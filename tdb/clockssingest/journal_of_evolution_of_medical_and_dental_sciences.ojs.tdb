@@ -1,0 +1,36 @@
+{
+
+  publisher <
+    name = Journal of Evolution of Medical and Dental Sciences ;
+    info[contract] = 2019 ;
+    info[tester] = 5 ;
+    info[poller] = 8 ;
+    info[platform] = OJS3. Open Journal Systems 3.3.0.7
+  >
+
+    #OJS3
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+    #attr[primary_locale] = es_ES
+
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+    param[journal_id] = jemds
+
+  {
+  
+    title < 
+      name = Journal of Evolution of Medical and Dental Sciences ;
+      issn = 2278-4748 ;
+      eissn = 2278-4802 
+    >
+
+      #published ? to present
+      param[base_url] = https://jemds.in/
+
+      au < testing ; exists ; 2020 ; Journal of Evolution of Medical and Dental Sciences Volume 2020 ; 9 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Journal of Evolution of Medical and Dental Sciences Volume 2021 ; 10 ; 2021 ; >
+      au < testing ; exists ; 2022 ; Journal of Evolution of Medical and Dental Sciences Volume 2022 ; 11 ; 2022 ; >
+
+  }
+
+}

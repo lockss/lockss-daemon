@@ -20358,10 +20358,10 @@
 
     title <
       name = International Journal of Space Structures ;
-      issn = 0266-3511 ;
+      issn = 0956-0599 ;
       eissn = 2059-8033
      >
-
+      #previous title "Space Structures" previous issn = 0266-3511 1985-1987
       param[base_url] = http://sps.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
@@ -28926,10 +28926,10 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
     title <
       name = Journal of Low Frequency Noise, Vibration and Active Control ;
-      issn = 0263-0923 ;
+      issn = 1461-3484 ;
       eissn = 2048-4046 
     >
-
+      #previous issn = 0263-0923 ; years 1982-1996
       param[base_url] = http://lfn.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
@@ -32080,7 +32080,7 @@ comment[mpj] = now published by Brill
     {
 
       title <
-        name = Journal of the International Association of Providers of AIDS Care (JIAPAC) ;
+        name = Journal of the International Association of Physicians in AIDS Care (JIAPAC) ;
         issn = 1545-1097 ;
         eissn = 1557-0886 ;
         issnl = 1545-1097
@@ -32119,10 +32119,31 @@ comment[mpj] = now published by Brill
         au < down ; 2010 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 9 ; 9 >
         au < down ; 2011 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 10 ; 10 >
         au < down ; 2012 ; Journal of the International Association of Physicians in AIDS Care (JIAPAC) Volume 11 ; 11 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Journal of the International Association of Providers of AIDS Care (JIAPAC) ;
+        issn = 2325-9574 ;
+        eissn = 2325-9582 ;
+        issnl = 2325-9582
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://jia.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        # Jan 2013 name changed from "Physicians in" to "Providers of"
+
         au < down ; 2013 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 12 ; 12 >
         au < down ; 2014 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 13 ; 13 >
         au < down ; 2015 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 14 ; 14 >
-        au < doNotProcess ; 2016 ; Journal of the International Association of Providers of AIDS Care (JIAPAC) Volume 15 ; 15 >
 
       }
 
@@ -37483,7 +37504,7 @@ comment[mpj] = now published by Brill
 
     {
       title <
-          name = Otolaryngology -- Head and Neck Surgery ;
+          name = Otolaryngology–Head and Neck Surgery ;
           issn = 0194-5998 ;
           eissn = 1097-6817
       >
@@ -37494,50 +37515,50 @@ comment[mpj] = now published by Brill
         param[base_url] = http://oto.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < doNotProcess ; 1995 ; Otolaryngology -- Head and Neck Surgery Volume 112 ; 112 >
-        au < doNotProcess ; 1995 ; Otolaryngology -- Head and Neck Surgery Volume 113 ; 113 >
-        au < doNotProcess ; 1996 ; Otolaryngology -- Head and Neck Surgery Volume 114 ; 114 >
-        au < doNotProcess ; 1996 ; Otolaryngology -- Head and Neck Surgery Volume 115 ; 115 >
-        au < doNotProcess ; 1997 ; Otolaryngology -- Head and Neck Surgery Volume 116 ; 116 >
-        au < doNotProcess ; 1997 ; Otolaryngology -- Head and Neck Surgery Volume 117 ; 117 >
-        au < doNotProcess ; 1998 ; Otolaryngology -- Head and Neck Surgery Volume 118 ; 118 >
-        au < doNotProcess ; 1998 ; Otolaryngology -- Head and Neck Surgery Volume 119 ; 119 >
-        au < doNotProcess ; 1999 ; Otolaryngology -- Head and Neck Surgery Volume 120 ; 120 >
-        au < doNotProcess ; 1999 ; Otolaryngology -- Head and Neck Surgery Volume 121 ; 121 >
-        au < doNotProcess ; 2000 ; Otolaryngology -- Head and Neck Surgery Volume 122 ; 122 >
-        au < doNotProcess ; 2000 ; Otolaryngology -- Head and Neck Surgery Volume 123 ; 123 >
-        au < doNotProcess ; 2001 ; Otolaryngology -- Head and Neck Surgery Volume 124 ; 124 >
-        au < doNotProcess ; 2001 ; Otolaryngology -- Head and Neck Surgery Volume 125 ; 125 >
-        au < doNotProcess ; 2002 ; Otolaryngology -- Head and Neck Surgery Volume 126 ; 126 >
-        au < doNotProcess ; 2002 ; Otolaryngology -- Head and Neck Surgery Volume 127 ; 127 >
-        au < doNotProcess ; 2003 ; Otolaryngology -- Head and Neck Surgery Volume 128 ; 128 >
-        au < doNotProcess ; 2003 ; Otolaryngology -- Head and Neck Surgery Volume 129 ; 129 >
-        au < doNotProcess ; 2004 ; Otolaryngology -- Head and Neck Surgery Volume 130 ; 130 >
-        au < doNotProcess ; 2004 ; Otolaryngology -- Head and Neck Surgery Volume 131 ; 131 >
-        au < doNotProcess ; 2005 ; Otolaryngology -- Head and Neck Surgery Volume 132 ; 132 >
-        au < doNotProcess ; 2005 ; Otolaryngology -- Head and Neck Surgery Volume 133 ; 133 >
-        au < doNotProcess ; 2006 ; Otolaryngology -- Head and Neck Surgery Volume 134 ; 134 >
-        au < doNotProcess ; 2006 ; Otolaryngology -- Head and Neck Surgery Volume 135 ; 135 >
-        au < doNotProcess ; 2007 ; Otolaryngology -- Head and Neck Surgery Volume 136 ; 136 >
-        au < doNotProcess ; 2007 ; Otolaryngology -- Head and Neck Surgery Volume 137 ; 137 >
-        au < down ; 2008 ; Otolaryngology -- Head and Neck Surgery Volume 138 ; 138 >
-        au < down ; 2008 ; Otolaryngology -- Head and Neck Surgery Volume 139 ; 139 >
-        au < down ; 2009 ; Otolaryngology -- Head and Neck Surgery Volume 140 ; 140 >
-        au < down ; 2009 ; Otolaryngology -- Head and Neck Surgery Volume 141 ; 141 >
-        au < down ; 2010 ; Otolaryngology -- Head and Neck Surgery Volume 142 ; 142 >
-        au < down ; 2010 ; Otolaryngology -- Head and Neck Surgery Volume 143 ; 143 >
-        au < down ; 2011 ; Otolaryngology -- Head and Neck Surgery Volume 144 ; 144 >
-        au < down ; 2011 ; Otolaryngology -- Head and Neck Surgery Volume 145 ; 145 >
-        au < down ; 2012 ; Otolaryngology -- Head and Neck Surgery Volume 146 ; 146 >
-        au < down ; 2012 ; Otolaryngology -- Head and Neck Surgery Volume 147 ; 147 >
-        au < down ; 2013 ; Otolaryngology -- Head and Neck Surgery Volume 148 ; 148 >
-        au < down ; 2013 ; Otolaryngology -- Head and Neck Surgery Volume 149 ; 149 >
-        au < down ; 2014 ; Otolaryngology -- Head and Neck Surgery Volume 150 ; 150 >
-        au < down ; 2014 ; Otolaryngology -- Head and Neck Surgery Volume 151 ; 151 >
-        au < down ; 2015 ; Otolaryngology -- Head and Neck Surgery Volume 152 ; 152 >
-        au < down ; 2015 ; Otolaryngology -- Head and Neck Surgery Volume 153 ; 153 >
-        au < doNotProcess ; 2016 ; Otolaryngology -- Head and Neck Surgery Volume 154 ; 154 >
-        au < doNotProcess ; 2016 ; Otolaryngology -- Head and Neck Surgery Volume 155 ; 155 >
+        au < doNotProcess ; 1995 ; Otolaryngology–Head and Neck Surgery Volume 112 ; 112 >
+        au < doNotProcess ; 1995 ; Otolaryngology–Head and Neck Surgery Volume 113 ; 113 >
+        au < doNotProcess ; 1996 ; Otolaryngology–Head and Neck Surgery Volume 114 ; 114 >
+        au < doNotProcess ; 1996 ; Otolaryngology–Head and Neck Surgery Volume 115 ; 115 >
+        au < doNotProcess ; 1997 ; Otolaryngology–Head and Neck Surgery Volume 116 ; 116 >
+        au < doNotProcess ; 1997 ; Otolaryngology–Head and Neck Surgery Volume 117 ; 117 >
+        au < doNotProcess ; 1998 ; Otolaryngology–Head and Neck Surgery Volume 118 ; 118 >
+        au < doNotProcess ; 1998 ; Otolaryngology–Head and Neck Surgery Volume 119 ; 119 >
+        au < doNotProcess ; 1999 ; Otolaryngology–Head and Neck Surgery Volume 120 ; 120 >
+        au < doNotProcess ; 1999 ; Otolaryngology–Head and Neck Surgery Volume 121 ; 121 >
+        au < doNotProcess ; 2000 ; Otolaryngology–Head and Neck Surgery Volume 122 ; 122 >
+        au < doNotProcess ; 2000 ; Otolaryngology–Head and Neck Surgery Volume 123 ; 123 >
+        au < doNotProcess ; 2001 ; Otolaryngology–Head and Neck Surgery Volume 124 ; 124 >
+        au < doNotProcess ; 2001 ; Otolaryngology–Head and Neck Surgery Volume 125 ; 125 >
+        au < doNotProcess ; 2002 ; Otolaryngology–Head and Neck Surgery Volume 126 ; 126 >
+        au < doNotProcess ; 2002 ; Otolaryngology–Head and Neck Surgery Volume 127 ; 127 >
+        au < doNotProcess ; 2003 ; Otolaryngology–Head and Neck Surgery Volume 128 ; 128 >
+        au < doNotProcess ; 2003 ; Otolaryngology–Head and Neck Surgery Volume 129 ; 129 >
+        au < doNotProcess ; 2004 ; Otolaryngology–Head and Neck Surgery Volume 130 ; 130 >
+        au < doNotProcess ; 2004 ; Otolaryngology–Head and Neck Surgery Volume 131 ; 131 >
+        au < doNotProcess ; 2005 ; Otolaryngology–Head and Neck Surgery Volume 132 ; 132 >
+        au < doNotProcess ; 2005 ; Otolaryngology–Head and Neck Surgery Volume 133 ; 133 >
+        au < doNotProcess ; 2006 ; Otolaryngology–Head and Neck Surgery Volume 134 ; 134 >
+        au < doNotProcess ; 2006 ; Otolaryngology–Head and Neck Surgery Volume 135 ; 135 >
+        au < doNotProcess ; 2007 ; Otolaryngology–Head and Neck Surgery Volume 136 ; 136 >
+        au < doNotProcess ; 2007 ; Otolaryngology–Head and Neck Surgery Volume 137 ; 137 >
+        au < down ; 2008 ; Otolaryngology–Head and Neck Surgery Volume 138 ; 138 >
+        au < down ; 2008 ; Otolaryngology–Head and Neck Surgery Volume 139 ; 139 >
+        au < down ; 2009 ; Otolaryngology–Head and Neck Surgery Volume 140 ; 140 >
+        au < down ; 2009 ; Otolaryngology–Head and Neck Surgery Volume 141 ; 141 >
+        au < down ; 2010 ; Otolaryngology–Head and Neck Surgery Volume 142 ; 142 >
+        au < down ; 2010 ; Otolaryngology–Head and Neck Surgery Volume 143 ; 143 >
+        au < down ; 2011 ; Otolaryngology–Head and Neck Surgery Volume 144 ; 144 >
+        au < down ; 2011 ; Otolaryngology–Head and Neck Surgery Volume 145 ; 145 >
+        au < down ; 2012 ; Otolaryngology–Head and Neck Surgery Volume 146 ; 146 >
+        au < down ; 2012 ; Otolaryngology–Head and Neck Surgery Volume 147 ; 147 >
+        au < down ; 2013 ; Otolaryngology–Head and Neck Surgery Volume 148 ; 148 >
+        au < down ; 2013 ; Otolaryngology–Head and Neck Surgery Volume 149 ; 149 >
+        au < down ; 2014 ; Otolaryngology–Head and Neck Surgery Volume 150 ; 150 >
+        au < down ; 2014 ; Otolaryngology–Head and Neck Surgery Volume 151 ; 151 >
+        au < down ; 2015 ; Otolaryngology–Head and Neck Surgery Volume 152 ; 152 >
+        au < down ; 2015 ; Otolaryngology–Head and Neck Surgery Volume 153 ; 153 >
+        au < doNotProcess ; 2016 ; Otolaryngology–Head and Neck Surgery Volume 154 ; 154 >
+        au < doNotProcess ; 2016 ; Otolaryngology–Head and Neck Surgery Volume 155 ; 155 >
 
       }
 

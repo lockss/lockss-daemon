@@ -124,7 +124,7 @@
       au < released ; 2019 ; Dialogue & Discourse Volume 10 ; 10 ; 2019 ; https://journals.uic.edu/ojs/ >
       au < released ; 2020 ; Dialogue & Discourse Volume 11 ; 11 ; 2020 ; https://journals.uic.edu/ojs/ >
       au < released ; 2021 ; Dialogue & Discourse Volume 12 ; 12 ; 2021 ; https://journals.uic.edu/ojs/ >
-      au < testing ; 2022 ; Dialogue & Discourse Volume 13 ; 13 ; 2022 ; https://journals.uic.edu/ojs/ >
+      au < released ; 2022 ; Dialogue & Discourse Volume 13 ; 13 ; 2022 ; https://journals.uic.edu/ojs/ >
     }
   }
 
@@ -217,7 +217,7 @@
       au < released ; 2019 ; First Monday Volume 24 ; 24 ; 2019 ; https://journals.uic.edu/ojs/ >
       au < released ; 2020 ; First Monday Volume 25 ; 25 ; 2020 ; https://journals.uic.edu/ojs/ >
       au < released ; 2021 ; First Monday Volume 26 ; 26 ; 2021 ; https://journals.uic.edu/ojs/ >
-      au < testing ; 2022 ; First Monday Volume 27 ; 27 ; 2022 ; https://journals.uic.edu/ojs/ >
+      au < released ; 2022 ; First Monday Volume 27 ; 27 ; 2022 ; https://journals.uic.edu/ojs/ >
 
     }
 
@@ -244,7 +244,7 @@
       au < released ; 2019 ; Journal of Biocommunication Volume 43 ; 43 ; 2019 ; https://journals.uic.edu/ojs/ >
       au < released ; 2020 ; Journal of Biocommunication Volume 44 ; 44 ; 2020 ; https://journals.uic.edu/ojs/ >
       au < released ; 2021 ; Journal of Biocommunication Volume 45 ; 45 ; 2021 ; https://journals.uic.edu/ojs/ >
-      au < expected ; 2022 ; Journal of Biocommunication Volume 46 ; 46 ; 2022 ; https://journals.uic.edu/ojs/ >
+      au < manifest ; 2022 ; Journal of Biocommunication Volume 46 ; 46 ; 2022 ; https://journals.uic.edu/ojs/ >
     }
   }
 
@@ -362,7 +362,7 @@
       au < released ; 2019 ; Online Journal of Public Health Informatics Volume 11 ; 11 ; 2019 ; https://journals.uic.edu/ojs/ >
       au < released ; 2020 ; Online Journal of Public Health Informatics Volume 12 ; 12 ; 2020 ; https://journals.uic.edu/ojs/ >
       au < released ; 2021 ; Online Journal of Public Health Informatics Volume 13 ; 13 ; 2021 ; https://journals.uic.edu/ojs/ >
-      au < expected ; 2022 ; Online Journal of Public Health Informatics Volume 14 ; 14 ; 2022 ; https://journals.uic.edu/ojs/ >
+      au < manifest ; 2022 ; Online Journal of Public Health Informatics Volume 14 ; 14 ; 2022 ; https://journals.uic.edu/ojs/ >
 
     }
 
@@ -421,7 +421,7 @@
 
   {
     title <
-      name = DISCO: Journal of Biomedical Discovery and Collaboration ;
+      name = Journal of Biomedical Discovery and Collaboration ;
       issn = 1747-5333
     >
     
@@ -443,7 +443,7 @@
       param[journal_id] = jbdc
       attr[start_stem] = index.php/
     
-      au < testing ; 2009 ; DISCO: Journal of Biomedical Discovery and Collaboration Volume 4 ; 4 ; 2009 ; https://journals.uic.edu/ojs/ >
+      au < released ; 2009 ; DISCO: Journal of Biomedical Discovery and Collaboration Volume 4 ; 4 ; 2009 ; https://journals.uic.edu/ojs/ >
       au < released ; 2010 ; DISCO: Journal of Biomedical Discovery and Collaboration Volume 5 ; 5 ; 2010 ; https://journals.uic.edu/ojs/ >
       au < released ; 2011 ; DISCO: Journal of Biomedical Discovery and Collaboration Volume 6 ; 6 ; 2011 ; https://journals.uic.edu/ojs/ >
       au < released ; 2016 ; DISCO: Journal of Biomedical Discovery and Collaboration Volume 7 ; 7 ; 2016 ; https://journals.uic.edu/ojs/ >

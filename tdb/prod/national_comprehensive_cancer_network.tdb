@@ -16,6 +16,7 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://www.jnccn.org/
     implicit < status ; year ; name ; param[volume_name] >
+    #Moved to PubFactory
   
     au < released ; 2003 ; Journal of the National Comprehensive Cancer Network Volume 1 ; 1 >
     au < released ; 2004 ; Journal of the National Comprehensive Cancer Network Volume 2 ; 2 >
@@ -33,7 +34,7 @@
     au < released ; 2016 ; Journal of the National Comprehensive Cancer Network Volume 14 ; 14 >
     au < released ; 2017 ; Journal of the National Comprehensive Cancer Network Volume 15 ; 15 >
     au < released ; 2018 ; Journal of the National Comprehensive Cancer Network Volume 16 ; 16 >
-    au < expected ; 2019 ; Journal of the National Comprehensive Cancer Network Volume 17 ; 17 >
+    au < doNotProcess ; 2019 ; Journal of the National Comprehensive Cancer Network Volume 17 ; 17 >
 
   }
   

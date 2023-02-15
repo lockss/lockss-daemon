@@ -74,7 +74,7 @@
     au < finished ; finished ; 2004 ; ; 9781600862007 ; 9781600862007 ; Introduction to Aeronautics ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < doesNotExist ; doesNotExist ; 2005 ; 9781563477027 ; ; 9781563477027 ; Radar and Laser Cross Section Engineering, Second Edition ; https://arc.aiaa.org/ ; >
     au < doesNotExist ; doesNotExist ; 2005 ; ; 9781600862403 ; 9781600862403 ; Space Vehicle Design, Second Edition ; https://arc.aiaa.org/ ; >
-    au < finished ; frozen ; 2006 ; 9781563478376 ; 9781600861352 ; 9781600861352 ; Aircraft and Rotorcraft System Identification (9781600861352) ; http://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2006 ; 9781563478376 ; 9781600861352 ; 9781600861352 ; Aircraft and Rotorcraft System Identification (9781600861352) ; http://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2006 ; 9781563477935 ; 9781600861567 ; 9781600861567 ; Applied Cartesian Tensors for Aerospace Simulations (9781600861567) ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2006 ; 9781563476990 ; 9781600861765 ; 9781600861765 ; Elements of Continuum Mechanics (9781600861765) ; http://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2006 ; 9781563476983 ; 9781600862373 ; 9781600862373 ; Rotary Wing Structural Dynamics and Aeroelasticity, 2e (9781600862373) ; http://arc.aiaa.org/ ; >
@@ -561,7 +561,7 @@
     au < finished ; finished ;2017 ; ; 9781624104923 ; 9781624104923 ; AIAA Flight Testing Conference (9781624104923) ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2017 ; ; 9781624104503 ; 9781624104503 ; AIAA Guidance, Navigation, and Control Conference (9781624104503) ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2017 ; ; 9781624104497 ; 9781624104497 ; AIAA Information Systems-AIAA Infotech @ Aerospace (9781624104497) ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2017 ; ; 9781624104510 ; 9781624104510 ; AIAA Modeling and Simulation Technologies Conference (9781624104510) ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2017 ; ; 9781624104510 ; 9781624104510 ; AIAA Modeling and Simulation Technologies Conference (9781624104510) ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2017 ; ; 9781624104916 ; 9781624104916 ; AIAA Modeling and Simulation Technologies Conference (9781624104916) ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ;2017 ; ; 9781624104831 ; 9781624104831 ; AIAA SPACE and Astronautics Forum and Exposition (9781624104831) ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2017 ; ; 9781624104558 ; 9781624104558 ; 4th AIAA Spacecraft Structures Conference (9781624104558) ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
@@ -618,16 +618,16 @@
     au < finished ; finished ; 2018 ; ; 9781624105319 ; 9781624105319 ; 2018 AIAA/AHS Adaptive Structures Conference ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2018 ; ; 9781624105579 ; 9781624105579 ; 2018 Atmospheric Flight Mechanics Conference ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; ; 9781624105524 ; 9781624105524 ; 2018 Joint Thermophysics and Heat Transfer Conference ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2019 ; ; 9781624105784 ; 9781624105784 ; AIAA Scitech 2019 Forum ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2019 ; ; 9781624105883 ; 9781624105883 ; 25th AIAA/CEAS Aeroacoustics Conference ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2019 ; ; 9781624105890 ; 9781624105890 ; AIAA Aviation 2019 Forum ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2019 ; ; 9781624105906 ; 9781624105906 ; AIAA Propulsion and Energy 2019 Forum ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2020 ; ; 9781624105951 ; 9781624105951 ; AIAA Scitech 2020 Forum ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2020 ; ; 9781624106002 ; 9781624106002 ; 23rd AIAA International Space Planes and Hypersonic Systems and Technologies Conference ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2020 ; ; 9781624105982 ; 9781624105982 ; AIAA Aviation 2020 Forum ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2020 ; ; 9781624106026 ; 9781624106026 ; AIAA Propulsion and Energy 2020 Forum ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2020 ; ; 9781624106088 ; 9781624106088 ; ASCEND 2020 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 2021 ; ; 9781624106095 ; 9781624106095 ; AIAA Scitech 2021 Forum ; https://arc.aiaa.org/ ; >
+    au < finished ; frozen ; 2019 ; ; 9781624105784 ; 9781624105784 ; AIAA Scitech 2019 Forum ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; ; 9781624105883 ; 9781624105883 ; 25th AIAA/CEAS Aeroacoustics Conference ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; ; 9781624105890 ; 9781624105890 ; AIAA Aviation 2019 Forum ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2019 ; ; 9781624105906 ; 9781624105906 ; AIAA Propulsion and Energy 2019 Forum ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2020 ; ; 9781624105951 ; 9781624105951 ; AIAA Scitech 2020 Forum ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; ; 9781624106002 ; 9781624106002 ; 23rd AIAA International Space Planes and Hypersonic Systems and Technologies Conference ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; ; 9781624105982 ; 9781624105982 ; AIAA Aviation 2020 Forum ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; ; 9781624106026 ; 9781624106026 ; AIAA Propulsion and Energy 2020 Forum ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2020 ; ; 9781624106088 ; 9781624106088 ; ASCEND 2020 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2021 ; ; 9781624106095 ; 9781624106095 ; AIAA Scitech 2021 Forum ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
 
  }
 
@@ -640,21 +640,21 @@
     au < finished ; finished ; 1974 ; 9781563473128 ; 9781600868672 ; 9781600868672 ; Lockheed C-5 Case Study in Aircraft Design (9781600868672) ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1978 ; 9781563473067 ; 9781600868634 ; 9781600868634 ; The British Aerospace Harrier Case Study in Aircraft Design (9781600868634) ; http://arc.aiaa.org/ ; >
     au < finished ; finished ; 1978 ; 9781563473098 ; 9781600868696 ; 9781600868696 ; Northrop F-5 Case Study in Aircraft Design (9781600868696) ; http://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 1978 ; 9781563472770 ; ; 9781563472770 ; A Case Study in Aircraft Design: The Boeing 727 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1978 ; 9780915928279 ; ; 9780915928279 ; Space Transportation Systems ; https://arc.aiaa.org/ ; >
+    au < finished ; frozen ; 1978 ; 9781563472770 ; ; 9781563472770 ; A Case Study in Aircraft Design: The Boeing 727 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1978 ; 9780915928279 ; ; 9780915928279 ; Space Transportation Systems ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 1979 ; 9781563473142 ; 9781600868009 ; 9781600868009 ; The International Ultraviolet Explorer Case Study in Spacecraft Design (9781600868009) ; http://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 1979 ; 9781563473135 ; 9781600868108 ; 9781600868108 ; Pioneer Venus Case Study in Spacecraft Design (9781600868108) ; http://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 1979 ; ; 9781600868566 ; 9781600868566 ; Case Study in Spacecraft Design (9781600868566) ; http://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 1979 ; 9780915928316 ; ; 9780915928316 ; Utilization of Alternative Fuels for Transportation ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1979 ; 9780915928347 ; ; 9780915928347 ; Potential Applications of Aerospace Technology in the Marine Transport Industry ; https://arc.aiaa.org/ ; >
+    au < finished ; frozen ; 1979 ; 9780915928316 ; ; 9780915928316 ; Utilization of Alternative Fuels for Transportation ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1979 ; 9780915928347 ; ; 9780915928347 ; Potential Applications of Aerospace Technology in the Marine Transport Industry ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1980 ; 9781563473050 ; 9781600867897 ; 9781600867897 ; Gossamer Condor and Albatross: A Case Study in Aircraft Design (9781600867897) ; http://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1980 ; 9781563473111 ; 9781600868061 ; 9781600868061 ; The Grumman Aerospace and Gulf Stream: American Gulfstream III (9781600868061) ; http://arc.aiaa.org/ ; >
     au < finished ; finished ; 1980 ; 9781563473081 ; 9781600868122 ; 9781600868122 ; A Case Study by Aerospatiale and British Aerospace on the Concorde (9781600868122) ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1981 ; 9781563473104 ; 9781600867989 ; 9781600867989 ; A Case Study on the De Havilland Family of STOL Commuter Aircraft (9781600867989) ; http://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 1981 ; 9780915928590 ; ; 9780915928590 ; Aeronautics in China ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1982 ; 9780915928682 ; ; 9780915928682 ; Global Implications of Space Activities ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1982 ; 9780915928699 ; ; 9780915928699 ; Aerospace Technology and Commercial Nuclear Power ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1984 ; 9780915928880 ; ; 9780915928880 ; Radar Cross Section Lectures ; https://arc.aiaa.org/ ; >
+    au < finished ; frozen ; 1981 ; 9780915928590 ; ; 9780915928590 ; Aeronautics in China ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1982 ; 9780915928682 ; ; 9780915928682 ; Global Implications of Space Activities ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1982 ; 9780915928699 ; ; 9780915928699 ; Aerospace Technology and Commercial Nuclear Power ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1984 ; 9780915928880 ; ; 9780915928880 ; Radar Cross Section Lectures ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < doesNotExist ; doesNotExist ; 1988 ; 9780962062902 ; ; 9780962062902 ; Missile Aerodynamics ; https://arc.aiaa.org/ ; >
     au < finished ; finished ; 1993 ; 9781563470615 ; ; 9781563470615 ; Space Biology and Medicine – Volume I, Space and Its Exploration ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < doesNotExist ; doesNotExist ; 1993 ; 9781563470721 ; ; 9781563470721 ; Methods to Extend Mechanical Component Life: Lessons Learned with Space Vehicle and Rocket Engine Components ; https://arc.aiaa.org/ ; >
@@ -747,10 +747,10 @@
     au < finished ; finished ; 2017 ; 9781624104411 ; 9781624104428 ; 9781624104411 ; America’s First Rocket Company: Reaction Motors, Inc. ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 9781624104022 ; 9781624104039 ; 9781624104022 ; AeroDynamic: Inside the High-Stakes Global Jetliner Ecosystem ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < doesNotExist ; doesNotExist ; 2019 ; 9781624105098 ; ; 9781624105098 ; Management of Defense Acquisition Projects, Second Edition ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 2021 ; 9781624103995 ; 9781624104770 ; 9781624104770 ; Human Spaceflight Operations: Lessons Learned from 60 Years in Space ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 2021 ;  ; 9781624106156 ; 9781624106156 ; The Business of Aerospace: Industry Dynamics, Corporate Strategies, Innovation Models, and the Big(ger) Picture ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 2021 ;  ; 9781624106217 ; 9781624106217 ; Gamera: A Human Powered Helicopter – In Pursuit of an Aviation Milestone ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 2021 ;  ; 9781624106255 ; 9781624106255 ; The RAH-66 Comanche Helicopter ; https://arc.aiaa.org/ ; >
+    au < finished ; frozen ; 2021 ; 9781624103995 ; 9781624104770 ; 9781624104770 ; Human Spaceflight Operations: Lessons Learned from 60 Years in Space ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ;  ; 9781624106156 ; 9781624106156 ; The Business of Aerospace: Industry Dynamics, Corporate Strategies, Innovation Models, and the Big(ger) Picture ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ;  ; 9781624106217 ; 9781624106217 ; Gamera: A Human Powered Helicopter – In Pursuit of an Aviation Milestone ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ;  ; 9781624106255 ; 9781624106255 ; The RAH-66 Comanche Helicopter ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
 
  }
 
@@ -759,7 +759,7 @@
    name = Progress in Astronautics and Aeronautics ;
    type = bookSeries
   >
-    au < finished ; frozen ; 1960 ; 9781563478512 ; 9781600864759 ; 9781600864759 ; Liquid Rockets and Propellants (9781600864759) ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1960 ; 9781563478512 ; 9781600864759 ; 9781600864759 ; Liquid Rockets and Propellants (9781600864759) ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1960 ; 9781563478505 ; 9781600864766 ; 9781600864766 ; Solid Propellant Rocket Research (9781600864766) ; http://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1961 ; 9781563478529 ; 9781600864773 ; 9781600864773 ; Energy Conversion for Space Power (9781600864773) ; http://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 1961 ; 9781563478536 ; 9781600864780 ; 9781600864780 ; Space Power Systems (9781600864780) ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
@@ -1001,13 +1001,13 @@
     au < finished ; finished ; 2017 ; 9781624104640 ; 9781624104657 ; 9781624104640 ; Testing Large Ultra-Lightweight Spacecraft ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 9781624104787 ; 9781624104794 ; 9781624104787 ; Advances in Computational Intelligence and Autonomy for Aerospace Systems ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 9781624104886 ; 9781624104893 ; 9781624104886 ; Aerospace Materials and Applications ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; 9781624105821 ; 9781624105838 ; 9781624105838 ; Methods of Orbital Maneuvering ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2019 ; 9781624105647 ; 9781624105654 ; 9781624105654 ; PAA256 Complex Systems Engineering: Theory and Practice ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2019 ; 9781624105661 ; 9781624105678 ; 9781624105678 ; PAA257 The F-35 Lightning II: From Concept to Cockpit ; https://arc.aiaa.org/ ; >
+    au < finished ; frozen ; 2019 ; 9781624105821 ; 9781624105838 ; 9781624105838 ; Methods of Orbital Maneuvering ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; 9781624105647 ; 9781624105654 ; 9781624105654 ; PAA256 Complex Systems Engineering: Theory and Practice ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2019 ; 9781624105661 ; 9781624105678 ; 9781624105678 ; PAA257 The F-35 Lightning II: From Concept to Cockpit ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < doesNotExist ; doesNotExist ; 2019 ; 9781624105371 ; ; 9781624105371 ; Tactical and Strategic Missile Guidance: An Introduction, Seventh Edition, Volume 1 ; https://arc.aiaa.org/ ; >
     au < doesNotExist ; doesNotExist ; 2019 ; 9781624105388 ; ; 9781624105388 ; Advanced Tactical and Strategic Missile Guidance, Seventh Edition, Volume 2 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2020 ; 9781624105807 ; 9781624105814 ; 9781624105814 ; High-Pressure Flows for Propulsion Applications ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 2021 ; ; 9781624106040 ; 9781624106040 ; Fuel Effects in Operability of Aircraft Gas Turbine Combustors ; https://arc.aiaa.org/ ; >
+    au < finished ; frozen ; 2020 ; 9781624105807 ; 9781624105814 ; 9781624105814 ; High-Pressure Flows for Propulsion Applications ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2021 ; ; 9781624106040 ; 9781624106040 ; Fuel Effects in Operability of Aircraft Gas Turbine Combustors ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
 
  }
 

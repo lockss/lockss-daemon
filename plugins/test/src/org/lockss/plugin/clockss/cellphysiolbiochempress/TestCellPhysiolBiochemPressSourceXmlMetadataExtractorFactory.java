@@ -3,7 +3,6 @@ package org.lockss.plugin.clockss.cellphysiolbiochempress;
 import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorTest;
-import org.lockss.plugin.clockss.chineseuniversityhongkong.TestChineseUniversityHongKongSourceXmlMetadataExtractorFactory;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.MockCachedUrl;
 import org.lockss.util.CIProperties;
@@ -17,28 +16,15 @@ import org.apache.commons.io.FileUtils;
 
 public class TestCellPhysiolBiochemPressSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorTest {
 
-    private static final Logger log = Logger.getLogger(TestChineseUniversityHongKongSourceXmlMetadataExtractorFactory.class);
+    private static final Logger log = Logger.getLogger(TestCellPhysiolBiochemPressSourceXmlMetadataExtractorFactory.class);
 
     private static String BaseUrl = "http://source.host.org/sourcefiles/cpbp-released/";
     private static String Directory = "2022_01";
 
-    private static String getXmlFileContent(String fname) {
-        String xmlContent = "";
-        try {
-            String currentDirectory = System.getProperty("user.dir");
-            String pathname = currentDirectory +
-                    "/plugins/test/src/org/lockss/plugin/clockss/cellphysiolbiochempress/" + fname;
-            xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
-        } catch (IOException e) {
-            log.error(e.getMessage(), e);
-        }
-        return xmlContent;
-    }
-
     public void testExtractArticleXmlSchema() throws Exception {
 
         String fname = "article_sample.xml";
-        String journalXml = getXmlFileContent(fname);
+        String journalXml = getResourceContent(fname);
 
         assertNotNull(journalXml);
 

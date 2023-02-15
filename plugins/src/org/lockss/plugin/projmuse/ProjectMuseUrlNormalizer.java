@@ -40,12 +40,13 @@ import java.util.zip.GZIPInputStream;
 import org.apache.commons.lang3.StringUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
 import org.lockss.util.*;
 
 /**
  * @since 1.67.5
  */
-public class ProjectMuseUrlNormalizer extends HttpToHttpsUtil.BaseUrlHttpHttpsUrlNormalizer {
+public class ProjectMuseUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
 
   private static final Logger log = Logger.getLogger(ProjectMuseUrlNormalizer.class);
   

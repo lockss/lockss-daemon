@@ -83,8 +83,8 @@ public class NullPlugin {
       return "NullVersion";
     }
 
-    public String getRequiredDaemonVersion() {
-      return "0.0.0";
+    public List<String> getRequiredDaemonVersion() {
+      return ListUtil.list("0.0.0");
     }
 
     public String getFeatureVersion(Plugin.Feature feat) {
@@ -357,6 +357,9 @@ public class NullPlugin {
       return null;
     }
 
+    public void pokeWatchdog() {
+    }
+
     public void setPreviousContentType(String previousContentType) {
     }
 
@@ -542,6 +545,11 @@ public class NullPlugin {
 
     public PatternStringMap makeUrlMimeValidationMap() {
       return PatternStringMap.EMPTY;
+    }
+
+    public AuCacheResultMap makeAuCacheResultMap()
+        throws ArchivalUnit.ConfigurationException {
+      return AuHttpResultMap.DEFAULT;
     }
 
     public PatternFloatMap makeUrlPollResultWeightMap() {

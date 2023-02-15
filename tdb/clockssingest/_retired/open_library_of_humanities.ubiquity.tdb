@@ -24,11 +24,11 @@
 #      param[base_url] = https://www.pynchon.net/
       #gone from this url. Morphed into Orbit: A Journal of American Literature
 
-      au < finished ; manifest ; 2012 ; 1 ; Orbit: Writing Around Pynchon Volume 2012 ; 2012 ; https://www.pynchon.net/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2013 ; 2 ; Orbit: Writing Around Pynchon Volume 2013 ; 2013 ; https://www.pynchon.net/ ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2014 ; 3 ; Orbit: Writing Around Pynchon Volume 2014 ; 2014 ; https://www.pynchon.net/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2015 ; 4 ; Orbit: Writing Around Pynchon Volume 2015 ; 2015 ; https://www.pynchon.net/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2016 ; 5 ; Orbit: Writing Around Pynchon Volume 2016 ; 2016 ; https://www.pynchon.net/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2012 ; 1 ; Orbit: Writing Around Pynchon Volume 2012 ; 2012 ; https://www.pynchon.net/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; 2 ; Orbit: Writing Around Pynchon Volume 2013 ; 2013 ; https://www.pynchon.net/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2014 ; 3 ; Orbit: Writing Around Pynchon Volume 2014 ; 2014 ; https://www.pynchon.net/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2015 ; 4 ; Orbit: Writing Around Pynchon Volume 2015 ; 2015 ; https://www.pynchon.net/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2016 ; 5 ; Orbit: Writing Around Pynchon Volume 2016 ; 2016 ; https://www.pynchon.net/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2017 ; 6 ; Orbit: Writing Around Pynchon Volume 2017 [superseded] ; 2017 ; https://www.pynchon.net/ ; >
 
   }
@@ -86,8 +86,8 @@
       comment[publisher] = Open Library of Humanities
 #      param[base_url] = http://c21.openlibhums.org/
 
-         au < finished ; manifest ; 2016 ; 4 ; C21 Literature: journal of 21st-century writings Volume 2016 ; 2016 ; http://c21.openlibhums.org/ ; reingest4.clockss.org:8082 >
-         au < finished ; manifest ; 2017 ; 5 ; C21 Literature: journal of 21st-century writings Volume 2017 ; 2017 ; http://c21.openlibhums.org/ ; reingest5.clockss.org:8082 >
+         au < finished ; crawling ; 2016 ; 4 ; C21 Literature: journal of 21st-century writings Volume 2016 ; 2016 ; http://c21.openlibhums.org/ ; reingest4.clockss.org:8082 >
+         au < finished ; crawling ; 2017 ; 5 ; C21 Literature: journal of 21st-century writings Volume 2017 ; 2017 ; http://c21.openlibhums.org/ ; reingest5.clockss.org:8082 >
 
   }
 
@@ -101,18 +101,18 @@
       comment[publisher] = Open Library of Humanities
 #      param[base_url] = http://www.19.bbk.ac.uk/
 
-        au < finished ; manifest ; 2005 ; 1 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2005 ; 2005 ; https://www.19.bbk.ac.uk/ ; reingest1.clockss.org:8082 >
-        au < finished ; manifest ; 2006 ; 2 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2006 ; 2006 ; https://www.19.bbk.ac.uk/ ; reingest2.clockss.org:8085 >
-        au < finished ; manifest ; 2007 ; 3 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2007 ; 2007 ; https://www.19.bbk.ac.uk/ ; reingest3.clockss.org:8083 >
-        au < finished ; manifest ; 2008 ; 4 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2008 ; 2008 ; https://www.19.bbk.ac.uk/ ; reingest4.clockss.org:8082 >
-        au < finished ; manifest ; 2009 ; 5 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2009 ; 2009 ; https://www.19.bbk.ac.uk/ ; reingest1.clockss.org:8082 >
-        au < finished ; manifest ; 2010 ; 6 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2010 ; 2010 ; http://www.19.bbk.ac.uk/ ; reingest4.clockss.org:8082 >
-        au < finished ; manifest ; 2011 ; 7 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2011 ; 2011 ; http://www.19.bbk.ac.uk/ ; reingest2.clockss.org:8085 >
-        au < finished ; manifest ; 2012 ; 8 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2012 ; 2012 ; http://www.19.bbk.ac.uk/ ; reingest4.clockss.org:8082 >
-        au < finished ; manifest ; 2013 ; 9 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2013 ; 2013 ; http://www.19.bbk.ac.uk/ ; reingest2.clockss.org:8085 >
-        au < finished ; manifest ; 2014 ; 10 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2014 ; 2014 ; http://www.19.bbk.ac.uk/ ; reingest5.clockss.org:8082 >
-        au < finished ; manifest ; 2015 ; 11 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2015 ; 2015 ; http://www.19.bbk.ac.uk/ ; reingest5.clockss.org:8082 >
-        au < finished ; manifest ; 2016 ; 12 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2016 ; 2016 ; http://www.19.bbk.ac.uk/ ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2005 ; 1 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2005 ; 2005 ; https://www.19.bbk.ac.uk/ ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2006 ; 2 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2006 ; 2006 ; https://www.19.bbk.ac.uk/ ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2007 ; 3 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2007 ; 2007 ; https://www.19.bbk.ac.uk/ ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2008 ; 4 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2008 ; 2008 ; https://www.19.bbk.ac.uk/ ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2009 ; 5 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2009 ; 2009 ; https://www.19.bbk.ac.uk/ ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2010 ; 6 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2010 ; 2010 ; http://www.19.bbk.ac.uk/ ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2011 ; 7 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2011 ; 2011 ; http://www.19.bbk.ac.uk/ ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2012 ; 8 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2012 ; 2012 ; http://www.19.bbk.ac.uk/ ; reingest4.clockss.org:8082 >
+        au < finished ; crawling ; 2013 ; 9 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2013 ; 2013 ; http://www.19.bbk.ac.uk/ ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2014 ; 10 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2014 ; 2014 ; http://www.19.bbk.ac.uk/ ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2015 ; 11 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2015 ; 2015 ; http://www.19.bbk.ac.uk/ ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2016 ; 12 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2016 ; 2016 ; http://www.19.bbk.ac.uk/ ; reingest1.clockss.org:8082 >
         au < superseded ; exists ; 2017 ; 13 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2017 [superseded] ; 2017 ; http://www.19.bbk.ac.uk/ ; >
         au < superseded ; exists ; 2018 ; 14 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2018 [superseded] ; 2018 ; https://www.19.bbk.ac.uk/ ; >
 
@@ -129,7 +129,7 @@
 #      param[base_url] = https://poetry.openlibhums.org/
 
         au < finished ; finished ; 2015 ; 1 ; Journal of British and Irish Innovative Poetry Volume 2015 ; 2015 ; https://poetry.openlibhums.org/ ; reingest5.clockss.org:8082 >
-        au < finished ; manifest ; 2016 ; 2 ; Journal of British and Irish Innovative Poetry Volume 2016 ; 2016 ; https://poetry.openlibhums.org/ ; reingest2.clockss.org:8085 >
+        au < finished ; crawling ; 2016 ; 2 ; Journal of British and Irish Innovative Poetry Volume 2016 ; 2016 ; https://poetry.openlibhums.org/ ; reingest2.clockss.org:8085 >
         au < superseded ; exists ; 2017 ; 3 ; Journal of British and Irish Innovative Poetry Volume 2017 [superseded] ; 2017 ; https://poetry.openlibhums.org/ ; >
         au < superseded ; exists ; 2018 ; 4 ; Journal of British and Irish Innovative Poetry Volume 2018 [superseded] ; 2018 ; https://poetry.openlibhums.org/ ; >
   }
@@ -231,13 +231,13 @@
 
       au < doesNotExist ; doesNotExist ; 1991 ; 1 ; Theoretical Roman Archaeology Conference Volume 1991 ; 1991 ; https://traj.openlibhums.org/ ; >
       au < doesNotExist ; doesNotExist ; 1992 ; 2 ; Theoretical Roman Archaeology Conference Volume 1992 ; 1992 ; https://traj.openlibhums.org/ ; >
-      au < exists ; exists ; 1993 ; 3 ; Theoretical Roman Archaeology Conference Volume 1993 ; 1993 ; https://traj.openlibhums.org/ ; ># 1991 articles
+      au < doNotProcess ; exists ; 1993 ; 3 ; Theoretical Roman Archaeology Conference Volume 1993 ; 1993 ; https://traj.openlibhums.org/ ; ># 1991 articles
       au < doesNotExist ; doesNotExist ; 1994 ; 4 ; Theoretical Roman Archaeology Conference Volume 1994 ; 1994 ; https://traj.openlibhums.org/ ; >
-      au < exists ; exists ; 1995 ; 5 ; Theoretical Roman Archaeology Conference Volume 1995 ; 1995 ; https://traj.openlibhums.org/ ; ># 1992 and 1994 articles
+      au < doNotProcess ; exists ; 1995 ; 5 ; Theoretical Roman Archaeology Conference Volume 1995 ; 1995 ; https://traj.openlibhums.org/ ; ># 1992 and 1994 articles
       au < doesNotExist ; doesNotExist ; 1996 ; 6 ; Theoretical Roman Archaeology Conference Volume 1996 ; 1996 ; https://traj.openlibhums.org/ ; >
-      au < exists ; exists ; 1997 ; 7 ; Theoretical Roman Archaeology Conference Volume 1997 ; 1997 ; https://traj.openlibhums.org/ ; ># 1996 articles
-      au < exists ; exists ; 1998 ; 8 ; Theoretical Roman Archaeology Conference Volume 1998 ; 1998 ; https://traj.openlibhums.org/ ; >
-      au < exists ; exists ; 1999 ; 9 ; Theoretical Roman Archaeology Conference Volume 1999 ; 1999 ; https://traj.openlibhums.org/ ; >
+      au < doNotProcess ; exists ; 1997 ; 7 ; Theoretical Roman Archaeology Conference Volume 1997 ; 1997 ; https://traj.openlibhums.org/ ; ># 1996 articles
+      au < doNotProcess ; exists ; 1998 ; 8 ; Theoretical Roman Archaeology Conference Volume 1998 ; 1998 ; https://traj.openlibhums.org/ ; >
+      au < doNotProcess ; exists ; 1999 ; 9 ; Theoretical Roman Archaeology Conference Volume 1999 ; 1999 ; https://traj.openlibhums.org/ ; >
       au < finished ; finished ; 2000 ; 10 ; Theoretical Roman Archaeology Conference Volume 2000 ; 2000 ; https://traj.openlibhums.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2001 ; 11 ; Theoretical Roman Archaeology Conference Volume 2001 ; 2001 ; https://traj.openlibhums.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2002 ; 12 ; Theoretical Roman Archaeology Conference Volume 2002 ; 2002 ; https://traj.openlibhums.org/ ; reingest2.clockss.org:8085 >
@@ -284,7 +284,7 @@
       au < finished ; crawling ; 2017 ; 24 ; ASIANetwork Exchange Volume 2017 ; 2017 ; http://www.asianetworkexchange.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; 25 ; ASIANetwork Exchange Volume 2018 ; 2018 ; https://www.asianetworkexchange.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; 26 ; ASIANetwork Exchange Volume 2019 ; 2019 ; https://www.asianetworkexchange.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2020 ; 27 ; ASIANetwork Exchange Volume 2020 ; 2020 ; https://www.asianetworkexchange.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2020 ; 27 ; ASIANetwork Exchange Volume 2020 ; 2020 ; https://www.asianetworkexchange.org/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2021 ; 28 ; ASIANetwork Exchange Volume 2021 [superseded] ; 2021 ; https://www.asianetworkexchange.org/ ; >
 
   }
@@ -304,7 +304,7 @@
       au < finished ; crawling ; 2017 ; 2 ; Glossa: a journal of general linguistics Volume 2017 ; 2017 ; http://www.glossa-journal.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; 3 ; Glossa: a journal of general linguistics Volume 2018 ; 2018 ; https://www.glossa-journal.org/ ; reingest4.clockss.org:8082 > #no permission statement 7.31.2018
       au < finished ; crawling ; 2019 ; 4 ; Glossa: a journal of general linguistics Volume 2019 ; 2019 ; https://www.glossa-journal.org/ ; reingest3.clockss.org:8083 > #no permission statement 7.31.2019
-      au < finished ; manifest ; 2020 ; 5 ; Glossa: a journal of general linguistics Volume 2020 ; 2020 ; https://www.glossa-journal.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2020 ; 5 ; Glossa: a journal of general linguistics Volume 2020 ; 2020 ; https://www.glossa-journal.org/ ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2021 ; 6 ; Glossa: a journal of general linguistics Volume 2021 ; 2021 ; https://www.glossa-journal.org/ ; > #moved to janeway?
 
   }
@@ -321,7 +321,7 @@
 
       au < finished ; crawling ; 2018 ; 1 ; Open Screens Volume 2018 ; 2018 ; https://openscreensjournal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; 2 ; Open Screens Volume 2019 ; 2019 ; https://openscreensjournal.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2020 ; 3 ; Open Screens Volume 2020 ; 2020 ; https://openscreensjournal.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2020 ; 3 ; Open Screens Volume 2020 ; 2020 ; https://openscreensjournal.com/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2021 ; 4 ; Open Screens Volume 2021 [superseded] ; 2021 ; https://openscreensjournal.com/ ; >
 
   }
@@ -358,8 +358,8 @@
       au < finished ; finished ; 2016 ; 2016 ; Body, Space & Technology Volume 2016 ; 2016 ; https://www.bstjournal.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; 2017 ; Body, Space & Technology Volume 2017 ; 2017 ; https://www.bstjournal.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; 2018 ; Body, Space & Technology Volume 2018 ; 2018 ; https://www.bstjournal.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2019 ; 2019 ; Body, Space & Technology Volume 2019 ; 2019 ; https://www.bstjournal.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2020 ; 2020 ; Body, Space & Technology Volume 2020 ; 2020 ; https://www.bstjournal.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2019 ; 2019 ; Body, Space & Technology Volume 2019 ; 2019 ; https://www.bstjournal.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2020 ; 2020 ; Body, Space & Technology Volume 2020 ; 2020 ; https://www.bstjournal.com/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2021 ; 2021 ; Body, Space & Technology Volume 2021 [superseded] ; 2021 ; https://www.bstjournal.com/ ; >
 
   }
@@ -390,7 +390,7 @@
       au < finished ; finished ; 2016 ; 12 ; Digital Medievalist Volume 2016 ; 2016 ; https://journal.digitalmedievalist.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; 13 ; Digital Medievalist Volume 2017 ; 2017 ; https://journal.digitalmedievalist.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; 14 ; Digital Medievalist Volume 2018 ; 2018 ; https://journal.digitalmedievalist.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2019 ; 15 ; Digital Medievalist Volume 2019 ; 2019 ; https://journal.digitalmedievalist.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 15 ; Digital Medievalist Volume 2019 ; 2019 ; https://journal.digitalmedievalist.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; 16 ; Digital Medievalist Volume 2020 ; 2020 ; https://journal.digitalmedievalist.org/ ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2021 ; 17 ; Digital Medievalist Volume 2021 [superseded] ; 2021 ; https://journal.digitalmedievalist.org/ ; >
 
@@ -416,8 +416,8 @@
       au < finished ; finished ; 2016 ; 2016 ; Digital Studies / Le champ numérique Volume 2016 ; 2016 ; https://www.digitalstudies.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; 2017 ; Digital Studies / Le champ numérique Volume 2017 ; 2017 ; https://www.digitalstudies.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; 2018 ; Digital Studies / Le champ numérique Volume 2018 ; 2018 ; https://www.digitalstudies.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2019 ; 2019 ; Digital Studies / Le champ numérique Volume 2019 ; 2019 ; https://www.digitalstudies.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2020 ; 2020 ; Digital Studies / Le champ numérique Volume 2020 ; 2020 ; https://www.digitalstudies.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 2019 ; Digital Studies / Le champ numérique Volume 2019 ; 2019 ; https://www.digitalstudies.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2020 ; 2020 ; Digital Studies / Le champ numérique Volume 2020 ; 2020 ; https://www.digitalstudies.org/ ; reingest4.clockss.org:8082 >
       au < superseded ; exists ; 2021 ; 2021 ; Digital Studies / Le champ numérique Volume 2021 [superseded] ; 2021 ; https://www.digitalstudies.org/ ; >
 
   }
@@ -439,8 +439,8 @@
       au < finished ; finished ; 2016 ; 2 ; Le foucaldien Volume 2016 ; 2016 ; https://foucaldien.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; 3 ; Le foucaldien Volume 2017 ; 2017 ; https://foucaldien.net/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; 4 ; Le foucaldien Volume 2018 ; 2018 ; https://foucaldien.net/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2019 ; 5 ; Le foucaldien Volume 2019 ; 2019 ; https://foucaldien.net/ ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2020 ; 6 ; Le foucaldien Volume 2020 ; 2020 ; https://foucaldien.net/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 5 ; Le foucaldien Volume 2019 ; 2019 ; https://foucaldien.net/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2020 ; 6 ; Le foucaldien Volume 2020 ; 2020 ; https://foucaldien.net/ ; reingest4.clockss.org:8082 >
       au < superseded ; exists ; 2021 ; 7 ; Le foucaldien Volume 2021 [superseded] ; 2021 ; https://foucaldien.net/ ; >
 
   }
@@ -459,9 +459,73 @@
 
 
       au < finished ; crawling ; 2018 ; 1 ; Journal of Embodied Research Volume 2018 ; 2018 ; https://jer.openlibhums.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2019 ; 2 ; Journal of Embodied Research Volume 2019 ; 2019 ; https://jer.openlibhums.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2019 ; 2 ; Journal of Embodied Research Volume 2019 ; 2019 ; https://jer.openlibhums.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; 3 ; Journal of Embodied Research Volume 2020 ; 2020 ; https://jer.openlibhums.org/ ; reingest1.clockss.org:8082 >
 
+  }
+
+  {
+
+      title <
+        name = Architectural Histories ;
+        eissn = 2050-5833
+      >
+
+      comment[publisher] = Open Library of Humanities, previously Ubiquity Press
+#      param[base_url] = http://journal.eahn.org/
+
+      au < finished ; finished ; 2013 ; 1 ; Architectural Histories Volume 2013 ; 2013 ; http://journal.eahn.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; 2 ; Architectural Histories Volume 2014 ; 2014 ; http://journal.eahn.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2015 ; 3 ; Architectural Histories Volume 2015 ; 2015 ; http://journal.eahn.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; 4 ; Architectural Histories Volume 2016 ; 2016 ; http://journal.eahn.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; 5 ; Architectural Histories Volume 2017 ; 2017 ; http://journal.eahn.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 6 ; Architectural Histories Volume 2018 ; 2018 ; https://journal.eahn.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 7 ; Architectural Histories Volume 2019 ; 2019 ; https://journal.eahn.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2020 ; 8 ; Architectural Histories Volume 2020 ; 2020 ; https://journal.eahn.org/ ; reingest3.clockss.org:8083 >
+      au < superseded ; exists ; 2021 ; 9 ; Architectural Histories Volume 2021 [superseded] ; 2021 ; https://journal.eahn.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2022 ; 10 ; Architectural Histories Volume 2022 ; 2022 ; https://journal.eahn.org/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Portuguese Linguistics ;
+        issn = 1645-4537 ;
+        eissn = 2397-5563
+      >
+
+      comment[publisher] = Open Library of Humanities, previously Ubiquity Press
+#      param[base_url] = http://jpl.letras.ulisboa.pt/
+      #Moved to Open Library of Humanities. Moved to Janeway
+
+      au < finished ; finished ; 2015 ; 1 ; Journal of Portuguese Linguistics Volume 2015 ; 2015 ; http://jpl.letras.ulisboa.pt/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2016 ; 2 ; Journal of Portuguese Linguistics Volume 2016 ; 2016 ; http://jpl.letras.ulisboa.pt/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2017 ; 3 ; Journal of Portuguese Linguistics Volume 2017 ; 2017 ; http://jpl.letras.ulisboa.pt/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2018 ; 4 ; Journal of Portuguese Linguistics Volume 2018 ; 2018 ; https://jpl.letras.ulisboa.pt/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 5 ; Journal of Portuguese Linguistics Volume 2019 ; 2019 ; https://jpl.letras.ulisboa.pt/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2020 ; 6 ; Journal of Portuguese Linguistics Volume 2020 ; 2020 ; https://jpl.letras.ulisboa.pt/ ; reingest4.clockss.org:8082 >
+      #Moved to OLH/Janeway
+  }
+
+  {
+
+      title <
+        name = Laboratory Phonology: Journal of the Association for Laboratory Phonology ;
+        eissn = 1868-6354
+      >
+
+      comment[publisher] = Open Library of Humanities, previously Ubiquity Press
+#      param[base_url] = http://www.journal-labphon.org/
+      #Moved to OLH / Janeway
+
+      au < finished ; finished ; 2016 ; 1 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2016 ; 2016 ; http://www.journal-labphon.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; 2 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2017 ; 2017 ; http://www.journal-labphon.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2018 ; 3 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2018 ; 2018 ; https://www.journal-labphon.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2019 ; 4 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2019 ; 2019 ; https://www.journal-labphon.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 5 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2020 ; 2020 ; https://www.journal-labphon.org/ ; reingest3.clockss.org:8083 >
+      au < superseded ; exists ; 2021 ; 6 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2021 [superseded] ; 2021 ; https://www.journal-labphon.org/ ; >
+      #Moved to OLH / Janeway
   }
 
 }

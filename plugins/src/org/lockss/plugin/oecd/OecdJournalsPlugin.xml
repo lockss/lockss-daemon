@@ -74,7 +74,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"OECD iLibrary Journals Plugin, Base URL %s, Journal ID %s, Volume %s, Journal Directory %s, Topic %s, Journal ISSN %s", base_url, journal_id, volume_name, journal_dir, topic, journal_issn</string>
+        <string>"OECD iLibrary Journals Plugin, Base URL %s, Volume %s, Journal Directory %s, Topic %s, Journal ISSN %s", base_url, volume_name, journal_dir, topic, journal_issn</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -84,15 +84,6 @@ POSSIBILITY OF SUCH DAMAGE.
                 <displayName>Base URL</displayName>
                 <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
                 <type>3</type>
-                <size>40</size>
-                <definitional>true</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
-            <org.lockss.daemon.ConfigParamDescr>
-                <key>journal_id</key>
-                <displayName>Journal Identifier</displayName>
-                <description>Identifier for journal (often used as part of file names)</description>
-                <type>1</type>
                 <size>40</size>
                 <definitional>true</definitional>
                 <defaultOnly>false</defaultOnly>
@@ -134,6 +125,12 @@ POSSIBILITY OF SUCH DAMAGE.
         </list>
     </entry>
     <entry>
+        <string>au_start_url</string>
+        <!-- https://www.oecd-ilibrary.org/economics/oecd-journal-journal-of-business-cycle-measurement-and-analysis_19952899/lockssissues?volume=2015
+             https://www.oecd-ilibrary.org/nuclear-energy/nuclear-law-bulletin_16097378/lockssissues?volume=2021 -->
+        <string>"%s%s/%s_%s/lockssissues?volume=%s", base_url, topic, journal_dir, journal_issn, volume_name</string>
+    </entry>
+    <entry>
         <string>au_crawlrules</string>
         <list>
             <string>1,"^%s[^?]*\.(bmp|css|gif|ico|svg|eot|ttf|woff2?|jpe?g|js|png|tif?f)(\?.+)?$", base_url</string>
@@ -153,7 +150,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>1,"^%s%s/", base_url, topic</string>
             <!-- citation dialogue
             /content/publication/jbcma-v2015-1-en/citation-->
-            <string>1,"^%scontent/.+/citation", base_url, journal_id</string>
+            <string>1,"^%scontent/.+/citation", base_url</string>
             <!-- citation
               <article-url>/cite/ris &  <article-url>/cite/endnote &  <article-url>/cite/txt & <article-url>/cite/bib -->
             <string>1,"^%s.+/cite/(ris|endnote|txt|bib)$", base_url</string>
@@ -173,16 +170,10 @@ POSSIBILITY OF SUCH DAMAGE.
         </list>
     </entry>
     <entry>
-        <string>au_start_url</string>
-        <!-- https://www.oecd-ilibrary.org/economics/oecd-journal-journal-of-business-cycle-measurement-and-analysis_19952899/lockssissues?volume=2015
-             https://www.oecd-ilibrary.org/nuclear-energy/nuclear-law-bulletin_16097378/lockssissues?volume=2021 -->
-        <string>"%s%s/%s_%s/lockssissues?volume=%s", base_url, topic, journal_dir, journal_issn, volume_name</string>
-    </entry>
-    <entry>
         <string>au_substance_url_pattern</string>
         <list>
             <!-- article, and pdf -->
-            <string>"%s%s/.*_%s-%s", base_url, topic, journal_id, volume_name</string>
+            <!--<string>"%s%s/.*_%s-%s", base_url, topic, journal_id, volume_name</string>-->
             <string>"%s.+\.pdf", base_url</string>
         </list>
     </entry>

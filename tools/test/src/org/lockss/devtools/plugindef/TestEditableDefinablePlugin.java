@@ -205,6 +205,7 @@ public class TestEditableDefinablePlugin
     "RetryableNetworkException_5_5M",
     "WarningOnly",
     "NoStoreWarningOnly",
+    "RedirectToLoginPageException",
   };
 
   public void testGetKnownCacheExceptions() {

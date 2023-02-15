@@ -1,3 +1,34 @@
+<!--
+
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
 <map>
 <!--  This plugin is used to HARVEST the content received via file-transfer and thence made in to a 
       crawlable website.  We will trigger from the harvested version of the content as per the trigger guidelines
@@ -12,8 +43,16 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
+    <entry>
+      <string>plugin_parent</string>
+      <string>org.lockss.plugin.clockss.ClockssSourcePlugin</string>
+    </entry>
+    <entry>
+      <string>plugin_parent_version</string>
+      <string>15</string>
+    </entry>
   <entry>
     <string>au_name</string>
     <string>"SAGE Publications Baywood Publishing Company Triggered Content Plugin (CLOCKSS), Base URL %s, Journal Abbreviation %s, Volume %s", base_url, journal_id, volume_name</string>
@@ -54,11 +93,6 @@
         </list>
       </entry>
     </map>
-  </entry>
-  <entry>
-<!--  we only harvest from our own servers -->
-    <string>au_def_pause_time</string>
-    <long>100</long>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>

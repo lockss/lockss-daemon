@@ -60,7 +60,7 @@ public class TestScienceOpenMetadataExtractor extends SourceXmlMetadataExtractor
     private static final Logger log = Logger.getLogger(TestScienceOpenMetadataExtractor.class);
 
     private static String BaseUrl = "http://source.host.org/sourcefiles/scienceopen/";
-    private static String Directory = "2020";
+    private static String Directory = "2021_01";
 
     private ArchivalUnit bau;
     static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
@@ -81,35 +81,17 @@ public class TestScienceOpenMetadataExtractor extends SourceXmlMetadataExtractor
 
     }
 
-    private String getXmlFileContent(String fname) {
-        String xmlContent = "";
-        InputStream file_input = null;
-
-        try {
-            file_input = getResourceAsStream(fname);
-            xmlContent = StringUtil.fromInputStream(file_input);
-            IOUtil.safeClose(file_input);
-        } catch (IOException e) {
-            log.error(e.getMessage(), e);
-        } finally {
-            IOUtil.safeClose(file_input);
-        }
-        return xmlContent;
-    }
-
     private List<ArticleMetadata> setupContentForAU(ArchivalUnit au,
                                                     String fname
     ) throws IOException, PluginException {
-        String content = getXmlFileContent(fname);
-        return setupContentForAU(au, fname, content);
+      return setupContentForAU(au, fname, getResourceAsStream(fname));
     }
 
     private List<ArticleMetadata> setupContentForAU(ArchivalUnit au,
                                                     String fname,
-                                                    String content
-    ) throws IOException, PluginException {
+                                                    InputStream input)
+      throws IOException, PluginException {
         String url =  BaseUrl + Directory + "/" + fname;
-        InputStream input = IOUtils.toInputStream(content, "utf-8");
         CIProperties xmlHead = new CIProperties();
         xmlHead.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
         FileMetadataExtractor me =
@@ -149,7 +131,7 @@ public class TestScienceOpenMetadataExtractor extends SourceXmlMetadataExtractor
     public void testExtractArticleXmlSchemaFromNonStandardJATS() throws Exception {
 
         String fname = "sample_test_non_standard_jats.xml";
-        String journalXml = getXmlFileContent(fname);
+        String journalXml = getResourceContent(fname);
         assertNotNull(journalXml);
 
         String xml_url = BaseUrl + Directory + "/" + fname;

@@ -1,7 +1,6 @@
 /*
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -48,6 +47,19 @@ import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 public class TaylorAndFrancisHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
 
   static NodeFilter[] filters = new NodeFilter[]{
+
+    /***** 8/23/22 a change from literatum -> ajax. This may be implemented in BaseAtypon... at some point. ****/
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ajaxAltmetricTopCitedArticlesWidget"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ajaxMostReadWidget"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ajaxMostCitedWidget"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ajaxMostRecentWidget"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ajaxOpenAccessWidget"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ajaxBookIssueNavigation"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ajaxAd"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ajaxListOfIssuesWidget"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ajaxListOfIssuesResponsiveWidget"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ajaxBreadcrumbs"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ajaxRelatedArticles"),
         
     /*******based on analysis on 3/31/17*****************/
     // found overcrawling due to new section at the bottom of full-text called "Notes" with

@@ -36,6 +36,7 @@ package org.lockss.plugin.clockss.iop;
 import java.io.*;
 import java.util.*;
 
+import org.lockss.config.TdbAu;
 import org.lockss.util.*;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.lockss.daemon.*;
@@ -174,8 +175,8 @@ public class IopArticleXmlMetadataExtractorFactory extends SourceXmlMetadataExtr
 		  // 1. customer xml, which is handled by if(cu.getUrl().endsWith("article"))
 		  // 2. Jats format, which is handled by the second if-else
 		  // 3. Brutal assumption here, the third case has "cm5" in filename
-		  // http://clockss-ingest.lockss.org/sourcefiles/iop-released/2020_2/12-05-2020/0953-8984.tar.gz!/0953-8984/17/37/012/cm5_37_012.xml
-		  // http://clockss-ingest.lockss.org/sourcefiles/iop-released/2020_2/12-05-2020/0953-8984.tar.gz!/0953-8984/17/37/012/cm5_37_012.xml
+		  // http://clockss-ingest.lockss.org/sourcefiles/2020_2/12-05-2020/0953-8984.tar.gz!/0953-8984/17/37/012/cm5_37_012.xml
+		  // http://clockss-ingest.lockss.org/sourcefiles/2020_2/12-05-2020/0953-8984.tar.gz!/0953-8984/17/37/012/cm5_37_012.xml
 		  if(cu.getUrl().endsWith("article")) {
 		  		log.debug3("Xml format: Article schema : "  + cu.getUrl());
 		  		if (ArticlePublishingHelper == null) {
@@ -259,6 +260,38 @@ public class IopArticleXmlMetadataExtractorFactory extends SourceXmlMetadataExtr
 	  @Override
 	  public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
 			  throws IOException, PluginException {
+
+    	// In Nov/2022, the decision is made to use 2022 buckets to replace 2020 and 2021 content,
+		//  based on publisher's request. So this method emit Null metadata to get records in DB get
+		// purged on purpose
+		  
+		  TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
+		  String directory = null;
+		  
+		  if (tdbau != null) {
+			  directory  = tdbau.getParam("directory");
+			  log.debug3("Suppressing emit of metadata in Null extractor. contains 2020 or 2021 bucket, directory = "
+					  + directory );
+		  } else {
+			  log.debug3("Suppressing emit of metadata in Null extractor. contains 2020 or 2021 bucket, tdbau directory is null");
+		  }
+
+    	if (	directory != null && (directory.contains("2020_1") ||
+				directory.contains("2020_2") ||
+				directory.contains("2020_3") ||
+				directory.contains("2020_4") ||
+				directory.contains("2021_01") ||
+				directory.contains("2021_02") ||
+				directory.contains("2021_03") ||
+				directory.contains("2021_04")) )
+		{
+			log.debug3("Suppressing emit of metadata in Null extractor. ontains 2020 or 2021 bucket " + directory);
+			// do nothing, do not allow TDB info to get used as default
+			// by not emitting
+
+			return;
+		}
+
 		  try {
 			  SourceXmlSchemaHelper schemaHelper;
 			  // 1. figure out which XmlMetadataExtractorHelper class to use to get

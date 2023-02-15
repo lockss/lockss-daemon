@@ -109,6 +109,10 @@ public class ClockssUrlFetcher implements UrlFetcher {
     return uf.getWatchdog();
   }
 
+  public void pokeWatchdog() {
+    getWatchdog().pokeWDog();
+  }
+
   public void setCrawlRateLimiter(CrawlRateLimiter crl) {
     uf.setCrawlRateLimiter(crl);
   }

@@ -28,26 +28,10 @@ public class TestEastviewMarcXmlMetadataExtractorFactory extends SourceXmlMetada
     private static String pdfUrl1 = BaseUrl + Directory + "/1275770BO.pdf";
     private static String pdfUrl2 = BaseUrl + Directory + "/1275773BO.pdf";
 
-    private String getXmlFileContent(String fname) {
-        String xmlContent = "";
-        InputStream file_input = null;
-
-        try {
-            file_input = getResourceAsStream(fname);
-            xmlContent = StringUtil.fromInputStream(file_input);
-            IOUtil.safeClose(file_input);
-        } catch (IOException e) {
-            log.error(e.getMessage(), e);
-        } finally {
-            IOUtil.safeClose(file_input);
-        }
-        return xmlContent;
-    }
-
     public void testExtractArticleXmlSchema() throws Exception {
 
         String fname = "TestEastviewMarcSample.xml";
-        String journalXml = getXmlFileContent(fname);
+        String journalXml = getResourceContent(fname);
         assertNotNull(journalXml);
 
         String xml_url = BaseUrl + Directory + "/" + fname;

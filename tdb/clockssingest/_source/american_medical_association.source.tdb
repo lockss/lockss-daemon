@@ -6,6 +6,9 @@
     info[tester] = S ;
     info[platform] = WARC
   >
+    hidden[proxy] = DIRECT
+    plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
+    implicit < status ; status2 ; year ; name ; param[year] >
 
   {
 
@@ -17,17 +20,20 @@
     # This content was collected using wget and provided for preservation as a
     # set of WARC files
     # WARC content collected from http://journalofethics.ama-assn.org/
-
-    plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
+    {
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/ama-journal-of-ethics-released/
-    hidden[proxy] = DIRECT
-    implicit < status ; status2 ; year ; name ; param[year] >
 
     au < zapped ; finished ; 2016 ; AMA Journal of Ethics WARC Content 2016 ; 2016 >
     #this replaces the previous WARC collection
     au < zapped ; finished ; 2018 ; AMA Journal of Ethics WARC Content 2018 ; 2018 >
-    au < readySource ; crawling ; 2020 ; AMA Journal of Ethics WARC Content 2020 ; 2020 >
+    au < readySource ; finished ; 2020 ; AMA Journal of Ethics WARC Content 2020 ; 2020 >
+    # No more AUs. Moved to https.
+    }
+    {
+    param[base_url] = https://clockss-ingest.lockss.org/warcfiles/ama-journal-of-ethics-released/
 
+    au < expected ; exists ; 2023 ; AMA Journal of Ethics WARC Content 2023 ; 2023 >
+    }
   }
 
 }

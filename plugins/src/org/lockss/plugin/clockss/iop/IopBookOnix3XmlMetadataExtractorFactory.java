@@ -112,9 +112,9 @@ public class IopBookOnix3XmlMetadataExtractorFactory extends SourceXmlMetadataEx
             String cuBase = FilenameUtils.getFullPath(cu.getUrl());
 
             if (filenameValue != null) {
-                log.debug3("Fei: PDF file path is : " + cuBase + filenameValue);
+                log.debug3("PDF file path is : " + cuBase + filenameValue);
             } else {
-                log.debug3("Fei: PDF file path not found : " + cuBase);
+                log.debug3("PDF file path not found : " + cuBase);
             }
 
             String fullPathFile = UrlUtil.minimallyEncodeUrl(cuBase + filenameValue + ".pdf");

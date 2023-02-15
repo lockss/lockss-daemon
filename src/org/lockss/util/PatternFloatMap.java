@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2022 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,122 +29,95 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.util.*;
-import java.text.*;
-import org.apache.commons.collections.map.*;
-import org.apache.oro.text.regex.*;
 
 /** "Map" strings to floats, where the keys are patterns against which the
  * strings are matched.  The patterns are ordered; the value associated
  * with the first one that matches is returned.  */
-
-// Should genericize (along with PatternIntMap) but need to find a way to
-// do type-depending string parsing.
-
-public class PatternFloatMap {
+public class PatternFloatMap extends AbstractPatternMap<Float> {
   static Logger log = Logger.getLogger("PatternFloatMap");
 
   /** An empty PatternFloatMap, which always returns the default value. */
   public final static PatternFloatMap EMPTY =
-    new PatternFloatMap(Collections.EMPTY_LIST);
+    new PatternFloatMap(Collections.emptyList());
 
-  private Map<Pattern,Float> patternMap;
+  private PatternFloatMap() {
+    super();
+  }
 
   /** Create a PatternFloatMap from a list of strings of the form
-   * <code><i>RE</i>,<i>int</i></code> */
+   * <code><i>RE</i>,<i>float</i></code>
+   * @deprecated use {@link #fromSpec()}
+   */
+  @Deprecated
   public PatternFloatMap(List<String> patternPairs)
       throws IllegalArgumentException {
-    makePatternMap(patternPairs);
+    super(patternPairs);
   }
 
   /** Create a PatternFloatMap from a string of the form
-   * <code><i>RE</i>,<i>float</i>[;<i>RE</i>,<i>float</i> ...]</code> */
+   * <code><i>RE</i>,<i>float</i>[;<i>RE</i>,<i>float</i> ...]</code>
+   * @deprecated use {@link #fromSpec()}
+   */
+  @Deprecated
   public PatternFloatMap(String spec)
       throws IllegalArgumentException {
-    makePatternMap(StringUtil.breakAt(spec, ";", -1, true, true));
+    super(spec);
   }
 
-  private void makePatternMap(List<String> patternPairs)
+  /** Create a PatternFloatMap from a list of strings of the form
+   * <code><i>RE</i>,<i>float</i></code>
+   */
+  public static PatternFloatMap fromSpec(List<String> patternPairs)
       throws IllegalArgumentException {
-    if (patternPairs != null) {
-      patternMap = new LinkedMap();
-      for (String pair : patternPairs) {
-	// Find the last occurrence of comma to avoid regexp quoting
-	int pos = pair.lastIndexOf(',');
-	if (pos < 0) {
-	  throw new IllegalArgumentException("Malformed pattern,float pair; no comma: "
-					     + pair);
-	}
-	String regexp = pair.substring(0, pos);
-	String pristr = pair.substring(pos + 1);
-	float pri;
-	Pattern pat;
-	try {
-	  pri = Float.parseFloat(pristr);
-	  int flags = Perl5Compiler.READ_ONLY_MASK;
-	  pat = RegexpUtil.getCompiler().compile(regexp, flags);
-	  patternMap.put(pat, pri);
-	} catch (NumberFormatException e) {
-	  throw new IllegalArgumentException("Illegal priority: " + pristr);
-	} catch (MalformedPatternException e) {
-	  throw new IllegalArgumentException("Illegal regexp: " + regexp);
-	}
-      }
-    }
+    return (PatternFloatMap)new PatternFloatMap().parseSpec(patternPairs);
+  }
+
+  /** Create a PatternFloatMap from a string of the form
+   * <code><i>RE</i>,<i>string</i>[;<i>RE</i>,<i>string</i> ...]</code> */
+  public static PatternFloatMap fromSpec(String spec)
+      throws IllegalArgumentException {
+    return (PatternFloatMap)new PatternFloatMap().parseSpec(specList(spec));
+  }
+
+  protected Float parseRhs(String rhs) throws NumberFormatException {
+    return Float.parseFloat(rhs);
   }
 
   /** Return the value associated with the first pattern that the string
-   * matches, or zero if none */
-  public float getMatch(String str) {
-    return getMatch(str, 0);
+   * matches, or 0.0 if none match.
+   * @param str the string to match against the LHS patterns.
+   * @return the value associated with the first pattern that matches
+   * str, or 0.0 if none match.
+   */
+  public Float getMatch(String str) {
+    return super.getMatch(str, 0.0F);
   }
 
   /** Return the value associated with the first pattern that the string
-   * matches, or the specified default value if none */
-  public float getMatch(String str, float dfault) {
-    return getMatch(str, dfault, Float.MAX_VALUE);
+   * matches, or the specified default value if none.
+   * @param str the string to match against the LHS patterns.
+   * @param dfault the value to return if no pattern matches str.
+   * @return the value associated with the first pattern that matches
+   * str, or dfault if none match.
+   */
+  public Float getMatch(String str, float dfault) {
+    return super.getMatch(str, dfault);
   }
 
   /** Return the value associated with the first pattern that the string
    * matches, or the specified default value if none, considering only
+   * patterns whose associated value is no greater than maxPri
+   * @param str the string to match against the LHS patterns.
+   * @param dfault the value to return if no pattern (whose value
+   * is less than or equal to maxPri) matches str.
+   * @param maxPri the largest acceptable result value
+   * @return the first value LE maxPri associated with a pattern that
+   * matches str.
+   */
+  /** Return the value associated with the first pattern that the string
+   * matches, or the specified default value if none, considering only
    * patterns whose associated value is less than or equal to maxPri. */
-  public float getMatch(String str, float dfault, float maxPri) {
-    Perl5Matcher matcher = RegexpUtil.getMatcher();
-    for (Map.Entry<Pattern,Float> ent : patternMap.entrySet()) {
-      if (ent.getValue() <= maxPri) {
-	Pattern pat = ent.getKey();
-	if (matcher.contains(str, pat)) {
-	  log.debug2("getMatch(" + str + "): " + ent.getValue());
-	  return ent.getValue();
-	}
-      }
-    }
-    log.debug2("getMatch(" + str + "): default: " + dfault);
-    return dfault;
-  }
-
-  public boolean isEmpty() {
-    return patternMap.isEmpty();
-  }
-
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("[pm: ");
-    if (patternMap.isEmpty()) {
-      sb.append("EMPTY");
-    } else {
-      for (Iterator<Map.Entry<Pattern,Float>> iter = patternMap.entrySet().iterator(); iter.hasNext(); ) {
-	Map.Entry<Pattern,Float> ent = iter.next();
-	sb.append("[");
-	sb.append(ent.getKey().getPattern());
-	sb.append(": ");
-	sb.append(ent.getValue());
-	sb.append("]");
-	if (iter.hasNext()) {
-	  sb.append(", ");
-	}
-      }
-    }
-    sb.append("]");
-    return sb.toString();
+  public Float getMatch(String str, float dfault, float maxPri) {
+    return super.getMatch(str, dfault, x -> x <= maxPri);
   }
 }

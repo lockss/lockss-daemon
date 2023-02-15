@@ -556,7 +556,7 @@
     au < released ; 2018 ; 2018 ; Annals of Otology and Neurotology Volume 1 ; 1 >
     au < released ; 2019 ; 2019 ; Annals of Otology and Neurotology Volume 2 ; 2 >
     au < released ; 2020 ; 2020 ; Annals of Otology and Neurotology Volume 3 ; 3 >
-    au < expected ; 2021 ; 2021 ; Annals of Otology and Neurotology Volume 4 ; 4 >
+    au < manifest ; 2021 ; 2021 ; Annals of Otology and Neurotology Volume 4 ; 4 >
     au < expected ; 2022 ; 2022 ; Annals of Otology and Neurotology Volume 5 ; 5 >
 
    }
@@ -653,6 +653,29 @@
    }
 
    {
+    title <
+      name = Asian Journal of Neurosurgery ;
+      issn = 1793-5482 ;
+      eissn = 2248-9614 ;
+      issnl = 1793-5482 ;
+      doi = 10.1055/s-00053244
+    >
+      param[journal_id] = 10.1055/s-00053244
+      comment[years] = 2015-current
+      #Moved from Medknow.
+
+    au < manifest ; 2015 ; 2015 ; Asian Journal of Neurosurgery Volume 10 ; 10 >
+    au < manifest ; 2016 ; 2016 ; Asian Journal of Neurosurgery Volume 11 ; 11 >
+    au < manifest ; 2017 ; 2017 ; Asian Journal of Neurosurgery Volume 12 ; 12 >
+    au < manifest ; 2018 ; 2018 ; Asian Journal of Neurosurgery Volume 13 ; 13 >
+    au < manifest ; 2019 ; 2019 ; Asian Journal of Neurosurgery Volume 14 ; 14 >
+    au < manifest ; 2020 ; 2020 ; Asian Journal of Neurosurgery Volume 15 ; 15 >
+    au < manifest ; 2021 ; 2021 ; Asian Journal of Neurosurgery Volume 16 ; 16 >
+    au < manifest ; 2022 ; 2022 ; Asian Journal of Neurosurgery Volume 17 ; 17 >
+
+   }
+
+   {
      title <
        name = Avicenna Journal of Medicine ;
        issn = 2231-0770 ;
@@ -661,7 +684,7 @@
        doi = 10.1055/s-00051312
     >
      param[journal_id] = 10.1055/s-00051312
-    comment[years] = 2011-current
+     comment[years] = 2011-current
      #Moved from Medknow
 
      au < doNotProcess ; 2011 ; 2011 ; Avicenna Journal of Medicine Volume 1 ; 1 >
@@ -858,7 +881,7 @@
     au < released ; 2018 ; 2018 ; Clinics in Colon and Rectal Surgery Volume 31 ; 31 >
     au < released ; 2019 ; 2019 ; Clinics in Colon and Rectal Surgery Volume 32 ; 32 >
     au < released ; 2020 ; 2020 ; Clinics in Colon and Rectal Surgery Volume 33 ; 33 >
-    au < manifest ; 2021 ; 2021 ; Clinics in Colon and Rectal Surgery Volume 34 ; 34 >
+    au < released ; 2021 ; 2021 ; Clinics in Colon and Rectal Surgery Volume 34 ; 34 >
     au < manifest ; 2022 ; 2022 ; Clinics in Colon and Rectal Surgery Volume 35 ; 35 >
 
   }
@@ -2401,6 +2424,28 @@
   }
 
   {
+
+      title <
+        name = Ibnosina Journal of Medicine and Biomedical Sciences ;
+        eissn = 1947-489X ;
+        doi = 10.1055/s-00053247
+      >
+      param[journal_id] = 10.1055/s-00053247
+      comment[years] = 2015-current
+      #Moved from Medknow.
+
+      au < manifest ; 2015 ; 2015 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 7 ; 7 >
+      au < manifest ; 2016 ; 2016 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 8 ; 8 >
+      au < manifest ; 2017 ; 2017 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 9 ; 9 >
+      au < manifest ; 2018 ; 2018 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 10 ; 10 >
+      au < manifest ; 2019 ; 2019 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 11 ; 11 >
+      au < manifest ; 2020 ; 2020 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 12 ; 12 >
+      au < manifest ; 2021 ; 2021 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 13 ; 13 >
+      au < manifest ; 2022 ; 2022 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 14 ; 14 >
+
+  }
+
+  {
     title <
       name = Im OP ;
       issn = 1611-7905 ;
@@ -2480,7 +2525,7 @@
    au < released ; 2019 ; 2019 ; Indian Journal of Neurotrauma Volume 16 ; 16 >
    au < released ; 2020 ; 2020 ; Indian Journal of Neurotrauma Volume 17 ; 17 >
    au < released ; 2021 ; 2021 ; Indian Journal of Neurotrauma Volume 18 ; 18 >
-   au < expected ; 2022 ; 2022 ; Indian Journal of Neurotrauma Volume 19 ; 19 >
+   au < manifest ; 2022 ; 2022 ; Indian Journal of Neurotrauma Volume 19 ; 19 >
 
   }
 
@@ -2511,10 +2556,10 @@
     au < doNotProcess ; 2016 ; 2016 ; Indian Journal of Radiology and Imaging Volume 26 ; 26 >
     au < doNotProcess ; 2017 ; 2017 ; Indian Journal of Radiology and Imaging Volume 27 ; 27 >
     au < doNotProcess ; 2018 ; 2018 ; Indian Journal of Radiology and Imaging Volume 28 ; 28 >
-    au < manifest ; 2019 ; 2019 ; Indian Journal of Radiology and Imaging Volume 29 ; 29 >
-    au < manifest ; 2020 ; 2020 ; Indian Journal of Radiology and Imaging Volume 30 ; 30 >
+    au < released ; 2019 ; 2019 ; Indian Journal of Radiology and Imaging Volume 29 ; 29 >
+    au < released ; 2020 ; 2020 ; Indian Journal of Radiology and Imaging Volume 30 ; 30 >
     au < released ; 2021 ; 2021 ; Indian Journal of Radiology and Imaging Volume 31 ; 31 >
-    au < expected ; 2022 ; 2022 ; Indian Journal of Radiology and Imaging Volume 32 ; 32 >
+    au < manifest ; 2022 ; 2022 ; Indian Journal of Radiology and Imaging Volume 32 ; 32 >
 
   }
 
@@ -2551,7 +2596,7 @@
    au < released ; 2019 ; 2019 ; Informationen aus Orthodontie & Kieferorthopädie Volume 51 ; 51 >
    au < released ; 2020 ; 2020 ; Informationen aus Orthodontie & Kieferorthopädie Volume 52 ; 52 >
    au < released ; 2021 ; 2021 ; Informationen aus Orthodontie & Kieferorthopädie Volume 53 ; 53 >
-   au < expected ; 2022 ; 2022 ; Informationen aus Orthodontie & Kieferorthopädie Volume 54 ; 54 >
+   au < manifest ; 2022 ; 2022 ; Informationen aus Orthodontie & Kieferorthopädie Volume 54 ; 54 >
 
   }
 
@@ -4050,7 +4095,7 @@
     au < released ; 2018 ; 2018 ; Neonatologie Scan Volume 6 ; 6 >
     au < released ; 2019 ; 2019 ; Neonatologie Scan Volume 7 ; 7 >
     au < released ; 2020 ; 2020 ; Neonatologie Scan Volume 8 ; 8 >
-    au < manifest ; 2021 ; 2021 ; Neonatologie Scan Volume 9 ; 9 >
+    au < released ; 2021 ; 2021 ; Neonatologie Scan Volume 9 ; 9 >
     au < manifest ; 2022 ; 2022 ; Neonatologie Scan Volume 10 ; 10 >
 
   }
@@ -4170,7 +4215,7 @@
     au < released ; 2018 ; 2018 ; Neuroradiologie Scan Volume 8 ; 8 >
     au < released ; 2019 ; 2019 ; Neuroradiologie Scan Volume 9 ; 9 >
     au < released ; 2020 ; 2020 ; Neuroradiologie Scan Volume 10 ; 10 >
-    au < manifest ; 2021 ; 2021 ; Neuroradiologie Scan Volume 11 ; 11 >
+    au < released ; 2021 ; 2021 ; Neuroradiologie Scan Volume 11 ; 11 >
     au < manifest ; 2022 ; 2022 ; Neuroradiologie Scan Volume 12 ; 12 >
 
   }
@@ -4236,7 +4281,7 @@
     au < released ; 2018 ; 2018 ; Notarzt Der Volume 34 ; 34 >
     au < released ; 2019 ; 2019 ; Notarzt Der Volume 35 ; 35 >
     au < released ; 2020 ; 2020 ; Notarzt Der Volume 36 ; 36 >
-    au < manifest ; 2021 ; 2021 ; Notarzt Der Volume 37 ; 37 >
+    au < released ; 2021 ; 2021 ; Notarzt Der Volume 37 ; 37 >
     au < manifest ; 2022 ; 2022 ; Notarzt Der Volume 38 ; 38 >
 
   }
@@ -4930,7 +4975,7 @@
    au < released ; 2018 ; 2018 ; Planta Medica International Open Volume 3 ; 3 >
    au < released ; 2019 ; 2019 ; Planta Medica International Open Volume 4 ; 4 >
    au < released ; 2020 ; 2020 ; Planta Medica International Open Volume 5 ; 5 >
-   au < manifest ; 2021 ; 2021 ; Planta Medica International Open Volume 6 ; 6 >
+   au < released ; 2021 ; 2021 ; Planta Medica International Open Volume 6 ; 6 >
    au < manifest ; 2022 ; 2022 ; Planta Medica International Open Volume 7 ; 7 >
 
   }
@@ -5489,7 +5534,7 @@
    au < released ; 2019 ; 2019 ; Seminars in Hearing Volume 40 ; 40 >
    au < released ; 2020 ; 2020 ; Seminars in Hearing Volume 41 ; 41 >
    au < released ; 2021 ; 2021 ; Seminars in Hearing Volume 42 ; 42 >
-   au < expected ; 2022 ; 2022 ; Seminars in Hearing Volume 43 ; 43 >
+   au < manifest ; 2022 ; 2022 ; Seminars in Hearing Volume 43 ; 43 >
 
   }
 
@@ -5754,7 +5799,7 @@
    au < released ; 2019 ; 2019 ; Seminars in Plastic Surgery Volume 33 ; 33 >
    au < released ; 2020 ; 2020 ; Seminars in Plastic Surgery Volume 34 ; 34 >
    au < released ; 2021 ; 2021 ; Seminars in Plastic Surgery Volume 35 ; 35 >
-   au < expected ; 2022 ; 2022 ; Seminars in Plastic Surgery Volume 36 ; 36 >
+   au < manifest ; 2022 ; 2022 ; Seminars in Plastic Surgery Volume 36 ; 36 >
 
   }
 
@@ -5785,7 +5830,7 @@
     au < doNotProcess ; 1998 ; 1998 ; Perspectives in Plastic Surgery Volume 12 ; 12 >
     au < doNotProcess ; 1999 ; 1999 ; Perspectives in Plastic Surgery Volume 13 ; 13 >
     au < doNotProcess ; 2000 ; 2000 ; Perspectives in Plastic Surgery Volume 14 ; 14 >
-    au < manifest ; 2001 ; 2001 ; Perspectives in Plastic Surgery Volume 15 ; 15 >
+    au < doNotProcess ; 2001 ; 2001 ; Perspectives in Plastic Surgery Volume 15 ; 15 >
 
   }
 
@@ -5823,7 +5868,7 @@
    au < released ; 2019 ; 2019 ; Seminars in Reproductive Medicine Volume 37 ; 37 >
    au < released ; 2020 ; 2020 ; Seminars in Reproductive Medicine Volume 38 ; 38 >
    au < released ; 2021 ; 2021 ; Seminars in Reproductive Medicine Volume 39 ; 39 >
-   au < expected ; 2022 ; 2022 ; Seminars in Reproductive Medicine Volume 40 ; 40 >
+   au < manifest ; 2022 ; 2022 ; Seminars in Reproductive Medicine Volume 40 ; 40 >
 
   }
 
@@ -6378,7 +6423,7 @@
    au < released ; 2017 ; 2017 ; SYNLETT Volume 28 ; 28 >
    au < released ; 2018 ; 2018 ; SYNLETT Volume 29 ; 29 >
    au < released ; 2019 ; 2019 ; SYNLETT Volume 30 ; 30 >
-   au < manifest ; 2020 ; 2020 ; SYNLETT Volume 31 ; 31 >
+   au < released ; 2020 ; 2020 ; SYNLETT Volume 31 ; 31 >
    au < released ; 2021 ; 2021 ; SYNLETT Volume 32 ; 32 >
    au < manifest ; 2022 ; 2022 ; SYNLETT Volume 33 ; 33 >
 
@@ -6447,7 +6492,7 @@
    au < released ; 2017 ; 2017 ; SYNTHESIS Volume 49 ; 49 >
    au < released ; 2018 ; 2018 ; SYNTHESIS Volume 50 ; 50 >
    au < released ; 2019 ; 2019 ; SYNTHESIS Volume 51 ; 51 >
-   au < manifest ; 2020 ; 2020 ; SYNTHESIS Volume 52 ; 52 >
+   au < released ; 2020 ; 2020 ; SYNTHESIS Volume 52 ; 52 >
    au < released ; 2021 ; 2021 ; SYNTHESIS Volume 53 ; 53 >
    au < manifest ; 2022 ; 2022 ; SYNTHESIS Volume 54 ; 54 >
 
@@ -7689,14 +7734,15 @@
     >
 
     param[journal_id] = 10.1055/s-00035300
-    comment[years] = 2017-current
+    comment[years] = 2017-2022
+    #move to Scientific Scholar, https://ijcdw.org by 2022-07-26
 
     au < released ; 2017 ; 2017 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 1 ; 1 >
     au < released ; 2018 ; 2018 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 2 ; 2 >
     au < released ; 2019 ; 2019 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 3 ; 3 >
     au < released ; 2020 ; 2020 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 4 ; 4 >
     au < released ; 2021 ; 2021 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 5 ; 5 >
-    au < expected ; 2022 ; 2022 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 6 ; 6 >
+    au < manifest ; 2022 ; 2022 ; Indian Journal of Cardiovascular Disease in Women WINCARS Volume 6 ; 6 >
 
   }
 
@@ -7802,7 +7848,7 @@
     au < released ; 2019 ; 2019 ; Methods of Information in Medicine Volume 58 ; 58 >
     au < released ; 2020 ; 2020 ; Methods of Information in Medicine Volume 59 ; 59 >
     au < released ; 2021 ; 2021 ; Methods of Information in Medicine Volume 60 ; 60 >
-    au < expected ; 2022 ; 2022 ; Methods of Information in Medicine Volume 61 ; 61 >
+    au < manifest ; 2022 ; 2022 ; Methods of Information in Medicine Volume 61 ; 61 >
 
   }
 
@@ -7902,7 +7948,7 @@
     au < released ; 2018 ; 2018 ; Onkologische Welt Volume 9 ; 9 >
     au < released ; 2019 ; 2019 ; Onkologische Welt Volume 10 ; 10 >
     au < released ; 2020 ; 2020 ; Onkologische Welt Volume 11 ; 11 >
-    au < manifest ; 2021 ; 2021 ; Onkologische Welt Volume 12 ; 12 >
+    au < released ; 2021 ; 2021 ; Onkologische Welt Volume 12 ; 12 >
     au < manifest ; 2022 ; 2022 ; Onkologische Welt Volume 13 ; 13 >
 
   }
@@ -8013,7 +8059,7 @@
     au < released ; 2019 ; 2019 ; Revista Iberoamericana de Cirugía de la Mano Volume 47 ; 47 >
     au < released ; 2020 ; 2020 ; Revista Iberoamericana de Cirugía de la Mano Volume 48 ; 48 >
     au < released ; 2021 ; 2021 ; Revista Iberoamericana de Cirugía de la Mano Volume 49 ; 49 >
-    au < expected ; 2022 ; 2022 ; Revista Iberoamericana de Cirugía de la Mano Volume 50 ; 50 >
+    au < manifest ; 2022 ; 2022 ; Revista Iberoamericana de Cirugía de la Mano Volume 50 ; 50 >
 
   }
 
@@ -8146,7 +8192,7 @@
     au < released ; 2019 ; 2019 ; Yearbook of Medical Informatics Volume 28 ; 28 >
     au < released ; 2020 ; 2020 ; Yearbook of Medical Informatics Volume 29 ; 29 >
     au < released ; 2021 ; 2021 ; Yearbook of Medical Informatics Volume 30 ; 30 >
-    au < expected ; 2022 ; 2022 ; Yearbook of Medical Informatics Volume 31 ; 31 >
+    au < manifest ; 2022 ; 2022 ; Yearbook of Medical Informatics Volume 31 ; 31 >
 
   }
   {
@@ -8339,7 +8385,7 @@
     au < released ; 2019 ; 2019 ; Dental Journal of Advance Studies Volume 7 ; 7 >
     au < released ; 2020 ; 2020 ; Dental Journal of Advance Studies Volume 8 ; 8 >
     au < released ; 2021 ; 2021 ; Dental Journal of Advance Studies Volume 9 ; 9 >
-    au < expected ; 2022 ; 2022 ; Dental Journal of Advance Studies Volume 10 ; 10 >
+    au < manifest ; 2022 ; 2022 ; Dental Journal of Advance Studies Volume 10 ; 10 >
 
   }
 
@@ -8439,7 +8485,7 @@
     au < released ; 2019 ; 2019 ; Hands On - Manuelle und physikalische Therapien in der Tiermedizin Volume 1 ; 1 >
     au < released ; 2020 ; 2020 ; Hands On - Manuelle und physikalische Therapien in der Tiermedizin Volume 2 ; 2 >
     au < released ; 2021 ; 2021 ; Hands On - Manuelle und physikalische Therapien in der Tiermedizin Volume 3 ; 3 >
-    au < expected ; 2022 ; 2022 ; Hands On - Manuelle und physikalische Therapien in der Tiermedizin Volume 4 ; 4 >
+    au < manifest ; 2022 ; 2022 ; Hands On - Manuelle und physikalische Therapien in der Tiermedizin Volume 4 ; 4 >
 
   }
 
@@ -8601,7 +8647,7 @@
     au < released ; 2019 ; 2019 ; International Journal of Recent Surgical and Medical Sciences Volume 5 ; 5 >
     au < released ; 2020 ; 2020 ; International Journal of Recent Surgical and Medical Sciences Volume 6 ; 6 >
     au < released ; 2021 ; 2021 ; International Journal of Recent Surgical and Medical Sciences Volume 7 ; 7 >
-    au < expected ; 2022 ; 2022 ; International Journal of Recent Surgical and Medical Sciences Volume 8 ; 8 >
+    au < manifest ; 2022 ; 2022 ; International Journal of Recent Surgical and Medical Sciences Volume 8 ; 8 >
 
   }
 
@@ -8703,7 +8749,7 @@
     au < released ; 2019 ; 2019 ; Journal of Laboratory Physicians Volume 11 ; 11 >
     au < released ; 2020 ; 2020 ; Journal of Laboratory Physicians Volume 12 ; 12 >
     au < released ; 2021 ; 2021 ; Journal of Laboratory Physicians Volume 13 ; 13 >
-    au < expected ; 2022 ; 2022 ; Journal of Laboratory Physicians Volume 14 ; 14 >
+    au < manifest ; 2022 ; 2022 ; Journal of Laboratory Physicians Volume 14 ; 14 >
 
   }
 
@@ -8761,7 +8807,8 @@
     >
 
     param[journal_id] = 10.1055/s-00043281
-    comment[years] = 2010-current
+    comment[years] = 2010-2022
+    #move to ScientificScholar on 2022-10-15
 
     au < released ; 2010 ; 2010 ; Journal of Neurosciences in Rural Practice Volume 1 ; 1 >
     au < released ; 2011 ; 2011 ; Journal of Neurosciences in Rural Practice Volume 2 ; 2 >
@@ -9138,4 +9185,20 @@
 
   }
 
+  {
+    title <
+      name = World Journal of Nuclear Medicine ;
+      issn = 1450-1147 ;
+      eissn = 1607-3312 ;
+      doi = 10.1055/s-00052852
+   >
+
+    param[journal_id] = 10.1055/s-00052852
+    comment[years] = 2015-current
+    #moved from Medknow, 2022
+    #year 2015 to 2021 had been processed under Medknow
+
+    au < manifest ; 2022 ; 2022 ; World Journal of Nuclear Medicine Volume 21 ; 21 >
+
+  }
 }

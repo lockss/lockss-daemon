@@ -149,10 +149,11 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
     Iterator<ArticleFiles> it = au.getArticleIterator();
     // ensure you have found articles - this would not otherwise not fail before completion
     assertTrue(it.hasNext());
+    int count = 0;
     while (it.hasNext()) {
       ArticleFiles af1 = it.next();
-      log.debug3("article file af1: " + af1.toString());
-      
+      log.debug("article file af1: " + af1.toString());
+      count+=1;
       // assert article 1
       String[] actualUrls1 = { af1.getRoleUrl(ArticleFiles.ROLE_ABSTRACT),
                                af1.getRoleUrl(ArticleFiles.ROLE_ARTICLE_METADATA),
@@ -161,8 +162,8 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
                                af1.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF) };
 
       for (int i = 0;i< actualUrls1.length; i++) {
-        log.debug3("expected url1: " + expectedUrls1[i]);
-        log.debug3("  actual url1: " + actualUrls1[i]);
+        log.debug("expected url1: " + expectedUrls1[i]);
+        log.debug("  actual url1: " + actualUrls1[i]);
 
         // "scholarworks.iu.edu" has speical case, which only has html page, no other aspects of article
         if (!BASE_URL.contains("scholarworks.iu.edu")) {
@@ -171,6 +172,7 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
       }
       
     }
+    assertEquals(count,1);
   }
 
   /*
@@ -180,7 +182,6 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
   public void testIssueUrlsWithPrefixes() throws Exception {
     Iterator<ArticleFiles> artIter = getArticleIteratorAfterSimCrawl(au, "issue");
     Pattern pat = getPattern((SubTreeArticleIterator) artIter);
-
     // issue
     assertMatchesRE(pat,"https://www.foo.com/index.php/test/issue/view/99");
     // wont exist
@@ -201,7 +202,6 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
   public void testArticleSingleUrlsWithPrefixes() throws Exception {
     Iterator<ArticleFiles> artIter = getArticleIteratorAfterSimCrawl(au, "article/123");
     Pattern pat = getPattern((SubTreeArticleIterator) artIter);
-
     // issue
     assertNotMatchesRE(pat,"https://www.foo.com/index.php/test/issue/view/99");
     // wont exist
@@ -262,6 +262,9 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
         BASE_URL, JOURNAL_ID)); // pdf of entire issue
     articleUrls.add(String.format("%sindex.php/%s/article/view/8110",
         BASE_URL, JOURNAL_ID)); // abstract
+    // this should get ignored
+    articleUrls.add(String.format("%s%s/article/view/8110",
+        BASE_URL, JOURNAL_ID)); // no index.php abstract
     articleUrls.add(String.format("%sindex.php/%s/article/view/8110/8514",
         BASE_URL, JOURNAL_ID)); // full-text html
     articleUrls.add(String.format("%sindex.php/%s/article/view/8110/8601",

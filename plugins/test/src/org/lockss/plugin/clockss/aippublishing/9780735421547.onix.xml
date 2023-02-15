@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ONIXMessage release="3.0">
+    <Header>
+        <Sender>
+            <SenderName>AIP Publishing</SenderName>
+            <ContactName>ContentOps</ContactName>
+            <EmailAddress>xml-sgml@aip.org</EmailAddress>
+        </Sender>
+        <SentDateTime>20210428153245</SentDateTime>
+        <MessageNote>Record for Electronic Format</MessageNote>
+    </Header>
+    <Product>
+        <RecordReference>aipp.onix.9780735421547</RecordReference>
+        <NotificationType>03</NotificationType>
+        <RecordSourceType>04</RecordSourceType>
+        <RecordSourceIdentifier>
+            <RecordSourceIDType>06</RecordSourceIDType>
+            <IDValue>0614141800001</IDValue>
+        </RecordSourceIdentifier>
+        <RecordSourceName>AIP Publishing LLC</RecordSourceName>
+        <ProductIdentifier>
+            <ProductIDType>03</ProductIDType>
+            <IDValue>9780735421547</IDValue>
+        </ProductIdentifier>
+        <ProductIdentifier>
+            <ProductIDType>15</ProductIDType>
+            <IDValue>9780735421547</IDValue>
+        </ProductIdentifier>
+        <Barcode>
+            <BarcodeType>00</BarcodeType>
+        </Barcode>
+        <DescriptiveDetail>
+            <ProductComposition>00</ProductComposition>
+            <ProductForm />
+            <ProductFormDetail />
+            <ProductFormFeature>
+                <ProductFormFeatureType />
+            </ProductFormFeature>
+            <ProductPackaging />
+            <ProductFormDescription />
+            <PrimaryContentType>10</PrimaryContentType>
+            <Measure>
+                <MeasureType>01</MeasureType>
+                <Measurement>10</Measurement>
+                <MeasureUnitCode>in</MeasureUnitCode>
+            </Measure>
+            <Measure>
+                <MeasureType>02</MeasureType>
+                <Measurement>7</Measurement>
+                <MeasureUnitCode>in</MeasureUnitCode>
+            </Measure>
+            <CountryOfManufacture>US</CountryOfManufacture>
+            <EpubTechnicalProtection>00</EpubTechnicalProtection>
+            <NoCollection />
+            <TitleDetail>
+                <TitleType>01</TitleType>
+                <TitleElement>
+                    <TitleElementLevel>01</TitleElementLevel>
+                    <TitleText>With You When You Fly: Aeronautics for Introductory Physics</TitleText>
+                    <Subtitle />
+                </TitleElement>
+            </TitleDetail>
+            <Contributor>
+                <SequenceNumber>1</SequenceNumber>
+                <ContributorRole>A01</ContributorRole>
+                <CorporateName>NASA</CorporateName>
+            </Contributor>
+            <Contributor>
+                <SequenceNumber>1</SequenceNumber>
+                <ContributorRole>A01</ContributorRole>
+                <CorporateName>AAPT</CorporateName>
+            </Contributor>
+            <EditionType>NED</EditionType>
+            <Language>
+                <LanguageRole>01</LanguageRole>
+                <LanguageCode>eng</LanguageCode>
+            </Language>
+            <Extent>
+                <ExtentType>05</ExtentType>
+                <ExtentValue>250</ExtentValue>
+                <ExtentUnit>03</ExtentUnit>
+            </Extent>
+            <Subject>
+                <MainSubject>Science</MainSubject>
+                <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+                <SubjectCode>SCI005000</SubjectCode>
+                <SubjectHeadingText>Astrophysics</SubjectHeadingText>
+            </Subject>
+        </DescriptiveDetail>
+        <CollateralDetail>
+            <TextContent>
+                <TextType>03</TextType>
+                <ContentAudience>00</ContentAudience>
+                <Text>Although there are many right ways to teach physics, there is a growing need for
+                    teaching by inquiry in context. This is the most effective method, ensuring classes
+                    are relevant and practical. With You When You Fly is an educator’s guide that
+                    addresses this need, providing a solid content base and actively engaging with
+                    topics necessary to the development of 21st century skills. With You When You Fly: Aeronautics for Introductory Physics is founded on 26
+                    aeronautics-related teaching ideas presented by seasoned high school and college
+                    physics teachers, and articles that have appeared in the American Association of
+                    Physics Teachers’s (AAPT) publication, The Physics Teacher. The lesson ideas are
+                    combined with NASA aeronautics education resources and ongoing research, as well as
+                    student experiences with flight.
+
+
+                    •
+                    Reviewed by acting high school and college/university AAPT members
+
+
+                    •
+                    Each activity includes objectives and/or guiding questions related to the
+                    physics of flight, followed by a detailed listing of the NGSS and CCSS
+                    addressed by students who successfully complete each activity
+
+
+                    •
+                    The activities can also be used to teach fundamental physics concepts and
+                    inquiry skills.
+
+
+                    With You When You Fly: Aeronautics for Introductory Physics is suitable for high
+                    school and introductory university level physics courses. Teachers as well as anyone
+                    interested in aeronautics and astrophysics will find this book useful and
+                    informative.</Text>
+            </TextContent>
+            <TextContent>
+                <TextType>04</TextType>
+                <ContentAudience>00</ContentAudience>
+                <Text>Overview — Standards and Best Practices — Scientific Thinking — Constant Velocity — Uniform Acceleration — Terminal Velocity — Force Particle – Inertia — Constant Net Force — 2-D Combination — Energy — Rotational Motion — Additional Resources.</Text>
+            </TextContent>
+            <TextContent>
+                <TextType>12</TextType>
+                <ContentAudience>00</ContentAudience>
+                <Text />
+            </TextContent>
+        </CollateralDetail>
+        <PublishingDetail>
+            <Imprint>
+                <ImprintName>AAPT</ImprintName>
+            </Imprint>
+            <Publisher>
+                <PublishingRole>01</PublishingRole>
+                <PublisherName>AIP Publishing LLC</PublisherName>
+                <Website>
+                    <WebsiteRole>18</WebsiteRole>
+                    <WebsiteLink>https://aip.scitation.org/doi/book/10.1063/9780735421547</WebsiteLink>
+                </Website>
+            </Publisher>
+            <PublishingStatus>04</PublishingStatus>
+            <PublishingDate>
+                <PublishingDateRole>01</PublishingDateRole>
+                <Date dateformat="01">20151120</Date>
+            </PublishingDate>
+            <SalesRights>
+                <SalesRightsType>01</SalesRightsType>
+                <Territory>
+                    <RegionsIncluded>WORLD</RegionsIncluded>
+                </Territory>
+            </SalesRights>
+        </PublishingDetail>
+        <RelatedMaterial>
+            <RelatedProduct sourcetype="01">
+                <ProductRelationCode>06</ProductRelationCode>
+                <ProductIdentifier>
+                    <ProductIDType>15</ProductIDType>
+                    <IDValue shortname="b244">9780735421523</IDValue>
+                </ProductIdentifier>
+                <ProductForm>BA</ProductForm>
+                <ProductFormDetail>B102</ProductFormDetail>
+            </RelatedProduct>
+            <RelatedProduct>
+                <ProductRelationCode>06</ProductRelationCode>
+                <ProductIdentifier>
+                    <ProductIDType>15</ProductIDType>
+                    <IDValue shortname="b246">9780735421530</IDValue>
+                </ProductIdentifier>
+                <ProductForm>EB</ProductForm>
+                <ProductFormDetail>E107</ProductFormDetail>
+            </RelatedProduct>
+            <RelatedProduct>
+                <ProductRelationCode>06</ProductRelationCode>
+                <ProductIdentifier>
+                    <ProductIDType>15</ProductIDType>
+                    <IDValue shortname="b245">9780735421554</IDValue>
+                </ProductIdentifier>
+                <ProductForm>ED</ProductForm>
+                <ProductFormDetail>E101</ProductFormDetail>
+            </RelatedProduct>
+        </RelatedMaterial>
+        <ProductSupply>
+            <SupplyDetail>
+                <Supplier>
+                    <SupplierRole>09</SupplierRole>
+                    <SupplierName>AIP Publishing LLC</SupplierName>
+                </Supplier>
+                <ProductAvailability>20</ProductAvailability>
+                <Price>
+                    <PriceType>41</PriceType>
+                    <PriceAmount>135.00</PriceAmount>
+                    <CurrencyCode>USD</CurrencyCode>
+                    <Territory>
+                        <RegionsIncluded>WORLD</RegionsIncluded>
+                    </Territory>
+                </Price>
+            </SupplyDetail>
+            <SupplyDetail>
+                <Supplier>
+                    <SupplierRole>09</SupplierRole>
+                    <SupplierName>AIP Publishing LLC</SupplierName>
+                </Supplier>
+                <ProductAvailability>23</ProductAvailability>
+                <Price>
+                    <PriceType>03</PriceType>
+                    <PriceAmount>135.00</PriceAmount>
+                    <CurrencyCode>USD</CurrencyCode>
+                    <Territory>
+                        <CountriesIncluded>US</CountriesIncluded>
+                    </Territory>
+                </Price>
+            </SupplyDetail>
+        </ProductSupply>
+    </Product>
+</ONIXMessage>

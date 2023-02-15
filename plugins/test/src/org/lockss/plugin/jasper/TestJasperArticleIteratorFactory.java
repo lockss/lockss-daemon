@@ -114,7 +114,12 @@ public class TestJasperArticleIteratorFactory extends ArticleIteratorTestCase {
     log.info("Pattern is: " + pat.toString());
     String targzPath = COLLECTION + "/rama-2021-06-25-11-25-53.tar.gz!";
     String metadataPath = "/2051-5960/00003741594643f4996e2555a01e03c7/data/metadata/metadata.json";
-    assertMatchesRE(pat, DOWNLOAD_URL + targzPath + metadataPath);
+    String pdfPath = "/2051-5960/00003741594643f4996e2555a01e03c7/data/ArticleFoo.pdf";
+    String htmlPath = "/2051-5960/00003741594643f4996e2555a01e03c7/data/ArticleFoo.html";
+    // match on pdf and or html, but not json. this allows the replacement to work best.
+    assertNotMatchesRE(pat, DOWNLOAD_URL + targzPath + metadataPath);
+    assertMatchesRE(pat, DOWNLOAD_URL + targzPath + pdfPath);
+    assertMatchesRE(pat, DOWNLOAD_URL + targzPath + htmlPath);
   }
 /*
   //

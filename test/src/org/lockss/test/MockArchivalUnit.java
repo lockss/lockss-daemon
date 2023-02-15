@@ -42,6 +42,7 @@ import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.test.MockCrawler.MockCrawlerFacade;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.SimpleUrlConsumerFactory;
@@ -208,6 +209,11 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public PatternStringMap makeUrlMimeValidationMap() {
     return PatternStringMap.EMPTY;
+  }
+
+  public AuCacheResultMap makeAuCacheResultMap()
+      throws ArchivalUnit.ConfigurationException {
+    return AuHttpResultMap.DEFAULT;
   }
 
   public PatternFloatMap makeUrlPollResultWeightMap()

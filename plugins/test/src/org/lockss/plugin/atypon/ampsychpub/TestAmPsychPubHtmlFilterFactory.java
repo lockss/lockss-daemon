@@ -47,6 +47,7 @@ import org.lockss.plugin.FilterFactory;
 import org.lockss.plugin.PluginManager;
 import org.lockss.plugin.PluginTestUtil;
 import org.lockss.test.*;
+import org.apache.commons.io.FileUtils;
 
 public class TestAmPsychPubHtmlFilterFactory extends LockssTestCase {
 
@@ -790,206 +791,187 @@ public class TestAmPsychPubHtmlFilterFactory extends LockssTestCase {
       "  </body>\n" + 
       "</html>";
   
-  private static final String art1ContentCrawlFiltered = 
-      "<html class=\"pb-page\" data-request-id=\"3b0ad0c2-6486-4c37-b3b1-febfb45e6b98\" lang=\"en\">\n" + 
-      "  <script type=\"text/javascript\" async=\"\" src=\"https://www.google-analytics.com/analytics.js\"></script>" +
-      "  <head data-pb-dropzone=\"head\">\n" + 
-      "    <link rel=\"schema.DC\" href=\"http://purl.org/DC/elements/1.0/\">\n" + 
-      "    <meta name=\"dc.Date\" scheme=\"WTN8601\" content=\"2017-03-01\">\n" + 
-      "    <meta charset=\"UTF-8\">\n" + 
-      "    <title>EDITOR'S NOTE | American Journal of Psychiatry</title>\n" + 
-      "    <meta data-pb-head=\"head-widgets-end\">\n" + 
-      "  </head>\n" + 
-      "  <body class=\"pb-ui\">\n" + 
-      "    <div id=\"pb-page-content\" data-ng-non-bindable=\"\">\n" + 
-      "      <div data-pb-dropzone=\"main\" data-pb-dropzone-name=\"Main\">\n" + 
-      "        <div class=\"widget pageHeader none  widget-none  widget-compact-all\" id=\"13c35e80-9b5e-479b-a71e-eec581320abf\">\n" + 
-      "          <div class=\"wrapped \">\n" + 
-      "            <div class=\"widget-body body body-none  body-compact-all\">\n" + 
-      "              \n" + 
-      "            </div>\n" + 
-      "          </div>\n" + 
-      "        </div>\n" + 
-      "        <div class=\"widget pageBody none  widget-none  widget-compact-all\" id=\"a3907b2c-e067-4eb5-9e12-040b6179d9d6\">\n" + 
-      "          <div class=\"wrapped \">\n" + 
-      "            <div class=\"widget-body body body-none  body-compact-all\">\n" + 
-      "              <!--begin pagefulltext-->\n" + 
-      "              <div class=\"page-body pagefulltext\">\n" + 
-      "                <div data-pb-dropzone=\"main\">\n" + 
-      "                  <div class=\"widget layout-two-columns none articleColumns widget-none  widget-compact-all\" id=\"037a5805-7259-48af-8825-21291d1e258b\">\n" + 
-      "                    <div class=\"wrapped \">\n" + 
-      "     <div class=\"widget-body body body-none  body-compact-all\">\n" + 
-      "       <div class=\"pb-columns row-fluid \">\n" + 
-      "         <div class=\"width_2_3\">\n" + 
-      "           <div data-pb-dropzone=\"left\" class=\"pb-autoheight\">\n" + 
-      "             \n" + 
-      "             <div class=\"widget literatumPublicationContentWidget none  widget-none  widget-compact-all\" id=\"75b33ea9-e7d2-43bd-8d65-da6fe6904e73\">\n" + 
-      "               <div class=\"wrapped \">\n" + 
-      "                 <div class=\"widget-body body body-none  body-compact-all\">\n" + 
-      "                   <div class=\"articleMeta ja\">\n" + 
-      "                     <div class=\"tocHeading\">\n" + 
-      "                       <b>Editor's Note</b>\n" + 
-      "                     </div>\n" + 
-      "                     <div class=\"publicationContentTitle\">\n" + 
-      "                       <h1>\n" + 
-      "        EDITOR'S NOTE\n" + 
-      "                       </h1>\n" + 
-      "                     </div>\n" + 
-      "                     <div class=\"articleMetaDrop publicationContentDropZone\" data-pb-dropzone=\"articleMetaDropZone\">\n" + 
-      "                     </div>\n" + 
-      "                     <div class=\"publicationContentAuthors\">\n" + 
-      "                       <div class=\"hlFld-ContribAuthor\"></div>\n" + 
-      "                     </div>\n" + 
-      "                     <div class=\"articleMetaDrop publicationContentDropZone publicationContentDropZone1\" data-pb-dropzone=\"articleMetaDropZone1\">\n" + 
-      "                     </div>\n" + 
-      "                     <div class=\"authInfo authInfoLink\" style=\"display: none;\"><a href=\"#\" onclick=\"scrollToAuthAndArtInformation();\">View Author and Article Information</a></div>\n" + 
-      "                     <div>\n" + 
-      "                     </div>\n" + 
-      "                     <div class=\"publicationContentDoi publicationContentEpubDate\">\n" + 
-      "                       Published online: March 01, 2017\n" + 
-      "                       &nbsp;|&nbsp;\n" + 
-      "                       <a href=\"https://doi.org/10.1176/appi.ajp.2017.1743editor\">https://doi.org/10.1176/appi.ajp.2017.1743editor</a>\n" + 
-      "                     </div>\n" + 
-      "                   </div>\n" + 
-      "                   <div class=\"articleToolsDropZone\" data-pb-dropzone=\"articleToolsDropZone\">\n" + 
-      "                   </div>\n" + 
-      "                   <div class=\"publication-tabs ja\">\n" + 
-      "                     <div class=\"tabs tabs-widget\">\n" + 
-      "                       <ul class=\"tab-nav\" role=\"tablist\">\n" + 
-      "        <li role=\"tab\" aria-selected=\"false\">\n" + 
-      "    <a href=\"/doi/abs/10.1176/appi.ajp.2017.1743editor\" class=\"show-abstract\">\n" + 
-      "    Citation\n" + 
-      "    </a>\n" + 
-      "        </li>\n" + 
-      "        <li class=\"active\" role=\"tab\" aria-selected=\"true\">\n" + 
-      "    <a href=\"/doi/full/10.1176/appi.ajp.2017.1743editor\" class=\"show-full\">\n" + 
-      "    Full Text\n" + 
-      "    </a>\n" + 
-      "        </li>\n" + 
-      "        <li role=\"tab\" aria-selected=\"false\">\n" + 
-      "    <a href=\"http://ajp.psychiatryonline.org/doi/pdf/10.1176/appi.ajp.2017.1743editor\"" +
-      " class=\"show-pdf\" target=\"_self\">\n" + 
-      "    PDF\n" + 
-      "    </a>\n" + 
-      "        </li>\n" + 
-      "        <li role=\"tab\" aria-selected=\"false\">\n" + 
-      "    <a href=\"http://ajp.psychiatryonline.org/doi/pdfplus/10.1176/appi.ajp.2017.1743editor\" target=\"_self\">\n" + 
-      "    PDF Plus\n" + 
-      "    </a>\n" + 
-      "        </li>\n" + 
-      "        <li role=\"tab\" aria-selected=\"false\">\n" + 
-      "    <a href=\"#relatedContent\">\n" + 
-      "    Related\n" + 
-      "    </a>\n" + 
-      "        </li>\n" + 
-      "                       </ul>\n" + 
-      "                       <div class=\"tab-content \">\n" + 
-      "        <a id=\"top-content-scroll\"></a>\n" + 
-      "        <div class=\"tab tab-pane active\">\n" + 
-      "    <article class=\"article\">\n" + 
-      "      <p class=\"fulltext\"></p>\n" + 
-      "      <!-- abstract content -->\n" + 
-      "      <div class=\"hlFld-Abstract\">\n" + 
-      "    <p class=\"fulltext\"></p>\n" + 
-      "      </div>\n" + 
-      "      <!-- /abstract content --><!-- fulltext content -->\n" + 
-      "      <div class=\"hlFld-Fulltext\">\n" + 
-      "    <p>The <i>Journal</i> was notified about a complaint (" +
-      "<a class=\"ext-link\" href=\"http://ajp.psychiatryonline.org/doi/full/10.1176/appi.ajp.158.6.906\" target=\"_blank\">" +
-      "http://dx.doi.org/10.1176/appi.ajp.158.6.906</a>).</p>\n" + 
-      "      </div>\n" + 
-      "      <!-- /fulltext content -->\n" + 
-      "      <div class=\"response\">\n" + 
-      "    <div class=\"sub-article-title\"></div>\n" + 
-      "      </div>\n" + 
-      "    </article>\n" + 
-      "        </div>\n" + 
-      "        \n" + 
-      "        \n" + 
-      "                       </div>\n" + 
-      "                     </div>\n" + 
-      "                   </div>\n" + 
-      "                   <input id=\"viewLargeImageCaption\" value=\"View Large Image\" type=\"hidden\">\n" + 
-      "                 </div>\n" + 
-      "               </div>\n" + 
-      "             </div>\n" + 
-      "           </div>\n" + 
-      "         </div>\n" + 
-      "         <div class=\"width_1_3\">\n" + 
-      "           <div data-pb-dropzone=\"right\" class=\"pb-autoheight\">\n" + 
-      "             <div class=\"widget literatumArticleToolsWidget none  widget-none\"" +
-      " id=\"2a984b58-2a84-4286-a261-a8108df4d8a8\">\n" + 
-      "               <div class=\"wrapped \">\n" + 
-      "                 <div class=\"widget-body body body-none \">\n" + 
-      "                   <div class=\"articleTools\">" + 
-      "<ul class=\"linkList blockLinks separators centered\">" + 
-      "<li class=\"downloadCitations\">" + 
-      "<a href=\"/action/showCitFormats?doi=10.1176%2Fappi.ajp.2017.1743editor\">Send to Citation Mgr</a>" + 
-      "</li>" + 
-      "</ul>" + 
-      "</div>\n" + 
-      "                 </div>\n" + 
-      "               </div>\n" + 
-      "             </div>\n" + 
-      "             <div class=\"widget layout-two-columns none  widget-none  widget-compact-all\">\n" + 
-      "               <div class=\"wrapped \">\n" + 
-      "                 <div class=\"widget-body body body-none  body-compact-all\">\n" + 
-      "                   <div class=\"pb-columns row-fluid gutterless\">\n" + 
-      "                     <div class=\"width_5_24\">\n" + 
-      "                       <div data-pb-dropzone=\"left\" class=\"pb-autoheight\">\n" + 
-      "        <div class=\"widget general-html none  widget-none  widget-compact-all\"" +
-      " id=\"1e879678-c84a-44e1-9a30-da2e26c3da18\">\n" + 
-      "    <div class=\"wrapped \">\n" + 
-      "      <div class=\"widget-body body body-none  body-compact-all\">\n" + 
-      "    <script type=\"text/javascript\"></script>\n" + 
-      "      </div>\n" + 
-      "    </div>\n" + 
-      "        </div>\n" + 
-      "                       </div>\n" + 
-      "                     </div>\n" + 
-      "                     <div class=\"width_19_24\">\n" + 
-      "                       <div data-pb-dropzone=\"right\" class=\"pb-autoheight\">\n" + 
-      "        \n" + 
-      "                       </div>\n" + 
-      "                     </div>\n" + 
-      "                   </div>\n" + 
-      "                 </div>\n" + 
-      "               </div>\n" + 
-      "             </div>\n" + 
-      "             <div class=\"widget layout-frame none inner-white widget-emphasis\" id=\"f4410c40-ec02-421f-a474-5b07264d4858\">\n" + 
-      "               <div class=\"wrapped \">\n" + 
-      "                 <h1 class=\"widget-header header-regular \">Related Articles</h1>\n" + 
-      "                 \n" + 
-      "               </div>\n" + 
-      "               \n" + 
-      "             </div>\n" + 
-      "           </div>\n" + 
-      "         </div>\n" + 
-      "       </div>\n" + 
-      "     </div>\n" + 
-      "                    </div>\n" + 
-      "                  </div>\n" + 
-      "                </div>\n" + 
-      "              </div>\n" + 
-      "              <!--end pagefulltext-->\n" + 
-      "            </div>\n" + 
-      "          </div>\n" + 
-      "        </div>\n" + 
-      "        <div class=\"widget pageFooter none  widget-none  widget-compact-all\" id=\"857d8e34-9b91-4e39-a31f-dc42600dc42e\">\n" + 
-      "          <div class=\"wrapped \">\n" + 
-      "            <div class=\"widget-body body body-none  body-compact-all\">\n" + 
-      "              \n" + 
-      "            </div>\n" + 
-      "          </div>\n" + 
-      "        </div>\n" + 
-      "        <div class=\"widget general-html none  widget-none\" id=\"9b0d00cb-3a46-4474-a164-2b3bc16b9005\">\n" + 
-      "          <div class=\"wrapped \" id=\"open-athens-js\">\n" + 
-      "          </div>\n" + 
-      "        </div>\n" + 
-      "      </div>\n" + 
-      "    </div>\n" + 
-      "  </body>\n" + 
-      "</html>";
+  private static final String art1ContentCrawlFiltered =
+          "<html class=\"pb-page\" data-request-id=\"3b0ad0c2-6486-4c37-b3b1-febfb45e6b98\" lang=\"en\">\n" +
+                  "  <script type=\"text/javascript\" async=\"\" src=\"https://www.google-analytics.com/analytics.js\"></script>  <head data-pb-dropzone=\"head\">\n" +
+                  "    <link rel=\"schema.DC\" href=\"http://purl.org/DC/elements/1.0/\">\n" +
+                  "    <meta name=\"dc.Date\" scheme=\"WTN8601\" content=\"2017-03-01\">\n" +
+                  "    <meta charset=\"UTF-8\">\n" +
+                  "    <title>EDITOR'S NOTE | American Journal of Psychiatry</title>\n" +
+                  "    <meta data-pb-head=\"head-widgets-end\">\n" +
+                  "  </head>\n" +
+                  "  <body class=\"pb-ui\">\n" +
+                  "    <div id=\"pb-page-content\" data-ng-non-bindable=\"\">\n" +
+                  "      <div data-pb-dropzone=\"main\" data-pb-dropzone-name=\"Main\">\n" +
+                  "        <div class=\"widget pageHeader none  widget-none  widget-compact-all\" id=\"13c35e80-9b5e-479b-a71e-eec581320abf\">\n" +
+                  "          <div class=\"wrapped \">\n" +
+                  "            <div class=\"widget-body body body-none  body-compact-all\">\n" +
+                  "              \n" +
+                  "            </div>\n" +
+                  "          </div>\n" +
+                  "        </div>\n" +
+                  "        <div class=\"widget pageBody none  widget-none  widget-compact-all\" id=\"a3907b2c-e067-4eb5-9e12-040b6179d9d6\">\n" +
+                  "          <div class=\"wrapped \">\n" +
+                  "            <div class=\"widget-body body body-none  body-compact-all\">\n" +
+                  "              <!--begin pagefulltext-->\n" +
+                  "              <div class=\"page-body pagefulltext\">\n" +
+                  "                <div data-pb-dropzone=\"main\">\n" +
+                  "                  <div class=\"widget layout-two-columns none articleColumns widget-none  widget-compact-all\" id=\"037a5805-7259-48af-8825-21291d1e258b\">\n" +
+                  "                    <div class=\"wrapped \">\n" +
+                  "     <div class=\"widget-body body body-none  body-compact-all\">\n" +
+                  "       <div class=\"pb-columns row-fluid \">\n" +
+                  "         <div class=\"width_2_3\">\n" +
+                  "           <div data-pb-dropzone=\"left\" class=\"pb-autoheight\">\n" +
+                  "             \n" +
+                  "             <div class=\"widget literatumPublicationContentWidget none  widget-none  widget-compact-all\" id=\"75b33ea9-e7d2-43bd-8d65-da6fe6904e73\">\n" +
+                  "               <div class=\"wrapped \">\n" +
+                  "                 <div class=\"widget-body body body-none  body-compact-all\">\n" +
+                  "                   <div class=\"articleMeta ja\">\n" +
+                  "                     <div class=\"tocHeading\">\n" +
+                  "                       <b>Editor's Note</b>\n" +
+                  "                     </div>\n" +
+                  "                     <div class=\"publicationContentTitle\">\n" +
+                  "                       <h1>\n" +
+                  "        EDITOR'S NOTE\n" +
+                  "                       </h1>\n" +
+                  "                     </div>\n" +
+                  "                     <div class=\"articleMetaDrop publicationContentDropZone\" data-pb-dropzone=\"articleMetaDropZone\">\n" +
+                  "                     </div>\n" +
+                  "                     <div class=\"publicationContentAuthors\">\n" +
+                  "                       <div class=\"hlFld-ContribAuthor\"></div>\n" +
+                  "                     </div>\n" +
+                  "                     <div class=\"articleMetaDrop publicationContentDropZone publicationContentDropZone1\" data-pb-dropzone=\"articleMetaDropZone1\">\n" +
+                  "                     </div>\n" +
+                  "                     <div class=\"authInfo authInfoLink\" style=\"display: none;\"><a href=\"#\" onclick=\"scrollToAuthAndArtInformation();\">View Author and Article Information</a></div>\n" +
+                  "                     <div>\n" +
+                  "                     </div>\n" +
+                  "                     <div class=\"publicationContentDoi publicationContentEpubDate\">\n" +
+                  "                       Published online: March 01, 2017\n" +
+                  "                       &nbsp;|&nbsp;\n" +
+                  "                       <a href=\"https://doi.org/10.1176/appi.ajp.2017.1743editor\">https://doi.org/10.1176/appi.ajp.2017.1743editor</a>\n" +
+                  "                     </div>\n" +
+                  "                   </div>\n" +
+                  "                   \n" +
+                  "                   <div class=\"publication-tabs ja\">\n" +
+                  "                     <div class=\"tabs tabs-widget\">\n" +
+                  "                       <ul class=\"tab-nav\" role=\"tablist\">\n" +
+                  "        <li role=\"tab\" aria-selected=\"false\">\n" +
+                  "    <a href=\"/doi/abs/10.1176/appi.ajp.2017.1743editor\" class=\"show-abstract\">\n" +
+                  "    Citation\n" +
+                  "    </a>\n" +
+                  "        </li>\n" +
+                  "        <li class=\"active\" role=\"tab\" aria-selected=\"true\">\n" +
+                  "    <a href=\"/doi/full/10.1176/appi.ajp.2017.1743editor\" class=\"show-full\">\n" +
+                  "    Full Text\n" +
+                  "    </a>\n" +
+                  "        </li>\n" +
+                  "        <li role=\"tab\" aria-selected=\"false\">\n" +
+                  "    <a href=\"http://ajp.psychiatryonline.org/doi/pdf/10.1176/appi.ajp.2017.1743editor\" class=\"show-pdf\" target=\"_self\">\n" +
+                  "    PDF\n" +
+                  "    </a>\n" +
+                  "        </li>\n" +
+                  "        <li role=\"tab\" aria-selected=\"false\">\n" +
+                  "    <a href=\"http://ajp.psychiatryonline.org/doi/pdfplus/10.1176/appi.ajp.2017.1743editor\" target=\"_self\">\n" +
+                  "    PDF Plus\n" +
+                  "    </a>\n" +
+                  "        </li>\n" +
+                  "        <li role=\"tab\" aria-selected=\"false\">\n" +
+                  "    <a href=\"#relatedContent\">\n" +
+                  "    Related\n" +
+                  "    </a>\n" +
+                  "        </li>\n" +
+                  "                       </ul>\n" +
+                  "                       <div class=\"tab-content \">\n" +
+                  "        <a id=\"top-content-scroll\"></a>\n" +
+                  "        <div class=\"tab tab-pane active\">\n" +
+                  "    <article class=\"article\">\n" +
+                  "      <p class=\"fulltext\"></p>\n" +
+                  "      <!-- abstract content -->\n" +
+                  "      <div class=\"hlFld-Abstract\">\n" +
+                  "    <p class=\"fulltext\"></p>\n" +
+                  "      </div>\n" +
+                  "      <!-- /abstract content --><!-- fulltext content -->\n" +
+                  "      <div class=\"hlFld-Fulltext\">\n" +
+                  "    <p>The <i>Journal</i> was notified about a complaint (<a class=\"ext-link\" href=\"http://ajp.psychiatryonline.org/doi/full/10.1176/appi.ajp.158.6.906\" target=\"_blank\">http://dx.doi.org/10.1176/appi.ajp.158.6.906</a>).</p>\n" +
+                  "      </div>\n" +
+                  "      <!-- /fulltext content -->\n" +
+                  "      <div class=\"response\">\n" +
+                  "    <div class=\"sub-article-title\"></div>\n" +
+                  "      </div>\n" +
+                  "    </article>\n" +
+                  "        </div>\n" +
+                  "        \n" +
+                  "        \n" +
+                  "                       </div>\n" +
+                  "                     </div>\n" +
+                  "                   </div>\n" +
+                  "                   <input id=\"viewLargeImageCaption\" value=\"View Large Image\" type=\"hidden\">\n" +
+                  "                 </div>\n" +
+                  "               </div>\n" +
+                  "             </div>\n" +
+                  "           </div>\n" +
+                  "         </div>\n" +
+                  "         <div class=\"width_1_3\">\n" +
+                  "           <div data-pb-dropzone=\"right\" class=\"pb-autoheight\">\n" +
+                  "             <div class=\"widget literatumArticleToolsWidget none  widget-none\" id=\"2a984b58-2a84-4286-a261-a8108df4d8a8\"><div class=\"wrapped \"><div class=\"widget-body body body-none \"><div class=\"articleTools\"><ul class=\"linkList blockLinks separators centered\"><li class=\"downloadCitations\"><a href=\"/action/showCitFormats?doi=10.1176%2Fappi.ajp.2017.1743editor\">Send to Citation Mgr</a></li></ul></div></div></div></div>\n" +
+                  "             <div class=\"widget layout-two-columns none  widget-none  widget-compact-all\">\n" +
+                  "               <div class=\"wrapped \">\n" +
+                  "                 <div class=\"widget-body body body-none  body-compact-all\">\n" +
+                  "                   <div class=\"pb-columns row-fluid gutterless\">\n" +
+                  "                     <div class=\"width_5_24\">\n" +
+                  "                       <div data-pb-dropzone=\"left\" class=\"pb-autoheight\">\n" +
+                  "        <div class=\"widget general-html none  widget-none  widget-compact-all\" id=\"1e879678-c84a-44e1-9a30-da2e26c3da18\">\n" +
+                  "    <div class=\"wrapped \">\n" +
+                  "      <div class=\"widget-body body body-none  body-compact-all\">\n" +
+                  "    <script type=\"text/javascript\"></script>\n" +
+                  "      </div>\n" +
+                  "    </div>\n" +
+                  "        </div>\n" +
+                  "                       </div>\n" +
+                  "                     </div>\n" +
+                  "                     <div class=\"width_19_24\">\n" +
+                  "                       <div data-pb-dropzone=\"right\" class=\"pb-autoheight\">\n" +
+                  "        \n" +
+                  "                       </div>\n" +
+                  "                     </div>\n" +
+                  "                   </div>\n" +
+                  "                 </div>\n" +
+                  "               </div>\n" +
+                  "             </div>\n" +
+                  "             <div class=\"widget layout-frame none inner-white widget-emphasis\" id=\"f4410c40-ec02-421f-a474-5b07264d4858\">\n" +
+                  "               <div class=\"wrapped \">\n" +
+                  "                 <h1 class=\"widget-header header-regular \">Related Articles</h1>\n" +
+                  "                 \n" +
+                  "               </div>\n" +
+                  "               \n" +
+                  "             </div>\n" +
+                  "           </div>\n" +
+                  "         </div>\n" +
+                  "       </div>\n" +
+                  "     </div>\n" +
+                  "                    </div>\n" +
+                  "                  </div>\n" +
+                  "                </div>\n" +
+                  "              </div>\n" +
+                  "              <!--end pagefulltext-->\n" +
+                  "            </div>\n" +
+                  "          </div>\n" +
+                  "        </div>\n" +
+                  "        <div class=\"widget pageFooter none  widget-none  widget-compact-all\" id=\"857d8e34-9b91-4e39-a31f-dc42600dc42e\">\n" +
+                  "          <div class=\"wrapped \">\n" +
+                  "            <div class=\"widget-body body body-none  body-compact-all\">\n" +
+                  "              \n" +
+                  "            </div>\n" +
+                  "          </div>\n" +
+                  "        </div>\n" +
+                  "        <div class=\"widget general-html none  widget-none\" id=\"9b0d00cb-3a46-4474-a164-2b3bc16b9005\">\n" +
+                  "          <div class=\"wrapped \" id=\"open-athens-js\">\n" +
+                  "          </div>\n" +
+                  "        </div>\n" +
+                  "      </div>\n" +
+                  "    </div>\n" +
+                  "  </body>\n" +
+                  "</html>";
   
   private static final String art1ContentHashFiltered = "<div class=\"widget literatumPublicationContentWidget none  widget-none  widget-compact-all\" >\n" +
           "               <div class=\"wrapped \">\n" +
@@ -1140,7 +1122,6 @@ public class TestAmPsychPubHtmlFilterFactory extends LockssTestCase {
     InputStream actIn; 
     actIn = fact.createFilteredInputStream(au, 
         new StringInputStream(nameToHash), Constants.ENCODING_UTF_8);
-
     String hashed = StringUtil.fromInputStream(actIn);
     
     assertEquals(expectedStr, hashed);

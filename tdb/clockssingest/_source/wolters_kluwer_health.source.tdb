@@ -6,6 +6,7 @@
     info[tester] = S ;
     info[platform] = Source
   >
+    hidden[proxy] = DIRECT
 
   {
 
@@ -14,9 +15,10 @@
     >
 
     plugin = org.lockss.plugin.clockss.wolterskluwer.ClockssWoltersKluwerSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wolterskluwer-released/
-    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
+
+    {
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wolterskluwer-released/
 
     au < zapped ; finished ; 2014 ; Wolters Kluwer Health Source Content 2014 ; 2014 >
     au < zapped ; finished ; 2015 ; Wolters Kluwer Health Source Content 2015 ; 2015 >
@@ -24,10 +26,18 @@
     au < zapped ; finished ; 2017 ; Wolters Kluwer Health Source Content 2017 ; 2017 >
     au < zapped ; finished ; 2018 ; Wolters Kluwer Health Source Content 2018 ; 2018 >
     au < zapped ; finished ; 2019 ; Wolters Kluwer Health Source Content 2019 ; 2019 >
-    au < readySource ; crawling ; 2020 ; Wolters Kluwer Health Source Content 2020 ; 2020 >
-    au < readySource ; crawling ; 2021 ; Wolters Kluwer Health Source Content 2021 ; 2021 >
-    au < readySource ; crawling ; 2022 ; Wolters Kluwer Health Source Content 2022 ; 2022 >
+    au < readySource ; finished ; 2020 ; Wolters Kluwer Health Source Content 2020 ; 2020 >
+    au < readySource ; finished ; 2021 ; Wolters Kluwer Health Source Content 2021 ; 2021 >
+    au < readySource ; frozen ; 2022 ; Wolters Kluwer Health Source Content 2022 ; 2022 >
+    #No more AUs. Moving to https.
 
+    }
+
+    {
+    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/wolterskluwer-released/
+
+    au < readySource ; crawling ; 2023 ; Wolters Kluwer Health Source Content 2023 ; 2023 >
+    }
   }
 
 }

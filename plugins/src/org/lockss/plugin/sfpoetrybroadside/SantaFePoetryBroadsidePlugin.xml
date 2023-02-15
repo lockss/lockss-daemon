@@ -1,7 +1,38 @@
+<!--
+
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>deprecated</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -9,9 +40,9 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
-    <entry>
+  <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
@@ -29,60 +60,8 @@
     </map>
   </entry>
   <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
-  </entry>
-  <entry>
-    <string>au_name</string>
-    <string>"Santa Fe Poetry Broadside Plugin, Base URL %s, Year %d", base_url, year</string>
-  </entry>
-  <entry>
     <string>plugin_name</string>
     <string>Santa Fe Poetry Broadside Plugin</string>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>4,"^%s", base_url</string>
-      <string>1,"^%sLOCKSS/manifest%d\.html", base_url, year</string>
-      <string>1,"^%s.*(%d|%02d)\.html", base_url, year, au_short_year</string>
-      <string>1,"^%sbio[0-9]+\.html", base_url</string>
-      <string>2,"^%s.*[12][09][0-9][0-9]\.html", base_url</string>
-      <string>2,"^%s.*[09][0-9].html", base_url</string>
-      <string>2,"^%s(about|broadside|index)\.html$", base_url</string>
-      <string>1,"^%s.*\.(html|jpg|gif|css)", base_url</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>"%sLOCKSS/manifest%d.html", base_url, year</string>
-  </entry>
-  <entry>
-    <string>au_feature_urls</string>
-  	<map>
-	  <entry>
-      <string>au_title</string>
-      <string>"%sbroadside.html", base_url</string>
-    </entry>
-    <entry>
-      <string>au_volume</string>
-      <string>"%sbroadside.html", base_url</string>
-    </entry>
-  	</map>
-  </entry>
-  <!--  the content is very flat so substance will be anthing.html that is not NON-substance -->
-  <entry>
-    <string>au_non_substance_url_pattern</string>
-    <list>
-    <!--  NON-substance: bio info, generic web info, issue TOC -->
-      	<string>"^%s(bio[0-9]+|links|contact|.*(%d|%02d))\.html", base_url, year, au_short_year</string>
-    </list>
-  </entry>
-      <entry>
-    <string>au_substance_url_pattern</string>
-    <list>
-      	<string>"^%s.*\.html", base_url</string>
-    </list>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -108,7 +87,59 @@
     </list>
   </entry>
   <entry>
+    <string>au_name</string>
+    <string>"Santa Fe Poetry Broadside Plugin, Base URL %s, Year %d", base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sLOCKSS/manifest%d.html", base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%sLOCKSS/manifest%d\.html", base_url, year</string>
+      <string>1,"^%s.*(%d|%02d)\.html", base_url, year, au_short_year</string>
+      <string>1,"^%sbio[0-9]+\.html", base_url</string>
+      <string>2,"^%s.*[12][09][0-9][0-9]\.html", base_url</string>
+      <string>2,"^%s.*[09][0-9].html", base_url</string>
+      <string>2,"^%s(about|broadside|index)\.html$", base_url</string>
+      <string>1,"^%s.*\.(html|jpg|gif|css)", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsideHtmlCrawlFilterFactory</string>
+  </entry>
+  <!--  the content is very flat so substance will be anthing.html that is not NON-substance -->
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      	<string>"^%s.*\.html", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_non_substance_url_pattern</string>
+    <list>
+    <!--  NON-substance: bio info, generic web info, issue TOC -->
+      	<string>"^%s(bio[0-9]+|links|contact|.*(%d|%02d))\.html", base_url, year, au_short_year</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+  	<map>
+	  <entry>
+      <string>au_title</string>
+      <string>"%sbroadside.html", base_url</string>
+    </entry>
+    <entry>
+      <string>au_volume</string>
+      <string>"%sbroadside.html", base_url</string>
+    </entry>
+  	</map>
   </entry>
 </map>

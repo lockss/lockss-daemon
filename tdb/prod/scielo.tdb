@@ -7,7 +7,7 @@
   
   rights = openaccess
   plugin = needs.plugin
-  #plugin = org.lockss.plugin.scielo.ClockssSciELOPlugin
+  #plugin = org.lockss.plugin.scielo.SciELOPlugin
   implicit < status ; year ; volume ; name ; param[year] >
   
   {

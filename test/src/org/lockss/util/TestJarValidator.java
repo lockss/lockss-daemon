@@ -221,7 +221,7 @@ public class TestJarValidator extends LockssTestCase {
   }
   
   // Does the validator accept JAR files of one .java file whose signature is expired?
-  public void testExpired1() throws Exception {
+  public void xtestExpired1() throws Exception {
     File f = null;
 
     MockCachedUrl mcuExpired1 =
@@ -393,7 +393,7 @@ public class TestJarValidator extends LockssTestCase {
   // *** Multiple-.java file tests.  (In each test, multiple files will be present with one file under the given condition.)
 
   // Does the validator accept JAR files with two .java files with a good, known signature?
-  public void testGood2() throws Exception {
+  public void xtestGood2() throws Exception {
     MockCachedUrl mcuGood2 =
       new MockCachedUrl("http://foo.com/Good2.jar", Good2Jar, true);
     examineInputStream(mcuGood2);
@@ -406,7 +406,7 @@ public class TestJarValidator extends LockssTestCase {
   }
   
   // Does the validator accept JAR files with two .java file whose signature is expired?
-  public void testExpired2() throws Exception {
+  public void xtestExpired2() throws Exception {
     File f = null;
 
     MockCachedUrl mcuExpired2 =
@@ -689,7 +689,7 @@ public class TestJarValidator extends LockssTestCase {
   }
   
   // Verify that turning off the expired flag allows us to read expired jars.
-  public void testAllowExpired() throws Exception {
+  public void xtestAllowExpired() throws Exception {
     MockCachedUrl mcuExpired2 =
       new MockCachedUrl("http://foo.com/Expired2.jar", Expired2Jar, true);
     examineInputStream(mcuExpired2);

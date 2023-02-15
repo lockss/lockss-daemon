@@ -41,15 +41,15 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Liverpool University Press Journals Plugin</string>
+    <string>Liverpool University Press Journals Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Liverpool University Press Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Liverpool University Press Journals Plugin (Legacy), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -61,7 +61,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>5</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_url_consumer_factory</string>

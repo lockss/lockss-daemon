@@ -1,37 +1,41 @@
 /*
-
-Copyright (c) 2000-2020 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
-
-*/
+ * 2000-2022, Board of Trustees of Leland Stanford Jr. University,
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice, this
+ * list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ * this list of conditions and the following disclaimer in the documentation and/or
+ * other materials provided with the distribution.
+ *
+ * 3. Neither the name of the copyright holder nor the names of its contributors
+ * may be used to endorse or promote products derived from this software without
+ * specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
 package org.lockss.laaws.model.cfg;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.Plugin.Feature;
@@ -552,7 +556,7 @@ public class V2AuStateBean {
    * @param cdnStems the cdnStems to set
    */
   public void setCdnStems(List<String> cdnStems) {
-    this.cdnStems = cdnStems;
+    this.cdnStems = cdnStems == null ? (List<String>) Collections.EMPTY_LIST : cdnStems;
   }
 
   /**
@@ -628,6 +632,59 @@ public class V2AuStateBean {
     propMap.put("substanceVersion", substanceVersion);
     propMap.put("v3Agreement", v3Agreement);
     return propMap;
+  }
+
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(auCreationTime, lastCrawlTime, lastCrawlAttempt, lastCrawlResultMsg,
+        lastCrawlResult, lastDeepCrawlTime, lastDeepCrawlAttempt, lastDeepCrawlResultMsg,
+        lastDeepCrawlResult, lastDeepCrawlDepth, lastTopLevelPollTime, lastPollStart,
+        lastPollResult,
+        pollDuration, averageHashDuration, clockssSubscriptionStatus, v3Agreement,
+        highestV3Agreement,
+        accessType, hasSubstance, substanceVersion, metadataVersion, lastMetadataIndex,
+        lastContentChange, lastPoPPoll, lastPoPPollResult, lastLocalHashScan, numAgreePeersLastPoR,
+        numWillingRepairers, numCurrentSuspectVersions, cdnStems, isMetadataExtractionEnabled,
+        auId);
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    V2AuStateBean that = (V2AuStateBean) o;
+    return auCreationTime == that.auCreationTime && lastCrawlTime == that.lastCrawlTime
+        && lastCrawlAttempt == that.lastCrawlAttempt && lastCrawlResult == that.lastCrawlResult
+        && lastDeepCrawlTime == that.lastDeepCrawlTime
+        && lastDeepCrawlAttempt == that.lastDeepCrawlAttempt
+        && lastDeepCrawlResult == that.lastDeepCrawlResult
+        && lastDeepCrawlDepth == that.lastDeepCrawlDepth
+        && lastTopLevelPollTime == that.lastTopLevelPollTime && lastPollStart == that.lastPollStart
+        && lastPollResult == that.lastPollResult && pollDuration == that.pollDuration
+        && averageHashDuration == that.averageHashDuration
+        && clockssSubscriptionStatus == that.clockssSubscriptionStatus
+        && Double.compare(that.v3Agreement, v3Agreement) == 0
+        && Double.compare(that.highestV3Agreement, highestV3Agreement) == 0
+        && lastMetadataIndex == that.lastMetadataIndex
+        && lastContentChange == that.lastContentChange
+        && lastPoPPoll == that.lastPoPPoll && lastPoPPollResult == that.lastPoPPollResult
+        && lastLocalHashScan == that.lastLocalHashScan
+        && numAgreePeersLastPoR == that.numAgreePeersLastPoR
+        && numWillingRepairers == that.numWillingRepairers
+        && numCurrentSuspectVersions == that.numCurrentSuspectVersions
+        && isMetadataExtractionEnabled == that.isMetadataExtractionEnabled
+        && Objects.equals(lastCrawlResultMsg, that.lastCrawlResultMsg)
+        && Objects.equals(lastDeepCrawlResultMsg, that.lastDeepCrawlResultMsg)
+        && accessType == that.accessType && hasSubstance == that.hasSubstance
+        && Objects.equals(substanceVersion, that.substanceVersion)
+        && Objects.equals(metadataVersion, that.metadataVersion)
+        && Objects.equals(cdnStems, that.cdnStems) && Objects.equals(auId,
+        that.auId);
   }
 
   @Override

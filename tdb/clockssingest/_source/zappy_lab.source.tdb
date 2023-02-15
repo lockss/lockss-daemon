@@ -25,8 +25,9 @@
     au < zapped ; finished ; 2018 ; protocols.io Source Content 2018 ; 2018 >
     au < zapped ; finished ; 2019 ; protocols.io Source Content 2019 ; 2019 >
     au < zapped ; finished ; 2020 ; protocols.io Source Content 2020 ; 2020 >
-    au < readySource ; crawling ; 2021 ; protocols.io Source Content 2021 ; 2021 >
-    au < readySource ; crawling ; 2022 ; protocols.io Source Content 2022 ; 2022 >
+    au < readySource ; finished ; 2021 ; protocols.io Source Content 2021 ; 2021 >
+    au < readySource ; frozen ; 2022 ; protocols.io Source Content 2022 ; 2022 >
+    #No more AUs expected using this plugin
     }
 
     {
@@ -36,7 +37,19 @@
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
 
-    au < readySource ; crawling ; 2022 ; protocols.io Source Content 2022_01 ; 2022_01 >
+    au < readySource ; frozen ; 2022 ; protocols.io Source Content 2022_01 ; 2022_01 >
+    #No more AUs. Moving to https.
+
+    }
+    {
+    plugin = org.lockss.plugin.clockss.zappylab.ClockssZappyLabDirSourcePlugin
+    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/protocols-released/
+
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[directory] >
+
+    au < readySource ; crawling ; 2023 ; protocols.io Source Content 2023_01 ; 2023_01 >
+
     }
   }
 

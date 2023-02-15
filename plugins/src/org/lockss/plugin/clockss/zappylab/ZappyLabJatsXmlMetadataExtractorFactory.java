@@ -32,11 +32,15 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.clockss.zappylab;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.lockss.plugin.clockss.eastview.EastviewNewspaperTitleISSNMappingHelper;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -57,12 +61,12 @@ public class ZappyLabJatsXmlMetadataExtractorFactory extends SourceXmlMetadataEx
 
   private static SourceXmlSchemaHelper JatsPublishingHelper = null;
 
-  private static Pattern PLOS_DOI_PAT = Pattern.compile("((^https://)?dx\\.doi\\.org/)(10\\.[\\d]{4,}/.*)", Pattern.CASE_INSENSITIVE);
+  private static Pattern PLOS_DOI_PAT = Pattern.compile("((^https?://)?/?dx\\.doi\\.org)?(/?10\\.[\\d]{4,}/.*)", Pattern.CASE_INSENSITIVE);
   private static final String DOI_REPL = "$3";
 
   private static String normalisePlosDoi(String doi) {
     String nVal = null;
-   
+
     // this will strip the "http://dx.doi.org/", if there
     log.debug3("raw doi: = " + doi);
     Matcher plosM = PLOS_DOI_PAT.matcher(doi);
@@ -74,6 +78,33 @@ public class ZappyLabJatsXmlMetadataExtractorFactory extends SourceXmlMetadataEx
       log.debug3("raw doi not cleaned: = " + doi);
     }
     return nVal;
+  }
+
+  public static List<String> ExcludedDOIList = new ArrayList<String>();
+
+  static {
+    try {
+      String fname = "protocolsio_all_retracted_DOIs.dat";
+      InputStream is = null;
+
+      is = ZappyLabJatsXmlMetadataExtractorFactory.class.getResourceAsStream(fname);
+
+      if (is == null) {
+        throw new ExceptionInInitializerError("ZappyLabExcludedDOI: ZappyLabExcludedDOI external data file not found");
+      }
+
+      BufferedReader bufr = new BufferedReader(new InputStreamReader(is));
+
+      String nextline = null;
+
+      while ((nextline = bufr.readLine()) != null) {
+        nextline = nextline.trim();
+        ExcludedDOIList.add(nextline);
+      }
+      bufr.close();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 
   @Override
@@ -94,6 +125,21 @@ public class ZappyLabJatsXmlMetadataExtractorFactory extends SourceXmlMetadataEx
       return JatsPublishingHelper;
     }
 
+    @Override
+    protected boolean preEmitCheck(SourceXmlSchemaHelper schemaHelper,
+                                   CachedUrl cu, ArticleMetadata thisAM) {
+
+      // Historically, content contained some "spam" need to be excluded based on DOI
+      // Publisher delivered content with extra "/" for doi
+      String extractedDOI = normalisePlosDoi(thisAM.getRaw(JatsPublishingSchemaHelper.JATS_doi)).replaceFirst("/", "");
+      
+      log.debug3("ZappyLab spam DOI: extracted doi in PreEmit: -----------" + extractedDOI + ", from excluded list = " + ExcludedDOIList.size());
+      if ( extractedDOI!= null &&  ExcludedDOIList.size() > 0 && ExcludedDOIList.contains(extractedDOI)) {
+        log.debug3("---ZappyLab spam DOI found: " + extractedDOI);
+        return false;
+      }
+      return true;
+    }
 
     /* 
      * filename is the same as the xml, just change the suffix 
@@ -118,6 +164,7 @@ public class ZappyLabJatsXmlMetadataExtractorFactory extends SourceXmlMetadataEx
         CachedUrl cu, ArticleMetadata thisAM) {
 
       log.debug3("in ZappyLab postCookProcess");
+
       // we get an issn but no publication information. This is protocols.io
       if (thisAM.get(MetadataField.FIELD_PUBLICATION_TITLE) == null) {
           thisAM.put(MetadataField.FIELD_PUBLICATION_TITLE, PROTOCOLS_IO_PUBLICATION);
@@ -132,7 +179,8 @@ public class ZappyLabJatsXmlMetadataExtractorFactory extends SourceXmlMetadataEx
       }
 
       if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_doi) != null) {
-        thisAM.put(MetadataField.FIELD_DOI, normalisePlosDoi(thisAM.getRaw(JatsPublishingSchemaHelper.JATS_doi)));
+        //The content delivered may have extra "/" in front of doi
+        thisAM.put(MetadataField.FIELD_DOI, normalisePlosDoi(thisAM.getRaw(JatsPublishingSchemaHelper.JATS_doi)).replaceFirst("/", ""));
       }
     }
     

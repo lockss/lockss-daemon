@@ -53,25 +53,10 @@ public class TestScienceOpenBookXMLMetadataExtractor extends LockssTestCase {
     super.tearDown();
   }
 
-  private String getXmlFileContent(String fname) {
-    String xmlContent = "";
-    InputStream file_input = null;
-    try {
-      file_input = getResourceAsStream(fname);
-      xmlContent = StringUtil.fromInputStream(file_input);
-      IOUtil.safeClose(file_input);
-    } catch (IOException e) {
-      log.error(e.getMessage(), e);
-    } finally {
-      IOUtil.safeClose(file_input);
-    }
-    return xmlContent;
-  }
-
   private List<ArticleMetadata> setupContentForAU(ArchivalUnit au,
                                                   String fname
   ) throws IOException, PluginException {
-    String content = getXmlFileContent(fname);
+    String content = getResourceContent(fname);
     return setupContentForAU(au, fname, content);
   }
 

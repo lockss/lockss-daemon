@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2022 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -53,6 +49,29 @@ public interface CacheResultHandler extends PluginFetchEventResponse {
     init((CacheResultMap)map);
   }
 
+  /** Determine what action to take in response to a CacheEvent.  The
+   * default implementation delegates to {@link
+   * #handleResult(ArchivalUnit, String, int)}, {@link
+   * #handleResult(ArchivalUnit, String, Exception)}, or {@link
+   * #handleResult(ArchivalUnit, String, String)} methods, for event
+   * type {@link CacheEvent.EventType.RESPONSE_CODE}, {@link
+   * CacheEvent.EventType.EXCEPTION}, or {@link
+   * CacheEvent.EventType.REDIRECT_TO_URL}, Plugins should override
+   * this method <b>or</b> one or more of those.
+   *
+   * The handler should return a CacheException instance with
+   * attributes specifying the number and timing of retries, if any,
+   * and the action the crawler should take (ignore, warning, error,
+   * abort).  See HttpReaultHandler.initExceptionTable()} for the
+   * default actions.
+   */
+  public default CacheException handleResult(ArchivalUnit au,
+                                             String url,
+                                             CacheEvent event)
+      throws PluginException {
+    return event.invokeHandler(this, au, url);
+  }
+
   /** Determine what action to take in response to HTTP result codes.
    *
    * The handler should return a CacheException with attributes specifying
@@ -60,10 +79,12 @@ public interface CacheResultHandler extends PluginFetchEventResponse {
    * should take (ignore, warning, error, abort).  See
    * HttpReaultHandler.initExceptionTable()} for the default actions.
    */
-  public CacheException handleResult(ArchivalUnit au,
-				     String url,
-				     int code)
-      throws PluginException;
+  public default CacheException handleResult(ArchivalUnit au,
+                                             String url,
+                                             int code)
+      throws PluginException {
+    throw new PluginException("Plugin specified handler to run on response code " + code + " but handler does not handle response codes");
+  }
 
   /** Determine what action to take when an exception is thrown while
    * fetching content from the network or writing to the repository.  The
@@ -89,8 +110,24 @@ public interface CacheResultHandler extends PluginFetchEventResponse {
    * should take (ignore, warning, error, abort).  See
    * HttpReaultHandler.initExceptionTable()} for the default actions.
    */
-  public CacheException handleResult(ArchivalUnit au,
-				     String url,
-				     Exception ex)
-      throws PluginException;
+  public default CacheException handleResult(ArchivalUnit au,
+                                             String url,
+                                             Exception ex)
+      throws PluginException {
+    throw new PluginException("Plugin specified handler to run on Exception " + ex.getClass() + " but handler does not handle Exceptions");
+  }
+
+  /** Determine what action to take when a redirect to a matching URL
+   * occurs while fetching content from the network.
+   *
+   * The handler should return a CacheException with attributes specifying
+   * the number and timing of retries, if any, and the action the crawler
+   * should take (ignore, warning, error, abort).
+   */
+  public default CacheException handleRedirect(ArchivalUnit au,
+                                               String url,
+                                               String redirToUrl)
+      throws PluginException {
+    throw new PluginException("Plugin specified handler to run on redirect to " + redirToUrl + " but handler does not handle redirects");
+  }
 }

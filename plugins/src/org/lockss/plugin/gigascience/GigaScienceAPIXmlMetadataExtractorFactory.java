@@ -3,8 +3,6 @@ package org.lockss.plugin.gigascience;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
-import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
@@ -31,7 +29,7 @@ public class GigaScienceAPIXmlMetadataExtractorFactory extends SourceXmlMetadata
         @Override
         protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
             if (GigaScienceAPIHelper== null) {
-                GigaScienceAPIHelper = new GigaScienceAPIHelper();
+                GigaScienceAPIHelper = (SourceXmlSchemaHelper) new GigaScienceAPIHelper();
                 log.debug3("Setup GigaScienceAPIHelper Metadata Extractor");
             }
             return GigaScienceAPIHelper;

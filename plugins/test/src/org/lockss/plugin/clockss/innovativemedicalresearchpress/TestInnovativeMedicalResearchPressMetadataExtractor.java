@@ -27,24 +27,10 @@ public class TestInnovativeMedicalResearchPressMetadataExtractor extends SourceX
     private static String BaseUrl = "http://source.host.org/sourcefiles/innovative/";
     private static String Directory = "2019";
 
-    private static String getXmlFileContent(String fname) {
-        String xmlContent = "";
-        try {
-            String currentDirectory = System.getProperty("user.dir");
-            String pathname = currentDirectory +
-                    "/plugins/test/src/org/lockss/plugin/clockss/innovativemedicalresearchpress/" + fname;
-            xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
-        } catch(IOException e) {
-            log.error(e.getMessage(), e);
-        }
-        return xmlContent;
-    }
-
-
     public void testExtractArticleXmlSchema() throws Exception {
 
         String fname = "sample_test_jats.xml";
-        String journalXml = getXmlFileContent(fname);
+        String journalXml = getResourceContent(fname);
         assertNotNull(journalXml);
 
         String xml_url = BaseUrl + Directory + "/" + fname;

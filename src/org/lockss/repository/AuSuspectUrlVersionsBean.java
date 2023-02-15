@@ -2,6 +2,8 @@ package org.lockss.repository;
 
 import java.util.HashSet;
 import java.util.Set;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 public class AuSuspectUrlVersionsBean {
   private String auid;
@@ -20,5 +22,34 @@ public class AuSuspectUrlVersionsBean {
 
   public void setSuspectVersions(Set<AuSuspectUrlVersions.SuspectUrlVersion> suspectVersions) {
     this.suspectVersions = suspectVersions;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+
+    AuSuspectUrlVersionsBean that = (AuSuspectUrlVersionsBean) o;
+
+    return new EqualsBuilder().append(auid, that.auid)
+        .append(suspectVersions, that.suspectVersions).isEquals();
+  }
+
+  @Override
+  public int hashCode() {
+    return new HashCodeBuilder(17, 37).append(auid).append(suspectVersions).toHashCode();
+  }
+
+  @Override
+  public String toString() {
+    return "AuSuspectUrlVersionsBean{" +
+        "auid='" + auid + '\'' +
+        ", suspectVersions=" + suspectVersions +
+        '}';
   }
 }

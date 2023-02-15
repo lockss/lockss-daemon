@@ -38,6 +38,7 @@ import org.lockss.plugin.*;
 import org.lockss.util.TypedEntryMap;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.Collection;
 import java.util.List;
 
@@ -52,7 +53,7 @@ public class Ojs3FeatureUrlHelperFactory implements FeatureUrlHelperFactory {
 
     @Override
     public Collection<String> getAccessUrls(ArchivalUnit au)
-        throws PluginException, IOException {
+        throws IOException {
 
       if (au == null) {
         return null;
@@ -64,7 +65,7 @@ public class Ojs3FeatureUrlHelperFactory implements FeatureUrlHelperFactory {
     @Override
     public List<String> getFeatureUrls(ArchivalUnit au,
                                        OpenUrlResolver.OpenUrlInfo.ResolvedTo itemType,
-                                       TypedEntryMap paramMap) {
+                                       TypedEntryMap paramMap) throws MalformedURLException {
 
       // This can actually get called with null AU from OpenUrlResolver
       if (au == null) {

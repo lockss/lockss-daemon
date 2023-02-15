@@ -423,7 +423,7 @@ private static final String withFlagModal =
       tempDirPath = setUpDiskSpace();
       startMockDaemon();
       variantFact = new PeerJHtmlHashFilterFactory();
-      variantArchivesAu = createAu("org.lockss.plugin.peerj.PeerJPlugin");
+      variantArchivesAu = createAu("org.lockss.plugin.peerj.ClockssPeerJPlugin");
     }
     public void testFilteringArchives() throws Exception {
       doFilterTest(variantArchivesAu, variantFact, withHead, filteredHead);

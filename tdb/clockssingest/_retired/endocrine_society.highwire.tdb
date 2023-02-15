@@ -88,7 +88,7 @@
   {
 
     title <
-      name = Journal of Clinical Endocrinology & Metabolism ;
+      name = The Journal of Clinical Endocrinology & Metabolism ;
       issn = 0021-972X ;
       eissn = 1945-7197 ;
       issnl = 0021-972X
@@ -99,8 +99,8 @@
       plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       param[base_url] = http://jcem.endojournals.org/
 
-      au < finished ; finished ; 2012 ; Journal of Clinical Endocrinology & Metabolism Volume 97 ; 97 ; >
-      au < superseded ; exists ; 2013 ; Journal of Clinical Endocrinology & Metabolism Volume 98 [superseded] ; 98 ; >
+      au < finished ; finished ; 2012 ; The Journal of Clinical Endocrinology & Metabolism Volume 97 ; 97 ; >
+      au < superseded ; exists ; 2013 ; The Journal of Clinical Endocrinology & Metabolism Volume 98 [superseded] ; 98 ; >
 
     }
 

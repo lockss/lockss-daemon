@@ -1,0 +1,83 @@
+{
+
+  publisher <
+    name = University of Baghdad, College of Arts ;
+    info[contract] = 2023 ;
+    info[back] = 2022 ;
+    info[tester] = 8 ;
+    info[poller] = 8 ;
+    info[platform] = OJS3 3.3.0.13
+  >
+
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+
+  {
+
+    title <
+      name = Al-Adab Journal ;
+      issn = 1994-473X ;
+      eissn = 2706-9931
+    >
+
+      param[base_url] = https://aladabj.uobaghdad.edu.iq/
+      param[journal_id] = aladabjournal
+
+      au < manifest ; exists ; 1960 ; Al-Adab Journal Volume 1960 ; 2 ; 1960 ; >
+      au < manifest ; exists ; 1961 ; Al-Adab Journal Volume 1961 ; 3 ; 1961 ; >
+      au < manifest ; exists ; 1962 ; Al-Adab Journal Volume 1962 ; 5 ; 1962 ; >
+      au < manifest ; exists ; 1963 ; Al-Adab Journal Volume 1963 ; 6 ; 1963 ; >
+      au < manifest ; exists ; 1964 ; Al-Adab Journal Volume 1964 ; 7 ; 1964 ; >
+      au < manifest ; exists ; 1965 ; Al-Adab Journal Volume 1965 ; 8 ; 1965 ; >
+      au < manifest ; exists ; 1966 ; Al-Adab Journal Volume 1966 ; 9 ; 1966 ; >
+      au < manifest ; exists ; 1967 ; Al-Adab Journal Volume 1967 ; 10 ; 1967 ; >
+      au < manifest ; exists ; 1968 ; Al-Adab Journal Volume 1968 ; 11 ; 1968 ; >
+      au < manifest ; exists ; 1969 ; Al-Adab Journal Volume 1969 ; 12 ; 1969 ; >
+      au < manifest ; exists ; 1970 ; Al-Adab Journal Volume 1970 ; 13 ; 1970 ; >
+
+      au < manifest ; exists ; 1971 ; Al-Adab Journal Volume 1971 ; 14 ; 1971 ; >
+      au < manifest ; exists ; 1972 ; Al-Adab Journal Volume 1972 ; 15 ; 1972 ; >
+      au < manifest ; exists ; 1973 ; Al-Adab Journal Volume 1973 ; 16-17 ; 1973 ; >
+      au < manifest ; exists ; 1974 ; Al-Adab Journal Volume 1974 ; 18 ; 1974 ; >
+      au < manifest ; exists ; 1976 ; Al-Adab Journal Volume 1976 ; 19-20 ; 1976 ; >
+      au < manifest ; exists ; 1977 ; Al-Adab Journal Volume 1977 ; 21 ; 1977 ; >
+      au < manifest ; exists ; 1978 ; Al-Adab Journal Volume 1978 ; 22-23 ; 1978 ; >
+      au < manifest ; exists ; 1979 ; Al-Adab Journal Volume 1979 ; 24-27 ; 1979 ; >
+      au < manifest ; exists ; 1980 ; Al-Adab Journal Volume 1980 ; 28-29 ; 1980 ; >
+
+      au < manifest ; exists ; 1981 ; Al-Adab Journal Volume 1981 ; 30-31 ; 1981 ; >
+      au < manifest ; exists ; 1982 ; Al-Adab Journal Volume 1982 ; 32-33 ; 1982 ; >
+      au < manifest ; exists ; 1986 ; Al-Adab Journal Volume 1986 ; 34 ; 1986 ; >
+      au < manifest ; exists ; 1988 ; Al-Adab Journal Volume 1988 ; 35 ; 1988 ; >
+      au < manifest ; exists ; 1989 ; Al-Adab Journal Volume 1989 ; 36 ; 1989 ; >
+      au < manifest ; exists ; 1990 ; Al-Adab Journal Volume 1990 ; 37-39 ; 1990 ; >
+
+      au < manifest ; exists ; 1995 ; Al-Adab Journal Volume 1995 ; 40 ; 1995 ; >
+      au < manifest ; exists ; 1996 ; Al-Adab Journal Volume 1996 ; 41 ; 1996 ; >
+      au < manifest ; exists ; 1997 ; Al-Adab Journal Volume 1997 ; 42-43 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; Al-Adab Journal Volume 1998 ; 44 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; Al-Adab Journal Volume 1999 ; 45-47 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; Al-Adab Journal Volume 2000 ; 48-51 ; 2000 ; >
+
+      au < manifest ; exists ; 2001 ; Al-Adab Journal Volume 2001 ; 52-57 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; Al-Adab Journal Volume 2002 ; 58-63 ; 2002 ; >
+      au < manifest ; exists ; 2004 ; Al-Adab Journal Volume 2004 ; 64-67 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; Al-Adab Journal Volume 2005 ; 68-71 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; Al-Adab Journal Volume 2006 ; 72-75 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; Al-Adab Journal Volume 2007 ; 76-81 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Al-Adab Journal Volume 2008 ; 82-87 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; Al-Adab Journal Volume 2009 ; 88-90 ; 2009 ; >
+
+      au < manifest ; exists ; 2015 ; Al-Adab Journal Volume 2015 ; 111-114 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Al-Adab Journal Volume 2016 ; 115-118 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; Al-Adab Journal Volume 2017 ; 119-122 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Al-Adab Journal Volume 2018 ; 123-127 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; Al-Adab Journal Volume 2019 ; 128-131 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; Al-Adab Journal Volume 2020 ; 132-135 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Al-Adab Journal Volume 2021 ; 136-139 ; 2021 ; >
+      au < testing ; exists ; 2022 ; Al-Adab Journal Volume 2022 ; 140-143 ; 2022 ; >
+
+  }
+
+}

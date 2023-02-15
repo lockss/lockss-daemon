@@ -89,14 +89,10 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
   protected static String AF_PATTERN_TEMPLATE;
   protected static Pattern AF_PATTERN;
 
-  protected static String ABSTRACT_PATTERN_TEMPLATE = "\".*/article/view/[^/]+$\"";
-  protected static Pattern ABSTRACT_PATTERN = Pattern.compile("article/view/[^/]+$", Pattern.CASE_INSENSITIVE);
-
-  protected static final String GENERIC_ARTICLE_PATTERN_TEMPLATE = "\".*/article/view/[^/]+/[^/]+$\"";
-  protected static Pattern GENERIC_ARTICLE_PATTERN = Pattern.compile("article/view/[^/]+/[^/]+$", Pattern.CASE_INSENSITIVE);
-
-  protected static String ISSUE_PATTERN_TEMPLATE = "\".*/issue/view/[^/]+$\"";
-  protected static Pattern ISSUE_PATTERN = Pattern.compile("issue/view/[^/]+$", Pattern.CASE_INSENSITIVE);
+  protected static String INDEX_REGEX = "index[.]php.*";
+  protected static String ABSTRACT_REGEX = "/article/view/[^/]+$";
+  protected static String GENERIC_ARTICLE_REGEX = "/article/view/[^/]+/[^/]+$";
+  protected static String ISSUE_REGEX = "/issue/view/[^/]+$";
 
   protected static String PUB_ID = "";
   protected static String JOURNAL_ID;
@@ -144,34 +140,42 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
    * we assume there are no article pages, and we set AF_PATTERN to ISSUE_PATTERN.
    */
   protected void setPatterns(ArchivalUnit au) {
-    if (searchCusForPattern(au, ABSTRACT_PATTERN)) {
+    // this is needed for the tests.
+    AF_PATTERN_TEMPLATE= "";
+    String PATTERN_SUFFIX = "";
+    if (searchCusForRegex(au, ABSTRACT_REGEX)) {
       log.debug3("found abstract pattern");
-      AF_PATTERN = ABSTRACT_PATTERN;
-      AF_PATTERN_TEMPLATE = ABSTRACT_PATTERN_TEMPLATE;
-    } else if (searchCusForPattern(au, GENERIC_ARTICLE_PATTERN)) {
+      PATTERN_SUFFIX = ABSTRACT_REGEX;
+    } else if (searchCusForRegex(au, GENERIC_ARTICLE_REGEX)) {
       log.debug3("found Generic pattern");
       // if we didnt find an ARTICLE_PATTERN we search for the generic PATTERN
-      AF_PATTERN = GENERIC_ARTICLE_PATTERN;
-      AF_PATTERN_TEMPLATE = GENERIC_ARTICLE_PATTERN_TEMPLATE;
+      PATTERN_SUFFIX = GENERIC_ARTICLE_REGEX;
     } else {
-      log.debug3("found neither pattern");
+      log.debug3("found neither pattern, assuming issue only");
       // if we didn't find the generic article pattern, we fall back to issue pattern
-      AF_PATTERN = ISSUE_PATTERN;
-      AF_PATTERN_TEMPLATE = ISSUE_PATTERN_TEMPLATE;
+      PATTERN_SUFFIX = ISSUE_REGEX;
     }
+    // add index.php, if we need to.
+    if (searchCusForRegex(au, INDEX_REGEX + PATTERN_SUFFIX)) {
+      AF_PATTERN_TEMPLATE += INDEX_REGEX;
+    }
+    AF_PATTERN_TEMPLATE += PATTERN_SUFFIX;
+    log.debug3(" using pattern: " + AF_PATTERN_TEMPLATE);
+    AF_PATTERN = Pattern.compile(AF_PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
   }
 
 
   /*
    * Helper function that iterates over the AUs cachedUrl set
-   * and searches for the supplied pattern in the urls.
+   * and searches for the supplied regex in the cached urls.
    */
-  protected boolean searchCusForPattern(ArchivalUnit au,
-                                          Pattern urlPattern) {
+  protected boolean searchCusForRegex(ArchivalUnit au,
+                                          String urlPattern) {
+    Pattern pat = Pattern.compile(urlPattern, Pattern.CASE_INSENSITIVE);
     Matcher mat;
     for (CachedUrl cu : au.getAuCachedUrlSet().getCuIterable()) {
       String cuUrl = cu.getUrl();
-      mat = urlPattern.matcher(cuUrl);
+      mat = pat.matcher(cuUrl);
       if (mat.find()) {
         return true;
       }
@@ -332,9 +336,17 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
           if (nl.size() > 0) {
             String urlStr = null;
             if (nl.elementAt(0) instanceof MetaTag) {
+              // if we have a metatag, then it is likely the actual pdf file.
               urlStr = ((MetaTag) nl.elementAt(0)).getMetaContent();
             } else if (nl.elementAt(0) instanceof LinkTag) {
+              // if this is a linktag, then we likely have the landing, lets convert to download if so
               urlStr = ((LinkTag) nl.elementAt(0)).getLink();
+              if (urlStr.contains("/view/")) {
+                CachedUrl downloadCu = au.makeCachedUrl(urlStr.replace("/view/", "/download/"));
+                if (downloadCu != null && downloadCu.hasContent()) {
+                  urlStr = urlStr.replace("/view/", "/download/");
+                }
+              }
             } else {
               log.debug3("node was an unexpected type.");
             }
@@ -347,13 +359,22 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
                   af.setFullTextCu(cu);
                 }
                 af.setRoleCu(role, cu);
+              } else {
+                log.debug3("No CachedUrl exists for that url. Searching all CUs for a match." );
+                // sometimes this url is not the one that we crawled.
+                // sometimes the one we crawl as an extra number appended. e.g.
+                // crawled  https://jkmc.uobaghdad.edu.iq/index.php/MEDICAL/article/download/624/624/1989
+                // metadata https://jkmc.uobaghdad.edu.iq/index.php/MEDICAL/article/download/624/624
+                // so we can search for this url...
+                searchCachedUrlSetForMatch(urlStr, af, role, setToFullTextCu);
               }
               // Now try for the PDF landing page which is the same as the PDF
               // but with "download" turned to "view"
               if (convertToLandingPage) {
                 String landingStr = urlStr.replace("download/", "view/");
                 cu = au.makeCachedUrl(landingStr);
-                if (cu != null && cu.hasContent()) {
+                // make sure teh replace happened. sometimes urlStr is just the view/
+                if (!landingStr.equals(urlStr) && cu != null && cu.hasContent()) {
                   // replace absCU with landCu if exists and has content
                   af.setRoleCu(landingRole, cu);
                 }
@@ -389,10 +410,41 @@ public class Ojs3ArticleIteratorFactory implements ArticleIteratorFactory,
       CachedUrl cu = au.makeCachedUrl(risUrl);
       if (cu != null && cu.hasContent()) {
         af.setRoleCu(ArticleFiles.ROLE_CITATION_RIS, cu);
+      } else {
+        // sometimes the PUB_ID is different for each/some citation files. so searching for a match is the best fix
+        searchCachedUrlSetForMatch(risUrl.replace(PUB_ID, ""), af, ArticleFiles.ROLE_CITATION_RIS);
       }
       cu = au.makeCachedUrl(bibtexUrl);
       if (cu != null && cu.hasContent()) {
         af.setRoleCu(ArticleFiles.ROLE_CITATION_BIBTEX, cu);
+      } else {
+        searchCachedUrlSetForMatch(bibtexUrl.replace(PUB_ID, ""), af, ArticleFiles.ROLE_CITATION_BIBTEX);
+      }
+    }
+
+    /*
+    Overloaded
+     */
+    protected final void searchCachedUrlSetForMatch(String urlToFind, ArticleFiles af, String role) {
+      searchCachedUrlSetForMatch(urlToFind, af, role, false);
+    }
+
+    /*
+    Searches the Archival Units cached url set for url that begins with the url to find.
+     */
+    protected final void searchCachedUrlSetForMatch(String urlToFind,
+                                                    ArticleFiles af,
+                                                    String role,
+                                                    boolean setToFullTextCu) {
+      for (CachedUrl cu : au.getAuCachedUrlSet().getCuIterable()) {
+        String cuUrl = cu.getUrl();
+        if (cuUrl.contains(urlToFind)) {
+          log.debug3("Found a cached url that contains the url: " + cuUrl + " setting to role.");
+          if (setToFullTextCu) {
+            af.setFullTextCu(cu);
+          }
+          af.setRoleCu(role, cu);
+        }
       }
     }
   }

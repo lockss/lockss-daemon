@@ -67,7 +67,7 @@ implements SourceXmlSchemaHelper {
    *   IDValue/
    * xPath that gets here has already figured out which type of ID it is
    */
-  static private final NodeValue ONIX_ID_VALUE = new NodeValue() {
+  static public final NodeValue ONIX_ID_VALUE = new NodeValue() {
     @Override
     public String getValue(Node node) {
       if (node == null) {
@@ -103,7 +103,7 @@ implements SourceXmlSchemaHelper {
    *   PersonName/
    *   PersonNameInverted
    */
-  static private final NodeValue ONIX_AUTHOR_VALUE = new NodeValue() {
+  static public final NodeValue ONIX_AUTHOR_VALUE = new NodeValue() {
     @Override
     public String getValue(Node node) {
       if (node == null) {
@@ -168,7 +168,7 @@ implements SourceXmlSchemaHelper {
    *     TitleWithoutPrefix
    *   </TitleElement>
    */
-  static private final NodeValue ONIX_TITLE_VALUE = new NodeValue() {
+  static public final NodeValue ONIX_TITLE_VALUE = new NodeValue() {
     @Override
     public String getValue(Node node) {
 

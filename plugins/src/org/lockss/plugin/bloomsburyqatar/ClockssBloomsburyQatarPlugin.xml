@@ -1,3 +1,34 @@
+<!--
+
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
 <map>
   <entry>
     <string>plugin_status</string>
@@ -9,11 +40,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
-  </entry>
-  <entry>
-    <string>plugin_publishing_platform</string>
-    <string>Atypon</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -33,73 +60,12 @@
     </map>
   </entry>
   <entry>
-    <string>au_name</string>
-    <string>&quot;Bloomsbury Qatar Foundation Plugin (CLOCKSS, legacy), Base URL %s, Journal Abbreviation %s, Volume %s&quot;, base_url, journal_dir, volume_name</string>
+    <string>plugin_publishing_platform</string>
+    <string>Atypon</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Bloomsbury Qatar Foundation Plugin (CLOCKSS, legacy)</string>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(_v[0-9]+)?$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%sclockss/%s/%s/index.html&quot;, base_url, journal_dir, volume_name</string>
-      <string>2,&quot;^%spage&quot;,base_url</string>
-      <string>1,&quot;^%stoc/%s/%s(/|$)&quot;, base_url, journal_dir, volume_name</string>
-      <string>1,&quot;^%sdoi/(pdf|pdfplus|abs|full|suppl)/10\.5339/%s\.(.*\.)?%s\.&quot;, base_url, journal_dir, volume_name</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>&quot;%sclockss/%s/%s/index.html&quot;, base_url, journal_dir, volume_name</string>
-  </entry>
-  <entry>
-  	<string>au_feature_urls</string>
-  	<map>
-  	  <entry>
-  	    <string>au_title</string>
-        <string>&quot;%sjournal/%s&quot;, base_url, journal_dir</string>
-  	  </entry>
-  	  <entry>
-  	    <string>au_issue</string>
-        <string>&quot;%stoc/%s/%s/%s&quot;, base_url, journal_dir, volume_name, issue</string>
-  	  </entry>
-	  <entry>
-	    <string>au_volume</string>
-    	<string>&quot;%sclockss/%s/%s/index.html&quot;, base_url, journal_dir, volume_name</string>
-	  </entry>
-  	</map>
-  </entry>
-  <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
-  </entry>
-  <entry>
-    <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.bloomsburyqatar.BloomsburyQatarArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.bloomsburyqatar.BloomsburyQatarArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.bloomsburyqatar.BloomsburyQatarUrlNormalizer</string>
-  </entry>
-  <entry>
-    <string>text/html_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-     	<string>*;DublinCore</string>
-        <string>org.lockss.plugin.bloomsburyqatar.BloomsburyQatarHtmlMetadataExtractorFactory</string>
-      </entry>
-    </map>
+    <string>Bloomsbury Qatar Foundation Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -132,4 +98,69 @@
       </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
-</map>    
+  <entry>
+    <string>au_name</string>
+    <string>"Bloomsbury Qatar Foundation Plugin (Legacy, CLOCKSS), Base URL %s, Journal Abbreviation %s, Volume %s", base_url, journal_dir, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sclockss/%s/%s/index.html", base_url, journal_dir, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(_v[0-9]+)?$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%sclockss/%s/%s/index.html", base_url, journal_dir, volume_name</string>
+      <string>2,"^%spage",base_url</string>
+      <string>1,"^%stoc/%s/%s(/|$)", base_url, journal_dir, volume_name</string>
+      <string>1,"^%sdoi/(pdf|pdfplus|abs|full|suppl)/10\.5339/%s\.(.*\.)?%s\.", base_url, journal_dir, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.bloomsburyqatar.BloomsburyQatarUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.bloomsburyqatar.BloomsburyQatarArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.bloomsburyqatar.BloomsburyQatarArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+     	<string>*;DublinCore</string>
+        <string>org.lockss.plugin.bloomsburyqatar.BloomsburyQatarHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+  	<string>au_feature_urls</string>
+  	<map>
+  	  <entry>
+  	    <string>au_title</string>
+        <string>"%sjournal/%s", base_url, journal_dir</string>
+  	  </entry>
+  	  <entry>
+  	    <string>au_issue</string>
+        <string>"%stoc/%s/%s/%s", base_url, journal_dir, volume_name, issue</string>
+  	  </entry>
+	  <entry>
+	    <string>au_volume</string>
+    	<string>"%sclockss/%s/%s/index.html", base_url, journal_dir, volume_name</string>
+	  </entry>
+  	</map>
+  </entry>
+</map>

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ "$#" == "0" ]; then
+if [ "$#" = "0" ]; then
  echo "Usage: $0 <class-name>"
  echo "Runs <class-name> in junit under jdb."
  echo "Must be run from project base dir."

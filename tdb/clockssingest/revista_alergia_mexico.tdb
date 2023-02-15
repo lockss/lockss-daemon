@@ -1,0 +1,41 @@
+{
+
+  publisher <
+    name = Revista Alergia México ;
+    info[contract] = 2022 ;
+    info[back] = 2018 ;
+    info[tester] = 5 ;
+    info[poller] = 5 ;
+    info[platform] = OJS3. Open Journal Systems 3.2.1.1 
+  >
+
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    param[base_url] = https://revistaalergia.mx/ojs/
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+    #OJS3
+    attr[start_stem] = index.php/
+    #attr[primary_locale] = es_ES
+
+  {
+  
+    title < 
+      name = Revista Alergia México ;
+      eissn = 2448-9190
+    >
+
+      param[journal_id] = ram
+      #published 2014 to present
+
+      au < frozen ; exists ; 2014 ; Revista Alergia México Volume 2014 ; 61 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Revista Alergia México Volume 2015 ; 62 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Revista Alergia México Volume 2016 ; 63 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; Revista Alergia México Volume 2017 ; 64 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; Revista Alergia México Volume 2018 ; 65 ; 2018 ; >
+      au < ready ; exists ; 2019 ; Revista Alergia México Volume 2019 ; 66 ; 2019 ; >
+      au < testing ; exists ; 2020 ; Revista Alergia México Volume 2020 ; 67 ; 2020 ; >
+      au < ready ; exists ; 2021 ; Revista Alergia México Volume 2021 ; 68 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; Revista Alergia México Volume 2022 ; 69 ; 2022 ; >
+
+  }
+
+}

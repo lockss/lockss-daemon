@@ -33,6 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.atypon;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.Pattern;
@@ -268,12 +269,35 @@ ArticleMetadataExtractorFactory {
   protected String getPatternWithAbstractTemplate() {
 	  return DEFAULT_PATTERN_TEMPLATE_WITH_ABSTRACT;
   }
-  
 
+  /** this code is modified to prevent emit metadata for FutureScience,
+   * which has embedded pdf file inside article content, like the following:
+   * Epigenomics Volume 3
+   * x-lockss-node-url: 	https://www.futuremedicine.com/doi/pdf/10.2217/epi.10.19  --embedded pdf
+   * x-lockss-referrer: 	https://www.futuremedicine.com/doi/full/10.2217/epi.11.16     --article
+   *
+   *
+   * Future Cardiology Volume 7
+   * x-lockss-node-url: 	https://www.futuremedicine.com/doi/pdf/10.2217/fca.10.84   --embedded pdf
+   * x-lockss-referrer: 	https://www.futuremedicine.com/doi/full/10.2217/fca.11.35   --article
+   * @param target the purpose for which metadata is being extracted
+   * @return
+   * @throws PluginException
+   */
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
-      throws PluginException {
-    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
+          throws PluginException {
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA) {
+      @Override
+      public void extract(MetadataTarget target, ArticleFiles af,
+                          Emitter emitter)
+              throws IOException, PluginException {
+        if (getCuToExtract(af) == null) {
+          return;
+        }
+        super.extract(target, af, emitter);
+      }
+    };
   }
 
   // return true if the AU is of type "abstracts"

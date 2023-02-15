@@ -6,6 +6,7 @@
     info[tester] = S ;
     info[platform] = Source
   >
+  hidden[proxy] = DIRECT
 
   {
 
@@ -13,16 +14,25 @@
        name = eLife Sciences Source Content
     >
 
+
+    plugin = org.lockss.plugin.clockss.elifesciences.ClockssElifeSciencesSourcePlugin
+    implicit < status ; status2 ; year ; name ; param[year] >
+
     {
 
-      plugin = org.lockss.plugin.clockss.elifesciences.ClockssElifeSciencesSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/elife-released/
-      hidden[proxy] = DIRECT
-      implicit < status ; status2 ; year ; name ; param[year] >
 
-      au < readySource ; crawling ; 2020 ; eLife Sciences Source Content 2020 ; 2020 >
-      au < readySource ; crawling ; 2021 ; eLife Sciences Source Content 2021 ; 2021 >
+      au < readySource ; finished ; 2020 ; eLife Sciences Source Content 2020 ; 2020 >
+      au < readySource ; finished ; 2021 ; eLife Sciences Source Content 2021 ; 2021 >
       au < readySource ; crawling ; 2022 ; eLife Sciences Source Content 2022 ; 2022 >
+      #No more AUs. Moved to https.
+
+    }
+    {
+
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/elife-released/
+
+      au < readySource ; crawling ; 2023 ; eLife Sciences Source Content 2023 ; 2023 >
 
     }
 

@@ -6,6 +6,7 @@
     info[tester] = S ;
     info[platform] = Source
   >
+    hidden[proxy] = DIRECT
 
   {
 
@@ -14,18 +15,23 @@
     >
 
     plugin = org.lockss.plugin.clockss.verduci.ClockssVerduciEditoreSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/verduci-released/
-
-    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
+    {
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/verduci-released/
 
     #2018 not on Humbodlt
     au < zapped ; finished ; 2018 ; Verduci Editore Source Content 2018 ; 2018 >
     au < zapped ; finished ; 2019 ; Verduci Editore Source Content 2019 ; 2019 >
-    au < readySource ; crawling ; 2020 ; Verduci Editore Source Content 2020 ; 2020 >
-    au < readySource ; crawling ; 2021 ; Verduci Editore Source Content 2021 ; 2021 >
-    au < readySource ; crawling ; 2022 ; Verduci Editore Source Content 2022 ; 2022 >
+    au < readySource ; finished ; 2020 ; Verduci Editore Source Content 2020 ; 2020 >
+    au < readySource ; finished ; 2021 ; Verduci Editore Source Content 2021 ; 2021 >
+    au < readySource ; frozen ; 2022 ; Verduci Editore Source Content 2022 ; 2022 >
+    #No more AUs. Moving to https.
+    }
+    {
+    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/verduci-released/
 
+    au < expected ; exists ; 2023 ; Verduci Editore Source Content 2023 ; 2023 >
+    }
   }
 
 }

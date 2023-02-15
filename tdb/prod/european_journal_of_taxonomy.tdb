@@ -13,6 +13,7 @@
       
       #param[base_url] = http://www.europeanjournaloftaxonomy.eu/
       param[journal_id] = ejt
+      attr[start_stem] = index.php/
 
       au < ojs2.OJS2Plugin ; down ; 2011 ; European Journal of Taxonomy Volume 2011 ; 1-4 ; 2011 ; http://www.europeanjournaloftaxonomy.eu/ >
       au < ojs2.OJS2Plugin ; down ; 2012 ; European Journal of Taxonomy Volume 2012 ; 5-34 ; 2012 ; http://www.europeanjournaloftaxonomy.eu/ >

@@ -22,12 +22,12 @@
         param[journal_id] = ijpds
         attr[start_stem] = index.php/
 
-        au < frozen ; exists ; 2017 ; International Journal of Population Data Science Volume 1-2 ; 1-2 ; 2017 ; > 
-        au < frozen ; exists ; 2018 ; International Journal of Population Data Science Volume 3 ; 3 ; 2018 ; >
-        au < frozen ; exists ; 2019 ; International Journal of Population Data Science Volume 4 ; 4 ; 2019 ; >
-        au < frozen ; exists ; 2020 ; International Journal of Population Data Science Volume 5 ; 5 ; 2020 ; >
-        au < crawling ; exists ; 2021 ; International Journal of Population Data Science Volume 6 ; 6 ; 2021 ; >
-        au < manifest ; exists ; 2022 ; International Journal of Population Data Science Volume 7 ; 7 ; 2022 ; >
+        au < finished ; manifest ; 2017 ; International Journal of Population Data Science Volume 1-2 ; 1-2 ; 2017 ; reingest2.clockss.org:8085 >
+        au < finished ; manifest ; 2018 ; International Journal of Population Data Science Volume 3 ; 3 ; 2018 ; reingest3.clockss.org:8083 >
+        au < finished ; manifest ; 2019 ; International Journal of Population Data Science Volume 4 ; 4 ; 2019 ; reingest5.clockss.org:8082 >
+        au < finished ; manifest ; 2020 ; International Journal of Population Data Science Volume 5 ; 5 ; 2020 ; reingest1.clockss.org:8082 >
+        au < deepCrawl ; exists ; 2021 ; International Journal of Population Data Science Volume 6 ; 6 ; 2021 ; >
+        au < crawling ; exists ; 2022 ; International Journal of Population Data Science Volume 7 ; 7 ; 2022 ; >
 
     }
 

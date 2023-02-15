@@ -1,4 +1,34 @@
 /*
+ * Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ * this list of conditions and the following disclaimer in the documentation
+ * and/or other materials provided with the distribution.
+ *
+ * 3. Neither the name of the copyright holder nor the names of its contributors
+ * may be used to endorse or promote products derived from this software without
+ * specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+*/
+
+/*
  * LOCKSS Repository Service REST API
  * REST API of the LOCKSS Repository Service
  *
@@ -10,211 +40,207 @@
  * Do not edit the class manually.
  */
 
-
 package org.lockss.laaws.model.rs;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapter;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
+import com.google.gson.reflect.TypeToken;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
+import java.io.Serializable;
+import java.lang.reflect.Type;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Objects;
+import java.util.Set;
+import org.lockss.laaws.client.JSON;
 
 /**
  * Information about a repository storage area
  */
 @ApiModel(description = "Information about a repository storage area")
-public class StorageInfo {
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+public class StorageInfo implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private String type;
+  @SerializedName(SERIALIZED_NAME_TYPE) private String type;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+  @SerializedName(SERIALIZED_NAME_NAME) private String name;
 
   public static final String SERIALIZED_NAME_SIZE = "size";
-  @SerializedName(SERIALIZED_NAME_SIZE)
-  private Long size;
+  @SerializedName(SERIALIZED_NAME_SIZE) private Long size;
 
   public static final String SERIALIZED_NAME_USED = "used";
-  @SerializedName(SERIALIZED_NAME_USED)
-  private Long used;
+  @SerializedName(SERIALIZED_NAME_USED) private Long used;
 
   public static final String SERIALIZED_NAME_AVAIL = "avail";
-  @SerializedName(SERIALIZED_NAME_AVAIL)
-  private Long avail;
+  @SerializedName(SERIALIZED_NAME_AVAIL) private Long avail;
 
   public static final String SERIALIZED_NAME_PERCENT_USED_STRING = "percentUsedString";
-  @SerializedName(SERIALIZED_NAME_PERCENT_USED_STRING)
-  private String percentUsedString;
+  @SerializedName(SERIALIZED_NAME_PERCENT_USED_STRING) private String percentUsedString;
 
   public static final String SERIALIZED_NAME_PERCENT_USED = "percentUsed";
-  @SerializedName(SERIALIZED_NAME_PERCENT_USED)
-  private Double percentUsed;
+  @SerializedName(SERIALIZED_NAME_PERCENT_USED) private Double percentUsed;
 
+  public StorageInfo() {}
 
   public StorageInfo type(String type) {
-
     this.type = type;
     return this;
   }
 
   /**
    * Type of the storage area
-   *
    * @return type
    **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "Type of the storage area")
 
   public String getType() {
     return type;
   }
 
-
   public void setType(String type) {
     this.type = type;
   }
 
-
   public StorageInfo name(String name) {
-
     this.name = name;
     return this;
   }
 
   /**
    * Name of the storage area
-   *
    * @return name
    **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "Name of the storage area")
 
   public String getName() {
     return name;
   }
 
-
   public void setName(String name) {
     this.name = name;
   }
 
-
   public StorageInfo size(Long size) {
-
     this.size = size;
     return this;
   }
 
   /**
    * Size in bytes of the storage area
-   *
    * @return size
    **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "Size in bytes of the storage area")
 
   public Long getSize() {
     return size;
   }
 
-
   public void setSize(Long size) {
     this.size = size;
   }
 
-
   public StorageInfo used(Long used) {
-
     this.used = used;
     return this;
   }
 
   /**
    * Used size in bytes of the torage area
-   *
    * @return used
    **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "Used size in bytes of the torage area")
 
   public Long getUsed() {
     return used;
   }
 
-
   public void setUsed(Long used) {
     this.used = used;
   }
 
-
   public StorageInfo avail(Long avail) {
-
     this.avail = avail;
     return this;
   }
 
   /**
    * Available size in bytes of the storage area
-   *
    * @return avail
    **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "Available size in bytes of the storage area")
 
   public Long getAvail() {
     return avail;
   }
 
-
   public void setAvail(Long avail) {
     this.avail = avail;
   }
 
-
   public StorageInfo percentUsedString(String percentUsedString) {
-
     this.percentUsedString = percentUsedString;
     return this;
   }
 
   /**
    * Percentage of size used, formatted as a string
-   *
    * @return percentUsedString
    **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "Percentage of size used, formatted as a string")
 
   public String getPercentUsedString() {
     return percentUsedString;
   }
 
-
   public void setPercentUsedString(String percentUsedString) {
     this.percentUsedString = percentUsedString;
   }
 
-
   public StorageInfo percentUsed(Double percentUsed) {
-
     this.percentUsed = percentUsed;
     return this;
   }
 
   /**
    * Percentage of size used
-   *
    * @return percentUsed
    **/
+  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "Percentage of size used")
 
   public Double getPercentUsed() {
     return percentUsed;
   }
 
-
   public void setPercentUsed(Double percentUsed) {
     this.percentUsed = percentUsed;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -225,20 +251,19 @@ public class StorageInfo {
       return false;
     }
     StorageInfo storageInfo = (StorageInfo) o;
-    return Objects.equals(this.type, storageInfo.type) &&
-      Objects.equals(this.name, storageInfo.name) &&
-      Objects.equals(this.size, storageInfo.size) &&
-      Objects.equals(this.used, storageInfo.used) &&
-      Objects.equals(this.avail, storageInfo.avail) &&
-      Objects.equals(this.percentUsedString, storageInfo.percentUsedString) &&
-      Objects.equals(this.percentUsed, storageInfo.percentUsed);
+    return Objects.equals(this.type, storageInfo.type)
+        && Objects.equals(this.name, storageInfo.name)
+        && Objects.equals(this.size, storageInfo.size)
+        && Objects.equals(this.used, storageInfo.used)
+        && Objects.equals(this.avail, storageInfo.avail)
+        && Objects.equals(this.percentUsedString, storageInfo.percentUsedString)
+        && Objects.equals(this.percentUsed, storageInfo.percentUsed);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(type, name, size, used, avail, percentUsedString, percentUsed);
   }
-
 
   @Override
   public String toString() {
@@ -266,5 +291,131 @@ public class StorageInfo {
     return o.toString().replace("\n", "\n    ");
   }
 
-}
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
 
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("type");
+    openapiFields.add("name");
+    openapiFields.add("size");
+    openapiFields.add("used");
+    openapiFields.add("avail");
+    openapiFields.add("percentUsedString");
+    openapiFields.add("percentUsed");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("type");
+    openapiRequiredFields.add("name");
+    openapiRequiredFields.add("size");
+    openapiRequiredFields.add("used");
+    openapiRequiredFields.add("avail");
+    openapiRequiredFields.add("percentUsedString");
+    openapiRequiredFields.add("percentUsed");
+  }
+
+  /**
+   * Validates the JSON Object and throws an exception if issues found
+   *
+   * @param jsonObj JSON Object
+   * @throws IOException if the JSON Object is invalid with respect to StorageInfo
+   */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+    if (jsonObj == null) {
+      if (StorageInfo.openapiRequiredFields.isEmpty()) {
+        return;
+      } else { // has required fields
+        throw new IllegalArgumentException(String.format(
+            "The required field(s) %s in StorageInfo is not found in the empty JSON string",
+            StorageInfo.openapiRequiredFields.toString()));
+      }
+    }
+
+    Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+    // check to see if the JSON string contains additional fields
+    for (Entry<String, JsonElement> entry : entries) {
+      if (!StorageInfo.openapiFields.contains(entry.getKey())) {
+        throw new IllegalArgumentException(String.format(
+            "The field `%s` in the JSON string is not defined in the `StorageInfo` properties. JSON: %s",
+            entry.getKey(), jsonObj.toString()));
+      }
+    }
+
+    // check to make sure all required properties/fields are present in the JSON string
+    for (String requiredField : StorageInfo.openapiRequiredFields) {
+      if (jsonObj.get(requiredField) == null) {
+        throw new IllegalArgumentException(
+            String.format("The required field `%s` is not found in the JSON string: %s",
+                requiredField, jsonObj.toString()));
+      }
+    }
+    if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull())
+        && !jsonObj.get("type").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(
+          "Expected the field `type` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("type").toString()));
+    }
+    if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull())
+        && !jsonObj.get("name").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(
+          "Expected the field `name` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("name").toString()));
+    }
+    if ((jsonObj.get("percentUsedString") != null && !jsonObj.get("percentUsedString").isJsonNull())
+        && !jsonObj.get("percentUsedString").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(
+          "Expected the field `percentUsedString` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("percentUsedString").toString()));
+    }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+      if (!StorageInfo.class.isAssignableFrom(type.getRawType())) {
+        return null; // this class only serializes 'StorageInfo' and its subtypes
+      }
+      final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+      final TypeAdapter<StorageInfo> thisAdapter =
+          gson.getDelegateAdapter(this, TypeToken.get(StorageInfo.class));
+
+      return (TypeAdapter<T>) new TypeAdapter<StorageInfo>() {
+        @Override
+        public void write(JsonWriter out, StorageInfo value) throws IOException {
+          JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+          elementAdapter.write(out, obj);
+        }
+
+        @Override
+        public StorageInfo read(JsonReader in) throws IOException {
+          JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+          validateJsonObject(jsonObj);
+          return thisAdapter.fromJsonTree(jsonObj);
+        }
+      }.nullSafe();
+    }
+  }
+
+  /**
+   * Create an instance of StorageInfo given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of StorageInfo
+   * @throws IOException if the JSON string is invalid with respect to StorageInfo
+   */
+  public static StorageInfo fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, StorageInfo.class);
+  }
+
+  /**
+   * Convert an instance of StorageInfo to an JSON string
+   *
+   * @return JSON string
+   */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
+}

@@ -120,7 +120,7 @@ public class TestAutoBiographyPlugin extends LockssTestCase {
     props.setProperty(VOLUME_NAME_KEY, "3");
     
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("CLOCKSS Auto/Biography Plugin, Base URL http://www.example.com/, " +
+    assertEquals("Auto/Biography Triggered Content Plugin, Base URL http://www.example.com/, " +
         "Volume 3", au.getName());
   }
 

@@ -1,0 +1,59 @@
+{
+
+  publisher <
+    name = North Carolina Institute of Medicine and The Duke Endowment ;
+    info[platform] = HWDrupal. One journal. To Scholastica
+  >
+  {
+
+    title <
+      name = North Carolina Medical Journal ;
+      issn = 0029-2559 ;
+      issnl = 0029-2559
+    >
+
+    {
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://www.ncmedicaljournal.com/
+    implicit < status ; year ; name ; param[volume_name] >
+    # 2002-2013 content on http://classic.ncmedicaljournal.com/
+
+    au < superseded ; 2014 ; North Carolina Medical Journal Volume 75 [superseded] ; 75 >
+    au < superseded ; 2015 ; North Carolina Medical Journal Volume 76 [superseded] ; 76 >
+    au < superseded ; 2016 ; North Carolina Medical Journal Volume 77 [superseded] ; 77 >
+    au < superseded ; 2017 ; North Carolina Medical Journal Volume 78 [superseded] ; 78 >
+    au < superseded ; 2018 ; North Carolina Medical Journal Volume 79 [superseded] ; 79 >
+
+    }
+
+    {
+    plugin = org.lockss.plugin.highwire.ncmj.NcmjDrupalPlugin
+    param[base_url] = https://www.ncmedicaljournal.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < doNotProcess ; 2002 ; North Carolina Medical Journal Volume 63 ; 63 >
+    au < doNotProcess ; 2003 ; North Carolina Medical Journal Volume 64 ; 64 >
+    au < doNotProcess ; 2004 ; North Carolina Medical Journal Volume 65 ; 65 >
+    au < doNotProcess ; 2005 ; North Carolina Medical Journal Volume 66 ; 66 >
+    au < doNotProcess ; 2006 ; North Carolina Medical Journal Volume 67 ; 67 >
+    au < doNotProcess ; 2007 ; North Carolina Medical Journal Volume 68 ; 68 >
+    au < doNotProcess ; 2008 ; North Carolina Medical Journal Volume 69 ; 69 >
+    au < doNotProcess ; 2009 ; North Carolina Medical Journal Volume 70 ; 70 >
+    au < down ; 2010 ; North Carolina Medical Journal Volume 71 ; 71 >
+    au < down ; 2011 ; North Carolina Medical Journal Volume 72 ; 72 >
+    au < down ; 2012 ; North Carolina Medical Journal Volume 73 ; 73 >
+    au < down ; 2013 ; North Carolina Medical Journal Volume 74 ; 74 >
+    au < down ; 2014 ; North Carolina Medical Journal Volume 75 ; 75 >
+    au < down ; 2015 ; North Carolina Medical Journal Volume 76 ; 76 >
+    au < down ; 2016 ; North Carolina Medical Journal Volume 77 ; 77 >
+    au < down ; 2017 ; North Carolina Medical Journal Volume 78 ; 78 >
+    au < down ; 2018 ; North Carolina Medical Journal Volume 79 ; 79 >
+    au < down ; 2019 ; North Carolina Medical Journal Volume 80 ; 80 >
+    au < down ; 2020 ; North Carolina Medical Journal Volume 81 ; 81 >
+    au < down ; 2021 ; North Carolina Medical Journal Volume 82 ; 82 >
+    au < doNotProcess ; 2022 ; North Carolina Medical Journal Volume 83 ; 83 >
+
+    }
+  }
+
+}

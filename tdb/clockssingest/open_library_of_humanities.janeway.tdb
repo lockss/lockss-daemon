@@ -15,23 +15,23 @@
   {
   
     title <
-      name = Comics Grid ;
+      name = The Comics Grid ;
         eissn = 2048-0792
     >
 
     param[base_url] = https://www.comicsgrid.com/
     # volume here: https://www.comicsgrid.com/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31
 
-    au < doNotProcess ; exists ; 2013 ; 3 ; Comics Grid Volume 2013 ; 2013 ; >
-    au < doNotProcess ; exists ; 2014 ; 4 ; Comics Grid Volume 2014 ; 2014 ; >
-    au < doNotProcess ; exists ; 2015 ; 5 ; Comics Grid Volume 2015 ; 2015 ; >
-    au < doNotProcess ; exists ; 2016 ; 6 ; Comics Grid Volume 2016 ; 2016 ; >
-    au < doNotProcess ; exists ; 2017 ; 7 ; Comics Grid Volume 2017 ; 2017 ; >
-    au < doNotProcess ; exists ; 2018 ; 8 ; Comics Grid Volume 2018 ; 2018 ; >
-    au < finished ; manifest ; 2019 ; 9 ; Comics Grid Volume 2019 ; 2019 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2020 ; 10 ; Comics Grid Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2021 ; 11 ; Comics Grid Volume 2021 ; 2021 ; >
-    au < manifest ; exists ; 2022 ; 12 ; Comics Grid Volume 2022 ; 2022 ; >
+    au < doNotProcess ; exists ; 2013 ; 3 ; The Comics Grid Volume 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; 4 ; The Comics Grid Volume 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; 5 ; The Comics Grid Volume 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; 6 ; The Comics Grid Volume 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; 7 ; The Comics Grid Volume 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; 8 ; The Comics Grid Volume 2018 ; 2018 ; >
+    au < finished ; crawling ; 2019 ; 9 ; The Comics Grid Volume 2019 ; 2019 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2020 ; 10 ; The Comics Grid Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
+    au < deepCrawl ; exists ; 2021 ; 11 ; The Comics Grid Volume 2021 ; 2021 ; >
+    au < crawling ; exists ; 2022 ; 12 ; The Comics Grid Volume 2022 ; 2022 ; >
 
   }
 
@@ -51,10 +51,10 @@
       au < manifest ; exists ; 2016 ; 5 ; Orbit: A Journal of American Literature Volume 2016 ; 2016 ; >
       au < manifest ; exists ; 2017 ; 6 ; Orbit: A Journal of American Literature Volume 2017 ; 2017 ; >
       au < manifest ; exists ; 2018 ; 7 ; Orbit: A Journal of American Literature Volume 2018 ; 2018 ; >
-      au < finished ; manifest ; 2019 ; 8 ; Orbit: A Journal of American Literature Volume 2019 ; 2019 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2020 ; 9 ; Orbit: A Journal of American Literature Volume 2020 ; 2020 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2021 ; 10 ; Orbit: A Journal of American Literature Volume 2021 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; 11 ; Orbit: A Journal of American Literature Volume 2022 ; 2022 ; >
+      au < finished ; crawling ; 2019 ; 8 ; Orbit: A Journal of American Literature Volume 2019 ; 2019 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2020 ; 9 ; Orbit: A Journal of American Literature Volume 2020 ; 2020 ; reingest4.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2021 ; 10 ; Orbit: A Journal of American Literature Volume 2021 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; 11 ; Orbit: A Journal of American Literature Volume 2022 ; 2022 ; >
 
   }
 
@@ -106,10 +106,10 @@
       param[base_url] = https://c21.openlibhums.org/
 
          au < manifest ; exists ; 2018 ; 6 ; C21 Literature: journal of 21st-century writings Volume 2018 ; 2018 ; >
-         au < manifest ; exists ; 2019 ; 7 ; C21 Literature: journal of 21st-century writings Volume 2019 ; 2019 ; >
-         au < manifest ; exists ; 2020 ; 8 ; C21 Literature: journal of 21st-century writings Volume 2020 ; 2020 ; >
-         au < manifest ; exists ; 2021 ; 9 ; C21 Literature: journal of 21st-century writings Volume 2021 ; 2021 ; >
-         au < manifest ; exists ; 2022 ; 10 ; C21 Literature: journal of 21st-century writings Volume 2022 ; 2022 ; >
+         au < frozen ; exists ; 2019 ; 7 ; C21 Literature: journal of 21st-century writings Volume 2019 ; 2019 ; >
+         au < frozen ; exists ; 2020 ; 8 ; C21 Literature: journal of 21st-century writings Volume 2020 ; 2020 ; >
+         au < frozen ; exists ; 2021 ; 9 ; C21 Literature: journal of 21st-century writings Volume 2021 ; 2021 ; >
+         au < crawling ; exists ; 2022 ; 10 ; C21 Literature: journal of 21st-century writings Volume 2022 ; 2022 ; >
 
   }
 
@@ -125,10 +125,10 @@
         au < doNotProcess ; exists ; 2016 ; 12 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2016 ; 2016 ; >
         au < manifest ; exists ; 2017 ; 13 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2017 ; 2017 ; >
         au < manifest ; exists ; 2018 ; 14 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2018 ; 2018 ; >
-        au < manifest ; exists ; 2019 ; 15 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2019 ; 2019 ; >
-        au < manifest ; exists ; 2020 ; 16 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2020 ; 2020 ; >
-        au < manifest ; exists ; 2021 ; 17 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2021 ; 2021 ; >
-        au < manifest ; exists ; 2022 ; 18 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2022 ; 2022 ; >
+        au < frozen ; exists ; 2019 ; 15 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2019 ; 2019 ; >
+        au < frozen ; exists ; 2020 ; 16 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2020 ; 2020 ; >
+        au < frozen ; exists ; 2021 ; 17 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2021 ; 2021 ; >
+        au < crawling ; exists ; 2022 ; 18 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2022 ; 2022 ; >
   }
 
   {
@@ -158,10 +158,10 @@
       au < manifest ; exists ; 2015 ; 45 ; Ethnologia Europaea Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 46 ; Ethnologia Europaea Volume 2016 ; 2016 ; >
       au < manifest ; exists ; 2017 ; 47 ; Ethnologia Europaea Volume 2017 ; 2017 ; >
-      au < finished ; manifest ; 2019 ; 49 ; Ethnologia Europaea Volume 2019 ; 2019 ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2020 ; 50 ; Ethnologia Europaea Volume 2020 ; 2020 ; >
-      au < manifest ; exists ; 2021 ; 51 ; Ethnologia Europaea Volume 2021 ; 2021 ; >
-      au < expected ; exists ; 2022 ; 52 ; Ethnologia Europaea Volume 2022 ; 2022 ; >
+      au < finished ; crawling ; 2019 ; 49 ; Ethnologia Europaea Volume 2019 ; 2019 ; reingest5.clockss.org:8082 >
+      au < frozen ; exists ; 2020 ; 50 ; Ethnologia Europaea Volume 2020 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; 51 ; Ethnologia Europaea Volume 2021 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; 52 ; Ethnologia Europaea Volume 2022 ; 2022 ; >
 
   }
 
@@ -177,10 +177,10 @@
         au < doNotProcess ; exists ; 2016 ; 2 ; Journal of British and Irish Innovative Poetry Volume 2016 ; 2016 ; >
         au < manifest ; exists ; 2017 ; 3 ; Journal of British and Irish Innovative Poetry Volume 2017 ; 2017 ; >
         au < manifest ; exists ; 2018 ; 4 ; Journal of British and Irish Innovative Poetry Volume 2018 ; 2018 ; >
-        au < finished ; manifest ; 2019 ; 5 ; Journal of British and Irish Innovative Poetry Volume 2019 ; 2019 ; reingest1.clockss.org:8082 >
-        au < finished ; manifest ; 2020 ; 6 ; Journal of British and Irish Innovative Poetry Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
-        au < crawling ; exists ; 2021 ; 7 ; Journal of British and Irish Innovative Poetry Volume 2021 ; 2021 ; >
-        au < expected ; exists ; 2022 ; 8 ; Journal of British and Irish Innovative Poetry Volume 2022 ; 2022 ; >
+        au < finished ; crawling ; 2019 ; 5 ; Journal of British and Irish Innovative Poetry Volume 2019 ; 2019 ; reingest1.clockss.org:8082 >
+        au < finished ; crawling ; 2020 ; 6 ; Journal of British and Irish Innovative Poetry Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
+        au < deepCrawl ; exists ; 2021 ; 7 ; Journal of British and Irish Innovative Poetry Volume 2021 ; 2021 ; >
+        au < crawling ; exists ; 2022 ; 8 ; Journal of British and Irish Innovative Poetry Volume 2022 ; 2022 ; >
 
   }
 
@@ -220,10 +220,10 @@
 
         au < manifest ; exists ; 2017 ; 4 ; International Journal of Welsh Writing in English Volume 2017 ; 2017 ; >
         au < manifest ; exists ; 2018 ; 5 ; International Journal of Welsh Writing in English Volume 2018 ; 2018 ; >
-        au < finished ; manifest ; 2019 ; 6 ; International Journal of Welsh Writing in English Volume 2019 ; 2019 ; reingest5.clockss.org:8082 >
-        au < finished ; manifest ; 2020 ; 7 ; International Journal of Welsh Writing in English Volume 2020 ; 2020 ; reingest1.clockss.org:8082 >
-        au < crawling ; exists ; 2021 ; 8 ; International Journal of Welsh Writing in English Volume 2021 ; 2021 ; >
-        au < expected ; exists ; 2022 ; 9 ; International Journal of Welsh Writing in English Volume 2022 ; 2022 ; >
+        au < finished ; crawling ; 2019 ; 6 ; International Journal of Welsh Writing in English Volume 2019 ; 2019 ; reingest5.clockss.org:8082 >
+        au < finished ; crawling ; 2020 ; 7 ; International Journal of Welsh Writing in English Volume 2020 ; 2020 ; reingest1.clockss.org:8082 >
+        au < deepCrawl ; exists ; 2021 ; 8 ; International Journal of Welsh Writing in English Volume 2021 ; 2021 ; >
+        au < ready ; exists ; 2022 ; 9 ; International Journal of Welsh Writing in English Volume 2022 ; 2022 ; >
 
   }
 
@@ -240,9 +240,9 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 2 ; Marvell Studies Volume 2017 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 3 ; Marvell Studies Volume 2018 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 4 ; Marvell Studies Volume 2019 ; 2019 ; >
-      au < finished ; manifest ; 2020 ; 5 ; Marvell Studies Volume 2020 ; 2020 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2021 ; 6 ; Marvell Studies Volume 2021 ; 2021 ; >
-      au < expected ; exists ; 2022 ; 7 ; Marvell Studies Volume 2022 ; 2022 ; >
+      au < finished ; crawling ; 2020 ; 5 ; Marvell Studies Volume 2020 ; 2020 ; reingest3.clockss.org:8083 >
+      au < deepCrawl ; exists ; 2021 ; 6 ; Marvell Studies Volume 2021 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; 7 ; Marvell Studies Volume 2022 ; 2022 ; >
 
   }
 
@@ -261,10 +261,10 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 2 ; Open Library of Humanities Volume 2016 ; 2016 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 3 ; Open Library of Humanities Volume 2017 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 4 ; Open Library of Humanities Volume 2018 ; 2018 ; >
-      au < finished ; manifest ; 2019 ; 5 ; Open Library of Humanities Volume 2019 ; 2019 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2020 ; 6 ; Open Library of Humanities Volume 2020 ; 2020 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2021 ; 7 ; Open Library of Humanities Volume 2021 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; 8 ; Open Library of Humanities Volume 2022 ; 2022 ; >
+      au < finished ; crawling ; 2019 ; 5 ; Open Library of Humanities Volume 2019 ; 2019 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2020 ; 6 ; Open Library of Humanities Volume 2020 ; 2020 ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2021 ; 7 ; Open Library of Humanities Volume 2021 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; 8 ; Open Library of Humanities Volume 2022 ; 2022 ; >
 
   }
 
@@ -288,8 +288,8 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 8 ; Studies in the Maternal Volume 2016 ; 2016 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 9 ; Studies in the Maternal Volume 2017 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 10 ; Studies in the Maternal Volume 2018 ; 2018 ; >
-      au < manifest ; exists ; 2019 ; 11 ; Studies in the Maternal Volume 2019 ; 2019 ; >
-      au < manifest ; exists ; 2020 ; 12 ; Studies in the Maternal Volume 2020 ; 2020 ; >
+      au < frozen ; exists ; 2019 ; 11 ; Studies in the Maternal Volume 2019 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; 12 ; Studies in the Maternal Volume 2020 ; 2020 ; >
       au < exists ; exists ; 2021 ; 13 ; Studies in the Maternal Volume 2021 ; 2021 ; >
       au < expected ; exists ; 2022 ; 14 ; Studies in the Maternal Volume 2022 ; 2022 ; >
 
@@ -335,10 +335,10 @@
       au < manifest ; exists ; 2016 ; 26 ; Theoretical Roman Archaeology Journal Volume 2016 ; 2016 ; >
       au < manifest ; exists ; 2017 ; 27 ; Theoretical Roman Archaeology Journal Volume 2017 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 28 ; Theoretical Roman Archaeology Journal Volume 2018 ; 2018 ; >
-      au < finished ; manifest ; 2019 ; 29 ; Theoretical Roman Archaeology Journal Volume 2019 ; 2019 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2020 ; 30 ; Theoretical Roman Archaeology Journal Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2021 ; 31 ; Theoretical Roman Archaeology Journal Volume 2021 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; 32 ; Theoretical Roman Archaeology Journal Volume 2022 ; 2022 ; >
+      au < finished ; crawling ; 2019 ; 29 ; Theoretical Roman Archaeology Journal Volume 2019 ; 2019 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2020 ; 30 ; Theoretical Roman Archaeology Journal Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
+      au < deepCrawl ; exists ; 2021 ; 31 ; Theoretical Roman Archaeology Journal Volume 2021 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; 32 ; Theoretical Roman Archaeology Journal Volume 2022 ; 2022 ; >
 
   }
 
@@ -352,10 +352,10 @@
       comment[publisher] = Open Library of Humanities
       param[base_url] = https://zff.openlibhums.org/
 
-      au < finished ; manifest ; 2019 ; 7 ; ZFF: Zeitschrift für Fantastikforschung Volume 2019 ; 2019 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2020 ; 8 ; ZFF: Zeitschrift für Fantastikforschung Volume 2020 ; 2020 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2021 ; 9 ; ZFF: Zeitschrift für Fantastikforschung Volume 2021 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; 10 ; ZFF: Zeitschrift für Fantastikforschung Volume 2022 ; 2022 ; >
+      au < finished ; crawling ; 2019 ; 7 ; ZFF: Zeitschrift für Fantastikforschung Volume 2019 ; 2019 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2020 ; 8 ; ZFF: Zeitschrift für Fantastikforschung Volume 2020 ; 2020 ; reingest4.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2021 ; 9 ; ZFF: Zeitschrift für Fantastikforschung Volume 2021 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; 10 ; ZFF: Zeitschrift für Fantastikforschung Volume 2022 ; 2022 ; >
 
   }
 
@@ -375,9 +375,9 @@
       au < manifest ; exists ; 2015 ; 3 ; The Parish Review Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; 3 ; The Parish Review Volume 2016 ; 2016 ; >
       au < manifest ; exists ; 2018 ; 4 ; The Parish Review Volume 2018 ; 2018 ; >
-      au < finished ; manifest ; 2020 ; 4 ; The Parish Review Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2021 ; 5 ; The Parish Review Volume 2021 ; 2021 ; >
-      au < expected ; exists ; 2022 ; 6 ; The Parish Review Volume 2022 ; 2022 ; >
+      au < finished ; crawling ; 2020 ; 4 ; The Parish Review Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
+      au < deepCrawl ; exists ; 2021 ; 5 ; The Parish Review Volume 2021 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; 6 ; The Parish Review Volume 2022 ; 2022 ; >
 
   }
 
@@ -404,8 +404,8 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 25 ; ASIANetwork Exchange Volume 2018 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 26 ; ASIANetwork Exchange Volume 2019 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 27 ; ASIANetwork Exchange Volume 2020 ; 2020 ; >
-      au < manifest ; exists ; 2021 ; 28 ; ASIANetwork Exchange Volume 2021 ; 2021 ; >
-      au < expected ; exists ; 2022 ; 29 ; ASIANetwork Exchange Volume 2022 ; 2022 ; >
+      au < frozen ; exists ; 2021 ; 28 ; ASIANetwork Exchange Volume 2021 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; 29 ; ASIANetwork Exchange Volume 2022 ; 2022 ; >
 
   }
 
@@ -424,8 +424,8 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 3 ; Glossa: a journal of general linguistics Volume 2018 ; 2018 ; > 
       au < doNotProcess ; doNotProcess ; 2019 ; 4 ; Glossa: a journal of general linguistics Volume 2019 ; 2019 ; > 
       au < doNotProcess ; doNotProcess ; 2020 ; 5 ; Glossa: a journal of general linguistics Volume 2020 ; 2020 ; > 
-      au < manifest ; exists ; 2021 ; 6 ; Glossa: a journal of general linguistics Volume 2021 ; 2021 ; > 
-      au < manifest ; exists ; 2022 ; 7 ; Glossa: a journal of general linguistics Volume 2022 ; 2022 ; > 
+      au < frozen ; exists ; 2021 ; 6 ; Glossa: a journal of general linguistics Volume 2021 ; 2021 ; > 
+      au < crawling ; exists ; 2022 ; 7 ; Glossa: a journal of general linguistics Volume 2022 ; 2022 ; > 
 
   }
 
@@ -437,13 +437,13 @@
       >
 
       comment[publisher] = Open Library of Humanities
-      param[base_url] = https://openscreensjournal.com/
+      param[base_url] = https://www.openscreensjournal.com/
 
       au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Open Screens Volume 2018 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2 ; Open Screens Volume 2019 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 3 ; Open Screens Volume 2020 ; 2020 ; >
-      au < exists ; exists ; 2021 ; 4 ; Open Screens Volume 2021 ; 2021 ; >
-      au < expected ; exists ; 2022 ; 5 ; Open Screens Volume 2022 ; 2022 ; >
+      au < ready ; exists ; 2021 ; 4 ; Open Screens Volume 2021 ; 2021 ; >
+      au < ready ; exists ; 2022 ; 5 ; Open Screens Volume 2022 ; 2022 ; >
 
   }
 
@@ -481,8 +481,8 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Body, Space & Technology Volume 2018 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Body, Space & Technology Volume 2019 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Body, Space & Technology Volume 2020 ; 2020 ; >
-      au < manifest ; exists ; 2021 ; 2021 ; Body, Space & Technology Volume 2021 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; 2022 ; Body, Space & Technology Volume 2022 ; 2022 ; >
+      au < frozen ; exists ; 2021 ; 2021 ; Body, Space & Technology Volume 2021 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Body, Space & Technology Volume 2022 ; 2022 ; >
 
   }
 
@@ -514,8 +514,8 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 14 ; Digital Medievalist Volume 2018 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 15 ; Digital Medievalist Volume 2019 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 16 ; Digital Medievalist Volume 2020 ; 2020 ; >
-      au < manifest ; exists ; 2021 ; 17 ; Digital Medievalist Volume 2021 ; 2021 ; >
-      au < expected ; exists ; 2022 ; 18 ; Digital Medievalist Volume 2022 ; 2022 ; >
+      au < frozen ; exists ; 2021 ; 17 ; Digital Medievalist Volume 2021 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; 18 ; Digital Medievalist Volume 2022 ; 2022 ; >
 
   }
 
@@ -541,8 +541,8 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Digital Studies / Le champ numérique Volume 2018 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Digital Studies / Le champ numérique Volume 2019 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Digital Studies / Le champ numérique Volume 2020 ; 2020 ; >
-      au < manifest ; exists ; 2021 ; 2021 ; Digital Studies / Le champ numérique Volume 2021 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; 2022 ; Digital Studies / Le champ numérique Volume 2022 ; 2022 ; >
+      au < frozen ; exists ; 2021 ; 2021 ; Digital Studies / Le champ numérique Volume 2021 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Digital Studies / Le champ numérique Volume 2022 ; 2022 ; >
 
   }
 
@@ -556,7 +556,7 @@
       comment[publisher] = Open Library of Humanities
       param[base_url] = https://www.genealogy-critique.net/
 
-      au < manifest ; exists ; 2022 ; 8 ; Genealogy+Critique Volume 2022 ; 2022 ; >
+      au < crawling ; exists ; 2022 ; 8 ; Genealogy+Critique Volume 2022 ; 2022 ; >
 
   }
 
@@ -576,7 +576,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 4 ; Le foucaldien Volume 2018 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 5 ; Le foucaldien Volume 2019 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 6 ; Le foucaldien Volume 2020 ; 2020 ; >
-      au < manifest ; exists ; 2021 ; 7 ; Le foucaldien Volume 2021 ; 2021 ; >
+      au < frozen ; exists ; 2021 ; 7 ; Le foucaldien Volume 2021 ; 2021 ; >
       #Changed name and issn: Genealogy+Critique 2755-0923
   }
 
@@ -593,8 +593,97 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Journal of Embodied Research Volume 2018 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2 ; Journal of Embodied Research Volume 2019 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 3 ; Journal of Embodied Research Volume 2020 ; 2020 ; >
-      au < manifest ; exists ; 2021 ; 4 ; Journal of Embodied Research Volume 2021 ; 2021 ; >
-      au < expected ; exists ; 2022 ; 5 ; Journal of Embodied Research Volume 2022 ; 2022 ; >
+      au < frozen ; exists ; 2021 ; 4 ; Journal of Embodied Research Volume 2021 ; 2021 ; >
+      au < ready ; exists ; 2022 ; 5 ; Journal of Embodied Research Volume 2022 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Architectural Histories ;
+        eissn = 2050-5833
+      >
+
+      comment[publisher] = Open Library of Humanities,
+      param[base_url] = https://journal.eahn.org/
+
+      au < doNotProcess ; doNotProcess ; 2013 ; 1 ; Architectural Histories Volume 2013 ; 2013 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2 ; Architectural Histories Volume 2014 ; 2014 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 3 ; Architectural Histories Volume 2015 ; 2015 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 4 ; Architectural Histories Volume 2016 ; 2016 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 5 ; Architectural Histories Volume 2017 ; 2017 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 6 ; Architectural Histories Volume 2018 ; 2018 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; 7 ; Architectural Histories Volume 2019 ; 2019 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; 8 ; Architectural Histories Volume 2020 ; 2020 ; >
+      au < ready ; exists ; 2021 ; 9 ; Architectural Histories Volume 2021 ; 2021 ; >
+      au < ready ; exists ; 2022 ; 10 ; Architectural Histories Volume 2022 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Portuguese Linguistics ;
+        issn = 1645-4537 ;
+        eissn = 2397-5563
+      >
+
+      comment[publisher] = Open Library of Humanities, previously Ubiquity Press
+      param[base_url] = https://jpl.letras.ulisboa.pt/
+
+      au < doNotProcess ; doNotProcess ; 2015 ; 1 ; Journal of Portuguese Linguistics Volume 2015 ; 2015 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 2 ; Journal of Portuguese Linguistics Volume 2016 ; 2016 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 3 ; Journal of Portuguese Linguistics Volume 2017 ; 2017 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 4 ; Journal of Portuguese Linguistics Volume 2018 ; 2018 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; 5 ; Journal of Portuguese Linguistics Volume 2019 ; 2019 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; 6 ; Journal of Portuguese Linguistics Volume 2020 ; 2020 ; >
+      au < ready ; exists ; 2021 ; 7 ; Journal of Portuguese Linguistics Volume 2021 ; 2021 ; >
+      au < ready ; exists ; 2022 ; 8 ; Journal of Portuguese Linguistics Volume 2022 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Laboratory Phonology: Journal of the Association for Laboratory Phonology ;
+        eissn = 1868-6354
+      >
+
+      comment[publisher] = Open Library of Humanities, previously Ubiquity Press
+      param[base_url] = https://www.journal-labphon.org/
+
+      au < doNotProcess ; doNotProcess ; 2016 ; 1 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2016 ; 2016 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 2 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2017 ; 2017 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 3 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2018 ; 2018 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; 4 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2019 ; 2019 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; 5 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2020 ; 2020 ; >
+      au < ready ; exists ; 2021 ; 6 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2021 ; 2021 ; >
+      au < ready ; exists ; 2022 ; 7 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2022 ; 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Livewriting Annual ;
+        eissn = 2635-2656
+      >
+
+      comment[publisher] = Open Library of Humanities
+      param[base_url] = https://lifewritingannual.openlibhums.org/
+      #All issues were published the day before the new year, except 2023.
+      #Volumes are 2006, 2008, 2012, 2015, 2023.
+
+      au < exists ; exists ; 2005 ; 1 ; Livewriting Annual Volume 2005 ; 2005 ; >
+      au < exists ; exists ; 2006 ; 1 ; Livewriting Annual Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2007 ; 2 ; Livewriting Annual Volume 2007 ; 2007 ; >
+      au < exists ; exists ; 2008 ; 2 ; Livewriting Annual Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2011 ; 3 ; Livewriting Annual Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 3 ; Livewriting Annual Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2014 ; 4 ; Livewriting Annual Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 4 ; Livewriting Annual Volume 2015 ; 2015 ; >
+      au < manifest ; exists ; 2023 ; 5 ; Livewriting Annual Volume 2023 ; 2023 ; >
 
   }
 

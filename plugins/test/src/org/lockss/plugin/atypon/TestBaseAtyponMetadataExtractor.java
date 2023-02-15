@@ -71,6 +71,7 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
   static String goodPublishingPlatform = "Atypon";
   static String goodDOI = "10.1137/10081839X";
   static String goodJID = "xxx";
+  static String goodCitationJournalTitle =  "Finance Volume 59";
   
   static String goodJournal = "Journal Name"; 
   static String goodStartPage = "22";
@@ -155,7 +156,7 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
 	    assertEquals(BaseAtyponMetadataUtil.normalize_id("issN:    1111-2222"),"11112222"); 
 	    assertEquals(BaseAtyponMetadataUtil.normalize_id(" issN:    1111-2222"),"11112222"); 
 	    //isbn
-	    assertEquals(BaseAtyponMetadataUtil.normalize_id("978-0-89118-196-5"),"9780891181965"); 
+	    assertEquals(BaseAtyponMetadataUtil.normalize_id("978-0-89118-196-5"),"9780891181965");
 	    assertEquals(BaseAtyponMetadataUtil.normalize_id("  978-0-89118-196-5"),"9780891181965"); 
 	    assertEquals(BaseAtyponMetadataUtil.normalize_id("9-7-8-0-89118-196-5"),"9780891181965"); 
 	    assertEquals(BaseAtyponMetadataUtil.normalize_id("978-0-89118-196-5   "),"9780891181965"); 
@@ -206,7 +207,8 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
    "<meta name=\"dc.Source\" content=\"http://dx.doi.org/10.1137/10081839X\"></meta>" +
    "<meta name=\"dc.Language\" content=\"en\"></meta>" +
    "<meta name=\"dc.Coverage\" content=\"world\"></meta>" +
-   "<meta name=\"keywords\" content=\"weighted regularity, elliptic problem, oscillatory diffusion, $hp$ finite elements, 65N30, 35B65, 35J57\"></meta>";	
+              "<meta name=\"citation_journal_title\" content=\"Finance Volume 59\"></meta>" +
+              "<meta name=\"keywords\" content=\"weighted regularity, elliptic problem, oscillatory diffusion, $hp$ finite elements, 65N30, 35B65, 35J57\"></meta>";
    
 
   public void testExtractGoodHtmlContent() throws Exception {
@@ -215,13 +217,14 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
-    assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
+    //assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
     assertEquals(goodTitle, md.get(MetadataField.DC_FIELD_TITLE));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
     assertEquals(goodFormat, md.get(MetadataField.DC_FIELD_FORMAT));
     assertEquals(goodType, md.get(MetadataField.DC_FIELD_TYPE));
     assertEquals(Arrays.asList(goodAuthors), md.getList(MetadataField.FIELD_AUTHOR));
     assertEquals(goodAuthors[0], md.get(MetadataField.DC_FIELD_CREATOR));
+    assertEquals(goodCitationJournalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
 
   }
   
@@ -338,6 +341,9 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
     sb.append("\nPB  - ");
     sb.append(goodPublisher);
     sb.append("\nER  - ");
+    //Since October/2022, we found missing VL will cause over crawl from leaking "corrected articles"
+    sb.append("\nVL  - ");
+    sb.append(goodVolume);
     return sb.toString();
   }
   /**

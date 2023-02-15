@@ -69,7 +69,7 @@ public class TestVoteBlocksTallier extends LockssTestCase {
       throws Exception {
     voter = new MyV3Voter();
     if (wAgree >= 0.0) {
-      voter.setUrlPsllResultMap(new PatternFloatMap("01,0.5"));
+      voter.setUrlPsllResultMap(PatternFloatMap.fromSpec("01,0.5"));
     }
     VoteBlocksTallier vbt = VoteBlocksTallier.make(voter);
     vbt.tallyVoteBlocks(vBlocks, pBlocks);

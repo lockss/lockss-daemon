@@ -196,8 +196,8 @@ public class TestEmeraldSubstancePredicate extends LockssTestCase {
       logger.debug3("Creating PDF file at " + file.getAbsolutePath());
       String file_content = "";
 
-      File testPdf = new File("./plugins/test/src/org/lockss/plugin/minerva/TestMetadata.pdf");
-      file_content = testPdf.toString();
+     // File testPdf = new File("./plugins/test/src/org/lockss/plugin/minerva/TestMetadata.pdf");
+      file_content = getResourceContent("TestMetadata.pdf");
       pw.print(file_content);
       pw.flush();
       pw.close();

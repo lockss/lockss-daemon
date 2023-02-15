@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = Kirkuk University College of Science ;
+    info[contract] = 2022 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+    hidden[proxy] = DIRECT
+
+    plugin = needs.plugin
+    implicit < status ; status2 ; year ; name ; param[directory] >
+
+  {
+
+    title <
+      name = Kirkuk University College of Science Source Content
+    >
+    #####Testing
+    param[base_url] = https://clockss-test.lockss.org/sourcefiles/kirkuksci-released/
+
+    au < expected ; exists ; 2022 ; Kirkuk University College of Science Source Content 2022_01 ; 2022_01 >
+
+  }
+}

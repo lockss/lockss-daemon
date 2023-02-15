@@ -96,7 +96,9 @@ implements FileMetadataExtractorFactory {
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, FileMetadataExtractor.Emitter emitter) 
         throws IOException, PluginException {
-      ArticleMetadata am = extract(target, cu); 
+      ArticleMetadata am = extract(target, cu);
+
+      log.debug3("---BaseAtyponRisMetadataExtractor---");
 
       /* 
        * if, due to overcrawl, we got to a page that didn't have anything
@@ -108,6 +110,22 @@ implements FileMetadataExtractorFactory {
         return;
       }
 
+      // Check VOLUME from preventing 0-volume-0-issue articles, see notes below
+      // For Sage, we found a real article can leak to other articles via "view corrected article" or "view correction" link
+      // Other leaked articles usually have 0-volume/0-issue and should not emit metadata
+      // In this article https://journals.sagepub.com/doi/abs/10.1177/03635465221082057,
+      // the "view corrected article"-https://journals.sagepub.com/doi/10.1177/03635465211063901
+
+      String ris_type = am.getRaw("TY");
+      if ( !ris_type.contains("BOOK") && !ris_type.contains("CHAP") ) {
+        if (am.getRaw("VL") == null) {
+          log.debug3("checking VL: VL is empty, no raw volume, cu = " + cu.getUrl());
+          return;
+        } else {
+          log.debug3("checking VL: VL is not empty, VL = " + am.getRaw("VL") + ", cu = " + cu.getUrl());
+        }
+
+      }
       /*
        * RIS data can be variable.  We don't have any way to add priority to
        * the cooking of data, so fallback to alternate values manually
@@ -118,15 +136,16 @@ implements FileMetadataExtractorFactory {
       if (am.get(MetadataField.FIELD_DATE) == null) {
         if (am.getRaw("Y1") != null) { // if DA wasn't there, use Y1
           am.put(MetadataField.FIELD_DATE, am.getRaw("Y1"));
+          log.debug3("Seg date check: seg_date is set by Y1 field in ris file");
         }
-      }  
-      
-      
+      } else {
+        log.debug3("Seg date check: seg_date already being set : " + am.get(MetadataField.FIELD_DATE));
+      }
+
       /*
        * Determine if this is a book item or a journal item.
        * set the appropriate article type once the daemon passes along the TY
        */
-      String ris_type = am.getRaw("TY");
       if (ris_type == null) {
         //pre 1.69, do an alternate check because TY wasn't passed through
         ris_type = "JOUR"; //set a default
@@ -151,7 +170,10 @@ implements FileMetadataExtractorFactory {
       } else {
         // JOURNAL default is to assume it's a journal for backwards compatibility
         if (!BaseAtyponMetadataUtil.metadataMatchesTdb(au, am)) {
+          log.debug3("Sage Check: emitting from RisMetadata side, failed metadataMatchesTdb url = " + cu.getUrl());
           return;
+        } else {
+          log.debug3("Sage Check: emitting from RisMetadata side, passed metadataMatchesTdb url = " + cu.getUrl());
         }
       }
 
@@ -161,6 +183,7 @@ implements FileMetadataExtractorFactory {
        * CORRECT the access.url if it is not in the AU
        */
       BaseAtyponMetadataUtil.completeMetadata(cu, am);
+      log.debug3("Sage Check: emitting from RisMetadata side, url = " + cu.getUrl());
       emitter.emitMetadata(cu, am);
     }
     

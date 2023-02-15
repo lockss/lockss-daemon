@@ -1,0 +1,44 @@
+{
+
+  publisher <
+    name = Philippine Association of Institutions for Research ;
+    info[contract] = 2022 ;
+    info[back] = 2018 ;
+    info[tester] = 5 ;
+    info[poller] = 5 ;
+    info[platform] = OJS3. Open Journal Systems 3.3.0.10 
+  >
+
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    param[base_url] = https://philair.ph/
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+    #OJS3
+    attr[start_stem] = index.php/
+    #attr[primary_locale] = es_ES
+
+  {
+  
+    title < 
+      name = JPAIR Multidisciplinary Research ;
+      issn = 2012-3981 ;
+      eissn = 2244-0445 
+    >
+
+      param[journal_id] = jpair
+      #published 2012 to present
+
+      au < finished ; manifest ; 2012 ; JPAIR Multidisciplinary Research Volume 2012 ; 7 ; 2012 ; reingest2.clockss.org:8085 >
+      au < manifest ; exists ; 2013 ; JPAIR Multidisciplinary Research Volume 2013 ; 8 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; JPAIR Multidisciplinary Research Volume 2014 ; 9 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; JPAIR Multidisciplinary Research Volume 2015 ; 10 ; 2015 ; >
+      au < finished ; manifest ; 2016 ; JPAIR Multidisciplinary Research Volume 2016 ; 11 ; 2016 ; reingest3.clockss.org:8083 >
+      au < manifest ; exists ; 2017 ; JPAIR Multidisciplinary Research Volume 2017 ; 12 ; 2017 ; >
+      au < ready ; exists ; 2018 ; JPAIR Multidisciplinary Research Volume 2018 ; 13 ; 2018 ; >
+      au < finished ; manifest ; 2019 ; JPAIR Multidisciplinary Research Volume 2019 ; 14 ; 2019 ; reingest4.clockss.org:8082 >
+      au < ready ; exists ; 2020 ; JPAIR Multidisciplinary Research Volume 2020 ; 15 ; 2020 ; >
+      au < ready ; exists ; 2021 ; JPAIR Multidisciplinary Research Volume 2021 ; 16 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; JPAIR Multidisciplinary Research Volume 2022 ; 17 ; 2022 ; >
+
+  }
+
+}

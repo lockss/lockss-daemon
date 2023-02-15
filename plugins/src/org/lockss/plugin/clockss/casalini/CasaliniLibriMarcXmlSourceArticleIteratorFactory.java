@@ -32,6 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.clockss.casalini;
 
+import org.lockss.config.CurrentConfig;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
@@ -79,7 +80,12 @@ public class CasaliniLibriMarcXmlSourceArticleIteratorFactory implements Article
     @Override
     public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
             throws PluginException {
-        return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
+        //Do this on purpose, since it has one-xml-many-PDFs
+        return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA) {
+            @Override
+            protected boolean isCheckAccessUrl() {
+                return false;
+            }
+        };
     }
-
 }

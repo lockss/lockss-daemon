@@ -93,13 +93,6 @@ public class FetchedUrlData {
     return input;
   }
 
-  public InputStream getResettableInputStream() throws IOException {
-    if(!input.markSupported()) {
-      return new BufferedInputStream(input);
-    }
-    return input;
-  }
-
   public boolean resetInputStream() throws IOException {
     if(fetcher != null) {
       input = fetcher.resetInputStream(input, null);

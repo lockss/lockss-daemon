@@ -1,7 +1,6 @@
 <!--
 
 Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -41,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -84,15 +83,15 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1, "https?://cdn\.mathjax\.org/mathjax/.*\.js"</string>
-      <string>1, "https://cdnjs\.cloudflare\.com/ajax/.*\.js"</string>
-      <string>1, "https://code\.jquery\.com/.*/jquery.*\.js"</string>
-      <string>1, "https://code\.jquery\.com/ui/.*\.css"</string>
+      <string>1, "^https?://cdn\.mathjax\.org/mathjax/.*\.js"</string>
+      <string>1, "^https?://cdnjs\.cloudflare\.com/ajax/.*\.js"</string>
+      <string>1, "^https?://code\.jquery\.com/.*/jquery.*\.js"</string>
+      <string>1, "^https?://code\.jquery\.com/ui/.*\.css"</string>
       <!--	https://cdn.jquerytools.org/1.2.2/jquery.tools.min.js, no longer exsit-->
-      <string>2, "https://cdn\.jquerytools\.org/.*jquery.*\.js"</string>
-      <string>1,"^https?://(%s|www\.mtosmt\.org)/[^?]*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", url_host(base_url)</string>
-      <string>1,"^https?://(%s|www\.mtosmt\.org)/(classic|issues)/mto\.[0-9]{2}\.%d\.[0-9]+/", url_host(base_url), volume</string>
-      <string>1, "^https?://(%s|www\.mtosmt\.org)/issues/mto\.[0-9]{2}\.%d\.[0-9]+/", base_url, volume</string>
+      <string>2, "^https://cdn\.jquerytools\.org/.*jquery.*\.js"</string>
+      <string>1, "^%s[^?]*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", base_url</string>
+      <string>1, "^%s(classic|issues)/mto\.[0-9]{2}\.%d\.[0-9]+/", base_url, volume</string>
+      <string>1, "^%sissues/mto\.[0-9]{2}\.%d\.[0-9]+/", base_url, volume</string>
     </list>
   </entry>
   <entry>
@@ -108,11 +107,10 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>edu.indiana.lib.plugin.mto.MTO2022UrlNormalizer</string>
   </entry>
   <entry>
-    <string>au_permitted_host_pattern</string>
-    <list>
-      <string>www\.mtosmt\.org</string>
-    </list>
+    <string>text/html_filter_factory</string>
+    <string>edu.indiana.lib.plugin.mto.MT2022HtmlHashFilterFactory</string>
   </entry>
+<!--
   <entry>
     <string>au_additional_url_stems</string>
     <list>
@@ -121,14 +119,13 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>https://www.mtosmt.org/</string>
     </list>
   </entry>
+-->
   <entry>
     <string>au_permitted_host_pattern</string>
     <list>
-      <string>www\.mtosmt\.org</string>
       <string>cdn\.mathjax\.org</string>
       <string>cdnjs\.cloudflare\.com</string>
       <string>code\.jquery\.com</string>
-      <string>cdnjs\.cloudflare\.com</string>
       <string>cdn\.jquerytools\.org</string>
     </list>
   </entry>

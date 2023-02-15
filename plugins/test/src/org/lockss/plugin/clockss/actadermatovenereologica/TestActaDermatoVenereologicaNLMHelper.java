@@ -20,9 +20,7 @@ public class TestActaDermatoVenereologicaNLMHelper extends LockssTestCase {
 
         String fname = "sample_nlm.xml";
 
-        String fileName= System.getProperty("user.dir") +
-                "/plugins/test/src/org/lockss/plugin/clockss/actadermatovenereologica/" + fname;
-        Document document = getDocument(fileName);
+        Document document = getDocumentFromResource(fname);
 
         String xpathArticleTitleExpression = "/PubmedArticleSet/PubmedArticle/MedlineCitation/Article/ArticleTitle";
         String xpathPaginationExpression = "/PubmedArticleSet/PubmedArticle/MedlineCitation/Article/Pagination/MedlinePgn";
@@ -160,15 +158,14 @@ public class TestActaDermatoVenereologicaNLMHelper extends LockssTestCase {
     }
 
 
-    private Document getDocument(String fileName) throws Exception
+    private Document getDocumentFromResource(String resource) throws Exception
     {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         factory.setNamespaceAware(true);
         DocumentBuilder builder = factory.newDocumentBuilder();
-        Document doc = builder.parse(fileName);
+        Document doc = builder.parse(getResourceAsStream(resource));
         return doc;
     }
-
 }
 
 

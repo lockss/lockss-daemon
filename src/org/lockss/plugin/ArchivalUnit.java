@@ -41,6 +41,7 @@ import org.lockss.daemon.*;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.state.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.AuCacheResultMap;
 import org.lockss.plugin.base.*;
 import org.lockss.rewriter.*;
 
@@ -161,7 +162,12 @@ public interface ArchivalUnit {
    * Return true if the URL is that of a login page.
    * @param url the url to test
    * @return true if login page URL
+   * @deprecated This method is now expensive.  In a crawl context,
+   * consult the AuCacheResultMap obtained from {@link
+   * org.lockss.crawler.Crawler.CrawlerFacade}.  See, e.g., {@link
+   * org.lockss.plugin.base.BaseUrlFetcher#checkRedirectAction(String)}
    */
+  @Deprecated
   public boolean isLoginPageUrl(String url);
 
   /**
@@ -257,6 +263,13 @@ public interface ArchivalUnit {
    * should insist on.
    */
   public PatternStringMap makeUrlMimeValidationMap();
+
+  /**
+   * Construct a PatternMap mapping redirect URLs to a
+   * CacheException or CacheResultHandler
+   */
+  public AuCacheResultMap makeAuCacheResultMap()
+      throws ArchivalUnit.ConfigurationException;
 
   /**
    * Construct a list of Patterns of URLs that should be excluded from

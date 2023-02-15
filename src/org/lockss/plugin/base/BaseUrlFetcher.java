@@ -450,9 +450,7 @@ public class BaseUrlFetcher implements UrlFetcher {
       if (input == null) {
         log.warning("Got null input stream back from conn.getResponseInputStream");
       }
-      if (!input.markSupported()) {
-        input = new BufferedInputStream(input);
-      }
+      input = StreamUtil.getResettableInputStream(input);
     } finally {
       if (conn != null && input == null) {
         log.debug3("Releasing connection");
@@ -588,9 +586,7 @@ public class BaseUrlFetcher implements UrlFetcher {
     LoginPageChecker checker = au.getLoginPageChecker();
     if (checker != null) {
       log.debug3("Found a login page checker");
-      if (!input.markSupported()) {
-        input = new BufferedInputStream(input);
-      }
+      input = StreamUtil.getResettableInputStream(input);
       input.mark(CurrentConfig.getIntParam(PARAM_LOGIN_CHECKER_MARK_LIMIT,
 					   DEFAULT_LOGIN_CHECKER_MARK_LIMIT));
       String contentEncoding =
@@ -788,10 +784,7 @@ public class BaseUrlFetcher implements UrlFetcher {
       }
       // Check redirect to login page *before* crawl spec, else plugins
       // would have to include login page URLs in crawl spec
-      if (au.isLoginPageUrl(newUrlString)) {
-        String msg = "Redirected to login page: " + newUrlString;
-        throw new CacheException.PermissionException(msg);
-      }
+      checkRedirectAction(newUrlString);
       if (redirectScheme.isRedirectOption(RedirectScheme.REDIRECT_OPTION_IF_CRAWL_SPEC)) {
         if (!au.shouldBeCached(newUrlString)) {
           String msg = "Redirected to excluded URL: " + newUrlString;
@@ -835,6 +828,15 @@ public class BaseUrlFetcher implements UrlFetcher {
     }
   }
   
+  protected void checkRedirectAction(String url) throws CacheException {
+    CacheException ex =
+      crawlFacade.getAuCacheResultMap().mapRedirUrl(au, conn, origUrl, url,
+                                                    "Redirect from " + origUrl);
+    if (ex != null && !(ex instanceof CacheSuccess)) {
+      throw ex;
+    }
+  }
+
   public CIProperties getUncachedProperties()
       throws UnsupportedOperationException {
     if (conn == null) {
@@ -910,6 +912,10 @@ public class BaseUrlFetcher implements UrlFetcher {
     return wdog;
   }
   
+  public void pokeWatchdog() {
+    getWatchdog().pokeWDog();
+  }
+
   /**
    * <p>
    * Determines if the triple of a fetch URL, its redirect URL, and the

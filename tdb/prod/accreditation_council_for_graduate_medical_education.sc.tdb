@@ -7,7 +7,6 @@
 
   plugin = org.lockss.plugin.silverchair.allenpress.AllenPressSilverchairPlugin
   implicit < status ; year ; param[year] ; name ; param[volume_name] >
-  param[base_url] = https://meridian.allenpress.com/
 
   {
 
@@ -19,6 +18,7 @@
 
     param[journal_id] = jgme
     {
+    param[base_url] = https://meridian.allenpress.com/
     #Permission statements visible from workhorse but not test machines.
 
     au < doNotProcess ; 2009 ; 2009 ; Journal of Graduate Medical Education Volume 1 ; 1 >
@@ -36,6 +36,10 @@
     au < notReady ; 2021 ; 2021 ; Journal of Graduate Medical Education Volume 13 ; 13 >
     au < notReady ; 2022 ; 2022 ; Journal of Graduate Medical Education Volume 14 ; 14 >
 
+    }
+    {
+    param[base_url] = https://allenpress.com/
+    au < doNotProcess ; 2020 ; 2020 ; Journal of Graduate Medical Education 12 ; 12 >
     }
   }
 }

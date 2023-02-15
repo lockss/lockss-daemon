@@ -45,16 +45,17 @@ public class CloudPublishArticleIteratorFactory implements ArticleIteratorFactor
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
 
   private static final String PATTERN_TEMPLATE =
-      "\"^%s(journals/article/|read/\\?item_type=journal_article&item_id=)[0-9]+(|&mode=download)$\", base_url";
+      "\"^%s(journals/.*article/|read/\\?item_type=journal_article&item_id=)[0-9]+(|&mode=download)$\", base_url";
 
   // http://dev-liverpoolup.cloudpublish.co.uk/journals/article/20098
-  private static final Pattern ART_LANDING_PATTERN = Pattern.compile("/journals/article/([0-9]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern ART_LANDING_PATTERN = Pattern.compile("/journals/.*article/([0-9]+)$", Pattern.CASE_INSENSITIVE);
   // http://dev-liverpoolup.cloudpublish.co.uk/read/?item_type=journal_article&item_id=20098&mode=download
   private static final Pattern ART_PDF_PATTERN = Pattern.compile("/read/\\?item_type=journal_article&item_id=([0-9]+)&mode=download$", Pattern.CASE_INSENSITIVE);
 
   // how to get from one of the above to the other
   private final String LANDING_REPLACEMENT = "/journals/article/$1";
   private final String PDF_REPLACEMENT = "/read/?item_type=journal_article&item_id=$1&mode=download";
+  private final String PDF_LANDING_REPLACEMENT = "/read/?item_type=journal_article&item_id=$1";
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
@@ -72,9 +73,13 @@ public class CloudPublishArticleIteratorFactory implements ArticleIteratorFactor
         ArticleFiles.ROLE_FULL_TEXT_HTML,
         ArticleFiles.ROLE_ARTICLE_METADATA);
 
-    builder.addAspect(ART_PDF_PATTERN,
+    builder.addAspect(
         PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
+
+    builder.addAspect(
+        PDF_LANDING_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
 
     builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
         ArticleFiles.ROLE_FULL_TEXT_HTML);

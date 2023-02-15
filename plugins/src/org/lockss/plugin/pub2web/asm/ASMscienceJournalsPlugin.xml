@@ -1,7 +1,6 @@
 <!--
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -42,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>24</string>
+    <string>25</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -50,15 +49,15 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>27</string>
+    <string>28</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Society for Microbiology Journals Plugin (Legacy Pub2web)</string>
+    <string>American Society for Microbiology Journals Plugin (Legacy Ingenta)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Society for Microbiology Journals Plugin (Legacy Pub2web), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"American Society for Microbiology Journals Plugin (Legacy Ingenta), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string> 

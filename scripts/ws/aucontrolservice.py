@@ -99,7 +99,8 @@ class _AuControlServiceOptions(object):
 
     @staticmethod
     def make_parser():
-        usage = '%(prog)s {--host=HOST}... [OPTIONS]'
+        usage = ('%(prog)s {--host=HOST}... {--auid=AUID|--auids=AFILE}... '+
+                 '{--request-crawl-by-id|--request-crawl-by-id-list|--request-deep-crawl-by-id|--request-deep-crawl-by-id-list} [OPTIONS]')
         parser = argparse.ArgumentParser(description=__doc__, usage=usage)
         parser.add_argument('--version', '-V', action='version', version=__version__)
         # Hosts
@@ -118,6 +119,9 @@ class _AuControlServiceOptions(object):
         group.add_argument('--request-deep-crawl-by-id', action='store_true', help='perform deep crawl on a single AU')
         group.add_argument('--request-deep-crawl-by-id-list', action='store_true',
                            help='perform a deep crawl on multiple AUs')
+        group.add_argument('--request-crawl-by-id', action='store_true', help='perform deep crawl on a single AU')
+        group.add_argument('--request-crawl-by-id-list', action='store_true',
+                           help='perform a deep crawl on multiple AUs')
 
         # Other options
         group = parser.add_argument_group('Other options')
@@ -131,11 +135,11 @@ class _AuControlServiceOptions(object):
 
     def __init__(self, parser, args):
         super(_AuControlServiceOptions, self).__init__()
-        if len(list(filter(None, [args.request_deep_crawl_by_id, args.request_deep_crawl_by_id_list]))) != 1:
-            parser.error('exactly one of --request-deep-crawl-by-id --request-deep-crawl-by-id-list is required')
-        if args.request_deep_crawl_by_id:
+        if len(list(filter(None, [args.request_crawl_by_id, args.request_crawl_by_id_list, args.request_deep_crawl_by_id, args.request_deep_crawl_by_id_list]))) != 1:
+            parser.error('exactly one of --request-crawl-by-id --request-crawl-by-id-list --request-deep-crawl-by-id --request-deep-crawl-by-id-list is required')
+        if args.request_deep_crawl_by_id | args.request_crawl_by_id:
             if len(args.auid) != 1:
-                parser.error('exactly one AUID required when --request-deep-crawl-by-id is set')
+                parser.error('exactly one AUID required when --request-crawl-by-id or --request-deep-crawl-by-id is set')
             self.auid = args.auid[0]
         else:
             self.auids = args.auid[:]
@@ -143,6 +147,8 @@ class _AuControlServiceOptions(object):
         # request_deep_crawl_by_id/request_deep_crawl_by_id_list
         self.request_deep_crawl_by_id=args.request_deep_crawl_by_id
         self.request_deep_crawl_by_id_list=args.request_deep_crawl_by_id_list
+        self.request_crawl_by_id=args.request_crawl_by_id
+        self.request_crawl_by_id_list=args.request_crawl_by_id_list
         self.host=args.host
         self.username = args.username or getpass.getpass('UI username: ')
         self.password = args.password or getpass.getpass('UI password: ')
@@ -158,6 +164,10 @@ def _dispatch(options):
         _do_request_deep_crawl_by_id(options)
     elif options.request_deep_crawl_by_id_list:
         _do_request_deep_crawl_by_id_list(options)
+    elif options.request_crawl_by_id:
+        _do_request_crawl_by_id(options)
+    elif options.request_crawl_by_id_list:
+        _do_request_crawl_by_id_list(options)
     else:
         raise RuntimeError('Unreachable')
 

@@ -2,12 +2,11 @@
 
   publisher <
     name = University of Iowa ;
-    info[platform] = Janeway
+    info[platform] = Janeway. LXPLUG-2222
   >
   #Moved from BePress to Janeway
 
-    #plugin = needs.plugin
-    plugin = org.lockss.plugin.janeway.iowastatedp.IowaStateDPPlugin
+    plugin = org.lockss.plugin.janeway.universityofiowa.UniversityofIowaPlugin
     param[base_url] = https://pubs.lib.uiowa.edu/
     implicit < status ; year ; param[year] ; name ; volume >
 
@@ -16,12 +15,6 @@
         name = Annals at Iowa ;
         issn = 0003-4827
       >
-
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = http://ir.uiowa.edu/
-      #param[journal_abbr] = annals-of-iowa
-      #implicit < status ; year ; name ; param[volume] ; param[base_url] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/annals-of-iowa/
 
       param[journal_id] = annals-of-iowa
 
@@ -41,7 +34,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Annals at Iowa Volume 77 ; 77 >
       au < doNotProcess ; 2019 ; 2019 ; Annals at Iowa Volume 78 ; 78 >
       au < doNotProcess ; 2020 ; 2020 ; Annals at Iowa Volume 79 ; 79 >
-      au < manifest ; 2021 ; 2021 ; Annals at Iowa Volume 80 ; 80 >
+      au < released ; 2021 ; 2021 ; Annals at Iowa Volume 80 ; 80 >
       au < exists ; 2022 ; 2022 ; Annals at Iowa Volume 81 ; 81 >
 
     }
@@ -53,13 +46,7 @@
         eissn = 2378-4830
       >
 
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = http://ir.uiowa.edu/
-      #param[journal_abbr] = bai
-      #implicit < status ; year ; name ; param[volume] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/bai/
-
-      #param[journal_id] = bai
+      param[journal_id] = bai
 
       au < doNotProcess ; 1989 ; 1989 ; Books at Iowa Volume 50 ; 50 >
       au < doNotProcess ; 1989 ; 1989 ; Books at Iowa Volume 51 ; 51 >
@@ -86,20 +73,14 @@
         issn = 2155-6687
       >
 
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = https://ir.uiowa.edu/
-      #param[journal_abbr] = bsides
-      #implicit < status ; year ; name ; param[volume] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/bsides/
-
       param[journal_id] = bsides
 
-      au < manifest ; 2010 ; 2010 ; B Sides Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 2011 ; B Sides Volume 2011 ; 2011 >
-      au < manifest ; 2012 ; 2012 ; B Sides Volume 2012 ; 2012 >
-      au < manifest ; 2013 ; 2013 ; B Sides Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 2014 ; B Sides Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 2015 ; B Sides Volume 2015 ; 2015 >
+      au < released ; 2010 ; 2010 ; B Sides Volume 2010 ; 2010 >
+      au < released ; 2011 ; 2011 ; B Sides Volume 2011 ; 2011 >
+      au < released ; 2012 ; 2012 ; B Sides Volume 2012 ; 2012 >
+      au < released ; 2013 ; 2013 ; B Sides Volume 2013 ; 2013 >
+      au < released ; 2014 ; 2014 ; B Sides Volume 2014 ; 2014 >
+      au < released ; 2015 ; 2015 ; B Sides Volume 2015 ; 2015 >
 
     }
     
@@ -110,24 +91,18 @@
         eissn = 2372-6725
       >
 
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = http://ir.uiowa.edu/
-      #param[journal_abbr] = dadasur
-      #implicit < status ; year ; name ; param[volume] ; param[base_url] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/dadasur/
-
       param[journal_id] = dadasur
 
-      au < exists ; 1971 ; 1971 ; Dada/Surrealism Volume 1 ; 1 >
-      au < exists ; 1972 ; 1972 ; Dada/Surrealism Volume 2 ; 2 >
-      au < exists ; 1973 ; 1973 ; Dada/Surrealism Volume 3 ; 3 >
-      au < exists ; 1974 ; 1974 ; Dada/Surrealism Volume 4 ; 4 >
-      au < exists ; 1975 ; 1975 ; Dada/Surrealism Volume 5 ; 5 >
-      au < exists ; 1976 ; 1976 ; Dada/Surrealism Volume 6 ; 6 >
-      au < exists ; 1977 ; 1977 ; Dada/Surrealism Volume 7 ; 7 >
-      au < exists ; 1978 ; 1978 ; Dada/Surrealism Volume 8 ; 8 >
-      au < exists ; 1979 ; 1979 ; Dada/Surrealism Volume 9 ; 9 >
-      au < exists ; 1982 ; 1982 ; Dada/Surrealism Volume 10 ; 10 >
+      au < manifest ; 1971 ; 1971 ; Dada/Surrealism Volume 1 ; 1 >
+      au < manifest ; 1972 ; 1972 ; Dada/Surrealism Volume 2 ; 2 >
+      au < manifest ; 1973 ; 1973 ; Dada/Surrealism Volume 3 ; 3 >
+      au < manifest ; 1974 ; 1974 ; Dada/Surrealism Volume 4 ; 4 >
+      au < manifest ; 1975 ; 1975 ; Dada/Surrealism Volume 5 ; 5 >
+      au < manifest ; 1976 ; 1976 ; Dada/Surrealism Volume 6 ; 6 >
+      au < manifest ; 1977 ; 1977 ; Dada/Surrealism Volume 7 ; 7 >
+      au < manifest ; 1978 ; 1978 ; Dada/Surrealism Volume 8 ; 8 >
+      au < manifest ; 1979 ; 1979 ; Dada/Surrealism Volume 9 ; 9 >
+      au < manifest ; 1982 ; 1982 ; Dada/Surrealism Volume 10 ; 10 >
       au < doesNotExist ; 0 ; 0 ; Dada/Surrealism Volume 11 ; 11 >
       au < doNotProcess ; 1983 ; 1983 ; Dada/Surrealism Volume 12 ; 12 >
       au < doNotProcess ; 1984 ; 1984 ; Dada/Surrealism Volume 13 ; 13 >
@@ -140,8 +115,8 @@
       au < doNotProcess ; 2015 ; 2015 ; Dada/Surrealism Volume 20 ; 20 >
       au < doNotProcess ; 2017 ; 2017 ; Dada/Surrealism Volume 21 ; 21 >
       au < doNotProcess ; 2018 ; 2018 ; Dada/Surrealism Volume 22 ; 22 >
-      au < exists ; 2019 ; 2019 ; Dada/Surrealism Volume 23 ; 23 >
-      au < manifest ; 2020 ; 2020 ; Dada/Surrealism Volume 24 ; 24 >
+      au < doesNotExist ; 2019 ; 2019 ; Dada/Surrealism Volume 23 ; 23 >
+      au < released ; 2020 ; 2020 ; Dada/Surrealism Volume 24 ; 24 >
 
     }
     
@@ -150,12 +125,6 @@
         name = Electronic Journal of Africana Bibliography ;
         issn = 1092-9576
       >
-
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = http://ir.uiowa.edu/
-      #param[journal_abbr] = ejab
-      #implicit < status ; year ; name ; param[volume] >
-      #Moved to OJS https://journals.library.columbia.edu/index.php/ejab
 
       param[journal_abbr] = ejab
 
@@ -185,48 +154,42 @@
         eissn = 2160-5300
       >
 
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = https://ir.uiowa.edu/
-      #param[journal_abbr] = igsar
-      #implicit < status ; year ; name ; param[volume] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/igsar/
-
       param[journal_id] = igsar
 
-      au < exists ; 1892 ; 1892 ; Iowa Geological Survey Annual Report Volume 1 ; 1 >
-      au < exists ; 1893 ; 1893 ; Iowa Geological Survey Annual Report Volume 2-3 ; 2-3 >
-      au < exists ; 1895 ; 1895 ; Iowa Geological Survey Annual Report Volume 4 ; 4 >
-      au < exists ; 1896 ; 1896 ; Iowa Geological Survey Annual Report Volume 5-6 ; 5-6 >
-      au < exists ; 1897 ; 1897 ; Iowa Geological Survey Annual Report Volume 7 ; 7 >
-      au < exists ; 1898 ; 1898 ; Iowa Geological Survey Annual Report Volume 8 ; 8 >
-      au < exists ; 1899 ; 1899 ; Iowa Geological Survey Annual Report Volume 9 ; 9 >
-      au < exists ; 1900 ; 1900 ; Iowa Geological Survey Annual Report Volume 10 ; 10 >
-      au < exists ; 1901 ; 1901 ; Iowa Geological Survey Annual Report Volume 11 ; 11 >
-      au < exists ; 1902 ; 1902 ; Iowa Geological Survey Annual Report Volume 12 ; 12 >
-      au < exists ; 1903 ; 1903 ; Iowa Geological Survey Annual Report Volume 13-14 ; 13-14 >
-      au < exists ; 1905 ; 1905 ; Iowa Geological Survey Annual Report Volume 15 ; 15 >
-      au < exists ; 1906 ; 1906 ; Iowa Geological Survey Annual Report Volume 16 ; 16 >
-      au < exists ; 1907 ; 1907 ; Iowa Geological Survey Annual Report Volume 17 ; 17 >
-      au < exists ; 1908 ; 1908 ; Iowa Geological Survey Annual Report Volume 18 ; 18 >
-      au < exists ; 1909 ; 1909 ; Iowa Geological Survey Annual Report Volume 19 ; 19 >
-      au < exists ; 1910 ; 1910 ; Iowa Geological Survey Annual Report Volume 20 ; 20 >
-      au < exists ; 1912 ; 1912 ; Iowa Geological Survey Annual Report Volume 21-22 ; 21-22 >
-      au < exists ; 1913 ; 1913 ; Iowa Geological Survey Annual Report Volume 23 ; 23 >
-      au < exists ; 1914 ; 1914 ; Iowa Geological Survey Annual Report Volume 24 ; 24 >
-      au < exists ; 1915 ; 1915 ; Iowa Geological Survey Annual Report Volume 25 ; 25 >
-      au < exists ; 1916 ; 1916 ; Iowa Geological Survey Annual Report Volume 26 ; 26 >
-      au < exists ; 1917 ; 1917 ; Iowa Geological Survey Annual Report Volume 27 ; 27 >
-      au < exists ; 1919 ; 1919 ; Iowa Geological Survey Annual Report Volume 28 ; 28 >
-      au < exists ; 1921 ; 1921 ; Iowa Geological Survey Annual Report Volume 29 ; 29 >
-      au < exists ; 1923 ; 1923 ; Iowa Geological Survey Annual Report Volume 30 ; 30 >
-      au < exists ; 1925 ; 1925 ; Iowa Geological Survey Annual Report Volume 31 ; 31 >
+      au < doesNotExist ; 1892 ; 1892 ; Iowa Geological Survey Annual Report Volume 1 ; 1 >
+      au < manifest ; 1893 ; 1893 ; Iowa Geological Survey Annual Report Volume 2-3 ; 2-3 >
+      au < manifest ; 1895 ; 1895 ; Iowa Geological Survey Annual Report Volume 4 ; 4 >
+      au < manifest ; 1896 ; 1896 ; Iowa Geological Survey Annual Report Volume 5-6 ; 5-6 >
+      au < manifest ; 1897 ; 1897 ; Iowa Geological Survey Annual Report Volume 7 ; 7 >
+      au < manifest ; 1898 ; 1898 ; Iowa Geological Survey Annual Report Volume 8 ; 8 >
+      au < manifest ; 1899 ; 1899 ; Iowa Geological Survey Annual Report Volume 9 ; 9 >
+      au < manifest ; 1900 ; 1900 ; Iowa Geological Survey Annual Report Volume 10 ; 10 >
+      au < manifest ; 1901 ; 1901 ; Iowa Geological Survey Annual Report Volume 11 ; 11 >
+      au < manifest ; 1902 ; 1902 ; Iowa Geological Survey Annual Report Volume 12 ; 12 >
+      au < manifest ; 1903 ; 1903 ; Iowa Geological Survey Annual Report Volume 13-14 ; 13-14 >
+      au < manifest ; 1905 ; 1905 ; Iowa Geological Survey Annual Report Volume 15 ; 15 >
+      au < manifest ; 1906 ; 1906 ; Iowa Geological Survey Annual Report Volume 16 ; 16 >
+      au < manifest ; 1907 ; 1907 ; Iowa Geological Survey Annual Report Volume 17 ; 17 >
+      au < manifest ; 1908 ; 1908 ; Iowa Geological Survey Annual Report Volume 18 ; 18 >
+      au < manifest ; 1909 ; 1909 ; Iowa Geological Survey Annual Report Volume 19 ; 19 >
+      au < manifest ; 1910 ; 1910 ; Iowa Geological Survey Annual Report Volume 20 ; 20 >
+      au < manifest ; 1912 ; 1912 ; Iowa Geological Survey Annual Report Volume 21-22 ; 21-22 >
+      au < manifest ; 1913 ; 1913 ; Iowa Geological Survey Annual Report Volume 23 ; 23 >
+      au < manifest ; 1914 ; 1914 ; Iowa Geological Survey Annual Report Volume 24 ; 24 >
+      au < doesNotExist ; 1915 ; 1915 ; Iowa Geological Survey Annual Report Volume 25 ; 25 >
+      au < manifest ; 1916 ; 1916 ; Iowa Geological Survey Annual Report Volume 26 ; 26 >
+      au < manifest ; 1917 ; 1917 ; Iowa Geological Survey Annual Report Volume 27 ; 27 >
+      au < manifest ; 1919 ; 1919 ; Iowa Geological Survey Annual Report Volume 28 ; 28 >
+      au < manifest ; 1921 ; 1921 ; Iowa Geological Survey Annual Report Volume 29 ; 29 >
+      au < manifest ; 1923 ; 1923 ; Iowa Geological Survey Annual Report Volume 30 ; 30 >
+      au < manifest ; 1925 ; 1925 ; Iowa Geological Survey Annual Report Volume 31 ; 31 >
       au < manifest ; 1927 ; 1927 ; Iowa Geological Survey Annual Report Volume 32 ; 32 >
       au < manifest ; 1928 ; 1928 ; Iowa Geological Survey Annual Report Volume 33 ; 33 >
       au < manifest ; 1929 ; 1929 ; Iowa Geological Survey Annual Report Volume 34 ; 34 >
-      au < exists ; 1930 ; 1930 ; Iowa Geological Survey Annual Report Volume 35 ; 35 >
-      au < exists ; 1934 ; 1934 ; Iowa Geological Survey Annual Report Volume 36 ; 36 >
-      au < exists ; 1940 ; 1940 ; Iowa Geological Survey Annual Report Volume 37 ; 37 >
-      au < exists ; 1942 ; 1942 ; Iowa Geological Survey Annual Report Volume 38 ; 38 >
+      au < manifest ; 1931 ; 1931 ; Iowa Geological Survey Annual Report Volume 35 ; 35 >
+      au < manifest ; 1935 ; 1935 ; Iowa Geological Survey Annual Report Volume 36 ; 36 >
+      au < manifest ; 1941 ; 1941 ; Iowa Geological Survey Annual Report Volume 37 ; 37 >
+      au < manifest ; 1943 ; 1943 ; Iowa Geological Survey Annual Report Volume 38 ; 38 >
 
     }
     
@@ -235,12 +198,6 @@
         name = Iowa Historical Review ;
         issn = 2373-1842
       >
-
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = http://ir.uiowa.edu/
-      #param[journal_abbr] = iowa-historical-review
-      #implicit < status ; year ; name ; param[volume] ; param[base_url] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/iowa-historical-review/
 
       param[journal_id] = iowa-historical-review
 
@@ -251,7 +208,7 @@
       au < doNotProcess ; 2015 ; 2015 ; Iowa Historical Review Volume 5 ; 5 >
       au < doNotProcess ; 2016 ; 2016 ; Iowa Historical Review Volume 6 ; 6 >
       au < doNotProcess ; 2017 ; 2017 ; Iowa Historical Review Volume 7 ; 7 >
-      au < manifest ; 2020 ; 2020 ; Iowa Historical Review Volume 8 ; 8 >
+      au < released ; 2020 ; 2020 ; Iowa Historical Review Volume 8 ; 8 >
 
     }
     
@@ -261,12 +218,6 @@
         issn = 2168-569X ;
         eissn = 2168-5738
       >
-
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = http://ir.uiowa.edu/
-      #param[journal_abbr] = ijcs
-      #implicit < status ; year ; name ; param[volume] ; param[base_url] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/ijcs/
 
       param[journal_id] = ijcs
 
@@ -299,7 +250,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Iowa Journal of Cultural Studies Volume 18 ; 18 >
       au < doNotProcess ; 2019 ; 2019 ; Iowa Journal of Cultural Studies Volume 19 ; 19 >
       au < doNotProcess ; 2020 ; 2020 ; Iowa Journal of Cultural Studies Volume 20 ; 20 >
-      au < manifest ; 2021 ; 2021 ; Iowa Journal of Cultural Studies Volume 21 ; 21 >
+      au < released ; 2021 ; 2021 ; Iowa Journal of Cultural Studies Volume 21 ; 21 >
       au < exists ; 2022 ; 2022 ; Iowa Journal of Cultural Studies Volume 22 ; 22 >
 
     }
@@ -310,12 +261,6 @@
         issn = 0743-2747 ;
         eissn = 2325-8845
       >
-
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = http://ir.uiowa.edu/
-      #param[journal_abbr] = ijls
-      #implicit < status ; year ; name ; param[volume] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/ijls/
 
       param[journal_id] = ijls
 
@@ -339,12 +284,6 @@
         issn = 2168-538X
       >
 
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = http://ir.uiowa.edu/
-      #param[journal_abbr] = mathal
-      #implicit < status ; year ; name ; param[volume] ; param[base_url] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/mathal/
-
       param[journal_id] = mathal
 
       au < doNotProcess ; 2011 ; 2011 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 1 ; 1 >
@@ -363,12 +302,6 @@
         eissn = 2326-7062
       >
 
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = http://ir.uiowa.edu/
-      #param[journal_abbr] = mzwp
-      #implicit < status ; year ; name ; param[volume] ; param[base_url] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/mzwp/
-
       param[journal_id] = mzwp
 
       au < doNotProcess ; 2005 ; 2005 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2005 ; 2005 >
@@ -382,8 +315,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2017 ; 2017 >
       au < doNotProcess ; 2018 ; 2018 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 2019 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2019 ; 2019 >
-      au < manifest ; 2021 ; 2021 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2021 ; 2021 >
-      au < exists ; 2022 ; 2022 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2022 ; 2022 >
+      au < released ; 2021 ; 2021 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2021 ; 2021 >
+      au < manifest ; 2022 ; 2022 ; Marilyn Zurmuehlen Working Papers in Art Education Volume 2022 ; 2022 >
 
     }
     
@@ -392,12 +325,6 @@
         name = Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention ;
         issn = 2151-2957
       >
-
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = http://ir.uiowa.edu/
-      #param[journal_abbr] = poroi
-      #implicit < status ; year ; name ; param[volume] ; param[base_url] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/poroi/
 
       param[journal_id] = poroi
 
@@ -416,7 +343,7 @@
       au < doNotProcess ; 2017 ; 2017 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 13 ; 13 >
       au < doNotProcess ; 2018 ; 2018 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 14 ; 14 >
       au < doNotProcess ; 2020 ; 2020 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 15 ; 15 >
-      au < manifest ; 2021 ; 2021 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 16 ; 16 >
+      au < released ; 2021 ; 2021 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 16 ; 16 >
       au < manifest ; 2022 ; 2022 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 17 ; 17 >
 
     }
@@ -426,12 +353,6 @@
         name = Proceedings in Obstetrics and Gynecology ;
         issn = 2154-4751
       >
-
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = http://ir.uiowa.edu/
-      #param[journal_abbr] = pog
-      #implicit < status ; year ; name ; param[volume] ; param[base_url] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/pog/
 
       param[journal_id] = pog
 
@@ -445,7 +366,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Proceedings in Obstetrics and Gynecology Volume 8 ; 8 >
       au < doNotProcess ; 2019 ; 2019 ; Proceedings in Obstetrics and Gynecology Volume 9 ; 9 >
       au < doNotProcess ; 2020 ; 2020 ; Proceedings in Obstetrics and Gynecology Volume 10 ; 10 >
-      au < manifest ; 2021 ; 2021 ; Proceedings in Obstetrics and Gynecology Volume 11 ; 11 >
+      au < released ; 2021 ; 2021 ; Proceedings in Obstetrics and Gynecology Volume 11 ; 11 >
       au < manifest ; 2022 ; 2022 ; Proceedings in Obstetrics and Gynecology Volume 12 ; 12 >
 
     }
@@ -456,12 +377,6 @@
         issn = 0737-0679 ;
         eissn = 2153-3695
       >
-
-      #plugin = org.lockss.plugin.bepress.BePressPlugin
-      #param[base_url] = http://ir.uiowa.edu/
-      #param[journal_abbr] = wwqr
-      #implicit < status ; year ; name ; param[volume] ; param[base_url] >
-      #Moved to Janeway https://pubs.lib.uiowa.edu/wwqr/
 
       param[journal_id] = wwqr
 
@@ -502,8 +417,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Walt Whitman Quarterly Review Volume 35 ; 35 >
       au < doNotProcess ; 2018 ; 2018 ; Walt Whitman Quarterly Review Volume 36 ; 36 >
       au < doNotProcess ; 2019 ; 2019 ; Walt Whitman Quarterly Review Volume 37 ; 37 >
-      au < manifest ; 2020 ; 2020 ; Walt Whitman Quarterly Review Volume 38 ; 38 >
-      au < manifest ; 2021 ; 2021 ; Walt Whitman Quarterly Review Volume 39 ; 39 >
+      au < released ; 2020 ; 2020 ; Walt Whitman Quarterly Review Volume 38 ; 38 >
+      au < released ; 2021 ; 2021 ; Walt Whitman Quarterly Review Volume 39 ; 39 >
       au < manifest ; 2022 ; 2022 ; Walt Whitman Quarterly Review Volume 40 ; 40 >
 
     }

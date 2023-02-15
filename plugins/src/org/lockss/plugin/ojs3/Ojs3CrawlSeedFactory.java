@@ -33,6 +33,8 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.ojs3;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -63,6 +65,10 @@ public class Ojs3CrawlSeedFactory implements CrawlSeedFactory {
   private static final Logger log = Logger.getLogger(Ojs3CrawlSeedFactory.class);
 
   public static class AddStemCrawlSeed extends BaseCrawlSeed {
+
+    /* with so many publishers using this plugin, we can't expect them all to serve http and https start urls */
+    @Override
+    public boolean isFailOnStartUrlError() { return false; }
 
     private String jid;
     private String baseUrl;
@@ -96,7 +102,7 @@ public class Ojs3CrawlSeedFactory implements CrawlSeedFactory {
       return addLocale(Ojs3StartStemHelper.addStartStem(au, super.doGetStartUrls()));
     }
 
-    private Collection<String> addLocale(Collection<String> urls) {
+    private Collection<String> addLocale(Collection<String> urls) throws MalformedURLException {
       if (primaryLocale == null) {
         // nothing to do if this is missing.
         return urls;
@@ -104,9 +110,15 @@ public class Ojs3CrawlSeedFactory implements CrawlSeedFactory {
       String SET_LOCAL_QUERY = "/user/setLocale/primary_locale?source=";
       Collection<String> localeUrls = new ArrayList<>(urls.size());
       for (String url : urls) {
-        // https://www.ride.org.mx/index.php/RIDE/user/setLocale/es_ES?source=%2Findex.php%2FRIDE%2Fgateway%2Flockss%3Fyear%3D2020
-        String sourcePath = "/" + url.substring(baseUrl.length());
+        /* takes url like this
+           https://www.ride.org.mx/index.php/RIDE/gateway/lockss?year=2020
+           and converts to this
+           https://www.ride.org.mx/index.php/RIDE/user/setLocale/es_ES?source=%2Findex.php%2FRIDE%2Fgateway%2Flockss%3Fyear%3D2020 */
+        // /index.php/RIDE/gateway/lockss?year=2020
+        String sourcePath = new URL(url).getFile();
+        // https://www.ride.org.mx/index.php/RIDE
         String setLocaleUrlRoot = url.substring(0, url.lastIndexOf(jid) + jid.length());
+        //  /user/setLocale/primary_locale?source= -->  /user/setLocale/es_ES?source=
         setLocaleUrlRoot += SET_LOCAL_QUERY.replace(PRIMARY_LOCAL_ATTR, primaryLocale);
         localeUrls.add(setLocaleUrlRoot + UrlUtil.encodeUrl(sourcePath));
         log.debug3("adding Url: " + setLocaleUrlRoot + UrlUtil.encodeUrl(sourcePath));
@@ -114,7 +126,6 @@ public class Ojs3CrawlSeedFactory implements CrawlSeedFactory {
       return localeUrls;
     }
   }
-  
   @Override
   public CrawlSeed createCrawlSeed(CrawlerFacade facade) {
 	  return new AddStemCrawlSeed(facade);

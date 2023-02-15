@@ -32,6 +32,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import java.text.*;
+import org.apache.commons.lang3.tuple.*;
 
 import org.lockss.plugin.*;
 import org.lockss.plugin.UrlFetcher.FetchResult;
@@ -985,8 +986,18 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     }
   }
 
+  AuHttpResultMap redirToLoginAuResultMap(String loginUrl) {
+    List<Pair<String,ResultAction>> actionPats =
+      ListUtil.list(Pair.of(loginUrl,
+                            ResultAction.exClass(CacheException.RedirectToLoginPageException.class)));
+    return new AuHttpResultMap(new HttpResultMap(),
+                               PatternMap.fromPairs(actionPats));
+  }
+
+
   public void testRedirectToLoginURL() throws Exception {
     String redTo = "http://somewhere.else/foo";
+    mcf.setAuCacheResultMap(redirToLoginAuResultMap(redTo));
     mau.setLoginPageUrls(ListUtil.list(redTo));
     MockConnectionBaseUrlFetcher muf =
       new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
@@ -1002,12 +1013,13 @@ public class TestBaseUrlFetcher extends LockssTestCase {
       InputStream is = muf.getUncachedInputStream();
       fail("Should have thrown PermissionException");
     } catch (CacheException.PermissionException e) {
-      assertEquals("Redirected to login page: " + redTo, e.getMessage());
+      assertEquals(expRedirToLoginPageMsg(TEST_URL, redTo), e.getMessage());
     }
   }
 
   public void testRedirectToLoginUrlUnsupportedProtocol() throws Exception {
     String redTo = "ftp://somewhere.else/foo";
+    mcf.setAuCacheResultMap(redirToLoginAuResultMap(redTo));
     mau.setLoginPageUrls(ListUtil.list(redTo));
     MockConnectionBaseUrlFetcher muf =
       new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
@@ -1023,9 +1035,14 @@ public class TestBaseUrlFetcher extends LockssTestCase {
       InputStream is = muf.getUncachedInputStream();
       fail("Should have thrown PermissionException");
     } catch (CacheException.PermissionException e) {
-      assertEquals("Redirected to login page: " + redTo, e.getMessage());
+      assertEquals(expRedirToLoginPageMsg(TEST_URL, redTo), e.getMessage());
     }
   }
+
+  String expRedirToLoginPageMsg(String fromUrl, String toUrl) {
+    return "Redirect to login page: " + toUrl + " Redirect from " + fromUrl;
+  }
+
 
   public void testRedirectPassesBoth() throws Exception {
     mau.returnRealCachedUrl = true;

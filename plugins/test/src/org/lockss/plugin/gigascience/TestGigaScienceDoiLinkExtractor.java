@@ -27,18 +27,6 @@ import org.w3c.dom.NodeList;
 
 public class TestGigaScienceDoiLinkExtractor extends LockssTestCase {
 
-    private String getXmlFileContent(String fname) {
-        String xmlContent = "";
-
-        try (InputStream file_input = getResourceAsStream(fname)) {
-            xmlContent = StringUtil.fromInputStream(file_input);
-        } catch (IOException e) {
-            log.error(e.getMessage(), e);
-        }
-        return xmlContent;
-    }
-
-
     public void testDOIAPIXPathAlone() throws Exception {
 
         String fname = "dois_api.xml";
@@ -87,7 +75,7 @@ public class TestGigaScienceDoiLinkExtractor extends LockssTestCase {
     public void testGoodInput() throws Exception {
         GigaScienceDoiLinkExtractor gigaDoi = new GigaScienceDoiLinkExtractor();
         String fname = "dois_api.xml";
-        String journalXml = getXmlFileContent(fname);
+        String journalXml = getResourceContent(fname);
         List<String> out = doExtractUrls(gigaDoi, journalXml);
         assertEquals(out.size(), 23);
     }

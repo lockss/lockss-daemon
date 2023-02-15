@@ -41,11 +41,22 @@ function lockssSetElem(form, name, value) {
  if (elem != null) elem.value = value;
 }
 
+function disableAllButtons() {
+  var inputs = document.getElementsByTagName("INPUT");
+  for (var i = 0; i < inputs.length; i++) {
+    if (inputs[i].type === 'submit' || inputs[i].type === 'button') {
+      inputs[i].disabled = true;
+    }
+  }
+}
+
 function lockssButton(element, action, name, val) {
  var form = element.form;
  if (name !== undefined && val !== undefined) {
   lockssSetElem(form, name, val);
  }
+  disableAllButtons()
+  element.value='Working...';
  form.lockssAction.value = action;
  form.submit();
 }

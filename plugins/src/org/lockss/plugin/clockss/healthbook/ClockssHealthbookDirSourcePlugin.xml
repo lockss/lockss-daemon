@@ -40,14 +40,14 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
         <map>
             <entry>
                 <string>Metadata</string>
-                <string>1</string>
+                <string>2</string>
             </entry>
             <entry>
                 <string>Poll</string>
@@ -81,10 +81,11 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>"^%s%s/.+\.pdf$", base_url, directory</string>
         </list>
     </entry>
+    <!-- most of the bibtex files do not have a mime_type, set it here by file extension. -->
     <entry>
         <string>au_url_mime_type</string>
         <list>
-            <string>.bibtex$, text/bibtex</string>
+            <string>.*\.bibtex$, text/bibtex</string>
         </list>
     </entry>
     <entry>
@@ -104,6 +105,16 @@ POSSIBILITY OF SUCH DAMAGE.
         <map>
             <entry>
                 <string>*</string>
+                <string>org.lockss.plugin.clockss.SourceBibtexMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
+    <!-- Some of the bibtex files are text/plain -->
+    <entry>
+        <string>text/plain_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*;BIBTEX</string>
                 <string>org.lockss.plugin.clockss.SourceBibtexMetadataExtractorFactory</string>
             </entry>
         </map>

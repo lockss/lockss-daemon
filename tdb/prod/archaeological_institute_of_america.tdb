@@ -14,6 +14,17 @@
     
     {
     
+      plugin = org.lockss.plugin.atypon.uchicagopress.UChicagoPressPlugin
+      param[base_url] = https://www.journals.uchicago.edu/
+      implicit < status ; year ; name ; param[volume_name] >
+      param[journal_id] = aja
+
+      au < manifest ; 2022 ; American Journal of Archaeology Volume 126 ; 126 >
+      
+    }
+
+    {
+    
       plugin = org.lockss.plugin.jstor.JstorCurrentScholarshipPlugin
       #param[base_url] = http://www.jstor.org/
       implicit < status ; year ; name ; param[year] ; param[base_url] >
@@ -40,7 +51,6 @@
       au < released ; 2019 ; American Journal of Archaeology Volume 123 ; 2019 ; https://www.jstor.org/ >
       au < released ; 2020 ; American Journal of Archaeology Volume 124 ; 2020 ; https://www.jstor.org/ >
       au < released ; 2021 ; American Journal of Archaeology Volume 125 ; 2021 ; https://www.jstor.org/ >
-      au < expected ; 2022 ; American Journal of Archaeology Volume 126 ; 2022 ; https://www.jstor.org/ >
 
     }  
       

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -226,9 +226,9 @@ Args:
 <!--  <property name="derby.jar"      value="${lib}/derby-${derby.version}.jar"/>-->
 <!--  <property name="derbyclient.jar" value="${lib}/derbyclient-${derby.version}.jar"/>-->
 <!--  <property name="derbynet.jar"   value="${lib}/derbynet-${derby.version}.jar"/>-->
-  <property name="postgresql-jdbc.jar" value="${lib}/postgresql-42.3.5.jar" />
-  <property name="mysql-connector-java.jar"
-				  value="${lib}/mysql-connector-java-8.0.27.jar" />
+  <property name="postgresql-jdbc.jar" value="${lib}/postgresql-42.5.0.jar" />
+  <property name="mysql-connector-j.jar"
+				  value="${lib}/mysql-connector-j-8.0.31.jar" />
   <property name="mailapi.jar"    value="${lib}/javamail-mailapi-1.3.2.jar"/>
   <property name="activation.jar" value="${lib}/activation-1.0.2.jar"/>
   <property name="castor.jar"     value="${lib}/castor-0.9.4.1-xml.jar"/>
@@ -246,7 +246,7 @@ Args:
                                   value="${lib}/ziplet-2.4.1.jar"/>
   <property name="jaxp.jar"       value="${lib}/javax.xml.jaxp.jar"/>
 <!--    <property name="xml.jar"  value="${lib}/org.apache.crimson.jar"/> -->
-  <property name="log4j2.version" value="2.17.2" />
+  <property name="log4j2.version" value="2.19.0" />
   <property name="log4j2-api.jar" value="${lib}/log4j-api-${log4j2.version}.jar" />
   <property name="log4j2-core.jar" value="${lib}/log4j-core-${log4j2.version}.jar" />
   <property name="log4j2-1.2-compat.jar" value="${lib}/log4j-1.2-api-${log4j2.version}.jar" />
@@ -267,7 +267,7 @@ Args:
   <property name="commons.lang3.jar" value="${lib}/commons-lang3-3.12.0.jar" />
   <property name="commons.logging.jar" value="${lib}/commons-logging-1.2.jar" />
   <property name="commons.primitives.jar" value="${lib}/commons-primitives-1.0.jar" />
-  <property name="commons.text.jar" value="${lib}/commons-text-1.9.jar" />
+  <property name="commons.text.jar" value="${lib}/commons-text-1.10.0.jar" />
   <property name="commons.validator.jar" value="${lib}/commons-validator-1.7.jar" />
 
   <property name="commons.httpclient.jar"
@@ -299,7 +299,7 @@ Args:
   <property name="jsoup.jar" value="${lib}/jsoup-1.14.3.jar"/>
   <property name="marc4j.jar" value="${lib}/marc4j-2.9.2.jar" />
   <!-- Next 6 needed for Jonix -->
-  <property name="jonix.version" value="8.0.1" /><!-- last Java 8 version, 9.0 is Java 9 -->
+  <property name="jonix.version" value="2022-08" />
   <property name="jonix.jar" value="${lib}/jonix-${jonix.version}.jar" />
   <property name="jonix-common.jar" value="${lib}/jonix-common-${jonix.version}.jar" />
   <property name="jonix-xml.jar" value="${lib}/jonix-xml-${jonix.version}.jar" />
@@ -342,15 +342,16 @@ Args:
   <property name="httpclient.jar" value="${lib}/httpclient-4.3.1.jar"/>
 
   <!-- PDFBox -->
-  <property name="pdfbox.version" value="1.8.16" />
+  <property name="pdfbox.version" value="1.8.17" />
   <property name="pdfbox.jar" value="${lib}/pdfbox-${pdfbox.version}.jar" />
   <!-- Next 7 JARs needed by PDFBox: -->
   <property name="fontbox.jar" value="${lib}/fontbox-${pdfbox.version}.jar" />
   <property name="jempbox.jar" value="${lib}/jempbox-${pdfbox.version}.jar" />
-  <property name="bouncycastle.version" value="1.70" />
-  <property name="bouncycastle-provider.jar" value="${lib}/bcprov-jdk15on-${bouncycastle.version}.jar" />
-  <property name="bouncycastle-mail.jar" value="${lib}/bcmail-jdk15on-${bouncycastle.version}.jar" />
-  <property name="icu4j.version" value="70.1" />
+  <property name="bouncycastle.variant" value="jdk18on" />
+  <property name="bouncycastle.version" value="1.72" />
+  <property name="bouncycastle-provider.jar" value="${lib}/bcprov-${bouncycastle.variant}-${bouncycastle.version}.jar" />
+  <property name="bouncycastle-mail.jar" value="${lib}/bcmail-${bouncycastle.variant}-${bouncycastle.version}.jar" />
+  <property name="icu4j.version" value="71.1" />
   <property name="icu4j.jar" value="${lib}/icu4j-${icu4j.version}.jar" />
   <property name="icu4j-charset.jar" value="${lib}/icu4j-charset-${icu4j.version}.jar" />
   <property name="icu4j-localespi.jar" value="${lib}/icu4j-localespi-${icu4j.version}.jar" />
@@ -383,13 +384,15 @@ Args:
   <property name="lucene-core.jar" value="${lib}/lucene-core-8.9.0.jar" />
 
   <!-- Jars for okhttp -->
-  <property name="okhttp.version" value="3.14.9" />
+  <property name="okhttp.version" value="4.9.3" />
   <property name="okhttp.jar" value="${lib}/okhttp-${okhttp.version}.jar" />
   <property name="logging-interceptor.jar" value="${lib}/logging-interceptor-${okhttp.version}.jar" />
-  <property name="okio.jar" value="${lib}/okio-1.17.5.jar" />
+  <property name="okio.jar" value="${lib}/okio-2.8.0.jar" />
+  <property name="kotlin-stdlib.jar" value="${lib}/kotlin-stdlib-1.4.10.jar" />
   <property name="gson.jar" value="${lib}/gson-2.8.6.jar" />
   <property name="gson-fire.jar" value="${lib}/gson-fire-1.8.4.jar" />
   <property name="swagger-annotations.jar" value="${lib}/swagger-annotations-1.5.24.jar" />
+  <property name="jsr305.jar" value="${lib}/jsr305-3.0.2.jar" />
 
   <property name="json-path.jar" value="${lib}/json-path-2.7.0.jar" />
 
@@ -412,6 +415,7 @@ Args:
   <!--  Files -->
   <property name="default.releasename.file" value="${src}/defaultreleasename"/>
   <property name="test.classpath.file" value="${test}/test-classpath"/>
+  <property name="test.plugin.classpath.file" value="${test}/test-plugin-classpath"/>
   <property name="test.param.classpath.file" value="${test}/test-p-classpath"/>
   <property name="run.classpath.file" value="${test}/run-classpath"/>
   <property name="openbsd.classpath.file" value="${lib}/run-classpath"/>
@@ -544,7 +548,7 @@ Args:
     <pathelement path="${derbyclient.jar}" />
     <pathelement path="${derbynet.jar}" />
 	<pathelement path="${postgresql-jdbc.jar}" />
-    <pathelement path="${mysql-connector-java.jar}" />
+    <pathelement path="${mysql-connector-j.jar}" />
     <pathelement path="${mailapi.jar}" />
     <pathelement path="${activation.jar}" />
     <pathelement path="${castor.jar}" />
@@ -624,9 +628,11 @@ Args:
     <pathelement path="${okhttp.jar}" />
     <pathelement path="${logging-interceptor.jar}" />
     <pathelement path="${okio.jar}" />
+    <pathelement path="${kotlin-stdlib.jar}" />
     <pathelement path="${gson.jar}" />
     <pathelement path="${gson-fire.jar}" />
     <pathelement path="${swagger-annotations.jar}" />
+    <pathelement path="${jsr305.jar}" />
     <pathelement path="${json-path.jar}" />
     <!-- Needed for TDB tools: -->
     <pathelement path="${antlr.runtime.jar}" />
@@ -1089,6 +1095,7 @@ Java ${my.ant.java.version} found, 1.8 required
     <delete file="${lockss.ant.jar}" quiet="true"/>
     <delete file="${lockss.platform.jar}" quiet="true"/>
     <delete file="${test.classpath.file}" quiet="true"/>
+    <delete file="${test.plugin.classpath.file}" quiet="true"/>
     <delete file="${test.param.classpath.file}" quiet="true"/>
     <delete file="${run.classpath.file}" quiet="true"/>
     <delete file="${openbsd.classpath.file}" quiet="true"/>
@@ -1825,7 +1832,10 @@ Must specify output dir with -Doutdir=dir
     <!-- Write test classpath to a file, so test scripts can get it -->
     <pathconvert refid="tools.test.run.classpath" property="tmp.test.clspth"
       targetos="${detected.os}" />
+    <pathconvert refid="plugins.test.run.classpath" property="tmp.test.plugin.clspth"
+      targetos="${detected.os}" />
     <echo message="${tmp.test.clspth}" file="${test.classpath.file}"/>
+    <echo message="${tmp.test.plugin.clspth}" file="${test.plugin.classpath.file}"/>
     <!-- Make a parameterized version -->
     <pathconvert refid="tools.test.run.classpath" property="tmp.param.test.clspth"
       targetos="${detected.os}" >

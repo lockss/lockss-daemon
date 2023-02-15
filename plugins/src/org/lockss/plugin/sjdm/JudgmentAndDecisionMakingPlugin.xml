@@ -1,19 +1,46 @@
+<!--
+
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready. Plugin reviewed 12.16.2019</string>
+    <string>ready - Plugin reviewed 12.16.2019</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.sjdm.JudgmentAndDecisionMakingPlugin</string>
   </entry>
   <entry>
-    <string>plugin_name</string>
-    <string>Judgment and Decision Making Plugin</string>
-  </entry>
-  <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -31,6 +58,10 @@
 	<string>1</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Judgment and Decision Making Plugin</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -56,27 +87,21 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Judgment and Decision Making Plugin, Base URL %s, Volume %s&quot;, base_url, volume_name</string>
+    <string>"Judgment and Decision Making Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%s&quot;, base_url</string>
+    <string>"%s", base_url</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%svol%s\.[^/]+\.html?$&quot;, base_url, volume_name</string>
-      <string>2,&quot;^%sRePEc/&quot;, base_url</string>
-      <string>2,&quot;^%s[^/]+\.html?$&quot;, base_url</string>
-      <string>1,&quot;^%s&quot;, base_url</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_substance_url_pattern</string>
-    <list>
-      <string>&quot;^%s.*\.pdf$&quot;, base_url</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%svol%s\.[^/]+\.html?$", base_url, volume_name</string>
+      <string>2,"^%sRePEc/", base_url</string>
+      <string>2,"^%s[^/]+\.html?$", base_url</string>
+      <string>1,"^%s", base_url</string>
     </list>
   </entry>
   <entry>
@@ -88,24 +113,10 @@
     <long>1209600000</long>
   </entry>
   <entry>
-    <string>au_feature_urls</string>
-    <map>
-    <entry>
-      <string>au_title</string>
-      <string>&quot;%s&quot;, base_url</string>
-    </entry>
-    <entry>
-      <string>au_volume</string>
-      <string>&quot;%s&quot;, base_url</string>
-    </entry>
-    <entry>
-      <string>au_issue</string>
-      <list>
-        <string>&quot;%svol%s.%s\.html&quot;, base_url, volume_name, issue</string>
-        <string>&quot;%svol%s.%s\.htm&quot;, base_url, volume_name, issue</string>
-      </list>
-    </entry>
-    </map>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%s.*\.pdf$", base_url</string>
+    </list>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
@@ -114,5 +125,25 @@
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.sjdm.JudgmentAndDecisionMakingArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+    <entry>
+      <string>au_title</string>
+      <string>"%s", base_url</string>
+    </entry>
+    <entry>
+      <string>au_volume</string>
+      <string>"%s", base_url</string>
+    </entry>
+    <entry>
+      <string>au_issue</string>
+      <list>
+        <string>"%svol%s.%s\.html", base_url, volume_name, issue</string>
+        <string>"%svol%s.%s\.htm", base_url, volume_name, issue</string>
+      </list>
+    </entry>
+    </map>
   </entry>
 </map>

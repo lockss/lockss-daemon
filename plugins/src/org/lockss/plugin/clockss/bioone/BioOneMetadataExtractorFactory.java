@@ -1,7 +1,6 @@
 /*
 
-Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -42,14 +41,10 @@ import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
-import org.lockss.plugin.clockss.PubMedSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
 import org.w3c.dom.Document;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class BioOneMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
 	static Logger log = Logger.getLogger(BioOneMetadataExtractorFactory.class);
@@ -98,21 +93,27 @@ public class BioOneMetadataExtractorFactory extends SourceXmlMetadataExtractorFa
 				}
 			}
 
-			thisAM.put(MetadataField.FIELD_PUBLISHER, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_pubname));
+			// Bioone prefer different publisher name, for AES content it prefer one from tdb file.
+			// For others, it prefer from publisher
 
-			/*
-			Comment out these changes, since we like to get publisher name from the xml files
-			String publisherName = "BioOne";
+			if (cu.getUrl().contains("aes-released")) {
+				String publisherName = "BioOne";
+				String providerName = "BioOne";
 
-			TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
-			if (tdbau != null) {
-				publisherName =  tdbau.getPublisherName();
+				TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
+				if (tdbau != null) {
+					publisherName = tdbau.getPublisherName();
+					providerName = tdbau.getProviderName();
+				}
+				log.debug3("postCookProcess publisherName = " + publisherName);
+				log.debug3("postCookProcess providerName in tdbau = " + providerName);
+
+				thisAM.put(MetadataField.FIELD_PUBLISHER, publisherName);
+				thisAM.put(MetadataField.FIELD_PROVIDER, providerName);
+			} else {
+				thisAM.put(MetadataField.FIELD_PUBLISHER, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_pubname));
+				thisAM.put(MetadataField.FIELD_PROVIDER, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_pubname));
 			}
-			
-			thisAM.put(MetadataField.FIELD_PUBLISHER, publisherName);
-			 */
-
-			thisAM.put(MetadataField.FIELD_PROVIDER, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_pubname));
 		}
 
 	}

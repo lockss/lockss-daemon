@@ -22,7 +22,7 @@
 #      param[base_url] = https://steiner-studies.org/
 
       au < released ; 2020 ; 1 ; Steiner Studies Volume 2020 ; 2020 ; https://steiner-studies.org/ >
-      au < manifest ; 2021 ; 2 ; Steiner Studies Volume 2021 ; 2021 ; https://steiner-studies.org/ >
+      au < released ; 2021 ; 2 ; Steiner Studies Volume 2021 ; 2021 ; https://steiner-studies.org/ >
       au < manifest ; 2022 ; 3 ; Steiner Studies Volume 2022 ; 2022 ; https://steiner-studies.org/ >
 
   }
@@ -66,7 +66,7 @@
       au < released ; 2016 ; 13 ; Journal of Hate Studies Volume 2016 ; 2016 ; https://jhs.press.gonzaga.edu/ >
       au < released ; 2019 ; 14-15 ; Journal of Hate Studies Volume 2019 ; 2019 ; https://jhs.press.gonzaga.edu/ >
       au < released ; 2020 ; 16 ; Journal of Hate Studies Volume 2020 ; 2020 ; https://jhs.press.gonzaga.edu/ >
-      au < manifest ; 2021 ; 17 ; Journal of Hate Studies Volume 2021 ; 2021 ; https://jhs.press.gonzaga.edu/ >
+      au < released ; 2021 ; 17 ; Journal of Hate Studies Volume 2021 ; 2021 ; https://jhs.press.gonzaga.edu/ >
       au < expected ; 2022 ; 18 ; Journal of Hate Studies Volume 2022 ; 2022 ; https://jhs.press.gonzaga.edu/ >
 
   }
@@ -107,7 +107,7 @@
       au < exists ; 2017 ; 54 ; Estetika: The European Journal of Aesthetics Volume 2017 ; 2017 ; https://estetikajournal.org/ >
       au < exists ; 2018 ; 55 ; Estetika: The European Journal of Aesthetics Volume 2018 ; 2018 ; https://estetikajournal.org/ >
       au < exists ; 2019 ; 56 ; Estetika: The European Journal of Aesthetics Volume 2019 ; 2019 ; https://estetikajournal.org/ >
-      au < manifest ; 2020 ; 57 ; Estetika: The European Journal of Aesthetics Volume 2020 ; 2020 ; https://estetikajournal.org/ >
+      au < released ; 2020 ; 57 ; Estetika: The European Journal of Aesthetics Volume 2020 ; 2020 ; https://estetikajournal.org/ >
       au < released ; 2021 ; 58 ; Estetika: The European Journal of Aesthetics Volume 2021 ; 2021 ; https://estetikajournal.org/ >
       au < manifest ; 2022 ; 59 ; Estetika: The European Journal of Aesthetics Volume 2022 ; 2022 ; https://estetikajournal.org/ >
   }
@@ -170,7 +170,7 @@
       au < released ; 2019 ; 22 ; Redescriptions Volume 2019 ; 2019 ; https://journal-redescriptions.org/ >
       au < released ; 2020 ; 23 ; Redescriptions Volume 2020 ; 2020 ; https://journal-redescriptions.org/ >
       au < released ; 2021 ; 24 ; Redescriptions Volume 2021 ; 2021 ; https://journal-redescriptions.org/ >
-      au < expected ; 2022 ; 25 ; Redescriptions Volume 2022 ; 2022 ; https://journal-redescriptions.org/ >
+      au < manifest ; 2022 ; 25 ; Redescriptions Volume 2022 ; 2022 ; https://journal-redescriptions.org/ >
 
   }
 }
@@ -326,7 +326,7 @@
       au < released ; 2019 ; 2 ; Journal of Scientific Innovation in Medicine Volume 2019 ; 2019 ; https://journalofscientificinnovationinmedicine.org/ >
       au < released ; 2020 ; 3 ; Journal of Scientific Innovation in Medicine Volume 2020 ; 2020 ; https://journalofscientificinnovationinmedicine.org/ >
       au < released ; 2021 ; 4 ; Journal of Scientific Innovation in Medicine Volume 2021 ; 2021 ; https://journalofscientificinnovationinmedicine.org/ >
-      au < expected ; 2022 ; 5 ; Journal of Scientific Innovation in Medicine Volume 2022 ; 2022 ; https://journalofscientificinnovationinmedicine.org/ >
+      au < manifest ; 2022 ; 5 ; Journal of Scientific Innovation in Medicine Volume 2022 ; 2022 ; https://journalofscientificinnovationinmedicine.org/ >
 
   }
 
@@ -375,7 +375,7 @@
       au < released ; 2018 ; 5 ; Modern Languages Open Volume 2018 ; 2018 ; https://www.modernlanguagesopen.org/ >
       au < released ; 2019 ; 6 ; Modern Languages Open Volume 2019 ; 2019 ; https://www.modernlanguagesopen.org/ >
       au < released ; 2020 ; 7 ; Modern Languages Open Volume 2020 ; 2020 ; https://www.modernlanguagesopen.org/ >
-      au < manifest ; 2021 ; 8 ; Modern Languages Open Volume 2021 ; 2021 ; https://www.modernlanguagesopen.org/ >
+      au < released ; 2021 ; 8 ; Modern Languages Open Volume 2021 ; 2021 ; https://www.modernlanguagesopen.org/ >
       au < manifest ; 2022 ; 9 ; Modern Languages Open Volume 2022 ; 2022 ; https://www.modernlanguagesopen.org/ >
 
   }
@@ -403,8 +403,8 @@
 
       au < released ; 2019 ; 1 ; London School of Economics and Politics Volume 2019 ; 2019 ; https://jied.lse.ac.uk/ >
       au < released ; 2020 ; 2 ; London School of Economics and Politics Volume 2020 ; 2020 ; https://jied.lse.ac.uk/ >
-      au < manifest ; 2021 ; 3 ; London School of Economics and Politics Volume 2021 ; 2021 ; https://jied.lse.ac.uk/ >
-      au < expected ; 2022 ; 4 ; London School of Economics and Politics Volume 2022 ; 2022 ; https://jied.lse.ac.uk/ >
+      au < released ; 2021 ; 3 ; London School of Economics and Politics Volume 2021 ; 2021 ; https://jied.lse.ac.uk/ >
+      au < manifest ; 2022 ; 4 ; London School of Economics and Politics Volume 2022 ; 2022 ; https://jied.lse.ac.uk/ >
 
   }
   
@@ -421,7 +421,7 @@
       au < released ; 2018 ; 2 ; Journal of Long-Term Care Volume 2018 ; 2018 ; https://journal.ilpnetwork.org/ > #problem with volume url?
       au < released ; 2019 ; 5 ; Journal of Long-Term Care Volume 2019 ; 2019 ; https://journal.ilpnetwork.org/ >
       au < released ; 2020 ; 6 ; Journal of Long-Term Care Volume 2020 ; 2020 ; https://journal.ilpnetwork.org/ >
-      au < manifest ; 2021 ; 8 ; Journal of Long-Term Care Volume 2021 ; 2021 ; https://journal.ilpnetwork.org/ >
+      au < released ; 2021 ; 8 ; Journal of Long-Term Care Volume 2021 ; 2021 ; https://journal.ilpnetwork.org/ >
       au < manifest ; 2022 ; 9 ; Journal of Long-Term Care Volume 2022 ; 2022 ; https://journal.ilpnetwork.org/ >
 
   }
@@ -437,7 +437,7 @@
 #      param[base_url] = https://ppr.lse.ac.uk/ 
 
       au < released ; 2020 ; 1 ; LSE Public Policy Review Volume 2020 ; 2020 ; https://ppr.lse.ac.uk/ >
-      au < manifest ; 2021 ; 2 ; LSE Public Policy Review Volume 2021 ; 2021 ; https://ppr.lse.ac.uk/ >
+      au < released ; 2021 ; 2 ; LSE Public Policy Review Volume 2021 ; 2021 ; https://ppr.lse.ac.uk/ >
       au < manifest ; 2022 ; 3 ; LSE Public Policy Review Volume 2022 ; 2022 ; https://ppr.lse.ac.uk/ >
 
   }
@@ -523,7 +523,7 @@
 #      param[base_url] = https://njtcg.org/
 
       au < released ; 2020 ; 1 ; Nordic Journal of Transitions, Careers and Guidance Volume 2020 ; 2020 ; https://njtcg.org/ >
-      au < manifest ; 2021 ; 2 ; Nordic Journal of Transitions, Careers and Guidance Volume 2021 ; 2021 ; https://njtcg.org/ >
+      au < released ; 2021 ; 2 ; Nordic Journal of Transitions, Careers and Guidance Volume 2021 ; 2021 ; https://njtcg.org/ >
       au < manifest ; 2022 ; 3 ; Nordic Journal of Transitions, Careers and Guidance Volume 2022 ; 2022 ; https://njtcg.org/ >
 
   }
@@ -803,29 +803,6 @@
   {
 
       title <
-        name = Architectural Histories ;
-        eissn = 2050-5833
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = http://journal.eahn.org/
-
-      au < released ; 2013 ; 1 ; Architectural Histories Volume 2013 ; 2013 ; http://journal.eahn.org/ >
-      au < released ; 2014 ; 2 ; Architectural Histories Volume 2014 ; 2014 ; http://journal.eahn.org/ >
-      au < released ; 2015 ; 3 ; Architectural Histories Volume 2015 ; 2015 ; http://journal.eahn.org/ >
-      au < released ; 2016 ; 4 ; Architectural Histories Volume 2016 ; 2016 ; http://journal.eahn.org/ >
-      au < released ; 2017 ; 5 ; Architectural Histories Volume 2017 ; 2017 ; https://journal.eahn.org/ >
-      au < released ; 2018 ; 6 ; Architectural Histories Volume 2018 ; 2018 ; https://journal.eahn.org/ >
-      au < released ; 2019 ; 7 ; Architectural Histories Volume 2019 ; 2019 ; https://journal.eahn.org/ >
-      au < released ; 2020 ; 8 ; Architectural Histories Volume 2020 ; 2020 ; https://journal.eahn.org/ >
-      au < manifest ; 2021 ; 9 ; Architectural Histories Volume 2021 ; 2021 ; https://journal.eahn.org/ >
-      au < expected ; 2022 ; 10 ; Architectural Histories Volume 2022 ; 2022 ; https://journal.eahn.org/ >
-
-  }
-
-  {
-
-      title <
         name = Anglo Saxonica ;
         eissn = 2184-6006
       >
@@ -902,7 +879,7 @@
       au < released ; 2018 ; 28 ; Bulletin of the History of Archaeology Volume 2018 ; 2018 ; https://www.archaeologybulletin.org/ >
       au < released ; 2019 ; 29 ; Bulletin of the History of Archaeology Volume 2019 ; 2019 ; https://www.archaeologybulletin.org/ >
       au < released ; 2020 ; 30 ; Bulletin of the History of Archaeology Volume 2020 ; 2020 ; https://www.archaeologybulletin.org/ >
-      au < manifest ; 2021 ; 31 ; Bulletin of the History of Archaeology Volume 2021 ; 2021 ; https://www.archaeologybulletin.org/ >
+      au < released ; 2021 ; 31 ; Bulletin of the History of Archaeology Volume 2021 ; 2021 ; https://www.archaeologybulletin.org/ >
       au < manifest ; 2022 ; 32 ; Bulletin of the History of Archaeology Volume 2022 ; 2022 ; https://www.archaeologybulletin.org/ >
 
   }
@@ -1135,8 +1112,8 @@
       au < released ; 2018 ; 16 ; Journal of Circadian Rhythms Volume 2018 ; 2018 ; https://www.jcircadianrhythms.com/ >
       au < released ; 2019 ; 17 ; Journal of Circadian Rhythms Volume 2019 ; 2019 ; https://www.jcircadianrhythms.com/ >
       au < released ; 2020 ; 18 ; Journal of Circadian Rhythms Volume 2020 ; 2020 ; https://www.jcircadianrhythms.com/ >
-      au < manifest ; 2021 ; 19 ; Journal of Circadian Rhythms Volume 2021 ; 2021 ; https://www.jcircadianrhythms.com/ >
-      au < expected ; 2022 ; 20 ; Journal of Circadian Rhythms Volume 2022 ; 2022 ; https://www.jcircadianrhythms.com/ >
+      au < released ; 2021 ; 19 ; Journal of Circadian Rhythms Volume 2021 ; 2021 ; https://www.jcircadianrhythms.com/ >
+      au < manifest ; 2022 ; 20 ; Journal of Circadian Rhythms Volume 2022 ; 2022 ; https://www.jcircadianrhythms.com/ >
 
   }
 
@@ -1167,7 +1144,7 @@
       au < released ; 2019 ; 17 ; Journal of Conservation and Museum Studies Volume 2019 ; 2019 ; https://www.jcms-journal.com/ >
       au < released ; 2020 ; 18 ; Journal of Conservation and Museum Studies Volume 2020 ; 2020 ; https://www.jcms-journal.com/ >
       au < released ; 2021 ; 19 ; Journal of Conservation and Museum Studies Volume 2021 ; 2021 ; https://www.jcms-journal.com/ >
-      au < expected ; 2022 ; 20 ; Journal of Conservation and Museum Studies Volume 2022 ; 2022 ; https://www.jcms-journal.com/ >
+      au < manifest ; 2022 ; 20 ; Journal of Conservation and Museum Studies Volume 2022 ; 2022 ; https://www.jcms-journal.com/ >
 
   }
 
@@ -1247,7 +1224,7 @@
       au < released ; 2018 ; 2018 ; Journal of Interactive Media in Education Volume 2018 ; 2018 ; https://jime.open.ac.uk/ >
       au < released ; 2019 ; 2019 ; Journal of Interactive Media in Education Volume 2019 ; 2019 ; https://jime.open.ac.uk/ >
       au < released ; 2020 ; 2020 ; Journal of Interactive Media in Education Volume 2020 ; 2020 ; https://jime.open.ac.uk/ >
-      au < manifest ; 2021 ; 2021 ; Journal of Interactive Media in Education Volume 2021 ; 2021 ; https://jime.open.ac.uk/ >
+      au < released ; 2021 ; 2021 ; Journal of Interactive Media in Education Volume 2021 ; 2021 ; https://jime.open.ac.uk/ >
       au < manifest ; 2022 ; 2022 ; Journal of Interactive Media in Education Volume 2022 ; 2022 ; https://jime.open.ac.uk/ >
     }
   }
@@ -1276,7 +1253,7 @@
       au < released ; 2017 ; 12 ; Journal of Molecular Signaling Volume 2017 ; 2017 ; https://www.jmolecularsignaling.com/ >
       au < released ; 2018 ; 13 ; Journal of Molecular Signaling Volume 2018 ; 2018 ; https://www.jmolecularsignaling.com/ >
       au < released ; 2020 ; 14 ; Journal of Molecular Signaling Volume 2020 ; 2020 ; https://www.jmolecularsignaling.com/ >
-      au < manifest ; 2021 ; 15 ; Journal of Molecular Signaling Volume 2021 ; 2021 ; https://www.jmolecularsignaling.com/ >
+      au < released ; 2021 ; 15 ; Journal of Molecular Signaling Volume 2021 ; 2021 ; https://www.jmolecularsignaling.com/ >
       au < expected ; 2022 ; 16 ; Journal of Molecular Signaling Volume 2022 ; 2022 ; https://www.jmolecularsignaling.com/ >
 
   }
@@ -1411,28 +1388,6 @@
   {
 
       title <
-        name = Journal of Portuguese Linguistics ;
-        issn = 1645-4537 ;
-        eissn = 2397-5563
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = http://jpl.letras.ulisboa.pt/
-
-      au < released ; 2015 ; 1 ; Journal of Portuguese Linguistics Volume 2015 ; 2015 ; http://jpl.letras.ulisboa.pt/ >
-      au < released ; 2016 ; 2 ; Journal of Portuguese Linguistics Volume 2016 ; 2016 ; http://jpl.letras.ulisboa.pt/ >
-      au < released ; 2017 ; 3 ; Journal of Portuguese Linguistics Volume 2017 ; 2017 ; https://jpl.letras.ulisboa.pt/ >
-      au < released ; 2018 ; 4 ; Journal of Portuguese Linguistics Volume 2018 ; 2018 ; https://jpl.letras.ulisboa.pt/ >
-      au < released ; 2019 ; 5 ; Journal of Portuguese Linguistics Volume 2019 ; 2019 ; https://jpl.letras.ulisboa.pt/ >
-      au < released ; 2020 ; 6 ; Journal of Portuguese Linguistics Volume 2020 ; 2020 ; https://jpl.letras.ulisboa.pt/ >
-      au < manifest ; 2021 ; 7 ; Journal of Portuguese Linguistics Volume 2021 ; 2021 ; https://jpl.letras.ulisboa.pt/ >
-      au < expected ; 2022 ; 8 ; Journal of Portuguese Linguistics Volume 2022 ; 2022 ; https://jpl.letras.ulisboa.pt/ >
-
-  }
-
-  {
-
-      title <
         name = JBR-BTR ;
         issn = 0302-7430 ;
         eissn = 1780-2393
@@ -1468,26 +1423,6 @@
       au < released ; 2020 ; 104 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2020 ; 2020 ; https://www.jbsr.be/ >
       au < released ; 2021 ; 105 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2021 ; 2021 ; https://www.jbsr.be/ >
       au < manifest ; 2022 ; 106 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2022 ; 2022 ; https://www.jbsr.be/ >
-
-  }
-
-  {
-
-      title <
-        name = Laboratory Phonology: Journal of the Association for Laboratory Phonology ;
-        eissn = 1868-6354
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = http://www.journal-labphon.org/
-
-      au < released ; 2016 ; 1 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2016 ; 2016 ; http://www.journal-labphon.org/ >
-      au < released ; 2017 ; 2 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2017 ; 2017 ; https://www.journal-labphon.org/ >
-      au < released ; 2018 ; 3 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2018 ; 2018 ; https://www.journal-labphon.org/ >
-      au < released ; 2019 ; 4 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2019 ; 2019 ; https://www.journal-labphon.org/ >
-      au < released ; 2020 ; 5 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2020 ; 2020 ; https://www.journal-labphon.org/ >
-      au < manifest ; 2021 ; 6 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2021 ; 2021 ; https://www.journal-labphon.org/ >
-      au < expected ; 2022 ; 7 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2022 ; 2022 ; https://www.journal-labphon.org/ >
 
   }
 
@@ -1861,7 +1796,7 @@
       au < released ; 2019 ; 3 ; Health Psychology Bulletin Volume 2019 ; 2019 ; https://www.healthpsychologybulletin.com/ >
       au < released ; 2020 ; 4 ; Health Psychology Bulletin Volume 2020 ; 2020 ; https://www.healthpsychologybulletin.com/ >
       au < released ; 2021 ; 5 ; Health Psychology Bulletin Volume 2021 ; 2021 ; https://www.healthpsychologybulletin.com/ >
-      au < expected ; 2022 ; 6 ; Health Psychology Bulletin Volume 2022 ; 2022 ; https://www.healthpsychologybulletin.com/ >
+      au < manifest ; 2022 ; 6 ; Health Psychology Bulletin Volume 2022 ; 2022 ; https://www.healthpsychologybulletin.com/ >
 
   }
 
@@ -2111,7 +2046,7 @@
       au < released ; 2018 ; 9 ; Yearbook of Swiss Administrative Science Volume 2018 ; 2018 ; https://www.ssas-yearbook.com/ >
       au < released ; 2019 ; 10 ; Yearbook of Swiss Administrative Science Volume 2019 ; 2019 ; https://www.ssas-yearbook.com/ >
       au < released ; 2020 ; 11 ; Yearbook of Swiss Administrative Science Volume 2020 ; 2020 ; https://www.ssas-yearbook.com/ >
-      au < manifest ; 2021 ; 12 ; Yearbook of Swiss Administrative Science Volume 2021 ; 2021 ; https://www.ssas-yearbook.com/ >
+      au < released ; 2021 ; 12 ; Yearbook of Swiss Administrative Science Volume 2021 ; 2021 ; https://www.ssas-yearbook.com/ >
       au < manifest ; 2022 ; 13 ; Yearbook of Swiss Administrative Science Volume 2022 ; 2022 ; https://www.ssas-yearbook.com/ >
 
   }
@@ -2270,7 +2205,7 @@
       au < exists ; 2018 ; 5 ; Journal of Philosophy in Schools Volume 2018 ; 2018 ; https://jps.bham.ac.uk/ >
       au < exists ; 2019 ; 6 ; Journal of Philosophy in Schools Volume 2019 ; 2019 ; https://jps.bham.ac.uk/ >
       au < released ; 2020 ; 7 ; Journal of Philosophy in Schools Volume 2020 ; 2020 ; https://jps.bham.ac.uk/ >
-      au < manifest ; 2021 ; 8 ; Journal of Philosophy in Schools Volume 2021 ; 2021 ; https://jps.bham.ac.uk/ > #no substance
+      au < released ; 2021 ; 8 ; Journal of Philosophy in Schools Volume 2021 ; 2021 ; https://jps.bham.ac.uk/ > #no substance
       au < manifest ; 2022 ; 9 ; Journal of Philosophy in Schools Volume 2022 ; 2022 ; https://jps.bham.ac.uk/ > #no substance
 
   }
@@ -2299,9 +2234,9 @@
       comment[publisher] = University of East Anglia
 #      param[base_url] = https://newareastudies.com/
 
-      au < manifest ; 2020 ; 1 ; New Area Studies Volume 2020 ; 2020 ; https://newareastudies.com/ >
-      au < manifest ; 2021 ; 2 ; New Area Studies Volume 2021 ; 2021 ; https://newareastudies.com/ >
-      au < expected ; 2022 ; 3 ; New Area Studies Volume 2022 ; 2022 ; https://newareastudies.com/ >
+      au < released ; 2020 ; 1 ; New Area Studies Volume 2020 ; 2020 ; https://newareastudies.com/ >
+      au < released ; 2021 ; 2 ; New Area Studies Volume 2021 ; 2021 ; https://newareastudies.com/ >
+      au < manifest ; 2022 ; 3 ; New Area Studies Volume 2022 ; 2022 ; https://newareastudies.com/ >
 
   }
 }
@@ -2329,7 +2264,7 @@
       comment[publisher] = University of New South Wales
 #      param[base_url] = https://jglobalbiosecurity.com/
 
-      au < manifest ; 2019 ; 1 ; Global Biosecurity Volume 2019 ; 2019 ; https://jglobalbiosecurity.com/ >
+      au < released ; 2019 ; 1 ; Global Biosecurity Volume 2019 ; 2019 ; https://jglobalbiosecurity.com/ >
       au < released ; 2020 ; 2 ; Global Biosecurity Volume 2020 ; 2020 ; https://jglobalbiosecurity.com/ >
       au < expected ; 2021 ; 3 ; Global Biosecurity Volume 2021 ; 2021 ; https://jglobalbiosecurity.com/ >
       au < manifest ; 2022 ; 4 ; Global Biosecurity Volume 2022 ; 2022 ; https://jglobalbiosecurity.com/ >
@@ -2593,7 +2528,7 @@
       au < released ; 2018 ; 16 ; ERLACS Volume 2018 ; 2018 ; https://www.erlacs.org/ >
       au < released ; 2019 ; 17 ; ERLACS Volume 2019 ; 2019 ; https://www.erlacs.org/ >
       au < released ; 2020 ; 18 ; ERLACS Volume 2020 ; 2020 ; https://www.erlacs.org/ >
-      au < manifest ; 2021 ; 19 ; ERLACS Volume 2021 ; 2021 ; https://www.erlacs.org/ >
+      au < released ; 2021 ; 19 ; ERLACS Volume 2021 ; 2021 ; https://www.erlacs.org/ >
       au < manifest ; 2022 ; 20 ; ERLACS Volume 2022 ; 2022 ; https://www.erlacs.org/ >
 
   }
@@ -3094,7 +3029,7 @@
 
       au < released ; 2019 ; 1 ; Journal of Modern Philosophy Volume 2019 ; 2019 ; https://jmphil.org/ >
       au < released ; 2020 ; 2 ; Journal of Modern Philosophy Volume 2020 ; 2020 ; https://jmphil.org/ >
-      au < manifest ; 2021 ; 3 ; Journal of Modern Philosophy Volume 2021 ; 2021 ; https://jmphil.org/ >
+      au < released ; 2021 ; 3 ; Journal of Modern Philosophy Volume 2021 ; 2021 ; https://jmphil.org/ >
       au < manifest ; 2022 ; 4 ; Journal of Modern Philosophy Volume 2022 ; 2022 ; https://jmphil.org/ >
 
   }

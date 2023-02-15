@@ -43,6 +43,7 @@ import org.lockss.plugin.ArticleIteratorFactory;
 import org.lockss.plugin.SubTreeArticleIteratorBuilder;
 import org.lockss.util.Logger;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
@@ -52,14 +53,18 @@ public class IsassNestedZipXmlArticleIteratorFactory implements ArticleIteratorF
 
   // <base_url>/<year>/SPECIAL_DELIVERY_ijss_25_3_2022.zip!/ijss_11_2.pdf.zip/IJSS-11-14444-4009.pdf
   // <base_url>/<year>/SPECIAL_DELIVERY_ijss_25_3_2022.zip!/ijss_11_2.xml.zip/IJSS-11-14444-4009.xml
+  // <base_url>/<year>/IJSS-1-01.zip!/IJSS-1-2006-0002-RR.pdf
+  // <base_url>/<year>/IJSS-1-01.zip!/IJSS-1-2006-0002-RR.xml
   protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
-      "\"%s[^/]+/[^/]+/.*\\.zip!/.*\\.zip/.*\\.xml$\", base_url";
+      "\"%s[^/]+/(?>[^/]+/)?.+\\.zip!?/.+\\.xml\", base_url";
 
 
-  public static final Pattern XML_PATTERN = Pattern.compile("/(.+)\\.xml\\.zip/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
-  public static final String XML_REPLACEMENT = "/$1.xml.zip/$2.xml";
+  public static final Pattern XML_PATTERN = Pattern.compile("zip!/(?>(.+)\\.xml\\.zip/)?([^/]+)\\.xml$", Pattern.CASE_INSENSITIVE);
+  public static final String XML_REPLACEMENT_NEW = "zip!/$1.xml.zip/$2.xml";
+  public static final String XML_REPLACEMENT_OLD = "zip!/$2.xml";
   // should always be a 1:1 relationship
-  public static final String PDF_REPLACEMENT = "/$1.pdf.zip/$2.pdf";
+  public static final String PDF_REPLACEMENT_NEW = "zip!/$1.pdf.zip/$2.pdf";
+  public static final String PDF_REPLACEMENT_OLD = "zip!/$2.pdf";
 
 
   //
@@ -86,13 +91,20 @@ public class IsassNestedZipXmlArticleIteratorFactory implements ArticleIteratorF
 
     // set up XML to be an aspect that will trigger an ArticleFiles to feed the metadata extractor
     builder.addAspect(XML_PATTERN,
-        XML_REPLACEMENT,
+        Arrays.asList(
+          XML_REPLACEMENT_OLD,
+          XML_REPLACEMENT_NEW
+        ),
         ArticleFiles.ROLE_ARTICLE_METADATA);
 
     // While we can't identify articles that are *just* PDF which is why they
     // can't trigger an articlefiles by themselves, we can identify them
     // by replacement and they should be the full text CU.
-    builder.addAspect(PDF_REPLACEMENT,
+    builder.addAspect(
+        Arrays.asList(
+          PDF_REPLACEMENT_NEW,
+          PDF_REPLACEMENT_OLD
+        ),
         ArticleFiles.ROLE_FULL_TEXT_PDF);
 
     //Now set the order for the full text cu

@@ -33,34 +33,50 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>deprecated</string>
     <!-- https transition enabled -->
   </entry>
-  <!-- compare to AAIDrupalPlugin, the added entries should be in synch -->
-  <!-- also compare to ClockssHighWireDrupalPlugin for CLOCKSS specific entries -->
+  <!-- compare to ClockssHighWireDrupalPlugin for CLOCKSS specific entries -->
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.highwire.aai.ClockssAAIDrupalPlugin</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Association of Immunologists Plugin (CLOCKSS)</string>
+    <string>American Association of Immunologists Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.highwire.aai.AAIDrupalPlugin</string>
+    <string>org.lockss.plugin.highwire.HighWireJCorePlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>4</string>
+    <string>83</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Association of Immunologists Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"American Association of Immunologists Plugin (Legacy, CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>2</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <!--  override start url from parent to support http to https conversion -->

@@ -92,7 +92,7 @@ public interface Plugin {
    * Return the minimum daemon version required by this plugin
    * @return the minimum daemon version
    */
-  public String getRequiredDaemonVersion();
+  public List<String> getRequiredDaemonVersion();
 
   /**
    * Return the human-readable name of the plugin

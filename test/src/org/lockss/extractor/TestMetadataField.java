@@ -133,6 +133,8 @@ public class TestMetadataField extends LockssTestCase {
     assertEquals("10.1234/56", f1.validate(am, "10.1234/56"));
     assertEquals("10.1234/56", f1.validate(am, "doi:10.1234/56"));
     assertEquals("10.1234/56", f1.validate(am, "DOI:10.1234/56"));
+    assertEquals("10.1234/56", f1.validate(am, "DOI.ORG:10.1234/56"));
+    assertEquals("10.1234/56", f1.validate(am, "https://dx.doi.org/10.1234/56"));
     try {
       f1.validate(am, "not.a.doi.1234");
       fail("Should throw ValidationException");

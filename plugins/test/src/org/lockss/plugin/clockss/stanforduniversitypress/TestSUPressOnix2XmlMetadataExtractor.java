@@ -41,9 +41,6 @@ import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.clockss.onixbooks.Onix2LongSourceXmlMetadataExtractorFactory;
-import org.lockss.plugin.definable.DefinablePlugin;
-
 
 public class TestSUPressOnix2XmlMetadataExtractor extends LockssTestCase {
 
@@ -123,7 +120,7 @@ public class TestSUPressOnix2XmlMetadataExtractor extends LockssTestCase {
      mcu.setContentSize(noArticleXML.length());
      mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
 
-   FileMetadataExtractor me = new Onix2LongSourceXmlMetadataExtractorFactory().createFileMetadataExtractor(
+   FileMetadataExtractor me = new SUPressOnixXmlMetadataExtractorFactory().createFileMetadataExtractor(
        MetadataTarget.Any(), "text/xml");
      FileMetadataListExtractor mle =
          new FileMetadataListExtractor(me);
@@ -156,7 +153,7 @@ public class TestSUPressOnix2XmlMetadataExtractor extends LockssTestCase {
       mau.addUrl(ZIP_BASE + "9780804744888.pdf", true, true, xmlHeader);
       // do not add the PDF with this id so it doesn't get emitted: 9780804741777 n
 
-    FileMetadataExtractor me = new Onix2LongSourceXmlMetadataExtractorFactory().createFileMetadataExtractor(
+    FileMetadataExtractor me = new SUPressOnixXmlMetadataExtractorFactory().createFileMetadataExtractor(
         MetadataTarget.Any(), "text/xml");
       FileMetadataListExtractor mle =
           new FileMetadataListExtractor(me);

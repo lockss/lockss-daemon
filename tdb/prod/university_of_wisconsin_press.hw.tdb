@@ -48,9 +48,10 @@
       issnl = 0066-6939
     >
 
+      implicit < status ; year ; name ; param[volume_name] >
+      {
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://aa.uwpress.org/
-      implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 2003 ; Arctic Anthropology Volume 40 ; 40 >
       au < released ; 2004 ; Arctic Anthropology Volume 41 ; 41 >
@@ -70,8 +71,16 @@
       au < released ; 2018 ; Arctic Anthropology Volume 55 ; 55 >
       au < released ; 2019 ; Arctic Anthropology Volume 56 ; 56 >
       au < released ; 2020 ; Arctic Anthropology Volume 57 ; 57 >
-  }
+      au < released ; 2021 ; Arctic Anthropology Volume 58 ; 58 >
+      }
+      {
+      plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
+      param[base_url] = https://aa.uwpress.org/
 
+      au < exists ; 2023 ; Arctic Anthropology Volume 59 ; 59 >
+      }
+  }
+  
   {
 
     title <
@@ -101,10 +110,10 @@
       au < released ; 2016 ; Contemporary Literature Volume 57 ; 57 >
       au < released ; 2017 ; Contemporary Literature Volume 58 ; 58 >
       au < released ; 2018 ; Contemporary Literature Volume 59 ; 59 >
-      au < released ; 2018 ; Contemporary Literature Volume 60 ; 60 >
-      au < released ; 2020 ; Contemporary Literature Volume 61 ; 61 >
-      au < released ; 2021 ; Contemporary Literature Volume 62 ; 62 >
-      au < exists ; 2022 ; Contemporary Literature Volume 63 ; 63 >
+      au < released ; 2019-2020 ; Contemporary Literature Volume 60 ; 60 >
+      au < released ; 2021 ; Contemporary Literature Volume 61 ; 61 >
+      au < released ; 2022 ; Contemporary Literature Volume 62 ; 62 >
+      au < expected ; 2023 ; Contemporary Literature Volume 63 ; 63 >
 
   }
 
@@ -117,51 +126,56 @@
       issnl = 1543-4060
     >
 
+      implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
+      #param[base_url] = http://er.uwpress.org/
+      {
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      param[base_url] = http://er.uwpress.org/
-      implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 1981-1983 ; Ecological Restoration Volume 1 ; 1 >
-      au < released ; 1984 ; Ecological Restoration Volume 2 ; 2 >
-      au < released ; 1985 ; Ecological Restoration Volume 3 ; 3 >
-      au < released ; 1986 ; Ecological Restoration Volume 4 ; 4 >
-      au < released ; 1987 ; Ecological Restoration Volume 5 ; 5 >
-      au < released ; 1988 ; Ecological Restoration Volume 6 ; 6 >
-      au < released ; 1989 ; Ecological Restoration Volume 7 ; 7 >
-      au < released ; 1990 ; Ecological Restoration Volume 8 ; 8 >
-      au < released ; 1991 ; Ecological Restoration Volume 9 ; 9 >
-      au < released ; 1992 ; Ecological Restoration Volume 10 ; 10 >
-      au < released ; 1993 ; Ecological Restoration Volume 11 ; 11 >
-      au < released ; 1994 ; Ecological Restoration Volume 12 ; 12 >
-      au < released ; 1995 ; Ecological Restoration Volume 13 ; 13 >
-      au < released ; 1996 ; Ecological Restoration Volume 14 ; 14 >
-      au < released ; 1997 ; Ecological Restoration Volume 15 ; 15 >
-      au < released ; 1998 ; Ecological Restoration Volume 16 ; 16 >
-      au < released ; 1999 ; Ecological Restoration Volume 17 ; 17 >
-      au < released ; 2000 ; Ecological Restoration Volume 18 ; 18 >
-      au < released ; 2001 ; Ecological Restoration Volume 19 ; 19 >
-      au < released ; 2002 ; Ecological Restoration Volume 20 ; 20 >
-      au < released ; 2003 ; Ecological Restoration Volume 21 ; 21 >
-      au < released ; 2004 ; Ecological Restoration Volume 22 ; 22 >
-      au < released ; 2005 ; Ecological Restoration Volume 23 ; 23 >
-      au < released ; 2006 ; Ecological Restoration Volume 24 ; 24 >
-      au < released ; 2007 ; Ecological Restoration Volume 25 ; 25 >
-      au < released ; 2008 ; Ecological Restoration Volume 26 ; 26 >
-      au < released ; 2009 ; Ecological Restoration Volume 27 ; 27 >
-      au < released ; 2010 ; Ecological Restoration Volume 28 ; 28 >
-      au < released ; 2011 ; Ecological Restoration Volume 29 ; 29 >
-      au < released ; 2012 ; Ecological Restoration Volume 30 ; 30 >
-      au < released ; 2013 ; Ecological Restoration Volume 31 ; 31 >
-      au < released ; 2014 ; Ecological Restoration Volume 32 ; 32 >
-      au < released ; 2015 ; Ecological Restoration Volume 33 ; 33 >
-      au < released ; 2016 ; Ecological Restoration Volume 34 ; 34 >
-      au < released ; 2017 ; Ecological Restoration Volume 35 ; 35 >
-      au < released ; 2018 ; Ecological Restoration Volume 36 ; 36 >
-      au < released ; 2019 ; Ecological Restoration Volume 37 ; 37 >
-      au < released ; 2020 ; Ecological Restoration Volume 38 ; 38 >
-      au < released ; 2021 ; Ecological Restoration Volume 39 ; 39 >
-      au < manifest ; 2022 ; Ecological Restoration Volume 40 ; 40 >
+      au < released ; 1981-1983 ; Ecological Restoration Volume 1 ; 1 ; http://er.uwpress.org/ >
+      au < released ; 1984 ; Ecological Restoration Volume 2 ; 2 ; http://er.uwpress.org/ >
+      au < released ; 1985 ; Ecological Restoration Volume 3 ; 3 ; http://er.uwpress.org/ >
+      au < released ; 1986 ; Ecological Restoration Volume 4 ; 4 ; http://er.uwpress.org/ >
+      au < released ; 1987 ; Ecological Restoration Volume 5 ; 5 ; http://er.uwpress.org/ >
+      au < released ; 1988 ; Ecological Restoration Volume 6 ; 6 ; http://er.uwpress.org/ >
+      au < released ; 1989 ; Ecological Restoration Volume 7 ; 7 ; http://er.uwpress.org/ >
+      au < released ; 1990 ; Ecological Restoration Volume 8 ; 8 ; http://er.uwpress.org/ >
+      au < released ; 1991 ; Ecological Restoration Volume 9 ; 9 ; http://er.uwpress.org/ >
+      au < released ; 1992 ; Ecological Restoration Volume 10 ; 10 ; http://er.uwpress.org/ >
+      au < released ; 1993 ; Ecological Restoration Volume 11 ; 11 ; http://er.uwpress.org/ >
+      au < released ; 1994 ; Ecological Restoration Volume 12 ; 12 ; http://er.uwpress.org/ >
+      au < released ; 1995 ; Ecological Restoration Volume 13 ; 13 ; http://er.uwpress.org/ >
+      au < released ; 1996 ; Ecological Restoration Volume 14 ; 14 ; http://er.uwpress.org/ >
+      au < released ; 1997 ; Ecological Restoration Volume 15 ; 15 ; http://er.uwpress.org/ >
+      au < released ; 1998 ; Ecological Restoration Volume 16 ; 16 ; http://er.uwpress.org/ >
+      au < released ; 1999 ; Ecological Restoration Volume 17 ; 17 ; http://er.uwpress.org/ >
+      au < released ; 2000 ; Ecological Restoration Volume 18 ; 18 ; http://er.uwpress.org/ >
+      au < released ; 2001 ; Ecological Restoration Volume 19 ; 19 ; http://er.uwpress.org/ >
+      au < released ; 2002 ; Ecological Restoration Volume 20 ; 20 ; http://er.uwpress.org/ >
+      au < released ; 2003 ; Ecological Restoration Volume 21 ; 21 ; http://er.uwpress.org/ >
+      au < released ; 2004 ; Ecological Restoration Volume 22 ; 22 ; http://er.uwpress.org/ >
+      au < released ; 2005 ; Ecological Restoration Volume 23 ; 23 ; http://er.uwpress.org/ >
+      au < released ; 2006 ; Ecological Restoration Volume 24 ; 24 ; http://er.uwpress.org/ >
+      au < released ; 2007 ; Ecological Restoration Volume 25 ; 25 ; http://er.uwpress.org/ >
+      au < released ; 2008 ; Ecological Restoration Volume 26 ; 26 ; http://er.uwpress.org/ >
+      au < released ; 2009 ; Ecological Restoration Volume 27 ; 27 ; http://er.uwpress.org/ >
+      au < released ; 2010 ; Ecological Restoration Volume 28 ; 28 ; http://er.uwpress.org/ >
+      au < released ; 2011 ; Ecological Restoration Volume 29 ; 29 ; http://er.uwpress.org/ >
+      au < released ; 2012 ; Ecological Restoration Volume 30 ; 30 ; http://er.uwpress.org/ >
+      au < released ; 2013 ; Ecological Restoration Volume 31 ; 31 ; http://er.uwpress.org/ >
+      au < released ; 2014 ; Ecological Restoration Volume 32 ; 32 ; http://er.uwpress.org/ >
+      au < released ; 2015 ; Ecological Restoration Volume 33 ; 33 ; http://er.uwpress.org/ >
+      au < released ; 2016 ; Ecological Restoration Volume 34 ; 34 ; http://er.uwpress.org/ >
+      au < released ; 2017 ; Ecological Restoration Volume 35 ; 35 ; http://er.uwpress.org/ >
+      au < released ; 2018 ; Ecological Restoration Volume 36 ; 36 ; http://er.uwpress.org/ >
+      au < released ; 2019 ; Ecological Restoration Volume 37 ; 37 ; http://er.uwpress.org/ >
+      au < released ; 2020 ; Ecological Restoration Volume 38 ; 38 ; http://er.uwpress.org/ >
+      au < released ; 2021 ; Ecological Restoration Volume 39 ; 39 ; http://er.uwpress.org/ >
+      }
+      {
+      plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
 
+      au < manifest ; 2022 ; Ecological Restoration Volume 40 ; 40 ; https://er.uwpress.org/ >
+      }
   }
 
   {
@@ -209,9 +223,10 @@
       issnl = 0023-7639
     >
 
+      implicit < status ; year ; name ; param[volume_name] >
+      {
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://le.uwpress.org/
-      implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 2001 ; Land Economics Volume 77 ; 77 >
       au < released ; 2002 ; Land Economics Volume 78 ; 78 >
@@ -233,8 +248,14 @@
       au < released ; 2018 ; Land Economics Volume 94 ; 94 >
       au < released ; 2019 ; Land Economics Volume 95 ; 95 >
       au < released ; 2020 ; Land Economics Volume 96 ; 96 >
-      au < notReady ; 2021 ; Land Economics Volume 97 ; 97 > #urls fail
-      au < manifest ; 2022 ; Land Economics Volume 98 ; 98 >
+      }
+      {
+      plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
+      param[base_url] = https://le.uwpress.org/
+
+      au < exists ; 2021 ; Land Economics Volume 97 ; 97 > #urls fail
+      au < exists ; 2022 ; Land Economics Volume 98 ; 98 >
+      }
 
   }
 
@@ -247,9 +268,10 @@
       issnl = 0277-2426
     >
 
+      implicit < status ; year ; name ; param[volume_name] >
+      {
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://lj.uwpress.org/
-      implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 1982 ; Landscape Journal: design, planning, and management of the land Volume 1 ; 1 >
       au < released ; 1983 ; Landscape Journal: design, planning, and management of the land Volume 2 ; 2 >
@@ -290,8 +312,9 @@
       au < released ; 2018 ; Landscape Journal: design, planning, and management of the land Volume 37 ; 37 >
       au < released ; 2019 ; Landscape Journal: design, planning, and management of the land Volume 38 ; 38 >
       au < released ; 2020 ; Landscape Journal: design, planning, and management of the land Volume 39 ; 39 >
-      au < notReady ; 2021 ; Landscape Journal: design, planning, and management of the land Volume 40 ; 40 > #urls fail
+      au < manifest ; 2021 ; Landscape Journal: design, planning, and management of the land Volume 40 ; 40 > #urls fail
       au < manifest ; 2022 ; Landscape Journal: design, planning, and management of the land Volume 41 ; 41 >
+      }
 
   }
 
@@ -341,9 +364,10 @@
       issnl = 0026-9271
     >
 
+      implicit < status ; year ; name ; param[volume_name] >
+      {
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://mon.uwpress.org/
-      implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 2003 ; Monatshefte Volume XCV ; XCV >
       au < released ; 2004 ; Monatshefte Volume XCVI ; XCVI >
@@ -363,8 +387,16 @@
       au < released ; 2018 ; Monatshefte Volume 110 ; 110 >
       au < released ; 2019 ; Monatshefte Volume 111 ; 111 >
       au < released ; 2020 ; Monatshefte Volume 112 ; 112 >
-      au < notReady ; 2021 ; Monatshefte Volume 113 ; 113 > #urls fail
+      au < manifest ; 2021 ; Monatshefte Volume 113 ; 113 > #urls fail
       au < manifest ; 2022 ; Monatshefte Volume 114 ; 114 >
+      }
+      {
+      plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
+      param[base_url] = https://mon.uwpress.org/
+
+      #au < exists ; 2021 ; Monatshefte Volume 113 ; 113 >
+      #au < exists ; 2022 ; Monatshefte Volume 114 ; 114 >
+      }
 
   }
 
@@ -376,10 +408,11 @@
       eissn = 1548-4785 
     >
 
+      implicit < status ; year ; name ; param[volume_name] >
+      
+      {
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://npj.uwpress.org/
-      implicit < status ; year ; name ; param[volume_name] >
-      comment[notReady] = RT4567
 
       au < released ; 2000 ; Native Plants Journal Volume 1 ; 1 >
       au < released ; 2001 ; Native Plants Journal Volume 2 ; 2 >
@@ -402,9 +435,14 @@
       au < released ; 2018 ; Native Plants Journal Volume 19 ; 19 >
       au < released ; 2019 ; Native Plants Journal Volume 20 ; 20 >
       au < released ; 2020 ; Native Plants Journal Volume 21 ; 21 >
-      au < notReady ; 2021 ; Native Plants Journal Volume 22 ; 22 > #urls fail
-    
-      au < manifest ; 2022 ; Native Plants Journal Volume 23 ; 23 >
+      }
+      {
+      plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
+      param[base_url] = https://npj.uwpress.org/
+
+      au < released ; 2021 ; Native Plants Journal Volume 22 ; 22 > #urls fail RT4567
+      au < released ; 2022 ; Native Plants Journal Volume 23 ; 23 >
+      }
   }
 
   {

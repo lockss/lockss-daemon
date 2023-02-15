@@ -478,7 +478,7 @@ public class DebugPanel extends LockssServlet {
       conn = dbMgr.getConnection();
       insertPendingAuBatchStatement =
 	  metadataMgr.getPrioritizedInsertPendingAuBatchStatement(conn);
-
+      log.debug("Enqueue metadata index for " + au.getName());
       if (metadataMgr.enableAndAddAuToReindex(au, conn,
 	  insertPendingAuBatchStatement, false, true)) {
 	statusMsg = "Reindexing metadata for " + au.getName();

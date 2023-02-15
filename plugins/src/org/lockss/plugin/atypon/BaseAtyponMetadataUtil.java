@@ -140,6 +140,113 @@ public class BaseAtyponMetadataUtil {
         }
       }
     }
+
+
+    // get the AU's publisher and check if it is in our list
+    String pubNameSeg = (tdbau == null) ? null : tdbau.getPublisherName();
+
+    //Do SEG specific check to exclude certain overcrawl Aus on certain ingest machines
+    if (isInAu && (pubNameSeg != null)) {
+      log.debug3("Seg date check: pubname = " + pubNameSeg);
+      Boolean isSeg = pubNameSeg.equals("Society of Exploration Geophysicists");
+      if (isSeg) {
+        isInAu = false;
+        log.debug3("Seg date check: start checking: " + pubNameSeg);
+        String seg_date = am.get(MetadataField.FIELD_DATE);
+        String seg_pubtitle = am.get(MetadataField.FIELD_PUBLICATION_TITLE);
+        
+        TdbAu seg_tdbau = au.getTdbAu();
+        String seg_AU_Year = seg_tdbau.getYear();
+        String seg_tdb_title = seg_tdbau.getPublicationTitle();
+
+        log.debug3("Seg date check: seg_date = " + seg_date + ", seg_AU_YEAR = " + seg_AU_Year
+        + ", seg_pubtitle = " + seg_pubtitle + ", seg_tdb_title = " + seg_tdb_title);
+
+        if ((!StringUtils.isEmpty(seg_date) && (seg_AU_Year != null))) {
+          for (String auYear : seg_AU_Year.split("/|-|,")) {
+            if (auYear.length() == 4) {
+              if (seg_date.substring(0, 4).equals(auYear)) {
+                log.debug3("Seg date check: seg_date = " + seg_date.substring(0, 4) + ", auYear = " + auYear);
+
+                if ((seg_pubtitle != null) && (seg_tdb_title != null) && seg_tdb_title.contains(seg_pubtitle)) {
+                  log.debug3("Seg date check: seg_date = " + seg_date + ", seg_AU_YEAR = " + seg_AU_Year
+                          + ", check title passed, seg_pubtitle = " + seg_pubtitle + ", seg_tdb_title = " + seg_tdb_title);
+                  isInAu = true;
+                } else {
+                  log.debug3("Seg date check: seg_date = " + seg_date + ", seg_AU_YEAR = " + seg_AU_Year
+                          + ", check title failed, seg_pubtitle = " + seg_pubtitle + ", seg_tdb_title = " + seg_tdb_title);
+                }
+              }
+            }
+          }
+        } else if (StringUtils.isEmpty(seg_date)) {
+          // If ".ris" file are not available, seg_date might be null, which means the article is not in the Au
+          log.debug3("Seg date check: seg_date is not avaialbe = " + seg_date);
+
+        }
+      }
+    }
+
+
+    // Add Atypon-Sage check for an over crawlled Au on ingest1 on Oct/2022 plugin version#41
+    // INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 59
+    // This check need to happen before the following code, since it will return true anyway
+    /*
+    if (StringUtils.isEmpty(foundVolume) && StringUtils.isEmpty(foundJournalTitle)) {
+      log.debug3("Vol and Title was empty, returning: " + isInAu);
+      return isInAu; //return true, we have no way of knowing
+    }
+     */
+
+
+    String pubNameSage = (tdbau == null) ? null : tdbau.getPublisherName();
+    log.debug3("Sage Check: Publisher Specific Checks for Sage = " + pubNameSage);
+
+    String AU_journal_titleSage = (tdbau == null) ? null : tdbau.getPublicationTitle();
+    String foundJournalTitleSage = am.get(MetadataField.FIELD_PUBLICATION_TITLE);
+
+    log.debug3("Sage Check: Publisher Specific Checks for Sage = " + pubNameSage + ", AU_journal_titleSage = " +
+            AU_journal_titleSage + ", foundJournalTitleSage ="  + foundJournalTitleSage + ", isInAu =" + isInAu);
+
+    if (isInAu && (pubNameSage != null) && (foundJournalTitleSage != null)) {
+      Boolean isSage = pubNameSage.equalsIgnoreCase("SAGE Publications");
+      if (isSage) {
+        log.debug3("Sage Check:  Publisher Specific Checks for Sage");
+
+        if (isInAu && !(StringUtils.isEmpty(foundJournalTitleSage) || StringUtils.isEmpty(AU_journal_titleSage)) ) {
+          // normalize titles to catch unimportant differences
+          log.debug3("Sage Check:  pre-normalized title from Sage AU is : " + AU_journal_titleSage);
+          log.debug3("Sage Check:  pre-normalized title from Sage metadata is : " + foundJournalTitleSage);
+          String normAuTitleSage = normalizeTitle(AU_journal_titleSage);
+          String normFoundTitleSage = normalizeTitle(foundJournalTitleSage);
+          log.debug3("Sage Check: normalized title from Sage AU is : " + normAuTitleSage);
+          log.debug3("Sage Check: normalized title from Sage metadata is : " + normFoundTitleSage);
+          // If the titles are a subset of each other or are equal after normalization
+          isInAu = (
+                  ((StringUtils.contains(normAuTitleSage, normFoundTitleSage)) ||
+                          (StringUtils.contains(normFoundTitleSage, normAuTitleSage))));
+          log.debug3("Sage Check: Publisher Specific Checks for Sage journal title condition meet, isInAu :" + isInAu + ", access.url = " + am.get(MetadataField.FIELD_ACCESS_URL)
+                  + ", AU_journal_titleSage = " + AU_journal_titleSage + ", foundJournalTitleSage ="  + foundJournalTitleSage
+                  + ", normAuTitleSage =  " + normAuTitleSage + ", normFoundTitleSage = " + normFoundTitleSage);
+
+          // Check VOLUME
+          String foundVolumeSage = am.get(MetadataField.FIELD_VOLUME);
+          if (!StringUtils.isEmpty(foundVolumeSage)) {
+            // Get the AU's volume name from the AU properties. This must be set
+            TypedEntryMap tfProps = au.getProperties();
+            String AU_volume = tfProps.getString(ConfigParamDescr.VOLUME_NAME.getKey());
+
+            if (isInAu && !(StringUtils.isEmpty(foundVolumeSage))) {
+              isInAu =  ( (AU_volume != null) && (AU_volume.equals(foundVolumeSage)));
+              log.debug3("Sage Check: After Sage volume check, isInAu :" + isInAu + ", foundVolumeSage = " + foundVolumeSage + ", AU_volume =" + AU_volume);
+            }
+          }
+          return isInAu;
+        }
+      }
+    }
+
+
     // END PUBLISHER SPECIFIC CHECKS //
 
     // Use the journalTitle and volume name from the ArticleMetadata
@@ -160,7 +267,7 @@ public class BaseAtyponMetadataUtil {
 
       if (isInAu && !(StringUtils.isEmpty(foundVolume))) {
         isInAu =  ( (AU_volume != null) && (AU_volume.equals(foundVolume)));
-        log.debug3("After volume check, isInAu :" + isInAu);
+        log.debug3("After volume check, isInAu :" + isInAu + ", foundVolume = " + foundVolume + ", AU_volume" + AU_volume);
       }
     }
 
@@ -251,6 +358,24 @@ public class BaseAtyponMetadataUtil {
     // this is a param...it can't be null, but be safe
     if (AU_EISBN == null) {
       return true; //return true, we have no way of knowing
+    }
+
+    // There are some books from Practical Action which have wrong isbn inside ".ris" files when they collected
+    // Do not do isbn/eisbn comparation so metadata can be extracted
+    if (tdbau == null) {
+      log.debug3("Publisher Specific Checks for publisher PA tdbau is null");
+    }
+    
+    String pubNamePA = (tdbau == null) ? null : tdbau.getPublisherName();
+    log.debug3("Publisher Specific Checks for publisher = " + pubNamePA);
+
+    if (isInAu && (pubNamePA != null)) {
+      Boolean isPABooks = pubNamePA.equalsIgnoreCase("Practical Action Publishing");
+      if ((isPABooks) &&  (!(StringUtils.isEmpty(foundEISBN)) || !(StringUtils.isEmpty(foundISBN)))) {
+        log.debug3("Practional Action book eisbn/isbn check, foundEISBN :" + foundEISBN + ", foundISBN" + foundISBN);
+        isInAu = true;
+        return isInAu;
+      }
     }
 
     // if either of the isbn variants matches, we're good

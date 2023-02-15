@@ -1,17 +1,44 @@
+/*
+
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+*/
+
 package org.lockss.plugin.springer;
 
-import org.apache.commons.collections.map.MultiValueMap;
-import org.apache.commons.io.FileUtils;
 import org.lockss.daemon.ShouldNotHappenException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.*;
-import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 import org.w3c.dom.Document;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
@@ -25,23 +52,10 @@ public class TestSpringerJatsXmlXPathMetadataExtractor extends SourceXmlMetadata
     private static String BaseUrl = "http://source.host.org/sourcefiles/springer/";
     private static String Directory = "2019_04";
 
-    private static String getXmlFileContent(String fname) {
-        String xmlContent = "";
-        try {
-            String currentDirectory = System.getProperty("user.dir");
-            String pathname = currentDirectory +
-                    "/plugins/test/src/org/lockss/plugin/springer/" + fname;
-            xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
-        } catch(IOException e) {
-            log.error(e.getMessage(), e);
-        }
-        return xmlContent;
-    }
-
     public void testExtractArticleXmlSchema() throws Exception {
 
         String fname = "springer_source_plugin_jats_journal_test_file.xml.Meta";
-        String journalXml = getXmlFileContent(fname);
+        String journalXml = getResourceContent(fname);
         String xml_url = BaseUrl + Directory + "/" + fname;
 
         FileMetadataExtractor me = new TestSpringerJatsXmlXPathMetadataExtractor.MyJatsPublishingSourceXmlMetadataExtractor();
@@ -62,7 +76,7 @@ public class TestSpringerJatsXmlXPathMetadataExtractor extends SourceXmlMetadata
     public void testExtractArticleXmlMetaSchema() throws Exception {
 
         String fname = "springer_source_plugin_jats_journal_test_file.xml";
-        String journalXml = getXmlFileContent(fname);
+        String journalXml = getResourceContent(fname);
         String xml_url = BaseUrl + Directory + "/" + fname;
 
         FileMetadataExtractor me = new TestSpringerJatsXmlXPathMetadataExtractor.MyJatsPublishingSourceXmlMetadataExtractor();
@@ -87,7 +101,7 @@ public class TestSpringerJatsXmlXPathMetadataExtractor extends SourceXmlMetadata
     public void testExtractBookXmlSchema() throws Exception {
 
         String fname = "springer_source_plugin_bits_book_test_file.xml";
-        String journalXml = getXmlFileContent(fname);
+        String journalXml = getResourceContent(fname);
         String xml_url = BaseUrl + Directory + "/" + fname;
 
         FileMetadataExtractor me = new TestSpringerJatsXmlXPathMetadataExtractor.MyJatsPublishingSourceXmlMetadataExtractor();
@@ -109,7 +123,7 @@ public class TestSpringerJatsXmlXPathMetadataExtractor extends SourceXmlMetadata
 
     public void testExtractBookSerieXmlSchema() throws Exception {
         String fname = "springer_source_plugin_bits_book_serie_test_file.xml";
-        String journalXml = getXmlFileContent(fname);
+        String journalXml = getResourceContent(fname);
 
         String xml_url = BaseUrl + Directory + "/" + fname;
         FileMetadataExtractor me = new TestSpringerJatsXmlXPathMetadataExtractor.MyJatsPublishingSourceXmlMetadataExtractor();

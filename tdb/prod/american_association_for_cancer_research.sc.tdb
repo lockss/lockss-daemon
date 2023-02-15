@@ -5,15 +5,25 @@
     info[platform] = Silverchair.
   >
   
-   #plugin = needs.plugin
-   #Like this plugin ->
-   plugin = org.lockss.plugin.silverchair.ucpress.UCPressSilverchairPlugin
+   plugin = org.lockss.plugin.silverchair.aacr.AACRSilverchairPlugin
    implicit < status ; year ; param[year] ; name ; param[volume_name] >
    param[base_url] = https://aacrjournals.org/
-   #move from HW to SilverChair
 
-   #pluginPrefix = org.lockss.plugin.highwire.
-   #implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
+  {
+
+    title <
+      name = Blood Cancer Discovery ;
+      issn = 2643-3230 ;
+      eissn = 2643-3249
+
+    >
+      param[journal_id] = bloodcancerdiscov
+    
+      au < notReady ; 2020 ; 2020 ; Blood Cancer Discovery Volume 1 ; 1 >
+      au < notReady ; 2021 ; 2021 ; Blood Cancer Discovery Volume 2 ; 2 >
+      au < notReady ; 2022 ; 2022 ; Blood Cancer Discovery Volume 3 ; 3 >
+
+  }
 
   {
 
@@ -36,8 +46,8 @@
       au < doNotProcess ; 2018 ; 2018 ; Cancer Discovery Volume 8 ; 8 >
       au < doNotProcess ; 2019 ; 2019 ; Cancer Discovery Volume 9 ; 9 >
       au < doNotProcess ; 2020 ; 2020 ; Cancer Discovery Volume 10 ; 10 >
-      au < manifest ; 2021 ; 2021 ; Cancer Discovery Volume 11 ; 11 >
-      au < manifest ; 2022 ; 2022 ; Cancer Discovery Volume 12 ; 12 >
+      au < notReady ; 2021 ; 2021 ; Cancer Discovery Volume 11 ; 11 >
+      au < notReady ; 2022 ; 2022 ; Cancer Discovery Volume 12 ; 12 >
 
   }
 
@@ -83,8 +93,8 @@
       au < doNotProcess ; 2018 ; 2018 ; Cancer Epidemiology Biomarkers & Prevention Volume 27 ; 27 >
       au < doNotProcess ; 2019 ; 2019 ; Cancer Epidemiology Biomarkers & Prevention Volume 28 ; 28 >
       au < doNotProcess ; 2020 ; 2020 ; Cancer Epidemiology Biomarkers & Prevention Volume 29 ; 29 >
-      au < manifest ; 2021 ; 2021 ; Cancer Epidemiology Biomarkers & Prevention Volume 30 ; 30 >
-      au < manifest ; 2022 ; 2022 ; Cancer Epidemiology Biomarkers & Prevention Volume 31 ; 31 >
+      au < notReady ; 2021 ; 2021 ; Cancer Epidemiology Biomarkers & Prevention Volume 30 ; 30 >
+      au < notReady ; 2022 ; 2022 ; Cancer Epidemiology Biomarkers & Prevention Volume 31 ; 31 >
 
   }
 
@@ -108,8 +118,8 @@
       au < doNotProcess ; 2018 ; 2018 ; Cancer Immunology Research Volume 6 ; 6 >
       au < doNotProcess ; 2019 ; 2019 ; Cancer Immunology Research Volume 7 ; 7 >
       au < doNotProcess ; 2020 ; 2020 ; Cancer Immunology Research Volume 8 ; 8 >
-      au < manifest ; 2021 ; 2021 ; Cancer Immunology Research Volume 9 ; 9 >
-      au < manifest ; 2022 ; 2022 ; Cancer Immunology Research Volume 10 ; 10 >
+      au < notReady ; 2021 ; 2021 ; Cancer Immunology Research Volume 9 ; 9 >
+      au < notReady ; 2022 ; 2022 ; Cancer Immunology Research Volume 10 ; 10 >
 
   }
 
@@ -138,8 +148,8 @@
       au < doNotProcess ; 2018 ; 2018 ; Cancer Prevention Research Volume 11 ; 11 >
       au < doNotProcess ; 2019 ; 2019 ; Cancer Prevention Research Volume 12 ; 12 >
       au < doNotProcess ; 2020 ; 2020 ; Cancer Prevention Research Volume 13 ; 13 >
-      au < manifest ; 2021 ; 2021 ; Cancer Prevention Research Volume 14 ; 14 >
-      au < manifest ; 2022 ; 2022 ; Cancer Prevention Research Volume 15 ; 15 >
+      au < notReady ; 2021 ; 2021 ; Cancer Prevention Research Volume 14 ; 14 >
+      au < notReady ; 2022 ; 2022 ; Cancer Prevention Research Volume 15 ; 15 >
 
   }
 
@@ -235,8 +245,22 @@
       au < doNotProcess ; 2018 ; 2018 ; Cancer Research Volume 78 ; 78 >
       au < doNotProcess ; 2019 ; 2019 ; Cancer Research Volume 79 ; 79 >
       au < doNotProcess ; 2020 ; 2020 ; Cancer Research Volume 80 ; 80 >
-      au < manifest ; 2021 ; 2021 ; Cancer Research Volume 81 ; 81 >
-      au < manifest ; 2022 ; 2022 ; Cancer Research Volume 82 ; 82 >
+      au < notReady ; 2021 ; 2021 ; Cancer Research Volume 81 ; 81 >
+      au < notReady ; 2022 ; 2022 ; Cancer Research Volume 82 ; 82 >
+
+  }
+
+  {
+
+    title <
+      name = Cancer Research Communications ;
+      eissn = 2767-9764
+
+    >
+      param[journal_id] = cancerrescommun
+    
+      au < notReady ; 2021 ; 2021 ; Cancer Research Communications Volume 1 ; 1 >
+      au < notReady ; 2022 ; 2022 ; Cancer Research Communications Volume 2 ; 2 >
 
   }
 
@@ -278,8 +302,8 @@
       au < doNotProcess ; 2018 ; 2018 ; Clinical Cancer Research Volume 24 ; 24 >
       au < doNotProcess ; 2019 ; 2019 ; Clinical Cancer Research Volume 25 ; 25 >
       au < doNotProcess ; 2020 ; 2020 ; Clinical Cancer Research Volume 26 ; 26 >
-      au < manifest ; 2021 ; 2021 ; Clinical Cancer Research Volume 27 ; 27 >
-      au < manifest ; 2022 ; 2022 ; Clinical Cancer Research Volume 28 ; 28 >
+      au < notReady ; 2021 ; 2021 ; Clinical Cancer Research Volume 27 ; 27 >
+      au < notReady ; 2022 ; 2022 ; Clinical Cancer Research Volume 28 ; 28 >
 
   }
 
@@ -314,8 +338,8 @@
       au < doNotProcess ; 2018 ; 2018 ; Molecular Cancer Research Volume 16 ; 16 >
       au < doNotProcess ; 2019 ; 2019 ; Molecular Cancer Research Volume 17 ; 17 >
       au < doNotProcess ; 2020 ; 2020 ; Molecular Cancer Research Volume 18 ; 18 >
-      au < manifest ; 2021 ; 2021 ; Molecular Cancer Research Volume 19 ; 19 >
-      au < manifest ; 2022 ; 2022 ; Molecular Cancer Research Volume 20 ; 20 >
+      au < notReady ; 2021 ; 2021 ; Molecular Cancer Research Volume 19 ; 19 >
+      au < notReady ; 2022 ; 2022 ; Molecular Cancer Research Volume 20 ; 20 >
 
   }
 
@@ -351,8 +375,8 @@
       au < doNotProcess ; 2018 ; 2018 ; Molecular Cancer Therapeutics Volume 17 ; 17 >
       au < doNotProcess ; 2019 ; 2019 ; Molecular Cancer Therapeutics Volume 18 ; 18 >
       au < doNotProcess ; 2020 ; 2020 ; Molecular Cancer Therapeutics Volume 19 ; 19 >
-      au < manifest ; 2021 ; 2021 ; Molecular Cancer Therapeutics Volume 20 ; 20 >
-      au < manifest ; 2022 ; 2022 ; Molecular Cancer Therapeutics Volume 21 ; 21 >
+      au < notReady ; 2021 ; 2021 ; Molecular Cancer Therapeutics Volume 20 ; 20 >
+      au < notReady ; 2022 ; 2022 ; Molecular Cancer Therapeutics Volume 21 ; 21 >
 
   }
 

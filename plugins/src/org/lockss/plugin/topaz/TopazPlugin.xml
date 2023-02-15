@@ -1,3 +1,34 @@
+<!--
+
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
 <map>
   <entry>
     <string>plugin_status</string>
@@ -13,11 +44,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Topaz Plugin, Base URL %s, Journal ID %s, Year %d&quot;, base_url, journal_id, year</string>
+    <string>"Topaz Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -30,49 +61,49 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%sarticle/info(:|%%3A)doi(/|%%2F)&quot;, base_url</string>
-      <string>1,&quot;^%sarticle/(citationList|fetch(First|Single)Representation|fetchObject(Attachment)?|get[a-zA-Z0-9]*Citation|showImageLarge|slideshow)\.action\?&quot;, base_url</string>
-      <string>1,&quot;^%sjournals/%s/article/fetchObject(Attachment)?\.action\?&quot;, base_url, journal_id</string>
-      <string>1,&quot;^%scontent/suppl/&quot;, base_url</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%sarticle/info(:|%%3A)doi(/|%%2F)", base_url</string>
+      <string>1,"^%sarticle/(citationList|fetch(First|Single)Representation|fetchObject(Attachment)?|get[a-zA-Z0-9]*Citation|showImageLarge|slideshow)\.action\?", base_url</string>
+      <string>1,"^%sjournals/%s/article/fetchObject(Attachment)?\.action\?", base_url, journal_id</string>
+      <string>1,"^%scontent/suppl/", base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
     <list>
-      <string>&quot;%sarticle/browse.action?month=1&amp;year=%d&amp;field=date&quot;, base_url, year</string>
-      <string>&quot;%sarticle/browse.action?month=2&amp;year=%d&amp;field=date&quot;, base_url, year</string>
-      <string>&quot;%sarticle/browse.action?month=3&amp;year=%d&amp;field=date&quot;, base_url, year</string>
-      <string>&quot;%sarticle/browse.action?month=4&amp;year=%d&amp;field=date&quot;, base_url, year</string>
-      <string>&quot;%sarticle/browse.action?month=5&amp;year=%d&amp;field=date&quot;, base_url, year</string>
-      <string>&quot;%sarticle/browse.action?month=6&amp;year=%d&amp;field=date&quot;, base_url, year</string>
-      <string>&quot;%sarticle/browse.action?month=7&amp;year=%d&amp;field=date&quot;, base_url, year</string>
-      <string>&quot;%sarticle/browse.action?month=8&amp;year=%d&amp;field=date&quot;, base_url, year</string>
-      <string>&quot;%sarticle/browse.action?month=9&amp;year=%d&amp;field=date&quot;, base_url, year</string>
-      <string>&quot;%sarticle/browse.action?month=10&amp;year=%d&amp;field=date&quot;, base_url, year</string>
-      <string>&quot;%sarticle/browse.action?month=11&amp;year=%d&amp;field=date&quot;, base_url, year</string>
-      <string>&quot;%sarticle/browse.action?month=12&amp;year=%d&amp;field=date&quot;, base_url, year</string>  
+      <string>"%sarticle/browse.action?month=1&amp;year=%d&amp;field=date", base_url, year</string>
+      <string>"%sarticle/browse.action?month=2&amp;year=%d&amp;field=date", base_url, year</string>
+      <string>"%sarticle/browse.action?month=3&amp;year=%d&amp;field=date", base_url, year</string>
+      <string>"%sarticle/browse.action?month=4&amp;year=%d&amp;field=date", base_url, year</string>
+      <string>"%sarticle/browse.action?month=5&amp;year=%d&amp;field=date", base_url, year</string>
+      <string>"%sarticle/browse.action?month=6&amp;year=%d&amp;field=date", base_url, year</string>
+      <string>"%sarticle/browse.action?month=7&amp;year=%d&amp;field=date", base_url, year</string>
+      <string>"%sarticle/browse.action?month=8&amp;year=%d&amp;field=date", base_url, year</string>
+      <string>"%sarticle/browse.action?month=9&amp;year=%d&amp;field=date", base_url, year</string>
+      <string>"%sarticle/browse.action?month=10&amp;year=%d&amp;field=date", base_url, year</string>
+      <string>"%sarticle/browse.action?month=11&amp;year=%d&amp;field=date", base_url, year</string>
+      <string>"%sarticle/browse.action?month=12&amp;year=%d&amp;field=date", base_url, year</string>  
     </list>
   </entry>
   <entry>
     <string>au_manifest</string>
-    <string>&quot;%slockss.txt&quot;, base_url</string>
+    <string>"%slockss.txt", base_url</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
   	<map>
 	  <entry>
       <string>au_title</string>
-      <string>&quot;%sarticle/browseVolume.action?field=volume&quot;, base_url</string>
+      <string>"%sarticle/browseVolume.action?field=volume", base_url</string>
     </entry>
     <entry>
       <string>au_volume</string>
-      <string>&quot;%sarticle/browseVolume.action?field=volume&quot;, base_url</string>
+      <string>"%sarticle/browseVolume.action?field=volume", base_url</string>
     </entry>
     <entry>
       <string>au_issue</string>
-      <string>&quot;%sarticle/browse.action?month=%s&amp;year=%d&amp;field=date&quot;, base_url, issue, year</string>
+      <string>"%sarticle/browse.action?month=%s&amp;year=%d&amp;field=date", base_url, issue, year</string>
     </entry>
   	</map>
   </entry>

@@ -41,11 +41,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Portland Press Journals Plugin (Legacy JCore)</string>
+    <string>Portland Press Journals Plugin (Legacy HighWire)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>20</string>
+    <string>21</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -74,6 +74,6 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Portland Press Journals Plugin (Legacy JCore), Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"Portland Press Journals Plugin (Legacy HighWire), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
 </map>

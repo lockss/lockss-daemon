@@ -6,6 +6,7 @@
     info[tester] = S ;
     info[platform] = Source
   >
+    hidden[proxy] = DIRECT
 
   {
 
@@ -14,17 +15,22 @@
     >
 
     plugin = org.lockss.plugin.clockss.pages.ClockssPagesSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/pages-released/
-
-    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
+    {
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/pages-released/
 
     au < zapped ; finished ; 2018 ; Past Global Changes Source Content 2018 ; 2018 >
     au < zapped ; finished ; 2019 ; Past Global Changes Source Content 2019 ; 2019 >
     au < zapped ; finished ; 2020 ; Past Global Changes Source Content 2020 ; 2020 >
-    au < readySource ; crawling ; 2021 ; Past Global Changes Source Content 2021 ; 2021 >
-    au < readySource ; crawling ; 2022 ; Past Global Changes Source Content 2022 ; 2022 >
+    au < readySource ; finished ; 2021 ; Past Global Changes Source Content 2021 ; 2021 >
+    au < readySource ; frozen ; 2022 ; Past Global Changes Source Content 2022 ; 2022 >
+    #No more AUs. Moving to https.
+    }
+    {
+    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/pages-released/
 
+    au < expected ; exists ; 2023 ; Past Global Changes Source Content 2023 ; 2023 >
+    }
   }
 
 }

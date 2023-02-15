@@ -225,6 +225,13 @@ public class V3PollFactory extends BasePollFactory {
     log.debug2("Creating V3Voter for " + orig + "'s poll: " + pollspec);
     IdentityManager idMgr = daemon.getIdentityManager();
     V3LcapMessage m = (V3LcapMessage)msg;
+    if (m.getMinorVersion() != m.getSupportedProtocolRev()) {
+      log.debug2("Ignoring poll request from " + orig + " requested minor ver " +
+                 m.getMinorVersion() + ", we support ver " +
+                 m.getSupportedProtocolRev());
+      sendNak(daemon, PollNak.NAK_VERSION_MISMATCH, pollspec.getAuId(), m);
+      return null;
+    }
     CachedUrlSet cus = pollspec.getCachedUrlSet();
     // Do we have the AU?
     if (cus == null) {
@@ -232,7 +239,7 @@ public class V3PollFactory extends BasePollFactory {
 		 + pollspec.getAuId());
       PollNak reason =
 	daemon.areAusStarted() ? PollNak.NAK_NO_AU : PollNak.NAK_NOT_READY;
-      sendNak(daemon, reason, pollspec.getAuId(), (V3LcapMessage)msg);
+      sendNak(daemon, reason, pollspec.getAuId(), m);
       return null;
     }
     ArchivalUnit au = cus.getArchivalUnit();
@@ -243,8 +250,7 @@ public class V3PollFactory extends BasePollFactory {
 		auPollVer +
 		", need: " + pollspec.getPluginVersion());
       sendNak(daemon, PollNak.NAK_PLUGIN_VERSION_MISMATCH,
-	      pollspec.getAuId(), (V3LcapMessage)msg,
-	      auPollVer);
+	      pollspec.getAuId(), m, auPollVer);
       return null;
     }
 

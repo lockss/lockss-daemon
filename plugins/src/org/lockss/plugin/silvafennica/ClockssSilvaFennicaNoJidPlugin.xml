@@ -1,35 +1,56 @@
+<!--
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+-->
 <map>
   <entry>
     <string>plugin_status</string>
     <string>ready</string>
   </entry>
-  <!-- identical to SilvaFennica but with journal_id removed but that was only used for a start_url -->
-  <!-- not currently deployed a child because of different params, though technically it could be -->
-  <!-- IF YOU MODIFY THIS PLUGIN YOU MUST ALSO MODIFY ClockssSilvaFennicaPlugin (or understand why not)-->
+  <!--
+  refactored to be a child of ClockssSilvaFennicaPlugin, only thing it changes is Plugin config props
+  the only reason still around is 'legacy' reasons, so that old AUs match.
+  -->
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.silvafennica.ClockssSilvaFennicaNoJidPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
-    <string>plugin_feature_version_map</string>
-    <map>
-      <entry>
-        <string>Metadata</string>
-        <string>1</string>
-      </entry>
-      <entry>
-        <string>Poll</string>
-        <string>3</string>
-      </entry>
-      <entry>
-        <string>Substance</string>
-        <string>1</string>
-      </entry>
-    </map>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.silvafennica.ClockssSilvaFennicaPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -38,53 +59,6 @@
   <entry>
     <string>au_name</string>
     <string>"Finnish Society of Forest Science Journals No JournalID Plugin (CLOCKSS), Base URL %s,  Volume %s", base_url, volume_name</string>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>"%sissue/volume/%s", base_url, volume_name</string>
-  </entry>
-  <entry>
-    <string>au_permission_url</string>
-    <string>"%s", base_url</string>
-  </entry>
-  <entry>
-    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
-         org.lockss.crawler.allowedPluginPermittedHosts -->
-    <string>au_permitted_host_pattern</string>
-    <list>
-      <string>(fonts|ajax)\.(googleapis|gstatic)\.com</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
-  </entry>
-  <entry>
-    <string>au_def_pause_time</string>
-    <long>3000</long>
-  </entry>
-  <entry>
-    <!-- start page contains all the articles -->
-    <string>au_refetch_depth</string>
-    <int>1</int>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>1,"^https?://(%s)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|json|otf|png|svg|tif?f|ttf|woff.?)(\?.+)?", url_host(base_url)</string>
-      <!-- in cases where there is a bad link, seems to redirect to search page, don't follow these links -->
-      <string>1,"^https?://%s(%s|/)(css|img|js|large_tables|supp_files|raw)/", url_host(base_url), url_path(base_url)</string>
-      <string>1,"^https?://%s%sarticle/[0-9]+$", url_host(base_url), url_path(base_url)</string>
-      <string>1,"^https?://%s%spdf/article[0-9]+\.pdf$", url_host(base_url), url_path(base_url)</string>
-      <string>1,"^https?://%s%sexport/[0-9]+$", url_host(base_url), url_path(base_url)</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_substance_url_pattern</string>
-    <list>
-      <string>"^https?://%s%sarticle/[0-9]+$", url_host(base_url), url_path(base_url)</string>
-      <string>"^https?://%s%spdf/article[0-9]+\.pdf$", url_host(base_url), url_path(base_url)</string>
-    </list>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -106,55 +80,6 @@
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
-    </list>
-  </entry>
-  <entry>
-    <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.silvafennica.FS2HtmlCrawlFilterFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.silvafennica.FS2HtmlHashFilterFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.silvafennica.FS2ArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.silvafennica.FS2ArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>text/plain_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*</string>
-        <string>org.lockss.plugin.silvafennica.LocalEnwMetadataExtractor</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
-    <string>au_repair_from_peer_if_missing_url_pattern</string>
-    <list>
-      <string>".+[.](bmp|css|eot|gif|ico|jpe?g|js|json|otf|png|svg|tif?f|ttf|woff.?)(\?.*)?$"</string>
-      <string>"/(css|js)/"</string>
-    </list>
-  </entry>
-  <!--  these will not count towards poll results but will replicate from peer if above -->
-  <entry>
-    <string>au_url_poll_result_weight</string>
-    <list>
-      <string>"/img/article", 1</string> <!-- this is needed to force images for articles to be weighted -->
-      <string>".+[.](bmp|css|eot|gif|ico|jpe?g|js|json|otf|png|svg|tif?f|ttf|woff.?)(\?.*)?$", 0</string>
-      <string>"/(css|js)/", 0</string>
-    </list>
-  </entry>
-  <!--  tell the default base.MimeTypeContentValidator what url patterns to validate by mime type -->
-  <entry>
-    <string>au_url_mime_validation_map</string>
-    <list>
-      <string>\.pdf$, application/pdf</string>
-      <string>/article/[0-9]+$, text/html</string>
     </list>
   </entry>
 </map>

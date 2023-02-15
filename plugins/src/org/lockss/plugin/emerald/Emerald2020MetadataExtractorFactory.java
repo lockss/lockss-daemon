@@ -35,13 +35,18 @@ package org.lockss.plugin.emerald;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.util.Logger;
 
 import java.io.IOException;
 
 public class Emerald2020MetadataExtractorFactory implements FileMetadataExtractorFactory {
+
+  private static final Logger log = Logger.getLogger(Emerald2020MetadataExtractorFactory.class);
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
@@ -98,7 +103,7 @@ public class Emerald2020MetadataExtractorFactory implements FileMetadataExtracto
    */
 
   public static class Emerald2020MetadataExtractor
-          extends SimpleHtmlMetaTagMetadataExtractor {
+          implements FileMetadataExtractor {
     private static MultiMap tagMap = new MultiValueMap();
     static {
       tagMap.put("dc.Language", MetadataField.DC_FIELD_LANGUAGE);
@@ -111,11 +116,37 @@ public class Emerald2020MetadataExtractorFactory implements FileMetadataExtracto
     }
 
     @Override
-    public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
-            throws IOException {
-      ArticleMetadata am = super.extract(target, cu);
+    public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter) throws IOException, PluginException {
+      ArticleMetadata am = new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       am.cook(tagMap);
-      return am;
+
+      if (am.isEmpty()) {
+        return;
+      }
+
+      // Some Aus in 2019 has overcrawled content, need to be excluded out from metadata by comparing date, like:
+      // Academia Revista Latinoamericana de Administración Volume 32
+      // Worldwide Hospitality and Tourism Themes Volume 11
+      String dc_date = am.get(MetadataField.DC_FIELD_DATE);
+      String tdb_date = null;
+
+      ArchivalUnit au = cu.getArchivalUnit();
+      TdbAu tdbau = au.getTdbAu();
+      if (tdbau != null) {
+        tdb_date = tdbau.getYear();
+        if (tdbau != null && dc_date != null) {
+          log.debug3("Emerald date check: dc_date = " + dc_date + ", tdb_dat = " + tdb_date);
+          log.debug3("Emerald date check: dc_date = " + dc_date.substring(0, 4) + ", tdb_date = " + tdb_date.substring(0, 4));
+          if (Integer.parseInt(dc_date.substring(0, 4)) <= Integer.parseInt(tdb_date.substring(0, 04))) {
+            log.debug3("Emerald date check: date In Au , dc_date = " + dc_date.substring(0, 4) + ", tdb_dat = " + tdb_date.substring(0, 4));
+            emitter.emitMetadata(cu, am);
+          } else {
+            log.debug3("Emerald date check: date NOT In Au , dc_date = " + dc_date.substring(0, 4) + ", tdb_dat = " + tdb_date.substring(0, 4));
+          }
+        }
+      } else {
+        log.debug3("Emerald date check: tdb file null");
+      }
     }
   }
 }

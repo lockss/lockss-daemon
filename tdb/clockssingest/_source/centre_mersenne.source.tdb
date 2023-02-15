@@ -6,6 +6,7 @@
     info[tester] = S ;
     info[platform] = Source
   >
+  hidden[proxy] = DIRECT
 
   {
 
@@ -14,19 +15,28 @@
     >
 
     plugin = org.lockss.plugin.clockss.mersenne.ClockssMersenneSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/mersenne-released/
-
-    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
+    {
 
-    au < zapped ; finished ; 2018 ; Centre Mersenne Source Content 2018 ; 2018 >
-    au < zapped ; finished ; 2019 ; Centre Mersenne Source Content 2019 ; 2019 >
-    au < readySource ; crawling ; 2020 ; Centre Mersenne Source Content 2020 ; 2020 >
-    au < readySource ; crawling ; 2021 ; Centre Mersenne Source Content 2021 ; 2021 >
-    #Plugin update to ignore content - JIRA LXPLUG-2080
-    au < readySource ; crawling ; 2021 ; Centre Mersenne Source Content 2021_01 ; 2021_01 >
-    au < readySource ; crawling ; 2021 ; Centre Mersenne Source Content 2022_01 ; 2022_01 >
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/mersenne-released/
 
+      au < zapped ; finished ; 2018 ; Centre Mersenne Source Content 2018 ; 2018 >
+      au < zapped ; finished ; 2019 ; Centre Mersenne Source Content 2019 ; 2019 >
+      au < readySource ; finished ; 2020 ; Centre Mersenne Source Content 2020 ; 2020 >
+      au < readySource ; finished ; 2021 ; Centre Mersenne Source Content 2021 ; 2021 >
+      #Plugin update to ignore content - JIRA LXPLUG-2080
+      au < readySource ; finished ; 2021 ; Centre Mersenne Source Content 2021_01 ; 2021_01 >
+      au < readySource ; frozen ; 2022 ; Centre Mersenne Source Content 2022_01 ; 2022_01 >
+      #No more AUs. Moved to https.
+
+    }
+    {
+
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/mersenne-released/
+
+      au < readySource ; crawling ; 2023 ; Centre Mersenne Source Content 2023_01 ; 2023_01 >
+
+    }
 
   }
 

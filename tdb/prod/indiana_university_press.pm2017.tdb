@@ -40,6 +40,7 @@
         au < released ; 2019 ; Africa Today Volume 66 [2019] ; 14516 >
         au < released ; 2020-2021 ; Africa Today Volume 67 [2020-2021] ; 15296 >
         au < released ; 2021 ; Africa Today Volume 68 [2021] ; 16532 >
+        au < manifest ; 2022-2023 ; Africa Today Volume 69 [2022-2023] ; 17489 >
 
     }
 
@@ -63,6 +64,7 @@
         au < released ; 2019 ; African Conflict & Peacebuilding Review Volume 9 [2019] ; 14230 >
         au < released ; 2020 ; African Conflict & Peacebuilding Review Volume 10 [2020] ; 14971 >
         au < released ; 2021 ; African Conflict & Peacebuilding Review Volume 11 [2021] ; 15869 >
+        au < testing ; 2022 ; African Conflict & Peacebuilding Review Volume 12 [2022] ; 17272 >
 
     }
 
@@ -113,7 +115,8 @@
 
       au < released ; 2019-2020 ; American Religion Volume 1 [2019-2020] ; 16131 >
       au < released ; 2020-2021 ; American Religion Volume 2 [2020-2021] ; 16132 >
-      au < manifest ; 2021-2022 ; American Religion Volume 3 [2021-2022] ; 16809 >
+      au < testing ; 2021-2022 ; American Religion Volume 3 [2021-2022] ; 16809 >
+      au < manifest ; 2022-2023 ; American Religion Volume 4 [2022-2023] ; 17381 >
 
     }
 
@@ -131,7 +134,7 @@
         au < released ; 2019 ; Antisemitism Studies Volume 3 [2019] ; 14090 >
         au < released ; 2020 ; Antisemitism Studies Volume 4 [2020] ; 14863 >
         au < released ; 2021 ; Antisemitism Studies Volume 5 [2021] ; 15711 >
-        au < manifest ; 2022 ; Antisemitism Studies Volume 6 [2022] ; 17110 >
+        au < testing ; 2022 ; Antisemitism Studies Volume 6 [2022] ; 17110 >
 
     }
 
@@ -154,6 +157,10 @@
         au < released ; 2016-2017 ; Black Camera Volume 8 [2016-2017 (The New Series)] ; 12171 >
         au < released ; 2017-2018 ; Black Camera Volume 9 [2017-2018 (The New Series)] ; 13111 >
         au < released ; 2018-2019 ; Black Camera Volume 10 [2018-2019 (The New Series)] ; 13735 >
+        au < testing ; 2019-2020 ; Black Camera Volume 11 [2019-2020] ; 14514 >
+        au < testing ; 2020-2021 ; Black Camera Volume 12 [2020-2021] ; 15432 >
+        au < testing ; 2021-2022 ; Black Camera Volume 13 [2021-2022] ; 16759 >
+        au < manifest ; 2022-2023 ; Black Camera Volume 14 [2022-2023] ; 17345 >
 
     }
     
@@ -173,7 +180,7 @@
         au < released ; 2018-2019 ; Chiricú Journal: Latina/o Literatures, Arts, and Cultures Volume 3 [2018-2019] ; 13811 >
         au < released ; 2019-2020 ; Chiricú Journal: Latina/o Literatures, Arts, and Cultures Volume 4 [2019-2020] ; 14548 >
         au < released ; 2020 ; Chiricú Journal: Latina/o Literatures, Arts, and Cultures Volume 5 [2020] ; 15380 >
-        au < manifest ; 2021 ; ChiricÃº Journal: Latina/o Literatures, Arts, and Cultures Volume 6 [2021] ; 16986 >
+        au < released ; 2021 ; ChiricÃº Journal: Latina/o Literatures, Arts, and Cultures Volume 6 [2021] ; 16986 >
 
     }
 
@@ -211,6 +218,7 @@
         au < released ; 2019 ; Ethics & the Environment Volume 24 [2019] ; 14208 >
         au < released ; 2020 ; Ethics & the Environment Volume 25 [2020] ; 14952 >
         au < released ; 2021 ; Ethics & the Environment Volume 26 [2021] ; 15881 >
+        au < testing ; 2022 ; Ethics & the Environment Volume 27 [2022] ; 17288 >
 
     }
 
@@ -242,6 +250,21 @@
         au < released ; 2019 ; Film History: An International Journal Volume 31 [2019] ; 14233 >
         au < released ; 2020 ; Film History: An International Journal Volume 32 [2020] ; 15066 >
         au < released ; 2021 ; Film History: An International Journal Volume 33 [2021] ; 15791 >
+        au < testing ; 2022 ; Film History: An International Journal Volume 34 [2022] ; 17205 >
+
+    }
+
+    {
+    title <
+      name = Historical Performance ;
+      issn = 2574-4151 ;
+      eissn = 2574-4178
+    >
+
+      attr[journal_id] = 829
+
+      au < testing ; 2018 ; Historical Performance Volume 1 [2018] ; 16182 >
+      au < testing ; 2019 ; Historical Performance Volume 2 [2019] ; 16183 >
 
     }
 
@@ -279,7 +302,8 @@
         au < released ; 2018 ; History & Memory Volume 30 [2018] ; 13333 >
         au < released ; 2019 ; History & Memory Volume 31 [2019] ; 14028 >
         au < released ; 2020 ; History & Memory Volume 32 [2020] ; 14819 >
-        au < manifest ; 2022 ; History & Memory Volume 34 [2022] ; 17016 >
+        au < testing ; 2022 ; History & Memory Volume 34 [2022] ; 17016 >
+        au < testing ; 2021 ; History & Memory Volume 33 [2021] ; 15658 >
 
     }
     
@@ -317,7 +341,11 @@
 
       attr[journal_id] = 826
 
-      au < manifest ; 2022 ; Indiana Magazine of History Volume 118 [2022] ; 16964 >
+      au < testing ; 2022 ; Indiana Magazine of History Volume 118 [2022] ; 16964 >
+      au < testing ; 2018 ; Indiana Magazine of History Volume 114 [2018] ; 16200 >
+      au < testing ; 2019 ; Indiana Magazine of History Volume 115 [2019] ; 16201 >
+      au < testing ; 2020 ; Indiana Magazine of History Volume 116 [2020] ; 16202 >
+      au < testing ; 2021 ; Indiana Magazine of History Volume 117 [2021] ; 16203 >
 
     }
 
@@ -351,7 +379,7 @@
         au < released ; 2019 ; Indiana Journal of Global Legal Studies Volume 26 [2019] ; 14104 >
         au < released ; 2020 ; Indiana Journal of Global Legal Studies Volume 27 [2020] ; 15029 >
         au < released ; 2021 ; Indiana Journal of Global Legal Studies Volume 28 [2021] ; 15672 >
-        au < manifest ; 2022 ; Indiana Journal of Global Legal Studies Volume 29 [2022] ; 17015 >
+        au < testing ; 2022 ; Indiana Journal of Global Legal Studies Volume 29 [2022] ; 17015 >
 
     }
 
@@ -413,7 +441,8 @@
         au < released ; 2019 ; Israel Studies Volume 24 [2019] ; 13776 >
         au < released ; 2020 ; Israel Studies Volume 25 [2020] ; 14525 >
         au < released ; 2021 ; Israel Studies Volume 26 [2021] ; 15277 >
-        au < manifest ; 2022 ; Israel Studies Volume 27 [2022] ; 16791 >
+        au < testing ; 2022 ; Israel Studies Volume 27 [2022] ; 16791 >
+        au < testing ; 2023 ; Israel Studies Volume 28 [2023] ; 17721 >
 
     }
 
@@ -449,6 +478,8 @@
         au < released ; 2017-2018 ; Jewish Social Studies New Series, Volume 23 [2017-2018] ; 12897 >
         au < released ; 2018-2019 ; Jewish Social Studies New Series, Volume 24 [2018-2019] ; 13742 >
         au < released ; 2019-2020 ; Jewish Social Studies New Series, Volume 25 [2019-2020] ; 14429 >
+        au < testing ; 2020-2021 ; Jewish Social Studies Volume 26 [2020-2021] ; 15276 >
+        au < testing ; 2022 ; Jewish Social Studies Volume 27 [2022] ; 16889 >
 
     }
     
@@ -464,7 +495,8 @@
 
       au < released ; 2019-2020 ; Journal of Education in Muslim Societies Volume 1 [2019-2020] ; 16186 >
       au < released ; 2020-2021 ; Journal of Education in Muslim Societies Volume 2 [2020-2021] ; 16187 >
-      au < manifest ; 2021-2022 ; Journal of Education in Muslim Societies Volume 3 [2021-2022] ; 16758 >
+      au < testing ; 2021-2022 ; Journal of Education in Muslim Societies Volume 3 [2021-2022] ; 16758 >
+      au < manifest ; 2022-2023 ; Journal of Education in Muslim Societies Volume 4 [2022-2023] ; 17382 >
 
     }
 
@@ -496,6 +528,7 @@
         au < released ; 2019 ; Journal of Feminist Studies in Religion Volume 35 [2019] ; 14157 >
         au < released ; 2020 ; Journal of Feminist Studies in Religion Volume 36 [2020] ; 14879 >
         au < released ; 2021 ; Journal of Feminist Studies in Religion Volume 37 [2021] ; 15710 >
+        au < testing ; 2022 ; Journal of Feminist Studies in Religion Volume 38 [2022] ; 17229 >
 
     }
 
@@ -529,7 +562,7 @@
         au < released ; 2019 ; Journal of Folklore Research Volume 56 [2019] ; 13993 >
         au < released ; 2020 ; Journal of Folklore Research Volume 57 [2020] ; 14787 >
         au < released ; 2021 ; Journal of Folklore Research Volume 58 [2021] ; 15513 >
-        au < manifest ; 2022 ; Journal of Folklore Research Volume 59 [2022] ; 16984 >
+        au < testing ; 2022 ; Journal of Folklore Research Volume 59 [2022] ; 16984 >
 
     }
 
@@ -550,6 +583,7 @@
         au < released ; 2019 ; Journal of Islamic and Muslim Studies Volume 4 [2019] ; 14435 >
         au < released ; 2020 ; Journal of Islamic and Muslim Studies Volume 5 [2020] ; 15282 >
         au < released ; 2021 ; Journal of Islamic and Muslim Studies Volume 6 [2021] ; 16861 >
+        au < testing ; 2022 ; Journal of Islamic and Muslim Studies Volume 7 [2022] ; 17777 >
 
     }
     
@@ -627,6 +661,7 @@
         au < released ; 2018 ; Mande Studies Volume 20 [2018] ; 13741 >
         au < released ; 2019 ; Mande Studies Volume 21 [2019] ; 14635 >
         au < released ; 2020 ; Mande Studies Volume 22 [2020] ; 15876 >
+        au < testing ; 2021 ; Mande Studies Volume 23 [2021] ; 17350 >
 
     }
 
@@ -641,38 +676,43 @@
 
       attr[journal_id] = 243
 
-        au < released ; 2000 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 3 [Spring/Summer 5760/2000] ; 6122 >
-        au < released ; 2001 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 4 [Fall 5762/2001] ; 6121 >
-        au < released ; 2003 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 6 [Fall 5764/2003] ; 2433 >
-        au < released ; 2004 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 7 [Spring 5764/2004] ; 2535 >
-        au < released ; 2004 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 8 [Fall 5765/2004] ; 2600 >
-        au < released ; 2005 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 9 [Spring 5765/2005] ; 2772 >
-        au < released ; 2005 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 10 [Fall 5766/2005] ; 2869 >
-        au < released ; 2006 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 11 [Spring 5766/2006] ; 3087 >
-        au < released ; 2006 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 12 [Fall 5767/2006] ; 3152 >
-        au < released ; 2007 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 13 [Spring 5767/2007] ; 3395 >
-        au < released ; 2007 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 14 [Fall 5768/2007] ; 3605 >
-        au < released ; 2008 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 15 [Spring 5769/2008] ; 3811 >
-        au < released ; 2008 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 16 [Spring 5769/2008] ; 4043 >
-        au < released ; 2009 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 17 [Spring 5769/2009] ; 4360 >
-        au < released ; 2009 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 18 [Spring 5770/2009] ; 5676 >
-        au < released ; 2010 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 19 [Spring 5770/2010] ; 6342 >
-        au < released ; 2010 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 20 [Fall 5771/2010] ; 6614 >
-        au < released ; 2011 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 21 [Spring 5771/2011] ; 7417 >
-        au < released ; 2011 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 22 [Fall 5772/2011] ; 7997 >
-        au < released ; 2012 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 23 [Spring-Fall 5772-3/2012] ; 8425 >
-        au < released ; 2013 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 24 [Spring 5773/2013] ; 8869 >
-        au < released ; 2013 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 25 [Fall 5774/2013] ; 9357 >
-        au < released ; 2014 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 26 [Spring 5774/2014] ; 9923 >
-        au < released ; 2014 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 27 [Fall 5775/2014] ; 10266 >
-        au < released ; 2015 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 28 [Spring 5775/2015] ; 10691 >
-        au < released ; 2015 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 29 [Spring 5776/2015] ; 11051 >
-        au < released ; 2016 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 30 [Spring 5777/2016] ; 12206 >
-        au < released ; 2017 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 31 [Spring-Fall 5777-78/2017] ; 12802 >
-        au < released ; 2018 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 32 [Spring 5778/2018] ; 13539 >
-        au < released ; 2018 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 33 [Spring 5779/2018] ; 13816 >
-        au < released ; 2019 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 34 [Spring 5779/2019] ; 14268 >
-        au < released ; 2019 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 35 [Fall 5779/2019] ; 14564 >
+        au < released ; 2000 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 3 [Spring/Summer 5760/2000] ; 6122 >
+        au < released ; 2001 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 4 [Fall 5762/2001] ; 6121 >
+        au < released ; 2003 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 6 [Fall 5764/2003] ; 2433 >
+        au < released ; 2004 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 7 [Spring 5764/2004] ; 2535 >
+        au < released ; 2004 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 8 [Fall 5765/2004] ; 2600 >
+        au < released ; 2005 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 9 [Spring 5765/2005] ; 2772 >
+        au < released ; 2005 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 10 [Fall 5766/2005] ; 2869 >
+        au < released ; 2006 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 11 [Spring 5766/2006] ; 3087 >
+        au < released ; 2006 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 12 [Fall 5767/2006] ; 3152 >
+        au < released ; 2007 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 13 [Spring 5767/2007] ; 3395 >
+        au < released ; 2007 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 14 [Fall 5768/2007] ; 3605 >
+        au < released ; 2008 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 15 [Spring 5769/2008] ; 3811 >
+        au < released ; 2008 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 16 [Spring 5769/2008] ; 4043 >
+        au < released ; 2009 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 17 [Spring 5769/2009] ; 4360 >
+        au < released ; 2009 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 18 [Spring 5770/2009] ; 5676 >
+        au < released ; 2010 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 19 [Spring 5770/2010] ; 6342 >
+        au < released ; 2010 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 20 [Fall 5771/2010] ; 6614 >
+        au < released ; 2011 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 21 [Spring 5771/2011] ; 7417 >
+        au < released ; 2011 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 22 [Fall 5772/2011] ; 7997 >
+        au < released ; 2012 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 23 [Spring-Fall 5772-3/2012] ; 8425 >
+        au < released ; 2013 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 24 [Spring 5773/2013] ; 8869 >
+        au < released ; 2013 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 25 [Fall 5774/2013] ; 9357 >
+        au < released ; 2014 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 26 [Spring 5774/2014] ; 9923 >
+        au < released ; 2014 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 27 [Fall 5775/2014] ; 10266 >
+        au < released ; 2015 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 28 [Spring 5775/2015] ; 10691 >
+        au < released ; 2015 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 29 [Spring 5776/2015] ; 11051 >
+        au < released ; 2016 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 30 [Spring 5777/2016] ; 12206 >
+        au < released ; 2017 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 31 [Spring-Fall 5777-78/2017] ; 12802 >
+        au < released ; 2018 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 32 [Spring 5778/2018] ; 13539 >
+        au < released ; 2018 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 33 [Spring 5779/2018] ; 13816 >
+        au < released ; 2019 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 34 [Spring 5779/2019] ; 14268 >
+        au < released ; 2019 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 35 [Fall 5779/2019] ; 14564 >
+        au < testing ; 2020 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 36 [Spring 5780/2020] ; 15069 >
+        au < testing ; 2020 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 37 [2020] ; 15384 >
+        au < testing ; 2021 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 38 [Spring 5781/2021] ; 16080 >
+        au < testing ; 2021 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 39 [Fall 5782/2021] ; 16857 >
+        au < testing ; 2022 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 40 [Fall 5782/2022] ; 17409 >
 
     }
 
@@ -709,7 +749,7 @@
       au < released ; 2018-2019 ; Philanthropy & Education Volume 2 [2018-2019] ; 16193 >
       au < released ; 2019-2020 ; Philanthropy & Education Volume 3 [2019-2020] ; 16194 >
       au < released ; 2020-2021 ; Philanthropy & Education Volume 4 [2020-2021] ; 16195 >
-      au < manifest ; 2021-2022 ; Philanthropy & Education Volume 5 [2021-2022] ; 16714 >
+      au < testing ; 2021-2022 ; Philanthropy & Education Volume 5 [2021-2022] ; 16714 >
 
     }
 
@@ -744,7 +784,8 @@
         au < released ; 2018 ; Philosophy of Music Education Review Volume 26 [2018] ; 13338 >
         au < released ; 2019 ; Philosophy of Music Education Review Volume 27 [2019] ; 14060 >
         au < released ; 2020 ; Philosophy of Music Education Review Volume 28 [2020] ; 14881 >
-        au < manifest ; 2022 ; Philosophy of Music Education Review Volume 30 [2022] ; 17081 >
+        au < testing ; 2022 ; Philosophy of Music Education Review Volume 30 [2022] ; 17081 >
+        au < testing ; 2021 ; Philosophy of Music Education Review Volume 29 [2021] ; 15637 >
 
     }
     
@@ -778,7 +819,7 @@
         au < released ; 2017 ; Prooftexts Volume 36 [2017] ; 13137 >
         au < released ; 2018 ; Prooftexts Volume 37 [2018] ; 13899 >
         au < released ; 2020 ; Prooftexts Volume 38 [2020] ; 15222 >
-        au < manifest ; 2021-2022 ; Prooftexts Volume 39 [2021-2022] ; 16954 >
+        au < testing ; 2021-2022 ; Prooftexts Volume 39 [2021-2022] ; 16954 >
 
     }
 
@@ -814,6 +855,7 @@
       au < released ; 2019 ; Recreation, Parks, and Tourism in Public Health Volume 3 [2019] ; 16198 >
       au < released ; 2020 ; Recreation, Parks, and Tourism in Public Health Volume 4 [2020] ; 16199 >
       au < released ; 2021 ; Recreation, Parks, and Tourism in Public Health Volume 5 [2021] ; 16627 >
+      au < testing ; 2022 ; Recreation, Parks, and Tourism in Public Health Volume 6 [2022] ; 17385 >
 
     }
 
@@ -848,7 +890,7 @@
         au < released ; 2018 ; Research in African Literatures Volume 49 [2018] ; 13603 >
         au < released ; 2019 ; Research in African Literatures Volume 50 [2019] ; 14289 >
         au < released ; 2020 ; Research in African Literatures Volume 51 [2020] ; 15178 >
-        au < manifest ; 2021-2022 ; Research in African Literatures Volume 52 [2021-2022] ; 16761 >
+        au < testing ; 2021-2022 ; Research in African Literatures Volume 52 [2021-2022] ; 16761 >
 
     }
 
@@ -872,6 +914,7 @@
         au < released ; 2018-2019 ; Spectrum: A Journal on Black Men Volume 7 [2018-2019] ; 14328 >
         au < released ; 2020-2021 ; Spectrum: A Journal on Black Men Volume 8 [2020-2021] ; 15263 >
         au < released ; 2021 ; Spectrum: A Journal on Black Men Volume 9 [2021] ; 16724 >
+        au < testing ; 2022 ; Spectrum: A Journal on Black Men Volume 10 [2022] ; 17666 >
 
     }
 
@@ -917,7 +960,7 @@
         au < released ; 2018 ; The Global South Volume 12 [2018] ; 14189 >
         au < released ; 2019 ; The Global South Volume 13 [2019] ; 14994 >
         au < released ; 2020 ; The Global South Volume 14 [2020] ; 15483 >
-        au < manifest ; 2021 ; The Global South Volume 15 [2021] ; 17182 >
+        au < released ; 2021 ; The Global South Volume 15 [2021] ; 17182 >
 
     }
 
@@ -949,6 +992,7 @@
         au < released ; 2019 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 55 [2019] ; 14292 >
         au < released ; 2020 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 56 [2020] ; 15046 >
         au < released ; 2021 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 57 [2021] ; 15927 >
+        au < testing ; 2022 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 58 [2022] ; 17305 >
 
     }
 
@@ -998,6 +1042,10 @@
         au < released ; 2018 ; Transition Issue 126 [2018] ; 13657 >
         au < released ; 2019 ; Transition Issue 127 [2019] ; 14177 >
         au < released ; 2019 ; Transition Issue 128 [2019] ; 14814 >
+        au < testing ; 2020 ; Transition Volume 129 [2020] ; 15314 >
+        au < testing ; 2021 ; Transition Volume 131 [2021] ; 16793 >
+        au < testing ; 2022 ; Transition Volume 132 [2022] ; 17242 >
+        au < testing ; 2021 ; Transition Volume 130 [2021] ; 15870 >
 
     }
 
@@ -1031,6 +1079,8 @@
         au < released ; 2017-2018 ; Victorian Studies Volume 60 [2017-2018] ; 13322 >
         au < released ; 2018-2019 ; Victorian Studies Volume 61 [2018-2019] ; 13992 >
         au < released ; 2019-2020 ; Victorian Studies Volume 62 [2019-2020] ; 14864 >
+        au < testing ; 2021-2022 ; Victorian Studies Volume 64 [2021-2022] ; 17237 >
+        au < testing ; 2020-2021 ; Victorian Studies Volume 63 [2020-2021] ; 15663 >
 
     }
 
@@ -1071,7 +1121,9 @@
 
       attr[journal_id] = 831
 
-      au < manifest ; 2022 ; Jazz Education in Research and Practice Volume 3 [2022] ; 16811 >
+      au < testing ; 2022 ; Jazz Education in Research and Practice Volume 3 [2022] ; 16811 >
+      au < testing ; 2020 ; Jazz Education in Research and Practice Volume 1 [2020] ; 16184 >
+      au < testing ; 2021 ; Jazz Education in Research and Practice Volume 2 [2021] ; 16185 >
 
     }
 

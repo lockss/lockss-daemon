@@ -3,6 +3,7 @@
   publisher <
     name = Universität Bern
   >
+  #Publisher prefers "University of Bern" over "Universität Bern" see RT 11375
 
     pluginPrefix = org.lockss.plugin.
     implicit < pluginSuffix ; status ; year ; volume ; name ; param[year] ; comment[error] >
@@ -29,7 +30,7 @@
       au < ojs3.Ojs3Plugin ; released ; 2019 ; 7 ; Acta Periodica Duellatorum Volume 2019 ; 2019 ; >
       au < ojs3.Ojs3Plugin ; released ; 2020 ; 8 ; Acta Periodica Duellatorum Volume 2020 ; 2020 ; >
       au < ojs3.Ojs3Plugin ; released ; 2021 ; 9 ; Acta Periodica Duellatorum Volume 2021 ; 2021 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2022 ; 10 ; Acta Periodica Duellatorum Volume 2022 ; 2022 ; >
+      au < ojs3.Ojs3Plugin ; released ; 2022 ; 10 ; Acta Periodica Duellatorum Volume 2022 ; 2022 ; >
 
   }
 
@@ -58,7 +59,7 @@
 
       title <
         name = BE N'ius - Beiträge aus der Berner Justiz ;
-        eissn = 0000-0000
+        eissn = 2673-477X
       >
 
       comment[publisher] = Universität Bern
@@ -67,9 +68,9 @@
       #moved to ojs3
       attr[start_stem] = index.php/
 
-      au < ojs3.Ojs3Plugin ; manifest ; 2007 ; 1 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2007 ; 2007 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2008 ; 2-3 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2008 ; 2008 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2009 ; 4-5 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2009 ; 2009 ; >
+      au < ojs3.Ojs3Plugin ; released ; 2007 ; 1 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2007 ; 2007 ; >
+      au < ojs3.Ojs3Plugin ; released ; 2008 ; 2-3 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2008 ; 2008 ; >
+      au < ojs3.Ojs3Plugin ; released ; 2009 ; 4-5 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2009 ; 2009 ; >
       au < ojs3.Ojs3Plugin ; released ; 2010 ; 6-7 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2010 ; 2010 ; >
       au < ojs3.Ojs3Plugin ; released ; 2011 ; 8-9 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2011 ; 2011 ; >
       au < ojs3.Ojs3Plugin ; released ; 2012 ; 10-11 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2012 ; 2012 ; >
@@ -82,7 +83,7 @@
       au < ojs3.Ojs3Plugin ; released ; 2019 ; 24-25 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2019 ; 2019 ; >
       au < ojs3.Ojs3Plugin ; released ; 2020 ; 26-27 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2020 ; 2020 ; >
       au < ojs3.Ojs3Plugin ; released ; 2021 ; 28-29 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2021 ; 2021 ; >
-      au < ojs3.Ojs3Plugin ; expected ; 2022 ; 30-31 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2022 ; 2022 ; >
+      au < ojs3.Ojs3Plugin ; released ; 2022 ; 30-31 ; BE N'ius - Beiträge aus der Berner Justiz Volume 2022 ; 2022 ; >
 
   }
 
@@ -141,6 +142,7 @@
       au < ojs3.Ojs3Plugin ; released ; 2018 ; 17 ; European Journal of Musicology Volume 2018 ; 2018 ; >
       au < ojs3.Ojs3Plugin ; released ; 2019 ; 18 ; European Journal of Musicology Volume 2019 ; 2019 ; >
       au < ojs3.Ojs3Plugin ; released ; 2020 ; 19 ; European Journal of Musicology Volume 2020 ; 2020 ; >
+      au < ojs3.Ojs3Plugin ; released ; 2021 ; 20 ; European Journal of Musicology Volume 2021 ; 2021 ; >
 
   }
 
@@ -180,9 +182,9 @@
       au < ojs2.OJS2Plugin ; down ; 2014 ; 3 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2014 ; 2014 ; >
       au < ojs2.OJS2Plugin ; down ; 2016 ; 4 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2016 ; 2016 ; >
 
-      au < ojs3.Ojs3Plugin ; manifest ; 2018 ; 5 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2018 ; 2018 ; > #500 error https://bop.unibe.ch/iw/article/view/4368
+      au < ojs3.Ojs3Plugin ; released ; 2018 ; 5 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2018 ; 2018 ; > #500 error https://bop.unibe.ch/iw/article/view/4368
       au < ojs3.Ojs3Plugin ; released ; 2020 ; 6 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2020 ; 2020 ; >
-      au < ojs3.Ojs3Plugin ; expected ; 2022 ; 7 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2022 ; 2022 ; >
+      au < ojs3.Ojs3Plugin ; released ; 2022 ; 7 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2022 ; 2022 ; >
 
   }
 
@@ -256,7 +258,7 @@
       au < ojs3.Ojs3Plugin ; released ; 2019 ; 12 ; Journal of Eye Movement Research Volume 2019 ; 2019 ; >
       au < ojs3.Ojs3Plugin ; released ; 2020 ; 13 ; Journal of Eye Movement Research Volume 2020 ; 2020 ; >
       au < ojs3.Ojs3Plugin ; released ; 2021 ; 14 ; Journal of Eye Movement Research Volume 2021 ; 2021 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2022 ; 15 ; Journal of Eye Movement Research Volume 2022 ; 2022 ; >
+      au < ojs3.Ojs3Plugin ; released ; 2022 ; 15 ; Journal of Eye Movement Research Volume 2022 ; 2022 ; >
 
   }
 
@@ -288,7 +290,7 @@
       au < ojs3.Ojs3Plugin ; released ; 2018 ; 9 ; Journal of Radiation Oncology Informatics Volume 2018 ; 2018 ; >
       au < ojs3.Ojs3Plugin ; released ; 2019 ; 10 ; Journal of Radiation Oncology Informatics Volume 2019 ; 2019 ; >
       au < ojs3.Ojs3Plugin ; released ; 2021 ; 11 ; Journal of Radiation Oncology Informatics Volume 2021 ; 2021 ; >
-      au < ojs3.Ojs3Plugin ; expected ; 2022 ; 12 ; Journal of Radiation Oncology Informatics Volume 2022 ; 2022 ; >
+      au < ojs3.Ojs3Plugin ; released ; 2022 ; 12 ; Journal of Radiation Oncology Informatics Volume 2022 ; 2022 ; >
     }
     {
       param[base_url] = https://bop.unibe.ch/
@@ -323,7 +325,7 @@
 
       au < ojs3.Ojs3Plugin ; released ; 2020 ; 1 ; Judaica. Neue digitale Folge Volume 2020 ; 2020 ; >
       au < ojs3.Ojs3Plugin ; released ; 2021 ; 2 ; Judaica. Neue digitale Folge Volume 2021 ; 2021 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2022 ; 3 ; Judaica. Neue digitale Folge Volume 2022 ; 2022 ; >
+      au < ojs3.Ojs3Plugin ; released ; 2022 ; 3 ; Judaica. Neue digitale Folge Volume 2022 ; 2022 ; >
 
   }
 
@@ -364,7 +366,7 @@
       au < ojs3.Ojs3Plugin ; released ; 2019 ; 94-100 ; Linguistik Online Volume 94-100 ; 2019 ; >
       au < ojs3.Ojs3Plugin ; released ; 2020 ; 101-105 ; Linguistik Online Volume 101-105 ; 2020 ; >
       au < ojs3.Ojs3Plugin ; released ; 2021 ; 106-112 ; Linguistik Online Volume 106-112 ; 2021 ; >
-      au < ojs3.Ojs3Plugin ; manifest ; 2022 ; 113-119 ; Linguistik Online Volume 112-119 ; 2022 ; >
+      au < ojs3.Ojs3Plugin ; released ; 2022 ; 113-119 ; Linguistik Online Volume 112-119 ; 2022 ; >
 
   }
 
@@ -372,7 +374,7 @@
 
       title <
         name = Manazir Journal ;
-        eissn = 0000-0000
+        eissn = 2673-4354
       >
 
       comment[publisher] = Universität Bern
@@ -468,7 +470,7 @@
       au < ojs3.Ojs3Plugin ; released ; 2019 ; 66 ; Versants. Revista suiza de literaturas románicas Volume 2019 ; 2019 ; >
       au < ojs3.Ojs3Plugin ; released ; 2020 ; 67 ; Versants. Revista suiza de literaturas románicas Volume 2020 ; 2020 ; >
       au < ojs3.Ojs3Plugin ; released ; 2021 ; 68 ; Versants. Revista suiza de literaturas románicas Volume 2021 ; 2021 ; >
-      au < ojs3.Ojs3Plugin ; expected ; 2022 ; 69 ; Versants. Revista suiza de literaturas románicas Volume 2022 ; 2022 ; >
+      au < ojs3.Ojs3Plugin ; released ; 2022 ; 69 ; Versants. Revista suiza de literaturas románicas Volume 2022 ; 2022 ; >
 
   }
 

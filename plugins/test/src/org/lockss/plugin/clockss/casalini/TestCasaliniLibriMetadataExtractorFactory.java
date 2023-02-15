@@ -54,44 +54,7 @@ public class TestCasaliniLibriMetadataExtractorFactory extends SourceXmlMetadata
         PublisherNameShortcutMap.put("Giardini", "GIARDI");
         PublisherNameShortcutMap.put("Istituti editoriali e poligrafici internazionali", "IEPI");
     };
-
-    private static String getXmlFileContent(String fname) {
-        String xmlContent = "";
-        try {
-            String currentDirectory = System.getProperty("user.dir");
-            String pathname = currentDirectory +
-                    "/plugins/test/src/org/lockss/plugin/clockss/casalini/" + fname;
-            xmlContent = FileUtils.readFileToString(new File(pathname), Constants.DEFAULT_ENCODING);
-        } catch (IOException e) {
-            log.error(e.getMessage(), e);
-        }
-        return xmlContent;
-    }
-
-    public void testGeneratedXmlFromMrcFormat() throws Exception {
-
-        String fname = "Sample.mrc";
-
-        String samplePath = "./plugins/test/src/org/lockss/plugin/clockss/casalini/" + fname;
-
-        /*
-        InputStream input = new FileInputStream(samplePath);
-        OutputStream out = new FileOutputStream(new File("./plugins/test/src/org/lockss/plugin/clockss/casalini/generated.xml"));
-
-
-        MarcReader reader = new MarcStreamReader(input);
-        MarcWriter writer = new MarcXmlWriter(out, true);
-
-        AnselToUnicode converter = new AnselToUnicode();
-        writer.setConverter(converter);
-
-        while (reader.hasNext()) {
-            Record record = reader.next();
-            writer.write(record);
-        }
-        writer.close();
-         */
-    }
+    
 
     public void testReadingMrcXmlByMrcBinary() throws Exception {
 
@@ -100,9 +63,7 @@ public class TestCasaliniLibriMetadataExtractorFactory extends SourceXmlMetadata
         String fname = "Marc212016Sample.xml";
         //String fname= "monographs2016.xml";
 
-        String samplePath = "./plugins/test/src/org/lockss/plugin/clockss/casalini/" + fname;
-
-        InputStream input = new FileInputStream(samplePath);
+        InputStream input = getResourceAsStream(fname);
 
         MarcReader reader = null;
 
@@ -206,15 +167,9 @@ public class TestCasaliniLibriMetadataExtractorFactory extends SourceXmlMetadata
 
     public void testExtractArticleXmlSchema() throws Exception {
 
-        /*
-        String fname = "monographs2016.xml";
-        String samplePath = "./plugins/test/src/org/lockss/plugin/clockss/casalini/" + fname;
-        InputStream input = new FileInputStream(samplePath);
-         */
-
         String fname = "Marc212016Sample.xml";
 
-        String journalXml = getXmlFileContent(fname);
+        String journalXml = getResourceContent(fname);
         assertNotNull(journalXml);
 
         String xml_url = BaseUrl + Directory + "/" + fname;

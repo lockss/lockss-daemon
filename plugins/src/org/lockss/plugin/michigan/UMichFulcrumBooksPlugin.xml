@@ -9,7 +9,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>14</string>
+        <string>15</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -62,6 +62,8 @@
             <string>2,"^%s%s.*&amp;(sort|per_page|view)=", base_url, book_uri</string>
             <!--  %% is the way to represent a percent in a crawl rule -->
             <string>2,"^%s%s\?f%%5B", base_url, book_uri</string>
+            <!-- exclude person email listed inside page, it will generate "406 Not Accepted" Error-->
+            <string>2,"^%sconcern/file_sets/[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$", base_url, </string>
             <!--  a strange redundant argument that causes a 503 now normalized-->
             <!-- <string>2,"^https?://%s/%s.*\?utf8=", url_host(base_url), book_uri</string>-->
             <string>1,"^%s%s", base_url, book_uri</string>

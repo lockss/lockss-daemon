@@ -6,6 +6,7 @@
     info[tester] = S ;
     info[platform] = Source
   >
+    hidden[proxy] = DIRECT
 
   {
 
@@ -14,18 +15,23 @@
     >
 
     plugin = org.lockss.plugin.clockss.transtech.ClockssTransTechPublicationsSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/transtech-released/
-
-    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
+    {
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/transtech-released/
 
     au < zapped ; finished ; 2017 ; Trans Tech Publications Source Content 2017 ; 2017 >
     au < zapped ; finished ; 2018 ; Trans Tech Publications Source Content 2018 ; 2018 >
     au < zapped ; finished ; 2019 ; Trans Tech Publications Source Content 2019 ; 2019 >
-    au < readySource ; crawling ; 2020 ; Trans Tech Publications Source Content 2020 ; 2020 >
-    au < readySource ; crawling ; 2021 ; Trans Tech Publications Source Content 2021 ; 2021 >
-    au < readySource ; crawling ; 2022 ; Trans Tech Publications Source Content 2022 ; 2022 >
+    au < readySource ; finished ; 2020 ; Trans Tech Publications Source Content 2020 ; 2020 >
+    au < readySource ; finished ; 2021 ; Trans Tech Publications Source Content 2021 ; 2021 >
+    au < readySource ; frozen ; 2022 ; Trans Tech Publications Source Content 2022 ; 2022 >
+    #No more AUs. Moving to https.
+    }
+    {
+    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/transtech-released/
 
+    au < readySource ; crawling ; 2023 ; Trans Tech Publications Source Content 2023 ; 2023 >
+    }
   }
 
 }

@@ -12,23 +12,23 @@
   {
   
     title <
-      name = Comics Grid ;
+      name = The Comics Grid ;
         eissn = 2048-0792
     >
 
     param[base_url] = https://www.comicsgrid.com/
     # Volume: https://www.comicsgrid.com/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31
 
-    au < doNotProcess ; 2013 ; 1 ; Comics Grid Volume 2013 ; 2013 >
-    au < doNotProcess ; 2014 ; 2 ; Comics Grid Volume 2014 ; 2014 >
-    au < doNotProcess ; 2015 ; 3 ; Comics Grid Volume 2015 ; 2015 >
-    au < doNotProcess ; 2016 ; 4 ; Comics Grid Volume 2016 ; 2016 >
-    au < doNotProcess ; 2017 ; 5 ; Comics Grid Volume 2017 ; 2017 >
-    au < doNotProcess ; 2018 ; 6 ; Comics Grid Volume 2018 ; 2018 >
-    au < doNotProcess ; 2019 ; 7 ; Comics Grid Volume 2019 ; 2019 >
-    au < released ; 2020 ; 8 ; Comics Grid Volume 2020 ; 2020 >
-    au < released ; 2021 ; 9 ; Comics Grid Volume 2021 ; 2021 >
-    au < manifest ; 2022 ; 10 ; Comics Grid Volume 2022 ; 2022 >
+    au < doNotProcess ; 2013 ; 1 ; The Comics Grid Volume 2013 ; 2013 >
+    au < doNotProcess ; 2014 ; 2 ; The Comics Grid Volume 2014 ; 2014 >
+    au < doNotProcess ; 2015 ; 3 ; The Comics Grid Volume 2015 ; 2015 >
+    au < doNotProcess ; 2016 ; 4 ; The Comics Grid Volume 2016 ; 2016 >
+    au < doNotProcess ; 2017 ; 5 ; The Comics Grid Volume 2017 ; 2017 >
+    au < doNotProcess ; 2018 ; 6 ; The Comics Grid Volume 2018 ; 2018 >
+    au < doNotProcess ; 2019 ; 7 ; The Comics Grid Volume 2019 ; 2019 >
+    au < released ; 2020 ; 8 ; The Comics Grid Volume 2020 ; 2020 >
+    au < released ; 2021 ; 9 ; The Comics Grid Volume 2021 ; 2021 >
+    au < manifest ; 2022 ; 10 ; The Comics Grid Volume 2022 ; 2022 >
 
   }
 
@@ -106,7 +106,7 @@
        au < released ; 2018 ; 6 ; C21 Literature: journal of 21st-century writings Volume 2018 ; 2018 >
        au < released ; 2019 ; 7 ; C21 Literature: journal of 21st-century writings Volume 2019 ; 2019 >
        au < released ; 2020 ; 8 ; C21 Literature: journal of 21st-century writings Volume 2020 ; 2020 >
-       au < manifest ; 2021 ; 9 ; C21 Literature: journal of 21st-century writings Volume 2021 ; 2021 >
+       au < released ; 2021 ; 9 ; C21 Literature: journal of 21st-century writings Volume 2021 ; 2021 >
        au < manifest ; 2022 ; 10 ; C21 Literature: journal of 21st-century writings Volume 2022 ; 2022 >
 
   }
@@ -125,7 +125,7 @@
       au < doNotProcess ; 2018 ; 14 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2018 ; 2018 >
       au < released ; 2019 ; 15 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2019 ; 2019 >
       au < released ; 2020 ; 16 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2020 ; 2020 >
-      au < manifest ; 2021 ; 17 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2021 ; 2021 >
+      au < released ; 2021 ; 17 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2021 ; 2021 >
       au < manifest ; 2022 ; 18 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2022 ; 2022 >
 
   }
@@ -144,9 +144,9 @@
       au < manifest ; 2002 ; 32 ; Ethnologia Europaea Volume 2002 ; 2002 >
       au < manifest ; 2003 ; 33 ; Ethnologia Europaea Volume 2003 ; 2003 >
       au < manifest ; 2004 ; 34 ; Ethnologia Europaea Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 35 ; Ethnologia Europaea Volume 2005 ; 2005 >
+      au < manifest ; 2005 ; 35 ; Ethnologia Europaea Volume 2005 ; 2005 >
       au < manifest ; 2006 ; 36 ; Ethnologia Europaea Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 37 ; Ethnologia Europaea Volume 2007 ; 2007 >
+      au < manifest ; 2007 ; 37 ; Ethnologia Europaea Volume 2007 ; 2007 >
       au < manifest ; 2008 ; 38 ; Ethnologia Europaea Volume 2008 ; 2008 >
       au < manifest ; 2009 ; 39 ; Ethnologia Europaea Volume 2009 ; 2009 >
       au < released ; 2010 ; 40 ; Ethnologia Europaea Volume 2010 ; 2010 >
@@ -158,9 +158,9 @@
       au < released ; 2016 ; 46 ; Ethnologia Europaea Volume 2016 ; 2016 >
       au < released ; 2017 ; 47 ; Ethnologia Europaea Volume 2017 ; 2017 >
       au < released ; 2019 ; 49 ; Ethnologia Europaea Volume 2019 ; 2019 >
-      au < manifest ; 2020 ; 50 ; Ethnologia Europaea Volume 2020 ; 2020 >
-      au < manifest ; 2021 ; 51 ; Ethnologia Europaea Volume 2021 ; 2021 >
-      au < expected ; 2022 ; 52 ; Ethnologia Europaea Volume 2022 ; 2022 >
+      au < released ; 2020 ; 50 ; Ethnologia Europaea Volume 2020 ; 2020 >
+      au < released ; 2021 ; 51 ; Ethnologia Europaea Volume 2021 ; 2021 >
+      au < manifest ; 2022 ; 52 ; Ethnologia Europaea Volume 2022 ; 2022 >
 
   }
 
@@ -180,7 +180,7 @@
       au < released ; 2019 ; 5 ; Journal of British and Irish Innovative Poetry Volume 2019 ; 2019 >
       au < released ; 2020 ; 6 ; Journal of British and Irish Innovative Poetry Volume 2020 ; 2020 >
       au < released ; 2021 ; 7 ; Journal of British and Irish Innovative Poetry Volume 2021 ; 2021 >
-      au < expected ; 2022 ; 8 ; Journal of British and Irish Innovative Poetry Volume 2022 ; 2022 >
+      au < manifest ; 2022 ; 8 ; Journal of British and Irish Innovative Poetry Volume 2022 ; 2022 >
   }
 
   {
@@ -220,7 +220,7 @@
         au < released ; 2019 ; 6 ; International Journal of Welsh Writing in English Volume 2019 ; 2019 >
         au < released ; 2020 ; 7 ; International Journal of Welsh Writing in English Volume 2020 ; 2020 >
         au < released ; 2021 ; 8 ; International Journal of Welsh Writing in English Volume 2021 ; 2021 >
-        au < expected ; 2022 ; 9 ; International Journal of Welsh Writing in English Volume 2022 ; 2022 >
+        au < manifest ; 2022 ; 9 ; International Journal of Welsh Writing in English Volume 2022 ; 2022 >
 
   }
 
@@ -239,7 +239,7 @@
       au < doNotProcess ; 2019 ; 4 ; Marvell Studies Volume 2019 ; 2019 >
       au < released ; 2020 ; 5 ; Marvell Studies Volume 2020 ; 2020 >
       au < released ; 2021 ; 6 ; Marvell Studies Volume 2021 ; 2021 >
-      au < expected ; 2022 ; 7 ; Marvell Studies Volume 2022 ; 2022 >
+      au < manifest ; 2022 ; 7 ; Marvell Studies Volume 2022 ; 2022 >
 
   }
 
@@ -284,7 +284,7 @@
       au < doNotProcess ; 2017 ; 9 ; Studies in the Maternal Volume 2017 ; 2017 >
       au < doNotProcess ; 2018 ; 10 ; Studies in the Maternal Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 11 ; Studies in the Maternal Volume 2019 ; 2019 >
-      au < manifest ; 2020 ; 12 ; Studies in the Maternal Volume 2020 ; 2020 >
+      au < released ; 2020 ; 12 ; Studies in the Maternal Volume 2020 ; 2020 >
       au < exists ; 2021 ; 13 ; Studies in the Maternal Volume 2021 ; 2021 >
       au < expected ; 2022 ; 14 ; Studies in the Maternal Volume 2022 ; 2022 >
 
@@ -371,8 +371,8 @@
       au < released ; 2016 ; 3 ; The Parish Review Volume 2016 ; 2016 >
       au < released ; 2018 ; 4 ; The Parish Review Volume 2018 ; 2018 >
       au < released ; 2020 ; 4 ; The Parish Review Volume 2020 ; 2020 >
-      au < manifest ; 2021 ; 5 ; The Parish Review Volume 2021 ; 2021 >
-      au < expected ; 2022 ; 6 ; The Parish Review Volume 2022 ; 2022 >
+      au < released ; 2021 ; 5 ; The Parish Review Volume 2021 ; 2021 >
+      au < manifest ; 2022 ; 6 ; The Parish Review Volume 2022 ; 2022 >
 
   }
 
@@ -399,8 +399,8 @@
       au < doNotProcess ; 2018 ; 25 ; ASIANetwork Exchange Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 26 ; ASIANetwork Exchange Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 27 ; ASIANetwork Exchange Volume 2020 ; 2020 >
-      au < manifest ; 2021 ; 28 ; ASIANetwork Exchange Volume 2021 ; 2021 >
-      au < expected ; 2022 ; 29 ; ASIANetwork Exchange Volume 2022 ; 2022 >
+      au < released ; 2021 ; 28 ; ASIANetwork Exchange Volume 2021 ; 2021 >
+      au < manifest ; 2022 ; 29 ; ASIANetwork Exchange Volume 2022 ; 2022 >
 
   }
 
@@ -437,7 +437,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Body, Space & Technology Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 2019 ; Body, Space & Technology Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 2020 ; Body, Space & Technology Volume 2020 ; 2020 >
-      au < manifest ; 2021 ; 2021 ; Body, Space & Technology Volume 2021 ; 2021 >
+      au < released ; 2021 ; 2021 ; Body, Space & Technology Volume 2021 ; 2021 >
       au < manifest ; 2022 ; 2022 ; Body, Space & Technology Volume 2022 ; 2022 >
 
   }
@@ -470,8 +470,8 @@
       au < doNotProcess ; 2018 ; 14 ; Digital Medievalist Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 15 ; Digital Medievalist Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 16 ; Digital Medievalist Volume 2020 ; 2020 >
-      au < manifest ; 2021 ; 17 ; Digital Medievalist Volume 2021 ; 2021 >
-      au < expected ; 2022 ; 18 ; Digital Medievalist Volume 2022 ; 2022 >
+      au < released ; 2021 ; 17 ; Digital Medievalist Volume 2021 ; 2021 >
+      au < manifest ; 2022 ; 18 ; Digital Medievalist Volume 2022 ; 2022 >
 
   }
 
@@ -496,7 +496,7 @@
       au < doNotProcess ; 2018 ; 2018 ; Digital Studies / Le champ numérique Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 2019 ; Digital Studies / Le champ numérique Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 2020 ; Digital Studies / Le champ numérique Volume 2020 ; 2020 >
-      au < manifest ; 2021 ; 2021 ; Digital Studies / Le champ numérique Volume 2021 ; 2021 >
+      au < released ; 2021 ; 2021 ; Digital Studies / Le champ numérique Volume 2021 ; 2021 >
       au < manifest ; 2022 ; 2022 ; Digital Studies / Le champ numérique Volume 2022 ; 2022 >
 
   }
@@ -516,7 +516,7 @@
       au < doNotProcess ; 2018 ; 3 ; Glossa: a journal of general linguistics Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 4 ; Glossa: a journal of general linguistics Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 5 ; Glossa: a journal of general linguistics Volume 2020 ; 2020 >
-      au < manifest ; 2021 ; 6 ; Glossa: a journal of general linguistics Volume 2021 ; 2021 >
+      au < released ; 2021 ; 6 ; Glossa: a journal of general linguistics Volume 2021 ; 2021 >
       au < manifest ; 2022 ; 7 ; Glossa: a journal of general linguistics Volume 2022 ; 2022 >
 
   }
@@ -536,8 +536,8 @@
       au < doNotProcess ; 2018 ; 1 ; Journal of Embodied Research Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 2 ; Journal of Embodied Research Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 3 ; Journal of Embodied Research Volume 2020 ; 2020 >
-      au < manifest ; 2021 ; 4 ; Journal of Embodied Research Volume 2021 ; 2021 >
-      au < expected ; 2022 ; 5 ; Journal of Embodied Research Volume 2022 ; 2022 >
+      au < released ; 2021 ; 4 ; Journal of Embodied Research Volume 2021 ; 2021 >
+      au < manifest ; 2022 ; 5 ; Journal of Embodied Research Volume 2022 ; 2022 >
 
   }
 
@@ -571,7 +571,7 @@
       au < doNotProcess ; 2018 ; 4 ; Le foucaldien Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 5 ; Le foucaldien Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 6 ; Le foucaldien Volume 2020 ; 2020 >
-      au < manifest ; 2021 ; 7 ; Le foucaldien Volume 2021 ; 2021 >
+      au < released ; 2021 ; 7 ; Le foucaldien Volume 2021 ; 2021 >
       #Changed name and issn: Genealogy+Critique 2755-0923
   }
 
@@ -583,13 +583,78 @@
       >
 
       comment[publisher] = Open Library of Humanities
-      param[base_url] = https://openscreensjournal.com/
+      param[base_url] = https://www.openscreensjournal.com/
 
       au < doNotProcess ; 2018 ; 1 ; Open Screens Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 2 ; Open Screens Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 3 ; Open Screens Volume 2020 ; 2020 >
-      au < exists ; 2021 ; 4 ; Open Screens Volume 2021 ; 2021 >
-      au < exists ; 2022 ; 5 ; Open Screens Volume 2022 ; 2022 >
+      au < manifest ; 2021 ; 4 ; Open Screens Volume 2021 ; 2021 >
+      au < manifest ; 2022 ; 5 ; Open Screens Volume 2022 ; 2022 >
+
+  }
+
+  {
+
+      title <
+        name = Architectural Histories ;
+        eissn = 2050-5833
+      >
+
+      comment[publisher] = Open Library of Humanities, previously Ubiquity Press
+      param[base_url] = https://journal.eahn.org/
+
+      au < doNotProcess ; 2013 ; 1 ; Architectural Histories Volume 2013 ; 2013 >
+      au < doNotProcess ; 2014 ; 2 ; Architectural Histories Volume 2014 ; 2014 >
+      au < doNotProcess ; 2015 ; 3 ; Architectural Histories Volume 2015 ; 2015 >
+      au < doNotProcess ; 2016 ; 4 ; Architectural Histories Volume 2016 ; 2016 >
+      au < doNotProcess ; 2017 ; 5 ; Architectural Histories Volume 2017 ; 2017 >
+      au < doNotProcess ; 2018 ; 6 ; Architectural Histories Volume 2018 ; 2018 >
+      au < doNotProcess ; 2019 ; 7 ; Architectural Histories Volume 2019 ; 2019 >
+      au < doNotProcess ; 2020 ; 8 ; Architectural Histories Volume 2020 ; 2020 >
+      au < manifest ; 2021 ; 9 ; Architectural Histories Volume 2021 ; 2021 >
+      au < manifest ; 2022 ; 10 ; Architectural Histories Volume 2022 ; 2022 >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Portuguese Linguistics ;
+        issn = 1645-4537 ;
+        eissn = 2397-5563
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = https://jpl.letras.ulisboa.pt/
+
+      au < doNotProcess ; 2015 ; 1 ; Journal of Portuguese Linguistics Volume 2015 ; 2015 >
+      au < doNotProcess ; 2016 ; 2 ; Journal of Portuguese Linguistics Volume 2016 ; 2016 >
+      au < doNotProcess ; 2017 ; 3 ; Journal of Portuguese Linguistics Volume 2017 ; 2017 >
+      au < doNotProcess ; 2018 ; 4 ; Journal of Portuguese Linguistics Volume 2018 ; 2018 >
+      au < doNotProcess ; 2019 ; 5 ; Journal of Portuguese Linguistics Volume 2019 ; 2019 >
+      au < doNotProcess ; 2020 ; 6 ; Journal of Portuguese Linguistics Volume 2020 ; 2020 >
+      au < manifest ; 2021 ; 7 ; Journal of Portuguese Linguistics Volume 2021 ; 2021 >
+      au < manifest ; 2022 ; 8 ; Journal of Portuguese Linguistics Volume 2022 ; 2022 >
+
+  }
+
+  {
+
+      title <
+        name = Laboratory Phonology: Journal of the Association for Laboratory Phonology ;
+        eissn = 1868-6354
+      >
+
+      comment[publisher] = Open Library of Humanities, previously Ubiquity Press
+      param[base_url] = https://www.journal-labphon.org/
+
+      au < doNotProcess ; 2016 ; 1 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2016 ; 2016 >
+      au < doNotProcess ; 2017 ; 2 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2017 ; 2017 >
+      au < doNotProcess ; 2018 ; 3 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2018 ; 2018 >
+      au < doNotProcess ; 2019 ; 4 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2019 ; 2019 >
+      au < doNotProcess ; 2020 ; 5 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2020 ; 2020 >
+      au < manifest ; 2021 ; 6 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2021 ; 2021 >
+      au < manifest ; 2022 ; 7 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2022 ; 2022 >
 
   }
 

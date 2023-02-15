@@ -9,7 +9,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>2</string>
+        <string>8</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
             </entry>
             <entry>
                 <string>Substance</string>
-                <string>1</string>
+                <string>2</string>
             </entry>
             <entry>
                 <string>Metadata</string>
@@ -69,14 +69,33 @@
         <string>"Resilience Alliance Plugin (CLOCKSS), Base URL %s, Year %d, Volume %s", base_url, year, volume_name</string>
     </entry>
     <entry>
+        <string>au_permission_url</string>
+        <!--
+        https://www.ace-eco.org/clockss.txt
+        https://ace-eco.org/clockss.txt
+        https://www.ecologyandsociety.org/clockss.txt
+        https://ecologyandsociety.org/clockss.txt
+        https://journal.afonet.org/clockss.txt
+        -->
+        <list>
+            <string>"%sclockss.txt", add_www(base_url)</string>
+            <string>"%sclockss.txt", del_www(base_url)</string>
+        </list>
+    </entry>
+    <entry>
+        <!-- both of the domains are needed due to the change in 2022 -->
         <string>au_start_url</string>
         <list>
-            <string>"%sissues/", base_url</string>
+            <string>"%sissue/", add_www(base_url)</string>
+            <string>"%sissue/", del_www(base_url)</string>
         </list>
     </entry>
     <entry>
         <string>au_crawlrules</string>
         <list>
+            <string>1,"^(%s|%s).*[.](css|js|eot|svg|ttf|woff.?|bmp|gif|ico|jpe?g|png|tif?f)([?].*)?$", add_www(base_url), del_www(base_url)</string>
+            <string>1,"fonts[.]googleapis.com/.+\.(css|js)([?].*)?$"</string>
+            <string>1,"https://cdnjs.cloudflare.com/.+\.(css|js)([?].*)?$"</string>
             <!--
             cissues/
             https://www.ace-eco.org/vol14/iss2/
@@ -112,7 +131,7 @@
             https://www.ace-eco.org/issues/erratum.php/1467
             https://www.ace-eco.org/issues/index.php/features
             -->
-            <string>2,"%sissues/(authors|search|view|discussion|erratum|index|articles)", base_url</string>
+            <string>2,"(%s|%s)issues?/(authors|search|view|discussion|erratum|index|articles)", add_www(base_url), del_www(base_url)</string>
             <!--
             https://www.ace-eco.org/common/lc1_base.css
             https://www.ace-eco.org/common/journal.css
@@ -129,16 +148,16 @@
             <!--citation ris file does not have volume/issue info
             https://www.ace-eco.org/issues/ref.php/1408/rm
             -->
-            <string>1,"%s(issues|common|srv|images|styles)/", base_url</string>
+            <string>1,"(%s|%s)(issues?|common|srv|images|styles)/", add_www(base_url), del_www(base_url)</string>
             <!--
             https://www.ace-eco.org/vol14/iss2/art1/appendix1.xlsm
             https://www.ace-eco.org/vol14/iss1/art1/appendix3.xlsx
             -->
-            <string>2,"%svol%s/.*\.xlsx?", base_url, volume_name</string>
-            <string>2, ""%svol%s/iss[^/]+/art[^/]+/(survey|inline)", base_url, volume_name</string>
+            <string>2,"(%s|%s)vol%s/.*\.xlsx?", add_www(base_url), del_www(base_url), volume_name</string>
+            <string>2,"(%s|%s)vol%s/iss[^/]+/art[^/]+/(survey|inline)", add_www(base_url), del_www(base_url), volume_name</string>
             <!-- Limit only to the targeted volume -->
-            <string>2,"%svol[^%s]", base_url, volume_name</string>
-            <string>1,"%svol%s", base_url, volume_name</string>
+            <string>2,"(%s|%s)vol[^%s]", add_www(base_url), del_www(base_url), volume_name</string>
+            <string>1,"(%s|%s)vol%s", add_www(base_url), del_www(base_url), volume_name</string>
         </list>
     </entry>
     <entry>
@@ -148,8 +167,26 @@
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
-            <string>"%svol%s/.*/.*\.pdf$", base_url, volume_name</string>
+            <!-- some journals do not have pdfs -->
+            <string>"(%s|%s)vol%s/iss.+/art.+\.pdf$", add_www(base_url), del_www(base_url), volume_name</string>
         </list>
+    </entry>
+    <entry>
+        <!-- custom param functor that will not add 'www' if there is already a subdomain -->
+        <string>au_param_functor</string>
+        <string>org.lockss.plugin.resiliencealliance.ResilienceAllianceAuParamFunctor</string>
+    </entry>
+    <entry>
+        <string>au_url_normalizer</string>
+        <string>org.lockss.plugin.resiliencealliance.ResilienceAllianceUrlNormalizer</string>
+    </entry>
+    <entry>
+        <string>plugin_url_fetcher_factory</string>
+        <string>org.lockss.plugin.resiliencealliance.ResilienceAllianceUrlFetcherFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_url_consumer_factory</string>
+        <string>org.lockss.plugin.resiliencealliance.ResilienceAllianceUrlConsumerFactory</string>
     </entry>
     <entry>
         <string>text/html_filter_factory</string>
@@ -185,13 +222,20 @@
     <entry>
         <string>au_repair_from_peer_if_missing_url_pattern</string>
         <list>
-            <string>.+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$"</string>
+            <string>.+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$</string>
         </list>
     </entry>
     <entry>
         <string>au_url_poll_result_weight</string>
         <list>
             <string>".+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", 0</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_permitted_host_pattern</string>
+        <list>
+            <string>"cdnjs\.cloudflare\.com"</string>
+            <string>"fonts\.googleapis\.com"</string>
         </list>
     </entry>
     <entry>

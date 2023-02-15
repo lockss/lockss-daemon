@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2022 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,6 +29,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.util.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import org.apache.commons.lang3.tuple.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 
@@ -44,7 +43,16 @@ public class TestPatternStringMap extends LockssTestCase {
   }
 
   public void testGetMatch() {
-    PatternStringMap ppm1 = new PatternStringMap("a.*b,foo;ccc,bar");
+    testGetMatch(PatternStringMap.fromSpec("a.*b,foo;ccc,bar"));
+    testGetMatch(PatternStringMap.fromSpec(ListUtil.list("a.*b,foo", "ccc,bar")));
+  }
+
+  public void testGetMatchDeprecated() {
+    testGetMatch(new PatternStringMap("a.*b,foo;ccc,bar"));
+    testGetMatch(new PatternStringMap(ListUtil.list("a.*b,foo", "ccc,bar")));
+  }
+
+  public void testGetMatch(PatternStringMap ppm1) {
     assertEquals(null, ppm1.getMatch("a123c"));
     assertEquals("df", ppm1.getMatch("a123c", "df"));
     assertEquals("foo", ppm1.getMatch("a123b"));
@@ -62,25 +70,32 @@ public class TestPatternStringMap extends LockssTestCase {
 
   public void testIsEmpty() {
     assertTrue(PatternStringMap.EMPTY.isEmpty());
-    assertTrue(new PatternStringMap("").isEmpty());
-    assertFalse(new PatternStringMap("a.*b,2;ccc,xxx").isEmpty());
+    assertTrue(PatternStringMap.fromSpec("").isEmpty());
+    assertFalse(PatternStringMap.fromSpec("a.*b,2;ccc,xxx").isEmpty());
+  }
+
+  public void testGetUrlMapPairs() {
+    assertEquals(ListUtil.list(Pair.of("foo.*", "bar")),
+                 PatternStringMap.fromSpec("foo.*,bar").getPairs().stream()
+                 .map(x -> Pair.of(x.getLeft().pattern(), x.getRight()))
+                 .collect(Collectors.toList()));
   }
 
   public void testIll() {
     try {
-      PatternStringMap ppm1 = new PatternStringMap("a[)2");
+      PatternStringMap ppm1 = PatternStringMap.fromSpec("a[)2");
       fail("Should throw: Malformed");
     } catch (IllegalArgumentException e) {
       assertMatchesRE("no comma", e.getMessage());
     }
     try {
-      PatternStringMap ppm1 = new PatternStringMap("a,1;bbb");
+      PatternStringMap ppm1 = PatternStringMap.fromSpec("a,1;bbb");
       fail("Should throw: Malformed");
     } catch (IllegalArgumentException e) {
       assertMatchesRE("no comma", e.getMessage());
     }
     try {
-      PatternStringMap ppm1 = new PatternStringMap("a[),2");
+      PatternStringMap ppm1 = PatternStringMap.fromSpec("a[),2");
       fail("Should throw: illegal regexp");
     } catch (IllegalArgumentException e) {
       assertMatchesRE("Illegal regexp", e.getMessage());

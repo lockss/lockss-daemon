@@ -37,7 +37,6 @@ import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.definable.DefinableArchivalUnit;
 import org.lockss.plugin.definable.DefinablePlugin;
-import org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsHttpResponseHandler.*;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockLockssDaemon;
@@ -140,9 +139,9 @@ public class TestGovInfoSitemapsHttpResponseHandler extends LockssTestCase {
       conn.setURL(url);
       CacheException exc = ((HttpResultMap) plugin.getCacheResultMap()).mapException(GIau, conn, responseCode, "foo");
       if (noFail) {
-        assertClass(GovInfoRetryNoFailException.class, exc);
+        assertClass(GovInfoRetrySameUrlException.class, exc); // This used to be different for ancillary URLs but not any more
       } else {
-        assertClass(GovInfoRetryFailException.class, exc);
+        assertClass(GovInfoRetrySameUrlException.class, exc);
       }
     }
   }

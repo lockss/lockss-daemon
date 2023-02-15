@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>9</string>
+        <string>12</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -91,10 +91,18 @@
             https://ash.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
             -->
             <string>2,"^https?://([^/]+\.silverchair-cdn\.com)/cassette\.axd/.*"</string>
+            <!--Found the link in:
+            https://ashpublications.org/blood/article/140/1/1/485736/Safety-of-genetically-modified-T-cells
+            <ul id="ShareDrop" class="addthis_toolbox addthis_default_style addthis_20x20_style f-dropdown" data-dropdown-content>
+                    <li><a class="addthis_button_twitter" href="https://api.addthis.com/oexchange/0.8/forward/twitter/offer?url=https://ashpublications.org/blood/article-abstract/140/1/1/485736/Safety-of-genetically-modified-T-cells%2F&amp;pubid=xa-5265518246c10183&amp;title=Safety of genetically modified T cells" target="_blank"><span>Twitter</span></a></li>
+                    <li><a class="addthis_button_linkedin" href="https://api.addthis.com/oexchange/0.8/forward/linkedin/offer?url=https://ashpublications.org/blood/article-abstract/140/1/1/485736/Safety-of-genetically-modified-T-cells%2F&amp;pubid=xa-5265518246c10183&amp;title=Safety of genetically modified T cells" target="_blank"><span>LinkedIn</span></a></li>
+                    </ul>
+            -->
+            <string>2, "^https://api\.addthis\.com/oexchange/.*"</string>
             <!--
             Rockefeller: https://rupress.org/jem/article-pdf/215/1/1/1018472/jem_20172022.pdf
             -->
-            <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com|s7\.addthis\.com)/"</string>
+            <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com)/"</string>
             <!-- Excluded pattern should be listed ahead of included pattern, which is more general-->
             <!--
                Exclude the following, it looks like an image, actually, it is a PPT, it is a hidden div
@@ -161,12 +169,17 @@
             <string>1,"^https?://(ucp\.silverchair-cdn\.com)/"</string>
             <string>1,"^https?://(watermark\.silverchair\.com)/"</string>
             <string>1,"^https?://(ajot2\.silverchair-cdn\.com)/"</string>
+            <string>2,"%s.*javascript;:", base_url</string>
         </list>
     </entry>
     <entry>
         <!-- Validator factory for text MIME types -->
         <string>text/*_content_validator_factory</string>
         <string>org.lockss.plugin.silverchair.BaseScContentValidatorFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_crawl_filter_factory</string>
+        <string>org.lockss.plugin.silverchair.SilverchairCommonThemeHtmlCrawlFilterFactory</string>
     </entry>
     <entry>
         <string>text/html_filter_factory</string>
@@ -225,7 +238,6 @@
             <string>.*\.brightcove\.net</string>
             <string>.*\.cloudfront\.net</string>
             <string>cdnjs\.cloudflare\.com</string>
-            <string>s7\.addthis\.com</string>
             <string>gsw\.silverchair-cdn\.com</string>
             <!--this is for california unviersity press-->
             <string>ucp\.silverchair-cdn\.com</string>

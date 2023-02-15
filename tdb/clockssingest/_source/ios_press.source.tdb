@@ -6,6 +6,7 @@
     info[tester] = S ;
     info[platform] = Source
   >
+    hidden[proxy] = DIRECT
 
   {
 
@@ -14,17 +15,22 @@
     >
 
     plugin = org.lockss.plugin.clockss.iospress.ClockssIosPressSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/iosbooks-released/
-
-    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
+    {
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/iosbooks-released/
 
     au < zapped ; finished ; 2018 ; IOS Press Books Source Content 2018 ; 2018 >
     au < zapped ; finished ; 2019 ; IOS Press Books Source Content 2019 ; 2019 >
-    au < readySource ; crawling ; 2020 ; IOS Press Books Source Content 2020 ; 2020 >
-    au < readySource ; crawling ; 2021 ; IOS Press Books Source Content 2021 ; 2021 >
-    au < readySource ; crawling ; 2022 ; IOS Press Books Source Content 2022 ; 2022 >
+    au < readySource ; finished ; 2020 ; IOS Press Books Source Content 2020 ; 2020 >
+    au < readySource ; finished ; 2021 ; IOS Press Books Source Content 2021 ; 2021 >
+    au < readySource ; frozen ; 2022 ; IOS Press Books Source Content 2022 ; 2022 >
+    #No more AUs. Moving to https.
+    }
+    {
+    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/iosbooks-released/
 
+    au < readySource ; crawling ; 2023 ; IOS Press Books Source Content 2023 ; 2023 >
+    }
   }
 
   {
@@ -34,17 +40,22 @@
     >
 
     plugin = org.lockss.plugin.clockss.iospress.ClockssIosPressSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/ios-released/
-
-    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
+    {
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/ios-released/
 
     au < zapped ; finished ; 2018 ; IOS Press Source Content 2018 ; 2018 >
     au < zapped ; finished ; 2019 ; IOS Press Source Content 2019 ; 2019 >
-    au < readySource ; crawling ; 2020 ; IOS Press Source Content 2020 ; 2020 >
-    au < readySource ; crawling ; 2021 ; IOS Press Source Content 2021 ; 2021 >
-    au < readySource ; crawling ; 2022 ; IOS Press Source Content 2022 ; 2022 >
+    au < readySource ; frozen ; 2020 ; IOS Press Source Content 2020 ; 2020 >
+    au < readySource ; frozen ; 2021 ; IOS Press Source Content 2021 ; 2021 >
+    au < readySource ; frozen ; 2022 ; IOS Press Source Content 2022 ; 2022 >
+    #No more AUs. Moving to https.
+    }
+    {
+    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/ios-released/
 
+    au < readySource ; crawling ; 2023 ; IOS Press Source Content 2023 ; 2023 >
+    }
   }
 
 }

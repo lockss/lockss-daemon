@@ -1,0 +1,39 @@
+{
+
+  publisher <
+    name = Pasifika Medical Association Group ;
+    info[contract] = 2017 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+    hidden[proxy] = DIRECT
+
+  {
+
+    title <
+       name = New Zealand Medical Journal ;
+       issn = 1175-8716
+    >
+
+    plugin = org.lockss.plugin.clockss.nzma.ClockssNZMASourcePlugin
+    implicit < status ; status2 ; year ; name ; param[year] >
+    {
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/nzma-released/
+
+    au < zapped ; finished ; 2017 ; New Zealand Medical Journal Source Content 2017 ; 2017 >
+    au < zapped ; finished ; 2018 ; New Zealand Medical Journal Source Content 2018 ; 2018 >
+    au < zapped ; finished ; 2019 ; New Zealand Medical Journal Source Content 2019 ; 2019 >
+    au < zapped ; finished ; 2020 ; New Zealand Medical Journal Source Content 2020 ; 2020 >
+    au < readySource ; finished ; 2021 ; New Zealand Medical Journal Source Content 2021 ; 2021 >
+    au < readySource ; frozen ; 2022 ; New Zealand Medical Journal Source Content 2022 ; 2022 >
+    #No more AUs. Moving to https.
+    }
+    {
+    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/nzma-released/
+
+    au < readySource ; crawling ; 2023 ; New Zealand Medical Journal Source Content 2023 ; 2023 >
+
+    }
+  }
+
+}

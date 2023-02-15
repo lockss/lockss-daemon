@@ -20,9 +20,8 @@
     hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
 
-    au < readySource ; crawling ; 2020 ; Journal of Evolution of Medical and Dental Sciences Source Content 2020 ; 2020 >
-    au < exists ; exists ; 2022 ; Journal of Evolution of Medical and Dental Sciences Source Content 2022 ; 2022 >
-
+    au < readySource ; finished ; 2020 ; Journal of Evolution of Medical and Dental Sciences Source Content 2020 ; 2020 >
+    #Moving to OJS
   }
 
 }

@@ -286,7 +286,8 @@
 
     title <
       name = International Journal of Innovation Science ;
-      issn = 1757-2223
+      issn = 1757-2223 ;
+      eissn = 1757-2231
     >
 
     param[journal_issn] = 1757-2223
@@ -360,10 +361,10 @@
 
     title <
       name = International Journal of Space Structures ;
-      issn = 0266-3511 ;
+      issn = 0956-0599 ;
       eissn = 2059-8033
-    >
-
+     >
+    #previous title "Space Structures" previous issn = 0266-3511 1985-1987
     param[journal_issn] = 0266-3511
 
     au < doNotProcess ; exists ; 1999 ; International Journal of Space Structures Volume 14 ; 14 ; >
@@ -477,7 +478,8 @@
 
     title <
       name = Journal of Structural Fire Engineering ;
-      issn = 2040-2317
+      issn = 2040-2317 ;
+      eissn = 2040-2325
     >
 
     param[journal_issn] = 2040-2317
@@ -494,10 +496,10 @@
 
     title <
       name = Journal of Low Frequency Noise, Vibration and Active Control ;
-      issn = 0263-0923 ;
+      issn = 1461-3484 ;
       eissn = 2048-4046
     >
-
+    #previous issn = 0263-0923 ; years 1982-1996
     param[journal_issn] = 0263-0923
 
     au < doNotProcess ; exists ; 2000 ; Journal of Low Frequency Noise, Vibration and Active Control Volume 19 ; 19 ; >

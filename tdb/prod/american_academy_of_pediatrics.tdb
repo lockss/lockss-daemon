@@ -2,11 +2,10 @@
   publisher <
     name = American Academy of Pediatrics ;
     info[tester] = 5 ;
-    info[platform] = SC, BLOCKED, LXPLUG-2135, manifest page autologin
+    info[platform] = SC
   >
-  #plugin = needs.plugin
 
-  plugin = org.lockss.plugin.silverchair.aap.ClockssAAPSilverchairPlugin
+  plugin = org.lockss.plugin.silverchair.aap.AAPSilverchairPlugin
   implicit < status ; year ; param[year] ; name ; param[volume_name] >
   param[base_url] = https://publications.aap.org/
 
@@ -64,13 +63,13 @@
       au < doNotProcess ; 2018 ; 2018 ; AAP Grand Rounds Volume 39 ; 39 >
       au < doNotProcess ; 2018 ; 2018 ; AAP Grand Rounds Volume 40 ; 40 >
       au < doNotProcess ; 2019 ; 2019 ; AAP Grand Rounds Volume 41 ; 41 >
-      au < manifest ; 2019 ; 2019 ; AAP Grand Rounds Volume 42 ; 42 > #manifest page redirects.
+      au < manifest ; 2019 ; 2019 ; AAP Grand Rounds Volume 42 ; 42 > 
       au < manifest ; 2020 ; 2020 ; AAP Grand Rounds Volume 43 ; 43 > 
       au < manifest ; 2020 ; 2020 ; AAP Grand Rounds Volume 44 ; 44 > 
       au < manifest ; 2021 ; 2021 ; AAP Grand Rounds Volume 45 ; 45 > 
       au < manifest ; 2021 ; 2021 ; AAP Grand Rounds Volume 46 ; 46 > 
       au < manifest ; 2022 ; 2022 ; AAP Grand Rounds Volume 47 ; 47 > 
-      au < expected ; 2022 ; 2022 ; AAP Grand Rounds Volume 48 ; 48 > 
+      au < manifest ; 2022 ; 2022 ; AAP Grand Rounds Volume 48 ; 48 > 
 
     }
 
@@ -365,7 +364,7 @@
       au < manifest ; 2021 ; 2021 ; Pediatrics Volume 147 ; 147 >
       au < manifest ; 2021 ; 2021 ; Pediatrics Volume 148 ; 148 >
       au < manifest ; 2022 ; 2022 ; Pediatrics Volume 149 ; 149 >
-      au < expected ; 2022 ; 2022 ; Pediatrics Volume 150 ; 150 >
+      au < manifest ; 2022 ; 2022 ; Pediatrics Volume 150 ; 150 >
 
     }
 

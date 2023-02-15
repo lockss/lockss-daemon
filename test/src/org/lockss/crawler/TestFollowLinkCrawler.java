@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.crawler;
 
 import java.util.*;
+import java.util.stream.*;
 import java.io.*;
 
 import org.apache.commons.collections.set.*;
@@ -171,6 +172,36 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 		 cs.getUrlsWithErrors());
   }
 
+  public void testCrawlSeedReturnsDuplicates()
+      throws ConfigurationException, PluginException, IOException {
+
+    String addlUrl1 = "http://www.example2.com/index2.html";
+    String addlUrl2 = "http://www.example3.com/index3.html";
+    mau.addUrlToBeCached(startUrl);
+    mau.addUrlToBeCached(permissionUrl);
+    mau.addUrlToBeCached(addlUrl1);
+    mau.addUrlToBeCached(addlUrl2);
+
+    MyBaseCrawlSeed bcs = new MyBaseCrawlSeed(mau);
+    List moreStartUrls = ListUtil.list(addlUrl1, addlUrl1, addlUrl2);
+    startUrls.addAll(moreStartUrls);
+    bcs.setStartUrls(startUrls);
+    mau.setCrawlSeed(bcs);
+
+    assertEquals(startUrls, bcs.getStartUrls());
+    crawler.enqueueStartUrls();
+
+    CrawlerStatus cs = crawler.getCrawlerStatus();
+    assertEquals(Crawler.STATUS_QUEUED, cs.getCrawlStatus());
+    assertEmpty(cs.getUrlsWithErrors());
+    crawler.getFetchQueue();
+    List<String> queuedUrls = crawler.getFetchQueue().asList().stream()
+      .map(cData -> cData.getUrl())
+      .collect(Collectors.toList());
+    assertSameElements(SetUtil.set(startUrl, addlUrl1, addlUrl2),
+                       queuedUrls);
+  }
+
   class MyBaseCrawlSeed extends BaseCrawlSeed {
     List<String> startUrls;
 
@@ -184,7 +215,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 	log.critical("doGetStartUrls: " + super.doGetStartUrls());
 	return super.doGetStartUrls();
       }
-      log.critical("doGetStartUrls: " + startUrls);
+      log.debug("doGetStartUrls: " + startUrls);
       return startUrls;
     }
     void setStartUrls(List<String> urls) {
@@ -1412,6 +1443,10 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 			  Map<String,CrawlUrlData> maxDepthUrls) {
       return new MyLinkExtractorCallback(au, curl, fetchQueue,
 					 processedUrls, maxDepthUrls);
+    }
+
+    private CrawlQueue getFetchQueue() {
+      return fetchQueue;
     }
 
     @Override

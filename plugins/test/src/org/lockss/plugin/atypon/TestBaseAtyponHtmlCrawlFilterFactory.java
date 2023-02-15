@@ -438,9 +438,28 @@ public class TestBaseAtyponHtmlCrawlFilterFactory extends LockssTestCase {
         "</div>" +
       "</div>";
 
-    String filteredGlma20582 =
-      "<div class=\"articleEntry\" data-order=\"1\" data-section=\"Original Articles\" data-pub-date=\"1230883200000\" data-page=\"1.13\" data-view-count=\"267\" data-cited-count=\"0\">" +
-      "</div>";
+    String filteredGlma20582 = "<div class=\"articleEntry\" data-order=\"1\" data-section=\"Original Articles\" data-pub-date=\"1230883200000\" data-page=\"1.13\" data-view-count=\"267\" data-cited-count=\"0\"></div>";
+
+    // Real sample from https://www.future-science.com/doi/full/10.2144/000113771
+    /*
+    <div data-db-target-of="b83a9112-ff13-4233-be12-8a37252f58fb" aria-labelledby="b83a9112-ff13-4233-be12-8a37252f58fb_Ctrl" role="menu" id="b83a9112-ff13-4233-be12-8a37252f58fb_Pop" class="article-tools__block fixed dropBlock__holder">
+    <ul class="rlist w-slide--list">
+        <li role="presentation" class="article-tool"><a href="/personalize/addFavoritePublication?doi=10.2144%2F000113771" role="menuitem"><i aria-hidden="true" class="icon-Icon_Star-26"></i><span>Add to favorites</span></a></li>
+        <li role="presentation" class="article-tool"><a href="/action/showCitFormats?doi=10.2144%2F000113771" role="menuitem"><i aria-hidden="true" class="icon-Icon_Download"></i><span>Download Citations</span></a></li>
+        <li role="presentation" class="article-tool"><a href="/action/addCitationAlert?doi=10.2144%2F000113771" role="menuitem"><i aria-hidden="true" class="icon-Icon_Track-citations"></i><span>Track Citations</span></a></li>
+    </ul>
+</div>
+     */
+    String originalToolsDiv = "<div data-db-target-of=\"b83a9112-ff13-4233-be12-8a37252f58fb\" aria-labelledby=\"b83a9112-ff13-4233-be12-8a37252f58fb_Ctrl\" role=\"menu\" id=\"b83a9112-ff13-4233-be12-8a37252f58fb_Pop\" class=\"article-tools__block fixed dropBlock__holder\">\n" +
+            "    <ul class=\"rlist w-slide--list\">\n" +
+            "        <li role=\"presentation\" class=\"article-tool\"><a href=\"/personalize/addFavoritePublication?doi=10.2144%2F000113771\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-Icon_Star-26\"></i><span>Add to favorites</span></a></li>\n" +
+            "        <li role=\"presentation\" class=\"article-tool\"><a href=\"/action/showCitFormats?doi=10.2144%2F000113771\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-Icon_Download\"></i><span>Download Citations</span></a></li>\n" +
+            "        <li role=\"presentation\" class=\"article-tool\"><a href=\"/action/addCitationAlert?doi=10.2144%2F000113771\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-Icon_Track-citations\"></i><span>Track Citations</span></a></li>\n" +
+            "    </ul>\n" +
+            "</div>";
+
+    String filteredToolsDiv = "<div data-db-target-of=\"b83a9112-ff13-4233-be12-8a37252f58fb\" aria-labelledby=\"b83a9112-ff13-4233-be12-8a37252f58fb_Ctrl\" role=\"menu\" id=\"b83a9112-ff13-4233-be12-8a37252f58fb_Pop\" class=\"article-tools__block fixed dropBlock__holder\"><ul class=\"rlist w-slide--list\"><li role=\"presentation\" class=\"article-tool\"><a href=\"/action/showCitFormats?doi=10.2144%2F000113771\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-Icon_Download\"></i><span>Download Citations</span></a></li></ul></div>";
+    
 
     InputStream inStream;
     inStream = fact.createFilteredInputStream(mau,
@@ -453,7 +472,17 @@ public class TestBaseAtyponHtmlCrawlFilterFactory extends LockssTestCase {
     inStream2 = fact.createFilteredInputStream(mau,
         new StringInputStream(glma20582),
         Constants.DEFAULT_ENCODING);
+
     assertEquals(filteredGlma20582, StringUtil.fromInputStream(inStream2));
+
+
+    InputStream inStream3;
+    inStream3 = fact.createFilteredInputStream(mau,
+            new StringInputStream(originalToolsDiv),
+            Constants.DEFAULT_ENCODING);
+
+    ////log.info(StringUtil.fromInputStream(inStream3));
+    assertEquals(filteredToolsDiv, StringUtil.fromInputStream(inStream3));
 
   }
 

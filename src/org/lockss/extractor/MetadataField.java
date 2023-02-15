@@ -76,12 +76,12 @@ public class MetadataField {
     @Override
     public String validate(ArticleMetadata am, String val)
         throws MetadataException.ValidationException {
-      // normalize away leading "doi:" before checking vaEND_PAGElidity
-      String doi = StringUtils.removeStartIgnoreCase(val, PROTOCOL_DOI);
-      if (!MetadataUtil.isDoi(doi)) {
-        throw new MetadataException.ValidationException("Illegal DOI: " + val);
+      // normalize and check validity
+      try {
+        return MetadataUtil.sanitizeDoi(val);
+      } catch (IllegalArgumentException e) {
+        throw new MetadataException.ValidationException(e.getMessage());
       }
-      return doi;
     }
   };
 

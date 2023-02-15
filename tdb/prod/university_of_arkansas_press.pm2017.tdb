@@ -10,6 +10,28 @@
 
     {
     title <
+      name = Artivate ;
+      eissn = 2164-7747
+    >
+
+      attr[journal_id] = 816
+
+      au < manifest ; 2022 ; Artivate Volume 11 [2022] ; 17379 >
+      au < released ; 2012 ; Artivate Volume 1 [2012] ; 16145 >
+      au < released ; 2013 ; Artivate Volume 2 [2013] ; 16146 >
+      au < released ; 2014 ; Artivate Volume 3 [2014] ; 16147 >
+      au < released ; 2015 ; Artivate Volume 4 [2015] ; 16148 >
+      au < released ; 2016 ; Artivate Volume 5 [2016] ; 16149 >
+      au < released ; 2017 ; Artivate Volume 6 [2017] ; 16150 >
+      au < released ; 2018 ; Artivate Volume 7 [2018] ; 16151 >
+      au < released ; 2019 ; Artivate Volume 8 [2019] ; 16152 >
+      au < released ; 2020 ; Artivate Volume 9 [2020] ; 16153 >
+      au < released ; 2021 ; Artivate Volume 10 [2021] ; 16154 >
+
+    }
+
+    {
+    title <
       name = Philosophical Topics ;
       issn = 0276-2080  ;
       issnl = 0276-2080
@@ -29,7 +51,8 @@
         au < released ; 2018 ; Philosophical Topics Volume 46 [2018] ; 13624 >
         au < released ; 2019 ; Philosophical Topics Volume 47 [2019] ; 15267 >
         au < released ; 2020 ; Philosophical Topics Volume 48 [2020] ; 16709 >
-        au < manifest ; 2021 ; Philosophical Topics Volume 49 [2021] ; 17017 >
+        au < released ; 2021 ; Philosophical Topics Volume 49 [2021] ; 17017 >
+        au < manifest ; 2022 ; Philosophical Topics Volume 50 [2022] ; 17464 >
 
     }
 

@@ -1,7 +1,6 @@
 /*
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -37,14 +36,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.lockss.daemon.Crawler.CrawlerFacade;
@@ -267,6 +259,24 @@ public class IUCrOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
   @Override
   public boolean isFailOnStartUrlError() {
     return false;
+  }
+  
+  @Override
+  public Collection<String> doGetStartUrls()
+      throws ConfigurationException,
+             PluginException,
+             IOException {
+    Collection<String> ret = new ArrayList<>();
+    /*
+     * Permission URLs don't all get fetched. This causes problems in the
+     * CLOCKSS reingest proxy scenario, for instance. Include all the permission
+     * URLs as start URLs. Note: duplicative URLs result in "URL comparator
+     * error, can't add to queue: Illegal to replace entry", need to deduplicate
+     * permission URLs (which in this plugin sometimes overlap).
+     */
+    ret.addAll(new LinkedHashSet<>(doGetPermissionUrls()));
+    ret.addAll(super.doGetStartUrls());
+    return ret;
   }
   
 }

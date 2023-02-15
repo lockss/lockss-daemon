@@ -25,10 +25,10 @@ public class IntechOpenBookOnix3XmlMetadataExtractorFactory extends SourceXmlMet
     public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
                                                              String contentType)
             throws PluginException {
-        return new LiverpoolOnix3XmlMetadataExtractor();
+        return new IntechOpenOnix3XmlMetadataExtractor();
     }
 
-    public class LiverpoolOnix3XmlMetadataExtractor extends SourceXmlMetadataExtractor {
+    public class IntechOpenOnix3XmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
         @Override
         protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {

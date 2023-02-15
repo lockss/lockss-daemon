@@ -35,6 +35,7 @@ package org.lockss.plugin.clockss.onixbooks;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.lockss.plugin.clockss.Onix3BooksSchemaHelper;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -61,7 +62,7 @@ public class AthabascaOnix3SourceXmlMetadataExtractorFactory extends SourceXmlMe
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it, just keep returning the same one. It won't change.
       if (Onix3Helper == null) {
-        Onix3Helper = new Onix3LongSchemaHelper();
+        Onix3Helper = new Onix3BooksSchemaHelper();
       }
       return Onix3Helper;
     }

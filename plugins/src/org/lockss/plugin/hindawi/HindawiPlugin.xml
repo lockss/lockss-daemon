@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>5</string>
+        <string>6</string>
     </entry>
     <entry>
         <string>au_name</string>
@@ -33,7 +33,7 @@
             </entry>
             <entry>
                 <string>Metadata</string>
-                <string>1</string>
+                <string>2</string>
             </entry>
         </map>
     </entry>
@@ -157,7 +157,7 @@
         <string>au_permitted_host_pattern</string>
         <list>
           <string>images\.hindawi\.com</string>
-          <string>static-01\.hindawi\.com</string>
+          <string>static-\d+\.hindawi\.com</string>
           <string>(fonts|ajax)\.(googleapis|gstatic)\.com</string>
           <string>cdnjs\.cloudflare\.com</string>
           <string>fast\.fonts\.net</string>

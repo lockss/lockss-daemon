@@ -1,4 +1,34 @@
 /*
+ * Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ * this list of conditions and the following disclaimer in the documentation
+ * and/or other materials provided with the distribution.
+ *
+ * 3. Neither the name of the copyright holder nor the names of its contributors
+ * may be used to endorse or promote products derived from this software without
+ * specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+*/
+
+/*
  * LOCKSS Configuration Service REST API
  * REST API of the LOCKSS Configuration Service
  *
@@ -10,7 +40,6 @@
  * Do not edit the class manually.
  */
 
-
 package org.lockss.laaws.model.cfg;
 
 import com.google.gson.TypeAdapter;
@@ -19,18 +48,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  * The status of an archival unit
  */
 @ApiModel(description = "The status of an archival unit")
-public class CheckSubstanceResult {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+public class CheckSubstanceResult implements Serializable {
+  private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private String id;
+  @SerializedName(SERIALIZED_NAME_ID) private String id;
 
   /**
    * An indication of whether the result is successful
@@ -43,7 +75,7 @@ public class CheckSubstanceResult {
 
     NO("No");
 
-    private final String value;
+    private String value;
 
     OldStateEnum(String value) {
       this.value = value;
@@ -68,10 +100,9 @@ public class CheckSubstanceResult {
     }
 
     public static class Adapter extends TypeAdapter<OldStateEnum> {
-
       @Override
       public void write(final JsonWriter jsonWriter, final OldStateEnum enumeration)
-        throws IOException {
+          throws IOException {
         jsonWriter.value(enumeration.getValue());
       }
 
@@ -84,8 +115,7 @@ public class CheckSubstanceResult {
   }
 
   public static final String SERIALIZED_NAME_OLD_STATE = "oldState";
-  @SerializedName(SERIALIZED_NAME_OLD_STATE)
-  private OldStateEnum oldState;
+  @SerializedName(SERIALIZED_NAME_OLD_STATE) private OldStateEnum oldState;
 
   /**
    * An indication of whether the result is successful
@@ -98,7 +128,7 @@ public class CheckSubstanceResult {
 
     NO("No");
 
-    private final String value;
+    private String value;
 
     NewStateEnum(String value) {
       this.value = value;
@@ -123,10 +153,9 @@ public class CheckSubstanceResult {
     }
 
     public static class Adapter extends TypeAdapter<NewStateEnum> {
-
       @Override
       public void write(final JsonWriter jsonWriter, final NewStateEnum enumeration)
-        throws IOException {
+          throws IOException {
         jsonWriter.value(enumeration.getValue());
       }
 
@@ -139,101 +168,92 @@ public class CheckSubstanceResult {
   }
 
   public static final String SERIALIZED_NAME_NEW_STATE = "newState";
-  @SerializedName(SERIALIZED_NAME_NEW_STATE)
-  private NewStateEnum newState;
+  @SerializedName(SERIALIZED_NAME_NEW_STATE) private NewStateEnum newState;
 
   public static final String SERIALIZED_NAME_ERROR_MESSAGE = "errorMessage";
-  @SerializedName(SERIALIZED_NAME_ERROR_MESSAGE)
-  private String errorMessage;
+  @SerializedName(SERIALIZED_NAME_ERROR_MESSAGE) private String errorMessage;
 
+  public CheckSubstanceResult() {}
 
   public CheckSubstanceResult id(String id) {
-
     this.id = id;
     return this;
   }
 
   /**
    * The identifier of the archival unit
-   *
    * @return id
    **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "The identifier of the archival unit")
 
   public String getId() {
     return id;
   }
 
-
   public void setId(String id) {
     this.id = id;
   }
 
-
   public CheckSubstanceResult oldState(OldStateEnum oldState) {
-
     this.oldState = oldState;
     return this;
   }
 
   /**
    * An indication of whether the result is successful
-   *
    * @return oldState
    **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "An indication of whether the result is successful")
 
   public OldStateEnum getOldState() {
     return oldState;
   }
 
-
   public void setOldState(OldStateEnum oldState) {
     this.oldState = oldState;
   }
 
-
   public CheckSubstanceResult newState(NewStateEnum newState) {
-
     this.newState = newState;
     return this;
   }
 
   /**
    * An indication of whether the result is successful
-   *
    * @return newState
    **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "An indication of whether the result is successful")
 
   public NewStateEnum getNewState() {
     return newState;
   }
 
-
   public void setNewState(NewStateEnum newState) {
     this.newState = newState;
   }
 
-
   public CheckSubstanceResult errorMessage(String errorMessage) {
-
     this.errorMessage = errorMessage;
     return this;
   }
 
   /**
    * The error message as a result of the operation
-   *
    * @return errorMessage
    **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "The error message as a result of the operation")
 
   public String getErrorMessage() {
     return errorMessage;
   }
 
-
   public void setErrorMessage(String errorMessage) {
     this.errorMessage = errorMessage;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -244,17 +264,16 @@ public class CheckSubstanceResult {
       return false;
     }
     CheckSubstanceResult checkSubstanceResult = (CheckSubstanceResult) o;
-    return Objects.equals(this.id, checkSubstanceResult.id) &&
-      Objects.equals(this.oldState, checkSubstanceResult.oldState) &&
-      Objects.equals(this.newState, checkSubstanceResult.newState) &&
-      Objects.equals(this.errorMessage, checkSubstanceResult.errorMessage);
+    return Objects.equals(this.id, checkSubstanceResult.id)
+        && Objects.equals(this.oldState, checkSubstanceResult.oldState)
+        && Objects.equals(this.newState, checkSubstanceResult.newState)
+        && Objects.equals(this.errorMessage, checkSubstanceResult.errorMessage);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(id, oldState, newState, errorMessage);
   }
-
 
   @Override
   public String toString() {
@@ -278,6 +297,4 @@ public class CheckSubstanceResult {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

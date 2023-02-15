@@ -235,7 +235,7 @@
   {
 
     title <
-      name = Journal of Clinical Endocrinology & Metabolism ;
+      name = The Journal of Clinical Endocrinology & Metabolism ;
       issn = 0021-972X ;
       eissn = 1945-7197 ;
       issnl = 0021-972X
@@ -248,104 +248,104 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
       comment[notReady] = .full.pdf+html not sync
 
-      au < HighWirePressH20Plugin ; down ; 1941 ; Journal of Clinical Endocrinology & Metabolism Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; down ; 1942 ; Journal of Clinical Endocrinology & Metabolism Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; down ; 1943 ; Journal of Clinical Endocrinology & Metabolism Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; down ; 1944 ; Journal of Clinical Endocrinology & Metabolism Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; down ; 1945 ; Journal of Clinical Endocrinology & Metabolism Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; down ; 1946 ; Journal of Clinical Endocrinology & Metabolism Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; down ; 1947 ; Journal of Clinical Endocrinology & Metabolism Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; down ; 1948 ; Journal of Clinical Endocrinology & Metabolism Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; down ; 1949 ; Journal of Clinical Endocrinology & Metabolism Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; down ; 1950 ; Journal of Clinical Endocrinology & Metabolism Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; down ; 1951 ; Journal of Clinical Endocrinology & Metabolism Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; down ; 1952 ; Journal of Clinical Endocrinology & Metabolism Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; down ; 1953 ; Journal of Clinical Endocrinology & Metabolism Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; down ; 1954 ; Journal of Clinical Endocrinology & Metabolism Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; down ; 1955 ; Journal of Clinical Endocrinology & Metabolism Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; down ; 1956 ; Journal of Clinical Endocrinology & Metabolism Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; down ; 1957 ; Journal of Clinical Endocrinology & Metabolism Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; down ; 1958 ; Journal of Clinical Endocrinology & Metabolism Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; down ; 1959 ; Journal of Clinical Endocrinology & Metabolism Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; down ; 1960 ; Journal of Clinical Endocrinology & Metabolism Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; down ; 1961 ; Journal of Clinical Endocrinology & Metabolism Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1962 ; Journal of Clinical Endocrinology & Metabolism Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; down ; 1963 ; Journal of Clinical Endocrinology & Metabolism Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1964 ; Journal of Clinical Endocrinology & Metabolism Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; down ; 1965 ; Journal of Clinical Endocrinology & Metabolism Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; down ; 1966 ; Journal of Clinical Endocrinology & Metabolism Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; down ; 1967 ; Journal of Clinical Endocrinology & Metabolism Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1968 ; Journal of Clinical Endocrinology & Metabolism Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; down ; 1969 ; Journal of Clinical Endocrinology & Metabolism Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; down ; 1970 ; Journal of Clinical Endocrinology & Metabolism Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; down ; 1970 ; Journal of Clinical Endocrinology & Metabolism Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; down ; 1971 ; Journal of Clinical Endocrinology & Metabolism Volume 32 ; 32 >
-      au < HighWirePressH20Plugin ; down ; 1971 ; Journal of Clinical Endocrinology & Metabolism Volume 33 ; 33 >
-      au < HighWirePressH20Plugin ; down ; 1972 ; Journal of Clinical Endocrinology & Metabolism Volume 34 ; 34 >
-      au < HighWirePressH20Plugin ; down ; 1972 ; Journal of Clinical Endocrinology & Metabolism Volume 35 ; 35 >
-      au < HighWirePressH20Plugin ; down ; 1973 ; Journal of Clinical Endocrinology & Metabolism Volume 36 ; 36 >
-      au < HighWirePressH20Plugin ; down ; 1973 ; Journal of Clinical Endocrinology & Metabolism Volume 37 ; 37 >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1974 ; Journal of Clinical Endocrinology & Metabolism Volume 38 ; 38 >
-      au < HighWirePressH20Plugin ; down ; 1974 ; Journal of Clinical Endocrinology & Metabolism Volume 39 ; 39 >
-      au < HighWirePressH20Plugin ; down ; 1975 ; Journal of Clinical Endocrinology & Metabolism Volume 40 ; 40 >
-      au < HighWirePressH20Plugin ; down ; 1975 ; Journal of Clinical Endocrinology & Metabolism Volume 41 ; 41 >
-      au < HighWirePressH20Plugin ; down ; 1976 ; Journal of Clinical Endocrinology & Metabolism Volume 42 ; 42 >
-      au < HighWirePressH20Plugin ; down ; 1976 ; Journal of Clinical Endocrinology & Metabolism Volume 43 ; 43 >
-      au < HighWirePressH20Plugin ; down ; 1977 ; Journal of Clinical Endocrinology & Metabolism Volume 44 ; 44 >
-      au < HighWirePressH20Plugin ; down ; 1977 ; Journal of Clinical Endocrinology & Metabolism Volume 45 ; 45 >
-      au < HighWirePressH20Plugin ; down ; 1978 ; Journal of Clinical Endocrinology & Metabolism Volume 46 ; 46 >
-      au < HighWirePressH20Plugin ; down ; 1978 ; Journal of Clinical Endocrinology & Metabolism Volume 47 ; 47 >
-      au < HighWirePressH20Plugin ; down ; 1979 ; Journal of Clinical Endocrinology & Metabolism Volume 48 ; 48 >
-      au < HighWirePressH20Plugin ; down ; 1979 ; Journal of Clinical Endocrinology & Metabolism Volume 49 ; 49 >
-      au < HighWirePressH20Plugin ; down ; 1980 ; Journal of Clinical Endocrinology & Metabolism Volume 50 ; 50 >
-      au < HighWirePressH20Plugin ; down ; 1980 ; Journal of Clinical Endocrinology & Metabolism Volume 51 ; 51 >
-      au < HighWirePressH20Plugin ; down ; 1981 ; Journal of Clinical Endocrinology & Metabolism Volume 52 ; 52 >
-      au < HighWirePressH20Plugin ; down ; 1981 ; Journal of Clinical Endocrinology & Metabolism Volume 53 ; 53 >
-      au < HighWirePressH20Plugin ; down ; 1982 ; Journal of Clinical Endocrinology & Metabolism Volume 54 ; 54 >
-      au < HighWirePressH20Plugin ; down ; 1982 ; Journal of Clinical Endocrinology & Metabolism Volume 55 ; 55 >
-      au < HighWirePressH20Plugin ; down ; 1983 ; Journal of Clinical Endocrinology & Metabolism Volume 56 ; 56 >
-      au < HighWirePressH20Plugin ; down ; 1983 ; Journal of Clinical Endocrinology & Metabolism Volume 57 ; 57 >
-      au < HighWirePressH20Plugin ; down ; 1984 ; Journal of Clinical Endocrinology & Metabolism Volume 58 ; 58 >
-      au < HighWirePressH20Plugin ; down ; 1984 ; Journal of Clinical Endocrinology & Metabolism Volume 59 ; 59 >
-      au < HighWirePressH20Plugin ; down ; 1985 ; Journal of Clinical Endocrinology & Metabolism Volume 60 ; 60 >
-      au < HighWirePressH20Plugin ; down ; 1985 ; Journal of Clinical Endocrinology & Metabolism Volume 61 ; 61 >
-      au < HighWirePressH20Plugin ; down ; 1986 ; Journal of Clinical Endocrinology & Metabolism Volume 62 ; 62 >
-      au < HighWirePressH20Plugin ; down ; 1986 ; Journal of Clinical Endocrinology & Metabolism Volume 63 ; 63 >
-      au < HighWirePressH20Plugin ; down ; 1987 ; Journal of Clinical Endocrinology & Metabolism Volume 64 ; 64 >
-      au < HighWirePressH20Plugin ; down ; 1987 ; Journal of Clinical Endocrinology & Metabolism Volume 65 ; 65 >
-      au < HighWirePressH20Plugin ; down ; 1988 ; Journal of Clinical Endocrinology & Metabolism Volume 66 ; 66 >
-      au < HighWirePressH20Plugin ; down ; 1988 ; Journal of Clinical Endocrinology & Metabolism Volume 67 ; 67 >
-      au < HighWirePressH20Plugin ; down ; 1989 ; Journal of Clinical Endocrinology & Metabolism Volume 68 ; 68 >
-      au < HighWirePressH20Plugin ; down ; 1989 ; Journal of Clinical Endocrinology & Metabolism Volume 69 ; 69 >
-      au < HighWirePressH20Plugin ; down ; 1990 ; Journal of Clinical Endocrinology & Metabolism Volume 70 ; 70 >
-      au < HighWirePressH20Plugin ; down ; 1990 ; Journal of Clinical Endocrinology & Metabolism Volume 71 ; 71 >
-      au < HighWirePressH20Plugin ; down ; 1991 ; Journal of Clinical Endocrinology & Metabolism Volume 72 ; 72 >
-      au < HighWirePressH20Plugin ; down ; 1991 ; Journal of Clinical Endocrinology & Metabolism Volume 73 ; 73 >
-      au < HighWirePressH20Plugin ; down ; 1992 ; Journal of Clinical Endocrinology & Metabolism Volume 74 ; 74 >
-      au < HighWirePressH20Plugin ; down ; 1992 ; Journal of Clinical Endocrinology & Metabolism Volume 75 ; 75 >
-      au < HighWirePressH20Plugin ; down ; 1993 ; Journal of Clinical Endocrinology & Metabolism Volume 76 ; 76 >
-      au < HighWirePressH20Plugin ; down ; 1993 ; Journal of Clinical Endocrinology & Metabolism Volume 77 ; 77 >
-      au < HighWirePressH20Plugin ; down ; 1994 ; Journal of Clinical Endocrinology & Metabolism Volume 78 ; 78 >
-      au < HighWirePressH20Plugin ; down ; 1994 ; Journal of Clinical Endocrinology & Metabolism Volume 79 ; 79 >
-      au < HighWirePressH20Plugin ; down ; 1995 ; Journal of Clinical Endocrinology & Metabolism Volume 80 ; 80 >
-      au < HighWirePressH20Plugin ; down ; 1996 ; Journal of Clinical Endocrinology & Metabolism Volume 81 ; 81 >
-      au < HighWirePressH20Plugin ; down ; 1997 ; Journal of Clinical Endocrinology & Metabolism Volume 82 ; 82 >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; Journal of Clinical Endocrinology & Metabolism Volume 83 ; 83 >
-      au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; Journal of Clinical Endocrinology & Metabolism Volume 84 ; 84 >
-      au < HighWirePressH20Plugin ; down ; 2000 ; Journal of Clinical Endocrinology & Metabolism Volume 85 ; 85 >
-      au < HighWirePressH20Plugin ; down ; 2001 ; Journal of Clinical Endocrinology & Metabolism Volume 86 ; 86 >
-      au < HighWirePressH20Plugin ; down ; 2002 ; Journal of Clinical Endocrinology & Metabolism Volume 87 ; 87 >
-      au < HighWirePressH20Plugin ; down ; 2003 ; Journal of Clinical Endocrinology & Metabolism Volume 88 ; 88 >
-      au < HighWirePressH20Plugin ; down ; 2004 ; Journal of Clinical Endocrinology & Metabolism Volume 89 ; 89 >
-      au < HighWirePressPlugin ; down ; 2005 ; Journal of Clinical Endocrinology & Metabolism Volume 90 ; 90 >
-      au < HighWirePressPlugin ; down ; 2006 ; Journal of Clinical Endocrinology & Metabolism Volume 91 ; 91 >
-      au < HighWirePressPlugin ; down ; 2007 ; Journal of Clinical Endocrinology & Metabolism Volume 92 ; 92 >
-      au < HighWirePressPlugin ; down ; 2008 ; Journal of Clinical Endocrinology & Metabolism Volume 93 ; 93 >
-      au < HighWirePressPlugin ; down ; 2009 ; Journal of Clinical Endocrinology & Metabolism Volume 94 ; 94 >
-      au < HighWirePressH20Plugin ; down ; 2010 ; Journal of Clinical Endocrinology & Metabolism Volume 95 ; 95 >
-      au < HighWirePressH20Plugin ; down ; 2011 ; Journal of Clinical Endocrinology & Metabolism Volume 96 ; 96 >
-      au < HighWirePressH20Plugin ; down ; 2012 ; Journal of Clinical Endocrinology & Metabolism Volume 97 ; 97 >
-      au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Journal of Clinical Endocrinology & Metabolism Volume 98 ; 98 >
+      au < HighWirePressH20Plugin ; down ; 1941 ; The Journal of Clinical Endocrinology & Metabolism Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; down ; 1942 ; The Journal of Clinical Endocrinology & Metabolism Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; down ; 1943 ; The Journal of Clinical Endocrinology & Metabolism Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; down ; 1944 ; The Journal of Clinical Endocrinology & Metabolism Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; down ; 1945 ; The Journal of Clinical Endocrinology & Metabolism Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; down ; 1946 ; The Journal of Clinical Endocrinology & Metabolism Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; down ; 1947 ; The Journal of Clinical Endocrinology & Metabolism Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; down ; 1948 ; The Journal of Clinical Endocrinology & Metabolism Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; down ; 1949 ; The Journal of Clinical Endocrinology & Metabolism Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; down ; 1950 ; The Journal of Clinical Endocrinology & Metabolism Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; down ; 1951 ; The Journal of Clinical Endocrinology & Metabolism Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; down ; 1952 ; The Journal of Clinical Endocrinology & Metabolism Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; down ; 1953 ; The Journal of Clinical Endocrinology & Metabolism Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; down ; 1954 ; The Journal of Clinical Endocrinology & Metabolism Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; down ; 1955 ; The Journal of Clinical Endocrinology & Metabolism Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; down ; 1956 ; The Journal of Clinical Endocrinology & Metabolism Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; down ; 1957 ; The Journal of Clinical Endocrinology & Metabolism Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; down ; 1958 ; The Journal of Clinical Endocrinology & Metabolism Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; down ; 1959 ; The Journal of Clinical Endocrinology & Metabolism Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; down ; 1960 ; The Journal of Clinical Endocrinology & Metabolism Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; down ; 1961 ; The Journal of Clinical Endocrinology & Metabolism Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1962 ; The Journal of Clinical Endocrinology & Metabolism Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; down ; 1963 ; The Journal of Clinical Endocrinology & Metabolism Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1964 ; The Journal of Clinical Endocrinology & Metabolism Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; down ; 1965 ; The Journal of Clinical Endocrinology & Metabolism Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; down ; 1966 ; The Journal of Clinical Endocrinology & Metabolism Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; down ; 1967 ; The Journal of Clinical Endocrinology & Metabolism Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1968 ; The Journal of Clinical Endocrinology & Metabolism Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; down ; 1969 ; The Journal of Clinical Endocrinology & Metabolism Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; down ; 1970 ; The Journal of Clinical Endocrinology & Metabolism Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; down ; 1970 ; The Journal of Clinical Endocrinology & Metabolism Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; down ; 1971 ; The Journal of Clinical Endocrinology & Metabolism Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; down ; 1971 ; The Journal of Clinical Endocrinology & Metabolism Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; down ; 1972 ; The Journal of Clinical Endocrinology & Metabolism Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; down ; 1972 ; The Journal of Clinical Endocrinology & Metabolism Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; down ; 1973 ; The Journal of Clinical Endocrinology & Metabolism Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; down ; 1973 ; The Journal of Clinical Endocrinology & Metabolism Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1974 ; The Journal of Clinical Endocrinology & Metabolism Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; down ; 1974 ; The Journal of Clinical Endocrinology & Metabolism Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; down ; 1975 ; The Journal of Clinical Endocrinology & Metabolism Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; down ; 1975 ; The Journal of Clinical Endocrinology & Metabolism Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; down ; 1976 ; The Journal of Clinical Endocrinology & Metabolism Volume 42 ; 42 >
+      au < HighWirePressH20Plugin ; down ; 1976 ; The Journal of Clinical Endocrinology & Metabolism Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; down ; 1977 ; The Journal of Clinical Endocrinology & Metabolism Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; down ; 1977 ; The Journal of Clinical Endocrinology & Metabolism Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; down ; 1978 ; The Journal of Clinical Endocrinology & Metabolism Volume 46 ; 46 >
+      au < HighWirePressH20Plugin ; down ; 1978 ; The Journal of Clinical Endocrinology & Metabolism Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; down ; 1979 ; The Journal of Clinical Endocrinology & Metabolism Volume 48 ; 48 >
+      au < HighWirePressH20Plugin ; down ; 1979 ; The Journal of Clinical Endocrinology & Metabolism Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; down ; 1980 ; The Journal of Clinical Endocrinology & Metabolism Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; down ; 1980 ; The Journal of Clinical Endocrinology & Metabolism Volume 51 ; 51 >
+      au < HighWirePressH20Plugin ; down ; 1981 ; The Journal of Clinical Endocrinology & Metabolism Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; down ; 1981 ; The Journal of Clinical Endocrinology & Metabolism Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; down ; 1982 ; The Journal of Clinical Endocrinology & Metabolism Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; down ; 1982 ; The Journal of Clinical Endocrinology & Metabolism Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; down ; 1983 ; The Journal of Clinical Endocrinology & Metabolism Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; down ; 1983 ; The Journal of Clinical Endocrinology & Metabolism Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; down ; 1984 ; The Journal of Clinical Endocrinology & Metabolism Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; down ; 1984 ; The Journal of Clinical Endocrinology & Metabolism Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; down ; 1985 ; The Journal of Clinical Endocrinology & Metabolism Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; down ; 1985 ; The Journal of Clinical Endocrinology & Metabolism Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; down ; 1986 ; The Journal of Clinical Endocrinology & Metabolism Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; down ; 1986 ; The Journal of Clinical Endocrinology & Metabolism Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; down ; 1987 ; The Journal of Clinical Endocrinology & Metabolism Volume 64 ; 64 >
+      au < HighWirePressH20Plugin ; down ; 1987 ; The Journal of Clinical Endocrinology & Metabolism Volume 65 ; 65 >
+      au < HighWirePressH20Plugin ; down ; 1988 ; The Journal of Clinical Endocrinology & Metabolism Volume 66 ; 66 >
+      au < HighWirePressH20Plugin ; down ; 1988 ; The Journal of Clinical Endocrinology & Metabolism Volume 67 ; 67 >
+      au < HighWirePressH20Plugin ; down ; 1989 ; The Journal of Clinical Endocrinology & Metabolism Volume 68 ; 68 >
+      au < HighWirePressH20Plugin ; down ; 1989 ; The Journal of Clinical Endocrinology & Metabolism Volume 69 ; 69 >
+      au < HighWirePressH20Plugin ; down ; 1990 ; The Journal of Clinical Endocrinology & Metabolism Volume 70 ; 70 >
+      au < HighWirePressH20Plugin ; down ; 1990 ; The Journal of Clinical Endocrinology & Metabolism Volume 71 ; 71 >
+      au < HighWirePressH20Plugin ; down ; 1991 ; The Journal of Clinical Endocrinology & Metabolism Volume 72 ; 72 >
+      au < HighWirePressH20Plugin ; down ; 1991 ; The Journal of Clinical Endocrinology & Metabolism Volume 73 ; 73 >
+      au < HighWirePressH20Plugin ; down ; 1992 ; The Journal of Clinical Endocrinology & Metabolism Volume 74 ; 74 >
+      au < HighWirePressH20Plugin ; down ; 1992 ; The Journal of Clinical Endocrinology & Metabolism Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; down ; 1993 ; The Journal of Clinical Endocrinology & Metabolism Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; down ; 1993 ; The Journal of Clinical Endocrinology & Metabolism Volume 77 ; 77 >
+      au < HighWirePressH20Plugin ; down ; 1994 ; The Journal of Clinical Endocrinology & Metabolism Volume 78 ; 78 >
+      au < HighWirePressH20Plugin ; down ; 1994 ; The Journal of Clinical Endocrinology & Metabolism Volume 79 ; 79 >
+      au < HighWirePressH20Plugin ; down ; 1995 ; The Journal of Clinical Endocrinology & Metabolism Volume 80 ; 80 >
+      au < HighWirePressH20Plugin ; down ; 1996 ; The Journal of Clinical Endocrinology & Metabolism Volume 81 ; 81 >
+      au < HighWirePressH20Plugin ; down ; 1997 ; The Journal of Clinical Endocrinology & Metabolism Volume 82 ; 82 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; The Journal of Clinical Endocrinology & Metabolism Volume 83 ; 83 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; The Journal of Clinical Endocrinology & Metabolism Volume 84 ; 84 >
+      au < HighWirePressH20Plugin ; down ; 2000 ; The Journal of Clinical Endocrinology & Metabolism Volume 85 ; 85 >
+      au < HighWirePressH20Plugin ; down ; 2001 ; The Journal of Clinical Endocrinology & Metabolism Volume 86 ; 86 >
+      au < HighWirePressH20Plugin ; down ; 2002 ; The Journal of Clinical Endocrinology & Metabolism Volume 87 ; 87 >
+      au < HighWirePressH20Plugin ; down ; 2003 ; The Journal of Clinical Endocrinology & Metabolism Volume 88 ; 88 >
+      au < HighWirePressH20Plugin ; down ; 2004 ; The Journal of Clinical Endocrinology & Metabolism Volume 89 ; 89 >
+      au < HighWirePressPlugin ; down ; 2005 ; The Journal of Clinical Endocrinology & Metabolism Volume 90 ; 90 >
+      au < HighWirePressPlugin ; down ; 2006 ; The Journal of Clinical Endocrinology & Metabolism Volume 91 ; 91 >
+      au < HighWirePressPlugin ; down ; 2007 ; The Journal of Clinical Endocrinology & Metabolism Volume 92 ; 92 >
+      au < HighWirePressPlugin ; down ; 2008 ; The Journal of Clinical Endocrinology & Metabolism Volume 93 ; 93 >
+      au < HighWirePressPlugin ; down ; 2009 ; The Journal of Clinical Endocrinology & Metabolism Volume 94 ; 94 >
+      au < HighWirePressH20Plugin ; down ; 2010 ; The Journal of Clinical Endocrinology & Metabolism Volume 95 ; 95 >
+      au < HighWirePressH20Plugin ; down ; 2011 ; The Journal of Clinical Endocrinology & Metabolism Volume 96 ; 96 >
+      au < HighWirePressH20Plugin ; down ; 2012 ; The Journal of Clinical Endocrinology & Metabolism Volume 97 ; 97 >
+      au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; The Journal of Clinical Endocrinology & Metabolism Volume 98 ; 98 >
 
     }
 

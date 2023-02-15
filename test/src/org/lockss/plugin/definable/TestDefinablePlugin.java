@@ -274,6 +274,16 @@ public class TestDefinablePlugin extends LockssTestCase {
 
   }
 
+  public void testRequiredDaemonVersion() throws Exception {
+    definablePlugin.initPlugin(daemon, "org.lockss.plugin.definable.GoodPlugin");
+    assertNotNull(definablePlugin.getRequiredDaemonVersion());
+    assertEmpty(definablePlugin.getRequiredDaemonVersion());
+    definablePlugin = new MyDefinablePlugin();
+    definablePlugin.initPlugin(daemon, "org.lockss.plugin.definable.LargeTestPlugin");
+    assertEquals(ListUtil.list("1.1.1"),
+                 definablePlugin.getRequiredDaemonVersion());
+  }
+
   public void testGetFeatureVersion() throws Exception {
     // no versions set
     assertEquals(null, definablePlugin.getFeatureVersion(Plugin.Feature.Poll));
@@ -592,6 +602,17 @@ public class TestDefinablePlugin extends LockssTestCase {
       fail("Ill http response should throw");
     } catch (PluginException.InvalidDefinition e) {
     }
+  }
+
+  public void testParseResultAction() {
+    assertEquals(ResultAction.remap(404),
+                 definablePlugin.parseResultAction("404"));
+    assertEquals(ResultAction.remap(UnknownHostException.class),
+                 definablePlugin.parseResultAction(UnknownHostException.class.getName()));
+    assertEquals(ResultAction.exClass(CacheException.PermissionException.class),
+                 definablePlugin.parseResultAction(CacheException.PermissionException.class.getName()));
+    assertEquals(ResultAction.handler(new MyHttpResultHandler()),
+                 definablePlugin.parseResultAction(MyHttpResultHandler.class.getName()));
   }
 
   public void testSiteNormalizeUrlNull() {

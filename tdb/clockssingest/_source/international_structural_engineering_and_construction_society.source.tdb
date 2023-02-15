@@ -6,6 +6,7 @@
     info[tester] = S ;
     info[platform] = Source
   >
+    hidden[proxy] = DIRECT
 
   {
 
@@ -14,14 +15,20 @@
     >
 
     plugin = org.lockss.plugin.clockss.isecs.ClockssInternationalStructuralEngineeringConstructionSocietySourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/isec-released/
-    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
+    {
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/isec-released/
 
-    au < readySource ; crawling ; 2020 ; International Structural Engineering and Construction Society 2020 ; 2020 >
-    au < readySource ; crawling ; 2021 ; International Structural Engineering and Construction Society 2021 ; 2021 >
-    au < expected ; exists ; 2022 ; International Structural Engineering and Construction Society 2022 ; 2022 >
+    au < readySource ; frozen ; 2020 ; International Structural Engineering and Construction Society Source Content 2020 ; 2020 >
+    au < readySource ; finished ; 2021 ; International Structural Engineering and Construction Society Source Content 2021 ; 2021 >
+    au < readySource ; frozen ; 2022 ; International Structural Engineering and Construction Society Source Content 2022 ; 2022 >
+    #No more AUs. Moving to https.
+    }
+    {
+    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/isec-released/
 
+    au < manifest ; exists ; 2023 ; International Structural Engineering and Construction Society Source Content 2023 ; 2023 >
+    }
   }
 
 }

@@ -70,4 +70,10 @@ public interface CacheResultMap {
       String url,
       int responseCode,
       String message);
+
+  public CacheException triggerAction(ArchivalUnit au,
+                                      String url,
+                                      CacheEvent evt,
+                                      ResultAction ra,
+                                      String message);
 }

@@ -47,8 +47,9 @@ import org.lockss.daemon.PluginException;
 import org.lockss.extractor.JsoupHtmlLinkExtractor;
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.extractor.LinkExtractorFactory;
+import org.lockss.util.*;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.util.Logger;
+import org.lockss.plugin.AuUtil;
 
 // an implementation of JsoupHtmlLinkExtractor
 public class ProjectMuseHtmlLinkExtractorFactory implements LinkExtractorFactory {
@@ -76,8 +77,8 @@ public class ProjectMuseHtmlLinkExtractorFactory implements LinkExtractorFactory
                               @Override
                               public void foundLink(String url) {
                                 if (au != null) {
-                                  if (HttpToHttpsUtil.UrlUtil.isSameHost(srcUrl, url)) {
-                                    url = HttpToHttpsUtil.AuUtil.normalizeHttpHttpsFromBaseUrl(au, url);
+                                  if (UrlUtil.isSameHost(srcUrl, url)) {
+                                    url = AuUtil.normalizeHttpHttpsFromBaseUrl(au, url);
                                   }
                                   if (url.contains(SUMM) && url.endsWith(HTML)) {
                                     String purl = url.replace(SUMM, "/");

@@ -40,14 +40,14 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>35</string>
+    <string>37</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>29</string>
+        <string>31</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -80,6 +80,10 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>plugin_archive_file_types</string>
     <string>standard</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.clockss.casalini.CasaliniJournalUrlNormalizer</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>

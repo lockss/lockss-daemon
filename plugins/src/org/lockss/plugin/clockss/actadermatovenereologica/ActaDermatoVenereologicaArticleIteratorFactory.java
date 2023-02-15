@@ -19,7 +19,7 @@ public class ActaDermatoVenereologicaArticleIteratorFactory implements ArticleIt
     protected static Logger log = Logger.getLogger(ActaDermatoVenereologicaArticleIteratorFactory.class);
 
     protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
-    private static final String PATTERN_TEMPLATE = "\"%s%d/.+\",base_url,year";
+    private static final String PATTERN_TEMPLATE = "\"%s%d/([^/]+)\\.(xml|pdf)$\",base_url,year";
 
     public static final Pattern XML_PATTERN = Pattern.compile("/([^/]+)\\.xml$", Pattern.CASE_INSENSITIVE);
     public static final Pattern PDF_PATTERN = Pattern.compile("/([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);

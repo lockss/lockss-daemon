@@ -4,23 +4,30 @@
     name = European University Institute of Law ;
     info[contract] = 2022 ;
     info[tester] = S ;
-    info[platform] = Source/FTP
+    info[platform] = Mark - Source/FTP
   >
+
+    plugin = org.lockss.plugin.clockss.euilaw.ClockssEuiLawDirSourcePlugin
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[directory] >
 
   {
 
     title <
       name = European University Institute of Law Source Content
     >
+    {
+    #####Testing
+    param[base_url] = https://clockss-test.lockss.org/sourcefiles/euilaw-released/
 
-    plugin = needs.SourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/NEEDS-PLUGIN-released/
-    #See also: param[base_url] = https://clockss-test.lockss.org/sourcefiles/euil-released/
-    hidden[proxy] = DIRECT
-    implicit < status ; status2 ; year ; name ; param[directory] >
+    au < testing ; exists ; 2022 ; European University Institute of Law Source Content 2022 [testing] ; 2022_01 >
+    }
+    {
+    #####Production: 
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/euilaw-released/
 
-    au < expected ; exists ; 2022 ; European University Institute of Law Source Content 2022 ; 2022_01 >
-
+    au < readySource ; crawling ; 2022 ; European University Institute of Law Source Content 2022 ; 2022_01 >
+    }
   }
 
 }

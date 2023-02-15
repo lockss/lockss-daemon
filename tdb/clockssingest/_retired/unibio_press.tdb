@@ -19,7 +19,7 @@
 
     {
 
-      provider = Unibio Press
+      provider = UniBio Press
       plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin  
       implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       param[base_url] = http://www.bioone.org/
@@ -65,7 +65,7 @@
     >
 
     {
-      provider = Unibio Press
+      provider = UniBio Press
       implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
@@ -111,7 +111,7 @@
     >
 
     {
-      provider = Unibio Press
+      provider = UniBio Press
       implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
@@ -155,7 +155,7 @@
     >
 
     {
-      provider = Unibio Press
+      provider = UniBio Press
       implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
@@ -201,7 +201,7 @@
     >
 
     {
-      provider = Unibio Press
+      provider = UniBio Press
       implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
@@ -248,7 +248,7 @@
     >
 
     {
-      provider = Unibio Press
+      provider = UniBio Press
       plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin  
       implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       param[base_url] = http://www.bioone.org/

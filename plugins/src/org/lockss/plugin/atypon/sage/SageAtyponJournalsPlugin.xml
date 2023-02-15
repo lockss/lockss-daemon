@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>35</string>
+    <string>60</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -54,7 +54,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>122</string>
+    <string>151</string>
   </entry>
   <!--  override start url from parent to support http to https conversion -->
   <entry>
@@ -102,5 +102,14 @@ POSSIBILITY OF SUCH DAMAGE.
     -->
     <string>au_exclude_urls_from_polls_pattern</string>
       <string>"%sdoi/suppl/10.1177/2331216519887614/suppl_file/TIA887614_Supplemental_Material.pdf",base_url</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.atypon.sage.SageAtyponHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
 </map>

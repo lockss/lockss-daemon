@@ -6,20 +6,38 @@
     info[tester] = S ;
     info[platform] = Source
   >
+    hidden[proxy] = DIRECT
+    provider = IOP Publishing
 
    {
      title <
        name = IOP Publishing JATS Source Content
      >
 
-     ### This plugin is for new IOP Jats content
      plugin = org.lockss.plugin.clockss.iop.ClockssIopDirZipSourcePlugin
-     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/iopjats-released/
-     hidden[proxy] = DIRECT
      implicit < status ; status2 ; year ; name ; param[directory] >
+     {
+     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/iopjats-released/
 
-     au < readySource ; crawling ; 2022 ; IOP Publishing JATS Source Content 2022_01 ; 2022_01 >
+     au < readySource ; frozen ; 2022 ; IOP Publishing JATS Source Content 2022_01 ; 2022_01 >
+     au < readySource ; frozen ; 2022 ; IOP Publishing JATS Source Content 2022_02 ; 2022_02 >
+     #No more AUs. Moving to https.
+     }
+     {
+     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/iopjatsrp1-released/
 
+     au < readySource ; frozen ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V1 ; 2022_01 >
+     au < readySource ; frozen ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V2 ; 2022_02 >
+     au < readySource ; frozen ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V3 ; 2022_03 >
+     au < readySource ; frozen ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V4 ; 2022_04 >
+     #no more buckets for this set
+     }
+     {
+     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/iopjats-released/
+
+     au < readySource ; crawling ; 2023 ; IOP Publishing JATS Source Content 2023_01 ; 2023_01 >
+
+     }
    }
 
   {
@@ -32,7 +50,6 @@
 
       plugin = org.lockss.plugin.clockss.iop.ClockssIopDirSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/iop-released/
-      hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[directory] >
 
       au < zapped ; finished ; 2019 ; IOP Publishing Source Content 2019_1 ; 2019_1 >
@@ -40,24 +57,23 @@
       au < zapped ; finished ; 2019 ; IOP Publishing Source Content 2019_3 ; 2019_3 >
       au < zapped ; finished ; 2019 ; IOP Publishing Source Content 2019_4 ; 2019_4 >
 
-      au < zapped ; finished ; 2020 ; IOP Publishing Source Content 2020_1 ; 2020_1 >
-      au < readySource ; crawling ; 2020 ; IOP Publishing Source Content 2020_2 ; 2020_2 >
-      au < readySource ; crawling ; 2020 ; IOP Publishing Source Content 2020_3 ; 2020_3 >
-      au < readySource ; crawling ; 2020 ; IOP Publishing Source Content 2020_4 ; 2020_4 >
+#      au < zapped ; finished ; 2020 ; IOP Publishing Source Content 2020_1 ; 2020_1 >
+#      au < readySource ; finished ; 2020 ; IOP Publishing Source Content 2020_2 ; 2020_2 >
+#      au < readySource ; finished ; 2020 ; IOP Publishing Source Content 2020_3 ; 2020_3 >
+#      au < readySource ; finished ; 2020 ; IOP Publishing Source Content 2020_4 ; 2020_4 >
 
-      au < readySource ; crawling ; 2021 ; IOP Publishing Source Content 2021_01 ; 2021_01 >
-      au < readySource ; crawling ; 2021 ; IOP Publishing Source Content 2021_02 ; 2021_02 >
-      au < readySource ; crawling ; 2021 ; IOP Publishing Source Content 2021_03 ; 2021_03 >
-      au < readySource ; crawling ; 2021 ; IOP Publishing Source Content 2021_04 ; 2021_04 >
+#      au < readySource ; finished ; 2021 ; IOP Publishing Source Content 2021_01 ; 2021_01 >
+#      au < readySource ; finished ; 2021 ; IOP Publishing Source Content 2021_02 ; 2021_02 >
+#      au < readySource ; finished ; 2021 ; IOP Publishing Source Content 2021_03 ; 2021_03 >
+#      au < readySource ; finished ; 2021 ; IOP Publishing Source Content 2021_04 ; 2021_04 >
 
-      au < readySource ; crawling ; 2022 ; IOP Publishing Source Content 2022_01 ; 2022_01 >
+      au < readySource ; frozen ; 2022 ; IOP Publishing Source Content 2022_01 ; 2022_01 >
       #no more buckets for this plugin
     }
     {
 
       plugin = org.lockss.plugin.clockss.iop.ClockssIopSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/iop-released/
-      hidden[proxy] = DIRECT
       implicit < status ; status2 ; year ; name ; param[year] >
 
       au < zapped ; finished ; 2015 ; IOP Publishing Source Content 2015 ; 2015 >
@@ -74,17 +90,27 @@
     title <
        name = IOP Publishing Books Source Content
     >
+    {
+    plugin = needs.plugin
+    #####Testing
+    param[base_url] = https://clockss-test.lockss.org/sourcefiles/iopbooksbits-released/
+    implicit < status ; status2 ; year ; name ; param[directory] >
 
+    #Books Bits
+    au < expected ; exists ; 2022 ; IOP Publishing Books Source Content 2022_01 ; 2022_01 >
+
+    }
+    {
     plugin = org.lockss.plugin.clockss.iop.ClockssIopBooksSourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/iopbooks-released/
-    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
 
     #4-17-2020: content delivered for 2018-2020, but still requires fixes from the publisher.
     au < zapped ; finished ; 2017 ; IOP Publishing Books Source Content 2017 ; 2017 >
     au < notReady ; exists ; 2020 ; IOP Publishing Books Source Content 2020 ; 2020 >
     #au < doNotProcess ; exists ; 2021 ; IOP Publishing Books Source Content 2021 ; 2021 >
-
+    #no more AUs expected at this time
+    }
   }
 
   {
@@ -95,13 +121,45 @@
 
     plugin = org.lockss.plugin.clockss.iop.ClockssIopDeliveredSourcePlugin
     param[base_url] = http://clockss-staged.clockss.org/sourcefiles/iop-delivered/
-    hidden[proxy] = DIRECT
-      implicit < status ; status2 ; year ; name ; param[year] ; param[directory] >
-
+    implicit < status ; status2 ; year ; name ; param[year] ; param[directory] >
 
       au < zapped ; finished ; 2018 ; IOP Publishing Delivered Source Content 2018 HD1_1 ; 2018 ; HD1_1 >
       #no more AUs expected at this time
-
   }
+}
+
+
+{
+
+  publisher <
+    name = IOP Publishing ;
+    info[contract] = 2015 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+    hidden[proxy] = DIRECT
+    provider = IOP ECS Backfile
+
+   {
+     title <
+       name = IOP Publishing ECS Backfile Source Content
+     >
+
+     plugin = org.lockss.plugin.clockss.iop.ClockssIopDirZipSourcePlugin
+     implicit < status ; status2 ; year ; name ; param[directory] >
+
+     {
+     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/iopecs2019-released/
+
+     au < readySource ; frozen ; 2022 ; IOP Publishing ECS Backfile Source Content 2022_01 ; 2022_01 >
+     }
+
+#     #Deleted from production UI, but content exists.
+#     {
+#     param[base_url] = https://clockss-test.lockss.org/sourcefiles/iopecs2019-released/
+#
+#     au < zapped ; superseded ; 2022 ; IOP Publishing ECS Backfile Source Content 2022_01 [superseded] ; 2022_01 >
+#     }
+   }
 
 }

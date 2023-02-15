@@ -78,6 +78,11 @@ public class OJS2CrawlSeedFactory implements CrawlSeedFactory {
     noIndexBaseUrlHosts.add("www.kmuj.kmu.edu.pk");
 
   }
+  protected static final HashSet<String> addOjsBaseUrlHosts = new HashSet<>();
+  static {
+    addOjsBaseUrlHosts.add("www.librelloph.com");
+
+  }
 
   public static class LocaleUrlCrawlSeed extends BaseCrawlSeed {
 
@@ -167,17 +172,17 @@ public class OJS2CrawlSeedFactory implements CrawlSeedFactory {
   }
 
   public static class NoIndexBaseUrlCrawlSeed extends LocaleUrlCrawlSeed {
-    
+
     public NoIndexBaseUrlCrawlSeed(CrawlerFacade crawlerFacade) {
       super(crawlerFacade);
     }
-    
+
     @Override
     public Collection<String> doGetPermissionUrls() throws ConfigurationException,
         PluginException, IOException {
       return removeIndex(super.doGetPermissionUrls());
     }
-    
+
     @Override
     public Collection<String> doGetStartUrls() throws ConfigurationException,
         PluginException, IOException {
@@ -195,9 +200,37 @@ public class OJS2CrawlSeedFactory implements CrawlSeedFactory {
     }
 
   }
-  
-  
-  
+
+  public static class AddOjsBaseUrlHosts extends LocaleUrlCrawlSeed {
+
+    public AddOjsBaseUrlHosts(CrawlerFacade crawlerFacade) {
+      super(crawlerFacade);
+    }
+
+    @Override
+    public Collection<String> doGetPermissionUrls() throws ConfigurationException,
+        PluginException, IOException {
+      return addOjs(super.doGetPermissionUrls());
+    }
+
+    @Override
+    public Collection<String> doGetStartUrls() throws ConfigurationException,
+        PluginException, IOException {
+      return addOjs(super.doGetStartUrls());
+    }
+
+    private Collection<String> addOjs(Collection<String> sUrls) {
+      Collection<String> uUrls = new ArrayList<>(sUrls.size());
+      for (String url : sUrls) {
+        // we know these will contain index.php
+        // remove url encoded version as well.
+        uUrls.add(url.replace("index.php/", "ojs/index.php/").replace("index.php%2F", "ojs%2Findex.php%2F"));
+      }
+      return uUrls;
+    }
+
+  }
+
   @Override
   public CrawlSeed createCrawlSeed(CrawlerFacade facade) {
     try {
@@ -207,6 +240,9 @@ public class OJS2CrawlSeedFactory implements CrawlSeedFactory {
           return new DualBaseUrlCrawlSeed(facade);
         } else if (noIndexBaseUrlHosts.contains(UrlUtil.getHost(baseUrl))) {
           return new NoIndexBaseUrlCrawlSeed(facade);
+        }
+        if (addOjsBaseUrlHosts.contains(UrlUtil.getHost(baseUrl))) {
+          return new AddOjsBaseUrlHosts(facade);
         }
       }
     } catch (Exception e) {

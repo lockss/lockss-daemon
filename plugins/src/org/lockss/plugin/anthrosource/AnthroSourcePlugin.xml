@@ -1,3 +1,34 @@
+<!--
+
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
 <map>
   <entry>
     <string>plugin_status</string>
@@ -9,79 +40,15 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
-  </entry>
-  <entry>
-    <string>required_daemon_version</string>
-    <string>1.57.4</string>
-  </entry>
-  <entry>
-    <string>plugin_bulk_content</string>
-    <boolean>true</boolean>
-  </entry>
-  <entry>
-    <string>au_name</string>
-    <string>&quot;AnthroSource Plugin, Base URL %s, Journal ID %s, Volume %s&quot;, base_url, journal_id, volume_name</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>plugin_name</string>
     <string>AnthroSource Plugin</string>
   </entry>
   <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%slockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
-      <string>1,&quot;^%stoc/%s(\.[0-9]+)?/([0-9]+/)?%s/&quot;, base_url, journal_id, volume_name</string>
-      <string>2,&quot;^%sdoi/(pdf|pdfplus|abs)/[.0-9]+/[-.9]+$&quot;, base_url</string>
-      <string>1,&quot;^%sdoi/(pdf|pdfplus|abs)/[.0-9]+/%s\.[0-9]+\.%s\.&quot;, base_url, journal_id, volume_name</string>
-      <string>1,&quot;^%s.*\.(css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>&quot;%slockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
-  </entry>
-  <entry>
-  	<string>au_feature_urls</string>
-  	<map>
-	  <entry>
-	    <string>au_title</string>
-	    <string>&quot;%s/issues.aspx?issn=%s&quot;, base_url, issn</string>
-	  </entry>
-	  <entry>
-	    <string>au_volume</string>
-	    <string>&quot;%slockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
-	  </entry>
-	  <entry>
-	    <string>au_issue</string>
-	    <string>&quot;%s/Articles.aspx?issn=%s&amp;volume=%s&amp;issue=%s&amp;cyear=%s&amp;jstor=False&quot;, base_url, issn, volume_name, issue, year</string>
-	  </entry>
-  	</map>
-  </entry>
-  <entry>
-    <string>application/pdf_filter_factory</string>
-    <string>org.lockss.plugin.anthrosource.AnthroSourcePdfFilterFactory</string>
-  </entry>
-  <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.anthrosource.AnthroSourceUrlNormalizer</string>
-  </entry>
-  <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
-  </entry>
-  <entry>
-    <string>plugin_au_config_user_msg</string>
-    <string>&quot;Your institutional administrator must &lt;a href=&apos;http://www.anthrosource.net/action/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box with AnthroSource&lt;/a&gt;, or your LOCKSS box may be banned from collecting this Archival Unit.&quot;</string>
-  </entry>
-  <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.anthrosource.AnthroSourceHtmlFilterFactory</string>
+    <string>required_daemon_version</string>
+    <string>1.57.4</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -113,5 +80,70 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"AnthroSource Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%slockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%slockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
+      <string>1,"^%stoc/%s(\.[0-9]+)?/([0-9]+/)?%s/", base_url, journal_id, volume_name</string>
+      <string>2,"^%sdoi/(pdf|pdfplus|abs)/[.0-9]+/[-.9]+$", base_url</string>
+      <string>1,"^%sdoi/(pdf|pdfplus|abs)/[.0-9]+/%s\.[0-9]+\.%s\.", base_url, journal_id, volume_name</string>
+      <string>1,"^%s.*\.(css|gif|ico|jpe?g|js|png|tif?f)$", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.anthrosource.AnthroSourceUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.anthrosource.AnthroSourceHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.anthrosource.AnthroSourcePdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_au_config_user_msg</string>
+    <string>"Your institutional administrator must &lt;a href=&apos;http://www.anthrosource.net/action/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box with AnthroSource&lt;/a&gt;, or your LOCKSS box may be banned from collecting this Archival Unit."</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+  	<string>au_feature_urls</string>
+  	<map>
+	  <entry>
+	    <string>au_title</string>
+	    <string>"%s/issues.aspx?issn=%s", base_url, issn</string>
+	  </entry>
+	  <entry>
+	    <string>au_volume</string>
+	    <string>"%slockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
+	  </entry>
+	  <entry>
+	    <string>au_issue</string>
+	    <string>"%s/Articles.aspx?issn=%s&amp;volume=%s&amp;issue=%s&amp;cyear=%s&amp;jstor=False", base_url, issn, volume_name, issue, year</string>
+	  </entry>
+  	</map>
+  </entry>
+  <!-- required because PluginValidator checks this if the name of the plugin ends with SourcePlugin... -->
+  <entry>
+    <string>plugin_bulk_content</string>
+    <boolean>true</boolean>
   </entry>
 </map>

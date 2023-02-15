@@ -6,7 +6,7 @@
   
 {
 
-  plugin = org.lockss.plugin.projmuse.ProjectMuse2020BooksPlugin
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2022BooksPlugin
   implicit < status ; year ; isbn ; eisbn ; name ; param[eisbn]; param[book_id] >
 
   {

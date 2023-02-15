@@ -1,11 +1,11 @@
 {
-
   publisher <
     name = Index Copernicus ;
     info[contract] = 2018 ;
     info[tester] = S ;
     info[platform] = Source
   >
+    hidden[proxy] = DIRECT
 
   {
 
@@ -14,15 +14,19 @@
     >
 
     plugin = org.lockss.plugin.clockss.indexcopernicus.ClockssIndexCopernicusSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/indexcopernicus-released/
-
-    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
+    {
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/indexcopernicus-released/
 
     au < zapped ; finished ; 2018 ; Index Copernicus Source Content 2018 ; 2018 >
     au < zapped ; finished ; 2019 ; Index Copernicus Source Content 2019 ; 2019 >
-    au < expected ; exists ; 2022 ; Index Copernicus Source Content 2022 ; 2022 >
+    #No more AUs. Moving to https.
+    }
+    {
+    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/indexcopernicus-released/
 
+    au < expected ; exists ; 2023 ; Index Copernicus Source Content 2023 ; 2023 >
+
+    }
   }
-
 }

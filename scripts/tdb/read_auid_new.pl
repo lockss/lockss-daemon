@@ -178,7 +178,8 @@ while (my $line = <>) {
         sleep(4);
 
 #GLN HighWire HW Drupal
-  } elsif ($plugin =~ m/^(?!Clockss).+DrupalPlugin/) {
+  } elsif (($plugin =~ m/^(?!Clockss).+DrupalPlugin/) ||
+           ($plugin eq AsnJournalsPlugin)) {
     $url = sprintf("%slockss-manifest/vol_%s_manifest.html",
         $param{base_url}, $param{volume_name});
         #printf("********************\n");  #debug
@@ -202,6 +203,9 @@ while (my $line = <>) {
     } elsif (($man_contents !~ m/body.*="$base_url_short[^"]*"/s) || ($man_contents !~ m/body.*="https?:\/\/.*"/s)) { #"
         #manifest page issue urls (after "body") must contain urls which start with the same characters as the manifest url
         #or must be a relative url, in which case, the link would not start with https://.
+        if ($man_contents =~ m/<a\s*href="([^"]*)">/si) { #"
+              $vol_title = $1;
+        }
         $result = "--BAD_ISS_URL--";
     } elsif (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/)) { #"
         $result = "CGI_probe_link";
@@ -278,6 +282,9 @@ while (my $line = <>) {
     } elsif (($man_contents !~ m/body.*="$base_url_short[^"]*"/s) || ($man_contents !~ m/body.*="https?:\/\/.*"/s)) { #"
         #manifest page issue urls (after "body") must contain urls which start with the same characters as the manifest url
         #or must be a relative url, in which case, the link would not start with https://.
+        if ($man_contents =~ m/<a\s*href="([^"]*)">/si) { #"
+              $vol_title = $1;
+        }
         $result = "--BAD_ISS_URL--";
     } elsif (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/)) { #"
         $result = "CGI_probe_link";
@@ -330,7 +337,8 @@ while (my $line = <>) {
     sleep(4);
 
 #GLN Highwire HW Origins
-  } elsif (($plugin =~ m/^(?!Clockss).+OriginsPlugin/) || ($plugin =~ m/^(?!Clockss).+ScolarisPlugin/)) {
+  } elsif (($plugin =~ m/^(?!Clockss).+OriginsPlugin/) || 
+           ($plugin =~ m/^(?!Clockss).+ScolarisPlugin/)) {
     $url = sprintf("%scontent/%s/lockss-manifest/vol_%s_manifest.html",
         $param{base_url}, $param{journal_id}, $param{volume_name});
         #printf("********************\n");  #debug
@@ -574,7 +582,7 @@ while (my $line = <>) {
       sleep(5);
 
   } elsif ($plugin eq "UbiquityPartnerNetworkPlugin") {
-      ####start url & permission url
+      ####start url & permission url in one
       $url = sprintf("%slockss/year/%d/",
           $param{base_url}, $param{year});
       $man_url = uri_unescape($url);
@@ -605,13 +613,13 @@ while (my $line = <>) {
       sleep(5);
 
   } elsif ($plugin eq "ClockssUbiquityPartnerNetworkPlugin") {
-      ####start url
+      ####start url only
       $url = sprintf("%slockss/year/%d/",
           $param{base_url}, $param{year});
       $man_url = uri_unescape($url);
       my $req = HTTP::Request->new(GET, $man_url);
       my $resp = $ua->request($req);
-      ####permission url
+      ####permission url only
       $url_p = sprintf("%sabout",
           $param{base_url});
       $man_url_p = uri_unescape($url_p);
@@ -627,7 +635,10 @@ while (my $line = <>) {
                   $vol_title = $1;
               }
               my $man_contents = $resp->content;
-              if (defined($man_contents) && ($man_contents =~ m/\/volume\//) && ($man_contents =~ m/\($param{year}\)/)) {
+              #printf("$man_contents");
+              #if (defined($man_contents) && ($man_contents =~ m/\/volume\//) && ($man_contents =~ m/\($param{year}\)/)) {
+              if (defined($man_contents) && (($man_contents =~ m/\/volume\//) || ($man_contents =~ m/\/articles\//)) && ($man_contents =~ m/$param{year}/)) {
+              #if (defined($man_contents)) {
                   $result = "Manifest";
               } else {
                   $result = "--NO_CONT--";
@@ -1097,7 +1108,12 @@ while (my $line = <>) {
     if ($resp_p->is_success) {
       my $perm_contents = $resp_p->content;
       my $lcl_tag = $cc_license_tag;
-      if (defined($perm_contents) && ($perm_contents =~ m/$lcl_tag/s)) {
+
+      if (($req_p->url ne $resp_p->request->uri) || ($req_s->url ne $resp_s->request->uri)) {
+          $vol_title = $resp_p->request->uri . "+" . $resp_s->request->uri;
+          $result = "Redirected";
+
+      } elsif (defined($perm_contents) && ($perm_contents =~ m/$lcl_tag/s) ) {
         if ($resp_s->is_success) {
           if ($resp_s->content =~ m/results in an empty (set|list)/is) {
             $result = "--EMPTY_LIST--"
@@ -1124,7 +1140,8 @@ while (my $line = <>) {
            ($plugin eq "UniversityofMichiganPlugin") ||
            ($plugin eq "ClockssUniversityofMichiganPlugin")) {
     #permission is different from start
-    $perm_url = uri_unescape($param{base_url}) . "clockss/";
+    $perm_url = uri_unescape($param{base_url}) . "plugins/clockss/";
+    #$perm_url = uri_unescape($param{base_url}) . "clockss/";
       #printf("URL: %s\n", $perm_url); #debug
       $vol_title = $perm_url ;
     #start_url for all OAI queries https://www.comicsgrid.com/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31
@@ -1169,6 +1186,8 @@ while (my $line = <>) {
   #Janeway. With journal_id
   } elsif (($plugin eq "ClockssIowaStateDPPlugin") ||
            ($plugin eq "IowaStateDPPlugin") ||
+           ($plugin eq "ClockssUniversityofIowaPlugin") ||
+           ($plugin eq "UniversityofIowaPlugin") ||
            ($plugin eq "ClockssGhentUniversityLibraryPlugin") ||
            ($plugin eq "GhentUniversityLibraryPlugin")) {
     #permission is different from start
@@ -1346,6 +1365,32 @@ while (my $line = <>) {
         }
         sleep(4);
 
+  } elsif ($plugin eq "ClockssTaarPlugin") {
+        $url = sprintf("%sarticles/%s",
+          $param{base_url}, $param{volume_name});
+        $man_url = uri_unescape($url);
+        my $req = HTTP::Request->new(GET, $man_url);
+        my $resp = $ua->request($req);
+        if ($resp->is_success) { 
+            my $man_contents = $resp->content;
+            if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+            } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/<title>\d\d\d\d - Volume $param{volume_name} - Aerosol and Air Quality Research<\/title>/)) { 
+                #<title>2001 - Volume 1 - Aerosol and Air Quality Research</title>
+                #if ($man_contents =~ m/<h1>CLOCKSS - Published Issues: (.*) $param{volume_name}<\/h1>/si) {
+                #    $vol_title = $1
+                #}
+                $vol_title = "Aerosol and Air Quality Research";
+                $result = "Manifest"
+            } else {
+                $result = "--"
+            }
+        } else {
+            $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+        }
+        sleep(4);
+
 #PubFactory Journals GLN
   } elsif (($plugin eq "BerghahnJournalsPlugin")   ||
            ($plugin eq "PubFactoryJournalsPlugin") ||
@@ -1496,10 +1541,12 @@ while (my $line = <>) {
            ($plugin eq "BESBJSPlugin") ||
            ($plugin eq "BIRAtyponPlugin") ||
            ($plugin eq "EdinburghUniversityPressPlugin") ||
+           ($plugin eq "EHP2022AtyponJournalPlugin") ||
 #           ($plugin eq "EmeraldGroupPlugin") ||
 #           ($plugin eq "EndocrineSocietyPlugin") ||
            ($plugin eq "FasebAtyponPlugin") ||
            ($plugin eq "FutureSciencePlugin") ||
+           ($plugin eq "GeologicalSocietyLondonPlugin") ||
            ($plugin eq "HealthAffairsPlugin") ||
            ($plugin eq "IndersciencePlugin") ||
 #           ($plugin eq "JstorPlugin") ||
@@ -1579,6 +1626,7 @@ while (my $line = <>) {
 #           ($plugin eq "ClockssEndocrineSocietyPlugin") ||
            ($plugin eq "ClockssFasebAtyponPlugin") ||
            ($plugin eq "ClockssFutureSciencePlugin") ||
+           ($plugin eq "ClockssGeologicalSocietyLondonPlugin") ||
            ($plugin eq "ClockssIndersciencePlugin") ||
 #           ($plugin eq "ClockssJstorPlugin") ||
            ($plugin eq "ClockssLiverpoolJournalsPlugin") ||
@@ -1743,10 +1791,10 @@ while (my $line = <>) {
                   my $bresp = $ua->request($breq);
                   if ($bresp->is_success) {
                       my $b_contents = $bresp->content;
-                      # what we're looking for on the page is href="/doi/pdf/doi1/doi2" OR href="/doi/pdfplus/doi1/doi2
+                      # what we're looking for on the page is href="/doi/pdf/doi1/doi2" OR href="/doi/pdfplus/doi1/doi2" OR href="/doi/epub/doi1/doi2"
                       #printf("href=\"pdfplus/%s/%s\"",${doi1},${doi2});
                       #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\/${doi2}/)) {
-                      if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\//)) {  #"
+                      if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+(pdf|epub)(plus)?\/${doi1}\//)) {  #"
                           $result = "Manifest";
                       }
                   }
@@ -3088,6 +3136,7 @@ while (my $line = <>) {
     }
   sleep(4);
     
+  #Silverchair GLN. Includes year/volume_name.
   } elsif ($plugin eq "GeoscienceWorldSilverchairPlugin") {
     $url = sprintf("%s%s/list-of-issues/%d",
         $param{base_url}, $param{journal_id}, $param{year});
@@ -3116,6 +3165,7 @@ while (my $line = <>) {
     }
   sleep(4);
     
+  #Silverchair CLOCKSS. Includes year/volume_name.
   } elsif ($plugin eq "ClockssGeoscienceWorldSilverchairPlugin") {
     $url = sprintf("%s%s/list-of-issues/%d",
         $param{base_url}, $param{journal_id}, $param{year});
@@ -3178,6 +3228,7 @@ while (my $line = <>) {
 
   #Silverchair CLOCKSS no year/volume_name. Common Theme
   } elsif (($plugin eq "ClockssIwapSilverchairPlugin") || 
+           ($plugin eq "ClockssAAISilverchairPlugin") ||
            ($plugin eq "ClockssAOTASilverchairPlugin") || 
            ($plugin eq "ClockssAllenPressSilverchairPlugin")) { 
     $url = sprintf("%s%s/issue/browse-by-year/%d",
@@ -3210,6 +3261,7 @@ while (my $line = <>) {
     
   #Silverchair GLN. Includes year/volume_name. Common Theme
   } elsif (($plugin eq "AAPSilverchairPlugin") || 
+           ($plugin eq "AACRSilverchairPlugin") || 
            ($plugin eq "AmericanDiabetesAssociationSilverchairPlugin") || 
            ($plugin eq "CompanyBiologistsSilverchairPlugin") || 
            ($plugin eq "PortlandPressSilverchairPlugin") || 
@@ -3243,10 +3295,11 @@ while (my $line = <>) {
     sleep(4);
 
   #Silverchair CLOCKSS. Includes year/volume_name. Common Theme
-  } elsif (($plugin eq "ClockssRockefellerUniversityPressSilverchairPlugin") || 
-           ($plugin eq "ClockssCompanyBiologistsSilverchairPlugin") || 
-           ($plugin eq "ClockssAAPSilverchairPlugin") || 
+  } elsif (($plugin eq "ClockssAAPSilverchairPlugin") || 
+           ($plugin eq "ClockssAACRSilverchairPlugin") || 
            ($plugin eq "ClockssAmericanDiabetesAssociationSilverchairPlugin") || 
+           ($plugin eq "ClockssCompanyBiologistsSilverchairPlugin") || 
+           ($plugin eq "ClockssRockefellerUniversityPressSilverchairPlugin") || 
            ($plugin eq "ClockssPortlandPressSilverchairPlugin")) { 
     $url = sprintf("%s%s/issue/browse-by-year/%d",
       $param{base_url}, $param{journal_id}, $param{year});
@@ -3348,7 +3401,8 @@ while (my $line = <>) {
       if ($req->url ne $resp->request->uri) {
               $vol_title = $resp->request->uri;
               $result = "Redirected";
-      } elsif (defined($man_contents) && ($man_contents =~ m/\/$param{journal_id}\/\S*$param{volume_name}/)) {
+      } elsif (defined($man_contents) && ($man_contents =~ m/publications\/journals\/$param{journal_id}\/\S*-$param{volume_name}/)) {
+#      } elsif (defined($man_contents) && ($man_contents =~ m/\/$param{journal_id}\[^"\]*-volume-$param{volume_name}\[^"\]*\"/)) {
         # no lockss permission statement on start page. Permission statements are here: https://press.anu.edu.au/lockss.txt
         if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
           $vol_title = $1 . ": " . $param{volume_name}
@@ -3513,43 +3567,65 @@ while (my $line = <>) {
     }
     sleep(4);
     
-  } elsif ($plugin eq "ClockssSilvaFennicaPlugin") {
-    #Url with list of articles https://www.silvafennica.fi/issue/sf/volume/50
-    $url = sprintf("%sissue/%s/volume/%s",
-        $param{base_url}, $param{journal_id}, $param{volume_name});
-    $start_url = uri_unescape($url);
-    my $req_s = HTTP::Request->new(GET, $start_url);
-    my $resp_s = $ua->request($req_s);
-    #For reporting at the end
-    $man_url = $start_url;
-    if ($resp_s->is_success) {
-      my $start_contents = $resp_s->content;
-      if (defined($start_contents) && ($start_contents =~ m/>(Silva Fennica vol. $param{volume_name})</)) {
-        $vol_title = $1;
-        $result = "Manifest"
-      } else {
-        $result = "--NO_TAG--"
-      }
-    } else {
-      $result = "--REQ_FAIL--"
-    }
-    sleep(4);
+#  } elsif ($plugin eq "ClockssSilvaFennicaPlugin") {
+#    #Old Url with list of articles https://www.silvafennica.fi/issue/sf/volume/50
+#    #$url = sprintf("%sissue/%s/volume/%s",
+#    #New start url: "%svolume/%s", base_url, volume_name
+#    #New permission url: "%s", base_url
+#    $url = sprintf("%svolume/%s",
+#        $param{base_url}, $param{volume_name});
+#    $start_url = uri_unescape($url);
+#    my $req_s = HTTP::Request->new(GET, $start_url);
+#    my $resp_s = $ua->request($req_s);
+#    #For reporting at the end
+#    $man_url = $start_url;
+#    if ($resp_s->is_success) {
+#      my $start_contents = $resp_s->content;
+#      if (defined($start_contents) && ($start_contents =~ m/>(Silva Fennica vol. $param{volume_name})</)) {
+#        $vol_title = $1;
+#        $result = "Manifest"
+#      } else {
+#        $result = "--NO_TAG--"
+#      }
+#    } else {
+#      $result = "--REQ_FAIL--"
+#    }
+#    sleep(4);
     
-      } elsif ($plugin eq "ClockssSilvaFennicaNoJidPlugin") {
-    $url = sprintf("%sissue/volume/%s",
+  } elsif ($plugin eq "ClockssSilvaFennicaNoJidPlugin" || $plugin eq "ClockssSilvaFennicaPlugin") {
+    #Old url with list of articles https://www.silvafennica.fi/issue/sf/volume/50
+    #$url = sprintf("%sissue/%s/volume/%s",
+    #Old url with list of articles https://www.dissertationesforestales.fi/issue/volume/2021
+    #$url = sprintf("%sissue/volume/%s",
+
+    #New start url: "%svolume/%s", base_url, volume_name
+    $url_s = sprintf("%svolume/%s",
         $param{base_url}, $param{volume_name});
-    $start_url = uri_unescape($url);
+    $start_url = uri_unescape($url_s);
     my $req_s = HTTP::Request->new(GET, $start_url);
     my $resp_s = $ua->request($req_s);
+    #New permission url: "%s", base_url
+    $url_p = sprintf("%s",
+        $param{base_url});
+    $perm_url = uri_unescape($url_p);
+    my $req_p = HTTP::Request->new(GET, $perm_url);
+    my $resp_p = $ua->request($req_p);
     #For reporting at the end
     $man_url = $start_url;
-    if ($resp_s->is_success) {
+    if ($resp_s->is_success && $resp_p->is_success) {
       my $start_contents = $resp_s->content;
-      if (defined($start_contents) && ($start_contents =~ m/<h1>([A-Z][^<]+ $param{volume_name})</)) {
-        $vol_title = $1;
-        $result = "Manifest"
+      my $perm_contents = $resp_p->content;
+      if (defined($perm_contents) && ($perm_contents =~ m/$cc_license_url/)) {
+        if (defined($start_contents) && ($start_contents =~ m/<h1>\s*([A-Z][^<]+ $param{volume_name})[^<]*</)) {
+          $vol_title = $1;
+          $vol_title =~ s/\s*\n\s*/ /g;
+          $result = "Manifest"
+        } else {
+            $result = "--NO_CONT--"
+        }
       } else {
-        $result = "--NO_TAG--"
+        $result = "--NO_TAG--";
+        $vol_title = $perm_url
       }
     } else {
       $result = "--REQ_FAIL--"

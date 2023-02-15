@@ -37,6 +37,7 @@ import java.io.*;
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
 
+import org.lockss.plugin.clockss.aimsciences.AimsCrossrefXmlMetadataExtractorFactory;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -92,9 +93,9 @@ public class BaseAtyponHtmlMetadataExtractorFactory
       tagMap.put("dc.Rights", MetadataField.DC_FIELD_RIGHTS);
       tagMap.put("dc.Coverage",MetadataField.DC_FIELD_COVERAGE);
       tagMap.put("dc.Source", MetadataField.DC_FIELD_SOURCE);
+      //Adding this one especially for Sage to filter out overcrawlled content which belongs to other volume
+      tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
     }
-    
-    
     
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
@@ -105,7 +106,9 @@ public class BaseAtyponHtmlMetadataExtractorFactory
 
       ArticleMetadata am = 
         new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
- 
+
+      log.debug3("---BaseAtyponHtmlMetadataExtractorFactory---");
+
       am.cook(tagMap);
       /* 
        * if, due to overcrawl, we got to a page that didn't have anything
@@ -120,8 +123,12 @@ public class BaseAtyponHtmlMetadataExtractorFactory
       // Only emit if this item is likely to be from this AU
       // protect against counting overcrawled articles
       ArchivalUnit au = cu.getArchivalUnit();
+      log.debug3("Sage Check: ---------BaseAtyponHtmlMetadataExtractor start checking-------");
       if (!BaseAtyponMetadataUtil.metadataMatchesTdb(au, am)) {
+        log.debug3("Sage Check: ---------BaseAtyponHtmlMetadataExtractor failed-------");
         return;
+      } else {
+        log.debug3("Sage Check: ---------BaseAtyponHtmlMetadataExtractor succeed-------");
       }
       
       /*
@@ -141,8 +148,8 @@ public class BaseAtyponHtmlMetadataExtractorFactory
         am.replace(MetadataField.FIELD_ACCESS_URL, url);
       }
       // If we've gotten this far, emit
-      emitter.emitMetadata(cu, am);
 
+      emitter.emitMetadata(cu, am);
     }
     
     protected MultiMap getTagMap() {

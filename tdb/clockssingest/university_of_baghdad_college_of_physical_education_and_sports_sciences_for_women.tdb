@@ -1,0 +1,49 @@
+{
+
+  publisher <
+    name = University of Baghdad, College of Physical Education and Sports Sciences for Women ;
+    info[contract] = 2023 ;
+    info[back] = 2012 ;
+    info[tester] = 5 ;
+    info[poller] = 3 ;
+    info[platform] = OJS3. Open Journal Systems 3.3.0.13
+  >
+
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+
+  {
+
+    title <
+      name = Modern Sport ;
+      issn = 1992-0091 ;
+      eissn = 2708-3454
+    >
+      param[base_url] = https://jcopew.uobaghdad.edu.iq/
+      param[journal_id] = sport
+      #published 2005-present
+
+      au < manifest ; exists ; 2005 ; Modern Sport Volume 2005 ; 4 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; Modern Sport Volume 2006 ; 5 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; Modern Sport Volume 2007 ; 6 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Modern Sport Volume 2008 ; 7 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; Modern Sport Volume 2009 ; 8 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; Modern Sport Volume 2010 ; 9 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Modern Sport Volume 2011 ; 10 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Modern Sport Volume 2012 ; 11 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Modern Sport Volume 2013 ; 12 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Modern Sport Volume 2014 ; 13 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Modern Sport Volume 2015 ; 14 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Modern Sport Volume 2016 ; 15 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; Modern Sport Volume 2017 ; 16 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Modern Sport Volume 2018 ; 17 ; 2018 ; >
+      au < ready ; exists ; 2019 ; Modern Sport Volume 2019 ; 18 ; 2019 ; >
+      au < ready ; exists ; 2020 ; Modern Sport Volume 2020 ; 19 ; 2020 ; >
+      au < testing ; exists ; 2021 ; Modern Sport Volume 2021 ; 20 ; 2021 ; >
+      au < ready ; exists ; 2022 ; Modern Sport Volume 2022 ; 21 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Modern Sport Volume 2023 ; 22 ; 2023 ; >
+
+  }
+
+}

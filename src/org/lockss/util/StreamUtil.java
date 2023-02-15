@@ -341,6 +341,18 @@ public class StreamUtil {
     }
   }
 
+  /** Return an InputStream that's guaranteed to be reset()able.  If
+   * the supplied InputStream supports mark() and reset(), return it,
+   * else wrap it in a BufferedInputStream.
+   */
+  public static InputStream getResettableInputStream(InputStream ins)
+      throws IOException {
+    if (!ins.markSupported()) {
+      return new BufferedInputStream(ins);
+    }
+    return ins;
+  }
+
   /** Return an InputStream that uncompresses the data on the input stream
    * (normally an HTTP response stream) according to the contentEncoding
    * @param instr raw InputStream

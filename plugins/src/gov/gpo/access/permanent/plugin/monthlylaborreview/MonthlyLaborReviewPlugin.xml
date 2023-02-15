@@ -1,7 +1,6 @@
 <!--
 
 Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -33,7 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>deprecated - gpo-pilot registry</string>
+    <string>ready - gpo-pilot registry</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -41,11 +40,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Monthly Labor Review Plugin</string>
+    <string>Monthly Labor Review Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -72,7 +71,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Monthly Labor Review Plugin, Base URL %s, Year %d", base_url, year</string>
+    <string>"Monthly Labor Review Plugin (Legacy), Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>

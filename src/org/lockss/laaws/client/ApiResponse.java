@@ -1,6 +1,36 @@
 /*
- * LOCKSS Configuration Service REST API
- * REST API of the LOCKSS Configuration Service
+ * Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ * this list of conditions and the following disclaimer in the documentation
+ * and/or other materials provided with the distribution.
+ *
+ * 3. Neither the name of the copyright holder nor the names of its contributors
+ * may be used to endorse or promote products derived from this software without
+ * specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+*/
+
+/*
+ * LOCKSS Repository Service REST API
+ * REST API of the LOCKSS Repository Service
  *
  * The version of the OpenAPI document: 2.0.0
  * Contact: lockss-support@lockss.org
@@ -10,7 +40,6 @@
  * Do not edit the class manually.
  */
 
-
 package org.lockss.laaws.client;
 
 import java.util.List;
@@ -18,27 +47,28 @@ import java.util.Map;
 
 /**
  * API response returned by API call.
- *
- * @param <T> The type of data that is deserialized from response body
  */
 public class ApiResponse<T> {
-
   final private int statusCode;
   final private Map<String, List<String>> headers;
   final private T data;
 
   /**
+   * <p>Constructor for ApiResponse.</p>
+   *
    * @param statusCode The status code of HTTP response
-   * @param headers    The headers of HTTP response
+   * @param headers The headers of HTTP response
    */
   public ApiResponse(int statusCode, Map<String, List<String>> headers) {
     this(statusCode, headers, null);
   }
 
   /**
+   * <p>Constructor for ApiResponse.</p>
+   *
    * @param statusCode The status code of HTTP response
-   * @param headers    The headers of HTTP response
-   * @param data       The object deserialized from response bod
+   * @param headers The headers of HTTP response
+   * @param data The object deserialized from response bod
    */
   public ApiResponse(int statusCode, Map<String, List<String>> headers, T data) {
     this.statusCode = statusCode;
@@ -46,14 +76,29 @@ public class ApiResponse<T> {
     this.data = data;
   }
 
+  /**
+   * <p>Get the <code>status code</code>.</p>
+   *
+   * @return the status code
+   */
   public int getStatusCode() {
     return statusCode;
   }
 
+  /**
+   * <p>Get the <code>headers</code>.</p>
+   *
+   * @return a {@link java.util.Map} of headers
+   */
   public Map<String, List<String>> getHeaders() {
     return headers;
   }
 
+  /**
+   * <p>Get the <code>data</code>.</p>
+   *
+   * @return the data
+   */
   public T getData() {
     return data;
   }
