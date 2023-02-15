@@ -59,7 +59,7 @@ public class AuState implements LockssSerializable {
   public enum AccessType {OpenAccess, Subscription};
 
   public enum MigrationState {
-    NotStarted, InProgress, Finished
+    Aborted, NotStarted, InProgress, Finished
   };
 
 

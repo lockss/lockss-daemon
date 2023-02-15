@@ -52,7 +52,7 @@ import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.V2RestClient;
 import org.lockss.laaws.model.rs.AuidPageInfo;
 import org.lockss.plugin.*;
-import org.lockss.servlet.MigrateContent;
+import org.lockss.state.AuState;
 import org.lockss.uiapi.util.DateFormatter;
 import org.lockss.util.*;
 import static org.lockss.laaws.Counters.CounterType;
@@ -814,6 +814,26 @@ s api client with long timeout */
     enqueueFinishAll();
   }
 
+  private void setAuMigrationState(ArchivalUnit au, AuState.MigrationState state) {
+    AuState auState = AuUtil.getAuState(au);
+
+    if (auState.getMigrationState() == state) {
+      log.warning("AU migration state is already " + state);
+      return;
+    }
+
+    auState.setMigrationState(AuState.MigrationState.InProgress);
+
+    switch (state) {
+      case Aborted:
+        // TODO: Resume crawling and polling on AU
+        break;
+      case InProgress:
+        // TODO: Abort any crawls and polls on AU
+        break;
+    }
+  }
+
   /**
    * Start the state machine for an AU
    */
@@ -824,6 +844,7 @@ s api client with long timeout */
     String auName = au.getName();
     log.debug("Starting state machine for AU: " + auName);
 
+    setAuMigrationState(au, AuState.MigrationState.InProgress);
     auStat.setPhase(Phase.QUEUE);       // For display purposes only,
                                         // unlikely to be seen.
     switch (opType) {
@@ -1105,8 +1126,10 @@ s api client with long timeout */
       addFinishedAu(au, auStat);
       updateReport(auStat);
       if (auStat.isAbort()) {
+        setAuMigrationState(au, AuState.MigrationState.Aborted);
         enterPhase(auStat, Phase.ABORT);
       } else {
+        setAuMigrationState(au, AuState.MigrationState.Finished);
         totalAusMoved++;
         if (checkMissingContent && existsInV2(auStat.getAuId())) {
           Counters ctrs = auStat.getCounters();
