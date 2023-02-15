@@ -194,22 +194,13 @@
         eissn = 0303-9021
       >
 
-      #published 2000-present
+      #published 2009-present
       #param[base_url] = https://openjournals.ugent.be/
       param[journal_id] = vdt
 
-      au < exists ; exists ; 2000 ; 2000 ; 2000 ; Vlaams Diergeneeskundig Tijdschrift Volume 2000 ; >
-      au < exists ; exists ; 2001 ; 2001 ; 2001 ; Vlaams Diergeneeskundig Tijdschrift Volume 2001 ; >
-      au < exists ; exists ; 2002 ; 2002 ; 2002 ; Vlaams Diergeneeskundig Tijdschrift Volume 2002 ; >
-      au < exists ; exists ; 2003 ; 2003 ; 2003 ; Vlaams Diergeneeskundig Tijdschrift Volume 2003 ; >
-      au < exists ; exists ; 2004 ; 2004 ; 2004 ; Vlaams Diergeneeskundig Tijdschrift Volume 2004 ; >
-      au < exists ; exists ; 2005 ; 2005 ; 2005 ; Vlaams Diergeneeskundig Tijdschrift Volume 2005 ; >
-      au < exists ; exists ; 2006 ; 2006 ; 2006 ; Vlaams Diergeneeskundig Tijdschrift Volume 2006 ; >
-      au < exists ; exists ; 2007 ; 2007 ; 2007 ; Vlaams Diergeneeskundig Tijdschrift Volume 2007 ; >
-      au < exists ; exists ; 2008 ; 2008 ; 2008 ; Vlaams Diergeneeskundig Tijdschrift Volume 2008 ; >
-      au < exists ; exists ; 2009 ; 2009 ; 2009 ; Vlaams Diergeneeskundig Tijdschrift Volume 2009 ; >
-      au < exists ; exists ; 2010 ; 2010 ; 2010 ; Vlaams Diergeneeskundig Tijdschrift Volume 2010 ; >
-      au < exists ; exists ; 2011 ; 2011 ; 2011 ; Vlaams Diergeneeskundig Tijdschrift Volume 2011 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Vlaams Diergeneeskundig Tijdschrift Volume 2009 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; 2010 ; Vlaams Diergeneeskundig Tijdschrift Volume 2010 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; 2011 ; Vlaams Diergeneeskundig Tijdschrift Volume 2011 ; >
       au < manifest ; exists ; 2012 ; 2012 ; 2012 ; Vlaams Diergeneeskundig Tijdschrift Volume 2012 ; >
       au < manifest ; exists ; 2013 ; 2013 ; 2013 ; Vlaams Diergeneeskundig Tijdschrift Volume 2013 ; >
       au < manifest ; exists ; 2014 ; 2014 ; 2014 ; Vlaams Diergeneeskundig Tijdschrift Volume 2014 ; >
@@ -231,10 +222,24 @@
         eissn = 0774-532X
       >
 
-      #published 2009-present
+      #published 1995-present
       #param[base_url] = https://openjournals.ugent.be/
       param[journal_id] = wt
 
+      au < manifest ; exists ; 1995 ; 1995 ; 1995 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 1995 ; >
+      au < manifest ; exists ; 1996 ; 1996 ; 1996 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 1996 ; >
+      au < manifest ; exists ; 1997 ; 1997 ; 1997 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 1997 ; >
+      au < manifest ; exists ; 1998 ; 1998 ; 1998 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 1998 ; >
+      au < manifest ; exists ; 1999 ; 1999 ; 1999 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 1999 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2000 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; 2001 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2001 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; 2002 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2002 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2003 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; 2004 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2004 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2005 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2006 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2007 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2008 ; >
       au < manifest ; exists ; 2009 ; 2009 ; 2009 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2009 ; >
       au < manifest ; exists ; 2010 ; 2010 ; 2010 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2010 ; >
       au < manifest ; exists ; 2011 ; 2011 ; 2011 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2011 ; >
@@ -280,9 +285,7 @@
       au < manifest ; exists ; 1999 ; 1999 ; 1999 ; Afrika Focus Volume 1999 ; >
       au < manifest ; exists ; 2000 ; 2000 ; 2000 ; Afrika Focus Volume 2000 ; >
       au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Afrika Focus Volume 2001 ; >
-      au < exists ; exists ; 2002 ; 2002 ; 2002 ; Afrika Focus Volume 2002 ; >
-      au < exists ; exists ; 2003 ; 2003 ; 2003 ; Afrika Focus Volume 2003 ; >
-      au < exists ; exists ; 2004 ; 2004 ; 2004 ; Afrika Focus Volume 2004 ; >
+
       au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Afrika Focus Volume 2005 ; >
       au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Afrika Focus Volume 2006 ; >
       au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Afrika Focus Volume 2007 ; >
@@ -309,7 +312,7 @@
         eissn = 1380-6319
       >
 
-      #published 1984-2020
+      #published 1984-2022
       param[journal_id] = agora
 
       au < manifest ; exists ; 1984 ; 1984 ; 1984 ; Agora Magazine Volume 1984 ; >
@@ -349,6 +352,8 @@
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Agora Magazine Volume 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Agora Magazine Volume 2019 ; >
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Agora Magazine Volume 2020 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Agora Magazine Volume 2021 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; 2022 ; Agora Magazine Volume 2022 ; >
 
   }
 
@@ -376,6 +381,7 @@
       au < manifest ; exists ; 1993 ; 1993 ; 1993 ; Amsab Tijdingen Volume 1993 ; >
       au < manifest ; exists ; 1994 ; 1994 ; 1994 ; Amsab Tijdingen Volume 1994 ; >
       au < manifest ; exists ; 1995 ; 1995 ; 1995 ; Amsab Tijdingen Volume 1995 ; >
+      au < exists ; exists ; 2019 ; 2019 ; 2019 ; Amsab Tijdingen Volume 2019 ; >
 
   }
 
@@ -386,7 +392,7 @@
         eissn = 1370-7477
       >
 
-      #published 1996-2018
+      #published 1996-2020
       param[journal_id] = broodenrozen
 
       au < manifest ; exists ; 1996 ; 1996 ; 1996 ; Brood & Rozen Volume 1996 ; >
@@ -412,6 +418,8 @@
       au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Brood & Rozen Volume 2016 ; >
       au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Brood & Rozen Volume 2017 ; >
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Brood & Rozen Volume 2018 ; >
+      au < exists ; exists ; 2019 ; 2019 ; 2019 ; Brood & Rozen Volume 2019 ; >
+      au < exists ; exists ; 2020 ; 2020 ; 2020 ; Brood & Rozen Volume 2020 ; >
 
   }
 
@@ -422,7 +430,7 @@
         eissn = 0772-4381
       >
 
-      #published 1984-2019
+      #published 1984-2022
       param[journal_id] = deuilvanminerva
 
       au < manifest ; exists ; 1984 ; 1984 ; 1984 ; De Uil van Minerva Volume 1984 ; >
@@ -461,6 +469,9 @@
       au < exists ; exists ; 2017 ; 2017 ; 2017 ; De Uil van Minerva Volume 2017 ; >
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; De Uil van Minerva Volume 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; De Uil van Minerva Volume 2019 ; >
+      au < exists ; exists ; 2020 ; 2020 ; 2020 ; De Uil van Minerva Volume 2020 ; >
+      au < exists ; exists ; 2021 ; 2021 ; 2021 ; De Uil van Minerva Volume 2021 ; >
+      au < exists ; exists ; 2022 ; 2022 ; 2022 ; De Uil van Minerva Volume 2022 ; >
 
   }
 
@@ -471,7 +482,7 @@
         eissn = 1783-9033
       >
 
-      #published 1971-2019
+      #published 1971-2022
       param[journal_id] = gt
 
       au < manifest ; exists ; 1971 ; 1971 ; 1971 ; Ghendtsche Tydinghen Volume 1971 ; >
@@ -523,6 +534,9 @@
       au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Ghendtsche Tydinghen Volume 2017 ; >
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Ghendtsche Tydinghen Volume 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Ghendtsche Tydinghen Volume 2019 ; >
+      au < exists ; exists ; 2020 ; 2020 ; 2020 ; Ghendtsche Tydinghen Volume 2020 ; >
+      au < exists ; exists ; 2021 ; 2021 ; 2021 ; Ghendtsche Tydinghen Volume 2021 ; >
+      au < exists ; exists ; 2022 ; 2022 ; 2022 ; Ghendtsche Tydinghen Volume 2022 ; >
 
   }
 
@@ -533,13 +547,12 @@
         eissn = 0774-286X
       >
 
-      #published 1894-2017
+      #published 1894-2022
       param[journal_id] = hmgog
 
       au < manifest ; exists ; 1894 ; 1894 ; 1894 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1894 ; >
       au < manifest ; exists ; 1895 ; 1895 ; 1895 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1895 ; >
-      au < exists ; exists ; 1896 ; 1896 ; 1896 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1896 ; >
-      au < exists ; exists ; 1897 ; 1897 ; 1897 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1897 ; >
+
       au < manifest ; exists ; 1898 ; 1898 ; 1898 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1898 ; >
       au < manifest ; exists ; 1899 ; 1899 ; 1899 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1899 ; >
       au < manifest ; exists ; 1900 ; 1900 ; 1900 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1900 ; >
@@ -550,49 +563,26 @@
       au < manifest ; exists ; 1905 ; 1905 ; 1905 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1905 ; >
       au < manifest ; exists ; 1906 ; 1906 ; 1906 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1906 ; >
       au < manifest ; exists ; 1907 ; 1907 ; 1907 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1907 ; >
-      au < exists ; exists ; 1908 ; 1908 ; 1908 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1908 ; >
+
       au < manifest ; exists ; 1909 ; 1909 ; 1909 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1909 ; >
       au < manifest ; exists ; 1910 ; 1910 ; 1910 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1910 ; >
       au < manifest ; exists ; 1911 ; 1911 ; 1911 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1911 ; >
       au < manifest ; exists ; 1912 ; 1912 ; 1912 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1912 ; >
-      au < exists ; exists ; 1913 ; 1913 ; 1913 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1913 ; >
+
       au < manifest ; exists ; 1914 ; 1914 ; 1914 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1914 ; >
-      au < exists ; exists ; 1915 ; 1915 ; 1915 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1915 ; >
-      au < exists ; exists ; 1916 ; 1916 ; 1916 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1916 ; >
-      au < exists ; exists ; 1917 ; 1917 ; 1917 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1917 ; >
-      au < exists ; exists ; 1918 ; 1918 ; 1918 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1918 ; >
+
       au < manifest ; exists ; 1919 ; 1919 ; 1919 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1919 ; >
       au < manifest ; exists ; 1920 ; 1920 ; 1920 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1920 ; >
       au < exists ; exists ; 1921 ; 1921 ; 1921 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1921 ; >
-      au < exists ; exists ; 1922 ; 1922 ; 1922 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1922 ; >
+
       au < manifest ; exists ; 1923 ; 1923 ; 1923 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1923 ; >
-      au < exists ; exists ; 1924 ; 1924 ; 1924 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1924 ; >
-      au < exists ; exists ; 1925 ; 1925 ; 1925 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1925 ; >
-      au < exists ; exists ; 1926 ; 1926 ; 1926 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1926 ; >
-      au < exists ; exists ; 1927 ; 1927 ; 1927 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1927 ; >
-      au < exists ; exists ; 1928 ; 1928 ; 1928 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1928 ; >
-      au < exists ; exists ; 1929 ; 1929 ; 1929 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1929 ; >
-      au < exists ; exists ; 1930 ; 1930 ; 1930 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1930 ; >
-      au < exists ; exists ; 1931 ; 1931 ; 1931 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1931 ; >
-      au < exists ; exists ; 1932 ; 1932 ; 1932 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1932 ; >
-      au < exists ; exists ; 1933 ; 1933 ; 1933 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1933 ; >
-      au < exists ; exists ; 1934 ; 1934 ; 1934 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1934 ; >
-      au < exists ; exists ; 1935 ; 1935 ; 1935 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1935 ; >
-      au < exists ; exists ; 1936 ; 1936 ; 1936 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1936 ; >
-      au < exists ; exists ; 1937 ; 1937 ; 1937 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1937 ; >
-      au < exists ; exists ; 1938 ; 1938 ; 1938 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1938 ; >
-      au < exists ; exists ; 1939 ; 1939 ; 1939 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1939 ; >
-      au < exists ; exists ; 1940 ; 1940 ; 1940 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1940 ; >
-      au < exists ; exists ; 1941 ; 1941 ; 1941 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1941 ; >
-      au < exists ; exists ; 1942 ; 1942 ; 1942 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1942 ; >
-      au < exists ; exists ; 1943 ; 1943 ; 1943 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1943 ; >
+
       au < manifest ; exists ; 1944 ; 1944 ; 1944 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1944 ; >
       au < manifest ; exists ; 1945 ; 1945 ; 1945 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1945 ; >
-      au < exists ; exists ; 1946 ; 1946 ; 1946 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1946 ; >
-      au < exists ; exists ; 1947 ; 1947 ; 1947 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1947 ; >
+
       au < manifest ; exists ; 1948 ; 1948 ; 1948 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1948 ; >
       au < manifest ; exists ; 1949 ; 1949 ; 1949 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1949 ; >
-      au < exists ; exists ; 1950 ; 1950 ; 1950 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1950 ; >
+
       au < manifest ; exists ; 1951 ; 1951 ; 1951 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1951 ; >
       au < manifest ; exists ; 1952 ; 1952 ; 1952 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1952 ; >
       au < manifest ; exists ; 1953 ; 1953 ; 1953 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1953 ; >
@@ -660,6 +650,11 @@
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2015 ; >
       au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2016 ; >
       au < exists ; exists ; 2017 ; 2017 ; 2017 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2017 ; >
+      au < exists ; exists ; 2018 ; 2018 ; 2018 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2018 ; >
+      au < exists ; exists ; 2019 ; 2019 ; 2019 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2019 ; >
+
+      au < exists ; exists ; 2021 ; 2021 ; 2021 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2021 ; >
+      au < exists ; exists ; 2022 ; 2022 ; 2022 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2022 ; >
 
   }
 
@@ -675,50 +670,7 @@
       param[journal_id] = kzm
 
       au < manifest ; exists ; 1906 ; 1906 ; 1906 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1906 ; >
-      au < exists ; exists ; 1907 ; 1907 ; 1907 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1907 ; >
-      au < exists ; exists ; 1908 ; 1908 ; 1908 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1908 ; >
-      au < exists ; exists ; 1909 ; 1909 ; 1909 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1909 ; >
-      au < exists ; exists ; 1910 ; 1910 ; 1910 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1910 ; >
-      au < exists ; exists ; 1911 ; 1911 ; 1911 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1911 ; >
-      au < exists ; exists ; 1912 ; 1912 ; 1912 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1912 ; >
-      au < exists ; exists ; 1913 ; 1913 ; 1913 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1913 ; >
-      au < exists ; exists ; 1914 ; 1914 ; 1914 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1914 ; >
-      au < exists ; exists ; 1915 ; 1915 ; 1915 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1915 ; >
-      au < exists ; exists ; 1916 ; 1916 ; 1916 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1916 ; >
-      au < exists ; exists ; 1917 ; 1917 ; 1917 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1917 ; >
-      au < exists ; exists ; 1918 ; 1918 ; 1918 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1918 ; >
-      au < exists ; exists ; 1919 ; 1919 ; 1919 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1919 ; >
-      au < exists ; exists ; 1920 ; 1920 ; 1920 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1920 ; >
-      au < exists ; exists ; 1921 ; 1921 ; 1921 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1921 ; >
-      au < exists ; exists ; 1922 ; 1922 ; 1922 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1922 ; >
-      au < exists ; exists ; 1923 ; 1923 ; 1923 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1923 ; >
-      au < exists ; exists ; 1924 ; 1924 ; 1924 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1924 ; >
-      au < exists ; exists ; 1925 ; 1925 ; 1925 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1925 ; >
-      au < exists ; exists ; 1926 ; 1926 ; 1926 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1926 ; >
-      au < exists ; exists ; 1927 ; 1927 ; 1927 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1927 ; >
-      au < exists ; exists ; 1928 ; 1928 ; 1928 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1928 ; >
-      au < exists ; exists ; 1929 ; 1929 ; 1929 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1929 ; >
-      au < exists ; exists ; 1930 ; 1930 ; 1930 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1930 ; >
-      au < exists ; exists ; 1931 ; 1931 ; 1931 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1931 ; >
-      au < exists ; exists ; 1932 ; 1932 ; 1932 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1932 ; >
-      au < exists ; exists ; 1933 ; 1933 ; 1933 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1933 ; >
-      au < exists ; exists ; 1934 ; 1934 ; 1934 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1934 ; >
-      au < exists ; exists ; 1935 ; 1935 ; 1935 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1935 ; >
-      au < exists ; exists ; 1936 ; 1936 ; 1936 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1936 ; >
-      au < exists ; exists ; 1937 ; 1937 ; 1937 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1937 ; >
-      au < exists ; exists ; 1938 ; 1938 ; 1938 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1938 ; >
-      au < exists ; exists ; 1939 ; 1939 ; 1939 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1939 ; >
-      au < exists ; exists ; 1940 ; 1940 ; 1940 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1940 ; >
-      au < exists ; exists ; 1941 ; 1941 ; 1941 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1941 ; >
-      au < exists ; exists ; 1942 ; 1942 ; 1942 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1942 ; >
-      au < exists ; exists ; 1943 ; 1943 ; 1943 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1943 ; >
-      au < exists ; exists ; 1944 ; 1944 ; 1944 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1944 ; >
-      au < exists ; exists ; 1945 ; 1945 ; 1945 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1945 ; >
-      au < exists ; exists ; 1946 ; 1946 ; 1946 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1946 ; >
-      au < exists ; exists ; 1947 ; 1947 ; 1947 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1947 ; >
-      au < exists ; exists ; 1948 ; 1948 ; 1948 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1948 ; >
-      au < exists ; exists ; 1949 ; 1949 ; 1949 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1949 ; >
-      au < exists ; exists ; 1950 ; 1950 ; 1950 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1950 ; >
+
       au < manifest ; exists ; 1951 ; 1951 ; 1951 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1951 ; >
       au < exists ; exists ; 1952 ; 1952 ; 1952 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1952 ; >
       au < exists ; exists ; 1953 ; 1953 ; 1953 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1953 ; >

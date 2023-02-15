@@ -189,9 +189,7 @@
       au < manifest ; 1999 ; 1999 ; 1999 ; Afrika Focus Volume 1999 >
       au < manifest ; 2000 ; 2000 ; 2000 ; Afrika Focus Volume 2000 >
       au < manifest ; 2001 ; 2001 ; 2001 ; Afrika Focus Volume 2001 >
-      au < exists ; 2002 ; 2002 ; 2002 ; Afrika Focus Volume 2002 >
-      au < exists ; 2003 ; 2003 ; 2003 ; Afrika Focus Volume 2003 >
-      au < exists ; 2004 ; 2004 ; 2004 ; Afrika Focus Volume 2004 >
+
       au < manifest ; 2005 ; 2005 ; 2005 ; Afrika Focus Volume 2005 >
       au < manifest ; 2006 ; 2006 ; 2006 ; Afrika Focus Volume 2006 >
       au < manifest ; 2007 ; 2007 ; 2007 ; Afrika Focus Volume 2007 >
@@ -218,7 +216,7 @@
         eissn = 1380-6319
       >
 
-      #published 1984-2020
+      #published 1984-2022
       param[journal_id] = agora
 
       au < manifest ; 1984 ; 1984 ; 1984 ; Agora Magazine Volume 1984 >
@@ -258,6 +256,8 @@
       au < released ; 2018 ; 2018 ; 2018 ; Agora Magazine Volume 2018 >
       au < released ; 2019 ; 2019 ; 2019 ; Agora Magazine Volume 2019 >
       au < released ; 2020 ; 2020 ; 2020 ; Agora Magazine Volume 2020 >
+      au < manifest ; 2021 ; 2021 ; 2021 ; Agora Magazine Volume 2021 >
+      au < manifest ; 2022 ; 2022 ; 2022 ; Agora Magazine Volume 2022 >
 
   }
 
@@ -1178,21 +1178,12 @@
         eissn = 0303-9021
       >
 
-      #published 2000-present
+      #published 2009-present
       param[journal_id] = vdt
 
-      au < exists ; 2000 ; 2000 ; 2000 ; Vlaams Diergeneeskundig Tijdschrift Volume 2000 >
-      au < exists ; 2001 ; 2001 ; 2001 ; Vlaams Diergeneeskundig Tijdschrift Volume 2001 >
-      au < exists ; 2002 ; 2002 ; 2002 ; Vlaams Diergeneeskundig Tijdschrift Volume 2002 >
-      au < exists ; 2003 ; 2003 ; 2003 ; Vlaams Diergeneeskundig Tijdschrift Volume 2003 >
-      au < exists ; 2004 ; 2004 ; 2004 ; Vlaams Diergeneeskundig Tijdschrift Volume 2004 >
-      au < exists ; 2005 ; 2005 ; 2005 ; Vlaams Diergeneeskundig Tijdschrift Volume 2005 >
-      au < exists ; 2006 ; 2006 ; 2006 ; Vlaams Diergeneeskundig Tijdschrift Volume 2006 >
-      au < exists ; 2007 ; 2007 ; 2007 ; Vlaams Diergeneeskundig Tijdschrift Volume 2007 >
-      au < exists ; 2008 ; 2008 ; 2008 ; Vlaams Diergeneeskundig Tijdschrift Volume 2008 >
-      au < exists ; 2009 ; 2009 ; 2009 ; Vlaams Diergeneeskundig Tijdschrift Volume 2009 >
-      au < exists ; 2010 ; 2010 ; 2010 ; Vlaams Diergeneeskundig Tijdschrift Volume 2010 >
-      au < exists ; 2011 ; 2011 ; 2011 ; Vlaams Diergeneeskundig Tijdschrift Volume 2011 >
+      au < manifest ; 2009 ; 2009 ; 2009 ; Vlaams Diergeneeskundig Tijdschrift Volume 2009 >
+      au < manifest ; 2010 ; 2010 ; 2010 ; Vlaams Diergeneeskundig Tijdschrift Volume 2010 >
+      au < manifest ; 2011 ; 2011 ; 2011 ; Vlaams Diergeneeskundig Tijdschrift Volume 2011 >
       au < released ; 2012 ; 2012 ; 2012 ; Vlaams Diergeneeskundig Tijdschrift Volume 2012 >
       au < released ; 2013 ; 2013 ; 2013 ; Vlaams Diergeneeskundig Tijdschrift Volume 2013 >
       au < released ; 2014 ; 2014 ; 2014 ; Vlaams Diergeneeskundig Tijdschrift Volume 2014 >
@@ -1214,9 +1205,23 @@
         eissn = 0774-532X
       >
 
-      #published 2009-present
+      #published 1995-present
       param[journal_id] = wt
 
+      au < manifest ; 1995 ; 1995 ; 1995 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 1995 >
+      au < manifest ; 1996 ; 1996 ; 1996 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 1996 >
+      au < manifest ; 1997 ; 1997 ; 1997 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 1997 >
+      au < manifest ; 1998 ; 1998 ; 1998 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 1998 >
+      au < manifest ; 1999 ; 1999 ; 1999 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 1999 >
+      au < manifest ; 2000 ; 2000 ; 2000 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2000 >
+      au < manifest ; 2001 ; 2001 ; 2001 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2001 >
+      au < manifest ; 2002 ; 2002 ; 2002 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2002 >
+      au < manifest ; 2003 ; 2003 ; 2003 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2003 >
+      au < manifest ; 2004 ; 2004 ; 2004 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2004 >
+      au < manifest ; 2005 ; 2005 ; 2005 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2005 >
+      au < manifest ; 2006 ; 2006 ; 2006 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2006 >
+      au < manifest ; 2007 ; 2007 ; 2007 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2007 >
+      au < manifest ; 2008 ; 2008 ; 2008 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2008 >
       au < manifest ; 2009 ; 2009 ; 2009 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2009 >
       au < released ; 2010 ; 2010 ; 2010 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2010 >
       au < released ; 2011 ; 2011 ; 2011 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2011 >
