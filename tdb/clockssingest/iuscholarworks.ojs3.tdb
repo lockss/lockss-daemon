@@ -3,7 +3,7 @@
   publisher <
     name = IUScholarWorks ;
     info[contract] = 2013 ;
-    info[back] = 1968 ;
+    info[back] = 1905 ;
     info[tester] = 8 ;
     info[poller] = 8 ;
     info[platform] = OJS3
@@ -246,7 +246,7 @@
       au < finished ; crawling ; 2017 ; 2017 ; Children's Folklore Review Volume 38 ; 38 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; 2018 ; Children's Folklore Review Volume 39 ; 39 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Children's Folklore Review Volume 40 ; 40 ; >
-      au < expected ; exists ; 2022 ; 2022 ; Children's Folklore Review Volume 41 ; 41 ; >
+      au < expected ; exists ; 2023 ; 2023 ; Children's Folklore Review Volume 41 ; 41 ; >
 
   }
 
@@ -281,7 +281,7 @@
       au < finished ; crawling ; 2019 ; 2019 ; Ethnomusicology Translations Volume 9-10 ; 9-10 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; 2020 ; Ethnomusicology Translations Volume 10 ; 10 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Ethnomusicology Translations Volume 11-12 ; 11-12 ; >
-      au < expected ; exists ; 2022 ; 2022 ; Ethnomusicology Translations Volume 13-14 ; 13-14 ; >
+      au < expected ; exists ; 2023 ; 2023 ; Ethnomusicology Translations Volume 13-14 ; 13-14 ; >
 
   }
 
@@ -391,7 +391,6 @@
       param[journal_id] = ihps
 
       au < finished ; crawling ; 2021 ; 2021 ; Integrated HPS Conference Proceedings Volume 1 ; 1 ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2022 ; 2022 ; Integrated HPS Conference Proceedings Volume 2 ; 2 ; >
 
   }
 
@@ -486,8 +485,6 @@
       au < finished ; crawling ; 2016 ; 2016 ; Journal of Economic Development in Higher Education Volume 1 ; 1 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; 2019 ; Journal of Economic Development in Higher Education Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Economic Development in Higher Education Volume 3 ; 3 ; >
-      au < expected ; exists ; 2021 ; 2021 ; Journal of Economic Development in Higher Education Volume 4 ; 4 ; >
-      au < expected ; exists ; 2022 ; 2022 ; Journal of Economic Development in Higher Education Volume 5 ; 5 ; >
 
   }
 
@@ -499,7 +496,15 @@
       #2015-2021, but have no articles
       param[journal_id] = jfrr
 
+      au < manifest ; exists ; 2015 ; 2016 ; Journal of Folklore Research Reviews Volume 2015 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; Journal of Folklore Research Reviews Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; Journal of Folklore Research Reviews Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; Journal of Folklore Research Reviews Volume 2018 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Journal of Folklore Research Reviews Volume 2019 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; Journal of Folklore Research Reviews Volume 2020 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Journal of Folklore Research Reviews Volume 2021 ; 2021 ; >
       au < manifest ; exists ; 2022 ; 2022 ; Journal of Folklore Research Reviews Volume 2022 ; 2022 ; >
+      au < manifest ; exists ; 2023 ; 2023 ; Journal of Folklore Research Reviews Volume 2023 ; 2023 ; >
 
   }
 
@@ -512,8 +517,6 @@
       param[journal_id] = jpea
 
       au < finished ; crawling ; 2020 ; 2020 ; Journal of Public and Environmental Affairs Volume 1 ; 1 ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2021 ; 2021 ; Journal of Public and Environmental Affairs Volume 2 ; 2 ; >
-      au < expected ; exists ; 2022 ; 2022 ; Journal of Public and Environmental Affairs Volume 3 ; 3 ; >
 
   }
 
@@ -1002,7 +1005,7 @@
       au < finished ; crawling ; 2019 ; 2019 ; Physical Disabilities: Education and Related Services Volume 2019 ; 38 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; 2020 ; Research, Advocacy, and Practice for Complex and Chronic Conditions Volume 2020 ; 39 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; 2021 ; Research, Advocacy, and Practice for Complex and Chronic Conditions Volume 2021 ; 40 ; reingest3.clockss.org:8083 >
-      au < expected ; exists ; 2022 ; 2022 ; Research, Advocacy, and Practice for Complex and Chronic Conditions Volume 2022 ; 41 ; >
+      au < expected ; exists ; 2023 ; 2023 ; Research, Advocacy, and Practice for Complex and Chronic Conditions Volume 2023 ; 41 ; >
 
   }
 
@@ -1110,8 +1113,6 @@
 
       au < finished ; crawling ; 2018 ; 2018 ; Journal of Academic Advising Volume 2018 ; 1 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Academic Advising Volume 2020 ; 2 ; >
-      au < expected ; exists ; 2021 ; 2021 ; Journal of Academic Advising Volume 2021 ; 3 ; >
-      au < expected ; exists ; 2022 ; 2022 ; Journal of Academic Advising Volume 2022 ; 4 ; >
 
   }
 
@@ -1128,8 +1129,6 @@
       au < finished ; crawling ; 2017 ; 2017 ; Global Engagement and Transformation Volume 2017 ; 1-2 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; 2018 ; Global Engagement and Transformation Volume 2018 ; 3 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Global Engagement and Transformation Volume 2020 ; 4 ; >
-      au < expected ; exists ; 2021 ; 2021 ; Global Engagement and Transformation Volume 2021 ; 5 ; >
-      au < expected ; exists ; 2022 ; 2022 ; Global Engagement and Transformation Volume 2022 ; 6 ; >
 
   }
 
@@ -1145,8 +1144,8 @@
 
       au < finished ; crawling ; 2019 ; 2019 ; Global Journal of Transformative Education Volume 2018 ; 1 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; 2020 ; Global Journal of Transformative Education Volume 2020 ; 2 ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2021 ; 2021 ; Global Journal of Transformative Education Volume 2021 ; 3 ; >
-      au < crawling ; exists ; 2022 ; 2022 ; Global Journal of Transformative Education Volume 2022 ; 4 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Global Journal of Transformative Education Volume 2022 ; 3 ; >
+      au < expected ; exists ; 2023 ; 2023 ; Global Journal of Transformative Education Volume 2023 ; 4 ; >
 
   }
 
@@ -1226,8 +1225,6 @@
       #no issn/eissn
 
       au < finished ; crawling ; 2020 ; 2020 ; Indiana Working Papers in Speech Sound Articulation Volume 2020 ; 1 ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2021 ; 2021 ; Indiana Working Papers in Speech Sound Articulation Volume 2021 ; 2 ; >
-      au < expected ; exists ; 2022 ; 2022 ; Indiana Working Papers in Speech Sound Articulation Volume 2022 ; 3 ; >
 
   }
 
