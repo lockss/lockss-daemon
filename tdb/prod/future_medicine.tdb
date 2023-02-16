@@ -622,22 +622,25 @@
   
     title < 
       name = Journal of Comparative Effectiveness Research ;
-      issn = 2042-6305
+      issn = 2042-6305 ;
+      eissn = 2042-6313
     >
     
     param[journal_id] = cer
+    #Moved to new publisher https://becarispublishing.com/journal/cer. 2019-2022 still here.
 
-    au < released ; 2012 ; Journal of Comparative Effectiveness Research Volume 1 ; 1 ; http://www.futuremedicine.com/ >
-    au < released ; 2013 ; Journal of Comparative Effectiveness Research Volume 2 ; 2 ; http://www.futuremedicine.com/ >
-    au < released ; 2014 ; Journal of Comparative Effectiveness Research Volume 3 ; 3 ; http://www.futuremedicine.com/ >
-    au < released ; 2015 ; Journal of Comparative Effectiveness Research Volume 4 ; 4 ; http://www.futuremedicine.com/ >
-    au < released ; 2016 ; Journal of Comparative Effectiveness Research Volume 5 ; 5 ; http://www.futuremedicine.com/ >
-    au < released ; 2017 ; Journal of Comparative Effectiveness Research Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; Journal of Comparative Effectiveness Research Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < down ; 2012 ; Journal of Comparative Effectiveness Research Volume 1 ; 1 ; http://www.futuremedicine.com/ >
+    au < down ; 2013 ; Journal of Comparative Effectiveness Research Volume 2 ; 2 ; http://www.futuremedicine.com/ >
+    au < down ; 2014 ; Journal of Comparative Effectiveness Research Volume 3 ; 3 ; http://www.futuremedicine.com/ >
+    au < down ; 2015 ; Journal of Comparative Effectiveness Research Volume 4 ; 4 ; http://www.futuremedicine.com/ >
+    au < down ; 2016 ; Journal of Comparative Effectiveness Research Volume 5 ; 5 ; http://www.futuremedicine.com/ >
+    au < down ; 2017 ; Journal of Comparative Effectiveness Research Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; Journal of Comparative Effectiveness Research Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+
     au < released ; 2019 ; Journal of Comparative Effectiveness Research Volume 8 ; 8 ; https://www.futuremedicine.com/ >
     au < released ; 2020 ; Journal of Comparative Effectiveness Research Volume 9 ; 9 ; https://www.futuremedicine.com/ >
     au < released ; 2021 ; Journal of Comparative Effectiveness Research Volume 10 ; 10 ; https://www.futuremedicine.com/ >
-    au < manifest ; 2022 ; Journal of Comparative Effectiveness Research Volume 11 ; 11 ; https://www.futuremedicine.com/ >
+    au < doNotProcess ; 2022 ; Journal of Comparative Effectiveness Research Volume 11 ; 11 ; https://www.futuremedicine.com/ >
 
   }
 
