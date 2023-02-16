@@ -822,7 +822,7 @@ s api client with long timeout */
       return;
     }
 
-    auState.setMigrationState(AuState.MigrationState.InProgress);
+    auState.setMigrationState(state);
 
     switch (state) {
       case Aborted:
