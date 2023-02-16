@@ -268,7 +268,7 @@
         eissn = 0771-0038
       >
 
-      #published 1982-1995
+      #published 1982-2019
       param[journal_id] = at
 
       au < exists ; 1982 ; 1982 ; 1982 ; Amsab Tijdingen Volume 1982 >
@@ -285,6 +285,7 @@
       au < manifest ; 1993 ; 1993 ; 1993 ; Amsab Tijdingen Volume 1993 >
       au < manifest ; 1994 ; 1994 ; 1994 ; Amsab Tijdingen Volume 1994 >
       au < manifest ; 1995 ; 1995 ; 1995 ; Amsab Tijdingen Volume 1995 >
+      au < exists ; 2019 ; 2019 ; 2019 ; Amsab Tijdingen Volume 2019 >
 
   }
 
@@ -295,7 +296,7 @@
         eissn = 1370-7477
       >
 
-      #published 1996-2018
+      #published 1996-2020
       param[journal_id] = broodenrozen
 
       au < manifest ; 1996 ; 1996 ; 1996 ; Brood & Rozen Volume 1996 >
@@ -321,6 +322,8 @@
       au < released ; 2016 ; 2016 ; 2016 ; Brood & Rozen Volume 2016 >
       au < released ; 2017 ; 2017 ; 2017 ; Brood & Rozen Volume 2017 >
       au < released ; 2018 ; 2018 ; 2018 ; Brood & Rozen Volume 2018 >
+      au < manifest ; 2019 ; 2019 ; 2019 ; Brood & Rozen Volume 2019 >
+      au < manifest ; 2020 ; 2020 ; 2020 ; Brood & Rozen Volume 2020 >
 
   }
 
@@ -331,7 +334,7 @@
         eissn = 0772-4381
       >
 
-      #published 1984-2019
+      #published 1984-2022
       param[journal_id] = deuilvanminerva
 
       au < manifest ; 1984 ; 1984 ; 1984 ; De Uil van Minerva Volume 1984 >
@@ -358,8 +361,7 @@
       au < manifest ; 2005 ; 2005 ; 2005 ; De Uil van Minerva Volume 2005 >
       au < manifest ; 2006 ; 2006 ; 2006 ; De Uil van Minerva Volume 2006 >
       au < manifest ; 2007 ; 2007 ; 2007 ; De Uil van Minerva Volume 2007 >
-      au < exists ; 2008 ; 2008 ; 2008 ; De Uil van Minerva Volume 2008 >
-      au < exists ; 2009 ; 2009 ; 2009 ; De Uil van Minerva Volume 2009 >
+
       au < released ; 2010 ; 2010 ; 2010 ; De Uil van Minerva Volume 2010 >
       au < released ; 2011 ; 2011 ; 2011 ; De Uil van Minerva Volume 2011 >
       au < released ; 2012 ; 2012 ; 2012 ; De Uil van Minerva Volume 2012 >
@@ -367,9 +369,12 @@
       au < released ; 2014 ; 2014 ; 2014 ; De Uil van Minerva Volume 2014 >
       au < released ; 2015 ; 2015 ; 2015 ; De Uil van Minerva Volume 2015 >
       au < released ; 2016 ; 2016 ; 2016 ; De Uil van Minerva Volume 2016 >
-      au < exists ; 2017 ; 2017 ; 2017 ; De Uil van Minerva Volume 2017 >
+      au < manifest ; 2017 ; 2017 ; 2017 ; De Uil van Minerva Volume 2017 >
       au < released ; 2018 ; 2018 ; 2018 ; De Uil van Minerva Volume 2018 >
       au < released ; 2019 ; 2019 ; 2019 ; De Uil van Minerva Volume 2019 >
+      au < manifest ; 2020 ; 2020 ; 2020 ; De Uil van Minerva Volume 2020 >
+      au < manifest ; 2021 ; 2021 ; 2021 ; De Uil van Minerva Volume 2021 >
+      au < manifest ; 2022 ; 2022 ; 2022 ; De Uil van Minerva Volume 2022 >
 
   }
 
@@ -381,7 +386,7 @@
         eissn = 1783-9033
       >
 
-      #published 1971-2019
+      #published 1971-2022
       param[journal_id] = gt
 
       au < manifest ; 1971 ; 1971 ; 1971 ; Ghendtsche Tydinghen Volume 1971 >
@@ -433,6 +438,9 @@
       au < released ; 2017 ; 2017 ; 2017 ; Ghendtsche Tydinghen Volume 2017 >
       au < released ; 2018 ; 2018 ; 2018 ; Ghendtsche Tydinghen Volume 2018 >
       au < released ; 2019 ; 2019 ; 2019 ; Ghendtsche Tydinghen Volume 2019 >
+      au < manifest ; 2020 ; 2020 ; 2020 ; Ghendtsche Tydinghen Volume 2020 >
+      au < manifest ; 2021 ; 2021 ; 2021 ; Ghendtsche Tydinghen Volume 2021 >
+      au < manifest ; 2022 ; 2022 ; 2022 ; Ghendtsche Tydinghen Volume 2022 >
 
   }
 
@@ -448,61 +456,37 @@
 
       au < manifest ; 1894 ; 1894 ; 1894 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1894 >
       au < manifest ; 1895 ; 1895 ; 1895 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1895 >
-      au < exists ; 1896 ; 1896 ; 1896 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1896 >
-      au < exists ; 1897 ; 1897 ; 1897 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1897 >
+
       au < manifest ; 1898 ; 1898 ; 1898 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1898 >
       au < manifest ; 1899 ; 1899 ; 1899 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1899 >
       au < manifest ; 1900 ; 1900 ; 1900 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1900 >
-      au < exists ; 1901 ; 1901 ; 1901 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1901 >
+      au < manifest ; 1901 ; 1901 ; 1901 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1901 >
       au < manifest ; 1902 ; 1902 ; 1902 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1902 >
       au < manifest ; 1903 ; 1903 ; 1903 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1903 >
       au < manifest ; 1904 ; 1904 ; 1904 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1904 >
       au < manifest ; 1905 ; 1905 ; 1905 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1905 >
       au < manifest ; 1906 ; 1906 ; 1906 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1906 >
       au < manifest ; 1907 ; 1907 ; 1907 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1907 >
-      au < exists ; 1908 ; 1908 ; 1908 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1908 >
+
       au < manifest ; 1909 ; 1909 ; 1909 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1909 >
       au < manifest ; 1910 ; 1910 ; 1910 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1910 >
       au < manifest ; 1911 ; 1911 ; 1911 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1911 >
       au < manifest ; 1912 ; 1912 ; 1912 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1912 >
-      au < exists ; 1913 ; 1913 ; 1913 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1913 >
+
       au < manifest ; 1914 ; 1914 ; 1914 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1914 >
-      au < exists ; 1915 ; 1915 ; 1915 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1915 >
-      au < exists ; 1916 ; 1916 ; 1916 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1916 >
-      au < exists ; 1917 ; 1917 ; 1917 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1917 >
-      au < exists ; 1918 ; 1918 ; 1918 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1918 >
+
       au < manifest ; 1919 ; 1919 ; 1919 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1919 >
       au < manifest ; 1920 ; 1920 ; 1920 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1920 >
-      au < exists ; 1921 ; 1921 ; 1921 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1921 >
-      au < exists ; 1922 ; 1922 ; 1922 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1922 >
+      au < manifest ; 1921 ; 1921 ; 1921 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1921 >
+
       au < manifest ; 1923 ; 1923 ; 1923 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1923 >
-      au < exists ; 1924 ; 1924 ; 1924 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1924 >
-      au < exists ; 1925 ; 1925 ; 1925 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1925 >
-      au < exists ; 1926 ; 1926 ; 1926 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1926 >
-      au < exists ; 1927 ; 1927 ; 1927 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1927 >
-      au < exists ; 1928 ; 1928 ; 1928 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1928 >
-      au < exists ; 1929 ; 1929 ; 1929 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1929 >
-      au < exists ; 1930 ; 1930 ; 1930 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1930 >
-      au < exists ; 1931 ; 1931 ; 1931 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1931 >
-      au < exists ; 1932 ; 1932 ; 1932 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1932 >
-      au < exists ; 1933 ; 1933 ; 1933 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1933 >
-      au < exists ; 1934 ; 1934 ; 1934 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1934 >
-      au < exists ; 1935 ; 1935 ; 1935 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1935 >
-      au < exists ; 1936 ; 1936 ; 1936 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1936 >
-      au < exists ; 1937 ; 1937 ; 1937 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1937 >
-      au < exists ; 1938 ; 1938 ; 1938 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1938 >
-      au < exists ; 1939 ; 1939 ; 1939 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1939 >
-      au < exists ; 1940 ; 1940 ; 1940 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1940 >
-      au < exists ; 1941 ; 1941 ; 1941 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1941 >
-      au < exists ; 1942 ; 1942 ; 1942 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1942 >
-      au < exists ; 1943 ; 1943 ; 1943 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1943 >
+
       au < manifest ; 1944 ; 1944 ; 1944 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1944 >
       au < manifest ; 1945 ; 1945 ; 1945 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1945 >
-      au < exists ; 1946 ; 1946 ; 1946 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1946 >
-      au < exists ; 1947 ; 1947 ; 1947 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1947 >
+
       au < manifest ; 1948 ; 1948 ; 1948 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1948 >
       au < manifest ; 1949 ; 1949 ; 1949 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1949 >
-      au < exists ; 1950 ; 1950 ; 1950 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1950 >
+
       au < manifest ; 1951 ; 1951 ; 1951 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1951 >
       au < manifest ; 1952 ; 1952 ; 1952 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1952 >
       au < manifest ; 1953 ; 1953 ; 1953 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1953 >
@@ -523,7 +507,7 @@
       au < manifest ; 1968 ; 1968 ; 1968 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1968 >
       au < manifest ; 1969 ; 1969 ; 1969 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1969 >
       au < manifest ; 1970 ; 1970 ; 1970 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1970 >
-      au < exists ; 1971 ; 1971 ; 1971 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1971 >
+      au < manifest ; 1971 ; 1971 ; 1971 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1971 >
       au < manifest ; 1972 ; 1972 ; 1972 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1972 >
       au < manifest ; 1973 ; 1973 ; 1973 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1973 >
       au < manifest ; 1974 ; 1974 ; 1974 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1974 >
@@ -566,10 +550,12 @@
       au < released ; 2011 ; 2011 ; 2011 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2011 >
       au < released ; 2012 ; 2012 ; 2012 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2012 >
       au < released ; 2013 ; 2013 ; 2013 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2013 >
-      au < exists ; 2014 ; 2014 ; 2014 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2014 >
+      au < manifest ; 2014 ; 2014 ; 2014 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2014 >
       au < released ; 2015 ; 2015 ; 2015 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2015 >
       au < released ; 2016 ; 2016 ; 2016 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2016 >
-      au < exists ; 2017 ; 2017 ; 2017 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2017 >
+      au < manifest ; 2017 ; 2017 ; 2017 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2017 >
+      au < manifest ; 2018 ; 2018 ; 2018 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2018 >
+      au < manifest ; 2019 ; 2019 ; 2019 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2019 >
 
   }
 
