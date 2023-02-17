@@ -561,7 +561,7 @@
     au < finished ; frozen ; 2018 ; 2018 ; Annals of Otology and Neurotology Volume 1 ; 1 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2019 ; 2019 ; Annals of Otology and Neurotology Volume 2 ; 2 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Annals of Otology and Neurotology Volume 3 ; 3 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Annals of Otology and Neurotology Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Annals of Otology and Neurotology Volume 4 ; 4 ; >
     au < expected ; exists ; 2022 ; 2022 ; Annals of Otology and Neurotology Volume 5 ; 5 ; >
 
    }
@@ -2533,7 +2533,7 @@
    au < finished ; frozen ; 2019 ; 2019 ; Indian Journal of Neurotrauma Volume 16 ; 16 ; reingest3.clockss.org:8083 >
    au < deepCrawl ; exists ; 2020 ; 2020 ; Indian Journal of Neurotrauma Volume 17 ; 17 ; >
    au < deepCrawl ; exists ; 2021 ; 2021 ; Indian Journal of Neurotrauma Volume 18 ; 18 ; >
-   au < ready ; exists ; 2022 ; 2022 ; Indian Journal of Neurotrauma Volume 19 ; 19 ; >
+   au < crawling ; exists ; 2022 ; 2022 ; Indian Journal of Neurotrauma Volume 19 ; 19 ; >
 
   }
 
@@ -8201,7 +8201,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Yearbook of Medical Informatics Volume 28 ; 28 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Yearbook of Medical Informatics Volume 29 ; 29 ; >
     au < deepCrawl ; exists ; 2021 ; 2021 ; Yearbook of Medical Informatics Volume 30 ; 30 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Yearbook of Medical Informatics Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Yearbook of Medical Informatics Volume 31 ; 31 ; >
 
   }
 
