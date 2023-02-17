@@ -27,23 +27,23 @@
     
     param[journal_id] = 1
 
-    au < finished ; frozen ; 2005 ; Therapeutics and Clinical Risk Management Volume 1 ; 1 ; 2005 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2006 ; Therapeutics and Clinical Risk Management Volume 2 ; 2 ; 2006 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2007 ; Therapeutics and Clinical Risk Management Volume 3 ; 3 ; 2007 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2005 ; Therapeutics and Clinical Risk Management Volume 1 ; 1 ; 2005 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2006 ; Therapeutics and Clinical Risk Management Volume 2 ; 2 ; 2006 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2007 ; Therapeutics and Clinical Risk Management Volume 3 ; 3 ; 2007 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2008 ; Therapeutics and Clinical Risk Management Volume 4 ; 4 ; 2008 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2009 ; Therapeutics and Clinical Risk Management Volume 5 ; 5 ; 2009 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2009 ; Therapeutics and Clinical Risk Management Volume 5 ; 5 ; 2009 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010 ; Therapeutics and Clinical Risk Management Volume 6 ; 6 ; 2010 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2011 ; Therapeutics and Clinical Risk Management Volume 7 ; 7 ; 2011 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2012 ; Therapeutics and Clinical Risk Management Volume 8 ; 8 ; 2012 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; Therapeutics and Clinical Risk Management Volume 7 ; 7 ; 2011 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; Therapeutics and Clinical Risk Management Volume 8 ; 8 ; 2012 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Therapeutics and Clinical Risk Management Volume 9 ; 9 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Therapeutics and Clinical Risk Management Volume 10 ; 10 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Therapeutics and Clinical Risk Management Volume 11 ; 11 ; 2015 ; >
     au < finished ; finished ; 2016 ; Therapeutics and Clinical Risk Management Volume 12 ; 12 ; 2016 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2017 ; Therapeutics and Clinical Risk Management Volume 13 ; 13 ; 2017 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2018 ; Therapeutics and Clinical Risk Management Volume 14 ; 14 ; 2018 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2019 ; Therapeutics and Clinical Risk Management Volume 15 ; 15 ; 2019 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2017 ; Therapeutics and Clinical Risk Management Volume 13 ; 13 ; 2017 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2018 ; Therapeutics and Clinical Risk Management Volume 14 ; 14 ; 2018 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Therapeutics and Clinical Risk Management Volume 15 ; 15 ; 2019 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2020 ; Therapeutics and Clinical Risk Management Volume 16 ; 16 ; 2020 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2021 ; Therapeutics and Clinical Risk Management Volume 17 ; 17 ; 2021 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2021 ; Therapeutics and Clinical Risk Management Volume 17 ; 17 ; 2021 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Therapeutics and Clinical Risk Management Volume 18 ; 18 ; 2022 ; >
 
   }
@@ -57,9 +57,9 @@
     
     param[journal_id] = 2
 
-    au < finished ; frozen ; 2005 ; Vascular Health and Risk Management Volume 1 ; 1 ; 2005 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2006 ; Vascular Health and Risk Management Volume 2 ; 2 ; 2006 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2007 ; Vascular Health and Risk Management Volume 3 ; 3 ; 2007 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2005 ; Vascular Health and Risk Management Volume 1 ; 1 ; 2005 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2006 ; Vascular Health and Risk Management Volume 2 ; 2 ; 2006 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2007 ; Vascular Health and Risk Management Volume 3 ; 3 ; 2007 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2008 ; Vascular Health and Risk Management Volume 4 ; 4 ; 2008 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Vascular Health and Risk Management Volume 5 ; 5 ; 2009 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2010 ; Vascular Health and Risk Management Volume 6 ; 6 ; 2010 ; reingest2.clockss.org:8085 >
@@ -69,11 +69,11 @@
     au < finished ; finished ; 2014 ; Vascular Health and Risk Management Volume 10 ; 10 ; 2014 ; >
     au < finished ; finished ; 2015 ; Vascular Health and Risk Management Volume 11 ; 11 ; 2015 ; >
     au < finished ; finished ; 2016 ; Vascular Health and Risk Management Volume 12 ; 12 ; 2016 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2017 ; Vascular Health and Risk Management Volume 13 ; 13 ; 2017 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2018 ; Vascular Health and Risk Management Volume 14 ; 14 ; 2018 ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2019 ; Vascular Health and Risk Management Volume 15 ; 15 ; 2019 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2017 ; Vascular Health and Risk Management Volume 13 ; 13 ; 2017 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2018 ; Vascular Health and Risk Management Volume 14 ; 14 ; 2018 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Vascular Health and Risk Management Volume 15 ; 15 ; 2019 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2020 ; Vascular Health and Risk Management Volume 16 ; 16 ; 2020 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2021 ; Vascular Health and Risk Management Volume 17 ; 17 ; 2021 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2021 ; Vascular Health and Risk Management Volume 17 ; 17 ; 2021 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Vascular Health and Risk Management Volume 18 ; 18 ; 2022 ; >
 
   }
@@ -88,22 +88,22 @@
     param[journal_id] = 3
 
     au < finished ; finished ; 2005 ; Neuropsychiatric Disease and Treatment Volume 1 ; 1 ; 2005 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2006 ; Neuropsychiatric Disease and Treatment Volume 2 ; 2 ; 2006 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2007 ; Neuropsychiatric Disease and Treatment Volume 3 ; 3 ; 2007 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2006 ; Neuropsychiatric Disease and Treatment Volume 2 ; 2 ; 2006 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2007 ; Neuropsychiatric Disease and Treatment Volume 3 ; 3 ; 2007 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2008 ; Neuropsychiatric Disease and Treatment Volume 4 ; 4 ; 2008 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2009 ; Neuropsychiatric Disease and Treatment Volume 5 ; 5 ; 2009 ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2010 ; Neuropsychiatric Disease and Treatment Volume 6 ; 6 ; 2010 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2011 ; Neuropsychiatric Disease and Treatment Volume 7 ; 7 ; 2011 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2012 ; Neuropsychiatric Disease and Treatment Volume 8 ; 8 ; 2012 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2010 ; Neuropsychiatric Disease and Treatment Volume 6 ; 6 ; 2010 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; Neuropsychiatric Disease and Treatment Volume 7 ; 7 ; 2011 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; Neuropsychiatric Disease and Treatment Volume 8 ; 8 ; 2012 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Neuropsychiatric Disease and Treatment Volume 9 ; 9 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Neuropsychiatric Disease and Treatment Volume 10 ; 10 ; 2014 ; >
     au < finished ; finished ; 2015 ; Neuropsychiatric Disease and Treatment Volume 11 ; 11 ; 2015 ; >
     au < finished ; crawling ; 2016 ; Neuropsychiatric Disease and Treatment Volume 12 ; 12 ; 2016 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2017 ; Neuropsychiatric Disease and Treatment Volume 13 ; 13 ; 2017 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2018 ; Neuropsychiatric Disease and Treatment Volume 14 ; 14 ; 2018 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2019 ; Neuropsychiatric Disease and Treatment Volume 15 ; 15 ; 2019 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2017 ; Neuropsychiatric Disease and Treatment Volume 13 ; 13 ; 2017 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2018 ; Neuropsychiatric Disease and Treatment Volume 14 ; 14 ; 2018 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Neuropsychiatric Disease and Treatment Volume 15 ; 15 ; 2019 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2020 ; Neuropsychiatric Disease and Treatment Volume 16 ; 16 ; 2020 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2021 ; Neuropsychiatric Disease and Treatment Volume 17 ; 17 ; 2021 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2021 ; Neuropsychiatric Disease and Treatment Volume 17 ; 17 ; 2021 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2022 ; Neuropsychiatric Disease and Treatment Volume 18 ; 18 ; 2022 ; >
 
   }
@@ -119,19 +119,19 @@
 
     au < finished ; finished ; 2006 ; Clinical Interventions in Aging Volume 1 ; 1 ; 2006 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2007 ; Clinical Interventions in Aging Volume 2 ; 2 ; 2007 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2008 ; Clinical Interventions in Aging Volume 3 ; 3 ; 2008 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2009 ; Clinical Interventions in Aging Volume 4 ; 4 ; 2009 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2010 ; Clinical Interventions in Aging Volume 5 ; 5 ; 2010 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2011 ; Clinical Interventions in Aging Volume 6 ; 6 ; 2011 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2008 ; Clinical Interventions in Aging Volume 3 ; 3 ; 2008 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2009 ; Clinical Interventions in Aging Volume 4 ; 4 ; 2009 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2010 ; Clinical Interventions in Aging Volume 5 ; 5 ; 2010 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; Clinical Interventions in Aging Volume 6 ; 6 ; 2011 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Clinical Interventions in Aging Volume 7 ; 7 ; 2012 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; Clinical Interventions in Aging Volume 8 ; 8 ; 2013 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Clinical Interventions in Aging Volume 9 ; 9 ; 2014 ; >
     au < finished ; finished ; 2015 ; Clinical Interventions in Aging Volume 10 ; 10 ; 2015 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2016 ; Clinical Interventions in Aging Volume 11 ; 11 ; 2016 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2017 ; Clinical Interventions in Aging Volume 12 ; 12 ; 2017 ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2018 ; Clinical Interventions in Aging Volume 13 ; 13 ; 2018 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2019 ; Clinical Interventions in Aging Volume 14 ; 14 ; 2019 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2020 ; Clinical Interventions in Aging Volume 15 ; 15 ; 2020 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; Clinical Interventions in Aging Volume 12 ; 12 ; 2017 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2018 ; Clinical Interventions in Aging Volume 13 ; 13 ; 2018 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Clinical Interventions in Aging Volume 14 ; 14 ; 2019 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2020 ; Clinical Interventions in Aging Volume 15 ; 15 ; 2020 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Clinical Interventions in Aging Volume 16 ; 16 ; 2021 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2022 ; Clinical Interventions in Aging Volume 17 ; 17 ; 2022 ; >
 

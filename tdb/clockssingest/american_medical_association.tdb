@@ -105,7 +105,7 @@
     au < finished ; finished ; 2018 ; JAMA Internal Medicine Volume 178 ; 2018 ; https://jamanetwork.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2019 ; JAMA Internal Medicine Volume 179 ; 2019 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; JAMA Internal Medicine Volume 180 ; 2020 ; https://jamanetwork.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2021 ; JAMA Internal Medicine Volume 181 ; 2021 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2021 ; JAMA Internal Medicine Volume 181 ; 2021 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2022 ; JAMA Internal Medicine Volume 182 ; 2022 ; https://jamanetwork.com/ ; >
 
   }
@@ -121,7 +121,7 @@
     param[journal_id] = jama-health-forum
     #See https://pubs.jamanetwork.com/data/sitemap/Site_193/sitemap_J185.xml
     
-    au < finished ; frozen ; 2020 ; JAMA Health Forum Volume 2020 ; 2020 ; https://jamanetwork.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2020 ; JAMA Health Forum Volume 2020 ; 2020 ; https://jamanetwork.com/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; JAMA Health Forum Volume 2021 ; 2021 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2022 ; JAMA Health Forum Volume 2022 ; 2022 ; https://jamanetwork.com/ ; >
 
@@ -229,8 +229,8 @@
     au < finished ; finished ; 2017 ; JAMA Ophthalmology Volume 135 ; 2017 ; http://jamanetwork.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2018 ; JAMA Ophthalmology Volume 136 ; 2018 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2019 ; JAMA Ophthalmology Volume 137 ; 2019 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2020 ; JAMA Ophthalmology Volume 138 ; 2020 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2021 ; JAMA Ophthalmology Volume 139 ; 2021 ; https://jamanetwork.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2020 ; JAMA Ophthalmology Volume 138 ; 2020 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2021 ; JAMA Ophthalmology Volume 139 ; 2021 ; https://jamanetwork.com/ ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2022 ; JAMA Ophthalmology Volume 140 ; 2022 ; https://jamanetwork.com/ ; >
 
   }
@@ -254,7 +254,7 @@
     au < finished ; crawling ; 2017 ; JAMA Otolaryngology - Head & Neck Surgery Volume 143 ; 2017 ; http://jamanetwork.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; JAMA Otolaryngology - Head & Neck Surgery Volume 144 ; 2018 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2019 ; JAMA Otolaryngology - Head & Neck Surgery Volume 145 ; 2019 ; https://jamanetwork.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2020 ; JAMA Otolaryngology - Head & Neck Surgery Volume 146 ; 2020 ; https://jamanetwork.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2020 ; JAMA Otolaryngology - Head & Neck Surgery Volume 146 ; 2020 ; https://jamanetwork.com/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2021 ; JAMA Otolaryngology - Head & Neck Surgery Volume 147 ; 2021 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2022 ; JAMA Otolaryngology - Head & Neck Surgery Volume 148 ; 2022 ; https://jamanetwork.com/ ; >
 
@@ -329,7 +329,7 @@
     au < finished ; crawling ; 2017 ; JAMA Surgery Volume 152 ; 2017 ; http://jamanetwork.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; JAMA Surgery Volume 153 ; 2018 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2019 ; JAMA Surgery Volume 154 ; 2019 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2020 ; JAMA Surgery Volume 155 ; 2020 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2020 ; JAMA Surgery Volume 155 ; 2020 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2021 ; JAMA Surgery Volume 156 ; 2021 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2022 ; JAMA Surgery Volume 157 ; 2022 ; https://jamanetwork.com/ ; >
 
