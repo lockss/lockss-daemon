@@ -24,8 +24,8 @@
 
       param[journal_id] = am-lit-scholarship
 
-      au < finished ; frozen ; 2016 ; 2016 ; American Literary Scholarship 2016 ; 2014 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2017 ; 2017 ; American Literary Scholarship 2017 ; 2015 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2016 ; 2016 ; American Literary Scholarship 2016 ; 2014 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; 2017 ; American Literary Scholarship 2017 ; 2015 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2018 ; 2018 ; American Literary Scholarship 2018 ; 2016 ; >
       au < frozen ; exists ; 2019 ; 2019 ; American Literary Scholarship 2019 ; 2017 ; >
       au < frozen ; exists ; 2020 ; 2020 ; American Literary Scholarship 2020 ; 2018 ; >
@@ -45,8 +45,8 @@
 
       param[journal_id] = american-literature
 
-      au < finished ; frozen ; 2017 ; 2017 ; American Literature Volume 89 ; 89 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2018 ; 2018 ; American Literature Volume 90 ; 90 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2017 ; 2017 ; American Literature Volume 89 ; 89 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2018 ; 2018 ; American Literature Volume 90 ; 90 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; 2019 ; American Literature Volume 91 ; 91 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2020 ; 2020 ; American Literature Volume 92 ; 92 ; >
       au < frozen ; exists ; 2021 ; 2021 ; American Literature Volume 93 ; 93 ; >
@@ -65,8 +65,8 @@
 
       param[journal_id] = american-speech
 
-      au < finished ; frozen ; 2017 ; 2017 ; American Speech Volume 92 ; 92 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; 2018 ; American Speech Volume 93 ; 93 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; 2017 ; American Speech Volume 92 ; 92 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 2018 ; American Speech Volume 93 ; 93 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; 2019 ; American Speech Volume 94 ; 94 ; >
       au < frozen ; exists ; 2020 ; 2020 ; American Speech Volume 95 ; 95 ; >
       au < frozen ; exists ; 2021 ; 2021 ; American Speech Volume 96 ; 96 ; >
@@ -85,7 +85,7 @@
 
       param[journal_id] = boundary-2
 
-      au < finished ; frozen ; 2017 ; 2017 ; boundary 2 Volume 44 ; 44 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; 2017 ; boundary 2 Volume 44 ; 44 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2018 ; 2018 ; boundary 2 Volume 45 ; 45 ; >
       au < frozen ; exists ; 2019 ; 2019 ; boundary 2 Volume 46 ; 46 ; >
       au < frozen ; exists ; 2020 ; 2020 ; boundary 2 Volume 47 ; 47 ; >
@@ -105,24 +105,24 @@
 
       param[journal_id] = archives-of-asian-art
 
-      au < finished ; frozen ; 2001 ; 2001 ; Archives of Asian Art Volume 52 ; 52 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2001 ; 2001 ; Archives of Asian Art Volume 52 ; 52 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2003 ; 2003 ; Archives of Asian Art Volume 53 ; 53 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2004 ; 2004 ; Archives of Asian Art Volume 54 ; 54 ; >
-      au < finished ; frozen ; 2005 ; 2005 ; Archives of Asian Art Volume 55 ; 55 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2006 ; 2006 ; Archives of Asian Art Volume 56 ; 56 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2007 ; 2007 ; Archives of Asian Art Volume 57 ; 57 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2008 ; 2008 ; Archives of Asian Art Volume 58 ; 58 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2005 ; 2005 ; Archives of Asian Art Volume 55 ; 55 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2006 ; 2006 ; Archives of Asian Art Volume 56 ; 56 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2007 ; 2007 ; Archives of Asian Art Volume 57 ; 57 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2008 ; 2008 ; Archives of Asian Art Volume 58 ; 58 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2009 ; 2009 ; Archives of Asian Art Volume 59 ; 59 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2010 ; 2010 ; Archives of Asian Art Volume 60 ; 60 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; 2010 ; Archives of Asian Art Volume 60 ; 60 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2011 ; 2011 ; Archives of Asian Art Volume 61 ; 61 ; >
-      au < finished ; frozen ; 2012 ; 2012 ; Archives of Asian Art Volume 62 ; 62 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2013 ; 2013 ; Archives of Asian Art Volume 63 ; 63 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2014 ; 2014 ; Archives of Asian Art Volume 64 ; 64 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2012 ; 2012 ; Archives of Asian Art Volume 62 ; 62 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; 2013 ; Archives of Asian Art Volume 63 ; 63 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; 2014 ; Archives of Asian Art Volume 64 ; 64 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2015 ; 2015 ; Archives of Asian Art Volume 65 ; 65 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2016 ; 2016 ; Archives of Asian Art Volume 66 ; 66 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; 2016 ; Archives of Asian Art Volume 66 ; 66 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; 2017 ; Archives of Asian Art Volume 67 ; 67 ; >
-      au < finished ; frozen ; 2018 ; 2018 ; Archives of Asian Art Volume 68 ; 68 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2019 ; 2019 ; Archives of Asian Art Volume 69 ; 69 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 2018 ; Archives of Asian Art Volume 68 ; 68 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 2019 ; Archives of Asian Art Volume 69 ; 69 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2020 ; 2020 ; Archives of Asian Art Volume 70 ; 70 ; >
       au < frozen ; exists ; 2021 ; 2021 ; Archives of Asian Art Volume 71 ; 71 ; >
       au < crawling ; exists ; 2022 ; 2022 ; Archives of Asian Art Volume 72 ; 72 ; >
@@ -140,14 +140,14 @@
 
       param[journal_id] = black-sacred-music
 
-      au < finished ; frozen ; 1987 ; 1987 ; Black Sacred Music Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 1988 ; 1988 ; Black Sacred Music Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 1989 ; 1989 ; Black Sacred Music Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 1987 ; 1987 ; Black Sacred Music Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1988 ; 1988 ; Black Sacred Music Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1989 ; 1989 ; Black Sacred Music Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 1990 ; 1990 ; Black Sacred Music Volume 4 ; 4 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 1991 ; 1991 ; Black Sacred Music Volume 5 ; 5 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 1992 ; 1992 ; Black Sacred Music Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 1993 ; 1993 ; Black Sacred Music Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 1994 ; 1994 ; Black Sacred Music Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 1991 ; 1991 ; Black Sacred Music Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 1992 ; 1992 ; Black Sacred Music Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1993 ; 1993 ; Black Sacred Music Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1994 ; 1994 ; Black Sacred Music Volume 8 ; 8 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 1995 ; 1995 ; Black Sacred Music Volume 9 ; 9 ; reingest4.clockss.org:8082 >
 
   }
@@ -165,7 +165,7 @@
 
       au < frozen ; exists ; 2017 ; 2017 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 32 ; 32 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 33 ; 33 ; >
-      au < finished ; frozen ; 2019 ; 2019 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 34 ; 34 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 2019 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 34 ; 34 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2020 ; 2020 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 35 ; 35 ; >
       au < frozen ; exists ; 2021 ; 2021 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 36 ; 36 ; >
       au < crawling ; exists ; 2022 ; 2022 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 37 ; 37 ; >
@@ -194,9 +194,9 @@
 
       param[journal_id] = common-knowledge
 
-      au < finished ; frozen ; 2017 ; 2017 ; Common Knowledge Volume 23 ; 23 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; 2018 ; Common Knowledge Volume 24 ; 24 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2019 ; 2019 ; Common Knowledge Volume 25 ; 25 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2017 ; 2017 ; Common Knowledge Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 2018 ; Common Knowledge Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2019 ; 2019 ; Common Knowledge Volume 25 ; 25 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2020 ; 2020 ; Common Knowledge Volume 26 ; 26 ; >
       au < frozen ; exists ; 2021 ; 2021 ; Common Knowledge Volume 27 ; 27 ; >
       au < crawling ; exists ; 2022 ; 2022 ; Common Knowledge Volume 28 ; 28 ; >
@@ -215,7 +215,7 @@
       param[journal_id] = comparative-literature
 
       au < finished ; crawling ; 2017 ; 2017 ; Comparative Literature Volume 68 ; 68 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; 2018 ; Comparative Literature Volume 69 ; 69 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 2018 ; Comparative Literature Volume 69 ; 69 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; 2019 ; Comparative Literature Volume 70 ; 70 ; >
       au < frozen ; exists ; 2020 ; 2020 ; Comparative Literature Volume 71 ; 71 ; >
       au < frozen ; exists ; 2021 ; 2021 ; Comparative Literature Volume 72 ; 72 ; >
@@ -236,7 +236,7 @@
 
       au < frozen ; exists ; 2017 ; 2017 ; Comparative Studies of South Asia, Africa and the Middle East Volume 37 ; 37 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Comparative Studies of South Asia, Africa and the Middle East Volume 38 ; 38 ; >
-      au < finished ; frozen ; 2019 ; 2019 ; Comparative Studies of South Asia, Africa and the Middle East Volume 39 ; 39 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 2019 ; Comparative Studies of South Asia, Africa and the Middle East Volume 39 ; 39 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2020 ; 2020 ; Comparative Studies of South Asia, Africa and the Middle East Volume 40 ; 40 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Comparative Studies of South Asia, Africa and the Middle East Volume 41 ; 41 ; >
       au < crawling ; exists ; 2022 ; 2022 ; Comparative Studies of South Asia, Africa and the Middle East Volume 42 ; 42 ; >
@@ -253,7 +253,7 @@
 
       param[journal_id] = critical-times
 
-      au < finished ; frozen ; 2018 ; 2018 ; Critical Times: Interventions in Global Critical Theory Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2018 ; 2018 ; Critical Times: Interventions in Global Critical Theory Volume 1 ; 1 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2019 ; 2019 ; Critical Times: Interventions in Global Critical Theory Volume 2 ; 2 ; >
       au < frozen ; exists ; 2020 ; 2020 ; Critical Times: Interventions in Global Critical Theory Volume 3 ; 3 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Critical Times: Interventions in Global Critical Theory Volume 4 ; 4 ; >
@@ -273,7 +273,7 @@
       param[journal_id] = cultural-politics
 
       au < finished ; crawling ; 2017 ; 2017 ; Cultural Politics Volume 13 ; 13 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; 2018 ; Cultural Politics Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 2018 ; Cultural Politics Volume 14 ; 14 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; 2019 ; Cultural Politics Volume 15 ; 15 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2020 ; 2020 ; Cultural Politics Volume 16 ; 16 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Cultural Politics Volume 17 ; 17 ; >
@@ -292,9 +292,9 @@
 
       param[journal_id] = differences
 
-      au < finished ; frozen ; 2017 ; 2017 ; differences: A Journal of Feminist Cultural Studies Volume 28 ; 28 ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2018 ; 2018 ; differences: A Journal of Feminist Cultural Studies Volume 29 ; 29 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2019 ; 2019 ; differences: A Journal of Feminist Cultural Studies Volume 30 ; 30 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2017 ; 2017 ; differences: A Journal of Feminist Cultural Studies Volume 28 ; 28 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2018 ; 2018 ; differences: A Journal of Feminist Cultural Studies Volume 29 ; 29 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2019 ; 2019 ; differences: A Journal of Feminist Cultural Studies Volume 30 ; 30 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2020 ; 2020 ; differences: A Journal of Feminist Cultural Studies Volume 31 ; 31 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; differences: A Journal of Feminist Cultural Studies Volume 32 ; 32 ; >
       au < crawling ; exists ; 2022 ; 2022 ; differences: A Journal of Feminist Cultural Studies Volume 33 ; 33 ; >
@@ -313,8 +313,8 @@
       param[journal_id] = easts
       #move to T&F in 2021
 
-      au < finished ; frozen ; 2017 ; 2017 ; East Asian Science, Technology and Society: An International Journal Volume 11 ; 11 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2018 ; 2018 ; East Asian Science, Technology and Society: An International Journal Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; 2017 ; East Asian Science, Technology and Society: An International Journal Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2018 ; 2018 ; East Asian Science, Technology and Society: An International Journal Volume 12 ; 12 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; 2019 ; East Asian Science, Technology and Society: An International Journal Volume 13 ; 13 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2020 ; 2020 ; East Asian Science, Technology and Society: An International Journal Volume 14 ; 14 ; >
       au < doNotProcess ; exists ; 2021 ; 2021 ; East Asian Science, Technology and Society: An International Journal Volume 15 ; 15 ; >
@@ -333,8 +333,8 @@
       param[journal_id] = eighteenth-century-life
 
       au < finished ; crawling ; 2017 ; 2017 ; Eighteenth-Century Life Volume 41 ; 41 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; 2018 ; Eighteenth-Century Life Volume 42 ; 42 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2019 ; 2019 ; Eighteenth-Century Life Volume 43 ; 43 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 2018 ; Eighteenth-Century Life Volume 42 ; 42 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 2019 ; Eighteenth-Century Life Volume 43 ; 43 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2020 ; 2020 ; Eighteenth-Century Life Volume 44 ; 44 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Eighteenth-Century Life Volume 45 ; 45 ; >
       au < crawling ; exists ; 2022 ; 2022 ; Eighteenth-Century Life Volume 46 ; 46 ; >
@@ -352,25 +352,25 @@
 
       param[journal_id] = english-language-notes
 
-      au < finished ; frozen ; 2000 ; 2000 ; English Language Notes Volume 37-38 ; 37-38 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2001 ; 2001 ; English Language Notes Volume 38-39 ; 38-39 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2000 ; 2000 ; English Language Notes Volume 37-38 ; 37-38 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2001 ; 2001 ; English Language Notes Volume 38-39 ; 38-39 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2002 ; 2002 ; English Language Notes Volume 39-40 ; 39-40 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2003 ; 2003 ; English Language Notes Volume 40-41 ; 40-41 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2004 ; 2004 ; English Language Notes Volume 41-42 ; 41-42 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2005 ; 2005 ; English Language Notes Volume 42-43 ; 42-43 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2006 ; 2006 ; English Language Notes Volume 44 ; 44 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2003 ; 2003 ; English Language Notes Volume 40-41 ; 40-41 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2004 ; 2004 ; English Language Notes Volume 41-42 ; 41-42 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2005 ; 2005 ; English Language Notes Volume 42-43 ; 42-43 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2006 ; 2006 ; English Language Notes Volume 44 ; 44 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2007 ; 2007 ; English Language Notes Volume 45 ; 45 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2008 ; 2008 ; English Language Notes Volume 46 ; 46 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2009 ; 2009 ; English Language Notes Volume 47 ; 47 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2010 ; 2010 ; English Language Notes Volume 48 ; 48 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2011 ; 2011 ; English Language Notes Volume 49 ; 49 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2008 ; 2008 ; English Language Notes Volume 46 ; 46 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; 2009 ; English Language Notes Volume 47 ; 47 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; 2010 ; English Language Notes Volume 48 ; 48 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2011 ; 2011 ; English Language Notes Volume 49 ; 49 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2012 ; 2012 ; English Language Notes Volume 50 ; 50 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2013 ; 2013 ; English Language Notes Volume 51 ; 51 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2014 ; 2014 ; English Language Notes Volume 52 ; 52 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2015 ; 2015 ; English Language Notes Volume 53 ; 53 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2016 ; 2016 ; English Language Notes Volume 54 ; 54 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2013 ; 2013 ; English Language Notes Volume 51 ; 51 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; 2014 ; English Language Notes Volume 52 ; 52 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 2015 ; English Language Notes Volume 53 ; 53 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2016 ; 2016 ; English Language Notes Volume 54 ; 54 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2017 ; 2017 ; English Language Notes Volume 55 ; 55 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; 2018 ; English Language Notes Volume 56 ; 56 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 2018 ; English Language Notes Volume 56 ; 56 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; 2019 ; English Language Notes Volume 57 ; 57 ; >
       au < frozen ; exists ; 2020 ; 2020 ; English Language Notes Volume 58 ; 58 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; English Language Notes Volume 59 ; 59 ; >
@@ -408,8 +408,8 @@
 
       param[journal_id] = ethnohistory
 
-      au < finished ; frozen ; 2017 ; 2017 ; Ethnohistory Volume 64 ; 64 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2018 ; 2018 ; Ethnohistory Volume 65 ; 65 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2017 ; 2017 ; Ethnohistory Volume 64 ; 64 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2018 ; 2018 ; Ethnohistory Volume 65 ; 65 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2019 ; 2019 ; Ethnohistory Volume 66 ; 66 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Ethnohistory Volume 67 ; 67 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Ethnohistory Volume 68 ; 68 ; >
@@ -427,8 +427,8 @@
 
       param[journal_id] = french-historical-studies
 
-      au < finished ; frozen ; 2017 ; 2017 ; French Historical Studies Volume 40 ; 40 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; 2018 ; French Historical Studies Volume 41 ; 41 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; 2017 ; French Historical Studies Volume 40 ; 40 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 2018 ; French Historical Studies Volume 41 ; 41 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; 2019 ; French Historical Studies Volume 42 ; 42 ; >
       au < frozen ; exists ; 2020 ; 2020 ; French Historical Studies Volume 43 ; 43 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; French Historical Studies Volume 44 ; 44 ; >
@@ -446,9 +446,9 @@
 
       param[journal_id] = genre
 
-      au < finished ; frozen ; 2017 ; 2017 ; Genre: Forms of Discourse and Culture Volume 50 ; 50 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; 2017 ; Genre: Forms of Discourse and Culture Volume 50 ; 50 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2018 ; 2018 ; Genre: Forms of Discourse and Culture Volume 51 ; 51 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2019 ; 2019 ; Genre: Forms of Discourse and Culture Volume 52 ; 52 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2019 ; 2019 ; Genre: Forms of Discourse and Culture Volume 52 ; 52 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2020 ; 2020 ; Genre: Forms of Discourse and Culture Volume 53 ; 53 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Genre: Forms of Discourse and Culture Volume 54 ; 54 ; >
       au < crawling ; exists ; 2022 ; 2022 ; Genre: Forms of Discourse and Culture Volume 55 ; 55 ; >
@@ -466,8 +466,8 @@
       param[journal_id] = glq
 
       au < finished ; crawling ; 2017 ; 2017 ; GLQ: A Journal of Lesbian and Gay Studies Volume 23 ; 23 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; 2018 ; GLQ: A Journal of Lesbian and Gay Studies Volume 24 ; 24 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2019 ; 2019 ; GLQ: A Journal of Lesbian and Gay Studies Volume 25 ; 25 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 2018 ; GLQ: A Journal of Lesbian and Gay Studies Volume 24 ; 24 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 2019 ; GLQ: A Journal of Lesbian and Gay Studies Volume 25 ; 25 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2020 ; 2020 ; GLQ: A Journal of Lesbian and Gay Studies Volume 26 ; 26 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; GLQ: A Journal of Lesbian and Gay Studies Volume 27 ; 27 ; >
       au < crawling ; exists ; 2022 ; 2022 ; GLQ: A Journal of Lesbian and Gay Studies Volume 28 ; 28 ; >
@@ -484,8 +484,8 @@
 
       param[journal_id] = hahr
 
-      au < finished ; frozen ; 2017 ; 2017 ; Hispanic American Historical Review Volume 97 ; 97 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2018 ; 2018 ; Hispanic American Historical Review Volume 98 ; 98 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2017 ; 2017 ; Hispanic American Historical Review Volume 97 ; 97 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2018 ; 2018 ; Hispanic American Historical Review Volume 98 ; 98 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2019 ; 2019 ; Hispanic American Historical Review Volume 99 ; 99 ; >
       au < frozen ; exists ; 2020 ; 2020 ; Hispanic American Historical Review Volume 100 ; 100 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Hispanic American Historical Review Volume 101 ; 101 ; >
@@ -504,7 +504,7 @@
       param[journal_id] = hope
 
       au < frozen ; exists ; 2017 ; 2017 ; History of Political Economy Volume 49 ; 49 ; >
-      au < finished ; frozen ; 2018 ; 2018 ; History of Political Economy Volume 50 ; 50 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 2018 ; History of Political Economy Volume 50 ; 50 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; 2019 ; History of Political Economy Volume 51 ; 51 ; >
       au < frozen ; exists ; 2020 ; 2020 ; History of Political Economy Volume 52 ; 52 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; History of Political Economy Volume 53 ; 53 ; >
@@ -546,7 +546,7 @@
       param[journal_id] = jclc
 
      au < finished ; crawling ; 2017 ; 2017 ; Journal of Chinese Literature and Culture Volume 4 ; 4 ; reingest4.clockss.org:8082 >
-     au < finished ; frozen ; 2018 ; 2018 ; Journal of Chinese Literature and Culture Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+     au < finished ; finished ; 2018 ; 2018 ; Journal of Chinese Literature and Culture Volume 5 ; 5 ; reingest5.clockss.org:8082 >
      au < frozen ; exists ; 2019 ; 2019 ; Journal of Chinese Literature and Culture Volume 6 ; 6 ; >
      au < frozen ; exists ; 2020 ; 2020 ; Journal of Chinese Literature and Culture Volume 7 ; 7 ; >
      au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Chinese Literature and Culture Volume 8 ; 8 ; >
@@ -564,9 +564,9 @@
 
       param[journal_id] = jhppl
 
-      au < finished ; frozen ; 2017 ; 2017 ; Journal of Health Politics, Policy and Law Volume 42 ; 42 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; 2018 ; Journal of Health Politics, Policy and Law Volume 43 ; 43 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2019 ; 2019 ; Journal of Health Politics, Policy and Law Volume 44 ; 44 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2017 ; 2017 ; Journal of Health Politics, Policy and Law Volume 42 ; 42 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 2018 ; Journal of Health Politics, Policy and Law Volume 43 ; 43 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2019 ; 2019 ; Journal of Health Politics, Policy and Law Volume 44 ; 44 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2020 ; 2020 ; Journal of Health Politics, Policy and Law Volume 45 ; 45 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Health Politics, Policy and Law Volume 46 ; 46 ; >
       au < crawling ; exists ; 2022 ; 2022 ; Journal of Health Politics, Policy and Law Volume 47 ; 47 ; >
@@ -606,7 +606,7 @@
 
       au < finished ; crawling ; 2017 ; 2017 ; Journal of Medieval and Early Modern Studies Volume 47 ; 47 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2018 ; 2018 ; Journal of Medieval and Early Modern Studies Volume 48 ; 48 ; >
-      au < finished ; frozen ; 2019 ; 2019 ; Journal of Medieval and Early Modern Studies Volume 49 ; 49 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 2019 ; Journal of Medieval and Early Modern Studies Volume 49 ; 49 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Medieval and Early Modern Studies Volume 50 ; 50 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Medieval and Early Modern Studies Volume 51 ; 51 ; >
       au < crawling ; exists ; 2022 ; 2022 ; Journal of Medieval and Early Modern Studies Volume 52 ; 52 ; >
@@ -623,21 +623,21 @@
 
       param[journal_id] = jmews
 
-      au < finished ; frozen ; 2005 ; 2005 ; Journal of Middle East Women's Studies Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2006 ; 2006 ; Journal of Middle East Women's Studies Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2007 ; 2007 ; Journal of Middle East Women's Studies Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2005 ; 2005 ; Journal of Middle East Women's Studies Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2006 ; 2006 ; Journal of Middle East Women's Studies Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2007 ; 2007 ; Journal of Middle East Women's Studies Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2008 ; 2008 ; Journal of Middle East Women's Studies Volume 4 ; 4 ; >
       au < frozen ; exists ; 2009 ; 2009 ; Journal of Middle East Women's Studies Volume 5 ; 5 ; >
       au < finished ; crawling ; 2010 ; 2010 ; Journal of Middle East Women's Studies Volume 6 ; 6 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2011 ; 2011 ; Journal of Middle East Women's Studies Volume 7 ; 7 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2012 ; 2012 ; Journal of Middle East Women's Studies Volume 8 ; 8 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2013 ; 2013 ; Journal of Middle East Women's Studies Volume 9 ; 9 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2014 ; 2014 ; Journal of Middle East Women's Studies Volume 10 ; 10 ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2015 ; 2015 ; Journal of Middle East Women's Studies Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; 2011 ; Journal of Middle East Women's Studies Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; 2012 ; Journal of Middle East Women's Studies Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; 2013 ; Journal of Middle East Women's Studies Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; 2014 ; Journal of Middle East Women's Studies Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2015 ; 2015 ; Journal of Middle East Women's Studies Volume 11 ; 11 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2016 ; 2016 ; Journal of Middle East Women's Studies Volume 12 ; 12 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; 2017 ;  Journal of Middle East Women's Studies Volume 13 ; 13 ; >
-      au < finished ; frozen ; 2018 ; 2018 ; Journal of Middle East Women's Studies Volume 14 ; 14 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2019 ; 2019 ; Journal of Middle East Women's Studies Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 2018 ; Journal of Middle East Women's Studies Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 2019 ; Journal of Middle East Women's Studies Volume 15 ; 15 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2020 ; 2020 ; Journal of Middle East Women's Studies Volume 16 ; 16 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Middle East Women's Studies Volume 17 ; 17 ; >
       au < crawling ; exists ; 2022 ; 2022 ; Journal of Middle East Women's Studies Volume 18 ; 18 ; >
@@ -655,7 +655,7 @@
       param[journal_id] = journal-of-music-theory
 
       au < finished ; frozen ; 2017 ; 2017 ; Journal of Music Theory Volume 61 ; 61 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2018 ; 2018 ; Journal of Music Theory Volume 62 ; 62 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2018 ; 2018 ; Journal of Music Theory Volume 62 ; 62 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019 ; 2019 ; Journal of Music Theory Volume 63 ; 63 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Music Theory Volume 64 ; 64 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Music Theory Volume 65 ; 65 ; >
@@ -673,8 +673,8 @@
 
       param[journal_id] = labor
 
-      au < finished ; frozen ; 2017 ; 2017 ; Labor: Studies in Working-Class History of the Americas Volume 14 ; 14 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; 2018 ; Labor: Studies in Working-Class History of the Americas Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; 2017 ; Labor: Studies in Working-Class History of the Americas Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 2018 ; Labor: Studies in Working-Class History of the Americas Volume 15 ; 15 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; 2019 ; Labor: Studies in Working-Class History of the Americas Volume 16 ; 16 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Labor: Studies in Working-Class History of the Americas Volume 17 ; 17 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Labor: Studies in Working-Class History of the Americas Volume 18 ; 18 ; >
