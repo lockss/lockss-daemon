@@ -74,6 +74,10 @@ public class AaasHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
 
         // popup
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related-content"),
+
+      // previous/next issue buttons -> publisher changed it to a "nav" and "a" tag
+      HtmlNodeFilters.tagWithAttributeRegex("nav", "class", "content-navigation"),
+      HtmlNodeFilters.tagWithAttributeRegex("a", "class", "content-navigation"),
   };
 
 
