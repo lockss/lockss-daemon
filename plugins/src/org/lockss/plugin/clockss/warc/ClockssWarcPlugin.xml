@@ -40,7 +40,15 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
+  </entry>
+  <entry>
+    <string>parent_plugin_identifier</string>
+    <string>org.lockss.plugin.clockss.ClockssDummyParentPlugin</string>
+  </entry>
+  <entry>
+    <string>parent_plugin_version</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
