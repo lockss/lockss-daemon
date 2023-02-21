@@ -80,8 +80,8 @@
       au < doNotProcess ; doNotProcess ; 2010 ; Avicenna Volume 2010 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Avicenna Volume 2011 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Avicenna Volume 2012 ; 2012 ; >
-      au < finished ; finished ; 2013 ; Avicenna Volume 2013 ; 2013 ; >
-      au < finished ; finished ; 2014 ; Avicenna Volume 2014 ; 2014 ; >
+      au < superseded ; finished ; 2013 ; Avicenna Volume 2013 [superseded] ; 2013 ; > #reindex caused metadata retraction
+      au < superseded ; finished ; 2014 ; Avicenna Volume 2014 [superseded] ; 2014 ; > #reindex caused metadata retraction
       au < finished ; finished ; 2015 ; Avicenna Volume 2015 ; 2015 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; Avicenna Volume 2016 ; 2016 ; reingest1.clockss.org:8082 >
 
