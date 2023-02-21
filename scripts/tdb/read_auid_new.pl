@@ -1561,6 +1561,7 @@ while (my $line = <>) {
            ($plugin eq "RsnaJournalsPlugin") ||
            ($plugin eq "SageAtyponJournalsPlugin") ||
            ($plugin eq "SiamPlugin") ||
+           ($plugin eq "UChicagoPressPlugin") ||
            ($plugin eq "WageningenJournalsPlugin")) {
       $url = sprintf("%slockss/%s/%s/index.html",
       $param{base_url}, $param{journal_id}, $param{volume_name});
@@ -1640,6 +1641,7 @@ while (my $line = <>) {
            ($plugin eq "ClockssSageAtyponJournalsPlugin") ||
            ($plugin eq "ClockssSEGPlugin") ||
            ($plugin eq "ClockssSiamPlugin") ||
+           ($plugin eq "ClockssUChicagoPressPlugin") ||
            ($plugin eq "ClockssWageningenJournalsPlugin")) {
       $url = sprintf("%sclockss/%s/%s/index.html",
       $param{base_url}, $param{journal_id}, $param{volume_name});
