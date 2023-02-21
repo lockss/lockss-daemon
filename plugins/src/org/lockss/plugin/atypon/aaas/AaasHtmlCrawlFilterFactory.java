@@ -72,12 +72,15 @@ public class AaasHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
       HtmlNodeFilters.tagWithAttribute("section", "id", "bibliography"),
       HtmlNodeFilters.tagWithAttribute("section", "id", "elettersSection"),
 
-        // popup
+      // popup
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related-content"),
 
       // previous/next issue buttons -> publisher changed it to a "nav" and "a" tag
       HtmlNodeFilters.tagWithAttributeRegex("nav", "class", "content-navigation"),
       HtmlNodeFilters.tagWithAttributeRegex("a", "class", "content-navigation"),
+
+      // Publisher add "modified" articles in the main body
+      HtmlNodeFilters.tagWithAttributeRegex("a", "class", "related-item"),
   };
 
 
