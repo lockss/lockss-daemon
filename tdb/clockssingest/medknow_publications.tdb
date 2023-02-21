@@ -4672,7 +4672,7 @@
     au < finished ; crawling ; 2019 ; Saudi Journal of Kidney Diseases and Transplantation Volume 30 ; 2019 ; 30 ; https://www.sjkdt.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2020 ; Saudi Journal of Kidney Diseases and Transplantation Volume 31 ; 2020 ; 31 ; https://www.sjkdt.org/ ; ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Saudi Journal of Kidney Diseases and Transplantation Volume 32 ; 2021 ; 32 ; https://www.sjkdt.org/ ; ; >
-    au < ready ; exists ; 2022 ; Saudi Journal of Kidney Diseases and Transplantation Volume 33 ; 2022 ; 33 ; https://www.sjkdt.org/ ; ; >
+    au < crawling ; exists ; 2022 ; Saudi Journal of Kidney Diseases and Transplantation Volume 33 ; 2022 ; 33 ; https://www.sjkdt.org/ ; ; >
 
   }
 
@@ -12469,7 +12469,7 @@
       param[journal_issn] = 2452-2325
       #param[base_url] = https://www.jcurrophthalmol.org/
 
-      au < ready ; exists ; 2020 ; Journal of Current Ophthalmology Volume 32 ; 2020 ; 32 ; https://www.jcurrophthalmol.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Journal of Current Ophthalmology Volume 32 ; 2020 ; 32 ; https://www.jcurrophthalmol.org/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Current Ophthalmology Volume 33 ; 2021 ; 33 ; https://www.jcurrophthalmol.org/ ; ; >
       au < crawling ; exists ; 2022 ; Journal of Current Ophthalmology Volume 34 ; 2022 ; 34 ; https://www.jcurrophthalmol.org/ ; ; >
 
@@ -12728,7 +12728,7 @@
       param[journal_issn] = 2772-3534
       #param[base_url] = https://www.jpcdoh.org/
 
-      au < ready ; exists ; 2020 ; Journal of Primary Care Dentistry and Oral Health Volume 1 ; 2020 ; 1 ; https://www.jpcdoh.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Journal of Primary Care Dentistry and Oral Health Volume 1 ; 2020 ; 1 ; https://www.jpcdoh.org/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Primary Care Dentistry and Oral Health Volume 2 ; 2021 ; 2 ; https://www.jpcdoh.org/ ; ; >
       au < crawling ; exists ; 2022 ; Journal of Primary Care Dentistry and Oral Health Volume 3 ; 2022 ; 3 ; https://www.jpcdoh.org/ ; ; >
 
@@ -13247,7 +13247,7 @@
       param[journal_issn] = 2666-3848
       #param[base_url] = https://www.qaij.org/
 
-      au < ready ; exists ; 2019 ; QAI Journal for Healthcare Quality and Patient Safety Volume 1 ; 2019 ; 1 ; https://www.qaij.org/ ; ; >
+      au < crawling ; exists ; 2019 ; QAI Journal for Healthcare Quality and Patient Safety Volume 1 ; 2019 ; 1 ; https://www.qaij.org/ ; ; >
       au < crawling ; exists ; 2020 ; QAI Journal for Healthcare Quality and Patient Safety Volume 2 ; 2020 ; 2 ; https://www.qaij.org/ ; ; >
       au < exists ; exists ; 2021 ; QAI Journal for Healthcare Quality and Patient Safety Volume 3 ; 2021 ; 3 ; https://www.qaij.org/ ; ; >
       au < expected ; exists ; 2022 ; QAI Journal for Healthcare Quality and Patient Safety Volume 4 ; 2022 ; 4 ; https://www.qaij.org/ ; ; >
@@ -13337,7 +13337,7 @@
       au < manifest ; exists ; 2017 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 19 ; 2017 ; 19 ; https://www.sjohns.org/ ; ; >
       au < manifest ; exists ; 2018 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 20 ; 2018 ; 20 ; https://www.sjohns.org/ ; ; >
       au < crawling ; exists ; 2019 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 21 ; 2019 ; 21 ; https://www.sjohns.org/ ; ; >
-      au < ready ; exists ; 2020 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 22 ; 2020 ; 22 ; https://www.sjohns.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 22 ; 2020 ; 22 ; https://www.sjohns.org/ ; ; >
       au < manifest ; exists ; 2021 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 23 ; 2021 ; 23 ; https://www.sjohns.org/ ; ; >
       au < crawling ; exists ; 2022 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 24 ; 2022 ; 24 ; https://www.sjohns.org/ ; ; >
 
@@ -13573,7 +13573,7 @@
       param[journal_issn] = 2667-1077
       #param[base_url] = https://www.worldsocpsychiatry.org/
 
-      au < ready ; exists ; 2019 ; World Social Psychiatry Volume 1 ; 2019 ; 1 ; https://www.worldsocpsychiatry.org/ ; ; >
+      au < crawling ; exists ; 2019 ; World Social Psychiatry Volume 1 ; 2019 ; 1 ; https://www.worldsocpsychiatry.org/ ; ; >
       au < crawling ; exists ; 2020 ; World Social Psychiatry Volume 2 ; 2020 ; 2 ; https://www.worldsocpsychiatry.org/ ; ; >
       au < frozen ; exists ; 2021 ; World Social Psychiatry Volume 3 ; 2021 ; 3 ; https://www.worldsocpsychiatry.org/ ; ; >
       au < crawling ; exists ; 2022 ; World Social Psychiatry Volume 4 ; 2022 ; 4 ; https://www.worldsocpsychiatry.org/ ; ; >
