@@ -23,11 +23,19 @@
     # set of WARC files
     # WARC content collected from https://www.ajaonline.org
     # This WARC collects the open-access portion of the content that is otherwise collected by JstorCurrentScholarshipPlugin
+    {
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/american-journal-of-archaeology-open-access-released/
 
-    au < zapped ; finished ; 2016 ; American Journal of Archaeology WARC Content 2016 ; 2016 >
-    au < zapped ; finished ; 2018 ; American Journal of Archaeology WARC Content 2018 ; 2018 >
-    #No more AUs. Moving to Atypon.
+    au < zapped ; finished ; 2016 ; American Journal of Archaeology WARC Content 2016 ; 2016 > #added 09/20/2016
+    au < zapped ; finished ; 2018 ; American Journal of Archaeology WARC Content 2018 ; 2018 > #added 08/01/2018
+    #No more AUs. Moving to https.
+    }
+    {
+    param[base_url] = https://clockss-ingest.lockss.org/warcfiles/american-journal-of-archaeology-open-access-released/
+
+    #Open Access materials for 8/1/2018-12/31/2021. After 1/1/2022, content is listed with the volume
+    au < expected ; exists ; 2023 ; American Journal of Archaeology WARC Content 2023 ; 2023 >
+    }
 
   }
 
