@@ -80,7 +80,7 @@ public class AaasHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
       HtmlNodeFilters.tagWithAttributeRegex("a", "class", "content-navigation"),
 
       // Publisher add "modified" articles in the main body
-      HtmlNodeFilters.tagWithAttributeRegex("a", "class", "related-item"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related-item"),
   };
 
 
