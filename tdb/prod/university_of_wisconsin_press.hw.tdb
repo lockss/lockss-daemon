@@ -72,12 +72,13 @@
       au < released ; 2019 ; Arctic Anthropology Volume 56 ; 56 >
       au < released ; 2020 ; Arctic Anthropology Volume 57 ; 57 >
       au < released ; 2021 ; Arctic Anthropology Volume 58 ; 58 >
+      au < exists ; 2022 ; Arctic Anthropology Volume 59 ; 59 >
       }
       {
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
       param[base_url] = https://aa.uwpress.org/
 
-      au < exists ; 2023 ; Arctic Anthropology Volume 59 ; 59 >
+      #au < exists ; 2023 ; Arctic Anthropology Volume 59 ; 59 >
       }
   }
   
@@ -312,8 +313,8 @@
       au < released ; 2018 ; Landscape Journal: design, planning, and management of the land Volume 37 ; 37 >
       au < released ; 2019 ; Landscape Journal: design, planning, and management of the land Volume 38 ; 38 >
       au < released ; 2020 ; Landscape Journal: design, planning, and management of the land Volume 39 ; 39 >
-      au < manifest ; 2021 ; Landscape Journal: design, planning, and management of the land Volume 40 ; 40 > #urls fail
-      au < manifest ; 2022 ; Landscape Journal: design, planning, and management of the land Volume 41 ; 41 >
+      au < exists ; 2021 ; Landscape Journal: design, planning, and management of the land Volume 40 ; 40 > #urls fail
+      au < exists ; 2022 ; Landscape Journal: design, planning, and management of the land Volume 41 ; 41 >
       }
 
   }
@@ -387,8 +388,8 @@
       au < released ; 2018 ; Monatshefte Volume 110 ; 110 >
       au < released ; 2019 ; Monatshefte Volume 111 ; 111 >
       au < released ; 2020 ; Monatshefte Volume 112 ; 112 >
-      au < manifest ; 2021 ; Monatshefte Volume 113 ; 113 > #urls fail
-      au < manifest ; 2022 ; Monatshefte Volume 114 ; 114 >
+      au < exists ; 2021 ; Monatshefte Volume 113 ; 113 > #urls fail
+      au < exists ; 2022 ; Monatshefte Volume 114 ; 114 >
       }
       {
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin

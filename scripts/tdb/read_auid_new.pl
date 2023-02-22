@@ -102,6 +102,13 @@ while (my $line = <>) {
           $result = "Redirected";
         }
         #$result = "Redirected";
+    } elsif (($man_contents !~ m/body.*="$base_url_short[^"]*"/s) || ($man_contents !~ m/body.*="https?:\/\/.*"/s)) { #"
+        #manifest page issue urls (after "body") must contain urls which start with the same characters as the manifest url
+        #or must be a relative url, in which case, the link would not start with https://.
+        if ($man_contents =~ m/<a\s*href="([^"]*)">/si) { #"
+              $vol_title = $1;
+        }
+        $result = "--BAD_ISS_URL--";
       } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/))) { #"
           $result = "CGI_probe_link";
           if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
@@ -151,6 +158,13 @@ while (my $line = <>) {
                 $result = "Redirected";
               }
               #$result = "Redirected";
+    } elsif (($man_contents !~ m/body.*="$base_url_short[^"]*"/s) || ($man_contents !~ m/body.*="https?:\/\/.*"/s)) { #"
+        #manifest page issue urls (after "body") must contain urls which start with the same characters as the manifest url
+        #or must be a relative url, in which case, the link would not start with https://.
+        if ($man_contents =~ m/<a\s*href="([^"]*)">/si) { #"
+              $vol_title = $1;
+        }
+        $result = "--BAD_ISS_URL--";
             } elsif (defined($man_contents) && (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/))) { #"
                 $result = "CGI_probe_link";
                 if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
