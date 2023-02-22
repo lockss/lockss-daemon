@@ -10021,6 +10021,7 @@
 
       param[journal_issn] = 2277-9019
 #      param[base_url] = http://www.ijrconline.org/
+      #move to Jaypee Publishing
 
       au < finished ; crawling ; 2012 ; Indian Journal of Respiratory Care Volume 1 ; 2012 ; 1 ; https://www.ijrc.in/ ; ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2013 ; Indian Journal of Respiratory Care Volume 2 ; 2013 ; 2 ; https://www.ijrc.in/ ; ; reingest5.clockss.org:8082 >
@@ -10032,8 +10033,8 @@
       au < finished ; frozen ; 2018 ; Indian Journal of Respiratory Care Volume 7 ; 2018 ; 7 ; https://www.ijrc.in/ ; ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2019 ; Indian Journal of Respiratory Care Volume 8 ; 2019 ; 8 ; https://www.ijrc.in/ ; ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2020 ; Indian Journal of Respiratory Care Volume 9 ; 2020 ; 9 ; https://www.ijrc.in/ ; ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Indian Journal of Respiratory Care Volume 10 ; 2021 ; 10 ; https://www.ijrc.in/ ; ; >
-      au < crawling ; exists ; 2022 ; Indian Journal of Respiratory Care Volume 11 ; 2022 ; 11 ; https://www.ijrc.in/ ; ; >
+      au < frozen ; exists ; 2021 ; Indian Journal of Respiratory Care Volume 10 ; 2021 ; 10 ; https://www.ijrc.in/ ; ; >
+      au < frozen ; exists ; 2022 ; Indian Journal of Respiratory Care Volume 11 ; 2022 ; 11 ; https://www.ijrc.in/ ; ; >
 
   }
 

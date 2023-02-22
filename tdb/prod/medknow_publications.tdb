@@ -9584,19 +9584,20 @@
 
       param[journal_issn] = 2277-9019
 #      param[base_url] = http://www.ijrconline.org/
+      #move to Jaypee Publishing
 
-      au < released ; 2012 ; Indian Journal of Respiratory Care Volume 1 ; 2012 ; 1 ; https://www.ijrc.in/ >
-      au < released ; 2013 ; Indian Journal of Respiratory Care Volume 2 ; 2013 ; 2 ; https://www.ijrc.in/ >
-      au < released ; 2014 ; Indian Journal of Respiratory Care Volume 3 ; 2014 ; 3 ; https://www.ijrc.in/ >
-      au < released ; 2015 ; Indian Journal of Respiratory Care Volume 4 ; 2015 ; 4 ; https://www.ijrc.in/ >
-      au < released ; 2016 ; Indian Journal of Respiratory Care Volume 5 ; 2016 ; 5 ; https://www.ijrc.in/ >
+      au < down ; 2012 ; Indian Journal of Respiratory Care Volume 1 ; 2012 ; 1 ; https://www.ijrc.in/ >
+      au < down ; 2013 ; Indian Journal of Respiratory Care Volume 2 ; 2013 ; 2 ; https://www.ijrc.in/ >
+      au < down ; 2014 ; Indian Journal of Respiratory Care Volume 3 ; 2014 ; 3 ; https://www.ijrc.in/ >
+      au < down ; 2015 ; Indian Journal of Respiratory Care Volume 4 ; 2015 ; 4 ; https://www.ijrc.in/ >
+      au < down ; 2016 ; Indian Journal of Respiratory Care Volume 5 ; 2016 ; 5 ; https://www.ijrc.in/ >
       au < superseded ; 2017 ; Indian Journal of Respiratory Care Volume 6 [superseded] ; 2017 ; 6 ; http://www.ijrconline.org/ >
-      au < released ; 2017 ; Indian Journal of Respiratory Care Volume 6 ; 2017 ; 6 ; https://www.ijrc.in/ >
-      au < released ; 2018 ; Indian Journal of Respiratory Care Volume 7 ; 2018 ; 7 ; https://www.ijrc.in/ >
-      au < released ; 2019 ; Indian Journal of Respiratory Care Volume 8 ; 2019 ; 8 ; https://www.ijrc.in/ >
-      au < released ; 2020 ; Indian Journal of Respiratory Care Volume 9 ; 2020 ; 9 ; https://www.ijrc.in/ >
-      au < released ; 2021 ; Indian Journal of Respiratory Care Volume 10 ; 2021 ; 10 ; https://www.ijrc.in/ >
-      au < manifest ; 2022 ; Indian Journal of Respiratory Care Volume 11 ; 2022 ; 11 ; https://www.ijrc.in/ >
+      au < down ; 2017 ; Indian Journal of Respiratory Care Volume 6 ; 2017 ; 6 ; https://www.ijrc.in/ >
+      au < down ; 2018 ; Indian Journal of Respiratory Care Volume 7 ; 2018 ; 7 ; https://www.ijrc.in/ >
+      au < down ; 2019 ; Indian Journal of Respiratory Care Volume 8 ; 2019 ; 8 ; https://www.ijrc.in/ >
+      au < down ; 2020 ; Indian Journal of Respiratory Care Volume 9 ; 2020 ; 9 ; https://www.ijrc.in/ >
+      au < down ; 2021 ; Indian Journal of Respiratory Care Volume 10 ; 2021 ; 10 ; https://www.ijrc.in/ >
+      au < doNotProcess ; 2022 ; Indian Journal of Respiratory Care Volume 11 ; 2022 ; 11 ; https://www.ijrc.in/ >
 
   }
 
