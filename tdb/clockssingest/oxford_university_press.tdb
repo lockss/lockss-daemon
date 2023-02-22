@@ -14187,6 +14187,21 @@
   {
 
     title <
+      name = Modern Rheumatology Case Reports;
+      eissn = 2472-5625 ;
+      issnl = 2472-5625
+    >
+
+    param[journal_id] = mrcr
+    #Content had been processed under T&F from 2017 volume 1 to 2021 volume 5
+
+    au < exists ; exists ; 2022 ; 2022 ; Modern Rheumatology Case Reports Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+    title <
       name = Molecular Biology and Evolution ;
       issn = 0737-4038 ;
       eissn = 1537-1719 ;
