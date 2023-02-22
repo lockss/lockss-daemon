@@ -1527,10 +1527,10 @@ while (my $line = <>) {
            ($plugin eq "GenericAtyponPlugin") ||
            ($plugin eq "ACCJournalsPlugin") ||
            ($plugin eq "AIAAPlugin") ||
-#           ($plugin eq "AllenPressJournalsPlugin") ||
+           ($plugin eq "AllenPressJournalsPlugin") ||
            ($plugin eq "AmericanSpeechLanguageHearingAssocAtyponPlugin") ||
            ($plugin eq "AmPublicHealthAssocPlugin") ||
-#           ($plugin eq "AMetSocPlugin") ||
+           ($plugin eq "AMetSocPlugin") ||
            ($plugin eq "AmPhysSocAtyponPlugin") ||
            ($plugin eq "AmPsychPubAtyponPlugin") ||
            ($plugin eq "ARRSPlugin") ||
@@ -1542,18 +1542,18 @@ while (my $line = <>) {
            ($plugin eq "BIRAtyponPlugin") ||
            ($plugin eq "EdinburghUniversityPressPlugin") ||
            ($plugin eq "EHP2022AtyponJournalPlugin") ||
-#           ($plugin eq "EmeraldGroupPlugin") ||
-#           ($plugin eq "EndocrineSocietyPlugin") ||
+           ($plugin eq "EmeraldGroupPlugin") ||
+           ($plugin eq "EndocrineSocietyPlugin") ||
            ($plugin eq "FasebAtyponPlugin") ||
            ($plugin eq "FutureSciencePlugin") ||
            ($plugin eq "GeologicalSocietyLondonPlugin") ||
            ($plugin eq "HealthAffairsPlugin") ||
            ($plugin eq "IndersciencePlugin") ||
-#           ($plugin eq "JstorPlugin") ||
+           ($plugin eq "JstorPlugin") ||
            ($plugin eq "LiverpoolJournalsPlugin") ||
-#           ($plugin eq "ManeyAtyponPlugin") ||
+           ($plugin eq "ManeyAtyponPlugin") ||
            ($plugin eq "MarkAllenPlugin") ||
-#           ($plugin eq "MultiSciencePlugin") ||
+           ($plugin eq "MultiSciencePlugin") ||
            ($plugin eq "MassachusettsMedicalSocietyPlugin") ||
            ($plugin eq "NasPlugin") ||
            ($plugin eq "NRCResearchPressPlugin") ||
@@ -1612,10 +1612,10 @@ while (my $line = <>) {
            ($plugin eq "ClockssGenericAtyponPlugin") ||
            ($plugin eq "ClockssAaasPlugin") ||
            ($plugin eq "ClockssAIAAPlugin") ||
-#           ($plugin eq "ClockssAllenPressJournalsPlugin") ||
+           ($plugin eq "ClockssAllenPressJournalsPlugin") ||
            ($plugin eq "ClockssAmericanSpeechLanguageHearingAssocAtyponPlugin") ||
-#           ($plugin eq "ClockssAMetSocPlugin") ||
-#           ($plugin eq "ClockssAmmonsScientificPlugin") ||
+           ($plugin eq "ClockssAMetSocPlugin") ||
+           ($plugin eq "ClockssAmmonsScientificPlugin") ||
            ($plugin eq "ClockssAmPhysSocAtyponPlugin") ||
            ($plugin eq "ClockssAmPsychPubAtyponPlugin") ||
            ($plugin eq "ClockssASCEPlugin") ||
@@ -1623,17 +1623,17 @@ while (my $line = <>) {
            ($plugin eq "ClockssAsmPlugin") ||
            ($plugin eq "ClockssBIRAtyponPlugin") ||
            ($plugin eq "ClockssEdinburghUniversityPressPlugin") ||
-#           ($plugin eq "ClockssEmeraldGroupPlugin") ||
-#           ($plugin eq "ClockssEndocrineSocietyPlugin") ||
+           ($plugin eq "ClockssEmeraldGroupPlugin") ||
+           ($plugin eq "ClockssEndocrineSocietyPlugin") ||
            ($plugin eq "ClockssFasebAtyponPlugin") ||
            ($plugin eq "ClockssFutureSciencePlugin") ||
            ($plugin eq "ClockssGeologicalSocietyLondonPlugin") ||
            ($plugin eq "ClockssIndersciencePlugin") ||
-#           ($plugin eq "ClockssJstorPlugin") ||
+           ($plugin eq "ClockssJstorPlugin") ||
            ($plugin eq "ClockssLiverpoolJournalsPlugin") ||
-#           ($plugin eq "ClockssManeyAtyponPlugin") ||
+           ($plugin eq "ClockssManeyAtyponPlugin") ||
            ($plugin eq "ClockssMarkAllenPlugin") ||
-#           ($plugin eq "ClockssMultiSciencePlugin") ||
+           ($plugin eq "ClockssMultiSciencePlugin") ||
            ($plugin eq "ClockssNasPlugin") ||
            ($plugin eq "ClockssNRCResearchPressPlugin") ||
            ($plugin eq "ClockssPracticalActionJournalsPlugin") ||
@@ -1691,7 +1691,7 @@ while (my $line = <>) {
   # the non-Clockss Atypon Books plugins go here
   } elsif (($plugin eq "GenericAtyponBooksPlugin") ||
            ($plugin eq "AIAABooksPlugin") ||
-#           ($plugin eq "EmeraldGroupBooksPlugin") ||
+           ($plugin eq "EmeraldGroupBooksPlugin") ||
            ($plugin eq "EndocrineSocietyBooksPlugin") ||
            ($plugin eq "FutureScienceBooksPlugin") ||
            ($plugin eq "LiverpoolBooksPlugin") ||
