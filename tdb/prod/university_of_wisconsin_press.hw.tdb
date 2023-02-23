@@ -72,13 +72,14 @@
       au < released ; 2019 ; Arctic Anthropology Volume 56 ; 56 >
       au < released ; 2020 ; Arctic Anthropology Volume 57 ; 57 >
       au < released ; 2021 ; Arctic Anthropology Volume 58 ; 58 >
-      au < exists ; 2022 ; Arctic Anthropology Volume 59 ; 59 >
+      #au < exists ; 2022 ; Arctic Anthropology Volume 59 ; 59 >
       }
       {
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
       param[base_url] = https://aa.uwpress.org/
 
-      #au < exists ; 2023 ; Arctic Anthropology Volume 59 ; 59 >
+      au < exists ; 2022 ; Arctic Anthropology Volume 58 ; 58 >
+      au < exists ; 2023 ; Arctic Anthropology Volume 59 ; 59 >
       }
   }
   
@@ -91,9 +92,10 @@
       issnl = 0010-7484
     >
 
+      implicit < status ; year ; name ; param[volume_name] >
+      {
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://cl.uwpress.org/
-      implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 2003 ; Contemporary Literature Volume 44 ; 44 >
       au < released ; 2004 ; Contemporary Literature Volume 45 ; 45 >
@@ -114,7 +116,13 @@
       au < released ; 2019-2020 ; Contemporary Literature Volume 60 ; 60 >
       au < released ; 2021 ; Contemporary Literature Volume 61 ; 61 >
       au < released ; 2022 ; Contemporary Literature Volume 62 ; 62 >
-      au < expected ; 2023 ; Contemporary Literature Volume 63 ; 63 >
+      }
+      {
+      plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
+      param[base_url] = https://cl.uwpress.org/
+
+      au < exists ; 2023 ; Contemporary Literature Volume 64 ; 64 >
+      }
 
   }
 
@@ -176,6 +184,7 @@
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
 
       au < manifest ; 2022 ; Ecological Restoration Volume 40 ; 40 ; https://er.uwpress.org/ >
+      au < expected ; 2023 ; Ecological Restoration Volume 41 ; 41 ; https://er.uwpress.org/ >
       }
   }
 
@@ -188,9 +197,10 @@
       issnl = 0022-166X
     >
 
+      implicit < status ; year ; name ; param[volume_name] >
+      {
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://jhr.uwpress.org/
-      implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 2003 ; The Journal of Human Resources Volume XXXVIII ; XXXVIII >
       au < released ; 2004 ; The Journal of Human Resources Volume XXXIX ; XXXIX >
@@ -211,8 +221,15 @@
       au < released ; 2019 ; The Journal of Human Resources Volume 54 ; 54 >
       au < released ; 2020 ; The Journal of Human Resources Volume 55 ; 55 >
       au < released ; 2021 ; The Journal of Human Resources Volume 56 ; 56 >
-      au < manifest ; 2022 ; The Journal of Human Resources Volume 57 ; 57 >
+      #au < manifest ; 2022 ; The Journal of Human Resources Volume 57 ; 57 >
+      }
+      {
+      plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
+      param[base_url] = https://jhr.uwpress.org/
 
+      au < exists ; 2022 ; The Journal of Human Resources Volume 58 ; 58 >
+      au < expected ; 2023 ; The Journal of Human Resources Volume 59 ; 59 >
+      }
   }
 
   {
@@ -256,6 +273,7 @@
 
       au < exists ; 2021 ; Land Economics Volume 97 ; 97 > #urls fail
       au < exists ; 2022 ; Land Economics Volume 98 ; 98 >
+      au < exists ; 2023 ; Land Economics Volume 99 ; 99 >
       }
 
   }
@@ -313,8 +331,16 @@
       au < released ; 2018 ; Landscape Journal: design, planning, and management of the land Volume 37 ; 37 >
       au < released ; 2019 ; Landscape Journal: design, planning, and management of the land Volume 38 ; 38 >
       au < released ; 2020 ; Landscape Journal: design, planning, and management of the land Volume 39 ; 39 >
-      au < exists ; 2021 ; Landscape Journal: design, planning, and management of the land Volume 40 ; 40 > #urls fail
-      au < exists ; 2022 ; Landscape Journal: design, planning, and management of the land Volume 41 ; 41 >
+      #au < exists ; 2021 ; Landscape Journal: design, planning, and management of the land Volume 40 ; 40 > #urls fail
+      #au < exists ; 2022 ; Landscape Journal: design, planning, and management of the land Volume 41 ; 41 >
+      }
+      {
+      plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
+      param[base_url] = https://lj.uwpress.org/
+
+      au < exists ; 2021 ; Landscape Journal: design, planning, and management of the land Volume 42 ; 42 >
+      au < exists ; 2022 ; Landscape Journal: design, planning, and management of the land Volume 43 ; 43 >
+      au < expected ; 2023 ; Landscape Journal: design, planning, and management of the land Volume 44 ; 44 >
       }
 
   }
@@ -388,15 +414,16 @@
       au < released ; 2018 ; Monatshefte Volume 110 ; 110 >
       au < released ; 2019 ; Monatshefte Volume 111 ; 111 >
       au < released ; 2020 ; Monatshefte Volume 112 ; 112 >
-      au < exists ; 2021 ; Monatshefte Volume 113 ; 113 > #urls fail
-      au < exists ; 2022 ; Monatshefte Volume 114 ; 114 >
+      #au < exists ; 2021 ; Monatshefte Volume 113 ; 113 > #urls fail
+      #au < exists ; 2022 ; Monatshefte Volume 114 ; 114 >
       }
       {
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
       param[base_url] = https://mon.uwpress.org/
 
-      #au < exists ; 2021 ; Monatshefte Volume 113 ; 113 >
-      #au < exists ; 2022 ; Monatshefte Volume 114 ; 114 >
+      au < exists ; 2021 ; Monatshefte Volume 113 ; 113 >
+      au < exists ; 2022 ; Monatshefte Volume 114 ; 114 >
+      au < expected ; 2023 ; Monatshefte Volume 115 ; 115 >
       }
 
   }
@@ -443,6 +470,7 @@
 
       au < released ; 2021 ; Native Plants Journal Volume 22 ; 22 > #urls fail RT4567
       au < released ; 2022 ; Native Plants Journal Volume 23 ; 23 >
+      au < expected ; 2023 ; Native Plants Journal Volume 24 ; 24 >
       }
   }
 
