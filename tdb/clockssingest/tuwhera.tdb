@@ -87,17 +87,17 @@
       ### Manifest page checker does not work with this title.
 
 
-      au < finished ; crawling ; 2011 ; Te Kaharoa Volume 4 ; 4 ; 2011 ; reingest2.clockss.org:8085 > 
-      au < finished ; crawling ; 2012 ; Te Kaharoa Volume 5 ; 5 ; 2012 ; reingest3.clockss.org:8083 > 
+      au < finished ; frozen ; 2011 ; Te Kaharoa Volume 4 ; 4 ; 2011 ; reingest2.clockss.org:8085 > 
+      au < finished ; frozen ; 2012 ; Te Kaharoa Volume 5 ; 5 ; 2012 ; reingest3.clockss.org:8083 > 
       au < finished ; crawling ; 2013 ; Te Kaharoa Volume 6 ; 6 ; 2013 ; reingest4.clockss.org:8082 > 
-      au < finished ; crawling ; 2014 ; Te Kaharoa Volume 7 ; 7 ; 2014 ; reingest5.clockss.org:8082 > 
-      au < finished ; crawling ; 2015 ; Te Kaharoa Volume 8 ; 8 ; 2015 ; reingest1.clockss.org:8082 > 
-      au < finished ; crawling ; 2016 ; Te Kaharoa Volume 9 ; 9 ; 2016 ; reingest2.clockss.org:8085 > 
-      au < finished ; crawling ; 2017 ; Te Kaharoa Volume 10 ; 10 ; 2017 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2014 ; Te Kaharoa Volume 7 ; 7 ; 2014 ; reingest5.clockss.org:8082 > 
+      au < finished ; frozen ; 2015 ; Te Kaharoa Volume 8 ; 8 ; 2015 ; reingest1.clockss.org:8082 > 
+      au < finished ; frozen ; 2016 ; Te Kaharoa Volume 9 ; 9 ; 2016 ; reingest2.clockss.org:8085 > 
+      au < finished ; frozen ; 2017 ; Te Kaharoa Volume 10 ; 10 ; 2017 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; Te Kaharoa Volume 11 ; 11 ; 2018 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2019 ; Te Kaharoa Volume 12 ; 12 ; 2019 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; Te Kaharoa Volume 12 ; 12 ; 2019 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Te Kaharoa Volume 13 ; 13 ; 2020 ; >
-      au < finished ; crawling ; 2021 ; Te Kaharoa Volume 14 ; 14 ; 2021 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2021 ; Te Kaharoa Volume 14 ; 14 ; 2021 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2022 ; Te Kaharoa Volume 15 ; 15 ; 2022 ; >
 
     }
@@ -370,10 +370,10 @@
       attr[start_stem] = 
       #Manifest pages not enabled
 
-      au < finished ; crawling ; 2001 ; Working Papers in Communication Volume 1 ; 1 ; 2001 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2001 ; Working Papers in Communication Volume 1 ; 1 ; 2001 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2005 ; Working Papers in Communication Volume 2 ; 2 ; 2005 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2008 ; Working Papers in Communication Volume 3 ; 3 ; 2008 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2010 ; Working Papers in Communication Volume 4 ; 4 ; 2010 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2008 ; Working Papers in Communication Volume 3 ; 3 ; 2008 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; Working Papers in Communication Volume 4 ; 4 ; 2010 ; reingest2.clockss.org:8085 >
       #no further volumes published
   }
 
