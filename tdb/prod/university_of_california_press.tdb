@@ -1209,11 +1209,10 @@
     >
 
       param[journal_id] = jmw
+      #suspended in 2021
 
       au < released ; 2019 ; 2019 ; The Journal of Medieval Worlds Volume 1 ; 1 >
       au < released ; 2020 ; 2020 ; The Journal of Medieval Worlds Volume 2 ; 2 >
-      au < expected ; 2021 ; 2021 ; The Journal of Medieval Worlds Volume 3 ; 3 >
-      au < expected ; 2022 ; 2022 ; The Journal of Medieval Worlds Volume 4 ; 4 >
 
   }
 
@@ -1279,6 +1278,7 @@
         eissn = 1533-8614 
     >
       #param[base_url] = http://jps.ucpress.edu/
+      #As of January 1, 2021, the journal is published by Taylor and Francis.
 
       param[journal_id] = jps
 #      au < exists ; 1971-1972 ; Journal of Palestine Studies Volume 1 ; 1 >
@@ -1334,8 +1334,6 @@
       au < doNotProcess ; 2019 ; 2019 ; Journal of Palestine Studies Volume 48 [2019] ; 48 >
       au < doNotProcess ; 2019 ; 2019 ; Journal of Palestine Studies Volume 49 [2019] ; 49 >
       au < released ; 2020 ; 2020 ; Journal of Palestine Studies Volume 49 [2020] ; 49 >
-      au < expected ; 2021 ; 2021 ; Journal of Palestine Studies Volume 50 [2021] ; 50 >
-      au < expected ; 2022 ; 2022 ; Journal of Palestine Studies Volume 51 [2022] ; 51 >
 
   }
 
