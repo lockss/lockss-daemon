@@ -304,7 +304,8 @@
     au < doNotProcess ; exists ; 2018 ; Comma Volume 2018 ; 2018 ; >
     au < doNotProcess ; exists ; 2019 ; Comma Volume 2019 ; 2019 ; >
     au < doNotProcess ; exists ; 2020 ; Comma Volume 2020 (2021) ; 2020 ; >
-    au < exists ; exists ; 2022 ; Comma Volume 2022 ; 2022 ; >
+    au < exists ; exists ; 2021 ; Comma Volume 2021 (2022) ; 2021 ; >
+    au < expected ; exists ; 2022 ; Comma Volume 2022 (2023) ; 2022 ; >
 
   }
 
@@ -765,7 +766,7 @@
     au < doNotProcess ; doNotProcess ; 2016-2017 ; Hunter Gatherer Research Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2017-2019 ; Hunter Gatherer Research Volume 3 ; 3 ; >
     au < doNotProcess ; exists ; 2019-2020 ; Hunter Gatherer Research Volume 4 ; 4 ; >
-    au < exists ; exists ; 2021 ; Hunter Gatherer Research Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2021 ; Hunter Gatherer Research Volume 5 ; 5 ; >
 
     }
   }
@@ -1325,10 +1326,10 @@
     au < doNotProcess ; doNotProcess ; 2015 ; Newsletter of the Gypsy Lore Society Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Newsletter of the Gypsy Lore Society Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Newsletter of the Gypsy Lore Society Volume 40 ; 40 ; >
-    au < exists ; exists ; 2018 ; Newsletter of the Gypsy Lore Society Volume 41 ; 41 ; >
-    au < exists ; exists ; 2019 ; Newsletter of the Gypsy Lore Society Volume 42 ; 42 ; >
-    au < exists ; exists ; 2020 ; Newsletter of the Gypsy Lore Society Volume 43 ; 43 ; >
-    au < exists ; exists ; 2021 ; Newsletter of the Gypsy Lore Society Volume 44 ; 44 ; >
+    au < manifest ; exists ; 2018 ; Newsletter of the Gypsy Lore Society Volume 41 ; 41 ; >
+    au < manifest ; exists ; 2019 ; Newsletter of the Gypsy Lore Society Volume 42 ; 42 ; >
+    au < manifest ; exists ; 2020 ; Newsletter of the Gypsy Lore Society Volume 43 ; 43 ; >
+    au < manifest ; exists ; 2021 ; Newsletter of the Gypsy Lore Society Volume 44 ; 44 ; >
     au < exists ; exists ; 2022 ; Newsletter of the Gypsy Lore Society Volume 45 ; 45 ; >
 
   }
@@ -1903,6 +1904,47 @@
     au < doNotProcess ; exists ; 2018 ; TS Eliot Studies Annual Volume 2 ; 2 ; >
     au < doNotProcess ; exists ; 2021 ; TS Eliot Studies Annual Volume 3 ; 3 ; >
     au < crawling ; exists ; 2022 ; TS Eliot Studies Annual Volume 4 ; 4 ; >
+
+  }
+  
+  {
+
+    title <
+      name = CFC Intersections ;
+      issn = 2752-552X ; 
+      eissn = 2752-5538
+    >
+
+    param[journal_id] = cfci
+
+    au < manifest ; exists ; 2022 ; CFC Intersections Volume 1 ; 1 ; >
+
+  }
+  
+  {
+
+    title <
+      name = Journal of Beatles Studies ;
+      eissn = 2752-5538
+    >
+
+    param[journal_id] = jbs
+
+    au < manifest ; exists ; 2022 ; Journal of Beatles Studies Volume 2022 ; 2022 ; >
+
+  }
+  
+  {
+
+    title <
+      name = Revista Iberoamericana ;
+      issn = 0034-9631 ;
+      eissn = 2154-4794
+    >
+
+    param[journal_id] = revista
+
+    au < manifest ; exists ; 2023 ; Revista Iberoamericana Volume 89 ; 89 ; >
 
   }
   
