@@ -1692,7 +1692,6 @@
 
       au < released ; 2020 ; 2020 ; Nineteenth-Century Literature Volume 75 [2020] ; 75 >
       au < released ; 2021 ; 2021 ; Nineteenth-Century Literature Volume 75 [2021] ; 75 >
-
       au < released ; 2021 ; 2021 ; Nineteenth-Century Literature Volume 76 [2021] ; 76 >
       au < manifest ; 2022 ; 2022 ; Nineteenth-Century Literature Volume 76 [2022] ; 76 >
       au < manifest ; 2022 ; 2022 ; Nineteenth-Century Literature Volume 77 [2022] ; 77 >
@@ -1710,6 +1709,8 @@
       #param[base_url] = http://nclr.ucpress.edu/
 
       param[journal_id] = nclr
+      #suspended publication following publication of Volume 24, Number 4
+
 #      au < exists ; 1997-1998 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 1 ; 1 >
 #      au < exists ; 1998-1999 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 2 ; 2 >
 #      au < exists ; 1999-2000 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 3 ; 3 >
@@ -1737,7 +1738,6 @@
       au < doNotProcess ; 2019 ; 2019 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 22 ; 22 >
       au < released ; 2020 ; 2020 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 23 ; 23 >
       au < released ; 2021 ; 2021 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 24 ; 24 >
-      au < expected ; 2022 ; 2022 ; New Criminal Law Review: An International and Interdisciplinary Journal Volume 25 ; 25 >
 
   }
 
@@ -1799,7 +1799,6 @@
 
       au < released ; 2020 ; 2020 ; 19th-Century Music Volume 44 [2020] ; 44 >
       au < released ; 2021 ; 2021 ; 19th-Century Music Volume 44 [2021] ; 44 >
-
       au < released ; 2021 ; 2021 ; 19th-Century Music Volume 45 [2021] ; 45 >
       au < manifest ; 2022 ; 2022 ; 19th-Century Music Volume 46 [2022] ; 46 >
       au < expected ; 2022 ; 2022 ; 19th-Century Music Volume 47 [2022] ; 47 >
@@ -2221,9 +2220,12 @@
       #param[base_url] = http://scq.ucpress.edu/
 
       param[journal_id] = scq
+      #no longer published by University of California Press
+
 #      au < exists ; 1884-1891 ; Southern California Quarterly Volume 1 ; 1 >
 
       au < manifest ; 1891 ; 1891 ; Southern California Quarterly Volume 2 ; 2 >
+
 #      au < exists ; 1893-1896 ; Southern California Quarterly Volume 3 ; 3 >
 #      au < exists ; 1897-1899 ; Southern California Quarterly Volume 4 ; 4 >
 #      au < exists ; 1900-1902 ; Southern California Quarterly Volume 5 ; 5 >
@@ -2327,7 +2329,6 @@
       au < doNotProcess ; 2019 ; 2019 ; Southern California Quarterly Volume 101 ; 101 >
       au < released ; 2020 ; 2020 ; Southern California Quarterly Volume 102 ; 102 >
       au < released ; 2021 ; 2021 ; Southern California Quarterly Volume 103 ; 103 >
-      au < expected ; 2022 ; 2022 ; Southern California Quarterly Volume 104 ; 104 >
 
   }
 
