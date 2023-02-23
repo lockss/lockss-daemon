@@ -75,7 +75,6 @@
     au < doNotProcess ; exists ; 2019 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 15 ; 15 ; >
     au < doNotProcess ; exists ; 2020 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 16 ; 16 ; >
     au < manifest ; exists ; 2021 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 17 ; 17 ; >
-    au < expected ; exists ; 2022 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 18 ; 18 ; >
 
   }
 
@@ -471,24 +470,24 @@
     #Published 1994-present
     #jounral_num = 79
 
-    au < doNotProcess ; exists ; 1994 ; Essays in Romanticism Volume 1 ; 1 ; >
-    au < doNotProcess ; exists ; 1995 ; Essays in Romanticism Volume 2 ; 2 ; >
-    au < doNotProcess ; exists ; 1996 ; Essays in Romanticism Volume 3 ; 3 ; >
-    au < doNotProcess ; exists ; 1997 ; Essays in Romanticism Volume 4 ; 4 ; >
-    au < doNotProcess ; exists ; 1998 ; Essays in Romanticism Volume 5 ; 5 ; >
-    au < doNotProcess ; exists ; 1999 ; Essays in Romanticism Volume 6 ; 6 ; >
-    au < doNotProcess ; exists ; 2000 ; Essays in Romanticism Volume 7 ; 7 ; >
-    au < doNotProcess ; exists ; 2001 ; Essays in Romanticism Volume 8 ; 8 ; >
-    au < doNotProcess ; exists ; 2002 ; Essays in Romanticism Volume 9 ; 9 ; >
-    au < doNotProcess ; exists ; 2003 ; Essays in Romanticism Volume 10 ; 10 ; >
-    au < doNotProcess ; exists ; 2004 ; Essays in Romanticism Volume 11 ; 11 ; >
-    au < doNotProcess ; exists ; 2005 ; Essays in Romanticism Volume 12 ; 12 ; >
-    au < doNotProcess ; exists ; 2006 ; Essays in Romanticism Volume 13 ; 13 ; >
-    au < doNotProcess ; exists ; 2007 ; Essays in Romanticism Volume 14 ; 14 ; >
-    au < doNotProcess ; exists ; 2008 ; Essays in Romanticism Volume 15 ; 15 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Essays in Romanticism Volume 16 ; 16 ; >
-    au < doNotProcess ; doNotProcess ; 2010 ; Essays in Romanticism Volume 17 ; 17 ; >
-    au < doNotProcess ; doNotProcess ; 2011 ; Essays in Romanticism Volume 18 ; 18 ; >
+    au < doNotProcess ; exists ; 1993 ; Essays in Romanticism Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 1994 ; Essays in Romanticism Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 1995 ; Essays in Romanticism Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 1996 ; Essays in Romanticism Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 1997 ; Essays in Romanticism Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 1998 ; Essays in Romanticism Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 1999 ; Essays in Romanticism Volume 7 ; 7 ; >
+    au < doNotProcess ; exists ; 2000 ; Essays in Romanticism Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 2001 ; Essays in Romanticism Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 2002 ; Essays in Romanticism Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 2003 ; Essays in Romanticism Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 2004 ; Essays in Romanticism Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 2005 ; Essays in Romanticism Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 2006 ; Essays in Romanticism Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 2007 ; Essays in Romanticism Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Essays in Romanticism Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Essays in Romanticism Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Essays in Romanticism Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Essays in Romanticism Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Essays in Romanticism Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Essays in Romanticism Volume 21 ; 21 ; >
@@ -758,12 +757,15 @@
     param[journal_id] = hgr
     #Published 2015-2019
     #journal_num = 66
+    #V2 I1=2016, I2=2016, I3=2016, I4=2017
+    #V3 I1=2017, I2=2018, I3=2019, I4=2019
+    #V4 I1=2019, I2=2019, I3=2020
 
     au < doNotProcess ; doNotProcess ; 2015 ; Hunter Gatherer Research Volume 1 ; 1 ; >
-    au < doNotProcess ; doNotProcess ; 2016 ; Hunter Gatherer Research Volume 2 ; 2 ; >
-    au < doNotProcess ; doNotProcess ; 2017 ; Hunter Gatherer Research Volume 3 ; 3 ; >
-    au < doNotProcess ; exists ; 2018 ; Hunter Gatherer Research Volume 4 ; 4 ; >
-    au < exists ; exists ; 2019 ; Hunter Gatherer Research Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 2016-2017 ; Hunter Gatherer Research Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 2017-2019 ; Hunter Gatherer Research Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 2019-2020 ; Hunter Gatherer Research Volume 4 ; 4 ; >
+    au < exists ; exists ; 2021 ; Hunter Gatherer Research Volume 5 ; 5 ; >
 
     }
   }
