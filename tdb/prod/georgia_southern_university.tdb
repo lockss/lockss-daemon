@@ -43,7 +43,6 @@
       au < released ; 2018 ; Becoming: Journal of the Georgia Middle School Association Volume 29 ; 29 >
       au < released ; 2019 ; Becoming: Journal of the Georgia Middle School Association Volume 30 ; 30 >
       au < released ; 2020 ; Becoming: Journal of the Georgia Middle School Association Volume 31 ; 31 >
-      au < expected ; 2022 ; Becoming: Journal of the Georgia Middle School Association Volume 32 ; 32 >
 
   }
 
@@ -84,18 +83,18 @@
       au < released ; 2008 ; Georgia Educational Researcher Volume 6 ; 6 >
       au < released ; 2009 ; Georgia Educational Researcher Volume 7 ; 7 >
       au < released ; 2010 ; Georgia Educational Researcher Volume 8 ; 8 >
-      au < released ; 2011 ; Georgia Educational Researcher Volume 9 ; 9 >
-      au < released ; 2012 ; Georgia Educational Researcher Volume 10 ; 10 >
-      au < released ; 2013 ; Georgia Educational Researcher Volume 11 ; 11 >
-      au < released ; 2014 ; Georgia Educational Researcher Volume 12 ; 12 >
-      au < released ; 2015 ; Georgia Educational Researcher Volume 13 ; 13 >
-      au < released ; 2016 ; Georgia Educational Researcher Volume 14 ; 14 >
-      au < released ; 2017 ; Georgia Educational Researcher Volume 15 ; 15 >
-      au < released ; 2018 ; Georgia Educational Researcher Volume 16 ; 16 >
-      au < released ; 2019 ; Georgia Educational Researcher Volume 17 ; 17 >
-      au < released ; 2020 ; Georgia Educational Researcher Volume 18 ; 18 >
-      au < released ; 2021 ; Georgia Educational Researcher Volume 19 ; 19 >
-      au < expected ; 2022 ; Georgia Educational Researcher Volume 20 ; 20 >
+      au < released ; 2012 ; Georgia Educational Researcher Volume 9 ; 9 >
+      au < released ; 2013 ; Georgia Educational Researcher Volume 10 ; 10 >
+      au < released ; 2014 ; Georgia Educational Researcher Volume 11 ; 11 >
+      au < released ; 2015 ; Georgia Educational Researcher Volume 12 ; 12 >
+      au < released ; 2016 ; Georgia Educational Researcher Volume 13 ; 13 >
+      au < released ; 2017-2018 ; Georgia Educational Researcher Volume 14 ; 14 >
+      au < released ; 2018 ; Georgia Educational Researcher Volume 15 ; 15 >
+      au < released ; 2019 ; Georgia Educational Researcher Volume 16 ; 16 >
+      au < released ; 2020 ; Georgia Educational Researcher Volume 17 ; 17 >
+      au < released ; 2021 ; Georgia Educational Researcher Volume 18 ; 18 >
+      au < released ; 2022 ; Georgia Educational Researcher Volume 19 ; 19 >
+      au < exists ; 2023 ; Georgia Educational Researcher Volume 20 ; 20 >
 
   }
 
@@ -182,7 +181,6 @@
       au < released ; 2016-2017 ; Journal of the Georgia Public Health Association Volume 6 ; 6 >
       au < released ; 2017-2019 ; Journal of the Georgia Public Health Association Volume 7 ; 7 >
       au < released ; 2020-2021 ; Journal of the Georgia Public Health Association Volume 8 ; 8 >
-      au < expected ; 2022 ; Journal of the Georgia Public Health Association Volume 9 ; 9 >
 
   }
 
@@ -243,8 +241,6 @@
       au < released ; 2015 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 9 ; 9 >
 
       au < released ; 2019 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 13 ; 13 >
-      au < expected ; 2021 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 14 ; 14 >
-      au < expected ; 2022 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 15 ; 15 >
 
   }
 
@@ -262,8 +258,6 @@
       au < released ; 2017 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 1 ; 1 >
       au < released ; 2018 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 2 ; 2 >
       au < released ; 2019 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 3 ; 3 >
-      au < expected ; 2021 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 4 ; 4 >
-      au < expected ; 2022 ; Proceedings of the Interdisciplinary STEM Teaching and Learning Conference Volume 5 ; 5 >
 
   }
 
@@ -311,16 +305,15 @@
       au < released ; 2008 ; The Coastal Review Volume 2 ; 2 >
       au < released ; 2011 ; The Coastal Review Volume 3 ; 3 >
       au < released ; 2013 ; The Coastal Review Volume 4 ; 4 >
-      au < doesNotExist ; 2012 ; The Coastal Review Volume 5 ; 5 >
+      au < doesNotExist ; 2014 ; The Coastal Review Volume 5 ; 5 >
       au < released ; 2015-2016 ; The Coastal Review Volume 6 ; 6 >
       au < released ; 2015-2016 ; The Coastal Review Volume 7 ; 7 >
       au < released ; 2016-2017 ; The Coastal Review Volume 8 ; 8 >
       au < released ; 2017-2018 ; The Coastal Review Volume 9 ; 9 >
       au < released ; 2018-2019 ; The Coastal Review Volume 10 ; 10 >
       au < released ; 2019-2020 ; The Coastal Review Volume 11 ; 11 >
-      au < released ; 2020-2021 ; The Coastal Review Volume 12 ; 12 >
-      au < manifest ; 2021-2022 ; The Coastal Review Volume 13 ; 13 >
-      au < expected ; 2022-2023 ; The Coastal Review Volume 14 ; 14 >
+      au < released ; 2020-2022 ; The Coastal Review Volume 12 ; 12 >
+      au < manifest ; 2023 ; The Coastal Review Volume 13 ; 13 >
 
   }
 
@@ -337,8 +330,6 @@
       param[journal_abbr] = jssw
 
       au < released ; 2017-2019 ; The Journal of Student Success in Writing Volume 1 ; 1 >
-      au < expected ; 2021 ; The Journal of Student Success in Writing Volume 2 ; 2 >
-      au < expected ; 2022 ; The Journal of Student Success in Writing Volume 3 ; 3 >
 
   }
 
