@@ -29881,7 +29881,7 @@
       au < finished ; finished ; 2012 ; Journalism & Communication Monographs Volume 14 ; 14 ; >
       au < finished ; finished ; 2013 ; Journalism & Communication Monographs Volume 15 ; 15 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Journalism & Communication Monographs Volume 16 ; 16 ; >
-      au < finished ; crawling ; 2015 ; Journalism & Communication Monographs Volume 17 ; 17 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2015 ; Journalism & Communication Monographs Volume 17 ; 17 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; Journalism & Communication Monographs Volume 18 ; 18 ; >
 
     }
@@ -30747,7 +30747,7 @@
       au < finished ; finished ; 2010 ; Lupus Volume 19 ; 19 ; >
       au < finished ; finished ; 2011 ; Lupus Volume 20 ; 20 ; >
       au < finished ; finished ; 2012 ; Lupus Volume 21 ; 21 ; >
-      au < finished ; crawling ; 2013 ; Lupus Volume 22 ; 22 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; Lupus Volume 22 ; 22 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Lupus Volume 23 ; 23 ; >
       au < finished ; finished ; 2015 ; Lupus Volume 24 ; 24 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; Lupus Volume 25 ; 25 ; >
@@ -31930,8 +31930,8 @@
       au < superseded ; exists ; 2010 ; Metamorphosis Volume 9 [superseded] ; 9 ; >
       au < superseded ; exists ; 2011 ; Metamorphosis Volume 10 [superseded] ; 10 ; >
       au < superseded ; exists ; 2012 ; Metamorphosis Volume 11 [superseded] ; 11 ; >
-      au < finished ; crawling ; 2013 ; Metamorphosis Volume 12 ; 12 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2014 ; Metamorphosis Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; Metamorphosis Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2014 ; Metamorphosis Volume 13 ; 13 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Metamorphosis Volume 14 ; 14 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; Metamorphosis Volume 15 ; 15 ; >
 
@@ -32022,7 +32022,7 @@
       au < finished ; finished ; 2010 ; Millennium - Journal of International Studies Volume 39 ; 39 ; >
       au < finished ; finished ; 2011 ; Millennium - Journal of International Studies Volume 40 ; 40 ; >
       au < finished ; finished ; 2012 ; Millennium - Journal of International Studies Volume 41 ; 41 ; >
-      au < finished ; crawling ; 2013 ; Millennium - Journal of International Studies Volume 42 ; 42 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2013 ; Millennium - Journal of International Studies Volume 42 ; 42 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Millennium - Journal of International Studies Volume 43 ; 43 ; >
       au < finished ; finished ; 2015 ; Millennium - Journal of International Studies Volume 44 ; 44 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2016 ; Millennium - Journal of International Studies Volume 45 [superseded] ; 45 ; >
@@ -32124,7 +32124,7 @@
       au < finished ; finished ; 2010 ; Molecular Imaging Volume 9 ; 9 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2011 ; Molecular Imaging Volume 10 ; 10 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2012 ; Molecular Imaging Volume 11 ; 11 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2013 ; Molecular Imaging Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; Molecular Imaging Volume 12 ; 12 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Molecular Imaging Volume 13 ; 13 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Molecular Imaging Volume 14 ; 14 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; Molecular Imaging Volume 15 ; 15 ; >
@@ -32148,7 +32148,7 @@
       au < finished ; finished ; 2009 ; Molecular Pain Volume 5 ; 5 ; >
       au < finished ; finished ; 2010 ; Molecular Pain Volume 6 ; 6 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2011 ; Molecular Pain Volume 7 ; 7 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2012 ; Molecular Pain Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2012 ; Molecular Pain Volume 8 ; 8 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2013 ; Molecular Pain Volume 9 ; 9 ; >
       au < finished ; finished ; 2014 ; Molecular Pain Volume 10 ; 10 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; Molecular Pain Volume 11 ; 11 ; reingest2.clockss.org:8085 >
@@ -32252,7 +32252,7 @@
       au < finished ; finished ; 2010 ; Music and Medicine Volume 2 ; 2 ; >
       au < finished ; finished ; 2011 ; Music and Medicine Volume 3 ; 3 ; >
       au < finished ; finished ; 2012 ; Music and Medicine Volume 4 ; 4 ; >
-      au < finished ; crawling ; 2013 ; Music and Medicine Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2013 ; Music and Medicine Volume 5 ; 5 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -32430,8 +32430,8 @@
       param[base_url] = http://nab.sagepub.com/
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < finished ; crawling ; 2014 ; Nanobiomedicine Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2015 ; Nanobiomedicine Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2014 ; Nanobiomedicine Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2015 ; Nanobiomedicine Volume 2 ; 2 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2016 ; Nanobiomedicine Volume 3 ; 3 ; >
 
   }
@@ -32447,10 +32447,10 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < superseded ; exists ; 2011 ; Nanomaterials and Nanotechnology Volume 1 [superseded] ; 1 ; >
-      au < finished ; crawling ; 2012 ; Nanomaterials and Nanotechnology Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2013 ; Nanomaterials and Nanotechnology Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2012 ; Nanomaterials and Nanotechnology Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2013 ; Nanomaterials and Nanotechnology Volume 3 ; 3 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2014 ; Nanomaterials and Nanotechnology Volume 4 ; 4 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2015 ; Nanomaterials and Nanotechnology Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2015 ; Nanomaterials and Nanotechnology Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; Nanomaterials and Nanotechnology Volume 6 ; 6 ; >
 
   }
@@ -32921,7 +32921,7 @@
       au < finished ; finished ; 2012 ; The Neurohospitalist Volume 2 ; 2 ; >
       au < finished ; crawling ; 2013 ; The Neurohospitalist Volume 3 ; 3 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2014 ; The Neurohospitalist Volume 4 ; 4 ; >
-      au < finished ; crawling ; 2015 ; The Neurohospitalist Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2015 ; The Neurohospitalist Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; The Neurohospitalist Volume 6 ; 6 ; >
 
     }
@@ -33262,7 +33262,7 @@
       au < doNotProcess ; exists ; 2006 ; Noise & Vibration Worldwide Volume 37 ; 37 ; >
       au < doNotProcess ; exists ; 2007 ; Noise & Vibration Worldwide Volume 38 ; 38 ; >
       au < finished ; finished ; 2008 ; Noise & Vibration Worldwide Volume 39 ; 39 ; >
-      au < finished ; crawling ; 2009 ; Noise & Vibration Worldwide Volume 40 ; 40 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; Noise & Vibration Worldwide Volume 40 ; 40 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2010 ; Noise & Vibration Worldwide Volume 41 ; 41 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2011 ; Noise & Vibration Worldwide Volume 42 ; 42 ; >
       au < finished ; finished ; 2012 ; Noise & Vibration Worldwide Volume 43 ; 43 ; >
@@ -33475,7 +33475,7 @@
       au < finished ; finished ; 2012 ; Nursing Ethics Volume 19 ; 19 ; >
       au < finished ; finished ; 2013 ; Nursing Ethics Volume 20 ; 20 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Nursing Ethics Volume 21 ; 21 ; >
-      au < finished ; crawling ; 2015 ; Nursing Ethics Volume 22 ; 22 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2015 ; Nursing Ethics Volume 22 ; 22 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; Nursing Ethics Volume 23 ; 23 ; >
 
     }
@@ -33633,7 +33633,7 @@
       au < finished ; finished ; 2010 ; Nutrition in Clinical Practice Volume 25 ; 25 ; >
       au < finished ; finished ; 2011 ; Nutrition in Clinical Practice Volume 26 ; 26 ; >
       au < finished ; finished ; 2012 ; Nutrition in Clinical Practice Volume 27 ; 27 ; >
-      au < finished ; crawling ; 2013 ; Nutrition in Clinical Practice Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2013 ; Nutrition in Clinical Practice Volume 28 ; 28 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Nutrition in Clinical Practice Volume 29 ; 29 ; >
       au < finished ; finished ; 2015 ; Nutrition in Clinical Practice Volume 30 ; 30 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; Nutrition in Clinical Practice Volume 31 ; 31 ; >
@@ -34251,9 +34251,9 @@
       au < finished ; finished ; 2008 ; Perception Volume 37 ; 37 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2009 ; Perception Volume 38 ; 38 ; >
       au < finished ; finished ; 2010 ; Perception Volume 39 ; 39 ; >
-      au < finished ; crawling ; 2011 ; Perception Volume 40 ; 40 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; Perception Volume 40 ; 40 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2012 ; Perception Volume 41 ; 41 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2013 ; Perception Volume 42 ; 42 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2013 ; Perception Volume 42 ; 42 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Perception Volume 43 ; 43 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Perception Volume 44 ; 44 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; Perception Volume 45 ; 45 ; >
@@ -34749,7 +34749,7 @@
         au < finished ; finished ; 2012-2013 ; Phi Delta Kappan Volume 94 ; 94 ; >
         au < finished ; finished ; 2013-2014 ; Phi Delta Kappan Volume 95 ; 95 ; reingest1.clockss.org:8082 >
         au < zapped ; finished ; 2014-2015 ; Phi Delta Kappan Volume 96 ; 96 ; >
-        au < finished ; crawling ; 2015-2016 ; Phi Delta Kappan Volume 97 ; 97 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2015-2016 ; Phi Delta Kappan Volume 97 ; 97 ; reingest5.clockss.org:8082 >
         au < doNotProcess ; exists ; 2016-2017 ; Phi Delta Kappan Volume 98 ; 98 ; >
 
     }
@@ -35225,7 +35225,7 @@
       au < finished ; finished ; 2012 ; Political Research Quarterly Volume 65 ; 65 ; >
       au < finished ; finished ; 2013 ; Political Research Quarterly Volume 66 ; 66 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; Political Research Quarterly Volume 67 ; 67 ; >
-      au < finished ; crawling ; 2015 ; Political Research Quarterly Volume 68 ; 68 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2015 ; Political Research Quarterly Volume 68 ; 68 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; Political Research Quarterly Volume 69 ; 69 ; >
 
     }
@@ -35253,7 +35253,7 @@
       au < doNotProcess ; exists ; 2006 ; Political Studies Volume 54 ; 54 ; >
       au < doNotProcess ; exists ; 2007 ; Political Studies Volume 55 ; 55 ; >
       au < finished ; finished ; 2008 ; Political Studies Volume 56 ; 56 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2009 ; Political Studies Volume 57 ; 57 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2009 ; Political Studies Volume 57 ; 57 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2010 ; Political Studies Volume 58 ; 58 ; >
       au < finished ; finished ; 2011 ; Political Studies Volume 59 ; 59 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2012 ; Political Studies Volume 60 ; 60 ; >
@@ -35803,7 +35803,7 @@
         au < zapped ; finished ; 2010 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 54 ; 54 ; >
         au < finished ; finished ; 2011 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 55 ; 55 ; >
         au < finished ; finished ; 2012 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 56 ; 56 ; >
-        au < finished ; crawling ; 2013 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 57 ; 57 ; reingest2.clockss.org:8085 >
+        au < finished ; frozen ; 2013 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 57 ; 57 ; reingest2.clockss.org:8085 >
         au < finished ; finished ; 2014 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 58 ; 58 ; reingest3.clockss.org:8083 >
         au < finished ; finished ; 2015 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 59 ; 59 ; reingest5.clockss.org:8082 >
         au < finished ; finished ; 2016 ; Proceedings of the Human Factors and Ergonomics Society Annual Meeting Volume 60 ; 60 ; reingest2.clockss.org:8085 >
@@ -36839,7 +36839,7 @@
       au < finished ; finished ; 2010 ; Psychological Science Volume 21 ; 21 ; >
       au < finished ; finished ; 2011 ; Psychological Science Volume 22 ; 22 ; >
       au < finished ; finished ; 2012 ; Psychological Science Volume 23 ; 23 ; >
-      au < finished ; crawling ; 2013 ; Psychological Science Volume 24 ; 24 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2013 ; Psychological Science Volume 24 ; 24 ; reingest3.clockss.org:8083 >
       au < zapped ; finished ; 2014 ; Psychological Science Volume 25 ; 25 ; >
       au < zapped ; finished ; 2015 ; Psychological Science Volume 26 ; 26 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; Psychological Science Volume 27 ; 27 ; >
@@ -37319,7 +37319,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < finished ; finished ; 2012 ; Public Relations Inquiry Volume 1 ; 1 ; >
-      au < finished ; crawling ; 2013 ; Public Relations Inquiry Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; Public Relations Inquiry Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Public Relations Inquiry Volume 3 ; 3 ; >
       au < finished ; finished ; 2015 ; Public Relations Inquiry Volume 4 ; 4 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; Public Relations Inquiry Volume 5 ; 5 ; >
@@ -37591,7 +37591,7 @@
       au < finished ; finished ; 2010 ; Qualitative Inquiry Volume 16 ; 16 ; >
       au < finished ; finished ; 2011 ; Qualitative Inquiry Volume 17 ; 17 ; >
       au < finished ; finished ; 2012 ; Qualitative Inquiry Volume 18 ; 18 ; >
-      au < finished ; crawling ; 2013 ; Qualitative Inquiry Volume 19 ; 19 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; Qualitative Inquiry Volume 19 ; 19 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Qualitative Inquiry Volume 20 ; 20 ; >
       au < finished ; finished ; 2015 ; Qualitative Inquiry Volume 21 ; 21 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; Qualitative Inquiry Volume 22 ; 22 ; >
@@ -37790,7 +37790,7 @@
 
       au < finished ; finished ; 2011 ; Race and Justice Volume 1 ; 1 ; >
       au < finished ; finished ; 2012 ; Race and Justice Volume 2 ; 2 ; >
-      au < finished ; crawling ; 2013 ; Race and Justice Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2013 ; Race and Justice Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Race and Justice Volume 4 ; 4 ; >
       au < finished ; finished ; 2015 ; Race and Justice Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; Race and Justice Volume 6 ; 6 ; >
@@ -37950,7 +37950,7 @@
       au < zapped ; finished ; 2012-2013 ; Rehabilitation Counseling Bulletin Volume 56 ; 56 ; >
       au < finished ; finished ; 2013-2014 ; Rehabilitation Counseling Bulletin Volume 57 ; 57 ; >
       au < finished ; finished ; 2014-2015 ; Rehabilitation Counseling Bulletin Volume 58 ; 58 ; >
-      au < finished ; crawling ; 2015-2016 ; Rehabilitation Counseling Bulletin Volume 59 ; 59 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2015-2016 ; Rehabilitation Counseling Bulletin Volume 59 ; 59 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2016-2017 ; Rehabilitation Counseling Bulletin Volume 60 ; 60 ; >
 
     }
@@ -38964,7 +38964,7 @@
       au < zapped ; finished ; 2009 ; Reviews of Human Factors and Ergonomics Volume 5 ; 5 ; >
       au < zapped ; finished ; 2010 ; Reviews of Human Factors and Ergonomics Volume 6 ; 6 ; >
       au < finished ; finished ; 2011 ; Reviews of Human Factors and Ergonomics Volume 7 ; 7 ; >
-      au < finished ; crawling ; 2013 ; Reviews of Human Factors and Ergonomics Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; Reviews of Human Factors and Ergonomics Volume 8 ; 8 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Reviews of Human Factors and Ergonomics Volume 9 ; 9 ; >
       au < finished ; finished ; 2015 ; Reviews of Human Factors and Ergonomics Volume 10 ; 10 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; Reviews of Human Factors and Ergonomics Volume 11 ; 11 ; >
@@ -39196,7 +39196,7 @@
       au < finished ; finished ; 2012 ; School Psychology International Volume 33 ; 33 ; >
       au < finished ; finished ; 2013 ; School Psychology International Volume 34 ; 34 ; >
       au < finished ; finished ; 2014 ; School Psychology International Volume 35 ; 35 ; >
-      au < finished ; crawling ; 2015 ; School Psychology International Volume 36 ; 36 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2015 ; School Psychology International Volume 36 ; 36 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; School Psychology International Volume 37 ; 37 ; >
 
     }
@@ -39519,7 +39519,7 @@
       au < finished ; finished ; 2012 ; Security Dialogue Volume 43 ; 43 ; >
       au < finished ; finished ; 2013 ; Security Dialogue Volume 44 ; 44 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Security Dialogue Volume 45 ; 45 ; >
-      au < finished ; crawling ; 2015 ; Security Dialogue Volume 46 ; 46 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2015 ; Security Dialogue Volume 46 ; 46 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; Security Dialogue Volume 47 ; 47 ; >
 
     }
@@ -39729,7 +39729,7 @@
     param[base_url] = http://sme.sagepub.com/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < finished ; crawling ; 2015 ; Sexualization, Media, and Society Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Sexualization, Media, and Society Volume 1 ; 1 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2016 ; Sexualization, Media, and Society Volume 2 ; 2 ; >
 
   }
@@ -40171,7 +40171,7 @@
       au < finished ; finished ; 2012 ; Social Compass Volume 59 ; 59 ; >
       au < finished ; finished ; 2013 ; Social Compass Volume 60 ; 60 ; >
       au < finished ; finished ; 2014 ; Social Compass Volume 61 ; 61 ; >
-      au < finished ; crawling ; 2015 ; Social Compass Volume 62 ; 62 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2015 ; Social Compass Volume 62 ; 62 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2016 ; Social Compass Volume 63 ; 63 ; >
 
     }
@@ -40590,7 +40590,7 @@
       au < finished ; finished ; 2010 ; Sociological Methods & Research Volume 39 ; 39 ; >
       au < finished ; finished ; 2011 ; Sociological Methods & Research Volume 40 ; 40 ; >
       au < finished ; finished ; 2012 ; Sociological Methods & Research Volume 41 ; 41 ; >
-      au < finished ; crawling ; 2013 ; Sociological Methods & Research Volume 42 ; 42 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; Sociological Methods & Research Volume 42 ; 42 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Sociological Methods & Research Volume 43 ; 43 ; >
       au < finished ; finished ; 2015 ; Sociological Methods & Research Volume 44 ; 44 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; Sociological Methods & Research Volume 45 ; 45 ; >
@@ -41757,7 +41757,7 @@
       au < finished ; finished ; 2012-2013 ; TEACHING Exceptional Children Volume 45 ; 45 ; >
       au < finished ; finished ; 2013-2014 ; TEACHING Exceptional Children Volume 46 ; 46 ; >
       au < finished ; finished ; 2014-2015 ; TEACHING Exceptional Children Volume 47 ; 47 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2015-2016 ; TEACHING Exceptional Children Volume 48 ; 48 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2015-2016 ; TEACHING Exceptional Children Volume 48 ; 48 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016-2017 ; TEACHING Exceptional Children Volume 49 ; 49 ; >
 
   }
@@ -42408,7 +42408,7 @@
       au < finished ; finished ; 2012 ; Theology Today Volume 69 ; 69 ; >
       au < finished ; finished ; 2013 ; Theology Today Volume 70 ; 70 ; >
       au < finished ; finished ; 2014 ; Theology Today Volume 71 ; 71 ; >
-      au < finished ; crawling ; 2015 ; Theology Today Volume 72 ; 72 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2015 ; Theology Today Volume 72 ; 72 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; Theology Today Volume 73 ; 73 ; >
 
     }
@@ -42615,7 +42615,7 @@
       au < finished ; finished ; 2010 ; Theory, Culture & Society Volume 27 ; 27 ; >
       au < finished ; finished ; 2011 ; Theory, Culture & Society Volume 28 ; 28 ; >
       au < finished ; finished ; 2012 ; Theory, Culture & Society Volume 29 ; 29 ; >
-      au < finished ; crawling ; 2013 ; Theory, Culture & Society Volume 30 ; 30 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2013 ; Theory, Culture & Society Volume 30 ; 30 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; Theory, Culture & Society Volume 31 ; 31 ; >
       au < finished ; finished ; 2015 ; Theory, Culture & Society Volume 32 ; 32 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; Theory, Culture & Society Volume 33 ; 33 ; >
@@ -42858,7 +42858,7 @@
       au < zapped ; finished ; 2010 ; Therapeutic Advances in Musculoskeletal Disease Volume 2 ; 2 ; >
       au < zapped ; finished ; 2011 ; Therapeutic Advances in Musculoskeletal Disease Volume 3 ; 3 ; >
       au < finished ; finished ; 2012 ; Therapeutic Advances in Musculoskeletal Disease Volume 4 ; 4 ; >
-      au < finished ; crawling ; 2013 ; Therapeutic Advances in Musculoskeletal Disease Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; Therapeutic Advances in Musculoskeletal Disease Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Therapeutic Advances in Musculoskeletal Disease Volume 6 ; 6 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Therapeutic Advances in Musculoskeletal Disease Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2016 ; Therapeutic Advances in Musculoskeletal Disease Volume 8 ; 8 ; >
@@ -43368,11 +43368,11 @@
       au < doNotProcess ; exists ; 2009 ; Tourism Economics Volume 15 [Sage] ; 15 ; >
       au < superseded ; exists ; 2010 ; Tourism Economics Volume 16 [Sage] [superseded] ; 16 ; >
       au < superseded ; exists ; 2011 ; Tourism Economics Volume 17 [Sage] [superseded] ; 17 ; >
-      au < finished ; crawling ; 2012 ; Tourism Economics Volume 18 [Sage] ; 18 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2013 ; Tourism Economics Volume 19 [Sage] ; 19 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2012 ; Tourism Economics Volume 18 [Sage] ; 18 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; Tourism Economics Volume 19 [Sage] ; 19 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2014 ; Tourism Economics Volume 20 [Sage] [superseded] ; 20 ; >
       au < superseded ; exists ; 2015 ; Tourism Economics Volume 21 [Sage] [superseded] ; 21 ; >
-      au < finished ; crawling ; 2016 ; Tourism Economics Volume 22 [Sage] ; 22 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2016 ; Tourism Economics Volume 22 [Sage] ; 22 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -43546,7 +43546,7 @@
       au < finished ; finished ; 2012 ; Toxicology and Industrial Health Volume 28 ; 28 ; >
       au < finished ; finished ; 2013 ; Toxicology and Industrial Health Volume 29 ; 29 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; Toxicology and Industrial Health Volume 30 ; 30 ; >
-      au < finished ; crawling ; 2015 ; Toxicology and Industrial Health Volume 31 ; 31 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2015 ; Toxicology and Industrial Health Volume 31 ; 31 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; Toxicology and Industrial Health Volume 32 ; 32 ; >
 
     }
@@ -43613,7 +43613,7 @@
       au < finished ; finished ; 2012 ; Transactions of the Institute of Measurement and Control Volume 34 ; 34 ; >
       au < finished ; finished ; 2013 ; Transactions of the Institute of Measurement and Control Volume 35 ; 35 ; >
       au < finished ; finished ; 2014 ; Transactions of the Institute of Measurement and Control Volume 36 ; 36 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2015 ; Transactions of the Institute of Measurement and Control Volume 37 ; 37 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2015 ; Transactions of the Institute of Measurement and Control Volume 37 ; 37 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2016 ; Transactions of the Institute of Measurement and Control Volume 38 ; 38 ; >
 
     }
@@ -44037,10 +44037,10 @@
       au < doNotProcess ; exists ; 2009 ; Tropical Conservation Science Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2010 ; Tropical Conservation Science Volume 3 ; 3 ; >
       au < superseded ; exists ; 2011 ; Tropical Conservation Science Volume 4 [superseded] ; 4 ; >
-      au < finished ; crawling ; 2012 ; Tropical Conservation Science Volume 5 ; 5 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2013 ; Tropical Conservation Science Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2014 ; Tropical Conservation Science Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2015 ; Tropical Conservation Science Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2012 ; Tropical Conservation Science Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; Tropical Conservation Science Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; Tropical Conservation Science Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2015 ; Tropical Conservation Science Volume 8 ; 8 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2016 ; Tropical Conservation Science Volume 9 ; 9 ; >
 
   }
@@ -44099,7 +44099,7 @@
       au < zapped ; finished ; 2012 ; Update: Applications of Research in Music Education Volume 31 ; 31 ; >
       au < finished ; finished ; 2013 ; Update: Applications of Research in Music Education Volume 32 ; 32 ; >
       au < finished ; finished ; 2014 ; Update: Applications of Research in Music Education Volume 33 ; 33 ; >
-      au < finished ; crawling ; 2015 ; Update: Applications of Research in Music Education Volume 34 ; 34 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2015 ; Update: Applications of Research in Music Education Volume 34 ; 34 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2016 ; Update: Applications of Research in Music Education Volume 35 [superseded] ; 35 ; >
 
     }
@@ -44421,7 +44421,7 @@
       au < finished ; finished ; 2012 ; Vascular and Endovascular Surgery Volume 46 ; 46 ; >
       au < finished ; finished ; 2013 ; Vascular and Endovascular Surgery Volume 47 ; 47 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Vascular and Endovascular Surgery Volume 48 ; 48 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2015 ; Vascular and Endovascular Surgery Volume 49 ; 49 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2015 ; Vascular and Endovascular Surgery Volume 49 ; 49 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; Vascular and Endovascular Surgery Volume 50 ; 50 ; >
 
 
@@ -45147,7 +45147,7 @@
       au < zapped ; finished ; 2010 ; World Journal for Pediatric and Congenital Heart Surgery Volume 1 ; 1 ; >
       au < finished ; finished ; 2011 ; World Journal for Pediatric and Congenital Heart Surgery Volume 2 ; 2 ; >
       au < finished ; finished ; 2012 ; World Journal for Pediatric and Congenital Heart Surgery Volume 3 ; 3 ; >
-      au < finished ; crawling ; 2013 ; World Journal for Pediatric and Congenital Heart Surgery Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2013 ; World Journal for Pediatric and Congenital Heart Surgery Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; World Journal for Pediatric and Congenital Heart Surgery Volume 5 ; 5 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2015 ; World Journal for Pediatric and Congenital Heart Surgery Volume 6 ; 6 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; World Journal for Pediatric and Congenital Heart Surgery Volume 7 ; 7 ; >
@@ -45675,7 +45675,7 @@
       au < finished ; finished ; 2008 ; Interpretation: A Journal of Bible and Theology Volume 62 ; 62 ; >
       au < finished ; finished ; 2009 ; Interpretation: A Journal of Bible and Theology Volume 63 ; 63 ; >
       au < finished ; finished ; 2010 ; Interpretation: A Journal of Bible and Theology Volume 64 ; 64 ; >
-      au < finished ; crawling ; 2011 ; Interpretation: A Journal of Bible and Theology Volume 65 ; 65 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2011 ; Interpretation: A Journal of Bible and Theology Volume 65 ; 65 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2012 ; Interpretation: A Journal of Bible and Theology Volume 66 ; 66 ; >
       au < finished ; finished ; 2013 ; Interpretation: A Journal of Bible and Theology Volume 67 ; 67 ; >
       au < finished ; finished ; 2014 ; Interpretation: A Journal of Bible and Theology Volume 68 ; 68 ; >
@@ -46796,7 +46796,7 @@
     au < doNotProcess ; exists ; 2012 ; Annals of the ICRP Volume 41 ; 41 ; >
     au < doNotProcess ; exists ; 2013 ; Annals of the ICRP Volume 42 ; 42 ; >
     au < finished ; finished ; 2014 ; Annals of the ICRP Volume 43 ; 43 ; >
-    au < finished ; crawling ; 2015 ; Annals of the ICRP Volume 44 ; 44 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2015 ; Annals of the ICRP Volume 44 ; 44 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2016 ; Annals of the ICRP Volume 45 ; 45 ; >
 
     }
@@ -46877,7 +46877,7 @@
     au < finished ; finished ; 2012 ; Jindal Journal of Business Research Volume 1 ; 1 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2013 ; Jindal Journal of Business Research Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Jindal Journal of Business Research Volume 3 ; 3 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Jindal Journal of Business Research Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2015 ; Jindal Journal of Business Research Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2016 ; Jindal Journal of Business Research Volume 5 ; 5 ; >
 
     }
@@ -47217,9 +47217,9 @@
     au < doNotProcess ; exists ; 2007 ; Foreign Trade Review Volume 42 ; 42 ; >
     au < doNotProcess ; exists ; 2008 ; Foreign Trade Review Volume 43 ; 43 ; >
     au < doNotProcess ; exists ; 2009 ; Foreign Trade Review Volume 44 ; 44 ; >
-    au < finished ; crawling ; 2010 ; Foreign Trade Review Volume 45 ; 45 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2010 ; Foreign Trade Review Volume 45 ; 45 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Foreign Trade Review Volume 46 ; 46 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2012 ; Foreign Trade Review Volume 47 ; 47 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2012 ; Foreign Trade Review Volume 47 ; 47 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Foreign Trade Review Volume 48 ; 48 ; >
     au < finished ; finished ; 2014 ; Foreign Trade Review Volume 49 ; 49 ; >
     au < finished ; finished ; 2015 ; Foreign Trade Review Volume 50 ; 50 ; reingest2.clockss.org:8085 >
@@ -47474,7 +47474,7 @@
     au < doNotProcess ; exists ; 2012 ; Pacifica: Australasian Theological Studies Volume 25 ; 25 ; >
     au < finished ; finished ; 2013 ; Pacifica: Australasian Theological Studies Volume 26 ; 26 ; >
     au < finished ; finished ; 2014 ; Pacifica: Australasian Theological Studies Volume 27 ; 27 ; >
-    au < finished ; crawling ; 2015 ; Pacifica: Australasian Theological Studies Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2015 ; Pacifica: Australasian Theological Studies Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2016 ; Pacifica: Australasian Theological Studies Volume 29 ; 29 ; >
 
     }
@@ -47544,9 +47544,9 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://tai.sagepub.com/
 
-    au < finished ; crawling ; 2013 ; Therapeutic Advances in Infectious Disease Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; Therapeutic Advances in Infectious Disease Volume 1 ; 1 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Therapeutic Advances in Infectious Disease Volume 2 ; 2 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2015 ; Therapeutic Advances in Infectious Disease Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2015 ; Therapeutic Advances in Infectious Disease Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2016 ; Therapeutic Advances in Infectious Disease Volume 4 ; 4 ; >
 
     }
@@ -47588,7 +47588,7 @@
       au < finished ; finished ; 2010 ; British Journal of Medical and Surgical Urology Volume 3 ; 3 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2011 ; British Journal of Medical and Surgical Urology Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2012 ; British Journal of Medical and Surgical Urology Volume 5 ; 5 ; >
-      au < finished ; crawling ; 2013 ; Journal of Clinical Urology Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; Journal of Clinical Urology Volume 6 ; 6 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Journal of Clinical Urology Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2015 ; Journal of Clinical Urology Volume 8 ; 8 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; exists ; 2016 ; Journal of Clinical Urology Volume 9 ; 9 ; >
@@ -47829,10 +47829,10 @@
         au < doNotProcess ; exists ; 2006 ; Clinical Ethics Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2007 ; Clinical Ethics Volume 2 ; 2 ; >
         au < finished ; finished ; 2008 ; Clinical Ethics Volume 3 ; 3 ; >
-        au < finished ; crawling ; 2009 ; Clinical Ethics Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+        au < finished ; frozen ; 2009 ; Clinical Ethics Volume 4 ; 4 ; reingest2.clockss.org:8085 >
         au < finished ; finished ; 2010 ; Clinical Ethics Volume 5 ; 5 ; >
         au < finished ; finished ; 2011 ; Clinical Ethics Volume 6 ; 6 ; >
-        au < finished ; crawling ; 2012 ; Clinical Ethics Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2012 ; Clinical Ethics Volume 7 ; 7 ; reingest3.clockss.org:8083 >
         au < finished ; finished ; 2013 ; Clinical Ethics Volume 8 ; 8 ; >
         au < finished ; finished ; 2014 ; Clinical Ethics Volume 9 ; 9 ; >
         au < finished ; finished ; 2015 ; Clinical Ethics Volume 10 ; 10 ; reingest5.clockss.org:8082 >
@@ -48120,7 +48120,7 @@
         au < doNotProcess ; exists ; 2010 ; Experimental Biology and Medicine Volume 235 ; 235 ; >
         au < doNotProcess ; exists ; 2011 ; Experimental Biology and Medicine Volume 236 ; 236 ; >
         au < doNotProcess ; exists ; 2012 ; Experimental Biology and Medicine Volume 237 ; 237 ; >
-        au < finished ; crawling ; 2013 ; Experimental Biology and Medicine Volume 238 ; 238 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2013 ; Experimental Biology and Medicine Volume 238 ; 238 ; reingest1.clockss.org:8082 >
         au < finished ; finished ; 2014 ; Experimental Biology and Medicine Volume 239 ; 239 ; reingest1.clockss.org:8082 >
         au < finished ; finished ; 2015 ; Experimental Biology and Medicine Volume 240 ; 240 ; reingest2.clockss.org:8085 >
         au < doNotProcess ; exists ; 2016 ; Experimental Biology and Medicine Volume 241 ; 241 ; >
@@ -48431,7 +48431,7 @@
         au < finished ; finished ; 2010 ; International Journal of STD & AIDS Volume 21 ; 21 ; >
         au < finished ; finished ; 2011 ; International Journal of STD & AIDS Volume 22 ; 22 ; reingest1.clockss.org:8082 >
         au < finished ; finished ; 2012 ; International Journal of STD & AIDS Volume 23 ; 23 ; >
-        au < finished ; crawling ; 2013 ; International Journal of STD & AIDS Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+        au < finished ; frozen ; 2013 ; International Journal of STD & AIDS Volume 24 ; 24 ; reingest2.clockss.org:8085 >
         au < finished ; finished ; 2014 ; International Journal of STD & AIDS Volume 25 ; 25 ; reingest2.clockss.org:8085 >
         au < finished ; finished ; 2015 ; International Journal of STD & AIDS Volume 26 ; 26 ; reingest2.clockss.org:8085 >
         au < doNotProcess ; exists ; 2016 ; International Journal of STD & AIDS Volume 27 ; 27 ; >
@@ -48575,7 +48575,7 @@
         au < finished ; finished ; 2012 ; Journal of Telemedicine and Telecare Volume 18 ; 18 ; >
         au < finished ; finished ; 2013 ; Journal of Telemedicine and Telecare Volume 19 ; 19 ; reingest3.clockss.org:8083 >
         au < finished ; finished ; 2014 ; Journal of Telemedicine and Telecare Volume 20 ; 20 ; >
-        au < finished ; crawling ; 2015 ; Journal of Telemedicine and Telecare Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2015 ; Journal of Telemedicine and Telecare Volume 21 ; 21 ; reingest3.clockss.org:8083 >
         au < doNotProcess ; exists ; 2016 ; Journal of Telemedicine and Telecare Volume 22 ; 22 ; >
 
       }
@@ -49022,7 +49022,7 @@
         au < doNotProcess ; exists ; 2012 ; Obstetric Medicine Volume 5 ; 5 ; >
         au < finished ; finished ; 2013 ; Obstetric Medicine Volume 6 ; 6 ; >
         au < finished ; finished ; 2014 ; Obstetric Medicine Volume 7 ; 7 ; >
-        au < finished ; crawling ; 2015 ; Obstetric Medicine Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2015 ; Obstetric Medicine Volume 8 ; 8 ; reingest5.clockss.org:8082 >
         au < doNotProcess ; exists ; 2016 ; Obstetric Medicine Volume 9 ; 9 ; >
 
       }
@@ -49056,7 +49056,7 @@
         au < doNotProcess ; exists ; 2012 ; Phlebology Volume 27 ; 27 ; >
         au < finished ; finished ; 2013 ; Phlebology Volume 28 ; 28 ; reingest2.clockss.org:8085 >
         au < finished ; finished ; 2014 ; Phlebology Volume 29 ; 29 ; >
-        au < finished ; crawling ; 2015 ; Phlebology Volume 30 ; 30 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2015 ; Phlebology Volume 30 ; 30 ; reingest1.clockss.org:8082 >
         au < doNotProcess ; exists ; 2016 ; Phlebology Volume 31 ; 31 ; >
 
       }

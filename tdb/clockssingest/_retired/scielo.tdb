@@ -1659,7 +1659,7 @@
     au < doNotProcess ; exists ; 2010 ; 85 ; Anais Brasileiros de Dermatologia Volume 85 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; 86 ; Anais Brasileiros de Dermatologia Volume 86 ; 2011 ; >
     au < doNotProcess ; exists ; 2012 ; 87 ; Anais Brasileiros de Dermatologia Volume 87 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 88 ; Anais Brasileiros de Dermatologia Volume 88 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; 88 ; Anais Brasileiros de Dermatologia Volume 88 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; 89 ; Anais Brasileiros de Dermatologia Volume 89 ; 2014 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 90 ; Anais Brasileiros de Dermatologia Volume 90 ; 2015 ; reingest1.clockss.org:8082 >
 
@@ -5644,7 +5644,7 @@
     au < doNotProcess ; exists ; 2010 ; 70 ; Chilean journal of agricultural research Volume 70 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; 71 ; Chilean journal of agricultural research Volume 71 ; 2011 ; >
     au < doNotProcess ; exists ; 2012 ; 72 ; Chilean journal of agricultural research Volume 72 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 73 ; Chilean journal of agricultural research Volume 73 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; 73 ; Chilean journal of agricultural research Volume 73 ; 2013 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 74 ; Chilean journal of agricultural research Volume 74 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; 75 ; Chilean journal of agricultural research Volume 75 ; 2015 ; reingest3.clockss.org:8083 >
 
@@ -10074,7 +10074,7 @@
     au < doNotProcess ; exists ; 2010 ; 27 ; Estudos de Psicologia (Campinas) Volume 27 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; 28 ; Estudos de Psicologia (Campinas) Volume 28 ; 2011 ; >
     au < doNotProcess ; exists ; 2012 ; 29 ; Estudos de Psicologia (Campinas) Volume 29 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 30 ; Estudos de Psicologia (Campinas) Volume 30 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; 30 ; Estudos de Psicologia (Campinas) Volume 30 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; 31 ; Estudos de Psicologia (Campinas) Volume 31 ; 2014 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 32 ; Estudos de Psicologia (Campinas) Volume 32 ; 2015 ; reingest1.clockss.org:8082 >
 
@@ -28136,7 +28136,7 @@
     param[journal_issn] = 0871-9721
 
     au < doNotProcess ; exists ; 2012 ; 20 ; Revista Portuguesa de Imunoalergologia Volume 20 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 21 ; Revista Portuguesa de Imunoalergologia Volume 21 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; 21 ; Revista Portuguesa de Imunoalergologia Volume 21 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; 22 ; Revista Portuguesa de Imunoalergologia Volume 22 ; 2014 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 23 ; Revista Portuguesa de Imunoalergologia Volume 23 ; 2015 ; reingest1.clockss.org:8082 >
 
@@ -30552,7 +30552,7 @@
     au < doNotProcess ; exists ; 2010 ; 14 ; Tecnura Volume 14 ; 2010 ; >
     au < doNotProcess ; exists ; 2011 ; 15 ; Tecnura Volume 15 ; 2011 ; >
     au < doNotProcess ; exists ; 2012 ; 16 ; Tecnura Volume 16 ; 2012 ; >
-    au < finished ; crawling ; 2013 ; 17 ; Tecnura Volume 17 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2013 ; 17 ; Tecnura Volume 17 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; 18 ; Tecnura Volume 18 ; 2014 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 19 ; Tecnura Volume 19 ; 2015 ; reingest1.clockss.org:8082 >
 
