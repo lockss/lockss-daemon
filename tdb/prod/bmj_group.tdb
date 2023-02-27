@@ -758,7 +758,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; BMJ Supportive & Palliative Care Volume 10 ; 10 ; https://spcare.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2021 ; BMJ Supportive & Palliative Care Volume 11 ; 11 ; https://spcare.bmj.com/ > #login, https://spcare.bmj.com/content/11/1/1
     au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; BMJ Supportive & Palliative Care Volume 12 ; 12 ; https://spcare.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; expected ; 2023 ; BMJ Supportive & Palliative Care Volume 13 ; 13 ; https://spcare.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2023 ; BMJ Supportive & Palliative Care Volume 13 ; 13 ; https://spcare.bmj.com/ >
 
   }
 
@@ -2376,7 +2376,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; Medical Humanities Volume 46 ; 46 ; https://mh.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2021 ; Medical Humanities Volume 47 ; 47 ; https://mh.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; Medical Humanities Volume 48 ; 48 ; https://mh.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; expected ; 2023 ; Medical Humanities Volume 49 ; 49 ; https://mh.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2023 ; Medical Humanities Volume 49 ; 49 ; https://mh.bmj.com/ >
 
   }
 
