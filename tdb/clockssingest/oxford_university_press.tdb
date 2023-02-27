@@ -13199,7 +13199,7 @@
     param[journal_id] = jrsssb
     #move from Wiley by 2023-01-01
 
-    au < expected ; exists ; 2022 ; 2022 ; Journal of the Royal Statistical Society, Series B: Statistical Methodology Volume 84 ; 84 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Journal of the Royal Statistical Society, Series B: Statistical Methodology Volume 84 ; 84 ; >
 
   }
 
@@ -14195,7 +14195,7 @@
     param[journal_id] = mrcr
     #Content had been processed under T&F from 2017 volume 1 to 2021 volume 5
 
-    au < exists ; exists ; 2022 ; 2022 ; Modern Rheumatology Case Reports Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Modern Rheumatology Case Reports Volume 6 ; 6 ; >
 
   }
 
