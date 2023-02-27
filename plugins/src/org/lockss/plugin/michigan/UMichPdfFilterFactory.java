@@ -32,14 +32,21 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.michigan;
 
-import org.lockss.daemon.PluginException;
-import org.lockss.extractor.*;
+import org.lockss.filter.pdf.SimplePdfFilterFactory;
+import org.lockss.pdf.PdfDocument;
+import org.lockss.pdf.PdfException;
+import org.lockss.pdf.PdfUtil;
+import org.lockss.plugin.ArchivalUnit;
 
-public class IiifJsonLinkExtractorFactory implements LinkExtractorFactory {
-  
+public class UMichPdfFilterFactory extends SimplePdfFilterFactory {
+
   @Override
-  public LinkExtractor createLinkExtractor(String mimeType) throws PluginException {
-    return new IiifJsonLinkExtractor();
+  public void transform(ArchivalUnit au,
+                        PdfDocument pdfDocument)
+      throws PdfException {
+    pdfDocument.unsetCreationDate();
+    pdfDocument.unsetModificationDate();
+    PdfUtil.normalizeTrailerId(pdfDocument);
   }
   
 }
