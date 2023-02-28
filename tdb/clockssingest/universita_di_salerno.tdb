@@ -1,0 +1,30 @@
+{
+  publisher <
+    name = Universita di Salerno ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[poller] = 6
+  >
+
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Translational Medicine @ UniSa ;
+        eissn = 2239-9747
+      >
+
+      comment[publisher] = Universita di Salerno
+      param[base_url] = https://tmj.unisa.it/
+      param[journal_abbr] = journal
+
+      au < manifest ; exists ; 2020 ; Translational Medicine @ UniSa Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2021 ; Translational Medicine @ UniSa Volume 24 ; 24 ; >
+      au < exists ; exists ; 2022 ; Translational Medicine @ UniSa Volume 25 ; 25 ; >
+      au < expected ; exists ; 2023 ; Translational Medicine @ UniSa Volume 26 ; 26 ; >
+
+  }
+
+}

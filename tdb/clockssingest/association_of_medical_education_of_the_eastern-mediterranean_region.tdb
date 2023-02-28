@@ -1,0 +1,29 @@
+{
+  publisher <
+    name = Association of Medical Education of the Eastern-Mediterranean Region (AMEE) ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[poller] = 6
+  >
+
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Journal Name: Health Professions Education ;
+        eissn = 2452-3011
+      >
+
+      comment[publisher] = Association of Medical Education of the Eastern-Mediterranean Region (AMEE)
+      param[base_url] = https://hpe.researchcommons.org/
+      param[journal_abbr] = journal
+
+      au < manifest ; exists ; 2021 ; Journal Name: Health Professions Education Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2022 ; Journal Name: Health Professions Education Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2023 ; Journal Name: Health Professions Education Volume 9 ; 9 ; >
+
+  }
+
+}

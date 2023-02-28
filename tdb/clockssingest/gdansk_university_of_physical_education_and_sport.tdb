@@ -1,0 +1,41 @@
+{
+  publisher <
+    name = Gdansk University of Physical Education and Sport ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[poller] = 6
+  >
+
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Baltic Journal of Health and Physical Activity ;
+        eissn = 2080-9999
+      >
+
+      comment[publisher] = Gdansk University of Physical Education and Sport
+      param[base_url] = https://www.balticsportscience.com/
+      param[journal_abbr] = journal
+
+      au < manifest ; exists ; 2009 ; Baltic Journal of Health and Physical Activity Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2010 ; Baltic Journal of Health and Physical Activity Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2011 ; Baltic Journal of Health and Physical Activity Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2012 ; Baltic Journal of Health and Physical Activity Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2013 ; Baltic Journal of Health and Physical Activity Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2014 ; Baltic Journal of Health and Physical Activity Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2015 ; Baltic Journal of Health and Physical Activity Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2016 ; Baltic Journal of Health and Physical Activity Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2017 ; Baltic Journal of Health and Physical Activity Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2018 ; Baltic Journal of Health and Physical Activity Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2019 ; Baltic Journal of Health and Physical Activity Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2020 ; Baltic Journal of Health and Physical Activity Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2021 ; Baltic Journal of Health and Physical Activity Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2022 ; Baltic Journal of Health and Physical Activity Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2023 ; Baltic Journal of Health and Physical Activity Volume 15 ; 15 ; >
+
+  }
+
+}
