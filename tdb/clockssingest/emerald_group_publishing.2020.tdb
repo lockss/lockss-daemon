@@ -46,8 +46,8 @@
     param[journal_issn] = 1055-4769
     comment[journal_id] = alc
 
-    au < manifest ; exists ; 1991 ; Academic and Library Computing Volume 8 ; 8 ; >
-    au < manifest ; exists ; 1992 ; Academic and Library Computing Volume 9 ; 9 ; >
+    au < ready ; exists ; 1991 ; Academic and Library Computing Volume 8 ; 8 ; >
+    au < ready ; exists ; 1992 ; Academic and Library Computing Volume 9 ; 9 ; >
 
   }
 
@@ -96,11 +96,11 @@
 
     au < manifest ; exists ; 1988 ; Accounting, Auditing & Accountability Journal Volume 1 ; 1 ; >
     au < manifest ; exists ; 1989 ; Accounting, Auditing & Accountability Journal Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1990 ; Accounting, Auditing & Accountability Journal Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1991 ; Accounting, Auditing & Accountability Journal Volume 4 ; 4 ; >
-    au < manifest ; exists ; 1992 ; Accounting, Auditing & Accountability Journal Volume 5 ; 5 ; >
-    au < manifest ; exists ; 1993 ; Accounting, Auditing & Accountability Journal Volume 6 ; 6 ; >
-    au < manifest ; exists ; 1994 ; Accounting, Auditing & Accountability Journal Volume 7 ; 7 ; >
+    au < ready ; exists ; 1990 ; Accounting, Auditing & Accountability Journal Volume 3 ; 3 ; >
+    au < ready ; exists ; 1991 ; Accounting, Auditing & Accountability Journal Volume 4 ; 4 ; >
+    au < ready ; exists ; 1992 ; Accounting, Auditing & Accountability Journal Volume 5 ; 5 ; >
+    au < ready ; exists ; 1993 ; Accounting, Auditing & Accountability Journal Volume 6 ; 6 ; >
+    au < ready ; exists ; 1994 ; Accounting, Auditing & Accountability Journal Volume 7 ; 7 ; >
     au < frozen ; exists ; 1995 ; Accounting, Auditing & Accountability Journal Volume 8 ; 8 ; >
     au < frozen ; exists ; 1996 ; Accounting, Auditing & Accountability Journal Volume 9 ; 9 ; >
     au < frozen ; exists ; 1997 ; Accounting, Auditing & Accountability Journal Volume 10 ; 10 ; >
@@ -342,10 +342,10 @@
     au < manifest ; exists ; 1987 ; Aircraft Engineering and Aerospace Technology Volume 59 ; 59 ; >
     au < manifest ; exists ; 1988 ; Aircraft Engineering and Aerospace Technology Volume 60 ; 60 ; >
     au < manifest ; exists ; 1989 ; Aircraft Engineering and Aerospace Technology Volume 61 ; 61 ; >
-    au < manifest ; exists ; 1990 ; Aircraft Engineering and Aerospace Technology Volume 62 ; 62 ; >
-    au < manifest ; exists ; 1991 ; Aircraft Engineering and Aerospace Technology Volume 63 ; 63 ; >
-    au < manifest ; exists ; 1992 ; Aircraft Engineering and Aerospace Technology Volume 64 ; 64 ; >
-    au < manifest ; exists ; 1993 ; Aircraft Engineering and Aerospace Technology Volume 65 ; 65 ; >
+    au < ready ; exists ; 1990 ; Aircraft Engineering and Aerospace Technology Volume 62 ; 62 ; >
+    au < ready ; exists ; 1991 ; Aircraft Engineering and Aerospace Technology Volume 63 ; 63 ; >
+    au < ready ; exists ; 1992 ; Aircraft Engineering and Aerospace Technology Volume 64 ; 64 ; >
+    au < ready ; exists ; 1993 ; Aircraft Engineering and Aerospace Technology Volume 65 ; 65 ; >
     au < frozen ; exists ; 1994 ; Aircraft Engineering and Aerospace Technology Volume 66 ; 66 ; >
     au < frozen ; exists ; 1995 ; Aircraft Engineering and Aerospace Technology Volume 67 ; 67 ; >
     au < finished ; frozen ; 1996 ; Aircraft Engineering and Aerospace Technology Volume 68 ; 68 ; reingest1.clockss.org:8082 >
@@ -392,11 +392,11 @@
     au < manifest ; exists ; 1987 ; American Journal of Business Volume 2 ; 2 ; >
     au < manifest ; exists ; 1988 ; American Journal of Business Volume 3 ; 3 ; >
     au < manifest ; exists ; 1989 ; American Journal of Business Volume 4 ; 4 ; >
-    au < manifest ; exists ; 1990 ; American Journal of Business Volume 5 ; 5 ; >
-    au < manifest ; exists ; 1991 ; American Journal of Business Volume 6 ; 6 ; >
-    au < manifest ; exists ; 1992 ; American Journal of Business Volume 7 ; 7 ; >
-    au < manifest ; exists ; 1993 ; American Journal of Business Volume 8 ; 8 ; >
-    au < manifest ; exists ; 1994 ; American Journal of Business Volume 9 ; 9 ; >
+    au < ready ; exists ; 1990 ; American Journal of Business Volume 5 ; 5 ; >
+    au < ready ; exists ; 1991 ; American Journal of Business Volume 6 ; 6 ; >
+    au < ready ; exists ; 1992 ; American Journal of Business Volume 7 ; 7 ; >
+    au < ready ; exists ; 1993 ; American Journal of Business Volume 8 ; 8 ; >
+    au < ready ; exists ; 1994 ; American Journal of Business Volume 9 ; 9 ; >
     au < frozen ; exists ; 1995 ; American Journal of Business Volume 10 ; 10 ; >
     au < frozen ; exists ; 1996 ; American Journal of Business Volume 11 ; 11 ; >
     au < finished ; frozen ; 1997 ; American Journal of Business Volume 12 ; 12 ; reingest2.clockss.org:8085 >
@@ -492,10 +492,10 @@
     au < manifest ; exists ; 1987 ; Anti-Corrosion Methods and Materials Volume 34 ; 34 ; >
     au < manifest ; exists ; 1988 ; Anti-Corrosion Methods and Materials Volume 35 ; 35 ; >
     au < manifest ; exists ; 1989 ; Anti-Corrosion Methods and Materials Volume 36 ; 36 ; >
-    au < manifest ; exists ; 1990 ; Anti-Corrosion Methods and Materials Volume 37 ; 37 ; >
-    au < manifest ; exists ; 1991 ; Anti-Corrosion Methods and Materials Volume 38 ; 38 ; >
-    au < manifest ; exists ; 1992 ; Anti-Corrosion Methods and Materials Volume 39 ; 39 ; >
-    au < manifest ; exists ; 1993 ; Anti-Corrosion Methods and Materials Volume 40 ; 40 ; >
+    au < ready ; exists ; 1990 ; Anti-Corrosion Methods and Materials Volume 37 ; 37 ; >
+    au < ready ; exists ; 1991 ; Anti-Corrosion Methods and Materials Volume 38 ; 38 ; >
+    au < ready ; exists ; 1992 ; Anti-Corrosion Methods and Materials Volume 39 ; 39 ; >
+    au < ready ; exists ; 1993 ; Anti-Corrosion Methods and Materials Volume 40 ; 40 ; >
     au < crawling ; exists ; 1994 ; Anti-Corrosion Methods and Materials Volume 41 ; 41 ; >
     au < frozen ; exists ; 1995 ; Anti-Corrosion Methods and Materials Volume 42 ; 42 ; >
     au < finished ; frozen ; 1996 ; Anti-Corrosion Methods and Materials Volume 43 ; 43 ; reingest1.clockss.org:8082 >
@@ -601,10 +601,10 @@
     comment[journal_id] = apijm
 
     au < manifest ; exists ; 1989 ; Asia Pacific International Journal of Marketing Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1990 ; Asia Pacific International Journal of Marketing Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1991 ; Asia Pacific International Journal of Marketing Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1992 ; Asia Pacific International Journal of Marketing Volume 4 ; 4 ; >
-    au < manifest ; exists ; 1993 ; Asia Pacific International Journal of Marketing Volume 5 ; 5 ; >
+    au < ready ; exists ; 1990 ; Asia Pacific International Journal of Marketing Volume 2 ; 2 ; >
+    au < ready ; exists ; 1991 ; Asia Pacific International Journal of Marketing Volume 3 ; 3 ; >
+    au < ready ; exists ; 1992 ; Asia Pacific International Journal of Marketing Volume 4 ; 4 ; >
+    au < ready ; exists ; 1993 ; Asia Pacific International Journal of Marketing Volume 5 ; 5 ; >
 
   }
 
@@ -620,8 +620,8 @@
     param[journal_issn] = 1355-5855
     comment[journal_id] = apjml
 
-    au < manifest ; exists ; 1993 ; Asia Pacific Journal of Marketing and Logistics Volume 5 ; 5 ; >
-    au < manifest ; exists ; 1994 ; Asia Pacific Journal of Marketing and Logistics Volume 6 ; 6 ; >
+    au < ready ; exists ; 1993 ; Asia Pacific Journal of Marketing and Logistics Volume 5 ; 5 ; >
+    au < ready ; exists ; 1994 ; Asia Pacific Journal of Marketing and Logistics Volume 6 ; 6 ; >
     au < frozen ; exists ; 1995 ; Asia Pacific Journal of Marketing and Logistics Volume 7 ; 7 ; >
     au < frozen ; exists ; 1996 ; Asia Pacific Journal of Marketing and Logistics Volume 8 ; 8 ; >
     au < frozen ; exists ; 1997 ; Asia Pacific Journal of Marketing and Logistics Volume 9 ; 9 ; >
@@ -759,8 +759,8 @@
     param[journal_issn] = 1321-7348
     comment[journal_id] = ara
 
-    au < manifest ; exists ; 1992 ; Asian Review of Accounting Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1994 ; Asian Review of Accounting Volume 2 ; 2 ; >
+    au < ready ; exists ; 1992 ; Asian Review of Accounting Volume 1 ; 1 ; >
+    au < ready ; exists ; 1994 ; Asian Review of Accounting Volume 2 ; 2 ; >
     au < frozen ; exists ; 1995 ; Asian Review of Accounting Volume 3 ; 3 ; >
     au < frozen ; exists ; 1996 ; Asian Review of Accounting Volume 4 ; 4 ; >
     au < finished ; frozen ; 1997 ; Asian Review of Accounting Volume 5 ; 5 ; reingest2.clockss.org:8085 >
@@ -844,10 +844,10 @@
     au < manifest ; exists ; 1987 ; Aslib Proceedings: New Information Perspectives Volume 39 ; 39 ; >
     au < manifest ; exists ; 1988 ; Aslib Proceedings: New Information Perspectives Volume 40 ; 40 ; >
     au < manifest ; exists ; 1989 ; Aslib Proceedings: New Information Perspectives Volume 41 ; 41 ; >
-    au < manifest ; exists ; 1990 ; Aslib Proceedings: New Information Perspectives Volume 42 ; 42 ; >
-    au < manifest ; exists ; 1991 ; Aslib Proceedings: New Information Perspectives Volume 43 ; 43 ; >
-    au < manifest ; exists ; 1992 ; Aslib Proceedings: New Information Perspectives Volume 44 ; 44 ; >
-    au < manifest ; exists ; 1993 ; Aslib Proceedings: New Information Perspectives Volume 45 ; 45 ; >
+    au < ready ; exists ; 1990 ; Aslib Proceedings: New Information Perspectives Volume 42 ; 42 ; >
+    au < ready ; exists ; 1991 ; Aslib Proceedings: New Information Perspectives Volume 43 ; 43 ; >
+    au < ready ; exists ; 1992 ; Aslib Proceedings: New Information Perspectives Volume 44 ; 44 ; >
+    au < ready ; exists ; 1993 ; Aslib Proceedings: New Information Perspectives Volume 45 ; 45 ; >
     au < frozen ; exists ; 1994 ; Aslib Proceedings: New Information Perspectives Volume 46 ; 46 ; >
     au < frozen ; exists ; 1995 ; Aslib Proceedings: New Information Perspectives Volume 47 ; 47 ; >
     au < finished ; frozen ; 1996 ; Aslib Proceedings: New Information Perspectives Volume 48 ; 48 ; reingest4.clockss.org:8082 >
@@ -892,7 +892,7 @@
     au < manifest ; exists ; 1988 ; Assembly Automation Volume 8 ; 8 ; >
     au < manifest ; exists ; 1989 ; Assembly Automation Volume 9 ; 9 ; >
     au < manifest ; exists ; 1990 ; Assembly Automation Volume 10 ; 10 ; >
-    au < manifest ; exists ; 1991 ; Assembly Automation Volume 11 ; 11 ; >
+    au < ready ; exists ; 1991 ; Assembly Automation Volume 11 ; 11 ; >
     au < manifest ; exists ; 1992 ; Assembly Automation Volume 12 ; 12 ; >
     au < manifest ; exists ; 1993 ; Assembly Automation Volume 13 ; 13 ; >
     au < crawling ; exists ; 1994 ; Assembly Automation Volume 14 ; 14 ; >

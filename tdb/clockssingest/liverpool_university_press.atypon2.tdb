@@ -74,7 +74,7 @@
     au < doNotProcess ; exists ; 2018 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 14 ; 14 ; >
     au < doNotProcess ; exists ; 2019 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 15 ; 15 ; >
     au < doNotProcess ; exists ; 2020 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2021 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 17 ; 17 ; >
+    au < ready ; exists ; 2021 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 17 ; 17 ; >
 
   }
 
@@ -766,7 +766,7 @@
     au < doNotProcess ; doNotProcess ; 2016-2017 ; Hunter Gatherer Research Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2017-2019 ; Hunter Gatherer Research Volume 3 ; 3 ; >
     au < doNotProcess ; exists ; 2019-2020 ; Hunter Gatherer Research Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2021 ; Hunter Gatherer Research Volume 5 ; 5 ; >
+    au < ready ; exists ; 2021 ; Hunter Gatherer Research Volume 5 ; 5 ; >
 
     }
   }
@@ -1917,7 +1917,7 @@
 
     param[journal_id] = cfci
 
-    au < manifest ; exists ; 2022 ; CFC Intersections Volume 1 ; 1 ; >
+    au < ready ; exists ; 2022 ; CFC Intersections Volume 1 ; 1 ; >
 
   }
   
@@ -1930,7 +1930,7 @@
 
     param[journal_id] = jbs
 
-    au < manifest ; exists ; 2022 ; Journal of Beatles Studies Volume 2022 ; 2022 ; >
+    au < ready ; exists ; 2022 ; Journal of Beatles Studies Volume 2022 ; 2022 ; >
 
   }
   

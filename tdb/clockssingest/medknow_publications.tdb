@@ -11479,8 +11479,8 @@
       param[journal_issn] = 2665-9425
       #param[base_url] = https://www.arwy.org/
 
-      au < manifest ; exists ; 2018 ; Airway Volume 1 ; 2018 ; 1 ; https://www.arwy.org/ ; ; >
-      au < manifest ; exists ; 2019 ; Airway Volume 2 ; 2019 ; 2 ; https://www.arwy.org/ ; ; >
+      au < ready ; exists ; 2018 ; Airway Volume 1 ; 2018 ; 1 ; https://www.arwy.org/ ; ; >
+      au < ready ; exists ; 2019 ; Airway Volume 2 ; 2019 ; 2 ; https://www.arwy.org/ ; ; >
       au < crawling ; exists ; 2020 ; Airway Volume 3 ; 2020 ; 3 ; https://www.arwy.org/ ; ; >
       au < finished ; frozen ; 2021 ; Airway Volume 4 ; 2021 ; 4 ; https://www.arwy.org/ ; ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2022 ; Airway Volume 5 ; 2022 ; 5 ; https://www.arwy.org/ ; ; >
@@ -11535,7 +11535,7 @@
       param[journal_issn] = 2590-3446
       #param[base_url] = https://www.aomd.in/
 
-      au < manifest ; exists ; 2018 ; Annals of Movement Disorders Volume 1 ; 2018 ; 1 ; https://www.aomd.in/ ; ; >
+      au < ready ; exists ; 2018 ; Annals of Movement Disorders Volume 1 ; 2018 ; 1 ; https://www.aomd.in/ ; ; >
       au < manifest ; exists ; 2019 ; Annals of Movement Disorders Volume 2 ; 2019 ; 2 ; https://www.aomd.in/ ; ; >
       au < crawling ; exists ; 2020 ; Annals of Movement Disorders Volume 3 ; 2020 ; 3 ; https://www.aomd.in/ ; ; >
       au < finished ; crawling ; 2021 ; Annals of Movement Disorders Volume 4 ; 2021 ; 4 ; https://www.aomd.in/ ; ; reingest4.clockss.org:8082 >
@@ -11595,7 +11595,7 @@
       #param[base_url] = https://www.amhonline.org/
 
       au < manifest ; exists ; 2010 ; Archives of Mental Health Volume 11 ; 2010 ; 11 ; https://www.amhonline.org/ ; ; >
-      au < manifest ; exists ; 2011 ; Archives of Mental Health Volume 12 ; 2011 ; 12 ; https://www.amhonline.org/ ; ; >
+      au < ready ; exists ; 2011 ; Archives of Mental Health Volume 12 ; 2011 ; 12 ; https://www.amhonline.org/ ; ; >
       au < manifest ; exists ; 2012 ; Archives of Mental Health Volume 13 ; 2012 ; 13 ; https://www.amhonline.org/ ; ; >
       au < manifest ; exists ; 2013 ; Archives of Mental Health Volume 14 ; 2013 ; 14 ; https://www.amhonline.org/ ; ; >
       au < manifest ; exists ; 2014 ; Archives of Mental Health Volume 15 ; 2014 ; 15 ; https://www.amhonline.org/ ; ; >
