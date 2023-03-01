@@ -545,17 +545,17 @@
       au < bmj.BMJDrupalPlugin ; released ; 2019 ; BMJ Volume 367 ; 367 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2020 ; BMJ Volume 368 ; 368 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2020 ; BMJ Volume 369 ; 369 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; BMJ Volume 370 ; 370 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; manifest ; 2020 ; BMJ Volume 371 ; 371 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; manifest ; 2021 ; BMJ Volume 372 ; 372 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; manifest ; 2021 ; BMJ Volume 373 ; 373 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; manifest ; 2021 ; BMJ Volume 374 ; 374 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; manifest ; 2021 ; BMJ Volume 375 ; 375 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; BMJ Volume 376 ; 376 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; BMJ Volume 377 ; 377 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; BMJ Volume 378 ; 378 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; BMJ Volume 379 ; 379 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; manifest ; 2023 ; BMJ Volume 380 ; 380 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2020 ; BMJ Volume 370 ; 370 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2020 ; BMJ Volume 371 ; 371 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2021 ; BMJ Volume 372 ; 372 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2021 ; BMJ Volume 373 ; 373 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2021 ; BMJ Volume 374 ; 374 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2021 ; BMJ Volume 375 ; 375 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2022 ; BMJ Volume 376 ; 376 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2022 ; BMJ Volume 377 ; 377 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2022 ; BMJ Volume 378 ; 378 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2022 ; BMJ Volume 379 ; 379 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; exists ; 2023 ; BMJ Volume 380 ; 380 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; expected ; 2023 ; BMJ Volume 381 ; 381 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; expected ; 2023 ; BMJ Volume 382 ; 382 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; expected ; 2023 ; BMJ Volume 383 ; 383 ; https://www.bmj.com/ >
@@ -667,8 +667,8 @@
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; BMJ Open Ophthalmology Volume 3 ; 3 ; https://bmjophth.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; BMJ Open Ophthalmology Volume 4 ; 4 ; https://bmjophth.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; BMJ Open Ophthalmology Volume 5 ; 5 ; https://bmjophth.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2021 ; BMJ Open Ophthalmology Volume 6 ; 6 ; https://bmjophth.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; BMJ Open Ophthalmology Volume 7 ; 7 ; https://bmjophth.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; exists ; 2021 ; BMJ Open Ophthalmology Volume 6 ; 6 ; https://bmjophth.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; exists ; 2022 ; BMJ Open Ophthalmology Volume 7 ; 7 ; https://bmjophth.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; expected ; 2023 ; BMJ Open Ophthalmology Volume 8 ; 8 ; https://bmjophth.bmj.com/ >
 
   }
