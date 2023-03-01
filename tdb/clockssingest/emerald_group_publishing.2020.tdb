@@ -13687,7 +13687,7 @@
     au < frozen ; exists ; 1999 ; International Journal of Organization Theory & Behavior Volume 2 ; 2 ; >
     au < frozen ; exists ; 2000 ; International Journal of Organization Theory & Behavior Volume 3 ; 3 ; >
     au < frozen ; exists ; 2001 ; International Journal of Organization Theory & Behavior Volume 4 ; 4 ; >
-    au < exists ; exists ; 2002 ; International Journal of Organization Theory & Behavior Volume 5 ; 5 ; >
+    au < doesNotExist ; doesNotExist ; 2002 ; International Journal of Organization Theory & Behavior Volume 5 ; 5 ; >
     au < frozen ; exists ; 2003 ; International Journal of Organization Theory & Behavior Volume 6 ; 6 ; >
     au < frozen ; exists ; 2004 ; International Journal of Organization Theory & Behavior Volume 7 ; 7 ; >
     au < frozen ; exists ; 2005 ; International Journal of Organization Theory & Behavior Volume 8 ; 8 ; >
@@ -13993,7 +13993,7 @@
     au < frozen ; exists ; 1998 ; Journal of Public Budgeting, Accounting & Financial Management Volume 10 ; 10 ; >
     au < frozen ; exists ; 1999 ; Journal of Public Budgeting, Accounting & Financial Management Volume 11 ; 11 ; >
     au < frozen ; exists ; 2000 ; Journal of Public Budgeting, Accounting & Financial Management Volume 12 ; 12 ; >
-    au < exists ; exists ; 2001 ; Journal of Public Budgeting, Accounting & Financial Management Volume 13 ; 13 ; >
+    au < doesNotExist ; doesNotExist ; 2001 ; Journal of Public Budgeting, Accounting & Financial Management Volume 13 ; 13 ; >
     au < frozen ; exists ; 2002 ; Journal of Public Budgeting, Accounting & Financial Management Volume 14 ; 14 ; >
     au < frozen ; exists ; 2003 ; Journal of Public Budgeting, Accounting & Financial Management Volume 15 ; 15 ; >
     au < frozen ; exists ; 2004 ; Journal of Public Budgeting, Accounting & Financial Management Volume 16 ; 16 ; >
@@ -14363,23 +14363,22 @@
 
     au < manifest ; exists ; 2005 ; Asian Association of Open Universities Journal Volume 1 ; 1 ; >
     au < manifest ; exists ; 2006 ; Asian Association of Open Universities Journal Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2007 ; Asian Association of Open Universities Journal Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2008 ; Asian Association of Open Universities Journal Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2009 ; Asian Association of Open Universities Journal Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2010 ; Asian Association of Open Universities Journal Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2011 ; Asian Association of Open Universities Journal Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2012 ; Asian Association of Open Universities Journal Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2013 ; Asian Association of Open Universities Journal Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2014 ; Asian Association of Open Universities Journal Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2015 ; Asian Association of Open Universities Journal Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2016 ; Asian Association of Open Universities Journal Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2017 ; Asian Association of Open Universities Journal Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2018 ; Asian Association of Open Universities Journal Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2019 ; Asian Association of Open Universities Journal Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2020 ; Asian Association of Open Universities Journal Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2021 ; Asian Association of Open Universities Journal Volume 17 ; 17 ; >
-    au < exists ; exists ; 2022 ; Asian Association of Open Universities Journal Volume 18 ; 18 ; >
-    au < expected ; exists ; 2023 ; Asian Association of Open Universities Journal Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2008 ; Asian Association of Open Universities Journal Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2009 ; Asian Association of Open Universities Journal Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2010 ; Asian Association of Open Universities Journal Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2011 ; Asian Association of Open Universities Journal Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2012 ; Asian Association of Open Universities Journal Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2013 ; Asian Association of Open Universities Journal Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2014 ; Asian Association of Open Universities Journal Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2015 ; Asian Association of Open Universities Journal Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2016 ; Asian Association of Open Universities Journal Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2017 ; Asian Association of Open Universities Journal Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2018 ; Asian Association of Open Universities Journal Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2019 ; Asian Association of Open Universities Journal Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2020 ; Asian Association of Open Universities Journal Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2021 ; Asian Association of Open Universities Journal Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2022 ; Asian Association of Open Universities Journal Volume 17 ; 17 ; >
+    au < expected ; exists ; 2023 ; Asian Association of Open Universities Journal Volume 18 ; 18 ; >
 
   }
 
@@ -14392,7 +14391,7 @@
         eissn = 2443-4175
     >
 
-    param[journal_issn] = 2443-4175
+    param[journal_issn] = 2459-9700
 
     au < exists ; exists ; 2016 ; Asian Journal of Accounting Research Volume 1 ; 1 ; >
     au < exists ; exists ; 2017 ; Asian Journal of Accounting Research Volume 2 ; 2 ; >
@@ -14568,14 +14567,13 @@
     >
 
     param[journal_issn] = 2398-7294
+    #Moved to Tsinghua University Press
 
     au < manifest ; exists ; 2017 ; International Journal of Crowd Science Volume 1 ; 1 ; >
     au < manifest ; exists ; 2018 ; International Journal of Crowd Science Volume 2 ; 2 ; >
     au < manifest ; exists ; 2019 ; International Journal of Crowd Science Volume 3 ; 3 ; >
     au < manifest ; exists ; 2020 ; International Journal of Crowd Science Volume 4 ; 4 ; >
     au < manifest ; exists ; 2021 ; International Journal of Crowd Science Volume 5 ; 5 ; >
-    au < exists ; exists ; 2022 ; International Journal of Crowd Science Volume 6 ; 6 ; >
-    au < expected ; exists ; 2023 ; International Journal of Crowd Science Volume 7 ; 7 ; >
 
   }
 
@@ -14590,8 +14588,7 @@
     param[journal_issn] = 2516-4392
 
     au < manifest ; exists ; 2021 ; International Journal of Disruptive Innovation in Government Volume 1 ; 1 ; >
-    au < exists ; exists ; 2022 ; International Journal of Disruptive Innovation in Government Volume 2 ; 2 ; >
-    au < expected ; exists ; 2023 ; International Journal of Disruptive Innovation in Government Volume 3 ; 3 ; >
+    au < expected ; exists ; 2023 ; International Journal of Disruptive Innovation in Government Volume 2 ; 2 ; >
 
   }
 
@@ -14606,10 +14603,8 @@
     param[journal_issn] = 2516-4384
 
     au < manifest ; exists ; 2019 ; International Journal of Excellence in Government Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2020 ; International Journal of Excellence in Government Volume 2 ; 2 ; >
-    au < exists ; exists ; 2021 ; International Journal of Excellence in Government Volume 3 ; 3 ; >
-    au < exists ; exists ; 2022 ; International Journal of Excellence in Government Volume 4 ; 4 ; >
-    au < expected ; exists ; 2023 ; International Journal of Excellence in Government Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2021 ; International Journal of Excellence in Government Volume 2 ; 2 ; >
+    au < expected ; exists ; 2023 ; International Journal of Excellence in Government Volume 3 ; 3 ; >
 
   }
 
@@ -14761,12 +14756,6 @@
     au < manifest ; exists ; 2015 ; Journal of Centrum Catherdra Volume 8 ; 8 ; >
     au < manifest ; exists ; 2016 ; Journal of Centrum Catherdra Volume 9 ; 9 ; >
     au < manifest ; exists ; 2017 ; Journal of Centrum Catherdra Volume 10 ; 10 ; >
-    au < exists ; exists ; 2018 ; Journal of Centrum Catherdra Volume 11 ; 11 ; >
-    au < exists ; exists ; 2019 ; Journal of Centrum Catherdra Volume 12 ; 12 ; >
-    au < exists ; exists ; 2020 ; Journal of Centrum Catherdra Volume 13 ; 13 ; >
-    au < exists ; exists ; 2021 ; Journal of Centrum Catherdra Volume 14 ; 14 ; >
-    au < exists ; exists ; 2022 ; Journal of Centrum Catherdra Volume 15 ; 15 ; >
-    au < expected ; exists ; 2023 ; Journal of Centrum Catherdra Volume 16 ; 16 ; >
 
   }
 
@@ -14876,12 +14865,12 @@
 
     param[journal_issn] = 2586-940X
 
-    au < exists ; exists ; 2018 ; Journal of Health Research Volume 1 ; 1 ; >
-    au < exists ; exists ; 2019 ; Journal of Health Research Volume 2 ; 2 ; >
-    au < exists ; exists ; 2020 ; Journal of Health Research Volume 3 ; 3 ; >
-    au < exists ; exists ; 2021 ; Journal of Health Research Volume 4 ; 4 ; >
-    au < exists ; exists ; 2022 ; Journal of Health Research Volume 5 ; 5 ; >
-    au < expected ; exists ; 2023 ; Journal of Health Research Volume 6 ; 6 ; >
+    au < exists ; exists ; 2018 ; Journal of Health Research Volume 32 ; 32 ; >
+    au < exists ; exists ; 2019 ; Journal of Health Research Volume 33 ; 33 ; >
+    au < exists ; exists ; 2020 ; Journal of Health Research Volume 34 ; 34 ; >
+    au < exists ; exists ; 2021 ; Journal of Health Research Volume 35 ; 35 ; >
+    au < exists ; exists ; 2022 ; Journal of Health Research Volume 36 ; 36 ; >
+    au < expected ; exists ; 2023 ; Journal of Health Research Volume 37 ; 37 ; >
 
   }
 
@@ -14917,8 +14906,7 @@
     au < manifest ; exists ; 2019 ; Journal of Industry-University Collaboration Volume 1 ; 1 ; >
     au < manifest ; exists ; 2020 ; Journal of Industry-University Collaboration Volume 2 ; 2 ; >
     au < manifest ; exists ; 2021 ; Journal of Industry-University Collaboration Volume 3 ; 3 ; >
-    au < exists ; exists ; 2022 ; Journal of Industry-University Collaboration Volume 4 ; 4 ; >
-    au < expected ; exists ; 2023 ; Journal of Industry-University Collaboration Volume 5 ; 5 ; >
+    au < expected ; exists ; 2023 ; Journal of Industry-University Collaboration Volume 4 ; 4 ; >
 
   }
 
@@ -14991,13 +14979,11 @@
     >
 
     param[journal_issn] = 2254-0644
+    #Stopped publishing
 
     au < manifest ; exists ; 2018 ; Journal of Tourism Analysis: Revista de Análisis Turístico Volume 25 ; 25 ; >
     au < manifest ; exists ; 2019 ; Journal of Tourism Analysis: Revista de Análisis Turístico Volume 26 ; 26 ; >
     au < manifest ; exists ; 2020 ; Journal of Tourism Analysis: Revista de Análisis Turístico Volume 27 ; 27 ; >
-    au < exists ; exists ; 2021 ; Journal of Tourism Analysis: Revista de Análisis Turístico Volume 28 ; 28 ; >
-    au < exists ; exists ; 2022 ; Journal of Tourism Analysis: Revista de Análisis Turístico Volume 29 ; 29 ; >
-    au < expected ; exists ; 2023 ; Journal of Tourism Analysis: Revista de Análisis Turístico Volume 30 ; 30 ; >
 
   }
 
@@ -15111,8 +15097,7 @@
     au < manifest ; exists ; 2019 ; Mental Illness Volume 11 ; 11 ; >
     au < manifest ; exists ; 2020 ; Mental Illness Volume 12 ; 12 ; >
     au < manifest ; exists ; 2021 ; Mental Illness Volume 13 ; 13 ; >
-    au < exists ; exists ; 2022 ; Mental Illness Volume 14 ; 14 ; >
-    au < expected ; exists ; 2023 ; Mental Illness Volume 15 ; 15 ; >
+    au < expected ; exists ; 2023 ; Mental Illness Volume 14 ; 14 ; >
 
   }
 
@@ -15195,10 +15180,11 @@
 
     title <
       name = PSU Research Review ;
+        issn = 2399-1747 ;
         eissn = 2398-4007
     >
 
-    param[journal_issn] = 2398-4007
+    param[journal_issn] = 2399-1747
 
     au < exists ; exists ; 2017 ; PSU Research Review Volume 1 ; 1 ; >
     au < exists ; exists ; 2018 ; PSU Research Review Volume 2 ; 2 ; >
@@ -15354,7 +15340,7 @@
         eissn = 2633-1233
     >
 
-    param[journal_issn] = 2633-1233
+    param[journal_issn] = 2633-1225
 
     au < exists ; exists ; 2020 ; Tourism Critiques Volume 1 ; 1 ; >
     au < exists ; exists ; 2021 ; Tourism Critiques Volume 2 ; 2 ; >
@@ -15406,10 +15392,9 @@
     au < manifest ; exists ; 2017 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 14 ; 14 ; >
     au < manifest ; exists ; 2018 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 15 ; 15 ; >
     au < manifest ; exists ; 2019 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2020 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2021 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 18 ; 18 ; >
-    au < exists ; exists ; 2022 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 19 ; 19 ; >
-    au < expected ; exists ; 2023 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2021 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2022 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 18 ; 18 ; >
+    au < expected ; exists ; 2023 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 19 ; 19 ; >
 
   }
 
@@ -15459,18 +15444,19 @@
 
     param[journal_issn] = 2631-6862
 
-    au < exists ; exists ; 2007 ; Archnet-IJAR Volume 1 ; 1 ; >
-    au < exists ; exists ; 2008 ; Archnet-IJAR Volume 2 ; 2 ; >
-    au < exists ; exists ; 2009 ; Archnet-IJAR Volume 3 ; 3 ; >
-    au < exists ; exists ; 2010 ; Archnet-IJAR Volume 4 ; 4 ; >
-    au < exists ; exists ; 2011 ; Archnet-IJAR Volume 5 ; 5 ; >
-    au < exists ; exists ; 2012 ; Archnet-IJAR Volume 6 ; 6 ; >
-    au < exists ; exists ; 2013 ; Archnet-IJAR Volume 7 ; 7 ; >
-    au < exists ; exists ; 2014 ; Archnet-IJAR Volume 8 ; 8 ; >
-    au < exists ; exists ; 2015 ; Archnet-IJAR Volume 9 ; 9 ; >
-    au < exists ; exists ; 2016 ; Archnet-IJAR Volume 10 ; 10 ; >
-    au < exists ; exists ; 2017 ; Archnet-IJAR Volume 11 ; 11 ; >
-    au < exists ; exists ; 2018 ; Archnet-IJAR Volume 12 ; 12 ; >
+#Back content from external links.
+#    au < exists ; exists ; 2007 ; Archnet-IJAR Volume 1 ; 1 ; >
+#    au < exists ; exists ; 2008 ; Archnet-IJAR Volume 2 ; 2 ; >
+#    au < exists ; exists ; 2009 ; Archnet-IJAR Volume 3 ; 3 ; >
+#    au < exists ; exists ; 2010 ; Archnet-IJAR Volume 4 ; 4 ; >
+#    au < exists ; exists ; 2011 ; Archnet-IJAR Volume 5 ; 5 ; >
+#    au < exists ; exists ; 2012 ; Archnet-IJAR Volume 6 ; 6 ; >
+#    au < exists ; exists ; 2013 ; Archnet-IJAR Volume 7 ; 7 ; >
+#    au < exists ; exists ; 2014 ; Archnet-IJAR Volume 8 ; 8 ; >
+#    au < exists ; exists ; 2015 ; Archnet-IJAR Volume 9 ; 9 ; >
+#    au < exists ; exists ; 2016 ; Archnet-IJAR Volume 10 ; 10 ; >
+#    au < exists ; exists ; 2017 ; Archnet-IJAR Volume 11 ; 11 ; >
+#    au < exists ; exists ; 2018 ; Archnet-IJAR Volume 12 ; 12 ; >
     au < manifest ; exists ; 2019 ; Archnet-IJAR Volume 13 ; 13 ; >
     au < manifest ; exists ; 2020 ; Archnet-IJAR Volume 14 ; 14 ; >
     au < manifest ; exists ; 2021 ; Archnet-IJAR Volume 15 ; 15 ; >
