@@ -39179,7 +39179,7 @@ comment[mpj] = now published by Brill
     {
 
     title <
-          name = Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare ;
+          name = Proceedings of the International Symposium of Human Factors and Ergonomics in Health Care ;
           issn = 2327-8579 ;
           eissn = 2327-8595
       >
@@ -39188,10 +39188,10 @@ comment[mpj] = now published by Brill
         param[base_url] = http://hcs.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < down ; 2013 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 2 ; 2 >
-        au < down ; 2014 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 3 ; 3 >
-        au < down ; 2015 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 4 ; 4 >
-        au < doNotProcess ; 2016 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 5 ; 5 >
+        au < down ; 2013 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Health Care Volume 2 ; 2 >
+        au < down ; 2014 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Health Care Volume 3 ; 3 >
+        au < down ; 2015 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Health Care Volume 4 ; 4 >
+        au < doNotProcess ; 2016 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Health Care Volume 5 ; 5 >
 
     }
 
