@@ -424,16 +424,16 @@
     au < finished ; frozen ; 2019 ; 6 ; IUCrJ Volume 6 (11/2019) ; 2019-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
     au < superseded ; doesNotExist ; 2019 ; 6 ; IUCrJ Volume 6 (12/2019) ; 2019-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #no content
 
-    au < deepCrawl ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (01/2020) ; 2020-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < deepCrawl ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (02/2020) ; 2020-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < deepCrawl ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (03/2020) ; 2020-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < deepCrawl ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (04/2020) ; 2020-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < deepCrawl ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (05/2020) ; 2020-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < deepCrawl ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (06/2020) ; 2020-06 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < deepCrawl ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (07/2020) ; 2020-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < deepCrawl ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (08/2020) ; 2020-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < deepCrawl ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (09/2020) ; 2020-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < deepCrawl ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (10/2020) ; 2020-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < finished ; manifest ; 2020 ; 7 ; IUCrJ Volume 7 (01/2020) ; 2020-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; 7 ; IUCrJ Volume 7 (02/2020) ; 2020-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2020 ; 7 ; IUCrJ Volume 7 (03/2020) ; 2020-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2020 ; 7 ; IUCrJ Volume 7 (04/2020) ; 2020-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; 7 ; IUCrJ Volume 7 (05/2020) ; 2020-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; 7 ; IUCrJ Volume 7 (06/2020) ; 2020-06 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2020 ; 7 ; IUCrJ Volume 7 (07/2020) ; 2020-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2020 ; 7 ; IUCrJ Volume 7 (08/2020) ; 2020-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; 7 ; IUCrJ Volume 7 (09/2020) ; 2020-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; 7 ; IUCrJ Volume 7 (10/2020) ; 2020-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
     au < superseded ; doesNotExist ; 2020 ; 7 ; IUCrJ Volume 7 (11/2020) ; 2020-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #no content
     au < superseded ; doesNotExist ; 2020 ; 7 ; IUCrJ Volume 7 (12/2020) ; 2020-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #no content
 
@@ -461,7 +461,7 @@
     au < crawling ; exists ; 2022 ; 9 ; IUCrJ Volume 9 (09/2022) ; 2022-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < crawling ; exists ; 2022 ; 9 ; IUCrJ Volume 9 (10/2022) ; 2022-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < crawling ; exists ; 2022 ; 9 ; IUCrJ Volume 9 (11/2022) ; 2022-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < testing ; exists ; 2022 ; 9 ; IUCrJ Volume 9 (12/2022) ; 2022-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < notReady ; exists ; 2022 ; 9 ; IUCrJ Volume 9 (12/2022) ; 2022-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #no content
 
   }
   
@@ -530,18 +530,18 @@
     au < finished ; frozen ; 2019 ; 4 ; IUCrData Volume 4 (11/2019) ; 2019-11 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2019 ; 4 ; IUCrData Volume 4 (12/2019) ; 2019-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
 
-    au < deepCrawl ; exists ; 2020 ; 5 ; IUCrData Volume 5 (01/2020) ; 2020-01 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < deepCrawl ; exists ; 2020 ; 5 ; IUCrData Volume 5 (02/2020) ; 2020-02 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < deepCrawl ; exists ; 2020 ; 5 ; IUCrData Volume 5 (03/2020) ; 2020-03 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < deepCrawl ; exists ; 2020 ; 5 ; IUCrData Volume 5 (04/2020) ; 2020-04 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < deepCrawl ; exists ; 2020 ; 5 ; IUCrData Volume 5 (05/2020) ; 2020-05 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < deepCrawl ; exists ; 2020 ; 5 ; IUCrData Volume 5 (06/2020) ; 2020-06 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < deepCrawl ; exists ; 2020 ; 5 ; IUCrData Volume 5 (07/2020) ; 2020-07 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < deepCrawl ; exists ; 2020 ; 5 ; IUCrData Volume 5 (08/2020) ; 2020-08 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < deepCrawl ; exists ; 2020 ; 5 ; IUCrData Volume 5 (09/2020) ; 2020-09 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < deepCrawl ; exists ; 2020 ; 5 ; IUCrData Volume 5 (10/2020) ; 2020-10 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < deepCrawl ; exists ; 2020 ; 5 ; IUCrData Volume 5 (11/2020) ; 2020-11 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < deepCrawl ; exists ; 2020 ; 5 ; IUCrData Volume 5 (12/2020) ; 2020-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < finished ; manifest ; 2020 ; 5 ; IUCrData Volume 5 (01/2020) ; 2020-01 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; 5 ; IUCrData Volume 5 (02/2020) ; 2020-02 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2020 ; 5 ; IUCrData Volume 5 (03/2020) ; 2020-03 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2020 ; 5 ; IUCrData Volume 5 (04/2020) ; 2020-04 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; 5 ; IUCrData Volume 5 (05/2020) ; 2020-05 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; 5 ; IUCrData Volume 5 (06/2020) ; 2020-06 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2020 ; 5 ; IUCrData Volume 5 (07/2020) ; 2020-07 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2020 ; 5 ; IUCrData Volume 5 (08/2020) ; 2020-08 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; 5 ; IUCrData Volume 5 (09/2020) ; 2020-09 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; 5 ; IUCrData Volume 5 (10/2020) ; 2020-10 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2020 ; 5 ; IUCrData Volume 5 (11/2020) ; 2020-11 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2020 ; 5 ; IUCrData Volume 5 (12/2020) ; 2020-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
 
     au < deepCrawl ; exists ; 2021 ; 6 ; IUCrData Volume 6 (01/2021) ; 2021-01 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < deepCrawl ; exists ; 2021 ; 6 ; IUCrData Volume 6 (02/2021) ; 2021-02 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
