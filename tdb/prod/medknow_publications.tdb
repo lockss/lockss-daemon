@@ -4902,7 +4902,7 @@
       au < released ; 2015 ; Astrocyte Volume 2 ; 2015 ; 2 ; http://www.astrocyte.in/ >
       au < released ; 2016 ; Astrocyte Volume 3 ; 2016 ; 3 ; http://www.astrocyte.in/ >
       au < released ; 2017 ; Astrocyte Volume 4 ; 2017 ; 4 ; http://www.astrocyte.in/ >
-      au < manifest ; 2018 ; Astrocyte Volume 5 ; 2018 ; 5 ; http://www.astrocyte.in/ >
+      au < ready ; 2018 ; Astrocyte Volume 5 ; 2018 ; 5 ; http://www.astrocyte.in/ >
 
   }
 
@@ -9663,7 +9663,7 @@
       param[journal_issn] = 2773-0387
       #move to LWW, Archive will stay with Medknow until further notice
 
-      au < manifest ; 2021 ; Integrative Medicine in Nephrology and Andrology Volume 8 ; 2021 ; 8 ; https://journal-imna.com/ >
+      au < ready ; 2021 ; Integrative Medicine in Nephrology and Andrology Volume 8 ; 2021 ; 8 ; https://journal-imna.com/ >
       au < manifest ; 2022 ; Integrative Medicine in Nephrology and Andrology Volume 9 ; 2022 ; 9 ; https://journal-imna.com/ >
       #deactivated
 
@@ -11114,7 +11114,7 @@
       param[journal_issn] = 2772-8382
       #param[base_url] = https://www.aort.info/
 
-      au < manifest ; 2021 ; Annals of Oncology Research and Therapy Volume 1 ; 2021 ; 1 ; https://www.aort.info/ >
+      au < ready ; 2021 ; Annals of Oncology Research and Therapy Volume 1 ; 2021 ; 1 ; https://www.aort.info/ >
       au < manifest ; 2022 ; Annals of Oncology Research and Therapy Volume 2 ; 2022 ; 2 ; https://www.aort.info/ >
 
   }
@@ -11131,8 +11131,8 @@
       param[journal_issn] = 2666-1802
       #param[base_url] = https://www.ajim.in/
 
-      au < manifest ; 2016 ; APIK Journal of Internal Medicine Volume 4 ; 2016 ; 4 ; https://www.ajim.in/ >
-      au < manifest ; 2017 ; APIK Journal of Internal Medicine Volume 5 ; 2017 ; 5 ; https://www.ajim.in/ >
+      au < ready ; 2016 ; APIK Journal of Internal Medicine Volume 4 ; 2016 ; 4 ; https://www.ajim.in/ >
+      au < ready ; 2017 ; APIK Journal of Internal Medicine Volume 5 ; 2017 ; 5 ; https://www.ajim.in/ >
       au < manifest ; 2018 ; APIK Journal of Internal Medicine Volume 6 ; 2018 ; 6 ; https://www.ajim.in/ >
       au < manifest ; 2019 ; APIK Journal of Internal Medicine Volume 7 ; 2019 ; 7 ; https://www.ajim.in/ >
       au < released ; 2020 ; APIK Journal of Internal Medicine Volume 8 ; 2020 ; 8 ; https://www.ajim.in/ >
@@ -11213,7 +11213,7 @@
       param[journal_issn] = 2278-8239
       #param[base_url] = https://www.ajimedicine.com/
 
-      au < manifest ; 2011 ; Assam Journal of Internal Medicine Volume 1 ; 2011 ; 1 ; https://www.ajimedicine.com/ >
+      au < ready ; 2011 ; Assam Journal of Internal Medicine Volume 1 ; 2011 ; 1 ; https://www.ajimedicine.com/ >
       au < released ; 2012 ; Assam Journal of Internal Medicine Volume 2 ; 2012 ; 2 ; https://www.ajimedicine.com/ >
       au < released ; 2013 ; Assam Journal of Internal Medicine Volume 3 ; 2013 ; 3 ; https://www.ajimedicine.com/ >
       au < released ; 2014 ; Assam Journal of Internal Medicine Volume 4 ; 2014 ; 4 ; https://www.ajimedicine.com/ >
@@ -11505,8 +11505,8 @@
       param[journal_issn] = 0976-2884
       #param[base_url] = https://www.ijms.in/
 
-      au < manifest ; 2019 ; Indian Journal of Medical Specialties Volume 10 ; 2019 ; 10 ; https://www.ijms.in/ >
-      au < manifest ; 2020 ; Indian Journal of Medical Specialties Volume 11 ; 2020 ; 11 ; https://www.ijms.in/ >
+      au < ready ; 2019 ; Indian Journal of Medical Specialties Volume 10 ; 2019 ; 10 ; https://www.ijms.in/ >
+      au < ready ; 2020 ; Indian Journal of Medical Specialties Volume 11 ; 2020 ; 11 ; https://www.ijms.in/ >
       au < released ; 2021 ; Indian Journal of Medical Specialties Volume 12 ; 2021 ; 12 ; https://www.ijms.in/ >
       au < manifest ; 2022 ; Indian Journal of Medical Specialties Volume 13 ; 2022 ; 13 ; https://www.ijms.in/ >
 
@@ -11631,7 +11631,7 @@
       #move to MM Publications 2022-06, Archive will stay with Medknow until further notice
 
       au < released ; 2018 ; International Journal of Head and Neck Pathology Volume 1 ; 2018 ; 1 ; https://www.ijhnp.org/ >
-      au < manifest ; 2019 ; International Journal of Head and Neck Pathology Volume 2 ; 2019 ; 2 ; https://www.ijhnp.org/ >
+      au < ready ; 2019 ; International Journal of Head and Neck Pathology Volume 2 ; 2019 ; 2 ; https://www.ijhnp.org/ >
       au < released ; 2020 ; International Journal of Head and Neck Pathology Volume 3 ; 2020 ; 3 ; https://www.ijhnp.org/ >
       #deactivated
 
@@ -11649,7 +11649,7 @@
       param[journal_issn] = 2772-4883
       #param[base_url] = https://www.ijmorweb.com/
 
-      au < manifest ; 2020 ; International Journal of Medical and Oral Research Volume 5 ; 2020 ; 5 ; https://www.ijmorweb.com/ >
+      au < ready ; 2020 ; International Journal of Medical and Oral Research Volume 5 ; 2020 ; 5 ; https://www.ijmorweb.com/ >
       au < released ; 2021 ; International Journal of Medical and Oral Research Volume 6 ; 2021 ; 6 ; https://www.ijmorweb.com/ >
       au < manifest ; 2022 ; International Journal of Medical and Oral Research Volume 7 ; 2022 ; 7 ; https://www.ijmorweb.com/ >
 
@@ -11681,16 +11681,16 @@
       au < manifest ; 2007 ; International Journal of Medicine and Health Development Volume 12 ; 2007 ; 12 ; https://www.ijmhdev.com/ >
       au < manifest ; 2008 ; International Journal of Medicine and Health Development Volume 13 ; 2008 ; 13 ; https://www.ijmhdev.com/ >
       au < manifest ; 2009 ; International Journal of Medicine and Health Development Volume 14 ; 2009 ; 14 ; https://www.ijmhdev.com/ >
-      au < manifest ; 2010 ; International Journal of Medicine and Health Development Volume 15 ; 2010 ; 15 ; https://www.ijmhdev.com/ >
-      au < manifest ; 2011 ; International Journal of Medicine and Health Development Volume 16 ; 2011 ; 16 ; https://www.ijmhdev.com/ >
-      au < manifest ; 2012 ; International Journal of Medicine and Health Development Volume 17 ; 2012 ; 17 ; https://www.ijmhdev.com/ >
-      au < manifest ; 2013 ; International Journal of Medicine and Health Development Volume 18 ; 2013 ; 18 ; https://www.ijmhdev.com/ >
-      au < manifest ; 2014 ; International Journal of Medicine and Health Development Volume 19 ; 2014 ; 19 ; https://www.ijmhdev.com/ >
-      au < manifest ; 2015 ; International Journal of Medicine and Health Development Volume 20 ; 2015 ; 20 ; https://www.ijmhdev.com/ >
-      au < manifest ; 2016 ; International Journal of Medicine and Health Development Volume 21 ; 2016 ; 21 ; https://www.ijmhdev.com/ >
-      au < manifest ; 2017 ; International Journal of Medicine and Health Development Volume 22 ; 2017 ; 22 ; https://www.ijmhdev.com/ >
-      au < manifest ; 2018 ; International Journal of Medicine and Health Development Volume 23 ; 2018 ; 23 ; https://www.ijmhdev.com/ >
-      au < manifest ; 2019 ; International Journal of Medicine and Health Development Volume 24 ; 2019 ; 24 ; https://www.ijmhdev.com/ >
+      au < ready ; 2010 ; International Journal of Medicine and Health Development Volume 15 ; 2010 ; 15 ; https://www.ijmhdev.com/ >
+      au < ready ; 2011 ; International Journal of Medicine and Health Development Volume 16 ; 2011 ; 16 ; https://www.ijmhdev.com/ >
+      au < ready ; 2012 ; International Journal of Medicine and Health Development Volume 17 ; 2012 ; 17 ; https://www.ijmhdev.com/ >
+      au < ready ; 2013 ; International Journal of Medicine and Health Development Volume 18 ; 2013 ; 18 ; https://www.ijmhdev.com/ >
+      au < ready ; 2014 ; International Journal of Medicine and Health Development Volume 19 ; 2014 ; 19 ; https://www.ijmhdev.com/ >
+      au < ready ; 2015 ; International Journal of Medicine and Health Development Volume 20 ; 2015 ; 20 ; https://www.ijmhdev.com/ >
+      au < ready ; 2016 ; International Journal of Medicine and Health Development Volume 21 ; 2016 ; 21 ; https://www.ijmhdev.com/ >
+      au < ready ; 2017 ; International Journal of Medicine and Health Development Volume 22 ; 2017 ; 22 ; https://www.ijmhdev.com/ >
+      au < ready ; 2018 ; International Journal of Medicine and Health Development Volume 23 ; 2018 ; 23 ; https://www.ijmhdev.com/ >
+      au < ready ; 2019 ; International Journal of Medicine and Health Development Volume 24 ; 2019 ; 24 ; https://www.ijmhdev.com/ >
       au < released ; 2020 ; International Journal of Medicine and Health Development Volume 25 ; 2020 ; 25 ; https://www.ijmhdev.com/ >
       au < released ; 2021 ; International Journal of Medicine and Health Development Volume 26 ; 2021 ; 26 ; https://www.ijmhdev.com/ >
       au < manifest ; 2022 ; International Journal of Medicine and Health Development Volume 27 ; 2022 ; 27 ; https://www.ijmhdev.com/ >
@@ -11805,14 +11805,14 @@
       param[journal_issn] = 2072-8069
       #param[base_url] = https://www.ijhonline.org/
 
-      au < manifest ; 2011 ; Iraqi Journal of Hematology Volume 1 ; 2011 ; 1 ; https://www.ijhonline.org/ >
-      au < manifest ; 2013 ; Iraqi Journal of Hematology Volume 2 ; 2013 ; 2 ; https://www.ijhonline.org/ >
-      au < manifest ; 2014 ; Iraqi Journal of Hematology Volume 3 ; 2014 ; 3 ; https://www.ijhonline.org/ >
-      au < manifest ; 2015 ; Iraqi Journal of Hematology Volume 4 ; 2015 ; 4 ; https://www.ijhonline.org/ >
-      au < manifest ; 2016 ; Iraqi Journal of Hematology Volume 5 ; 2016 ; 5 ; https://www.ijhonline.org/ >
-      au < manifest ; 2017 ; Iraqi Journal of Hematology Volume 6 ; 2017 ; 6 ; https://www.ijhonline.org/ >
-      au < manifest ; 2018 ; Iraqi Journal of Hematology Volume 7 ; 2018 ; 7 ; https://www.ijhonline.org/ >
-      au < manifest ; 2019 ; Iraqi Journal of Hematology Volume 8 ; 2019 ; 8 ; https://www.ijhonline.org/ >
+      au < ready ; 2011 ; Iraqi Journal of Hematology Volume 1 ; 2011 ; 1 ; https://www.ijhonline.org/ >
+      au < ready ; 2013 ; Iraqi Journal of Hematology Volume 2 ; 2013 ; 2 ; https://www.ijhonline.org/ >
+      au < ready ; 2014 ; Iraqi Journal of Hematology Volume 3 ; 2014 ; 3 ; https://www.ijhonline.org/ >
+      au < ready ; 2015 ; Iraqi Journal of Hematology Volume 4 ; 2015 ; 4 ; https://www.ijhonline.org/ >
+      au < ready ; 2016 ; Iraqi Journal of Hematology Volume 5 ; 2016 ; 5 ; https://www.ijhonline.org/ >
+      au < ready ; 2017 ; Iraqi Journal of Hematology Volume 6 ; 2017 ; 6 ; https://www.ijhonline.org/ >
+      au < ready ; 2018 ; Iraqi Journal of Hematology Volume 7 ; 2018 ; 7 ; https://www.ijhonline.org/ >
+      au < ready ; 2019 ; Iraqi Journal of Hematology Volume 8 ; 2019 ; 8 ; https://www.ijhonline.org/ >
       au < released ; 2020 ; Iraqi Journal of Hematology Volume 9 ; 2020 ; 9 ; https://www.ijhonline.org/ >
       au < released ; 2021 ; Iraqi Journal of Hematology Volume 10 ; 2021 ; 10 ; https://www.ijhonline.org/ >
       au < manifest ; 2022 ; Iraqi Journal of Hematology Volume 11 ; 2022 ; 11 ; https://www.ijhonline.org/ >
