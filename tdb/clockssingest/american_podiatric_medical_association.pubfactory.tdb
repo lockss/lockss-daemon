@@ -16,6 +16,7 @@
     plugin = needs.plugin
     #plugin = org.lockss.plugin.pubfactory.ajtmh.ClockssAjtmhPlugin
     param[base_url] = https://japmaonline.org/
+    param[journal_id] = apms
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
     au < exists ; exists ; 2022 ; Journal of the American Podiatric Medical Association Volume 112 ; 112 ; >
