@@ -14,7 +14,6 @@
 
     rights = openaccess
     plugin = uk.org.lockss.plugin.informationresearch.InformationResearchPlugin
-    param[base_url] = http://www.informationr.net/ir/
     implicit < status ; year ; name ; param[volume_name] >
     #NO MANIFEST PAGE CHECKER
 
