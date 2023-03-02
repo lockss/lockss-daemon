@@ -19,7 +19,7 @@
     {
         param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/iniestares-released/
 
-        au < manifest ; exists ; 2023 ; Iniestares Source Content 2023_01 ; 2023_01 >
+        au < readySource ; crawling ; 2023 ; Iniestares Source Content 2023_01 ; 2023_01 >
     }
   }
 
