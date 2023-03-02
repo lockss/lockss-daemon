@@ -45,13 +45,13 @@
 
     au < readySource ; finished ; 2021 ; Taylor & Francis Source Content 2021_01 ; 2021_01 >
     au < readySource ; finished ; 2021 ; Taylor & Francis Source Content 2021_02 ; 2021_02 >
-    au < readySource ; frozen ; 2021 ; Taylor & Francis Source Content 2021_03 ; 2021_03 >
+    au < readySource ; finished ; 2021 ; Taylor & Francis Source Content 2021_03 ; 2021_03 >
     au < readySource ; finished ; 2021 ; Taylor & Francis Source Content 2021_04 ; 2021_04 >
-    au < readySource ; frozen ; 2021 ; Taylor & Francis Source Content 2021_05 ; 2021_05 >
+    au < readySource ; finished ; 2021 ; Taylor & Francis Source Content 2021_05 ; 2021_05 >
     au < readySource ; finished ; 2021 ; Taylor & Francis Source Content 2021_06 ; 2021_06 >
     au < readySource ; frozen ; 2021 ; Taylor & Francis Source Content 2021_07 ; 2021_07 >
 
-    au < readySource ; frozen ; 2022 ; Taylor & Francis Source Content 2022_01 ; 2022_01 >
+    au < readySource ; finished ; 2022 ; Taylor & Francis Source Content 2022_01 ; 2022_01 >
     au < readySource ; frozen ; 2022 ; Taylor & Francis Source Content 2022_02 ; 2022_02 >
     au < readySource ; frozen ; 2022 ; Taylor & Francis Source Content 2022_03 ; 2022_03 >
     #No more AUs. Moving to https.
@@ -80,7 +80,7 @@
       au < readySource ; finished ; 2021 ; Taylor & Francis Back Content 2021_03 ; 2021_03 >
       au < readySource ; finished ; 2021 ; Taylor & Francis Back Content 2021_04 ; 2021_04 >
       au < readySource ; finished ; 2021 ; Taylor & Francis Back Content 2021_05 ; 2021_05 >
-      au < readySource ; frozen ; 2021 ; Taylor & Francis Back Content 2021_06 ; 2021_06 >
+      au < readySource ; finished ; 2021 ; Taylor & Francis Back Content 2021_06 ; 2021_06 >
       au < readySource ; finished ; 2021 ; Taylor & Francis Back Content 2021_07 ; 2021_07 >
       #No more AUs expected using this plugin
 

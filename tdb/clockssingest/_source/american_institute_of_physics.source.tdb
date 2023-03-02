@@ -19,7 +19,7 @@
     {
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/aipbooks-released/
 
-      au < readySource ; frozen ; 2022 ; American Institute of Physics Books Source Content 2022_01 ; 2022_01 >
+      au < readySource ; finished ; 2022 ; American Institute of Physics Books Source Content 2022_01 ; 2022_01 >
     }
     {
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/aipbooks-released/
@@ -48,7 +48,7 @@
       au < zapped ; finished ; 2019 ; American Institute of Physics JATS Source Content 2019 ; 2019 >
       au < zapped ; finished ; 2020 ; American Institute of Physics JATS Source Content 2020 ; 2020 >
       au < readySource ; finished ; 2021 ; American Institute of Physics JATS Source Content 2021 ; 2021 >
-      au < readySource ; frozen ; 2022 ; American Institute of Physics JATS Source Content 2022 ; 2022 >
+      au < readySource ; finished ; 2022 ; American Institute of Physics JATS Source Content 2022 ; 2022 >
       #Change to directory base plugin
 
     }

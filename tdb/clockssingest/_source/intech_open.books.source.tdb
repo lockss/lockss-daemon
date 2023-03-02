@@ -18,7 +18,7 @@
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/intechopen-released/
 
     au < readySource ; finished ; 2020 ; Intech Open Books Content 2020 ; 2020 >
-    au < readySource ; frozen ; 2022 ; Intech Open Books Content 2022 ; 2022 >
+    au < readySource ; finished ; 2022 ; Intech Open Books Content 2022 ; 2022 >
     #No more AUs. Moving to https and changing plugin.
     }
 

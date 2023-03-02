@@ -19,7 +19,7 @@
     {
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/aes-released/
 
-      au < readySource ; frozen ; 2022 ; American Entomological Society Source Content 2022_01 ; 2022_01 >
+      au < readySource ; finished ; 2022 ; American Entomological Society Source Content 2022_01 ; 2022_01 >
       #No more AUs. Moved to https.
 
     }
@@ -54,7 +54,7 @@
     {
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/bioone-released/
 
-      au < readySource ; frozen ; 2022 ; UniBio Press Source Content 2022 ; 2022 >
+      au < readySource ; finished ; 2022 ; UniBio Press Source Content 2022 ; 2022 >
       #No more AUs. Moved to https.
 
     }
