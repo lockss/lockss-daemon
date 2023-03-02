@@ -396,7 +396,7 @@ Args:
 
   <property name="json-path.jar" value="${lib}/json-path-2.7.0.jar" />
 
-  <property name="antlr.version" value="4.9.3" />
+  <property name="antlr.version" value="4.9.3" /><!-- 4.9.3 is the last Java 8 version before 4.10 -->
   <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-${antlr.version}.jar" />
   <property name="antlr.tools.jar" value="${lib}/antlr-${antlr.version}-complete.jar" />
 
@@ -547,7 +547,7 @@ Args:
     <pathelement path="${derby.jar}" />
     <pathelement path="${derbyclient.jar}" />
     <pathelement path="${derbynet.jar}" />
-	<pathelement path="${postgresql-jdbc.jar}" />
+    <pathelement path="${postgresql-jdbc.jar}" />
     <pathelement path="${mysql-connector-j.jar}" />
     <pathelement path="${mailapi.jar}" />
     <pathelement path="${activation.jar}" />
