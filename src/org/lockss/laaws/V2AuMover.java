@@ -45,6 +45,7 @@ import java.util.stream.*;
 import okhttp3.*;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
+import org.lockss.crawler.CrawlManager;
 import org.lockss.daemon.LockssRunnable;
 import org.lockss.laaws.MigrationManager.OpType;
 import org.lockss.laaws.api.rs.StreamingArtifactsApi;
@@ -814,7 +815,9 @@ s api client with long timeout */
     enqueueFinishAll();
   }
 
-  private void setAuMigrationState(ArchivalUnit au, AuState.MigrationState state) {
+  private void setAuMigrationState(ArchivalUnit au,
+                                   AuState.MigrationState state) {
+
     AuState auState = AuUtil.getAuState(au);
 
     if (auState.getMigrationState() == state) {
@@ -826,7 +829,9 @@ s api client with long timeout */
 
     switch (state) {
       case Aborted:
-        // TODO: Resume crawling and polling on AU
+        // Migration state is checked when determining crawling and polling
+        // eligibility; nothing further to do to signal those activities can
+        // be resumed.
         break;
       case InProgress:
         // TODO: Abort any crawls and polls on AU

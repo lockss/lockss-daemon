@@ -2972,6 +2972,12 @@ public class PollManager
       theLog.debug3(msg + " " + au);
       throw new NotEligibleException(msg);
     }
+
+    AuState.MigrationState ms = auState.getMigrationState();
+    if (ms == AuState.MigrationState.InProgress ||
+        ms == AuState.MigrationState.Finished) {
+      throw new NotEligibleException("AU migrated or migrating");
+    }
   }
 
   void checkAuClassAllowed(PollReq req) throws NotEligibleException {
