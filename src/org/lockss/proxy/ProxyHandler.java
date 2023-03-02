@@ -428,6 +428,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       // We only want to override the post request by proxy if we cached it during crawling.
       CachedUrl cu = pluginMgr.findCachedUrl(postUri.toString());
       if (cu != null) {
+        request.setMethod(HttpRequest.__GET);
         uri = postUri;
       } else if (isMigratingFrom()) {
         request.setMethod(HttpRequest.__GET);
