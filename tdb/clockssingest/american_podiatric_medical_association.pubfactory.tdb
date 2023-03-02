@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = American Podiatric Medical Association ;
+    info[contract] = 2020 ;
+    info[tester] = 5 ;
+    info[platform] = PubFactory
+  >
+
+  {
+
+    title <
+      name = The Journal of the American Podiatric Medical Association
+    >
+
+    plugin = needs.plugin
+    #plugin = org.lockss.plugin.pubfactory.ajtmh.ClockssAjtmhPlugin
+    param[base_url] = https://japmaonline.org/
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+
+    au < exists ; exists ; 2022 ; Journal of the American Podiatric Medical Association Volume 112 ; 112 ; >
+    au < expected ; exists ; 2023 ; Journal of the American Podiatric Medical Association Volume 113 ; 113 ; >
+
+  }
+}
