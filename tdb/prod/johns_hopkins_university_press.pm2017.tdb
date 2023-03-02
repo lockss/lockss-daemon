@@ -4073,8 +4073,6 @@
 
       attr[journal_id] = 808
 
-      au < released ; 2021 ; Classical Journal Volume 117 [2021] ; 16719 >
-      au < testing ; 2022-2023 ; Classical Journal Volume 118 [2022-2023] ; 17571 >
       au < ready ; 2007-2008 ; Classical Journal Volume 103 [2007-2008] ; 16112 >
       au < ready ; 2008-2009 ; Classical Journal Volume 104 [2008-2009] ; 16113 >
       au < ready ; 2009-2010 ; Classical Journal Volume 105 [2009-2010] ; 16114 >
@@ -4089,6 +4087,8 @@
       au < ready ; 2018-2019 ; Classical Journal Volume 114 [2018-2019] ; 16123 >
       au < ready ; 2019-2020 ; Classical Journal Volume 115 [2019-2020] ; 16124 >
       au < ready ; 2020-2021 ; Classical Journal Volume 116 [2020-2021] ; 16111 >
+      au < released ; 2021 ; Classical Journal Volume 117 [2021] ; 16719 >
+      au < manifest ; 2022-2023 ; Classical Journal Volume 118 [2022-2023] ; 17571 >
 
     }
 
