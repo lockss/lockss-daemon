@@ -107,7 +107,14 @@ public class ProxyHandler extends AbstractHttpHandler {
     Configuration.PREFIX + "proxy.loopbackConnectMapMax";
   static final int DEFAULT_LOOPBACK_CONNECT_MAP_MAX = 100;
 
-  private final Map<Integer,String> loopbackConnectMap;
+  /**
+   * Forwards proxy requests to the specified machine if set
+   **/
+  static final String PARAM_FORWARD_PROXY =
+      Configuration.PREFIX + "proxy.forwardProxy";
+  public static final String DEFAULT_FORWARD_PROXY = null;
+
+  private final Map<Integer, String> loopbackConnectMap;
 
   private LockssDaemon theDaemon = null;
   private PluginManager pluginMgr = null;
@@ -119,6 +126,7 @@ public class ProxyHandler extends AbstractHttpHandler {
   private boolean auditProxy = false;
   private boolean auditIndex = false;
   private boolean audit503UntilAusStarted = DEFAULT_AUDIT_503_UNTIL_AUS_STARTED;
+  private HostPortParser forwardProxy = null;
   private String connectHost;
   private int connectPort = -1;
   private int sslListenPort = -1;
@@ -140,6 +148,14 @@ public class ProxyHandler extends AbstractHttpHandler {
     audit503UntilAusStarted =
       config.getBoolean(PARAM_AUDIT_503_UNTIL_AUS_STARTED,
 			DEFAULT_AUDIT_503_UNTIL_AUS_STARTED);
+
+    try {
+      String forwardProxyParam = config.get(PARAM_FORWARD_PROXY, DEFAULT_FORWARD_PROXY);
+      forwardProxy = new HostPortParser(forwardProxyParam);
+    } catch (HostPortParser.InvalidSpec e) {
+      log.error("Error parsing forwardProxy parameter", e);
+      forwardProxy = null;
+    }
 
     hostname = PlatformUtil.getLocalHostname();
 
@@ -348,6 +364,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       return;
     }
 
+    // Handle loopback-ed SSL connect request:
     // The URI in https proxy requests is generally host-relative.  Detect
     // this and replace the URI in the request with the absolute URI.  Do
     // this only for SSL connections, else accessing directly with browser
@@ -369,22 +386,25 @@ public class ProxyHandler extends AbstractHttpHandler {
       log.debug3("URI="+uri);
     }
 
-    // Handling post requests specially.
-    // During a crawl, we can store links from a POST form similar to a GET form.
+    // Handle POST requests specially:
+    // During a crawl, we can store links from a POST form similar to a GET form. This is
+    // done by transforming by encoding form parameters to query parameters. So we do a
+    // similar transform here then look for a CU with that URL.
+    //
+    // Note: This consumes the request body so avoid doing this if possible, as we need
+    // to buffer the request in case we decide later to forward it.
+    //
     // See TestHtmlParserLinkExtractor::testPOSTForm.
     //
     // This logic is similar to logic in ServeContent.
-    //TODO -- CTG: we need to determine the mime type and dispatch based on it
-
-    // Avoid doing this if possible, as we need to buffer the request
-    // in case we decide later to forward it
+    // TODO -- CTG: we need to determine the mime type and dispatch based on it
+    //
     String source = request.getField(Constants.X_LOCKSS_SOURCE);
 
     if (HttpRequest.__POST.equals(request.getMethod())
         && proxyMgr.isHandleFormPost()
-        && !Constants.X_LOCKSS_SOURCE_PUBLISHER.equals(source)
+        && !Constants.X_LOCKSS_SOURCE_PUBLISHER.equals(source)) {
 
-        ) {
       log.debug3("POST request found!");
       // Get a map of the request parameters, and the complete body
       // InputStream which will be needed if we forward the request.
@@ -409,6 +429,10 @@ public class ProxyHandler extends AbstractHttpHandler {
       CachedUrl cu = pluginMgr.findCachedUrl(postUri.toString());
       if (cu != null) {
         uri = postUri;
+      } else if (isMigratingFrom()) {
+        request.setMethod(HttpRequest.__GET);
+        forwardRequest(request, response, postUri.toString());
+        return;
       }
     }
 
@@ -425,12 +449,16 @@ public class ProxyHandler extends AbstractHttpHandler {
 
     String urlString = uri.toString();
     if (MANIFEST_INDEX_URL_PATH.equals(urlString)) {
+      // FIXME: Doing nothing references AUs from this "migrating-from" machine
       sendIndexPage(request, response);
       logAccess(request, "200 index page", TimeBase.msSince(reqStartTime));
       return;
     }
-    String unencUrl = urlString;
+
+    // There should be no double encoding issue here when forwarding the proxy
+    // request because minimallyEncodeUrl doesn't encode %
     if (proxyMgr.isMinimallyEncodeUrls()) {
+      String unencUrl = urlString;
       urlString = UrlUtil.minimallyEncodeUrl(urlString);
       if (!urlString.equals(unencUrl)) {
         log.debug("Encoded " + unencUrl + " to " + urlString);
@@ -450,28 +478,34 @@ public class ProxyHandler extends AbstractHttpHandler {
 */
     ArchivalUnit au;
     CachedUrl cu;
+
+    // This supports CLOCKSS Production machines to crawling from the Ingest
+    // machine. The crawler adds the X-Lockss-Auid header to be specific about
+    // which AU it wants a URL from.
     String auid = request.getField(Constants.X_LOCKSS_AUID);
     if (!StringUtil.isNullString(auid)) {
       au = pluginMgr.getAuFromId(auid);
       if (au == null) {
-	// Requested AU not found.  Return 412, or 503 during startup
-	if (audit503UntilAusStarted && !theDaemon.areAusStarted()) {
-	  // TODO - Guesstimate remaining time and add Retry-After header
-	  String errmsg =
-	    "This LOCKSS box is starting.  Please try again in a moment.";
-	  response.sendError(HttpResponse.__503_Service_Unavailable, errmsg);
-	  request.setHandled(true);
-	  logAccess(request, "not present (no AU: " + auid + "), 503",
-		    TimeBase.msSince(reqStartTime));
-	} else {
-	  response.sendError(HttpResponse.__412_Precondition_Failed,
-			     "AU specified by " + Constants.X_LOCKSS_AUID +
-			     " header not found: " + auid);
-	  request.setHandled(true);
-	  logAccess(request, "412 AU not found: " + auid,
-		    TimeBase.msSince(reqStartTime));
-	}
-	return;
+        // Requested AU not found.  Return 412, or 503 during startup
+        if (audit503UntilAusStarted && !theDaemon.areAusStarted()) {
+          // TODO - Guesstimate remaining time and add Retry-After header
+          String errmsg =
+              "This LOCKSS box is starting.  Please try again in a moment.";
+          response.sendError(HttpResponse.__503_Service_Unavailable, errmsg);
+          request.setHandled(true);
+          logAccess(request, "not present (no AU: " + auid + "), 503",
+              TimeBase.msSince(reqStartTime));
+        } else if (isMigratingFrom()) {
+          forwardRequest(request, response, urlString);
+        } else {
+          response.sendError(HttpResponse.__412_Precondition_Failed,
+              "AU specified by " + Constants.X_LOCKSS_AUID +
+                  " header not found: " + auid);
+          request.setHandled(true);
+          logAccess(request, "412 AU not found: " + auid,
+              TimeBase.msSince(reqStartTime));
+        }
+        return;
       }
       String normUrl = urlString;
       if (proxyMgr.isNormalizeAuidRequest()) {
@@ -486,6 +520,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       cu = pluginMgr.findCachedUrl(urlString);
     }
     // Don't allow CLOCKSS to serve local content for unsubscribed AUs
+    // No longer in use?
     if (cu != null && theDaemon.isDetectClockssSubscription() && !auditProxy) {
       au = cu.getArchivalUnit();
       switch (AuUtil.getAuState(au).getClockssSubscriptionStatus()) {
@@ -508,48 +543,60 @@ public class ProxyHandler extends AbstractHttpHandler {
         log.debug2("cu: " + (isRepairRequest ? "(repair) " : "") + cu);
       }
       if (isRepairRequest || neverProxy ||
-	  Constants.X_LOCKSS_SOURCE_CACHE.equals(source) ||
-	  (isInCache && proxyMgr.isHostDown(uri.getHost()))) {
-	if (isInCache) {
-	  if (isRepairRequest && log.isDebug()) {
-	    log.debug("Serving repair to " + request.getRemoteAddr() + ", " + cu);
-	  }
-	  serveFromCache(pathInContext, pathParams, request,
-			 response, cu);
-	  logAccess(request, "200 from cache", TimeBase.msSince(reqStartTime));
-	  // Record the necessary information required for COUNTER reports.
-	  CounterReportsRequestRecorder.getInstance().recordRequest(urlString,
-	      CounterReportsRequestRecorder.PublisherContacted.FALSE, 200,
-	      null);
-	  return;
-	} else {
-	  // Not found on cache and told not to forward request
-	  String errmsg = auditProxy
-	    ? "Not found in LOCKSS box " + PlatformUtil.getLocalHostname()
-	    : "Not found";
-	  if (audit503UntilAusStarted && !theDaemon.areAusStarted()) {
-	    // TODO - Guesstimate remaining time and add Retry-After header
-	    errmsg =
-	      "This LOCKSS box is starting.  Please try again in a moment.";
-	    response.sendError(HttpResponse.__503_Service_Unavailable, errmsg);
-	    request.setHandled(true);
-	    logAccess(request, "not present, no forward, 503",
-		      TimeBase.msSince(reqStartTime));
-	  } else if (auditIndex) {
-	    sendErrorPage(request,
-			  response,
-			  404, errmsg,
-			  pluginMgr.getCandidateAus(urlString));
-	    logAccess(request, "not present, no forward, 404 w/index",
-		      TimeBase.msSince(reqStartTime));
-	  } else {
-	    response.sendError(HttpResponse.__404_Not_Found, errmsg);
-	    request.setHandled(true);
-	    logAccess(request, "not present, no forward, 404",
-		      TimeBase.msSince(reqStartTime));
-	  }
-	  return;
-	}
+          // CLOCKSS Production always asks for content only in cache
+          Constants.X_LOCKSS_SOURCE_CACHE.equals(source) ||
+          (isInCache && proxyMgr.isHostDown(uri.getHost()))) {
+        if (isInCache) {
+          if (isRepairRequest && log.isDebug()) {
+            log.debug("Serving repair to " + request.getRemoteAddr() + ", " + cu);
+          }
+          // TODO: Need to consider the case where the migration of an AU finished and
+          //  it froze and deactivated this AU while we were in this code path
+          serveFromCache(pathInContext, pathParams, request,
+              response, cu);
+          logAccess(request, "200 from cache", TimeBase.msSince(reqStartTime));
+          // Record the necessary information required for COUNTER reports.
+          CounterReportsRequestRecorder.getInstance().recordRequest(urlString,
+              CounterReportsRequestRecorder.PublisherContacted.FALSE, 200,
+              null);
+          return;
+        } else {
+          // Not found on cache and told not to forward request
+          String errmsg = auditProxy
+              ? "Not found in LOCKSS box " + PlatformUtil.getLocalHostname()
+              : "Not found";
+          if (audit503UntilAusStarted && !theDaemon.areAusStarted()) {
+            // TODO - Guesstimate remaining time and add Retry-After header
+            errmsg =
+                "This LOCKSS box is starting.  Please try again in a moment.";
+            response.sendError(HttpResponse.__503_Service_Unavailable, errmsg);
+            request.setHandled(true);
+            logAccess(request, "not present, no forward, 503",
+                TimeBase.msSince(reqStartTime));
+          } else if (isMigratingFrom()) {
+            // Forward proxy request to migrating-to machine - if we forward to
+            // other machine and it doesn't have it either, just forward the
+            // error response to client.
+            // FIXME: If it is an index page, it will reflect only what is on
+            //  that machine.
+            forwardRequest(request, response, urlString);
+            return;
+          } else if (auditIndex) {
+            // FIXME: Error page will only reflect candidate AUs from this machine
+            sendErrorPage(request,
+                response,
+                404, errmsg,
+                pluginMgr.getCandidateAus(urlString));
+            logAccess(request, "not present, no forward, 404 w/index",
+                TimeBase.msSince(reqStartTime));
+          } else {
+            response.sendError(HttpResponse.__404_Not_Found, errmsg);
+            request.setHandled(true);
+            logAccess(request, "not present, no forward, 404",
+                TimeBase.msSince(reqStartTime));
+          }
+          return;
+        }
       }
 
       if (!isInCache
@@ -557,12 +604,18 @@ public class ProxyHandler extends AbstractHttpHandler {
           && (proxyMgr.getHostDownAction() ==
               ProxyManager.HOST_DOWN_NO_CACHE_ACTION_504)
           && proxyMgr.isHostDown(uri.getHost())) {
-        sendErrorPage(request, response, 504,
-            hostMsg("Can't connect to", uri.getHost(),
-                "Host not responding (cached status)"),
-            pluginMgr.getCandidateAus(urlString));
-        logAccess(request, "not present, host down, 504",
-            TimeBase.msSince(reqStartTime));
+
+        if (isMigratingFrom()) {
+          forwardRequest(request, response, urlString);
+        } else {
+          // FIXME: Error page will only reflect candidate AUs from this machine
+          sendErrorPage(request, response, 504,
+              hostMsg("Can't connect to", uri.getHost(),
+                  "Host not responding (cached status)"),
+              pluginMgr.getCandidateAus(urlString));
+          logAccess(request, "not present, host down, 504",
+              TimeBase.msSince(reqStartTime));
+        }
         return;
       }
       if (UrlUtil.isHttpOrHttpsUrl(urlString)) {
@@ -572,6 +625,8 @@ public class ProxyHandler extends AbstractHttpHandler {
           return;
         }
       }
+
+      // Use legacy Jetty proxy handler
       doSun(pathInContext, pathParams, request, response, reqBodyStrm);
       logAccess(request, "unrecognized request type, forwarded",
           TimeBase.msSince(reqStartTime));
@@ -875,24 +930,28 @@ public class ProxyHandler extends AbstractHttpHandler {
       // publisher for newer content.
       // XXX This needs to forward the request to the publisher (but not
       // wait for the result) so the publisher can count the access.
-      if (isInCache && (proxyMgr.isRecentlyAccessedUrl(urlString)
-			|| isPubNever(cu))) {
-	if (log.isDebug2()) log.debug2("Nopub: " + cu.getUrl());
-	serveFromCache(pathInContext, pathParams, request, response, cu);
-	logAccess(request, "200 from cache", TimeBase.msSince(reqStartTime));
-	// Record the necessary information required for COUNTER reports.
-	recordRequest(request,
-		      urlString,
-		      CounterReportsRequestRecorder.PublisherContacted.FALSE,
-		      200);
-	return;
+      if (isInCache &&
+          (proxyMgr.isRecentlyAccessedUrl(urlString) || isPubNever(cu))) {
+        if (log.isDebug2()) log.debug2("Nopub: " + cu.getUrl());
+        // FIXME: AU may have been deactivated in the middle of processing the request
+        serveFromCache(pathInContext, pathParams, request, response, cu);
+        logAccess(request, "200 from cache", TimeBase.msSince(reqStartTime));
+        // Record the necessary information required for COUNTER reports.
+        recordRequest(request,
+            urlString,
+            CounterReportsRequestRecorder.PublisherContacted.FALSE,
+            200);
+        return;
       }
       if (isPubNever(cu)) {
         if (isInCache) {
           // shouldn't happen, (isInCache && isPubNever) handled before
           // calling this method.
           log.error("Shouldn't happen, isInCache && isPubNever: " +
-                    cu.getUrl());
+              cu.getUrl());
+        } else if (isMigratingFrom()) {
+          forwardRequest(request, response, urlString);
+          return;
         } else {
           Collection<ArchivalUnit> candidateAus =
               pluginMgr.getCandidateAus(urlString);
@@ -911,11 +970,27 @@ public class ProxyHandler extends AbstractHttpHandler {
           }
         }
       }
+
+      // Forward the proxy request if we're "migrating from" this machine and
+      // did not find it in this cache. Let the "migrating to" machine forward
+      // a response from the publisher or serve from its cache. It may also
+      // return an index or error page.
+      if (isMigratingFrom() && !isInCache) {
+        forwardRequest(request, response, urlString);
+        return;
+      }
+
+      // Two connection pools with different timeouts: If isInCache, or we
+      // noticed that the publisher host is down, or we have configured it
+      // to be "quick", then we open the connection with a connection pool
+      // with a short timeout.
       boolean useQuick =
           (isInCache ||
-           (proxyMgr.isHostDown(request.getURI().getHost()) &&
-            (proxyMgr.getHostDownAction() ==
-             ProxyManager.HOST_DOWN_NO_CACHE_ACTION_QUICK)));
+              (proxyMgr.isHostDown(request.getURI().getHost()) &&
+                  (proxyMgr.getHostDownAction() ==
+                      ProxyManager.HOST_DOWN_NO_CACHE_ACTION_QUICK)));
+
+      // Forward response from publisher or serve from this cache...
       try {
         conn =
             UrlUtil.openConnection(LockssUrlConnection.METHOD_PROXY,
@@ -1101,7 +1176,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       if (candidateAus != null && !candidateAus.isEmpty()) {
         forwardResponseWithIndex(request, response, candidateAus, conn);
       } else {
-        forwardResponse(request, response, conn, reqStartTime);
+        forwardResponseAndLogAccess(request, response, conn, reqStartTime);
       }
     } catch (Exception e) {
       log.error("doLockss error", e);
@@ -1130,12 +1205,69 @@ public class ProxyHandler extends AbstractHttpHandler {
     return allowed.contains(addr);
   }
 
-  void forwardResponse(HttpRequest request, HttpResponse response,
-                       LockssUrlConnection conn, long reqStartTime)
+  /**
+   * Returns a boolean indicating whether this is the "migrating from" machine.
+   **/
+  boolean isMigratingFrom() {
+    return forwardProxy != null;
+  }
+
+  /**
+   * Forwards a proxy request to another proxy server and forwards the
+   * response to the client
+   **/
+  void forwardRequest(HttpRequest request, HttpResponse response,
+                      String urlString) throws IOException {
+
+    LockssUrlConnection conn =
+        UrlUtil.openConnection(LockssUrlConnection.METHOD_PROXY,
+            UrlUtil.minimallyEncodeUrl(urlString), quickFailConnPool);
+
+    conn.setFollowRedirects(false);
+
+    // Check connection header
+    String connectionHdr = request.getField(HttpFields.__Connection);
+    if (connectionHdr != null &&
+        (connectionHdr.equalsIgnoreCase(HttpFields.__KeepAlive) ||
+            connectionHdr.equalsIgnoreCase(HttpFields.__Close)))
+      connectionHdr = null;
+
+    for (Enumeration en = request.getFieldNames();
+         en.hasMoreElements(); ) {
+      String hdr = (String) en.nextElement();
+
+      if (_DontProxyHeaders.containsKey(hdr)) continue;
+
+      if (connectionHdr != null && connectionHdr.indexOf(hdr) >= 0) continue;
+
+      Enumeration vals = request.getFieldValues(hdr);
+      while (vals.hasMoreElements()) {
+        String val = (String) vals.nextElement();
+        if (val != null) {
+          conn.addRequestProperty(hdr, val);
+        }
+      }
+    }
+
+    conn.setProxy(forwardProxy.getHost(), forwardProxy.getPort());
+    conn.execute();
+
+    forwardResponse(request, response, conn);
+  }
+
+  void forwardResponseAndLogAccess(HttpRequest request, HttpResponse response,
+                                   LockssUrlConnection conn, long reqStartTime)
       throws IOException {
     // return response from server
     logAccess(request, conn.getResponseCode() + " from publisher",
 	      TimeBase.msSince(reqStartTime));
+
+    forwardResponse(request, response, conn);
+  }
+
+  /** Return response from upstream to client response **/
+  void forwardResponse(HttpRequest request, HttpResponse response,
+                       LockssUrlConnection conn) throws IOException {
 
     response.setStatus(conn.getResponseCode());
     response.setReason(conn.getResponseMessage());
