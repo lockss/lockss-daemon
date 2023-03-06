@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = PUBLISHER_NAME
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:PUB_ID
+
+    {
+    title <
+      name = Russell: The Journal of Bertrand Russell Studies ;
+      issn = ISSN ;
+      eissn = EISSN
+
+    >
+
+      attr[journal_id] = 852
+
+      au < manifest ; 2018-2019 ; Russell: The Journal of Bertrand Russell Studies Volume 38 [2018-2019] ; 18066 >
+      au < manifest ; 2021 ; Russell: The Journal of Bertrand Russell Studies Volume 41 [2021] ; 17739 >
+      au < manifest ; 2022 ; Russell: The Journal of Bertrand Russell Studies Volume 42 [2022] ; 17740 >
+
+    }
+
+}

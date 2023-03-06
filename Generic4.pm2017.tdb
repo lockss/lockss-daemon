@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = PUBLISHER_NAME
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:PUB_ID
+
+    {
+    title <
+      name = Revista de Estudios de GÃ©nero y Sexualidades / Journal of Gender and Sexuality Studies ;
+      issn = ISSN ;
+      eissn = EISSN
+
+    >
+
+      attr[journal_id] = 851
+
+      au < manifest ; 2021 ; Revista de Estudios de GÃ©nero y Sexualidades / Journal of Gender and Sexuality Studies Volume 47 [2021] ; 17981 >
+      au < manifest ; 2022 ; Revista de Estudios de GÃ©nero y Sexualidades / Journal of Gender and Sexuality Studies Volume 48 [2022] ; 17987 >
+
+    }
+
+}
