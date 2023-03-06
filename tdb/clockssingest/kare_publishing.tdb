@@ -6,7 +6,7 @@
     info[back] = 2020 ;
     info[tester] = 5 ;
     info[poller] = 8 ;
-    info[platform] = Custom
+    info[platform] = BLOCKED-waiting for publisher. Custom. LXPLUG-2314
   >
 
     plugin = needs.plugin
