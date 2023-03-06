@@ -104,15 +104,15 @@
       #still ojs3 20201015
       #gone from site
 
-      au < manifest ; exists ; 2000 ; Journal of Distance Education Volume 15 ; 15 ; 2000 ; >
-      au < manifest ; exists ; 2001 ; Journal of Distance Education Volume 16 ; 16 ; 2001 ; >
-      au < manifest ; exists ; 2002 ; Journal of Distance Education Volume 17 ; 17 ; 2002 ; >
-      au < manifest ; exists ; 2003 ; Journal of Distance Education Volume 18 ; 18 ; 2003 ; >
-      au < manifest ; exists ; 2004 ; Journal of Distance Education Volume 19 ; 19 ; 2004 ; >
-      au < manifest ; exists ; 2005 ; Journal of Distance Education Volume 20 ; 20 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; Journal of Distance Education Volume 21 ; 21 ; 2006 ; >
+      au < ready ; exists ; 2000 ; Journal of Distance Education Volume 15 ; 15 ; 2000 ; >
+      au < ready ; exists ; 2001 ; Journal of Distance Education Volume 16 ; 16 ; 2001 ; >
+      au < ready ; exists ; 2002 ; Journal of Distance Education Volume 17 ; 17 ; 2002 ; >
+      au < ready ; exists ; 2003 ; Journal of Distance Education Volume 18 ; 18 ; 2003 ; >
+      au < ready ; exists ; 2004 ; Journal of Distance Education Volume 19 ; 19 ; 2004 ; >
+      au < ready ; exists ; 2005 ; Journal of Distance Education Volume 20 ; 20 ; 2005 ; >
+      au < ready ; exists ; 2006 ; Journal of Distance Education Volume 21 ; 21 ; 2006 ; >
       au < manifest ; exists ; 2007 ; Journal of Distance Education Volume 21-22 ; 21-22 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; Journal of Distance Education Volume 22 ; 22 ; 2008 ; >
+      au < ready ; exists ; 2008 ; Journal of Distance Education Volume 22 ; 22 ; 2008 ; >
       au < manifest ; exists ; 2009 ; Journal of Distance Education Volume 23 ; 23 ; 2009 ; >
       au < frozen ; exists ; 2010 ; Journal of Distance Education Volume 24 ; 24 ; 2010 ; >
       au < frozen ; exists ; 2011 ; Journal of Distance Education Volume 25 ; 25 ; 2011 ; >
@@ -193,11 +193,11 @@
       param[base_url] = http://jrp.icaap.org/
       param[journal_id] = jrp
 
-      au < manifest ; exists ; 2005 ; Journal of Research Practice Volume 1 ; 1 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; Journal of Research Practice Volume 2 ; 2 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; Journal of Research Practice Volume 3 ; 3 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; Journal of Research Practice Volume 4 ; 4 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; Journal of Research Practice Volume 5 ; 5 ; 2009 ; >
+      au < ready ; exists ; 2005 ; Journal of Research Practice Volume 1 ; 1 ; 2005 ; >
+      au < ready ; exists ; 2006 ; Journal of Research Practice Volume 2 ; 2 ; 2006 ; >
+      au < ready ; exists ; 2007 ; Journal of Research Practice Volume 3 ; 3 ; 2007 ; >
+      au < ready ; exists ; 2008 ; Journal of Research Practice Volume 4 ; 4 ; 2008 ; >
+      au < ready ; exists ; 2009 ; Journal of Research Practice Volume 5 ; 5 ; 2009 ; >
       au < frozen ; exists ; 2010 ; Journal of Research Practice Volume 6 ; 6 ; 2010 ; >
       au < frozen ; exists ; 2011 ; Journal of Research Practice Volume 7 ; 7 ; 2011 ; >
       au < frozen ; exists ; 2017 ; Journal of Research Practice Volume 13 ; 13 ; 2017 ; >

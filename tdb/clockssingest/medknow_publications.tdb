@@ -10100,8 +10100,8 @@
       param[journal_issn] = 2773-0387
       #move to LWW, Archive will stay with Medknow until further notice
 
-      au < manifest ; exists ; 2021 ; Integrative Medicine in Nephrology and Andrology Volume 8 ; 2021 ; 8 ; https://journal-imna.com/ ; ; >
-      au < manifest ; exists ; 2022 ; Integrative Medicine in Nephrology and Andrology Volume 9 ; 2022 ; 9 ; https://journal-imna.com/ ; ; >
+      au < ready ; exists ; 2021 ; Integrative Medicine in Nephrology and Andrology Volume 8 ; 2021 ; 8 ; https://journal-imna.com/ ; ; >
+      au < ready ; exists ; 2022 ; Integrative Medicine in Nephrology and Andrology Volume 9 ; 2022 ; 9 ; https://journal-imna.com/ ; ; >
       #deactivated
 
   }
@@ -10353,11 +10353,11 @@
 
       au < manifest ; exists ; 2011 ; International Journal of Students' Research Volume 1 ; 2011 ; 1 ; http://www.ijsronline.net/ ; ; >
       au < manifest ; exists ; 2012 ; International Journal of Students' Research Volume 2 ; 2012 ; 2 ; http://www.ijsronline.net/ ; ; >
-      au < manifest ; exists ; 2013 ; International Journal of Students' Research Volume 3 ; 2013 ; 3 ; http://www.ijsronline.net/ ; ; >
-      au < manifest ; exists ; 2014 ; International Journal of Students' Research Volume 4 ; 2014 ; 4 ; http://www.ijsronline.net/ ; ; >
-      au < manifest ; exists ; 2015 ; International Journal of Students' Research Volume 5 ; 2015 ; 5 ; http://www.ijsronline.net/ ; ; >
-      au < manifest ; exists ; 2016 ; International Journal of Students' Research Volume 6 ; 2016 ; 6 ; http://www.ijsronline.net/ ; ; >
-      au < manifest ; exists ; 2017 ; International Journal of Students' Research Volume 7 ; 2017 ; 7 ; http://www.ijsronline.net/ ; ; >
+      au < ready ; exists ; 2013 ; International Journal of Students' Research Volume 3 ; 2013 ; 3 ; http://www.ijsronline.net/ ; ; >
+      au < ready ; exists ; 2014 ; International Journal of Students' Research Volume 4 ; 2014 ; 4 ; http://www.ijsronline.net/ ; ; >
+      au < ready ; exists ; 2015 ; International Journal of Students' Research Volume 5 ; 2015 ; 5 ; http://www.ijsronline.net/ ; ; >
+      au < ready ; exists ; 2016 ; International Journal of Students' Research Volume 6 ; 2016 ; 6 ; http://www.ijsronline.net/ ; ; >
+      au < ready ; exists ; 2017 ; International Journal of Students' Research Volume 7 ; 2017 ; 7 ; http://www.ijsronline.net/ ; ; >
 
   }
 
@@ -11536,7 +11536,7 @@
       #param[base_url] = https://www.aomd.in/
 
       au < crawling ; exists ; 2018 ; Annals of Movement Disorders Volume 1 ; 2018 ; 1 ; https://www.aomd.in/ ; ; >
-      au < manifest ; exists ; 2019 ; Annals of Movement Disorders Volume 2 ; 2019 ; 2 ; https://www.aomd.in/ ; ; >
+      au < ready ; exists ; 2019 ; Annals of Movement Disorders Volume 2 ; 2019 ; 2 ; https://www.aomd.in/ ; ; >
       au < crawling ; exists ; 2020 ; Annals of Movement Disorders Volume 3 ; 2020 ; 3 ; https://www.aomd.in/ ; ; >
       au < finished ; crawling ; 2021 ; Annals of Movement Disorders Volume 4 ; 2021 ; 4 ; https://www.aomd.in/ ; ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2022 ; Annals of Movement Disorders Volume 5 ; 2022 ; 5 ; https://www.aomd.in/ ; ; >
@@ -11596,14 +11596,14 @@
 
       au < manifest ; exists ; 2010 ; Archives of Mental Health Volume 11 ; 2010 ; 11 ; https://www.amhonline.org/ ; ; >
       au < crawling ; exists ; 2011 ; Archives of Mental Health Volume 12 ; 2011 ; 12 ; https://www.amhonline.org/ ; ; >
-      au < manifest ; exists ; 2012 ; Archives of Mental Health Volume 13 ; 2012 ; 13 ; https://www.amhonline.org/ ; ; >
-      au < manifest ; exists ; 2013 ; Archives of Mental Health Volume 14 ; 2013 ; 14 ; https://www.amhonline.org/ ; ; >
-      au < manifest ; exists ; 2014 ; Archives of Mental Health Volume 15 ; 2014 ; 15 ; https://www.amhonline.org/ ; ; >
-      au < manifest ; exists ; 2015 ; Archives of Mental Health Volume 16 ; 2015 ; 16 ; https://www.amhonline.org/ ; ; >
-      au < manifest ; exists ; 2016 ; Archives of Mental Health Volume 17 ; 2016 ; 17 ; https://www.amhonline.org/ ; ; >
-      au < manifest ; exists ; 2017 ; Archives of Mental Health Volume 18 ; 2017 ; 18 ; https://www.amhonline.org/ ; ; >
-      au < manifest ; exists ; 2018 ; Archives of Mental Health Volume 19 ; 2018 ; 19 ; https://www.amhonline.org/ ; ; >
-      au < manifest ; exists ; 2019 ; Archives of Mental Health Volume 20 ; 2019 ; 20 ; https://www.amhonline.org/ ; ; >
+      au < ready ; exists ; 2012 ; Archives of Mental Health Volume 13 ; 2012 ; 13 ; https://www.amhonline.org/ ; ; >
+      au < ready ; exists ; 2013 ; Archives of Mental Health Volume 14 ; 2013 ; 14 ; https://www.amhonline.org/ ; ; >
+      au < ready ; exists ; 2014 ; Archives of Mental Health Volume 15 ; 2014 ; 15 ; https://www.amhonline.org/ ; ; >
+      au < ready ; exists ; 2015 ; Archives of Mental Health Volume 16 ; 2015 ; 16 ; https://www.amhonline.org/ ; ; >
+      au < ready ; exists ; 2016 ; Archives of Mental Health Volume 17 ; 2016 ; 17 ; https://www.amhonline.org/ ; ; >
+      au < ready ; exists ; 2017 ; Archives of Mental Health Volume 18 ; 2017 ; 18 ; https://www.amhonline.org/ ; ; >
+      au < ready ; exists ; 2018 ; Archives of Mental Health Volume 19 ; 2018 ; 19 ; https://www.amhonline.org/ ; ; >
+      au < ready ; exists ; 2019 ; Archives of Mental Health Volume 20 ; 2019 ; 20 ; https://www.amhonline.org/ ; ; >
       au < crawling ; exists ; 2020 ; Archives of Mental Health Volume 21 ; 2020 ; 21 ; https://www.amhonline.org/ ; ; >
       au < finished ; frozen ; 2021 ; Archives of Mental Health Volume 22 ; 2021 ; 22 ; https://www.amhonline.org/ ; ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2022 ; Archives of Mental Health Volume 23 ; 2022 ; 23 ; https://www.amhonline.org/ ; ; >
@@ -11654,15 +11654,15 @@
       param[journal_issn] = 2278-8239
       #param[base_url] = https://www.ajimedicine.com/
 
-      au < manifest ; exists ; 2011 ; Assam Journal of Internal Medicine Volume 1 ; 2011 ; 1 ; https://www.ajimedicine.com/ ; ; >
+      au < ready ; exists ; 2011 ; Assam Journal of Internal Medicine Volume 1 ; 2011 ; 1 ; https://www.ajimedicine.com/ ; ; >
       au < manifest ; exists ; 2012 ; Assam Journal of Internal Medicine Volume 2 ; 2012 ; 2 ; https://www.ajimedicine.com/ ; ; >
       au < manifest ; exists ; 2013 ; Assam Journal of Internal Medicine Volume 3 ; 2013 ; 3 ; https://www.ajimedicine.com/ ; ; >
-      au < manifest ; exists ; 2014 ; Assam Journal of Internal Medicine Volume 4 ; 2014 ; 4 ; https://www.ajimedicine.com/ ; ; >
-      au < manifest ; exists ; 2015 ; Assam Journal of Internal Medicine Volume 5 ; 2015 ; 5 ; https://www.ajimedicine.com/ ; ; >
-      au < manifest ; exists ; 2016 ; Assam Journal of Internal Medicine Volume 6 ; 2016 ; 6 ; https://www.ajimedicine.com/ ; ; >
-      au < manifest ; exists ; 2017 ; Assam Journal of Internal Medicine Volume 7 ; 2017 ; 7 ; https://www.ajimedicine.com/ ; ; >
-      au < manifest ; exists ; 2018 ; Assam Journal of Internal Medicine Volume 8 ; 2018 ; 8 ; https://www.ajimedicine.com/ ; ; >
-      au < manifest ; exists ; 2019 ; Assam Journal of Internal Medicine Volume 9 ; 2019 ; 9 ; https://www.ajimedicine.com/ ; ; >
+      au < ready ; exists ; 2014 ; Assam Journal of Internal Medicine Volume 4 ; 2014 ; 4 ; https://www.ajimedicine.com/ ; ; >
+      au < ready ; exists ; 2015 ; Assam Journal of Internal Medicine Volume 5 ; 2015 ; 5 ; https://www.ajimedicine.com/ ; ; >
+      au < ready ; exists ; 2016 ; Assam Journal of Internal Medicine Volume 6 ; 2016 ; 6 ; https://www.ajimedicine.com/ ; ; >
+      au < ready ; exists ; 2017 ; Assam Journal of Internal Medicine Volume 7 ; 2017 ; 7 ; https://www.ajimedicine.com/ ; ; >
+      au < ready ; exists ; 2018 ; Assam Journal of Internal Medicine Volume 8 ; 2018 ; 8 ; https://www.ajimedicine.com/ ; ; >
+      au < ready ; exists ; 2019 ; Assam Journal of Internal Medicine Volume 9 ; 2019 ; 9 ; https://www.ajimedicine.com/ ; ; >
       au < crawling ; exists ; 2020 ; Assam Journal of Internal Medicine Volume 10 ; 2020 ; 10 ; https://www.ajimedicine.com/ ; ; >
       au < frozen ; exists ; 2021 ; Assam Journal of Internal Medicine Volume 11 ; 2021 ; 11 ; https://www.ajimedicine.com/ ; ; >
       au < manifest ; exists ; 2022 ; Assam Journal of Internal Medicine Volume 12 ; 2022 ; 12 ; https://www.ajimedicine.com/ ; ; >
@@ -11682,7 +11682,7 @@
 
       au < manifest ; exists ; 2017 ; Bali Journal of Anesthesiology Volume 1 ; 2017 ; 1 ; https://www.bjoaonline.com/ ; ; >
       au < manifest ; exists ; 2018 ; Bali Journal of Anesthesiology Volume 2 ; 2018 ; 2 ; https://www.bjoaonline.com/ ; ; >
-      au < manifest ; exists ; 2019 ; Bali Journal of Anesthesiology Volume 3 ; 2019 ; 3 ; https://www.bjoaonline.com/ ; ; >
+      au < ready ; exists ; 2019 ; Bali Journal of Anesthesiology Volume 3 ; 2019 ; 3 ; https://www.bjoaonline.com/ ; ; >
       au < crawling ; exists ; 2020 ; Bali Journal of Anesthesiology Volume 4 ; 2020 ; 4 ; https://www.bjoaonline.com/ ; ; >
       au < frozen ; exists ; 2021 ; Bali Journal of Anesthesiology Volume 5 ; 2021 ; 5 ; https://www.bjoaonline.com/ ; ; >
       au < crawling ; exists ; 2022 ; Bali Journal of Anesthesiology Volume 6 ; 2022 ; 6 ; https://www.bjoaonline.com/ ; ; >
@@ -11702,11 +11702,11 @@
       #param[base_url] = https://www.brjnmims.org/
 
       au < manifest ; exists ; 2014 ; Biomedical Research Journal Volume 1 ; 2014 ; 1 ; https://www.brjnmims.org/ ; ; >
-      au < manifest ; exists ; 2015 ; Biomedical Research Journal Volume 2 ; 2015 ; 2 ; https://www.brjnmims.org/ ; ; >
-      au < manifest ; exists ; 2016 ; Biomedical Research Journal Volume 3 ; 2016 ; 3 ; https://www.brjnmims.org/ ; ; >
-      au < manifest ; exists ; 2017 ; Biomedical Research Journal Volume 4 ; 2017 ; 4 ; https://www.brjnmims.org/ ; ; >
-      au < manifest ; exists ; 2018 ; Biomedical Research Journal Volume 5 ; 2018 ; 5 ; https://www.brjnmims.org/ ; ; >
-      au < manifest ; exists ; 2019 ; Biomedical Research Journal Volume 6 ; 2019 ; 6 ; https://www.brjnmims.org/ ; ; >
+      au < ready ; exists ; 2015 ; Biomedical Research Journal Volume 2 ; 2015 ; 2 ; https://www.brjnmims.org/ ; ; >
+      au < ready ; exists ; 2016 ; Biomedical Research Journal Volume 3 ; 2016 ; 3 ; https://www.brjnmims.org/ ; ; >
+      au < ready ; exists ; 2017 ; Biomedical Research Journal Volume 4 ; 2017 ; 4 ; https://www.brjnmims.org/ ; ; >
+      au < ready ; exists ; 2018 ; Biomedical Research Journal Volume 5 ; 2018 ; 5 ; https://www.brjnmims.org/ ; ; >
+      au < ready ; exists ; 2019 ; Biomedical Research Journal Volume 6 ; 2019 ; 6 ; https://www.brjnmims.org/ ; ; >
       au < crawling ; exists ; 2020 ; Biomedical Research Journal Volume 7 ; 2020 ; 7 ; https://www.brjnmims.org/ ; ; >
       au < frozen ; exists ; 2021 ; Biomedical Research Journal Volume 8 ; 2021 ; 8 ; https://www.brjnmims.org/ ; ; >
       au < expected ; exists ; 2022 ; Biomedical Research Journal Volume 9 ; 2022 ; 9 ; https://www.brjnmims.org/ ; ; >
@@ -11763,9 +11763,9 @@
       param[journal_issn] = 2352-0817
       #param[base_url] = https://www.cmrpjournal.org/
 
-      au < manifest ; exists ; 2011 ; Current Medicine Research and Practice Volume 1 ; 2011 ; 1 ; https://www.cmrpjournal.org/ ; ; >
-      au < manifest ; exists ; 2012 ; Current Medicine Research and Practice Volume 2 ; 2012 ; 2 ; https://www.cmrpjournal.org/ ; ; >
-      au < manifest ; exists ; 2013 ; Current Medicine Research and Practice Volume 3 ; 2013 ; 3 ; https://www.cmrpjournal.org/ ; ; >
+      au < ready ; exists ; 2011 ; Current Medicine Research and Practice Volume 1 ; 2011 ; 1 ; https://www.cmrpjournal.org/ ; ; >
+      au < ready ; exists ; 2012 ; Current Medicine Research and Practice Volume 2 ; 2012 ; 2 ; https://www.cmrpjournal.org/ ; ; >
+      au < ready ; exists ; 2013 ; Current Medicine Research and Practice Volume 3 ; 2013 ; 3 ; https://www.cmrpjournal.org/ ; ; >
       au < exists ; exists ; 2014 ; Current Medicine Research and Practice Volume 4 ; 2014 ; 4 ; https://www.cmrpjournal.org/ ; ; >
       au < exists ; exists ; 2015 ; Current Medicine Research and Practice Volume 5 ; 2015 ; 5 ; https://www.cmrpjournal.org/ ; ; >
       au < exists ; exists ; 2016 ; Current Medicine Research and Practice Volume 6 ; 2016 ; 6 ; https://www.cmrpjournal.org/ ; ; >
@@ -11844,8 +11844,8 @@
       param[journal_issn] = 2590-1761
       #param[base_url] = https://www.ehpjournal.com/
 
-      au < manifest ; exists ; 2018 ; Education in the Health Professions Volume 1 ; 2018 ; 1 ; https://www.ehpjournal.com/ ; ; >
-      au < manifest ; exists ; 2019 ; Education in the Health Professions Volume 2 ; 2019 ; 2 ; https://www.ehpjournal.com/ ; ; >
+      au < ready ; exists ; 2018 ; Education in the Health Professions Volume 1 ; 2018 ; 1 ; https://www.ehpjournal.com/ ; ; >
+      au < ready ; exists ; 2019 ; Education in the Health Professions Volume 2 ; 2019 ; 2 ; https://www.ehpjournal.com/ ; ; >
       au < crawling ; exists ; 2020 ; Education in the Health Professions Volume 3 ; 2020 ; 3 ; https://www.ehpjournal.com/ ; ; >
       au < frozen ; exists ; 2021 ; Education in the Health Professions Volume 4 ; 2021 ; 4 ; https://www.ehpjournal.com/ ; ; >
       au < crawling ; exists ; 2022 ; Education in the Health Professions Volume 5 ; 2022 ; 5 ; https://www.ehpjournal.com/ ; ; >
@@ -11881,8 +11881,8 @@
       param[journal_issn] = 2666-0784
       #param[base_url] = https://www.ijcrsonweb.org/
 
-      au < manifest ; exists ; 2018 ; Indian Journal of Colo-Rectal Surgery Volume 1 ; 2018 ; 1 ; https://www.ijcrsonweb.org/ ; ; >
-      au < manifest ; exists ; 2019 ; Indian Journal of Colo-Rectal Surgery Volume 2 ; 2019 ; 2 ; https://www.ijcrsonweb.org/ ; ; >
+      au < ready ; exists ; 2018 ; Indian Journal of Colo-Rectal Surgery Volume 1 ; 2018 ; 1 ; https://www.ijcrsonweb.org/ ; ; >
+      au < ready ; exists ; 2019 ; Indian Journal of Colo-Rectal Surgery Volume 2 ; 2019 ; 2 ; https://www.ijcrsonweb.org/ ; ; >
       au < crawling ; exists ; 2020 ; Indian Journal of Colo-Rectal Surgery Volume 3 ; 2020 ; 3 ; https://www.ijcrsonweb.org/ ; ; >
       au < frozen ; exists ; 2021 ; Indian Journal of Colo-Rectal Surgery Volume 4 ; 2021 ; 4 ; https://www.ijcrsonweb.org/ ; ; >
       au < crawling ; exists ; 2022 ; Indian Journal of Colo-Rectal Surgery Volume 5 ; 2022 ; 5 ; https://www.ijcrsonweb.org/ ; ; >
@@ -11923,10 +11923,10 @@
       param[journal_issn] = 2230-7354
       #param[base_url] = https://www.ijcne.org/
 
-      au < manifest ; exists ; 2015 ; Indian Journal of Continuing Nursing Education Volume 16 ; 2015 ; 16 ; https://www.ijcne.org/ ; ; >
-      au < manifest ; exists ; 2016 ; Indian Journal of Continuing Nursing Education Volume 17 ; 2016 ; 17 ; https://www.ijcne.org/ ; ; >
-      au < manifest ; exists ; 2017 ; Indian Journal of Continuing Nursing Education Volume 18 ; 2017 ; 18 ; https://www.ijcne.org/ ; ; >
-      au < manifest ; exists ; 2018 ; Indian Journal of Continuing Nursing Education Volume 19 ; 2018 ; 19 ; https://www.ijcne.org/ ; ; >
+      au < ready ; exists ; 2015 ; Indian Journal of Continuing Nursing Education Volume 16 ; 2015 ; 16 ; https://www.ijcne.org/ ; ; >
+      au < ready ; exists ; 2016 ; Indian Journal of Continuing Nursing Education Volume 17 ; 2016 ; 17 ; https://www.ijcne.org/ ; ; >
+      au < ready ; exists ; 2017 ; Indian Journal of Continuing Nursing Education Volume 18 ; 2017 ; 18 ; https://www.ijcne.org/ ; ; >
+      au < ready ; exists ; 2018 ; Indian Journal of Continuing Nursing Education Volume 19 ; 2018 ; 19 ; https://www.ijcne.org/ ; ; >
       au < crawling ; exists ; 2019 ; Indian Journal of Continuing Nursing Education Volume 20 ; 2019 ; 20 ; https://www.ijcne.org/ ; ; >
       au < manifest ; exists ; 2020 ; Indian Journal of Continuing Nursing Education Volume 21 ; 2020 ; 21 ; https://www.ijcne.org/ ; ; >
       au < frozen ; exists ; 2021 ; Indian Journal of Continuing Nursing Education Volume 22 ; 2021 ; 22 ; https://www.ijcne.org/ ; ; >
@@ -12002,19 +12002,19 @@
       param[journal_issn] = 2231-1505
       #param[base_url] = https://www.ijpn.in/
 
-      au < manifest ; exists ; 2013 ; Indian Journal of Psychiatric Nursing Volume 5 ; 2013 ; 5 ; https://www.ijpn.in/ ; ; >
+      au < ready ; exists ; 2013 ; Indian Journal of Psychiatric Nursing Volume 5 ; 2013 ; 5 ; https://www.ijpn.in/ ; ; >
 
-      au < manifest ; exists ; 2014 ; Indian Journal of Psychiatric Nursing Volume 7 ; 2014 ; 7 ; https://www.ijpn.in/ ; ; >
-      au < manifest ; exists ; 2014 ; Indian Journal of Psychiatric Nursing Volume 8 ; 2014 ; 8 ; https://www.ijpn.in/ ; ; >
-      au < manifest ; exists ; 2015 ; Indian Journal of Psychiatric Nursing Volume 9 ; 2015 ; 9 ; https://www.ijpn.in/ ; ; >
-      au < manifest ; exists ; 2015 ; Indian Journal of Psychiatric Nursing Volume 10 ; 2015 ; 10 ; https://www.ijpn.in/ ; ; >
-      au < manifest ; exists ; 2016 ; Indian Journal of Psychiatric Nursing Volume 11 ; 2016 ; 11 ; https://www.ijpn.in/ ; ; >
-      au < manifest ; exists ; 2016 ; Indian Journal of Psychiatric Nursing Volume 12 ; 2016 ; 12 ; https://www.ijpn.in/ ; ; >
-      au < manifest ; exists ; 2017 ; Indian Journal of Psychiatric Nursing Volume 13 ; 2017 ; 13 ; https://www.ijpn.in/ ; ; >
-      au < manifest ; exists ; 2017 ; Indian Journal of Psychiatric Nursing Volume 14 ; 2017 ; 14 ; https://www.ijpn.in/ ; ; >
-      au < manifest ; exists ; 2018 ; Indian Journal of Psychiatric Nursing Volume 15 ; 2018 ; 15 ; https://www.ijpn.in/ ; ; >
-      au < manifest ; exists ; 2019 ; Indian Journal of Psychiatric Nursing Volume 16 ; 2019 ; 16 ; https://www.ijpn.in/ ; ; >
-      au < manifest ; exists ; 2020 ; Indian Journal of Psychiatric Nursing Volume 17 ; 2020 ; 17 ; https://www.ijpn.in/ ; ; >
+      au < ready ; exists ; 2014 ; Indian Journal of Psychiatric Nursing Volume 7 ; 2014 ; 7 ; https://www.ijpn.in/ ; ; >
+      au < ready ; exists ; 2014 ; Indian Journal of Psychiatric Nursing Volume 8 ; 2014 ; 8 ; https://www.ijpn.in/ ; ; >
+      au < ready ; exists ; 2015 ; Indian Journal of Psychiatric Nursing Volume 9 ; 2015 ; 9 ; https://www.ijpn.in/ ; ; >
+      au < ready ; exists ; 2015 ; Indian Journal of Psychiatric Nursing Volume 10 ; 2015 ; 10 ; https://www.ijpn.in/ ; ; >
+      au < ready ; exists ; 2016 ; Indian Journal of Psychiatric Nursing Volume 11 ; 2016 ; 11 ; https://www.ijpn.in/ ; ; >
+      au < ready ; exists ; 2016 ; Indian Journal of Psychiatric Nursing Volume 12 ; 2016 ; 12 ; https://www.ijpn.in/ ; ; >
+      au < ready ; exists ; 2017 ; Indian Journal of Psychiatric Nursing Volume 13 ; 2017 ; 13 ; https://www.ijpn.in/ ; ; >
+      au < ready ; exists ; 2017 ; Indian Journal of Psychiatric Nursing Volume 14 ; 2017 ; 14 ; https://www.ijpn.in/ ; ; >
+      au < ready ; exists ; 2018 ; Indian Journal of Psychiatric Nursing Volume 15 ; 2018 ; 15 ; https://www.ijpn.in/ ; ; >
+      au < ready ; exists ; 2019 ; Indian Journal of Psychiatric Nursing Volume 16 ; 2019 ; 16 ; https://www.ijpn.in/ ; ; >
+      au < ready ; exists ; 2020 ; Indian Journal of Psychiatric Nursing Volume 17 ; 2020 ; 17 ; https://www.ijpn.in/ ; ; >
       au < frozen ; exists ; 2021 ; Indian Journal of Psychiatric Nursing Volume 18 ; 2021 ; 18 ; https://www.ijpn.in/ ; ; >
       au < crawling ; exists ; 2022 ; Indian Journal of Psychiatric Nursing Volume 19 ; 2022 ; 19 ; https://www.ijpn.in/ ; ; >
 
@@ -12032,8 +12032,8 @@
       param[journal_issn] = 2589-8736
       #param[base_url] = https://www.herniasurgeryjournal.org/
 
-      au < manifest ; exists ; 2018 ; International Journal of Abdominal Wall and Hernia Surgery Volume 1 ; 2018 ; 1 ; https://www.herniasurgeryjournal.org/ ; ; >
-      au < manifest ; exists ; 2019 ; International Journal of Abdominal Wall and Hernia Surgery Volume 2 ; 2019 ; 2 ; https://www.herniasurgeryjournal.org/ ; ; >
+      au < ready ; exists ; 2018 ; International Journal of Abdominal Wall and Hernia Surgery Volume 1 ; 2018 ; 1 ; https://www.herniasurgeryjournal.org/ ; ; >
+      au < ready ; exists ; 2019 ; International Journal of Abdominal Wall and Hernia Surgery Volume 2 ; 2019 ; 2 ; https://www.herniasurgeryjournal.org/ ; ; >
       au < crawling ; exists ; 2020 ; International Journal of Abdominal Wall and Hernia Surgery Volume 3 ; 2020 ; 3 ; https://www.herniasurgeryjournal.org/ ; ; >
       au < frozen ; exists ; 2021 ; International Journal of Abdominal Wall and Hernia Surgery Volume 4 ; 2021 ; 4 ; https://www.herniasurgeryjournal.org/ ; ; >
       au < crawling ; exists ; 2022 ; International Journal of Abdominal Wall and Hernia Surgery Volume 5 ; 2022 ; 5 ; https://www.herniasurgeryjournal.org/ ; ; >
@@ -12052,7 +12052,7 @@
       #param[base_url] = https://www.ijcommdent.com/
       #move to MM Publications 2022-06, Archive will stay with Medknow until further notice
 
-      au < manifest ; exists ; 2018 ; International Journal of Community Dentistry Volume 6 ; 2018 ; 6 ; https://www.ijcommdent.com/ ; ; >
+      au < ready ; exists ; 2018 ; International Journal of Community Dentistry Volume 6 ; 2018 ; 6 ; https://www.ijcommdent.com/ ; ; >
       au < manifest ; exists ; 2019 ; International Journal of Community Dentistry Volume 7 ; 2019 ; 7 ; https://www.ijcommdent.com/ ; ; >
       au < crawling ; exists ; 2020 ; International Journal of Community Dentistry Volume 8 ; 2020 ; 8 ; https://www.ijcommdent.com/ ; ; >
       au < frozen ; exists ; 2021 ; International Journal of Community Dentistry Volume 9 ; 2021 ; 9 ; https://www.ijcommdent.com/ ; ; >
