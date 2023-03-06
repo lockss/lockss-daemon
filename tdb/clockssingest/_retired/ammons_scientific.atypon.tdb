@@ -8,8 +8,8 @@
     info[poller] = 3 ;
     info[platform] = Atypon
    
-  # Do not cause any AU to crawl publisher.
-  # Website redirects to squater.
+  # Do not cause any AU to crawl publisher. Website redirects to squater.
+  # Reprocessing content on Sage where possible.
   >
   
   plugin = org.lockss.plugin.atypon.ammonsscientific.ClockssAmmonsScientificPlugin
@@ -24,11 +24,12 @@
     >
     
     param[journal_id] = cp
+    #Moved to Sage
  
-    au < finished ; down ; 2012 ; Comprehensive Psychology Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 2012 ; Comprehensive Psychology Volume 1 [superseded] ; 1 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Comprehensive Psychology Volume 2 ; 2 ; >
     au < finished ; finished ; 2014 ; Comprehensive Psychology Volume 3 ; 3 ; >
-    au < finished ; down ; 2015 ; Comprehensive Psychology Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 2015 ; Comprehensive Psychology Volume 4 [superseded] ; 4 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -41,10 +42,10 @@
     
     param[journal_id] = it
  
-    au < finished ; down ; 2012 ; Innovative Teaching Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 2013 ; Innovative Teaching Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 2012 ; Innovative Teaching Volume 1 [superseded] ; 1 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 2013 ; Innovative Teaching Volume 2 [superseded] ; 2 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Innovative Teaching Volume 3 ; 3 ; >
-    au < finished ; down ; 2015 ; Innovative Teaching Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 2015 ; Innovative Teaching Volume 4 [superseded] ; 4 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -57,124 +58,125 @@
     >
     
     param[journal_id] = pr0
+    #Moved to Sage
  
-    au < finished ; down ; 1955 ; Psychological Reports Volume 1 ; 1 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1956 ; Psychological Reports Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1957 ; Psychological Reports Volume 3 ; 3 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1958 ; Psychological Reports Volume 4 ; 4 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1959 ; Psychological Reports Volume 5 ; 5 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1960 ; Psychological Reports Volume 6 ; 6 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1960 ; Psychological Reports Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1961 ; Psychological Reports Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1961 ; Psychological Reports Volume 9 ; 9 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1962 ; Psychological Reports Volume 10 ; 10 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1962 ; Psychological Reports Volume 11 ; 11 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1963 ; Psychological Reports Volume 12 ; 12 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1963 ; Psychological Reports Volume 13 ; 13 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1964 ; Psychological Reports Volume 14 ; 14 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1964 ; Psychological Reports Volume 15 ; 15 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1965 ; Psychological Reports Volume 16 ; 16 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1965 ; Psychological Reports Volume 17 ; 17 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1966 ; Psychological Reports Volume 18 ; 18 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1966 ; Psychological Reports Volume 19 ; 19 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1967 ; Psychological Reports Volume 20 ; 20 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1967 ; Psychological Reports Volume 21 ; 21 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1968 ; Psychological Reports Volume 22 ; 22 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1968 ; Psychological Reports Volume 23 ; 23 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1969 ; Psychological Reports Volume 24 ; 24 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1969 ; Psychological Reports Volume 25 ; 25 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1970 ; Psychological Reports Volume 26 ; 26 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1970 ; Psychological Reports Volume 27 ; 27 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1971 ; Psychological Reports Volume 28 ; 28 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1971 ; Psychological Reports Volume 29 ; 29 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1972 ; Psychological Reports Volume 30 ; 30 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1972 ; Psychological Reports Volume 31 ; 31 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1973 ; Psychological Reports Volume 32 ; 32 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1973 ; Psychological Reports Volume 33 ; 33 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1974 ; Psychological Reports Volume 34 ; 34 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1974 ; Psychological Reports Volume 35 ; 35 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1975 ; Psychological Reports Volume 36 ; 36 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1975 ; Psychological Reports Volume 37 ; 37 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1976 ; Psychological Reports Volume 38 ; 38 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1976 ; Psychological Reports Volume 39 ; 39 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1977 ; Psychological Reports Volume 40 ; 40 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1977 ; Psychological Reports Volume 41 ; 41 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1978 ; Psychological Reports Volume 42 ; 42 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1978 ; Psychological Reports Volume 43 ; 43 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1979 ; Psychological Reports Volume 44 ; 44 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1979 ; Psychological Reports Volume 45 ; 45 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1980 ; Psychological Reports Volume 46 ; 46 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1980 ; Psychological Reports Volume 47 ; 47 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1981 ; Psychological Reports Volume 48 ; 48 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1981 ; Psychological Reports Volume 49 ; 49 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1982 ; Psychological Reports Volume 50 ; 50 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1982 ; Psychological Reports Volume 51 ; 51 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1983 ; Psychological Reports Volume 52 ; 52 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1983 ; Psychological Reports Volume 53 ; 53 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1984 ; Psychological Reports Volume 54 ; 54 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1984 ; Psychological Reports Volume 55 ; 55 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1985 ; Psychological Reports Volume 56 ; 56 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1985 ; Psychological Reports Volume 57 ; 57 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1986 ; Psychological Reports Volume 58 ; 58 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1986 ; Psychological Reports Volume 59 ; 59 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1987 ; Psychological Reports Volume 60 ; 60 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1987 ; Psychological Reports Volume 61 ; 61 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1988 ; Psychological Reports Volume 62 ; 62 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1988 ; Psychological Reports Volume 63 ; 63 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1989 ; Psychological Reports Volume 64 ; 64 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1989 ; Psychological Reports Volume 65 ; 65 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1990 ; Psychological Reports Volume 66 ; 66 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1990 ; Psychological Reports Volume 67 ; 67 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1991 ; Psychological Reports Volume 68 ; 68 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1991 ; Psychological Reports Volume 69 ; 69 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1992 ; Psychological Reports Volume 70 ; 70 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1992 ; Psychological Reports Volume 71 ; 71 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1993 ; Psychological Reports Volume 72 ; 72 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1993 ; Psychological Reports Volume 73 ; 73 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1994 ; Psychological Reports Volume 74 ; 74 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1994 ; Psychological Reports Volume 75 ; 75 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1995 ; Psychological Reports Volume 76 ; 76 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1995 ; Psychological Reports Volume 77 ; 77 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1996 ; Psychological Reports Volume 78 ; 78 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1996 ; Psychological Reports Volume 79 ; 79 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1997 ; Psychological Reports Volume 80 ; 80 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1997 ; Psychological Reports Volume 81 ; 81 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1998 ; Psychological Reports Volume 82 ; 82 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1998 ; Psychological Reports Volume 83 ; 83 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1999 ; Psychological Reports Volume 84 ; 84 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1999 ; Psychological Reports Volume 85 ; 85 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 2000 ; Psychological Reports Volume 86 ; 86 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 2000 ; Psychological Reports Volume 87 ; 87 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 2001 ; Psychological Reports Volume 88 ; 88 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 2001 ; Psychological Reports Volume 89 ; 89 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 2002 ; Psychological Reports Volume 90 ; 90 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 2002 ; Psychological Reports Volume 91 ; 91 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 2003 ; Psychological Reports Volume 92 ; 92 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 2003 ; Psychological Reports Volume 93 ; 93 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 2004 ; Psychological Reports Volume 94 ; 94 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 2004 ; Psychological Reports Volume 95 ; 95 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 2005 ; Psychological Reports Volume 96 ; 96 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 2005 ; Psychological Reports Volume 97 ; 97 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 2006 ; Psychological Reports Volume 98 ; 98 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1955 ; Psychological Reports Volume 1 [superseded] ; 1 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1956 ; Psychological Reports Volume 2 [superseded] ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1957 ; Psychological Reports Volume 3 [superseded] ; 3 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1958 ; Psychological Reports Volume 4 [superseded] ; 4 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1959 ; Psychological Reports Volume 5 [superseded] ; 5 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1960 ; Psychological Reports Volume 6 [superseded] ; 6 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1960 ; Psychological Reports Volume 7 [superseded] ; 7 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1961 ; Psychological Reports Volume 8 [superseded] ; 8 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1961 ; Psychological Reports Volume 9 [superseded] ; 9 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1962 ; Psychological Reports Volume 10 [superseded] ; 10 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1962 ; Psychological Reports Volume 11 [superseded] ; 11 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1963 ; Psychological Reports Volume 12 [superseded] ; 12 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1963 ; Psychological Reports Volume 13 [superseded] ; 13 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1964 ; Psychological Reports Volume 14 [superseded] ; 14 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1964 ; Psychological Reports Volume 15 [superseded] ; 15 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1965 ; Psychological Reports Volume 16 [superseded] ; 16 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1965 ; Psychological Reports Volume 17 [superseded] ; 17 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1966 ; Psychological Reports Volume 18 [superseded] ; 18 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1966 ; Psychological Reports Volume 19 [superseded] ; 19 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1967 ; Psychological Reports Volume 20 [superseded] ; 20 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1967 ; Psychological Reports Volume 21 [superseded] ; 21 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1968 ; Psychological Reports Volume 22 [superseded] ; 22 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1968 ; Psychological Reports Volume 23 [superseded] ; 23 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1969 ; Psychological Reports Volume 24 [superseded] ; 24 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1969 ; Psychological Reports Volume 25 [superseded] ; 25 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1970 ; Psychological Reports Volume 26 [superseded] ; 26 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1970 ; Psychological Reports Volume 27 [superseded] ; 27 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1971 ; Psychological Reports Volume 28 [superseded] ; 28 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1971 ; Psychological Reports Volume 29 [superseded] ; 29 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1972 ; Psychological Reports Volume 30 [superseded] ; 30 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1972 ; Psychological Reports Volume 31 [superseded] ; 31 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1973 ; Psychological Reports Volume 32 [superseded] ; 32 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1973 ; Psychological Reports Volume 33 [superseded] ; 33 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1974 ; Psychological Reports Volume 34 [superseded] ; 34 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1974 ; Psychological Reports Volume 35 [superseded] ; 35 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1975 ; Psychological Reports Volume 36 [superseded] ; 36 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1975 ; Psychological Reports Volume 37 [superseded] ; 37 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1976 ; Psychological Reports Volume 38 [superseded] ; 38 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1976 ; Psychological Reports Volume 39 [superseded] ; 39 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1977 ; Psychological Reports Volume 40 [superseded] ; 40 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1977 ; Psychological Reports Volume 41 [superseded] ; 41 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1978 ; Psychological Reports Volume 42 [superseded] ; 42 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1978 ; Psychological Reports Volume 43 [superseded] ; 43 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1979 ; Psychological Reports Volume 44 [superseded] ; 44 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1979 ; Psychological Reports Volume 45 [superseded] ; 45 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1980 ; Psychological Reports Volume 46 [superseded] ; 46 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1980 ; Psychological Reports Volume 47 [superseded] ; 47 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1981 ; Psychological Reports Volume 48 [superseded] ; 48 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1981 ; Psychological Reports Volume 49 [superseded] ; 49 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1982 ; Psychological Reports Volume 50 [superseded] ; 50 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1982 ; Psychological Reports Volume 51 [superseded] ; 51 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1983 ; Psychological Reports Volume 52 [superseded] ; 52 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1983 ; Psychological Reports Volume 53 [superseded] ; 53 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1984 ; Psychological Reports Volume 54 [superseded] ; 54 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1984 ; Psychological Reports Volume 55 [superseded] ; 55 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1985 ; Psychological Reports Volume 56 [superseded] ; 56 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1985 ; Psychological Reports Volume 57 [superseded] ; 57 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1986 ; Psychological Reports Volume 58 [superseded] ; 58 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1986 ; Psychological Reports Volume 59 [superseded] ; 59 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1987 ; Psychological Reports Volume 60 [superseded] ; 60 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1987 ; Psychological Reports Volume 61 [superseded] ; 61 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1988 ; Psychological Reports Volume 62 [superseded] ; 62 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1988 ; Psychological Reports Volume 63 [superseded] ; 63 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1989 ; Psychological Reports Volume 64 [superseded] ; 64 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1989 ; Psychological Reports Volume 65 [superseded] ; 65 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1990 ; Psychological Reports Volume 66 [superseded] ; 66 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1990 ; Psychological Reports Volume 67 [superseded] ; 67 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1991 ; Psychological Reports Volume 68 [superseded] ; 68 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1991 ; Psychological Reports Volume 69 [superseded] ; 69 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1992 ; Psychological Reports Volume 70 [superseded] ; 70 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1992 ; Psychological Reports Volume 71 [superseded] ; 71 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1993 ; Psychological Reports Volume 72 [superseded] ; 72 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1993 ; Psychological Reports Volume 73 [superseded] ; 73 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1994 ; Psychological Reports Volume 74 [superseded] ; 74 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1994 ; Psychological Reports Volume 75 [superseded] ; 75 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1995 ; Psychological Reports Volume 76 [superseded] ; 76 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1995 ; Psychological Reports Volume 77 [superseded] ; 77 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1996 ; Psychological Reports Volume 78 [superseded] ; 78 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1996 ; Psychological Reports Volume 79 [superseded] ; 79 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1997 ; Psychological Reports Volume 80 [superseded] ; 80 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1997 ; Psychological Reports Volume 81 [superseded] ; 81 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1998 ; Psychological Reports Volume 82 [superseded] ; 82 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1998 ; Psychological Reports Volume 83 [superseded] ; 83 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1999 ; Psychological Reports Volume 84 [superseded] ; 84 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1999 ; Psychological Reports Volume 85 [superseded] ; 85 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 2000 ; Psychological Reports Volume 86 [superseded] ; 86 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 2000 ; Psychological Reports Volume 87 [superseded] ; 87 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 2001 ; Psychological Reports Volume 88 [superseded] ; 88 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 2001 ; Psychological Reports Volume 89 [superseded] ; 89 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 2002 ; Psychological Reports Volume 90 [superseded] ; 90 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 2002 ; Psychological Reports Volume 91 [superseded] ; 91 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 2003 ; Psychological Reports Volume 92 [superseded] ; 92 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 2003 ; Psychological Reports Volume 93 [superseded] ; 93 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 2004 ; Psychological Reports Volume 94 [superseded] ; 94 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 2004 ; Psychological Reports Volume 95 [superseded] ; 95 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 2005 ; Psychological Reports Volume 96 [superseded] ; 96 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 2005 ; Psychological Reports Volume 97 [superseded] ; 97 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 2006 ; Psychological Reports Volume 98 [superseded] ; 98 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2006 ; Psychological Reports Volume 99 ; 99 ; >
-    au < finished ; down ; 2007 ; Psychological Reports Volume 100 ; 100 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 2007 ; Psychological Reports Volume 101 ; 101 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 2008 ; Psychological Reports Volume 102 ; 102 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 2008 ; Psychological Reports Volume 103 ; 103 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 2009 ; Psychological Reports Volume 104 ; 104 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 2009 ; Psychological Reports Volume 105 ; 105 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 2010 ; Psychological Reports Volume 106 ; 106 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 2010 ; Psychological Reports Volume 107 ; 107 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 2011 ; Psychological Reports Volume 108 ; 108 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 2007 ; Psychological Reports Volume 100 [superseded] ; 100 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 2007 ; Psychological Reports Volume 101 [superseded] ; 101 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 2008 ; Psychological Reports Volume 102 [superseded] ; 102 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 2008 ; Psychological Reports Volume 103 [superseded] ; 103 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 2009 ; Psychological Reports Volume 104 [superseded] ; 104 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 2009 ; Psychological Reports Volume 105 [superseded] ; 105 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 2010 ; Psychological Reports Volume 106 [superseded] ; 106 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 2010 ; Psychological Reports Volume 107 [superseded] ; 107 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 2011 ; Psychological Reports Volume 108 [superseded] ; 108 ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2011 ; Psychological Reports Volume 109 [superseded] ; 109 ; > #reprocess when it moves to highwire
-    au < finished ; down ; 2012 ; Psychological Reports Volume 110 ; 110 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 2012 ; Psychological Reports Volume 111 ; 111 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 2013 ; Psychological Reports Volume 112 ; 112 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 2013 ; Psychological Reports Volume 113 ; 113 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 2014 ; Psychological Reports Volume 114 ; 114 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 2014 ; Psychological Reports Volume 115 ; 115 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 2012 ; Psychological Reports Volume 110 [superseded] ; 110 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 2012 ; Psychological Reports Volume 111 [superseded] ; 111 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 2013 ; Psychological Reports Volume 112 [superseded] ; 112 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 2013 ; Psychological Reports Volume 113 [superseded] ; 113 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 2014 ; Psychological Reports Volume 114 [superseded] ; 114 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 2014 ; Psychological Reports Volume 115 [superseded] ; 115 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2015 ; Psychological Reports Volume 116 ; 116 ; > #PD-1411 500 Internal Server Error. process after move.
-    au < finished ; down ; 2015 ; Psychological Reports Volume 117 ; 117 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 2015 ; Psychological Reports Volume 117 [superseded] ; 117 ; reingest1.clockss.org:8082 >
     
   }
 
@@ -187,128 +189,129 @@
     >
     
     param[journal_id] = pms
+    #Moved to Sage
 
-    au < finished ; down ; 1949 ; Perceptual and Motor Skills Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1950 ; Perceptual and Motor Skills Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1949 ; Perceptual and Motor Skills Volume 1 [superseded] ; 1 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1950 ; Perceptual and Motor Skills Volume 2 [superseded] ; 2 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 1951 ; Perceptual and Motor Skills Volume 3 ; 3 ; > #no articles online. TOC only. See http://www.amsciepub.com/clockss/pms/3/index.html
-    au < finished ; down ; 1952 ; Perceptual and Motor Skills Volume 4 ; 4 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1955 ; Perceptual and Motor Skills Volume 5 ; 5 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1956 ; Perceptual and Motor Skills Volume 6 ; 6 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1957 ; Perceptual and Motor Skills Volume 7 ; 7 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1958 ; Perceptual and Motor Skills Volume 8 ; 8 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1959 ; Perceptual and Motor Skills Volume 9 ; 9 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1960 ; Perceptual and Motor Skills Volume 10 ; 10 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1960 ; Perceptual and Motor Skills Volume 11 ; 11 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1961 ; Perceptual and Motor Skills Volume 12 ; 12 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1961 ; Perceptual and Motor Skills Volume 13 ; 13 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1962 ; Perceptual and Motor Skills Volume 14 ; 14 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1962 ; Perceptual and Motor Skills Volume 15 ; 15 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1963 ; Perceptual and Motor Skills Volume 16 ; 16 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1963 ; Perceptual and Motor Skills Volume 17 ; 17 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1964 ; Perceptual and Motor Skills Volume 18 ; 18 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1964 ; Perceptual and Motor Skills Volume 19 ; 19 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1965 ; Perceptual and Motor Skills Volume 20 ; 20 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1965 ; Perceptual and Motor Skills Volume 21 ; 21 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1966 ; Perceptual and Motor Skills Volume 22 ; 22 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1966 ; Perceptual and Motor Skills Volume 23 ; 23 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1967 ; Perceptual and Motor Skills Volume 24 ; 24 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1967 ; Perceptual and Motor Skills Volume 25 ; 25 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1968 ; Perceptual and Motor Skills Volume 26 ; 26 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1968 ; Perceptual and Motor Skills Volume 27 ; 27 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1969 ; Perceptual and Motor Skills Volume 28 ; 28 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1969 ; Perceptual and Motor Skills Volume 29 ; 29 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1970 ; Perceptual and Motor Skills Volume 30 ; 30 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1970 ; Perceptual and Motor Skills Volume 31 ; 31 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1971 ; Perceptual and Motor Skills Volume 32 ; 32 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1971 ; Perceptual and Motor Skills Volume 33 ; 33 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1972 ; Perceptual and Motor Skills Volume 34 ; 34 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1972 ; Perceptual and Motor Skills Volume 35 ; 35 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1973 ; Perceptual and Motor Skills Volume 36 ; 36 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1973 ; Perceptual and Motor Skills Volume 37 ; 37 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1974 ; Perceptual and Motor Skills Volume 38 ; 38 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1974 ; Perceptual and Motor Skills Volume 39 ; 39 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1975 ; Perceptual and Motor Skills Volume 40 ; 40 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1975 ; Perceptual and Motor Skills Volume 41 ; 41 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1976 ; Perceptual and Motor Skills Volume 42 ; 42 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1976 ; Perceptual and Motor Skills Volume 43 ; 43 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1977 ; Perceptual and Motor Skills Volume 44 ; 44 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1977 ; Perceptual and Motor Skills Volume 45 ; 45 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1978 ; Perceptual and Motor Skills Volume 46 ; 46 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1978 ; Perceptual and Motor Skills Volume 47 ; 47 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1979 ; Perceptual and Motor Skills Volume 48 ; 48 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1979 ; Perceptual and Motor Skills Volume 49 ; 49 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1980 ; Perceptual and Motor Skills Volume 50 ; 50 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1980 ; Perceptual and Motor Skills Volume 51 ; 51 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1981 ; Perceptual and Motor Skills Volume 52 ; 52 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1981 ; Perceptual and Motor Skills Volume 53 ; 53 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1982 ; Perceptual and Motor Skills Volume 54 ; 54 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1982 ; Perceptual and Motor Skills Volume 55 ; 55 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1983 ; Perceptual and Motor Skills Volume 56 ; 56 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1983 ; Perceptual and Motor Skills Volume 57 ; 57 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1984 ; Perceptual and Motor Skills Volume 58 ; 58 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1984 ; Perceptual and Motor Skills Volume 59 ; 59 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1985 ; Perceptual and Motor Skills Volume 60 ; 60 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1985 ; Perceptual and Motor Skills Volume 61 ; 61 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1986 ; Perceptual and Motor Skills Volume 62 ; 62 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1986 ; Perceptual and Motor Skills Volume 63 ; 63 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1987 ; Perceptual and Motor Skills Volume 64 ; 64 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1987 ; Perceptual and Motor Skills Volume 65 ; 65 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1988 ; Perceptual and Motor Skills Volume 66 ; 66 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1988 ; Perceptual and Motor Skills Volume 67 ; 67 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1989 ; Perceptual and Motor Skills Volume 68 ; 68 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1989 ; Perceptual and Motor Skills Volume 69 ; 69 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1990 ; Perceptual and Motor Skills Volume 70 ; 70 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1990 ; Perceptual and Motor Skills Volume 71 ; 71 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1991 ; Perceptual and Motor Skills Volume 72 ; 72 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1991 ; Perceptual and Motor Skills Volume 73 ; 73 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1992 ; Perceptual and Motor Skills Volume 74 ; 74 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1992 ; Perceptual and Motor Skills Volume 75 ; 75 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1993 ; Perceptual and Motor Skills Volume 76 ; 76 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1993 ; Perceptual and Motor Skills Volume 77 ; 77 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1994 ; Perceptual and Motor Skills Volume 78 ; 78 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1994 ; Perceptual and Motor Skills Volume 79 ; 79 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1995 ; Perceptual and Motor Skills Volume 80 ; 80 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1995 ; Perceptual and Motor Skills Volume 81 ; 81 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1996 ; Perceptual and Motor Skills Volume 82 ; 82 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1996 ; Perceptual and Motor Skills Volume 83 ; 83 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1997 ; Perceptual and Motor Skills Volume 84 ; 84 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 1997 ; Perceptual and Motor Skills Volume 85 ; 85 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 1998 ; Perceptual and Motor Skills Volume 86 ; 86 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 1998 ; Perceptual and Motor Skills Volume 87 ; 87 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 1999 ; Perceptual and Motor Skills Volume 88 ; 88 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 1999 ; Perceptual and Motor Skills Volume 89 ; 89 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 2000 ; Perceptual and Motor Skills Volume 90 ; 90 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 2000 ; Perceptual and Motor Skills Volume 91 ; 91 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 2001 ; Perceptual and Motor Skills Volume 92 ; 92 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 2001 ; Perceptual and Motor Skills Volume 93 ; 93 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 2002 ; Perceptual and Motor Skills Volume 94 ; 94 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 2002 ; Perceptual and Motor Skills Volume 95 ; 95 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 2003 ; Perceptual and Motor Skills Volume 96 ; 96 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 2003 ; Perceptual and Motor Skills Volume 97 ; 97 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 2004 ; Perceptual and Motor Skills Volume 98 ; 98 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 2004 ; Perceptual and Motor Skills Volume 99 ; 99 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 2005 ; Perceptual and Motor Skills Volume 100 ; 100 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 2005 ; Perceptual and Motor Skills Volume 101 ; 101 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 2006 ; Perceptual and Motor Skills Volume 102 ; 102 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 2006 ; Perceptual and Motor Skills Volume 103 ; 103 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 2007 ; Perceptual and Motor Skills Volume 104 ; 104 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 2007 ; Perceptual and Motor Skills Volume 105 ; 105 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 2008 ; Perceptual and Motor Skills Volume 106 ; 106 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 2008 ; Perceptual and Motor Skills Volume 107 ; 107 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 2009 ; Perceptual and Motor Skills Volume 108 ; 108 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 2009 ; Perceptual and Motor Skills Volume 109 ; 109 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 2010 ; Perceptual and Motor Skills Volume 110 ; 110 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 2010 ; Perceptual and Motor Skills Volume 111 ; 111 ; reingest3.clockss.org:8083 >
-    au < finished ; down ; 2011 ; Perceptual and Motor Skills Volume 112 ; 112 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 2011 ; Perceptual and Motor Skills Volume 113 ; 113 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 2012 ; Perceptual and Motor Skills Volume 114 ; 114 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 2012 ; Perceptual and Motor Skills Volume 115 ; 115 ; reingest4.clockss.org:8082 >
-    au < finished ; down ; 2013 ; Perceptual and Motor Skills Volume 116 ; 116 ; reingest5.clockss.org:8082 >
-    au < finished ; down ; 2013 ; Perceptual and Motor Skills Volume 117 ; 117 ; reingest1.clockss.org:8082 >
-    au < finished ; down ; 2014 ; Perceptual and Motor Skills Volume 118 ; 118 ; reingest2.clockss.org:8085 >
-    au < finished ; down ; 2014 ; Perceptual and Motor Skills Volume 119 ; 119 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1952 ; Perceptual and Motor Skills Volume 4 [superseded] ; 4 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1955 ; Perceptual and Motor Skills Volume 5 [superseded] ; 5 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1956 ; Perceptual and Motor Skills Volume 6 [superseded] ; 6 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1957 ; Perceptual and Motor Skills Volume 7 [superseded] ; 7 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1958 ; Perceptual and Motor Skills Volume 8 [superseded] ; 8 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1959 ; Perceptual and Motor Skills Volume 9 [superseded] ; 9 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1960 ; Perceptual and Motor Skills Volume 10 [superseded] ; 10 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1960 ; Perceptual and Motor Skills Volume 11 [superseded] ; 11 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1961 ; Perceptual and Motor Skills Volume 12 [superseded] ; 12 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1961 ; Perceptual and Motor Skills Volume 13 [superseded] ; 13 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1962 ; Perceptual and Motor Skills Volume 14 [superseded] ; 14 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1962 ; Perceptual and Motor Skills Volume 15 [superseded] ; 15 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1963 ; Perceptual and Motor Skills Volume 16 [superseded] ; 16 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1963 ; Perceptual and Motor Skills Volume 17 [superseded] ; 17 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1964 ; Perceptual and Motor Skills Volume 18 [superseded] ; 18 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1964 ; Perceptual and Motor Skills Volume 19 [superseded] ; 19 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1965 ; Perceptual and Motor Skills Volume 20 [superseded] ; 20 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1965 ; Perceptual and Motor Skills Volume 21 [superseded] ; 21 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1966 ; Perceptual and Motor Skills Volume 22 [superseded] ; 22 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1966 ; Perceptual and Motor Skills Volume 23 [superseded] ; 23 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1967 ; Perceptual and Motor Skills Volume 24 [superseded] ; 24 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1967 ; Perceptual and Motor Skills Volume 25 [superseded] ; 25 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1968 ; Perceptual and Motor Skills Volume 26 [superseded] ; 26 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1968 ; Perceptual and Motor Skills Volume 27 [superseded] ; 27 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1969 ; Perceptual and Motor Skills Volume 28 [superseded] ; 28 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1969 ; Perceptual and Motor Skills Volume 29 [superseded] ; 29 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1970 ; Perceptual and Motor Skills Volume 30 [superseded] ; 30 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1970 ; Perceptual and Motor Skills Volume 31 [superseded] ; 31 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1971 ; Perceptual and Motor Skills Volume 32 [superseded] ; 32 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1971 ; Perceptual and Motor Skills Volume 33 [superseded] ; 33 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1972 ; Perceptual and Motor Skills Volume 34 [superseded] ; 34 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1972 ; Perceptual and Motor Skills Volume 35 [superseded] ; 35 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1973 ; Perceptual and Motor Skills Volume 36 [superseded] ; 36 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1973 ; Perceptual and Motor Skills Volume 37 [superseded] ; 37 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1974 ; Perceptual and Motor Skills Volume 38 [superseded] ; 38 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1974 ; Perceptual and Motor Skills Volume 39 [superseded] ; 39 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1975 ; Perceptual and Motor Skills Volume 40 [superseded] ; 40 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1975 ; Perceptual and Motor Skills Volume 41 [superseded] ; 41 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1976 ; Perceptual and Motor Skills Volume 42 [superseded] ; 42 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1976 ; Perceptual and Motor Skills Volume 43 [superseded] ; 43 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1977 ; Perceptual and Motor Skills Volume 44 [superseded] ; 44 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1977 ; Perceptual and Motor Skills Volume 45 [superseded] ; 45 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1978 ; Perceptual and Motor Skills Volume 46 [superseded] ; 46 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1978 ; Perceptual and Motor Skills Volume 47 [superseded] ; 47 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1979 ; Perceptual and Motor Skills Volume 48 [superseded] ; 48 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1979 ; Perceptual and Motor Skills Volume 49 [superseded] ; 49 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1980 ; Perceptual and Motor Skills Volume 50 [superseded] ; 50 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1980 ; Perceptual and Motor Skills Volume 51 [superseded] ; 51 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1981 ; Perceptual and Motor Skills Volume 52 [superseded] ; 52 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1981 ; Perceptual and Motor Skills Volume 53 [superseded] ; 53 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1982 ; Perceptual and Motor Skills Volume 54 [superseded] ; 54 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1982 ; Perceptual and Motor Skills Volume 55 [superseded] ; 55 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1983 ; Perceptual and Motor Skills Volume 56 [superseded] ; 56 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1983 ; Perceptual and Motor Skills Volume 57 [superseded] ; 57 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1984 ; Perceptual and Motor Skills Volume 58 [superseded] ; 58 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1984 ; Perceptual and Motor Skills Volume 59 [superseded] ; 59 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1985 ; Perceptual and Motor Skills Volume 60 [superseded] ; 60 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1985 ; Perceptual and Motor Skills Volume 61 [superseded] ; 61 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1986 ; Perceptual and Motor Skills Volume 62 [superseded] ; 62 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1986 ; Perceptual and Motor Skills Volume 63 [superseded] ; 63 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1987 ; Perceptual and Motor Skills Volume 64 [superseded] ; 64 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1987 ; Perceptual and Motor Skills Volume 65 [superseded] ; 65 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1988 ; Perceptual and Motor Skills Volume 66 [superseded] ; 66 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1988 ; Perceptual and Motor Skills Volume 67 [superseded] ; 67 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1989 ; Perceptual and Motor Skills Volume 68 [superseded] ; 68 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1989 ; Perceptual and Motor Skills Volume 69 [superseded] ; 69 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1990 ; Perceptual and Motor Skills Volume 70 [superseded] ; 70 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1990 ; Perceptual and Motor Skills Volume 71 [superseded] ; 71 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1991 ; Perceptual and Motor Skills Volume 72 [superseded] ; 72 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1991 ; Perceptual and Motor Skills Volume 73 [superseded] ; 73 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1992 ; Perceptual and Motor Skills Volume 74 [superseded] ; 74 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1992 ; Perceptual and Motor Skills Volume 75 [superseded] ; 75 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1993 ; Perceptual and Motor Skills Volume 76 [superseded] ; 76 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1993 ; Perceptual and Motor Skills Volume 77 [superseded] ; 77 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1994 ; Perceptual and Motor Skills Volume 78 [superseded] ; 78 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1994 ; Perceptual and Motor Skills Volume 79 [superseded] ; 79 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1995 ; Perceptual and Motor Skills Volume 80 [superseded] ; 80 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1995 ; Perceptual and Motor Skills Volume 81 [superseded] ; 81 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1996 ; Perceptual and Motor Skills Volume 82 [superseded] ; 82 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1996 ; Perceptual and Motor Skills Volume 83 [superseded] ; 83 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1997 ; Perceptual and Motor Skills Volume 84 [superseded] ; 84 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 1997 ; Perceptual and Motor Skills Volume 85 [superseded] ; 85 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 1998 ; Perceptual and Motor Skills Volume 86 [superseded] ; 86 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 1998 ; Perceptual and Motor Skills Volume 87 [superseded] ; 87 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 1999 ; Perceptual and Motor Skills Volume 88 [superseded] ; 88 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 1999 ; Perceptual and Motor Skills Volume 89 [superseded] ; 89 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 2000 ; Perceptual and Motor Skills Volume 90 [superseded] ; 90 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 2000 ; Perceptual and Motor Skills Volume 91 [superseded] ; 91 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 2001 ; Perceptual and Motor Skills Volume 92 [superseded] ; 92 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 2001 ; Perceptual and Motor Skills Volume 93 [superseded] ; 93 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 2002 ; Perceptual and Motor Skills Volume 94 [superseded] ; 94 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 2002 ; Perceptual and Motor Skills Volume 95 [superseded] ; 95 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 2003 ; Perceptual and Motor Skills Volume 96 [superseded] ; 96 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 2003 ; Perceptual and Motor Skills Volume 97 [superseded] ; 97 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 2004 ; Perceptual and Motor Skills Volume 98 [superseded] ; 98 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 2004 ; Perceptual and Motor Skills Volume 99 [superseded] ; 99 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 2005 ; Perceptual and Motor Skills Volume 100 [superseded] ; 100 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 2005 ; Perceptual and Motor Skills Volume 101 [superseded] ; 101 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 2006 ; Perceptual and Motor Skills Volume 102 [superseded] ; 102 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 2006 ; Perceptual and Motor Skills Volume 103 [superseded] ; 103 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 2007 ; Perceptual and Motor Skills Volume 104 [superseded] ; 104 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 2007 ; Perceptual and Motor Skills Volume 105 [superseded] ; 105 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 2008 ; Perceptual and Motor Skills Volume 106 [superseded] ; 106 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 2008 ; Perceptual and Motor Skills Volume 107 [superseded] ; 107 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 2009 ; Perceptual and Motor Skills Volume 108 [superseded] ; 108 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 2009 ; Perceptual and Motor Skills Volume 109 [superseded] ; 109 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 2010 ; Perceptual and Motor Skills Volume 110 [superseded] ; 110 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 2010 ; Perceptual and Motor Skills Volume 111 [superseded] ; 111 ; reingest3.clockss.org:8083 >
+    au < finished ; superseded ; 2011 ; Perceptual and Motor Skills Volume 112 [superseded] ; 112 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 2011 ; Perceptual and Motor Skills Volume 113 [superseded] ; 113 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 2012 ; Perceptual and Motor Skills Volume 114 [superseded] ; 114 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 2012 ; Perceptual and Motor Skills Volume 115 [superseded] ; 115 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 2013 ; Perceptual and Motor Skills Volume 116 [superseded] ; 116 ; reingest5.clockss.org:8082 >
+    au < finished ; superseded ; 2013 ; Perceptual and Motor Skills Volume 117 [superseded] ; 117 ; reingest1.clockss.org:8082 >
+    au < finished ; superseded ; 2014 ; Perceptual and Motor Skills Volume 118 [superseded] ; 118 ; reingest2.clockss.org:8085 >
+    au < finished ; superseded ; 2014 ; Perceptual and Motor Skills Volume 119 [superseded] ; 119 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2015 ; Perceptual and Motor Skills Volume 120 ; 120 ; > #PD-1411 500 Internal Server Error. process after move.
-    au < finished ; down ; 2015 ; Perceptual and Motor Skills Volume 121 ; 121 ; reingest4.clockss.org:8082 >
+    au < finished ; superseded ; 2015 ; Perceptual and Motor Skills Volume 121 [superseded] ; 121 ; reingest4.clockss.org:8082 >
 
   }
 }
