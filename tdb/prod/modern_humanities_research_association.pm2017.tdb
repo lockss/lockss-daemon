@@ -18,13 +18,13 @@
 
       attr[journal_id] = 819
 
-      au < manifest ; 2003 ; Austrian Studies Volume 11 [2003] ; 16221 >
-      au < manifest ; 2004 ; Austrian Studies Volume 12 [2004] ; 16222 >
-      au < manifest ; 2005 ; Austrian Studies Volume 13 [2005] ; 16223 >
-      au < manifest ; 2006 ; Austrian Studies Volume 14 [2006] ; 16224 >
-      au < manifest ; 2007 ; Austrian Studies Volume 15 [2007] ; 16225 >
-      au < manifest ; 2008 ; Austrian Studies Volume 16 [2008] ; 16226 >
-      au < manifest ; 2009 ; Austrian Studies Volume 17 [2009] ; 16227 >
+      au < ready ; 2003 ; Austrian Studies Volume 11 [2003] ; 16221 >
+      au < ready ; 2004 ; Austrian Studies Volume 12 [2004] ; 16222 >
+      au < ready ; 2005 ; Austrian Studies Volume 13 [2005] ; 16223 >
+      au < ready ; 2006 ; Austrian Studies Volume 14 [2006] ; 16224 >
+      au < ready ; 2007 ; Austrian Studies Volume 15 [2007] ; 16225 >
+      au < ready ; 2008 ; Austrian Studies Volume 16 [2008] ; 16226 >
+      au < ready ; 2009 ; Austrian Studies Volume 17 [2009] ; 16227 >
       au < released ; 2010 ; Austrian Studies Volume 18 [2010] ; 16228 >
       au < released ; 2011 ; Austrian Studies Volume 19 [2011] ; 16229 >
       au < released ; 2012 ; Austrian Studies Volume 20 [2012] ; 16230 >
@@ -50,15 +50,15 @@
 
       attr[journal_id] = 822
 
-      au < manifest ; 2001 ; Modern Language Review Volume 96 [2001] ; 16409 >
-      au < manifest ; 2002 ; Modern Language Review Volume 97 [2002] ; 16410 >
-      au < manifest ; 2003 ; Modern Language Review Volume 98 [2003] ; 16411 >
-      au < manifest ; 2004 ; Modern Language Review Volume 99 [2004] ; 16412 >
-      au < manifest ; 2005 ; Modern Language Review Volume 100 [2005] ; 16413 >
-      au < manifest ; 2006 ; Modern Language Review Volume 101 [2006] ; 16414 >
-      au < manifest ; 2007 ; Modern Language Review Volume 102 [2007] ; 16415 >
-      au < manifest ; 2008 ; Modern Language Review Volume 103 [2008] ; 16416 >
-      au < manifest ; 2009 ; Modern Language Review Volume 104 [2009] ; 16417 >
+      au < ready ; 2001 ; Modern Language Review Volume 96 [2001] ; 16409 >
+      au < ready ; 2002 ; Modern Language Review Volume 97 [2002] ; 16410 >
+      au < ready ; 2003 ; Modern Language Review Volume 98 [2003] ; 16411 >
+      au < ready ; 2004 ; Modern Language Review Volume 99 [2004] ; 16412 >
+      au < ready ; 2005 ; Modern Language Review Volume 100 [2005] ; 16413 >
+      au < ready ; 2006 ; Modern Language Review Volume 101 [2006] ; 16414 >
+      au < ready ; 2007 ; Modern Language Review Volume 102 [2007] ; 16415 >
+      au < ready ; 2008 ; Modern Language Review Volume 103 [2008] ; 16416 >
+      au < ready ; 2009 ; Modern Language Review Volume 104 [2009] ; 16417 >
       au < released ; 2010 ; Modern Language Review Volume 105 [2010] ; 16418 >
       au < released ; 2011 ; Modern Language Review Volume 106 [2011] ; 16419 >
       au < released ; 2012 ; Modern Language Review Volume 107 [2012] ; 16420 >
@@ -71,7 +71,7 @@
       au < released ; 2019 ; Modern Language Review Volume 114 [2019] ; 16427 >
       au < released ; 2020 ; Modern Language Review Volume 115 [2020] ; 16428 >
       au < released ; 2021 ; Modern Language Review Volume 116 [2021] ; 16429 >
-      au < manifest ; 2022 ; Modern Language Review Volume 117 [2022] ; 16835 >
+      au < ready ; 2022 ; Modern Language Review Volume 117 [2022] ; 16835 >
 
     }
 
@@ -85,15 +85,15 @@
 
       attr[journal_id] = 821
 
-      au < manifest ; 2001 ; Portuguese Studies Volume 17 [2001] ; 16239 >
-      au < manifest ; 2002 ; Portuguese Studies Volume 18 [2002] ; 16240 >
-      au < manifest ; 2003 ; Portuguese Studies Volume 19 [2003] ; 16241 >
-      au < manifest ; 2004 ; Portuguese Studies Volume 20 [2004] ; 16242 >
-      au < manifest ; 2005 ; Portuguese Studies Volume 21 [2005] ; 16243 >
-      au < manifest ; 2006 ; Portuguese Studies Volume 22 [2006] ; 16244 >
-      au < manifest ; 2007 ; Portuguese Studies Volume 23 [2007] ; 16245 >
-      au < manifest ; 2008 ; Portuguese Studies Volume 24 [2008] ; 16246 >
-      au < manifest ; 2009 ; Portuguese Studies Volume 25 [2009] ; 16247 >
+      au < ready ; 2001 ; Portuguese Studies Volume 17 [2001] ; 16239 >
+      au < ready ; 2002 ; Portuguese Studies Volume 18 [2002] ; 16240 >
+      au < ready ; 2003 ; Portuguese Studies Volume 19 [2003] ; 16241 >
+      au < ready ; 2004 ; Portuguese Studies Volume 20 [2004] ; 16242 >
+      au < ready ; 2005 ; Portuguese Studies Volume 21 [2005] ; 16243 >
+      au < ready ; 2006 ; Portuguese Studies Volume 22 [2006] ; 16244 >
+      au < ready ; 2007 ; Portuguese Studies Volume 23 [2007] ; 16245 >
+      au < ready ; 2008 ; Portuguese Studies Volume 24 [2008] ; 16246 >
+      au < ready ; 2009 ; Portuguese Studies Volume 25 [2009] ; 16247 >
       au < released ; 2010 ; Portuguese Studies Volume 26 [2010] ; 16248 >
       au < released ; 2011 ; Portuguese Studies Volume 27 [2011] ; 16249 >
       au < released ; 2012 ; Portuguese Studies Volume 28 [2012] ; 16250 >
@@ -106,7 +106,7 @@
       au < released ; 2019 ; Portuguese Studies Volume 35 [2019] ; 16257 >
       au < released ; 2020 ; Portuguese Studies Volume 36 [2020] ; 16258 >
       au < released ; 2021 ; Portuguese Studies Volume 37 [2021] ; 16259 >
-      au < manifest ; 2022 ; Portuguese Studies Volume 38 [2022] ; 17197 >
+      au < ready ; 2022 ; Portuguese Studies Volume 38 [2022] ; 17197 >
 
     }
 
@@ -141,7 +141,7 @@
       au < released ; 2019 ; Slavonic and East European Review Volume 97 [2019] ; 16278 >
       au < released ; 2020 ; Slavonic and East European Review Volume 98 [2020] ; 16279 >
       au < released ; 2021 ; Slavonic and East European Review Volume 99 [2021] ; 16280 >
-      au < manifest ; 2022 ; Slavonic and East European Review Volume 100 [2022] ; 17392 >
+      au < ready ; 2022 ; Slavonic and East European Review Volume 100 [2022] ; 17392 >
 
     }
 
@@ -176,7 +176,7 @@
       au < released ; 2019 ; The Yearbook of English Studies Volume 49 [2019] ; 16299 >
       au < released ; 2020 ; The Yearbook of English Studies Volume 50 [2020] ; 16300 >
       au < released ; 2021 ; The Yearbook of English Studies Volume 51 [2021] ; 16697 >
-      au < manifest ; 2022 ; The Yearbook of English Studies Volume 52 [2022] ; 17393 >
+      au < ready ; 2022 ; The Yearbook of English Studies Volume 52 [2022] ; 17393 >
 
     }
 
