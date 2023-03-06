@@ -28,8 +28,8 @@
     
     #published 1980-present
 
-    au < exists ; exists ; 2008 ; 2008 ; Lecturas de Economía Volume 68-69 ; 68-69 ; >
-    au < exists ; exists ; 2009 ; 2009 ; Lecturas de Economía Volume 70-71 ; 70-71 ; >
+    au < manifest ; exists ; 2008 ; 2008 ; Lecturas de Economía Volume 68-69 ; 68-69 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; Lecturas de Economía Volume 70-71 ; 70-71 ; >
     au < finished ; crawling ; 2010 ; 2010 ; Lecturas de Economía Volume 72-73 ; 72-73 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2011 ; 2011 ; Lecturas de Economía Volume 74-75 ; 74-75 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2012 ; 2012 ; Lecturas de Economía Volume 76-77 ; 76-77 ; reingest3.clockss.org:8083 >
@@ -43,7 +43,7 @@
     au < deepCrawl ; exists ; 2020 ; 2020 ; Lecturas de Economía Volume 92-93 ; 92-93 ; >
     au < deepCrawl ; exists ; 2021 ; 2021 ; Lecturas de Economía Volume 94-95 ; 94-95 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Lecturas de Economía Volume 96-97 ; 96-97 ; >
-    au < exists ; exists ; 2023 ; 2023 ; Lecturas de Economía Volume 98 ; 98 ; >
+    au < manifest ; exists ; 2023 ; 2023 ; Lecturas de Economía Volume 98 ; 98 ; >
 
     }
 

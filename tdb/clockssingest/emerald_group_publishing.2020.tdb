@@ -14324,7 +14324,7 @@
     au < manifest ; exists ; 2020 ; Applied Economic Analysis Volume 28 ; 28 ; >
     au < manifest ; exists ; 2021 ; Applied Economic Analysis Volume 29 ; 29 ; >
     au < manifest ; exists ; 2022 ; Applied Economic Analysis Volume 30 ; 30 ; >
-    au < expected ; exists ; 2023 ; Applied Economic Analysis Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2023 ; Applied Economic Analysis Volume 31 ; 31 ; >
 
   }
 
@@ -14393,14 +14393,14 @@
 
     param[journal_issn] = 2459-9700
 
-    au < exists ; exists ; 2016 ; Asian Journal of Accounting Research Volume 1 ; 1 ; >
-    au < exists ; exists ; 2017 ; Asian Journal of Accounting Research Volume 2 ; 2 ; >
-    au < exists ; exists ; 2018 ; Asian Journal of Accounting Research Volume 3 ; 3 ; >
-    au < exists ; exists ; 2019 ; Asian Journal of Accounting Research Volume 4 ; 4 ; >
-    au < exists ; exists ; 2020 ; Asian Journal of Accounting Research Volume 5 ; 5 ; >
-    au < exists ; exists ; 2021 ; Asian Journal of Accounting Research Volume 6 ; 6 ; >
-    au < exists ; exists ; 2022 ; Asian Journal of Accounting Research Volume 7 ; 7 ; >
-    au < expected ; exists ; 2023 ; Asian Journal of Accounting Research Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2016 ; Asian Journal of Accounting Research Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2017 ; Asian Journal of Accounting Research Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2018 ; Asian Journal of Accounting Research Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2019 ; Asian Journal of Accounting Research Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2020 ; Asian Journal of Accounting Research Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2021 ; Asian Journal of Accounting Research Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2022 ; Asian Journal of Accounting Research Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2023 ; Asian Journal of Accounting Research Volume 8 ; 8 ; >
 
   }
 
@@ -14476,7 +14476,7 @@
     au < manifest ; exists ; 2020 ; European Journal of Management & Business Economics Volume 29 ; 29 ; >
     au < manifest ; exists ; 2021 ; European Journal of Management & Business Economics Volume 30 ; 30 ; >
     au < manifest ; exists ; 2022 ; European Journal of Management & Business Economics Volume 31 ; 31 ; >
-    au < expected ; exists ; 2023 ; European Journal of Management & Business Economics Volume 32 ; 32 ; >
+    au < manifest ; exists ; 2023 ; European Journal of Management & Business Economics Volume 32 ; 32 ; >
 
   }
 
@@ -14812,7 +14812,7 @@
     au < manifest ; exists ; 2020 ; Journal of Derivatives and Quantitative Studies Volume 28 ; 28 ; >
     au < manifest ; exists ; 2021 ; Journal of Derivatives and Quantitative Studies Volume 29 ; 29 ; >
     au < manifest ; exists ; 2022 ; Journal of Derivatives and Quantitative Studies Volume 30 ; 30 ; >
-    au < expected ; exists ; 2023 ; Journal of Derivatives and Quantitative Studies Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2023 ; Journal of Derivatives and Quantitative Studies Volume 31 ; 31 ; >
 
   }
 
@@ -14865,11 +14865,11 @@
 
     param[journal_issn] = 2586-940X
 
-    au < exists ; exists ; 2018 ; Journal of Health Research Volume 32 ; 32 ; >
-    au < exists ; exists ; 2019 ; Journal of Health Research Volume 33 ; 33 ; >
-    au < exists ; exists ; 2020 ; Journal of Health Research Volume 34 ; 34 ; >
-    au < exists ; exists ; 2021 ; Journal of Health Research Volume 35 ; 35 ; >
-    au < exists ; exists ; 2022 ; Journal of Health Research Volume 36 ; 36 ; >
+    au < manifest ; exists ; 2018 ; Journal of Health Research Volume 32 ; 32 ; >
+    au < manifest ; exists ; 2019 ; Journal of Health Research Volume 33 ; 33 ; >
+    au < manifest ; exists ; 2020 ; Journal of Health Research Volume 34 ; 34 ; >
+    au < manifest ; exists ; 2021 ; Journal of Health Research Volume 35 ; 35 ; >
+    au < manifest ; exists ; 2022 ; Journal of Health Research Volume 36 ; 36 ; >
     au < expected ; exists ; 2023 ; Journal of Health Research Volume 37 ; 37 ; >
 
   }
@@ -15068,7 +15068,7 @@
     au < manifest ; exists ; 2020 ; Maritme Business Review Volume 5 ; 5 ; >
     au < manifest ; exists ; 2021 ; Maritme Business Review Volume 6 ; 6 ; >
     au < manifest ; exists ; 2022 ; Maritme Business Review Volume 7 ; 7 ; >
-    au < expected ; exists ; 2023 ; Maritme Business Review Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2023 ; Maritme Business Review Volume 8 ; 8 ; >
 
   }
 
@@ -15184,12 +15184,12 @@
 
     param[journal_issn] = 2399-1747
 
-    au < exists ; exists ; 2017 ; PSU Research Review Volume 1 ; 1 ; >
-    au < exists ; exists ; 2018 ; PSU Research Review Volume 2 ; 2 ; >
-    au < exists ; exists ; 2019 ; PSU Research Review Volume 3 ; 3 ; >
-    au < exists ; exists ; 2020 ; PSU Research Review Volume 4 ; 4 ; >
-    au < exists ; exists ; 2021 ; PSU Research Review Volume 5 ; 5 ; >
-    au < exists ; exists ; 2022 ; PSU Research Review Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2017 ; PSU Research Review Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2018 ; PSU Research Review Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2019 ; PSU Research Review Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2020 ; PSU Research Review Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2021 ; PSU Research Review Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2022 ; PSU Research Review Volume 6 ; 6 ; >
     au < expected ; exists ; 2023 ; PSU Research Review Volume 7 ; 7 ; >
 
   }
@@ -15340,9 +15340,9 @@
 
     param[journal_issn] = 2633-1225
 
-    au < exists ; exists ; 2020 ; Tourism Critiques Volume 1 ; 1 ; >
-    au < exists ; exists ; 2021 ; Tourism Critiques Volume 2 ; 2 ; >
-    au < exists ; exists ; 2022 ; Tourism Critiques Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2020 ; Tourism Critiques Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2021 ; Tourism Critiques Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2022 ; Tourism Critiques Volume 3 ; 3 ; >
     au < expected ; exists ; 2023 ; Tourism Critiques Volume 4 ; 4 ; >
 
   }
