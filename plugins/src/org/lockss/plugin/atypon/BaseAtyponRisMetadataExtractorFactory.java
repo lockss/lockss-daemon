@@ -117,7 +117,7 @@ implements FileMetadataExtractorFactory {
       // the "view corrected article"-https://journals.sagepub.com/doi/10.1177/03635465211063901
 
       String ris_type = am.getRaw("TY");
-      if ( !ris_type.contains("BOOK") && !ris_type.contains("CHAP") ) {
+      if ( !ris_type.toUpperCase().contains("BOOK") && !ris_type.toUpperCase().contains("CHAP") ) {
         if (am.getRaw("VL") == null) {
           log.debug3("checking VL: VL is empty, no raw volume, cu = " + cu.getUrl());
           return;
@@ -163,7 +163,7 @@ implements FileMetadataExtractorFactory {
       // protect against counting overcrawled articles by checking against
       // values from the TDB file - differentiate between book items and journal itesm
       ArchivalUnit au = cu.getArchivalUnit();
-      if ( ris_type.contains("BOOK") || ris_type.contains("CHAP") ) {
+      if ( ris_type.toUpperCase().contains("BOOK") || ris_type.toUpperCase().contains("CHAP") ) {
         if (!BaseAtyponMetadataUtil.metadataMatchesBookTdb(au, am)) {
           return;
         }
@@ -209,7 +209,7 @@ implements FileMetadataExtractorFactory {
        * There are differences between books and journals, so fork for titles
        * and metadata check
        */ 
-      if ( ris_type.contains("BOOK") || ris_type.contains("CHAP") ) {
+      if ( ris_type.toUpperCase().contains("BOOK") || ris_type.toUpperCase().contains("CHAP") ) {
         //BOOK in some form
         // T1 is the primary title - of the chapter for a book chapter, or book for a complete book
         // T2 is the next title up - of the book for a chapter, of the series for a book
@@ -221,7 +221,7 @@ implements FileMetadataExtractorFactory {
           }
         }
 
-        if (ris_type.contains("CHAP")) {
+        if (ris_type.toUpperCase().contains("CHAP")) {
           // PROCEEDINGS ISSUE - Proceedings cannot have children of type CHAP
           // so if the publisher is declaring items as CHAP then we shouldn't be calling
           // this a proceeding, it should be a BOOK
