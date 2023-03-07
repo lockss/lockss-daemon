@@ -70,8 +70,8 @@
       au < released ; 2021 ; Irish Studies in International Affairs Volume 32 [2021] ; 16345 >
       au < ready ; 2022 ; Irish Studies in International Affairs Volume 33 [2022] ; 16879 >
 
-      au < manifest ; 2018 ; Reflections on the Northern Ireland Conflict and Peace Process ; 16979 >
-      au < manifest ; 2019 ; 100 years of Irish Foreign Policy 2019 ; 16837 >
+      au < testing ; 2018 ; Reflections on the Northern Ireland Conflict and Peace Process ; 16979 >
+      au < testing ; 2019 ; 100 years of Irish Foreign Policy 2019 ; 16837 >
 
     }
 
@@ -101,10 +101,10 @@
       au < released ; 2017 ; Irish Journal of Earth Sciences Volume 35 [2017] ; 16375 >
       au < released ; 2018 ; Irish Journal of Earth Sciences Volume 36 [2018] ; 16374 >
       au < released ; 2019 ; Irish Journal of Earth Sciences Volume 37 [2019] ; 16373 >
-      au < manifest ; 2019 ; Special supplement on the Quaternary of Ireland 2019 ; 16836 >
+      au < testing ; 2019 ; Special supplement on the Quaternary of Ireland 2019 ; 16836 >
       au < manifest ; 2020 ; Irish Journal of Earth Sciences Volume 38 [2020] ; 16372 >
       au < released ; 2021 ; Irish Journal of Earth Sciences Volume 39 [2021] ; 16371 >
-      au < manifest ; 2022 ; Irish Journal of Earth Sciences Volume 40 [2022] ; 17395 >
+      au < testing ; 2022 ; Irish Journal of Earth Sciences Volume 40 [2022] ; 17395 >
 
     }
 
@@ -117,10 +117,6 @@
 
       attr[journal_id] = 810
 
-      au < manifest ; 2019 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 119B [2019] ; 16327 >
-      au < released ; 2020 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 120B [2020] ; 16326 >
-      au < released ; 2021 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 121B [2021] ; 16325 >
-      au < ready ; 2022 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 122B [2022] ; 17176 >
       au < released ; 2002 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 102B [2002] ; 16344 >
       au < released ; 2003 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 103B [2003] ; 16343 >
       au < released ; 2004 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 104B [2004] ; 16342 >
@@ -138,6 +134,10 @@
       au < released ; 2016 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 116B [2016] ; 16330 >
       au < released ; 2017 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 117B [2017] ; 16329 >
       au < released ; 2018 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 118B [2018] ; 16328 >
+      au < manifest ; 2019 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 119B [2019] ; 16327 >
+      au < released ; 2020 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 120B [2020] ; 16326 >
+      au < released ; 2021 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 121B [2021] ; 16325 >
+      au < ready ; 2022 ; Biology and Environment: Proceedings of the Royal Irish Academy Volume 122B [2022] ; 17176 >
 
     }
 
@@ -150,10 +150,6 @@
 
       attr[journal_id] = 814
 
-      au < released ; 2019 ; Mathematical Proceedings of the Royal Irish Academy Volume 119A [2019] ; 16465 >
-      au < released ; 2020 ; Mathematical Proceedings of the Royal Irish Academy Volume 120A [2020] ; 16464 >
-      au < released ; 2021 ; Mathematical Proceedings of the Royal Irish Academy Volume 121A [2021] ; 16619 >
-      au < ready ; 2022 ; Mathematical Proceedings of the Royal Irish Academy Volume 122A [2022] ; 16874 >
       au < released ; 2002 ; Mathematical Proceedings of the Royal Irish Academy Volume 102A [2002] ; 16482 >
       au < released ; 2003 ; Mathematical Proceedings of the Royal Irish Academy Volume 103A [2003] ; 16481 >
       au < released ; 2004 ; Mathematical Proceedings of the Royal Irish Academy Volume 104A [2004] ; 16480 >
@@ -171,6 +167,10 @@
       au < released ; 2016 ; Mathematical Proceedings of the Royal Irish Academy Volume 116A [2016] ; 16468 >
       au < released ; 2017 ; Mathematical Proceedings of the Royal Irish Academy Volume 117A [2017] ; 16467 >
       au < released ; 2018 ; Mathematical Proceedings of the Royal Irish Academy Volume 118A [2018] ; 16466 >
+      au < released ; 2019 ; Mathematical Proceedings of the Royal Irish Academy Volume 119A [2019] ; 16465 >
+      au < released ; 2020 ; Mathematical Proceedings of the Royal Irish Academy Volume 120A [2020] ; 16464 >
+      au < released ; 2021 ; Mathematical Proceedings of the Royal Irish Academy Volume 121A [2021] ; 16619 >
+      au < ready ; 2022 ; Mathematical Proceedings of the Royal Irish Academy Volume 122A [2022] ; 16874 >
       au < manifest ; 2023 ; Mathematical Proceedings of the Royal Irish Academy Volume 123A [2023] ; 17396 >
 
     }
@@ -205,7 +205,7 @@
       au < released ; 2020 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 120A [2020] ; 16390 >
       au < released ; 2021 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 121A [2021] ; 16696 >
       au < ready ; 2022 ; Proceedings of the Royal Irish Academy: Archaeology, Culture, History, Literature Volume 122A [2022] ; 17397 >
-      au < manifest ; 2022 ; Proceedings of the Royal Irish Academy: The Mesolithic of Ireland ; 47920 >
+      au < testing ; 2022 ; Proceedings of the Royal Irish Academy: The Mesolithic of Ireland ; 47920 >
 
     }
 
