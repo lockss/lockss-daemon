@@ -1236,16 +1236,35 @@
   {
 
       title <
-        name = Studies on National Movements
+        name = Studies on National Movements ;
+        eissn = 2295-1466
       >
 
       #published 2013-present
       param[journal_id] = snm
 
-      au < exists ; exists ; 2013 ; 2013 ; 2013 ; Studies on National Movements 2013 Volume 2013 ; >
-      au < exists ; exists ; 2014 ; 2014 ; 2014 ; Studies on National Movements 2014 Volume 2014 ; >
-      au < exists ; exists ; 2015 ; 2015 ; 2015 ; Studies on National Movements 2015 Volume 2015 ; >
-      au < exists ; exists ; 2019 ; 2019 ; 2019 ; Studies on National Movements 2019 Volume 2019 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; 2013 ; Studies on National Movements Volume 2013 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; 2014 ; Studies on National Movements Volume 2014 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; 2015 ; Studies on National Movements Volume 2015 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; 2019 ; Studies on National Movements Volume 2019 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Studies on National Movements Volume 2020 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Studies on National Movements Volume 2021 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; 2022 ; Studies on National Movements Volume 2022 ; >
+
+  }
+
+  {
+
+      title <
+        name = Radices ;
+        eissn = 2736-7770
+      >
+
+      #published 2021-present
+      param[journal_id] = radices
+
+      au < exists ; exists ; 2021 ; 2021 ; 2021 ; Radices Volume 2021 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; 2022 ; Radices Volume 2022 ; >
 
   }
 
