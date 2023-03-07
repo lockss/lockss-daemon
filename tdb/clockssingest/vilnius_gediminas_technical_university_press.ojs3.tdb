@@ -31,9 +31,9 @@
 
       param[journal_id] = Aviation
 
-      au < finished ; frozen ; 2006 ; Aviation Volume 2006 ; 3 ; 2006 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2006 ; Aviation Volume 2006 ; 3 ; 2006 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2007 ; Aviation Volume 2007 ; 4 ; 2007 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2008 ; Aviation Volume 2008 ; 5 ; 2008 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2008 ; Aviation Volume 2008 ; 5 ; 2008 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2009 ; Aviation Volume 2009 ; 6 ; 2009 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2010 ; Aviation Volume 2010 ; 7 ; 2010 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
       au < finished ; finished ; 2011 ; Aviation Volume 2011 ; 8 ; 2011 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
@@ -184,7 +184,7 @@
       au < finished ; finished ; 2018 ; Engineering Structures and Technologies Volume 2018 ; 10 ; 2018 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
       au < finished ; finished ; 2019 ; Engineering Structures and Technologies Volume 2019 ; 11 ; 2019 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083>
       au < deepCrawl ; exists ; 2020 ; Engineering Structures and Technologies Volume 2020 ; 12 ; 2020 ; https://journals.vgtu.lt/ ; >
-      au < finished ; frozen ; 2021 ; Engineering Structures and Technologies Volume 2021 ; 13 ; 2021 ; https://journals.vilniustech.lt/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2021 ; Engineering Structures and Technologies Volume 2021 ; 13 ; 2021 ; https://journals.vilniustech.lt/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2022 ; Engineering Structures and Technologies Volume 2022 ; 14 ; 2022 ; https://journals.vilniustech.lt/ ; >
 
   }
@@ -201,10 +201,10 @@
 
       au < finished ; frozen ; 2004 ; Geodesy and Cartography Volume 2004 ; 1 ; 2004 ; https://journals.vilniustech.lt/ ; reingest2.clockss.org:8085 >
       au < manifest ; exists ; 2005 ; Geodesy and Cartography Volume 2005 ; 2 ; 2005 ; https://journals.vilniustech.lt/ ; >
-      au < finished ; frozen ; 2006 ; Geodesy and Cartography Volume 2006 ; 3 ; 2006 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2006 ; Geodesy and Cartography Volume 2006 ; 3 ; 2006 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2007 ; Geodesy and Cartography Volume 2007 ; 4 ; 2007 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2008 ; Geodesy and Cartography Volume 2008 ; 5 ; 2008 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2009 ; Geodesy and Cartography Volume 2009 ; 6 ; 2009 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2009 ; Geodesy and Cartography Volume 2009 ; 6 ; 2009 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2010 ; Geodesy and Cartography Volume 2010 ; 7 ; 2010 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
       au < finished ; crawling ; 2011 ; Geodesy and Cartography Volume 2011 ; 8 ; 2011 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
       au < finished ; finished ; 2012 ; Geodesy and Cartography Volume 2012 ; 9 ; 2012 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
@@ -233,8 +233,8 @@
 
       au < finished ; crawling ; 2006 ; International Journal of Strategic Property Management Volume 2006 ; 3 ; 2006 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2007 ; International Journal of Strategic Property Management Volume 2007 ; 4 ; 2007 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2008 ; International Journal of Strategic Property Management Volume 2008 ; 5 ; 2008 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2009 ; International Journal of Strategic Property Management Volume 2009 ; 6 ; 2009 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2008 ; International Journal of Strategic Property Management Volume 2008 ; 5 ; 2008 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; International Journal of Strategic Property Management Volume 2009 ; 6 ; 2009 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2010 ; International Journal of Strategic Property Management Volume 2010 ; 7 ; 2010 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
       au < finished ; finished ; 2011 ; International Journal of Strategic Property Management Volume 2011 ; 8 ; 2011 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
       au < finished ; crawling ; 2012 ; International Journal of Strategic Property Management Volume 2012 ; 9 ; 2012 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
@@ -269,7 +269,7 @@
       au < finished ; frozen ; 2006 ; Journal of Architecture and Urbanism Volume 2006 ; 1 ; 2006 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2007 ; Journal of Architecture and Urbanism Volume 2007 ; 2 ; 2007 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2008 ; Journal of Architecture and Urbanism Volume 2008 ; 3 ; 2008 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2009 ; Journal of Architecture and Urbanism Volume 2009 ; 4 ; 2009 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2009 ; Journal of Architecture and Urbanism Volume 2009 ; 4 ; 2009 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2010 ; Journal of Architecture and Urbanism Volume 2010 ; 5 ; 2010 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083>
       au < finished ; crawling ; 2011 ; Journal of Architecture and Urbanism Volume 2011 ; 6 ; 2011 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082>
       au < finished ; finished ; 2012 ; Journal of Architecture and Urbanism Volume 2012 ; 7 ; 2012 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
@@ -298,7 +298,7 @@
 
       au < finished ; frozen ; 2006 ; Journal of Business Economics and Management Volume 2006 ; 4 ; 2006 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2007 ; Journal of Business Economics and Management Volume 2007 ; 5 ; 2007 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2008 ; Journal of Business Economics and Management Volume 2008 ; 6 ; 2008 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2008 ; Journal of Business Economics and Management Volume 2008 ; 6 ; 2008 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2009 ; Journal of Business Economics and Management Volume 2009 ; 7 ; 2009 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
       au < finished ; finished ; 2010 ; Journal of Business Economics and Management Volume 2010 ; 8 ; 2010 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083>
       au < finished ; finished ; 2011 ; Journal of Business Economics and Management Volume 2011 ; 9 ; 2011 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083>
@@ -375,7 +375,7 @@
 
       au < finished ; frozen ; 2006 ; Journal of Environmental Engineering and Landscape Management Volume 2006 ; 3 ; 2006 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2007 ; Journal of Environmental Engineering and Landscape Management Volume 2007 ; 4 ; 2007 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2008 ; Journal of Environmental Engineering and Landscape Management Volume 2008 ; 5 ; 2008 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2008 ; Journal of Environmental Engineering and Landscape Management Volume 2008 ; 5 ; 2008 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2009 ; Journal of Environmental Engineering and Landscape Management Volume 2009 ; 6 ; 2009 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2010 ; Journal of Environmental Engineering and Landscape Management Volume 2010 ; 7 ; 2010 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
       au < finished ; crawling ; 2011 ; Journal of Environmental Engineering and Landscape Management Volume 2011 ; 8 ; 2011 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
@@ -408,8 +408,8 @@
 
       param[journal_id] = MMA
 
-      au < finished ; frozen ; 2006 ; Mathematical Modelling and Analysis Volume 2006 ; 11 ; 2006 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2007 ; Mathematical Modelling and Analysis Volume 2007 ; 12 ; 2007 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2006 ; Mathematical Modelling and Analysis Volume 2006 ; 11 ; 2006 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2007 ; Mathematical Modelling and Analysis Volume 2007 ; 12 ; 2007 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2008 ; Mathematical Modelling and Analysis Volume 2008 ; 13 ; 2008 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2009 ; Mathematical Modelling and Analysis Volume 2009 ; 14 ; 2009 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2010 ; Mathematical Modelling and Analysis Volume 2010 ; 15 ; 2010 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
@@ -433,7 +433,7 @@
       au < manifest ; exists ; 2001 ; Mathematical Modelling and Analysis Volume 2001 ; 6 ; 2001 ; https://journals.vilniustech.lt/ ; >
       au < manifest ; exists ; 2002 ; Mathematical Modelling and Analysis Volume 2002 ; 7 ; 2002 ; https://journals.vilniustech.lt/ ; >
       au < manifest ; exists ; 2003 ; Mathematical Modelling and Analysis Volume 2003 ; 8 ; 2003 ; https://journals.vilniustech.lt/ ; >
-      au < finished ; frozen ; 2004 ; Mathematical Modelling and Analysis Volume 2004 ; 9 ; 2004 ; https://journals.vilniustech.lt/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2004 ; Mathematical Modelling and Analysis Volume 2004 ; 9 ; 2004 ; https://journals.vilniustech.lt/ ; reingest3.clockss.org:8083 >
       au < manifest ; exists ; 2005 ; Mathematical Modelling and Analysis Volume 2005 ; 10 ; 2005 ; https://journals.vilniustech.lt/ ; >
 
       au < doNotProcess ; exists ; 2021 ; Mathematical Modelling and Analysis Volume 2021 ; 26 ; 2021 ; https://journals.vilniustech.lt/ ; >
@@ -481,9 +481,9 @@
       param[journal_id] = TEDE
 
       au < finished ; crawling ; 2006 ; Technological and Economic Development of Economy Volume 2006 ; 3 ; 2006 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2007 ; Technological and Economic Development of Economy Volume 2007 ; 4 ; 2007 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2007 ; Technological and Economic Development of Economy Volume 2007 ; 4 ; 2007 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2008 ; Technological and Economic Development of Economy Volume 2008 ; 5 ; 2008 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2009 ; Technological and Economic Development of Economy Volume 2009 ; 6 ; 2009 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2009 ; Technological and Economic Development of Economy Volume 2009 ; 6 ; 2009 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2010 ; Technological and Economic Development of Economy Volume 2010 ; 7 ; 2010 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082>
       au < finished ; finished ; 2011 ; Technological and Economic Development of Economy Volume 2011 ; 8 ; 2011 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082>
       au < finished ; finished ; 2012 ; Technological and Economic Development of Economy Volume 2012 ; 9 ; 2012 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085>
