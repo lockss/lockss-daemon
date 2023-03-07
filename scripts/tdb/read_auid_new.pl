@@ -1152,7 +1152,9 @@ while (my $line = <>) {
   } elsif (($plugin eq "OLHPlugin") || 
            ($plugin eq "ClockssOLHPlugin") ||
            ($plugin eq "UniversityofMichiganPlugin") ||
-           ($plugin eq "ClockssUniversityofMichiganPlugin")) {
+           ($plugin eq "ClockssUniversityofMichiganPlugin") ||
+           ($plugin eq "GhentUniversityLibraryDomainModeJournalsPlugin") ||
+           ($plugin eq "ClockssGhentUniversityLibraryDomainModeJournalsPlugin")) {
     #permission is different from start
     $perm_url = uri_unescape($param{base_url}) . "plugins/clockss/";
     #$perm_url = uri_unescape($param{base_url}) . "clockss/";
