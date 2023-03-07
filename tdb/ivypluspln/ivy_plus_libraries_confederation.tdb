@@ -1,13 +1,13 @@
 {
 
   publisher <
-    name = Ivy Plus Web Archive Preservation Network
+    name = Ivy Plus Libraries Confederation
   >
 
   {
 
     title <
-      name = Archive-It Collections
+      name = Ivy Plus Libraries Confederation Archive-It Collections
     >
 
     {
@@ -18,11 +18,11 @@
       nondefparam[user_pass] = ivypluspln_U_P
       implicit < status ; name ; param[collection] >
 
-      au < superseded ; Contemporary Composers Web Archive (CCWA) (Archive-It Collection 4019) [superseded] ; 4019 >
+      au < superseded ; Contemporary Composers (Archive-It Collection 4019) [superseded] ; 4019 >
       au < superseded ; Collaborative Architecture, Urbanism, and Sustainability Web Archive (CAUSEWAY) (Archive-It Collection 4638) [superseded] ; 4638 >
-      au < superseded ; Global Webcomics Web Archive (Archive-It Collection 10181) [superseded] ; 10181 >
-      au < superseded ; National Statistical Offices and Central Banks Web Archive (Archive-It Collection 10637) [superseded] ; 10637 >
-      au < superseded ; State Elections Web Archive (Archive-It Collection 10793) [superseded] ; 10793 >
+      au < superseded ; Global Webcomics (Archive-It Collection 10181) [superseded] ; 10181 >
+      au < superseded ; National Statistical Offices and Central Banks (Archive-It Collection 10637) [superseded] ; 10637 >
+      au < superseded ; State Elections (Archive-It Collection 10793) [superseded] ; 10793 >
 
     }
 
@@ -34,11 +34,11 @@
       nondefparam[user_pass] = ivypluspln_U_P
       implicit < status ; name ; param[collection] >
 
-      au < ready ; Contemporary Composers Web Archive (CCWA) (Archive-It Collection 4019) ; 4019 >
+      au < released ; Contemporary Composers (Archive-It Collection 4019) ; 4019 >
       au < ready ; Collaborative Architecture, Urbanism, and Sustainability Web Archive (CAUSEWAY) (Archive-It Collection 4638) ; 4638 >
-      au < ready ; Global Webcomics Web Archive (Archive-It Collection 10181) ; 10181 >
-      au < ready ; National Statistical Offices and Central Banks Web Archive (Archive-It Collection 10637) ; 10637 >
-      au < ready ; State Elections Web Archive (Archive-It Collection 10793) ; 10793 >
+      au < ready ; Global Webcomics (Archive-It Collection 10181) ; 10181 >
+      au < ready ; National Statistical Offices and Central Banks (Archive-It Collection 10637) ; 10637 >
+      au < ready ; State Elections (Archive-It Collection 10793) ; 10793 >
       au < ready ; Eastern Europe and Former Soviet Union Web Archive (Archive-It Collection 11360) ; 11360 >
       au < ready ; Brazilian Presidential Transition (2018) Web Archive (Archive-It Collection 11549) ; 11549 >
       au < ready ; Latin American and Caribbean Contemporary Art Web Archive (Archive-It Collection 11576) ; 11576 >
