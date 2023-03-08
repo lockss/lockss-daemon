@@ -107,13 +107,6 @@ public class ProxyHandler extends AbstractHttpHandler {
     Configuration.PREFIX + "proxy.loopbackConnectMapMax";
   static final int DEFAULT_LOOPBACK_CONNECT_MAP_MAX = 100;
 
-  /**
-   * Forwards proxy requests to the specified machine if set
-   **/
-  static final String PARAM_FORWARD_PROXY =
-      Configuration.PREFIX + "proxy.forwardProxy";
-  public static final String DEFAULT_FORWARD_PROXY = null;
-
   private final Map<Integer, String> loopbackConnectMap;
 
   private LockssDaemon theDaemon = null;
@@ -126,7 +119,6 @@ public class ProxyHandler extends AbstractHttpHandler {
   private boolean auditProxy = false;
   private boolean auditIndex = false;
   private boolean audit503UntilAusStarted = DEFAULT_AUDIT_503_UNTIL_AUS_STARTED;
-  private HostPortParser forwardProxy = null;
   private String connectHost;
   private int connectPort = -1;
   private int sslListenPort = -1;
@@ -149,13 +141,6 @@ public class ProxyHandler extends AbstractHttpHandler {
       config.getBoolean(PARAM_AUDIT_503_UNTIL_AUS_STARTED,
 			DEFAULT_AUDIT_503_UNTIL_AUS_STARTED);
 
-    try {
-      String forwardProxyParam = config.get(PARAM_FORWARD_PROXY, DEFAULT_FORWARD_PROXY);
-      forwardProxy = new HostPortParser(forwardProxyParam);
-    } catch (HostPortParser.InvalidSpec e) {
-      log.error("Error parsing forwardProxy parameter", e);
-      forwardProxy = null;
-    }
 
     hostname = PlatformUtil.getLocalHostname();
 
@@ -430,7 +415,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       if (cu != null) {
         request.setMethod(HttpRequest.__GET);
         uri = postUri;
-      } else if (isMigratingFrom()) {
+      } else if (proxyMgr.isMigratingFrom()) {
         request.setMethod(HttpRequest.__GET);
         forwardRequest(request, response, postUri.toString());
         return;
@@ -496,7 +481,7 @@ public class ProxyHandler extends AbstractHttpHandler {
           request.setHandled(true);
           logAccess(request, "not present (no AU: " + auid + "), 503",
               TimeBase.msSince(reqStartTime));
-        } else if (isMigratingFrom()) {
+        } else if (proxyMgr.isMigratingFrom()) {
           forwardRequest(request, response, urlString);
         } else {
           response.sendError(HttpResponse.__412_Precondition_Failed,
@@ -574,7 +559,7 @@ public class ProxyHandler extends AbstractHttpHandler {
             request.setHandled(true);
             logAccess(request, "not present, no forward, 503",
                 TimeBase.msSince(reqStartTime));
-          } else if (isMigratingFrom()) {
+          } else if (proxyMgr.isMigratingFrom()) {
             // Forward proxy request to migrating-to machine - if we forward to
             // other machine and it doesn't have it either, just forward the
             // error response to client.
@@ -606,7 +591,7 @@ public class ProxyHandler extends AbstractHttpHandler {
               ProxyManager.HOST_DOWN_NO_CACHE_ACTION_504)
           && proxyMgr.isHostDown(uri.getHost())) {
 
-        if (isMigratingFrom()) {
+        if (proxyMgr.isMigratingFrom()) {
           forwardRequest(request, response, urlString);
         } else {
           // FIXME: Error page will only reflect candidate AUs from this machine
@@ -950,7 +935,7 @@ public class ProxyHandler extends AbstractHttpHandler {
           // calling this method.
           log.error("Shouldn't happen, isInCache && isPubNever: " +
               cu.getUrl());
-        } else if (isMigratingFrom()) {
+        } else if (proxyMgr.isMigratingFrom()) {
           forwardRequest(request, response, urlString);
           return;
         } else {
@@ -976,7 +961,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       // did not find it in this cache. Let the "migrating to" machine forward
       // a response from the publisher or serve from its cache. It may also
       // return an index or error page.
-      if (isMigratingFrom() && !isInCache) {
+      if (proxyMgr.isMigratingFrom() && !isInCache) {
         forwardRequest(request, response, urlString);
         return;
       }
@@ -1207,13 +1192,6 @@ public class ProxyHandler extends AbstractHttpHandler {
   }
 
   /**
-   * Returns a boolean indicating whether this is the "migrating from" machine.
-   **/
-  boolean isMigratingFrom() {
-    return forwardProxy != null;
-  }
-
-  /**
    * Forwards a proxy request to another proxy server and forwards the
    * response to the client
    **/
@@ -1250,6 +1228,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       }
     }
 
+    HostPortParser forwardProxy = proxyMgr.getForwardProxy();
     conn.setProxy(forwardProxy.getHost(), forwardProxy.getPort());
     conn.execute();
 
