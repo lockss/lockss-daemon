@@ -38,13 +38,12 @@ import java.util.regex.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.clockss.nzma.PasifikaPubMedXmlArticleIteratorFactory;
 import org.lockss.util.Logger;
 
 
 public class InformationResearchArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-  protected static Logger log = Logger.getLogger(PasifikaPubMedXmlArticleIteratorFactory.class);
+  protected static Logger log = Logger.getLogger( InformationResearchArticleIteratorFactory.class);
 
   protected static final String ROOT_TEMPLATE = "\"%s\",base_url";
   private static final String PATTERN_TEMPLATE = "\"%s(.*)\\.html$\",base_url";
