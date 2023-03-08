@@ -38,7 +38,6 @@ import java.util.regex.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.clockss.elifesciences.ElifeSciencesXmlSourceArticleIteratorFactory;
 import org.lockss.plugin.clockss.nzma.PasifikaPubMedXmlArticleIteratorFactory;
 import org.lockss.util.Logger;
 
