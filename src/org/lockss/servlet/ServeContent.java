@@ -32,30 +32,23 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
-import java.io.*;
-import java.net.*;
-import java.util.*;
-import java.util.List;
-import java.util.regex.*;
-
-import javax.servlet.*;
-import javax.servlet.http.HttpServletResponse;
-
-import org.apache.commons.collections.*;
+import org.apache.commons.collections.Predicate;
+import org.apache.commons.collections.PredicateUtils;
 import org.apache.commons.httpclient.util.DateParseException;
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.output.ByteArrayOutputStream;
-import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.ObjectUtils;
-import org.apache.commons.lang3.tuple.Pair;
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.lockss.alert.Alert;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
-import org.lockss.daemon.*;
+import org.lockss.daemon.LoginPageChecker;
+import org.lockss.daemon.OpenUrlResolver;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo.ResolvedTo;
+import org.lockss.daemon.PluginBehaviorException;
+import org.lockss.daemon.PluginException;
 import org.lockss.exporter.biblio.BibliographicItem;
-import org.lockss.exporter.counter.*;
+import org.lockss.exporter.counter.CounterReportsRequestRecorder;
 import org.lockss.exporter.counter.CounterReportsRequestRecorder.PublisherContacted;
 import org.lockss.plugin.*;
 import org.lockss.plugin.AuUtil.AuProxyInfo;
@@ -65,10 +58,23 @@ import org.lockss.proxy.ProxyManager;
 import org.lockss.rewriter.LinkRewriterFactory;
 import org.lockss.state.AuState;
 import org.lockss.util.*;
-import org.lockss.util.CloseCallbackInputStream.DeleteFileOnCloseInputStream;
-import org.lockss.util.urlconn.*;
+import org.lockss.util.urlconn.CacheException;
+import org.lockss.util.urlconn.LockssUrlConnection;
+import org.lockss.util.urlconn.LockssUrlConnectionPool;
 import org.mortbay.html.*;
-import org.mortbay.http.*;
+import org.mortbay.http.HttpFields;
+import org.mortbay.http.HttpRequest;
+import org.mortbay.http.HttpResponse;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
+import java.net.*;
+import java.util.List;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /** ServeContent servlet displays cached content with links rewritten.
  */
@@ -503,8 +509,8 @@ public class ServeContent extends LockssServlet {
       displayNotStarted();
       return;
     }
-    accessLogInfo = null;
 
+    accessLogInfo = null;
     enabledPluginsOnly =
         !"no".equalsIgnoreCase(getParameter("filterPlugins"));
 
@@ -519,49 +525,52 @@ public class ServeContent extends LockssServlet {
     if (pathInfo != null && pathInfo.length() >= 1) {
       String query = req.getQueryString();
       if (query != null) {
-	url = pathInfo.substring(1) + "?" + query;
+        url = pathInfo.substring(1) + "?" + query;
       } else {
-	url = pathInfo.substring(1);
+        url = pathInfo.substring(1);
       }
     } else {
       url = getParameter("url");
       auid = getParameter("auid");
       useOpenUrlForAuid = Boolean.parseBoolean(getParameter("use_openurl"));
     }
-    versionStr = getParameter("version");
 
-    au = explicitAu = null;		// redundant, just making sure
+    versionStr = getParameter("version");
+    au = explicitAu = null;    // redundant, just making sure
 
     if (!StringUtil.isNullString(url)) {
       if (StringUtil.isNullString(auid)) {
         if (isMementoRequest()) {
-
           // Error, because Memento requests must have auid.
           resp.sendError(
               HttpServletResponse.SC_BAD_REQUEST,
               "Requests containing a \"version\" parameter must also include " +
-              "\"auid\" and \"url\" parameters; \"auid\" is missing.");
+                  "\"auid\" and \"url\" parameters; \"auid\" is missing.");
           return;
         }
       } else {
         explicitAu = pluginMgr.getAuFromId(auid);
         au = explicitAu;
       }
+
       if (log.isDebug2()) log.debug2("Url req, raw: " + url);
+
       // handle html-encoded URLs with characters like &amp;
       // that can appear as links embedded in HTML pages
       url = StringEscapeUtils.unescapeHtml4(url);
       requestType = AccessLogType.Url;
+
       //this is a partial replicate of proxy_handler post logic here
       // TODO check mime type and use that to determine what should be sent ctg
       if (HttpRequest.__POST.equals(req.getMethod()) && processForms) {
         log.debug2("POST request found!");
         FormUrlHelper helper = new FormUrlHelper(url.toString());
         Enumeration en = req.getParameterNames();
+
         while (en.hasMoreElements()) {
-          String name = (String)en.nextElement();
+          String name = (String) en.nextElement();
           // filter out LOCKSS specific params
-          if (   !"url".equals(name)
+          if (!"url".equals(name)
               && !"auid".equals(name)
               && !"version".equals(name)) {
             String vals[] = req.getParameterValues(name);
@@ -570,10 +579,13 @@ public class ServeContent extends LockssServlet {
             }
           }
         }
+
         helper.sortKeyValues();
         org.mortbay.util.URI postUri =
             new org.mortbay.util.URI(helper.toEncodedString());
-	log.debug2("POST URL: " + postUri);
+
+        log.debug2("POST URL: " + postUri);
+
         // We only want to override the post request by proxy if we cached it during crawling.
         CachedUrl cu = pluginMgr.findCachedUrl(postUri.toString());
         if (cu != null) {
@@ -581,6 +593,7 @@ public class ServeContent extends LockssServlet {
           if (log.isDebug2()) log.debug2("Setting url to:" + url);
         }
       }
+
       if (minimallyEncodeUrl) {
         String unencUrl = url;
         url = UrlUtil.minimallyEncodeUrl(url);
@@ -588,6 +601,7 @@ public class ServeContent extends LockssServlet {
           log.debug2("Encoded " + unencUrl + " to " + url);
         }
       }
+
       if (normalizeUrl) {
         String normUrl;
         if (au != null) {
@@ -605,6 +619,7 @@ public class ServeContent extends LockssServlet {
           url = normUrl;
         }
       }
+
       handleUrlRequest();
       return;
     }
@@ -617,7 +632,7 @@ public class ServeContent extends LockssServlet {
       resp.sendError(
           HttpServletResponse.SC_BAD_REQUEST,
           "Requests containing a \"version\" parameter must also include " +
-          "\"auid\" and \"url\" parameters.");
+              "\"auid\" and \"url\" parameters.");
       return;
     }
 
@@ -626,11 +641,11 @@ public class ServeContent extends LockssServlet {
       OpenUrlInfo resolved = OpenUrlResolver.OPEN_URL_INFO_NONE;
 
       // If any params, pass them all to OpenUrl resolver
-      Map<String,String> pmap = getParamsAsMap();
+      Map<String, String> pmap = getParamsAsMap();
       if (!pmap.isEmpty()) {
         if (log.isDebug3()) log.debug3("Resolving OpenUrl: " + pmap);
         resolved = openUrlResolver.resolveOpenUrl(pmap);
-	log.debug3("Resolved to: " + resolved);
+        log.debug3("Resolved to: " + resolved);
         requestType = AccessLogType.OpenUrl;
       }
 
@@ -642,7 +657,7 @@ public class ServeContent extends LockssServlet {
 
       // if there is only one result, present it
       url = resolved.getResolvedUrl();
-      if (   (url != null)
+      if ((url != null)
           || (resolved.getResolvedTo() != ResolvedTo.NONE)) {
         // record type of access for logging
         accessLogInfo = resolved.getResolvedTo().toString();
@@ -651,16 +666,17 @@ public class ServeContent extends LockssServlet {
       }
 
       if (!useOpenUrlForAuid) {
-	if (serveFromAuid(auid)) {
-	  return;
-	}
-
+        if (serveFromAuid(auid)) {
+          return;
+        }
       }
+
       // redirect to the OpenURL corresponding to the specified auid;
       // ensures that the corresponding OpenURL is available to the client.
       if (auid != null) {
         String openUrlQueryString =
             openUrlResolver.getOpenUrlQueryForAuid(auid);
+
         if (openUrlQueryString != null) {
           StringBuffer sb = req.getRequestURL();
           sb.append("?");
@@ -668,16 +684,18 @@ public class ServeContent extends LockssServlet {
           resp.sendRedirect(sb.toString());
           return;
         }
-	// If open URL resolution fails fall back to first start page
-	if (serveFromAuid(auid)) {
-	  return;
-	}
+
+        // If open URL resolution fails fall back to first start page
+        if (serveFromAuid(auid)) {
+          return;
+        }
       }
 
       log.debug3("Unknown request");
     } catch (RuntimeException ex) {
       log.warning("Couldn't handle unknown request", ex);
     }
+
     // Maybe should display a message here if URL is unknown format.  But
     // this is also the default case for the bare ServeContent URL, which
     // should generate an index with no message.
@@ -720,10 +738,12 @@ public class ServeContent extends LockssServlet {
   protected void handleUrlRequest() throws IOException {
     log.debug2("url: " + url);
     log.debug2("is " + (isMementoRequest() ? "" : "not ") + "a Memento request.");
+
     try {
       // Get the CachedUrl for the URL, only if it has content.
       if (au != null) {
         cu = au.makeCachedUrl(url);
+
         if (isMementoRequest()) {
 
           // Replace CU with the historical CU; similar to ViewContent:
@@ -736,11 +756,11 @@ public class ServeContent extends LockssServlet {
 
             // Add the optional Memento-Datetime header.
             CIProperties props = cu.getProperties();
-            String lastMod   = props.getProperty(cu.PROPERTY_LAST_MODIFIED);
+            String lastMod = props.getProperty(cu.PROPERTY_LAST_MODIFIED);
             String fetchTime = props.getProperty(cu.PROPERTY_FETCH_TIME);
             resp.setHeader("Memento-Datetime",
                 (StringUtil.isNullString(lastMod)) ? fetchTime
-                                                   : lastMod);
+                    : lastMod);
           } catch (VersionNotFoundException e) {
 	    /*
 	     * 404 error.  Should not use handleMissingUrlRequest, because it
@@ -762,35 +782,39 @@ public class ServeContent extends LockssServlet {
             AuUtil.safeRelease(cu);
             return;
           } // Not catching RuntimeException, which already results in a 500 response.
-
         }
       } else if (!isMementoRequest()) {
+        // AU is null and this is NOT a Memento request:
         // Find a CU with content if possible.  If none, find an AU where
         // it would fit so can rewrite content from publisher if necessary.
+
         cu = pluginMgr.findCachedUrl(url, CuContentReq.PreferContent);
         if (cu != null) {
-	  cuUrl = cu.getUrl();
+          cuUrl = cu.getUrl();
           au = cu.getArchivalUnit();
           if (log.isDebug3()) log.debug3("cu: " + cu + " au: " + au);
         }
       } else {
-	/*
-	 * This is a Memento request, and the AU param was provided, but we
-	 * didn't find an AU with that AU ID. 404 error; should not let this
-	 * pass through to handleMissingURlRequest, because we don't want
-	 * Memento requests to result in redirects to the publisher.
-	 */
+        // AUID is null but this IS a Memento request:
+        /*
+         * This is a Memento request, and the AU param was provided, but we didn't find an
+         * AU with that AU ID (this happened in lockssHandleRequest()). Return a 404 error;
+         * should not let this pass through to handleMissingURlRequest, because we don't
+         * want Memento requests to result in redirects to the publisher.
+         */
         resp.sendError(HttpServletResponse.SC_NOT_FOUND,
             "This LOCKSS box does not have (any versions of) the requested AU.");
         AuUtil.safeRelease(cu);
         logAccess("AU not present, 404");
         return;
       }
+
       if (cu != null && cu.hasContent() && useRedirectedBaseUrl) {
-	baseUrl = PluginUtil.getBaseUrl(cu);
+        baseUrl = PluginUtil.getBaseUrl(cu);
       } else {
-	baseUrl = url;
+        baseUrl = url;
       }
+
       if (au != null) {
         handleAuRequest();
       } else if (proxyMgr.isMigratingFrom()) {
@@ -1007,7 +1031,7 @@ public class ServeContent extends LockssServlet {
   protected void handleAuRequest() throws IOException {
     boolean isInCache = isInCache();
     PublisherContacted pubContacted =
-	CounterReportsRequestRecorder.PublisherContacted.FALSE;
+        CounterReportsRequestRecorder.PublisherContacted.FALSE;
 
     if (isNeverProxyForAu(au) || isMementoRequest()) {
       if (isInCache) {
@@ -1019,11 +1043,11 @@ public class ServeContent extends LockssServlet {
         // Forward request; return the response unless
         handleForwardRequestAndResponse();
       } else {
-	/*
-	 * We don't want to redirect to the publisher, so pass KnownDown below
-	 * in order to ensure that. It's true that we might be lying, because
-	 * the publisher might be up.
-	 */
+        /*
+         * We don't want to redirect to the publisher, so pass KnownDown below
+         * in order to ensure that. It's true that we might be lying, because
+         * the publisher might be up.
+         */
         handleMissingUrlRequest(url, PubState.KnownDown);
       }
       return;
@@ -1069,14 +1093,16 @@ public class ServeContent extends LockssServlet {
       AuProxyInfo info = AuUtil.getAuProxyInfo(au);
       String proxyHost = info.getHost();
       int proxyPort = info.getPort();
+
       if (!StringUtil.isNullString(proxyHost) && (proxyPort > 0)) {
         try {
           conn.setProxy(info.getHost(), info.getPort());
         } catch (UnsupportedOperationException ex) {
-          log.warning(  "Unsupported connection request proxy: "
-                        + proxyHost + ":" + proxyPort);
+          log.warning("Unsupported connection request proxy: "
+              + proxyHost + ":" + proxyPort);
         }
       }
+
       conn.execute();
       pubContacted = CounterReportsRequestRecorder.PublisherContacted.TRUE;
     } catch (IOException ex) {
@@ -1086,8 +1112,9 @@ public class ServeContent extends LockssServlet {
       if (ex instanceof LockssUrlConnection.ConnectionTimeoutException) {
         proxyMgr.setHostDown(host, isInCache);
       } else {
-	pubContacted = CounterReportsRequestRecorder.PublisherContacted.TRUE;
+        pubContacted = CounterReportsRequestRecorder.PublisherContacted.TRUE;
       }
+
       pstate = PubState.KnownDown;
 
       // tear down connection
@@ -1096,9 +1123,10 @@ public class ServeContent extends LockssServlet {
     }
 
     int response = 0;
+
     try {
       if (conn != null) {
-	response = conn.getResponseCode();
+        response = conn.getResponseCode();
         if (log.isDebug2())
           log.debug2("response: " + response + " " + conn.getResponseMessage());
         if (response == HttpResponse.__200_OK) {
@@ -1108,7 +1136,7 @@ public class ServeContent extends LockssServlet {
             serveFromPublisher(conn);
             logAccess(present(isInCache, "200 from publisher"));
             // Record the necessary information required for COUNTER reports.
-	    recordRequest(url, pubContacted, response);
+            recordRequest(url, pubContacted, response);
             return;
           } catch (CacheException.PermissionException ex) {
             logAccess("login exception: " + ex.getMessage());
@@ -1575,8 +1603,10 @@ public class ServeContent extends LockssServlet {
     String charset = HeaderUtil.getCharsetOrDefaultFromContentType(ctype);
     BufferedInputStream bufRespStrm = new BufferedInputStream(respStrm);
     charset = CharsetUtil.guessCharsetFromStream(bufRespStrm,charset);
+
     handleRewriteInputStream(bufRespStrm, mimeType, charset,
         responseContentLength);
+
   }
 
   // Patterm to extract url query arg from Referer string
@@ -1752,7 +1782,6 @@ public class ServeContent extends LockssServlet {
     }
     return null;
   }
-
   protected void handleRewriteInputStream(InputStream original,
                                           String mimeType,
                                           String charset,
