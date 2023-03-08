@@ -192,6 +192,8 @@ public class ServeContent extends LockssServlet {
     PathInfo,
   }
 
+  public static final String HEADER_REWRITE_FOR = "X-Lockss-RewriteFor";
+
   /** Determines how original URLs are represented in ServeContent URLs.
    * Can be set to one of:
    *  <ul>
@@ -791,6 +793,10 @@ public class ServeContent extends LockssServlet {
       }
       if (au != null) {
         handleAuRequest();
+      } else if (proxyMgr.isMigratingFrom()) {
+        // No AU -> No CU; do not need to look at "migrating to"'s response
+        // TODO: Forward to "migrating to" machine and let it handle the request
+        handleForwardRequestAndResponse();
       } else {
         handleMissingUrlRequest(url, PubState.Unknown);
       }
@@ -987,10 +993,19 @@ public class ServeContent extends LockssServlet {
    *
    * @throws IOException for IO errors
    */
+  /**
+   C = have content (implies A)
+   NC - no content
+   A = have AU
+   NA = no have AU
+
+   C - forward, rewrite if 200 else rewrite from cache
+   NC, NA - V2
+   NC, A - V2: 200, 304 - return that
+           else - forward, rewrite if 200 else error
+   **/
   protected void handleAuRequest() throws IOException {
-    String host = UrlUtil.getHost(url);
     boolean isInCache = isInCache();
-    boolean isHostDown = proxyMgr.isHostDown(host);
     PublisherContacted pubContacted =
 	CounterReportsRequestRecorder.PublisherContacted.FALSE;
 
@@ -999,7 +1014,10 @@ public class ServeContent extends LockssServlet {
         serveFromCache();
         logAccess("200 from cache");
         // Record the necessary information required for COUNTER reports.
-	recordRequest(url, pubContacted, 200);
+        recordRequest(url, pubContacted, 200);
+      } else if (proxyMgr.isMigratingFrom()) {
+        // Forward request; return the response unless
+        handleForwardRequestAndResponse();
       } else {
 	/*
 	 * We don't want to redirect to the publisher, so pass KnownDown below
@@ -1010,6 +1028,22 @@ public class ServeContent extends LockssServlet {
       }
       return;
     }
+
+    handlePublisherRequestAndResponse();
+  }
+
+  /** Sends the ServeContent request to the upstream publisher and performs
+   * any link rewriting on the response before the responding to the client
+   */
+  private void handlePublisherRequestAndResponse() throws IOException {
+    boolean isInCache = isInCache();
+    PublisherContacted pubContacted =
+        CounterReportsRequestRecorder.PublisherContacted.FALSE;
+
+    String host = UrlUtil.getHost(url);
+    boolean isHostDown = proxyMgr.isHostDown(host);
+    LockssUrlConnection conn = null;
+    PubState pstate = PubState.Unknown;
 
     LockssUrlConnectionPool connPool = proxyMgr.getNormalConnectionPool();
 
@@ -1028,9 +1062,6 @@ public class ServeContent extends LockssServlet {
       }
     }
 
-    // Send request to publisher
-    LockssUrlConnection conn = null;
-    PubState pstate = PubState.Unknown;
     try {
       conn = openLockssUrlConnection(connPool);
 
@@ -1102,6 +1133,58 @@ public class ServeContent extends LockssServlet {
       log.debug2("No content for: " + url);
       // return 404 with index
       handleMissingUrlRequest(url, pstate);
+    }
+  }
+
+  /** Forwards the request to the "migrating to" machine, if configured to do so.
+   * Returns a boolean indicating whether the request was handled, or not and needs
+   * further handling.
+   */
+  private void handleForwardRequestAndResponse()
+      throws IOException {
+
+    LockssUrlConnectionPool connPool = proxyMgr.getNormalConnectionPool();
+    LockssUrlConnection conn = null;
+
+    try {
+      // Forward the ServeContent request to "migrating to" machine
+      HostPortParser fwdProxy = proxyMgr.getForwardProxy();
+      String fwdUrl = UrlUtil.rewriteRequestURLWithQuery(fwdProxy.getHost(), fwdProxy.getPort(), req);
+      conn = openLockssUrlConnection(fwdUrl, connPool);
+
+      // Add "migrating from" host and port headers to request
+      conn.addRequestProperty(HEADER_REWRITE_FOR,
+          UrlUtil.getUrlPrefix(UrlUtil.getRequestURL(req)));
+
+      conn.execute();
+    } catch (IOException e) {
+      if (log.isDebug3()) log.debug3("conn.execute", e);
+
+      // tear down connection
+      IOUtil.safeRelease(conn);
+      conn = null;
+    }
+
+    if (conn != null) {
+      switch (conn.getResponseCode()) {
+        case 200:
+        case 304:
+          // Forward response to client
+          serveFromForward(conn);
+          return;
+        default:
+          // Fallthrough
+          break;
+      }
+    } else {
+      // Forwarding to the "migrating to" machine failed due to some IOException -
+      // fallthrough...
+    }
+
+    if (isNeverProxyForAu(au) || isMementoRequest()) {
+      handleMissingUrlRequest(url, PubState.KnownDown);
+    } else {
+      handlePublisherRequestAndResponse();
     }
   }
 
@@ -1336,6 +1419,76 @@ public class ServeContent extends LockssServlet {
     return res;
   }
 
+  /**
+   * Serve content from publisher.
+   *
+   * @param conn the connection
+   * @throws IOException if cannot read content
+   */
+  protected void serveFromForward(LockssUrlConnection conn) throws IOException {
+    String ctype = conn.getResponseContentType();
+    String mimeType = HeaderUtil.getMimeTypeFromContentType(ctype);
+    log.debug2(  "Serving forwarded content for: " + url
+        + " mime type=" + mimeType + " size=" + conn.getResponseContentLength());
+
+    // copy connection response headers to servlet response
+    for (int i = 0; true; i++) {
+      String key = conn.getResponseHeaderFieldKey(i);
+      String val = conn.getResponseHeaderFieldVal(i);
+
+      if ((key == null) && (val == null)) {
+        break;
+      }
+
+      if ((key == null) || (val == null)) {
+        // XXX Here to ensure complete compatibility with previous
+        // code. Not sure it's necessary or desirable.
+        continue;
+      }
+
+      // Content-Encoding processed below
+      // Don't copy the following headers:
+      if (HttpFields.__ContentEncoding.equalsIgnoreCase(key) ||
+          HttpFields.__KeepAlive.equalsIgnoreCase(key) ||
+          HttpFields.__Connection.equalsIgnoreCase(key)) {
+        continue;
+      }
+
+      if (HttpFields.__ContentType.equalsIgnoreCase(key)) {
+        // Must use setContentType() for Content-Type, both to replace the
+        // default that LockssServlet stored, and to ensure proper charset
+        // processing
+        resp.setContentType(val);
+      } else {
+        resp.addHeader(key, val);
+      }
+    }
+
+    resp.addHeader(HttpFields.__Via,
+        proxyMgr.makeVia(getMachineName(), reqURL.getPort()));
+
+    String contentEncoding = conn.getResponseContentEncoding();
+    long responseContentLength = conn.getResponseContentLength();
+
+    // get input stream and encoding
+    InputStream respStrm = getInputStream(conn);
+
+    if (contentEncoding != null) {
+      resp.setHeader(HttpFields.__ContentEncoding, contentEncoding);
+    }
+
+    // Indicate the AU the content was rewritten for, even though it isn't
+    // cached locally
+    resp.setHeader(Constants.X_LOCKSS_REWRITTEN_FOR_AUID, au.getAuId());
+
+    String charset = HeaderUtil.getCharsetOrDefaultFromContentType(ctype);
+    BufferedInputStream bufRespStrm = new BufferedInputStream(respStrm);
+    charset = CharsetUtil.guessCharsetFromStream(bufRespStrm,charset);
+
+    // Pass a null LinkRewriterFactory disables link rewriting
+    handleRewriteInputStream(null, bufRespStrm, mimeType, charset,
+        responseContentLength);
+  }
 
   /**
    * Serve content from publisher.
@@ -1430,14 +1583,9 @@ public class ServeContent extends LockssServlet {
   String URL_ARG_REGEXP = "url=([^&]*)";
   Pattern URL_ARG_PAT = Pattern.compile(URL_ARG_REGEXP);
 
-
-  protected LockssUrlConnection openLockssUrlConnection(LockssUrlConnectionPool
-                                                            pool)
-      throws IOException {
-
-    boolean isInCache = isInCache();
-    String ifModified = null;
-    String referer = null;
+  /** Creates a LockssUrlConnection that forwards the request to the publisher URL **/
+  protected LockssUrlConnection openLockssUrlConnection(
+      LockssUrlConnectionPool pool) throws IOException {
 
     String fwdUrl;
     if (cuUrl != null && normalizeForwardedUrl) {
@@ -1445,7 +1593,19 @@ public class ServeContent extends LockssServlet {
     } else {
       fwdUrl = url;
     }
-    LockssUrlConnection conn = UrlUtil.openConnection(fwdUrl, pool);
+
+    return openLockssUrlConnection(fwdUrl, pool);
+  }
+
+  /** Creates a LockssUrlConnection that forwards the request to a specified URL **/
+  protected LockssUrlConnection openLockssUrlConnection(
+    String url, LockssUrlConnectionPool pool) throws IOException {
+
+    boolean isInCache = isInCache();
+    String ifModified = null;
+    String referer = null;
+
+    LockssUrlConnection conn = UrlUtil.openConnection(url, pool);
 
     // check connection header
     String connectionHdr = req.getHeader(HttpFields.__Connection);
