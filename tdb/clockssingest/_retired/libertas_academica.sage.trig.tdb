@@ -307,7 +307,7 @@
     au < finished ; finished ; 2013 ; Human Parasitic Diseases Volume 5 ; 5 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2014 ; Human Parasitic Diseases Volume 6 ; 6 ; 2014 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Human Parasitic Diseases Volume 7 ; 7 ; 2015 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2016 ; Human Parasitic Diseases Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Human Parasitic Diseases Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Human Parasitic Diseases Volume 9 ; 9 ; 2017 ; reingest4.clockss.org:8082 >
 
   }
@@ -323,11 +323,11 @@
     param[journal_id] = 173
     #Triggered by Sage
 
-    au < finished ; frozen ; 2012 ; Journal of Genomes and Exomes Volume 1 ; 1 ; 2012 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2013 ; Journal of Genomes and Exomes Volume 2 ; 2 ; 2013 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2012 ; Journal of Genomes and Exomes Volume 1 ; 1 ; 2012 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; Journal of Genomes and Exomes Volume 2 ; 2 ; 2013 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2014 ; Journal of Genomes and Exomes Volume 3 ; 3 ; 2014 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2015 ; Journal of Genomes and Exomes Volume 4 ; 4 ; 2015 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2016 ; Journal of Genomes and Exomes Volume 5 ; 5 ; 2016 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Journal of Genomes and Exomes Volume 4 ; 4 ; 2015 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; Journal of Genomes and Exomes Volume 5 ; 5 ; 2016 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -342,13 +342,13 @@
     param[journal_id] = 147
     #Triggered by Sage
 
-    au < finished ; frozen ; 2009 ; Lymphona and Chronic Lymphocytic Leukemias Volume 1 ; 1 ; 2009 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2010 ; Lymphona and Chronic Lymphocytic Leukemias Volume 2 ; 2 ; 2010 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2009 ; Lymphona and Chronic Lymphocytic Leukemias Volume 1 ; 1 ; 2009 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2010 ; Lymphona and Chronic Lymphocytic Leukemias Volume 2 ; 2 ; 2010 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2013 ; Lymphona and Chronic Lymphocytic Leukemias Volume 3 ; 3 ; 2013 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2014 ; Lymphona and Chronic Lymphocytic Leukemias Volume 4 ; 4 ; 2014 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2015 ; Lymphona and Chronic Lymphocytic Leukemias Volume 5 ; 5 ; 2015 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2016 ; Lymphona and Chronic Lymphocytic Leukemias Volume 6 ; 6 ; 2016 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2017 ; Lymphona and Chronic Lymphocytic Leukemias Volume 7 ; 7 ; 2017 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Lymphona and Chronic Lymphocytic Leukemias Volume 4 ; 4 ; 2014 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Lymphona and Chronic Lymphocytic Leukemias Volume 5 ; 5 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Lymphona and Chronic Lymphocytic Leukemias Volume 6 ; 6 ; 2016 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2017 ; Lymphona and Chronic Lymphocytic Leukemias Volume 7 ; 7 ; 2017 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -363,12 +363,12 @@
     param[journal_id] = 104
     #Triggered by Sage
 
-    au < finished ; frozen ; 2008 ; Organic Chemistry Insights Volume 1 ; 1 ; 2008 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2008 ; Organic Chemistry Insights Volume 1 ; 1 ; 2008 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2009 ; Organic Chemistry Insights Volume 2 ; 2 ; 2009 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2010 ; Organic Chemistry Insights Volume 3 ; 3 ; 2010 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2012 ; Organic Chemistry Insights Volume 4 ; 4 ; 2012 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2015 ; Organic Chemistry Insights Volume 5 ; 5 ; 2015 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2016 ; Organic Chemistry Insights Volume 6 ; 6 ; 2016 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2010 ; Organic Chemistry Insights Volume 3 ; 3 ; 2010 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; Organic Chemistry Insights Volume 4 ; 4 ; 2012 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Organic Chemistry Insights Volume 5 ; 5 ; 2015 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; Organic Chemistry Insights Volume 6 ; 6 ; 2016 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -384,12 +384,12 @@
     #Triggered by Sage
 
     au < finished ; crawling ; 2009 ; Primary Prevention Insights Volume 1 ; 1 ; 2009 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2010 ; Primary Prevention Insights Volume 2 ; 2 ; 2010 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2012 ; Primary Prevention Insights Volume 3 ; 3 ; 2012 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2014 ; Primary Prevention Insights Volume 4 ; 4 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2010 ; Primary Prevention Insights Volume 2 ; 2 ; 2010 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; Primary Prevention Insights Volume 3 ; 3 ; 2012 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Primary Prevention Insights Volume 4 ; 4 ; 2014 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2015 ; Primary Prevention Insights Volume 5 ; 5 ; 2015 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; Primary Prevention Insights Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2017 ; Primary Prevention Insights Volume 7 ; 7 ; 2017 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2017 ; Primary Prevention Insights Volume 7 ; 7 ; 2017 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -404,14 +404,14 @@
     param[journal_id] = 111
     #Triggered by Sage
 
-    au < finished ; frozen ; 2008 ; Reproductive Biology Insights Volume 1 ; 1 ; 2008 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2009 ; Reproductive Biology Insights Volume 2 ; 2 ; 2009 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2010 ; Reproductive Biology Insights Volume 3 ; 3 ; 2010 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2011 ; Reproductive Biology Insights Volume 4 ; 4 ; 2011 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2008 ; Reproductive Biology Insights Volume 1 ; 1 ; 2008 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2009 ; Reproductive Biology Insights Volume 2 ; 2 ; 2009 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; Reproductive Biology Insights Volume 3 ; 3 ; 2010 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2011 ; Reproductive Biology Insights Volume 4 ; 4 ; 2011 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2013 ; Reproductive Biology Insights Volume 6 ; 6 ; 2013 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2014 ; Reproductive Biology Insights Volume 7 ; 7 ; 2014 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2015 ; Reproductive Biology Insights Volume 8 ; 8 ; 2015 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2016 ; Reproductive Biology Insights Volume 9 ; 9 ; 2016 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Reproductive Biology Insights Volume 7 ; 7 ; 2014 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Reproductive Biology Insights Volume 8 ; 8 ; 2015 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Reproductive Biology Insights Volume 9 ; 9 ; 2016 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -427,13 +427,13 @@
     # skips year 2011
     #Triggered by Sage
 
-    au < finished ; frozen ; 2008 ; Retrovirology: Research and Treatment Volume 1-2 ; 1-2 ; 2008 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2008 ; Retrovirology: Research and Treatment Volume 1-2 ; 1-2 ; 2008 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2010 ; Retrovirology: Research and Treatment Volume 3 ; 3 ; 2010 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2012 ; Retrovirology: Research and Treatment Volume 4 ; 4 ; 2012 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2013 ; Retrovirology: Research and Treatment Volume 5 ; 5 ; 2013 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2014 ; Retrovirology: Research and Treatment Volume 6 ; 6 ; 2014 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2015 ; Retrovirology: Research and Treatment Volume 7 ; 7 ; 2015 ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2017 ; Retrovirology: Research and Treatment Volume 8 ; 8 ; 2017 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2012 ; Retrovirology: Research and Treatment Volume 4 ; 4 ; 2012 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; Retrovirology: Research and Treatment Volume 5 ; 5 ; 2013 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Retrovirology: Research and Treatment Volume 6 ; 6 ; 2014 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Retrovirology: Research and Treatment Volume 7 ; 7 ; 2015 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2017 ; Retrovirology: Research and Treatment Volume 8 ; 8 ; 2017 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -449,13 +449,13 @@
     #Triggered by Sage
 
     au < finished ; crawling ; 2006 ; Translational Oncogenomics Volume 1 ; 1 ; 2006 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2007 ; Translational Oncogenomics Volume 2 ; 2 ; 2007 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2007 ; Translational Oncogenomics Volume 2 ; 2 ; 2007 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2008 ; Translational Oncogenomics Volume 3 ; 3 ; 2008 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2010 ; Translational Oncogenomics Volume 4 ; 4 ; 2010 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2012 ; Translational Oncogenomics Volume 5 ; 5 ; 2012 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2010 ; Translational Oncogenomics Volume 4 ; 4 ; 2010 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2012 ; Translational Oncogenomics Volume 5 ; 5 ; 2012 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2014 ; Translational Oncogenomics Volume 6 ; 6 ; 2014 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2015 ; Translational Oncogenomics Volume 7 ; 7 ; 2015 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2016 ; Translational Oncogenomics Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Translational Oncogenomics Volume 7 ; 7 ; 2015 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Translational Oncogenomics Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Translational Oncogenomics Volume 9 ; 9 ; 2017 ; reingest4.clockss.org:8082 >
 
   }
