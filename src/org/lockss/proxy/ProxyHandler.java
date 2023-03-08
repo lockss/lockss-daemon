@@ -41,6 +41,7 @@ import java.io.*;
 import java.net.*;
 import java.net.HttpURLConnection;
 import java.util.*;
+
 import org.apache.commons.collections.SetUtils;
 import org.apache.commons.collections.map.LRUMap;
 import org.apache.commons.httpclient.util.*;
@@ -81,30 +82,38 @@ public class ProxyHandler extends AbstractHttpHandler {
   private static Log jlog = LogFactory.getLog(ProxyHandler.class);
 
 
-  /** a GET of this path results in an index page of all AU manifest
-   * pages */
+  /**
+   * a GET of this path results in an index page of all AU manifest
+   * pages
+   */
   public static String MANIFEST_INDEX_URL_PATH = "/";
 
-  /** Force the proxy to serve only locally cached content.  Mainly useful
-   * in testing. */
+  /**
+   * Force the proxy to serve only locally cached content.  Mainly useful
+   * in testing.
+   */
   static final String PARAM_NEVER_PROXY =
       Configuration.PREFIX + "proxy.neverProxy";
   static final boolean DEFAULT_NEVER_PROXY = false;
 
-  /** If true the audit proxy refrains from returning 404 until all AUs are
-   * started - 503 is returned instead. */
+  /**
+   * If true the audit proxy refrains from returning 404 until all AUs are
+   * started - 503 is returned instead.
+   */
   static final String PARAM_AUDIT_503_UNTIL_AUS_STARTED =
-    Configuration.PREFIX + "proxy.audit503UntilAusStarted";
+      Configuration.PREFIX + "proxy.audit503UntilAusStarted";
   static final boolean DEFAULT_AUDIT_503_UNTIL_AUS_STARTED = true;
 
-  /** https requests are tunneled through CONNECT on same host so appear to
+  /**
+   * https requests are tunneled through CONNECT on same host so appear to
    * come from loopback addr.  To report correct request address, CONNECT
    * method records source addr in a map keyed by port number of the
    * loopback connection.  We don't know when we're done with an entry
    * because CONNECT connections from clients are reused, so used a fixed
-   * size LRU map.  This is the maximum size. */
-  static final String PARAM_LOOPBACK_CONNECT_MAP_MAX = 
-    Configuration.PREFIX + "proxy.loopbackConnectMapMax";
+   * size LRU map.  This is the maximum size.
+   */
+  static final String PARAM_LOOPBACK_CONNECT_MAP_MAX =
+      Configuration.PREFIX + "proxy.loopbackConnectMapMax";
   static final int DEFAULT_LOOPBACK_CONNECT_MAP_MAX = 100;
 
   private final Map<Integer, String> loopbackConnectMap;
@@ -138,16 +147,16 @@ public class ProxyHandler extends AbstractHttpHandler {
     Configuration config = ConfigManager.getCurrentConfig();
     neverProxy = config.getBoolean(PARAM_NEVER_PROXY, DEFAULT_NEVER_PROXY);
     audit503UntilAusStarted =
-      config.getBoolean(PARAM_AUDIT_503_UNTIL_AUS_STARTED,
-			DEFAULT_AUDIT_503_UNTIL_AUS_STARTED);
+        config.getBoolean(PARAM_AUDIT_503_UNTIL_AUS_STARTED,
+            DEFAULT_AUDIT_503_UNTIL_AUS_STARTED);
 
 
     hostname = PlatformUtil.getLocalHostname();
 
     int connectMapSize = config.getInt(PARAM_LOOPBACK_CONNECT_MAP_MAX,
-				       DEFAULT_LOOPBACK_CONNECT_MAP_MAX);
+        DEFAULT_LOOPBACK_CONNECT_MAP_MAX);
     loopbackConnectMap =
-      Collections.synchronizedMap(new LRUMap(connectMapSize));
+        Collections.synchronizedMap(new LRUMap(connectMapSize));
   }
 
   ProxyHandler(LockssDaemon daemon, LockssUrlConnectionPool pool) {
@@ -164,47 +173,61 @@ public class ProxyHandler extends AbstractHttpHandler {
 
   // Entry points from ProxyManager
 
-  /** If set to true, will act like an audit proxy.  (Content will be
+  /**
+   * If set to true, will act like an audit proxy.  (Content will be
    * served only from the cache; requests will never be proxied, will serve
-   * CLOCKSS unsubscribed content */
+   * CLOCKSS unsubscribed content
+   */
   public void setAuditProxy(boolean flg) {
     auditProxy = flg;
     setFromCacheOnly(flg);
   }
 
-  /** If set to true, audit proxy will generate a manifest index just like
-   * the normal proxy does */
+  /**
+   * If set to true, audit proxy will generate a manifest index just like
+   * the normal proxy does
+   */
   public void setAuditIndex(boolean flg) {
     auditIndex = flg;
   }
 
-  /** If set to true, content will be served only from the cache; requests
-   * will never be proxied */
+  /**
+   * If set to true, content will be served only from the cache; requests
+   * will never be proxied
+   */
   public void setFromCacheOnly(boolean flg) {
     neverProxy = flg;
   }
 
-  /** Set the address to which CONNECT requests will connect, ignoring the
-   * address in the request.  */
+  /**
+   * Set the address to which CONNECT requests will connect, ignoring the
+   * address in the request.
+   */
   public void setConnectAddr(String host, int port) {
     connectHost = host;
     connectPort = port;
     log.debug2("setConnectAddr(" + host + ", " + port + ")");
   }
 
-  /** Set the SSL port on which this proxy is listening.  */
+  /**
+   * Set the SSL port on which this proxy is listening.
+   */
   public void setSslListenPort(int port) {
     sslListenPort = port;
   }
 
-  /** Set the error template.  */
+  /**
+   * Set the error template.
+   */
   public void setErrorTemplate(String template) {
     errorTemplate = template;
   }
 
-  /** Set a target to use as a base (protocol, host, port) for all incoming
+  /**
+   * Set a target to use as a base (protocol, host, port) for all incoming
    * request URLs.  To be used to cause the proxy to serve locally cached
-   * content in response to direct (non-proxy) GET requests. */
+   * content in response to direct (non-proxy) GET requests.
+   */
   public void setProxiedTarget(String target) {
     failOverTargetUri = new URI(target);
     isFailOver = true;
@@ -225,7 +248,8 @@ public class ProxyHandler extends AbstractHttpHandler {
     }
   }
 
-  /** Create a Via header value:
+  /**
+   * Create a Via header value:
    * 1.1 thishost:port (LOCKSS/Jetty)
    */
   String makeVia(HttpRequest req) {
@@ -237,38 +261,42 @@ public class ProxyHandler extends AbstractHttpHandler {
     return proxyMgr.makeVia(hostname, port);
   }
 
-  protected int _tunnelTimeoutMs=250;
+  protected int _tunnelTimeoutMs = 250;
 
   /* ------------------------------------------------------------ */
-  /** Map of leg by leg headers (not end to end).
+  /**
+   * Map of leg by leg headers (not end to end).
    * Should be a set, but more efficient string map is used instead.
    */
   protected StringMap _DontProxyHeaders = new StringMap();
+
   {
     Object o = new Object();
     _DontProxyHeaders.setIgnoreCase(true);
-    _DontProxyHeaders.put(HttpFields.__ProxyConnection,o);
-    _DontProxyHeaders.put(HttpFields.__Connection,o);
-    _DontProxyHeaders.put(HttpFields.__KeepAlive,o);
-    _DontProxyHeaders.put(HttpFields.__TransferEncoding,o);
-    _DontProxyHeaders.put(HttpFields.__TE,o);
-    _DontProxyHeaders.put(HttpFields.__Trailer,o);
-    _DontProxyHeaders.put(HttpFields.__ProxyAuthorization,o);
-    _DontProxyHeaders.put(HttpFields.__ProxyAuthenticate,o);
-    _DontProxyHeaders.put(HttpFields.__Upgrade,o);
+    _DontProxyHeaders.put(HttpFields.__ProxyConnection, o);
+    _DontProxyHeaders.put(HttpFields.__Connection, o);
+    _DontProxyHeaders.put(HttpFields.__KeepAlive, o);
+    _DontProxyHeaders.put(HttpFields.__TransferEncoding, o);
+    _DontProxyHeaders.put(HttpFields.__TE, o);
+    _DontProxyHeaders.put(HttpFields.__Trailer, o);
+    _DontProxyHeaders.put(HttpFields.__ProxyAuthorization, o);
+    _DontProxyHeaders.put(HttpFields.__ProxyAuthenticate, o);
+    _DontProxyHeaders.put(HttpFields.__Upgrade, o);
   }
 
   /* ------------------------------------------------------------ */
-  /**  Map of allows schemes to proxy
+  /**
+   * Map of allows schemes to proxy
    * Should be a set, but more efficient string map is used instead.
    */
   protected StringMap _ProxySchemes = new StringMap();
+
   {
     Object o = new Object();
     _ProxySchemes.setIgnoreCase(true);
-    _ProxySchemes.put(HttpMessage.__SCHEME,o);
-    _ProxySchemes.put(HttpMessage.__SSL_SCHEME,o);
-    _ProxySchemes.put("ftp",o);
+    _ProxySchemes.put(HttpMessage.__SCHEME, o);
+    _ProxySchemes.put(HttpMessage.__SSL_SCHEME, o);
+    _ProxySchemes.put("ftp", o);
   }
 
   /* ------------------------------------------------------------ */
@@ -277,16 +305,18 @@ public class ProxyHandler extends AbstractHttpHandler {
   }
 
   /* ------------------------------------------------------------ */
-  /** Tunnel timeout.
+
+  /**
+   * Tunnel timeout.
    * IE on win2000 has connections issues with normal timeout handling.
    * This timeout should be set to a low value that will expire to allow IE to
    * see the end of the tunnel connection.
    */
   public void setTunnelTimeoutMs(long ms) {
-    _tunnelTimeoutMs = (int)ms;
+    _tunnelTimeoutMs = (int) ms;
   }
 
-   /* ------------------------------------------------------------ */
+  /* ------------------------------------------------------------ */
   public void handle(String pathInContext,
                      String pathParams,
                      HttpRequest request,
@@ -329,23 +359,25 @@ public class ProxyHandler extends AbstractHttpHandler {
                       HttpRequest request,
                       HttpResponse response)
       throws HttpException, IOException {
+
     InputStream reqBodyStrm = null;
     URI uri = request.getURI();
     long reqStartTime = TimeBase.nowMs();
+
     if (proxyMgr.isLogReqStart()) {
       log.info("Proxy handle url: " + uri);
     }
 
     if (!proxyMgr.isMethodAllowed(request.getMethod())) {
-      sendForbid(request,response,uri);
+      sendForbid(request, response, uri);
       logAccess(request, "forbidden method: " + request.getMethod());
       return;
     }
 
     // Is this a CONNECT request?
     if (HttpRequest.__CONNECT.equals(request.getMethod())) {
-      response.setField(HttpFields.__Connection,"close"); // XXX Needed for IE????
-      handleConnect(pathInContext,pathParams,request,response);
+      response.setField(HttpFields.__Connection, "close"); // XXX Needed for IE????
+      handleConnect(pathInContext, pathParams, request, response);
       return;
     }
 
@@ -357,18 +389,18 @@ public class ProxyHandler extends AbstractHttpHandler {
     HttpConnection conn = request.getHttpConnection();
     if (sslListenPort > 0 && sslListenPort == conn.getServerPort()) {
       if (uri.toString().startsWith("/")) {
-	String root = request.getRootURL().toString();
-	if (!StringUtil.isNullString(root)) {
-	  String newUri = root.toLowerCase() + uri.toString();
-	  log.debug("Relative URI: " + uri + " -> " + newUri);
-	  uri.setURI(newUri);
-	}
+        String root = request.getRootURL().toString();
+        if (!StringUtil.isNullString(root)) {
+          String newUri = root.toLowerCase() + uri.toString();
+          log.debug("Relative URI: " + uri + " -> " + newUri);
+          uri.setURI(newUri);
+        }
       }
     }
 
     if (log.isDebug3()) {
-      log.debug3("pathInContext="+pathInContext);
-      log.debug3("URI="+uri);
+      log.debug3("pathInContext=" + pathInContext);
+      log.debug3("URI=" + uri);
     }
 
     // Handle POST requests specially:
@@ -385,12 +417,12 @@ public class ProxyHandler extends AbstractHttpHandler {
     // TODO -- CTG: we need to determine the mime type and dispatch based on it
     //
     String source = request.getField(Constants.X_LOCKSS_SOURCE);
-
     if (HttpRequest.__POST.equals(request.getMethod())
         && proxyMgr.isHandleFormPost()
         && !Constants.X_LOCKSS_SOURCE_PUBLISHER.equals(source)) {
 
       log.debug3("POST request found!");
+
       // Get a map of the request parameters, and the complete body
       // InputStream which will be needed if we forward the request.
       MultiMap params = new MultiMap(16);
@@ -406,10 +438,13 @@ public class ProxyHandler extends AbstractHttpHandler {
       for (String k : keys) {
         helper.add((k), params.get(k).toString());
       }
+
       if (log.isDebug3()) {
         log.debug3("Overriding original URI to:" + helper.toEncodedString());
       }
+
       URI postUri = new URI(helper.toEncodedString());
+
       // We only want to override the post request by proxy if we cached it during crawling.
       CachedUrl cu = pluginMgr.findCachedUrl(postUri.toString());
       if (cu != null) {
@@ -422,6 +457,8 @@ public class ProxyHandler extends AbstractHttpHandler {
       }
     }
 
+    // Support for publisher running a LOCKSS box: Allows LOCKSS box to be swapped in and configured
+    // with their original hostname. Precedes ServeContent.
     if (isFailOver) {
       if (uri.getHost() == null && failOverTargetUri.getHost() != null) {
         uri.setHost(failOverTargetUri.getHost());
@@ -462,6 +499,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       return;
     }
 */
+
     ArchivalUnit au;
     CachedUrl cu;
 
@@ -493,18 +531,23 @@ public class ProxyHandler extends AbstractHttpHandler {
         }
         return;
       }
+
       String normUrl = urlString;
+
       if (proxyMgr.isNormalizeAuidRequest()) {
-	try {
-	  normUrl = UrlUtil.normalizeUrl(urlString, au);
-	} catch (PluginBehaviorException e) {
-	  log.siteWarning("Normalizer error: " + urlString, e);
-	}
+        try {
+          normUrl = UrlUtil.normalizeUrl(urlString, au);
+        } catch (PluginBehaviorException e) {
+          log.siteWarning("Normalizer error: " + urlString, e);
+        }
       }
+
       cu = au.makeCachedUrl(normUrl);
     } else {
+      // No AUID specified
       cu = pluginMgr.findCachedUrl(urlString);
     }
+
     // Don't allow CLOCKSS to serve local content for unsubscribed AUs
     // No longer in use?
     if (cu != null && theDaemon.isDetectClockssSubscription() && !auditProxy) {
@@ -528,6 +571,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       if (log.isDebug2()) {
         log.debug2("cu: " + (isRepairRequest ? "(repair) " : "") + cu);
       }
+
       if (isRepairRequest || neverProxy ||
           // CLOCKSS Production always asks for content only in cache
           Constants.X_LOCKSS_SOURCE_CACHE.equals(source) ||
@@ -585,6 +629,8 @@ public class ProxyHandler extends AbstractHttpHandler {
         }
       }
 
+      // Support for machines (mainly Content Testing machines) that need to operate
+      // on content freshly crawled from the publisher through this proxy
       if (!isInCache
           && !Constants.X_LOCKSS_SOURCE_PUBLISHER.equals(source)
           && (proxyMgr.getHostDownAction() ==
@@ -604,6 +650,7 @@ public class ProxyHandler extends AbstractHttpHandler {
         }
         return;
       }
+
       if (UrlUtil.isHttpOrHttpsUrl(urlString)) {
         if (HttpRequest.__GET.equals(request.getMethod())) {
           doLockss(pathInContext, pathParams, request, response,
@@ -621,7 +668,9 @@ public class ProxyHandler extends AbstractHttpHandler {
     }
   }
 
-  /** Proxy a connection using Java's native URLConection */
+  /**
+   * Proxy a connection using Java's native URLConection
+   */
   void doSun(String pathInContext,
              String pathParams,
              HttpRequest request,
@@ -630,16 +679,16 @@ public class ProxyHandler extends AbstractHttpHandler {
     URI uri = request.getURI();
     try {
       // Do we proxy this?
-      URL url=isProxied(uri);
-      if (url==null) {
+      URL url = isProxied(uri);
+      if (url == null) {
         if (isForbidden(uri)) {
-          sendForbid(request,response,uri);
-	  logAccess(request, "forbidden method: " + request.getMethod());
-	}
+          sendForbid(request, response, uri);
+          logAccess(request, "forbidden method: " + request.getMethod());
+        }
         return;
       }
 
-      if(jlog.isDebugEnabled())jlog.debug("PROXY URL="+url);
+      if (jlog.isDebugEnabled()) jlog.debug("PROXY URL=" + url);
 
       URLConnection connection = url.openConnection();
       connection.setAllowUserInteraction(false);
@@ -647,40 +696,40 @@ public class ProxyHandler extends AbstractHttpHandler {
       // Set method
       HttpURLConnection http = null;
       if (connection instanceof HttpURLConnection) {
-        http = (HttpURLConnection)connection;
+        http = (HttpURLConnection) connection;
         http.setRequestMethod(request.getMethod());
         http.setInstanceFollowRedirects(false);
       }
 
       // check connection header
       String connectionHdr = request.getField(HttpFields.__Connection);
-      if (connectionHdr!=null &&
-          (connectionHdr.equalsIgnoreCase(HttpFields.__KeepAlive)||
-           connectionHdr.equalsIgnoreCase(HttpFields.__Close)))
-        connectionHdr=null;
+      if (connectionHdr != null &&
+          (connectionHdr.equalsIgnoreCase(HttpFields.__KeepAlive) ||
+              connectionHdr.equalsIgnoreCase(HttpFields.__Close)))
+        connectionHdr = null;
 
       // copy headers
-      boolean hasContent=false;
+      boolean hasContent = false;
       Enumeration en = request.getFieldNames();
 
       while (en.hasMoreElements()) {
         // XXX could be better than this!
-        String hdr=(String)en.nextElement();
+        String hdr = (String) en.nextElement();
 
         if (_DontProxyHeaders.containsKey(hdr))
           continue;
 
-        if (connectionHdr!=null && connectionHdr.indexOf(hdr)>=0)
+        if (connectionHdr != null && connectionHdr.indexOf(hdr) >= 0)
           continue;
 
         if (HttpFields.__ContentType.equalsIgnoreCase(hdr))
-          hasContent=true;
+          hasContent = true;
 
         Enumeration vals = request.getFieldValues(hdr);
         while (vals.hasMoreElements()) {
-          String val = (String)vals.nextElement();
-          if (val!=null) {
-            connection.addRequestProperty(hdr,val);
+          String val = (String) vals.nextElement();
+          if (val != null) {
+            connection.addRequestProperty(hdr, val);
           }
         }
       }
@@ -689,17 +738,17 @@ public class ProxyHandler extends AbstractHttpHandler {
       connection.addRequestProperty(HttpFields.__Via, makeVia(request));
       String reqAddr = getOrigReqAddr(request);
       if (!StringUtil.isNullString(reqAddr)) {
-	connection.addRequestProperty(HttpFields.__XForwardedFor, reqAddr);
+        connection.addRequestProperty(HttpFields.__XForwardedFor, reqAddr);
       }
       // a little bit of cache control
       String cache_control = request.getField(HttpFields.__CacheControl);
-      if (cache_control!=null &&
-          (cache_control.indexOf("no-cache")>=0 ||
-           cache_control.indexOf("no-store")>=0))
+      if (cache_control != null &&
+          (cache_control.indexOf("no-cache") >= 0 ||
+              cache_control.indexOf("no-store") >= 0))
         connection.setUseCaches(false);
 
       // customize Connection
-      customizeConnection(pathInContext,pathParams,request,connection);
+      customizeConnection(pathInContext, pathParams, request, connection);
 
       try {
         connection.setDoInput(true);
@@ -708,31 +757,32 @@ public class ProxyHandler extends AbstractHttpHandler {
         InputStream in = reqIn != null ? reqIn : request.getInputStream();
         if (hasContent) {
           connection.setDoOutput(true);
-          IO.copy(in,connection.getOutputStream());
+          IO.copy(in, connection.getOutputStream());
         }
 
         // Connect
         connection.connect();
       } catch (Exception e) {
-        LogSupport.ignore(jlog,e);
+        LogSupport.ignore(jlog, e);
       }
 
       InputStream proxy_in = null;
 
       // handler status codes etc.
-      int code=HttpResponse.__500_Internal_Server_Error;
-      if (http!=null) {
+      int code = HttpResponse.__500_Internal_Server_Error;
+      if (http != null) {
         proxy_in = http.getErrorStream();
 
-        code=http.getResponseCode();
+        code = http.getResponseCode();
         response.setStatus(code);
         response.setReason(http.getResponseMessage());
       }
 
-      if (proxy_in==null) {
-        try {proxy_in=connection.getInputStream();}
-        catch (Exception e) {
-          LogSupport.ignore(jlog,e);
+      if (proxy_in == null) {
+        try {
+          proxy_in = connection.getInputStream();
+        } catch (Exception e) {
+          LogSupport.ignore(jlog, e);
           proxy_in = http.getErrorStream();
         }
       }
@@ -742,22 +792,22 @@ public class ProxyHandler extends AbstractHttpHandler {
       response.removeField(HttpFields.__Server);
 
       // set response headers
-      int h=0;
-      String hdr=connection.getHeaderFieldKey(h);
-      String val=connection.getHeaderField(h);
-      while(hdr!=null || val!=null) {
-        if (hdr!=null && val!=null && !_DontProxyHeaders.containsKey(hdr))
-          response.addField(hdr,val);
+      int h = 0;
+      String hdr = connection.getHeaderFieldKey(h);
+      String val = connection.getHeaderField(h);
+      while (hdr != null || val != null) {
+        if (hdr != null && val != null && !_DontProxyHeaders.containsKey(hdr))
+          response.addField(hdr, val);
         h++;
-        hdr=connection.getHeaderFieldKey(h);
-        val=connection.getHeaderField(h);
+        hdr = connection.getHeaderFieldKey(h);
+        val = connection.getHeaderField(h);
       }
       response.addField(HttpFields.__Via, makeVia(request));
 
       // Handled
       request.setHandled(true);
-      if (proxy_in!=null)
-        IO.copy(proxy_in,response.getOutputStream());
+      if (proxy_in != null)
+        IO.copy(proxy_in, response.getOutputStream());
 
     } catch (Exception e) {
       log.warning("doSun error", e);
@@ -779,8 +829,10 @@ public class ProxyHandler extends AbstractHttpHandler {
     return pluginMgr.getAuFromId(auid);
   }
 
-  /** Extract query args and form parameters from request URI and
-   * body, and return an InputStream for the complete body. */
+  /**
+   * Extract query args and form parameters from request URI and
+   * body, and return an InputStream for the complete body.
+   */
   // Adapted from org.mortbay.http.HttpRequest
   private InputStream extractParametersTo(HttpRequest request,
                                           MultiMap paramMap) {
@@ -831,12 +883,12 @@ public class ProxyHandler extends AbstractHttpHandler {
             // save lots of memory by streaming this!!!!
             IO.copy(reqIn, bout, max);
 
-            if (bout.size()==maxFormContentSize && reqIn.available()>0) {
+            if (bout.size() == maxFormContentSize && reqIn.available() > 0) {
               log.warning("Ignoring POST body larger than " + maxFormContentSize);
             } else {
               // Add form params to query params
               UrlEncoded.decodeTo(bout.toByteArray(), 0, bout.getCount(),
-                                  paramMap, encoding);
+                  paramMap, encoding);
             }
           } catch (org.mortbay.http.EOFException e) {
             LogSupport.ignore(jlog, e);
@@ -848,7 +900,7 @@ public class ProxyHandler extends AbstractHttpHandler {
     }
     if (bout != null) {
       return new SequenceInputStream(new ByteArrayInputStream(bout.getBuf()),
-                                     reqIn);
+          reqIn);
     } else if (reqIn != null) {
       return reqIn;
     } else {
@@ -868,24 +920,26 @@ public class ProxyHandler extends AbstractHttpHandler {
       msg = "AU: " + au.getName() + " : " + msg;
     }
     proxyMgr.logAccess(request.getMethod(), request.getURI().toString(), msg,
-		       getOrigReqAddr(request),
-		       reqElapsedTime);
+        getOrigReqAddr(request),
+        reqElapsedTime);
   }
 
   /**
    * Record the request in COUNTER if appropriate
    */
   void recordRequest(HttpRequest request,
-		     String url,
-		     CounterReportsRequestRecorder.PublisherContacted contacted,
-		     int publisherCode) {
+                     String url,
+                     CounterReportsRequestRecorder.PublisherContacted contacted,
+                     int publisherCode) {
     if (proxyMgr.isCounterCountable(request.getField(HttpFields.__UserAgent))) {
       CounterReportsRequestRecorder.getInstance().recordRequest(url, contacted,
-	  publisherCode, null);
+          publisherCode, null);
     }
   }
 
-  /** Proxy a connection using LockssUrlConnection */
+  /**
+   * Proxy a connection using LockssUrlConnection
+   */
   void doLockss(String pathInContext,
                 String pathParams,
                 HttpRequest request,
@@ -893,6 +947,7 @@ public class ProxyHandler extends AbstractHttpHandler {
                 String urlString,
                 CachedUrl cu,
                 long reqStartTime) throws IOException {
+
     boolean isInCache = cu != null && cu.hasContent();
 
     LockssUrlConnection conn = null;
@@ -929,6 +984,7 @@ public class ProxyHandler extends AbstractHttpHandler {
             200);
         return;
       }
+
       if (isPubNever(cu)) {
         if (isInCache) {
           // shouldn't happen, (isInCache && isPubNever) handled before
@@ -944,7 +1000,7 @@ public class ProxyHandler extends AbstractHttpHandler {
           if (candidateAus != null && !candidateAus.isEmpty()) {
             sendErrorPage(request, response, 404,
                 "Host " + request.getURI().getHost() +
-                " no longer has content",
+                    " no longer has content",
                 candidateAus);
             logAccess(request, "not present, pub_never, 404 with index",
                 TimeBase.msSince(reqStartTime));
@@ -978,10 +1034,9 @@ public class ProxyHandler extends AbstractHttpHandler {
 
       // Forward response from publisher or serve from this cache...
       try {
-        conn =
-            UrlUtil.openConnection(LockssUrlConnection.METHOD_PROXY,
-                UrlUtil.minimallyEncodeUrl(urlString),
-                (useQuick ? quickFailConnPool : connPool));
+        conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_PROXY,
+            UrlUtil.minimallyEncodeUrl(urlString),
+            (useQuick ? quickFailConnPool : connPool));
 
         conn.setFollowRedirects(false);
       } catch (MalformedURLException e) {
@@ -992,41 +1047,42 @@ public class ProxyHandler extends AbstractHttpHandler {
         doSun(pathInContext, pathParams, request, response, null);
         return;
       }
+
       // check connection header
       String connectionHdr = request.getField(HttpFields.__Connection);
-      if (connectionHdr!=null &&
-          (connectionHdr.equalsIgnoreCase(HttpFields.__KeepAlive)||
-           connectionHdr.equalsIgnoreCase(HttpFields.__Close)))
-        connectionHdr=null;
+      if (connectionHdr != null &&
+          (connectionHdr.equalsIgnoreCase(HttpFields.__KeepAlive) ||
+              connectionHdr.equalsIgnoreCase(HttpFields.__Close)))
+        connectionHdr = null;
 
       // copy request headers into new request
-      boolean hasContent=false;
+      boolean hasContent = false;
       String ifModified = null;
 
       for (Enumeration en = request.getFieldNames();
            en.hasMoreElements(); ) {
-        String hdr=(String)en.nextElement();
+        String hdr = (String) en.nextElement();
 
         if (_DontProxyHeaders.containsKey(hdr)) continue;
 
-        if (connectionHdr!=null && connectionHdr.indexOf(hdr)>=0) continue;
+        if (connectionHdr != null && connectionHdr.indexOf(hdr) >= 0) continue;
 
-        if (HttpFields.__ContentType.equalsIgnoreCase(hdr)) hasContent=true;
+        if (HttpFields.__ContentType.equalsIgnoreCase(hdr)) hasContent = true;
 
-	// Set local address if requested and allowed
+        // Set local address if requested and allowed
         if (Constants.X_LOCKSS_LOCAL_ADDRESS.equalsIgnoreCase(hdr)) {
-	  String localAddrStr = request.getField(hdr);
-	  if (!StringUtil.isNullString(localAddrStr) &&
-	      isAllowedLocalAddress(localAddrStr)) {
-	    try {
-	      IPAddr localAddr = IPAddr.getByName(localAddrStr);
-	      log.debug2("Setting local addr to " + localAddr);
-	      conn.setLocalAddress(localAddr);
-	    } catch (UnknownHostException e) {
-	      log.siteWarning("Illegal source address: " + localAddrStr, e);
-	    }
-	  }
-	}
+          String localAddrStr = request.getField(hdr);
+          if (!StringUtil.isNullString(localAddrStr) &&
+              isAllowedLocalAddress(localAddrStr)) {
+            try {
+              IPAddr localAddr = IPAddr.getByName(localAddrStr);
+              log.debug2("Setting local addr to " + localAddr);
+              conn.setLocalAddress(localAddr);
+            } catch (UnknownHostException e) {
+              log.siteWarning("Illegal source address: " + localAddrStr, e);
+            }
+          }
+        }
 
         if (isInCache) {
           if (HttpFields.__IfModifiedSince.equalsIgnoreCase(hdr)) {
@@ -1037,8 +1093,8 @@ public class ProxyHandler extends AbstractHttpHandler {
 
         Enumeration vals = request.getFieldValues(hdr);
         while (vals.hasMoreElements()) {
-          String val = (String)vals.nextElement();
-          if (val!=null) {
+          String val = (String) vals.nextElement();
+          if (val != null) {
             conn.addRequestProperty(hdr, val);
           }
         }
@@ -1076,7 +1132,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       conn.addRequestProperty(HttpFields.__Via, makeVia(request));
       String reqAddr = getOrigReqAddr(request);
       if (!StringUtil.isNullString(reqAddr)) {
-	conn.addRequestProperty(HttpFields.__XForwardedFor, reqAddr);
+        conn.addRequestProperty(HttpFields.__XForwardedFor, reqAddr);
       }
       String cookiePolicy = proxyMgr.getCookiePolicy();
       if (cookiePolicy != null &&
@@ -1085,7 +1141,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       }
 
       PublisherContacted pubContacted =
-	  CounterReportsRequestRecorder.PublisherContacted.TRUE;
+          CounterReportsRequestRecorder.PublisherContacted.TRUE;
 
       // If we ever handle input, this is (more-or-less) the HttpClient way
       // to do it
@@ -1096,58 +1152,59 @@ public class ProxyHandler extends AbstractHttpHandler {
       // }
 
       // Send the request
-
       try {
         conn.execute();
       } catch (IOException e) {
         if (log.isDebug3()) log.debug3("conn.execute", e);
 
-	// If connection timed out, remember host is down for a little while.
-	// Remember this only for hosts whose content we hold.
-	if (e instanceof LockssUrlConnection.ConnectionTimeoutException) {
-	  proxyMgr.setHostDown(request.getURI().getHost(), isInCache);
-	  pubContacted = CounterReportsRequestRecorder.PublisherContacted.FALSE;
-	}
-	// if we get any error and it's in the cache, serve it from there
-	if (isInCache) {
-	  serveFromCache(pathInContext, pathParams, request, response, cu);
-	  // Record the necessary information required for COUNTER reports.
-	  recordRequest(request,
-	      		urlString,
-	      		pubContacted,
-	      		conn.getResponseCode());
-	} else {
-	  // else generate an error page
-	  sendProxyErrorPage(e, request, response,
-			     pluginMgr.getCandidateAus(urlString));
-	}
-	return;
+        // If connection timed out, remember host is down for a little while.
+        // Remember this only for hosts whose content we hold.
+        if (e instanceof LockssUrlConnection.ConnectionTimeoutException) {
+          proxyMgr.setHostDown(request.getURI().getHost(), isInCache);
+          pubContacted = CounterReportsRequestRecorder.PublisherContacted.FALSE;
+        }
+
+        // if we get any error and it's in the cache, serve it from there
+        if (isInCache) {
+          serveFromCache(pathInContext, pathParams, request, response, cu);
+          // Record the necessary information required for COUNTER reports.
+          recordRequest(request,
+              urlString,
+              pubContacted,
+              conn.getResponseCode());
+        } else {
+          // else generate an error page
+          sendProxyErrorPage(e, request, response,
+              pluginMgr.getCandidateAus(urlString));
+        }
+        return;
       }
       // We got a response, should we prefer it to what's in the cache?
       if (isInCache && preferCacheOverPubResponse(cu, conn)) {
-	// Remember that we served this URL from the cache, so that for a
-	// while we can serve it quickly, without incurring the cost of
-	// first checking with the publisher.
+        // Remember that we served this URL from the cache, so that for a
+        // while we can serve it quickly, without incurring the cost of
+        // first checking with the publisher.
 
-	// XXX It's likely that the policy for determining when (and for
-	// how long) to put the URL in the recently-accessed-URL cache
-	// should differ from the policy for determining whether to serve
-	// the content from the cache.  E.g., if the publisher responds
-	// with 200, we should perhaps cache the URL if the content
-	// returned is the same as what we have (in case the publisher
-	// doesn't support if-modified-since).
+        // XXX It's likely that the policy for determining when (and for
+        // how long) to put the URL in the recently-accessed-URL cache
+        // should differ from the policy for determining whether to serve
+        // the content from the cache.  E.g., if the publisher responds
+        // with 200, we should perhaps cache the URL if the content
+        // returned is the same as what we have (in case the publisher
+        // doesn't support if-modified-since).
 
-	proxyMgr.setRecentlyAccessedUrl(urlString);
+        proxyMgr.setRecentlyAccessedUrl(urlString);
 
-	serveFromCache(pathInContext, pathParams, request,
-		       response, cu);
-	// Record the necessary information required for COUNTER reports.
-	recordRequest(request, urlString, pubContacted, conn.getResponseCode());
-	return;
+        serveFromCache(pathInContext, pathParams, request,
+            response, cu);
+        // Record the necessary information required for COUNTER reports.
+        recordRequest(request, urlString, pubContacted, conn.getResponseCode());
+        return;
       }
 
       Collection<ArchivalUnit> candidateAus = null;
-      int code=conn.getResponseCode();
+
+      int code = conn.getResponseCode();
       if (proxyMgr.showManifestIndexForResponse(code)) {
         switch (code) {
           case HttpResponse.__200_OK:
@@ -1159,6 +1216,7 @@ public class ProxyHandler extends AbstractHttpHandler {
             candidateAus = pluginMgr.getCandidateAus(urlString);
         }
       }
+
       if (candidateAus != null && !candidateAus.isEmpty()) {
         forwardResponseWithIndex(request, response, candidateAus, conn);
       } else {
@@ -1240,7 +1298,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       throws IOException {
     // return response from server
     logAccess(request, conn.getResponseCode() + " from publisher",
-	      TimeBase.msSince(reqStartTime));
+        TimeBase.msSince(reqStartTime));
 
     forwardResponse(request, response, conn);
   }
@@ -1274,8 +1332,8 @@ public class ProxyHandler extends AbstractHttpHandler {
 
     // Handled
     request.setHandled(true);
-    if (proxy_in!=null) {
-      IO.copy(proxy_in,response.getOutputStream());
+    if (proxy_in != null) {
+      IO.copy(proxy_in, response.getOutputStream());
     }
   }
 
@@ -1312,56 +1370,57 @@ public class ProxyHandler extends AbstractHttpHandler {
                             HttpRequest request,
                             HttpResponse response)
       throws HttpException, IOException {
+
     URI uri = request.getURI();
 
     if (connectHost == null || connectHost.length() == 0 ||
-	connectPort <= 0) {
+        connectPort <= 0) {
       // Not allowed
-      sendForbid(request,response,uri);
+      sendForbid(request, response, uri);
       logAccess(request, "forbidden method: " + request.getMethod());
       return;
     }
+
     try {
       if (isForbidden(HttpMessage.__SSL_SCHEME, false)) {
-	sendForbid(request,response,uri);
-	logAccess(request, "forbidden scheme for CONNECT: " +
-		  HttpMessage.__SSL_SCHEME);
+        sendForbid(request, response, uri);
+        logAccess(request, "forbidden scheme for CONNECT: " +
+            HttpMessage.__SSL_SCHEME);
       } else {
-	Socket socket = new Socket(connectHost, connectPort);
-	if (isLoopbackAddr(connectHost)) {
-	  recordConnectSource(request, socket);
-	}
+        Socket socket = new Socket(connectHost, connectPort);
+        if (isLoopbackAddr(connectHost)) {
+          recordConnectSource(request, socket);
+        }
 
-	// XXX - need to setup semi-busy loop for IE.
-	int timeoutMs=30000;
-	if (_tunnelTimeoutMs > 0) {
-	  socket.setSoTimeout(_tunnelTimeoutMs);
-	  Object maybesocket = request.getHttpConnection().getConnection();
-	  try {
-	    Socket s = (Socket) maybesocket;
-	    timeoutMs=s.getSoTimeout();
-	    s.setSoTimeout(_tunnelTimeoutMs);
-	  } catch (Exception e) {
-	    log.warning("Couldn't set socket timeout", e);
-	  }
-	}
+        // XXX - need to setup semi-busy loop for IE.
+        int timeoutMs = 30000;
+        if (_tunnelTimeoutMs > 0) {
+          socket.setSoTimeout(_tunnelTimeoutMs);
+          Object maybesocket = request.getHttpConnection().getConnection();
+          try {
+            Socket s = (Socket) maybesocket;
+            timeoutMs = s.getSoTimeout();
+            s.setSoTimeout(_tunnelTimeoutMs);
+          } catch (Exception e) {
+            log.warning("Couldn't set socket timeout", e);
+          }
+        }
 
-	customizeConnection(pathInContext,pathParams,request,socket);
-	request.getHttpConnection().setHttpTunnel(new HttpTunnel(socket,
-								 timeoutMs));
-	logAccess(request, "200 redirected to " +
-		  connectHost + ":" + connectPort);
+        customizeConnection(pathInContext, pathParams, request, socket);
+        request.getHttpConnection().setHttpTunnel(new HttpTunnel(socket,
+            timeoutMs));
+        logAccess(request, "200 redirected to " +
+            connectHost + ":" + connectPort);
 
-	response.setStatus(HttpResponse.__200_OK);
-	response.setContentLength(0);
-	request.setHandled(true);
+        response.setStatus(HttpResponse.__200_OK);
+        response.setContentLength(0);
+        request.setHandled(true);
       }
     } catch (Exception e) {
       log.error("Error in CONNECT for " + uri, e);
       response.sendError(HttpResponse.__500_Internal_Server_Error,
-			 e.getMessage());
+          e.getMessage());
     }
-
 
 //     try {
 //       if(jlog.isDebugEnabled())jlog.debug("CONNECT: "+uri);
