@@ -44,16 +44,14 @@
   {
   
     title <
-      name = Development ;
-      issn = 0950-1991 ;
-      eissn = 1477-9129 ;
-      issnl = 0950-1991
+      name = Journal of Embryology and Experimental Morphology ;
+      issn = 0022-0752 ;
+      issnl = 0022-0752
     >
     #param[base_url] = http://dev.biologists.org/
-
     param[journal_id] = dev
-    #Vol 119, 121, 123-147 processed on HW
 
+    au < manifest ; exists ; 1953 ; 1953 ; Journal of Embryology and Experimental Morphology Volume 1 ; 1 ; >
     au < manifest ; exists ; 1953 ; 1953 ; Journal of Embryology and Experimental Morphology Volume 1 ; 1 ; >
     au < manifest ; exists ; 1954 ; 1954 ; Journal of Embryology and Experimental Morphology Volume 2 ; 2 ; >
     au < manifest ; exists ; 1955 ; 1955 ; Journal of Embryology and Experimental Morphology Volume 3 ; 3 ; >
@@ -152,8 +150,25 @@
     au < manifest ; exists ; 1986 ; 1986 ; Journal of Embryology and Experimental Morphology Volume 96 ; 96 ; >
     au < manifest ; exists ; 1986 ; 1986 ; Journal of Embryology and Experimental Morphology Volume 97 ; 97 ; >
     au < manifest ; exists ; 1986 ; 1986 ; Journal of Embryology and Experimental Morphology Volume 98 ; 98 ; >
-    au < manifest ; exists ; 1987 ; 1987 ; Development Volume 99 ; 99 ; >
-    au < manifest ; exists ; 1987 ; 1987 ; Development Volume 100 ; 100 ; >
+    au < manifest ; exists ; 1987 ; 1987 ; Journal of Embryology and Experimental Morphology Volume 99 ; 99 ; >
+    au < manifest ; exists ; 1987 ; 1987 ; Journal of Embryology and Experimental Morphology Volume 100 ; 100 ; >
+    #Became Development
+  }
+
+  {
+  
+    title <
+      name = Development ;
+      issn = 0950-1991 ;
+      eissn = 1477-9129 ;
+      issnl = 0950-1991
+    >
+    #param[base_url] = http://dev.biologists.org/
+
+    param[journal_id] = dev
+    #Vol 119, 121, 123-147 processed on HW
+    #Previously Journal of Embryology and Experimental Morphology
+
     au < manifest ; exists ; 1987 ; 1987 ; Development Volume 101 ; 101 ; >
     au < manifest ; exists ; 1988 ; 1988 ; Development Volume 102 ; 102 ; >
     au < manifest ; exists ; 1988 ; 1988 ; Development Volume 103 ; 103 ; >
@@ -240,6 +255,157 @@
   {
   
     title <
+      name = Quarterly Journal of Microscopical Science ;
+      issn = 0022-0752 ;
+      issnl = 0022-0752
+    >
+
+    comment[legacy] = 1853-1965 under a different name, with three series of synthetic volume names
+    #param[base_url] = http://jcs.biologists.org/
+
+    param[journal_id] = jcs
+
+    au < exists ; exists ; 1938 ; 1938 ; Quarterly Journal of Microscopical Science Volume s2-80 ; s2-80 ; >
+    au < exists ; exists ; 1938 ; 1938 ; Quarterly Journal of Microscopical Science Volume s2-81 ; s2-81 ; >
+    au < exists ; exists ; 1939 ; 1939 ; Quarterly Journal of Microscopical Science Volume s2-81 ; s2-81 ; >
+    au < manifest ; exists ; 1940 ; 1940 ; Quarterly Journal of Microscopical Science Volume s2-81 ; s2-81 ; >
+    au < manifest ; exists ; 1941 ; 1941 ; Quarterly Journal of Microscopical Science Volume s2-82 ; s2-82 ; >
+    au < manifest ; exists ; 1942 ; 1942 ; Quarterly Journal of Microscopical Science Volume s2-83 ; s2-83 ; >
+    au < manifest ; exists ; 1943 ; 1943 ; Quarterly Journal of Microscopical Science Volume s2-84 ; s2-84 ; >
+    au < manifest ; exists ; 1944 ; 1944 ; Quarterly Journal of Microscopical Science Volume s2-85 ; s2-85 ; >
+    au < manifest ; exists ; 1945 ; 1945 ; Quarterly Journal of Microscopical Science Volume s2-86 ; s2-86 ; >
+    au < manifest ; exists ; 1946 ; 1946 ; Quarterly Journal of Microscopical Science Volume s2-87 ; s2-87 ; >
+    au < manifest ; exists ; 1947 ; 1947 ; Quarterly Journal of Microscopical Science Volume s3-88 ; s3-88 ; >
+    au < manifest ; exists ; 1948 ; 1948 ; Quarterly Journal of Microscopical Science Volume s3-89 ; s3-89 ; >
+    au < manifest ; exists ; 1949 ; 1949 ; Quarterly Journal of Microscopical Science Volume s3-90 ; s3-90 ; >
+    au < manifest ; exists ; 1950 ; 1950 ; Quarterly Journal of Microscopical Science Volume s3-91 ; s3-91 ; >
+    au < manifest ; exists ; 1951 ; 1951 ; Quarterly Journal of Microscopical Science Volume s3-92 ; s3-92 ; >
+    au < manifest ; exists ; 1952 ; 1952 ; Quarterly Journal of Microscopical Science Volume s3-93 ; s3-93 ; >
+    au < manifest ; exists ; 1953 ; 1953 ; Quarterly Journal of Microscopical Science Volume s3-94 ; s3-94 ; >
+    au < manifest ; exists ; 1954 ; 1954 ; Quarterly Journal of Microscopical Science Volume s3-95 ; s3-95 ; >
+    au < manifest ; exists ; 1955 ; 1955 ; Quarterly Journal of Microscopical Science Volume s3-96 ; s3-96 ; >
+    au < manifest ; exists ; 1956 ; 1956 ; Quarterly Journal of Microscopical Science Volume s3-97 ; s3-97 ; >
+    au < manifest ; exists ; 1957 ; 1957 ; Quarterly Journal of Microscopical Science Volume s3-98 ; s3-98 ; >
+    au < manifest ; exists ; 1958 ; 1958 ; Quarterly Journal of Microscopical Science Volume s3-99 ; s3-99 ; >
+    au < manifest ; exists ; 1959 ; 1959 ; Quarterly Journal of Microscopical Science Volume s3-100 ; s3-100 ; >
+    au < manifest ; exists ; 1960 ; 1960 ; Quarterly Journal of Microscopical Science Volume s3-101 ; s3-101 ; >
+    au < manifest ; exists ; 1961 ; 1961 ; Quarterly Journal of Microscopical Science Volume s3-102 ; s3-102 ; >
+    au < manifest ; exists ; 1962 ; 1962 ; Quarterly Journal of Microscopical Science Volume s3-103 ; s3-103 ; >
+    au < manifest ; exists ; 1963 ; 1963 ; Quarterly Journal of Microscopical Science Volume s3-104 ; s3-104 ; >
+    au < manifest ; exists ; 1964 ; 1964 ; Quarterly Journal of Microscopical Science Volume s3-105 ; s3-105 ; >
+    au < manifest ; exists ; 1965 ; 1965 ; Quarterly Journal of Microscopical Science Volume s3-106 ; s3-106 ; >
+    au < manifest ; exists ; 1966 ; 1966 ; Quarterly Journal of Microscopical Science Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1967 ; 1967 ; Quarterly Journal of Microscopical Science Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1968 ; 1968 ; Quarterly Journal of Microscopical Science Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1969 ; 1969 ; Quarterly Journal of Microscopical Science Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1969 ; 1969 ; Quarterly Journal of Microscopical Science Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1970 ; 1970 ; Quarterly Journal of Microscopical Science Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1970 ; 1970 ; Quarterly Journal of Microscopical Science Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1971 ; 1971 ; Quarterly Journal of Microscopical Science Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1971 ; 1971 ; Quarterly Journal of Microscopical Science Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1972 ; 1972 ; Quarterly Journal of Microscopical Science Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1972 ; 1972 ; Quarterly Journal of Microscopical Science Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1973 ; 1973 ; Quarterly Journal of Microscopical Science Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1973 ; 1973 ; Quarterly Journal of Microscopical Science Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1974 ; 1974 ; Quarterly Journal of Microscopical Science Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1974 ; 1974 ; Quarterly Journal of Microscopical Science Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1974 ; 1974 ; Quarterly Journal of Microscopical Science Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1975 ; 1975 ; Quarterly Journal of Microscopical Science Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1975 ; 1975 ; Quarterly Journal of Microscopical Science Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1975 ; 1975 ; Quarterly Journal of Microscopical Science Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1976 ; 1976 ; Quarterly Journal of Microscopical Science Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1976 ; 1976 ; Quarterly Journal of Microscopical Science Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1976 ; 1976 ; Quarterly Journal of Microscopical Science Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1977 ; 1977 ; Quarterly Journal of Microscopical Science Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1977 ; 1977 ; Quarterly Journal of Microscopical Science Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1977 ; 1977 ; Quarterly Journal of Microscopical Science Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1977 ; 1977 ; Quarterly Journal of Microscopical Science Volume 26 ; 26 ; >
+    au < manifest ; exists ; 1977 ; 1977 ; Quarterly Journal of Microscopical Science Volume 27 ; 27 ; >
+    au < manifest ; exists ; 1977 ; 1977 ; Quarterly Journal of Microscopical Science Volume 28 ; 28 ; >
+    au < manifest ; exists ; 1978 ; 1978 ; Quarterly Journal of Microscopical Science Volume 29 ; 29 ; >
+    au < manifest ; exists ; 1978 ; 1978 ; Quarterly Journal of Microscopical Science Volume 30 ; 30 ; >
+    au < manifest ; exists ; 1978 ; 1978 ; Quarterly Journal of Microscopical Science Volume 31 ; 31 ; >
+    au < manifest ; exists ; 1978 ; 1978 ; Quarterly Journal of Microscopical Science Volume 32 ; 32 ; >
+    au < manifest ; exists ; 1978 ; 1978 ; Quarterly Journal of Microscopical Science Volume 33 ; 33 ; >
+    au < manifest ; exists ; 1978 ; 1978 ; Quarterly Journal of Microscopical Science Volume 34 ; 34 ; >
+    au < manifest ; exists ; 1979 ; 1979 ; Quarterly Journal of Microscopical Science Volume 35 ; 35 ; >
+    au < manifest ; exists ; 1979 ; 1979 ; Quarterly Journal of Microscopical Science Volume 36 ; 36 ; >
+    au < manifest ; exists ; 1979 ; 1979 ; Quarterly Journal of Microscopical Science Volume 37 ; 37 ; >
+    au < manifest ; exists ; 1979 ; 1979 ; Quarterly Journal of Microscopical Science Volume 38 ; 38 ; >
+    au < manifest ; exists ; 1979 ; 1979 ; Quarterly Journal of Microscopical Science Volume 39 ; 39 ; >
+    au < manifest ; exists ; 1979 ; 1979 ; Quarterly Journal of Microscopical Science Volume 40 ; 40 ; >
+    au < manifest ; exists ; 1980 ; 1980 ; Quarterly Journal of Microscopical Science Volume 41 ; 41 ; >
+    au < manifest ; exists ; 1980 ; 1980 ; Quarterly Journal of Microscopical Science Volume 42 ; 42 ; >
+    au < manifest ; exists ; 1980 ; 1980 ; Quarterly Journal of Microscopical Science Volume 43 ; 43 ; >
+    au < manifest ; exists ; 1980 ; 1980 ; Quarterly Journal of Microscopical Science Volume 44 ; 44 ; >
+    au < manifest ; exists ; 1980 ; 1980 ; Quarterly Journal of Microscopical Science Volume 45 ; 45 ; >
+    au < manifest ; exists ; 1980 ; 1980 ; Quarterly Journal of Microscopical Science Volume 46 ; 46 ; >
+    au < manifest ; exists ; 1981 ; 1981 ; Quarterly Journal of Microscopical Science Volume 47 ; 47 ; >
+    au < manifest ; exists ; 1981 ; 1981 ; Quarterly Journal of Microscopical Science Volume 48 ; 48 ; >
+    au < manifest ; exists ; 1981 ; 1981 ; Quarterly Journal of Microscopical Science Volume 49 ; 49 ; >
+    au < manifest ; exists ; 1981 ; 1981 ; Quarterly Journal of Microscopical Science Volume 50 ; 50 ; >
+    au < manifest ; exists ; 1981 ; 1981 ; Quarterly Journal of Microscopical Science Volume 51 ; 51 ; >
+    au < manifest ; exists ; 1981 ; 1981 ; Quarterly Journal of Microscopical Science Volume 52 ; 52 ; >
+    au < manifest ; exists ; 1982 ; 1982 ; Quarterly Journal of Microscopical Science Volume 53 ; 53 ; >
+    au < manifest ; exists ; 1982 ; 1982 ; Quarterly Journal of Microscopical Science Volume 54 ; 54 ; >
+    au < manifest ; exists ; 1982 ; 1982 ; Quarterly Journal of Microscopical Science Volume 55 ; 55 ; >
+    au < manifest ; exists ; 1982 ; 1982 ; Quarterly Journal of Microscopical Science Volume 56 ; 56 ; >
+    au < manifest ; exists ; 1982 ; 1982 ; Quarterly Journal of Microscopical Science Volume 57 ; 57 ; >
+    au < manifest ; exists ; 1982 ; 1982 ; Quarterly Journal of Microscopical Science Volume 58 ; 58 ; >
+    au < manifest ; exists ; 1983 ; 1983 ; Quarterly Journal of Microscopical Science Volume 59 ; 59 ; >
+    au < manifest ; exists ; 1983 ; 1983 ; Quarterly Journal of Microscopical Science Volume 60 ; 60 ; >
+    au < manifest ; exists ; 1983 ; 1983 ; Quarterly Journal of Microscopical Science Volume 61 ; 61 ; >
+    au < manifest ; exists ; 1983 ; 1983 ; Quarterly Journal of Microscopical Science Volume 62 ; 62 ; >
+    au < manifest ; exists ; 1983 ; 1983 ; Quarterly Journal of Microscopical Science Volume 63 ; 63 ; >
+    au < manifest ; exists ; 1983 ; 1983 ; Quarterly Journal of Microscopical Science Volume 64 ; 64 ; >
+    au < manifest ; exists ; 1984 ; 1984 ; Quarterly Journal of Microscopical Science Volume 65 ; 65 ; >
+    au < manifest ; exists ; 1984 ; 1984 ; Quarterly Journal of Microscopical Science Volume 66 ; 66 ; >
+    au < manifest ; exists ; 1984 ; 1984 ; Quarterly Journal of Microscopical Science Volume 67 ; 67 ; >
+    au < manifest ; exists ; 1984 ; 1984 ; Quarterly Journal of Microscopical Science Volume 68 ; 68 ; >
+    au < manifest ; exists ; 1984 ; 1984 ; Quarterly Journal of Microscopical Science Volume 69 ; 69 ; >
+    au < manifest ; exists ; 1984 ; 1984 ; Quarterly Journal of Microscopical Science Volume 70 ; 70 ; >
+    au < manifest ; exists ; 1984 ; 1984 ; Quarterly Journal of Microscopical Science Volume 71 ; 71 ; >
+    au < manifest ; exists ; 1984 ; 1984 ; Quarterly Journal of Microscopical Science Volume 72 ; 72 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; Quarterly Journal of Microscopical Science Volume 73 ; 73 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; Quarterly Journal of Microscopical Science Volume 74 ; 74 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; Quarterly Journal of Microscopical Science Volume 75 ; 75 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; Quarterly Journal of Microscopical Science Volume 76 ; 76 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; Quarterly Journal of Microscopical Science Volume 77 ; 77 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; Quarterly Journal of Microscopical Science Volume 78 ; 78 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; Quarterly Journal of Microscopical Science Volume 79 ; 79 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; Quarterly Journal of Microscopical Science Volume 80 ; 80 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; Quarterly Journal of Microscopical Science Volume 81 ; 81 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; Quarterly Journal of Microscopical Science Volume 82 ; 82 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; Quarterly Journal of Microscopical Science Volume 83 ; 83 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; Quarterly Journal of Microscopical Science Volume 84 ; 84 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; Quarterly Journal of Microscopical Science Volume 85 ; 85 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; Quarterly Journal of Microscopical Science Volume 86 ; 86 ; >
+    au < manifest ; exists ; 1987 ; 1987 ; Quarterly Journal of Microscopical Science Volume 87 ; 87 ; >
+    au < manifest ; exists ; 1987 ; 1987 ; Quarterly Journal of Microscopical Science Volume 88 ; 88 ; >
+    au < manifest ; exists ; 1988 ; 1988 ; Quarterly Journal of Microscopical Science Volume 89 ; 89 ; >
+    au < manifest ; exists ; 1988 ; 1988 ; Quarterly Journal of Microscopical Science Volume 90 ; 90 ; >
+    au < manifest ; exists ; 1988 ; 1988 ; Quarterly Journal of Microscopical Science Volume 91 ; 91 ; >
+    au < manifest ; exists ; 1989 ; 1989 ; Quarterly Journal of Microscopical Science Volume 92 ; 92 ; >
+    au < manifest ; exists ; 1989 ; 1989 ; Quarterly Journal of Microscopical Science Volume 93 ; 93 ; >
+    au < manifest ; exists ; 1989 ; 1989 ; Quarterly Journal of Microscopical Science Volume 94 ; 94 ; >
+    au < manifest ; exists ; 1990 ; 1990 ; Quarterly Journal of Microscopical Science Volume 95 ; 95 ; >
+    au < manifest ; exists ; 1990 ; 1990 ; Quarterly Journal of Microscopical Science Volume 96 ; 96 ; >
+    au < manifest ; exists ; 1990 ; 1990 ; Quarterly Journal of Microscopical Science Volume 97 ; 97 ; >
+    au < manifest ; exists ; 1991 ; 1991 ; Quarterly Journal of Microscopical Science Volume 98 ; 98 ; >
+    au < manifest ; exists ; 1991 ; 1991 ; Quarterly Journal of Microscopical Science Volume 99 ; 99 ; >
+    au < manifest ; exists ; 1991 ; 1991 ; Quarterly Journal of Microscopical Science Volume 100 ; 100 ; >
+    au < manifest ; exists ; 1992 ; 1992 ; Quarterly Journal of Microscopical Science Volume 101 ; 101 ; >
+    au < manifest ; exists ; 1992 ; 1992 ; Quarterly Journal of Microscopical Science Volume 102 ; 102 ; >
+    au < manifest ; exists ; 1992 ; 1992 ; Quarterly Journal of Microscopical Science Volume 103 ; 103 ; >
+    au < manifest ; exists ; 1993 ; 1993 ; Quarterly Journal of Microscopical Science Volume 104 ; 104 ; >
+    au < manifest ; exists ; 1993 ; 1993 ; Quarterly Journal of Microscopical Science Volume 105 ; 105 ; >
+    au < manifest ; exists ; 1993 ; 1993 ; Quarterly Journal of Microscopical Science Volume 106 ; 106 ; >
+    au < manifest ; exists ; 1994 ; 1994 ; Quarterly Journal of Microscopical Science Volume 107 ; 107 ; >
+    #Became Journal of Cell Science
+  }
+  {
+  
+    title <
       name = Journal of Cell Science ;
       issn = 0021-9533 ;
       eissn = 1477-9137 ;
@@ -251,140 +417,8 @@
 
     param[journal_id] = jcs
     #Processed 111-133 on HW
+    #Previously Journal of Embryology and Experimental Morphology
 
-    au < manifest ; exists ; 1940 ; 1940 ; The Quarterly Journal of Microscopical Science Volume s2-81 ; s2-81 ; >
-    au < manifest ; exists ; 1941 ; 1941 ; The Quarterly Journal of Microscopical Science Volume s2-82 ; s2-82 ; >
-    au < manifest ; exists ; 1942 ; 1942 ; The Quarterly Journal of Microscopical Science Volume s2-83 ; s2-83 ; >
-    au < manifest ; exists ; 1943 ; 1943 ; The Quarterly Journal of Microscopical Science Volume s2-84 ; s2-84 ; >
-    au < manifest ; exists ; 1944 ; 1944 ; The Quarterly Journal of Microscopical Science Volume s2-85 ; s2-85 ; >
-    au < manifest ; exists ; 1945 ; 1945 ; The Quarterly Journal of Microscopical Science Volume s2-86 ; s2-86 ; >
-    au < manifest ; exists ; 1946 ; 1946 ; The Quarterly Journal of Microscopical Science Volume s2-87 ; s2-87 ; >
-    au < manifest ; exists ; 1947 ; 1947 ; The Quarterly Journal of Microscopical Science Volume s3-88 ; s3-88 ; >
-    au < manifest ; exists ; 1948 ; 1948 ; The Quarterly Journal of Microscopical Science Volume s3-89 ; s3-89 ; >
-    au < manifest ; exists ; 1949 ; 1949 ; The Quarterly Journal of Microscopical Science Volume s3-90 ; s3-90 ; >
-    au < manifest ; exists ; 1950 ; 1950 ; The Quarterly Journal of Microscopical Science Volume s3-91 ; s3-91 ; >
-    au < manifest ; exists ; 1951 ; 1951 ; The Quarterly Journal of Microscopical Science Volume s3-92 ; s3-92 ; >
-    au < manifest ; exists ; 1952 ; 1952 ; The Quarterly Journal of Microscopical Science Volume s3-93 ; s3-93 ; >
-    au < manifest ; exists ; 1953 ; 1953 ; The Quarterly Journal of Microscopical Science Volume s3-94 ; s3-94 ; >
-    au < manifest ; exists ; 1954 ; 1954 ; The Quarterly Journal of Microscopical Science Volume s3-95 ; s3-95 ; >
-    au < manifest ; exists ; 1955 ; 1955 ; The Quarterly Journal of Microscopical Science Volume s3-96 ; s3-96 ; >
-    au < manifest ; exists ; 1956 ; 1956 ; The Quarterly Journal of Microscopical Science Volume s3-97 ; s3-97 ; >
-    au < manifest ; exists ; 1957 ; 1957 ; The Quarterly Journal of Microscopical Science Volume s3-98 ; s3-98 ; >
-    au < manifest ; exists ; 1958 ; 1958 ; The Quarterly Journal of Microscopical Science Volume s3-99 ; s3-99 ; >
-    au < manifest ; exists ; 1959 ; 1959 ; The Quarterly Journal of Microscopical Science Volume s3-100 ; s3-100 ; >
-    au < manifest ; exists ; 1960 ; 1960 ; The Quarterly Journal of Microscopical Science Volume s3-101 ; s3-101 ; >
-    au < manifest ; exists ; 1961 ; 1961 ; The Quarterly Journal of Microscopical Science Volume s3-102 ; s3-102 ; >
-    au < manifest ; exists ; 1962 ; 1962 ; The Quarterly Journal of Microscopical Science Volume s3-103 ; s3-103 ; >
-    au < manifest ; exists ; 1963 ; 1963 ; The Quarterly Journal of Microscopical Science Volume s3-104 ; s3-104 ; >
-    au < manifest ; exists ; 1964 ; 1964 ; The Quarterly Journal of Microscopical Science Volume s3-105 ; s3-105 ; >
-    au < manifest ; exists ; 1965 ; 1965 ; The Quarterly Journal of Microscopical Science Volume s3-106 ; s3-106 ; >
-    au < manifest ; exists ; 1966 ; 1966 ; Journal of Cell Science Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1967 ; 1967 ; Journal of Cell Science Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1968 ; 1968 ; Journal of Cell Science Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1969 ; 1969 ; Journal of Cell Science Volume 4 ; 4 ; >
-    au < manifest ; exists ; 1969 ; 1969 ; Journal of Cell Science Volume 5 ; 5 ; >
-    au < manifest ; exists ; 1970 ; 1970 ; Journal of Cell Science Volume 6 ; 6 ; >
-    au < manifest ; exists ; 1970 ; 1970 ; Journal of Cell Science Volume 7 ; 7 ; >
-    au < manifest ; exists ; 1971 ; 1971 ; Journal of Cell Science Volume 8 ; 8 ; >
-    au < manifest ; exists ; 1971 ; 1971 ; Journal of Cell Science Volume 9 ; 9 ; >
-    au < manifest ; exists ; 1972 ; 1972 ; Journal of Cell Science Volume 10 ; 10 ; >
-    au < manifest ; exists ; 1972 ; 1972 ; Journal of Cell Science Volume 11 ; 11 ; >
-    au < manifest ; exists ; 1973 ; 1973 ; Journal of Cell Science Volume 12 ; 12 ; >
-    au < manifest ; exists ; 1973 ; 1973 ; Journal of Cell Science Volume 13 ; 13 ; >
-    au < manifest ; exists ; 1974 ; 1974 ; Journal of Cell Science Volume 14 ; 14 ; >
-    au < manifest ; exists ; 1974 ; 1974 ; Journal of Cell Science Volume 15 ; 15 ; >
-    au < manifest ; exists ; 1974 ; 1974 ; Journal of Cell Science Volume 16 ; 16 ; >
-    au < manifest ; exists ; 1975 ; 1975 ; Journal of Cell Science Volume 17 ; 17 ; >
-    au < manifest ; exists ; 1975 ; 1975 ; Journal of Cell Science Volume 18 ; 18 ; >
-    au < manifest ; exists ; 1975 ; 1975 ; Journal of Cell Science Volume 19 ; 19 ; >
-    au < manifest ; exists ; 1976 ; 1976 ; Journal of Cell Science Volume 20 ; 20 ; >
-    au < manifest ; exists ; 1976 ; 1976 ; Journal of Cell Science Volume 21 ; 21 ; >
-    au < manifest ; exists ; 1976 ; 1976 ; Journal of Cell Science Volume 22 ; 22 ; >
-    au < manifest ; exists ; 1977 ; 1977 ; Journal of Cell Science Volume 23 ; 23 ; >
-    au < manifest ; exists ; 1977 ; 1977 ; Journal of Cell Science Volume 24 ; 24 ; >
-    au < manifest ; exists ; 1977 ; 1977 ; Journal of Cell Science Volume 25 ; 25 ; >
-    au < manifest ; exists ; 1977 ; 1977 ; Journal of Cell Science Volume 26 ; 26 ; >
-    au < manifest ; exists ; 1977 ; 1977 ; Journal of Cell Science Volume 27 ; 27 ; >
-    au < manifest ; exists ; 1977 ; 1977 ; Journal of Cell Science Volume 28 ; 28 ; >
-    au < manifest ; exists ; 1978 ; 1978 ; Journal of Cell Science Volume 29 ; 29 ; >
-    au < manifest ; exists ; 1978 ; 1978 ; Journal of Cell Science Volume 30 ; 30 ; >
-    au < manifest ; exists ; 1978 ; 1978 ; Journal of Cell Science Volume 31 ; 31 ; >
-    au < manifest ; exists ; 1978 ; 1978 ; Journal of Cell Science Volume 32 ; 32 ; >
-    au < manifest ; exists ; 1978 ; 1978 ; Journal of Cell Science Volume 33 ; 33 ; >
-    au < manifest ; exists ; 1978 ; 1978 ; Journal of Cell Science Volume 34 ; 34 ; >
-    au < manifest ; exists ; 1979 ; 1979 ; Journal of Cell Science Volume 35 ; 35 ; >
-    au < manifest ; exists ; 1979 ; 1979 ; Journal of Cell Science Volume 36 ; 36 ; >
-    au < manifest ; exists ; 1979 ; 1979 ; Journal of Cell Science Volume 37 ; 37 ; >
-    au < manifest ; exists ; 1979 ; 1979 ; Journal of Cell Science Volume 38 ; 38 ; >
-    au < manifest ; exists ; 1979 ; 1979 ; Journal of Cell Science Volume 39 ; 39 ; >
-    au < manifest ; exists ; 1979 ; 1979 ; Journal of Cell Science Volume 40 ; 40 ; >
-    au < manifest ; exists ; 1980 ; 1980 ; Journal of Cell Science Volume 41 ; 41 ; >
-    au < manifest ; exists ; 1980 ; 1980 ; Journal of Cell Science Volume 42 ; 42 ; >
-    au < manifest ; exists ; 1980 ; 1980 ; Journal of Cell Science Volume 43 ; 43 ; >
-    au < manifest ; exists ; 1980 ; 1980 ; Journal of Cell Science Volume 44 ; 44 ; >
-    au < manifest ; exists ; 1980 ; 1980 ; Journal of Cell Science Volume 45 ; 45 ; >
-    au < manifest ; exists ; 1980 ; 1980 ; Journal of Cell Science Volume 46 ; 46 ; >
-    au < manifest ; exists ; 1981 ; 1981 ; Journal of Cell Science Volume 47 ; 47 ; >
-    au < manifest ; exists ; 1981 ; 1981 ; Journal of Cell Science Volume 48 ; 48 ; >
-    au < manifest ; exists ; 1981 ; 1981 ; Journal of Cell Science Volume 49 ; 49 ; >
-    au < manifest ; exists ; 1981 ; 1981 ; Journal of Cell Science Volume 50 ; 50 ; >
-    au < manifest ; exists ; 1981 ; 1981 ; Journal of Cell Science Volume 51 ; 51 ; >
-    au < manifest ; exists ; 1981 ; 1981 ; Journal of Cell Science Volume 52 ; 52 ; >
-    au < manifest ; exists ; 1982 ; 1982 ; Journal of Cell Science Volume 53 ; 53 ; >
-    au < manifest ; exists ; 1982 ; 1982 ; Journal of Cell Science Volume 54 ; 54 ; >
-    au < manifest ; exists ; 1982 ; 1982 ; Journal of Cell Science Volume 55 ; 55 ; >
-    au < manifest ; exists ; 1982 ; 1982 ; Journal of Cell Science Volume 56 ; 56 ; >
-    au < manifest ; exists ; 1982 ; 1982 ; Journal of Cell Science Volume 57 ; 57 ; >
-    au < manifest ; exists ; 1982 ; 1982 ; Journal of Cell Science Volume 58 ; 58 ; >
-    au < manifest ; exists ; 1983 ; 1983 ; Journal of Cell Science Volume 59 ; 59 ; >
-    au < manifest ; exists ; 1983 ; 1983 ; Journal of Cell Science Volume 60 ; 60 ; >
-    au < manifest ; exists ; 1983 ; 1983 ; Journal of Cell Science Volume 61 ; 61 ; >
-    au < manifest ; exists ; 1983 ; 1983 ; Journal of Cell Science Volume 62 ; 62 ; >
-    au < manifest ; exists ; 1983 ; 1983 ; Journal of Cell Science Volume 63 ; 63 ; >
-    au < manifest ; exists ; 1983 ; 1983 ; Journal of Cell Science Volume 64 ; 64 ; >
-    au < manifest ; exists ; 1984 ; 1984 ; Journal of Cell Science Volume 65 ; 65 ; >
-    au < manifest ; exists ; 1984 ; 1984 ; Journal of Cell Science Volume 66 ; 66 ; >
-    au < manifest ; exists ; 1984 ; 1984 ; Journal of Cell Science Volume 67 ; 67 ; >
-    au < manifest ; exists ; 1984 ; 1984 ; Journal of Cell Science Volume 68 ; 68 ; >
-    au < manifest ; exists ; 1984 ; 1984 ; Journal of Cell Science Volume 69 ; 69 ; >
-    au < manifest ; exists ; 1984 ; 1984 ; Journal of Cell Science Volume 70 ; 70 ; >
-    au < manifest ; exists ; 1984 ; 1984 ; Journal of Cell Science Volume 71 ; 71 ; >
-    au < manifest ; exists ; 1984 ; 1984 ; Journal of Cell Science Volume 72 ; 72 ; >
-    au < manifest ; exists ; 1985 ; 1985 ; Journal of Cell Science Volume 73 ; 73 ; >
-    au < manifest ; exists ; 1985 ; 1985 ; Journal of Cell Science Volume 74 ; 74 ; >
-    au < manifest ; exists ; 1985 ; 1985 ; Journal of Cell Science Volume 75 ; 75 ; >
-    au < manifest ; exists ; 1985 ; 1985 ; Journal of Cell Science Volume 76 ; 76 ; >
-    au < manifest ; exists ; 1985 ; 1985 ; Journal of Cell Science Volume 77 ; 77 ; >
-    au < manifest ; exists ; 1985 ; 1985 ; Journal of Cell Science Volume 78 ; 78 ; >
-    au < manifest ; exists ; 1985 ; 1985 ; Journal of Cell Science Volume 79 ; 79 ; >
-    au < manifest ; exists ; 1986 ; 1986 ; Journal of Cell Science Volume 80 ; 80 ; >
-    au < manifest ; exists ; 1986 ; 1986 ; Journal of Cell Science Volume 81 ; 81 ; >
-    au < manifest ; exists ; 1986 ; 1986 ; Journal of Cell Science Volume 82 ; 82 ; >
-    au < manifest ; exists ; 1986 ; 1986 ; Journal of Cell Science Volume 83 ; 83 ; >
-    au < manifest ; exists ; 1986 ; 1986 ; Journal of Cell Science Volume 84 ; 84 ; >
-    au < manifest ; exists ; 1986 ; 1986 ; Journal of Cell Science Volume 85 ; 85 ; >
-    au < manifest ; exists ; 1986 ; 1986 ; Journal of Cell Science Volume 86 ; 86 ; >
-    au < manifest ; exists ; 1987 ; 1987 ; Journal of Cell Science Volume 87 ; 87 ; >
-    au < manifest ; exists ; 1987 ; 1987 ; Journal of Cell Science Volume 88 ; 88 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; Journal of Cell Science Volume 89 ; 89 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; Journal of Cell Science Volume 90 ; 90 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; Journal of Cell Science Volume 91 ; 91 ; >
-    au < manifest ; exists ; 1989 ; 1989 ; Journal of Cell Science Volume 92 ; 92 ; >
-    au < manifest ; exists ; 1989 ; 1989 ; Journal of Cell Science Volume 93 ; 93 ; >
-    au < manifest ; exists ; 1989 ; 1989 ; Journal of Cell Science Volume 94 ; 94 ; >
-    au < manifest ; exists ; 1990 ; 1990 ; Journal of Cell Science Volume 95 ; 95 ; >
-    au < manifest ; exists ; 1990 ; 1990 ; Journal of Cell Science Volume 96 ; 96 ; >
-    au < manifest ; exists ; 1990 ; 1990 ; Journal of Cell Science Volume 97 ; 97 ; >
-    au < manifest ; exists ; 1991 ; 1991 ; Journal of Cell Science Volume 98 ; 98 ; >
-    au < manifest ; exists ; 1991 ; 1991 ; Journal of Cell Science Volume 99 ; 99 ; >
-    au < manifest ; exists ; 1991 ; 1991 ; Journal of Cell Science Volume 100 ; 100 ; >
-    au < manifest ; exists ; 1992 ; 1992 ; Journal of Cell Science Volume 101 ; 101 ; >
-    au < manifest ; exists ; 1992 ; 1992 ; Journal of Cell Science Volume 102 ; 102 ; >
-    au < manifest ; exists ; 1992 ; 1992 ; Journal of Cell Science Volume 103 ; 103 ; >
-    au < manifest ; exists ; 1993 ; 1993 ; Journal of Cell Science Volume 104 ; 104 ; >
-    au < manifest ; exists ; 1993 ; 1993 ; Journal of Cell Science Volume 105 ; 105 ; >
-    au < manifest ; exists ; 1993 ; 1993 ; Journal of Cell Science Volume 106 ; 106 ; >
-    au < manifest ; exists ; 1994 ; 1994 ; Journal of Cell Science Volume 107 ; 107 ; >
     au < manifest ; exists ; 1995 ; 1995 ; Journal of Cell Science Volume 108 ; 108 ; >
     au < manifest ; exists ; 1996 ; 1996 ; Journal of Cell Science Volume 109 ; 109 ; >
     au < manifest ; exists ; 1997 ; 1997 ; Journal of Cell Science Volume 110 ; 110 ; >
