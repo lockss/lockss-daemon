@@ -11623,6 +11623,7 @@
 
       au < frozen ; exists ; 2021 ; Asian Journal of  Social Health and Behavior Volume 4 ; 2021 ; 4 ; https://www.healthandbehavior.com/ ; ; >
       au < crawling ; exists ; 2022 ; Asian Journal of  Social Health and Behavior Volume 5 ; 2022 ; 5 ; https://www.healthandbehavior.com/ ; ; >
+      au < expected ; exists ; 2023 ; Asian Journal of  Social Health and Behavior Volume 6 ; 2023 ; 6 ; https://www.healthandbehavior.com/ ; ; >
 
   }
 
@@ -13366,23 +13367,22 @@
   }
 
 
-  {
-
-      title <
-        name = Social Health and Behavior ;
-        eissn = 2772-4204
-      >
-
-      param[journal_issn] = 2772-4204
-      #param[base_url] = https://www.shbonweb.com/
-
-      au < exists ; exists ; 2018 ; Social Health and Behavior Volume 1 ; 2018 ; 1 ; https://www.shbonweb.com/ ; ; >
-      au < exists ; exists ; 2019 ; Social Health and Behavior Volume 2 ; 2019 ; 2 ; https://www.shbonweb.com/ ; ; >
-      au < exists ; exists ; 2020 ; Social Health and Behavior Volume 3 ; 2020 ; 3 ; https://www.shbonweb.com/ ; ; >
-      au < exists ; exists ; 2021 ; Social Health and Behavior Volume 4 ; 2021 ; 4 ; https://www.shbonweb.com/ ; ; >
-      au < expected ; exists ; 2022 ; Social Health and Behavior Volume 5 ; 2022 ; 5 ; https://www.shbonweb.com/ ; ; >
-
-  }
+#  {
+#
+#      title <
+#        name = Social Health and Behavior ;
+#        eissn = 2772-4204
+#      >
+#
+#      param[journal_issn] = 2772-4204
+#      #param[base_url] = https://www.shbonweb.com/
+#      #Moved to https://www.healthandbehavior.com/
+#
+#      au < doesNotExist ; doesNotExist ; 2018 ; Social Health and Behavior Volume 1 ; 2018 ; 1 ; https://www.shbonweb.com/ ; ; >
+#      au < doesNotExist ; doesNotExist ; 2019 ; Social Health and Behavior Volume 2 ; 2019 ; 2 ; https://www.shbonweb.com/ ; ; >
+#      au < doesNotExist ; doesNotExist ; 2020 ; Social Health and Behavior Volume 3 ; 2020 ; 3 ; https://www.shbonweb.com/ ; ; >
+#
+#  }
 
 
   {
