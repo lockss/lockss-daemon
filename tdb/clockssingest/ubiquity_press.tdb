@@ -178,7 +178,7 @@
 
 {
   publisher <
-    name = IJS Press ;
+    name = IJS Publishing Group ;
     info[contract] = 2011 ;
     info[back] = 2000 ;
     info[tester] = 8 ;
@@ -196,7 +196,7 @@
         eissn = 2515-8872
       >
 
-      comment[publisher] = IJS Press
+      comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://www.amscasereports.com/
 
       au < finished ; finished ; 2018 ; 1 ; Annals of Medicine and Surgery Case Reports Volume 2018 ; 2018 ; https://www.amscasereports.com/ ; reingest2.clockss.org:8085 >
@@ -212,7 +212,7 @@
         eissn = 2515-8902
       >
 
-      comment[publisher] = IJS Press
+      comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://www.amsprotocols.com/
 
       au < finished ; finished ; 2018 ; 1 ; Annals of Medicine and Surgery Protocols Volume 2018 ; 2018 ; https://www.amsprotocols.com/ ; reingest3.clockss.org:8083 >
@@ -226,7 +226,7 @@
         eissn = 2515-7566
       >
 
-      comment[publisher] = IJS Press
+      comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://ijops.com/
 
       au < finished ; finished ; 2018 ; 1 ; International Journal of Orthoplastic Surgery Volume 2018 ; 2018 ; https://ijops.com/ ; reingest2.clockss.org:8085 >
@@ -240,7 +240,7 @@
         eissn = 2634-4580
       >
 
-      comment[publisher] = IJS Press
+      comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://ijdigitalhealth.com/
 
       au < manifest ; exists ; 2021 ; 1 ; International Journal of Digital Health Volume 2021 ; 2021 ; https://ijdigitalhealth.com/ ; >
@@ -1543,8 +1543,6 @@
       au < finished ; finished ; 2018 ; 2 ; MaHKUscript: Journal of Fine Art Research Volume 2 ; 2018 ; https://www.mahkuscript.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; 3 ; MaHKUscript: Journal of Fine Art Research Volume 3 ; 2019 ; https://www.mahkuscript.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2020 ; 4 ; MaHKUscript: Journal of Fine Art Research Volume 4 ; 2020 ; https://www.mahkuscript.com/ ; reingest1.clockss.org:8082 >
-      au < expected ; exists ; 2021 ; 5 ; MaHKUscript: Journal of Fine Art Research Volume 5 ; 2021 ; https://mahkuscript.com/ ; >
-      au < expected ; exists ; 2022 ; 6 ; MaHKUscript: Journal of Fine Art Research Volume 6 ; 2022 ; https://mahkuscript.com/ ; >
 
   }
 
@@ -2225,6 +2223,7 @@
       au < crawling ; exists ; 2022 ; 5 ; Transactions of the International Society for Music Information Retrieval Volume 2022 ; 2022 ; https://transactions.ismir.net/ ; >
 
   }
+
   {
 
       title <
@@ -2253,7 +2252,6 @@
       au < crawling ; exists ; 2022 ; 2 ; Swiss Psychology Open Volume 2022 ; 2022 ; https://swisspsychologyopen.com/ ; >
 
   }
-
 }
 
 {
@@ -3443,6 +3441,7 @@
 
       title <
         name = Tellus A: Dynamic Meteorology and Oceanography ;
+        issn = 0280-6495 ;
         eissn = 1600-0870
       >
 
@@ -3531,6 +3530,7 @@
 
       title <
         name = Tellus B: Chemical and Physical Meteorology ;
+        issn = 0280-6509 ;
         eissn = 1600-0889
       >
 
