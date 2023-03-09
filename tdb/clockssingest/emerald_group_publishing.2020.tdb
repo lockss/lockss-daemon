@@ -1052,7 +1052,7 @@
     au < ready ; exists ; 1990 ; The Bottom Line: Managing Library Finances Volume 3 ; 3 ; >
     au < ready ; exists ; 1991 ; The Bottom Line: Managing Library Finances Volume 4 ; 4 ; >
     au < ready ; exists ; 1992 ; The Bottom Line: Managing Library Finances Volume 5 ; 5 ; >
-    au < ready ; exists ; 1993 ; The Bottom Line: Managing Library Finances Volume 6 ; 6 ; >
+    au < crawling ; exists ; 1993 ; The Bottom Line: Managing Library Finances Volume 6 ; 6 ; >
     au < manifest ; exists ; 1994 ; The Bottom Line: Managing Library Finances Volume 7 ; 7 ; >
     au < frozen ; exists ; 1995 ; The Bottom Line: Managing Library Finances Volume 8 ; 8 ; >
     au < frozen ; exists ; 1996 ; The Bottom Line: Managing Library Finances Volume 9 ; 9 ; >
@@ -14321,9 +14321,9 @@
     param[journal_issn] = 2632-7627
 
     au < manifest ; exists ; 2019 ; Applied Economic Analysis Volume 27 ; 27 ; >
-    au < ready ; exists ; 2020 ; Applied Economic Analysis Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2020 ; Applied Economic Analysis Volume 28 ; 28 ; >
     au < ready ; exists ; 2021 ; Applied Economic Analysis Volume 29 ; 29 ; >
-    au < ready ; exists ; 2022 ; Applied Economic Analysis Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2022 ; Applied Economic Analysis Volume 30 ; 30 ; >
     au < manifest ; exists ; 2023 ; Applied Economic Analysis Volume 31 ; 31 ; >
 
   }
@@ -14344,8 +14344,8 @@
     au < manifest ; exists ; 2018 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 12 ; 12 ; >
     au < manifest ; exists ; 2019 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 13 ; 13 ; >
     au < crawling ; exists ; 2020 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 14 ; 14 ; >
-    au < ready ; exists ; 2021 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 15 ; 15 ; >
-    au < ready ; exists ; 2022 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2021 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2022 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 16 ; 16 ; >
     au < expected ; exists ; 2023 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 17 ; 17 ; >
 
   }
@@ -14376,8 +14376,8 @@
     au < manifest ; exists ; 2018 ; Asian Association of Open Universities Journal Volume 13 ; 13 ; >
     au < manifest ; exists ; 2019 ; Asian Association of Open Universities Journal Volume 14 ; 14 ; >
     au < ready ; exists ; 2020 ; Asian Association of Open Universities Journal Volume 15 ; 15 ; >
-    au < ready ; exists ; 2021 ; Asian Association of Open Universities Journal Volume 16 ; 16 ; >
-    au < ready ; exists ; 2022 ; Asian Association of Open Universities Journal Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2021 ; Asian Association of Open Universities Journal Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2022 ; Asian Association of Open Universities Journal Volume 17 ; 17 ; >
     au < expected ; exists ; 2023 ; Asian Association of Open Universities Journal Volume 18 ; 18 ; >
 
   }
@@ -14415,7 +14415,7 @@
 
     param[journal_issn] = 2615-9821
 
-    au < ready ; exists ; 2020 ; Asian Journal of Economics and Banking Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2020 ; Asian Journal of Economics and Banking Volume 4 ; 4 ; >
     au < ready ; exists ; 2021 ; Asian Journal of Economics and Banking Volume 5 ; 5 ; >
     au < crawling ; exists ; 2022 ; Asian Journal of Economics and Banking Volume 6 ; 6 ; >
     au < expected ; exists ; 2023 ; Asian Journal of Economics and Banking Volume 7 ; 7 ; >
@@ -14453,7 +14453,7 @@
     param[journal_issn] = 2633-4062
 
     au < ready ; exists ; 2020 ; Ecofeminism and Climate Change Volume 1 ; 1 ; >
-    au < ready ; exists ; 2021 ; Ecofeminism and Climate Change Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2021 ; Ecofeminism and Climate Change Volume 2 ; 2 ; >
     au < ready ; exists ; 2022 ; Ecofeminism and Climate Change Volume 3 ; 3 ; >
     au < expected ; exists ; 2023 ; Ecofeminism and Climate Change Volume 4 ; 4 ; >
 
@@ -14491,7 +14491,7 @@
     param[journal_issn] = 2631-3030
 
     au < manifest ; exists ; 2019 ; Forest Economic Review Volume 1 ; 1 ; >
-    au < ready ; exists ; 2020 ; Forest Economic Review Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2020 ; Forest Economic Review Volume 2 ; 2 ; >
     au < ready ; exists ; 2021 ; Forest Economic Review Volume 3 ; 3 ; >
     au < crawling ; exists ; 2022 ; Forest Economic Review Volume 4 ; 4 ; >
     au < expected ; exists ; 2023 ; Forest Economic Review Volume 5 ; 5 ; >
@@ -14603,7 +14603,7 @@
     param[journal_issn] = 2516-4384
 
     au < manifest ; exists ; 2019 ; International Journal of Excellence in Government Volume 1 ; 1 ; >
-    au < ready ; exists ; 2021 ; International Journal of Excellence in Government Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2021 ; International Journal of Excellence in Government Volume 2 ; 2 ; >
     au < expected ; exists ; 2023 ; International Journal of Excellence in Government Volume 3 ; 3 ; >
 
   }
@@ -14640,7 +14640,7 @@
     au < manifest ; exists ; 2017 ; Irish Journal of Occupational Therapy Volume 45 ; 45 ; >
     au < manifest ; exists ; 2018 ; Irish Journal of Occupational Therapy Volume 46 ; 46 ; >
     au < manifest ; exists ; 2019 ; Irish Journal of Occupational Therapy Volume 47 ; 47 ; >
-    au < ready ; exists ; 2020 ; Irish Journal of Occupational Therapy Volume 48 ; 48 ; >
+    au < crawling ; exists ; 2020 ; Irish Journal of Occupational Therapy Volume 48 ; 48 ; >
     au < ready ; exists ; 2021 ; Irish Journal of Occupational Therapy Volume 49 ; 49 ; >
     au < ready ; exists ; 2022 ; Irish Journal of Occupational Therapy Volume 50 ; 50 ; >
     au < expected ; exists ; 2023 ; Irish Journal of Occupational Therapy Volume 51 ; 51 ; >
@@ -14848,7 +14848,7 @@
 
     param[journal_issn] = 2633-7436
 
-    au < ready ; exists ; 2021 ; Journal of Ethics, Entrepreneurship and Technology Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2021 ; Journal of Ethics, Entrepreneurship and Technology Volume 1 ; 1 ; >
     au < crawling ; exists ; 2022 ; Journal of Ethics, Entrepreneurship and Technology Volume 2 ; 2 ; >
     au < expected ; exists ; 2023 ; Journal of Ethics, Entrepreneurship and Technology Volume 3 ; 3 ; >
 
@@ -14905,7 +14905,7 @@
 
     au < manifest ; exists ; 2019 ; Journal of Industry-University Collaboration Volume 1 ; 1 ; >
     au < ready ; exists ; 2020 ; Journal of Industry-University Collaboration Volume 2 ; 2 ; >
-    au < ready ; exists ; 2021 ; Journal of Industry-University Collaboration Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2021 ; Journal of Industry-University Collaboration Volume 3 ; 3 ; >
     au < expected ; exists ; 2023 ; Journal of Industry-University Collaboration Volume 4 ; 4 ; >
 
   }
@@ -14924,7 +14924,7 @@
     au < manifest ; exists ; 2019 ; Journal of Intelligent and Connected Vehicles Volume 2 ; 2 ; >
     au < ready ; exists ; 2020 ; Journal of Intelligent and Connected Vehicles Volume 3 ; 3 ; >
     au < ready ; exists ; 2021 ; Journal of Intelligent and Connected Vehicles Volume 4 ; 4 ; >
-    au < ready ; exists ; 2022 ; Journal of Intelligent and Connected Vehicles Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2022 ; Journal of Intelligent and Connected Vehicles Volume 5 ; 5 ; >
     au < expected ; exists ; 2023 ; Journal of Intelligent and Connected Vehicles Volume 6 ; 6 ; >
 
   }
@@ -15026,7 +15026,7 @@
     au < manifest ; exists ; 2019 ; Journal of Work Applied Management Volume 11 ; 11 ; >
     au < ready ; exists ; 2020 ; Journal of Work Applied Management Volume 12 ; 12 ; >
     au < ready ; exists ; 2021 ; Journal of Work Applied Management Volume 13 ; 13 ; >
-    au < ready ; exists ; 2022 ; Journal of Work Applied Management Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2022 ; Journal of Work Applied Management Volume 14 ; 14 ; >
     au < expected ; exists ; 2023 ; Journal of Work Applied Management Volume 15 ; 15 ; >
 
   }
@@ -15043,7 +15043,7 @@
 
     au < manifest ; exists ; 2018 ; Marine Economics and Management Volume 1 ; 1 ; >
     au < manifest ; exists ; 2019 ; Marine Economics and Management Volume 2 ; 2 ; >
-    au < ready ; exists ; 2020 ; Marine Economics and Management Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2020 ; Marine Economics and Management Volume 3 ; 3 ; >
     au < crawling ; exists ; 2021 ; Marine Economics and Management Volume 4 ; 4 ; >
     au < ready ; exists ; 2022 ; Marine Economics and Management Volume 5 ; 5 ; >
     au < expected ; exists ; 2023 ; Marine Economics and Management Volume 6 ; 6 ; >
@@ -15110,7 +15110,7 @@
     param[journal_issn] = 2631-3871
 
     au < manifest ; exists ; 2019 ; Modern Supply Chain Research and Applications Volume 1 ; 1 ; >
-    au < ready ; exists ; 2020 ; Modern Supply Chain Research and Applications Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2020 ; Modern Supply Chain Research and Applications Volume 2 ; 2 ; >
     au < ready ; exists ; 2021 ; Modern Supply Chain Research and Applications Volume 3 ; 3 ; >
     au < ready ; exists ; 2022 ; Modern Supply Chain Research and Applications Volume 4 ; 4 ; >
     au < expected ; exists ; 2023 ; Modern Supply Chain Research and Applications Volume 5 ; 5 ; >
