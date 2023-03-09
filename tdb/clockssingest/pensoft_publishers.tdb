@@ -48,9 +48,9 @@
     au < finished ; manifest ; 2014 ; 2 ; Biodiversity Data Journal Volume 2014 ; 2014 ; http://bdj.pensoft.net/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; 3 ; Biodiversity Data Journal Volume 2015 ; 2015 ; http://bdj.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; 4 ; Biodiversity Data Journal Volume 2016 ; 2016 ; https://bdj.pensoft.net/ ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2017 ; 5 ; Biodiversity Data Journal Volume 2017 ; 2017 ; https://bdj.pensoft.net/ ; >
+    au < finished ; manifest ; 2017 ; 5 ; Biodiversity Data Journal Volume 2017 ; 2017 ; https://bdj.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 6 ; Biodiversity Data Journal Volume 2018 ; 2018 ; https://bdj.pensoft.net/ ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2019 ; 7 ; Biodiversity Data Journal Volume 2019 ; 2019 ; https://bdj.pensoft.net/ ; >
+    au < finished ; manifest ; 2019 ; 7 ; Biodiversity Data Journal Volume 2019 ; 2019 ; https://bdj.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 8 ; Biodiversity Data Journal Volume 2020 ; 2020 ; https://bdj.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2021 ; 9 ; Biodiversity Data Journal Volume 2021 ; 2021 ; https://bdj.pensoft.net/ ; >
     au < crawling ; exists ; 2022 ; 10 ; Biodiversity Data Journal Volume 2022 ; 2022 ; https://bdj.pensoft.net/ ; >
@@ -74,13 +74,13 @@
     au < finished ; manifest ; 2010 ; 4-5 ; BioRisk Volume 2010 ; 2010 ; https://biorisk.pensoft.net/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 6 ; BioRisk Volume 2011 ; 2011 ; https://biorisk.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; 7 ; BioRisk Volume 2012 ; 2012 ; http://biorisk.pensoft.net/ ; >
-    au < deepCrawl ; down ; 2013 ; 8 ; BioRisk Volume 2013 ; 2013 ; http://biorisk.pensoft.net/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2013 ; 8 ; BioRisk Volume 2013 ; 2013 ; http://biorisk.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 9 ; BioRisk Volume 2014 ; 2014 ; http://biorisk.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; 10 ; BioRisk Volume 2015 ; 2015 ; https://biorisk.pensoft.net/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2016 ; 11 ; BioRisk Volume 2016 ; 2016 ; https://biorisk.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2017 ; 12 ; BioRisk Volume 2017 ; 2017 ; https://biorisk.pensoft.net/ ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; 13 ; BioRisk Volume 2018 ; 2018 ; https://biorisk.pensoft.net/ ; >
-    au < deepCrawl ; exists ; 2019 ; 14 ; BioRisk Volume 2019 ; 2019 ; https://biorisk.pensoft.net/ ; >
+    au < finished ; manifest ; 2018 ; 13 ; BioRisk Volume 2018 ; 2018 ; https://biorisk.pensoft.net/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2019 ; 14 ; BioRisk Volume 2019 ; 2019 ; https://biorisk.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 15 ; BioRisk Volume 2020 ; 2020 ; https://biorisk.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2021 ; 16 ; BioRisk Volume 2021 ; 2021 ; https://biorisk.pensoft.net/ ; >
     au < crawling ; exists ; 2022 ; 17 ; BioRisk Volume 2022 ; 2022 ; https://biorisk.pensoft.net/ ; >
@@ -116,8 +116,8 @@
      au < finished ; finished ; 2014 ; 61 ; Deutsche Entomologische Zeitschrift Volume 2014 ; 2014 ; http://dez.pensoft.net/ ; reingest1.clockss.org:8082 >
      au < finished ; finished ; 2015 ; 62 ; Deutsche Entomologische Zeitschrift Volume 2015 ; 2015 ; http://dez.pensoft.net/ ; reingest1.clockss.org:8082 >
      au < finished ; manifest ; 2016 ; 63 ; Deutsche Entomologische Zeitschrift Volume 2016 ; 2016 ; http://dez.pensoft.net/ ; reingest2.clockss.org:8085 >
-     au < deepCrawl ; exists ; 2017 ; 64 ; Deutsche Entomologische Zeitschrift Volume 2017 ; 2017 ; https://dez.pensoft.net/ ; >
-     au < deepCrawl ; exists ; 2018 ; 65 ; Deutsche Entomologische Zeitschrift Volume 2018 ; 2018 ; https://dez.pensoft.net/ ; >
+     au < finished ; manifest ; 2017 ; 64 ; Deutsche Entomologische Zeitschrift Volume 2017 ; 2017 ; https://dez.pensoft.net/ ; reingest4.clockss.org:8082 >
+     au < finished ; manifest ; 2018 ; 65 ; Deutsche Entomologische Zeitschrift Volume 2018 ; 2018 ; https://dez.pensoft.net/ ; reingest5.clockss.org:8082 >
      au < finished ; manifest ; 2019 ; 66 ; Deutsche Entomologische Zeitschrift Volume 2019 ; 2019 ; https://dez.pensoft.net/ ; reingest1.clockss.org:8082 >
      au < deepCrawl ; exists ; 2020 ; 67 ; Deutsche Entomologische Zeitschrift Volume 2020 ; 2020 ; https://dez.pensoft.net/ ; >
      au < deepCrawl ; exists ; 2021 ; 68 ; Deutsche Entomologische Zeitschrift Volume 2021 ; 2021 ; https://dez.pensoft.net/ ; >
@@ -172,12 +172,12 @@
     
     au < finished ; manifest ; 2011 ; 20-23 ; Journal of Hymenoptera Research Volume 2011 ; 2011 ; https://jhr.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; 24-29 ; Journal of Hymenoptera Research Volume 2012 ; 2012 ; http://jhr.pensoft.net/ ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2013 ; 30-35 ; Journal of Hymenoptera Research Volume 2013 ; 2013 ; http://jhr.pensoft.net/ ; >
+    au < finished ; manifest ; 2013 ; 30-35 ; Journal of Hymenoptera Research Volume 2013 ; 2013 ; http://jhr.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; 36-41 ; Journal of Hymenoptera Research Volume 2014 ; 2014 ; http://jhr.pensoft.net/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; 42-47 ; Journal of Hymenoptera Research Volume 2015 ; 2015 ; http://jhr.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2016 ; 48-53 ; Journal of Hymenoptera Research Volume 2016 ; 2016 ; https://jhr.pensoft.net/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; 54-61 ; Journal of Hymenoptera Research Volume 2017 ; 2017 ; https://jhr.pensoft.net/ ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; 62-67 ; Journal of Hymenoptera Research Volume 2018 ; 2018 ; https://jhr.pensoft.net/ ; >
+    au < finished ; manifest ; 2018 ; 62-67 ; Journal of Hymenoptera Research Volume 2018 ; 2018 ; https://jhr.pensoft.net/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2019 ; 68-73 ; Journal of Hymenoptera Research Volume 2019 ; 2019 ; https://jhr.pensoft.net/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 74-80 ; Journal of Hymenoptera Research Volume 2020 ; 2020 ; https://jhr.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2021 ; 81-88 ; Journal of Hymenoptera Research Volume 2021 ; 2021 ; https://jhr.pensoft.net/ ; >
@@ -203,9 +203,9 @@
     au < finished ; finished ; 2014 ; 8 ; MycoKeys Volume 2014 ; 2014 ; http://mycokeys.pensoft.net/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2015 ; 9-11 ; MycoKeys Volume 2015 ; 2015 ; http://mycokeys.pensoft.net/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2016 ; 12-18 ; MycoKeys Volume 2016 ; 2016 ; https://mycokeys.pensoft.net/ ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2017 ; 19-28 ; MycoKeys Volume 2017 ; 2017 ; https://mycokeys.pensoft.net/ ; >
-    au < deepCrawl ; exists ; 2018 ; 29-44 ; MycoKeys Volume 2018 ; 2018 ; https://mycokeys.pensoft.net/ ; >
-    au < deepCrawl ; exists ; 2019 ; 45-61 ; MycoKeys Volume 2019 ; 2019 ; https://mycokeys.pensoft.net/ ; >
+    au < finished ; manifest ; 2017 ; 19-28 ; MycoKeys Volume 2017 ; 2017 ; https://mycokeys.pensoft.net/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2018 ; 29-44 ; MycoKeys Volume 2018 ; 2018 ; https://mycokeys.pensoft.net/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; 45-61 ; MycoKeys Volume 2019 ; 2019 ; https://mycokeys.pensoft.net/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 62-76 ; MycoKeys Volume 2020 ; 2020 ; https://mycokeys.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2021 ; 77-85 ; MycoKeys Volume 2021 ; 2021 ; https://mycokeys.pensoft.net/ ; >
     au < crawling ; exists ; 2022 ; 86-94 ; MycoKeys Volume 2022 ; 2022 ; https://mycokeys.pensoft.net/ ; >
@@ -228,7 +228,7 @@
     au < finished ; finished ; 2015 ; 10-13 ; Nature Conservation Volume 2015 ; 2015 ; http://natureconservation.pensoft.net/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2016 ; 14-16 ; Nature Conservation Volume 2016 ; 2016 ; https://natureconservation.pensoft.net/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2017 ; 17-23 ; Nature Conservation Volume 2017 ; 2017 ; https://natureconservation.pensoft.net/ ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; 24-31 ; Nature Conservation Volume 2018 ; 2018 ; https://natureconservation.pensoft.net/ ; >
+    au < finished ; manifest ; 2018 ; 24-31 ; Nature Conservation Volume 2018 ; 2018 ; https://natureconservation.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; 32-37 ; Nature Conservation Volume 2019 ; 2019 ; https://natureconservation.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 38-42 ; Nature Conservation Volume 2020 ; 2020 ; https://natureconservation.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2021 ; 43-45 ; Nature Conservation Volume 2021 ; 2021 ; https://natureconservation.pensoft.net/ ; >
@@ -255,8 +255,8 @@
     au < finished ; finished ; 2015 ; 24-27 ; NeoBiota Volume 2015 ; 2015 ; http://neobiota.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; 28-31 ; NeoBiota Volume 2016 ; 2016 ; https://neobiota.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2017 ; 32-36 ; NeoBiota Volume 2017 ; 2017 ; https://neobiota.pensoft.net/ ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; 37-41 ; NeoBiota Volume 2018 ; 2018 ; https://neobiota.pensoft.net/ ; >
-    au < deepCrawl ; exists ; 2019 ; 42-53 ; NeoBiota Volume 2019 ; 2019 ; https://neobiota.pensoft.net/ ; >
+    au < finished ; manifest ; 2018 ; 37-41 ; NeoBiota Volume 2018 ; 2018 ; https://neobiota.pensoft.net/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2019 ; 42-53 ; NeoBiota Volume 2019 ; 2019 ; https://neobiota.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 54-63 ; NeoBiota Volume 2020 ; 2020 ; https://neobiota.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2021 ; 64-70 ; NeoBiota Volume 2021 ; 2021 ; https://neobiota.pensoft.net/ ; >
     au < crawling ; exists ; 2022 ; 71-77 ; NeoBiota Volume 2022 ; 2022 ; https://neobiota.pensoft.net/ ; >
@@ -279,8 +279,8 @@
     au < finished ; manifest ; 2015 ; 38 ; Nota Lepidopterologica Volume 2015 ; 2015 ; http://nl.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; 39 ; Nota Lepidopterologica Volume 2016 ; 2016 ; https://nl.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; 40 ; Nota Lepidopterologica Volume 2017 ; 2017 ; https://nl.pensoft.net/ ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2018 ; 41 ; Nota Lepidopterologica Volume 2018 ; 2018 ; https://nl.pensoft.net/ ; >
-    au < deepCrawl ; exists ; 2019 ; 42 ; Nota Lepidopterologica Volume 2019 ; 2019 ; https://nl.pensoft.net/ ; >
+    au < finished ; manifest ; 2018 ; 41 ; Nota Lepidopterologica Volume 2018 ; 2018 ; https://nl.pensoft.net/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2019 ; 42 ; Nota Lepidopterologica Volume 2019 ; 2019 ; https://nl.pensoft.net/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 43 ; Nota Lepidopterologica Volume 2020 ; 2020 ; https://nl.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2021 ; 44 ; Nota Lepidopterologica Volume 2021 ; 2021 ; https://nl.pensoft.net/ ; >
     au < crawling ; exists ; 2022 ; 45 ; Nota Lepidopterologica Volume 2022 ; 2022 ; https://nl.pensoft.net/ ; >
@@ -307,7 +307,7 @@
     au < finished ; manifest ; 2015 ; 44-57 ; PhytoKeys Volume 2015 ; 2015 ; http://phytokeys.pensoft.net/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2016 ; 58-75 ; PhytoKeys Volume 2016 ; 2016 ; https://phytokeys.pensoft.net/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; 76-91 ; PhytoKeys Volume 2017 ; 2017 ; https://phytokeys.pensoft.net/ ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; 92-114 ; PhytoKeys Volume 2018 ; 2018 ; https://phytokeys.pensoft.net/ ; >
+    au < finished ; manifest ; 2018 ; 92-114 ; PhytoKeys Volume 2018 ; 2018 ; https://phytokeys.pensoft.net/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; 115-136 ; PhytoKeys Volume 2019 ; 2019 ; https://phytokeys.pensoft.net/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 137-170 ; PhytoKeys Volume 2020 ; 2020 ; https://phytokeys.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2021 ; 171-187 ; PhytoKeys Volume 2021 ; 2021 ; https://phytokeys.pensoft.net/ ; >
@@ -356,7 +356,7 @@
     
     au < finished ; manifest ; 2008 ; 1-4 ; ZooKeys Volume 2008 ; 2008 ; https://zookeys.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2009 ; 5-31 ; ZooKeys Volume 2009 ; 2009 ; https://zookeys.pensoft.net/ ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2010 ; 32-73 ; ZooKeys Volume 2010 ; 2010 ; https://zookeys.pensoft.net/ ; >
+    au < finished ; manifest ; 2010 ; 32-73 ; ZooKeys Volume 2010 ; 2010 ; https://zookeys.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2011 ; 74-160 ; ZooKeys Volume 2011 ; 2011 ; https://zookeys.pensoft.net/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2012 ; 161-255 ; ZooKeys Volume 2012 ; 2012 ; http://zookeys.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2013 ; 256-366 ; ZooKeys Volume 2013 ; 2013 ; http://zookeys.pensoft.net/ ; reingest5.clockss.org:8082 >
@@ -364,8 +364,8 @@
     au < finished ; manifest ; 2015 ; 469-548 ; ZooKeys Volume 2015 ; 2015 ; http://zookeys.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2016 ; 549-641 ; ZooKeys Volume 2016 ; 2016 ; https://zookeys.pensoft.net/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; 642-725 ; ZooKeys Volume 2017 ; 2017 ; https://zookeys.pensoft.net/ ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; 726-811 ; ZooKeys Volume 2018 ; 2018 ; https://zookeys.pensoft.net/ ; >
-    au < deepCrawl ; exists ; 2019 ; 812-900 ; ZooKeys Volume 2019 ; 2019 ; https://zookeys.pensoft.net/ ; >
+    au < finished ; manifest ; 2018 ; 726-811 ; ZooKeys Volume 2018 ; 2018 ; https://zookeys.pensoft.net/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; 812-900 ; ZooKeys Volume 2019 ; 2019 ; https://zookeys.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 901-1008 ; ZooKeys Volume 2020 ; 2020 ; https://zookeys.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2021 ; 1009-1079 ; ZooKeys Volume 2021 ; 2021 ; https://zookeys.pensoft.net/ ; >
     au < crawling ; exists ; 2022 ; 1080-1150 ; ZooKeys Volume 2022 ; 2022 ; https://zookeys.pensoft.net/ ; >
@@ -390,8 +390,8 @@
     au < finished ; manifest ; 2015 ; 91 ; Zoosystematics and Evolution Volume 2015 ; 2015 ; https://zse.pensoft.net/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2016 ; 92 ; Zoosystematics and Evolution Volume 2016 ; 2016 ; https://zse.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2017 ; 93 ; Zoosystematics and Evolution Volume 2017 ; 2017 ; https://zse.pensoft.net/ ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; 94 ; Zoosystematics and Evolution Volume 2018 ; 2018 ; https://zse.pensoft.net/ ; >
-    au < deepCrawl ; exists ; 2019 ; 95 ; Zoosystematics and Evolution Volume 2019 ; 2019 ; https://zse.pensoft.net/ ; >
+    au < finished ; manifest ; 2018 ; 94 ; Zoosystematics and Evolution Volume 2018 ; 2018 ; https://zse.pensoft.net/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; 95 ; Zoosystematics and Evolution Volume 2019 ; 2019 ; https://zse.pensoft.net/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; 96 ; Zoosystematics and Evolution Volume 2020 ; 2020 ; https://zse.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2021 ; 97 ; Zoosystematics and Evolution Volume 2021 ; 2021 ; https://zse.pensoft.net/ ; >
     au < crawling ; exists ; 2022 ; 98 ; Zoosystematics and Evolution Volume 2022 ; 2022 ; https://zse.pensoft.net/ ; >
@@ -410,7 +410,7 @@
 
       au < finished ; manifest ; 2017 ; 2017 ; Alpine Entomology Volume 2017 ; 2017 ; https://alpineentomology.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 2018 ; Alpine Entomology Volume 2018 ; 2018 ; https://alpineentomology.pensoft.net/ ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; 2019 ; Alpine Entomology Volume 2019 ; 2019 ; https://alpineentomology.pensoft.net/ ; >
+      au < finished ; manifest ; 2019 ; 2019 ; Alpine Entomology Volume 2019 ; 2019 ; https://alpineentomology.pensoft.net/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Alpine Entomology Volume 2020 ; 2020 ; https://alpineentomology.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Alpine Entomology Volume 2021 ; 2021 ; https://alpineentomology.pensoft.net/ ; >
       au < crawling ; exists ; 2022 ; 2022 ; Alpine Entomology Volume 2022 ; 2022 ; https://alpineentomology.pensoft.net/ ; >
@@ -446,7 +446,7 @@
       param[au_oai_set] = aca
 
       au < finished ; manifest ; 2018 ; 2018 ; ARPHA Conference Abstracts Volume 2018 ; 2018 ; https://aca.pensoft.net/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2019 ; 2019 ; ARPHA Conference Abstracts Volume 2019 ; 2019 ; https://aca.pensoft.net/ ; >
+      au < finished ; manifest ; 2019 ; 2019 ; ARPHA Conference Abstracts Volume 2019 ; 2019 ; https://aca.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; ARPHA Conference Abstracts Volume 2020 ; 2020 ; https://aca.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; ARPHA Conference Abstracts Volume 2021 ; 2021 ; https://aca.pensoft.net/ ; >
       au < crawling ; exists ; 2022 ; 2022 ; ARPHA Conference Abstracts Volume 2022 ; 2022 ; https://aca.pensoft.net/ ; >
@@ -514,7 +514,7 @@
       au < finished ; manifest ; 2016 ; 2016 ; Check List Volume 2016 ; 2016 ; https://checklist.pensoft.net/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 2017 ; Check List Volume 2017 ; 2017 ; https://checklist.pensoft.net/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; 2018 ; Check List Volume 2018 ; 2018 ; https://checklist.pensoft.net/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2019 ; 2019 ; Check List Volume 2019 ; 2019 ; https://checklist.pensoft.net/ ; >
+      au < finished ; manifest ; 2019 ; 2019 ; Check List Volume 2019 ; 2019 ; https://checklist.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Check List Volume 2020 ; 2020 ; https://checklist.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Check List Volume 2021 ; 2021 ; https://checklist.pensoft.net/ ; >
       au < crawling ; exists ; 2022 ; 2022 ; Check List Volume 2022 ; 2022 ; https://checklist.pensoft.net/ ; >
@@ -635,13 +635,13 @@
     au < finished ; manifest ; 2009 ; 3 ; Comparative Cytogenetics Volume 2009 ; 2009 ; https://compcytogen.pensoft.net/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2010 ; 4 ; Comparative Cytogenetics Volume 2010 ; 2010 ; https://compcytogen.pensoft.net/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2011 ; 5 ; Comparative Cytogenetics Volume 2011 ; 2011 ; https://compcytogen.pensoft.net/ ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; down ; 2012 ; 6 ; Comparative Cytogenetics Volume 2012 ; 2012 ; http://compcytogen.pensoft.net/ ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2013 ; 7 ; Comparative Cytogenetics Volume 2013 ; 2013 ; http://compcytogen.pensoft.net/ ; >
-    au < deepCrawl ; down ; 2014 ; 8 ; Comparative Cytogenetics Volume 2014 ; 2014 ; http://compcytogen.pensoft.net/ ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2012 ; 6 ; Comparative Cytogenetics Volume 2012 ; 2012 ; http://compcytogen.pensoft.net/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2013 ; 7 ; Comparative Cytogenetics Volume 2013 ; 2013 ; http://compcytogen.pensoft.net/ ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2014 ; 8 ; Comparative Cytogenetics Volume 2014 ; 2014 ; http://compcytogen.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; 9 ; Comparative Cytogenetics Volume 2015 ; 2015 ; http://compcytogen.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; 10 ; Comparative Cytogenetics Volume 2016 ; 2016 ; https://compcytogen.pensoft.net/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; 11 ; Comparative Cytogenetics Volume 2017 ; 2017 ; https://compcytogen.pensoft.net/ ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; 12 ; Comparative Cytogenetics Volume 2018 ; 2018 ; https://compcytogen.pensoft.net/ ; >
+    au < finished ; manifest ; 2018 ; 12 ; Comparative Cytogenetics Volume 2018 ; 2018 ; https://compcytogen.pensoft.net/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2019 ; 13 ; Comparative Cytogenetics Volume 2019 ; 2019 ; https://compcytogen.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 14 ; Comparative Cytogenetics Volume 2020 ; 2020 ; https://compcytogen.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2021 ; 15 ; Comparative Cytogenetics Volume 2021 ; 2021 ; https://compcytogen.pensoft.net/ ; >
@@ -698,7 +698,7 @@
       au < finished ; manifest ; 2016 ; 2016 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2016 ; 2016 ; https://mab-online.nl/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 2017 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2017 ; 2017 ; https://mab-online.nl/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 2018 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2018 ; 2018 ; https://mab-online.nl/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2019 ; 2019 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2019 ; 2019 ; https://mab-online.nl/ ; >
+      au < finished ; manifest ; 2019 ; 2019 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2019 ; 2019 ; https://mab-online.nl/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2020 ; 2020 ; https://mab-online.nl/ ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2021 ; 2021 ; https://mab-online.nl/ ; >
       au < crawling ; exists ; 2022 ; 2022 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2022 ; 2022 ; https://mab-online.nl/ ; >
@@ -735,7 +735,7 @@
 
       param[au_oai_set] = moem
 
-      au < deepCrawl ; exists ; 2018 ; 2018 ; Modern Electronic Materials Volume 2018 ; 2018 ; https://moem.pensoft.net/ ; >
+      au < finished ; manifest ; 2018 ; 2018 ; Modern Electronic Materials Volume 2018 ; 2018 ; https://moem.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; 2019 ; Modern Electronic Materials Volume 2019 ; 2019 ; https://moem.pensoft.net/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Modern Electronic Materials Volume 2020 ; 2020 ; https://moem.pensoft.net/ ; >
       au < finished ; manifest ; 2021 ; 2021 ; Modern Electronic Materials Volume 2021 ; 2021 ; https://moem.pensoft.net/ ; reingest3.clockss.org:8083 >
@@ -774,7 +774,7 @@
       au < finished ; manifest ; 2016 ; 2016 ; One Ecosystem Volume 2016 ; 2016 ; https://oneecosystem.pensoft.net/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2017 ; 2017 ; One Ecosystem Volume 2017 ; 2017 ; https://oneecosystem.pensoft.net/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; 2018 ; One Ecosystem Volume 2018 ; 2018 ; https://oneecosystem.pensoft.net/ ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; 2019 ; One Ecosystem Volume 2019 ; 2019 ; https://oneecosystem.pensoft.net/ ; >
+      au < finished ; manifest ; 2019 ; 2019 ; One Ecosystem Volume 2019 ; 2019 ; https://oneecosystem.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; One Ecosystem Volume 2020 ; 2020 ; https://oneecosystem.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; One Ecosystem Volume 2021 ; 2021 ; https://oneecosystem.pensoft.net/ ; >
       au < crawling ; exists ; 2022 ; 2022 ; One Ecosystem Volume 2022 ; 2022 ; https://oneecosystem.pensoft.net/ ; >
@@ -793,7 +793,7 @@
 
       au < finished ; manifest ; 2015 ; 2015 ; Research Ideas and Outcomes Volume 2015 ; 2015 ; https://riojournal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2016 ; 2016 ; Research Ideas and Outcomes Volume 2016 ; 2016 ; https://riojournal.com/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2017 ; 2017 ; Research Ideas and Outcomes Volume 2017 ; 2017 ; https://riojournal.com/ ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Research Ideas and Outcomes Volume 2017 ; 2017 ; https://riojournal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 2018 ; Research Ideas and Outcomes Volume 2018 ; 2018 ; https://riojournal.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2019 ; 2019 ; Research Ideas and Outcomes Volume 2019 ; 2019 ; https://riojournal.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Research Ideas and Outcomes Volume 2020 ; 2020 ; https://riojournal.com/ ; >
@@ -836,7 +836,7 @@
       au < finished ; manifest ; 2016 ; 2016 ; Rethinking Ecology Volume 2016 ; 2016 ; https://rethinkingecology.pensoft.net/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2017 ; 2017 ; Rethinking Ecology Volume 2017 ; 2017 ; https://rethinkingecology.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 2018 ; Rethinking Ecology Volume 2018 ; 2018 ; https://rethinkingecology.pensoft.net/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2019 ; 2019 ; Rethinking Ecology Volume 2019 ; 2019 ; https://rethinkingecology.pensoft.net/ ; >
+      au < finished ; manifest ; 2019 ; 2019 ; Rethinking Ecology Volume 2019 ; 2019 ; https://rethinkingecology.pensoft.net/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Rethinking Ecology Volume 2020 ; 2020 ; https://rethinkingecology.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Rethinking Ecology Volume 2021 ; 2021 ; https://rethinkingecology.pensoft.net/ ; >
       au < expected ; exists ; 2022 ; 2022 ; Rethinking Ecology Volume 2022 ; 2022 ; https://rethinkingecology.pensoft.net/ ; >
@@ -912,7 +912,7 @@
 
       au < finished ; manifest ; 2017 ; 34 ; Zoologia Volume 2017 ; 2017 ; https://zoologia.pensoft.net/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 35 ; Zoologia Volume 2018 ; 2018 ; https://zoologia.pensoft.net/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2019 ; 36 ; Zoologia Volume 2019 ; 2019 ; https://zoologia.pensoft.net/ ; >
+      au < finished ; manifest ; 2019 ; 36 ; Zoologia Volume 2019 ; 2019 ; https://zoologia.pensoft.net/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; 37 ; Zoologia Volume 2020 ; 2020 ; https://zoologia.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2021 ; 38 ; Zoologia Volume 2021 ; 2021 ; https://zoologia.pensoft.net/ ; >
       au < expected ; exists ; 2022 ; 39 ; Zoologia Volume 2022 ; 2022 ; https://zoologia.pensoft.net/ ; >
