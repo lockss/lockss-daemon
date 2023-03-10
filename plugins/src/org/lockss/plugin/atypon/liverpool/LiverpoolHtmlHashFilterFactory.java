@@ -100,7 +100,11 @@ public class LiverpoolHtmlHashFilterFactory
                                               "downloadCitationsWidget"),
         // early 2017- changed to <div class 
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "downloadCitationsWidget"), 
+                                              "downloadCitationsWidget"),
+
+
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class",
+                    "core-container"),
     };
     
     // handled by parent: script, sfxlink, stylesheet, pdfplus file sise

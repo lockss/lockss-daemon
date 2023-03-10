@@ -52,7 +52,9 @@ public class LiverpoolHtmlCrawlFilterFactory
     // toc, abs, ref - right column most read/most cited
     // too restrictive - it relates to any tabbed content, which could be main
     // TODO - look for a better solution
-    HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),    
+    HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),
+    // In March/2023, the publisher lists related books at the bottom of the page
+    HtmlNodeFilters.tagWithAttributeRegex("a", "class", "slide_item__content"),
                                              
     // all has been moved up to parent
   };
