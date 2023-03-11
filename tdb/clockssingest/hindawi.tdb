@@ -202,7 +202,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Advances in Artificial Neural Systems Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Advances in Artificial Neural Systems Volume 2015 ; 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Advances in Artificial Neural Systems Volume 2016 ; 2016 ; 2016 ; >
-    au < exists ; exists ; 2017 ; Advances in Artificial Neural Systems Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2017 ; Advances in Artificial Neural Systems Volume 2017 ; 2017 ; 2017 ; >
 
   }
 
@@ -10345,6 +10345,1006 @@
     au < finished ; frozen ; 2020 ; Wireless Communications and Mobile Computing Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2021 ; Wireless Communications and Mobile Computing Volume 2021 ; 2021 ; 2021 ; >
     au < manifest ; exists ; 2022 ; Wireless Communications and Mobile Computing Volume 2022 ; 2022 ; 2022 ; >
+
+  }
+
+#########################
+### TITLES FROM WILEY
+#########################
+
+  {
+
+    title <
+       name = ACTA NEUROLOGICA SCANDINAVICA ;
+       eissn = 1600-0404
+    >
+
+    param[journal_id] = ans
+    comment[years] = 1997-current
+
+    au < doNotProcess ; exists ; 1997 ; ACTA NEUROLOGICA SCANDINAVICA Volume 1997 ; 1997 ; 1997 ; >
+    au < doNotProcess ; exists ; 1998 ; ACTA NEUROLOGICA SCANDINAVICA Volume 1998 ; 1998 ; 1998 ; >
+    au < doNotProcess ; exists ; 1999 ; ACTA NEUROLOGICA SCANDINAVICA Volume 1999 ; 1999 ; 1999 ; >
+    au < doNotProcess ; exists ; 2000 ; ACTA NEUROLOGICA SCANDINAVICA Volume 2000 ; 2000 ; 2000 ; >
+    au < doNotProcess ; exists ; 2001 ; ACTA NEUROLOGICA SCANDINAVICA Volume 2001 ; 2001 ; 2001 ; >
+    au < doNotProcess ; exists ; 2002 ; ACTA NEUROLOGICA SCANDINAVICA Volume 2002 ; 2002 ; 2002 ; >
+    au < doNotProcess ; exists ; 2003 ; ACTA NEUROLOGICA SCANDINAVICA Volume 2003 ; 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; ACTA NEUROLOGICA SCANDINAVICA Volume 2004 ; 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; ACTA NEUROLOGICA SCANDINAVICA Volume 2005 ; 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; ACTA NEUROLOGICA SCANDINAVICA Volume 2006 ; 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; ACTA NEUROLOGICA SCANDINAVICA Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; ACTA NEUROLOGICA SCANDINAVICA Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; ACTA NEUROLOGICA SCANDINAVICA Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; ACTA NEUROLOGICA SCANDINAVICA Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; ACTA NEUROLOGICA SCANDINAVICA Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; ACTA NEUROLOGICA SCANDINAVICA Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; ACTA NEUROLOGICA SCANDINAVICA Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; ACTA NEUROLOGICA SCANDINAVICA Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; ACTA NEUROLOGICA SCANDINAVICA Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; ACTA NEUROLOGICA SCANDINAVICA Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; ACTA NEUROLOGICA SCANDINAVICA Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; ACTA NEUROLOGICA SCANDINAVICA Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; ACTA NEUROLOGICA SCANDINAVICA Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; ACTA NEUROLOGICA SCANDINAVICA Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; ACTA NEUROLOGICA SCANDINAVICA Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; ACTA NEUROLOGICA SCANDINAVICA Volume 2022 ; 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; ACTA NEUROLOGICA SCANDINAVICA Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
+       name = ANDROLOGIA ;
+       eissn = 1439-0272
+    >
+
+    param[journal_id] = and
+    comment[years] = 1997-current
+
+    au < doNotProcess ; exists ; 1997 ; ANDROLOGIA Volume 1997 ; 1997 ; 1997 ; >
+    au < doNotProcess ; exists ; 1998 ; ANDROLOGIA Volume 1998 ; 1998 ; 1998 ; >
+    au < doNotProcess ; exists ; 1999 ; ANDROLOGIA Volume 1999 ; 1999 ; 1999 ; >
+    au < doNotProcess ; exists ; 2000 ; ANDROLOGIA Volume 2000 ; 2000 ; 2000 ; >
+    au < doNotProcess ; exists ; 2001 ; ANDROLOGIA Volume 2001 ; 2001 ; 2001 ; >
+    au < doNotProcess ; exists ; 2002 ; ANDROLOGIA Volume 2002 ; 2002 ; 2002 ; >
+    au < doNotProcess ; exists ; 2003 ; ANDROLOGIA Volume 2003 ; 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; ANDROLOGIA Volume 2004 ; 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; ANDROLOGIA Volume 2005 ; 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; ANDROLOGIA Volume 2006 ; 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; ANDROLOGIA Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; ANDROLOGIA Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; ANDROLOGIA Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; ANDROLOGIA Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; ANDROLOGIA Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; ANDROLOGIA Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; ANDROLOGIA Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; ANDROLOGIA Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; ANDROLOGIA Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; ANDROLOGIA Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; ANDROLOGIA Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; ANDROLOGIA Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; ANDROLOGIA Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; ANDROLOGIA Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; ANDROLOGIA Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; ANDROLOGIA Volume 2022 ; 2022 ; 2022 ; >
+    au < manifest ; exists ; 2023 ; ANDROLOGIA Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
+       name = AQUACULTURE RESEARCH ;
+       issn = 1355-557X ;
+       eissn = 1365-2109
+    >
+
+    param[journal_id] = are
+    comment[years] = 1997-current
+
+    au < doNotProcess ; exists ; 1997 ; AQUACULTURE RESEARCH Volume 1997 ; 1997 ; 1997 ; >
+    au < doNotProcess ; exists ; 1998 ; AQUACULTURE RESEARCH Volume 1998 ; 1998 ; 1998 ; >
+    au < doNotProcess ; exists ; 1999 ; AQUACULTURE RESEARCH Volume 1999 ; 1999 ; 1999 ; >
+    au < doNotProcess ; exists ; 2000 ; AQUACULTURE RESEARCH Volume 2000 ; 2000 ; 2000 ; >
+    au < doNotProcess ; exists ; 2001 ; AQUACULTURE RESEARCH Volume 2001 ; 2001 ; 2001 ; >
+    au < doNotProcess ; exists ; 2002 ; AQUACULTURE RESEARCH Volume 2002 ; 2002 ; 2002 ; >
+    au < doNotProcess ; exists ; 2003 ; AQUACULTURE RESEARCH Volume 2003 ; 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; AQUACULTURE RESEARCH Volume 2004 ; 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; AQUACULTURE RESEARCH Volume 2005 ; 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; AQUACULTURE RESEARCH Volume 2006 ; 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; AQUACULTURE RESEARCH Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; AQUACULTURE RESEARCH Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; AQUACULTURE RESEARCH Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; AQUACULTURE RESEARCH Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; AQUACULTURE RESEARCH Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; AQUACULTURE RESEARCH Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; AQUACULTURE RESEARCH Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; AQUACULTURE RESEARCH Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; AQUACULTURE RESEARCH Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; AQUACULTURE RESEARCH Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; AQUACULTURE RESEARCH Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; AQUACULTURE RESEARCH Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; AQUACULTURE RESEARCH Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; AQUACULTURE RESEARCH Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; AQUACULTURE RESEARCH Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; AQUACULTURE RESEARCH Volume 2022 ; 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; AQUACULTURE RESEARCH Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
+       name = DEPRESSION AND ANXIETY ;
+       eissn = 1520-6394
+    >
+
+    param[journal_id] = da
+    comment[years] = 1996-current
+
+    au < doNotProcess ; exists ; 1996 ; DEPRESSION AND ANXIETY Volume 1996 ; 1996 ; 1996 ; >
+    au < doNotProcess ; exists ; 1997 ; DEPRESSION AND ANXIETY Volume 1997 ; 1997 ; 1997 ; >
+    au < doNotProcess ; exists ; 1998 ; DEPRESSION AND ANXIETY Volume 1998 ; 1998 ; 1998 ; >
+    au < doNotProcess ; exists ; 1999 ; DEPRESSION AND ANXIETY Volume 1999 ; 1999 ; 1999 ; >
+    au < doNotProcess ; exists ; 2000 ; DEPRESSION AND ANXIETY Volume 2000 ; 2000 ; 2000 ; >
+    au < doNotProcess ; exists ; 2001 ; DEPRESSION AND ANXIETY Volume 2001 ; 2001 ; 2001 ; >
+    au < doNotProcess ; exists ; 2002 ; DEPRESSION AND ANXIETY Volume 2002 ; 2002 ; 2002 ; >
+    au < doNotProcess ; exists ; 2003 ; DEPRESSION AND ANXIETY Volume 2003 ; 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; DEPRESSION AND ANXIETY Volume 2004 ; 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; DEPRESSION AND ANXIETY Volume 2005 ; 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; DEPRESSION AND ANXIETY Volume 2006 ; 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; DEPRESSION AND ANXIETY Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; DEPRESSION AND ANXIETY Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; DEPRESSION AND ANXIETY Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; DEPRESSION AND ANXIETY Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; DEPRESSION AND ANXIETY Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; DEPRESSION AND ANXIETY Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; DEPRESSION AND ANXIETY Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; DEPRESSION AND ANXIETY Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; DEPRESSION AND ANXIETY Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; DEPRESSION AND ANXIETY Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; DEPRESSION AND ANXIETY Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; DEPRESSION AND ANXIETY Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; DEPRESSION AND ANXIETY Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; DEPRESSION AND ANXIETY Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; DEPRESSION AND ANXIETY Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; DEPRESSION AND ANXIETY Volume 2022 ; 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; DEPRESSION AND ANXIETY Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
+       name = DERMATOLOGIC THERAPY ;
+       eissn = 1529-8019
+    >
+
+    param[journal_id] = dth
+    comment[years] = 2000-current
+
+    au < doNotProcess ; exists ; 2000 ; DERMATOLOGIC THERAPY Volume 2000 ; 2000 ; 2000 ; >
+    au < doNotProcess ; exists ; 2001 ; DERMATOLOGIC THERAPY Volume 2001 ; 2001 ; 2001 ; >
+    au < doNotProcess ; exists ; 2002 ; DERMATOLOGIC THERAPY Volume 2002 ; 2002 ; 2002 ; >
+    au < doNotProcess ; exists ; 2003 ; DERMATOLOGIC THERAPY Volume 2003 ; 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; DERMATOLOGIC THERAPY Volume 2004 ; 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; DERMATOLOGIC THERAPY Volume 2005 ; 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; DERMATOLOGIC THERAPY Volume 2006 ; 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; DERMATOLOGIC THERAPY Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; DERMATOLOGIC THERAPY Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; DERMATOLOGIC THERAPY Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; DERMATOLOGIC THERAPY Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; DERMATOLOGIC THERAPY Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; DERMATOLOGIC THERAPY Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; DERMATOLOGIC THERAPY Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; DERMATOLOGIC THERAPY Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; DERMATOLOGIC THERAPY Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; DERMATOLOGIC THERAPY Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; DERMATOLOGIC THERAPY Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; DERMATOLOGIC THERAPY Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; DERMATOLOGIC THERAPY Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; DERMATOLOGIC THERAPY Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; DERMATOLOGIC THERAPY Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; DERMATOLOGIC THERAPY Volume 2022 ; 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; DERMATOLOGIC THERAPY Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
+       name = EUROPEAN JOURNAL OF CANCER CARE ;
+       eissn = 1365-2354
+    >
+
+    param[journal_id] = ejcc
+    comment[years] = 1997-current
+
+    au < doNotProcess ; exists ; 1997 ; EUROPEAN JOURNAL OF CANCER CARE Volume 1997 ; 1997 ; 1997 ; >
+    au < doNotProcess ; exists ; 1998 ; EUROPEAN JOURNAL OF CANCER CARE Volume 1998 ; 1998 ; 1998 ; >
+    au < doNotProcess ; exists ; 1999 ; EUROPEAN JOURNAL OF CANCER CARE Volume 1999 ; 1999 ; 1999 ; >
+    au < doNotProcess ; exists ; 2000 ; EUROPEAN JOURNAL OF CANCER CARE Volume 2000 ; 2000 ; 2000 ; >
+    au < doNotProcess ; exists ; 2001 ; EUROPEAN JOURNAL OF CANCER CARE Volume 2001 ; 2001 ; 2001 ; >
+    au < doNotProcess ; exists ; 2002 ; EUROPEAN JOURNAL OF CANCER CARE Volume 2002 ; 2002 ; 2002 ; >
+    au < doNotProcess ; exists ; 2003 ; EUROPEAN JOURNAL OF CANCER CARE Volume 2003 ; 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; EUROPEAN JOURNAL OF CANCER CARE Volume 2004 ; 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; EUROPEAN JOURNAL OF CANCER CARE Volume 2005 ; 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; EUROPEAN JOURNAL OF CANCER CARE Volume 2006 ; 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; EUROPEAN JOURNAL OF CANCER CARE Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; EUROPEAN JOURNAL OF CANCER CARE Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; EUROPEAN JOURNAL OF CANCER CARE Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; EUROPEAN JOURNAL OF CANCER CARE Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; EUROPEAN JOURNAL OF CANCER CARE Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; EUROPEAN JOURNAL OF CANCER CARE Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; EUROPEAN JOURNAL OF CANCER CARE Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; EUROPEAN JOURNAL OF CANCER CARE Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; EUROPEAN JOURNAL OF CANCER CARE Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; EUROPEAN JOURNAL OF CANCER CARE Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; EUROPEAN JOURNAL OF CANCER CARE Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; EUROPEAN JOURNAL OF CANCER CARE Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; EUROPEAN JOURNAL OF CANCER CARE Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; EUROPEAN JOURNAL OF CANCER CARE Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; EUROPEAN JOURNAL OF CANCER CARE Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; EUROPEAN JOURNAL OF CANCER CARE Volume 2022 ; 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; EUROPEAN JOURNAL OF CANCER CARE Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
+       name = HEALTH & SOCIAL CARE IN THE COMMUNITY ;
+       issn = 0966-0410 ;
+       eissn = 1365-2524
+    >
+
+    param[journal_id] = hsc
+    comment[years] = 1997-current
+
+    au < doNotProcess ; exists ; 1997 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 1997 ; 1997 ; 1997 ; >
+    au < doNotProcess ; exists ; 1998 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 1998 ; 1998 ; 1998 ; >
+    au < doNotProcess ; exists ; 1999 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 1999 ; 1999 ; 1999 ; >
+    au < doNotProcess ; exists ; 2000 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 2000 ; 2000 ; 2000 ; >
+    au < doNotProcess ; exists ; 2001 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 2001 ; 2001 ; 2001 ; >
+    au < doNotProcess ; exists ; 2002 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 2002 ; 2002 ; 2002 ; >
+    au < doNotProcess ; exists ; 2003 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 2003 ; 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 2004 ; 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 2005 ; 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 2006 ; 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 2022 ; 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; HEALTH & SOCIAL CARE IN THE COMMUNITY Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
+       name = HUMAN MUTATION ;
+       issn = 1059-7794 ;
+       eissn = 1098-1004
+    >
+
+    param[journal_id] = humu
+    comment[years] = 1996-current
+
+    au < doNotProcess ; exists ; 1996 ; HUMAN MUTATION Volume 1996 ; 1996 ; 1996 ; >
+    au < doNotProcess ; exists ; 1997 ; HUMAN MUTATION Volume 1997 ; 1997 ; 1997 ; >
+    au < doNotProcess ; exists ; 1998 ; HUMAN MUTATION Volume 1998 ; 1998 ; 1998 ; >
+    au < doNotProcess ; exists ; 1999 ; HUMAN MUTATION Volume 1999 ; 1999 ; 1999 ; >
+    au < doNotProcess ; exists ; 2000 ; HUMAN MUTATION Volume 2000 ; 2000 ; 2000 ; >
+    au < doNotProcess ; exists ; 2001 ; HUMAN MUTATION Volume 2001 ; 2001 ; 2001 ; >
+    au < doNotProcess ; exists ; 2002 ; HUMAN MUTATION Volume 2002 ; 2002 ; 2002 ; >
+    au < doNotProcess ; exists ; 2003 ; HUMAN MUTATION Volume 2003 ; 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; HUMAN MUTATION Volume 2004 ; 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; HUMAN MUTATION Volume 2005 ; 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; HUMAN MUTATION Volume 2006 ; 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; HUMAN MUTATION Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; HUMAN MUTATION Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; HUMAN MUTATION Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; HUMAN MUTATION Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; HUMAN MUTATION Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; HUMAN MUTATION Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; HUMAN MUTATION Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; HUMAN MUTATION Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; HUMAN MUTATION Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; HUMAN MUTATION Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; HUMAN MUTATION Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; HUMAN MUTATION Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; HUMAN MUTATION Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; HUMAN MUTATION Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; HUMAN MUTATION Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; HUMAN MUTATION Volume 2022 ; 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; HUMAN MUTATION Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
+       name = INDOOR AIR ;
+       eissn = 1600-0668
+    >
+
+    param[journal_id] = ina
+    comment[years] = 1997-current
+
+    au < doNotProcess ; exists ; 1997 ; INDOOR AIR Volume 1997 ; 1997 ; 1997 ; >
+    au < doNotProcess ; exists ; 1998 ; INDOOR AIR Volume 1998 ; 1998 ; 1998 ; >
+    au < doNotProcess ; exists ; 1999 ; INDOOR AIR Volume 1999 ; 1999 ; 1999 ; >
+    au < doNotProcess ; exists ; 2000 ; INDOOR AIR Volume 2000 ; 2000 ; 2000 ; >
+    au < doNotProcess ; exists ; 2001 ; INDOOR AIR Volume 2001 ; 2001 ; 2001 ; >
+    au < doNotProcess ; exists ; 2002 ; INDOOR AIR Volume 2002 ; 2002 ; 2002 ; >
+    au < doNotProcess ; exists ; 2003 ; INDOOR AIR Volume 2003 ; 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; INDOOR AIR Volume 2004 ; 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; INDOOR AIR Volume 2005 ; 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; INDOOR AIR Volume 2006 ; 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; INDOOR AIR Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; INDOOR AIR Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; INDOOR AIR Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; INDOOR AIR Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; INDOOR AIR Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; INDOOR AIR Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; INDOOR AIR Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; INDOOR AIR Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; INDOOR AIR Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; INDOOR AIR Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; INDOOR AIR Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; INDOOR AIR Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; INDOOR AIR Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; INDOOR AIR Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; INDOOR AIR Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; INDOOR AIR Volume 2022 ; 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; INDOOR AIR Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
+       name = INTERNATIONAL JOURNAL OF ENERGY RESEARCH ;
+       issn = 0363-907X ;
+       eissn = 1099-114X
+    >
+
+    param[journal_id] = ijer
+    comment[years] = 1996-current
+
+    au < doNotProcess ; exists ; 1996 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 1996 ; 1996 ; 1996 ; >
+    au < doNotProcess ; exists ; 1997 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 1997 ; 1997 ; 1997 ; >
+    au < doNotProcess ; exists ; 1998 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 1998 ; 1998 ; 1998 ; >
+    au < doNotProcess ; exists ; 1999 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 1999 ; 1999 ; 1999 ; >
+    au < doNotProcess ; exists ; 2000 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 2000 ; 2000 ; 2000 ; >
+    au < doNotProcess ; exists ; 2001 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 2001 ; 2001 ; 2001 ; >
+    au < doNotProcess ; exists ; 2002 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 2002 ; 2002 ; 2002 ; >
+    au < doNotProcess ; exists ; 2003 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 2003 ; 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 2004 ; 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 2005 ; 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 2006 ; 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 2022 ; 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; INTERNATIONAL JOURNAL OF ENERGY RESEARCH Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
+       name = INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS ;
+       issn = 0884-8173 ;
+       eissn = 1098-111X
+    >
+
+    param[journal_id] = ijis
+    comment[years] = 1996-current
+
+    au < doNotProcess ; exists ; 1996 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 1996 ; 1996 ; 1996 ; >
+    au < doNotProcess ; exists ; 1997 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 1997 ; 1997 ; 1997 ; >
+    au < doNotProcess ; exists ; 1998 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 1998 ; 1998 ; 1998 ; >
+    au < doNotProcess ; exists ; 1999 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 1999 ; 1999 ; 1999 ; >
+    au < doNotProcess ; exists ; 2000 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 2000 ; 2000 ; 2000 ; >
+    au < doNotProcess ; exists ; 2001 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 2001 ; 2001 ; 2001 ; >
+    au < doNotProcess ; exists ; 2002 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 2002 ; 2002 ; 2002 ; >
+    au < doNotProcess ; exists ; 2003 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 2003 ; 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 2004 ; 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 2005 ; 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 2006 ; 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 2022 ; 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; INTERNATIONAL JOURNAL OF INTELLIGENT SYSTEMS Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
+       name = INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING ;
+       eissn = 1099-047X
+    >
+
+    param[journal_id] = ijmce
+    comment[years] = 1996-current
+
+    au < doNotProcess ; exists ; 1996 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 1996 ; 1996 ; 1996 ; >
+    au < doNotProcess ; exists ; 1997 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 1997 ; 1997 ; 1997 ; >
+    au < doNotProcess ; exists ; 1998 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 1998 ; 1998 ; 1998 ; >
+    au < doNotProcess ; exists ; 1999 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 1999 ; 1999 ; 1999 ; >
+    au < doNotProcess ; exists ; 2000 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 2000 ; 2000 ; 2000 ; >
+    au < doNotProcess ; exists ; 2001 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 2001 ; 2001 ; 2001 ; >
+    au < doNotProcess ; exists ; 2002 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 2002 ; 2002 ; 2002 ; >
+    au < doNotProcess ; exists ; 2003 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 2003 ; 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 2004 ; 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 2005 ; 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 2006 ; 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 2022 ; 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; INTERNATIONAL JOURNAL OF RF AND MICROWAVE COMPUTER-AIDED ENGINEERING Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
+       name = JOURNAL OF APPLIED ICHTHYOLOGY ;
+       eissn = 1439-0426
+    >
+
+    param[journal_id] = jai
+    comment[years] = 1997-current
+
+    au < doNotProcess ; exists ; 1997 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 1997 ; 1997 ; 1997 ; >
+    au < doNotProcess ; exists ; 1998 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 1998 ; 1998 ; 1998 ; >
+    au < doNotProcess ; exists ; 1999 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 1999 ; 1999 ; 1999 ; >
+    au < doNotProcess ; exists ; 2000 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 2000 ; 2000 ; 2000 ; >
+    au < doNotProcess ; exists ; 2001 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 2001 ; 2001 ; 2001 ; >
+    au < doNotProcess ; exists ; 2002 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 2002 ; 2002 ; 2002 ; >
+    au < doNotProcess ; exists ; 2003 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 2003 ; 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 2004 ; 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 2005 ; 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 2006 ; 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 2022 ; 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; JOURNAL OF APPLIED ICHTHYOLOGY Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
+       name = JOURNAL OF CARDIAC SURGERY ;
+       eissn = 1540-8191
+    >
+
+    param[journal_id] = jocs
+    comment[years] = 1997-current
+
+    au < doNotProcess ; exists ; 1997 ; JOURNAL OF CARDIAC SURGERY Volume 1997 ; 1997 ; 1997 ; >
+    au < doNotProcess ; exists ; 1998 ; JOURNAL OF CARDIAC SURGERY Volume 1998 ; 1998 ; 1998 ; >
+    au < doNotProcess ; exists ; 1999 ; JOURNAL OF CARDIAC SURGERY Volume 1999 ; 1999 ; 1999 ; >
+    au < doNotProcess ; exists ; 2000 ; JOURNAL OF CARDIAC SURGERY Volume 2000 ; 2000 ; 2000 ; >
+    au < doNotProcess ; exists ; 2001 ; JOURNAL OF CARDIAC SURGERY Volume 2001 ; 2001 ; 2001 ; >
+    au < doNotProcess ; exists ; 2002 ; JOURNAL OF CARDIAC SURGERY Volume 2002 ; 2002 ; 2002 ; >
+    au < doNotProcess ; exists ; 2003 ; JOURNAL OF CARDIAC SURGERY Volume 2003 ; 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; JOURNAL OF CARDIAC SURGERY Volume 2004 ; 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; JOURNAL OF CARDIAC SURGERY Volume 2005 ; 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; JOURNAL OF CARDIAC SURGERY Volume 2006 ; 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; JOURNAL OF CARDIAC SURGERY Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; JOURNAL OF CARDIAC SURGERY Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; JOURNAL OF CARDIAC SURGERY Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; JOURNAL OF CARDIAC SURGERY Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; JOURNAL OF CARDIAC SURGERY Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; JOURNAL OF CARDIAC SURGERY Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; JOURNAL OF CARDIAC SURGERY Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; JOURNAL OF CARDIAC SURGERY Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; JOURNAL OF CARDIAC SURGERY Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; JOURNAL OF CARDIAC SURGERY Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; JOURNAL OF CARDIAC SURGERY Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; JOURNAL OF CARDIAC SURGERY Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; JOURNAL OF CARDIAC SURGERY Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; JOURNAL OF CARDIAC SURGERY Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; JOURNAL OF CARDIAC SURGERY Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; JOURNAL OF CARDIAC SURGERY Volume 2022 ; 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; JOURNAL OF CARDIAC SURGERY Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
+       name = JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS ;
+       issn = 0269-4727 ;
+       eissn = 1365-2710
+    >
+
+    param[journal_id] = jcpt
+    comment[years] = 1997-current
+
+    au < doNotProcess ; exists ; 1997 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 1997 ; 1997 ; 1997 ; >
+    au < doNotProcess ; exists ; 1998 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 1998 ; 1998 ; 1998 ; >
+    au < doNotProcess ; exists ; 1999 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 1999 ; 1999 ; 1999 ; >
+    au < doNotProcess ; exists ; 2000 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 2000 ; 2000 ; 2000 ; >
+    au < doNotProcess ; exists ; 2001 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 2001 ; 2001 ; 2001 ; >
+    au < doNotProcess ; exists ; 2002 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 2002 ; 2002 ; 2002 ; >
+    au < doNotProcess ; exists ; 2003 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 2003 ; 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 2004 ; 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 2005 ; 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 2006 ; 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 2022 ; 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; JOURNAL OF CLINICAL PHARMACY & THERAPEUTICS Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
+       name = JOURNAL OF FOOD BIOCHEMISTRY ;
+       issn = 0145-8884 ;
+       eissn = 1745-4514
+    >
+
+    param[journal_id] = jfbc
+    comment[years] = 1997-current
+
+    au < doNotProcess ; exists ; 1997 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 1997 ; 1997 ; 1997 ; >
+    au < doNotProcess ; exists ; 1998 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 1998 ; 1998 ; 1998 ; >
+    au < doNotProcess ; exists ; 1999 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 1999 ; 1999 ; 1999 ; >
+    au < doNotProcess ; exists ; 2000 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 2000 ; 2000 ; 2000 ; >
+    au < doNotProcess ; exists ; 2001 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 2001 ; 2001 ; 2001 ; >
+    au < doNotProcess ; exists ; 2002 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 2002 ; 2002 ; 2002 ; >
+    au < doNotProcess ; exists ; 2003 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 2003 ; 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 2004 ; 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 2005 ; 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 2006 ; 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 2022 ; 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; JOURNAL OF FOOD BIOCHEMISTRY Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
+       name = JOURNAL OF FOOD PROCESSING AND PRESERVATION ;
+       issn = 0145-8892 ;
+       eissn = 1745-4549
+    >
+
+    param[journal_id] = jfpp
+    comment[years] = 1997-current
+
+    au < doNotProcess ; exists ; 1997 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 1997 ; 1997 ; 1997 ; >
+    au < doNotProcess ; exists ; 1998 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 1998 ; 1998 ; 1998 ; >
+    au < doNotProcess ; exists ; 1999 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 1999 ; 1999 ; 1999 ; >
+    au < doNotProcess ; exists ; 2000 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 2000 ; 2000 ; 2000 ; >
+    au < doNotProcess ; exists ; 2001 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 2001 ; 2001 ; 2001 ; >
+    au < doNotProcess ; exists ; 2002 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 2002 ; 2002 ; 2002 ; >
+    au < doNotProcess ; exists ; 2003 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 2003 ; 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 2004 ; 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 2005 ; 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 2006 ; 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 2022 ; 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; JOURNAL OF FOOD PROCESSING AND PRESERVATION Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
+       name = JOURNAL OF NURSING MANAGEMENT ;
+       issn = 0966-0429 ;
+       eissn = 1365-2834
+    >
+
+    param[journal_id] = jonm
+    comment[years] = 1997-current
+
+    au < doNotProcess ; exists ; 1997 ; JOURNAL OF NURSING MANAGEMENT Volume 1997 ; 1997 ; 1997 ; >
+    au < doNotProcess ; exists ; 1998 ; JOURNAL OF NURSING MANAGEMENT Volume 1998 ; 1998 ; 1998 ; >
+    au < doNotProcess ; exists ; 1999 ; JOURNAL OF NURSING MANAGEMENT Volume 1999 ; 1999 ; 1999 ; >
+    au < doNotProcess ; exists ; 2000 ; JOURNAL OF NURSING MANAGEMENT Volume 2000 ; 2000 ; 2000 ; >
+    au < doNotProcess ; exists ; 2001 ; JOURNAL OF NURSING MANAGEMENT Volume 2001 ; 2001 ; 2001 ; >
+    au < doNotProcess ; exists ; 2002 ; JOURNAL OF NURSING MANAGEMENT Volume 2002 ; 2002 ; 2002 ; >
+    au < doNotProcess ; exists ; 2003 ; JOURNAL OF NURSING MANAGEMENT Volume 2003 ; 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; JOURNAL OF NURSING MANAGEMENT Volume 2004 ; 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; JOURNAL OF NURSING MANAGEMENT Volume 2005 ; 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; JOURNAL OF NURSING MANAGEMENT Volume 2006 ; 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; JOURNAL OF NURSING MANAGEMENT Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; JOURNAL OF NURSING MANAGEMENT Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; JOURNAL OF NURSING MANAGEMENT Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; JOURNAL OF NURSING MANAGEMENT Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; JOURNAL OF NURSING MANAGEMENT Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; JOURNAL OF NURSING MANAGEMENT Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; JOURNAL OF NURSING MANAGEMENT Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; JOURNAL OF NURSING MANAGEMENT Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; JOURNAL OF NURSING MANAGEMENT Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; JOURNAL OF NURSING MANAGEMENT Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; JOURNAL OF NURSING MANAGEMENT Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; JOURNAL OF NURSING MANAGEMENT Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; JOURNAL OF NURSING MANAGEMENT Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; JOURNAL OF NURSING MANAGEMENT Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; JOURNAL OF NURSING MANAGEMENT Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; JOURNAL OF NURSING MANAGEMENT Volume 2022 ; 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; JOURNAL OF NURSING MANAGEMENT Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
+       name = JOURNAL OF TISSUE ENGINEERING AND REGENERATIVE MEDICINE ;
+       issn = 1932-6254 ;
+       eissn = 1932-7005
+    >
+
+    param[journal_id] = jterm
+    comment[years] = 2007-current
+
+    au < doNotProcess ; exists ; 2007 ; JOURNAL OF TISSUE ENGINEERING AND REGENERATIVE MEDICINE Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; JOURNAL OF TISSUE ENGINEERING AND REGENERATIVE MEDICINE Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; JOURNAL OF TISSUE ENGINEERING AND REGENERATIVE MEDICINE Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; JOURNAL OF TISSUE ENGINEERING AND REGENERATIVE MEDICINE Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; JOURNAL OF TISSUE ENGINEERING AND REGENERATIVE MEDICINE Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; JOURNAL OF TISSUE ENGINEERING AND REGENERATIVE MEDICINE Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; JOURNAL OF TISSUE ENGINEERING AND REGENERATIVE MEDICINE Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; JOURNAL OF TISSUE ENGINEERING AND REGENERATIVE MEDICINE Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; JOURNAL OF TISSUE ENGINEERING AND REGENERATIVE MEDICINE Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; JOURNAL OF TISSUE ENGINEERING AND REGENERATIVE MEDICINE Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; JOURNAL OF TISSUE ENGINEERING AND REGENERATIVE MEDICINE Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; JOURNAL OF TISSUE ENGINEERING AND REGENERATIVE MEDICINE Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; JOURNAL OF TISSUE ENGINEERING AND REGENERATIVE MEDICINE Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; JOURNAL OF TISSUE ENGINEERING AND REGENERATIVE MEDICINE Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; JOURNAL OF TISSUE ENGINEERING AND REGENERATIVE MEDICINE Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; JOURNAL OF TISSUE ENGINEERING AND REGENERATIVE MEDICINE Volume 2022 ; 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; JOURNAL OF TISSUE ENGINEERING AND REGENERATIVE MEDICINE Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
+       name = NEW DIRECTIONS FOR CHILD AND ADOLESCENT DEVELOPMENT ;
+       issn = 1520-3247 ;
+       eissn = 1534-8687
+    >
+
+    param[journal_id] = cad
+    comment[years] = 2001-current
+
+    au < doNotProcess ; exists ; 2001 ; NEW DIRECTIONS FOR CHILD AND ADOLESCENT DEVELOPMENT Volume 2001 ; 2001 ; 2001 ; >
+    au < doNotProcess ; exists ; 2002 ; NEW DIRECTIONS FOR CHILD AND ADOLESCENT DEVELOPMENT Volume 2002 ; 2002 ; 2002 ; >
+    au < doNotProcess ; exists ; 2003 ; NEW DIRECTIONS FOR CHILD AND ADOLESCENT DEVELOPMENT Volume 2003 ; 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; NEW DIRECTIONS FOR CHILD AND ADOLESCENT DEVELOPMENT Volume 2004 ; 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; NEW DIRECTIONS FOR CHILD AND ADOLESCENT DEVELOPMENT Volume 2005 ; 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; NEW DIRECTIONS FOR CHILD AND ADOLESCENT DEVELOPMENT Volume 2006 ; 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; NEW DIRECTIONS FOR CHILD AND ADOLESCENT DEVELOPMENT Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; NEW DIRECTIONS FOR CHILD AND ADOLESCENT DEVELOPMENT Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; NEW DIRECTIONS FOR CHILD AND ADOLESCENT DEVELOPMENT Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; NEW DIRECTIONS FOR CHILD AND ADOLESCENT DEVELOPMENT Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; NEW DIRECTIONS FOR CHILD AND ADOLESCENT DEVELOPMENT Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; NEW DIRECTIONS FOR CHILD AND ADOLESCENT DEVELOPMENT Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; NEW DIRECTIONS FOR CHILD AND ADOLESCENT DEVELOPMENT Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; NEW DIRECTIONS FOR CHILD AND ADOLESCENT DEVELOPMENT Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; NEW DIRECTIONS FOR CHILD AND ADOLESCENT DEVELOPMENT Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; NEW DIRECTIONS FOR CHILD AND ADOLESCENT DEVELOPMENT Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; NEW DIRECTIONS FOR CHILD AND ADOLESCENT DEVELOPMENT Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; NEW DIRECTIONS FOR CHILD AND ADOLESCENT DEVELOPMENT Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; NEW DIRECTIONS FOR CHILD AND ADOLESCENT DEVELOPMENT Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; NEW DIRECTIONS FOR CHILD AND ADOLESCENT DEVELOPMENT Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; NEW DIRECTIONS FOR CHILD AND ADOLESCENT DEVELOPMENT Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; NEW DIRECTIONS FOR CHILD AND ADOLESCENT DEVELOPMENT Volume 2022 ; 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; NEW DIRECTIONS FOR CHILD AND ADOLESCENT DEVELOPMENT Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
+       name = NURSING FORUM ;
+       issn = 0029-6473 ;
+       eissn = 1744-6198
+    >
+
+    param[journal_id] = nuf
+    comment[years] = 1997-current
+
+    au < doNotProcess ; exists ; 1997 ; NURSING FORUM Volume 1997 ; 1997 ; 1997 ; >
+    au < doNotProcess ; exists ; 1998 ; NURSING FORUM Volume 1998 ; 1998 ; 1998 ; >
+    au < doNotProcess ; exists ; 1999 ; NURSING FORUM Volume 1999 ; 1999 ; 1999 ; >
+    au < doNotProcess ; exists ; 2000 ; NURSING FORUM Volume 2000 ; 2000 ; 2000 ; >
+    au < doNotProcess ; exists ; 2001 ; NURSING FORUM Volume 2001 ; 2001 ; 2001 ; >
+    au < doNotProcess ; exists ; 2002 ; NURSING FORUM Volume 2002 ; 2002 ; 2002 ; >
+    au < doNotProcess ; exists ; 2003 ; NURSING FORUM Volume 2003 ; 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; NURSING FORUM Volume 2004 ; 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; NURSING FORUM Volume 2005 ; 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; NURSING FORUM Volume 2006 ; 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; NURSING FORUM Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; NURSING FORUM Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; NURSING FORUM Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; NURSING FORUM Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; NURSING FORUM Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; NURSING FORUM Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; NURSING FORUM Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; NURSING FORUM Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; NURSING FORUM Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; NURSING FORUM Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; NURSING FORUM Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; NURSING FORUM Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; NURSING FORUM Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; NURSING FORUM Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; NURSING FORUM Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; NURSING FORUM Volume 2022 ; 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; NURSING FORUM Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
+       name = PEDIATRIC DIABETES ;
+       issn = 1399-543X ;
+       eissn = 1399-5448
+    >
+
+    param[journal_id] = pedi
+    comment[years] = 2000-current
+
+    au < doNotProcess ; exists ; 2000 ; PEDIATRIC DIABETES Volume 2000 ; 2000 ; 2000 ; >
+    au < doNotProcess ; exists ; 2001 ; PEDIATRIC DIABETES Volume 2001 ; 2001 ; 2001 ; >
+    au < doNotProcess ; exists ; 2002 ; PEDIATRIC DIABETES Volume 2002 ; 2002 ; 2002 ; >
+    au < doNotProcess ; exists ; 2003 ; PEDIATRIC DIABETES Volume 2003 ; 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; PEDIATRIC DIABETES Volume 2004 ; 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; PEDIATRIC DIABETES Volume 2005 ; 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; PEDIATRIC DIABETES Volume 2006 ; 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; PEDIATRIC DIABETES Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; PEDIATRIC DIABETES Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; PEDIATRIC DIABETES Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; PEDIATRIC DIABETES Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; PEDIATRIC DIABETES Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; PEDIATRIC DIABETES Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; PEDIATRIC DIABETES Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; PEDIATRIC DIABETES Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; PEDIATRIC DIABETES Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; PEDIATRIC DIABETES Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; PEDIATRIC DIABETES Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; PEDIATRIC DIABETES Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; PEDIATRIC DIABETES Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; PEDIATRIC DIABETES Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; PEDIATRIC DIABETES Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; PEDIATRIC DIABETES Volume 2022 ; 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; PEDIATRIC DIABETES Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
+       name = PERSPECTIVES IN PSYCHIATRIC CARE ;
+       issn = 0031-5990 ;
+       eissn = 1744-6163
+    >
+
+    param[journal_id] = ppc
+    comment[years] = 1997-current
+
+    au < doNotProcess ; exists ; 1997 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 1997 ; 1997 ; 1997 ; >
+    au < doNotProcess ; exists ; 1998 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 1998 ; 1998 ; 1998 ; >
+    au < doNotProcess ; exists ; 1999 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 1999 ; 1999 ; 1999 ; >
+    au < doNotProcess ; exists ; 2000 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 2000 ; 2000 ; 2000 ; >
+    au < doNotProcess ; exists ; 2001 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 2001 ; 2001 ; 2001 ; >
+    au < doNotProcess ; exists ; 2002 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 2002 ; 2002 ; 2002 ; >
+    au < doNotProcess ; exists ; 2003 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 2003 ; 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 2004 ; 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 2005 ; 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 2006 ; 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 2022 ; 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; PERSPECTIVES IN PSYCHIATRIC CARE Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
+       name = STRUCTURAL CONTROL AND HEALTH MONITORING ;
+       issn = 1545-2255 ;
+       eissn = 1545-2263
+    >
+
+    param[journal_id] = schm
+    comment[years] = 2002-current
+
+    au < doNotProcess ; exists ; 2002 ; STRUCTURAL CONTROL AND HEALTH MONITORING Volume 2002 ; 2002 ; 2002 ; >
+    au < doNotProcess ; exists ; 2003 ; STRUCTURAL CONTROL AND HEALTH MONITORING Volume 2003 ; 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; STRUCTURAL CONTROL AND HEALTH MONITORING Volume 2004 ; 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; STRUCTURAL CONTROL AND HEALTH MONITORING Volume 2005 ; 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; STRUCTURAL CONTROL AND HEALTH MONITORING Volume 2006 ; 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; STRUCTURAL CONTROL AND HEALTH MONITORING Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; STRUCTURAL CONTROL AND HEALTH MONITORING Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; STRUCTURAL CONTROL AND HEALTH MONITORING Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; STRUCTURAL CONTROL AND HEALTH MONITORING Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; STRUCTURAL CONTROL AND HEALTH MONITORING Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; STRUCTURAL CONTROL AND HEALTH MONITORING Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; STRUCTURAL CONTROL AND HEALTH MONITORING Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; STRUCTURAL CONTROL AND HEALTH MONITORING Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; STRUCTURAL CONTROL AND HEALTH MONITORING Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; STRUCTURAL CONTROL AND HEALTH MONITORING Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; STRUCTURAL CONTROL AND HEALTH MONITORING Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; STRUCTURAL CONTROL AND HEALTH MONITORING Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; STRUCTURAL CONTROL AND HEALTH MONITORING Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; STRUCTURAL CONTROL AND HEALTH MONITORING Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; STRUCTURAL CONTROL AND HEALTH MONITORING Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; STRUCTURAL CONTROL AND HEALTH MONITORING Volume 2022 ; 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; STRUCTURAL CONTROL AND HEALTH MONITORING Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
+       name = TRANSBOUNDARY AND EMERGING DISEASES ;
+       issn = 1865-1674 ;
+       eissn = 1865-1682
+    >
+
+    param[journal_id] = tbed
+    comment[years] = 1997-current
+
+    au < doNotProcess ; exists ; 1997 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 1997 ; 1997 ; 1997 ; >
+    au < doNotProcess ; exists ; 1998 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 1998 ; 1998 ; 1998 ; >
+    au < doNotProcess ; exists ; 1999 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 1999 ; 1999 ; 1999 ; >
+    au < doNotProcess ; exists ; 2000 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2000 ; 2000 ; 2000 ; >
+    au < doNotProcess ; exists ; 2001 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2001 ; 2001 ; 2001 ; >
+    au < doNotProcess ; exists ; 2002 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2002 ; 2002 ; 2002 ; >
+    au < doNotProcess ; exists ; 2003 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2003 ; 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2004 ; 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2005 ; 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2006 ; 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2007 ; 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2008 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2008 ; 2008 ; 2008 ; >
+    au < doNotProcess ; exists ; 2009 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2009 ; 2009 ; 2009 ; >
+    au < doNotProcess ; exists ; 2010 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2010 ; 2010 ; 2010 ; >
+    au < doNotProcess ; exists ; 2011 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2011 ; 2011 ; 2011 ; >
+    au < doNotProcess ; exists ; 2012 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2012 ; 2012 ; 2012 ; >
+    au < doNotProcess ; exists ; 2013 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2013 ; 2013 ; 2013 ; >
+    au < doNotProcess ; exists ; 2014 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2014 ; 2014 ; 2014 ; >
+    au < doNotProcess ; exists ; 2015 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2015 ; 2015 ; 2015 ; >
+    au < doNotProcess ; exists ; 2016 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2016 ; 2016 ; 2016 ; >
+    au < doNotProcess ; exists ; 2017 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2017 ; 2017 ; 2017 ; >
+    au < doNotProcess ; exists ; 2018 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2018 ; 2018 ; 2018 ; >
+    au < doNotProcess ; exists ; 2019 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2019 ; 2019 ; 2019 ; >
+    au < doNotProcess ; exists ; 2020 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2020 ; 2020 ; 2020 ; >
+    au < doNotProcess ; exists ; 2021 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2021 ; 2021 ; 2021 ; >
+    au < doNotProcess ; exists ; 2022 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2022 ; 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2023 ; 2023 ; 2023 ; >
 
   }
 
