@@ -80,6 +80,7 @@
 
       au < manifest ; 2022 ; Arctic Anthropology Volume 58 ; 58 >
       au < exists ; 2023 ; Arctic Anthropology Volume 59 ; 59 >
+      au < expected ; 2023 ; Arctic Anthropology Volume 59 ; 59 >
       }
   }
   
@@ -116,6 +117,7 @@
       au < released ; 2019-2020 ; Contemporary Literature Volume 60 ; 60 >
       au < released ; 2021 ; Contemporary Literature Volume 61 ; 61 >
       au < released ; 2022 ; Contemporary Literature Volume 62 ; 62 >
+      au < expected ; 2023 ; Contemporary Literature Volume 63 ; 63 >
       }
       {
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
@@ -185,6 +187,7 @@
 
       au < manifest ; 2022 ; Ecological Restoration Volume 40 ; 40 ; https://er.uwpress.org/ >
       au < expected ; 2023 ; Ecological Restoration Volume 41 ; 41 ; https://er.uwpress.org/ >
+      au < expected ; 2023 ; Ecological Restoration Volume 41 ; 41 ; https://er.uwpress.org/ >
       }
   }
 
@@ -228,6 +231,7 @@
       param[base_url] = https://jhr.uwpress.org/
 
       au < exists ; 2022 ; The Journal of Human Resources Volume 58 ; 58 >
+      au < expected ; 2023 ; The Journal of Human Resources Volume 59 ; 59 >
       au < expected ; 2023 ; The Journal of Human Resources Volume 59 ; 59 >
       }
   }
@@ -274,6 +278,7 @@
       au < exists ; 2021 ; Land Economics Volume 97 ; 97 > #urls fail
       au < exists ; 2022 ; Land Economics Volume 98 ; 98 >
       au < exists ; 2023 ; Land Economics Volume 99 ; 99 >
+      au < expected ; 2023 ; Land Economics Volume 99 ; 99 >
       }
 
   }
@@ -340,6 +345,7 @@
 
       au < exists ; 2021 ; Landscape Journal: design, planning, and management of the land Volume 42 ; 42 >
       au < exists ; 2022 ; Landscape Journal: design, planning, and management of the land Volume 43 ; 43 >
+      au < expected ; 2023 ; Landscape Journal: design, planning, and management of the land Volume 44 ; 44 >
       au < expected ; 2023 ; Landscape Journal: design, planning, and management of the land Volume 44 ; 44 >
       }
 
@@ -424,6 +430,7 @@
       au < exists ; 2021 ; Monatshefte Volume 113 ; 113 >
       au < exists ; 2022 ; Monatshefte Volume 114 ; 114 >
       au < expected ; 2023 ; Monatshefte Volume 115 ; 115 >
+      au < expected ; 2023 ; Monatshefte Volume 115 ; 115 >
       }
 
   }
@@ -470,6 +477,7 @@
 
       au < released ; 2021 ; Native Plants Journal Volume 22 ; 22 > #urls fail RT4567
       au < released ; 2022 ; Native Plants Journal Volume 23 ; 23 >
+      au < expected ; 2023 ; Native Plants Journal Volume 24 ; 24 >
       au < expected ; 2023 ; Native Plants Journal Volume 24 ; 24 >
       }
   }

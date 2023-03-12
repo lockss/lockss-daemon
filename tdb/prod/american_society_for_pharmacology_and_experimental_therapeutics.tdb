@@ -70,6 +70,7 @@
     au < aspet.ASPETDrupalPlugin ; released ; 2021 ; Drug Metabolism and Disposition Volume 49 ; 49 ; https://dmd.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; manifest ; 2022 ; Drug Metabolism and Disposition Volume 50 ; 50 ; https://dmd.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; manifest ; 2023 ; Drug Metabolism and Disposition Volume 51 ; 51 ; https://dmd.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2023 ; Drug Metabolism and Disposition Volume 51 ; 51 ; https://dmd.aspetjournals.org/ >
 
   }
 
@@ -472,6 +473,10 @@
     au < aspet.ASPETDrupalPlugin ; expected ; 2023 ; Journal of Pharmacology and Experimental Therapeutics Volume 385 ; 385 ; https://jpet.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; expected ; 2023 ; Journal of Pharmacology and Experimental Therapeutics Volume 386 ; 386 ; https://jpet.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; expected ; 2023 ; Journal of Pharmacology and Experimental Therapeutics Volume 387 ; 387 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2023 ; Journal of Pharmacology and Experimental Therapeutics Volume 384 ; 384 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2023 ; Journal of Pharmacology and Experimental Therapeutics Volume 385 ; 385 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2023 ; Journal of Pharmacology and Experimental Therapeutics Volume 386 ; 386 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2023 ; Journal of Pharmacology and Experimental Therapeutics Volume 387 ; 387 ; https://jpet.aspetjournals.org/ >
 
     }
   }
@@ -618,6 +623,8 @@
     au < aspet.ASPETDrupalPlugin ; manifest ; 2022 ; Molecular Pharmacology Volume 102 ; 102 ; https://molpharm.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; manifest ; 2023 ; Molecular Pharmacology Volume 103 ; 103 ; https://molpharm.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; expected ; 2023 ; Molecular Pharmacology Volume 104 ; 104 ; https://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2023 ; Molecular Pharmacology Volume 103 ; 103 ; https://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2023 ; Molecular Pharmacology Volume 104 ; 104 ; https://molpharm.aspetjournals.org/ >
 
   }
 
@@ -707,6 +714,7 @@
     au < aspet.ASPETDrupalPlugin ; released ; 2021 ; Pharmacological Reviews Volume 73 ; 73 ; https://pharmrev.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; manifest ; 2022 ; Pharmacological Reviews Volume 74 ; 74 ; https://pharmrev.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; manifest ; 2023 ; Pharmacological Reviews Volume 75 ; 75 ; https://pharmrev.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2023 ; Pharmacological Reviews Volume 75 ; 75 ; https://pharmrev.aspetjournals.org/ >
 
   }
 
