@@ -71,7 +71,7 @@
     au < doNotProcess ; 2018 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 14 ; 14 >
     au < doNotProcess ; 2019 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 15 ; 15 >
     au < doNotProcess ; 2020 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 16 ; 16 >
-    au < manifest ; 2021 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 17 ; 17 >
+    au < ready ; 2021 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 17 ; 17 >
 
   }
 
@@ -346,7 +346,7 @@
     au < doNotProcess ; 2019 ; Catalan Review Volume 33 ; 33 >
     au < doNotProcess ; 2020 ; Catalan Review Volume 34 ; 34 >
     au < doNotProcess ; 2021 ; Catalan Review Volume 35 ; 35 >
-    au < manifest ; 2022 ; Catalan Review Volume 36 ; 36 >
+    au < ready ; 2022 ; Catalan Review Volume 36 ; 36 >
     au < expected ; 2023 ; Catalan Review Volume 37 ; 37 >
 
   }
@@ -387,7 +387,7 @@
     au < doNotProcess ; 2019 ; Contemporary French Civilization Volume 44 ; 44 >
     au < doNotProcess ; 2020 ; Contemporary French Civilization Volume 45 ; 45 >
     au < doNotProcess ; 2021 ; Contemporary French Civilization Volume 46 ; 46 >
-    au < manifest ; 2022 ; Contemporary French Civilization Volume 47 ; 47 >
+    au < ready ; 2022 ; Contemporary French Civilization Volume 47 ; 47 >
     au < expected ; 2023 ; Contemporary French Civilization Volume 48 ; 48 >
 
   }
@@ -460,7 +460,7 @@
     au < doNotProcess ; 2019 ; Eighteenth-Century Ireland Volume 34 ; 34 >
     au < doNotProcess ; 2020 ; Eighteenth-Century Ireland Volume 35 ; 35 >
     au < doNotProcess ; 2021 ; Eighteenth-Century Ireland Volume 36 ; 36 >
-    au < manifest ; 2022 ; Eighteenth-Century Ireland Volume 37 ; 37 >
+    au < ready ; 2022 ; Eighteenth-Century Ireland Volume 37 ; 37 >
     au < expected ; 2023 ; Eighteenth-Century Ireland Volume 38 ; 38 >
 
   }
@@ -537,7 +537,7 @@
     au < doNotProcess ; 2019 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 11 ; 11 >
     au < doNotProcess ; 2020 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 12 ; 12 >
     au < doNotProcess ; 2021 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 13 ; 13 >
-    au < manifest ; 2022 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 14 ; 14 >
+    au < ready ; 2022 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 14 ; 14 >
     au < expected ; 2023 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 15 ; 15 >
 
   }
@@ -621,7 +621,7 @@
     param[journal_id] = gncs
     #jounral_num = 111
 
-    au < manifest ; 2022 ; Global Nineteenth-Century Studies Volume 1 ; 1 >
+    au < ready ; 2022 ; Global Nineteenth-Century Studies Volume 1 ; 1 >
     au < expected ; 2023 ; Global Nineteenth-Century Studies Volume 2 ; 2 >
 
   }
@@ -756,7 +756,7 @@
     au < doNotProcess ; 2019 ; International Development Planning Review Volume 41 ; 41 >
     au < doNotProcess ; 2020 ; International Development Planning Review Volume 42 ; 42 >
     au < doNotProcess ; 2021 ; International Development Planning Review Volume 43 ; 43 >
-    au < manifest ; 2022 ; International Development Planning Review Volume 44 ; 44 >
+    au < ready ; 2022 ; International Development Planning Review Volume 44 ; 44 >
     au < expected ; 2023 ; International Development Planning Review Volume 45 ; 45 >
 
   }
@@ -774,7 +774,7 @@
     #jounral_num = 94
 
     au < doNotProcess ; 2021 ; International Journal of English for Academic Purposes: Research and Practice Volume 2021 ; 2021 >
-    au < manifest ; 2022 ; International Journal of English for Academic Purposes: Research and Practice Volume 2022 ; 2022 >
+    au < ready ; 2022 ; International Journal of English for Academic Purposes: Research and Practice Volume 2022 ; 2022 >
     au < expected ; 2023 ; International Journal of English for Academic Purposes: Research and Practice Volume 2023 ; 2023 >
   }
 
@@ -910,7 +910,7 @@
     param[journal_id] = jrns
     #jounral_num = 115
 
-    au < manifest ; 2022 ; Journal of Romanian Studies Volume 4 ; 4 >
+    au < ready ; 2022 ; Journal of Romanian Studies Volume 4 ; 4 >
     au < expected ; 2023 ; Journal of Romanian Studies Volume 5 ; 5 >
 
   }
@@ -1358,7 +1358,7 @@
     au < doNotProcess ; 2019 ; Modern Believing Volume 60 ; 60 >
     au < doNotProcess ; 2020 ; Modern Believing Volume 61 ; 61 >
     au < doNotProcess ; 2021 ; Modern Believing Volume 62 ; 62 >
-    au < manifest ; 2022 ; Modern Believing Volume 63 ; 63 >
+    au < ready ; 2022 ; Modern Believing Volume 63 ; 63 >
     au < expected ; 2023 ; Modern Believing Volume 64 ; 64 >
 
   }
@@ -1540,7 +1540,7 @@
     au < doNotProcess ; 2019 ; Romani Studies Volume 29 ; 29 >
     au < doNotProcess ; 2020 ; Romani Studies Volume 30 ; 30 >
     au < doNotProcess ; 2021 ; Romani Studies Volume 31 ; 31 >
-    au < manifest ; 2022 ; Romani Studies Volume 32 ; 32 >
+    au < ready ; 2022 ; Romani Studies Volume 32 ; 32 >
     au < expected ; 2023 ; Romani Studies Volume 33 ; 33 >
 
   }
@@ -1603,7 +1603,7 @@
     au < doNotProcess ; 2020 ; Quebec Studies Volume 70 ; 70 >
     au < doNotProcess ; 2021 ; Quebec Studies Volume 71 ; 71 >
     au < doNotProcess ; 2021 ; Quebec Studies Volume 72 ; 72 >
-    au < manifest ; 2022 ; Quebec Studies Volume 73 ; 73 >
+    au < ready ; 2022 ; Quebec Studies Volume 73 ; 73 >
     au < expected ; 2023 ; Quebec Studies Volume 74 ; 74 >
 
   }
@@ -1878,7 +1878,7 @@
     au < doNotProcess ; 2019 ; Town Planning Review Volume 90 ; 90 >
     au < doNotProcess ; 2020 ; Town Planning Review Volume 91 ; 91 >
     au < doNotProcess ; 2021 ; Town Planning Review Volume 92 ; 92 >
-    au < manifest ; 2022 ; Town Planning Review Volume 93 ; 93 >
+    au < ready ; 2022 ; Town Planning Review Volume 93 ; 93 >
     au < expected ; 2023 ; Town Planning Review Volume 94 ; 94 >
 
   }
@@ -1910,7 +1910,7 @@
     au < doNotProcess ; 2019 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 168 ; 168 >
     au < doNotProcess ; 2020 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 169 ; 169 >
     au < doNotProcess ; 2021 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 170 ; 170 >
-    au < manifest ; 2022 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 171 ; 171 >
+    au < ready ; 2022 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 171 ; 171 >
     au < expected ; 2023 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 172 ; 172 >
 
   }
@@ -1929,7 +1929,7 @@
     au < doNotProcess ; 2017 ; T. S. Eliot Studies Annual Volume 1 ; 1 >
     au < doNotProcess ; 2018 ; T. S. Eliot Studies Annual Volume 2 ; 2 >
     au < doNotProcess ; 2021 ; T. S. Eliot Studies Annual Volume 3 ; 3 >
-    au < manifest ; 2022 ; T. S. Eliot Studies Annual Volume 4 ; 4 >
+    au < ready ; 2022 ; T. S. Eliot Studies Annual Volume 4 ; 4 >
     au < expected ; 2023 ; T. S. Eliot Studies Annual Volume 5 ; 5 >
 
   }
