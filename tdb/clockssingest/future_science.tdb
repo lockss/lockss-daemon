@@ -35,6 +35,7 @@
     au < deepCrawl ; exists ; 2020 ; Bioanalysis Volume 12 ; 12 ; https://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2021 ; Bioanalysis Volume 13 ; 13 ; https://www.future-science.com/ ; >
     au < crawling ; exists ; 2022 ; Bioanalysis Volume 14 ; 14 ; https://www.future-science.com/ ; >
+    au < expected ; exists ; 2023 ; Bioanalysis Volume 15 ; 15 ; https://www.future-science.com/ ; >
 
   }
 
@@ -102,6 +103,8 @@
     au < deepCrawl ; exists ; 2021 ; BioTechniques Volume 71 ; 71 ; https://www.future-science.com/ ; >
     au < crawling ; exists ; 2022 ; BioTechniques Volume 72 ; 72 ; https://www.future-science.com/ ; >
     au < crawling ; exists ; 2022 ; BioTechniques Volume 73 ; 73 ; https://www.future-science.com/ ; >
+    au < expected ; exists ; 2023 ; BioTechniques Volume 74 ; 74 ; https://www.future-science.com/ ; >
+    au < expected ; exists ; 2023 ; BioTechniques Volume 75 ; 75 ; https://www.future-science.com/ ; >
 
   }
 
@@ -153,6 +156,7 @@
     au < finished ; crawling ; 2020 ; Future Drug Discover Volume 2 ; 2 ; https://www.future-science.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2021 ; Future Drug Discover Volume 3 ; 3 ; https://www.future-science.com/ ; >
     au < crawling ; exists ; 2022 ; Future Drug Discover Volume 4 ; 4 ; https://www.future-science.com/ ; >
+    au < expected ; exists ; 2023 ; Future Drug Discover Volume 5 ; 5 ; https://www.future-science.com/ ; >
 
   }
 
@@ -180,6 +184,7 @@
     au < deepCrawl ; exists ; 2020 ; Future Medicinal Chemistry Volume 12 ; 12 ; https://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2021 ; Future Medicinal Chemistry Volume 13 ; 13 ; https://www.future-science.com/ ; >
     au < crawling ; exists ; 2022 ; Future Medicinal Chemistry Volume 14 ; 14 ; https://www.future-science.com/ ; >
+    au < expected ; exists ; 2023 ; Future Medicinal Chemistry Volume 15 ; 15 ; https://www.future-science.com/ ; >
 
   }
 
@@ -205,6 +210,7 @@
     au < deepCrawl ; exists ; 2020 ; Future Science OA Volume 6 ; 6 ; https://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2021 ; Future Science OA Volume 7 ; 7 ; https://www.future-science.com/ ; >
     au < crawling ; exists ; 2022 ; Future Science OA Volume 8 ; 8 ; https://www.future-science.com/ ; >
+    au < expected ; exists ; 2023 ; Future Science OA Volume 9 ; 9 ; https://www.future-science.com/ ; >
     }
   }
 
@@ -225,6 +231,7 @@
    au < finished ; frozen ; 2019 ; International Journal of Pharmacokinetics Volume 4 ; 4 ; https://www.future-science.com/ ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2021 ; International Journal of Pharmacokinetics Volume 5 ; 5 ; https://www.future-science.com/ ; >
    au < manifest ; exists ; 2022 ; International Journal of Pharmacokinetics Volume 6 ; 6 ; https://www.future-science.com/ ; >
+   au < expected ; exists ; 2023 ; International Journal of Pharmacokinetics Volume 7 ; 7 ; https://www.future-science.com/ ; >
 
    }
 
@@ -264,6 +271,7 @@
     au < deepCrawl ; exists ; 2020 ; Pharmaceutical Patent Analyst Volume 9 ; 9 ; https://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2021 ; Pharmaceutical Patent Analyst Volume 10 ; 10 ; https://www.future-science.com/ ; >
     au < crawling ; exists ; 2022 ; Pharmaceutical Patent Analyst Volume 11 ; 11 ; https://www.future-science.com/ ; >
+    au < expected ; exists ; 2023 ; Pharmaceutical Patent Analyst Volume 12 ; 12 ; https://www.future-science.com/ ; >
 
   }
 
@@ -290,6 +298,7 @@
     au < deepCrawl ; exists ; 2020 ; Therapeutic Delivery Volume 11 ; 11 ; https://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2021 ; Therapeutic Delivery Volume 12 ; 12 ; https://www.future-science.com/ ; >
     au < crawling ; exists ; 2022 ; Therapeutic Delivery Volume 13 ; 13 ; https://www.future-science.com/ ; >
+    au < expected ; exists ; 2023 ; Therapeutic Delivery Volume 14 ; 14 ; https://www.future-science.com/ ; >
 
   }
 

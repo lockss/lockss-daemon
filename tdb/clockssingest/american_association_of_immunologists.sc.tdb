@@ -233,6 +233,8 @@
         au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; The Journal of Immunology Volume 207 ; 207 ; >
         au < manifest ; exists ; 2022 ; 2022 ; The Journal of Immunology Volume 208 ; 208 ; >
         au < manifest ; exists ; 2022 ; 2022 ; The Journal of Immunology Volume 209 ; 209 ; >
+        au < expected ; exists ; 2023 ; 2023 ; The Journal of Immunology Volume 210 ; 210 ; >
+        au < expected ; exists ; 2023 ; 2023 ; The Journal of Immunology Volume 211 ; 211 ; >
 
   }
 
@@ -252,6 +254,7 @@
         au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; ImmunoHorizons Volume 4 ; 4 ; >
         au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; ImmunoHorizons Volume 5 ; 5 ; >
         au < exists ; exists ; 2022 ; 2022 ; ImmunoHorizons Volume 6 ; 6 ; >
+        au < expected ; expected ; 2023 ; 2023 ; ImmunoHorizons Volume 7 ; 7 ; >
 
   }
 }

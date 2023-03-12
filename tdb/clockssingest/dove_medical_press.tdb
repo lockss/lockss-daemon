@@ -45,6 +45,7 @@
     au < finished ; crawling ; 2020 ; Therapeutics and Clinical Risk Management Volume 16 ; 16 ; 2020 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Therapeutics and Clinical Risk Management Volume 17 ; 17 ; 2021 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Therapeutics and Clinical Risk Management Volume 18 ; 18 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Therapeutics and Clinical Risk Management Volume 19 ; 19 ; 2023 ; >
 
   }
 
@@ -75,6 +76,7 @@
     au < finished ; crawling ; 2020 ; Vascular Health and Risk Management Volume 16 ; 16 ; 2020 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Vascular Health and Risk Management Volume 17 ; 17 ; 2021 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Vascular Health and Risk Management Volume 18 ; 18 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Vascular Health and Risk Management Volume 19 ; 19 ; 2023 ; >
 
   }
 
@@ -105,6 +107,7 @@
     au < finished ; crawling ; 2020 ; Neuropsychiatric Disease and Treatment Volume 16 ; 16 ; 2020 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Neuropsychiatric Disease and Treatment Volume 17 ; 17 ; 2021 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2022 ; Neuropsychiatric Disease and Treatment Volume 18 ; 18 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Neuropsychiatric Disease and Treatment Volume 19 ; 19 ; 2023 ; >
 
   }
 
@@ -134,6 +137,7 @@
     au < finished ; finished ; 2020 ; Clinical Interventions in Aging Volume 15 ; 15 ; 2020 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Clinical Interventions in Aging Volume 16 ; 16 ; 2021 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2022 ; Clinical Interventions in Aging Volume 17 ; 17 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Clinical Interventions in Aging Volume 18 ; 18 ; 2023 ; >
 
   }
 
@@ -163,6 +167,7 @@
     au < finished ; crawling ; 2020 ; International Journal of Nanomedicine Volume 15 ; 15 ; 2020 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; International Journal of Nanomedicine Volume 16 ; 16 ; 2021 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; International Journal of Nanomedicine Volume 17 ; 17 ; 2022 ; >
+    au < expected ; exists ; 2023 ; International Journal of Nanomedicine Volume 18 ; 18 ; 2023 ; >
 
   }
 
@@ -192,6 +197,7 @@
     au < finished ; finished ; 2020 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 15 ; 15 ; 2020 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2021 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 16 ; 16 ; 2021 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 17 ; 17 ; 2022 ; >
+    au < expected ; exists ; 2023 ; International Journal of Chronic Obstructive Pulmonary Disease Volume 18 ; 18 ; 2023 ; >
 
   }
 
@@ -219,6 +225,7 @@
     au < finished ; finished ; 2020 ; Journal of Multidisciplinary Healthcare Volume 13 ; 13 ; 2020 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Journal of Multidisciplinary Healthcare Volume 14 ; 14 ; 2021 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Journal of Multidisciplinary Healthcare Volume 15 ; 15 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Journal of Multidisciplinary Healthcare Volume 16 ; 16 ; 2023 ; >
 
   }
 
@@ -248,6 +255,7 @@
     au < finished ; finished ; 2020 ; Biologics: Targets and Therapy Volume 14 ; 14 ; 2020 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Biologics: Targets and Therapy Volume 15 ; 15 ; 2021 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2022 ; Biologics: Targets and Therapy Volume 16 ; 16 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Biologics: Targets and Therapy Volume 17 ; 17 ; 2023 ; >
 
   }
 
@@ -276,6 +284,7 @@
     au < finished ; finished ; 2020 ; Clinical Ophthalmology Volume 14 ; 14 ; 2020 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Clinical Ophthalmology Volume 15 ; 15 ; 2021 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2022 ; Clinical Ophthalmology Volume 16 ; 16 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Clinical Ophthalmology Volume 17 ; 17 ; 2023 ; >
 
   }
 
@@ -303,6 +312,7 @@
     au < finished ; finished ; 2020 ; Nanotechnology, Science and Applications Volume 13 ; 13 ; 2020 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Nanotechnology, Science and Applications Volume 14 ; 14 ; 2021 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Nanotechnology, Science and Applications Volume 15 ; 15 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Nanotechnology, Science and Applications Volume 16 ; 16 ; 2023 ; >
 
   }
 
@@ -331,6 +341,7 @@
     au < finished ; crawling ; 2020 ; Drug Design, Development and Therapy Volume 14 ; 14 ; 2020 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Drug Design, Development and Therapy Volume 15 ; 15 ; 2021 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Drug Design, Development and Therapy Volume 16 ; 16 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Drug Design, Development and Therapy Volume 17 ; 17 ; 2023 ; >
 
   }
 
@@ -359,6 +370,7 @@
     au < finished ; finished ; 2020 ; Patient Preference and Adherence Volume 14 ; 14 ; 2020 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2021 ; Patient Preference and Adherence Volume 15 ; 15 ; 2021 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Patient Preference and Adherence Volume 16 ; 16 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Patient Preference and Adherence Volume 17 ; 17 ; 2023 ; >
 
   }
 
@@ -386,6 +398,7 @@
     au < finished ; crawling ; 2020 ; OncoTargets and Therapy Volume 13 ; 13 ; 2020 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2021 ; OncoTargets and Therapy Volume 14 ; 14 ; 2021 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2022 ; OncoTargets and Therapy Volume 15 ; 15 ; 2022 ; >
+    au < expected ; exists ; 2023 ; OncoTargets and Therapy Volume 16 ; 16 ; 2023 ; >
 
   }
 
@@ -413,6 +426,7 @@
     au < finished ; finished ; 2020 ; Medical Devices: Evidence and Research Volume 13 ; 13 ; 2020 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Medical Devices: Evidence and Research Volume 14 ; 14 ; 2021 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2022 ; Medical Devices: Evidence and Research Volume 15 ; 15 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Medical Devices: Evidence and Research Volume 16 ; 16 ; 2023 ; >
 
   }
 
@@ -462,6 +476,7 @@
     au < finished ; finished ; 2020 ; Stem Cells and Cloning: Advances and Applications Volume 13 ; 13 ; 2020 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Stem Cells and Cloning: Advances and Applications Volume 14 ; 14 ; 2021 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Stem Cells and Cloning: Advances and Applications Volume 15 ; 15 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Stem Cells and Cloning: Advances and Applications Volume 16 ; 16 ; 2023 ; >
 
   }
 
@@ -489,6 +504,7 @@
     au < finished ; finished ; 2020 ; Journal of Asthma and Allergy Volume 13 ; 13 ; 2020 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Journal of Asthma and Allergy Volume 14 ; 14 ; 2021 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Journal of Asthma and Allergy Volume 15 ; 15 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Journal of Asthma and Allergy Volume 16 ; 16 ; 2023 ; >
 
   }
 
@@ -516,6 +532,7 @@
     au < finished ; crawling ; 2020 ; Infection and Drug Resistance Volume 13 ; 13 ; 2020 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2021 ; Infection and Drug Resistance Volume 14 ; 14 ; 2021 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Infection and Drug Resistance Volume 15 ; 15 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Infection and Drug Resistance Volume 16 ; 16 ; 2023 ; >
 
   }
 
@@ -542,6 +559,7 @@
     au < finished ; crawling ; 2020 ; ClinicoEconomics and Outcomes Research Volume 12 ; 12 ; 2020 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2021 ; ClinicoEconomics and Outcomes Research Volume 13 ; 13 ; 2021 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2022 ; ClinicoEconomics and Outcomes Research Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; ClinicoEconomics and Outcomes Research Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -591,6 +609,7 @@
     au < finished ; finished ; 2020 ; Local and Regional Anesthesia Volume 13 ; 13 ; 2020 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Local and Regional Anesthesia Volume 14 ; 14 ; 2021 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2022 ; Local and Regional Anesthesia Volume 15 ; 15 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Local and Regional Anesthesia Volume 16 ; 16 ; 2023 ; >
 
   }
 
@@ -618,6 +637,7 @@
     au < finished ; crawling ; 2020 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 13 ; 13 ; 2020 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 14 ; 14 ; 2021 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 15 ; 15 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy Volume 16 ; 16 ; 2023 ; >
 
   }
 
@@ -645,6 +665,7 @@
     au < finished ; finished ; 2020 ; Clinical, Cosmetic and Investigational Dermatology Volume 13 ; 13 ; 2020 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2021 ; Clinical, Cosmetic and Investigational Dermatology Volume 14 ; 14 ; 2021 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Clinical, Cosmetic and Investigational Dermatology Volume 15 ; 15 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Clinical, Cosmetic and Investigational Dermatology Volume 16 ; 16 ; 2023 ; >
 
   }
 
@@ -672,6 +693,7 @@
     au < finished ; finished ; 2020 ; Clinical and Experimental Gastroenterology Volume 13 ; 13 ; 2020 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2021 ; Clinical and Experimental Gastroenterology Volume 14 ; 14 ; 2021 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Clinical and Experimental Gastroenterology Volume 15 ; 15 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Clinical and Experimental Gastroenterology Volume 16 ; 16 ; 2023 ; >
 
   }
 
@@ -699,6 +721,7 @@
     au < finished ; finished ; 2020 ; Journal of Inflammation Research Volume 13 ; 13 ; 2020 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; Journal of Inflammation Research Volume 14 ; 14 ; 2021 ; >
     au < crawling ; exists ; 2022 ; Journal of Inflammation Research Volume 15 ; 15 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Journal of Inflammation Research Volume 16 ; 16 ; 2023 ; >
 
   }
 
@@ -726,6 +749,7 @@
     au < finished ; finished ; 2020 ; The Application of Clinical Genetics Volume 13 ; 13 ; 2020 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; The Application of Clinical Genetics Volume 14 ; 14 ; 2021 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2022 ; The Application of Clinical Genetics Volume 15 ; 15 ; 2022 ; >
+    au < expected ; exists ; 2023 ; The Application of Clinical Genetics Volume 16 ; 16 ; 2023 ; >
 
   }
 
@@ -753,6 +777,7 @@
     au < finished ; finished ; 2020 ; International Journal of Nephrology and Renovascular Disease Volume 13 ; 13 ; 2020 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; International Journal of Nephrology and Renovascular Disease Volume 14 ; 14 ; 2021 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2022 ; International Journal of Nephrology and Renovascular Disease Volume 15 ; 15 ; 2022 ; >
+    au < expected ; exists ; 2023 ; International Journal of Nephrology and Renovascular Disease Volume 16 ; 16 ; 2023 ; >
 
   }
 
@@ -780,6 +805,7 @@
     au < finished ; finished ; 2020 ; Pharmacogenomics and Personalized Medicine Volume 13 ; 13 ; 2020 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2021 ; Pharmacogenomics and Personalized Medicine Volume 14 ; 14 ; 2021 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Pharmacogenomics and Personalized Medicine Volume 15 ; 15 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Pharmacogenomics and Personalized Medicine Volume 16 ; 16 ; 2023 ; >
 
   }
 
@@ -807,6 +833,7 @@
     au < finished ; finished ; 2020 ; International Journal of General Medicine Volume 13 ; 13 ; 2020 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2021 ; International Journal of General Medicine Volume 14 ; 14 ; 2021 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; International Journal of General Medicine Volume 15 ; 15 ; 2022 ; >
+    au < expected ; exists ; 2023 ; International Journal of General Medicine Volume 16 ; 16 ; 2023 ; >
 
   }
 
@@ -834,6 +861,7 @@
     au < finished ; finished ; 2020 ; Open Access Surgery Volume 13 ; 13 ; 2020 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Open Access Surgery Volume 14 ; 14 ; 2021 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Open Access Surgery Volume 15 ; 15 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Open Access Surgery Volume 16 ; 16 ; 2023 ; >
 
   }
 
@@ -861,6 +889,7 @@
     au < finished ; crawling ; 2020 ; Journal of Pain Research Volume 13 ; 13 ; 2020 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Journal of Pain Research Volume 14 ; 14 ; 2021 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2022 ; Journal of Pain Research Volume 15 ; 15 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Journal of Pain Research Volume 16 ; 16 ; 2023 ; >
 
   }
 
@@ -888,6 +917,7 @@
     au < finished ; finished ; 2020 ; Integrated Blood Pressure Control Volume 13 ; 13 ; 2020 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2021 ; Integrated Blood Pressure Control Volume 14 ; 14 ; 2021 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2022 ; Integrated Blood Pressure Control Volume 15 ; 15 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Integrated Blood Pressure Control Volume 16 ; 16 ; 2023 ; >
 
   }
 
@@ -914,6 +944,7 @@
     au < finished ; finished ; 2020 ; Clinical Epidemiology Volume 12 ; 12 ; 2020 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2021 ; Clinical Epidemiology Volume 13 ; 13 ; 2021 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Clinical Epidemiology Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Clinical Epidemiology Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -940,6 +971,7 @@
     au < finished ; finished ; 2020 ; Drug, Healthcare and Patient Safety Volume 12 ; 12 ; 2020 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Drug, Healthcare and Patient Safety Volume 13 ; 13 ; 2021 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Drug, Healthcare and Patient Safety Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Drug, Healthcare and Patient Safety Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -966,6 +998,7 @@
     au < finished ; finished ; 2020 ; International Journal of Women's Health Volume 12 ; 12 ; 2020 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; International Journal of Women's Health Volume 13 ; 13 ; 2021 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; International Journal of Women's Health Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; International Journal of Women's Health Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -993,6 +1026,7 @@
     au < finished ; finished ; 2020 ; International Medical Case Reports Journal Volume 13 ; 13 ; 2020 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2021 ; International Medical Case Reports Journal Volume 14 ; 14 ; 2021 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2022 ; International Medical Case Reports Journal Volume 15 ; 15 ; 2022 ; >
+    au < expected ; exists ; 2023 ; International Medical Case Reports Journal Volume 16 ; 16 ; 2023 ; >
 
   }
 
@@ -1019,6 +1053,7 @@
     au < finished ; finished ; 2020 ; Open Access Emergency Medicine Volume 12 ; 12 ; 2020 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2021 ; Open Access Emergency Medicine Volume 13 ; 13 ; 2021 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2022 ; Open Access Emergency Medicine Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Open Access Emergency Medicine Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -1067,6 +1102,7 @@
     au < finished ; finished ; 2020 ; Reports in Medical Imaging Volume 13 ; 13 ; 2020 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2021 ; Reports in Medical Imaging Volume 14 ; 14 ; 2021 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Reports in Medical Imaging Volume 15 ; 15 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Reports in Medical Imaging Volume 16 ; 16 ; 2023 ; >
 
   }
 
@@ -1093,6 +1129,7 @@
     au < finished ; finished ; 2020 ; Research and Reports in Urology Volume 12 ; 12 ; 2020 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Research and Reports in Urology Volume 13 ; 13 ; 2021 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Research and Reports in Urology Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Research and Reports in Urology Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -1119,6 +1156,7 @@
     au < finished ; finished ; 2020 ; Open Access Journal of Clinical Trials Volume 12 ; 12 ; 2020 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2021 ; Open Access Journal of Clinical Trials Volume 13 ; 13 ; 2021 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Open Access Journal of Clinical Trials Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Open Access Journal of Clinical Trials Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -1145,6 +1183,7 @@
     au < finished ; finished ; 2020 ; International Journal of Wine Research Volume 12 ; 12 ; 2020 ; reingest3.clockss.org:8083 >
     au < expected ; exists ; 2021 ; International Journal of Wine Research Volume 13 ; 13 ; 2021 ; >
     au < expected ; exists ; 2022 ; International Journal of Wine Research Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; International Journal of Wine Research Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -1172,6 +1211,7 @@
     au < finished ; finished ; 2020 ; Psychology Research and Behavior Management Volume 13 ; 13 ; 2020 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Psychology Research and Behavior Management Volume 14 ; 14 ; 2021 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2022 ; Psychology Research and Behavior Management Volume 15 ; 15 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Psychology Research and Behavior Management Volume 16 ; 16 ; 2023 ; >
 
   }
 
@@ -1198,6 +1238,7 @@
     au < finished ; finished ; 2020 ; Clinical, Cosmetic and Investigational Dentistry Volume 12 ; 12 ; 2020 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Clinical, Cosmetic and Investigational Dentistry Volume 13 ; 13 ; 2021 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2022 ; Clinical, Cosmetic and Investigational Dentistry Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Clinical, Cosmetic and Investigational Dentistry Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -1224,6 +1265,7 @@
     au < finished ; crawling ; 2020 ; Cancer Management and Research Volume 12 ; 12 ; 2020 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Cancer Management and Research Volume 13 ; 13 ; 2021 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Cancer Management and Research Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Cancer Management and Research Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -1251,6 +1293,7 @@
     au < finished ; crawling ; 2020 ; Risk Management and Healthcare Policy Volume 13 ; 13 ; 2020 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Risk Management and Healthcare Policy Volume 14 ; 14 ; 2021 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Risk Management and Healthcare Policy Volume 15 ; 15 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Risk Management and Healthcare Policy Volume 16 ; 16 ; 2023 ; >
 
   }
 
@@ -1277,6 +1320,7 @@
     au < finished ; finished ; 2020 ; Transplant Research and Risk Management Volume 12 ; 12 ; 2020 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2021 ; Transplant Research and Risk Management Volume 13 ; 13 ; 2021 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Transplant Research and Risk Management Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Transplant Research and Risk Management Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -1324,6 +1368,7 @@
     au < finished ; finished ; 2020 ; Open Access Rheumatology: Research and Reviews Volume 12 ; 12 ; 2020 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2021 ; Open Access Rheumatology: Research and Reviews Volume 13 ; 13 ; 2021 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2022 ; Open Access Rheumatology: Research and Reviews Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Open Access Rheumatology: Research and Reviews Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -1372,6 +1417,7 @@
     au < finished ; finished ; 2020 ; Hepatic Medicine: Evidence and Research Volume 12 ; 12 ; 2020 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Hepatic Medicine: Evidence and Research Volume 13 ; 13 ; 2021 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2022 ; Hepatic Medicine: Evidence and Research Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Hepatic Medicine: Evidence and Research Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -1412,6 +1458,7 @@
     au < finished ; finished ; 2020 ; Open Access Journal of Sports Medicine Volume 11 ; 11 ; 2020 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Open Access Journal of Sports Medicine Volume 12 ; 12 ; 2021 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Open Access Journal of Sports Medicine Volume 13 ; 13 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Open Access Journal of Sports Medicine Volume 14 ; 14 ; 2023 ; >
 
   }
 
@@ -1438,6 +1485,7 @@
     au < finished ; finished ; 2020 ; Clinical Pharmacology: Advances and Applications Volume 12 ; 12 ; 2020 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Clinical Pharmacology: Advances and Applications Volume 13 ; 13 ; 2021 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Clinical Pharmacology: Advances and Applications Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Clinical Pharmacology: Advances and Applications Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -1464,6 +1512,7 @@
     au < finished ; finished ; 2020 ; Journal of Experimental Pharmacology Volume 12 ; 12 ; 2020 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2021 ; Journal of Experimental Pharmacology Volume 13 ; 13 ; 2021 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Journal of Experimental Pharmacology Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Journal of Experimental Pharmacology Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -1490,6 +1539,7 @@
     au < finished ; finished ; 2020 ; HIV/AIDS - Research and Palliative Care Volume 12 ; 12 ; 2020 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2021 ; HIV/AIDS - Research and Palliative Care Volume 13 ; 13 ; 2021 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2022 ; HIV/AIDS - Research and Palliative Care Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; HIV/AIDS - Research and Palliative Care Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -1516,6 +1566,7 @@
     au < finished ; finished ; 2020 ; Breast Cancer: Targets and Therapy Volume 12 ; 12 ; 2020 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Breast Cancer: Targets and Therapy Volume 13 ; 13 ; 2021 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2022 ; Breast Cancer: Targets and Therapy Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Breast Cancer: Targets and Therapy Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -1542,6 +1593,7 @@
     au < finished ; finished ; 2020 ; Nutrition and Dietary Supplements Volume 12 ; 12 ; 2020 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Nutrition and Dietary Supplements Volume 13 ; 13 ; 2021 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Nutrition and Dietary Supplements Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Nutrition and Dietary Supplements Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -1568,6 +1620,7 @@
     au < finished ; finished ; 2020 ; Orthopedic Research and Reviews Volume 12 ; 12 ; 2020 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Orthopedic Research and Reviews Volume 13 ; 13 ; 2021 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Orthopedic Research and Reviews Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Orthopedic Research and Reviews Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -1594,6 +1647,7 @@
     au < finished ; finished ; 2020 ; Nature and Science of Sleep Volume 12 ; 12 ; 2020 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2021 ; Nature and Science of Sleep Volume 13 ; 13 ; 2021 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Nature and Science of Sleep Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Nature and Science of Sleep Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -1619,6 +1673,7 @@
     au < finished ; finished ; 2020 ; Open Access Journal of Contraception Volume 11 ; 11 ; 2020 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2021 ; Open Access Journal of Contraception Volume 12 ; 12 ; 2021 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2022 ; Open Access Journal of Contraception Volume 13 ; 13 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Open Access Journal of Contraception Volume 14 ; 14 ; 2023 ; >
 
   }
 
@@ -1665,6 +1720,7 @@
     au < finished ; finished ; 2020 ; Clinical Optometry Volume 12 ; 12 ; 2020 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Clinical Optometry Volume 13 ; 13 ; 2021 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2022 ; Clinical Optometry Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Clinical Optometry Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -1691,6 +1747,7 @@
     au < finished ; finished ; 2020 ; Eye and Brain Volume 12 ; 12 ; 2020 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Eye and Brain Volume 13 ; 13 ; 2021 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Eye and Brain Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Eye and Brain Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -1717,6 +1774,7 @@
     au < finished ; finished ; 2020 ; Pathology and Laboratory Medicine International Volume 12 ; 12 ; 2020 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Pathology and Laboratory Medicine International Volume 13 ; 13 ; 2021 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Pathology and Laboratory Medicine International Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Pathology and Laboratory Medicine International Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -1764,6 +1822,7 @@
     au < finished ; finished ; 2020 ; Clinical Audit Volume 12 ; 12 ; 2020 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2021 ; Clinical Audit Volume 13 ; 13 ; 2021 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Clinical Audit Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Clinical Audit Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -1789,6 +1848,7 @@
     au < finished ; finished ; 2020 ; Lung Cancer: Targets and Therapy Volume 11 ; 11 ; 2020 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2021 ; Lung Cancer: Targets and Therapy Volume 12 ; 12 ; 2021 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2022 ; Lung Cancer: Targets and Therapy Volume 13 ; 13 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Lung Cancer: Targets and Therapy Volume 14 ; 14 ; 2023 ; >
 
   }
 
@@ -1814,6 +1874,7 @@
     au < finished ; crawling ; 2020 ; Patient Related Outcome Measures Volume 11 ; 11 ; 2020 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Patient Related Outcome Measures Volume 12 ; 12 ; 2021 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2022 ; Patient Related Outcome Measures Volume 13 ; 13 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Patient Related Outcome Measures Volume 14 ; 14 ; 2023 ; >
 
   }
 
@@ -1839,6 +1900,7 @@
     au < finished ; finished ; 2020 ; Journal of Blood Medicine Volume 11 ; 11 ; 2020 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2021 ; Journal of Blood Medicine Volume 12 ; 12 ; 2021 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Journal of Blood Medicine Volume 13 ; 13 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Journal of Blood Medicine Volume 14 ; 14 ; 2023 ; >
 
   }
 
@@ -1909,6 +1971,7 @@
     au < finished ; finished ; 2020 ; Core Evidence Volume 15 ; 15 ; 2020 ; reingest4.clockss.org:8082 >
     au < expected ; exists ; 2021 ; Core Evidence Volume 16 ; 16 ; 2021 ; >
     au < expected ; exists ; 2022 ; Core Evidence Volume 17 ; 17 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Core Evidence Volume 18 ; 18 ; 2023 ; >
 
   }
 
@@ -1934,6 +1997,7 @@
     au < finished ; finished ; 2020 ; Adolescent Health, Medicine and Therapeutics Volume 11 ; 11 ; 2020 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Adolescent Health, Medicine and Therapeutics Volume 12 ; 12 ; 2021 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Adolescent Health, Medicine and Therapeutics Volume 13 ; 13 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Adolescent Health, Medicine and Therapeutics Volume 14 ; 14 ; 2023 ; >
 
   }
 
@@ -1981,6 +2045,7 @@
     au < finished ; finished ; 2020 ; Journal of Healthcare Leadership Volume 12 ; 12 ; 2020 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2021 ; Journal of Healthcare Leadership Volume 13 ; 13 ; 2021 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Journal of Healthcare Leadership Volume 14 ; 14 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Journal of Healthcare Leadership Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -2006,6 +2071,7 @@
     au < finished ; crawling ; 2020 ; Advances in Medical Education and Practice Volume 11 ; 11 ; 2020 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2021 ; Advances in Medical Education and Practice Volume 12 ; 12 ; 2021 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2022 ; Advances in Medical Education and Practice Volume 13 ; 13 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Advances in Medical Education and Practice Volume 14 ; 14 ; 2023 ; >
 
   }
 
@@ -2031,6 +2097,7 @@
     au < finished ; finished ; 2020 ; Research and Reports in Tropical Medicine Volume 11 ; 11 ; 2020 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Research and Reports in Tropical Medicine Volume 12 ; 12 ; 2021 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2022 ; Research and Reports in Tropical Medicine Volume 13 ; 13 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Research and Reports in Tropical Medicine Volume 14 ; 14 ; 2023 ; >
 
   }
 
@@ -2077,6 +2144,7 @@
     au < finished ; finished ; 2020 ; Pragmatic and Observational Research Volume 11 ; 11 ; 2020 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Pragmatic and Observational Research Volume 12 ; 12 ; 2021 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Pragmatic and Observational Research Volume 13 ; 13 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Pragmatic and Observational Research Volume 14 ; 14 ; 2023 ; >
 
   }
 
@@ -2102,6 +2170,7 @@
     au < finished ; finished ; 2020 ; Research Reports in Clinical Cardiology Volume 11 ; 11 ; 2020 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Research Reports in Clinical Cardiology Volume 12 ; 12 ; 2021 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Research Reports in Clinical Cardiology Volume 13 ; 13 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Research Reports in Clinical Cardiology Volume 14 ; 14 ; 2023 ; >
 
   }
 
@@ -2147,6 +2216,7 @@
     au < finished ; finished ; 2020 ; Substance Abuse and Rehabilitation Volume 11 ; 11 ; 2020 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2021 ; Substance Abuse and Rehabilitation Volume 12 ; 12 ; 2021 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Substance Abuse and Rehabilitation Volume 13 ; 13 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Substance Abuse and Rehabilitation Volume 14 ; 14 ; 2023 ; >
 
   }
 
@@ -2171,6 +2241,7 @@
     au < finished ; finished ; 2020 ; Degenerative Neurological and Neuromuscular Disease Volume 10 ; 10 ; 2020 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2021 ; Degenerative Neurological and Neuromuscular Disease Volume 11 ; 11 ; 2021 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2022 ; Degenerative Neurological and Neuromuscular Disease Volume 12 ; 12 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Degenerative Neurological and Neuromuscular Disease Volume 13 ; 13 ; 2023 ; >
 
   }
 
@@ -2215,6 +2286,7 @@
     au < finished ; finished ; 2020 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 10 ; 10 ; 2020 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 11 ; 11 ; 2021 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2022 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 12 ; 12 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Blood and Lymphatic Cancer: Targets and Therapy Volume 13 ; 13 ; 2023 ; >
 
   }
 
@@ -2260,6 +2332,7 @@
     au < finished ; finished ; 2020 ; Pediatric Health, Medicine and Therapeutics Volume 11 ; 11 ; 2020 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2021 ; Pediatric Health, Medicine and Therapeutics Volume 12 ; 12 ; 2021 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Pediatric Health, Medicine and Therapeutics Volume 13 ; 13 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Pediatric Health, Medicine and Therapeutics Volume 14 ; 14 ; 2023 ; >
 
   }
 
@@ -2284,6 +2357,7 @@
     au < finished ; finished ; 2020 ; Research and Reports in Neonatology Volume 10 ; 10 ; 2020 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2021 ; Research and Reports in Neonatology Volume 11 ; 11 ; 2021 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Research and Reports in Neonatology Volume 12 ; 12 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Research and Reports in Neonatology Volume 13 ; 13 ; 2023 ; >
 
   }
 
@@ -2367,6 +2441,7 @@
     au < finished ; finished ; 2020 ; Veterinary Medicine: Research and Reports Volume 11 ; 11 ; 2020 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Veterinary Medicine: Research and Reports Volume 12 ; 12 ; 2021 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Veterinary Medicine: Research and Reports Volume 13 ; 13 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Veterinary Medicine: Research and Reports Volume 14 ; 14 ; 2023 ; >
 
   }
 
@@ -2622,6 +2697,7 @@
     au < finished ; finished ; 2020 ; Psoriasis: Targets and Therapy Volume 10 ; 10 ; 2020 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Psoriasis: Targets and Therapy Volume 11 ; 11 ; 2021 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2022 ; Psoriasis: Targets and Therapy Volume 12 ; 12 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Psoriasis: Targets and Therapy Volume 13 ; 13 ; 2023 ; >
 
   }
 
@@ -2701,6 +2777,7 @@
     au < finished ; finished ; 2020 ; Nursing: Research and Reviews Volume 10 ; 10 ; 2020 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Nursing: Research and Reviews Volume 11 ; 11 ; 2021 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2022 ; Nursing: Research and Reviews Volume 12 ; 12 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Nursing: Research and Reviews Volume 13 ; 13 ; 2023 ; >
 
   }
 
@@ -2762,6 +2839,7 @@
     au < finished ; finished ; 2020 ; Integrated Pharmacy Research and Practice Volume 9 ; 9 ; 2020 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2021 ; Integrated Pharmacy Research and Practice Volume 10 ; 10 ; 2021 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Integrated Pharmacy Research and Practice Volume 11 ; 11 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Integrated Pharmacy Research and Practice Volume 12 ; 12 ; 2023 ; >
 
   }
 
@@ -2823,6 +2901,7 @@
     au < finished ; finished ; 2020 ; ImmunoTargets and Therapy Volume 9 ; 9 ; 2020 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2021 ; ImmunoTargets and Therapy Volume 10 ; 10 ; 2021 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; ImmunoTargets and Therapy Volume 11 ; 11 ; 2022 ; >
+    au < expected ; exists ; 2023 ; ImmunoTargets and Therapy Volume 12 ; 12 ; 2023 ; >
 
   }
 
@@ -2844,6 +2923,7 @@
     au < finished ; finished ; 2020 ; Smart Homecare Technology and TeleHealth Volume 7 ; 7 ; 2020 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Smart Homecare Technology and TeleHealth Volume 8 ; 8 ; 2021 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Smart Homecare Technology and TeleHealth Volume 9 ; 9 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Smart Homecare Technology and TeleHealth Volume 10 ; 10 ; 2023 ; >
 
   }
 
@@ -2867,6 +2947,7 @@
     au < finished ; finished ; 2020 ; Oncolytic Virotherapy Volume 9 ; 9 ; 2020 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Oncolytic Virotherapy Volume 10 ; 10 ; 2021 ; reingest2.clockss.org:8085 >
     au < expected ; exists ; 2022 ; Oncolytic Virotherapy Volume 11 ; 11 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Oncolytic Virotherapy Volume 12 ; 12 ; 2023 ; >
 
   }
 
@@ -2960,6 +3041,7 @@
     au < finished ; finished ; 2020 ; International Journal of Clinical Transfusion Medicine Volume 8 ; 8 ; 2020 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; International Journal of Clinical Transfusion Medicine Volume 9 ; 9 ; 2021 ; reingest3.clockss.org:8083 >
     au < expected ; exists ; 2022 ; International Journal of Clinical Transfusion Medicine Volume 10 ; 10 ; 2022 ; >
+    au < expected ; exists ; 2023 ; International Journal of Clinical Transfusion Medicine Volume 11 ; 11 ; 2023 ; >
 
   }
 
@@ -2984,6 +3066,7 @@
     au < finished ; finished ; 2020 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 10 ; 10 ; 2020 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2021 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 11 ; 11 ; 2021 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 12 ; 12 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 13 ; 13 ; 2023 ; >
 
   }
 
@@ -3005,6 +3088,7 @@
     au < finished ; finished ; 2020 ; Journal of Hepatocellular Carcinoma Volume 7 ; 7 ; 2020 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2021 ; Journal of Hepatocellular Carcinoma Volume 8 ; 8 ; 2021 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Journal of Hepatocellular Carcinoma Volume 9 ; 9 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Journal of Hepatocellular Carcinoma Volume 10 ; 10 ; 2023 ; >
 
   }
 
@@ -3027,6 +3111,7 @@
     au < finished ; finished ; 2020 ; Hypoxia Volume 8 ; 8 ; 2020 ; reingest4.clockss.org:8082 >
     au < expected ; exists ; 2021 ; Hypoxia Volume 9 ; 9 ; 2021 ; >
     au < expected ; exists ; 2022 ; Hypoxia Volume 10 ; 10 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Hypoxia Volume 11 ; 11 ; 2023 ; >
 
   }
 
@@ -3048,6 +3133,7 @@
     au < finished ; finished ; 2020 ; Metalloproteinases In Medicine Volume 7 ; 7 ; 2020 ; reingest5.clockss.org:8082 >
     au < expected ; exists ; 2021 ; Metalloproteinases In Medicine Volume 8 ; 8 ; 2021 ; >
     au < expected ; exists ; 2022 ; Metalloproteinases In Medicine Volume 9 ; 9 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Metalloproteinases In Medicine Volume 10 ; 10 ; 2023 ; >
 
   }
 
@@ -3088,6 +3174,7 @@
     au < finished ; finished ; 2020 ; Journal of Vascular Diagnostics and Interventions Volume 8 ; 8 ; 2020 ; reingest1.clockss.org:8082 >
     au < expected ; exists ; 2021 ; Journal of Vascular Diagnostics and Interventions Volume 9 ; 9 ; 2021 ; >
     au < expected ; exists ; 2022 ; Journal of Vascular Diagnostics and Interventions Volume 10 ; 10 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Journal of Vascular Diagnostics and Interventions Volume 11 ; 11 ; 2023 ; >
 
   }
 
@@ -3109,6 +3196,7 @@
     au < finished ; finished ; 2020 ; Chronic Wound Care Management and Research Volume 7 ; 7 ; 2020 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2021 ; Chronic Wound Care Management and Research Volume 8 ; 8 ; 2021 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Chronic Wound Care Management and Research Volume 9 ; 9 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Chronic Wound Care Management and Research Volume 10 ; 10 ; 2023 ; >
 
   }
   {
@@ -3129,6 +3217,7 @@
     au < finished ; finished ; 2020 ; Robotic Surgery: Research and Reviews Volume 7 ; 7 ; 2020 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2021 ; Robotic Surgery: Research and Reviews Volume 8 ; 8 ; 2021 ; reingest2.clockss.org:8085 >
     au < expected ; exists ; 2022 ; Robotic Surgery: Research and Reviews Volume 9 ; 9 ; 2022 ; >
+    au < expected ; exists ; 2023 ; Robotic Surgery: Research and Reviews Volume 10 ; 10 ; 2023 ; >
 
   }
 

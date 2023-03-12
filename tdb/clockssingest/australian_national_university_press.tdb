@@ -71,6 +71,7 @@
     au < finished ; finished ; 2020 ; Aboriginal History Journal Volume 44 ; 44 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Aboriginal History Journal Volume 45 ; 45 ; reingest1.clockss.org:8082 >
     au < expected ; exists ; 2022 ; Aboriginal History Journal Volume 46 ; 46 ; >
+    au < expected ; exists ; 2023 ; Aboriginal History Journal Volume 47 ; 47 ; >
 
   }
 
@@ -129,6 +130,7 @@
       au < finished ; frozen ; 2020 ; Agenda - A Journal of Policy Analysis and Reform Volume 27 ; 27 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2021 ; Agenda - A Journal of Policy Analysis and Reform Volume 28 ; 28 ; reingest4.clockss.org:8082 >
       au < expected ; exists ; 2022 ; Agenda - A Journal of Policy Analysis and Reform Volume 29 ; 29 ; >
+      au < expected ; exists ; 2023 ; Agenda - A Journal of Policy Analysis and Reform Volume 30 ; 30 ; >
 
     }
   }
@@ -147,6 +149,7 @@
     au < finished ; frozen ; 2020 ; ANU Historical Journal II: Number 2 ; 2 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; ANU Historical Journal II: Number 3 ; 3 ; reingest1.clockss.org:8082 >
     au < expected ; exists ; 2022 ; ANU Historical Journal II: Number 4 ; 4 ; >
+    au < expected ; exists ; 2023 ; ANU Historical Journal II: Number 5 ; 5 ; >
 
   }
   
@@ -167,6 +170,7 @@
     au < finished ; finished ; 2020 ; Australian Journal of Biography and History: Number 4 ; 4 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Australian Journal of Biography and History: Number 5 ; 5 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Australian Journal of Biography and History: Number 6 ; 6 ; >
+    au < expected ; exists ; 2023 ; Australian Journal of Biography and History: Number 7 ; 7 ; >
 
   }  
 
@@ -194,6 +198,7 @@
     au < finished ; frozen ; 2020 ; East Asia Forum Quarterly Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2021 ; East Asia Forum Quarterly Volume 13 ; 13 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2022 ; East Asia Forum Quarterly Volume 14 ; 14 ; >
+    au < expected ; exists ; 2023 ; East Asia Forum Quarterly Volume 15 ; 15 ; >
 
   }
 
@@ -216,6 +221,7 @@
     au < finished ; finished ; 2019 ; Human Ecology Review: Volume 25 ; 25 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2021 ; Human Ecology Review: Volume 26 ; 26 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; Human Ecology Review: Volume 27 ; 27 ;  >
+    au < expected ; exists ; 2023 ; Human Ecology Review: Volume 28 ; 28 ;  >
 
   }
 
@@ -238,6 +244,7 @@
     au < finished ; finished ; 2020 ; International Review of Environmental History: Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; International Review of Environmental History: Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2022 ; International Review of Environmental History: Volume 8 ; 8 ; >
+    au < expected ; exists ; 2023 ; International Review of Environmental History: Volume 9 ; 9 ; >
 
   }
 
@@ -253,6 +260,7 @@
     au < finished ; finished ; 2020 ; Lilith: A Feminist History Journal Volume 26 ; 26 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2021 ; Lilith: A Feminist History Journal Volume 27 ; 27 ; reingest3.clockss.org:8083 >
     au < notReady ; exists ; 2022 ; Lilith: A Feminist History Journal Volume 28 ; 28 ; > #manifest page checker finds a volume that does not exist.
+    au < expected ; exists ; 2023 ; Lilith: A Feminist History Journal Volume 29 ; 29 ; > #manifest page checker finds a volume that does not exist.
 
   }
 
@@ -273,6 +281,7 @@
     au < finished ; frozen ; 2020 ; Made in China Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2021 ; Made in China Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < notReady ; exists ; 2022 ; Made in China Volume 7 ; 7 ; > #manifest page checker finds a volume that does not exist.
+    au < expected ; exists ; 2023 ; Made in China Volume 8 ; 8 ; > #manifest page checker finds a volume that does not exist.
 
   }
   

@@ -38,6 +38,7 @@
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Biology Open Volume 9 ; 9 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Biology Open Volume 10 ; 10 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Biology Open Volume 11 ; 11 ; >
+    au < expected ; exists ; 2023 ; 2023 ; Biology Open Volume 12 ; 12 ; >
 
   }
 
@@ -218,6 +219,7 @@
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Development Volume 147 ; 147 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Development Volume 148 ; 148 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Development Volume 149 ; 149 ; >
+    au < expected ; exists ; 2023 ; 2023 ; Development Volume 150 ; 150 ; >
 
   }
 
@@ -249,6 +251,7 @@
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Disease Models & Mechanisms Volume 13 ; 13 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Disease Models & Mechanisms Volume 14 ; 14 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Disease Models & Mechanisms Volume 15 ; 15 ; >
+    au < expected ; exists ; 2023 ; 2023 ; Disease Models & Mechanisms Volume 16 ; 16 ; >
 
   }
 
@@ -447,6 +450,7 @@
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Journal of Cell Science Volume 133 ; 133 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Cell Science Volume 134 ; 134 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Journal of Cell Science Volume 135 ; 135 ; >
+    au < expected ; exists ; 2023 ; 2023 ; Journal of Cell Science Volume 136 ; 136 ; >
 
   }
 
@@ -687,6 +691,7 @@
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Journal of Experimental Biology Volume 223 ; 223 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Experimental Biology Volume 224 ; 224 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Journal of Experimental Biology Volume 225 ; 225 ; >
+    au < expected ; exists ; 2023 ; 2023 ; Journal of Experimental Biology Volume 226 ; 226 ; >
 
   }
 

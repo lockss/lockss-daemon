@@ -33,6 +33,7 @@
       au < finished ; finished ; 2020 ; Cold Spring Harbor Molecular Case Studies Volume 6 ; 6 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2021 ; Cold Spring Harbor Molecular Case Studies Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2022 ; Cold Spring Harbor Molecular Case Studies Volume 8 ; 8 ; >
+      au < expected ; exists ; 2023 ; Cold Spring Harbor Molecular Case Studies Volume 9 ; 9 ; >
 
     }
 
@@ -66,6 +67,7 @@
       au < deepCrawl ; exists ; 2020 ; Cold Spring Harbor Perspectives in Biology Volume 12 ; 12 ; https://cshperspectives.cshlp.org/ ; >
       au < finished ; crawling ; 2021 ; Cold Spring Harbor Perspectives in Biology Volume 13 ; 13 ; https://cshperspectives.cshlp.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2022 ; Cold Spring Harbor Perspectives in Biology Volume 14 ; 14 ; https://cshperspectives.cshlp.org/ ; >
+      au < expected ; exists ; 2023 ; Cold Spring Harbor Perspectives in Biology Volume 15 ; 15 ; https://cshperspectives.cshlp.org/ ; >
 
     }
     
@@ -97,6 +99,7 @@
       au < deepCrawl ; exists ; 2020 ; Cold Spring Harbor Perspectives in Medicine Volume 10 ; 10 ; >
       au < deepCrawl ; exists ; 2021 ; Cold Spring Harbor Perspectives in Medicine Volume 11 ; 11 ; >
       au < crawling ; exists ; 2022 ; Cold Spring Harbor Perspectives in Medicine Volume 12 ; 12 ; >
+      au < expected ; exists ; 2023 ; Cold Spring Harbor Perspectives in Medicine Volume 13 ; 13 ; >
 
     }
     
@@ -134,6 +137,7 @@
       au < deepCrawl ; exists ; 2020 ; Cold Spring Harbor Protocols Volume 2020 ; 2020 ; >
       au < deepCrawl ; exists ; 2021 ; Cold Spring Harbor Protocols Volume 2021 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Cold Spring Harbor Protocols Volume 2022 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Cold Spring Harbor Protocols Volume 2023 ; 2023 ; >
 
     }
     
@@ -297,6 +301,7 @@
       au < finished ; frozen ; 2020 ; Genes & Development Volume 34 ; 34 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Genes & Development Volume 35 ; 35 ; >
       au < crawling ; exists ; 2022 ; Genes & Development Volume 36 ; 36 ; >
+      au < expected ; exists ; 2023 ; Genes & Development Volume 37 ; 37 ; >
 
     }
 
@@ -349,6 +354,7 @@
       au < deepCrawl ; exists ; 2020 ; Genome Research Volume 30 ; 30 ; https://genome.cshlp.org/ ; >
       au < deepCrawl ; exists ; 2021 ; Genome Research Volume 31 ; 31 ; https://genome.cshlp.org/ ; >
       au < crawling ; exists ; 2022 ; Genome Research Volume 32 ; 32 ; https://genome.cshlp.org/ ; >
+      au < expected ; exists ; 2023 ; Genome Research Volume 33 ; 33 ; https://genome.cshlp.org/ ; >
 
     }
 
@@ -398,6 +404,7 @@
       au < finished ; frozen ; 2020 ; Learning & Memory Volume 27 ; 27 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Learning & Memory Volume 28 ; 28 ; >
       au < notReady ; exists ; 2022 ; Learning & Memory Volume 29 ; 29 ; > #Found a login page
+      au < expected ; exists ; 2023 ; Learning & Memory Volume 30 ; 30 ; > #Found a login page
 
     }
 
@@ -446,6 +453,7 @@
       au < finished ; crawling ; 2020 ; RNA Volume 26 ; 26 ; https://rnajournal.cshlp.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; RNA Volume 27 ; 27 ; https://rnajournal.cshlp.org/ ; >
       au < crawling ; exists ; 2022 ; RNA Volume 28 ; 28 ; https://rnajournal.cshlp.org/ ; >
+      au < expected ; exists ; 2023 ; RNA Volume 29 ; 29 ; https://rnajournal.cshlp.org/ ; >
 
     }
 
