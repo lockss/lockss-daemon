@@ -53,7 +53,7 @@
       au < released ; 2019 ; 8 ; Orbit: A Journal of American Literature Volume 2019 ; 2019 >
       au < released ; 2020 ; 9 ; Orbit: A Journal of American Literature Volume 2020 ; 2020 >
       au < released ; 2021 ; 10 ; Orbit: A Journal of American Literature Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 11 ; Orbit: A Journal of American Literature Volume 2022 ; 2022 >
+      au < released ; 2022 ; 11 ; Orbit: A Journal of American Literature Volume 2022 ; 2022 >
       au < expected ; 2023 ; 12 ; Orbit: A Journal of American Literature Volume 2023 ; 2023 >
 
   }
@@ -129,7 +129,7 @@
       au < released ; 2019 ; 15 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2019 ; 2019 >
       au < released ; 2020 ; 16 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2020 ; 2020 >
       au < released ; 2021 ; 17 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 18 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2022 ; 2022 >
+      au < released ; 2022 ; 18 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2022 ; 2022 >
       au < expected ; 2023 ; 19 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2023 ; 2023 >
 
   }
@@ -185,7 +185,7 @@
       au < released ; 2019 ; 5 ; Journal of British and Irish Innovative Poetry Volume 2019 ; 2019 >
       au < released ; 2020 ; 6 ; Journal of British and Irish Innovative Poetry Volume 2020 ; 2020 >
       au < released ; 2021 ; 7 ; Journal of British and Irish Innovative Poetry Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 8 ; Journal of British and Irish Innovative Poetry Volume 2022 ; 2022 >
+      au < released ; 2022 ; 8 ; Journal of British and Irish Innovative Poetry Volume 2022 ; 2022 >
       au < expected ; 2023 ; 9 ; Journal of British and Irish Innovative Poetry Volume 2023 ; 2023 >
   }
 
@@ -226,7 +226,7 @@
         au < released ; 2019 ; 6 ; International Journal of Welsh Writing in English Volume 2019 ; 2019 >
         au < released ; 2020 ; 7 ; International Journal of Welsh Writing in English Volume 2020 ; 2020 >
         au < released ; 2021 ; 8 ; International Journal of Welsh Writing in English Volume 2021 ; 2021 >
-        au < releasing ; 2022 ; 9 ; International Journal of Welsh Writing in English Volume 2022 ; 2022 >
+        au < released ; 2022 ; 9 ; International Journal of Welsh Writing in English Volume 2022 ; 2022 >
         au < expected ; 2023 ; 10 ; International Journal of Welsh Writing in English Volume 2023 ; 2023 >
 
   }
@@ -268,7 +268,7 @@
       au < doNotProcess ; 2019 ; 5 ; Open Library of Humanities Volume 2019 ; 2019 >
       au < released ; 2020 ; 6 ; Open Library of Humanities Volume 2020 ; 2020 >
       au < released ; 2021 ; 7 ; Open Library of Humanities Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 8 ; Open Library of Humanities Volume 2022 ; 2022 >
+      au < released ; 2022 ; 8 ; Open Library of Humanities Volume 2022 ; 2022 >
       au < expected ; 2023 ; 9 ; Open Library of Humanities Volume 2023 ; 2023 >
 
   }
@@ -384,7 +384,7 @@
       au < released ; 2018 ; 4 ; The Parish Review Volume 2018 ; 2018 >
       au < released ; 2020 ; 4 ; The Parish Review Volume 2020 ; 2020 >
       au < released ; 2021 ; 5 ; The Parish Review Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 6 ; The Parish Review Volume 2022 ; 2022 >
+      au < released ; 2022 ; 6 ; The Parish Review Volume 2022 ; 2022 >
       au < expected ; 2023 ; 7 ; The Parish Review Volume 2023 ; 2023 >
 
   }
@@ -570,7 +570,7 @@
       comment[publisher] = Open Library of Humanities
       param[base_url] = https://www.genealogy-critique.net/
 
-      au < releasing ; 2022 ; 8 ; Genealogy+Critique Volume 2022 ; 2022 >
+      au < released ; 2022 ; 8 ; Genealogy+Critique Volume 2022 ; 2022 >
       au < expected ; 2023 ; 9 ; Genealogy+Critique Volume 2023 ; 2023 >
 
   }
@@ -608,7 +608,7 @@
       au < doNotProcess ; 2018 ; 1 ; Open Screens Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 2 ; Open Screens Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 3 ; Open Screens Volume 2020 ; 2020 >
-      au < releasing ; 2021 ; 4 ; Open Screens Volume 2021 ; 2021 >
+      au < released ; 2021 ; 4 ; Open Screens Volume 2021 ; 2021 >
       au < manifest ; 2022 ; 5 ; Open Screens Volume 2022 ; 2022 >
       au < expected ; 2023 ; 6 ; Open Screens Volume 2023 ; 2023 >
 
@@ -632,7 +632,7 @@
       au < doNotProcess ; 2018 ; 6 ; Architectural Histories Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 7 ; Architectural Histories Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 8 ; Architectural Histories Volume 2020 ; 2020 >
-      au < releasing ; 2021 ; 9 ; Architectural Histories Volume 2021 ; 2021 >
+      au < released ; 2021 ; 9 ; Architectural Histories Volume 2021 ; 2021 >
       au < manifest ; 2022 ; 10 ; Architectural Histories Volume 2022 ; 2022 >
       au < expected ; 2023 ; 11 ; Architectural Histories Volume 2023 ; 2023 >
 
@@ -655,8 +655,8 @@
       au < doNotProcess ; 2018 ; 4 ; Journal of Portuguese Linguistics Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 5 ; Journal of Portuguese Linguistics Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 6 ; Journal of Portuguese Linguistics Volume 2020 ; 2020 >
-      au < releasing ; 2021 ; 7 ; Journal of Portuguese Linguistics Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 8 ; Journal of Portuguese Linguistics Volume 2022 ; 2022 >
+      au < released ; 2021 ; 7 ; Journal of Portuguese Linguistics Volume 2021 ; 2021 >
+      au < released ; 2022 ; 8 ; Journal of Portuguese Linguistics Volume 2022 ; 2022 >
       au < expected ; 2023 ; 9 ; Journal of Portuguese Linguistics Volume 2023 ; 2023 >
 
   }
@@ -676,8 +676,8 @@
       au < doNotProcess ; 2018 ; 3 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 4 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 5 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2020 ; 2020 >
-      au < releasing ; 2021 ; 6 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 7 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2022 ; 2022 >
+      au < released ; 2021 ; 6 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2021 ; 2021 >
+      au < released ; 2022 ; 7 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2022 ; 2022 >
       au < expected ; 2023 ; 8 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2023 ; 2023 >
 
   }
