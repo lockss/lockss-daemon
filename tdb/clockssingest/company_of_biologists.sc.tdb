@@ -53,7 +53,6 @@
     param[journal_id] = dev
 
     au < manifest ; exists ; 1953 ; 1953 ; Journal of Embryology and Experimental Morphology Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1953 ; 1953 ; Journal of Embryology and Experimental Morphology Volume 1 ; 1 ; >
     au < manifest ; exists ; 1954 ; 1954 ; Journal of Embryology and Experimental Morphology Volume 2 ; 2 ; >
     au < manifest ; exists ; 1955 ; 1955 ; Journal of Embryology and Experimental Morphology Volume 3 ; 3 ; >
     au < manifest ; exists ; 1956 ; 1956 ; Journal of Embryology and Experimental Morphology Volume 4 ; 4 ; >
@@ -268,10 +267,41 @@
 
     param[journal_id] = jcs
 
-    au < exists ; exists ; 1938 ; 1938 ; Quarterly Journal of Microscopical Science Volume s2-80 ; s2-80 ; >
-    au < exists ; exists ; 1938 ; 1938 ; Quarterly Journal of Microscopical Science Volume s2-81 ; s2-81 ; >
-    au < exists ; exists ; 1939 ; 1939 ; Quarterly Journal of Microscopical Science Volume s2-81 ; s2-81 ; >
-    au < manifest ; exists ; 1940 ; 1940 ; Quarterly Journal of Microscopical Science Volume s2-81 ; s2-81 ; >
+    au < exists ; exists ; 1918 ; 1918 ; Quarterly Journal of Microscopical Science Volume s2-63 (1918) ; s2-63 ; >
+    au < exists ; exists ; 1919 ; 1919 ; Quarterly Journal of Microscopical Science Volume s2-63 (1919) ; s2-63 ; >
+    au < exists ; exists ; 1919 ; 1919 ; Quarterly Journal of Microscopical Science Volume s2-64 (1919) ; s2-64 ; >
+    au < exists ; exists ; 1920 ; 1920 ; Quarterly Journal of Microscopical Science Volume s2-64 (1920) ; s2-64 ; >
+    au < exists ; exists ; 1920 ; 1920 ; Quarterly Journal of Microscopical Science Volume s2-65 (1920) ; s2-65 ; >
+    au < exists ; exists ; 1921 ; 1921 ; Quarterly Journal of Microscopical Science Volume s2-65 (1921) ; s2-65 ; >
+    au < exists ; exists ; 1922 ; 1922 ; Quarterly Journal of Microscopical Science Volume s2-66 (1922) ; s2-66 ; >
+    au < exists ; exists ; 1923 ; 1923 ; Quarterly Journal of Microscopical Science Volume s2-67 (1923) ; s2-67 ; >
+    au < exists ; exists ; 1924 ; 1924 ; Quarterly Journal of Microscopical Science Volume s2-68 (1924) ; s2-68 ; >
+    au < exists ; exists ; 1924 ; 1924 ; Quarterly Journal of Microscopical Science Volume s2-69 (1924) ; s2-69 ; >
+    au < exists ; exists ; 1925 ; 1925 ; Quarterly Journal of Microscopical Science Volume s2-69 (1925) ; s2-69 ; >
+    au < exists ; exists ; 1926 ; 1926 ; Quarterly Journal of Microscopical Science Volume s2-70 (1926) ; s2-70 ; >
+    au < exists ; exists ; 1927 ; 1927 ; Quarterly Journal of Microscopical Science Volume s2-71 (1927) ; s2-71 ; >
+    au < exists ; exists ; 1928 ; 1928 ; Quarterly Journal of Microscopical Science Volume s2-71 (1928) ; s2-71 ; >
+    au < exists ; exists ; 1928 ; 1928 ; Quarterly Journal of Microscopical Science Volume s2-72 (1928) ; s2-72 ; >
+    au < exists ; exists ; 1929 ; 1929 ; Quarterly Journal of Microscopical Science Volume s2-72 (1929) ; s2-72 ; >
+    au < exists ; exists ; 1929 ; 1929 ; Quarterly Journal of Microscopical Science Volume s2-73 (1929) ; s2-73 ; >
+    au < exists ; exists ; 1930 ; 1930 ; Quarterly Journal of Microscopical Science Volume s2-73 (1930) ; s2-73 ; >
+    au < exists ; exists ; 1930 ; 1930 ; Quarterly Journal of Microscopical Science Volume s2-74 (1930) ; s2-74 ; >
+    au < exists ; exists ; 1931 ; 1931 ; Quarterly Journal of Microscopical Science Volume s2-74 (1931) ; s2-74 ; >
+    au < exists ; exists ; 1932 ; 1932 ; Quarterly Journal of Microscopical Science Volume s2-75 (1932) ; s2-75 ; >
+    au < exists ; exists ; 1933 ; 1933 ; Quarterly Journal of Microscopical Science Volume s2-75 (1933) ; s2-75 ; >
+    au < exists ; exists ; 1933 ; 1933 ; Quarterly Journal of Microscopical Science Volume s2-76 (1933) ; s2-76 ; >
+    au < exists ; exists ; 1934 ; 1934 ; Quarterly Journal of Microscopical Science Volume s2-76 (1934) ; s2-76 ; >
+    au < exists ; exists ; 1934 ; 1934 ; Quarterly Journal of Microscopical Science Volume s2-77 (1934) ; s2-77 ; >
+    au < exists ; exists ; 1935 ; 1935 ; Quarterly Journal of Microscopical Science Volume s2-77 (1935) ; s2-77 ; >
+    au < exists ; exists ; 1935 ; 1935 ; Quarterly Journal of Microscopical Science Volume s2-78 (1935) ; s2-78 ; >
+    au < exists ; exists ; 1936 ; 1936 ; Quarterly Journal of Microscopical Science Volume s2-78 (1936) ; s2-78 ; >
+    au < exists ; exists ; 1936 ; 1936 ; Quarterly Journal of Microscopical Science Volume s2-79 (1936) ; s2-79 ; >
+    au < exists ; exists ; 1937 ; 1937 ; Quarterly Journal of Microscopical Science Volume s2-79 (1937) ; s2-79 ; >
+    au < exists ; exists ; 1937 ; 1937 ; Quarterly Journal of Microscopical Science Volume s2-80 (1937) ; s2-80 ; >
+    au < exists ; exists ; 1938 ; 1938 ; Quarterly Journal of Microscopical Science Volume s2-80 (1938) ; s2-80 ; >
+    au < exists ; exists ; 1938 ; 1938 ; Quarterly Journal of Microscopical Science Volume s2-81 (1938) ; s2-81 ; >
+    au < exists ; exists ; 1939 ; 1939 ; Quarterly Journal of Microscopical Science Volume s2-81 (1939) ; s2-81 ; >
+    au < manifest ; exists ; 1940 ; 1940 ; Quarterly Journal of Microscopical Science Volume s2-81 (1940) ; s2-81 ; >
     au < manifest ; exists ; 1941 ; 1941 ; Quarterly Journal of Microscopical Science Volume s2-82 ; s2-82 ; >
     au < manifest ; exists ; 1942 ; 1942 ; Quarterly Journal of Microscopical Science Volume s2-83 ; s2-83 ; >
     au < manifest ; exists ; 1943 ; 1943 ; Quarterly Journal of Microscopical Science Volume s2-84 ; s2-84 ; >
@@ -297,6 +327,7 @@
     au < manifest ; exists ; 1963 ; 1963 ; Quarterly Journal of Microscopical Science Volume s3-104 ; s3-104 ; >
     au < manifest ; exists ; 1964 ; 1964 ; Quarterly Journal of Microscopical Science Volume s3-105 ; s3-105 ; >
     au < manifest ; exists ; 1965 ; 1965 ; Quarterly Journal of Microscopical Science Volume s3-106 ; s3-106 ; >
+
     au < manifest ; exists ; 1966 ; 1966 ; Quarterly Journal of Microscopical Science Volume 1 ; 1 ; >
     au < manifest ; exists ; 1967 ; 1967 ; Quarterly Journal of Microscopical Science Volume 2 ; 2 ; >
     au < manifest ; exists ; 1968 ; 1968 ; Quarterly Journal of Microscopical Science Volume 3 ; 3 ; >
