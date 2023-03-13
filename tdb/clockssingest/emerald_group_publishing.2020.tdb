@@ -1068,8 +1068,8 @@
     au < manifest ; exists ; 1988 ; The Bottom Line: Managing Library Finances Volume 1 ; 1 ; >
     au < manifest ; exists ; 1989 ; The Bottom Line: Managing Library Finances Volume 2 ; 2 ; >
     au < crawling ; exists ; 1990 ; The Bottom Line: Managing Library Finances Volume 3 ; 3 ; >
-    au < ready ; exists ; 1991 ; The Bottom Line: Managing Library Finances Volume 4 ; 4 ; >
-    au < ready ; exists ; 1992 ; The Bottom Line: Managing Library Finances Volume 5 ; 5 ; >
+    au < crawling ; exists ; 1991 ; The Bottom Line: Managing Library Finances Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1992 ; The Bottom Line: Managing Library Finances Volume 5 ; 5 ; >
     au < crawling ; exists ; 1993 ; The Bottom Line: Managing Library Finances Volume 6 ; 6 ; >
     au < manifest ; exists ; 1994 ; The Bottom Line: Managing Library Finances Volume 7 ; 7 ; >
     au < frozen ; exists ; 1995 ; The Bottom Line: Managing Library Finances Volume 8 ; 8 ; >
@@ -14730,7 +14730,7 @@
     param[journal_issn] = 2615-9821
 
     au < crawling ; exists ; 2020 ; Asian Journal of Economics and Banking Volume 4 ; 4 ; >
-    au < ready ; exists ; 2021 ; Asian Journal of Economics and Banking Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2021 ; Asian Journal of Economics and Banking Volume 5 ; 5 ; >
     au < crawling ; exists ; 2022 ; Asian Journal of Economics and Banking Volume 6 ; 6 ; >
     au < expected ; exists ; 2023 ; Asian Journal of Economics and Banking Volume 7 ; 7 ; >
     au < expected ; exists ; 2023 ; Asian Journal of Economics and Banking Volume 7 ; 7 ; >
@@ -14853,7 +14853,7 @@
     au < manifest ; exists ; 2019 ; Innovation & Management Review Volume 16 ; 16 ; >
     au < crawling ; exists ; 2020 ; Innovation & Management Review Volume 17 ; 17 ; >
     au < crawling ; exists ; 2021 ; Innovation & Management Review Volume 18 ; 18 ; >
-    au < ready ; exists ; 2022 ; Innovation & Management Review Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2022 ; Innovation & Management Review Volume 19 ; 19 ; >
     au < manifest ; exists ; 2023 ; Innovation & Management Review Volume 20 ; 20 ; >
     au < expected ; exists ; 2023 ; Innovation & Management Review Volume 20 ; 20 ; >
 
@@ -14941,8 +14941,8 @@
     param[journal_issn] = 2586-3932
 
     au < manifest ; exists ; 2019 ; International Trade, Politics and Development Volume 3 ; 3 ; >
-    au < ready ; exists ; 2020 ; International Trade, Politics and Development Volume 4 ; 4 ; >
-    au < ready ; exists ; 2021 ; International Trade, Politics and Development Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2020 ; International Trade, Politics and Development Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2021 ; International Trade, Politics and Development Volume 5 ; 5 ; >
     au < ready ; exists ; 2022 ; International Trade, Politics and Development Volume 6 ; 6 ; >
     au < expected ; exists ; 2023 ; International Trade, Politics and Development Volume 7 ; 7 ; >
     au < expected ; exists ; 2023 ; International Trade, Politics and Development Volume 7 ; 7 ; >
@@ -14983,7 +14983,7 @@
 
     au < manifest ; exists ; 2019 ; Islamic Economic Studies Volume 27 ; 27 ; >
     au < ready ; exists ; 2020 ; Islamic Economic Studies Volume 28 ; 28 ; >
-    au < ready ; exists ; 2021 ; Islamic Economic Studies Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2021 ; Islamic Economic Studies Volume 29 ; 29 ; >
     au < ready ; exists ; 2022 ; Islamic Economic Studies Volume 30 ; 30 ; >
     au < expected ; exists ; 2023 ; Islamic Economic Studies Volume 31 ; 31 ; >
     au < expected ; exists ; 2023 ; Islamic Economic Studies Volume 31 ; 31 ; >
@@ -15024,9 +15024,9 @@
 
     au < manifest ; exists ; 2018 ; Journal of Asian Business Economics Studies Volume 25 ; 25 ; >
     au < manifest ; exists ; 2019 ; Journal of Asian Business Economics Studies Volume 26 ; 26 ; >
-    au < ready ; exists ; 2020 ; Journal of Asian Business Economics Studies Volume 27 ; 27 ; >
-    au < ready ; exists ; 2021 ; Journal of Asian Business Economics Studies Volume 28 ; 28 ; >
-    au < ready ; exists ; 2022 ; Journal of Asian Business Economics Studies Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2020 ; Journal of Asian Business Economics Studies Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2021 ; Journal of Asian Business Economics Studies Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2022 ; Journal of Asian Business Economics Studies Volume 29 ; 29 ; >
     au < expected ; exists ; 2023 ; Journal of Asian Business Economics Studies Volume 30 ; 30 ; >
     au < expected ; exists ; 2023 ; Journal of Asian Business Economics Studies Volume 30 ; 30 ; >
 
@@ -15141,7 +15141,7 @@
     au < manifest ; exists ; 2019 ; Journal of Derivatives and Quantitative Studies Volume 27 ; 27 ; >
     au < crawling ; exists ; 2020 ; Journal of Derivatives and Quantitative Studies Volume 28 ; 28 ; >
     au < crawling ; exists ; 2021 ; Journal of Derivatives and Quantitative Studies Volume 29 ; 29 ; >
-    au < ready ; exists ; 2022 ; Journal of Derivatives and Quantitative Studies Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2022 ; Journal of Derivatives and Quantitative Studies Volume 30 ; 30 ; >
     au < manifest ; exists ; 2023 ; Journal of Derivatives and Quantitative Studies Volume 31 ; 31 ; >
     au < expected ; exists ; 2023 ; Journal of Derivatives and Quantitative Studies Volume 31 ; 31 ; >
 
@@ -15222,7 +15222,7 @@
     au < manifest ; exists ; 2019 ; Journal of Humanities and Applied Social Sciences Volume 1 ; 1 ; >
     au < crawling ; exists ; 2020 ; Journal of Humanities and Applied Social Sciences Volume 2 ; 2 ; >
     au < crawling ; exists ; 2021 ; Journal of Humanities and Applied Social Sciences Volume 3 ; 3 ; >
-    au < ready ; exists ; 2022 ; Journal of Humanities and Applied Social Sciences Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2022 ; Journal of Humanities and Applied Social Sciences Volume 4 ; 4 ; >
     au < manifest ; exists ; 2023 ; Journal of Humanities and Applied Social Sciences Volume 5 ; 5 ; >
     au < expected ; exists ; 2023 ; Journal of Humanities and Applied Social Sciences Volume 5 ; 5 ; >
 
@@ -15257,7 +15257,7 @@
 
     au < manifest ; exists ; 2018 ; Journal of Intelligent and Connected Vehicles Volume 1 ; 1 ; >
     au < manifest ; exists ; 2019 ; Journal of Intelligent and Connected Vehicles Volume 2 ; 2 ; >
-    au < ready ; exists ; 2020 ; Journal of Intelligent and Connected Vehicles Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2020 ; Journal of Intelligent and Connected Vehicles Volume 3 ; 3 ; >
     au < ready ; exists ; 2021 ; Journal of Intelligent and Connected Vehicles Volume 4 ; 4 ; >
     au < crawling ; exists ; 2022 ; Journal of Intelligent and Connected Vehicles Volume 5 ; 5 ; >
     au < expected ; exists ; 2023 ; Journal of Intelligent and Connected Vehicles Volume 6 ; 6 ; >
@@ -15299,7 +15299,7 @@
     au < manifest ; exists ; 2019 ; Journal of Research in Innovative Teaching & Learning Volume 12 ; 12 ; >
     au < ready ; exists ; 2020 ; Journal of Research in Innovative Teaching & Learning Volume 13 ; 13 ; >
     au < crawling ; exists ; 2021 ; Journal of Research in Innovative Teaching & Learning Volume 14 ; 14 ; >
-    au < ready ; exists ; 2022 ; Journal of Research in Innovative Teaching & Learning Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2022 ; Journal of Research in Innovative Teaching & Learning Volume 15 ; 15 ; >
     au < expected ; exists ; 2023 ; Journal of Research in Innovative Teaching & Learning Volume 16 ; 16 ; >
     au < expected ; exists ; 2023 ; Journal of Research in Innovative Teaching & Learning Volume 16 ; 16 ; >
 
@@ -15339,7 +15339,7 @@
     au < manifest ; exists ; 2017 ; Journal of Tourism Futures Volume 3 ; 3 ; >
     au < manifest ; exists ; 2018 ; Journal of Tourism Futures Volume 4 ; 4 ; >
     au < manifest ; exists ; 2019 ; Journal of Tourism Futures Volume 5 ; 5 ; >
-    au < ready ; exists ; 2020 ; Journal of Tourism Futures Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2020 ; Journal of Tourism Futures Volume 6 ; 6 ; >
     au < crawling ; exists ; 2021 ; Journal of Tourism Futures Volume 7 ; 7 ; >
     au < crawling ; exists ; 2022 ; Journal of Tourism Futures Volume 8 ; 8 ; >
     au < expected ; exists ; 2023 ; Journal of Tourism Futures Volume 9 ; 9 ; >
@@ -15364,7 +15364,7 @@
     au < manifest ; exists ; 2018 ; Journal of Work Applied Management Volume 10 ; 10 ; >
     au < manifest ; exists ; 2019 ; Journal of Work Applied Management Volume 11 ; 11 ; >
     au < crawling ; exists ; 2020 ; Journal of Work Applied Management Volume 12 ; 12 ; >
-    au < ready ; exists ; 2021 ; Journal of Work Applied Management Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2021 ; Journal of Work Applied Management Volume 13 ; 13 ; >
     au < crawling ; exists ; 2022 ; Journal of Work Applied Management Volume 14 ; 14 ; >
     au < expected ; exists ; 2023 ; Journal of Work Applied Management Volume 15 ; 15 ; >
     au < expected ; exists ; 2023 ; Journal of Work Applied Management Volume 15 ; 15 ; >
@@ -15406,7 +15406,7 @@
     au < manifest ; exists ; 2017 ; Maritme Business Review Volume 2 ; 2 ; >
     au < manifest ; exists ; 2018 ; Maritme Business Review Volume 3 ; 3 ; >
     au < manifest ; exists ; 2019 ; Maritme Business Review Volume 4 ; 4 ; >
-    au < ready ; exists ; 2020 ; Maritme Business Review Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2020 ; Maritme Business Review Volume 5 ; 5 ; >
     au < ready ; exists ; 2021 ; Maritme Business Review Volume 6 ; 6 ; >
     au < ready ; exists ; 2022 ; Maritme Business Review Volume 7 ; 7 ; >
     au < manifest ; exists ; 2023 ; Maritme Business Review Volume 8 ; 8 ; >
@@ -15453,7 +15453,7 @@
 
     au < manifest ; exists ; 2019 ; Modern Supply Chain Research and Applications Volume 1 ; 1 ; >
     au < crawling ; exists ; 2020 ; Modern Supply Chain Research and Applications Volume 2 ; 2 ; >
-    au < ready ; exists ; 2021 ; Modern Supply Chain Research and Applications Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2021 ; Modern Supply Chain Research and Applications Volume 3 ; 3 ; >
     au < ready ; exists ; 2022 ; Modern Supply Chain Research and Applications Volume 4 ; 4 ; >
     au < expected ; exists ; 2023 ; Modern Supply Chain Research and Applications Volume 5 ; 5 ; >
     au < expected ; exists ; 2023 ; Modern Supply Chain Research and Applications Volume 5 ; 5 ; >
