@@ -1,7 +1,6 @@
 <!--
 
-Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -33,7 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
     <entry>
         <string>plugin_status</string>
-        <string>testing</string>
+        <string>development</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
@@ -45,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>4</string>
+        <string>7</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -70,7 +69,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>6</string>
+        <string>7</string>
     </entry>
     <entry>
         <string>au_name</string>
@@ -111,7 +110,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_start_url</string>
         <list>
             <!-- https://www.oecd-ilibrary.org/science-and-technology/bridging-digital-divides-in-g20-countries_35c1d850-en -->
-            <string>"%s%s_%s", base_url, pub_path, pub_id</string>
+            <string>"%s%s%s", base_url, pub_path, pub_id</string>
             <!-- https://www.oecd-ilibrary.org/content/publication/35c1d850-en -->
             <string>"%scontent/publication/%s", base_url, pub_id</string>
         </list>
@@ -165,7 +164,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_substance_url_pattern</string>
         <list>
             <!-- start_page, and pdfs -->
-            <string>"%s%s_%s$", base_url, pub_path, pub_id</string>
+            <!--<string>"%s%s%s$", base_url, pub_path, pub_id</string>-->
             <string>"%s.+\.pdf", base_url</string>
         </list>
     </entry>

@@ -1,7 +1,6 @@
 <!--
 
-Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -33,7 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
     <entry>
         <string>plugin_status</string>
-        <string>testing - down - Parent only</string>
+        <string>down - Parent only</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
@@ -45,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>6</string>
+        <string>7</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -66,8 +65,9 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"OECD iLibrary Parent Plugin, Base URL %s, Year %d", base_url, year</string>
+        <string>"OECD iLibrary Parent Plugin, Base URL %s", base_url</string>
     </entry>
+    <!-- must have at least base_url to be valid but ignored: each child defines its params -->
     <entry>
         <string>plugin_config_props</string>
         <list>
@@ -77,14 +77,6 @@ POSSIBILITY OF SUCH DAMAGE.
                 <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
                 <type>3</type>
                 <size>40</size>
-                <definitional>true</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
-            <org.lockss.daemon.ConfigParamDescr>
-                <key>year</key>
-                <displayName>Year</displayName>
-                <type>4</type>
-                <size>4</size>
                 <definitional>true</definitional>
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>

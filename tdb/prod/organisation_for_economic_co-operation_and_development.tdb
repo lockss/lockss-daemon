@@ -5,6 +5,14 @@
     info[platform] = See LXPLUG-1730
   >
 
+  #
+  #
+  #
+  # Under heavy development, subject to significant change
+  #
+  #
+  #
+
   param[base_url] = https://www.oecd-ilibrary.org/
   plugin = org.lockss.plugin.oecd.OecdJournalsPlugin
   implicit < status ; year ; name ; param[volume_name] >

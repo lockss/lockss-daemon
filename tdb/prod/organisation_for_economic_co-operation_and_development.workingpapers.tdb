@@ -4,6 +4,15 @@
     name = Organisation for Economic Co-operation and Development ;
     info[platform] = See LXPLUG-1730
   >
+  
+  #
+  #
+  #
+  # Under heavy development, subject to significant change
+  #
+  #
+  #
+  
   param[base_url] = https://www.oecd-ilibrary.org/
   plugin = org.lockss.plugin.oecd.OecdWorkingpapersPlugin # needs.plugin
 
@@ -129,7 +138,7 @@
         au < manifest ; 2002 ; OECD Guidelines for the Testing of Chemicals Test No. 307 ; environment/test-no-307-aerobic-and-anaerobic-transformation-in-soil ; 9789264070509-en >
         au < manifest ; 2002 ; OECD Guidelines for the Testing of Chemicals Test No. 308 ; environment/test-no-308-aerobic-and-anaerobic-transformation-in-aquatic-sediment-systems ; 9789264070523-en >
         au < manifest ; 2004 ; OECD Guidelines for the Testing of Chemicals Test No. 309 ; environment/test-no-309-aerobic-mineralisation-in-surface-water-simulation-biodegradation-test ; 9789264070547-en >
-        au < ready ; 2014 ; OECD Guidelines for the Testing of Chemicals Test No. 310 ; environment/test-no-310-ready-biodegradability-co2-in-sealed-vessels-headspace-test ; 9789264224506-en >
+        au < testing ; 2014 ; OECD Guidelines for the Testing of Chemicals Test No. 310 ; environment/test-no-310-ready-biodegradability-co2-in-sealed-vessels-headspace-test ; 9789264224506-en >
         au < manifest ; 2006 ; OECD Guidelines for the Testing of Chemicals Test No. 311 ; environment/test-no-311-anaerobic-biodegradability-of-organic-compounds-in-digested-sludge-by-measurement-of-gas-production ; 9789264016842-en >
         au < manifest ; 2004 ; OECD Guidelines for the Testing of Chemicals Test No. 312 ; environment/test-no-312-leaching-in-soil-columns ; 9789264070561-en >
         au < manifest ; 2007 ; OECD Guidelines for the Testing of Chemicals Test No. 313 ; environment/test-no-313-estimation-of-emissions-from-preservative-treated-wood-to-the-environment ; 9789264067370-en >
