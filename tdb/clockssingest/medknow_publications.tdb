@@ -7893,20 +7893,27 @@
 
       title <
         name = Journal of Radiation and Cancer Research ;
-        issn = 0973-0168
+        issn = 2588-9273 ;
+        eissn = 2468-9203
       >
 
-      param[journal_issn] = 0973-0168
 #      param[base_url] = http://www.journalrcr.org/
+
+      {
+      param[journal_issn] = 0973-0168
 
       au < finished ; frozen ; 2016 ; Journal of Radiation and Cancer Research Volume 7 ; 2016 ; 7 ; http://www.journalrcr.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2017 ; Journal of Radiation and Cancer Research Volume 8 ; 2017 ; 8 ; http://www.journalrcr.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2018 ; Journal of Radiation and Cancer Research Volume 9 ; 2018 ; 9 ; http://www.journalrcr.org/ ; ; reingest1.clockss.org:8082 >
+      }
+      {
+      param[journal_issn] = 2588-9273
       au < exists ; exists ; 2019 ; Journal of Radiation and Cancer Research Volume 10 ; 2019 ; 10 ; https://www.journalrcr.org/ ; ; >
       au < exists ; exists ; 2020 ; Journal of Radiation and Cancer Research Volume 11 ; 2020 ; 11 ; https://www.journalrcr.org/ ; ; >
       au < exists ; exists ; 2021 ; Journal of Radiation and Cancer Research Volume 12 ; 2021 ; 12 ; https://www.journalrcr.org/ ; ; >
-      au < expected ; exists ; 2022 ; Journal of Radiation and Cancer Research Volume 13 ; 2022 ; 13 ; https://www.journalrcr.org/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Radiation and Cancer Research Volume 14 ; 2023 ; 14 ; https://www.journalrcr.org/ ; ; >
+      au < exists ; exists ; 2022 ; Journal of Radiation and Cancer Research Volume 13 ; 2022 ; 13 ; https://www.journalrcr.org/ ; ; >
+      au < exists ; exists ; 2023 ; Journal of Radiation and Cancer Research Volume 14 ; 2023 ; 14 ; https://www.journalrcr.org/ ; ; >
+      }
 
   }
 
@@ -11888,17 +11895,16 @@
   {
 
       title <
-        name = Asian Journal of  Social Health and Behavior ;
+        name = Asian Journal of Social Health and Behavior ;
         eissn = 2772-4204
       >
 
       param[journal_issn] = 2772-4204
       #param[base_url] = https://www.healthandbehavior.com/
 
-      au < frozen ; exists ; 2021 ; Asian Journal of  Social Health and Behavior Volume 4 ; 2021 ; 4 ; https://www.healthandbehavior.com/ ; ; >
-      au < crawling ; exists ; 2022 ; Asian Journal of  Social Health and Behavior Volume 5 ; 2022 ; 5 ; https://www.healthandbehavior.com/ ; ; >
-      au < expected ; exists ; 2023 ; Asian Journal of  Social Health and Behavior Volume 6 ; 2023 ; 6 ; https://www.healthandbehavior.com/ ; ; >
-      au < manifest ; exists ; 2023 ; Asian Journal of  Social Health and Behavior Volume 6 ; 2023 ; 6 ; https://www.healthandbehavior.com/ ; ; >
+      au < frozen ; exists ; 2021 ; Asian Journal of Social Health and Behavior Volume 4 ; 2021 ; 4 ; https://www.healthandbehavior.com/ ; ; >
+      au < crawling ; exists ; 2022 ; Asian Journal of Social Health and Behavior Volume 5 ; 2022 ; 5 ; https://www.healthandbehavior.com/ ; ; >
+      au < manifest ; exists ; 2023 ; Asian Journal of Social Health and Behavior Volume 6 ; 2023 ; 6 ; https://www.healthandbehavior.com/ ; ; >
 
   }
 
