@@ -22,7 +22,7 @@
       au < notReady ; 2020 ; 2020 ; Blood Cancer Discovery Volume 1 ; 1 >
       au < notReady ; 2021 ; 2021 ; Blood Cancer Discovery Volume 2 ; 2 >
       au < notReady ; 2022 ; 2022 ; Blood Cancer Discovery Volume 3 ; 3 >
-      au < expected ; 2023 ; 2023 ; Blood Cancer Discovery Volume 4 ; 4 >
+      au < manifest ; 2023 ; 2023 ; Blood Cancer Discovery Volume 4 ; 4 >
 
   }
 
@@ -49,7 +49,7 @@
       au < doNotProcess ; 2020 ; 2020 ; Cancer Discovery Volume 10 ; 10 >
       au < notReady ; 2021 ; 2021 ; Cancer Discovery Volume 11 ; 11 >
       au < notReady ; 2022 ; 2022 ; Cancer Discovery Volume 12 ; 12 >
-      au < expected ; 2023 ; 2023 ; Cancer Discovery Volume 13 ; 13 >
+      au < manifest ; 2023 ; 2023 ; Cancer Discovery Volume 13 ; 13 >
 
   }
 
@@ -97,7 +97,7 @@
       au < doNotProcess ; 2020 ; 2020 ; Cancer Epidemiology Biomarkers & Prevention Volume 29 ; 29 >
       au < notReady ; 2021 ; 2021 ; Cancer Epidemiology Biomarkers & Prevention Volume 30 ; 30 >
       au < notReady ; 2022 ; 2022 ; Cancer Epidemiology Biomarkers & Prevention Volume 31 ; 31 >
-      au < expected ; 2023 ; 2023 ; Cancer Epidemiology Biomarkers & Prevention Volume 32 ; 32 >
+      au < manifest ; 2023 ; 2023 ; Cancer Epidemiology Biomarkers & Prevention Volume 32 ; 32 >
 
   }
 
@@ -123,7 +123,7 @@
       au < doNotProcess ; 2020 ; 2020 ; Cancer Immunology Research Volume 8 ; 8 >
       au < notReady ; 2021 ; 2021 ; Cancer Immunology Research Volume 9 ; 9 >
       au < notReady ; 2022 ; 2022 ; Cancer Immunology Research Volume 10 ; 10 >
-      au < expected ; 2023 ; 2023 ; Cancer Immunology Research Volume 11 ; 11 >
+      au < manifest ; 2023 ; 2023 ; Cancer Immunology Research Volume 11 ; 11 >
 
   }
 
@@ -154,7 +154,7 @@
       au < doNotProcess ; 2020 ; 2020 ; Cancer Prevention Research Volume 13 ; 13 >
       au < notReady ; 2021 ; 2021 ; Cancer Prevention Research Volume 14 ; 14 >
       au < notReady ; 2022 ; 2022 ; Cancer Prevention Research Volume 15 ; 15 >
-      au < expected ; 2023 ; 2023 ; Cancer Prevention Research Volume 16 ; 16 >
+      au < manifest ; 2023 ; 2023 ; Cancer Prevention Research Volume 16 ; 16 >
 
   }
 
@@ -252,7 +252,7 @@
       au < doNotProcess ; 2020 ; 2020 ; Cancer Research Volume 80 ; 80 >
       au < notReady ; 2021 ; 2021 ; Cancer Research Volume 81 ; 81 >
       au < notReady ; 2022 ; 2022 ; Cancer Research Volume 82 ; 82 >
-      au < expected ; 2023 ; 2023 ; Cancer Research Volume 83 ; 83 >
+      au < manifest ; 2023 ; 2023 ; Cancer Research Volume 83 ; 83 >
 
   }
 
@@ -267,7 +267,7 @@
     
       au < notReady ; 2021 ; 2021 ; Cancer Research Communications Volume 1 ; 1 >
       au < notReady ; 2022 ; 2022 ; Cancer Research Communications Volume 2 ; 2 >
-      au < expected ; 2023 ; 2023 ; Cancer Research Communications Volume 3 ; 3 >
+      au < manifest ; 2023 ; 2023 ; Cancer Research Communications Volume 3 ; 3 >
 
   }
 
@@ -311,7 +311,7 @@
       au < doNotProcess ; 2020 ; 2020 ; Clinical Cancer Research Volume 26 ; 26 >
       au < notReady ; 2021 ; 2021 ; Clinical Cancer Research Volume 27 ; 27 >
       au < notReady ; 2022 ; 2022 ; Clinical Cancer Research Volume 28 ; 28 >
-      au < expected ; 2023 ; 2023 ; Clinical Cancer Research Volume 29 ; 29 >
+      au < manifest ; 2023 ; 2023 ; Clinical Cancer Research Volume 29 ; 29 >
 
   }
 
@@ -348,7 +348,7 @@
       au < doNotProcess ; 2020 ; 2020 ; Molecular Cancer Research Volume 18 ; 18 >
       au < notReady ; 2021 ; 2021 ; Molecular Cancer Research Volume 19 ; 19 >
       au < notReady ; 2022 ; 2022 ; Molecular Cancer Research Volume 20 ; 20 >
-      au < expected ; 2023 ; 2023 ; Molecular Cancer Research Volume 21 ; 21 >
+      au < manifest ; 2023 ; 2023 ; Molecular Cancer Research Volume 21 ; 21 >
 
   }
 
@@ -386,7 +386,7 @@
       au < doNotProcess ; 2020 ; 2020 ; Molecular Cancer Therapeutics Volume 19 ; 19 >
       au < notReady ; 2021 ; 2021 ; Molecular Cancer Therapeutics Volume 20 ; 20 >
       au < notReady ; 2022 ; 2022 ; Molecular Cancer Therapeutics Volume 21 ; 21 >
-      au < expected ; 2023 ; 2023 ; Molecular Cancer Therapeutics Volume 22 ; 22 >
+      au < manifest ; 2023 ; 2023 ; Molecular Cancer Therapeutics Volume 22 ; 22 >
 
   }
 
