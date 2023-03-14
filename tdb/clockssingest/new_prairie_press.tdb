@@ -405,7 +405,7 @@
       au < finished ; finished ; 1993-1994 ; Educational Considerations Volume 21 ; 21 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 1994-1995 ; Educational Considerations Volume 22 ; 22 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 1995-1996 ; Educational Considerations Volume 23 ; 23 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 1996-1997 ; Educational Considerations Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1996-1997 ; Educational Considerations Volume 24 ; 24 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 1997-1998 ; Educational Considerations Volume 25 ; 25 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 1998-1999 ; Educational Considerations Volume 26 ; 26 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 1999-2000 ; Educational Considerations Volume 27 ; 27 ; reingest2.clockss.org:8085 >
@@ -682,7 +682,7 @@
       au < finished ; finished ; 1999 ; Journal of Applied Communications Volume 83 ; 83 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2000 ; Journal of Applied Communications Volume 84 ; 84 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2001 ; Journal of Applied Communications Volume 85 ; 85 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2002 ; Journal of Applied Communications Volume 86 ; 86 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2002 ; Journal of Applied Communications Volume 86 ; 86 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2003 ; Journal of Applied Communications Volume 87 ; 87 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2004 ; Journal of Applied Communications Volume 88 ; 88 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2005 ; Journal of Applied Communications Volume 89 ; 89 ; reingest4.clockss.org:8082 >
@@ -743,7 +743,7 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = kaesrr
 
-      au < finished ; crawling ; 1993-2014 ; Cattleman's Day 1993-2014 Volume 0 ; 0 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1993-2014 ; Cattleman's Day 1993-2014 Volume 0 ; 0 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Kansas Agricultural Experiment Station Research Reports Volume 1 ; 1 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; Kansas Agricultural Experiment Station Research Reports Volume 2 ; 2 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Kansas Agricultural Experiment Station Research Reports Volume 3 ; 3 ; reingest2.clockss.org:8085 >
@@ -848,7 +848,7 @@
       au < manifest ; exists ; 1989 ; Oz Volume 11 ; 11 ; >
       au < finished ; finished ; 1990 ; Oz Volume 12 ; 12 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 1991 ; Oz Volume 13 ; 13 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 1992 ; Oz Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1992 ; Oz Volume 14 ; 14 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 1993 ; Oz Volume 15 ; 15 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 1994 ; Oz Volume 16 ; 16 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 1995 ; Oz Volume 17 ; 17 ; reingest2.clockss.org:8085 >
@@ -980,7 +980,7 @@
       au < finished ; finished ; 1998 ; Studies in 20th & 21st Century Literature Volume 22 ; 22 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 1999 ; Studies in 20th & 21st Century Literature Volume 23 ; 23 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2000 ; Studies in 20th & 21st Century Literature Volume 24 ; 24 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2001 ; Studies in 20th & 21st Century Literature Volume 25 ; 25 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2001 ; Studies in 20th & 21st Century Literature Volume 25 ; 25 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2002 ; Studies in 20th & 21st Century Literature Volume 26 ; 26 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2003 ; Studies in 20th & 21st Century Literature Volume 27 ; 27 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2004 ; Studies in 20th & 21st Century Literature Volume 28 ; 28 ; reingest2.clockss.org:8085 >

@@ -79,7 +79,7 @@
       au < finished ; finished ; 2015 ; Electronics Letters Volume 51 ; 51 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; Electronics Letters Volume 52 ; 52 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017 ; Electronics Letters Volume 53 ; 53 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2018 ; Electronics Letters Volume 54 ; 54 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; Electronics Letters Volume 54 ; 54 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Electronics Letters Volume 55 ; 55 ; https://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Electronics Letters Volume 56 ; 56 ; https://digital-library.theiet.org/ ; >
       au < doNotProcess ; exists ; 2021 ; Electronics Letters Volume 57 ; 57 ; https://digital-library.theiet.org/ ; >
@@ -247,7 +247,7 @@
       au < finished ; finished ; 2015 ; IET Computer Vision Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; IET Computer Vision Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; IET Computer Vision Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2018 ; IET Computer Vision Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; IET Computer Vision Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2019 ; IET Computer Vision Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; IET Computer Vision Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
       au < doNotProcess ; exists ; 2021 ; IET Computer Vision Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
@@ -328,7 +328,7 @@
       au < finished ; finished ; 2016 ; IET Electrical Systems in Transportation Volume 6 ; 6 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; IET Electrical Systems in Transportation Volume 7 ; 7 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; IET Electrical Systems in Transportation Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2019 ; IET Electrical Systems in Transportation Volume 9 ; 9 ; https://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; IET Electrical Systems in Transportation Volume 9 ; 9 ; https://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; IET Electrical Systems in Transportation Volume 10 ; 10 ; https://digital-library.theiet.org/ ; >
       au < doNotProcess ; exists ; 2021 ; IET Electrical Systems in Transportation Volume 11 ; 11 ; https://digital-library.theiet.org/ ; >
 
@@ -439,7 +439,7 @@
       au < finished ; finished ; 2015 ; IET Intelligent Transport Systems Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2016 ; IET Intelligent Transport Systems Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; IET Intelligent Transport Systems Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2018 ; IET Intelligent Transport Systems Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; IET Intelligent Transport Systems Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2019 ; IET Intelligent Transport Systems Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; IET Intelligent Transport Systems Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
       au < doNotProcess ; exists ; 2021 ; IET Intelligent Transport Systems Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
@@ -495,7 +495,7 @@
       au < finished ; finished ; 2014 ; IET Nanotechnology Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; IET Nanotechnology Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2016 ; IET Nanotechnology Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2017 ; IET Nanotechnology Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; IET Nanotechnology Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; IET Nanotechnology Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2019 ; IET Nanotechnology Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; IET Nanotechnology Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
@@ -659,7 +659,7 @@
       au < finished ; finished ; 2016 ; IET Science, Measurement & Technology Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; IET Science, Measurement & Technology Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; IET Science, Measurement & Technology Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2019 ; IET Science, Measurement & Technology Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; IET Science, Measurement & Technology Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; IET Science, Measurement & Technology Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
       au < doNotProcess ; exists ; 2021 ; IET Science, Measurement & Technology Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
@@ -687,7 +687,7 @@
       au < finished ; finished ; 2016 ; IET Signal Processing Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2017 ; IET Signal Processing Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2018 ; IET Signal Processing Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2019 ; IET Signal Processing Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; IET Signal Processing Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; IET Signal Processing Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
       au < doNotProcess ; exists ; 2021 ; IET Signal Processing Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
@@ -715,7 +715,7 @@
       au < finished ; finished ; 2016 ; IET Software Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; IET Software Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; IET Software Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2019 ; IET Software Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; IET Software Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; IET Software Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
       au < doNotProcess ; exists ; 2021 ; IET Software Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
@@ -738,12 +738,12 @@
       au < finished ; finished ; 2011 ; IET Systems Biology Volume 5 ; 5 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2012 ; IET Systems Biology Volume 6 ; 6 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2013 ; IET Systems Biology Volume 7 ; 7 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2014 ; IET Systems Biology Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2014 ; IET Systems Biology Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; IET Systems Biology Volume 9 ; 9 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; IET Systems Biology Volume 10 ; 10 ; http://digital-library.theiet.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2017 ; IET Systems Biology Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; IET Systems Biology Volume 11 ; 11 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; IET Systems Biology Volume 12 ; 12 ; http://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2019 ; IET Systems Biology Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; IET Systems Biology Volume 13 ; 13 ; https://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; IET Systems Biology Volume 14 ; 14 ; https://digital-library.theiet.org/ ; >
       au < doNotProcess ; exists ; 2021 ; IET Systems Biology Volume 15 ; 15 ; https://digital-library.theiet.org/ ; >
 
@@ -765,7 +765,7 @@
       au < finished ; finished ; 2014 ; IET Wireless Sensor Systems Volume 4 ; 4 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; IET Wireless Sensor Systems Volume 5 ; 5 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; IET Wireless Sensor Systems Volume 6 ; 6 ; http://digital-library.theiet.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2017 ; IET Wireless Sensor Systems Volume 7 ; 7 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; IET Wireless Sensor Systems Volume 7 ; 7 ; http://digital-library.theiet.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; IET Wireless Sensor Systems Volume 8 ; 8 ; http://digital-library.theiet.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; IET Wireless Sensor Systems Volume 9 ; 9 ; https://digital-library.theiet.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; IET Wireless Sensor Systems Volume 10 ; 10 ; https://digital-library.theiet.org/ ; >
@@ -831,7 +831,7 @@
       au < finished ; frozen ; 1984 ; Computer-Aided Engineering Journal Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 1985 ; Computer-Aided Engineering Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 1986 ; Computer-Aided Engineering Journal Volume 3 ; 3 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 1987 ; Computer-Aided Engineering Journal Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1987 ; Computer-Aided Engineering Journal Volume 4 ; 4 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 1988 ; Computer-Aided Engineering Journal Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 1989 ; Computer-Aided Engineering Journal Volume 6 ; 6 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 1990 ; Computer-Aided Engineering Journal Volume 7 ; 7 ; reingest2.clockss.org:8085 >
@@ -853,7 +853,7 @@
       au < finished ; finished ; 1990 ; Computing & Control Engineering Journal Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 1991 ; Computing & Control Engineering Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 1992 ; Computing & Control Engineering Journal Volume 3 ; 3 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 1993 ; Computing & Control Engineering Journal Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1993 ; Computing & Control Engineering Journal Volume 4 ; 4 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 1994 ; Computing & Control Engineering Journal Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 1995 ; Computing & Control Engineering Journal Volume 6 ; 6 ; >
       au < frozen ; exists ; 1996 ; Computing & Control Engineering Journal Volume 7 ; 7 ; >
@@ -902,12 +902,12 @@
       au < finished ; finished ; 1993 ; Electronics & Communication Engineering Journal Volume 5 ; 5 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 1994 ; Electronics & Communication Engineering Journal Volume 6 ; 6 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 1995 ; Electronics & Communication Engineering Journal Volume 7 ; 7 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 1996 ; Electronics & Communication Engineering Journal Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1996 ; Electronics & Communication Engineering Journal Volume 8 ; 8 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 1997 ; Electronics & Communication Engineering Journal Volume 9 ; 9 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 1998 ; Electronics & Communication Engineering Journal Volume 10 ; 10 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 1999 ; Electronics & Communication Engineering Journal Volume 11 ; 11 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2000 ; Electronics & Communication Engineering Journal Volume 12 ; 12 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2001 ; Electronics & Communication Engineering Journal Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2001 ; Electronics & Communication Engineering Journal Volume 13 ; 13 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2002 ; Electronics & Communication Engineering Journal Volume 14 ; 14 ; reingest5.clockss.org:8082 >
 
   }
@@ -929,17 +929,17 @@
       au < finished ; finished ; 1993 ; Electronics Education Volume 1993 ; 1993 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 1994 ; Electronics Education Volume 1994 ; 1994 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 1995 ; Electronics Education Volume 1995 ; 1995 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 1996 ; Electronics Education Volume 1996 ; 1996 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1996 ; Electronics Education Volume 1996 ; 1996 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 1997 ; Electronics Education Volume 1997 ; 1997 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 1998 ; Electronics Education Volume 1998 ; 1998 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 1999 ; Electronics Education Volume 1999 ; 1999 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2000 ; Electronics Education Volume 2000 ; 2000 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2001 ; Electronics Education Volume 2001 ; 2001 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2001 ; Electronics Education Volume 2001 ; 2001 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2002 ; Electronics Education Volume 2002 ; 2002 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2003 ; Electronics Education Volume 2003 ; 2003 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2004 ; Electronics Education Volume 2004 ; 2004 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2005 ; Electronics Education Volume 2005 ; 2005 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2006 ; Electronics Education Volume 2006 ; 2006 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2006 ; Electronics Education Volume 2006 ; 2006 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2007 ; Electronics Education Volume 2007 ; 2007 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2008 ; Electronics Education Volume 2008 ; 2008 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2009 ; Electronics Education Volume 2009 ; 2009 ; reingest2.clockss.org:8085 >
@@ -1023,12 +1023,12 @@
 
       au < frozen ; exists ; 1992 ; Engineering Science and Education Journal Volume 1 ; 1 ; >
       au < finished ; finished ; 1993 ; Engineering Science and Education Journal Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 1994 ; Engineering Science and Education Journal Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1994 ; Engineering Science and Education Journal Volume 3 ; 3 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 1995 ; Engineering Science and Education Journal Volume 4 ; 4 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 1996 ; Engineering Science and Education Journal Volume 5 ; 5 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 1997 ; Engineering Science and Education Journal Volume 6 ; 6 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 1998 ; Engineering Science and Education Journal Volume 7 ; 7 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 1999 ; Engineering Science and Education Journal Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1999 ; Engineering Science and Education Journal Volume 8 ; 8 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2000 ; Engineering Science and Education Journal Volume 9 ; 9 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2001 ; Engineering Science and Education Journal Volume 10 ; 10 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2002 ; Engineering Science and Education Journal Volume 11 ; 11 ; reingest2.clockss.org:8085 >
@@ -1246,7 +1246,7 @@
       au < frozen ; exists ; 1990 ; IEE Proceedings B (Electric Power Applications) Volume 137 ; 137 ; >
       au < frozen ; exists ; 1991 ; IEE Proceedings B (Electric Power Applications) Volume 138 ; 138 ; >
       au < frozen ; exists ; 1992 ; IEE Proceedings B (Electric Power Applications) Volume 139 ; 139 ; >
-      au < finished ; crawling ; 1993 ; IEE Proceedings B (Electric Power Applications) Volume 140 ; 140 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1993 ; IEE Proceedings B (Electric Power Applications) Volume 140 ; 140 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -1436,7 +1436,7 @@
       au < frozen ; exists ; 1990 ; IEE Proceedings G (Circuits, Devices and Systems) Volume 137 ; 137 ; >
       au < frozen ; exists ; 1991 ; IEE Proceedings G (Circuits, Devices and Systems) Volume 138 ; 138 ; >
       au < frozen ; exists ; 1992 ; IEE Proceedings G (Circuits, Devices and Systems) Volume 139 ; 139 ; >
-      au < finished ; crawling ; 1993 ; IEE Proceedings G (Circuits, Devices and Systems) Volume 140 ; 140 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1993 ; IEE Proceedings G (Circuits, Devices and Systems) Volume 140 ; 140 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -1564,18 +1564,18 @@
       au < frozen ; exists ; 1991 ; IEE Review Volume 37 ; 37 ; >
       au < frozen ; exists ; 1992 ; IEE Review Volume 38 ; 38 ; >
       au < finished ; finished ; 1993 ; IEE Review Volume 39 ; 39 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 1994 ; IEE Review Volume 40 ; 40 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1994 ; IEE Review Volume 40 ; 40 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 1995 ; IEE Review Volume 41 ; 41 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 1996 ; IEE Review Volume 42 ; 42 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 1997 ; IEE Review Volume 43 ; 43 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 1998 ; IEE Review Volume 44 ; 44 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 1999 ; IEE Review Volume 45 ; 45 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1999 ; IEE Review Volume 45 ; 45 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2000 ; IEE Review Volume 46 ; 46 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2001 ; IEE Review Volume 47 ; 47 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2002 ; IEE Review Volume 48 ; 48 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2003 ; IEE Review Volume 49 ; 49 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2004 ; IEE Review Volume 50 ; 50 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2005 ; IEE Review Volume 51 ; 51 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2005 ; IEE Review Volume 51 ; 51 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2006 ; IEE Review Volume 52 ; 52 ; reingest5.clockss.org:8082 >
 
   }
@@ -2004,18 +2004,18 @@
       au < frozen ; exists ; 1991 ; Manufacturing Engineer Volume 70 ; 70 ; >
       au < frozen ; exists ; 1992 ; Manufacturing Engineer Volume 71 ; 71 ; >
       au < finished ; finished ; 1993 ; Manufacturing Engineer Volume 72 ; 72 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 1994 ; Manufacturing Engineer Volume 73 ; 73 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1994 ; Manufacturing Engineer Volume 73 ; 73 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 1995 ; Manufacturing Engineer Volume 74 ; 74 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 1996 ; Manufacturing Engineer Volume 75 ; 75 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 1997 ; Manufacturing Engineer Volume 76 ; 76 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 1998 ; Manufacturing Engineer Volume 77 ; 77 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 1999 ; Manufacturing Engineer Volume 78 ; 78 ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2000 ; Manufacturing Engineer Volume 79 ; 79 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2000 ; Manufacturing Engineer Volume 79 ; 79 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2001 ; Manufacturing Engineer Volume 80 ; 80 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2002 ; Manufacturing Engineer Volume 81 ; 81 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2003 ; Manufacturing Engineer Volume 82 ; 82 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2004 ; Manufacturing Engineer Volume 83 ; 83 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2005 ; Manufacturing Engineer Volume 84 ; 84 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2005 ; Manufacturing Engineer Volume 84 ; 84 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2006 ; Manufacturing Engineer Volume 85 ; 85 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2007 ; Manufacturing Engineer Volume 86 ; 86 ; reingest1.clockss.org:8082 >
 
@@ -2443,7 +2443,7 @@
       au < frozen ; exists ; 1993 ; Software Engineering Journal Volume 8 ; 8 ; >
       au < finished ; finished ; 1994 ; Software Engineering Journal Volume 9 ; 9 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 1995 ; Software Engineering Journal Volume 10 ; 10 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 1996 ; Software Engineering Journal Volume 11 ; 11 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1996 ; Software Engineering Journal Volume 11 ; 11 ; reingest4.clockss.org:8082 >
 
   }
 

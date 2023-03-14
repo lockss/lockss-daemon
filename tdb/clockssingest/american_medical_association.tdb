@@ -106,7 +106,7 @@
     au < finished ; finished ; 2017 ; JAMA Internal Medicine Volume 177 ; 2017 ; http://jamanetwork.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2018 ; JAMA Internal Medicine Volume 178 ; 2018 ; https://jamanetwork.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2019 ; JAMA Internal Medicine Volume 179 ; 2019 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2020 ; JAMA Internal Medicine Volume 180 ; 2020 ; https://jamanetwork.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; JAMA Internal Medicine Volume 180 ; 2020 ; https://jamanetwork.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; JAMA Internal Medicine Volume 181 ; 2021 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2022 ; JAMA Internal Medicine Volume 182 ; 2022 ; https://jamanetwork.com/ ; >
     au < expected ; exists ; 2023 ; JAMA Internal Medicine Volume 182 ; 2023 ; https://jamanetwork.com/ ; >
@@ -186,7 +186,7 @@
     au < finished ; finished ; 2017 ; JAMA Neurology Volume 74 ; 2017 ; http://jamanetwork.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; JAMA Neurology Volume 75 ; 2018 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2019 ; JAMA Neurology Volume 76 ; 2019 ; https://jamanetwork.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2020 ; JAMA Neurology Volume 77 ; 2020 ; https://jamanetwork.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; JAMA Neurology Volume 77 ; 2020 ; https://jamanetwork.com/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; JAMA Neurology Volume 78 ; 2021 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2022 ; JAMA Neurology Volume 79 ; 2022 ; https://jamanetwork.com/ ; >
     au < expected ; exists ; 2023 ; JAMA Neurology Volume 79 ; 2023 ; https://jamanetwork.com/ ; >
@@ -288,7 +288,7 @@
     au < finished ; finished ; 2017 ; JAMA Pediatrics Volume 171 ; 2017 ; http://jamanetwork.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; JAMA Pediatrics Volume 172 ; 2018 ; https://jamanetwork.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2019 ; JAMA Pediatrics Volume 173 ; 2019 ; https://jamanetwork.com/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2020 ; JAMA Pediatrics Volume 174 ; 2020 ; https://jamanetwork.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; JAMA Pediatrics Volume 174 ; 2020 ; https://jamanetwork.com/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; JAMA Pediatrics Volume 175 ; 2021 ; https://jamanetwork.com/ ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2022 ; JAMA Pediatrics Volume 176 ; 2022 ; https://jamanetwork.com/ ; >
     au < expected ; exists ; 2023 ; JAMA Pediatrics Volume 176 ; 2023 ; https://jamanetwork.com/ ; >
@@ -366,7 +366,7 @@
     au < finished ; finished ; 2017 ; JAMA: The Journal of the American Medical Association Volume 317-318 ; 2017 ; http://jamanetwork.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2018 ; JAMA: The Journal of the American Medical Association Volume 319-320 ; 2018 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2019 ; JAMA: The Journal of the American Medical Association Volume 321-322 ; 2019 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2020 ; JAMA: The Journal of the American Medical Association Volume 323-324 ; 2020 ; https://jamanetwork.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; JAMA: The Journal of the American Medical Association Volume 323-324 ; 2020 ; https://jamanetwork.com/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; JAMA: The Journal of the American Medical Association Volume 325-326 ; 2021 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2022 ; JAMA: The Journal of the American Medical Association Volume 327-328 ; 2022 ; https://jamanetwork.com/ ; >
     au < expected ; exists ; 2023 ; JAMA: The Journal of the American Medical Association Volume 327-328 ; 2023 ; https://jamanetwork.com/ ; >
