@@ -27,7 +27,7 @@
         au < readySource ; finished ; 2021 ; Frontiers Journals Source Content 2021_01 ; 2021_01 >
         au < readySource ; finished ; 2021 ; Frontiers Journals Source Content 2021_02 ; 2021_02 >
 
-        au < readySource ; frozen ; 2022 ; Frontiers Journals Source Content 2022_01 ; 2022_01 >
+        au < readySource ; finished ; 2022 ; Frontiers Journals Source Content 2022_01 ; 2022_01 >
         au < readySource ; frozen ; 2022 ; Frontiers Journals Source Content 2022_02 ; 2022_02 >
         au < readySource ; frozen ; 2022 ; Frontiers Journals Source Content 2022_03 ; 2022_03 >
         au < readySource ; frozen ; 2022 ; Frontiers Journals Source Content 2022_04 ; 2022_04 >
@@ -77,7 +77,7 @@
 
         param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/frontiersbooks-released/
 
-        au < readySource ; frozen ; 2022 ; Frontiers Books Source Content 2022_01 ; 2022_01 >
+        au < readySource ; finished ; 2022 ; Frontiers Books Source Content 2022_01 ; 2022_01 >
         #No more AUs. Moved to https.
 
       }
