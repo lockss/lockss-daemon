@@ -55,28 +55,6 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>7</string>
     </entry>
     <entry>
-        <string>plugin_config_props</string>
-        <list>
-            <org.lockss.daemon.ConfigParamDescr>
-                <key>base_url</key>
-                <displayName>Base URL</displayName>
-                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
-                <type>3</type>
-                <size>40</size>
-                <definitional>true</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
-            <org.lockss.daemon.ConfigParamDescr>
-                <key>year</key>
-                <displayName>Year</displayName>
-                <type>4</type>
-                <size>4</size>
-                <definitional>true</definitional>
-                <defaultOnly>false</defaultOnly>
-            </org.lockss.daemon.ConfigParamDescr>
-        </list>
-    </entry>
-    <entry>
         <string>au_name</string>
         <string>"OECD iLibrary Working Papers Plugin, Base URL %s, Publication Path %s, Publication ID %s", base_url, pub_path, pub_id</string>
     </entry>
