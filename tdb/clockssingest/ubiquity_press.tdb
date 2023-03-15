@@ -24,7 +24,7 @@
       au < exists ; exists ; 2020 ; 1 ; Steiner Studies Volume 2020 ; 2020 ; https://steiner-studies.org/ ; >
       au < exists ; exists ; 2021 ; 2 ; Steiner Studies Volume 2021 ; 2021 ; https://steiner-studies.org/ ; >
       au < exists ; exists ; 2022 ; 3 ; Steiner Studies Volume 2022 ; 2022 ; https://steiner-studies.org/ ; >
-      au < expected ; expected ; 2023 ; 4 ; Steiner Studies Volume 2023 ; 2023 ; https://steiner-studies.org/ ; >
+      au < expected ; exists ; 2023 ; 4 ; Steiner Studies Volume 2023 ; 2023 ; https://steiner-studies.org/ ; >
 
   }
 }
@@ -565,7 +565,7 @@
       au < exists ; exists ; 2020 ; 21 ; Economia Volume 2020 ; 2020 ; https://economia.lse.ac.uk/ ; >
       au < exists ; exists ; 2021 ; 22 ; Economia Volume 2021 ; 2021 ; https://economia.lse.ac.uk/ ; >
       au < exists ; exists ; 2022 ; 23 ; Economia Volume 2022 ; 2022 ; https://economia.lse.ac.uk/ ; >
-      au < expected ; expected ; 2023 ; 24 ; Economia Volume 2023 ; 2023 ; https://economia.lse.ac.uk/ ; >
+      au < expected ; exists ; 2023 ; 24 ; Economia Volume 2023 ; 2023 ; https://economia.lse.ac.uk/ ; >
 
   }
   
@@ -2238,7 +2238,7 @@
       au < finished ; finished ; 2020 ; 11 ; Yearbook of Swiss Administrative Science Volume 2020 ; 2020 ; https://www.ssas-yearbook.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2021 ; 12 ; Yearbook of Swiss Administrative Science Volume 2021 ; 2021 ; https://www.ssas-yearbook.com/ ; reingest4.clockss.org:8082 >
       au < exists ; exists ; 2022 ; 13 ; Yearbook of Swiss Administrative Science Volume 2022 ; 2022 ; https://www.ssas-yearbook.com/ ; >
-      au < expected ; expected ; 2023 ; 14 ; Yearbook of Swiss Administrative Science Volume 2023 ; 2023 ; https://www.ssas-yearbook.com/ ; >
+      au < expected ; exists ; 2023 ; 14 ; Yearbook of Swiss Administrative Science Volume 2023 ; 2023 ; https://www.ssas-yearbook.com/ ; >
 
   }
 
@@ -2389,7 +2389,7 @@
       au < exists ; exists ; 2020 ; 1 ; New Area Studies Volume 2020 ; 2020 ; https://newareastudies.com/ ; >
       au < exists ; exists ; 2021 ; 2 ; New Area Studies Volume 2021 ; 2021 ; https://newareastudies.com/ ; >
       au < exists ; exists ; 2022 ; 3 ; New Area Studies Volume 2022 ; 2022 ; https://newareastudies.com/ ; >
-      au < expected ; expected ; 2023 ; 4 ; New Area Studies Volume 2023 ; 2023 ; https://newareastudies.com/ ; >
+      au < expected ; exists ; 2023 ; 4 ; New Area Studies Volume 2023 ; 2023 ; https://newareastudies.com/ ; >
 
   }
 }
@@ -3207,7 +3207,7 @@
 #      param[base_url] = https://writingchinesejournal.org/
 
       au < exists ; exists ; 2022 ; 1 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2022 ; 2022 ; https://writingchinesejournal.org/ ; >
-      au < expected ; expected ; 2023 ; 2 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2023 ; 2023 ; https://writingchinesejournal.org/ ; >
+      au < expected ; exists ; 2023 ; 2 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2023 ; 2023 ; https://writingchinesejournal.org/ ; >
 
   }
 
@@ -3388,7 +3388,7 @@
       au < exists ; exists ; 2020 ; 32 ; Journal of Technology Education Volume 2020 ; 2020 ; https://jte-journal.org/ ; >
       au < exists ; exists ; 2021 ; 33 ; Journal of Technology Education Volume 2021 ; 2021 ; https://jte-journal.org/ ; >
       au < exists ; exists ; 2022 ; 34 ; Journal of Technology Education Volume 2022 ; 2022 ; https://jte-journal.org/ ; >
-      au < expected ; expected ; 2023 ; 35 ; Journal of Technology Education Volume 2023 ; 2023 ; https://jte-journal.org/ ; >
+      au < expected ; exists ; 2023 ; 35 ; Journal of Technology Education Volume 2023 ; 2023 ; https://jte-journal.org/ ; >
 
   }
 
@@ -3463,7 +3463,7 @@
       au < exists ; exists ; 2010 ; 1 ; Gateway Papers Volume 2010 ; 2010 ; https://gp.demontfortuniversitypress.org/ ; >
       au < exists ; exists ; 2021 ; 12 ; Gateway Papers Volume 2021 ; 2021 ; https://gp.demontfortuniversitypress.org/ ; >
       au < exists ; exists ; 2022 ; 13 ; Gateway Papers Volume 2022 ; 2022 ; https://gp.demontfortuniversitypress.org/ ; >
-      au < expected ; expected ; 2023 ; 14 ; Gateway Papers Volume 2023 ; 2023 ; https://gp.demontfortuniversitypress.org/ ; >
+      au < expected ; exists ; 2023 ; 14 ; Gateway Papers Volume 2023 ; 2023 ; https://gp.demontfortuniversitypress.org/ ; >
 
   }
 
