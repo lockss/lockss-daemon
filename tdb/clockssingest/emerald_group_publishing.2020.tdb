@@ -908,8 +908,8 @@
     au < manifest ; exists ; 1989 ; Assembly Automation Volume 9 ; 9 ; >
     au < crawling ; exists ; 1990 ; Assembly Automation Volume 10 ; 10 ; >
     au < crawling ; exists ; 1991 ; Assembly Automation Volume 11 ; 11 ; >
-    au < ready ; exists ; 1992 ; Assembly Automation Volume 12 ; 12 ; >
-    au < ready ; exists ; 1993 ; Assembly Automation Volume 13 ; 13 ; >
+    au < crawling ; exists ; 1992 ; Assembly Automation Volume 12 ; 12 ; >
+    au < crawling ; exists ; 1993 ; Assembly Automation Volume 13 ; 13 ; >
     au < crawling ; exists ; 1994 ; Assembly Automation Volume 14 ; 14 ; >
     au < frozen ; exists ; 1995 ; Assembly Automation Volume 15 ; 15 ; >
     au < frozen ; exists ; 1996 ; Assembly Automation Volume 16 ; 16 ; >
@@ -1007,7 +1007,7 @@
     comment[journal_id] = bqmt
     #continued_by = 1463-5771
 
-    au < ready ; exists ; 1994 ; Benchmarking for Quality Management & Technology Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1994 ; Benchmarking for Quality Management & Technology Volume 1 ; 1 ; >
     au < frozen ; exists ; 1995 ; Benchmarking for Quality Management & Technology Volume 2 ; 2 ; >
     au < frozen ; exists ; 1996 ; Benchmarking for Quality Management & Technology Volume 3 ; 3 ; >
     au < frozen ; exists ; 1997 ; Benchmarking for Quality Management & Technology Volume 4 ; 4 ; >
@@ -14632,7 +14632,7 @@
 
     au < manifest ; exists ; 2019 ; Applied Economic Analysis Volume 27 ; 27 ; >
     au < crawling ; exists ; 2020 ; Applied Economic Analysis Volume 28 ; 28 ; >
-    au < ready ; exists ; 2021 ; Applied Economic Analysis Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2021 ; Applied Economic Analysis Volume 29 ; 29 ; >
     au < crawling ; exists ; 2022 ; Applied Economic Analysis Volume 30 ; 30 ; >
     au < manifest ; exists ; 2023 ; Applied Economic Analysis Volume 31 ; 31 ; >
 
@@ -14764,7 +14764,7 @@
 
     au < crawling ; exists ; 2020 ; Ecofeminism and Climate Change Volume 1 ; 1 ; >
     au < crawling ; exists ; 2021 ; Ecofeminism and Climate Change Volume 2 ; 2 ; >
-    au < ready ; exists ; 2022 ; Ecofeminism and Climate Change Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2022 ; Ecofeminism and Climate Change Volume 3 ; 3 ; >
     au < expected ; exists ; 2023 ; Ecofeminism and Climate Change Volume 4 ; 4 ; >
 
   }
@@ -14784,7 +14784,7 @@
     au < manifest ; exists ; 2018 ; European Journal of Management & Business Economics Volume 27 ; 27 ; >
     au < manifest ; exists ; 2019 ; European Journal of Management & Business Economics Volume 28 ; 28 ; >
     au < crawling ; exists ; 2020 ; European Journal of Management & Business Economics Volume 29 ; 29 ; >
-    au < ready ; exists ; 2021 ; European Journal of Management & Business Economics Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2021 ; European Journal of Management & Business Economics Volume 30 ; 30 ; >
     au < crawling ; exists ; 2022 ; European Journal of Management & Business Economics Volume 31 ; 31 ; >
     au < manifest ; exists ; 2023 ; European Journal of Management & Business Economics Volume 32 ; 32 ; >
 
@@ -14802,7 +14802,7 @@
 
     au < manifest ; exists ; 2019 ; Forest Economic Review Volume 1 ; 1 ; >
     au < crawling ; exists ; 2020 ; Forest Economic Review Volume 2 ; 2 ; >
-    au < ready ; exists ; 2021 ; Forest Economic Review Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2021 ; Forest Economic Review Volume 3 ; 3 ; >
     au < crawling ; exists ; 2022 ; Forest Economic Review Volume 4 ; 4 ; >
     au < expected ; exists ; 2023 ; Forest Economic Review Volume 5 ; 5 ; >
 
@@ -14821,8 +14821,8 @@
     au < manifest ; exists ; 2017 ; Higher Education Evaluation and Development Volume 11 ; 11 ; >
     au < manifest ; exists ; 2018 ; Higher Education Evaluation and Development Volume 12 ; 12 ; >
     au < manifest ; exists ; 2019 ; Higher Education Evaluation and Development Volume 13 ; 13 ; >
-    au < ready ; exists ; 2020 ; Higher Education Evaluation and Development Volume 14 ; 14 ; >
-    au < ready ; exists ; 2021 ; Higher Education Evaluation and Development Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2020 ; Higher Education Evaluation and Development Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2021 ; Higher Education Evaluation and Development Volume 15 ; 15 ; >
     au < crawling ; exists ; 2022 ; Higher Education Evaluation and Development Volume 16 ; 16 ; >
     au < expected ; exists ; 2023 ; Higher Education Evaluation and Development Volume 17 ; 17 ; >
 
@@ -14861,8 +14861,8 @@
     au < manifest ; exists ; 2018 ; International Hospitality Review Volume 32 ; 32 ; >
     au < manifest ; exists ; 2019 ; International Hospitality Review Volume 33 ; 33 ; >
     au < crawling ; exists ; 2020 ; International Hospitality Review Volume 34 ; 34 ; >
-    au < ready ; exists ; 2021 ; International Hospitality Review Volume 35 ; 35 ; >
-    au < ready ; exists ; 2022 ; International Hospitality Review Volume 36 ; 36 ; >
+    au < crawling ; exists ; 2021 ; International Hospitality Review Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2022 ; International Hospitality Review Volume 36 ; 36 ; >
     au < expected ; exists ; 2023 ; International Hospitality Review Volume 37 ; 37 ; >
 
   }
@@ -14897,7 +14897,7 @@
 
     param[journal_issn] = 2516-4392
 
-    au < ready ; exists ; 2021 ; International Journal of Disruptive Innovation in Government Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2021 ; International Journal of Disruptive Innovation in Government Volume 1 ; 1 ; >
     au < expected ; exists ; 2023 ; International Journal of Disruptive Innovation in Government Volume 2 ; 2 ; >
 
   }
@@ -14931,7 +14931,7 @@
     au < manifest ; exists ; 2019 ; International Trade, Politics and Development Volume 3 ; 3 ; >
     au < crawling ; exists ; 2020 ; International Trade, Politics and Development Volume 4 ; 4 ; >
     au < crawling ; exists ; 2021 ; International Trade, Politics and Development Volume 5 ; 5 ; >
-    au < ready ; exists ; 2022 ; International Trade, Politics and Development Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2022 ; International Trade, Politics and Development Volume 6 ; 6 ; >
     au < expected ; exists ; 2023 ; International Trade, Politics and Development Volume 7 ; 7 ; >
 
   }
@@ -14968,7 +14968,7 @@
     param[journal_issn] = 1319-1616
 
     au < manifest ; exists ; 2019 ; Islamic Economic Studies Volume 27 ; 27 ; >
-    au < ready ; exists ; 2020 ; Islamic Economic Studies Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2020 ; Islamic Economic Studies Volume 28 ; 28 ; >
     au < crawling ; exists ; 2021 ; Islamic Economic Studies Volume 29 ; 29 ; >
     au < crawling ; exists ; 2022 ; Islamic Economic Studies Volume 30 ; 30 ; >
     au < expected ; exists ; 2023 ; Islamic Economic Studies Volume 31 ; 31 ; >
@@ -15233,7 +15233,7 @@
     au < manifest ; exists ; 2018 ; Journal of Intelligent and Connected Vehicles Volume 1 ; 1 ; >
     au < manifest ; exists ; 2019 ; Journal of Intelligent and Connected Vehicles Volume 2 ; 2 ; >
     au < crawling ; exists ; 2020 ; Journal of Intelligent and Connected Vehicles Volume 3 ; 3 ; >
-    au < ready ; exists ; 2021 ; Journal of Intelligent and Connected Vehicles Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2021 ; Journal of Intelligent and Connected Vehicles Volume 4 ; 4 ; >
     au < crawling ; exists ; 2022 ; Journal of Intelligent and Connected Vehicles Volume 5 ; 5 ; >
     au < expected ; exists ; 2023 ; Journal of Intelligent and Connected Vehicles Volume 6 ; 6 ; >
 
@@ -15252,7 +15252,7 @@
 
     au < crawling ; exists ; 2020 ; Journal of Intelligent Manufacturing and Special Equipment Volume 1 ; 1 ; >
     au < crawling ; exists ; 2021 ; Journal of Intelligent Manufacturing and Special Equipment Volume 2 ; 2 ; >
-    au < ready ; exists ; 2022 ; Journal of Intelligent Manufacturing and Special Equipment Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2022 ; Journal of Intelligent Manufacturing and Special Equipment Volume 3 ; 3 ; >
     au < manifest ; exists ; 2023 ; Journal of Intelligent Manufacturing and Special Equipment Volume 4 ; 4 ; >
 
   }
@@ -15355,7 +15355,7 @@
     au < manifest ; exists ; 2019 ; Marine Economics and Management Volume 2 ; 2 ; >
     au < crawling ; exists ; 2020 ; Marine Economics and Management Volume 3 ; 3 ; >
     au < crawling ; exists ; 2021 ; Marine Economics and Management Volume 4 ; 4 ; >
-    au < ready ; exists ; 2022 ; Marine Economics and Management Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2022 ; Marine Economics and Management Volume 5 ; 5 ; >
     au < expected ; exists ; 2023 ; Marine Economics and Management Volume 6 ; 6 ; >
 
   }
@@ -15422,7 +15422,7 @@
     au < manifest ; exists ; 2019 ; Modern Supply Chain Research and Applications Volume 1 ; 1 ; >
     au < crawling ; exists ; 2020 ; Modern Supply Chain Research and Applications Volume 2 ; 2 ; >
     au < crawling ; exists ; 2021 ; Modern Supply Chain Research and Applications Volume 3 ; 3 ; >
-    au < ready ; exists ; 2022 ; Modern Supply Chain Research and Applications Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2022 ; Modern Supply Chain Research and Applications Volume 4 ; 4 ; >
     au < expected ; exists ; 2023 ; Modern Supply Chain Research and Applications Volume 5 ; 5 ; >
 
   }
