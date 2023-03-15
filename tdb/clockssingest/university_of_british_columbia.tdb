@@ -30,7 +30,7 @@
       param[base_url] = https://www.ingentaconnect.com/
       param[api_url] = https://api.ingentaconnect.com/
     
-       au < finished ; crawling ; 2005-2006 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 78 ; 78 ; reingest4.clockss.org:8082 >
+       au < finished ; frozen ; 2005-2006 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 78 ; 78 ; reingest4.clockss.org:8082 >
        au < finished ; frozen ; 2006-2007 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 79 ; 79 ; reingest5.clockss.org:8082 >
        au < finished ; finished ; 2007 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 80 ; 80 ; reingest1.clockss.org:8082 >
        au < finished ; finished ; 2008 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 81 ; 81 ; reingest2.clockss.org:8085 >
@@ -56,7 +56,7 @@
       param[api_url] = https://api.ingentaconnect.com/
 
       au < finished ; finished ; 2018 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 91 ; 91 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2019 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 92 ; 92 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 92 ; 92 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 93 ; 93 ; >
       au < deepCrawl ; exists ; 2021 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 94 ; 94 ; >
       au < crawling ; exists ; 2022 ; Pacific Affairs: An International Review of Asia and the Pacific Volume 95 ; 95 ; >
