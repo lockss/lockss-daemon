@@ -424,6 +424,7 @@
     #param[base_url] = http://www.jecme.eu/
 
     param[journal_id] = zjec20
+    #continued_by = 2833-8073
 
     au < released ; 2012 ; Journal of European Continuing Medical Education Volume 1 ; 1 ; http://www.tandfonline.com/ >
     au < released ; 2013 ; Journal of European Continuing Medical Education Volume 2 ; 2 ; http://www.tandfonline.com/ >
@@ -436,6 +437,21 @@
     au < released ; 2020 ; Journal of European Continuing Medical Education Volume 9 ; 9 ; https://www.tandfonline.com/ >
     au < released ; 2021 ; Journal of European Continuing Medical Education Volume 10 ; 10 ; https://www.tandfonline.com/ >
     au < manifest ; 2022 ; Journal of European Continuing Medical Education Volume 11 ; 11 ; https://www.tandfonline.com/ >
+
+  }
+
+  {
+
+    title <
+      name = Journal of CME ;
+      eissn = 2833-8073 ;
+      issnl = 2833-8073
+    >
+
+    param[journal_id] = zjec21
+    #contiues = 2161-4083
+
+    au < exists ; 2023 ; Journal of CME Volume 12 ; 12 ; https://www.tandfonline.com/ >
 
   }
 
