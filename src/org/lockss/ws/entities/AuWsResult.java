@@ -73,6 +73,7 @@ public class AuWsResult {
   private Boolean isBulkContent;
   private List<PeerAgreementsWsResult> peerAgreements;
   private List<UrlWsResult> urls;
+  private List<String> accessUrls;
   private List<String> substanceUrls;
   private List<String> articleUrls;
   private String journalTitle;
@@ -560,10 +561,22 @@ public class AuWsResult {
   }
 
   /**
-   * Provides the Archival Unit substance URLs.
-   * 
-   * @return a {@code List<String>} with the substance URLs.
+   * Provides the Archival Unit access URLs.
+   *
+   * @return a {@code List<String>} with the access URLs.
    */
+  public List<String> getAccessUrls() {
+    return accessUrls;
+  }
+  public void setAccessUrls(List<String> accessUrls) {
+    this.accessUrls = accessUrls;
+  }
+
+    /**
+     * Provides the Archival Unit substance URLs.
+     *
+     * @return a {@code List<String>} with the substance URLs.
+     */
   public List<String> getSubstanceUrls() {
     return substanceUrls;
   }
