@@ -2,10 +2,11 @@
 
   publisher <
     name = Scientific Journal Publishers ;
-    info[back] = 2010 ;
+    info[back] = 2005 ;
     info[contract] = 2012 ;
     info[tester] = 8 ;
-    info[poller] = 6
+    info[poller] = 6 ;
+    info[platform] = OJS3 now. Ingenta still active 2023/03/15
   >
   
   provider = Social Behavior and Personality Journal
@@ -17,6 +18,20 @@
       issn = 0301-2212
     >
 
+    {
+    
+    plugin = org.lockss.plugin.ojs3.Ojs3Plugin
+    attr[start_stem] = index.php/ 
+    param[base_url] = https://www.sbp-journal.com/
+    param[journal_id] = sbp 
+    implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
+
+    au < manifest ; exists ; 2022 ; 2022 ; Social Behavior and Personality Volume 50 ; 50 ; >
+    au < manifest ; exists ; 2023 ; 2023 ; Social Behavior and Personality Volume 51 ; 51 ; >
+
+    }
+
+    {
     plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
 #    param[base_url] = http://www.ingentaconnect.com/
 #    param[api_url] = http://api.ingentaconnect.com/
@@ -95,10 +110,9 @@
     au < deepCrawl ; exists ; 2020 ; Social Behavior and Personality Volume 48 ; 48 ; >
     au < deepCrawl ; exists ; 2021 ; Social Behavior and Personality Volume 49 ; 49 ; >
     au < crawling ; exists ; 2022 ; Social Behavior and Personality Volume 50 ; 50 ; >
-    au < expected ; exists ; 2023 ; Social Behavior and Personality Volume 51 ; 51 ; >
 
     }
-
+    }
   }
   
 }
