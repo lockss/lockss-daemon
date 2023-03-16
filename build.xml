@@ -814,7 +814,8 @@ Args:
         <include name="**/*.tdb"/>
       </fileset>
       <mapper type="glob" from="*.tdb" to="*.xml"/>
-      <arg value="-A"/>
+      <arg value="--viable" />
+      <arg value="--expected" />
       <arg value="-i"/>
       <srcfile/>
       <arg value="-o"/>
@@ -840,7 +841,8 @@ Args:
 					<include name="*.tdb"/>
 				</fileset>
 				<mapper type="glob" from="*.tdb" to="*.xml"/>
-				<arg value="--all" />
+				<arg value="--viable" />
+				<arg value="--expected" />
 				<arg value="--output-dir=@{destdir}" />
 			</apply>
 		</sequential>

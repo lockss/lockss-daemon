@@ -76,7 +76,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbQueryBuilder:0.3.1]";
+  public static final String VERSION = "[TdbQueryBuilder:0.3.2]";
   
   /**
    * <p>
