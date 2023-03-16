@@ -118,7 +118,7 @@
 
       au < deepCrawl ; exists ; 2021 ; Aotearoa New Zealand Journal of Social Issues Volume 1 ; 1 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Aotearoa New Zealand Journal of Social Issues Volume 2 ; 2 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Aotearoa New Zealand Journal of Social Issues Volume 3 ; 3 ; 2023 ; >
+      au < manifest ; exists ; 2023 ; Aotearoa New Zealand Journal of Social Issues Volume 3 ; 3 ; 2023 ; >
 
   }
 
@@ -134,17 +134,17 @@
       param[journal_id] = ata
       attr[start_stem] = 
 
-      au < finished ; frozen ; 2012 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 16 ; 16 ; 2012 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2013 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 17 ; 17 ; 2013 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2014 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 18 ; 18 ; 2014 ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2015 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 19 ; 19 ; 2015 ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2016 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 20 ; 20 ; 2016 ; reingest5.clockss.org:8082 >
-      au < finished ; frozen ; 2017 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 21 ; 21 ; 2017 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 22 ; 22 ; 2018 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2020 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 23 ; 23 ; 2020 ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2021 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 25 ; 25 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 26 ; 26 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Ata: Journal of Psychotherapy Aotearoa New Zealand  Volume 27 ; 27 ; 2023 ; >
+      au < finished ; frozen ; 2012 ; Ata: Journal of Psychotherapy Aotearoa New Zealand Volume 16 ; 16 ; 2012 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2013 ; Ata: Journal of Psychotherapy Aotearoa New Zealand Volume 17 ; 17 ; 2013 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2014 ; Ata: Journal of Psychotherapy Aotearoa New Zealand Volume 18 ; 18 ; 2014 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2015 ; Ata: Journal of Psychotherapy Aotearoa New Zealand Volume 19 ; 19 ; 2015 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; Ata: Journal of Psychotherapy Aotearoa New Zealand Volume 20 ; 20 ; 2016 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; Ata: Journal of Psychotherapy Aotearoa New Zealand Volume 21 ; 21 ; 2017 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; Ata: Journal of Psychotherapy Aotearoa New Zealand Volume 22 ; 22 ; 2018 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2020 ; Ata: Journal of Psychotherapy Aotearoa New Zealand Volume 23 ; 23 ; 2020 ; reingest3.clockss.org:8083 >
+      au < deepCrawl ; exists ; 2021 ; Ata: Journal of Psychotherapy Aotearoa New Zealand Volume 25 ; 25 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; Ata: Journal of Psychotherapy Aotearoa New Zealand Volume 26 ; 26 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Ata: Journal of Psychotherapy Aotearoa New Zealand Volume 27 ; 27 ; 2023 ; >
 
   }
 
@@ -160,12 +160,11 @@
       param[journal_id] = back-story
       attr[start_stem] = 
 
-      au < finished ; frozen ; 2016 ; Back Story  Volume 1 ; 1 ; 2016 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2017 ; Back Story  Volume 2 ; 2 ; 2017 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; Back Story  Volume 3 ; 3 ; 2018 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2021 ; Back Story  Volume 4 ; 4 ; 2021 ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2022 ; Back Story  Volume 5 ; 5 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Back Story  Volume 6 ; 6 ; 2023 ; >
+      au < finished ; frozen ; 2016 ; Back Story Volume 1 ; 1 ; 2016 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; Back Story Volume 2 ; 2 ; 2017 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; Back Story Volume 3 ; 3 ; 2018 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2021 ; Back Story Volume 4 ; 4 ; 2021 ; reingest5.clockss.org:8082 >
+      au < expected ; exists ; 2023 ; Back Story Volume 5 ; 5 ; 2023 ; >
 
   }
 
@@ -180,11 +179,11 @@
       param[journal_id] = dcj
       attr[start_stem] = 
 
-      au < finished ; frozen ; 2019 ; Decolonization of Criminology and Justice  Volume 1 ; 1 ; 2019 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; Decolonization of Criminology and Justice  Volume 2 ; 2 ; 2020 ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2021 ; Decolonization of Criminology and Justice  Volume 3 ; 3 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; Decolonization of Criminology and Justice  Volume 4 ; 4 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Decolonization of Criminology and Justice  Volume 5 ; 5 ; 2023 ; >
+      au < finished ; frozen ; 2019 ; Decolonization of Criminology and Justice Volume 1 ; 1 ; 2019 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; Decolonization of Criminology and Justice Volume 2 ; 2 ; 2020 ; reingest2.clockss.org:8085 >
+      au < deepCrawl ; exists ; 2021 ; Decolonization of Criminology and Justice Volume 3 ; 3 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; Decolonization of Criminology and Justice Volume 4 ; 4 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Decolonization of Criminology and Justice Volume 5 ; 5 ; 2023 ; >
 
   }
 
@@ -245,8 +244,7 @@
       au < finished ; frozen ; 2019 ; Interstices Volume 19 ; 19 ; 2019 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2020 ; Interstices Volume 20 ; 20 ; 2020 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; Interstices Volume 21 ; 21 ; 2021 ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2022 ; Interstices Volume 22 ; 22 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Interstices Volume 23 ; 23 ; 2023 ; >
+      au < expected ; exists ; 2023 ; Interstices Volume 22 ; 22 ; 2023 ; >
 
   }
 
@@ -282,10 +280,9 @@
       param[journal_id] = nzjer
       attr[start_stem] = 
 
-      au < finished ; frozen ; 2020 ; NZJER: New Zealand Journal of Employment Relations  Volume 45 ; 45 ; 2020 ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2021 ; NZJER: New Zealand Journal of Employment Relations  Volume 46 ; 46 ; 2021 ; >
-      au < expected ; exists ; 2022 ; NZJER: New Zealand Journal of Employment Relations  Volume 47 ; 47 ; 2022 ; >
-      au < expected ; exists ; 2023 ; NZJER: New Zealand Journal of Employment Relations  Volume 48 ; 48 ; 2023 ; >
+      au < finished ; frozen ; 2020 ; NZJER: New Zealand Journal of Employment Relations Volume 45 ; 45 ; 2020 ; reingest2.clockss.org:8085 >
+      au < deepCrawl ; exists ; 2021 ; NZJER: New Zealand Journal of Employment Relations Volume 46 ; 46 ; 2021 ; >
+      au < expected ; exists ; 2023 ; NZJER: New Zealand Journal of Employment Relations Volume 47 ; 47 ; 2023 ; >
 
   }
 
@@ -320,11 +317,11 @@
       param[journal_id] = pjtel
       attr[start_stem] = 
 
-      au < finished ; frozen ; 2019 ; PJTEL: Pacific Journal of Technology Enhanced Learning  Volume 1 ; 1 ; 2019 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2020 ; PJTEL: Pacific Journal of Technology Enhanced Learning  Volume 2 ; 2 ; 2020 ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2021 ; PJTEL: Pacific Journal of Technology Enhanced Learning  Volume 3 ; 3 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; PJTEL: Pacific Journal of Technology Enhanced Learning  Volume 4 ; 4 ; 2022 ; >
-      au < expected ; exists ; 2023 ; PJTEL: Pacific Journal of Technology Enhanced Learning  Volume 5 ; 5 ; 2023 ; >
+      au < finished ; frozen ; 2019 ; PJTEL: Pacific Journal of Technology Enhanced Learning Volume 1 ; 1 ; 2019 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2020 ; PJTEL: Pacific Journal of Technology Enhanced Learning Volume 2 ; 2 ; 2020 ; reingest2.clockss.org:8085 >
+      au < deepCrawl ; exists ; 2021 ; PJTEL: Pacific Journal of Technology Enhanced Learning Volume 3 ; 3 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; PJTEL: Pacific Journal of Technology Enhanced Learning Volume 4 ; 4 ; 2022 ; >
+      au < expected ; exists ; 2023 ; PJTEL: Pacific Journal of Technology Enhanced Learning Volume 5 ; 5 ; 2023 ; >
 
   }
 
@@ -388,6 +385,106 @@
       au < finished ; finished ; 2008 ; Working Papers in Communication Volume 3 ; 3 ; 2008 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2010 ; Working Papers in Communication Volume 4 ; 4 ; 2010 ; reingest2.clockss.org:8085 >
       #no further volumes published
+  }
+
+  {
+
+      title <
+        name = Ethnographic Edge ;
+        eissn = 2537-7426
+      >
+
+      param[base_url] = https://ojs.aut.ac.nz/
+      param[journal_id] = ethnographic-edge
+
+      au < manifest ; exists ; 2017 ; Ethnographic Edge Volume 1 ; 1 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Ethnographic Edge Volume 2 ; 2 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; Ethnographic Edge Volume 3 ; 3 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; Ethnographic Edge Volume 4 ; 4 ; 2020 ; >
+      au < manifest ; exists ; 2022 ; Ethnographic Edge Volume 5 ; 5 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Ethnographic Edge Volume 6 ; 6 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = Library Summer Conference ;
+        eissn = 
+      >
+
+      param[base_url] = https://ojs.aut.ac.nz/
+      param[journal_id] = lsc
+
+      au < manifest ; exists ; 2019 ; Library Summer Conference 2019 ; 1 ; 2019 ; >
+
+  }
+
+  {
+
+      title <
+        name = Link Symposium Abstracts ;
+        eissn = 2744-4015
+      >
+
+      param[base_url] = https://ojs.aut.ac.nz/
+      param[journal_id] = linksymposium
+
+      au < manifest ; exists ; 2020 ; Link Symposium Abstracts Volume 1 ; 1 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Link Symposium Abstracts Volume 2 ; 2 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Link Symposium Abstracts Volume 3 ; 3 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Link Symposium Abstracts Volume 4 ; 4 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = Pacific Journalism Monographs ;
+        issn = 2253-4113 ;
+        eissn = 2253-4121
+      >
+
+      param[base_url] = https://ojs.aut.ac.nz/
+      param[journal_id] = pacific-journalism-monographs
+
+      au < manifest ; exists ; 2011 ; Pacific Journalism Monographs Volume 1 ; 1 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Pacific Journalism Monographs Volume 2 ; 2 ; 2012 ; >
+      au < manifest ; exists ; 2014 ; Pacific Journalism Monographs Volume 3-4 ; 3-4 ; 2014 ; >
+      au < manifest ; exists ; 2016 ; Pacific Journalism Monographs Volume 5 ; 5 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; Pacific Journalism Monographs Volume 6-7 ; 6-7 ; 2017 ; >
+
+  }
+
+  {
+
+      title <
+        name = Psychotherapy and Politics International ;
+        eissn = 1556-9195
+      >
+
+      param[base_url] = https://ojs.aut.ac.nz/
+      param[journal_id] = psychotherapy-politics-international
+
+      au < manifest ; exists ; 2020 ; Psychotherapy and Politics International Volume 18 ; 18 ; 2020 ; >
+      au < manifest ; exists ; 2022 ; Psychotherapy and Politics International Volume 20 ; 20 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Psychotherapy and Politics International Volume 21 ; 21 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = Rangahau Aranga: AUT Graduate Review ;
+        eissn = 2815-8202
+      >
+
+      param[base_url] = https://ojs.aut.ac.nz/
+      param[journal_id] = rangahau-aranga
+
+      au < manifest ; exists ; 2022 ; Rangahau Aranga: AUT Graduate Review Volume 1 ; 1 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Rangahau Aranga: AUT Graduate Review Volume 2 ; 2 ; 2023 ; >
+
   }
 
 }
