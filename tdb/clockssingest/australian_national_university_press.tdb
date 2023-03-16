@@ -260,7 +260,7 @@
     au < finished ; finished ; 2020 ; Lilith: A Feminist History Journal Volume 26 ; 26 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2021 ; Lilith: A Feminist History Journal Volume 27 ; 27 ; reingest3.clockss.org:8083 >
     au < notReady ; exists ; 2022 ; Lilith: A Feminist History Journal Volume 28 ; 28 ; > #manifest page checker finds a volume that does not exist.
-    au < expected ; exists ; 2023 ; Lilith: A Feminist History Journal Volume 29 ; 29 ; > #manifest page checker finds a volume that does not exist.
+    au < expected ; exists ; 2023 ; Lilith: A Feminist History Journal Volume 29 ; 29 ; >
 
   }
 
@@ -281,7 +281,7 @@
     au < finished ; frozen ; 2020 ; Made in China Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2021 ; Made in China Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < notReady ; exists ; 2022 ; Made in China Volume 7 ; 7 ; > #manifest page checker finds a volume that does not exist.
-    au < expected ; exists ; 2023 ; Made in China Volume 8 ; 8 ; > #manifest page checker finds a volume that does not exist.
+    au < expected ; exists ; 2023 ; Made in China Volume 8 ; 8 ; >
 
   }
   
