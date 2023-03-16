@@ -32,8 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.collections.Predicate;
-import org.apache.commons.collections.PredicateUtils;
 import org.apache.commons.httpclient.util.DateParseException;
 import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.apache.commons.lang3.ObjectUtils;
@@ -434,17 +435,6 @@ public class ServeContent extends LockssServlet {
     return res;
   }
 
-  private boolean isIncludedAu(ArchivalUnit au) {
-    String pluginId = au.getPlugin().getPluginId();
-    if (!includePlugins.isEmpty()) {
-      return includePlugins.contains(pluginId);
-    }
-    if (!excludePlugins.isEmpty()) {
-      return !excludePlugins.contains(pluginId);
-    }
-    return true;
-  }
-
   protected boolean isNeverProxy() {
     return neverProxy ||
            !StringUtil.isNullString(getParameter("noproxy"));
@@ -706,8 +696,10 @@ public class ServeContent extends LockssServlet {
 
   boolean serveFromAuid(String auid) throws IOException {
     au = pluginMgr.getAuFromId(auid);
+
     if (au != null) {
       Collection<String> starts = au.getAccessUrls();
+
       if (!starts.isEmpty()) {
 	// look for a start URL with content
 	for (String startUrl : starts) {
@@ -718,12 +710,14 @@ public class ServeContent extends LockssServlet {
 	    return true;
 	  }
 	}
+
 	// if none found, use first start URL
 	url = starts.iterator().next();
 	handleUrlRequest();
 	return true;
       }
     }
+
     return false;
   }
 
@@ -818,8 +812,8 @@ public class ServeContent extends LockssServlet {
       if (au != null) {
         handleAuRequest();
       } else if (proxyMgr.isMigratingFrom()) {
-        // No AU -> No CU; do not need to look at "migrating to"'s response
-        // TODO: Forward to "migrating to" machine and let it handle the request
+        // No AU -> No CU: Do not need to look at "migrating to"'s response;
+        // forward to "migrating to" machine and let it handle the request.
         handleForwardRequestAndResponse();
       } else {
         handleMissingUrlRequest(url, PubState.Unknown);
@@ -1175,42 +1169,47 @@ public class ServeContent extends LockssServlet {
     LockssUrlConnection conn = null;
 
     try {
-      // Forward the ServeContent request to "migrating to" machine
-      HostPortParser fwdProxy = proxyMgr.getForwardProxy();
-      String fwdUrl = UrlUtil.rewriteRequestURLWithQuery(fwdProxy.getHost(), fwdProxy.getPort(), req);
-      conn = openLockssUrlConnection(fwdUrl, connPool);
+      try {
+        // Forward the ServeContent request to "migrating to" machine
+        HostPortParser fwdProxy = proxyMgr.getForwardProxy();
+        String fwdUrl = UrlUtil.rewriteRequestURLWithQuery(fwdProxy.getHost(), fwdProxy.getPort(), req);
+        conn = openLockssUrlConnection(fwdUrl, connPool);
 
-      // Add "migrating from" host and port headers to request
-      conn.addRequestProperty(HEADER_REWRITE_FOR,
-          UrlUtil.getUrlPrefix(UrlUtil.getRequestURL(req)));
+        // Add "migrating from" host and port headers to request
+        conn.addRequestProperty(HEADER_REWRITE_FOR,
+            UrlUtil.getUrlPrefix(UrlUtil.getRequestURL(req)));
 
-      conn.execute();
-    } catch (IOException e) {
-      if (log.isDebug3()) log.debug3("conn.execute", e);
+        conn.execute();
+      } catch (IOException e) {
+        if (log.isDebug3()) log.debug3("conn.execute", e);
 
-      // tear down connection
-      IOUtil.safeRelease(conn);
-      conn = null;
-    }
-
-    if (conn != null) {
-      switch (conn.getResponseCode()) {
-        case 200:
-        case 304:
-          // Forward response to client
-          serveFromForward(conn);
-          return;
-        default:
-          // Fallthrough
-          break;
+        // tear down connection
+        IOUtil.safeRelease(conn);
+        conn = null;
       }
-    } else {
-      // Forwarding to the "migrating to" machine failed due to some IOException -
-      // fallthrough...
+
+      if (conn != null) {
+        switch (conn.getResponseCode()) {
+          case 200:
+          case 304:
+            // Forward response to client
+            serveFromForward(conn);
+            return;
+          default:
+            // Fallthrough
+            break;
+        }
+      } else {
+        // Forwarding to the "migrating to" machine failed due to some IOException -
+        // fallthrough...
+      }
+    } finally {
+      IOUtil.safeRelease(conn);
     }
 
-    if (isNeverProxyForAu(au) || isMementoRequest()) {
-      handleMissingUrlRequest(url, PubState.KnownDown);
+    if (au == null || isNeverProxyForAu(au) || isMementoRequest()) {
+      handleMissingUrlRequest(url, au == null ?
+          PubState.NoContent : PubState.KnownDown);
     } else {
       handlePublisherRequestAndResponse();
     }
@@ -1346,7 +1345,9 @@ public class ServeContent extends LockssServlet {
 				     LockssUrlConnection conn)
       throws CacheException.PermissionException, IOException {
 
-    LoginPageChecker checker = au.getLoginPageChecker();
+    // TODO
+    LoginPageChecker checker = au == null ? null : au.getLoginPageChecker();
+
     if (checker == null) {
       return input;
     }
@@ -1504,10 +1505,6 @@ public class ServeContent extends LockssServlet {
     if (contentEncoding != null) {
       resp.setHeader(HttpFields.__ContentEncoding, contentEncoding);
     }
-
-    // Indicate the AU the content was rewritten for, even though it isn't
-    // cached locally
-    resp.setHeader(Constants.X_LOCKSS_REWRITTEN_FOR_AUID, au.getAuId());
 
     String charset = HeaderUtil.getCharsetOrDefaultFromContentType(ctype);
     BufferedInputStream bufRespStrm = new BufferedInputStream(respStrm);
@@ -2154,12 +2151,20 @@ public class ServeContent extends LockssServlet {
     block.add(table) ;
     block.add("<br/><br/>");
 
+    CandidateAusResponse response = CandidateAusResponse.EMPTY_RESPONSE;
+
     switch (missingFileAction) {
       case AuIndex:
+        if (proxyMgr.isMigratingFrom()) {
+          response = fetchAccessUrls(CandidateAusRequest.forAllAus());
+        }
+
         displayIndexPage(pluginMgr.getAllAus(),
+            response,
             HttpResponse.__404_Not_Found,
             block,
             "The LOCKSS box has the following Archival Units");
+
         logAccess("not present, 404 with index");
         break;
       case Redirect:
@@ -2168,6 +2173,8 @@ public class ServeContent extends LockssServlet {
       case HostAuIndex:
       default:
         Collection<ArchivalUnit> candidateAus = Collections.emptyList();
+
+        // Candidate AUs from this "migrating from" machine
         if (bibliographicItem != null) {
           candidateAus = getCandidateAus(bibliographicItem);
         } else if (url != null) {
@@ -2179,19 +2186,150 @@ public class ServeContent extends LockssServlet {
           }
         }
 
-        if (candidateAus != null && !candidateAus.isEmpty()) {
-          displayIndexPage(candidateAus,
+        // Fetch candidate AUs from "migrating to" machine
+        if (proxyMgr.isMigratingFrom()) {
+          CandidateAusRequest causReq = (bibliographicItem == null) ?
+              CandidateAusRequest.fromMissingUrl(url) :
+              CandidateAusRequest.fromBibliographicItem(bibliographicItem);
+
+          response = fetchAccessUrls(causReq);
+        }
+
+        Map<String, AccessUrlRow> fetchedAccessUrls =
+            response == null ? null : response.getAccessUrls();
+
+        if ((candidateAus != null && !candidateAus.isEmpty()) ||
+            (fetchedAccessUrls != null && !fetchedAccessUrls.isEmpty())) {
+          displayIndexPage(candidateAus, response,
               HttpResponse.__404_Not_Found,
               block,
               candidates404Msg);
         } else {
-          displayIndexPage(Collections.<ArchivalUnit> emptyList(),
+          displayIndexPage(Collections.emptyList(),
+              CandidateAusResponse.EMPTY_RESPONSE,
               HttpResponse.__404_Not_Found,
               block,
               null);
           logAccess("not present, 404");
         }
         break;
+    }
+  }
+
+  /**
+   * Fetch "migrating to" candidate AUs for a CandidateAusRequest:
+   *
+   * Note: We assume that the two machines have been set up with the same
+   * relevant configuration (e.g., plugin exclusions, TDB, etc)!
+   **/
+  private CandidateAusResponse fetchAccessUrls(CandidateAusRequest causReq) {
+    ObjectMapper objMapper = new ObjectMapper();
+    LockssUrlConnection conn = null;
+
+    try {
+      // Construct URL to "migrating to" ServeContent
+      HostPortParser fp = proxyMgr.getForwardProxy();
+      // Q: Do we always want to use the same protocol? Assuming yes.
+      String migratingToStem = reqURL.getProtocol() + "://" + fp.getHost() + ":" + fp.getPort();
+      String srvContentUrl = srvURLFromStem(migratingToStem, myServletDescr(), null);
+
+      // Execute POST request
+      // Q: Implement paging?
+      LockssUrlConnectionPool pool = proxyMgr.getQuickConnectionPool();
+      conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_POST, srvContentUrl, pool);
+      conn.setRequestEntity(objMapper.writeValueAsString(causReq));
+      conn.execute();
+
+      // Parse JSON response as access URLs map
+      InputStream responseBody = conn.getResponseInputStream();
+      return objMapper.readValue(responseBody, new TypeReference<CandidateAusResponse>() {});
+    } catch (IOException e) {
+      log.warning("Could not fetch accessUrls", e);
+      IOUtil.safeRelease(conn);
+      return null;
+    }
+  }
+
+  public static class CandidateAusResponse {
+    Map<String, AccessUrlRow> accessUrls;
+    boolean ausStarted;
+
+    public static final CandidateAusResponse EMPTY_RESPONSE = new CandidateAusResponse();
+    static {
+      EMPTY_RESPONSE.setAusStarted(true);
+      EMPTY_RESPONSE.setAccessUrls(Collections.emptyMap());
+    }
+
+    public Map<String, AccessUrlRow> getAccessUrls() {
+      return accessUrls;
+    }
+
+    public void setAccessUrls(Map<String, AccessUrlRow> accessUrls) {
+      this.accessUrls = accessUrls;
+    }
+
+    public boolean isAusStarted() {
+      return ausStarted;
+    }
+
+    public void setAusStarted(boolean ausStarted) {
+      this.ausStarted = ausStarted;
+    }
+  }
+
+  public static class CandidateAusRequest {
+    public enum RequestType {
+      BIBLIOGRAPHIC_ITEM,
+      MISSING_URL,
+      ALL_AUS
+    }
+
+    RequestType requestType;
+    String url;
+    BibliographicItem bibliographicItem;
+
+    public static CandidateAusRequest forAllAus() {
+      CandidateAusRequest req = new CandidateAusRequest();
+      req.setRequestType(RequestType.ALL_AUS);
+      return req;
+    }
+
+    public static CandidateAusRequest fromBibliographicItem(BibliographicItem bibliographicItem) {
+      CandidateAusRequest req = new CandidateAusRequest();
+      req.setRequestType(RequestType.BIBLIOGRAPHIC_ITEM);
+      req.setBibliographicItem(bibliographicItem);
+      return req;
+    }
+
+    public static CandidateAusRequest fromMissingUrl(String missingUrl) {
+      CandidateAusRequest req = new CandidateAusRequest();
+      req.setRequestType(RequestType.MISSING_URL);
+      req.setUrl(missingUrl);
+      return req;
+    }
+
+    public RequestType getRequestType() {
+      return requestType;
+    }
+
+    public void setRequestType(RequestType requestType) {
+      this.requestType = requestType;
+    }
+
+    public String getUrl() {
+      return url;
+    }
+
+    public void setUrl(String url) {
+      this.url = url;
+    }
+
+    public BibliographicItem getBibliographicItem() {
+      return bibliographicItem;
+    }
+
+    public void setBibliographicItem(BibliographicItem bibliographicItem) {
+      this.bibliographicItem = bibliographicItem;
     }
   }
 
@@ -2374,6 +2512,7 @@ public class ServeContent extends LockssServlet {
 
   protected void handleMissingUrlRequest(String missingUrl, PubState pstate)
       throws IOException {
+
     String missing =
         missingUrl + ((au != null) ? " in AU: " + au.getName() : "");
 
@@ -2385,6 +2524,8 @@ public class ServeContent extends LockssServlet {
         "Selecting publisher link takes you away from this LOCKSS box."));
     block.add(" to view it at the publisher:</p>");
     block.add("<a href=\"" + missingUrl + "\">" + missingUrl + "</a><br/><br/>");
+
+    CandidateAusResponse response = CandidateAusResponse.EMPTY_RESPONSE;
 
     switch (getMissingFileAction(pstate)) {
       case Error_404:
@@ -2398,20 +2539,33 @@ public class ServeContent extends LockssServlet {
         break;
       case HostAuIndex:
         Collection<ArchivalUnit> candidateAus = Collections.emptyList();
+
+        // Candidate AUs from this "migrating from" machine
         try {
             candidateAus = pluginMgr.getCandidateAus(missingUrl);
         } catch (MalformedURLException ex) {
           // ignore error, serve file
           log.warning("Handling URL: " + url + " throws ", ex);
         }
-        if (candidateAus != null && !candidateAus.isEmpty()) {
-          displayIndexPage(candidateAus,
+
+        // Fetch candidate AUs from "migrating to" machine
+        if (proxyMgr.isMigratingFrom()) {
+          response = fetchAccessUrls(CandidateAusRequest.fromMissingUrl(url));
+        }
+
+        Map<String, AccessUrlRow> fetchedAccessUrls =
+            response == null ? null : response.getAccessUrls();
+
+        if ((candidateAus != null && !candidateAus.isEmpty()) ||
+            (fetchedAccessUrls != null && !fetchedAccessUrls.isEmpty())){
+          displayIndexPage(candidateAus, response,
               HttpResponse.__404_Not_Found,
               block,
               candidates404Msg);
           logAccess("not present, 404 with index");
         } else {
-          displayIndexPage(Collections.<ArchivalUnit>emptyList(),
+          displayIndexPage(Collections.emptyList(),
+              CandidateAusResponse.EMPTY_RESPONSE,
               HttpResponse.__404_Not_Found,
               block,
               null);
@@ -2419,10 +2573,16 @@ public class ServeContent extends LockssServlet {
         }
         break;
       case AuIndex:
+        if (proxyMgr.isMigratingFrom()) {
+          response = fetchAccessUrls(CandidateAusRequest.forAllAus());
+        }
+
         displayIndexPage(pluginMgr.getAllAus(),
+            response,
             HttpResponse.__404_Not_Found,
             block,
             null);
+
         logAccess("not present, 404 with index");
         break;
     }
@@ -2439,29 +2599,45 @@ public class ServeContent extends LockssServlet {
   }
 
   void displayIndexPage() throws IOException {
-    displayIndexPage(pluginMgr.getAllAus(), -1, (Element)null, (String)null);
+    CandidateAusResponse response = proxyMgr.isMigratingFrom() ?
+        fetchAccessUrls(CandidateAusRequest.forAllAus()) :
+        CandidateAusResponse.EMPTY_RESPONSE;
+
+    displayIndexPage(pluginMgr.getAllAus(),
+        response,
+        -1, (Element)null, (String)null);
   }
 
+  /** Displays a ServeContent index page from the provided {@link ArchivalUnit}s and
+   * {@link CandidateAusResponse} from a "migrating to" machine.
+   *
+   * A {@code null} response is interpreted as a fetch error. Use
+   * {@code CandidateAusResponse.EMPTY_RESPONSE} if presenting access URLS for AUs only.
+   */
   void displayIndexPage(Collection<ArchivalUnit> auList,
-                        int result,
-                        String headerText)
-      throws IOException {
-    displayIndexPage(auList, result, (Element)null, headerText);
-  }
-
-  void displayIndexPage(Collection<ArchivalUnit> auList,
+                        CandidateAusResponse response,
                         int result,
                         Element headerElement,
-                        String headerText)
-      throws IOException {
-    Predicate pred;
-    boolean offerUnfilteredList = false;
-    if (enabledPluginsOnly) {
-      pred = PredicateUtils.andPredicate(enabledAusPred, allAusPred);
-      offerUnfilteredList = areAnyExcluded(auList, enabledAusPred);
-    } else {
-      pred = allAusPred;
+                        String headerText) throws IOException {
+
+    Predicate pred = allAusPred;
+
+    boolean noMatchingContent = areAllExcluded(auList, pred);
+    boolean areAusStartedOnBoth = pluginMgr.areAusStarted();
+
+    Map<String, AccessUrlRow> allAccessUrls =
+        transformAuList(auList, pred);
+
+    // Merge access URLs from "migrating to" machine
+    if (response != null) {
+      Map<String, AccessUrlRow> accessUrlRows =
+          response.getAccessUrls();
+
+      allAccessUrls.putAll(accessUrlRows);
+      noMatchingContent &= accessUrlRows.isEmpty();
+      areAusStartedOnBoth &= response.isAusStarted();
     }
+
     Page page = newPage();
 
     if (headerElement != null) {
@@ -2470,54 +2646,113 @@ public class ServeContent extends LockssServlet {
 
     Block centeredBlock = new Block(Block.Center);
 
-    if (areAllExcluded(auList, pred) && !offerUnfilteredList) {
+    if (response == null) {
+      errMsg = "Error fetching access URLs";
+    } else if (noMatchingContent) {
       ServletUtil.layoutExplanationBlock(centeredBlock,
           "No matching content has been preserved on this LOCKSS box");
     } else {
-      // Layout manifest index w/ URLs pointing to this servlet
-      Element ele =
-          ServletUtil.manifestIndex(pluginMgr,
-              auList,
-              pred,
-              headerText,
-              new ServletUtil.ManifestUrlTransform() {
-                public Object transformUrl(String url,
-                                           ArchivalUnit au){
-                  Properties query =
-                      PropUtil.fromArgs("url", url);
-                  if (au != null) {
-                    query.put("auid", au.getAuId());
-                  }
-                  return srvLink(myServletDescr(),
-                      url, query);
-                }},
-              true);
+      // Sort access URL rows by AU title
+      // FIXME: This doesn't scale
+      List<AccessUrlRow> rows = new ArrayList<>(allAccessUrls.values());
+      Collections.sort(rows);
+
+      Element ele = manifestIndexTable(areAusStartedOnBoth, headerText, rows);
       centeredBlock.add(ele);
-      if (offerUnfilteredList) {
-        centeredBlock.add("<br>");
-        centeredBlock.add("Other possibly relevant content has not yet been "
-                          + "certified for use with ServeContent and may not "
-                          + "display correctly.  Click ");
-        Properties args = getParamsAsProps();
-        args.put("filterPlugins", "no");
-        centeredBlock.add(srvLink(myServletDescr(), "here", args));
-        centeredBlock.add(" to see the complete list.");
-      }
     }
+
     page.add(centeredBlock);
+
     if (result > 0) {
       resp.setStatus(result);
     }
+
     endPage(page);
   }
 
-  boolean areAnyExcluded(Collection<ArchivalUnit> auList, Predicate pred) {
+  /** Transforms a collection of AUs to a map from AUID to {@link AccessUrlRow} which
+   * can be used to generate an index. */
+  private Map<String, AccessUrlRow> transformAuList(
+      Collection<ArchivalUnit> auList, Predicate pred) {
+
+    Map<String, AccessUrlRow> rows = new HashMap<>();
+
+    // Add "migrating from" index table data
     for (ArchivalUnit au : auList) {
-      if (!pred.evaluate(au)) {
-        return true;
+      if (pred != null && !pred.evaluate(au)) {
+        continue;
+      }
+
+      AccessUrlRow row =
+          new AccessUrlRow(encodeText(au.getName()), AuUtil.hasCrawled(au));
+
+      try {
+        row.setAuId(au.getAuId());
+        row.setAccessUrls(au.getAccessUrls());
+        rows.put(au.getAuId(), row);
+      } catch (RuntimeException e) {
+        log.warning("Plugin error; couldn't get access URLs for AUID: " + au.getAuId(), e);
       }
     }
-    return false;
+
+    return rows;
+  }
+
+  /** Generates HTML for a manifest index table from a collection of {@link AccessUrlRow}s **/
+  private Element manifestIndexTable(boolean areAusStarted,
+                                     String header,
+                                     Collection<AccessUrlRow> accessUrlRows) {
+
+    Table tbl = new Table(ServletUtil.AUSUMMARY_TABLE_BORDER,
+        "cellspacing=\"4\" cellpadding=\"0\"");
+
+    if (header != null) {
+      tbl.newRow();
+      tbl.newCell("align=\"center\" colspan=\"3\"");
+      tbl.add(header);
+    }
+
+    if (!areAusStarted) {
+      tbl.newRow();
+      tbl.newCell("align=\"center\" colspan=\"3\"");
+      tbl.add(ServletUtil.notStartedWarning());
+    }
+
+    tbl.newRow();
+    tbl.addHeading("Archival Unit", "align=left");
+    tbl.newCell("width=8");
+    tbl.add("&nbsp;");
+    tbl.addHeading("Manifest", "align=left");
+
+    for (AccessUrlRow row : accessUrlRows) {
+      tbl.newRow();
+      tbl.newCell(ServletUtil.ALIGN_LEFT);
+      tbl.add(encodeText(row.getName()));
+      tbl.newCell("width=8");
+      tbl.add("&nbsp;");
+      tbl.newCell(ServletUtil.ALIGN_LEFT);
+
+      try {
+        for (Iterator<String> uiter = row.getAccessUrls().iterator(); uiter.hasNext(); ) {
+          String accessUrl = uiter.next();
+          Properties query = PropUtil.fromArgs("url", accessUrl,
+              "auid", row.getAuId());
+          tbl.add(srvLink(myServletDescr(), accessUrl, query));
+
+          if (!row.isFullyCollected()) {
+            tbl.add(" (not fully collected)");
+          }
+
+          if (uiter.hasNext()) {
+            tbl.add("<br>");
+          }
+        }
+      } catch (RuntimeException e) {
+        tbl.add("Plugin error: " + e.getMessage());
+      }
+    }
+
+    return tbl;
   }
 
   boolean areAllExcluded(Collection<ArchivalUnit> auList, Predicate pred) {
@@ -2536,13 +2771,6 @@ public class ServeContent extends LockssServlet {
              || !pluginMgr.isInternalAu((ArchivalUnit)obj);
     }};
 
-  // true of AUs belonging to plugins included by includePlugins and
-  // excludePlugins
-  Predicate enabledAusPred = new Predicate() {
-    public boolean evaluate(Object obj) {
-      return isIncludedAu((ArchivalUnit)obj);
-    }};
-
   static enum PubState {
     KnownDown,
     RecentlyDown,
@@ -2554,6 +2782,57 @@ public class ServeContent extends LockssServlet {
     };
     public boolean mightHaveContent() {
       return false;
+    }
+  }
+
+  /** Represents a row in the access URL table */
+  public static class AccessUrlRow implements Comparable<AccessUrlRow> {
+    private String auId;
+    private String name;
+    private boolean fullyCollected;
+    private Collection<String> accessUrls = new ArrayList<>();
+
+    public AccessUrlRow() {
+      // Intentionally left blank for JSON deserialization
+    }
+
+    @Override
+    public int compareTo(AccessUrlRow o) {
+      return CatalogueOrderComparator.getSingleton()
+          .compare(getName(), o.getName());
+    }
+
+    public AccessUrlRow(String name, boolean isFullyCollected) {
+      this.name = name;
+      this.fullyCollected = isFullyCollected;
+    }
+
+    public String getName() {
+      return name;
+    }
+
+    public void setName(String name) {
+      this.name = name;
+    }
+
+    public boolean isFullyCollected() {
+      return fullyCollected;
+    }
+
+    public Collection<String> getAccessUrls() {
+      return accessUrls;
+    }
+
+    public void setAccessUrls(Collection<String> accessUrls) {
+      this.accessUrls = accessUrls;
+    }
+
+    public String getAuId() {
+      return auId;
+    }
+
+    public void setAuId(String auId) {
+      this.auId = auId;
     }
   }
 }
