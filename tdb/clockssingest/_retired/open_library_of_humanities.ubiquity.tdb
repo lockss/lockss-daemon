@@ -86,7 +86,7 @@
       comment[publisher] = Open Library of Humanities
 #      param[base_url] = http://c21.openlibhums.org/
 
-         au < finished ; crawling ; 2016 ; 4 ; C21 Literature: journal of 21st-century writings Volume 2016 ; 2016 ; http://c21.openlibhums.org/ ; reingest4.clockss.org:8082 >
+         au < finished ; frozen ; 2016 ; 4 ; C21 Literature: journal of 21st-century writings Volume 2016 ; 2016 ; http://c21.openlibhums.org/ ; reingest4.clockss.org:8082 >
          au < finished ; finished ; 2017 ; 5 ; C21 Literature: journal of 21st-century writings Volume 2017 ; 2017 ; http://c21.openlibhums.org/ ; reingest5.clockss.org:8082 >
 
   }
@@ -104,11 +104,11 @@
         au < finished ; finished ; 2005 ; 1 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2005 ; 2005 ; https://www.19.bbk.ac.uk/ ; reingest1.clockss.org:8082 >
         au < finished ; finished ; 2006 ; 2 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2006 ; 2006 ; https://www.19.bbk.ac.uk/ ; reingest2.clockss.org:8085 >
         au < finished ; finished ; 2007 ; 3 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2007 ; 2007 ; https://www.19.bbk.ac.uk/ ; reingest3.clockss.org:8083 >
-        au < finished ; crawling ; 2008 ; 4 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2008 ; 2008 ; https://www.19.bbk.ac.uk/ ; reingest4.clockss.org:8082 >
+        au < finished ; frozen ; 2008 ; 4 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2008 ; 2008 ; https://www.19.bbk.ac.uk/ ; reingest4.clockss.org:8082 >
         au < finished ; finished ; 2009 ; 5 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2009 ; 2009 ; https://www.19.bbk.ac.uk/ ; reingest1.clockss.org:8082 >
-        au < finished ; crawling ; 2010 ; 6 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2010 ; 2010 ; http://www.19.bbk.ac.uk/ ; reingest4.clockss.org:8082 >
+        au < finished ; frozen ; 2010 ; 6 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2010 ; 2010 ; http://www.19.bbk.ac.uk/ ; reingest4.clockss.org:8082 >
         au < finished ; crawling ; 2011 ; 7 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2011 ; 2011 ; http://www.19.bbk.ac.uk/ ; reingest2.clockss.org:8085 >
-        au < finished ; crawling ; 2012 ; 8 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2012 ; 2012 ; http://www.19.bbk.ac.uk/ ; reingest4.clockss.org:8082 >
+        au < finished ; frozen ; 2012 ; 8 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2012 ; 2012 ; http://www.19.bbk.ac.uk/ ; reingest4.clockss.org:8082 >
         au < finished ; crawling ; 2013 ; 9 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2013 ; 2013 ; http://www.19.bbk.ac.uk/ ; reingest2.clockss.org:8085 >
         au < finished ; finished ; 2014 ; 10 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2014 ; 2014 ; http://www.19.bbk.ac.uk/ ; reingest5.clockss.org:8082 >
         au < finished ; finished ; 2015 ; 11 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2015 ; 2015 ; http://www.19.bbk.ac.uk/ ; reingest5.clockss.org:8082 >
@@ -165,7 +165,7 @@
 #      param[base_url] = https://marvell.openlibhums.org/
 
       au < finished ; finished ; 2016 ; 1 ; Marvell Studies Volume 2016 ; 2016 ; https://marvell.openlibhums.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2017 ; 2 ; Marvell Studies Volume 2017 ; 2017 ; https://marvell.openlibhums.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2017 ; 2 ; Marvell Studies Volume 2017 ; 2017 ; https://marvell.openlibhums.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; 3 ; Marvell Studies Volume 2018 ; 2018 ; https://marvell.openlibhums.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; 4 ; Marvell Studies Volume 2019 ; 2019 ; https://marvell.openlibhums.org/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2020 ; 5 ; Marvell Studies Volume 2020 ; 2020 ; https://marvell.openlibhums.org/ ; >
@@ -256,7 +256,7 @@
       au < finished ; finished ; 2015 ; 25 ; Theoretical Roman Archaeology Conference Volume 2015 ; 2015 ; https://traj.openlibhums.org/ ; reingest5.clockss.org:8082 >
       au < doesNotExist ; doesNotExist ; 2016 ; 26 ; Theoretical Roman Archaeology Journal Volume 2016 ; 2016 ; https://traj.openlibhums.org/ ; >
       au < doesNotExist ; doesNotExist ; 2017 ; 27 ; Theoretical Roman Archaeology Journal Volume 2017 ; 2017 ; https://traj.openlibhums.org/ ; >
-      au < finished ; crawling ; 2018 ; 28 ; Theoretical Roman Archaeology Journal Volume 2018 ; 2018 ; https://traj.openlibhums.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; 28 ; Theoretical Roman Archaeology Journal Volume 2018 ; 2018 ; https://traj.openlibhums.org/ ; reingest4.clockss.org:8082 >
       au < superseded ; exists ; 2019 ; 29 ; Theoretical Roman Archaeology Journal Volume 2019 [superseded] ; 2019 ; https://traj.openlibhums.org/ ; >
       au < superseded ; exists ; 2020 ; 30 ; Theoretical Roman Archaeology Journal Volume 2020 [superseded] ; 2020 ; https://traj.openlibhums.org/ ; >
 
@@ -301,8 +301,8 @@
       #Moved to janeway?
 
       au < finished ; finished ; 2016 ; 1 ; Glossa: a journal of general linguistics Volume 2016 ; 2016 ; http://www.glossa-journal.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2017 ; 2 ; Glossa: a journal of general linguistics Volume 2017 ; 2017 ; http://www.glossa-journal.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2018 ; 3 ; Glossa: a journal of general linguistics Volume 2018 ; 2018 ; https://www.glossa-journal.org/ ; reingest4.clockss.org:8082 > #no permission statement 7.31.2018
+      au < finished ; frozen ; 2017 ; 2 ; Glossa: a journal of general linguistics Volume 2017 ; 2017 ; http://www.glossa-journal.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; 3 ; Glossa: a journal of general linguistics Volume 2018 ; 2018 ; https://www.glossa-journal.org/ ; reingest4.clockss.org:8082 > #no permission statement 7.31.2018
       au < finished ; finished ; 2019 ; 4 ; Glossa: a journal of general linguistics Volume 2019 ; 2019 ; https://www.glossa-journal.org/ ; reingest3.clockss.org:8083 > #no permission statement 7.31.2019
       au < finished ; finished ; 2020 ; 5 ; Glossa: a journal of general linguistics Volume 2020 ; 2020 ; https://www.glossa-journal.org/ ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2021 ; 6 ; Glossa: a journal of general linguistics Volume 2021 ; 2021 ; https://www.glossa-journal.org/ ; > #moved to janeway?
@@ -320,7 +320,7 @@
 #      param[base_url] = https://openscreensjournal.com/
 
       au < finished ; finished ; 2018 ; 1 ; Open Screens Volume 2018 ; 2018 ; https://openscreensjournal.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2019 ; 2 ; Open Screens Volume 2019 ; 2019 ; https://openscreensjournal.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2019 ; 2 ; Open Screens Volume 2019 ; 2019 ; https://openscreensjournal.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2020 ; 3 ; Open Screens Volume 2020 ; 2020 ; https://openscreensjournal.com/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2021 ; 4 ; Open Screens Volume 2021 [superseded] ; 2021 ; https://openscreensjournal.com/ ; >
 
@@ -389,7 +389,7 @@
       au < finished ; finished ; 2015 ; 11 ; Digital Medievalist Volume 2015 ; 2015 ; https://journal.digitalmedievalist.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2016 ; 12 ; Digital Medievalist Volume 2016 ; 2016 ; https://journal.digitalmedievalist.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; 13 ; Digital Medievalist Volume 2017 ; 2017 ; https://journal.digitalmedievalist.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2018 ; 14 ; Digital Medievalist Volume 2018 ; 2018 ; https://journal.digitalmedievalist.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2018 ; 14 ; Digital Medievalist Volume 2018 ; 2018 ; https://journal.digitalmedievalist.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2019 ; 15 ; Digital Medievalist Volume 2019 ; 2019 ; https://journal.digitalmedievalist.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2020 ; 16 ; Digital Medievalist Volume 2020 ; 2020 ; https://journal.digitalmedievalist.org/ ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2021 ; 17 ; Digital Medievalist Volume 2021 [superseded] ; 2021 ; https://journal.digitalmedievalist.org/ ; >
@@ -417,7 +417,7 @@
       au < finished ; finished ; 2017 ; 2017 ; Digital Studies / Le champ numérique Volume 2017 ; 2017 ; https://www.digitalstudies.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; 2018 ; Digital Studies / Le champ numérique Volume 2018 ; 2018 ; https://www.digitalstudies.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; 2019 ; Digital Studies / Le champ numérique Volume 2019 ; 2019 ; https://www.digitalstudies.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2020 ; 2020 ; Digital Studies / Le champ numérique Volume 2020 ; 2020 ; https://www.digitalstudies.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2020 ; 2020 ; Digital Studies / Le champ numérique Volume 2020 ; 2020 ; https://www.digitalstudies.org/ ; reingest4.clockss.org:8082 >
       au < superseded ; exists ; 2021 ; 2021 ; Digital Studies / Le champ numérique Volume 2021 [superseded] ; 2021 ; https://www.digitalstudies.org/ ; >
 
   }
@@ -440,7 +440,7 @@
       au < finished ; finished ; 2017 ; 3 ; Le foucaldien Volume 2017 ; 2017 ; https://foucaldien.net/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; 4 ; Le foucaldien Volume 2018 ; 2018 ; https://foucaldien.net/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; 5 ; Le foucaldien Volume 2019 ; 2019 ; https://foucaldien.net/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2020 ; 6 ; Le foucaldien Volume 2020 ; 2020 ; https://foucaldien.net/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2020 ; 6 ; Le foucaldien Volume 2020 ; 2020 ; https://foucaldien.net/ ; reingest4.clockss.org:8082 >
       au < superseded ; exists ; 2021 ; 7 ; Le foucaldien Volume 2021 [superseded] ; 2021 ; https://foucaldien.net/ ; >
 
   }
