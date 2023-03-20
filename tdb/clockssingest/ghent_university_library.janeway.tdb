@@ -42,7 +42,7 @@
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Authorship Volume 2020 ; >
       au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Authorship Volume 2021 ; >
       au < expected ; exists ; 2022 ; 2022 ; 2022 ; Authorship Volume 2022 ; >
-      au < expected ; exists ; 2023 ; 2023 ; 2023 ; Authorship Volume 2023 ; >
+      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Authorship Volume 2023 ; >
 
   }
 
@@ -186,7 +186,7 @@
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Journal of European Periodical Studies Volume 2020 ; >
       au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Journal of European Periodical Studies Volume 2021 ; >
       au < crawling ; exists ; 2022 ; 2022 ; 2022 ; Journal of European Periodical Studies Volume 2022 ; >
-      au < expected ; exists ; 2023 ; 2023 ; 2023 ; Journal of European Periodical Studies Volume 2023 ; >
+      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Journal of European Periodical Studies Volume 2023 ; >
 
   }
 
@@ -216,7 +216,7 @@
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Vlaams Diergeneeskundig Tijdschrift Volume 2020 ; >
       au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Vlaams Diergeneeskundig Tijdschrift Volume 2021 ; >
       au < crawling ; exists ; 2022 ; 2022 ; 2022 ; Vlaams Diergeneeskundig Tijdschrift Volume 2022 ; >
-      au < expected ; exists ; 2023 ; 2023 ; 2023 ; Vlaams Diergeneeskundig Tijdschrift Volume 2023 ; >
+      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Vlaams Diergeneeskundig Tijdschrift Volume 2023 ; >
 
   }
 
@@ -663,7 +663,7 @@
 
       au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2021 ; >
       au < manifest ; exists ; 2022 ; 2022 ; 2022 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2022 ; >
-      au < expected ; exists ; 2023 ; 2023 ; 2023 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2023 ; >
+      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2023 ; >
 
   }
 

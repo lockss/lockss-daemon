@@ -250,7 +250,7 @@
 
       au < manifest ; exists ; 2021 ; 1 ; International Journal of Digital Health Volume 2021 ; 2021 ; https://ijdigitalhealth.com/ ; >
       au < manifest ; exists ; 2022 ; 2 ; International Journal of Digital Health Volume 2022 ; 2022 ; https://ijdigitalhealth.com/ ; >
-      au < expected ; exists ; 2023 ; 3 ; International Journal of Digital Health Volume 2023 ; 2023 ; https://ijdigitalhealth.com/ ; >
+      au < manifest ; exists ; 2023 ; 3 ; International Journal of Digital Health Volume 2023 ; 2023 ; https://ijdigitalhealth.com/ ; >
 
   }
 
@@ -321,7 +321,7 @@
       au < finished ; finished ; 2020 ; 7 ; Annals of Global Health Volume 2020 ; 2020 ; https://www.annalsofglobalhealth.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; 8 ; Annals of Global Health Volume 2021 ; 2021 ; https://www.annalsofglobalhealth.org/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2022 ; 9 ; Annals of Global Health Volume 2022 ; 2022 ; https://www.annalsofglobalhealth.org/ ; >
-      au < expected ; exists ; 2023 ; 10 ; Annals of Global Health Volume 2023 ; 2023 ; https://www.annalsofglobalhealth.org/ ; >
+      au < manifest ; exists ; 2023 ; 10 ; Annals of Global Health Volume 2023 ; 2023 ; https://www.annalsofglobalhealth.org/ ; >
 
   }
 
@@ -1037,7 +1037,7 @@
       au < notReady ; exists ; 2020 ; 5 ; Citizen Science: Theory and Practice Volume 2020 ; 2020 ; https://theoryandpractice.citizenscienceassociation.org/ ; > #403 Forbidden cloudfront.net
       au < finished ; manifest ; 2021 ; 6 ; Citizen Science: Theory and Practice Volume 2021 ; 2021 ; https://theoryandpractice.citizenscienceassociation.org/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2022 ; 7 ; Citizen Science: Theory and Practice Volume 2022 ; 2022 ; https://theoryandpractice.citizenscienceassociation.org/ ; >
-      au < expected ; exists ; 2023 ; 8 ; Citizen Science: Theory and Practice Volume 2023 ; 2023 ; https://theoryandpractice.citizenscienceassociation.org/ ; >
+      au < manifest ; exists ; 2023 ; 8 ; Citizen Science: Theory and Practice Volume 2023 ; 2023 ; https://theoryandpractice.citizenscienceassociation.org/ ; >
 
   }
 
@@ -1092,7 +1092,7 @@
       au < finished ; finished ; 2020 ; 19 ; Data Science Journal Volume 2020 ; 2020 ; https://datascience.codata.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2021 ; 20 ; Data Science Journal Volume 2021 ; 2021 ; https://datascience.codata.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2022 ; 21 ; Data Science Journal Volume 2022 ; 2022 ; https://datascience.codata.org/ ; >
-      au < expected ; exists ; 2023 ; 22 ; Data Science Journal Volume 2023 ; 2023 ; https://datascience.codata.org/ ; >
+      au < manifest ; exists ; 2023 ; 22 ; Data Science Journal Volume 2023 ; 2023 ; https://datascience.codata.org/ ; >
 
   }
 
@@ -1110,7 +1110,7 @@
       au < finished ; finished ; 2020 ; 3 ; Future Cities and Environment Volume 2020 ; 2020 ; https://futurecitiesandenvironment.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; 4 ; Future Cities and Environment Volume 2021 ; 2021 ; https://futurecitiesandenvironment.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2022 ; 5 ; Future Cities and Environment Volume 2022 ; 2022 ; https://futurecitiesandenvironment.com/ ; >
-      au < expected ; exists ; 2023 ; 6 ; Future Cities and Environment Volume 2023 ; 2023 ; https://futurecitiesandenvironment.com/ ; >
+      au < manifest ; exists ; 2023 ; 6 ; Future Cities and Environment Volume 2023 ; 2023 ; https://futurecitiesandenvironment.com/ ; >
 
   }
 
@@ -1575,7 +1575,7 @@
       au < finished ; finished ; 2020 ; 104 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2020 ; 2020 ; https://www.jbsr.be/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2021 ; 105 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2021 ; 2021 ; https://www.jbsr.be/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2022 ; 106 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2022 ; 2022 ; https://www.jbsr.be/ ; >
-      au < expected ; exists ; 2023 ; 107 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2023 ; 2023 ; https://www.jbsr.be/ ; >
+      au < manifest ; exists ; 2023 ; 107 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2023 ; 2023 ; https://www.jbsr.be/ ; >
 
   }
 
@@ -1677,7 +1677,7 @@
       au < finished ; finished ; 2020 ; 14 ; International Journal of the Commons Volume 2020 ; 2020 ; https://www.thecommonsjournal.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; 15 ; International Journal of the Commons Volume 2021 ; 2021 ; https://www.thecommonsjournal.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2022 ; 16 ; International Journal of the Commons Volume 2022 ; 2022 ; https://www.thecommonsjournal.org/ ; >
-      au < expected ; exists ; 2023 ; 17 ; International Journal of the Commons Volume 2023 ; 2023 ; https://www.thecommonsjournal.org/ ; >
+      au < manifest ; exists ; 2023 ; 17 ; International Journal of the Commons Volume 2023 ; 2023 ; https://www.thecommonsjournal.org/ ; >
 
   }
 
@@ -1708,7 +1708,7 @@
       au < finished ; finished ; 2020 ; 15 ; Global Heart Volume 2020 ; 2020 ;  https://globalheartjournal.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2021 ; 16 ; Global Heart Volume 2021 ; 2021 ;  https://globalheartjournal.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2022 ; 17 ; Global Heart Volume 2022 ; 2022 ;  https://globalheartjournal.com/ ; >
-      au < expected ; exists ; 2023 ; 18 ; Global Heart Volume 2023 ; 2023 ;  https://globalheartjournal.com/ ; >
+      au < manifest ; exists ; 2023 ; 18 ; Global Heart Volume 2023 ; 2023 ;  https://globalheartjournal.com/ ; >
 
   }
 
@@ -2005,7 +2005,7 @@
       au < finished ; crawling ; 2020 ; 10 ; Tremor and Other Hyperkinetic Movements Volume 2020 ; 2020 ; https://tremorjournal.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2021 ; 11 ; Tremor and Other Hyperkinetic Movements Volume 2021 ; 2021 ; https://tremorjournal.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2022 ; 12 ; Tremor and Other Hyperkinetic Movements Volume 2022 ; 2022 ; https://tremorjournal.org/ ; >
-      au < expected ; exists ; 2023 ; 13 ; Tremor and Other Hyperkinetic Movements Volume 2023 ; 2023 ; https://tremorjournal.org/ ; >
+      au < manifest ; exists ; 2023 ; 13 ; Tremor and Other Hyperkinetic Movements Volume 2023 ; 2023 ; https://tremorjournal.org/ ; >
 
   }
 
@@ -2110,7 +2110,7 @@
       au < finished ; finished ; 2020 ; 3 ; Journal of Cognition Volume 2020 ; 2020 ; https://www.journalofcognition.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; 4 ; Journal of Cognition Volume 2021 ; 2021 ; https://www.journalofcognition.org/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2022 ; 5 ; Journal of Cognition Volume 2022 ; 2022 ; https://www.journalofcognition.org/ ; >
-      au < expected ; exists ; 2023 ; 6 ; Journal of Cognition Volume 2023 ; 2023 ; https://www.journalofcognition.org/ ; >
+      au < manifest ; exists ; 2023 ; 6 ; Journal of Cognition Volume 2023 ; 2023 ; https://www.journalofcognition.org/ ; >
 
   }
 
@@ -2129,7 +2129,7 @@
       au < finished ; finished ; 2020 ; 3 ; Journal of Computer Applications in Archaeology Volume 2020 ; 2020 ; https://journal.caa-international.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; 4 ; Journal of Computer Applications in Archaeology Volume 2021 ; 2021 ; https://journal.caa-international.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2022 ; 5 ; Journal of Computer Applications in Archaeology Volume 2022 ; 2022 ; https://journal.caa-international.org/ ; >
-      au < expected ; exists ; 2023 ; 6 ; Journal of Computer Applications in Archaeology Volume 2023 ; 2023 ; https://journal.caa-international.org/ ; >
+      au < manifest ; exists ; 2023 ; 6 ; Journal of Computer Applications in Archaeology Volume 2023 ; 2023 ; https://journal.caa-international.org/ ; >
 
   }
 
@@ -2692,7 +2692,7 @@
       au < finished ; finished ; 2020 ; 18 ; ERLACS Volume 2020 ; 2020 ; https://www.erlacs.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2021 ; 19 ; ERLACS Volume 2021 ; 2021 ; https://www.erlacs.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2022 ; 20 ; ERLACS Volume 2022 ; 2022 ; https://www.erlacs.org/ ; >
-      au < expected ; exists ; 2023 ; 21 ; ERLACS Volume 2023 ; 2023 ; https://www.erlacs.org/ ; >
+      au < manifest ; exists ; 2023 ; 21 ; ERLACS Volume 2023 ; 2023 ; https://www.erlacs.org/ ; >
 
   }
 

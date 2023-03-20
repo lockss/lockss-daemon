@@ -27,7 +27,7 @@
     au < manifest ; exists ; 2020 ; 2020 ; Journal of Immunotherapy and Precision Oncology Volume 3 ; 3 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Immunotherapy and Precision Oncology Volume 4 ; 4 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Journal of Immunotherapy and Precision Oncology Volume 5 ; 5 ; >
-    au < expected ; exists ; 2023 ; 2023 ; Journal of Immunotherapy and Precision Oncology Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2023 ; 2023 ; Journal of Immunotherapy and Precision Oncology Volume 6 ; 6 ; >
 
   }
   {
@@ -45,7 +45,7 @@
     au < manifest ; exists ; 2020 ; 2020 ; Global Journal on Quality and Safety in Healthcare Volume 3 ; 3 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Global Journal on Quality and Safety in Healthcare Volume 4 ; 4 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Global Journal on Quality and Safety in Healthcare Volume 5 ; 5 ; >
-    au < expected ; exists ; 2023 ; 2023 ; Global Journal on Quality and Safety in Healthcare Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2023 ; 2023 ; Global Journal on Quality and Safety in Healthcare Volume 6 ; 6 ; >
 
   }
   {
@@ -59,7 +59,7 @@
 
     au < manifest ; exists ; 2021 ; 2021 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 1 ; 1 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 2 ; 2 ; >
-    au < expected ; exists ; 2023 ; 2023 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2023 ; 2023 ; Innovations in Digital Health, Diagnostics, and Biomarkers Volume 3 ; 3 ; >
 
   }
   {
@@ -73,7 +73,7 @@
 
     au < manifest ; exists ; 2021 ; 2021 ; Innovations in Surgery and Interventional Medicine Volume 1 ; 1 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Innovations in Surgery and Interventional Medicine Volume 2 ; 2 ; >
-    au < expected ; exists ; 2023 ; 2023 ; Innovations in Surgery and Interventional Medicine Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2023 ; 2023 ; Innovations in Surgery and Interventional Medicine Volume 3 ; 3 ; >
 
   }
 }
