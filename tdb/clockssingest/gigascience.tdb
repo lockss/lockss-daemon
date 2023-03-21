@@ -20,10 +20,10 @@
 
     param[base_url] = http://gigadb.org/
 
-    au < finished ; manifest ; 2018 ; GigaDB 2018 ; 2018 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; GigaDB 2019 ; 2019 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2020 ; GigaDB 2020 ; 2020 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2021 ; GigaDB 2021 ; 2021 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; GigaDB 2018 ; 2018 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; GigaDB 2019 ; 2019 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2020 ; GigaDB 2020 ; 2020 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2021 ; GigaDB 2021 ; 2021 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2022 ; GigaDB 2022 ; 2022 ; >
     au < manifest ; exists ; 2023 ; GigaDB 2023 ; 2023 ; >
 

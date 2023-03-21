@@ -112,7 +112,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Hydrology Research Volume 47 ; 47 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Hydrology Research Volume 48 ; 48 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Hydrology Research Volume 49 ; 49 ; > 
-    au < finished ; manifest ; 2019 ; 2019 ; Hydrology Research Volume 50 ; 50 ; reingest4.clockss.org:8082 > 
+    au < finished ; crawling ; 2019 ; 2019 ; Hydrology Research Volume 50 ; 50 ; reingest4.clockss.org:8082 > 
     au < crawling ; exists ; 2020 ; 2020 ; Hydrology Research Volume 51 ; 51 ; > 
     au < crawling ; exists ; 2021 ; 2021 ; Hydrology Research Volume 52 ; 52 ; > 
     au < notReady ; exists ; 2022 ; 2022 ; Hydrology Research Volume 53 ; 53 ; > 
@@ -140,7 +140,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Water and Climate Change Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Water and Climate Change Volume 8 ; 8 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Journal of Water and Climate Change Volume 9 ; 9 ; >
-    au < finished ; manifest ; 2019 ; 2019 ; Journal of Water and Climate Change Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; 2019 ; Journal of Water and Climate Change Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2020 ; 2020 ; Journal of Water and Climate Change Volume 11 ; 11 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Water and Climate Change Volume 12 ; 12 ; >
     au < notReady ; exists ; 2022 ; 2022 ; Journal of Water and Climate Change Volume 13 ; 13 ; >
@@ -301,7 +301,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Water Supply: Research and Technology - Aqua Volume 64 ; 64 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Water Supply: Research and Technology - Aqua Volume 65 ; 65 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Water Supply: Research and Technology - Aqua Volume 66 ; 66 ; >
-    au < finished ; manifest ; 2018 ; 2018 ; Journal of Water Supply: Research and Technology - Aqua Volume 67 ; 67 ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; 2018 ; Journal of Water Supply: Research and Technology - Aqua Volume 67 ; 67 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Water Supply: Research and Technology - Aqua Volume 68 ; 68 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Journal of Water Supply: Research and Technology - Aqua Volume 69 ; 69 ; >
     #publisher changed name, issn AQUA: Water Infrastructure, Ecosystems and Society
@@ -368,7 +368,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Water Practice and Technology Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Water Practice and Technology Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Water Practice and Technology Volume 12 ; 12 ; >
-    au < finished ; manifest ; 2018 ; 2018 ; Water Practice and Technology Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2018 ; 2018 ; Water Practice and Technology Volume 13 ; 13 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2019 ; 2019 ; Water Practice and Technology Volume 14 ; 14 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Water Practice and Technology Volume 15 ; 15 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Water Practice and Technology Volume 16 ; 16 ; >
@@ -426,7 +426,7 @@
     #name = Water Quality Research Journal of Canada ; title removed the of Canada in 2018
 
     au < crawling ; exists ; 2018 ; 2018 ; Water Quality Research Journal Volume 53 ; 53 ; >
-    au < finished ; manifest ; 2019 ; 2019 ; Water Quality Research Journal Volume 54 ; 54 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; 2019 ; Water Quality Research Journal Volume 54 ; 54 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2020 ; 2020 ; Water Quality Research Journal Volume 55 ; 55 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Water Quality Research Journal Volume 56 ; 56 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Water Quality Research Journal Volume 57 ; 57 ; >
