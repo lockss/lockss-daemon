@@ -1,0 +1,41 @@
+{
+
+  publisher <
+    name = Egyptian Spine Association ;
+    info[contract] = 2010 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+  
+  plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+  param[base_url] = https://esj.researchcommons.org/
+  implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+  
+  {
+
+    title <
+      name = Egyptian Spine Journal ;
+      issn = 0001-8368
+    >
+
+    param[journal_abbr] = egyspinej
+
+    au < manifest ; exists ; 2012 ; Egyptian Spine Journal Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2013 ; Egyptian Spine Journal Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2014 ; Egyptian Spine Journal Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2015 ; Egyptian Spine Journal Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2016 ; Egyptian Spine Journal Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2017 ; Egyptian Spine Journal Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2018 ; Egyptian Spine Journal Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2019 ; Egyptian Spine Journal Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2020 ; Egyptian Spine Journal Volume 9 ; 9 ; >
+    au < exists ; exists ; 2021 ; Egyptian Spine Journal Volume 10 ; 10 ; >
+    au < exists ; exists ; 2022 ; Egyptian Spine Journal Volume 11 ; 11 ; >
+    au < expected ; exists ; 2023 ; Egyptian Spine Journal Volume 12 ; 12 ; >
+
+  }
+
+}
