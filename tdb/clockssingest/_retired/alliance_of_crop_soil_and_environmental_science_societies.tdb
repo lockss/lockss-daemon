@@ -37,9 +37,9 @@
     param[journal_id] = ael
 
     au < finished ; finished ; 2016 ; Agricultural & Environmental Letters Volume 1 ; 1 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2017 ; Agricultural & Environmental Letters Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; Agricultural & Environmental Letters Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Agricultural & Environmental Letters Volume 3 ; 3 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2019 ; Agricultural & Environmental Letters Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Agricultural & Environmental Letters Volume 4 ; 4 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -130,7 +130,7 @@
     au < finished ; finished ; 2013 ; Crop Science Volume 53 ; 53 ; reingest2.clockss.org:8085 >
     au < zapped ; finished ; 2014 ; Crop Science Volume 54 ; 54 ; >
     au < zapped ; finished ; 2015 ; Crop Science Volume 55 ; 55 ; reingest1.clockss.org:8082 > #malformed url. 403 error
-    au < finished ; frozen ; 2016 ; Crop Science Volume 56 ; 56 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Crop Science Volume 56 ; 56 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Crop Science Volume 57 ; 57 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Crop Science Volume 58 ; 58 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2019 ; Crop Science Volume 59 ; 59 ; reingest5.clockss.org:8082 >
@@ -162,7 +162,7 @@
     au < finished ; finished ; 2014 ; CSA News Volume 59 ; 59 ; >
     au < zapped ; finished ; 2015 ; CSA News Volume 60 ; 60 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2016 ; CSA News Volume 61 ; 61 ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2017 ; CSA News Volume 62 ; 62 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; CSA News Volume 62 ; 62 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; CSA News Volume 63 ; 63 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2019 ; CSA News Volume 64 ; 64 ; reingest2.clockss.org:8085 >
 
@@ -269,7 +269,7 @@
     au < finished ; finished ; 2013 ; Natural Sciences Education Volume 42 ; 42 ; >
     au < finished ; finished ; 2014 ; Natural Sciences Education Volume 43 ; 43 ; >
     au < finished ; finished ; 2015 ; Natural Sciences Education Volume 44 ; 44 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2016 ; Natural Sciences Education Volume 45 ; 45 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Natural Sciences Education Volume 45 ; 45 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Natural Sciences Education Volume 46 ; 46 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Natural Sciences Education Volume 47 ; 47 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2019 ; Natural Sciences Education Volume 48 ; 48 ; reingest1.clockss.org:8082 >
@@ -298,7 +298,7 @@
     au < finished ; finished ; 2015 ; The Plant Genome Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2016 ; The Plant Genome Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2017 ; The Plant Genome Volume 10 ; 10 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2018 ; The Plant Genome Volume 11 ; 11 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2018 ; The Plant Genome Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2019 ; The Plant Genome Volume 12 ; 12 ; > #can't crawl https://dl.sciencesocieties.org/images/publications/tpg/12/1/.jpeg
 
   }
@@ -355,7 +355,7 @@
     au < finished ; finished ; 2014 ; Soil Science Society of America Journal Volume 78 ; 78 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Soil Science Society of America Journal Volume 79 ; 79 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2016 ; Soil Science Society of America Journal Volume 80 ; 80 ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2017 ; Soil Science Society of America Journal Volume 81 ; 81 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; Soil Science Society of America Journal Volume 81 ; 81 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Soil Science Society of America Journal Volume 82 ; 82 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2019 ; Soil Science Society of America Journal Volume 83 ; 83 ; reingest1.clockss.org:8082 >
 
@@ -388,7 +388,7 @@
     au < finished ; frozen ; 2016 ; Vadose Zone Journal Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2017 ; Vadose Zone Journal Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; Vadose Zone Journal Volume 17 ; 17 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2019 ; Vadose Zone Journal Volume 18 ; 18 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Vadose Zone Journal Volume 18 ; 18 ; reingest4.clockss.org:8082 >
 
   }
 
