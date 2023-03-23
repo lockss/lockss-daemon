@@ -71,9 +71,8 @@ public class BaseOecdHtmlCrawlFilterFactory implements FilterFactory {
       // get rid of all the links in the landing page except the csv file(s)
       HtmlNodeFilters.allExceptSubtree(
           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "section-title"),
-          // per OECD we are only to collect the pdfs
-          //HtmlNodeFilters.tagWithAttributeRegex("a", "class", "action-(web|epub|csv|pdf|read)")
-          HtmlNodeFilters.tagWithAttributeRegex("a", "class", "action-pdf")
+          // per OECD we are only to collect the pdfs and epubs
+          HtmlNodeFilters.tagWithAttributeRegex("a", "class", "action-(epub|pdf)")
       )
   };
 

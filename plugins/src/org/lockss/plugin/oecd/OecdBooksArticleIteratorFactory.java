@@ -93,13 +93,15 @@ public class OecdBooksArticleIteratorFactory implements ArticleIteratorFactory, 
         LANDING_PATTERN,
         LANDING_REPLACEMENT,
         ArticleFiles.ROLE_ABSTRACT,
-        ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE);
+        ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
 
     builder.addAspect(
         PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
 
     /*
+    Not every article/book has epub
     builder.addAspect(
         EPUB_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_EPUB);

@@ -83,6 +83,13 @@ POSSIBILITY OF SUCH DAMAGE.
         </list>
     </entry>
     <entry>
+        <string>au_url_mime_validation_map</string>
+        <list>
+            <string>.+\.pdf, application/pdf</string>
+            <string>.+\.epub, application/epub</string>
+        </list>
+    </entry>
+    <entry>
         <string>text/html_crawl_filter_factory</string>
         <string>org.lockss.plugin.oecd.BaseOecdHtmlCrawlFilterFactory</string>
     </entry>

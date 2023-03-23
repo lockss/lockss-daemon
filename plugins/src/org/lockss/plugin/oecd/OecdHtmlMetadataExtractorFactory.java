@@ -34,11 +34,16 @@ package org.lockss.plugin.oecd;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.util.Logger;
 
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class OecdHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
 /*
@@ -71,6 +76,10 @@ public class OecdHtmlMetadataExtractorFactory implements FileMetadataExtractorFa
 --<meta name="citation_abstract" content="Twenty-one individual country business cycle chronologies, maintained and updated by the Economic Cycle Research Institute (ECRI), are analysed for their degree of synchronisation with a proposed “world business cycle chronology”. Several key results emerge. First, perhaps not surprisingly, the world’s four 20th Century locomotor economies of the US, UK, Germany and Japan are statistically significantly and reasonably strongly positively synchronised with the world cycle. Second, European countries in the sample are either positively synchronised with the world cycle at zero lag or with a lag of around three months. Third, the NAFTA countries (US, Canada and Mexico) are, perhaps again not unexpectedly, quite strongly positively synchronised with the world cycle at zero lag and with each other. Fourth, the single South American country included in the sample, Brazil, is strongly positively synchronised with the world cycle at zero lag as well as with the NAFTA countries – but behaves very differently from China and India with respect to the world cycle. Fifth, interestingly, the newly industrialized East Asian countries included in the sample appear to lead the world cycle by about three to nine months. Finally, and very interestingly, there appears to be some a priori evidence of a long leading negative synchronisation between the commodity exporting countries in the sample and the world cycle. Key words: world business cycle, synchronisation JEL classification: E32, E37">
 --<meta name="citation_abstract_html_url" content="https://www.oecd-ilibrary.org/economics/the-world-and-the-world-business-cycle-chronology_jbcma-2015-5jrtfl953jxp">
  */
+
+  private static final Logger log = Logger.getLogger(OecdHtmlMetadataExtractorFactory.class);
+
+
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(
@@ -111,8 +120,103 @@ public class OecdHtmlMetadataExtractorFactory implements FileMetadataExtractorFa
       ArticleMetadata am =
           new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       am.cook(tagMap);
+
+      ArchivalUnit au = cu.getArchivalUnit();
+      TdbAu tdbau = au.getTdbAu();
+
+      Pattern DOI_PAT = Pattern.compile("10[.][0-9a-z]{4,6}/.*");
+
+      Pattern DECORATED_DOI_PAT =
+              Pattern.compile("^(" +
+                              "(?:doi:)|" +
+                              "(?:doi/)|" +
+                              "(?:doi\\.org:)|" +
+                              "(?:doi\\.org/)|" +
+                              "(?:https?://dx\\.doi\\.org/)|" +
+                              "(?:https?://doi\\.org/)|" +
+                              ")?" + "(" + DOI_PAT.toString() + ")",
+                      Pattern.CASE_INSENSITIVE);
+
+      String isbn;
+      String eisbn;
+      String issn;
+      String eissn;
+      String provider;
+      String publisher;
+      String doi = null;
+      String type;
+
+      if (tdbau != null) {
+        isbn = tdbau.getIsbn();
+        eisbn = tdbau.getEisbn();
+        issn = tdbau.getIssn();
+        eissn = tdbau.getEissn();
+
+        String raw_doi = tdbau.getAttr("doi");
+
+        if (raw_doi != null) {
+          log.debug3("Inside OECD Metadata extractor, raw_doi = " + raw_doi);
+          Matcher m1 = DECORATED_DOI_PAT.matcher(raw_doi);
+          if (m1.find()) {
+            doi = m1.group(2);
+          } else {
+            throw new IllegalArgumentException("Not recognized as a (possibly-decorated) DOI: " + raw_doi);
+          }
+        }
+
+        provider = tdbau.getProviderName();
+        publisher = tdbau.getPublisherName();
+
+        boolean isBook = false;
+
+        if (isbn != null || eisbn != null) {
+          isBook = true;
+        }
+
+        if (isbn != null) {
+          am.put(MetadataField.FIELD_ISBN, isbn);
+        }
+        if (eisbn != null) {
+          am.put(MetadataField.FIELD_EISBN, eisbn);
+        }
+
+        if (issn != null) {
+          am.put(MetadataField.FIELD_ISSN, issn);
+        }
+        if (eissn != null) {
+          am.put(MetadataField.FIELD_EISSN, eissn);
+        }
+
+        if (doi != null) {
+          am.put(MetadataField.FIELD_DOI, doi);
+        }
+
+        if (provider != null) {
+          am.put(MetadataField.FIELD_PROVIDER, provider);
+        }
+        if (publisher != null) {
+          am.put(MetadataField.FIELD_PUBLISHER, publisher);
+        }
+
+
+        if (isBook == true) {
+          if (isbn != null) {
+            am.put(MetadataField.FIELD_ISBN, isbn);
+          }
+          if (eisbn != null) {
+            am.put(MetadataField.FIELD_EISBN, eisbn);
+          }
+          am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_BOOK);
+        } else {
+          am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
+        }
+
+      } else {
+        log.debug3("Inside OECD Metadata extractor, tdb is empty");
+      }
+
+
       emitter.emitMetadata(cu, am);
     }
-
   }
 }

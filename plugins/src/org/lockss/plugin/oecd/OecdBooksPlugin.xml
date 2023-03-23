@@ -141,7 +141,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <!-- ibid
             <string>1,"^%s.+\.xlsx?\?itemId=.+&amp;mimeType=", base_url</string> -->
             <!-- pdf & epub files -->
-            <string>1,"^%s.+\.pdf\?itemId=.+&amp;mimeType=pdf$", base_url</string>
+            <string>1,"^%s.+\.(pdf|epub)\?itemId=.+&amp;mimeType=(pdf|epub)$", base_url</string>
             <!-- pdf redirect
                  https://www.oecd-ilibrary.org/docserver/7a3b07d2-en.pdf?expires=1643843528&id=id&accname=ocid194777&checksum=063C56734FAFCB0F81A2F8646E0B6DEC -->
             <string>1,"^%sdocserver", base_url</string>
@@ -167,10 +167,6 @@ POSSIBILITY OF SUCH DAMAGE.
             <!--<string>"%s%s%s$", base_url, pub_path, pub_id</string>-->
             <string>"%s.+\.pdf", base_url</string>
         </list>
-    </entry>
-    <entry>
-        <string>text/html_crawl_filter_factory</string>
-        <string>org.lockss.plugin.oecd.OecdBooksHtmlCrawlFilterFactory</string>
     </entry>
     <entry>
         <string>plugin_article_iterator_factory</string>
