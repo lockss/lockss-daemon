@@ -405,8 +405,15 @@
       au < released ; 2018 ; Monatshefte Volume 110 ; 110 >
       au < released ; 2019 ; Monatshefte Volume 111 ; 111 >
       au < released ; 2020 ; Monatshefte Volume 112 ; 112 >
+      }
+
+      {
+      plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
+      param[base_url] = https://mon.uwpress.org/
+
       au < exists ; 2021 ; Monatshefte Volume 113 ; 113 >
       au < exists ; 2022 ; Monatshefte Volume 114 ; 114 >
+      au < expected ; 2023 ; Monatshefte Volume 115 ; 115 >
 
       }
   }
