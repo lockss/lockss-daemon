@@ -3098,7 +3098,7 @@ while (my $line = <>) {
     sleep(4);
 
   } elsif ($plugin eq "ClockssGeoscienceWorldSilverchairBooksPlugin") {
-    $url = sprintf("%s/%s",
+    $url = sprintf("%s%s",
       $param{base_url}, $param{resource_id});
     $man_url = uri_unescape($url);
     my $req = HTTP::Request->new(GET, $man_url);
