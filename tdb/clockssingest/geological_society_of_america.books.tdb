@@ -14,7 +14,6 @@
     plugin = org.lockss.plugin.silverchair.geoscienceworld.ClockssGeoscienceWorldSilverchairBooksPlugin
     implicit < status ; status2 ; year ; isbn ; eisbn ; name ; param[resource_id]; hidden[proxy] >
     param[base_url] = https://pubs.geoscienceworld.org/
-    
 
   {
 
