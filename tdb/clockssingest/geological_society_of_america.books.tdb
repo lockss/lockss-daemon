@@ -9,8 +9,6 @@
     info[platform] = Silverchair books
   >
     
-    #plugin = needs.plugin
-    #plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     plugin = org.lockss.plugin.silverchair.geoscienceworld.ClockssGeoscienceWorldSilverchairBooksPlugin
     implicit < status ; status2 ; year ; isbn ; eisbn ; name ; param[resource_id]; hidden[proxy] >
     param[base_url] = https://pubs.geoscienceworld.org/
@@ -818,6 +816,80 @@
 
   }
 
+
+  {
+  
+    title <
+      name = GSA Field Guides ;
+      type = bookSeries
+    >
+    
+    au < manifest ; exists ; 1999 ; 9780813700014 ; 9780813756011 ; Geological Society of America Field Guides Volume 1 ; gsa/books/book/777/Colorado-and-Adjacent-Areas ; >
+    au < manifest ; exists ; 2000 ; 9780813700021 ; 9780813756028 ; Geological Society of America Field Guides Volume 2 ; gsa/books/book/920/Great-Basin-and-Sierra-Nevada ; >
+    au < manifest ; exists ; 2002 ; 9780813700038 ; 9780813756035 ; Geological Society of America Field Guides Volume 3 ; gsa/books/book/910/Science-at-the-Highest-Level ; >
+    au < manifest ; exists ; 2003 ; 9780813700045 ; 9780813756042 ; Geological Society of America Field Guides Volume 4 ; gsa/books/book/884/Western-Cordillera-and-Adjacent-Areas ; >
+    au < manifest ; exists ; 2004 ; 9780813700052 ; 9780813756059 ; Geological Society of America Field Guides Volume 5 ; gsa/books/book/899/Field-Trips-in-the-Southern-Rocky-Mountains-USA ; >
+    au < manifest ; exists ; 2005 ; 9780813700069 ; 9780813756066 ; Geological Society of America Field Guides Volume 6 ; gsa/books/book/908/Interior-Western-United-States ; >
+    au < manifest ; exists ; 2006 ; 9780813700076 ; 9780813756073 ; Geological Society of America Field Guides Volume 7 ; gsa/books/book/911/1906-San-Francisco-Earthquake-centennial-Field ; >
+    au < manifest ; exists ; 2006 ; 9780813700083 ; 9780813756080 ; Geological Society of America Field Guides Volume 8 ; gsa/books/book/840/Excursions-in-Geology-and-HistoryField-Trips-in ; >
+    au < manifest ; exists ; 2007 ; 9780813700090 ; 9780813756097 ; Geological Society of America Field Guides Volume 9 ; gsa/books/book/797/Floods-Faults-and-Fire ; >
+    au < manifest ; exists ; 2008 ; 9780813700106 ; 9780813756103 ; Geological Society of America Field Guides Volume 10 ; gsa/books/book/909/Roaming-the-Rocky-Mountains-and-EnvironsGeological ; >
+    au < manifest ; exists ; 2008 ; 9780813700113 ; 9780813756110 ; Geological Society of America Field Guides Volume 11 ; gsa/books/book/919/Field-Guide-to-Plutons-Volcanoes-Faults-Reefs ; >
+    au < manifest ; exists ; 2008 ; 9780813700120 ; 9780813756127 ; Geological Society of America Field Guides Volume 12 ; gsa/books/book/898/From-the-Cincinnati-Arch-to-the-Illinois ; >
+    au < manifest ; exists ; 2008 ; 9780813700137 ; 9780813756134 ; Geological Society of America Field Guides Volume 13 ; gsa/books/book/900/Field-Trip-Guides-to-the-Backbone-of-the-Americas ; >
+    au < manifest ; exists ; 2008 ; 9780813700144 ; 9780813756141 ; Geological Society of America Field Guides Volume 14 ; gsa/books/book/823/Geological-Society-of-America-Field-Guide-14-2008 ; >
+    au < manifest ; exists ; 2009 ; 9780813700151 ; 9780813756158 ; Geological Society of America Field Guides Volume 15 ; gsa/books/book/885/Volcanoes-to-Vineyards ; >
+    au < manifest ; exists ; 2010 ; 9780813700168 ; 9780813756165 ; Geological Society of America Field Guides Volume 16 ; gsa/books/book/876/The-Mid-Atlantic-Shore-to-the-Appalachian ; >
+    au < manifest ; exists ; 2010 ; 9780813700175 ; 9780813756172 ; Geological Society of America Field Guides Volume 17 ; gsa/books/book/897/From-Precambrian-Rift-Volcanoes-to-the ; >
+    au < manifest ; exists ; 2010 ; 9780813700182 ; 9780813756189 ; Geological Society of America Field Guides Volume 18 ; gsa/books/book/881/Through-the-Generations ; >
+    au < manifest ; exists ; 2011 ; 9780813700199 ; 9780813756196 ; Geological Society of America Field Guides Volume 19 ; gsa/books/book/856/Structural-Geology-and-Tectonic-Evolution-of-the ; >
+    au < manifest ; exists ; 2011 ; 9780813700205 ; 9780813756202 ; Geological Society of America Field Guides Volume 20 ; gsa/books/book/802/From-the-Shield-to-the-Sea ; >
+    au < manifest ; exists ; 2011 ; 9780813700212 ; 9780813756219 ; Geological Society of America Field Guides Volume 21 ; gsa/books/book/902/Geologic-Field-Trips-to-the-Basin-and-Range-Rocky ; >
+    au < manifest ; exists ; 2011 ; 9780813700229 ; 9780813756226 ; Geological Society of America Field Guides Volume 22 ; gsa/books/book/888/Geological-Field-Trips-in-Central-Western-Europe ; >
+    au < manifest ; exists ; 2011 ; 9780813700236 ; 9780813756233 ; Geological Society of America Field Guides Volume 23 ; gsa/books/book/780/Field-Guide-to-Samos-and-the-Menderes-Massif ; >
+    au < manifest ; exists ; 2011 ; 9780813700243 ; 9780813756240 ; Geological Society of America Field Guides Volume 24 ; gsa/books/book/894/Archean-to-AnthropoceneField-Guides-to-the-Geology ; >
+    au < manifest ; exists ; 2012 ; 9780813700250 ; 9780813756257 ; Geological Society of America Field Guides Volume 25 ; gsa/books/book/877/The-Southern-Cordillera-and-Beyond ; >
+    au < manifest ; exists ; 2012 ; 9780813700267 ; 9780813756264 ; Geological Society of America Field Guides Volume 26 ; gsa/books/book/836/Neoproterozoic-Glacial-and-Associated-Facies-in ; >
+    au < manifest ; exists ; 2012 ; 9780813700274 ; 9780813756271 ; Geological Society of America Field Guides Volume 27 ; gsa/books/book/844/On-and-around-the-Cincinnati-Arch-and-Niagara ; >
+    au < manifest ; exists ; 2012 ; 9780813700281 ; 9780813756288 ; Geological Society of America Field Guides Volume 28 ; gsa/books/book/775/Deformation-Fluid-Flow-and-Mass-Transfer-in-the ; >
+    au < manifest ; exists ; 2012 ; 9780813700298 ; 9780813756295 ; Geological Society of America Field Guides Volume 29 ; gsa/books/book/901/From-the-Blue-Ridge-to-the-Coastal-PlainField ; >
+    au < manifest ; exists ; 2013 ; 9780813700304 ; 9780813756301 ; Geological Society of America Field Guides Volume 30 ; gsa/books/book/905/Late-Cretaceous-to-Quaternary-Strata-and-Fossils ; >
+    au < exists ; exists ; 2013 ; 9780813700311 ; 9780813756318 ; Geological Society of America Field Guides Volume 31 ; gsa/books/book/818/Insights-into-the-Michigan-Basin ; >
+    au < exists ; exists ; 2013 ; 9780813700328 ; 9780813756325 ; Geological Society of America Field Guides Volume 32 ; gsa/books/book/798/Geologic-Excursions-from-Fresno-California-and-the ; >
+    au < exists ; exists ; 2013 ; 9780813700335 ; 9780813756332 ; Geological Society of America Field Guides Volume 33 ; gsa/books/book/895/Classic-Concepts-and-New-DirectionsExploring-125 ; >
+    au < exists ; exists ; 2014 ;  ; 9780813756349 ; Geological Society of America Field Guides Volume 34 ; gsa/books/book/796/Formation-of-the-Sierra-Nevada-Batholith ; >
+    au < exists ; exists ; 2014 ; 9780813700359 ; 9780813756356 ; Geological Society of America Field Guides Volume 35 ; gsa/books/book/896/Elevating-Geoscience-in-the-Southeastern-United ; >
+    au < exists ; exists ; 2014 ;  ; 9780813756363 ; Geological Society of America Field Guides Volume 36 ; gsa/books/book/889/Geologic-Field-Trips-along-the-Boundary-between ; >
+    au < exists ; exists ; 2014 ;  ; 9780813756370 ; Geological Society of America Field Guides Volume 37 ; gsa/books/book/918/Exploring-the-Northern-Rocky-Mountains ; >
+    au < exists ; exists ; 2014 ;  ; 9780813756387 ; Geological Society of America Field Guides Volume 38 ; gsa/books/book/912/Trials-and-Tribulations-of-Life-on-an-Active ; >
+    au < exists ; exists ; 2015 ; 9780813700397 ; 9780813756394 ; Geological Society of America Field Guides Volume 39 ; gsa/books/book/891/Diverse-Excursions-in-the-SoutheastPaleozoic-to ; >
+    au < exists ; exists ; 2015 ; 9780813700403 ; 9780813756400 ; Geological Society of America Field Guides Volume 40 ; gsa/books/book/923/Tripping-from-the-Fall-LineField-Excursions-for ; >
+    au < exists ; exists ; 2016 ; 9780813700410 ; 9780813756417 ; Geological Society of America Field Guides Volume 41 ; gsa/books/book/922/Exploring-the-Geology-of-the-Inland-Northwest ; >
+    au < exists ; exists ; 2016 ; 9780813700427 ; 9780813756424 ; Geological Society of America Field Guides Volume 42 ; gsa/books/book/886/Gold-Structures-and-Landforms-in-Central-South ; >
+    au < exists ; exists ; 2016 ; 9780813700434 ; 9780813756431 ; Geological Society of America Field Guides Volume 43 ; gsa/books/book/887/Geology-of-the-Baraboo-Wisconsin-Area ; >
+    au < exists ; exists ; 2016 ; 9780813700441 ; 9780813756448 ; Geological Society of America Field Guides Volume 44 ; gsa/books/book/1995/Unfolding-the-Geology-of-the-West ; >
+    au < exists ; exists ; 2017 ; 9780813700458 ; 9780813756455 ; Geological Society of America Field Guides Volume 45 ; gsa/books/book/1986/Field-Excursions-in-Southern-California-Field ; >
+    au < exists ; exists ; 2017 ; 9780813700465 ; 9780813756462 ; Geological Society of America Field Guides Volume 46 ; gsa/books/book/915/Forts-Floods-and-Periglacial-FeaturesExploring-the ; >
+    au < exists ; exists ; 2017 ; 9780813700472 ; 9780813756479 ; Geological Society of America Field Guides Volume 47 ; gsa/books/book/916/From-the-Blue-Ridge-to-the-Coastal-PlainField ; >
+    au < exists ; exists ; 2017 ; 9780813756486 ;  ; Geological Society of America Field Guides Volume 48 ; gsa/books/book/924/Geologic-Field-Trips-of-the-Canadian-Rockies-2017 ; >
+    au < exists ; exists ; 2017 ; 9780813700496 ; 9780813756493 ; Geological Society of America Field Guides Volume 49 ; gsa/books/book/2047/From-the-Puget-Lowland-to-East-of-the-Cascade ; >
+    au < exists ; exists ; 2018 ; 9780813700502 ; 9780813756509 ; Geological Society of America Field Guides Volume 50 ; gsa/books/book/2075/Geology-at-Every-ScaleField-Excursions-for-the ; >
+    au < exists ; exists ; 2018 ; 9780813700519 ; 9780813756516 ; Geological Society of America Field Guides Volume 51 ; gsa/books/book/2139/Geology-at-Every-ScaleField-Excursions-for-the ; >
+    au < exists ; exists ; 2019 ; 9780813700526 ; 9780813756523 ; Geological Society of America Field Guides Volume 52 ; gsa/books/book/2158/Exploring-Extreme-and-Unusual-Geology-in-the ; >
+    au < exists ; exists ; 2019 ; 9780813700533 ; 9780813756530 ; Geological Society of America Field Guides Volume 53 ; gsa/books/book/2152/Field-Excursions-in-the-Carolinas-Guides-for-the ; >
+    au < exists ; exists ; 2019 ; 9780813700540 ; 9780813756547 ; Geological Society of America Field Guides Volume 54 ; gsa/books/book/2192/Iceland-The-Formation-and-Evolution-of-a-Young ; >
+    au < exists ; exists ; 2019 ; 9780813700557 ; 9780813756554 ; Geological Society of America Field Guides Volume 55 ; gsa/books/book/2196/Geologic-Excursions-in-Southwestern-North-America ; >
+    au < exists ; exists ; 2019 ; 9780813700564 ; 9780813756561 ; Geological Society of America Field Guides Volume 56 ; gsa/books/book/2220/The-Gigantic-Markagunt-and-Sevier-Gravity-Slides ; >
+    au < exists ; exists ; 2020 ; 9780813700571 ; 9780813756578 ; Geological Society of America Field Guides Volume 57 ; gsa/books/book/2275/Geology-Field-Trips-in-and-around-the-U-S-Capital ; >
+    au < exists ; exists ; 2020 ; 9780813700588 ; 9780813756585 ; Geological Society of America Field Guides Volume 58 ; gsa/books/book/2285/Architecture-and-Evolution-of-the-Crust-during ; >
+    au < exists ; exists ; 2020 ; 9780813700595 ; 9780813756592 ; Geological Society of America Field Guides Volume 59 ; gsa/books/book/2279/From-the-Islands-to-the-Mountains-A-2020-View-of ; >
+    au < exists ; exists ; 2021 ; 9780813700601 ; 9780813756608 ; Geological Society of America Field Guides Volume 60 ; gsa/books/book/2324/GSA-in-the-Field-in-2020 ; >
+    au < exists ; exists ; 2021 ; 9780813700618 ; 9780813756615 ; Geological Society of America Field Guides Volume 61 ; gsa/books/book/2334/Field-Excursions-from-the-2021-GSA-Section ; >
+    au < exists ; exists ; 2021 ; 9780813700625 ; 9780813756622 ; Geological Society of America Field Guides Volume 62 ; gsa/books/book/2333/From-Terranes-to-Terrains-Geologic-Field-Guides-on ; >
+    au < exists ; exists ; 2022 ; 9780813700632 ; 9780813756639 ; Geological Society of America Field Guides Volume 63 ; gsa/books/book/2352/Field-Excursions-from-Las-Vegas-Nevada-Guides-to ; >
+    au < exists ; exists ; 2022 ; 9780813700649 ; 9780813756646 ; Geological Society of America Field Guides Volume 64 ; gsa/books/edited-volume/2378/Field-Excursions-in-the-Front-Range-and-Wet ; >
+
+  }
 
 #  {
 #    title <
