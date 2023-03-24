@@ -40,7 +40,6 @@ import org.lockss.daemon.PluginException;
 import org.lockss.filter.RisFilterReader;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
-import org.lockss.plugin.atypon.RisBlankFilterReader;
 import org.lockss.util.Logger;
 
 import java.io.*;
