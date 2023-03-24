@@ -198,11 +198,10 @@
 
       comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://www.amscasereports.com/
+      #content not available
 
-      au < released ; 2018 ; 1 ; Annals of Medicine and Surgery Case Reports Volume 2018 ; 2018 ; https://www.amscasereports.com/ >
-      au < released ; 2021 ; 2 ; Annals of Medicine and Surgery Case Reports Volume 2021 ; 2021 ; https://www.amscasereports.com/ >
-      au < expected ; 2022 ; 3 ; Annals of Medicine and Surgery Case Reports Volume 2022 ; 2022 ; https://www.amscasereports.com/ >
-      au < expected ; 2023 ; 4 ; Annals of Medicine and Surgery Case Reports Volume 2023 ; 2023 ; https://www.amscasereports.com/ >
+      au < down ; 2018 ; 1 ; Annals of Medicine and Surgery Case Reports Volume 2018 ; 2018 ; https://www.amscasereports.com/ >
+      au < down ; 2021 ; 2 ; Annals of Medicine and Surgery Case Reports Volume 2021 ; 2021 ; https://www.amscasereports.com/ >
 
   }
 
@@ -215,8 +214,9 @@
 
       comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://www.amsprotocols.com/
+      #content not available
 
-      au < released ; 2018 ; 1 ; Annals of Medicine and Surgery Protocols Volume 2018 ; 2018 ; https://www.amsprotocols.com/ >
+      au < down ; 2018 ; 1 ; Annals of Medicine and Surgery Protocols Volume 2018 ; 2018 ; https://www.amsprotocols.com/ >
 
   }
 
@@ -229,9 +229,10 @@
 
       comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://ijops.com/
+      #content not available
 
-      au < released ; 2018 ; 1 ; International Journal of Orthoplastic Surgery Volume 2018 ; 2018 ; https://ijops.com/ >
-      au < released ; 2019 ; 2 ; International Journal of Orthoplastic Surgery Volume 2019 ; 2019 ; https://ijops.com/ >
+      au < down ; 2018 ; 1 ; International Journal of Orthoplastic Surgery Volume 2018 ; 2018 ; https://ijops.com/ >
+      au < down ; 2019 ; 2 ; International Journal of Orthoplastic Surgery Volume 2019 ; 2019 ; https://ijops.com/ >
 
   }
 
