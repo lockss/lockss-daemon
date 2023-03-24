@@ -15476,7 +15476,7 @@
 
     param[journal_issn] = 2753-8567
 
-    au < ready ; exists ; 2020 ; Organization Management Journal Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2020 ; Organization Management Journal Volume 17 ; 17 ; >
     au < crawling ; exists ; 2021 ; Organization Management Journal Volume 18 ; 18 ; >
     au < crawling ; exists ; 2022 ; Organization Management Journal Volume 19 ; 19 ; >
     au < manifest ; exists ; 2023 ; Organization Management Journal Volume 20 ; 20 ; >
@@ -15535,7 +15535,7 @@
     param[journal_issn] = 0972-9968
 
     au < manifest ; exists ; 2019 ; Rajagiri Management Journal Volume 13 ; 13 ; >
-    au < ready ; exists ; 2020 ; Rajagiri Management Journal Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2020 ; Rajagiri Management Journal Volume 14 ; 14 ; >
     au < crawling ; exists ; 2021 ; Rajagiri Management Journal Volume 15 ; 15 ; >
     au < crawling ; exists ; 2022 ; Rajagiri Management Journal Volume 16 ; 16 ; >
     au < manifest ; exists ; 2023 ; Rajagiri Management Journal Volume 17 ; 17 ; >
@@ -15576,7 +15576,7 @@
     au < manifest ; exists ; 2019 ; Review of Economics and Political Science Volume 4 ; 4 ; >
     au < crawling ; exists ; 2020 ; Review of Economics and Political Science Volume 5 ; 5 ; >
     au < crawling ; exists ; 2021 ; Review of Economics and Political Science Volume 6 ; 6 ; >
-    au < ready ; exists ; 2022 ; Review of Economics and Political Science Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2022 ; Review of Economics and Political Science Volume 7 ; 7 ; >
     au < manifest ; exists ; 2023 ; Review of Economics and Political Science Volume 8 ; 8 ; >
 
   }
@@ -15596,7 +15596,7 @@
     au < manifest ; exists ; 2019 ; Revista de Gestão Volume 26 ; 26 ; >
     au < crawling ; exists ; 2020 ; Revista de Gestão Volume 27 ; 27 ; >
     au < crawling ; exists ; 2021 ; Revista de Gestão Volume 28 ; 28 ; >
-    au < ready ; exists ; 2022 ; Revista de Gestão Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2022 ; Revista de Gestão Volume 29 ; 29 ; >
     au < manifest ; exists ; 2023 ; Revista de Gestão Volume 30 ; 30 ; >
 
   }
@@ -15766,7 +15766,7 @@
 #    au < exists ; exists ; 2017 ; Archnet-IJAR Volume 11 ; 11 ; >
 #    au < exists ; exists ; 2018 ; Archnet-IJAR Volume 12 ; 12 ; >
     au < manifest ; exists ; 2019 ; Archnet-IJAR Volume 13 ; 13 ; >
-    au < ready ; exists ; 2020 ; Archnet-IJAR Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2020 ; Archnet-IJAR Volume 14 ; 14 ; >
     au < crawling ; exists ; 2021 ; Archnet-IJAR Volume 15 ; 15 ; >
     au < crawling ; exists ; 2022 ; Archnet-IJAR Volume 16 ; 16 ; >
     au < manifest ; exists ; 2023 ; Archnet-IJAR Volume 17 ; 17 ; >
