@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -134,6 +134,15 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>org.lockss.plugin.silverchair.SilverchairCommonThemeBooksUrlConsumerFactory</string>
     </entry>
     <entry>
+        <string>application/x-research-info-systems_filter_factory</string>
+        <string>org.lockss.plugin.silverchair.SilverchairRisFilterFactory</string>
+    </entry>
+    <!--  RIS citation URLs come in as text/plain; we do additional RIS check in the factory -->
+    <entry>
+        <string>text/plain_filter_factory</string>
+        <string>org.lockss.plugin.silverchair.SilverchairRisFilterFactory</string>
+    </entry>
+    <entry>
         <string>plugin_article_iterator_factory</string>
         <string>org.lockss.plugin.silverchair.SilverchairCommonThemeBooksArticleIteratorFactory</string>
     </entry>
@@ -177,6 +186,14 @@ POSSIBILITY OF SUCH DAMAGE.
         <list>
             <string>"[.](css|js)(\?.+)?$", 0</string>
             <string>"(%s|silverchair-?cdn\.com/)UI/app/", base_url, 0</string>
+            <string>"/(Script|Web)Resource\.axd\?d=", 0</string>
+            <string>"/combres\.axd/[^/]+-(js|css)/-?[0-9]+$", 0</string>
+            <string>"/multimediaPlayer.aspx\?", 0</string>
+            <string>"/errors/404\.aspx\?aspxerrorpath=", 0</string>
+            <string>"silverchaircdn\.com/(CSS|Images)/", 0</string>
+            <string>"\?v=[0-9]+$", 0</string>
+            <string>"\.axd/(file|script|stylesheet)/", 0</string>
+            <!--Silverchaird add Y2-"access date" to downloaded citation file which varies each time, generate problem for polling-->
         </list>
     </entry>
     <entry>
