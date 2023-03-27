@@ -1795,7 +1795,7 @@
     au < finished ; frozen ; 2020 ; Indian Journal of Pharmacology Volume 52 ; 2020 ; 52 ; https://www.ijp-online.com/ ; ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Indian Journal of Pharmacology Volume 53 ; 2021 ; 53 ; https://www.ijp-online.com/ ; ; >
     au < deepCrawl ; exists ; 2022 ; Indian Journal of Pharmacology Volume 54 ; 2022 ; 54 ; https://www.ijp-online.com/ ; ; >
-    au < expected ; exists ; 2023 ; Indian Journal of Pharmacology Volume 55 ; 2023 ; 55 ; https://www.ijp-online.com/ ; ; >
+    au < manifest ; exists ; 2023 ; Indian Journal of Pharmacology Volume 55 ; 2023 ; 55 ; https://www.ijp-online.com/ ; ; >
 
   }
 
@@ -2297,7 +2297,7 @@
     au < finished ; finished ; 2020 ; International Journal of Critical Illness and Injury Science Volume 10 ; 2020 ; 10 ; https://www.ijciis.org/ ; ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Critical Illness and Injury Science Volume 11 ; 2021 ; 11 ; https://www.ijciis.org/ ; ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Critical Illness and Injury Science Volume 12 ; 2022 ; 12 ; https://www.ijciis.org/ ; ; >
-    au < expected ; exists ; 2023 ; International Journal of Critical Illness and Injury Science Volume 13 ; 2023 ; 13 ; https://www.ijciis.org/ ; ; >
+    au < manifest ; exists ; 2023 ; International Journal of Critical Illness and Injury Science Volume 13 ; 2023 ; 13 ; https://www.ijciis.org/ ; ; >
 
   }
 #  {
@@ -2910,7 +2910,7 @@
     au < finished ; frozen ; 2020 ; Journal of Cytology Volume 37 ; 2020 ; 37 ; https://www.jcytol.org/ ; ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Journal of Cytology Volume 38 ; 2021 ; 38 ; https://www.jcytol.org/ ; ; >
     au < notReady ; exists ; 2022 ; Journal of Cytology Volume 39 ; 2022 ; 39 ; https://www.jcytol.org/ ; ; > #Image urls at base_url http://jcytol.org/
-    au < expected ; exists ; 2023 ; Journal of Cytology Volume 40 ; 2023 ; 40 ; https://www.jcytol.org/ ; ; > #Image urls at base_url http://jcytol.org/
+    au < manifest ; exists ; 2023 ; Journal of Cytology Volume 40 ; 2023 ; 40 ; https://www.jcytol.org/ ; ; > #Image urls at base_url http://jcytol.org/
 
   }
 
@@ -5489,7 +5489,7 @@
       au < finished ; finished ; 2020 ; Brain Circulation Volume 6 ; 2020 ; 6 ; https://www.braincirculation.org/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Brain Circulation Volume 7 ; 2021 ; 7 ; https://www.braincirculation.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Brain Circulation Volume 8 ; 2022 ; 8 ; https://www.braincirculation.org/ ; ; >
-      au < expected ; exists ; 2023 ; Brain Circulation Volume 9 ; 2023 ; 9 ; https://www.braincirculation.org/ ; ; >
+      au < manifest ; exists ; 2023 ; Brain Circulation Volume 9 ; 2023 ; 9 ; https://www.braincirculation.org/ ; ; >
 
   }
 
@@ -5743,7 +5743,7 @@
       au < finished ; frozen ; 2020 ; Dental Hypotheses Volume 11 ; 2020 ; 11 ; https://www.dentalhypotheses.com/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Dental Hypotheses Volume 12 ; 2021 ; 12 ; https://www.dentalhypotheses.com/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Dental Hypotheses Volume 13 ; 2022 ; 13 ; https://www.dentalhypotheses.com/ ; ; >
-      au < expected ; exists ; 2023 ; Dental Hypotheses Volume 14 ; 2023 ; 14 ; https://www.dentalhypotheses.com/ ; ; >
+      au < manifest ; exists ; 2023 ; Dental Hypotheses Volume 14 ; 2023 ; 14 ; https://www.dentalhypotheses.com/ ; ; >
 
   }
 
@@ -7750,7 +7750,7 @@
       au < finished ; finished ; 2020 ; Journal of Oral and Maxillofacial Radiology Volume 8 ; 2020 ; 8 ; https://www.joomr.org/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Journal of Oral and Maxillofacial Radiology Volume 9 ; 2021 ; 9 ; https://www.joomr.org/ ; ; >
       au < notReady ; exists ; 2022 ; Journal of Oral and Maxillofacial Radiology Volume 10 ; 2022 ; 10 ; https://www.joomr.org/ ; ; > #524 Error https://www.joomr.org/viewimage.asp?img=JOralMaxillofacRadiol_2022_10_1_19_343695_f1.jpg
-      au < expected ; exists ; 2023 ; Journal of Oral and Maxillofacial Radiology Volume 11 ; 2023 ; 11 ; https://www.joomr.org/ ; ; > #524 Error https://www.joomr.org/viewimage.asp?img=JOralMaxillofacRadiol_2023_11_1_19_343695_f1.jpg
+      au < manifest ; exists ; 2023 ; Journal of Oral and Maxillofacial Radiology Volume 11 ; 2023 ; 11 ; https://www.joomr.org/ ; ; > #524 Error https://www.joomr.org/viewimage.asp?img=JOralMaxillofacRadiol_2023_11_1_19_343695_f1.jpg
 
   }
 
@@ -8105,7 +8105,7 @@
       au < finished ; finished ; 2020 ; Journal of the Scientific Society Volume 47 ; 2020 ; 47 ; https://www.jscisociety.com/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Journal of the Scientific Society Volume 48 ; 2021 ; 48 ; https://www.jscisociety.com/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Journal of the Scientific Society Volume 49 ; 2022 ; 49 ; https://www.jscisociety.com/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of the Scientific Society Volume 50 ; 2023 ; 50 ; https://www.jscisociety.com/ ; ; >
+      au < manifest ; exists ; 2023 ; Journal of the Scientific Society Volume 50 ; 2023 ; 50 ; https://www.jscisociety.com/ ; ; >
 
   }
 
@@ -8597,7 +8597,7 @@
       au < finished ; finished ; 2020 ; Pigment International Volume 7 ; 2020 ; 7 ; https://www.pigmentinternational.com/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2021 ; Pigment International Volume 8 ; 2021 ; 8 ; https://www.pigmentinternational.com/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Pigment International Volume 9 ; 2022 ; 9 ; https://www.pigmentinternational.com/ ; ; >
-      au < expected ; exists ; 2023 ; Pigment International Volume 10 ; 2023 ; 10 ; https://www.pigmentinternational.com/ ; ; >
+      au < manifest ; exists ; 2023 ; Pigment International Volume 10 ; 2023 ; 10 ; https://www.pigmentinternational.com/ ; ; >
 
   }
 
@@ -10088,7 +10088,7 @@
       au < finished ; finished ; 2020 ; Hamdan Medical Journal Volume 13 ; 2020 ; 13 ; https://www.hamdanjournal.org/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Hamdan Medical Journal Volume 14 ; 2021 ; 14 ; https://www.hamdanjournal.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Hamdan Medical Journal Volume 15 ; 2022 ; 15 ; https://www.hamdanjournal.org/ ; ; >
-      au < expected ; exists ; 2023 ; Hamdan Medical Journal Volume 16 ; 2023 ; 16 ; https://www.hamdanjournal.org/ ; ; >
+      au < manifest ; exists ; 2023 ; Hamdan Medical Journal Volume 16 ; 2023 ; 16 ; https://www.hamdanjournal.org/ ; ; >
 
   }
 
@@ -10897,7 +10897,7 @@
       au < finished ; finished ; 2020 ; Journal of Marine Medical Society Volume 22 ; 2020 ; 22 ; https://www.marinemedicalsociety.in/ ; ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Journal of Marine Medical Society Volume 23 ; 2021 ; 23 ; https://www.marinemedicalsociety.in/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Journal of Marine Medical Society Volume 24 ; 2022 ; 24 ; https://www.marinemedicalsociety.in/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Marine Medical Society Volume 25 ; 2023 ; 25 ; https://www.marinemedicalsociety.in/ ; ; >
+      au < manifest ; exists ; 2023 ; Journal of Marine Medical Society Volume 25 ; 2023 ; 25 ; https://www.marinemedicalsociety.in/ ; ; >
 
   }
 
@@ -10943,7 +10943,7 @@
       au < finished ; finished ; 2020 ; Journal of Medical Ultrasound Volume 28 ; 2020 ; 28 ; https://www.jmuonline.org/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2021 ; Journal of Medical Ultrasound Volume 29 ; 2021 ; 29 ; https://www.jmuonline.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Journal of Medical Ultrasound Volume 30 ; 2022 ; 30 ; https://www.jmuonline.org/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Medical Ultrasound Volume 31 ; 2023 ; 31 ; https://www.jmuonline.org/ ; ; >
+      au < manifest ; exists ; 2023 ; Journal of Medical Ultrasound Volume 31 ; 2023 ; 31 ; https://www.jmuonline.org/ ; ; >
 
   }
 
@@ -11613,7 +11613,7 @@
       au < finished ; finished ; 2020 ; TNOA Journal of Ophthalmic Science and Research Volume 58 ; 2020 ; 58 ; https://www.tnoajosr.com/ ; ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2021 ; TNOA Journal of Ophthalmic Science and Research Volume 59 ; 2021 ; 59 ; https://www.tnoajosr.com/ ; ; >
       au < deepCrawl ; exists ; 2022 ; TNOA Journal of Ophthalmic Science and Research Volume 60 ; 2022 ; 60 ; https://www.tnoajosr.com/ ; ; >
-      au < expected ; exists ; 2023 ; TNOA Journal of Ophthalmic Science and Research Volume 61 ; 2023 ; 61 ; https://www.tnoajosr.com/ ; ; >
+      au < manifest ; exists ; 2023 ; TNOA Journal of Ophthalmic Science and Research Volume 61 ; 2023 ; 61 ; https://www.tnoajosr.com/ ; ; >
 
   }
 
@@ -12691,7 +12691,7 @@
       au < frozen ; exists ; 2020 ; Journal of Ayurveda Case Reports Volume 3 ; 2020 ; 3 ; https://www.ayucare.org/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Ayurveda Case Reports Volume 4 ; 2021 ; 4 ; https://www.ayucare.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Journal of Ayurveda Case Reports Volume 5 ; 2022 ; 5 ; https://www.ayucare.org/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Ayurveda Case Reports Volume 6 ; 2023 ; 6 ; https://www.ayucare.org/ ; ; >
+      au < manifest ; exists ; 2023 ; Journal of Ayurveda Case Reports Volume 6 ; 2023 ; 6 ; https://www.ayucare.org/ ; ; >
 
   }
 
@@ -12940,7 +12940,7 @@
       au < frozen ; exists ; 2020 ; Journal of Integrative Nursing Volume 2 ; 2020 ; 2 ; https://www.journalin.org/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Integrative Nursing Volume 3 ; 2021 ; 3 ; https://www.journalin.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Journal of Integrative Nursing Volume 4 ; 2022 ; 4 ; https://www.journalin.org/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Integrative Nursing Volume 5 ; 2023 ; 5 ; https://www.journalin.org/ ; ; >
+      au < manifest ; exists ; 2023 ; Journal of Integrative Nursing Volume 5 ; 2023 ; 5 ; https://www.journalin.org/ ; ; >
 
   }
 
