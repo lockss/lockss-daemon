@@ -83,28 +83,37 @@
   {
 
     title <
-      name = Journal on Applied Mathematics ;
-      issn = 0036-1399 ;
-      eissn = 1095-712X
+      name = Journal of the Society for Industrial and Applied Mathematics ;
+      issn = 0368-4245
     >
 
     {
       param[journal_id] = smjmap.1
 
-      au < frozen ; exists ; 1953 ; Journal on Applied Mathematics Volume 1 ; 1 ; https://epubs.siam.org/ ; > 
-      au < frozen ; exists ; 1954 ; Journal on Applied Mathematics Volume 2 ; 2 ; https://epubs.siam.org/ ; > 
-      au < frozen ; exists ; 1955 ; Journal on Applied Mathematics Volume 3 ; 3 ; https://epubs.siam.org/ ; > 
-      au < frozen ; exists ; 1956 ; Journal on Applied Mathematics Volume 4 ; 4 ; https://epubs.siam.org/ ; > 
-      au < frozen ; exists ; 1957 ; Journal on Applied Mathematics Volume 5 ; 5 ; https://epubs.siam.org/ ; > 
-      au < frozen ; exists ; 1958 ; Journal on Applied Mathematics Volume 6 ; 6 ; https://epubs.siam.org/ ; > 
-      au < frozen ; exists ; 1959 ; Journal on Applied Mathematics Volume 7 ; 7 ; https://epubs.siam.org/ ; > 
-      au < frozen ; exists ; 1960 ; Journal on Applied Mathematics Volume 8 ; 8 ; https://epubs.siam.org/ ; > 
-      au < frozen ; exists ; 1961 ; Journal on Applied Mathematics Volume 9 ; 9 ; https://epubs.siam.org/ ; > 
-      au < frozen ; exists ; 1962 ; Journal on Applied Mathematics Volume 10 ; 10 ; https://epubs.siam.org/ ; > 
-      au < frozen ; exists ; 1963 ; Journal on Applied Mathematics Volume 11 ; 11 ; https://epubs.siam.org/ ; > 
-      au < frozen ; exists ; 1964 ; Journal on Applied Mathematics Volume 12 ; 12 ; https://epubs.siam.org/ ; > 
-      au < frozen ; exists ; 1965 ; Journal on Applied Mathematics Volume 13 ; 13 ; https://epubs.siam.org/ ; > 
+      au < frozen ; exists ; 1953 ; Journal of the Society for Industrial and Applied Mathematics Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+      au < frozen ; exists ; 1954 ; Journal of the Society for Industrial and Applied Mathematics Volume 2 ; 2 ; https://epubs.siam.org/ ; >
+      au < frozen ; exists ; 1955 ; Journal of the Society for Industrial and Applied Mathematics Volume 3 ; 3 ; https://epubs.siam.org/ ; >
+      au < frozen ; exists ; 1956 ; Journal of the Society for Industrial and Applied Mathematics Volume 4 ; 4 ; https://epubs.siam.org/ ; >
+      au < frozen ; exists ; 1957 ; Journal of the Society for Industrial and Applied Mathematics Volume 5 ; 5 ; https://epubs.siam.org/ ; >
+      au < frozen ; exists ; 1958 ; Journal of the Society for Industrial and Applied Mathematics Volume 6 ; 6 ; https://epubs.siam.org/ ; >
+      au < frozen ; exists ; 1959 ; Journal of the Society for Industrial and Applied Mathematics Volume 7 ; 7 ; https://epubs.siam.org/ ; >
+      au < frozen ; exists ; 1960 ; Journal of the Society for Industrial and Applied Mathematics Volume 8 ; 8 ; https://epubs.siam.org/ ; >
+      au < frozen ; exists ; 1961 ; Journal of the Society for Industrial and Applied Mathematics Volume 9 ; 9 ; https://epubs.siam.org/ ; >
+      au < frozen ; exists ; 1962 ; Journal of the Society for Industrial and Applied Mathematics Volume 10 ; 10 ; https://epubs.siam.org/ ; >
+      au < frozen ; exists ; 1963 ; Journal of the Society for Industrial and Applied Mathematics Volume 11 ; 11 ; https://epubs.siam.org/ ; >
+      au < frozen ; exists ; 1964 ; Journal of the Society for Industrial and Applied Mathematics Volume 12 ; 12 ; https://epubs.siam.org/ ; >
+      au < frozen ; exists ; 1965 ; Journal of the Society for Industrial and Applied Mathematics Volume 13 ; 13 ; https://epubs.siam.org/ ; >
     }
+
+  }
+
+  {
+
+    title <
+      name = Journal on Applied Mathematics ;
+      issn = 0036-1399 ;
+      eissn = 1095-712X
+    >
 
     {
       param[journal_id] = smjmap
