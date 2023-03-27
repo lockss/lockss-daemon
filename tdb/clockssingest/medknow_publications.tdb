@@ -9122,8 +9122,8 @@
       au < finished ; finished ; 2019 ; The Egyptian Orthopaedic Journal Volume 54 ; 2019 ; 54 ; https://www.eoj.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2020 ; The Egyptian Orthopaedic Journal Volume 55 ; 2020 ; 55 ; https://www.eoj.eg.net/ ; ; reingest4.clockss.org:8082 >
       au < notReady ; exists ; 2021 ; The Egyptian Orthopaedic Journal Volume 56 ; 2021 ; 56 ; https://www.eoj.eg.net/ ; ; > #site cert failed
-      au < deepCrawl ; exists ; 2022 ; The Egyptian Orthopaedic Journal Volume 57 ; 2022 ; 57 ; https://www.eoj.eg.net/ ; ; > #site cert failed
-      au < expected ; exists ; 2023 ; The Egyptian Orthopaedic Journal Volume 58 ; 2023 ; 58 ; https://www.eoj.eg.net/ ; ; > #site cert failed
+      au < deepCrawl ; exists ; 2022 ; The Egyptian Orthopaedic Journal Volume 57 ; 2022 ; 57 ; https://www.eoj.eg.net/ ; ; >
+      au < expected ; exists ; 2023 ; The Egyptian Orthopaedic Journal Volume 58 ; 2023 ; 58 ; https://www.eoj.eg.net/ ; ; >
 
   }
 
@@ -10015,7 +10015,6 @@
       au < frozen ; exists ; 2021 ; Formosan Journal of Surgery Volume 54 ; 2021 ; 54 ; https://www.e-fjs.org/ ; ; >
       au < frozen ; exists ; 2022 ; Formosan Journal of Surgery Volume 55 ; 2022 ; 55 ; https://www.e-fjs.org/ ; ; >
       #deactivated
-      au < expected ; exists ; 2023 ; Formosan Journal of Surgery Volume 56 ; 2023 ; 56 ; https://www.e-fjs.org/ ; ; >
 
   }
 
@@ -10775,9 +10774,10 @@
 
       param[journal_issn] = 2078-7685
 #      param[base_url] = http://www.journalofdiabetology.org/
+      #move to LWW in 2023, moved https://journals.lww.com/jodb/
 
-      au < manifest ; exists ; 2010 ; Journal of Diabetology Volume 1 ; 2010 ; 1 ; https://www.journalofdiabetology.org/ ; ; >
-      au < notReady ; exists ; 2011 ; Journal of Diabetology Volume 2 ; 2011 ; 2 ; https://www.journalofdiabetology.org/ ; ; > #500 error
+      au < doNotProcess ; exists ; 2010 ; Journal of Diabetology Volume 1 ; 2010 ; 1 ; https://www.journalofdiabetology.org/ ; ; >
+      au < doNotProcess ; exists ; 2011 ; Journal of Diabetology Volume 2 ; 2011 ; 2 ; https://www.journalofdiabetology.org/ ; ; > #500 error
       au < finished ; frozen ; 2012 ; Journal of Diabetology Volume 3 ; 2012 ; 3 ; https://www.journalofdiabetology.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2013 ; Journal of Diabetology Volume 4 ; 2013 ; 4 ; https://www.journalofdiabetology.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2014 ; Journal of Diabetology Volume 5 ; 2014 ; 5 ; https://www.journalofdiabetology.org/ ; ; reingest1.clockss.org:8082 >
@@ -10787,9 +10787,8 @@
       au < finished ; finished ; 2018 ; Journal of Diabetology Volume 9 ; 2018 ; 9 ; https://www.journalofdiabetology.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Journal of Diabetology Volume 10 ; 2019 ; 10 ; https://www.journalofdiabetology.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; Journal of Diabetology Volume 11 ; 2020 ; 11 ; https://www.journalofdiabetology.org/ ; ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Journal of Diabetology Volume 12 ; 2021 ; 12 ; https://www.journalofdiabetology.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of Diabetology Volume 13 ; 2022 ; 13 ; https://www.journalofdiabetology.org/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Diabetology Volume 14 ; 2023 ; 14 ; https://www.journalofdiabetology.org/ ; ; >
+      au < frozen ; exists ; 2021 ; Journal of Diabetology Volume 12 ; 2021 ; 12 ; https://www.journalofdiabetology.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of Diabetology Volume 13 ; 2022 ; 13 ; https://www.journalofdiabetology.org/ ; ; >
 
   }
 

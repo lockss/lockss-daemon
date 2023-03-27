@@ -10328,9 +10328,10 @@
 
       param[journal_issn] = 2078-7685
 #      param[base_url] = http://www.journalofdiabetology.org/
+      #move to LWW in 2023, moved https://journals.lww.com/jodb/
 
       au < released ; 2010 ; Journal of Diabetology Volume 1 ; 2010 ; 1 ; https://www.journalofdiabetology.org/ >
-      au < notReady ; 2011 ; Journal of Diabetology Volume 2 ; 2011 ; 2 ; https://www.journalofdiabetology.org/ > #500
+      au < doNotProcess ; 2011 ; Journal of Diabetology Volume 2 ; 2011 ; 2 ; https://www.journalofdiabetology.org/ > #500
       au < released ; 2012 ; Journal of Diabetology Volume 3 ; 2012 ; 3 ; https://www.journalofdiabetology.org/ >
       au < released ; 2013 ; Journal of Diabetology Volume 4 ; 2013 ; 4 ; https://www.journalofdiabetology.org/ >
       au < released ; 2014 ; Journal of Diabetology Volume 5 ; 2014 ; 5 ; https://www.journalofdiabetology.org/ >
@@ -10341,8 +10342,7 @@
       au < released ; 2019 ; Journal of Diabetology Volume 10 ; 2019 ; 10 ; https://www.journalofdiabetology.org/ >
       au < released ; 2020 ; Journal of Diabetology Volume 11 ; 2020 ; 11 ; https://www.journalofdiabetology.org/ >
       au < released ; 2021 ; Journal of Diabetology Volume 12 ; 2021 ; 12 ; https://www.journalofdiabetology.org/ >
-      au < manifest ; 2022 ; Journal of Diabetology Volume 13 ; 2022 ; 13 ; https://www.journalofdiabetology.org/ >
-      au < manifest ; 2023 ; Journal of Diabetology Volume 14 ; 2023 ; 14 ; https://www.journalofdiabetology.org/ >
+      au < doNotProcess ; 2022 ; Journal of Diabetology Volume 13 ; 2022 ; 13 ; https://www.journalofdiabetology.org/ >
 
   }
 
