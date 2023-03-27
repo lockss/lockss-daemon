@@ -901,9 +901,6 @@
 #      issn = 0080-2018
 #    
 #    >
-#    # not in usual HighWire shape
-#    param[base_url] = http://reg.gsapubs.org/
-#    implicit < status ; status2 ; year ; doi ; isbn ; name ; param[volume_name] ; hidden[proxy] >
 #
 #    au < doNotProcess ; exists ; 1962 ; 10.1130/REG1 ;  ; Reviews in Engineering Geology Volume 1 ; 1 ; >
 #    au < doNotProcess ; exists ; 1969 ; 10.1130/REG2 ;  ; Reviews in Engineering Geology Volume 2 ; 2 ; >
