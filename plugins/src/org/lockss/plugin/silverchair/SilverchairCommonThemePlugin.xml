@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>12</string>
+        <string>13</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -196,6 +196,15 @@
             <string>"%s([^/]+/)?%s/article-pdf/.*\.pdf$", base_url, journal_id</string>
             <string>"^https?://([^/]+\.silverchair-cdn\.com)/[^?]+pdf\?Expires=2147483647"</string>
         </list>
+    </entry>
+    <entry>
+        <string>application/x-research-info-systems_filter_factory</string>
+        <string>org.lockss.plugin.silverchair.SilverchairRisFilterFactory</string>
+    </entry>
+    <!--  RIS citation URLs come in as text/plain; we do additional RIS check in the factory -->
+    <entry>
+        <string>text/plain_filter_factory</string>
+        <string>org.lockss.plugin.silverchair.SilverchairRisFilterFactory</string>
     </entry>
     <entry>
         <string>plugin_article_iterator_factory</string>
