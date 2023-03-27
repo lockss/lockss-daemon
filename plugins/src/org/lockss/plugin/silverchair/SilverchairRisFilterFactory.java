@@ -50,10 +50,30 @@ import java.util.regex.Pattern;
  * Y2 - 03/23/2023, which changes based on current download date
  * Reads through RIS files line by line and removes the line with the start tag Y2
  */
+
+/*
+Sample Silvearchair books ris file:
+
+Provider: Silverchair
+Database: GeoScienceWorld
+Content: text/plain; charset="UTF-8"
+
+TY  - ECHAP
+T1  - Front Matter
+PY  - 1985
+Y1  - 1985/01/01
+T2  - Proceedings of the International Clay Conference Denver, 1985
+A2  - Schultz, Leonard G.
+A2  - Olphen, H. van
+A2  - Mumpton, Frederick A.
+SP  - 0
+PB  - Clay Minerals Society
+SN  - 9780935868291
+Y2  - 3/24/2023
+ER  -
+ */
 public class SilverchairRisFilterFactory implements FilterFactory {
   private static Logger log = Logger.getLogger(SilverchairRisFilterFactory.class);
-  
-  private static Pattern RIS_PATTERN = Pattern.compile("^\\s*TY\\s*-", Pattern.CASE_INSENSITIVE);
 
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
@@ -67,13 +87,16 @@ public class SilverchairRisFilterFactory implements FilterFactory {
      * we have to filter all text/plain and then determine if they're a RIS file 
      * here.  We are working on a different long-term solution by allowing us to verify
      * the URL against a regexp.
+     *
      */
 
     BufferedReader bReader;
 
     if (in.markSupported() != true) {
+      log.debug3("goes here====in.markSupported() != true");
       inBuf = new BufferedInputStream(in); //wrap the one that came in
-    } else {  
+    } else {
+      log.debug3("goes here====inBuf =  in;");
       inBuf =  in; //use the one passed in
     }
     int BUF_LEN = 2000;
@@ -84,11 +107,7 @@ public class SilverchairRisFilterFactory implements FilterFactory {
       bReader = new BufferedReader(new InputStreamReader(new BoundedInputStream(inBuf, BUF_LEN), encoding));
       
       String aLine = bReader.readLine();
-      // The first tag in a RIS file must be "TY - "; be nice about WS
-      // The specification doesn't allow for comments or other preceding characters
 
-      // isBlank() checks if whitespace, empty or null
-      // keep initial null check or you'd never exit loop if you hit the end of input!
       while (aLine != null && StringUtils.isBlank(aLine)) {
         aLine = bReader.readLine(); // get the next line
       }
@@ -96,7 +115,7 @@ public class SilverchairRisFilterFactory implements FilterFactory {
       // do NOT close bReader - it would also close underlying inBuf!
       inBuf.reset();
       // if we have  data, see if it matches the RIS pattern
-      if (aLine != null && RIS_PATTERN.matcher(aLine).find()) {
+      if (aLine != null) {
         return getRisFilterReader(encoding, inBuf).toInputStream(encoding);
       }
       return inBuf; // If not a RIS file, just return reset file
