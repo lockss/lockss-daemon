@@ -3,7 +3,7 @@
   publisher <
     name = Geological Society of America ;
     info[contract] = 2011 ;
-    info[back] = 2011 ;
+    info[back] = 1934 ;
     info[tester] = 8 ;
     info[poller] = 6 ;
     info[platform] = Silverchair books
@@ -893,37 +893,37 @@
     au < manifest ; exists ; 2022 ; 9780813700649 ; 9780813756646 ; Geological Society of America Field Guides Volume 64 ; gsa/books/edited-volume/2378/Field-Excursions-in-the-Front-Range-and-Wet ; >
 
   }
+  
+  {
+    title < 
+      name = Reviews in Engineering Geology ;
+      type = bookSeries ;
+      issn = 0080-2018
+    >
+    #Processed on HW platform: Volumes 8-22 
 
-#  {
-#    title < 
-#      name = Reviews in Engineering Geology ;
-#      type = bookSeries ;
-#      issn = 0080-2018
-#    
-#    >
-#
-#    au < doNotProcess ; exists ; 1962 ; 10.1130/REG1 ;  ; Reviews in Engineering Geology Volume 1 ; 1 ; >
-#    au < doNotProcess ; exists ; 1969 ; 10.1130/REG2 ;  ; Reviews in Engineering Geology Volume 2 ; 2 ; >
-#    au < doNotProcess ; exists ; 1977 ; 10.1130/REG3 ; 0-8137-4103-3 ; Reviews in Engineering Geology Volume 3 ; 3 ; >
-#    au < doNotProcess ; exists ; 1979 ; 10.1130/REG4 ; 0-8137-4104-1 ; Reviews in Engineering Geology Volume 4 ; 4 ; >
-#    au < doNotProcess ; exists ; 1982 ; 10.1130/REG5 ; 0-8137-4105-X ; Reviews in Engineering Geology Volume 5 ; 5 ; >
-#    au < doNotProcess ; exists ; 1984 ; 10.1130/REG6 ; 0-8137-4106-8 ; Reviews in Engineering Geology Volume 6 ; 6 ; >
-#    au < doNotProcess ; exists ; 1987 ; 10.1130/REG7 ; 0-8137-4107-6 ; Reviews in Engineering Geology Volume 7 ; 7 ; >
-#    au < doNotProcess ; doNotProcess ; 1990 ; 10.1130/REG8 ; 0-8137-4108-4 ; Reviews in Engineering Geology Volume 8 ; 8 ; >
-#    au < doNotProcess ; doNotProcess ; 1992 ; 10.1130/REG9 ; 0-8137-4109-2 ; Reviews in Engineering Geology Volume 9 ; 9 ; >
-#    au < doNotProcess ; doNotProcess ; 1995 ; 10.1130/REG10 ; 0-8137-4110-6 ; Reviews in Engineering Geology Volume 10 ; 10 ; >
-#    au < doNotProcess ; doNotProcess ; 1997 ; 10.1130/REG11 ; 0-8137-4111-4 ; Reviews in Engineering Geology Volume 11 ; 11 ; >
-#    au < doNotProcess ; doNotProcess ; 1998 ; 10.1130/REG12 ; 0-8137-4112-2 ; Reviews in Engineering Geology Volume 12 ; 12 ; >
-#    au < doNotProcess ; doNotProcess ; 1998 ; 10.1130/REG13 ; 0-8137-4113-0 ; Reviews in Engineering Geology Volume 13 ; 13 ; >
-#    au < doNotProcess ; doNotProcess ; 2001 ; 10.1130/REG14 ; 0-8137-4114-9 ; Reviews in Engineering Geology Volume 14 ; 14 ; >
-#    au < doNotProcess ; doNotProcess ; 2002 ; 10.1130/REG15 ; 0-8137-4115-7 ; Reviews in Engineering Geology Volume 15 ; 15 ; >
-#    au < doNotProcess ; doNotProcess ; 2005 ;  ; 978-0-8137-4120-8 ; Reviews in Engineering Geology Volume 16 ; 16 ; >
-#    au < doNotProcess ; doNotProcess ; 2007 ;  ; 978-0-8137-4119-2 ; Reviews in Engineering Geology Volume 17 ; 17 ; >
-#    au < doNotProcess ; doNotProcess ; 2007 ;  ; 978-0-8137-4118-5 ; Reviews in Engineering Geology Volume 18 ; 18 ; >
-#    au < doNotProcess ; doNotProcess ; 2008 ;  ; 978-0-8137-4117-8 ; Reviews in Engineering Geology Volume 19 ; 19 ; >
-#    au < doNotProcess ; doNotProcess ; 2008 ;  ; 978-0-8137-4116-1 ; Reviews in Engineering Geology Volume 20 ; 20 ; >
-#    au < doNotProcess ; doNotProcess ; 2013 ; 10.1130/9780813741215 ; 978-0-8137-4121-5 ; Reviews in Engineering Geology Volume 21 ; 21 ; >
-#    au < doNotProcess ; doNotProcess ; 2014 ; 10.1130/9780813741222 ; 978-0-8137-4122-2 ; Reviews in Engineering Geology Volume 22 ; 22 ; >
-#    #nothing after 2014.
-#  }
+    au < manifest ; exists ; 1962 ; 813741017 ; 9780813758015 ; Geological Society of America Reviews in Engineering Geology Volume 1 ; gsa/books/book/851/Reviews-in-Engineering-Geology ; >
+    au < manifest ; exists ; 1969 ; 813741025 ; 9780813758022 ; Geological Society of America Reviews in Engineering Geology Volume 2 ; gsa/books/book/854/Reviews-in-Engineering-Geology ; >
+    au < manifest ; exists ; 1977 ; 813741033 ; 9780813758039 ; Geological Society of America Reviews in Engineering Geology Volume 3 ; gsa/books/book/827/Landslides ; >
+    au < manifest ; exists ; 1979 ; 813741041 ; 9780813758046 ; Geological Society of America Reviews in Engineering Geology Volume 4 ; gsa/books/book/794/Geology-in-the-Siting-of-Nuclear-Power-Plants ; >
+    au < manifest ; exists ; 1982 ; 081374105X ; 9780813758053 ; Geological Society of America Reviews in Engineering Geology Volume 5 ; gsa/books/book/820/Geology-Under-Cities ; >
+    au < manifest ; exists ; 1984 ; 813741068 ; 9780813758060 ; Geological Society of America Reviews in Engineering Geology Volume 6 ; gsa/books/book/831/Man-Induced-Land-Subsidence ; >
+    au < manifest ; exists ; 1987 ; 813741076 ; 9780813758077 ; Geological Society of America Reviews in Engineering Geology Volume 7 ; gsa/books/book/790/Debris-Flows-Avalanches ; >
+    au < doNotProcess ; exists ; 1990 ; 813741084 ; 9780813758084 ; Geological Society of America Reviews in Engineering Geology Volume 8 ; gsa/books/book/834/Neotectonics-in-Earthquake-Evaluation ; >
+    au < doNotProcess ; exists ; 1992 ; 813741092 ; 9780813758091 ; Geological Society of America Reviews in Engineering Geology Volume 9 ; gsa/books/book/830/Landslides-Landslide-Mitigation ; >
+    au < doNotProcess ; exists ; 1995 ; 9780813741109 ; 9780813758107 ; Geological Society of America Reviews in Engineering Geology Volume 10 ; gsa/books/book/778/Clay-and-Shale-Slope-Instability ; >
+    au < doNotProcess ; exists ; 1997 ; 9780813741116 ; 9780813758114 ; Geological Society of America Reviews in Engineering Geology Volume 11 ; gsa/books/book/857/Storm-Induced-Geologic-Hazards ; >
+    au < doNotProcess ; exists ; 1998 ; 9780813741123 ; 9780813758121 ; Geological Society of America Reviews in Engineering Geology Volume 12 ; gsa/books/book/751/A-Paradox-of-Power ; >
+    au < doNotProcess ; exists ; 1998 ; 9780813741130 ; 9780813758138 ; Geological Society of America Reviews in Engineering Geology Volume 13 ; gsa/books/book/907/Military-Geology-in-War-and-Peace ; >
+    au < doNotProcess ; exists ; 2001 ; 9780813741147 ; 9780813758145 ; Geological Society of America Reviews in Engineering Geology Volume 14 ; gsa/books/book/890/The-Environmental-Legacy-of-Military-Operations ; >
+    au < doNotProcess ; exists ; 2002 ; 9780813741154 ; 9780813758152 ; Geological Society of America Reviews in Engineering Geology Volume 15 ; gsa/books/book/795/Catastrophic-Landslides ; >
+    au < doNotProcess ; exists ; 2005 ; 9780813741161 ; 9780813758169 ; Geological Society of America Reviews in Engineering Geology Volume 16 ; gsa/books/book/921/Humans-as-Geologic-Agents ; >
+    au < doNotProcess ; exists ; 2007 ; 9780813741178 ; 9780813758176 ; Geological Society of America Reviews in Engineering Geology Volume 17 ; gsa/books/book/914/Understanding-and-Responding-to-Hazardous ; >
+    au < doNotProcess ; exists ; 2007 ; 9780813741185 ; 9780813758183 ; Geological Society of America Reviews in Engineering Geology Volume 18 ; gsa/books/book/903/Geology-of-Coal-FiresCase-Studies-from-Around-the ; >
+    au < doNotProcess ; exists ; 2008 ; 9780813741192 ; 9780813758190 ; Geological Society of America Reviews in Engineering Geology Volume 19 ; gsa/books/book/893/Deep-Geologic-Repositories ; >
+    au < doNotProcess ; exists ; 2008 ; 9780813741208 ; 9780813758206 ; Geological Society of America Reviews in Engineering Geology Volume 20 ; gsa/books/book/826/Landslides-and-Engineering-Geology-of-the-Seattle ; >
+    au < doNotProcess ; exists ; 2013 ; 9780813741215 ; 9780813758213 ; Geological Society of America Reviews in Engineering Geology Volume 21 ; gsa/books/book/867/The-Challenges-of-Dam-Removal-and-River ; >
+    au < doNotProcess ; exists ; 2014 ; 9780813741222 ; 9780813758220 ; Geological Society of America Reviews in Engineering Geology Volume 22 ; gsa/books/book/906/Military-Geosciences-in-the-Twenty-First-Century ; >
+    #nothing after 2014.
+  }
 }
