@@ -3924,7 +3924,7 @@ while (my $line = <>) {
 #           }
 #           sleep(4);
 #    # End of OECD Publisher
-#  }
+  }
   
   if($result eq "Plugin Unknown") {
     printf("*PLUGIN UNKNOWN*, %s, %s\n",$auid,$man_url);
