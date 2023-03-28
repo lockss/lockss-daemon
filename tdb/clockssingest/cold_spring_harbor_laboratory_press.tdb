@@ -301,6 +301,12 @@
       au < finished ; frozen ; 2020 ; Genes & Development Volume 34 ; 34 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Genes & Development Volume 35 ; 35 ; >
       au < crawling ; exists ; 2022 ; Genes & Development Volume 36 ; 36 ; >
+    }
+
+    {
+
+      param[base_url] = https://genesdev.cshlp.org/
+
       au < manifest ; exists ; 2023 ; Genes & Development Volume 37 ; 37 ; >
 
     }

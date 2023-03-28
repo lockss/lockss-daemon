@@ -295,6 +295,12 @@
       au < released ; 2020 ; Genes & Development Volume 34 ; 34 >
       au < released ; 2021 ; Genes & Development Volume 35 ; 35 >
       au < testing ; 2022 ; Genes & Development Volume 36 ; 36 >
+    }
+
+    {
+
+      param[base_url] = https://genesdev.cshlp.org/
+
       au < expected ; 2023 ; Genes & Development Volume 37 ; 37 >
 
     }
