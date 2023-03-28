@@ -57,6 +57,12 @@ public class Emerald2020MetadataExtractorFactory implements FileMetadataExtracto
 
   /*
      // From journal
+     <meta name="citation_journal_title" content="Journal of Social Marketing">
+      <meta name="citation_volume" content="12">
+      <meta name="citation_issue" content="2">
+      <meta name="citation_firstpage" content="275">
+      <meta name="citation_lastpage" content="291">
+
      <meta name="dc.Title" content="Point cloud measurements-uncertainty calculation on spatial-feature based registration">
       <meta name="citation_journal_title" content="Sensor Review">
       <meta name="dc.Subject" content="Algorithmic model,Measurement uncertainty,Registered point cloud,Spatial feature">
@@ -106,6 +112,7 @@ public class Emerald2020MetadataExtractorFactory implements FileMetadataExtracto
           implements FileMetadataExtractor {
     private static MultiMap tagMap = new MultiValueMap();
     static {
+      tagMap.put("dc.Identifier", MetadataField.DC_FIELD_LANGUAGE);
       tagMap.put("dc.Language", MetadataField.DC_FIELD_LANGUAGE);
       tagMap.put("dc.Title", MetadataField.DC_FIELD_TITLE);
       tagMap.put("dc.Identifier", MetadataField.DC_FIELD_IDENTIFIER);
@@ -113,6 +120,13 @@ public class Emerald2020MetadataExtractorFactory implements FileMetadataExtracto
       tagMap.put("dc.Publisher", MetadataField.DC_FIELD_PUBLISHER);
       tagMap.put("dc.Contributor", MetadataField.DC_FIELD_CONTRIBUTOR);
       tagMap.put("dc.Subject", MetadataField.DC_FIELD_SUBJECT);
+
+      tagMap.put("dc.Identifier", MetadataField.FIELD_DOI);
+      tagMap.put("dc.Title", MetadataField.FIELD_ARTICLE_TITLE);
+      tagMap.put("dc.Publisher", MetadataField.FIELD_PUBLISHER);
+      tagMap.put("DC.Date", MetadataField.FIELD_DATE);
+      tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
+      tagMap.put("citation_issue", MetadataField.FIELD_ISSUE);
     }
 
     @Override
