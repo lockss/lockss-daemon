@@ -71,7 +71,7 @@
       {
         param[base_url] = https://www.ajnr.org/
 
-        au < asnr.AsnrDrupalPlugin ; exists ; 2022 ; American Journal of Neuroradiology Volume 43 ; 43 >
+        au < asnr.AsnrDrupalPlugin ; manifest ; 2022 ; American Journal of Neuroradiology Volume 43 ; 43 >
         au < asnr.AsnrDrupalPlugin ; manifest ; 2023 ; American Journal of Neuroradiology Volume 44 ; 44 >
       }
     }
