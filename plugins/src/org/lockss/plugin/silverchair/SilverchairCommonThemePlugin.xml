@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>13</string>
+        <string>14</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -259,6 +259,7 @@
         <list>
             <string>[.](css|js)(\?.+)?$</string>
             <string>"(%s|silverchair-?cdn\.com/)UI/app/", base_url</string>
+            <string>.+[.](bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff.?)(\?.*)?$</string>
         </list>
     </entry>
     <entry>
@@ -266,6 +267,7 @@
         <list>
             <string>"[.](css|js)(\?.+)?$", 0</string>
             <string>"(%s|silverchair-?cdn\.com/)UI/app/", base_url, 0</string>
+            <string>".+[.](bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff.?)(\?.*)?$", 0</string>
         </list>
     </entry>
     <entry>

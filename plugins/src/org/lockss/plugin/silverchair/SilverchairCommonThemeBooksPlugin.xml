@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>4</string>
+        <string>5</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -109,7 +109,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>2,"^https?://([^/]+\.silverchair-cdn\.com)/.*\.xlsx"</string>
             <string>2,"%smy-account/register", base_url</string>
             <string>1,"^https?://(%s|[^.]+\.(silverchair-?cdn\.com/|cloudfront\.net/|brightcove\.net/)).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
-            <string>1,"%sCitation/Download\?resourceId=[^&amp;]+&amp;resourceType=[^&amp;]+&amp;citationFormat=", base_url</string>
+            <string>1,"%sCitation/Download\?resourceId=[^&amp;]+&amp;resourceType=[^&amp;]+&amp;citationFormat=2", base_url</string>
             <string>1,"^https?://([^/]+\.silverchair-cdn\.com)/[^?]+\?Expires=2147483647"</string>
             <string>1,"%s%s/", base_url, resource_id</string>
             <!--https://pubs.geoscienceworld.org/books/book/2160/chapter-pdf/4705971/01_sp471-18-052.pdf-->
@@ -179,6 +179,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <list>
             <string>[.](css|js)(\?.+)?$</string>
             <string>"(%s|silverchair-?cdn\.com/)UI/app/", base_url</string>
+            <string>.+[.](bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff.?)(\?.*)?$</string>
         </list>
     </entry>
     <entry>
@@ -193,7 +194,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>"silverchaircdn\.com/(CSS|Images)/", 0</string>
             <string>"\?v=[0-9]+$", 0</string>
             <string>"\.axd/(file|script|stylesheet)/", 0</string>
-            <!--Silverchaird add Y2-"access date" to downloaded citation file which varies each time, generate problem for polling-->
+            <string>".+[.](bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff.?)(\?.*)?$", 0</string>
         </list>
     </entry>
     <entry>
