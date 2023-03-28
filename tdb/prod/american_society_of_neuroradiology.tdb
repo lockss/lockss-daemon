@@ -1,7 +1,7 @@
 {
   publisher <
     name = American Society of Neuroradiology ;
-    info[platform] = 1 title HWDrupal w manifests. 1 title Ingenta no manifests.
+    info[platform] = 1 title HWDrupal. 1 title Ingenta.
   >
 
   {
@@ -15,12 +15,11 @@
     {
 
       pluginPrefix = org.lockss.plugin.highwire.
-      param[base_url] = http://www.ajnr.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       {
-
         attr[au_coverage_depth] = abstracts
+        param[base_url] = http://www.ajnr.org/
 
         au < HighWirePressH20Plugin ; down ; 1980 ; American Journal of Neuroradiology [abstracts only] Volume 1 ; 1 >
         au < HighWirePressH20Plugin ; down ; 1981 ; American Journal of Neuroradiology [abstracts only] Volume 2 ; 2 >
@@ -38,37 +37,43 @@
         au < HighWirePressH20Plugin ; down ; 1993 ; American Journal of Neuroradiology [abstracts only] Volume 14 ; 14 >
         au < HighWirePressH20Plugin ; down ; 1994 ; American Journal of Neuroradiology [abstracts only] Volume 15 ; 15 >
       }
-      
-      au < HighWirePressH20Plugin ; down ; 1995 ; American Journal of Neuroradiology Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; down ; 1996 ; American Journal of Neuroradiology Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; down ; 1997 ; American Journal of Neuroradiology Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; down ; 1998 ; American Journal of Neuroradiology Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; down ; 1999 ; American Journal of Neuroradiology Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; down ; 2000 ; American Journal of Neuroradiology Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; down ; 2001 ; American Journal of Neuroradiology Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; down ; 2002 ; American Journal of Neuroradiology Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; down ; 2003 ; American Journal of Neuroradiology Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; down ; 2004 ; American Journal of Neuroradiology Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; down ; 2005 ; American Journal of Neuroradiology Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; down ; 2006 ; American Journal of Neuroradiology Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; down ; 2007 ; American Journal of Neuroradiology Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; down ; 2008 ; American Journal of Neuroradiology Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; down ; 2009 ; American Journal of Neuroradiology Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; down ; 2010 ; American Journal of Neuroradiology Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; down ; 2011 ; American Journal of Neuroradiology Volume 32 ; 32 >
-      au < HighWirePressH20Plugin ; down ; 2012 ; American Journal of Neuroradiology Volume 33 ; 33 >
-      au < HighWirePressH20Plugin ; down ; 2013 ; American Journal of Neuroradiology Volume 34 ; 34 >
-      au < HighWirePressH20Plugin ; down ; 2014 ; American Journal of Neuroradiology Volume 35 ; 35 >
-      au < HighWirePressH20Plugin ; down ; 2015 ; American Journal of Neuroradiology Volume 36 ; 36 >
-      au < asnr.AsnrDrupalPlugin ; released ; 2016 ; American Journal of Neuroradiology Volume 37 ; 37 >
-      au < asnr.AsnrDrupalPlugin ; released ; 2017 ; American Journal of Neuroradiology Volume 38 ; 38 >
-      au < asnr.AsnrDrupalPlugin ; released ; 2018 ; American Journal of Neuroradiology Volume 39 ; 39 >
-      au < asnr.AsnrDrupalPlugin ; released ; 2019 ; American Journal of Neuroradiology Volume 40 ; 40 >
-      au < asnr.AsnrDrupalPlugin ; released ; 2020 ; American Journal of Neuroradiology Volume 41 ; 41 >
-      au < asnr.AsnrDrupalPlugin ; released ; 2021 ; American Journal of Neuroradiology Volume 42 ; 42 >
-      au < asnr.AsnrDrupalPlugin ; manifest ; 2022 ; American Journal of Neuroradiology Volume 43 ; 43 >
-      au < asnr.AsnrDrupalPlugin ; manifest ; 2023 ; American Journal of Neuroradiology Volume 44 ; 44 >
+      {
+        param[base_url] = http://www.ajnr.org/
 
+        au < HighWirePressH20Plugin ; down ; 1995 ; American Journal of Neuroradiology Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; down ; 1996 ; American Journal of Neuroradiology Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; down ; 1997 ; American Journal of Neuroradiology Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; down ; 1998 ; American Journal of Neuroradiology Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; down ; 1999 ; American Journal of Neuroradiology Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; down ; 2000 ; American Journal of Neuroradiology Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; down ; 2001 ; American Journal of Neuroradiology Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; down ; 2002 ; American Journal of Neuroradiology Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; down ; 2003 ; American Journal of Neuroradiology Volume 24 ; 24 >
+        au < HighWirePressH20Plugin ; down ; 2004 ; American Journal of Neuroradiology Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; down ; 2005 ; American Journal of Neuroradiology Volume 26 ; 26 >
+        au < HighWirePressH20Plugin ; down ; 2006 ; American Journal of Neuroradiology Volume 27 ; 27 >
+        au < HighWirePressH20Plugin ; down ; 2007 ; American Journal of Neuroradiology Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; down ; 2008 ; American Journal of Neuroradiology Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; down ; 2009 ; American Journal of Neuroradiology Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; down ; 2010 ; American Journal of Neuroradiology Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; down ; 2011 ; American Journal of Neuroradiology Volume 32 ; 32 >
+        au < HighWirePressH20Plugin ; down ; 2012 ; American Journal of Neuroradiology Volume 33 ; 33 >
+        au < HighWirePressH20Plugin ; down ; 2013 ; American Journal of Neuroradiology Volume 34 ; 34 >
+        au < HighWirePressH20Plugin ; down ; 2014 ; American Journal of Neuroradiology Volume 35 ; 35 >
+        au < HighWirePressH20Plugin ; down ; 2015 ; American Journal of Neuroradiology Volume 36 ; 36 >
+        au < asnr.AsnrDrupalPlugin ; released ; 2016 ; American Journal of Neuroradiology Volume 37 ; 37 >
+        au < asnr.AsnrDrupalPlugin ; released ; 2017 ; American Journal of Neuroradiology Volume 38 ; 38 >
+        au < asnr.AsnrDrupalPlugin ; released ; 2018 ; American Journal of Neuroradiology Volume 39 ; 39 >
+        au < asnr.AsnrDrupalPlugin ; released ; 2019 ; American Journal of Neuroradiology Volume 40 ; 40 >
+        au < asnr.AsnrDrupalPlugin ; released ; 2020 ; American Journal of Neuroradiology Volume 41 ; 41 >
+        au < asnr.AsnrDrupalPlugin ; released ; 2021 ; American Journal of Neuroradiology Volume 42 ; 42 >
+      }
+      {
+        param[base_url] = https://www.ajnr.org/
+
+        au < asnr.AsnrDrupalPlugin ; exists ; 2022 ; American Journal of Neuroradiology Volume 43 ; 43 >
+        au < asnr.AsnrDrupalPlugin ; manifest ; 2023 ; American Journal of Neuroradiology Volume 44 ; 44 >
+      }
     }
 
   }
@@ -113,6 +118,8 @@
       au < released ; 2019 ; Neurographics Volume 9 ; 9 >
       au < released ; 2020 ; Neurographics Volume 10 ; 10 >
       au < released ; 2021 ; Neurographics Volume 11 ; 11 >
+      au < manifest ; 2022 ; Neurographics Volume 12 ; 12 >
+      au < expected ; 2023 ; Neurographics Volume 13 ; 13 >
 
     }
 
