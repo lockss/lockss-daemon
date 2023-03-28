@@ -28,6 +28,12 @@
     au < aapl.ClockssAAPLDrupalPlugin ; finished ; finished ; 2020 ; Journal of the American Academy of Psychiatry and the Law Online Volume 48 ; 48 ; reingest2.clockss.org:8085 >
     au < aapl.ClockssAAPLDrupalPlugin ; finished ; frozen ; 2021 ; Journal of the American Academy of Psychiatry and the Law Online Volume 49 ; 49 ; reingest3.clockss.org:8083 >
     au < aapl.ClockssAAPLDrupalPlugin ; crawling ; exists ; 2022 ; Journal of the American Academy of Psychiatry and the Law Online Volume 50 ; 50 ; >
+    }
+
+    {
+    #base_url moved to https.
+    param[base_url] = https://jaapl.org/
+
     au < aapl.ClockssAAPLDrupalPlugin ; expected ; exists ; 2023 ; Journal of the American Academy of Psychiatry and the Law Online Volume 51 ; 51 ; >
 
     }
