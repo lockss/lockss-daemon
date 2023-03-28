@@ -22,7 +22,6 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
 
     {
-
       #param[base_url] = http://molecularcasestudies.cshlp.org/
 
       au < finished ; finished ; 2015 ; Cold Spring Harbor Molecular Case Studies Volume 1 ; 1 ; http://molecularcasestudies.cshlp.org/ ; reingest4.clockss.org:8082 >
@@ -52,7 +51,6 @@
     {
       #param[base_url] = http://cshperspectives.cshlp.org/
 
-
       au < finished ; finished ; 2009 ; Cold Spring Harbor Perspectives in Biology Volume 1 ; 1 ; http://cshperspectives.cshlp.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2010 ; Cold Spring Harbor Perspectives in Biology Volume 2 ; 2 ; http://cshperspectives.cshlp.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2011 ; Cold Spring Harbor Perspectives in Biology Volume 3 ; 3 ; http://cshperspectives.cshlp.org/ ; reingest5.clockss.org:8082 >
@@ -67,7 +65,7 @@
       au < deepCrawl ; exists ; 2020 ; Cold Spring Harbor Perspectives in Biology Volume 12 ; 12 ; https://cshperspectives.cshlp.org/ ; >
       au < finished ; crawling ; 2021 ; Cold Spring Harbor Perspectives in Biology Volume 13 ; 13 ; https://cshperspectives.cshlp.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2022 ; Cold Spring Harbor Perspectives in Biology Volume 14 ; 14 ; https://cshperspectives.cshlp.org/ ; >
-      au < expected ; exists ; 2023 ; Cold Spring Harbor Perspectives in Biology Volume 15 ; 15 ; https://cshperspectives.cshlp.org/ ; >
+      au < manifest ; exists ; 2023 ; Cold Spring Harbor Perspectives in Biology Volume 15 ; 15 ; https://cshperspectives.cshlp.org/ ; >
 
     }
     
@@ -84,7 +82,6 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
 
     {
-
       #param[base_url] = http://perspectivesinmedicine.cshlp.org/
 
       au < finished ; finished ; 2011 ; Cold Spring Harbor Perspectives in Medicine Volume 1 ; 1 ; http://perspectivesinmedicine.cshlp.org/ ; reingest1.clockss.org:8082 >
@@ -117,7 +114,6 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
 
     {
-
       #param[base_url] = http://cshprotocols.cshlp.org/
 
       au < finished ; finished ; 2006 ; Cold Spring Harbor Protocols Volume 2006 ; 2006 ; http://cshprotocols.cshlp.org/ ; reingest5.clockss.org:8082 >
@@ -155,7 +151,6 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
    {
-
       param[base_url] = http://symposium.cshlp.org/
       comment[publishing_date] = This journal is published in June of the following year. Nothing published after 2019.
 
@@ -261,7 +256,6 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
 
     {
-
       #param[base_url] = http://genesdev.cshlp.org/
 
       au < finished ; finished ; 1987 ; Genes & Development Volume 1 ; 1 ; http://genesdev.cshlp.org/ ; reingest3.clockss.org:8083 >
@@ -318,8 +312,7 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
 
     {
-#      param[base_url] = http://genome.cshlp.org/
-
+      #param[base_url] = http://genome.cshlp.org/
 
       au < finished ; crawling ; 1991-1992 ; Genome Research Volume 1 ; 1 ; https://genome.cshlp.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 1992-1993 ; Genome Research Volume 2 ; 2 ; https://genome.cshlp.org/ ; reingest5.clockss.org:8082 >
@@ -371,7 +364,6 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
 
     {
-
       #param[base_url] = http://learnmem.cshlp.org/
 
       au < finished ; finished ; 1994 ; Learning & Memory Volume 1 ; 1 ; http://learnmem.cshlp.org/ ; reingest5.clockss.org:8082 >
@@ -452,7 +444,7 @@
       au < finished ; crawling ; 2020 ; RNA Volume 26 ; 26 ; https://rnajournal.cshlp.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; RNA Volume 27 ; 27 ; https://rnajournal.cshlp.org/ ; >
       au < crawling ; exists ; 2022 ; RNA Volume 28 ; 28 ; https://rnajournal.cshlp.org/ ; >
-      au < expected ; exists ; 2023 ; RNA Volume 29 ; 29 ; https://rnajournal.cshlp.org/ ; >
+      au < manifest ; exists ; 2023 ; RNA Volume 29 ; 29 ; https://rnajournal.cshlp.org/ ; >
 
     }
 
