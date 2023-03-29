@@ -3,7 +3,6 @@
   publisher <
     name = Universität Bern
   >
-  #Publisher prefers "University of Bern" over "Universität Bern" see RT 11375
 
     pluginPrefix = org.lockss.plugin.
     implicit < pluginSuffix ; status ; year ; volume ; name ; param[year] ; comment[error] >
@@ -179,11 +178,15 @@
       #moved to ojs3
       attr[start_stem] = index.php/
 
-      au < ojs2.OJS2Plugin ; down ; 2010 ; 1 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2010 ; 2010 ; >
-      au < ojs2.OJS2Plugin ; down ; 2012 ; 2 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2012 ; 2012 ; >
-      au < ojs2.OJS2Plugin ; down ; 2014 ; 3 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2014 ; 2014 ; >
-      au < ojs2.OJS2Plugin ; down ; 2016 ; 4 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2016 ; 2016 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2010 ; 1 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2010 [superseded] ; 2010 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2012 ; 2 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2012 [superseded] ; 2012 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2014 ; 3 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2014 [superseded] ; 2014 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2016 ; 4 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2016 [superseded] ; 2016 ; >
 
+      au < ojs3.Ojs3Plugin ; exists ; 2010 ; 1 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2010 ; 2010 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2012 ; 2 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2012 ; 2012 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2014 ; 3 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2014 ; 2014 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2016 ; 4 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2016 ; 2016 ; >
       au < ojs3.Ojs3Plugin ; released ; 2018 ; 5 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2018 ; 2018 ; > #500 error https://bop.unibe.ch/iw/article/view/4368
       au < ojs3.Ojs3Plugin ; released ; 2020 ; 6 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2020 ; 2020 ; >
       au < ojs3.Ojs3Plugin ; released ; 2022 ; 7 ; Informationswissenschaft: Theorie, Methode und Praxis / Sciences de l’information: théorie, méthode et pratique Volume 2022 ; 2022 ; >
@@ -204,8 +207,11 @@
       #moved to ojs3
       attr[start_stem] = index.php/
 
-      au < ojs2.OJS2Plugin ; down ; 2015 ; 1 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2015 ; 2015 ; >
-      au < ojs2.OJS2Plugin ; down ; 2016 ; 2 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2016 ; 2016 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2015 ; 1 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2015 [superseded] ; 2015 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2016 ; 2 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2016 [superseded] ; 2016 ; >
+
+      au < ojs3.Ojs3Plugin ; exists ; 2015 ; 1 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2015 ; 2015 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2016 ; 2 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2016 ; 2016 ; >
       au < ojs3.Ojs3Plugin ; released ; 2018 ; 3 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2018 ; 2018 ; >
       au < ojs3.Ojs3Plugin ; released ; 2020 ; 4 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2020 ; 2020 ; >
       au < ojs3.Ojs3Plugin ; released ; 2021 ; 5 ; itw : im dialog -- Forschungen zum Gegenwartstheater Volume 2021 ; 2021 ; >
@@ -225,7 +231,10 @@
       #moved to ojs3
       attr[start_stem] = index.php/
 
-      au < ojs2.OJS2Plugin ; down ; 2017 ; 1 ; Jahrbuch Diakonie Schweiz Volume 2017 ; 2017 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2017 ; 1 ; Jahrbuch Diakonie Schweiz Volume 2017 [superseded] ; 2017 ; >
+
+      au < ojs3.Ojs3Plugin ; exists ; 2017 ; 1 ; Jahrbuch Diakonie Schweiz Volume 2017 ; 2017 ; >
+
       au < ojs3.Ojs3Plugin ; released ; 2018 ; 2 ; Jahrbuch Diakonie Schweiz Volume 2018 ; 2018 ; >
       au < ojs3.Ojs3Plugin ; released ; 2019 ; 3 ; Jahrbuch Diakonie Schweiz Volume 2019 ; 2019 ; >
       au < ojs3.Ojs3Plugin ; released ; 2021 ; 4 ; Jahrbuch Diakonie Schweiz Volume 2021 ; 2021 ; >
@@ -247,17 +256,26 @@
       #moved to ojs3
       attr[start_stem] = index.php/
 
+      au < ojs2.OJS2Plugin ; superseded ; 2010 ; 3 ; Journal of Eye Movement Research Volume 2010 [superseded] ; 2010 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2011 ; 4 ; Journal of Eye Movement Research Volume 2011 [superseded] ; 2011 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2012 ; 5 ; Journal of Eye Movement Research Volume 2012 [superseded] ; 2012 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2013 ; 6 ; Journal of Eye Movement Research Volume 2013 [superseded] ; 2013 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2014 ; 7 ; Journal of Eye Movement Research Volume 2014 [superseded] ; 2014 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2015 ; 8 ; Journal of Eye Movement Research Volume 2015 [superseded] ; 2015 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2016 ; 9 ; Journal of Eye Movement Research Volume 2016 [superseded] ; 2016 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2017 ; 10 ; Journal of Eye Movement Research Volume 2017 [superseded] ; 2017 ; >
+
       au < ojs3.Ojs3Plugin ; released ; 2007 ; 1 ; Journal of Eye Movement Research Volume 2007 ; 2007 ; >
       au < ojs3.Ojs3Plugin ; released ; 2008 ; 2 ; Journal of Eye Movement Research Volume 2008 ; 2008 ; >
       au < ojs3.Ojs3Plugin ; released ; 2009 ; 3 ; Journal of Eye Movement Research Volume 2009 ; 2009 ; >
-      au < ojs2.OJS2Plugin ; down ; 2010 ; 3 ; Journal of Eye Movement Research Volume 2010 ; 2010 ; >
-      au < ojs2.OJS2Plugin ; down ; 2011 ; 4 ; Journal of Eye Movement Research Volume 2011 ; 2011 ; >
-      au < ojs2.OJS2Plugin ; down ; 2012 ; 5 ; Journal of Eye Movement Research Volume 2012 ; 2012 ; >
-      au < ojs2.OJS2Plugin ; down ; 2013 ; 6 ; Journal of Eye Movement Research Volume 2013 ; 2013 ; >
-      au < ojs2.OJS2Plugin ; down ; 2014 ; 7 ; Journal of Eye Movement Research Volume 2014 ; 2014 ; >
-      au < ojs2.OJS2Plugin ; down ; 2015 ; 8 ; Journal of Eye Movement Research Volume 2015 ; 2015 ; >
-      au < ojs2.OJS2Plugin ; down ; 2016 ; 9 ; Journal of Eye Movement Research Volume 2016 ; 2016 ; >
-      au < ojs2.OJS2Plugin ; down ; 2017 ; 10 ; Journal of Eye Movement Research Volume 2017 ; 2017 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2010 ; 3 ; Journal of Eye Movement Research Volume 2010 ; 2010 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2011 ; 4 ; Journal of Eye Movement Research Volume 2011 ; 2011 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2012 ; 5 ; Journal of Eye Movement Research Volume 2012 ; 2012 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2013 ; 6 ; Journal of Eye Movement Research Volume 2013 ; 2013 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2014 ; 7 ; Journal of Eye Movement Research Volume 2014 ; 2014 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2015 ; 8 ; Journal of Eye Movement Research Volume 2015 ; 2015 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2016 ; 9 ; Journal of Eye Movement Research Volume 2016 ; 2016 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2017 ; 10 ; Journal of Eye Movement Research Volume 2017 ; 2017 ; >
       au < ojs3.Ojs3Plugin ; released ; 2018 ; 11 ; Journal of Eye Movement Research Volume 2018 ; 2018 ; >
       au < ojs3.Ojs3Plugin ; released ; 2019 ; 12 ; Journal of Eye Movement Research Volume 2019 ; 2019 ; >
       au < ojs3.Ojs3Plugin ; released ; 2020 ; 13 ; Journal of Eye Movement Research Volume 2020 ; 2020 ; >
@@ -349,26 +367,47 @@
       # moved from europa universitat viadrina on request of u of bern. rt9866
       attr[start_stem] = index.php/
       
-      au < ojs2.OJS2Plugin ; down ; 1998 ; 1 ; Linguistik Online Volume 1 ; 1998 ; >
-      au < ojs2.OJS2Plugin ; down ; 1999 ; 2-4 ; Linguistik Online Volume 2-4 ; 1999 ; >
-      au < ojs2.OJS2Plugin ; down ; 2000 ; 5-7 ; Linguistik Online Volume 5-7 ; 2000 ; >
-      au < ojs2.OJS2Plugin ; down ; 2001 ; 8-9 ; Linguistik Online Volume 8-9 ; 2001 ; >
-      au < ojs2.OJS2Plugin ; down ; 2002 ; 10-12 ; Linguistik Online Volume 10-12 ; 2002 ; >
-      au < ojs2.OJS2Plugin ; down ; 2003 ; 13-17 ; Linguistik Online Volume 13-17 ; 2003 ; >
-      au < ojs2.OJS2Plugin ; down ; 2004 ; 18-21 ; Linguistik Online Volume 18-21 ; 2004 ; >
-      au < ojs2.OJS2Plugin ; down ; 2005 ; 22-25 ; Linguistik Online Volume 22-25 ; 2005 ; >
-      au < ojs2.OJS2Plugin ; down ; 2006 ; 26-29 ; Linguistik Online Volume 26-29 ; 2006 ; >
-      au < ojs2.OJS2Plugin ; down ; 2007 ; 30-32 ; Linguistik Online Volume 30-32 ; 2007 ; >
-      au < ojs2.OJS2Plugin ; down ; 2008 ; 33-36 ; Linguistik Online Volume 33-36 ; 2008 ; >
-      au < ojs2.OJS2Plugin ; down ; 2009 ; 37-40 ; Linguistik Online Volume 37-40 ; 2009 ; >
-      au < ojs2.OJS2Plugin ; down ; 2010 ; 41-44 ; Linguistik Online Volume 41-44 ; 2010 ; >
-      au < ojs2.OJS2Plugin ; down ; 2011 ; 45-50 ; Linguistik Online Volume 45-50 ; 2011 ; >
-      au < ojs2.OJS2Plugin ; down ; 2012 ; 51-57 ; Linguistik Online Volume 51-57 ; 2012 ; >
-      au < ojs2.OJS2Plugin ; down ; 2013 ; 58-62 ; Linguistik Online Volume 58-62 ; 2013 ; >
-      au < ojs2.OJS2Plugin ; down ; 2014 ; 63-69 ; Linguistik Online Volume 63-69 ; 2014 ; >
-      au < ojs2.OJS2Plugin ; down ; 2015 ; 70-74 ; Linguistik Online Volume 70-74 ; 2015 ; >
-      au < ojs2.OJS2Plugin ; down ; 2016 ; 75-79 ; Linguistik Online Volume 75-79 ; 2016 ; >
-      au < ojs2.OJS2Plugin ; down ; 2017 ; 80-87 ; Linguistik Online Volume 80-87 ; 2017 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 1998 ; 1 ; Linguistik Online Volume 1 [superseded] ; 1998 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 1999 ; 2-4 ; Linguistik Online Volume 2-4 [superseded] ; 1999 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2000 ; 5-7 ; Linguistik Online Volume 5-7 [superseded] ; 2000 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2001 ; 8-9 ; Linguistik Online Volume 8-9 [superseded] ; 2001 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2002 ; 10-12 ; Linguistik Online Volume 10-12 [superseded] ; 2002 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2003 ; 13-17 ; Linguistik Online Volume 13-17 [superseded] ; 2003 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2004 ; 18-21 ; Linguistik Online Volume 18-21 [superseded] ; 2004 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2005 ; 22-25 ; Linguistik Online Volume 22-25 [superseded] ; 2005 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2006 ; 26-29 ; Linguistik Online Volume 26-29 [superseded] ; 2006 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2007 ; 30-32 ; Linguistik Online Volume 30-32 [superseded] ; 2007 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2008 ; 33-36 ; Linguistik Online Volume 33-36 [superseded] ; 2008 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2009 ; 37-40 ; Linguistik Online Volume 37-40 [superseded] ; 2009 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2010 ; 41-44 ; Linguistik Online Volume 41-44 [superseded] ; 2010 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2011 ; 45-50 ; Linguistik Online Volume 45-50 [superseded] ; 2011 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2012 ; 51-57 ; Linguistik Online Volume 51-57 [superseded] ; 2012 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2013 ; 58-62 ; Linguistik Online Volume 58-62 [superseded] ; 2013 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2014 ; 63-69 ; Linguistik Online Volume 63-69 [superseded] ; 2014 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2015 ; 70-74 ; Linguistik Online Volume 70-74 [superseded] ; 2015 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2016 ; 75-79 ; Linguistik Online Volume 75-79 [superseded] ; 2016 ; >
+      au < ojs2.OJS2Plugin ; superseded ; 2017 ; 80-87 ; Linguistik Online Volume 80-87 [superseded] ; 2017 ; >
+
+      au < ojs3.Ojs3Plugin ; exists ; 1998 ; 1 ; Linguistik Online Volume 1 ; 1998 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 1999 ; 2-4 ; Linguistik Online Volume 2-4 ; 1999 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2000 ; 5-7 ; Linguistik Online Volume 5-7 ; 2000 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2001 ; 8-9 ; Linguistik Online Volume 8-9 ; 2001 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2002 ; 10-12 ; Linguistik Online Volume 10-12 ; 2002 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2003 ; 13-17 ; Linguistik Online Volume 13-17 ; 2003 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2004 ; 18-21 ; Linguistik Online Volume 18-21 ; 2004 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2005 ; 22-25 ; Linguistik Online Volume 22-25 ; 2005 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2006 ; 26-29 ; Linguistik Online Volume 26-29 ; 2006 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2007 ; 30-32 ; Linguistik Online Volume 30-32 ; 2007 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2008 ; 33-36 ; Linguistik Online Volume 33-36 ; 2008 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2009 ; 37-40 ; Linguistik Online Volume 37-40 ; 2009 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2010 ; 41-44 ; Linguistik Online Volume 41-44 ; 2010 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2011 ; 45-50 ; Linguistik Online Volume 45-50 ; 2011 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2012 ; 51-57 ; Linguistik Online Volume 51-57 ; 2012 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2013 ; 58-62 ; Linguistik Online Volume 58-62 ; 2013 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2014 ; 63-69 ; Linguistik Online Volume 63-69 ; 2014 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2015 ; 70-74 ; Linguistik Online Volume 70-74 ; 2015 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2016 ; 75-79 ; Linguistik Online Volume 75-79 ; 2016 ; >
+      au < ojs3.Ojs3Plugin ; exists ; 2017 ; 80-87 ; Linguistik Online Volume 80-87 ; 2017 ; >
       au < ojs3.Ojs3Plugin ; released ; 2018 ; 88-93 ; Linguistik Online Volume 88-93 ; 2018 ; >
       au < ojs3.Ojs3Plugin ; released ; 2019 ; 94-100 ; Linguistik Online Volume 94-100 ; 2019 ; >
       au < ojs3.Ojs3Plugin ; released ; 2020 ; 101-105 ; Linguistik Online Volume 101-105 ; 2020 ; >
