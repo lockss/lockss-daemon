@@ -84,6 +84,7 @@
     >
 
     param[journal_id] = advances
+    #move to Elsevier, 2023-01-02
 
     au < released ; 2010 ; 2010 ; Advances in Nutrition Volume 1 ; 1 >
     au < released ; 2011 ; 2011 ; Advances in Nutrition Volume 2 ; 2 >
@@ -98,7 +99,6 @@
     au < released ; 2020 ; 2020 ; Advances in Nutrition Volume 11 ; 11 >
     au < released ; 2021 ; 2021 ; Advances in Nutrition Volume 12 ; 12 >
     au < manifest ; 2022 ; 2022 ; Advances in Nutrition Volume 13 ; 13 >
-    au < expected ; 2023 ; 2023 ; Advances in Nutrition Volume 14 ; 14 >
 
   }
 
@@ -550,6 +550,7 @@
     >
 
     param[journal_id] = ajcn
+    #move to Elsevier, 2023-01-02
     #content available from 1952 volume 1 to 1999 volume 70
 
     au < doNotProcess ; 2000 ; 2000 ; The American Journal of Clinical Nutrition Volume 71-72 ; 71-72 >
@@ -575,7 +576,6 @@
     au < released ; 2020 ; 2020 ; The American Journal of Clinical Nutrition Volume 111-112 ; 111-112 >
     au < released ; 2021 ; 2021 ; The American Journal of Clinical Nutrition Volume 113-114 ; 113-114 >
     au < manifest ; 2022 ; 2022 ; The American Journal of Clinical Nutrition Volume 115-116 ; 115-116 >
-    au < expected ; 2023 ; 2023 ; The American Journal of Clinical Nutrition Volume 117-118 ; 117-118 >
 
   }
 
@@ -4107,6 +4107,7 @@
     >
 
     param[journal_id] = cdn
+    #move to Elsevier, 2023-01-02
 
     au < released ; 2017 ; 2017 ; Current Developments in Nutrition Volume 1 ; 1 >
     au < released ; 2018 ; 2018 ; Current Developments in Nutrition Volume 2 ; 2 >
@@ -4114,7 +4115,6 @@
     au < released ; 2020 ; 2020 ; Current Developments in Nutrition Volume 4 ; 4 >
     au < released ; 2021 ; 2021 ; Current Developments in Nutrition Volume 5 ; 5 >
     au < manifest ; 2022 ; 2022 ; Current Developments in Nutrition Volume 6 ; 6 >
-    au < expected ; 2023 ; 2023 ; Current Developments in Nutrition Volume 7 ; 7 >
 
   }
 
@@ -11943,6 +11943,7 @@
     >
 
     param[journal_id] = jn
+    #move to Elsevier, 2023-01-02
     #content available from 1928 volume 1 to 1999 volume 129
 
     au < doNotProcess ; 2000 ; 2000 ; The Journal of Nutrition Volume 130 ; 130 >
@@ -11968,7 +11969,6 @@
     au < released ; 2020 ; 2020 ; The Journal of Nutrition Volume 150 ; 150 >
     au < ready ; 2021 ; 2021 ; The Journal of Nutrition Volume 151 ; 151 >
     au < manifest ; 2022 ; 2022 ; The Journal of Nutrition Volume 152 ; 152 >
-    au < manifest ; 2023 ; 2023 ; The Journal of Nutrition Volume 153 ; 153 >
 
   }
 
