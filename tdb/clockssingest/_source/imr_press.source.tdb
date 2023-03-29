@@ -21,7 +21,7 @@
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/imrpress-released/
 
     au < readySource ; finished ; 2020 ; IMR Press Source Content 2020 ; 2020 >
-    au < readySource ; crawling ; 2021 ; IMR Press Source Content 2021 ; 2021 > #LXPLUG-2334
+    au < readySource ; down ; 2021 ; IMR Press Source Content 2021 ; 2021 > #LXPLUG-2334
     au < readySource ; finished ; 2022 ; IMR Press Source Content 2022 ; 2022 >
     #No more AUs. Moving to https.
     }
