@@ -882,6 +882,128 @@
       au < doNotProcess ; exists ; 2021 ; Micro & Nano Letters Volume 16 ; 16 ; https://digital-library.theiet.org/ ; >
 
     }
+
+    {
+
+    title <
+      name = Biosurface and Biotribology ;
+      eissn = 2405-4518
+
+      >
+      param[journal_id] = bsbt
+
+      au < exists ; exists ; 2018 ; Biosurface and Biotribology Volume 4 ; 4 ; https://digital-library.theiet.org/ ; >
+      au < exists ; exists ; 2019 ; Biosurface and Biotribology Volume 5 ; 5 ; https://digital-library.theiet.org/ ; >
+      au < exists ; exists ; 2020 ; Biosurface and Biotribology Volume 6 ; 6 ; https://digital-library.theiet.org/ ; >
+      au < doNotProcess ; exists ; 2021 ; Biosurface and Biotribology Volume 7 ; 7 ; https://digital-library.theiet.org/ ; >
+      au < doNotProcess ; exists ; 2022 ; Biosurface and Biotribology Volume 8 ; 8 ; https://digital-library.theiet.org/ ; >
+
+    }
+
+    {
+
+    title <
+      name = CAAI Transactions on Intelligence Technology ;
+      issn = 2468-6557 ;
+      eissn = 2468-2322
+
+      >
+      param[journal_id] = trit
+
+      au < exists ; exists ; 2017 ; CAAI Transactions on Intelligence Technology Volume 2 ; 2 ; https://digital-library.theiet.org/ ; >
+      au < exists ; exists ; 2018 ; CAAI Transactions on Intelligence Technology Volume 3 ; 3 ; https://digital-library.theiet.org/ ; >
+      au < exists ; exists ; 2019 ; CAAI Transactions on Intelligence Technology Volume 4 ; 4 ; https://digital-library.theiet.org/ ; >
+      au < exists ; exists ; 2020 ; CAAI Transactions on Intelligence Technology Volume 5 ; 5 ; https://digital-library.theiet.org/ ; >
+      au < doNotProcess ; exists ; 2021 ; CAAI Transactions on Intelligence Technology Volume 6 ; 6 ; https://digital-library.theiet.org/ ; >
+      au < doNotProcess ; exists ; 2022 ; CAAI Transactions on Intelligence Technology Volume 7 ; 7 ; https://digital-library.theiet.org/ ; >
+
+    }
+
+    {
+
+    title <
+      name = Cognitive Computation and Systems ;
+      eissn = 2517-7567
+
+      >
+      param[journal_id] = ccs
+
+      au < exists ; exists ; 2019 ; Cognitive Computation and Systems Volume 1 ; 1 ; https://digital-library.theiet.org/ ; >
+      au < exists ; exists ; 2020 ; Cognitive Computation and Systems Volume 2 ; 2 ; https://digital-library.theiet.org/ ; >
+      au < doNotProcess ; exists ; 2021 ; Cognitive Computation and Systems Volume 3 ; 3 ; https://digital-library.theiet.org/ ; >
+      au < doNotProcess ; exists ; 2022 ; Cognitive Computation and Systems Volume 4 ; 4 ; https://digital-library.theiet.org/ ; >
+
+    }
+
+    {
+
+    title <
+      name = Energy Conversion and Economics ;
+      eissn = 2634-1581
+
+      >
+      param[journal_id] = ece
+
+      au < doNotProcess ; exists ; 2021 ; Energy Conversion and Economics Volume 2 ; 2 ; https://digital-library.theiet.org/ ; >
+      au < doNotProcess ; exists ; 2022 ; Energy Conversion and Economics Volume 3 ; 3 ; https://digital-library.theiet.org/ ; >
+
+    }
+
+    {
+
+    title <
+      name = Engineering Biology ;
+      eissn = 2398-6182
+
+      >
+      param[journal_id] = enb
+
+      au < exists ; exists ; 2017 ; Engineering Biology Volume 1 ; 1 ; https://digital-library.theiet.org/ ; >
+      au < exists ; exists ; 2018 ; Engineering Biology Volume 2 ; 2 ; https://digital-library.theiet.org/ ; >
+      au < exists ; exists ; 2019 ; Engineering Biology Volume 3 ; 3 ; https://digital-library.theiet.org/ ; >
+      au < exists ; exists ; 2020 ; Engineering Biology Volume 4 ; 4 ; https://digital-library.theiet.org/ ; >
+      au < doNotProcess ; exists ; 2021 ; Engineering Biology Volume 5 ; 5 ; https://digital-library.theiet.org/ ; >
+
+    }
+
+    {
+
+    title <
+      name = Healthcare Technology Letters ;
+      eissn = 2053-3713
+
+      >
+      param[journal_id] = htl
+
+      au < exists ; exists ; 2014 ; Healthcare Technology Letters Volume 1 ; 1 ; https://digital-library.theiet.org/ ; >
+      au < exists ; exists ; 2015 ; Healthcare Technology Letters Volume 2 ; 2 ; https://digital-library.theiet.org/ ; >
+      au < exists ; exists ; 2016 ; Healthcare Technology Letters Volume 3 ; 3 ; https://digital-library.theiet.org/ ; >
+      au < exists ; exists ; 2017 ; Healthcare Technology Letters Volume 4 ; 4 ; https://digital-library.theiet.org/ ; >
+      au < exists ; exists ; 2018 ; Healthcare Technology Letters Volume 5 ; 5 ; https://digital-library.theiet.org/ ; >
+      au < exists ; exists ; 2019 ; Healthcare Technology Letters Volume 6 ; 6 ; https://digital-library.theiet.org/ ; >
+      au < exists ; exists ; 2020 ; Healthcare Technology Letters Volume 7 ; 7 ; https://digital-library.theiet.org/ ; >
+      au < doNotProcess ; exists ; 2021 ; Healthcare Technology Letters Volume 8 ; 8 ; https://digital-library.theiet.org/ ; >
+
+    }
+
+    {
+
+    title <
+      name = High Voltage ;
+      eissn = 2397-7264
+
+      >
+      param[journal_id] = hve
+
+      au < exists ; exists ; 2016 ; High Voltage Volume 1 ; 1 ; https://digital-library.theiet.org/ ; >
+      au < exists ; exists ; 2017 ; High Voltage Volume 2 ; 2 ; https://digital-library.theiet.org/ ; >
+      au < exists ; exists ; 2018 ; High Voltage Volume 3 ; 3 ; https://digital-library.theiet.org/ ; >
+      au < exists ; exists ; 2019 ; High Voltage Volume 4 ; 4 ; https://digital-library.theiet.org/ ; >
+      au < exists ; exists ; 2020 ; High Voltage Volume 5 ; 5 ; https://digital-library.theiet.org/ ; >
+      au < doNotProcess ; exists ; 2021 ; High Voltage Volume 6 ; 6 ; https://digital-library.theiet.org/ ; >
+
+    }
+
 }
 
 {
@@ -2670,6 +2792,6 @@
       au < frozen ; exists ; 1985 ; Wiring Installations and Supplies Volume 1985 ; 1985 ; >
       au < frozen ; exists ; 1986 ; Wiring Installations and Supplies Volume 1986 ; 1986 ; >
 
-  }
+    }
 
 }
