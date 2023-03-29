@@ -47,6 +47,7 @@ public class SilverchairCommonThemeHtmlCrawlFilterFactory implements FilterFacto
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ref-list"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "global-footer"),
             HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^10[.]"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "id", "Sidebar"),
         };
 
         return new HtmlFilterInputStream(in,
