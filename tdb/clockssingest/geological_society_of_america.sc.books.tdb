@@ -926,4 +926,81 @@
     au < doNotProcess ; exists ; 2014 ; 9780813741222 ; 9780813758220 ; Geological Society of America Reviews in Engineering Geology Volume 22 ; gsa/books/book/906/Military-Geosciences-in-the-Twenty-First-Century ; >
     #nothing after 2014.
   }
+  
+  {
+
+    title <
+      name = GSA Decade of North American Geology ;
+      type = bookSeries
+    >
+    #Published between 1982 and 2005
+
+    au < manifest ; exists ; 1989 ; 0813752078 ; 9780813754451 ; The Geology of North America Volume A ; gsa/books/book/880/The-Geology-of-North-America-An-Overview ; >
+    au < manifest ; exists ; 1998 ; 0660131358 ; 9780813754468 ; The Geology of North America Volume C1 ; gsa/books/book/813/Geology-of-the-Precambrian-Superior-and-Grenville ; >
+    au < manifest ; exists ; 1992 ; 0813752183 ; 9780813754475 ; The Geology of North America Volume C2 ; gsa/books/book/846/Precambrian ; >
+    au < manifest ; exists ; 1993 ; 0660131331 ; 9780813754482 ; The Geology of North America Volume D1 ; gsa/books/book/863/Sedimentary-Cover-of-the-Craton-in-Canada ; >
+    au < manifest ; exists ; 1988 ; 0813752051 ; 9780813754499 ; The Geology of North America Volume D2 ; gsa/books/book/860/Sedimentary-Cover-North-American-Craton ; >
+    au < manifest ; exists ; 1991 ; 0660131315 ; 9780813754505 ; The Geology of North America Volume E ; gsa/books/book/837/Geology-of-the-Innuitian-Orogen-and-Arctic ; >
+    au < manifest ; exists ; 1995 ; 066013134X ; 9780813754512 ; The Geology of North America Volume F1 ; gsa/books/book/828/Geology-of-the-Appalachian-Caledonian-Orogen-in ; >
+    au < manifest ; exists ; 1989 ; 0813752094 ; 9780813754529 ; The Geology of North America Volume F2 ; gsa/books/book/862/The-Appalachian-Ouachita-Orogen-in-the-United ; >
+    au < manifest ; exists ; 1994 ; 0813752191 ; 9780813754536 ; The Geology of North America Volume G1 ; gsa/books/book/875/The-Geology-of-Alaska ; >
+    au < manifest ; exists ; 1991 ; 0660131323 ; 9780813754543 ; The Geology of North America Volume G2 ; gsa/books/book/835/Geology-of-the-Cordilleran-Orogen-in-Canada ; >
+    au < exists ; exists ; 1992 ; 0813752175 ; 9780813754550 ; The Geology of North America Volume G3 ; gsa/books/book/864/The-Cordilleran-Orogen ; >
+    au < exists ; exists ; 1991 ; 0813752124 ; 9780813754567 ; The Geology of North America Volume H ; gsa/books/book/868/The-Caribbean-Region ; >
+    au < exists ; exists ; 1990 ; 0660131307 ; 9780813754574 ; The Geology of North America Volume I1 ; gsa/books/book/812/Geology-of-the-Continental-Margin-of-Eastern ; >
+    au < exists ; exists ; 1988 ; 0813752043 ; 9780813754581 ; The Geology of North America Volume I2 ; gsa/books/book/865/The-Atlantic-Continental-Margin ; >
+    au < exists ; exists ; 1991 ; 0813752167 ; 9780813754598 ; The Geology of North America Volume J ; gsa/books/book/913/The-Gulf-of-Mexico-Basin ; >
+    au < exists ; exists ; 1989 ; 0660131145 ; 9780813754604 ; The Geology of North America Volume K1 ; gsa/books/book/853/Quaternary-Geology-of-Canada-and-Greenland ; >
+    au < exists ; exists ; 1991 ; 0813752159 ; 9780813754611 ; The Geology of North America Volume K2 ; gsa/books/book/850/Quaternary-Nonglacial-Geology ; >
+    au < exists ; exists ; 1987 ; 0813752035 ; 9780813754628 ; The Geology of North America Volume K3 ; gsa/books/book/841/North-America-and-Adjacent-Oceans-During-the-Last ; >
+    au < exists ; exists ; 1990 ; 0813752116 ; 9780813754635 ; The Geology of North America Volume L ; gsa/books/book/866/The-Arctic-Ocean-Region ; >
+    au < exists ; exists ; 1986 ; 0813752027 ; 9780813754642 ; The Geology of North America Volume M ; gsa/books/book/883/The-Western-North-Atlantic-Region ; >
+    au < exists ; exists ; 1989 ; 0813752086 ; 9780813754659 ; The Geology of North America Volume N ; gsa/books/book/872/The-Eastern-Pacific-Ocean-and-Hawaii ; >
+    au < exists ; exists ; 1990 ; 0813752108 ; 9780813754666 ; The Geology of North America Volume O1 ; gsa/books/book/861/Surface-Water-Hydrology ; >
+    au < exists ; exists ; 1988 ; 081375206X ; 9780813754673 ; The Geology of North America Volume O2 ; gsa/books/book/816/Hydrogeology ; >
+    au < exists ; exists ; 1995 ; 0660131366 ; 9780813754680 ; The Geology of North America Volume P1 ; gsa/books/book/824/Geology-of-Canadian-Mineral-Deposit-Types ; >
+    au < exists ; exists ; 1991 ; 0813752140 ; 9780813754697 ; The Geology of North America Volume P2 ; gsa/books/book/789/Economic-Geology-U-S ; >
+    au < exists ; exists ; 1991 ; 0813752132 ; 9780813754703 ; The Geology of North America Volume P3 ; gsa/books/book/785/Economic-Geology-Mexico ; >
+    au < exists ; exists ; 1985 ; 0813753015 ; 9780813754130 ; Centennial Special Volumes Volume 1 ; gsa/books/book/793/Geologists-and-Ideas ; >
+    au < exists ; exists ; 1987 ; 0813753023 ; 9780813754147 ; Centennial Special Volumes Volume 2 ; gsa/books/book/904/Geomorphic-Systems-of-North-America ; >
+    au < exists ; exists ; 1991 ; 0813753031 ; 9780813754154 ; Centennial Special Volumes Volume 3 ; gsa/books/book/878/The-Heritage-of-Engineering-Geology-The-First ; >
+    au < exists ; exists ; 1990 ; 081375304X ; 9780813754161 ; Centennial Special Volumes Volume 4 ; gsa/books/book/752/Archaeological-Geology-of-North-America ; >
+    au < exists ; exists ; 1987 ; 0813754011 ; 9780813754079 ; Centennial Field Guides Volume 1 ; gsa/books/book/786/Cordilleran-Section-of-the-Geological-Society-of ; >
+    au < exists ; exists ; 1987 ; 081375402X ; 9780813754086 ; Centennial Field Guides Volume 2 ; gsa/books/book/855/Rocky-Mountain-Section-of-the-Geological-Society ; >
+    au < exists ; exists ; 1987 ; 0813754038 ; 9780813754093 ; Centennial Field Guides Volume 3 ; gsa/books/book/848/North-Central-Section-of-the-Geological-Society-of ; >
+    au < exists ; exists ; 1988 ; 0813754046 ; 9780813754109 ; Centennial Field Guides Volume 4 ; gsa/books/book/870/South-Central-Section-of-the-Geological-Society-of ; >
+    au < exists ; exists ; 1987 ; 0813754054 ; 9780813754116 ; Centennial Field Guides Volume 5 ; gsa/books/book/838/Northeastern-Section-of-the-Geological-Society-of ; >
+    au < exists ; exists ; 1988 ; 0813754062 ; 9780813754123 ; Centennial Field Guides Volume 6 ; gsa/books/book/869/Southeastern-Section-of-the-Geological-Society-of ; >
+    au < exists ; exists ; 1982 ; 0813752019 ; 9780813754710 ; Decade of North American Geology Special Publications Volume 1 ; gsa/books/book/845/Perspectives-in-Regional-Geological-Synthesis ; >
+    au < exists ; exists ; 1988 ;  ; 9780813754727 ; Decade of North American Geology Special Publications Volume 2 ; gsa/books/book/811/History-in-the-Making-The-Evolution-of-the-Decade ; >
+    au < exists ; exists ; 2005 ;  ; 9780813754178 ; Continent Scale Map Series (scale 1:5,000,000) Volume 1 ; gsa/books/book/762/ ; >
+    au < exists ; exists ; 1987 ;  ; 9780813754185 ; Continent Scale Map Series (scale 1:5,000,000) Volume 2 ; gsa/books/book/787/Gravity-Anomaly-Map-of-North-America ; >
+    au < exists ; exists ; 1987 ;  ; 9780813754192 ; Continent Scale Map Series (scale 1:5,000,000) Volume 3 ; gsa/books/book/825/Magnetic-Anomaly-Map-of-North-America ; >
+    au < exists ; exists ; 1988 ;  ; 9780813754208 ; Continent Scale Map Series (scale 1:5,000,000) Volume 4 ; gsa/books/book/858/Seismicity-Map-of-North-America ; >
+    au < exists ; exists ; 1991 ;  ; 9780813754215 ; Continent Scale Map Series (scale 1:5,000,000) Volume 5 ; gsa/books/book/859/Stress-Map-of-North-America ; >
+    au < exists ; exists ; 1992 ;  ; 9780813754222 ; Continent Scale Map Series (scale 1:5,000,000) Volume 6 ; gsa/books/book/801/Geothermal-Map-of-North-America ; >
+    au < exists ; exists ; 1992 ; 0813753066 ; 9780813754239 ; Continent Scale Map Series (scale 1:5,000,000) Volume Summary ; gsa/books/book/839/Neotectonics-of-North-America ; >
+    au < exists ; exists ; 1985 ;  ; 9780813754246 ; Continent/Ocean Transects (scale 1:500,000) Volume A-2 ; gsa/books/book/744/A-2-Kodiak-to-Kuskokwim-Alaska ; >
+    au < exists ; exists ; 1991 ;  ; 9780813754253 ; Continent/Ocean Transects (scale 1:500,000) Volume A-3 ; gsa/books/book/800/Gulf-of-Alaska-to-Arctic-Ocean ; >
+    au < exists ; exists ; 1985 ;  ; 9780813754260 ; Continent/Ocean Transects (scale 1:500,000) Volume B-1 ; gsa/books/book/753/B-1-Intermontane-Belt-Skeena-Mountains-to-Insular ; >
+    au < exists ; exists ; 1985 ;  ; 9780813754277 ; Continent/Ocean Transects (scale 1:500,000) Volume B-2 ; gsa/books/book/754/B-2-Juan-de-Fuca-Plate-to-Alberta-Plains ; >
+    au < exists ; exists ; 1986 ;  ; 9780813754284 ; Continent/Ocean Transects (scale 1:500,000) Volume B-3 ; gsa/books/book/755/B-3-Juan-de-Fuca-Spreading-Ridge-to-Montana-Thrust ; >
+    au < exists ; exists ; 1989 ;  ; 9780813754291 ; Continent/Ocean Transects (scale 1:500,000) Volume C-1 ; gsa/books/book/892/C-1-Mendocino-Triple-Junction-to-North-American ; >
+    au < exists ; exists ; 1986 ;  ; 9780813754307 ; Continent/Ocean Transects (scale 1:500,000) Volume C-2 ; gsa/books/book/756/C-2-Central-California-Offshore-to-Colorado ; >
+    au < exists ; exists ; 1985 ;  ; 9780813754314 ; Continent/Ocean Transects (scale 1:500,000) Volume C-3 ; gsa/books/book/757/C-3-Pacific-abyssal-plain-to-the-Rio-Grande-rift ; >
+    au < exists ; exists ; 1985 ;  ; 9780813754321 ; Continent/Ocean Transects (scale 1:500,000) Volume D-1 ; gsa/books/book/764/D-1-Northern-Appalachians ; >
+    au < exists ; exists ; 1985 ;  ; 9780813754338 ; Continent/Ocean Transects (scale 1:500,000) Volume D-2 ; gsa/books/book/760/D-2-Transform-margin-south-of-Grand-Banks ; >
+    au < exists ; exists ; 1984 ;  ; 9780813754345 ; Continent/Ocean Transects (scale 1:500,000) Volume D-3 ; gsa/books/book/763/D-3-Rifted-continental-margin-off-Nova-Scotia ; >
+    au < exists ; exists ; 1985 ;  ; 9780813754352 ; Continent/Ocean Transects (scale 1:500,000) Volume D-4 ; gsa/books/book/761/D-4-Rifted-continental-margin-off-Labrador ; >
+    au < exists ; exists ; 1993 ;  ; 9780813754369 ; Continent/Ocean Transects (scale 1:500,000) Volume E-1 ; gsa/books/book/772/E-1-Adirondacks-to-Georges-Bank ; >
+    au < exists ; exists ; 1995 ;  ; 9780813754376 ; Continent/Ocean Transects (scale 1:500,000) Volume E-3 ; gsa/books/book/782/E-3-Southwestern-Pennsylvania-to-Baltimore-Canyon ; >
+    au < exists ; exists ; 1991 ;  ; 9780813754383 ; Continent/Ocean Transects (scale 1:500,000) Volume E-4 ; gsa/books/book/769/E-4-Central-Kentucky-to-the-Carolina-Trough ; >
+    au < exists ; exists ; 1994 ;  ; 9780813754390 ; Continent/Ocean Transects (scale 1:500,000) Volume E-5 ; gsa/books/book/773/E-5-Cumberland-Plateau-to-Blake-Plateau ; >
+    au < exists ; exists ; 1986 ;  ; 9780813754406 ; Continent/Ocean Transects (scale 1:500,000) Volume G ; gsa/books/book/810/G-Somerset-Island-to-Canada-Basin ; >
+    au < exists ; exists ; 1990 ;  ; 9780813754413 ; Continent/Ocean Transects (scale 1:500,000) Volume H-1 ; gsa/books/book/814/H-1-La-Paz-to-Saltillo-Northwestern-and-Northern ; >
+    au < exists ; exists ; 1990 ;  ; 9780813754420 ; Continent/Ocean Transects (scale 1:500,000) Volume H-3 ; gsa/books/book/745/Acapulco-Trench-to-the-Gulf-of-Mexico-across ; >
+    au < exists ; exists ; 1991 ;  ; 9780813754444 ; Continent/Ocean Transects (scale 1:500,000) Volume TSD ; gsa/books/book/879/Tectonic-Section-Display ; >
+    au < exists ; exists ; 1994 ; 0813753058 ; 9780813754437 ; Continent/Ocean Transects (scale 1:500,000) Volume Summary ; gsa/books/book/849/Phanerozoic-Evolution-of-North-American-Continent ; >
+
+  }
 }
