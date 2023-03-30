@@ -24,12 +24,10 @@
       eissn = 2278-4802 
     >
 
-      #published ? to present
+      #published 2022 to present
       param[base_url] = https://jemds.in/
 
-      au < testing ; exists ; 2020 ; Journal of Evolution of Medical and Dental Sciences Volume 2020 ; 9 ; 2020 ; >
-      au < exists ; exists ; 2021 ; Journal of Evolution of Medical and Dental Sciences Volume 2021 ; 10 ; 2021 ; >
-      au < testing ; exists ; 2022 ; Journal of Evolution of Medical and Dental Sciences Volume 2022 ; 11 ; 2022 ; >
+      au < manifest ; exists ; 2022 ; Journal of Evolution of Medical and Dental Sciences Volume 2022 ; 11 ; 2022 ; >
       au < manifest ; exists ; 2023 ; Journal of Evolution of Medical and Dental Sciences Volume 2023 ; 12 ; 2023 ; >
 
   }
