@@ -4,7 +4,7 @@
     name = American School of Classical Studies at Athens ;
     info[contract] = 2014 ;
     info[tester] = S ;
-    info[platform] = BLOCKED-Awaiting content. JSTOR Books. LXPIPE-69. LXPUB-29. GLN & CLOCKSS
+    info[platform] = Source. BLOCKED-Awaiting content. LXPIPE-69. LXPUB-29. GLN & CLOCKSS
   >
   hidden[proxy] = DIRECT
   
@@ -16,7 +16,7 @@
    
      plugin = needs.plugin
      implicit < status ; status2 ; year ; name ; param[directory] >
-     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/airiti-released/
+     #param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/airiti-released/
 
      au < expected ; exists ; 2023 ; American School of Classical Studies at Athens Books Source Content 2023 ; 2023 >
     
