@@ -75,7 +75,7 @@ public class ACMJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
         protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu, Document xmlDoc) {
             String url = cu.getUrl();
             // acm  conferences is using BITS format
-            if ((url != null) && url.indexOf("conferences") > -1) {
+            if ((url != null) && ((url.indexOf("conferences") > -1) || url.indexOf("books") > -1)) {
                 log.debug3("Setup Bits schema helper for url " + url);
                 if (BitsPublishingHelper == null) {
                     BitsPublishingHelper = new ACMBitsPublishingSchemaHelper();
