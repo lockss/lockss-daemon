@@ -179,8 +179,8 @@
       >
       param[journal_id] = iet-cim
 
-      au < exists ; exists ; 2019 ; IET Collaborative Intelligent Manufacturing Volume 1 ; 1 ; https://digital-library.theiet.org/ ; >
-      au < exists ; exists ; 2020 ; IET Collaborative Intelligent Manufacturing Volume 2 ; 2 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2019 ; IET Collaborative Intelligent Manufacturing Volume 1 ; 1 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2020 ; IET Collaborative Intelligent Manufacturing Volume 2 ; 2 ; https://digital-library.theiet.org/ ; >
       au < doNotProcess ; exists ; 2021 ; IET Collaborative Intelligent Manufacturing Volume 3 ; 3 ; https://digital-library.theiet.org/ ; >
       au < doNotProcess ; exists ; 2022 ; IET Collaborative Intelligent Manufacturing Volume 4 ; 4 ; https://digital-library.theiet.org/ ; >
 
@@ -307,11 +307,11 @@
       >
       param[journal_id] = iet-cps
 
-      au < exists ; exists ; 2016 ; IET Cyber-Physical Systems: Theory & Applications Volume 1 ; 1 ; https://digital-library.theiet.org/ ; >
-      au < exists ; exists ; 2017 ; IET Cyber-Physical Systems: Theory & Applications Volume 2 ; 2 ; https://digital-library.theiet.org/ ; >
-      au < exists ; exists ; 2018 ; IET Cyber-Physical Systems: Theory & Applications Volume 3 ; 3 ; https://digital-library.theiet.org/ ; >
-      au < exists ; exists ; 2019 ; IET Cyber-Physical Systems: Theory & Applications Volume 4 ; 4 ; https://digital-library.theiet.org/ ; >
-      au < exists ; exists ; 2020 ; IET Cyber-Physical Systems: Theory & Applications Volume 5 ; 5 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2016 ; IET Cyber-Physical Systems: Theory & Applications Volume 1 ; 1 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2017 ; IET Cyber-Physical Systems: Theory & Applications Volume 2 ; 2 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2018 ; IET Cyber-Physical Systems: Theory & Applications Volume 3 ; 3 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2019 ; IET Cyber-Physical Systems: Theory & Applications Volume 4 ; 4 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2020 ; IET Cyber-Physical Systems: Theory & Applications Volume 5 ; 5 ; https://digital-library.theiet.org/ ; >
       au < doNotProcess ; exists ; 2021 ; IET Cyber-Physical Systems: Theory & Applications Volume 6 ; 6 ; https://digital-library.theiet.org/ ; >
       au < doNotProcess ; exists ; 2022 ; IET Cyber-Physical Systems: Theory & Applications Volume 7 ; 7 ; https://digital-library.theiet.org/ ; >
 
@@ -326,8 +326,8 @@
       >
       param[journal_id] = iet-csr
 
-      au < exists ; exists ; 2019 ; IET Cyber-Systems and Robotics Volume 1 ; 1 ; https://digital-library.theiet.org/ ; >
-      au < exists ; exists ; 2020 ; IET Cyber-Systems and Robotics Volume 2 ; 2 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2019 ; IET Cyber-Systems and Robotics Volume 1 ; 1 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2020 ; IET Cyber-Systems and Robotics Volume 2 ; 2 ; https://digital-library.theiet.org/ ; >
       au < doNotProcess ; exists ; 2021 ; IET Cyber-Systems and Robotics Volume 3 ; 3 ; https://digital-library.theiet.org/ ; >
       au < doNotProcess ; exists ; 2022 ; IET Cyber-Systems and Robotics Volume 4 ; 4 ; https://digital-library.theiet.org/ ; >
 
@@ -535,9 +535,9 @@
       >
       param[journal_id] = iet-nde
 
-      au < exists ; exists ; 2018 ; IET Nanodielectrics Volume 1 ; 1 ; https://digital-library.theiet.org/ ; >
-      au < exists ; exists ; 2019 ; IET Nanodielectrics Volume 2 ; 2 ; https://digital-library.theiet.org/ ; >
-      au < exists ; exists ; 2020 ; IET Nanodielectrics Volume 3 ; 3 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2018 ; IET Nanodielectrics Volume 1 ; 1 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2019 ; IET Nanodielectrics Volume 2 ; 2 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2020 ; IET Nanodielectrics Volume 3 ; 3 ; https://digital-library.theiet.org/ ; >
       au < doNotProcess ; exists ; 2021 ; IET Nanodielectrics Volume 4 ; 4 ; https://digital-library.theiet.org/ ; >
 
     }
@@ -657,7 +657,7 @@
       >
       param[journal_id] = iet-qtc
 
-      au < exists ; exists ; 2020 ; IET Quantum Communication Volume 1 ; 1 ; https://digital-library.theiet.org/ ; >
+      au < manifest ; exists ; 2020 ; IET Quantum Communication Volume 1 ; 1 ; https://digital-library.theiet.org/ ; >
       au < doNotProcess ; exists ; 2021 ; IET Quantum Communication Volume 2 ; 2 ; https://digital-library.theiet.org/ ; >
 
     }

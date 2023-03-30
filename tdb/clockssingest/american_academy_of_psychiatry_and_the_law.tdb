@@ -34,7 +34,7 @@
     #base_url moved to https.
     param[base_url] = https://jaapl.org/
 
-    au < aapl.ClockssAAPLDrupalPlugin ; expected ; exists ; 2023 ; Journal of the American Academy of Psychiatry and the Law Online Volume 51 ; 51 ; >
+    au < aapl.ClockssAAPLDrupalPlugin ; manifest ; exists ; 2023 ; Journal of the American Academy of Psychiatry and the Law Online Volume 51 ; 51 ; >
 
     }
 

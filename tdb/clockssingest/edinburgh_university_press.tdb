@@ -101,7 +101,7 @@
 
     au < deepCrawl ; exists ; 2021 ; Burns Chronicle Volume 130 ; 130 ; https://www.euppublishing.com/ ; >
     au < crawling ; exists ; 2022 ; Burns Chronicle Volume 131 ; 131 ; https://www.euppublishing.com/ ; >
-    au < expected ; exists ; 2023 ; Burns Chronicle Volume 132 ; 132 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2023 ; Burns Chronicle Volume 132 ; 132 ; https://www.euppublishing.com/ ; >
   }
 
   {
@@ -298,7 +298,7 @@
     au < deepCrawl ; exists ; 2020 ; African Journal of International and Comparative Law Volume 28 ; 28 ; https://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2021 ; African Journal of International and Comparative Law Volume 29 ; 29 ; https://www.euppublishing.com/ ; >
     au < crawling ; exists ; 2022 ; African Journal of International and Comparative Law Volume 30 ; 30 ; https://www.euppublishing.com/ ; >
-    au < expected ; exists ; 2023 ; African Journal of International and Comparative Law Volume 31 ; 31 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2023 ; African Journal of International and Comparative Law Volume 31 ; 31 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -2464,7 +2464,7 @@
 
     param[journal_id] = arabic
 
-    au < exists ; exists ; 2023 ; Journal of Arabic Sociolinguistics Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2023 ; Journal of Arabic Sociolinguistics Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
 
   }
 

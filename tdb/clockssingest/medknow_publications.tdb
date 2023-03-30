@@ -4367,7 +4367,7 @@
     au < finished ; finished ; 2020 ; Noise and Health Volume 22 ; 2020 ; 22 ; https://www.noiseandhealth.org/ ; ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Noise and Health Volume 23 ; 2021 ; 23 ; https://www.noiseandhealth.org/ ; ; >
     au < deepCrawl ; exists ; 2022 ; Noise and Health Volume 24 ; 2022 ; 24 ; https://www.noiseandhealth.org/ ; ; >
-    au < expected ; exists ; 2023 ; Noise and Health Volume 25 ; 2023 ; 25 ; https://www.noiseandhealth.org/ ; ; >
+    au < manifest ; exists ; 2023 ; Noise and Health Volume 25 ; 2023 ; 25 ; https://www.noiseandhealth.org/ ; ; >
 
   }
 
@@ -5365,7 +5365,7 @@
       #Moved to https://www.bnmjournal.com/
 
       au < deepCrawl ; exists ; 2022 ; Brain Network and Modulation Volume 1 ; 2022 ; 1 ; https://www.bnmjournal.com/ ; ; >
-      au < expected ; exists ; 2023 ; Brain Network and Modulation Volume 2 ; 2023 ; 2 ; https://www.bnmjournal.com/ ; ; >
+      au < manifest ; exists ; 2023 ; Brain Network and Modulation Volume 2 ; 2023 ; 2 ; https://www.bnmjournal.com/ ; ; >
 
   }
 
@@ -7083,7 +7083,7 @@
       au < finished ; finished ; 2020 ; Journal of Clinical Sciences Volume 17 ; 2020 ; 17 ; https://www.jcsjournal.org/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2021 ; Journal of Clinical Sciences Volume 18 ; 2021 ; 18 ; https://www.jcsjournal.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Journal of Clinical Sciences Volume 19 ; 2022 ; 19 ; https://www.jcsjournal.org/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Clinical Sciences Volume 20 ; 2023 ; 20 ; https://www.jcsjournal.org/ ; ; >
+      au < manifest ; exists ; 2023 ; Journal of Clinical Sciences Volume 20 ; 2023 ; 20 ; https://www.jcsjournal.org/ ; ; >
 
   }
 
@@ -11523,7 +11523,7 @@
       au < finished ; finished ; 2020 ; Saudi Critical Care Journal Volume 4 ; 2020 ; 4 ; https://www.sccj-sa.org/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2021 ; Saudi Critical Care Journal Volume 5 ; 2021 ; 5 ; https://www.sccj-sa.org/ ; ; >
       au < crawling ; exists ; 2022 ; Saudi Critical Care Journal Volume 6 ; 2022 ; 6 ; https://www.sccj-sa.org/ ; ; >
-      au < expected ; exists ; 2023 ; Saudi Critical Care Journal Volume 7 ; 2023 ; 7 ; https://www.sccj-sa.org/ ; ; >
+      au < manifest ; exists ; 2023 ; Saudi Critical Care Journal Volume 7 ; 2023 ; 7 ; https://www.sccj-sa.org/ ; ; >
 
   }
 
@@ -11772,7 +11772,7 @@
       au < frozen ; exists ; 2020 ; Amrita Journal of Medicine Volume 16 ; 2020 ; 16 ; https://www.ajmonline.org.in/ ; ; >
       au < finished ; finished ; 2021 ; Amrita Journal of Medicine Volume 17 ; 2021 ; 17 ; https://www.ajmonline.org.in/ ; ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; Amrita Journal of Medicine Volume 18 ; 2022 ; 18 ; https://www.ajmonline.org.in/ ; ; >
-      au < expected ; exists ; 2023 ; Amrita Journal of Medicine Volume 19 ; 2023 ; 19 ; https://www.ajmonline.org.in/ ; ; >
+      au < manifest ; exists ; 2023 ; Amrita Journal of Medicine Volume 19 ; 2023 ; 19 ; https://www.ajmonline.org.in/ ; ; >
 
   }
 
@@ -12097,7 +12097,7 @@
       au < frozen ; exists ; 2020 ; Dermatologica Sinica Volume 38 ; 2020 ; 38 ; https://www.dermsinica.org/ ; ; >
       au < frozen ; exists ; 2021 ; Dermatologica Sinica Volume 39 ; 2021 ; 39 ; https://www.dermsinica.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Dermatologica Sinica Volume 40 ; 2022 ; 40 ; https://www.dermsinica.org/ ; ; >
-      au < expected ; exists ; 2023 ; Dermatologica Sinica Volume 41 ; 2023 ; 41 ; https://www.dermsinica.org/ ; ; >
+      au < manifest ; exists ; 2023 ; Dermatologica Sinica Volume 41 ; 2023 ; 41 ; https://www.dermsinica.org/ ; ; >
 
   }
 
@@ -13211,7 +13211,7 @@
       au < frozen ; exists ; 2020 ; Journal of The Anatomical Society of India Volume 69 ; 2020 ; 69 ; https://www.jasi.org.in/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of The Anatomical Society of India Volume 70 ; 2021 ; 70 ; https://www.jasi.org.in/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Journal of The Anatomical Society of India Volume 71 ; 2022 ; 71 ; https://www.jasi.org.in/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of The Anatomical Society of India Volume 72 ; 2023 ; 72 ; https://www.jasi.org.in/ ; ; >
+      au < manifest ; exists ; 2023 ; Journal of The Anatomical Society of India Volume 72 ; 2023 ; 72 ; https://www.jasi.org.in/ ; ; >
 
   }
 
@@ -13755,7 +13755,7 @@
       au < crawling ; exists ; 2020 ; Taiwanese Journal of Psychiatry Volume 34 ; 2020 ; 34 ; https://www.e-tjp.org/ ; ; >
       au < frozen ; exists ; 2021 ; Taiwanese Journal of Psychiatry Volume 35 ; 2021 ; 35 ; https://www.e-tjp.org/ ; ; >
       au < crawling ; exists ; 2022 ; Taiwanese Journal of Psychiatry Volume 36 ; 2022 ; 36 ; https://www.e-tjp.org/ ; ; >
-      au < expected ; exists ; 2023 ; Taiwanese Journal of Psychiatry Volume 37 ; 2023 ; 37 ; https://www.e-tjp.org/ ; ; >
+      au < manifest ; exists ; 2023 ; Taiwanese Journal of Psychiatry Volume 37 ; 2023 ; 37 ; https://www.e-tjp.org/ ; ; >
 
   }
 
@@ -13844,7 +13844,7 @@
       au < crawling ; exists ; 2020 ; The Journal of Neurobehavioral Sciences Volume 7 ; 2020 ; 7 ; https://www.jnbsjournal.com/ ; ; >
       au < frozen ; exists ; 2021 ; The Journal of Neurobehavioral Sciences Volume 8 ; 2021 ; 8 ; https://www.jnbsjournal.com/ ; ; >
       au < crawling ; exists ; 2022 ; The Journal of Neurobehavioral Sciences Volume 9 ; 2022 ; 9 ; https://www.jnbsjournal.com/ ; ; >
-      au < expected ; exists ; 2023 ; The Journal of Neurobehavioral Sciences Volume 10 ; 2023 ; 10 ; https://www.jnbsjournal.com/ ; ; >
+      au < manifest ; exists ; 2023 ; The Journal of Neurobehavioral Sciences Volume 10 ; 2023 ; 10 ; https://www.jnbsjournal.com/ ; ; >
 
   }
 
