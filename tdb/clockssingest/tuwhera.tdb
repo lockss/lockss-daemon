@@ -41,7 +41,7 @@
       au < finished ; finished ; 2019 ; Applied Finance Letters Volume 8 ; 8 ; 2019 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2020 ; Applied Finance Letters Volume 9 ; 9 ; 2020 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2021 ; Applied Finance Letters Volume 10 ; 10 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; Applied Finance Letters Volume 11 ; 11 ; 2022 ; >
+      au < deepCrawl ; exists ; 2022 ; Applied Finance Letters Volume 11 ; 11 ; 2022 ; >
       au < manifest ; exists ; 2023 ; Applied Finance Letters Volume 12 ; 12 ; 2023 ; >
 
     }
@@ -68,7 +68,7 @@
       au < finished ; frozen ; 2019 ; Pacific Journalism Review Volume 25 ; 25 ; 2019 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; Pacific Journalism Review Volume 26 ; 26 ; 2020 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Pacific Journalism Review Volume 27 ; 27 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; Pacific Journalism Review Volume 28 ; 28 ; 2022 ; >
+      au < deepCrawl ; exists ; 2022 ; Pacific Journalism Review Volume 28 ; 28 ; 2022 ; >
       au < expected ; exists ; 2023 ; Pacific Journalism Review Volume 29 ; 29 ; 2023 ; >
 
     }
@@ -100,7 +100,7 @@
       au < finished ; frozen ; 2019 ; Te Kaharoa Volume 12 ; 12 ; 2019 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Te Kaharoa Volume 13 ; 13 ; 2020 ; >
       au < finished ; finished ; 2021 ; Te Kaharoa Volume 14 ; 14 ; 2021 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2022 ; Te Kaharoa Volume 15 ; 15 ; 2022 ; >
+      au < deepCrawl ; exists ; 2022 ; Te Kaharoa Volume 15 ; 15 ; 2022 ; >
       au < expected ; exists ; 2023 ; Te Kaharoa Volume 16 ; 16 ; 2023 ; >
 
     }
@@ -117,7 +117,7 @@
       attr[start_stem] = 
 
       au < deepCrawl ; exists ; 2021 ; Aotearoa New Zealand Journal of Social Issues Volume 1 ; 1 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; Aotearoa New Zealand Journal of Social Issues Volume 2 ; 2 ; 2022 ; >
+      au < deepCrawl ; exists ; 2022 ; Aotearoa New Zealand Journal of Social Issues Volume 2 ; 2 ; 2022 ; >
       au < manifest ; exists ; 2023 ; Aotearoa New Zealand Journal of Social Issues Volume 3 ; 3 ; 2023 ; >
 
   }
@@ -143,7 +143,7 @@
       au < finished ; frozen ; 2018 ; Ata: Journal of Psychotherapy Aotearoa New Zealand Volume 22 ; 22 ; 2018 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2020 ; Ata: Journal of Psychotherapy Aotearoa New Zealand Volume 23 ; 23 ; 2020 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2021 ; Ata: Journal of Psychotherapy Aotearoa New Zealand Volume 25 ; 25 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; Ata: Journal of Psychotherapy Aotearoa New Zealand Volume 26 ; 26 ; 2022 ; >
+      au < deepCrawl ; exists ; 2022 ; Ata: Journal of Psychotherapy Aotearoa New Zealand Volume 26 ; 26 ; 2022 ; >
       au < expected ; exists ; 2023 ; Ata: Journal of Psychotherapy Aotearoa New Zealand Volume 27 ; 27 ; 2023 ; >
 
   }
@@ -182,7 +182,7 @@
       au < finished ; frozen ; 2019 ; Decolonization of Criminology and Justice Volume 1 ; 1 ; 2019 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2020 ; Decolonization of Criminology and Justice Volume 2 ; 2 ; 2020 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2021 ; Decolonization of Criminology and Justice Volume 3 ; 3 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; Decolonization of Criminology and Justice Volume 4 ; 4 ; 2022 ; >
+      au < deepCrawl ; exists ; 2022 ; Decolonization of Criminology and Justice Volume 4 ; 4 ; 2022 ; >
       au < expected ; exists ; 2023 ; Decolonization of Criminology and Justice Volume 5 ; 5 ; 2023 ; >
 
   }
@@ -203,7 +203,7 @@
       au < finished ; frozen ; 2019 ; Hospitality Insights Volume 3 ; 3 ; 2019 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2020 ; Hospitality Insights Volume 4 ; 4 ; 2020 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Hospitality Insights Volume 5 ; 5 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; Hospitality Insights Volume 6 ; 6 ; 2022 ; >
+      au < deepCrawl ; exists ; 2022 ; Hospitality Insights Volume 6 ; 6 ; 2022 ; >
       au < expected ; exists ; 2023 ; Hospitality Insights Volume 7 ; 7 ; 2023 ; >
 
   }
@@ -301,7 +301,7 @@
       au < finished ; frozen ; 2019 ; Pacific Health Volume 2 ; 2 ; 2019 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; Pacific Health Volume 3 ; 3 ; 2020 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Pacific Health Volume 4 ; 4 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; Pacific Health Volume 5 ; 5 ; 2022 ; >
+      au < deepCrawl ; exists ; 2022 ; Pacific Health Volume 5 ; 5 ; 2022 ; >
       au < expected ; exists ; 2023 ; Pacific Health Volume 6 ; 6 ; 2023 ; >
 
   }
@@ -320,7 +320,7 @@
       au < finished ; frozen ; 2019 ; PJTEL: Pacific Journal of Technology Enhanced Learning Volume 1 ; 1 ; 2019 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; PJTEL: Pacific Journal of Technology Enhanced Learning Volume 2 ; 2 ; 2020 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2021 ; PJTEL: Pacific Journal of Technology Enhanced Learning Volume 3 ; 3 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; PJTEL: Pacific Journal of Technology Enhanced Learning Volume 4 ; 4 ; 2022 ; >
+      au < deepCrawl ; exists ; 2022 ; PJTEL: Pacific Journal of Technology Enhanced Learning Volume 4 ; 4 ; 2022 ; >
       au < manifest ; exists ; 2023 ; PJTEL: Pacific Journal of Technology Enhanced Learning Volume 5 ; 5 ; 2023 ; >
 
   }
@@ -363,7 +363,7 @@
       au < finished ; frozen ; 2019 ; Teachers Work Volume 16 ; 16 ; 2019 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; Teachers Work Volume 17 ; 17 ; 2020 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Teachers Work Volume 18 ; 18 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; Teachers Work Volume 19 ; 19 ; 2022 ; >
+      au < deepCrawl ; exists ; 2022 ; Teachers Work Volume 19 ; 19 ; 2022 ; >
       au < expected ; exists ; 2023 ; Teachers Work Volume 20 ; 20 ; 2023 ; >
 
   }
