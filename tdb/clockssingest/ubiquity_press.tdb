@@ -644,7 +644,7 @@
       comment[publisher] = Stockholm University Press
 #      param[base_url] = https://njtcg.org/
 
-      au < crawling ; exists ; 2020 ; 1 ; Nordic Journal of Transitions, Careers and Guidance Volume 2020 ; 2020 ; https://njtcg.org/ ; >
+      au < frozen ; exists ; 2020 ; 1 ; Nordic Journal of Transitions, Careers and Guidance Volume 2020 ; 2020 ; https://njtcg.org/ ; >
       au < frozen ; exists ; 2021 ; 2 ; Nordic Journal of Transitions, Careers and Guidance Volume 2021 ; 2021 ; https://njtcg.org/ ; >
       au < deepCrawl ; exists ; 2022 ; 3 ; Nordic Journal of Transitions, Careers and Guidance Volume 2022 ; 2022 ; https://njtcg.org/ ; >
       au < expected ; exists ; 2023 ; 4 ; Nordic Journal of Transitions, Careers and Guidance Volume 2023 ; 2023 ; https://njtcg.org/ ; >
@@ -1051,9 +1051,9 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://cpsyjournal.org/
 
-      au < crawling ; exists ; 2017 ; 1 ; Computational Psychiatry Volume 2017 ; 2017 ; https://cpsyjournal.org/ ; >
-      au < crawling ; exists ; 2018 ; 2 ; Computational Psychiatry Volume 2018 ; 2018 ; https://cpsyjournal.org/ ; >
-      au < crawling ; exists ; 2019 ; 3 ; Computational Psychiatry Volume 2019 ; 2019 ; https://cpsyjournal.org/ ; >
+      au < frozen ; exists ; 2017 ; 1 ; Computational Psychiatry Volume 2017 ; 2017 ; https://cpsyjournal.org/ ; >
+      au < frozen ; exists ; 2018 ; 2 ; Computational Psychiatry Volume 2018 ; 2018 ; https://cpsyjournal.org/ ; >
+      au < frozen ; exists ; 2019 ; 3 ; Computational Psychiatry Volume 2019 ; 2019 ; https://cpsyjournal.org/ ; >
       au < finished ; finished ; 2020 ; 4 ; Computational Psychiatry Volume 2020 ; 2020 ; https://cpsyjournal.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2021 ; 5 ; Computational Psychiatry Volume 2021 ; 2021 ; https://cpsyjournal.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 6 ; Computational Psychiatry Volume 2022 ; 2022 ; https://cpsyjournal.org/ ; >
@@ -1367,8 +1367,8 @@
       au < doNotProcess ; exists ; 2016 ; 2016 ; Journal of Interactive Media in Education Volume 2016 ; 2016 ; https://jime.open.ac.uk/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; 2017 ; Journal of Interactive Media in Education Volume 2017 ; 2017 ; https://jime.open.ac.uk/ ; reingest3.clockss.org:8083 > #no www
       au < finished ; finished ; 2018 ; 2018 ; Journal of Interactive Media in Education Volume 2018 ; 2018 ; https://jime.open.ac.uk/ ; reingest1.clockss.org:8082 > #no www
-      au < crawling ; exists ; 2019 ; 2019 ; Journal of Interactive Media in Education Volume 2019 ; 2019 ; https://jime.open.ac.uk/ ; >
-      au < crawling ; exists ; 2020 ; 2020 ; Journal of Interactive Media in Education Volume 2020 ; 2020 ; https://jime.open.ac.uk/ ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Journal of Interactive Media in Education Volume 2019 ; 2019 ; https://jime.open.ac.uk/ ; >
+      au < frozen ; exists ; 2020 ; 2020 ; Journal of Interactive Media in Education Volume 2020 ; 2020 ; https://jime.open.ac.uk/ ; >
       au < frozen ; exists ; 2021 ; 2021 ; Journal of Interactive Media in Education Volume 2021 ; 2021 ; https://jime.open.ac.uk/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Interactive Media in Education Volume 2022 ; 2022 ; https://jime.open.ac.uk/ ; >
       au < expected ; exists ; 2023 ; 2023 ; Journal of Interactive Media in Education Volume 2023 ; 2023 ; https://jime.open.ac.uk/ ; >
@@ -2350,12 +2350,12 @@
       comment[publisher] = University of Birmingham
 #      param[base_url] = https://jps.bham.ac.uk/
 
-      au < crawling ; exists ; 2014 ; 1 ; Journal of Philosophy in Schools Volume 2014 ; 2014 ; https://jps.bham.ac.uk/ ; >
-      au < crawling ; exists ; 2015 ; 2 ; Journal of Philosophy in Schools Volume 2015 ; 2015 ; https://jps.bham.ac.uk/ ; >
-      au < crawling ; exists ; 2016 ; 3 ; Journal of Philosophy in Schools Volume 2016 ; 2016 ; https://jps.bham.ac.uk/ ; >
-      au < crawling ; exists ; 2017 ; 4 ; Journal of Philosophy in Schools Volume 2017 ; 2017 ; https://jps.bham.ac.uk/ ; >
-      au < crawling ; exists ; 2018 ; 5 ; Journal of Philosophy in Schools Volume 2018 ; 2018 ; https://jps.bham.ac.uk/ ; >
-      au < crawling ; exists ; 2019 ; 6 ; Journal of Philosophy in Schools Volume 2019 ; 2019 ; https://jps.bham.ac.uk/ ; >
+      au < frozen ; exists ; 2014 ; 1 ; Journal of Philosophy in Schools Volume 2014 ; 2014 ; https://jps.bham.ac.uk/ ; >
+      au < frozen ; exists ; 2015 ; 2 ; Journal of Philosophy in Schools Volume 2015 ; 2015 ; https://jps.bham.ac.uk/ ; >
+      au < frozen ; exists ; 2016 ; 3 ; Journal of Philosophy in Schools Volume 2016 ; 2016 ; https://jps.bham.ac.uk/ ; >
+      au < frozen ; exists ; 2017 ; 4 ; Journal of Philosophy in Schools Volume 2017 ; 2017 ; https://jps.bham.ac.uk/ ; >
+      au < frozen ; exists ; 2018 ; 5 ; Journal of Philosophy in Schools Volume 2018 ; 2018 ; https://jps.bham.ac.uk/ ; >
+      au < frozen ; exists ; 2019 ; 6 ; Journal of Philosophy in Schools Volume 2019 ; 2019 ; https://jps.bham.ac.uk/ ; >
       au < finished ; finished ; 2020 ; 7 ; Journal of Philosophy in Schools Volume 2020 ; 2020 ; https://jps.bham.ac.uk/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2021 ; 8 ; Journal of Philosophy in Schools Volume 2021 ; 2021 ; https://jps.bham.ac.uk/ ; > #no substance
       au < deepCrawl ; exists ; 2022 ; 9 ; Journal of Philosophy in Schools Volume 2022 ; 2022 ; https://jps.bham.ac.uk/ ; > #no substance
@@ -3338,7 +3338,7 @@
       comment[publisher] = Virginia Tech Publishing
 #      param[base_url] = https://www.seejournal.org/
 
-      au < crawling ; exists ; 2020 ; 1 ; Studies in Engineering Education Volume 2020 ; 2020 ; https://www.seejournal.org/ ; >
+      au < frozen ; exists ; 2020 ; 1 ; Studies in Engineering Education Volume 2020 ; 2020 ; https://www.seejournal.org/ ; >
       au < frozen ; exists ; 2021 ; 2 ; Studies in Engineering Education Volume 2021 ; 2021 ; https://www.seejournal.org/ ; >
       au < deepCrawl ; exists ; 2022 ; 3 ; Studies in Engineering Education Volume 2022 ; 2022 ; https://www.seejournal.org/ ; >
       au < expected ; exists ; 2023 ; 4 ; Studies in Engineering Education Volume 2023 ; 2023 ; https://www.seejournal.org/ ; >
@@ -3609,9 +3609,9 @@
       au < doNotProcess ; exists ; 2014 ; 66 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2014 ; 2014 ; https://a.tellusjournals.se/ ; >
       au < doNotProcess ; exists ; 2015 ; 67 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2015 ; 2015 ; https://a.tellusjournals.se/ ; >
       au < doNotProcess ; exists ; 2016 ; 68 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2016 ; 2016 ; https://a.tellusjournals.se/ ; >
-      au < crawling ; exists ; 2017 ; 69 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2017 ; 2017 ; https://a.tellusjournals.se/ ; >
-      au < crawling ; exists ; 2018 ; 70 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2018 ; 2018 ; https://a.tellusjournals.se/ ; >
-      au < crawling ; exists ; 2019 ; 71 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2019 ; 2019 ; https://a.tellusjournals.se/ ; >
+      au < frozen ; exists ; 2017 ; 69 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2017 ; 2017 ; https://a.tellusjournals.se/ ; >
+      au < frozen ; exists ; 2018 ; 70 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2018 ; 2018 ; https://a.tellusjournals.se/ ; >
+      au < frozen ; exists ; 2019 ; 71 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2019 ; 2019 ; https://a.tellusjournals.se/ ; >
       au < manifest ; exists ; 2020 ; 72 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2020 ; 2020 ; https://a.tellusjournals.se/ ; >
       au < frozen ; exists ; 2021 ; 73 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2021 ; 2021 ; https://a.tellusjournals.se/ ; >
       au < notReady ; exists ; 2022 ; 74 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2022 ; 2022 ; https://a.tellusjournals.se/ ; > #Lists all volumes.
@@ -3665,10 +3665,10 @@
       au < doNotProcess ; exists ; 2014 ; 32 ; Tellus B: Chemical and Physical Meteorology Volume 2014 ; 2014 ; https://b.tellusjournals.se/ ; >
       au < doNotProcess ; exists ; 2015 ; 33 ; Tellus B: Chemical and Physical Meteorology Volume 2015 ; 2015 ; https://b.tellusjournals.se/ ; >
       au < doNotProcess ; exists ; 2016 ; 34 ; Tellus B: Chemical and Physical Meteorology Volume 2016 ; 2016 ; https://b.tellusjournals.se/ ; >
-      au < crawling ; exists ; 2017 ; 35 ; Tellus B: Chemical and Physical Meteorology Volume 2017 ; 2017 ; https://b.tellusjournals.se/ ; >
-      au < crawling ; exists ; 2018 ; 36 ; Tellus B: Chemical and Physical Meteorology Volume 2018 ; 2018 ; https://b.tellusjournals.se/ ; >
-      au < crawling ; exists ; 2019 ; 37 ; Tellus B: Chemical and Physical Meteorology Volume 2019 ; 2019 ; https://b.tellusjournals.se/ ; >
-      au < crawling ; exists ; 2020 ; 38 ; Tellus B: Chemical and Physical Meteorology Volume 2020 ; 2020 ; https://b.tellusjournals.se/ ; >
+      au < frozen ; exists ; 2017 ; 35 ; Tellus B: Chemical and Physical Meteorology Volume 2017 ; 2017 ; https://b.tellusjournals.se/ ; >
+      au < frozen ; exists ; 2018 ; 36 ; Tellus B: Chemical and Physical Meteorology Volume 2018 ; 2018 ; https://b.tellusjournals.se/ ; >
+      au < frozen ; exists ; 2019 ; 37 ; Tellus B: Chemical and Physical Meteorology Volume 2019 ; 2019 ; https://b.tellusjournals.se/ ; >
+      au < frozen ; exists ; 2020 ; 38 ; Tellus B: Chemical and Physical Meteorology Volume 2020 ; 2020 ; https://b.tellusjournals.se/ ; >
       au < frozen ; exists ; 2021 ; 39 ; Tellus B: Chemical and Physical Meteorology Volume 2021 ; 2021 ; https://b.tellusjournals.se/ ; >
       au < notReady ; exists ; 2022 ; 40 ; Tellus B: Chemical and Physical Meteorology Volume 2022 ; 2022 ; https://b.tellusjournals.se/ ; > # Lists all volumes.
       au < expected ; exists ; 2023 ; 41 ; Tellus B: Chemical and Physical Meteorology Volume 2023 ; 2023 ; https://b.tellusjournals.se/ ; > # Lists all volumes.
@@ -3704,18 +3704,18 @@
       param[base_url] =  https://account.cehh.press.lshtm.ac.uk/
       param[journal_id] = s-j-cehh
 
-      au < crawling ; exists ; 2010 ; 7 ; Indigenous Business & Public Administration Volume 2010 ; 2010 ; >
-      au < crawling ; exists ; 2011 ; 8 ; Indigenous Business & Public Administration Volume 2011 ; 2011 ; >
-      au < crawling ; exists ; 2012 ; 9 ; Indigenous Business & Public Administration Volume 2012 ; 2012 ; >
-      au < crawling ; exists ; 2013 ; 10 ; Indigenous Business & Public Administration Volume 2013 ; 2013 ; >
-      au < crawling ; exists ; 2014 ; 11 ; Indigenous Business & Public Administration Volume 2014 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; 12 ; Indigenous Business & Public Administration Volume 2015 ; 2015 ; >
-      au < crawling ; exists ; 2016 ; 13 ; Indigenous Business & Public Administration Volume 2016 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; 14 ; Indigenous Business & Public Administration Volume 2017 ; 2017 ; >
-      au < crawling ; exists ; 2018 ; 15 ; Indigenous Business & Public Administration Volume 2018 ; 2018 ; >
-      au < crawling ; exists ; 2019 ; 16 ; Indigenous Business & Public Administration Volume 2019 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; 17 ; Indigenous Business & Public Administration Volume 2020 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; 18 ; Indigenous Business & Public Administration Volume 2021 ; 2021 ; >
+      au < frozen ; exists ; 2010 ; 7 ; Indigenous Business & Public Administration Volume 2010 ; 2010 ; >
+      au < frozen ; exists ; 2011 ; 8 ; Indigenous Business & Public Administration Volume 2011 ; 2011 ; >
+      au < frozen ; exists ; 2012 ; 9 ; Indigenous Business & Public Administration Volume 2012 ; 2012 ; >
+      au < frozen ; exists ; 2013 ; 10 ; Indigenous Business & Public Administration Volume 2013 ; 2013 ; >
+      au < frozen ; exists ; 2014 ; 11 ; Indigenous Business & Public Administration Volume 2014 ; 2014 ; >
+      au < frozen ; exists ; 2015 ; 12 ; Indigenous Business & Public Administration Volume 2015 ; 2015 ; >
+      au < frozen ; exists ; 2016 ; 13 ; Indigenous Business & Public Administration Volume 2016 ; 2016 ; >
+      au < frozen ; exists ; 2017 ; 14 ; Indigenous Business & Public Administration Volume 2017 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; 15 ; Indigenous Business & Public Administration Volume 2018 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; 16 ; Indigenous Business & Public Administration Volume 2019 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; 17 ; Indigenous Business & Public Administration Volume 2020 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; 18 ; Indigenous Business & Public Administration Volume 2021 ; 2021 ; >
 
   }
 
