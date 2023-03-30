@@ -329,8 +329,8 @@
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
       param[base_url] = https://lj.uwpress.org/
 
-      au < exists ; 2021 ; Landscape Journal: design, planning, and management of the land Volume 40 ; 40 >
-      au < exists ; 2022 ; Landscape Journal: design, planning, and management of the land Volume 41 ; 41 >
+      au < manifest ; 2021 ; Landscape Journal: design, planning, and management of the land Volume 40 ; 40 >
+      au < manifest ; 2022 ; Landscape Journal: design, planning, and management of the land Volume 41 ; 41 >
       au < expected ; 2023 ; Landscape Journal: design, planning, and management of the land Volume 42 ; 42 >
       }
 
@@ -411,8 +411,8 @@
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
       param[base_url] = https://mon.uwpress.org/
 
-      au < exists ; 2021 ; Monatshefte Volume 113 ; 113 >
-      au < exists ; 2022 ; Monatshefte Volume 114 ; 114 >
+      au < manifest ; 2021 ; Monatshefte Volume 113 ; 113 >
+      au < manifest ; 2022 ; Monatshefte Volume 114 ; 114 >
       au < expected ; 2023 ; Monatshefte Volume 115 ; 115 >
 
       }
