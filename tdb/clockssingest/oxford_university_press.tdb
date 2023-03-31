@@ -2166,7 +2166,7 @@
 
     param[journal_id] = bbb
     #continues = 0002-1369
-    #move from T&F, 2022
+    #move from T&F, 2021
 
     au < frozen ; exists ; 2021 ; 2021 ; Bioscience, Biotechnology, and Biochemistry Volume 85 ; 85 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Bioscience, Biotechnology, and Biochemistry Volume 86 ; 86 ; >
@@ -5496,6 +5496,7 @@
     >
 
     param[journal_id] = ehjacc
+    #doNotProcess = content had been processed by Sage
 
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; European Heart Journal. Acute Cardiovascular Care Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; European Heart Journal. Acute Cardiovascular Care Volume 2 ; 2 ; >
@@ -12346,7 +12347,22 @@
 
     param[journal_id] = jope
     #move from Wiley by 2023-01-01
+    #content avilable online from 1967 Volume 1 to 2007 Volume 41
 
+    au < exists ; exists ; 2008 ; 2008 ; Journal of Philosophy of Education Volume 42 ; 42 ; >
+    au < exists ; exists ; 2009 ; 2009 ; Journal of Philosophy of Education Volume 43 ; 43 ; >
+    au < exists ; exists ; 2010 ; 2010 ; Journal of Philosophy of Education Volume 44 ; 44 ; >
+    au < exists ; exists ; 2011 ; 2011 ; Journal of Philosophy of Education Volume 45 ; 45 ; >
+    au < exists ; exists ; 2012 ; 2012 ; Journal of Philosophy of Education Volume 46 ; 46 ; >
+    au < exists ; exists ; 2013 ; 2013 ; Journal of Philosophy of Education Volume 47 ; 47 ; >
+    au < exists ; exists ; 2014 ; 2014 ; Journal of Philosophy of Education Volume 48 ; 48 ; >
+    au < exists ; exists ; 2015 ; 2015 ; Journal of Philosophy of Education Volume 49 ; 49 ; >
+    au < exists ; exists ; 2016 ; 2016 ; Journal of Philosophy of Education Volume 50 ; 50 ; >
+    au < exists ; exists ; 2017 ; 2017 ; Journal of Philosophy of Education Volume 51 ; 51 ; >
+    au < exists ; exists ; 2018 ; 2018 ; Journal of Philosophy of Education Volume 52 ; 52 ; >
+    au < exists ; exists ; 2019 ; 2019 ; Journal of Philosophy of Education Volume 53 ; 53 ; >
+    au < exists ; exists ; 2020 ; 2020 ; Journal of Philosophy of Education Volume 54 ; 54 ; >
+    au < exists ; exists ; 2021 ; 2021 ; Journal of Philosophy of Education Volume 55 ; 55 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Journal of Philosophy of Education Volume 56 ; 56 ; >
     au < expected ; exists ; 2023 ; 2023 ; Journal of Philosophy of Education Volume 57 ; 57 ; >
 

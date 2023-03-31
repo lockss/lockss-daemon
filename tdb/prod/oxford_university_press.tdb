@@ -2157,8 +2157,8 @@
 
     param[journal_id] = bbb
     #continues = 0002-1369
-    #move from T&F, 2022
-    #content prior to 2021 process under T&F
+    #move from T&F, 2021
+    #content prior to 2020 process under T&F
 
     au < ready ; 2021 ; 2021 ; Bioscience, Biotechnology, and Biochemistry Volume 85 ; 85 >
     au < manifest ; 2022 ; 2022 ; Bioscience, Biotechnology, and Biochemistry Volume 86 ; 86 >
@@ -12342,7 +12342,22 @@
 
     param[journal_id] = jope
     #move from Wiley by 2023-01-01
+    #content avilable online from 1967 Volume 1 to 2007 Volume 41
 
+    au < exists ; 2008 ; 2008 ; Journal of Philosophy of Education Volume 42 ; 42 >
+    au < exists ; 2009 ; 2009 ; Journal of Philosophy of Education Volume 43 ; 43 >
+    au < exists ; 2010 ; 2010 ; Journal of Philosophy of Education Volume 44 ; 44 >
+    au < exists ; 2011 ; 2011 ; Journal of Philosophy of Education Volume 45 ; 45 >
+    au < exists ; 2012 ; 2012 ; Journal of Philosophy of Education Volume 46 ; 46 >
+    au < exists ; 2013 ; 2013 ; Journal of Philosophy of Education Volume 47 ; 47 >
+    au < exists ; 2014 ; 2014 ; Journal of Philosophy of Education Volume 48 ; 48 >
+    au < exists ; 2015 ; 2015 ; Journal of Philosophy of Education Volume 49 ; 49 >
+    au < exists ; 2016 ; 2016 ; Journal of Philosophy of Education Volume 50 ; 50 >
+    au < exists ; 2017 ; 2017 ; Journal of Philosophy of Education Volume 51 ; 51 >
+    au < exists ; 2018 ; 2018 ; Journal of Philosophy of Education Volume 52 ; 52 >
+    au < exists ; 2019 ; 2019 ; Journal of Philosophy of Education Volume 53 ; 53 >
+    au < exists ; 2020 ; 2020 ; Journal of Philosophy of Education Volume 54 ; 54 >
+    au < exists ; 2021 ; 2021 ; Journal of Philosophy of Education Volume 55 ; 55 >
     au < manifest ; 2022 ; 2022 ; Journal of Philosophy of Education Volume 56 ; 56 >
     au < expected ; 2023 ; 2023 ; Journal of Philosophy of Education Volume 57 ; 57 >
 
