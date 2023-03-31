@@ -3591,8 +3591,23 @@
     >
 
     param[journal_id] = ced
+    #content available from 1976 Volume 1 to 2007 Volume 32
     #move from Wiley, 2023
 
+    au < exists ; 2008 ; 2008 ; Clinical and Experimental Dermatology Volume 33 ; 33 >
+    au < exists ; 2009 ; 2009 ; Clinical and Experimental Dermatology Volume 34 ; 34 >
+    au < exists ; 2010 ; 2010 ; Clinical and Experimental Dermatology Volume 35 ; 35 >
+    au < exists ; 2011 ; 2011 ; Clinical and Experimental Dermatology Volume 36 ; 36 >
+    au < exists ; 2012 ; 2012 ; Clinical and Experimental Dermatology Volume 37 ; 37 >
+    au < exists ; 2013 ; 2013 ; Clinical and Experimental Dermatology Volume 38 ; 38 >
+    au < exists ; 2014 ; 2014 ; Clinical and Experimental Dermatology Volume 39 ; 39 >
+    au < exists ; 2015 ; 2015 ; Clinical and Experimental Dermatology Volume 30 ; 30 >
+    au < exists ; 2016 ; 2016 ; Clinical and Experimental Dermatology Volume 41 ; 41 >
+    au < exists ; 2017 ; 2017 ; Clinical and Experimental Dermatology Volume 42 ; 42 >
+    au < exists ; 2018 ; 2018 ; Clinical and Experimental Dermatology Volume 43 ; 43 >
+    au < exists ; 2019 ; 2019 ; Clinical and Experimental Dermatology Volume 44 ; 44 >
+    au < exists ; 2020 ; 2020 ; Clinical and Experimental Dermatology Volume 45 ; 45 >
+    au < exists ; 2021 ; 2021 ; Clinical and Experimental Dermatology Volume 46 ; 46 >
     au < manifest ; 2022 ; 2022 ; Clinical and Experimental Dermatology Volume 47 ; 47 >
     au < manifest ; 2023 ; 2023 ; Clinical and Experimental Dermatology Volume 48 ; 48 >
 
@@ -3609,8 +3624,40 @@
 
     param[journal_id] = cei
 
-    au < manifest ; 2022 ; 2022 ; Clinical & Experimental Immunology Volume 207 ; 207 >
-    au < manifest ; 2023 ; 2023 ; Clinical & Experimental Immunology Volume 208 ; 208 >
+    au < doNotProces ; 1990 ; 1990 ; Clinical & Experimental Immunology Volume 79-82 ; 79-82 >
+    au < doNotProces ; 1991 ; 1991 ; Clinical & Experimental Immunology Volume 83-86 ; 83-86 >
+    au < doNotProces ; 1992 ; 1992 ; Clinical & Experimental Immunology Volume 87-90 ; 87-90 >
+    au < doNotProces ; 1993 ; 1993 ; Clinical & Experimental Immunology Volume 91-94 ; 91-94 >
+    au < doNotProces ; 1994 ; 1994 ; Clinical & Experimental Immunology Volume 95-98 ; 95-98 >
+    au < doNotProces ; 1995 ; 1995 ; Clinical & Experimental Immunology Volume 99-102 ; 99-102 >
+    au < doNotProces ; 1996 ; 1996 ; Clinical & Experimental Immunology Volume 103-106 ; 103-106 >
+    au < doNotProces ; 1997 ; 1997 ; Clinical & Experimental Immunology Volume 107-110 ; 107-110 >
+    au < doNotProces ; 1998 ; 1998 ; Clinical & Experimental Immunology Volume 111-114 ; 111-114 >
+    au < doNotProces ; 1999 ; 1999 ; Clinical & Experimental Immunology Volume 115-118 ; 115-118 >
+    au < doNotProces ; 2000 ; 2000 ; Clinical & Experimental Immunology Volume 119-122 ; 119-122 >
+    au < doNotProces ; 2001 ; 2001 ; Clinical & Experimental Immunology Volume 123-126 ; 123-126 >
+    au < doNotProces ; 2002 ; 2002 ; Clinical & Experimental Immunology Volume 127-130 ; 127-130 >
+    au < doNotProces ; 2003 ; 2003 ; Clinical & Experimental Immunology Volume 131-134 ; 131-134 >
+    au < doNotProces ; 2004 ; 2004 ; Clinical & Experimental Immunology Volume 135-138 ; 135-138 >
+    au < doNotProces ; 2005 ; 2005 ; Clinical & Experimental Immunology Volume 139-142 ; 139-142 >
+    au < doNotProces ; 2006 ; 2006 ; Clinical & Experimental Immunology Volume 143-146 ; 143-146 >
+    au < doNotProces ; 2007 ; 2007 ; Clinical & Experimental Immunology Volume 147-150 ; 147-150 >
+    au < exists ; 2008 ; 2008 ; Clinical & Experimental Immunology Volume 151-154 ; 151-154 >
+    au < exists ; 2009 ; 2009 ; Clinical & Experimental Immunology Volume 155-158 ; 155-158 >
+    au < exists ; 2010 ; 2010 ; Clinical & Experimental Immunology Volume 159-162 ; 159-162 >
+    au < exists ; 2011 ; 2011 ; Clinical & Experimental Immunology Volume 163-166 ; 163-166 >
+    au < exists ; 2012 ; 2012 ; Clinical & Experimental Immunology Volume 167-170 ; 167-170 >
+    au < exists ; 2013 ; 2013 ; Clinical & Experimental Immunology Volume 171-174 ; 171-174 >
+    au < exists ; 2014 ; 2014 ; Clinical & Experimental Immunology Volume 175-178 ; 175-178 >
+    au < exists ; 2015 ; 2015 ; Clinical & Experimental Immunology Volume 179-182 ; 179-182 >
+    au < exists ; 2016 ; 2016 ; Clinical & Experimental Immunology Volume 183-186 ; 183-186 >
+    au < exists ; 2017 ; 2017 ; Clinical & Experimental Immunology Volume 187-190 ; 187-190 >
+    au < exists ; 2018 ; 2018 ; Clinical & Experimental Immunology Volume 191-194 ; 191-194 >
+    au < exists ; 2019 ; 2019 ; Clinical & Experimental Immunology Volume 195-198 ; 195-198 >
+    au < exists ; 2020 ; 2020 ; Clinical & Experimental Immunology Volume 199-202 ; 199-202 >
+    au < exists ; 2021 ; 2021 ; Clinical & Experimental Immunology Volume 203-206 ; 203-206 >
+    au < manifest ; 2022 ; 2022 ; Clinical & Experimental Immunology Volume 207-210 ; 207-210 >
+    au < manifest ; 2023 ; 2023 ; Clinical & Experimental Immunology Volume 211-214 ; 211-214 >
 
   }
 

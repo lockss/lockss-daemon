@@ -3615,7 +3615,7 @@
       au < manifest ; exists ; 2020 ; 72 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2020 ; 2020 ; https://a.tellusjournals.se/ ; >
       au < frozen ; exists ; 2021 ; 73 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2021 ; 2021 ; https://a.tellusjournals.se/ ; >
       au < notReady ; exists ; 2022 ; 74 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2022 ; 2022 ; https://a.tellusjournals.se/ ; > #Lists all volumes.
-      au < expected ; exists ; 2023 ; 75 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2023 ; 2023 ; https://a.tellusjournals.se/ ; > #Lists all volumes.
+      au < exists ; exists ; 2023 ; 75 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2023 ; 2023 ; https://a.tellusjournals.se/ ; >
 
   }
 
@@ -3631,47 +3631,47 @@
 #      param[base_url] = https://b.tellusjournals.se/
       #2000-2016 processed under the publisher Co-action.
 
-      au < manifest ; exists ; 1983 ; 1 ; Tellus B: Chemical and Physical Meteorology Volume 1983 ; 1983 ; https://b.tellusjournals.se/ ; >
-      au < manifest ; exists ; 1984 ; 2 ; Tellus B: Chemical and Physical Meteorology Volume 1984 ; 1984 ; https://b.tellusjournals.se/ ; >
-      au < manifest ; exists ; 1985 ; 3 ; Tellus B: Chemical and Physical Meteorology Volume 1985 ; 1985 ; https://b.tellusjournals.se/ ; >
-      au < manifest ; exists ; 1986 ; 4 ; Tellus B: Chemical and Physical Meteorology Volume 1986 ; 1986 ; https://b.tellusjournals.se/ ; >
-      au < manifest ; exists ; 1987 ; 5 ; Tellus B: Chemical and Physical Meteorology Volume 1987 ; 1987 ; https://b.tellusjournals.se/ ; >
-      au < manifest ; exists ; 1988 ; 6 ; Tellus B: Chemical and Physical Meteorology Volume 1988 ; 1988 ; https://b.tellusjournals.se/ ; >
-      au < manifest ; exists ; 1989 ; 7 ; Tellus B: Chemical and Physical Meteorology Volume 1989 ; 1989 ; https://b.tellusjournals.se/ ; >
-      au < manifest ; exists ; 1990 ; 8 ; Tellus B: Chemical and Physical Meteorology Volume 1990 ; 1990 ; https://b.tellusjournals.se/ ; >
-      au < manifest ; exists ; 1991 ; 9 ; Tellus B: Chemical and Physical Meteorology Volume 1991 ; 1991 ; https://b.tellusjournals.se/ ; >
-      au < manifest ; exists ; 1992 ; 10 ; Tellus B: Chemical and Physical Meteorology Volume 1992 ; 1992 ; https://b.tellusjournals.se/ ; >
-      au < manifest ; exists ; 1993 ; 11 ; Tellus B: Chemical and Physical Meteorology Volume 1993 ; 1993 ; https://b.tellusjournals.se/ ; >
-      au < manifest ; exists ; 1994 ; 12 ; Tellus B: Chemical and Physical Meteorology Volume 1994 ; 1994 ; https://b.tellusjournals.se/ ; >
-      au < manifest ; exists ; 1995 ; 13 ; Tellus B: Chemical and Physical Meteorology Volume 1995 ; 1995 ; https://b.tellusjournals.se/ ; >
-      au < manifest ; exists ; 1996 ; 14 ; Tellus B: Chemical and Physical Meteorology Volume 1996 ; 1996 ; https://b.tellusjournals.se/ ; >
-      au < manifest ; exists ; 1997 ; 15 ; Tellus B: Chemical and Physical Meteorology Volume 1997 ; 1997 ; https://b.tellusjournals.se/ ; >
-      au < manifest ; exists ; 1998 ; 16 ; Tellus B: Chemical and Physical Meteorology Volume 1998 ; 1998 ; https://b.tellusjournals.se/ ; >
-      au < manifest ; exists ; 1999 ; 17 ; Tellus B: Chemical and Physical Meteorology Volume 1999 ; 1999 ; https://b.tellusjournals.se/ ; >
-      au < doNotProcess ; exists ; 2000 ; 18 ; Tellus B: Chemical and Physical Meteorology Volume 2000 ; 2000 ; https://b.tellusjournals.se/ ; >
-      au < doNotProcess ; exists ; 2001 ; 19 ; Tellus B: Chemical and Physical Meteorology Volume 2001 ; 2001 ; https://b.tellusjournals.se/ ; >
-      au < doNotProcess ; exists ; 2002 ; 20 ; Tellus B: Chemical and Physical Meteorology Volume 2002 ; 2002 ; https://b.tellusjournals.se/ ; >
-      au < doNotProcess ; exists ; 2003 ; 21 ; Tellus B: Chemical and Physical Meteorology Volume 2003 ; 2003 ; https://b.tellusjournals.se/ ; >
-      au < doNotProcess ; exists ; 2004 ; 22 ; Tellus B: Chemical and Physical Meteorology Volume 2004 ; 2004 ; https://b.tellusjournals.se/ ; >
-      au < doNotProcess ; exists ; 2005 ; 23 ; Tellus B: Chemical and Physical Meteorology Volume 2005 ; 2005 ; https://b.tellusjournals.se/ ; >
-      au < doNotProcess ; exists ; 2006 ; 24 ; Tellus B: Chemical and Physical Meteorology Volume 2006 ; 2006 ; https://b.tellusjournals.se/ ; >
-      au < doNotProcess ; exists ; 2007 ; 25 ; Tellus B: Chemical and Physical Meteorology Volume 2007 ; 2007 ; https://b.tellusjournals.se/ ; >
-      au < doNotProcess ; exists ; 2008 ; 26 ; Tellus B: Chemical and Physical Meteorology Volume 2008 ; 2008 ; https://b.tellusjournals.se/ ; >
-      au < doNotProcess ; exists ; 2009 ; 27 ; Tellus B: Chemical and Physical Meteorology Volume 2009 ; 2009 ; https://b.tellusjournals.se/ ; >
-      au < doNotProcess ; exists ; 2010 ; 28 ; Tellus B: Chemical and Physical Meteorology Volume 2010 ; 2010 ; https://b.tellusjournals.se/ ; >
-      au < doNotProcess ; exists ; 2011 ; 29 ; Tellus B: Chemical and Physical Meteorology Volume 2011 ; 2011 ; https://b.tellusjournals.se/ ; >
-      au < doNotProcess ; exists ; 2012 ; 30 ; Tellus B: Chemical and Physical Meteorology Volume 2012 ; 2012 ; https://b.tellusjournals.se/ ; >
-      au < doNotProcess ; exists ; 2013 ; 31 ; Tellus B: Chemical and Physical Meteorology Volume 2013 ; 2013 ; https://b.tellusjournals.se/ ; >
-      au < doNotProcess ; exists ; 2014 ; 32 ; Tellus B: Chemical and Physical Meteorology Volume 2014 ; 2014 ; https://b.tellusjournals.se/ ; >
-      au < doNotProcess ; exists ; 2015 ; 33 ; Tellus B: Chemical and Physical Meteorology Volume 2015 ; 2015 ; https://b.tellusjournals.se/ ; >
-      au < doNotProcess ; exists ; 2016 ; 34 ; Tellus B: Chemical and Physical Meteorology Volume 2016 ; 2016 ; https://b.tellusjournals.se/ ; >
-      au < frozen ; exists ; 2017 ; 35 ; Tellus B: Chemical and Physical Meteorology Volume 2017 ; 2017 ; https://b.tellusjournals.se/ ; >
-      au < frozen ; exists ; 2018 ; 36 ; Tellus B: Chemical and Physical Meteorology Volume 2018 ; 2018 ; https://b.tellusjournals.se/ ; >
-      au < frozen ; exists ; 2019 ; 37 ; Tellus B: Chemical and Physical Meteorology Volume 2019 ; 2019 ; https://b.tellusjournals.se/ ; >
-      au < frozen ; exists ; 2020 ; 38 ; Tellus B: Chemical and Physical Meteorology Volume 2020 ; 2020 ; https://b.tellusjournals.se/ ; >
-      au < frozen ; exists ; 2021 ; 39 ; Tellus B: Chemical and Physical Meteorology Volume 2021 ; 2021 ; https://b.tellusjournals.se/ ; >
-      au < notReady ; exists ; 2022 ; 40 ; Tellus B: Chemical and Physical Meteorology Volume 2022 ; 2022 ; https://b.tellusjournals.se/ ; > # Lists all volumes.
-      au < expected ; exists ; 2023 ; 41 ; Tellus B: Chemical and Physical Meteorology Volume 2023 ; 2023 ; https://b.tellusjournals.se/ ; > # Lists all volumes.
+      au < manifest ; exists ; 1983 ; 35 ; Tellus B: Chemical and Physical Meteorology Volume 1983 ; 1983 ; https://b.tellusjournals.se/ ; >
+      au < manifest ; exists ; 1984 ; 36 ; Tellus B: Chemical and Physical Meteorology Volume 1984 ; 1984 ; https://b.tellusjournals.se/ ; >
+      au < manifest ; exists ; 1985 ; 37 ; Tellus B: Chemical and Physical Meteorology Volume 1985 ; 1985 ; https://b.tellusjournals.se/ ; >
+      au < manifest ; exists ; 1986 ; 38 ; Tellus B: Chemical and Physical Meteorology Volume 1986 ; 1986 ; https://b.tellusjournals.se/ ; >
+      au < manifest ; exists ; 1987 ; 39 ; Tellus B: Chemical and Physical Meteorology Volume 1987 ; 1987 ; https://b.tellusjournals.se/ ; >
+      au < manifest ; exists ; 1988 ; 40 ; Tellus B: Chemical and Physical Meteorology Volume 1988 ; 1988 ; https://b.tellusjournals.se/ ; >
+      au < manifest ; exists ; 1989 ; 41 ; Tellus B: Chemical and Physical Meteorology Volume 1989 ; 1989 ; https://b.tellusjournals.se/ ; >
+      au < manifest ; exists ; 1990 ; 42 ; Tellus B: Chemical and Physical Meteorology Volume 1990 ; 1990 ; https://b.tellusjournals.se/ ; >
+      au < manifest ; exists ; 1991 ; 43 ; Tellus B: Chemical and Physical Meteorology Volume 1991 ; 1991 ; https://b.tellusjournals.se/ ; >
+      au < manifest ; exists ; 1992 ; 44 ; Tellus B: Chemical and Physical Meteorology Volume 1992 ; 1992 ; https://b.tellusjournals.se/ ; >
+      au < manifest ; exists ; 1993 ; 45 ; Tellus B: Chemical and Physical Meteorology Volume 1993 ; 1993 ; https://b.tellusjournals.se/ ; >
+      au < manifest ; exists ; 1994 ; 46 ; Tellus B: Chemical and Physical Meteorology Volume 1994 ; 1994 ; https://b.tellusjournals.se/ ; >
+      au < manifest ; exists ; 1995 ; 47 ; Tellus B: Chemical and Physical Meteorology Volume 1995 ; 1995 ; https://b.tellusjournals.se/ ; >
+      au < manifest ; exists ; 1996 ; 48 ; Tellus B: Chemical and Physical Meteorology Volume 1996 ; 1996 ; https://b.tellusjournals.se/ ; >
+      au < manifest ; exists ; 1997 ; 49 ; Tellus B: Chemical and Physical Meteorology Volume 1997 ; 1997 ; https://b.tellusjournals.se/ ; >
+      au < manifest ; exists ; 1998 ; 50 ; Tellus B: Chemical and Physical Meteorology Volume 1998 ; 1998 ; https://b.tellusjournals.se/ ; >
+      au < manifest ; exists ; 1999 ; 51 ; Tellus B: Chemical and Physical Meteorology Volume 1999 ; 1999 ; https://b.tellusjournals.se/ ; >
+      au < doNotProcess ; exists ; 2000 ; 52 ; Tellus B: Chemical and Physical Meteorology Volume 2000 ; 2000 ; https://b.tellusjournals.se/ ; >
+      au < doNotProcess ; exists ; 2001 ; 53 ; Tellus B: Chemical and Physical Meteorology Volume 2001 ; 2001 ; https://b.tellusjournals.se/ ; >
+      au < doNotProcess ; exists ; 2002 ; 54 ; Tellus B: Chemical and Physical Meteorology Volume 2002 ; 2002 ; https://b.tellusjournals.se/ ; >
+      au < doNotProcess ; exists ; 2003 ; 55 ; Tellus B: Chemical and Physical Meteorology Volume 2003 ; 2003 ; https://b.tellusjournals.se/ ; >
+      au < doNotProcess ; exists ; 2004 ; 56 ; Tellus B: Chemical and Physical Meteorology Volume 2004 ; 2004 ; https://b.tellusjournals.se/ ; >
+      au < doNotProcess ; exists ; 2005 ; 57 ; Tellus B: Chemical and Physical Meteorology Volume 2005 ; 2005 ; https://b.tellusjournals.se/ ; >
+      au < doNotProcess ; exists ; 2006 ; 58 ; Tellus B: Chemical and Physical Meteorology Volume 2006 ; 2006 ; https://b.tellusjournals.se/ ; >
+      au < doNotProcess ; exists ; 2007 ; 59 ; Tellus B: Chemical and Physical Meteorology Volume 2007 ; 2007 ; https://b.tellusjournals.se/ ; >
+      au < doNotProcess ; exists ; 2008 ; 60 ; Tellus B: Chemical and Physical Meteorology Volume 2008 ; 2008 ; https://b.tellusjournals.se/ ; >
+      au < doNotProcess ; exists ; 2009 ; 61 ; Tellus B: Chemical and Physical Meteorology Volume 2009 ; 2009 ; https://b.tellusjournals.se/ ; >
+      au < doNotProcess ; exists ; 2010 ; 62 ; Tellus B: Chemical and Physical Meteorology Volume 2010 ; 2010 ; https://b.tellusjournals.se/ ; >
+      au < doNotProcess ; exists ; 2011 ; 63 ; Tellus B: Chemical and Physical Meteorology Volume 2011 ; 2011 ; https://b.tellusjournals.se/ ; >
+      au < doNotProcess ; exists ; 2012 ; 64 ; Tellus B: Chemical and Physical Meteorology Volume 2012 ; 2012 ; https://b.tellusjournals.se/ ; >
+      au < doNotProcess ; exists ; 2013 ; 65 ; Tellus B: Chemical and Physical Meteorology Volume 2013 ; 2013 ; https://b.tellusjournals.se/ ; >
+      au < doNotProcess ; exists ; 2014 ; 66 ; Tellus B: Chemical and Physical Meteorology Volume 2014 ; 2014 ; https://b.tellusjournals.se/ ; >
+      au < doNotProcess ; exists ; 2015 ; 67 ; Tellus B: Chemical and Physical Meteorology Volume 2015 ; 2015 ; https://b.tellusjournals.se/ ; >
+      au < doNotProcess ; exists ; 2016 ; 68 ; Tellus B: Chemical and Physical Meteorology Volume 2016 ; 2016 ; https://b.tellusjournals.se/ ; >
+      au < frozen ; exists ; 2017 ; 69 ; Tellus B: Chemical and Physical Meteorology Volume 2017 ; 2017 ; https://b.tellusjournals.se/ ; >
+      au < frozen ; exists ; 2018 ; 70 ; Tellus B: Chemical and Physical Meteorology Volume 2018 ; 2018 ; https://b.tellusjournals.se/ ; >
+      au < frozen ; exists ; 2019 ; 71 ; Tellus B: Chemical and Physical Meteorology Volume 2019 ; 2019 ; https://b.tellusjournals.se/ ; >
+      au < frozen ; exists ; 2020 ; 72 ; Tellus B: Chemical and Physical Meteorology Volume 2020 ; 2020 ; https://b.tellusjournals.se/ ; >
+      au < frozen ; exists ; 2021 ; 73 ; Tellus B: Chemical and Physical Meteorology Volume 2021 ; 2021 ; https://b.tellusjournals.se/ ; >
+      au < notReady ; exists ; 2022 ; 74 ; Tellus B: Chemical and Physical Meteorology Volume 2022 ; 2022 ; https://b.tellusjournals.se/ ; > # Lists all volumes.
+      au < expected ; exists ; 2023 ; 75 ; Tellus B: Chemical and Physical Meteorology Volume 2023 ; 2023 ; https://b.tellusjournals.se/ ; >
 
   }
 
