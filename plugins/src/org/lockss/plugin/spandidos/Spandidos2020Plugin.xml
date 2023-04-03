@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -119,6 +119,17 @@
     <list>
       <!--https://www.spandidos-publications.com/images/table-icon.jpg-->
       <string>2,"^%s(downloadForm|pages|morelikethis|var)", base_url</string>
+      <!--
+        https://www.spandidos-publications.com/br/forthcoming
+        https://www.spandidos-publications.com/br/mostcitedby
+        https://www.spandidos-publications.com/br/mostcitedbylastyear
+        https://www.spandidos-publications.com/br/mostciteddimension
+        https://www.spandidos-publications.com/br/mostciteddimensionrecent
+        https://www.spandidos-publications.com/br/mostread
+        advancedsearch/br
+      -->
+      <string>2,"^%sadvancedsearch", base_url</string>
+      <string>2,"^%s%s/(forthcoming|mostcitedby|mostcitedbylastyear|mostciteddimension|mostciteddimensionrecent|mostread)", base_url, journal_id</string>
       <string>2,"^%sISSUE_IMAGES", base_url</string>
       <string>2,"^%s\d+/downloadSupplementary",base_url</string>
       <string>1,"^%slockss.txt", base_url</string>
@@ -129,7 +140,8 @@
       <string>1,"^%sarticle_images/%s/%s/", base_url, journal_id, volume_name</string>
       <!--https://www.spandidos-publications.com/ISSUE_IMAGES/ol_15_6.jpg-->
       <string>1,"^%sISSUE_IMAGES/%s_%s_[^/]+.jpe?g", base_url, journal_id, volume_name</string>
-      <string>1,"^%s[^/]+/[^/]+(/download|/abstract)?$", base_url</string>
+      <string>1,"^%s(article_images|resources|images)/[^/]+(/download|/abstract)?$", base_url</string>
+      <string>1,"^%s10[.][0-9a-z]{4,6}/.*", base_url</string>
     </list>
   </entry>
  <entry>
@@ -223,7 +235,7 @@
     <map>
       <entry>
         <string>*;DublinCore</string>
-        <string>org.lockss.plugin.spandidos.SpandidosHtmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.spandidos.Spandidos2020HtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
