@@ -24,30 +24,30 @@
 
       param[journal_id] = agricultural-history
 
-      au < exists ; exists ; 2000 ; 2000 ; Agricultural History Volume 74 ; 74 ; >
-      au < exists ; exists ; 2001 ; 2001 ; Agricultural History Volume 75 ; 75 ; >
-      au < exists ; exists ; 2002 ; 2002 ; Agricultural History Volume 76 ; 76 ; >
-      au < exists ; exists ; 2003 ; 2003 ; Agricultural History Volume 77 ; 77 ; >
-      au < exists ; exists ; 2004 ; 2004 ; Agricultural History Volume 78 ; 78 ; >
-      au < exists ; exists ; 2005 ; 2005 ; Agricultural History Volume 79 ; 79 ; >
-      au < exists ; exists ; 2006 ; 2006 ; Agricultural History Volume 80 ; 80 ; >
-      au < exists ; exists ; 2007 ; 2007 ; Agricultural History Volume 81 ; 81 ; >
-      au < exists ; exists ; 2008 ; 2008 ; Agricultural History Volume 82 ; 82 ; >
-      au < exists ; exists ; 2009 ; 2009 ; Agricultural History Volume 83 ; 83 ; >
-      au < exists ; exists ; 2010 ; 2010 ; Agricultural History Volume 84 ; 84 ; >
-      au < exists ; exists ; 2011 ; 2011 ; Agricultural History Volume 85 ; 85 ; >
-      au < exists ; exists ; 2012 ; 2012 ; Agricultural History Volume 86 ; 86 ; >
-      au < exists ; exists ; 2013 ; 2013 ; Agricultural History Volume 87 ; 87 ; >
-      au < exists ; exists ; 2014 ; 2014 ; Agricultural History Volume 88 ; 88 ; >
-      au < exists ; exists ; 2015 ; 2015 ; Agricultural History Volume 89 ; 89 ; >
-      au < exists ; exists ; 2016 ; 2016 ; Agricultural History Volume 90 ; 90 ; >
-      au < exists ; exists ; 2017 ; 2017 ; Agricultural History Volume 91 ; 91 ; >
-      au < exists ; exists ; 2018 ; 2018 ; Agricultural History Volume 92 ; 92 ; >
-      au < exists ; exists ; 2019 ; 2019 ; Agricultural History Volume 93 ; 93 ; >
-      au < exists ; exists ; 2020 ; 2020 ; Agricultural History Volume 94 ; 94 ; >
-      au < exists ; exists ; 2021 ; 2021 ; Agricultural History Volume 95 ; 95 ; >
-      au < exists ; exists ; 2022 ; 2022 ; Agricultural History Volume 96 ; 96 ; >
-      au < exists ; exists ; 2023 ; 2023 ; Agricultural History Volume 97 ; 97 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; Agricultural History Volume 74 ; 74 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; Agricultural History Volume 75 ; 75 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Agricultural History Volume 76 ; 76 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Agricultural History Volume 77 ; 77 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Agricultural History Volume 78 ; 78 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Agricultural History Volume 79 ; 79 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Agricultural History Volume 80 ; 80 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Agricultural History Volume 81 ; 81 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Agricultural History Volume 82 ; 82 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Agricultural History Volume 83 ; 83 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Agricultural History Volume 84 ; 84 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Agricultural History Volume 85 ; 85 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; Agricultural History Volume 86 ; 86 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; Agricultural History Volume 87 ; 87 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; Agricultural History Volume 88 ; 88 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; Agricultural History Volume 89 ; 89 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; Agricultural History Volume 90 ; 90 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; Agricultural History Volume 91 ; 91 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; Agricultural History Volume 92 ; 92 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Agricultural History Volume 93 ; 93 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; Agricultural History Volume 94 ; 94 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Agricultural History Volume 95 ; 95 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Agricultural History Volume 96 ; 96 ; >
+      au < manifest ; exists ; 2023 ; 2023 ; Agricultural History Volume 97 ; 97 ; >
 
   }
 
@@ -265,7 +265,7 @@
       au < frozen ; exists ; 2020 ; 2020 ; Comparative Literature Volume 71 ; 71 ; >
       au < frozen ; exists ; 2021 ; 2021 ; Comparative Literature Volume 72 ; 72 ; >
       au < crawling ; exists ; 2022 ; 2022 ; Comparative Literature Volume 73 ; 73 ; >
-      au < expected ; exists ; 2023 ; 2023 ; Comparative Literature Volume 74 ; 74 ; >
+      au < manifest ; exists ; 2023 ; 2023 ; Comparative Literature Volume 74 ; 74 ; >
 
   }
 
@@ -705,7 +705,7 @@
       au < frozen ; exists ; 2020 ; 2020 ; Journal of Middle East Women's Studies Volume 16 ; 16 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Middle East Women's Studies Volume 17 ; 17 ; >
       au < crawling ; exists ; 2022 ; 2022 ; Journal of Middle East Women's Studies Volume 18 ; 18 ; >
-      au < expected ; exists ; 2023 ; 2023 ; Journal of Middle East Women's Studies Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2023 ; 2023 ; Journal of Middle East Women's Studies Volume 19 ; 19 ; >
 
    }
 
@@ -853,7 +853,7 @@
       au < frozen ; exists ; 2020 ; 2020 ; MLQ: Modern Language Quarterly Volume 81 ; 81 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; MLQ: Modern Language Quarterly Volume 82 ; 82 ; >
       au < crawling ; exists ; 2022 ; 2022 ; MLQ: Modern Language Quarterly Volume 83 ; 83 ; >
-      au < expected ; exists ; 2023 ; 2023 ; MLQ: Modern Language Quarterly Volume 84 ; 84 ; >
+      au < manifest ; exists ; 2023 ; 2023 ; MLQ: Modern Language Quarterly Volume 84 ; 84 ; >
 
     }
 
@@ -1178,7 +1178,7 @@
       au < deepCrawl ; exists ; 2020 ; 2020 ; Social Text Volume 38 ; 38 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Social Text Volume 39 ; 39 ; >
       au < crawling ; exists ; 2022 ; 2022 ; Social Text Volume 40 ; 40 ; >
-      au < expected ; exists ; 2023 ; 2023 ; Social Text Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2023 ; 2023 ; Social Text Volume 41 ; 41 ; >
 
      }
 
@@ -1249,17 +1249,17 @@
 
       au < exists ; exists ; 2010 ; 2010 ; Trans Asia Photography Volume 1 (2020) ; 1 ;>
       au < exists ; exists ; 2011 ; 2011 ; Trans Asia Photography Volume 1 (2011) ; 1 ;>
-      au < exists ; exists ; 2012 ; 2012 ; Trans Asia Photography Volume 2 ; 2 ; >
-      au < exists ; exists ; 2013 ; 2013 ; Trans Asia Photography Volume 3 ; 3 ; >
-      au < exists ; exists ; 2014 ; 2014 ; Trans Asia Photography Volume 4 ; 4 ; >
-      au < exists ; exists ; 2015 ; 2015 ; Trans Asia Photography Volume 5 ; 5 ; >
-      au < exists ; exists ; 2016 ; 2016 ; Trans Asia Photography Volume 6 ; 6 ; >
-      au < exists ; exists ; 2017 ; 2017 ; Trans Asia Photography Volume 7 ; 7 ; >
-      au < exists ; exists ; 2018 ; 2018 ; Trans Asia Photography Volume 8 ; 8 ; >
-      au < exists ; exists ; 2019 ; 2019 ; Trans Asia Photography Volume 9 ; 9 ; >
-      au < exists ; exists ; 2020 ; 2020 ; Trans Asia Photography Volume 10 ; 10 ; >
-      au < exists ; exists ; 2021 ; 2021 ; Trans Asia Photography Volume 11 ; 11 ; >
-      au < exists ; exists ; 2022 ; 2022 ; Trans Asia Photography Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; Trans Asia Photography Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; Trans Asia Photography Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; Trans Asia Photography Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; Trans Asia Photography Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; Trans Asia Photography Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; Trans Asia Photography Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; Trans Asia Photography Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Trans Asia Photography Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; Trans Asia Photography Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Trans Asia Photography Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Trans Asia Photography Volume 12 ; 12 ; >
       au < expected ; exists ; 2023 ; 2023 ; Trans Asia Photography Volume 13 ; 13 ; >
 
   }

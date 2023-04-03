@@ -567,7 +567,7 @@
     param[journal_issn] = 2773-1332
 
     au < finished ; finished ; 2021 ; Bengal Journal of Cancer Volume 1 ; 2021 ; 1 ; https://www.bengaljcancer.org/ ; ; reingest1.clockss.org:8082 >
-    au < expected ; exists ; 2022 ; Bengal Journal of Cancer Volume 2 ; 2022 ; 2 ; https://www.bengaljcancer.org/ ; ; >
+    au < manifest ; exists ; 2022 ; Bengal Journal of Cancer Volume 2 ; 2022 ; 2 ; https://www.bengaljcancer.org/ ; ; >
     au < expected ; exists ; 2023 ; Bengal Journal of Cancer Volume 3 ; 2023 ; 3 ; https://www.bengaljcancer.org/ ; ; >
 
   }
@@ -1063,7 +1063,7 @@
     au < finished ; frozen ; 2020 ; Indian Journal of Dermatology Volume 65 ; 2020 ; 65 ; https://www.e-ijd.org/ ; ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Indian Journal of Dermatology Volume 66 ; 2021 ; 66 ; https://www.e-ijd.org/ ; ; >
     au < deepCrawl ; exists ; 2022 ; Indian Journal of Dermatology Volume 67 ; 2022 ; 67 ; https://www.e-ijd.org/ ; ; >
-    au < expected ; exists ; 2023 ; Indian Journal of Dermatology Volume 68 ; 2023 ; 68 ; https://www.e-ijd.org/ ; ; >
+    au < manifest ; exists ; 2023 ; Indian Journal of Dermatology Volume 68 ; 2023 ; 68 ; https://www.e-ijd.org/ ; ; >
 
   }
 
@@ -1426,7 +1426,7 @@
     au < finished ; frozen ; 2020 ; Indian Journal of Occupational and Environmental Medicine Volume 24 ; 2020 ; 24 ; https://www.ijoem.com/ ; ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2021 ; Indian Journal of Occupational and Environmental Medicine Volume 25 ; 2021 ; 25 ; https://www.ijoem.com/ ; ; >
     au < deepCrawl ; exists ; 2022 ; Indian Journal of Occupational and Environmental Medicine Volume 26 ; 2022 ; 26 ; https://www.ijoem.com/ ; ; >
-    au < expected ; exists ; 2023 ; Indian Journal of Occupational and Environmental Medicine Volume 27 ; 2023 ; 27 ; https://www.ijoem.com/ ; ; >
+    au < manifest ; exists ; 2023 ; Indian Journal of Occupational and Environmental Medicine Volume 27 ; 2023 ; 27 ; https://www.ijoem.com/ ; ; >
 
     }
 
@@ -2008,7 +2008,7 @@
     au < finished ; frozen ; 2020 ; Indian Journal of Public Health Volume 64 ; 2020 ; 64 ; https://www.ijph.in/ ; ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Indian Journal of Public Health Volume 65 ; 2021 ; 65 ; https://www.ijph.in/ ; ; >
     au < deepCrawl ; exists ; 2022 ; Indian Journal of Public Health Volume 66 ; 2022 ; 66 ; https://www.ijph.in/ ; ; >
-    au < expected ; exists ; 2023 ; Indian Journal of Public Health Volume 67 ; 2023 ; 67 ; https://www.ijph.in/ ; ; >
+    au < manifest ; exists ; 2023 ; Indian Journal of Public Health Volume 67 ; 2023 ; 67 ; https://www.ijph.in/ ; ; >
 
   }
 
@@ -3175,7 +3175,7 @@
     au < finished ; finished ; 2020 ; Journal of Human Reproductive Sciences Volume 13 ; 2020 ; 13 ; https://www.jhrsonline.org/ ; ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Journal of Human Reproductive Sciences Volume 14 ; 2021 ; 14 ; https://www.jhrsonline.org/ ; ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Human Reproductive Sciences Volume 15 ; 2022 ; 15 ; https://www.jhrsonline.org/ ; ; >
-    au < expected ; exists ; 2023 ; Journal of Human Reproductive Sciences Volume 16 ; 2023 ; 16 ; https://www.jhrsonline.org/ ; ; >
+    au < manifest ; exists ; 2023 ; Journal of Human Reproductive Sciences Volume 16 ; 2023 ; 16 ; https://www.jhrsonline.org/ ; ; >
 
   }
 
@@ -5946,7 +5946,7 @@
       au < finished ; frozen ; 2020 ; Egyptian Pharmaceutical Journal Volume 19 ; 2020 ; 19 ; https://www.epj.eg.net/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2021 ; Egyptian Pharmaceutical Journal Volume 20 ; 2021 ; 20 ; https://www.epj.eg.net/ ; ; >
       au < notReady ; exists ; 2022 ; Egyptian Pharmaceutical Journal Volume 21 ; 2022 ; 21 ; https://www.epj.eg.net/ ; ; > #524 error https://www.epj.eg.net/article.asp?issn=1687-4315;year=2022;volume=21;issue=1;spage=108;epage=108;aulast=;type=0
-      au < expected ; exists ; 2023 ; Egyptian Pharmaceutical Journal Volume 22 ; 2023 ; 22 ; https://www.epj.eg.net/ ; ; > #524 error https://www.epj.eg.net/article.asp?issn=1687-4315;year=2023;volume=22;issue=1;spage=108;epage=108;aulast=;type=0
+      au < manifest ; exists ; 2023 ; Egyptian Pharmaceutical Journal Volume 22 ; 2023 ; 22 ; https://www.epj.eg.net/ ; ; > #524 error https://www.epj.eg.net/article.asp?issn=1687-4315;year=2023;volume=22;issue=1;spage=108;epage=108;aulast=;type=0
 
   }
 
@@ -6082,7 +6082,7 @@
       au < finished ; frozen ; 2020 ; Environmental Disease Volume 5 ; 2020 ; 5 ; https://www.environmentmed.org/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Environmental Disease Volume 6 ; 2021 ; 6 ; https://www.environmentmed.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Environmental Disease Volume 7 ; 2022 ; 7 ; https://www.environmentmed.org/ ; ; >
-      au < expected ; exists ; 2023 ; Environmental Disease Volume 8 ; 2023 ; 8 ; https://www.environmentmed.org/ ; ; >
+      au < manifest ; exists ; 2023 ; Environmental Disease Volume 8 ; 2023 ; 8 ; https://www.environmentmed.org/ ; ; >
 
   }
 
@@ -6803,7 +6803,7 @@
       au < finished ; frozen ; 2020 ; International Journal of Noncommunicable Diseases Volume 5 ; 2020 ; 5 ; https://www.ijncd.org/ ; ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; International Journal of Noncommunicable Diseases Volume 6 ; 2021 ; 6 ; https://www.ijncd.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; International Journal of Noncommunicable Diseases Volume 7 ; 2022 ; 7 ; https://www.ijncd.org/ ; ; >
-      au < expected ; exists ; 2023 ; International Journal of Noncommunicable Diseases Volume 8 ; 2023 ; 8 ; https://www.ijncd.org/ ; ; >
+      au < manifest ; exists ; 2023 ; International Journal of Noncommunicable Diseases Volume 8 ; 2023 ; 8 ; https://www.ijncd.org/ ; ; >
 
   }
 
@@ -7431,7 +7431,7 @@
       au < finished ; finished ; 2020 ; Journal of Indian Association of Public Health Dentistry Volume 18 ; 2020 ; 18 ; https://www.jiaphd.org/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Journal of Indian Association of Public Health Dentistry Volume 19 ; 2021 ; 19 ; https://www.jiaphd.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Journal of Indian Association of Public Health Dentistry Volume 20 ; 2022 ; 20 ; https://www.jiaphd.org/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Indian Association of Public Health Dentistry Volume 21 ; 2023 ; 21 ; https://www.jiaphd.org/ ; ; >
+      au < manifest ; exists ; 2023 ; Journal of Indian Association of Public Health Dentistry Volume 21 ; 2023 ; 21 ; https://www.jiaphd.org/ ; ; >
 
   }
 
@@ -8034,7 +8034,7 @@
       au < finished ; finished ; 2020 ; Journal of the Egyptian Ophthalmological Society Volume 113 ; 2020 ; 113 ; https://www.jeos.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Journal of the Egyptian Ophthalmological Society Volume 114 ; 2021 ; 114 ; https://www.jeos.eg.net/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Journal of the Egyptian Ophthalmological Society Volume 115 ; 2022 ; 115 ; https://www.jeos.eg.net/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of the Egyptian Ophthalmological Society Volume 116 ; 2023 ; 116 ; https://www.jeos.eg.net/ ; ; >
+      au < manifest ; exists ; 2023 ; Journal of the Egyptian Ophthalmological Society Volume 116 ; 2023 ; 116 ; https://www.jeos.eg.net/ ; ; >
 
   }
 
@@ -10035,7 +10035,7 @@
       au < finished ; finished ; 2020 ; Glioma Volume 3 ; 2020 ; 3 ; https://www.jglioma.com/ ; ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Glioma Volume 4 ; 2021 ; 4 ; https://www.jglioma.com/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Glioma Volume 5 ; 2022 ; 5 ; https://www.jglioma.com/ ; ; >
-      au < expected ; exists ; 2023 ; Glioma Volume 6 ; 2023 ; 6 ; https://www.jglioma.com/ ; ; >
+      au < manifest ; exists ; 2023 ; Glioma Volume 6 ; 2023 ; 6 ; https://www.jglioma.com/ ; ; >
 
   }
 
@@ -10719,7 +10719,7 @@
       au < notReady ; exists ; 2020 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 15 ; 2020 ; 15 ; http://www.journaldmims.com/ ; ; >
       au < notReady ; exists ; 2021 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 16 ; 2021 ; 16 ; http://www.journaldmims.com/ ; ; >
       au < notReady ; exists ; 2022 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 17 ; 2022 ; 17 ; http://www.journaldmims.com/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 18 ; 2023 ; 18 ; http://www.journaldmims.com/ ; ; >
+      au < manifest ; exists ; 2023 ; Journal of Datta Meghe Institute of Medical Sciences University Volume 18 ; 2023 ; 18 ; http://www.journaldmims.com/ ; ; >
 
   }
 
@@ -10810,7 +10810,7 @@
       au < finished ; frozen ; 2020 ; Journal of Indian Academy of Echocardiography & Cardiovascular Imaging Volume 4 ; 2020 ; 4 ; https://www.jiaecho.org/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2021 ; Journal of Indian Academy of Echocardiography & Cardiovascular Imaging Volume 5 ; 2021 ; 5 ; https://www.jiaecho.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Journal of Indian Academy of Echocardiography & Cardiovascular Imaging Volume 6 ; 2022 ; 6 ; https://www.jiaecho.org/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Indian Academy of Echocardiography & Cardiovascular Imaging Volume 7 ; 2023 ; 7 ; https://www.jiaecho.org/ ; ; >
+      au < manifest ; exists ; 2023 ; Journal of Indian Academy of Echocardiography & Cardiovascular Imaging Volume 7 ; 2023 ; 7 ; https://www.jiaecho.org/ ; ; >
 
   }
 
@@ -11387,7 +11387,7 @@
       au < finished ; finished ; 2020 ; Nursing and Midwifery Studies Volume 9 ; 2020 ; 9 ; https://www.nmsjournal.com/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2021 ; Nursing and Midwifery Studies Volume 10 ; 2021 ; 10 ; https://www.nmsjournal.com/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Nursing and Midwifery Studies Volume 11 ; 2022 ; 11 ; https://www.nmsjournal.com/ ; ; >
-      au < expected ; exists ; 2023 ; Nursing and Midwifery Studies Volume 12 ; 2023 ; 12 ; https://www.nmsjournal.com/ ; ; >
+      au < manifest ; exists ; 2023 ; Nursing and Midwifery Studies Volume 12 ; 2023 ; 12 ; https://www.nmsjournal.com/ ; ; >
 
   }
 
@@ -11917,7 +11917,7 @@
       #param[base_url] = https://www.ajprhc.com/
 
       au < deepCrawl ; exists ; 2022 ; Asian Journal of Pharmaceutical Research and Health Care Volume 14 ; 2022 ; 14 ; https://www.ajprhc.com/ ; ; >
-      au < expected ; exists ; 2023 ; Asian Journal of Pharmaceutical Research and Health Care Volume 15 ; 2023 ; 15 ; https://www.ajprhc.com/ ; ; >
+      au < manifest ; exists ; 2023 ; Asian Journal of Pharmaceutical Research and Health Care Volume 15 ; 2023 ; 15 ; https://www.ajprhc.com/ ; ; >
 
   }
 
@@ -12334,7 +12334,7 @@
       au < frozen ; exists ; 2020 ; International Journal of Abdominal Wall and Hernia Surgery Volume 3 ; 2020 ; 3 ; https://www.herniasurgeryjournal.org/ ; ; >
       au < frozen ; exists ; 2021 ; International Journal of Abdominal Wall and Hernia Surgery Volume 4 ; 2021 ; 4 ; https://www.herniasurgeryjournal.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; International Journal of Abdominal Wall and Hernia Surgery Volume 5 ; 2022 ; 5 ; https://www.herniasurgeryjournal.org/ ; ; >
-      au < expected ; exists ; 2023 ; International Journal of Abdominal Wall and Hernia Surgery Volume 6 ; 2023 ; 6 ; https://www.herniasurgeryjournal.org/ ; ; >
+      au < manifest ; exists ; 2023 ; International Journal of Abdominal Wall and Hernia Surgery Volume 6 ; 2023 ; 6 ; https://www.herniasurgeryjournal.org/ ; ; >
 
   }
 
@@ -12475,7 +12475,7 @@
       au < manifest ; exists ; 2020 ; International Journal of Oral Care and Research Volume 8 ; 2020 ; 8 ; https://www.ijocr.org/ ; ; >
       au < frozen ; exists ; 2021 ; International Journal of Oral Care and Research Volume 9 ; 2021 ; 9 ; https://www.ijocr.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; International Journal of Oral Care and Research Volume 10 ; 2022 ; 10 ; https://www.ijocr.org/ ; ; >
-      au < expected ; exists ; 2023 ; International Journal of Oral Care and Research Volume 11 ; 2023 ; 11 ; https://www.ijocr.org/ ; ; >
+      au < manifest ; exists ; 2023 ; International Journal of Oral Care and Research Volume 11 ; 2023 ; 11 ; https://www.ijocr.org/ ; ; >
 
   }
 
@@ -12496,7 +12496,7 @@
       au < manifest ; exists ; 2020 ; International Journal of Preventive and Clinical Dental Research Volume 7 ; 2020 ; 7 ; https://www.ijpcdr.org/ ; ; >
       au < frozen ; exists ; 2021 ; International Journal of Preventive and Clinical Dental Research Volume 8 ; 2021 ; 8 ; https://www.ijpcdr.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; International Journal of Preventive and Clinical Dental Research Volume 9 ; 2022 ; 9 ; https://www.ijpcdr.org/ ; ; >
-      au < expected ; exists ; 2023 ; International Journal of Preventive and Clinical Dental Research Volume 10 ; 2023 ; 10 ; https://www.ijpcdr.org/ ; ; >
+      au < manifest ; exists ; 2023 ; International Journal of Preventive and Clinical Dental Research Volume 10 ; 2023 ; 10 ; https://www.ijpcdr.org/ ; ; >
 
   }
 
@@ -12668,7 +12668,7 @@
       au < manifest ; exists ; 2020 ; Journal of Ayurveda Volume 14 ; 2020 ; 14 ; https://www.journayu.in/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Ayurveda Volume 15 ; 2021 ; 15 ; https://www.journayu.in/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Journal of Ayurveda Volume 16 ; 2022 ; 16 ; https://www.journayu.in/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Ayurveda Volume 17 ; 2023 ; 17 ; https://www.journayu.in/ ; ; >
+      au < manifest ; exists ; 2023 ; Journal of Ayurveda Volume 17 ; 2023 ; 17 ; https://www.journayu.in/ ; ; >
 
   }
 
@@ -12892,7 +12892,7 @@
       au < frozen ; exists ; 2020 ; Journal of Indira Gandhi Institute Of Medical Sciences Volume 6 ; 2020 ; 6 ; https://www.jigims.co.in/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Indira Gandhi Institute Of Medical Sciences Volume 7 ; 2021 ; 7 ; https://www.jigims.co.in/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Journal of Indira Gandhi Institute Of Medical Sciences Volume 8 ; 2022 ; 8 ; https://www.jigims.co.in/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Indira Gandhi Institute Of Medical Sciences Volume 9 ; 2023 ; 9 ; https://www.jigims.co.in/ ; ; >
+      au < manifest ; exists ; 2023 ; Journal of Indira Gandhi Institute Of Medical Sciences Volume 9 ; 2023 ; 9 ; https://www.jigims.co.in/ ; ; >
 
   }
 
@@ -13464,7 +13464,7 @@
       au < frozen ; exists ; 2020 ; MGM Journal of Medical Sciences Volume 7 ; 2020 ; 7 ; https://www.mgmjms.com/ ; ; >
       au < frozen ; exists ; 2021 ; MGM Journal of Medical Sciences Volume 8 ; 2021 ; 8 ; https://www.mgmjms.com/ ; ; >
       au < manifest ; exists ; 2022 ; MGM Journal of Medical Sciences Volume 9 ; 2022 ; 9 ; https://www.mgmjms.com/ ; ; >
-      au < expected ; exists ; 2023 ; MGM Journal of Medical Sciences Volume 10 ; 2023 ; 10 ; https://www.mgmjms.com/ ; ; >
+      au < manifest ; exists ; 2023 ; MGM Journal of Medical Sciences Volume 10 ; 2023 ; 10 ; https://www.mgmjms.com/ ; ; >
 
   }
 
@@ -13535,7 +13535,7 @@
       au < crawling ; exists ; 2020 ; Neurological Sciences and Neurophysiology Volume 37 ; 2020 ; 37 ; https://www.nsnjournal.org/ ; ; >
       au < frozen ; exists ; 2021 ; Neurological Sciences and Neurophysiology Volume 38 ; 2021 ; 38 ; https://www.nsnjournal.org/ ; ; >
       au < manifest ; exists ; 2022 ; Neurological Sciences and Neurophysiology Volume 39 ; 2022 ; 39 ; https://www.nsnjournal.org/ ; ; >
-      au < expected ; exists ; 2023 ; Neurological Sciences and Neurophysiology Volume 40 ; 2023 ; 40 ; https://www.nsnjournal.org/ ; ; >
+      au < manifest ; exists ; 2023 ; Neurological Sciences and Neurophysiology Volume 40 ; 2023 ; 40 ; https://www.nsnjournal.org/ ; ; >
 
   }
 
@@ -13695,7 +13695,7 @@
       au < crawling ; exists ; 2020 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 22 ; 2020 ; 22 ; https://www.sjohns.org/ ; ; >
       au < manifest ; exists ; 2021 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 23 ; 2021 ; 23 ; https://www.sjohns.org/ ; ; >
       au < crawling ; exists ; 2022 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 24 ; 2022 ; 24 ; https://www.sjohns.org/ ; ; >
-      au < expected ; exists ; 2023 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 25 ; 2023 ; 25 ; https://www.sjohns.org/ ; ; >
+      au < manifest ; exists ; 2023 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 25 ; 2023 ; 25 ; https://www.sjohns.org/ ; ; >
 
   }
 
