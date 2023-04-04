@@ -17,6 +17,19 @@
   {
 
     title <
+      name = Artificial Intelligence and Applications ;
+      eissn = 2811-0854
+    >
+      param[journal_id] = AIA
+
+      au < crawling ; exists ; 2022 ; Artificial Intelligence and Applications Volume 1 ; 1 ; 2022 ; >
+      au < manifest ; exists ; 2023 ; Artificial Intelligence and Applications Volume 2 ; 2 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Computational and Cognitive Engineering ;
       issn = 2810-9570 ;
       eissn = 2810-9503
@@ -31,13 +44,13 @@
   {
 
     title <
-      name = Artificial Intelligence and Applications ;
-      eissn = 2811-0854
+      name = Journal of Data Science and Intelligence Systems ;
+      eissn = 2972-3841
     >
-      param[journal_id] = AIA
+      param[journal_id] = jdsis
 
-      au < crawling ; exists ; 2022 ; Artificial Intelligence and Applications Volume 1 ; 1 ; 2022 ; >
-      au < manifest ; exists ; 2023 ; Artificial Intelligence and Applications Volume 2 ; 2 ; 2023 ; >
+      au < expected ; exists ; 2022 ; Journal of Data Science and Intelligence Systems Volume 1 ; 1 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Journal of Data Science and Intelligence Systems Volume 2 ; 2 ; 2023 ; >
 
   }
 
@@ -49,8 +62,8 @@
     >
       param[journal_id] = GLCE
 
-      au < exists ; exists ; 2022 ; Green and Low-Carbon Economy Volume 1 ; 1 ; 2022 ; >
-      au < exists ; exists ; 2023 ; Green and Low-Carbon Economy Volume 2 ; 2 ; 2023 ; >
+      au < expected ; exists ; 2022 ; Green and Low-Carbon Economy Volume 1 ; 1 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Green and Low-Carbon Economy Volume 2 ; 2 ; 2023 ; >
 
   }
 
