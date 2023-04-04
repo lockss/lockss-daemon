@@ -14,21 +14,21 @@
       issnl = 2373-2873
     >
 
-    implicit < status ; year ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
     {
 
-      param[base_url] = http://molecularcasestudies.cshlp.org/
+      #param[base_url] = http://molecularcasestudies.cshlp.org/
 
-      au < released ; 2015 ; Cold Spring Harbor Molecular Case Studies Volume 1 ; 1 >
-      au < released ; 2016 ; Cold Spring Harbor Molecular Case Studies Volume 2 ; 2 >
-      au < released ; 2017 ; Cold Spring Harbor Molecular Case Studies Volume 3 ; 3 >
-      au < released ; 2018 ; Cold Spring Harbor Molecular Case Studies Volume 4 ; 4 >
-      au < released ; 2019 ; Cold Spring Harbor Molecular Case Studies Volume 5 ; 5 >
-      au < released ; 2020 ; Cold Spring Harbor Molecular Case Studies Volume 6 ; 6 >
-      au < released ; 2021 ; Cold Spring Harbor Molecular Case Studies Volume 7 ; 7 >
-      au < released ; 2022 ; Cold Spring Harbor Molecular Case Studies Volume 8 ; 8 >
-      au < expected ; 2023 ; Cold Spring Harbor Molecular Case Studies Volume 9 ; 9 >
+      au < released ; 2015 ; Cold Spring Harbor Molecular Case Studies Volume 1 ; 1 ; http://molecularcasestudies.cshlp.org/ >
+      au < released ; 2016 ; Cold Spring Harbor Molecular Case Studies Volume 2 ; 2 ; http://molecularcasestudies.cshlp.org/ >
+      au < released ; 2017 ; Cold Spring Harbor Molecular Case Studies Volume 3 ; 3 ; http://molecularcasestudies.cshlp.org/ >
+      au < released ; 2018 ; Cold Spring Harbor Molecular Case Studies Volume 4 ; 4 ; http://molecularcasestudies.cshlp.org/ >
+      au < released ; 2019 ; Cold Spring Harbor Molecular Case Studies Volume 5 ; 5 ; http://molecularcasestudies.cshlp.org/ >
+      au < released ; 2020 ; Cold Spring Harbor Molecular Case Studies Volume 6 ; 6 ; http://molecularcasestudies.cshlp.org/ >
+      au < released ; 2021 ; Cold Spring Harbor Molecular Case Studies Volume 7 ; 7 ; http://molecularcasestudies.cshlp.org/ >
+      au < released ; 2022 ; Cold Spring Harbor Molecular Case Studies Volume 8 ; 8 ; http://molecularcasestudies.cshlp.org/ >
+      au < expected ; 2023 ; Cold Spring Harbor Molecular Case Studies Volume 9 ; 9 ; https://molecularcasestudies.cshlp.org/ >
 
     }
 
@@ -61,7 +61,7 @@
       au < released ; 2019 ; Cold Spring Harbor Perspectives in Biology Volume 11 ; 11 ; https://cshperspectives.cshlp.org/ >
       au < released ; 2020 ; Cold Spring Harbor Perspectives in Biology Volume 12 ; 12 ; https://cshperspectives.cshlp.org/ >
       au < released ; 2021 ; Cold Spring Harbor Perspectives in Biology Volume 13 ; 13 ; https://cshperspectives.cshlp.org/ >
-      au < testing ; 2022 ; Cold Spring Harbor Perspectives in Biology Volume 14 ; 14 ; https://cshperspectives.cshlp.org/ >
+      au < manifest ; 2022 ; Cold Spring Harbor Perspectives in Biology Volume 14 ; 14 ; https://cshperspectives.cshlp.org/ >
       au < manifest ; 2023 ; Cold Spring Harbor Perspectives in Biology Volume 15 ; 15 ; https://cshperspectives.cshlp.org/ >
 
     }
@@ -76,25 +76,25 @@
       issnl = 2157-1422
     >
 
-    implicit < status ; year ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
     {
 
-      param[base_url] = http://perspectivesinmedicine.cshlp.org/
+      #param[base_url] = http://perspectivesinmedicine.cshlp.org/
 
-      au < released ; 2011 ; Cold Spring Harbor Perspectives in Medicine Volume 1 ; 1 >
-      au < released ; 2012 ; Cold Spring Harbor Perspectives in Medicine Volume 2 ; 2 >
-      au < released ; 2013 ; Cold Spring Harbor Perspectives in Medicine Volume 3 ; 3 >
-      au < released ; 2014 ; Cold Spring Harbor Perspectives in Medicine Volume 4 ; 4 >
-      au < released ; 2015 ; Cold Spring Harbor Perspectives in Medicine Volume 5 ; 5 >
-      au < released ; 2016 ; Cold Spring Harbor Perspectives in Medicine Volume 6 ; 6 >
-      au < released ; 2017 ; Cold Spring Harbor Perspectives in Medicine Volume 7 ; 7 >
-      au < released ; 2018 ; Cold Spring Harbor Perspectives in Medicine Volume 8 ; 8 >
-      au < released ; 2019 ; Cold Spring Harbor Perspectives in Medicine Volume 9 ; 9 >
-      au < released ; 2020 ; Cold Spring Harbor Perspectives in Medicine Volume 10 ; 10 >
-      au < released ; 2021 ; Cold Spring Harbor Perspectives in Medicine Volume 11 ; 11 >
-      au < testing ; 2022 ; Cold Spring Harbor Perspectives in Medicine Volume 12 ; 12 >
-      au < manifest ; 2023 ; Cold Spring Harbor Perspectives in Medicine Volume 13 ; 13 >
+      au < released ; 2011 ; Cold Spring Harbor Perspectives in Medicine Volume 1 ; 1 ; http://perspectivesinmedicine.cshlp.org/ >
+      au < released ; 2012 ; Cold Spring Harbor Perspectives in Medicine Volume 2 ; 2 ; http://perspectivesinmedicine.cshlp.org/ >
+      au < released ; 2013 ; Cold Spring Harbor Perspectives in Medicine Volume 3 ; 3 ; http://perspectivesinmedicine.cshlp.org/ >
+      au < released ; 2014 ; Cold Spring Harbor Perspectives in Medicine Volume 4 ; 4 ; http://perspectivesinmedicine.cshlp.org/ >
+      au < released ; 2015 ; Cold Spring Harbor Perspectives in Medicine Volume 5 ; 5 ; http://perspectivesinmedicine.cshlp.org/ >
+      au < released ; 2016 ; Cold Spring Harbor Perspectives in Medicine Volume 6 ; 6 ; http://perspectivesinmedicine.cshlp.org/ >
+      au < released ; 2017 ; Cold Spring Harbor Perspectives in Medicine Volume 7 ; 7 ; http://perspectivesinmedicine.cshlp.org/ >
+      au < released ; 2018 ; Cold Spring Harbor Perspectives in Medicine Volume 8 ; 8 ; http://perspectivesinmedicine.cshlp.org/ >
+      au < released ; 2019 ; Cold Spring Harbor Perspectives in Medicine Volume 9 ; 9 ; http://perspectivesinmedicine.cshlp.org/ >
+      au < released ; 2020 ; Cold Spring Harbor Perspectives in Medicine Volume 10 ; 10 ; http://perspectivesinmedicine.cshlp.org/ >
+      au < released ; 2021 ; Cold Spring Harbor Perspectives in Medicine Volume 11 ; 11 ; http://perspectivesinmedicine.cshlp.org/ >
+      au < exists ; 2022 ; Cold Spring Harbor Perspectives in Medicine Volume 12 ; 12 ; https://perspectivesinmedicine.cshlp.org/ >
+      au < manifest ; 2023 ; Cold Spring Harbor Perspectives in Medicine Volume 13 ; 13 ; https://perspectivesinmedicine.cshlp.org/ >
 
     }
     
@@ -109,30 +109,30 @@
       issnl = 1940-3402
     >
 
-    implicit < status ; year ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
     {
 
-      param[base_url] = http://cshprotocols.cshlp.org/
+      #param[base_url] = http://cshprotocols.cshlp.org/
 
-      au < released ; 2006 ; Cold Spring Harbor Protocols Volume 2006 ; 2006 >
-      au < released ; 2007 ; Cold Spring Harbor Protocols Volume 2007 ; 2007 >
-      au < released ; 2008 ; Cold Spring Harbor Protocols Volume 2008 ; 2008 >
-      au < released ; 2009 ; Cold Spring Harbor Protocols Volume 2009 ; 2009 >
-      au < released ; 2010 ; Cold Spring Harbor Protocols Volume 2010 ; 2010 >
-      au < released ; 2011 ; Cold Spring Harbor Protocols Volume 2011 ; 2011 >
-      au < released ; 2012 ; Cold Spring Harbor Protocols Volume 2012 ; 2012 >
-      au < released ; 2013 ; Cold Spring Harbor Protocols Volume 2013 ; 2013 >
-      au < released ; 2014 ; Cold Spring Harbor Protocols Volume 2014 ; 2014 >
-      au < released ; 2015 ; Cold Spring Harbor Protocols Volume 2015 ; 2015 >
-      au < released ; 2016 ; Cold Spring Harbor Protocols Volume 2016 ; 2016 >
-      au < released ; 2017 ; Cold Spring Harbor Protocols Volume 2017 ; 2017 >
-      au < released ; 2018 ; Cold Spring Harbor Protocols Volume 2018 ; 2018 >
-      au < released ; 2019 ; Cold Spring Harbor Protocols Volume 2019 ; 2019 >
-      au < released ; 2020 ; Cold Spring Harbor Protocols Volume 2020 ; 2020 >
-      au < released ; 2021 ; Cold Spring Harbor Protocols Volume 2021 ; 2021 >
-      au < testing ; 2022 ; Cold Spring Harbor Protocols Volume 2022 ; 2022 >
-      au < manifest ; 2023 ; Cold Spring Harbor Protocols Volume 2023 ; 2023 >
+      au < released ; 2006 ; Cold Spring Harbor Protocols Volume 2006 ; 2006 ; http://cshprotocols.cshlp.org/ >
+      au < released ; 2007 ; Cold Spring Harbor Protocols Volume 2007 ; 2007 ; http://cshprotocols.cshlp.org/ >
+      au < released ; 2008 ; Cold Spring Harbor Protocols Volume 2008 ; 2008 ; http://cshprotocols.cshlp.org/ >
+      au < released ; 2009 ; Cold Spring Harbor Protocols Volume 2009 ; 2009 ; http://cshprotocols.cshlp.org/ >
+      au < released ; 2010 ; Cold Spring Harbor Protocols Volume 2010 ; 2010 ; http://cshprotocols.cshlp.org/ >
+      au < released ; 2011 ; Cold Spring Harbor Protocols Volume 2011 ; 2011 ; http://cshprotocols.cshlp.org/ >
+      au < released ; 2012 ; Cold Spring Harbor Protocols Volume 2012 ; 2012 ; http://cshprotocols.cshlp.org/ >
+      au < released ; 2013 ; Cold Spring Harbor Protocols Volume 2013 ; 2013 ; http://cshprotocols.cshlp.org/ >
+      au < released ; 2014 ; Cold Spring Harbor Protocols Volume 2014 ; 2014 ; http://cshprotocols.cshlp.org/ >
+      au < released ; 2015 ; Cold Spring Harbor Protocols Volume 2015 ; 2015 ; http://cshprotocols.cshlp.org/ >
+      au < released ; 2016 ; Cold Spring Harbor Protocols Volume 2016 ; 2016 ; http://cshprotocols.cshlp.org/ >
+      au < released ; 2017 ; Cold Spring Harbor Protocols Volume 2017 ; 2017 ; http://cshprotocols.cshlp.org/ >
+      au < released ; 2018 ; Cold Spring Harbor Protocols Volume 2018 ; 2018 ; http://cshprotocols.cshlp.org/ >
+      au < released ; 2019 ; Cold Spring Harbor Protocols Volume 2019 ; 2019 ; http://cshprotocols.cshlp.org/ >
+      au < released ; 2020 ; Cold Spring Harbor Protocols Volume 2020 ; 2020 ; http://cshprotocols.cshlp.org/ >
+      au < released ; 2021 ; Cold Spring Harbor Protocols Volume 2021 ; 2021 ; http://cshprotocols.cshlp.org/ >
+      au < exists ; 2022 ; Cold Spring Harbor Protocols Volume 2022 ; 2022 ; https://cshprotocols.cshlp.org/ >
+      au < manifest ; 2023 ; Cold Spring Harbor Protocols Volume 2023 ; 2023 ; https://cshprotocols.cshlp.org/ >
 
     }
     
@@ -147,98 +147,96 @@
       issnl = 0091-7451
     >
 
-    implicit < status ; year ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
     {
+      #param[base_url] = http://symposium.cshlp.org/
+      comment[publishing_date] = This journal is published in June of the following year. Last published 2019.
 
-      param[base_url] = http://symposium.cshlp.org/
-      
-      comment[publishing_date] = This journal is published in June of the following year.
-
-      au < manifest ; 1933 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 1 ; 1 >
-      au < manifest ; 1934 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 2 ; 2 >
-      au < manifest ; 1935 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 3 ; 3 >
-      au < manifest ; 1936 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 4 ; 4 >
-      au < manifest ; 1937 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 5 ; 5 >
-      au < manifest ; 1938 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 6 ; 6 >
-      au < manifest ; 1939 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 7 ; 7 >
-      au < manifest ; 1940 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 8 ; 8 >
-      au < manifest ; 1941 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 9 ; 9 >
-      au < manifest ; 1942 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 10 ; 10 >
-      au < manifest ; 1946 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 11 ; 11 >
-      au < manifest ; 1947 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 12 ; 12 >
-      au < manifest ; 1948 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 13 ; 13 >
-      au < manifest ; 1949 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 14 ; 14 >
-      au < manifest ; 1950 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 15 ; 15 >
-      au < manifest ; 1951 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 16 ; 16 >
-      au < manifest ; 1952 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 17 ; 17 >
-      au < manifest ; 1953 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 18 ; 18 >
-      au < manifest ; 1954 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 19 ; 19 >
-      au < manifest ; 1955 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 20 ; 20 >
-      au < manifest ; 1956 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 21 ; 21 >
-      au < manifest ; 1957 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 22 ; 22 >
-      au < manifest ; 1958 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 23 ; 23 >
-      au < manifest ; 1959 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 24 ; 24 >
-      au < manifest ; 1960 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 25 ; 25 >
-      au < manifest ; 1961 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 26 ; 26 >
-      au < manifest ; 1962 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 27 ; 27 >
-      au < manifest ; 1963 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 28 ; 28 >
-      au < manifest ; 1964 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 29 ; 29 >
-      au < manifest ; 1965 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 30 ; 30 >
-      au < manifest ; 1966 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 31 ; 31 >
-      au < manifest ; 1967 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 32 ; 32 >
-      au < manifest ; 1968 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 33 ; 33 >
-      au < manifest ; 1969 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 34 ; 34 >
-      au < manifest ; 1970 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 35 ; 35 >
-      au < manifest ; 1971 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 36 ; 36 >
-      au < manifest ; 1972 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 37 ; 37 >
-      au < manifest ; 1973 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 38 ; 38 >
-      au < manifest ; 1974 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 39 ; 39 >
-      au < manifest ; 1975 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 40 ; 40 >
-      au < manifest ; 1976 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 41 ; 41 >
-      au < manifest ; 1977 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 42 ; 42 >
-      au < manifest ; 1978 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 43 ; 43 >
-      au < manifest ; 1979 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 44 ; 44 >
-      au < manifest ; 1980 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 45 ; 45 >
-      au < manifest ; 1981 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 46 ; 46 >
-      au < manifest ; 1982 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 47 ; 47 >
-      au < manifest ; 1983 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 48 ; 48 >
-      au < manifest ; 1984 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 49 ; 49 >
-      au < manifest ; 1985 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 50 ; 50 >
-      au < manifest ; 1986 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 51 ; 51 >
-      au < manifest ; 1987 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 52 ; 52 >
-      au < manifest ; 1988 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 53 ; 53 >
-      au < manifest ; 1989 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 54 ; 54 >
-      au < manifest ; 1990 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 55 ; 55 >
-      au < manifest ; 1991 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 56 ; 56 >
-      au < manifest ; 1992 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 57 ; 57 >
-      au < manifest ; 1993 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 58 ; 58 >
-      au < manifest ; 1994 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 59 ; 59 >
-      au < manifest ; 1995 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 60 ; 60 >
-      au < manifest ; 1996 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 61 ; 61 >
-      au < manifest ; 1997 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 62 ; 62 >
-      au < manifest ; 1998 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 63 ; 63 >
-      au < manifest ; 1999 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 64 ; 64 >
-      au < released ; 2000 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 65 ; 65 >
-      au < released ; 2001 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 66 ; 66 >
-      au < released ; 2002 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 67 ; 67 >
-      au < released ; 2003 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 68 ; 68 >
-      au < released ; 2004 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 69 ; 69 >
-      au < released ; 2005 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 70 ; 70 >
-      au < released ; 2006 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 71 ; 71 >
-      au < released ; 2007 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 72 ; 72 >
-      au < released ; 2008 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 73 ; 73 >
-      au < released ; 2009 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 74 ; 74 >
-      au < released ; 2010 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 75 ; 75 >
-      au < released ; 2011 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 76 ; 76 >
-      au < released ; 2012 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 77 ; 77 >
-      au < released ; 2013 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 78 ; 78 >
-      au < released ; 2014 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 79 ; 79 >
-      au < released ; 2015 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 80 ; 80 >
-      au < released ; 2016 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 81 ; 81 >
-      au < released ; 2017 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 82 ; 82 >
-      au < released ; 2018 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 83 ; 83 >
-      au < released ; 2019 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 84 ; 84 >
+      au < manifest ; 1933 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 1 ; 1 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1934 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 2 ; 2 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1935 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 3 ; 3 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1936 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 4 ; 4 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1937 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 5 ; 5 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1938 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 6 ; 6 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1939 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 7 ; 7 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1940 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 8 ; 8 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1941 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 9 ; 9 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1942 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 10 ; 10 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1946 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 11 ; 11 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1947 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 12 ; 12 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1948 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 13 ; 13 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1949 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 14 ; 14 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1950 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 15 ; 15 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1951 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 16 ; 16 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1952 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 17 ; 17 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1953 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 18 ; 18 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1954 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 19 ; 19 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1955 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 20 ; 20 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1956 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 21 ; 21 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1957 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 22 ; 22 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1958 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 23 ; 23 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1959 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 24 ; 24 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1960 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 25 ; 25 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1961 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 26 ; 26 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1962 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 27 ; 27 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1963 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 28 ; 28 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1964 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 29 ; 29 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1965 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 30 ; 30 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1966 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 31 ; 31 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1967 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 32 ; 32 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1968 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 33 ; 33 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1969 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 34 ; 34 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1970 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 35 ; 35 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1971 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 36 ; 36 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1972 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 37 ; 37 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1973 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 38 ; 38 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1974 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 39 ; 39 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1975 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 40 ; 40 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1976 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 41 ; 41 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1977 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 42 ; 42 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1978 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 43 ; 43 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1979 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 44 ; 44 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1980 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 45 ; 45 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1981 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 46 ; 46 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1982 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 47 ; 47 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1983 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 48 ; 48 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1984 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 49 ; 49 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1985 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 50 ; 50 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1986 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 51 ; 51 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1987 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 52 ; 52 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1988 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 53 ; 53 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1989 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 54 ; 54 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1990 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 55 ; 55 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1991 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 56 ; 56 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1992 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 57 ; 57 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1993 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 58 ; 58 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1994 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 59 ; 59 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1995 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 60 ; 60 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1996 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 61 ; 61 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1997 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 62 ; 62 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1998 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 63 ; 63 ; https://symposium.cshlp.org/ >
+      au < manifest ; 1999 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 64 ; 64 ; https://symposium.cshlp.org/ >
+      au < released ; 2000 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 65 ; 65 ; http://symposium.cshlp.org/ >
+      au < released ; 2001 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 66 ; 66 ; http://symposium.cshlp.org/ >
+      au < released ; 2002 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 67 ; 67 ; http://symposium.cshlp.org/ >
+      au < released ; 2003 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 68 ; 68 ; http://symposium.cshlp.org/ >
+      au < released ; 2004 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 69 ; 69 ; http://symposium.cshlp.org/ >
+      au < released ; 2005 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 70 ; 70 ; http://symposium.cshlp.org/ >
+      au < released ; 2006 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 71 ; 71 ; http://symposium.cshlp.org/ >
+      au < released ; 2007 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 72 ; 72 ; http://symposium.cshlp.org/ >
+      au < released ; 2008 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 73 ; 73 ; http://symposium.cshlp.org/ >
+      au < released ; 2009 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 74 ; 74 ; http://symposium.cshlp.org/ >
+      au < released ; 2010 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 75 ; 75 ; http://symposium.cshlp.org/ >
+      au < released ; 2011 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 76 ; 76 ; http://symposium.cshlp.org/ >
+      au < released ; 2012 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 77 ; 77 ; http://symposium.cshlp.org/ >
+      au < released ; 2013 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 78 ; 78 ; http://symposium.cshlp.org/ >
+      au < released ; 2014 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 79 ; 79 ; http://symposium.cshlp.org/ >
+      au < released ; 2015 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 80 ; 80 ; http://symposium.cshlp.org/ >
+      au < released ; 2016 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 81 ; 81 ; http://symposium.cshlp.org/ >
+      au < released ; 2017 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 82 ; 82 ; http://symposium.cshlp.org/ >
+      au < released ; 2018 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 83 ; 83 ; http://symposium.cshlp.org/ >
+      au < released ; 2019 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 84 ; 84 ; http://symposium.cshlp.org/ >
 
     }
 
@@ -253,55 +251,49 @@
       issnl = 0890-9369
     >
 
-    implicit < status ; year ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
     {
 
-      param[base_url] = http://genesdev.cshlp.org/
+      #param[base_url] = http://genesdev.cshlp.org/
 
-      au < manifest ; 1987 ; Genes & Development Volume 1 ; 1 >
-      au < manifest ; 1988 ; Genes & Development Volume 2 ; 2 >
-      au < manifest ; 1989 ; Genes & Development Volume 3 ; 3 >
-      au < manifest ; 1990 ; Genes & Development Volume 4 ; 4 >
-      au < manifest ; 1991 ; Genes & Development Volume 5 ; 5 >
-      au < manifest ; 1992 ; Genes & Development Volume 6 ; 6 >
-      au < manifest ; 1993 ; Genes & Development Volume 7 ; 7 >
-      au < manifest ; 1994 ; Genes & Development Volume 8 ; 8 >
-      au < manifest ; 1995 ; Genes & Development Volume 9 ; 9 >
-      au < manifest ; 1996 ; Genes & Development Volume 10 ; 10 >
-      au < manifest ; 1997 ; Genes & Development Volume 11 ; 11 >
-      au < manifest ; 1998 ; Genes & Development Volume 12 ; 12 >
-      au < manifest ; 1999 ; Genes & Development Volume 13 ; 13 >
-      au < released ; 2000 ; Genes & Development Volume 14 ; 14 >
-      au < released ; 2001 ; Genes & Development Volume 15 ; 15 >
-      au < released ; 2002 ; Genes & Development Volume 16 ; 16 >
-      au < released ; 2003 ; Genes & Development Volume 17 ; 17 >
-      au < released ; 2004 ; Genes & Development Volume 18 ; 18 >
-      au < released ; 2005 ; Genes & Development Volume 19 ; 19 >
-      au < released ; 2006 ; Genes & Development Volume 20 ; 20 >
-      au < released ; 2007 ; Genes & Development Volume 21 ; 21 >
-      au < released ; 2008 ; Genes & Development Volume 22 ; 22 >
-      au < released ; 2009 ; Genes & Development Volume 23 ; 23 >
-      au < released ; 2010 ; Genes & Development Volume 24 ; 24 >
-      au < released ; 2011 ; Genes & Development Volume 25 ; 25 >
-      au < released ; 2012 ; Genes & Development Volume 26 ; 26 >
-      au < released ; 2013 ; Genes & Development Volume 27 ; 27 >
-      au < released ; 2014 ; Genes & Development Volume 28 ; 28 >
-      au < released ; 2015 ; Genes & Development Volume 29 ; 29 >
-      au < released ; 2016 ; Genes & Development Volume 30 ; 30 >
-      au < released ; 2017 ; Genes & Development Volume 31 ; 31 >
-      au < released ; 2018 ; Genes & Development Volume 32 ; 32 >
-      au < released ; 2019 ; Genes & Development Volume 33 ; 33 >
-      au < released ; 2020 ; Genes & Development Volume 34 ; 34 >
-      au < released ; 2021 ; Genes & Development Volume 35 ; 35 >
-      au < testing ; 2022 ; Genes & Development Volume 36 ; 36 >
-    }
-
-    {
-
-      param[base_url] = https://genesdev.cshlp.org/
-
-      au < manifest ; 2023 ; Genes & Development Volume 37 ; 37 >
+      au < exists ; 1987 ; Genes & Development Volume 1 ; 1 ; https://genesdev.cshlp.org/ >
+      au < exists ; 1988 ; Genes & Development Volume 2 ; 2 ; https://genesdev.cshlp.org/ >
+      au < exists ; 1989 ; Genes & Development Volume 3 ; 3 ; https://genesdev.cshlp.org/ >
+      au < exists ; 1990 ; Genes & Development Volume 4 ; 4 ; https://genesdev.cshlp.org/ >
+      au < exists ; 1991 ; Genes & Development Volume 5 ; 5 ; https://genesdev.cshlp.org/ >
+      au < exists ; 1992 ; Genes & Development Volume 6 ; 6 ; https://genesdev.cshlp.org/ >
+      au < exists ; 1993 ; Genes & Development Volume 7 ; 7 ; https://genesdev.cshlp.org/ >
+      au < exists ; 1994 ; Genes & Development Volume 8 ; 8 ; https://genesdev.cshlp.org/ >
+      au < exists ; 1995 ; Genes & Development Volume 9 ; 9 ; https://genesdev.cshlp.org/ >
+      au < exists ; 1996 ; Genes & Development Volume 10 ; 10 ; https://genesdev.cshlp.org/ >
+      au < exists ; 1997 ; Genes & Development Volume 11 ; 11 ; https://genesdev.cshlp.org/ >
+      au < exists ; 1998 ; Genes & Development Volume 12 ; 12 ; https://genesdev.cshlp.org/ >
+      au < exists ; 1999 ; Genes & Development Volume 13 ; 13 ; https://genesdev.cshlp.org/ >
+      au < released ; 2000 ; Genes & Development Volume 14 ; 14 ; http://genesdev.cshlp.org/ >
+      au < released ; 2001 ; Genes & Development Volume 15 ; 15 ; http://genesdev.cshlp.org/ >
+      au < released ; 2002 ; Genes & Development Volume 16 ; 16 ; http://genesdev.cshlp.org/ >
+      au < released ; 2003 ; Genes & Development Volume 17 ; 17 ; http://genesdev.cshlp.org/ >
+      au < released ; 2004 ; Genes & Development Volume 18 ; 18 ; http://genesdev.cshlp.org/ >
+      au < released ; 2005 ; Genes & Development Volume 19 ; 19 ; http://genesdev.cshlp.org/ >
+      au < released ; 2006 ; Genes & Development Volume 20 ; 20 ; http://genesdev.cshlp.org/ >
+      au < released ; 2007 ; Genes & Development Volume 21 ; 21 ; http://genesdev.cshlp.org/ >
+      au < released ; 2008 ; Genes & Development Volume 22 ; 22 ; http://genesdev.cshlp.org/ >
+      au < released ; 2009 ; Genes & Development Volume 23 ; 23 ; http://genesdev.cshlp.org/ >
+      au < released ; 2010 ; Genes & Development Volume 24 ; 24 ; http://genesdev.cshlp.org/ >
+      au < released ; 2011 ; Genes & Development Volume 25 ; 25 ; http://genesdev.cshlp.org/ >
+      au < released ; 2012 ; Genes & Development Volume 26 ; 26 ; http://genesdev.cshlp.org/ >
+      au < released ; 2013 ; Genes & Development Volume 27 ; 27 ; http://genesdev.cshlp.org/ >
+      au < released ; 2014 ; Genes & Development Volume 28 ; 28 ; http://genesdev.cshlp.org/ >
+      au < released ; 2015 ; Genes & Development Volume 29 ; 29 ; http://genesdev.cshlp.org/ >
+      au < released ; 2016 ; Genes & Development Volume 30 ; 30 ; http://genesdev.cshlp.org/ >
+      au < released ; 2017 ; Genes & Development Volume 31 ; 31 ; http://genesdev.cshlp.org/ >
+      au < released ; 2018 ; Genes & Development Volume 32 ; 32 ; http://genesdev.cshlp.org/ >
+      au < released ; 2019 ; Genes & Development Volume 33 ; 33 ; http://genesdev.cshlp.org/ >
+      au < released ; 2020 ; Genes & Development Volume 34 ; 34 ; http://genesdev.cshlp.org/ >
+      au < released ; 2021 ; Genes & Development Volume 35 ; 35 ; http://genesdev.cshlp.org/ >
+      au < exists ; 2022 ; Genes & Development Volume 36 ; 36 ; https://genesdev.cshlp.org/ >
+      au < manifest ; 2023 ; Genes & Development Volume 37 ; 37 ; https://genesdev.cshlp.org/ >
 
     }
 
@@ -369,42 +361,42 @@
       issnl = 1072-0502
     >
 
-    implicit < status ; year ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
     {
 
-      param[base_url] = http://learnmem.cshlp.org/
+      #param[base_url] = http://learnmem.cshlp.org/
 
-      au < released ; 1994 ; Learning & Memory Volume 1 ; 1 >
-      au < released ; 1995 ; Learning & Memory Volume 2 ; 2 >
-      au < released ; 1996 ; Learning & Memory Volume 3 ; 3 >
-      au < released ; 1997 ; Learning & Memory Volume 4 ; 4 >
-      au < released ; 1998 ; Learning & Memory Volume 5 ; 5 >
-      au < released ; 1999 ; Learning & Memory Volume 6 ; 6 >
-      au < released ; 2000 ; Learning & Memory Volume 7 ; 7 >
-      au < released ; 2001 ; Learning & Memory Volume 8 ; 8 >
-      au < released ; 2002 ; Learning & Memory Volume 9 ; 9 >
-      au < released ; 2003 ; Learning & Memory Volume 10 ; 10 >
-      au < released ; 2004 ; Learning & Memory Volume 11 ; 11 >
-      au < released ; 2005 ; Learning & Memory Volume 12 ; 12 >
-      au < released ; 2006 ; Learning & Memory Volume 13 ; 13 >
-      au < released ; 2007 ; Learning & Memory Volume 14 ; 14 >
-      au < released ; 2008 ; Learning & Memory Volume 15 ; 15 >
-      au < released ; 2009 ; Learning & Memory Volume 16 ; 16 >
-      au < released ; 2010 ; Learning & Memory Volume 17 ; 17 >
-      au < released ; 2011 ; Learning & Memory Volume 18 ; 18 >
-      au < released ; 2012 ; Learning & Memory Volume 19 ; 19 >
-      au < released ; 2013 ; Learning & Memory Volume 20 ; 20 >
-      au < released ; 2014 ; Learning & Memory Volume 21 ; 21 >
-      au < released ; 2015 ; Learning & Memory Volume 22 ; 22 >
-      au < released ; 2016 ; Learning & Memory Volume 23 ; 23 >
-      au < released ; 2017 ; Learning & Memory Volume 24 ; 24 >
-      au < released ; 2018 ; Learning & Memory Volume 25 ; 25 >
-      au < released ; 2019 ; Learning & Memory Volume 26 ; 26 >
-      au < released ; 2020 ; Learning & Memory Volume 27 ; 27 >
-      au < released ; 2021 ; Learning & Memory Volume 28 ; 28 >
-      au < testing ; 2022 ; Learning & Memory Volume 29 ; 29 >
-      au < manifest ; 2023 ; Learning & Memory Volume 30 ; 30 >
+      au < released ; 1994 ; Learning & Memory Volume 1 ; 1 ; http://learnmem.cshlp.org/ >
+      au < released ; 1995 ; Learning & Memory Volume 2 ; 2 ; http://learnmem.cshlp.org/ >
+      au < released ; 1996 ; Learning & Memory Volume 3 ; 3 ; http://learnmem.cshlp.org/ >
+      au < released ; 1997 ; Learning & Memory Volume 4 ; 4 ; http://learnmem.cshlp.org/ >
+      au < released ; 1998 ; Learning & Memory Volume 5 ; 5 ; http://learnmem.cshlp.org/ >
+      au < released ; 1999 ; Learning & Memory Volume 6 ; 6 ; http://learnmem.cshlp.org/ >
+      au < released ; 2000 ; Learning & Memory Volume 7 ; 7 ; http://learnmem.cshlp.org/ >
+      au < released ; 2001 ; Learning & Memory Volume 8 ; 8 ; http://learnmem.cshlp.org/ >
+      au < released ; 2002 ; Learning & Memory Volume 9 ; 9 ; http://learnmem.cshlp.org/ >
+      au < released ; 2003 ; Learning & Memory Volume 10 ; 10 ; http://learnmem.cshlp.org/ >
+      au < released ; 2004 ; Learning & Memory Volume 11 ; 11 ; http://learnmem.cshlp.org/ >
+      au < released ; 2005 ; Learning & Memory Volume 12 ; 12 ; http://learnmem.cshlp.org/ >
+      au < released ; 2006 ; Learning & Memory Volume 13 ; 13 ; http://learnmem.cshlp.org/ >
+      au < released ; 2007 ; Learning & Memory Volume 14 ; 14 ; http://learnmem.cshlp.org/ >
+      au < released ; 2008 ; Learning & Memory Volume 15 ; 15 ; http://learnmem.cshlp.org/ >
+      au < released ; 2009 ; Learning & Memory Volume 16 ; 16 ; http://learnmem.cshlp.org/ >
+      au < released ; 2010 ; Learning & Memory Volume 17 ; 17 ; http://learnmem.cshlp.org/ >
+      au < released ; 2011 ; Learning & Memory Volume 18 ; 18 ; http://learnmem.cshlp.org/ >
+      au < released ; 2012 ; Learning & Memory Volume 19 ; 19 ; http://learnmem.cshlp.org/ >
+      au < released ; 2013 ; Learning & Memory Volume 20 ; 20 ; http://learnmem.cshlp.org/ >
+      au < released ; 2014 ; Learning & Memory Volume 21 ; 21 ; http://learnmem.cshlp.org/ >
+      au < released ; 2015 ; Learning & Memory Volume 22 ; 22 ; http://learnmem.cshlp.org/ >
+      au < released ; 2016 ; Learning & Memory Volume 23 ; 23 ; http://learnmem.cshlp.org/ >
+      au < released ; 2017 ; Learning & Memory Volume 24 ; 24 ; http://learnmem.cshlp.org/ >
+      au < released ; 2018 ; Learning & Memory Volume 25 ; 25 ; http://learnmem.cshlp.org/ >
+      au < released ; 2019 ; Learning & Memory Volume 26 ; 26 ; http://learnmem.cshlp.org/ >
+      au < released ; 2020 ; Learning & Memory Volume 27 ; 27 ; http://learnmem.cshlp.org/ >
+      au < released ; 2021 ; Learning & Memory Volume 28 ; 28 ; http://learnmem.cshlp.org/ >
+      au < exists ; 2022 ; Learning & Memory Volume 29 ; 29 ; https://learnmem.cshlp.org/ >
+      au < exists ; 2023 ; Learning & Memory Volume 30 ; 30 ; https://learnmem.cshlp.org/ >
 
     }
 
@@ -452,7 +444,7 @@
       au < released ; 2019 ; RNA Volume 25 ; 25 ; https://rnajournal.cshlp.org/ >
       au < released ; 2020 ; RNA Volume 26 ; 26 ; https://rnajournal.cshlp.org/ >
       au < released ; 2021 ; RNA Volume 27 ; 27 ; https://rnajournal.cshlp.org/ >
-      au < testing ; 2022 ; RNA Volume 28 ; 28 ; https://rnajournal.cshlp.org/ >
+      au < manifest ; 2022 ; RNA Volume 28 ; 28 ; https://rnajournal.cshlp.org/ >
       au < manifest ; 2023 ; RNA Volume 29 ; 29 ; https://rnajournal.cshlp.org/ >
 
     }
