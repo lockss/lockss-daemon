@@ -8,6 +8,7 @@
     info[poller] = 8
   >
 
+  {
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
     param[base_url] = https://e-journal.unair.ac.id/
     implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
@@ -872,19 +873,29 @@
 
   {
       title <
-        name = Journal of Aquaculture Science ;
-        issn = 2550-0910 ;
-        eissn = 2579-4817
+        name = Journal of Advanced Technology and Multidiscipline ;
+        eissn = 2964-6162
       >
 
-      param[journal_id] = JoAS
+      param[journal_id] = JATM
 
-      au < exists ; exists ; 2017 ; Journal of Aquaculture Science Volume 1-2 ; 1-2 ; 2017 ; >
-      au < exists ; exists ; 2018 ; Journal of Aquaculture Science Volume 3 ; 3 ; 2018 ; >
-      au < exists ; exists ; 2019 ; Journal of Aquaculture Science Volume 4 ; 4 ; 2019 ; >
-      au < exists ; exists ; 2020 ; Journal of Aquaculture Science Volume 5 ; 5 ; 2020 ; >
-      au < exists ; exists ; 2021 ; Journal of Aquaculture Science Volume 6 ; 6 ; 2021 ; >
-      au < exists ; exists ; 2022 ; Journal of Aquaculture Science Volume 7 ; 7 ; 2022 ; >
+      au < manifest ; exists ; 2022 ; Journal of Advanced Technology and Multidiscipline Volume 2 ; 2 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Journal of Advanced Technology and Multidiscipline Volume 3 ; 3 ; 2023 ; >
+
+  }
+
+  {
+      title <
+        name = Journal of Governance and Administrative Reform ;
+        eissn = 2962-9578
+      >
+
+      param[journal_id] = JGAR
+
+      au < manifest ; exists ; 2020 ; Journal of Governance and Administrative Reform Volume 1 ; 1 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Journal of Governance and Administrative Reform Volume 2 ; 2 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Journal of Governance and Administrative Reform Volume 3 ; 3 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Journal of Governance and Administrative Reform Volume 4 ; 4 ; 2023 ; >
 
   }
 
@@ -1959,5 +1970,31 @@
       au < expected ; exists ; 2023 ; Journal of Bio-Molecule Research and Engineering Volume 2 ; 2 ; 2023 ; >
 
   }
+  } #end URL
+  {
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    param[base_url] = https://joas.co.id/
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+    #OJS3
+    attr[start_stem] = index.php/
+  
+  {
+      title <
+        name = Journal of Aquaculture Science ;
+        issn = 2550-0910 ;
+        eissn = 2579-4817
+      >
 
+      param[journal_id] = JoAS
+
+      au < exists ; exists ; 2017 ; Journal of Aquaculture Science Volume 1-2 ; 1-2 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Journal of Aquaculture Science Volume 3 ; 3 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Journal of Aquaculture Science Volume 4 ; 4 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Journal of Aquaculture Science Volume 5 ; 5 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Journal of Aquaculture Science Volume 6 ; 6 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Journal of Aquaculture Science Volume 7 ; 7 ; 2022 ; >
+
+  }
+  
+  }
 }
