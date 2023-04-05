@@ -1,0 +1,112 @@
+{
+  publisher <
+    name = American Veterinary Medical Association ;
+    info[contract] = 2023 ;
+    info[back] = 2020 ;
+    info[tester] = 5 ;
+    info[poller] = 5 ;
+    info[platform] = pubfactory.
+  >
+
+    #plugin = needs.plugin
+    plugin = org.lockss.plugin.pubfactory.ajtmh.ClockssAjtmhPlugin
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+    param[base_url] = https://avmajournals.avma.org/
+
+  {
+  
+    title <
+      name = American Journal of Veterinary Research ;
+      issn = 0002-9645 ;
+      eissn = 1943-5681 ;
+      issnl = 0002-9645
+    >
+      param[journal_id] = ajvr
+
+      au < manifest ; exists ; 2000 ; American Journal of Veterinary Research Volume 61 ; 61 ; >
+      au < manifest ; exists ; 2001 ; American Journal of Veterinary Research Volume 62 ; 62 ; >
+      au < manifest ; exists ; 2002 ; American Journal of Veterinary Research Volume 63 ; 63 ; >
+      au < manifest ; exists ; 2003 ; American Journal of Veterinary Research Volume 64 ; 64 ; >
+      au < manifest ; exists ; 2004 ; American Journal of Veterinary Research Volume 65 ; 65 ; >
+      au < manifest ; exists ; 2005 ; American Journal of Veterinary Research Volume 66 ; 66 ; >
+      au < manifest ; exists ; 2006 ; American Journal of Veterinary Research Volume 67 ; 67 ; >
+      au < manifest ; exists ; 2007 ; American Journal of Veterinary Research Volume 68 ; 68 ; >
+      au < manifest ; exists ; 2008 ; American Journal of Veterinary Research Volume 69 ; 69 ; >
+      au < manifest ; exists ; 2009 ; American Journal of Veterinary Research Volume 70 ; 70 ; >
+      au < manifest ; exists ; 2010 ; American Journal of Veterinary Research Volume 71 ; 71 ; >
+      au < manifest ; exists ; 2011 ; American Journal of Veterinary Research Volume 72 ; 72 ; >
+      au < manifest ; exists ; 2012 ; American Journal of Veterinary Research Volume 73 ; 73 ; >
+      au < manifest ; exists ; 2013 ; American Journal of Veterinary Research Volume 74 ; 74 ; >
+      au < manifest ; exists ; 2014 ; American Journal of Veterinary Research Volume 75 ; 75 ; >
+      au < manifest ; exists ; 2015 ; American Journal of Veterinary Research Volume 76 ; 76 ; >
+      au < manifest ; exists ; 2016 ; American Journal of Veterinary Research Volume 77 ; 77 ; >
+      au < manifest ; exists ; 2017 ; American Journal of Veterinary Research Volume 78 ; 78 ; >
+      au < manifest ; exists ; 2018 ; American Journal of Veterinary Research Volume 79 ; 79 ; >
+      au < manifest ; exists ; 2019 ; American Journal of Veterinary Research Volume 80 ; 80 ; >
+      au < manifest ; exists ; 2020 ; American Journal of Veterinary Research Volume 81 ; 81 ; >
+      au < manifest ; exists ; 2021 ; American Journal of Veterinary Research Volume 82 ; 82 ; >
+      au < manifest ; exists ; 2022 ; American Journal of Veterinary Research Volume 83 ; 83 ; >
+      au < manifest ; exists ; 2023 ; American Journal of Veterinary Research Volume 84 ; 84 ; >
+
+  }
+
+  {
+  
+    title <
+      name = Journal of the American Veterinary Medical Association ;
+      issn = 0003-1488 ;
+      eissn = 1943-569X ;
+      issnl = 0003-1488
+    >
+      param[journal_id] = javma
+
+      au < manifest ; exists ; 2000 ; Journal of the American Veterinary Medical Association Volume 216 ; 216 ; >
+      au < manifest ; exists ; 2000 ; Journal of the American Veterinary Medical Association Volume 217 ; 217 ; >
+      au < manifest ; exists ; 2001 ; Journal of the American Veterinary Medical Association Volume 218 ; 218 ; >
+      au < manifest ; exists ; 2001 ; Journal of the American Veterinary Medical Association Volume 219 ; 219 ; >
+      au < manifest ; exists ; 2002 ; Journal of the American Veterinary Medical Association Volume 220 ; 220 ; >
+      au < manifest ; exists ; 2002 ; Journal of the American Veterinary Medical Association Volume 221 ; 221 ; >
+      au < manifest ; exists ; 2003 ; Journal of the American Veterinary Medical Association Volume 222 ; 222 ; >
+      au < manifest ; exists ; 2003 ; Journal of the American Veterinary Medical Association Volume 223 ; 223 ; >
+      au < manifest ; exists ; 2004 ; Journal of the American Veterinary Medical Association Volume 224 ; 224 ; >
+      au < manifest ; exists ; 2004 ; Journal of the American Veterinary Medical Association Volume 225 ; 225 ; >
+      au < manifest ; exists ; 2005 ; Journal of the American Veterinary Medical Association Volume 226 ; 226 ; >
+      au < manifest ; exists ; 2005 ; Journal of the American Veterinary Medical Association Volume 227 ; 227 ; >
+      au < manifest ; exists ; 2006 ; Journal of the American Veterinary Medical Association Volume 228 ; 228 ; >
+      au < manifest ; exists ; 2006 ; Journal of the American Veterinary Medical Association Volume 229 ; 229 ; >
+      au < manifest ; exists ; 2007 ; Journal of the American Veterinary Medical Association Volume 230 ; 230 ; >
+      au < manifest ; exists ; 2007 ; Journal of the American Veterinary Medical Association Volume 231 ; 231 ; >
+      au < manifest ; exists ; 2008 ; Journal of the American Veterinary Medical Association Volume 232 ; 232 ; >
+      au < manifest ; exists ; 2008 ; Journal of the American Veterinary Medical Association Volume 233 ; 233 ; >
+      au < manifest ; exists ; 2009 ; Journal of the American Veterinary Medical Association Volume 234 ; 234 ; >
+      au < manifest ; exists ; 2009 ; Journal of the American Veterinary Medical Association Volume 235 ; 235 ; >
+      au < manifest ; exists ; 2010 ; Journal of the American Veterinary Medical Association Volume 236 ; 236 ; >
+      au < manifest ; exists ; 2010 ; Journal of the American Veterinary Medical Association Volume 237 ; 237 ; >
+      au < manifest ; exists ; 2011 ; Journal of the American Veterinary Medical Association Volume 238 ; 238 ; >
+      au < manifest ; exists ; 2011 ; Journal of the American Veterinary Medical Association Volume 239 ; 239 ; >
+      au < manifest ; exists ; 2012 ; Journal of the American Veterinary Medical Association Volume 240 ; 240 ; >
+      au < manifest ; exists ; 2012 ; Journal of the American Veterinary Medical Association Volume 241 ; 241 ; >
+      au < manifest ; exists ; 2013 ; Journal of the American Veterinary Medical Association Volume 242 ; 242 ; >
+      au < manifest ; exists ; 2013 ; Journal of the American Veterinary Medical Association Volume 243 ; 243 ; >
+      au < manifest ; exists ; 2014 ; Journal of the American Veterinary Medical Association Volume 244 ; 244 ; >
+      au < manifest ; exists ; 2014 ; Journal of the American Veterinary Medical Association Volume 245 ; 245 ; >
+      au < manifest ; exists ; 2015 ; Journal of the American Veterinary Medical Association Volume 246 ; 246 ; >
+      au < manifest ; exists ; 2015 ; Journal of the American Veterinary Medical Association Volume 247 ; 247 ; >
+      au < manifest ; exists ; 2016 ; Journal of the American Veterinary Medical Association Volume 248 ; 248 ; >
+      au < manifest ; exists ; 2016 ; Journal of the American Veterinary Medical Association Volume 249 ; 249 ; >
+      au < manifest ; exists ; 2017 ; Journal of the American Veterinary Medical Association Volume 250 ; 250 ; >
+      au < manifest ; exists ; 2017 ; Journal of the American Veterinary Medical Association Volume 251 ; 251 ; >
+      au < manifest ; exists ; 2018 ; Journal of the American Veterinary Medical Association Volume 252 ; 252 ; >
+      au < manifest ; exists ; 2018 ; Journal of the American Veterinary Medical Association Volume 253 ; 253 ; >
+      au < manifest ; exists ; 2019 ; Journal of the American Veterinary Medical Association Volume 254 ; 254 ; >
+      au < manifest ; exists ; 2019 ; Journal of the American Veterinary Medical Association Volume 255 ; 255 ; >
+      au < manifest ; exists ; 2020 ; Journal of the American Veterinary Medical Association Volume 256 ; 256 ; >
+      au < manifest ; exists ; 2020 ; Journal of the American Veterinary Medical Association Volume 257 ; 257 ; >
+      au < manifest ; exists ; 2021 ; Journal of the American Veterinary Medical Association Volume 258 ; 258 ; >
+      au < manifest ; exists ; 2021 ; Journal of the American Veterinary Medical Association Volume 259 ; 259 ; >
+      au < manifest ; exists ; 2022 ; Journal of the American Veterinary Medical Association Volume 260 ; 260 ; >
+      au < manifest ; exists ; 2023 ; Journal of the American Veterinary Medical Association Volume 261 ; 261 ; >
+
+  }
+
+}
