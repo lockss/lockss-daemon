@@ -1815,7 +1815,7 @@ while (my $line = <>) {
                       #printf("href=\"pdfplus/%s/%s\"",${doi1},${doi2});
                       #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\/${doi2}/)) {
                       #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+(pdf|epub)(plus)?\/${doi1}\//)) {  #"
-                      if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+(pdf|epub|doi\/reader|doi\/full)(plus)?\/${doi1}\//)) {  #"
+                      if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+(epdf|pdf|epub|doi\/full)(plus)?\/${doi1}\//)) {  #"
                           $result = "Manifest";
                       }
                   }
