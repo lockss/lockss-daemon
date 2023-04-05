@@ -1814,7 +1814,8 @@ while (my $line = <>) {
                       # what we're looking for on the page is href="/doi/pdf/doi1/doi2" OR href="/doi/pdfplus/doi1/doi2" OR href="/doi/epub/doi1/doi2"
                       #printf("href=\"pdfplus/%s/%s\"",${doi1},${doi2});
                       #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\/${doi2}/)) {
-                      if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+(pdf|epub)(plus)?\/${doi1}\//)) {  #"
+                      #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+(pdf|epub)(plus)?\/${doi1}\//)) {  #"
+                      if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+(pdf|epub|doi\/reader|doi\/full)(plus)?\/${doi1}\//)) {  #"
                           $result = "Manifest";
                       }
                   }
