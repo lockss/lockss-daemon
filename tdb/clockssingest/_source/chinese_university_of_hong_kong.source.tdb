@@ -28,7 +28,8 @@
 
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/cuhk-released/
 
-      au < testing ; exists ; 2023 ; Chinese University of Hong Kong Source Content 2023_01 ; 2023_01 >
+      #This Au may need a different plugin, since it is directory structure changed
+      #au < testing ; exists ; 2023 ; Chinese University of Hong Kong Source Content 2023_01 ; 2023_01 >
 
     }
 
