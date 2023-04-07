@@ -20,14 +20,14 @@
   
       param[journal_id] = ol
   
-      au < manifest ; exists ; 2010 ; Oncology Letters Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2011 ; Oncology Letters Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2012 ; Oncology Letters Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2012 ; Oncology Letters Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2013 ; Oncology Letters Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2013 ; Oncology Letters Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2014 ; Oncology Letters Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2014 ; Oncology Letters Volume 8 ; 8 ; >
+      au < doNotProcess ; exists ; 2010 ; Oncology Letters Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2011 ; Oncology Letters Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2012 ; Oncology Letters Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2012 ; Oncology Letters Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2013 ; Oncology Letters Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2013 ; Oncology Letters Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2014 ; Oncology Letters Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2014 ; Oncology Letters Volume 8 ; 8 ; >
       au < frozen ; exists ; 2015 ; Oncology Letters Volume 9 ; 9 ; >
       au < frozen ; exists ; 2015 ; Oncology Letters Volume 10 ; 10 ; >
       au < frozen ; exists ; 2016 ; Oncology Letters Volume 11 ; 11 ; >
@@ -132,8 +132,8 @@
       
       param[journal_id] = mco
   
-      au < manifest ; exists ; 2013 ; Molecular and Clinical Oncology Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2014 ; Molecular and Clinical Oncology Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2013 ; Molecular and Clinical Oncology Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2014 ; Molecular and Clinical Oncology Volume 2 ; 2 ; >
       au < frozen ; exists ; 2015 ; Molecular and Clinical Oncology Volume 3 ; 3 ; >
       au < frozen ; exists ; 2016 ; Molecular and Clinical Oncology Volume 4 ; 4 ; >
       au < frozen ; exists ; 2016 ; Molecular and Clinical Oncology Volume 5 ; 5 ; >
@@ -163,13 +163,13 @@
       param[journal_id] = etm
   
       au < frozen ; exists ; 2010 ; Experimental and Therapeutic Medicine Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2011 ; Experimental and Therapeutic Medicine Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2012 ; Experimental and Therapeutic Medicine Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2012 ; Experimental and Therapeutic Medicine Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2013 ; Experimental and Therapeutic Medicine Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2013 ; Experimental and Therapeutic Medicine Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2014 ; Experimental and Therapeutic Medicine Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2014 ; Experimental and Therapeutic Medicine Volume 8 ; 8 ; >
+      au < doNotProcess ; exists ; 2011 ; Experimental and Therapeutic Medicine Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2012 ; Experimental and Therapeutic Medicine Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2012 ; Experimental and Therapeutic Medicine Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2013 ; Experimental and Therapeutic Medicine Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2013 ; Experimental and Therapeutic Medicine Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2014 ; Experimental and Therapeutic Medicine Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2014 ; Experimental and Therapeutic Medicine Volume 8 ; 8 ; >
       au < frozen ; exists ; 2015 ; Experimental and Therapeutic Medicine Volume 9 ; 9 ; >
       au < frozen ; exists ; 2015 ; Experimental and Therapeutic Medicine Volume 10 ; 10 ; >
       au < frozen ; exists ; 2016 ; Experimental and Therapeutic Medicine Volume 11 ; 11 ; >
@@ -182,7 +182,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; Experimental and Therapeutic Medicine Volume 18 ; 18 ; >
       au < frozen ; exists ; 2020 ; Experimental and Therapeutic Medicine Volume 19 ; 19 ; >
       au < frozen ; exists ; 2020 ; Experimental and Therapeutic Medicine Volume 20 ; 20 ; >
-      au < manifest ; exists ; 2021 ; Experimental and Therapeutic Medicine Volume 21 ; 21 ; >
+      au < doNotProcess ; exists ; 2021 ; Experimental and Therapeutic Medicine Volume 21 ; 21 ; > #500 Error https://www.spandidos-publications.com/10.3892/www.chigene.org
       au < deepCrawl ; exists ; 2021 ; Experimental and Therapeutic Medicine Volume 22 ; 22 ; >
       au < crawling ; exists ; 2022 ; Experimental and Therapeutic Medicine Volume 23 ; 23 ; >
       au < crawling ; exists ; 2022 ; Experimental and Therapeutic Medicine Volume 24 ; 24 ; >
@@ -263,8 +263,8 @@
       
       param[journal_id] = br
   
-      au < manifest ; exists ; 2013 ; Biomedical Reports Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2014 ; Biomedical Reports Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2013 ; Biomedical Reports Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2014 ; Biomedical Reports Volume 2 ; 2 ; >
       au < frozen ; exists ; 2015 ; Biomedical Reports Volume 3 ; 3 ; >
       au < frozen ; exists ; 2016 ; Biomedical Reports Volume 4 ; 4 ; >
       au < frozen ; exists ; 2016 ; Biomedical Reports Volume 5 ; 5 ; >
@@ -355,16 +355,16 @@
       
       param[journal_id] = mmr
   
-      au < manifest ; exists ; 2008 ; Molecular Medicine Reports Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2009 ; Molecular Medicine Reports Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2010 ; Molecular Medicine Reports Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2011 ; Molecular Medicine Reports Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2012 ; Molecular Medicine Reports Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2012 ; Molecular Medicine Reports Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2013 ; Molecular Medicine Reports Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2013 ; Molecular Medicine Reports Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2014 ; Molecular Medicine Reports Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2014 ; Molecular Medicine Reports Volume 10 ; 10 ; >
+      au < doNotProcess ; exists ; 2008 ; Molecular Medicine Reports Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2009 ; Molecular Medicine Reports Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2010 ; Molecular Medicine Reports Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2011 ; Molecular Medicine Reports Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2012 ; Molecular Medicine Reports Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2012 ; Molecular Medicine Reports Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2013 ; Molecular Medicine Reports Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2013 ; Molecular Medicine Reports Volume 8 ; 8 ; >
+      au < doNotProcess ; exists ; 2014 ; Molecular Medicine Reports Volume 9 ; 9 ; >
+      au < doNotProcess ; exists ; 2014 ; Molecular Medicine Reports Volume 10 ; 10 ; >
       au < frozen ; exists ; 2015 ; Molecular Medicine Reports Volume 11 ; 11 ; >
       au < frozen ; exists ; 2015 ; Molecular Medicine Reports Volume 12 ; 12 ; >
       au < frozen ; exists ; 2016 ; Molecular Medicine Reports Volume 13 ; 13 ; >
