@@ -1410,6 +1410,36 @@
   {
 
     title <
+      name = Journal of AOAC INTERNATIONAL ;
+      issn = 1060-3271 ;
+      eissn = 1944-7922
+    >
+
+    param[journal_id] = jaoac
+    #content available from 1915 Volume 1 to 2007 Volume 90
+
+    au < exists ; exists ; 2008 ; 2008 ; Journal of AOAC INTERNATIONAL Volume 91 ; 91 ; >
+    au < exists ; exists ; 2009 ; 2009 ; Journal of AOAC INTERNATIONAL Volume 92 ; 92 ; >
+    au < exists ; exists ; 2010 ; 2010 ; Journal of AOAC INTERNATIONAL Volume 93 ; 93 ; >
+    au < exists ; exists ; 2011 ; 2011 ; Journal of AOAC INTERNATIONAL Volume 94 ; 94 ; >
+    au < exists ; exists ; 2012 ; 2012 ; Journal of AOAC INTERNATIONAL Volume 95 ; 95 ; >
+    au < exists ; exists ; 2013 ; 2013 ; Journal of AOAC INTERNATIONAL Volume 96 ; 96 ; >
+    au < exists ; exists ; 2014 ; 2014 ; Journal of AOAC INTERNATIONAL Volume 97 ; 97 ; >
+    au < exists ; exists ; 2015 ; 2015 ; Journal of AOAC INTERNATIONAL Volume 98 ; 98 ; >
+    au < exists ; exists ; 2016 ; 2016 ; Journal of AOAC INTERNATIONAL Volume 99 ; 99 ; >
+    au < exists ; exists ; 2017 ; 2017 ; Journal of AOAC INTERNATIONAL Volume 100 ; 100 ; >
+    au < exists ; exists ; 2018 ; 2018 ; Journal of AOAC INTERNATIONAL Volume 101 ; 101 ; >
+    au < exists ; exists ; 2019 ; 2019 ; Journal of AOAC INTERNATIONAL Volume 102 ; 102 ; >
+    au < exists ; exists ; 2020 ; 2020 ; Journal of AOAC INTERNATIONAL Volume 103 ; 103 ; >
+    au < exists ; exists ; 2021 ; 2021 ; Journal of AOAC INTERNATIONAL Volume 104 ; 104 ; >
+    au < exists ; exists ; 2022 ; 2022 ; Journal of AOAC INTERNATIONAL Volume 105 ; 105 ; >
+    au < doNotProcess ; exists ; 2023 ; 2023 ; Journal of AOAC INTERNATIONAL Volume 106 ; 106 ; >
+
+  }
+
+  {
+
+    title <
       name = AoB PLANTS ;
       eissn = 2041-2851
     >
