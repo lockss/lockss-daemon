@@ -74,10 +74,10 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>2,"^%s.+(www\.|\.(gov|com|edu|org|net|uk))", base_url </string>
             <!--  looks like an error - pdf tab while on pdf tab view has ?amp -->
             <string>2,"^%s.*\.xml\?&amp;pdfVersion=true$", base_url</string>
+            <string>1,"^https://fonts.googleapis.com/css"</string>
             <!--  citation overlay and ris download have odd normalization; allow for both -->
-            <string>1,"^%scite/(\$002f)?journals(\$002f|/)%s(\$002f|/)%s", base_url, journal_id, volume_name</string>
-            <string>1,"^%scite:exportcitation/ris\?t:ac=\$002fjournals(\$002f|/)%s(\$002f|/)%s", base_url, journal_id, volume_name</string>
-            <string>1,"^%s(view|downloadpdf|abstract)/journals/%s/%s", base_url, journal_id, volume_name</string>
+            <string>1,"^%s(view|downloadpdf|abstract|skin|pdfviewer)/journals/%s/%s", base_url, journal_id, volume_name</string>
+            <string>1,"^%s(skin|pdfviewer)", base_url</string>
         </list>
     </entry>
     <entry>
@@ -117,14 +117,19 @@ POSSIBILITY OF SUCH DAMAGE.
             </org.lockss.daemon.ConfigParamDescr>
         </list>
     </entry>
-    <!--
     <entry>
-        <string>au_login_page_checker</string>
-        <string>org.lockss.plugin.pubfactory.apma.APMAJournalsLoginPageChecker</string>
+        <string>au_permitted_host_pattern</string>
+        <list>
+            <string>fonts\.googleapis\.com</string>
+        </list>
     </entry>
     <entry>
-        <string>application/pdf_filter_factory</string>
-        <string>org.lockss.plugin.pubfactory.apma.APMAJournalsPdfFilterFactory</string>
+        <string>clockss_override</string>
+        <map>
+            <entry>
+                <string>au_def_pause_time</string>
+                <long>100</long>
+            </entry>
+        </map>
     </entry>
-    -->
 </map>
