@@ -4207,25 +4207,25 @@
 #    param[base_url] = http://www.phcog.com/
 
     param[journal_issn] = 0973-1296
-    #move to Sage, 2023. Archive will stay with Medknow until further notice.
+    #move to Sage, 2023.
 
     au < doNotProcess ; 2005 ; Pharmacognosy Magazine Volume 1 ; 2005 ; 1 ; https://www.phcog.com/ >
     au < doNotProcess ; 2006 ; Pharmacognosy Magazine Volume 2 ; 2006 ; 2 ; https://www.phcog.com/ >
     au < doNotProcess ; 2007 ; Pharmacognosy Magazine Volume 3 ; 2007 ; 3 ; https://www.phcog.com/ >
     au < doNotProcess ; 2008 ; Pharmacognosy Magazine Volume 4 ; 2008 ; 4 ; https://www.phcog.com/ >
     au < doNotProcess ; 2009 ; Pharmacognosy Magazine Volume 5 ; 2009 ; 5 ; https://www.phcog.com/ >
-    au < released ; 2010 ; Pharmacognosy Magazine Volume 6 ; 2010 ; 6 ; https://www.phcog.com/ >
-    au < released ; 2011 ; Pharmacognosy Magazine Volume 7 ; 2011 ; 7 ; http://www.phcog.com/ >
-    au < released ; 2012 ; Pharmacognosy Magazine Volume 8 ; 2012 ; 8 ; http://www.phcog.com/ >
-    au < released ; 2013 ; Pharmacognosy Magazine Volume 9 ; 2013 ; 9 ; http://www.phcog.com/ >
-    au < released ; 2014 ; Pharmacognosy Magazine Volume 10 ; 2014 ; 10 ; http://www.phcog.com/ >
-    au < released ; 2015 ; Pharmacognosy Magazine Volume 11 ; 2015 ; 11 ; http://www.phcog.com/ >
-    au < released ; 2016 ; Pharmacognosy Magazine Volume 12 ; 2016 ; 12 ; http://www.phcog.com/ >
-    au < released ; 2017 ; Pharmacognosy Magazine Volume 13 ; 2017 ; 13 ; http://www.phcog.com/ >
-    au < released ; 2018 ; Pharmacognosy Magazine Volume 14 ; 2018 ; 14 ; http://www.phcog.com/ >
-    au < released ; 2019 ; Pharmacognosy Magazine Volume 15 ; 2019 ; 15 ; https://www.phcog.com/ >
-    au < released ; 2020 ; Pharmacognosy Magazine Volume 16 ; 2020 ; 16 ; https://www.phcog.com/ >
-    au < released ; 2021 ; Pharmacognosy Magazine Volume 17 ; 2021 ; 17 ; https://www.phcog.com/ >
+    au < down ; 2010 ; Pharmacognosy Magazine Volume 6 ; 2010 ; 6 ; https://www.phcog.com/ >
+    au < down ; 2011 ; Pharmacognosy Magazine Volume 7 ; 2011 ; 7 ; http://www.phcog.com/ >
+    au < down ; 2012 ; Pharmacognosy Magazine Volume 8 ; 2012 ; 8 ; http://www.phcog.com/ >
+    au < down ; 2013 ; Pharmacognosy Magazine Volume 9 ; 2013 ; 9 ; http://www.phcog.com/ >
+    au < down ; 2014 ; Pharmacognosy Magazine Volume 10 ; 2014 ; 10 ; http://www.phcog.com/ >
+    au < down ; 2015 ; Pharmacognosy Magazine Volume 11 ; 2015 ; 11 ; http://www.phcog.com/ >
+    au < down ; 2016 ; Pharmacognosy Magazine Volume 12 ; 2016 ; 12 ; http://www.phcog.com/ >
+    au < down ; 2017 ; Pharmacognosy Magazine Volume 13 ; 2017 ; 13 ; http://www.phcog.com/ >
+    au < down ; 2018 ; Pharmacognosy Magazine Volume 14 ; 2018 ; 14 ; http://www.phcog.com/ >
+    au < down ; 2019 ; Pharmacognosy Magazine Volume 15 ; 2019 ; 15 ; https://www.phcog.com/ >
+    au < down ; 2020 ; Pharmacognosy Magazine Volume 16 ; 2020 ; 16 ; https://www.phcog.com/ >
+    au < down ; 2021 ; Pharmacognosy Magazine Volume 17 ; 2021 ; 17 ; https://www.phcog.com/ >
     au < doNotProcess ; 2022 ; Pharmacognosy Magazine Volume 18 ; 2022 ; 18 ; https://www.phcog.com/ >
 
   }
@@ -5175,15 +5175,13 @@
 
       param[journal_issn] = 2542-3975
 #      param[base_url] = http://www.clinicaltdd.com/
+      # changed to “Aging Advances” in 2023, but no new content found
 
       au < released ; 2016 ; Clinical and Translational Degenerative Diseases Volume 1 ; 2016 ; 1 ; http://www.clinicaltdd.com/ >
       au < released ; 2017 ; Clinical and Translational Degenerative Diseases Volume 2 ; 2017 ; 2 ; http://www.clinicaltdd.com/ >
       au < released ; 2018 ; Clinical and Translational Degenerative Diseases Volume 3 ; 2018 ; 3 ; http://www.clinicaltdd.com/ >
       au < released ; 2019 ; Clinical and Translational Degenerative Diseases Volume 4 ; 2019 ; 4 ; https://www.clinicaltdd.com/ >
       au < released ; 2020 ; Clinical and Translational Degenerative Diseases Volume 5 ; 2020 ; 5 ; https://www.clinicaltdd.com/ >
-      au < expected ; 2021 ; Clinical and Translational Degenerative Diseases Volume 6 ; 2021 ; 6 ; https://www.clinicaltdd.com/ >
-      au < expected ; 2022 ; Clinical and Translational Degenerative Diseases Volume 7 ; 2022 ; 7 ; https://www.clinicaltdd.com/ >
-      au < expected ; 2023 ; Clinical and Translational Degenerative Diseases Volume 8 ; 2023 ; 8 ; https://www.clinicaltdd.com/ >
 
   }
 
@@ -9072,10 +9070,14 @@
 
       param[journal_issn] = 2468-8452
 #      param[base_url] = http://www.afrijiac.org/
+       # changed to African Journal of Reproduction and Gynaecological Endoscopy in 2023, but no new content found
 
       au < released ; 2016 ; African Journal for Infertility and Assisted Conception Volume 1 ; 2016 ; 1 ; http://www.afrijiac.org/ >
       au < released ; 2017 ; African Journal for Infertility and Assisted Conception Volume 2 ; 2017 ; 2 ; http://www.afrijiac.org/ >
       au < released ; 2018 ; African Journal for Infertility and Assisted Conception Volume 3 ; 2018 ; 3 ; https://www.afrijiac.org/ >
+      au < exists ; 2019 ; African Journal for Infertility and Assisted Conception Volume 4 ; 2019 ; 4 ; https://www.afrijiac.org/ >
+      au < exists ; 2020 ; African Journal for Infertility and Assisted Conception Volume 5 ; 2020 ; 5 ; https://www.afrijiac.org/ >
+      au < exists ; 2021 ; African Journal for Infertility and Assisted Conception Volume 6 ; 2021 ; 6 ; https://www.afrijiac.org/ >
 
   }
 
@@ -10167,7 +10169,6 @@
       au < released ; 2021 ; International Journal of the Cardiovascular Academy Volume 7 ; 2021 ; 7 ; https://www.ijcva.com/ >
       au < manifest ; 2022 ; International Journal of the Cardiovascular Academy Volume 8 ; 2022 ; 8 ; https://www.ijcva.com/ >
       #deactivated
-      au < expected ; 2023 ; International Journal of the Cardiovascular Academy Volume 9 ; 2023 ; 9 ; https://www.ijcva.com/ >
 
   }
 

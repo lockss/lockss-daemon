@@ -4492,7 +4492,7 @@
 #    param[base_url] = http://www.phcog.com/
 
     param[journal_issn] = 0973-1296
-    #move to Sage, 2023. Archive will stay with Medknow until further notice.
+    #move to Sage, 2023
 
     au < doNotProcess ; exists ; 2005 ; Pharmacognosy Magazine Volume 1 ; 2005 ; 1 ; https://www.phcog.com/ ; ; >
     au < doNotProcess ; exists ; 2006 ; Pharmacognosy Magazine Volume 2 ; 2006 ; 2 ; https://www.phcog.com/ ; ; >
@@ -4512,7 +4512,6 @@
     au < finished ; finished ; 2020 ; Pharmacognosy Magazine Volume 16 ; 2020 ; 16 ; https://www.phcog.com/ ; ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; Pharmacognosy Magazine Volume 17 ; 2021 ; 17 ; https://www.phcog.com/ ; ; >
     au < frozen ; exists ; 2022 ; Pharmacognosy Magazine Volume 18 ; 2022 ; 18 ; https://www.phcog.com/ ; ; >
-    au < expected ; exists ; 2023 ; Pharmacognosy Magazine Volume 19 ; 2023 ; 19 ; https://www.phcog.com/ ; ; >
 
   }
 
@@ -5610,15 +5609,13 @@
 
       param[journal_issn] = 2542-3975
 #      param[base_url] = http://www.clinicaltdd.com/
+      # changed to “Aging Advances” in 2023, but no new content found
 
       au < finished ; frozen ; 2016 ; Clinical and Translational Degenerative Diseases Volume 1 ; 2016 ; 1 ; http://www.clinicaltdd.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2017 ; Clinical and Translational Degenerative Diseases Volume 2 ; 2017 ; 2 ; http://www.clinicaltdd.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2018 ; Clinical and Translational Degenerative Diseases Volume 3 ; 2018 ; 3 ; http://www.clinicaltdd.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2019 ; Clinical and Translational Degenerative Diseases Volume 4 ; 2019 ; 4 ; https://www.clinicaltdd.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; Clinical and Translational Degenerative Diseases Volume 5 ; 2020 ; 5 ; https://www.clinicaltdd.com/ ; ; reingest3.clockss.org:8083 >
-      au < expected ; exists ; 2021 ; Clinical and Translational Degenerative Diseases Volume 6 ; 2021 ; 6 ; https://www.clinicaltdd.com/ ; ; >
-      au < expected ; exists ; 2022 ; Clinical and Translational Degenerative Diseases Volume 7 ; 2022 ; 7 ; https://www.clinicaltdd.com/ ; ; >
-      au < expected ; exists ; 2023 ; Clinical and Translational Degenerative Diseases Volume 8 ; 2023 ; 8 ; https://www.clinicaltdd.com/ ; ; >
 
   }
 
@@ -9515,10 +9512,14 @@
 
       param[journal_issn] = 2468-8452
 #      param[base_url] = http://www.afrijiac.org/
+       # changed to African Journal of Reproduction and Gynaecological Endoscopy in 2023, but no new content found
 
       au < finished ; finished ; 2016 ; African Journal for Infertility and Assisted Conception Volume 1 ; 2016 ; 1 ; http://www.afrijiac.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; African Journal for Infertility and Assisted Conception Volume 2 ; 2017 ; 2 ; http://www.afrijiac.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2018 ; African Journal for Infertility and Assisted Conception Volume 3 ; 2018 ; 3 ; https://www.afrijiac.org/ ; ; reingest2.clockss.org:8085 >
+      au < exists ; exists ; 2019 ; African Journal for Infertility and Assisted Conception Volume 4 ; 2019 ; 4 ; https://www.afrijiac.org/ ; >
+      au < exists ; exists ; 2020 ; African Journal for Infertility and Assisted Conception Volume 5 ; 2020 ; 5 ; https://www.afrijiac.org/ ; >
+      au < exists ; exists ; 2021 ; African Journal for Infertility and Assisted Conception Volume 6 ; 2021 ; 6 ; https://www.afrijiac.org/ ; >
 
   }
 
@@ -10258,7 +10259,6 @@
       au < finished ; finished ; 2020 ; Indian Journal of Respiratory Care Volume 9 ; 2020 ; 9 ; https://www.ijrc.in/ ; ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2021 ; Indian Journal of Respiratory Care Volume 10 ; 2021 ; 10 ; https://www.ijrc.in/ ; ; >
       au < frozen ; exists ; 2022 ; Indian Journal of Respiratory Care Volume 11 ; 2022 ; 11 ; https://www.ijrc.in/ ; ; >
-      au < expected ; exists ; 2023 ; Indian Journal of Respiratory Care Volume 12 ; 2023 ; 12 ; https://www.ijrc.in/ ; ; >
 
   }
 
@@ -10609,7 +10609,6 @@
       au < deepCrawl ; exists ; 2021 ; International Journal of the Cardiovascular Academy Volume 7 ; 2021 ; 7 ; https://www.ijcva.com/ ; ; >
       au < deepCrawl ; exists ; 2022 ; International Journal of the Cardiovascular Academy Volume 8 ; 2022 ; 8 ; https://www.ijcva.com/ ; ; >
       #deactivated
-      au < expected ; exists ; 2023 ; International Journal of the Cardiovascular Academy Volume 9 ; 2023 ; 9 ; https://www.ijcva.com/ ; ; >
 
   }
 
