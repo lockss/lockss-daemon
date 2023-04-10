@@ -1410,9 +1410,9 @@ while (my $line = <>) {
 #PubFactory Journals GLN
   } elsif (($plugin eq "BerghahnJournalsPlugin")   ||
            ($plugin eq "PubFactoryJournalsPlugin") ||
-           ($plugin eq "AjtmhPlugin")      ||
-           ($plugin eq "AMetSoc2021Plugin")      ||
-           ($plugin eq "BioscientificaPlugin")      ||
+           ($plugin eq "AjtmhPlugin")              ||
+           ($plugin eq "AMetSoc2021Plugin")        ||
+           ($plugin eq "BioscientificaPlugin")     ||
            ($plugin eq "ManchesterUniversityPressPlugin")) {
       $url = sprintf("%slockss-manifest/journal/%s/%s",
       $param{base_url}, $param{journal_id}, $param{volume_name});
@@ -1446,6 +1446,7 @@ while (my $line = <>) {
 #PubFactory Journals CLOCKSS
   } elsif (($plugin eq "ClockssBerghahnJournalsPlugin") ||
            ($plugin eq "ClockssAjtmhPlugin")            ||
+           ($plugin eq "ClockssAPMAJournalsPlugin")     ||
            ($plugin eq "ClockssAMetSoc2021Plugin")      ||
            ($plugin eq "ClockssManchesterUniversityPressPlugin")) {
       $url = sprintf("%slockss-manifest/journal/%s/%s",
