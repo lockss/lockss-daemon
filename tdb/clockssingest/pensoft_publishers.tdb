@@ -1409,7 +1409,7 @@
       param[au_oai_set] = geologica-saxonica
 
       au < manifest ; exists ; 2021 ; 2021 ; Geologica Saxonica Volume 2021 ; 2021 ; https://geologica-saxonica.arphahub.com/ ; >
-      au < exists ; exists ; 2022 ; 2022 ; Geologica Saxonica Volume 2022 ; 2022 ; https://geologica-saxonica.arphahub.com/ ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Geologica Saxonica Volume 2022 ; 2022 ; https://geologica-saxonica.arphahub.com/ ; >
       au < expected ; exists ; 2023 ; 2023 ; Geologica Saxonica Volume 2023 ; 2023 ; https://geologica-saxonica.arphahub.com/ ; >
 
   }
@@ -1424,8 +1424,8 @@
       param[au_oai_set] = interventionalcardioforum
 
       au < manifest ; exists ; 2021 ; 2021 ; Interventional Cardiology Forum Volume 2021 ; 2021 ; https://interventionalcardioforum.net/ ; >
-      au < exists ; exists ; 2022 ; 2022 ; Interventional Cardiology Forum Volume 2022 ; 2022 ; https://interventionalcardioforum.net/ ; >
-      au < expected ; exists ; 2023 ; 2023 ; Interventional Cardiology Forum Volume 2023 ; 2023 ; https://interventionalcardioforum.net/ ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Interventional Cardiology Forum Volume 2022 ; 2022 ; https://interventionalcardioforum.net/ ; >
+      au < manifest ; exists ; 2023 ; 2023 ; Interventional Cardiology Forum Volume 2023 ; 2023 ; https://interventionalcardioforum.net/ ; >
 
   }
 
@@ -1439,7 +1439,7 @@
       param[au_oai_set] = languagesandmodalities
 
       au < manifest ; exists ; 2021 ; 2021 ; Languages and Modalities (LaMo) Volume 2021 ; 2021 ; https://languagesandmodalities.ru/ ; >
-      au < exists ; exists ; 2022 ; 2022 ; Languages and Modalities (LaMo) Volume 2022 ; 2022 ; https://languagesandmodalities.ru/ ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Languages and Modalities (LaMo) Volume 2022 ; 2022 ; https://languagesandmodalities.ru/ ; >
       au < expected ; exists ; 2023 ; 2023 ; Languages and Modalities (LaMo) Volume 2023 ; 2023 ; https://languagesandmodalities.ru/ ; >
 
   }
@@ -1455,16 +1455,16 @@
       param[au_oai_set] = plecevo
 
       au < manifest ; exists ; 2013 ; 2013 ; Plant Ecology and Evolution Volume 2013 ; 2013 ; https://plecevo.eu/ ; >
-      au < exists ; exists ; 2014 ; 2014 ; Plant Ecology and Evolution Volume 2014 ; 2014 ; https://plecevo.eu/ ; >
-      au < exists ; exists ; 2015 ; 2015 ; Plant Ecology and Evolution Volume 2015 ; 2015 ; https://plecevo.eu/ ; >
-      au < exists ; exists ; 2016 ; 2016 ; Plant Ecology and Evolution Volume 2016 ; 2016 ; https://plecevo.eu/ ; >
-      au < exists ; exists ; 2017 ; 2017 ; Plant Ecology and Evolution Volume 2017 ; 2017 ; https://plecevo.eu/ ; >
-      au < exists ; exists ; 2018 ; 2018 ; Plant Ecology and Evolution Volume 2018 ; 2018 ; https://plecevo.eu/ ; >
-      au < exists ; exists ; 2019 ; 2019 ; Plant Ecology and Evolution Volume 2019 ; 2019 ; https://plecevo.eu/ ; >
-      au < exists ; exists ; 2020 ; 2020 ; Plant Ecology and Evolution Volume 2020 ; 2020 ; https://plecevo.eu/ ; >
-      au < exists ; exists ; 2021 ; 2021 ; Plant Ecology and Evolution Volume 2021 ; 2021 ; https://plecevo.eu/ ; >
-      au < exists ; exists ; 2022 ; 2022 ; Plant Ecology and Evolution Volume 2022 ; 2022 ; https://plecevo.eu/ ; >
-      au < expected ; exists ; 2023 ; 2023 ; Plant Ecology and Evolution Volume 2023 ; 2023 ; https://plecevo.eu/ ; >
+      au < manifest ; exists ; 2014 ; 2014 ; Plant Ecology and Evolution Volume 2014 ; 2014 ; https://plecevo.eu/ ; >
+      au < manifest ; exists ; 2015 ; 2015 ; Plant Ecology and Evolution Volume 2015 ; 2015 ; https://plecevo.eu/ ; >
+      au < manifest ; exists ; 2016 ; 2016 ; Plant Ecology and Evolution Volume 2016 ; 2016 ; https://plecevo.eu/ ; >
+      au < manifest ; exists ; 2017 ; 2017 ; Plant Ecology and Evolution Volume 2017 ; 2017 ; https://plecevo.eu/ ; >
+      au < manifest ; exists ; 2018 ; 2018 ; Plant Ecology and Evolution Volume 2018 ; 2018 ; https://plecevo.eu/ ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Plant Ecology and Evolution Volume 2019 ; 2019 ; https://plecevo.eu/ ; >
+      au < manifest ; exists ; 2020 ; 2020 ; Plant Ecology and Evolution Volume 2020 ; 2020 ; https://plecevo.eu/ ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Plant Ecology and Evolution Volume 2021 ; 2021 ; https://plecevo.eu/ ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Plant Ecology and Evolution Volume 2022 ; 2022 ; https://plecevo.eu/ ; >
+      au < manifest ; exists ; 2023 ; 2023 ; Plant Ecology and Evolution Volume 2023 ; 2023 ; https://plecevo.eu/ ; >
 
   }
 
@@ -1479,7 +1479,7 @@
       param[au_oai_set] = tuhinga
 
       au < manifest ; exists ; 2022 ; 2022 ; Tuhinga Volume 2022 ; 2022 ; https://tuhinga.arphahub.com/ ; >
-      au < expected ; exists ; 2023 ; 2023 ; Tuhinga Volume 2023 ; 2023 ; https://tuhinga.arphahub.com/ ; >
+      au < manifest ; exists ; 2023 ; 2023 ; Tuhinga Volume 2023 ; 2023 ; https://tuhinga.arphahub.com/ ; >
 
   }
 
