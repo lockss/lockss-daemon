@@ -769,7 +769,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; American Journal of Health-System Pharmacy Volume 63 ; 63 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; American Journal of Health-System Pharmacy Volume 64 ; 64 ; >
     au < manifest ; exists ; 2008 ; 2008 ; American Journal of Health-System Pharmacy Volume 65 ; 65 ; >
-    au < exists ; exists ; 2009 ; 2009 ; American Journal of Health-System Pharmacy Volume 66 ; 66 ; > #LXQUEUE-1779
+    au < manifest ; exists ; 2009 ; 2009 ; American Journal of Health-System Pharmacy Volume 66 ; 66 ; > #LXQUEUE-1779
     au < frozen ; exists ; 2010 ; 2010 ; American Journal of Health-System Pharmacy Volume 67 ; 67 ; >
     au < frozen ; exists ; 2011 ; 2011 ; American Journal of Health-System Pharmacy Volume 68 ; 68 ; >
     au < frozen ; exists ; 2012 ; 2012 ; American Journal of Health-System Pharmacy Volume 69 ; 69 ; >
@@ -1418,21 +1418,21 @@
     param[journal_id] = jaoac
     #content available from 1915 Volume 1 to 2007 Volume 90
 
-    au < exists ; exists ; 2008 ; 2008 ; Journal of AOAC INTERNATIONAL Volume 91 ; 91 ; >
-    au < exists ; exists ; 2009 ; 2009 ; Journal of AOAC INTERNATIONAL Volume 92 ; 92 ; >
-    au < exists ; exists ; 2010 ; 2010 ; Journal of AOAC INTERNATIONAL Volume 93 ; 93 ; >
-    au < exists ; exists ; 2011 ; 2011 ; Journal of AOAC INTERNATIONAL Volume 94 ; 94 ; >
-    au < exists ; exists ; 2012 ; 2012 ; Journal of AOAC INTERNATIONAL Volume 95 ; 95 ; >
-    au < exists ; exists ; 2013 ; 2013 ; Journal of AOAC INTERNATIONAL Volume 96 ; 96 ; >
-    au < exists ; exists ; 2014 ; 2014 ; Journal of AOAC INTERNATIONAL Volume 97 ; 97 ; >
-    au < exists ; exists ; 2015 ; 2015 ; Journal of AOAC INTERNATIONAL Volume 98 ; 98 ; >
-    au < exists ; exists ; 2016 ; 2016 ; Journal of AOAC INTERNATIONAL Volume 99 ; 99 ; >
-    au < exists ; exists ; 2017 ; 2017 ; Journal of AOAC INTERNATIONAL Volume 100 ; 100 ; >
-    au < exists ; exists ; 2018 ; 2018 ; Journal of AOAC INTERNATIONAL Volume 101 ; 101 ; >
-    au < exists ; exists ; 2019 ; 2019 ; Journal of AOAC INTERNATIONAL Volume 102 ; 102 ; >
-    au < exists ; exists ; 2020 ; 2020 ; Journal of AOAC INTERNATIONAL Volume 103 ; 103 ; >
-    au < exists ; exists ; 2021 ; 2021 ; Journal of AOAC INTERNATIONAL Volume 104 ; 104 ; >
-    au < exists ; exists ; 2022 ; 2022 ; Journal of AOAC INTERNATIONAL Volume 105 ; 105 ; >
+    au < manifest ; exists ; 2008 ; 2008 ; Journal of AOAC INTERNATIONAL Volume 91 ; 91 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; Journal of AOAC INTERNATIONAL Volume 92 ; 92 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; Journal of AOAC INTERNATIONAL Volume 93 ; 93 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Journal of AOAC INTERNATIONAL Volume 94 ; 94 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Journal of AOAC INTERNATIONAL Volume 95 ; 95 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Journal of AOAC INTERNATIONAL Volume 96 ; 96 ; >
+    au < manifest ; exists ; 2014 ; 2014 ; Journal of AOAC INTERNATIONAL Volume 97 ; 97 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; Journal of AOAC INTERNATIONAL Volume 98 ; 98 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Journal of AOAC INTERNATIONAL Volume 99 ; 99 ; >
+    au < manifest ; exists ; 2017 ; 2017 ; Journal of AOAC INTERNATIONAL Volume 100 ; 100 ; >
+    au < manifest ; exists ; 2018 ; 2018 ; Journal of AOAC INTERNATIONAL Volume 101 ; 101 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Journal of AOAC INTERNATIONAL Volume 102 ; 102 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Journal of AOAC INTERNATIONAL Volume 103 ; 103 ; >
+    au < manifest ; exists ; 2021 ; 2021 ; Journal of AOAC INTERNATIONAL Volume 104 ; 104 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Journal of AOAC INTERNATIONAL Volume 105 ; 105 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Journal of AOAC INTERNATIONAL Volume 106 ; 106 ; >
 
   }
@@ -2307,7 +2307,7 @@
     au < frozen ; exists ; 2010 ; 2010 ; Biological Journal of the Linnean Society Volume 99-101 ; 99-101 ; >
     au < frozen ; exists ; 2011 ; 2011 ; Biological Journal of the Linnean Society Volume 102-104 ; 102-104 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Biological Journal of the Linnean Society Volume 105-107 ; 105-107 ; >
-    au < exists ; exists ; 2013 ; 2013 ; Biological Journal of the Linnean Society Volume 108-110 ; 108-110 ; > #504 gateway timeout https://academic.oup.com/view-large/82253110
+    au < manifest ; exists ; 2013 ; 2013 ; Biological Journal of the Linnean Society Volume 108-110 ; 108-110 ; > #504 gateway timeout https://academic.oup.com/view-large/82253110
     au < frozen ; exists ; 2014 ; 2014 ; Biological Journal of the Linnean Society Volume 111-113 ; 111-113 ; >
     au < frozen ; exists ; 2015 ; 2015 ; Biological Journal of the Linnean Society Volume 114-116 ; 114-116 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Biological Journal of the Linnean Society Volume 117-119 ; 117-119 ; >
@@ -2591,7 +2591,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Biostatistics Volume 19 ; 19 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Biostatistics Volume 20 ; 20 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Biostatistics Volume 21 ; 21 ; >
-    au < exists ; exists ; 2021 ; 2021 ; Biostatistics Volume 22 ; 22 ; > #500 internal server error
+    au < manifest ; exists ; 2021 ; 2021 ; Biostatistics Volume 22 ; 22 ; > #500 internal server error
     au < crawling ; exists ; 2022 ; 2022 ; Biostatistics Volume 23 ; 23 ; > #500 internal server error
     au < doNotProcess ; exists ; 2023 ; 2023 ; Biostatistics Volume 24 ; 24 ; > #500 internal server error
 
@@ -2615,7 +2615,7 @@
     au < frozen ; exists ; 2012 ; 2012 ; Botanical Journal of the Linnean Society Volume 168-170 ; 168-170 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Botanical Journal of the Linnean Society Volume 171-173 ; 171-173 ; >
     au < frozen ; exists ; 2014 ; 2014 ; Botanical Journal of the Linnean Society Volume 174-176 ; 174-176 ; >
-    au < exists ; exists ; 2015 ; 2015 ; Botanical Journal of the Linnean Society Volume 177-179 ; 177-179 ; > #LXQUEUE-1592
+    au < manifest ; exists ; 2015 ; 2015 ; Botanical Journal of the Linnean Society Volume 177-179 ; 177-179 ; > #LXQUEUE-1592
     au < frozen ; exists ; 2016 ; 2016 ; Botanical Journal of the Linnean Society Volume 180-182 ; 180-182 ; >
     au < finished ; finished ; 2017 ; 2017 ; Botanical Journal of the Linnean Society Volume 183-185 ; 183-185 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Botanical Journal of the Linnean Society Volume 186-188 ; 186-188 ; >
@@ -7020,7 +7020,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Genome Biology and Evolution Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Genome Biology and Evolution Volume 7 ; 7 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Genome Biology and Evolution Volume 8 ; 8 ; >
-    au < exists ; exists ; 2017 ; 2017 ; Genome Biology and Evolution Volume 9 ; 9 ; > # 403 error on cdn back file
+    au < manifest ; exists ; 2017 ; 2017 ; Genome Biology and Evolution Volume 9 ; 9 ; > # 403 error on cdn back file
     au < frozen ; exists ; 2018 ; 2018 ; Genome Biology and Evolution Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Genome Biology and Evolution Volume 11 ; 11 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Genome Biology and Evolution Volume 12 ; 12 ; >
@@ -8920,7 +8920,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; International Journal of Epidemiology Volume 46 ; 46 ; >
     au < frozen ; exists ; 2018 ; 2018 ; International Journal of Epidemiology Volume 47 ; 47 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; International Journal of Epidemiology Volume 48 ; 48 ; >
-    au < exists ; exists ; 2020 ; 2020 ; International Journal of Epidemiology Volume 49 ; 49 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; International Journal of Epidemiology Volume 49 ; 49 ; >
     au < frozen ; exists ; 2021 ; 2021 ; International Journal of Epidemiology Volume 50 ; 50 ; >
     au < crawling ; exists ; 2022 ; 2022 ; International Journal of Epidemiology Volume 51 ; 51 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; International Journal of Epidemiology Volume 52 ; 52 ; >
@@ -12689,7 +12689,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Semantics Volume 34 ; 34 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Semantics Volume 35 ; 35 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Semantics Volume 36 ; 36 ; >
-    au < exists ; exists ; 2020 ; 2020 ; Journal of Semantics Volume 37 ; 37 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Journal of Semantics Volume 37 ; 37 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Journal of Semantics Volume 38 ; 38 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Semantics Volume 39 ; 39 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Journal of Semantics Volume 40 ; 40 ; >
@@ -12917,7 +12917,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Surgical Case Reports Volume 2017 ; 2017 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Surgical Case Reports Volume 2018 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Surgical Case Reports Volume 2019 ; 2019 ; >
-    au < exists ; exists ; 2020 ; 2020 ; Journal of Surgical Case Reports Volume 2020 ; 2020 ; > #LXQUEUE-1592
+    au < manifest ; exists ; 2020 ; 2020 ; Journal of Surgical Case Reports Volume 2020 ; 2020 ; > #LXQUEUE-1592
     au < frozen ; exists ; 2021 ; 2021 ; Journal of Surgical Case Reports Volume 2021 ; 2021 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Surgical Case Reports Volume 2022 ; 2022 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Journal of Surgical Case Reports Volume 2023 ; 2023 ; >
@@ -13067,7 +13067,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Tropical Pediatrics Volume 63 ; 63 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Tropical Pediatrics Volume 64 ; 64 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Tropical Pediatrics Volume 65 ; 65 ; >
-    au < exists ; exists ; 2020 ; 2020 ; Journal of Tropical Pediatrics Volume 66 ; 66 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Journal of Tropical Pediatrics Volume 66 ; 66 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Journal of Tropical Pediatrics Volume 67 ; 67 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Tropical Pediatrics Volume 68 ; 68 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Journal of Tropical Pediatrics Volume 69 ; 69 ; >
@@ -14711,7 +14711,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Monthly Notices of the Royal Astronomical Society Volume 464-472 ; 464-472 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Monthly Notices of the Royal Astronomical Society Volume 473-481 ; 473-481 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Monthly Notices of the Royal Astronomical Society Volume 482-490 ; 482-490 ; >
-    au < exists ; exists ; 2020 ; 2020 ; Monthly Notices of the Royal Astronomical Society Volume 491-499 ; 491-499 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Monthly Notices of the Royal Astronomical Society Volume 491-499 ; 491-499 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Monthly Notices of the Royal Astronomical Society Volume 500-508 ; 500-508 ; >
     au < manifest ; exists ; 2022 ; 2022 ; Monthly Notices of the Royal Astronomical Society Volume 509-517 ; 509-517 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Monthly Notices of the Royal Astronomical Society Volume 518-526 ; 518-526 ; >
@@ -15330,7 +15330,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Nicotine & Tobacco Research Volume 19 ; 19 ; >
     au < finished ; finished ; 2018 ; 2018 ; Nicotine & Tobacco Research Volume 20 ; 20 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Nicotine & Tobacco Research Volume 21 ; 21 ; >
-    au < exists ; exists ; 2020 ; 2020 ; Nicotine & Tobacco Research Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Nicotine & Tobacco Research Volume 22 ; 22 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Nicotine & Tobacco Research Volume 23 ; 23 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Nicotine & Tobacco Research Volume 24 ; 24 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Nicotine & Tobacco Research Volume 25 ; 25 ; >
@@ -18378,7 +18378,7 @@
     au < frozen ; exists ; 2016 ; 2016 ; Shakespeare Quarterly Volume 67 ; 67 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Shakespeare Quarterly Volume 68 ; 68 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Shakespeare Quarterly Volume 69 ; 69 ; >
-    au < exists ; exists ; 2019 ; 2019 ; Shakespeare Quarterly Volume 70 ; 70 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Shakespeare Quarterly Volume 70 ; 70 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Shakespeare Quarterly Volume 71 ; 71 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Shakespeare Quarterly Volume 72 ; 72 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Shakespeare Quarterly Volume 73 ; 73 ; >
