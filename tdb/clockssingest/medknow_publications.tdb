@@ -5775,12 +5775,14 @@
 
       title <
         name = Digital Medicine ;
+        issn = 2542-629X ;
         eissn = 2226-8561
       >
 
       param[journal_issn] = 2226-8561
 #      param[base_url] = http://www.digitmedicine.com/
       #https://www.digitmedicine.com/backissues.asp redirects to https://www.digitmedicine.com/browse.asp
+    #move to LWW in 2023, Archive will stay with Medknow until further notice.
 
       au < finished ; finished ; 2015 ; Digital Medicine Volume 1 ; 2015 ; 1 ; http://www.digitmedicine.com/ ; ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2016 ; Digital Medicine Volume 2 ; 2016 ; 2 ; http://www.digitmedicine.com/ ; ; reingest5.clockss.org:8082 >
@@ -5790,7 +5792,7 @@
       au < finished ; finished ; 2020 ; Digital Medicine Volume 6 ; 2020 ; 6 ; https://www.digitmedicine.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2021 ; Digital Medicine Volume 7 ; 2021 ; 7 ; https://www.digitmedicine.com/ ; ; reingest4.clockss.org:8082 >
       au < notReady ; exists ; 2022 ; Digital Medicine Volume 8 ; 2022 ; 8 ; https://www.digitmedicine.com/ ; ; > #browse instead of backissues
-      au < manifest ; exists ; 2023 ; Digital Medicine Volume 9 ; 2023 ; 9 ; https://www.digitmedicine.com/ ; ; > #browse instead of backissues
+      au < manifest ; exists ; 2023 ; Digital Medicine Volume 9 ; 2023 ; 9 ; https://www.digitmedicine.com/ ; ; >
 
   }
 

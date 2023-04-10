@@ -5342,11 +5342,13 @@
 
       title <
         name = Digital Medicine ;
+        issn = 2542-629X ;
         eissn = 2226-8561
       >
 
       param[journal_issn] = 2226-8561
 #      param[base_url] = http://www.digitmedicine.com/
+    #move to LWW in 2023, Archive will stay with Medknow until further notice.
 
       au < released ; 2015 ; Digital Medicine Volume 1 ; 2015 ; 1 ; http://www.digitmedicine.com/ >
       au < released ; 2016 ; Digital Medicine Volume 2 ; 2016 ; 2 ; http://www.digitmedicine.com/ >
