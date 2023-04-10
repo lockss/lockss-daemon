@@ -2,8 +2,9 @@
 
   publisher <
     name = American Institute of Aeronautics and Astronautics ;
-    info[back] = 1900 ;
     info[contract] = 2014 ;
+    info[back] = 1930 ;
+    info[min_year] = 1930 ;
     info[tester] = 5 ;
     info[poller] = 3
   >

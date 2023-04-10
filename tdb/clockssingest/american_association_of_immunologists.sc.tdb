@@ -2,8 +2,9 @@
 
   publisher <
     name = American Association of Immunologists ;
-    info[back] = 1990 ;
     info[contract] = 2016 ;
+    info[back] = 1990 ;
+    info[min_year] = 1916 ;
     info[tester] = 5 ;
     info[poller] = 6 ;
     info[platform] = SC. LXPUB-226

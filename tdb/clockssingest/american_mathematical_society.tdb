@@ -2,8 +2,9 @@
 
   publisher <
     name = American Mathematical Society ;
-    info[back] = 1890 ;
     info[contract] = 2012 ;
+    info[back] = 1891 ;
+    info[min_year] = 1891 ;
     info[tester] = 5 ;
     info[poller] = 2
 
