@@ -34,6 +34,14 @@ public class PubFactoryHtmlCrawlFilterFactory implements FilterFactory {
       // related content is similarly unnecessary
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "component-related-content"),
       HtmlNodeFilters.tagWithAttributeRegex("a", "class", "relatedArticle"),
+      //https://japmaonline.org/view/journals/apms/112/1/17-224.xml
+      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "headerWrap"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "smartNav"),
+      HtmlNodeFilters.tagWithAttributeRegex("section", "class", "refSection"),
+      HtmlNodeFilters.tagWithAttributeRegex("span", "class", "bg-primary"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "bg-tertiary"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "component-volume-issue-selector"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "component-content-item"),
     };
 
     return new HtmlFilterInputStream(in,
