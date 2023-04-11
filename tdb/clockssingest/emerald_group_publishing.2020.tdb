@@ -47,8 +47,8 @@
     param[journal_issn] = 1055-4769
     comment[journal_id] = alc
 
-    au < crawling ; exists ; 1991 ; Academic and Library Computing Volume 8 ; 8 ; >
-    au < crawling ; exists ; 1992 ; Academic and Library Computing Volume 9 ; 9 ; >
+    au < frozen ; exists ; 1991 ; Academic and Library Computing Volume 8 ; 8 ; >
+    au < frozen ; exists ; 1992 ; Academic and Library Computing Volume 9 ; 9 ; >
 
   }
 
@@ -98,11 +98,11 @@
 
     au < manifest ; exists ; 1988 ; Accounting, Auditing & Accountability Journal Volume 1 ; 1 ; >
     au < manifest ; exists ; 1989 ; Accounting, Auditing & Accountability Journal Volume 2 ; 2 ; >
-    au < crawling ; exists ; 1990 ; Accounting, Auditing & Accountability Journal Volume 3 ; 3 ; >
-    au < crawling ; exists ; 1991 ; Accounting, Auditing & Accountability Journal Volume 4 ; 4 ; >
-    au < crawling ; exists ; 1992 ; Accounting, Auditing & Accountability Journal Volume 5 ; 5 ; >
-    au < crawling ; exists ; 1993 ; Accounting, Auditing & Accountability Journal Volume 6 ; 6 ; >
-    au < crawling ; exists ; 1994 ; Accounting, Auditing & Accountability Journal Volume 7 ; 7 ; >
+    au < frozen ; exists ; 1990 ; Accounting, Auditing & Accountability Journal Volume 3 ; 3 ; >
+    au < frozen ; exists ; 1991 ; Accounting, Auditing & Accountability Journal Volume 4 ; 4 ; >
+    au < frozen ; exists ; 1992 ; Accounting, Auditing & Accountability Journal Volume 5 ; 5 ; >
+    au < frozen ; exists ; 1993 ; Accounting, Auditing & Accountability Journal Volume 6 ; 6 ; >
+    au < frozen ; exists ; 1994 ; Accounting, Auditing & Accountability Journal Volume 7 ; 7 ; >
     au < finished ; manifest ; 1995 ; Accounting, Auditing & Accountability Journal Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Accounting, Auditing & Accountability Journal Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1997 ; Accounting, Auditing & Accountability Journal Volume 10 ; 10 ; reingest3.clockss.org:8083 >
@@ -349,10 +349,10 @@
     au < manifest ; exists ; 1987 ; Aircraft Engineering and Aerospace Technology Volume 59 ; 59 ; >
     au < manifest ; exists ; 1988 ; Aircraft Engineering and Aerospace Technology Volume 60 ; 60 ; >
     au < manifest ; exists ; 1989 ; Aircraft Engineering and Aerospace Technology Volume 61 ; 61 ; >
-    au < crawling ; exists ; 1990 ; Aircraft Engineering and Aerospace Technology Volume 62 ; 62 ; >
-    au < crawling ; exists ; 1991 ; Aircraft Engineering and Aerospace Technology Volume 63 ; 63 ; >
-    au < crawling ; exists ; 1992 ; Aircraft Engineering and Aerospace Technology Volume 64 ; 64 ; >
-    au < crawling ; exists ; 1993 ; Aircraft Engineering and Aerospace Technology Volume 65 ; 65 ; >
+    au < frozen ; exists ; 1990 ; Aircraft Engineering and Aerospace Technology Volume 62 ; 62 ; >
+    au < frozen ; exists ; 1991 ; Aircraft Engineering and Aerospace Technology Volume 63 ; 63 ; >
+    au < frozen ; exists ; 1992 ; Aircraft Engineering and Aerospace Technology Volume 64 ; 64 ; >
+    au < frozen ; exists ; 1993 ; Aircraft Engineering and Aerospace Technology Volume 65 ; 65 ; >
     au < finished ; manifest ; 1994 ; Aircraft Engineering and Aerospace Technology Volume 66 ; 66 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1995 ; Aircraft Engineering and Aerospace Technology Volume 67 ; 67 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1996 ; Aircraft Engineering and Aerospace Technology Volume 68 ; 68 ; reingest1.clockss.org:8082 >
@@ -400,11 +400,11 @@
     au < manifest ; exists ; 1987 ; American Journal of Business Volume 2 ; 2 ; >
     au < manifest ; exists ; 1988 ; American Journal of Business Volume 3 ; 3 ; >
     au < manifest ; exists ; 1989 ; American Journal of Business Volume 4 ; 4 ; >
-    au < crawling ; exists ; 1990 ; American Journal of Business Volume 5 ; 5 ; >
-    au < crawling ; exists ; 1991 ; American Journal of Business Volume 6 ; 6 ; >
-    au < crawling ; exists ; 1992 ; American Journal of Business Volume 7 ; 7 ; >
-    au < crawling ; exists ; 1993 ; American Journal of Business Volume 8 ; 8 ; >
-    au < crawling ; exists ; 1994 ; American Journal of Business Volume 9 ; 9 ; >
+    au < frozen ; exists ; 1990 ; American Journal of Business Volume 5 ; 5 ; >
+    au < frozen ; exists ; 1991 ; American Journal of Business Volume 6 ; 6 ; >
+    au < frozen ; exists ; 1992 ; American Journal of Business Volume 7 ; 7 ; >
+    au < frozen ; exists ; 1993 ; American Journal of Business Volume 8 ; 8 ; >
+    au < frozen ; exists ; 1994 ; American Journal of Business Volume 9 ; 9 ; >
     au < finished ; manifest ; 1995 ; American Journal of Business Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; American Journal of Business Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 1997 ; American Journal of Business Volume 12 ; 12 ; reingest2.clockss.org:8085 >
@@ -501,11 +501,11 @@
     au < manifest ; exists ; 1987 ; Anti-Corrosion Methods and Materials Volume 34 ; 34 ; >
     au < manifest ; exists ; 1988 ; Anti-Corrosion Methods and Materials Volume 35 ; 35 ; >
     au < manifest ; exists ; 1989 ; Anti-Corrosion Methods and Materials Volume 36 ; 36 ; >
-    au < crawling ; exists ; 1990 ; Anti-Corrosion Methods and Materials Volume 37 ; 37 ; >
-    au < crawling ; exists ; 1991 ; Anti-Corrosion Methods and Materials Volume 38 ; 38 ; >
-    au < crawling ; exists ; 1992 ; Anti-Corrosion Methods and Materials Volume 39 ; 39 ; >
-    au < crawling ; exists ; 1993 ; Anti-Corrosion Methods and Materials Volume 40 ; 40 ; >
-    au < crawling ; exists ; 1994 ; Anti-Corrosion Methods and Materials Volume 41 ; 41 ; >
+    au < frozen ; exists ; 1990 ; Anti-Corrosion Methods and Materials Volume 37 ; 37 ; >
+    au < frozen ; exists ; 1991 ; Anti-Corrosion Methods and Materials Volume 38 ; 38 ; >
+    au < frozen ; exists ; 1992 ; Anti-Corrosion Methods and Materials Volume 39 ; 39 ; >
+    au < frozen ; exists ; 1993 ; Anti-Corrosion Methods and Materials Volume 40 ; 40 ; >
+    au < frozen ; exists ; 1994 ; Anti-Corrosion Methods and Materials Volume 41 ; 41 ; >
     au < finished ; manifest ; 1995 ; Anti-Corrosion Methods and Materials Volume 42 ; 42 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 1996 ; Anti-Corrosion Methods and Materials Volume 43 ; 43 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; Anti-Corrosion Methods and Materials Volume 44 ; 44 ; reingest5.clockss.org:8082 >
@@ -612,10 +612,10 @@
     comment[journal_id] = apijm
 
     au < manifest ; exists ; 1989 ; Asia Pacific International Journal of Marketing Volume 1 ; 1 ; >
-    au < crawling ; exists ; 1990 ; Asia Pacific International Journal of Marketing Volume 2 ; 2 ; >
-    au < crawling ; exists ; 1991 ; Asia Pacific International Journal of Marketing Volume 3 ; 3 ; >
-    au < crawling ; exists ; 1992 ; Asia Pacific International Journal of Marketing Volume 4 ; 4 ; >
-    au < crawling ; exists ; 1993 ; Asia Pacific International Journal of Marketing Volume 5 ; 5 ; >
+    au < frozen ; exists ; 1990 ; Asia Pacific International Journal of Marketing Volume 2 ; 2 ; >
+    au < frozen ; exists ; 1991 ; Asia Pacific International Journal of Marketing Volume 3 ; 3 ; >
+    au < frozen ; exists ; 1992 ; Asia Pacific International Journal of Marketing Volume 4 ; 4 ; >
+    au < frozen ; exists ; 1993 ; Asia Pacific International Journal of Marketing Volume 5 ; 5 ; >
 
   }
 
@@ -631,8 +631,8 @@
     param[journal_issn] = 1355-5855
     comment[journal_id] = apjml
 
-    au < crawling ; exists ; 1993 ; Asia Pacific Journal of Marketing and Logistics Volume 5 ; 5 ; >
-    au < crawling ; exists ; 1994 ; Asia Pacific Journal of Marketing and Logistics Volume 6 ; 6 ; >
+    au < frozen ; exists ; 1993 ; Asia Pacific Journal of Marketing and Logistics Volume 5 ; 5 ; >
+    au < frozen ; exists ; 1994 ; Asia Pacific Journal of Marketing and Logistics Volume 6 ; 6 ; >
     au < finished ; manifest ; 1995 ; Asia Pacific Journal of Marketing and Logistics Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Asia Pacific Journal of Marketing and Logistics Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; Asia Pacific Journal of Marketing and Logistics Volume 9 ; 9 ; reingest2.clockss.org:8085 >
@@ -773,8 +773,8 @@
     param[journal_issn] = 1321-7348
     comment[journal_id] = ara
 
-    au < crawling ; exists ; 1992 ; Asian Review of Accounting Volume 1 ; 1 ; >
-    au < crawling ; exists ; 1994 ; Asian Review of Accounting Volume 2 ; 2 ; >
+    au < frozen ; exists ; 1992 ; Asian Review of Accounting Volume 1 ; 1 ; >
+    au < frozen ; exists ; 1994 ; Asian Review of Accounting Volume 2 ; 2 ; >
     au < finished ; manifest ; 1995 ; Asian Review of Accounting Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Asian Review of Accounting Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1997 ; Asian Review of Accounting Volume 5 ; 5 ; reingest2.clockss.org:8085 >
@@ -859,10 +859,10 @@
     au < manifest ; exists ; 1987 ; Aslib Proceedings: New Information Perspectives Volume 39 ; 39 ; >
     au < manifest ; exists ; 1988 ; Aslib Proceedings: New Information Perspectives Volume 40 ; 40 ; >
     au < manifest ; exists ; 1989 ; Aslib Proceedings: New Information Perspectives Volume 41 ; 41 ; >
-    au < crawling ; exists ; 1990 ; Aslib Proceedings: New Information Perspectives Volume 42 ; 42 ; >
-    au < crawling ; exists ; 1991 ; Aslib Proceedings: New Information Perspectives Volume 43 ; 43 ; >
-    au < crawling ; exists ; 1992 ; Aslib Proceedings: New Information Perspectives Volume 44 ; 44 ; >
-    au < crawling ; exists ; 1993 ; Aslib Proceedings: New Information Perspectives Volume 45 ; 45 ; >
+    au < frozen ; exists ; 1990 ; Aslib Proceedings: New Information Perspectives Volume 42 ; 42 ; >
+    au < frozen ; exists ; 1991 ; Aslib Proceedings: New Information Perspectives Volume 43 ; 43 ; >
+    au < frozen ; exists ; 1992 ; Aslib Proceedings: New Information Perspectives Volume 44 ; 44 ; >
+    au < frozen ; exists ; 1993 ; Aslib Proceedings: New Information Perspectives Volume 45 ; 45 ; >
     au < finished ; manifest ; 1994 ; Aslib Proceedings: New Information Perspectives Volume 46 ; 46 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1995 ; Aslib Proceedings: New Information Perspectives Volume 47 ; 47 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 1996 ; Aslib Proceedings: New Information Perspectives Volume 48 ; 48 ; reingest4.clockss.org:8082 >
@@ -906,11 +906,11 @@
     au < manifest ; exists ; 1987 ; Assembly Automation Volume 7 ; 7 ; >
     au < manifest ; exists ; 1988 ; Assembly Automation Volume 8 ; 8 ; >
     au < manifest ; exists ; 1989 ; Assembly Automation Volume 9 ; 9 ; >
-    au < crawling ; exists ; 1990 ; Assembly Automation Volume 10 ; 10 ; >
-    au < crawling ; exists ; 1991 ; Assembly Automation Volume 11 ; 11 ; >
-    au < crawling ; exists ; 1992 ; Assembly Automation Volume 12 ; 12 ; >
-    au < crawling ; exists ; 1993 ; Assembly Automation Volume 13 ; 13 ; >
-    au < crawling ; exists ; 1994 ; Assembly Automation Volume 14 ; 14 ; >
+    au < frozen ; exists ; 1990 ; Assembly Automation Volume 10 ; 10 ; >
+    au < frozen ; exists ; 1991 ; Assembly Automation Volume 11 ; 11 ; >
+    au < frozen ; exists ; 1992 ; Assembly Automation Volume 12 ; 12 ; >
+    au < frozen ; exists ; 1993 ; Assembly Automation Volume 13 ; 13 ; >
+    au < frozen ; exists ; 1994 ; Assembly Automation Volume 14 ; 14 ; >
     au < finished ; manifest ; 1995 ; Assembly Automation Volume 15 ; 15 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Assembly Automation Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1997 ; Assembly Automation Volume 17 ; 17 ; reingest2.clockss.org:8085 >
@@ -1007,7 +1007,7 @@
     comment[journal_id] = bqmt
     #continued_by = 1463-5771
 
-    au < crawling ; exists ; 1994 ; Benchmarking for Quality Management & Technology Volume 1 ; 1 ; >
+    au < frozen ; exists ; 1994 ; Benchmarking for Quality Management & Technology Volume 1 ; 1 ; >
     au < finished ; manifest ; 1995 ; Benchmarking for Quality Management & Technology Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Benchmarking for Quality Management & Technology Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; Benchmarking for Quality Management & Technology Volume 4 ; 4 ; reingest1.clockss.org:8082 >
@@ -1067,10 +1067,10 @@
 
     au < manifest ; exists ; 1988 ; The Bottom Line: Managing Library Finances Volume 1 ; 1 ; >
     au < manifest ; exists ; 1989 ; The Bottom Line: Managing Library Finances Volume 2 ; 2 ; >
-    au < crawling ; exists ; 1990 ; The Bottom Line: Managing Library Finances Volume 3 ; 3 ; >
-    au < crawling ; exists ; 1991 ; The Bottom Line: Managing Library Finances Volume 4 ; 4 ; >
-    au < crawling ; exists ; 1992 ; The Bottom Line: Managing Library Finances Volume 5 ; 5 ; >
-    au < crawling ; exists ; 1993 ; The Bottom Line: Managing Library Finances Volume 6 ; 6 ; >
+    au < frozen ; exists ; 1990 ; The Bottom Line: Managing Library Finances Volume 3 ; 3 ; >
+    au < frozen ; exists ; 1991 ; The Bottom Line: Managing Library Finances Volume 4 ; 4 ; >
+    au < frozen ; exists ; 1992 ; The Bottom Line: Managing Library Finances Volume 5 ; 5 ; >
+    au < frozen ; exists ; 1993 ; The Bottom Line: Managing Library Finances Volume 6 ; 6 ; >
     au < manifest ; exists ; 1994 ; The Bottom Line: Managing Library Finances Volume 7 ; 7 ; >
     au < finished ; manifest ; 1995 ; The Bottom Line: Managing Library Finances Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; The Bottom Line: Managing Library Finances Volume 9 ; 9 ; reingest3.clockss.org:8083 >
@@ -1741,7 +1741,7 @@
     au < manifest ; exists ; 1990 ; Collection Building Volume 10 ; 10 ; >
     au < manifest ; exists ; 1992 ; Collection Building Volume 11 ; 11 ; >
     au < manifest ; exists ; 1993 ; Collection Building Volume 12 ; 12 ; >
-    au < crawling ; exists ; 1994 ; Collection Building Volume 13 ; 13 ; >
+    au < frozen ; exists ; 1994 ; Collection Building Volume 13 ; 13 ; >
     au < finished ; manifest ; 1995 ; Collection Building Volume 14 ; 14 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Collection Building Volume 15 ; 15 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; Collection Building Volume 16 ; 16 ; reingest1.clockss.org:8082 >
@@ -2357,7 +2357,7 @@
     au < manifest ; exists ; 1991 ; The Electronic Library Volume 9 ; 9 ; >
     au < manifest ; exists ; 1992 ; The Electronic Library Volume 10 ; 10 ; >
     au < manifest ; exists ; 1993 ; The Electronic Library Volume 11 ; 11 ; >
-    au < crawling ; exists ; 1994 ; The Electronic Library Volume 12 ; 12 ; >
+    au < frozen ; exists ; 1994 ; The Electronic Library Volume 12 ; 12 ; >
     au < finished ; manifest ; 1995 ; The Electronic Library Volume 13 ; 13 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; The Electronic Library Volume 14 ; 14 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1997 ; The Electronic Library Volume 15 ; 15 ; reingest3.clockss.org:8083 >
@@ -2509,7 +2509,7 @@
     au < manifest ; exists ; 1991 ; Engineering Computations Volume 8 ; 8 ; >
     au < manifest ; exists ; 1992 ; Engineering Computations Volume 9 ; 9 ; >
     au < manifest ; exists ; 1993 ; Engineering Computations Volume 10 ; 10 ; >
-    au < crawling ; exists ; 1994 ; Engineering Computations Volume 11 ; 11 ; >
+    au < frozen ; exists ; 1994 ; Engineering Computations Volume 11 ; 11 ; >
     au < finished ; manifest ; 1995 ; Engineering Computations Volume 12 ; 12 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Engineering Computations Volume 13 ; 13 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; Engineering Computations Volume 14 ; 14 ; reingest1.clockss.org:8082 >
@@ -2638,7 +2638,7 @@
     au < manifest ; exists ; 1991 ; Equal Opportunities International Volume 10 ; 10 ; >
     au < manifest ; exists ; 1992 ; Equal Opportunities International Volume 11 ; 11 ; >
     au < manifest ; exists ; 1993 ; Equal Opportunities International Volume 12 ; 12 ; >
-    au < crawling ; exists ; 1994 ; Equal Opportunities International Volume 13 ; 13 ; >
+    au < frozen ; exists ; 1994 ; Equal Opportunities International Volume 13 ; 13 ; >
     au < finished ; manifest ; 1995 ; Equal Opportunities International Volume 14 ; 14 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Equal Opportunities International Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1997 ; Equal Opportunities International Volume 16 ; 16 ; reingest3.clockss.org:8083 >
@@ -2945,7 +2945,7 @@
     au < manifest ; exists ; 1991 ; Facilities Volume 9 ; 9 ; >
     au < manifest ; exists ; 1992 ; Facilities Volume 10 ; 10 ; >
     au < manifest ; exists ; 1993 ; Facilities Volume 11 ; 11 ; >
-    au < crawling ; exists ; 1994 ; Facilities Volume 12 ; 12 ; >
+    au < frozen ; exists ; 1994 ; Facilities Volume 12 ; 12 ; >
     au < finished ; manifest ; 1995 ; Facilities Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; Facilities Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; Facilities Volume 15 ; 15 ; reingest5.clockss.org:8082 >
@@ -3523,7 +3523,7 @@
     au < manifest ; exists ; 1992 ; Industrial Lubrication and Tribology Volume 44 ; 44 ; >
     au < manifest ; exists ; 1993 ; Industrial Lubrication and Tribology Volume 45 ; 45 ; >
     au < finished ; manifest ; 1994 ; Industrial Lubrication and Tribology Volume 46 ; 46 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 1995 ; Industrial Lubrication and Tribology Volume 47 ; 47 ; >
+    au < frozen ; exists ; 1995 ; Industrial Lubrication and Tribology Volume 47 ; 47 ; >
     au < finished ; manifest ; 1996 ; Industrial Lubrication and Tribology Volume 48 ; 48 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1997 ; Industrial Lubrication and Tribology Volume 49 ; 49 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1998 ; Industrial Lubrication and Tribology Volume 50 ; 50 ; reingest2.clockss.org:8085 >
@@ -3591,7 +3591,7 @@
     au < manifest ; exists ; 1991 ; Industrial Management & Data Systems Volume 91 ; 91 ; >
     au < manifest ; exists ; 1992 ; Industrial Management & Data Systems Volume 92 ; 92 ; >
     au < manifest ; exists ; 1993 ; Industrial Management & Data Systems Volume 93 ; 93 ; >
-    au < crawling ; exists ; 1994 ; Industrial Management & Data Systems Volume 94 ; 94 ; >
+    au < frozen ; exists ; 1994 ; Industrial Management & Data Systems Volume 94 ; 94 ; >
     au < finished ; manifest ; 1995 ; Industrial Management & Data Systems Volume 95 ; 95 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; Industrial Management & Data Systems Volume 96 ; 96 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; Industrial Management & Data Systems Volume 97 ; 97 ; reingest5.clockss.org:8082 >
