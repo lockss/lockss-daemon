@@ -29,7 +29,6 @@
       eissn = 1178-6221
 
     >
-
     #param[journal_id] = 99
 
     au < exists ; exists ; 2008 ; Air, Soil & Water Research Volume 1 ; 1 ; aswa ; https://journals.sagepub.com/ ; >
@@ -58,7 +57,6 @@
       eissn = 1177-3901
 
     >
-
     #param[journal_id] = 1
 
     au < exists ; exists ; 2007 ; Analytical Chemistry Insights Volume 1-2 ; 1-2 ; acia ; https://journals.sagepub.com/ ; >
@@ -83,7 +81,6 @@
       eissn = 1178-6264
 
     >
-
     #param[journal_id] = 95
 
     au < exists ; exists ; 2008 ; Biochemistry Insights Volume 1 ; 1 ; bcia ; https://journals.sagepub.com/ ; >
@@ -112,7 +109,6 @@
       eissn = 1177-9322
 
     >
-
     #param[journal_id] = 39
 
     au < exists ; exists ; 2007 ; Bioinformatics and Biology Insights Volume 1 ; 1 ; bbia ; https://journals.sagepub.com/ ; >
@@ -142,7 +138,6 @@
       eissn = 1177-2719
 
     >
-
     #param[journal_id] = 4
 
     au < exists ; exists ; 2006 ; Biomarker Insights Volume 1 ; 1 ; bmia ; https://journals.sagepub.com/ ; >
@@ -173,7 +168,6 @@
       eissn = 1179-299X
 
     >
-
     #param[journal_id] = 154
 
     au < exists ; exists ; 2009 ; Biomarkers in Cancer Volume 1 ; 1 ; bica ; https://journals.sagepub.com/ ; >
@@ -201,7 +195,6 @@
       eissn = 1179-5972
 
     >
-
     #param[journal_id] = 170
 
     au < exists ; exists ; 2009 ; Biomedical Engineering and Computational Biology Volume 1 ; 1 ; beca ; https://journals.sagepub.com/ ; >
@@ -228,7 +221,6 @@
       eissn = 1178-2226
 
     >
-
     #param[journal_id] = 82
 
     au < exists ; exists ; 2008 ; Biomedical Informatics Insights Volume 1 ; 1 ; biia ; https://journals.sagepub.com/ ; >
@@ -256,7 +248,6 @@
       eissn = 1179-061X
 
     >
-
     #param[journal_id] = 120
 
     au < exists ; exists ; 2008 ; Bone and Tissue Regeneration Insights Volume 1 ; 1 ; btra ; https://journals.sagepub.com/ ; >
@@ -282,7 +273,6 @@
       eissn = 1178-2234
 
     >
-
     #param[journal_id] = 84
 
     au < exists ; exists ; 2008 ; Breast Cancer: Basic and Clinical Research Volume 1-2 ; 1-2 ; bcba ; https://journals.sagepub.com/ ; >
@@ -311,7 +301,6 @@
       eissn = 1179-0644
 
     >
-
     #param[journal_id] = 122
 
     au < exists ; exists ; 2008 ; Cancer Growth and Metastasis Volume 1 ; 1 ; cgma ; https://journals.sagepub.com/ ; >
@@ -340,7 +329,6 @@
       eissn = 1176-9351
 
     >
-
     #param[journal_id] = 10
 
     au < exists ; exists ; 2005 ; Cancer Informatics Volume 1 ; 1 ; cixa ; https://journals.sagepub.com/ ; >
@@ -372,7 +360,6 @@
       eissn = 1179-5441
 
     >
-
     #param[journal_id] = 46
 
     au < doNotProcess ; doNotProcess ; 2008 ; Clinical Medicine Insights: Arthritis and Musculoskeletal Disorders Volume 1 ; 1 ; amda ; http://journals.sagepub.com/ ; >
@@ -401,7 +388,6 @@
       eissn = 1179-545X
 
     >
-
     #param[journal_id] = 63
 
     au < exists ; exists ; 2008 ; Clinical Medicine Insights: Blood Disorders Volume 1 ; 1 ; bdxa ; https://journals.sagepub.com/ ; >
@@ -415,11 +401,11 @@
     au < finished ; finished ; 2016 ; Clinical Medicine Insights: Blood Disorders Volume 9 ; 9 ; bdxa ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2017 ; Clinical Medicine Insights: Blood Disorders Volume 10 ; 10 ; bdxa ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Blood Disorders Volume 11 ; 11 ; bdxa ; http://journals.sagepub.com/ ; >
-      au < exists ; exists ; 2019 ; Clinical Medicine Insights: Blood Disorders Volume 12 ; 12 ; bdxa ; https://journals.sagepub.com/ ;  >
-      au < exists ; exists ; 2020 ; Clinical Medicine Insights: Blood Disorders Volume 13 ; 13 ; bdxa ; https://journals.sagepub.com/ ;  >
-      au < exists ; exists ; 2021 ; Clinical Medicine Insights: Blood Disorders Volume 14 ; 14 ; bdxa ; https://journals.sagepub.com/ ;  >
-      au < expected ; exists ; 2022 ; Clinical Medicine Insights: Blood Disorders Volume 15 ; 15 ; bdxa ; https://journals.sagepub.com/ ;  >
-      au < expected ; exists ; 2023 ; Clinical Medicine Insights: Blood Disorders Volume 16 ; 16 ; bdxa ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2019 ; Clinical Medicine Insights: Blood Disorders Volume 12 ; 12 ; bdxa ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2020 ; Clinical Medicine Insights: Blood Disorders Volume 13 ; 13 ; bdxa ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2021 ; Clinical Medicine Insights: Blood Disorders Volume 14 ; 14 ; bdxa ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2022 ; Clinical Medicine Insights: Blood Disorders Volume 15 ; 15 ; bdxa ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2023 ; Clinical Medicine Insights: Blood Disorders Volume 16 ; 16 ; bdxa ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -430,7 +416,6 @@
       eissn = 1179-5468
 
     >
-
     #param[journal_id] = 48
 
     au < exists ; exists ; 2007 ; Clinical Medicine Insights: Cardiology Volume 1 ; 1 ; cica ; https://journals.sagepub.com/ ; >
@@ -445,6 +430,11 @@
     au < finished ; finished ; 2016 ; Clinical Medicine Insights: Cardiology Volume 10 ; 10 ; cica ; http://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2017 ; Clinical Medicine Insights: Cardiology Volume 11 ; 11 ; cica ; http://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Cardiology Volume 12 ; 12 ; cica ; http://journals.sagepub.com/ ; >
+    au < exists ; exists ; 2019 ; Clinical Medicine Insights: Cardiology Volume 13 ; 13 ; cica ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2020 ; Clinical Medicine Insights: Cardiology Volume 14 ; 14 ; cica ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2021 ; Clinical Medicine Insights: Cardiology Volume 15 ; 15 ; cica ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2022 ; Clinical Medicine Insights: Cardiology Volume 16 ; 16 ; cica ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2023 ; Clinical Medicine Insights: Cardiology Volume 17 ; 17 ; cica ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -455,7 +445,6 @@
       eissn = 1179-5476
 
     >
-
     #param[journal_id] = 91
 
     au < exists ; exists ; 2008 ; Clinical Medicine Insights: Case Reports Volume 1 ; 1 ; icra ; https://journals.sagepub.com/ ; >
@@ -469,6 +458,11 @@
     au < finished ; finished ; 2016 ; Clinical Medicine Insights: Case Reports Volume 9 ; 9 ; icra ; http://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Clinical Medicine Insights: Case Reports Volume 10 ; 10 ; icra ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Case Reports Volume 11 ; 11 ; icra ; http://journals.sagepub.com/ ; >
+    au < exists ; exists ; 2019 ; Clinical Medicine Insights: Case Reports Volume 12 ; 12 ; icra ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2020 ; Clinical Medicine Insights: Case Reports Volume 13 ; 13 ; icra ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2021 ; Clinical Medicine Insights: Case Reports Volume 14 ; 14 ; icra ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2022 ; Clinical Medicine Insights: Case Reports Volume 15 ; 15 ; icra ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2023 ; Clinical Medicine Insights: Case Reports Volume 16 ; 16 ; icra ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -479,7 +473,6 @@
       eissn = 1179-5484
 
     >
-
     #param[journal_id] = 44
 
     au < exists ; exists ; 2007 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 1 ; 1 ; craa ; https://journals.sagepub.com/ ; >
@@ -494,6 +487,11 @@
     au < finished ; finished ; 2016 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 10 ; 10 ; craa ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2017 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 11 ; 11 ; craa ; http://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 12 ; 12 ; craa ; http://journals.sagepub.com/ ; >
+    au < exists ; exists ; 2019 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 13 ; 13 ; craa ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2020 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 14 ; 14 ; craa ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2021 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 15 ; 15 ; craa ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2022 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 16 ; 16 ; craa ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2023 ; Clinical Medicine Insights: Circulatory, Respiratory and Pulmonary Medicine Volume 17 ; 17 ; craa ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -504,12 +502,8 @@
       eissn = 1179-5506
 
     >
-
     #param[journal_id] = 61
 
-    au < exists ; exists ; 2008 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 1 ; 1 ; enta ; https://journals.sagepub.com/ ; >
-    au < exists ; exists ; 2009 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 2 ; 2 ; enta ; https://journals.sagepub.com/ ; >
-    au < exists ; exists ; 2010 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 3 ; 3 ; enta ; https://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 4 ; 4 ; enta ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 5 ; 5 ; enta ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 6 ; 6 ; enta ; http://journals.sagepub.com/ ; >
@@ -518,6 +512,11 @@
     au < finished ; finished ; 2016 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 9 ; 9 ; enta ; http://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 10 ; 10 ; enta ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 11 ; 11 ; enta ; http://journals.sagepub.com/ ; >
+    au < exists ; exists ; 2019 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 12 ; 12 ; enta ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2020 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 13 ; 13 ; enta ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2021 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 14 ; 14 ; enta ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2022 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 15 ; 15 ; enta ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2023 ; Clinical Medicine Insights: Ear, Nose and Throat Volume 16 ; 16 ; enta ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -528,11 +527,8 @@
       eissn = 1179-5514
 
     >
-
     #param[journal_id] = 65
 
-    au < exists ; exists ; 2008 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 1 ; 1 ; enda ; https://journals.sagepub.com/ ; >
-    au < exists ; exists ; 2009 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 2 ; 2 ; enda ; https://journals.sagepub.com/ ; >
     au < exists ; exists ; 2010 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 3 ; 3 ; enda ; https://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 4 ; 4 ; enda ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 5 ; 5 ; enda ; http://journals.sagepub.com/ ; >
@@ -542,6 +538,11 @@
     au < finished ; finished ; 2016 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 9 ; 9 ; enda ; http://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 10 ; 10 ; enda ; http://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 11 ; 11 ; enda ; http://journals.sagepub.com/ ; >
+    au < exists ; exists ; 2019 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 12 ; 12 ; enda ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2020 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 13 ; 13 ; enda ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2021 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 14 ; 14 ; enda ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2022 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 15 ; 15 ; enda ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2023 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 16 ; 16 ; enda ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -552,13 +553,8 @@
       eissn = 1179-5522
 
     >
-
     #param[journal_id] = 56
 
-    au < exists ; exists ; 2008 ; Clinical Medicine Insights: Gastroenterology Volume 1 ; 1 ; cmga ; https://journals.sagepub.com/ ; >
-    au < exists ; exists ; 2009 ; Clinical Medicine Insights: Gastroenterology Volume 2 ; 2 ; cmga ; https://journals.sagepub.com/ ; >
-    au < exists ; exists ; 2010 ; Clinical Medicine Insights: Gastroenterology Volume 3 ; 3 ; cmga ; https://journals.sagepub.com/ ; >
-    au < doNotProcess ; doNotProcess ; 2011 ; Clinical Medicine Insights: Gastroenterology Volume 4 ; 4 ; cmga ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Clinical Medicine Insights: Gastroenterology Volume 5 ; 5 ; cmga ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Clinical Medicine Insights: Gastroenterology Volume 6 ; 6 ; cmga ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Gastroenterology Volume 7 ; 7 ; cmga ; http://journals.sagepub.com/ ; >
@@ -566,6 +562,11 @@
     au < finished ; finished ; 2016 ; Clinical Medicine Insights: Gastroenterology Volume 9 ; 9 ; cmga ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Clinical Medicine Insights: Gastroenterology Volume 10 ; 10 ; cmga ; http://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Gastroenterology Volume 11 ; 11 ; cmga ; http://journals.sagepub.com/ ; >
+    au < exists ; exists ; 2019 ; Clinical Medicine Insights: Gastroenterology Volume 12 ; 12 ; cmga ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2020 ; Clinical Medicine Insights: Gastroenterology Volume 13 ; 13 ; cmga ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2021 ; Clinical Medicine Insights: Gastroenterology Volume 14 ; 14 ; cmga ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2022 ; Clinical Medicine Insights: Gastroenterology Volume 15 ; 15 ; cmga ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2023 ; Clinical Medicine Insights: Gastroenterology Volume 16 ; 16 ; cmga ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -576,12 +577,8 @@
       eissn = 1179-5549
 
     >
-
     #param[journal_id] = 42
 
-    au < exists ; exists ; 2007 ; Clinical Medicine Insights: Oncology Volume 1 ; 1 ; onca ; https://journals.sagepub.com/ ; >
-    au < exists ; exists ; 2008 ; Clinical Medicine Insights: Oncology Volume 2 ; 2 ; onca ; https://journals.sagepub.com/ ; >
-    au < exists ; exists ; 2009 ; Clinical Medicine Insights: Oncology Volume 3 ; 3 ; onca ; https://journals.sagepub.com/ ; >
     au < exists ; exists ; 2010 ; Clinical Medicine Insights: Oncology Volume 4 ; 4 ; onca ; https://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Clinical Medicine Insights: Oncology Volume 5 ; 5 ; onca ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Clinical Medicine Insights: Oncology Volume 6 ; 6 ; onca ; http://journals.sagepub.com/ ; >
@@ -591,6 +588,11 @@
     au < finished ; finished ; 2016 ; Clinical Medicine Insights: Oncology Volume 10 ; 10 ; onca ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2017 ; Clinical Medicine Insights: Oncology Volume 11 ; 11 ; onca ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Oncology Volume 12 ; 12 ; onca ; http://journals.sagepub.com/ ; >
+    au < exists ; exists ; 2019 ; Clinical Medicine Insights: Oncology Volume 13 ; 13 ; onca ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2020 ; Clinical Medicine Insights: Oncology Volume 14 ; 14 ; onca ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2021 ; Clinical Medicine Insights: Oncology Volume 15 ; 15 ; onca ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2022 ; Clinical Medicine Insights: Oncology Volume 16 ; 16 ; onca ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2023 ; Clinical Medicine Insights: Oncology Volume 17 ; 17 ; onca ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -601,11 +603,8 @@
       eissn = 1179-5557
 
     >
-
     #param[journal_id] = 54
 
-    au < exists ; exists ; 2008 ; Clinical Medicine Insights: Pathology Volume 1 ; 1 ; pata ; https://journals.sagepub.com/ ; >
-    au < exists ; exists ; 2009 ; Clinical Medicine Insights: Pathology Volume 2 ; 2 ; pata ; https://journals.sagepub.com/ ; >
     au < exists ; exists ; 2010 ; Clinical Medicine Insights: Pathology Volume 3 ; 3 ; pata ; https://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Clinical Medicine Insights: Pathology Volume 4 ; 4 ; pata ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Clinical Medicine Insights: Pathology Volume 5 ; 5 ; pata ; http://journals.sagepub.com/ ; >
@@ -615,6 +614,11 @@
     au < finished ; finished ; 2016 ; Clinical Medicine Insights: Pathology Volume 9 ; 9 ; pata ; http://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2017 ; Clinical Medicine Insights: Pathology Volume 10 ; 10 ; pata ; http://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Pathology Volume 11 ; 11 ; pata ; http://journals.sagepub.com/ ; >
+    au < exists ; exists ; 2019 ; Clinical Medicine Insights: Pathology Volume 12 ; 12 ; pata ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2020 ; Clinical Medicine Insights: Pathology Volume 13 ; 13 ; pata ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2021 ; Clinical Medicine Insights: Pathology Volume 14 ; 14 ; pata ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2022 ; Clinical Medicine Insights: Pathology Volume 15 ; 15 ; pata ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2023 ; Clinical Medicine Insights: Pathology Volume 16 ; 16 ; pata ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -625,11 +629,8 @@
       eissn = 1179-5565
 
     >
-
     #param[journal_id] = 78
 
-    au < exists ; exists ; 2008 ; Clinical Medicine Insights: Pediatrics Volume 1-2 ; 1-2 ; pdia ; https://journals.sagepub.com/ ; >
-    au < exists ; exists ; 2009 ; Clinical Medicine Insights: Pediatrics Volume 3 ; 3 ; pdia ; https://journals.sagepub.com/ ; >
     au < exists ; exists ; 2010 ; Clinical Medicine Insights: Pediatrics Volume 4 ; 4 ; pdia ; https://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Clinical Medicine Insights: Pediatrics Volume 5 ; 5 ; pdia ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Clinical Medicine Insights: Pediatrics Volume 6 ; 6 ; pdia ; http://journals.sagepub.com/ ; >
@@ -639,6 +640,11 @@
     au < finished ; finished ; 2016 ; Clinical Medicine Insights: Pediatrics Volume 10 ; 10 ; pdia ; http://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Clinical Medicine Insights: Pediatrics Volume 11 ; 11 ; pdia ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Pediatrics Volume 12 ; 12 ; pdia ; http://journals.sagepub.com/ ; >
+    au < exists ; exists ; 2019 ; Clinical Medicine Insights: Pediatrics Volume 13 ; 13 ; pdia ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2020 ; Clinical Medicine Insights: Pediatrics Volume 14 ; 14 ; pdia ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2021 ; Clinical Medicine Insights: Pediatrics Volume 15 ; 15 ; pdia ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2022 ; Clinical Medicine Insights: Pediatrics Volume 16 ; 16 ; pdia ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2023 ; Clinical Medicine Insights: Pediatrics Volume 17 ; 17 ; pdia ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -649,7 +655,6 @@
       eissn = 1179-5573
 
     >
-
     #param[journal_id] = 88
     # no years 2010, 2013 as of 10/4/13
 
@@ -662,6 +667,11 @@
     au < finished ; finished ; 2016 ; Clinical Medicine Insights: Psychiatry Volume 7 ; 7 ; psya ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2017 ; Clinical Medicine Insights: Psychiatry Volume 8 ; 8 ; psya ; http://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Psychiatry Volume 9 ; 9 ; psya ; http://journals.sagepub.com/ ; >
+    au < exists ; exists ; 2019 ; Clinical Medicine Insights: Psychiatry Volume 12 ; 12 ; psya ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2020 ; Clinical Medicine Insights: Psychiatry Volume 13 ; 13 ; psya ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2021 ; Clinical Medicine Insights: Psychiatry Volume 14 ; 14 ; psya ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2022 ; Clinical Medicine Insights: Psychiatry Volume 15 ; 15 ; psya ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2023 ; Clinical Medicine Insights: Psychiatry Volume 16 ; 16 ; psya ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -672,11 +682,8 @@
       eissn = 1179-5581
 
     >
-
     #param[journal_id] = 114
 
-    au < exists ; exists ; 2008 ; Clinical Medicine Insights: Reproductive Health Volume 1-2 ; 1-2 ; reha ; https://journals.sagepub.com/ ; >
-    au < exists ; exists ; 2009 ; Clinical Medicine Insights: Reproductive Health Volume 3 ; 3 ; reha ; https://journals.sagepub.com/ ; >
     au < exists ; exists ; 2010 ; Clinical Medicine Insights: Reproductive Health Volume 4 ; 4 ; reha ; https://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Clinical Medicine Insights: Reproductive Health Volume 5 ; 5 ; reha ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Clinical Medicine Insights: Reproductive Health Volume 6 ; 6 ; reha ; http://journals.sagepub.com/ ; >
@@ -686,6 +693,11 @@
     au < finished ; finished ; 2016 ; Clinical Medicine Insights: Reproductive Health Volume 10 ; 10 ; reha ; http://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Clinical Medicine Insights: Reproductive Health Volume 11 ; 11 ; reha ; http://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Reproductive Health Volume 12 ; 12 ; reha ; http://journals.sagepub.com/ ; >
+    au < exists ; exists ; 2019 ; Clinical Medicine Insights: Reproductive Health Volume 13 ; 13 ; reha ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2020 ; Clinical Medicine Insights: Reproductive Health Volume 14 ; 14 ; reha ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2021 ; Clinical Medicine Insights: Reproductive Health Volume 15 ; 15 ; reha ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2022 ; Clinical Medicine Insights: Reproductive Health Volume 16 ; 16 ; reha ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2023 ; Clinical Medicine Insights: Reproductive Health Volume 17 ; 17 ; reha ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -696,10 +708,8 @@
       eissn = 1179-559X
 
     >
-
     #param[journal_id] = 133
 
-    au < exists ; exists ; 2009 ; Clinical Medicine Insights: Therapeutics Volume 1 ; 1 ; thpa ; https://journals.sagepub.com/ ; >
     au < exists ; exists ; 2010 ; Clinical Medicine Insights: Therapeutics Volume 2 ; 2 ; thpa ; https://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Clinical Medicine Insights: Therapeutics Volume 3 ; 3 ; thpa ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Clinical Medicine Insights: Therapeutics Volume 4 ; 4 ; thpa ; http://journals.sagepub.com/ ; >
@@ -709,6 +719,11 @@
     au < finished ; finished ; 2016 ; Clinical Medicine Insights: Therapeutics Volume 8 ; 8 ; thpa ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Clinical Medicine Insights: Therapeutics Volume 9 ; 9 ; thpa ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Therapeutics Volume 10 ; 10 ; thpa ; http://journals.sagepub.com/ ; >
+    au < exists ; exists ; 2019 ; Clinical Medicine Insights: Therapeutics Volume 11 ; 11 ; thpa ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2020 ; Clinical Medicine Insights: Therapeutics Volume 12 ; 12 ; thpa ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2021 ; Clinical Medicine Insights: Therapeutics Volume 13 ; 13 ; thpa ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2022 ; Clinical Medicine Insights: Therapeutics Volume 14 ; 14 ; thpa ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2023 ; Clinical Medicine Insights: Therapeutics Volume 15 ; 15 ; thpa ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -719,12 +734,9 @@
       eissn = 1179-5603
 
     >
-
     #param[journal_id] = 71
     # skips years 2011 and 2012
 
-    au < exists ; exists ; 2008 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 1 ; 1 ; tria ; https://journals.sagepub.com/ ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 2 ; 2 ; tria ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 3 ; 3 ; tria ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 4 ; 4 ; tria ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 5 ; 5 ; tria ; http://journals.sagepub.com/ ; >
@@ -732,6 +744,11 @@
     au < finished ; finished ; 2016 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 7 ; 7 ; tria ; http://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2017 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 8 ; 8 ; tria ; http://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 9 ; 9 ; tria ; http://journals.sagepub.com/ ; >
+    au < exists ; exists ; 2019 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 12 ; 12 ; tria ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2020 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 13 ; 13 ; tria ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2021 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 14 ; 14 ; tria ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2022 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 15 ; 15 ; tria ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2023 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 16 ; 16 ; tria ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -742,7 +759,6 @@
       eissn = 1179-5611
 
     >
-
     #param[journal_id] = 75
 
     au < exists ; exists ; 2008 ; Clinical Medicine Insights: Urology Volume 1-2 ; 1-2 ; cmua ; https://journals.sagepub.com/ ; >
@@ -755,6 +771,11 @@
     au < finished ; finished ; 2016 ; Clinical Medicine Insights: Urology Volume 9 ; 9 ; cmua ; http://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Clinical Medicine Insights: Urology Volume 10 ; 10 ; cmua ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Urology Volume 11 ; 11 ; cmua ; http://journals.sagepub.com/ ; >
+    au < exists ; exists ; 2019 ; Clinical Medicine Insights: Urology Volume 13 ; 13 ; cmua ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2020 ; Clinical Medicine Insights: Urology Volume 14 ; 14 ; cmua ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2021 ; Clinical Medicine Insights: Urology Volume 15 ; 15 ; cmua ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2022 ; Clinical Medicine Insights: Urology Volume 16 ; 16 ; cmua ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2023 ; Clinical Medicine Insights: Urology Volume 17 ; 17 ; cmua ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -765,11 +786,8 @@
       eissn = 1179-562X
 
     >
-
     #param[journal_id] = 77
 
-    au < exists ; exists ; 2008 ; Clinical Medicine Insights: Women's Health Volume 1 ; 1 ; cmwa ; https://journals.sagepub.com/ ; >
-    au < exists ; exists ; 2009 ; Clinical Medicine Insights: Women's Health Volume 2 ; 2 ; cmwa ; https://journals.sagepub.com/ ; >
     au < exists ; exists ; 2010 ; Clinical Medicine Insights: Women's Health Volume 3 ; 3 ; cmwa ; https://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Clinical Medicine Insights: Women's Health Volume 4 ; 4 ; cmwa ; http://journals.sagepub.com/ ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Clinical Medicine Insights: Women's Health Volume 5 ; 5 ; cmwa ; http://journals.sagepub.com/ ; >
@@ -779,6 +797,11 @@
     au < finished ; finished ; 2016 ; Clinical Medicine Insights: Women's Health Volume 9 ; 9 ; cmwa ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2017 ; Clinical Medicine Insights: Women's Health Volume 10 ; 10 ; cmwa ; http://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2018 ; Clinical Medicine Insights: Women's Health Volume 11 ; 11 ; cmwa ; http://journals.sagepub.com/ ; >
+    au < exists ; exists ; 2019 ; Clinical Medicine Insights: Women's Health Volume 12 ; 12 ; cmwa ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2020 ; Clinical Medicine Insights: Women's Health Volume 13 ; 13 ; cmwa ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2021 ; Clinical Medicine Insights: Women's Health Volume 14 ; 14 ; cmwa ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2022 ; Clinical Medicine Insights: Women's Health Volume 15 ; 15 ; cmwa ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2023 ; Clinical Medicine Insights: Women's Health Volume 16 ; 16 ; cmwa ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -789,7 +812,6 @@
       eissn = 1177-3928
 
     >
-
     #param[journal_id] = 23
 
     au < exists ; exists ; 2006 ; Drug Target Insights Volume 1 ; 1 ; dtia ; https://journals.sagepub.com/ ; >
@@ -804,6 +826,11 @@
     au < finished ; finished ; 2016 ; Drug Target Insights Volume 10 ; 10 ; dtia ; http://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Drug Target Insights Volume 11 ; 11 ; dtia ; http://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Drug Target Insights Volume 12 ; 12 ; dtia ; http://journals.sagepub.com/ ; >
+    au < exists ; exists ; 2019 ; Drug Target Insights Volume 14 ; 14 ; dtia ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2020 ; Drug Target Insights Volume 15 ; 15 ; dtia ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2021 ; Drug Target Insights Volume 16 ; 16 ; dtia ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2022 ; Drug Target Insights Volume 17 ; 17 ; dtia ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2023 ; Drug Target Insights Volume 18 ; 18 ; dtia ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -814,7 +841,6 @@
       eissn = 1178-6302
 
     >
-
     #param[journal_id] = 110
 
     au < exists ; exists ; 2008 ; Environmental Health Insights Volume 1-2 ; 1-2 ; ehia ; https://journals.sagepub.com/ ; >
@@ -828,6 +854,11 @@
     au < finished ; finished ; 2016 ; Environmental Health Insights Volume 10 ; 10 ; ehia ; http://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Environmental Health Insights Volume 11 ; 11 ; ehia ; http://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2018 ; Environmental Health Insights Volume 12 ; 12 ; ehia ; http://journals.sagepub.com/ ; >
+    au < exists ; exists ; 2019 ; Environmental Health Insights Volume 13 ; 13 ; ehia ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2020 ; Environmental Health Insights Volume 14 ; 14 ; ehia ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2021 ; Environmental Health Insights Volume 15 ; 15 ; ehia ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2022 ; Environmental Health Insights Volume 16 ; 16 ; ehia ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2023 ; Environmental Health Insights Volume 17 ; 17 ; ehia ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -838,7 +869,6 @@
       eissn = 1176-9343
 
     >
-
     #param[journal_id] = 17
 
     au < exists ; exists ; 2005 ; Evolutionary Bioinformatics Volume 1 ; 1 ; evba ; https://journals.sagepub.com/ ; >
@@ -855,6 +885,11 @@
     au < finished ; finished ; 2016 ; Evolutionary Bioinformatics Volume 12 ; 12 ; evba ; http://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2017 ; Evolutionary Bioinformatics Volume 13 ; 13 ; evba ; http://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Evolutionary Bioinformatics Volume 14 ; 14 ; evba ; http://journals.sagepub.com/ ; >
+    au < exists ; exists ; 2019 ; Evolutionary Bioinformatics Volume 15 ; 15 ; evba ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2020 ; Evolutionary Bioinformatics Volume 16 ; 16 ; evba ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2021 ; Evolutionary Bioinformatics Volume 17 ; 17 ; evba ; https://journals.sagepub.com/ ;  >
+    au < exists ; exists ; 2022 ; Evolutionary Bioinformatics Volume 18 ; 18 ; evba ; https://journals.sagepub.com/ ;  >
+    au < expected ; exists ; 2023 ; Evolutionary Bioinformatics Volume 19 ; 19 ; evba ; https://journals.sagepub.com/ ;  >
 
   }
 
@@ -865,7 +900,6 @@
       eissn = 1177-6250
 
     >
-
     #param[journal_id] = 26
 
     au < exists ; exists ; 2007 ; Gene Regulation and Systems Biology Volume 1 ; 1 ; grsa ; https://journals.sagepub.com/ ; >
@@ -890,7 +924,6 @@
       eissn = 1179-237X
 
     >
-
     #param[journal_id] = 127
 
     au < exists ; exists ; 2008 ; Genetics & Epigenetics Volume 1 ; 1 ; gaea ; https://journals.sagepub.com/ ; >
@@ -913,7 +946,6 @@
       eissn = 1178-6310
 
     >
-
     #param[journal_id] = 103
 
     au < exists ; exists ; 2008 ; Genomics Insights Volume 1 ; 1 ; gena ; https://journals.sagepub.com/ ; >
@@ -937,7 +969,6 @@
       eissn = 1178-6329
 
     >
-
     #param[journal_id] = 117
 
     au < exists ; exists ; 2008 ; Health Services Insights Volume 1 ; 1 ; hisa ; https://journals.sagepub.com/ ; >
@@ -961,7 +992,6 @@
       eissn = 1178-6345
 
     >
-
     #param[journal_id] = 100
 
     au < exists ; exists ; 2009 ; Immunology and Immunogenetics Insights Volume 1 ; 1 ; iiia ; https://journals.sagepub.com/ ; >
@@ -984,7 +1014,6 @@
       eissn = 1179-9161
 
     >
-
     #param[journal_id] = 171
 
     au < exists ; exists ; 2010 ; Indian Journal of Clinical Medicine Volume 1 ; 1 ; icma ; https://journals.sagepub.com/ ; >
@@ -1006,7 +1035,6 @@
       eissn = 1178-6337
 
     >
-
     #param[journal_id] = 112
 
     au < exists ; exists ; 2008 ; Infectious Diseases: Research and Treatment Volume 1 ; 1 ; idra ; https://journals.sagepub.com/ ; >
@@ -1030,7 +1058,6 @@
       eissn = 1177-3936
 
     >
-
     #param[journal_id] = 21
 
     au < exists ; exists ; 2006 ; Integrative Medicine Insights Volume 1 ; 1 ; imia ; https://journals.sagepub.com/ ; >
@@ -1055,7 +1082,6 @@
       eissn = 1179-5433
 
     >
-
     #param[journal_id] = 129
 
     au < exists ; exists ; 2009 ; International Journal of Insect Science Volume 1 ; 1 ; insa ; https://journals.sagepub.com/ ; >
@@ -1078,7 +1104,6 @@
       eissn = 1178-6469
 
     >
-
     #param[journal_id] = 97
 
     au < exists ; exists ; 2008 ; International Journal of Tryptophan Research Volume 1 ; 1 ; trya ; https://journals.sagepub.com/ ; >
@@ -1102,7 +1127,6 @@
       eissn = 1179-6707
 
     >
-
     #param[journal_id] = 172
 
     au < exists ; exists ; 2010 ; Japanese Clinical Medicine Volume 1 ; 1 ; jpma ; https://journals.sagepub.com/ ; >
@@ -1124,7 +1148,6 @@
       eissn = 1179-0660
 
     >
-
     #param[journal_id] = 124
 
     au < exists ; exists ; 2008 ; Journal of Cell Death Volume 1 ; 1 ; clda ; https://journals.sagepub.com/ ; >
@@ -1148,7 +1171,6 @@
       eissn = 1179-5735
 
     >
-
     #param[journal_id] = 121
 
     au < exists ; exists ; 2009 ; Journal of Central Nervous System Disease Volume 1 ; 1 ; cnsa ; https://journals.sagepub.com/ ; >
@@ -1171,7 +1193,6 @@
       eissn = 1179-0695
 
     >
-
     #param[journal_id] = 131
 
     au < exists ; exists ; 2008 ; Journal of Experimental Neuroscience Volume 1 ; 1 ; exna ; https://journals.sagepub.com/ ; >
@@ -1195,7 +1216,6 @@
       eissn = 2382-1205
 
     >
-
     #param[journal_id] = 174
 
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Medical Education and Curricular Development Volume 1 ; 1 ; mdea ; http://journals.sagepub.com/ ; >
@@ -1213,7 +1233,6 @@
       eissn = 1178-6353
 
     >
-
     #param[journal_id] = 109
 
     au < exists ; exists ; 2008 ; Lipid Insights Volume 1-2 ; 1-2 ; lixa ; https://journals.sagepub.com/ ; >
@@ -1236,7 +1255,6 @@
       eissn = 1178-623X
 
     >
-
     #param[journal_id] = 115
 
     au < exists ; exists ; 2008 ; Magnetic Resonance Insights Volume 1-2 ; 1-2 ; mria ; https://journals.sagepub.com/ ; >
@@ -1259,7 +1277,6 @@
       eissn = 1178-637X
 
     >
-
     #param[journal_id] = 98
 
     au < exists ; exists ; 2008 ; Medical Equipment Insights Volume 1 ; 1 ; meia ; https://journals.sagepub.com/ ; >
@@ -1278,7 +1295,6 @@
       eissn = 1178-6361
 
     >
-
     #param[journal_id] = 108
 
     au < exists ; exists ; 2008 ; Microbiology Insights Volume 1 ; 1 ; mbia ; https://journals.sagepub.com/ ; >
@@ -1302,7 +1318,6 @@
       eissn = 1178-6388
 
     >
-
     #param[journal_id] = 101
 
     au < exists ; exists ; 2008 ; Nutrition and Metabolic Insights Volume 1 ; 1 ; nmia ; https://journals.sagepub.com/ ; >
@@ -1326,7 +1341,6 @@
       eissn = 1179-0652
 
     >
-
     #param[journal_id] = 123
 
     au < exists ; exists ; 2008 ; Open Journal of Cardiovascular Surgery Volume 1 ; 1 ; ojca ; https://journals.sagepub.com/ ; >
@@ -1349,7 +1363,6 @@
       eissn = 1179-1721
 
     >
-
     #param[journal_id] = 146
 
     au < exists ; exists ; 2009 ; Ophthalmology and Eye Diseases Volume 1 ; 1 ; oeda ; https://journals.sagepub.com/ ; >
@@ -1372,7 +1385,6 @@
       eissn = 1178-2242
 
     >
-
     #param[journal_id] = 86
 
     au < exists ; exists ; 2008 ; Palliative Care: Research and Treatment Volume 1-2 ; 1-2 ; pcra ; https://journals.sagepub.com/ ; >
@@ -1395,7 +1407,6 @@
       eissn = 1177-391X
 
     >
-
     #param[journal_id] = 25
 
     au < exists ; exists ; 2007 ; Perspectives in Medicinal Chemistry Volume 1 ; 1 ; pmda ; https://journals.sagepub.com/ ; >
@@ -1416,7 +1427,6 @@
       eissn = 1178-6418
 
     >
-
     #param[journal_id] = 106
 
     au < exists ; exists ; 2008 ; Proteomics Insights Volume 1 ; 1 ; prta ; https://journals.sagepub.com/ ; >
@@ -1442,7 +1452,6 @@
       eissn = 1179-5727
 
     >
-
     #param[journal_id] = 134
 
     au < exists ; exists ; 2008 ; Rehabilitation Process and Outcome Volume 1 ; 1 ; rpoa ; https://journals.sagepub.com/ ; >
@@ -1462,7 +1471,6 @@
       eissn = 1178-6434
 
     >
-
     #param[journal_id] = 102
 
     au < exists ; exists ; 2008 ; Signal Transduction Insights Volume 1 ; 1 ; stia ; https://journals.sagepub.com/ ; >
@@ -1486,7 +1494,6 @@
       eissn = 1178-2218
 
     >
-
     #param[journal_id] = 80
 
     au < exists ; exists ; 2008 ; Substance Abuse: Research and Treatment Volume 1-2 ; 1-2 ; sata ; https://journals.sagepub.com/ ; >
@@ -1510,7 +1517,6 @@
       eissn = 1179-173X
 
     >
-
     #param[journal_id] = 139
 
     au < exists ; exists ; 2008 ; Tobacco Use Insights Volume 1 ; 1 ; tuia ; https://journals.sagepub.com/ ; >
@@ -1534,7 +1540,6 @@
       eissn = 1178-122X
 
     >
-
     #param[journal_id] = 50
     # skips 2009, 2011, 2012 and there is no volume 3
 
