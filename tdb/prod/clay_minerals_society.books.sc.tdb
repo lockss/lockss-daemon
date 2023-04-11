@@ -1,0 +1,45 @@
+{
+
+  publisher <
+    name = Clay Minerals Society ;
+    info[platform] = Silverchair Books
+  >
+
+  plugin = org.lockss.plugin.silverchair.geoscienceworld.GeoscienceWorldSilverchairBooksPlugin
+  implicit < status ; year ; isbn ; eisbn ; name ; param[resource_id] >
+  param[base_url] = https://pubs.geoscienceworld.org/
+
+  {
+
+    title <
+       name = Clay Minerals Society Books;
+       type = bookSeries
+      >
+
+      au < manifest ; 1985 ; ; 9781881208396 ; Proceedings of the International Clay Conference Denver, 1985 ; clays/books/book/1936/Proceedings-of-the-International-Clay-Conference >
+      au < manifest ; 1989 ; ; 9781881208211 ; Quantitative Mineral Analysis of Clays ; clays/books/book/1793/Quantitative-Mineral-Analysis-of-Clays >
+      au < manifest ; 1990 ; ; 9781881208228 ; Electron–Optical Methods in Clay Science ;  clays/books/book/1794/Electron-Optical-Methods-in-Clay-Science >
+      au < manifest ; 1990 ; ; 9781881208235 ; Thermal Analysis in Clay Science ; clays/books/book/1797/Thermal-Analysis-in-Clay-Science >
+      au < manifest ; 1992 ; ; 9781881208242 ; Clay-Water Interface and its Rheological Implications ; clays/books/book/1796/Clay-Water-Interface-and-its-Rheological >
+      au < manifest ; 1993 ; ; 9781881208259 ; Computer Applications to X-Ray Powder Diffraction Analysis of Clay Minerals ; clays/books/book/1800/Computer-Applications-to-X-Ray-Powder-Diffraction >
+      au < manifest ; 1993 ; ; 9781881208389 ; Kaolin Genesis and Utilization ; clays/books/book/1811/Kaolin-Genesis-and-Utilization >
+      au < manifest ; 1994 ; ; 9781881208266 ; Layer Charge Characteristics of 2:1 Silicate Clay Minerals ; clays/books/book/1801/Layer-Charge-Characteristics-of-2-1-Silicate-Clay >
+      au < manifest ; 1994 ; ; 9781881208273 ; Scanning Probe Microscopy of Clay Minerals ; clays/books/book/1802/Scanning-Probe-Microscopy-of-Clay-Minerals >
+      au < manifest ; 1996 ; ; 9781881208280 ; Organic Pollutants in the Environment ; clays/books/book/1803/Organic-Pollutants-in-the-Environment >
+      au < manifest ; 1999 ; ; 9781881208297 ; Synchrotron X-Ray Methods in Clay Science ; clays/books/book/1804/Synchrotron-X-Ray-Methods-in-Clay-Science >
+      au < manifest ; 2002 ; ; 9781881208310 ; Teaching clay science ; clays/books/book/1805/Teaching-clay-science >
+      au < manifest ; 2002 ; ; 9781881208303 ; Electrochemical Properties of Clays ; clays/books/book/1806/Electrochemical-Properties-of-Clays >
+      au < manifest ; 2003 ; ; 9781881208327 ; Molecular Modeling of Clays and Mineral Surfaces ; clays/books/book/1807/Molecular-Modeling-of-Clays-and-Mineral-Surfaces >
+      au < manifest ; 2005 ; ; 9781881208334 ; The Application of Vibrational Spectroscopy to Clay Minerals and Layered Double Hydroxides ; clays/books/book/1808/The-Application-of-Vibrational-Spectroscopy-to >
+      au < manifest ; 2006 ; ; 9781881208341 ; Methods for Study of Microbe – Mineral Interactions ; clays/books/book/1932/Methods-for-Study-of-Microbe-Mineral-Interactions >
+      au < manifest ; 2007 ; ; 9781881208358 ; Clay-based Polymer Nano-composites (CPN) ; clays/books/book/1809/Clay-based-Polymer-Nano-composites-CPN >
+      au < manifest ; 2009 ; ; 9781881208365 ; Carbon Stabilization by Clays in the Environment: Process and Characterization Methods ; clays/books/book/1810/Carbon-Stabilization-by-Clays-in-the >
+      au < manifest ; 2010 ; ; 9781881208372 ; Clays of Yellowstone National Park ; clays/books/book/1812/Clays-of-Yellowstone-National-Park >
+      au < manifest ; 2014 ; ; 9781881208433 ; Advanced Applications of Synchrotron Radiation in Clay Science ; clays/books/book/1813/Advanced-Applications-of-Synchrotron-Radiation-in >
+      au < manifest ; 2014 ; ; 9781881208006 ; Materials and Clay Minerals ; clays/books/book/2013/Materials-and-Clay-Minerals >
+      au < manifest ; 2016 ; ; 9781881208457 ; Surface Modification of Clays and Nanocomposites ; clays/books/book/2015/Surface-Modification-of-Clays-and-Nanocomposites >
+      au < manifest ; 2016 ; ; 9781881208471 ; Filling the Gaps – from Microscopic Pore Structures to Transport Properties in Shales ; clays/books/book/2016/Filling-the-Gaps-from-Microscopic-Pore-Structures >
+      au < manifest ; 2018 ; ; 9781881208495 ; Introduction to Oil Sands Clays ; clays/books/book/2154/Introduction-to-Oil-Sands-Clays >
+
+  }
+}

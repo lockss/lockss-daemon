@@ -243,7 +243,6 @@
       type = bookSeries
     >
     
-    # not in usual HighWire shape
     param[base_url] = http://specialpapers.gsapubs.org/
     implicit < status ; year ; doi ; isbn ; name ; param[volume_name] >
 
