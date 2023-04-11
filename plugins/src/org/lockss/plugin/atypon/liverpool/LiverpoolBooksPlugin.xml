@@ -94,4 +94,12 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.atypon.liverpool.LiverpoolBooksHtmlLinkExtractorFactory</string>
   </entry>
+  <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.atypon.liverpool.LiverpoolArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.atypon.liverpool.LiverpoolArticleIteratorFactory</string>
+  </entry>
 </map>
