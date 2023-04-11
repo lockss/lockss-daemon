@@ -31,7 +31,8 @@
       au < finished ; finished ; 2019 ; Cold Spring Harbor Molecular Case Studies Volume 5 ; 5 ; http://molecularcasestudies.cshlp.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2020 ; Cold Spring Harbor Molecular Case Studies Volume 6 ; 6 ; http://molecularcasestudies.cshlp.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2021 ; Cold Spring Harbor Molecular Case Studies Volume 7 ; 7 ; http://molecularcasestudies.cshlp.org/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2022 ; Cold Spring Harbor Molecular Case Studies Volume 8 ; 8 ; http://molecularcasestudies.cshlp.org/ ; >
+      au < superseded ; exists ; 2022 ; Cold Spring Harbor Molecular Case Studies Volume 8 [superseded] ; 8 ; http://molecularcasestudies.cshlp.org/ ; >
+      au < exists ; exists ; 2022 ; Cold Spring Harbor Molecular Case Studies Volume 8 ; 8 ; https://molecularcasestudies.cshlp.org/ ; >
       au < manifest ; exists ; 2023 ; Cold Spring Harbor Molecular Case Studies Volume 9 ; 9 ; https://molecularcasestudies.cshlp.org/ ; >
 
     }
@@ -95,7 +96,8 @@
       au < finished ; finished ; 2019 ; Cold Spring Harbor Perspectives in Medicine Volume 9 ; 9 ; http://perspectivesinmedicine.cshlp.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; Cold Spring Harbor Perspectives in Medicine Volume 10 ; 10 ; http://perspectivesinmedicine.cshlp.org/ ; >
       au < deepCrawl ; exists ; 2021 ; Cold Spring Harbor Perspectives in Medicine Volume 11 ; 11 ; http://perspectivesinmedicine.cshlp.org/ ; >
-      au < crawling ; exists ; 2022 ; Cold Spring Harbor Perspectives in Medicine Volume 12 ; 12 ; http://perspectivesinmedicine.cshlp.org/ ; >
+      au < superseded ; exists ; 2022 ; Cold Spring Harbor Perspectives in Medicine Volume 12 [superseded] ; 12 ; http://perspectivesinmedicine.cshlp.org/ ; >
+      au < exists ; exists ; 2022 ; Cold Spring Harbor Perspectives in Medicine Volume 12 ; 12 ; https://perspectivesinmedicine.cshlp.org/ ; >
       au < manifest ; exists ; 2023 ; Cold Spring Harbor Perspectives in Medicine Volume 13 ; 13 ; https://perspectivesinmedicine.cshlp.org/ ; >
 
     }
@@ -132,7 +134,8 @@
       au < finished ; finished ; 2019 ; Cold Spring Harbor Protocols Volume 2019 ; 2019 ; http://cshprotocols.cshlp.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Cold Spring Harbor Protocols Volume 2020 ; 2020 ; http://cshprotocols.cshlp.org/ ; >
       au < deepCrawl ; exists ; 2021 ; Cold Spring Harbor Protocols Volume 2021 ; 2021 ; http://cshprotocols.cshlp.org/ ; >
-      au < crawling ; exists ; 2022 ; Cold Spring Harbor Protocols Volume 2022 ; 2022 ; http://cshprotocols.cshlp.org/ ; >
+      au < superseded ; exists ; 2022 ; Cold Spring Harbor Protocols Volume 2022 [superseded] ; 2022 ; http://cshprotocols.cshlp.org/ ; >
+      au < exists ; exists ; 2022 ; Cold Spring Harbor Protocols Volume 2022 ; 2022 ; https://cshprotocols.cshlp.org/ ; >
       au < manifest ; exists ; 2023 ; Cold Spring Harbor Protocols Volume 2023 ; 2023 ; https://cshprotocols.cshlp.org/ ; >
 
     }
@@ -293,7 +296,8 @@
       au < finished ; frozen ; 2019 ; Genes & Development Volume 33 ; 33 ; http://genesdev.cshlp.org/ ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; Genes & Development Volume 34 ; 34 ; http://genesdev.cshlp.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Genes & Development Volume 35 ; 35 ; http://genesdev.cshlp.org/ ; >
-      au < crawling ; exists ; 2022 ; Genes & Development Volume 36 ; 36 ; http://genesdev.cshlp.org/ ; >
+      au < superseded ; exists ; 2022 ; Genes & Development Volume 36 [superseded] ; 36 ; http://genesdev.cshlp.org/ ; >
+      au < exists ; exists ; 2022 ; Genes & Development Volume 36 ; 36 ; https://genesdev.cshlp.org/ ; >
       au < manifest ; exists ; 2023 ; Genes & Development Volume 37 ; 37 ; https://genesdev.cshlp.org/ ; >
 
     }

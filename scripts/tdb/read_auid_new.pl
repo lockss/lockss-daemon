@@ -87,6 +87,7 @@ while (my $line = <>) {
     $man_url = uri_unescape($url);
     $man_url_d = uri_unescape($url_d);
     $base_url_short = substr(uri_unescape($param{base_url}), 0, -1);
+    #printf("%s\n", $base_url_short);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
     if ($resp->is_success) {
@@ -102,7 +103,8 @@ while (my $line = <>) {
           $result = "Redirected";
         }
         #$result = "Redirected";
-    } elsif (($man_contents !~ m/body.*="$base_url_short[^"]*"/s) || ($man_contents !~ m/body.*="https?:\/\/.*"/s)) { #"
+    } elsif (($man_contents !~ m/body.*="$base_url_short[^"]*"/s) && ($man_contents !~ m/body.*="\/content\/.*"/s)) { #"
+   #} elsif (($man_contents !~ m/body.*="$base_url_short[^"]*"/s) || ($man_contents !~ m/body.*="https?:\/\/.*"/s)) { #"
         #manifest page issue urls (after "body") must contain urls which start with the same characters as the manifest url
         #or must be a relative url, in which case, the link would not start with https://.
         if ($man_contents =~ m/<a\s*href="([^"]*)">/si) { #"
@@ -158,7 +160,7 @@ while (my $line = <>) {
                 $result = "Redirected";
               }
               #$result = "Redirected";
-    } elsif (($man_contents !~ m/body.*="$base_url_short[^"]*"/s) || ($man_contents !~ m/body.*="https?:\/\/.*"/s)) { #"
+    } elsif (($man_contents !~ m/body.*="$base_url_short[^"]*"/s) && ($man_contents !~ m/body.*="\/content\/.*"/s)) { #"
         #manifest page issue urls (after "body") must contain urls which start with the same characters as the manifest url
         #or must be a relative url, in which case, the link would not start with https://.
         if ($man_contents =~ m/<a\s*href="([^"]*)">/si) { #"
