@@ -128,7 +128,7 @@
       au < finished ; crawling ; 2019 ; International Journal of Systematic and Evolutionary Microbiology Volume 69 ; 69 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; International Journal of Systematic and Evolutionary Microbiology Volume 70 ; 70 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2021 ; International Journal of Systematic and Evolutionary Microbiology Volume 71 ; 71 ; https://www.microbiologyresearch.org/ ; >
-      au < crawling ; exists ; 2022 ; International Journal of Systematic and Evolutionary Microbiology Volume 72 ; 72 ; https://www.microbiologyresearch.org/ ; >
+      au < deepCrawl ; exists ; 2022 ; International Journal of Systematic and Evolutionary Microbiology Volume 72 ; 72 ; https://www.microbiologyresearch.org/ ; >
       au < manifest ; exists ; 2023 ; International Journal of Systematic and Evolutionary Microbiology Volume 73 ; 73 ; https://www.microbiologyresearch.org/ ; >
 
   }
@@ -398,7 +398,7 @@
       au < finished ; crawling ; 2019 ; Journal of General Virology Volume 100 ; 100 ; https://www.microbiologyresearch.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; Journal of General Virology Volume 101 ; 101 ; https://www.microbiologyresearch.org/ ; >
       au < deepCrawl ; exists ; 2021 ; Journal of General Virology Volume 102 ; 102 ; https://www.microbiologyresearch.org/ ; >
-      au < crawling ; exists ; 2022 ; Journal of General Virology Volume 103 ; 103 ; https://www.microbiologyresearch.org/ ; >
+      au < deepCrawl ; exists ; 2022 ; Journal of General Virology Volume 103 ; 103 ; https://www.microbiologyresearch.org/ ; >
       au < manifest ; exists ; 2023 ; Journal of General Virology Volume 104 ; 104 ; https://www.microbiologyresearch.org/ ; >
 
   }

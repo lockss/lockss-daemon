@@ -3619,7 +3619,7 @@
     param[journal_issn] = 2345-5756
     #move to Brieflands, 2023-01-01
 
-    au < crawling ; exists ; 2014 ; Journal of Nursing and Midwifery Sciences Volume 1 ; 2014 ; 1 ; https://www.jnmsjournal.org/ ; ; >
+    au < frozen ; exists ; 2014 ; Journal of Nursing and Midwifery Sciences Volume 1 ; 2014 ; 1 ; https://www.jnmsjournal.org/ ; ; >
     au < manifest ; exists ; 2015 ; Journal of Nursing and Midwifery Sciences Volume 2 ; 2015 ; 2 ; https://www.jnmsjournal.org/ ; ; >
     au < manifest ; exists ; 2016 ; Journal of Nursing and Midwifery Sciences Volume 3 ; 2016 ; 3 ; https://www.jnmsjournal.org/ ; ; >
     au < manifest ; exists ; 2017 ; Journal of Nursing and Midwifery Sciences Volume 4 ; 2017 ; 4 ; https://www.jnmsjournal.org/ ; ; >
@@ -11963,7 +11963,7 @@
       param[journal_issn] = 2549-2276
       #param[base_url] = https://www.bjoaonline.com/
 
-      au < crawling ; exists ; 2017 ; Bali Journal of Anesthesiology Volume 1 ; 2017 ; 1 ; https://www.bjoaonline.com/ ; ; >
+      au < frozen ; exists ; 2017 ; Bali Journal of Anesthesiology Volume 1 ; 2017 ; 1 ; https://www.bjoaonline.com/ ; ; >
       au < crawling ; exists ; 2018 ; Bali Journal of Anesthesiology Volume 2 ; 2018 ; 2 ; https://www.bjoaonline.com/ ; ; >
       au < frozen ; exists ; 2019 ; Bali Journal of Anesthesiology Volume 3 ; 2019 ; 3 ; https://www.bjoaonline.com/ ; ; >
       au < frozen ; exists ; 2020 ; Bali Journal of Anesthesiology Volume 4 ; 2020 ; 4 ; https://www.bjoaonline.com/ ; ; >
@@ -12432,7 +12432,7 @@
       au < manifest ; exists ; 2014 ; International Journal of Medicine and Health Development Volume 19 ; 2014 ; 19 ; https://www.ijmhdev.com/ ; ; >
       au < manifest ; exists ; 2015 ; International Journal of Medicine and Health Development Volume 20 ; 2015 ; 20 ; https://www.ijmhdev.com/ ; ; >
       au < manifest ; exists ; 2016 ; International Journal of Medicine and Health Development Volume 21 ; 2016 ; 21 ; https://www.ijmhdev.com/ ; ; >
-      au < crawling ; exists ; 2017 ; International Journal of Medicine and Health Development Volume 22 ; 2017 ; 22 ; https://www.ijmhdev.com/ ; ; >
+      au < frozen ; exists ; 2017 ; International Journal of Medicine and Health Development Volume 22 ; 2017 ; 22 ; https://www.ijmhdev.com/ ; ; >
       au < manifest ; exists ; 2018 ; International Journal of Medicine and Health Development Volume 23 ; 2018 ; 23 ; https://www.ijmhdev.com/ ; ; >
       au < manifest ; exists ; 2019 ; International Journal of Medicine and Health Development Volume 24 ; 2019 ; 24 ; https://www.ijmhdev.com/ ; ; >
       au < frozen ; exists ; 2020 ; International Journal of Medicine and Health Development Volume 25 ; 2020 ; 25 ; https://www.ijmhdev.com/ ; ; >
@@ -12554,10 +12554,10 @@
       #param[base_url] = https://www.ijhonline.org/
 
       au < manifest ; exists ; 2011 ; Iraqi Journal of Hematology Volume 1 ; 2011 ; 1 ; https://www.ijhonline.org/ ; ; >
-      au < crawling ; exists ; 2013 ; Iraqi Journal of Hematology Volume 2 ; 2013 ; 2 ; https://www.ijhonline.org/ ; ; >
-      au < crawling ; exists ; 2014 ; Iraqi Journal of Hematology Volume 3 ; 2014 ; 3 ; https://www.ijhonline.org/ ; ; >
-      au < crawling ; exists ; 2015 ; Iraqi Journal of Hematology Volume 4 ; 2015 ; 4 ; https://www.ijhonline.org/ ; ; >
-      au < crawling ; exists ; 2016 ; Iraqi Journal of Hematology Volume 5 ; 2016 ; 5 ; https://www.ijhonline.org/ ; ; >
+      au < frozen ; exists ; 2013 ; Iraqi Journal of Hematology Volume 2 ; 2013 ; 2 ; https://www.ijhonline.org/ ; ; >
+      au < frozen ; exists ; 2014 ; Iraqi Journal of Hematology Volume 3 ; 2014 ; 3 ; https://www.ijhonline.org/ ; ; >
+      au < frozen ; exists ; 2015 ; Iraqi Journal of Hematology Volume 4 ; 2015 ; 4 ; https://www.ijhonline.org/ ; ; >
+      au < frozen ; exists ; 2016 ; Iraqi Journal of Hematology Volume 5 ; 2016 ; 5 ; https://www.ijhonline.org/ ; ; >
       au < manifest ; exists ; 2017 ; Iraqi Journal of Hematology Volume 6 ; 2017 ; 6 ; https://www.ijhonline.org/ ; ; >
       au < manifest ; exists ; 2018 ; Iraqi Journal of Hematology Volume 7 ; 2018 ; 7 ; https://www.ijhonline.org/ ; ; >
       au < manifest ; exists ; 2019 ; Iraqi Journal of Hematology Volume 8 ; 2019 ; 8 ; https://www.ijhonline.org/ ; ; >
@@ -12862,11 +12862,11 @@
       param[journal_issn] = 2320-4419
       #param[base_url] = https://www.joinsysmed.com/
 
-      au < crawling ; exists ; 2013 ; Journal of Indian System of Medicine Volume 1 ; 2013 ; 1 ; https://www.joinsysmed.com/ ; ; >
+      au < frozen ; exists ; 2013 ; Journal of Indian System of Medicine Volume 1 ; 2013 ; 1 ; https://www.joinsysmed.com/ ; ; >
       au < crawling ; exists ; 2014 ; Journal of Indian System of Medicine Volume 2 ; 2014 ; 2 ; https://www.joinsysmed.com/ ; ; >
-      au < crawling ; exists ; 2015 ; Journal of Indian System of Medicine Volume 3 ; 2015 ; 3 ; https://www.joinsysmed.com/ ; ; >
+      au < frozen ; exists ; 2015 ; Journal of Indian System of Medicine Volume 3 ; 2015 ; 3 ; https://www.joinsysmed.com/ ; ; >
       au < crawling ; exists ; 2016 ; Journal of Indian System of Medicine Volume 4 ; 2016 ; 4 ; https://www.joinsysmed.com/ ; ; >
-      au < crawling ; exists ; 2017 ; Journal of Indian System of Medicine Volume 5 ; 2017 ; 5 ; https://www.joinsysmed.com/ ; ; >
+      au < frozen ; exists ; 2017 ; Journal of Indian System of Medicine Volume 5 ; 2017 ; 5 ; https://www.joinsysmed.com/ ; ; >
       au < manifest ; exists ; 2018 ; Journal of Indian System of Medicine Volume 6 ; 2018 ; 6 ; https://www.joinsysmed.com/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of Indian System of Medicine Volume 7 ; 2019 ; 7 ; https://www.joinsysmed.com/ ; ; >
       au < manifest ; exists ; 2020 ; Journal of Indian System of Medicine Volume 8 ; 2020 ; 8 ; https://www.joinsysmed.com/ ; ; >
@@ -12915,11 +12915,11 @@
       au < crawling ; exists ; 2013 ; Journal of Integrated Health Sciences Volume 1 ; 2013 ; 1 ; https://www.jihs.in/ ; ; >
       au < manifest ; exists ; 2014 ; Journal of Integrated Health Sciences Volume 2 ; 2014 ; 2 ; https://www.jihs.in/ ; ; >
       au < manifest ; exists ; 2015 ; Journal of Integrated Health Sciences Volume 3 ; 2015 ; 3 ; https://www.jihs.in/ ; ; >
-      au < crawling ; exists ; 2016 ; Journal of Integrated Health Sciences Volume 4 ; 2016 ; 4 ; https://www.jihs.in/ ; ; >
-      au < crawling ; exists ; 2017 ; Journal of Integrated Health Sciences Volume 5 ; 2017 ; 5 ; https://www.jihs.in/ ; ; >
+      au < frozen ; exists ; 2016 ; Journal of Integrated Health Sciences Volume 4 ; 2016 ; 4 ; https://www.jihs.in/ ; ; >
+      au < frozen ; exists ; 2017 ; Journal of Integrated Health Sciences Volume 5 ; 2017 ; 5 ; https://www.jihs.in/ ; ; >
       au < manifest ; exists ; 2018 ; Journal of Integrated Health Sciences Volume 6 ; 2018 ; 6 ; https://www.jihs.in/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of Integrated Health Sciences Volume 7 ; 2019 ; 7 ; https://www.jihs.in/ ; ; >
-      au < crawling ; exists ; 2020 ; Journal of Integrated Health Sciences Volume 8 ; 2020 ; 8 ; https://www.jihs.in/ ; ; >
+      au < frozen ; exists ; 2020 ; Journal of Integrated Health Sciences Volume 8 ; 2020 ; 8 ; https://www.jihs.in/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Integrated Health Sciences Volume 9 ; 2021 ; 9 ; https://www.jihs.in/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Journal of Integrated Health Sciences Volume 10 ; 2022 ; 10 ; https://www.jihs.in/ ; ; >
       au < expected ; exists ; 2023 ; Journal of Integrated Health Sciences Volume 11 ; 2023 ; 11 ; https://www.jihs.in/ ; ; >
@@ -13153,7 +13153,7 @@
 
       au < crawling ; exists ; 2018 ; Journal of Research in Siddha Medicine Volume 1 ; 2018 ; 1 ; https://www.jrsm.in/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of Research in Siddha Medicine Volume 2 ; 2019 ; 2 ; https://www.jrsm.in/ ; ; >
-      au < crawling ; exists ; 2020 ; Journal of Research in Siddha Medicine Volume 3 ; 2020 ; 3 ; https://www.jrsm.in/ ; ; >
+      au < frozen ; exists ; 2020 ; Journal of Research in Siddha Medicine Volume 3 ; 2020 ; 3 ; https://www.jrsm.in/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Research in Siddha Medicine Volume 4 ; 2021 ; 4 ; https://www.jrsm.in/ ; ; >
 
   }
@@ -13172,7 +13172,7 @@
 
       au < manifest ; exists ; 2017 ; Journal of Society of Indian Physiotherapists Volume 1 ; 2017 ; 1 ; https://www.jsip-physio.org/ ; ; >
       au < crawling ; exists ; 2018 ; Journal of Society of Indian Physiotherapists Volume 2 ; 2018 ; 2 ; https://www.jsip-physio.org/ ; ; >
-      au < crawling ; exists ; 2019 ; Journal of Society of Indian Physiotherapists Volume 3 ; 2019 ; 3 ; https://www.jsip-physio.org/ ; ; >
+      au < frozen ; exists ; 2019 ; Journal of Society of Indian Physiotherapists Volume 3 ; 2019 ; 3 ; https://www.jsip-physio.org/ ; ; >
       au < manifest ; exists ; 2020 ; Journal of Society of Indian Physiotherapists Volume 4 ; 2020 ; 4 ; https://www.jsip-physio.org/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Society of Indian Physiotherapists Volume 5 ; 2021 ; 5 ; https://www.jsip-physio.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Journal of Society of Indian Physiotherapists Volume 6 ; 2022 ; 6 ; https://www.jsip-physio.org/ ; ; >
@@ -13233,7 +13233,7 @@
 
       au < manifest ; exists ; 2016 ; Journal of the Indian Academy of Geriatrics Volume 12 ; 2016 ; 12 ; https://www.jiag.in/ ; ; >
       au < manifest ; exists ; 2017 ; Journal of the Indian Academy of Geriatrics Volume 13 ; 2017 ; 13 ; https://www.jiag.in/ ; ; >
-      au < crawling ; exists ; 2018 ; Journal of the Indian Academy of Geriatrics Volume 14 ; 2018 ; 14 ; https://www.jiag.in/ ; ; >
+      au < frozen ; exists ; 2018 ; Journal of the Indian Academy of Geriatrics Volume 14 ; 2018 ; 14 ; https://www.jiag.in/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of the Indian Academy of Geriatrics Volume 15 ; 2019 ; 15 ; https://www.jiag.in/ ; ; >
       au < manifest ; exists ; 2020 ; Journal of the Indian Academy of Geriatrics Volume 16 ; 2020 ; 16 ; https://www.jiag.in/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of the Indian Academy of Geriatrics Volume 17 ; 2021 ; 17 ; https://www.jiag.in/ ; ; >
@@ -13321,7 +13321,7 @@
       au < manifest ; exists ; 2016 ; Journal on Recent Advances in Pain Volume 2 ; 2016 ; 2 ; https://www.jorapain.com/ ; ; >
       au < manifest ; exists ; 2017 ; Journal on Recent Advances in Pain Volume 3 ; 2017 ; 3 ; https://www.jorapain.com/ ; ; >
       au < crawling ; exists ; 2018 ; Journal on Recent Advances in Pain Volume 4 ; 2018 ; 4 ; https://www.jorapain.com/ ; ; >
-      au < crawling ; exists ; 2019 ; Journal on Recent Advances in Pain Volume 5 ; 2019 ; 5 ; https://www.jorapain.com/ ; ; >
+      au < frozen ; exists ; 2019 ; Journal on Recent Advances in Pain Volume 5 ; 2019 ; 5 ; https://www.jorapain.com/ ; ; >
       au < manifest ; exists ; 2020 ; Journal on Recent Advances in Pain Volume 6 ; 2020 ; 6 ; https://www.jorapain.com/ ; ; >
 
   }
@@ -13398,13 +13398,13 @@
       param[journal_issn] = 2600-9404
       #param[base_url] = https://www.mohejournal.org/
 
-      au < crawling ; exists ; 2013 ; Malaysian Journal of Movement, Health and Exercise Volume 2 ; 2013 ; 2 ; https://www.mohejournal.org/ ; ; >
-      au < crawling ; exists ; 2014 ; Malaysian Journal of Movement, Health and Exercise Volume 3 ; 2014 ; 3 ; https://www.mohejournal.org/ ; ; >
-      au < crawling ; exists ; 2015 ; Malaysian Journal of Movement, Health and Exercise Volume 4 ; 2015 ; 4 ; https://www.mohejournal.org/ ; ; >
-      au < crawling ; exists ; 2016 ; Malaysian Journal of Movement, Health and Exercise Volume 5 ; 2016 ; 5 ; https://www.mohejournal.org/ ; ; >
-      au < crawling ; exists ; 2017 ; Malaysian Journal of Movement, Health and Exercise Volume 6 ; 2017 ; 6 ; https://www.mohejournal.org/ ; ; >
+      au < frozen ; exists ; 2013 ; Malaysian Journal of Movement, Health and Exercise Volume 2 ; 2013 ; 2 ; https://www.mohejournal.org/ ; ; >
+      au < frozen ; exists ; 2014 ; Malaysian Journal of Movement, Health and Exercise Volume 3 ; 2014 ; 3 ; https://www.mohejournal.org/ ; ; >
+      au < frozen ; exists ; 2015 ; Malaysian Journal of Movement, Health and Exercise Volume 4 ; 2015 ; 4 ; https://www.mohejournal.org/ ; ; >
+      au < frozen ; exists ; 2016 ; Malaysian Journal of Movement, Health and Exercise Volume 5 ; 2016 ; 5 ; https://www.mohejournal.org/ ; ; >
+      au < frozen ; exists ; 2017 ; Malaysian Journal of Movement, Health and Exercise Volume 6 ; 2017 ; 6 ; https://www.mohejournal.org/ ; ; >
       au < crawling ; exists ; 2018 ; Malaysian Journal of Movement, Health and Exercise Volume 7 ; 2018 ; 7 ; https://www.mohejournal.org/ ; ; >
-      au < crawling ; exists ; 2019 ; Malaysian Journal of Movement, Health and Exercise Volume 8 ; 2019 ; 8 ; https://www.mohejournal.org/ ; ; >
+      au < frozen ; exists ; 2019 ; Malaysian Journal of Movement, Health and Exercise Volume 8 ; 2019 ; 8 ; https://www.mohejournal.org/ ; ; >
       au < crawling ; exists ; 2020 ; Malaysian Journal of Movement, Health and Exercise Volume 9 ; 2020 ; 9 ; https://www.mohejournal.org/ ; ; >
       au < frozen ; exists ; 2021 ; Malaysian Journal of Movement, Health and Exercise Volume 10 ; 2021 ; 10 ; https://www.mohejournal.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Malaysian Journal of Movement, Health and Exercise Volume 11 ; 2022 ; 11 ; https://www.mohejournal.org/ ; ; >
@@ -13427,7 +13427,7 @@
       au < frozen ; exists ; 2019 ; Matrix Science Medica Volume 3 ; 2019 ; 3 ; https://www.matrixscimed.org/ ; ; >
       au < frozen ; exists ; 2020 ; Matrix Science Medica Volume 4 ; 2020 ; 4 ; https://www.matrixscimed.org/ ; ; >
       au < frozen ; exists ; 2021 ; Matrix Science Medica Volume 5 ; 2021 ; 5 ; https://www.matrixscimed.org/ ; ; >
-      au < crawling ; exists ; 2022 ; Matrix Science Medica Volume 6 ; 2022 ; 6 ; https://www.matrixscimed.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Matrix Science Medica Volume 6 ; 2022 ; 6 ; https://www.matrixscimed.org/ ; ; >
       au < manifest ; exists ; 2023 ; Matrix Science Medica Volume 7 ; 2023 ; 7 ; https://www.matrixscimed.org/ ; ; >
 
   }
@@ -13491,7 +13491,7 @@
       au < manifest ; exists ; 2017 ; MRIMS Journal of Health Sciences Volume 5 ; 2017 ; 5 ; https://www.mrimsjournal.com/ ; ; >
       au < manifest ; exists ; 2018 ; MRIMS Journal of Health Sciences Volume 6 ; 2018 ; 6 ; https://www.mrimsjournal.com/ ; ; >
       au < frozen ; exists ; 2019 ; MRIMS Journal of Health Sciences Volume 7 ; 2019 ; 7 ; https://www.mrimsjournal.com/ ; ; >
-      au < crawling ; exists ; 2020 ; MRIMS Journal of Health Sciences Volume 8 ; 2020 ; 8 ; https://www.mrimsjournal.com/ ; ; >
+      au < frozen ; exists ; 2020 ; MRIMS Journal of Health Sciences Volume 8 ; 2020 ; 8 ; https://www.mrimsjournal.com/ ; ; >
       au < frozen ; exists ; 2021 ; MRIMS Journal of Health Sciences Volume 9 ; 2021 ; 9 ; https://www.mrimsjournal.com/ ; ; >
       au < manifest ; exists ; 2022 ; MRIMS Journal of Health Sciences Volume 10 ; 2022 ; 10 ; https://www.mrimsjournal.com/ ; ; >
       au < manifest ; exists ; 2023 ; MRIMS Journal of Health Sciences Volume 11 ; 2023 ; 11 ; https://www.mrimsjournal.com/ ; ; >
@@ -13517,8 +13517,8 @@
       au < manifest ; exists ; 2016 ; National Journal of Clinical Anatomy Volume 5 ; 2016 ; 5 ; https://www.njca.info/ ; ; >
       au < manifest ; exists ; 2017 ; National Journal of Clinical Anatomy Volume 6 ; 2017 ; 6 ; https://www.njca.info/ ; ; >
       au < manifest ; exists ; 2018 ; National Journal of Clinical Anatomy Volume 7 ; 2018 ; 7 ; https://www.njca.info/ ; ; >
-      au < crawling ; exists ; 2019 ; National Journal of Clinical Anatomy Volume 8 ; 2019 ; 8 ; https://www.njca.info/ ; ; >
-      au < crawling ; exists ; 2020 ; National Journal of Clinical Anatomy Volume 9 ; 2020 ; 9 ; https://www.njca.info/ ; ; >
+      au < frozen ; exists ; 2019 ; National Journal of Clinical Anatomy Volume 8 ; 2019 ; 8 ; https://www.njca.info/ ; ; >
+      au < frozen ; exists ; 2020 ; National Journal of Clinical Anatomy Volume 9 ; 2020 ; 9 ; https://www.njca.info/ ; ; >
       au < frozen ; exists ; 2021 ; National Journal of Clinical Anatomy Volume 10 ; 2021 ; 10 ; https://www.njca.info/ ; ; >
       au < manifest ; exists ; 2022 ; National Journal of Clinical Anatomy Volume 11 ; 2022 ; 11 ; https://www.njca.info/ ; ; >
       au < manifest ; exists ; 2023 ; National Journal of Clinical Anatomy Volume 12 ; 2023 ; 12 ; https://www.njca.info/ ; ; >
@@ -13536,7 +13536,7 @@
       param[journal_issn] = 2636-865X
       #param[base_url] = https://www.nsnjournal.org/
 
-      au < crawling ; exists ; 2020 ; Neurological Sciences and Neurophysiology Volume 37 ; 2020 ; 37 ; https://www.nsnjournal.org/ ; ; >
+      au < frozen ; exists ; 2020 ; Neurological Sciences and Neurophysiology Volume 37 ; 2020 ; 37 ; https://www.nsnjournal.org/ ; ; >
       au < frozen ; exists ; 2021 ; Neurological Sciences and Neurophysiology Volume 38 ; 2021 ; 38 ; https://www.nsnjournal.org/ ; ; >
       au < manifest ; exists ; 2022 ; Neurological Sciences and Neurophysiology Volume 39 ; 2022 ; 39 ; https://www.nsnjournal.org/ ; ; >
       au < manifest ; exists ; 2023 ; Neurological Sciences and Neurophysiology Volume 40 ; 2023 ; 40 ; https://www.nsnjournal.org/ ; ; >
@@ -13585,7 +13585,7 @@
       #param[base_url] = https://www.pnjb-online.org/
 
       au < frozen ; exists ; 2021 ; Paediatric Nephrology Journal of Bangladesh Volume 6 ; 2021 ; 6 ; https://www.pnjb-online.org/ ; ; >
-      au < crawling ; exists ; 2022 ; Paediatric Nephrology Journal of Bangladesh Volume 7 ; 2022 ; 7 ; https://www.pnjb-online.org/ ; ; >
+      au < deepCrawl ; exists ; 2022 ; Paediatric Nephrology Journal of Bangladesh Volume 7 ; 2022 ; 7 ; https://www.pnjb-online.org/ ; ; >
       au < expected ; exists ; 2023 ; Paediatric Nephrology Journal of Bangladesh Volume 8 ; 2023 ; 8 ; https://www.pnjb-online.org/ ; ; >
 
   }
@@ -13602,8 +13602,8 @@
       param[journal_issn] = 2666-3848
       #param[base_url] = https://www.qaij.org/
 
-      au < crawling ; exists ; 2019 ; QAI Journal for Healthcare Quality and Patient Safety Volume 1 ; 2019 ; 1 ; https://www.qaij.org/ ; ; >
-      au < crawling ; exists ; 2020 ; QAI Journal for Healthcare Quality and Patient Safety Volume 2 ; 2020 ; 2 ; https://www.qaij.org/ ; ; >
+      au < frozen ; exists ; 2019 ; QAI Journal for Healthcare Quality and Patient Safety Volume 1 ; 2019 ; 1 ; https://www.qaij.org/ ; ; >
+      au < frozen ; exists ; 2020 ; QAI Journal for Healthcare Quality and Patient Safety Volume 2 ; 2020 ; 2 ; https://www.qaij.org/ ; ; >
       au < exists ; exists ; 2021 ; QAI Journal for Healthcare Quality and Patient Safety Volume 3 ; 2021 ; 3 ; https://www.qaij.org/ ; ; >
       au < expected ; exists ; 2022 ; QAI Journal for Healthcare Quality and Patient Safety Volume 4 ; 2022 ; 4 ; https://www.qaij.org/ ; ; >
       au < expected ; exists ; 2023 ; QAI Journal for Healthcare Quality and Patient Safety Volume 5 ; 2023 ; 5 ; https://www.qaij.org/ ; ; >
@@ -13623,7 +13623,7 @@
       #param[base_url] = https://www.ridiseases.org/
 
       au < manifest ; exists ; 2021 ; Radiology of Infectious Diseases Volume 8 ; 2021 ; 8 ; https://www.ridiseases.org/ ; ; >
-      au < crawling ; exists ; 2022 ; Radiology of Infectious Diseases Volume 9 ; 2022 ; 9 ; https://www.ridiseases.org/ ; ; >
+      au < deepCrawl ; exists ; 2022 ; Radiology of Infectious Diseases Volume 9 ; 2022 ; 9 ; https://www.ridiseases.org/ ; ; >
       au < expected ; exists ; 2023 ; Radiology of Infectious Diseases Volume 10 ; 2023 ; 10 ; https://www.ridiseases.org/ ; ; >
 
   }
@@ -13657,9 +13657,9 @@
       param[journal_issn] = 1319-4534
       #param[base_url] = https://www.saudijophthalmol.org/
 
-      au < crawling ; exists ; 2020 ; Saudi Journal of Ophthalmology Volume 34 ; 2020 ; 34 ; https://www.saudijophthalmol.org/ ; ; >
+      au < frozen ; exists ; 2020 ; Saudi Journal of Ophthalmology Volume 34 ; 2020 ; 34 ; https://www.saudijophthalmol.org/ ; ; >
       au < frozen ; exists ; 2021 ; Saudi Journal of Ophthalmology Volume 35 ; 2021 ; 35 ; https://www.saudijophthalmol.org/ ; ; >
-      au < crawling ; exists ; 2022 ; Saudi Journal of Ophthalmology Volume 36 ; 2022 ; 36 ; https://www.saudijophthalmol.org/ ; ; >
+      au < deepCrawl ; exists ; 2022 ; Saudi Journal of Ophthalmology Volume 36 ; 2022 ; 36 ; https://www.saudijophthalmol.org/ ; ; >
       au < manifest ; exists ; 2023 ; Saudi Journal of Ophthalmology Volume 37 ; 2023 ; 37 ; https://www.saudijophthalmol.org/ ; ; >
 
   }
@@ -13695,10 +13695,10 @@
       au < manifest ; exists ; 2016 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 18 ; 2016 ; 18 ; https://www.sjohns.org/ ; ; >
       au < manifest ; exists ; 2017 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 19 ; 2017 ; 19 ; https://www.sjohns.org/ ; ; >
       au < manifest ; exists ; 2018 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 20 ; 2018 ; 20 ; https://www.sjohns.org/ ; ; >
-      au < crawling ; exists ; 2019 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 21 ; 2019 ; 21 ; https://www.sjohns.org/ ; ; >
-      au < crawling ; exists ; 2020 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 22 ; 2020 ; 22 ; https://www.sjohns.org/ ; ; >
+      au < frozen ; exists ; 2019 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 21 ; 2019 ; 21 ; https://www.sjohns.org/ ; ; >
+      au < frozen ; exists ; 2020 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 22 ; 2020 ; 22 ; https://www.sjohns.org/ ; ; >
       au < manifest ; exists ; 2021 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 23 ; 2021 ; 23 ; https://www.sjohns.org/ ; ; >
-      au < crawling ; exists ; 2022 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 24 ; 2022 ; 24 ; https://www.sjohns.org/ ; ; >
+      au < deepCrawl ; exists ; 2022 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 24 ; 2022 ; 24 ; https://www.sjohns.org/ ; ; >
       au < manifest ; exists ; 2023 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 25 ; 2023 ; 25 ; https://www.sjohns.org/ ; ; >
 
   }
@@ -13716,11 +13716,11 @@
       #param[base_url] = https://www.scidentj.com/
 
       au < manifest ; exists ; 2017 ; Scientific Dental Journal Volume 1 ; 2017 ; 1 ; https://www.scidentj.com/ ; ; >
-      au < crawling ; exists ; 2018 ; Scientific Dental Journal Volume 2 ; 2018 ; 2 ; https://www.scidentj.com/ ; ; >
+      au < frozen ; exists ; 2018 ; Scientific Dental Journal Volume 2 ; 2018 ; 2 ; https://www.scidentj.com/ ; ; >
       au < manifest ; exists ; 2019 ; Scientific Dental Journal Volume 3 ; 2019 ; 3 ; https://www.scidentj.com/ ; ; >
       au < manifest ; exists ; 2020 ; Scientific Dental Journal Volume 4 ; 2020 ; 4 ; https://www.scidentj.com/ ; ; >
       au < frozen ; exists ; 2021 ; Scientific Dental Journal Volume 5 ; 2021 ; 5 ; https://www.scidentj.com/ ; ; >
-      au < crawling ; exists ; 2022 ; Scientific Dental Journal Volume 6 ; 2022 ; 6 ; https://www.scidentj.com/ ; ; >
+      au < deepCrawl ; exists ; 2022 ; Scientific Dental Journal Volume 6 ; 2022 ; 6 ; https://www.scidentj.com/ ; ; >
       au < expected ; exists ; 2023 ; Scientific Dental Journal Volume 7 ; 2023 ; 7 ; https://www.scidentj.com/ ; ; >
 
   }
@@ -13755,10 +13755,10 @@
       param[journal_issn] = 1028-3684
       #param[base_url] = https://www.e-tjp.org/
 
-      au < crawling ; exists ; 2019 ; Taiwanese Journal of Psychiatry Volume 33 ; 2019 ; 33 ; https://www.e-tjp.org/ ; ; >
-      au < crawling ; exists ; 2020 ; Taiwanese Journal of Psychiatry Volume 34 ; 2020 ; 34 ; https://www.e-tjp.org/ ; ; >
+      au < frozen ; exists ; 2019 ; Taiwanese Journal of Psychiatry Volume 33 ; 2019 ; 33 ; https://www.e-tjp.org/ ; ; >
+      au < frozen ; exists ; 2020 ; Taiwanese Journal of Psychiatry Volume 34 ; 2020 ; 34 ; https://www.e-tjp.org/ ; ; >
       au < frozen ; exists ; 2021 ; Taiwanese Journal of Psychiatry Volume 35 ; 2021 ; 35 ; https://www.e-tjp.org/ ; ; >
-      au < crawling ; exists ; 2022 ; Taiwanese Journal of Psychiatry Volume 36 ; 2022 ; 36 ; https://www.e-tjp.org/ ; ; >
+      au < deepCrawl ; exists ; 2022 ; Taiwanese Journal of Psychiatry Volume 36 ; 2022 ; 36 ; https://www.e-tjp.org/ ; ; >
       au < manifest ; exists ; 2023 ; Taiwanese Journal of Psychiatry Volume 37 ; 2023 ; 37 ; https://www.e-tjp.org/ ; ; >
 
   }
@@ -13779,12 +13779,12 @@
       au < manifest ; exists ; 2014 ; Tanta Medical Journal Volume 42 ; 2014 ; 42 ; https://www.tdj.eg.net/ ; ; >
       au < manifest ; exists ; 2015 ; Tanta Medical Journal Volume 43 ; 2015 ; 43 ; https://www.tdj.eg.net/ ; ; >
       au < manifest ; exists ; 2016 ; Tanta Medical Journal Volume 44 ; 2016 ; 44 ; https://www.tdj.eg.net/ ; ; >
-      au < crawling ; exists ; 2017 ; Tanta Medical Journal Volume 45 ; 2017 ; 45 ; https://www.tdj.eg.net/ ; ; >
+      au < frozen ; exists ; 2017 ; Tanta Medical Journal Volume 45 ; 2017 ; 45 ; https://www.tdj.eg.net/ ; ; >
       au < manifest ; exists ; 2018 ; Tanta Medical Journal Volume 46 ; 2018 ; 46 ; https://www.tdj.eg.net/ ; ; >
       au < crawling ; exists ; 2019 ; Tanta Medical Journal Volume 47 ; 2019 ; 47 ; https://www.tdj.eg.net/ ; ; >
       au < manifest ; exists ; 2020 ; Tanta Medical Journal Volume 48 ; 2020 ; 48 ; https://www.tdj.eg.net/ ; ; >
       au < frozen ; exists ; 2021 ; Tanta Medical Journal Volume 49 ; 2021 ; 49 ; https://www.tdj.eg.net/ ; ; >
-      au < crawling ; exists ; 2022 ; Tanta Medical Journal Volume 50 ; 2022 ; 50 ; https://www.tdj.eg.net/ ; ; >
+      au < deepCrawl ; exists ; 2022 ; Tanta Medical Journal Volume 50 ; 2022 ; 50 ; https://www.tdj.eg.net/ ; ; >
       au < expected ; exists ; 2023 ; Tanta Medical Journal Volume 51 ; 2023 ; 51 ; https://www.tdj.eg.net/ ; ; >
 
   }
@@ -13828,7 +13828,7 @@
       au < manifest ; exists ; 2019 ; The Indian Journal of Occupational Therapy Volume 51 ; 2019 ; 51 ; https://www.ijotonweb.org/ ; ; >
       au < manifest ; exists ; 2020 ; The Indian Journal of Occupational Therapy Volume 52 ; 2020 ; 52 ; https://www.ijotonweb.org/ ; ; >
       au < frozen ; exists ; 2021 ; The Indian Journal of Occupational Therapy Volume 53 ; 2021 ; 53 ; https://www.ijotonweb.org/ ; ; >
-      au < crawling ; exists ; 2022 ; The Indian Journal of Occupational Therapy Volume 54 ; 2022 ; 54 ; https://www.ijotonweb.org/ ; ; >
+      au < deepCrawl ; exists ; 2022 ; The Indian Journal of Occupational Therapy Volume 54 ; 2022 ; 54 ; https://www.ijotonweb.org/ ; ; >
       au < expected ; exists ; 2023 ; The Indian Journal of Occupational Therapy Volume 55 ; 2023 ; 55 ; https://www.ijotonweb.org/ ; ; >
 
   }
@@ -13845,9 +13845,9 @@
       param[journal_issn] = 2149-1909
       #param[base_url] = https://www.jnbsjournal.com/
 
-      au < crawling ; exists ; 2020 ; The Journal of Neurobehavioral Sciences Volume 7 ; 2020 ; 7 ; https://www.jnbsjournal.com/ ; ; >
+      au < frozen ; exists ; 2020 ; The Journal of Neurobehavioral Sciences Volume 7 ; 2020 ; 7 ; https://www.jnbsjournal.com/ ; ; >
       au < frozen ; exists ; 2021 ; The Journal of Neurobehavioral Sciences Volume 8 ; 2021 ; 8 ; https://www.jnbsjournal.com/ ; ; >
-      au < crawling ; exists ; 2022 ; The Journal of Neurobehavioral Sciences Volume 9 ; 2022 ; 9 ; https://www.jnbsjournal.com/ ; ; >
+      au < deepCrawl ; exists ; 2022 ; The Journal of Neurobehavioral Sciences Volume 9 ; 2022 ; 9 ; https://www.jnbsjournal.com/ ; ; >
       au < manifest ; exists ; 2023 ; The Journal of Neurobehavioral Sciences Volume 10 ; 2023 ; 10 ; https://www.jnbsjournal.com/ ; ; >
 
   }
@@ -13899,10 +13899,10 @@
       param[journal_issn] = 1307-7635
       #param[base_url] = https://www.tjdonline.org/
 
-      au < crawling ; exists ; 2019 ; Turkish Journal of Dermatology Volume 13 ; 2019 ; 13 ; https://www.tjdonline.org/ ; ; >
-      au < crawling ; exists ; 2020 ; Turkish Journal of Dermatology Volume 14 ; 2020 ; 14 ; https://www.tjdonline.org/ ; ; >
+      au < frozen ; exists ; 2019 ; Turkish Journal of Dermatology Volume 13 ; 2019 ; 13 ; https://www.tjdonline.org/ ; ; >
+      au < frozen ; exists ; 2020 ; Turkish Journal of Dermatology Volume 14 ; 2020 ; 14 ; https://www.tjdonline.org/ ; ; >
       au < frozen ; exists ; 2021 ; Turkish Journal of Dermatology Volume 15 ; 2021 ; 15 ; https://www.tjdonline.org/ ; ; >
-      au < crawling ; exists ; 2022 ; Turkish Journal of Dermatology Volume 16 ; 2022 ; 16 ; https://www.tjdonline.org/ ; ; >
+      au < deepCrawl ; exists ; 2022 ; Turkish Journal of Dermatology Volume 16 ; 2022 ; 16 ; https://www.tjdonline.org/ ; ; >
       au < manifest ; exists ; 2023 ; Turkish Journal of Dermatology Volume 17 ; 2023 ; 17 ; https://www.tjdonline.org/ ; ; >
 
   }
@@ -13919,11 +13919,11 @@
       param[journal_issn] = 2589-9686
       #param[base_url] = https://www.vitonline.org/
 
-      au < crawling ; exists ; 2018 ; Vascular Investigation and Therapy Volume 1 ; 2018 ; 1 ; https://www.vitonline.org/ ; ; >
+      au < frozen ; exists ; 2018 ; Vascular Investigation and Therapy Volume 1 ; 2018 ; 1 ; https://www.vitonline.org/ ; ; >
       au < manifest ; exists ; 2019 ; Vascular Investigation and Therapy Volume 2 ; 2019 ; 2 ; https://www.vitonline.org/ ; ; >
       au < manifest ; exists ; 2020 ; Vascular Investigation and Therapy Volume 3 ; 2020 ; 3 ; https://www.vitonline.org/ ; ; >
       au < frozen ; exists ; 2021 ; Vascular Investigation and Therapy Volume 4 ; 2021 ; 4 ; https://www.vitonline.org/ ; ; >
-      au < crawling ; exists ; 2022 ; Vascular Investigation and Therapy Volume 5 ; 2022 ; 5 ; https://www.vitonline.org/ ; ; >
+      au < deepCrawl ; exists ; 2022 ; Vascular Investigation and Therapy Volume 5 ; 2022 ; 5 ; https://www.vitonline.org/ ; ; >
       au < expected ; exists ; 2023 ; Vascular Investigation and Therapy Volume 6 ; 2023 ; 6 ; https://www.vitonline.org/ ; ; >
 
   }
@@ -13940,10 +13940,10 @@
       param[journal_issn] = 2667-1077
       #param[base_url] = https://www.worldsocpsychiatry.org/
 
-      au < crawling ; exists ; 2019 ; World Social Psychiatry Volume 1 ; 2019 ; 1 ; https://www.worldsocpsychiatry.org/ ; ; >
-      au < crawling ; exists ; 2020 ; World Social Psychiatry Volume 2 ; 2020 ; 2 ; https://www.worldsocpsychiatry.org/ ; ; >
+      au < frozen ; exists ; 2019 ; World Social Psychiatry Volume 1 ; 2019 ; 1 ; https://www.worldsocpsychiatry.org/ ; ; >
+      au < frozen ; exists ; 2020 ; World Social Psychiatry Volume 2 ; 2020 ; 2 ; https://www.worldsocpsychiatry.org/ ; ; >
       au < frozen ; exists ; 2021 ; World Social Psychiatry Volume 3 ; 2021 ; 3 ; https://www.worldsocpsychiatry.org/ ; ; >
-      au < crawling ; exists ; 2022 ; World Social Psychiatry Volume 4 ; 2022 ; 4 ; https://www.worldsocpsychiatry.org/ ; ; >
+      au < deepCrawl ; exists ; 2022 ; World Social Psychiatry Volume 4 ; 2022 ; 4 ; https://www.worldsocpsychiatry.org/ ; ; >
       au < expected ; exists ; 2023 ; World Social Psychiatry Volume 5 ; 2023 ; 5 ; https://www.worldsocpsychiatry.org/ ; ; >
 
   }
