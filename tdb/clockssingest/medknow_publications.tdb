@@ -3619,7 +3619,7 @@
     param[journal_issn] = 2345-5756
     #move to Brieflands, 2023-01-01
 
-    au < ready ; exists ; 2014 ; Journal of Nursing and Midwifery Sciences Volume 1 ; 2014 ; 1 ; https://www.jnmsjournal.org/ ; ; >
+    au < crawling ; exists ; 2014 ; Journal of Nursing and Midwifery Sciences Volume 1 ; 2014 ; 1 ; https://www.jnmsjournal.org/ ; ; >
     au < manifest ; exists ; 2015 ; Journal of Nursing and Midwifery Sciences Volume 2 ; 2015 ; 2 ; https://www.jnmsjournal.org/ ; ; >
     au < manifest ; exists ; 2016 ; Journal of Nursing and Midwifery Sciences Volume 3 ; 2016 ; 3 ; https://www.jnmsjournal.org/ ; ; >
     au < manifest ; exists ; 2017 ; Journal of Nursing and Midwifery Sciences Volume 4 ; 2017 ; 4 ; https://www.jnmsjournal.org/ ; ; >
@@ -11937,8 +11937,8 @@
       #param[base_url] = https://www.ajimedicine.com/
 
       au < frozen ; exists ; 2011 ; Assam Journal of Internal Medicine Volume 1 ; 2011 ; 1 ; https://www.ajimedicine.com/ ; ; >
-      au < ready ; exists ; 2012 ; Assam Journal of Internal Medicine Volume 2 ; 2012 ; 2 ; https://www.ajimedicine.com/ ; ; >
-      au < ready ; exists ; 2013 ; Assam Journal of Internal Medicine Volume 3 ; 2013 ; 3 ; https://www.ajimedicine.com/ ; ; >
+      au < crawling ; exists ; 2012 ; Assam Journal of Internal Medicine Volume 2 ; 2012 ; 2 ; https://www.ajimedicine.com/ ; ; >
+      au < crawling ; exists ; 2013 ; Assam Journal of Internal Medicine Volume 3 ; 2013 ; 3 ; https://www.ajimedicine.com/ ; ; >
       au < frozen ; exists ; 2014 ; Assam Journal of Internal Medicine Volume 4 ; 2014 ; 4 ; https://www.ajimedicine.com/ ; ; >
       au < frozen ; exists ; 2015 ; Assam Journal of Internal Medicine Volume 5 ; 2015 ; 5 ; https://www.ajimedicine.com/ ; ; >
       au < frozen ; exists ; 2016 ; Assam Journal of Internal Medicine Volume 6 ; 2016 ; 6 ; https://www.ajimedicine.com/ ; ; >
@@ -11963,8 +11963,8 @@
       param[journal_issn] = 2549-2276
       #param[base_url] = https://www.bjoaonline.com/
 
-      au < ready ; exists ; 2017 ; Bali Journal of Anesthesiology Volume 1 ; 2017 ; 1 ; https://www.bjoaonline.com/ ; ; >
-      au < ready ; exists ; 2018 ; Bali Journal of Anesthesiology Volume 2 ; 2018 ; 2 ; https://www.bjoaonline.com/ ; ; >
+      au < crawling ; exists ; 2017 ; Bali Journal of Anesthesiology Volume 1 ; 2017 ; 1 ; https://www.bjoaonline.com/ ; ; >
+      au < crawling ; exists ; 2018 ; Bali Journal of Anesthesiology Volume 2 ; 2018 ; 2 ; https://www.bjoaonline.com/ ; ; >
       au < frozen ; exists ; 2019 ; Bali Journal of Anesthesiology Volume 3 ; 2019 ; 3 ; https://www.bjoaonline.com/ ; ; >
       au < frozen ; exists ; 2020 ; Bali Journal of Anesthesiology Volume 4 ; 2020 ; 4 ; https://www.bjoaonline.com/ ; ; >
       au < frozen ; exists ; 2021 ; Bali Journal of Anesthesiology Volume 5 ; 2021 ; 5 ; https://www.bjoaonline.com/ ; ; >
@@ -11985,7 +11985,7 @@
       param[journal_issn] = 2349-3666
       #param[base_url] = https://www.brjnmims.org/
 
-      au < ready ; exists ; 2014 ; Biomedical Research Journal Volume 1 ; 2014 ; 1 ; https://www.brjnmims.org/ ; ; >
+      au < crawling ; exists ; 2014 ; Biomedical Research Journal Volume 1 ; 2014 ; 1 ; https://www.brjnmims.org/ ; ; >
       au < frozen ; exists ; 2015 ; Biomedical Research Journal Volume 2 ; 2015 ; 2 ; https://www.brjnmims.org/ ; ; >
       au < frozen ; exists ; 2016 ; Biomedical Research Journal Volume 3 ; 2016 ; 3 ; https://www.brjnmims.org/ ; ; >
       au < frozen ; exists ; 2017 ; Biomedical Research Journal Volume 4 ; 2017 ; 4 ; https://www.brjnmims.org/ ; ; >
@@ -12432,7 +12432,7 @@
       au < manifest ; exists ; 2014 ; International Journal of Medicine and Health Development Volume 19 ; 2014 ; 19 ; https://www.ijmhdev.com/ ; ; >
       au < manifest ; exists ; 2015 ; International Journal of Medicine and Health Development Volume 20 ; 2015 ; 20 ; https://www.ijmhdev.com/ ; ; >
       au < manifest ; exists ; 2016 ; International Journal of Medicine and Health Development Volume 21 ; 2016 ; 21 ; https://www.ijmhdev.com/ ; ; >
-      au < ready ; exists ; 2017 ; International Journal of Medicine and Health Development Volume 22 ; 2017 ; 22 ; https://www.ijmhdev.com/ ; ; >
+      au < crawling ; exists ; 2017 ; International Journal of Medicine and Health Development Volume 22 ; 2017 ; 22 ; https://www.ijmhdev.com/ ; ; >
       au < manifest ; exists ; 2018 ; International Journal of Medicine and Health Development Volume 23 ; 2018 ; 23 ; https://www.ijmhdev.com/ ; ; >
       au < manifest ; exists ; 2019 ; International Journal of Medicine and Health Development Volume 24 ; 2019 ; 24 ; https://www.ijmhdev.com/ ; ; >
       au < frozen ; exists ; 2020 ; International Journal of Medicine and Health Development Volume 25 ; 2020 ; 25 ; https://www.ijmhdev.com/ ; ; >
@@ -12554,10 +12554,10 @@
       #param[base_url] = https://www.ijhonline.org/
 
       au < manifest ; exists ; 2011 ; Iraqi Journal of Hematology Volume 1 ; 2011 ; 1 ; https://www.ijhonline.org/ ; ; >
-      au < ready ; exists ; 2013 ; Iraqi Journal of Hematology Volume 2 ; 2013 ; 2 ; https://www.ijhonline.org/ ; ; >
-      au < ready ; exists ; 2014 ; Iraqi Journal of Hematology Volume 3 ; 2014 ; 3 ; https://www.ijhonline.org/ ; ; >
-      au < ready ; exists ; 2015 ; Iraqi Journal of Hematology Volume 4 ; 2015 ; 4 ; https://www.ijhonline.org/ ; ; >
-      au < ready ; exists ; 2016 ; Iraqi Journal of Hematology Volume 5 ; 2016 ; 5 ; https://www.ijhonline.org/ ; ; >
+      au < crawling ; exists ; 2013 ; Iraqi Journal of Hematology Volume 2 ; 2013 ; 2 ; https://www.ijhonline.org/ ; ; >
+      au < crawling ; exists ; 2014 ; Iraqi Journal of Hematology Volume 3 ; 2014 ; 3 ; https://www.ijhonline.org/ ; ; >
+      au < crawling ; exists ; 2015 ; Iraqi Journal of Hematology Volume 4 ; 2015 ; 4 ; https://www.ijhonline.org/ ; ; >
+      au < crawling ; exists ; 2016 ; Iraqi Journal of Hematology Volume 5 ; 2016 ; 5 ; https://www.ijhonline.org/ ; ; >
       au < manifest ; exists ; 2017 ; Iraqi Journal of Hematology Volume 6 ; 2017 ; 6 ; https://www.ijhonline.org/ ; ; >
       au < manifest ; exists ; 2018 ; Iraqi Journal of Hematology Volume 7 ; 2018 ; 7 ; https://www.ijhonline.org/ ; ; >
       au < manifest ; exists ; 2019 ; Iraqi Journal of Hematology Volume 8 ; 2019 ; 8 ; https://www.ijhonline.org/ ; ; >
@@ -12862,11 +12862,11 @@
       param[journal_issn] = 2320-4419
       #param[base_url] = https://www.joinsysmed.com/
 
-      au < ready ; exists ; 2013 ; Journal of Indian System of Medicine Volume 1 ; 2013 ; 1 ; https://www.joinsysmed.com/ ; ; >
-      au < ready ; exists ; 2014 ; Journal of Indian System of Medicine Volume 2 ; 2014 ; 2 ; https://www.joinsysmed.com/ ; ; >
-      au < ready ; exists ; 2015 ; Journal of Indian System of Medicine Volume 3 ; 2015 ; 3 ; https://www.joinsysmed.com/ ; ; >
-      au < ready ; exists ; 2016 ; Journal of Indian System of Medicine Volume 4 ; 2016 ; 4 ; https://www.joinsysmed.com/ ; ; >
-      au < ready ; exists ; 2017 ; Journal of Indian System of Medicine Volume 5 ; 2017 ; 5 ; https://www.joinsysmed.com/ ; ; >
+      au < crawling ; exists ; 2013 ; Journal of Indian System of Medicine Volume 1 ; 2013 ; 1 ; https://www.joinsysmed.com/ ; ; >
+      au < crawling ; exists ; 2014 ; Journal of Indian System of Medicine Volume 2 ; 2014 ; 2 ; https://www.joinsysmed.com/ ; ; >
+      au < crawling ; exists ; 2015 ; Journal of Indian System of Medicine Volume 3 ; 2015 ; 3 ; https://www.joinsysmed.com/ ; ; >
+      au < crawling ; exists ; 2016 ; Journal of Indian System of Medicine Volume 4 ; 2016 ; 4 ; https://www.joinsysmed.com/ ; ; >
+      au < crawling ; exists ; 2017 ; Journal of Indian System of Medicine Volume 5 ; 2017 ; 5 ; https://www.joinsysmed.com/ ; ; >
       au < manifest ; exists ; 2018 ; Journal of Indian System of Medicine Volume 6 ; 2018 ; 6 ; https://www.joinsysmed.com/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of Indian System of Medicine Volume 7 ; 2019 ; 7 ; https://www.joinsysmed.com/ ; ; >
       au < manifest ; exists ; 2020 ; Journal of Indian System of Medicine Volume 8 ; 2020 ; 8 ; https://www.joinsysmed.com/ ; ; >
@@ -12912,14 +12912,14 @@
       param[journal_issn] = 2347-6486
       #param[base_url] = https://www.jihs.in/
 
-      au < ready ; exists ; 2013 ; Journal of Integrated Health Sciences Volume 1 ; 2013 ; 1 ; https://www.jihs.in/ ; ; >
+      au < crawling ; exists ; 2013 ; Journal of Integrated Health Sciences Volume 1 ; 2013 ; 1 ; https://www.jihs.in/ ; ; >
       au < manifest ; exists ; 2014 ; Journal of Integrated Health Sciences Volume 2 ; 2014 ; 2 ; https://www.jihs.in/ ; ; >
       au < manifest ; exists ; 2015 ; Journal of Integrated Health Sciences Volume 3 ; 2015 ; 3 ; https://www.jihs.in/ ; ; >
-      au < ready ; exists ; 2016 ; Journal of Integrated Health Sciences Volume 4 ; 2016 ; 4 ; https://www.jihs.in/ ; ; >
-      au < ready ; exists ; 2017 ; Journal of Integrated Health Sciences Volume 5 ; 2017 ; 5 ; https://www.jihs.in/ ; ; >
+      au < crawling ; exists ; 2016 ; Journal of Integrated Health Sciences Volume 4 ; 2016 ; 4 ; https://www.jihs.in/ ; ; >
+      au < crawling ; exists ; 2017 ; Journal of Integrated Health Sciences Volume 5 ; 2017 ; 5 ; https://www.jihs.in/ ; ; >
       au < manifest ; exists ; 2018 ; Journal of Integrated Health Sciences Volume 6 ; 2018 ; 6 ; https://www.jihs.in/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of Integrated Health Sciences Volume 7 ; 2019 ; 7 ; https://www.jihs.in/ ; ; >
-      au < ready ; exists ; 2020 ; Journal of Integrated Health Sciences Volume 8 ; 2020 ; 8 ; https://www.jihs.in/ ; ; >
+      au < crawling ; exists ; 2020 ; Journal of Integrated Health Sciences Volume 8 ; 2020 ; 8 ; https://www.jihs.in/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Integrated Health Sciences Volume 9 ; 2021 ; 9 ; https://www.jihs.in/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Journal of Integrated Health Sciences Volume 10 ; 2022 ; 10 ; https://www.jihs.in/ ; ; >
       au < expected ; exists ; 2023 ; Journal of Integrated Health Sciences Volume 11 ; 2023 ; 11 ; https://www.jihs.in/ ; ; >
@@ -13151,9 +13151,9 @@
       param[journal_issn] = 2582-1954
       #param[base_url] = https://www.jrsm.in/
 
-      au < ready ; exists ; 2018 ; Journal of Research in Siddha Medicine Volume 1 ; 2018 ; 1 ; https://www.jrsm.in/ ; ; >
+      au < crawling ; exists ; 2018 ; Journal of Research in Siddha Medicine Volume 1 ; 2018 ; 1 ; https://www.jrsm.in/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of Research in Siddha Medicine Volume 2 ; 2019 ; 2 ; https://www.jrsm.in/ ; ; >
-      au < ready ; exists ; 2020 ; Journal of Research in Siddha Medicine Volume 3 ; 2020 ; 3 ; https://www.jrsm.in/ ; ; >
+      au < crawling ; exists ; 2020 ; Journal of Research in Siddha Medicine Volume 3 ; 2020 ; 3 ; https://www.jrsm.in/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Research in Siddha Medicine Volume 4 ; 2021 ; 4 ; https://www.jrsm.in/ ; ; >
 
   }
@@ -13171,8 +13171,8 @@
       #param[base_url] = https://www.jsip-physio.org/
 
       au < manifest ; exists ; 2017 ; Journal of Society of Indian Physiotherapists Volume 1 ; 2017 ; 1 ; https://www.jsip-physio.org/ ; ; >
-      au < ready ; exists ; 2018 ; Journal of Society of Indian Physiotherapists Volume 2 ; 2018 ; 2 ; https://www.jsip-physio.org/ ; ; >
-      au < ready ; exists ; 2019 ; Journal of Society of Indian Physiotherapists Volume 3 ; 2019 ; 3 ; https://www.jsip-physio.org/ ; ; >
+      au < crawling ; exists ; 2018 ; Journal of Society of Indian Physiotherapists Volume 2 ; 2018 ; 2 ; https://www.jsip-physio.org/ ; ; >
+      au < crawling ; exists ; 2019 ; Journal of Society of Indian Physiotherapists Volume 3 ; 2019 ; 3 ; https://www.jsip-physio.org/ ; ; >
       au < manifest ; exists ; 2020 ; Journal of Society of Indian Physiotherapists Volume 4 ; 2020 ; 4 ; https://www.jsip-physio.org/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Society of Indian Physiotherapists Volume 5 ; 2021 ; 5 ; https://www.jsip-physio.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Journal of Society of Indian Physiotherapists Volume 6 ; 2022 ; 6 ; https://www.jsip-physio.org/ ; ; >
@@ -13233,7 +13233,7 @@
 
       au < manifest ; exists ; 2016 ; Journal of the Indian Academy of Geriatrics Volume 12 ; 2016 ; 12 ; https://www.jiag.in/ ; ; >
       au < manifest ; exists ; 2017 ; Journal of the Indian Academy of Geriatrics Volume 13 ; 2017 ; 13 ; https://www.jiag.in/ ; ; >
-      au < ready ; exists ; 2018 ; Journal of the Indian Academy of Geriatrics Volume 14 ; 2018 ; 14 ; https://www.jiag.in/ ; ; >
+      au < crawling ; exists ; 2018 ; Journal of the Indian Academy of Geriatrics Volume 14 ; 2018 ; 14 ; https://www.jiag.in/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of the Indian Academy of Geriatrics Volume 15 ; 2019 ; 15 ; https://www.jiag.in/ ; ; >
       au < manifest ; exists ; 2020 ; Journal of the Indian Academy of Geriatrics Volume 16 ; 2020 ; 16 ; https://www.jiag.in/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of the Indian Academy of Geriatrics Volume 17 ; 2021 ; 17 ; https://www.jiag.in/ ; ; >
@@ -13320,8 +13320,8 @@
       au < manifest ; exists ; 2015 ; Journal on Recent Advances in Pain Volume 1 ; 2015 ; 1 ; https://www.jorapain.com/ ; ; >
       au < manifest ; exists ; 2016 ; Journal on Recent Advances in Pain Volume 2 ; 2016 ; 2 ; https://www.jorapain.com/ ; ; >
       au < manifest ; exists ; 2017 ; Journal on Recent Advances in Pain Volume 3 ; 2017 ; 3 ; https://www.jorapain.com/ ; ; >
-      au < ready ; exists ; 2018 ; Journal on Recent Advances in Pain Volume 4 ; 2018 ; 4 ; https://www.jorapain.com/ ; ; >
-      au < ready ; exists ; 2019 ; Journal on Recent Advances in Pain Volume 5 ; 2019 ; 5 ; https://www.jorapain.com/ ; ; >
+      au < crawling ; exists ; 2018 ; Journal on Recent Advances in Pain Volume 4 ; 2018 ; 4 ; https://www.jorapain.com/ ; ; >
+      au < crawling ; exists ; 2019 ; Journal on Recent Advances in Pain Volume 5 ; 2019 ; 5 ; https://www.jorapain.com/ ; ; >
       au < manifest ; exists ; 2020 ; Journal on Recent Advances in Pain Volume 6 ; 2020 ; 6 ; https://www.jorapain.com/ ; ; >
 
   }
@@ -13398,14 +13398,14 @@
       param[journal_issn] = 2600-9404
       #param[base_url] = https://www.mohejournal.org/
 
-      au < ready ; exists ; 2013 ; Malaysian Journal of Movement, Health and Exercise Volume 2 ; 2013 ; 2 ; https://www.mohejournal.org/ ; ; >
-      au < ready ; exists ; 2014 ; Malaysian Journal of Movement, Health and Exercise Volume 3 ; 2014 ; 3 ; https://www.mohejournal.org/ ; ; >
-      au < ready ; exists ; 2015 ; Malaysian Journal of Movement, Health and Exercise Volume 4 ; 2015 ; 4 ; https://www.mohejournal.org/ ; ; >
-      au < ready ; exists ; 2016 ; Malaysian Journal of Movement, Health and Exercise Volume 5 ; 2016 ; 5 ; https://www.mohejournal.org/ ; ; >
-      au < ready ; exists ; 2017 ; Malaysian Journal of Movement, Health and Exercise Volume 6 ; 2017 ; 6 ; https://www.mohejournal.org/ ; ; >
-      au < ready ; exists ; 2018 ; Malaysian Journal of Movement, Health and Exercise Volume 7 ; 2018 ; 7 ; https://www.mohejournal.org/ ; ; >
-      au < ready ; exists ; 2019 ; Malaysian Journal of Movement, Health and Exercise Volume 8 ; 2019 ; 8 ; https://www.mohejournal.org/ ; ; >
-      au < ready ; exists ; 2020 ; Malaysian Journal of Movement, Health and Exercise Volume 9 ; 2020 ; 9 ; https://www.mohejournal.org/ ; ; >
+      au < crawling ; exists ; 2013 ; Malaysian Journal of Movement, Health and Exercise Volume 2 ; 2013 ; 2 ; https://www.mohejournal.org/ ; ; >
+      au < crawling ; exists ; 2014 ; Malaysian Journal of Movement, Health and Exercise Volume 3 ; 2014 ; 3 ; https://www.mohejournal.org/ ; ; >
+      au < crawling ; exists ; 2015 ; Malaysian Journal of Movement, Health and Exercise Volume 4 ; 2015 ; 4 ; https://www.mohejournal.org/ ; ; >
+      au < crawling ; exists ; 2016 ; Malaysian Journal of Movement, Health and Exercise Volume 5 ; 2016 ; 5 ; https://www.mohejournal.org/ ; ; >
+      au < crawling ; exists ; 2017 ; Malaysian Journal of Movement, Health and Exercise Volume 6 ; 2017 ; 6 ; https://www.mohejournal.org/ ; ; >
+      au < crawling ; exists ; 2018 ; Malaysian Journal of Movement, Health and Exercise Volume 7 ; 2018 ; 7 ; https://www.mohejournal.org/ ; ; >
+      au < crawling ; exists ; 2019 ; Malaysian Journal of Movement, Health and Exercise Volume 8 ; 2019 ; 8 ; https://www.mohejournal.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Malaysian Journal of Movement, Health and Exercise Volume 9 ; 2020 ; 9 ; https://www.mohejournal.org/ ; ; >
       au < frozen ; exists ; 2021 ; Malaysian Journal of Movement, Health and Exercise Volume 10 ; 2021 ; 10 ; https://www.mohejournal.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Malaysian Journal of Movement, Health and Exercise Volume 11 ; 2022 ; 11 ; https://www.mohejournal.org/ ; ; >
       au < expected ; exists ; 2023 ; Malaysian Journal of Movement, Health and Exercise Volume 12 ; 2023 ; 12 ; https://www.mohejournal.org/ ; ; >
@@ -13716,7 +13716,7 @@
       #param[base_url] = https://www.scidentj.com/
 
       au < manifest ; exists ; 2017 ; Scientific Dental Journal Volume 1 ; 2017 ; 1 ; https://www.scidentj.com/ ; ; >
-      au < ready ; exists ; 2018 ; Scientific Dental Journal Volume 2 ; 2018 ; 2 ; https://www.scidentj.com/ ; ; >
+      au < crawling ; exists ; 2018 ; Scientific Dental Journal Volume 2 ; 2018 ; 2 ; https://www.scidentj.com/ ; ; >
       au < manifest ; exists ; 2019 ; Scientific Dental Journal Volume 3 ; 2019 ; 3 ; https://www.scidentj.com/ ; ; >
       au < manifest ; exists ; 2020 ; Scientific Dental Journal Volume 4 ; 2020 ; 4 ; https://www.scidentj.com/ ; ; >
       au < frozen ; exists ; 2021 ; Scientific Dental Journal Volume 5 ; 2021 ; 5 ; https://www.scidentj.com/ ; ; >
@@ -13779,9 +13779,9 @@
       au < manifest ; exists ; 2014 ; Tanta Medical Journal Volume 42 ; 2014 ; 42 ; https://www.tdj.eg.net/ ; ; >
       au < manifest ; exists ; 2015 ; Tanta Medical Journal Volume 43 ; 2015 ; 43 ; https://www.tdj.eg.net/ ; ; >
       au < manifest ; exists ; 2016 ; Tanta Medical Journal Volume 44 ; 2016 ; 44 ; https://www.tdj.eg.net/ ; ; >
-      au < ready ; exists ; 2017 ; Tanta Medical Journal Volume 45 ; 2017 ; 45 ; https://www.tdj.eg.net/ ; ; >
+      au < crawling ; exists ; 2017 ; Tanta Medical Journal Volume 45 ; 2017 ; 45 ; https://www.tdj.eg.net/ ; ; >
       au < manifest ; exists ; 2018 ; Tanta Medical Journal Volume 46 ; 2018 ; 46 ; https://www.tdj.eg.net/ ; ; >
-      au < ready ; exists ; 2019 ; Tanta Medical Journal Volume 47 ; 2019 ; 47 ; https://www.tdj.eg.net/ ; ; >
+      au < crawling ; exists ; 2019 ; Tanta Medical Journal Volume 47 ; 2019 ; 47 ; https://www.tdj.eg.net/ ; ; >
       au < manifest ; exists ; 2020 ; Tanta Medical Journal Volume 48 ; 2020 ; 48 ; https://www.tdj.eg.net/ ; ; >
       au < frozen ; exists ; 2021 ; Tanta Medical Journal Volume 49 ; 2021 ; 49 ; https://www.tdj.eg.net/ ; ; >
       au < crawling ; exists ; 2022 ; Tanta Medical Journal Volume 50 ; 2022 ; 50 ; https://www.tdj.eg.net/ ; ; >
@@ -13919,7 +13919,7 @@
       param[journal_issn] = 2589-9686
       #param[base_url] = https://www.vitonline.org/
 
-      au < ready ; exists ; 2018 ; Vascular Investigation and Therapy Volume 1 ; 2018 ; 1 ; https://www.vitonline.org/ ; ; >
+      au < crawling ; exists ; 2018 ; Vascular Investigation and Therapy Volume 1 ; 2018 ; 1 ; https://www.vitonline.org/ ; ; >
       au < manifest ; exists ; 2019 ; Vascular Investigation and Therapy Volume 2 ; 2019 ; 2 ; https://www.vitonline.org/ ; ; >
       au < manifest ; exists ; 2020 ; Vascular Investigation and Therapy Volume 3 ; 2020 ; 3 ; https://www.vitonline.org/ ; ; >
       au < frozen ; exists ; 2021 ; Vascular Investigation and Therapy Volume 4 ; 2021 ; 4 ; https://www.vitonline.org/ ; ; >
