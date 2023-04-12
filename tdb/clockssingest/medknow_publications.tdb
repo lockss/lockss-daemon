@@ -5424,9 +5424,9 @@
 
       au < finished ; finished ; 2014 ; Astrocyte Volume 1 ; 2014 ; 1 ; http://www.astrocyte.in/ ; ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2015 ; Astrocyte Volume 2 ; 2015 ; 2 ; http://www.astrocyte.in/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2016 ; Astrocyte Volume 3 ; 2016 ; 3 ; http://www.astrocyte.in/ ; ; >
+      au < frozen ; exists ; 2016 ; Astrocyte Volume 3 ; 2016 ; 3 ; http://www.astrocyte.in/ ; ; >
       au < finished ; frozen ; 2017 ; Astrocyte Volume 4 ; 2017 ; 4 ; http://www.astrocyte.in/ ; ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2018 ; Astrocyte Volume 5 ; 2018 ; 5 ; http://www.astrocyte.in/ ; ; >
+      au < notReady ; exists ; 2018 ; Astrocyte Volume 5 ; 2018 ; 5 ; http://www.astrocyte.in/ ; ; > #502 Bad Gateway for https
 
   }
 
@@ -6376,6 +6376,7 @@
       param[journal_issn] = 2349-5006
 #      param[base_url] = http://www.ijournalhs.org/
       #continued_by = 2542-6214
+      #move to LWW in 2023, https://journals.lww.com/kleu/
 
       au < finished ; finished ; 2014 ; Indian Journal of Health Sciences and Biomedical Research Volume 7 ; 2014 ; 7 ; http://www.ijournalhs.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Indian Journal of Health Sciences and Biomedical Research Volume 8 ; 2015 ; 8 ; http://www.ijournalhs.org/ ; ; reingest1.clockss.org:8082 >
@@ -6395,13 +6396,14 @@
 
       param[journal_issn] = 2542-6214
       #continues = 2349-5006
+      #move to LWW in 2023, https://journals.lww.com/kleu/
 
-      au < manifest ; exists ; 2018 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 11 ; 2018 ; 11 ; https://www.ijournalhs.org/ ; ; >
-      au < manifest ; exists ; 2019 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 12 ; 2019 ; 12 ; https://www.ijournalhs.org/ ; ; >
-      au < manifest ; exists ; 2020 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 13 ; 2020 ; 13 ; https://www.ijournalhs.org/ ; ; >
+      au < doNotProcess ; exists ; 2018 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 11 ; 2018 ; 11 ; https://www.ijournalhs.org/ ; ; >
+      au < doNotProcess ; exists ; 2019 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 12 ; 2019 ; 12 ; https://www.ijournalhs.org/ ; ; >
+      au < doNotProcess ; exists ; 2020 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 13 ; 2020 ; 13 ; https://www.ijournalhs.org/ ; ; >
       au < finished ; frozen ; 2021 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 14 ; 2021 ; 14 ; https://www.ijournalhs.org/ ; ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2022 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 15 ; 2022 ; 15 ; https://www.ijournalhs.org/ ; ; >
-      au < manifest ; exists ; 2023 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 16 ; 2023 ; 16 ; https://www.ijournalhs.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 15 ; 2022 ; 15 ; https://www.ijournalhs.org/ ; ; >
+      au < doNotProcess ; exists ; 2023 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 16 ; 2023 ; 16 ; https://www.ijournalhs.org/ ; ; >
 
   }
 
@@ -12652,24 +12654,25 @@
 
       param[journal_issn] = 2321-0435
       #param[base_url] = https://www.journayu.in/
+      #move to LWW in 2023, moved https://journals.lww.com/joay/
 
-      au < manifest ; exists ; 2007 ; Journal of Ayurveda Volume 1 ; 2007 ; 1 ; https://www.journayu.in/ ; ; >
-      au < manifest ; exists ; 2008 ; Journal of Ayurveda Volume 2 ; 2008 ; 2 ; https://www.journayu.in/ ; ; >
-      au < manifest ; exists ; 2009 ; Journal of Ayurveda Volume 3 ; 2009 ; 3 ; https://www.journayu.in/ ; ; >
-      au < manifest ; exists ; 2010 ; Journal of Ayurveda Volume 4 ; 2010 ; 4 ; https://www.journayu.in/ ; ; >
-      au < manifest ; exists ; 2011 ; Journal of Ayurveda Volume 5 ; 2011 ; 5 ; https://www.journayu.in/ ; ; >
-      au < manifest ; exists ; 2012 ; Journal of Ayurveda Volume 6 ; 2012 ; 6 ; https://www.journayu.in/ ; ; >
-      au < manifest ; exists ; 2013 ; Journal of Ayurveda Volume 7 ; 2013 ; 7 ; https://www.journayu.in/ ; ; >
-      au < manifest ; exists ; 2014 ; Journal of Ayurveda Volume 8 ; 2014 ; 8 ; https://www.journayu.in/ ; ; >
-      au < manifest ; exists ; 2015 ; Journal of Ayurveda Volume 9 ; 2015 ; 9 ; https://www.journayu.in/ ; ; >
-      au < manifest ; exists ; 2016 ; Journal of Ayurveda Volume 10 ; 2016 ; 10 ; https://www.journayu.in/ ; ; >
-      au < manifest ; exists ; 2017 ; Journal of Ayurveda Volume 11 ; 2017 ; 11 ; https://www.journayu.in/ ; ; >
-      au < manifest ; exists ; 2018 ; Journal of Ayurveda Volume 12 ; 2018 ; 12 ; https://www.journayu.in/ ; ; >
-      au < manifest ; exists ; 2019 ; Journal of Ayurveda Volume 13 ; 2019 ; 13 ; https://www.journayu.in/ ; ; >
-      au < manifest ; exists ; 2020 ; Journal of Ayurveda Volume 14 ; 2020 ; 14 ; https://www.journayu.in/ ; ; >
+      au < doNotProcess ; exists ; 2007 ; Journal of Ayurveda Volume 1 ; 2007 ; 1 ; https://www.journayu.in/ ; ; >
+      au < doNotProcess ; exists ; 2008 ; Journal of Ayurveda Volume 2 ; 2008 ; 2 ; https://www.journayu.in/ ; ; >
+      au < doNotProcess ; exists ; 2009 ; Journal of Ayurveda Volume 3 ; 2009 ; 3 ; https://www.journayu.in/ ; ; >
+      au < doNotProcess ; exists ; 2010 ; Journal of Ayurveda Volume 4 ; 2010 ; 4 ; https://www.journayu.in/ ; ; >
+      au < doNotProcess ; exists ; 2011 ; Journal of Ayurveda Volume 5 ; 2011 ; 5 ; https://www.journayu.in/ ; ; >
+      au < doNotProcess ; exists ; 2012 ; Journal of Ayurveda Volume 6 ; 2012 ; 6 ; https://www.journayu.in/ ; ; >
+      au < doNotProcess ; exists ; 2013 ; Journal of Ayurveda Volume 7 ; 2013 ; 7 ; https://www.journayu.in/ ; ; >
+      au < doNotProcess ; exists ; 2014 ; Journal of Ayurveda Volume 8 ; 2014 ; 8 ; https://www.journayu.in/ ; ; >
+      au < doNotProcess ; exists ; 2015 ; Journal of Ayurveda Volume 9 ; 2015 ; 9 ; https://www.journayu.in/ ; ; >
+      au < doNotProcess ; exists ; 2016 ; Journal of Ayurveda Volume 10 ; 2016 ; 10 ; https://www.journayu.in/ ; ; >
+      au < doNotProcess ; exists ; 2017 ; Journal of Ayurveda Volume 11 ; 2017 ; 11 ; https://www.journayu.in/ ; ; >
+      au < doNotProcess ; exists ; 2018 ; Journal of Ayurveda Volume 12 ; 2018 ; 12 ; https://www.journayu.in/ ; ; >
+      au < doNotProcess ; exists ; 2019 ; Journal of Ayurveda Volume 13 ; 2019 ; 13 ; https://www.journayu.in/ ; ; >
+      au < doNotProcess ; exists ; 2020 ; Journal of Ayurveda Volume 14 ; 2020 ; 14 ; https://www.journayu.in/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Ayurveda Volume 15 ; 2021 ; 15 ; https://www.journayu.in/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of Ayurveda Volume 16 ; 2022 ; 16 ; https://www.journayu.in/ ; ; >
-      au < manifest ; exists ; 2023 ; Journal of Ayurveda Volume 17 ; 2023 ; 17 ; https://www.journayu.in/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of Ayurveda Volume 16 ; 2022 ; 16 ; https://www.journayu.in/ ; ; >
+      au < doNotProcess ; exists ; 2023 ; Journal of Ayurveda Volume 17 ; 2023 ; 17 ; https://www.journayu.in/ ; ; >
 
   }
 
@@ -12743,7 +12746,7 @@
       param[journal_issn] = 2454-8529
       #param[base_url] = https://www.jcvs.in/
 
-      au < manifest ; exists ; 2018 ; Journal of Cerebrovascular Sciences Volume 6 ; 2018 ; 6 ; https://www.jcvs.in/ ; ; >
+      au < notReady ; exists ; 2018 ; Journal of Cerebrovascular Sciences Volume 6 ; 2018 ; 6 ; https://www.jcvs.in/ ; ; > #500 Internal Server Error https://www.jcvs.in/article.asp?issn=2454-8529;year=2018;volume=6;issue=1;spage=5;epage=74;aulast=;type=2
       au < manifest ; exists ; 2019 ; Journal of Cerebrovascular Sciences Volume 7 ; 2019 ; 7 ; https://www.jcvs.in/ ; ; >
       au < manifest ; exists ; 2020 ; Journal of Cerebrovascular Sciences Volume 8 ; 2020 ; 8 ; https://www.jcvs.in/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Cerebrovascular Sciences Volume 9 ; 2021 ; 9 ; https://www.jcvs.in/ ; ; >

@@ -5923,11 +5923,12 @@
       param[journal_issn] = 2349-5006
 #      param[base_url] = http://www.ijournalhs.org/
       #continued_by = 2542-6214
+      #move to LWW in 2023, https://journals.lww.com/kleu/
 
-      au < released ; 2014 ; Indian Journal of Health Sciences and Biomedical Research Volume 7 ; 2014 ; 7 ; http://www.ijournalhs.org/ >
-      au < released ; 2015 ; Indian Journal of Health Sciences and Biomedical Research Volume 8 ; 2015 ; 8 ; http://www.ijournalhs.org/ >
-      au < released ; 2016 ; Indian Journal of Health Sciences and Biomedical Research Volume 9 ; 2016 ; 9 ; http://www.ijournalhs.org/ >
-      au < released ; 2017 ; Indian Journal of Health Sciences and Biomedical Research Volume 10 ; 2017 ; 10 ; http://www.ijournalhs.org/ >
+      au < down ; 2014 ; Indian Journal of Health Sciences and Biomedical Research Volume 7 ; 2014 ; 7 ; http://www.ijournalhs.org/ >
+      au < down ; 2015 ; Indian Journal of Health Sciences and Biomedical Research Volume 8 ; 2015 ; 8 ; http://www.ijournalhs.org/ >
+      au < down ; 2016 ; Indian Journal of Health Sciences and Biomedical Research Volume 9 ; 2016 ; 9 ; http://www.ijournalhs.org/ >
+      au < down ; 2017 ; Indian Journal of Health Sciences and Biomedical Research Volume 10 ; 2017 ; 10 ; http://www.ijournalhs.org/ >
       au < doNotProcess ; 2018 ; Indian Journal of Health Sciences and Biomedical Research Volume 11 ; 2018 ; 11 ; http://www.ijournalhs.org/ >
 
   }
@@ -5942,13 +5943,14 @@
 
       param[journal_issn] = 2542-6214
       #continues = 2349-5006
+      #move to LWW in 2023, https://journals.lww.com/kleu/
 
-      au < released ; 2018 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 11 ; 2018 ; 11 ; https://www.ijournalhs.org/ >
-      au < released ; 2019 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 12 ; 2019 ; 12 ; https://www.ijournalhs.org/ >
-      au < released ; 2020 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 13 ; 2020 ; 13 ; https://www.ijournalhs.org/ >
-      au < released ; 2021 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 14 ; 2021 ; 14 ; https://www.ijournalhs.org/ >
-      au < released ; 2022 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 15 ; 2022 ; 15 ; https://www.ijournalhs.org/ >
-      au < manifest ; 2023 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 16 ; 2023 ; 16 ; https://www.ijournalhs.org/ >
+      au < down ; 2018 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 11 ; 2018 ; 11 ; https://www.ijournalhs.org/ >
+      au < down ; 2019 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 12 ; 2019 ; 12 ; https://www.ijournalhs.org/ >
+      au < down ; 2020 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 13 ; 2020 ; 13 ; https://www.ijournalhs.org/ >
+      au < down ; 2021 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 14 ; 2021 ; 14 ; https://www.ijournalhs.org/ >
+      au < down ; 2022 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 15 ; 2022 ; 15 ; https://www.ijournalhs.org/ >
+      au < doNotProcess ; 2023 ; Indian Journal of Health Sciences and Biomedical Research KLEU Volume 16 ; 2023 ; 16 ; https://www.ijournalhs.org/ >
 
   }
 
@@ -12206,24 +12208,25 @@
 
       param[journal_issn] = 2321-0435
       #param[base_url] = https://www.journayu.in/
+      #move to LWW in 2023, moved https://journals.lww.com/joay/
 
-      au < manifest ; 2007 ; Journal of Ayurveda Volume 1 ; 2007 ; 1 ; https://www.journayu.in/ >
-      au < manifest ; 2008 ; Journal of Ayurveda Volume 2 ; 2008 ; 2 ; https://www.journayu.in/ >
-      au < manifest ; 2009 ; Journal of Ayurveda Volume 3 ; 2009 ; 3 ; https://www.journayu.in/ >
-      au < released ; 2010 ; Journal of Ayurveda Volume 4 ; 2010 ; 4 ; https://www.journayu.in/ >
-      au < released ; 2011 ; Journal of Ayurveda Volume 5 ; 2011 ; 5 ; https://www.journayu.in/ >
-      au < manifest ; 2012 ; Journal of Ayurveda Volume 6 ; 2012 ; 6 ; https://www.journayu.in/ >
-      au < released ; 2013 ; Journal of Ayurveda Volume 7 ; 2013 ; 7 ; https://www.journayu.in/ >
-      au < released ; 2014 ; Journal of Ayurveda Volume 8 ; 2014 ; 8 ; https://www.journayu.in/ >
-      au < released ; 2015 ; Journal of Ayurveda Volume 9 ; 2015 ; 9 ; https://www.journayu.in/ >
-      au < released ; 2016 ; Journal of Ayurveda Volume 10 ; 2016 ; 10 ; https://www.journayu.in/ >
-      au < released ; 2017 ; Journal of Ayurveda Volume 11 ; 2017 ; 11 ; https://www.journayu.in/ >
-      au < released ; 2018 ; Journal of Ayurveda Volume 12 ; 2018 ; 12 ; https://www.journayu.in/ >
-      au < released ; 2019 ; Journal of Ayurveda Volume 13 ; 2019 ; 13 ; https://www.journayu.in/ >
-      au < released ; 2020 ; Journal of Ayurveda Volume 14 ; 2020 ; 14 ; https://www.journayu.in/ >
-      au < released ; 2021 ; Journal of Ayurveda Volume 15 ; 2021 ; 15 ; https://www.journayu.in/ >
-      au < released ; 2022 ; Journal of Ayurveda Volume 16 ; 2022 ; 16 ; https://www.journayu.in/ >
-      au < manifest ; 2023 ; Journal of Ayurveda Volume 17 ; 2023 ; 17 ; https://www.journayu.in/ >
+      au < doNotProcess ; 2007 ; Journal of Ayurveda Volume 1 ; 2007 ; 1 ; https://www.journayu.in/ >
+      au < doNotProcess ; 2008 ; Journal of Ayurveda Volume 2 ; 2008 ; 2 ; https://www.journayu.in/ >
+      au < doNotProcess ; 2009 ; Journal of Ayurveda Volume 3 ; 2009 ; 3 ; https://www.journayu.in/ >
+      au < down ; 2010 ; Journal of Ayurveda Volume 4 ; 2010 ; 4 ; https://www.journayu.in/ >
+      au < down ; 2011 ; Journal of Ayurveda Volume 5 ; 2011 ; 5 ; https://www.journayu.in/ >
+      au < doNotProcess ; 2012 ; Journal of Ayurveda Volume 6 ; 2012 ; 6 ; https://www.journayu.in/ >
+      au < down ; 2013 ; Journal of Ayurveda Volume 7 ; 2013 ; 7 ; https://www.journayu.in/ >
+      au < down ; 2014 ; Journal of Ayurveda Volume 8 ; 2014 ; 8 ; https://www.journayu.in/ >
+      au < down ; 2015 ; Journal of Ayurveda Volume 9 ; 2015 ; 9 ; https://www.journayu.in/ >
+      au < down ; 2016 ; Journal of Ayurveda Volume 10 ; 2016 ; 10 ; https://www.journayu.in/ >
+      au < down ; 2017 ; Journal of Ayurveda Volume 11 ; 2017 ; 11 ; https://www.journayu.in/ >
+      au < down ; 2018 ; Journal of Ayurveda Volume 12 ; 2018 ; 12 ; https://www.journayu.in/ >
+      au < down ; 2019 ; Journal of Ayurveda Volume 13 ; 2019 ; 13 ; https://www.journayu.in/ >
+      au < down ; 2020 ; Journal of Ayurveda Volume 14 ; 2020 ; 14 ; https://www.journayu.in/ >
+      au < down ; 2021 ; Journal of Ayurveda Volume 15 ; 2021 ; 15 ; https://www.journayu.in/ >
+      au < down ; 2022 ; Journal of Ayurveda Volume 16 ; 2022 ; 16 ; https://www.journayu.in/ >
+      au < doNotProcess ; 2023 ; Journal of Ayurveda Volume 17 ; 2023 ; 17 ; https://www.journayu.in/ >
 
   }
 
