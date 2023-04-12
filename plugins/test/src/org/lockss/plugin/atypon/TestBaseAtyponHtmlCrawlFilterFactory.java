@@ -8,6 +8,8 @@ import org.lockss.util.*;
 import org.lockss.test.*;
 
 public class TestBaseAtyponHtmlCrawlFilterFactory extends LockssTestCase {
+
+  static Logger log = Logger.getLogger(TestBaseAtyponHtmlCrawlFilterFactory.class);
   static String ENC = Constants.DEFAULT_ENCODING;
 
   private BaseAtyponHtmlCrawlFilterFactory fact;
@@ -459,7 +461,17 @@ public class TestBaseAtyponHtmlCrawlFilterFactory extends LockssTestCase {
             "</div>";
 
     String filteredToolsDiv = "<div data-db-target-of=\"b83a9112-ff13-4233-be12-8a37252f58fb\" aria-labelledby=\"b83a9112-ff13-4233-be12-8a37252f58fb_Ctrl\" role=\"menu\" id=\"b83a9112-ff13-4233-be12-8a37252f58fb_Pop\" class=\"article-tools__block fixed dropBlock__holder\"><ul class=\"rlist w-slide--list\"><li role=\"presentation\" class=\"article-tool\"><a href=\"/action/showCitFormats?doi=10.2144%2F000113771\" role=\"menuitem\"><i aria-hidden=\"true\" class=\"icon-Icon_Download\"></i><span>Download Citations</span></a></li></ul></div>";
-    
+
+
+    String contentNavigation = "<div class=\"content-navigation clearfix\">\n" +
+            "                     <a href=\"/doi/10.1137/20M1356129\" title=\"Previous\" class=\"content-navigation__btn--pre\"><i class=\"icon-arrow_l\"></i><span> Previous article</span></a>\n" +
+            "                     <div class=\"content-navigation__extra\">\n" +
+            "                        <div class=\"pb-dropzone\" data-pb-dropzone=\"navigation-dropzone\" title=\"navigation-dropzone\"></div>\n" +
+            "                     </div>\n" +
+            "                     <a href=\"/doi/10.1137/20M1385172\" title=\"Next\" class=\"content-navigation__btn--next\"><span> Next article</span><i class=\"icon-arrow_r\"></i></a>\n" +
+            "                  </div>";
+
+    String filteredContentNavigation = "";
 
     InputStream inStream;
     inStream = fact.createFilteredInputStream(mau,
@@ -483,6 +495,13 @@ public class TestBaseAtyponHtmlCrawlFilterFactory extends LockssTestCase {
 
     ////log.info(StringUtil.fromInputStream(inStream3));
     assertEquals(filteredToolsDiv, StringUtil.fromInputStream(inStream3));
+
+    InputStream inStream4;
+    inStream4 = fact.createFilteredInputStream(mau,
+            new StringInputStream(contentNavigation),
+            Constants.DEFAULT_ENCODING);
+
+    assertEquals(filteredContentNavigation, StringUtil.fromInputStream(inStream4));
 
   }
 
