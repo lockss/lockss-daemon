@@ -83,6 +83,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
+            <!--https://japmaonline.org/downloadpdf/journals/apms/112/6/20-260.pdf-->
             <string>"^%sdownloadpdf/journals/%s/%s/", base_url, journal_id, volume_name</string>
         </list>
     </entry>
