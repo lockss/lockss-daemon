@@ -17,7 +17,7 @@
     {
     param[base_url] = https://clockss-test.lockss.org/sourcefiles/practicalaction-released/
 
-    au < testing ; exists ; 2022 ; Practical Action Publishing Source Content 2022 ; 2022_01 >
+    au < manifest ; exists ; 2022 ; Practical Action Publishing Source Content 2022 ; 2022_01 >
     #No more AUs. Moving to https.
     }
     {
