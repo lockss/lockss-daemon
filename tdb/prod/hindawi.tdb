@@ -66,12 +66,12 @@
     param[journal_id] = apec
     # no issue in 2005 & 2006
 
-    au < manifest ; 1974 ; Active and Passive Electronic Components Volume 1 (1974) ; 1974 ; 1 >
-    au < manifest ; 1975 ; Active and Passive Electronic Components Volume 2 (1975) ; 1975 ; 2 >
-    au < manifest ; 1976 ; Active and Passive Electronic Components Volume 2-3 (1976) ; 1976 ; 2-3 >
-    au < manifest ; 1977 ; Active and Passive Electronic Components Volume 3-4 (1977) ; 1977 ; 3-4 >
-    au < manifest ; 1978 ; Active and Passive Electronic Components Volume 5 (1978) ; 1978 ; 5 >
-    au < manifest ; 1979 ; Active and Passive Electronic Components Volume 5-6 (1979) ; 1979 ; 5-6 >
+    au < doNotProcess ; 1974 ; Active and Passive Electronic Components Volume 1 (1974) ; 1974 ; 1 >
+    au < doNotProcess ; 1975 ; Active and Passive Electronic Components Volume 2 (1975) ; 1975 ; 2 >
+    au < doNotProcess ; 1976 ; Active and Passive Electronic Components Volume 2-3 (1976) ; 1976 ; 2-3 >
+    au < doNotProcess ; 1977 ; Active and Passive Electronic Components Volume 3-4 (1977) ; 1977 ; 3-4 >
+    au < doNotProcess ; 1978 ; Active and Passive Electronic Components Volume 5 (1978) ; 1978 ; 5 >
+    au < doNotProcess ; 1979 ; Active and Passive Electronic Components Volume 5-6 (1979) ; 1979 ; 5-6 >
     au < doNotProcess ; 1980 ; Active and Passive Electronic Components Volume 6-7 (1980) ; 1980 ; 6-7 >
     au < doNotProcess ; 1981 ; Active and Passive Electronic Components Volume 7-9 (1981) ; 1981 ; 7-9 >
     au < doNotProcess ; 1982 ; Active and Passive Electronic Components Volume 9-10 (1982) ; 1982 ; 9-10 >
@@ -383,18 +383,18 @@
     param[journal_id] = ads
     #published by Asia University, Taiwan
 
-    au < manifest ; 1997 ; Journal of Applied Mathematics and Decision Sciences Volume 1 (1997) ; 1997 ; 1 >
-    au < manifest ; 1998 ; Journal of Applied Mathematics and Decision Sciences Volume 2 (1998) ; 1998 ; 2 >
-    au < manifest ; 1999 ; Journal of Applied Mathematics and Decision Sciences Volume 3 (1999) ; 1999 ; 3 >
-    au < manifest ; 2000 ; Journal of Applied Mathematics and Decision Sciences Volume 4 (2000) ; 2000 ; 4 >
-    au < manifest ; 2001 ; Journal of Applied Mathematics and Decision Sciences Volume 5 (2001) ; 2001 ; 5 >
-    au < manifest ; 2002 ; Journal of Applied Mathematics and Decision Sciences Volume 6 (2002) ; 2002 ; 6 >
-    au < manifest ; 2003 ; Journal of Applied Mathematics and Decision Sciences Volume 7 (2003) ; 2003 ; 7 >
-    au < manifest ; 2004 ; Journal of Applied Mathematics and Decision Sciences Volume 8 (2004) ; 2004 ; 8 >
-    au < manifest ; 2005 ; Journal of Applied Mathematics and Decision Sciences Volume 2005 ; 2005 ; 2005 >
-    au < manifest ; 2006 ; Journal of Applied Mathematics and Decision Sciences Volume 2006 ; 2006 ; 2006 >
-    au < manifest ; 2007 ; Journal of Applied Mathematics and Decision Sciences Volume 2007 ; 2007 ; 2007 >
-    au < manifest ; 2008 ; Journal of Applied Mathematics and Decision Sciences Volume 2008 ; 2008 ; 2008 >
+    au < doNotProcess ; 1997 ; Journal of Applied Mathematics and Decision Sciences Volume 1 (1997) ; 1997 ; 1 >
+    au < doNotProcess ; 1998 ; Journal of Applied Mathematics and Decision Sciences Volume 2 (1998) ; 1998 ; 2 >
+    au < doNotProcess ; 1999 ; Journal of Applied Mathematics and Decision Sciences Volume 3 (1999) ; 1999 ; 3 >
+    au < doNotProcess ; 2000 ; Journal of Applied Mathematics and Decision Sciences Volume 4 (2000) ; 2000 ; 4 >
+    au < doNotProcess ; 2001 ; Journal of Applied Mathematics and Decision Sciences Volume 5 (2001) ; 2001 ; 5 >
+    au < doNotProcess ; 2002 ; Journal of Applied Mathematics and Decision Sciences Volume 6 (2002) ; 2002 ; 6 >
+    au < doNotProcess ; 2003 ; Journal of Applied Mathematics and Decision Sciences Volume 7 (2003) ; 2003 ; 7 >
+    au < doNotProcess ; 2004 ; Journal of Applied Mathematics and Decision Sciences Volume 8 (2004) ; 2004 ; 8 >
+    au < doNotProcess ; 2005 ; Journal of Applied Mathematics and Decision Sciences Volume 2005 ; 2005 ; 2005 >
+    au < doNotProcess ; 2006 ; Journal of Applied Mathematics and Decision Sciences Volume 2006 ; 2006 ; 2006 >
+    au < doNotProcess ; 2007 ; Journal of Applied Mathematics and Decision Sciences Volume 2007 ; 2007 ; 2007 >
+    au < doNotProcess ; 2008 ; Journal of Applied Mathematics and Decision Sciences Volume 2008 ; 2008 ; 2008 >
     au < doNotProcess ; 2009 ; Journal of Applied Mathematics and Decision Sciences Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Advances in Decision Sciences Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Advances in Decision Sciences Volume 2011 ; 2011 ; 2011 >
@@ -478,9 +478,9 @@
 
     param[journal_id] = ah
 
-    au < manifest ; 2009 ; Advances in Hematology Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; Advances in Hematology Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Advances in Hematology Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2009 ; Advances in Hematology Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; Advances in Hematology Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Advances in Hematology Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Advances in Hematology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Advances in Hematology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Advances in Hematology Volume 2014 ; 2014 ; 2014 >
@@ -579,7 +579,7 @@
     comment[supersedes] = see journal id 'rlms', incongruent overlap
     param[journal_id] = amse
 
-    au < manifest ; 2007 ; Research Letters in Materials Science Volume 2007 ; 2007 ; 2007 >
+    au < doNotProcess ; 2007 ; Research Letters in Materials Science Volume 2007 ; 2007 ; 2007 >
     au < doNotProcess ; 2008 ; Advances in Materials Science and Engineering Volume 2008 ; 2008 ; 2008 >
     au < doNotProcess ; 2009 ; Advances in Materials Science and Engineering Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Advances in Materials Science and Engineering Volume 2010 ; 2010 ; 2010 >
@@ -657,9 +657,9 @@
 
     param[journal_id] = amete
     
-    au < manifest ; 2009 ; Advances in Meteorology Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; Advances in Meteorology Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Advances in Meteorology Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2009 ; Advances in Meteorology Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; Advances in Meteorology Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Advances in Meteorology Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Advances in Meteorology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Advances in Meteorology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Advances in Meteorology Volume 2014 ; 2014 ; 2014 >
@@ -884,7 +884,7 @@
     {
     param[journal_id] = aorth
 
-    au < manifest ; 2011 ; Advances in Orthopedics Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Advances in Orthopedics Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Advances in Orthopedics Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Advances in Orthopedics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Advances in Orthopedics Volume 2014 ; 2014 ; 2014 >
@@ -975,8 +975,8 @@
     comment[supersedes] = see journal id 'rlpc', incongruent overlap
     param[journal_id] = apc
 
-    au < manifest ; 2007 ; Research Letters in Physical Chemistry Volume 2007 ; 2007 ; 2007 >
-    au < manifest ; 2008 ; Research Letters in Physical Chemistry Volume 2008 ; 2008 ; 2008 >
+    au < doNotProcess ; 2007 ; Research Letters in Physical Chemistry Volume 2007 ; 2007 ; 2007 >
+    au < doNotProcess ; 2008 ; Research Letters in Physical Chemistry Volume 2008 ; 2008 ; 2008 >
     au < doNotProcess ; 2009 ; Advances in Physical Chemistry Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Advances in Physical Chemistry Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Advances in Physical Chemistry Volume 2011 ; 2011 ; 2011 >
@@ -1380,8 +1380,8 @@
 
     param[journal_id] = anemia
 
-    au < manifest ; 2010 ; Anemia Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Anemia Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2010 ; Anemia Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Anemia Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Anemia Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Anemia Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Anemia Volume 2014 ; 2014 ; 2014 >
@@ -1516,16 +1516,16 @@
 
     param[journal_id] = archaea
 
-    au < manifest ; 2002 ; Archaea Volume 2002 ; 2002 ; 2002 >
-    au < manifest ; 2003 ; Archaea Volume 2003 ; 2003 ; 2003 >
-    au < manifest ; 2004 ; Archaea Volume 2004 ; 2004 ; 2004 >
-    au < manifest ; 2005 ; Archaea Volume 2005 ; 2005 ; 2005 >
-    au < manifest ; 2006 ; Archaea Volume 2006 ; 2006 ; 2006 >
-    au < manifest ; 2007 ; Archaea Volume 2007 ; 2007 ; 2007 >
-    au < manifest ; 2008 ; Archaea Volume 2008 ; 2008 ; 2008 >
-    au < manifest ; 2009 ; Archaea Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; Archaea Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Archaea Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2002 ; Archaea Volume 2002 ; 2002 ; 2002 >
+    au < doNotProcess ; 2003 ; Archaea Volume 2003 ; 2003 ; 2003 >
+    au < doNotProcess ; 2004 ; Archaea Volume 2004 ; 2004 ; 2004 >
+    au < doNotProcess ; 2005 ; Archaea Volume 2005 ; 2005 ; 2005 >
+    au < doNotProcess ; 2006 ; Archaea Volume 2006 ; 2006 ; 2006 >
+    au < doNotProcess ; 2007 ; Archaea Volume 2007 ; 2007 ; 2007 >
+    au < doNotProcess ; 2008 ; Archaea Volume 2008 ; 2008 ; 2008 >
+    au < doNotProcess ; 2009 ; Archaea Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; Archaea Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Archaea Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Archaea Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Archaea Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Archaea Volume 2014 ; 2014 ; 2014 >
@@ -1551,8 +1551,8 @@
 
     param[journal_id] = arthritis
 
-    au < manifest ; 2010 ; Arthritis Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Arthritis Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2010 ; Arthritis Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Arthritis Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Arthritis Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Arthritis Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Arthritis Volume 2014 ; 2014 ; 2014 >
@@ -1642,29 +1642,29 @@
 
     param[journal_id] = bn
 
-    au < manifest ; 1988 ; Behavioural Neurology Volume 1 (1988) ; 1988 ; 1 >
-    au < manifest ; 1989 ; Behavioural Neurology Volume 2 (1989) ; 1989 ; 2 >
-    au < manifest ; 1990 ; Behavioural Neurology Volume 3 (1990) ; 1990 ; 3 >
-    au < manifest ; 1991 ; Behavioural Neurology Volume 4 (1991) ; 1991 ; 4 >
-    au < manifest ; 1992 ; Behavioural Neurology Volume 5 (1992) ; 1992 ; 5 >
-    au < manifest ; 1993 ; Behavioural Neurology Volume 6 (1993) ; 1993 ; 6 >
-    au < manifest ; 1994 ; Behavioural Neurology Volume 7 (1994) ; 1994 ; 7 >
-    au < manifest ; 1995 ; Behavioural Neurology Volume 8 (1995) ; 1995 ; 8 >
-    au < manifest ; 1996 ; Behavioural Neurology Volume 9 (1996) ; 1996 ; 9 >
-    au < manifest ; 1997 ; Behavioural Neurology Volume 10 (1997) ; 1997 ; 10 >
-    au < manifest ; 1998 ; Behavioural Neurology Volume 11 (1998) ; 1998 ; 11 >
-    au < manifest ; 1999 ; Behavioural Neurology Volume 11 (1999) ; 1999 ; 11 >
-    au < manifest ; 2000 ; Behavioural Neurology Volume 12 (2000) ; 2000 ; 12 >
-    au < manifest ; 2002 ; Behavioural Neurology Volume 13 (2002) ; 2002 ; 13 >
-    au < manifest ; 2003 ; Behavioural Neurology Volume 14 (2003) ; 2003 ; 14 >
-    au < manifest ; 2004 ; Behavioural Neurology Volume 15 (2004) ; 2004 ; 15 >
-    au < manifest ; 2005 ; Behavioural Neurology Volume 16 (2005) ; 2005 ; 16 >
-    au < manifest ; 2006 ; Behavioural Neurology Volume 17 (2006) ; 2006 ; 17 >
-    au < manifest ; 2007 ; Behavioural Neurology Volume 18 (2007) ; 2007 ; 18 >
-    au < manifest ; 2008 ; Behavioural Neurology Volume 19-20 (2008) ; 2008 ; 19-20 >
-    au < manifest ; 2009 ; Behavioural Neurology Volume 21 (2009) ; 2009 ; 21 >
-    au < manifest ; 2010 ; Behavioural Neurology Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Behavioural Neurology Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 1988 ; Behavioural Neurology Volume 1 (1988) ; 1988 ; 1 >
+    au < doNotProcess ; 1989 ; Behavioural Neurology Volume 2 (1989) ; 1989 ; 2 >
+    au < doNotProcess ; 1990 ; Behavioural Neurology Volume 3 (1990) ; 1990 ; 3 >
+    au < doNotProcess ; 1991 ; Behavioural Neurology Volume 4 (1991) ; 1991 ; 4 >
+    au < doNotProcess ; 1992 ; Behavioural Neurology Volume 5 (1992) ; 1992 ; 5 >
+    au < doNotProcess ; 1993 ; Behavioural Neurology Volume 6 (1993) ; 1993 ; 6 >
+    au < doNotProcess ; 1994 ; Behavioural Neurology Volume 7 (1994) ; 1994 ; 7 >
+    au < doNotProcess ; 1995 ; Behavioural Neurology Volume 8 (1995) ; 1995 ; 8 >
+    au < doNotProcess ; 1996 ; Behavioural Neurology Volume 9 (1996) ; 1996 ; 9 >
+    au < doNotProcess ; 1997 ; Behavioural Neurology Volume 10 (1997) ; 1997 ; 10 >
+    au < doNotProcess ; 1998 ; Behavioural Neurology Volume 11 (1998) ; 1998 ; 11 >
+    au < doNotProcess ; 1999 ; Behavioural Neurology Volume 11 (1999) ; 1999 ; 11 >
+    au < doNotProcess ; 2000 ; Behavioural Neurology Volume 12 (2000) ; 2000 ; 12 >
+    au < doNotProcess ; 2002 ; Behavioural Neurology Volume 13 (2002) ; 2002 ; 13 >
+    au < doNotProcess ; 2003 ; Behavioural Neurology Volume 14 (2003) ; 2003 ; 14 >
+    au < doNotProcess ; 2004 ; Behavioural Neurology Volume 15 (2004) ; 2004 ; 15 >
+    au < doNotProcess ; 2005 ; Behavioural Neurology Volume 16 (2005) ; 2005 ; 16 >
+    au < doNotProcess ; 2006 ; Behavioural Neurology Volume 17 (2006) ; 2006 ; 17 >
+    au < doNotProcess ; 2007 ; Behavioural Neurology Volume 18 (2007) ; 2007 ; 18 >
+    au < doNotProcess ; 2008 ; Behavioural Neurology Volume 19-20 (2008) ; 2008 ; 19-20 >
+    au < doNotProcess ; 2009 ; Behavioural Neurology Volume 21 (2009) ; 2009 ; 21 >
+    au < doNotProcess ; 2010 ; Behavioural Neurology Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Behavioural Neurology Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Behavioural Neurology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Behavioural Neurology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Behavioural Neurology Volume 2014 ; 2014 ; 2014 >
@@ -1689,10 +1689,10 @@
 
     param[journal_id] = bri
 
-    au < manifest ; 2008 ; Biochemistry Research International Volume 2008 ; 2008 ; 2008 >
-    au < manifest ; 2009 ; Biochemistry Research International Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; Biochemistry Research International Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Biochemistry Research International Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2008 ; Biochemistry Research International Volume 2008 ; 2008 ; 2008 >
+    au < doNotProcess ; 2009 ; Biochemistry Research International Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; Biochemistry Research International Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Biochemistry Research International Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Biochemistry Research International Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Biochemistry Research International Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Biochemistry Research International Volume 2014 ; 2014 ; 2014 >
@@ -1752,17 +1752,17 @@
 
     param[journal_id] = bmri
 
-    au < manifest ; 2001 ; BioMed Research International Volume 1 (2001) ; 2001 ; 1 >
-    au < manifest ; 2002 ; BioMed Research International Volume 2 (2002) ; 2002 ; 2 >
-    au < manifest ; 2003 ; BioMed Research International Volume 2003 ; 2003 ; 2003 >
-    au < manifest ; 2004 ; BioMed Research International Volume 2004 ; 2004 ; 2004 >
-    au < manifest ; 2005 ; BioMed Research International Volume 2005 ; 2005 ; 2005 >
-    au < manifest ; 2006 ; BioMed Research International Volume 2006 ; 2006 ; 2006 >
-    au < manifest ; 2007 ; BioMed Research International Volume 2007 ; 2007 ; 2007 >
-    au < manifest ; 2008 ; BioMed Research International Volume 2008 ; 2008 ; 2008 >
-    au < manifest ; 2009 ; BioMed Research International Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; BioMed Research International Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; BioMed Research International Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2001 ; BioMed Research International Volume 1 (2001) ; 2001 ; 1 >
+    au < doNotProcess ; 2002 ; BioMed Research International Volume 2 (2002) ; 2002 ; 2 >
+    au < doNotProcess ; 2003 ; BioMed Research International Volume 2003 ; 2003 ; 2003 >
+    au < doNotProcess ; 2004 ; BioMed Research International Volume 2004 ; 2004 ; 2004 >
+    au < doNotProcess ; 2005 ; BioMed Research International Volume 2005 ; 2005 ; 2005 >
+    au < doNotProcess ; 2006 ; BioMed Research International Volume 2006 ; 2006 ; 2006 >
+    au < doNotProcess ; 2007 ; BioMed Research International Volume 2007 ; 2007 ; 2007 >
+    au < doNotProcess ; 2008 ; BioMed Research International Volume 2008 ; 2008 ; 2008 >
+    au < doNotProcess ; 2009 ; BioMed Research International Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; BioMed Research International Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; BioMed Research International Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; BioMed Research International Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; BioMed Research International Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; BioMed Research International Volume 2014 ; 2014 ; 2014 >
@@ -1831,7 +1831,7 @@
 
     param[journal_id] = cjgh
 
-    au < manifest ; 2011 ; Canadian Journal of Gastroenterology and Hepatology Volume 25 (2011) ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Canadian Journal of Gastroenterology and Hepatology Volume 25 (2011) ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Canadian Journal of Gastroenterology and Hepatology Volume 26 (2012) ; 2012 ; 2012 >
     au < released ; 2013 ; Canadian Journal of Gastroenterology and Hepatology Volume 27 (2013) ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Canadian Journal of Gastroenterology and Hepatology Volume 28 (2014) ; 2014 ; 2014 >
@@ -1853,7 +1853,7 @@
 
     param[journal_id] = cjidmm
 
-    au < manifest ; 2011 ; Canadian Journal of Infectious Diseases and Medical Microbiology Volume 22 (2011) ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Canadian Journal of Infectious Diseases and Medical Microbiology Volume 22 (2011) ; 2011 ; 2011 >
     au < released ; 2012 ; Canadian Journal of Infectious Diseases and Medical Microbiology Volume 23 (2012) ; 2012 ; 2012 >
     au < released ; 2013 ; Canadian Journal of Infectious Diseases and Medical Microbiology Volume 24 (2013) ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Canadian Journal of Infectious Diseases and Medical Microbiology Volume 25 (2014) ; 2014 ; 2014 >
@@ -1875,7 +1875,7 @@
 
     param[journal_id] = crj
 
-    au < manifest ; 2011 ; Canadian Respiratory Journal Volume 18 (2011) ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Canadian Respiratory Journal Volume 18 (2011) ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Canadian Respiratory Journal Volume 19 (2012) ; 2012 ; 2012 >
     au < released ; 2013 ; Canadian Respiratory Journal Volume 20 (2013) ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Canadian Respiratory Journal Volume 21 (2014) ; 2014 ; 2014 >
@@ -1947,7 +1947,7 @@
 
     param[journal_id] = cria
 
-    au < manifest ; 2011 ; Case Reports in Anesthesiology Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Anesthesiology Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Case Reports in Anesthesiology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Anesthesiology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Anesthesiology Volume 2014 ; 2014 ; 2014 >
@@ -1972,7 +1972,7 @@
 
     param[journal_id] = cric
 
-    au < manifest ; 2011 ; Case Reports in Cardiology Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Cardiology Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Case Reports in Cardiology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Cardiology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Cardiology Volume 2014 ; 2014 ; 2014 >
@@ -1998,7 +1998,7 @@
 
     param[journal_id] = cricc
 
-    au < manifest ; 2011 ; Case Reports in Critical Care Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Critical Care Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Case Reports in Critical Care Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Critical Care Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Critical Care Volume 2014 ; 2014 ; 2014 >
@@ -2024,7 +2024,7 @@
 
     param[journal_id] = crid
 
-    au < manifest ; 2011 ; Case Reports in Dentistry Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Dentistry Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Case Reports in Dentistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Case Reports in Dentistry Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Dentistry Volume 2014 ; 2014 ; 2014 >
@@ -2050,7 +2050,7 @@
 
     param[journal_id] = cridm
 
-    au < manifest ; 2011 ; Case Reports in Dermatological Medicine Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Dermatological Medicine Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Case Reports in Dermatological Medicine Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Dermatological Medicine Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Dermatological Medicine Volume 2014 ; 2014 ; 2014 >
@@ -2077,7 +2077,7 @@
     param[journal_id] = criem
     # redirects to /crim subdir
 
-    au < manifest ; 2011 ; Case Reports in Emergency Medicine Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Emergency Medicine Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Case Reports in Emergency Medicine Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Emergency Medicine Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Emergency Medicine Volume 2014 ; 2014 ; 2014 >
@@ -2102,7 +2102,7 @@
 
     param[journal_id] = crie
 
-    au < manifest ; 2011 ; Case Reports in Endocrinology Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Endocrinology Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Case Reports in Endocrinology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Endocrinology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Endocrinology Volume 2014 ; 2014 ; 2014 >
@@ -2127,7 +2127,7 @@
 
     param[journal_id] = crigm
 
-    au < manifest ; 2011 ; Case Reports in Gastrointestinal Medicine Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Gastrointestinal Medicine Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Case Reports in Gastrointestinal Medicine Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Gastrointestinal Medicine Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Gastrointestinal Medicine Volume 2014 ; 2014 ; 2014 >
@@ -2152,7 +2152,7 @@
 
     param[journal_id] = crig
 
-    au < manifest ; 2011 ; Case Reports in Genetics Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Genetics Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Case Reports in Genetics Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Genetics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Genetics Volume 2014 ; 2014 ; 2014 >
@@ -2177,7 +2177,7 @@
 
     param[journal_id] = crihem
 
-    au < manifest ; 2011 ; Case Reports in Hematology Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Hematology Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Case Reports in Hematology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Hematology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Hematology Volume 2014 ; 2014 ; 2014 >
@@ -2202,7 +2202,7 @@
 
     param[journal_id] = crihep
 
-    au < manifest ; 2011 ; Case Reports in Hepatology Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Hepatology Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Case Reports in Hepatology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Hepatology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Hepatology Volume 2014 ; 2014 ; 2014 >
@@ -2227,7 +2227,7 @@
 
     param[journal_id] = crii
 
-    au < manifest ; 2011 ; Case Reports in Immunology Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Immunology Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Case Reports in Immunology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Immunology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Immunology Volume 2014 ; 2014 ; 2014 >
@@ -2252,7 +2252,7 @@
 
     param[journal_id] = criid
 
-    au < manifest ; 2011 ; Case Reports in Infectious Diseases Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Infectious Diseases Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Case Reports in Infectious Diseases Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Case Reports in Infectious Diseases Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Infectious Diseases Volume 2014 ; 2014 ; 2014 >
@@ -2305,7 +2305,7 @@
 
     param[journal_id] = crin
 
-    au < manifest ; 2011 ; Case Reports in Nephrology Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Nephrology Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Case Reports in Nephrology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Nephrology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Nephrology Volume 2014 ; 2014 ; 2014 >
@@ -2377,7 +2377,7 @@
 
     param[journal_id] = crionm
 
-    au < manifest ; 2011 ; Case Reports in Oncological Medicine Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Oncological Medicine Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Case Reports in Oncological Medicine Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Oncological Medicine Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Oncological Medicine Volume 2014 ; 2014 ; 2014 >
@@ -2402,7 +2402,7 @@
 
     param[journal_id] = criopm
 
-    au < manifest ; 2011 ; Case Reports in Ophthalmological Medicine Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Ophthalmological Medicine Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Case Reports in Ophthalmological Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Case Reports in Ophthalmological Medicine Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Ophthalmological Medicine Volume 2014 ; 2014 ; 2014 >
@@ -2427,7 +2427,7 @@
 
     param[journal_id] = crior
 
-    au < manifest ; 2011 ; Case Reports in Orthopedics Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Orthopedics Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Case Reports in Orthopedics Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Orthopedics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Orthopedics Volume 2014 ; 2014 ; 2014 >
@@ -2453,7 +2453,7 @@
 
     param[journal_id] = criot
 
-    au < manifest ; 2011 ; Case Reports in Otolaryngology Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Otolaryngology Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Case Reports in Otolaryngology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Otolaryngology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Otolaryngology Volume 2014 ; 2014 ; 2014 >
@@ -2478,7 +2478,7 @@
 
     param[journal_id] = cripa
 
-    au < manifest ; 2011 ; Case Reports in Pathology Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Pathology Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Case Reports in Pathology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Pathology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Pathology Volume 2014 ; 2014 ; 2014 >
@@ -2503,7 +2503,7 @@
 
     param[journal_id] = cripe
 
-    au < manifest ; 2011 ; Case Reports in Pediatrics Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Pediatrics Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Case Reports in Pediatrics Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Pediatrics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Pediatrics Volume 2014 ; 2014 ; 2014 >
@@ -2528,7 +2528,7 @@
 
     param[journal_id] = crips
 
-    au < manifest ; 2011 ; Case Reports in Psychiatry Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Psychiatry Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Case Reports in Psychiatry Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Psychiatry Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Psychiatry Volume 2014 ; 2014 ; 2014 >
@@ -2553,7 +2553,7 @@
 
     param[journal_id] = cripu
 
-    au < manifest ; 2011 ; Case Reports in Pulmonology Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Pulmonology Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Case Reports in Pulmonology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Pulmonology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Pulmonology Volume 2014 ; 2014 ; 2014 >
@@ -2578,7 +2578,7 @@
 
     param[journal_id] = crira
 
-    au < manifest ; 2011 ; Case Reports in Radiology Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Radiology Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Case Reports in Radiology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Radiology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Radiology Volume 2014 ; 2014 ; 2014 >
@@ -2603,7 +2603,7 @@
 
     param[journal_id] = crirh
 
-    au < manifest ; 2011 ; Case Reports in Rheumatology Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Rheumatology Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Case Reports in Rheumatology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Rheumatology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Rheumatology Volume 2014 ; 2014 ; 2014 >
@@ -2628,7 +2628,7 @@
 
     param[journal_id] = cris
 
-    au < manifest ; 2011 ; Case Reports in Surgery Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Surgery Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Case Reports in Surgery Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Surgery Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Surgery Volume 2014 ; 2014 ; 2014 >
@@ -2653,7 +2653,7 @@
 
     param[journal_id] = crit
 
-    au < manifest ; 2011 ; Case Reports in Transplantation Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Transplantation Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Case Reports in Transplantation Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Transplantation Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Transplantation Volume 2014 ; 2014 ; 2014 >
@@ -2703,7 +2703,7 @@
 
     param[journal_id] = crivam
 
-    au < manifest ; 2011 ; Case Reports in Vascular Medicine Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Vascular Medicine Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Case Reports in Vascular Medicine Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Vascular Medicine Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Vascular Medicine Volume 2014 ; 2014 ; 2014 >
@@ -2728,7 +2728,7 @@
 
     param[journal_id] = crivem
 
-    au < manifest ; 2011 ; Case Reports in Veterinary Medicine Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Case Reports in Veterinary Medicine Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Case Reports in Veterinary Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Case Reports in Veterinary Medicine Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Veterinary Medicine Volume 2014 ; 2014 ; 2014 >
@@ -2754,8 +2754,8 @@
     param[journal_id] = cherp
     #ceased publication in 2017
 
-    au < manifest ; 2010 ; Chemotherapy Research and Practice Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Chemotherapy Research and Practice Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2010 ; Chemotherapy Research and Practice Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Chemotherapy Research and Practice Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Chemotherapy Research and Practice Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Chemotherapy Research and Practice Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Chemotherapy Research and Practice Volume 2014 ; 2014 ; 2014 >
@@ -2850,8 +2850,8 @@
 
     param[journal_id] = cholesterol
 
-    au < manifest ; 2010 ; Cholesterol Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Cholesterol Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2010 ; Cholesterol Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Cholesterol Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Cholesterol Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Cholesterol Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Cholesterol Volume 2014 ; 2014 ; 2014 >
@@ -2914,20 +2914,20 @@
 
     param[journal_id] = cmmm
 
-    au < manifest ; 1997 ; Computational and Mathematical Methods in Medicine Volume 1 (1997) ; 1997 ; 1 >
-    au < manifest ; 1998 ; Computational and Mathematical Methods in Medicine Volume 1 (1998) ; 1998 ; 1 >
-    au < manifest ; 1999 ; Computational and Mathematical Methods in Medicine Volume 1-2 (1999) ; 1999 ; 1-2 >
-    au < manifest ; 2000 ; Computational and Mathematical Methods in Medicine Volume 2-3 (2000) ; 2000 ; 2-3 >
-    au < manifest ; 2001 ; Computational and Mathematical Methods in Medicine Volume 3 (2001); 2001 ; 3 >
-    au < manifest ; 2002 ; Computational and Mathematical Methods in Medicine Volume 4 (2002) ; 2002 ; 4 >
-    au < manifest ; 2003 ; Computational and Mathematical Methods in Medicine Volume 5 (2003) ; 2003 ; 5 >
-    au < manifest ; 2005 ; Computational and Mathematical Methods in Medicine Volume 6 (2005) ; 2005 ; 6 >
-    au < manifest ; 2006 ; Computational and Mathematical Methods in Medicine Volume 7 (2006) ; 2006 ; 7 >
-    au < manifest ; 2007 ; Computational and Mathematical Methods in Medicine Volume 8 (2007) ; 2007 ; 8 >
-    au < manifest ; 2008 ; Computational and Mathematical Methods in Medicine Volume 9 (2008) ; 2008 ; 9 >
-    au < manifest ; 2009 ; Computational and Mathematical Methods in Medicine Volume 10 (2009) ; 2009 ; 10 >
-    au < manifest ; 2010 ; Computational and Mathematical Methods in Medicine Volume 11 (2010) ; 2010 ; 11 >
-    au < manifest ; 2011 ; Computational and Mathematical Methods in Medicine Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 1997 ; Computational and Mathematical Methods in Medicine Volume 1 (1997) ; 1997 ; 1 >
+    au < doNotProcess ; 1998 ; Computational and Mathematical Methods in Medicine Volume 1 (1998) ; 1998 ; 1 >
+    au < doNotProcess ; 1999 ; Computational and Mathematical Methods in Medicine Volume 1-2 (1999) ; 1999 ; 1-2 >
+    au < doNotProcess ; 2000 ; Computational and Mathematical Methods in Medicine Volume 2-3 (2000) ; 2000 ; 2-3 >
+    au < doNotProcess ; 2001 ; Computational and Mathematical Methods in Medicine Volume 3 (2001); 2001 ; 3 >
+    au < doNotProcess ; 2002 ; Computational and Mathematical Methods in Medicine Volume 4 (2002) ; 2002 ; 4 >
+    au < doNotProcess ; 2003 ; Computational and Mathematical Methods in Medicine Volume 5 (2003) ; 2003 ; 5 >
+    au < doNotProcess ; 2005 ; Computational and Mathematical Methods in Medicine Volume 6 (2005) ; 2005 ; 6 >
+    au < doNotProcess ; 2006 ; Computational and Mathematical Methods in Medicine Volume 7 (2006) ; 2006 ; 7 >
+    au < doNotProcess ; 2007 ; Computational and Mathematical Methods in Medicine Volume 8 (2007) ; 2007 ; 8 >
+    au < doNotProcess ; 2008 ; Computational and Mathematical Methods in Medicine Volume 9 (2008) ; 2008 ; 9 >
+    au < doNotProcess ; 2009 ; Computational and Mathematical Methods in Medicine Volume 10 (2009) ; 2009 ; 10 >
+    au < doNotProcess ; 2010 ; Computational and Mathematical Methods in Medicine Volume 11 (2010) ; 2010 ; 11 >
+    au < doNotProcess ; 2011 ; Computational and Mathematical Methods in Medicine Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Computational and Mathematical Methods in Medicine Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Computational and Mathematical Methods in Medicine Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Computational and Mathematical Methods in Medicine Volume 2014 ; 2014 ; 2014 >
@@ -3181,13 +3181,13 @@
     param[journal_id] = dte
     # no issue from 2002 to 2007
 
-    au < manifest ; 1994 ; Diagnostic and Therapeutic Endoscopy Volume 1 (1994) ; 1994 ; 1 >
-    au < manifest ; 1995 ; Diagnostic and Therapeutic Endoscopy Volume 1-2 (1995) ; 1995 ; 1-2 >
-    au < manifest ; 1996 ; Diagnostic and Therapeutic Endoscopy Volume 2-3 (1996) ; 1996 ; 2-3 >
-    au < manifest ; 1997 ; Diagnostic and Therapeutic Endoscopy Volume 3-4 (1997) ; 1997 ; 3-4 >
-    au < manifest ; 1998 ; Diagnostic and Therapeutic Endoscopy Volume 4-5 (1998) ; 1998 ; 4-5 >
-    au < manifest ; 1999 ; Diagnostic and Therapeutic Endoscopy Volume 5-6 (1999) ; 1999 ; 5-6 >
-    au < manifest ; 2000 ; Diagnostic and Therapeutic Endoscopy Volume 6-7 (2000) ; 2000 ; 6-7 >
+    au < doNotProcess ; 1994 ; Diagnostic and Therapeutic Endoscopy Volume 1 (1994) ; 1994 ; 1 >
+    au < doNotProcess ; 1995 ; Diagnostic and Therapeutic Endoscopy Volume 1-2 (1995) ; 1995 ; 1-2 >
+    au < doNotProcess ; 1996 ; Diagnostic and Therapeutic Endoscopy Volume 2-3 (1996) ; 1996 ; 2-3 >
+    au < doNotProcess ; 1997 ; Diagnostic and Therapeutic Endoscopy Volume 3-4 (1997) ; 1997 ; 3-4 >
+    au < doNotProcess ; 1998 ; Diagnostic and Therapeutic Endoscopy Volume 4-5 (1998) ; 1998 ; 4-5 >
+    au < doNotProcess ; 1999 ; Diagnostic and Therapeutic Endoscopy Volume 5-6 (1999) ; 1999 ; 5-6 >
+    au < doNotProcess ; 2000 ; Diagnostic and Therapeutic Endoscopy Volume 6-7 (2000) ; 2000 ; 6-7 >
     au < doNotProcess ; 2001 ; Diagnostic and Therapeutic Endoscopy Volume 7 (2001) ; 2001 ; 7 >
     # no issue from 2002 to 2007
     au < doNotProcess ; 2008 ; Diagnostic and Therapeutic Endoscopy Volume 2008 ; 2008 ; 2008 >
@@ -3256,23 +3256,23 @@
     param[journal_id] = dm
     # no issue in 1995, 1997
 
-    au < manifest ; 1993 ; Disease Markers Volume 11 (1993) ; 1993 ; 11 >
-    au < manifest ; 1994 ; Disease Markers Volume 12 (1994) ; 1994 ; 12 >
-    au < manifest ; 1996 ; Disease Markers Volume 12-13 (1996) ; 1996 ; 12-13 >
-    au < manifest ; 1998 ; Disease Markers Volume 13-14 (1998) ; 1998 ; 13-14 >
-    au < manifest ; 1999 ; Disease Markers Volume 15 (1999) ; 1999 ; 15 >
-    au < manifest ; 2000 ; Disease Markers Volume 16 (2000) ; 2000 ; 16 >
-    au < manifest ; 2001 ; Disease Markers Volume 17 (2001) ; 2001 ; 17 >
-    au < manifest ; 2002 ; Disease Markers Volume 18 (2002) ; 2002 ; 18 >
-    au < manifest ; 2003 ; Disease Markers Volume 19 (2003) ; 2003 ; 19 >
-    au < manifest ; 2004 ; Disease Markers Volume 19-20 (2004) ; 2004 ; 19-20 >
-    au < manifest ; 2005 ; Disease Markers Volume 21 (2005) ; 2005 ; 21 >
-    au < manifest ; 2006 ; Disease Markers Volume 22 (2006) ; 2006 ; 22 >
-    au < manifest ; 2007 ; Disease Markers Volume 23 (2007) ; 2007 ; 23 >
-    au < manifest ; 2008 ; Disease Markers Volume 24-25 (2008) ; 2008 ; 24-25 >
-    au < manifest ; 2009 ; Disease Markers Volume 26-27 (2009) ; 2009 ; 26-27 >
-    au < manifest ; 2010 ; Disease Markers Volume 28-29 (2010) ; 2010 ; 28-29 >
-    au < manifest ; 2011 ; Disease Markers Volume 30-31 (2011) ; 2011 ; 30-31 >
+    au < doNotProcess ; 1993 ; Disease Markers Volume 11 (1993) ; 1993 ; 11 >
+    au < doNotProcess ; 1994 ; Disease Markers Volume 12 (1994) ; 1994 ; 12 >
+    au < doNotProcess ; 1996 ; Disease Markers Volume 12-13 (1996) ; 1996 ; 12-13 >
+    au < doNotProcess ; 1998 ; Disease Markers Volume 13-14 (1998) ; 1998 ; 13-14 >
+    au < doNotProcess ; 1999 ; Disease Markers Volume 15 (1999) ; 1999 ; 15 >
+    au < doNotProcess ; 2000 ; Disease Markers Volume 16 (2000) ; 2000 ; 16 >
+    au < doNotProcess ; 2001 ; Disease Markers Volume 17 (2001) ; 2001 ; 17 >
+    au < doNotProcess ; 2002 ; Disease Markers Volume 18 (2002) ; 2002 ; 18 >
+    au < doNotProcess ; 2003 ; Disease Markers Volume 19 (2003) ; 2003 ; 19 >
+    au < doNotProcess ; 2004 ; Disease Markers Volume 19-20 (2004) ; 2004 ; 19-20 >
+    au < doNotProcess ; 2005 ; Disease Markers Volume 21 (2005) ; 2005 ; 21 >
+    au < doNotProcess ; 2006 ; Disease Markers Volume 22 (2006) ; 2006 ; 22 >
+    au < doNotProcess ; 2007 ; Disease Markers Volume 23 (2007) ; 2007 ; 23 >
+    au < doNotProcess ; 2008 ; Disease Markers Volume 24-25 (2008) ; 2008 ; 24-25 >
+    au < doNotProcess ; 2009 ; Disease Markers Volume 26-27 (2009) ; 2009 ; 26-27 >
+    au < doNotProcess ; 2010 ; Disease Markers Volume 28-29 (2010) ; 2010 ; 28-29 >
+    au < doNotProcess ; 2011 ; Disease Markers Volume 30-31 (2011) ; 2011 ; 30-31 >
     au < doNotProcess ; 2012 ; Disease Markers Volume 32-33 (2012) ; 2012 ; 32-33 >
     au < released ; 2013 ; Disease Markers Volume 35 (2013) ; 2013 ; 35 >
     au < doNotProcess ; 2014 ; Disease Markers Volume 2014 ; 2014 ; 2014 >
@@ -3298,8 +3298,8 @@
     param[journal_id] = ecri
     #ceased publication in 2017
 
-    au < manifest ; 2010 ; Economics Research International Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Economics Research International Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2010 ; Economics Research International Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Economics Research International Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Economics Research International Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Economics Research International Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Economics Research International Volume 2014 ; 2014 ; 2014 >
@@ -3319,7 +3319,7 @@
 
     param[journal_id] = edri
 
-    au < manifest ; 2011 ; Education Research International Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Education Research International Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Education Research International Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Education Research International Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Education Research International Volume 2014 ; 2014 ; 2014 >
@@ -3621,15 +3621,15 @@
     param[journal_id] = hpb
     # no issue from 2001 to 2007
 
-    au < manifest ; 1988 ; HPB Surgery Volume 1 (1988) ; 1988 ; 1 >
-    au < manifest ; 1989 ; HPB Surgery Volume 1 (1989) ; 1989 ; 1 >
-    au < manifest ; 1990 ; HPB Surgery Volume 2-3 (1990) ; 1990 ; 2-3 >
-    au < manifest ; 1991 ; HPB Surgery Volume 3-5 (1991) ; 1991 ; 3-5 >
-    au < manifest ; 1992 ; HPB Surgery Volume 5-6 (1992) ; 1992 ; 5-6 >
-    au < manifest ; 1993 ; HPB Surgery Volume 6-7 (1993) ; 1993 ; 6-7 >
-    au < manifest ; 1994 ; HPB Surgery Volume 7-8 (1994) ; 1994 ; 7-8 >
-    au < manifest ; 1995 ; HPB Surgery Volume 8-9 (1995) ; 1995 ; 8-9 >
-    au < manifest ; 1996 ; HPB Surgery Volume 9-10 (1996) ; 1996 ; 9-10 >
+    au < doNotProcess ; 1988 ; HPB Surgery Volume 1 (1988) ; 1988 ; 1 >
+    au < doNotProcess ; 1989 ; HPB Surgery Volume 1 (1989) ; 1989 ; 1 >
+    au < doNotProcess ; 1990 ; HPB Surgery Volume 2-3 (1990) ; 1990 ; 2-3 >
+    au < doNotProcess ; 1991 ; HPB Surgery Volume 3-5 (1991) ; 1991 ; 3-5 >
+    au < doNotProcess ; 1992 ; HPB Surgery Volume 5-6 (1992) ; 1992 ; 5-6 >
+    au < doNotProcess ; 1993 ; HPB Surgery Volume 6-7 (1993) ; 1993 ; 6-7 >
+    au < doNotProcess ; 1994 ; HPB Surgery Volume 7-8 (1994) ; 1994 ; 7-8 >
+    au < doNotProcess ; 1995 ; HPB Surgery Volume 8-9 (1995) ; 1995 ; 8-9 >
+    au < doNotProcess ; 1996 ; HPB Surgery Volume 9-10 (1996) ; 1996 ; 9-10 >
     au < doNotProcess ; 1997 ; HPB Surgery Volume 10 (1997) ; 1997 ; 10 >
     au < doNotProcess ; 1998 ; HPB Surgery Volume 10-11 (1998) ; 1998 ; 10-11 >
     au < doNotProcess ; 1999 ; HPB Surgery Volume 11 (1999) ; 1999 ; 11 >
@@ -4219,9 +4219,9 @@
     param[journal_id] = ijcom
     #Moved to archive
 
-    au < manifest ; 2009 ; International Journal of Combinatorics Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; International Journal of Combinatorics Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; International Journal of Combinatorics Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2009 ; International Journal of Combinatorics Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; International Journal of Combinatorics Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; International Journal of Combinatorics Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; International Journal of Combinatorics Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Combinatorics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Combinatorics Volume 2014 ; 2014 ; 2014 >
@@ -4339,9 +4339,9 @@
     comment[supersedes] = see journal id 'denm'
     param[journal_id] = ijde
 
-    au < manifest ; 2006 ; Differential Equations and Nonlinear Mechanics Volume 2006 ; 2006 ; 2006 >
-    au < manifest ; 2007 ; Differential Equations and Nonlinear Mechanics Volume 2007 ; 2007 ; 2007 >
-    au < manifest ; 2008 ; Differential Equations and Nonlinear Mechanics Volume 2008 ; 2008 ; 2008 >
+    au < doNotProcess ; 2006 ; Differential Equations and Nonlinear Mechanics Volume 2006 ; 2006 ; 2006 >
+    au < doNotProcess ; 2007 ; Differential Equations and Nonlinear Mechanics Volume 2007 ; 2007 ; 2007 >
+    au < doNotProcess ; 2008 ; Differential Equations and Nonlinear Mechanics Volume 2008 ; 2008 ; 2008 >
     au < doNotProcess ; 2009 ; International Journal of Differential Equations Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Differential Equations Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Differential Equations Volume 2011 ; 2011 ; 2011 >
@@ -4398,11 +4398,11 @@
 
     param[journal_id] = ijecol
 
-    au < manifest ; 2007 ; Research Letters in Ecology Volume 2007 ; 2007 ; 2007 >
-    au < manifest ; 2008 ; Research Letters in Ecology Volume 2008 ; 2008 ; 2008 >
-    au < manifest ; 2009 ; International Journal of Ecology Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; International Journal of Ecology Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; International Journal of Ecology Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2007 ; Research Letters in Ecology Volume 2007 ; 2007 ; 2007 >
+    au < doNotProcess ; 2008 ; Research Letters in Ecology Volume 2008 ; 2008 ; 2008 >
+    au < doNotProcess ; 2009 ; International Journal of Ecology Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; International Journal of Ecology Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; International Journal of Ecology Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; International Journal of Ecology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Ecology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Ecology Volume 2014 ; 2014 ; 2014 >
@@ -4614,17 +4614,17 @@
     comment[supersedes] = see journal id 'cfg'
     param[journal_id] = ijg
 
-    au < manifest ; 2000 ; Comparative and Functional Genomics Volume 1 (2000) ; 2000 ; 1 >
-    au < manifest ; 2001 ; Comparative and Functional Genomics Volume 2 (2001) ; 2001 ; 2 >
-    au < manifest ; 2002 ; Comparative and Functional Genomics Volume 3 (2002) ; 2002 ; 3 >
-    au < manifest ; 2003 ; Comparative and Functional Genomics Volume 4 (2003) ; 2003 ; 4 >
-    au < manifest ; 2004 ; Comparative and Functional Genomics Volume 5 (2004) ; 2004 ; 5 >
-    au < manifest ; 2005 ; Comparative and Functional Genomics Volume 6 (2005) ; 2005 ; 6 >
-    au < manifest ; 2007 ; Comparative and Functional Genomics Volume 2007 ; 2007 ; 2007 >
-    au < manifest ; 2008 ; Comparative and Functional Genomics Volume 2008 ; 2008 ; 2008 >
-    au < manifest ; 2009 ; Comparative and Functional Genomics Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; Comparative and Functional Genomics Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Comparative and Functional Genomics Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2000 ; Comparative and Functional Genomics Volume 1 (2000) ; 2000 ; 1 >
+    au < doNotProcess ; 2001 ; Comparative and Functional Genomics Volume 2 (2001) ; 2001 ; 2 >
+    au < doNotProcess ; 2002 ; Comparative and Functional Genomics Volume 3 (2002) ; 2002 ; 3 >
+    au < doNotProcess ; 2003 ; Comparative and Functional Genomics Volume 4 (2003) ; 2003 ; 4 >
+    au < doNotProcess ; 2004 ; Comparative and Functional Genomics Volume 5 (2004) ; 2004 ; 5 >
+    au < doNotProcess ; 2005 ; Comparative and Functional Genomics Volume 6 (2005) ; 2005 ; 6 >
+    au < doNotProcess ; 2007 ; Comparative and Functional Genomics Volume 2007 ; 2007 ; 2007 >
+    au < doNotProcess ; 2008 ; Comparative and Functional Genomics Volume 2008 ; 2008 ; 2008 >
+    au < doNotProcess ; 2009 ; Comparative and Functional Genomics Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; Comparative and Functional Genomics Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Comparative and Functional Genomics Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Comparative and Functional Genomics Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Genomics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Genomics Volume 2014 ; 2014 ; 2014 >
@@ -4650,9 +4650,9 @@
 
     param[journal_id] = ijge
 
-    au < manifest ; 2009 ; International Journal of Geophysics Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; International Journal of Geophysics Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; International Journal of Geophysics Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2009 ; International Journal of Geophysics Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; International Journal of Geophysics Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; International Journal of Geophysics Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; International Journal of Geophysics Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Geophysics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Geophysics Volume 2014 ; 2014 ; 2014 >
@@ -4678,7 +4678,7 @@
 
     param[journal_id] = ijh
 
-    au < manifest ; 2011 ; International Journal of Hepatology Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; International Journal of Hepatology Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; International Journal of Hepatology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Hepatology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Hepatology Volume 2014 ; 2014 ; 2014 >
@@ -4704,8 +4704,8 @@
 
     param[journal_id] = ijhy
 
-    au < manifest ; 2010 ; International Journal of Hypertension Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; International Journal of Hypertension Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2010 ; International Journal of Hypertension Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; International Journal of Hypertension Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; International Journal of Hypertension Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Hypertension Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Hypertension Volume 2014 ; 2014 ; 2014 >
@@ -4761,9 +4761,9 @@
     param[journal_id] = ijic
     #Moved to archive
 
-    au < manifest ; 2008 ; Research Letters in Inorganic Chemistry Volume 2008 ; 2008 ; 2008 >
-    au < manifest ; 2009 ; Research Letters in Inorganic Chemistry Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; International Journal of Inorganic Chemistry Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2008 ; Research Letters in Inorganic Chemistry Volume 2008 ; 2008 ; 2008 >
+    au < doNotProcess ; 2009 ; Research Letters in Inorganic Chemistry Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; International Journal of Inorganic Chemistry Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Inorganic Chemistry Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; International Journal of Inorganic Chemistry Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Inorganic Chemistry Volume 2013 ; 2013 ; 2013 >
@@ -4922,9 +4922,9 @@
 
     param[journal_id] = ijmicro
 
-    au < manifest ; 2009 ; International Journal of Microbiology Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; International Journal of Microbiology Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; International Journal of Microbiology Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2009 ; International Journal of Microbiology Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; International Journal of Microbiology Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; International Journal of Microbiology Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; International Journal of Microbiology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Microbiology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Microbiology Volume 2014 ; 2014 ; 2014 >
@@ -5081,9 +5081,9 @@
     param[journal_id] = ijocean
     #Moved to archive
 
-    au < manifest ; 2009 ; International Journal of Oceanography Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; International Journal of Oceanography Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; International Journal of Oceanography Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2009 ; International Journal of Oceanography Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; International Journal of Oceanography Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; International Journal of Oceanography Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; International Journal of Oceanography Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Oceanography Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Oceanography Volume 2014 ; 2014 ; 2014 >
@@ -5134,9 +5134,9 @@
     {
     param[journal_id] = ijoto
    
-    au < manifest ; 2009 ; International Journal of Otolaryngology Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; International Journal of Otolaryngology Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; International Journal of Otolaryngology Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2009 ; International Journal of Otolaryngology Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; International Journal of Otolaryngology Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; International Journal of Otolaryngology Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; International Journal of Otolaryngology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Otolaryngology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Otolaryngology Volume 2014 ; 2014 ; 2014 >
@@ -5180,9 +5180,9 @@
 
     param[journal_id] = ijpedi
 
-    au < manifest ; 2009 ; International Journal of Pediatrics Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; International Journal of Pediatrics Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; International Journal of Pediatrics Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2009 ; International Journal of Pediatrics Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; International Journal of Pediatrics Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; International Journal of Pediatrics Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; International Journal of Pediatrics Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Pediatrics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Pediatrics Volume 2014 ; 2014 ; 2014 >
@@ -5294,7 +5294,7 @@
 
     param[journal_id] = ijps
 
-    au < manifest ; 2009 ; International Journal of Polymer Science Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2009 ; International Journal of Polymer Science Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Polymer Science Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Polymer Science Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; International Journal of Polymer Science Volume 2012 ; 2012 ; 2012 >
@@ -5529,7 +5529,7 @@
     comment[sighting] = seen online 8/20/1013
     param[journal_id] = ijsa
 
-    au < manifest ; 1987 ; Journal of Applied Mathematics and Simulation Volume 1 (1987) ; 1987 ; 1 >
+    au < doNotProcess ; 1987 ; Journal of Applied Mathematics and Simulation Volume 1 (1987) ; 1987 ; 1 >
     au < doNotProcess ; 1988 ; Journal of Applied Mathematics and Simulation Volume 1 (1988) ; 1988 ; 1 >
     au < doNotProcess ; 1989 ; Journal of Applied Mathematics and Simulation Volume 2 (1989) ; 1989 ; 2 >
     au < doNotProcess ; 1990 ; Journal of Applied Mathematics and Simulation Volume 3 (1990) ; 1990 ; 3 >
@@ -5744,7 +5744,7 @@
 
     param[journal_id] = isrn
 
-    au < manifest ; 2011 ; International Scholarly Research Notices Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; International Scholarly Research Notices Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; International Scholarly Research Notices Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Scholarly Research Notices Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Scholarly Research Notices Volume 2014 ; 2014 ; 2014 >
@@ -5902,38 +5902,38 @@
 
     param[journal_id] = jamc
 
-    au < manifest ; 1979 ; Journal of Analytical Methods in Chemistry Volume 1 (1979) ; 1979 ; 1 >
-    au < manifest ; 1980 ; Journal of Analytical Methods in Chemistry Volume 2 (1980) ; 1980 ; 2 >
-    au < manifest ; 1981 ; Journal of Analytical Methods in Chemistry Volume 3 (1981) ; 1981 ; 3 >
-    au < manifest ; 1982 ; Journal of Analytical Methods in Chemistry Volume 4 (1982) ; 1982 ; 4 >
-    au < manifest ; 1983 ; Journal of Analytical Methods in Chemistry Volume 5 (1983) ; 1983 ; 5 >
-    au < manifest ; 1984 ; Journal of Analytical Methods in Chemistry Volume 6 (1984) ; 1984 ; 6 >
-    au < manifest ; 1985 ; Journal of Analytical Methods in Chemistry Volume 7 (1985) ; 1985 ; 7 >
-    au < manifest ; 1986 ; Journal of Analytical Methods in Chemistry Volume 8 (1986) ; 1986 ; 8 >
-    au < manifest ; 1987 ; Journal of Analytical Methods in Chemistry Volume 9 (1987) ; 1987 ; 9 >
-    au < manifest ; 1988 ; Journal of Analytical Methods in Chemistry Volume 10 (1988) ; 1988 ; 10 >
-    au < manifest ; 1989 ; Journal of Analytical Methods in Chemistry Volume 11 (1989) ; 1989 ; 11 >
-    au < manifest ; 1990 ; Journal of Analytical Methods in Chemistry Volume 12 (1990) ; 1990 ; 12 >
-    au < manifest ; 1991 ; Journal of Analytical Methods in Chemistry Volume 13 (1991) ; 1991 ; 13 >
-    au < manifest ; 1992 ; Journal of Analytical Methods in Chemistry Volume 14 (1992) ; 1992 ; 14 >
-    au < manifest ; 1993 ; Journal of Analytical Methods in Chemistry Volume 15 (1993) ; 1993 ; 15 >
-    au < manifest ; 1994 ; Journal of Analytical Methods in Chemistry Volume 16 (1994) ; 1994 ; 16 >
-    au < manifest ; 1995 ; Journal of Analytical Methods in Chemistry Volume 17 (1995) ; 1995 ; 17 >
-    au < manifest ; 1996 ; Journal of Analytical Methods in Chemistry Volume 18 (1996) ; 1996 ; 18 >
-    au < manifest ; 1997 ; Journal of Analytical Methods in Chemistry Volume 19 (1997) ; 1997 ; 19 >
-    au < manifest ; 1998 ; Journal of Analytical Methods in Chemistry Volume 20 (1998) ; 1998 ; 20 >
-    au < manifest ; 1999 ; Journal of Analytical Methods in Chemistry Volume 21 (1999) ; 1999 ; 21 >
-    au < manifest ; 2000 ; Journal of Analytical Methods in Chemistry Volume 22 (2000) ; 2000 ; 22 >
-    au < manifest ; 2001 ; Journal of Analytical Methods in Chemistry Volume 23 (2001) ; 2001 ; 23 >
-    au < manifest ; 2002 ; Journal of Analytical Methods in Chemistry Volume 24 (2002) ; 2002 ; 24 >
-    au < manifest ; 2003 ; Journal of Analytical Methods in Chemistry Volume 25 (2003) ; 2003 ; 25 >
-    au < manifest ; 2005 ; Journal of Analytical Methods in Chemistry Volume 2005 ; 2005 ; 2005 >
-    au < manifest ; 2006 ; Journal of Analytical Methods in Chemistry Volume 2006 ; 2006 ; 2006 >
-    au < manifest ; 2007 ; Journal of Analytical Methods in Chemistry Volume 2007 ; 2007 ; 2007 >
-    au < manifest ; 2008 ; Journal of Analytical Methods in Chemistry Volume 2008 ; 2008 ; 2008 >
-    au < manifest ; 2009 ; Journal of Analytical Methods in Chemistry Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; Journal of Analytical Methods in Chemistry Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Journal of Analytical Methods in Chemistry Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 1979 ; Journal of Analytical Methods in Chemistry Volume 1 (1979) ; 1979 ; 1 >
+    au < doNotProcess ; 1980 ; Journal of Analytical Methods in Chemistry Volume 2 (1980) ; 1980 ; 2 >
+    au < doNotProcess ; 1981 ; Journal of Analytical Methods in Chemistry Volume 3 (1981) ; 1981 ; 3 >
+    au < doNotProcess ; 1982 ; Journal of Analytical Methods in Chemistry Volume 4 (1982) ; 1982 ; 4 >
+    au < doNotProcess ; 1983 ; Journal of Analytical Methods in Chemistry Volume 5 (1983) ; 1983 ; 5 >
+    au < doNotProcess ; 1984 ; Journal of Analytical Methods in Chemistry Volume 6 (1984) ; 1984 ; 6 >
+    au < doNotProcess ; 1985 ; Journal of Analytical Methods in Chemistry Volume 7 (1985) ; 1985 ; 7 >
+    au < doNotProcess ; 1986 ; Journal of Analytical Methods in Chemistry Volume 8 (1986) ; 1986 ; 8 >
+    au < doNotProcess ; 1987 ; Journal of Analytical Methods in Chemistry Volume 9 (1987) ; 1987 ; 9 >
+    au < doNotProcess ; 1988 ; Journal of Analytical Methods in Chemistry Volume 10 (1988) ; 1988 ; 10 >
+    au < doNotProcess ; 1989 ; Journal of Analytical Methods in Chemistry Volume 11 (1989) ; 1989 ; 11 >
+    au < doNotProcess ; 1990 ; Journal of Analytical Methods in Chemistry Volume 12 (1990) ; 1990 ; 12 >
+    au < doNotProcess ; 1991 ; Journal of Analytical Methods in Chemistry Volume 13 (1991) ; 1991 ; 13 >
+    au < doNotProcess ; 1992 ; Journal of Analytical Methods in Chemistry Volume 14 (1992) ; 1992 ; 14 >
+    au < doNotProcess ; 1993 ; Journal of Analytical Methods in Chemistry Volume 15 (1993) ; 1993 ; 15 >
+    au < doNotProcess ; 1994 ; Journal of Analytical Methods in Chemistry Volume 16 (1994) ; 1994 ; 16 >
+    au < doNotProcess ; 1995 ; Journal of Analytical Methods in Chemistry Volume 17 (1995) ; 1995 ; 17 >
+    au < doNotProcess ; 1996 ; Journal of Analytical Methods in Chemistry Volume 18 (1996) ; 1996 ; 18 >
+    au < doNotProcess ; 1997 ; Journal of Analytical Methods in Chemistry Volume 19 (1997) ; 1997 ; 19 >
+    au < doNotProcess ; 1998 ; Journal of Analytical Methods in Chemistry Volume 20 (1998) ; 1998 ; 20 >
+    au < doNotProcess ; 1999 ; Journal of Analytical Methods in Chemistry Volume 21 (1999) ; 1999 ; 21 >
+    au < doNotProcess ; 2000 ; Journal of Analytical Methods in Chemistry Volume 22 (2000) ; 2000 ; 22 >
+    au < doNotProcess ; 2001 ; Journal of Analytical Methods in Chemistry Volume 23 (2001) ; 2001 ; 23 >
+    au < doNotProcess ; 2002 ; Journal of Analytical Methods in Chemistry Volume 24 (2002) ; 2002 ; 24 >
+    au < doNotProcess ; 2003 ; Journal of Analytical Methods in Chemistry Volume 25 (2003) ; 2003 ; 25 >
+    au < doNotProcess ; 2005 ; Journal of Analytical Methods in Chemistry Volume 2005 ; 2005 ; 2005 >
+    au < doNotProcess ; 2006 ; Journal of Analytical Methods in Chemistry Volume 2006 ; 2006 ; 2006 >
+    au < doNotProcess ; 2007 ; Journal of Analytical Methods in Chemistry Volume 2007 ; 2007 ; 2007 >
+    au < doNotProcess ; 2008 ; Journal of Analytical Methods in Chemistry Volume 2008 ; 2008 ; 2008 >
+    au < doNotProcess ; 2009 ; Journal of Analytical Methods in Chemistry Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; Journal of Analytical Methods in Chemistry Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Journal of Analytical Methods in Chemistry Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Journal of Analytical Methods in Chemistry Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Analytical Methods in Chemistry Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Analytical Methods in Chemistry Volume 2014 ; 2014 ; 2014 >
@@ -6009,7 +6009,7 @@
     param[journal_id] = janthro
     #ceased publication in 2017
 
-    au < manifest ; 2011 ; Journal of Anthropology Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Journal of Anthropology Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Journal of Anthropology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Anthropology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Anthropology Volume 2014 ; 2014 ; 2014 >
@@ -6218,7 +6218,7 @@
 
     param[journal_id] = jbt
 
-    au < manifest ; 2011 ; Journal of Blood Transfusion Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Journal of Blood Transfusion Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Journal of Blood Transfusion Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Blood Transfusion Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Blood Transfusion Volume 2014 ; 2014 ; 2014 >
@@ -6395,14 +6395,14 @@
 
     param[journal_id] = jchem
 
-    au < manifest ; 2004 ; E-Journal of Chemistry Volume 1 (2004) ; 2004 ; 1 >
-    au < manifest ; 2005 ; E-Journal of Chemistry Volume 2 (2005) ; 2005 ; 2 >
-    au < manifest ; 2006 ; E-Journal of Chemistry Volume 3 (2006) ; 2006 ; 3 >
-    au < manifest ; 2007 ; E-Journal of Chemistry Volume 4 (2007) ; 2007 ; 4 >
-    au < manifest ; 2008 ; E-Journal of Chemistry Volume 5 (2008) ; 2008 ; 5 >
-    au < manifest ; 2009 ; E-Journal of Chemistry Volume 6 (2009) ; 2009 ; 6 >
-    au < manifest ; 2010 ; E-Journal of Chemistry Volume 7 (2010) ; 2010 ; 7 >
-    au < manifest ; 2011 ; E-Journal of Chemistry Volume 8 (2011) ; 2011 ; 8 >
+    au < doNotProcess ; 2004 ; E-Journal of Chemistry Volume 1 (2004) ; 2004 ; 1 >
+    au < doNotProcess ; 2005 ; E-Journal of Chemistry Volume 2 (2005) ; 2005 ; 2 >
+    au < doNotProcess ; 2006 ; E-Journal of Chemistry Volume 3 (2006) ; 2006 ; 3 >
+    au < doNotProcess ; 2007 ; E-Journal of Chemistry Volume 4 (2007) ; 2007 ; 4 >
+    au < doNotProcess ; 2008 ; E-Journal of Chemistry Volume 5 (2008) ; 2008 ; 5 >
+    au < doNotProcess ; 2009 ; E-Journal of Chemistry Volume 6 (2009) ; 2009 ; 6 >
+    au < doNotProcess ; 2010 ; E-Journal of Chemistry Volume 7 (2010) ; 2010 ; 7 >
+    au < doNotProcess ; 2011 ; E-Journal of Chemistry Volume 8 (2011) ; 2011 ; 8 >
     au < doNotProcess ; 2012 ; E-Journal of Chemistry Volume 9 (2012) ; 2012 ; 9 >
     au < manifest ; 2013 ; Journal of Chemistry Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Chemistry Volume 2014 ; 2014 ; 2014 >
@@ -6463,7 +6463,7 @@
     comment= see journal id 'ijrs'
     param[journal_id] = jc
 
-    au < manifest ; 2008 ; International Journal of Reacting Systems Volume 2008 ; 2008 ; 2008 >
+    au < doNotProcess ; 2008 ; International Journal of Reacting Systems Volume 2008 ; 2008 ; 2008 >
     au < doesNotExist ; 2009 ; Journal of Combustion Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Journal of Combustion Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Combustion Volume 2011 ; 2011 ; 2011 >
@@ -6768,16 +6768,16 @@
     param[journal_id] = jdr 
     # no issue in 2005, 2006
 
-    au < manifest ; 2000 ; Experimental Diabetes Research Volume 1 (2000) ; 2000 ; 1 >
-    au < manifest ; 2001 ; Experimental Diabetes Research Volume 2 (2001) ; 2001 ; 2 >
-    au < manifest ; 2002 ; Experimental Diabetes Research Volume 3 (2002) ; 2002 ; 3 >
-    au < manifest ; 2003 ; Experimental Diabetes Research Volume 4 (2003) ; 2003 ; 4 >
-    au < manifest ; 2004 ; Experimental Diabetes Research Volume 5 (2004) ; 2004 ; 5 >
-    au < manifest ; 2007 ; Experimental Diabetes Research Volume 2007 ; 2007 ; 2007 >
-    au < manifest ; 2008 ; Experimental Diabetes Research Volume 2008 ; 2008 ; 2008 >
-    au < manifest ; 2009 ; Experimental Diabetes Research Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; Experimental Diabetes Research Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Experimental Diabetes Research Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2000 ; Experimental Diabetes Research Volume 1 (2000) ; 2000 ; 1 >
+    au < doNotProcess ; 2001 ; Experimental Diabetes Research Volume 2 (2001) ; 2001 ; 2 >
+    au < doNotProcess ; 2002 ; Experimental Diabetes Research Volume 3 (2002) ; 2002 ; 3 >
+    au < doNotProcess ; 2003 ; Experimental Diabetes Research Volume 4 (2003) ; 2003 ; 4 >
+    au < doNotProcess ; 2004 ; Experimental Diabetes Research Volume 5 (2004) ; 2004 ; 5 >
+    au < doNotProcess ; 2007 ; Experimental Diabetes Research Volume 2007 ; 2007 ; 2007 >
+    au < doNotProcess ; 2008 ; Experimental Diabetes Research Volume 2008 ; 2008 ; 2008 >
+    au < doNotProcess ; 2009 ; Experimental Diabetes Research Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; Experimental Diabetes Research Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Experimental Diabetes Research Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Experimental Diabetes Research Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Diabetes Research Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Diabetes Research Volume 2014 ; 2014 ; 2014 >
@@ -6899,10 +6899,10 @@
     comment[supsersedes] = this journal's earlier volumes seem to be a mashup of older journals
     param[journal_id] = jece
 
-    au < manifest ; 2007 ; Journal of Electrical and Computer Engineering Volume 2007 ; 2007 ; 2007 >
-    au < manifest ; 2008 ; Journal of Electrical and Computer Engineering Volume 2008 ; 2008 ; 2008 >
-    au < manifest ; 2009 ; Journal of Electrical and Computer Engineering Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; Journal of Electrical and Computer Engineering Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2007 ; Journal of Electrical and Computer Engineering Volume 2007 ; 2007 ; 2007 >
+    au < doNotProcess ; 2008 ; Journal of Electrical and Computer Engineering Volume 2008 ; 2008 ; 2008 >
+    au < doNotProcess ; 2009 ; Journal of Electrical and Computer Engineering Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; Journal of Electrical and Computer Engineering Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Electrical and Computer Engineering Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Journal of Electrical and Computer Engineering Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Electrical and Computer Engineering Volume 2013 ; 2013 ; 2013 >
@@ -7092,15 +7092,15 @@
 
     param[journal_id] = jfs
 
-    au < manifest ; 2003 ; Journal of Function Spaces and Applications Volume 2003 ; 2003 ; 2003 >
-    au < manifest ; 2004 ; Journal of Function Spaces and Applications Volume 2004 ; 2004 ; 2004 >
-    au < manifest ; 2005 ; Journal of Function Spaces and Applications Volume 2005 ; 2005 ; 2005 >
-    au < manifest ; 2006 ; Journal of Function Spaces and Applications Volume 2006 ; 2006 ; 2006 >
-    au < manifest ; 2007 ; Journal of Function Spaces and Applications Volume 2007 ; 2007 ; 2007 >
-    au < manifest ; 2008 ; Journal of Function Spaces and Applications Volume 2008 ; 2008 ; 2008 >
-    au < manifest ; 2009 ; Journal of Function Spaces and Applications Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; Journal of Function Spaces and Applications Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Journal of Function Spaces and Applications Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2003 ; Journal of Function Spaces and Applications Volume 2003 ; 2003 ; 2003 >
+    au < doNotProcess ; 2004 ; Journal of Function Spaces and Applications Volume 2004 ; 2004 ; 2004 >
+    au < doNotProcess ; 2005 ; Journal of Function Spaces and Applications Volume 2005 ; 2005 ; 2005 >
+    au < doNotProcess ; 2006 ; Journal of Function Spaces and Applications Volume 2006 ; 2006 ; 2006 >
+    au < doNotProcess ; 2007 ; Journal of Function Spaces and Applications Volume 2007 ; 2007 ; 2007 >
+    au < doNotProcess ; 2008 ; Journal of Function Spaces and Applications Volume 2008 ; 2008 ; 2008 >
+    au < doNotProcess ; 2009 ; Journal of Function Spaces and Applications Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; Journal of Function Spaces and Applications Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Journal of Function Spaces and Applications Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Journal of Function Spaces and Applications Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Function Spaces and Applications Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Function Spaces Volume 2014 ; 2014 ; 2014 >
@@ -7204,8 +7204,8 @@
     param[journal_id] = jhe
     # transfering from Multi Science
 
-    au < manifest ; 2010 ; Journal of Healthcare Engineering Volume 1 (2010) ; 2010 ; 1 >
-    au < manifest ; 2011 ; Journal of Healthcare Engineering Volume 2 (2011) ; 2011 ; 2 >
+    au < doNotProcess ; 2010 ; Journal of Healthcare Engineering Volume 1 (2010) ; 2010 ; 1 >
+    au < doNotProcess ; 2011 ; Journal of Healthcare Engineering Volume 2 (2011) ; 2011 ; 2 >
     au < doNotProcess ; 2012 ; Journal of Healthcare Engineering Volume 3 (2012) ; 2012 ; 3 >
     au < released ; 2013 ; Journal of Healthcare Engineering Volume 4 (2013) ; 2013 ; 4 >
     au < manifest ; 2014 ; Journal of Healthcare Engineering Volume 5 (2014) ; 2014 ; 5 >
@@ -7268,28 +7268,28 @@
     comment[supersedes] = see journal id 'cdi'
     param[journal_id] = jir
 
-    au < manifest ; 1990 ; Clinical and Developmental Immunology Volume 1 (1990) ; 1990 ; 1 >
-    au < manifest ; 1991 ; Clinical and Developmental Immunology Volume 1 (1991) ; 1991 ; 1 >
-    au < manifest ; 1992 ; Clinical and Developmental Immunology Volume 2-3 (1992) ; 1992 ; 2-3 >
-    au < manifest ; 1993 ; Clinical and Developmental Immunology Volume 3 (1993) ; 1993 ; 3 >
-    au < manifest ; 1994 ; Clinical and Developmental Immunology Volume 3-4 (1994) ; 1994 ; 3-4 >
-    au < manifest ; 1995 ; Clinical and Developmental Immunology Volume 4 (1995) ; 1995 ; 4 >
-    au < manifest ; 1996 ; Clinical and Developmental Immunology Volume 5 (1996) ; 1996 ; 5 >
-    au < manifest ; 1997 ; Clinical and Developmental Immunology Volume 5 (1997) ; 1997 ; 5 >
-    au < manifest ; 1998 ; Clinical and Developmental Immunology Volume 5-6 (1998) ; 1998 ; 5-6 >
-    au < manifest ; 1999 ; Clinical and Developmental Immunology Volume 7 (1999) ; 1999 ; 7 >
-    au < manifest ; 2000 ; Clinical and Developmental Immunology Volume 7-8 (2000) ; 2000 ; 7-8 >
-    au < manifest ; 2001 ; Clinical and Developmental Immunology Volume 8 (2001) ; 2001 ; 8 >
-    au < manifest ; 2002 ; Clinical and Developmental Immunology Volume 9 (2002) ; 2002 ; 9 >
-    au < manifest ; 2003 ; Clinical and Developmental Immunology Volume 10 (2003) ; 2003 ; 10 >
-    au < manifest ; 2004 ; Clinical and Developmental Immunology Volume 11 (2004) ; 2004 ; 11 >
-    au < manifest ; 2005 ; Clinical and Developmental Immunology Volume 12 (2005) ; 2005 ; 12 >
-    au < manifest ; 2006 ; Clinical and Developmental Immunology Volume 13 (2006) ; 2006 ; 13 >
-    au < manifest ; 2007 ; Clinical and Developmental Immunology Volume 2007 ; 2007 ; 2007 >
-    au < manifest ; 2008 ; Clinical and Developmental Immunology Volume 2008 ; 2008 ; 2008 >
-    au < manifest ; 2009 ; Clinical and Developmental Immunology Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; Clinical and Developmental Immunology Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Clinical and Developmental Immunology Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 1990 ; Clinical and Developmental Immunology Volume 1 (1990) ; 1990 ; 1 >
+    au < doNotProcess ; 1991 ; Clinical and Developmental Immunology Volume 1 (1991) ; 1991 ; 1 >
+    au < doNotProcess ; 1992 ; Clinical and Developmental Immunology Volume 2-3 (1992) ; 1992 ; 2-3 >
+    au < doNotProcess ; 1993 ; Clinical and Developmental Immunology Volume 3 (1993) ; 1993 ; 3 >
+    au < doNotProcess ; 1994 ; Clinical and Developmental Immunology Volume 3-4 (1994) ; 1994 ; 3-4 >
+    au < doNotProcess ; 1995 ; Clinical and Developmental Immunology Volume 4 (1995) ; 1995 ; 4 >
+    au < doNotProcess ; 1996 ; Clinical and Developmental Immunology Volume 5 (1996) ; 1996 ; 5 >
+    au < doNotProcess ; 1997 ; Clinical and Developmental Immunology Volume 5 (1997) ; 1997 ; 5 >
+    au < doNotProcess ; 1998 ; Clinical and Developmental Immunology Volume 5-6 (1998) ; 1998 ; 5-6 >
+    au < doNotProcess ; 1999 ; Clinical and Developmental Immunology Volume 7 (1999) ; 1999 ; 7 >
+    au < doNotProcess ; 2000 ; Clinical and Developmental Immunology Volume 7-8 (2000) ; 2000 ; 7-8 >
+    au < doNotProcess ; 2001 ; Clinical and Developmental Immunology Volume 8 (2001) ; 2001 ; 8 >
+    au < doNotProcess ; 2002 ; Clinical and Developmental Immunology Volume 9 (2002) ; 2002 ; 9 >
+    au < doNotProcess ; 2003 ; Clinical and Developmental Immunology Volume 10 (2003) ; 2003 ; 10 >
+    au < doNotProcess ; 2004 ; Clinical and Developmental Immunology Volume 11 (2004) ; 2004 ; 11 >
+    au < doNotProcess ; 2005 ; Clinical and Developmental Immunology Volume 12 (2005) ; 2005 ; 12 >
+    au < doNotProcess ; 2006 ; Clinical and Developmental Immunology Volume 13 (2006) ; 2006 ; 13 >
+    au < doNotProcess ; 2007 ; Clinical and Developmental Immunology Volume 2007 ; 2007 ; 2007 >
+    au < doNotProcess ; 2008 ; Clinical and Developmental Immunology Volume 2008 ; 2008 ; 2008 >
+    au < doNotProcess ; 2009 ; Clinical and Developmental Immunology Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; Clinical and Developmental Immunology Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Clinical and Developmental Immunology Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Clinical and Developmental Immunology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Clinical and Developmental Immunology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Immunology Research Volume 2014 ; 2014 ; 2014 >
@@ -7758,8 +7758,8 @@
 
     param[journal_id] = jnme
 
-    au < manifest ; 2010 ; Journal of Nutrition and Metabolism Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Journal of Nutrition and Metabolism Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2010 ; Journal of Nutrition and Metabolism Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Journal of Nutrition and Metabolism Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Journal of Nutrition and Metabolism Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Nutrition and Metabolism Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Nutrition and Metabolism Volume 2014 ; 2014 ; 2014 >
@@ -7785,8 +7785,8 @@
 
     param[journal_id] = jobe
    
-    au < manifest ; 2010 ; Journal of Obesity Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Journal of Obesity Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2010 ; Journal of Obesity Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Journal of Obesity Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Journal of Obesity Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Journal of Obesity Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Obesity Volume 2014 ; 2014 ; 2014 >
@@ -7859,9 +7859,9 @@
 
     param[journal_id] = joph
 
-    au < manifest ; 2009 ; Journal of Ophthalmology Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; Journal of Ophthalmology Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Journal of Ophthalmology Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2009 ; Journal of Ophthalmology Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; Journal of Ophthalmology Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Journal of Ophthalmology Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Journal of Ophthalmology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Ophthalmology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Ophthalmology Volume 2014 ; 2014 ; 2014 >
@@ -7962,8 +7962,8 @@
 
     param[journal_id] = jos
 
-    au < manifest ; 2010 ; Journal of Osteoporosis Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Journal of Osteoporosis Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2010 ; Journal of Osteoporosis Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Journal of Osteoporosis Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Journal of Osteoporosis Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Osteoporosis Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Osteoporosis Volume 2014 ; 2014 ; 2014 >
@@ -8212,10 +8212,10 @@
     param[journal_id] = jqre
     #stopped publishing
 
-    au < manifest ; 2008 ; Journal of Quality and Reliability Engineering Volume 2008 ; 2008 ; 2008 >
-    au < manifest ; 2009 ; Journal of Quality and Reliability Engineering Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; Journal of Quality and Reliability Engineering Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Journal of Quality and Reliability Engineering Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2008 ; Journal of Quality and Reliability Engineering Volume 2008 ; 2008 ; 2008 >
+    au < doNotProcess ; 2009 ; Journal of Quality and Reliability Engineering Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; Journal of Quality and Reliability Engineering Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Journal of Quality and Reliability Engineering Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Journal of Quality and Reliability Engineering Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Journal of Quality and Reliability Engineering Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Quality and Reliability Engineering Volume 2014 ; 2014 ; 2014 >
@@ -8481,21 +8481,21 @@
 
     param[journal_id] = jspec
 
-    au < manifest ; 1997 ; Spectroscopy Volume 13 (1997) ; 1997 ; 13 >
-    au < manifest ; 1998 ; Spectroscopy Volume 14 (1998) ; 1998 ; 14 >
-    au < manifest ; 1999 ; Spectroscopy Volume 14 (1999) ; 1999 ; 14 >
-    au < manifest ; 2000 ; Spectroscopy Volume 14 (2000) ; 2000 ; 14 >
-    au < manifest ; 2001 ; Spectroscopy Volume 15 (2001) ; 2001 ; 15 >
-    au < manifest ; 2002 ; Spectroscopy Volume 16 (2002) ; 2002 ; 16 >
-    au < manifest ; 2003 ; Spectroscopy Volume 17 (2003) ; 2003 ; 17 >
-    au < manifest ; 2004 ; Spectroscopy Volume 18 (2004) ; 2004 ; 18 >
-    au < manifest ; 2005 ; Spectroscopy Volume 19 (2005) ; 2005 ; 19 >
-    au < manifest ; 2006 ; Spectroscopy Volume 20 (2006) ; 2006 ; 20 >
-    au < manifest ; 2007 ; Spectroscopy Volume 21 (2007) ; 2007 ; 21 >
-    au < manifest ; 2008 ; Spectroscopy Volume 22 (2008) ; 2008 ; 22 >
-    au < manifest ; 2009 ; Spectroscopy Volume 23 (2009) ; 2009 ; 23 >
-    au < manifest ; 2010 ; Spectroscopy Volume 24 (2010) ; 2010 ; 24 >
-    au < manifest ; 2011 ; Spectroscopy Volume 25-26 (2011) ; 2011 ; 25-26 >
+    au < doNotProcess ; 1997 ; Spectroscopy Volume 13 (1997) ; 1997 ; 13 >
+    au < doNotProcess ; 1998 ; Spectroscopy Volume 14 (1998) ; 1998 ; 14 >
+    au < doNotProcess ; 1999 ; Spectroscopy Volume 14 (1999) ; 1999 ; 14 >
+    au < doNotProcess ; 2000 ; Spectroscopy Volume 14 (2000) ; 2000 ; 14 >
+    au < doNotProcess ; 2001 ; Spectroscopy Volume 15 (2001) ; 2001 ; 15 >
+    au < doNotProcess ; 2002 ; Spectroscopy Volume 16 (2002) ; 2002 ; 16 >
+    au < doNotProcess ; 2003 ; Spectroscopy Volume 17 (2003) ; 2003 ; 17 >
+    au < doNotProcess ; 2004 ; Spectroscopy Volume 18 (2004) ; 2004 ; 18 >
+    au < doNotProcess ; 2005 ; Spectroscopy Volume 19 (2005) ; 2005 ; 19 >
+    au < doNotProcess ; 2006 ; Spectroscopy Volume 20 (2006) ; 2006 ; 20 >
+    au < doNotProcess ; 2007 ; Spectroscopy Volume 21 (2007) ; 2007 ; 21 >
+    au < doNotProcess ; 2008 ; Spectroscopy Volume 22 (2008) ; 2008 ; 22 >
+    au < doNotProcess ; 2009 ; Spectroscopy Volume 23 (2009) ; 2009 ; 23 >
+    au < doNotProcess ; 2010 ; Spectroscopy Volume 24 (2010) ; 2010 ; 24 >
+    au < doNotProcess ; 2011 ; Spectroscopy Volume 25-26 (2011) ; 2011 ; 25-26 >
     au < doNotProcess ; 2012 ; Spectroscopy: An International Journal Volume 27 (2012) ; 2012 ; 27 >
     au < released ; 2013 ; Journal of Spectroscopy Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Spectroscopy Volume 2014 ; 2014 ; 2014 >
@@ -8630,9 +8630,9 @@
     param[journal_id] = jther
     #ceased publication in 2017
 
-    au < manifest ; 2009 ; Journal of Thermodynamics Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; Journal of Thermodynamics Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Journal of Thermodynamics Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2009 ; Journal of Thermodynamics Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; Journal of Thermodynamics Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Journal of Thermodynamics Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Journal of Thermodynamics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Journal of Thermodynamics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Thermodynamics Volume 2014 ; 2014 ; 2014 >
@@ -8724,9 +8724,9 @@
 
     param[journal_id] = jtrans
 
-    au < manifest ; 2009 ; Journal of Transplantation Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; Journal of Transplantation Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Journal of Transplantation Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2009 ; Journal of Transplantation Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; Journal of Transplantation Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Journal of Transplantation Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Journal of Transplantation Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Journal of Transplantation Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Transplantation Volume 2014 ; 2014 ; 2014 >
@@ -9176,11 +9176,11 @@
     param[journal_id] = np
     comment[down] = doNotProcess but doesNotExist with no substance
 
-    au < manifest ; 1989 ; Journal of Neural Transplantation Volume 1 (1989) ; 1989 ; 1 >
-    au < manifest ; 1991 ; Journal of Neural Transplantation Volume 2 (1991) ; 1991 ; 2 >
-    au < manifest ; 1992 ; Journal of Neural Transplantation and Plasticity Volume 3 (1992) ; 1992 ; 3 >
-    au < manifest ; 1993 ; Journal of Neural Transplantation and Plasticity Volume 4 (1993) ; 1993 ; 4 >
-    au < manifest ; 1994 ; Journal of Neural Transplantation and Plasticity Volume 5 (1994) ; 1994 ; 5 >
+    au < doNotProcess ; 1989 ; Journal of Neural Transplantation Volume 1 (1989) ; 1989 ; 1 >
+    au < doNotProcess ; 1991 ; Journal of Neural Transplantation Volume 2 (1991) ; 1991 ; 2 >
+    au < doNotProcess ; 1992 ; Journal of Neural Transplantation and Plasticity Volume 3 (1992) ; 1992 ; 3 >
+    au < doNotProcess ; 1993 ; Journal of Neural Transplantation and Plasticity Volume 4 (1993) ; 1993 ; 4 >
+    au < doNotProcess ; 1994 ; Journal of Neural Transplantation and Plasticity Volume 5 (1994) ; 1994 ; 5 >
     au < doNotProcess ; 1995 ; Journal of Neural Transplantation and Plasticity Volume 5 (1995) ; 1995 ; 5 >
     au < doNotProcess ; 1996 ; Neural Plasticity Volume 2 (1996); 1996 ; 2 >
     au < doNotProcess ; 1997 ; Journal of Neural Transplantation and Plasticity Volume 6 (1997) ; 1997 ; 6 >
@@ -9369,9 +9369,9 @@
     param[journal_id] = oci
     #stopped publishing
 
-    au < manifest ; 2008 ; Research Letters in Organic Chemistry Volume 2008 ; 2008 ; 2008 >
-    au < manifest ; 2009 ; Research Letters in Organic Chemistry Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; Research Letters in Organic Chemistry Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2008 ; Research Letters in Organic Chemistry Volume 2008 ; 2008 ; 2008 >
+    au < doNotProcess ; 2009 ; Research Letters in Organic Chemistry Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; Research Letters in Organic Chemistry Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Organic Chemistry International Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Organic Chemistry International Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Organic Chemistry International Volume 2013 ; 2013 ; 2013 >
@@ -9391,10 +9391,10 @@
 
     param[journal_id] = omcl
 
-    au < manifest ; 2008 ; Oxidative Medicine and Cellular Longevity Volume 2008 ; 2008 ; 2008 >
-    au < manifest ; 2009 ; Oxidative Medicine and Cellular Longevity Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; Oxidative Medicine and Cellular Longevity Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Oxidative Medicine and Cellular Longevity Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2008 ; Oxidative Medicine and Cellular Longevity Volume 2008 ; 2008 ; 2008 >
+    au < doNotProcess ; 2009 ; Oxidative Medicine and Cellular Longevity Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; Oxidative Medicine and Cellular Longevity Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Oxidative Medicine and Cellular Longevity Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Oxidative Medicine and Cellular Longevity Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Oxidative Medicine and Cellular Longevity Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Oxidative Medicine and Cellular Longevity Volume 2014 ; 2014 ; 2014 >
@@ -9420,9 +9420,9 @@
 
     param[journal_id] = prm
 
-    au < manifest ; 2009 ; Pain Research and Management Volume 14 (2009) ; 2009 ; 2009 >
-    au < manifest ; 2010 ; Pain Research and Management Volume 15 (2010) ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Pain Research and Management Volume 16 (2011) ; 2011 ; 2011 >
+    au < doNotProcess ; 2009 ; Pain Research and Management Volume 14 (2009) ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; Pain Research and Management Volume 15 (2010) ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Pain Research and Management Volume 16 (2011) ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Pain Research and Management Volume 17 (2012) ; 2012 ; 2012 >
     au < released ; 2013 ; Pain Research and Management Volume 18 (2013) ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Pain Research and Management Volume 19 (2014) ; 2014 ; 2014 >
@@ -9542,10 +9542,10 @@
     comment[merged] = Research Letters in Physics 2008–2009 (Merged)
     #ceased publication in 2017
 
-    au < manifest ; 2008 ; Research Letters in Physics Volume 2008 ; 2008 ; 2008 >
-    au < manifest ; 2009 ; Research Letters in Physics Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; Physics Research International Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Physics Research International Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2008 ; Research Letters in Physics Volume 2008 ; 2008 ; 2008 >
+    au < doNotProcess ; 2009 ; Research Letters in Physics Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; Physics Research International Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Physics Research International Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Physics Research International Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Physics Research International Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Physics Research International Volume 2014 ; 2014 ; 2014 >
@@ -9925,21 +9925,21 @@
 
     param[journal_id] = sarcoma
 
-    au < manifest ; 1997 ; Sarcoma Volume 1 (1997) ; 1997 ; 1 >
-    au < manifest ; 1998 ; Sarcoma Volume 2 (1998) ; 1998 ; 2 >
-    au < manifest ; 1999 ; Sarcoma Volume 3 (1999) ; 1999 ; 3 >
-    au < manifest ; 2000 ; Sarcoma Volume 4 (2000) ; 2000 ; 4 >
-    au < manifest ; 2001 ; Sarcoma Volume 5 (2001) ; 2001 ; 5 >
-    au < manifest ; 2002 ; Sarcoma Volume 6 (2002) ; 2002 ; 6 >
-    au < manifest ; 2003 ; Sarcoma Volume 7 (2003) ; 2003 ; 7 >
-    au < manifest ; 2004 ; Sarcoma Volume 8 (2004) ; 2004 ; 8 >
-    au < manifest ; 2005 ; Sarcoma Volume 9 (2005) ; 2005 ; 9 >
-    au < manifest ; 2006 ; Sarcoma Volume 2006 ; 2006 ; 2006 >
-    au < manifest ; 2007 ; Sarcoma Volume 2007 ; 2007 ; 2007 >
-    au < manifest ; 2008 ; Sarcoma Volume 2008 ; 2008 ; 2008 >
-    au < manifest ; 2009 ; Sarcoma Volume 2009 ; 2009 ; 2009 >
-    au < manifest ; 2010 ; Sarcoma Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Sarcoma Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 1997 ; Sarcoma Volume 1 (1997) ; 1997 ; 1 >
+    au < doNotProcess ; 1998 ; Sarcoma Volume 2 (1998) ; 1998 ; 2 >
+    au < doNotProcess ; 1999 ; Sarcoma Volume 3 (1999) ; 1999 ; 3 >
+    au < doNotProcess ; 2000 ; Sarcoma Volume 4 (2000) ; 2000 ; 4 >
+    au < doNotProcess ; 2001 ; Sarcoma Volume 5 (2001) ; 2001 ; 5 >
+    au < doNotProcess ; 2002 ; Sarcoma Volume 6 (2002) ; 2002 ; 6 >
+    au < doNotProcess ; 2003 ; Sarcoma Volume 7 (2003) ; 2003 ; 7 >
+    au < doNotProcess ; 2004 ; Sarcoma Volume 8 (2004) ; 2004 ; 8 >
+    au < doNotProcess ; 2005 ; Sarcoma Volume 9 (2005) ; 2005 ; 9 >
+    au < doNotProcess ; 2006 ; Sarcoma Volume 2006 ; 2006 ; 2006 >
+    au < doNotProcess ; 2007 ; Sarcoma Volume 2007 ; 2007 ; 2007 >
+    au < doNotProcess ; 2008 ; Sarcoma Volume 2008 ; 2008 ; 2008 >
+    au < doNotProcess ; 2009 ; Sarcoma Volume 2009 ; 2009 ; 2009 >
+    au < doNotProcess ; 2010 ; Sarcoma Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Sarcoma Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Sarcoma Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Sarcoma Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Sarcoma Volume 2014 ; 2014 ; 2014 >
@@ -9986,7 +9986,7 @@
 
     param[journal_id] = schizort
 
-    au < manifest ; 2011 ; Schizophrenia Research and Treatment Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2011 ; Schizophrenia Research and Treatment Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Schizophrenia Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Schizophrenia Research and Treatment Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Schizophrenia Research and Treatment Volume 2014 ; 2014 ; 2014 >
@@ -10110,25 +10110,25 @@
 
     param[journal_id] = sv
 
-    au < manifest ; 1993 ; Shock and Vibration Volume 1 (1993) ; 1993 ; 1 >
-    au < manifest ; 1994 ; Shock and Vibration Volume 1 (1994) ; 1994 ; 1 >
-    au < manifest ; 1995 ; Shock and Vibration Volume 2 (1995) ; 1995 ; 2 >
-    au < manifest ; 1996 ; Shock and Vibration Volume 3 (1996) ; 1996 ; 3 >
-    au < manifest ; 1997 ; Shock and Vibration Volume 4 (1997) ; 1997 ; 4 >
-    au < manifest ; 1998 ; Shock and Vibration Volume 5 (1998) ; 1998 ; 5 >
-    au < manifest ; 1999 ; Shock and Vibration Volume 6 (1999) ; 1999 ; 6 >
-    au < manifest ; 2000 ; Shock and Vibration Volume 7 (2000) ; 2000 ; 7 >
-    au < manifest ; 2001 ; Shock and Vibration Volume 8 (2001) ; 2001 ; 8 >
-    au < manifest ; 2002 ; Shock and Vibration Volume 9 (2002) ; 2002 ; 9 >
-    au < manifest ; 2003 ; Shock and Vibration Volume 10 (2003) ; 2003 ; 10 >
-    au < manifest ; 2004 ; Shock and Vibration Volume 11 (2004) ; 2004 ; 11 >
-    au < manifest ; 2005 ; Shock and Vibration Volume 12 (2005) ; 2005 ; 12 >
-    au < manifest ; 2006 ; Shock and Vibration Volume 13 (2006) ; 2006 ; 13 >
-    au < manifest ; 2007 ; Shock and Vibration Volume 14 (2007) ; 2007 ; 14 >
-    au < manifest ; 2008 ; Shock and Vibration Volume 15 (2008) ; 2008 ; 15 >
-    au < manifest ; 2009 ; Shock and Vibration Volume 16 (2009) ; 2009 ; 16 >
-    au < manifest ; 2010 ; Shock and Vibration Volume 17 (2010) ; 2010 ; 17 >
-    au < manifest ; 2011 ; Shock and Vibration Volume 18 (2011) ; 2011 ; 18 >
+    au < doNotProcess ; 1993 ; Shock and Vibration Volume 1 (1993) ; 1993 ; 1 >
+    au < doNotProcess ; 1994 ; Shock and Vibration Volume 1 (1994) ; 1994 ; 1 >
+    au < doNotProcess ; 1995 ; Shock and Vibration Volume 2 (1995) ; 1995 ; 2 >
+    au < doNotProcess ; 1996 ; Shock and Vibration Volume 3 (1996) ; 1996 ; 3 >
+    au < doNotProcess ; 1997 ; Shock and Vibration Volume 4 (1997) ; 1997 ; 4 >
+    au < doNotProcess ; 1998 ; Shock and Vibration Volume 5 (1998) ; 1998 ; 5 >
+    au < doNotProcess ; 1999 ; Shock and Vibration Volume 6 (1999) ; 1999 ; 6 >
+    au < doNotProcess ; 2000 ; Shock and Vibration Volume 7 (2000) ; 2000 ; 7 >
+    au < doNotProcess ; 2001 ; Shock and Vibration Volume 8 (2001) ; 2001 ; 8 >
+    au < doNotProcess ; 2002 ; Shock and Vibration Volume 9 (2002) ; 2002 ; 9 >
+    au < doNotProcess ; 2003 ; Shock and Vibration Volume 10 (2003) ; 2003 ; 10 >
+    au < doNotProcess ; 2004 ; Shock and Vibration Volume 11 (2004) ; 2004 ; 11 >
+    au < doNotProcess ; 2005 ; Shock and Vibration Volume 12 (2005) ; 2005 ; 12 >
+    au < doNotProcess ; 2006 ; Shock and Vibration Volume 13 (2006) ; 2006 ; 13 >
+    au < doNotProcess ; 2007 ; Shock and Vibration Volume 14 (2007) ; 2007 ; 14 >
+    au < doNotProcess ; 2008 ; Shock and Vibration Volume 15 (2008) ; 2008 ; 15 >
+    au < doNotProcess ; 2009 ; Shock and Vibration Volume 16 (2009) ; 2009 ; 16 >
+    au < doNotProcess ; 2010 ; Shock and Vibration Volume 17 (2010) ; 2010 ; 17 >
+    au < doNotProcess ; 2011 ; Shock and Vibration Volume 18 (2011) ; 2011 ; 18 >
     au < doNotProcess ; 2012 ; Shock and Vibration Volume 19 (2012) ; 2012 ; 19 >
     au < manifest ; 2013 ; Shock and Vibration Volume 20 (2013) ; 2013 ; 20 >
     au < doNotProcess ; 2014 ; Shock and Vibration Volume 2014 ; 2014 ; 2014 >
@@ -10294,18 +10294,18 @@
 
     param[journal_id] = tswj
 
-    au < manifest ; 2000 ; TheScientificWorldJOURNAL Volume 1 (2000) ; 2000 ; 1 >
-    au < manifest ; 2001 ; TheScientificWorldJOURNAL Volume 1 (2001) ; 2001 ; 1 >
-    au < manifest ; 2002 ; TheScientificWorldJOURNAL Volume 2 (2002) ; 2002 ; 2 >
-    au < manifest ; 2003 ; TheScientificWorldJOURNAL Volume 3 (2003) ; 2003 ; 3 >
-    au < manifest ; 2004 ; TheScientificWorldJOURNAL Volume 4 (2004) ; 2004 ; 4 >
-    au < manifest ; 2005 ; TheScientificWorldJOURNAL Volume 5 (2005) ; 2005 ; 5 >
-    au < manifest ; 2006 ; TheScientificWorldJOURNAL Volume 6 (2006) ; 2006 ; 6 >
-    au < manifest ; 2007 ; TheScientificWorldJOURNAL Volume 7 (2007) ; 2007 ; 7 >
-    au < manifest ; 2008 ; TheScientificWorldJOURNAL Volume 8 (2008) ; 2008 ; 8 >
-    au < manifest ; 2009 ; TheScientificWorldJOURNAL Volume 9 (2009) ; 2009 ; 9 >
-    au < manifest ; 2010 ; TheScientificWorldJOURNAL Volume 10 (2010) ; 2010 ; 10 >
-    au < manifest ; 2011 ; TheScientificWorldJOURNAL Volume 11 (2011) ; 2011 ; 11 >
+    au < doNotProcess ; 2000 ; TheScientificWorldJOURNAL Volume 1 (2000) ; 2000 ; 1 >
+    au < doNotProcess ; 2001 ; TheScientificWorldJOURNAL Volume 1 (2001) ; 2001 ; 1 >
+    au < doNotProcess ; 2002 ; TheScientificWorldJOURNAL Volume 2 (2002) ; 2002 ; 2 >
+    au < doNotProcess ; 2003 ; TheScientificWorldJOURNAL Volume 3 (2003) ; 2003 ; 3 >
+    au < doNotProcess ; 2004 ; TheScientificWorldJOURNAL Volume 4 (2004) ; 2004 ; 4 >
+    au < doNotProcess ; 2005 ; TheScientificWorldJOURNAL Volume 5 (2005) ; 2005 ; 5 >
+    au < doNotProcess ; 2006 ; TheScientificWorldJOURNAL Volume 6 (2006) ; 2006 ; 6 >
+    au < doNotProcess ; 2007 ; TheScientificWorldJOURNAL Volume 7 (2007) ; 2007 ; 7 >
+    au < doNotProcess ; 2008 ; TheScientificWorldJOURNAL Volume 8 (2008) ; 2008 ; 8 >
+    au < doNotProcess ; 2009 ; TheScientificWorldJOURNAL Volume 9 (2009) ; 2009 ; 9 >
+    au < doNotProcess ; 2010 ; TheScientificWorldJOURNAL Volume 10 (2010) ; 2010 ; 10 >
+    au < doNotProcess ; 2011 ; TheScientificWorldJOURNAL Volume 11 (2011) ; 2011 ; 11 >
     au < doNotProcess ; 2012 ; The Scientific World Journal Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; The Scientific World Journal Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; The Scientific World Journal Volume 2014 ; 2014 ; 2014 >
@@ -10332,8 +10332,8 @@
     param[journal_id] = thrombosis
     #ceased publication in 2017
 
-    au < manifest ; 2010 ; Thrombosis Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Thrombosis Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2010 ; Thrombosis Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Thrombosis Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Thrombosis Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Thrombosis Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Thrombosis Volume 2014 ; 2014 ; 2014 >
@@ -10381,8 +10381,8 @@
 
     param[journal_id] = ulcers
 
-    au < manifest ; 2010 ; Ulcers Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2011 ; Ulcers Volume 2011 ; 2011 ; 2011 >
+    au < doNotProcess ; 2010 ; Ulcers Volume 2010 ; 2010 ; 2010 >
+    au < doNotProcess ; 2011 ; Ulcers Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Ulcers Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Ulcers Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Ulcers Volume 2014 ; 2014 ; 2014 >
