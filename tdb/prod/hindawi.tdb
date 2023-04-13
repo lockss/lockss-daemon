@@ -5,6 +5,7 @@
   >
   
   #the publisher requested that their name be listed simply as "Hindawi." see RT8402
+  #Content 2012 and before is in a different format and does not pass testing with current plugin
 
   rights = openaccess
   plugin = org.lockss.plugin.hindawi.HindawiPlugin
@@ -197,7 +198,7 @@
     au < doNotProcess ; 2009 ; Advances in Artificial Neural Systems Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Advances in Artificial Neural Systems Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Advances in Artificial Neural Systems Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Advances in Artificial Neural Systems Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Advances in Artificial Neural Systems Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Advances in Artificial Neural Systems Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Advances in Artificial Neural Systems Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in Artificial Neural Systems Volume 2015 ; 2015 ; 2015 >
@@ -220,7 +221,7 @@
     au < doNotProcess ; 2009 ; Advances in Astronomy Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Advances in Astronomy Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Advances in Astronomy Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Advances in Astronomy Volume 2012 ; 2012 ; 2012 > #502 upstream error.
+    au < doNotProcess ; 2012 ; Advances in Astronomy Volume 2012 ; 2012 ; 2012 > #502 upstream error.
     au < doNotProcess ; 2013 ; Advances in Astronomy Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Advances in Astronomy Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in Astronomy Volume 2015 ; 2015 ; 2015 >
@@ -420,7 +421,7 @@
     au < doNotProcess ; 2009 ; Advances in Fuzzy Systems Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Advances in Fuzzy Systems Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Advances in Fuzzy Systems Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Advances in Fuzzy Systems Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Advances in Fuzzy Systems Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Advances in Fuzzy Systems Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Advances in Fuzzy Systems Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in Fuzzy Systems Volume 2015 ; 2015 ; 2015 >
@@ -480,7 +481,7 @@
     au < manifest ; 2009 ; Advances in Hematology Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; Advances in Hematology Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Advances in Hematology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Advances in Hematology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Advances in Hematology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Advances in Hematology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Advances in Hematology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in Hematology Volume 2015 ; 2015 ; 2015 >
@@ -525,7 +526,7 @@
     au < doNotProcess ; 2009 ; Advances in High Energy Physics Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Advances in High Energy Physics Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Advances in High Energy Physics Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Advances in High Energy Physics Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Advances in High Energy Physics Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Advances in High Energy Physics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Advances in High Energy Physics Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in High Energy Physics Volume 2015 ; 2015 ; 2015 >
@@ -583,7 +584,7 @@
     au < doNotProcess ; 2009 ; Advances in Materials Science and Engineering Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Advances in Materials Science and Engineering Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Advances in Materials Science and Engineering Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Advances in Materials Science and Engineering Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Advances in Materials Science and Engineering Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Advances in Materials Science and Engineering Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Advances in Materials Science and Engineering Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in Materials Science and Engineering Volume 2015 ; 2015 ; 2015 >
@@ -610,7 +611,7 @@
     au < doNotProcess ; 2009 ; Advances in Mathematical Physics Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Advances in Mathematical Physics Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Advances in Mathematical Physics Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Advances in Mathematical Physics Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Advances in Mathematical Physics Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Advances in Mathematical Physics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Advances in Mathematical Physics Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in Mathematical Physics Volume 2015 ; 2015 ; 2015 >
@@ -659,7 +660,7 @@
     au < manifest ; 2009 ; Advances in Meteorology Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; Advances in Meteorology Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Advances in Meteorology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Advances in Meteorology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Advances in Meteorology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Advances in Meteorology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Advances in Meteorology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in Meteorology Volume 2015 ; 2015 ; 2015 >
@@ -704,7 +705,7 @@
     au < doNotProcess ; 2009 ; Advances in Multimedia Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Advances in Multimedia Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Advances in Multimedia Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Advances in Multimedia Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Advances in Multimedia Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Advances in Multimedia Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Advances in Multimedia Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in Multimedia Volume 2015 ; 2015 ; 2015 >
@@ -815,7 +816,7 @@
     au < doesNotExist ; 2009 ; Advances in Optical Technologies Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Advances in Optical Technologies Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Advances in Optical Technologies Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Advances in Optical Technologies Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Advances in Optical Technologies Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Advances in Optical Technologies Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Advances in Optical Technologies Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in Optical Technologies Volume 2015 ; 2015 ; 2015 >
@@ -839,7 +840,7 @@
     au < doNotProcess ; 2009 ; Advances in OptoElectronics Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Advances in OptoElectronics Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Advances in OptoElectronics Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Advances in OptoElectronics Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Advances in OptoElectronics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Advances in OptoElectronics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Advances in OptoElectronics Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in OptoElectronics Volume 2015 ; 2015 ; 2015 >
@@ -948,7 +949,7 @@
     au < doNotProcess ; 2009 ; Advances in Pharmacological Sciences Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Advances in Pharmacological Sciences Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Advances in Pharmacological Sciences Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Advances in Pharmacological Sciences Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Advances in Pharmacological Sciences Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Advances in Pharmacological Sciences Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Advances in Pharmacological Sciences Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in Pharmacological Sciences Volume 2015 ; 2015 ; 2015 >
@@ -979,7 +980,7 @@
     au < doNotProcess ; 2009 ; Advances in Physical Chemistry Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Advances in Physical Chemistry Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Advances in Physical Chemistry Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Advances in Physical Chemistry Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Advances in Physical Chemistry Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Advances in Physical Chemistry Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Advances in Physical Chemistry Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in Physical Chemistry Volume 2015 ; 2015 ; 2015 >
@@ -1005,7 +1006,7 @@
     au < doesNotExist ; 2009 ; International Journal of Power Management Electronics Volume 2009 (2009) ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Advances in Power Electronics Volume 2010 (2010) ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Advances in Power Electronics Volume 2011 (2011) ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Advances in Power Electronics Volume 2012 (2012) ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Advances in Power Electronics Volume 2012 (2012) ; 2012 ; 2012 >
     au < manifest ; 2013 ; Advances in Power Electronics Volume 2013 (2013) ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Advances in Power Electronics Volume 2014 (2014) ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in Power Electronics Volume 2015 (2015) ; 2015 ; 2015 >
@@ -1123,7 +1124,7 @@
     au < doNotProcess ; 2009 ; Advances in Software Engineering Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Advances in Software Engineering Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Advances in Software Engineering Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Advances in Software Engineering Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Advances in Software Engineering Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Advances in Software Engineering Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Advances in Software Engineering Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in Software Engineering Volume 2015 ; 2015 ; 2015 >
@@ -1178,7 +1179,7 @@
     au < doNotProcess ; 2009 ; Advances in Tribology Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Advances in Tribology Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Advances in Tribology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Advances in Tribology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Advances in Tribology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Advances in Tribology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Advances in Tribology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in Tribology Volume 2015 ; 2015 ; 2015 >
@@ -1205,7 +1206,7 @@
     au < doNotProcess ; 2009 ; Advances in Urology Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Advances in Urology Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Advances in Urology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Advances in Urology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Advances in Urology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Advances in Urology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Advances in Urology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in Urology Volume 2015 ; 2015 ; 2015 >
@@ -1248,7 +1249,7 @@
     au < doNotProcess ; 2009 ; Advances in Virology Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Advances in Virology Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Advances in Virology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Advances in Virology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Advances in Virology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Advances in Virology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Advances in Virology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in Virology Volume 2015 ; 2015 ; 2015 >
@@ -1291,7 +1292,7 @@
 
     au < doNotProcess ; 2010 ; AIDS Research and Treatment Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; AIDS Research and Treatment Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; AIDS Research and Treatment Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; AIDS Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; AIDS Research and Treatment Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; AIDS Research and Treatment Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; AIDS Research and Treatment Volume 2015 ; 2015 ; 2015 >
@@ -1358,7 +1359,7 @@
     param[journal_id] = ari
 
     au < doNotProcess ; 2011 ; Anatomy Research International Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Anatomy Research International Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Anatomy Research International Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Anatomy Research International Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Anatomy Research International Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Anatomy Research International Volume 2015 ; 2015 ; 2015 >
@@ -1381,7 +1382,7 @@
 
     au < manifest ; 2010 ; Anemia Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Anemia Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Anemia Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Anemia Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Anemia Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Anemia Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Anemia Volume 2015 ; 2015 ; 2015 >
@@ -1438,7 +1439,7 @@
     au < doNotProcess ; 2009 ; Applied and Environmental Soil Science Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Applied and Environmental Soil Science Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Applied and Environmental Soil Science Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Applied and Environmental Soil Science Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Applied and Environmental Soil Science Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Applied and Environmental Soil Science Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Applied and Environmental Soil Science Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Applied and Environmental Soil Science Volume 2015 ; 2015 ; 2015 >
@@ -1490,7 +1491,7 @@
     au < doNotProcess ; 2009 ; Applied Computational Intelligence and Soft Computing Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Applied Computational Intelligence and Soft Computing Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Applied Computational Intelligence and Soft Computing Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Applied Computational Intelligence and Soft Computing Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Applied Computational Intelligence and Soft Computing Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Applied Computational Intelligence and Soft Computing Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Applied Computational Intelligence and Soft Computing Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Applied Computational Intelligence and Soft Computing Volume 2015 ; 2015 ; 2015 >
@@ -1525,7 +1526,7 @@
     au < manifest ; 2009 ; Archaea Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; Archaea Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Archaea Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Archaea Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Archaea Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Archaea Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Archaea Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Archaea Volume 2015 ; 2015 ; 2015 >
@@ -1616,7 +1617,7 @@
 
     au < doNotProcess ; 2010 ; Autoimmune Diseases Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Autoimmune Diseases Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Autoimmune Diseases Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Autoimmune Diseases Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Autoimmune Diseases Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Autoimmune Diseases Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Autoimmune Diseases Volume 2015 ; 2015 ; 2015 >
@@ -1664,7 +1665,7 @@
     au < manifest ; 2009 ; Behavioural Neurology Volume 21 (2009) ; 2009 ; 21 >
     au < manifest ; 2010 ; Behavioural Neurology Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Behavioural Neurology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Behavioural Neurology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Behavioural Neurology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Behavioural Neurology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Behavioural Neurology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Behavioural Neurology Volume 2015 ; 2015 ; 2015 >
@@ -1692,7 +1693,7 @@
     au < manifest ; 2009 ; Biochemistry Research International Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; Biochemistry Research International Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Biochemistry Research International Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Biochemistry Research International Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Biochemistry Research International Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Biochemistry Research International Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Biochemistry Research International Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Biochemistry Research International Volume 2015 ; 2015 ; 2015 >
@@ -1726,7 +1727,7 @@
     au < doNotProcess ; 2009 ; Bioinorganic Chemistry and Applications Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Bioinorganic Chemistry and Applications Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Bioinorganic Chemistry and Applications Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Bioinorganic Chemistry and Applications Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Bioinorganic Chemistry and Applications Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Bioinorganic Chemistry and Applications Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Bioinorganic Chemistry and Applications Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Bioinorganic Chemistry and Applications Volume 2015 ; 2015 ; 2015 >
@@ -1762,7 +1763,7 @@
     au < manifest ; 2009 ; BioMed Research International Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; BioMed Research International Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; BioMed Research International Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; BioMed Research International Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; BioMed Research International Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; BioMed Research International Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; BioMed Research International Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; BioMed Research International Volume 2015 ; 2015 ; 2015 >
@@ -1831,7 +1832,7 @@
     param[journal_id] = cjgh
 
     au < manifest ; 2011 ; Canadian Journal of Gastroenterology and Hepatology Volume 25 (2011) ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Canadian Journal of Gastroenterology and Hepatology Volume 26 (2012) ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Canadian Journal of Gastroenterology and Hepatology Volume 26 (2012) ; 2012 ; 2012 >
     au < released ; 2013 ; Canadian Journal of Gastroenterology and Hepatology Volume 27 (2013) ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Canadian Journal of Gastroenterology and Hepatology Volume 28 (2014) ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Canadian Journal of Gastroenterology and Hepatology Volume 29 (2015) ; 2015 ; 2015 >
@@ -1875,7 +1876,7 @@
     param[journal_id] = crj
 
     au < manifest ; 2011 ; Canadian Respiratory Journal Volume 18 (2011) ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Canadian Respiratory Journal Volume 19 (2012) ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Canadian Respiratory Journal Volume 19 (2012) ; 2012 ; 2012 >
     au < released ; 2013 ; Canadian Respiratory Journal Volume 20 (2013) ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Canadian Respiratory Journal Volume 21 (2014) ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Canadian Respiratory Journal Volume 22 (2015) ; 2015 ; 2015 >
@@ -1899,7 +1900,7 @@
     au < doNotProcess ; 2009 ; Cardiology Research and Practice Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Cardiology Research and Practice Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Cardiology Research and Practice Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Cardiology Research and Practice Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Cardiology Research and Practice Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Cardiology Research and Practice Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Cardiology Research and Practice Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Cardiology Research and Practice Volume 2015 ; 2015 ; 2015 >
@@ -1972,7 +1973,7 @@
     param[journal_id] = cric
 
     au < manifest ; 2011 ; Case Reports in Cardiology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Case Reports in Cardiology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Case Reports in Cardiology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Cardiology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Cardiology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Case Reports in Cardiology Volume 2015 ; 2015 ; 2015 >
@@ -2024,7 +2025,7 @@
     param[journal_id] = crid
 
     au < manifest ; 2011 ; Case Reports in Dentistry Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Case Reports in Dentistry Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Case Reports in Dentistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Case Reports in Dentistry Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Dentistry Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Case Reports in Dentistry Volume 2015 ; 2015 ; 2015 >
@@ -2050,7 +2051,7 @@
     param[journal_id] = cridm
 
     au < manifest ; 2011 ; Case Reports in Dermatological Medicine Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Case Reports in Dermatological Medicine Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Case Reports in Dermatological Medicine Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Dermatological Medicine Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Dermatological Medicine Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Case Reports in Dermatological Medicine Volume 2015 ; 2015 ; 2015 >
@@ -2127,7 +2128,7 @@
     param[journal_id] = crigm
 
     au < manifest ; 2011 ; Case Reports in Gastrointestinal Medicine Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Case Reports in Gastrointestinal Medicine Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Case Reports in Gastrointestinal Medicine Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Gastrointestinal Medicine Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Gastrointestinal Medicine Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Case Reports in Gastrointestinal Medicine Volume 2015 ; 2015 ; 2015 >
@@ -2152,7 +2153,7 @@
     param[journal_id] = crig
 
     au < manifest ; 2011 ; Case Reports in Genetics Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Case Reports in Genetics Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Case Reports in Genetics Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Genetics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Genetics Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Case Reports in Genetics Volume 2015 ; 2015 ; 2015 >
@@ -2330,7 +2331,7 @@
     param[journal_id] = crinm
 
     au < doNotProcess ; 2011 ; Case Reports in Neurological Medicine Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Case Reports in Neurological Medicine Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Case Reports in Neurological Medicine Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Neurological Medicine Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Neurological Medicine Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Case Reports in Neurological Medicine Volume 2015 ; 2015 ; 2015 >
@@ -2402,7 +2403,7 @@
     param[journal_id] = criopm
 
     au < manifest ; 2011 ; Case Reports in Ophthalmological Medicine Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Case Reports in Ophthalmological Medicine Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Case Reports in Ophthalmological Medicine Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Case Reports in Ophthalmological Medicine Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Ophthalmological Medicine Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Case Reports in Ophthalmological Medicine Volume 2015 ; 2015 ; 2015 >
@@ -2578,7 +2579,7 @@
     param[journal_id] = crira
 
     au < manifest ; 2011 ; Case Reports in Radiology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Case Reports in Radiology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Case Reports in Radiology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Radiology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Radiology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Case Reports in Radiology Volume 2015 ; 2015 ; 2015 >
@@ -2628,7 +2629,7 @@
     param[journal_id] = cris
 
     au < manifest ; 2011 ; Case Reports in Surgery Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Case Reports in Surgery Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Case Reports in Surgery Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Surgery Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Surgery Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Case Reports in Surgery Volume 2015 ; 2015 ; 2015 >
@@ -2653,7 +2654,7 @@
     param[journal_id] = crit
 
     au < manifest ; 2011 ; Case Reports in Transplantation Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Case Reports in Transplantation Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Case Reports in Transplantation Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Case Reports in Transplantation Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Transplantation Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Case Reports in Transplantation Volume 2015 ; 2015 ; 2015 >
@@ -2851,7 +2852,7 @@
 
     au < manifest ; 2010 ; Cholesterol Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Cholesterol Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Cholesterol Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Cholesterol Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Cholesterol Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Cholesterol Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Cholesterol Volume 2015 ; 2015 ; 2015 >
@@ -2874,7 +2875,7 @@
     #Moved to archive
 
     au < doNotProcess ; 2011 ; Chromatography Research International Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Chromatography Research International Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Chromatography Research International Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Chromatography Research International Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Chromatography Research International Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Chromatography Research International Volume 2015 ; 2015 ; 2015 >
@@ -2927,7 +2928,7 @@
     au < manifest ; 2009 ; Computational and Mathematical Methods in Medicine Volume 10 (2009) ; 2009 ; 10 >
     au < manifest ; 2010 ; Computational and Mathematical Methods in Medicine Volume 11 (2010) ; 2010 ; 11 >
     au < manifest ; 2011 ; Computational and Mathematical Methods in Medicine Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Computational and Mathematical Methods in Medicine Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Computational and Mathematical Methods in Medicine Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Computational and Mathematical Methods in Medicine Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Computational and Mathematical Methods in Medicine Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Computational and Mathematical Methods in Medicine Volume 2015 ; 2015 ; 2015 >
@@ -2975,7 +2976,7 @@
     au < doNotProcess ; 2009 ; Computational Intelligence and Neuroscience Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Computational Intelligence and Neuroscience Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Computational Intelligence and Neuroscience Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Computational Intelligence and Neuroscience Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Computational Intelligence and Neuroscience Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Computational Intelligence and Neuroscience Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Computational Intelligence and Neuroscience Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Computational Intelligence and Neuroscience Volume 2015 ; 2015 ; 2015 >
@@ -3111,7 +3112,7 @@
 
     au < doNotProcess ; 2010 ; Depression Research and Treatment Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Depression Research and Treatment Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Depression Research and Treatment Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Depression Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Depression Research and Treatment Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Depression Research and Treatment Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Depression Research and Treatment Volume 2015 ; 2015 ; 2015 >
@@ -3138,7 +3139,7 @@
     au < doNotProcess ; 2009 ; Dermatology Research and Practice Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Dermatology Research and Practice Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Dermatology Research and Practice Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Dermatology Research and Practice Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Dermatology Research and Practice Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Dermatology Research and Practice Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Dermatology Research and Practice Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Dermatology Research and Practice Volume 2015 ; 2015 ; 2015 >
@@ -3193,7 +3194,7 @@
     au < doNotProcess ; 2009 ; Diagnostic and Therapeutic Endoscopy Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Diagnostic and Therapeutic Endoscopy Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Diagnostic and Therapeutic Endoscopy Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Diagnostic and Therapeutic Endoscopy Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Diagnostic and Therapeutic Endoscopy Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Diagnostic and Therapeutic Endoscopy Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Diagnostic and Therapeutic Endoscopy Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Diagnostic and Therapeutic Endoscopy Volume 2015 ; 2015 ; 2015 >
@@ -3230,7 +3231,7 @@
     au < doNotProcess ; 2009 ; Discrete Dynamics in Nature and Society Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Discrete Dynamics in Nature and Society Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Discrete Dynamics in Nature and Society Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Discrete Dynamics in Nature and Society Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Discrete Dynamics in Nature and Society Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Discrete Dynamics in Nature and Society Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Discrete Dynamics in Nature and Society Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Discrete Dynamics in Nature and Society Volume 2015 ; 2015 ; 2015 >
@@ -3272,7 +3273,7 @@
     au < manifest ; 2009 ; Disease Markers Volume 26-27 (2009) ; 2009 ; 26-27 >
     au < manifest ; 2010 ; Disease Markers Volume 28-29 (2010) ; 2010 ; 28-29 >
     au < manifest ; 2011 ; Disease Markers Volume 30-31 (2011) ; 2011 ; 30-31 >
-    au < manifest ; 2012 ; Disease Markers Volume 32-33 (2012) ; 2012 ; 32-33 >
+    au < doNotProcess ; 2012 ; Disease Markers Volume 32-33 (2012) ; 2012 ; 32-33 >
     au < released ; 2013 ; Disease Markers Volume 35 (2013) ; 2013 ; 35 >
     au < doNotProcess ; 2014 ; Disease Markers Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Disease Markers Volume 2015 ; 2015 ; 2015 >
@@ -3299,7 +3300,7 @@
 
     au < manifest ; 2010 ; Economics Research International Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Economics Research International Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Economics Research International Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Economics Research International Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Economics Research International Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Economics Research International Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Economics Research International Volume 2015 ; 2015 ; 2015 >
@@ -3319,7 +3320,7 @@
     param[journal_id] = edri
 
     au < manifest ; 2011 ; Education Research International Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Education Research International Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Education Research International Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Education Research International Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Education Research International Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Education Research International Volume 2015 ; 2015 ; 2015 >
@@ -3346,7 +3347,7 @@
 
     au < doNotProcess ; 2010 ; Emergency Medicine International Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Emergency Medicine International Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Emergency Medicine International Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Emergency Medicine International Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Emergency Medicine International Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Emergency Medicine International Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Emergency Medicine International Volume 2015 ; 2015 ; 2015 >
@@ -3372,7 +3373,7 @@
 
     au < doNotProcess ; 2010 ; Enzyme Research Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Enzyme Research Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Enzyme Research Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Enzyme Research Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Enzyme Research Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Enzyme Research Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Enzyme Research Volume 2015 ; 2015 ; 2015 >
@@ -3398,7 +3399,7 @@
     #Moved to archive
 
     au < doNotProcess ; 2011 ; Epidemiology Research International Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Epidemiology Research International Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Epidemiology Research International Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Epidemiology Research International Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Epidemiology Research International Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Epidemiology Research International Volume 2015 ; 2015 ; 2015 >
@@ -3493,7 +3494,7 @@
     au < doNotProcess ; 2009 ; Gastroenterology Research and Practice Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Gastroenterology Research and Practice Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Gastroenterology Research and Practice Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Gastroenterology Research and Practice Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Gastroenterology Research and Practice Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Gastroenterology Research and Practice Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Gastroenterology Research and Practice Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Gastroenterology Research and Practice Volume 2015 ; 2015 ; 2015 >
@@ -3518,7 +3519,7 @@
     param[journal_id] = gri
 
     au < doNotProcess ; 2011 ; Genetics Research International Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Genetics Research International Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Genetics Research International Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Genetics Research International Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Genetics Research International Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Genetics Research International Volume 2015 ; 2015 ; 2015 >
@@ -3600,7 +3601,7 @@
 
     au < doNotProcess ; 2010 ; Hepatitis Research and Treatment Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Hepatitis Research and Treatment Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Hepatitis Research and Treatment Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Hepatitis Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Hepatitis Research and Treatment Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Hepatitis Research and Treatment Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Hepatitis Research and Treatment Volume 2015 ; 2015 ; 2015 >
@@ -3638,7 +3639,7 @@
     au < doNotProcess ; 2009 ; HPB Surgery Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; HPB Surgery Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; HPB Surgery Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; HPB Surgery Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; HPB Surgery Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; HPB Surgery Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; HPB Surgery Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; HPB Surgery Volume 2015 ; 2015 ; 2015 >
@@ -3696,7 +3697,7 @@
     au < doNotProcess ; 2009 ; Infectious Diseases in Obstetrics and Gynecology Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Infectious Diseases in Obstetrics and Gynecology Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Infectious Diseases in Obstetrics and Gynecology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Infectious Diseases in Obstetrics and Gynecology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Infectious Diseases in Obstetrics and Gynecology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Infectious Diseases in Obstetrics and Gynecology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Infectious Diseases in Obstetrics and Gynecology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Infectious Diseases in Obstetrics and Gynecology Volume 2015 ; 2015 ; 2015 >
@@ -3723,7 +3724,7 @@
 
     au < doNotProcess ; 2010 ; Influenza Research and Treatment Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Influenza Research and Treatment Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Influenza Research and Treatment Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Influenza Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Influenza Research and Treatment Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Influenza Research and Treatment Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Influenza Research and Treatment Volume 2015 ; 2015 ; 2015 >
@@ -3745,7 +3746,7 @@
     au < doNotProcess ; 2009 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2015 ; 2015 ; 2015 >
@@ -3773,7 +3774,7 @@
     au < doNotProcess ; 2009 ; International Journal of Aerospace Engineering Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Aerospace Engineering Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Aerospace Engineering Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Aerospace Engineering Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Aerospace Engineering Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Aerospace Engineering Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Aerospace Engineering Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Aerospace Engineering Volume 2015 ; 2015 ; 2015 >
@@ -3800,7 +3801,7 @@
     au < doNotProcess ; 2009 ; International Journal of Agronomy Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Agronomy Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Agronomy Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Agronomy Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Agronomy Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Agronomy Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Agronomy Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Agronomy Volume 2015 ; 2015 ; 2015 >
@@ -3827,7 +3828,7 @@
     au < doNotProcess ; 2009 ; International Journal of Alzheimer's Disease Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Alzheimer's Disease Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Alzheimer's Disease Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Alzheimer's Disease Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Alzheimer's Disease Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Alzheimer's Disease Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Alzheimer's Disease Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Alzheimer's Disease Volume 2015 ; 2015 ; 2015 >
@@ -3903,7 +3904,7 @@
     au < doNotProcess ; 2009 ; International Journal of Antennas and Propagation Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Antennas and Propagation Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Antennas and Propagation Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Antennas and Propagation Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Antennas and Propagation Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Antennas and Propagation Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Antennas and Propagation Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Antennas and Propagation Volume 2015 ; 2015 ; 2015 >
@@ -4006,7 +4007,7 @@
     au < doNotProcess ; 2009 ; International Journal of Biomaterials Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Biomaterials Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Biomaterials Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Biomaterials Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Biomaterials Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Biomaterials Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Biomaterials Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Biomaterials Volume 2015 ; 2015 ; 2015 >
@@ -4036,7 +4037,7 @@
     au < doNotProcess ; 2009 ; International Journal of Biomedical Imaging Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Biomedical Imaging Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Biomedical Imaging Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Biomedical Imaging Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Biomedical Imaging Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Biomedical Imaging Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Biomedical Imaging Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Biomedical Imaging Volume 2015 ; 2015 ; 2015 >
@@ -4077,7 +4078,7 @@
     param[journal_id] = ijbc
 
     au < doNotProcess ; 2011 ; International Journal of Breast Cancer Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Breast Cancer Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Breast Cancer Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Breast Cancer Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Breast Cancer Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Breast Cancer Volume 2015 ; 2015 ; 2015 >
@@ -4105,7 +4106,7 @@
     au < doNotProcess ; 2009 ; International Journal of Carbohydrate Chemistry Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Carbohydrate Chemistry Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Carbohydrate Chemistry Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Carbohydrate Chemistry Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Carbohydrate Chemistry Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Carbohydrate Chemistry Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Carbohydrate Chemistry Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Carbohydrate Chemistry Volume 2015 ; 2015 ; 2015 >
@@ -4126,7 +4127,7 @@
     au < doNotProcess ; 2009 ; International Journal of Cell Biology Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Cell Biology Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Cell Biology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Cell Biology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Cell Biology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Cell Biology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Cell Biology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Cell Biology Volume 2015 ; 2015 ; 2015 >
@@ -4154,7 +4155,7 @@
     au < doNotProcess ; 2009 ; International Journal of Chemical Engineering Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Chemical Engineering Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Chemical Engineering Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Chemical Engineering Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Chemical Engineering Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Chemical Engineering Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Chemical Engineering Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Chemical Engineering Volume 2015 ; 2015 ; 2015 >
@@ -4221,7 +4222,7 @@
     au < manifest ; 2009 ; International Journal of Combinatorics Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; International Journal of Combinatorics Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; International Journal of Combinatorics Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Combinatorics Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Combinatorics Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Combinatorics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Combinatorics Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Combinatorics Volume 2015 ; 2015 ; 2015 >
@@ -4260,7 +4261,7 @@
     au < doNotProcess ; 2009 ; International Journal of Computer Games Technology Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Computer Games Technology Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Computer Games Technology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Computer Games Technology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Computer Games Technology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Computer Games Technology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Computer Games Technology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Computer Games Technology Volume 2015 ; 2015 ; 2015 >
@@ -4286,7 +4287,7 @@
 
     au < doNotProcess ; 2010 ; International Journal of Corrosion Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Corrosion Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Corrosion Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Corrosion Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Corrosion Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Corrosion Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Corrosion Volume 2015 ; 2015 ; 2015 >
@@ -4313,7 +4314,7 @@
     au < doNotProcess ; 2009 ; International Journal of Dentistry Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Dentistry Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Dentistry Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Dentistry Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Dentistry Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Dentistry Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Dentistry Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Dentistry Volume 2015 ; 2015 ; 2015 >
@@ -4344,7 +4345,7 @@
     au < doNotProcess ; 2009 ; International Journal of Differential Equations Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Differential Equations Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Differential Equations Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Differential Equations Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Differential Equations Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Differential Equations Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Differential Equations Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Differential Equations Volume 2015 ; 2015 ; 2015 >
@@ -4372,7 +4373,7 @@
     au < doNotProcess ; 2009 ; International Journal of Digital Multimedia Broadcasting Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Digital Multimedia Broadcasting Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Digital Multimedia Broadcasting Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Digital Multimedia Broadcasting Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Digital Multimedia Broadcasting Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Digital Multimedia Broadcasting Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Digital Multimedia Broadcasting Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Digital Multimedia Broadcasting Volume 2015 ; 2015 ; 2015 >
@@ -4402,7 +4403,7 @@
     au < manifest ; 2009 ; International Journal of Ecology Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; International Journal of Ecology Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; International Journal of Ecology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Ecology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Ecology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Ecology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Ecology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Ecology Volume 2015 ; 2015 ; 2015 >
@@ -4471,7 +4472,7 @@
     au < doNotProcess ; 2009 ; International Journal of Endocrinology Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Endocrinology Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Endocrinology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Endocrinology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Endocrinology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Endocrinology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Endocrinology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Endocrinology Volume 2015 ; 2015 ; 2015 >
@@ -4519,7 +4520,7 @@
     au < doNotProcess ; 2009 ; International Journal of Evolutionary Biology Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Evolutionary Biology Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Evolutionary Biology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Evolutionary Biology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Evolutionary Biology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Evolutionary Biology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Evolutionary Biology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Evolutionary Biology Volume 2015 ; 2015 ; 2015 >
@@ -4541,7 +4542,7 @@
 
     au < doNotProcess ; 2010 ; International Journal of Family Medicine Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Family Medicine Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Family Medicine Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Family Medicine Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Family Medicine Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Family Medicine Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Family Medicine Volume 2015 ; 2015 ; 2015 >
@@ -4624,7 +4625,7 @@
     au < manifest ; 2009 ; Comparative and Functional Genomics Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; Comparative and Functional Genomics Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Comparative and Functional Genomics Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Comparative and Functional Genomics Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Comparative and Functional Genomics Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Genomics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Genomics Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Genomics Volume 2015 ; 2015 ; 2015 >
@@ -4652,7 +4653,7 @@
     au < manifest ; 2009 ; International Journal of Geophysics Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; International Journal of Geophysics Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; International Journal of Geophysics Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Geophysics Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Geophysics Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Geophysics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Geophysics Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Geophysics Volume 2015 ; 2015 ; 2015 >
@@ -4678,7 +4679,7 @@
     param[journal_id] = ijh
 
     au < manifest ; 2011 ; International Journal of Hepatology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Hepatology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Hepatology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Hepatology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Hepatology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Hepatology Volume 2015 ; 2015 ; 2015 >
@@ -4705,7 +4706,7 @@
 
     au < manifest ; 2010 ; International Journal of Hypertension Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; International Journal of Hypertension Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Hypertension Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Hypertension Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Hypertension Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Hypertension Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Hypertension Volume 2015 ; 2015 ; 2015 >
@@ -4732,7 +4733,7 @@
 
     au < doNotProcess ; 2010 ; International Journal of Inflammation Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Inflammation Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Inflammation Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Inflammation Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Inflammation Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Inflammation Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Inflammation Volume 2015 ; 2015 ; 2015 >
@@ -4764,7 +4765,7 @@
     au < manifest ; 2009 ; Research Letters in Inorganic Chemistry Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; International Journal of Inorganic Chemistry Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Inorganic Chemistry Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Inorganic Chemistry Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Inorganic Chemistry Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Inorganic Chemistry Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Inorganic Chemistry Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Inorganic Chemistry Volume 2015 ; 2015 ; 2015 >
@@ -4836,7 +4837,7 @@
     au < doNotProcess ; 2009 ; International Journal of Mathematics and Mathematical Sciences Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Mathematics and Mathematical Sciences Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Mathematics and Mathematical Sciences Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Mathematics and Mathematical Sciences Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Mathematics and Mathematical Sciences Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Mathematics and Mathematical Sciences Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Mathematics and Mathematical Sciences Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Mathematics and Mathematical Sciences Volume 2015 ; 2015 ; 2015 >
@@ -4878,7 +4879,7 @@
     param[journal_id] = ijmc
 
     au < doNotProcess ; 2011 ; International Journal of Medicinal Chemistry Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Medicinal Chemistry Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Medicinal Chemistry Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Medicinal Chemistry Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Medicinal Chemistry Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Medicinal Chemistry Volume 2015 ; 2015 ; 2015 >
@@ -4924,7 +4925,7 @@
     au < manifest ; 2009 ; International Journal of Microbiology Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; International Journal of Microbiology Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; International Journal of Microbiology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Microbiology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Microbiology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Microbiology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Microbiology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Microbiology Volume 2015 ; 2015 ; 2015 >
@@ -4956,7 +4957,7 @@
     au < doNotProcess ; 2009 ; International Journal of Microwave Science and Technology Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Microwave Science and Technology Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Microwave Science and Technology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Microwave Science and Technology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Microwave Science and Technology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Microwave Science and Technology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Microwave Science and Technology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Microwave Science and Technology Volume 2015 ; 2015 ; 2015 >
@@ -4992,7 +4993,7 @@
     #ceased publication in 2017
 
     au < doNotProcess ; 2011 ; International Journal of Molecular Imaging Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Molecular Imaging Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Molecular Imaging Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Molecular Imaging Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Molecular Imaging Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Molecular Imaging Volume 2015 ; 2015 ; 2015 >
@@ -5015,7 +5016,7 @@
     au < doNotProcess ; 2009 ; International Journal of Navigation and Observation Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Navigation and Observation Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Navigation and Observation Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Navigation and Observation Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Navigation and Observation Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Navigation and Observation Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Navigation and Observation Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Navigation and Observation Volume 2015 ; 2015 ; 2015 >
@@ -5083,7 +5084,7 @@
     au < manifest ; 2009 ; International Journal of Oceanography Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; International Journal of Oceanography Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; International Journal of Oceanography Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Oceanography Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Oceanography Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Oceanography Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Oceanography Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Oceanography Volume 2015 ; 2015 ; 2015 >
@@ -5107,7 +5108,7 @@
     au < doNotProcess ; 2009 ; International Journal of Optics Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Optics Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Optics Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Optics Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Optics Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Optics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Optics Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Optics Volume 2015 ; 2015 ; 2015 >
@@ -5136,7 +5137,7 @@
     au < manifest ; 2009 ; International Journal of Otolaryngology Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; International Journal of Otolaryngology Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; International Journal of Otolaryngology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Otolaryngology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Otolaryngology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Otolaryngology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Otolaryngology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Otolaryngology Volume 2015 ; 2015 ; 2015 >
@@ -5182,7 +5183,7 @@
     au < manifest ; 2009 ; International Journal of Pediatrics Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; International Journal of Pediatrics Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; International Journal of Pediatrics Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Pediatrics Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Pediatrics Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Pediatrics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Pediatrics Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Pediatrics Volume 2015 ; 2015 ; 2015 >
@@ -5211,7 +5212,7 @@
     au < doNotProcess ; 2009 ; International Journal of Peptides Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Peptides Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Peptides Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Peptides Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Peptides Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Peptides Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Peptides Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Peptides Volume 2015 ; 2015 ; 2015 >
@@ -5243,7 +5244,7 @@
     au < doNotProcess ; 2009 ; International Journal of Photoenergy Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Photoenergy Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Photoenergy Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Photoenergy Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Photoenergy Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Photoenergy Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Photoenergy Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Photoenergy Volume 2015 ; 2015 ; 2015 >
@@ -5274,7 +5275,7 @@
     au < doNotProcess ; 2009 ; International Journal of Plant Genomics Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Plant Genomics Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Plant Genomics Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Plant Genomics Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Plant Genomics Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Plant Genomics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Plant Genomics Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Plant Genomics Volume 2015 ; 2015 ; 2015 >
@@ -5296,7 +5297,7 @@
     au < manifest ; 2009 ; International Journal of Polymer Science Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Polymer Science Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Polymer Science Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Polymer Science Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Polymer Science Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Polymer Science Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Polymer Science Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Polymer Science Volume 2015 ; 2015 ; 2015 >
@@ -5322,7 +5323,7 @@
     param[journal_id] = ijpr
 
     au < doNotProcess ; 2011 ; International Journal of Population Research Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Population Research Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Population Research Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Population Research Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Population Research Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Population Research Volume 2015 ; 2015 ; 2015 >
@@ -5345,7 +5346,7 @@
 
     au < doNotProcess ; 2010 ; International Journal of Proteomics Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Proteomics Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Proteomics Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Proteomics Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Proteomics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Proteomics Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Proteomics Volume 2015 ; 2015 ; 2015 >
@@ -5367,7 +5368,7 @@
     au < doNotProcess ; 2009 ; International Journal of Reconfigurable Computing Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Reconfigurable Computing Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Reconfigurable Computing Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Reconfigurable Computing Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Reconfigurable Computing Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Reconfigurable Computing Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Reconfigurable Computing Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Reconfigurable Computing Volume 2015 ; 2015 ; 2015 >
@@ -5419,7 +5420,7 @@
     au < doNotProcess ; 2009 ; International Journal of Rheumatology Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Rheumatology Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Rheumatology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Rheumatology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Rheumatology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Rheumatology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Rheumatology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Rheumatology Volume 2015 ; 2015 ; 2015 >
@@ -5461,7 +5462,7 @@
     au < doNotProcess ; 2009 ; International Journal of Rotating Machinery Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Rotating Machinery Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Rotating Machinery Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Rotating Machinery Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Rotating Machinery Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Rotating Machinery Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Rotating Machinery Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Rotating Machinery Volume 2015 ; 2015 ; 2015 >
@@ -5489,7 +5490,7 @@
     au < doNotProcess ; 2009 ; International Journal of Spectroscopy Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Spectroscopy Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Spectroscopy Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Spectroscopy Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Spectroscopy Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Spectroscopy Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Spectroscopy Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Spectroscopy Volume 2015 ; 2015 ; 2015 >
@@ -5553,7 +5554,7 @@
     au < doNotProcess ; 2009 ; Journal of Applied Mathematics and Simulation Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Stochastic Analysis Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Stochastic Analysis Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Stochastic Analysis Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Stochastic Analysis Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Stochastic Analysis Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Stochastic Analysis Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Stochastic Analysis Volume 2015 ; 2015 ; 2015 >
@@ -5592,7 +5593,7 @@
 
     au < doNotProcess ; 2010 ; International Journal of Surgical Oncology Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Surgical Oncology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Surgical Oncology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Surgical Oncology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Surgical Oncology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Surgical Oncology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Surgical Oncology Volume 2015 ; 2015 ; 2015 >
@@ -5621,7 +5622,7 @@
     au < doNotProcess ; 2009 ; International Journal of Telemedicine and Applications Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Telemedicine and Applications Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Telemedicine and Applications Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Telemedicine and Applications Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Telemedicine and Applications Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Telemedicine and Applications Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Telemedicine and Applications Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Telemedicine and Applications Volume 2015 ; 2015 ; 2015 >
@@ -5665,7 +5666,7 @@
 
     au < doNotProcess ; 2010 ; International Journal of Vascular Medicine Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Vascular Medicine Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Vascular Medicine Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Vascular Medicine Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Vascular Medicine Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Vascular Medicine Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Vascular Medicine Volume 2015 ; 2015 ; 2015 >
@@ -5695,7 +5696,7 @@
     au < doNotProcess ; 2009 ; International Journal of Vehicular Technology Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Vehicular Technology Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Vehicular Technology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Vehicular Technology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Vehicular Technology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Vehicular Technology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Vehicular Technology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Vehicular Technology Volume 2015 ; 2015 ; 2015 >
@@ -5717,7 +5718,7 @@
     au < doNotProcess ; 2009 ; International Journal of Zoology Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; International Journal of Zoology Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Zoology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Journal of Zoology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Journal of Zoology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; International Journal of Zoology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Zoology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Zoology Volume 2015 ; 2015 ; 2015 >
@@ -5744,7 +5745,7 @@
     param[journal_id] = isrn
 
     au < manifest ; 2011 ; International Scholarly Research Notices Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; International Scholarly Research Notices Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; International Scholarly Research Notices Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Scholarly Research Notices Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Scholarly Research Notices Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Scholarly Research Notices Volume 2015 ; 2015 ; 2015 >
@@ -5831,7 +5832,7 @@
 
     au < doNotProcess ; 2010 ; Journal of Aging Research Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Aging Research Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Aging Research Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Aging Research Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Aging Research Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Aging Research Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Aging Research Volume 2015 ; 2015 ; 2015 >
@@ -5860,7 +5861,7 @@
     au < doNotProcess ; 2009 ; Journal of Allergy Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Journal of Allergy Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Allergy Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Allergy Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Allergy Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Allergy Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Allergy Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Allergy Volume 2015 ; 2015 ; 2015 >
@@ -5882,7 +5883,7 @@
 
     au < doNotProcess ; 2010 ; Journal of Amino Acids Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Amino Acids Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Amino Acids Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Amino Acids Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Amino Acids Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Amino Acids Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Amino Acids Volume 2015 ; 2015 ; 2015 >
@@ -5933,7 +5934,7 @@
     au < manifest ; 2009 ; Journal of Analytical Methods in Chemistry Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; Journal of Analytical Methods in Chemistry Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Journal of Analytical Methods in Chemistry Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Analytical Methods in Chemistry Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Analytical Methods in Chemistry Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Analytical Methods in Chemistry Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Analytical Methods in Chemistry Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Analytical Methods in Chemistry Volume 2015 ; 2015 ; 2015 >
@@ -6009,7 +6010,7 @@
     #ceased publication in 2017
 
     au < manifest ; 2011 ; Journal of Anthropology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Anthropology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Anthropology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Anthropology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Anthropology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Anthropology Volume 2015 ; 2015 ; 2015 >
@@ -6059,7 +6060,7 @@
     au < doNotProcess ; 2009 ; Journal of Applied Mathematics Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Journal of Applied Mathematics Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Applied Mathematics Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Applied Mathematics Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Applied Mathematics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Journal of Applied Mathematics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Applied Mathematics Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Applied Mathematics Volume 2015 ; 2015 ; 2015 >
@@ -6122,7 +6123,7 @@
     au < doNotProcess ; 2009 ; Journal of Atomic, Molecular, and Optical Physics Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Journal of Atomic, Molecular, and Optical Physics Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Atomic, Molecular, and Optical Physics Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Atomic, Molecular, and Optical Physics Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Atomic, Molecular, and Optical Physics Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Atomic, Molecular, and Optical Physics Volume 2013 ; 2013 ; 2013 >
 
   }
@@ -6197,7 +6198,7 @@
     au < doNotProcess ; 2009 ; Journal of Biophysics Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Journal of Biophysics Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Biophysics Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Biophysics Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Biophysics Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Biophysics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Biophysics Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Biophysics Volume 2015 ; 2015 ; 2015 >
@@ -6218,7 +6219,7 @@
     param[journal_id] = jbt
 
     au < manifest ; 2011 ; Journal of Blood Transfusion Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Blood Transfusion Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Blood Transfusion Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Blood Transfusion Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Blood Transfusion Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Blood Transfusion Volume 2015 ; 2015 ; 2015 >
@@ -6242,7 +6243,7 @@
     au < doNotProcess ; 2009 ; Journal of Botany Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Journal of Botany Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Botany Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Botany Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Botany Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Botany Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Botany Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Botany Volume 2015 ; 2015 ; 2015 >
@@ -6286,7 +6287,7 @@
     au < doNotProcess ; 2009 ; Journal of Cancer Epidemiology Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Journal of Cancer Epidemiology Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Cancer Epidemiology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Cancer Epidemiology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Cancer Epidemiology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Cancer Epidemiology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Cancer Epidemiology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Cancer Epidemiology Volume 2015 ; 2015 ; 2015 >
@@ -6402,7 +6403,7 @@
     au < manifest ; 2009 ; E-Journal of Chemistry Volume 6 (2009) ; 2009 ; 6 >
     au < manifest ; 2010 ; E-Journal of Chemistry Volume 7 (2010) ; 2010 ; 7 >
     au < manifest ; 2011 ; E-Journal of Chemistry Volume 8 (2011) ; 2011 ; 8 >
-    au < manifest ; 2012 ; E-Journal of Chemistry Volume 9 (2012) ; 2012 ; 9 >
+    au < doNotProcess ; 2012 ; E-Journal of Chemistry Volume 9 (2012) ; 2012 ; 9 >
     au < manifest ; 2013 ; Journal of Chemistry Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Chemistry Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Chemistry Volume 2015 ; 2015 ; 2015 >
@@ -6466,7 +6467,7 @@
     au < doesNotExist ; 2009 ; Journal of Combustion Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Journal of Combustion Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Combustion Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Combustion Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Combustion Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Combustion Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Combustion Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Combustion Volume 2015 ; 2015 ; 2015 >
@@ -6623,7 +6624,7 @@
     au < doNotProcess ; 2009 ; Journal of Computer Systems, Networks, and Communications Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Journal of Computer Systems, Networks, and Communications Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Computer Networks and Communications Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Computer Networks and Communications Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Computer Networks and Communications Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Computer Networks and Communications Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Computer Networks and Communications Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Computer Networks and Communications Volume 2015 ; 2015 ; 2015 >
@@ -6673,7 +6674,7 @@
     au < doNotProcess ; 2009 ; Journal of Control Science and Engineering Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Journal of Control Science and Engineering Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Control Science and Engineering Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Control Science and Engineering Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Control Science and Engineering Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Journal of Control Science and Engineering Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Control Science and Engineering Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Control Science and Engineering Volume 2015 ; 2015 ; 2015 >
@@ -6777,7 +6778,7 @@
     au < manifest ; 2009 ; Experimental Diabetes Research Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; Experimental Diabetes Research Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Experimental Diabetes Research Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Experimental Diabetes Research Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Experimental Diabetes Research Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Diabetes Research Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Diabetes Research Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Diabetes Research Volume 2015 ; 2015 ; 2015 >
@@ -6838,7 +6839,7 @@
     param[journal_id] = jdd
 
     au < doNotProcess ; 2011 ; Journal of Drug Delivery Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Drug Delivery Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Drug Delivery Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Journal of Drug Delivery Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Drug Delivery Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Drug Delivery Volume 2015 ; 2015 ; 2015 >
@@ -6903,7 +6904,7 @@
     au < manifest ; 2009 ; Journal of Electrical and Computer Engineering Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; Journal of Electrical and Computer Engineering Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Electrical and Computer Engineering Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Electrical and Computer Engineering Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Electrical and Computer Engineering Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Electrical and Computer Engineering Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Electrical and Computer Engineering Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Electrical and Computer Engineering Volume 2015 ; 2015 ; 2015 >
@@ -6979,7 +6980,7 @@
 
     au < doNotProcess ; 2009 ; Journal of Environmental and Public Health Volume 2009 ; 2009 ; 2009 > 
     au < doNotProcess ; 2010 ; Journal of Environmental and Public Health Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2012 ; Journal of Environmental and Public Health Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Environmental and Public Health Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Environmental and Public Health Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Environmental and Public Health Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Environmental and Public Health Volume 2015 ; 2015 ; 2015 >
@@ -7100,7 +7101,7 @@
     au < manifest ; 2009 ; Journal of Function Spaces and Applications Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; Journal of Function Spaces and Applications Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Journal of Function Spaces and Applications Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Function Spaces and Applications Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Function Spaces and Applications Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Function Spaces and Applications Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Function Spaces Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Function Spaces Volume 2015 ; 2015 ; 2015 >
@@ -7144,7 +7145,7 @@
     au < doNotProcess ; 2009 ; Journal of Geological Research Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Journal of Geological Research Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Geological Research Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Geological Research Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Geological Research Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Geological Research Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Geological Research Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Geological Research Volume 2015 ; 2015 ; 2015 >
@@ -7205,7 +7206,7 @@
 
     au < manifest ; 2010 ; Journal of Healthcare Engineering Volume 1 (2010) ; 2010 ; 1 >
     au < manifest ; 2011 ; Journal of Healthcare Engineering Volume 2 (2011) ; 2011 ; 2 >
-    au < manifest ; 2012 ; Journal of Healthcare Engineering Volume 3 (2012) ; 2012 ; 3 >
+    au < doNotProcess ; 2012 ; Journal of Healthcare Engineering Volume 3 (2012) ; 2012 ; 3 >
     au < released ; 2013 ; Journal of Healthcare Engineering Volume 4 (2013) ; 2013 ; 4 >
     au < manifest ; 2014 ; Journal of Healthcare Engineering Volume 5 (2014) ; 2014 ; 5 >
     au < released ; 2015 ; Journal of Healthcare Engineering Volume 6 (2015) ; 2015 ; 6 >
@@ -7289,7 +7290,7 @@
     au < manifest ; 2009 ; Clinical and Developmental Immunology Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; Clinical and Developmental Immunology Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Clinical and Developmental Immunology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Clinical and Developmental Immunology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Clinical and Developmental Immunology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Clinical and Developmental Immunology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Immunology Research Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Immunology Research Volume 2015 ; 2015 ; 2015 >
@@ -7386,7 +7387,7 @@
     param[journal_id] = jl
 
     au < doNotProcess ; 2011 ; Journal of Lipids Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Lipids Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Lipids Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Lipids Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Lipids Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Lipids Volume 2015 ; 2015 ; 2015 >
@@ -7414,7 +7415,7 @@
     au < doNotProcess ; 2009 ; Journal of Marine Biology Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Journal of Marine Biology Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Marine Biology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Marine Biology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Marine Biology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Marine Biology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Marine Biology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Marine Biology Volume 2015 ; 2015 ; 2015 >
@@ -7506,7 +7507,7 @@
     au < doNotProcess ; 2009 ; Journal of Metallurgy Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Journal of Metallurgy Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Metallurgy Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Metallurgy Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Metallurgy Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Metallurgy Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Metallurgy Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Metallurgy Volume 2015 ; 2015 ; 2015 >
@@ -7566,7 +7567,7 @@
     au < doNotProcess ; 2009 ; Journal of Nanomaterials Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Journal of Nanomaterials Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Nanomaterials Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Nanomaterials Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Nanomaterials Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Nanomaterials Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Nanomaterials Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Nanomaterials Volume 2015 ; 2015 ; 2015 >
@@ -7635,7 +7636,7 @@
     au < doNotProcess ; 2009 ; Research Letters in Nanotechnology Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Journal of Nanotechnology Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Nanotechnology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Nanotechnology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Nanotechnology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Nanotechnology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Nanotechnology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Nanotechnology Volume 2015 ; 2015 ; 2015 >
@@ -7715,7 +7716,7 @@
 
     au < doNotProcess ; 2010 ; Journal of Nucleic Acids Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Nucleic Acids Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Nucleic Acids Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Nucleic Acids Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Nucleic Acids Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Nucleic Acids Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Nucleic Acids Volume 2015 ; 2015 ; 2015 >
@@ -7759,7 +7760,7 @@
 
     au < manifest ; 2010 ; Journal of Nutrition and Metabolism Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Journal of Nutrition and Metabolism Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Nutrition and Metabolism Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Nutrition and Metabolism Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Nutrition and Metabolism Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Nutrition and Metabolism Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Nutrition and Metabolism Volume 2015 ; 2015 ; 2015 >
@@ -7786,7 +7787,7 @@
    
     au < manifest ; 2010 ; Journal of Obesity Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Journal of Obesity Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Obesity Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Obesity Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Journal of Obesity Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Obesity Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Obesity Volume 2015 ; 2015 ; 2015 >
@@ -7815,7 +7816,7 @@
     au < doNotProcess ; 2009 ; Journal of Oncology Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Journal of Oncology Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Oncology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Oncology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Oncology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Journal of Oncology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Oncology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Oncology Volume 2015 ; 2015 ; 2015 >
@@ -7861,7 +7862,7 @@
     au < manifest ; 2009 ; Journal of Ophthalmology Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; Journal of Ophthalmology Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Journal of Ophthalmology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Ophthalmology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Ophthalmology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Ophthalmology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Ophthalmology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Ophthalmology Volume 2015 ; 2015 ; 2015 >
@@ -7963,7 +7964,7 @@
 
     au < manifest ; 2010 ; Journal of Osteoporosis Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Journal of Osteoporosis Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Osteoporosis Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Osteoporosis Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Osteoporosis Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Osteoporosis Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Osteoporosis Volume 2015 ; 2015 ; 2015 >
@@ -7991,7 +7992,7 @@
     au < doNotProcess ; 2009 ; Journal of Parasitology Research Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Journal of Parasitology Research Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Parasitology Research Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Parasitology Research Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Parasitology Research Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Parasitology Research Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Parasitology Research Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Parasitology Research Volume 2015 ; 2015 ; 2015 >
@@ -8017,7 +8018,7 @@
     param[journal_id] = jpath
 
     au < doNotProcess ; 2011 ; Journal of Pathogens Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Pathogens Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Pathogens Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Pathogens Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Pathogens Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Pathogens Volume 2015 ; 2015 ; 2015 >
@@ -8142,7 +8143,7 @@
 
     au < doNotProcess ; 2010 ; Journal of Pregnancy Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Pregnancy Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Pregnancy Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Pregnancy Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Pregnancy Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Pregnancy Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Pregnancy Volume 2015 ; 2015 ; 2015 >
@@ -8185,7 +8186,7 @@
 
     au < doNotProcess ; 2009 ; Journal of Probability and Statistics Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Journal of Probability and Statistics Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2012 ; Journal of Probability and Statistics Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Probability and Statistics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Journal of Probability and Statistics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Probability and Statistics Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Probability and Statistics Volume 2015 ; 2015 ; 2015 >
@@ -8215,7 +8216,7 @@
     au < manifest ; 2009 ; Journal of Quality and Reliability Engineering Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; Journal of Quality and Reliability Engineering Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Journal of Quality and Reliability Engineering Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Quality and Reliability Engineering Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Quality and Reliability Engineering Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Journal of Quality and Reliability Engineering Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Quality and Reliability Engineering Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Quality and Reliability Engineering Volume 2015 ; 2015 ; 2015 >
@@ -8307,7 +8308,7 @@
 
     au < doNotProcess ; 2009 ; Journal of Robotics Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Journal of Robotics Volume 2010 ; 2010 ; 2010 >
-    au < manifest ; 2012 ; Journal of Robotics Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Robotics Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Robotics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Robotics Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Robotics Volume 2015 ; 2015 ; 2015 >
@@ -8336,7 +8337,7 @@
     au < doNotProcess ; 2009 ; Journal of Sensors Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Journal of Sensors Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Sensors Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Sensors Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Sensors Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Sensors Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Sensors Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Sensors Volume 2015 ; 2015 ; 2015 >
@@ -8383,7 +8384,7 @@
 
     au < doNotProcess ; 2010 ; Journal of Signal Transduction Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Signal Transduction Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Signal Transduction Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Signal Transduction Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Journal of Signal Transduction Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Signal Transduction Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Signal Transduction Volume 2015 ; 2015 ; 2015 >
@@ -8402,7 +8403,7 @@
     param[journal_id] = jsc
 
     au < doNotProcess ; 2011 ; Journal of Skin Cancer Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Skin Cancer Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Skin Cancer Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Skin Cancer Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Skin Cancer Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Skin Cancer Volume 2015 ; 2015 ; 2015 >
@@ -8495,7 +8496,7 @@
     au < manifest ; 2009 ; Spectroscopy Volume 23 (2009) ; 2009 ; 23 >
     au < manifest ; 2010 ; Spectroscopy Volume 24 (2010) ; 2010 ; 24 >
     au < manifest ; 2011 ; Spectroscopy Volume 25-26 (2011) ; 2011 ; 25-26 >
-    au < manifest ; 2012 ; Spectroscopy: An International Journal Volume 27 (2012) ; 2012 ; 27 >
+    au < doNotProcess ; 2012 ; Spectroscopy: An International Journal Volume 27 (2012) ; 2012 ; 27 >
     au < released ; 2013 ; Journal of Spectroscopy Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Spectroscopy Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Spectroscopy Volume 2015 ; 2015 ; 2015 >
@@ -8632,7 +8633,7 @@
     au < manifest ; 2009 ; Journal of Thermodynamics Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; Journal of Thermodynamics Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Journal of Thermodynamics Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Thermodynamics Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Thermodynamics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Journal of Thermodynamics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Thermodynamics Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Thermodynamics Volume 2015 ; 2015 ; 2015 >
@@ -8653,7 +8654,7 @@
 
     au < doNotProcess ; 2010 ; Journal of Thyroid Research Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Thyroid Research Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Thyroid Research Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Thyroid Research Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Thyroid Research Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Thyroid Research Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Thyroid Research Volume 2015 ; 2015 ; 2015 >
@@ -8681,7 +8682,7 @@
     au < doNotProcess ; 2009 ; Journal of Toxicology Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Journal of Toxicology Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Toxicology Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Toxicology Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Toxicology Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Toxicology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Toxicology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Toxicology Volume 2015 ; 2015 ; 2015 >
@@ -8726,7 +8727,7 @@
     au < manifest ; 2009 ; Journal of Transplantation Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; Journal of Transplantation Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Journal of Transplantation Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Transplantation Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Transplantation Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Journal of Transplantation Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Transplantation Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Transplantation Volume 2015 ; 2015 ; 2015 >
@@ -8754,7 +8755,7 @@
     au < doNotProcess ; 2009 ; Journal of Tropical Medicine Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Journal of Tropical Medicine Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Tropical Medicine Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Journal of Tropical Medicine Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Journal of Tropical Medicine Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Journal of Tropical Medicine Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Tropical Medicine Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Tropical Medicine Volume 2015 ; 2015 ; 2015 >
@@ -8875,7 +8876,7 @@
     #ceased publication in 2017
 
     au < doNotProcess ; 2011 ; Leukemia Research and Treatment Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Leukemia Research and Treatment Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Leukemia Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Leukemia Research and Treatment Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Leukemia Research and Treatment Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Leukemia Research and Treatment Volume 2015 ; 2015 ; 2015 >
@@ -8896,7 +8897,7 @@
     #ceased publication in 2017
 
     au < doNotProcess ; 2011 ; Lung Cancer International Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Lung Cancer International Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Lung Cancer International Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Lung Cancer International Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Lung Cancer International Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Lung Cancer International Volume 2015 ; 2015 ; 2015 >
@@ -8917,7 +8918,7 @@
     #Moved to archive
 
     au < doNotProcess ; 2011 ; Lymphoma Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Lymphoma Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Lymphoma Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Lymphoma Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Lymphoma Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Lymphoma Volume 2015 ; 2015 ; 2015 >
@@ -8935,7 +8936,7 @@
 
     au < doNotProcess ; 2010 ; Malaria Research and Treatment Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Malaria Research and Treatment Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Malaria Research and Treatment Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Malaria Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Malaria Research and Treatment Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Malaria Research and Treatment Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Malaria Research and Treatment Volume 2015 ; 2015 ; 2015 >
@@ -8977,7 +8978,7 @@
     au < doNotProcess ; 2009 ; Mathematical Problems in Engineering Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Mathematical Problems in Engineering Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Mathematical Problems in Engineering Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Mathematical Problems in Engineering Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Mathematical Problems in Engineering Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Mathematical Problems in Engineering Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Mathematical Problems in Engineering Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Mathematical Problems in Engineering Volume 2015 ; 2015 ; 2015 >
@@ -9022,7 +9023,7 @@
     au < doNotProcess ; 2009 ; Mediators of Inflammation Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Mediators of Inflammation Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Mediators of Inflammation Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Mediators of Inflammation Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Mediators of Inflammation Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Mediators of Inflammation Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Mediators of Inflammation Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Mediators of Inflammation Volume 2015 ; 2015 ; 2015 >
@@ -9049,7 +9050,7 @@
     param[journal_id] = mis
 
     au < doNotProcess ; 2011 ; Minimally Invasive Surgery Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Minimally Invasive Surgery Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Minimally Invasive Surgery Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Minimally Invasive Surgery Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Minimally Invasive Surgery Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Minimally Invasive Surgery Volume 2015 ; 2015 ; 2015 >
@@ -9102,7 +9103,7 @@
     au < doNotProcess ; 2009 ; Modelling and Simulation in Engineering Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Modelling and Simulation in Engineering Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Modelling and Simulation in Engineering Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Modelling and Simulation in Engineering Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Modelling and Simulation in Engineering Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Modelling and Simulation in Engineering Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Modelling and Simulation in Engineering Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Modelling and Simulation in Engineering Volume 2015 ; 2015 ; 2015 >
@@ -9129,7 +9130,7 @@
 
     au < doNotProcess ; 2010 ; Molecular Biology International Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Molecular Biology International Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Molecular Biology International Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Molecular Biology International Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Molecular Biology International Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Molecular Biology International Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Molecular Biology International Volume 2015 ; 2015 ; 2015 >
@@ -9149,7 +9150,7 @@
 
     au < doNotProcess ; 2010 ; Multiple Sclerosis International Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Multiple Sclerosis International Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Multiple Sclerosis International Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Multiple Sclerosis International Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Multiple Sclerosis International Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Multiple Sclerosis International Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Multiple Sclerosis International Volume 2015 ; 2015 ; 2015 >
@@ -9197,7 +9198,7 @@
     au < doNotProcess ; 2009 ; Neural Plasticity Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Neural Plasticity Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Neural Plasticity Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Neural Plasticity Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Neural Plasticity Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Neural Plasticity Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Neural Plasticity Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Neural Plasticity Volume 2015 ; 2015 ; 2015 >
@@ -9292,7 +9293,7 @@
 
     au < doNotProcess ; 2010 ; Nursing Research and Practice Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Nursing Research and Practice Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Nursing Research and Practice Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Nursing Research and Practice Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Nursing Research and Practice Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Nursing Research and Practice Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Nursing Research and Practice Volume 2015 ; 2015 ; 2015 >
@@ -9320,7 +9321,7 @@
     au < doNotProcess ; 2009 ; Obstetrics and Gynecology International Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Obstetrics and Gynecology International Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Obstetrics and Gynecology International Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Obstetrics and Gynecology International Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Obstetrics and Gynecology International Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Obstetrics and Gynecology International Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Obstetrics and Gynecology International Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Obstetrics and Gynecology International Volume 2015 ; 2015 ; 2015 >
@@ -9372,7 +9373,7 @@
     au < manifest ; 2009 ; Research Letters in Organic Chemistry Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; Research Letters in Organic Chemistry Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Organic Chemistry International Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Organic Chemistry International Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Organic Chemistry International Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Organic Chemistry International Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Organic Chemistry International Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Organic Chemistry International Volume 2015 ; 2015 ; 2015 >
@@ -9394,7 +9395,7 @@
     au < manifest ; 2009 ; Oxidative Medicine and Cellular Longevity Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; Oxidative Medicine and Cellular Longevity Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Oxidative Medicine and Cellular Longevity Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Oxidative Medicine and Cellular Longevity Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Oxidative Medicine and Cellular Longevity Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Oxidative Medicine and Cellular Longevity Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Oxidative Medicine and Cellular Longevity Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Oxidative Medicine and Cellular Longevity Volume 2015 ; 2015 ; 2015 >
@@ -9422,7 +9423,7 @@
     au < manifest ; 2009 ; Pain Research and Management Volume 14 (2009) ; 2009 ; 2009 >
     au < manifest ; 2010 ; Pain Research and Management Volume 15 (2010) ; 2010 ; 2010 >
     au < manifest ; 2011 ; Pain Research and Management Volume 16 (2011) ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Pain Research and Management Volume 17 (2012) ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Pain Research and Management Volume 17 (2012) ; 2012 ; 2012 >
     au < released ; 2013 ; Pain Research and Management Volume 18 (2013) ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Pain Research and Management Volume 19 (2014) ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Pain Research and Management Volume 20 (2015) ; 2015 ; 2015 >
@@ -9449,7 +9450,7 @@
 
     au < doNotProcess ; 2010 ; Pain Research and Treatment Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Pain Research and Treatment Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Pain Research and Treatment Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Pain Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Pain Research and Treatment Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Pain Research and Treatment Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Pain Research and Treatment Volume 2015 ; 2015 ; 2015 >
@@ -9491,7 +9492,7 @@
 
     au < doNotProcess ; 2010 ; Parkinson's Disease Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Parkinson's Disease Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Parkinson's Disease Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Parkinson's Disease Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Parkinson's Disease Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Parkinson's Disease Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Parkinson's Disease Volume 2015 ; 2015 ; 2015 >
@@ -9518,7 +9519,7 @@
 
     au < doNotProcess ; 2010 ; Pathology Research International Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Pathology Research International Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Pathology Research International Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Pathology Research International Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Pathology Research International Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Pathology Research International Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Pathology Research International Volume 2015 ; 2015 ; 2015 >
@@ -9545,7 +9546,7 @@
     au < manifest ; 2009 ; Research Letters in Physics Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; Physics Research International Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Physics Research International Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Physics Research International Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Physics Research International Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Physics Research International Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Physics Research International Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Physics Research International Volume 2015 ; 2015 ; 2015 >
@@ -9583,7 +9584,7 @@
 
     au < doNotProcess ; 2010 ; Plastic Surgery International Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Plastic Surgery International Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Plastic Surgery International Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Plastic Surgery International Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Plastic Surgery International Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Plastic Surgery International Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Plastic Surgery International Volume 2015 ; 2015 ; 2015 >
@@ -9611,7 +9612,7 @@
     au < doNotProcess ; 2009 ; PPAR Research Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; PPAR Research Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; PPAR Research Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; PPAR Research Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; PPAR Research Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; PPAR Research Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; PPAR Research Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; PPAR Research Volume 2015 ; 2015 ; 2015 >
@@ -9795,7 +9796,7 @@
     au < doNotProcess ; 2009 ; Psyche Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Psyche Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Psyche Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Psyche Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Psyche Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Psyche Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Psyche Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Psyche Volume 2015 ; 2015 ; 2015 >
@@ -9846,7 +9847,7 @@
 
     au < doNotProcess ; 2010 ; Pulmonary Medicine Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Pulmonary Medicine Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Pulmonary Medicine Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Pulmonary Medicine Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Pulmonary Medicine Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Pulmonary Medicine Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Pulmonary Medicine Volume 2015 ; 2015 ; 2015 >
@@ -9872,7 +9873,7 @@
     param[journal_id] = rrp
 
     au < doNotProcess ; 2011 ; Radiology Research and Practice Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Radiology Research and Practice Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Radiology Research and Practice Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Radiology Research and Practice Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Radiology Research and Practice Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Radiology Research and Practice Volume 2015 ; 2015 ; 2015 >
@@ -9899,7 +9900,7 @@
 
     au < doNotProcess ; 2010 ; Rehabilitation Research and Practice Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Rehabilitation Research and Practice Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Rehabilitation Research and Practice Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Rehabilitation Research and Practice Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Rehabilitation Research and Practice Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Rehabilitation Research and Practice Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Rehabilitation Research and Practice Volume 2015 ; 2015 ; 2015 >
@@ -9939,7 +9940,7 @@
     au < manifest ; 2009 ; Sarcoma Volume 2009 ; 2009 ; 2009 >
     au < manifest ; 2010 ; Sarcoma Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Sarcoma Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Sarcoma Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Sarcoma Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Sarcoma Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Sarcoma Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Sarcoma Volume 2015 ; 2015 ; 2015 >
@@ -9986,7 +9987,7 @@
     param[journal_id] = schizort
 
     au < manifest ; 2011 ; Schizophrenia Research and Treatment Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Schizophrenia Research and Treatment Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Schizophrenia Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Schizophrenia Research and Treatment Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Schizophrenia Research and Treatment Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Schizophrenia Research and Treatment Volume 2015 ; 2015 ; 2015 >
@@ -10016,7 +10017,7 @@
     au < doNotProcess ; 2009 ; Science and Technology of Nuclear Installations Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Science and Technology of Nuclear Installations Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Science and Technology of Nuclear Installations Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Science and Technology of Nuclear Installations Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Science and Technology of Nuclear Installations Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Science and Technology of Nuclear Installations Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Science and Technology of Nuclear Installations Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Science and Technology of Nuclear Installations Volume 2015 ; 2015 ; 2015 >
@@ -10063,7 +10064,7 @@
 
     param[journal_id] = scientifica
 
-    au < manifest ; 2012 ; Scientifica Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Scientifica Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Scientifica Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Scientifica Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Scientifica Volume 2015 ; 2015 ; 2015 >
@@ -10128,7 +10129,7 @@
     au < manifest ; 2009 ; Shock and Vibration Volume 16 (2009) ; 2009 ; 16 >
     au < manifest ; 2010 ; Shock and Vibration Volume 17 (2010) ; 2010 ; 17 >
     au < manifest ; 2011 ; Shock and Vibration Volume 18 (2011) ; 2011 ; 18 >
-    au < manifest ; 2012 ; Shock and Vibration Volume 19 (2012) ; 2012 ; 19 >
+    au < doNotProcess ; 2012 ; Shock and Vibration Volume 19 (2012) ; 2012 ; 19 >
     au < manifest ; 2013 ; Shock and Vibration Volume 20 (2013) ; 2013 ; 20 >
     au < doNotProcess ; 2014 ; Shock and Vibration Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Shock and Vibration Volume 2015 ; 2015 ; 2015 >
@@ -10154,7 +10155,7 @@
     param[journal_id] = sd
 
     au < doNotProcess ; 2011 ; Sleep Disorders Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Sleep Disorders Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Sleep Disorders Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Sleep Disorders Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Sleep Disorders Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Sleep Disorders Volume 2015 ; 2015 ; 2015 >
@@ -10181,7 +10182,7 @@
     #Moved to archive
 
     au < doNotProcess ; 2011 ; Smart Materials Research Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Smart Materials Research Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Smart Materials Research Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Smart Materials Research Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Smart Materials Research Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Smart Materials Research Volume 2015 ; 2015 ; 2015 >
@@ -10202,7 +10203,7 @@
 
     au < doNotProcess ; 2010 ; Stem Cells International Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Stem Cells International Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Stem Cells International Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Stem Cells International Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Stem Cells International Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Stem Cells International Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Stem Cells International Volume 2015 ; 2015 ; 2015 >
@@ -10229,7 +10230,7 @@
 
     au < doNotProcess ; 2010 ; Stroke Research and Treatment Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Stroke Research and Treatment Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Stroke Research and Treatment Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Stroke Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Stroke Research and Treatment Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Stroke Research and Treatment Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Stroke Research and Treatment Volume 2015 ; 2015 ; 2015 >
@@ -10305,7 +10306,7 @@
     au < manifest ; 2009 ; TheScientificWorldJOURNAL Volume 9 (2009) ; 2009 ; 9 >
     au < manifest ; 2010 ; TheScientificWorldJOURNAL Volume 10 (2010) ; 2010 ; 10 >
     au < manifest ; 2011 ; TheScientificWorldJOURNAL Volume 11 (2011) ; 2011 ; 11 >
-    au < manifest ; 2012 ; The Scientific World Journal Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; The Scientific World Journal Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; The Scientific World Journal Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; The Scientific World Journal Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; The Scientific World Journal Volume 2015 ; 2015 ; 2015 >
@@ -10333,7 +10334,7 @@
 
     au < manifest ; 2010 ; Thrombosis Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Thrombosis Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Thrombosis Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Thrombosis Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Thrombosis Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Thrombosis Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Thrombosis Volume 2015 ; 2015 ; 2015 >
@@ -10354,7 +10355,7 @@
 
     au < doNotProcess ; 2010 ; Tuberculosis Research and Treatment Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Tuberculosis Research and Treatment Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Tuberculosis Research and Treatment Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Tuberculosis Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Tuberculosis Research and Treatment Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Tuberculosis Research and Treatment Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Tuberculosis Research and Treatment Volume 2015 ; 2015 ; 2015 >
@@ -10382,7 +10383,7 @@
 
     au < manifest ; 2010 ; Ulcers Volume 2010 ; 2010 ; 2010 >
     au < manifest ; 2011 ; Ulcers Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Ulcers Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Ulcers Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; Ulcers Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Ulcers Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Ulcers Volume 2015 ; 2015 ; 2015 >
@@ -10401,7 +10402,7 @@
     #ceased publication in 2018
 
     au < doNotProcess ; 2011 ; Urban Studies Research Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Urban Studies Research Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Urban Studies Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Urban Studies Research Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Urban Studies Research Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Urban Studies Research Volume 2015 ; 2015 ; 2015 >
@@ -10422,7 +10423,7 @@
 
     au < doNotProcess ; 2010 ; Veterinary Medicine International Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Veterinary Medicine International Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; Veterinary Medicine International Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; Veterinary Medicine International Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Veterinary Medicine International Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Veterinary Medicine International Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Veterinary Medicine International Volume 2015 ; 2015 ; 2015 >
@@ -10470,7 +10471,7 @@
     au < doNotProcess ; 2009 ; VLSI Design Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; VLSI Design Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; VLSI Design Volume 2011 ; 2011 ; 2011 >
-    au < manifest ; 2012 ; VLSI Design Volume 2012 ; 2012 ; 2012 >
+    au < doNotProcess ; 2012 ; VLSI Design Volume 2012 ; 2012 ; 2012 >
     au < released ; 2013 ; VLSI Design Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; VLSI Design Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; VLSI Design Volume 2015 ; 2015 ; 2015 >
