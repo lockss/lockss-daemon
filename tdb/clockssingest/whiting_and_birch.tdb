@@ -122,7 +122,7 @@
       au < ojs3.ClockssOjs3Plugin ; finished ; frozen ; 2019 ; 2019 ; Social Work and Social Sciences Review Volume 2019 ; 2019 ; https://journals.whitingbirch.net/ ; reingest1.clockss.org:8082 >
       #nothing published in 2020
       au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2021 ; 2021 ; Social Work and Social Sciences Review Volume 2021 ; 2021 ; https://journals.whitingbirch.net/ ; >
-      au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2022 ; 2022 ; Social Work and Social Sciences Review Volume 2022 ; 2022 ; https://journals.whitingbirch.net/ ; >
+      au < ojs3.ClockssOjs3Plugin ; deepCrawl ; exists ; 2022 ; 2022 ; Social Work and Social Sciences Review Volume 2022 ; 2022 ; https://journals.whitingbirch.net/ ; >
       au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2023 ; 2023 ; Social Work and Social Sciences Review Volume 2023 ; 2023 ; https://journals.whitingbirch.net/ ; >
 
     }

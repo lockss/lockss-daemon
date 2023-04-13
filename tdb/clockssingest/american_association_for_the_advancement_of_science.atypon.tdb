@@ -442,10 +442,10 @@
       au < finished ; crawling ; 2021 ; Science Volume 372 ; 372 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; Science Volume 373 ; 373 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2021 ; Science Volume 374 ; 374 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2022 ; Science Volume 375 ; 375 ; >
-      au < crawling ; exists ; 2022 ; Science Volume 376 ; 376 ; >
-      au < crawling ; exists ; 2022 ; Science Volume 377 ; 377 ; >
-      au < crawling ; exists ; 2022 ; Science Volume 378 ; 378 ; >
+      au < deepCrawl ; exists ; 2022 ; Science Volume 375 ; 375 ; >
+      au < deepCrawl ; exists ; 2022 ; Science Volume 376 ; 376 ; >
+      au < deepCrawl ; exists ; 2022 ; Science Volume 377 ; 377 ; >
+      au < deepCrawl ; exists ; 2022 ; Science Volume 378 ; 378 ; >
       au < manifest ; exists ; 2023 ; Science Volume 379 ; 379 ; >
       au < expected ; exists ; 2023 ; Science Volume 380 ; 380 ; >
       au < expected ; exists ; 2023 ; Science Volume 381 ; 381 ; >
@@ -478,7 +478,7 @@
       au < testing ; exists ; 2019 ; Science Signaling Volume 12 ; 12 ; >
       au < testing ; exists ; 2020 ; Science Signaling Volume 13 ; 13 ; >
       au < finished ; crawling ; 2021 ; Science Signaling Volume 14 ; 14 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2022 ; Science Signaling Volume 15 ; 15 ; >
+      au < deepCrawl ; exists ; 2022 ; Science Signaling Volume 15 ; 15 ; >
       au < manifest ; exists ; 2023 ; Science Signaling Volume 16 ; 16 ; >
 
   }
@@ -507,7 +507,7 @@
       au < testing ; exists ; 2019 ; Science Translational Medicine Volume 11 ; 11 ; >
       au < testing ; exists ; 2020 ; Science Translational Medicine Volume 12 ; 12 ; >
       au < finished ; crawling ; 2021 ; Science Translational Medicine Volume 13 ; 13 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2022 ; Science Translational Medicine Volume 14 ; 14 ; >
+      au < deepCrawl ; exists ; 2022 ; Science Translational Medicine Volume 14 ; 14 ; >
       au < manifest ; exists ; 2023 ; Science Translational Medicine Volume 15 ; 15 ; >
 
   }
@@ -529,7 +529,7 @@
       au < testing ; exists ; 2019 ; Science Advances Volume 5 ; 5 ; >
       au < testing ; exists ; 2020 ; Science Advances Volume 6 ; 6 ; >
       au < finished ; crawling ; 2021 ; Science Advances Volume 7 ; 7 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2022 ; Science Advances Volume 8 ; 8 ; >
+      au < deepCrawl ; exists ; 2022 ; Science Advances Volume 8 ; 8 ; >
       au < manifest ; exists ; 2023 ; Science Advances Volume 9 ; 9 ; >
 
   }
@@ -550,7 +550,7 @@
       au < testing ; exists ; 2019 ; Science Robotics Volume 4 ; 4 ; >
       au < testing ; exists ; 2020 ; Science Robotics Volume 5 ; 5 ; >
       au < finished ; crawling ; 2021 ; Science Robotics Volume 6 ; 6 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2022 ; Science Robotics Volume 7 ; 7 ; >
+      au < deepCrawl ; exists ; 2022 ; Science Robotics Volume 7 ; 7 ; >
       au < manifest ; exists ; 2023 ; Science Robotics Volume 8 ; 8 ; >
 
   }
@@ -571,7 +571,7 @@
       au < testing ; exists ; 2019 ; Science Immunology Volume 4 ; 4 ; >
       au < testing ; exists ; 2020 ; Science Immunology Volume 5 ; 5 ; >
       au < finished ; crawling ; 2021 ; Science Immunology Volume 6 ; 6 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2022 ; Science Immunology Volume 7 ; 7 ; >
+      au < deepCrawl ; exists ; 2022 ; Science Immunology Volume 7 ; 7 ; >
       au < manifest ; exists ; 2023 ; Science Immunology Volume 8 ; 8 ; >
 
   }

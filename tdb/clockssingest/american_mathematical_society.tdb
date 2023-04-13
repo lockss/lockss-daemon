@@ -169,7 +169,7 @@
     au < finished ; finished ; 2019 ; Bulletin of the American Mathematical Society Volume 56 (2019) ; 2019 ; https://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2020 ; Bulletin of the American Mathematical Society Volume 57 (2020) ; 2020 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2021 ; Bulletin of the American Mathematical Society Volume 58 (2021) ; 2021 ; https://www.ams.org/ ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2022 ; Bulletin of the American Mathematical Society Volume 59 (2022) ; 2022 ; https://www.ams.org/ ; >
+    au < deepCrawl ; exists ; 2022 ; Bulletin of the American Mathematical Society Volume 59 (2022) ; 2022 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2023 ; Bulletin of the American Mathematical Society Volume 59 (2023) ; 2023 ; https://www.ams.org/ ; >
 
   }
@@ -210,7 +210,7 @@
     au < finished ; finished ; 2019 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 23 ; 2019 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2020 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 24 ; 2020 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2021 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 25 ; 2021 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2022 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 26 ; 2022 ; https://www.ams.org/ ; >
+    au < deepCrawl ; exists ; 2022 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 26 ; 2022 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2023 ; Conformal Geometry and Dynamics : An Electronic Journal of the AMS Volume 27 ; 2023 ; https://www.ams.org/ ; >
 
   }
@@ -448,7 +448,7 @@
     au < finished ; finished ; 2019 ; Proceedings of the American Mathematical Society B Volume 6 ; 2019 ; https://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2020 ; Proceedings of the American Mathematical Society B Volume 7 ; 2020 ; https://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2021 ; Proceedings of the American Mathematical Society B Volume 8 ; 2021 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2022 ; Proceedings of the American Mathematical Society B Volume 9 ; 2022 ; https://www.ams.org/ ; >
+    au < deepCrawl ; exists ; 2022 ; Proceedings of the American Mathematical Society B Volume 9 ; 2022 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2023 ; Proceedings of the American Mathematical Society B Volume 10 ; 2023 ; https://www.ams.org/ ; >
 
   }
@@ -490,7 +490,7 @@
     au < finished ; finished ; 2019 ; Representation Theory Volume 23 ; 2019 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2020 ; Representation Theory Volume 24 ; 2020 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Representation Theory Volume 25 ; 2021 ; https://www.ams.org/ ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2022 ; Representation Theory Volume 26 ; 2022 ; https://www.ams.org/ ; >
+    au < deepCrawl ; exists ; 2022 ; Representation Theory Volume 26 ; 2022 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2023 ; Representation Theory Volume 27 ; 2023 ; https://www.ams.org/ ; >
 
   }
@@ -560,7 +560,7 @@
     au < finished ; finished ; 2019 ; Theory of Probability and Mathematical Statistics Volume 91 ; 2019 ; https://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2020 ; Theory of Probability and Mathematical Statistics Volume 92 ; 2020 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Theory of Probability and Mathematical Statistics Volume 93 ; 2021 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2022 ; Theory of Probability and Mathematical Statistics Volume 94 ; 2022 ; https://www.ams.org/ ; >
+    au < deepCrawl ; exists ; 2022 ; Theory of Probability and Mathematical Statistics Volume 94 ; 2022 ; https://www.ams.org/ ; >
     au < expected ; exists ; 2023 ; Theory of Probability and Mathematical Statistics Volume 95 ; 2023 ; https://www.ams.org/ ; >
 
   }   
@@ -616,7 +616,7 @@
     au < finished ; finished ; 2019 ; Transactions of the American Mathematical Society B Volume 6 ; 2019 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2020 ; Transactions of the American Mathematical Society B Volume 7 ; 2020 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2021 ; Transactions of the American Mathematical Society B Volume 8 ; 2021 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2022 ; Transactions of the American Mathematical Society B Volume 9 ; 2022 ; https://www.ams.org/ ; >
+    au < deepCrawl ; exists ; 2022 ; Transactions of the American Mathematical Society B Volume 9 ; 2022 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2023 ; Transactions of the American Mathematical Society B Volume 10 ; 2023 ; https://www.ams.org/ ; >
 
   }

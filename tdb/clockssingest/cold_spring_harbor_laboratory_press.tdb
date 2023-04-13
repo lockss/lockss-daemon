@@ -65,7 +65,7 @@
       au < finished ; crawling ; 2019 ; Cold Spring Harbor Perspectives in Biology Volume 11 ; 11 ; https://cshperspectives.cshlp.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Cold Spring Harbor Perspectives in Biology Volume 12 ; 12 ; https://cshperspectives.cshlp.org/ ; >
       au < finished ; crawling ; 2021 ; Cold Spring Harbor Perspectives in Biology Volume 13 ; 13 ; https://cshperspectives.cshlp.org/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2022 ; Cold Spring Harbor Perspectives in Biology Volume 14 ; 14 ; https://cshperspectives.cshlp.org/ ; >
+      au < deepCrawl ; exists ; 2022 ; Cold Spring Harbor Perspectives in Biology Volume 14 ; 14 ; https://cshperspectives.cshlp.org/ ; >
       au < manifest ; exists ; 2023 ; Cold Spring Harbor Perspectives in Biology Volume 15 ; 15 ; https://cshperspectives.cshlp.org/ ; >
 
     }
@@ -349,7 +349,7 @@
       au < finished ; crawling ; 2019 ; Genome Research Volume 29 ; 29 ; https://genome.cshlp.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; Genome Research Volume 30 ; 30 ; https://genome.cshlp.org/ ; >
       au < deepCrawl ; exists ; 2021 ; Genome Research Volume 31 ; 31 ; https://genome.cshlp.org/ ; >
-      au < crawling ; exists ; 2022 ; Genome Research Volume 32 ; 32 ; https://genome.cshlp.org/ ; >
+      au < deepCrawl ; exists ; 2022 ; Genome Research Volume 32 ; 32 ; https://genome.cshlp.org/ ; >
       au < manifest ; exists ; 2023 ; Genome Research Volume 33 ; 33 ; https://genome.cshlp.org/ ; >
 
     }
@@ -447,7 +447,7 @@
       au < finished ; crawling ; 2019 ; RNA Volume 25 ; 25 ; https://rnajournal.cshlp.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; RNA Volume 26 ; 26 ; https://rnajournal.cshlp.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; RNA Volume 27 ; 27 ; https://rnajournal.cshlp.org/ ; >
-      au < crawling ; exists ; 2022 ; RNA Volume 28 ; 28 ; https://rnajournal.cshlp.org/ ; >
+      au < deepCrawl ; exists ; 2022 ; RNA Volume 28 ; 28 ; https://rnajournal.cshlp.org/ ; >
       au < manifest ; exists ; 2023 ; RNA Volume 29 ; 29 ; https://rnajournal.cshlp.org/ ; >
 
     }

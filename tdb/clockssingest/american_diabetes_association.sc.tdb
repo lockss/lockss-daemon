@@ -44,7 +44,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Clinical Diabetes Volume 37 ; 37 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Clinical Diabetes Volume 38 ; 38 ; >
       au < frozen ; exists ; 2021 ; 2021 ; Clinical Diabetes Volume 39 ; 39 ; >
-      au < crawling ; exists ; 2022 ; 2022 ; Clinical Diabetes Volume 40 ; 40 ; >
+      au < deepCrawl ; exists ; 2022 ; 2022 ; Clinical Diabetes Volume 40 ; 40 ; >
       au < manifest ; exists ; 2023 ; 2023 ; Clinical Diabetes Volume 41 ; 41 ; >
 
     }
@@ -132,7 +132,7 @@
         au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Diabetes Volume 68 ; 68 ; >
         au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Diabetes Volume 69 ; 69 ; >
         au < frozen ; exists ; 2021 ; 2021 ; Diabetes Volume 70 ; 70 ; >
-        au < crawling ; exists ; 2022 ; 2022 ; Diabetes Volume 71 ; 71 ; >
+        au < deepCrawl ; exists ; 2022 ; 2022 ; Diabetes Volume 71 ; 71 ; >
         au < manifest ; exists ; 2023 ; 2023 ; Diabetes Volume 72 ; 72 ; >
 
     }
@@ -193,7 +193,7 @@
         au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Diabetes Care Volume 42 ; 42 ; >
         au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Diabetes Care Volume 43 ; 43 ; >
         au < frozen ; exists ; 2021 ; 2021 ; Diabetes Care Volume 44 ; 44 ; >
-        au < crawling ; exists ; 2022 ; 2022 ; Diabetes Care Volume 45 ; 45 ; >
+        au < deepCrawl ; exists ; 2022 ; 2022 ; Diabetes Care Volume 45 ; 45 ; >
         au < manifest ; exists ; 2023 ; 2023 ; Diabetes Care Volume 46 ; 46 ; >
 
     }
@@ -230,7 +230,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Diabetes Spectrum Volume 32 ; 32 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Diabetes Spectrum Volume 33 ; 33 ; >
       au < frozen ; exists ; 2021 ; 2021 ; Diabetes Spectrum Volume 34 ; 34 ; >
-      au < crawling ; exists ; 2022 ; 2022 ; Diabetes Spectrum Volume 35 ; 35 ; >
+      au < deepCrawl ; exists ; 2022 ; 2022 ; Diabetes Spectrum Volume 35 ; 35 ; >
       au < manifest ; exists ; 2023 ; 2023 ; Diabetes Spectrum Volume 36 ; 36 ; >
 
     }
