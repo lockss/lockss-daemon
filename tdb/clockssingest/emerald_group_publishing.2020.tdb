@@ -6400,16 +6400,16 @@
     #  online from 2009
 
     au < finished ; manifest ; 2009 ; Journal of Aggression, Conflict and Peace Research Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2010 ; Journal of Aggression, Conflict and Peace Research Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2011 ; Journal of Aggression, Conflict and Peace Research Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2012 ; Journal of Aggression, Conflict and Peace Research Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2013 ; Journal of Aggression, Conflict and Peace Research Volume 5 ; 5 ; >
+    au < finished ; manifest ; 2010 ; Journal of Aggression, Conflict and Peace Research Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Journal of Aggression, Conflict and Peace Research Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2012 ; Journal of Aggression, Conflict and Peace Research Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2013 ; Journal of Aggression, Conflict and Peace Research Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Aggression, Conflict and Peace Research Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Aggression, Conflict and Peace Research Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Aggression, Conflict and Peace Research Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Aggression, Conflict and Peace Research Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Aggression, Conflict and Peace Research Volume 10 ; 10 ; >
-    au < frozen ; exists ; 2019 ; Journal of Aggression, Conflict and Peace Research Volume 11 ; 11 ; >
+    au < finished ; manifest ; 2019 ; Journal of Aggression, Conflict and Peace Research Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Aggression, Conflict and Peace Research Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Aggression, Conflict and Peace Research Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Aggression, Conflict and Peace Research Volume 14 ; 14 ; >
@@ -6426,15 +6426,15 @@
     param[journal_issn] = 2044-0839
     comment[journal_id] = jadee
 
-    au < frozen ; exists ; 2011 ; Journal of Agribusiness in Developing and Emerging Economies Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2012 ; Journal of Agribusiness in Developing and Emerging Economies Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2013 ; Journal of Agribusiness in Developing and Emerging Economies Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2011 ; Journal of Agribusiness in Developing and Emerging Economies Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2012 ; Journal of Agribusiness in Developing and Emerging Economies Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Journal of Agribusiness in Developing and Emerging Economies Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Agribusiness in Developing and Emerging Economies Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Agribusiness in Developing and Emerging Economies Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Agribusiness in Developing and Emerging Economies Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Agribusiness in Developing and Emerging Economies Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Agribusiness in Developing and Emerging Economies Volume 8 ; 8 ; >
-    au < frozen ; exists ; 2019 ; Journal of Agribusiness in Developing and Emerging Economies Volume 9 ; 9 ; >
+    au < finished ; manifest ; 2019 ; Journal of Agribusiness in Developing and Emerging Economies Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Agribusiness in Developing and Emerging Economies Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Agribusiness in Developing and Emerging Economies Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Agribusiness in Developing and Emerging Economies Volume 12 ; 12 ; >
@@ -6454,22 +6454,22 @@
     comment[journal_id] = jaar
     # online from 2000
 
-    au < frozen ; exists ; 2000 ; Journal of Applied Accounting Research Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2002 ; Journal of Applied Accounting Research Volume 6 ; 6 ; >
-    au < frozen ; exists ; 2005 ; Journal of Applied Accounting Research Volume 7 ; 7 ; >
-    au < frozen ; exists ; 2007 ; Journal of Applied Accounting Research Volume 8 ; 8 ; >
-    au < frozen ; exists ; 2008 ; Journal of Applied Accounting Research Volume 9 ; 9 ; >
-    au < frozen ; exists ; 2009 ; Journal of Applied Accounting Research Volume 10 ; 10 ; >
+    au < finished ; manifest ; 2000 ; Journal of Applied Accounting Research Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2002 ; Journal of Applied Accounting Research Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2005 ; Journal of Applied Accounting Research Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; Journal of Applied Accounting Research Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; Journal of Applied Accounting Research Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; Journal of Applied Accounting Research Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2010 ; Journal of Applied Accounting Research Volume 11 ; 11 ; >
-    au < frozen ; exists ; 2011 ; Journal of Applied Accounting Research Volume 12 ; 12 ; >
-    au < frozen ; exists ; 2012 ; Journal of Applied Accounting Research Volume 13 ; 13 ; >
-    au < frozen ; exists ; 2013 ; Journal of Applied Accounting Research Volume 14 ; 14 ; >
+    au < finished ; manifest ; 2011 ; Journal of Applied Accounting Research Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2012 ; Journal of Applied Accounting Research Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Journal of Applied Accounting Research Volume 14 ; 14 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Applied Accounting Research Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Applied Accounting Research Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Applied Accounting Research Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Applied Accounting Research Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Applied Accounting Research Volume 19 ; 19 ; >
-    au < frozen ; exists ; 2019 ; Journal of Applied Accounting Research Volume 20 ; 20 ; >
+    au < finished ; manifest ; 2019 ; Journal of Applied Accounting Research Volume 20 ; 20 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Applied Accounting Research Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Applied Accounting Research Volume 22 ; 22 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Applied Accounting Research Volume 23 ; 23 ; >
@@ -6489,17 +6489,17 @@
     comment[journal_id] = jarhe
     # online from 2009
 
-    au < frozen ; exists ; 2009 ; Journal of Applied Research in Higher Education Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2010 ; Journal of Applied Research in Higher Education Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2011 ; Journal of Applied Research in Higher Education Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2012 ; Journal of Applied Research in Higher Education Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2013 ; Journal of Applied Research in Higher Education Volume 5 ; 5 ; >
+    au < finished ; manifest ; 2009 ; Journal of Applied Research in Higher Education Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2010 ; Journal of Applied Research in Higher Education Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2011 ; Journal of Applied Research in Higher Education Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Journal of Applied Research in Higher Education Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Journal of Applied Research in Higher Education Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Applied Research in Higher Education Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Applied Research in Higher Education Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Applied Research in Higher Education Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Applied Research in Higher Education Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Applied Research in Higher Education Volume 10 ; 10 ; >
-    au < frozen ; exists ; 2019 ; Journal of Applied Research in Higher Education Volume 11 ; 11 ; >
+    au < finished ; manifest ; 2019 ; Journal of Applied Research in Higher Education Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Applied Research in Higher Education Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Applied Research in Higher Education Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Applied Research in Higher Education Volume 14 ; 14 ; >
@@ -6518,19 +6518,19 @@
     param[journal_issn] = 1558-7894
     comment[journal_id] = jabs
 
-    au < frozen ; exists ; 2007 ; Journal of Asia Business Studies Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2008 ; Journal of Asia Business Studies Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2009 ; Journal of Asia Business Studies Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2010 ; Journal of Asia Business Studies Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2011 ; Journal of Asia Business Studies Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2012 ; Journal of Asia Business Studies Volume 6 ; 6 ; >
+    au < finished ; manifest ; 2007 ; Journal of Asia Business Studies Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; Journal of Asia Business Studies Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; Journal of Asia Business Studies Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; Journal of Asia Business Studies Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2011 ; Journal of Asia Business Studies Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Journal of Asia Business Studies Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Asia Business Studies Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Aisa Business Studies Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Aisa Business Studies Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Aisa Business Studies Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Aisa Business Studies Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Aisa Business Studies Volume 12 ; 12 ; >
-    au < frozen ; exists ; 2019 ; Journal of Aisa Business Studies Volume 13 ; 13 ; >
+    au < finished ; manifest ; 2019 ; Journal of Aisa Business Studies Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Journal of Aisa Business Studies Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Aisa Business Studies Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Aisa Business Studies Volume 16 ; 16 ; >
@@ -6555,7 +6555,7 @@
     au < frozen ; exists ; 2009 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 3 ; 3 ; >
     au < frozen ; exists ; 2010 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 4 ; 4 ; >
     au < frozen ; exists ; 2011 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2012 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 6 ; 6 ; >
+    au < finished ; manifest ; 2012 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2013 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 9 ; 9 ; >
@@ -6609,25 +6609,25 @@
     au < frozen ; exists ; 1998 ; Journal of Business & Industrial Marketing Volume 13 ; 13 ; >
     au < frozen ; exists ; 1999 ; Journal of Business & Industrial Marketing Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Journal of Business & Industrial Marketing Volume 15 ; 15 ; >
-    au < frozen ; exists ; 2001 ; Journal of Business & Industrial Marketing Volume 16 ; 16 ; >
+    au < finished ; manifest ; 2001 ; Journal of Business & Industrial Marketing Volume 16 ; 16 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2002 ; Journal of Business & Industrial Marketing Volume 17 ; 17 ; >
     au < frozen ; exists ; 2003 ; Journal of Business & Industrial Marketing Volume 18 ; 18 ; >
     au < frozen ; exists ; 2004 ; Journal of Business & Industrial Marketing Volume 19 ; 19 ; >
-    au < frozen ; exists ; 2005 ; Journal of Business & Industrial Marketing Volume 20 ; 20 ; >
-    au < frozen ; exists ; 2006 ; Journal of Business & Industrial Marketing Volume 21 ; 21 ; >
-    au < frozen ; exists ; 2007 ; Journal of Business & Industrial Marketing Volume 22 ; 22 ; >
-    au < frozen ; exists ; 2008 ; Journal of Business & Industrial Marketing Volume 23 ; 23 ; >
-    au < frozen ; exists ; 2009 ; Journal of Business & Industrial Marketing Volume 24 ; 24 ; >
-    au < frozen ; exists ; 2010 ; Journal of Business & Industrial Marketing Volume 25 ; 25 ; >
-    au < frozen ; exists ; 2011 ; Journal of Business & Industrial Marketing Volume 26 ; 26 ; >
-    au < frozen ; exists ; 2012 ; Journal of Business & Industrial Marketing Volume 27 ; 27 ; >
-    au < frozen ; exists ; 2013 ; Journal of Business & Industrial Marketing Volume 28 ; 28 ; >
+    au < finished ; manifest ; 2005 ; Journal of Business & Industrial Marketing Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2006 ; Journal of Business & Industrial Marketing Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; Journal of Business & Industrial Marketing Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2008 ; Journal of Business & Industrial Marketing Volume 23 ; 23 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2009 ; Journal of Business & Industrial Marketing Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2010 ; Journal of Business & Industrial Marketing Volume 25 ; 25 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Journal of Business & Industrial Marketing Volume 26 ; 26 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Journal of Business & Industrial Marketing Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2013 ; Journal of Business & Industrial Marketing Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Business & Industrial Marketing Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Business & Industrial Marketing Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Business & Industrial Marketing Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Business & Industrial Marketing Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Business & Industrial Marketing Volume 33 ; 33 ; >
-    au < frozen ; exists ; 2019 ; Journal of Business & Industrial Marketing Volume 34 ; 34 ; >
+    au < finished ; manifest ; 2019 ; Journal of Business & Industrial Marketing Volume 34 ; 34 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Business & Industrial Marketing Volume 35 ; 35 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Business & Industrial Marketing Volume 36 ; 36 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Business & Industrial Marketing Volume 37 ; 37 ; >
@@ -6665,26 +6665,26 @@
     au < frozen ; exists ; 1997 ; Journal of Business Strategy Volume 18 ; 18 ; >
     au < frozen ; exists ; 1998 ; Journal of Business Strategy Volume 19 ; 19 ; >
     au < frozen ; exists ; 1999 ; Journal of Business Strategy Volume 20 ; 20 ; >
-    au < frozen ; exists ; 2000 ; Journal of Business Strategy Volume 21 ; 21 ; >
-    au < frozen ; exists ; 2001 ; Journal of Business Strategy Volume 22 ; 22 ; >
-    au < frozen ; exists ; 2002 ; Journal of Business Strategy Volume 23 ; 23 ; >
+    au < finished ; manifest ; 2000 ; Journal of Business Strategy Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2001 ; Journal of Business Strategy Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2002 ; Journal of Business Strategy Volume 23 ; 23 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2003 ; Journal of Business Strategy Volume 24 ; 24 ; >
     au < frozen ; exists ; 2004 ; Journal of Business Strategy Volume 25 ; 25 ; >
-    au < frozen ; exists ; 2005 ; Journal of Business Strategy Volume 26 ; 26 ; >
-    au < frozen ; exists ; 2006 ; Journal of Business Strategy Volume 27 ; 27 ; >
-    au < frozen ; exists ; 2007 ; Journal of Business Strategy Volume 28 ; 28 ; >
-    au < frozen ; exists ; 2008 ; Journal of Business Strategy Volume 29 ; 29 ; >
-    au < frozen ; exists ; 2009 ; Journal of Business Strategy Volume 30 ; 30 ; >
-    au < frozen ; exists ; 2010 ; Journal of Business Strategy Volume 31 ; 31 ; >
-    au < frozen ; exists ; 2011 ; Journal of Business Strategy Volume 32 ; 32 ; >
-    au < frozen ; exists ; 2012 ; Journal of Business Strategy Volume 33 ; 33 ; >
-    au < frozen ; exists ; 2013 ; Journal of Business Strategy Volume 34 ; 34 ; >
+    au < finished ; manifest ; 2005 ; Journal of Business Strategy Volume 26 ; 26 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2006 ; Journal of Business Strategy Volume 27 ; 27 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2007 ; Journal of Business Strategy Volume 28 ; 28 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; Journal of Business Strategy Volume 29 ; 29 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2009 ; Journal of Business Strategy Volume 30 ; 30 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; Journal of Business Strategy Volume 31 ; 31 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2011 ; Journal of Business Strategy Volume 32 ; 32 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2012 ; Journal of Business Strategy Volume 33 ; 33 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2013 ; Journal of Business Strategy Volume 34 ; 34 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Business Strategy Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Business Strategy Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Business Strategy Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Business Strategy Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Business Strategy Volume 39 ; 39 ; >
-    au < frozen ; exists ; 2019 ; Journal of Business Strategy Volume 40 ; 40 ; >
+    au < finished ; manifest ; 2019 ; Journal of Business Strategy Volume 40 ; 40 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Business Strategy Volume 41 ; 41 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Business Strategy Volume 42 ; 42 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Business Strategy Volume 43 ; 43 ; >
@@ -6704,19 +6704,19 @@
     comment[journal_id] = jcs
 
     au < finished ; frozen ; 2006 ; Journal of Children’s Services: Research informing policy and practice Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2007 ; Journal of Children’s Services: Research informing policy and practice Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2008 ; Journal of Children’s Services: Research informing policy and practice Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2007 ; Journal of Children’s Services: Research informing policy and practice Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; Journal of Children’s Services: Research informing policy and practice Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Children’s Services: Research informing policy and practice Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2010 ; Journal of Children’s Services: Research informing policy and practice Volume 5 ; 5 ; >
+    au < finished ; manifest ; 2010 ; Journal of Children’s Services: Research informing policy and practice Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2011 ; Journal of Children’s Services: Research informing policy and practice Volume 6 ; 6 ; >
-    au < frozen ; exists ; 2012 ; Journal of Children’s Services: Research informing policy and practice Volume 7 ; 7 ; >
-    au < frozen ; exists ; 2013 ; Journal of Children’s Services: Research informing policy and practice Volume 8 ; 8 ; >
+    au < finished ; manifest ; 2012 ; Journal of Children’s Services: Research informing policy and practice Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2013 ; Journal of Children’s Services: Research informing policy and practice Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Children's Services: Research informing policy and practice Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Children's Services: Research informing policy and practice Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Children's Services: Research informing policy and practice Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Children's Services: Research informing policy and practice Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Children's Services: Research informing policy and practice Volume 13 ; 13 ; >
-    au < frozen ; exists ; 2019 ; Journal of Children's Services: Research informing policy and practice Volume 14 ; 14 ; >
+    au < finished ; manifest ; 2019 ; Journal of Children's Services: Research informing policy and practice Volume 14 ; 14 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Children's Services: Research informing policy and practice Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Children's Services: Research informing policy and practice Volume 16 ; 16 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Children's Services: Research informing policy and practice Volume 17 ; 17 ; >
@@ -6735,18 +6735,18 @@
     param[journal_issn] = 1754-4408
     comment[journal_id] = jcefts
 
-    au < frozen ; exists ; 2008 ; Journal of Chinese Economic and Foreign Trade Studies Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2009 ; Journal of Chinese Economic and Foreign Trade Studies Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2010 ; Journal of Chinese Economic and Foreign Trade Studies Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2011 ; Journal of Chinese Economic and Foreign Trade Studies Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2012 ; Journal of Chinese Economic and Foreign Trade Studies Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2013 ; Journal of Chinese Economic and Foreign Trade Studies Volume 6 ; 6 ; >
+    au < finished ; manifest ; 2008 ; Journal of Chinese Economic and Foreign Trade Studies Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; Journal of Chinese Economic and Foreign Trade Studies Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; Journal of Chinese Economic and Foreign Trade Studies Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2011 ; Journal of Chinese Economic and Foreign Trade Studies Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Journal of Chinese Economic and Foreign Trade Studies Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2013 ; Journal of Chinese Economic and Foreign Trade Studies Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Chinese Economic and Foreign Trade Studies Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Chinese Economic and Foreign Trade Studies Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Chinese Economic and Foreign Trade Studies Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Chinese Economic and Foreign Trade Studies Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Chinese Economic and Foreign Trade Studies Volume 11 ; 11 ; >
-    au < frozen ; exists ; 2019 ; Journal of Chinese Economic and Foreign Trade Studies Volume 12 ; 12 ; >
+    au < finished ; manifest ; 2019 ; Journal of Chinese Economic and Foreign Trade Studies Volume 12 ; 12 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Chinese Economic and Foreign Trade Studies Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Chinese Economic and Foreign Trade Studies Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Chinese Economic and Foreign Trade Studies Volume 15 ; 15 ; >
@@ -6811,18 +6811,18 @@
     au < frozen ; exists ; 1997 ; Journal of Communication Management Volume 1 ; 1 ; >
     au < frozen ; exists ; 1998 ; Journal of Communication Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 1999 ; Journal of Communication Management Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2000 ; Journal of Communication Management Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2001 ; Journal of Communication Management Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2002 ; Journal of Communication Management Volume 6 ; 6 ; >
+    au < finished ; manifest ; 2000 ; Journal of Communication Management Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2001 ; Journal of Communication Management Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2002 ; Journal of Communication Management Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2003 ; Journal of Communication Management Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; Journal of Communication Management Volume 8 ; 8 ; >
-    au < frozen ; exists ; 2005 ; Journal of Communication Management Volume 9 ; 9 ; >
+    au < finished ; manifest ; 2005 ; Journal of Communication Management Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2006 ; Journal of Communication Management Volume 10 ; 10 ; >
-    au < frozen ; exists ; 2007 ; Journal of Communication Management Volume 11 ; 11 ; >
-    au < frozen ; exists ; 2008 ; Journal of Communication Management Volume 12 ; 12 ; >
-    au < frozen ; exists ; 2009 ; Journal of Communication Management Volume 13 ; 13 ; >
-    au < frozen ; exists ; 2010 ; Journal of Communication Management Volume 14 ; 14 ; >
-    au < frozen ; exists ; 2011 ; Journal of Communication Management Volume 15 ; 15 ; >
+    au < finished ; manifest ; 2007 ; Journal of Communication Management Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2008 ; Journal of Communication Management Volume 12 ; 12 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; Journal of Communication Management Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2010 ; Journal of Communication Management Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Journal of Communication Management Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Communication Management Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Communication Management Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Communication Management Volume 18 ; 18 ; >
@@ -6830,7 +6830,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Communication Management Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Communication Management Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Communication Management Volume 22 ; 22 ; >
-    au < frozen ; exists ; 2019 ; Journal of Communication Management Volume 23 ; 23 ; >
+    au < finished ; manifest ; 2019 ; Journal of Communication Management Volume 23 ; 23 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Journal of Communication Management Volume 24 ; 24 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Communication Management Volume 25 ; 25 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Communication Management Volume 26 ; 26 ; >
@@ -6864,26 +6864,26 @@
     au < frozen ; exists ; 1997 ; Journal of Consumer Marketing Volume 14 ; 14 ; >
     au < frozen ; exists ; 1998 ; Journal of Consumer Marketing Volume 15 ; 15 ; >
     au < frozen ; exists ; 1999 ; Journal of Consumer Marketing Volume 16 ; 16 ; >
-    au < frozen ; exists ; 2000 ; Journal of Consumer Marketing Volume 17 ; 17 ; >
-    au < frozen ; exists ; 2001 ; Journal of Consumer Marketing Volume 18 ; 18 ; >
+    au < finished ; manifest ; 2000 ; Journal of Consumer Marketing Volume 17 ; 17 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2001 ; Journal of Consumer Marketing Volume 18 ; 18 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2002 ; Journal of Consumer Marketing Volume 19 ; 19 ; >
     au < frozen ; exists ; 2003 ; Journal of Consumer Marketing Volume 20 ; 20 ; >
     au < frozen ; exists ; 2004 ; Journal of Consumer Marketing Volume 21 ; 21 ; >
-    au < frozen ; exists ; 2005 ; Journal of Consumer Marketing Volume 22 ; 22 ; >
-    au < frozen ; exists ; 2006 ; Journal of Consumer Marketing Volume 23 ; 23 ; >
+    au < finished ; manifest ; 2005 ; Journal of Consumer Marketing Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2006 ; Journal of Consumer Marketing Volume 23 ; 23 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2007 ; Journal of Consumer Marketing Volume 24 ; 24 ; >
-    au < frozen ; exists ; 2008 ; Journal of Consumer Marketing Volume 25 ; 25 ; >
-    au < frozen ; exists ; 2009 ; Journal of Consumer Marketing Volume 26 ; 26 ; >
-    au < frozen ; exists ; 2010 ; Journal of Consumer Marketing Volume 27 ; 27 ; >
-    au < frozen ; exists ; 2011 ; Journal of Consumer Marketing Volume 28 ; 28 ; >
-    au < frozen ; exists ; 2012 ; Journal of Consumer Marketing Volume 29 ; 29 ; >
-    au < frozen ; exists ; 2013 ; Journal of Consumer Marketing Volume 30 ; 30 ; >
+    au < finished ; manifest ; 2008 ; Journal of Consumer Marketing Volume 25 ; 25 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; Journal of Consumer Marketing Volume 26 ; 26 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; Journal of Consumer Marketing Volume 27 ; 27 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2011 ; Journal of Consumer Marketing Volume 28 ; 28 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Journal of Consumer Marketing Volume 29 ; 29 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2013 ; Journal of Consumer Marketing Volume 30 ; 30 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Consumer Marketing Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Consumer Marketing Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Consumer Marketing Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Consumer Marketing Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Consumer Marketing Volume 35 ; 35 ; >
-    au < frozen ; exists ; 2019 ; Journal of Consumer Marketing Volume 36 ; 36 ; >
+    au < finished ; manifest ; 2019 ; Journal of Consumer Marketing Volume 36 ; 36 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Consumer Marketing Volume 37 ; 37 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Consumer Marketing Volume 38 ; 38 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Consumer Marketing Volume 39 ; 39 ; >
@@ -6904,25 +6904,25 @@
 
     au < frozen ; exists ; 1999 ; Journal of Corporate Real Estate Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Journal of Corporate Real Estate Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2001 ; Journal of Corporate Real Estate Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2001 ; Journal of Corporate Real Estate Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2002 ; Journal of Corporate Real Estate Volume 4 ; 4 ; >
     au < frozen ; exists ; 2003 ; Journal of Corporate Real Estate Volume 5 ; 5 ; >
     au < frozen ; exists ; 2004 ; Journal of Corporate Real Estate Volume 6 ; 6 ; >
     au < frozen ; exists ; 2005 ; Journal of Corporate Real Estate Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; Journal of Corporate Real Estate Volume 8 ; 8 ; >
-    au < frozen ; exists ; 2007 ; Journal of Corporate Real Estate Volume 9 ; 9 ; >
-    au < frozen ; exists ; 2008 ; Journal of Corporate Real Estate Volume 10 ; 10 ; >
-    au < frozen ; exists ; 2009 ; Journal of Corporate Real Estate Volume 11 ; 11 ; >
-    au < frozen ; exists ; 2010 ; Journal of Corporate Real Estate Volume 12 ; 12 ; >
-    au < frozen ; exists ; 2011 ; Journal of Corporate Real Estate Volume 13 ; 13 ; >
-    au < frozen ; exists ; 2012 ; Journal of Corporate Real Estate Volume 14 ; 14 ; >
-    au < frozen ; exists ; 2013 ; Journal of Corporate Real Estate Volume 15 ; 15 ; >
+    au < finished ; manifest ; 2007 ; Journal of Corporate Real Estate Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; Journal of Corporate Real Estate Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; Journal of Corporate Real Estate Volume 11 ; 11 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; Journal of Corporate Real Estate Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Journal of Corporate Real Estate Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Journal of Corporate Real Estate Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Journal of Corporate Real Estate Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Corporate Real Estate Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Corporate Real Estate Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Corporate Real Estate Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Corporate Real Estate Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Corporate Real Estate Volume 20 ; 20 ; >
-    au < frozen ; exists ; 2019 ; Journal of Corporate Real Estate Volume 21 ; 21 ; >
+    au < finished ; manifest ; 2019 ; Journal of Corporate Real Estate Volume 21 ; 21 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Journal of Corporate Real Estate Volume 22 ; 22 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Corporate Real Estate Volume 23 ; 23 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Corporate Real Estate Volume 24 ; 24 ; >
@@ -6939,9 +6939,9 @@
     param[journal_issn] = 2009-3829
     comment[journal_id] = jcp
 
-    au < frozen ; exists ; 2011 ; Journal of Criminal Psychology Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2012 ; Journal of Criminal Psychology Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2013 ; Journal of Criminal Psychology Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2011 ; Journal of Criminal Psychology Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Journal of Criminal Psychology Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2013 ; Journal of Criminal Psychology Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Criminal Psychology Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Criminal Psychology Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Criminal Psychology Volume 6 ; 6 ; >
@@ -6965,15 +6965,15 @@
     param[journal_issn] = 2044-1266
     comment[journal_id] = jchmsd
 
-    au < frozen ; exists ; 2011 ; Journal of Cultural Heritage Management and Sustainable Development Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2012 ; Journal of Cultural Heritage Management and Sustainable Development Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2013 ; Journal of Cultural Heritage Management and Sustainable Development Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2011 ; Journal of Cultural Heritage Management and Sustainable Development Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2012 ; Journal of Cultural Heritage Management and Sustainable Development Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Journal of Cultural Heritage Management and Sustainable Development Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Cultural Heritage Management and Sustainable Development Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Cultural Heritage Management and Sustainable Development Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Cultural Heritage Management and Sustainable Development Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Cultural Heritage Management and Sustainable Development Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Cultural Heritage Management and Sustainable Development Volume 8 ; 8 ; >
-    au < frozen ; exists ; 2019 ; Journal of Cultural Heritage Management and Sustainable Development Volume 9 ; 9 ; >
+    au < finished ; manifest ; 2019 ; Journal of Cultural Heritage Management and Sustainable Development Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Cultural Heritage Management and Sustainable Development Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Cultural Heritage Management and Sustainable Development Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Cultural Heritage Management and Sustainable Development Volume 12 ; 12 ; >
@@ -7047,26 +7047,26 @@
     au < frozen ; exists ; 1997 ; Journal of Documentation Volume 53 ; 53 ; >
     au < frozen ; exists ; 1998 ; Journal of Documentation Volume 54 ; 54 ; >
     au < frozen ; exists ; 1999 ; Journal of Documentation Volume 55 ; 55 ; >
-    au < frozen ; exists ; 2000 ; Journal of Documentation Volume 56 ; 56 ; >
+    au < finished ; manifest ; 2000 ; Journal of Documentation Volume 56 ; 56 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2001 ; Journal of Documentation Volume 57 ; 57 ; >
     au < frozen ; exists ; 2002 ; Journal of Documentation Volume 58 ; 58 ; >
-    au < frozen ; exists ; 2003 ; Journal of Documentation Volume 59 ; 59 ; >
+    au < finished ; manifest ; 2003 ; Journal of Documentation Volume 59 ; 59 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2004 ; Journal of Documentation Volume 60 ; 60 ; >
-    au < frozen ; exists ; 2005 ; Journal of Documentation Volume 61 ; 61 ; >
-    au < frozen ; exists ; 2006 ; Journal of Documentation Volume 62 ; 62 ; >
+    au < finished ; manifest ; 2005 ; Journal of Documentation Volume 61 ; 61 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2006 ; Journal of Documentation Volume 62 ; 62 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2007 ; Journal of Documentation Volume 63 ; 63 ; >
-    au < frozen ; exists ; 2008 ; Journal of Documentation Volume 64 ; 64 ; >
-    au < frozen ; exists ; 2009 ; Journal of Documentation Volume 65 ; 65 ; >
-    au < frozen ; exists ; 2010 ; Journal of Documentation Volume 66 ; 66 ; >
+    au < finished ; manifest ; 2008 ; Journal of Documentation Volume 64 ; 64 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; Journal of Documentation Volume 65 ; 65 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; Journal of Documentation Volume 66 ; 66 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; Journal of Documentation Volume 67 ; 67 ; >
-    au < frozen ; exists ; 2012 ; Journal of Documentation Volume 68 ; 68 ; >
-    au < frozen ; exists ; 2013 ; Journal of Documentation Volume 69 ; 69 ; >
+    au < finished ; manifest ; 2012 ; Journal of Documentation Volume 68 ; 68 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2013 ; Journal of Documentation Volume 69 ; 69 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Documentation Volume 70 ; 70 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Documentation Volume 71 ; 71 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Documentation Volume 72 ; 72 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Documentation Volume 73 ; 73 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Documentation Volume 74 ; 74 ; >
-    au < frozen ; exists ; 2019 ; Journal of Documentation Volume 75 ; 75 ; >
+    au < finished ; manifest ; 2019 ; Journal of Documentation Volume 75 ; 75 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Documentation Volume 76 ; 76 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Documentation Volume 77 ; 77 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Documentation Volume 78 ; 78 ; >
@@ -7086,21 +7086,21 @@
 
     au < frozen ; exists ; 2003 ; Journal of Economic and Administrative Sciences Volume 19 ; 19 ; >
     au < frozen ; exists ; 2004 ; Journal of Economic and Administrative Sciences Volume 20 ; 20 ; >
-    au < frozen ; exists ; 2005 ; Journal of Economic and Administrative Sciences Volume 21 ; 21 ; >
-    au < frozen ; exists ; 2006 ; Journal of Economic and Administrative Sciences Volume 22 ; 22 ; >
-    au < frozen ; exists ; 2007 ; Journal of Economic and Administrative Sciences Volume 23 ; 23 ; >
+    au < finished ; manifest ; 2005 ; Journal of Economic and Administrative Sciences Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2006 ; Journal of Economic and Administrative Sciences Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2007 ; Journal of Economic and Administrative Sciences Volume 23 ; 23 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2008 ; Journal of Economic and Administrative Sciences Volume 24 ; 24 ; >
-    au < frozen ; exists ; 2009 ; Journal of Economic and Administrative Sciences Volume 25 ; 25 ; >
-    au < frozen ; exists ; 2010 ; Journal of Economic and Administrative Sciences Volume 26 ; 26 ; >
+    au < finished ; manifest ; 2009 ; Journal of Economic and Administrative Sciences Volume 25 ; 25 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2010 ; Journal of Economic and Administrative Sciences Volume 26 ; 26 ; reingest5.clockss.org:8082 >
     au < doesNotExist ; doesNotExist ; 0 ; Journal of Economic and Administrative Sciences Volume 27 ; 27 ; >
-    au < frozen ; exists ; 2012 ; Journal of Economic and Administrative Sciences Volume 28 ; 28 ; >
-    au < frozen ; exists ; 2013 ; Journal of Economic and Administrative Sciences Volume 29 ; 29 ; >
+    au < finished ; manifest ; 2012 ; Journal of Economic and Administrative Sciences Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2013 ; Journal of Economic and Administrative Sciences Volume 29 ; 29 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Economic and Administrative Sciences Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Economic and Administrative Sciences Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Economic and Administrative Sciences Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Economic and Administrative Sciences Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Economic and Administrative Sciences Volume 34 ; 34 ; >
-    au < frozen ; exists ; 2019 ; Journal of Economic and Administrative Sciences Volume 35 ; 35 ; >
+    au < finished ; manifest ; 2019 ; Journal of Economic and Administrative Sciences Volume 35 ; 35 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Economic and Administrative Sciences Volume 36 ; 36 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Economic and Administrative Sciences Volume 37 ; 37 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Economic and Administrative Sciences Volume 38 ; 38 ; >
@@ -7145,26 +7145,26 @@
     au < frozen ; exists ; 1997 ; Journal of Economic Studies Volume 24 ; 24 ; >
     au < frozen ; exists ; 1998 ; Journal of Economic Studies Volume 25 ; 25 ; >
     au < frozen ; exists ; 1999 ; Journal of Economic Studies Volume 26 ; 26 ; >
-    au < frozen ; exists ; 2000 ; Journal of Economic Studies Volume 27 ; 27 ; >
+    au < finished ; manifest ; 2000 ; Journal of Economic Studies Volume 27 ; 27 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2001 ; Journal of Economic Studies Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; Journal of Economic Studies Volume 29 ; 29 ; >
     au < frozen ; exists ; 2003 ; Journal of Economic Studies Volume 30 ; 30 ; >
     au < frozen ; exists ; 2004 ; Journal of Economic Studies Volume 31 ; 31 ; >
-    au < frozen ; exists ; 2005 ; Journal of Economic Studies Volume 32 ; 32 ; >
-    au < frozen ; exists ; 2006 ; Journal of Economic Studies Volume 33 ; 33 ; >
-    au < frozen ; exists ; 2007 ; Journal of Economic Studies Volume 34 ; 34 ; >
-    au < frozen ; exists ; 2008 ; Journal of Economic Studies Volume 35 ; 35 ; >
-    au < frozen ; exists ; 2009 ; Journal of Economic Studies Volume 36 ; 36 ; >
-    au < frozen ; exists ; 2010 ; Journal of Economic Studies Volume 37 ; 37 ; >
-    au < frozen ; exists ; 2011 ; Journal of Economic Studies Volume 38 ; 38 ; >
-    au < frozen ; exists ; 2012 ; Journal of Economic Studies Volume 39 ; 39 ; >
-    au < frozen ; exists ; 2013 ; Journal of Economic Studies Volume 40 ; 40 ; >
+    au < finished ; manifest ; 2005 ; Journal of Economic Studies Volume 32 ; 32 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2006 ; Journal of Economic Studies Volume 33 ; 33 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; Journal of Economic Studies Volume 34 ; 34 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; Journal of Economic Studies Volume 35 ; 35 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2009 ; Journal of Economic Studies Volume 36 ; 36 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; Journal of Economic Studies Volume 37 ; 37 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Journal of Economic Studies Volume 38 ; 38 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Journal of Economic Studies Volume 39 ; 39 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Journal of Economic Studies Volume 40 ; 40 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Economic Studies Volume 41 ; 41 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Economic Studies Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Economic Studies Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Economic Studies Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Economic Studies Volume 45 ; 45 ; >
-    au < frozen ; exists ; 2019 ; Journal of Economic Studies Volume 46 ; 46 ; >
+    au < finished ; manifest ; 2019 ; Journal of Economic Studies Volume 46 ; 46 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Economic Studies Volume 47 ; 47 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Economic Studies Volume 48 ; 48 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Economic Studies Volume 49 ; 49 ; >
@@ -7221,25 +7221,25 @@
     au < frozen ; exists ; 1998 ; Journal of Educational Administration Volume 36 ; 36 ; >
     au < frozen ; exists ; 1999 ; Journal of Educational Administration Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Journal of Educational Administration Volume 38 ; 38 ; >
-    au < frozen ; exists ; 2001 ; Journal of Educational Administration Volume 39 ; 39 ; >
-    au < frozen ; exists ; 2002 ; Journal of Educational Administration Volume 40 ; 40 ; >
+    au < finished ; manifest ; 2001 ; Journal of Educational Administration Volume 39 ; 39 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2002 ; Journal of Educational Administration Volume 40 ; 40 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2003 ; Journal of Educational Administration Volume 41 ; 41 ; >
     au < frozen ; exists ; 2004 ; Journal of Educational Administration Volume 42 ; 42 ; >
-    au < frozen ; exists ; 2005 ; Journal of Educational Administration Volume 43 ; 43 ; >
-    au < frozen ; exists ; 2006 ; Journal of Educational Administration Volume 44 ; 44 ; >
-    au < frozen ; exists ; 2007 ; Journal of Educational Administration Volume 45 ; 45 ; >
-    au < frozen ; exists ; 2008 ; Journal of Educational Administration Volume 46 ; 46 ; >
-    au < frozen ; exists ; 2009 ; Journal of Educational Administration Volume 47 ; 47 ; >
-    au < frozen ; exists ; 2010 ; Journal of Educational Administration Volume 48 ; 48 ; >
+    au < finished ; manifest ; 2005 ; Journal of Educational Administration Volume 43 ; 43 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2006 ; Journal of Educational Administration Volume 44 ; 44 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; Journal of Educational Administration Volume 45 ; 45 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; Journal of Educational Administration Volume 46 ; 46 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2009 ; Journal of Educational Administration Volume 47 ; 47 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; Journal of Educational Administration Volume 48 ; 48 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; Journal of Educational Administration Volume 49 ; 49 ; >
-    au < frozen ; exists ; 2012 ; Journal of Educational Administration Volume 50 ; 50 ; >
-    au < frozen ; exists ; 2013 ; Journal of Educational Administration Volume 51 ; 51 ; >
+    au < finished ; manifest ; 2012 ; Journal of Educational Administration Volume 50 ; 50 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Journal of Educational Administration Volume 51 ; 51 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Educational Administration Volume 52 ; 52 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Educational Administration Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Educational Administration Volume 54 ; 54 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Educational Administration Volume 55 ; 55 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Educational Administration Volume 56 ; 56 ; >
-    au < frozen ; exists ; 2019 ; Journal of Educational Administration Volume 57 ; 57 ; >
+    au < finished ; manifest ; 2019 ; Journal of Educational Administration Volume 57 ; 57 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Educational Administration Volume 58 ; 58 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Educational Administration Volume 59 ; 59 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Educational Administration Volume 60 ; 60 ; >
@@ -7261,20 +7261,20 @@
     au < frozen ; exists ; 2003 ; Journal of Engineering, Design and Technology Volume 1 ; 1 ; >
     au < doesNotExist ; doesNotExist ; 2004 ; Journal of Engineering, Design and Technology Volume 2 ; 2 ; >
     au < frozen ; exists ; 2005 ; Journal of Engineering, Design and Technology Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2006 ; Journal of Engineering, Design and Technology Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2007 ; Journal of Engineering, Design and Technology Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2008 ; Journal of Engineering, Design and Technology Volume 6 ; 6 ; >
-    au < frozen ; exists ; 2009 ; Journal of Engineering, Design and Technology Volume 7 ; 7 ; >
-    au < frozen ; exists ; 2010 ; Journal of Engineering, Design and Technology Volume 8 ; 8 ; >
-    au < frozen ; exists ; 2011 ; Journal of Engineering, Design and Technology Volume 9 ; 9 ; >
+    au < finished ; manifest ; 2006 ; Journal of Engineering, Design and Technology Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; Journal of Engineering, Design and Technology Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; Journal of Engineering, Design and Technology Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; Journal of Engineering, Design and Technology Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; Journal of Engineering, Design and Technology Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2011 ; Journal of Engineering, Design and Technology Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Engineering, Design and Technology Volume 10 ; 10 ; >
-    au < frozen ; exists ; 2013 ; Journal of Engineering, Design and Technology Volume 11 ; 11 ; >
+    au < finished ; manifest ; 2013 ; Journal of Engineering, Design and Technology Volume 11 ; 11 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Engineering, Design and Technology Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Engineering, Design and Technology Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Engineering, Design and Technology Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Engineering, Design and Technology Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Engineering, Design and Technology Volume 16 ; 16 ; >
-    au < frozen ; exists ; 2019 ; Journal of Engineering, Design and Technology Volume 17 ; 17 ; >
+    au < finished ; manifest ; 2019 ; Journal of Engineering, Design and Technology Volume 17 ; 17 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Engineering, Design and Technology Volume 18 ; 18 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Engineering, Design and Technology Volume 19 ; 19 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Engineering, Design and Technology Volume 20 ; 20 ; >
@@ -7296,20 +7296,20 @@
 
     au < frozen ; exists ; 2004 ; Journal of Enterprise Information Management Volume 17 ; 17 ; >
     au < frozen ; exists ; 2005 ; Journal of Enterprise Information Management Volume 18 ; 18 ; >
-    au < frozen ; exists ; 2006 ; Journal of Enterprise Information Management Volume 19 ; 19 ; >
-    au < frozen ; exists ; 2007 ; Journal of Enterprise Information Management Volume 20 ; 20 ; >
-    au < frozen ; exists ; 2008 ; Journal of Enterprise Information Management Volume 21 ; 21 ; >
-    au < frozen ; exists ; 2009 ; Journal of Enterprise Information Management Volume 22 ; 22 ; >
+    au < finished ; manifest ; 2006 ; Journal of Enterprise Information Management Volume 19 ; 19 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; Journal of Enterprise Information Management Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2008 ; Journal of Enterprise Information Management Volume 21 ; 21 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; Journal of Enterprise Information Management Volume 22 ; 22 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2010 ; Journal of Enterprise Information Management Volume 23 ; 23 ; >
-    au < frozen ; exists ; 2011 ; Journal of Enterprise Information Management Volume 24 ; 24 ; >
-    au < frozen ; exists ; 2012 ; Journal of Enterprise Information Management Volume 25 ; 25 ; >
+    au < finished ; manifest ; 2011 ; Journal of Enterprise Information Management Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2012 ; Journal of Enterprise Information Management Volume 25 ; 25 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Enterprise Information Management Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Enterprise Information Management Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Enterprise Information Management Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Enterprise Information Management Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Enterprise Information Management Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Enterprise Information Management Volume 31 ; 31 ; >
-    au < frozen ; exists ; 2019 ; Journal of Enterprise Information Management Volume 32 ; 32 ; >
+    au < finished ; manifest ; 2019 ; Journal of Enterprise Information Management Volume 32 ; 32 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Enterprise Information Management Volume 33 ; 33 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Enterprise Information Management Volume 34 ; 34 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Enterprise Information Management Volume 35 ; 35 ; >
@@ -7328,19 +7328,19 @@
     param[journal_issn] = 1750-6204
     comment[journal_id] = jec
 
-    au < frozen ; exists ; 2007 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2008 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2009 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2010 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2011 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2012 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 6 ; 6 ; >
-    au < frozen ; exists ; 2013 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 7 ; 7 ; >
+    au < finished ; manifest ; 2007 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2009 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2011 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2012 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2013 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 12 ; 12 ; >
-    au < frozen ; exists ; 2019 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 13 ; 13 ; >
+    au < finished ; manifest ; 2019 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 13 ; 13 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 16 ; 16 ; >
@@ -7357,14 +7357,14 @@
     param[journal_issn] = 2045-2101
     comment[journal_id] = jepp
 
-    au < frozen ; exists ; 2012 ; Journal of Entrepreneurship and Public Policy Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2013 ; Journal of Entrepreneurship and Public Policy Volume 2 ; 2 ; >
+    au < finished ; manifest ; 2012 ; Journal of Entrepreneurship and Public Policy Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2013 ; Journal of Entrepreneurship and Public Policy Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Entrepreneurship and Public Policy Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Entrepreneurship and Public Policy Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Entrepreneurship and Public Policy Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Entrepreneurship and Public Policy Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Entrepreneurship and Public Policy Volume 7 ; 7 ; >
-    au < frozen ; exists ; 2019 ; Journal of Entrepreneurship and Public Policy Volume 8 ; 8 ; >
+    au < finished ; manifest ; 2019 ; Journal of Entrepreneurship and Public Policy Volume 8 ; 8 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Entrepreneurship and Public Policy Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Entrepreneurship and Public Policy Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Entrepreneurship and Public Policy Volume 11 ; 11 ; >
@@ -7413,10 +7413,10 @@
     au < frozen ; exists ; 2004 ; Journal of European Industrial Training Volume 28 ; 28 ; >
     au < frozen ; exists ; 2005 ; Journal of European Industrial Training Volume 29 ; 29 ; >
     au < frozen ; exists ; 2006 ; Journal of European Industrial Training Volume 30 ; 30 ; >
-    au < frozen ; exists ; 2007 ; Journal of European Industrial Training Volume 31 ; 31 ; >
+    au < finished ; manifest ; 2007 ; Journal of European Industrial Training Volume 31 ; 31 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2008 ; Journal of European Industrial Training Volume 32 ; 32 ; >
     au < frozen ; exists ; 2009 ; Journal of European Industrial Training Volume 33 ; 33 ; >
-    au < frozen ; exists ; 2010 ; Journal of European Industrial Training Volume 34 ; 34 ; >
+    au < finished ; manifest ; 2010 ; Journal of European Industrial Training Volume 34 ; 34 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2011 ; Journal of European Industrial Training Volume 35 ; 35 ; >
 
   }
@@ -7432,18 +7432,18 @@
     param[journal_issn] = 1753-9269
     comment[journal_id] = jerer
 
-    au < frozen ; exists ; 2008 ; Journal of European Real Estate Research Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2009 ; Journal of European Real Estate Research Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2010 ; Journal of European Real Estate Research Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2011 ; Journal of European Real Estate Research Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2012 ; Journal of European Real Estate Research Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2013 ; Journal of European Real Estate Research Volume 6 ; 6 ; >
+    au < finished ; manifest ; 2008 ; Journal of European Real Estate Research Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; Journal of European Real Estate Research Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2010 ; Journal of European Real Estate Research Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2011 ; Journal of European Real Estate Research Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Journal of European Real Estate Research Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2013 ; Journal of European Real Estate Research Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of European Real Estate Research Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of European Real Estate Research Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of European Real Estate Research Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of European Real Estate Research Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of European Real Estate Research Volume 11 ; 11 ; >
-    au < frozen ; exists ; 2019 ; Journal of European Real Estate Research Volume 12 ; 12 ; >
+    au < finished ; manifest ; 2019 ; Journal of European Real Estate Research Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Journal of European Real Estate Research Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of European Real Estate Research Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of European Real Estate Research Volume 15 ; 15 ; >
@@ -7465,20 +7465,20 @@
     au < frozen ; exists ; 2003 ; Journal of Facilities Management Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; Journal of Facilities Management Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; Journal of Facilities Management Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2006 ; Journal of Facilities Management Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2007 ; Journal of Facilities Management Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2008 ; Journal of Facilities Management Volume 6 ; 6 ; >
-    au < frozen ; exists ; 2009 ; Journal of Facilities Management Volume 7 ; 7 ; >
-    au < frozen ; exists ; 2010 ; Journal of Facilities Management Volume 8 ; 8 ; >
-    au < frozen ; exists ; 2011 ; Journal of Facilities Management Volume 9 ; 9 ; >
+    au < finished ; manifest ; 2006 ; Journal of Facilities Management Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; Journal of Facilities Management Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2008 ; Journal of Facilities Management Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2009 ; Journal of Facilities Management Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; Journal of Facilities Management Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Journal of Facilities Management Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Facilities Management Volume 10 ; 10 ; >
-    au < frozen ; exists ; 2013 ; Journal of Facilities Management Volume 11 ; 11 ; >
+    au < finished ; manifest ; 2013 ; Journal of Facilities Management Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Facilities Management Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Facilities Management Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Facilities Management Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Facilities Management Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Facilities Management Volume 16 ; 16 ; >
-    au < frozen ; exists ; 2019 ; Journal of Facilities Management Volume 17 ; 17 ; >
+    au < finished ; manifest ; 2019 ; Journal of Facilities Management Volume 17 ; 17 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Facilities Management Volume 18 ; 18 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Facilities Management Volume 19 ; 19 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Facilities Management Volume 20 ; 20 ; >
@@ -7496,15 +7496,15 @@
     param[journal_issn] = 2043-6238
     comment[journal_id] = jfbm
 
-    au < frozen ; exists ; 2011 ; Journal of Family Business Management Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2012 ; Journal of Family Business Management Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2013 ; Journal of Family Business Management Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2011 ; Journal of Family Business Management Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Journal of Family Business Management Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Journal of Family Business Management Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Family Business Management Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Family Business Management Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Family Business Management Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Family Business Management Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Family Business Management Volume 8 ; 8 ; >
-    au < frozen ; exists ; 2019 ; Journal of Family Business Management Volume 9 ; 9 ; >
+    au < finished ; manifest ; 2019 ; Journal of Family Business Management Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Journal of Family Business Management Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Family Business Management Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Family Business Management Volume 12 ; 12 ; >
@@ -7526,26 +7526,26 @@
     au < frozen ; exists ; 1997 ; Journal of Fashion Marketing and Management Volume 1 ; 1 ; >
     au < frozen ; exists ; 1998 ; Journal of Fashion Marketing and Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 1999 ; Journal of Fashion Marketing and Management Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2000 ; Journal of Fashion Marketing and Management Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2001 ; Journal of Fashion Marketing and Management Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2002 ; Journal of Fashion Marketing and Management Volume 6 ; 6 ; >
+    au < finished ; manifest ; 2000 ; Journal of Fashion Marketing and Management Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2001 ; Journal of Fashion Marketing and Management Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2002 ; Journal of Fashion Marketing and Management Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2003 ; Journal of Fashion Marketing and Management Volume 7 ; 7 ; >
     au < frozen ; exists ; 2004 ; Journal of Fashion Marketing and Management Volume 8 ; 8 ; >
-    au < frozen ; exists ; 2005 ; Journal of Fashion Marketing and Management Volume 9 ; 9 ; >
-    au < frozen ; exists ; 2006 ; Journal of Fashion Marketing and Management Volume 10 ; 10 ; >
-    au < frozen ; exists ; 2007 ; Journal of Fashion Marketing and Management Volume 11 ; 11 ; >
-    au < frozen ; exists ; 2008 ; Journal of Fashion Marketing and Management Volume 12 ; 12 ; >
-    au < frozen ; exists ; 2009 ; Journal of Fashion Marketing and Management Volume 13 ; 13 ; >
-    au < frozen ; exists ; 2010 ; Journal of Fashion Marketing and Management Volume 14 ; 14 ; >
-    au < frozen ; exists ; 2011 ; Journal of Fashion Marketing and Management Volume 15 ; 15 ; >
-    au < frozen ; exists ; 2012 ; Journal of Fashion Marketing and Management Volume 16 ; 16 ; >
-    au < frozen ; exists ; 2013 ; Journal of Fashion Marketing and Management Volume 17 ; 17 ; >
+    au < finished ; manifest ; 2005 ; Journal of Fashion Marketing and Management Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2006 ; Journal of Fashion Marketing and Management Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; Journal of Fashion Marketing and Management Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2008 ; Journal of Fashion Marketing and Management Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2009 ; Journal of Fashion Marketing and Management Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; Journal of Fashion Marketing and Management Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2011 ; Journal of Fashion Marketing and Management Volume 15 ; 15 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Journal of Fashion Marketing and Management Volume 16 ; 16 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2013 ; Journal of Fashion Marketing and Management Volume 17 ; 17 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Fashion Marketing and Management Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Fashion Marketing and Management Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Fashion Marketing and Management Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Fashion Marketing and Management Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Fashion Marketing and Management Volume 22 ; 22 ; >
-    au < frozen ; exists ; 2019 ; Journal of Fashion Marketing and Management Volume 23 ; 23 ; >
+    au < finished ; manifest ; 2019 ; Journal of Fashion Marketing and Management Volume 23 ; 23 ; reingest2.clockss.org:8085 >
     au < notReady ; exists ; 2020 ; Journal of Fashion Marketing and Management Volume 24 ; 24 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/JFMM-10-2018-0138/full/html
     au < deepCrawl ; exists ; 2021 ; Journal of Fashion Marketing and Management Volume 25 ; 25 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Fashion Marketing and Management Volume 26 ; 26 ; >
@@ -7570,26 +7570,26 @@
     au < frozen ; exists ; 1997 ; Journal of Financial Crime Volume 4 ; 4 ; >
     au < frozen ; exists ; 1998 ; Journal of Financial Crime Volume 5 ; 5 ; >
     au < frozen ; exists ; 1999 ; Journal of Financial Crime Volume 6 ; 6 ; >
-    au < frozen ; exists ; 2000 ; Journal of Financial Crime Volume 7 ; 7 ; >
-    au < frozen ; exists ; 2001 ; Journal of Financial Crime Volume 8 ; 8 ; >
-    au < frozen ; exists ; 2002 ; Journal of Financial Crime Volume 9 ; 9 ; >
+    au < finished ; manifest ; 2000 ; Journal of Financial Crime Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2001 ; Journal of Financial Crime Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2002 ; Journal of Financial Crime Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2003 ; Journal of Financial Crime Volume 10 ; 10 ; >
     au < frozen ; exists ; 2004 ; Journal of Financial Crime Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; Journal of Financial Crime Volume 12 ; 12 ; >
-    au < frozen ; exists ; 2006 ; Journal of Financial Crime Volume 13 ; 13 ; >
-    au < frozen ; exists ; 2007 ; Journal of Financial Crime Volume 14 ; 14 ; >
-    au < frozen ; exists ; 2008 ; Journal of Financial Crime Volume 15 ; 15 ; >
-    au < frozen ; exists ; 2009 ; Journal of Financial Crime Volume 16 ; 16 ; >
-    au < frozen ; exists ; 2010 ; Journal of Financial Crime Volume 17 ; 17 ; >
-    au < frozen ; exists ; 2011 ; Journal of Financial Crime Volume 18 ; 18 ; >
+    au < finished ; manifest ; 2006 ; Journal of Financial Crime Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; Journal of Financial Crime Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2008 ; Journal of Financial Crime Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2009 ; Journal of Financial Crime Volume 16 ; 16 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2010 ; Journal of Financial Crime Volume 17 ; 17 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Journal of Financial Crime Volume 18 ; 18 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Financial Crime Volume 19 ; 19 ; >
-    au < frozen ; exists ; 2013 ; Journal of Financial Crime Volume 20 ; 20 ; >
+    au < finished ; manifest ; 2013 ; Journal of Financial Crime Volume 20 ; 20 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Financial Crime Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Financial Crime Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Financial Crime Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Financial Crime Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Financial Crime Volume 25 ; 25 ; >
-    au < frozen ; exists ; 2019 ; Journal of Financial Crime Volume 26 ; 26 ; >
+    au < finished ; manifest ; 2019 ; Journal of Financial Crime Volume 26 ; 26 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal of Financial Crime Volume 27 ; 27 ; >
     au < deepCrawl ; exists ; 2021 ; Journal of Financial Crime Volume 28 ; 28 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Financial Crime Volume 29 ; 29 ; >
