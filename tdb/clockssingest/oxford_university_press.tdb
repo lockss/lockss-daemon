@@ -89,7 +89,7 @@
     param[journal_id] = advances
     #move to Elsevier, 2023-01-02
 
-    au < frozen ; exists ; 2010 ; 2010 ; Advances in Nutrition Volume 1 ; 1 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Advances in Nutrition Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; Advances in Nutrition Volume 2 ; 2 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Advances in Nutrition Volume 3 ; 3 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Advances in Nutrition Volume 4 ; 4 ; >
@@ -566,7 +566,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; The American Journal of Clinical Nutrition Volume 85-86 ; 85-86 ; >
     au < manifest ; exists ; 2008 ; 2008 ; The American Journal of Clinical Nutrition Volume 87-88 ; 87-88 ; >
     au < finished ; manifest ; 2009 ; 2009 ; The American Journal of Clinical Nutrition Volume 89-90 ; 89-90 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; 2010 ; The American Journal of Clinical Nutrition Volume 91-92 ; 91-92 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; The American Journal of Clinical Nutrition Volume 91-92 ; 91-92 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2011 ; 2011 ; The American Journal of Clinical Nutrition Volume 93-94 ; 93-94 ; >
     au < frozen ; exists ; 2012 ; 2012 ; The American Journal of Clinical Nutrition Volume 95-96 ; 95-96 ; >
     au < frozen ; exists ; 2013 ; 2013 ; The American Journal of Clinical Nutrition Volume 97-98 ; 97-98 ; >
@@ -603,7 +603,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; American Journal of Clinical Pathology Volume 127-128 ; 127-128 ; >
     au < manifest ; exists ; 2008 ; 2008 ; American Journal of Clinical Pathology Volume 129-130 ; 129-130 ; >
     au < finished ; manifest ; 2009 ; 2009 ; American Journal of Clinical Pathology Volume 131-132 ; 131-132 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2010 ; 2010 ; American Journal of Clinical Pathology Volume 133-134 ; 133-134 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; American Journal of Clinical Pathology Volume 133-134 ; 133-134 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2011 ; 2011 ; American Journal of Clinical Pathology Volume 135-136 ; 135-136 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2012 ; 2012 ; American Journal of Clinical Pathology Volume 137-138 ; 137-138 ; >
     au < frozen ; exists ; 2013 ; 2013 ; American Journal of Clinical Pathology Volume 139-140 ; 139-140 ; >
@@ -770,7 +770,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; American Journal of Health-System Pharmacy Volume 64 ; 64 ; >
     au < manifest ; exists ; 2008 ; 2008 ; American Journal of Health-System Pharmacy Volume 65 ; 65 ; >
     au < manifest ; exists ; 2009 ; 2009 ; American Journal of Health-System Pharmacy Volume 66 ; 66 ; > #LXQUEUE-1779
-    au < frozen ; exists ; 2010 ; 2010 ; American Journal of Health-System Pharmacy Volume 67 ; 67 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; American Journal of Health-System Pharmacy Volume 67 ; 67 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; American Journal of Health-System Pharmacy Volume 68 ; 68 ; >
     au < frozen ; exists ; 2012 ; 2012 ; American Journal of Health-System Pharmacy Volume 69 ; 69 ; >
     au < frozen ; exists ; 2013 ; 2013 ; American Journal of Health-System Pharmacy Volume 70 ; 70 ; >
@@ -1103,7 +1103,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Animal Science Volume 84 ; 84 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Journal of Animal Science Volume 85 ; 85 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Journal of Animal Science Volume 86 ; 86 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2010 ; 2010 ; Journal of Animal Science Volume 87 ; 87 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Journal of Animal Science Volume 87 ; 87 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; Journal of Animal Science Volume 88 ; 88 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Journal of Animal Science Volume 89 ; 89 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Journal of Animal Science Volume 90 ; 90 ; >
@@ -1886,7 +1886,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; The Auk: Ornithological Advances Volume 122 ; 122 ; >
     au < manifest ; exists ; 2008 ; 2008 ; The Auk: Ornithological Advances Volume 123 ; 123 ; >
     au < finished ; manifest ; 2009 ; 2009 ; The Auk: Ornithological Advances Volume 124 ; 124 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; 2010 ; The Auk: Ornithological Advances Volume 125 ; 125 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; The Auk: Ornithological Advances Volume 125 ; 125 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; The Auk: Ornithological Advances Volume 126 ; 126 ; >
     au < frozen ; exists ; 2012 ; 2012 ; The Auk: Ornithological Advances Volume 127 ; 127 ; >
     au < frozen ; exists ; 2013 ; 2013 ; The Auk: Ornithological Advances Volume 128 ; 128 ; >
@@ -1924,7 +1924,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; BJA Education Volume 7 ; 7 ; >
     au < manifest ; exists ; 2008 ; 2008 ; BJA Education Volume 8 ; 8 ; >
     au < finished ; manifest ; 2009 ; 2009 ; BJA Education Volume 9 ; 9 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; 2010 ; BJA Education Volume 10 ; 10 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; BJA Education Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2011 ; 2011 ; BJA Education Volume 11 ; 11 ; >
     au < frozen ; exists ; 2012 ; 2012 ; BJA Education Volume 12 ; 12 ; >
     au < frozen ; exists ; 2013 ; 2013 ; BJA Education Volume 13 ; 13 ; >
@@ -2304,7 +2304,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Biological Journal of the Linnean Society Volume 90-92 ; 90-92 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Biological Journal of the Linnean Society Volume 93-95 ; 93-95 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Biological Journal of the Linnean Society Volume 96-98 ; 96-98 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; 2010 ; Biological Journal of the Linnean Society Volume 99-101 ; 99-101 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Biological Journal of the Linnean Society Volume 99-101 ; 99-101 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2011 ; 2011 ; Biological Journal of the Linnean Society Volume 102-104 ; 102-104 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Biological Journal of the Linnean Society Volume 105-107 ; 105-107 ; >
     au < manifest ; exists ; 2013 ; 2013 ; Biological Journal of the Linnean Society Volume 108-110 ; 108-110 ; > #504 gateway timeout https://academic.oup.com/view-large/82253110
@@ -2394,7 +2394,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Biology of Reproduction Volume 76-77 ; 76-77 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Biology of Reproduction Volume 78-79 ; 78-79 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Biology of Reproduction Volume 80-81 ; 80-81 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2010 ; 2010 ; Biology of Reproduction Volume 82-83 ; 82-83 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Biology of Reproduction Volume 82-83 ; 82-83 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; Biology of Reproduction Volume 84-85 ; 84-85 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Biology of Reproduction Volume 86-87 ; 86-87 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Biology of Reproduction Volume 88-89 ; 88-89 ; >
@@ -2547,7 +2547,7 @@
 
     au < manifest ; exists ; 2008 ; 2008 ; Bioscience Horizons: The International Journal of Student Research Volume 1 ; 1 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Bioscience Horizons: The International Journal of Student Research Volume 2 ; 2 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; 2010 ; Bioscience Horizons: The International Journal of Student Research Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Bioscience Horizons: The International Journal of Student Research Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; Bioscience Horizons: The International Journal of Student Research Volume 4 ; 4 ; >
     au < finished ; finished ; 2012 ; 2012 ; Bioscience Horizons: The International Journal of Student Research Volume 5 ; 5 ; reingest4.clockss.org:8082 > # different volume url: https://academic.oup.com/biohorizons/issue/volume/5
     au < frozen ; exists ; 2013 ; 2013 ; Bioscience Horizons: The International Journal of Student Research Volume 6 ; 6 ; >
@@ -2610,7 +2610,7 @@
     #content available from 1856 volume 1 to 2009 volume 161
 
 
-    au < frozen ; exists ; 2010 ; 2010 ; Botanical Journal of the Linnean Society Volume 162-164 ; 162-164 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Botanical Journal of the Linnean Society Volume 162-164 ; 162-164 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; Botanical Journal of the Linnean Society Volume 165-167 ; 165-167 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Botanical Journal of the Linnean Society Volume 168-170 ; 168-170 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Botanical Journal of the Linnean Society Volume 171-173 ; 171-173 ; >
@@ -2888,7 +2888,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; British Journal of Surgery Volume 94 ; 94 ; >
     au < manifest ; exists ; 2008 ; 2008 ; British Journal of Surgery Volume 95 ; 95 ; >
     au < finished ; frozen ; 2009 ; 2009 ; British Journal of Surgery Volume 96 ; 96 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; 2010 ; British Journal of Surgery Volume 97 ; 97 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; British Journal of Surgery Volume 97 ; 97 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; British Journal of Surgery Volume 98 ; 98 ; >
     au < frozen ; exists ; 2012 ; 2012 ; British Journal of Surgery Volume 99 ; 99 ; >
     au < frozen ; exists ; 2013 ; 2013 ; British Journal of Surgery Volume 100 ; 100 ; >
@@ -3761,7 +3761,7 @@
       au < doNotProcess ; exists ; 2007 ; 2007 ; Clinical Chemistry Volume 53 ; 53 ; >
       au < manifest ; exists ; 2008 ; 2008 ; Clinical Chemistry Volume 54 ; 54 ; >
       au < finished ; manifest ; 2009 ; 2009 ; Clinical Chemistry Volume 55 ; 55 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2010 ; 2010 ; Clinical Chemistry Volume 56 ; 56 ; >
+      au < finished ; manifest ; 2010 ; 2010 ; Clinical Chemistry Volume 56 ; 56 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2011 ; 2011 ; Clinical Chemistry Volume 57 ; 57 ; >
       au < frozen ; exists ; 2012 ; 2012 ; Clinical Chemistry Volume 58 ; 58 ; >
       au < frozen ; exists ; 2013 ; 2013 ; Clinical Chemistry Volume 59 ; 59 ; >
@@ -4022,7 +4022,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; The Condor: Ornithological Applications Volume 109 ; 109 ; >
     au < manifest ; exists ; 2008 ; 2008 ; The Condor: Ornithological Applications Volume 110 ; 110 ; >
     au < finished ; manifest ; 2009 ; 2009 ; The Condor: Ornithological Applications Volume 111 ; 111 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; 2010 ; The Condor: Ornithological Applications Volume 112 ; 112 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; The Condor: Ornithological Applications Volume 112 ; 112 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2011 ; 2011 ; The Condor: Ornithological Applications Volume 113 ; 113 ; >
     au < frozen ; exists ; 2012 ; 2012 ; The Condor: Ornithological Applications Volume 114 ; 114 ; >
     au < frozen ; exists ; 2013 ; 2013 ; The Condor: Ornithological Applications Volume 115 ; 115 ; >
@@ -4375,7 +4375,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Digital Scholarship in the Humanities Volume 22 ; 22 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Digital Scholarship in the Humanities Volume 23 ; 23 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Digital Scholarship in the Humanities Volume 24 ; 24 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2010 ; 2010 ; Digital Scholarship in the Humanities Volume 25 ; 25 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Digital Scholarship in the Humanities Volume 25 ; 25 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; Digital Scholarship in the Humanities Volume 26 ; 26 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Digital Scholarship in the Humanities Volume 27 ; 27 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Digital Scholarship in the Humanities Volume 28 ; 28 ; >
@@ -4485,7 +4485,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Diseases of the Esophagus Volume 20 ; 20 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Diseases of the Esophagus Volume 21 ; 21 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Diseases of the Esophagus Volume 22 ; 22 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2010 ; 2010 ; Diseases of the Esophagus Volume 23 ; 23 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Diseases of the Esophagus Volume 23 ; 23 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2011 ; 2011 ; Diseases of the Esophagus Volume 24 ; 24 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Diseases of the Esophagus Volume 25 ; 25 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Diseases of the Esophagus Volume 26 ; 26 ; >
@@ -4743,7 +4743,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; The Econometrics Journal Volume 10 ; 10 ; >
     au < manifest ; exists ; 2008 ; 2008 ; The Econometrics Journal Volume 11 ; 11 ; >
     au < finished ; manifest ; 2009 ; 2009 ; The Econometrics Journal Volume 12 ; 12 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2010 ; 2010 ; The Econometrics Journal Volume 13 ; 13 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; The Econometrics Journal Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2011 ; 2011 ; The Econometrics Journal Volume 14 ; 14 ; >
     au < frozen ; exists ; 2012 ; 2012 ; The Econometrics Journal Volume 15 ; 15 ; >
     au < frozen ; exists ; 2013 ; 2013 ; The Econometrics Journal Volume 16 ; 16 ; >
@@ -4890,7 +4890,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; The Economic Journal Volume 117 ; 117 ; >
     au < manifest ; exists ; 2008 ; 2008 ; The Economic Journal Volume 118 ; 118 ; >
     au < finished ; manifest ; 2009 ; 2009 ; The Economic Journal Volume 119 ; 119 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; 2010 ; The Economic Journal Volume 120 ; 120 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; The Economic Journal Volume 120 ; 120 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; The Economic Journal Volume 121 ; 121 ; >
     au < frozen ; exists ; 2012 ; 2012 ; The Economic Journal Volume 122 ; 122 ; >
     au < frozen ; exists ; 2013 ; 2013 ; The Economic Journal Volume 123 ; 123 ; >
@@ -6545,7 +6545,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Forest Science Volume 53 ; 53 ; >
     au < finished ; manifest ; 2008 ; 2008 ; Forest Science Volume 54 ; 54 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 2009 ; Forest Science Volume 55 ; 55 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; 2010 ; Forest Science Volume 56 ; 56 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Forest Science Volume 56 ; 56 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; Forest Science Volume 57 ; 57 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Forest Science Volume 58 ; 58 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Forest Science Volume 59 ; 59 ; >
@@ -7980,7 +7980,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; ICSID Review: Foreign Investment Law Journal Volume 22 ; 22 ; >
     au < finished ; manifest ; 2008 ; 2008 ; ICSID Review: Foreign Investment Law Journal Volume 23 ; 23 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 2009 ; ICSID Review: Foreign Investment Law Journal Volume 24 ; 24 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; 2010 ; ICSID Review: Foreign Investment Law Journal Volume 25 ; 25 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; ICSID Review: Foreign Investment Law Journal Volume 25 ; 25 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; ICSID Review: Foreign Investment Law Journal Volume 26 ; 26 ; >
     au < frozen ; exists ; 2012 ; 2012 ; ICSID Review: Foreign Investment Law Journal Volume 27 ; 27 ; >
     au < frozen ; exists ; 2013 ; 2013 ; ICSID Review: Foreign Investment Law Journal Volume 28 ; 28 ; >
@@ -8590,7 +8590,7 @@
     param[journal_id] = ib
 
     au < finished ; manifest ; 2009 ; 2009 ; Integrative Biology Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; 2010 ; Integrative Biology Volume 2 ; 2 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Integrative Biology Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; Integrative Biology Volume 3 ; 3 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Integrative Biology Volume 4 ; 4 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Integrative Biology Volume 5 ; 5 ; >
@@ -8655,7 +8655,7 @@
     param[journal_id] = ia
     #this title was ONLY in the publisher listing
 
-    au < frozen ; exists ; 2010 ; 2010 ; International Affairs Volume 86 ; 86 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; International Affairs Volume 86 ; 86 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2011 ; 2011 ; International Affairs Volume 87 ; 87 ; >
     au < frozen ; exists ; 2012 ; 2012 ; International Affairs Volume 88 ; 88 ; >
     au < frozen ; exists ; 2013 ; 2013 ; International Affairs Volume 89 ; 89 ; >
@@ -9173,7 +9173,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; International Journal of Pharmacy Practice Volume 15 ; 15 ; >
     au < doNotProcess ; exists ; 2008 ; 2008 ; International Journal of Pharmacy Practice Volume 16 ; 16 ; >
     au < exists ; exists ; 2009 ; 2009 ; International Journal of Pharmacy Practice Volume 17 ; 17 ; >
-    au < frozen ; exists ; 2010 ; 2010 ; International Journal of Pharmacy Practice Volume 18 ; 18 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; International Journal of Pharmacy Practice Volume 18 ; 18 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; International Journal of Pharmacy Practice Volume 19 ; 19 ; >
     au < frozen ; exists ; 2012 ; 2012 ; International Journal of Pharmacy Practice Volume 20 ; 20 ; >
     au < frozen ; exists ; 2013 ; 2013 ; International Journal of Pharmacy Practice Volume 21 ; 21 ; >
@@ -10112,7 +10112,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Burn Care & Research Volume 28 ; 28 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Journal of Burn Care & Research Volume 29 ; 29 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Journal of Burn Care & Research Volume 30 ; 30 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2010 ; 2010 ; Journal of Burn Care & Research Volume 31 ; 31 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Journal of Burn Care & Research Volume 31 ; 31 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2011 ; 2011 ; Journal of Burn Care & Research Volume 32 ; 32 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Journal of Burn Care & Research Volume 33 ; 33 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Journal of Burn Care & Research Volume 34 ; 34 ; >
@@ -10519,7 +10519,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Crohn's and Colitis Supplements Volume 1 ; 1 ; > # no permission statement on manifest page
     au < finished ; manifest ; 2008 ; 2008 ; Journal of Crohn's and Colitis Supplements Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 2009 ; Journal of Crohn's and Colitis Supplements Volume 3 ; 3 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2010 ; 2010 ; Journal of Crohn's and Colitis Supplements Volume 4 ; 4 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Journal of Crohn's and Colitis Supplements Volume 4 ; 4 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -10563,7 +10563,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Crustacean Biology Volume 27 ; 27 ; >
     au < finished ; manifest ; 2008 ; 2008 ; Journal of Crustacean Biology Volume 28 ; 28 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2009 ; 2009 ; Journal of Crustacean Biology Volume 29 ; 29 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; 2010 ; Journal of Crustacean Biology Volume 30 ; 30 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Journal of Crustacean Biology Volume 30 ; 30 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; Journal of Crustacean Biology Volume 31 ; 31 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Journal of Crustacean Biology Volume 32 ; 32 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Journal of Crustacean Biology Volume 33 ; 33 ; >
@@ -10982,7 +10982,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Forestry Volume 105 ; 105 ; >
     au < finished ; manifest ; 2008 ; 2008 ; Journal of Forestry Volume 106 ; 106 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 2009 ; Journal of Forestry Volume 107 ; 107 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; 2010 ; Journal of Forestry Volume 108 ; 108 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Journal of Forestry Volume 108 ; 108 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; Journal of Forestry Volume 109 ; 109 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Journal of Forestry Volume 110 ; 110 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Journal of Forestry Volume 111 ; 111 ; >
@@ -11992,7 +11992,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Neuropathology & Experimental Neurology Volume 66 ; 66 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Journal of Neuropathology & Experimental Neurology Volume 67 ; 67 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Journal of Neuropathology & Experimental Neurology Volume 68 ; 68 ; >
-    au < frozen ; exists ; 2010 ; 2010 ; Journal of Neuropathology & Experimental Neurology Volume 69 ; 69 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Journal of Neuropathology & Experimental Neurology Volume 69 ; 69 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Journal of Neuropathology & Experimental Neurology Volume 70 ; 70 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of Neuropathology & Experimental Neurology Volume 71 ; 71 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Journal of Neuropathology & Experimental Neurology Volume 72 ; 72 ; >
@@ -12032,7 +12032,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; The Journal of Nutrition Volume 137 ; 137 ; >
     au < finished ; manifest ; 2008 ; 2008 ; The Journal of Nutrition Volume 138 ; 138 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 2009 ; The Journal of Nutrition Volume 139 ; 139 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; 2010 ; The Journal of Nutrition Volume 140 ; 140 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; The Journal of Nutrition Volume 140 ; 140 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2011 ; 2011 ; The Journal of Nutrition Volume 141 ; 141 ; >
     au < frozen ; exists ; 2012 ; 2012 ; The Journal of Nutrition Volume 142 ; 142 ; >
     au < frozen ; exists ; 2013 ; 2013 ; The Journal of Nutrition Volume 143 ; 143 ; >
@@ -12256,7 +12256,7 @@
 
     param[journal_id] = jphsr
 
-    au < frozen ; exists ; 2010 ; 2010 ; Journal of Pharmaceutical Health Services Research Volume 1 ; 1 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Journal of Pharmaceutical Health Services Research Volume 1 ; 1 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; Journal of Pharmaceutical Health Services Research Volume 2 ; 2 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Journal of Pharmaceutical Health Services Research Volume 3 ; 3 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Journal of Pharmaceutical Health Services Research Volume 4 ; 4 ; >
@@ -12343,7 +12343,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Pharmacy and Pharmacology Volume 59 ; 59 ; >
     au < doNotProcess ; exists ; 2008 ; 2008 ; Journal of Pharmacy and Pharmacology Volume 60 ; 60 ; >
     au < exists ; exists ; 2009 ; 2009 ; Journal of Pharmacy and Pharmacology Volume 61 ; 61 ; >
-    au < frozen ; exists ; 2010 ; 2010 ; Journal of Pharmacy and Pharmacology Volume 62 ; 62 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Journal of Pharmacy and Pharmacology Volume 62 ; 62 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2011 ; 2011 ; Journal of Pharmacy and Pharmacology Volume 63 ; 63 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Journal of Pharmacy and Pharmacology Volume 64 ; 64 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Journal of Pharmacy and Pharmacology Volume 65 ; 65 ; >
@@ -12575,7 +12575,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Radiation Research Volume 48 ; 48 ; >
     au < finished ; manifest ; 2008 ; 2008 ; Journal of Radiation Research Volume 49 ; 49 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2009 ; 2009 ; Journal of Radiation Research Volume 50 ; 50 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2010 ; 2010 ; Journal of Radiation Research Volume 51 ; 51 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Journal of Radiation Research Volume 51 ; 51 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2011 ; 2011 ; Journal of Radiation Research Volume 52 ; 52 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of Radiation Research Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Radiation Research Volume 54 ; 54 ; >
@@ -12880,7 +12880,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Social History Volume 40-41 ; 40-41 ; >
     au < finished ; manifest ; 2008 ; 2008 ; Journal of Social History Volume 41-42 ; 41-42 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2009 ; 2009 ; Journal of Social History Volume 42-43 ; 42-43 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2010 ; 2010 ; Journal of Social History Volume 43-44 ; 43-44 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Journal of Social History Volume 43-44 ; 43-44 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; Journal of Social History Volume 44-45 ; 44-45 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Journal of Social History Volume 45-46 ; 45-46 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Journal of Social History Volume 46-47 ; 46-47 ; >
@@ -13248,7 +13248,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of the American Medical Informatics Association Volume 14 ; 14 ; >
     au < finished ; manifest ; 2008 ; 2008 ; Journal of the American Medical Informatics Association Volume 15 ; 15 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 2009 ; Journal of the American Medical Informatics Association Volume 16 ; 16 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; 2010 ; Journal of the American Medical Informatics Association Volume 17 ; 17 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Journal of the American Medical Informatics Association Volume 17 ; 17 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; Journal of the American Medical Informatics Association Volume 18 ; 18 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Journal of the American Medical Informatics Association Volume 19 ; 19 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Journal of the American Medical Informatics Association Volume 20 ; 20 ; >
@@ -13283,7 +13283,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of the European Economic Association Volume 5 ; 5 ; >
     au < finished ; manifest ; 2008 ; 2008 ; Journal of the European Economic Association Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 2009 ; Journal of the European Economic Association Volume 7 ; 7 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; 2010 ; Journal of the European Economic Association Volume 8 ; 8 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Journal of the European Economic Association Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; Journal of the European Economic Association Volume 9 ; 9 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Journal of the European Economic Association Volume 10 ; 10 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Journal of the European Economic Association Volume 11 ; 11 ; >
@@ -13489,7 +13489,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of the ICRU Volume 7 ; 7 ; >
     au < finished ; manifest ; 2008 ; 2008 ; Journal of the ICRU Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 2009 ; Journal of the ICRU Volume 9 ; 9 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; 2010 ; Journal of the ICRU Volume 10 ; 10 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Journal of the ICRU Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 2011 ; 2011 ; Journal of the ICRU Volume 11 ; 11 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Journal of the ICRU Volume 12 ; 12 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Journal of the ICRU Volume 13 ; 13 ; >
@@ -13625,7 +13625,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Laboratory Medicine Volume 38 ; 38 ; >
     au < finished ; manifest ; 2008 ; 2008 ; Laboratory Medicine Volume 39 ; 39 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2009 ; 2009 ; Laboratory Medicine Volume 40 ; 40 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; 2010 ; Laboratory Medicine Volume 41 ; 41 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Laboratory Medicine Volume 41 ; 41 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2011 ; 2011 ; Laboratory Medicine Volume 42 ; 42 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Laboratory Medicine Volume 43 ; 43 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Laboratory Medicine Volume 44 ; 44 ; >
@@ -14029,7 +14029,7 @@
 #    au < exists ; exists ; 2009 ; 2009 ; Mammalian Species Volume Issue 824-847 ; Issue 824-847 ; >
 
 
-    au < frozen ; exists ; 2010 ; 2010 ; Mammalian Species Volume 42 ; 42 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Mammalian Species Volume 42 ; 42 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; Mammalian Species Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Mammalian Species Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Mammalian Species Volume 45 ; 45 ; >
@@ -14199,7 +14199,7 @@
 
     au < manifest ; exists ; 2008 ; 2008 ; Microscopy Volume 57 ; 57 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Microscopy Volume 58 ; 58 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2010 ; 2010 ; Microscopy Volume 59 ; 59 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Microscopy Volume 59 ; 59 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2011 ; 2011 ; Microscopy Volume 60 ; 60 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Microscopy Volume 61 ; 61 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Microscopy Volume 62 ; 62 ; >
@@ -15267,7 +15267,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Neurosurgery Volume 60-61 ; 60-61 ; >
     au < finished ; manifest ; 2008 ; 2008 ; Neurosurgery Volume 62-63 ; 62-63 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 2009 ; Neurosurgery Volume 64-65 ; 64-65 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2010 ; 2010 ; Neurosurgery Volume 66-67 ; 66-67 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Neurosurgery Volume 66-67 ; 66-67 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; Neurosurgery Volume 58,68-69 ; 58,68-69 ; >
     au < ingNotReady ; exists ; 2012 ; 2012 ; Neurosurgery Volume 59,70-71 ; 59,70-71 ; > #403 forbidden on an article. https://academic.oup.com/neurosurgery/article-pdf/70/2/306/30234209/neurosurgery-70-2-306.pdf
     au < frozen ; exists ; 2013 ; 2013 ; Neurosurgery Volume 60,72-73 ; 60,72-73 ; >
@@ -15320,7 +15320,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Nicotine & Tobacco Research Volume 9 ; 9 ; >
     au < finished ; manifest ; 2008 ; 2008 ; Nicotine & Tobacco Research Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 2009 ; Nicotine & Tobacco Research Volume 11 ; 11 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2010 ; 2010 ; Nicotine & Tobacco Research Volume 12 ; 12 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Nicotine & Tobacco Research Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; Nicotine & Tobacco Research Volume 13 ; 13 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Nicotine & Tobacco Research Volume 14 ; 14 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Nicotine & Tobacco Research Volume 15 ; 15 ; >
@@ -15828,7 +15828,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; The Oncologist Volume 12 ; 12 ; >
     au < manifest ; exists ; 2008 ; 2008 ; The Oncologist Volume 13 ; 13 ; >
     au < finished ; finished ; 2009 ; 2009 ; The Oncologist Volume 14 ; 14 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; 2010 ; The Oncologist Volume 15 ; 15 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; The Oncologist Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2011 ; 2011 ; The Oncologist Volume 16 ; 16 ; >
     au < frozen ; exists ; 2012 ; 2012 ; The Oncologist Volume 17 ; 17 ; >
     au < frozen ; exists ; 2013 ; 2013 ; The Oncologist Volume 18 ; 18 ; >
@@ -15885,7 +15885,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Operative Neurosurgery Volume 60 ; 60 ; >
     au < finished ; manifest ; 2008 ; 2008 ; Operative Neurosurgery Volume 62 ; 62 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2009 ; 2009 ; Operative Neurosurgery Volume 64 ; 64 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2010 ; 2010 ; Operative Neurosurgery Volume 66 ; 66 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Operative Neurosurgery Volume 66 ; 66 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2011 ; 2011 ; Operative Neurosurgery Volume 68 ; 68 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Operative Neurosurgery Volume 70 ; 70 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Operative Neurosurgery Volume 72 ; 72 ; >
@@ -16241,7 +16241,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Paediatrics & Child Health Volume 12 ; 12 ; >
     au < finished ; manifest ; 2008 ; 2008 ; Paediatrics & Child Health Volume 13 ; 13 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 2009 ; Paediatrics & Child Health Volume 14 ; 14 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; 2010 ; Paediatrics & Child Health Volume 15 ; 15 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Paediatrics & Child Health Volume 15 ; 15 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; Paediatrics & Child Health Volume 16 ; 16 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Paediatrics & Child Health Volume 17 ; 17 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Paediatrics & Child Health Volume 18 ; 18 ; >
@@ -16502,7 +16502,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Pathogens and Disease Volume 49-51 ; 49-51 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Pathogens and Disease Volume 52-54 ; 52-54 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Pathogens and Disease Volume 55-57 ; 55-57 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; 2010 ; Pathogens and Disease Volume 58-60 ; 58-60 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Pathogens and Disease Volume 58-60 ; 58-60 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; Pathogens and Disease Volume 61-63 ; 61-63 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Pathogens and Disease Volume 64-66 ; 64-66 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Pathogens and Disease Volume 67-69 ; 67-69 ; >
@@ -16660,7 +16660,7 @@
     au < doNotProcess ; exists ; 2007 ; 2007 ; Physical Therapy Volume 87 ; 87 ; >
     au < frozen ; exists ; 2008 ; 2008 ; Physical Therapy Volume 88 ; 88 ; >
     au < finished ; manifest ; 2009 ; 2009 ; Physical Therapy Volume 89 ; 89 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2010 ; 2010 ; Physical Therapy Volume 90 ; 90 ; >
+    au < finished ; manifest ; 2010 ; 2010 ; Physical Therapy Volume 90 ; 90 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2011 ; 2011 ; Physical Therapy Volume 91 ; 91 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Physical Therapy Volume 92 ; 92 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Physical Therapy Volume 93 ; 93 ; >
