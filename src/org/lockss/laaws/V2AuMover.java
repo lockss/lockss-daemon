@@ -541,8 +541,7 @@ s api client with long timeout */
    * @param args the arguments for this request.
    * @throws IllegalArgumentException
    */
-  void initRequest(Args args) throws IllegalArgumentException {
-
+  void initRequest(Args args, String whichAus) throws IllegalArgumentException {
     currentStatus = "Initializing";
     running = true;
     hasBeenStarted = true;
@@ -629,7 +628,7 @@ s api client with long timeout */
 
     // Must be called after config & args are processed
     initPhaseMap();
-    openReportFiles();
+    openReportFiles(args, whichAus);
 
     startTime = now();
   }
@@ -729,7 +728,7 @@ s api client with long timeout */
       throw new IllegalArgumentException("Can't move internal AUs");
     }
     startTotalTimers();
-    initRequest(args);
+    initRequest(args, ("AU: " + args.au.getName()));
     currentStatus = "Checking V2 services";
     checkV2ServicesAvailable();
     // get the aus known to the v2 repository
@@ -746,7 +745,7 @@ s api client with long timeout */
    */
   public void moveAllAus(Args args) throws IOException {
     startTotalTimers();
-    initRequest(args);
+    initRequest(args, "All AUs");
     currentStatus = "Checking V2 services";
     checkV2ServicesAvailable();
     // get the aus known to the v2 repo
@@ -774,7 +773,11 @@ s api client with long timeout */
    */
   public void movePluginAus(Args args) throws IOException {
     startTotalTimers();
-    initRequest(args);
+    initRequest(args,
+                "AUs in plugin(s): " +
+                StringUtil.separatedString(args.plugins.stream()
+                                           .map(x -> x.getPluginName())
+                                           .collect(Collectors.toList())));
     currentStatus = "Checking V2 services";
     checkV2ServicesAvailable();
     // get the aus known to the v2 repo
@@ -1992,13 +1995,14 @@ s api client with long timeout */
   /**
    * Open (append) the Report file and error file
    */
-  void openReportFiles() {
+  void openReportFiles(Args args, String whichAUs) {
     String now = DateFormatter.now();
-    reportWriter = openReportFile(reportFile, "Report", now);
-    errorWriter = openReportFile(errorFile, "Error Report", now);
+    reportWriter = openReportFile(reportFile, args, whichAUs, "Report", now);
+    errorWriter = openReportFile(errorFile, args, whichAUs, "Error Report", now);
   }
 
-  PrintWriter openReportFile(File file, String title, String now) {
+  PrintWriter openReportFile(File file, Args args, String whichAUs,
+                             String title, String now) {
     PrintWriter res = null;
     try {
       log.info("Writing " + title + " to " + file.getAbsolutePath());
@@ -2007,6 +2011,10 @@ s api client with long timeout */
                             true);
       res.println("--------------------------------------------------");
       res.println("  V2 AU Migration " + title + " - " + now);
+      res.println("  Migrating (" + args.opType
+                  + (args.isCompareContent ? " with compare" : "")
+                  + ") to " + args.host);
+      res.println("  " + whichAUs);
       res.println("--------------------------------------------------");
       res.println();
       if (res.checkError()) {
