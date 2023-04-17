@@ -41,7 +41,6 @@ public class PubFactoryHtmlCrawlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttributeRegex("span", "class", "bg-primary"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "bg-tertiary"),
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "component-volume-issue-selector"),
-      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "component-content-item"),
     };
 
     return new HtmlFilterInputStream(in,
