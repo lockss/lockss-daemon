@@ -7,6 +7,7 @@
     info[poller] = 8
   >
   provider = bepress
+  #Moved to OJS around 12/1/2022
   
   # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
@@ -23,7 +24,7 @@
     comment[publisher] = University of Lodz
     param[journal_abbr] = turyzm
 
-    au < manifest ; exists ; 2012 ; Tourism / Turyzm Volume 22 ; 22 ; >
+    au < doNotProcess ; exists ; 2012 ; Tourism / Turyzm Volume 22 ; 22 ; >
     au < finished ; finished ; 2013 ; Tourism / Turyzm Volume 23 ; 23 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Tourism / Turyzm Volume 24 ; 24 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Tourism / Turyzm Volume 25 ; 25 ; reingest3.clockss.org:8083 >
@@ -31,10 +32,10 @@
     au < finished ; finished ; 2017 ; Tourism / Turyzm Volume 27 ; 27 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; Tourism / Turyzm Volume 28 ; 28 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2019 ; Tourism / Turyzm Volume 29 ; 29 ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2020 ; Tourism / Turyzm Volume 30 ; 30 ; >
-    au < deepCrawl ; exists ; 2021 ; Tourism / Turyzm Volume 31 ; 31 ; >
-    au < expected ; exists ; 2022 ; Tourism / Turyzm Volume 32 ; 32 ; >
-    au < expected ; exists ; 2023 ; Tourism / Turyzm Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2020 ; Tourism / Turyzm Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2021 ; Tourism / Turyzm Volume 31 ; 31 ; >
+    au < doNotProcess ; exists ; 2022 ; Tourism / Turyzm Volume 32 ; 32 ; >
+    au < doNotProcess ; exists ; 2023 ; Tourism / Turyzm Volume 33 ; 33 ; >
 
   }
 
@@ -49,10 +50,10 @@
       comment[publisher] = University of Lodz
       param[journal_abbr] = foliabiologica
 
-      au < manifest ; exists ; 2009 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2010 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2011 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2012 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 8 ; 8 ; >
+      au < doNotProcess ; exists ; 2009 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2010 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2011 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2012 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 8 ; 8 ; >
       au < finished ; finished ; 2013 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 9 ; 9 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 10 ; 10 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Acta Universitatis Lodziensis, Folia Biologica et Oecologica Volume 11 ; 11 ; reingest1.clockss.org:8082 >
@@ -78,9 +79,9 @@
       au < finished ; finished ; 2018 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 34 ; 34 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 35 ; 35 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2020 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 36 ; 36 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 37 ; 37 ; >
-      au < crawling ; exists ; 2022 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 38 ; 38 ; >
-      au < expected ; exists ; 2023 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 39 ; 39 ; >
+      au < frozen ; exists ; 2021 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 37 ; 37 ; >
+      au < superseded ; exists ; 2022 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 38 [superseded] ; 38 ; >
+      au < doNotProcess ; exists ; 2023 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 39 ; 39 ; >
 
   }
 
@@ -93,13 +94,14 @@
 
       comment[publisher] = University of Lodz
       param[journal_abbr] = convivium
+      #Moved to https://czasopisma.uni.lodz.pl/conv/index
 
-      au < manifest ; exists ; 2007 ; Convivium: Germanistisches Jahrbuch Polen Volume 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; Convivium: Germanistisches Jahrbuch Polen Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; Convivium: Germanistisches Jahrbuch Polen Volume 2009 ; 2009 ; >
-      au < manifest ; exists ; 2010 ; Convivium: Germanistisches Jahrbuch Polen Volume 2010 ; 2010 ; >
-      au < manifest ; exists ; 2011 ; Convivium: Germanistisches Jahrbuch Polen Volume 2011 ; 2011 ; >
-      au < manifest ; exists ; 2012 ; Convivium: Germanistisches Jahrbuch Polen Volume 2012 ; 2012 ; >
+      au < doNotProcess ; exists ; 2007 ; Convivium: Germanistisches Jahrbuch Polen Volume 2007 ; 2007 ; >
+      au < doNotProcess ; exists ; 2008 ; Convivium: Germanistisches Jahrbuch Polen Volume 2008 ; 2008 ; >
+      au < doNotProcess ; exists ; 2009 ; Convivium: Germanistisches Jahrbuch Polen Volume 2009 ; 2009 ; >
+      au < doNotProcess ; exists ; 2010 ; Convivium: Germanistisches Jahrbuch Polen Volume 2010 ; 2010 ; >
+      au < doNotProcess ; exists ; 2011 ; Convivium: Germanistisches Jahrbuch Polen Volume 2011 ; 2011 ; >
+      au < doNotProcess ; exists ; 2012 ; Convivium: Germanistisches Jahrbuch Polen Volume 2012 ; 2012 ; >
       au < finished ; finished ; 2013 ; Convivium: Germanistisches Jahrbuch Polen Volume 2013 ; 2013 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Convivium: Germanistisches Jahrbuch Polen Volume 2014 ; 2014 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2015 ; Convivium: Germanistisches Jahrbuch Polen Volume 2015 ; 2015 ; reingest3.clockss.org:8083 >
@@ -109,8 +111,8 @@
       au < finished ; finished ; 2019 ; Convivium: Germanistisches Jahrbuch Polen Volume 2019 ; 2019 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2020 ; Convivium: Germanistisches Jahrbuch Polen Volume 2020 ; 2020 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2021 ; Convivium: Germanistisches Jahrbuch Polen Volume 2021 ; 2021 ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2022 ; Convivium: Germanistisches Jahrbuch Polen Volume 2022 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Convivium: Germanistisches Jahrbuch Polen Volume 2023 ; 2023 ; >
+      au < doNotProcess ; exists ; 2022 ; Convivium: Germanistisches Jahrbuch Polen Volume 2022 ; 2022 ; >
+      au < doNotProcess ; exists ; 2023 ; Convivium: Germanistisches Jahrbuch Polen Volume 2023 ; 2023 ; >
 
   }
 
@@ -125,9 +127,9 @@
       param[journal_abbr] = esrap
 
       au < finished ; finished ; 2020 ; European Spatial Research and Policy Volume 16 ; 16 ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; European Spatial Research and Policy Volume 17 ; 17 ; >
-      au < crawling ; exists ; 2022 ; European Spatial Research and Policy Volume 18 ; 18 ; >
-      au < expected ; exists ; 2023 ; European Spatial Research and Policy Volume 19 ; 19 ; >
+      au < frozen ; exists ; 2021 ; European Spatial Research and Policy Volume 17 ; 17 ; >
+      au < superseded ; exists ; 2022 ; European Spatial Research and Policy Volume 18 [superseded] ; 18 ; >
+      au < doNotProcess ; exists ; 2023 ; European Spatial Research and Policy Volume 19 ; 19 ; >
 
   }
 
@@ -141,8 +143,8 @@
       comment[publisher] = University of Lodz
       param[journal_abbr] = is
 
-      au < manifest ; exists ; 2011 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 13 ; 13 ; >
-      au < manifest ; exists ; 2012 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 14 ; 14 ; >
+      au < doNotProcess ; exists ; 2011 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 13 ; 13 ; >
+      au < doNotProcess ; exists ; 2012 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 14 ; 14 ; >
       au < finished ; finished ; 2013 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 15 ; 15 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 16 ; 16 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 17 ; 17 ; reingest2.clockss.org:8085 >
@@ -151,9 +153,9 @@
       au < finished ; finished ; 2018 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 20 ; 20 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 21 ; 21 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2020 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 22 ; 22 ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2021 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 23 ; 23 ; >
-      au < crawling ; exists ; 2022 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 24 ; 24 ; >
-      au < expected ; exists ; 2023 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 25 ; 25 ; >
+      au < frozen ; exists ; 2021 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 23 ; 23 ; >
+      au < superseded ; exists ; 2022 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 24 [superseded] ; 24 ; >
+      au < doNotProcess ; exists ; 2023 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 25 ; 25 ; >
 
   }
 
@@ -172,8 +174,8 @@
       au < finished ; finished ; 2019 ; Logopaedica Lodziensia Volume 3 ; 3 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; Logopaedica Lodziensia Volume 4 ; 4 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2021 ; Logopaedica Lodziensia Volume 5 ; 5 ; reingest3.clockss.org:8083 >
-      au < expected ; exists ; 2022 ; Logopaedica Lodziensia Volume 6 ; 6 ; >
-      au < expected ; exists ; 2023 ; Logopaedica Lodziensia Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2022 ; Logopaedica Lodziensia Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2023 ; Logopaedica Lodziensia Volume 7 ; 7 ; >
 
   }
 
@@ -187,8 +189,8 @@
       comment[publisher] = University of Lodz
       param[journal_abbr] = multishake
 
-      au < manifest ; exists ; 2011 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2012 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 9 ; 9 ; >
+      au < doNotProcess ; exists ; 2011 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 8 ; 8 ; >
+      au < doNotProcess ; exists ; 2012 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 9 ; 9 ; >
       au < finished ; finished ; 2013 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 10 ; 10 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 11 ; 11 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 12 ; 12 ; reingest4.clockss.org:8082 >
@@ -197,9 +199,9 @@
       au < finished ; finished ; 2018 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 15 ; 15 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2019 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 16 ; 16 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 17 ; 17 ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 18 ; 18 ; >
-      au < crawling ; exists ; 2022 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 19 ; 19 ; >
-      au < expected ; exists ; 2023 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 20 ; 20 ; >
+      au < frozen ; exists ; 2021 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 18 ; 18 ; >
+      au < superseded ; exists ; 2022 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 19 [superseded] ; 19 ; >
+      au < doNotProcess ; exists ; 2023 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 20 ; 20 ; >
 
   }
 
@@ -217,8 +219,8 @@
       au < finished ; finished ; 2019 ; Research in Language Volume 17 ; 17 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2020 ; Research in Language Volume 18 ; 18 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2021 ; Research in Language Volume 19 ; 19 ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2022 ; Research in Language Volume 20 ; 20 ; >
-      au < expected ; exists ; 2023 ; Research in Language Volume 21 ; 21 ; >
+      au < doNotProcess ; exists ; 2022 ; Research in Language Volume 20 ; 20 ; >
+      au < doNotProcess ; exists ; 2023 ; Research in Language Volume 21 ; 21 ; >
 
   }
 
@@ -235,7 +237,7 @@
       #In practical terms this means the AI will not close, instead a new issue will be added each year.
 
       au < finished ; finished ; 2011-2020 ; Text Matters: A Journal of Literature, Theory and Culture Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2021-2030 ; Text Matters: A Journal of Literature, Theory and Culture Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2021-2030 ; Text Matters: A Journal of Literature, Theory and Culture Volume 2 ; 2 ; >
 
   }
 
