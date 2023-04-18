@@ -200,14 +200,14 @@
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
       #param[base_url] = http://hopp.uwpress.org/
 
-      au < exists ; 2014 ; History of Pharmacy and Pharmaceuticals Volume 56 ; 56 ; https://hopp.uwpress.org/ >
-      au < exists ; 2015 ; History of Pharmacy and Pharmaceuticals Volume 57 ; 57 ; https://hopp.uwpress.org/ >
-      au < exists ; 2016 ; History of Pharmacy and Pharmaceuticals Volume 58 ; 58 ; https://hopp.uwpress.org/ >
-      au < exists ; 2017 ; History of Pharmacy and Pharmaceuticals Volume 59 ; 59 ; https://hopp.uwpress.org/ >
-      au < exists ; 2018 ; History of Pharmacy and Pharmaceuticals Volume 60 ; 60 ; https://hopp.uwpress.org/ >
-      au < exists ; 2019 ; History of Pharmacy and Pharmaceuticals Volume 61 ; 61 ; https://hopp.uwpress.org/ >
-      au < exists ; 2020 ; History of Pharmacy and Pharmaceuticals Volume 62 ; 62 ; https://hopp.uwpress.org/ >
-      au < exists ; 2021-2022 ; History of Pharmacy and Pharmaceuticals Volume 63 ; 63 ; https://hopp.uwpress.org/ >
+      au < manifest ; 2014 ; History of Pharmacy and Pharmaceuticals Volume 56 ; 56 ; https://hopp.uwpress.org/ >
+      au < manifest ; 2015 ; History of Pharmacy and Pharmaceuticals Volume 57 ; 57 ; https://hopp.uwpress.org/ >
+      au < manifest ; 2016 ; History of Pharmacy and Pharmaceuticals Volume 58 ; 58 ; https://hopp.uwpress.org/ >
+      au < manifest ; 2017 ; History of Pharmacy and Pharmaceuticals Volume 59 ; 59 ; https://hopp.uwpress.org/ >
+      au < manifest ; 2018 ; History of Pharmacy and Pharmaceuticals Volume 60 ; 60 ; https://hopp.uwpress.org/ >
+      au < manifest ; 2019 ; History of Pharmacy and Pharmaceuticals Volume 61 ; 61 ; https://hopp.uwpress.org/ >
+      au < manifest ; 2020 ; History of Pharmacy and Pharmaceuticals Volume 62 ; 62 ; https://hopp.uwpress.org/ >
+      au < manifest ; 2021-2022 ; History of Pharmacy and Pharmaceuticals Volume 63 ; 63 ; https://hopp.uwpress.org/ >
       au < manifest ; 2022 ; History of Pharmacy and Pharmaceuticals Volume 64 ; 64 ; https://hopp.uwpress.org/ >
       au < expected ; 2023 ; History of Pharmacy and Pharmaceuticals Volume 65 ; 65 ; https://hopp.uwpress.org/ >
 
@@ -485,7 +485,7 @@
 
       au < released ; 2021 ; Native Plants Journal Volume 22 ; 22 >
       au < released ; 2022 ; Native Plants Journal Volume 23 ; 23 >
-      au < expected ; 2023 ; Native Plants Journal Volume 24 ; 24 >
+      au < manifest ; 2023 ; Native Plants Journal Volume 24 ; 24 >
       }
   }
 
