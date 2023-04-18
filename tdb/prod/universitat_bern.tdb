@@ -108,7 +108,7 @@
       au < ojs3.Ojs3Plugin ; released ; 2020 ; 5 ; Current Issues in Sport Science Volume 2020 ; 2020 ; >
       au < ojs3.Ojs3Plugin ; released ; 2021 ; 6 ; Current Issues in Sport Science Volume 2021 ; 2021 ; >
       au < ojs3.Ojs3Plugin ; manifest ; 2022 ; 7 ; Current Issues in Sport Science Volume 2022 ; 2022 ; >
-      au < ojs3.Ojs3Plugin ; expected ; 2023 ; 8 ; Current Issues in Sport Science Volume 2023 ; 2023 ; >
+      au < ojs3.Ojs3Plugin ; manifest ; 2023 ; 8 ; Current Issues in Sport Science Volume 2023 ; 2023 ; >
 
   }
 
@@ -473,11 +473,12 @@
       >
 
       comment[publisher] = Universität Bern
-      param[base_url] = https://sjer.ch/
-      param[journal_id] = sjer
       #moved to ojs3
       attr[start_stem] = index.php/
       #do not Process Swiss Journal of Educational Research 1979-1999. Different platform.
+      {
+      param[base_url] = https://sjer.ch/
+      param[journal_id] = sjer
 
       au < ojs3.Ojs3Plugin ; released ; 2000 ; 22 ; Swiss Journal of Educational Research Volume 2000 ; 2000 ; >
       au < ojs3.Ojs3Plugin ; released ; 2001 ; 23 ; Swiss Journal of Educational Research Volume 2001 ; 2001 ; >
@@ -500,10 +501,17 @@
       au < ojs3.Ojs3Plugin ; released ; 2018 ; 40 ; Swiss Journal of Educational Research Volume 2018 ; 2018 ; >
       au < ojs3.Ojs3Plugin ; released ; 2019 ; 41 ; Swiss Journal of Educational Research Volume 2019 ; 2019 ; >
       au < ojs3.Ojs3Plugin ; released ; 2020 ; 42 ; Swiss Journal of Educational Research Volume 2020 ; 2020 ; >
-      au < ojs3.Ojs3Plugin ; released ; 2021 ; 43 ; Swiss Journal of Educational Research Volume 2021 ; 2021 ; >
+      au < ojs3.Ojs3Plugin ; superseded ; 2021 ; 43 ; Swiss Journal of Educational Research Volume 2021 [superseded] ; 2021 ; >
+      }
+      {
+      param[base_url] = https://bop.unibe.ch/
+      param[journal_id] = sjer
+
+      au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 43 ; Swiss Journal of Educational Research Volume 2021 ; 2021 ; >
       au < ojs3.Ojs3Plugin ; manifest ; 2022 ; 44 ; Swiss Journal of Educational Research Volume 2022 ; 2022 ; >
       au < ojs3.Ojs3Plugin ; expected ; 2023 ; 45 ; Swiss Journal of Educational Research Volume 2023 ; 2023 ; >
 
+      }
   }
 
   {
