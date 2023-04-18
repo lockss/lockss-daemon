@@ -15,7 +15,7 @@
   comment[https] = appears to have moved from http to https
   #move to Silverchair
   #ingNotReady = ArticlesCount do not match MetadataArticlesCount
-
+  #superseded = No longer getting good content from Atypon website, will preserve on SilverChair
   
   {
 
@@ -71,9 +71,9 @@
     au < doNotProcess ; exists ; 2010 ; Bulletin of the American Meteorological Society Volume 91 ; 91 ; https://journals.ametsoc.org/ ; >
     au < doNotProcess ; exists ; 2011 ; Bulletin of the American Meteorological Society Volume 92 ; 92 ; https://journals.ametsoc.org/ ; >
     au < finished ; finished ; 2012 ; Bulletin of the American Meteorological Society Volume 93 ; 93 ; http://journals.ametsoc.org/ ; >
-    au < ingNotReady ; exists ; 2013 ; Bulletin of the American Meteorological Society Volume 94 ; 94 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2013 ; Bulletin of the American Meteorological Society Volume 94 [superseded] ; 94 ; http://journals.ametsoc.org/ ; >
     au < zapped ; finished ; 2014 ; Bulletin of the American Meteorological Society Volume 95 ; 95 ; http://journals.ametsoc.org/ ; >
-    au < ingNotReady ; exists ; 2015 ; Bulletin of the American Meteorological Society Volume 96 ; 96 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2015 ; Bulletin of the American Meteorological Society Volume 96 [superseded] ; 96 ; http://journals.ametsoc.org/ ; >
     au < finished ; crawling ; 2016 ; Bulletin of the American Meteorological Society Volume 97 ; 97 ; http://journals.ametsoc.org/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2017 ; Bulletin of the American Meteorological Society Volume 98 ; 98 ; http://journals.ametsoc.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; Bulletin of the American Meteorological Society Volume 99 ; 99 ; https://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
@@ -229,7 +229,7 @@
     au < finished ; finished ; 2012 ; Journal of Applied Meteorology and Climatology Volume 51 ; 51 ; http://journals.ametsoc.org/ ; >
     au < finished ; finished ; 2013 ; Journal of Applied Meteorology and Climatology Volume 52 ; 52 ; http://journals.ametsoc.org/ ; >
     au < zapped ; finished ; 2014 ; Journal of Applied Meteorology and Climatology Volume 53 ; 53 ; http://journals.ametsoc.org/ ; >
-    au < ingNotReady ; exists ; 2015 ; Journal of Applied Meteorology and Climatology Volume 54 ; 54 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2015 ; Journal of Applied Meteorology and Climatology Volume 54 [superseded] ; 54 ; http://journals.ametsoc.org/ ; >
     au < finished ; finished ; 2016 ; Journal of Applied Meteorology and Climatology Volume 55 ; 55 ; http://journals.ametsoc.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2017 ; Journal of Applied Meteorology and Climatology Volume 56 ; 56 ; http://journals.ametsoc.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; Journal of Applied Meteorology and Climatology Volume 57 ; 57 ; https://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
@@ -278,9 +278,9 @@
     au < doNotProcess ; exists ; 2010 ; Journal of Atmospheric and Oceanic Technology Volume 27 ; 27 ; https://journals.ametsoc.org/ ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Atmospheric and Oceanic Technology Volume 28 ; 28 ; https://journals.ametsoc.org/ ; >
     au < finished ; finished ; 2012 ; Journal of Atmospheric and Oceanic Technology Volume 29 ; 29 ; http://journals.ametsoc.org/ ; >
-    au < ingNotReady ; exists ; 2013 ; Journal of Atmospheric and Oceanic Technology Volume 30 ; 30 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2013 ; Journal of Atmospheric and Oceanic Technology Volume 30 [superseded] ; 30 ; http://journals.ametsoc.org/ ; >
     au < zapped ; finished ; 2014 ; Journal of Atmospheric and Oceanic Technology Volume 31 ; 31 ; http://journals.ametsoc.org/ ; reingest3.clockss.org:8083 >
-    au < ingNotReady ; exists ; 2015 ; Journal of Atmospheric and Oceanic Technology Volume 32 ; 32 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2015 ; Journal of Atmospheric and Oceanic Technology Volume 32 [superseded] ; 32 ; http://journals.ametsoc.org/ ; >
     au < finished ; crawling ; 2016 ; Journal of Atmospheric and Oceanic Technology Volume 33 ; 33 ; http://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Journal of Atmospheric and Oceanic Technology Volume 34 ; 34 ; http://journals.ametsoc.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Journal of Atmospheric and Oceanic Technology Volume 35 ; 35 ; https://journals.ametsoc.org/ ; reingest3.clockss.org:8083 >
@@ -324,10 +324,10 @@
     au < doNotProcess ; exists ; 2009 ; Journal of Climate Volume 22 ; 22 ; https://journals.ametsoc.org/ ; >
     au < doNotProcess ; exists ; 2010 ; Journal of Climate Volume 23 ; 23 ; https://journals.ametsoc.org/ ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Climate Volume 24 ; 24 ; https://journals.ametsoc.org/ ; >
-    au < ingNotReady ; exists ; 2012 ; Journal of Climate Volume 25 ; 25 ; http://journals.ametsoc.org/ ; >
-    au < ingNotReady ; exists ; 2013 ; Journal of Climate Volume 26 ; 26 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2012 ; Journal of Climate Volume 25 [superseded] ; 25 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2013 ; Journal of Climate Volume 26 [superseded] ; 26 ; http://journals.ametsoc.org/ ; >
     au < zapped ; finished ; 2014 ; Journal of Climate Volume 27 ; 27 ; http://journals.ametsoc.org/ ; >
-    au < ingNotReady ; exists ; 2015 ; Journal of Climate Volume 28 ; 28 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2015 ; Journal of Climate Volume 28 [superseded] ; 28 ; http://journals.ametsoc.org/ ; >
     au < finished ; finished ; 2016 ; Journal of Climate Volume 29 ; 29 ; http://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Journal of Climate Volume 30 ; 30 ; http://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Journal of Climate Volume 31 ; 31 ; https://journals.ametsoc.org/ ; reingest5.clockss.org:8082 >
@@ -361,11 +361,11 @@
     au < doNotProcess ; exists ; 2010 ; Journal of Hydrometeorology Volume 11 ; 11 ; https://journals.ametsoc.org/ ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Hydrometeorology Volume 12 ; 12 ; https://journals.ametsoc.org/ ; >
     au < finished ; finished ; 2012 ; Journal of Hydrometeorology Volume 13 ; 13 ; http://journals.ametsoc.org/ ; reingest2.clockss.org:8085 >
-    au < ingNotReady ; exists ; 2013 ; Journal of Hydrometeorology Volume 14 ; 14 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2013 ; Journal of Hydrometeorology Volume 14 [superseded] ; 14 ; http://journals.ametsoc.org/ ; >
     au < zapped ; finished ; 2014 ; Journal of Hydrometeorology Volume 15 ; 15 ; http://journals.ametsoc.org/ ; >
-    au < ingNotReady ; exists ; 2015 ; Journal of Hydrometeorology Volume 16 ; 16 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2015 ; Journal of Hydrometeorology Volume 16 [superseded] ; 16 ; http://journals.ametsoc.org/ ; >
     au < finished ; finished ; 2016 ; Journal of Hydrometeorology Volume 17 ; 17 ; http://journals.ametsoc.org/ ; reingest3.clockss.org:8083 >
-    au < ingNotReady ; exists ; 2017 ; Journal of Hydrometeorology Volume 18 ; 18 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2017 ; Journal of Hydrometeorology Volume 18 [superseded] ; 18 ; http://journals.ametsoc.org/ ; >
     au < finished ; finished ; 2018 ; Journal of Hydrometeorology Volume 19 ; 19 ; https://journals.ametsoc.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2019 ; Journal of Hydrometeorology Volume 20 ; 20 ; https://journals.ametsoc.org/ ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2020 ; Journal of Hydrometeorology Volume 21 ; 21 ; https://journals.ametsoc.org/ ; >
@@ -425,10 +425,10 @@
     au < doNotProcess ; exists ; 2010 ; Journal of Physical Oceanography Volume 40 ; 40 ; https://journals.ametsoc.org/ ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Physical Oceanography Volume 41 ; 41 ; https://journals.ametsoc.org/ ; >
     au < finished ; finished ; 2012 ; Journal of Physical Oceanography Volume 42 ; 42 ; http://journals.ametsoc.org/ ; >
-    au < ingNotReady ; exists ; 2013 ; Journal of Physical Oceanography Volume 43 ; 43 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2013 ; Journal of Physical Oceanography Volume 43 [superseded] ; 43 ; http://journals.ametsoc.org/ ; >
     au < zapped ; finished ; 2014 ; Journal of Physical Oceanography Volume 44 ; 44 ; http://journals.ametsoc.org/ ; >
-    au < ingNotReady ; exists ; 2015 ; Journal of Physical Oceanography Volume 45 ; 45 ; http://journals.ametsoc.org/ ; >
-    au < ingNotReady ; exists ; 2016 ; Journal of Physical Oceanography Volume 46 ; 46 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2015 ; Journal of Physical Oceanography Volume 45 [superseded] ; 45 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2016 ; Journal of Physical Oceanography Volume 46 [superseded] ; 46 ; http://journals.ametsoc.org/ ; >
     au < finished ; finished ; 2017 ; Journal of Physical Oceanography Volume 47 ; 47 ; http://journals.ametsoc.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Journal of Physical Oceanography Volume 48 ; 48 ; https://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2019 ; Journal of Physical Oceanography Volume 49 ; 49 ; https://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
@@ -515,11 +515,11 @@
     au < doNotProcess ; exists ; 2009 ; Journal of the Atmospheric Sciences Volume 66 ; 66 ; https://journals.ametsoc.org/ ; >
     au < doNotProcess ; exists ; 2010 ; Journal of the Atmospheric Sciences Volume 67 ; 67 ; https://journals.ametsoc.org/ ; >
     au < doNotProcess ; exists ; 2011 ; Journal of the Atmospheric Sciences Volume 68 ; 68 ; https://journals.ametsoc.org/ ; >
-    au < ingNotReady ; exists ; 2012 ; Journal of the Atmospheric Sciences Volume 69 ; 69 ; http://journals.ametsoc.org/ ; >
-    au < ingNotReady ; exists ; 2013 ; Journal of the Atmospheric Sciences Volume 70 ; 70 ; http://journals.ametsoc.org/ ; >
-    au < ingNotReady ; exists ; 2014 ; Journal of the Atmospheric Sciences Volume 71 ; 71 ; http://journals.ametsoc.org/ ; >
-    au < ingNotReady ; exists ; 2015 ; Journal of the Atmospheric Sciences Volume 72 ; 72 ; http://journals.ametsoc.org/ ; >
-    au < ingNotReady ; exists ; 2016 ; Journal of the Atmospheric Sciences Volume 73 ; 73 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2012 ; Journal of the Atmospheric Sciences Volume 69 [superseded] ; 69 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2013 ; Journal of the Atmospheric Sciences Volume 70 [superseded] ; 70 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2014 ; Journal of the Atmospheric Sciences Volume 71 [superseded] ; 71 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2015 ; Journal of the Atmospheric Sciences Volume 72 [superseded] ; 72 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2016 ; Journal of the Atmospheric Sciences Volume 73 [superseded] ; 73 ; http://journals.ametsoc.org/ ; >
     au < finished ; finished ; 2017 ; Journal of the Atmospheric Sciences Volume 74 ; 74 ; http://journals.ametsoc.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2018 ; Journal of the Atmospheric Sciences Volume 75 ; 75 ; https://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2019 ; Journal of the Atmospheric Sciences Volume 76 ; 76 ; https://journals.ametsoc.org/ ; reingest5.clockss.org:8082 >
@@ -552,7 +552,7 @@
     au < doNotProcess ; exists ; 2008 ; Meteorological Monographs Volume 55 [abstract only] ; 55 ; https://journals.ametsoc.org/ ; >
     au < finished ; finished ; 2016 ; Meteorological Monographs Volume 56 ; 56 ; http://journals.ametsoc.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2016 ; Meteorological Monographs Volume 57 ; 57 ; http://journals.ametsoc.org/ ; reingest2.clockss.org:8085 >
-    au < ingNotReady ; exists ; 2017 ; Meteorological Monographs Volume 58 ; 58 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2017 ; Meteorological Monographs Volume 58 ; 58 [superseded] ; http://journals.ametsoc.org/ ; >
     au < finished ; finished ; 2018 ; Meteorological Monographs Volume 59 ; 59 ; https://journals.ametsoc.org/ ; reingest3.clockss.org:8083 >
 
   }
@@ -708,11 +708,11 @@
     au < doNotProcess ; exists ; 2009 ; Monthly Weather Review Volume 137 ; 137 ; https://journals.ametsoc.org/ ; >
     au < doNotProcess ; exists ; 2010 ; Monthly Weather Review Volume 138 ; 138 ; https://journals.ametsoc.org/ ; >
     au < doNotProcess ; exists ; 2011 ; Monthly Weather Review Volume 139 ; 139 ; https://journals.ametsoc.org/ ; >
-    au < ingNotReady ; exists ; 2012 ; Monthly Weather Review Volume 140 ; 140 ; http://journals.ametsoc.org/ ; >
-    au < ingNotReady ; exists ; 2013 ; Monthly Weather Review Volume 141 ; 141 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2012 ; Monthly Weather Review Volume 140 [superseded] ; 140 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2013 ; Monthly Weather Review Volume 141 [superseded] ; 141 ; http://journals.ametsoc.org/ ; >
     au < zapped ; finished ; 2014 ; Monthly Weather Review Volume 142 ; 142 ; http://journals.ametsoc.org/ ; >
-    au < ingNotReady ; exists ; 2015 ; Monthly Weather Review Volume 143 ; 143 ; http://journals.ametsoc.org/ ; >
-    au < ingNotReady ; exists ; 2016 ; Monthly Weather Review Volume 144 ; 144 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2015 ; Monthly Weather Review Volume 143 [superseded] ; 143 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2016 ; Monthly Weather Review Volume 144 [superseded] ; 144 ; http://journals.ametsoc.org/ ; >
     au < finished ; finished ; 2017 ; Monthly Weather Review Volume 145 ; 145 ; http://journals.ametsoc.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Monthly Weather Review Volume 146 ; 146 ; https://journals.ametsoc.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2019 ; Monthly Weather Review Volume 147 ; 147 ; https://journals.ametsoc.org/ ; reingest2.clockss.org:8085 >
@@ -737,7 +737,7 @@
     au < finished ; finished ; 2012 ; Weather, Climate, and Society Volume 4 ; 4 ; http://journals.ametsoc.org/ ; >
     au < finished ; finished ; 2013 ; Weather, Climate, and Society Volume 5 ; 5 ; http://journals.ametsoc.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Weather, Climate, and Society Volume 6 ; 6 ; http://journals.ametsoc.org/ ; >
-    au < ingNotReady ; exists ; 2015 ; Weather, Climate, and Society Volume 7 ; 7 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2015 ; Weather, Climate, and Society Volume 7 [superseded] ; 7 ; http://journals.ametsoc.org/ ; >
     au < finished ; finished ; 2016 ; Weather, Climate, and Society Volume 8 ; 8 ; http://journals.ametsoc.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Weather, Climate, and Society Volume 9 ; 9 ; http://journals.ametsoc.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Weather, Climate, and Society Volume 10 ; 10 ; https://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
@@ -786,7 +786,7 @@
     au < finished ; finished ; 2012 ; Weather and Forecasting Volume 27 ; 27 ; http://journals.ametsoc.org/ ; >
     au < finished ; finished ; 2013 ; Weather and Forecasting Volume 28 ; 28 ; http://journals.ametsoc.org/ ; >
     au < zapped ; finished ; 2014 ; Weather and Forecasting Volume 29 ; 29 ; http://journals.ametsoc.org/ ; >
-    au < ingNotReady ; exists ; 2015 ; Weather and Forecasting Volume 30 ; 30 ; http://journals.ametsoc.org/ ; >
+    au < superseded ; exists ; 2015 ; Weather and Forecasting Volume 30 [superseded] ; 30 ; http://journals.ametsoc.org/ ; >
     au < finished ; finished ; 2016 ; Weather and Forecasting Volume 31 ; 31 ; http://journals.ametsoc.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Weather and Forecasting Volume 32 ; 32 ; http://journals.ametsoc.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Weather and Forecasting Volume 33 ; 33 ; https://journals.ametsoc.org/ ; reingest1.clockss.org:8082 >
