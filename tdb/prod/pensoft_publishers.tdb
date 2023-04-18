@@ -840,15 +840,16 @@
 
       param[au_oai_set] = rrpharmacology
 
-      au < released ; 2015 ; 2015 ; Research results in Pharmacology Volume 2015 ; 2015 ; https://rrpharmacology.pensoft.net/ >
-      au < released ; 2016 ; 2016 ; Research results in Pharmacology Volume 2016 ; 2016 ; https://rrpharmacology.pensoft.net/ >
-      au < released ; 2017 ; 2017 ; Research results in Pharmacology Volume 2017 ; 2017 ; https://rrpharmacology.pensoft.net/ >
-      au < released ; 2018 ; 2018 ; Research results in Pharmacology Volume 2018 ; 2018 ; https://rrpharmacology.pensoft.net/ >
-      au < released ; 2019 ; 2019 ; Research results in Pharmacology Volume 2019 ; 2019 ; https://rrpharmacology.pensoft.net/ >
-      au < released ; 2020 ; 2020 ; Research results in Pharmacology Volume 2020 ; 2020 ; https://rrpharmacology.pensoft.net/ >
-      au < manifest ; 2021 ; 2021 ; Research results in Pharmacology Volume 2021 ; 2021 ; https://rrpharmacology.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; Research results in Pharmacology Volume 2022 ; 2022 ; https://rrpharmacology.ru/ >
-      au < expected ; 2023 ; 2023 ; Research results in Pharmacology Volume 2023 ; 2023 ; https://rrpharmacology.ru/ >
+      au < down ; 2015 ; 2015 ; Research results in Pharmacology Volume 2015 ; 2015 ; https://rrpharmacology.pensoft.net/ >
+      au < down ; 2016 ; 2016 ; Research results in Pharmacology Volume 2016 ; 2016 ; https://rrpharmacology.pensoft.net/ >
+      au < down ; 2017 ; 2017 ; Research results in Pharmacology Volume 2017 ; 2017 ; https://rrpharmacology.pensoft.net/ >
+      au < down ; 2018 ; 2018 ; Research results in Pharmacology Volume 2018 ; 2018 ; https://rrpharmacology.pensoft.net/ >
+      au < down ; 2019 ; 2019 ; Research results in Pharmacology Volume 2019 ; 2019 ; https://rrpharmacology.pensoft.net/ >
+      au < down ; 2020 ; 2020 ; Research results in Pharmacology Volume 2020 ; 2020 ; https://rrpharmacology.pensoft.net/ >
+      au < doNotProcess ; 2021 ; 2021 ; Research results in Pharmacology Volume 2021 ; 2021 ; https://rrpharmacology.pensoft.net/ >
+      au < doNotProcess ; 2022 ; 2022 ; Research results in Pharmacology Volume 2022 ; 2022 ; https://rrpharmacology.ru/ >
+      au < doNotProcess ; 2023 ; 2023 ; Research results in Pharmacology Volume 2023 ; 2023 ; https://rrpharmacology.ru/ >
+      #Moved to OJS https://rrpharmacology.ru/
 
   }
 
