@@ -78,6 +78,7 @@
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
       param[base_url] = https://aa.uwpress.org/
 
+      #No 2023 content as of 4/19/2023
       au < expected ; 2023 ; Arctic Anthropology Volume 59 ; 59 >
 
       }
@@ -121,6 +122,7 @@
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
       param[base_url] = https://cl.uwpress.org/
 
+      #No 2023 content as of 4/19/2023
       au < expected ; 2023 ; Contemporary Literature Volume 63 ; 63 >
       }
 
@@ -184,6 +186,7 @@
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
 
       au < manifest ; 2022 ; Ecological Restoration Volume 40 ; 40 ; https://er.uwpress.org/ >
+      #No 2023 content as of 4/19/2023
       au < expected ; 2023 ; Ecological Restoration Volume 41 ; 41 ; https://er.uwpress.org/ >
       }
   }
@@ -209,6 +212,7 @@
       au < manifest ; 2020 ; History of Pharmacy and Pharmaceuticals Volume 62 ; 62 ; https://hopp.uwpress.org/ >
       au < manifest ; 2021-2022 ; History of Pharmacy and Pharmaceuticals Volume 63 ; 63 ; https://hopp.uwpress.org/ >
       au < manifest ; 2022 ; History of Pharmacy and Pharmaceuticals Volume 64 ; 64 ; https://hopp.uwpress.org/ >
+      #No 2023 content as of 4/19/2023
       au < expected ; 2023 ; History of Pharmacy and Pharmaceuticals Volume 65 ; 65 ; https://hopp.uwpress.org/ >
 
   }
@@ -356,6 +360,7 @@
 
       au < manifest ; 2021 ; Landscape Journal: design, planning, and management of the land Volume 40 ; 40 >
       au < manifest ; 2022 ; Landscape Journal: design, planning, and management of the land Volume 41 ; 41 >
+      #No 2023 content as of 4/19/2023
       au < expected ; 2023 ; Landscape Journal: design, planning, and management of the land Volume 42 ; 42 >
       }
 
@@ -438,7 +443,7 @@
 
       au < manifest ; 2021 ; Monatshefte Volume 113 ; 113 >
       au < manifest ; 2022 ; Monatshefte Volume 114 ; 114 >
-      au < expected ; 2023 ; Monatshefte Volume 115 ; 115 >
+      au < exists ; 2023 ; Monatshefte Volume 115 ; 115 >
 
       }
   }

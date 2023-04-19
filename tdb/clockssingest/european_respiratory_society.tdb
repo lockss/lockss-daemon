@@ -39,7 +39,7 @@
     au < ers.ClockssERSDrupalPlugin ; frozen ; exists ; 2020 ; Breathe Volume 16 ; 16 ; https://breathe.ersjournals.com/ ; >
     au < ers.ClockssERSDrupalPlugin ; deepCrawl ; exists ; 2021 ; Breathe Volume 17 ; 17 ; https://breathe.ersjournals.com/ ; >
     au < ers.ClockssERSDrupalPlugin ; deepCrawl ; exists ; 2022 ; Breathe Volume 18 ; 18 ; https://breathe.ersjournals.com/ ; >
-    au < ers.ClockssERSDrupalPlugin ; expected ; exists ; 2023 ; Breathe Volume 19 ; 19 ; https://breathe.ersjournals.com/ ; >
+    au < ers.ClockssERSDrupalPlugin ; exists ; exists ; 2023 ; Breathe Volume 19 ; 19 ; https://breathe.ersjournals.com/ ; >
 
   }
 
@@ -141,7 +141,7 @@
       au < ers.ClockssERSDrupalPlugin ; deepCrawl ; exists ; 2022 ; European Respiratory Journal Volume 59 ; 59 ; https://erj.ersjournals.com/ ; >
       au < ers.ClockssERSDrupalPlugin ; deepCrawl ; exists ; 2022 ; European Respiratory Journal Volume 60 ; 60 ; https://erj.ersjournals.com/ ; >
       au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2023 ; European Respiratory Journal Volume 61 ; 61 ; https://erj.ersjournals.com/ ; >
-      au < ers.ClockssERSDrupalPlugin ; expected ; exists ; 2023 ; European Respiratory Journal Volume 62 ; 62 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; exists ; exists ; 2023 ; European Respiratory Journal Volume 62 ; 62 ; https://erj.ersjournals.com/ ; >
 
     }
 
