@@ -1,9 +1,10 @@
 {
 
   publisher <
-    name = University of Kerbala ;
+    name = University of Alkafeel ;
     info[contract] = 2023 ;
     info[back] = 2022 ;
+    info[min_year] = 2022 ;
     info[tester] = 5 ;
     info[poller] = 8
   >
@@ -24,8 +25,8 @@
     param[base_url] = https://majms.alkafeel.edu.iq/
     param[journal_abbr] = journal
 
-    au < exists ; exists ; 2022 ; Ma’aen Journal for Medical Sciences (MAJMS) Volume 1 ; 1 ; >
-    au < exists ; exists ; 2023 ; Ma’aen Journal for Medical Sciences (MAJMS) Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2022 ; Ma’aen Journal for Medical Sciences (MAJMS) Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2023 ; Ma’aen Journal for Medical Sciences (MAJMS) Volume 2 ; 2 ; >
 
   }
 
