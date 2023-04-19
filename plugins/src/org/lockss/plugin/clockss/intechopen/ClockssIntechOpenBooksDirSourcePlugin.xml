@@ -9,7 +9,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>5</string>
+        <string>6</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -48,12 +48,6 @@
         <string>au_substance_url_pattern</string>
         <list>
             <string>"^%s%s/.+\.pdf$", base_url, directory</string>
-        </list>
-    </entry>
-    <entry>
-        <string>au_crawlrules</string>
-        <list>
-            <string>1,"%s2020/2005-2008", base_url</string>
         </list>
     </entry>
     <entry>
