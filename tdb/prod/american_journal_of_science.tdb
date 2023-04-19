@@ -84,22 +84,24 @@
     au < manifest ; 1891 ; American Journal of Science Series 3 Volume 41 (1891) ; s3-41 >
     au < manifest ; 1891 ; American Journal of Science Series 3 Volume 42 (1891) ; s3-42 >
     au < released ; 1892 ; American Journal of Science Series 3 Volume 43 (1892) ; s3-43 >
-    au < manifest ; 1892 ; American Journal of Science Series 3 Volume 44 (1892) ; s3-44 >
-    au < manifest ; 1893 ; American Journal of Science Series 3 Volume 45 (1893) ; s3-45 >
-    au < manifest ; 1893 ; American Journal of Science Series 3 Volume 46 (1893) ; s3-46 >
-    au < manifest ; 1894 ; American Journal of Science Series 3 Volume 47 (1894) ; s3-47 >
-    au < manifest ; 1894 ; American Journal of Science Series 3 Volume 48 (1894) ; s3-48 >
-    au < manifest ; 1895 ; American Journal of Science Series 3 Volume 49 (1895) ; s3-49 >
-    au < manifest ; 1895 ; American Journal of Science Series 3 Volume 50 (1895) ; s3-50 >
+    au < wanted ; 1892 ; American Journal of Science Series 3 Volume 44 (1892) ; s3-44 >
+    au < wanted ; 1893 ; American Journal of Science Series 3 Volume 45 (1893) ; s3-45 >
+    au < wanted ; 1893 ; American Journal of Science Series 3 Volume 46 (1893) ; s3-46 >
+    au < wanted ; 1894 ; American Journal of Science Series 3 Volume 47 (1894) ; s3-47 >
+    au < wanted ; 1894 ; American Journal of Science Series 3 Volume 48 (1894) ; s3-48 >
+    au < wanted ; 1895 ; American Journal of Science Series 3 Volume 49 (1895) ; s3-49 >
+    au < wanted ; 1895 ; American Journal of Science Series 3 Volume 50 (1895) ; s3-50 >
 
-    au < doNotProcess ; 2016 ; American Journal of Science Volume 316 ; 316 >
-    au < doNotProcess ; 2017 ; American Journal of Science Volume 317 ; 317 >
-    au < doNotProcess ; 2018 ; American Journal of Science Volume 318 ; 318 >
+    au < exists ; 2016 ; American Journal of Science Volume 316 ; 316 >
+    au < exists ; 2017 ; American Journal of Science Volume 317 ; 317 >
+    au < exists ; 2018 ; American Journal of Science Volume 318 ; 318 >
     au < released ; 2019 ; American Journal of Science Volume 319 ; 319 >
     au < released ; 2020 ; American Journal of Science Volume 320 ; 320 >
     au < released ; 2021 ; American Journal of Science Volume 321 ; 321 >
     au < manifest ; 2022 ; American Journal of Science Volume 322 ; 322 >
     au < expected ; 2023 ; American Journal of Science Volume 323 ; 323 >
+
+#   2023 still expected 4/18/2023
 
     }
 
@@ -273,9 +275,9 @@
     au < down ; 2013 ; American Journal of Science Volume 313 ; 313 >
     au < down ; 2014 ; American Journal of Science Volume 314 ; 314 >
     au < down ; 2015 ; American Journal of Science Volume 315 ; 315 >
-    au < down ; 2016 ; American Journal of Science Volume 316 ; 316 >
-    au < down ; 2017 ; American Journal of Science Volume 317 ; 317 >
-    au < down ; 2018 ; American Journal of Science Volume 318 ; 318 >
+    au < superseded ; 2016 ; American Journal of Science Volume 316 [superseded] ; 316 >
+    au < superseded ; 2017 ; American Journal of Science Volume 317 [superseded] ; 317 >
+    au < superseded ; 2018 ; American Journal of Science Volume 318 [superseded] ; 318 >
 
     }
   }
