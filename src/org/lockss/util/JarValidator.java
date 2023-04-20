@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2023 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -50,14 +46,14 @@ import java.security.cert.*;
 public class JarValidator {
   private KeyStore m_keystore;
   private File m_pluginDir;
-  private boolean m_allowExpired;
+  private boolean m_allowExpired = true; // default allow expired certs
+  private boolean m_checkAllEntries = true; // default check all entries
 
   private static Logger log = Logger.getLogger("JarValidator");
 
   public JarValidator(KeyStore keystore, File pluginDir) {
     this.m_keystore = keystore;
     this.m_pluginDir = pluginDir;
-    m_allowExpired = true;  // Request: default to ALLOWING expired certificates.
   }
 
   /**
@@ -70,7 +66,7 @@ public class JarValidator {
       throws IOException, JarValidationException {
 
     if (m_pluginDir == null) {
-      throw new JarValidationException("No plugin directory, can't continue.");
+      throw new IllegalArgumentException("No plugin directory, can't continue.");
     }
 
     File f = null;
@@ -101,7 +97,10 @@ public class JarValidator {
    */
   private void validatePluginJar(CachedUrl cu)
       throws IOException, JarValidationException {
-    boolean foundJarEntry = false;
+    if (cu == null) {
+      throw new IllegalArgumentException("CU is null");
+    }
+    int numEntries = 0;
 
     // If the keystore is null we can't continue.
     if (m_keystore == null) {
@@ -110,7 +109,11 @@ public class JarValidator {
 
     JarInputStream jstr = null;
     try {
-      jstr = new JarInputStream(cu.getUnfilteredInputStream(), true);
+      InputStream cuIn = cu.getUnfilteredInputStream();
+      if (cuIn == null) {
+        throw new FileNotFoundException("CU has no content: " + cu.getUrl());
+      }
+      jstr = new JarInputStream(cuIn, true);
 
       Manifest manifest = jstr.getManifest();
 
@@ -123,11 +126,13 @@ public class JarValidator {
       JarEntry je;
 
       while ((je = jstr.getNextJarEntry()) != null) {
-	// Only entries in the manifest matter.  Nothing else
-	// will get loaded.
-	if (inManifest(je.getName(), manifest)) {
+        // There are claims that unsigned class/files in otherwise
+        // signed jars can't be loaded/opened, but there's no obvious
+        // support for that.  So we now check all files, even if not
+        // in manifest.
+	if (requiresValidation(je.getName(), manifest)) {
 	  verifyJarEntry(jstr, je);
-	  if (!foundJarEntry) foundJarEntry = true;
+	  numEntries++;
 	}
       }
     } finally {
@@ -135,18 +140,31 @@ public class JarValidator {
 	jstr.close();
     }
 
-    if (!foundJarEntry) {
+    if (numEntries == 0) {
       throw new JarValidationException("No valid entries found in manifest.");
     }
+    log.debug("Validated " + numEntries + " entries");
   }
 
   /**
-   * Check to see if the entry name exists in the manifest.
+   * Return true if this jar entry should have its signature checked
+   * Originally only entries included in the manfest were checked,
+   * with the comment "Only entries in the manifest matter.  Nothing
+   * else will get loaded". but I haven't determined whether that's
+   * true (it would be implemented by the ClassLoader?) and even if it
+   * is true, would it apply to Resource files?  So the new behavior
+   * is to check all files that aren't either in or related to the
+   * manifest (i.e., in the META-INF dir) or directories.  The old behavior can be restored by calling 
    */
-  private boolean inManifest(String entryName, Manifest manifest) {
-    return (manifest.getAttributes(entryName) != null)
-      || (manifest.getAttributes ("./" + entryName) != null)
-      || (manifest.getAttributes ("/" + entryName) != null);
+  private boolean requiresValidation(String entryName, Manifest manifest) {
+    if (m_checkAllEntries) {
+      return !(StringUtil.startsWithIgnoreCase(entryName, "meta-inf/")
+               || entryName.endsWith("/"));
+    } else {
+     return (manifest.getAttributes(entryName) != null)
+       || (manifest.getAttributes ("./" + entryName) != null)
+       || (manifest.getAttributes ("/" + entryName) != null);
+    }
   }
 
   /**
@@ -308,16 +326,21 @@ public class JarValidator {
     }
   }
 
-  
   /**
-   ** If set true, accept otherwise-valid certificates that are expired
-   * or not yet valid. In a preservation system, refusing to run
-   * code (e.g., a plugin) signed by a valid certificate that has now
-   * expired may be a bigger security risk than running it.
+   ** If set true, accept otherwise-valid certificates that are
+   * expired. In a preservation system, refusing to run code (e.g., a
+   * plugin) signed by a valid certificate that has now expired may be
+   * a bigger security risk than running it.
    * 
    * @param b (whether to allow expired certificates)
    */
   public void allowExpired(boolean b) {
     m_allowExpired = b;
+  }
+
+  /**
+   */
+  public void checkAllEntries(boolean b) {
+    m_checkAllEntries = b;
   }
 }

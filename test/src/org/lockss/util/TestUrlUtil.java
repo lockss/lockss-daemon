@@ -687,6 +687,8 @@ public class TestUrlUtil extends LockssTestCase {
     // "smart" left/right double quotes
     assertEquals("http%3A%2F%2Fhost%2FINT-%E2%80%9CToll%E2%80%9D-Extending",
 		 UrlUtil.encodeUrl("http://host/INT-\u201cToll\u201d-Extending"));
+    log.critical("FOO: " + UrlUtil.encodeUrl("https://allen.silverchair-cdn.com/ImageLibrary/INHI/JIPO/JIPO PO Forum Graphic (500 × 450 px).png?versionId=18934"));
+    log.critical("FOO: " + UrlUtil.encodeUrl("500 × 450 px"));
   }
 
   public void testDecodeUrl() throws Exception {
