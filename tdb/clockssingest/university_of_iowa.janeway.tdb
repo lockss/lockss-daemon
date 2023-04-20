@@ -43,9 +43,9 @@
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 13 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 14 ; 14 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 15 ; 15 ; >
-      au < crawling ; exists ; 2021 ; 2021 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 16 ; 16 ; >
-      au < crawling ; exists ; 2022 ; 2022 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 17 ; 17 ; >
+      au < frozen ; exists ; 2020 ; 2020 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 15 ; 15 ; >
+      au < frozen ; exists ; 2021 ; 2021 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2022 ; 2022 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 17 ; 17 ; >
       au < expected ; exists ; 2023 ; 2023 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 18 ; 18 ; >
 
     }
@@ -96,11 +96,11 @@
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Walt Whitman Quarterly Review Volume 33 ; 33 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Walt Whitman Quarterly Review Volume 34 ; 34 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Walt Whitman Quarterly Review Volume 35 ; 35 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; Walt Whitman Quarterly Review Volume 36 ; 36 ; >
-      au < crawling ; exists ; 2019 ; 2019 ; Walt Whitman Quarterly Review Volume 37 ; 37 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; Walt Whitman Quarterly Review Volume 38 ; 38 ; >
-      au < crawling ; exists ; 2021 ; 2021 ; Walt Whitman Quarterly Review Volume 39 ; 39 ; >
-      au < crawling ; exists ; 2022 ; 2022 ; Walt Whitman Quarterly Review Volume 40 ; 40 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; Walt Whitman Quarterly Review Volume 36 ; 36 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; Walt Whitman Quarterly Review Volume 37 ; 37 ; >
+      au < frozen ; exists ; 2020 ; 2020 ; Walt Whitman Quarterly Review Volume 38 ; 38 ; >
+      au < frozen ; exists ; 2021 ; 2021 ; Walt Whitman Quarterly Review Volume 39 ; 39 ; >
+      au < frozen ; exists ; 2022 ; 2022 ; Walt Whitman Quarterly Review Volume 40 ; 40 ; >
       #If 2018 is successful, test the others.
       au < expected ; exists ; 2023 ; 2023 ; Walt Whitman Quarterly Review Volume 41 ; 41 ; >
     }
