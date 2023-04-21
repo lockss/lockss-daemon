@@ -107,7 +107,7 @@ public class BaseAtyponHtmlMetadataExtractorFactory
       ArticleMetadata am = 
         new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
 
-      log.debug3("---BaseAtyponHtmlMetadataExtractorFactory---");
+      log.debug3("BaseAtyponHtmlMetadataExtractorFactory");
 
       am.cook(tagMap);
       /* 
@@ -123,12 +123,12 @@ public class BaseAtyponHtmlMetadataExtractorFactory
       // Only emit if this item is likely to be from this AU
       // protect against counting overcrawled articles
       ArchivalUnit au = cu.getArchivalUnit();
-      log.debug3("Sage Check: ---------BaseAtyponHtmlMetadataExtractor start checking-------");
+      log.debug3("Check: BaseAtyponHtmlMetadataExtractor start checking");
       if (!BaseAtyponMetadataUtil.metadataMatchesTdb(au, am)) {
-        log.debug3("Sage Check: ---------BaseAtyponHtmlMetadataExtractor failed-------");
+        log.debug3("Check: BaseAtyponHtmlMetadataExtractor failed");
         return;
       } else {
-        log.debug3("Sage Check: ---------BaseAtyponHtmlMetadataExtractor succeed-------");
+        log.debug3("Check: BaseAtyponHtmlMetadataExtractor succeed");
       }
       
       /*

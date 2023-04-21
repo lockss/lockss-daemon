@@ -142,6 +142,8 @@ public class BaseAtyponMetadataUtil {
     }
 
 
+
+
     // get the AU's publisher and check if it is in our list
     String pubNameSeg = (tdbau == null) ? null : tdbau.getPublisherName();
 
@@ -246,6 +248,42 @@ public class BaseAtyponMetadataUtil {
       }
     }
 
+    //Do Siam specific check and emit 0 metadata based on publication title
+    String pubNameSiam = (tdbau == null) ? null : tdbau.getPublisherName();
+
+    log.debug3("Siam Check: Publisher Specific Checks for Siam = " + pubNameSiam);
+
+    String AU_journal_titleSiam = (tdbau == null) ? null : tdbau.getPublicationTitle();
+    String foundJournalTitleSiam = am.get(MetadataField.FIELD_PUBLICATION_TITLE);
+
+    log.debug3("Siam Check: Publisher Specific Checks for Siam = " + pubNameSiam + ", AU_journal_titleSiam = " +
+            AU_journal_titleSiam + ", foundJournalTitleSiam ="  + foundJournalTitleSiam + ", isInAu =" + isInAu);
+
+    if (isInAu && (pubNameSiam != null) && (foundJournalTitleSiam != null)) {
+      Boolean isSiam = pubNameSeg.equals("Society for Industrial and Applied Mathematics");
+      if (isSiam) {
+        log.debug3("Siam Check:  Publisher Specific Checks for Siam");
+
+        if (isInAu && !(StringUtils.isEmpty(foundJournalTitleSiam) || StringUtils.isEmpty(AU_journal_titleSiam)) ) {
+          // normalize titles to catch unimportant differences
+          log.debug3("Siam Check:  pre-normalized title from Siam AU is : " + AU_journal_titleSiam);
+          log.debug3("Siam Check:  pre-normalized title from Siam metadata is : " + foundJournalTitleSiam);
+          String normAuTitleSiam = normalizeTitle(AU_journal_titleSiam);
+          String normFoundTitleSiam = normalizeTitle(foundJournalTitleSiam);
+          log.debug3("Siam Check: normalized title from Siam AU is : " + normAuTitleSiam);
+          log.debug3("Siam Check: normalized title from Siam metadata is : " + normFoundTitleSiam);
+          // If the titles are a subset of each other or are equal after normalization
+          isInAu = (
+                  ((StringUtils.contains(normAuTitleSiam, normFoundTitleSiam)) ||
+                          (StringUtils.contains(normFoundTitleSiam, normAuTitleSiam))));
+          log.debug3("Siam Check: Publisher Specific Checks for Siam journal title condition meet, isInAu :" + isInAu + ", access.url = " + am.get(MetadataField.FIELD_ACCESS_URL)
+                  + ", AU_journal_titleSiam = " + AU_journal_titleSiam + ", foundJournalTitleSiam ="  + foundJournalTitleSiam
+                  + ", normAuTitleSiam =  " + normAuTitleSiam + ", normFoundTitleSiam = " + normFoundTitleSiam);
+
+          return isInAu;
+        }
+      }
+    }
 
     // END PUBLISHER SPECIFIC CHECKS //
 
