@@ -2109,7 +2109,7 @@
     au < finished ; frozen ; 2020 ; Case Reports in Emergency Medicine Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2021 ; Case Reports in Emergency Medicine Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Case Reports in Emergency Medicine Volume 2022 ; 2022 ; 2022 ; >
-    au < expected ; exists ; 2023 ; Case Reports in Emergency Medicine Volume 2023 ; 2023 ; 2023 ; >
+    au < manifest ; exists ; 2023 ; Case Reports in Emergency Medicine Volume 2023 ; 2023 ; 2023 ; >
 
   }
 
@@ -10240,7 +10240,7 @@
     au < finished ; frozen ; 2020 ; Sleep Disorders Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Sleep Disorders Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Sleep Disorders Volume 2022 ; 2022 ; 2022 ; >
-    au < expected ; exists ; 2023 ; Sleep Disorders Volume 2023 ; 2023 ; 2023 ; >
+    au < manifest ; exists ; 2023 ; Sleep Disorders Volume 2023 ; 2023 ; 2023 ; >
 
   }
 
@@ -10734,7 +10734,7 @@
     au < doNotProcess ; exists ; 2020 ; DEPRESSION AND ANXIETY Volume 2020 ; 2020 ; 2020 ; >
     au < doNotProcess ; exists ; 2021 ; DEPRESSION AND ANXIETY Volume 2021 ; 2021 ; 2021 ; >
     au < doNotProcess ; exists ; 2022 ; DEPRESSION AND ANXIETY Volume 2022 ; 2022 ; 2022 ; >
-    au < exists ; exists ; 2023 ; DEPRESSION AND ANXIETY Volume 2023 ; 2023 ; 2023 ; >
+    au < manifest ; exists ; 2023 ; DEPRESSION AND ANXIETY Volume 2023 ; 2023 ; 2023 ; >
 
   }
 

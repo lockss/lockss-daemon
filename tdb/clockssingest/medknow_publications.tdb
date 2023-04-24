@@ -2454,7 +2454,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Trichology Volume 12 ; 2020 ; 12 ; https://www.ijtrichology.com/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; International Journal of Trichology Volume 13 ; 2021 ; 13 ; https://www.ijtrichology.com/ ; ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; International Journal of Trichology Volume 14 ; 2022 ; 14 ; https://www.ijtrichology.com/ ; ; >
-    au < expected ; exists ; 2023 ; International Journal of Trichology Volume 15 ; 2023 ; 15 ; https://www.ijtrichology.com/ ; ; >
+    au < manifest ; exists ; 2023 ; International Journal of Trichology Volume 15 ; 2023 ; 15 ; https://www.ijtrichology.com/ ; ; >
 
   }
 
@@ -11714,7 +11714,7 @@
       au < finished ; finished ; 2019 ; World Journal of Colorectal Surgery Volume 8 ; 2019 ; 8 ; https://www.wjcs.us.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2020 ; World Journal of Colorectal Surgery Volume 9 ; 2020 ; 9 ; https://www.wjcs.us.com/ ; ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; World Journal of Colorectal Surgery Volume 10 ; 2021 ; 10 ; https://www.wjcs.us.com/ ; ; reingest1.clockss.org:8082 >
-      au < expected ; exists ; 2022 ; World Journal of Colorectal Surgery Volume 11 ; 2022 ; 11 ; https://www.wjcs.us.com/ ; ; >
+      au < manifest ; exists ; 2022 ; World Journal of Colorectal Surgery Volume 11 ; 2022 ; 11 ; https://www.wjcs.us.com/ ; ; >
       au < expected ; exists ; 2023 ; World Journal of Colorectal Surgery Volume 12 ; 2023 ; 12 ; https://www.wjcs.us.com/ ; ; >
 
   }
@@ -11757,7 +11757,7 @@
       au < frozen ; exists ; 2020 ; Airway Volume 3 ; 2020 ; 3 ; https://www.arwy.org/ ; ; >
       au < finished ; frozen ; 2021 ; Airway Volume 4 ; 2021 ; 4 ; https://www.arwy.org/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2022 ; Airway Volume 5 ; 2022 ; 5 ; https://www.arwy.org/ ; ; >
-      au < expected ; exists ; 2023 ; Airway Volume 6 ; 2023 ; 6 ; https://www.arwy.org/ ; ; >
+      au < manifest ; exists ; 2023 ; Airway Volume 6 ; 2023 ; 6 ; https://www.arwy.org/ ; ; >
 
   }
 
@@ -12711,7 +12711,7 @@
 
       au < frozen ; exists ; 2021 ; Journal of Bone and Joint Diseases Volume 36 ; 2021 ; 36 ; https://www.jbjd.in/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Journal of Bone and Joint Diseases Volume 37 ; 2022 ; 37 ; https://www.jbjd.in/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Bone and Joint Diseases Volume 38 ; 2023 ; 38 ; https://www.jbjd.in/ ; ; >
+      au < manifest ; exists ; 2023 ; Journal of Bone and Joint Diseases Volume 38 ; 2023 ; 38 ; https://www.jbjd.in/ ; ; >
 
   }
 
