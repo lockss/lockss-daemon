@@ -3773,7 +3773,7 @@ while (my $line = <>) {
 
   # begin Resilience Alliance
   } elsif ($plugin eq "ClockssResilienceAlliancePlugin") {
-         $url = sprintf("%sissues/",
+         $url = sprintf("%sissue/",
          $param{base_url});
          $man_url = uri_unescape($url);
          my $req = HTTP::Request->new(GET, $man_url);
