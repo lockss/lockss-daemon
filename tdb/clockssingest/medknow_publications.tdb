@@ -1591,6 +1591,7 @@
 #    param[base_url] = http://www.indianjotol.org/
 
     param[journal_issn] = 0971-7749
+    #move to LWW in 2023, moved https://journals.lww.com/ijoo/
 
     au < finished ; finished ; 2011 ; Indian Journal of Otology Volume 17 ; 2011 ; 17 ; http://www.indianjotol.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; Indian Journal of Otology Volume 18 ; 2012 ; 18 ; http://www.indianjotol.org/ ; ; reingest1.clockss.org:8082 >
@@ -1602,9 +1603,8 @@
     au < finished ; finished ; 2018 ; Indian Journal of Otology Volume 24 ; 2018 ; 24 ; http://www.indianjotol.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2019 ; Indian Journal of Otology Volume 25 ; 2019 ; 25 ; https://www.indianjotol.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2020 ; Indian Journal of Otology Volume 26 ; 2020 ; 26 ; https://www.indianjotol.org/ ; ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2021 ; Indian Journal of Otology Volume 27 ; 2021 ; 27 ; https://www.indianjotol.org/ ; ; >
-    au < deepCrawl ; exists ; 2022 ; Indian Journal of Otology Volume 28 ; 2022 ; 28 ; https://www.indianjotol.org/ ; ; >
-    au < expected ; exists ; 2023 ; Indian Journal of Otology Volume 29 ; 2023 ; 29 ; https://www.indianjotol.org/ ; ; >
+    au < frozen ; exists ; 2021 ; Indian Journal of Otology Volume 27 ; 2021 ; 27 ; https://www.indianjotol.org/ ; ; >
+    au < frozen ; exists ; 2022 ; Indian Journal of Otology Volume 28 ; 2022 ; 28 ; https://www.indianjotol.org/ ; ; >
 
   }
 
@@ -2468,10 +2468,11 @@
 #    param[base_url] = http://www.ijoy.org.in/
 
     param[journal_issn] = 0973-6131
+    #move to LWW in 2023, moved https://journals.lww.com/ijoy/
 
-    au < manifest ; exists ; 2008 ; International Journal of Yoga Volume 1 ; 2008 ; 1 ; https://www.ijoy.org.in/ ; ; >
-    au < manifest ; exists ; 2009 ; International Journal of Yoga Volume 2 ; 2009 ; 2 ; https://www.ijoy.org.in/ ; ; >
-    au < manifest ; exists ; 2010 ; International Journal of Yoga Volume 3 ; 2010 ; 3 ; https://www.ijoy.org.in/ ; ; >
+    au < doNotProcess ; exists ; 2008 ; International Journal of Yoga Volume 1 ; 2008 ; 1 ; https://www.ijoy.org.in/ ; ; >
+    au < doNotProcess ; exists ; 2009 ; International Journal of Yoga Volume 2 ; 2009 ; 2 ; https://www.ijoy.org.in/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; International Journal of Yoga Volume 3 ; 2010 ; 3 ; https://www.ijoy.org.in/ ; ; >
     au < finished ; frozen ; 2011 ; International Journal of Yoga Volume 4 ; 2011 ; 4 ; http://www.ijoy.org.in/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2012 ; International Journal of Yoga Volume 5 ; 2012 ; 5 ; http://www.ijoy.org.in/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2013 ; International Journal of Yoga Volume 6 ; 2013 ; 6 ; http://www.ijoy.org.in/ ; ; reingest4.clockss.org:8082 >
@@ -2482,9 +2483,8 @@
     au < finished ; finished ; 2018 ; International Journal of Yoga Volume 11 ; 2018 ; 11 ; http://www.ijoy.org.in/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2019 ; International Journal of Yoga Volume 12 ; 2019 ; 12 ; https://www.ijoy.org.in/ ; ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2020 ; International Journal of Yoga Volume 13 ; 2020 ; 13 ; https://www.ijoy.org.in/ ; ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2021 ; International Journal of Yoga Volume 14 ; 2021 ; 14 ; https://www.ijoy.org.in/ ; ; >
-    au < deepCrawl ; exists ; 2022 ; International Journal of Yoga Volume 15 ; 2022 ; 15 ; https://www.ijoy.org.in/ ; ; >
-    au < expected ; exists ; 2023 ; International Journal of Yoga Volume 16 ; 2023 ; 16 ; https://www.ijoy.org.in/ ; ; >
+    au < frozen ; exists ; 2021 ; International Journal of Yoga Volume 14 ; 2021 ; 14 ; https://www.ijoy.org.in/ ; ; >
+    au < frozen ; exists ; 2022 ; International Journal of Yoga Volume 15 ; 2022 ; 15 ; https://www.ijoy.org.in/ ; ; >
 
   }
 
@@ -3409,40 +3409,41 @@
 #    param[base_url] = http://www.jmp.org.in/
 
     param[journal_issn] = 0971-6203
+    #move to LWW in 2023, moved https://journals.lww.com/jomp/
 
-    au < manifest ; exists ; 1978 ; Journal of Medical Physics Volume 3 ; 1978 ; 3 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 1979 ; Journal of Medical Physics Volume 4 ; 1979 ; 4 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 1980 ; Journal of Medical Physics Volume 5 ; 1980 ; 5 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 1981 ; Journal of Medical Physics Volume 6 ; 1981 ; 6 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 1978 ; Journal of Medical Physics Volume 3 ; 1978 ; 3 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 1979 ; Journal of Medical Physics Volume 4 ; 1979 ; 4 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 1980 ; Journal of Medical Physics Volume 5 ; 1980 ; 5 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 1981 ; Journal of Medical Physics Volume 6 ; 1981 ; 6 ; https://www.jmp.org.in/ ; ; >
     au < doesNotExist ; doesNotExist ; 1982 ; Journal of Medical Physics Volume 7 ; 0 ; 0 ; http://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 1983 ; Journal of Medical Physics Volume 8 ; 1983 ; 8 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 1984 ; Journal of Medical Physics Volume 9 ; 1984 ; 9 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 1985 ; Journal of Medical Physics Volume 10 ; 1985 ; 10 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 1986 ; Journal of Medical Physics Volume 11 ; 1986 ; 11 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 1987 ; Journal of Medical Physics Volume 12 ; 1987 ; 12 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 1988 ; Journal of Medical Physics Volume 13 ; 1988 ; 13 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 1989 ; Journal of Medical Physics Volume 14 ; 1989 ; 14 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 1990 ; Journal of Medical Physics Volume 15 ; 1990 ; 15 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 1991 ; Journal of Medical Physics Volume 16 ; 1991 ; 16 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 1992 ; Journal of Medical Physics Volume 17 ; 1992 ; 17 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 1993 ; Journal of Medical Physics Volume 18 ; 1993 ; 18 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 1994 ; Journal of Medical Physics Volume 19 ; 1994 ; 19 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 1995 ; Journal of Medical Physics Volume 20 ; 1995 ; 20 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 1996 ; Journal of Medical Physics Volume 21 ; 1996 ; 21 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 1997 ; Journal of Medical Physics Volume 22 ; 1997 ; 22 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 1998 ; Journal of Medical Physics Volume 23 ; 1998 ; 23 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 1999 ; Journal of Medical Physics Volume 24 ; 1999 ; 24 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 2000 ; Journal of Medical Physics Volume 25 ; 2000 ; 25 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 2001 ; Journal of Medical Physics Volume 26 ; 2001 ; 26 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 2002 ; Journal of Medical Physics Volume 27 ; 2002 ; 27 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 2003 ; Journal of Medical Physics Volume 28 ; 2003 ; 28 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 2004 ; Journal of Medical Physics Volume 29 ; 2004 ; 29 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 2005 ; Journal of Medical Physics Volume 30 ; 2005 ; 30 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 2006 ; Journal of Medical Physics Volume 31 ; 2006 ; 31 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 2007 ; Journal of Medical Physics Volume 32 ; 2007 ; 32 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 2008 ; Journal of Medical Physics Volume 33 ; 2008 ; 33 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 2009 ; Journal of Medical Physics Volume 34 ; 2009 ; 34 ; https://www.jmp.org.in/ ; ; >
-    au < manifest ; exists ; 2010 ; Journal of Medical Physics Volume 35 ; 2010 ; 35 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 1983 ; Journal of Medical Physics Volume 8 ; 1983 ; 8 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 1984 ; Journal of Medical Physics Volume 9 ; 1984 ; 9 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 1985 ; Journal of Medical Physics Volume 10 ; 1985 ; 10 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 1986 ; Journal of Medical Physics Volume 11 ; 1986 ; 11 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 1987 ; Journal of Medical Physics Volume 12 ; 1987 ; 12 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 1988 ; Journal of Medical Physics Volume 13 ; 1988 ; 13 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 1989 ; Journal of Medical Physics Volume 14 ; 1989 ; 14 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 1990 ; Journal of Medical Physics Volume 15 ; 1990 ; 15 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 1991 ; Journal of Medical Physics Volume 16 ; 1991 ; 16 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 1992 ; Journal of Medical Physics Volume 17 ; 1992 ; 17 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 1993 ; Journal of Medical Physics Volume 18 ; 1993 ; 18 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 1994 ; Journal of Medical Physics Volume 19 ; 1994 ; 19 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 1995 ; Journal of Medical Physics Volume 20 ; 1995 ; 20 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 1996 ; Journal of Medical Physics Volume 21 ; 1996 ; 21 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 1997 ; Journal of Medical Physics Volume 22 ; 1997 ; 22 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 1998 ; Journal of Medical Physics Volume 23 ; 1998 ; 23 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 1999 ; Journal of Medical Physics Volume 24 ; 1999 ; 24 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 2000 ; Journal of Medical Physics Volume 25 ; 2000 ; 25 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 2001 ; Journal of Medical Physics Volume 26 ; 2001 ; 26 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 2002 ; Journal of Medical Physics Volume 27 ; 2002 ; 27 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 2003 ; Journal of Medical Physics Volume 28 ; 2003 ; 28 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 2004 ; Journal of Medical Physics Volume 29 ; 2004 ; 29 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 2005 ; Journal of Medical Physics Volume 30 ; 2005 ; 30 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 2006 ; Journal of Medical Physics Volume 31 ; 2006 ; 31 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 2007 ; Journal of Medical Physics Volume 32 ; 2007 ; 32 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 2008 ; Journal of Medical Physics Volume 33 ; 2008 ; 33 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 2009 ; Journal of Medical Physics Volume 34 ; 2009 ; 34 ; https://www.jmp.org.in/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Medical Physics Volume 35 ; 2010 ; 35 ; https://www.jmp.org.in/ ; ; >
     au < finished ; frozen ; 2011 ; Journal of Medical Physics Volume 36 ; 2011 ; 36 ; http://www.jmp.org.in/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2012 ; Journal of Medical Physics Volume 37 ; 2012 ; 37 ; http://www.jmp.org.in/ ; ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Journal of Medical Physics Volume 38 ; 2013 ; 38 ; http://www.jmp.org.in/ ; ; reingest1.clockss.org:8082 >
@@ -3453,9 +3454,8 @@
     au < finished ; finished ; 2018 ; Journal of Medical Physics Volume 43 ; 2018 ; 43 ; http://www.jmp.org.in/ ; ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2019 ; Journal of Medical Physics Volume 44 ; 2019 ; 44 ; https://www.jmp.org.in/ ; ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2020 ; Journal of Medical Physics Volume 45 ; 2020 ; 45 ; https://www.jmp.org.in/ ; ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2021 ; Journal of Medical Physics Volume 46 ; 2021 ; 46 ; https://www.jmp.org.in/ ; ; >
-    au < deepCrawl ; exists ; 2022 ; Journal of Medical Physics Volume 47 ; 2022 ; 47 ; https://www.jmp.org.in/ ; ; >
-    au < expected ; exists ; 2023 ; Journal of Medical Physics Volume 48 ; 2023 ; 48 ; https://www.jmp.org.in/ ; ; >
+    au < frozen ; exists ; 2021 ; Journal of Medical Physics Volume 46 ; 2021 ; 46 ; https://www.jmp.org.in/ ; ; >
+    au < frozen ; exists ; 2022 ; Journal of Medical Physics Volume 47 ; 2022 ; 47 ; https://www.jmp.org.in/ ; ; >
 
   }
 #  {
@@ -4906,6 +4906,7 @@
 #    param[base_url] = http://www.tropicalparasitology.org/
 
     param[journal_issn] = 2229-5070
+    #move to LWW in 2023, moved https://journals.lww.com/tpar/
 
     au < finished ; frozen ; 2011 ; Tropical Parasitology Volume 1 ; 2011 ; 1 ; http://www.tropicalparasitology.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2012 ; Tropical Parasitology Volume 2 ; 2012 ; 2 ; http://www.tropicalparasitology.org/ ; ; reingest2.clockss.org:8085 >
@@ -4917,9 +4918,8 @@
     au < finished ; finished ; 2018 ; Tropical Parasitology Volume 8 ; 2018 ; 8 ; http://www.tropicalparasitology.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2019 ; Tropical Parasitology Volume 9 ; 2019 ; 9 ; https://www.tropicalparasitology.org/ ; ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2020 ; Tropical Parasitology Volume 10 ; 2020 ; 10 ; https://www.tropicalparasitology.org/ ; ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2021 ; Tropical Parasitology Volume 11 ; 2021 ; 11 ; https://www.tropicalparasitology.org/ ; ; >
-    au < deepCrawl ; exists ; 2022 ; Tropical Parasitology Volume 12 ; 2022 ; 12 ; https://www.tropicalparasitology.org/ ; ; >
-    au < expected ; exists ; 2023 ; Tropical Parasitology Volume 13 ; 2023 ; 13 ; https://www.tropicalparasitology.org/ ; ; >
+    au < frozen ; exists ; 2021 ; Tropical Parasitology Volume 11 ; 2021 ; 11 ; https://www.tropicalparasitology.org/ ; ; >
+    au < frozen ; exists ; 2022 ; Tropical Parasitology Volume 12 ; 2022 ; 12 ; https://www.tropicalparasitology.org/ ; ; >
 
   }
 
@@ -5124,15 +5124,15 @@
 
       param[journal_issn] = 1687-1693
 #      param[base_url] = http://www.azmj.eg.net/
+    #move to LWW in 2023, moved https://journals.lww.com/aamj/
 
       au < finished ; finished ; 2016 ; Al-Azhar Assiut Medical Journal Volume 14 ; 2016 ; 14 ; http://www.azmj.eg.net/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2017 ; Al-Azhar Assiut Medical Journal Volume 15 ; 2017 ; 15 ; http://www.azmj.eg.net/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Al-Azhar Assiut Medical Journal Volume 16 ; 2018 ; 16 ; http://www.azmj.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2019 ; Al-Azhar Assiut Medical Journal Volume 17 ; 2019 ; 17 ; https://www.azmj.eg.net/ ; ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; Al-Azhar Assiut Medical Journal Volume 18 ; 2020 ; 18 ; https://www.azmj.eg.net/ ; ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2021 ; Al-Azhar Assiut Medical Journal Volume 19 ; 2021 ; 19 ; https://www.azmj.eg.net/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Al-Azhar Assiut Medical Journal Volume 20 ; 2022 ; 20 ; https://www.azmj.eg.net/ ; ; >
-      au < expected ; exists ; 2023 ; Al-Azhar Assiut Medical Journal Volume 21 ; 2023 ; 21 ; https://www.azmj.eg.net/ ; ; >
+      au < frozen ; exists ; 2021 ; Al-Azhar Assiut Medical Journal Volume 19 ; 2021 ; 19 ; https://www.azmj.eg.net/ ; ; >
+      au < frozen ; exists ; 2022 ; Al-Azhar Assiut Medical Journal Volume 20 ; 2022 ; 20 ; https://www.azmj.eg.net/ ; ; >
 
   }
 
@@ -5288,6 +5288,7 @@
 
       param[journal_issn] = 2321-4848
 #      param[base_url] = http://www.amhsjournal.org/
+    #move to LWW in 2023, moved https://journals.lww.com/armh/
 
       au < finished ; finished ; 2013 ; Archives of Medicine and Health Sciences Volume 1 ; 2013 ; 1 ; http://www.amhsjournal.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2014 ; Archives of Medicine and Health Sciences Volume 2 ; 2014 ; 2 ; http://www.amhsjournal.org/ ; ; reingest2.clockss.org:8085 >
@@ -5297,9 +5298,8 @@
       au < finished ; frozen ; 2018 ; Archives of Medicine and Health Sciences Volume 6 ; 2018 ; 6 ; http://www.amhsjournal.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; Archives of Medicine and Health Sciences Volume 7 ; 2019 ; 7 ; https://www.amhsjournal.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; Archives of Medicine and Health Sciences Volume 8 ; 2020 ; 8 ; https://www.amhsjournal.org/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Archives of Medicine and Health Sciences Volume 9 ; 2021 ; 9 ; https://www.amhsjournal.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Archives of Medicine and Health Sciences Volume 10 ; 2022 ; 10 ; https://www.amhsjournal.org/ ; ; >
-      au < expected ; exists ; 2023 ; Archives of Medicine and Health Sciences Volume 11 ; 2023 ; 11 ; https://www.amhsjournal.org/ ; ; >
+      au < frozen ; exists ; 2021 ; Archives of Medicine and Health Sciences Volume 9 ; 2021 ; 9 ; https://www.amhsjournal.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Archives of Medicine and Health Sciences Volume 10 ; 2022 ; 10 ; https://www.amhsjournal.org/ ; ; >
 
   }
 
@@ -5753,6 +5753,7 @@
 
       param[journal_issn] = 2348-1471
 #      param[base_url] = http://www.dmrjournal.org/
+    #move to LWW in 2023, moved https://journals.lww.com/dmrs/
 
       au < finished ; finished ; 2013 ; Dentistry and Medical Research Volume 1 ; 2013 ; 1 ; http://www.dmrjournal.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Dentistry and Medical Research Volume 2 ; 2014 ; 2 ; http://www.dmrjournal.org/ ; ; reingest3.clockss.org:8083 >
@@ -5762,9 +5763,8 @@
       au < finished ; finished ; 2018 ; Dentistry and Medical Research Volume 6 ; 2018 ; 6 ; http://www.dmrjournal.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2019 ; Dentistry and Medical Research Volume 7 ; 2019 ; 7 ; https://www.dmrjournal.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2020 ; Dentistry and Medical Research Volume 8 ; 2020 ; 8 ; https://www.dmrjournal.org/ ; ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2021 ; Dentistry and Medical Research Volume 9 ; 2021 ; 9 ; https://www.dmrjournal.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Dentistry and Medical Research Volume 10 ; 2022 ; 10 ; https://www.dmrjournal.org/ ; ; >
-      au < expected ; exists ; 2023 ; Dentistry and Medical Research Volume 11 ; 2023 ; 11 ; https://www.dmrjournal.org/ ; ; >
+      au < frozen ; exists ; 2021 ; Dentistry and Medical Research Volume 9 ; 2021 ; 9 ; https://www.dmrjournal.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Dentistry and Medical Research Volume 10 ; 2022 ; 10 ; https://www.dmrjournal.org/ ; ; >
 
   }
 
@@ -6337,9 +6337,8 @@
       au < finished ; finished ; 2018 ; Indian Journal of Dermatopathology and Diagnostic Dermatology Volume 5 ; 2018 ; 5 ; http://www.ijdpdd.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; Indian Journal of Dermatopathology and Diagnostic Dermatology Volume 6 ; 2019 ; 6 ; https://www.ijdpdd.com/ ; ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; Indian Journal of Dermatopathology and Diagnostic Dermatology Volume 7 ; 2020 ; 7 ; https://www.ijdpdd.com/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Indian Journal of Dermatopathology and Diagnostic Dermatology Volume 8 ; 2021 ; 8 ; https://www.ijdpdd.com/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Indian Journal of Dermatopathology and Diagnostic Dermatology Volume 9 ; 2022 ; 9 ; https://www.ijdpdd.com/ ; ; >
-      au < expected ; exists ; 2023 ; Indian Journal of Dermatopathology and Diagnostic Dermatology Volume 10 ; 2023 ; 10 ; https://www.ijdpdd.com/ ; ; >
+      au < frozen ; exists ; 2021 ; Indian Journal of Dermatopathology and Diagnostic Dermatology Volume 8 ; 2021 ; 8 ; https://www.ijdpdd.com/ ; ; >
+      au < frozen ; exists ; 2022 ; Indian Journal of Dermatopathology and Diagnostic Dermatology Volume 9 ; 2022 ; 9 ; https://www.ijdpdd.com/ ; ; >
 
   }
 
@@ -6519,6 +6518,7 @@
 
       param[journal_issn] = 0970-5333
 #      param[base_url] = http://www.indianjpain.org/
+    #move to LWW in 2023, moved https://journals.lww.com/ijpn/
 
       au < finished ; frozen ; 2013 ; Indian Journal of Pain Volume 27 ; 2013 ; 27 ; http://www.indianjpain.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; Indian Journal of Pain Volume 28 ; 2014 ; 28 ; http://www.indianjpain.org/ ; ; reingest2.clockss.org:8085 >
@@ -6528,9 +6528,8 @@
       au < finished ; finished ; 2018 ; Indian Journal of Pain Volume 32 ; 2018 ; 32 ; http://www.indianjpain.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2019 ; Indian Journal of Pain Volume 33 ; 2019 ; 33 ; https://www.indianjpain.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2020 ; Indian Journal of Pain Volume 34 ; 2020 ; 34 ; https://www.indianjpain.org/ ; ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2021 ; Indian Journal of Pain Volume 35 ; 2021 ; 35 ; https://www.indianjpain.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Indian Journal of Pain Volume 36 ; 2022 ; 36 ; https://www.indianjpain.org/ ; ; >
-      au < expected ; exists ; 2023 ; Indian Journal of Pain Volume 37 ; 2023 ; 37 ; https://www.indianjpain.org/ ; ; >
+      au < frozen ; exists ; 2021 ; Indian Journal of Pain Volume 35 ; 2021 ; 35 ; https://www.indianjpain.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Indian Journal of Pain Volume 36 ; 2022 ; 36 ; https://www.indianjpain.org/ ; ; >
 
   }
 
@@ -6644,6 +6643,7 @@
 
       param[journal_issn] = 2349-4220
 #      param[base_url] = http://www.ijamhrjournal.org/
+    #move to LWW in 2023, moved https://journals.lww.com/iamr/
 
       au < finished ; finished ; 2014 ; International Journal of Advanced Medical and Health Research Volume 1 ; 2014 ; 1 ; http://www.ijamhrjournal.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; International Journal of Advanced Medical and Health Research Volume 2 ; 2015 ; 2 ; http://www.ijamhrjournal.org/ ; ; reingest4.clockss.org:8082 >
@@ -6652,9 +6652,8 @@
       au < finished ; finished ; 2018 ; International Journal of Advanced Medical and Health Research Volume 5 ; 2018 ; 5 ; http://www.ijamhrjournal.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2019 ; International Journal of Advanced Medical and Health Research Volume 6 ; 2019 ; 6 ; https://www.ijamhrjournal.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2020 ; International Journal of Advanced Medical and Health Research Volume 7 ; 2020 ; 7 ; https://www.ijamhrjournal.org/ ; ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2021 ; International Journal of Advanced Medical and Health Research Volume 8 ; 2021 ; 8 ; https://www.ijamhrjournal.org/ ; ; > #500 error
-      au < deepCrawl ; exists ; 2022 ; International Journal of Advanced Medical and Health Research Volume 9 ; 2022 ; 9 ; https://www.ijamhrjournal.org/ ; ; >
-      au < expected ; exists ; 2023 ; International Journal of Advanced Medical and Health Research Volume 10 ; 2023 ; 10 ; https://www.ijamhrjournal.org/ ; ; >
+      au < frozen ; exists ; 2021 ; International Journal of Advanced Medical and Health Research Volume 8 ; 2021 ; 8 ; https://www.ijamhrjournal.org/ ; ; > #500 error
+      au < frozen ; exists ; 2022 ; International Journal of Advanced Medical and Health Research Volume 9 ; 2022 ; 9 ; https://www.ijamhrjournal.org/ ; ; >
 
   }
 
@@ -7479,6 +7478,7 @@
 
       param[journal_issn] = 0974-2131
 #      param[base_url] = http://www.jisha.org/
+     #move to LWW in 2023, moved https://journals.lww.com/insh/
 
       au < finished ; finished ; 2014 ; Journal of Indian Speech Language & Hearing Association Volume 28 ; 2014 ; 28 ; http://www.jisha.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; Journal of Indian Speech Language & Hearing Association Volume 29 ; 2015 ; 29 ; http://www.jisha.org/ ; ; reingest4.clockss.org:8082 >
@@ -7487,9 +7487,8 @@
       au < finished ; finished ; 2018 ; Journal of Indian Speech Language & Hearing Association Volume 32 ; 2018 ; 32 ; https://www.jisha.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2019 ; Journal of Indian Speech Language & Hearing Association Volume 33 ; 2019 ; 33 ; https://www.jisha.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2020 ; Journal of Indian Speech Language & Hearing Association Volume 34 ; 2020 ; 34 ; https://www.jisha.org/ ; ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Journal of Indian Speech Language & Hearing Association Volume 35 ; 2021 ; 35 ; https://www.jisha.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of Indian Speech Language & Hearing Association Volume 36 ; 2022 ; 36 ; https://www.jisha.org/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Indian Speech Language & Hearing Association Volume 37 ; 2023 ; 37 ; https://www.jisha.org/ ; ; >
+      au < frozen ; exists ; 2021 ; Journal of Indian Speech Language & Hearing Association Volume 35 ; 2021 ; 35 ; https://www.jisha.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of Indian Speech Language & Hearing Association Volume 36 ; 2022 ; 36 ; https://www.jisha.org/ ; ; >
 
   }
 
@@ -7528,6 +7527,7 @@
 
       param[journal_issn] = 2455-3719
 #      param[base_url] = http://www.jlimblengthrecon.org/
+    #move to LWW in 2023, moved https://journals.lww.com/jllr/
 
       au < finished ; finished ; 2015 ; Journal of Limb Lengthening & Reconstruction Volume 1 ; 2015 ; 1 ; http://www.jlimblengthrecon.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; Journal of Limb Lengthening & Reconstruction Volume 2 ; 2016 ; 2 ; http://www.jlimblengthrecon.org/ ; ; reingest2.clockss.org:8085 >
@@ -7535,9 +7535,8 @@
       au < finished ; finished ; 2018 ; Journal of Limb Lengthening & Reconstruction Volume 4 ; 2018 ; 4 ; http://www.jlimblengthrecon.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; Journal of Limb Lengthening & Reconstruction Volume 5 ; 2019 ; 5 ; https://www.jlimblengthrecon.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2020 ; Journal of Limb Lengthening & Reconstruction Volume 6 ; 2020 ; 6 ; https://www.jlimblengthrecon.org/ ; ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Journal of Limb Lengthening & Reconstruction Volume 7 ; 2021 ; 7 ; https://www.jlimblengthrecon.org/ ; ; >
-      au < crawling ; exists ; 2022 ; Journal of Limb Lengthening & Reconstruction Volume 8 ; 2022 ; 8 ; https://www.jlimblengthrecon.org/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Limb Lengthening & Reconstruction Volume 9 ; 2023 ; 9 ; https://www.jlimblengthrecon.org/ ; ; >
+      au < frozen ; exists ; 2021 ; Journal of Limb Lengthening & Reconstruction Volume 7 ; 2021 ; 7 ; https://www.jlimblengthrecon.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of Limb Lengthening & Reconstruction Volume 8 ; 2022 ; 8 ; https://www.jlimblengthrecon.org/ ; ; >
 
   }
 
@@ -9602,13 +9601,12 @@
 #      param[base_url] = http://www.anip.co.in/
       #no backissues.asp page
 
-      au < notReady ; exists ; 2017 ; Annals of Indian Psychiatry Volume 1 ; 2017 ; 1 ; https://www.anip.co.in/ ; login for pdf ; >
-      au < notReady ; exists ; 2018 ; Annals of Indian Psychiatry Volume 2 ; 2018 ; 2 ; https://www.anip.co.in/ ; login for pdf ; >
+      au < doNotProcess ; exists ; 2017 ; Annals of Indian Psychiatry Volume 1 ; 2017 ; 1 ; https://www.anip.co.in/ ; login for pdf ; >
+      au < doNotProcess ; exists ; 2018 ; Annals of Indian Psychiatry Volume 2 ; 2018 ; 2 ; https://www.anip.co.in/ ; login for pdf ; >
       au < finished ; finished ; 2019 ; Annals of Indian Psychiatry Volume 3 ; 2019 ; 3 ; https://www.anip.co.in/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2020 ; Annals of Indian Psychiatry Volume 4 ; 2020 ; 4 ; https://www.anip.co.in/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Annals of Indian Psychiatry Volume 5 ; 2021 ; 5 ; https://www.anip.co.in/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Annals of Indian Psychiatry Volume 6 ; 2022 ; 6 ; https://www.anip.co.in/ ; ; >
-      au < expected ; exists ; 2023 ; Annals of Indian Psychiatry Volume 7 ; 2023 ; 7 ; https://www.anip.co.in/ ; ; >
+      au < frozen ; exists ; 2021 ; Annals of Indian Psychiatry Volume 5 ; 2021 ; 5 ; https://www.anip.co.in/ ; ; >
+      au < frozen ; exists ; 2022 ; Annals of Indian Psychiatry Volume 6 ; 2022 ; 6 ; https://www.anip.co.in/ ; ; >
 
   }
 
@@ -10737,13 +10735,13 @@
 
       param[journal_issn] = 2352-2410
 #      param[base_url] = http://www.jddsjournal.org/
+    #move to LWW in 2023, moved https://journals.lww.com/jdds/
 
       au < finished ; finished ; 2018 ; Journal of Dermatology and Dermatologic Surgery Volume 22 ; 2018 ; 22 ; https://www.jddsjournal.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Journal of Dermatology and Dermatologic Surgery Volume 23 ; 2019 ; 23 ; https://www.jddsjournal.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2020 ; Journal of Dermatology and Dermatologic Surgery Volume 24 ; 2020 ; 24 ; https://www.jddsjournal.org/ ; ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2021 ; Journal of Dermatology and Dermatologic Surgery Volume 25 ; 2021 ; 25 ; https://www.jddsjournal.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of Dermatology and Dermatologic Surgery Volume 26 ; 2022 ; 26 ; https://www.jddsjournal.org/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Dermatology and Dermatologic Surgery Volume 27 ; 2023 ; 27 ; https://www.jddsjournal.org/ ; ; >
+      au < frozen ; exists ; 2021 ; Journal of Dermatology and Dermatologic Surgery Volume 25 ; 2021 ; 25 ; https://www.jddsjournal.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of Dermatology and Dermatologic Surgery Volume 26 ; 2022 ; 26 ; https://www.jddsjournal.org/ ; ; >
 
   }
 
@@ -11255,14 +11253,14 @@
 
       param[journal_issn] = 2588-9044
 #      param[base_url] = http://www.ljmsonline.com/
+    #move to LWW in 2023, moved https://journals.lww.com/ljms/
 
       au < finished ; finished ; 2017 ; Libyan Journal of Medical Sciences Volume 1 ; 2017 ; 1 ; https://www.ljmsonline.com/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Libyan Journal of Medical Sciences Volume 2 ; 2018 ; 2 ; https://www.ljmsonline.com/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Libyan Journal of Medical Sciences Volume 3 ; 2019 ; 3 ; https://www.ljmsonline.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2020 ; Libyan Journal of Medical Sciences Volume 4 ; 2020 ; 4 ; https://www.ljmsonline.com/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Libyan Journal of Medical Sciences Volume 5 ; 2021 ; 5 ; https://www.ljmsonline.com/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Libyan Journal of Medical Sciences Volume 6 ; 2022 ; 6 ; https://www.ljmsonline.com/ ; ; >
-      au < expected ; exists ; 2023 ; Libyan Journal of Medical Sciences Volume 7 ; 2023 ; 7 ; https://www.ljmsonline.com/ ; ; >
+      au < frozen ; exists ; 2021 ; Libyan Journal of Medical Sciences Volume 5 ; 2021 ; 5 ; https://www.ljmsonline.com/ ; ; >
+      au < frozen ; exists ; 2022 ; Libyan Journal of Medical Sciences Volume 6 ; 2022 ; 6 ; https://www.ljmsonline.com/ ; ; >
 
   }
 
@@ -12173,13 +12171,13 @@
 
       param[journal_issn] = 2666-0784
       #param[base_url] = https://www.ijcrsonweb.org/
+    #move to LWW in 2023, moved https://journals.lww.com/ijcr/
 
       au < frozen ; exists ; 2018 ; Indian Journal of Colo-Rectal Surgery Volume 1 ; 2018 ; 1 ; https://www.ijcrsonweb.org/ ; ; >
       au < frozen ; exists ; 2019 ; Indian Journal of Colo-Rectal Surgery Volume 2 ; 2019 ; 2 ; https://www.ijcrsonweb.org/ ; ; >
       au < frozen ; exists ; 2020 ; Indian Journal of Colo-Rectal Surgery Volume 3 ; 2020 ; 3 ; https://www.ijcrsonweb.org/ ; ; >
       au < frozen ; exists ; 2021 ; Indian Journal of Colo-Rectal Surgery Volume 4 ; 2021 ; 4 ; https://www.ijcrsonweb.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Indian Journal of Colo-Rectal Surgery Volume 5 ; 2022 ; 5 ; https://www.ijcrsonweb.org/ ; ; >
-      au < expected ; exists ; 2023 ; Indian Journal of Colo-Rectal Surgery Volume 6 ; 2023 ; 6 ; https://www.ijcrsonweb.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Indian Journal of Colo-Rectal Surgery Volume 5 ; 2022 ; 5 ; https://www.ijcrsonweb.org/ ; ; >
 
   }
 
@@ -12745,13 +12743,13 @@
 
       param[journal_issn] = 2454-8529
       #param[base_url] = https://www.jcvs.in/
+    #move to LWW in 2023, moved https://journals.lww.com/jcvs/
 
-      au < notReady ; exists ; 2018 ; Journal of Cerebrovascular Sciences Volume 6 ; 2018 ; 6 ; https://www.jcvs.in/ ; ; > #500 Internal Server Error https://www.jcvs.in/article.asp?issn=2454-8529;year=2018;volume=6;issue=1;spage=5;epage=74;aulast=;type=2
-      au < manifest ; exists ; 2019 ; Journal of Cerebrovascular Sciences Volume 7 ; 2019 ; 7 ; https://www.jcvs.in/ ; ; >
-      au < manifest ; exists ; 2020 ; Journal of Cerebrovascular Sciences Volume 8 ; 2020 ; 8 ; https://www.jcvs.in/ ; ; >
+      au < doNotProcess ; exists ; 2018 ; Journal of Cerebrovascular Sciences Volume 6 ; 2018 ; 6 ; https://www.jcvs.in/ ; ; > #500 Internal Server Error https://www.jcvs.in/article.asp?issn=2454-8529;year=2018;volume=6;issue=1;spage=5;epage=74;aulast=;type=2
+      au < doNotProcess ; exists ; 2019 ; Journal of Cerebrovascular Sciences Volume 7 ; 2019 ; 7 ; https://www.jcvs.in/ ; ; >
+      au < doNotProcess ; exists ; 2020 ; Journal of Cerebrovascular Sciences Volume 8 ; 2020 ; 8 ; https://www.jcvs.in/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Cerebrovascular Sciences Volume 9 ; 2021 ; 9 ; https://www.jcvs.in/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of Cerebrovascular Sciences Volume 10 ; 2022 ; 10 ; https://www.jcvs.in/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Cerebrovascular Sciences Volume 11 ; 2023 ; 11 ; https://www.jcvs.in/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of Cerebrovascular Sciences Volume 10 ; 2022 ; 10 ; https://www.jcvs.in/ ; ; >
 
   }
 
@@ -12805,11 +12803,11 @@
 
       param[journal_issn] = 0973-4724
       #param[base_url] = https://www.journaldds.org/
+      #move to LWW in 2023, moved https://journals.lww.com/jodd/
 
       au < frozen ; exists ; 2020 ; Journal of Dentistry Defense Section Volume 14 ; 2020 ; 14 ; https://www.journaldds.org/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Dentistry Defense Section Volume 15 ; 2021 ; 15 ; https://www.journaldds.org/ ; ; >
-      au < manifest ; exists ; 2022 ; Journal of Dentistry Defense Section Volume 16 ; 2022 ; 16 ; https://www.journaldds.org/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Dentistry Defense Section Volume 17 ; 2023 ; 17 ; https://www.journaldds.org/ ; ; >
+      au < doNotProcess ; exists ; 2022 ; Journal of Dentistry Defense Section Volume 16 ; 2022 ; 16 ; https://www.journaldds.org/ ; ; >
 
   }
 
@@ -13191,11 +13189,11 @@
 
       param[journal_issn] = 2772-3143
       #param[base_url] = https://www.jssrp.org/
+      #move to LWW in 2023, moved https://journals.lww.com/jssr/
 
       au < frozen ; exists ; 2020 ; Journal of Surgical Specialties and Rural Practice Volume 1 ; 2020 ; 1 ; https://www.jssrp.org/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Surgical Specialties and Rural Practice Volume 2 ; 2021 ; 2 ; https://www.jssrp.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of Surgical Specialties and Rural Practice Volume 3 ; 2022 ; 3 ; https://www.jssrp.org/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Surgical Specialties and Rural Practice Volume 4 ; 2023 ; 4 ; https://www.jssrp.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of Surgical Specialties and Rural Practice Volume 3 ; 2022 ; 3 ; https://www.jssrp.org/ ; ; >
 
   }
 
