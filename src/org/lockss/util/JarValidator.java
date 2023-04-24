@@ -154,7 +154,8 @@ public class JarValidator {
    * true (it would be implemented by the ClassLoader?) and even if it
    * is true, would it apply to Resource files?  So the new behavior
    * is to check all files that aren't either in or related to the
-   * manifest (i.e., in the META-INF dir) or directories.  The old behavior can be restored by calling 
+   * manifest (i.e., in the META-INF dir) or directories.  The old
+   * behavior can be restored with checkAllEntries(false).
    */
   private boolean requiresValidation(String entryName, Manifest manifest) {
     if (m_checkAllEntries) {

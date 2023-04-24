@@ -4,7 +4,7 @@
 # TestPluginManager.  Must be rerun if the keystores are regenerated,
 # and (in some cases) if changes are made to the plugins
 
-# NOTE: this must be run *after* the tests are compiles as it
+# NOTE: this must be run *after* the tests are compiled as it
 # references files in test/classes .  So run "ant jar-tests" first.
 
 # Some "PluginWellformednessTests FAILED" message are expected.
