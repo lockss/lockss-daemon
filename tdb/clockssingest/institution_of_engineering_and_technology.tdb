@@ -1059,14 +1059,14 @@
       au < finished ; frozen ; 1992 ; Computing & Control Engineering Journal Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 1993 ; Computing & Control Engineering Journal Volume 4 ; 4 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 1994 ; Computing & Control Engineering Journal Volume 5 ; 5 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 1995 ; Computing & Control Engineering Journal Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 1996 ; Computing & Control Engineering Journal Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 1997 ; Computing & Control Engineering Journal Volume 8 ; 8 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 1998 ; Computing & Control Engineering Journal Volume 9 ; 9 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 1999 ; Computing & Control Engineering Journal Volume 10 ; 10 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2000 ; Computing & Control Engineering Journal Volume 11 ; 11 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2001 ; Computing & Control Engineering Journal Volume 12 ; 12 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2002 ; Computing & Control Engineering Journal Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 1995 ; Computing & Control Engineering Journal Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 1996 ; Computing & Control Engineering Journal Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1997 ; Computing & Control Engineering Journal Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 1998 ; Computing & Control Engineering Journal Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 1999 ; Computing & Control Engineering Journal Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2000 ; Computing & Control Engineering Journal Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2001 ; Computing & Control Engineering Journal Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2002 ; Computing & Control Engineering Journal Volume 13 ; 13 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -1081,10 +1081,10 @@
 
       param[journal_id] = cm
 
-      au < finished ; manifest ; 1986 ; Computerised Manufacturing Volume 1986 ; 1986 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 1987 ; Computerised Manufacturing Volume 1987 ; 1987 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 1988 ; Computerised Manufacturing Volume 1988 ; 1988 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 1989 ; Computerised Manufacturing Volume 1989 ; 1989 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 1986 ; Computerised Manufacturing Volume 1986 ; 1986 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1987 ; Computerised Manufacturing Volume 1987 ; 1987 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 1988 ; Computerised Manufacturing Volume 1988 ; 1988 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 1989 ; Computerised Manufacturing Volume 1989 ; 1989 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -1099,10 +1099,10 @@
 
       param[journal_id] = ecej
 
-      au < finished ; manifest ; 1989 ; Electronics & Communication Engineering Journal Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 1990 ; Electronics & Communication Engineering Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 1991 ; Electronics & Communication Engineering Journal Volume 3 ; 3 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 1992 ; Electronics & Communication Engineering Journal Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 1989 ; Electronics & Communication Engineering Journal Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 1990 ; Electronics & Communication Engineering Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1991 ; Electronics & Communication Engineering Journal Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 1992 ; Electronics & Communication Engineering Journal Volume 4 ; 4 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 1993 ; Electronics & Communication Engineering Journal Volume 5 ; 5 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 1994 ; Electronics & Communication Engineering Journal Volume 6 ; 6 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 1995 ; Electronics & Communication Engineering Journal Volume 7 ; 7 ; reingest3.clockss.org:8083 >
@@ -1127,9 +1127,9 @@
 
       param[journal_id] = ee
 
-      au < finished ; manifest ; 1990 ; Electronics Education Volume 1990 ; 1990 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 1991 ; Electronics Education Volume 1991 ; 1991 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 1992 ; Electronics Education Volume 1992 ; 1992 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1990 ; Electronics Education Volume 1990 ; 1990 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 1991 ; Electronics Education Volume 1991 ; 1991 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 1992 ; Electronics Education Volume 1992 ; 1992 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 1993 ; Electronics Education Volume 1993 ; 1993 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 1994 ; Electronics Education Volume 1994 ; 1994 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 1995 ; Electronics Education Volume 1995 ; 1995 ; reingest3.clockss.org:8083 >
@@ -1161,14 +1161,14 @@
 
       param[journal_id] = emj
 
-      au < finished ; manifest ; 1991 ; Engineering Management Journal Volume 1 ; 1 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 1992 ; Engineering Management Journal Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 1993 ; Engineering Management Journal Volume 3 ; 3 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 1994 ; Engineering Management Journal Volume 4 ; 4 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 1995 ; Engineering Management Journal Volume 5 ; 5 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 1996 ; Engineering Management Journal Volume 6 ; 6 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 1997 ; Engineering Management Journal Volume 7 ; 7 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 1998 ; Engineering Management Journal Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 1991 ; Engineering Management Journal Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1992 ; Engineering Management Journal Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 1993 ; Engineering Management Journal Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 1994 ; Engineering Management Journal Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 1995 ; Engineering Management Journal Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 1996 ; Engineering Management Journal Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1997 ; Engineering Management Journal Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 1998 ; Engineering Management Journal Volume 8 ; 8 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 1999 ; Engineering Management Journal Volume 9 ; 9 ; >
       au < frozen ; exists ; 2000 ; Engineering Management Journal Volume 10 ; 10 ; >
       au < frozen ; exists ; 2001 ; Engineering Management Journal Volume 11 ; 11 ; >
