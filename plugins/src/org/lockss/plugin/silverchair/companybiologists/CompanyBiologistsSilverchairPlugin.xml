@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>16</string>
+        <string>17</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -61,12 +61,10 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <!--
     https://journals.biologists.com/jcs/issue/browse-by-year/2019
-    https://journals.biologists.com/jcs/issue-covers/year/1993
     -->
     <entry>
         <string>au_start_url</string>
         <list>
-            <string>"%s%s/issue-covers/year/%d", base_url, journal_id, year</string>
             <string>"%s%s/issue/browse-by-year/%d", base_url, journal_id, year</string>
         </list>
     </entry>
