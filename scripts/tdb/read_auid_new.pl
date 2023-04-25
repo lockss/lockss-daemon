@@ -1448,6 +1448,7 @@ while (my $line = <>) {
 #PubFactory Journals CLOCKSS
   } elsif (($plugin eq "ClockssBerghahnJournalsPlugin") ||
            ($plugin eq "ClockssAjtmhPlugin")            ||
+           ($plugin eq "ClockssAVMAJournalsPlugin")     ||
            ($plugin eq "ClockssAPMAJournalsPlugin")     ||
            ($plugin eq "ClockssAMetSoc2021Plugin")      ||
            ($plugin eq "ClockssManchesterUniversityPressPlugin")) {
