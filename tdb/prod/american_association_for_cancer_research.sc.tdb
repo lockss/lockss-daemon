@@ -122,7 +122,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Cancer Immunology Research Volume 7 ; 7 >
       au < doNotProcess ; 2020 ; 2020 ; Cancer Immunology Research Volume 8 ; 8 >
       au < manifest ; 2021 ; 2021 ; Cancer Immunology Research Volume 9 ; 9 >
-      au < manifest ; 2022 ; 2022 ; Cancer Immunology Research Volume 10 ; 10 >
+      au < ready ; 2022 ; 2022 ; Cancer Immunology Research Volume 10 ; 10 >
       au < manifest ; 2023 ; 2023 ; Cancer Immunology Research Volume 11 ; 11 >
 
   }
@@ -153,7 +153,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Cancer Prevention Research Volume 12 ; 12 >
       au < doNotProcess ; 2020 ; 2020 ; Cancer Prevention Research Volume 13 ; 13 >
       au < manifest ; 2021 ; 2021 ; Cancer Prevention Research Volume 14 ; 14 >
-      au < manifest ; 2022 ; 2022 ; Cancer Prevention Research Volume 15 ; 15 >
+      au < ready ; 2022 ; 2022 ; Cancer Prevention Research Volume 15 ; 15 >
       au < manifest ; 2023 ; 2023 ; Cancer Prevention Research Volume 16 ; 16 >
 
   }
@@ -251,7 +251,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Cancer Research Volume 79 ; 79 >
       au < doNotProcess ; 2020 ; 2020 ; Cancer Research Volume 80 ; 80 >
       au < manifest ; 2021 ; 2021 ; Cancer Research Volume 81 ; 81 >
-      au < manifest ; 2022 ; 2022 ; Cancer Research Volume 82 ; 82 >
+      au < ready ; 2022 ; 2022 ; Cancer Research Volume 82 ; 82 >
       au < manifest ; 2023 ; 2023 ; Cancer Research Volume 83 ; 83 >
 
   }
@@ -266,7 +266,7 @@
       param[journal_id] = cancerrescommun
     
       au < manifest ; 2021 ; 2021 ; Cancer Research Communications Volume 1 ; 1 >
-      au < manifest ; 2022 ; 2022 ; Cancer Research Communications Volume 2 ; 2 >
+      au < ready ; 2022 ; 2022 ; Cancer Research Communications Volume 2 ; 2 >
       au < manifest ; 2023 ; 2023 ; Cancer Research Communications Volume 3 ; 3 >
 
   }
