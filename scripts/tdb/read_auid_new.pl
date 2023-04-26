@@ -3983,4 +3983,5 @@ printf("*Today: %s\n", $datestring);
 printf("*Total manifests found: %d\n", $total_manifests);
 printf("*Total missing manifests: %d\n", $total_missing);
 printf("*Total AUs with unknown plugin: %d\n", $total_missing_plugin);
+printf("*Total IP Address: %s\n", `hostname -I`);
 exit(0);
