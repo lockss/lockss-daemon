@@ -12,7 +12,7 @@
   # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
-    param[base_url] = https://digijournals.uni.lodz.pl/
+    param[base_url] = https://digijournals.uni.lodz.pl/ #host is gone, 2023-04
 
   {
   
@@ -35,7 +35,6 @@
     au < frozen ; exists ; 2020 ; Tourism / Turyzm Volume 30 ; 30 ; >
     au < frozen ; exists ; 2021 ; Tourism / Turyzm Volume 31 ; 31 ; >
     au < doNotProcess ; exists ; 2022 ; Tourism / Turyzm Volume 32 ; 32 ; >
-    au < doNotProcess ; exists ; 2023 ; Tourism / Turyzm Volume 33 ; 33 ; >
 
   }
 
@@ -81,7 +80,6 @@
       au < finished ; finished ; 2020 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 36 ; 36 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2021 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 37 ; 37 ; >
       au < superseded ; exists ; 2022 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 38 [superseded] ; 38 ; >
-      au < doNotProcess ; exists ; 2023 ; Acta Universitatis Lodziensis Folia Litteraria Polonica Volume 39 ; 39 ; >
 
   }
 
@@ -112,7 +110,6 @@
       au < finished ; finished ; 2020 ; Convivium: Germanistisches Jahrbuch Polen Volume 2020 ; 2020 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2021 ; Convivium: Germanistisches Jahrbuch Polen Volume 2021 ; 2021 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2022 ; Convivium: Germanistisches Jahrbuch Polen Volume 2022 ; 2022 ; >
-      au < doNotProcess ; exists ; 2023 ; Convivium: Germanistisches Jahrbuch Polen Volume 2023 ; 2023 ; >
 
   }
 
@@ -129,7 +126,6 @@
       au < finished ; finished ; 2020 ; European Spatial Research and Policy Volume 16 ; 16 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2021 ; European Spatial Research and Policy Volume 17 ; 17 ; >
       au < superseded ; exists ; 2022 ; European Spatial Research and Policy Volume 18 [superseded] ; 18 ; >
-      au < doNotProcess ; exists ; 2023 ; European Spatial Research and Policy Volume 19 ; 19 ; >
 
   }
 
@@ -155,7 +151,6 @@
       au < finished ; finished ; 2020 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 22 ; 22 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2021 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 23 ; 23 ; >
       au < superseded ; exists ; 2022 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 24 [superseded] ; 24 ; >
-      au < doNotProcess ; exists ; 2023 ; International Studies: Interdisciplinary Cultural and Political Journal Volume 25 ; 25 ; >
 
   }
 
@@ -175,7 +170,6 @@
       au < finished ; frozen ; 2020 ; Logopaedica Lodziensia Volume 4 ; 4 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2021 ; Logopaedica Lodziensia Volume 5 ; 5 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; exists ; 2022 ; Logopaedica Lodziensia Volume 6 ; 6 ; >
-      au < doNotProcess ; exists ; 2023 ; Logopaedica Lodziensia Volume 7 ; 7 ; >
 
   }
 
@@ -201,7 +195,6 @@
       au < finished ; finished ; 2020 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 17 ; 17 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2021 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 18 ; 18 ; >
       au < superseded ; exists ; 2022 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 19 [superseded] ; 19 ; >
-      au < doNotProcess ; exists ; 2023 ; Multicultural Shakespeare: Translation, Appropriation and Performance Volume 20 ; 20 ; >
 
   }
 
@@ -220,7 +213,6 @@
       au < finished ; finished ; 2020 ; Research in Language Volume 18 ; 18 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2021 ; Research in Language Volume 19 ; 19 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2022 ; Research in Language Volume 20 ; 20 ; >
-      au < doNotProcess ; exists ; 2023 ; Research in Language Volume 21 ; 21 ; >
 
   }
 
