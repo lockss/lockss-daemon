@@ -88,7 +88,7 @@
     au < finished ; finished ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 (09/2019) ; 2019-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 (10/2019) ; 2019-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 (11/2019) ; 2019-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
-    au < superseded ; doesNotExist ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 (12/2019) ; 2019-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #no content
+    au < superseded ; exists ; 2019 ; 75 ; Acta Crystallographica Section E: Crystallographic Communications Volume 75 (12/2019) ; 2019-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #no content
 
     au < deepCrawl ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (01/2020) ; 2020-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < deepCrawl ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (02/2020) ; 2020-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
@@ -101,7 +101,7 @@
     au < deepCrawl ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (09/2020) ; 2020-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < deepCrawl ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (10/2020) ; 2020-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < deepCrawl ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (11/2020) ; 2020-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < superseded ; doesNotExist ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (12/2020) ; 2020-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #no content
+    au < superseded ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (12/2020) ; 2020-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #no content
 
     au < finished ; crawling ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (01/2021) ; 2021-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (02/2021) ; 2021-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
@@ -434,7 +434,7 @@
     au < finished ; finished ; 2019 ; 6 ; IUCrJ Volume 6 (09/2019) ; 2019-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2019 ; 6 ; IUCrJ Volume 6 (10/2019) ; 2019-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2019 ; 6 ; IUCrJ Volume 6 (11/2019) ; 2019-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < superseded ; doesNotExist ; 2019 ; 6 ; IUCrJ Volume 6 (12/2019) ; 2019-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #no content
+    au < superseded ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (12/2019) ; 2019-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #no content
 
     au < finished ; crawling ; 2020 ; 7 ; IUCrJ Volume 7 (01/2020) ; 2020-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; 7 ; IUCrJ Volume 7 (02/2020) ; 2020-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
@@ -446,8 +446,8 @@
     au < finished ; crawling ; 2020 ; 7 ; IUCrJ Volume 7 (08/2020) ; 2020-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; 7 ; IUCrJ Volume 7 (09/2020) ; 2020-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; 7 ; IUCrJ Volume 7 (10/2020) ; 2020-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < superseded ; doesNotExist ; 2020 ; 7 ; IUCrJ Volume 7 (11/2020) ; 2020-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #no content
-    au < superseded ; doesNotExist ; 2020 ; 7 ; IUCrJ Volume 7 (12/2020) ; 2020-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #no content
+    au < superseded ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (11/2020) ; 2020-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #no content
+    au < superseded ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (12/2020) ; 2020-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #no content
 
     au < finished ; crawling ; 2021 ; 8 ; IUCrJ Volume 8 (01/2021) ; 2021-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2021 ; 8 ; IUCrJ Volume 8 (02/2021) ; 2021-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
