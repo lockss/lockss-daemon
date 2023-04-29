@@ -220,7 +220,8 @@ public class CuMover extends Worker {
       CIProperties hdr_props = cu.getProperties();
       if (hdr_props != null) {
         ((Set<String>) ((Map) hdr_props).keySet()).forEach(
-          key -> response.addHeader(key, hdr_props.getProperty(key)));
+          key -> response.addHeader(CuMover.v2CuPropKey(key),
+                                    hdr_props.getProperty(key)));
       }
 
       Artifact uncommitted =
@@ -238,6 +239,16 @@ public class CuMover extends Worker {
        ctrs.removeInProgressDcu(CounterType.CONTENT_BYTES_MOVED, dcu);
        ctrs.removeInProgressDcu(CounterType.BYTES_MOVED, dcu);
     }
+  }
+
+  static final String FETCH_TIME_V2_LOWER =
+    CachedUrl.PROPERTY_FETCH_TIME_V2.toLowerCase();
+
+  static String v2CuPropKey(String key) {
+    if (key.equalsIgnoreCase(CachedUrl.PROPERTY_FETCH_TIME)) {
+      return FETCH_TIME_V2_LOWER;
+    }
+    return key;
   }
 
   private String respHeadersToString(HttpResponse response) {

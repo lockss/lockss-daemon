@@ -94,7 +94,11 @@ public interface CachedUrl extends CachedUrlSetNode {
   /** Local time when file collected.  *Not* derived from the Date: header
    * from the server, which is stored separately if present.  Poorly named
    * but cannot be changed. */
-  public static final String PROPERTY_FETCH_TIME = "X_Lockss-server-date";
+  public static final String PROPERTY_FETCH_TIME = "X_Lockss-server-date".toLowerCase();
+
+  /** New name for fetch time property, used in V1 only when migrating
+   * content to V2. */
+  public static String PROPERTY_FETCH_TIME_V2 = "X-Lockss-fetch-time";
 
   /** Referer header that was sent with the request for this URL, if any.
       Used by the repair crawler */

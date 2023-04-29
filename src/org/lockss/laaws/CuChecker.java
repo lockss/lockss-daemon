@@ -154,23 +154,24 @@ public class CuChecker extends Worker {
           log.debug3("V1 and V2 artifact content match.");
         }
         // Ensure each V1 header has a V2 counterpart
-        HttpResponse respHdr = artifactData.getResponseHeader();
-        if (log.isDebug2()) log.debug2("ad.getResponseHeader(): " + respHdr);
+        HttpResponse v2RespHdr = artifactData.getResponseHeader();
+        if (log.isDebug2()) log.debug2("ad.getResponseHeader(): " + v2RespHdr);
         Properties cuProps = cu.getProperties();
         for (Map.Entry ent : cuProps.entrySet()) {
           String v1Key = (String)ent.getKey();
+          String v2Key = CuMover.v2CuPropKey(v1Key);
           String v1Val = (String)ent.getValue();
-          Header firstHdr = respHdr.getFirstHeader(v1Key);
+          Header v2Hdr = v2RespHdr.getFirstHeader(v2Key);
           if (log.isDebug3()) {
             log.debug3("header: " + v1Key + ": v1: " + v1Val + ", v2: " +
-                       (firstHdr == null ? "missing" : firstHdr.getValue()));
+                       (v2Hdr == null ? "missing" : v2Hdr.getValue()));
           }
-          if (firstHdr == null) {
-            task.addError(cu.getUrl() + "V1 header '" + v1Key + "' missing from V2.");
-          } else if (!StringUtil.equalStrings(firstHdr.getValue(), v1Val)) {
+          if (v2Hdr == null) {
+            task.addError(cu.getUrl() + "V1 header '" + v2Key + "' missing from V2.");
+          } else if (!StringUtil.equalStrings(v2Hdr.getValue(), v1Val)) {
             task.addError(cu.getUrl() + "V1 header '" + v1Key
                           + "' value mismatch, V1: " + v1Val
-                          + ", V2: " + firstHdr.getValue());
+                          + ", V2: " + v2Hdr.getValue());
           }
         }
         ctrs.incr(CounterType.ARTIFACTS_VERIFIED);
