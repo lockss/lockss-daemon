@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import org.lockss.config.*;
 
 /**
@@ -89,13 +90,13 @@ public class StringPool {
   /** Create a StringPool with a name and initial size */
   public StringPool(String name, int initialSize) {
     this.name = name;
-    map = new HashMap<String,String>(initialSize);
+    map = new ConcurrentHashMap<String,String>(initialSize);
     registerPool(name, this);
   }
 
   private static void registerPool(String name, StringPool pool) {
     if (pools == null) {
-      pools = new HashMap<String,StringPool>();
+      pools = new ConcurrentHashMap<String,StringPool>();
     }
     pools.put(name, pool);
     Configuration poolConf =
