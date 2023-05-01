@@ -291,9 +291,9 @@
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
       param[base_url] = https://le.uwpress.org/
 
-      au < exists ; 2021 ; Land Economics Volume 97 ; 97 >
-      au < exists ; 2022 ; Land Economics Volume 98 ; 98 >
-      au < exists ; 2023 ; Land Economics Volume 99 ; 99 >
+      au < manifest ; 2021 ; Land Economics Volume 97 ; 97 >
+      au < manifest ; 2022 ; Land Economics Volume 98 ; 98 >
+      au < manifest ; 2023 ; Land Economics Volume 99 ; 99 >
 
       }
 
@@ -443,7 +443,7 @@
 
       au < manifest ; 2021 ; Monatshefte Volume 113 ; 113 >
       au < manifest ; 2022 ; Monatshefte Volume 114 ; 114 >
-      au < exists ; 2023 ; Monatshefte Volume 115 ; 115 >
+      au < manifest ; 2023 ; Monatshefte Volume 115 ; 115 >
 
       }
   }

@@ -581,7 +581,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; BMJ Health & Care Informatics Volume 27 ; 27 ; https://informatics.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2021 ; BMJ Health & Care Informatics Volume 28 ; 28 ; https://informatics.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; BMJ Health & Care Informatics Volume 29 ; 29 ; https://informatics.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2023 ; BMJ Health & Care Informatics Volume 30 ; 30 ; https://informatics.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2023 ; BMJ Health & Care Informatics Volume 30 ; 30 ; https://informatics.bmj.com/ >
 
   }
 
@@ -669,7 +669,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; BMJ Open Ophthalmology Volume 5 ; 5 ; https://bmjophth.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2021 ; BMJ Open Ophthalmology Volume 6 ; 6 ; https://bmjophth.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; BMJ Open Ophthalmology Volume 7 ; 7 ; https://bmjophth.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2023 ; BMJ Open Ophthalmology Volume 8 ; 8 ; https://bmjophth.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2023 ; BMJ Open Ophthalmology Volume 8 ; 8 ; https://bmjophth.bmj.com/ >
 
   }
   
@@ -690,7 +690,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; BMJ Open Respiratory Research Volume 7 ; 7 ; https://bmjopenrespres.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2021 ; BMJ Open Respiratory Research Volume 8 ; 8 ; https://bmjopenrespres.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; BMJ Open Respiratory Research Volume 9 ; 9 ; https://bmjopenrespres.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2023 ; BMJ Open Respiratory Research Volume 10 ; 10 ; https://bmjopenrespres.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2023 ; BMJ Open Respiratory Research Volume 10 ; 10 ; https://bmjopenrespres.bmj.com/ >
 
   }
   
@@ -714,7 +714,7 @@
       au < bmj.BMJDrupalPlugin ; released ; 2020 ; BMJ Quality Improvement Reports Volume 9 ; 9 ; https://bmjopenquality.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2021 ; BMJ Quality Improvement Reports Volume 10 ; 10 ; https://bmjopenquality.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; BMJ Quality Improvement Reports Volume 11 ; 11 ; https://bmjopenquality.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; exists ; 2023 ; BMJ Quality Improvement Reports Volume 12 ; 12 ; https://bmjopenquality.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 2023 ; BMJ Quality Improvement Reports Volume 12 ; 12 ; https://bmjopenquality.bmj.com/ >
 
     }
 
@@ -1184,7 +1184,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; OpenHeart Volume 7 ; 7 ; https://openheart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2021 ; OpenHeart Volume 8 ; 8 ; https://openheart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; OpenHeart Volume 9 ; 9 ; https://openheart.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2023 ; OpenHeart Volume 10 ; 10 ; https://openheart.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2023 ; OpenHeart Volume 10 ; 10 ; https://openheart.bmj.com/ >
 
   }
 
@@ -2335,7 +2335,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < bmj.BMJDrupalPlugin ; released ; 2020 ; Lupus Science & Medicine Volume 7 ; 7 ; https://lupus.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2021 ; Lupus Science & Medicine Volume 8 ; 8 ; https://lupus.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; Lupus Science & Medicine Volume 9 ; 9 ; https://lupus.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; exists ; 2023 ; Lupus Science & Medicine Volume 10 ; 10 ; https://lupus.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 2023 ; Lupus Science & Medicine Volume 10 ; 10 ; https://lupus.bmj.com/ >
 
     }
     
@@ -2737,7 +2737,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; RMD Open Volume 6 ; 6 ; https://rmdopen.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2021 ; RMD Open Volume 7 ; 7 ; https://rmdopen.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; RMD Open Volume 8 ; 8 ; https://rmdopen.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; exists ; 2023 ; RMD Open Volume 9 ; 9 ; https://rmdopen.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2023 ; RMD Open Volume 9 ; 9 ; https://rmdopen.bmj.com/ >
 
   }
 
