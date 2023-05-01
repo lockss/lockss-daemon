@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>14</string>
+        <string>15</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -52,11 +52,15 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>15</string>
+        <string>16</string>
     </entry>
     <entry>
         <string>au_name</string>
         <string>"GeoScienceWorld Journals Plugin, Base URL %s, Journal ID %s, Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
+    </entry>
+    <entry>
+        <string>text/html_link_extractor_factory</string>
+        <string>org.lockss.plugin.silverchair.geoscienceworld.GeoscienceWorldLinkExtractorFactory</string>
     </entry>
     <entry>
         <string>plugin_cache_result_list</string>

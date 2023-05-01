@@ -53,6 +53,10 @@ public class SilverchairCommonThemeHtmlHashFilterFactory implements FilterFactor
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "authornotes-section-wrapper"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "permissionstatement-section-wrapper"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "toolbar-wrap"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "global-nav"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "new-and-popular"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "global-footer-link-wrap"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "issue-browse-top"),
             
     };
 
