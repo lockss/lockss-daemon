@@ -1,7 +1,13 @@
 {
 
   publisher <
-    name = Organisation for Economic Co-operation and Development
+    name = Organisation for Economic Co-operation and Development ;
+    info[contract] = 2023 ;
+    info[back] = 1955 ;
+    info[min_year] = 1955 ;
+    info[tester] = 1 ;
+    info[poller] = 1 ;
+    info[platform] = ClockssOecdBooksPlugin
   >
   
   # Generated 2023-04-25 03:27:33.586616
