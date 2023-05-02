@@ -5,13 +5,13 @@
     #name = Global Alliance Against Traffic in Women ;
     info[contract] = 2013 ;
     info[back] = 2012 ;
+    info[min_year] = 2012 ;
     info[tester] = 8 ;
     info[poller] = 8
   >
   
      implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
 
- 
   {
   
     title < 
