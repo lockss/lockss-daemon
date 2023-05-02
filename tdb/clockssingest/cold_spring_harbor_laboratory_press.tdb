@@ -32,7 +32,7 @@
       au < finished ; finished ; 2020 ; Cold Spring Harbor Molecular Case Studies Volume 6 ; 6 ; http://molecularcasestudies.cshlp.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2021 ; Cold Spring Harbor Molecular Case Studies Volume 7 ; 7 ; http://molecularcasestudies.cshlp.org/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2022 ; Cold Spring Harbor Molecular Case Studies Volume 8 [superseded] ; 8 ; http://molecularcasestudies.cshlp.org/ ; >
-      au < crawling ; exists ; 2022 ; Cold Spring Harbor Molecular Case Studies Volume 8 ; 8 ; https://molecularcasestudies.cshlp.org/ ; >
+      au < frozen ; exists ; 2022 ; Cold Spring Harbor Molecular Case Studies Volume 8 ; 8 ; https://molecularcasestudies.cshlp.org/ ; >
       au < manifest ; exists ; 2023 ; Cold Spring Harbor Molecular Case Studies Volume 9 ; 9 ; https://molecularcasestudies.cshlp.org/ ; >
 
     }

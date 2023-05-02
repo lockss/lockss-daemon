@@ -352,7 +352,7 @@
       au < frozen ; exists ; 2015 ; Jurnal Administrasi Kesehatan Indonesia Volume 3 ; 3 ; 2015 ; >
       au < frozen ; exists ; 2016 ; Jurnal Administrasi Kesehatan Indonesia Volume 4 ; 4 ; 2016 ; >
       au < frozen ; exists ; 2017 ; Jurnal Administrasi Kesehatan Indonesia Volume 5 ; 5 ; 2017 ; >
-      au < crawling ; exists ; 2018 ; Jurnal Administrasi Kesehatan Indonesia Volume 6 ; 6 ; 2018 ; >
+      au < frozen ; exists ; 2018 ; Jurnal Administrasi Kesehatan Indonesia Volume 6 ; 6 ; 2018 ; >
       au < frozen ; exists ; 2019 ; Jurnal Administrasi Kesehatan Indonesia Volume 7 ; 7 ; 2019 ; >
       au < finished ; finished ; 2020 ; Jurnal Administrasi Kesehatan Indonesia Volume 8 ; 8 ; 2020 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; Jurnal Administrasi Kesehatan Indonesia Volume 9 ; 9 ; 2021 ; reingest4.clockss.org:8082 >
@@ -371,14 +371,14 @@
       param[journal_id] = JIPK
 
       au < finished ; finished ; 2011 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 3 ; 3 ; 2011 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2012 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 4 ; 4 ; 2012 ; >
-      au < crawling ; exists ; 2013 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 5 ; 5 ; 2013 ; >
-      au < crawling ; exists ; 2014 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 6 ; 6 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 7 ; 7 ; 2015 ; >
-      au < crawling ; exists ; 2016 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 8 ; 8 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 9 ; 9 ; 2017 ; >
-      au < crawling ; exists ; 2018 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 10 ; 10 ; 2018 ; >
-      au < crawling ; exists ; 2019 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 11 ; 11 ; 2019 ; >
+      au < frozen ; exists ; 2012 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 4 ; 4 ; 2012 ; >
+      au < frozen ; exists ; 2013 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 5 ; 5 ; 2013 ; >
+      au < frozen ; exists ; 2014 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 6 ; 6 ; 2014 ; >
+      au < frozen ; exists ; 2015 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 7 ; 7 ; 2015 ; >
+      au < frozen ; exists ; 2016 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 8 ; 8 ; 2016 ; >
+      au < frozen ; exists ; 2017 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 9 ; 9 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 10 ; 10 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 11 ; 11 ; 2019 ; >
       au < finished ; crawling ; 2020 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 12 ; 12 ; 2020 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2021 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 13 ; 13 ; 2021 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 14 ; 14 ; 2022 ; >
@@ -395,7 +395,7 @@
 
       param[journal_id] = AMNT
 
-      au < crawling ; exists ; 2017 ; Amerta Nutrition Volume 1 ; 1 ; 2017 ; >
+      au < frozen ; exists ; 2017 ; Amerta Nutrition Volume 1 ; 1 ; 2017 ; >
       au < finished ; finished ; 2018 ; Amerta Nutrition Volume 2 ; 2 ; 2018 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; Amerta Nutrition Volume 3 ; 3 ; 2019 ; >
       au < finished ; crawling ; 2020 ; Amerta Nutrition Volume 4 ; 4 ; 2020 ; reingest1.clockss.org:8082 >
@@ -413,11 +413,11 @@
 
       param[journal_id] = RLJ
 
-      au < crawling ; exists ; 2015 ; Record and Library Journal Volume 1 ; 1 ; 2015 ; >
-      au < crawling ; exists ; 2016 ; Record and Library Journal Volume 2 ; 2 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; Record and Library Journal Volume 3 ; 3 ; 2017 ; >
+      au < frozen ; exists ; 2015 ; Record and Library Journal Volume 1 ; 1 ; 2015 ; >
+      au < frozen ; exists ; 2016 ; Record and Library Journal Volume 2 ; 2 ; 2016 ; >
+      au < frozen ; exists ; 2017 ; Record and Library Journal Volume 3 ; 3 ; 2017 ; >
       au < finished ; finished ; 2018 ; Record and Library Journal Volume 4 ; 4 ; 2018 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2019 ; Record and Library Journal Volume 5 ; 5 ; 2019 ; >
+      au < frozen ; exists ; 2019 ; Record and Library Journal Volume 5 ; 5 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Record and Library Journal Volume 6 ; 6 ; 2020 ; >
       au < finished ; crawling ; 2021 ; Record and Library Journal Volume 7 ; 7 ; 2021 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; Record and Library Journal Volume 8 ; 8 ; 2022 ; >
@@ -434,10 +434,10 @@
 
       param[journal_id] = JEBIS
 
-      au < crawling ; exists ; 2015 ; Jurnal Ekonomi dan Bisnis Islam Volume 1 ; 1 ; 2015 ; >
-      au < crawling ; exists ; 2016 ; Jurnal Ekonomi dan Bisnis Islam Volume 2 ; 2 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; Jurnal Ekonomi dan Bisnis Islam Volume 3 ; 3 ; 2017 ; >
-      au < crawling ; exists ; 2018 ; Jurnal Ekonomi dan Bisnis Islam Volume 4 ; 4 ; 2018 ; >
+      au < frozen ; exists ; 2015 ; Jurnal Ekonomi dan Bisnis Islam Volume 1 ; 1 ; 2015 ; >
+      au < frozen ; exists ; 2016 ; Jurnal Ekonomi dan Bisnis Islam Volume 2 ; 2 ; 2016 ; >
+      au < frozen ; exists ; 2017 ; Jurnal Ekonomi dan Bisnis Islam Volume 3 ; 3 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; Jurnal Ekonomi dan Bisnis Islam Volume 4 ; 4 ; 2018 ; >
       au < finished ; finished ; 2019 ; Jurnal Ekonomi dan Bisnis Islam Volume 5 ; 5 ; 2019 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Jurnal Ekonomi dan Bisnis Islam Volume 6 ; 6 ; 2020 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; Jurnal Ekonomi dan Bisnis Islam Volume 7 ; 7 ; 2021 ; reingest5.clockss.org:8082 >
@@ -460,13 +460,13 @@
       au < manifest ; exists ; 2010 ; Jurnal Manajemen Teori dan Terapan Volume 3 ; 3 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Jurnal Manajemen Teori dan Terapan Volume 4 ; 4 ; 2011 ; >
       au < finished ; frozen ; 2012 ; Jurnal Manajemen Teori dan Terapan Volume 5 ; 5 ; 2012 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2013 ; Jurnal Manajemen Teori dan Terapan Volume 6 ; 6 ; 2013 ; >
-      au < crawling ; exists ; 2014 ; Jurnal Manajemen Teori dan Terapan Volume 7 ; 7 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; Jurnal Manajemen Teori dan Terapan Volume 8 ; 8 ; 2015 ; >
-      au < crawling ; exists ; 2016 ; Jurnal Manajemen Teori dan Terapan Volume 9 ; 9 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; Jurnal Manajemen Teori dan Terapan Volume 10 ; 10 ; 2017 ; >
-      au < crawling ; exists ; 2018 ; Jurnal Manajemen Teori dan Terapan Volume 11 ; 11 ; 2018 ; >
-      au < crawling ; exists ; 2019 ; Jurnal Manajemen Teori dan Terapan Volume 12 ; 12 ; 2019 ; >
+      au < frozen ; exists ; 2013 ; Jurnal Manajemen Teori dan Terapan Volume 6 ; 6 ; 2013 ; >
+      au < frozen ; exists ; 2014 ; Jurnal Manajemen Teori dan Terapan Volume 7 ; 7 ; 2014 ; >
+      au < frozen ; exists ; 2015 ; Jurnal Manajemen Teori dan Terapan Volume 8 ; 8 ; 2015 ; >
+      au < frozen ; exists ; 2016 ; Jurnal Manajemen Teori dan Terapan Volume 9 ; 9 ; 2016 ; >
+      au < frozen ; exists ; 2017 ; Jurnal Manajemen Teori dan Terapan Volume 10 ; 10 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; Jurnal Manajemen Teori dan Terapan Volume 11 ; 11 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; Jurnal Manajemen Teori dan Terapan Volume 12 ; 12 ; 2019 ; >
       au < finished ; crawling ; 2020 ; Jurnal Manajemen Teori dan Terapan Volume 13 ; 13 ; 2020 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; Jurnal Manajemen Teori dan Terapan Volume 14 ; 14 ; 2021 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2022 ; Jurnal Manajemen Teori dan Terapan Volume 15 ; 15 ; 2022 ; >
@@ -484,9 +484,9 @@
       param[journal_id] = JKR
 
       au < finished ; finished ; 2016 ; Jurnal Kimia Riset Volume 1 ; 1 ; 2016 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2017 ; Jurnal Kimia Riset Volume 2 ; 2 ; 2017 ; >
-      au < crawling ; exists ; 2018 ; Jurnal Kimia Riset Volume 3 ; 3 ; 2018 ; >
-      au < crawling ; exists ; 2019 ; Jurnal Kimia Riset Volume 4 ; 4 ; 2019 ; >
+      au < frozen ; exists ; 2017 ; Jurnal Kimia Riset Volume 2 ; 2 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; Jurnal Kimia Riset Volume 3 ; 3 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; Jurnal Kimia Riset Volume 4 ; 4 ; 2019 ; >
       au < finished ; crawling ; 2020 ; Jurnal Kimia Riset Volume 5 ; 5 ; 2020 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2021 ; Jurnal Kimia Riset Volume 6 ; 6 ; 2021 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2022 ; Jurnal Kimia Riset Volume 7 ; 7 ; 2022 ; >
