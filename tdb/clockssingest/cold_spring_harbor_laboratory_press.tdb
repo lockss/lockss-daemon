@@ -151,96 +151,97 @@
       issnl = 0091-7451
     >
 
-    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
 
    {
-      param[base_url] = http://symposium.cshlp.org/
+      #param[base_url] = http://symposium.cshlp.org/
       comment[publishing_date] = This journal is published in June of the following year. Nothing published after 2019.
 
-      au < finished ; finished ; 1933 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 1 ; 1 ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 1934 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 2 ; 2 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 1935 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 3 ; 3 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 1936 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 4 ; 4 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 1937 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 5 ; 5 ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 1938 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 6 ; 6 ; reingest4.clockss.org:8082 >#not i2 or i3
-      au < finished ; finished ; 1939 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 7 ; 7 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 1940 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 8 ; 8 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 1941 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 9 ; 9 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 1942 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 10 ; 10 ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 1946 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 11 ; 11 ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 1947 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 12 ; 12 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 1948 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 13 ; 13 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 1949 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 14 ; 14 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 1950 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 15 ; 15 ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 1951 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 16 ; 16 ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 1952 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 17 ; 17 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 1953 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 18 ; 18 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 1954 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 19 ; 19 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 1955 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 20 ; 20 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 1956 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 21 ; 21 ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 1957 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 22 ; 22 ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 1958 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 23 ; 23 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 1959 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 24 ; 24 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 1960 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 25 ; 25 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 1961 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 26 ; 26 ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 1962 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 27 ; 27 ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 1963 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 28 ; 28 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 1964 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 29 ; 29 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 1965 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 30 ; 30 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 1966 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 31 ; 31 ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 1967 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 32 ; 32 ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 1968 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 33 ; 33 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 1969 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 34 ; 34 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 1970 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 35 ; 35 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 1971 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 36 ; 36 ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 1972 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 37 ; 37 ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 1973 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 38 ; 38 ; reingest5.clockss.org:8082 >#not i2 or i3
-      au < finished ; finished ; 1974 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 39 ; 39 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 1975 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 40 ; 40 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 1976 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 41 ; 41 ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 1977 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 42 ; 42 ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 1978 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 43 ; 43 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 1979 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 44 ; 44 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 1980 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 45 ; 45 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 1981 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 46 ; 46 ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 1982 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 47 ; 47 ; reingest4.clockss.org:8082 >#not i2 or i3
-      au < finished ; finished ; 1983 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 48 ; 48 ; reingest5.clockss.org:8082 >#not i2 or i3
-      au < finished ; finished ; 1984 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 49 ; 49 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 1985 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 50 ; 50 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 1986 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 51 ; 51 ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 1987 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 52 ; 52 ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 1988 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 53 ; 53 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 1989 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 54 ; 54 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 1990 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 55 ; 55 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 1991 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 56 ; 56 ; reingest5.clockss.org:8082 >#not i2 or i3
-      au < finished ; finished ; 1992 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 57 ; 57 ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 1993 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 58 ; 58 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 1994 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 59 ; 59 ; reingest1.clockss.org:8082 >#not i2 or i3
-      au < finished ; finished ; 1995 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 60 ; 60 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 1996 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 61 ; 61 ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 1997 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 62 ; 62 ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 1998 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 63 ; 63 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 1999 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 64 ; 64 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2000 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 65 ; 65 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2001 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 66 ; 66 ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2002 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 67 ; 67 ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2003 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 68 ; 68 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2004 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 69 ; 69 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2005 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 70 ; 70 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2006 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 71 ; 71 ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2007 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 72 ; 72 ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2008 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 73 ; 73 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2009 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 74 ; 74 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2010 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 75 ; 75 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2011 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 76 ; 76 ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2012 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 77 ; 77 ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2013 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 78 ; 78 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2014 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 79 ; 79 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2015 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 80 ; 80 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2016 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 81 ; 81 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2017 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 82 ; 82 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2018 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 83 ; 83 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 84 ; 84 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 1933 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 1 ; 1 ; http://symposium.cshlp.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 1934 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 2 ; 2 ; http://symposium.cshlp.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 1935 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 3 ; 3 ; http://symposium.cshlp.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1936 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 4 ; 4 ; http://symposium.cshlp.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1937 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 5 ; 5 ; http://symposium.cshlp.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 1938 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 6 ; 6 ; http://symposium.cshlp.org/ ; reingest4.clockss.org:8082 >#not i2 or i3
+      au < finished ; finished ; 1939 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 7 ; 7 ; http://symposium.cshlp.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 1940 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 8 ; 8 ; http://symposium.cshlp.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1941 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 9 ; 9 ; http://symposium.cshlp.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1942 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 10 ; 10 ; http://symposium.cshlp.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 1946 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 11 ; 11 ; http://symposium.cshlp.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 1947 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 12 ; 12 ; http://symposium.cshlp.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 1948 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 13 ; 13 ; http://symposium.cshlp.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1949 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 14 ; 14 ; http://symposium.cshlp.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1950 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 15 ; 15 ; http://symposium.cshlp.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 1951 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 16 ; 16 ; http://symposium.cshlp.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 1952 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 17 ; 17 ; http://symposium.cshlp.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 1953 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 18 ; 18 ; http://symposium.cshlp.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1954 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 19 ; 19 ; http://symposium.cshlp.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1955 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 20 ; 20 ; http://symposium.cshlp.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 1956 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 21 ; 21 ; http://symposium.cshlp.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 1957 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 22 ; 22 ; http://symposium.cshlp.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 1958 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 23 ; 23 ; http://symposium.cshlp.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 1959 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 24 ; 24 ; http://symposium.cshlp.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1960 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 25 ; 25 ; http://symposium.cshlp.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1961 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 26 ; 26 ; http://symposium.cshlp.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 1962 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 27 ; 27 ; http://symposium.cshlp.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 1963 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 28 ; 28 ; http://symposium.cshlp.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 1964 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 29 ; 29 ; http://symposium.cshlp.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1965 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 30 ; 30 ; http://symposium.cshlp.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1966 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 31 ; 31 ; http://symposium.cshlp.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 1967 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 32 ; 32 ; http://symposium.cshlp.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 1968 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 33 ; 33 ; http://symposium.cshlp.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 1969 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 34 ; 34 ; http://symposium.cshlp.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1970 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 35 ; 35 ; http://symposium.cshlp.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1971 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 36 ; 36 ; http://symposium.cshlp.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 1972 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 37 ; 37 ; http://symposium.cshlp.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 1973 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 38 ; 38 ; http://symposium.cshlp.org/ ; reingest5.clockss.org:8082 >#not i2 or i3
+      au < finished ; finished ; 1974 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 39 ; 39 ; http://symposium.cshlp.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1975 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 40 ; 40 ; http://symposium.cshlp.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1976 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 41 ; 41 ; http://symposium.cshlp.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 1977 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 42 ; 42 ; http://symposium.cshlp.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 1978 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 43 ; 43 ; http://symposium.cshlp.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 1979 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 44 ; 44 ; http://symposium.cshlp.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1980 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 45 ; 45 ; http://symposium.cshlp.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1981 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 46 ; 46 ; http://symposium.cshlp.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 1982 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 47 ; 47 ; http://symposium.cshlp.org/ ; reingest4.clockss.org:8082 >#not i2 or i3
+      au < finished ; finished ; 1983 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 48 ; 48 ; http://symposium.cshlp.org/ ; reingest5.clockss.org:8082 >#not i2 or i3
+      au < finished ; finished ; 1984 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 49 ; 49 ; http://symposium.cshlp.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1985 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 50 ; 50 ; http://symposium.cshlp.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1986 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 51 ; 51 ; http://symposium.cshlp.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 1987 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 52 ; 52 ; http://symposium.cshlp.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 1988 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 53 ; 53 ; http://symposium.cshlp.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 1989 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 54 ; 54 ; http://symposium.cshlp.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1990 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 55 ; 55 ; http://symposium.cshlp.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1991 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 56 ; 56 ; http://symposium.cshlp.org/ ; reingest5.clockss.org:8082 >#not i2 or i3
+      au < finished ; finished ; 1992 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 57 ; 57 ; http://symposium.cshlp.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 1993 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 58 ; 58 ; http://symposium.cshlp.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 1994 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 59 ; 59 ; http://symposium.cshlp.org/ ; reingest1.clockss.org:8082 >#not i2 or i3
+      au < finished ; finished ; 1995 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 60 ; 60 ; http://symposium.cshlp.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1996 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 61 ; 61 ; http://symposium.cshlp.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 1997 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 62 ; 62 ; http://symposium.cshlp.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 1998 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 63 ; 63 ; http://symposium.cshlp.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 1999 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 64 ; 64 ; http://symposium.cshlp.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2000 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 65 ; 65 ; http://symposium.cshlp.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2001 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 66 ; 66 ; http://symposium.cshlp.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2002 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 67 ; 67 ; http://symposium.cshlp.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2003 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 68 ; 68 ; http://symposium.cshlp.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2004 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 69 ; 69 ; http://symposium.cshlp.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2005 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 70 ; 70 ; http://symposium.cshlp.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2006 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 71 ; 71 ; http://symposium.cshlp.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2007 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 72 ; 72 ; http://symposium.cshlp.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2008 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 73 ; 73 ; http://symposium.cshlp.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 74 ; 74 ; http://symposium.cshlp.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 75 ; 75 ; http://symposium.cshlp.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2011 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 76 ; 76 ; http://symposium.cshlp.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2012 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 77 ; 77 ; http://symposium.cshlp.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 78 ; 78 ; http://symposium.cshlp.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 79 ; 79 ; http://symposium.cshlp.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 80 ; 80 ; http://symposium.cshlp.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 81 ; 81 ; http://symposium.cshlp.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 82 ; 82 ; http://symposium.cshlp.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2018 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 83 ; 83 ; http://symposium.cshlp.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 84 ; 84 ; http://symposium.cshlp.org/ ; reingest3.clockss.org:8083 >
+      au < exists ; exists ; 2020 ; Cold Spring Harbor Symposia on Quantitative Biology Volume 85 ; 85 ; https://symposium.cshlp.org/ ; >
       #Nothing published after 2019 as of 3/27/2023
     }
 
