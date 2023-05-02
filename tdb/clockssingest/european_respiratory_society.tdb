@@ -141,7 +141,7 @@
       au < ers.ClockssERSDrupalPlugin ; deepCrawl ; exists ; 2022 ; European Respiratory Journal Volume 59 ; 59 ; https://erj.ersjournals.com/ ; >
       au < ers.ClockssERSDrupalPlugin ; deepCrawl ; exists ; 2022 ; European Respiratory Journal Volume 60 ; 60 ; https://erj.ersjournals.com/ ; >
       au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2023 ; European Respiratory Journal Volume 61 ; 61 ; https://erj.ersjournals.com/ ; >
-      au < ers.ClockssERSDrupalPlugin ; exists ; exists ; 2023 ; European Respiratory Journal Volume 62 ; 62 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSDrupalPlugin ; expected ; exists ; 2023 ; European Respiratory Journal Volume 62 ; 62 ; https://erj.ersjournals.com/ ; >
 
     }
 
