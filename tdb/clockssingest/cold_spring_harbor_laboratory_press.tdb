@@ -97,7 +97,7 @@
       au < deepCrawl ; exists ; 2020 ; Cold Spring Harbor Perspectives in Medicine Volume 10 ; 10 ; http://perspectivesinmedicine.cshlp.org/ ; >
       au < deepCrawl ; exists ; 2021 ; Cold Spring Harbor Perspectives in Medicine Volume 11 ; 11 ; http://perspectivesinmedicine.cshlp.org/ ; >
       au < superseded ; exists ; 2022 ; Cold Spring Harbor Perspectives in Medicine Volume 12 [superseded] ; 12 ; http://perspectivesinmedicine.cshlp.org/ ; >
-      au < crawling ; exists ; 2022 ; Cold Spring Harbor Perspectives in Medicine Volume 12 ; 12 ; https://perspectivesinmedicine.cshlp.org/ ; >
+      au < frozen ; exists ; 2022 ; Cold Spring Harbor Perspectives in Medicine Volume 12 ; 12 ; https://perspectivesinmedicine.cshlp.org/ ; >
       au < manifest ; exists ; 2023 ; Cold Spring Harbor Perspectives in Medicine Volume 13 ; 13 ; https://perspectivesinmedicine.cshlp.org/ ; >
 
     }
@@ -298,7 +298,7 @@
       au < finished ; frozen ; 2020 ; Genes & Development Volume 34 ; 34 ; http://genesdev.cshlp.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Genes & Development Volume 35 ; 35 ; http://genesdev.cshlp.org/ ; >
       au < superseded ; exists ; 2022 ; Genes & Development Volume 36 [superseded] ; 36 ; http://genesdev.cshlp.org/ ; >
-      au < crawling ; exists ; 2022 ; Genes & Development Volume 36 ; 36 ; https://genesdev.cshlp.org/ ; >
+      au < frozen ; exists ; 2022 ; Genes & Development Volume 36 ; 36 ; https://genesdev.cshlp.org/ ; >
       au < manifest ; exists ; 2023 ; Genes & Development Volume 37 ; 37 ; https://genesdev.cshlp.org/ ; >
 
     }
@@ -399,7 +399,7 @@
       au < finished ; finished ; 2019 ; Learning & Memory Volume 26 ; 26 ; http://learnmem.cshlp.org/ ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; Learning & Memory Volume 27 ; 27 ; http://learnmem.cshlp.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Learning & Memory Volume 28 ; 28 ; http://learnmem.cshlp.org/ ; >
-      au < crawling ; exists ; 2022 ; Learning & Memory Volume 29 ; 29 ; https://learnmem.cshlp.org/ ; >
+      au < frozen ; exists ; 2022 ; Learning & Memory Volume 29 ; 29 ; https://learnmem.cshlp.org/ ; >
       au < manifest ; exists ; 2023 ; Learning & Memory Volume 30 ; 30 ; https://learnmem.cshlp.org/ ; >
 
     }
