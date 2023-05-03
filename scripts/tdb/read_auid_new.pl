@@ -2432,12 +2432,12 @@ while (my $line = <>) {
     if ($resp->is_success && $p_resp->is_success) {
       my $man_contents = $resp->content;
       my $perm_contents = $p_resp->content;
-      #my $has_no_chapters = "Chapters \\(0\\)";
       if ($req->url ne $resp->request->uri) {
               $vol_title = $resp->request->uri;
               $result = "Redirected";
       } elsif (defined($man_contents) && ($perm_contents =~ m/$clockss_tag/)) {
-        if ($man_contents =~ m/01.xhtml/ || $man_contents =~ m/locale=en#page=/ || $man_contents =~ m/chapter01/ || $man_contents =~ m/chapter1/) {
+        #if ($man_contents =~ m/01.xhtml/ || $man_contents =~ m/locale=en#page=/ || $man_contents =~ m/chapter01/ || $man_contents =~ m/chapter1/) {
+        if (($man_contents !~ m/Your institution does not have access to this book/) && ($man_contents =~ m/locale=en/) && ($man_contents =~ m/Access to this book has been provided by your Library/ || ($man_contents =~ m/Open Access/ && $man_contents =~ m/\(open access\)/ ) )) {
           if ($man_contents =~ m/<title>\s*(\S[^<]*\S)\s*<\/title>/si) {
             $vol_title = $1;
             $vol_title =~ s/\s*\n\s*/ /g;
