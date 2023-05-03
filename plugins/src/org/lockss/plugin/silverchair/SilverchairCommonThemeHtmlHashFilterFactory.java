@@ -57,6 +57,7 @@ public class SilverchairCommonThemeHtmlHashFilterFactory implements FilterFactor
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "new-and-popular"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "global-footer-link-wrap"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "issue-browse-top"),
+            HtmlNodeFilters.tagWithAttributeRegex("li", "class", "geoRef-coordinate"),
             
     };
 

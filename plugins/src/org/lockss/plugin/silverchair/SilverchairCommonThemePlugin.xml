@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>16</string>
+        <string>17</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -148,7 +148,7 @@
 
             Rockefeller: https://rupress.org/jem/article-pdf/215/1/1/1018472/jem_20172022.pdf
             -->
-            <string>1,"%s([^/]+/)?%s/article-pdf/%s/.*\.pdf$", base_url, journal_id, volume_name</string>
+            <string>1,"%s([^/]+/)?%s/article-pdf/(doi/[^/]+/)?%s/.*\.pdf$", base_url, journal_id, volume_name</string>
             <!--
                 citationFormat=0 // ris
                 citationFormat=1 // Endnote
