@@ -398,9 +398,10 @@
     #param[base_url] = http://www.jchimp.net/
 
     param[journal_id] = zjch20
+    #move to BePress
 
-    au < doNotProcess ; 2011 ; Journal of Community Hospital Internal Medicine Perspectives Volume 1 ; 1 ; https://www.tandfonline.com/ >
-    au < doNotProcess ; 2012 ; Journal of Community Hospital Internal Medicine Perspectives Volume 2 ; 2 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2011-2012 ; Journal of Community Hospital Internal Medicine Perspectives Volume 1 ; 1 ; https://www.tandfonline.com/ >
+    au < doNotProcess ; 2012-2013 ; Journal of Community Hospital Internal Medicine Perspectives Volume 2 ; 2 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2013 ; Journal of Community Hospital Internal Medicine Perspectives Volume 3 ; 3 ; https://www.tandfonline.com/ >
     au < released ; 2014 ; Journal of Community Hospital Internal Medicine Perspectives Volume 4 ; 4 ; http://www.tandfonline.com/ >
     au < doNotProcess ; 2015 ; Journal of Community Hospital Internal Medicine Perspectives Volume 5 ; 5 ; https://www.tandfonline.com/ >
