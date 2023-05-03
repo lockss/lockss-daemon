@@ -23,17 +23,17 @@
 
     param[journal_abbr] = egyspinej
 
-    au < manifest ; exists ; 2012 ; Egyptian Spine Journal Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2013 ; Egyptian Spine Journal Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2014 ; Egyptian Spine Journal Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2015 ; Egyptian Spine Journal Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2016 ; Egyptian Spine Journal Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2017 ; Egyptian Spine Journal Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2018 ; Egyptian Spine Journal Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2019 ; Egyptian Spine Journal Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2020 ; Egyptian Spine Journal Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2021 ; Egyptian Spine Journal Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2022 ; Egyptian Spine Journal Volume 11 ; 11 ; >
+    au < testing ; exists ; 2012 ; Egyptian Spine Journal Volume 1 ; 1 ; >
+    au < testing ; exists ; 2013 ; Egyptian Spine Journal Volume 2 ; 2 ; >
+    au < testing ; exists ; 2014 ; Egyptian Spine Journal Volume 3 ; 3 ; >
+    au < testing ; exists ; 2015 ; Egyptian Spine Journal Volume 4 ; 4 ; >
+    au < testing ; exists ; 2016 ; Egyptian Spine Journal Volume 5 ; 5 ; >
+    au < testing ; exists ; 2017 ; Egyptian Spine Journal Volume 6 ; 6 ; >
+    au < testing ; exists ; 2018 ; Egyptian Spine Journal Volume 7 ; 7 ; >
+    au < testing ; exists ; 2019 ; Egyptian Spine Journal Volume 8 ; 8 ; >
+    au < testing ; exists ; 2020 ; Egyptian Spine Journal Volume 9 ; 9 ; >
+    au < testing ; exists ; 2021 ; Egyptian Spine Journal Volume 10 ; 10 ; >
+    au < testing ; exists ; 2022 ; Egyptian Spine Journal Volume 11 ; 11 ; >
     au < manifest ; exists ; 2023 ; Egyptian Spine Journal Volume 12 ; 12 ; >
 
   }
