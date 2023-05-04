@@ -32,7 +32,7 @@
   {
   
     title < 
-      name = Annales de l’Institut Henri Poincaré D ;
+      name = Annales de l'Institut Henri Poincaré D ;
       issn = 2308-5827 ;
       eissn = 2308-5835 
       
@@ -41,15 +41,15 @@
     param[journal_issn] = 2308-5827
     comment[journal_id] = aihpd
     
-    au < down ; 2014 ; Annales de l’Institut Henri Poincaré D Volume 1 ; 1 >
-    au < down ; 2015 ; Annales de l’Institut Henri Poincaré D Volume 2 ; 2 >
-    au < down ; 2016 ; Annales de l’Institut Henri Poincaré D Volume 3 ; 3 >
-    au < down ; 2017 ; Annales de l’Institut Henri Poincaré D Volume 4 ; 4 >
-    au < down ; 2018 ; Annales de l’Institut Henri Poincaré D Volume 5 ; 5 >
-    au < down ; 2019 ; Annales de l’Institut Henri Poincaré D Volume 6 ; 6 >
-    au < down ; 2020 ; Annales de l’Institut Henri Poincaré D Volume 7 ; 7 >
-    au < down ; 2021 ; Annales de l’Institut Henri Poincaré D Volume 8 ; 8 >
-    au < doNotProcess ; 2022 ; Annales de l’Institut Henri Poincaré D Volume 9 ; 9 >
+    au < down ; 2014 ; Annales de l'Institut Henri Poincaré D Volume 1 ; 1 >
+    au < down ; 2015 ; Annales de l'Institut Henri Poincaré D Volume 2 ; 2 >
+    au < down ; 2016 ; Annales de l'Institut Henri Poincaré D Volume 3 ; 3 >
+    au < down ; 2017 ; Annales de l'Institut Henri Poincaré D Volume 4 ; 4 >
+    au < down ; 2018 ; Annales de l'Institut Henri Poincaré D Volume 5 ; 5 >
+    au < down ; 2019 ; Annales de l'Institut Henri Poincaré D Volume 6 ; 6 >
+    au < down ; 2020 ; Annales de l'Institut Henri Poincaré D Volume 7 ; 7 >
+    au < down ; 2021 ; Annales de l'Institut Henri Poincaré D Volume 8 ; 8 >
+    au < doNotProcess ; 2022 ; Annales de l'Institut Henri Poincaré D Volume 9 ; 9 >
 
   }
 
@@ -372,7 +372,7 @@
   {
   
     title < 
-      name = L’Enseignement Mathématique ;
+      name = L'Enseignement Mathématique ;
       issn = 0013-8584 ;
       eissn = 2309-4672 
       
@@ -381,20 +381,20 @@
     param[journal_issn] = 0013-8584
     comment[journal_id] = lem
 
-    au < doNotProcess ; 2009 ; L’Enseignement Mathématique Volume 55 ; 55 >
-    au < down ; 2010 ; L’Enseignement Mathématique Volume 56 ; 56 >
-    au < down ; 2011 ; L’Enseignement Mathématique Volume 57 ; 57 >
-    au < down ; 2012 ; L’Enseignement Mathématique Volume 58 ; 58 >
-    au < down ; 2013 ; L’Enseignement Mathématique Volume 59 ; 59 >
-    au < down ; 2014 ; L’Enseignement Mathématique Volume 60 ; 60 >
-    au < down ; 2015 ; L’Enseignement Mathématique Volume 61 ; 61 >
-    au < down ; 2016 ; L’Enseignement Mathématique Volume 62 ; 62 >
-    au < down ; 2017 ; L’Enseignement Mathématique Volume 63 ; 63 >
-    au < down ; 2018 ; L’Enseignement Mathématique Volume 64 ; 64 >
-    au < down ; 2019 ; L’Enseignement Mathématique Volume 65 ; 65 >
-    au < down ; 2020 ; L’Enseignement Mathématique Volume 66 ; 66 >
-    au < doNotProcess ; 2021 ; L’Enseignement Mathématique Volume 67 ; 67 >
-    au < doNotProcess ; 2022 ; L’Enseignement Mathématique Volume 68 ; 68 >
+    au < doNotProcess ; 2009 ; L'Enseignement Mathématique Volume 55 ; 55 >
+    au < down ; 2010 ; L'Enseignement Mathématique Volume 56 ; 56 >
+    au < down ; 2011 ; L'Enseignement Mathématique Volume 57 ; 57 >
+    au < down ; 2012 ; L'Enseignement Mathématique Volume 58 ; 58 >
+    au < down ; 2013 ; L'Enseignement Mathématique Volume 59 ; 59 >
+    au < down ; 2014 ; L'Enseignement Mathématique Volume 60 ; 60 >
+    au < down ; 2015 ; L'Enseignement Mathématique Volume 61 ; 61 >
+    au < down ; 2016 ; L'Enseignement Mathématique Volume 62 ; 62 >
+    au < down ; 2017 ; L'Enseignement Mathématique Volume 63 ; 63 >
+    au < down ; 2018 ; L'Enseignement Mathématique Volume 64 ; 64 >
+    au < down ; 2019 ; L'Enseignement Mathématique Volume 65 ; 65 >
+    au < down ; 2020 ; L'Enseignement Mathématique Volume 66 ; 66 >
+    au < doNotProcess ; 2021 ; L'Enseignement Mathématique Volume 67 ; 67 >
+    au < doNotProcess ; 2022 ; L'Enseignement Mathématique Volume 68 ; 68 >
 
   }
 
