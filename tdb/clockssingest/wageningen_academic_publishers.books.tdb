@@ -11,7 +11,7 @@
   #  param[base_url] = http://www.wageningenacademic.com/
   implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_eisbn] ; name ; param[base_url] ; hidden[proxy] >
 
-  #doNotProcess = textbook is “print-only” book, not preserved
+  #doNotProcess = textbook is "print-only" book, not preserved
 
  {
   title <
