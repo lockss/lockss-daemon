@@ -15074,7 +15074,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; National Science Review Volume 1 ; 1 ; > #doesNotExist
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; National Science Review Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; National Science Review Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; National Science Review Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; National Science Review Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; 2017 ; National Science Review Volume 4 ; 4 ; >
     au < finished ; finished ; 2018 ; 2018 ; National Science Review Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; National Science Review Volume 6 ; 6 ; >
@@ -15126,7 +15126,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Nephrology Dialysis Transplantation Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Nephrology Dialysis Transplantation Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Nephrology Dialysis Transplantation Volume 30 ; 30 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Nephrology Dialysis Transplantation Volume 31 ; 31 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Nephrology Dialysis Transplantation Volume 31 ; 31 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; 2017 ; Nephrology Dialysis Transplantation Volume 32 ; 32 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Nephrology Dialysis Transplantation Volume 33 ; 33 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Nephrology Dialysis Transplantation Volume 34 ; 34 ; >
@@ -15189,7 +15189,7 @@
 
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Neuro-Oncology Practice Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Neuro-Oncology Practice Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Neuro-Oncology Practice Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Neuro-Oncology Practice Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2017 ; 2017 ; Neuro-Oncology Practice Volume 4 ; 4 ; >
     au < finished ; finished ; 2018 ; 2018 ; Neuro-Oncology Practice Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Neuro-Oncology Practice Volume 6 ; 6 ; >
@@ -15211,7 +15211,7 @@
     param[journal_id] = nc
 
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Neuroscience of Consciousness Volume 2015 ; 2015 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Neuroscience of Consciousness Volume 2016 ; 2016 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Neuroscience of Consciousness Volume 2016 ; 2016 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; 2017 ; Neuroscience of Consciousness Volume 2017 ; 2017 ; >
     au < finished ; finished ; 2018 ; 2018 ; Neuroscience of Consciousness Volume 2018 ; 2018 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Neuroscience of Consciousness Volume 2019 ; 2019 ; >
@@ -15273,7 +15273,7 @@
     au < finished ; crawling ; 2013 ; 2013 ; Neurosurgery Volume 60,72-73 ; 60,72-73 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2014 ; 2014 ; Neurosurgery Volume 61,74-75 ; 61,74-75 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2015 ; 2015 ; Neurosurgery Volume 62,76-77 ; 62,76-77 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2016 ; 2016 ; Neurosurgery Volume 63,78-79 ; 63,78-79 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Neurosurgery Volume 63,78-79 ; 63,78-79 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2017 ; 2017 ; Neurosurgery Volume 64,80-81 ; 64,80-81 ; >
     au < finished ; finished ; 2018 ; 2018 ; Neurosurgery Volume 82-83 ; 82-83 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2019 ; 2019 ; Neurosurgery Volume 84-85 ; 84-85 ; >
@@ -15326,7 +15326,7 @@
     au < finished ; crawling ; 2013 ; 2013 ; Nicotine & Tobacco Research Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2014 ; 2014 ; Nicotine & Tobacco Research Volume 16 ; 16 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; 2015 ; Nicotine & Tobacco Research Volume 17 ; 17 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2016 ; 2016 ; Nicotine & Tobacco Research Volume 18 ; 18 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Nicotine & Tobacco Research Volume 18 ; 18 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; 2017 ; Nicotine & Tobacco Research Volume 19 ; 19 ; >
     au < finished ; finished ; 2018 ; 2018 ; Nicotine & Tobacco Research Volume 20 ; 20 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Nicotine & Tobacco Research Volume 21 ; 21 ; >
@@ -15515,7 +15515,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Notes and Queries Volume 60 ; 60 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Notes and Queries Volume 61 ; 61 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Notes and Queries Volume 62 ; 62 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Notes and Queries Volume 63 ; 63 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Notes and Queries Volume 63 ; 63 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2017 ; 2017 ; Notes and Queries Volume 64 ; 64 ; >
     au < finished ; finished ; 2018 ; 2018 ; Notes and Queries Volume 65 ; 65 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Notes and Queries Volume 66 ; 66 ; >
@@ -15579,7 +15579,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Nucleic Acids Research Volume 41 ; 41 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Nucleic Acids Research Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Nucleic Acids Research Volume 43 ; 43 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Nucleic Acids Research Volume 44 ; 44 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Nucleic Acids Research Volume 44 ; 44 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2017 ; 2017 ; Nucleic Acids Research Volume 45 ; 45 ; >
     au < finished ; finished ; 2018 ; 2018 ; Nucleic Acids Research Volume 46 ; 46 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Nucleic Acids Research Volume 47 ; 47 ; >
@@ -15681,7 +15681,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Nutrition Reviews Volume 71 ; 71 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Nutrition Reviews Volume 72 ; 72 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Nutrition Reviews Volume 73 ; 73 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Nutrition Reviews Volume 74 ; 74 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Nutrition Reviews Volume 74 ; 74 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; 2017 ; Nutrition Reviews Volume 75 ; 75 ; >
     au < finished ; finished ; 2018 ; 2018 ; Nutrition Reviews Volume 76 ; 76 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Nutrition Reviews Volume 77 ; 77 ; >
@@ -15792,7 +15792,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Occupational Medicine Volume 63 ; 63 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Occupational Medicine Volume 64 ; 64 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Occupational Medicine Volume 65 ; 65 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Occupational Medicine Volume 66 ; 66 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Occupational Medicine Volume 66 ; 66 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; 2017 ; Occupational Medicine Volume 67 ; 67 ; >
     au < finished ; finished ; 2018 ; 2018 ; Occupational Medicine Volume 68 ; 68 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Occupational Medicine Volume 69 ; 69 ; >
@@ -15857,7 +15857,7 @@
 
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Open Forum Infectious Diseases Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Open Forum Infectious Diseases Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Open Forum Infectious Diseases Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Open Forum Infectious Diseases Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2017 ; 2017 ; Open Forum Infectious Diseases Volume 4 ; 4 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Open Forum Infectious Diseases Volume 5 ; 5 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Open Forum Infectious Diseases Volume 6 ; 6 ; >
@@ -15891,7 +15891,7 @@
     au < finished ; crawling ; 2013 ; 2013 ; Operative Neurosurgery Volume 72 ; 72 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; 2014 ; Operative Neurosurgery Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; 2015 ; Operative Neurosurgery Volume 11 ; 11 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; 2016 ; Operative Neurosurgery Volume 12 ; 12 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Operative Neurosurgery Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2017 ; 2017 ; Operative Neurosurgery Volume 13 ; 13 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Operative Neurosurgery Volume 14 ; 14 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Operative Neurosurgery Volume 15 ; 15 ; >
@@ -15950,7 +15950,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Oxford Art Journal Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Oxford Art Journal Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Oxford Art Journal Volume 38 ; 38 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Oxford Art Journal Volume 39 ; 39 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Oxford Art Journal Volume 39 ; 39 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; 2017 ; Oxford Art Journal Volume 40 ; 40 ; >
     au < finished ; finished ; 2018 ; 2018 ; Oxford Art Journal Volume 41 ; 41 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Oxford Art Journal Volume 42 ; 42 ; >
@@ -16046,7 +16046,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Oxford Economic Papers Volume 65 ; 65 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Oxford Economic Papers Volume 66 ; 66 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Oxford Economic Papers Volume 67 ; 67 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Oxford Economic Papers Volume 68 ; 68 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Oxford Economic Papers Volume 68 ; 68 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; 2017 ; Oxford Economic Papers Volume 69 ; 69 ; >
     au < finished ; finished ; 2018 ; 2018 ; Oxford Economic Papers Volume 70 ; 70 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Oxford Economic Papers Volume 71 ; 71 ; >
@@ -16072,7 +16072,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Oxford Journal of Law and Religion Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Oxford Journal of Law and Religion Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Oxford Journal of Law and Religion Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Oxford Journal of Law and Religion Volume 5 ; 5 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Oxford Journal of Law and Religion Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; 2017 ; Oxford Journal of Law and Religion Volume 6 ; 6 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Oxford Journal of Law and Religion Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Oxford Journal of Law and Religion Volume 8 ; 8 ; >
@@ -16129,7 +16129,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Oxford Journal of Legal Studies Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Oxford Journal of Legal Studies Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Oxford Journal of Legal Studies Volume 35 ; 35 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Oxford Journal of Legal Studies Volume 36 ; 36 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Oxford Journal of Legal Studies Volume 36 ; 36 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; 2017 ; Oxford Journal of Legal Studies Volume 37 ; 37 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Oxford Journal of Legal Studies Volume 38 ; 38 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Oxford Journal of Legal Studies Volume 39 ; 39 ; >
@@ -16152,7 +16152,7 @@
 
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Oxford Medical Case Reports Volume 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Oxford Medical Case Reports Volume 2015 ; 2015 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Oxford Medical Case Reports Volume 2016 ; 2016 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Oxford Medical Case Reports Volume 2016 ; 2016 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2017 ; 2017 ; Oxford Medical Case Reports Volume 2017 ; 2017 ; >
     au < finished ; finished ; 2018 ; 2018 ; Oxford Medical Case Reports Volume 2018 ; 2018 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Oxford Medical Case Reports Volume 2019 ; 2019 ; >
@@ -16205,7 +16205,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Oxford Review of Economic Policy Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Oxford Review of Economic Policy Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Oxford Review of Economic Policy Volume 31 ; 31 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Oxford Review of Economic Policy Volume 32 ; 32 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Oxford Review of Economic Policy Volume 32 ; 32 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; 2017 ; Oxford Review of Economic Policy Volume 33 ; 33 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Oxford Review of Economic Policy Volume 34 ; 34 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Oxford Review of Economic Policy Volume 35 ; 35 ; >
@@ -16247,7 +16247,7 @@
     au < finished ; crawling ; 2013 ; 2013 ; Paediatrics & Child Health Volume 18 ; 18 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; 2014 ; Paediatrics & Child Health Volume 19 ; 19 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2015 ; 2015 ; Paediatrics & Child Health Volume 20 ; 20 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; 2016 ; Paediatrics & Child Health Volume 21 ; 21 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Paediatrics & Child Health Volume 21 ; 21 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; 2017 ; Paediatrics & Child Health Volume 22 ; 22 ; >
     au < finished ; finished ; 2018 ; 2018 ; Paediatrics & Child Health Volume 23 ; 23 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Paediatrics & Child Health Volume 24 ; 24 ; >
@@ -16284,7 +16284,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Pain Medicine Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Pain Medicine Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Pain Medicine Volume 16 ; 16 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Pain Medicine Volume 17 ; 17 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Pain Medicine Volume 17 ; 17 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2017 ; 2017 ; Pain Medicine Volume 18 ; 18 ; >
     au < finished ; finished ; 2018 ; 2018 ; Pain Medicine Volume 19 ; 19 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Pain Medicine Volume 20 ; 20 ; >
@@ -17254,7 +17254,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2015 ; 2015 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2016 ; 2016 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2016 ; 2016 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2017 ; 2017 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2017 ; 2017 ; >
     au < finished ; finished ; 2018 ; 2018 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2018 ; 2018 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2019 ; 2019 ; >
@@ -17322,7 +17322,7 @@
     au < finished ; crawling ; 2013 ; 2013 ; Protein Engineering, Design and Selection (PEDS) Volume 26 ; 26 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2014 ; 2014 ; Protein Engineering, Design and Selection (PEDS) Volume 27 ; 27 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; 2015 ; Protein Engineering, Design and Selection (PEDS) Volume 28 ; 28 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2016 ; 2016 ; Protein Engineering, Design and Selection (PEDS) Volume 29 ; 29 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Protein Engineering, Design and Selection (PEDS) Volume 29 ; 29 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; 2017 ; Protein Engineering, Design and Selection (PEDS) Volume 30 ; 30 ; >
     au < finished ; finished ; 2018 ; 2018 ; Protein Engineering, Design and Selection (PEDS) Volume 31 ; 31 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Protein Engineering, Design and Selection (PEDS) Volume 32 ; 32 ; >
@@ -17453,7 +17453,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Public Opinion Quarterly Volume 77 ; 77 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Public Opinion Quarterly Volume 78 ; 78 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Public Opinion Quarterly Volume 79 ; 79 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Public Opinion Quarterly Volume 80 ; 80 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Public Opinion Quarterly Volume 80 ; 80 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2017 ; 2017 ; Public Opinion Quarterly Volume 81 ; 81 ; >
     au < finished ; finished ; 2018 ; 2018 ; Public Opinion Quarterly Volume 82 ; 82 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Public Opinion Quarterly Volume 83 ; 83 ; >
@@ -17487,7 +17487,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Public Policy & Aging Report Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Public Policy & Aging Report Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Public Policy & Aging Report Volume 25 ; 25 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Public Policy & Aging Report Volume 26 ; 26 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Public Policy & Aging Report Volume 26 ; 26 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; 2017 ; Public Policy & Aging Report Volume 27 ; 27 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Public Policy & Aging Report Volume 28 ; 28 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Public Policy & Aging Report Volume 29 ; 29 ; >
@@ -17529,7 +17529,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Publications of the Astronomical Society of Japan Volume 65 ; 65 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Publications of the Astronomical Society of Japan Volume 66 ; 66 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Publications of the Astronomical Society of Japan Volume 67 ; 67 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Publications of the Astronomical Society of Japan Volume 68 ; 68 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Publications of the Astronomical Society of Japan Volume 68 ; 68 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; 2017 ; Publications of the Astronomical Society of Japan Volume 69 ; 69 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Publications of the Astronomical Society of Japan Volume 70 ; 70 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Publications of the Astronomical Society of Japan Volume 71 ; 71 ; >
@@ -17596,7 +17596,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Publius: The Journal of Federalism Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Publius: The Journal of Federalism Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Publius: The Journal of Federalism Volume 45 ; 45 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Publius: The Journal of Federalism Volume 46 ; 46 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Publius: The Journal of Federalism Volume 46 ; 46 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; 2017 ; Publius: The Journal of Federalism Volume 47 ; 47 ; >
     au < finished ; finished ; 2018 ; 2018 ; Publius: The Journal of Federalism Volume 48 ; 48 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Publius: The Journal of Federalism Volume 49 ; 49 ; >
@@ -17702,7 +17702,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; QJM: An International Journal of Medicine Volume 106 ; 106 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; QJM: An International Journal of Medicine Volume 107 ; 107 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; QJM: An International Journal of Medicine Volume 108 ; 108 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; QJM: An International Journal of Medicine Volume 109 ; 109 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; QJM: An International Journal of Medicine Volume 109 ; 109 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2017 ; 2017 ; QJM: An International Journal of Medicine Volume 110 ; 110 ; >
     au < frozen ; exists ; 2018 ; 2018 ; QJM: An International Journal of Medicine Volume 111 ; 111 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; QJM: An International Journal of Medicine Volume 112 ; 112 ; >
@@ -17759,7 +17759,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Radiation Protection Dosimetry Volume 153-157 ; 153-157 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Radiation Protection Dosimetry Volume 158-162 ; 158-162 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Radiation Protection Dosimetry Volume 163-167 ; 163-167 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Radiation Protection Dosimetry Volume 168-172 ; 168-172 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Radiation Protection Dosimetry Volume 168-172 ; 168-172 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2017 ; 2017 ; Radiation Protection Dosimetry Volume 173-177 ; 173-177 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Radiation Protection Dosimetry Volume 178-182 ; 178-182 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Radiation Protection Dosimetry Volume 183-187 ; 183-187 ; >
@@ -17815,7 +17815,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Refugee Survey Quarterly Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Refugee Survey Quarterly Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Refugee Survey Quarterly Volume 34 ; 34 ; >
-    au < frozen ; exists ; 2016 ; 2016 ; Refugee Survey Quarterly Volume 35 ; 35 ; >
+    au < finished ; manifest ; 2016 ; 2016 ; Refugee Survey Quarterly Volume 35 ; 35 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2017 ; 2017 ; Refugee Survey Quarterly Volume 36 ; 36 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Refugee Survey Quarterly Volume 37 ; 37 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Refugee Survey Quarterly Volume 38 ; 38 ; >
