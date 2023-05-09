@@ -358,6 +358,9 @@ s api client with long timeout */
   /** V2 cfgsvc REST access URL */
   private String cfgAccessUrl = null;
 
+  /** Original args to V2AuMover **/
+  private Args args;
+
   /** V2 host name */
   private String hostName;
 
@@ -677,6 +680,9 @@ s api client with long timeout */
   /** Entry point from MigrateContent servlet.  Synchronous - doesn't
    * return until all AUs in request have been copied. */
   public void executeRequest(Args args) {
+    // Remember original Args from request
+    this.args = args;
+
     try {
       if (args.au != null) {
         // If an AU was supplied, copy it
@@ -1787,10 +1793,33 @@ s api client with long timeout */
   public List<String> getCurrentStatus() {
     List<String> res = new ArrayList<>();
     String errstat = getErrorStatus();
+    StringBuilder sb = new StringBuilder();
+    sb.append("Status: ");
     if (STATUS_RUNNING.equals(currentStatus)) {
-      StringBuilder sb = new StringBuilder();
-      sb.append("Status: ");
-      sb.append(isAbort() ? "Aborting" : "Running");
+
+      if (!isAbort()) {
+        switch (opType) {
+          case CopyOnly:
+            sb.append("Copying");
+            break;
+          case CopyAndVerify:
+            sb.append("Copying and verifying");
+            break;
+          case VerifyOnly:
+            sb.append("Verifying");
+            break;
+        }
+
+        if (isCompareBytes) sb.append(" and comparing");
+      } else {
+        sb.append("Aborting");
+      }
+
+      sb.append(", AUs in ");
+      StringUtil.separatedString(args.plugins, ",", sb);
+
+      sb.append(" to ");
+      sb.append(hostName);
       sb.append(", processed ");
       sb.append(totalAusMoved);
       sb.append(" of ");
@@ -1805,8 +1834,6 @@ s api client with long timeout */
       totalTimers.addCounterStatus(sb, opType);
       res.add(sb.toString());
     } else {
-      StringBuilder sb = new StringBuilder();
-      sb.append("Status: ");
       sb.append(getIdleStatus());
       if (errstat.length() != 0) {
         sb.append(", ");
