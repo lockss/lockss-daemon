@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = British Academy ;
+    info[contract] = 2023 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+    hidden[proxy] = DIRECT
+
+  {
+
+    title <
+       name = British Academy Source Content
+    >
+    plugin = needs.plugin
+    implicit < status ; status2 ; year ; name ; param[directory] >
+
+      #param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/XXXX/
+
+      au < expected ; exists ; 2023 ; British Academy Source Content 2023 ; 2023 >
+
+  }
+
+}
