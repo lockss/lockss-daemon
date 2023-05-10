@@ -26,8 +26,8 @@
      {
      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/iopjatsrp1-released/
 
-     au < readySource ; frozen ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V1 ; 2022_01 >
-     au < readySource ; frozen ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V2 ; 2022_02 >
+     au < readySource ; finished ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V1 ; 2022_01 >
+     au < readySource ; finished ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V2 ; 2022_02 >
      au < readySource ; finished ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V3 ; 2022_03 >
      au < readySource ; finished ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V4 ; 2022_04 >
      #no more buckets for this set
