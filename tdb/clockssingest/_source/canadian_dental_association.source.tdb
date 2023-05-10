@@ -6,6 +6,7 @@
     info[tester] = S ;
     info[platform] = Source
   >
+    hidden[proxy] = DIRECT
 
   {
 
@@ -15,7 +16,6 @@
     >
     #single journal in the source delivery
     plugin = org.lockss.plugin.clockss.canadiandental.ClockssCanadianDentalAssocSourcePlugin
-    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[directory] >
     {
 
@@ -32,7 +32,7 @@
 
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/cda-released/
 
-      au < testing ; exists ; 2023 ; Journal of the Canadian Dental Association Source Content 2023 ; 2023 >
+      au < manifest ; exists ; 2023 ; Journal of the Canadian Dental Association Source Content 2023 ; 2023 >
 
     }
   }
