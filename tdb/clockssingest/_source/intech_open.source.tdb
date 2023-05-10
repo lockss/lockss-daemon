@@ -27,7 +27,7 @@
     plugin = org.lockss.plugin.clockss.intechopen.ClockssIntechOpenBooksDirSourcePlugin
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/intechopen-released/
 
-    au < manifest ; exists ; 2023 ; Intech Open Books Content 2023_01 ; 2023_01 >
+    au < testing ; exists ; 2023 ; Intech Open Books Content 2023_01 ; 2023_01 >
 
     }
   }
