@@ -28476,7 +28476,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     {
 
         title <
-          name = JALA (Charlottesville, Va.) ;
+          name = JALA ;
           issn = 1535-5535 ;
           eissn = 1540-2452 
       >
@@ -28487,18 +28487,18 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         param[base_url] = http://jla.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < doNotProcess ; 1999 ; JALA (Charlottesville, Va.) Volume 4 ; 4 >
-        au < doNotProcess ; 2000 ; JALA (Charlottesville, Va.) Volume 5 ; 5 >
-        au < doNotProcess ; 2001 ; JALA (Charlottesville, Va.) Volume 6 ; 6 >
-        au < doNotProcess ; 2002 ; JALA (Charlottesville, Va.) Volume 7 ; 7 >
-        au < doNotProcess ; 2003 ; JALA (Charlottesville, Va.) Volume 8 ; 8 >
-        au < doNotProcess ; 2004 ; JALA (Charlottesville, Va.) Volume 9 ; 9 >
-        au < doNotProcess ; 2005 ; JALA (Charlottesville, Va.) Volume 10 ; 10 >
-        au < doNotProcess ; 2006 ; JALA (Charlottesville, Va.) Volume 11 ; 11 >
-        au < doNotProcess ; 2007 ; JALA (Charlottesville, Va.) Volume 12 ; 12 >
-        au < down ; 2008 ; JALA (Charlottesville, Va.) Volume 13 ; 13 >
-        au < down ; 2009 ; JALA (Charlottesville, Va.) Volume 14 ; 14 >
-        au < down ; 2010 ; JALA (Charlottesville, Va.) Volume 15 ; 15 >
+        au < doNotProcess ; 1999 ; JALA Volume 4 ; 4 >
+        au < doNotProcess ; 2000 ; JALA Volume 5 ; 5 >
+        au < doNotProcess ; 2001 ; JALA Volume 6 ; 6 >
+        au < doNotProcess ; 2002 ; JALA Volume 7 ; 7 >
+        au < doNotProcess ; 2003 ; JALA Volume 8 ; 8 >
+        au < doNotProcess ; 2004 ; JALA Volume 9 ; 9 >
+        au < doNotProcess ; 2005 ; JALA Volume 10 ; 10 >
+        au < doNotProcess ; 2006 ; JALA Volume 11 ; 11 >
+        au < doNotProcess ; 2007 ; JALA Volume 12 ; 12 >
+        au < down ; 2008 ; JALA Volume 13 ; 13 >
+        au < down ; 2009 ; JALA Volume 14 ; 14 >
+        au < down ; 2010 ; JALA Volume 15 ; 15 >
 
       }
 
