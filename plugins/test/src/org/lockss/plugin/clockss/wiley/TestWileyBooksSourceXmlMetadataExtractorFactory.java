@@ -4,7 +4,6 @@ import org.apache.commons.io.FileUtils;
 import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorTest;
-import org.lockss.plugin.clockss.intechopen.IntechOpenBookOnix3XmlMetadataExtractorFactory;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.MockCachedUrl;
 import org.lockss.util.CIProperties;
