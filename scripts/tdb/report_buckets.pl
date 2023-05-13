@@ -32,11 +32,11 @@
 #git checkout master
 #git checkout `git rev-list -n 1 --before="2022-05-01 00:00" master`
 #ant jar-lockss
-#./scripts/tdb/tdbout -t year,status2 tdb/clockssingest/_source/*.tdb | sort | uniq -c > ../SageEdits/file_y.txt
+#./scripts/tdb/tdbout -t year,status2 tdb/clockssingest/{_source/,_retired/}*.source.tdb | sort | uniq -c > ../SageEdits/file_y.txt
 #git checkout master
 #git checkout `git rev-list -n 1 --before="2023-05-01 00:00" master`
 #ant jar-lockss
-#./scripts/tdb/tdbout -t year,status2 tdb/clockssingest/_source/*.tdb | sort | uniq -c > ../SageEdits/file_z.txt
+#./scripts/tdb/tdbout -t year,status2 tdb/clockssingest/{_source/,_retired/}*.source.tdb | sort | uniq -c > ../SageEdits/file_z.txt
 #git checkout master
 #git pull
 #ant jar-lockss
