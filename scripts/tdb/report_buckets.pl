@@ -19,11 +19,24 @@
 
 #CLOCKSS: To create a report, comparing clockss status1 and status2.
 #git checkout master
-#git checkout `git rev-list -n 1 --before="2021-05-01 00:00" master`
+#git checkout `git rev-list -n 1 --before="2023-05-01 00:00" master`
 #ant jar-lockss
-#./scripts/tdb/tdbout -t auid,status tdb/clockssingest/{,_retired/}*.tdb | sort -u > ../SageEdits/file1.txt
-#./scripts/tdb/tdbout -t auid,status2 tdb/clockssingest/{,_retired/}*.tdb | sort -u > ../SageEdits/file2.txt
-#./scripts/tdb/report_buckets.pl ../SageEdits/file1.txt ../SageEdits/file2.txt > ../SageEdits/buckets_today.tsv
+#./scripts/tdb/tdbout -t auid,status tdb/clockssingest/{,_retired/}*.tdb | sort -u > ../SageEdits/file_a.txt
+#./scripts/tdb/tdbout -t auid,status2 tdb/clockssingest/{,_retired/}*.tdb | sort -u > ../SageEdits/file_b.txt
+#./scripts/tdb/report_buckets.pl ../SageEdits/file_a.txt ../SageEdits/file_b.txt > ../SageEdits/buckets_today.tsv
+#git checkout master
+#git pull
+#ant jar-lockss
+
+#CLOCKSS: To create a report for FTP status2.
+#git checkout master
+#git checkout `git rev-list -n 1 --before="2022-05-01 00:00" master`
+#ant jar-lockss
+#./scripts/tdb/tdbout -t year,status2 tdb/clockssingest/_source/*.tdb | sort | uniq -c > ../SageEdits/file_y.txt
+#git checkout master
+#git checkout `git rev-list -n 1 --before="2023-05-01 00:00" master`
+#ant jar-lockss
+#./scripts/tdb/tdbout -t year,status2 tdb/clockssingest/_source/*.tdb | sort | uniq -c > ../SageEdits/file_z.txt
 #git checkout master
 #git pull
 #ant jar-lockss
