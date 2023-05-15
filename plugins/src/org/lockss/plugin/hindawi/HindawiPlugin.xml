@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>6</string>
+        <string>7</string>
     </entry>
     <entry>
         <string>au_name</string>
@@ -54,7 +54,7 @@
     <entry>
         <string>au_crawlrules</string>
         <list>
-            <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdnjs\.cloudflare\.com|fast\.fonts\.net|cdn\.cookielaw\.org|images\.hindawi\.com|static-01\.hindawi\.com)/"</string>
+            <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdnjs\.cloudflare\.com|fast\.fonts\.net|cdn\.cookielaw\.org|images\.hindawi\.com|static(-d+)?\.hindawi\.com)/"</string>
             <string>1,"^%sfonts", base_url</string>
             <string>1,"^%sjournals/%s/%d/", base_url, journal_id, year</string>
             <string>1,"^%s", download_url</string>
@@ -157,7 +157,7 @@
         <string>au_permitted_host_pattern</string>
         <list>
           <string>images\.hindawi\.com</string>
-          <string>static-\d+\.hindawi\.com</string>
+          <string>static(-\d+)?\.hindawi\.com</string>
           <string>(fonts|ajax)\.(googleapis|gstatic)\.com</string>
           <string>cdnjs\.cloudflare\.com</string>
           <string>fast\.fonts\.net</string>
