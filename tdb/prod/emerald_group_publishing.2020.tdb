@@ -14656,8 +14656,8 @@
 
     param[journal_issn] = 2632-7627
 
-    au < manifest ; 2019 ; Applied Economic Analysis Volume 27 ; 27 >
-    au < manifest ; 2020 ; Applied Economic Analysis Volume 28 ; 28 >
+    au < ready ; 2019 ; Applied Economic Analysis Volume 27 ; 27 >
+    au < ready ; 2020 ; Applied Economic Analysis Volume 28 ; 28 >
     au < released ; 2021 ; Applied Economic Analysis Volume 29 ; 29 >
     au < released ; 2022 ; Applied Economic Analysis Volume 30 ; 30 >
     au < manifest ; 2023 ; Applied Economic Analysis Volume 31 ; 31 >
@@ -14753,7 +14753,7 @@
     param[journal_issn] = 2615-9821
 
     au < released ; 2020 ; Asian Journal of Economics and Banking Volume 4 ; 4 >
-    au < manifest ; 2021 ; Asian Journal of Economics and Banking Volume 5 ; 5 >
+    au < ready ; 2021 ; Asian Journal of Economics and Banking Volume 5 ; 5 >
     au < released ; 2022 ; Asian Journal of Economics and Banking Volume 6 ; 6 >
     au < manifest ; 2023 ; Asian Journal of Economics and Banking Volume 7 ; 7 >
 
@@ -14827,9 +14827,9 @@
 
     param[journal_issn] = 2631-3030
 
-    au < manifest ; 2019 ; Forest Economic Review Volume 1 ; 1 >
-    au < manifest ; 2020 ; Forest Economic Review Volume 2 ; 2 >
-    au < manifest ; 2021 ; Forest Economic Review Volume 3 ; 3 >
+    au < ready ; 2019 ; Forest Economic Review Volume 1 ; 1 >
+    au < ready ; 2020 ; Forest Economic Review Volume 2 ; 2 >
+    au < ready ; 2021 ; Forest Economic Review Volume 3 ; 3 >
     au < manifest ; 2022 ; Forest Economic Review Volume 4 ; 4 >
     au < expected ; 2023 ; Forest Economic Review Volume 5 ; 5 >
 
@@ -14957,7 +14957,7 @@
 
     au < manifest ; 2019 ; International Trade, Politics and Development Volume 3 ; 3 >
     au < released ; 2020 ; International Trade, Politics and Development Volume 4 ; 4 >
-    au < manifest ; 2021 ; International Trade, Politics and Development Volume 5 ; 5 >
+    au < ready ; 2021 ; International Trade, Politics and Development Volume 5 ; 5 >
     au < manifest ; 2022 ; International Trade, Politics and Development Volume 6 ; 6 >
     au < manifest ; 2023 ; International Trade, Politics and Development Volume 7 ; 7 >
 
@@ -15227,9 +15227,9 @@
 
     param[journal_issn] = 2632-279X
 
-    au < manifest ; 2019 ; Journal of Humanities and Applied Social Sciences Volume 1 ; 1 >
+    au < ready ; 2019 ; Journal of Humanities and Applied Social Sciences Volume 1 ; 1 >
     au < released ; 2020 ; Journal of Humanities and Applied Social Sciences Volume 2 ; 2 >
-    au < manifest ; 2021 ; Journal of Humanities and Applied Social Sciences Volume 3 ; 3 >
+    au < ready ; 2021 ; Journal of Humanities and Applied Social Sciences Volume 3 ; 3 >
     au < manifest ; 2022 ; Journal of Humanities and Applied Social Sciences Volume 4 ; 4 >
     au < manifest ; 2023 ; Journal of Humanities and Applied Social Sciences Volume 5 ; 5 >
 
@@ -15245,9 +15245,9 @@
 
     param[journal_issn] = 2631-357X
 
-    au < manifest ; 2019 ; Journal of Industry-University Collaboration Volume 1 ; 1 >
+    au < ready ; 2019 ; Journal of Industry-University Collaboration Volume 1 ; 1 >
     au < released ; 2020 ; Journal of Industry-University Collaboration Volume 2 ; 2 >
-    au < manifest ; 2021 ; Journal of Industry-University Collaboration Volume 3 ; 3 >
+    au < ready ; 2021 ; Journal of Industry-University Collaboration Volume 3 ; 3 >
     au < expected ; 2023 ; Journal of Industry-University Collaboration Volume 4 ; 4 >
 
   }
@@ -15453,8 +15453,8 @@
 
     param[journal_issn] = 2631-3871
 
-    au < manifest ; 2019 ; Modern Supply Chain Research and Applications Volume 1 ; 1 >
-    au < manifest ; 2020 ; Modern Supply Chain Research and Applications Volume 2 ; 2 >
+    au < ready ; 2019 ; Modern Supply Chain Research and Applications Volume 1 ; 1 >
+    au < ready ; 2020 ; Modern Supply Chain Research and Applications Volume 2 ; 2 >
     au < released ; 2021 ; Modern Supply Chain Research and Applications Volume 3 ; 3 >
     au < released ; 2022 ; Modern Supply Chain Research and Applications Volume 4 ; 4 >
     au < manifest ; 2023 ; Modern Supply Chain Research and Applications Volume 5 ; 5 >
@@ -15606,8 +15606,8 @@
 
     param[journal_issn] = 2631-3561
 
-    au < manifest ; 2018 ; Review of Economics and Political Science Volume 3 ; 3 >
-    au < manifest ; 2019 ; Review of Economics and Political Science Volume 4 ; 4 >
+    au < ready ; 2018 ; Review of Economics and Political Science Volume 3 ; 3 >
+    au < ready ; 2019 ; Review of Economics and Political Science Volume 4 ; 4 >
     au < released ; 2020 ; Review of Economics and Political Science Volume 5 ; 5 >
     au < released ; 2021 ; Review of Economics and Political Science Volume 6 ; 6 >
     au < manifest ; 2022 ; Review of Economics and Political Science Volume 7 ; 7 >
@@ -15646,8 +15646,8 @@
 
     param[journal_issn] = 2632-0487
 
-    au < manifest ; 2019 ; Smart and Resilient Transportation Volume 1 ; 1 >
-    au < manifest ; 2020 ; Smart and Resilient Transportation Volume 2 ; 2 >
+    au < ready ; 2019 ; Smart and Resilient Transportation Volume 1 ; 1 >
+    au < ready ; 2020 ; Smart and Resilient Transportation Volume 2 ; 2 >
     au < released ; 2021 ; Smart and Resilient Transportation Volume 3 ; 3 >
     au < manifest ; 2022 ; Smart and Resilient Transportation Volume 4 ; 4 >
     au < expected ; 2023 ; Smart and Resilient Transportation Volume 5 ; 5 >
@@ -15752,7 +15752,7 @@
 
     param[journal_issn] = 2634-1964
 
-    au < manifest ; 2020 ; Applied Computing and Informatics Volume 16 ; 16 >
+    au < ready ; 2020 ; Applied Computing and Informatics Volume 16 ; 16 >
     au < manifest ; 2021 ; Applied Computing and Informatics Volume 17 ; 17 >
     au < released ; 2022 ; Applied Computing and Informatics Volume 18 ; 18 >
     au < manifest ; 2023 ; Applied Computing and Informatics Volume 19 ; 19 >
@@ -15799,9 +15799,9 @@
     au < exists ; 2016 ; Archnet-IJAR Volume 10 ; 10 >
     au < exists ; 2017 ; Archnet-IJAR Volume 11 ; 11 >
     au < exists ; 2018 ; Archnet-IJAR Volume 12 ; 12 >
-    au < manifest ; 2019 ; Archnet-IJAR Volume 13 ; 13 >
-    au < manifest ; 2020 ; Archnet-IJAR Volume 14 ; 14 >
-    au < manifest ; 2021 ; Archnet-IJAR Volume 15 ; 15 >
+    au < ready ; 2019 ; Archnet-IJAR Volume 13 ; 13 >
+    au < ready ; 2020 ; Archnet-IJAR Volume 14 ; 14 >
+    au < ready ; 2021 ; Archnet-IJAR Volume 15 ; 15 >
     au < released ; 2022 ; Archnet-IJAR Volume 16 ; 16 >
     au < manifest ; 2023 ; Archnet-IJAR Volume 17 ; 17 >
 

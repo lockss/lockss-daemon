@@ -7447,10 +7447,10 @@
 
       au < doNotProcess ; 2016 ; Journal of Radiation and Cancer Research Volume 7 ; 2016 ; 7 ; http://www.journalrcr.org/ >
       au < doNotProcess ; 2017 ; Journal of Radiation and Cancer Research Volume 8 ; 2017 ; 8 ; http://www.journalrcr.org/ >
-      au < manifest ; 2018 ; Journal of Radiation and Cancer Research Volume 9 ; 2018 ; 9 ; https://www.journalrcr.org/ >
-      au < manifest ; 2019 ; Journal of Radiation and Cancer Research Volume 10 ; 2019 ; 10 ; https://www.journalrcr.org/ >
-      au < manifest ; 2020 ; Journal of Radiation and Cancer Research Volume 11 ; 2020 ; 11 ; https://www.journalrcr.org/ >
-      au < manifest ; 2021 ; Journal of Radiation and Cancer Research Volume 12 ; 2021 ; 12 ; https://www.journalrcr.org/ >
+      au < ready ; 2018 ; Journal of Radiation and Cancer Research Volume 9 ; 2018 ; 9 ; https://www.journalrcr.org/ >
+      au < ready ; 2019 ; Journal of Radiation and Cancer Research Volume 10 ; 2019 ; 10 ; https://www.journalrcr.org/ >
+      au < ready ; 2020 ; Journal of Radiation and Cancer Research Volume 11 ; 2020 ; 11 ; https://www.journalrcr.org/ >
+      au < ready ; 2021 ; Journal of Radiation and Cancer Research Volume 12 ; 2021 ; 12 ; https://www.journalrcr.org/ >
       au < manifest ; 2022 ; Journal of Radiation and Cancer Research Volume 13 ; 2022 ; 13 ; https://www.journalrcr.org/ >
       au < manifest ; 2023 ; Journal of Radiation and Cancer Research Volume 14 ; 2023 ; 14 ; https://www.journalrcr.org/ >
       }
@@ -8510,7 +8510,7 @@
       au < released ; 2018 ; Sudanese Journal of Ophthalmology Volume 10 ; 2018 ; 10 ; http://www.sjopthal.net/ >
       au < released ; 2019 ; Sudanese Journal of Ophthalmology Volume 11 ; 2019 ; 11 ; https://www.sjopthal.net/ >
       au < released ; 2020 ; Sudanese Journal of Ophthalmology Volume 12 ; 2020 ; 12 ; https://www.sjopthal.net/ >
-      au < manifest ; 2021 ; Sudanese Journal of Ophthalmology Volume 13 ; 2021 ; 13 ; https://www.sjopthal.net/ >
+      au < ready ; 2021 ; Sudanese Journal of Ophthalmology Volume 13 ; 2021 ; 13 ; https://www.sjopthal.net/ >
       au < expected ; 2022 ; Sudanese Journal of Ophthalmology Volume 14 ; 2022 ; 14 ; https://www.sjopthal.net/ >
       au < expected ; 2023 ; Sudanese Journal of Ophthalmology Volume 15 ; 2023 ; 15 ; https://www.sjopthal.net/ >
 
@@ -12077,7 +12077,7 @@
       param[journal_issn] = 1684-5382
       #param[base_url] = https://www.journalijcm.org/
 
-      au < manifest ; 2020 ; Iraqi Journal of Community Medicine Volume 33 ; 2020 ; 33 ; https://www.journalijcm.org/ >
+      au < ready ; 2020 ; Iraqi Journal of Community Medicine Volume 33 ; 2020 ; 33 ; https://www.journalijcm.org/ >
       au < exists ; 2021 ; Iraqi Journal of Community Medicine Volume 34 ; 2021 ; 34 ; https://www.journalijcm.org/ >
       au < expected ; 2022 ; Iraqi Journal of Community Medicine Volume 35 ; 2022 ; 35 ; https://www.journalijcm.org/ >
       au < expected ; 2023 ; Iraqi Journal of Community Medicine Volume 36 ; 2023 ; 36 ; https://www.journalijcm.org/ >
@@ -12941,13 +12941,13 @@
       param[journal_issn] = 2600-9404
       #param[base_url] = https://www.mohejournal.org/
 
-      au < manifest ; 2013 ; Malaysian Journal of Movement, Health and Exercise Volume 2 ; 2013 ; 2 ; https://www.mohejournal.org/ >
+      au < ready ; 2013 ; Malaysian Journal of Movement, Health and Exercise Volume 2 ; 2013 ; 2 ; https://www.mohejournal.org/ >
       au < released ; 2014 ; Malaysian Journal of Movement, Health and Exercise Volume 3 ; 2014 ; 3 ; https://www.mohejournal.org/ >
-      au < manifest ; 2015 ; Malaysian Journal of Movement, Health and Exercise Volume 4 ; 2015 ; 4 ; https://www.mohejournal.org/ >
-      au < manifest ; 2016 ; Malaysian Journal of Movement, Health and Exercise Volume 5 ; 2016 ; 5 ; https://www.mohejournal.org/ >
-      au < manifest ; 2017 ; Malaysian Journal of Movement, Health and Exercise Volume 6 ; 2017 ; 6 ; https://www.mohejournal.org/ >
-      au < manifest ; 2018 ; Malaysian Journal of Movement, Health and Exercise Volume 7 ; 2018 ; 7 ; https://www.mohejournal.org/ >
-      au < manifest ; 2019 ; Malaysian Journal of Movement, Health and Exercise Volume 8 ; 2019 ; 8 ; https://www.mohejournal.org/ >
+      au < ready ; 2015 ; Malaysian Journal of Movement, Health and Exercise Volume 4 ; 2015 ; 4 ; https://www.mohejournal.org/ >
+      au < ready ; 2016 ; Malaysian Journal of Movement, Health and Exercise Volume 5 ; 2016 ; 5 ; https://www.mohejournal.org/ >
+      au < ready ; 2017 ; Malaysian Journal of Movement, Health and Exercise Volume 6 ; 2017 ; 6 ; https://www.mohejournal.org/ >
+      au < ready ; 2018 ; Malaysian Journal of Movement, Health and Exercise Volume 7 ; 2018 ; 7 ; https://www.mohejournal.org/ >
+      au < ready ; 2019 ; Malaysian Journal of Movement, Health and Exercise Volume 8 ; 2019 ; 8 ; https://www.mohejournal.org/ >
       au < manifest ; 2020 ; Malaysian Journal of Movement, Health and Exercise Volume 9 ; 2020 ; 9 ; https://www.mohejournal.org/ >
       au < released ; 2021 ; Malaysian Journal of Movement, Health and Exercise Volume 10 ; 2021 ; 10 ; https://www.mohejournal.org/ >
       au < released ; 2022 ; Malaysian Journal of Movement, Health and Exercise Volume 11 ; 2022 ; 11 ; https://www.mohejournal.org/ >

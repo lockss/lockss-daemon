@@ -685,8 +685,8 @@
     param[journal_id] = amb
     #Moved to archive
 
-    au < manifest ; 2014 ; Advances in Molecular Biology Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; 2015 ; Advances in Molecular Biology Volume 2015 ; 2015 ; 2015 >
+    au < ready ; 2014 ; Advances in Molecular Biology Volume 2014 ; 2014 ; 2014 >
+    au < ready ; 2015 ; Advances in Molecular Biology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -732,7 +732,7 @@
 
     au < doNotProcess ; 2014 ; Advances in Nephrology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in Nephrology Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Advances in Nephrology Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Advances in Nephrology Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -915,7 +915,7 @@
 
     au < doNotProcess ; 2014 ; Advances in Otolaryngology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in Otolaryngology Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Advances in Otolaryngology Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Advances in Otolaryngology Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -1161,7 +1161,7 @@
 
     au < doNotProcess ; 2014 ; Advances in Toxicology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Advances in Toxicology Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Advances in Toxicology Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Advances in Toxicology Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -1321,7 +1321,7 @@
     au < released ; 2013 ; Algebra Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Algebra Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Algebra Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Algebra Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Algebra Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -2254,7 +2254,7 @@
 
     au < doNotProcess ; 2011 ; Case Reports in Infectious Diseases Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Case Reports in Infectious Diseases Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; 2013 ; Case Reports in Infectious Diseases Volume 2013 ; 2013 ; 2013 >
+    au < ready ; 2013 ; Case Reports in Infectious Diseases Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Infectious Diseases Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Case Reports in Infectious Diseases Volume 2015 ; 2015 ; 2015 >
     au < doNotProcess ; 2016 ; Case Reports in Infectious Diseases Volume 2016 ; 2016 ; 2016 >
@@ -2404,7 +2404,7 @@
 
     au < doNotProcess ; 2011 ; Case Reports in Ophthalmological Medicine Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Case Reports in Ophthalmological Medicine Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; 2013 ; Case Reports in Ophthalmological Medicine Volume 2013 ; 2013 ; 2013 >
+    au < ready ; 2013 ; Case Reports in Ophthalmological Medicine Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Ophthalmological Medicine Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Case Reports in Ophthalmological Medicine Volume 2015 ; 2015 ; 2015 >
     au < doNotProcess ; 2016 ; Case Reports in Ophthalmological Medicine Volume 2016 ; 2016 ; 2016 >
@@ -2730,7 +2730,7 @@
 
     au < doNotProcess ; 2011 ; Case Reports in Veterinary Medicine Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Case Reports in Veterinary Medicine Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; 2013 ; Case Reports in Veterinary Medicine Volume 2013 ; 2013 ; 2013 >
+    au < ready ; 2013 ; Case Reports in Veterinary Medicine Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Case Reports in Veterinary Medicine Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Case Reports in Veterinary Medicine Volume 2015 ; 2015 ; 2015 >
     au < doNotProcess ; 2016 ; Case Reports in Veterinary Medicine Volume 2016 ; 2016 ; 2016 >
@@ -2761,7 +2761,7 @@
     au < doNotProcess ; 2014 ; Chemotherapy Research and Practice Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Chemotherapy Research and Practice Volume 2015 ; 2015 ; 2015 >
     au < doNotProcess ; 2016 ; Chemotherapy Research and Practice Volume 2016 ; 2016 ; 2016 >
-    au < manifest ; 2017 ; Chemotherapy Research and Practice Volume 2017 ; 2017 ; 2017 >
+    au < ready ; 2017 ; Chemotherapy Research and Practice Volume 2017 ; 2017 ; 2017 >
 
   }
   
@@ -2803,7 +2803,7 @@
 
     au < doNotProcess ; 2014 ; Chinese Journal of Biology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Chinese Journal of Biology Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Chinese Journal of Biology Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Chinese Journal of Biology Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -2957,7 +2957,7 @@
     au < released ; 2013 ; Computational Biology Journal Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Computational Biology Journal Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Computational Biology Journal Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Computational Biology Journal Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Computational Biology Journal Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -3003,7 +3003,7 @@
 
     au < released ; 2013 ; Conference Papers in Science Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Conference Papers in Science Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; 2015 ; Conference Papers in Science Volume 2015 ; 2015 ; 2015 >
+    au < ready ; 2015 ; Conference Papers in Science Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -3567,7 +3567,7 @@
     au < released ; 2013 ; Geography Journal Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Geography Journal Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Geography Journal Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Geography Journal Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Geography Journal Volume 2016 ; 2016 ; 2016 >
 
   }
 
