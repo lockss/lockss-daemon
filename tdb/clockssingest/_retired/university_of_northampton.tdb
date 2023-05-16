@@ -9,10 +9,30 @@
   
     provider = Library & Learning Services, University of North Hampton
 
-    param[base_url] = http://journals.northampton.ac.uk/
-    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
     implicit < status ; status2 ; year ; name ; param[year] ; volume ; hidden[proxy] >
 
+    {
+
+      title <
+        name = Transportation Systems in Buildings ;
+        issn = 2631-8156
+      >
+
+        param[journal_id] = tsib
+        #Nothing new since 2015
+        param[base_url] = https://journals.northampton.ac.uk/
+        plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+        attr[start_stem] = index.php/
+
+        au < manifest ; exists ; 2017 ; Transportation Systems in Buildings Volume 1 ; 2017 ; 1 ; >
+        au < manifest ; exists ; 2018 ; Transportation Systems in Buildings Volume 2 ; 2018 ; 2 ; >
+        au < exists ; exists ; 2019 ; Transportation Systems in Buildings Volume 3 ; 2019 ; 3 ; >
+        au < exists ; exists ; 2020 ; Transportation Systems in Buildings Volume 4 ; 2020 ; 4 ; >
+        au < manifest ; exists ; 2021 ; Transportation Systems in Buildings Volume 5 ; 2021 ; 5 ; >
+        au < manifest ; exists ; 2022 ; Transportation Systems in Buildings Volume 6 ; 2022 ; 6 ; >
+        au < expected ; exists ; 2023 ; Transportation Systems in Buildings Volume 7 ; 2023 ; 7 ; >
+
+    }
     {
 
       title <
@@ -22,6 +42,8 @@
 
         param[journal_id] = elehe
         #Nothing new since 2015
+        param[base_url] = http://journals.northampton.ac.uk/
+        plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
 
         au < finished ; finished ; 2009 ; Enhancing the Learner Experience in Higher Education Volume 1 ; 2009 ; 1 ; >
         au < finished ; finished ; 2010 ; Enhancing the Learner Experience in Higher Education Volume 2 ; 2010 ; 2 ; >
