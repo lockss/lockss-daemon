@@ -9,7 +9,7 @@
   hidden[proxy] = DIRECT
 
   plugin = org.lockss.plugin.jasper.ClockssJasperPlugin
-  implicit < status ; status2 ; year ; name ; param[collection] >
+  implicit < status ; status2 ; year ; name ; param[item] >
   nondefparam[user_pass] = clockss_jasper_U_P
   param[base_url] = https://archive.org/
 

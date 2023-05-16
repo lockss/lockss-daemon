@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>4</string>
+        <string>5</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -59,9 +59,9 @@ POSSIBILITY OF SUCH DAMAGE.
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
             <org.lockss.daemon.ConfigParamDescr>
-                <key>collection</key>
-                <displayName>Collection</displayName>
-                <description>Collection identifier</description>
+                <key>item</key>
+                <displayName>Item</displayName>
+                <description>Item Identifier</description>
                 <type>1</type>
                 <size>40</size>
                 <definitional>true</definitional>
@@ -78,8 +78,25 @@ POSSIBILITY OF SUCH DAMAGE.
         </list>
     </entry>
     <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Poll</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
         <string>au_name</string>
-        <string>"Jasper Plugin (CLOCKSS), Base URL %s, Collection %s", base_url, collection</string>
+        <string>"Jasper Plugin (CLOCKSS), Base URL %s, Item %s", base_url, item</string>
     </entry>
     <entry>
         <string>au_def_pause_time</string>
@@ -92,7 +109,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_crawlrules</string>
         <list>
-            <string>1,"^%sdownload/%s/", base_url, collection</string>
+            <string>1,"^%sdownload/%s/", base_url, item</string>
             <string>1,"^https?://.*\.archive\.org/[0-9]*/items/"</string>
             <!-- Added so that test URL in
                  TestJasperJsonMetadataExtractorFactory is in crawl spec -->
@@ -100,12 +117,12 @@ POSSIBILITY OF SUCH DAMAGE.
             <!-- synthetic start url, if you want to update the pattern you must update it in all of these places
             // 1. crawl_rules & start_url
             // 2. JasperCrawlSeed.initialize() -->
-            <string>1,"^%sProjectJasper\?collection=", base_url</string>
+            <string>1,"^%sProjectJasper\?item=", base_url</string>
         </list>
     </entry>
     <entry>
         <string>au_start_url</string>
-        <string>"%sProjectJasper?collection=%s", base_url, collection</string>
+        <string>"%sProjectJasper?item=%s", base_url, item</string>
     </entry>
     <entry>
         <string>au_permission_url</string>

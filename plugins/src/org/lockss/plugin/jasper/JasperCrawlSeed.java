@@ -93,7 +93,7 @@ public class JasperCrawlSeed extends BaseCrawlSeed {
   protected List<String> allUrls;
 
   protected String baseUrl;
-  protected String collection;
+  protected String item;
   protected String storeUrl;
 
   /**
@@ -113,15 +113,15 @@ public class JasperCrawlSeed extends BaseCrawlSeed {
   @Override
   protected void initialize() {
     this.baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
-    this.collection = au.getConfiguration().get(ConfigParamDescr.COLLECTION.getKey());
+    this.item = au.getConfiguration().get("item");
     this.fetchUrls = null;
     this.allUrls = null;
     // synthetic url, if you want to update the pattern you must update it in all of these places
     // 1. crawl_rules & start_url
     // 2. JasperCrawlSeed.initialize()
     this.storeUrl = baseUrl
-        + "ProjectJasper?collection="
-        + UrlUtil.encodeUrl(collection);
+        + "ProjectJasper?item="
+        + UrlUtil.encodeUrl(item);
   }
 
   @Override
@@ -201,7 +201,7 @@ public class JasperCrawlSeed extends BaseCrawlSeed {
   protected String makeApiUrl(int page) {
     return String.format("%s%s",
         API_URL,
-        collection
+        item
     );
   }
 

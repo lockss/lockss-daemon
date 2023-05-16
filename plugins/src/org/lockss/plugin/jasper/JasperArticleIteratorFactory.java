@@ -49,7 +49,7 @@ public class JasperArticleIteratorFactory implements ArticleIteratorFactory, Art
   protected static Logger log = Logger.getLogger(JasperArticleIteratorFactory.class);
 
   protected static final String TARED_GZED_FILES_PATTERN_TEMPLATE =
-      "\"%sdownload/%s/.*\\.tar\\.gz!/.*\\.(pdf|html)$\", base_url, collection";
+      "\"%sdownload/%s/.*\\.tar\\.gz!/.*\\.(pdf|html)$\", base_url, item";
 
   // Be sure to exclude all nested archives in case supplemental data is provided this way
   protected static final Pattern NESTED_ARCHIVE_PATTERN =

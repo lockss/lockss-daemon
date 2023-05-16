@@ -33,6 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.jasper;
 
 import org.apache.commons.collections.map.MultiValueMap;
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
@@ -42,6 +43,8 @@ import org.apache.commons.collections.MultiMap;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -137,6 +140,7 @@ public class JasperJsonMetadataExtractorFactory implements FileMetadataExtractor
     private StringBuilder currentValue;
 
     static MultiMap jsonPathToMetadataField = new MultiValueMap();
+
     static {
       jsonPathToMetadataField.put("created_date", MetadataField.FIELD_DATE);
       jsonPathToMetadataField.put("bibjson.abstract", MetadataField.FIELD_ABSTRACT);
@@ -154,76 +158,210 @@ public class JasperJsonMetadataExtractorFactory implements FileMetadataExtractor
     }
 
     static String stripBrackets(String value) {
-      if (value.matches("\\[.*\\]") ) {
-        return value.substring(1,value.length()-2);
+      if (value.matches("\\[.*\\]")) {
+        return value.substring(1, value.length() - 2);
       }
       return value;
     }
 
-    static void processKeys(String currentPath,
-                            JsonNode jsonNode,
-                            Map<String, String> map,
-                            List<Integer> suffix) {
-      if (jsonNode.isObject()) {
-        ObjectNode objectNode = (ObjectNode) jsonNode;
-        Iterator<Map.Entry<String, JsonNode>> iter = objectNode.fields();
-        String pathPrefix = currentPath.isEmpty() ? "" : currentPath + ".";
+    static String getIssnFromTdbOrSrcUrl(String itemName, String srcUrl) {
 
-        while (iter.hasNext()) {
-          Map.Entry<String, JsonNode> entry = iter.next();
-          processKeys(pathPrefix + entry.getKey(), entry.getValue(), map, suffix);
-        }
-      } else if (jsonNode.isArray()) {
-        ArrayNode arrayNode = (ArrayNode) jsonNode;
+      String issnFromOtherResources = null;
 
-        for (int i = 0; i < arrayNode.size(); i++) {
-          processKeys(currentPath, arrayNode.get(i), map, suffix);
-        }
-
-      } else if (jsonNode.isValueNode()) {
-        ValueNode valueNode = (ValueNode) jsonNode;
-        if (map.containsKey(currentPath)) {
-          String oldValues = stripBrackets(map.get(currentPath));
-          map.put(
-              currentPath,
-              "[" + oldValues + ", " + valueNode.asText() + "]"
-          );
-        } else {
-          map.put(currentPath, valueNode.asText());
-        }
+      if (itemName != null) {
+        issnFromOtherResources = getIssnFromOtherResources(itemName);
+        log.debug3(" itemName = " + itemName + ", srcUrl = " + srcUrl);
+      } else {
+        log.debug3("tdbAu is null");
+        issnFromOtherResources = getIssnFromOtherResources(srcUrl);
       }
+
+      return issnFromOtherResources;
     }
 
-    @Override
-    public void extract(MetadataTarget target,
-                        CachedUrl cu,
-                        Emitter emitter)
+    static String getIssnFromOtherResources(String srcUrl) {
+
+
+      //Alphaville_2009-4078
+      //https://archive.org/download/Daysona_Life_Science_2708-6291/27086283-2022-10-01-05-17-46.tar.gz!/27086283-2022-10-01-05-17-46/2708-6283/99ecd4071a21457e90ac4fedf7c75978/data/metadata/metadata.json
+      Pattern issn_pattern = Pattern.compile(".*_(\\d{4}-\\d{3}[0-9X])");
+
+      Matcher issn_matcher = issn_pattern.matcher(srcUrl);
+      String single_issn_candidate = null;
+
+      if (issn_matcher.find()) {
+        log.debug3("single issns matching pattern,  srcUrl = " + srcUrl);
+        int groupCount = issn_matcher.groupCount();
+
+        if (groupCount >= 1) {
+          single_issn_candidate = issn_matcher.group(1);
+        } else {
+          log.debug3("single issns NOTs matching pattern, srcUrl = " + srcUrl);
+        }
+      } else {
+        log.debug3("single issns NOTs matching pattern, srcUrl = " + srcUrl);
+      }
+      return single_issn_candidate;
+    }
+
+      static void processKeys (String currentPath,
+              JsonNode jsonNode,
+              Map < String, String > map,
+              List < Integer > suffix){
+        if (jsonNode.isObject()) {
+          ObjectNode objectNode = (ObjectNode) jsonNode;
+          Iterator<Map.Entry<String, JsonNode>> iter = objectNode.fields();
+          String pathPrefix = currentPath.isEmpty() ? "" : currentPath + ".";
+
+          while (iter.hasNext()) {
+            Map.Entry<String, JsonNode> entry = iter.next();
+            processKeys(pathPrefix + entry.getKey(), entry.getValue(), map, suffix);
+          }
+        } else if (jsonNode.isArray()) {
+          ArrayNode arrayNode = (ArrayNode) jsonNode;
+
+          for (int i = 0; i < arrayNode.size(); i++) {
+            processKeys(currentPath, arrayNode.get(i), map, suffix);
+          }
+
+        } else if (jsonNode.isValueNode()) {
+          ValueNode valueNode = (ValueNode) jsonNode;
+          if (map.containsKey(currentPath)) {
+            String oldValues = stripBrackets(map.get(currentPath));
+            map.put(
+                    currentPath,
+                    "[" + oldValues + ", " + valueNode.asText() + "]"
+            );
+          } else {
+            map.put(currentPath, valueNode.asText());
+          }
+        }
+      }
+
+      @Override
+      public void extract (MetadataTarget target,
+              CachedUrl cu,
+              Emitter emitter)
         throws IOException, PluginException {
-      //
-      log.debug2("Parsing " + cu.getUrl());
+        //
+        log.debug2("Parsing " + cu.getUrl());
 
-      am = new ArticleMetadata();
-      currentTag = null;
-      currentValue = new StringBuilder();
-      boolean hasBegun = false;
+        am = new ArticleMetadata();
+        currentTag = null;
+        currentValue = new StringBuilder();
+        boolean hasBegun = false;
 
-      ObjectMapper objectMapper = new ObjectMapper();
-      JsonNode rootNode = null;
-      try (Reader reader = cu.openForReading()) {
-        rootNode = objectMapper.readTree(reader);
-      }
-      Map<String, String> map = new HashMap<>();
-      // add all json keys to a map
-      processKeys("", rootNode, map, new ArrayList<>());
+        ObjectMapper objectMapper = new ObjectMapper();
+        JsonNode rootNode = null;
+        try (Reader reader = cu.openForReading()) {
+          rootNode = objectMapper.readTree(reader);
+        }
+        Map<String, String> map = new HashMap<>();
+        // add all json keys to a map
+        processKeys("", rootNode, map, new ArrayList<>());
 
-      for (Map.Entry<String, String> entry : map.entrySet()) {
-        String key = entry.getKey();
-        String value = entry.getValue();
-        am.putRaw(key, value);
-      }
-      am.cook(jsonPathToMetadataField);
-      emitter.emitMetadata(cu, am);
+        String srcUrl = cu.getUrl();
+
+        String itemName = null;
+        String issnFromOtherResources = null;
+
+        TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
+
+        if (tdbau != null) {
+          itemName = tdbau.getParam("item");
+        }
+
+        for (Map.Entry<String, String> entry : map.entrySet()) {
+          String key = entry.getKey();
+          String value = entry.getValue();
+
+          //Colombo_Business_Journal_-_2579-2210/8bfc2597-2023-01-05-02-45-00.tar/8bfc2597-2023-01-05-02-45-00/1800-363X/d65087ccb4e043c299cb5e8e72c40e98/data/metadata/metadata.json
+          //            "issns": [
+          //                "1800-363X",
+          //                "2579-2210"
+          //            ]
+          //santander_estudios_de_patrimonio_2605-5317/26054450-2023-03-24-08-22-25.tar.gz!/26054450-2023-03-24-08-22-25/2605-4450/5bcea626423f42f596a7dfe5c67ce620/data/metadata/metadata.json
+          //            "issns": [
+          //                "2605-4450",
+          //                "2605-5317"
+          //            ]
+
+          if (key.contains("issn")) {
+
+            // "issns" is array, has more than 1 issn
+            if (value.contains("[") && value.contains("]") && value.contains(",")) {
+              Pattern pattern = Pattern.compile("\\[(.*?)\\]");
+
+              // Match the pattern against the input string
+              Matcher matcher = pattern.matcher(value);
+
+              if (matcher.find()) {
+                String matchedString = matcher.group(1);
+
+                // Split the matched string by commas
+                String[] elements = matchedString.split(", ");
+
+                // Print each individual element
+                for (String element : elements) {
+
+                  if (itemName != null) {
+                      issnFromOtherResources = getIssnFromTdbOrSrcUrl(itemName, null);
+                      log.debug3("Multile issn found, match pattern, key =  " + key + ", val = " + value
+                              + ", element = " + element + ", issnFromOtherResources = " + issnFromOtherResources + ", itemName = " + itemName + ", srcUrl = " + srcUrl);
+                  } else {
+                    log.debug3("tdbAu is null");
+                    issnFromOtherResources = getIssnFromTdbOrSrcUrl(null, srcUrl);
+                  }
+
+                  if (issnFromOtherResources != null && issnFromOtherResources.equals(element)) {
+                    am.putRaw(key, element);
+                    log.debug3("Multile issn found, match pattern, key =  " + key + ", val = " + value
+                            + ", element = " + element + ", issnFromOtherResources = " + issnFromOtherResources + ", srcUrl = " + srcUrl);
+                  }
+                }
+              } else {
+                log.debug3("Multile issn found, NOT match pattern, key =  " + key + ", val = " + value + ", srcUrl = " + srcUrl);
+              }
+            } else {
+              // "issns" is single value, still need to check if it is the same with the directory
+
+              boolean shouldCompareSingleIssnWithOtherResources = true;
+
+              if (shouldCompareSingleIssnWithOtherResources) {
+
+                if (itemName != null) {
+                  issnFromOtherResources = getIssnFromTdbOrSrcUrl(itemName, null);
+                  log.debug3("Single issn found, need to compare, key =  " + key + ", val = " + value
+                          + ", issnFromOtherResources = " + issnFromOtherResources + ", itemName = " + itemName + ", srcUrl = " + srcUrl);
+                } else {
+                  log.debug3("tdbAu is null");
+                  issnFromOtherResources = getIssnFromTdbOrSrcUrl(null, srcUrl);
+                }
+
+                if (issnFromOtherResources != null && issnFromOtherResources.equals(value)) {
+                  log.debug3("Single issn from different resoures matched, set from json value =" + value
+                          + ", issnFromOtherResources = " + issnFromOtherResources + ", itemName = " + itemName + ", srcUrl = " + srcUrl);
+                  am.putRaw(key, value);
+                } else if (issnFromOtherResources != null) {
+                  log.debug3("Single issn from different resoures NOT match, set from issnFromOtherResources " + value
+                          + ", issnFromOtherResources = " + issnFromOtherResources + ", itemName = " + itemName + ", srcUrl = " + srcUrl);
+                  am.putRaw(key, issnFromOtherResources);
+                }
+              } else {
+                log.debug3("Single issn found, NOs need to compare key =  " + key + ", val = " + value + ", srcUrl = " + srcUrl);
+                am.putRaw(key, value);
+              }
+            }
+          } else {
+
+            am.putRaw(key, value);
+
+            log.debug3("Putraw key =  " + key + ", val = " + value + ", srcUrl = " + srcUrl);
+          }
+        }
+        am.cook(jsonPathToMetadataField);
+
+        emitter.emitMetadata(cu, am);
     }
   }
-
 }

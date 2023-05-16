@@ -5,7 +5,7 @@
 
     plugin = org.lockss.plugin.jasper.ClockssJasperPlugin
     param[base_url] = https://warcs.archive-it.org/
-    implicit < status ; year ; name ; param[collection] ; param[user_pass] >
+    implicit < status ; year ; name ; param[item] ; param[user_pass] >
 
     {
 
