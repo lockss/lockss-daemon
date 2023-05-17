@@ -1157,9 +1157,10 @@ while (my $line = <>) {
       #printf("URL: %s\n", $perm_url); #debug
       $vol_title = $perm_url ;
     #start_url for all OAI queries https://www.comicsgrid.com/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31
-    $url = sprintf("%soai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31",
+    $url = sprintf("%soai?verb=ListRecords&metadataPrefix=oai_dc&from=%d-01-01&until=%d-12-31",
       $param{base_url}, $param{year}, $param{year});
     $man_url = uri_unescape($url);
+    #$man_url = $url;
     my $req_p = HTTP::Request->new(GET, $perm_url);
     my $resp_p = $ua->request($req_p);
     my $req_s = HTTP::Request->new(GET, $man_url);
