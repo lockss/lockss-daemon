@@ -305,7 +305,8 @@ public class TestLockssKeyStore extends LockssTestCase {
     assertNotNull(lk.getTrustManagerFactory());
     Collection aliases =
       ListUtil.fromIterator(new EnumerationIterator(lk.getKeyStore().aliases()));
-    assertSameElements(SetUtil.set("expired", "goodguy", "future", "good"),
+    assertSameElements(SetUtil.set("goodguy", "wrongguy",
+                                   "goodguy-expired", "goodguy-future"),
 		       aliases);
   }
 
@@ -321,7 +322,8 @@ public class TestLockssKeyStore extends LockssTestCase {
     assertNotNull(lk.getTrustManagerFactory());
     Collection aliases =
       ListUtil.fromIterator(new EnumerationIterator(lk.getKeyStore().aliases()));
-    assertSameElements(SetUtil.set("expired", "goodguy", "future", "good"),
+    assertSameElements(SetUtil.set("goodguy", "wrongguy",
+                                   "goodguy-expired", "goodguy-future"),
 		       aliases);
   }
 
@@ -339,7 +341,8 @@ public class TestLockssKeyStore extends LockssTestCase {
     assertNotNull(lk.getTrustManagerFactory());
     Collection aliases =
       ListUtil.fromIterator(new EnumerationIterator(lk.getKeyStore().aliases()));
-    assertSameElements(SetUtil.set("expired", "goodguy", "future", "good"),
+    assertSameElements(SetUtil.set("goodguy", "wrongguy",
+                                   "goodguy-expired", "goodguy-future"),
 		       aliases);
   }
 

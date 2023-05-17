@@ -1,8 +1,81 @@
 #!/bin/sh
 
-# Regenerate the loadable plugin jars used by TestPluginManager.
-# Should be run if the keystores are regenerated, or changes made to
-# test/src/org/lockss/test/MockConfigurablePlugin[V2].xml
+# Regenerate the loadable plugin jars used by TestJarValidator and
+# TestPluginManager.  Must be rerun if the keystores are regenerated,
+# and (in some cases) if changes are made to the plugins
+
+# NOTE: this must be run *after* the tests are compiled as it
+# references files in test/classes .  So run "ant jar-tests" first.
+
+# Some "PluginWellformednessTests FAILED" message are expected.
+
+# mkplugin <jarname> <plugin> <alias>
+# If <alias> empty, jar is not signed
+mkplugin() {
+  local tmproot=`mktemp -t -d plug.XXXXXX`
+  mkdir -p ${tmproot}/classes/org/lockss/test
+  jarname="$1"; shift
+  plugin="$1"; shift
+  alias="$1"; shift
+  cp test/classes/org/lockss/test/${plugin} ${tmproot}/classes/org/lockss/test/
+  for x in $@; do
+    cp test/classes/org/lockss/test/$x ${tmproot}/classes/org/lockss/test/
+  done
+  if [ -n "${alias}" ]; then
+    test/scripts/genplugin --jar=${jarname} --plugin=${tmproot}/classes/org/lockss/test/${plugin} --plugin-root=${tmproot}/classes --alias=${alias} --keystore test/src/org/lockss/test/${alias}.keystore --password f00bar --titledb=
+  else
+    test/scripts/genplugin --nosign --jar=${jarname} --plugin=${tmproot}/classes/org/lockss/test/${plugin} --plugin-root=${tmproot}/classes --titledb=
+  fi
+  rm -rf ${tmproot}
+}
+
+test_plugins_dir=test/src/org/lockss/test/plugins
+# plugin buid dir
+pbd=plugins/jars
+rm -f ${pbd}/*
+
+# good-xml.jar contains MockConfigurablePlugin
+mkplugin good-xml.jar MockConfigurablePlugin.xml goodguy
+
+# good-aux.jar contains MockConfigurablePlugin & an aux class
+mkplugin good-aux.jar MockConfigurablePlugin.xml goodguy MockFilterFactory.class
+
+# good-java.jar contains java plugin
+mkplugin good-java.jar SimpleJavaPlugin.class goodguy
+
+# unsigned.jar contains MockConfigurablePlugin but is unsigned
+mkplugin unsigned.jar MockConfigurablePlugin.xml ""
+
+# unknown-sig.jar is signed by key not in pub keystore
+mkplugin unknown-sig.jar MockConfigurablePlugin.xml badguy
+
+# wrong-sig.jar is signed by key not matching key of same alias in pub keystore
+mkplugin wrong-sig.jar MockConfigurablePlugin.xml wrongguy
+
+# expired-sig.jar is signed by a good key that's expired
+mkplugin expired-sig.jar MockConfigurablePlugin.xml goodguy-expired
+
+# future-sig.jar is signed by a good key that's not valid yet
+mkplugin future-sig.jar MockConfigurablePlugin.xml goodguy-future
+
+# partially-signed.jar has a file added after signing
+cp ${pbd}/good-xml.jar ${pbd}/partially-signed.jar
+jar uf ${pbd}/partially-signed.jar -C classes org/lockss/util/Deadline.class
+
+# tampered1.jar has a file replaced after signing
+cp ${pbd}/good-xml.jar ${pbd}/tampered1.jar
+zip -d ${pbd}/tampered1.jar org/lockss/test/MockConfigurablePlugin.xml
+jar uf ${pbd}/tampered1.jar -C classes org/lockss/test/MockConfigurablePlugin.xml
+
+# nomanifest.jar has no manifest
+cp ${pbd}/good-xml.jar ${pbd}/nomanifest.jar
+#unzip -l ${pbd}/nomanifest.jar
+zip -d ${pbd}/nomanifest.jar META-INF/MANIFEST.MF
+
+
+# Generate the loadable plugin jars used by TestPluginManager.  These
+# don't use mkplugin because some of them build from non-standard
+# locations
 
 # good-plugin.jar contains MockConfigurablePlugin v1.
 test/scripts/genplugin --jar=good-plugin.jar --plugin=test/src/org/lockss/test/MockConfigurablePlugin.xml --plugin-root=./test/src --alias=goodguy --keystore test/src/org/lockss/test/goodguy.keystore --password f00bar "--titledb="
@@ -17,6 +90,7 @@ mkdir -p ${tmproot}/classes/org/lockss/test
 cp test/src/org/lockss/test/MockConfigurablePluginV2.xml ${tmproot}/classes/org/lockss/test/MockConfigurablePlugin.xml
 
 test/scripts/genplugin --jar=good-plugin2.jar --plugin=${tmproot}/classes/org/lockss/test/MockConfigurablePlugin.xml --plugin-root=${tmproot}/classes --alias=goodguy --keystore test/src/org/lockss/test/goodguy.keystore --password f00bar "--titledb="
+rm -rf ${tmproot}
 
 # good-plugin3.jar contains MockConfigurablePlugin v3, which must be (still
 # a different version of) the same plugin above.  Its source is in
@@ -29,15 +103,5 @@ cp test/src/org/lockss/test/MockConfigurablePluginV3.xml ${tmproot}/classes/org/
 
 test/scripts/genplugin --jar=good-plugin3.jar --plugin=${tmproot}/classes/org/lockss/test/MockConfigurablePlugin.xml --plugin-root=${tmproot}/classes --alias=goodguy --keystore test/src/org/lockss/test/goodguy.keystore --password f00bar "--titledb="
 
-# bad-plugin.jar contains MockConfigurablePlugin signed by an expired key.
-test/scripts/genplugin --jar=bad-plugin.jar --plugin=test/src/org/lockss/test/MockConfigurablePlugin.xml --plugin-root=./test/src --alias=badguy --keystore test/src/org/lockss/test/badguy.keystore --password f00bar "--titledb="
-
-test/scripts/genplugin --jar=Good1.jar --plugin=test/classes/org/lockss/test/SimpleJavaPlugin.class --plugin-root=test/classes --alias=goodguy --keystore test/src/org/lockss/test/goodguy.keystore --password f00bar "--titledb="
-
-cp plugins/jars/good-plugin.jar \
-   plugins/jars/good-plugin2.jar \
-   plugins/jars/good-plugin3.jar \
-   plugins/jars/bad-plugin.jar \
-   plugins/jars/Good1.jar \
-   test/src/org/lockss/test
 rm -rf ${tmproot}
+cp ${pbd}/*.jar "${test_plugins_dir}"
