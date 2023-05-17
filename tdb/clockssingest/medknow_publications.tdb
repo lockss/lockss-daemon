@@ -5967,7 +5967,7 @@
       au < finished ; frozen ; 2019 ; Egyptian Retina Journal Volume 6 ; 2019 ; 6 ; https://www.egyptretinaj.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; Egyptian Retina Journal Volume 7 ; 2020 ; 7 ; https://www.egyptretinaj.com/ ; ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; Egyptian Retina Journal Volume 8 ; 2021 ; 8 ; https://www.egyptretinaj.com/ ; ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2022 ; Egyptian Retina Journal Volume 9 ; 2022 ; 9 ; https://www.egyptretinaj.com/ ; ; >
+      au < manifest ; exists ; 2022 ; Egyptian Retina Journal Volume 9 ; 2022 ; 9 ; https://www.egyptretinaj.com/ ; ; >
       au < expected ; exists ; 2023 ; Egyptian Retina Journal Volume 10 ; 2023 ; 10 ; https://www.egyptretinaj.com/ ; ; >
 
   }
@@ -6201,7 +6201,7 @@
       au < finished ; finished ; 2020 ; Global Journal of Transfusion Medicine Volume 5 ; 2020 ; 5 ; https://www.gjtmonline.com/ ; ; reingest5.clockss.org:8082 >
       au < notReady ; exists ; 2021 ; Global Journal of Transfusion Medicine Volume 6 ; 2021 ; 6 ; https://www.gjtmonline.com/ ; ; > #500 error
       au < notReady ; exists ; 2022 ; Global Journal of Transfusion Medicine Volume 7 ; 2022 ; 7 ; https://www.gjtmonline.com/ ; ; > #500 error https://www.gjtmonline.com/viewimage.asp?img=GlobJTransfusMed_2022_7_1_82_344338_f5.jpg
-      au < expected ; exists ; 2023 ; Global Journal of Transfusion Medicine Volume 8 ; 2023 ; 8 ; https://www.gjtmonline.com/ ; ; > #500 error https://www.gjtmonline.com/viewimage.asp?img=GlobJTransfusMed_2023_8_1_82_344338_f5.jpg
+      au < manifest ; exists ; 2023 ; Global Journal of Transfusion Medicine Volume 8 ; 2023 ; 8 ; https://www.gjtmonline.com/ ; ; > #500 error https://www.gjtmonline.com/viewimage.asp?img=GlobJTransfusMed_2023_8_1_82_344338_f5.jpg
 
   }
 
@@ -8079,7 +8079,7 @@
       au < finished ; frozen ; 2020 ; Journal of the Practice of Cardiovascular Sciences Volume 6 ; 2020 ; 6 ; https://www.j-pcs.org/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Journal of the Practice of Cardiovascular Sciences Volume 7 ; 2021 ; 7 ; https://www.j-pcs.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Journal of the Practice of Cardiovascular Sciences Volume 8 ; 2022 ; 8 ; https://www.j-pcs.org/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of the Practice of Cardiovascular Sciences Volume 9 ; 2023 ; 9 ; https://www.j-pcs.org/ ; ; >
+      au < manifest ; exists ; 2023 ; Journal of the Practice of Cardiovascular Sciences Volume 9 ; 2023 ; 9 ; https://www.j-pcs.org/ ; ; >
 
   }
 
