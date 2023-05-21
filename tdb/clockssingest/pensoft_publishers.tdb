@@ -1483,4 +1483,31 @@
 
   }
 
+  {
+
+      title <
+        name = Aquatic Invasions ;
+        issn = 1798-6540 ;
+        eissn = 1818-5487
+      >
+
+      param[au_oai_set] = aquaticinvasions
+
+      au < manifest ; exists ; 2023 ; 2023 ; Aquatic Invasions Volume 2023 ; 2023 ; https://aquaticinvasions.arphahub.com/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Atomic Layer Deposition ;
+        eissn = 2772-2570
+      >
+
+      param[au_oai_set] = atomiclayerdeposition
+
+      au < manifest ; exists ; 2023 ; 2023 ; Atomic Layer Deposition Volume 2023 ; 2023 ; https://journal.atomiclayerdeposition.com/ ; >
+
+  }
+
 }
