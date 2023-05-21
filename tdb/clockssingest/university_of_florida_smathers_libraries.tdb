@@ -30,7 +30,7 @@
       au < manifest ; exists ; 1964 ; Chemical Engineering Education Volume 1964 ; 1964 ; 1964 ; >
       au < manifest ; exists ; 1965 ; Chemical Engineering Education Volume 1965 ; 1965 ; 1965 ; >
       au < manifest ; exists ; 1966 ; Chemical Engineering Education Volume 1966 ; 1966 ; 1966 ; >
-      au < exists ; exists ; 1967 ; Chemical Engineering Education Volume 1967 ; 1967 ; 1967 ; >
+      au < doesNotExist ; doesNotExist ; 1967 ; Chemical Engineering Education Volume 1967 ; 1967 ; 1967 ; >
       au < manifest ; exists ; 1968 ; Chemical Engineering Education Volume 1968 ; 1968 ; 1968 ; >
       au < manifest ; exists ; 1969 ; Chemical Engineering Education Volume 1969 ; 1969 ; 1969 ; >
       au < manifest ; exists ; 1970 ; Chemical Engineering Education Volume 1970 ; 1970 ; 1970 ; >
@@ -214,8 +214,7 @@
 
       title <
         name = The International FLAIRS Conference Proceedings ;
-        issn = 2334-0762 ;
-        eissn = 
+        issn = 2334-0762
       >
 
       param[journal_id] = FLAIRS
@@ -226,32 +225,11 @@
       au < manifest ; exists ; 1991 ; The International FLAIRS Conference Proceedings Volume 4 ; 4 ; 1991 ; >
       au < manifest ; exists ; 1992 ; The International FLAIRS Conference Proceedings Volume 5 ; 5 ; 1992 ; >
       au < manifest ; exists ; 1993 ; The International FLAIRS Conference Proceedings Volume 6 ; 6 ; 1993 ; >
-      au < exists ; exists ; 1994 ; The International FLAIRS Conference Proceedings Volume 7 ; 7 ; 1994 ; >
+      au < doesNotExist ; doesNotExist ; 1994 ; The International FLAIRS Conference Proceedings Volume 7 ; 7 ; 1994 ; >
       au < manifest ; exists ; 1995 ; The International FLAIRS Conference Proceedings Volume 8 ; 8 ; 1995 ; >
       au < manifest ; exists ; 1996 ; The International FLAIRS Conference Proceedings Volume 9 ; 9 ; 1996 ; >
       au < manifest ; exists ; 1997 ; The International FLAIRS Conference Proceedings Volume 10 ; 10 ; 1997 ; >
-      au < exists ; exists ; 1998 ; The International FLAIRS Conference Proceedings Volume 11 ; 11 ; 1998 ; >
-      au < exists ; exists ; 1999 ; The International FLAIRS Conference Proceedings Volume 12 ; 12 ; 1999 ; >
-      au < exists ; exists ; 2000 ; The International FLAIRS Conference Proceedings Volume 13 ; 13 ; 2000 ; >
-      au < exists ; exists ; 2001 ; The International FLAIRS Conference Proceedings Volume 14 ; 14 ; 2001 ; >
-      au < exists ; exists ; 2002 ; The International FLAIRS Conference Proceedings Volume 15 ; 15 ; 2002 ; >
-      au < exists ; exists ; 2003 ; The International FLAIRS Conference Proceedings Volume 16 ; 16 ; 2003 ; >
-      au < exists ; exists ; 2004 ; The International FLAIRS Conference Proceedings Volume 17 ; 17 ; 2004 ; >
-      au < exists ; exists ; 2005 ; The International FLAIRS Conference Proceedings Volume 18 ; 18 ; 2005 ; >
-      au < exists ; exists ; 2006 ; The International FLAIRS Conference Proceedings Volume 19 ; 19 ; 2006 ; >
-      au < exists ; exists ; 2007 ; The International FLAIRS Conference Proceedings Volume 20 ; 20 ; 2007 ; >
-      au < exists ; exists ; 2008 ; The International FLAIRS Conference Proceedings Volume 21 ; 21 ; 2008 ; >
-      au < exists ; exists ; 2009 ; The International FLAIRS Conference Proceedings Volume 22 ; 22 ; 2009 ; >
-      au < exists ; exists ; 2010 ; The International FLAIRS Conference Proceedings Volume 23 ; 23 ; 2010 ; >
-      au < exists ; exists ; 2011 ; The International FLAIRS Conference Proceedings Volume 24 ; 24 ; 2011 ; >
-      au < exists ; exists ; 2012 ; The International FLAIRS Conference Proceedings Volume 25 ; 25 ; 2012 ; >
-      au < exists ; exists ; 2013 ; The International FLAIRS Conference Proceedings Volume 26 ; 26 ; 2013 ; >
-      au < exists ; exists ; 2014 ; The International FLAIRS Conference Proceedings Volume 27 ; 27 ; 2014 ; >
-      au < exists ; exists ; 2015 ; The International FLAIRS Conference Proceedings Volume 28 ; 28 ; 2015 ; >
-      au < exists ; exists ; 2016 ; The International FLAIRS Conference Proceedings Volume 29 ; 29 ; 2016 ; >
-      au < exists ; exists ; 2017 ; The International FLAIRS Conference Proceedings Volume 30 ; 30 ; 2017 ; >
-      au < exists ; exists ; 2018 ; The International FLAIRS Conference Proceedings Volume 31 ; 31 ; 2018 ; >
-      au < exists ; exists ; 2019 ; The International FLAIRS Conference Proceedings Volume 32 ; 32 ; 2019 ; >
+      #No issues between 1998 and 2019
       au < manifest ; exists ; 2020 ; The International FLAIRS Conference Proceedings Volume 33 ; 33 ; 2020 ; >
       au < manifest ; exists ; 2021 ; The International FLAIRS Conference Proceedings Volume 34 ; 34 ; 2021 ; >
       au < manifest ; exists ; 2022 ; The International FLAIRS Conference Proceedings Volume 35 ; 35 ; 2022 ; >
@@ -263,8 +241,7 @@
 
       title <
         name = Florida Journal of Educational Research ;
-        issn = 2575-6109 ;
-        eissn = 
+        issn = 2575-6109
       >
 
       param[journal_id] = fjer
@@ -340,8 +317,7 @@
 
       title <
         name = Journal of Assessment in Higher Education ;
-        issn = 2642-0694 ;
-        eissn = 
+        issn = 2642-0694
       >
 
       param[journal_id] = assessment
@@ -374,8 +350,7 @@
 
       title <
         name = The Journal of Public Interest Communications ;
-        issn = 2573-4342 ;
-        eissn = 
+        issn = 2573-4342
       >
 
       param[journal_id] = jpic
@@ -428,8 +403,7 @@
 
       title <
         name = Journal of Veterinary Forensic Sciences ;
-        issn = 2690-3660 ;
-        eissn = 
+        issn = 2690-3660
       >
 
       param[journal_id] = JVFS
@@ -608,8 +582,7 @@
 
       title <
         name = Proceedings of the Florida State Horticultural Society ;
-        issn = 0886-7283 ;
-        eissn = 
+        issn = 0886-7283
       >
 
       param[journal_id] = fshs
@@ -746,8 +719,8 @@
       au < manifest ; exists ; 2017 ; Proceedings of the Florida State Horticultural Society Volume 130 ; 130 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Proceedings of the Florida State Horticultural Society Volume 131 ; 131 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Proceedings of the Florida State Horticultural Society Volume 132 ; 132 ; 2019 ; >
-      au < exists ; exists ; 2020 ; Proceedings of the Florida State Horticultural Society Volume 133 ; 133 ; 2020 ; >
-      au < exists ; exists ; 2021 ; Proceedings of the Florida State Horticultural Society Volume 134 ; 134 ; 2021 ; >
+      au < manifest ; exists ; 2020 ; Proceedings of the Florida State Horticultural Society Volume 133 ; 133 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Proceedings of the Florida State Horticultural Society Volume 134 ; 134 ; 2021 ; >
       au < exists ; exists ; 2022 ; Proceedings of the Florida State Horticultural Society Volume 135 ; 135 ; 2022 ; >
       au < exists ; exists ; 2023 ; Proceedings of the Florida State Horticultural Society Volume 136 ; 136 ; 2023 ; >
 
@@ -788,10 +761,6 @@
       au < manifest ; exists ; 2017 ; Florida Linguistics Papers Volume 4 ; 4 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Florida Linguistics Papers Volume 5 ; 5 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Florida Linguistics Papers Volume 6 ; 6 ; 2019 ; >
-      au < exists ; exists ; 2020 ; Florida Linguistics Papers Volume 7 ; 7 ; 2020 ; >
-      au < exists ; exists ; 2021 ; Florida Linguistics Papers Volume 8 ; 8 ; 2021 ; >
-      au < exists ; exists ; 2022 ; Florida Linguistics Papers Volume 9 ; 9 ; 2022 ; >
-      au < exists ; exists ; 2023 ; Florida Linguistics Papers Volume 10 ; 10 ; 2023 ; >
 
   }
 
@@ -815,25 +784,8 @@
       au < manifest ; exists ; 2002 ; Holarctic Lepidoptera Volume 9 ; 9 ; 2002 ; >
       au < manifest ; exists ; 2003 ; Holarctic Lepidoptera Volume 10 ; 10 ; 2003 ; >
       au < manifest ; exists ; 2004 ; Holarctic Lepidoptera Volume 11 ; 11 ; 2004 ; >
-      au < exists ; exists ; 2005 ; Holarctic Lepidoptera Volume 12 ; 12 ; 2005 ; >
-      au < exists ; exists ; 2006 ; Holarctic Lepidoptera Volume 13 ; 13 ; 2006 ; >
-      au < exists ; exists ; 2007 ; Holarctic Lepidoptera Volume 14 ; 14 ; 2007 ; >
       au < manifest ; exists ; 2008 ; Holarctic Lepidoptera Volume 15 ; 15 ; 2008 ; >
-      au < exists ; exists ; 2009 ; Holarctic Lepidoptera Volume 16 ; 16 ; 2009 ; >
-      au < exists ; exists ; 2010 ; Holarctic Lepidoptera Volume 17 ; 17 ; 2010 ; >
-      au < exists ; exists ; 2011 ; Holarctic Lepidoptera Volume 18 ; 18 ; 2011 ; >
-      au < exists ; exists ; 2012 ; Holarctic Lepidoptera Volume 19 ; 19 ; 2012 ; >
-      au < exists ; exists ; 2013 ; Holarctic Lepidoptera Volume 20 ; 20 ; 2013 ; >
-      au < exists ; exists ; 2014 ; Holarctic Lepidoptera Volume 21 ; 21 ; 2014 ; >
-      au < exists ; exists ; 2015 ; Holarctic Lepidoptera Volume 22 ; 22 ; 2015 ; >
-      au < exists ; exists ; 2016 ; Holarctic Lepidoptera Volume 23 ; 23 ; 2016 ; >
-      au < exists ; exists ; 2017 ; Holarctic Lepidoptera Volume 24 ; 24 ; 2017 ; >
-      au < exists ; exists ; 2018 ; Holarctic Lepidoptera Volume 25 ; 25 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Holarctic Lepidoptera Volume 26 ; 26 ; 2019 ; >
-      au < exists ; exists ; 2020 ; Holarctic Lepidoptera Volume 27 ; 27 ; 2020 ; >
-      au < exists ; exists ; 2021 ; Holarctic Lepidoptera Volume 28 ; 28 ; 2021 ; >
-      au < exists ; exists ; 2022 ; Holarctic Lepidoptera Volume 29 ; 29 ; 2022 ; >
-      au < exists ; exists ; 2023 ; Holarctic Lepidoptera Volume 30 ; 30 ; 2023 ; >
 
   }
 
@@ -850,11 +802,6 @@
       au < manifest ; exists ; 2016 ; International Journal of Student Scholarship in Physical Therapy Volume 2 ; 2 ; 2016 ; >
       au < manifest ; exists ; 2017 ; International Journal of Student Scholarship in Physical Therapy Volume 3 ; 3 ; 2017 ; >
       au < manifest ; exists ; 2018 ; International Journal of Student Scholarship in Physical Therapy Volume 4 ; 4 ; 2018 ; >
-      au < exists ; exists ; 2019 ; International Journal of Student Scholarship in Physical Therapy Volume 5 ; 5 ; 2019 ; >
-      au < exists ; exists ; 2020 ; International Journal of Student Scholarship in Physical Therapy Volume 6 ; 6 ; 2020 ; >
-      au < exists ; exists ; 2021 ; International Journal of Student Scholarship in Physical Therapy Volume 7 ; 7 ; 2021 ; >
-      au < exists ; exists ; 2022 ; International Journal of Student Scholarship in Physical Therapy Volume 8 ; 8 ; 2022 ; >
-      au < exists ; exists ; 2023 ; International Journal of Student Scholarship in Physical Therapy Volume 9 ; 9 ; 2023 ; >
 
   }
 
