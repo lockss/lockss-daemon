@@ -261,6 +261,25 @@
     au < finished ; frozen ; 1990-1999 ; Proceedings of Symposia in Applied Mathematics 1990-1999 ; 1990-1999 ; reingest2.clockss.org:8085 > #prod complete, but no successful crawl, and no polling
     au < finished ; frozen ; 2000-2009 ; Proceedings of Symposia in Applied Mathematics 2000-2009 ; 2000-2009 ; reingest1.clockss.org:8082 > #prod complete, but no successful crawl, and no polling
     au < finished ; frozen ; 2010-2019 ; Proceedings of Symposia in Applied Mathematics 2010-2019 ; 2010-2019 ; reingest2.clockss.org:8085 >
+    au < expected ; exists ; 2020-2029 ; Proceedings of Symposia in Applied Mathematics 2020-2029 ; 2020-2029 ; >
+
+    }
+    {
+  
+    title < 
+      name = AMS Chelsea Publishing ;
+      type = bookSeries
+    >
+    
+    param[collection_id] = chel
+    
+    au < manifest ; exists ; 2009 ; AMS Chelsea Publishing 2009 ; 2009 ; >
+    au < manifest ; exists ; 2011 ; AMS Chelsea Publishing 2011 ; 2011 ; >
+    au < manifest ; exists ; 2012 ; AMS Chelsea Publishing 2012 ; 2012 ; >
+    au < manifest ; exists ; 2015 ; AMS Chelsea Publishing 2015 ; 2015 ; >
+    au < manifest ; exists ; 2018 ; AMS Chelsea Publishing 2018 ; 2018 ; >
+    au < manifest ; exists ; 2021 ; AMS Chelsea Publishing 2021 ; 2021 ; >
+    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 2022 ; 2022 ; >
 
     }
 }
