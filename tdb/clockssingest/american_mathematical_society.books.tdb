@@ -273,40 +273,125 @@
     
     param[collection_id] = chel
     
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 1894 ; 1894 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 1950 ; 1950 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 1961 ; 1961 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 1962 ; 1962 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 1964 ; 1964 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 1965 ; 1965 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 1966 ; 1966 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 1967 ; 1967 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 1968 ; 1968 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 1969 ; 1969 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 1971 ; 1971 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 1973 ; 1973 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 1974 ; 1974 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 1975 ; 1975 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 1976 ; 1976 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 1978 ; 1978 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 1979 ; 1979 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 1984 ; 1984 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 1986 ; 1986 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 1987 ; 1987 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 1988 ; 1988 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 1989 ; 1989 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 1992 ; 1992 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 2002 ; 2002 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 2004 ; 2004 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 2005 ; 2005 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 2008 ; 2008 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 2009 ; 2009 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 2011 ; 2011 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 2012 ; 2012 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 2015 ; 2015 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 2018 ; 2018 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 2021 ; 2021 ; >
-    au < manifest ; exists ; 2022 ; AMS Chelsea Publishing 2022 ; 2022 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 1894 ; 1894 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 1950 ; 1950 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 1961 ; 1961 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 1962 ; 1962 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 1964 ; 1964 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 1965 ; 1965 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 1966 ; 1966 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 1967 ; 1967 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 1968 ; 1968 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 1969 ; 1969 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 1971 ; 1971 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 1973 ; 1973 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 1974 ; 1974 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 1975 ; 1975 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 1976 ; 1976 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 1978 ; 1978 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 1979 ; 1979 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 1984 ; 1984 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 1986 ; 1986 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 1987 ; 1987 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 1988 ; 1988 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 1989 ; 1989 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 1992 ; 1992 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 2002 ; 2002 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 2004 ; 2004 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 2005 ; 2005 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 2008 ; 2008 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 2009 ; 2009 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 2011 ; 2011 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 2012 ; 2012 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 2015 ; 2015 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 2018 ; 2018 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 2021 ; 2021 ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing 2022 ; 2022 ; >
 
     }
+    
+    {
+  
+    title < 
+      name = AMS Non-Series Monographs ;
+      type = bookSeries
+    >
+    
+    param[collection_id] = mbk
+    
+    au < exists ; exists ; 2022 ; AMS Non-Series Monographs 2007 ; 2007 ; >
+    au < exists ; exists ; 2022 ; AMS Non-Series Monographs 2008 ; 2008 ; >
+    au < exists ; exists ; 2022 ; AMS Non-Series Monographs 2009 ; 2009 ; >
+    au < exists ; exists ; 2022 ; AMS Non-Series Monographs 2010 ; 2010 ; >
+    au < exists ; exists ; 2022 ; AMS Non-Series Monographs 2011 ; 2011 ; >
+    au < exists ; exists ; 2022 ; AMS Non-Series Monographs 2013 ; 2013 ; >
+    au < exists ; exists ; 2022 ; AMS Non-Series Monographs 2014 ; 2014 ; >
+    au < exists ; exists ; 2022 ; AMS Non-Series Monographs 2015 ; 2015 ; >
+    au < exists ; exists ; 2022 ; AMS Non-Series Monographs 2016 ; 2016 ; >
+    au < exists ; exists ; 2022 ; AMS Non-Series Monographs 2017 ; 2017 ; >
+    au < exists ; exists ; 2022 ; AMS Non-Series Monographs 2018 ; 2018 ; >
+    au < exists ; exists ; 2022 ; AMS Non-Series Monographs 2019 ; 2019 ; >
+    au < exists ; exists ; 2022 ; AMS Non-Series Monographs 2020 ; 2020 ; >
+    au < exists ; exists ; 2022 ; AMS Non-Series Monographs 2021 ; 2021 ; >
+    au < exists ; exists ; 2022 ; AMS Non-Series Monographs 2022 ; 2022 ; >
+
+    }
+
+    {
+  
+    title < 
+      name = CBMS Regional Conference Series in Mathematics ;
+      type = bookSeries
+    >
+    
+    param[collection_id] = cbms
+    
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1970 ; 1970 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1971 ; 1971 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1972 ; 1972 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1973 ; 1973 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1974 ; 1974 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1975 ; 1975 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1976 ; 1976 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1977 ; 1977 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1978 ; 1978 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1979 ; 1979 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1980 ; 1980 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1981 ; 1981 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1982 ; 1982 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1983 ; 1983 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1984 ; 1984 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1985 ; 1985 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1986 ; 1986 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1987 ; 1987 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1989 ; 1989 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1990 ; 1990 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1991 ; 1991 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1993 ; 1993 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1994 ; 1994 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1995 ; 1995 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1996 ; 1996 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1997 ; 1997 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 1999 ; 1999 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 2000 ; 2000 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 2002 ; 2002 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 2003 ; 2003 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 2004 ; 2004 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 2005 ; 2005 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 2006 ; 2006 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 2008 ; 2008 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 2009 ; 2009 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 2010 ; 2010 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 2011 ; 2011 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 2012 ; 2012 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 2013 ; 2013 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 2014 ; 2014 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 2015 ; 2015 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 2017 ; 2017 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 2018 ; 2018 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 2019 ; 2019 ; >
+    au < exists ; exists ; 2022 ; CBMS Regional Conference Series in Mathematics 2020 ; 2020 ; >
+
+    }
+
 }
