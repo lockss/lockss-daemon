@@ -33,6 +33,11 @@ my $bmc_tag = "<span>Archive</span>";
 my $bmc2_tag = "<span>Issues</span>";
 my $igi_tag = "/gateway/issue/";
 my $igi_book_tag = "/gateway/chapter/full-text";
+  my $au_type = "";
+  my $au_issn = "";
+  my $au_eissn = "";
+  my $au_year = "";
+  my $au_title = "";
 my $total_manifests = 0;
 my $total_missing = 0;
 my $total_missing_plugin = 0;
@@ -51,11 +56,23 @@ $ua->no_proxy('localhost', '127.0.0.1');
 while (my $line = <>) {
   chomp $line;
   my $auid_long = $line;
-  my @input_rec = split(/\|/, $line);
-  my $num_elements = int(@input_rec);
-  my $auid = $input_rec[$num_elements-1];
-  my @auid_rec = split(/\&/, $auid);
-  my $plugin = shift(@auid_rec);
+  my @input_strings = split(/\t/, $line); #either 1 element (auid) or 6 (auid,type,issn,eissn,year,title)
+  my $num_values = int(@input_strings); #either 1 or 6
+  if ($num_values == 6) {
+    $auid_long = $input_strings[0];
+    $au_type = $input_strings[1];
+    $au_issn = $input_strings[2];
+    $au_eissn = $input_strings[3];
+    $au_year = $input_strings[4];
+    $au_title = $input_strings[5];
+    printf("*Elements: %s %s %s %s %s\n", $au_type, $au_issn, $au_eissn, $au_year, $au_title); #debug
+  }
+  my @input_rec = split(/\|/, $input_strings[0]); #split the plugin path elements
+  my $num_elements = int(@input_rec); #number of path elements plus 1 (the auid and all the parameters)
+  my $auid = $input_rec[$num_elements-1]; #capure the auid without the path.
+  my @auid_rec = split(/\&/, $auid); #split the parameters
+  my $plugin = shift(@auid_rec); #capure the plugin name without the path.
+  #Create an array for the parameters
   my %param = ();
   foreach my $param_entry (@auid_rec) {
     if ($param_entry =~ m/^([^\~]+)\~([^\~]+)$/) {
@@ -77,6 +94,7 @@ while (my $line = <>) {
   my $vol_title = "NO TITLE FOUND";
   my $result = "Plugin Unknown";
 
+    printf("*Elements: %s %s %s %s %s\n", $au_type, $au_issn, $au_eissn, $au_year, $au_title); #debug
 
   #if ($plugin eq "HighWirePressH20Plugin" || $plugin eq "HighWirePressPlugin") {
   if ($plugin eq "HighWirePressH20Plugin") {
@@ -1675,6 +1693,61 @@ while (my $line = <>) {
   }
         sleep(4);
 
+  } elsif ($plugin eq "ClockssSageAtyponJournalsPlugin" && $num_values == 6) {
+      $url = sprintf("%sclockss/%s/%s/index.html",
+      $param{base_url}, $param{journal_id}, $param{volume_name});
+      #printf("Six Values\n");
+      $man_url = uri_unescape($url);
+      $jid = uri_unescape($param{journal_id});  #some journal_ids have a dot.
+      my $req = HTTP::Request->new(GET, $man_url);
+      my $resp = $ua->request($req);
+      #my $man_contents = $resp->is_success ? $resp->content : "";
+      if ($resp->is_success) {
+          my $man_contents = $resp->content;
+          if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+          } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && 
+                  ($man_contents =~ m/\/toc\/$jid\/$param{volume_name}\//)) {
+              if ($man_contents =~ m/<title>\s*(.*) (\d\d\d\d) CLOCKSS Manifest Page\s*<\/title>/si) {
+                  $vol_title = $1;
+                  if ($vol_title eq $au_title) {
+                    printf("Title matches!!!\n");
+                  } else {
+                    printf("Title does not match!!!\n");
+                  }
+                  $vol_title =~ s/\s*\n\s*/ /g;
+                  $vol_title =~ s/ &amp\; / & /;
+                  if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+                      $vol_title = "\"" . $vol_title . "\"";
+                  }
+                  my $vol_year = $2;
+                  if ($vol_year eq $au_year) {
+                    printf("Year matches!!!\n");
+                  } else {
+                    printf ("Year does not match!!!\n");
+                  }
+                  $vol_title = $vol_title . " " . $vol_year
+              }
+              $result = "Manifest";
+          } elsif ($man_contents !~ m/$clockss_tag/) {
+              $result = "--NO_TAG--"
+          } else {
+            $vol_title = "";
+            if ($man_contents =~ m/href=([^>]*)>/) {
+              $vol_title = $1;
+            }
+            if ($vol_title =~ m/\/$jid\//) {
+              $result = "--BAD_VOL--"
+            } else {
+              $result = "--BAD_JID--"
+            }
+          }
+      } else {
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+  }
+        sleep(4);
+
   } elsif (($plugin eq "ClockssTaylorAndFrancisPlugin") ||
            ($plugin eq "ClockssGenericAtyponPlugin") ||
            ($plugin eq "ClockssAaasPlugin") ||
@@ -1715,6 +1788,52 @@ while (my $line = <>) {
       $param{base_url}, $param{journal_id}, $param{volume_name});
       $man_url = uri_unescape($url);
       $jid = uri_unescape($param{journal_id});  #some journal_id's have a dot.
+      my $req = HTTP::Request->new(GET, $man_url);
+      my $resp = $ua->request($req);
+      if ($resp->is_success) {
+          my $man_contents = $resp->content;
+          #JSTOR plugin links are like ?journalCode=chaucerrev&amp;issue=2&amp;volume=44
+          if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+          } elsif (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) && 
+                  (($man_contents =~ m/\/$jid\/$param{volume_name}\//) || 
+                  ($man_contents =~ m/\/toc\/$jid\/*$param{volume_name}\"/) || 
+                  ##Royal Society Publishing: "/toc/rsbl/2014/10/12"  or "/toc/rsbm/2018/64"  
+                  ($man_contents =~ m/\"\/toc\/$jid\/[12][67890]\d\d\/$param{volume_name}(\/[-0-9]*)?\"/) || 
+                  ($man_contents =~ m/\/$jid\S*volume=$param{volume_name}/)))) {
+              if ($man_contents =~ m/<title>\s*(.*) CLOCKSS Manifest Page\s*<\/title>/si) {
+                  $vol_title = $1;
+                  $vol_title =~ s/\s*\n\s*/ /g;
+                  $vol_title =~ s/ &amp\; / & /;
+                  if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+                      $vol_title = "\"" . $vol_title . "\"";
+                  }
+              }
+              $result = "Manifest";
+          } elsif ($man_contents !~ m/$clockss_tag/) {
+              $result = "--NO_TAG--"
+          } else {
+            $vol_title = "";
+            if ($man_contents =~ m/href=([^>]*)>/) {
+              $vol_title = $1;
+            }
+            if ($vol_title =~ m/\/$jid\//) {
+              $result = "--BAD_VOL--"
+            } else {
+              $result = "--BAD_JID--"
+            }
+          }
+      } else {
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+  }
+        sleep(4);
+
+  } elsif ($plugin eq "ClockssSageAtyponJournalsPlugin" && $num_values == 6) {
+      $url = sprintf("%sclockss/%s/%s/index.html",
+      $param{base_url}, $param{journal_id}, $param{volume_name});
+      $man_url = uri_unescape($url);
+      $jid = uri_unescape($param{journal_id});  #some journal_ids have a dot.
       my $req = HTTP::Request->new(GET, $man_url);
       my $resp = $ua->request($req);
       if ($resp->is_success) {
