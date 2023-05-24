@@ -32,7 +32,7 @@
 
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/cda-released/
 
-      au < manifest ; exists ; 2023 ; Journal of the Canadian Dental Association Source Content 2023 ; 2023 >
+      au < readySource ; crawling ; 2023 ; Journal of the Canadian Dental Association Source Content 2023 ; 2023 >
 
     }
   }

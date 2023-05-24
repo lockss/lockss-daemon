@@ -39,7 +39,7 @@
         param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/frontiers-released/
 
         au < readySource ; crawling ; 2023 ; Frontiers Journals Source Content 2023_01 ; 2023_01 >
-        au < manifest ; exists ; 2023 ; Frontiers Journals Source Content 2023_02 ; 2023_02 >
+        au < readySource ; crawling ; 2023 ; Frontiers Journals Source Content 2023_02 ; 2023_02 >
 
       }
 
@@ -85,7 +85,7 @@
 
         param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/frontiersbooks-released/
 
-        au < manifest ; exists ; 2023 ; Frontiers Books Source Content 2023_01 ; 2023_01 >
+        au < readySource ; crawling ; 2023 ; Frontiers Books Source Content 2023_01 ; 2023_01 >
 
       }
 
