@@ -65,7 +65,7 @@ while (my $line = <>) {
     $au_eissn = $input_strings[3];
     $au_year = $input_strings[4];
     $au_title = $input_strings[5];
-    printf("*Elements: %s %s %s %s %s\n", $au_type, $au_issn, $au_eissn, $au_year, $au_title); #debug
+#    printf("*Elements: %s %s %s %s %s\n", $au_type, $au_issn, $au_eissn, $au_year, $au_title); #debug
   }
   my @input_rec = split(/\|/, $input_strings[0]); #split the plugin path elements
   my $num_elements = int(@input_rec); #number of path elements plus 1 (the auid and all the parameters)
@@ -94,7 +94,7 @@ while (my $line = <>) {
   my $vol_title = "NO TITLE FOUND";
   my $result = "Plugin Unknown";
 
-    printf("*Elements: %s %s %s %s %s\n", $au_type, $au_issn, $au_eissn, $au_year, $au_title); #debug
+#    printf("*Elements: %s %s %s %s %s\n", $au_type, $au_issn, $au_eissn, $au_year, $au_title); #debug
 
   #if ($plugin eq "HighWirePressH20Plugin" || $plugin eq "HighWirePressPlugin") {
   if ($plugin eq "HighWirePressH20Plugin") {
@@ -1701,51 +1701,93 @@ while (my $line = <>) {
       $jid = uri_unescape($param{journal_id});  #some journal_ids have a dot.
       my $req = HTTP::Request->new(GET, $man_url);
       my $resp = $ua->request($req);
-      #my $man_contents = $resp->is_success ? $resp->content : "";
-      if ($resp->is_success) {
-          my $man_contents = $resp->content;
-          if ($req->url ne $resp->request->uri) {
-              $vol_title = $resp->request->uri;
-              $result = "Redirected";
-          } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && 
-                  ($man_contents =~ m/\/toc\/$jid\/$param{volume_name}\//)) {
-              if ($man_contents =~ m/<title>\s*(.*) (\d\d\d\d) CLOCKSS Manifest Page\s*<\/title>/si) {
-                  $vol_title = $1;
-                  if ($vol_title eq $au_title) {
-                    printf("Title matches!!!\n");
-                  } else {
-                    printf("Title does not match!!!\n");
-                  }
-                  $vol_title =~ s/\s*\n\s*/ /g;
-                  $vol_title =~ s/ &amp\; / & /;
-                  if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-                      $vol_title = "\"" . $vol_title . "\"";
-                  }
-                  my $vol_year = $2;
-                  if ($vol_year eq $au_year) {
-                    printf("Year matches!!!\n");
-                  } else {
-                    printf ("Year does not match!!!\n");
-                  }
-                  $vol_title = $vol_title . " " . $vol_year
-              }
-              $result = "Manifest";
-          } elsif ($man_contents !~ m/$clockss_tag/) {
-              $result = "--NO_TAG--"
-          } else {
-            $vol_title = "";
-            if ($man_contents =~ m/href=([^>]*)>/) {
-              $vol_title = $1;
-            }
-            if ($vol_title =~ m/\/$jid\//) {
-              $result = "--BAD_VOL--"
-            } else {
-              $result = "--BAD_JID--"
-            }
+      my $man_contents = $resp->is_success ? $resp->content : "";
+      if (! $resp->is_success) {
+          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+      } elsif ($req->url ne $resp->request->uri) {
+          $vol_title = $resp->request->uri;
+          $result = "Redirected";
+      } elsif (! defined($man_contents)) {
+          $result = "--NOT_DEF--";
+      } elsif ($man_contents !~ m/$clockss_tag/) {
+          $result = "--NO_TAG--";
+      } elsif ($man_contents !~ m/\/toc\/$jid\//) {
+          $result = "--BAD_JID--";
+      } elsif ($man_contents !~ m/\/toc\/$jid\/$param{volume_name}\//) {
+          if ($man_contents =~ m/<title>\s*(.*) (\d\d\d\d) CLOCKSS Manifest Page\s*<\/title>/si) {
+              $vol_title = $1 . " " . $2;
+              $vol_title =~ s/\s*\n\s*/ /g;
+              $vol_title =~ s/ &amp\; / & /;
           }
-      } else {
-      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-  }
+          $result = "--BAD_VOL--";
+      } elsif ($man_contents !~ m/<title>\s*($au_title) *(\d\d\d\d) CLOCKSS Manifest Page\s*<\/title>/si) {
+          if ($man_contents =~ m/<title>\s*(.*) (\d\d\d\d) CLOCKSS Manifest Page\s*<\/title>/si) {
+              $vol_title = $1 . " " . $2;
+              $vol_title =~ s/\s*\n\s*/ /g;
+              $vol_title =~ s/ &amp\; / & /;
+          }
+          $result = "--BAD_TITLE--";
+      } elsif ($man_contents !~ m/<title>\s*($au_title) *($au_year) CLOCKSS Manifest Page\s*<\/title>/si) {
+          if ($man_contents =~ m/<title>\s*(.*) (\d\d\d\d) CLOCKSS Manifest Page\s*<\/title>/si) {
+              $vol_title = $1 . " " . $2;
+              $vol_title =~ s/\s*\n\s*/ /g;
+              $vol_title =~ s/ &amp\; / & /;
+          }
+          $result = "--BAD_YEAR--";
+          } else {
+          if ($man_contents =~ m/<title>\s*(.*) (\d\d\d\d) CLOCKSS Manifest Page\s*<\/title>/si) {
+              $vol_title = $1 . " " . $2;
+              $vol_title =~ s/\s*\n\s*/ /g;
+              $vol_title =~ s/ &amp\; / & /;
+          }
+              $result = "Manifest";
+          }
+
+
+#      if ($resp->is_success) {
+#          my $man_contents = $resp->content;
+#          if ($req->url ne $resp->request->uri) {
+#              $vol_title = $resp->request->uri;
+#              $result = "Redirected";
+#          } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && 
+#                  ($man_contents =~ m/\/toc\/$jid\/$param{volume_name}\//)) {
+#              if ($man_contents =~ m/<title>\s*(.*) (\d\d\d\d) CLOCKSS Manifest Page\s*<\/title>/si) {
+#                  $vol_title = $1;
+#                  if ($vol_title eq $au_title) {
+#                    printf("Title matches!!!\n");
+#                  } else {
+#                    printf("Title does not match!!!\n");
+#                  }
+#                  $vol_title =~ s/\s*\n\s*/ /g;
+#                  $vol_title =~ s/ &amp\; / & /;
+#                  if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+#                      $vol_title = "\"" . $vol_title . "\"";
+#                  }
+#                  my $vol_year = $2;
+#                  if ($vol_year eq $au_year) {
+#                    printf("Year matches!!!\n");
+#                  } else {
+#                    printf ("Year does not match!!!\n");
+#                  }
+#                  $vol_title = $vol_title . " " . $vol_year
+#              }
+#              $result = "Manifest";
+#          } elsif ($man_contents !~ m/$clockss_tag/) {
+#              $result = "--NO_TAG--"
+#          } else {
+#            $vol_title = "";
+#            if ($man_contents =~ m/href=([^>]*)>/) {
+#              $vol_title = $1;
+#            }
+#            if ($vol_title =~ m/\/$jid\//) {
+#              $result = "--BAD_VOL--"
+#            } else {
+#              $result = "--BAD_JID--"
+#            }
+#          }
+#      } else {
+#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+#  }
         sleep(4);
 
   } elsif (($plugin eq "ClockssTaylorAndFrancisPlugin") ||
