@@ -65,6 +65,11 @@ while (my $line = <>) {
     $au_eissn = $input_strings[3];
     $au_year = $input_strings[4];
     $au_title = $input_strings[5];
+    $au_title =~ s/ & / and /;
+    $au_title = lc($au_title);
+    $au_title =~ s/^the //;
+    #printf("  au_title:%s   au_year:%s\n", $au_title, $au_year); #debug
+
 #    printf("*Elements: %s %s %s %s %s\n", $au_type, $au_issn, $au_eissn, $au_year, $au_title); #debug
   }
   my @input_rec = split(/\|/, $input_strings[0]); #split the plugin path elements
@@ -1697,11 +1702,26 @@ while (my $line = <>) {
       $url = sprintf("%sclockss/%s/%s/index.html",
       $param{base_url}, $param{journal_id}, $param{volume_name});
       #printf("Six Values\n");
+      my $site_title = "";
+      my $site_year = "";
       $man_url = uri_unescape($url);
+      $man_url =~ s/^http:/https:/; #swap http for https, because we don't care about this redirect.
       $jid = uri_unescape($param{journal_id});  #some journal_ids have a dot.
       my $req = HTTP::Request->new(GET, $man_url);
       my $resp = $ua->request($req);
       my $man_contents = $resp->is_success ? $resp->content : "";
+      
+      if ($man_contents =~ m/<title>\s*(.*) (\S*) CLOCKSS Manifest Page\s*<\/title>/si) {
+          $site_title = $1;
+          $site_year = $2;
+          $site_title =~ s/\s*\n\s*/ /g;
+          $site_title =~ s/ &amp\; / & /;
+          $site_title =~ s/ & / and /;
+          $site_title = lc($site_title);
+          $site_title =~ s/^the //;
+          $site_title =~ s/^the //;
+          #printf("site_title:%s site_year:%s\n", $site_title, $site_year); #debug
+      }
       if (! $resp->is_success) {
           $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
       } elsif ($req->url ne $resp->request->uri) {
@@ -1713,25 +1733,21 @@ while (my $line = <>) {
           $result = "--NO_TAG--";
       } elsif ($man_contents !~ m/\/toc\/$jid\//) {
           $result = "--BAD_JID--";
-      } elsif ($man_contents !~ m/\/toc\/$jid\/$param{volume_name}\//) {
+      } elsif ($man_contents !~ m/\/toc\/$jid\/$param{volume_name}/) {
           if ($man_contents =~ m/<title>\s*(.*) (\d\d\d\d) CLOCKSS Manifest Page\s*<\/title>/si) {
-              $vol_title = $1 . " " . $2;
-              $vol_title =~ s/\s*\n\s*/ /g;
-              $vol_title =~ s/ &amp\; / & /;
+              $vol_title = $1 . " " . $2 . " JID-" . $jid . " Vol-" . $param{volume_name};
+              #$vol_title =~ s/\s*\n\s*/ /g;
+              #$vol_title =~ s/ &amp\; / & /;
           }
           $result = "--BAD_VOL--";
-      } elsif ($man_contents !~ m/<title>\s*($au_title) *(\d\d\d\d) CLOCKSS Manifest Page\s*<\/title>/si) {
+      } elsif ($site_title ne $au_title) {
           if ($man_contents =~ m/<title>\s*(.*) (\d\d\d\d) CLOCKSS Manifest Page\s*<\/title>/si) {
-              $vol_title = $1 . " " . $2;
-              $vol_title =~ s/\s*\n\s*/ /g;
-              $vol_title =~ s/ &amp\; / & /;
+              $vol_title = $site_title . " " . $site_year . "-tdb-" . $au_title . " " . $au_year;
           }
           $result = "--BAD_TITLE--";
-      } elsif ($man_contents !~ m/<title>\s*($au_title) *($au_year) CLOCKSS Manifest Page\s*<\/title>/si) {
+      } elsif ($site_year ne $au_year) {
           if ($man_contents =~ m/<title>\s*(.*) (\d\d\d\d) CLOCKSS Manifest Page\s*<\/title>/si) {
-              $vol_title = $1 . " " . $2;
-              $vol_title =~ s/\s*\n\s*/ /g;
-              $vol_title =~ s/ &amp\; / & /;
+              $vol_title = $site_title . " " . $site_year . "-tdb-" . $au_title . " " . $au_year;
           }
           $result = "--BAD_YEAR--";
           } else {
@@ -1742,52 +1758,6 @@ while (my $line = <>) {
           }
               $result = "Manifest";
           }
-
-
-#      if ($resp->is_success) {
-#          my $man_contents = $resp->content;
-#          if ($req->url ne $resp->request->uri) {
-#              $vol_title = $resp->request->uri;
-#              $result = "Redirected";
-#          } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && 
-#                  ($man_contents =~ m/\/toc\/$jid\/$param{volume_name}\//)) {
-#              if ($man_contents =~ m/<title>\s*(.*) (\d\d\d\d) CLOCKSS Manifest Page\s*<\/title>/si) {
-#                  $vol_title = $1;
-#                  if ($vol_title eq $au_title) {
-#                    printf("Title matches!!!\n");
-#                  } else {
-#                    printf("Title does not match!!!\n");
-#                  }
-#                  $vol_title =~ s/\s*\n\s*/ /g;
-#                  $vol_title =~ s/ &amp\; / & /;
-#                  if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-#                      $vol_title = "\"" . $vol_title . "\"";
-#                  }
-#                  my $vol_year = $2;
-#                  if ($vol_year eq $au_year) {
-#                    printf("Year matches!!!\n");
-#                  } else {
-#                    printf ("Year does not match!!!\n");
-#                  }
-#                  $vol_title = $vol_title . " " . $vol_year
-#              }
-#              $result = "Manifest";
-#          } elsif ($man_contents !~ m/$clockss_tag/) {
-#              $result = "--NO_TAG--"
-#          } else {
-#            $vol_title = "";
-#            if ($man_contents =~ m/href=([^>]*)>/) {
-#              $vol_title = $1;
-#            }
-#            if ($vol_title =~ m/\/$jid\//) {
-#              $result = "--BAD_VOL--"
-#            } else {
-#              $result = "--BAD_JID--"
-#            }
-#          }
-#      } else {
-#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-#  }
         sleep(4);
 
   } elsif (($plugin eq "ClockssTaylorAndFrancisPlugin") ||
