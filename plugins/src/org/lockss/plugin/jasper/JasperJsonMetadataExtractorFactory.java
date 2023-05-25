@@ -164,44 +164,87 @@ public class JasperJsonMetadataExtractorFactory implements FileMetadataExtractor
       return value;
     }
 
-    static String getIssnFromTdbOrSrcUrl(String itemName, String srcUrl) {
+    /*
+     * For particular "Item", an issn/issns will come from three resources:
+     * 1. tdb file (1 or more), name it tdb_issn
+     * 2. publisher ".json" file (1 or more), name it json_issn
+     * 3. "url" inside tar file (only 1 for any givne directory). issn appended to directory name itself, is not reliable, name it url_issn
+     *
+     */
 
-      String issnFromOtherResources = null;
 
-      if (itemName != null) {
-        issnFromOtherResources = getIssnFromOtherResources(itemName);
-        log.debug3(" itemName = " + itemName + ", srcUrl = " + srcUrl);
-      } else {
-        log.debug3("tdbAu is null");
-        issnFromOtherResources = getIssnFromOtherResources(srcUrl);
+    static Boolean compareTdbInfoWithJsonInfo(String tdbIssn, List<String> jsonIssns) {
+
+      Boolean issnInfoMatch = false;
+
+      if (tdbIssn != null) {
+        for (String issn : jsonIssns) {
+          if (issn.equals(tdbIssn)) {
+            issnInfoMatch = true;
+            break;
+          }
+        }
       }
 
-      return issnFromOtherResources;
+      return issnInfoMatch;
     }
 
-    static String getIssnFromOtherResources(String srcUrl) {
+    static Boolean compareSrcUrlInfoWithJsonInfo(String issnFromSrcUrl, List<String> jsonIssns) {
 
+      Boolean issnInfoMatch = false;
 
-      //Alphaville_2009-4078
+      if (issnFromSrcUrl != null ) {
+        for (String issn : jsonIssns) {
+          if (issn.equals(issnFromSrcUrl)) {
+            issnInfoMatch = true;
+            break;
+          }
+        }
+      }
+
+      return issnInfoMatch;
+    }
+
+    static String getIssnFromSrcUrl(String srcUrl) {
+
       //https://archive.org/download/Daysona_Life_Science_2708-6291/27086283-2022-10-01-05-17-46.tar.gz!/27086283-2022-10-01-05-17-46/2708-6283/99ecd4071a21457e90ac4fedf7c75978/data/metadata/metadata.json
-      Pattern issn_pattern = Pattern.compile(".*_(\\d{4}-\\d{3}[0-9X])");
+      //Expected "2708-6283" inside the tar file
+      Pattern issnPattern = Pattern.compile(".*/(\\d{4}-\\d{3}[0-9X])/.*");
 
-      Matcher issn_matcher = issn_pattern.matcher(srcUrl);
-      String single_issn_candidate = null;
+      Matcher issnMatcher = issnPattern.matcher(srcUrl);
+      String issnFromSrcUrl = null;
 
-      if (issn_matcher.find()) {
-        log.debug3("single issns matching pattern,  srcUrl = " + srcUrl);
-        int groupCount = issn_matcher.groupCount();
+      if (issnMatcher.find()) {
+        log.debug3("Handle issns: single issns matching pattern,  srcUrl = " + srcUrl);
+        int groupCount = issnMatcher.groupCount();
 
         if (groupCount >= 1) {
-          single_issn_candidate = issn_matcher.group(1);
+          issnFromSrcUrl = issnMatcher.group(1);
         } else {
-          log.debug3("single issns NOTs matching pattern, srcUrl = " + srcUrl);
+          log.debug3("Handle issns: single issns NOTs matching pattern, srcUrl = " + srcUrl);
         }
       } else {
-        log.debug3("single issns NOTs matching pattern, srcUrl = " + srcUrl);
+        log.debug3("Handle issns: single issns NOTs matching pattern, srcUrl = " + srcUrl);
       }
-      return single_issn_candidate;
+      return issnFromSrcUrl;
+    }
+
+
+    static String getIdentifierIdFromJsonFile(JsonNode jsonNode, String identifierType) {
+      try {
+        JsonNode identifierArray = jsonNode.at("/bibjson/identifier");
+
+        for (JsonNode identifier : identifierArray) {
+          String type = identifier.at("/type").asText();
+          if (type.equals(identifierType)) {
+            return identifier.at("/id").asText();
+          }
+        }
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+
+      return null; // Return null if identifier with given type is not found
     }
 
       static void processKeys (String currentPath,
@@ -251,6 +294,17 @@ public class JasperJsonMetadataExtractorFactory implements FileMetadataExtractor
         currentValue = new StringBuilder();
         boolean hasBegun = false;
 
+        String tdbItemName = null;
+        String tdbIssn = null;
+        String tdbEissn = null;
+        String issnFromSrcUrl = null;
+        String issnFromJsonPissn = null;
+        String eissnFromJsonEissn = null;
+
+        Boolean tdbIssnMatchJson = false;
+        Boolean tdbEissnMatchJson = false;
+        Boolean issnFromSrcUrlMatchJson = false;
+
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode rootNode = null;
         try (Reader reader = cu.openForReading()) {
@@ -261,14 +315,22 @@ public class JasperJsonMetadataExtractorFactory implements FileMetadataExtractor
         processKeys("", rootNode, map, new ArrayList<>());
 
         String srcUrl = cu.getUrl();
+        issnFromSrcUrl = getIssnFromSrcUrl(srcUrl);
 
-        String itemName = null;
-        String issnFromOtherResources = null;
+        issnFromJsonPissn = getIdentifierIdFromJsonFile(rootNode, "pissn");
+        eissnFromJsonEissn = getIdentifierIdFromJsonFile(rootNode, "eissn");
+
+        log.debug3("Handle issns: getIdentifierIdFromJsonFile, issnFromJsonPissn = " + issnFromJsonPissn + ", eissnFromJsonEissn = " + eissnFromJsonEissn);
+
 
         TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
 
         if (tdbau != null) {
-          itemName = tdbau.getParam("item");
+          tdbItemName = tdbau.getParam("item");
+          tdbIssn = tdbau.getIssn();
+          tdbEissn = tdbau.getEissn();
+
+          log.debug3("Handle issns: tdbAu is not null, tdbItemName = " + tdbItemName + ", tdbIssn = " + tdbIssn + ", tdbEissn = " + tdbEissn);
         }
 
         for (Map.Entry<String, String> entry : map.entrySet()) {
@@ -285,8 +347,15 @@ public class JasperJsonMetadataExtractorFactory implements FileMetadataExtractor
           //                "2605-4450",
           //                "2605-5317"
           //            ]
+          //Daysona_Life_Science_2708-6291/27086283-2022-10-08-19-03-38.tar/27086283-2022-10-08-19-03-38/2708-6291/23fdd6ebec514db79b687d3da502a6ba/data/metadata/metadata.json
+          //            "issns": [
+          //                "2708-6291",
+          //                "2708-6283"
+          //            ]
 
           if (key.contains("issn")) {
+
+            List<String> jsonIssns = new ArrayList<>();
 
             // "issns" is array, has more than 1 issn
             if (value.contains("[") && value.contains("]") && value.contains(",")) {
@@ -299,64 +368,76 @@ public class JasperJsonMetadataExtractorFactory implements FileMetadataExtractor
                 String matchedString = matcher.group(1);
 
                 // Split the matched string by commas
-                String[] elements = matchedString.split(", ");
+                jsonIssns = Arrays.asList(matchedString.split(", "));
 
-                // Print each individual element
-                for (String element : elements) {
+                tdbIssnMatchJson = compareTdbInfoWithJsonInfo(tdbIssn, jsonIssns);
+                tdbEissnMatchJson = compareTdbInfoWithJsonInfo(tdbEissn, jsonIssns);
+                issnFromSrcUrlMatchJson = compareSrcUrlInfoWithJsonInfo(issnFromSrcUrl , jsonIssns);
 
-                  if (itemName != null) {
-                      issnFromOtherResources = getIssnFromTdbOrSrcUrl(itemName, null);
-                      log.debug3("Multile issn found, match pattern, key =  " + key + ", val = " + value
-                              + ", element = " + element + ", issnFromOtherResources = " + issnFromOtherResources + ", itemName = " + itemName + ", srcUrl = " + srcUrl);
-                  } else {
-                    log.debug3("tdbAu is null");
-                    issnFromOtherResources = getIssnFromTdbOrSrcUrl(null, srcUrl);
-                  }
 
-                  if (issnFromOtherResources != null && issnFromOtherResources.equals(element)) {
-                    am.putRaw(key, element);
-                    log.debug3("Multile issn found, match pattern, key =  " + key + ", val = " + value
-                            + ", element = " + element + ", issnFromOtherResources = " + issnFromOtherResources + ", srcUrl = " + srcUrl);
-                  }
+                if (tdbIssnMatchJson && tdbEissnMatchJson && issnFromSrcUrlMatchJson) {
+                  // All three resources matches, follow normal metadata flow
+                  log.debug3("Handle issns: : Multi value, tdbIssnMatchJson && tdbEissnMatchJson && issnFromSrcUrlMatchJson: tdbIssnEissnMatchJson && issnFromSrcUrlMatchJson, tdbItemName = " + tdbItemName + ", tdbIssn = " + tdbIssn + ", tdbEissn = " + tdbEissn + ", issnFromSrcUrl = " + issnFromSrcUrl);
+
+                } else if (tdbIssnMatchJson && tdbEissnMatchJson) {
+                  // Two resources matches, follow normal metadata flow
+                  log.debug3("Handle issns: :  Multi value, tdbIssnMatchJson && tdbEissnMatchJson: tdbIssnEissnMatchJson, tdbItemName = " + tdbItemName + ", tdbIssn = " + tdbIssn + ", tdbEissn = " + tdbEissn + ", issnFromSrcUrl = " + issnFromSrcUrl);
+                } else {
+                  // Two resources matches, ONLY USE JSON DATA FOR METADATA
+                  log.debug3("Handle issns: :  Multi value, issnFromSrcUrlMatchJson, tdbItemName = " + tdbItemName + ", tdbIssn = " + tdbIssn + ", tdbEissn = " + tdbEissn + ", issnFromSrcUrl = " + issnFromSrcUrl);
                 }
+
               } else {
-                log.debug3("Multile issn found, NOT match pattern, key =  " + key + ", val = " + value + ", srcUrl = " + srcUrl);
+                log.debug3("Handle issns: Multile issn found, NOT match pattern, key =  " + key + ", val = " + value + ", srcUrl = " + srcUrl);
               }
             } else {
               // "issns" is single value, still need to check if it is the same with the directory
+              jsonIssns.add(value);
 
-              boolean shouldCompareSingleIssnWithOtherResources = true;
+              tdbIssnMatchJson = compareTdbInfoWithJsonInfo(tdbIssn, jsonIssns);
+              tdbEissnMatchJson = compareTdbInfoWithJsonInfo(tdbEissn, jsonIssns);
+              issnFromSrcUrlMatchJson = compareSrcUrlInfoWithJsonInfo(issnFromSrcUrl, jsonIssns);
 
-              if (shouldCompareSingleIssnWithOtherResources) {
 
-                if (itemName != null) {
-                  issnFromOtherResources = getIssnFromTdbOrSrcUrl(itemName, null);
-                  log.debug3("Single issn found, need to compare, key =  " + key + ", val = " + value
-                          + ", issnFromOtherResources = " + issnFromOtherResources + ", itemName = " + itemName + ", srcUrl = " + srcUrl);
-                } else {
-                  log.debug3("tdbAu is null");
-                  issnFromOtherResources = getIssnFromTdbOrSrcUrl(null, srcUrl);
-                }
-
-                if (issnFromOtherResources != null && issnFromOtherResources.equals(value)) {
-                  log.debug3("Single issn from different resoures matched, set from json value =" + value
-                          + ", issnFromOtherResources = " + issnFromOtherResources + ", itemName = " + itemName + ", srcUrl = " + srcUrl);
-                  am.putRaw(key, value);
-                } else if (issnFromOtherResources != null) {
-                  log.debug3("Single issn from different resoures NOT match, set from issnFromOtherResources " + value
-                          + ", issnFromOtherResources = " + issnFromOtherResources + ", itemName = " + itemName + ", srcUrl = " + srcUrl);
-                  am.putRaw(key, issnFromOtherResources);
-                }
+              if (tdbIssnMatchJson && issnFromSrcUrlMatchJson) {
+                // All three resources matches, follow normal metadata flow
+                log.debug3("Handle issns: Single value, tdbIssnMatchJson && issnFromSrcUrlMatchJson: tdbIssnEissnMatchJson && issnFromSrcUrlMatchJson, tdbItemName = " + tdbItemName + ", tdbIssn = " + tdbIssn + ", tdbEissn = " + tdbEissn + ", issnFromSrcUrl = " + issnFromSrcUrl);
+              } else if (tdbEissnMatchJson && issnFromSrcUrlMatchJson) {
+                // Two resources matches, follow normal metadata flow
+                log.debug3("Handle issns: Single value, tdbEissnMatchJson && issnFromSrcUrlMatchJson: tdbIssnEissnMatchJson, tdbItemName = " + tdbItemName + ", tdbIssn = " + tdbIssn + ", tdbEissn = " + tdbEissn + ", issnFromSrcUrl = " + issnFromSrcUrl);
               } else {
-                log.debug3("Single issn found, NOs need to compare key =  " + key + ", val = " + value + ", srcUrl = " + srcUrl);
-                am.putRaw(key, value);
+                // Two resources matches, ONLY USE JSON DATA FOR METADATA
+                log.debug3("Handle issns: Single value, issnFromSrcUrlMatchJson, tdbItemName = " + tdbItemName + ", tdbIssn = " + tdbIssn + ", tdbEissn = " + tdbEissn + ", issnFromSrcUrl = " + issnFromSrcUrl);
               }
             }
+
+            if (tdbIssnMatchJson) {
+              log.debug3("=====Handle issns: setting Issn value from TDB Issn to " + tdbIssn);
+              am.put(MetadataField.FIELD_ISSN, tdbIssn);
+            }
+            if (tdbEissnMatchJson) {
+              log.debug3("====Handle issns: setting Eissn value to TDB Eissn to " + tdbEissnMatchJson);
+              am.put(MetadataField.FIELD_EISSN, tdbEissn);
+            }
+            if (issnFromSrcUrlMatchJson && tdbIssnMatchJson == false && tdbEissnMatchJson == false ){
+              // ONLY USE JSON DATA FOR METADATA
+              log.debug3("=====Handle issns: setting value from JSON") ;
+              if  (issnFromJsonPissn != null) {
+                log.debug3("=====Handle issns: setting value from JSON issnFromJsonPissn = " +  issnFromSrcUrl);
+                am.put(MetadataField.FIELD_ISSN, issnFromJsonPissn);
+              }
+              if ( eissnFromJsonEissn != null) {
+                log.debug3("=====Handle issns: setting value from JSON eissnFromJsonEissn = " +  eissnFromJsonEissn);
+                am.put(MetadataField.FIELD_EISSN, eissnFromJsonEissn);
+              }
+            }
+            // if issnFromSrcUrlMatchJson is false, which means the issn/eissn of the folder is does not match any pissn/eissn in JSON
+            // Take it as mis-package from the publisher?
           } else {
 
             am.putRaw(key, value);
 
-            log.debug3("Putraw key =  " + key + ", val = " + value + ", srcUrl = " + srcUrl);
+            log.debug3("Handle issns: Putraw key =  " + key + ", val = " + value + ", srcUrl = " + srcUrl);
           }
         }
         am.cook(jsonPathToMetadataField);
