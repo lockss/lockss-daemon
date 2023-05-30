@@ -3590,7 +3590,7 @@
     {
 
       title <
-        name = Asia-Pacific Journal of Public Health ;
+        name = Asia Pacific Journal of Public Health ;
         issn = 1010-5395 ;
         eissn = 1941-2479 ;
         issnl = 1010-5395
@@ -3602,9 +3602,9 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2007 ; Asia-Pacific Journal of Public Health Volume 19 ; 19 >
-        au < HighWirePressPlugin ; down ; 2008 ; Asia-Pacific Journal of Public Health Volume 20 ; 20 >
-        au < HighWirePressPlugin ; down ; 2009 ; Asia-Pacific Journal of Public Health Volume 21 ; 21 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Asia Pacific Journal of Public Health Volume 19 ; 19 >
+        au < HighWirePressPlugin ; down ; 2008 ; Asia Pacific Journal of Public Health Volume 20 ; 20 >
+        au < HighWirePressPlugin ; down ; 2009 ; Asia Pacific Journal of Public Health Volume 21 ; 21 >
 
       }
 
@@ -3614,34 +3614,34 @@
         param[base_url] = http://aph.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < doNotProcess ; 1966 ; Asia-Pacific Journal of Public Health Volume 1 ; 1 >
-        au < doNotProcess ; 1967 ; Asia-Pacific Journal of Public Health Volume 2 ; 2 >
-        au < doNotProcess ; 1968 ; Asia-Pacific Journal of Public Health Volume 3 ; 3 >
-        au < doNotProcess ; 1969 ; Asia-Pacific Journal of Public Health Volume 4 ; 4 >
-        au < doNotProcess ; 1970 ; Asia-Pacific Journal of Public Health Volume 5 ; 5 >
-        au < doNotProcess ; 1971 ; Asia-Pacific Journal of Public Health Volume 6 ; 6 >
-        au < doNotProcess ; 1972 ; Asia-Pacific Journal of Public Health Volume 7 ; 7 >
-        au < doNotProcess ; 1973 ; Asia-Pacific Journal of Public Health Volume 8 ; 8 >
-        au < doNotProcess ; 1974 ; Asia-Pacific Journal of Public Health Volume 9 ; 9 >
-        au < doNotProcess ; 1975 ; Asia-Pacific Journal of Public Health Volume 10 ; 10 >
-        au < doNotProcess ; 1976 ; Asia-Pacific Journal of Public Health Volume 11 ; 11 >
-        au < doNotProcess ; 2000 ; Asia-Pacific Journal of Public Health Volume 12 ; 12 >
-        au < doNotProcess ; 2001 ; Asia-Pacific Journal of Public Health Volume 13 ; 13 >
-        au < doNotProcess ; 2002 ; Asia-Pacific Journal of Public Health Volume 14 ; 14 >
-        au < doNotProcess ; 2003 ; Asia-Pacific Journal of Public Health Volume 15 ; 15 >
-        au < doNotProcess ; 2004 ; Asia-Pacific Journal of Public Health Volume 16 ; 16 >
-        au < down ; 2005 ; Asia-Pacific Journal of Public Health Volume 17 ; 17 >
-        au < down ; 2006 ; Asia-Pacific Journal of Public Health Volume 18 ; 18 >
-        au < doNotProcess ; 2007 ; Asia-Pacific Journal of Public Health Volume 19 ; 19 >
-        au < doNotProcess ; 2008 ; Asia-Pacific Journal of Public Health Volume 20 ; 20 >
-        au < doNotProcess ; 2009 ; Asia-Pacific Journal of Public Health Volume 21 ; 21 >
-        au < down ; 2010 ; Asia-Pacific Journal of Public Health Volume 22 ; 22 >
-        au < down ; 2011 ; Asia-Pacific Journal of Public Health Volume 23 ; 23 >
-        au < down ; 2012 ; Asia-Pacific Journal of Public Health Volume 24 ; 24 >
-        au < down ; 2013 ; Asia-Pacific Journal of Public Health Volume 25 ; 25 >
-        au < down ; 2014 ; Asia-Pacific Journal of Public Health Volume 26 ; 26 >
-        au < down ; 2015 ; Asia-Pacific Journal of Public Health Volume 27 ; 27 >
-        au < doNotProcess ; 2016 ; Asia-Pacific Journal of Public Health Volume 28 ; 28 >
+        au < doNotProcess ; 1966 ; Asia Pacific Journal of Public Health Volume 1 ; 1 >
+        au < doNotProcess ; 1967 ; Asia Pacific Journal of Public Health Volume 2 ; 2 >
+        au < doNotProcess ; 1968 ; Asia Pacific Journal of Public Health Volume 3 ; 3 >
+        au < doNotProcess ; 1969 ; Asia Pacific Journal of Public Health Volume 4 ; 4 >
+        au < doNotProcess ; 1970 ; Asia Pacific Journal of Public Health Volume 5 ; 5 >
+        au < doNotProcess ; 1971 ; Asia Pacific Journal of Public Health Volume 6 ; 6 >
+        au < doNotProcess ; 1972 ; Asia Pacific Journal of Public Health Volume 7 ; 7 >
+        au < doNotProcess ; 1973 ; Asia Pacific Journal of Public Health Volume 8 ; 8 >
+        au < doNotProcess ; 1974 ; Asia Pacific Journal of Public Health Volume 9 ; 9 >
+        au < doNotProcess ; 1975 ; Asia Pacific Journal of Public Health Volume 10 ; 10 >
+        au < doNotProcess ; 1976 ; Asia Pacific Journal of Public Health Volume 11 ; 11 >
+        au < doNotProcess ; 2000 ; Asia Pacific Journal of Public Health Volume 12 ; 12 >
+        au < doNotProcess ; 2001 ; Asia Pacific Journal of Public Health Volume 13 ; 13 >
+        au < doNotProcess ; 2002 ; Asia Pacific Journal of Public Health Volume 14 ; 14 >
+        au < doNotProcess ; 2003 ; Asia Pacific Journal of Public Health Volume 15 ; 15 >
+        au < doNotProcess ; 2004 ; Asia Pacific Journal of Public Health Volume 16 ; 16 >
+        au < down ; 2005 ; Asia Pacific Journal of Public Health Volume 17 ; 17 >
+        au < down ; 2006 ; Asia Pacific Journal of Public Health Volume 18 ; 18 >
+        au < doNotProcess ; 2007 ; Asia Pacific Journal of Public Health Volume 19 ; 19 >
+        au < doNotProcess ; 2008 ; Asia Pacific Journal of Public Health Volume 20 ; 20 >
+        au < doNotProcess ; 2009 ; Asia Pacific Journal of Public Health Volume 21 ; 21 >
+        au < down ; 2010 ; Asia Pacific Journal of Public Health Volume 22 ; 22 >
+        au < down ; 2011 ; Asia Pacific Journal of Public Health Volume 23 ; 23 >
+        au < down ; 2012 ; Asia Pacific Journal of Public Health Volume 24 ; 24 >
+        au < down ; 2013 ; Asia Pacific Journal of Public Health Volume 25 ; 25 >
+        au < down ; 2014 ; Asia Pacific Journal of Public Health Volume 26 ; 26 >
+        au < down ; 2015 ; Asia Pacific Journal of Public Health Volume 27 ; 27 >
+        au < doNotProcess ; 2016 ; Asia Pacific Journal of Public Health Volume 28 ; 28 >
 
       }
 
@@ -42802,7 +42802,7 @@ comment[mpj] = now published by Brill
     {
 
       title <
-        name = Science, Technology & Human Values ;
+        name = Science, Technology, and Human Values ;
         issn = 0162-2439 ;
         eissn = 1552-8251 ;
         issnl = 0162-2439
@@ -42814,9 +42814,9 @@ comment[mpj] = now published by Brill
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2005 ; Science, Technology & Human Values Volume 30 ; 30 >
-        au < HighWirePressPlugin ; down ; 2008 ; Science, Technology & Human Values Volume 33 ; 33 >
-        au < HighWirePressPlugin ; down ; 2009 ; Science, Technology & Human Values Volume 34 ; 34 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Science, Technology, and Human Values Volume 30 ; 30 >
+        au < HighWirePressPlugin ; down ; 2008 ; Science, Technology, and Human Values Volume 33 ; 33 >
+        au < HighWirePressPlugin ; down ; 2009 ; Science, Technology, and Human Values Volume 34 ; 34 >
 
       }
 
@@ -42826,47 +42826,47 @@ comment[mpj] = now published by Brill
         param[base_url] = http://sth.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < doNotProcess ; 1976 ; Science, Technology & Human Values Volume 1 ; 1 >
-        au < doNotProcess ; 1977 ; Science, Technology & Human Values Volume 2 ; 2 >
-        au < doNotProcess ; 1978 ; Science, Technology & Human Values Volume 3 ; 3 >
-        au < doNotProcess ; 1979 ; Science, Technology & Human Values Volume 4 ; 4 >
-        au < doNotProcess ; 1980 ; Science, Technology & Human Values Volume 5 ; 5 >
-        au < doNotProcess ; 1981 ; Science, Technology & Human Values Volume 6 ; 6 >
-        au < doNotProcess ; 1982 ; Science, Technology & Human Values Volume 7 ; 7 >
-        au < doNotProcess ; 1983 ; Science, Technology & Human Values Volume 8 ; 8 >
-        au < doNotProcess ; 1984 ; Science, Technology & Human Values Volume 9 ; 9 >
-        au < doNotProcess ; 1985 ; Science, Technology & Human Values Volume 10 ; 10 >
-        au < doNotProcess ; 1986 ; Science, Technology & Human Values Volume 11 ; 11 >
-        au < doNotProcess ; 1987 ; Science, Technology & Human Values Volume 12 ; 12 >
-        au < doesNotExist ; 0 ; Science, Technology & Human Values Volume 13 ; 13 >
-        au < doNotProcess ; 1989 ; Science, Technology & Human Values Volume 14 ; 14 >
-        au < doNotProcess ; 1990 ; Science, Technology & Human Values Volume 15 ; 15 >
-        au < doNotProcess ; 1991 ; Science, Technology & Human Values Volume 16 ; 16 >
-        au < doNotProcess ; 1992 ; Science, Technology & Human Values Volume 17 ; 17 >
-        au < doNotProcess ; 1993 ; Science, Technology & Human Values Volume 18 ; 18 >
-        au < doNotProcess ; 1994 ; Science, Technology & Human Values Volume 19 ; 19 >
-        au < doNotProcess ; 1995 ; Science, Technology & Human Values Volume 20 ; 20 >
-        au < doNotProcess ; 1996 ; Science, Technology & Human Values Volume 21 ; 21 >
-        au < doNotProcess ; 1997 ; Science, Technology & Human Values Volume 22 ; 22 >
-        au < doNotProcess ; 1998 ; Science, Technology & Human Values Volume 23 ; 23 >
-        au < doNotProcess ; 1999 ; Science, Technology & Human Values Volume 24 ; 24 >
-        au < doNotProcess ; 2000 ; Science, Technology & Human Values Volume 25 ; 25 >
-        au < doNotProcess ; 2001 ; Science, Technology & Human Values Volume 26 ; 26 >
-        au < doNotProcess ; 2002 ; Science, Technology & Human Values Volume 27 ; 27 >
-        au < doNotProcess ; 2003 ; Science, Technology & Human Values Volume 28 ; 28 >
-        au < doNotProcess ; 2004 ; Science, Technology & Human Values Volume 29 ; 29 >
-        au < doNotProcess ; 2005 ; Science, Technology & Human Values Volume 30 ; 30 >
-        au < doNotProcess ; 2006 ; Science, Technology & Human Values Volume 31 ; 31 >
-        au < doNotProcess ; 2007 ; Science, Technology & Human Values Volume 32 ; 32 >
-        au < doNotProcess ; 2008 ; Science, Technology & Human Values Volume 33 ; 33 >
-        au < doNotProcess ; 2009 ; Science, Technology & Human Values Volume 34 ; 34 >
-        au < down ; 2010 ; Science, Technology & Human Values Volume 35 ; 35 >
-        au < down ; 2011 ; Science, Technology & Human Values Volume 36 ; 36 >
-        au < down ; 2012 ; Science, Technology & Human Values Volume 37 ; 37 >
-        au < down ; 2013 ; Science, Technology & Human Values Volume 38 ; 38 >
-        au < down ; 2014 ; Science, Technology & Human Values Volume 39 ; 39 >
-        au < down ; 2015 ; Science, Technology & Human Values Volume 40 ; 40 >
-        au < doNotProcess ; 2016 ; Science, Technology & Human Values Volume 41 ; 41 >
+        au < doNotProcess ; 1976 ; Science, Technology, and Human Values Volume 1 ; 1 >
+        au < doNotProcess ; 1977 ; Science, Technology, and Human Values Volume 2 ; 2 >
+        au < doNotProcess ; 1978 ; Science, Technology, and Human Values Volume 3 ; 3 >
+        au < doNotProcess ; 1979 ; Science, Technology, and Human Values Volume 4 ; 4 >
+        au < doNotProcess ; 1980 ; Science, Technology, and Human Values Volume 5 ; 5 >
+        au < doNotProcess ; 1981 ; Science, Technology, and Human Values Volume 6 ; 6 >
+        au < doNotProcess ; 1982 ; Science, Technology, and Human Values Volume 7 ; 7 >
+        au < doNotProcess ; 1983 ; Science, Technology, and Human Values Volume 8 ; 8 >
+        au < doNotProcess ; 1984 ; Science, Technology, and Human Values Volume 9 ; 9 >
+        au < doNotProcess ; 1985 ; Science, Technology, and Human Values Volume 10 ; 10 >
+        au < doNotProcess ; 1986 ; Science, Technology, and Human Values Volume 11 ; 11 >
+        au < doNotProcess ; 1987 ; Science, Technology, and Human Values Volume 12 ; 12 >
+        au < doesNotExist ; 0 ; Science, Technology, and Human Values Volume 13 ; 13 >
+        au < doNotProcess ; 1989 ; Science, Technology, and Human Values Volume 14 ; 14 >
+        au < doNotProcess ; 1990 ; Science, Technology, and Human Values Volume 15 ; 15 >
+        au < doNotProcess ; 1991 ; Science, Technology, and Human Values Volume 16 ; 16 >
+        au < doNotProcess ; 1992 ; Science, Technology, and Human Values Volume 17 ; 17 >
+        au < doNotProcess ; 1993 ; Science, Technology, and Human Values Volume 18 ; 18 >
+        au < doNotProcess ; 1994 ; Science, Technology, and Human Values Volume 19 ; 19 >
+        au < doNotProcess ; 1995 ; Science, Technology, and Human Values Volume 20 ; 20 >
+        au < doNotProcess ; 1996 ; Science, Technology, and Human Values Volume 21 ; 21 >
+        au < doNotProcess ; 1997 ; Science, Technology, and Human Values Volume 22 ; 22 >
+        au < doNotProcess ; 1998 ; Science, Technology, and Human Values Volume 23 ; 23 >
+        au < doNotProcess ; 1999 ; Science, Technology, and Human Values Volume 24 ; 24 >
+        au < doNotProcess ; 2000 ; Science, Technology, and Human Values Volume 25 ; 25 >
+        au < doNotProcess ; 2001 ; Science, Technology, and Human Values Volume 26 ; 26 >
+        au < doNotProcess ; 2002 ; Science, Technology, and Human Values Volume 27 ; 27 >
+        au < doNotProcess ; 2003 ; Science, Technology, and Human Values Volume 28 ; 28 >
+        au < doNotProcess ; 2004 ; Science, Technology, and Human Values Volume 29 ; 29 >
+        au < doNotProcess ; 2005 ; Science, Technology, and Human Values Volume 30 ; 30 >
+        au < doNotProcess ; 2006 ; Science, Technology, and Human Values Volume 31 ; 31 >
+        au < doNotProcess ; 2007 ; Science, Technology, and Human Values Volume 32 ; 32 >
+        au < doNotProcess ; 2008 ; Science, Technology, and Human Values Volume 33 ; 33 >
+        au < doNotProcess ; 2009 ; Science, Technology, and Human Values Volume 34 ; 34 >
+        au < down ; 2010 ; Science, Technology, and Human Values Volume 35 ; 35 >
+        au < down ; 2011 ; Science, Technology, and Human Values Volume 36 ; 36 >
+        au < down ; 2012 ; Science, Technology, and Human Values Volume 37 ; 37 >
+        au < down ; 2013 ; Science, Technology, and Human Values Volume 38 ; 38 >
+        au < down ; 2014 ; Science, Technology, and Human Values Volume 39 ; 39 >
+        au < down ; 2015 ; Science, Technology, and Human Values Volume 40 ; 40 >
+        au < doNotProcess ; 2016 ; Science, Technology, and Human Values Volume 41 ; 41 >
 
       }
 
