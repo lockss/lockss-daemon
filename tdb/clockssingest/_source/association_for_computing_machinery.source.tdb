@@ -6,13 +6,13 @@
     info[tester] = S ;
     info[platform] = Source
   >
+    hidden[proxy] = DIRECT
 
   {
 
     title <
       name = Association for Computing Machinery Source Content
     >
-    hidden[proxy] = DIRECT
 
     {
        plugin = org.lockss.plugin.associationforcomputingmachinery.ClockssACMJatsSourcePlugin
