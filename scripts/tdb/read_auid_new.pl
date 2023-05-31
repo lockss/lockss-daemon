@@ -1719,7 +1719,6 @@ while (my $line = <>) {
           $site_title =~ s/ & / and /;
           $site_title = lc($site_title);
           $site_title =~ s/^the //;
-          $site_title =~ s/^the //;
           #printf("site_title:%s site_year:%s\n", $site_title, $site_year); #debug
       }
       if (! $resp->is_success) {
