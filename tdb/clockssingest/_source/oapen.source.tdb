@@ -8,11 +8,11 @@
     hidden[proxy] = DIRECT
 
 
-  {
     title <
       name = OAPEN Source Content
     >
 
+  {
      plugin = needs.plugin
      implicit < status ; status2 ; year ; name ; param[directory] >
      #param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/acmjats-released/
