@@ -2134,31 +2134,40 @@ while (my $line = <>) {
     sleep(4);
 
   } elsif ($plugin eq "ClockssAmericanMathematicalSocietyBooksPlugin") {
-    $url = sprintf("%sclockssdata?p=%s", $param{base_url}, $param{collection_id});
-    $man_url = uri_unescape($url);
-    # printf("\nUrl: %s\n", $man_url);
-    my $req = HTTP::Request->new(GET, $man_url);
-    my $resp = $ua->request($req);
-    if ($resp->is_success) {
-      my $man_contents = $resp->content;
-      if ($req->url ne $resp->request->uri) {
-              $vol_title = $resp->request->uri;
-              $result = "Redirected";
-      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
-        $vol_title = $param{collection_id} . " " . $param{year_string};
-        if (($man_contents =~ m/\/$param{collection_id}\//) && ($man_contents =~ m/$param{year_string}/) &&
-            ($man_contents =~ m/\/books\/$param{collection_id}\/year\/$param{year_string}/)) {
-          $result = "Manifest";
-        } else {
-          $result = "--NO_URL--";
-        }
+    $url_p = sprintf("%sclockssdata?p=%s", $param{base_url}, $param{collection_id});
+    $perm_url = uri_unescape($url_p);
+      #printf("\nPermUrl: %s\n", $perm_url); #debug
+    my $perm_req = HTTP::Request->new(GET, $perm_url);
+    my $perm_resp = $ua->request($perm_req);
+
+    $url_s = sprintf("%sbooks/%s/year/%s/", $param{base_url}, $param{collection_id}, $param{year_string});
+    $start_url = uri_unescape($url_s);
+      #printf("\nStartUrl: %s\n", $start_url); #debug
+    my $start_req = HTTP::Request->new(GET, $start_url);
+    my $start_resp = $ua->request($start_req);
+    
+    $man_url = $perm_url . "+" . $start_url;
+
+    if ($perm_resp->is_success && $start_resp->is_success) {
+      my $perm_contents = $perm_resp->content;
+      my $start_contents = $start_resp->content;
+      if ($perm_req->url ne $perm_resp->request->uri || $start_req->url ne $start_resp->request->uri) {
+        $vol_title = $perm_resp->request->uri . "+" . $start_resp->request->uri;
+        $result = "Redirected";
+      } elsif (defined($perm_contents) && ($perm_contents =~ m/$clockss_tag/)) {
+          if (defined($start_contents) && ($start_contents =~ m/\/books\/$param{collection_id}\//)) {
+            $vol_title = $param{collection_id} . " Volume " . $param{year_string};
+            $result = "Manifest";
+         } else {
+            $result = "--NO_CONTENT--";
+         }
       } else {
-        $result = "--NO_TAG--"
+        $result = "--NO_TAG--";
       }
-    } else {
-      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-    }
-    sleep(4);
+  } else {
+    $result = "--REQ_FAIL--" . $start_resp->code() . " " . $start_resp->message();
+  }
+  sleep(4);
 
   } elsif ($plugin eq "MathematicalSciencesPublishersPlugin") {
     $url = sprintf("%s%s/%d/manifest",
