@@ -1129,7 +1129,7 @@ while (my $line = <>) {
         }
         sleep(4);
 
-  } elsif ($plugin eq "PensoftOaiPlugin" || $plugin eq "ClockssPensoftOaiPlugin") {
+  } elsif ($plugin eq "PensoftOaiPlugin" || $plugin eq "ClockssPensoftOaiPlugin" ) {
     #permission is different from start
     $perm_url = uri_unescape($param{base_url});
     #start_url for all OAI queries https://bdj.pensoft.net/oai.php?verb=ListRecords&identifier=bdj&metadataPrefix=oai_dc
@@ -1173,6 +1173,32 @@ while (my $line = <>) {
     }
     sleep(4);
 
+  } elsif ($plugin eq "ClockssPensoftBooksPlugin") {
+        $url = sprintf("%sbook/%s",
+          $param{base_url}, $param{book_id});
+        $man_url = uri_unescape($url);
+        my $req = HTTP::Request->new(GET, $man_url);
+        my $resp = $ua->request($req);
+        if ($resp->is_success) {
+            my $man_contents = $resp->content;
+            #no lockss permission statement on start page. Permission statement is here: https://www.thieme-connect.de/lockss.txt
+            if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+            } elsif (defined($man_contents) && ($man_contents =~ m/$param{book_id}\/download\/pdf/)) {
+                 if ($man_contents =~ m/<title>\s*(.*)\s*<\/title>/si) {
+                    $vol_title = $1;
+                    $vol_title =~ s/\s*\n\s*/ /g;
+                }
+                $result = "Manifest"
+            } else {
+                $result = "--"
+            }
+        } else {
+            $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+        }
+        sleep(4);
+        
   #Residencia Pediatrica.
   } elsif (($plugin eq "ClockssResPediatricaOaiPlugin")) {
     #permission is different from start
