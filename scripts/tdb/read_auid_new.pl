@@ -1130,7 +1130,7 @@ while (my $line = <>) {
         sleep(4);
 
   } elsif ($plugin eq "PensoftOaiPlugin" || $plugin eq "ClockssPensoftOaiPlugin" ) {
-    #permission is different from start
+    #no lockss permission statement on start page. Permission statement is on the base_url
     $perm_url = uri_unescape($param{base_url});
     #start_url for all OAI queries https://bdj.pensoft.net/oai.php?verb=ListRecords&identifier=bdj&metadataPrefix=oai_dc
     $url = sprintf("%soai.php?verb=ListRecords&set=%s&metadataPrefix=oai_dc",
@@ -1139,10 +1139,10 @@ while (my $line = <>) {
       $url = $url . "&from=" . $param{au_oai_date} . "-01-01" . "&until=" . $param{au_oai_date} . "-12-31";
     }
     $man_url = uri_unescape($url);
-    my $req_p = HTTP::Request->new(GET, $perm_url);
-    my $resp_p = $ua->request($req_p);
     my $req_s = HTTP::Request->new(GET, $man_url);
     my $resp_s = $ua->request($req_s);
+    my $req_p = HTTP::Request->new(GET, $perm_url);
+    my $resp_p = $ua->request($req_p);
     
     if ($resp_p->is_success) {
       my $perm_contents = $resp_p->content;
@@ -1173,27 +1173,32 @@ while (my $line = <>) {
     }
     sleep(4);
 
-  } elsif ($plugin eq "ClockssPensoftBooksPlugin") {
-        $url = sprintf("%sbook/%s",
-          $param{base_url}, $param{book_id});
-        $man_url = uri_unescape($url);
-        my $req = HTTP::Request->new(GET, $man_url);
-        my $resp = $ua->request($req);
-        if ($resp->is_success) {
-            my $man_contents = $resp->content;
-            #no lockss permission statement on start page. Permission statement is here: https://www.thieme-connect.de/lockss.txt
-            if ($req->url ne $resp->request->uri) {
-              $vol_title = $resp->request->uri;
-              $result = "Redirected";
-            } elsif (defined($man_contents) && ($man_contents =~ m/$param{book_id}\/download\/pdf/)) {
-                 if ($man_contents =~ m/<title>\s*(.*)\s*<\/title>/si) {
-                    $vol_title = $1;
-                    $vol_title =~ s/\s*\n\s*/ /g;
-                }
-                $result = "Manifest"
-            } else {
-                $result = "--"
-            }
+  } elsif ($plugin eq "ClockssPensoftBooksPlugin" || $plugin eq "PensoftBooksPlugin" ) {
+    #no lockss permission statement on start page. Permission statement is on the base_url
+    $perm_url = uri_unescape($param{base_url});
+    $url = sprintf("%sarticle/%s",
+      $param{base_url}, $param{book_id});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    my $req_p = HTTP::Request->new(GET, $perm_url);
+    my $resp_p = $ua->request($req_p);
+
+    if ($resp_p->is_success && $resp->is_success) {
+      my $perm_contents = $resp_p->content;
+      my $man_contents = $resp->content;
+      if ($req_p->url ne $resp_p->request->uri || $req->url ne $resp->request->uri) {
+        $vol_title = $resp->request->uri;
+        $result = "Redirected";
+      } elsif (defined($man_contents) && ($perm_contents =~ m/$clockss_tag/) && ($perm_contents =~ m/$lockss_tag/) && ($man_contents =~ m/$param{book_id}\/download\/pdf/)) {
+        if ($man_contents =~ m/<title>\s*(.*)\s*<\/title>/si) {
+          $vol_title = $1;
+          $vol_title =~ s/\s*\n\s*/ /g;
+        }
+        $result = "Manifest"
+      } else {
+        $result = "--"
+      }
         } else {
             $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
         }
