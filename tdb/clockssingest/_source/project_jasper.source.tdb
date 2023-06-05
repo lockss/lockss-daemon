@@ -39,7 +39,8 @@
 
     title <
       name = Colombo Business Journal ;
-      eissn = 2579-2210
+      eissn = 2579-2210 ;
+      issn = 1800-363X
     >
 
     au < expected ; exists ; 2022 ; Colombo Business Journal ; Colombo_Business_Journal_-_2579-2210 >
@@ -90,5 +91,50 @@
     au < testing ; exists ; 2022 ; Finnish Society for Science Fiction and Fantasy Research ; Fafnir_2342-2009 >
 
   }
+
+  {
+
+    title <
+      name = Aposta ;
+      eissn = 1696-7348
+    >
+
+    au < testing ; exists ; 2022 ; Aposta ; aposta_1696-7348 >
+
+  }
+
+  {
+
+    title <
+      name = History of Classical Scholarship ;
+      eissn = 2632-4091
+    >
+
+    au < testing ; exists ; 2022 ; History of Classical Scholarship ; history_of_classical_scholarship_2632-4091 >
+
+  }
+
+  {
+
+    title <
+      name = Santander, Estudios de Patrimonio ;
+      eissn = 2632-4091
+    >
+
+    au < testing ; exists ; 2022 ; Santander, Estudios de Patrimonio ; santander_estudios_de_patrimonio_2605-5317 >
+
+  }
+
+  {
+
+    title <
+      name = 027.7 ;
+      issn = 2296-0597
+    >
+
+    au < testing ; exists ; 2022 ; 027.7 ; 277_2296-0597 >
+
+  }
+
 
 }
