@@ -291,7 +291,7 @@
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
       param[base_url] = https://le.uwpress.org/
 
-      au < releasing ; 2021 ; Land Economics Volume 97 ; 97 >
+      au < released ; 2021 ; Land Economics Volume 97 ; 97 >
       au < manifest ; 2022 ; Land Economics Volume 98 ; 98 >
       au < manifest ; 2023 ; Land Economics Volume 99 ; 99 >
 
@@ -358,7 +358,7 @@
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
       param[base_url] = https://lj.uwpress.org/
 
-      au < releasing ; 2021 ; Landscape Journal: design, planning, and management of the land Volume 40 ; 40 >
+      au < released ; 2021 ; Landscape Journal: design, planning, and management of the land Volume 40 ; 40 >
       au < manifest ; 2022 ; Landscape Journal: design, planning, and management of the land Volume 41 ; 41 >
       #No 2023 content as of 4/19/2023
       au < expected ; 2023 ; Landscape Journal: design, planning, and management of the land Volume 42 ; 42 >
@@ -441,7 +441,7 @@
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
       param[base_url] = https://mon.uwpress.org/
 
-      au < releasing ; 2021 ; Monatshefte Volume 113 ; 113 >
+      au < released ; 2021 ; Monatshefte Volume 113 ; 113 >
       au < manifest ; 2022 ; Monatshefte Volume 114 ; 114 >
       au < manifest ; 2023 ; Monatshefte Volume 115 ; 115 >
 
