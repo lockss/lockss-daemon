@@ -2749,8 +2749,8 @@
       issnl = 2249-4847
    >
 #    param[base_url] = http://www.jcnonweb.com/
-
     param[journal_issn] = 2249-4847
+    #Moved to LWW
 
     au < finished ; frozen ; 2012 ; Journal of Clinical Neonatology Volume 1 ; 2012 ; 1 ; http://www.jcnonweb.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2013 ; Journal of Clinical Neonatology Volume 2 ; 2013 ; 2 ; http://www.jcnonweb.com/ ; ; reingest5.clockss.org:8082 >
@@ -2761,9 +2761,9 @@
     au < finished ; finished ; 2018 ; Journal of Clinical Neonatology Volume 7 ; 2018 ; 7 ; http://www.jcnonweb.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2019 ; Journal of Clinical Neonatology Volume 8 ; 2019 ; 8 ; https://www.jcnonweb.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2020 ; Journal of Clinical Neonatology Volume 9 ; 2020 ; 9 ; https://www.jcnonweb.com/ ; ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2021 ; Journal of Clinical Neonatology Volume 10 ; 2021 ; 10 ; https://www.jcnonweb.com/ ; ; >
-    au < deepCrawl ; exists ; 2022 ; Journal of Clinical Neonatology Volume 11 ; 2022 ; 11 ; https://www.jcnonweb.com/ ; ; >
-    au < manifest ; exists ; 2023 ; Journal of Clinical Neonatology Volume 12 ; 2023 ; 12 ; https://www.jcnonweb.com/ ; ; >
+    au < frozen ; exists ; 2021 ; Journal of Clinical Neonatology Volume 10 ; 2021 ; 10 ; https://www.jcnonweb.com/ ; ; >
+    au < frozen ; exists ; 2022 ; Journal of Clinical Neonatology Volume 11 ; 2022 ; 11 ; https://www.jcnonweb.com/ ; ; >
+    au < doNotProcess ; exists ; 2023 ; Journal of Clinical Neonatology Volume 12 ; 2023 ; 12 ; https://www.jcnonweb.com/ ; ; >
 
   }
 #  {
@@ -10644,14 +10644,15 @@
 
       param[journal_issn] = 2221-6189
 #      param[base_url] = http://www.jadweb.org/
+      #Moved to LWW
 
       au < finished ; finished ; 2017 ; Journal of Acute Disease Volume 6 ; 2017 ; 6 ; https://www.jadweb.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Journal of Acute Disease Volume 7 ; 2018 ; 7 ; https://www.jadweb.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Journal of Acute Disease Volume 8 ; 2019 ; 8 ; https://www.jadweb.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2020 ; Journal of Acute Disease Volume 9 ; 2020 ; 9 ; https://www.jadweb.org/ ; ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2021 ; Journal of Acute Disease Volume 10 ; 2021 ; 10 ; https://www.jadweb.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of Acute Disease Volume 11 ; 2022 ; 11 ; https://www.jadweb.org/ ; ; >
-      au < manifest ; exists ; 2023 ; Journal of Acute Disease Volume 12 ; 2023 ; 12 ; https://www.jadweb.org/ ; ; >
+      au < frozen ; exists ; 2021 ; Journal of Acute Disease Volume 10 ; 2021 ; 10 ; https://www.jadweb.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of Acute Disease Volume 11 ; 2022 ; 11 ; https://www.jadweb.org/ ; ; >
+      au < doNotProcess ; exists ; 2023 ; Journal of Acute Disease Volume 12 ; 2023 ; 12 ; https://www.jadweb.org/ ; ; >
 
   }
 
@@ -11381,14 +11382,15 @@
 
       param[journal_issn] = 2322-1488
 #      param[base_url] = http://www.nmsjournal.com/
+      #Moved to Wolters Kluwer LWW
 
       au < finished ; finished ; 2017 ; Nursing and Midwifery Studies Volume 6 ; 2017 ; 6 ; https://www.nmsjournal.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; Nursing and Midwifery Studies Volume 7 ; 2018 ; 7 ; https://www.nmsjournal.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Nursing and Midwifery Studies Volume 8 ; 2019 ; 8 ; https://www.nmsjournal.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; Nursing and Midwifery Studies Volume 9 ; 2020 ; 9 ; https://www.nmsjournal.com/ ; ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2021 ; Nursing and Midwifery Studies Volume 10 ; 2021 ; 10 ; https://www.nmsjournal.com/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Nursing and Midwifery Studies Volume 11 ; 2022 ; 11 ; https://www.nmsjournal.com/ ; ; >
-      au < manifest ; exists ; 2023 ; Nursing and Midwifery Studies Volume 12 ; 2023 ; 12 ; https://www.nmsjournal.com/ ; ; >
+      au < frozen ; exists ; 2021 ; Nursing and Midwifery Studies Volume 10 ; 2021 ; 10 ; https://www.nmsjournal.com/ ; ; >
+      au < frozen ; exists ; 2022 ; Nursing and Midwifery Studies Volume 11 ; 2022 ; 11 ; https://www.nmsjournal.com/ ; ; >
+      au < doNotProcess ; exists ; 2023 ; Nursing and Midwifery Studies Volume 12 ; 2023 ; 12 ; https://www.nmsjournal.com/ ; ; >
 
   }
 
@@ -12859,6 +12861,7 @@
 
       param[journal_issn] = 2320-4419
       #param[base_url] = https://www.joinsysmed.com/
+      #moved to LWW
 
       au < frozen ; exists ; 2013 ; Journal of Indian System of Medicine Volume 1 ; 2013 ; 1 ; https://www.joinsysmed.com/ ; ; >
       au < frozen ; exists ; 2014 ; Journal of Indian System of Medicine Volume 2 ; 2014 ; 2 ; https://www.joinsysmed.com/ ; ; >
@@ -12885,6 +12888,7 @@
 
       param[journal_issn] = 2394-9031
       #param[base_url] = https://www.jigims.co.in/
+      #moved to LWW
 
       au < frozen ; exists ; 2015 ; Journal of Indira Gandhi Institute Of Medical Sciences Volume 1 ; 2015 ; 1 ; https://www.jigims.co.in/ ; ; >
       au < frozen ; exists ; 2016 ; Journal of Indira Gandhi Institute Of Medical Sciences Volume 2 ; 2016 ; 2 ; https://www.jigims.co.in/ ; ; >
@@ -12893,8 +12897,8 @@
       au < frozen ; exists ; 2019 ; Journal of Indira Gandhi Institute Of Medical Sciences Volume 5 ; 2019 ; 5 ; https://www.jigims.co.in/ ; ; >
       au < frozen ; exists ; 2020 ; Journal of Indira Gandhi Institute Of Medical Sciences Volume 6 ; 2020 ; 6 ; https://www.jigims.co.in/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Indira Gandhi Institute Of Medical Sciences Volume 7 ; 2021 ; 7 ; https://www.jigims.co.in/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of Indira Gandhi Institute Of Medical Sciences Volume 8 ; 2022 ; 8 ; https://www.jigims.co.in/ ; ; >
-      au < manifest ; exists ; 2023 ; Journal of Indira Gandhi Institute Of Medical Sciences Volume 9 ; 2023 ; 9 ; https://www.jigims.co.in/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of Indira Gandhi Institute Of Medical Sciences Volume 8 ; 2022 ; 8 ; https://www.jigims.co.in/ ; ; >
+      au < doNotProcess ; exists ; 2023 ; Journal of Indira Gandhi Institute Of Medical Sciences Volume 9 ; 2023 ; 9 ; https://www.jigims.co.in/ ; ; >
 
   }
 
@@ -13208,12 +13212,13 @@
 
       param[journal_issn] = 0003-2778
       #param[base_url] = https://www.jasi.org.in/
+      #Moved to LWW
 
       au < frozen ; exists ; 2019 ; Journal of The Anatomical Society of India Volume 68 ; 2019 ; 68 ; https://www.jasi.org.in/ ; ; >
       au < frozen ; exists ; 2020 ; Journal of The Anatomical Society of India Volume 69 ; 2020 ; 69 ; https://www.jasi.org.in/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of The Anatomical Society of India Volume 70 ; 2021 ; 70 ; https://www.jasi.org.in/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of The Anatomical Society of India Volume 71 ; 2022 ; 71 ; https://www.jasi.org.in/ ; ; >
-      au < manifest ; exists ; 2023 ; Journal of The Anatomical Society of India Volume 72 ; 2023 ; 72 ; https://www.jasi.org.in/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of The Anatomical Society of India Volume 71 ; 2022 ; 71 ; https://www.jasi.org.in/ ; ; >
+      au < doNotProcess ; exists ; 2023 ; Journal of The Anatomical Society of India Volume 72 ; 2023 ; 72 ; https://www.jasi.org.in/ ; ; >
 
   }
 
