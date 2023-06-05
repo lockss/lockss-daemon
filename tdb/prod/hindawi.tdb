@@ -3602,7 +3602,7 @@
     au < doNotProcess ; 2010 ; Hepatitis Research and Treatment Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Hepatitis Research and Treatment Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Hepatitis Research and Treatment Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; 2013 ; Hepatitis Research and Treatment Volume 2013 ; 2013 ; 2013 >
+    au < ready ; 2013 ; Hepatitis Research and Treatment Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Hepatitis Research and Treatment Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Hepatitis Research and Treatment Volume 2015 ; 2015 ; 2015 >
     au < doNotProcess ; 2016 ; Hepatitis Research and Treatment Volume 2016 ; 2016 ; 2016 >
@@ -3660,7 +3660,7 @@
     param[journal_id] = ijms
     #ceased publication in 2017
 
-    au < manifest ; 2013 ; Indian Journal of Materials Science Volume 2013 ; 2013 ; 2013 >
+    au < ready ; 2013 ; Indian Journal of Materials Science Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Indian Journal of Materials Science Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Indian Journal of Materials Science Volume 2015 ; 2015 ; 2015 >
     au < doNotProcess ; 2016 ; Indian Journal of Materials Science Volume 2016 ; 2016 ; 2016 >
@@ -3931,7 +3931,7 @@
 
     au < released ; 2013 ; International Journal of Antibiotics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Antibiotics Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; 2015 ; International Journal of Antibiotics Volume 2015 ; 2015 ; 2015 >
+    au < ready ; 2015 ; International Journal of Antibiotics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4181,7 +4181,7 @@
     #Moved to archive
 
     au < released ; 2013 ; International Journal of Chemical Physics Volume 2013 ; 2013 ; 2013 >
-    au < manifest ; 2015 ; International Journal of Chemical Physics Volume 2015 ; 2015 ; 2015 >
+    au < ready ; 2015 ; International Journal of Chemical Physics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -4243,7 +4243,7 @@
 
     au < doNotProcess ; 2014 ; International Journal of Computational Mathematics Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Computational Mathematics Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; International Journal of Computational Mathematics Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; International Journal of Computational Mathematics Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -4962,7 +4962,7 @@
     au < doNotProcess ; 2014 ; International Journal of Microwave Science and Technology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Microwave Science and Technology Volume 2015 ; 2015 ; 2015 >
     au < doNotProcess ; 2016 ; International Journal of Microwave Science and Technology Volume 2016 ; 2016 ; 2016 >
-    au < manifest ; 2017 ; International Journal of Microwave Science and Technology Volume 2017 ; 2017 ; 2017 >
+    au < ready ; 2017 ; International Journal of Microwave Science and Technology Volume 2017 ; 2017 ; 2017 >
 
   }
 
@@ -4998,7 +4998,7 @@
     au < doNotProcess ; 2014 ; International Journal of Molecular Imaging Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Molecular Imaging Volume 2015 ; 2015 ; 2015 >
     au < doNotProcess ; 2016 ; International Journal of Molecular Imaging Volume 2016 ; 2016 ; 2016 >
-    au < manifest ; 2017 ; International Journal of Molecular Imaging Volume 2017 ; 2017 ; 2017 >
+    au < ready ; 2017 ; International Journal of Molecular Imaging Volume 2017 ; 2017 ; 2017 >
 
   }
   
@@ -5393,7 +5393,7 @@
 
     param[journal_id] = ijrmed
 
-    au < manifest ; 2013 ; International Journal of Reproductive Medicine Volume 2013 ; 2013 ; 2013 >
+    au < ready ; 2013 ; International Journal of Reproductive Medicine Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Reproductive Medicine Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Reproductive Medicine Volume 2015 ; 2015 ; 2015 >
     au < doNotProcess ; 2016 ; International Journal of Reproductive Medicine Volume 2016 ; 2016 ; 2016 >
@@ -5421,7 +5421,7 @@
     au < doNotProcess ; 2010 ; International Journal of Rheumatology Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; International Journal of Rheumatology Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; International Journal of Rheumatology Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; 2013 ; International Journal of Rheumatology Volume 2013 ; 2013 ; 2013 >
+    au < ready ; 2013 ; International Journal of Rheumatology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; International Journal of Rheumatology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; International Journal of Rheumatology Volume 2015 ; 2015 ; 2015 >
     au < doNotProcess ; 2016 ; International Journal of Rheumatology Volume 2016 ; 2016 ; 2016 >
@@ -7372,7 +7372,7 @@
     au < released ; 2013 ; Journal of Insects Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Insects Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Insects Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Insects Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Journal of Insects Volume 2016 ; 2016 ; 2016 >
 
   }
 
