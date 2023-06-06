@@ -2378,10 +2378,10 @@
 #    param[base_url] = https://ijos.in/
 
     param[journal_issn] = 2773-1367
+    #move to LWW in 2023, moved https://journals.lww.com/iots/
 
     au < finished ; finished ; 2021 ; International Journal of Orthopaedic Surgery Volume 29 ; 2021 ; 29 ; https://ijos.in/ ; ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2022 ; International Journal of Orthopaedic Surgery Volume 30 ; 2022 ; 30 ; https://ijos.in/ ; ; >
-    au < expected ; exists ; 2023 ; International Journal of Orthopaedic Surgery Volume 31 ; 2023 ; 31 ; https://ijos.in/ ; ; >
+    au < frozen ; exists ; 2022 ; International Journal of Orthopaedic Surgery Volume 30 ; 2022 ; 30 ; https://ijos.in/ ; ; >
 
   }
 
@@ -3974,9 +3974,10 @@
 #    param[base_url] = http://www.jicdro.org/
 
     param[journal_issn] = 2231-0754
+    #move to LWW in 2023, moved https://journals.lww.com/jicd/
 
-    au < manifest ; exists ; 2009 ; Journal of the International Clinical Dental Research Organization Volume 1 ; 2009 ; 1 ; https://www.jicdro.org/ ; ; >
-    au < manifest ; exists ; 2010 ; Journal of the International Clinical Dental Research Organization Volume 2 ; 2010 ; 2 ; https://www.jicdro.org/ ; ; >
+    au < doNotProcess ; exists ; 2009 ; Journal of the International Clinical Dental Research Organization Volume 1 ; 2009 ; 1 ; https://www.jicdro.org/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of the International Clinical Dental Research Organization Volume 2 ; 2010 ; 2 ; https://www.jicdro.org/ ; ; >
     au < finished ; finished ; 2011 ; Journal of the International Clinical Dental Research Organization Volume 3 ; 2011 ; 3 ; http://www.jicdro.org/ ; ; >
     au < finished ; finished ; 2012 ; Journal of the International Clinical Dental Research Organization Volume 4 ; 2012 ; 4 ; http://www.jicdro.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Journal of the International Clinical Dental Research Organization Volume 5 ; 2013 ; 5 ; http://www.jicdro.org/ ; ; reingest1.clockss.org:8082 >
@@ -3987,9 +3988,8 @@
     au < finished ; finished ; 2018 ; Journal of the International Clinical Dental Research Organization Volume 10 ; 2018 ; 10 ; http://www.jicdro.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2019 ; Journal of the International Clinical Dental Research Organization Volume 11 ; 2019 ; 11 ; https://www.jicdro.org/ ; ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2020 ; Journal of the International Clinical Dental Research Organization Volume 12 ; 2020 ; 12 ; https://www.jicdro.org/ ; ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2021 ; Journal of the International Clinical Dental Research Organization Volume 13 ; 2021 ; 13 ; https://www.jicdro.org/ ; ; >
-    au < deepCrawl ; exists ; 2022 ; Journal of the International Clinical Dental Research Organization Volume 14 ; 2022 ; 14 ; https://www.jicdro.org/ ; ; >
-    au < expected ; exists ; 2023 ; Journal of the International Clinical Dental Research Organization Volume 15 ; 2023 ; 15 ; https://www.jicdro.org/ ; ; >
+    au < frozen ; exists ; 2021 ; Journal of the International Clinical Dental Research Organization Volume 13 ; 2021 ; 13 ; https://www.jicdro.org/ ; ; >
+    au < frozen ; exists ; 2022 ; Journal of the International Clinical Dental Research Organization Volume 14 ; 2022 ; 14 ; https://www.jicdro.org/ ; ; >
 
   }
 
@@ -5583,6 +5583,7 @@
 
       param[journal_issn] = 2348-3334
 #      param[base_url] = http://www.cjhr.org/
+    #move to LWW in 2023, moved https://journals.lww.com/chri/
 
       au < finished ; finished ; 2014 ; CHRISMED Journal of Health and Research Volume 1 ; 2014 ; 1 ; http://www.cjhr.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2015 ; CHRISMED Journal of Health and Research Volume 2 ; 2015 ; 2 ; http://www.cjhr.org/ ; ; reingest2.clockss.org:8085 >
@@ -5591,9 +5592,8 @@
       au < finished ; frozen ; 2018 ; CHRISMED Journal of Health and Research Volume 5 ; 2018 ; 5 ; http://www.cjhr.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; CHRISMED Journal of Health and Research Volume 6 ; 2019 ; 6 ; https://www.cjhr.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; CHRISMED Journal of Health and Research Volume 7 ; 2020 ; 7 ; https://www.cjhr.org/ ; ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; CHRISMED Journal of Health and Research Volume 8 ; 2021 ; 8 ; https://www.cjhr.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; CHRISMED Journal of Health and Research Volume 9 ; 2022 ; 9 ; https://www.cjhr.org/ ; ; >
-      au < expected ; exists ; 2023 ; CHRISMED Journal of Health and Research Volume 10 ; 2023 ; 10 ; https://www.cjhr.org/ ; ; >
+      au < frozen ; exists ; 2021 ; CHRISMED Journal of Health and Research Volume 8 ; 2021 ; 8 ; https://www.cjhr.org/ ; ; >
+      au < frozen ; exists ; 2022 ; CHRISMED Journal of Health and Research Volume 9 ; 2022 ; 9 ; https://www.cjhr.org/ ; ; >
 
   }
 
@@ -6968,6 +6968,7 @@
 
       param[journal_issn] = 2211-4122
 #      param[base_url] = http://www.jcecho.org/
+    #move to LWW in 2023, moved https://journals.lww.com/jceg/
 
       au < finished ; frozen ; 2013 ; Journal of Cardiovascular Echography Volume 23 ; 2013 ; 23 ; http://www.jcecho.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; Journal of Cardiovascular Echography Volume 24 ; 2014 ; 24 ; http://www.jcecho.org/ ; ; reingest5.clockss.org:8082 >
@@ -6977,9 +6978,8 @@
       au < finished ; finished ; 2018 ; Journal of Cardiovascular Echography Volume 28 ; 2018 ; 28 ; http://www.jcecho.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2019 ; Journal of Cardiovascular Echography Volume 29 ; 2019 ; 29 ; https://www.jcecho.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; Journal of Cardiovascular Echography Volume 30 ; 2020 ; 30 ; https://www.jcecho.org/ ; ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2021 ; Journal of Cardiovascular Echography Volume 31 ; 2021 ; 31 ; https://www.jcecho.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of Cardiovascular Echography Volume 32 ; 2022 ; 32 ; https://www.jcecho.org/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Cardiovascular Echography Volume 33 ; 2023 ; 33 ; https://www.jcecho.org/ ; ; >
+      au < frozen ; exists ; 2021 ; Journal of Cardiovascular Echography Volume 31 ; 2021 ; 31 ; https://www.jcecho.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of Cardiovascular Echography Volume 32 ; 2022 ; 32 ; https://www.jcecho.org/ ; ; >
 
   }
 
@@ -7167,6 +7167,7 @@
 
       param[journal_issn] = 2348-2915
 #      param[base_url] = http://www.jdrr.org/
+    #move to LWW in 2023, moved https://journals.lww.com/jdrr/
 
       au < finished ; finished ; 2014 ; Journal of Dental Research and Review Volume 1 ; 2014 ; 1 ; http://www.jdrr.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Journal of Dental Research and Review Volume 2 ; 2015 ; 2 ; http://www.jdrr.org/ ; ; reingest5.clockss.org:8082 >
@@ -7174,10 +7175,9 @@
       au < finished ; finished ; 2017 ; Journal of Dental Research and Review Volume 4 ; 2017 ; 4 ; http://www.jdrr.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2018 ; Journal of Dental Research and Review Volume 5 ; 2018 ; 5 ; http://www.jdrr.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; Journal of Dental Research and Review Volume 6 ; 2019 ; 6 ; https://www.jdrr.org/ ; ; reingest1.clockss.org:8082 >
-      au < notReady ; exists ; 2020 ; Journal of Dental Research and Review Volume 7 ; 2020 ; 7 ; https://www.jdrr.org/ ; ; > #500 https://www.jdrr.org/article.asp?issn=2348-2915;year=2020;volume=7;issue=3;spage=105;epage=114;aulast=Hassan;type=2
-      au < deepCrawl ; exists ; 2021 ; Journal of Dental Research and Review Volume 8 ; 2021 ; 8 ; https://www.jdrr.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of Dental Research and Review Volume 9 ; 2022 ; 9 ; https://www.jdrr.org/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Dental Research and Review Volume 10 ; 2023 ; 10 ; https://www.jdrr.org/ ; ; >
+      au < doNotProcess ; exists ; 2020 ; Journal of Dental Research and Review Volume 7 ; 2020 ; 7 ; https://www.jdrr.org/ ; ; > #500 https://www.jdrr.org/article.asp?issn=2348-2915;year=2020;volume=7;issue=3;spage=105;epage=114;aulast=Hassan;type=2
+      au < frozen ; exists ; 2021 ; Journal of Dental Research and Review Volume 8 ; 2021 ; 8 ; https://www.jdrr.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of Dental Research and Review Volume 9 ; 2022 ; 9 ; https://www.jdrr.org/ ; ; >
 
   }
 
@@ -7214,6 +7214,7 @@
 
       param[journal_issn] = 2277-8632
 #      param[base_url] = http://www.jdrntruhs.org/
+    #move to LWW in 2023, moved https://journals.lww.com/jntr/
 
       au < finished ; frozen ; 2012 ; Journal of Dr. NTR University of Health Sciences Volume 1 ; 2012 ; 1 ; http://www.jdrntruhs.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Journal of Dr. NTR University of Health Sciences Volume 2 ; 2013 ; 2 ; http://www.jdrntruhs.org/ ; ; reingest5.clockss.org:8082 >
@@ -7224,9 +7225,8 @@
       au < finished ; finished ; 2018 ; Journal of Dr. NTR University of Health Sciences Volume 7 ; 2018 ; 7 ; http://www.jdrntruhs.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; Journal of Dr. NTR University of Health Sciences Volume 8 ; 2019 ; 8 ; https://www.jdrntruhs.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2020 ; Journal of Dr. NTR University of Health Sciences Volume 9 ; 2020 ; 9 ; https://www.jdrntruhs.org/ ; ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Journal of Dr. NTR University of Health Sciences Volume 10 ; 2021 ; 10 ; https://www.jdrntruhs.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of Dr. NTR University of Health Sciences Volume 11 ; 2022 ; 11 ; https://www.jdrntruhs.org/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Dr. NTR University of Health Sciences Volume 12 ; 2023 ; 12 ; https://www.jdrntruhs.org/ ; ; >
+      au < frozen ; exists ; 2021 ; Journal of Dr. NTR University of Health Sciences Volume 10 ; 2021 ; 10 ; https://www.jdrntruhs.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of Dr. NTR University of Health Sciences Volume 11 ; 2022 ; 11 ; https://www.jdrntruhs.org/ ; ; >
 
   }
 
@@ -7926,6 +7926,8 @@
       >
 
 #      param[base_url] = http://www.jrpp.net/
+    #move to LWW in 2023, moved https://journals.lww.com/jrpp/
+
       {
       param[journal_issn] = 2319-9644
 
@@ -7933,8 +7935,7 @@
       au < frozen ; exists ; 2019 ; Journal of Research in Pharmacy Practice Volume 8 ; 2019 ; 8 ; https://www.jrpp.net/ ; ; >
       au < frozen ; exists ; 2020 ; Journal of Research in Pharmacy Practice Volume 9 ; 2020 ; 9 ; https://www.jrpp.net/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Research in Pharmacy Practice Volume 10 ; 2021 ; 10 ; https://www.jrpp.net/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of Research in Pharmacy Practice Volume 11 ; 2022 ; 11 ; https://www.jrpp.net/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Research in Pharmacy Practice Volume 12 ; 2023 ; 12 ; https://www.jrpp.net/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of Research in Pharmacy Practice Volume 11 ; 2022 ; 11 ; https://www.jrpp.net/ ; ; >
       }
       {
       param[journal_issn] = 2279-042X
@@ -9000,6 +9001,7 @@
 
       param[journal_issn] = 1687-9090
 #      param[base_url] = http://www.ejca.eg.net/
+    #move to LWW in 2023, moved https://journals.lww.com/ejca/
 
       au < finished ; frozen ; 2012 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 6 ; 2012 ; 6 ; http://www.ejca.eg.net/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2013 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 7 ; 2013 ; 7 ; http://www.ejca.eg.net/ ; ; reingest1.clockss.org:8082 >
@@ -9010,9 +9012,8 @@
       au < finished ; frozen ; 2018 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 12 ; 2018 ; 12 ; http://www.ejca.eg.net/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 13 ; 2019 ; 13 ; https://www.ejca.eg.net/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2020 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 14 ; 2020 ; 14 ; https://www.ejca.eg.net/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 15 ; 2021 ; 15 ; https://www.ejca.eg.net/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 16 ; 2022 ; 16 ; https://www.ejca.eg.net/ ; ; >
-      au < expected ; exists ; 2023 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 17 ; 2023 ; 17 ; https://www.ejca.eg.net/ ; ; >
+      au < frozen ; exists ; 2021 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 15 ; 2021 ; 15 ; https://www.ejca.eg.net/ ; ; >
+      au < frozen ; exists ; 2022 ; The Egyptian Journal of Cardiothoracic Anesthesia Volume 16 ; 2022 ; 16 ; https://www.ejca.eg.net/ ; ; >
 
   }
 
@@ -9577,14 +9578,14 @@
 
       param[journal_issn] = 2589-3505
 #      param[base_url] = http://www.aiaohns.in/
+    #move to LWW in 2023, moved https://journals.lww.com/aohn/
 
       au < finished ; finished ; 2017 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 1 ; 2017 ; 1 ; http://www.aiaohns.in/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2018 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 2 ; 2018 ; 2 ; https://www.aiaohns.in/ ; ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2019 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 3 ; 2019 ; 3 ; https://www.aiaohns.in/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2020 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 4 ; 2020 ; 4 ; https://www.aiaohns.in/ ; ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 5 ; 2021 ; 5 ; https://www.aiaohns.in/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 6 ; 2022 ; 6 ; https://www.aiaohns.in/ ; ; >
-      au < expected ; exists ; 2023 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 7 ; 2023 ; 7 ; https://www.aiaohns.in/ ; ; >
+      au < frozen ; exists ; 2021 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 5 ; 2021 ; 5 ; https://www.aiaohns.in/ ; ; >
+      au < frozen ; exists ; 2022 ; Annals of Indian Academy of Otorhinolaryngology Head and Neck Surgery Volume 6 ; 2022 ; 6 ; https://www.aiaohns.in/ ; ; >
 
   }
 
@@ -11492,6 +11493,7 @@
 
       param[journal_issn] = 2251-9572
 #      param[base_url] = http://www.rcvmonline.com/
+    #move to LWW in 2023, moved https://journals.lww.com/RCVM/
 
       au < finished ; finished ; 2012 ; Research in Cardiovascular Medicine Volume 1 ; 2012 ; 1 ; https://www.rcvmonline.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Research in Cardiovascular Medicine Volume 2 ; 2013 ; 2 ; https://www.rcvmonline.com/ ; ; reingest2.clockss.org:8085 >
@@ -11502,9 +11504,8 @@
       au < finished ; finished ; 2018 ; Research in Cardiovascular Medicine Volume 7 ; 2018 ; 7 ; https://www.rcvmonline.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2019 ; Research in Cardiovascular Medicine Volume 8 ; 2019 ; 8 ; https://www.rcvmonline.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; Research in Cardiovascular Medicine Volume 9 ; 2020 ; 9 ; https://www.rcvmonline.com/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Research in Cardiovascular Medicine Volume 10 ; 2021 ; 10 ; https://www.rcvmonline.com/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Research in Cardiovascular Medicine Volume 11 ; 2022 ; 11 ; https://www.rcvmonline.com/ ; ; >
-      au < expected ; exists ; 2023 ; Research in Cardiovascular Medicine Volume 12 ; 2023 ; 12 ; https://www.rcvmonline.com/ ; ; >
+      au < frozen ; exists ; 2021 ; Research in Cardiovascular Medicine Volume 10 ; 2021 ; 10 ; https://www.rcvmonline.com/ ; ; >
+      au < frozen ; exists ; 2022 ; Research in Cardiovascular Medicine Volume 11 ; 2022 ; 11 ; https://www.rcvmonline.com/ ; ; >
 
   }
 
@@ -12077,10 +12078,10 @@
 
       param[journal_issn] = 2347-3665
       #param[base_url] = https://www.dypatiljhs.com/
+    #move to LWW in 2023, moved https://journals.lww.com/dypj/
 
       au < frozen ; exists ; 2021 ; D Y Patil Journal of Health Sciences Volume 9 ; 2021 ; 9 ; https://www.dypatiljhs.com/ ; ; >
-      au < manifest ; exists ; 2022 ; D Y Patil Journal of Health Sciences Volume 10 ; 2022 ; 10 ; https://www.dypatiljhs.com/ ; ; >
-      au < expected ; exists ; 2023 ; D Y Patil Journal of Health Sciences Volume 11 ; 2023 ; 11 ; https://www.dypatiljhs.com/ ; ; >
+      au < doNotProcess ; exists ; 2022 ; D Y Patil Journal of Health Sciences Volume 10 ; 2022 ; 10 ; https://www.dypatiljhs.com/ ; ; >
 
   }
 
@@ -12154,11 +12155,10 @@
 
       param[journal_issn] = 2241-9136
       #param[base_url] = https://www.hellenicurologyjournal.com/
+    #move to LWW in 2023, moved https://journals.lww.com/heur/
 
       au < frozen ; exists ; 2020 ; Hellenic Urology Volume 32 ; 2020 ; 32 ; https://www.hellenicurologyjournal.com/ ; ; >
       au < frozen ; exists ; 2021 ; Hellenic Urology Volume 33 ; 2021 ; 33 ; https://www.hellenicurologyjournal.com/ ; ; >
-      au < expected ; exists ; 2022 ; Hellenic Urology Volume 34 ; 2022 ; 34 ; https://www.hellenicurologyjournal.com/ ; ; >
-      au < expected ; exists ; 2023 ; Hellenic Urology Volume 35 ; 2023 ; 35 ; https://www.hellenicurologyjournal.com/ ; ; >
 
   }
 
@@ -12597,10 +12597,9 @@
 
       param[journal_issn] = 0973-662X
       #param[base_url] = https://www.jaiish.com/
+    #move to LWW in 2023, moved https://journals.lww.com/JOSH/
 
       au < frozen ; exists ; 2021 ; Journal of All India Institute of Speech and Hearing Volume 40 ; 2021 ; 40 ; https://www.jaiish.com/ ; ; >
-      au < expected ; exists ; 2022 ; Journal of All India Institute of Speech and Hearing Volume 41 ; 2022 ; 41 ; https://www.jaiish.com/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of All India Institute of Speech and Hearing Volume 42 ; 2023 ; 42 ; https://www.jaiish.com/ ; ; >
 
   }
 
@@ -13446,12 +13445,12 @@
 
       param[journal_issn] = 2521-0815
       #param[base_url] = https://www.matrixscipharma.org/
+    #move to LWW in 2023, moved https://journals.lww.com/mtsp/
 
       au < frozen ; exists ; 2019 ; Matrix Science Pharma Volume 3 ; 2019 ; 3 ; https://www.matrixscipharma.org/ ; ; >
       au < frozen ; exists ; 2020 ; Matrix Science Pharma Volume 4 ; 2020 ; 4 ; https://www.matrixscipharma.org/ ; ; >
       au < frozen ; exists ; 2021 ; Matrix Science Pharma Volume 5 ; 2021 ; 5 ; https://www.matrixscipharma.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Matrix Science Pharma Volume 6 ; 2022 ; 6 ; https://www.matrixscipharma.org/ ; ; >
-      au < expected ; exists ; 2023 ; Matrix Science Pharma Volume 7 ; 2023 ; 7 ; https://www.matrixscipharma.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Matrix Science Pharma Volume 6 ; 2022 ; 6 ; https://www.matrixscipharma.org/ ; ; >
 
   }
 
@@ -13604,12 +13603,10 @@
 
       param[journal_issn] = 2666-3848
       #param[base_url] = https://www.qaij.org/
+    #move to LWW in 2023, moved https://journals.lww.com/qaij/
 
       au < frozen ; exists ; 2019 ; QAI Journal for Healthcare Quality and Patient Safety Volume 1 ; 2019 ; 1 ; https://www.qaij.org/ ; ; >
       au < frozen ; exists ; 2020 ; QAI Journal for Healthcare Quality and Patient Safety Volume 2 ; 2020 ; 2 ; https://www.qaij.org/ ; ; >
-      au < exists ; exists ; 2021 ; QAI Journal for Healthcare Quality and Patient Safety Volume 3 ; 2021 ; 3 ; https://www.qaij.org/ ; ; >
-      au < expected ; exists ; 2022 ; QAI Journal for Healthcare Quality and Patient Safety Volume 4 ; 2022 ; 4 ; https://www.qaij.org/ ; ; >
-      au < expected ; exists ; 2023 ; QAI Journal for Healthcare Quality and Patient Safety Volume 5 ; 2023 ; 5 ; https://www.qaij.org/ ; ; >
 
   }
 
