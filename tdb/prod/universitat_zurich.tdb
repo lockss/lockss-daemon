@@ -12,14 +12,24 @@
         issn = 1613-4702 ;
         eissn = 2297-878X
       >
-      
+      {
       plugin = org.lockss.plugin.ojs2.OJS2Plugin
       param[journal_id] = psychoanalyse
       #param[base_url] = http://www.psychoanalyse-journal.ch/
 
-      au < released ; 2014-2017 ; Journal für Psychoanalyse Volume 0 ; 0 ; 0 ; http://www.psychoanalyse-journal.ch/ >
+      au < down ; 2014-2023 ; Journal für Psychoanalyse Volume 0 ; 0 ; 0 ; http://www.psychoanalyse-journal.ch/ >
       #all issues embedded in volume 0. contains all content. open AU.
+      }
+      {
+      plugin = org.lockss.plugin.ojs3.Ojs3Plugin
+      param[journal_id] = psychoanalyse
+      #param[base_url] = https://www.psychoanalyse-journal.ch/
+      attr[start_stem] = index.php/
+      #No manifest pages enabled as of 2023-06-06
 
+      au < exists ; 2014-2023 ; Journal für Psychoanalyse Volume 0 ; 0 ; 0 ; http://www.psychoanalyse-journal.ch/ >
+      #all issues embedded in volume 0. contains all content. open AU.
+      }
     }
 
     {
@@ -68,12 +78,13 @@
       {
       plugin = org.lockss.plugin.ojs3.Ojs3Plugin
       attr[start_stem] = index.php/
+      #No manifest pages enabled as of 2023-06-06
 
       au < released ; 2019 ; altrelettere Volume 2019 ; 2019 ; 2019 ; https://www.altrelettere.uzh.ch/ >
       au < released ; 2020 ; altrelettere Volume 2020 ; 2020 ; 2020 ; https://www.altrelettere.uzh.ch/ >
-      au < expected ; 2021 ; altrelettere Volume 2021 ; 2021 ; 2021 ; https://www.altrelettere.uzh.ch/ >
-      au < expected ; 2022 ; altrelettere Volume 2022 ; 2022 ; 2022 ; https://www.altrelettere.uzh.ch/ >
-      au < expected ; 2023 ; altrelettere Volume 2023 ; 2023 ; 2023 ; https://www.altrelettere.uzh.ch/ >
+      au < exists ; 2021 ; altrelettere Volume 2021 ; 2021 ; 2021 ; https://www.altrelettere.uzh.ch/ >
+      au < exists ; 2022 ; altrelettere Volume 2022 ; 2022 ; 2022 ; https://www.altrelettere.uzh.ch/ >
+      au < exists ; 2023 ; altrelettere Volume 2023 ; 2023 ; 2023 ; https://www.altrelettere.uzh.ch/ >
       }
     }
 
@@ -138,131 +149,145 @@
         issn = 0254-4407
       >
       
-      plugin = org.lockss.plugin.ojs2.OJS2Plugin
       param[journal_id] = zwa
 
       {
-      
+        plugin = org.lockss.plugin.ojs3.Ojs3Plugin
+        attr[start_stem] = index.php/
         #param[base_url] = http://www.zwingliana.ch/
         comment[years] = Rolling last 3 years no substance.
 
-        au < released ; 1897 ; Zwingliana Volume 1 (1897) ; 1 ; 1897 ; https://www.zwingliana.ch/ >
-        au < released ; 1898 ; Zwingliana Volume 1 (1898) ; 1 ; 1898 ; https://www.zwingliana.ch/ >
-        au < released ; 1899 ; Zwingliana Volume 1 (1899) ; 1 ; 1899 ; https://www.zwingliana.ch/ >
-        au < released ; 1900 ; Zwingliana Volume 1 (1900) ; 1 ; 1900 ; https://www.zwingliana.ch/ >
-        au < released ; 1901 ; Zwingliana Volume 1 (1901) ; 1 ; 1901 ; https://www.zwingliana.ch/ >
-        au < released ; 1902 ; Zwingliana Volume 1 (1902) ; 1 ; 1902 ; https://www.zwingliana.ch/ >
-        au < released ; 1903 ; Zwingliana Volume 1 (1903) ; 1 ; 1903 ; https://www.zwingliana.ch/ >
-        au < released ; 1904 ; Zwingliana Volume 1 (1904) ; 1 ; 1904 ; https://www.zwingliana.ch/ >
-        au < released ; 1905 ; Zwingliana Volume 2 (1905) ; 2 ; 1905 ; https://www.zwingliana.ch/ >
-        au < released ; 1906 ; Zwingliana Volume 2 (1906) ; 2 ; 1906 ; https://www.zwingliana.ch/ >
-        au < released ; 1907 ; Zwingliana Volume 2 (1907) ; 2 ; 1907 ; https://www.zwingliana.ch/ >
-        au < released ; 1908 ; Zwingliana Volume 2 (1908) ; 2 ; 1908 ; https://www.zwingliana.ch/ >
-        au < released ; 1909 ; Zwingliana Volume 2 (1909) ; 2 ; 1909 ; https://www.zwingliana.ch/ >
-        au < released ; 1910 ; Zwingliana Volume 2 (1910) ; 2 ; 1910 ; https://www.zwingliana.ch/ >
-        au < released ; 1911 ; Zwingliana Volume 2 (1911) ; 2 ; 1911 ; https://www.zwingliana.ch/ >
-        au < released ; 1912 ; Zwingliana Volume 2 (1912) ; 2 ; 1912 ; https://www.zwingliana.ch/ >
-        au < released ; 1913 ; Zwingliana Volume 3 (1913) ; 3 ; 1913 ; https://www.zwingliana.ch/ >
-        au < released ; 1914 ; Zwingliana Volume 3 (1914) ; 3 ; 1914 ; https://www.zwingliana.ch/ >
-        au < released ; 1915 ; Zwingliana Volume 3 (1915) ; 3 ; 1915 ; https://www.zwingliana.ch/ >
-        au < released ; 1916 ; Zwingliana Volume 3 (1916) ; 3 ; 1916 ; https://www.zwingliana.ch/ >
-        au < released ; 1917 ; Zwingliana Volume 3 (1917) ; 3 ; 1917 ; https://www.zwingliana.ch/ >
-        au < released ; 1918 ; Zwingliana Volume 3 (1918) ; 3 ; 1918 ; https://www.zwingliana.ch/ >
-        au < released ; 1919 ; Zwingliana Volume 3 (1919) ; 3 ; 1919 ; https://www.zwingliana.ch/ >
-        au < released ; 1920 ; Zwingliana Volume 3 (1920) ; 3 ; 1920 ; https://www.zwingliana.ch/ >
-        au < released ; 1921 ; Zwingliana Volume 4 (1921) ; 4 ; 1921 ; https://www.zwingliana.ch/ >
-        au < released ; 1922 ; Zwingliana Volume 4 (1922) ; 4 ; 1922 ; https://www.zwingliana.ch/ >
-        au < released ; 1923 ; Zwingliana Volume 4 (1923) ; 4 ; 1923 ; https://www.zwingliana.ch/ >
-        au < released ; 1924 ; Zwingliana Volume 4 (1924) ; 4 ; 1924 ; https://www.zwingliana.ch/ >
-        au < released ; 1925 ; Zwingliana Volume 4 (1925) ; 4 ; 1925 ; https://www.zwingliana.ch/ >
-        au < released ; 1926 ; Zwingliana Volume 4 (1926) ; 4 ; 1926 ; https://www.zwingliana.ch/ >
-        au < released ; 1927 ; Zwingliana Volume 4 (1927) ; 4 ; 1927 ; https://www.zwingliana.ch/ >
-        au < released ; 1928 ; Zwingliana Volume 4 (1928) ; 4 ; 1928 ; https://www.zwingliana.ch/ >
-        au < released ; 1929 ; Zwingliana Volume 5 (1929) ; 5 ; 1929 ; https://www.zwingliana.ch/ >
-        au < released ; 1930 ; Zwingliana Volume 5 (1930) ; 5 ; 1930 ; https://www.zwingliana.ch/ >
-        au < released ; 1931 ; Zwingliana Volume 5 (1931) ; 5 ; 1931 ; https://www.zwingliana.ch/ >
-        au < released ; 1932 ; Zwingliana Volume 5 (1932) ; 5 ; 1932 ; https://www.zwingliana.ch/ >
-        au < released ; 1933 ; Zwingliana Volume 5 (1933) ; 5 ; 1933 ; https://www.zwingliana.ch/ >
-        au < released ; 1934 ; Zwingliana Volume 6 (1934) ; 6 ; 1934 ; https://www.zwingliana.ch/ >
-        au < released ; 1935 ; Zwingliana Volume 6 (1935) ; 6 ; 1935 ; https://www.zwingliana.ch/ >
-        au < released ; 1936 ; Zwingliana Volume 6 (1936) ; 6 ; 1936 ; https://www.zwingliana.ch/ >
-        au < released ; 1937 ; Zwingliana Volume 6 (1937) ; 6 ; 1937 ; https://www.zwingliana.ch/ >
-        au < released ; 1938 ; Zwingliana Volume 6 (1938) ; 6 ; 1938 ; https://www.zwingliana.ch/ >
-        au < released ; 1939 ; Zwingliana Volume 7 (1939) ; 7 ; 1939 ; https://www.zwingliana.ch/ >
-        au < released ; 1940 ; Zwingliana Volume 7 (1940) ; 7 ; 1940 ; https://www.zwingliana.ch/ >
-        au < released ; 1941 ; Zwingliana Volume 7 (1941) ; 7 ; 1941 ; https://www.zwingliana.ch/ >
-        au < released ; 1942 ; Zwingliana Volume 7 (1942) ; 7 ; 1942 ; https://www.zwingliana.ch/ >
-        au < released ; 1943 ; Zwingliana Volume 7 (1943) ; 7 ; 1943 ; https://www.zwingliana.ch/ >
-        au < released ; 1944 ; Zwingliana Volume 8 (1944) ; 8 ; 1944 ; https://www.zwingliana.ch/ >
-        au < released ; 1945 ; Zwingliana Volume 8 (1945) ; 8 ; 1945 ; https://www.zwingliana.ch/ >
-        au < released ; 1946 ; Zwingliana Volume 8 (1946) ; 8 ; 1946 ; https://www.zwingliana.ch/ >
-        au < released ; 1947 ; Zwingliana Volume 8 (1947) ; 8 ; 1947 ; https://www.zwingliana.ch/ >
-        au < released ; 1948 ; Zwingliana Volume 8 (1948) ; 8 ; 1948 ; https://www.zwingliana.ch/ >
-        au < released ; 1949 ; Zwingliana Volume 9 (1949) ; 9 ; 1949 ; http://www.zwingliana.ch/ >
-        au < released ; 1950 ; Zwingliana Volume 9 (1950) ; 9 ; 1950 ; http://www.zwingliana.ch/ >
-        au < released ; 1951 ; Zwingliana Volume 9 (1951) ; 9 ; 1951 ; http://www.zwingliana.ch/ >
-        au < released ; 1952 ; Zwingliana Volume 9 (1952) ; 9 ; 1952 ; http://www.zwingliana.ch/ >
-        au < released ; 1953 ; Zwingliana Volume 9 (1953) ; 9 ; 1953 ; http://www.zwingliana.ch/ >
-        au < released ; 1954 ; Zwingliana Volume 10 (1954) ; 10 ; 1954 ; http://www.zwingliana.ch/ >
-        au < released ; 1955 ; Zwingliana Volume 10 (1955) ; 10 ; 1955 ; http://www.zwingliana.ch/ >
-        au < released ; 1956 ; Zwingliana Volume 10 (1956) ; 10 ; 1956 ; http://www.zwingliana.ch/ >
-        au < released ; 1957 ; Zwingliana Volume 10 (1957) ; 10 ; 1957 ; http://www.zwingliana.ch/ >
-        au < released ; 1958 ; Zwingliana Volume 10 (1958) ; 10 ; 1958 ; http://www.zwingliana.ch/ >
-        au < released ; 1959 ; Zwingliana Volume 11 (1959) ; 11 ; 1959 ; http://www.zwingliana.ch/ >
-        au < released ; 1960 ; Zwingliana Volume 11 (1960) ; 11 ; 1960 ; http://www.zwingliana.ch/ >
-        au < released ; 1961 ; Zwingliana Volume 11 (1961) ; 11 ; 1961 ; http://www.zwingliana.ch/ >
-        au < released ; 1962 ; Zwingliana Volume 11 (1962) ; 11 ; 1962 ; http://www.zwingliana.ch/ >
-        au < released ; 1963 ; Zwingliana Volume 11 (1963) ; 11 ; 1963 ; http://www.zwingliana.ch/ >
-        au < released ; 1964 ; Zwingliana Volume 12 (1964) ; 12 ; 1964 ; http://www.zwingliana.ch/ >
-        au < released ; 1965 ; Zwingliana Volume 12 (1965) ; 12 ; 1965 ; http://www.zwingliana.ch/ >
-        au < released ; 1966 ; Zwingliana Volume 12 (1966) ; 12 ; 1966 ; http://www.zwingliana.ch/ >
-        au < released ; 1967 ; Zwingliana Volume 12 (1967) ; 12 ; 1967 ; http://www.zwingliana.ch/ >
-        au < released ; 1968 ; Zwingliana Volume 12 (1968) ; 12 ; 1968 ; http://www.zwingliana.ch/ >
-        au < released ; 1969 ; Zwingliana Volume 13 (1969) ; 13 ; 1969 ; http://www.zwingliana.ch/ >
-        au < released ; 1970 ; Zwingliana Volume 13 (1970) ; 13 ; 1970 ; http://www.zwingliana.ch/ >
-        au < released ; 1971 ; Zwingliana Volume 13 (1971) ; 13 ; 1971 ; http://www.zwingliana.ch/ >
-        au < released ; 1972 ; Zwingliana Volume 13 (1972) ; 13 ; 1972 ; http://www.zwingliana.ch/ >
-        au < released ; 1973 ; Zwingliana Volume 13 (1973) ; 13 ; 1973 ; http://www.zwingliana.ch/ >
-        au < released ; 1974 ; Zwingliana Volume 14 (1974) ; 14 ; 1974 ; http://www.zwingliana.ch/ >
-        au < released ; 1975 ; Zwingliana Volume 14 (1975) ; 14 ; 1975 ; http://www.zwingliana.ch/ >
-        au < released ; 1976 ; Zwingliana Volume 14 (1976) ; 14 ; 1976 ; http://www.zwingliana.ch/ >
-        au < released ; 1977 ; Zwingliana Volume 14 (1977) ; 14 ; 1977 ; http://www.zwingliana.ch/ >
-        au < released ; 1978 ; Zwingliana Volume 14 (1978) ; 14 ; 1978 ; http://www.zwingliana.ch/ >
-        au < released ; 1979 ; Zwingliana Volume 15 (1979) ; 15 ; 1979 ; http://www.zwingliana.ch/ >
-        au < released ; 1980 ; Zwingliana Volume 15 (1980) ; 15 ; 1980 ; http://www.zwingliana.ch/ >
-        au < released ; 1981 ; Zwingliana Volume 15 (1981) ; 15 ; 1981 ; http://www.zwingliana.ch/ >
-        au < released ; 1982 ; Zwingliana Volume 15 (1982) ; 15 ; 1982 ; http://www.zwingliana.ch/ >
-        au < released ; 1983 ; Zwingliana Volume 16 (1983) ; 16 ; 1983 ; http://www.zwingliana.ch/ >
-        au < released ; 1984 ; Zwingliana Volume 16 (1984) ; 16 ; 1984 ; http://www.zwingliana.ch/ >
-        au < released ; 1985 ; Zwingliana Volume 16 (1985) ; 16 ; 1985 ; http://www.zwingliana.ch/ >
-        au < released ; 1986 ; Zwingliana Volume 17 (1986) ; 17 ; 1986 ; http://www.zwingliana.ch/ >
-        au < released ; 1987 ; Zwingliana Volume 17 (1987) ; 17 ; 1987 ; http://www.zwingliana.ch/ >
-        au < released ; 1988 ; Zwingliana Volume 17 (1988) ; 17 ; 1988 ; http://www.zwingliana.ch/ >
-        au < released ; 1989 ; Zwingliana Volume 18 (1989) ; 18 ; 1989 ; http://www.zwingliana.ch/ >
-        au < released ; 1990-1991 ; Zwingliana Volume 18 (1990-1991) ; 18 ; 1990 ; http://www.zwingliana.ch/ >
-        au < released ; 1992 ; Zwingliana Volume 19 (1992) ; 19 ; 1992 ; http://www.zwingliana.ch/ >
-        au < released ; 1993 ; Zwingliana Volume 19-20 (1993) ; 19-20 ; 1993 ; http://www.zwingliana.ch/ >
-        au < released ; 1994 ; Zwingliana Volume 21 ; 21 ; 1994 ; http://www.zwingliana.ch/ >
-        au < released ; 1995 ; Zwingliana Volume 22 ; 22 ; 1995 ; http://www.zwingliana.ch/ >
-        au < released ; 1996 ; Zwingliana Volume 23 ; 23 ; 1996 ; http://www.zwingliana.ch/ >
-        au < released ; 1997 ; Zwingliana Volume 24 ; 24 ; 1997 ; http://www.zwingliana.ch/ >
-        au < released ; 1998 ; Zwingliana Volume 25 ; 25 ; 1998 ; http://www.zwingliana.ch/ >
-        au < released ; 1999 ; Zwingliana Volume 26 ; 26 ; 1999 ; http://www.zwingliana.ch/ >
-        au < released ; 2000 ; Zwingliana Volume 27 ; 27 ; 2000 ; http://www.zwingliana.ch/ >
-        au < released ; 2001 ; Zwingliana Volume 28 ; 28 ; 2001 ; http://www.zwingliana.ch/ >
-        au < released ; 2002 ; Zwingliana Volume 29 ; 29 ; 2002 ; http://www.zwingliana.ch/ >
-        au < released ; 2003 ; Zwingliana Volume 30 ; 30 ; 2003 ; http://www.zwingliana.ch/ >
-        au < released ; 2004 ; Zwingliana Volume 31 ; 31 ; 2004 ; http://www.zwingliana.ch/ >
-        au < released ; 2005 ; Zwingliana Volume 32 ; 32 ; 2005 ; http://www.zwingliana.ch/ >
-        au < released ; 2006 ; Zwingliana Volume 33 ; 33 ; 2006 ; http://www.zwingliana.ch/ >
-        au < released ; 2007 ; Zwingliana Volume 34 ; 34 ; 2007 ; http://www.zwingliana.ch/ >
-        au < released ; 2008 ; Zwingliana Volume 35 ; 35 ; 2008 ; http://www.zwingliana.ch/ >
-        au < released ; 2009 ; Zwingliana Volume 36 ; 36 ; 2009 ; http://www.zwingliana.ch/ >
-        au < released ; 2010 ; Zwingliana Volume 37 ; 37 ; 2010 ; http://www.zwingliana.ch/ >
-        au < released ; 2011 ; Zwingliana Volume 38 ; 38 ; 2011 ; http://www.zwingliana.ch/ >
-        au < released ; 2012 ; Zwingliana Volume 39 ; 39 ; 2012 ; http://www.zwingliana.ch/ >
-        au < released ; 2013 ; Zwingliana Volume 40 ; 40 ; 2013 ; http://www.zwingliana.ch/ >
-        au < released ; 2014 ; Zwingliana Volume 41 ; 41 ; 2014 ; http://www.zwingliana.ch/ >
+        au < manifest ; 2015 ; Zwingliana Volume 42 ; 42 ; 2015 ; https://www.zwingliana.ch/ > #see https://www.zwingliana.ch/index.php/zwa/gateway/lockss?year=2015
+        au < manifest ; 2016 ; Zwingliana Volume 43 ; 43 ; 2016 ; https://www.zwingliana.ch/ >
+        au < manifest ; 2017 ; Zwingliana Volume 44 ; 44 ; 2017 ; https://www.zwingliana.ch/ >
+        au < doNotProcess ; 2018 ; Zwingliana Volume 45 [abstract only] ; 44 ; 2017 ; https://www.zwingliana.ch/ >
+        au < doNotProcess ; 2019 ; Zwingliana Volume 46 [abstract only] ; 44 ; 2017 ; https://www.zwingliana.ch/ >
+        au < doNotProcess ; 2020 ; Zwingliana Volume 47 [abstract only] ; 44 ; 2017 ; https://www.zwingliana.ch/ >
+
+      }
+
+      {
+        plugin = org.lockss.plugin.ojs2.OJS2Plugin
+        #param[base_url] = http://www.zwingliana.ch/
+        comment[years] = Rolling last 3 years no substance.
+
+        au < down ; 1897 ; Zwingliana Volume 1 (1897) ; 1 ; 1897 ; https://www.zwingliana.ch/ >
+        au < down ; 1898 ; Zwingliana Volume 1 (1898) ; 1 ; 1898 ; https://www.zwingliana.ch/ >
+        au < down ; 1899 ; Zwingliana Volume 1 (1899) ; 1 ; 1899 ; https://www.zwingliana.ch/ >
+        au < down ; 1900 ; Zwingliana Volume 1 (1900) ; 1 ; 1900 ; https://www.zwingliana.ch/ >
+        au < down ; 1901 ; Zwingliana Volume 1 (1901) ; 1 ; 1901 ; https://www.zwingliana.ch/ >
+        au < down ; 1902 ; Zwingliana Volume 1 (1902) ; 1 ; 1902 ; https://www.zwingliana.ch/ >
+        au < down ; 1903 ; Zwingliana Volume 1 (1903) ; 1 ; 1903 ; https://www.zwingliana.ch/ >
+        au < down ; 1904 ; Zwingliana Volume 1 (1904) ; 1 ; 1904 ; https://www.zwingliana.ch/ >
+        au < down ; 1905 ; Zwingliana Volume 2 (1905) ; 2 ; 1905 ; https://www.zwingliana.ch/ >
+        au < down ; 1906 ; Zwingliana Volume 2 (1906) ; 2 ; 1906 ; https://www.zwingliana.ch/ >
+        au < down ; 1907 ; Zwingliana Volume 2 (1907) ; 2 ; 1907 ; https://www.zwingliana.ch/ >
+        au < down ; 1908 ; Zwingliana Volume 2 (1908) ; 2 ; 1908 ; https://www.zwingliana.ch/ >
+        au < down ; 1909 ; Zwingliana Volume 2 (1909) ; 2 ; 1909 ; https://www.zwingliana.ch/ >
+        au < down ; 1910 ; Zwingliana Volume 2 (1910) ; 2 ; 1910 ; https://www.zwingliana.ch/ >
+        au < down ; 1911 ; Zwingliana Volume 2 (1911) ; 2 ; 1911 ; https://www.zwingliana.ch/ >
+        au < down ; 1912 ; Zwingliana Volume 2 (1912) ; 2 ; 1912 ; https://www.zwingliana.ch/ >
+        au < down ; 1913 ; Zwingliana Volume 3 (1913) ; 3 ; 1913 ; https://www.zwingliana.ch/ >
+        au < down ; 1914 ; Zwingliana Volume 3 (1914) ; 3 ; 1914 ; https://www.zwingliana.ch/ >
+        au < down ; 1915 ; Zwingliana Volume 3 (1915) ; 3 ; 1915 ; https://www.zwingliana.ch/ >
+        au < down ; 1916 ; Zwingliana Volume 3 (1916) ; 3 ; 1916 ; https://www.zwingliana.ch/ >
+        au < down ; 1917 ; Zwingliana Volume 3 (1917) ; 3 ; 1917 ; https://www.zwingliana.ch/ >
+        au < down ; 1918 ; Zwingliana Volume 3 (1918) ; 3 ; 1918 ; https://www.zwingliana.ch/ >
+        au < down ; 1919 ; Zwingliana Volume 3 (1919) ; 3 ; 1919 ; https://www.zwingliana.ch/ >
+        au < down ; 1920 ; Zwingliana Volume 3 (1920) ; 3 ; 1920 ; https://www.zwingliana.ch/ >
+        au < down ; 1921 ; Zwingliana Volume 4 (1921) ; 4 ; 1921 ; https://www.zwingliana.ch/ >
+        au < down ; 1922 ; Zwingliana Volume 4 (1922) ; 4 ; 1922 ; https://www.zwingliana.ch/ >
+        au < down ; 1923 ; Zwingliana Volume 4 (1923) ; 4 ; 1923 ; https://www.zwingliana.ch/ >
+        au < down ; 1924 ; Zwingliana Volume 4 (1924) ; 4 ; 1924 ; https://www.zwingliana.ch/ >
+        au < down ; 1925 ; Zwingliana Volume 4 (1925) ; 4 ; 1925 ; https://www.zwingliana.ch/ >
+        au < down ; 1926 ; Zwingliana Volume 4 (1926) ; 4 ; 1926 ; https://www.zwingliana.ch/ >
+        au < down ; 1927 ; Zwingliana Volume 4 (1927) ; 4 ; 1927 ; https://www.zwingliana.ch/ >
+        au < down ; 1928 ; Zwingliana Volume 4 (1928) ; 4 ; 1928 ; https://www.zwingliana.ch/ >
+        au < down ; 1929 ; Zwingliana Volume 5 (1929) ; 5 ; 1929 ; https://www.zwingliana.ch/ >
+        au < down ; 1930 ; Zwingliana Volume 5 (1930) ; 5 ; 1930 ; https://www.zwingliana.ch/ >
+        au < down ; 1931 ; Zwingliana Volume 5 (1931) ; 5 ; 1931 ; https://www.zwingliana.ch/ >
+        au < down ; 1932 ; Zwingliana Volume 5 (1932) ; 5 ; 1932 ; https://www.zwingliana.ch/ >
+        au < down ; 1933 ; Zwingliana Volume 5 (1933) ; 5 ; 1933 ; https://www.zwingliana.ch/ >
+        au < down ; 1934 ; Zwingliana Volume 6 (1934) ; 6 ; 1934 ; https://www.zwingliana.ch/ >
+        au < down ; 1935 ; Zwingliana Volume 6 (1935) ; 6 ; 1935 ; https://www.zwingliana.ch/ >
+        au < down ; 1936 ; Zwingliana Volume 6 (1936) ; 6 ; 1936 ; https://www.zwingliana.ch/ >
+        au < down ; 1937 ; Zwingliana Volume 6 (1937) ; 6 ; 1937 ; https://www.zwingliana.ch/ >
+        au < down ; 1938 ; Zwingliana Volume 6 (1938) ; 6 ; 1938 ; https://www.zwingliana.ch/ >
+        au < down ; 1939 ; Zwingliana Volume 7 (1939) ; 7 ; 1939 ; https://www.zwingliana.ch/ >
+        au < down ; 1940 ; Zwingliana Volume 7 (1940) ; 7 ; 1940 ; https://www.zwingliana.ch/ >
+        au < down ; 1941 ; Zwingliana Volume 7 (1941) ; 7 ; 1941 ; https://www.zwingliana.ch/ >
+        au < down ; 1942 ; Zwingliana Volume 7 (1942) ; 7 ; 1942 ; https://www.zwingliana.ch/ >
+        au < down ; 1943 ; Zwingliana Volume 7 (1943) ; 7 ; 1943 ; https://www.zwingliana.ch/ >
+        au < down ; 1944 ; Zwingliana Volume 8 (1944) ; 8 ; 1944 ; https://www.zwingliana.ch/ >
+        au < down ; 1945 ; Zwingliana Volume 8 (1945) ; 8 ; 1945 ; https://www.zwingliana.ch/ >
+        au < down ; 1946 ; Zwingliana Volume 8 (1946) ; 8 ; 1946 ; https://www.zwingliana.ch/ >
+        au < down ; 1947 ; Zwingliana Volume 8 (1947) ; 8 ; 1947 ; https://www.zwingliana.ch/ >
+        au < down ; 1948 ; Zwingliana Volume 8 (1948) ; 8 ; 1948 ; https://www.zwingliana.ch/ >
+        au < down ; 1949 ; Zwingliana Volume 9 (1949) ; 9 ; 1949 ; http://www.zwingliana.ch/ >
+        au < down ; 1950 ; Zwingliana Volume 9 (1950) ; 9 ; 1950 ; http://www.zwingliana.ch/ >
+        au < down ; 1951 ; Zwingliana Volume 9 (1951) ; 9 ; 1951 ; http://www.zwingliana.ch/ >
+        au < down ; 1952 ; Zwingliana Volume 9 (1952) ; 9 ; 1952 ; http://www.zwingliana.ch/ >
+        au < down ; 1953 ; Zwingliana Volume 9 (1953) ; 9 ; 1953 ; http://www.zwingliana.ch/ >
+        au < down ; 1954 ; Zwingliana Volume 10 (1954) ; 10 ; 1954 ; http://www.zwingliana.ch/ >
+        au < down ; 1955 ; Zwingliana Volume 10 (1955) ; 10 ; 1955 ; http://www.zwingliana.ch/ >
+        au < down ; 1956 ; Zwingliana Volume 10 (1956) ; 10 ; 1956 ; http://www.zwingliana.ch/ >
+        au < down ; 1957 ; Zwingliana Volume 10 (1957) ; 10 ; 1957 ; http://www.zwingliana.ch/ >
+        au < down ; 1958 ; Zwingliana Volume 10 (1958) ; 10 ; 1958 ; http://www.zwingliana.ch/ >
+        au < down ; 1959 ; Zwingliana Volume 11 (1959) ; 11 ; 1959 ; http://www.zwingliana.ch/ >
+        au < down ; 1960 ; Zwingliana Volume 11 (1960) ; 11 ; 1960 ; http://www.zwingliana.ch/ >
+        au < down ; 1961 ; Zwingliana Volume 11 (1961) ; 11 ; 1961 ; http://www.zwingliana.ch/ >
+        au < down ; 1962 ; Zwingliana Volume 11 (1962) ; 11 ; 1962 ; http://www.zwingliana.ch/ >
+        au < down ; 1963 ; Zwingliana Volume 11 (1963) ; 11 ; 1963 ; http://www.zwingliana.ch/ >
+        au < down ; 1964 ; Zwingliana Volume 12 (1964) ; 12 ; 1964 ; http://www.zwingliana.ch/ >
+        au < down ; 1965 ; Zwingliana Volume 12 (1965) ; 12 ; 1965 ; http://www.zwingliana.ch/ >
+        au < down ; 1966 ; Zwingliana Volume 12 (1966) ; 12 ; 1966 ; http://www.zwingliana.ch/ >
+        au < down ; 1967 ; Zwingliana Volume 12 (1967) ; 12 ; 1967 ; http://www.zwingliana.ch/ >
+        au < down ; 1968 ; Zwingliana Volume 12 (1968) ; 12 ; 1968 ; http://www.zwingliana.ch/ >
+        au < down ; 1969 ; Zwingliana Volume 13 (1969) ; 13 ; 1969 ; http://www.zwingliana.ch/ >
+        au < down ; 1970 ; Zwingliana Volume 13 (1970) ; 13 ; 1970 ; http://www.zwingliana.ch/ >
+        au < down ; 1971 ; Zwingliana Volume 13 (1971) ; 13 ; 1971 ; http://www.zwingliana.ch/ >
+        au < down ; 1972 ; Zwingliana Volume 13 (1972) ; 13 ; 1972 ; http://www.zwingliana.ch/ >
+        au < down ; 1973 ; Zwingliana Volume 13 (1973) ; 13 ; 1973 ; http://www.zwingliana.ch/ >
+        au < down ; 1974 ; Zwingliana Volume 14 (1974) ; 14 ; 1974 ; http://www.zwingliana.ch/ >
+        au < down ; 1975 ; Zwingliana Volume 14 (1975) ; 14 ; 1975 ; http://www.zwingliana.ch/ >
+        au < down ; 1976 ; Zwingliana Volume 14 (1976) ; 14 ; 1976 ; http://www.zwingliana.ch/ >
+        au < down ; 1977 ; Zwingliana Volume 14 (1977) ; 14 ; 1977 ; http://www.zwingliana.ch/ >
+        au < down ; 1978 ; Zwingliana Volume 14 (1978) ; 14 ; 1978 ; http://www.zwingliana.ch/ >
+        au < down ; 1979 ; Zwingliana Volume 15 (1979) ; 15 ; 1979 ; http://www.zwingliana.ch/ >
+        au < down ; 1980 ; Zwingliana Volume 15 (1980) ; 15 ; 1980 ; http://www.zwingliana.ch/ >
+        au < down ; 1981 ; Zwingliana Volume 15 (1981) ; 15 ; 1981 ; http://www.zwingliana.ch/ >
+        au < down ; 1982 ; Zwingliana Volume 15 (1982) ; 15 ; 1982 ; http://www.zwingliana.ch/ >
+        au < down ; 1983 ; Zwingliana Volume 16 (1983) ; 16 ; 1983 ; http://www.zwingliana.ch/ >
+        au < down ; 1984 ; Zwingliana Volume 16 (1984) ; 16 ; 1984 ; http://www.zwingliana.ch/ >
+        au < down ; 1985 ; Zwingliana Volume 16 (1985) ; 16 ; 1985 ; http://www.zwingliana.ch/ >
+        au < down ; 1986 ; Zwingliana Volume 17 (1986) ; 17 ; 1986 ; http://www.zwingliana.ch/ >
+        au < down ; 1987 ; Zwingliana Volume 17 (1987) ; 17 ; 1987 ; http://www.zwingliana.ch/ >
+        au < down ; 1988 ; Zwingliana Volume 17 (1988) ; 17 ; 1988 ; http://www.zwingliana.ch/ >
+        au < down ; 1989 ; Zwingliana Volume 18 (1989) ; 18 ; 1989 ; http://www.zwingliana.ch/ >
+        au < down ; 1990-1991 ; Zwingliana Volume 18 (1990-1991) ; 18 ; 1990 ; http://www.zwingliana.ch/ >
+        au < down ; 1992 ; Zwingliana Volume 19 (1992) ; 19 ; 1992 ; http://www.zwingliana.ch/ >
+        au < down ; 1993 ; Zwingliana Volume 19-20 (1993) ; 19-20 ; 1993 ; http://www.zwingliana.ch/ >
+        au < down ; 1994 ; Zwingliana Volume 21 ; 21 ; 1994 ; http://www.zwingliana.ch/ >
+        au < down ; 1995 ; Zwingliana Volume 22 ; 22 ; 1995 ; http://www.zwingliana.ch/ >
+        au < down ; 1996 ; Zwingliana Volume 23 ; 23 ; 1996 ; http://www.zwingliana.ch/ >
+        au < down ; 1997 ; Zwingliana Volume 24 ; 24 ; 1997 ; http://www.zwingliana.ch/ >
+        au < down ; 1998 ; Zwingliana Volume 25 ; 25 ; 1998 ; http://www.zwingliana.ch/ >
+        au < down ; 1999 ; Zwingliana Volume 26 ; 26 ; 1999 ; http://www.zwingliana.ch/ >
+        au < down ; 2000 ; Zwingliana Volume 27 ; 27 ; 2000 ; http://www.zwingliana.ch/ >
+        au < down ; 2001 ; Zwingliana Volume 28 ; 28 ; 2001 ; http://www.zwingliana.ch/ >
+        au < down ; 2002 ; Zwingliana Volume 29 ; 29 ; 2002 ; http://www.zwingliana.ch/ >
+        au < down ; 2003 ; Zwingliana Volume 30 ; 30 ; 2003 ; http://www.zwingliana.ch/ >
+        au < down ; 2004 ; Zwingliana Volume 31 ; 31 ; 2004 ; http://www.zwingliana.ch/ >
+        au < down ; 2005 ; Zwingliana Volume 32 ; 32 ; 2005 ; http://www.zwingliana.ch/ >
+        au < down ; 2006 ; Zwingliana Volume 33 ; 33 ; 2006 ; http://www.zwingliana.ch/ >
+        au < down ; 2007 ; Zwingliana Volume 34 ; 34 ; 2007 ; http://www.zwingliana.ch/ >
+        au < down ; 2008 ; Zwingliana Volume 35 ; 35 ; 2008 ; http://www.zwingliana.ch/ >
+        au < down ; 2009 ; Zwingliana Volume 36 ; 36 ; 2009 ; http://www.zwingliana.ch/ >
+        au < down ; 2010 ; Zwingliana Volume 37 ; 37 ; 2010 ; http://www.zwingliana.ch/ >
+        au < down ; 2011 ; Zwingliana Volume 38 ; 38 ; 2011 ; http://www.zwingliana.ch/ >
+        au < down ; 2012 ; Zwingliana Volume 39 ; 39 ; 2012 ; http://www.zwingliana.ch/ >
+        au < down ; 2013 ; Zwingliana Volume 40 ; 40 ; 2013 ; http://www.zwingliana.ch/ >
+        au < down ; 2014 ; Zwingliana Volume 41 ; 41 ; 2014 ; http://www.zwingliana.ch/ >
         au < doNotProcess ; 2015 ; Zwingliana Volume 42 ; 42 ; 2015 ; https://www.zwingliana.ch/ > #see http://www.zwingliana.ch/index.php/zwa/gateway/lockss?year=2015
         au < doNotProcess ; 2016 ; Zwingliana Volume 43 ; 43 ; 2016 ; https://www.zwingliana.ch/ >
         au < doNotProcess ; 2017 ; Zwingliana Volume 44 [abstract only] ; 44 ; 2017 ; https://www.zwingliana.ch/ >
