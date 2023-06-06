@@ -150,26 +150,22 @@
       >
       
       param[journal_id] = zwa
+      comment[years] = Rolling last 3 years no substance.
 
       {
         plugin = org.lockss.plugin.ojs3.Ojs3Plugin
         attr[start_stem] = index.php/
-        #param[base_url] = http://www.zwingliana.ch/
-        comment[years] = Rolling last 3 years no substance.
 
-        au < manifest ; 2015 ; Zwingliana Volume 42 ; 42 ; 2015 ; https://www.zwingliana.ch/ > #see https://www.zwingliana.ch/index.php/zwa/gateway/lockss?year=2015
+        au < manifest ; 2015 ; Zwingliana Volume 42 ; 42 ; 2015 ; https://www.zwingliana.ch/ >
         au < manifest ; 2016 ; Zwingliana Volume 43 ; 43 ; 2016 ; https://www.zwingliana.ch/ >
         au < manifest ; 2017 ; Zwingliana Volume 44 ; 44 ; 2017 ; https://www.zwingliana.ch/ >
         au < doNotProcess ; 2018 ; Zwingliana Volume 45 [abstract only] ; 44 ; 2017 ; https://www.zwingliana.ch/ >
         au < doNotProcess ; 2019 ; Zwingliana Volume 46 [abstract only] ; 44 ; 2017 ; https://www.zwingliana.ch/ >
         au < doNotProcess ; 2020 ; Zwingliana Volume 47 [abstract only] ; 44 ; 2017 ; https://www.zwingliana.ch/ >
-
       }
 
       {
         plugin = org.lockss.plugin.ojs2.OJS2Plugin
-        #param[base_url] = http://www.zwingliana.ch/
-        comment[years] = Rolling last 3 years no substance.
 
         au < down ; 1897 ; Zwingliana Volume 1 (1897) ; 1 ; 1897 ; https://www.zwingliana.ch/ >
         au < down ; 1898 ; Zwingliana Volume 1 (1898) ; 1 ; 1898 ; https://www.zwingliana.ch/ >
@@ -288,15 +284,11 @@
         au < down ; 2012 ; Zwingliana Volume 39 ; 39 ; 2012 ; http://www.zwingliana.ch/ >
         au < down ; 2013 ; Zwingliana Volume 40 ; 40 ; 2013 ; http://www.zwingliana.ch/ >
         au < down ; 2014 ; Zwingliana Volume 41 ; 41 ; 2014 ; http://www.zwingliana.ch/ >
-        au < doNotProcess ; 2015 ; Zwingliana Volume 42 ; 42 ; 2015 ; https://www.zwingliana.ch/ > #see http://www.zwingliana.ch/index.php/zwa/gateway/lockss?year=2015
-        au < doNotProcess ; 2016 ; Zwingliana Volume 43 ; 43 ; 2016 ; https://www.zwingliana.ch/ >
-        au < doNotProcess ; 2017 ; Zwingliana Volume 44 [abstract only] ; 44 ; 2017 ; https://www.zwingliana.ch/ >
 
       }
 
       {
-        #param[base_url] = http://www.Zwingliana.ch/
-
+        plugin = org.lockss.plugin.ojs2.OJS2Plugin
         comment[Z] = unnecessary upper case Z. Keeps metadata extraction from working. Please reprocess.
 
         au < superseded ; 1974 ; Zwingliana Volume 14 (1974) [superseded] ; 14 ; 1974 ; http://www.Zwingliana.ch/ >
