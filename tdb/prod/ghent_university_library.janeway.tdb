@@ -30,14 +30,14 @@
       au < exists ; 2013 ; 2013 ; 2013 ; Authorship Volume 2013 >
       au < exists ; 2014 ; 2014 ; 2014 ; Authorship Volume 2014 >
       au < exists ; 2015 ; 2015 ; 2015 ; Authorship Volume 2015 >
-      au < exists ; 2016 ; 2016 ; 2016 ; Authorship Volume 2016 >
-      au < exists ; 2017 ; 2017 ; 2017 ; Authorship Volume 2017 >
-      au < exists ; 2018 ; 2018 ; 2018 ; Authorship Volume 2018 >
-      au < exists ; 2019 ; 2019 ; 2019 ; Authorship Volume 2019 >
-      au < exists ; 2020 ; 2020 ; 2020 ; Authorship Volume 2020 >
-      au < exists ; 2021 ; 2021 ; 2021 ; Authorship Volume 2021 >
+      au < manifest ; 2016 ; 2016 ; 2016 ; Authorship Volume 2016 >
+      au < manifest ; 2017 ; 2017 ; 2017 ; Authorship Volume 2017 >
+      au < manifest ; 2018 ; 2018 ; 2018 ; Authorship Volume 2018 >
+      au < manifest ; 2019 ; 2019 ; 2019 ; Authorship Volume 2019 >
+      au < manifest ; 2020 ; 2020 ; 2020 ; Authorship Volume 2020 >
+      au < manifest ; 2021 ; 2021 ; 2021 ; Authorship Volume 2021 >
       au < exists ; 2022 ; 2022 ; 2022 ; Authorship Volume 2022 >
-      au < exists ; 2023 ; 2023 ; 2023 ; Authorship Volume 2023 >
+      au < manifest ; 2023 ; 2023 ; 2023 ; Authorship Volume 2023 >
 
   }
 
@@ -89,7 +89,7 @@
       au < exists ; 2017 ; 2017 ; 2017 ; Documenta Volume 2017 >
       au < exists ; 2018 ; 2018 ; 2018 ; Documenta Volume 2018 >
       au < exists ; 2019 ; 2019 ; 2019 ; Documenta Volume 2019 >
-      au < exists ; 2020 ; 2020 ; 2020 ; Documenta Volume 2020 >
+      au < manifest ; 2020 ; 2020 ; 2020 ; Documenta Volume 2020 >
 
   }
 
@@ -105,9 +105,9 @@
       param[base_url] = https://www.digest.ugent.be/
       #param[journal_id] = digest
 
-      au < exists ; 2020 ; 2020 ; 2020 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2020 >
-      au < exists ; 2021 ; 2021 ; 2021 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2021 >
-      au < exists ; 2022 ; 2022 ; 2022 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2022 >
+      au < manifest ; 2020 ; 2020 ; 2020 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2020 >
+      au < manifest ; 2021 ; 2021 ; 2021 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2021 >
+      au < manifest ; 2022 ; 2022 ; 2022 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2022 >
       au < expected ; 2023 ; 2023 ; 2023 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2023 >
 
   }
@@ -123,10 +123,10 @@
       param[base_url] = https://jolcel.ugent.be/
       #param[journal_id] = jolcel
 
-      au < exists ; 2019 ; 2019 ; 2019 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2019 >
-      au < exists ; 2020 ; 2020 ; 2020 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2020 >
-      au < exists ; 2021 ; 2021 ; 2021 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2021 >
-      au < exists ; 2022 ; 2022 ; 2022 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2022 >
+      au < manifest ; 2019 ; 2019 ; 2019 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2019 >
+      au < manifest ; 2020 ; 2020 ; 2020 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2020 >
+      au < manifest ; 2021 ; 2021 ; 2021 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2021 >
+      au < manifest ; 2022 ; 2022 ; 2022 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2022 >
       au < expected ; 2023 ; 2023 ; 2023 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2023 >
 
   }
@@ -144,11 +144,11 @@
       #param[journal_id] = philosophica
 
       au < exists ; 2010 ; 2010 ; 83 ; Philosophica Volume 83 >
-      au < exists ; 2012 ; 2012 ; 84-87 ; Philosophica Volume 84-87 >
-      au < exists ; 2013 ; 2013 ; 88 ; Philosophica Volume 88 >
-      au < exists ; 2014 ; 2014 ; 89 ; Philosophica Volume 89 >
-      au < exists ; 2015 ; 2015 ; 90 ; Philosophica Volume 90 >
-      au < exists ; 2017 ; 2017 ; 91-92 ; Philosophica Volume 91-92 >
+      au < manifest ; 2012 ; 2012 ; 84-87 ; Philosophica Volume 84-87 >
+      au < manifest ; 2013 ; 2013 ; 88 ; Philosophica Volume 88 >
+      au < manifest ; 2014 ; 2014 ; 89 ; Philosophica Volume 89 >
+      au < manifest ; 2015 ; 2015 ; 90 ; Philosophica Volume 90 >
+      au < manifest ; 2017 ; 2017 ; 91-92 ; Philosophica Volume 91-92 >
       #au < exists ; 2018 ; 2018 ; 91-92 ; Philosophica Volume 91-92 >
 
   }
@@ -260,7 +260,7 @@
       au < released ; 2019 ; 2019 ; 2019 ; Agora Magazine Volume 2019 >
       au < released ; 2020 ; 2020 ; 2020 ; Agora Magazine Volume 2020 >
       au < exists ; 2021 ; 2021 ; 2021 ; Agora Magazine Volume 2021 >
-      au < exists ; 2022 ; 2022 ; 2022 ; Agora Magazine Volume 2022 >
+      au < manifest ; 2022 ; 2022 ; 2022 ; Agora Magazine Volume 2022 >
       au < expected ; 2023 ; 2023 ; 2023 ; Agora Magazine Volume 2023 >
 
   }
@@ -285,11 +285,11 @@
       au < exists ; 1989 ; 1989 ; 1989 ; Amsab Tijdingen Volume 1989 >
       au < exists ; 1990 ; 1990 ; 1990 ; Amsab Tijdingen Volume 1990 >
       au < exists ; 1991 ; 1991 ; 1991 ; Amsab Tijdingen Volume 1991 >
-      au < exists ; 1992 ; 1992 ; 1992 ; Amsab Tijdingen Volume 1992 >
-      au < exists ; 1993 ; 1993 ; 1993 ; Amsab Tijdingen Volume 1993 >
-      au < exists ; 1994 ; 1994 ; 1994 ; Amsab Tijdingen Volume 1994 >
-      au < exists ; 1995 ; 1995 ; 1995 ; Amsab Tijdingen Volume 1995 >
-      au < exists ; 2019 ; 2019 ; 2019 ; Amsab Tijdingen Volume 2019 >
+      au < manifest ; 1992 ; 1992 ; 1992 ; Amsab Tijdingen Volume 1992 >
+      au < manifest ; 1993 ; 1993 ; 1993 ; Amsab Tijdingen Volume 1993 >
+      au < manifest ; 1994 ; 1994 ; 1994 ; Amsab Tijdingen Volume 1994 >
+      au < manifest ; 1995 ; 1995 ; 1995 ; Amsab Tijdingen Volume 1995 >
+      au < manifest ; 2019 ; 2019 ; 2019 ; Amsab Tijdingen Volume 2019 >
 
   }
 
@@ -326,8 +326,8 @@
       au < released ; 2016 ; 2016 ; 2016 ; Brood & Rozen Volume 2016 >
       au < released ; 2017 ; 2017 ; 2017 ; Brood & Rozen Volume 2017 >
       au < released ; 2018 ; 2018 ; 2018 ; Brood & Rozen Volume 2018 >
-      au < exists ; 2019 ; 2019 ; 2019 ; Brood & Rozen Volume 2019 >
-      au < exists ; 2020 ; 2020 ; 2020 ; Brood & Rozen Volume 2020 >
+      au < manifest ; 2019 ; 2019 ; 2019 ; Brood & Rozen Volume 2019 >
+      au < manifest ; 2020 ; 2020 ; 2020 ; Brood & Rozen Volume 2020 >
 
   }
 
@@ -378,8 +378,8 @@
       au < released ; 2019 ; 2019 ; 2019 ; De Uil van Minerva Volume 2019 >
       au < exists ; 2020 ; 2020 ; 2020 ; De Uil van Minerva Volume 2020 >
       au < exists ; 2021 ; 2021 ; 2021 ; De Uil van Minerva Volume 2021 >
-      au < exists ; 2022 ; 2022 ; 2022 ; De Uil van Minerva Volume 2022 >
-      au < expected ; 2023 ; 2023 ; 2023 ; De Uil van Minerva Volume 2023 >
+      au < manifest ; 2022 ; 2022 ; 2022 ; De Uil van Minerva Volume 2022 >
+      au < manifest ; 2023 ; 2023 ; 2023 ; De Uil van Minerva Volume 2023 >
 
   }
 
@@ -443,8 +443,8 @@
       au < released ; 2017 ; 2017 ; 2017 ; Ghendtsche Tydinghen Volume 2017 >
       au < released ; 2018 ; 2018 ; 2018 ; Ghendtsche Tydinghen Volume 2018 >
       au < released ; 2019 ; 2019 ; 2019 ; Ghendtsche Tydinghen Volume 2019 >
-      au < exists ; 2020 ; 2020 ; 2020 ; Ghendtsche Tydinghen Volume 2020 >
-      au < exists ; 2021 ; 2021 ; 2021 ; Ghendtsche Tydinghen Volume 2021 >
+      au < manifest ; 2020 ; 2020 ; 2020 ; Ghendtsche Tydinghen Volume 2020 >
+      au < manifest ; 2021 ; 2021 ; 2021 ; Ghendtsche Tydinghen Volume 2021 >
       au < exists ; 2022 ; 2022 ; 2022 ; Ghendtsche Tydinghen Volume 2022 >
       au < expected ; 2023 ; 2023 ; 2023 ; Ghendtsche Tydinghen Volume 2023 >
 
@@ -560,8 +560,8 @@
       au < released ; 2015 ; 2015 ; 2015 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2015 >
       au < released ; 2016 ; 2016 ; 2016 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2016 >
       au < exists ; 2017 ; 2017 ; 2017 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2017 >
-      au < exists ; 2018 ; 2018 ; 2018 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2018 >
-      au < exists ; 2019 ; 2019 ; 2019 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2019 >
+      au < manifest ; 2018 ; 2018 ; 2018 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2018 >
+      au < manifest ; 2019 ; 2019 ; 2019 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2019 >
 
   }
 
@@ -646,9 +646,9 @@
       au < released ; 2017 ; 2017 ; 2017 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2017 >
       au < released ; 2018 ; 2018 ; 2018 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2018 >
       au < released ; 2019 ; 2019 ; 2019 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2019 >
-      au < exists ; 2020 ; 2020 ; 2020 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2020 >
-      au < exists ; 2021 ; 2021 ; 2021 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2021 >
-      au < exists ; 2022 ; 2022 ; 2022 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2022 >
+      au < manifest ; 2020 ; 2020 ; 2020 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2020 >
+      au < manifest ; 2021 ; 2021 ; 2021 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2021 >
+      au < manifest ; 2022 ; 2022 ; 2022 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2022 >
       au < expected ; 2023 ; 2023 ; 2023 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2023 >
 
   }
@@ -752,7 +752,7 @@
       au < exists ; 2011 ; 2011 ; 2011 ; International Journal Sustainable Construction & Design Volume 2011 >
       au < exists ; 2012 ; 2012 ; 2012 ; International Journal Sustainable Construction & Design Volume 2012 >
       au < exists ; 2013 ; 2013 ; 2013 ; International Journal Sustainable Construction & Design Volume 2013 >
-      au < exists ; 2014 ; 2014 ; 2014 ; International Journal Sustainable Construction & Design Volume 2014 >
+      au < manifest ; 2014 ; 2014 ; 2014 ; International Journal Sustainable Construction & Design Volume 2014 >
       au < released ; 2015 ; 2015 ; 2015 ; International Journal Sustainable Construction & Design Volume 2015 >
       au < released ; 2016 ; 2016 ; 2016 ; International Journal Sustainable Construction & Design Volume 2016 >
       au < released ; 2017 ; 2017 ; 2017 ; International Journal Sustainable Construction & Design Volume 2017 >
@@ -770,12 +770,12 @@
       #published 2016-2020
       param[journal_id] = jhes
 
-      au < exists ; 2016 ; 2016 ; 2016 ; Journal for the History of Environment and Society Volume 2016 >
-      au < exists ; 2017 ; 2017 ; 2017 ; Journal for the History of Environment and Society Volume 2017 >
-      au < exists ; 2018 ; 2018 ; 2018 ; Journal for the History of Environment and Society Volume 2018 >
-      au < exists ; 2019 ; 2019 ; 2019 ; Journal for the History of Environment and Society Volume 2019 >
-      au < exists ; 2020 ; 2020 ; 2020 ; Journal for the History of Environment and Society Volume 2020 >
-      au < exists ; 2021 ; 2021 ; 2021 ; Journal for the History of Environment and Society Volume 2021 >
+      au < manifest ; 2016 ; 2016 ; 2016 ; Journal for the History of Environment and Society Volume 2016 >
+      au < manifest ; 2017 ; 2017 ; 2017 ; Journal for the History of Environment and Society Volume 2017 >
+      au < manifest ; 2018 ; 2018 ; 2018 ; Journal for the History of Environment and Society Volume 2018 >
+      au < manifest ; 2019 ; 2019 ; 2019 ; Journal for the History of Environment and Society Volume 2019 >
+      au < manifest ; 2020 ; 2020 ; 2020 ; Journal for the History of Environment and Society Volume 2020 >
+      au < manifest ; 2021 ; 2021 ; 2021 ; Journal for the History of Environment and Society Volume 2021 >
 
   }
 
@@ -795,8 +795,8 @@
       au < released ; 2019 ; 2019 ; 2019 ; Journal of European Periodical Studies Volume 2019 >
       au < released ; 2020 ; 2020 ; 2020 ; Journal of European Periodical Studies Volume 2020 >
       au < released ; 2021 ; 2021 ; 2021 ; Journal of European Periodical Studies Volume 2021 >
-      au < exists ; 2022 ; 2022 ; 2022 ; Journal of European Periodical Studies Volume 2022 >
-      au < exists ; 2023 ; 2023 ; 2023 ; Journal of European Periodical Studies Volume 2023 >
+      au < manifest ; 2022 ; 2022 ; 2022 ; Journal of European Periodical Studies Volume 2022 >
+      au < manifest ; 2023 ; 2023 ; 2023 ; Journal of European Periodical Studies Volume 2023 >
 
   }
 
@@ -884,8 +884,8 @@
       au < exists ; 1998 ; 1998 ; 1998 ; Oostvlaamse Zanten Volume 1998 >
       au < exists ; 1999 ; 1999 ; 1999 ; Oostvlaamse Zanten Volume 1999 >
       au < exists ; 2000 ; 2000 ; 2000 ; Oostvlaamse Zanten Volume 2000 >
-      au < exists ; 2001 ; 2001 ; 2001 ; Oostvlaamse Zanten Volume 2001 >
-      au < exists ; 2002 ; 2002 ; 2002 ; Oostvlaamse Zanten Volume 2002 >
+      au < manifest ; 2001 ; 2001 ; 2001 ; Oostvlaamse Zanten Volume 2001 >
+      au < manifest ; 2002 ; 2002 ; 2002 ; Oostvlaamse Zanten Volume 2002 >
 
   }
 
@@ -910,8 +910,8 @@
 
       au < released ; 2020 ; 2020 ; 2020 ; Relaties en Nieuwe Gezinnen Volume 2020 >
 
-      au < exists ; 2022 ; 2022 ; 2022 ; Relaties en Nieuwe Gezinnen Volume 2022 >
-      au < expected ; 2023 ; 2023 ; 2023 ; Relaties en Nieuwe Gezinnen Volume 2023 >
+      au < manifest ; 2022 ; 2022 ; 2022 ; Relaties en Nieuwe Gezinnen Volume 2022 >
+      au < manifest ; 2023 ; 2023 ; 2023 ; Relaties en Nieuwe Gezinnen Volume 2023 >
 
   }
 
@@ -986,7 +986,7 @@
       au < released ; 2017 ; 2017 ; 2017 ; Res Publica Volume 2017 >
       au < released ; 2018 ; 2018 ; 2018 ; Res Publica Volume 2018 >
 
-      au < exists ; 2021 ; 2021 ; 2021 ; Res Publica Volume 2021 >
+      au < manifest ; 2021 ; 2021 ; 2021 ; Res Publica Volume 2021 >
 
   }
 
@@ -1028,12 +1028,12 @@
       au < exists ; 1993 ; 1993 ; 1993 ; Silva Gandavensis Volume 1993 >
       au < exists ; 1994 ; 1994 ; 1994 ; Silva Gandavensis Volume 1994 >
       au < exists ; 1995 ; 1995 ; 1995 ; Silva Gandavensis Volume 1995 >
-      au < exists ; 1996 ; 1996 ; 1996 ; Silva Gandavensis Volume 1996 >
-      au < exists ; 1997 ; 1997 ; 1997 ; Silva Gandavensis Volume 1997 >
-      au < exists ; 1998 ; 1998 ; 1998 ; Silva Gandavensis Volume 1998 >
-      au < exists ; 1999 ; 1999 ; 1999 ; Silva Gandavensis Volume 1999 >
-      au < exists ; 2000 ; 2000 ; 2000 ; Silva Gandavensis Volume 2000 >
-      au < exists ; 2001 ; 2001 ; 2001 ; Silva Gandavensis Volume 2001 >
+      au < manifest ; 1996 ; 1996 ; 1996 ; Silva Gandavensis Volume 1996 >
+      au < manifest ; 1997 ; 1997 ; 1997 ; Silva Gandavensis Volume 1997 >
+      au < manifest ; 1998 ; 1998 ; 1998 ; Silva Gandavensis Volume 1998 >
+      au < manifest ; 1999 ; 1999 ; 1999 ; Silva Gandavensis Volume 1999 >
+      au < manifest ; 2000 ; 2000 ; 2000 ; Silva Gandavensis Volume 2000 >
+      au < manifest ; 2001 ; 2001 ; 2001 ; Silva Gandavensis Volume 2001 >
 
   }
 
@@ -1053,9 +1053,9 @@
       au < exists ; 1986 ; 1986 ; 1986 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1986 >
       au < exists ; 1987 ; 1987 ; 1987 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1987 >
       au < exists ; 1988 ; 1988 ; 1988 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1988 >
-      au < exists ; 1989 ; 1989 ; 1989 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1989 >
-      au < exists ; 1990 ; 1990 ; 1990 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1990 >
-      au < exists ; 1991 ; 1991 ; 1991 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1991 >
+      au < manifest ; 1989 ; 1989 ; 1989 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1989 >
+      au < manifest ; 1990 ; 1990 ; 1990 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1990 >
+      au < manifest ; 1991 ; 1991 ; 1991 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1991 >
 
   }
 
@@ -1148,7 +1148,7 @@
       au < released ; 2020 ; 2020 ; 2020 ; Vlaams Diergeneeskundig Tijdschrift Volume 2020 >
       au < released ; 2021 ; 2021 ; 2021 ; Vlaams Diergeneeskundig Tijdschrift Volume 2021 >
       au < released ; 2022 ; 2022 ; 2022 ; Vlaams Diergeneeskundig Tijdschrift Volume 2022 >
-      au < exists ; 2023 ; 2023 ; 2023 ; Vlaams Diergeneeskundig Tijdschrift Volume 2023 >
+      au < manifest ; 2023 ; 2023 ; 2023 ; Vlaams Diergeneeskundig Tijdschrift Volume 2023 >
 
   }
 
@@ -1189,7 +1189,7 @@
       au < released ; 2019 ; 2019 ; 2019 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2019 >
       au < released ; 2020 ; 2020 ; 2020 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2020 >
       au < released ; 2021 ; 2021 ; 2021 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2021 >
-      au < exists ; 2022 ; 2022 ; 2022 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2022 >
+      au < manifest ; 2022 ; 2022 ; 2022 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2022 >
       au < expected ; 2023 ; 2023 ; 2023 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2023 >
 
   }
