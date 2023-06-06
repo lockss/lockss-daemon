@@ -870,6 +870,16 @@ public class MetadataField {
     return extractor != null;
   }
 
+  public String toString() {
+    return new ToStringBuilder(this)
+      .append("key", key)
+      .append("cardinality", cardinality)
+      .append("validator", validator)
+      .append("splitter", splitter)
+      .append("extractor", extractor)
+      .toString();
+  }
+
   /** Cardinality of a MetadataField: single-valued or multi-valued */
   public static enum Cardinality {
     Single, Multi
