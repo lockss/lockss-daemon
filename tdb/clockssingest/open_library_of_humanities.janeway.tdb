@@ -112,7 +112,7 @@
          au < frozen ; exists ; 2020 ; 8 ; C21 Literature: journal of 21st-century writings Volume 2020 ; 2020 ; >
          au < frozen ; exists ; 2021 ; 9 ; C21 Literature: journal of 21st-century writings Volume 2021 ; 2021 ; >
          au < deepCrawl ; exists ; 2022 ; 10 ; C21 Literature: journal of 21st-century writings Volume 2022 ; 2022 ; >
-         au < expected ; exists ; 2023 ; 11 ; C21 Literature: journal of 21st-century writings Volume 2023 ; 2023 ; >
+         au < manifest ; exists ; 2023 ; 11 ; C21 Literature: journal of 21st-century writings Volume 2023 ; 2023 ; >
 
   }
 
@@ -132,7 +132,7 @@
         au < frozen ; exists ; 2020 ; 16 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2020 ; 2020 ; >
         au < frozen ; exists ; 2021 ; 17 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2021 ; 2021 ; >
         au < deepCrawl ; exists ; 2022 ; 18 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2022 ; 2022 ; >
-        au < expected ; exists ; 2023 ; 19 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2023 ; 2023 ; >
+        au < manifest ; exists ; 2023 ; 19 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Volume 2023 ; 2023 ; >
   }
 
   {
@@ -166,7 +166,7 @@
       au < frozen ; exists ; 2020 ; 50 ; Ethnologia Europaea Volume 2020 ; 2020 ; >
       au < frozen ; exists ; 2021 ; 51 ; Ethnologia Europaea Volume 2021 ; 2021 ; >
       au < deepCrawl ; exists ; 2022 ; 52 ; Ethnologia Europaea Volume 2022 ; 2022 ; >
-      au < expected ; exists ; 2023 ; 53 ; Ethnologia Europaea Volume 2023 ; 2023 ; >
+      au < manifest ; exists ; 2023 ; 53 ; Ethnologia Europaea Volume 2023 ; 2023 ; >
 
   }
 
@@ -186,7 +186,7 @@
         au < finished ; crawling ; 2020 ; 6 ; Journal of British and Irish Innovative Poetry Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
         au < deepCrawl ; exists ; 2021 ; 7 ; Journal of British and Irish Innovative Poetry Volume 2021 ; 2021 ; >
         au < deepCrawl ; exists ; 2022 ; 8 ; Journal of British and Irish Innovative Poetry Volume 2022 ; 2022 ; >
-        au < expected ; exists ; 2023 ; 9 ; Journal of British and Irish Innovative Poetry Volume 2023 ; 2023 ; >
+        au < manifest ; exists ; 2023 ; 9 ; Journal of British and Irish Innovative Poetry Volume 2023 ; 2023 ; >
 
   }
 
@@ -701,11 +701,11 @@
 
       au < exists ; exists ; 2005 ; 1 ; Livewriting Annual Volume 2005 ; 2005 ; >
       au < exists ; exists ; 2006 ; 1 ; Livewriting Annual Volume 2006 ; 2006 ; >
-      au < exists ; exists ; 2007 ; 2 ; Livewriting Annual Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2007 ; 2 ; Livewriting Annual Volume 2007 ; 2007 ; >
       au < exists ; exists ; 2008 ; 2 ; Livewriting Annual Volume 2008 ; 2008 ; >
-      au < exists ; exists ; 2011 ; 3 ; Livewriting Annual Volume 2011 ; 2011 ; >
+      au < manifest ; exists ; 2011 ; 3 ; Livewriting Annual Volume 2011 ; 2011 ; >
       au < exists ; exists ; 2012 ; 3 ; Livewriting Annual Volume 2012 ; 2012 ; >
-      au < exists ; exists ; 2014 ; 4 ; Livewriting Annual Volume 2014 ; 2014 ; >
+      au < manifest ; exists ; 2014 ; 4 ; Livewriting Annual Volume 2014 ; 2014 ; >
       au < exists ; exists ; 2015 ; 4 ; Livewriting Annual Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2023 ; 5 ; Livewriting Annual Volume 2023 ; 2023 ; >
 

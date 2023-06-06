@@ -293,7 +293,7 @@
       au < finished ; crawling ; 2020 ; Global Strategis Volume 14 ; 14 ; 2020 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2021 ; Global Strategis Volume 15 ; 15 ; 2021 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Global Strategis Volume 16 ; 16 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Global Strategis Volume 17 ; 17 ; 2023 ; >
+      au < manifest ; exists ; 2023 ; Global Strategis Volume 17 ; 17 ; 2023 ; >
 
   }
 
@@ -357,7 +357,7 @@
       au < finished ; finished ; 2020 ; Jurnal Administrasi Kesehatan Indonesia Volume 8 ; 8 ; 2020 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; Jurnal Administrasi Kesehatan Indonesia Volume 9 ; 9 ; 2021 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Jurnal Administrasi Kesehatan Indonesia Volume 10 ; 10 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Jurnal Administrasi Kesehatan Indonesia Volume 11 ; 11 ; 2023 ; >
+      au < manifest ; exists ; 2023 ; Jurnal Administrasi Kesehatan Indonesia Volume 11 ; 11 ; 2023 ; >
 
   }
 
@@ -636,7 +636,7 @@
 
       au < finished ; crawling ; 2021 ; Jurnal Riset Akuntansi dan Bisnis Airlangga (JRABA) Volume 6 ; 6 ; 2021 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; Jurnal Riset Akuntansi dan Bisnis Airlangga (JRABA) Volume 7 ; 7 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Jurnal Riset Akuntansi dan Bisnis Airlangga (JRABA) Volume 8 ; 8 ; 2023 ; >
+      au < manifest ; exists ; 2023 ; Jurnal Riset Akuntansi dan Bisnis Airlangga (JRABA) Volume 8 ; 8 ; 2023 ; >
 
   }
 
@@ -674,7 +674,7 @@
       au < finished ; crawling ; 2020 ; Etnolingual Volume 4 ; 4 ; 2020 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; Etnolingual Volume 5 ; 5 ; 2021 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Etnolingual Volume 6 ; 6 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Etnolingual Volume 7 ; 7 ; 2023 ; >
+      au < manifest ; exists ; 2023 ; Etnolingual Volume 7 ; 7 ; 2023 ; >
 
   }
 
@@ -714,7 +714,7 @@
       au < finished ; crawling ; 2020 ; Jurnal Ekonomi dan Bisnis Airlangga (JEBA) Volume 30 ; 30 ; 2020 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; Jurnal Ekonomi dan Bisnis Airlangga (JEBA) Volume 31 ; 31 ; 2021 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Jurnal Ekonomi dan Bisnis Airlangga (JEBA) Volume 32 ; 32 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Jurnal Ekonomi dan Bisnis Airlangga (JEBA) Volume 33 ; 33 ; 2023 ; >
+      au < manifest ; exists ; 2023 ; Jurnal Ekonomi dan Bisnis Airlangga (JEBA) Volume 33 ; 33 ; 2023 ; >
 
   }
 
@@ -849,7 +849,7 @@
       param[journal_id] = JBMV
 
       au < deepCrawl ; exists ; 2022 ; Journal of Basic Medical Veterinary Volume 11 ; 11 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Journal of Basic Medical Veterinary Volume 12 ; 12 ; 2023 ; >
+      au < manifest ; exists ; 2023 ; Journal of Basic Medical Veterinary Volume 12 ; 12 ; 2023 ; >
 
   }
 
@@ -880,7 +880,7 @@
       param[journal_id] = JATM
 
       au < manifest ; exists ; 2022 ; Journal of Advanced Technology and Multidiscipline Volume 2 ; 2 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Journal of Advanced Technology and Multidiscipline Volume 3 ; 3 ; 2023 ; >
+      au < manifest ; exists ; 2023 ; Journal of Advanced Technology and Multidiscipline Volume 3 ; 3 ; 2023 ; >
 
   }
 
@@ -987,7 +987,7 @@
       au < finished ; crawling ; 2020 ; Journal of Vocational Nursing Volume 1 ; 1 ; 2020 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2021 ; Journal of Vocational Nursing Volume 2 ; 2 ; 2021 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Journal of Vocational Nursing Volume 3 ; 3 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Journal of Vocational Nursing Volume 4 ; 4 ; 2023 ; >
+      au < manifest ; exists ; 2023 ; Journal of Vocational Nursing Volume 4 ; 4 ; 2023 ; >
 
   }
 
@@ -1329,7 +1329,7 @@
       au < finished ; finished ; 2020 ; Journal of Stem Cell Research and Tissue Engineering Volume 4 ; 4 ; 2020 ; reingest1.clockss.org:8082 >
       au < manifest ; exists ; 2021 ; Journal of Stem Cell Research and Tissue Engineering Volume 5 ; 5 ; 2021 ; >
       au < deepCrawl ; exists ; 2022 ; Journal of Stem Cell Research and Tissue Engineering Volume 6 ; 6 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Journal of Stem Cell Research and Tissue Engineering Volume 7 ; 7 ; 2023 ; >
+      au < manifest ; exists ; 2023 ; Journal of Stem Cell Research and Tissue Engineering Volume 7 ; 7 ; 2023 ; >
 
   }
 
@@ -1508,7 +1508,7 @@
       au < finished ; finished ; 2020 ; Darmabakti Cendekia : Journal of Community Service and Engagements Volume 2 ; 2 ; 2020 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; Darmabakti Cendekia : Journal of Community Service and Engagements Volume 3 ; 3 ; 2021 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Darmabakti Cendekia : Journal of Community Service and Engagements Volume 4 ; 4 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Darmabakti Cendekia : Journal of Community Service and Engagements Volume 5 ; 5 ; 2023 ; >
+      au < manifest ; exists ; 2023 ; Darmabakti Cendekia : Journal of Community Service and Engagements Volume 5 ; 5 ; 2023 ; >
 
   }
 
@@ -1718,7 +1718,7 @@
       au < finished ; crawling ; 2020 ; Jurnal Farmasi Komunitas Volume 7 ; 7 ; 2020 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2021 ; Jurnal Farmasi Komunitas Volume 8 ; 8 ; 2021 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Jurnal Farmasi Komunitas Volume 9 ; 9 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Jurnal Farmasi Komunitas Volume 10 ; 10 ; 2023 ; >
+      au < manifest ; exists ; 2023 ; Jurnal Farmasi Komunitas Volume 10 ; 10 ; 2023 ; >
 
   }
 
@@ -1872,7 +1872,7 @@
       au < finished ; crawling ; 2020 ; Jurnal Rekonstruksi dan Estetik Volume 5 ; 5 ; 2020 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2021 ; Jurnal Rekonstruksi dan Estetik Volume 6 ; 6 ; 2021 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Jurnal Rekonstruksi dan Estetik Volume 7 ; 7 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Jurnal Rekonstruksi dan Estetik Volume 8 ; 8 ; 2023 ; >
+      au < manifest ; exists ; 2023 ; Jurnal Rekonstruksi dan Estetik Volume 8 ; 8 ; 2023 ; >
 
   }
 
