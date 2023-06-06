@@ -400,8 +400,8 @@
       au < manifest ; exists ; 2017 ; Ethnographic Edge Volume 1 ; 1 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Ethnographic Edge Volume 2 ; 2 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Ethnographic Edge Volume 3 ; 3 ; 2019 ; >
-      au < manifest ; exists ; 2020 ; Ethnographic Edge Volume 4 ; 4 ; 2020 ; >
-      au < manifest ; exists ; 2022 ; Ethnographic Edge Volume 5 ; 5 ; 2022 ; >
+      au < ready ; exists ; 2020 ; Ethnographic Edge Volume 4 ; 4 ; 2020 ; >
+      au < ready ; exists ; 2022 ; Ethnographic Edge Volume 5 ; 5 ; 2022 ; >
       au < expected ; exists ; 2023 ; Ethnographic Edge Volume 6 ; 6 ; 2023 ; >
 
   }
@@ -430,9 +430,9 @@
       param[base_url] = https://ojs.aut.ac.nz/
       param[journal_id] = linksymposium
 
-      au < manifest ; exists ; 2020 ; Link Symposium Abstracts Volume 1 ; 1 ; 2020 ; >
-      au < manifest ; exists ; 2021 ; Link Symposium Abstracts Volume 2 ; 2 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; Link Symposium Abstracts Volume 3 ; 3 ; 2022 ; >
+      au < ready ; exists ; 2020 ; Link Symposium Abstracts Volume 1 ; 1 ; 2020 ; >
+      au < ready ; exists ; 2021 ; Link Symposium Abstracts Volume 2 ; 2 ; 2021 ; >
+      au < ready ; exists ; 2022 ; Link Symposium Abstracts Volume 3 ; 3 ; 2022 ; >
       au < expected ; exists ; 2023 ; Link Symposium Abstracts Volume 4 ; 4 ; 2023 ; >
 
   }
@@ -466,8 +466,8 @@
       param[base_url] = https://ojs.aut.ac.nz/
       param[journal_id] = psychotherapy-politics-international
 
-      au < manifest ; exists ; 2020 ; Psychotherapy and Politics International Volume 18 ; 18 ; 2020 ; >
-      au < manifest ; exists ; 2022 ; Psychotherapy and Politics International Volume 20 ; 20 ; 2022 ; >
+      au < ready ; exists ; 2020 ; Psychotherapy and Politics International Volume 18 ; 18 ; 2020 ; >
+      au < ready ; exists ; 2022 ; Psychotherapy and Politics International Volume 20 ; 20 ; 2022 ; >
       au < manifest ; exists ; 2023 ; Psychotherapy and Politics International Volume 21 ; 21 ; 2023 ; >
 
   }
@@ -482,7 +482,7 @@
       param[base_url] = https://ojs.aut.ac.nz/
       param[journal_id] = rangahau-aranga
 
-      au < manifest ; exists ; 2022 ; Rangahau Aranga: AUT Graduate Review Volume 1 ; 1 ; 2022 ; >
+      au < ready ; exists ; 2022 ; Rangahau Aranga: AUT Graduate Review Volume 1 ; 1 ; 2022 ; >
       au < manifest ; exists ; 2023 ; Rangahau Aranga: AUT Graduate Review Volume 2 ; 2 ; 2023 ; >
 
   }
