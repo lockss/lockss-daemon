@@ -63,7 +63,7 @@ public class ResPediatricaOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
   protected Collection<String> startUrls;
   protected int year;
   protected Pattern yearPattern = Pattern.compile("^([0-9]{4})-[0-9]{2}-[0-9]{2}");
-  private static final String OAI_GRANULARITY = "YYYY-MM";
+  private static final String OAI_GRANULARITY = "YYYY-MM-DD";
   public static final String OAI_DC_METADATA_PREFIX = "oai_dc";
   private static Logger logger =
 	      Logger.getLogger(ResPediatricaOaiCrawlSeed.class);
