@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
   <!-- Different start/permission - otherwise ClockssOJS2Plugin.xml inherited from OJS2Plugin.xml. -->  
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>deprecated</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -41,11 +41,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Journal of Infection in Developing Countries Plugin (CLOCKSS)</string>
+    <string>Journal of Infection in Developing Countries Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -57,7 +57,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Journal of Infection in Developing Countries Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+    <string>"Journal of Infection in Developing Countries Plugin (Legacy, CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>
