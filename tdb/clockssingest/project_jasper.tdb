@@ -3,8 +3,8 @@
   publisher <
     name = Project JASPER ;
     info[contract] = 2022 ;
-    info[tester] = S ;
-    info[platform] = Internet Archive JASPER # https://doaj.org/preservation/
+    info[tester] = 7 ;
+    info[platform] = Internet Archive JASPER. https://doaj.org/preservation/
   >
 
   plugin = org.lockss.plugin.jasper.ClockssJasperPlugin
