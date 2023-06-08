@@ -7720,7 +7720,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Human Reproduction Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Human Reproduction Volume 30 ; 30 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Human Reproduction Volume 31 ; 31 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2017 ; 2017 ; Human Reproduction Volume 32 ; 32 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Human Reproduction Volume 32 ; 32 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; 2018 ; Human Reproduction Volume 33 ; 33 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Human Reproduction Volume 34 ; 34 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Human Reproduction Volume 35 ; 35 ; >
@@ -7987,7 +7987,7 @@
     au < finished ; crawling ; 2014 ; 2014 ; ICSID Review: Foreign Investment Law Journal Volume 29 ; 29 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2015 ; 2015 ; ICSID Review: Foreign Investment Law Journal Volume 30 ; 30 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2016 ; 2016 ; ICSID Review: Foreign Investment Law Journal Volume 31 ; 31 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; ICSID Review: Foreign Investment Law Journal Volume 32 ; 32 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; ICSID Review: Foreign Investment Law Journal Volume 32 ; 32 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; ICSID Review: Foreign Investment Law Journal Volume 33 ; 33 ; >
     au < frozen ; exists ; 2019 ; 2019 ; ICSID Review: Foreign Investment Law Journal Volume 34 ; 34 ; >
     au < frozen ; exists ; 2021 ; 2021 ; ICSID Review: Foreign Investment Law Journal Volume 35 ; 35 ; >
@@ -8034,7 +8034,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ILAR Journal Volume 54-55 ; 54-55 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ILAR Journal Volume 56 ; 56 ; >
     au < finished ; manifest ; 2016 ; 2016 ; ILAR Journal Volume 57 ; 57 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; ILAR Journal Volume 58 ; 58 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; ILAR Journal Volume 58 ; 58 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; ILAR Journal Volume 59 ; 59 ; >
     au < frozen ; exists ; 2019 ; 2019 ; ILAR Journal Volume 60 ; 60 ; >
 
@@ -8493,7 +8493,7 @@
     param[journal_id] = isd
     #this title was ONLY in the publisher listing
 
-    au < frozen ; exists ; 2017 ; 2017 ; Insect Systematics and Diversity Volume 1 ; 1 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Insect Systematics and Diversity Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Insect Systematics and Diversity Volume 2 ; 2 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Insect Systematics and Diversity Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Insect Systematics and Diversity Volume 4 ; 4 ; >
@@ -8570,7 +8570,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Integrative and Comparative Biology Volume 54 ; 54 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Integrative and Comparative Biology Volume 55 ; 55 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Integrative and Comparative Biology Volume 56 ; 56 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Integrative and Comparative Biology Volume 57 ; 57 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Integrative and Comparative Biology Volume 57 ; 57 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; Integrative and Comparative Biology Volume 58 ; 58 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Integrative and Comparative Biology Volume 59 ; 59 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Integrative and Comparative Biology Volume 60 ; 60 ; >
@@ -8597,7 +8597,7 @@
     au < finished ; crawling ; 2014 ; 2014 ; Integrative Biology Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2015 ; 2015 ; Integrative Biology Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2016 ; 2016 ; Integrative Biology Volume 8 ; 8 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Integrative Biology Volume 9 ; 9 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Integrative Biology Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; 2018 ; Integrative Biology Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Integrative Biology Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Integrative Biology Volume 12 ; 12 ; >
@@ -8662,7 +8662,7 @@
     au < finished ; crawling ; 2014 ; 2014 ; International Affairs Volume 90 ; 90 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2015 ; 2015 ; International Affairs Volume 91 ; 91 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; 2016 ; International Affairs Volume 92 ; 92 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; International Affairs Volume 93 ; 93 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; International Affairs Volume 93 ; 93 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; International Affairs Volume 94 ; 94 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; International Affairs Volume 95 ; 95 ; >
     au < frozen ; exists ; 2020 ; 2020 ; International Affairs Volume 96 ; 96 ; >
@@ -8767,7 +8767,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Immunology Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Immunology Volume 27 ; 27 ; >
     au < finished ; manifest ; 2016 ; 2016 ; International Immunology Volume 28 ; 28 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2017 ; 2017 ; International Immunology Volume 29 ; 29 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; International Immunology Volume 29 ; 29 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; International Immunology Volume 30 ; 30 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; International Immunology Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; International Immunology Volume 32 ; 32 ; >
@@ -8962,7 +8962,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Law and Information Technology Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Law and Information Technology Volume 23 ; 23 ; >
     au < finished ; manifest ; 2016 ; 2016 ; International Journal of Law and Information Technology Volume 24 ; 24 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; International Journal of Law and Information Technology Volume 25 ; 25 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; International Journal of Law and Information Technology Volume 25 ; 25 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; International Journal of Law and Information Technology Volume 26 ; 26 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; International Journal of Law and Information Technology Volume 27 ; 27 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; International Journal of Law and Information Technology Volume 28 ; 28 ; >
@@ -9013,7 +9013,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Law, Policy and the Family Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Law, Policy and the Family Volume 29 ; 29 ; >
     au < finished ; manifest ; 2016 ; 2016 ; International Journal of Law, Policy and the Family Volume 30 ; 30 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; International Journal of Law, Policy and the Family Volume 31 ; 31 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; International Journal of Law, Policy and the Family Volume 31 ; 31 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; International Journal of Law, Policy and the Family Volume 32 ; 32 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; International Journal of Law, Policy and the Family Volume 33 ; 33 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; International Journal of Law, Policy and the Family Volume 34 ; 34 ; >
@@ -9063,7 +9063,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Lexicography Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Lexicography Volume 28 ; 28 ; >
     au < finished ; manifest ; 2016 ; 2016 ; International Journal of Lexicography Volume 29 ; 29 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; International Journal of Lexicography Volume 30 ; 30 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; International Journal of Lexicography Volume 30 ; 30 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; 2018 ; International Journal of Lexicography Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; International Journal of Lexicography Volume 32 ; 32 ; >
     au < frozen ; exists ; 2020 ; 2020 ; International Journal of Lexicography Volume 33 ; 33 ; >
@@ -9095,7 +9095,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Low-Carbon Technologies Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Low-Carbon Technologies Volume 10 ; 10 ; >
     au < finished ; manifest ; 2016 ; 2016 ; International Journal of Low-Carbon Technologies Volume 11 ; 11 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2017 ; 2017 ; International Journal of Low-Carbon Technologies Volume 12 ; 12 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; International Journal of Low-Carbon Technologies Volume 12 ; 12 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; International Journal of Low-Carbon Technologies Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; International Journal of Low-Carbon Technologies Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; International Journal of Low-Carbon Technologies Volume 15 ; 15 ; >
@@ -9135,7 +9135,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Neuropsychopharmacology Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Neuropsychopharmacology Volume 18 ; 18 ; >
     au < finished ; manifest ; 2016 ; 2016 ; International Journal of Neuropsychopharmacology Volume 19 ; 19 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2017 ; 2017 ; International Journal of Neuropsychopharmacology Volume 20 ; 20 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; International Journal of Neuropsychopharmacology Volume 20 ; 20 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; International Journal of Neuropsychopharmacology Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; International Journal of Neuropsychopharmacology Volume 22 ; 22 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; International Journal of Neuropsychopharmacology Volume 23 ; 23 ; >
@@ -9229,7 +9229,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Public Opinion Research Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Public Opinion Research Volume 27 ; 27 ; >
     au < finished ; manifest ; 2016 ; 2016 ; International Journal of Public Opinion Research Volume 28 ; 28 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2017 ; 2017 ; International Journal of Public Opinion Research Volume 29 ; 29 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; International Journal of Public Opinion Research Volume 29 ; 29 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; International Journal of Public Opinion Research Volume 30 ; 30 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; International Journal of Public Opinion Research Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; International Journal of Public Opinion Research Volume 32 ; 32 ; >
@@ -9278,7 +9278,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Refugee Law Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Refugee Law Volume 27 ; 27 ; >
     au < finished ; manifest ; 2016 ; 2016 ; International Journal of Refugee Law Volume 28 ; 28 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2017 ; 2017 ; International Journal of Refugee Law Volume 29 ; 29 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; International Journal of Refugee Law Volume 29 ; 29 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; International Journal of Refugee Law Volume 30 ; 30 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; International Journal of Refugee Law Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; International Journal of Refugee Law Volume 32 ; 32 ; >
@@ -9309,7 +9309,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Journal of Transitional Justice Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Transitional Justice Volume 9 ; 9 ; >
     au < finished ; manifest ; 2016 ; 2016 ; International Journal of Transitional Justice Volume 10 ; 10 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; International Journal of Transitional Justice Volume 11 ; 11 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; International Journal of Transitional Justice Volume 11 ; 11 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; 2018 ; International Journal of Transitional Justice Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; International Journal of Transitional Justice Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; International Journal of Transitional Justice Volume 14 ; 14 ; >
@@ -9459,7 +9459,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Relations of the Asia-Pacific Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Relations of the Asia-Pacific Volume 15 ; 15 ; >
     au < finished ; manifest ; 2016 ; 2016 ; International Relations of the Asia-Pacific Volume 16 ; 16 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; International Relations of the Asia-Pacific Volume 17 ; 17 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; International Relations of the Asia-Pacific Volume 17 ; 17 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; International Relations of the Asia-Pacific Volume 18 ; 18 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; International Relations of the Asia-Pacific Volume 19 ; 19 ; >
     au < frozen ; exists ; 2020 ; 2020 ; International Relations of the Asia-Pacific Volume 20 ; 20 ; >
@@ -9497,7 +9497,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Studies Perspectives Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Studies Perspectives Volume 16 ; 16 ; >
     au < finished ; manifest ; 2016 ; 2016 ; International Studies Perspectives Volume 17 ; 17 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2017 ; 2017 ; International Studies Perspectives Volume 18 ; 18 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; International Studies Perspectives Volume 18 ; 18 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; International Studies Perspectives Volume 19 ; 19 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; International Studies Perspectives Volume 20 ; 20 ; >
     au < frozen ; exists ; 2020 ; 2020 ; International Studies Perspectives Volume 21 ; 21 ; >
@@ -9535,7 +9535,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Studies Quarterly Volume 58 ; 58 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Studies Quarterly Volume 59 ; 59 ; >
     au < finished ; manifest ; 2016 ; 2016 ; International Studies Quarterly Volume 60 ; 60 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2017 ; 2017 ; International Studies Quarterly Volume 61 ; 61 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; International Studies Quarterly Volume 61 ; 61 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; International Studies Quarterly Volume 62 ; 62 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; International Studies Quarterly Volume 63 ; 63 ; >
     au < frozen ; exists ; 2020 ; 2020 ; International Studies Quarterly Volume 64 ; 64 ; >
@@ -9579,7 +9579,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; International Studies Review Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Studies Review Volume 17 ; 17 ; >
     au < finished ; manifest ; 2016 ; 2016 ; International Studies Review Volume 18 ; 18 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; International Studies Review Volume 19 ; 19 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; International Studies Review Volume 19 ; 19 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; International Studies Review Volume 20 ; 20 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; International Studies Review Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; International Studies Review Volume 22 ; 22 ; >
@@ -9619,7 +9619,7 @@
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; JNCI Monographs Volume 2013 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; JNCI Monographs Volume 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; JNCI Monographs Volume 2015 ; 2015 ; >
-    au < frozen ; exists ; 2017 ; 2017 ; JNCI Monographs Volume 2017 ; 2017 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; JNCI Monographs Volume 2017 ; 2017 ; reingest3.clockss.org:8083 >
     au < exists ; exists ; 2018 ; 2018 ; JNCI Monographs Volume 2018 ; 2018 ; >
     au < frozen ; exists ; 2019 ; 2019 ; JNCI Monographs Volume 2019 ; 2019 ; >
     au < frozen ; exists ; 2020 ; 2020 ; JNCI Monographs Volume 2020 ; 2020 ; >
@@ -9715,7 +9715,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Japanese Journal of Clinical Oncology Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Japanese Journal of Clinical Oncology Volume 45 ; 45 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Japanese Journal of Clinical Oncology Volume 46 ; 46 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Japanese Journal of Clinical Oncology Volume 47 ; 47 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Japanese Journal of Clinical Oncology Volume 47 ; 47 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Japanese Journal of Clinical Oncology Volume 48 ; 48 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Japanese Journal of Clinical Oncology Volume 49 ; 49 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Japanese Journal of Clinical Oncology Volume 50 ; 50 ; >
@@ -9743,7 +9743,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Jerusalem Review of Legal Studies Volume 10-9 ; 10-9 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Jerusalem Review of Legal Studies Volume 11-12 ; 11-12 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Jerusalem Review of Legal Studies Volume 13-14 ; 13-14 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Jerusalem Review of Legal Studies Volume 15-16 ; 15-16 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Jerusalem Review of Legal Studies Volume 15-16 ; 15-16 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Jerusalem Review of Legal Studies Volume 17-18 ; 17-18 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Jerusalem Review of Legal Studies Volume 19-20 ; 19-20 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Jerusalem Review of Legal Studies Volume 21-22 ; 21-22 ; >
@@ -9789,7 +9789,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of African Economies Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of African Economies Volume 24 ; 24 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of African Economies Volume 25 ; 25 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of African Economies Volume 26 ; 26 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of African Economies Volume 26 ; 26 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of African Economies Volume 27 ; 27 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of African Economies Volume 28 ; 28 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of African Economies Volume 29 ; 29 ; >
@@ -9913,7 +9913,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of American History Volume 100-101 ; 100-101 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of American History Volume 101-102 ; 101-102 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of American History Volume 102-103 ; 102-103 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of American History Volume 103-104 ; 103-104 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of American History Volume 103-104 ; 103-104 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of American History Volume 104-105 ; 104-105 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of American History Volume 106-107 ; 106-107 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of American History Volume 108-109 ; 108-109 ; >
@@ -10061,7 +10061,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Antitrust Enforcement Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Antitrust Enforcement Volume 3 ; 3 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Antitrust Enforcement Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Antitrust Enforcement Volume 5 ; 5 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Antitrust Enforcement Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Antitrust Enforcement Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Antitrust Enforcement Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Antitrust Enforcement Volume 8 ; 8 ; >
@@ -10119,7 +10119,7 @@
     au < finished ; crawling ; 2014 ; 2014 ; Journal of Burn Care & Research Volume 35 ; 35 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; 2015 ; Journal of Burn Care & Research Volume 36 ; 36 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Burn Care & Research Volume 37 ; 37 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Burn Care & Research Volume 38 ; 38 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Burn Care & Research Volume 38 ; 38 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Burn Care & Research Volume 39 ; 39 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Burn Care & Research Volume 40 ; 40 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Burn Care & Research Volume 41 ; 41 ; >
@@ -10194,7 +10194,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Chromatographic Science Volume 52 ; 52 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Chromatographic Science Volume 53 ; 53 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Chromatographic Science Volume 54 ; 54 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Chromatographic Science Volume 55 ; 55 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Chromatographic Science Volume 55 ; 55 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Chromatographic Science Volume 56 ; 56 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Chromatographic Science Volume 57 ; 57 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Chromatographic Science Volume 58 ; 58 ; >
@@ -10273,7 +10273,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Church and State Volume 56 ; 56 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Church and State Volume 57 ; 57 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Church and State Volume 58 ; 58 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Church and State Volume 59 ; 59 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Church and State Volume 59 ; 59 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Church and State Volume 60 ; 60 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Church and State Volume 61 ; 61 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Church and State Volume 62 ; 62 ; >
@@ -10351,7 +10351,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Complex Networks Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Complex Networks Volume 3 ; 3 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Complex Networks Volume 4 ; 4 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Complex Networks Volume 5 ; 5 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Complex Networks Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Complex Networks Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Complex Networks Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Complex Networks Volume 8 ; 8 ; >
@@ -10434,7 +10434,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Conflict and Security Law Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Conflict and Security Law Volume 20 ; 20 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Conflict and Security Law Volume 21 ; 21 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Conflict and Security Law Volume 22 ; 22 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Conflict and Security Law Volume 22 ; 22 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Conflict and Security Law Volume 23 ; 23 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Conflict and Security Law Volume 24 ; 24 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Conflict and Security Law Volume 25 ; 25 ; >
@@ -10570,7 +10570,7 @@
     au < finished ; crawling ; 2014 ; 2014 ; Journal of Crustacean Biology Volume 34 ; 34 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2015 ; 2015 ; Journal of Crustacean Biology Volume 35 ; 35 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Crustacean Biology Volume 36 ; 36 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Crustacean Biology Volume 37 ; 37 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Crustacean Biology Volume 37 ; 37 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Crustacean Biology Volume 38 ; 38 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Crustacean Biology Volume 39 ; 39 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Crustacean Biology Volume 40 ; 40 ; >
@@ -10643,7 +10643,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Design History Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Design History Volume 28 ; 28 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Design History Volume 29 ; 29 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Design History Volume 30 ; 30 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Design History Volume 30 ; 30 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Design History Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Design History Volume 32 ; 32 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Design History Volume 33 ; 33 ; >
@@ -10691,7 +10691,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Economic Entomology Volume 107 ; 107 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Economic Entomology Volume 108 ; 108 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Economic Entomology Volume 109 ; 109 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Economic Entomology Volume 110 ; 110 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Economic Entomology Volume 110 ; 110 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Economic Entomology Volume 111 ; 111 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Economic Entomology Volume 112 ; 112 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Economic Entomology Volume 113 ; 113 ; >
@@ -10777,7 +10777,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Environmental Law Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Environmental Law Volume 27 ; 27 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Environmental Law Volume 28 ; 28 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Environmental Law Volume 29 ; 29 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Environmental Law Volume 29 ; 29 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Environmental Law Volume 30 ; 30 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Environmental Law Volume 31 ; 31 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Environmental Law Volume 32 ; 32 ; >
@@ -10805,7 +10805,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of European Competition Law & Practice Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of European Competition Law & Practice Volume 6 ; 6 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of European Competition Law & Practice Volume 7 ; 7 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of European Competition Law & Practice Volume 8 ; 8 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of European Competition Law & Practice Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of European Competition Law & Practice Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of European Competition Law & Practice Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of European Competition Law & Practice Volume 11 ; 11 ; >
@@ -10928,7 +10928,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Financial Econometrics Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Financial Econometrics Volume 13 ; 13 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Financial Econometrics Volume 14 ; 14 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Financial Econometrics Volume 15 ; 15 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Financial Econometrics Volume 15 ; 15 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Financial Econometrics Volume 16 ; 16 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Financial Econometrics Volume 17 ; 17 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Financial Econometrics Volume 18 ; 18 ; >
@@ -10951,7 +10951,7 @@
 
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Financial Regulation Volume 1 ; 1 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Financial Regulation Volume 2 ; 2 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Financial Regulation Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Financial Regulation Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Financial Regulation Volume 4 ; 4 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Financial Regulation Volume 5 ; 5 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Financial Regulation Volume 6 ; 6 ; >
@@ -11247,7 +11247,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Hip Preservation Surgery Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Hip Preservation Surgery Volume 2 ; 2 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Hip Preservation Surgery Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Hip Preservation Surgery Volume 4 ; 4 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Hip Preservation Surgery Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Hip Preservation Surgery Volume 5 ; 5 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Hip Preservation Surgery Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Hip Preservation Surgery Volume 7 ; 7 ; >
@@ -11276,7 +11276,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Human Rights Practice Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Human Rights Practice Volume 7 ; 7 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Human Rights Practice Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Human Rights Practice Volume 9 ; 9 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Human Rights Practice Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Human Rights Practice Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Human Rights Practice Volume 11 ; 11 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Human Rights Practice Volume 12 ; 12 ; >
@@ -11311,7 +11311,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Insect Science Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Insect Science Volume 15 ; 15 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Insect Science Volume 16 ; 16 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Insect Science Volume 17 ; 17 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Insect Science Volume 17 ; 17 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Insect Science Volume 18 ; 18 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Insect Science Volume 19 ; 19 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Insect Science Volume 20 ; 20 ; >
@@ -11333,7 +11333,7 @@
 
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Integrable Systems Volume 1 ; 1 ; > #doesNotExist
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Integrable Systems Volume 1 ; 1 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Integrable Systems Volume 2 ; 2 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Integrable Systems Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Integrable Systems Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Integrable Systems Volume 4 ; 4 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Integrable Systems Volume 5 ; 5 ; >
@@ -11358,7 +11358,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Integrated Pest Management Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Integrated Pest Management Volume 6 ; 6 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Integrated Pest Management Volume 7 ; 7 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Integrated Pest Management Volume 8 ; 8 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Integrated Pest Management Volume 8 ; 8 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Integrated Pest Management Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Integrated Pest Management Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Integrated Pest Management Volume 11 ; 11 ; >
@@ -11391,7 +11391,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Intellectual Property Law & Practice Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Intellectual Property Law & Practice Volume 10 ; 10 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Intellectual Property Law & Practice Volume 11 ; 11 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Intellectual Property Law & Practice Volume 12 ; 12 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Intellectual Property Law & Practice Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Intellectual Property Law & Practice Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Intellectual Property Law & Practice Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Intellectual Property Law & Practice Volume 15 ; 15 ; >
@@ -11426,7 +11426,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of International Criminal Justice Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of International Criminal Justice Volume 13 ; 13 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of International Criminal Justice Volume 14 ; 14 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of International Criminal Justice Volume 15 ; 15 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of International Criminal Justice Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of International Criminal Justice Volume 16 ; 16 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of International Criminal Justice Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of International Criminal Justice Volume 18 ; 18 ; >
@@ -11454,7 +11454,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of International Dispute Settlement Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of International Dispute Settlement Volume 6 ; 6 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of International Dispute Settlement Volume 7 ; 7 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of International Dispute Settlement Volume 8 ; 8 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of International Dispute Settlement Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of International Dispute Settlement Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of International Dispute Settlement Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of International Dispute Settlement Volume 11 ; 11 ; >
@@ -11542,7 +11542,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Islamic Studies Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Islamic Studies Volume 26 ; 26 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Islamic Studies Volume 27 ; 27 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Islamic Studies Volume 28 ; 28 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Islamic Studies Volume 28 ; 28 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Islamic Studies Volume 29 ; 29 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Islamic Studies Volume 30 ; 30 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Islamic Studies Volume 31 ; 31 ; >
@@ -11586,7 +11586,7 @@
     au < finished ; crawling ; 2014 ; 2014 ; Journal of Law and the Biosciences Volume 1 ; 1 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; 2015 ; Journal of Law and the Biosciences Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Law and the Biosciences Volume 3 ; 3 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Law and the Biosciences Volume 4 ; 4 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Law and the Biosciences Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Law and the Biosciences Volume 5 ; 5 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Journal of Law and the Biosciences Volume 6 ; 6 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Law and the Biosciences Volume 7 ; 7 ; >
@@ -11615,7 +11615,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Legal Analysis Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Legal Analysis Volume 7 ; 7 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Legal Analysis Volume 8 ; 8 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Legal Analysis Volume 9 ; 9 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Legal Analysis Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Legal Analysis Volume 10 ; 10 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Journal of Legal Analysis Volume 11 ; 11 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Legal Analysis Volume 12 ; 12 ; >
@@ -11756,7 +11756,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Medical Entomology Volume 51 ; 51 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Medical Entomology Volume 52 ; 52 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Medical Entomology Volume 53 ; 53 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Medical Entomology Volume 54 ; 54 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Medical Entomology Volume 54 ; 54 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Medical Entomology Volume 55 ; 55 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Medical Entomology Volume 56 ; 56 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Medical Entomology Volume 57 ; 57 ; >
@@ -11785,7 +11785,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Molecular Cell Biology Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Molecular Cell Biology Volume 7 ; 7 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Molecular Cell Biology Volume 8 ; 8 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Molecular Cell Biology Volume 9 ; 9 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Molecular Cell Biology Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Molecular Cell Biology Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Molecular Cell Biology Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Molecular Cell Biology Volume 12 ; 12 ; >
@@ -11888,7 +11888,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Molluscan Studies Volume 80 ; 80 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Molluscan Studies Volume 81 ; 81 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Molluscan Studies Volume 82 ; 82 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Molluscan Studies Volume 83 ; 83 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Molluscan Studies Volume 83 ; 83 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Molluscan Studies Volume 84 ; 84 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Molluscan Studies Volume 85 ; 85 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Molluscan Studies Volume 86 ; 86 ; >
@@ -12100,7 +12100,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Pediatric Psychology Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Pediatric Psychology Volume 40 ; 40 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Pediatric Psychology Volume 41 ; 41 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Pediatric Psychology Volume 42 ; 42 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Pediatric Psychology Volume 42 ; 42 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Pediatric Psychology Volume 43 ; 43 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Pediatric Psychology Volume 44 ; 44 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Pediatric Psychology Volume 45 ; 45 ; >
@@ -12178,7 +12178,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Petrology Volume 55 ; 55 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Petrology Volume 56 ; 56 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Petrology Volume 57 ; 57 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Petrology Volume 58 ; 58 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Petrology Volume 58 ; 58 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Petrology Volume 59 ; 59 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Petrology Volume 60 ; 60 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Petrology Volume 61 ; 61 ; >
@@ -12237,7 +12237,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Plankton Research Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Plankton Research Volume 37 ; 37 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Plankton Research Volume 38 ; 38 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Plankton Research Volume 39 ; 39 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Plankton Research Volume 39 ; 39 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Plankton Research Volume 40 ; 40 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Plankton Research Volume 41 ; 41 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Plankton Research Volume 42 ; 42 ; >
@@ -12263,7 +12263,7 @@
     au < finished ; crawling ; 2014 ; 2014 ; Journal of Pharmaceutical Health Services Research Volume 5 ; 5 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; 2015 ; Journal of Pharmaceutical Health Services Research Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2016 ; 2016 ; Journal of Pharmaceutical Health Services Research Volume 7 ; 7 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Pharmaceutical Health Services Research Volume 8 ; 8 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Pharmaceutical Health Services Research Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Pharmaceutical Health Services Research Volume 9 ; 9 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Journal of Pharmaceutical Health Services Research Volume 10 ; 10 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Pharmaceutical Health Services Research Volume 11 ; 11 ; >
@@ -12350,7 +12350,7 @@
     au < finished ; crawling ; 2014 ; 2014 ; Journal of Pharmacy and Pharmacology Volume 66 ; 66 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; 2015 ; Journal of Pharmacy and Pharmacology Volume 67 ; 67 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Pharmacy and Pharmacology Volume 68 ; 68 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Pharmacy and Pharmacology Volume 69 ; 69 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Pharmacy and Pharmacology Volume 69 ; 69 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Pharmacy and Pharmacology Volume 70 ; 70 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Journal of Pharmacy and Pharmacology Volume 71 ; 71 ; >
     au < finished ; finished ; 2020 ; 2020 ; Journal of Pharmacy and Pharmacology Volume 72 ; 72 ; reingest4.clockss.org:8082 >
@@ -12412,7 +12412,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Plant Ecology Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Plant Ecology Volume 8 ; 8 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Plant Ecology Volume 9 ; 9 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Plant Ecology Volume 10 ; 10 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Plant Ecology Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Plant Ecology Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Plant Ecology Volume 12 ; 12 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Plant Ecology Volume 13 ; 13 ; >
@@ -12438,7 +12438,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Professions and Organization Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Professions and Organization Volume 2 ; 2 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Professions and Organization Volume 3 ; 3 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Professions and Organization Volume 4 ; 4 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Professions and Organization Volume 4 ; 4 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Professions and Organization Volume 5 ; 5 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Professions and Organization Volume 6 ; 6 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Professions and Organization Volume 7 ; 7 ; >
@@ -12485,7 +12485,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Public Administration Research and Theory Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Public Administration Research and Theory Volume 25 ; 25 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Public Administration Research and Theory Volume 26 ; 26 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Public Administration Research and Theory Volume 27 ; 27 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Public Administration Research and Theory Volume 27 ; 27 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Public Administration Research and Theory Volume 28 ; 28 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Public Administration Research and Theory Volume 29 ; 29 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Public Administration Research and Theory Volume 30 ; 30 ; >
@@ -12544,7 +12544,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Public Health Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Public Health Volume 37 ; 37 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Public Health Volume 38 ; 38 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Public Health Volume 39 ; 39 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Public Health Volume 39 ; 39 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Public Health Volume 40 ; 40 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Public Health Volume 41 ; 41 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Public Health Volume 42 ; 42 ; >
@@ -12582,7 +12582,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Radiation Research Volume 55 ; 55 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Radiation Research Volume 56 ; 56 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Radiation Research Volume 57 ; 57 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Radiation Research Volume 58 ; 58 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Radiation Research Volume 58 ; 58 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Radiation Research Volume 59 ; 59 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Radiation Research Volume 60 ; 60 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Radiation Research Volume 61 ; 61 ; >
@@ -12632,7 +12632,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Refugee Studies Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Refugee Studies Volume 28 ; 28 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Refugee Studies Volume 29 ; 29 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Refugee Studies Volume 30 ; 30 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Refugee Studies Volume 30 ; 30 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Refugee Studies Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Refugee Studies Volume 32 ; 32 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Refugee Studies Volume 33 ; 33 ; >
@@ -12686,7 +12686,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Semantics Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Semantics Volume 32 ; 32 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Semantics Volume 33 ; 33 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Semantics Volume 34 ; 34 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Semantics Volume 34 ; 34 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Semantics Volume 35 ; 35 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Semantics Volume 36 ; 36 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Journal of Semantics Volume 37 ; 37 ; >
@@ -12768,7 +12768,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Semitic Studies Volume 59 ; 59 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Semitic Studies Volume 60 ; 60 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Semitic Studies Volume 61 ; 61 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Semitic Studies Volume 62 ; 62 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Semitic Studies Volume 62 ; 62 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Semitic Studies Volume 63 ; 63 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Semitic Studies Volume 64 ; 64 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Semitic Studies Volume 65 ; 65 ; >
@@ -12887,7 +12887,7 @@
     au < finished ; crawling ; 2014 ; 2014 ; Journal of Social History Volume 47-48 ; 47-48 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; 2015 ; Journal of Social History Volume 48-49 ; 48-49 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Social History Volume 49-50 ; 49-50 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Social History Volume 50-51 ; 50-51 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Social History Volume 50-51 ; 50-51 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Social History Volume 51-52 ; 51-52 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Social History Volume 53-54 ; 53-54 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Social History Volume 55-56 ; 55-56 ; >
@@ -12914,7 +12914,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Surgical Case Reports Volume 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Surgical Case Reports Volume 2015 ; 2015 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Surgical Case Reports Volume 2016 ; 2016 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Surgical Case Reports Volume 2017 ; 2017 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Surgical Case Reports Volume 2017 ; 2017 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Surgical Case Reports Volume 2018 ; 2018 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Surgical Case Reports Volume 2019 ; 2019 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Journal of Surgical Case Reports Volume 2020 ; 2020 ; > #LXQUEUE-1592
@@ -12938,7 +12938,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Survey Statistics and Methodology Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Survey Statistics and Methodology Volume 3 ; 3 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Survey Statistics and Methodology Volume 4 ; 4 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Survey Statistics and Methodology Volume 5 ; 5 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Survey Statistics and Methodology Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Survey Statistics and Methodology Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Survey Statistics and Methodology Volume 7 ; 7 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Survey Statistics and Methodology Volume 8 ; 8 ; >
@@ -12981,7 +12981,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Travel Medicine Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Travel Medicine Volume 22 ; 22 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Travel Medicine Volume 23 ; 23 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Travel Medicine Volume 24 ; 24 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Travel Medicine Volume 24 ; 24 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Travel Medicine Volume 25 ; 25 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Travel Medicine Volume 26 ; 26 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Travel Medicine Volume 27 ; 27 ; >
@@ -13064,7 +13064,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Tropical Pediatrics Volume 60 ; 60 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Tropical Pediatrics Volume 61 ; 61 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Tropical Pediatrics Volume 62 ; 62 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Tropical Pediatrics Volume 63 ; 63 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Tropical Pediatrics Volume 63 ; 63 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Tropical Pediatrics Volume 64 ; 64 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Tropical Pediatrics Volume 65 ; 65 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Journal of Tropical Pediatrics Volume 66 ; 66 ; >
@@ -13086,7 +13086,7 @@
 
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Urban Ecology Volume 1 ; 1 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Urban Ecology Volume 2 ; 2 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of Urban Ecology Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of Urban Ecology Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Urban Ecology Volume 4 ; 4 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Urban Ecology Volume 5 ; 5 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Urban Ecology Volume 6 ; 6 ; >
@@ -13211,7 +13211,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of the American Academy of Religion Volume 82 ; 82 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of the American Academy of Religion Volume 83 ; 83 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of the American Academy of Religion Volume 84 ; 84 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of the American Academy of Religion Volume 85 ; 85 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of the American Academy of Religion Volume 85 ; 85 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of the American Academy of Religion Volume 86 ; 86 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of the American Academy of Religion Volume 87 ; 87 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of the American Academy of Religion Volume 88 ; 88 ; >
@@ -13255,7 +13255,7 @@
     au < finished ; crawling ; 2014 ; 2014 ; Journal of the American Medical Informatics Association Volume 21 ; 21 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2015 ; 2015 ; Journal of the American Medical Informatics Association Volume 22 ; 22 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of the American Medical Informatics Association Volume 23 ; 23 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of the American Medical Informatics Association Volume 24 ; 24 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of the American Medical Informatics Association Volume 24 ; 24 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; Journal of the American Medical Informatics Association Volume 25 ; 25 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of the American Medical Informatics Association Volume 26 ; 26 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of the American Medical Informatics Association Volume 27 ; 27 ; >
@@ -13290,7 +13290,7 @@
     au < finished ; crawling ; 2014 ; 2014 ; Journal of the European Economic Association Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2015 ; 2015 ; Journal of the European Economic Association Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of the European Economic Association Volume 14 ; 14 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of the European Economic Association Volume 15 ; 15 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of the European Economic Association Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; 2018 ; Journal of the European Economic Association Volume 16 ; 16 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of the European Economic Association Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of the European Economic Association Volume 18 ; 18 ; >
@@ -13339,7 +13339,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of the History of Collections Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of the History of Collections Volume 27 ; 27 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of the History of Collections Volume 28 ; 28 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of the History of Collections Volume 29 ; 29 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of the History of Collections Volume 29 ; 29 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2018 ; 2018 ; Journal of the History of Collections Volume 30 ; 30 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of the History of Collections Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of the History of Collections Volume 32 ; 32 ; >
@@ -13431,7 +13431,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of the History of Medicine and Allied Sciences Volume 69 ; 69 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of the History of Medicine and Allied Sciences Volume 70 ; 70 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of the History of Medicine and Allied Sciences Volume 71 ; 71 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of the History of Medicine and Allied Sciences Volume 72 ; 72 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of the History of Medicine and Allied Sciences Volume 72 ; 72 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; Journal of the History of Medicine and Allied Sciences Volume 73 ; 73 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of the History of Medicine and Allied Sciences Volume 74 ; 74 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of the History of Medicine and Allied Sciences Volume 75 ; 75 ; >
@@ -13513,7 +13513,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of the Pediatric Infectious Diseases Society Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of the Pediatric Infectious Diseases Society Volume 4 ; 4 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of the Pediatric Infectious Diseases Society Volume 5 ; 5 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Journal of the Pediatric Infectious Diseases Society Volume 6 ; 6 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Journal of the Pediatric Infectious Diseases Society Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; Journal of the Pediatric Infectious Diseases Society Volume 7 ; 7 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of the Pediatric Infectious Diseases Society Volume 8 ; 8 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of the Pediatric Infectious Diseases Society Volume 9 ; 9 ; >
@@ -13632,7 +13632,7 @@
     au < finished ; crawling ; 2014 ; 2014 ; Laboratory Medicine Volume 45 ; 45 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Laboratory Medicine Volume 46 ; 46 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Laboratory Medicine Volume 47 ; 47 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Laboratory Medicine Volume 48 ; 48 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Laboratory Medicine Volume 48 ; 48 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; Laboratory Medicine Volume 49 ; 49 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Laboratory Medicine Volume 50 ; 50 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Laboratory Medicine Volume 51 ; 51 ; >
@@ -13668,7 +13668,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Law, Probability and Risk Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Law, Probability and Risk Volume 14 ; 14 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Law, Probability and Risk Volume 15 ; 15 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2017 ; 2017 ; Law, Probability and Risk Volume 16 ; 16 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Law, Probability and Risk Volume 16 ; 16 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; Law, Probability and Risk Volume 17 ; 17 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Law, Probability and Risk Volume 18 ; 18 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Law, Probability and Risk Volume 19 ; 19 ; >
@@ -13741,7 +13741,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Literary Imagination Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Literary Imagination Volume 17 ; 17 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Literary Imagination Volume 18 ; 18 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2017 ; 2017 ; Literary Imagination Volume 19 ; 19 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Literary Imagination Volume 19 ; 19 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; 2018 ; Literary Imagination Volume 20 ; 20 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Literary Imagination Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Literary Imagination Volume 22 ; 22 ; >
@@ -13792,7 +13792,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Literature and Theology Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Literature and Theology Volume 29 ; 29 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Literature and Theology Volume 30 ; 30 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Literature and Theology Volume 31 ; 31 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Literature and Theology Volume 31 ; 31 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2018 ; 2018 ; Literature and Theology Volume 32 ; 32 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Literature and Theology Volume 33 ; 33 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Literature and Theology Volume 34 ; 34 ; >
@@ -13837,7 +13837,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Logic Journal of the IGPL Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Logic Journal of the IGPL Volume 23 ; 23 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Logic Journal of the IGPL Volume 24 ; 24 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Logic Journal of the IGPL Volume 25 ; 25 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Logic Journal of the IGPL Volume 25 ; 25 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; 2018 ; Logic Journal of the IGPL Volume 26 ; 26 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Logic Journal of the IGPL Volume 27 ; 27 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Logic Journal of the IGPL Volume 28 ; 28 ; >
@@ -13861,7 +13861,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; London Review of International Law Volume 2 ; 2 ; >
     au < finished ; manifest ; 2015 ; 2015 ; London Review of International Law Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; 2016 ; London Review of International Law Volume 4 ; 4 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; London Review of International Law Volume 5 ; 5 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; London Review of International Law Volume 5 ; 5 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; London Review of International Law Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; London Review of International Law Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; London Review of International Law Volume 8 ; 8 ; >
@@ -13924,7 +13924,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; MELUS Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; MELUS Volume 40 ; 40 ; >
     au < finished ; manifest ; 2016 ; 2016 ; MELUS Volume 41 ; 41 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; MELUS Volume 42 ; 42 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; MELUS Volume 42 ; 42 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2018 ; 2018 ; MELUS Volume 43 ; 43 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; MELUS Volume 44 ; 44 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; MELUS Volume 45 ; 45 ; >
@@ -13967,7 +13967,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; MHR: Basic science of reproductive medicine Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; MHR: Basic science of reproductive medicine Volume 21 ; 21 ; >
     au < finished ; manifest ; 2016 ; 2016 ; MHR: Basic science of reproductive medicine Volume 22 ; 22 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2017 ; 2017 ; MHR: Basic science of reproductive medicine Volume 23 ; 23 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; MHR: Basic science of reproductive medicine Volume 23 ; 23 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; MHR: Basic science of reproductive medicine Volume 24 ; 24 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; MHR: Basic science of reproductive medicine Volume 25 ; 25 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; MHR: Basic science of reproductive medicine Volume 26 ; 26 ; >
@@ -14036,7 +14036,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Mammalian Species Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Mammalian Species Volume 47 ; 47 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Mammalian Species Volume 48 ; 48 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2017 ; 2017 ; Mammalian Species Volume 49 ; 49 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Mammalian Species Volume 49 ; 49 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; Mammalian Species Volume 50 ; 50 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Mammalian Species Volume 51 ; 51 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Mammalian Species Volume 52 ; 52 ; >
@@ -14090,7 +14090,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 32 ; 32 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 33 ; 33 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 34 ; 34 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 34 ; 34 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 35 ; 35 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 36 ; 36 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 37 ; 37 ; >
@@ -14135,7 +14135,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Medical Law Review Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Medical Law Review Volume 23 ; 23 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Medical Law Review Volume 24 ; 24 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Medical Law Review Volume 25 ; 25 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Medical Law Review Volume 25 ; 25 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2018 ; 2018 ; Medical Law Review Volume 26 ; 26 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Medical Law Review Volume 27 ; 27 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Medical Law Review Volume 28 ; 28 ; >
@@ -14175,7 +14175,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Medical Mycology Volume 52 ; 52 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Medical Mycology Volume 53 ; 53 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Medical Mycology Volume 54 ; 54 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Medical Mycology Volume 55 ; 55 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Medical Mycology Volume 55 ; 55 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; Medical Mycology Volume 56 ; 56 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Medical Mycology Volume 57 ; 57 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Medical Mycology Volume 58 ; 58 ; >
@@ -14206,7 +14206,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Microscopy Volume 63 ; 63 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Microscopy Volume 64 ; 64 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Microscopy Volume 65 ; 65 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Microscopy Volume 66 ; 66 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Microscopy Volume 66 ; 66 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; Microscopy Volume 67 ; 67 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Microscopy Volume 68 ; 68 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Microscopy Volume 69 ; 69 ; >
@@ -14294,7 +14294,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Migration Studies Volume 2 ; 2 ; >
     au < finished ; manifest ; 2015 ; 2015 ; Migration Studies Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; 2016 ; Migration Studies Volume 4 ; 4 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2017 ; 2017 ; Migration Studies Volume 5 ; 5 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Migration Studies Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; Migration Studies Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Migration Studies Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Migration Studies Volume 8 ; 8 ; >
@@ -14315,7 +14315,7 @@
 
     param[journal_id] = milmed
 
-    au < frozen ; exists ; 2017 ; 2017 ; Military Medicine Volume 1 ; 1 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Military Medicine Volume 1 ; 1 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; Military Medicine Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Military Medicine Volume 3 ; 3 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Military Medicine Volume 4 ; 4 ; >
@@ -14477,7 +14477,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Mind Volume 123 ; 123 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Mind Volume 124 ; 124 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Mind Volume 125 ; 125 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2017 ; 2017 ; Mind Volume 126 ; 126 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Mind Volume 126 ; 126 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; Mind Volume 127 ; 127 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Mind Volume 128 ; 128 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Mind Volume 129 ; 129 ; >
@@ -14534,7 +14534,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Modern Judaism Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Modern Judaism Volume 35 ; 35 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Modern Judaism Volume 36 ; 36 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Modern Judaism Volume 37 ; 37 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Modern Judaism Volume 37 ; 37 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; 2018 ; Modern Judaism Volume 38 ; 38 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Modern Judaism Volume 39 ; 39 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Modern Judaism Volume 40 ; 40 ; >
@@ -14621,7 +14621,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Molecular Biology and Evolution Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Molecular Biology and Evolution Volume 32 ; 32 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Molecular Biology and Evolution Volume 33 ; 33 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; Molecular Biology and Evolution Volume 34 ; 34 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Molecular Biology and Evolution Volume 34 ; 34 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; Molecular Biology and Evolution Volume 35 ; 35 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Molecular Biology and Evolution Volume 36 ; 36 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Molecular Biology and Evolution Volume 37 ; 37 ; >
