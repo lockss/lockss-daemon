@@ -3321,7 +3321,7 @@ while (my $line = <>) {
     sleep(4);
 
 # GSW Books Silverchair CLOCKSS
-  } elsif ($plugin eq "ClockssGeoscienceWorldSilverchairBooksPlugin") {
+  } elsif (($plugin eq "ClockssGeoscienceWorldSilverchairBooksPlugin")) {
     $url = sprintf("%s%s",
       $param{base_url}, $param{resource_id});
     $man_url = uri_unescape($url);
@@ -3404,7 +3404,8 @@ while (my $line = <>) {
   sleep(4);
     
   #Silverchair GLN. Includes year/volume_name.
-  } elsif ($plugin eq "GeoscienceWorldSilverchairPlugin") {
+  } elsif (($plugin eq "GeoscienceWorldSilverchairPlugin") || 
+          ($plugin eq "ClockssPSUPSilverchairPlugin")) {
     $url = sprintf("%s%s/list-of-issues/%d",
         $param{base_url}, $param{journal_id}, $param{year});
     $man_url = uri_unescape($url);

@@ -3,8 +3,8 @@
   publisher <
     name = Penn State University Press ;
     info[contract] = 2023 ;
-    #info[tester] = 8 ;
-    #info[poller] = 2 ;
+    info[tester] = 8 ;
+    info[poller] = 2 ;
     info[platform] = Silverchair
   >
 
@@ -22,7 +22,6 @@
 
     param[college_id] = psup
     param[journal_id] = arthur-miller
-
 
     au < manifest ; exists ; 2020 ; 2020 ; The Arthur Miller Journal Scholarly Publishing Collective Volume 15 ; 15 ; >
     au < manifest ; exists ; 2021 ; 2021 ; The Arthur Miller Journal Scholarly Publishing Collective Volume 16 ; 16 ; >
