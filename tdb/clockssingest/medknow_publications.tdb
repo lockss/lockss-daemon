@@ -550,7 +550,7 @@
 
     param[journal_issn] = 2949-7973
 
-    au < ready ; exists ; 2022 ; Bangladesh Journal of Endocrinology and Metabolism Volume 1 ; 2022 ; 1 ; https://www.bjem.org/ ; ; >
+    au < crawling ; exists ; 2022 ; Bangladesh Journal of Endocrinology and Metabolism Volume 1 ; 2022 ; 1 ; https://www.bjem.org/ ; ; >
     au < manifest ; exists ; 2023 ; Bangladesh Journal of Endocrinology and Metabolism Volume 2 ; 2023 ; 2 ; https://www.bjem.org/ ; ; >
 
   }
@@ -567,7 +567,7 @@
     param[journal_issn] = 2773-1332
 
     au < finished ; finished ; 2021 ; Bengal Journal of Cancer Volume 1 ; 2021 ; 1 ; https://www.bengaljcancer.org/ ; ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 2022 ; Bengal Journal of Cancer Volume 2 ; 2022 ; 2 ; https://www.bengaljcancer.org/ ; ; >
+    au < crawling ; exists ; 2022 ; Bengal Journal of Cancer Volume 2 ; 2022 ; 2 ; https://www.bengaljcancer.org/ ; ; >
     au < expected ; exists ; 2023 ; Bengal Journal of Cancer Volume 3 ; 2023 ; 3 ; https://www.bengaljcancer.org/ ; ; >
 
   }
@@ -601,7 +601,7 @@
 
     param[journal_issn] = 2773-1316
 
-    au < ready ; exists ; 2022 ; Chronicle of Diabetes Research and Practice Volume 1 ; 2022 ; 1 ; https://cdrpj.org/ ; ; >
+    au < crawling ; exists ; 2022 ; Chronicle of Diabetes Research and Practice Volume 1 ; 2022 ; 1 ; https://cdrpj.org/ ; ; >
     au < manifest ; exists ; 2023 ; Chronicle of Diabetes Research and Practice Volume 2 ; 2023 ; 2 ; https://cdrpj.org/ ; ; >
 
   }
@@ -3959,7 +3959,7 @@
 
     param[journal_issn] = 2949-6594
 
-    au < ready ; exists ; 2022 ; Journal of Preventive, Diagnostic and Treatment Strategies in Medicine Volume 1 ; 2022 ; 1 ; https://www.jpdtsm.com/ ; ; >
+    au < crawling ; exists ; 2022 ; Journal of Preventive, Diagnostic and Treatment Strategies in Medicine Volume 1 ; 2022 ; 1 ; https://www.jpdtsm.com/ ; ; >
     au < manifest ; exists ; 2023 ; Journal of Preventive, Diagnostic and Treatment Strategies in Medicine Volume 2 ; 2023 ; 2 ; https://www.jpdtsm.com/ ; ; >
 
   }
@@ -6252,7 +6252,7 @@
       au < finished ; finished ; 2019 ; Indian Journal of Allergy, Asthma and Immunology Volume 33 ; 2019 ; 33 ; https://www.ijaai.in/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2020 ; Indian Journal of Allergy, Asthma and Immunology Volume 34 ; 2020 ; 34 ; https://www.ijaai.in/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; Indian Journal of Allergy, Asthma and Immunology Volume 35 ; 2021 ; 35 ; https://www.ijaai.in/ ; ; reingest1.clockss.org:8082 >
-      au < ready ; exists ; 2022 ; Indian Journal of Allergy, Asthma and Immunology Volume 36 ; 2022 ; 36 ; https://www.ijaai.in/ ; ; >
+      au < crawling ; exists ; 2022 ; Indian Journal of Allergy, Asthma and Immunology Volume 36 ; 2022 ; 36 ; https://www.ijaai.in/ ; ; >
       au < manifest ; exists ; 2023 ; Indian Journal of Allergy, Asthma and Immunology Volume 37 ; 2023 ; 37 ; https://www.ijaai.in/ ; ; >
 
   }
@@ -7909,9 +7909,9 @@
       {
       param[journal_issn] = 2588-9273
       au < manifest ; exists ; 2019 ; Journal of Radiation and Cancer Research Volume 10 ; 2019 ; 10 ; https://www.journalrcr.org/ ; ; >
-      au < ready ; exists ; 2020 ; Journal of Radiation and Cancer Research Volume 11 ; 2020 ; 11 ; https://www.journalrcr.org/ ; ; >
-      au < ready ; exists ; 2021 ; Journal of Radiation and Cancer Research Volume 12 ; 2021 ; 12 ; https://www.journalrcr.org/ ; ; >
-      au < ready ; exists ; 2022 ; Journal of Radiation and Cancer Research Volume 13 ; 2022 ; 13 ; https://www.journalrcr.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Journal of Radiation and Cancer Research Volume 11 ; 2020 ; 11 ; https://www.journalrcr.org/ ; ; >
+      au < crawling ; exists ; 2021 ; Journal of Radiation and Cancer Research Volume 12 ; 2021 ; 12 ; https://www.journalrcr.org/ ; ; >
+      au < crawling ; exists ; 2022 ; Journal of Radiation and Cancer Research Volume 13 ; 2022 ; 13 ; https://www.journalrcr.org/ ; ; >
       au < manifest ; exists ; 2023 ; Journal of Radiation and Cancer Research Volume 14 ; 2023 ; 14 ; https://www.journalrcr.org/ ; ; >
       }
 
@@ -8963,7 +8963,7 @@
       au < finished ; finished ; 2018 ; Sudanese Journal of Ophthalmology Volume 10 ; 2018 ; 10 ; http://www.sjopthal.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Sudanese Journal of Ophthalmology Volume 11 ; 2019 ; 11 ; https://www.sjopthal.net/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2020 ; Sudanese Journal of Ophthalmology Volume 12 ; 2020 ; 12 ; https://www.sjopthal.net/ ; ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2021 ; Sudanese Journal of Ophthalmology Volume 13 ; 2021 ; 13 ; https://www.sjopthal.net/ ; ; >
+      au < crawling ; exists ; 2021 ; Sudanese Journal of Ophthalmology Volume 13 ; 2021 ; 13 ; https://www.sjopthal.net/ ; ; >
       au < expected ; exists ; 2022 ; Sudanese Journal of Ophthalmology Volume 14 ; 2022 ; 14 ; https://www.sjopthal.net/ ; ; >
       au < expected ; exists ; 2023 ; Sudanese Journal of Ophthalmology Volume 15 ; 2023 ; 15 ; https://www.sjopthal.net/ ; ; >
 
@@ -11715,7 +11715,7 @@
       au < finished ; finished ; 2019 ; World Journal of Colorectal Surgery Volume 8 ; 2019 ; 8 ; https://www.wjcs.us.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2020 ; World Journal of Colorectal Surgery Volume 9 ; 2020 ; 9 ; https://www.wjcs.us.com/ ; ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; World Journal of Colorectal Surgery Volume 10 ; 2021 ; 10 ; https://www.wjcs.us.com/ ; ; reingest1.clockss.org:8082 >
-      au < ready ; exists ; 2022 ; World Journal of Colorectal Surgery Volume 11 ; 2022 ; 11 ; https://www.wjcs.us.com/ ; ; >
+      au < crawling ; exists ; 2022 ; World Journal of Colorectal Surgery Volume 11 ; 2022 ; 11 ; https://www.wjcs.us.com/ ; ; >
       au < expected ; exists ; 2023 ; World Journal of Colorectal Surgery Volume 12 ; 2023 ; 12 ; https://www.wjcs.us.com/ ; ; >
 
   }
@@ -11948,7 +11948,7 @@
       au < frozen ; exists ; 2019 ; Assam Journal of Internal Medicine Volume 9 ; 2019 ; 9 ; https://www.ajimedicine.com/ ; ; >
       au < frozen ; exists ; 2020 ; Assam Journal of Internal Medicine Volume 10 ; 2020 ; 10 ; https://www.ajimedicine.com/ ; ; >
       au < frozen ; exists ; 2021 ; Assam Journal of Internal Medicine Volume 11 ; 2021 ; 11 ; https://www.ajimedicine.com/ ; ; >
-      au < ready ; exists ; 2022 ; Assam Journal of Internal Medicine Volume 12 ; 2022 ; 12 ; https://www.ajimedicine.com/ ; ; >
+      au < crawling ; exists ; 2022 ; Assam Journal of Internal Medicine Volume 12 ; 2022 ; 12 ; https://www.ajimedicine.com/ ; ; >
       au < expected ; exists ; 2023 ; Assam Journal of Internal Medicine Volume 13 ; 2023 ; 13 ; https://www.ajimedicine.com/ ; ; >
 
   }
@@ -12032,7 +12032,7 @@
       #param[base_url] = https://www.cjphysiology.org/
 
       au < frozen ; exists ; 2019 ; Chinese Journal of Physiology Volume 62 ; 2019 ; 62 ; https://www.cjphysiology.org/ ; ; >
-      au < ready ; exists ; 2020 ; Chinese Journal of Physiology Volume 63 ; 2020 ; 63 ; https://www.cjphysiology.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Chinese Journal of Physiology Volume 63 ; 2020 ; 63 ; https://www.cjphysiology.org/ ; ; >
       au < frozen ; exists ; 2021 ; Chinese Journal of Physiology Volume 64 ; 2021 ; 64 ; https://www.cjphysiology.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Chinese Journal of Physiology Volume 65 ; 2022 ; 65 ; https://www.cjphysiology.org/ ; ; >
       au < manifest ; exists ; 2023 ; Chinese Journal of Physiology Volume 66 ; 2023 ; 66 ; https://www.cjphysiology.org/ ; ; >
@@ -12456,7 +12456,7 @@
 
       au < manifest ; exists ; 2018 ; International Journal of Neuro-Oncology Volume 1 ; 2018 ; 1 ; https://www.internationaljneurooncology.com/ ; ; >
       au < manifest ; exists ; 2019 ; International Journal of Neuro-Oncology Volume 2 ; 2019 ; 2 ; https://www.internationaljneurooncology.com/ ; ; >
-      au < ready ; exists ; 2020 ; International Journal of Neuro-Oncology Volume 3 ; 2020 ; 3 ; https://www.internationaljneurooncology.com/ ; ; >
+      au < crawling ; exists ; 2020 ; International Journal of Neuro-Oncology Volume 3 ; 2020 ; 3 ; https://www.internationaljneurooncology.com/ ; ; >
       au < frozen ; exists ; 2021 ; International Journal of Neuro-Oncology Volume 4 ; 2021 ; 4 ; https://www.internationaljneurooncology.com/ ; ; >
 
   }
@@ -12475,7 +12475,7 @@
 
       au < manifest ; exists ; 2018 ; International Journal of Oral Care and Research Volume 6 ; 2018 ; 6 ; https://www.ijocr.org/ ; ; >
       au < manifest ; exists ; 2019 ; International Journal of Oral Care and Research Volume 7 ; 2019 ; 7 ; https://www.ijocr.org/ ; ; >
-      au < ready ; exists ; 2020 ; International Journal of Oral Care and Research Volume 8 ; 2020 ; 8 ; https://www.ijocr.org/ ; ; >
+      au < crawling ; exists ; 2020 ; International Journal of Oral Care and Research Volume 8 ; 2020 ; 8 ; https://www.ijocr.org/ ; ; >
       au < frozen ; exists ; 2021 ; International Journal of Oral Care and Research Volume 9 ; 2021 ; 9 ; https://www.ijocr.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; International Journal of Oral Care and Research Volume 10 ; 2022 ; 10 ; https://www.ijocr.org/ ; ; >
       au < manifest ; exists ; 2023 ; International Journal of Oral Care and Research Volume 11 ; 2023 ; 11 ; https://www.ijocr.org/ ; ; >
@@ -12496,7 +12496,7 @@
 
       au < manifest ; exists ; 2018 ; International Journal of Preventive and Clinical Dental Research Volume 5 ; 2018 ; 5 ; https://www.ijpcdr.org/ ; ; >
       au < manifest ; exists ; 2019 ; International Journal of Preventive and Clinical Dental Research Volume 6 ; 2019 ; 6 ; https://www.ijpcdr.org/ ; ; >
-      au < ready ; exists ; 2020 ; International Journal of Preventive and Clinical Dental Research Volume 7 ; 2020 ; 7 ; https://www.ijpcdr.org/ ; ; >
+      au < crawling ; exists ; 2020 ; International Journal of Preventive and Clinical Dental Research Volume 7 ; 2020 ; 7 ; https://www.ijpcdr.org/ ; ; >
       au < frozen ; exists ; 2021 ; International Journal of Preventive and Clinical Dental Research Volume 8 ; 2021 ; 8 ; https://www.ijpcdr.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; International Journal of Preventive and Clinical Dental Research Volume 9 ; 2022 ; 9 ; https://www.ijpcdr.org/ ; ; >
       au < manifest ; exists ; 2023 ; International Journal of Preventive and Clinical Dental Research Volume 10 ; 2023 ; 10 ; https://www.ijpcdr.org/ ; ; >
@@ -12869,7 +12869,7 @@
       au < frozen ; exists ; 2017 ; Journal of Indian System of Medicine Volume 5 ; 2017 ; 5 ; https://www.joinsysmed.com/ ; ; >
       au < manifest ; exists ; 2018 ; Journal of Indian System of Medicine Volume 6 ; 2018 ; 6 ; https://www.joinsysmed.com/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of Indian System of Medicine Volume 7 ; 2019 ; 7 ; https://www.joinsysmed.com/ ; ; >
-      au < ready ; exists ; 2020 ; Journal of Indian System of Medicine Volume 8 ; 2020 ; 8 ; https://www.joinsysmed.com/ ; ; >
+      au < crawling ; exists ; 2020 ; Journal of Indian System of Medicine Volume 8 ; 2020 ; 8 ; https://www.joinsysmed.com/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Indian System of Medicine Volume 9 ; 2021 ; 9 ; https://www.joinsysmed.com/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Journal of Indian System of Medicine Volume 10 ; 2022 ; 10 ; https://www.joinsysmed.com/ ; ; >
       au < manifest ; exists ; 2023 ; Journal of Indian System of Medicine Volume 11 ; 2023 ; 11 ; https://www.joinsysmed.com/ ; ; >
@@ -12998,7 +12998,7 @@
 
       au < manifest ; exists ; 2018 ; Journal of Orthopaedic Diseases and Traumatology Volume 1 ; 2018 ; 1 ; https://www.jodt.org/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of Orthopaedic Diseases and Traumatology Volume 2 ; 2019 ; 2 ; https://www.jodt.org/ ; ; >
-      au < ready ; exists ; 2020 ; Journal of Orthopaedic Diseases and Traumatology Volume 3 ; 2020 ; 3 ; https://www.jodt.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Journal of Orthopaedic Diseases and Traumatology Volume 3 ; 2020 ; 3 ; https://www.jodt.org/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Orthopaedic Diseases and Traumatology Volume 4 ; 2021 ; 4 ; https://www.jodt.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Journal of Orthopaedic Diseases and Traumatology Volume 5 ; 2022 ; 5 ; https://www.jodt.org/ ; ; >
       au < manifest ; exists ; 2023 ; Journal of Orthopaedic Diseases and Traumatology Volume 6 ; 2023 ; 6 ; https://www.jodt.org/ ; ; >
@@ -13174,7 +13174,7 @@
       au < manifest ; exists ; 2017 ; Journal of Society of Indian Physiotherapists Volume 1 ; 2017 ; 1 ; https://www.jsip-physio.org/ ; ; >
       au < frozen ; exists ; 2018 ; Journal of Society of Indian Physiotherapists Volume 2 ; 2018 ; 2 ; https://www.jsip-physio.org/ ; ; >
       au < frozen ; exists ; 2019 ; Journal of Society of Indian Physiotherapists Volume 3 ; 2019 ; 3 ; https://www.jsip-physio.org/ ; ; >
-      au < ready ; exists ; 2020 ; Journal of Society of Indian Physiotherapists Volume 4 ; 2020 ; 4 ; https://www.jsip-physio.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Journal of Society of Indian Physiotherapists Volume 4 ; 2020 ; 4 ; https://www.jsip-physio.org/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Society of Indian Physiotherapists Volume 5 ; 2021 ; 5 ; https://www.jsip-physio.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Journal of Society of Indian Physiotherapists Volume 6 ; 2022 ; 6 ; https://www.jsip-physio.org/ ; ; >
       au < expected ; exists ; 2023 ; Journal of Society of Indian Physiotherapists Volume 7 ; 2023 ; 7 ; https://www.jsip-physio.org/ ; ; >
@@ -13237,7 +13237,7 @@
       au < manifest ; exists ; 2017 ; Journal of the Indian Academy of Geriatrics Volume 13 ; 2017 ; 13 ; https://www.jiag.in/ ; ; >
       au < frozen ; exists ; 2018 ; Journal of the Indian Academy of Geriatrics Volume 14 ; 2018 ; 14 ; https://www.jiag.in/ ; ; >
       au < manifest ; exists ; 2019 ; Journal of the Indian Academy of Geriatrics Volume 15 ; 2019 ; 15 ; https://www.jiag.in/ ; ; >
-      au < ready ; exists ; 2020 ; Journal of the Indian Academy of Geriatrics Volume 16 ; 2020 ; 16 ; https://www.jiag.in/ ; ; >
+      au < crawling ; exists ; 2020 ; Journal of the Indian Academy of Geriatrics Volume 16 ; 2020 ; 16 ; https://www.jiag.in/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of the Indian Academy of Geriatrics Volume 17 ; 2021 ; 17 ; https://www.jiag.in/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Journal of the Indian Academy of Geriatrics Volume 18 ; 2022 ; 18 ; https://www.jiag.in/ ; ; >
       au < manifest ; exists ; 2023 ; Journal of the Indian Academy of Geriatrics Volume 19 ; 2023 ; 19 ; https://www.jiag.in/ ; ; >
@@ -13718,7 +13718,7 @@
       au < manifest ; exists ; 2017 ; Scientific Dental Journal Volume 1 ; 2017 ; 1 ; https://www.scidentj.com/ ; ; >
       au < frozen ; exists ; 2018 ; Scientific Dental Journal Volume 2 ; 2018 ; 2 ; https://www.scidentj.com/ ; ; >
       au < manifest ; exists ; 2019 ; Scientific Dental Journal Volume 3 ; 2019 ; 3 ; https://www.scidentj.com/ ; ; >
-      au < ready ; exists ; 2020 ; Scientific Dental Journal Volume 4 ; 2020 ; 4 ; https://www.scidentj.com/ ; ; >
+      au < crawling ; exists ; 2020 ; Scientific Dental Journal Volume 4 ; 2020 ; 4 ; https://www.scidentj.com/ ; ; >
       au < frozen ; exists ; 2021 ; Scientific Dental Journal Volume 5 ; 2021 ; 5 ; https://www.scidentj.com/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Scientific Dental Journal Volume 6 ; 2022 ; 6 ; https://www.scidentj.com/ ; ; >
       au < manifest ; exists ; 2023 ; Scientific Dental Journal Volume 7 ; 2023 ; 7 ; https://www.scidentj.com/ ; ; >
@@ -13782,7 +13782,7 @@
       au < frozen ; exists ; 2017 ; Tanta Medical Journal Volume 45 ; 2017 ; 45 ; https://www.tdj.eg.net/ ; ; >
       au < manifest ; exists ; 2018 ; Tanta Medical Journal Volume 46 ; 2018 ; 46 ; https://www.tdj.eg.net/ ; ; >
       au < frozen ; exists ; 2019 ; Tanta Medical Journal Volume 47 ; 2019 ; 47 ; https://www.tdj.eg.net/ ; ; >
-      au < ready ; exists ; 2020 ; Tanta Medical Journal Volume 48 ; 2020 ; 48 ; https://www.tdj.eg.net/ ; ; >
+      au < crawling ; exists ; 2020 ; Tanta Medical Journal Volume 48 ; 2020 ; 48 ; https://www.tdj.eg.net/ ; ; >
       au < frozen ; exists ; 2021 ; Tanta Medical Journal Volume 49 ; 2021 ; 49 ; https://www.tdj.eg.net/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Tanta Medical Journal Volume 50 ; 2022 ; 50 ; https://www.tdj.eg.net/ ; ; >
       au < expected ; exists ; 2023 ; Tanta Medical Journal Volume 51 ; 2023 ; 51 ; https://www.tdj.eg.net/ ; ; >
@@ -13826,7 +13826,7 @@
 
       au < manifest ; exists ; 2018 ; The Indian Journal of Occupational Therapy Volume 50 ; 2018 ; 50 ; https://www.ijotonweb.org/ ; ; >
       au < manifest ; exists ; 2019 ; The Indian Journal of Occupational Therapy Volume 51 ; 2019 ; 51 ; https://www.ijotonweb.org/ ; ; >
-      au < ready ; exists ; 2020 ; The Indian Journal of Occupational Therapy Volume 52 ; 2020 ; 52 ; https://www.ijotonweb.org/ ; ; >
+      au < crawling ; exists ; 2020 ; The Indian Journal of Occupational Therapy Volume 52 ; 2020 ; 52 ; https://www.ijotonweb.org/ ; ; >
       au < frozen ; exists ; 2021 ; The Indian Journal of Occupational Therapy Volume 53 ; 2021 ; 53 ; https://www.ijotonweb.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; The Indian Journal of Occupational Therapy Volume 54 ; 2022 ; 54 ; https://www.ijotonweb.org/ ; ; >
       au < expected ; exists ; 2023 ; The Indian Journal of Occupational Therapy Volume 55 ; 2023 ; 55 ; https://www.ijotonweb.org/ ; ; >
@@ -13865,7 +13865,7 @@
 
       au < manifest ; exists ; 2018 ; The Onco Fertility Journal Volume 1 ; 2018 ; 1 ; https://www.tofjonline.org/ ; ; >
       au < manifest ; exists ; 2019 ; The Onco Fertility Journal Volume 2 ; 2019 ; 2 ; https://www.tofjonline.org/ ; ; >
-      au < ready ; exists ; 2020 ; The Onco Fertility Journal Volume 3 ; 2020 ; 3 ; https://www.tofjonline.org/ ; ; >
+      au < crawling ; exists ; 2020 ; The Onco Fertility Journal Volume 3 ; 2020 ; 3 ; https://www.tofjonline.org/ ; ; >
       au < frozen ; exists ; 2021 ; The Onco Fertility Journal Volume 4 ; 2021 ; 4 ; https://www.tofjonline.org/ ; ; >
 
   }
@@ -13921,7 +13921,7 @@
 
       au < frozen ; exists ; 2018 ; Vascular Investigation and Therapy Volume 1 ; 2018 ; 1 ; https://www.vitonline.org/ ; ; >
       au < manifest ; exists ; 2019 ; Vascular Investigation and Therapy Volume 2 ; 2019 ; 2 ; https://www.vitonline.org/ ; ; >
-      au < ready ; exists ; 2020 ; Vascular Investigation and Therapy Volume 3 ; 2020 ; 3 ; https://www.vitonline.org/ ; ; >
+      au < crawling ; exists ; 2020 ; Vascular Investigation and Therapy Volume 3 ; 2020 ; 3 ; https://www.vitonline.org/ ; ; >
       au < frozen ; exists ; 2021 ; Vascular Investigation and Therapy Volume 4 ; 2021 ; 4 ; https://www.vitonline.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Vascular Investigation and Therapy Volume 5 ; 2022 ; 5 ; https://www.vitonline.org/ ; ; >
       au < manifest ; exists ; 2023 ; Vascular Investigation and Therapy Volume 6 ; 2023 ; 6 ; https://www.vitonline.org/ ; ; >

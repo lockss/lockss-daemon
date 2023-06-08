@@ -14630,7 +14630,7 @@
 
     param[journal_issn] = 2632-7627
 
-    au < ready ; exists ; 2019 ; Applied Economic Analysis Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2019 ; Applied Economic Analysis Volume 27 ; 27 ; >
     au < frozen ; exists ; 2020 ; Applied Economic Analysis Volume 28 ; 28 ; >
     au < frozen ; exists ; 2021 ; Applied Economic Analysis Volume 29 ; 29 ; >
     au < frozen ; exists ; 2022 ; Applied Economic Analysis Volume 30 ; 30 ; >
@@ -14651,7 +14651,7 @@
 
     au < manifest ; exists ; 2016 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 10 ; 10 ; >
     au < manifest ; exists ; 2017 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 11 ; 11 ; >
-    au < ready ; exists ; 2018 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2018 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 12 ; 12 ; >
     au < ready ; exists ; 2019 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 13 ; 13 ; >
     au < frozen ; exists ; 2020 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 14 ; 14 ; >
     au < frozen ; exists ; 2021 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 15 ; 15 ; >
@@ -14743,7 +14743,7 @@
     param[journal_issn] = 2516-1652
 
     au < ready ; exists ; 2018 ; China Political Economy Volume 1 ; 1 ; >
-    au < ready ; exists ; 2019 ; China Political Economy Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2019 ; China Political Economy Volume 2 ; 2 ; >
     au < frozen ; exists ; 2020 ; China Political Economy Volume 3 ; 3 ; >
     au < frozen ; exists ; 2021 ; China Political Economy Volume 4 ; 4 ; >
     au < frozen ; exists ; 2022 ; China Political Economy Volume 5 ; 5 ; >
@@ -14800,7 +14800,7 @@
 
     param[journal_issn] = 2631-3030
 
-    au < ready ; exists ; 2019 ; Forest Economic Review Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2019 ; Forest Economic Review Volume 1 ; 1 ; >
     au < frozen ; exists ; 2020 ; Forest Economic Review Volume 2 ; 2 ; >
     au < frozen ; exists ; 2021 ; Forest Economic Review Volume 3 ; 3 ; >
     au < frozen ; exists ; 2022 ; Forest Economic Review Volume 4 ; 4 ; >
@@ -14820,7 +14820,7 @@
 
     au < manifest ; exists ; 2017 ; Higher Education Evaluation and Development Volume 11 ; 11 ; >
     au < ready ; exists ; 2018 ; Higher Education Evaluation and Development Volume 12 ; 12 ; >
-    au < ready ; exists ; 2019 ; Higher Education Evaluation and Development Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2019 ; Higher Education Evaluation and Development Volume 13 ; 13 ; >
     au < frozen ; exists ; 2020 ; Higher Education Evaluation and Development Volume 14 ; 14 ; >
     au < frozen ; exists ; 2021 ; Higher Education Evaluation and Development Volume 15 ; 15 ; >
     au < frozen ; exists ; 2022 ; Higher Education Evaluation and Development Volume 16 ; 16 ; >
@@ -14858,7 +14858,7 @@
 
     param[journal_issn] = 2516-8142
 
-    au < ready ; exists ; 2018 ; International Hospitality Review Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2018 ; International Hospitality Review Volume 32 ; 32 ; >
     au < ready ; exists ; 2019 ; International Hospitality Review Volume 33 ; 33 ; >
     au < frozen ; exists ; 2020 ; International Hospitality Review Volume 34 ; 34 ; >
     au < frozen ; exists ; 2021 ; International Hospitality Review Volume 35 ; 35 ; >
@@ -14928,7 +14928,7 @@
 
     param[journal_issn] = 2586-3932
 
-    au < ready ; exists ; 2019 ; International Trade, Politics and Development Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2019 ; International Trade, Politics and Development Volume 3 ; 3 ; >
     au < frozen ; exists ; 2020 ; International Trade, Politics and Development Volume 4 ; 4 ; >
     au < frozen ; exists ; 2021 ; International Trade, Politics and Development Volume 5 ; 5 ; >
     au < frozen ; exists ; 2022 ; International Trade, Politics and Development Volume 6 ; 6 ; >
@@ -14988,7 +14988,7 @@
 
     au < manifest ; exists ; 2017 ; ISRA  International Journal of Islamic Finance Volume 9 ; 9 ; >
     au < ready ; exists ; 2018 ; ISRA  International Journal of Islamic Finance Volume 10 ; 10 ; >
-    au < ready ; exists ; 2019 ; ISRA  International Journal of Islamic Finance Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2019 ; ISRA  International Journal of Islamic Finance Volume 11 ; 11 ; >
     au < frozen ; exists ; 2020 ; ISRA  International Journal of Islamic Finance Volume 12 ; 12 ; >
     au < frozen ; exists ; 2021 ; ISRA  International Journal of Islamic Finance Volume 13 ; 13 ; >
     au < frozen ; exists ; 2022 ; ISRA  International Journal of Islamic Finance Volume 14 ; 14 ; >
@@ -15043,7 +15043,7 @@
     param[journal_issn] = 2514-4774
 
     au < manifest ; exists ; 2017 ; Journal of Capital Markets Studies Volume 1 ; 1 ; >
-    au < ready ; exists ; 2018 ; Journal of Capital Markets Studies Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2018 ; Journal of Capital Markets Studies Volume 2 ; 2 ; >
     au < ready ; exists ; 2019 ; Journal of Capital Markets Studies Volume 3 ; 3 ; >
     au < frozen ; exists ; 2020 ; Journal of Capital Markets Studies Volume 4 ; 4 ; >
     au < frozen ; exists ; 2021 ; Journal of Capital Markets Studies Volume 5 ; 5 ; >
@@ -15138,8 +15138,8 @@
     param[journal_issn] = 2218-0648
 
     au < manifest ; exists ; 2017 ; Journal of Economics, Finance and Administrative Science Volume 22 ; 22 ; >
-    au < ready ; exists ; 2018 ; Journal of Economics, Finance and Administrative Science Volume 23 ; 23 ; >
-    au < ready ; exists ; 2019 ; Journal of Economics, Finance and Administrative Science Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2018 ; Journal of Economics, Finance and Administrative Science Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2019 ; Journal of Economics, Finance and Administrative Science Volume 24 ; 24 ; >
     au < frozen ; exists ; 2020 ; Journal of Economics, Finance and Administrative Science Volume 25 ; 25 ; >
     au < frozen ; exists ; 2021 ; Journal of Economics, Finance and Administrative Science Volume 26 ; 26 ; >
     au < frozen ; exists ; 2022 ; Journal of Economics, Finance and Administrative Science Volume 27 ; 27 ; >
@@ -15176,7 +15176,7 @@
     param[journal_issn] = 2586-940X
     #move to BePress, 2023
 
-    au < ready ; exists ; 2018 ; Journal of Health Research Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2018 ; Journal of Health Research Volume 32 ; 32 ; >
     au < ready ; exists ; 2019 ; Journal of Health Research Volume 33 ; 33 ; >
     au < manifest ; exists ; 2020 ; Journal of Health Research Volume 34 ; 34 ; >
     au < manifest ; exists ; 2021 ; Journal of Health Research Volume 35 ; 35 ; >
@@ -15195,7 +15195,7 @@
 
     param[journal_issn] = 2632-279X
 
-    au < ready ; exists ; 2019 ; Journal of Humanities and Applied Social Sciences Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2019 ; Journal of Humanities and Applied Social Sciences Volume 1 ; 1 ; >
     au < frozen ; exists ; 2020 ; Journal of Humanities and Applied Social Sciences Volume 2 ; 2 ; >
     au < frozen ; exists ; 2021 ; Journal of Humanities and Applied Social Sciences Volume 3 ; 3 ; >
     au < frozen ; exists ; 2022 ; Journal of Humanities and Applied Social Sciences Volume 4 ; 4 ; >
@@ -15351,7 +15351,7 @@
 
     param[journal_issn] = 2516-158X
 
-    au < ready ; exists ; 2018 ; Marine Economics and Management Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2018 ; Marine Economics and Management Volume 1 ; 1 ; >
     au < ready ; exists ; 2019 ; Marine Economics and Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 2020 ; Marine Economics and Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 2021 ; Marine Economics and Management Volume 4 ; 4 ; >
@@ -15496,7 +15496,7 @@
 
     au < manifest ; exists ; 2017 ; PSU Research Review Volume 1 ; 1 ; >
     au < ready ; exists ; 2018 ; PSU Research Review Volume 2 ; 2 ; >
-    au < ready ; exists ; 2019 ; PSU Research Review Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2019 ; PSU Research Review Volume 3 ; 3 ; >
     au < manifest ; exists ; 2020 ; PSU Research Review Volume 4 ; 4 ; >
     au < manifest ; exists ; 2021 ; PSU Research Review Volume 5 ; 5 ; >
     au < manifest ; exists ; 2022 ; PSU Research Review Volume 6 ; 6 ; >
@@ -15534,7 +15534,7 @@
 
     param[journal_issn] = 0972-9968
 
-    au < ready ; exists ; 2019 ; Rajagiri Management Journal Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2019 ; Rajagiri Management Journal Volume 13 ; 13 ; >
     au < frozen ; exists ; 2020 ; Rajagiri Management Journal Volume 14 ; 14 ; >
     au < frozen ; exists ; 2021 ; Rajagiri Management Journal Volume 15 ; 15 ; >
     au < frozen ; exists ; 2022 ; Rajagiri Management Journal Volume 16 ; 16 ; >
@@ -15592,8 +15592,8 @@
 
     param[journal_issn] = 2177-8736
 
-    au < ready ; exists ; 2018 ; Revista de Gestão Volume 25 ; 25 ; >
-    au < ready ; exists ; 2019 ; Revista de Gestão Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2018 ; Revista de Gestão Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2019 ; Revista de Gestão Volume 26 ; 26 ; >
     au < frozen ; exists ; 2020 ; Revista de Gestão Volume 27 ; 27 ; >
     au < frozen ; exists ; 2021 ; Revista de Gestão Volume 28 ; 28 ; >
     au < frozen ; exists ; 2022 ; Revista de Gestão Volume 29 ; 29 ; >
