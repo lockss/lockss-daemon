@@ -4583,7 +4583,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; ELT Journal Volume 68 ; 68 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; ELT Journal Volume 69 ; 69 ; >
     au < finished ; manifest ; 2016 ; 2016 ; ELT Journal Volume 70 ; 70 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; ELT Journal Volume 71 ; 71 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; ELT Journal Volume 71 ; 71 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; ELT Journal Volume 72 ; 72 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; ELT Journal Volume 73 ; 73 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; ELT Journal Volume 74 ; 74 ; >
@@ -4750,7 +4750,7 @@
     au < finished ; crawling ; 2014 ; 2014 ; The Econometrics Journal Volume 17 ; 17 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2015 ; 2015 ; The Econometrics Journal Volume 18 ; 18 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; 2016 ; The Econometrics Journal Volume 19 ; 19 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2017 ; 2017 ; The Econometrics Journal Volume 20 ; 20 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; The Econometrics Journal Volume 20 ; 20 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; The Econometrics Journal Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; The Econometrics Journal Volume 22 ; 22 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; The Econometrics Journal Volume 23 ; 23 ; >
@@ -5214,7 +5214,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Environmental History Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Environmental History Volume 20 ; 20 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Environmental History Volume 21 ; 21 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2017 ; 2017 ; Environmental History Volume 22 ; 22 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Environmental History Volume 22 ; 22 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2018 ; 2018 ; Environmental History Volume 23 ; 23 ; >
     au < doNotProcess ; exists ; 2019 ; 2019 ; Environmental History Volume 24 ; 24 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Environmental History Volume 25 ; 25 ; >
@@ -6144,7 +6144,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; FEMS Microbiology Ecology Volume 87-90 ; 87-90 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; FEMS Microbiology Ecology Volume 91 ; 91 ; >
     au < finished ; manifest ; 2016 ; 2016 ; FEMS Microbiology Ecology Volume 92 ; 92 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2017 ; 2017 ; FEMS Microbiology Ecology Volume 93 ; 93 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; FEMS Microbiology Ecology Volume 93 ; 93 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; FEMS Microbiology Ecology Volume 94 ; 94 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; FEMS Microbiology Ecology Volume 95 ; 95 ; >
     au < frozen ; exists ; 2020 ; 2020 ; FEMS Microbiology Ecology Volume 96 ; 96 ; >
@@ -6993,7 +6993,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Gastroenterology Report Volume 2 ; 2 ; >
     au < finished ; manifest ; 2015 ; 2015 ; Gastroenterology Report Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; 2016 ; Gastroenterology Report Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2017 ; 2017 ; Gastroenterology Report Volume 5 ; 5 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Gastroenterology Report Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; Gastroenterology Report Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Gastroenterology Report Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Gastroenterology Report Volume 8 ; 8 ; >
@@ -7200,7 +7200,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; German History Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; German History Volume 33 ; 33 ; >
     au < finished ; manifest ; 2016 ; 2016 ; German History Volume 34 ; 34 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; 2017 ; German History Volume 35 ; 35 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; German History Volume 35 ; 35 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; 2018 ; German History Volume 36 ; 36 ; >
     au < deepCrawl ; exists ; 2019 ; 2019 ; German History Volume 37 ; 37 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; German History Volume 38 ; 38 ; >
@@ -7249,7 +7249,7 @@
 
     au < finished ; manifest ; 2015 ; 2015 ; Global Summitry Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; 2016 ; Global Summitry Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2017 ; 2017 ; Global Summitry Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2017 ; 2017 ; Global Summitry Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2018 ; 2018 ; Global Summitry Volume 4 ; 4 ; >
 
   }
