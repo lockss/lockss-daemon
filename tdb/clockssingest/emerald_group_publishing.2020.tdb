@@ -14684,7 +14684,7 @@
     au < manifest ; exists ; 2016 ; Asian Association of Open Universities Journal Volume 11 ; 11 ; >
     au < manifest ; exists ; 2017 ; Asian Association of Open Universities Journal Volume 12 ; 12 ; >
     au < crawling ; exists ; 2018 ; Asian Association of Open Universities Journal Volume 13 ; 13 ; >
-    au < ready ; exists ; 2019 ; Asian Association of Open Universities Journal Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2019 ; Asian Association of Open Universities Journal Volume 14 ; 14 ; >
     au < frozen ; exists ; 2020 ; Asian Association of Open Universities Journal Volume 15 ; 15 ; >
     au < frozen ; exists ; 2021 ; Asian Association of Open Universities Journal Volume 16 ; 16 ; >
     au < frozen ; exists ; 2022 ; Asian Association of Open Universities Journal Volume 17 ; 17 ; >
@@ -14839,7 +14839,7 @@
 
     param[journal_issn] = 2515-8961
 
-    au < ready ; exists ; 2018 ; Innovation & Management Review Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2018 ; Innovation & Management Review Volume 15 ; 15 ; >
     au < ready ; exists ; 2019 ; Innovation & Management Review Volume 16 ; 16 ; >
     au < frozen ; exists ; 2020 ; Innovation & Management Review Volume 17 ; 17 ; >
     au < frozen ; exists ; 2021 ; Innovation & Management Review Volume 18 ; 18 ; >
@@ -14859,7 +14859,7 @@
     param[journal_issn] = 2516-8142
 
     au < crawling ; exists ; 2018 ; International Hospitality Review Volume 32 ; 32 ; >
-    au < ready ; exists ; 2019 ; International Hospitality Review Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2019 ; International Hospitality Review Volume 33 ; 33 ; >
     au < frozen ; exists ; 2020 ; International Hospitality Review Volume 34 ; 34 ; >
     au < frozen ; exists ; 2021 ; International Hospitality Review Volume 35 ; 35 ; >
     au < frozen ; exists ; 2022 ; International Hospitality Review Volume 36 ; 36 ; >
@@ -15007,7 +15007,7 @@
     param[journal_issn] = 2515-964X
 
     au < ready ; exists ; 2018 ; Journal of Asian Business Economics Studies Volume 25 ; 25 ; >
-    au < ready ; exists ; 2019 ; Journal of Asian Business Economics Studies Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2019 ; Journal of Asian Business Economics Studies Volume 26 ; 26 ; >
     au < frozen ; exists ; 2020 ; Journal of Asian Business Economics Studies Volume 27 ; 27 ; >
     au < frozen ; exists ; 2021 ; Journal of Asian Business Economics Studies Volume 28 ; 28 ; >
     au < frozen ; exists ; 2022 ; Journal of Asian Business Economics Studies Volume 29 ; 29 ; >
@@ -15081,7 +15081,7 @@
     param[journal_issn] = 2399-6439
 
     au < manifest ; exists ; 2017 ; Journal of Defense Analytics & Logistics Volume 1 ; 1 ; >
-    au < ready ; exists ; 2018 ; Journal of Defense Analytics & Logistics Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2018 ; Journal of Defense Analytics & Logistics Volume 2 ; 2 ; >
     au < ready ; exists ; 2019 ; Journal of Defense Analytics & Logistics Volume 3 ; 3 ; >
     au < frozen ; exists ; 2020 ; Journal of Defense Analytics & Logistics Volume 4 ; 4 ; >
     au < frozen ; exists ; 2021 ; Journal of Defense Analytics & Logistics Volume 5 ; 5 ; >
@@ -15177,7 +15177,7 @@
     #move to BePress, 2023
 
     au < crawling ; exists ; 2018 ; Journal of Health Research Volume 32 ; 32 ; >
-    au < ready ; exists ; 2019 ; Journal of Health Research Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2019 ; Journal of Health Research Volume 33 ; 33 ; >
     au < manifest ; exists ; 2020 ; Journal of Health Research Volume 34 ; 34 ; >
     au < manifest ; exists ; 2021 ; Journal of Health Research Volume 35 ; 35 ; >
     au < manifest ; exists ; 2022 ; Journal of Health Research Volume 36 ; 36 ; >
@@ -15230,7 +15230,7 @@
 
     param[journal_issn] = 2399-9802
 
-    au < ready ; exists ; 2018 ; Journal of Intelligent and Connected Vehicles Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2018 ; Journal of Intelligent and Connected Vehicles Volume 1 ; 1 ; >
     au < ready ; exists ; 2019 ; Journal of Intelligent and Connected Vehicles Volume 2 ; 2 ; >
     au < frozen ; exists ; 2020 ; Journal of Intelligent and Connected Vehicles Volume 3 ; 3 ; >
     au < frozen ; exists ; 2021 ; Journal of Intelligent and Connected Vehicles Volume 4 ; 4 ; >
@@ -15268,7 +15268,7 @@
     param[journal_issn] = 2397-7604
 
     au < manifest ; exists ; 2017 ; Journal of Research in Innovative Teaching & Learning Volume 10 ; 10 ; >
-    au < ready ; exists ; 2018 ; Journal of Research in Innovative Teaching & Learning Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2018 ; Journal of Research in Innovative Teaching & Learning Volume 11 ; 11 ; >
     au < ready ; exists ; 2019 ; Journal of Research in Innovative Teaching & Learning Volume 12 ; 12 ; >
     au < frozen ; exists ; 2020 ; Journal of Research in Innovative Teaching & Learning Volume 13 ; 13 ; >
     au < frozen ; exists ; 2021 ; Journal of Research in Innovative Teaching & Learning Volume 14 ; 14 ; >
@@ -15290,7 +15290,7 @@
     #Stopped publishing
 
     au < crawling ; exists ; 2018 ; Journal of Tourism Analysis: Revista de Análisis Turístico Volume 25 ; 25 ; >
-    au < ready ; exists ; 2019 ; Journal of Tourism Analysis: Revista de Análisis Turístico Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2019 ; Journal of Tourism Analysis: Revista de Análisis Turístico Volume 26 ; 26 ; >
     au < frozen ; exists ; 2020 ; Journal of Tourism Analysis: Revista de Análisis Turístico Volume 27 ; 27 ; >
 
   }
@@ -15308,9 +15308,9 @@
 
     au < manifest ; exists ; 2015 ; Journal of Tourism Futures Volume 1 ; 1 ; >
     au < manifest ; exists ; 2016 ; Journal of Tourism Futures Volume 2 ; 2 ; >
-    au < ready ; exists ; 2017 ; Journal of Tourism Futures Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2017 ; Journal of Tourism Futures Volume 3 ; 3 ; >
     au < crawling ; exists ; 2018 ; Journal of Tourism Futures Volume 4 ; 4 ; >
-    au < ready ; exists ; 2019 ; Journal of Tourism Futures Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2019 ; Journal of Tourism Futures Volume 5 ; 5 ; >
     au < frozen ; exists ; 2020 ; Journal of Tourism Futures Volume 6 ; 6 ; >
     au < frozen ; exists ; 2021 ; Journal of Tourism Futures Volume 7 ; 7 ; >
     au < frozen ; exists ; 2022 ; Journal of Tourism Futures Volume 8 ; 8 ; >
@@ -15332,7 +15332,7 @@
     au < manifest ; exists ; 2015 ; Journal of Work Applied Management Volume 7 ; 7 ; >
     au < manifest ; exists ; 2016 ; Journal of Work Applied Management Volume 8 ; 8 ; >
     au < manifest ; exists ; 2017 ; Journal of Work Applied Management Volume 9 ; 9 ; >
-    au < ready ; exists ; 2018 ; Journal of Work Applied Management Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2018 ; Journal of Work Applied Management Volume 10 ; 10 ; >
     au < crawling ; exists ; 2019 ; Journal of Work Applied Management Volume 11 ; 11 ; >
     au < frozen ; exists ; 2020 ; Journal of Work Applied Management Volume 12 ; 12 ; >
     au < frozen ; exists ; 2021 ; Journal of Work Applied Management Volume 13 ; 13 ; >
@@ -15352,7 +15352,7 @@
     param[journal_issn] = 2516-158X
 
     au < crawling ; exists ; 2018 ; Marine Economics and Management Volume 1 ; 1 ; >
-    au < ready ; exists ; 2019 ; Marine Economics and Management Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2019 ; Marine Economics and Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 2020 ; Marine Economics and Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 2021 ; Marine Economics and Management Volume 4 ; 4 ; >
     au < frozen ; exists ; 2022 ; Marine Economics and Management Volume 5 ; 5 ; >
@@ -15400,8 +15400,8 @@
     au < manifest ; exists ; 2014 ; Mental Illness Volume 6 ; 6 ; >
     au < manifest ; exists ; 2015 ; Mental Illness Volume 7 ; 7 ; >
     au < manifest ; exists ; 2016 ; Mental Illness Volume 8 ; 8 ; >
-    au < ready ; exists ; 2017 ; Mental Illness Volume 9 ; 9 ; >
-    au < ready ; exists ; 2018 ; Mental Illness Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2017 ; Mental Illness Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2018 ; Mental Illness Volume 10 ; 10 ; >
     au < ready ; exists ; 2019 ; Mental Illness Volume 11 ; 11 ; >
     au < frozen ; exists ; 2020 ; Mental Illness Volume 12 ; 12 ; >
     au < frozen ; exists ; 2021 ; Mental Illness Volume 13 ; 13 ; >
@@ -15515,7 +15515,7 @@
     param[journal_issn] = 2517-679X
 
     au < crawling ; exists ; 2018 ; Public Administration and Policy Volume 21 ; 21 ; >
-    au < ready ; exists ; 2019 ; Public Administration and Policy Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2019 ; Public Administration and Policy Volume 22 ; 22 ; >
     au < frozen ; exists ; 2020 ; Public Administration and Policy Volume 23 ; 23 ; >
     au < frozen ; exists ; 2021 ; Public Administration and Policy Volume 24 ; 24 ; >
     au < frozen ; exists ; 2022 ; Public Administration and Policy Volume 25 ; 25 ; >
@@ -15552,7 +15552,7 @@
 
     param[journal_issn] = 2531-0488
 
-    au < ready ; exists ; 2018 ; RAUSP Management Journal Volume 53 ; 53 ; >
+    au < crawling ; exists ; 2018 ; RAUSP Management Journal Volume 53 ; 53 ; >
     au < ready ; exists ; 2019 ; RAUSP Management Journal Volume 54 ; 54 ; >
     au < frozen ; exists ; 2020 ; RAUSP Management Journal Volume 55 ; 55 ; >
     au < frozen ; exists ; 2021 ; RAUSP Management Journal Volume 56 ; 56 ; >
@@ -15698,7 +15698,7 @@
     au < manifest ; exists ; 2015 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 12 ; 12 ; >
     au < manifest ; exists ; 2016 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 13 ; 13 ; >
     au < manifest ; exists ; 2017 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 14 ; 14 ; >
-    au < ready ; exists ; 2018 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2018 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 15 ; 15 ; >
     au < crawling ; exists ; 2019 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 16 ; 16 ; >
     au < frozen ; exists ; 2021 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 17 ; 17 ; >
     au < frozen ; exists ; 2022 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 18 ; 18 ; >
