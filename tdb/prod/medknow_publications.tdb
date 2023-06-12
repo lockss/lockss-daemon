@@ -2081,7 +2081,7 @@
     au < released ; 2020 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 41 ; 2020 ; 41 ; https://www.ijstd.org/ >
     au < released ; 2021 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 42 ; 2021 ; 42 ; https://www.ijstd.org/ >
     au < manifest ; 2022 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 43 ; 2022 ; 43 ; https://www.ijstd.org/ >
-    au < expected ; 2023 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 44 ; 2023 ; 44 ; https://www.ijstd.org/ >
+    au < manifest ; 2023 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 44 ; 2023 ; 44 ; https://www.ijstd.org/ >
 
     }
     {
@@ -6648,7 +6648,7 @@
       au < released ; 2020 ; Journal of Current Research in Scientific Medicine Volume 6 ; 2020 ; 6 ; https://www.jcrsmed.org/ >
       au < released ; 2021 ; Journal of Current Research in Scientific Medicine Volume 7 ; 2021 ; 7 ; https://www.jcrsmed.org/ >
       au < manifest ; 2022 ; Journal of Current Research in Scientific Medicine Volume 8 ; 2022 ; 8 ; https://www.jcrsmed.org/ >
-      au < expected ; 2023 ; Journal of Current Research in Scientific Medicine Volume 9 ; 2023 ; 9 ; https://www.jcrsmed.org/ >
+      au < manifest ; 2023 ; Journal of Current Research in Scientific Medicine Volume 9 ; 2023 ; 9 ; https://www.jcrsmed.org/ >
 
   }
 
@@ -12108,7 +12108,7 @@
       au < released ; 2020 ; Iraqi Journal of Hematology Volume 9 ; 2020 ; 9 ; https://www.ijhonline.org/ >
       au < released ; 2021 ; Iraqi Journal of Hematology Volume 10 ; 2021 ; 10 ; https://www.ijhonline.org/ >
       au < released ; 2022 ; Iraqi Journal of Hematology Volume 11 ; 2022 ; 11 ; https://www.ijhonline.org/ >
-      au < expected ; 2023 ; Iraqi Journal of Hematology Volume 12 ; 2023 ; 12 ; https://www.ijhonline.org/ >
+      au < manifest ; 2023 ; Iraqi Journal of Hematology Volume 12 ; 2023 ; 12 ; https://www.ijhonline.org/ >
 
   }
 
@@ -12520,9 +12520,9 @@
       param[journal_issn] = 2667-3665
       #param[base_url] = https://www.joasis.org/
 
-      au < exists ; 2020 ; Journal of Orthopaedic Association of South Indian States Volume 17 ; 2020 ; 17 ; https://www.joasis.org/ >
-      au < exists ; 2021 ; Journal of Orthopaedic Association of South Indian States Volume 18 ; 2021 ; 18 ; https://www.joasis.org/ >
-      au < expected ; 2022 ; Journal of Orthopaedic Association of South Indian States Volume 19 ; 2022 ; 19 ; https://www.joasis.org/ >
+      au < manifest ; 2020 ; Journal of Orthopaedic Association of South Indian States Volume 17 ; 2020 ; 17 ; https://www.joasis.org/ >
+      au < manifest ; 2021 ; Journal of Orthopaedic Association of South Indian States Volume 18 ; 2021 ; 18 ; https://www.joasis.org/ >
+      au < manifest ; 2022 ; Journal of Orthopaedic Association of South Indian States Volume 19 ; 2022 ; 19 ; https://www.joasis.org/ >
       au < expected ; 2023 ; Journal of Orthopaedic Association of South Indian States Volume 20 ; 2023 ; 20 ; https://www.joasis.org/ >
 
   }
