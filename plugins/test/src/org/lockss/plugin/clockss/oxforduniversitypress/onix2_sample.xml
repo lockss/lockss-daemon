@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book id="acprof-9780198283652" OSOsubject="economicsFinance" doi="10.1093/0198283652.001.0001">
+    <bookMeta id="acprof-9780198283652-bookMeta-1">
+        <OSOsubdiscipline>
+            <sdCode>ecodev</sdCode>
+            <sdExpansion>Development, Growth, and Environmental</sdExpansion>
+        </OSOsubdiscipline>
+        <ONIXMeta>
+            <ONIXMessage>
+                <FromCompany>OUP</FromCompany>
+                <FromPerson>Oxford Scholarship Online  oso@oup.co.uk</FromPerson>
+                <ToCompany>Whitakers</ToCompany>
+                <SentDate>20030818</SentDate>
+                <Product>
+                    <RecordReference>uk0198283652</RecordReference>
+                    <NotificationType>03</NotificationType>
+                    <RecordSourceType>01</RecordSourceType>
+                    <ProductIdentifier>
+                        <ProductIDType>02</ProductIDType>
+                        <IDValue>0198283652</IDValue>
+                    </ProductIdentifier>
+                    <ProductIdentifier>
+                        <ProductIDType>03</ProductIDType>
+                        <IDValue>9780198283652</IDValue>
+                    </ProductIdentifier>
+                    <ProductForm>BC</ProductForm>
+                    <Series>
+                        <SeriesIdentifier>
+                            <SeriesIDType>01</SeriesIDType>
+                            <IDTypeName>OUP</IDTypeName>
+                            <IDValue>WIDER</IDValue>
+                        </SeriesIdentifier>
+                        <TitleOfSeries>WIDER Studies in Development Economics</TitleOfSeries>
+                        <NumberWithinSeries/>
+                    </Series>
+                    <Series>
+                        <SeriesIdentifier>
+                            <SeriesIDType>01</SeriesIDType>
+                            <IDTypeName>OUP</IDTypeName>
+                            <IDValue>CPB</IDValue>
+                        </SeriesIdentifier>
+                        <TitleOfSeries>Clarendon Paperbacks</TitleOfSeries>
+                        <NumberWithinSeries/>
+                    </Series>
+                    <DistinctiveTitle>Hunger and Public Action</DistinctiveTitle>
+                    <Subtitle/>
+                    <Contributor>
+                        <SequenceNumber>1</SequenceNumber>
+                        <ContributorRole>A01</ContributorRole>
+                        <TitlesBeforeNames/>
+                        <NamesBeforeKey>Amartya</NamesBeforeKey>
+                        <KeyNames>Sen</KeyNames>
+                        <LettersAfterNames/>
+                        <ProfessionalPosition>Master of Trinity College, Cambridge</ProfessionalPosition>
+                        <Affiliation/>
+                    </Contributor>
+                    <EditionStatement/>
+                    <Language>
+                        <LanguageRole>01</LanguageRole>
+                        <LanguageCode>eng</LanguageCode>
+                    </Language>
+                    <NumberOfPages>392</NumberOfPages>
+                    <IllustrationsNote>line drawings and tables</IllustrationsNote>
+                    <Subject>
+                        <SubjectSchemeIdentifier>12</SubjectSchemeIdentifier>
+                        <SubjectSchemeVersion>1</SubjectSchemeVersion>
+                        <SubjectCode>GTF</SubjectCode>
+                        <SubjectHeadingText>Development studies</SubjectHeadingText>
+                    </Subject>
+                    <Subject>
+                        <SubjectSchemeIdentifier>12</SubjectSchemeIdentifier>
+                        <SubjectSchemeVersion>1</SubjectSchemeVersion>
+                        <SubjectCode>KCM</SubjectCode>
+                        <SubjectHeadingText>Development economics</SubjectHeadingText>
+                    </Subject>
+                    <Subject>
+                        <SubjectSchemeIdentifier>12</SubjectSchemeIdentifier>
+                        <SubjectSchemeVersion>1</SubjectSchemeVersion>
+                        <SubjectCode>JBNG2</SubjectCode>
+                        <SubjectHeadingText>Famine</SubjectHeadingText>
+                    </Subject>
+                    <Subject>
+                        <SubjectSchemeIdentifier>12</SubjectSchemeIdentifier>
+                        <SubjectSchemeVersion>1</SubjectSchemeVersion>
+                        <SubjectCode>JBSR</SubjectCode>
+                        <SubjectHeadingText>Aid &amp; relief programmes</SubjectHeadingText>
+                    </Subject>
+                    <AudienceCode>06</AudienceCode>
+                    <MediaFile>
+                        <MediaFileTypeCode>07</MediaFileTypeCode>
+                        <MediaFileFormatCode>02</MediaFileFormatCode>
+                        <MediaFileLinkTypeCode>01</MediaFileLinkTypeCode>
+                        <MediaFileLink>
+                            http://www.oup.co.uk/images/covers/0-19-828365-2.gif</MediaFileLink>
+                    </MediaFile>
+                    <Imprint>
+                        <NameCodeType>02</NameCodeType>
+                        <NameCodeTypeName>OXIMPRINTS</NameCodeTypeName>
+                        <NameCodeValue>CP</NameCodeValue>
+                        <ImprintName>Clarendon Press</ImprintName>
+                    </Imprint>
+                    <PublisherName>Clarendon Press</PublisherName>
+                    <CityOfPublication>Oxford</CityOfPublication>
+                    <CountryOfPublication>GB</CountryOfPublication>
+                    <PublicationDate>19910124</PublicationDate>
+                    <YearFirstPublished>1990</YearFirstPublished>
+                </Product>
+            </ONIXMessage>
+        </ONIXMeta>
+    </bookMeta>
+</book>
