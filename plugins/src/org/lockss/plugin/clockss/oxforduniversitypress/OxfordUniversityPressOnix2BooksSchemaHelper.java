@@ -345,12 +345,21 @@ implements SourceXmlSchemaHelper {
 
     /* 2. Each item (book) has its own subNode */
     //could be ONIXMessage/Product or just /Product
-    private static final String ONIX_articleNode = "//Product|//product"; 
+    private static final String ONIX_articleNode = "//Product|//product";
 
-    /* 3. in ONIX, there is no global information we care about, it is repeated per article */ 
-    private static final Map<String,XPathValue> ONIX_globalMap = null;
-
+    // Doi is at upper level
     /*
+    <book xmlns:r="http://www.rsuitecms.com/rsuite/ns/metadata" id="acprof-9780198283652" OSOsubject="economicsFinance" doi="10.1093/0198283652.001.0001">
+    */
+    static protected final String ONIX_doi = "/book/@doi";
+    static private final Map<String,XPathValue> ONIX_globalMap =
+            new HashMap<String,XPathValue>();
+      static {
+        ONIX_globalMap.put(ONIX_doi,XmlDomMetadataExtractor.TEXT_VALUE);
+
+      }
+
+  /*
      * The emitter will need a map to know how to cook ONIX raw values
      */
     private static final MultiValueMap cookMap = new MultiValueMap();

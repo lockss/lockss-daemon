@@ -46,6 +46,7 @@ import org.lockss.plugin.clockss.Onix2BooksSchemaHelper;
 import org.lockss.plugin.clockss.Onix3BooksSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
+import org.lockss.plugin.clockss.mersenne.MersenneIssueMetadataHelper;
 import org.lockss.util.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.DocumentType;
@@ -131,6 +132,10 @@ public class OxfordUniversityPressOnixXmlMetadataExtractorFactory extends Source
 
         thisAM.put(MetadataField.FIELD_PUBLISHER, publisherName);
         thisAM.put(MetadataField.FIELD_PROVIDER, providerName);
+
+        if (thisAM.getRaw(OxfordUniversityPressOnix2BooksSchemaHelper.ONIX_doi) != null) {
+            thisAM.put(MetadataField.FIELD_DOI, thisAM.getRaw(OxfordUniversityPressOnix2BooksSchemaHelper.ONIX_doi));
+        }
     }
 
   }
