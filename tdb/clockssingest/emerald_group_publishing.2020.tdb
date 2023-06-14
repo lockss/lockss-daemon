@@ -15082,7 +15082,7 @@
 
     au < manifest ; exists ; 2017 ; Journal of Defense Analytics & Logistics Volume 1 ; 1 ; >
     au < crawling ; exists ; 2018 ; Journal of Defense Analytics & Logistics Volume 2 ; 2 ; >
-    au < ready ; exists ; 2019 ; Journal of Defense Analytics & Logistics Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2019 ; Journal of Defense Analytics & Logistics Volume 3 ; 3 ; >
     au < frozen ; exists ; 2020 ; Journal of Defense Analytics & Logistics Volume 4 ; 4 ; >
     au < frozen ; exists ; 2021 ; Journal of Defense Analytics & Logistics Volume 5 ; 5 ; >
     au < frozen ; exists ; 2022 ; Journal of Defense Analytics & Logistics Volume 6 ; 6 ; >
@@ -15213,7 +15213,7 @@
 
     param[journal_issn] = 2631-357X
 
-    au < ready ; exists ; 2019 ; Journal of Industry-University Collaboration Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2019 ; Journal of Industry-University Collaboration Volume 1 ; 1 ; >
     au < frozen ; exists ; 2020 ; Journal of Industry-University Collaboration Volume 2 ; 2 ; >
     au < frozen ; exists ; 2021 ; Journal of Industry-University Collaboration Volume 3 ; 3 ; >
     au < expected ; exists ; 2023 ; Journal of Industry-University Collaboration Volume 4 ; 4 ; >
@@ -15572,7 +15572,7 @@
 
     param[journal_issn] = 2631-3561
 
-    au < ready ; exists ; 2018 ; Review of Economics and Political Science Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2018 ; Review of Economics and Political Science Volume 3 ; 3 ; >
     au < crawling ; exists ; 2019 ; Review of Economics and Political Science Volume 4 ; 4 ; >
     au < frozen ; exists ; 2020 ; Review of Economics and Political Science Volume 5 ; 5 ; >
     au < frozen ; exists ; 2021 ; Review of Economics and Political Science Volume 6 ; 6 ; >
@@ -15765,7 +15765,7 @@
 #    au < exists ; exists ; 2016 ; Archnet-IJAR Volume 10 ; 10 ; >
 #    au < exists ; exists ; 2017 ; Archnet-IJAR Volume 11 ; 11 ; >
 #    au < exists ; exists ; 2018 ; Archnet-IJAR Volume 12 ; 12 ; >
-    au < ready ; exists ; 2019 ; Archnet-IJAR Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2019 ; Archnet-IJAR Volume 13 ; 13 ; >
     au < frozen ; exists ; 2020 ; Archnet-IJAR Volume 14 ; 14 ; >
     au < frozen ; exists ; 2021 ; Archnet-IJAR Volume 15 ; 15 ; >
     au < frozen ; exists ; 2022 ; Archnet-IJAR Volume 16 ; 16 ; >
