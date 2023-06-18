@@ -86,7 +86,9 @@ public class TestCrawlRules extends LockssTestCase {
     CrawlRule cr3 = new CrawlRules.RE("blahblah.*",
 				      CrawlRules.RE.MATCH_EXCLUDE);
     assertTrue(cr1.equals(cr1));
+    assertEquals(cr1.hashCode(), cr1.hashCode());
     assertTrue(cr1.equals(cr1a));
+    assertEquals(cr1.hashCode(), cr1a.hashCode());
     assertTrue(cr1a.equals(cr1));
 
     assertFalse(cr1.equals(cr2));
@@ -126,19 +128,19 @@ public class TestCrawlRules extends LockssTestCase {
 
     CrawlRule crs1 = new CrawlRules.REMatchSet("blahblah.*",
 					       CrawlRules.RE.MATCH_INCLUDE,
-					       SetUtil.set(2, 4, 7));
+					       SetUtil.set("2", "4", "7"));
     CrawlRule crs1a = new CrawlRules.REMatchSet("blahblah.*",
 						CrawlRules.RE.MATCH_INCLUDE,
-						SetUtil.set(2, 4, 7));
+						SetUtil.set("2", "4", "7"));
     CrawlRule crs2 = new CrawlRules.REMatchSet("foo.*",
 					       CrawlRules.RE.MATCH_INCLUDE,
-					       SetUtil.set(2, 4, 7));
+					       SetUtil.set("2", "4", "7"));
     CrawlRule crs3 = new CrawlRules.REMatchSet("blahblah.*",
 					       CrawlRules.RE.MATCH_INCLUDE,
-					       SetUtil.set(2, 4));
+					       SetUtil.set("2", "4"));
     CrawlRule crs4 = new CrawlRules.REMatchSet("blahblah.*",
 					       CrawlRules.RE.MATCH_INCLUDE,
-					       SetUtil.set(4, 4, 8));
+					       SetUtil.set("4", "4", "8"));
 
     assertTrue(crs1.equals(crs1));
     assertTrue(crs1.equals(crs1a));
@@ -208,7 +210,7 @@ public class TestCrawlRules extends LockssTestCase {
 		 crr3.toString());
     CrawlRule crs1 = new CrawlRules.REMatchSet("blahblah.*",
 					       CrawlRules.RE.MATCH_INCLUDE,
-					       SetUtil.set(2, 4, 7));
+					       SetUtil.set("2", "4", "7"));
     assertEquals("[CrawlRules$REMatchSet: match_incl, 'blahblah.*' In_Set [2, 4, 7]]",
 		 crs1.toString());
     CrawlRule crs2 = new CrawlRules.REMatchSet("blahblah.*",

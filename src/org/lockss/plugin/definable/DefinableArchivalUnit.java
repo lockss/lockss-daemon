@@ -1,9 +1,5 @@
 /*
- * $Id$
- */
-
-/*
- Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2023 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -75,6 +71,11 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
   static final String PARAM_CRAWL_RULES_INCLUDE_START =
     Configuration.PREFIX + "plugin.crawlRulesIncludeStartUrl";
   static final boolean DEFAULT_CRAWL_RULES_INCLUDE_START = true;
+
+  /** If true, crawl rules pattern strings will be interned */
+  static final String PARAM_INTERN_CRAWL_RULES =
+    Configuration.PREFIX + "plugin.internCrawlRules";
+  static final boolean DEFAULT_INTERN_CRAWL_RULES = false;
 
   static final int CRAWL_RULE_CONTAINS_SET_THRESHOLD = 12;
 
@@ -359,6 +360,9 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
     List<String> resultWeightSpec =
       getElementList(KEY_AU_URL_POLL_RESULT_WEIGHT, null);
     if (resultWeightSpec != null) {
+      boolean internCrawlRules =
+        CurrentConfig.getBooleanParam(PARAM_INTERN_CRAWL_RULES,
+                                      DEFAULT_INTERN_CRAWL_RULES);
       List<String> lst = new ArrayList<String>();
       for (String pair : resultWeightSpec) {
 	// Separate printf from priority, process printf, reassemble for
@@ -384,12 +388,20 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
 	PrintfConverter.MatchPattern mp =
 	  convertVariableRegexpString(printf, RegexpContext.Url);
 	if (mp.getRegexp() != null) {
-	  lst.add(mp.getRegexp() + "," + weight);
+	  lst.add(getMpRegexp(mp, internCrawlRules) + "," + weight);
 	}
       }
       return PatternFloatMap.fromSpec(lst);
     } else {
       return null;
+    }
+  }
+
+  private String getMpRegexp(PrintfConverter.MatchPattern mp, boolean intern) {
+    if (intern) {
+      return StringPool.CRAWL_RULE_PATTERNS.intern(mp.getRegexp());
+    } else {
+      return mp.getRegexp();
     }
   }
 
@@ -452,6 +464,9 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
 
   public PatternStringMap makeUrlStringMap(List<String> spec) {
     if (spec != null) {
+      boolean internCrawlRules =
+        CurrentConfig.getBooleanParam(PARAM_INTERN_CRAWL_RULES,
+                                      DEFAULT_INTERN_CRAWL_RULES);
       List<String> lst = new ArrayList<String>();
       for (String pair : spec) {
 	// Separate printf from value string, process printf, reassemble for
@@ -468,10 +483,10 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
 	PrintfConverter.MatchPattern mp =
 	  convertVariableRegexpString(printf, RegexpContext.Url);
 	if (mp.getRegexp() != null) {
-	  lst.add(mp.getRegexp() + "," + val);
+	  lst.add(getMpRegexp(mp, internCrawlRules) + "," + val);
 	}
       }
-      return new PatternStringMap(lst);
+      return PatternStringMap.fromSpec(lst);
     } else {
       return PatternStringMap.EMPTY;
     }
@@ -930,22 +945,25 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
     if (mp.getRegexp() == null) {
       return null;
     }
+    boolean internCrawlRules =
+      CurrentConfig.getBooleanParam(PARAM_INTERN_CRAWL_RULES,
+				    DEFAULT_INTERN_CRAWL_RULES);
     List<List> matchArgs = mp.getMatchArgs();
     switch (matchArgs.size()) {
     case 0:
-      return new CrawlRules.RE(mp.getRegexp(), ignoreCase, action);
+      return CrawlRules.createRE(getMpRegexp(mp, internCrawlRules), ignoreCase, action);
     case 1:
       List argPair = matchArgs.get(0);
       AuParamType ptype = mp.getMatchArgTypes().get(0);
       switch (ptype) {
       case Range:
-	return new CrawlRules.REMatchRange(mp.getRegexp(),
+	return new CrawlRules.REMatchRange(getMpRegexp(mp, internCrawlRules),
 					   ignoreCase,
 					   action,
 					   (String)argPair.get(0),
 					   (String)argPair.get(1));
       case NumRange:
-	return new CrawlRules.REMatchRange(mp.getRegexp(),
+	return new CrawlRules.REMatchRange(getMpRegexp(mp, internCrawlRules),
 					   ignoreCase,
 					   action,
 					   ((Long)argPair.get(0)).longValue(),
