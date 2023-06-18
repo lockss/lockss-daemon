@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
 Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -311,18 +307,20 @@ public abstract class BasePlugin
       for (ConfigParamDescr descr : local) {
 	switch (descr.getTypeEnum()) {
 	case Year:
-	  res.add(descr.getDerivedDescr(BaseArchivalUnit.PREFIX_AU_SHORT_YEAR
-					+ descr.getKey()));
+	  res.add(ConfigParamDescr.intern(descr.getDerivedDescr(BaseArchivalUnit.PREFIX_AU_SHORT_YEAR
+                                                                + descr.getKey())));
 	  break;
 	case Url:
 	  ConfigParamDescr derived;
-	  derived = descr.getDerivedDescr(descr.getKey()
-					  + BaseArchivalUnit.SUFFIX_AU_HOST);
-	  derived.setType(AuParamType.String);
+	  derived =
+            ConfigParamDescr.intern(descr.getDerivedDescr(descr.getKey()
+                                                          + BaseArchivalUnit.SUFFIX_AU_HOST)
+                                    .setType(AuParamType.String));
 	  res.add(derived);
-	  derived = descr.getDerivedDescr(descr.getKey()
-					  + BaseArchivalUnit.SUFFIX_AU_PATH);
-	  derived.setType(AuParamType.String);
+	  derived =
+            ConfigParamDescr.intern(descr.getDerivedDescr(descr.getKey()
+                                                          + BaseArchivalUnit.SUFFIX_AU_PATH)
+                                    .setType(AuParamType.String));
 	  res.add(derived);
 	  break;
 	}

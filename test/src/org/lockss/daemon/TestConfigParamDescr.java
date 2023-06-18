@@ -254,7 +254,8 @@ public class TestConfigParamDescr extends LockssTestCase {
 
   public void testDerived() {
     ConfigParamDescr d = ConfigParamDescr.BASE_URL;
-    ConfigParamDescr d1 = d.getDerivedDescr("base_url_host");
+    ConfigParamDescr d1 =
+      ConfigParamDescr.intern(d.getDerivedDescr("base_url_host"));
     assertFalse(d.isDerived());
     assertTrue(d1.isDerived());
     assertNotEquals(d1, d);
@@ -262,10 +263,15 @@ public class TestConfigParamDescr extends LockssTestCase {
     assertFalse(d1.isDefinitional());
     assertEquals("base_url_host (derived from Base URL)", d1.getDisplayName());
     // Should always get same one back
-    ConfigParamDescr d2 = d.getDerivedDescr("base_url_host");
-    assertSame(d2, d1);
+
+    ConfigParamDescr d2 =
+      ConfigParamDescr.intern(d.getDerivedDescr(new String("base_url_host")));
+    assertEquals(d1, d2);
+    assertSame(d1, d2);
     // this one is different
-    ConfigParamDescr d3 = d.getDerivedDescr("base_url2_host");
+    ConfigParamDescr d3 =
+      ConfigParamDescr.intern(d.getDerivedDescr("base_url2_host"));
+    assertNotEquals(d2, d3);
     assertNotSame(d2, d3);
     assertNotEquals(d2, d3);
   }
