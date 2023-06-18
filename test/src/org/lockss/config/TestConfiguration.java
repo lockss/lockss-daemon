@@ -257,6 +257,27 @@ public class TestConfiguration extends LockssTestCase {
     assertNotSame(tdb1, tdb2);
   }
 
+  String ns(String s) {
+    return new String(s);
+  }
+
+  public void testCopyIntern() throws TdbException {
+    Configuration c1 = newConfiguration();
+    Configuration c2 = newConfiguration();
+    String k1 = "base_url";
+    String k2 = "weoiuweoi";
+    String v1 = "1230498712304";
+    String v2 = "!@#$)(!&@#$)";
+    c1.put(k1, v1);
+    c1.put(k2, v2);
+    c2.put(ns(k1), ns(v1));
+    c2.put(ns(k2), ns(v2));
+    Configuration cc1 = c1.copyIntern(StringPool.AU_CONFIG_PROPS);
+    Configuration cc2 = c2.copyIntern(StringPool.AU_CONFIG_PROPS);
+    assertSame(cc1.get(k1), cc2.get(k1));
+    assertSame(cc1.get(k2), cc2.get(k2));
+  }
+
   public void testCopyFromEvent() throws TdbException {
     Configuration c1 = newConfiguration();
     c1.put("a", "1");
@@ -285,6 +306,11 @@ public class TestConfiguration extends LockssTestCase {
     Tdb tdb2 = c2.getTdb();
     assertEmpty(tdb1.computeDifferences(tdb2).getPluginIdsForDifferences());
     assertNotSame(tdb1, tdb2);
+  }
+
+  public void testToStringMap() throws TdbException {
+    Configuration c1 = ConfigurationUtil.fromArgs("k1", "v1", "k2", "v2");
+    assertEquals(MapUtil.map("k1", "v1", "k2", "v2"), c1.toStringMap());
   }
 
   public void testEquals() throws TdbException {
@@ -763,13 +789,13 @@ public class TestConfiguration extends LockssTestCase {
     Configuration config = ConfigurationUtil.fromProps(props);
     assertEquals(-1.0, config.getDouble("p1"), 0.0000001);
     assertEquals(-1.0, config.getDouble("p1", 0.1), 0.0000001);
-    assertEquals(0.0, config.getDouble("p2"));
+    assertEquals(0.0, config.getDouble("p2"), 0.0000001);
     assertEquals(0.0, config.getDouble("p2"), 0.0);
-    assertEquals(0.0, config.getDouble("p3"));
+    assertEquals(0.0, config.getDouble("p3"), 0.0000001);
     assertEquals(0.0, config.getDouble("p3"), 0.0);
-    assertEquals(1.0, config.getDouble("p4"));
+    assertEquals(1.0, config.getDouble("p4"), 0.0000001);
     assertEquals(1.0, config.getDouble("p4"), 0.0);
-    assertEquals(-10.25, config.getDouble("p5"));
+    assertEquals(-10.25, config.getDouble("p5"), 0.0000001);
     assertEquals(-10.25, config.getDouble("p5"), 0.0);
     assertEquals(0.5, config.getDouble("p6", 0.5), 0.0);
     assertEquals(14000000000000000.0, config.getDouble("p7"), 10);

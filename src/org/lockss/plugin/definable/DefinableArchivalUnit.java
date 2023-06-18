@@ -339,7 +339,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
       definitionMap.getString(DefinablePlugin.KEY_PLUGIN_AU_CONFIG_USER_MSG,
 			      null);
     if (umsg != null) {
-      paramMap.putString(KEY_AU_CONFIG_USER_MSG, makeConfigUserMsg(umsg));
+      paramMap.putString(KEY_AU_CONFIG_USER_MSG,
+                         StringPool.AU_CONFIG_PROPS.intern(makeConfigUserMsg(umsg)));
     }
   }
 
@@ -690,7 +691,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit
     if (perms != null) {
       for (String url : perms) {
 	if (rule.match(url) != CrawlRule.INCLUDE) {
-	  expUrls.add(url);
+	  expUrls.add(StringPool.AU_CONFIG_PROPS.intern(url));
 	}
       }
     }

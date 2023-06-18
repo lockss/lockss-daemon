@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2023 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -54,6 +50,20 @@ public class TestStringPool extends LockssTestCase {
     assertSame(exp, pool.intern(s2));
   }
 
+  public void testInternNormalized() {
+    StringPool pool = new StringPool("name");
+    assertNull(pool.internNormalized(null, x -> x.toLowerCase()));
+    String s1 = new String("foo");
+    String s2 = new String("foo");
+    assertNotSame(s1, s2);
+    String exp = pool.internNormalized(s1, x -> x.toLowerCase());
+    assertSame(s1, exp);
+    assertNotSame(exp, s2);
+    assertSame(exp, pool.internNormalized(s2, x -> x.toLowerCase()));
+    assertSame(exp, pool.internNormalized("Foo", x -> x.toLowerCase()));
+    assertSame(exp, pool.internNormalized("FOO", x -> x.toLowerCase()));
+  }
+
   public void testInternList() {
     StringPool pool = new StringPool("name");
     List lst1 = ListUtil.list(new String("foo"), new String("bar"));
@@ -97,6 +107,32 @@ public class TestStringPool extends LockssTestCase {
     assertNotSame(v1, pool.internMapValue("keyxyz", new String(v1)));
     assertSame(v2, pool.internMapValue("key2", v2));
     assertSame(v2, pool.internMapValue("key2", new String(v2)));
+
+    // Test key pattern
+    pool.setKeyPattern("^.*_floober_factory$");
+    String v3 = "FactName";
+    String v4 = "FactName2";
+    assertSame(v3, pool.internMapValue("text/pdf_floober_factory", v3));
+    assertSame(v3, pool.internMapValue("text/pdf_floober_factory",
+                                       new String(v3)));
+    assertSame(v4, pool.internMapValue("text/pdf_floober_foundry", v4));
+    assertNotSame(v4, pool.internMapValue("text/pdf_floober_foundry",
+                                          new String(v4)));
+    String t1 = "true";
+    assertSame(t1, pool.internMapValue("uncommon_key", t1));
+    assertSame(t1, pool.internMapValue("uncommon_key", new String(t1)));
+  }
+
+  public void testPredefined() {
+    StringPool pool = StringPool.TDBAU_ATTRS;
+    String v1 = "val1";
+    String v2 = "val2";
+    assertSame(v1, pool.internMapValue("text/pdf_filter_factory", v1));
+    assertSame(v1, pool.internMapValue("text/pdf_filter_factory",
+                                       new String(v1)));
+    assertSame(v2, pool.internMapValue("text/pdf_toy_factory", v2));
+    assertNotSame(v2, pool.internMapValue("text/pdf_toy_factory",
+                                                 new String(v2)));
   }
 
   // Same but create pool after config set, which is a different code path
@@ -125,6 +161,6 @@ public class TestStringPool extends LockssTestCase {
     ConfigurationUtil.setFromArgs("org.lockss.stringPool.TdbAu props.mapKeys",
 				  "key1;key2");
     assertSame(v2, pool.internMapValue("type", v2));
-    assertNotSame(v2, pool.internMapValue("type", new String(v2)));
+    assertSame(v2, pool.internMapValue("type", new String(v2)));
   }
 }

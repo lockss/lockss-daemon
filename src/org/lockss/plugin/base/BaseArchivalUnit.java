@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2023 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -165,7 +161,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     } else {
       if (log.isDebug3()) log.debug3("setConfiguration: " + config);
       checkLegalConfigChange(config);
-      auConfig = config.copy();
+      auConfig = config.copyIntern(StringPool.AU_CONFIG_PROPS);
       loadAuConfigDescrs(config);
       addImpliedConfigParams();
       setBaseAuParams(config);
@@ -245,7 +241,15 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       if (config.containsKey(key)) {
         try {
           Object val = descr.getValueOfType(config.get(key));
-          paramMap.setMapElement(key, val);
+          if (val instanceof String) {
+            paramMap.putString(StringPool.AU_CONFIG_PROPS.intern(key),
+                               StringPool.AU_CONFIG_PROPS.internMapValue(key, (String)val));
+          } else if (val instanceof URL) {
+            paramMap.putString(StringPool.AU_CONFIG_PROPS.intern(key),
+                               StringPool.AU_CONFIG_PROPS.internMapValue(key, val.toString()));
+          } else {
+            paramMap.setMapElement(StringPool.AU_CONFIG_PROPS.intern(key), val);
+          }
         } catch (Exception ex) {
           throw new ConfigurationException("Error configuring: " + key, ex);
         }
@@ -269,7 +273,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
     // get the base url
     URL baseUrl = loadConfigUrl(ConfigParamDescr.BASE_URL, config);
-    paramMap.putUrl(KEY_AU_BASE_URL, baseUrl);
+    paramMap.putString(KEY_AU_BASE_URL,
+                       StringPool.AU_CONFIG_PROPS.intern(baseUrl.toString()));
 
     // get the fetch delay
     long minFetchDelay = CurrentConfig.getLongParam(PARAM_MIN_FETCH_DELAY,
@@ -325,9 +330,9 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
             URL url = (URL)val;
             if(url != null) {
               paramMap.putString(pool.intern(key + SUFFIX_AU_HOST),
-                                 url.getHost());
+                                 pool.intern(url.getHost()));
               paramMap.putString(pool.intern(key + SUFFIX_AU_PATH),
-                                 url.getPath());
+                                 pool.intern(url.getPath()));
               if (log.isDebug3()) {
                 log.debug3("Inferred " + key + SUFFIX_AU_HOST +
                               " = " + url.getHost());
@@ -467,7 +472,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
         set.addAll(cdnStems);
         set.addAll(getAdditionalUrlStems());
         res.addAll(set);
-        urlStems = res;
+        urlStems = StringPool.URL_STEMS.internList(res);
       } catch (MalformedURLException e) {
         log.error("getUrlStems(" + getName() + ")", e);
         // XXX should throw
