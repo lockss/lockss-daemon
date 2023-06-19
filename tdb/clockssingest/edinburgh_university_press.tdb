@@ -85,7 +85,7 @@
 
     au < deepCrawl ; exists ; 2021 ; Legalities: The Australian and New Zealand Journal of Law and Society Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2022 ; Legalities: The Australian and New Zealand Journal of Law and Society Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
-    au < expected ; exists ; 2023 ; Legalities: The Australian and New Zealand Journal of Law and Society Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2023 ; Legalities: The Australian and New Zealand Journal of Law and Society Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
   }
 
   {
@@ -2449,7 +2449,7 @@
 
     param[journal_id] = irss
 
-    au < exists ; exists ; 2023 ; International Review of Scottish Studies Volume 48 ; 48 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2023 ; International Review of Scottish Studies Volume 48 ; 48 ; https://www.euppublishing.com/ ; >
 
   }
 
@@ -2479,7 +2479,7 @@
 
     param[journal_id] = tna
 
-    au < exists ; exists ; 2023 ; The New Americanist Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
+    au < manifest ; exists ; 2023 ; The New Americanist Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
 
   }
 
