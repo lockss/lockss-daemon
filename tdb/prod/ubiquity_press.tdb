@@ -816,6 +816,7 @@
 
       comment[publisher] = Ubiquity Press
 #      param[base_url] = http://www.ancient-asia-journal.com/
+       #move to edtech, https://www.arfjournals.com/ancient-asia
 
       au < released ; 2006 ; 1 ; Ancient Asia Volume 2006 ; 2006 ; http://www.ancient-asia-journal.com/ >
       au < released ; 2010 ; 2 ; Ancient Asia Volume 2010 ; 2010 ; http://www.ancient-asia-journal.com/ >
@@ -830,7 +831,6 @@
       au < released ; 2020 ; 11 ; Ancient Asia Volume 2020 ; 2020 ; https://www.ancient-asia-journal.com/ >
       au < released ; 2021 ; 12 ; Ancient Asia Volume 2021 ; 2021 ; https://www.ancient-asia-journal.com/ >
       au < released ; 2022 ; 13 ; Ancient Asia Volume 2022 ; 2022 ; https://www.ancient-asia-journal.com/ >
-      au < expected ; 2023 ; 14 ; Ancient Asia Volume 2023 ; 2023 ; https://www.ancient-asia-journal.com/ >
 
   }
 
