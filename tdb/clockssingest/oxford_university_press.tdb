@@ -10062,7 +10062,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Antitrust Enforcement Volume 3 ; 3 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Antitrust Enforcement Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2017 ; 2017 ; Journal of Antitrust Enforcement Volume 5 ; 5 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2018 ; 2018 ; Journal of Antitrust Enforcement Volume 6 ; 6 ; >
+    au < finished ; manifest ; 2018 ; 2018 ; Journal of Antitrust Enforcement Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Antitrust Enforcement Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Antitrust Enforcement Volume 8 ; 8 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Journal of Antitrust Enforcement Volume 9 ; 9 ; >
@@ -10120,7 +10120,7 @@
     au < finished ; manifest ; 2015 ; 2015 ; Journal of Burn Care & Research Volume 36 ; 36 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Burn Care & Research Volume 37 ; 37 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2017 ; 2017 ; Journal of Burn Care & Research Volume 38 ; 38 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; 2018 ; Journal of Burn Care & Research Volume 39 ; 39 ; >
+    au < finished ; manifest ; 2018 ; 2018 ; Journal of Burn Care & Research Volume 39 ; 39 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Burn Care & Research Volume 40 ; 40 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Burn Care & Research Volume 41 ; 41 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Journal of Burn Care & Research Volume 42 ; 42 ; >
@@ -10195,7 +10195,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Chromatographic Science Volume 53 ; 53 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Chromatographic Science Volume 54 ; 54 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; 2017 ; Journal of Chromatographic Science Volume 55 ; 55 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; 2018 ; Journal of Chromatographic Science Volume 56 ; 56 ; >
+    au < finished ; manifest ; 2018 ; 2018 ; Journal of Chromatographic Science Volume 56 ; 56 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Chromatographic Science Volume 57 ; 57 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Chromatographic Science Volume 58 ; 58 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Journal of Chromatographic Science Volume 59 ; 59 ; >
@@ -10274,7 +10274,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Church and State Volume 57 ; 57 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Church and State Volume 58 ; 58 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; 2017 ; Journal of Church and State Volume 59 ; 59 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; 2018 ; Journal of Church and State Volume 60 ; 60 ; >
+    au < finished ; manifest ; 2018 ; 2018 ; Journal of Church and State Volume 60 ; 60 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Church and State Volume 61 ; 61 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Church and State Volume 62 ; 62 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Journal of Church and State Volume 63 ; 63 ; >
@@ -10294,7 +10294,7 @@
 
     param[journal_id] = joc
 
-    au < frozen ; exists ; 2018 ; 2018 ; Journal of Communication Volume 1 ; 1 ; >
+    au < finished ; manifest ; 2018 ; 2018 ; Journal of Communication Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Communication Volume 2 ; 2 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Communication Volume 3 ; 3 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Journal of Communication Volume 4 ; 4 ; >
@@ -10327,7 +10327,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Competition Law & Economics Volume 11 ; 11 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Journal of Competition Law & Economics Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; 2017 ; Journal of Competition Law & Economics Volume 13 ; 13 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; 2018 ; Journal of Competition Law & Economics Volume 14 ; 14 ; >
+    au < finished ; manifest ; 2018 ; 2018 ; Journal of Competition Law & Economics Volume 14 ; 14 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Competition Law & Economics Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Competition Law & Economics Volume 16 ; 16 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Journal of Competition Law & Economics Volume 17 ; 17 ; >
