@@ -1418,8 +1418,8 @@
     param[journal_id] = jaoac
     #content available from 1915 Volume 1 to 2007 Volume 90
 
-    au < manifest ; exists ; 2008 ; 2008 ; Journal of AOAC INTERNATIONAL Volume 91 ; 91 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Journal of AOAC INTERNATIONAL Volume 92 ; 92 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Journal of AOAC INTERNATIONAL Volume 91 ; 91 ; >
+    au < ready ; exists ; 2009 ; 2009 ; Journal of AOAC INTERNATIONAL Volume 92 ; 92 ; >
     au < manifest ; exists ; 2010 ; 2010 ; Journal of AOAC INTERNATIONAL Volume 93 ; 93 ; >
     au < manifest ; exists ; 2011 ; 2011 ; Journal of AOAC INTERNATIONAL Volume 94 ; 94 ; >
     au < manifest ; exists ; 2012 ; 2012 ; Journal of AOAC INTERNATIONAL Volume 95 ; 95 ; >
@@ -7105,7 +7105,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Geophysical Journal International Volume 216-219 ; 216-219 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Geophysical Journal International Volume 220-223 ; 220-223 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Geophysical Journal International Volume 224-227 ; 224-227 ; >
-    au < manifest ; exists ; 2022 ; 2022 ; Geophysical Journal International Volume 228-231 ; 228-231 ; >
+    au < ready ; exists ; 2022 ; 2022 ; Geophysical Journal International Volume 228-231 ; 228-231 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Geophysical Journal International Volume 232-235 ; 232-235 ; >
 
   }
