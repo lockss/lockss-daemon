@@ -118,13 +118,29 @@ implements FileMetadataExtractorFactory {
 
       String ris_type = am.getRaw("TY");
       if ( !ris_type.toUpperCase().contains("BOOK") && !ris_type.toUpperCase().contains("CHAP") ) {
-        if (am.getRaw("VL") == null) {
-          log.debug3("checking VL: VL is empty, no raw volume, cu = " + cu.getUrl());
-          return;
-        } else {
-          log.debug3("checking VL: VL is not empty, VL = " + am.getRaw("VL") + ", cu = " + cu.getUrl());
-        }
 
+        // Liverpool move back and forth between Atypon and Cloudpublishing, and use IS for older issue without volume
+        //https://www.liverpooluniversitypress.co.uk/action/downloadCitation?doi=10.3828%2F27740306&format=ris&include=cit
+        //Newer issue has both volume and issue
+        //https://www.liverpooluniversitypress.co.uk/action/downloadCitation?doi=10.3828%2Fjlh.2022.1&format=ris&include=cit
+        if (cu.getUrl().contains("liverpooluniversitypress")) {
+          if ((am.getRaw("VL") == null) && (am.getRaw("IS") == null) ) {
+            // Liverpool move back and forth between Atypon and Cloudpublishing, and use IS for issue without volume
+            log.debug3("checking VL: VL is empty, no raw volume, issue is empty, cu = " + cu.getUrl());
+            return;
+          } else {
+            //Use issue as volume
+            log.debug3("checking VL: VL is empty, no raw volume, issue is not empty, cu = " + cu.getUrl());
+          }
+        } else {
+
+          if (am.getRaw("VL") == null) {
+            log.debug3("checking VL: VL is empty, no raw volume, cu = " + cu.getUrl());
+            return;
+          }  else {
+            log.debug3("checking VL: VL is not empty, VL = " + am.getRaw("VL") + ", cu = " + cu.getUrl());
+          }
+        }
       }
       /*
        * RIS data can be variable.  We don't have any way to add priority to

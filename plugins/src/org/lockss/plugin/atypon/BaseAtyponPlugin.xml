@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>153</string>
+    <string>154</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -63,7 +63,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <map>
       <entry>
         <string>Metadata</string>
-        <string>48</string>
+        <string>49</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -170,6 +170,16 @@ POSSIBILITY OF SUCH DAMAGE.
          https://royalsocietypublishing.org/toc/rstb/2019/374/1763
       -->
       <string>1,"^https?://%s/toc/%s([^/]+)?(/\d{4})?/%s($|/)", url_host(base_url), journal_id, volume_name</string>
+      <!--
+      https://www.liverpooluniversitypress.co.uk/toc/labourhistory/120/1 - 2021
+      Liverpools moved from Atypon to Cloudpublishing and moved back to Atypon, but keep older issue using different url
+      https://www.liverpooluniversitypress.co.uk/toc/10.3828/labourhistory.2020.issue-118 - 2020
+      https://www.liverpooluniversitypress.co.uk/toc/10.3828/labourhistory.2019.issue-117
+      https://www.liverpooluniversitypress.co.uk/toc/10.3828/labourhistory.2009.issue-97
+      https://www.liverpooluniversitypress.co.uk/toc/10.3828/labourhistory.1999.issue-76
+      https://www.liverpooluniversitypress.co.uk/toc/10.3828/labourhistory.1989.issue-57
+      -->
+      <string>1,"^https?://%s/toc/10[.][0-9]{4,}/%s\.\d{4}.issue-%s",url_host(base_url), journal_id, volume_name</string>
       <!-- the only difference between the last two crawl rules is what can be optional at the end of the journal_id (dot+digits or anything); not sure if this is needed -->
       <string>2,"^https?://%s/doi/([^/]+/)?[0-9.]+/(null\?|[-.9]+$)", url_host(base_url)</string>
       <string>2,"^https?://%s/doi/.*\?(prevSearch=|queryID=%%24%%7BresultBean.queryID%%7D|tab=permissions)", url_host(base_url)</string>
