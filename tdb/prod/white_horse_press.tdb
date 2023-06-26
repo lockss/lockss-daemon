@@ -79,7 +79,7 @@
     
     param[journal_id] = ev
     param[journal_issn] = 0963-2719
-    #Moved to Sage as of 2024
+    #Moved to Sage as of 2024. Back content moving end 2023.
     
     {
     param[base_url] = http://www.ingentaconnect.com/
@@ -123,8 +123,8 @@
     au < released ; 2020 ; Environmental Values Volume 29 ; 29 >
     au < released ; 2021 ; Environmental Values Volume 30 ; 30 >
     au < manifest ; 2022 ; Environmental Values Volume 31 ; 31 >
-    au < manifest ; 2023 ; Environmental Values Volume 32 ; 32 >
-    #Moved to Sage as of 2024
+    au < doNotProcess ; 2023 ; Environmental Values Volume 32 ; 32 >
+    #Moved to Sage as of 2024. Back content moving end 2023.
 
     }
   }
