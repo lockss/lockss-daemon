@@ -1427,12 +1427,12 @@
     au < crawling ; exists ; 2014 ; 2014 ; Journal of AOAC INTERNATIONAL Volume 97 ; 97 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Journal of AOAC INTERNATIONAL Volume 98 ; 98 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Journal of AOAC INTERNATIONAL Volume 99 ; 99 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Journal of AOAC INTERNATIONAL Volume 100 ; 100 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Journal of AOAC INTERNATIONAL Volume 100 ; 100 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Journal of AOAC INTERNATIONAL Volume 101 ; 101 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; Journal of AOAC INTERNATIONAL Volume 102 ; 102 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Journal of AOAC INTERNATIONAL Volume 103 ; 103 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Journal of AOAC INTERNATIONAL Volume 104 ; 104 ; >
-    au < manifest ; exists ; 2022 ; 2022 ; Journal of AOAC INTERNATIONAL Volume 105 ; 105 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Journal of AOAC INTERNATIONAL Volume 102 ; 102 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Journal of AOAC INTERNATIONAL Volume 103 ; 103 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Journal of AOAC INTERNATIONAL Volume 104 ; 104 ; >
+    au < ready ; exists ; 2022 ; 2022 ; Journal of AOAC INTERNATIONAL Volume 105 ; 105 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Journal of AOAC INTERNATIONAL Volume 106 ; 106 ; >
 
   }
@@ -4237,7 +4237,7 @@
     au < finished ; manifest ; 2018 ; 2018 ; Current Legal Problems Volume 71 ; 71 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; 2019 ; Current Legal Problems Volume 72 ; 72 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; 2021 ; Current Legal Problems Volume 73 ; 73 ; >
-    au < manifest ; exists ; 2022 ; 2022 ; Current Legal Problems Volume 74 ; 74 ; >
+    au < ready ; exists ; 2022 ; 2022 ; Current Legal Problems Volume 74 ; 74 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Current Legal Problems Volume 75 ; 75 ; >
 
   }
@@ -4715,7 +4715,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Early Music Volume 47 ; 47 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Early Music Volume 48 ; 48 ; >
     au < deepCrawl ; exists ; 2021 ; 2021 ; Early Music Volume 49 ; 49 ; >
-    au < manifest ; exists ; 2022 ; 2022 ; Early Music Volume 50 ; 50 ; >
+    au < ready ; exists ; 2022 ; 2022 ; Early Music Volume 50 ; 50 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Early Music Volume 51 ; 51 ; >
 
   }
@@ -5697,7 +5697,7 @@
     param[journal_id] = ejendo
     #move from Bioscientifica, 2023-01-01
 
-    au < manifest ; exists ; 2022 ; 2022 ; European Journal of Endocrinology Volume 186-187 ; 186-187 ; >
+    au < ready ; exists ; 2022 ; 2022 ; European Journal of Endocrinology Volume 186-187 ; 186-187 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; European Journal of Endocrinology Volume 188-189 ; 188-189 ; >
 
   }
@@ -6054,7 +6054,7 @@
     param[journal_id] = evolut
     #move from Wiley by 2023-01-01
 
-    au < manifest ; exists ; 2022 ; 2022 ; Evolution Volume 76 ; 76 ; >
+    au < ready ; exists ; 2022 ; 2022 ; Evolution Volume 76 ; 76 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Evolution Volume 77 ; 77 ; >
 
   }
@@ -6070,7 +6070,7 @@
     param[journal_id] = evlett
     #move from Wiley by 2023-01-01
 
-    au < manifest ; exists ; 2022 ; 2022 ; Evolution Letters Volume 6 ; 6 ; >
+    au < ready ; exists ; 2022 ; 2022 ; Evolution Letters Volume 6 ; 6 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Evolution Letters Volume 7 ; 7 ; >
 
   }
