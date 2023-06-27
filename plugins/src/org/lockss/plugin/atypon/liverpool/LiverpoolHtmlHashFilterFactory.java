@@ -105,6 +105,8 @@ public class LiverpoolHtmlHashFilterFactory
 
         HtmlNodeFilters.tagWithAttributeRegex("div", "class",
                     "core-container"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class",
+                    "meta-panel"),
     };
     
     // handled by parent: script, sfxlink, stylesheet, pdfplus file sise

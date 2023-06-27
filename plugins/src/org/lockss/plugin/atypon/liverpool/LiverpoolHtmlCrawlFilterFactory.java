@@ -55,6 +55,7 @@ public class LiverpoolHtmlCrawlFilterFactory
     HtmlNodeFilters.tagWithAttribute("div", "aria-relevant", "additions"),
     // In March/2023, the publisher lists related books at the bottom of the page
     HtmlNodeFilters.tagWithAttributeRegex("a", "class", "slide_item__content"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "meta-panel"),
                                              
     // all has been moved up to parent
   };
