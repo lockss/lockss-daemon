@@ -53,6 +53,15 @@ my $ua = LWP::UserAgent->new( cookie_jar => $cjar, agent => "LOCKSS cache", ssl_
 $ua->proxy('http', 'http://proxy.lockss.org:3128/');
 $ua->no_proxy('localhost', '127.0.0.1');
 
+#Fetch IP address
+my $ip_address = "";
+my $ip_url = uri_unescape("https://ipecho.net/plain");
+my $ip_req = HTTP::Request->new(GET, $ip_url);
+my $ip_resp = $ua->request($ip_req);
+if ($ip_resp->is_success) {
+  $ip_address = $ip_resp->content;
+}
+
 while (my $line = <>) {
   chomp $line;
   my $auid_long = $line;
@@ -4258,5 +4267,6 @@ printf("*Today: %s\n", $datestring);
 printf("*Total manifests found: %d\n", $total_manifests);
 printf("*Total missing manifests: %d\n", $total_missing);
 printf("*Total AUs with unknown plugin: %d\n", $total_missing_plugin);
-printf("*Total IP Address: %s\n", `hostname -I`);
+printf("*Total IP Address: %s", `hostname -I`);
+printf("*Total Simple IP Address: %s\n", $ip_address);
 exit(0);
