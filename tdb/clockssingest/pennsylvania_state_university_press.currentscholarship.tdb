@@ -28,25 +28,25 @@
       param[journal_id] = chaucer
       # opted to make all viable though vols 46-49 (2012-2014 superset) were collected
 
-      au < exists ; exists ; 2005 ; The Chaucer Review Volume 2005 ; 2005 ; 2005 ; >
-      au < exists ; exists ; 2006 ; The Chaucer Review Volume 2006 ; 2006 ; 2006 ; >
-      au < exists ; exists ; 2007 ; The Chaucer Review Volume 2007 ; 2007 ; 2007 ; >
-      au < exists ; exists ; 2008 ; The Chaucer Review Volume 2008 ; 2008 ; 2008 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; The Chaucer Review Volume 2009 ; 2009 ; 2009 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; The Chaucer Review Volume 2010 ; 2010 ; 2010 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; The Chaucer Review Volume 2011 ; 2011 ; 2011 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; The Chaucer Review Volume 2012 ; 2012 ; 2012 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; The Chaucer Review Volume 2013 ; 2013 ; 2013 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; The Chaucer Review Volume 2014 ; 2014 ; 2014 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; The Chaucer Review Volume 2015 ; 2015 ; 2015 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; The Chaucer Review Volume 2016 ; 2016 ; 2016 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; The Chaucer Review Volume 2017 ; 2017 ; 2017 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; The Chaucer Review Volume 2018 ; 2018 ; 2018 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; The Chaucer Review Volume 2019 ; 2019 ; 2019 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; The Chaucer Review Volume 2020 ; 2020 ; 2020 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; The Chaucer Review Volume 2021 ; 2021 ; 2021 ; >
-      au < exists ; exists ; 2022 ; The Chaucer Review Volume 2022 ; 2022 ; 2022 ; >
-      au < expected ; exists ; 2023 ; The Chaucer Review Volume 2023 ; 2023 ; 2023 ; >
+      au < exists ; exists ; 2005 ; The Chaucer Review Volume 40 ; 40 ; 2005 ; >
+      au < exists ; exists ; 2006 ; The Chaucer Review Volume 41 ; 41 ; 2006 ; >
+      au < exists ; exists ; 2007 ; The Chaucer Review Volume 42 ; 42 ; 2007 ; >
+      au < exists ; exists ; 2008 ; The Chaucer Review Volume 43 ; 43 ; 2008 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; The Chaucer Review Volume 44 ; 44 ; 2009 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; The Chaucer Review Volume 45 ; 45 ; 2010 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; The Chaucer Review Volume 46 ; 46 ; 2011 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; The Chaucer Review Volume 47 ; 47 ; 2012 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; The Chaucer Review Volume 48 ; 48 ; 2013 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; The Chaucer Review Volume 49 ; 49 ; 2014 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; The Chaucer Review Volume 50 ; 50 ; 2015 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; The Chaucer Review Volume 51 ; 51 ; 2016 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; The Chaucer Review Volume 52 ; 52 ; 2017 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; The Chaucer Review Volume 53 ; 53 ; 2018 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; The Chaucer Review Volume 54 ; 54 ; 2019 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; The Chaucer Review Volume 55 ; 55 ; 2020 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; The Chaucer Review Volume 56 ; 56 ; 2021 ; >
+      au < exists ; exists ; 2022 ; The Chaucer Review Volume 57 ; 57 ; 2022 ; >
+      au < expected ; exists ; 2023 ; The Chaucer Review Volume 58 ; 58 ; 2023 ; >
 
   }
   
@@ -180,7 +180,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; The F. Scott Fitzgerald Review Volume 17 ; 17 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; The F. Scott Fitzgerald Review Volume 18 ; 18 ; 2020 ; >
       au < manifest ; exists ; 2021 ; The F. Scott Fitzgerald Review Volume 19 ; 19 ; 2021 ; >
-      au < exists ; exists ; 2022 ; The F. Scott Fitzgerald Review Volume 20 ; 20 ; 2022 ; >
+      #No volume for 2022
       au < expected ; exists ; 2023 ; The F. Scott Fitzgerald Review Volume 21 ; 21 ; 2023 ; >
 
   }
@@ -209,8 +209,8 @@
       au < doNotProcess ; doNotProcess ; 2019 ; The Good Society Volume 28 ; 28 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; The Good Society Volume 29 ; 29 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; The Good Society Volume 30 ; 30 ; 2021 ; >
-      au < exists ; exists ; 2022 ; The Good Society Volume 31 ; 31 ; 2022 ; >
-      au < expected ; exists ; 2023 ; The Good Society Volume 32 ; 32 ; 2023 ; >
+      #No volume for 2022
+      au < expected ; exists ; 2023 ; The Good Society Volume 31 ; 31 ; 2023 ; >
 
   }
 
@@ -226,16 +226,10 @@
       param[journal_id] = ils
       # 2009, 2010 volume numbers don't line up with years
 
-      au < exists ; exists ; 1999 ; Interdisciplinary Literary Studies Volume 1 ; 1 ; 1999 ; >
-      au < exists ; exists ; 2000 ; Interdisciplinary Literary Studies Volume 1-2 ; 1-2 ; 2000 ; >
-      au < exists ; exists ; 2001 ; Interdisciplinary Literary Studies Volume 2-3 ; 2-3 ; 2001 ; >
-      au < exists ; exists ; 2002 ; Interdisciplinary Literary Studies Volume 3-4 ; 3-4 ; 2002 ; >
-      au < exists ; exists ; 2003 ; Interdisciplinary Literary Studies Volume 4-5 ; 4-5 ; 2003 ; >
-      au < exists ; exists ; 2004 ; Interdisciplinary Literary Studies Volume 5-6 ; 5-6 ; 2004 ; >
-      au < exists ; exists ; 2005 ; Interdisciplinary Literary Studies Volume 6-7 ; 6-7 ; 2005 ; >
-      au < exists ; exists ; 2006 ; Interdisciplinary Literary Studies Volume 7-8 ; 7-8 ; 2006 ; >
-      au < exists ; exists ; 2007 ; Interdisciplinary Literary Studies Volume 8-9 ; 8-9 ; 2007 ; >
-      au < exists ; exists ; 2008 ; Interdisciplinary Literary Studies Volume 9-10 ; 9-10 ; 2008 ; >
+      au < exists ; exists ; 2007 ; Interdisciplinary Literary Studies Volume 8 [2007] ; 8 ; 2007 ; >
+      au < exists ; exists ; 2007 ; Interdisciplinary Literary Studies Volume 9 [2007] ; 9 ; 2007 ; >
+      au < exists ; exists ; 2008 ; Interdisciplinary Literary Studies Volume 9 [2008] ; 9 ; 2008 ; >
+      au < exists ; exists ; 2008 ; Interdisciplinary Literary Studies Volume 10 [2008] ; 10 ; 2008 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Interdisciplinary Literary Studies Volume 10-11 ; 10-11 ; 2009 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Interdisciplinary Literary Studies Volume 11-12; 11-12; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Interdisciplinary Literary Studies Volume 12-13 ; 12-13 ; 2011 ; >
@@ -265,17 +259,17 @@
 
       param[journal_id] = africana-religions
 
-      au < doNotProcess ; doNotProcess ; 2013 ; Journal of Africana Religions Volume 1-2 ; 1-2 ; 2013 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; Journal of Africana Religions Volume 3 ; 3 ; 2014 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; Journal of Africana Religions Volume 4 ; 4 ; 2015 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; Journal of Africana Religions Volume 5 ; 5 ; 2016 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; Journal of Africana Religions Volume 6 ; 6 ; 2017 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; Journal of Africana Religions Volume 7 ; 7 ; 2018 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; Journal of Africana Religions Volume 8 ; 8 ; 2019 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; Journal of Africana Religions Volume 9 ; 9 ; 2020 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; Journal of Africana Religions Volume 10 ; 10 ; 2021 ; >
-      au < exists ; exists ; 2022 ; Journal of Africana Religions Volume 11 ; 11 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Journal of Africana Religions Volume 12 ; 12 ; 2023 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; Journal of Africana Religions Volume 1 ; 1 ; 2013 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; Journal of Africana Religions Volume 2 ; 2 ; 2014 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; Journal of Africana Religions Volume 3 ; 3 ; 2015 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; Journal of Africana Religions Volume 4 ; 4 ; 2016 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Journal of Africana Religions Volume 5 ; 5 ; 2017 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; Journal of Africana Religions Volume 6 ; 6 ; 2018 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; Journal of Africana Religions Volume 7 ; 7 ; 2019 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; Journal of Africana Religions Volume 8 ; 8 ; 2020 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; Journal of Africana Religions Volume 9 ; 9 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Journal of Africana Religions Volume 10 ; 10 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Journal of Africana Religions Volume 11 ; 11 ; 2023 ; >
 
   }
 
@@ -288,7 +282,7 @@
       issnl = 2160-6757
     >
 
-      param[journal_id] = jasseinsteffe
+      param[journal_id] = jaie
 
       au < doNotProcess ; doNotProcess ; 2010 ; Journal of Assessment and Institutional Effectiveness Volume 1 ; 1 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Journal of Assessment and Institutional Effectiveness Volume 2 ; 2 ; 2012 ; >
@@ -314,7 +308,7 @@
       issnl = 1526-1018
     >
 
-      param[journal_id] = jaynrandstud
+      param[journal_id] = ayn-rand
 
       au < exists ; exists ; 2008 ; The Journal of Ayn Rand Studies Volume 8 ; 8 ; 2008 ; >
       au < exists ; exists ; 2009 ; The Journal of Ayn Rand Studies Volume 9 ; 9 ; 2009 ; >
@@ -345,7 +339,7 @@
       issnl = 2166-3548
     >
 
-      param[journal_id] = jeasmedarcherstu
+      param[journal_id] = jemahs
 
       au < doNotProcess ; doNotProcess ; 2013 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 1 ; 1 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 2 ; 2 ; 2014 ; >
@@ -370,7 +364,7 @@
       issnl = 0021-3667
     >
 
-      param[journal_id] = jgeneeduc
+      param[journal_id] = general-education
 
       au < doNotProcess ; doNotProcess ; 2010 ; The Journal of General Education Volume 59 ; 59 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; The Journal of General Education Volume 60 ; 60 ; 2011 ; >
@@ -398,7 +392,7 @@
       issnl = 1947-6566
     >
 
-      param[journal_id] = jmedirelicult
+      param[journal_id] = jmrc
       comment[continues] = Mystics Quarterly 0742-5503
 
       au < doNotProcess ; doNotProcess ; 2010 ; Journal of Medieval Religious Cultures Volume 36 ; 36 ; 2010 ; >
@@ -427,7 +421,7 @@
       issnl = 1947-6574
     >
 
-      param[journal_id] = jmodeperistud
+      param[journal_id] = jmps
       # volume numbers don't line up with years - how to handle already processed content?
 
       au < doNotProcess ; doNotProcess ; 2010 ; Journal of Modern Periodical Studies Volume 1 ; 1 ; 2010 ; >
@@ -456,7 +450,7 @@
       issnl = 1933-6632
     >
 
-      param[journal_id] = jmorahist
+      param[journal_id] = moravian-history
 
       au < exists ; exists ; 2006 ; Journal of Moravian History Volume 2006 ; 2006 ; 2006 ; >
       au < exists ; exists ; 2007 ; Journal of Moravian History Volume 2007 ; 2007 ; 2007 ; >
@@ -488,7 +482,7 @@
       issnl = 0968-8005
     >
 
-      param[journal_id] = jnietstud
+      param[journal_id] = nietzsche-studies
 
       au < doNotProcess ; doNotProcess ; 2011 ; The Journal of Nietzsche Studies Volume 41-42 ; 41-42 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; The Journal of Nietzsche Studies Volume 43 ; 43 ; 2012 ; >
@@ -515,7 +509,7 @@
       issnl = 0891-625X
     >
 
-      param[journal_id] = jspecphil
+      param[journal_id] = speculative-philosophy
 
       au < doNotProcess ; doNotProcess ; 2010 ; The Journal of Speculative Philosophy Volume 24 ; 24 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; The Journal of Speculative Philosophy Volume 25 ; 25 ; 2011 ; >
@@ -543,7 +537,7 @@
       issnl = 1553-0981
     >
 
-      param[journal_id] = marktwaij
+      param[journal_id] = mark-twain
       
 
       au < doNotProcess ; doNotProcess ; 2010 ; The Mark Twain Annual Volume 8 ; 8 ; 2010 ; >
@@ -575,7 +569,7 @@
     # See pennsylvania_state_university_press.ingenta.tdb for 2005-2010
 
 
-      param[journal_id] = mediterraneanstu
+      param[journal_id] = mediterranean-studies
 
       au < doNotProcess ; doNotProcess ; 2010 ; Mediterranean Studies Volume 19 ; 19 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Mediterranean Studies Volume 20 ; 20 ; 2012 ; >
@@ -603,7 +597,7 @@
     
       #45 = no manifest page
 
-      param[journal_id] = pacicoasphil
+      param[journal_id] = pcp
 
       au < exists ; exists ; 2010 ; Pacific Coast Philology Volume 45 ; 45 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Pacific Coast Philology Volume 46 ; 46 ; 2011 ; >
@@ -630,7 +624,7 @@
       issnl = 0031-4528
     >
 
-      param[journal_id] = pennhistory
+      param[journal_id] = pa-history
 
       au < doNotProcess ; doNotProcess ; 2010 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77 ; 77 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 78 ; 78 ; 2011 ; >
@@ -658,7 +652,7 @@
       issnl = 0031-8213
     >
 
-      param[journal_id] = philrhet
+      param[journal_id] = p-n-r
 
       au < doNotProcess ; doNotProcess ; 2010 ; Philosophy and Rhetoric Volume 43 ; 43 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Philosophy and Rhetoric Volume 44 ; 44 ; 2011 ; >
@@ -711,8 +705,6 @@
       eissn = 2155-7888 ;
       issnl = 2168-0604
     >
-    
-
     
       param[journal_id] = reception
 
@@ -800,7 +792,7 @@
       issnl = 1546-007X
     >
 
-      param[journal_id] = steinbeckreview
+      param[journal_id] = steinbeck
 
       au < doNotProcess ; doNotProcess ; 2010 ; Steinbeck Review Volume 7 ; 7 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Steinbeck Review Volume 8 ; 8 ; 2011 ; >
@@ -828,7 +820,7 @@
       issnl = 0271-9274
     >
 
-      param[journal_id] = studamerjewilite
+      param[journal_id] = sajl
 
       au < doNotProcess ; doNotProcess ; 2010 ; Studies in American Jewish Literature Volume 29 ; 29 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Studies in American Jewish Literature Volume 30 ; 30 ; 2011 ; >
@@ -856,7 +848,7 @@
       issnl = 0041-1612
     >
 
-      param[journal_id] = transportationj
+      param[journal_id] = transportation-journal
 
       au < doNotProcess ; doNotProcess ; 2010 ; Transportation Journal Volume 49 ; 49 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Transportation Journal Volume 50 ; 50 ; 2011 ; >
@@ -884,7 +876,7 @@
       issnl = 1045-991X
     >
 
-      param[journal_id] = utopianstudies
+      param[journal_id] = utopian-studies
 
       au < doNotProcess ; doNotProcess ; 2010 ; Utopian Studies Volume 21 ; 21 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Utopian Studies Volume 22 ; 22 ; 2011 ; >
@@ -912,7 +904,7 @@
         eissn = 2470-6221
       >
 
-      param[journal_id] = aboriginal
+      param[journal_id] = ab-original
 
       au < doNotProcess ; doNotProcess ; 2017 ; ab-Original Volume 1 ; 1 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; ab-Original Volume 1-2 ; 1-2 ; 2018 ; >
@@ -933,7 +925,7 @@
         eissn = 2576-0998
       >
 
-      param[journal_id] = bullbiblrese
+      param[journal_id] = biblical-research
 
       au < exists ; exists ; 1991 ; Bulletin for Biblical Research Volume 1 ; 1 ; 1991 ; >
       au < exists ; exists ; 1992 ; Bulletin for Biblical Research Volume 2 ; 2 ; 1992 ; >
@@ -1083,7 +1075,7 @@
         eissn = 2572-4428
       >
 
-      param[journal_id] = comeperf
+      param[journal_id] = comedia-performance
 
       au < exists ; exists ; 2004 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 1 ; 1 ; 2004 ; >
       au < exists ; exists ; 2005 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 2 ; 2 ; 2005 ; >
@@ -1117,7 +1109,7 @@
         eissn = 2167-8510
       >
 
-      param[journal_id] = dickstudannu
+      param[journal_id] = dickens
 
       au < exists ; exists ; 1970 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 1 ; 1 ; 1970 ; >
       au < exists ; exists ; 1971 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 2 ; 2 ; 1971 ; >
@@ -1215,7 +1207,7 @@
         eissn = 2330-3980
       >
 
-      param[journal_id] = editwharrevi
+      param[journal_id] = edith-wharton
 
       au < exists ; exists ; 1990 ; Edith Wharton Review Volume 7 ; 7 ; 1990 ; >
       au < exists ; exists ; 1991 ; Edith Wharton Review Volume 8 ; 8 ; 1991 ; >
@@ -1262,7 +1254,7 @@
         eissn = 2372-191X
       >
 
-      param[journal_id] = georelioghlstud
+      param[journal_id] = george-eliot
 
       au < exists ; exists ; 1992 ; George Eliot-George Henry Lewes Studies Volume 1992 ; 1992 ; 1992 ; >
       au < exists ; exists ; 1993 ; George Eliot-George Henry Lewes Studies Volume 1993 ; 1993 ; 1993 ; >
@@ -1308,7 +1300,7 @@
         eissn = 1945-4023
       >
 
-      param[journal_id] = gestaltreview
+      param[journal_id] = gestalt-review
 
       au < exists ; exists ; 1997 ; Gestalt Review Volume 1 ; 1 ; 1997 ; >
       au < exists ; exists ; 1998 ; Gestalt Review Volume 2 ; 2 ; 1998 ; >
