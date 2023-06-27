@@ -15,6 +15,38 @@
   {
   
     title < 
+      name = Scandinavian Journal of Urology ;
+      eissn = 2168-1813 
+    >
+
+      param[base_url] = https://medicaljournalssweden.se/
+      param[journal_id] = SJU
+      attr[start_stem] = 
+      #First publication Volume 58, 1923. Older content not online 20221201
+
+      au < manifest ; exists ; 2023 ; Scandinavian Journal of Urology Volume 2023 ; 58 ; 2023 ; >
+
+  }
+
+  {
+  
+    title < 
+      name = Journal of Plastic Surgery and Hand Surgery ;
+      eissn = 2000-6764 
+    >
+
+      param[base_url] = https://medicaljournalssweden.se/
+      param[journal_id] = JPHS
+      attr[start_stem] = 
+      #First publication Volume 58, 1923. Older content not online 20221201
+
+      au < manifest ; exists ; 2023 ; Journal of Plastic Surgery and Hand Surgery Volume 2023 ; 58 ; 2023 ; >
+
+  }
+
+  {
+  
+    title < 
       name = Acta Dermato-Venereologica ;
       eissn = 1651-2057 
     >
