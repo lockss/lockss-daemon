@@ -28,10 +28,10 @@
       param[journal_id] = chaucer
       # opted to make all viable though vols 46-49 (2012-2014 superset) were collected
 
-      au < exists ; exists ; 2005 ; The Chaucer Review Volume 40 ; 40 ; 2005 ; >
-      au < exists ; exists ; 2006 ; The Chaucer Review Volume 41 ; 41 ; 2006 ; >
-      au < exists ; exists ; 2007 ; The Chaucer Review Volume 42 ; 42 ; 2007 ; >
-      au < exists ; exists ; 2008 ; The Chaucer Review Volume 43 ; 43 ; 2008 ; >
+      au < manifest ; exists ; 2005 ; The Chaucer Review Volume 40 ; 40 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; The Chaucer Review Volume 41 ; 41 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; The Chaucer Review Volume 42 ; 42 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; The Chaucer Review Volume 43 ; 43 ; 2008 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; The Chaucer Review Volume 44 ; 44 ; 2009 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; The Chaucer Review Volume 45 ; 45 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; The Chaucer Review Volume 46 ; 46 ; 2011 ; >
@@ -45,8 +45,8 @@
       au < doNotProcess ; doNotProcess ; 2019 ; The Chaucer Review Volume 54 ; 54 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; The Chaucer Review Volume 55 ; 55 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; The Chaucer Review Volume 56 ; 56 ; 2021 ; >
-      au < exists ; exists ; 2022 ; The Chaucer Review Volume 57 ; 57 ; 2022 ; >
-      au < expected ; exists ; 2023 ; The Chaucer Review Volume 58 ; 58 ; 2023 ; >
+      au < manifest ; exists ; 2022 ; The Chaucer Review Volume 57 ; 57 ; 2022 ; >
+      au < manifest ; exists ; 2023 ; The Chaucer Review Volume 58 ; 58 ; 2023 ; >
 
   }
   
@@ -226,10 +226,10 @@
       param[journal_id] = ils
       # 2009, 2010 volume numbers don't line up with years
 
-      au < exists ; exists ; 2007 ; Interdisciplinary Literary Studies Volume 8 [2007] ; 8 ; 2007 ; >
-      au < exists ; exists ; 2007 ; Interdisciplinary Literary Studies Volume 9 [2007] ; 9 ; 2007 ; >
-      au < exists ; exists ; 2008 ; Interdisciplinary Literary Studies Volume 9 [2008] ; 9 ; 2008 ; >
-      au < exists ; exists ; 2008 ; Interdisciplinary Literary Studies Volume 10 [2008] ; 10 ; 2008 ; >
+      au < manifest ; exists ; 2007 ; Interdisciplinary Literary Studies Volume 8 [2007] ; 8 ; 2007 ; >
+      au < manifest ; exists ; 2007 ; Interdisciplinary Literary Studies Volume 9 [2007] ; 9 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Interdisciplinary Literary Studies Volume 9 [2008] ; 9 ; 2008 ; >
+      au < manifest ; exists ; 2008 ; Interdisciplinary Literary Studies Volume 10 [2008] ; 10 ; 2008 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Interdisciplinary Literary Studies Volume 10-11 ; 10-11 ; 2009 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Interdisciplinary Literary Studies Volume 11-12; 11-12; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Interdisciplinary Literary Studies Volume 12-13 ; 12-13 ; 2011 ; >
@@ -268,8 +268,8 @@
       au < doNotProcess ; doNotProcess ; 2019 ; Journal of Africana Religions Volume 7 ; 7 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; Journal of Africana Religions Volume 8 ; 8 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Journal of Africana Religions Volume 9 ; 9 ; 2021 ; >
-      au < exists ; exists ; 2022 ; Journal of Africana Religions Volume 10 ; 10 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Journal of Africana Religions Volume 11 ; 11 ; 2023 ; >
+      au < manifest ; exists ; 2022 ; Journal of Africana Religions Volume 10 ; 10 ; 2022 ; >
+      au < manifest ; exists ; 2023 ; Journal of Africana Religions Volume 11 ; 11 ; 2023 ; >
 
   }
 
@@ -292,9 +292,8 @@
       au < doNotProcess ; doNotProcess ; 2017 ; Journal of Assessment and Institutional Effectiveness Volume 6 ; 6 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; Journal of Assessment and Institutional Effectiveness Volume 7 ; 7 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Journal of Assessment and Institutional Effectiveness Volume 8 ; 8 ; 2019 ; >
-      au < exists ; exists ; 2020 ; Journal of Assessment and Institutional Effectiveness Volume 9 ; 9 ; 2020 ; >
-      au < exists ; exists ; 2021 ; Journal of Assessment and Institutional Effectiveness Volume 10 ; 10 ; 2021 ; >
-      au < exists ; exists ; 2022 ; Journal of Assessment and Institutional Effectiveness Volume 11 ; 11 ; 2022 ; >
+      au < manifest ; exists ; 2020 ; Journal of Assessment and Institutional Effectiveness Volume 10 ; 10 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Journal of Assessment and Institutional Effectiveness Volume 11 ; 11 ; 2021 ; >
       au < expected ; exists ; 2023 ; Journal of Assessment and Institutional Effectiveness Volume 12 ; 12 ; 2023 ; >
 
   }
@@ -310,10 +309,12 @@
 
       param[journal_id] = ayn-rand
 
-      au < exists ; exists ; 2008 ; The Journal of Ayn Rand Studies Volume 8 ; 8 ; 2008 ; >
-      au < exists ; exists ; 2009 ; The Journal of Ayn Rand Studies Volume 9 ; 9 ; 2009 ; >
-      au < exists ; exists ; 2010 ; The Journal of Ayn Rand Studies Volume 10 ; 10 ; 2010 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; The Journal of Ayn Rand Studies Volume 11 ; 11 ; 2011 ; >
+      au < exists ; exists ; 2007 ; The Journal of Ayn Rand Studies Volume 8 ; 8 ; 2007 ; >
+      au < exists ; exists ; 2007 ; The Journal of Ayn Rand Studies Volume 9[2007]  ; 9 ; 2007 ; >
+      au < exists ; exists ; 2008 ; The Journal of Ayn Rand Studies Volume 9 [2008] ; 9 ; 2008 ; >
+      au < exists ; exists ; 2008 ; The Journal of Ayn Rand Studies Volume 10 [2008] ; 10 ; 2008 ; >
+      au < exists ; exists ; 2009 ; The Journal of Ayn Rand Studies Volume 10 [2009] ; 10 ; 2009 ; >
+      au < exists ; exists ; 2011 ; The Journal of Ayn Rand Studies Volume 11 ; 11 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; The Journal of Ayn Rand Studies Volume 12 ; 12 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; The Journal of Ayn Rand Studies Volume 13 ; 13 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The Journal of Ayn Rand Studies Volume 14 ; 14 ; 2014 ; >
@@ -324,8 +325,8 @@
       au < doNotProcess ; doNotProcess ; 2019 ; The Journal of Ayn Rand Studies Volume 19 ; 19 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; The Journal of Ayn Rand Studies Volume 20 ; 20 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; The Journal of Ayn Rand Studies Volume 21 ; 21 ; 2021 ; >
-      au < exists ; exists ; 2022 ; The Journal of Ayn Rand Studies Volume 22 ; 22 ; 2022 ; >
-      au < expected ; exists ; 2023 ; The Journal of Ayn Rand Studies Volume 23 ; 23 ; 2023 ; >
+      au < manifest ; exists ; 2022 ; The Journal of Ayn Rand Studies Volume 22 ; 22 ; 2022 ; >
+      au < manifest ; exists ; 2023 ; The Journal of Ayn Rand Studies Volume 23 ; 23 ; 2023 ; >
       #Last volume V23 2023
 
   }
@@ -2328,6 +2329,126 @@
       au < doNotProcess ; doNotProcess ; 2021 ; Thornton Wilder Journal Volume 2 ; 2 ; 2021 ; >
       au < exists ; exists ; 2022 ; Thornton Wilder Journal Volume 3 ; 3 ; 2022 ; >
       au < expected ; exists ; 2023 ; Thornton Wilder Journal Volume 4 ; 4 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = AMP: American Music Perspectives ;
+        issn = 2688-3635 ;
+        eissn = 2688-3643
+      >
+
+      param[journal_id] = amp
+
+      au < exists ; exists ; 2022 ; AMP: American Music Perspectives Volume 2022 ; 2022 ; 2022 ; >
+      au < expected ; exists ; 2023 ; AMP: American Music Perspectives Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = Bishop–Lowell Studies ;
+        issn = 2692-9481 ;
+        eissn = 2692-949X
+      >
+
+      param[journal_id] = bishop-lowell
+
+      au < exists ; exists ; 2022 ; Bishop–Lowell Studies Volume 2022 ; 2022 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Bishop–Lowell Studies Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal for the History of Rhetoric ;
+        issn = 2687-8003 ;
+        eissn = 2687-8011
+      >
+
+      param[journal_id] = jhr
+
+      au < exists ; exists ; 2022 ; Journal for the History of Rhetoric Volume 2022 ; 2022 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Journal for the History of Rhetoric Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = Methodist History ;
+        issn = 0026-1238 ;
+        eissn = 2769-3244
+      >
+
+      param[journal_id] = methodist-history
+
+      au < exists ; exists ; 2022 ; Methodist History Volume 2022 ; 2022 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Methodist History Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora ;
+        issn = 1539-8250 ;
+        eissn = 1944-7914
+      >
+
+      param[journal_id] = philosophia-africana
+
+      au < exists ; exists ; 2022 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 2022 ; 2022 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = Restoration and Eighteenth-Century Theatre Research ;
+        issn = 0034-5822 ;
+        eissn = 2769-2221
+      >
+
+      param[journal_id] = rectr
+
+      au < exists ; exists ; 2022 ; Restoration and Eighteenth-Century Theatre Research Volume 2022 ; 2022 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Restoration and Eighteenth-Century Theatre Research Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = The Scriblerian and the Kit-Cats ;
+        issn = 0190-731X ;
+        eissn = 2165-0624
+      >
+
+      param[journal_id] = scriblerian
+
+      au < exists ; exists ; 2022 ; The Scriblerian and the Kit-Cats Volume 2022 ; 2022 ; 2022 ; >
+      au < expected ; exists ; 2023 ; The Scriblerian and the Kit-Cats Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = Victorians Institute Journal ;
+        issn = 0886-3865 ;
+        eissn = 2693-3411
+      >
+
+      param[journal_id] = victorians-institute
+
+      au < exists ; exists ; 2022 ; Victorians Institute Journal Volume 2022 ; 2022 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Victorians Institute Journal Volume 2023 ; 2023 ; 2023 ; >
 
   }
 
