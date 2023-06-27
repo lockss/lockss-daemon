@@ -309,12 +309,12 @@
 
       param[journal_id] = ayn-rand
 
-      au < exists ; exists ; 2007 ; The Journal of Ayn Rand Studies Volume 8 ; 8 ; 2007 ; >
-      au < exists ; exists ; 2007 ; The Journal of Ayn Rand Studies Volume 9[2007]  ; 9 ; 2007 ; >
-      au < exists ; exists ; 2008 ; The Journal of Ayn Rand Studies Volume 9 [2008] ; 9 ; 2008 ; >
-      au < exists ; exists ; 2008 ; The Journal of Ayn Rand Studies Volume 10 [2008] ; 10 ; 2008 ; >
-      au < exists ; exists ; 2009 ; The Journal of Ayn Rand Studies Volume 10 [2009] ; 10 ; 2009 ; >
-      au < exists ; exists ; 2011 ; The Journal of Ayn Rand Studies Volume 11 ; 11 ; 2011 ; >
+      au < manifest ; exists ; 2007 ; The Journal of Ayn Rand Studies Volume 8 ; 8 ; 2007 ; >
+      au < manifest ; exists ; 2007 ; The Journal of Ayn Rand Studies Volume 9[2007]  ; 9 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; The Journal of Ayn Rand Studies Volume 9 [2008] ; 9 ; 2008 ; >
+      au < manifest ; exists ; 2008 ; The Journal of Ayn Rand Studies Volume 10 [2008] ; 10 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; The Journal of Ayn Rand Studies Volume 10 [2009] ; 10 ; 2009 ; >
+      au < manifest ; exists ; 2011 ; The Journal of Ayn Rand Studies Volume 11 ; 11 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; The Journal of Ayn Rand Studies Volume 12 ; 12 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; The Journal of Ayn Rand Studies Volume 13 ; 13 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; The Journal of Ayn Rand Studies Volume 14 ; 14 ; 2014 ; >
@@ -351,7 +351,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 7 ; 7 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 8 ; 8 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 9 ; 9 ; 2021 ; >
-      au < exists ; exists ; 2022 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 10 ; 10 ; 2022 ; >
+      au < manifest ; exists ; 2022 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 10 ; 10 ; 2022 ; >
       au < expected ; exists ; 2023 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 11 ; 11 ; 2023 ; >
 
   }
@@ -377,10 +377,9 @@
       au < doNotProcess ; doNotProcess ; 2017 ; The Journal of General Education Volume 66 ; 66 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; The Journal of General Education Volume 67 ; 67 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; The Journal of General Education Volume 68 ; 68 ; 2019 ; >
-      au < exists ; exists ; 2020 ; The Journal of General Education Volume 69 ; 69 ; 2020 ; >
+      au < manifest ; exists ; 2020 ; The Journal of General Education Volume 69 ; 69 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; The Journal of General Education Volume 70 ; 70 ; 2021 ; >
-      au < exists ; exists ; 2022 ; The Journal of General Education Volume 71 ; 71 ; 2022 ; >
-      au < expected ; exists ; 2023 ; The Journal of General Education Volume 72 ; 72 ; 2023 ; >
+      au < expected ; exists ; 2023 ; The Journal of General Education Volume 71 ; 71 ; 2023 ; >
 
   }
 
@@ -408,7 +407,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; Journal of Medieval Religious Cultures Volume 45 ; 45 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; Journal of Medieval Religious Cultures Volume 46 ; 46 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Journal of Medieval Religious Cultures Volume 47 ; 47 ; 2021 ; >
-      au < exists ; exists ; 2022 ; Journal of Medieval Religious Cultures Volume 48 ; 48 ; 2022 ; >
+      au < manifest ; exists ; 2022 ; Journal of Medieval Religious Cultures Volume 48 ; 48 ; 2022 ; >
       au < expected ; exists ; 2023 ; Journal of Medieval Religious Cultures Volume 49 ; 49 ; 2023 ; >
 
   }
@@ -435,10 +434,10 @@
       au < doNotProcess ; doNotProcess ; 2017 ; Journal of Modern Periodical Studies Volume 7 ; 7 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; Journal of Modern Periodical Studies Volume 8 ; 8 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Journal of Modern Periodical Studies Volume 9 ; 9 ; 2019 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; Journal of Modern Periodical Studies Volume 10 ; 10 ; 2020 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; Journal of Modern Periodical Studies Volume 11 ; 11 ; 2021 ; >
-      au < exists ; exists ; 2022 ; Journal of Modern Periodical Studies Volume 12 ; 12 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Journal of Modern Periodical Studies Volume 13 ; 13 ; 2023 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; Journal of Modern Periodical Studies Volume 11 ; 11 ; 2020 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; Journal of Modern Periodical Studies Volume 12 ; 12 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Journal of Modern Periodical Studies Volume 13 ; 13 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Journal of Modern Periodical Studies Volume 14 ; 14 ; 2023 ; >
 
   }
 
@@ -453,9 +452,10 @@
 
       param[journal_id] = moravian-history
 
-      au < exists ; exists ; 2006 ; Journal of Moravian History Volume 2006 ; 2006 ; 2006 ; >
-      au < exists ; exists ; 2007 ; Journal of Moravian History Volume 2007 ; 2007 ; 2007 ; >
-      au < exists ; exists ; 2008 ; Journal of Moravian History Volume 2008 ; 2008 ; 2008 ; >
+      au < manifest ; exists ; 2007 ; Journal of Moravian History Volume 2 ; 2 ; 2007 ; >
+      au < manifest ; exists ; 2007 ; Journal of Moravian History Volume 3 ; 3 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Journal of Moravian History Volume 4 ; 4 ; 2008 ; >
+      au < manifest ; exists ; 2008 ; Journal of Moravian History Volume 5 ; 5 ; 2008 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Moravian History Volume 2009 ; 2009 ; 2009 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Journal of Moravian History Volume 2010 ; 2010 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Journal of Moravian History Volume 2011 ; 2011 ; 2011 ; >
@@ -469,7 +469,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; Journal of Moravian History Volume 19 ; 19 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; Journal of Moravian History Volume 20 ; 20 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Journal of Moravian History Volume 21 ; 21 ; 2021 ; >
-      au < exists ; exists ; 2022 ; Journal of Moravian History Volume 22 ; 22 ; 2022 ; >
+      au < manifest ; exists ; 2022 ; Journal of Moravian History Volume 22 ; 22 ; 2022 ; >
       au < expected ; exists ; 2023 ; Journal of Moravian History Volume 23 ; 23 ; 2023 ; >
 
   }
@@ -496,7 +496,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; The Journal of Nietzsche Studies Volume 50 ; 50 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; The Journal of Nietzsche Studies Volume 51 ; 51 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; The Journal of Nietzsche Studies Volume 52 ; 52 ; 2021 ; >
-      au < exists ; exists ; 2022 ; The Journal of Nietzsche Studies Volume 53 ; 53 ; 2022 ; >
+      au < manifest ; exists ; 2022 ; The Journal of Nietzsche Studies Volume 53 ; 53 ; 2022 ; >
       au < expected ; exists ; 2023 ; The Journal of Nietzsche Studies Volume 54 ; 54 ; 2023 ; >
 
   }
@@ -524,7 +524,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; The Journal of Speculative Philosophy Volume 33 ; 33 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; The Journal of Speculative Philosophy Volume 34 ; 34 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; The Journal of Speculative Philosophy Volume 35 ; 35 ; 2021 ; >
-      au < exists ; exists ; 2022 ; The Journal of Speculative Philosophy Volume 36 ; 36 ; 2022 ; >
+      au < manifest ; exists ; 2022 ; The Journal of Speculative Philosophy Volume 36 ; 36 ; 2022 ; >
       au < expected ; exists ; 2023 ; The Journal of Speculative Philosophy Volume 37 ; 37 ; 2023 ; >
 
   }
@@ -552,7 +552,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; The Mark Twain Annual Volume 16 ; 16 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; The Mark Twain Annual Volume 17 ; 17 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; The Mark Twain Annual Volume 18 ; 18 ; 2020 ; >
-      au < exists ; exists ; 2021 ; The Mark Twain Annual Volume 19 ; 19 ; 2021 ; >
+      au < manifest ; exists ; 2021 ; The Mark Twain Annual Volume 19 ; 19 ; 2021 ; >
       au < exists ; exists ; 2022 ; The Mark Twain Annual Volume 20 ; 20 ; 2022 ; >
       au < expected ; exists ; 2023 ; The Mark Twain Annual Volume 21 ; 21 ; 2023 ; >
 
@@ -583,7 +583,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; Mediterranean Studies Volume 27 ; 27 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; Mediterranean Studies Volume 28 ; 28 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Mediterranean Studies Volume 29 ; 29 ; 2021 ; >
-      au < exists ; exists ; 2022 ; Mediterranean Studies Volume 30 ; 30 ; 2022 ; >
+      au < manifest ; exists ; 2022 ; Mediterranean Studies Volume 30 ; 30 ; 2022 ; >
       au < expected ; exists ; 2023 ; Mediterranean Studies Volume 31 ; 31 ; 2023 ; >
 
   }
@@ -928,26 +928,26 @@
 
       param[journal_id] = biblical-research
 
-      au < exists ; exists ; 1991 ; Bulletin for Biblical Research Volume 1 ; 1 ; 1991 ; >
-      au < exists ; exists ; 1992 ; Bulletin for Biblical Research Volume 2 ; 2 ; 1992 ; >
-      au < exists ; exists ; 1993 ; Bulletin for Biblical Research Volume 3 ; 3 ; 1993 ; >
-      au < exists ; exists ; 1994 ; Bulletin for Biblical Research Volume 4 ; 4 ; 1994 ; >
-      au < exists ; exists ; 1995 ; Bulletin for Biblical Research Volume 5 ; 5 ; 1995 ; >
-      au < exists ; exists ; 1996 ; Bulletin for Biblical Research Volume 6 ; 6 ; 1996 ; >
-      au < exists ; exists ; 1997 ; Bulletin for Biblical Research Volume 7 ; 7 ; 1997 ; >
-      au < exists ; exists ; 1998 ; Bulletin for Biblical Research Volume 8 ; 8 ; 1998 ; >
-      au < exists ; exists ; 1999 ; Bulletin for Biblical Research Volume 9 ; 9 ; 1999 ; >
-      au < exists ; exists ; 2000 ; Bulletin for Biblical Research Volume 10 ; 10 ; 2000 ; >
-      au < exists ; exists ; 2001 ; Bulletin for Biblical Research Volume 11 ; 11 ; 2001 ; >
-      au < exists ; exists ; 2002 ; Bulletin for Biblical Research Volume 12 ; 12 ; 2002 ; >
-      au < exists ; exists ; 2003 ; Bulletin for Biblical Research Volume 13 ; 13 ; 2003 ; >
-      au < exists ; exists ; 2004 ; Bulletin for Biblical Research Volume 14 ; 14 ; 2004 ; >
-      au < exists ; exists ; 2005 ; Bulletin for Biblical Research Volume 15 ; 15 ; 2005 ; >
-      au < exists ; exists ; 2006 ; Bulletin for Biblical Research Volume 16 ; 16 ; 2006 ; >
-      au < exists ; exists ; 2007 ; Bulletin for Biblical Research Volume 17 ; 17 ; 2007 ; >
-      au < exists ; exists ; 2008 ; Bulletin for Biblical Research Volume 18 ; 18 ; 2008 ; >
-      au < exists ; exists ; 2009 ; Bulletin for Biblical Research Volume 19 ; 19 ; 2009 ; >
-      au < exists ; exists ; 2010 ; Bulletin for Biblical Research Volume 20 ; 20 ; 2010 ; >
+      au < manifest ; exists ; 1991 ; Bulletin for Biblical Research Volume 1 ; 1 ; 1991 ; >
+      au < manifest ; exists ; 1992 ; Bulletin for Biblical Research Volume 2 ; 2 ; 1992 ; >
+      au < manifest ; exists ; 1993 ; Bulletin for Biblical Research Volume 3 ; 3 ; 1993 ; >
+      au < manifest ; exists ; 1994 ; Bulletin for Biblical Research Volume 4 ; 4 ; 1994 ; >
+      au < manifest ; exists ; 1995 ; Bulletin for Biblical Research Volume 5 ; 5 ; 1995 ; >
+      au < manifest ; exists ; 1996 ; Bulletin for Biblical Research Volume 6 ; 6 ; 1996 ; >
+      au < manifest ; exists ; 1997 ; Bulletin for Biblical Research Volume 7 ; 7 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; Bulletin for Biblical Research Volume 8 ; 8 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; Bulletin for Biblical Research Volume 9 ; 9 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; Bulletin for Biblical Research Volume 10 ; 10 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; Bulletin for Biblical Research Volume 11 ; 11 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; Bulletin for Biblical Research Volume 12 ; 12 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; Bulletin for Biblical Research Volume 13 ; 13 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; Bulletin for Biblical Research Volume 14 ; 14 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; Bulletin for Biblical Research Volume 15 ; 15 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; Bulletin for Biblical Research Volume 16 ; 16 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; Bulletin for Biblical Research Volume 17 ; 17 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Bulletin for Biblical Research Volume 18 ; 18 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; Bulletin for Biblical Research Volume 19 ; 19 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; Bulletin for Biblical Research Volume 20 ; 20 ; 2010 ; >
       au < exists ; exists ; 2011 ; Bulletin for Biblical Research Volume 21 ; 21 ; 2011 ; >
       au < exists ; exists ; 2012 ; Bulletin for Biblical Research Volume 22 ; 22 ; 2012 ; >
       au < exists ; exists ; 2013 ; Bulletin for Biblical Research Volume 23 ; 23 ; 2013 ; >
@@ -2342,8 +2342,10 @@
 
       param[journal_id] = amp
 
-      au < exists ; exists ; 2022 ; AMP: American Music Perspectives Volume 2022 ; 2022 ; 2022 ; >
-      au < expected ; exists ; 2023 ; AMP: American Music Perspectives Volume 2023 ; 2023 ; 2023 ; >
+      au < exists ; exists ; 2020 ; AMP: American Music Perspectives Volume 1 ; 1 ; 2020 ; >
+      au < exists ; exists ; 2021 ; AMP: American Music Perspectives Volume 2 ; 2 ; 2021 ; >
+      au < exists ; exists ; 2022 ; AMP: American Music Perspectives Volume 3 ; 3 ; 2022 ; >
+      au < expected ; exists ; 2023 ; AMP: American Music Perspectives Volume 4 ; 4 ; 2023 ; >
 
   }
 
@@ -2357,8 +2359,9 @@
 
       param[journal_id] = bishop-lowell
 
-      au < exists ; exists ; 2022 ; Bishop–Lowell Studies Volume 2022 ; 2022 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Bishop–Lowell Studies Volume 2023 ; 2023 ; 2023 ; >
+      au < exists ; exists ; 2021 ; Bishop–Lowell Studies Volume 1 ; 1 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Bishop–Lowell Studies Volume 2 ; 2 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Bishop–Lowell Studies Volume 3 ; 3 ; 2023 ; >
 
   }
 
@@ -2371,6 +2374,8 @@
       >
 
       param[journal_id] = jhr
+
+      au < exists ; exists ; 1998 ; Journal for the History of Rhetoric Volume 1 ; 1 ; 2022 ; >
 
       au < exists ; exists ; 2022 ; Journal for the History of Rhetoric Volume 2022 ; 2022 ; 2022 ; >
       au < expected ; exists ; 2023 ; Journal for the History of Rhetoric Volume 2023 ; 2023 ; 2023 ; >
@@ -2387,6 +2392,8 @@
 
       param[journal_id] = methodist-history
 
+      au < exists ; exists ; 2017 ; Methodist History Volume 55 ; 55 ; 2017 ; >
+
       au < exists ; exists ; 2022 ; Methodist History Volume 2022 ; 2022 ; 2022 ; >
       au < expected ; exists ; 2023 ; Methodist History Volume 2023 ; 2023 ; 2023 ; >
 
@@ -2401,6 +2408,8 @@
       >
 
       param[journal_id] = philosophia-africana
+
+      au < exists ; exists ; 2001 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 4 ; 4 ; 2001 ; >
 
       au < exists ; exists ; 2022 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 2022 ; 2022 ; 2022 ; >
       au < expected ; exists ; 2023 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 2023 ; 2023 ; 2023 ; >
@@ -2417,6 +2426,8 @@
 
       param[journal_id] = rectr
 
+      au < exists ; exists ; 2015 ; Restoration and Eighteenth-Century Theatre Research Volume 30 ; 30 ; 2015 ; >
+
       au < exists ; exists ; 2022 ; Restoration and Eighteenth-Century Theatre Research Volume 2022 ; 2022 ; 2022 ; >
       au < expected ; exists ; 2023 ; Restoration and Eighteenth-Century Theatre Research Volume 2023 ; 2023 ; 2023 ; >
 
@@ -2431,6 +2442,8 @@
       >
 
       param[journal_id] = scriblerian
+
+      au < exists ; exists ; 2016 ; The Scriblerian and the Kit-Cats Volume 48 ; 48 ; 2016 ; >
 
       au < exists ; exists ; 2022 ; The Scriblerian and the Kit-Cats Volume 2022 ; 2022 ; 2022 ; >
       au < expected ; exists ; 2023 ; The Scriblerian and the Kit-Cats Volume 2023 ; 2023 ; 2023 ; >
@@ -2447,8 +2460,16 @@
 
       param[journal_id] = victorians-institute
 
-      au < exists ; exists ; 2022 ; Victorians Institute Journal Volume 2022 ; 2022 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Victorians Institute Journal Volume 2023 ; 2023 ; 2023 ; >
+      au < exists ; exists ; 2014 ; Victorians Institute Journal Volume 42 ; 42 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Victorians Institute Journal Volume 43 ; 43 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Victorians Institute Journal Volume 44 ; 44 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Victorians Institute Journal Volume 45 ; 45 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Victorians Institute Journal Volume 46 ; 46 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Victorians Institute Journal Volume 47 ; 47 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Victorians Institute Journal Volume 48 ; 48 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Victorians Institute Journal Volume 49 ; 49 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Victorians Institute Journal Volume 50 ; 50 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Victorians Institute Journal Volume 51 ; 51 ; 2023 ; >
 
   }
 
