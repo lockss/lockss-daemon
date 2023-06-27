@@ -5866,7 +5866,7 @@
     au < doNotProcess ; 2014 ; Journal of Allergy Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Allergy Volume 2015 ; 2015 ; 2015 >
     au < doNotProcess ; 2016 ; Journal of Allergy Volume 2016 ; 2016 ; 2016 >
-    au < manifest ; 2017 ; Journal of Allergy Volume 2017 ; 2017 ; 2017 >
+    au < ready ; 2017 ; Journal of Allergy Volume 2017 ; 2017 ; 2017 >
 
   }
 
@@ -5962,7 +5962,7 @@
     
     au < doNotProcess ; 2014 ; Journal of Anesthesiology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Anesthesiology Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Anesthesiology Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Journal of Anesthesiology Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -5979,7 +5979,7 @@
     
     au < released ; 2013 ; Journal of Angiology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Angiology Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; 2015 ; Journal of Angiology Volume 2015 ; 2015 ; 2015 >
+    au < ready ; 2015 ; Journal of Angiology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6269,7 +6269,7 @@
     param[journal_id] = jcv
     #Moved to archive
     
-    au < manifest ; 2013 ; Journal of Calculus of Variations Volume 2013 ; 2013 ; 2013 >
+    au < ready ; 2013 ; Journal of Calculus of Variations Volume 2013 ; 2013 ; 2013 >
 
   }
 
@@ -6316,7 +6316,7 @@
     au < released ; 2013 ; Journal of Cancer Research Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Cancer Research Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Cancer Research Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Cancer Research Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Journal of Cancer Research Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -6381,7 +6381,7 @@
     
     au < released ; 2013 ; Journal of Chaos Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Chaos Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; 2016 ; Journal of Chaos Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Journal of Chaos Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -6432,7 +6432,7 @@
     au < released ; 2013 ; Journal of Climatology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Climatology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Climatology Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Climatology Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Journal of Climatology Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -6492,7 +6492,7 @@
 
     param[journal_id] = jca
     
-    au < manifest ; 2013 ; Journal of Complex Analysis Volume 2013 ; 2013 ; 2013 >
+    au < ready ; 2013 ; Journal of Complex Analysis Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Complex Analysis Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Complex Analysis Volume 2015 ; 2015 ; 2015 >
     au < doNotProcess ; 2016 ; Journal of Complex Analysis Volume 2016 ; 2016 ; 2016 >
@@ -6571,7 +6571,7 @@
     #Moved to archive
     
     au < doNotProcess ; 2014 ; Journal of Computational Environmental Sciences Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; 2015 ; Journal of Computational Environmental Sciences Volume 2015 ; 2015 ; 2015 >
+    au < ready ; 2015 ; Journal of Computational Environmental Sciences Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6589,7 +6589,7 @@
     au < released ; 2013 ; Journal of Computational Medicine Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Computational Medicine Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Computational Medicine Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Computational Medicine Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Journal of Computational Medicine Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -6606,7 +6606,7 @@
     
     au < released ; 2013 ; Journal of Computational Methods in Physics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Computational Methods in Physics Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; 2016 ; Journal of Computational Methods in Physics Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Journal of Computational Methods in Physics Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -6752,7 +6752,7 @@
     #Moved to archive
     
     au < doNotProcess ; 2014 ; Journal of Dental Surgery Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; 2015 ; Journal of Dental Surgery Volume 2015 ; 2015 ; 2015 >
+    au < ready ; 2015 ; Journal of Dental Surgery Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -6806,7 +6806,7 @@
     
     au < doNotProcess ; 2014 ; Journal of Difference Equations Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Difference Equations Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Difference Equations Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Journal of Difference Equations Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -6824,7 +6824,7 @@
     au < released ; 2013 ; Journal of Discrete Mathematics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Discrete Mathematics Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Discrete Mathematics Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Discrete Mathematics Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Journal of Discrete Mathematics Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -6867,7 +6867,7 @@
     
     au < doNotProcess ; 2014 ; Journal of Earthquakes Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Earthquakes Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Earthquakes Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Journal of Earthquakes Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -7007,7 +7007,7 @@
     #Moved to archive
     
     au < doNotProcess ; 2014 ; Journal of Experimental Physics Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; 2015 ; Journal of Experimental Physics Volume 2015 ; 2015 ; 2015 >
+    au < ready ; 2015 ; Journal of Experimental Physics Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7128,7 +7128,7 @@
     #Moved to archive
     
     au < doNotProcess ; 2014 ; Journal of Geochemistry Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; 2015 ; Journal of Geochemistry Volume 2015 ; 2015 ; 2015 >
+    au < ready ; 2015 ; Journal of Geochemistry Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7169,7 +7169,7 @@
     
     au < doNotProcess ; 2014 ; Journal of Geriatrics Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Geriatrics Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Geriatrics Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Journal of Geriatrics Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -7208,7 +7208,7 @@
     au < doNotProcess ; 2011 ; Journal of Healthcare Engineering Volume 2 (2011) ; 2011 ; 2 >
     au < doNotProcess ; 2012 ; Journal of Healthcare Engineering Volume 3 (2012) ; 2012 ; 3 >
     au < released ; 2013 ; Journal of Healthcare Engineering Volume 4 (2013) ; 2013 ; 4 >
-    au < manifest ; 2014 ; Journal of Healthcare Engineering Volume 5 (2014) ; 2014 ; 5 >
+    au < ready ; 2014 ; Journal of Healthcare Engineering Volume 5 (2014) ; 2014 ; 5 >
     au < released ; 2015 ; Journal of Healthcare Engineering Volume 6 (2015) ; 2015 ; 6 >
     au < doNotProcess ; 2016 ; Journal of Healthcare Engineering Volume 2016 ; 2016 ; 2016 >
     au < doNotProcess ; 2017 ; Journal of Healthcare Engineering Volume 2017 ; 2017 ; 2017 >
@@ -7232,10 +7232,10 @@
     param[journal_id] = jh
     #Moved to archive
     
-    au < manifest ; 2013 ; Journal of Histology Volume 2013 ; 2013 ; 2013 >
+    au < ready ; 2013 ; Journal of Histology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Histology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Histology Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Histology Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Journal of Histology Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -7253,7 +7253,7 @@
     au < released ; 2013 ; Journal of Hormones Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Hormones Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Hormones Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Hormones Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Journal of Hormones Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -7338,7 +7338,7 @@
     au < released ; 2013 ; Journal of Industrial Mathematics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Industrial Mathematics Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Industrial Mathematics Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Industrial Mathematics Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Journal of Industrial Mathematics Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -7726,7 +7726,7 @@
     au < doNotProcess ; 2018 ; Journal of Nucleic Acids Volume 2018 ; 2018 ; 2018 >
     au < released ; 2019 ; Journal of Nucleic Acids Volume 2019 ; 2019 ; 2019 >
     au < released ; 2020 ; Journal of Nucleic Acids Volume 2020 ; 2020 ; 2020 >
-    au < manifest ; 2021 ; Journal of Nucleic Acids Volume 2021 ; 2021 ; 2021 >
+    au < ready ; 2021 ; Journal of Nucleic Acids Volume 2021 ; 2021 ; 2021 >
     au < released ; 2022 ; Journal of Nucleic Acids Volume 2022 ; 2022 ; 2022 >
     au < manifest ; 2023 ; Journal of Nucleic Acids Volume 2023 ; 2023 ; 2023 >
 
@@ -7887,7 +7887,7 @@
 
     param[journal_id] = jopti
     
-    au < manifest ; 2013 ; Journal of Optimization Volume 2013 ; 2013 ; 2013 >
+    au < ready ; 2013 ; Journal of Optimization Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Optimization Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Optimization Volume 2015 ; 2015 ; 2015 >
     au < doNotProcess ; 2016 ; Journal of Optimization Volume 2016 ; 2016 ; 2016 >
@@ -7895,7 +7895,7 @@
     au < doNotProcess ; 2018 ; Journal of Optimization Volume 2018 ; 2018 ; 2018 >
     au < released ; 2019 ; Journal of Optimization Volume 2019 ; 2019 ; 2019 >
     au < exists ; 2020 ; Journal of Optimization Volume 2020 ; 2020 ; 2020 >
-    au < manifest ; 2021 ; Journal of Optimization Volume 2021 ; 2021 ; 2021 >
+    au < ready ; 2021 ; Journal of Optimization Volume 2021 ; 2021 ; 2021 >
     au < released ; 2022 ; Journal of Optimization Volume 2022 ; 2022 ; 2022 >
     au < expected ; 2023 ; Journal of Optimization Volume 2023 ; 2023 ; 2023 >
 
@@ -7915,7 +7915,7 @@
     au < released ; 2013 ; Journal of Oral Diseases Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Oral Diseases Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Oral Diseases Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Oral Diseases Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Journal of Oral Diseases Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -7931,7 +7931,7 @@
     #Moved to archive
     
     au < doNotProcess ; 2014 ; Journal of Oral Implants Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; 2015 ; Journal of Oral Implants Volume 2015 ; 2015 ; 2015 >
+    au < ready ; 2015 ; Journal of Oral Implants Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -7946,9 +7946,9 @@
     param[journal_id] = joo
     #Moved to archive
     
-    au < manifest ; 2013 ; Journal of Oral Oncology Volume 2013 ; 2013 ; 2013 >
+    au < ready ; 2013 ; Journal of Oral Oncology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Oral Oncology Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; 2015 ; Journal of Oral Oncology Volume 2015 ; 2015 ; 2015 >
+    au < ready ; 2015 ; Journal of Oral Oncology Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -8090,7 +8090,7 @@
     au < released ; 2013 ; Journal of Photonics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Photonics Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Photonics Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Photonics Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Journal of Photonics Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -8127,7 +8127,7 @@
     au < released ; 2013 ; Journal of Powder Technology Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Powder Technology Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Powder Technology Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Powder Technology Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Journal of Powder Technology Volume 2016 ; 2016 ; 2016 >
 
   }
 
@@ -8170,7 +8170,7 @@
     #Moved to archive
     
     au < doNotProcess ; 2014 ; Journal of Probability Volume 2014 ; 2014 ; 2014 >
-    au < manifest ; 2015 ; Journal of Probability Volume 2015 ; 2015 ; 2015 >
+    au < ready ; 2015 ; Journal of Probability Volume 2015 ; 2015 ; 2015 >
 
   }
 
@@ -8217,7 +8217,7 @@
     au < doNotProcess ; 2010 ; Journal of Quality and Reliability Engineering Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Quality and Reliability Engineering Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Journal of Quality and Reliability Engineering Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; 2013 ; Journal of Quality and Reliability Engineering Volume 2013 ; 2013 ; 2013 >
+    au < ready ; 2013 ; Journal of Quality and Reliability Engineering Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Quality and Reliability Engineering Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Quality and Reliability Engineering Volume 2015 ; 2015 ; 2015 >
     au < doNotProcess ; 2016 ; Journal of Quality and Reliability Engineering Volume 2016 ; 2016 ; 2016 >
@@ -8363,7 +8363,7 @@
     param[journal_id] = jstd
     #ceased publication in 2018
 
-    au < manifest ; 2013 ; Journal of Sexually Transmitted Diseases Volume 2013 ; 2013 ; 2013 >
+    au < ready ; 2013 ; Journal of Sexually Transmitted Diseases Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Sexually Transmitted Diseases Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Sexually Transmitted Diseases Volume 2015 ; 2015 ; 2015 >
     au < doNotProcess ; 2016 ; Journal of Sexually Transmitted Diseases Volume 2016 ; 2016 ; 2016 >
@@ -8385,7 +8385,7 @@
     au < doNotProcess ; 2010 ; Journal of Signal Transduction Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Journal of Signal Transduction Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Journal of Signal Transduction Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; 2013 ; Journal of Signal Transduction Volume 2013 ; 2013 ; 2013 >
+    au < ready ; 2013 ; Journal of Signal Transduction Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Signal Transduction Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Signal Transduction Volume 2015 ; 2015 ; 2015 >
     au < doNotProcess ; 2016 ; Journal of Signal Transduction Volume 2016 ; 2016 ; 2016 >
@@ -8564,7 +8564,7 @@
     au < released ; 2013 ; Journal of Structures Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Structures Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Structures Volume 2015 ; 2015 ; 2015 >
-    au < manifest ; 2016 ; Journal of Structures Volume 2016 ; 2016 ; 2016 >
+    au < ready ; 2016 ; Journal of Structures Volume 2016 ; 2016 ; 2016 >
 
   }
 

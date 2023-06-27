@@ -12825,15 +12825,15 @@
     param[journal_id] = smoa
     #move from Elsevier on 2023
 
-    au < manifest ; 2013 ; 2013 ; Sexual Medicine Volume 1 ; 1 >
-    au < manifest ; 2014 ; 2014 ; Sexual Medicine Volume 2 ; 2 >
-    au < manifest ; 2015 ; 2015 ; Sexual Medicine Volume 3 ; 3 >
-    au < manifest ; 2016 ; 2016 ; Sexual Medicine Volume 4 ; 4 >
-    au < manifest ; 2017 ; 2017 ; Sexual Medicine Volume 5 ; 5 >
-    au < manifest ; 2018 ; 2018 ; Sexual Medicine Volume 6 ; 6 >
-    au < manifest ; 2019 ; 2019 ; Sexual Medicine Volume 7 ; 7 >
-    au < manifest ; 2020 ; 2020 ; Sexual Medicine Volume 8 ; 8 >
-    au < manifest ; 2021 ; 2021 ; Sexual Medicine Volume 9 ; 9 >
+    au < ready ; 2013 ; 2013 ; Sexual Medicine Volume 1 ; 1 >
+    au < ready ; 2014 ; 2014 ; Sexual Medicine Volume 2 ; 2 >
+    au < ready ; 2015 ; 2015 ; Sexual Medicine Volume 3 ; 3 >
+    au < ready ; 2016 ; 2016 ; Sexual Medicine Volume 4 ; 4 >
+    au < ready ; 2017 ; 2017 ; Sexual Medicine Volume 5 ; 5 >
+    au < ready ; 2018 ; 2018 ; Sexual Medicine Volume 6 ; 6 >
+    au < ready ; 2019 ; 2019 ; Sexual Medicine Volume 7 ; 7 >
+    au < ready ; 2020 ; 2020 ; Sexual Medicine Volume 8 ; 8 >
+    au < ready ; 2021 ; 2021 ; Sexual Medicine Volume 9 ; 9 >
     au < manifest ; 2022 ; 2022 ; Sexual Medicine Volume 10 ; 10 >
     au < manifest ; 2023 ; 2023 ; Sexual Medicine Volume 11 ; 11 >
 
@@ -12851,15 +12851,15 @@
     param[journal_id] = smr
     #move from Elsevier on 2023
 
-    au < manifest ; 2013 ; 2013 ; Sexual Medicine Reviews Volume 1 ; 1 >
-    au < manifest ; 2014 ; 2014 ; Sexual Medicine Reviews Volume 2 ; 2 >
-    au < manifest ; 2015 ; 2015 ; Sexual Medicine Reviews Volume 3 ; 3 >
-    au < manifest ; 2016 ; 2016 ; Sexual Medicine Reviews Volume 4 ; 4 >
-    au < manifest ; 2017 ; 2017 ; Sexual Medicine Reviews Volume 5 ; 5 >
-    au < manifest ; 2018 ; 2018 ; Sexual Medicine Reviews Volume 6 ; 6 >
-    au < manifest ; 2019 ; 2019 ; Sexual Medicine Reviews Volume 7 ; 7 >
-    au < manifest ; 2020 ; 2020 ; Sexual Medicine Reviews Volume 8 ; 8 >
-    au < manifest ; 2021 ; 2021 ; Sexual Medicine Reviews Volume 9 ; 9 >
+    au < ready ; 2013 ; 2013 ; Sexual Medicine Reviews Volume 1 ; 1 >
+    au < ready ; 2014 ; 2014 ; Sexual Medicine Reviews Volume 2 ; 2 >
+    au < ready ; 2015 ; 2015 ; Sexual Medicine Reviews Volume 3 ; 3 >
+    au < ready ; 2016 ; 2016 ; Sexual Medicine Reviews Volume 4 ; 4 >
+    au < ready ; 2017 ; 2017 ; Sexual Medicine Reviews Volume 5 ; 5 >
+    au < ready ; 2018 ; 2018 ; Sexual Medicine Reviews Volume 6 ; 6 >
+    au < ready ; 2019 ; 2019 ; Sexual Medicine Reviews Volume 7 ; 7 >
+    au < ready ; 2020 ; 2020 ; Sexual Medicine Reviews Volume 8 ; 8 >
+    au < ready ; 2021 ; 2021 ; Sexual Medicine Reviews Volume 9 ; 9 >
     au < manifest ; 2022 ; 2022 ; Sexual Medicine Reviews Volume 10 ; 10 >
     au < manifest ; 2023 ; 2023 ; Sexual Medicine Reviews Volume 11 ; 11 >
 
@@ -16839,8 +16839,8 @@
       #doNotProcess = had been processed in American Society of Plant Biologists
       #Only 2020-present exist on website as of 11/2022
 
-      au < manifest ; 2020 ; 2020 ; Plant Physiology Volume 182-184 ; 182-184 >
-      au < manifest ; 2021 ; 2021 ; Plant Physiology Volume 185-187 ; 185-187 >
+      au < ready ; 2020 ; 2020 ; Plant Physiology Volume 182-184 ; 182-184 >
+      au < ready ; 2021 ; 2021 ; Plant Physiology Volume 185-187 ; 185-187 >
       au < manifest ; 2022 ; 2022 ; Plant Physiology Volume 188-190 ; 188-190 >
       au < manifest ; 2023 ; 2023 ; Plant Physiology Volume 191-193 ; 191-193 >
 
