@@ -6422,7 +6422,7 @@
     param[journal_id] = fsr
     #move from T&F by 2023-01-01
 
-    au < manifest ; exists ; 2022 ; 2022 ; Forensic Sciences Research Volume 7 ; 7 ; >
+    au < ready ; exists ; 2022 ; 2022 ; Forensic Sciences Research Volume 7 ; 7 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Forensic Sciences Research Volume 8 ; 8 ; >
 
   }
@@ -11620,7 +11620,7 @@
     au < finished ; manifest ; 2019 ; 2019 ; Journal of Legal Analysis Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Legal Analysis Volume 12 ; 12 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Journal of Legal Analysis Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2022 ; 2022 ; Journal of Legal Analysis Volume 14 ; 14 ; >
+    au < ready ; exists ; 2022 ; 2022 ; Journal of Legal Analysis Volume 14 ; 14 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Journal of Legal Analysis Volume 15 ; 15 ; >
 
   }
@@ -11636,7 +11636,7 @@
     param[journal_id] = jleukbio
     #move from Wiley on 2023
 
-    au < manifest ; exists ; 2022 ; 2022 ; Journal of Leukocyte Biology Volume 112 ; 112 ; >
+    au < ready ; exists ; 2022 ; 2022 ; Journal of Leukocyte Biology Volume 112 ; 112 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Journal of Leukocyte Biology Volume 113 ; 113 ; >
 
   }
@@ -12387,7 +12387,7 @@
     au < manifest ; exists ; 2019 ; 2019 ; Journal of Philosophy of Education Volume 53 ; 53 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Journal of Philosophy of Education Volume 54 ; 54 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Journal of Philosophy of Education Volume 55 ; 55 ; >
-    au < manifest ; exists ; 2022 ; 2022 ; Journal of Philosophy of Education Volume 56 ; 56 ; >
+    au < ready ; exists ; 2022 ; 2022 ; Journal of Philosophy of Education Volume 56 ; 56 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Journal of Philosophy of Education Volume 57 ; 57 ; >
 
   }
