@@ -1455,7 +1455,7 @@
     au < finished ; finished ; 2011 ; Campus-Wide Information Systems Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; Campus-Wide Information Systems Volume 29 ; 29 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Campus-Wide Information Systems Volume 30 ; 30 ; reingest2.clockss.org:8085 >
-    au < manifest ; exists ; 2014 ; Campus-Wide Information Systems Volume 31 ; 31 ; >
+    au < ready ; exists ; 2014 ; Campus-Wide Information Systems Volume 31 ; 31 ; >
 
   }
 
@@ -14649,8 +14649,8 @@
 
     param[journal_issn] = 2398-7812
 
-    au < manifest ; exists ; 2016 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2017 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 11 ; 11 ; >
+    au < ready ; exists ; 2016 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 10 ; 10 ; >
+    au < ready ; exists ; 2017 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 11 ; 11 ; >
     au < crawling ; exists ; 2018 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 12 ; 12 ; >
     au < crawling ; exists ; 2019 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 13 ; 13 ; >
     au < frozen ; exists ; 2020 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 14 ; 14 ; >
@@ -14678,11 +14678,11 @@
     au < manifest ; exists ; 2010 ; Asian Association of Open Universities Journal Volume 5 ; 5 ; >
     au < manifest ; exists ; 2011 ; Asian Association of Open Universities Journal Volume 6 ; 6 ; >
     au < manifest ; exists ; 2012 ; Asian Association of Open Universities Journal Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2013 ; Asian Association of Open Universities Journal Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2014 ; Asian Association of Open Universities Journal Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2015 ; Asian Association of Open Universities Journal Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2016 ; Asian Association of Open Universities Journal Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2017 ; Asian Association of Open Universities Journal Volume 12 ; 12 ; >
+    au < ready ; exists ; 2013 ; Asian Association of Open Universities Journal Volume 8 ; 8 ; >
+    au < ready ; exists ; 2014 ; Asian Association of Open Universities Journal Volume 9 ; 9 ; >
+    au < ready ; exists ; 2015 ; Asian Association of Open Universities Journal Volume 10 ; 10 ; >
+    au < ready ; exists ; 2016 ; Asian Association of Open Universities Journal Volume 11 ; 11 ; >
+    au < ready ; exists ; 2017 ; Asian Association of Open Universities Journal Volume 12 ; 12 ; >
     au < crawling ; exists ; 2018 ; Asian Association of Open Universities Journal Volume 13 ; 13 ; >
     au < crawling ; exists ; 2019 ; Asian Association of Open Universities Journal Volume 14 ; 14 ; >
     au < frozen ; exists ; 2020 ; Asian Association of Open Universities Journal Volume 15 ; 15 ; >
@@ -14703,13 +14703,13 @@
 
     param[journal_issn] = 2459-9700
 
-    au < manifest ; exists ; 2016 ; Asian Journal of Accounting Research Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2017 ; Asian Journal of Accounting Research Volume 2 ; 2 ; >
+    au < ready ; exists ; 2016 ; Asian Journal of Accounting Research Volume 1 ; 1 ; >
+    au < ready ; exists ; 2017 ; Asian Journal of Accounting Research Volume 2 ; 2 ; >
     au < crawling ; exists ; 2018 ; Asian Journal of Accounting Research Volume 3 ; 3 ; >
     au < crawling ; exists ; 2019 ; Asian Journal of Accounting Research Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2020 ; Asian Journal of Accounting Research Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2021 ; Asian Journal of Accounting Research Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2022 ; Asian Journal of Accounting Research Volume 7 ; 7 ; >
+    au < ready ; exists ; 2020 ; Asian Journal of Accounting Research Volume 5 ; 5 ; >
+    au < ready ; exists ; 2021 ; Asian Journal of Accounting Research Volume 6 ; 6 ; >
+    au < ready ; exists ; 2022 ; Asian Journal of Accounting Research Volume 7 ; 7 ; >
     au < manifest ; exists ; 2023 ; Asian Journal of Accounting Research Volume 8 ; 8 ; >
 
   }
@@ -14780,7 +14780,7 @@
 
     param[journal_issn] = 2444-8494
 
-    au < manifest ; exists ; 2017 ; European Journal of Management & Business Economics Volume 26 ; 26 ; >
+    au < ready ; exists ; 2017 ; European Journal of Management & Business Economics Volume 26 ; 26 ; >
     au < crawling ; exists ; 2018 ; European Journal of Management & Business Economics Volume 27 ; 27 ; >
     au < crawling ; exists ; 2019 ; European Journal of Management & Business Economics Volume 28 ; 28 ; >
     au < frozen ; exists ; 2020 ; European Journal of Management & Business Economics Volume 29 ; 29 ; >
@@ -14818,7 +14818,7 @@
 
     param[journal_issn] = 2514-5789
 
-    au < manifest ; exists ; 2017 ; Higher Education Evaluation and Development Volume 11 ; 11 ; >
+    au < ready ; exists ; 2017 ; Higher Education Evaluation and Development Volume 11 ; 11 ; >
     au < crawling ; exists ; 2018 ; Higher Education Evaluation and Development Volume 12 ; 12 ; >
     au < crawling ; exists ; 2019 ; Higher Education Evaluation and Development Volume 13 ; 13 ; >
     au < frozen ; exists ; 2020 ; Higher Education Evaluation and Development Volume 14 ; 14 ; >
@@ -14879,7 +14879,7 @@
     param[journal_issn] = 2398-7294
     #Moved to Tsinghua University Press
 
-    au < manifest ; exists ; 2017 ; International Journal of Crowd Science Volume 1 ; 1 ; >
+    au < ready ; exists ; 2017 ; International Journal of Crowd Science Volume 1 ; 1 ; >
     au < crawling ; exists ; 2018 ; International Journal of Crowd Science Volume 2 ; 2 ; >
     au < crawling ; exists ; 2019 ; International Journal of Crowd Science Volume 3 ; 3 ; >
     au < frozen ; exists ; 2020 ; International Journal of Crowd Science Volume 4 ; 4 ; >
@@ -14947,7 +14947,7 @@
 
     param[journal_issn] = 2398-8819
 
-    au < manifest ; exists ; 2017 ; Irish Journal of Occupational Therapy Volume 45 ; 45 ; >
+    au < ready ; exists ; 2017 ; Irish Journal of Occupational Therapy Volume 45 ; 45 ; >
     au < crawling ; exists ; 2018 ; Irish Journal of Occupational Therapy Volume 46 ; 46 ; >
     au < crawling ; exists ; 2019 ; Irish Journal of Occupational Therapy Volume 47 ; 47 ; >
     au < frozen ; exists ; 2020 ; Irish Journal of Occupational Therapy Volume 48 ; 48 ; >
@@ -14986,7 +14986,7 @@
 
     param[journal_issn] = 2289-4365
 
-    au < manifest ; exists ; 2017 ; ISRA  International Journal of Islamic Finance Volume 9 ; 9 ; >
+    au < ready ; exists ; 2017 ; ISRA  International Journal of Islamic Finance Volume 9 ; 9 ; >
     au < crawling ; exists ; 2018 ; ISRA  International Journal of Islamic Finance Volume 10 ; 10 ; >
     au < crawling ; exists ; 2019 ; ISRA  International Journal of Islamic Finance Volume 11 ; 11 ; >
     au < frozen ; exists ; 2020 ; ISRA  International Journal of Islamic Finance Volume 12 ; 12 ; >
@@ -15042,7 +15042,7 @@
 
     param[journal_issn] = 2514-4774
 
-    au < manifest ; exists ; 2017 ; Journal of Capital Markets Studies Volume 1 ; 1 ; >
+    au < ready ; exists ; 2017 ; Journal of Capital Markets Studies Volume 1 ; 1 ; >
     au < crawling ; exists ; 2018 ; Journal of Capital Markets Studies Volume 2 ; 2 ; >
     au < crawling ; exists ; 2019 ; Journal of Capital Markets Studies Volume 3 ; 3 ; >
     au < frozen ; exists ; 2020 ; Journal of Capital Markets Studies Volume 4 ; 4 ; >
@@ -15063,8 +15063,8 @@
 
     param[journal_issn] = 1851-6599
 
-    au < manifest ; exists ; 2015 ; Journal of Centrum Catherdra Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2016 ; Journal of Centrum Catherdra Volume 9 ; 9 ; >
+    au < ready ; exists ; 2015 ; Journal of Centrum Catherdra Volume 8 ; 8 ; >
+    au < ready ; exists ; 2016 ; Journal of Centrum Catherdra Volume 9 ; 9 ; >
     au < crawling ; exists ; 2017 ; Journal of Centrum Catherdra Volume 10 ; 10 ; >
 
   }
@@ -15080,7 +15080,7 @@
 
     param[journal_issn] = 2399-6439
 
-    au < manifest ; exists ; 2017 ; Journal of Defense Analytics & Logistics Volume 1 ; 1 ; >
+    au < ready ; exists ; 2017 ; Journal of Defense Analytics & Logistics Volume 1 ; 1 ; >
     au < crawling ; exists ; 2018 ; Journal of Defense Analytics & Logistics Volume 2 ; 2 ; >
     au < crawling ; exists ; 2019 ; Journal of Defense Analytics & Logistics Volume 3 ; 3 ; >
     au < frozen ; exists ; 2020 ; Journal of Defense Analytics & Logistics Volume 4 ; 4 ; >
@@ -15137,7 +15137,7 @@
 
     param[journal_issn] = 2218-0648
 
-    au < manifest ; exists ; 2017 ; Journal of Economics, Finance and Administrative Science Volume 22 ; 22 ; >
+    au < ready ; exists ; 2017 ; Journal of Economics, Finance and Administrative Science Volume 22 ; 22 ; >
     au < crawling ; exists ; 2018 ; Journal of Economics, Finance and Administrative Science Volume 23 ; 23 ; >
     au < crawling ; exists ; 2019 ; Journal of Economics, Finance and Administrative Science Volume 24 ; 24 ; >
     au < frozen ; exists ; 2020 ; Journal of Economics, Finance and Administrative Science Volume 25 ; 25 ; >
@@ -15178,9 +15178,9 @@
 
     au < crawling ; exists ; 2018 ; Journal of Health Research Volume 32 ; 32 ; >
     au < crawling ; exists ; 2019 ; Journal of Health Research Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2020 ; Journal of Health Research Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2021 ; Journal of Health Research Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2022 ; Journal of Health Research Volume 36 ; 36 ; >
+    au < ready ; exists ; 2020 ; Journal of Health Research Volume 34 ; 34 ; >
+    au < ready ; exists ; 2021 ; Journal of Health Research Volume 35 ; 35 ; >
+    au < ready ; exists ; 2022 ; Journal of Health Research Volume 36 ; 36 ; >
 
   }
 
@@ -15267,7 +15267,7 @@
 
     param[journal_issn] = 2397-7604
 
-    au < manifest ; exists ; 2017 ; Journal of Research in Innovative Teaching & Learning Volume 10 ; 10 ; >
+    au < ready ; exists ; 2017 ; Journal of Research in Innovative Teaching & Learning Volume 10 ; 10 ; >
     au < crawling ; exists ; 2018 ; Journal of Research in Innovative Teaching & Learning Volume 11 ; 11 ; >
     au < crawling ; exists ; 2019 ; Journal of Research in Innovative Teaching & Learning Volume 12 ; 12 ; >
     au < frozen ; exists ; 2020 ; Journal of Research in Innovative Teaching & Learning Volume 13 ; 13 ; >
@@ -15306,8 +15306,8 @@
 
     param[journal_issn] = 2055-5911
 
-    au < manifest ; exists ; 2015 ; Journal of Tourism Futures Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2016 ; Journal of Tourism Futures Volume 2 ; 2 ; >
+    au < ready ; exists ; 2015 ; Journal of Tourism Futures Volume 1 ; 1 ; >
+    au < ready ; exists ; 2016 ; Journal of Tourism Futures Volume 2 ; 2 ; >
     au < crawling ; exists ; 2017 ; Journal of Tourism Futures Volume 3 ; 3 ; >
     au < crawling ; exists ; 2018 ; Journal of Tourism Futures Volume 4 ; 4 ; >
     au < crawling ; exists ; 2019 ; Journal of Tourism Futures Volume 5 ; 5 ; >
@@ -15329,9 +15329,9 @@
 
     param[journal_issn] = 2205-2062
 
-    au < manifest ; exists ; 2015 ; Journal of Work Applied Management Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2016 ; Journal of Work Applied Management Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2017 ; Journal of Work Applied Management Volume 9 ; 9 ; >
+    au < ready ; exists ; 2015 ; Journal of Work Applied Management Volume 7 ; 7 ; >
+    au < ready ; exists ; 2016 ; Journal of Work Applied Management Volume 8 ; 8 ; >
+    au < ready ; exists ; 2017 ; Journal of Work Applied Management Volume 9 ; 9 ; >
     au < crawling ; exists ; 2018 ; Journal of Work Applied Management Volume 10 ; 10 ; >
     au < crawling ; exists ; 2019 ; Journal of Work Applied Management Volume 11 ; 11 ; >
     au < frozen ; exists ; 2020 ; Journal of Work Applied Management Volume 12 ; 12 ; >
@@ -15371,8 +15371,8 @@
 
     param[journal_issn] = 2397-3757
 
-    au < manifest ; exists ; 2016 ; Maritme Business Review Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2017 ; Maritme Business Review Volume 2 ; 2 ; >
+    au < ready ; exists ; 2016 ; Maritme Business Review Volume 1 ; 1 ; >
+    au < ready ; exists ; 2017 ; Maritme Business Review Volume 2 ; 2 ; >
     au < crawling ; exists ; 2018 ; Maritme Business Review Volume 3 ; 3 ; >
     au < crawling ; exists ; 2019 ; Maritme Business Review Volume 4 ; 4 ; >
     au < frozen ; exists ; 2020 ; Maritme Business Review Volume 5 ; 5 ; >
@@ -15396,10 +15396,10 @@
     au < manifest ; exists ; 2010 ; Mental Illness Volume 2 ; 2 ; >
     au < manifest ; exists ; 2011 ; Mental Illness Volume 3 ; 3 ; >
     au < manifest ; exists ; 2012 ; Mental Illness Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2013 ; Mental Illness Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2014 ; Mental Illness Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2015 ; Mental Illness Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2016 ; Mental Illness Volume 8 ; 8 ; >
+    au < ready ; exists ; 2013 ; Mental Illness Volume 5 ; 5 ; >
+    au < ready ; exists ; 2014 ; Mental Illness Volume 6 ; 6 ; >
+    au < ready ; exists ; 2015 ; Mental Illness Volume 7 ; 7 ; >
+    au < ready ; exists ; 2016 ; Mental Illness Volume 8 ; 8 ; >
     au < crawling ; exists ; 2017 ; Mental Illness Volume 9 ; 9 ; >
     au < crawling ; exists ; 2018 ; Mental Illness Volume 10 ; 10 ; >
     au < crawling ; exists ; 2019 ; Mental Illness Volume 11 ; 11 ; >
@@ -15453,10 +15453,10 @@
     au < manifest ; exists ; 2011 ; New England Journal of Entrepreneurship Volume 14 ; 14 ; >
     au < manifest ; exists ; 2012 ; New England Journal of Entrepreneurship Volume 15 ; 15 ; >
     au < manifest ; exists ; 2013 ; New England Journal of Entrepreneurship Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2014 ; New England Journal of Entrepreneurship Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2015 ; New England Journal of Entrepreneurship Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2016 ; New England Journal of Entrepreneurship Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2017 ; New England Journal of Entrepreneurship Volume 20 ; 20 ; >
+    au < ready ; exists ; 2014 ; New England Journal of Entrepreneurship Volume 17 ; 17 ; >
+    au < ready ; exists ; 2015 ; New England Journal of Entrepreneurship Volume 18 ; 18 ; >
+    au < ready ; exists ; 2016 ; New England Journal of Entrepreneurship Volume 19 ; 19 ; >
+    au < ready ; exists ; 2017 ; New England Journal of Entrepreneurship Volume 20 ; 20 ; >
     au < crawling ; exists ; 2018 ; New England Journal of Entrepreneurship Volume 21 ; 21 ; >
     au < crawling ; exists ; 2019 ; New England Journal of Entrepreneurship Volume 22 ; 22 ; >
     au < frozen ; exists ; 2020 ; New England Journal of Entrepreneurship Volume 23 ; 23 ; >
@@ -15494,12 +15494,12 @@
 
     param[journal_issn] = 2399-1747
 
-    au < manifest ; exists ; 2017 ; PSU Research Review Volume 1 ; 1 ; >
+    au < ready ; exists ; 2017 ; PSU Research Review Volume 1 ; 1 ; >
     au < crawling ; exists ; 2018 ; PSU Research Review Volume 2 ; 2 ; >
     au < crawling ; exists ; 2019 ; PSU Research Review Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2020 ; PSU Research Review Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2021 ; PSU Research Review Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2022 ; PSU Research Review Volume 6 ; 6 ; >
+    au < ready ; exists ; 2020 ; PSU Research Review Volume 4 ; 4 ; >
+    au < ready ; exists ; 2021 ; PSU Research Review Volume 5 ; 5 ; >
+    au < ready ; exists ; 2022 ; PSU Research Review Volume 6 ; 6 ; >
     au < manifest ; exists ; 2023 ; PSU Research Review Volume 7 ; 7 ; >
 
   }
@@ -15650,9 +15650,9 @@
 
     param[journal_issn] = 2633-1225
 
-    au < manifest ; exists ; 2020 ; Tourism Critiques Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2021 ; Tourism Critiques Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2022 ; Tourism Critiques Volume 3 ; 3 ; >
+    au < ready ; exists ; 2020 ; Tourism Critiques Volume 1 ; 1 ; >
+    au < ready ; exists ; 2021 ; Tourism Critiques Volume 2 ; 2 ; >
+    au < ready ; exists ; 2022 ; Tourism Critiques Volume 3 ; 3 ; >
     au < expected ; exists ; 2023 ; Tourism Critiques Volume 4 ; 4 ; >
 
   }
@@ -15693,11 +15693,11 @@
     au < manifest ; exists ; 2010 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 7 ; 7 ; >
     au < manifest ; exists ; 2011 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 8 ; 8 ; >
     au < manifest ; exists ; 2012 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2013 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2014 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2015 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2016 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2017 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 14 ; 14 ; >
+    au < ready ; exists ; 2013 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 10 ; 10 ; >
+    au < ready ; exists ; 2014 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 11 ; 11 ; >
+    au < ready ; exists ; 2015 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 12 ; 12 ; >
+    au < ready ; exists ; 2016 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 13 ; 13 ; >
+    au < ready ; exists ; 2017 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 14 ; 14 ; >
     au < crawling ; exists ; 2018 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 15 ; 15 ; >
     au < crawling ; exists ; 2019 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 16 ; 16 ; >
     au < frozen ; exists ; 2021 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 17 ; 17 ; >
