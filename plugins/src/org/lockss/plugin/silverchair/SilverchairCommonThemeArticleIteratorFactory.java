@@ -41,7 +41,7 @@ public class SilverchairCommonThemeArticleIteratorFactory implements ArticleIter
 
 
     private static String ROOT_TEMPLATE = "\"%s\", base_url";
-    private static String PATTERN_TEMPLATE =  "\"%s([^/]+/)?%s/article-abstract/\", base_url, journal_id";
+    private static String PATTERN_TEMPLATE =  "\"%s([^/]+/)?%s/(article-abstract|article)/\", base_url, journal_id";
 
     private static Pattern HTML_PATTERN = Pattern.compile("/article/([^/]+)/(.*)$", Pattern.CASE_INSENSITIVE);
     private static Pattern HTML_ABSTRACT_PATTERN = Pattern.compile("/article-abstract/([^/]+)/(.*)$", Pattern.CASE_INSENSITIVE);
