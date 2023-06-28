@@ -9519,9 +9519,9 @@
       au < finished ; finished ; 2016 ; African Journal for Infertility and Assisted Conception Volume 1 ; 2016 ; 1 ; http://www.afrijiac.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; African Journal for Infertility and Assisted Conception Volume 2 ; 2017 ; 2 ; http://www.afrijiac.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2018 ; African Journal for Infertility and Assisted Conception Volume 3 ; 2018 ; 3 ; https://www.afrijiac.org/ ; ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2019 ; African Journal for Infertility and Assisted Conception Volume 4 ; 2019 ; 4 ; https://www.afrijiac.org/ ; ; >
-      au < manifest ; exists ; 2020 ; African Journal for Infertility and Assisted Conception Volume 5 ; 2020 ; 5 ; https://www.afrijiac.org/ ; ; >
-      au < manifest ; exists ; 2021 ; African Journal for Infertility and Assisted Conception Volume 6 ; 2021 ; 6 ; https://www.afrijiac.org/ ; ; >
+      au < notReady ; exists ; 2019 ; African Journal for Infertility and Assisted Conception Volume 4 ; 2019 ; 4 ; https://www.afrijiac.org/ ; ; > #500 error
+      au < exists ; exists ; 2020 ; African Journal for Infertility and Assisted Conception Volume 5 ; 2020 ; 5 ; https://www.afrijiac.org/ ; ; >
+      au < notReady ; exists ; 2021 ; African Journal for Infertility and Assisted Conception Volume 6 ; 2021 ; 6 ; https://www.afrijiac.org/ ; ; > #500 error
 
   }
 
@@ -10224,14 +10224,14 @@
 #      param[base_url] = http://www.ijds.in/
       #Site appears to still be on http, but has errors. Is moving to https.
 
-      au < manifest ; exists ; 2016 ; Indian Journal of Dental Sciences Volume 8 ; 2016 ; 8 ; http://www.ijds.in/ ; ; >
-      au < manifest ; exists ; 2017 ; Indian Journal of Dental Sciences Volume 9 ; 2017 ; 9 ; http://www.ijds.in/ ; ; >
-      au < manifest ; exists ; 2018 ; Indian Journal of Dental Sciences Volume 10 ; 2018 ; 10 ; http://www.ijds.in/ ; ; >
-      au < manifest ; exists ; 2019 ; Indian Journal of Dental Sciences Volume 11 ; 2019 ; 11 ; http://www.ijds.in/ ; ; >
-      au < manifest ; exists ; 2020 ; Indian Journal of Dental Sciences Volume 12 ; 2020 ; 12 ; http://www.ijds.in/ ; ; >
-      au < manifest ; exists ; 2021 ; Indian Journal of Dental Sciences Volume 13 ; 2021 ; 13 ; http://www.ijds.in/ ; ; >
-      au < manifest ; exists ; 2022 ; Indian Journal of Dental Sciences Volume 14 ; 2022 ; 14 ; http://www.ijds.in/ ; ; >
-      au < manifest ; exists ; 2023 ; Indian Journal of Dental Sciences Volume 15 ; 2023 ; 15 ; http://www.ijds.in/ ; ; >
+      au < notReady ; exists ; 2016 ; Indian Journal of Dental Sciences Volume 8 ; 2016 ; 8 ; http://www.ijds.in/ ; ; >
+      au < notReady ; exists ; 2017 ; Indian Journal of Dental Sciences Volume 9 ; 2017 ; 9 ; http://www.ijds.in/ ; ; >
+      au < notReady ; exists ; 2018 ; Indian Journal of Dental Sciences Volume 10 ; 2018 ; 10 ; http://www.ijds.in/ ; ; >
+      au < notReady ; exists ; 2019 ; Indian Journal of Dental Sciences Volume 11 ; 2019 ; 11 ; http://www.ijds.in/ ; ; >
+      au < notReady ; exists ; 2020 ; Indian Journal of Dental Sciences Volume 12 ; 2020 ; 12 ; http://www.ijds.in/ ; ; >
+      au < notReady ; exists ; 2021 ; Indian Journal of Dental Sciences Volume 13 ; 2021 ; 13 ; http://www.ijds.in/ ; ; >
+      au < notReady ; exists ; 2022 ; Indian Journal of Dental Sciences Volume 14 ; 2022 ; 14 ; http://www.ijds.in/ ; ; >
+      au < notReady ; exists ; 2023 ; Indian Journal of Dental Sciences Volume 15 ; 2023 ; 15 ; http://www.ijds.in/ ; ; >
 
   }
 
@@ -12062,7 +12062,7 @@
       au < exists ; exists ; 2019 ; Current Medicine Research and Practice Volume 9 ; 2019 ; 9 ; https://www.cmrpjournal.org/ ; ; >
       au < frozen ; exists ; 2020 ; Current Medicine Research and Practice Volume 10 ; 2020 ; 10 ; https://www.cmrpjournal.org/ ; ; >
       au < frozen ; exists ; 2021 ; Current Medicine Research and Practice Volume 11 ; 2021 ; 11 ; https://www.cmrpjournal.org/ ; ; >
-      au < manifest ; exists ; 2022 ; Current Medicine Research and Practice Volume 12 ; 2022 ; 12 ; https://www.cmrpjournal.org/ ; ; >
+      au < notReady ; exists ; 2022 ; Current Medicine Research and Practice Volume 12 ; 2022 ; 12 ; https://www.cmrpjournal.org/ ; ; > #524
       au < manifest ; exists ; 2023 ; Current Medicine Research and Practice Volume 13 ; 2023 ; 13 ; https://www.cmrpjournal.org/ ; ; >
 
   }
