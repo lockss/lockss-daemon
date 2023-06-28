@@ -970,27 +970,35 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   protected static class ParamHandlerMap extends TypedEntryMap {
-    HashMap<String,ParamHandler> handlerMap = new HashMap<String,ParamHandler>();
+    HashMap<String,ParamHandler> handlerMap;
 
     protected ParamHandlerMap() {
       super();
     }
 
-    protected void addParamHandler(String paramKey, ParamHandler handler) {
-      handlerMap.put(paramKey, handler);
+    private HashMap<String,ParamHandler> getHandlerMap() {
+      if (handlerMap == null) {
+        handlerMap = new HashMap<>();
+      }
+      return handlerMap;
     }
 
-    protected ParamHandler removeParamHandler(String paramKey) {
-      synchronized (handlerMap) {
-        return (ParamHandler) handlerMap.remove(paramKey);
-      }
+    protected synchronized void addParamHandler(String paramKey,
+                                                ParamHandler handler) {
+      getHandlerMap().put(paramKey, handler);
+    }
+
+    protected synchronized ParamHandler removeParamHandler(String paramKey) {
+      return (ParamHandler) getHandlerMap().remove(paramKey);
     }
 
     public Object getMapElement(String paramKey) {
-      synchronized (handlerMap) {
-        ParamHandler handler = (ParamHandler)handlerMap.get(paramKey);
-        if(handler != null) {
-          return handler.getParamValue(paramKey);
+      if (handlerMap != null) {
+        synchronized (this) {
+          ParamHandler handler = (ParamHandler)handlerMap.get(paramKey);
+          if(handler != null) {
+            return handler.getParamValue(paramKey);
+          }
         }
       }
       return super.getMapElement(paramKey);
