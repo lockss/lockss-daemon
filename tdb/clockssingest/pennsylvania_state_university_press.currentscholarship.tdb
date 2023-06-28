@@ -2344,7 +2344,7 @@
 
       au < exists ; exists ; 2020 ; AMP: American Music Perspectives Volume 1 ; 1 ; 2020 ; >
       au < exists ; exists ; 2021 ; AMP: American Music Perspectives Volume 2 ; 2 ; 2021 ; >
-      au < exists ; exists ; 2022 ; AMP: American Music Perspectives Volume 3 ; 3 ; 2022 ; >
+      au < expected ; exists ; 2022 ; AMP: American Music Perspectives Volume 3 ; 3 ; 2022 ; >
       au < expected ; exists ; 2023 ; AMP: American Music Perspectives Volume 4 ; 4 ; 2023 ; >
 
   }
@@ -2368,6 +2368,31 @@
   {
 
       title <
+        name = Hiperboreea ;
+        issn = 2688-8211 ;
+        eissn = 2284-5666
+      >
+
+      param[journal_id] = hiperboreea
+
+      au < exists ; exists ; 2012 ; Hiperboreea Volume A1 ; A1 ; 2012 ; >
+      au < exists ; exists ; 2013 ; Hiperboreea Volume A2 ; A2 ; 2013 ; >
+      au < exists ; exists ; 2014 ; Hiperboreea Volume 1 ; 1 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Hiperboreea Volume 2 ; 2 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Hiperboreea Volume 3 ; 3 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Hiperboreea Volume 4 ; 4 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Hiperboreea Volume 5 ; 5 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Hiperboreea Volume 6 ; 6 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Hiperboreea Volume 7 ; 7 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Hiperboreea Volume 8 ; 8 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Hiperboreea Volume 9 ; 9 ; 2022 ; >
+      au < exists ; exists ; 2023 ; Hiperboreea Volume 10 ; 10 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
         name = Journal for the History of Rhetoric ;
         issn = 2687-8003 ;
         eissn = 2687-8011
@@ -2375,10 +2400,32 @@
 
       param[journal_id] = jhr
 
-      au < exists ; exists ; 1998 ; Journal for the History of Rhetoric Volume 1 ; 1 ; 2022 ; >
-
-      au < exists ; exists ; 2022 ; Journal for the History of Rhetoric Volume 2022 ; 2022 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Journal for the History of Rhetoric Volume 2023 ; 2023 ; 2023 ; >
+      au < exists ; exists ; 1998 ; Journal for the History of Rhetoric Volume 1 ; 1 ; 1998 ; >
+      au < exists ; exists ; 1999 ; Journal for the History of Rhetoric Volume 2 ; 2 ; 1999 ; >
+      au < exists ; exists ; 2000 ; Journal for the History of Rhetoric Volume 3 ; 3 ; 2000 ; >
+      au < exists ; exists ; 2001 ; Journal for the History of Rhetoric Volume 4 ; 4 ; 2001 ; >
+      au < exists ; exists ; 2002 ; Journal for the History of Rhetoric Volume 5 ; 5 ; 2002 ; >
+      au < exists ; exists ; 2003 ; Journal for the History of Rhetoric Volume 6 ; 6 ; 2003 ; >
+      au < exists ; exists ; 2004 ; Journal for the History of Rhetoric Volume 7 ; 7 ; 2004 ; >
+      au < exists ; exists ; 2005 ; Journal for the History of Rhetoric Volume 8 ; 8 ; 2005 ; >
+      au < exists ; exists ; 2006 ; Journal for the History of Rhetoric Volume 9 ; 9 ; 2006 ; >
+      au < exists ; exists ; 2007 ; Journal for the History of Rhetoric Volume 10 ; 10 ; 2007 ; >
+      au < exists ; exists ; 2008 ; Journal for the History of Rhetoric Volume 11 ; 11 ; 2008 ; >
+      au < exists ; exists ; 2009 ; Journal for the History of Rhetoric Volume 12 ; 12 ; 2009 ; >
+      au < exists ; exists ; 2010 ; Journal for the History of Rhetoric Volume 13 ; 13 ; 2010 ; >
+      au < exists ; exists ; 2011 ; Journal for the History of Rhetoric Volume 14 ; 14 ; 2011 ; >
+      au < exists ; exists ; 2012 ; Journal for the History of Rhetoric Volume 15 ; 15 ; 2012 ; >
+      au < exists ; exists ; 2013 ; Journal for the History of Rhetoric Volume 16 ; 16 ; 2013 ; >
+      au < exists ; exists ; 2014 ; Journal for the History of Rhetoric Volume 17 ; 17 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Journal for the History of Rhetoric Volume 18 ; 18 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Journal for the History of Rhetoric Volume 19 ; 19 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Journal for the History of Rhetoric Volume 20 ; 20 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Journal for the History of Rhetoric Volume 21 ; 21 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Journal for the History of Rhetoric Volume 22 ; 22 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Journal for the History of Rhetoric Volume 23 ; 23 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Journal for the History of Rhetoric Volume 24 ; 24 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Journal for the History of Rhetoric Volume 25 ; 25 ; 2022 ; >
+      au < exists ; exists ; 2023 ; Journal for the History of Rhetoric Volume 26 ; 26 ; 2023 ; >
 
   }
 
@@ -2393,9 +2440,12 @@
       param[journal_id] = methodist-history
 
       au < exists ; exists ; 2017 ; Methodist History Volume 55 ; 55 ; 2017 ; >
-
-      au < exists ; exists ; 2022 ; Methodist History Volume 2022 ; 2022 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Methodist History Volume 2023 ; 2023 ; 2023 ; >
+      au < exists ; exists ; 2018 ; Methodist History Volume 56 ; 56 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Methodist History Volume 57 ; 57 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Methodist History Volume 58 ; 58 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Methodist History Volume 59 ; 59 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Methodist History Volume 60 ; 60 ; 2022 ; >
+      au < exists ; exists ; 2023 ; Methodist History Volume 61 ; 61 ; 2023 ; >
 
   }
 
@@ -2410,9 +2460,25 @@
       param[journal_id] = philosophia-africana
 
       au < exists ; exists ; 2001 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 4 ; 4 ; 2001 ; >
-
-      au < exists ; exists ; 2022 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 2022 ; 2022 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 2023 ; 2023 ; 2023 ; >
+      au < exists ; exists ; 2002 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 5 ; 5 ; 2002 ; >
+      au < exists ; exists ; 2003 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 6 ; 6 ; 2003 ; >
+      au < exists ; exists ; 2004 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 7 ; 7 ; 2004 ; >
+      au < exists ; exists ; 2005 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 8 ; 8 ; 2005 ; >
+      au < exists ; exists ; 2006 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 9 ; 9 ; 2006 ; >
+      au < exists ; exists ; 2007 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 10 ; 10 ; 2007 ; >
+      au < exists ; exists ; 2008 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 11 ; 11 ; 2008 ; >
+      au < exists ; exists ; 2009 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 12 ; 12 ; 2009 ; >
+      au < exists ; exists ; 2010 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 13 (2010) ; 13 ; 2010 ; >
+      au < exists ; exists ; 2011 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 13 (2011) ; 13 ; 2011 ; >
+      au < exists ; exists ; 2012 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 14 ; 14 ; 2012 ; >
+      au < exists ; exists ; 2013 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 15 ; 15 ; 2013 ; >
+      au < exists ; exists ; 2014 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 16 ; 16 ; 2014 ; >
+      au < exists ; exists ; 2015 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 17 ; 17 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 18 ; 18 ; 2016 ; >
+      au < exists ; exists ; 2020 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 19 ; 19 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 20 ; 20 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 21 ; 21 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 22 ; 22 ; 2023 ; >
 
   }
 
@@ -2427,9 +2493,11 @@
       param[journal_id] = rectr
 
       au < exists ; exists ; 2015 ; Restoration and Eighteenth-Century Theatre Research Volume 30 ; 30 ; 2015 ; >
-
-      au < exists ; exists ; 2022 ; Restoration and Eighteenth-Century Theatre Research Volume 2022 ; 2022 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Restoration and Eighteenth-Century Theatre Research Volume 2023 ; 2023 ; 2023 ; >
+      au < exists ; exists ; 2016 ; Restoration and Eighteenth-Century Theatre Research Volume 31 ; 31 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Restoration and Eighteenth-Century Theatre Research Volume 32 ; 32 ; 2017 ; >
+      au < exists ; exists ; 2021 ; Restoration and Eighteenth-Century Theatre Research Volume 33 ; 33 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Restoration and Eighteenth-Century Theatre Research Volume 34 ; 34 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Restoration and Eighteenth-Century Theatre Research Volume 35 ; 35 ; 2023 ; >
 
   }
 
@@ -2443,10 +2511,14 @@
 
       param[journal_id] = scriblerian
 
-      au < exists ; exists ; 2016 ; The Scriblerian and the Kit-Cats Volume 48 ; 48 ; 2016 ; >
-
-      au < exists ; exists ; 2022 ; The Scriblerian and the Kit-Cats Volume 2022 ; 2022 ; 2022 ; >
-      au < expected ; exists ; 2023 ; The Scriblerian and the Kit-Cats Volume 2023 ; 2023 ; 2023 ; >
+      au < exists ; exists ; 2016 ; The Scriblerian and the Kit-Cats Volume 48-49 ; 48-49 ; 2016 ; >
+      au < exists ; exists ; 2017 ; The Scriblerian and the Kit-Cats Volume 49-50 ; 49-50 ; 2017 ; >
+      au < exists ; exists ; 2018 ; The Scriblerian and the Kit-Cats Volume 50-51 ; 50-51 ; 2018 ; >
+      au < exists ; exists ; 2019 ; The Scriblerian and the Kit-Cats Volume 51-52 ; 51-52 ; 2019 ; >
+      au < exists ; exists ; 2020 ; The Scriblerian and the Kit-Cats Volume 52-53 ; 52-53 ; 2020 ; >
+      au < exists ; exists ; 2021 ; The Scriblerian and the Kit-Cats Volume 53-54 ; 53-54 ; 2021 ; >
+      au < exists ; exists ; 2022 ; The Scriblerian and the Kit-Cats Volume 55 ; 55 ; 2022 ; >
+      au < expected ; exists ; 2023 ; The Scriblerian and the Kit-Cats Volume 56 ; 56 ; 2023 ; >
 
   }
 
@@ -2465,11 +2537,10 @@
       au < exists ; exists ; 2016 ; Victorians Institute Journal Volume 44 ; 44 ; 2016 ; >
       au < exists ; exists ; 2017 ; Victorians Institute Journal Volume 45 ; 45 ; 2017 ; >
       au < exists ; exists ; 2018 ; Victorians Institute Journal Volume 46 ; 46 ; 2018 ; >
-      au < exists ; exists ; 2019 ; Victorians Institute Journal Volume 47 ; 47 ; 2019 ; >
-      au < exists ; exists ; 2020 ; Victorians Institute Journal Volume 48 ; 48 ; 2020 ; >
-      au < exists ; exists ; 2021 ; Victorians Institute Journal Volume 49 ; 49 ; 2021 ; >
-      au < exists ; exists ; 2022 ; Victorians Institute Journal Volume 50 ; 50 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Victorians Institute Journal Volume 51 ; 51 ; 2023 ; >
+      au < exists ; exists ; 2020 ; Victorians Institute Journal Volume 47 ; 47 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Victorians Institute Journal Volume 48 ; 48 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Victorians Institute Journal Volume 49 ; 49 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Victorians Institute Journal Volume 50 ; 50 ; 2023 ; >
 
   }
 
