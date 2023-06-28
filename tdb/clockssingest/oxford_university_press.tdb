@@ -12808,7 +12808,7 @@
     au < manifest ; exists ; 2019 ; 2019 ; The Journal of Sexual Medicine Volume 16 ; 16 ; >
     au < manifest ; exists ; 2020 ; 2020 ; The Journal of Sexual Medicine Volume 17 ; 17 ; >
     au < manifest ; exists ; 2021 ; 2021 ; The Journal of Sexual Medicine Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2022 ; 2022 ; The Journal of Sexual Medicine Volume 19 ; 19 ; >
+    au < ready ; exists ; 2022 ; 2022 ; The Journal of Sexual Medicine Volume 19 ; 19 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; The Journal of Sexual Medicine Volume 20 ; 20 ; >
 
   }
@@ -12833,7 +12833,7 @@
     au < manifest ; exists ; 2019 ; 2019 ; Sexual Medicine Volume 7 ; 7 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Sexual Medicine Volume 8 ; 8 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Sexual Medicine Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2022 ; 2022 ; Sexual Medicine Volume 10 ; 10 ; >
+    au < ready ; exists ; 2022 ; 2022 ; Sexual Medicine Volume 10 ; 10 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Sexual Medicine Volume 11 ; 11 ; >
 
   }
@@ -12859,7 +12859,7 @@
     au < manifest ; exists ; 2019 ; 2019 ; Sexual Medicine Reviews Volume 7 ; 7 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Sexual Medicine Reviews Volume 8 ; 8 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Sexual Medicine Reviews Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2022 ; 2022 ; Sexual Medicine Reviews Volume 10 ; 10 ; >
+    au < ready ; exists ; 2022 ; 2022 ; Sexual Medicine Reviews Volume 10 ; 10 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Sexual Medicine Reviews Volume 11 ; 11 ; >
 
   }
@@ -13535,7 +13535,7 @@
     param[journal_id] = jrsssa
     #move from Wiley by 2023-01-01
 
-    au < manifest ; exists ; 2022 ; 2022 ; Journal of the Royal Statistical Society, Series A: Statistics in Society Volume 185 ; 185 ; >
+    au < ready ; exists ; 2022 ; 2022 ; Journal of the Royal Statistical Society, Series A: Statistics in Society Volume 185 ; 185 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Journal of the Royal Statistical Society, Series A: Statistics in Society Volume 186 ; 186 ; >
 
   }
@@ -13552,7 +13552,7 @@
     param[journal_id] = jrsssb
     #move from Wiley by 2023-01-01
 
-    au < manifest ; exists ; 2022 ; 2022 ; Journal of the Royal Statistical Society, Series B: Statistical Methodology Volume 84 ; 84 ; >
+    au < ready ; exists ; 2022 ; 2022 ; Journal of the Royal Statistical Society, Series B: Statistical Methodology Volume 84 ; 84 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Journal of the Royal Statistical Society, Series B: Statistical Methodology Volume 85 ; 85 ; >
 
   }
@@ -13569,7 +13569,7 @@
     param[journal_id] = jrsssc
     #move from Wiley by 2023-01-01
 
-    au < manifest ; exists ; 2022 ; 2022 ; Journal of the Royal Statistical Society, Series C: Applied Statistics Volume 71 ; 71 ; >
+    au < ready ; exists ; 2022 ; 2022 ; Journal of the Royal Statistical Society, Series C: Applied Statistics Volume 71 ; 71 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Journal of the Royal Statistical Society, Series C: Applied Statistics Volume 72 ; 72 ; >
 
   }
@@ -13707,7 +13707,7 @@
     param[journal_id] = lambio
     #move from Wiley by 2022-12-19
 
-    au < manifest ; exists ; 2022 ; 2022 ; Letters in Applied Microbiology Volume 75 ; 75 ; >
+    au < ready ; exists ; 2022 ; 2022 ; Letters in Applied Microbiology Volume 75 ; 75 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Letters in Applied Microbiology Volume 76 ; 76 ; >
 
   }
@@ -14275,7 +14275,7 @@
     au < manifest ; exists ; 2019 ; 2019 ; Microscopy Today Volume 27 ; 27 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Microscopy Today Volume 28 ; 28 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Microscopy Today Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2022 ; 2022 ; Microscopy Today Volume 30 ; 30 ; >
+    au < ready ; exists ; 2022 ; 2022 ; Microscopy Today Volume 30 ; 30 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Microscopy Today Volume 31 ; 31 ; >
 
   }
