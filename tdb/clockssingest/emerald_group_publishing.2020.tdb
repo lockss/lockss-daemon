@@ -14678,8 +14678,8 @@
     au < manifest ; exists ; 2010 ; Asian Association of Open Universities Journal Volume 5 ; 5 ; >
     au < manifest ; exists ; 2011 ; Asian Association of Open Universities Journal Volume 6 ; 6 ; >
     au < manifest ; exists ; 2012 ; Asian Association of Open Universities Journal Volume 7 ; 7 ; >
-    au < ready ; exists ; 2013 ; Asian Association of Open Universities Journal Volume 8 ; 8 ; >
-    au < ready ; exists ; 2014 ; Asian Association of Open Universities Journal Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2013 ; Asian Association of Open Universities Journal Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2014 ; Asian Association of Open Universities Journal Volume 9 ; 9 ; >
     au < crawling ; exists ; 2015 ; Asian Association of Open Universities Journal Volume 10 ; 10 ; >
     au < ready ; exists ; 2016 ; Asian Association of Open Universities Journal Volume 11 ; 11 ; >
     au < crawling ; exists ; 2017 ; Asian Association of Open Universities Journal Volume 12 ; 12 ; >
@@ -14707,8 +14707,8 @@
     au < crawling ; exists ; 2017 ; Asian Journal of Accounting Research Volume 2 ; 2 ; >
     au < crawling ; exists ; 2018 ; Asian Journal of Accounting Research Volume 3 ; 3 ; >
     au < crawling ; exists ; 2019 ; Asian Journal of Accounting Research Volume 4 ; 4 ; >
-    au < ready ; exists ; 2020 ; Asian Journal of Accounting Research Volume 5 ; 5 ; >
-    au < ready ; exists ; 2021 ; Asian Journal of Accounting Research Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2020 ; Asian Journal of Accounting Research Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2021 ; Asian Journal of Accounting Research Volume 6 ; 6 ; >
     au < ready ; exists ; 2022 ; Asian Journal of Accounting Research Volume 7 ; 7 ; >
     au < manifest ; exists ; 2023 ; Asian Journal of Accounting Research Volume 8 ; 8 ; >
 
@@ -14818,7 +14818,7 @@
 
     param[journal_issn] = 2514-5789
 
-    au < ready ; exists ; 2017 ; Higher Education Evaluation and Development Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2017 ; Higher Education Evaluation and Development Volume 11 ; 11 ; >
     au < crawling ; exists ; 2018 ; Higher Education Evaluation and Development Volume 12 ; 12 ; >
     au < crawling ; exists ; 2019 ; Higher Education Evaluation and Development Volume 13 ; 13 ; >
     au < frozen ; exists ; 2020 ; Higher Education Evaluation and Development Volume 14 ; 14 ; >
@@ -14986,7 +14986,7 @@
 
     param[journal_issn] = 2289-4365
 
-    au < ready ; exists ; 2017 ; ISRA  International Journal of Islamic Finance Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2017 ; ISRA  International Journal of Islamic Finance Volume 9 ; 9 ; >
     au < crawling ; exists ; 2018 ; ISRA  International Journal of Islamic Finance Volume 10 ; 10 ; >
     au < crawling ; exists ; 2019 ; ISRA  International Journal of Islamic Finance Volume 11 ; 11 ; >
     au < frozen ; exists ; 2020 ; ISRA  International Journal of Islamic Finance Volume 12 ; 12 ; >
@@ -15064,7 +15064,7 @@
     param[journal_issn] = 1851-6599
 
     au < crawling ; exists ; 2015 ; Journal of Centrum Catherdra Volume 8 ; 8 ; >
-    au < ready ; exists ; 2016 ; Journal of Centrum Catherdra Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2016 ; Journal of Centrum Catherdra Volume 9 ; 9 ; >
     au < crawling ; exists ; 2017 ; Journal of Centrum Catherdra Volume 10 ; 10 ; >
 
   }
@@ -15178,7 +15178,7 @@
 
     au < crawling ; exists ; 2018 ; Journal of Health Research Volume 32 ; 32 ; >
     au < crawling ; exists ; 2019 ; Journal of Health Research Volume 33 ; 33 ; >
-    au < ready ; exists ; 2020 ; Journal of Health Research Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2020 ; Journal of Health Research Volume 34 ; 34 ; >
     au < crawling ; exists ; 2021 ; Journal of Health Research Volume 35 ; 35 ; >
     au < ready ; exists ; 2022 ; Journal of Health Research Volume 36 ; 36 ; >
 
@@ -15371,7 +15371,7 @@
 
     param[journal_issn] = 2397-3757
 
-    au < ready ; exists ; 2016 ; Maritme Business Review Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2016 ; Maritme Business Review Volume 1 ; 1 ; >
     au < ready ; exists ; 2017 ; Maritme Business Review Volume 2 ; 2 ; >
     au < crawling ; exists ; 2018 ; Maritme Business Review Volume 3 ; 3 ; >
     au < crawling ; exists ; 2019 ; Maritme Business Review Volume 4 ; 4 ; >
@@ -15397,9 +15397,9 @@
     au < manifest ; exists ; 2011 ; Mental Illness Volume 3 ; 3 ; >
     au < manifest ; exists ; 2012 ; Mental Illness Volume 4 ; 4 ; >
     au < ready ; exists ; 2013 ; Mental Illness Volume 5 ; 5 ; >
-    au < ready ; exists ; 2014 ; Mental Illness Volume 6 ; 6 ; >
-    au < ready ; exists ; 2015 ; Mental Illness Volume 7 ; 7 ; >
-    au < ready ; exists ; 2016 ; Mental Illness Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2014 ; Mental Illness Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2015 ; Mental Illness Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2016 ; Mental Illness Volume 8 ; 8 ; >
     au < crawling ; exists ; 2017 ; Mental Illness Volume 9 ; 9 ; >
     au < crawling ; exists ; 2018 ; Mental Illness Volume 10 ; 10 ; >
     au < crawling ; exists ; 2019 ; Mental Illness Volume 11 ; 11 ; >
@@ -15453,8 +15453,8 @@
     au < manifest ; exists ; 2011 ; New England Journal of Entrepreneurship Volume 14 ; 14 ; >
     au < manifest ; exists ; 2012 ; New England Journal of Entrepreneurship Volume 15 ; 15 ; >
     au < manifest ; exists ; 2013 ; New England Journal of Entrepreneurship Volume 16 ; 16 ; >
-    au < ready ; exists ; 2014 ; New England Journal of Entrepreneurship Volume 17 ; 17 ; >
-    au < ready ; exists ; 2015 ; New England Journal of Entrepreneurship Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2014 ; New England Journal of Entrepreneurship Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2015 ; New England Journal of Entrepreneurship Volume 18 ; 18 ; >
     au < crawling ; exists ; 2016 ; New England Journal of Entrepreneurship Volume 19 ; 19 ; >
     au < ready ; exists ; 2017 ; New England Journal of Entrepreneurship Volume 20 ; 20 ; >
     au < crawling ; exists ; 2018 ; New England Journal of Entrepreneurship Volume 21 ; 21 ; >
@@ -15494,11 +15494,11 @@
 
     param[journal_issn] = 2399-1747
 
-    au < ready ; exists ; 2017 ; PSU Research Review Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2017 ; PSU Research Review Volume 1 ; 1 ; >
     au < crawling ; exists ; 2018 ; PSU Research Review Volume 2 ; 2 ; >
     au < crawling ; exists ; 2019 ; PSU Research Review Volume 3 ; 3 ; >
-    au < ready ; exists ; 2020 ; PSU Research Review Volume 4 ; 4 ; >
-    au < ready ; exists ; 2021 ; PSU Research Review Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2020 ; PSU Research Review Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2021 ; PSU Research Review Volume 5 ; 5 ; >
     au < crawling ; exists ; 2022 ; PSU Research Review Volume 6 ; 6 ; >
     au < manifest ; exists ; 2023 ; PSU Research Review Volume 7 ; 7 ; >
 
@@ -15696,7 +15696,7 @@
     au < ready ; exists ; 2013 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 10 ; 10 ; >
     au < crawling ; exists ; 2014 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 11 ; 11 ; >
     au < crawling ; exists ; 2015 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 12 ; 12 ; >
-    au < ready ; exists ; 2016 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2016 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 13 ; 13 ; >
     au < crawling ; exists ; 2017 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 14 ; 14 ; >
     au < crawling ; exists ; 2018 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 15 ; 15 ; >
     au < crawling ; exists ; 2019 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 16 ; 16 ; >
