@@ -2602,9 +2602,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; Postgraduate Medical Journal Volume 95 ; 95 ; https://pmj.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; Postgraduate Medical Journal Volume 96 ; 96 ; https://pmj.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2021 ; Postgraduate Medical Journal Volume 97 ; 97 ; https://pmj.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2022 ; Postgraduate Medical Journal Volume 98 ; 98 ; https://pmj.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; expected ; 2023 ; Postgraduate Medical Journal Volume 99 ; 99 ; https://pmj.bmj.com/ >
-
+    #Moved to OUP
   }
 
   {
