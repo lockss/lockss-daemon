@@ -98,11 +98,11 @@
 
     au < manifest ; exists ; 1988 ; Accounting, Auditing & Accountability Journal Volume 1 ; 1 ; >
     au < manifest ; exists ; 1989 ; Accounting, Auditing & Accountability Journal Volume 2 ; 2 ; >
-    au < frozen ; exists ; 1990 ; Accounting, Auditing & Accountability Journal Volume 3 ; 3 ; >
-    au < frozen ; exists ; 1991 ; Accounting, Auditing & Accountability Journal Volume 4 ; 4 ; >
-    au < frozen ; exists ; 1992 ; Accounting, Auditing & Accountability Journal Volume 5 ; 5 ; >
-    au < frozen ; exists ; 1993 ; Accounting, Auditing & Accountability Journal Volume 6 ; 6 ; >
-    au < frozen ; exists ; 1994 ; Accounting, Auditing & Accountability Journal Volume 7 ; 7 ; >
+    au < finished ; manifest ; 1990 ; Accounting, Auditing & Accountability Journal Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1991 ; Accounting, Auditing & Accountability Journal Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1992 ; Accounting, Auditing & Accountability Journal Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1993 ; Accounting, Auditing & Accountability Journal Volume 6 ; 6 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1994 ; Accounting, Auditing & Accountability Journal Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1995 ; Accounting, Auditing & Accountability Journal Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Accounting, Auditing & Accountability Journal Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1997 ; Accounting, Auditing & Accountability Journal Volume 10 ; 10 ; reingest3.clockss.org:8083 >
