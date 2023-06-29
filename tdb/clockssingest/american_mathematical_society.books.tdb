@@ -667,4 +667,74 @@
     au < manifest ; exists ; 2023 ; The Student Mathematical Library 2023 ; 2023 ; https://www.ams.org/ ; >
 
     }
+
+    {
+  
+    title < 
+      name = University Lecture Series ;
+      type = bookSeries
+    >
+    
+    param[collection_id] = ulect
+    
+    au < exists ; exists ; 1989 ; University Lecture Series 1989 ; 1989 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1990 ; University Lecture Series 1990 ; 1990 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1991 ; University Lecture Series 1991 ; 1991 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1992 ; University Lecture Series 1992 ; 1992 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1993 ; University Lecture Series 1993 ; 1993 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1994 ; University Lecture Series 1994 ; 1994 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1995 ; University Lecture Series 1995 ; 1995 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1996 ; University Lecture Series 1996 ; 1996 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1997 ; University Lecture Series 1997 ; 1997 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1998 ; University Lecture Series 1998 ; 1998 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1999 ; University Lecture Series 1999 ; 1999 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2000 ; University Lecture Series 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2001 ; University Lecture Series 2001 ; 2001 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2002 ; University Lecture Series 2002 ; 2002 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2003 ; University Lecture Series 2003 ; 2003 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2004 ; University Lecture Series 2004 ; 2004 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2005 ; University Lecture Series 2005 ; 2005 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2006 ; University Lecture Series 2006 ; 2006 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2007 ; University Lecture Series 2007 ; 2007 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2008 ; University Lecture Series 2008 ; 2008 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2009 ; University Lecture Series 2009 ; 2009 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2010 ; University Lecture Series 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2011 ; University Lecture Series 2011 ; 2011 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2012 ; University Lecture Series 2012 ; 2012 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2013 ; University Lecture Series 2013 ; 2013 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2014 ; University Lecture Series 2014 ; 2014 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2015 ; University Lecture Series 2015 ; 2015 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2016 ; University Lecture Series 2016 ; 2016 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2017 ; University Lecture Series 2017 ; 2017 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2018 ; University Lecture Series 2018 ; 2018 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2019 ; University Lecture Series 2019 ; 2019 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2020 ; University Lecture Series 2020 ; 2020 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2021 ; University Lecture Series 2021 ; 2021 ; https://www.ams.org/ ; >
+    }
+
+    {
+  
+    title < 
+      name = CBMS Issues in Mathematics Education ;
+      type = bookSeries
+    >
+    
+    param[collection_id] = cbmath
+    
+    au < exists ; exists ; 1990 ; CBMS Issues in Mathematics Education 1990 ; 1990 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1991 ; CBMS Issues in Mathematics Education 1991 ; 1991 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1993 ; CBMS Issues in Mathematics Education 1993 ; 1993 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1994 ; CBMS Issues in Mathematics Education 1994 ; 1994 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1995 ; CBMS Issues in Mathematics Education 1995 ; 1995 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1996 ; CBMS Issues in Mathematics Education 1996 ; 1996 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1998 ; CBMS Issues in Mathematics Education 1998 ; 1998 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2000 ; CBMS Issues in Mathematics Education 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2001 ; CBMS Issues in Mathematics Education 2001 ; 2001 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2003 ; CBMS Issues in Mathematics Education 2003 ; 2003 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2006 ; CBMS Issues in Mathematics Education 2006 ; 2006 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2007 ; CBMS Issues in Mathematics Education 2007 ; 2007 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2008 ; CBMS Issues in Mathematics Education 2008 ; 2008 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2010 ; CBMS Issues in Mathematics Education 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2012 ; CBMS Issues in Mathematics Education 2012 ; 2012 ; https://www.ams.org/ ; >
+    }
 }
