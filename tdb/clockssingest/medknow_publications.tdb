@@ -536,7 +536,7 @@
     au < finished ; finished ; 2020 ; AYUHOM Volume 7 ; 2020 ; 7 ; https://www.ayuhom.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; AYUHOM Volume 8 ; 2021 ; 8 ; https://www.ayuhom.com/ ; ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; AYUHOM Volume 9 ; 2022 ; 9 ; https://www.ayuhom.com/ ; ; >
-    au < expected ; exists ; 2023 ; AYUHOM Volume 10 ; 2023 ; 10 ; https://www.ayuhom.com/ ; ; >
+    au < manifest ; exists ; 2023 ; AYUHOM Volume 10 ; 2023 ; 10 ; https://www.ayuhom.com/ ; ; >
 
   }
 
@@ -9457,7 +9457,7 @@
       au < finished ; finished ; 2020 ; Acta Medica International Volume 7 ; 2020 ; 7 ; https://www.actamedicainternational.com/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2021 ; Acta Medica International Volume 8 ; 2021 ; 8 ; https://www.actamedicainternational.com/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Acta Medica International Volume 9 ; 2022 ; 9 ; https://www.actamedicainternational.com/ ; ; >
-      au < expected ; exists ; 2023 ; Acta Medica International Volume 10 ; 2023 ; 10 ; https://www.actamedicainternational.com/ ; ; >
+      au < manifest ; exists ; 2023 ; Acta Medica International Volume 10 ; 2023 ; 10 ; https://www.actamedicainternational.com/ ; ; >
 
   }
 
@@ -9520,7 +9520,7 @@
       au < finished ; finished ; 2017 ; African Journal for Infertility and Assisted Conception Volume 2 ; 2017 ; 2 ; http://www.afrijiac.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2018 ; African Journal for Infertility and Assisted Conception Volume 3 ; 2018 ; 3 ; https://www.afrijiac.org/ ; ; reingest2.clockss.org:8085 >
       au < notReady ; exists ; 2019 ; African Journal for Infertility and Assisted Conception Volume 4 ; 2019 ; 4 ; https://www.afrijiac.org/ ; ; > #500 error
-      au < exists ; exists ; 2020 ; African Journal for Infertility and Assisted Conception Volume 5 ; 2020 ; 5 ; https://www.afrijiac.org/ ; ; >
+      au < manifest ; exists ; 2020 ; African Journal for Infertility and Assisted Conception Volume 5 ; 2020 ; 5 ; https://www.afrijiac.org/ ; ; >
       au < notReady ; exists ; 2021 ; African Journal for Infertility and Assisted Conception Volume 6 ; 2021 ; 6 ; https://www.afrijiac.org/ ; ; > #500 error
 
   }
@@ -9758,7 +9758,7 @@
       au < finished ; finished ; 2020 ; Asian Journal of Pediatric Nephrology Volume 3 ; 2020 ; 3 ; https://www.ajpn-online.org/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Asian Journal of Pediatric Nephrology Volume 4 ; 2021 ; 4 ; https://www.ajpn-online.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Asian Journal of Pediatric Nephrology Volume 5 ; 2022 ; 5 ; https://www.ajpn-online.org/ ; ; >
-      au < expected ; exists ; 2023 ; Asian Journal of Pediatric Nephrology Volume 6 ; 2023 ; 6 ; https://www.ajpn-online.org/ ; ; >
+      au < manifest ; exists ; 2023 ; Asian Journal of Pediatric Nephrology Volume 6 ; 2023 ; 6 ; https://www.ajpn-online.org/ ; ; >
 
   }
 
@@ -11949,7 +11949,7 @@
       au < frozen ; exists ; 2020 ; Assam Journal of Internal Medicine Volume 10 ; 2020 ; 10 ; https://www.ajimedicine.com/ ; ; >
       au < frozen ; exists ; 2021 ; Assam Journal of Internal Medicine Volume 11 ; 2021 ; 11 ; https://www.ajimedicine.com/ ; ; >
       au < crawling ; exists ; 2022 ; Assam Journal of Internal Medicine Volume 12 ; 2022 ; 12 ; https://www.ajimedicine.com/ ; ; >
-      au < expected ; exists ; 2023 ; Assam Journal of Internal Medicine Volume 13 ; 2023 ; 13 ; https://www.ajimedicine.com/ ; ; >
+      au < manifest ; exists ; 2023 ; Assam Journal of Internal Medicine Volume 13 ; 2023 ; 13 ; https://www.ajimedicine.com/ ; ; >
 
   }
 
@@ -13410,7 +13410,7 @@
       au < frozen ; exists ; 2020 ; Malaysian Journal of Movement, Health and Exercise Volume 9 ; 2020 ; 9 ; https://www.mohejournal.org/ ; ; >
       au < frozen ; exists ; 2021 ; Malaysian Journal of Movement, Health and Exercise Volume 10 ; 2021 ; 10 ; https://www.mohejournal.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Malaysian Journal of Movement, Health and Exercise Volume 11 ; 2022 ; 11 ; https://www.mohejournal.org/ ; ; >
-      au < expected ; exists ; 2023 ; Malaysian Journal of Movement, Health and Exercise Volume 12 ; 2023 ; 12 ; https://www.mohejournal.org/ ; ; >
+      au < manifest ; exists ; 2023 ; Malaysian Journal of Movement, Health and Exercise Volume 12 ; 2023 ; 12 ; https://www.mohejournal.org/ ; ; >
 
   }
 
@@ -13588,7 +13588,7 @@
 
       au < frozen ; exists ; 2021 ; Paediatric Nephrology Journal of Bangladesh Volume 6 ; 2021 ; 6 ; https://www.pnjb-online.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Paediatric Nephrology Journal of Bangladesh Volume 7 ; 2022 ; 7 ; https://www.pnjb-online.org/ ; ; >
-      au < expected ; exists ; 2023 ; Paediatric Nephrology Journal of Bangladesh Volume 8 ; 2023 ; 8 ; https://www.pnjb-online.org/ ; ; >
+      au < manifest ; exists ; 2023 ; Paediatric Nephrology Journal of Bangladesh Volume 8 ; 2023 ; 8 ; https://www.pnjb-online.org/ ; ; >
 
   }
 
@@ -13624,7 +13624,7 @@
 
       au < manifest ; exists ; 2021 ; Radiology of Infectious Diseases Volume 8 ; 2021 ; 8 ; https://www.ridiseases.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Radiology of Infectious Diseases Volume 9 ; 2022 ; 9 ; https://www.ridiseases.org/ ; ; >
-      au < expected ; exists ; 2023 ; Radiology of Infectious Diseases Volume 10 ; 2023 ; 10 ; https://www.ridiseases.org/ ; ; >
+      au < manifest ; exists ; 2023 ; Radiology of Infectious Diseases Volume 10 ; 2023 ; 10 ; https://www.ridiseases.org/ ; ; >
 
   }
 

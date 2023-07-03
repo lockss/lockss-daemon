@@ -33,7 +33,7 @@
     {
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/schweizerbart-released/
 
-    au < expected ; exists ; 2023 ; Schweizerbart Science Publishers Source Content 2023 ; 2023 >
+    au < manifest ; exists ; 2023 ; Schweizerbart Science Publishers Source Content 2023 ; 2023 >
     }
   }
 
