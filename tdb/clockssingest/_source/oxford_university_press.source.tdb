@@ -18,7 +18,7 @@
       plugin = org.lockss.plugin.clockss.oxforduniversitypress.ClockssOxfordUniversityPressBooksSourcePlugin
       param[base_url] = https://clockss-test.lockss.org/sourcefiles/oupbooks-released/
 
-      au < exists ; exists ; 2023 ; Oxford University Press Book Source Content 2023_01 ; 2023_01 >
+      au < manifest ; exists ; 2023 ; Oxford University Press Book Source Content 2023_01 ; 2023_01 >
   }
 
   {
