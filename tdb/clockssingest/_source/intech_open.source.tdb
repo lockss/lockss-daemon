@@ -15,8 +15,7 @@
     #Journals
     plugin = org.lockss.plugin.clockss.intechopen.ClockssIntechOpenJournalsDirSourcePlugin
     implicit < status ; status2 ; year ; name ; param[directory] >
-    #param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/intechopen-released/
-    #param[base_url] = https://clockss-test.lockss.org/sourcefiles/intechopenjnls-released/
+    param[base_url] = https://clockss-test.lockss.org/sourcefiles/intechopenjnls-released/
 
     au < exists ; exists ; 2023 ; Intech Open Journals Content 2023_01 ; 2023_01 >
 
