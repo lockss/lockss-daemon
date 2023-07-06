@@ -224,10 +224,10 @@
       param[journal_id] = ils
       # 2009, 2010 volume numbers don't line up with years
 
-      au < manifest ; exists ; 2007 ; Interdisciplinary Literary Studies Volume 8 [2007] ; 8 ; 2007 ; >
-      au < manifest ; exists ; 2007 ; Interdisciplinary Literary Studies Volume 9 [2007] ; 9 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; Interdisciplinary Literary Studies Volume 9 [2008] ; 9 ; 2008 ; >
-      au < manifest ; exists ; 2008 ; Interdisciplinary Literary Studies Volume 10 [2008] ; 10 ; 2008 ; >
+      au < manifest ; exists ; 2007 ; Interdisciplinary Literary Studies Volume 8 (2007) ; 8 ; 2007 ; >
+      au < manifest ; exists ; 2007 ; Interdisciplinary Literary Studies Volume 9 (2007) ; 9 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Interdisciplinary Literary Studies Volume 9 (2008) ; 9 ; 2008 ; >
+      au < manifest ; exists ; 2008 ; Interdisciplinary Literary Studies Volume 10 (2008) ; 10 ; 2008 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Interdisciplinary Literary Studies Volume 10-11 ; 10-11 ; 2009 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Interdisciplinary Literary Studies Volume 11-12; 11-12; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Interdisciplinary Literary Studies Volume 12-13 ; 12-13 ; 2011 ; >
@@ -1870,7 +1870,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; The Korean Language in America Volume 21-22 ; 21-22 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; The Korean Language in America Volume 23 ; 23 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; The Korean Language in America Volume 24 ; 24 ; 2020 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; The Korean Language in America Volume 25 ; 24-25 ; 2021 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; The Korean Language in America Volume 25 ; 25 ; 2021 ; >
       au < expected ; exists ; 2023 ; The Korean Language in America Volume 26 ; 26 ; 2023 ; >
 
   }
