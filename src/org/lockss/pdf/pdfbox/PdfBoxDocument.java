@@ -198,6 +198,8 @@ public class PdfBoxDocument implements PdfDocument {
       }
       finally {
         autoCloseables.clear();
+        // maybe clear caches
+        getDocumentFactory().documentClosed(this);
       }
     }
   }

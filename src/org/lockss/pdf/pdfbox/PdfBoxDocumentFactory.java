@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2023 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,14 +30,22 @@ package org.lockss.pdf.pdfbox;
 
 import java.io.*;
 import java.util.List;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
+import org.apache.pdfbox.cos.COSName;
 import org.apache.pdfbox.exceptions.*;
 import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.pdmodel.*;
 import org.apache.pdfbox.pdmodel.common.PDStream;
+import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.apache.pdfbox.pdmodel.graphics.xobject.PDXObjectForm;
+import org.lockss.config.*;
+import org.lockss.util.Logger;
 import org.lockss.pdf.*;
 import org.lockss.util.IOUtil;
+import org.lockss.util.TimeBase;
+import org.lockss.util.Constants;
 
 /**
  * <p>
@@ -53,6 +57,39 @@ import org.lockss.util.IOUtil;
  * @see <a href="http://pdfbox.apache.org/">PDFBox site</a>
  */
 public class PdfBoxDocumentFactory implements PdfDocumentFactory {
+  static Logger log = Logger.getLogger(PdfBoxDocumentFactory.class);
+
+  public static final PdfDocumentFactory SINGLETON =
+    new PdfBoxDocumentFactory();
+
+  static final String PREFIX = Configuration.PREFIX + "pdf.";
+  /** The minimum interval between clearing the PDFont and COSName
+   * static caches */
+  public static final String PARAM_CACHE_FLUSH_INTERVAL =
+    PREFIX + "cacheFlushInterval";
+  public static final long DEFAULT_CACHE_FLUSH_INTERVAL = 6 * Constants.HOUR;
+
+  // The fields below support a mechanism to periodically flush the
+  // static caches in PDFont and COSName.  It tries to not clear those
+  // caches while a parse is in progress, but as it doesn't prevent a
+  // parse from starting once it has made a decision to flush, or
+  // during the flush, this is not guaranteed.  We don't know if
+  // flushing during a pdf operation can cause problems.
+
+  // Records all active PdfBoxDocument s, to determine when it might
+  // not be safe to call the static clearResources() methods
+  private Set<PdfBoxDocument> activePdfBoxDocs = ConcurrentHashMap.newKeySet();
+
+  // Count of parsers running in makeDocument() before a
+  // PdfBoxDocument has been created to add to the Set above.
+  private volatile int kludgeyInterimParserCounter = 0;
+
+  private static long cacheFlushInterval = DEFAULT_CACHE_FLUSH_INTERVAL;
+  private long nextClearResourcesTime = 0;
+
+  // org.lockss.pdf.pdfbox.PdfBoxTokens.Nam points to things in
+  // COSName - is that a problem?
+
 
   @Override
   public PdfTokenFactory getTokenFactory() {
@@ -65,6 +102,7 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
              PdfCryptographyException,
              PdfException {
     try {
+      ++kludgeyInterimParserCounter;
       PDDocument pdDocument = makePdDocument(pdfInputStream);
       processAfterParse(pdDocument);
       return makeDocument(this, pdDocument);
@@ -78,6 +116,7 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
     finally {
       // PDFBox normally closes the input stream, but just in case
       IOUtil.safeClose(pdfInputStream);
+      --kludgeyInterimParserCounter;
     }
   }
   
@@ -85,7 +124,43 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
   public PdfBoxDocument makeDocument(PdfDocumentFactory pdfDocumentFactory,
                                      Object pdfDocumentObject)
       throws PdfException {
-    return new PdfBoxDocument(this, (PDDocument)pdfDocumentObject);
+    PdfBoxDocument res =
+      new PdfBoxDocument(this, (PDDocument)pdfDocumentObject);
+    activePdfBoxDocs.add(res);
+    return res;
+  }
+
+  void documentClosed(PdfBoxDocument pbdoc) {
+    activePdfBoxDocs.remove(pbdoc);
+    log.debug2("documentClosed: " + pbdoc +
+               ", interim: " + kludgeyInterimParserCounter +
+               ", remaining: " + activePdfBoxDocs);
+    if (kludgeyInterimParserCounter < 0) {
+      log.warning("Oh dear, kludgeyInterimParserCounter is negative: " +
+                  kludgeyInterimParserCounter);
+    }
+    if (kludgeyInterimParserCounter == 0 && activePdfBoxDocs.isEmpty() &&
+        TimeBase.nowMs() >= nextClearResourcesTime) {
+      clearResources();
+    }
+  }
+
+  private void clearResources() {
+    log.info("Clearing PDF caches");
+    PDFont.clearResources();
+    COSName.clearResources();
+    nextClearResourcesTime = TimeBase.nowMs() + cacheFlushInterval;
+  }
+
+  /** Called by org.lockss.config.MiscConfig
+   */
+  public static void setConfig(Configuration config,
+                               Configuration oldConfig,
+                               Configuration.Differences diffs) {
+    if (diffs.contains(PREFIX)) {
+      cacheFlushInterval = config.getTimeInterval(PARAM_CACHE_FLUSH_INTERVAL,
+                                                  DEFAULT_CACHE_FLUSH_INTERVAL);
+    }
   }
 
   @Override
