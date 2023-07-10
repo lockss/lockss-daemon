@@ -49,13 +49,129 @@ import java.io.Reader;
 
 public class OecdHtmlHashFilterFactory implements FilterFactory {
 
-  static NodeFilter[] excludeFilters = new NodeFilter[] {
+  protected static final NodeFilter[] excludeFilters = new NodeFilter[] {
+      /*
+       * High risk of turnover: comments, <scripts> and <style> tags.
+       */
       HtmlNodeFilters.comment(),
       HtmlNodeFilters.tag("script"),
-      HtmlNodeFilters.tag("header"),
-      HtmlNodeFilters.tag("footer"),
-      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "subscription-indicator"),
+      HtmlNodeFilters.tag("style"),
+      
+      /*
+       * Structural elements that are subject to evolution:
+       */
+      /*
+       * Cookie bar
+       */
       HtmlNodeFilters.tagWithAttribute("div", "id", "cookie-bar"),
+      /*
+       * General header
+       */
+      HtmlNodeFilters.tag("header"),
+      /*
+       * Breadcrumb
+       * 
+       * Style changed over time, e.g.:
+       * 
+       * https://www.oecd-ilibrary.org/economics/etudes-economiques-de-l-ocde-malaisie-2019-version-abregee_e544ad44-fr
+       * 
+       * 14:18:15 04/25/23:
+
+<ol class="breadcrumb">
+<li>
+<a href="/" 
+>Home</a>
+</li>
+<li>
+<a href="/books" 
+>Books</a>
+</li>
+<li>
+<a href="/economics/etudes-economiques-de-l-ocde_16843428" 
+>Études économiques de l&apos;OCDE</a>
+</li>
+<li>
+Études économiques de l&apos;OCDE : Malaisie 2019 (version abrégée)
+</li>
+</ol>
+
+       * 15:32:56 06/06/23:
+
+<ol class="breadcrumb">
+<li>
+<a href="/" 
+>Home</a>
+</li>
+<li>
+<a href="/books" 
+>Books</a>
+</li>
+<li>
+<a href="/economics/etudes-economiques-de-l-ocde_16843428" 
+>Études économiques de l&apos;OCDE</a>
+</li>
+<li>
+<a href="/economics/etudes-economiques-de-l-ocde-malaisie_87a4fada-fr" 
+>Études économiques de l‘OCDE : Malaisie</a>
+</li>
+<li>
+2019
+</li>
+</ol>
+
+       */
+      HtmlNodeFilters.tagWithAttribute("ol", "class", "breadcrumb"),
+      /*
+       * LOCKSS and CLOCKSS permission statements
+       * 
+       * In an <h1> tag with some styling that could change.
+       */
+      HtmlNodeFilters.tag("h1"),
+      /* 
+       * General footer: <footer>
+       */
+      HtmlNodeFilters.tag("footer"),
+      
+      /*
+       * Links to ancillary CSS and Javascript change versions, e.g.:
+       * 
+       * https://www.oecd-ilibrary.org/economics/etudes-economiques-de-l-ocde-malaisie-2019-version-abregee_e544ad44-fr
+       * 
+       * 14:18:15 04/25/23:
+
+<link rel="stylesheet" href="/css/v/9.3.0/instance/site.css" type="text/css" />
+<link rel="stylesheet" href="/css/v/9.3.0/instance/jquery.mCustomScrollbar.min.css" />
+
+       * 15:32:56 06/06/23:
+
+<link rel="stylesheet" href="/css/v/10.1.1/instance/site.css" type="text/css" />
+<link rel="stylesheet" href="/css/v/10.1.1/instance/jquery.mCustomScrollbar.min.css" />
+
+       * It could also be anticipated that more libraries would be added, or
+       * that a used library would gain or lose links in a cluster, so it's just
+       * easier to remove all <link> tags.
+       */
+      HtmlNodeFilters.tag("link"),
+
+      /*
+       * The style of the <title> tag changed, e.g.:
+       *
+       * https://www.oecd-ilibrary.org/economics/etudes-economiques-de-l-ocde-malaisie-2019-version-abregee_e544ad44-fr
+       * 
+       * 14:18:15 04/25/23:
+
+<title>Études économiques de l&apos;OCDE : Malaisie 2019 (version abrégée) | Études économiques de l&apos;OCDE | OECD iLibrary</title>
+
+       * 15:32:56 06/06/23:
+
+<title>Études économiques de l&apos;OCDE : Malaisie 2019 (version abrégée) | Études économiques de l‘OCDE : Malaisie | OECD iLibrary</title>
+
+       * Simply remove the <title> tag.
+       */
+      HtmlNodeFilters.tag("title"),
+
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "subscription-indicator"),
+
       HtmlNodeFilters.tagWithAttribute("div", "id", "survicate-fb-box"),
       HtmlNodeFilters.tagWithAttribute("div", "id", "survicate-box"),
       HtmlNodeFilters.tagWithAttribute("li", "class", "boardpaper"),
