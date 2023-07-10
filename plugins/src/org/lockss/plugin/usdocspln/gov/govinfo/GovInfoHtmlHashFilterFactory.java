@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -37,8 +37,10 @@ import java.io.InputStream;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.*;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.ReaderInputStream;
 
 public class GovInfoHtmlHashFilterFactory implements FilterFactory {
 
@@ -47,14 +49,40 @@ public class GovInfoHtmlHashFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
+        /*
+         * High probability of churn: comments, <style> and <script> tags.
+         */
+        HtmlNodeFilters.comment(),
+        HtmlNodeFilters.tag("style"),
+        HtmlNodeFilters.tag("script"),
+        
+        /*
+         * ID and timestamp injected by the Prerender service, e.g.:
+         * 
+         * https://www.govinfo.gov/app/details/BUDGET-2023-APP/BUDGET-2023-APP-1-1
+
+<meta rel="x-prerender-render-id" content="5fe4ae94-ce33-4e2a-a783-d7a32e107390" />
+<meta rel="x-prerender-render-at" content="2023-06-06T20:53:01.004Z" />
+
+         * vs.
+
+<meta rel="x-prerender-render-id" content="7ae17b42-264a-4ae9-80a5-413ae0bbc4b5" />
+<meta rel="x-prerender-render-at" content="2023-06-05T02:59:25.940Z" />
+
+         */
+        HtmlNodeFilters.tagWithAttribute("meta", "ref", "x-prerender-render-id"),
+        HtmlNodeFilters.tagWithAttribute("meta", "ref", "x-prerender-render-at"),
+    
         // Share by e-mail tag with a unique tracking identifier, e.g. <a href="/cdn-cgi/l/email-protection#b788...858f" id="email-share-search" target="_blank">
         HtmlNodeFilters.tagWithAttribute("a", "id", "email-share-search"),
         // A few things in this <div> started having random numeric suffixes in 'id' attributes, ostensibly to support toggling and similar dynamic behaviors
         HtmlNodeFilters.tagWithAttribute("div", "id", "contentdetaildocinContextview"),
     };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+
+    HtmlFilterInputStream htmlFiltered = new HtmlFilterInputStream(in,
+                                             encoding,
+                                             HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    return new ReaderInputStream(new WhiteSpaceFilter(FilterUtil.getReader(htmlFiltered, encoding)));
   }
   
 }
