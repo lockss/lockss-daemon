@@ -292,7 +292,8 @@
       au < doNotProcess ; doNotProcess ; 2019 ; Journal of Assessment and Institutional Effectiveness Volume 8 ; 8 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Journal of Assessment and Institutional Effectiveness Volume 10 ; 10 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Journal of Assessment and Institutional Effectiveness Volume 11 ; 11 ; 2021 ; >
-      au < expected ; exists ; 2023 ; Journal of Assessment and Institutional Effectiveness Volume 12 ; 12 ; 2023 ; >
+      au < exists ; exists ; 2022 ; Journal of Assessment and Institutional Effectiveness Volume 12 ; 12 ; 2022 ; >
+      au < expected ; exists ; 2023 ; Journal of Assessment and Institutional Effectiveness Volume 13 ; 13 ; 2023 ; >
 
   }
 
@@ -308,10 +309,10 @@
       param[journal_id] = ayn-rand
 
       au < manifest ; exists ; 2007 ; The Journal of Ayn Rand Studies Volume 8 ; 8 ; 2007 ; >
-      au < manifest ; exists ; 2007 ; The Journal of Ayn Rand Studies Volume 9 [2007] ; 9 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; The Journal of Ayn Rand Studies Volume 9 [2008] ; 9 ; 2008 ; >
-      au < manifest ; exists ; 2008 ; The Journal of Ayn Rand Studies Volume 10 [2008] ; 10 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; The Journal of Ayn Rand Studies Volume 10 [2009] ; 10 ; 2009 ; >
+      au < manifest ; exists ; 2007 ; The Journal of Ayn Rand Studies Volume 9 (2007) ; 9 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; The Journal of Ayn Rand Studies Volume 9 (2008) ; 9 ; 2008 ; >
+      au < manifest ; exists ; 2008 ; The Journal of Ayn Rand Studies Volume 10 (2008) ; 10 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; The Journal of Ayn Rand Studies Volume 10 (2009) ; 10 ; 2009 ; >
       au < manifest ; exists ; 2011 ; The Journal of Ayn Rand Studies Volume 11 ; 11 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; The Journal of Ayn Rand Studies Volume 12 ; 12 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; The Journal of Ayn Rand Studies Volume 13 ; 13 ; 2013 ; >
@@ -537,7 +538,6 @@
     >
 
       param[journal_id] = mark-twain
-      
 
       au < doNotProcess ; doNotProcess ; 2010 ; The Mark Twain Annual Volume 8 ; 8 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; The Mark Twain Annual Volume 9 ; 9 ; 2011 ; >
@@ -719,7 +719,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Reception: Texts, Readers, Audiences, History Volume 12 ; 12 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Reception: Texts, Readers, Audiences, History Volume 13 ; 13 ; 2021 ; >
       au < manifest ; exists ; 2022 ; Reception: Texts, Readers, Audiences, History Volume 14 ; 14 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Reception: Texts, Readers, Audiences, History Volume 15 ; 15 ; 2023 ; >
+      au < exists ; exists ; 2023 ; Reception: Texts, Readers, Audiences, History Volume 15 ; 15 ; 2023 ; >
 
   }
 
@@ -907,8 +907,8 @@
       au < doNotProcess ; doNotProcess ; 2018 ; ab-Original Volume 2 ; 2 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; ab-Original Volume 3 (2019) ; 3 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; ab-Original Volume 3 (2020) ; 3 ; 2020 ; >
-      au < manifest ; exists ; 2021 ; ab-Original Volume 5 ; 5 ; 2021 ; >
-      au < expected ; exists ; 2023 ; ab-Original Volume 6 ; 6 ; 2023 ; >
+      au < exists ; exists ; 2021 ; ab-Original Volume 4 ; 4 ; 2021 ; >
+      au < expected ; exists ; 2023 ; ab-Original Volume 5 ; 5 ; 2023 ; >
 
   }
 
@@ -1107,53 +1107,6 @@
 
       param[journal_id] = dickens
 
-#      au < exists ; exists ; 1970 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 1 ; 1 ; 1970 ; >
-#      au < exists ; exists ; 1971 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 2 ; 2 ; 1971 ; >
-#      au < exists ; exists ; 1972 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 3 ; 3 ; 1972 ; >
-#      au < exists ; exists ; 1973 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 4 ; 4 ; 1973 ; >
-#      au < exists ; exists ; 1974 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 5 ; 5 ; 1974 ; >
-#      au < exists ; exists ; 1975 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 6 ; 6 ; 1975 ; >
-#      au < exists ; exists ; 1976 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 7 ; 7 ; 1976 ; >
-#      au < exists ; exists ; 1977 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 8 ; 8 ; 1977 ; >
-#      au < exists ; exists ; 1978 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 9 ; 9 ; 1978 ; >
-#      au < exists ; exists ; 1979 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 10 ; 10 ; 1979 ; >
-#      au < exists ; exists ; 1980 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 11 ; 11 ; 1980 ; >
-#      au < exists ; exists ; 1981 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 12 ; 12 ; 1981 ; >
-#      au < exists ; exists ; 1982 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 13 ; 13 ; 1982 ; >
-#      au < exists ; exists ; 1983 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 14 ; 14 ; 1983 ; >
-#      au < exists ; exists ; 1984 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 15 ; 15 ; 1984 ; >
-#      au < exists ; exists ; 1985 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 16 ; 16 ; 1985 ; >
-#      au < exists ; exists ; 1986 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 17 ; 17 ; 1986 ; >
-#      au < exists ; exists ; 1987 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 18 ; 18 ; 1987 ; >
-#      au < exists ; exists ; 1988 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 19 ; 19 ; 1988 ; >
-#      au < exists ; exists ; 1989 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 20 ; 20 ; 1989 ; >
-#      au < exists ; exists ; 1990 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 21 ; 21 ; 1990 ; >
-#      au < exists ; exists ; 1991 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 22 ; 22 ; 1991 ; >
-#      au < exists ; exists ; 1992 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 23 ; 23 ; 1992 ; >
-#      au < exists ; exists ; 1993 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 24 ; 24 ; 1993 ; >
-#      au < exists ; exists ; 1994 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 25 ; 25 ; 1994 ; >
-#      au < exists ; exists ; 1995 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 26 ; 26 ; 1995 ; >
-#      au < exists ; exists ; 1996 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 27 ; 27 ; 1996 ; >
-#      au < exists ; exists ; 1997 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 28 ; 28 ; 1997 ; >
-#      au < exists ; exists ; 1998 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 29 ; 29 ; 1998 ; >
-#      au < exists ; exists ; 1999 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 30 ; 30 ; 1999 ; >
-#      au < exists ; exists ; 2000 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 31 ; 31 ; 2000 ; >
-#      au < exists ; exists ; 2001 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 32 ; 32 ; 2001 ; >
-#      au < exists ; exists ; 2002 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 33 ; 33 ; 2002 ; >
-#      au < exists ; exists ; 2003 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 34 ; 34 ; 2003 ; >
-#      au < exists ; exists ; 2004 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 35 ; 35 ; 2004 ; >
-#      au < exists ; exists ; 2005 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 36 ; 36 ; 2005 ; >
-#      au < exists ; exists ; 2006 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 37 ; 37 ; 2006 ; >
-#      au < exists ; exists ; 2007 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 38 ; 38 ; 2007 ; >
-#      au < exists ; exists ; 2008 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 39 ; 39 ; 2008 ; >
-#      au < exists ; exists ; 2009 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 40 ; 40 ; 2009 ; >
-#      au < exists ; exists ; 2010 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 41 ; 41 ; 2010 ; >
-#      au < exists ; exists ; 2011 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 42 ; 42 ; 2011 ; >
-#      au < exists ; exists ; 2012 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 43 ; 43 ; 2012 ; >
-#      au < exists ; exists ; 2013 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 44 ; 44 ; 2013 ; >
-#      au < exists ; exists ; 2014 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 45 ; 45 ; 2014 ; >
-#      au < exists ; exists ; 2015 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 46 ; 46 ; 2015 ; >
-#      au < exists ; exists ; 2016 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 47 ; 47 ; 2016 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 48 ; 48 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 49 ; 49 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 50 ; 50 ; 2019 ; >
@@ -1205,27 +1158,6 @@
 
       param[journal_id] = edith-wharton
 
-#      au < exists ; exists ; 1990 ; Edith Wharton Review Volume 7 ; 7 ; 1990 ; >
-#      au < exists ; exists ; 1991 ; Edith Wharton Review Volume 8 ; 8 ; 1991 ; >
-#      au < exists ; exists ; 1992 ; Edith Wharton Review Volume 9 ; 9 ; 1992 ; >
-#      au < exists ; exists ; 1993 ; Edith Wharton Review Volume 10 ; 10 ; 1993 ; >
-#      au < exists ; exists ; 1994 ; Edith Wharton Review Volume 11 ; 11 ; 1994 ; >
-#      au < exists ; exists ; 1995 ; Edith Wharton Review Volume 12 ; 12 ; 1995 ; >
-#      au < exists ; exists ; 1996 ; Edith Wharton Review Volume 13 ; 13 ; 1996 ; >
-#      au < exists ; exists ; 1997 ; Edith Wharton Review Volume 14 ; 14 ; 1997 ; >
-#      au < exists ; exists ; 1999 ; Edith Wharton Review Volume 15 ; 15 ; 1999 ; >
-#      au < exists ; exists ; 2000 ; Edith Wharton Review Volume 16 ; 16 ; 2000 ; >
-#      au < exists ; exists ; 2001 ; Edith Wharton Review Volume 17 ; 17 ; 2001 ; >
-#      au < exists ; exists ; 2002 ; Edith Wharton Review Volume 18 ; 18 ; 2002 ; >
-#      au < exists ; exists ; 2003 ; Edith Wharton Review Volume 19 ; 19 ; 2003 ; >
-#      au < exists ; exists ; 2004 ; Edith Wharton Review Volume 20 ; 20 ; 2004 ; >
-#      au < exists ; exists ; 2005 ; Edith Wharton Review Volume 21 ; 21 ; 2005 ; >
-#      au < exists ; exists ; 2006 ; Edith Wharton Review Volume 22 ; 22 ; 2006 ; >
-#      au < exists ; exists ; 2007 ; Edith Wharton Review Volume 23 ; 23 ; 2007 ; >
-#      au < exists ; exists ; 2008 ; Edith Wharton Review Volume 24 ; 24 ; 2008 ; >
-#      au < exists ; exists ; 2009 ; Edith Wharton Review Volume 25 ; 25 ; 2009 ; >
-#      au < exists ; exists ; 2010 ; Edith Wharton Review Volume 26 ; 26 ; 2010 ; >
-#      au < exists ; exists ; 2011 ; Edith Wharton Review Volume 27 ; 27 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Edith Wharton Review Volume 28 ; 28 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Edith Wharton Review Volume 29 ; 29 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Edith Wharton Review Volume 30 ; 30 ; 2014 ; >
@@ -1252,23 +1184,6 @@
 
       param[journal_id] = george-eliot
 
-#      au < exists ; exists ; 1992 ; George Eliot-George Henry Lewes Studies Volume 1992 ; 1992 ; 1992 ; >
-#      au < exists ; exists ; 1993 ; George Eliot-George Henry Lewes Studies Volume 1993 ; 1993 ; 1993 ; >
-#      au < exists ; exists ; 1994 ; George Eliot-George Henry Lewes Studies Volume 1994 ; 1994 ; 1994 ; >
-#      au < exists ; exists ; 1995 ; George Eliot-George Henry Lewes Studies Volume 1995 ; 1995 ; 1995 ; >
-#      au < exists ; exists ; 1996 ; George Eliot-George Henry Lewes Studies Volume 1996 ; 1996 ; 1996 ; >
-#      au < exists ; exists ; 1997 ; George Eliot-George Henry Lewes Studies Volume 1997 ; 1997 ; 1997 ; >
-#      au < exists ; exists ; 1998 ; George Eliot-George Henry Lewes Studies Volume 1998 ; 1998 ; 1998 ; >
-#      au < exists ; exists ; 1999 ; George Eliot-George Henry Lewes Studies Volume 1999 ; 1999 ; 1999 ; >
-#      au < exists ; exists ; 2000 ; George Eliot-George Henry Lewes Studies Volume 2000 ; 2000 ; 2000 ; >
-#      au < exists ; exists ; 2001 ; George Eliot-George Henry Lewes Studies Volume 2001 ; 2001 ; 2001 ; >
-#      au < exists ; exists ; 2002 ; George Eliot-George Henry Lewes Studies Volume 2002 ; 2002 ; 2002 ; >
-#      au < exists ; exists ; 2003 ; George Eliot-George Henry Lewes Studies Volume 2003 ; 2003 ; 2003 ; >
-#      au < exists ; exists ; 2004 ; George Eliot-George Henry Lewes Studies Volume 2004 ; 2004 ; 2004 ; >
-#      au < exists ; exists ; 2005 ; George Eliot-George Henry Lewes Studies Volume 2005 ; 2005 ; 2005 ; >
-#      au < exists ; exists ; 2006 ; George Eliot-George Henry Lewes Studies Volume 2006 ; 2006 ; 2006 ; >
-#      au < exists ; exists ; 2007 ; George Eliot-George Henry Lewes Studies Volume 2007 ; 2007 ; 2007 ; >
-#      au < exists ; exists ; 2008 ; George Eliot-George Henry Lewes Studies Volume 2008 ; 2008 ; 2008 ; >
       au < manifest ; exists ; 2009 ; George Eliot-George Henry Lewes Studies Volume 56-57 ; 56-57 ; 2009 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; George Eliot-George Henry Lewes Studies Volume 2010 ; 2010 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; George Eliot-George Henry Lewes Studies Volume 2011 ; 2011 ; 2011 ; >
@@ -1466,6 +1381,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; Journal of Natural Resources Policy Research Volume 7 ; 7 ; 2015 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; Journal of Natural Resources Policy Research Volume 8 ; 8 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Journal of Natural Resources Policy Research Volume 9 ; 9 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Journal of Natural Resources Policy Research Volume 10 ; 10 ; 2020 ; >
 
   }
 
@@ -1579,34 +1495,6 @@
 
       param[journal_id] = nathaniel-hawthorne
 
-#      au < exists ; exists ; 1986 ; Nathaniel Hawthorne Review Volume 12 ; 12 ; 1986 ; >
-#      au < exists ; exists ; 1987 ; Nathaniel Hawthorne Review Volume 13 ; 13 ; 1987 ; >
-#      au < exists ; exists ; 1988 ; Nathaniel Hawthorne Review Volume 14 ; 14 ; 1988 ; >
-#      au < exists ; exists ; 1989 ; Nathaniel Hawthorne Review Volume 15 ; 15 ; 1989 ; >
-#      au < exists ; exists ; 1990 ; Nathaniel Hawthorne Review Volume 16 ; 16 ; 1990 ; >
-#      au < exists ; exists ; 1991 ; Nathaniel Hawthorne Review Volume 17 ; 17 ; 1991 ; >
-#      au < exists ; exists ; 1992 ; Nathaniel Hawthorne Review Volume 18 ; 18 ; 1992 ; >
-#      au < exists ; exists ; 1993 ; Nathaniel Hawthorne Review Volume 19 ; 19 ; 1993 ; >
-#      au < exists ; exists ; 1994 ; Nathaniel Hawthorne Review Volume 20 ; 20 ; 1994 ; >
-#      au < exists ; exists ; 1995 ; Nathaniel Hawthorne Review Volume 21 ; 21 ; 1995 ; >
-#      au < exists ; exists ; 1996 ; Nathaniel Hawthorne Review Volume 22 ; 22 ; 1996 ; >
-#      au < exists ; exists ; 1997 ; Nathaniel Hawthorne Review Volume 23 ; 23 ; 1997 ; >
-#      au < exists ; exists ; 1998 ; Nathaniel Hawthorne Review Volume 24 ; 24 ; 1998 ; >
-#      au < exists ; exists ; 1999 ; Nathaniel Hawthorne Review Volume 25 ; 25 ; 1999 ; >
-#      au < exists ; exists ; 2000 ; Nathaniel Hawthorne Review Volume 26 ; 26 ; 2000 ; >
-#      au < exists ; exists ; 2001 ; Nathaniel Hawthorne Review Volume 27 ; 27 ; 2001 ; >
-#      au < exists ; exists ; 2002 ; Nathaniel Hawthorne Review Volume 28 ; 28 ; 2002 ; >
-#      au < exists ; exists ; 2003 ; Nathaniel Hawthorne Review Volume 29 ; 29 ; 2003 ; >
-#      au < exists ; exists ; 2004 ; Nathaniel Hawthorne Review Volume 30 ; 30 ; 2004 ; >
-#      au < exists ; exists ; 2005 ; Nathaniel Hawthorne Review Volume 31 ; 31 ; 2005 ; >
-#      au < exists ; exists ; 2006 ; Nathaniel Hawthorne Review Volume 32 ; 32 ; 2006 ; >
-#      au < exists ; exists ; 2007 ; Nathaniel Hawthorne Review Volume 33 ; 33 ; 2007 ; >
-#      au < exists ; exists ; 2008 ; Nathaniel Hawthorne Review Volume 34 ; 34 ; 2008 ; >
-#      au < exists ; exists ; 2009 ; Nathaniel Hawthorne Review Volume 35 ; 35 ; 2009 ; >
-#      au < exists ; exists ; 2010 ; Nathaniel Hawthorne Review Volume 36 ; 36 ; 2010 ; >
-#      au < exists ; exists ; 2011 ; Nathaniel Hawthorne Review Volume 37 ; 37 ; 2011 ; >
-#      au < exists ; exists ; 2012 ; Nathaniel Hawthorne Review Volume 38 ; 38 ; 2012 ; >
-#      au < exists ; exists ; 2013 ; Nathaniel Hawthorne Review Volume 39 ; 39 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Nathaniel Hawthorne Review Volume 40 ; 40 ; 2014 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; Nathaniel Hawthorne Review Volume 41 ; 41 ; 2015 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; Nathaniel Hawthorne Review Volume 42 ; 42 ; 2016 ; >
@@ -1646,21 +1534,21 @@
       au < manifest ; exists ; 1983 ; Resources for American Literary Study Volume 13 ; 13 ; 1983 ; >
       au < manifest ; exists ; 1984 ; Resources for American Literary Study Volume 14 ; 14 ; 1984 ; >
       au < manifest ; exists ; 1985 ; Resources for American Literary Study Volume 15 ; 15 ; 1985 ; >
-      #au < exists ; exists ; 1986 ; Resources for American Literary Study Volume 16 ; 16 ; 1986 ; >
+      au < exists ; exists ; 1989 ; Resources for American Literary Study Volume 16 ; 16 ; 1989 ; >
       au < manifest ; exists ; 1990 ; Resources for American Literary Study Volume 17 (1990) ; 17 ; 1990 ; >
       au < manifest ; exists ; 1991 ; Resources for American Literary Study Volume 17 (1991) ; 17 ; 1991 ; >
       au < manifest ; exists ; 1992 ; Resources for American Literary Study Volume 18 ; 18 ; 1992 ; >
       au < manifest ; exists ; 1993 ; Resources for American Literary Study Volume 19 ; 19 ; 1993 ; >
       au < manifest ; exists ; 1994 ; Resources for American Literary Study Volume 20 ; 20 ; 1994 ; >
       au < manifest ; exists ; 1995 ; Resources for American Literary Study Volume 21 ; 21 ; 1995 ; >
-      #au < exists ; exists ; 1996 ; Resources for American Literary Study Volume 22 ; 22 ; 1996 ; >
+      #au < doesNotExist ; exists ; 1996 ; Resources for American Literary Study Volume 22 ; 22 ; 1996 ; >
       au < manifest ; exists ; 1997 ; Resources for American Literary Study Volume 23 ; 23 ; 1997 ; >
       au < manifest ; exists ; 1998 ; Resources for American Literary Study Volume 24 ; 24 ; 1998 ; >
       au < manifest ; exists ; 1999 ; Resources for American Literary Study Volume 25 ; 25 ; 1999 ; >
       au < manifest ; exists ; 2000 ; Resources for American Literary Study Volume 26 ; 26 ; 2000 ; >
       au < manifest ; exists ; 2001 ; Resources for American Literary Study Volume 27 ; 27 ; 2001 ; >
       au < manifest ; exists ; 2002 ; Resources for American Literary Study Volume 28 ; 28 ; 2002 ; >
-      #au < exists ; exists ; 2003 ; Resources for American Literary Study Volume 29 ; 29 ; 2003 ; >
+      au < exists ; exists ; 2004 ; Resources for American Literary Study Volume 29 ; 29 ; 2004 ; >
       au < manifest ; exists ; 2005 ; Resources for American Literary Study Volume 30 ; 30 ; 2005 ; >
       au < manifest ; exists ; 2006 ; Resources for American Literary Study Volume 31 ; 31 ; 2006 ; >
       au < manifest ; exists ; 2007 ; Resources for American Literary Study Volume 32 ; 32 ; 2007 ; >
@@ -1748,13 +1636,6 @@
 
       param[journal_id] = cormac-mccarthy
 
-#      au < exists ; exists ; 2001 ; The Cormac McCarthy Journal Volume 1 ; 1 ; 2001 ; >
-#      au < exists ; exists ; 2002 ; The Cormac McCarthy Journal Volume 2 ; 2 ; 2002 ; >
-#      au < exists ; exists ; 2003 ; The Cormac McCarthy Journal Volume 3-4 ; 3-4 ; 2003 ; >
-#      au < exists ; exists ; 2005 ; The Cormac McCarthy Journal Volume 5 ; 5 ; 2005 ; >
-#      au < exists ; exists ; 2008 ; The Cormac McCarthy Journal Volume 6 ; 6 ; 2008 ; >
-#      au < exists ; exists ; 2009 ; The Cormac McCarthy Journal Volume 7 ; 7 ; 2009 ; >
-#      au < exists ; exists ; 2010 ; The Cormac McCarthy Journal Volume 8 ; 8 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; The Cormac McCarthy Journal Volume 9 ; 9 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; The Cormac McCarthy Journal Volume 10 ; 10 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; The Cormac McCarthy Journal Volume 11 ; 11 ; 2013 ; >
@@ -1806,6 +1687,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; The Journal of Development Perspectives Volume 1 ; 1 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; The Journal of Development Perspectives Volume 2 ; 2 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; The Journal of Development Perspectives Volume 3 ; 3 ; 2019 ; >
+      au < exists ; exists ; 2020 ; The Journal of Development Perspectives Volume 4 ; 4 ; 2020 ; >
 
   }
 
@@ -1820,10 +1702,6 @@
 
       param[journal_id] = world-christianity
 
-#      au < exists ; exists ; 2008 ; The Journal of World Christianity Volume 1 ; 1 ; 2008 ; >
-#      au < exists ; exists ; 2009 ; The Journal of World Christianity Volume 2 ; 2 ; 2009 ; >
-#      au < exists ; exists ; 2010 ; The Journal of World Christianity Volume 3 ; 3 ; 2010 ; >
-#      au < exists ; exists ; 2011 ; The Journal of World Christianity Volume 4 ; 4 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; The Journal of World Christianity Volume 5 ; 5 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; The Journal of World Christianity Volume 6 ; 6 ; 2016 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; The Journal of World Christianity Volume 7 ; 7 ; 2017 ; >
@@ -1847,18 +1725,6 @@
 
       param[journal_id] = korean-language
 
-#      au < exists ; exists ; 1995 ; The Korean Language in America Volume 1 ; 1 ; 1995 ; >
-#      au < exists ; exists ; 1997 ; The Korean Language in America Volume 2 ; 2 ; 1997 ; >
-#      au < exists ; exists ; 1999 ; The Korean Language in America Volume 3 ; 3 ; 1999 ; >
-#      au < exists ; exists ; 2000 ; The Korean Language in America Volume 4-5 ; 4-5 ; 2000 ; >
-#      au < exists ; exists ; 2001 ; The Korean Language in America Volume 6 ; 6 ; 2001 ; >
-#      au < exists ; exists ; 2002 ; The Korean Language in America Volume 7 ; 7 ; 2002 ; >
-#      au < exists ; exists ; 2003 ; The Korean Language in America Volume 8 ; 8 ; 2003 ; >
-#      au < exists ; exists ; 2004 ; The Korean Language in America Volume 9 ; 9 ; 2004 ; >
-#      au < exists ; exists ; 2005 ; The Korean Language in America Volume 10 ; 10 ; 2005 ; >
-#      au < exists ; exists ; 2006 ; The Korean Language in America Volume 11 ; 11 ; 2006 ; >
-#      au < exists ; exists ; 2007 ; The Korean Language in America Volume 12 ; 12 ; 2007 ; >
-#      au < exists ; exists ; 2008 ; The Korean Language in America Volume 13 ; 13 ; 2008 ; >
       au < manifest ; exists ; 2009 ; The Korean Language in America Volume 14 ; 14 ; 2009 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; The Korean Language in America Volume 15 ; 15 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; The Korean Language in America Volume 16 ; 16 ; 2011 ; >
@@ -1886,30 +1752,6 @@
 
       param[journal_id] = langston-hughes
 
-#      au < exists ; exists ; 1982 ; The Langston Hughes Review Volume 1 ; 1 ; 1982 ; >
-#      au < exists ; exists ; 1983 ; The Langston Hughes Review Volume 2 ; 2 ; 1983 ; >
-#      au < exists ; exists ; 1984 ; The Langston Hughes Review Volume 3 ; 3 ; 1984 ; >
-#      au < exists ; exists ; 1985 ; The Langston Hughes Review Volume 4 ; 4 ; 1985 ; >
-#      au < exists ; exists ; 1986 ; The Langston Hughes Review Volume 5 ; 5 ; 1986 ; >
-#      au < exists ; exists ; 1987 ; The Langston Hughes Review Volume 6 ; 6 ; 1987 ; >
-#      au < exists ; exists ; 1988 ; The Langston Hughes Review Volume 7 ; 7 ; 1988 ; >
-#      au < exists ; exists ; 1989 ; The Langston Hughes Review Volume 8 ; 8 ; 1989 ; >
-#      au < exists ; exists ; 1990 ; The Langston Hughes Review Volume 9-10 ; 9-10 ; 1990 ; >
-#      au < exists ; exists ; 1992 ; The Langston Hughes Review Volume 11 ; 11 ; 1992 ; >
-#      au < exists ; exists ; 1993 ; The Langston Hughes Review Volume 12 ; 12 ; 1993 ; >
-#      au < exists ; exists ; 1994 ; The Langston Hughes Review Volume 13 (1994) ; 13 ; 1994 ; >
-#      au < exists ; exists ; 1995 ; The Langston Hughes Review Volume 13 (1995) ; 13 ; 1995 ; >
-#      au < exists ; exists ; 1996 ; The Langston Hughes Review Volume 14 ; 14 ; 1996 ; >
-#      au < exists ; exists ; 1997 ; The Langston Hughes Review Volume 15 ; 15 ; 1997 ; >
-#      au < exists ; exists ; 1999 ; The Langston Hughes Review Volume 16 ; 16 ; 1999 ; >
-#      au < exists ; exists ; 2001 ; The Langston Hughes Review Volume 17 ; 17 ; 2001 ; >
-#      au < exists ; exists ; 2004 ; The Langston Hughes Review Volume 18-19 ; 18-19 ; 2004 ; >
-#      au < exists ; exists ; 2005 ; The Langston Hughes Review Volume 19 ; 19 ; 2005 ; >
-#      au < exists ; exists ; 2006 ; The Langston Hughes Review Volume 20 ; 20 ; 2006 ; >
-#      au < exists ; exists ; 2007 ; The Langston Hughes Review Volume 21 ; 21 ; 2007 ; >
-#      au < exists ; exists ; 2008 ; The Langston Hughes Review Volume 22 ; 22 ; 2008 ; >
-#      au < exists ; exists ; 2009 ; The Langston Hughes Review Volume 23 ; 23 ; 2009 ; >
-#      au < exists ; exists ; 2010 ; The Langston Hughes Review Volume 24 ; 24 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; The Langston Hughes Review Volume 25 ; 25 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; The Langston Hughes Review Volume 26 ; 26 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; The Langston Hughes Review Volume 27 ; 27 ; 2021 ; >
@@ -1929,28 +1771,6 @@
 
       param[journal_id] = transformations
 
-#      au < exists ; exists ; 1990 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 1 ; 1 ; 1990 ; >
-#      au < exists ; exists ; 1991 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 2 ; 2 ; 1991 ; >
-#      au < exists ; exists ; 1992 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 3 ; 3 ; 1992 ; >
-#      au < exists ; exists ; 1993 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 4 ; 4 ; 1993 ; >
-#      au < exists ; exists ; 1994 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 5 ; 5 ; 1994 ; >
-#      au < exists ; exists ; 1995 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 6 ; 6 ; 1995 ; >
-#      au < exists ; exists ; 1996 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 7 ; 7 ; 1996 ; >
-#      au < exists ; exists ; 1997 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 8 ; 8 ; 1997 ; >
-#      au < exists ; exists ; 1998 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 9 ; 9 ; 1998 ; >
-#      au < exists ; exists ; 1999 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 10 ; 10 ; 1999 ; >
-#      au < exists ; exists ; 2000 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 11 ; 11 ; 2000 ; >
-#      au < exists ; exists ; 2001 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 12 ; 12 ; 2001 ; >
-#      au < exists ; exists ; 2002 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 13 ; 13 ; 2002 ; >
-#      au < exists ; exists ; 2003 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 14 ; 14 ; 2003 ; >
-#      au < exists ; exists ; 2004 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 15 ; 15 ; 2004 ; >
-#      au < exists ; exists ; 2005 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 16 ; 16 ; 2005 ; >
-#      au < exists ; exists ; 2006 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 17 ; 17 ; 2006 ; >
-#      au < exists ; exists ; 2007 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 17-18 ; 17-18 ; 2007 ; >
-#      au < exists ; exists ; 2008 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 18-19 ; 18-19 ; 2008 ; >
-#      au < exists ; exists ; 2009 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 20 ; 20 ; 2009 ; >
-#      au < exists ; exists ; 2010 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 20-21 ; 20-21 ; 2010 ; >
-#      au < exists ; exists ; 2011 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 21-22 ; 21-22 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 22-23 ; 22-23 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 23 ; 23 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 24-25 ; 24-25 ; 2014 ; >
@@ -1959,7 +1779,6 @@
       au < doNotProcess ; doNotProcess ; 2018 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 28 ; 28 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 29 ; 29 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 30 ; 30 ; 2020 ; >
-      au < expected ; exists ; 2023 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 31 ; 31 ; 2023 ; >
 
   }
 
@@ -1974,8 +1793,6 @@
 
       param[journal_id] = wms
 
-#      au < exists ; exists ; 2009 ; Wesley and Methodist Studies Volume 1 ; 1 ; 2009 ; >
-#      au < exists ; exists ; 2010 ; Wesley and Methodist Studies Volume 2 ; 2 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Wesley and Methodist Studies Volume 3 ; 3 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Wesley and Methodist Studies Volume 4 ; 4 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Wesley and Methodist Studies Volume 5 ; 5 ; 2013 ; >
@@ -2003,31 +1820,6 @@
 
       param[journal_id] = william-carlos-williams
 
-#      au < exists ; exists ; 1980 ; William Carlos Williams Review Volume 6 ; 6 ; 1980 ; >
-#      au < exists ; exists ; 1981 ; William Carlos Williams Review Volume 7 ; 7 ; 1981 ; >
-#      au < exists ; exists ; 1982 ; William Carlos Williams Review Volume 8 ; 8 ; 1982 ; >
-#      au < exists ; exists ; 1983 ; William Carlos Williams Review Volume 9 ; 9 ; 1983 ; >
-#      au < exists ; exists ; 1984 ; William Carlos Williams Review Volume 10 ; 10 ; 1984 ; >
-#      au < exists ; exists ; 1985 ; William Carlos Williams Review Volume 11 ; 11 ; 1985 ; >
-#      au < exists ; exists ; 1986 ; William Carlos Williams Review Volume 12 ; 12 ; 1986 ; >
-#      au < exists ; exists ; 1987 ; William Carlos Williams Review Volume 13 ; 13 ; 1987 ; >
-#      au < exists ; exists ; 1988 ; William Carlos Williams Review Volume 14 ; 14 ; 1988 ; >
-#      au < exists ; exists ; 1989 ; William Carlos Williams Review Volume 15 ; 15 ; 1989 ; >
-#      au < exists ; exists ; 1990 ; William Carlos Williams Review Volume 16 ; 16 ; 1990 ; >
-#      au < exists ; exists ; 1991 ; William Carlos Williams Review Volume 17 ; 17 ; 1991 ; >
-#      au < exists ; exists ; 1992 ; William Carlos Williams Review Volume 18 ; 18 ; 1992 ; >
-#      au < exists ; exists ; 1993 ; William Carlos Williams Review Volume 19 ; 19 ; 1993 ; >
-#      au < exists ; exists ; 1994 ; William Carlos Williams Review Volume 20 ; 20 ; 1994 ; >
-#      au < exists ; exists ; 1995 ; William Carlos Williams Review Volume 21 ; 21 ; 1995 ; >
-#      au < exists ; exists ; 1996 ; William Carlos Williams Review Volume 22 ; 22 ; 1996 ; >
-#      au < exists ; exists ; 1997 ; William Carlos Williams Review Volume 23 ; 23 ; 1997 ; >
-#      au < exists ; exists ; 1998 ; William Carlos Williams Review Volume 24 (1998) ; 24 ; 1998 ; >
-#      au < exists ; exists ; 2004 ; William Carlos Williams Review Volume 24 (2004) ; 24 ; 2004 ; >
-#      au < exists ; exists ; 2005 ; William Carlos Williams Review Volume 25 ; 25 ; 2005 ; >
-#      au < exists ; exists ; 2006 ; William Carlos Williams Review Volume 26 ; 26 ; 2006 ; >
-#      au < exists ; exists ; 2007 ; William Carlos Williams Review Volume 27 ; 27 ; 2007 ; >
-#      au < exists ; exists ; 2008 ; William Carlos Williams Review Volume 28 ; 28 ; 2008 ; >
-#      au < exists ; exists ; 2009 ; William Carlos Williams Review Volume 29 ; 29 ; 2009 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; William Carlos Williams Review Volume 30 ; 30 ; 2013 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; William Carlos Williams Review Volume 31 ; 31 ; 2014 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; William Carlos Williams Review Volume 32 ; 32 ; 2015 ; >
@@ -2041,7 +1833,6 @@
       au < manifest ; exists ; 2023 ; William Carlos Williams Review Volume 40 ; 40 ; 2023 ; >
 
   }
-
 
   {
 
@@ -2334,8 +2125,7 @@
 
       au < manifest ; exists ; 2020 ; AMP: American Music Perspectives Volume 1 ; 1 ; 2020 ; >
       au < manifest ; exists ; 2021 ; AMP: American Music Perspectives Volume 2 ; 2 ; 2021 ; >
-      au < expected ; exists ; 2022 ; AMP: American Music Perspectives Volume 3 ; 3 ; 2022 ; >
-      au < expected ; exists ; 2023 ; AMP: American Music Perspectives Volume 4 ; 4 ; 2023 ; >
+      au < expected ; exists ; 2023 ; AMP: American Music Perspectives Volume 3 ; 3 ; 2023 ; >
 
   }
 
@@ -2375,9 +2165,8 @@
       au < manifest ; exists ; 2005 ; Journal for the History of Rhetoric Volume 8 ; 8 ; 2005 ; >
       au < manifest ; exists ; 2006 ; Journal for the History of Rhetoric Volume 9 ; 9 ; 2006 ; >
       au < manifest ; exists ; 2007 ; Journal for the History of Rhetoric Volume 10 ; 10 ; 2007 ; >
-      #au < exists ; exists ; 2008 ; Journal for the History of Rhetoric Volume 11 ; 11 ; 2008 ; >
-      #au < exists ; exists ; 2009 ; Journal for the History of Rhetoric Volume 12 ; 12 ; 2009 ; >
-      #au < exists ; exists ; 2010 ; Journal for the History of Rhetoric Volume 13 ; 13 ; 2010 ; >
+      au < exists ; exists ; 2009 ; Journal for the History of Rhetoric Volume 11-12 ; 11-12 ; 2009 ; >
+      au < doesNotExist ; exists ; 2010 ; Journal for the History of Rhetoric Volume 13 ; 13 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Journal for the History of Rhetoric Volume 14 ; 14 ; 2011 ; >
       au < manifest ; exists ; 2012 ; Journal for the History of Rhetoric Volume 15 ; 15 ; 2012 ; >
       au < manifest ; exists ; 2013 ; Journal for the History of Rhetoric Volume 16 ; 16 ; 2013 ; >
