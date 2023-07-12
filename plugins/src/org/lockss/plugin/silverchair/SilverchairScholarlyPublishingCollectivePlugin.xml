@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -136,20 +136,29 @@
             -->
             <string>2,"^https?://([^/]+\.silverchair-cdn\.com)/.*\.xlsx"</string>
             <string>2,"%smy-account/register", base_url</string>
+            <!--https://scholarlypublishingcollective.org/institutional-login?returnUrl=https%3A%2F%2Fscholarlypublishingcollective.org%2Fview-large%2Ffigure%2F6743702%2Fvictinstj.49.2022.0086.F1.jpg-->
+            <!--https://scholarlypublishingcollective.org/sign-in?returnUrl=%2Fview-large%2Ffigure%2F6743704%2Fvictinstj.49.2022.0086.F2.jpg-->
+            <string>2,"%s(institutional-login|sign-in)", base_url</string>
             <string>1,"^https?://(%s|[^.]+\.(silverchair-?cdn\.com/|cloudfront\.net/|brightcove\.net/)).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
             <!--
             https://scholarlypublishingcollective.org/psup/arthur-miller/issue/16/1
             https://scholarlypublishingcollective.org/psup/arthur-miller/issue/16/2
+            https://scholarlypublishingcollective.org/psup/victorians-institute/issue/volume/49 - this one is special
+            https://scholarlypublishingcollective.org/psup/victorians-institute/article/doi/10.5325/victinstj.49.2022.0055/319224/Behold-we-know-not-anything-Tennyson-s
             -->
-            <string>1,"%s%s/%s/(issue|article|article-abstract|article-standard)/%s/", base_url, college_id, journal_id, volume_name</string>
+            <string>1,"%s%s/%s/(issue|article|article-abstract|article-standard)/(volume/)?%s", base_url, college_id, journal_id, volume_name</string>
+            <string>1,"%s%s/%s/article/doi/.*%s.*", base_url, college_id, journal_id, volume_name</string>
             <!--
             https://pubs.geoscienceworld.org/gsabulletin/article-pdf/132/1-2/3/4907520/3.pdf
             Redirected to excluded URL:
             https://pubs.geoscienceworld.org/gsa/gsabulletin/article-pdf/132/1-2/3/4907520/3.pdf
 
             Rockefeller: https://rupress.org/jem/article-pdf/215/1/1/1018472/jem_20172022.pdf
+
+            https://scholarlypublishingcollective.org/victorians-institute/article-pdf/doi/10.5325/victinstj.49.2022.0001/1649580/victinstj.49.2022.0001.pdf
+
             -->
-            <string>1,"%s%s/%s/article-pdf/(doi/[^/]+/)?%s/.*\.pdf$", base_url, college_id, journal_id, volume_name</string>
+            <string>1,"%s(%s/)?%s/article-pdf/(doi/[^/]+/.*)?%s.*/.*\.pdf$", base_url, college_id, journal_id, volume_name</string>
             <!--
                 citationFormat=0 // ris
                 citationFormat=1 // Endnote
@@ -170,6 +179,9 @@
             <string>1,"^https?://(ucp\.silverchair-cdn\.com)/"</string>
             <string>1,"^https?://(watermark\.silverchair\.com)/"</string>
             <string>1,"^https?://(ajot2\.silverchair-cdn\.com)/"</string>
+            <string>1,"^https?://(dupspc\.silverchair-cdn\.com)/"</string>
+            <string>1,"^https?://(platform-api\.sharethis\.com)/"</string>
+            <string>1,"^https?://(www\.googletagservices\.com)/"</string>
             <string>2,"%s.*javascript;:", base_url</string>
             <string>2,"%s.*javascript:;", base_url</string>
         </list>
@@ -178,6 +190,10 @@
         <!-- Validator factory for text MIME types -->
         <string>text/*_content_validator_factory</string>
         <string>org.lockss.plugin.silverchair.BaseScContentValidatorFactory</string>
+    </entry>
+    <entry>
+        <string>au_url_normalizer</string>
+        <string>org.lockss.plugin.silverchair.SilverchairScholarlyPublishingCollectiveUrlNormalizer</string>
     </entry>
     <entry>
         <string>text/html_crawl_filter_factory</string>
@@ -254,6 +270,9 @@
             <string>ucp\.silverchair-cdn\.com</string>
             <string>watermark\.silverchair\.com</string>
             <string>ajot2\.silverchair-cdn\.com</string>
+            <string>dupspc\.silverchair-cdn\.com</string>
+            <string>platform-api\.sharethis\.com</string>
+            <string>www\.googletagservices\.com</string>
         </list>
     </entry>
     <entry>
