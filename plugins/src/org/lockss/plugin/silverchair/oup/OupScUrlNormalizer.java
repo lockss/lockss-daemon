@@ -34,8 +34,11 @@ package org.lockss.plugin.silverchair.oup;
 
 import java.util.regex.*;
 
+import org.apache.commons.lang3.StringUtils;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.silverchair.SilverchairScholarlyPublishingCollectiveUrlNormalizer;
+import org.lockss.util.Logger;
 
 /**
  * <p>
@@ -48,12 +51,39 @@ import org.lockss.plugin.*;
  */
 public class OupScUrlNormalizer implements UrlNormalizer {
 
+  private static final Logger log = Logger.getLogger(OupScUrlNormalizer.class);
+
+  protected static Pattern VERSIONED_DIRECTORY_NAME =
+          Pattern.compile("(.*)\\/(v-\\d+)/(.*)\\.(css|js|ico|png|json|bmp|css|eot|gif|ico|jpe\\?g|js|otf|png|svg|tif\\?f|ttf|woff\\?)",
+                  Pattern.CASE_INSENSITIVE);
+
+
   private static final Pattern RESULT_PATTERN = Pattern.compile("[?]searchresult=\\d+$", Pattern.CASE_INSENSITIVE);
   private static final String RESULT_CANONICAL = "";
 
   @Override
   public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
+
+    String[] excludedFileTypes = new String[] {"css", "js", "ico", "png", "json", "bmp", "eot", "gif", "ico", "jpeg", "jpg", "otf", "png", "svg", "tiff", "tif","ttf", "woff", "wof"};
+
+    Matcher m1 = VERSIONED_DIRECTORY_NAME.matcher(url);
+
+    String newUrl = url;
+
+    if (StringUtils.indexOfAny(url, excludedFileTypes) > -1) {
+
+      log.debug3("Version based diretory check: UrlNormalizer url = " + url );
+      if (m1.find()) {
+        newUrl = m1.group(1) + "/" + m1.group(3) + "." + m1.group(4);
+
+        log.debug3("Version based diretory check: UrlNormalizer newUrl = " + newUrl );
+      }
+
+      return newUrl;
+    }
+
     url = RESULT_PATTERN.matcher(url).replaceFirst(RESULT_CANONICAL);
+
     return url;
   }
 
