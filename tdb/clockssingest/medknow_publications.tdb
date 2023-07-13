@@ -5803,18 +5803,19 @@
 
       param[journal_issn] = 1357-6283
 #      param[base_url] = http://www.educationforhealth.net/
+    #move to LWW in 2023, moved https://journals.lww.com/EDHE/
 
-      au < manifest ; exists ; 2000 ; Education for Health Volume 13 ; 2000 ; 13 ; https://www.educationforhealth.net/ ; ; >
-      au < manifest ; exists ; 2001 ; Education for Health Volume 14 ; 2001 ; 14 ; https://www.educationforhealth.net/ ; ; >
-      au < manifest ; exists ; 2002 ; Education for Health Volume 15 ; 2002 ; 15 ; https://www.educationforhealth.net/ ; ; >
-      au < manifest ; exists ; 2003 ; Education for Health Volume 16 ; 2003 ; 16 ; https://www.educationforhealth.net/ ; ; >
-      au < manifest ; exists ; 2004 ; Education for Health Volume 17 ; 2004 ; 17 ; https://www.educationforhealth.net/ ; ; >
-      au < manifest ; exists ; 2005 ; Education for Health Volume 18 ; 2005 ; 18 ; https://www.educationforhealth.net/ ; ; >
-      au < manifest ; exists ; 2006 ; Education for Health Volume 19 ; 2006 ; 19 ; https://www.educationforhealth.net/ ; ; >
-      au < manifest ; exists ; 2007 ; Education for Health Volume 20 ; 2007 ; 20 ; https://www.educationforhealth.net/ ; ; >
-      au < manifest ; exists ; 2008 ; Education for Health Volume 21 ; 2008 ; 21 ; https://www.educationforhealth.net/ ; ; >
-      au < manifest ; exists ; 2009 ; Education for Health Volume 22 ; 2009 ; 22 ; https://www.educationforhealth.net/ ; ; >
-      au < manifest ; exists ; 2010 ; Education for Health Volume 23 ; 2010 ; 23 ; https://www.educationforhealth.net/ ; ; >
+      au < doNotProcess ; exists ; 2000 ; Education for Health Volume 13 ; 2000 ; 13 ; https://www.educationforhealth.net/ ; ; >
+      au < doNotProcess ; exists ; 2001 ; Education for Health Volume 14 ; 2001 ; 14 ; https://www.educationforhealth.net/ ; ; >
+      au < doNotProcess ; exists ; 2002 ; Education for Health Volume 15 ; 2002 ; 15 ; https://www.educationforhealth.net/ ; ; >
+      au < doNotProcess ; exists ; 2003 ; Education for Health Volume 16 ; 2003 ; 16 ; https://www.educationforhealth.net/ ; ; >
+      au < doNotProcess ; exists ; 2004 ; Education for Health Volume 17 ; 2004 ; 17 ; https://www.educationforhealth.net/ ; ; >
+      au < doNotProcess ; exists ; 2005 ; Education for Health Volume 18 ; 2005 ; 18 ; https://www.educationforhealth.net/ ; ; >
+      au < doNotProcess ; exists ; 2006 ; Education for Health Volume 19 ; 2006 ; 19 ; https://www.educationforhealth.net/ ; ; >
+      au < doNotProcess ; exists ; 2007 ; Education for Health Volume 20 ; 2007 ; 20 ; https://www.educationforhealth.net/ ; ; >
+      au < doNotProcess ; exists ; 2008 ; Education for Health Volume 21 ; 2008 ; 21 ; https://www.educationforhealth.net/ ; ; >
+      au < doNotProcess ; exists ; 2009 ; Education for Health Volume 22 ; 2009 ; 22 ; https://www.educationforhealth.net/ ; ; >
+      au < doNotProcess ; exists ; 2010 ; Education for Health Volume 23 ; 2010 ; 23 ; https://www.educationforhealth.net/ ; ; >
       au < finished ; finished ; 2011 ; Education for Health Volume 24 ; 2011 ; 24 ; http://www.educationforhealth.net/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2012 ; Education for Health Volume 25 ; 2012 ; 25 ; http://www.educationforhealth.net/ ; ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2013 ; Education for Health Volume 26 ; 2013 ; 26 ; http://www.educationforhealth.net/ ; ; reingest1.clockss.org:8082 >
@@ -5825,9 +5826,8 @@
       au < finished ; finished ; 2018 ; Education for Health Volume 31 ; 2018 ; 31 ; http://www.educationforhealth.net/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2019 ; Education for Health Volume 32 ; 2019 ; 32 ; https://www.educationforhealth.net/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2020 ; Education for Health Volume 33 ; 2020 ; 33 ; https://www.educationforhealth.net/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Education for Health Volume 34 ; 2021 ; 34 ; https://www.educationforhealth.net/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Education for Health Volume 35 ; 2022 ; 35 ; https://www.educationforhealth.net/ ; ; >
-      au < expected ; exists ; 2023 ; Education for Health Volume 36 ; 2023 ; 36 ; https://www.educationforhealth.net/ ; ; >
+      au < frozen ; exists ; 2021 ; Education for Health Volume 34 ; 2021 ; 34 ; https://www.educationforhealth.net/ ; ; >
+      au < frozen ; exists ; 2022 ; Education for Health Volume 35 ; 2022 ; 35 ; https://www.educationforhealth.net/ ; ; >
 
   }
 
@@ -5888,6 +5888,7 @@
 
       param[journal_issn] = 2356-8062
 #      param[base_url] = http://www.ejode.eg.net/
+    #move to LWW in 2023, moved https://journals.lww.com/ejde/
 
       au < finished ; finished ; 2015 ; Egyptian Journal of Obesity, Diabetes and Endocrinology Volume 1 ; 2015 ; 1 ; http://www.ejode.eg.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; Egyptian Journal of Obesity, Diabetes and Endocrinology Volume 2 ; 2016 ; 2 ; http://www.ejode.eg.net/ ; ; reingest1.clockss.org:8082 >
@@ -5895,9 +5896,7 @@
       au < finished ; finished ; 2018 ; Egyptian Journal of Obesity, Diabetes and Endocrinology Volume 4 ; 2018 ; 4 ; http://www.ejode.eg.net/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; Egyptian Journal of Obesity, Diabetes and Endocrinology Volume 5 ; 2019 ; 5 ; https://www.ejode.eg.net/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; Egyptian Journal of Obesity, Diabetes and Endocrinology Volume 6 ; 2020 ; 6 ; https://www.ejode.eg.net/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Egyptian Journal of Obesity, Diabetes and Endocrinology Volume 7 ; 2021 ; 7 ; https://www.ejode.eg.net/ ; ; >
-      au < expected ; exists ; 2022 ; Egyptian Journal of Obesity, Diabetes and Endocrinology Volume 8 ; 2022 ; 8 ; https://www.ejode.eg.net/ ; ; >
-      au < expected ; exists ; 2023 ; Egyptian Journal of Obesity, Diabetes and Endocrinology Volume 9 ; 2023 ; 9 ; https://www.ejode.eg.net/ ; ; >
+      au < frozen ; exists ; 2021 ; Egyptian Journal of Obesity, Diabetes and Endocrinology Volume 7 ; 2021 ; 7 ; https://www.ejode.eg.net/ ; ; >
 
   }
 
@@ -7016,15 +7015,15 @@
 
       param[journal_issn] = 2250-3528
 #      param[base_url] = http://www.jcpconline.org/
+    #move to LWW in 2023, moved https://journals.lww.com/jcpc/
 
       au < finished ; frozen ; 2016 ; Journal of Clinical and Preventive Cardiology Volume 5 ; 2016 ; 5 ; http://www.jcpconline.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017 ; Journal of Clinical and Preventive Cardiology Volume 6 ; 2017 ; 6 ; http://www.jcpconline.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; Journal of Clinical and Preventive Cardiology Volume 7 ; 2018 ; 7 ; http://www.jcpconline.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; Journal of Clinical and Preventive Cardiology Volume 8 ; 2019 ; 8 ; https://www.jcpconline.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2020 ; Journal of Clinical and Preventive Cardiology Volume 9 ; 2020 ; 9 ; https://www.jcpconline.org/ ; ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Journal of Clinical and Preventive Cardiology Volume 10 ; 2021 ; 10 ; https://www.jcpconline.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of Clinical and Preventive Cardiology Volume 11 ; 2022 ; 11 ; https://www.jcpconline.org/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Clinical and Preventive Cardiology Volume 12 ; 2023 ; 12 ; https://www.jcpconline.org/ ; ; >
+      au < frozen ; exists ; 2021 ; Journal of Clinical and Preventive Cardiology Volume 10 ; 2021 ; 10 ; https://www.jcpconline.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of Clinical and Preventive Cardiology Volume 11 ; 2022 ; 11 ; https://www.jcpconline.org/ ; ; >
 
   }
 
@@ -7593,6 +7592,7 @@
 
       param[journal_issn] = 0972-4958
 #      param[base_url] = http://www.jmedsoc.org/
+      #move to LWW in 2023, moved https://journals.lww.com/jmso/
 
       au < finished ; frozen ; 2012 ; Journal of Medical Society Volume 26 ; 2012 ; 26 ; http://www.jmedsoc.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2013 ; Journal of Medical Society Volume 27 ; 2013 ; 27 ; http://www.jmedsoc.org/ ; ; reingest3.clockss.org:8083 >
@@ -7603,9 +7603,8 @@
       au < finished ; finished ; 2018 ; Journal of Medical Society Volume 32 ; 2018 ; 32 ; http://www.jmedsoc.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2019 ; Journal of Medical Society Volume 33 ; 2019 ; 33 ; https://www.jmedsoc.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2020 ; Journal of Medical Society Volume 34 ; 2020 ; 34 ; https://www.jmedsoc.org/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Journal of Medical Society Volume 35 ; 2021 ; 35 ; https://www.jmedsoc.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of Medical Society Volume 36 ; 2022 ; 36 ; https://www.jmedsoc.org/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Medical Society Volume 37 ; 2023 ; 37 ; https://www.jmedsoc.org/ ; ; >
+      au < frozen ; exists ; 2021 ; Journal of Medical Society Volume 35 ; 2021 ; 35 ; https://www.jmedsoc.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of Medical Society Volume 36 ; 2022 ; 36 ; https://www.jmedsoc.org/ ; ; >
 
   }
 
@@ -7643,6 +7642,7 @@
 
       param[journal_issn] = 0971-8990
 #      param[base_url] = http://www.jmhhb.org/
+    #move to LWW in 2023, moved https://journals.lww.com/mhhb/
 
       au < finished ; frozen ; 2014 ; Journal of Mental Health and Human Behaviour Volume 19 ; 2014 ; 19 ; http://www.jmhhb.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Journal of Mental Health and Human Behaviour Volume 20 ; 2015 ; 20 ; http://www.jmhhb.org/ ; ; reingest1.clockss.org:8082 >
@@ -7651,9 +7651,8 @@
       au < finished ; frozen ; 2018 ; Journal of Mental Health and Human Behaviour Volume 23 ; 2018 ; 23 ; http://www.jmhhb.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Journal of Mental Health and Human Behaviour Volume 24 ; 2019 ; 24 ; https://www.jmhhb.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2020 ; Journal of Mental Health and Human Behaviour Volume 25 ; 2020 ; 25 ; https://www.jmhhb.org/ ; ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Journal of Mental Health and Human Behaviour Volume 26 ; 2021 ; 26 ; https://www.jmhhb.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of Mental Health and Human Behaviour Volume 27 ; 2022 ; 27 ; https://www.jmhhb.org/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Mental Health and Human Behaviour Volume 28 ; 2023 ; 28 ; https://www.jmhhb.org/ ; ; >
+      au < frozen ; exists ; 2021 ; Journal of Mental Health and Human Behaviour Volume 26 ; 2021 ; 26 ; https://www.jmhhb.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of Mental Health and Human Behaviour Volume 27 ; 2022 ; 27 ; https://www.jmhhb.org/ ; ; >
 
   }
 
@@ -7788,9 +7787,10 @@
 
       param[journal_issn] = 0975-8844
 #      param[base_url] = http://www.jofs.in/
+      #move to LWW in 2023, moved https://journals.lww.com/joro/
 
-      au < manifest ; exists ; 2009 ; Journal of Orofacial Sciences Volume 1 ; 2009 ; 1 ; https://www.jofs.in/ ; ; >
-      au < manifest ; exists ; 2010 ; Journal of Orofacial Sciences Volume 2 ; 2010 ; 2 ; https://www.jofs.in/ ; ; >
+      au < doNotProcess ; exists ; 2009 ; Journal of Orofacial Sciences Volume 1 ; 2009 ; 1 ; https://www.jofs.in/ ; ; >
+      au < doNotProcess ; exists ; 2010 ; Journal of Orofacial Sciences Volume 2 ; 2010 ; 2 ; https://www.jofs.in/ ; ; >
       au < finished ; finished ; 2011 ; Journal of Orofacial Sciences Volume 3 ; 2011 ; 3 ; http://www.jofs.in/ ; ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2012 ; Journal of Orofacial Sciences Volume 4 ; 2012 ; 4 ; http://www.jofs.in/ ; ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2013 ; Journal of Orofacial Sciences Volume 5 ; 2013 ; 5 ; http://www.jofs.in/ ; ; reingest5.clockss.org:8082 >
@@ -7801,9 +7801,8 @@
       au < finished ; finished ; 2018 ; Journal of Orofacial Sciences Volume 10 ; 2018 ; 10 ; http://www.jofs.in/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; Journal of Orofacial Sciences Volume 11 ; 2019 ; 11 ; https://www.jofs.in/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2020 ; Journal of Orofacial Sciences Volume 12 ; 2020 ; 12 ; https://www.jofs.in/ ; ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2021 ; Journal of Orofacial Sciences Volume 13 ; 2021 ; 13 ; https://www.jofs.in/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of Orofacial Sciences Volume 14 ; 2022 ; 14 ; https://www.jofs.in/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Orofacial Sciences Volume 15 ; 2023 ; 15 ; https://www.jofs.in/ ; ; >
+      au < frozen ; exists ; 2021 ; Journal of Orofacial Sciences Volume 13 ; 2021 ; 13 ; https://www.jofs.in/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of Orofacial Sciences Volume 14 ; 2022 ; 14 ; https://www.jofs.in/ ; ; >
 
   }
 
@@ -9256,14 +9255,14 @@
 
       param[journal_issn] = 2454-3160
 #      param[base_url] = http://www.sidj.org/
+    #move to LWW in 2023, moved https://journals.lww.com/sidj/
 
       au < finished ; frozen ; 2015 ; The Saint's International Dental Journal Volume 1 ; 2015 ; 1 ; http://www.sidj.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; The Saint's International Dental Journal Volume 2 ; 2016 ; 2 ; http://www.sidj.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; The Saint's International Dental Journal Volume 3 ; 2017 ; 3 ; http://www.sidj.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2020 ; The Saint's International Dental Journal Volume 4 ; 2020 ; 4 ; https://www.sidj.org/ ; ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2021 ; The Saint's International Dental Journal Volume 5 ; 2021 ; 5 ; https://www.sidj.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; The Saint's International Dental Journal Volume 6 ; 2022 ; 6 ; https://www.sidj.org/ ; ; >
-      au < expected ; exists ; 2023 ; The Saint's International Dental Journal Volume 7 ; 2023 ; 7 ; https://www.sidj.org/ ; ; >
+      au < frozen ; exists ; 2021 ; The Saint's International Dental Journal Volume 5 ; 2021 ; 5 ; https://www.sidj.org/ ; ; >
+      au < frozen ; exists ; 2022 ; The Saint's International Dental Journal Volume 6 ; 2022 ; 6 ; https://www.sidj.org/ ; ; >
 
   }
 
@@ -9422,6 +9421,7 @@
 
       param[journal_issn] = 0044-0507
 #      param[base_url] = http://www.ym-kdham.in/
+    #move to LWW in 2023, moved https://journals.lww.com/yomi/
 
       au < finished ; frozen ; 2014 ; Yoga Mimamsa Volume 46 ; 2014 ; 46 ; http://www.ym-kdham.in/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2015 ; Yoga Mimamsa Volume 47 ; 2015 ; 47 ; http://www.ym-kdham.in/ ; ; reingest1.clockss.org:8082 >
@@ -9430,9 +9430,8 @@
       au < finished ; finished ; 2018 ; Yoga Mimamsa Volume 50 ; 2018 ; 50 ; http://www.ym-kdham.in/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Yoga Mimamsa Volume 51 ; 2019 ; 51 ; https://www.ym-kdham.in/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2020 ; Yoga Mimamsa Volume 52 ; 2020 ; 52 ; https://www.ym-kdham.in/ ; ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2021 ; Yoga Mimamsa Volume 53 ; 2021 ; 53 ; https://www.ym-kdham.in/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Yoga Mimamsa Volume 54 ; 2022 ; 54 ; https://www.ym-kdham.in/ ; ; >
-      au < expected ; exists ; 2023 ; Yoga Mimamsa Volume 55 ; 2023 ; 55 ; https://www.ym-kdham.in/ ; ; >
+      au < frozen ; exists ; 2021 ; Yoga Mimamsa Volume 53 ; 2021 ; 53 ; https://www.ym-kdham.in/ ; ; >
+      au < frozen ; exists ; 2022 ; Yoga Mimamsa Volume 54 ; 2022 ; 54 ; https://www.ym-kdham.in/ ; ; >
 
   }
 
@@ -11048,17 +11047,17 @@
 
       param[journal_issn] = 2214-207X
 #      param[base_url] = http://www.jpsiconline.com/
+    #move to LWW in 2023, moved https://journals.lww.com/ejde/
 
       au < finished ; frozen ; 2014 ; Journal of Patient Safety and Infection Control Volume 2 ; 2014 ; 2 ; https://www.jpsiconline.com/ ; ; reingest5.clockss.org:8082 >
-      au < notReady ; exists ; 2015 ; Journal of Patient Safety and Infection Control Volume 3 ; 2015 ; 3 ; https://www.jpsiconline.com/ ; ; > #500 error
+      au < doNotProcess ; exists ; 2015 ; Journal of Patient Safety and Infection Control Volume 3 ; 2015 ; 3 ; https://www.jpsiconline.com/ ; ; > #500 error
       au < finished ; finished ; 2016 ; Journal of Patient Safety and Infection Control Volume 4 ; 2016 ; 4 ; https://www.jpsiconline.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Journal of Patient Safety and Infection Control Volume 5 ; 2017 ; 5 ; https://www.jpsiconline.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2018 ; Journal of Patient Safety and Infection Control Volume 6 ; 2018 ; 6 ; https://www.jpsiconline.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2019 ; Journal of Patient Safety and Infection Control Volume 7 ; 2019 ; 7 ; https://www.jpsiconline.com/ ; ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; Journal of Patient Safety and Infection Control Volume 8 ; 2020 ; 8 ; https://www.jpsiconline.com/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Journal of Patient Safety and Infection Control Volume 9 ; 2021 ; 9 ; https://www.jpsiconline.com/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of Patient Safety and Infection Control Volume 10 ; 2022 ; 10 ; https://www.jpsiconline.com/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Patient Safety and Infection Control Volume 11 ; 2023 ; 11 ; https://www.jpsiconline.com/ ; ; >
+      au < frozen ; exists ; 2021 ; Journal of Patient Safety and Infection Control Volume 9 ; 2021 ; 9 ; https://www.jpsiconline.com/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of Patient Safety and Infection Control Volume 10 ; 2022 ; 10 ; https://www.jpsiconline.com/ ; ; >
 
   }
 
@@ -12391,11 +12390,11 @@
 
       param[journal_issn] = 2772-4883
       #param[base_url] = https://www.ijmorweb.com/
+    #move to LWW in 2023, moved https://journals.lww.com/IJMO/
 
       au < frozen ; exists ; 2020 ; International Journal of Medical and Oral Research Volume 5 ; 2020 ; 5 ; https://www.ijmorweb.com/ ; ; >
       au < frozen ; exists ; 2021 ; International Journal of Medical and Oral Research Volume 6 ; 2021 ; 6 ; https://www.ijmorweb.com/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; International Journal of Medical and Oral Research Volume 7 ; 2022 ; 7 ; https://www.ijmorweb.com/ ; ; >
-      au < expected ; exists ; 2023 ; International Journal of Medical and Oral Research Volume 8 ; 2023 ; 8 ; https://www.ijmorweb.com/ ; ; >
+      au < frozen ; exists ; 2022 ; International Journal of Medical and Oral Research Volume 7 ; 2022 ; 7 ; https://www.ijmorweb.com/ ; ; >
 
   }
 
