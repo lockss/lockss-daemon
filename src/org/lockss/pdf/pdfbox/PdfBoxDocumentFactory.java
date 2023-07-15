@@ -43,8 +43,10 @@ import org.apache.pdfbox.pdmodel.graphics.xobject.PDXObjectForm;
 import org.lockss.config.*;
 import org.lockss.util.Logger;
 import org.lockss.pdf.*;
+import org.lockss.util.Deadline;
 import org.lockss.util.IOUtil;
 import org.lockss.util.TimeBase;
+import org.lockss.util.TimerQueue;
 import org.lockss.util.Constants;
 
 /**
@@ -59,7 +61,7 @@ import org.lockss.util.Constants;
 public class PdfBoxDocumentFactory implements PdfDocumentFactory {
   static Logger log = Logger.getLogger(PdfBoxDocumentFactory.class);
 
-  public static final PdfDocumentFactory SINGLETON =
+  public static final PdfBoxDocumentFactory SINGLETON =
     new PdfBoxDocumentFactory();
 
   static final String PREFIX = Configuration.PREFIX + "pdf.";
@@ -68,24 +70,6 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
   public static final String PARAM_CACHE_FLUSH_INTERVAL =
     PREFIX + "cacheFlushInterval";
   public static final long DEFAULT_CACHE_FLUSH_INTERVAL = 6 * Constants.HOUR;
-
-  // The fields below support a mechanism to periodically flush the
-  // static caches in PDFont and COSName.  It tries to not clear those
-  // caches while a parse is in progress, but as it doesn't prevent a
-  // parse from starting once it has made a decision to flush, or
-  // during the flush, this is not guaranteed.  We don't know if
-  // flushing during a pdf operation can cause problems.
-
-  // Records all active PdfBoxDocument s, to determine when it might
-  // not be safe to call the static clearResources() methods
-  private Set<PdfBoxDocument> activePdfBoxDocs = ConcurrentHashMap.newKeySet();
-
-  // Count of parsers running in makeDocument() before a
-  // PdfBoxDocument has been created to add to the Set above.
-  private volatile int kludgeyInterimParserCounter = 0;
-
-  private static long cacheFlushInterval = DEFAULT_CACHE_FLUSH_INTERVAL;
-  private long nextClearResourcesTime = 0;
 
   // org.lockss.pdf.pdfbox.PdfBoxTokens.Nam points to things in
   // COSName - is that a problem?
@@ -128,39 +112,6 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
       new PdfBoxDocument(this, (PDDocument)pdfDocumentObject);
     activePdfBoxDocs.add(res);
     return res;
-  }
-
-  void documentClosed(PdfBoxDocument pbdoc) {
-    activePdfBoxDocs.remove(pbdoc);
-    log.debug2("documentClosed: " + pbdoc +
-               ", interim: " + kludgeyInterimParserCounter +
-               ", remaining: " + activePdfBoxDocs);
-    if (kludgeyInterimParserCounter < 0) {
-      log.warning("Oh dear, kludgeyInterimParserCounter is negative: " +
-                  kludgeyInterimParserCounter);
-    }
-    if (kludgeyInterimParserCounter == 0 && activePdfBoxDocs.isEmpty() &&
-        TimeBase.nowMs() >= nextClearResourcesTime) {
-      clearResources();
-    }
-  }
-
-  private void clearResources() {
-    log.info("Clearing PDF caches");
-    PDFont.clearResources();
-    COSName.clearResources();
-    nextClearResourcesTime = TimeBase.nowMs() + cacheFlushInterval;
-  }
-
-  /** Called by org.lockss.config.MiscConfig
-   */
-  public static void setConfig(Configuration config,
-                               Configuration oldConfig,
-                               Configuration.Differences diffs) {
-    if (diffs.contains(PREFIX)) {
-      cacheFlushInterval = config.getTimeInterval(PARAM_CACHE_FLUSH_INTERVAL,
-                                                  DEFAULT_CACHE_FLUSH_INTERVAL);
-    }
   }
 
   @Override
@@ -275,4 +226,94 @@ public class PdfBoxDocumentFactory implements PdfDocumentFactory {
     }
   }
   
+  // The fields and methods below are a mechanism to periodically
+  // flush the static caches in PDFont and COSName.  It tries to not
+  // clear those caches while a parse is in progress, but as it
+  // doesn't prevent a parse from starting once it has made a decision
+  // to flush, or during the flush, this is not guaranteed.  We don't
+  // know if flushing during a pdf operation can cause problems.
+
+  // Records all active PdfBoxDocument s, to determine when it might
+  // not be safe to call the static clearResources() methods
+  private Set<PdfBoxDocument> activePdfBoxDocs =
+    ConcurrentHashMap.newKeySet();
+
+  // Count of parsers running in makeDocument() before a
+  // PdfBoxDocument has been created to add to the Set above.
+  private volatile int kludgeyInterimParserCounter = 0;
+
+  private long cacheFlushInterval = DEFAULT_CACHE_FLUSH_INTERVAL;
+  private TimerQueue.Request timerReq;
+  private boolean flushWhenIdle = false;
+  private int flushCtr = 0;                     // for tests
+
+  /** Called when it's time to flush the caches.  Does it now if no
+   * current PDFBox activity, else sets a flag examined when a
+   * document is closed */
+  private void needCacheFlush() {
+    flushWhenIdle = true;
+    if (okToFlushCaches()) {
+      flushCaches();
+    }
+  }
+
+  /** true if there's no current PdfBox activity */
+  boolean okToFlushCaches() {
+    if (kludgeyInterimParserCounter < 0) {
+      log.warning("Oh dear, kludgeyInterimParserCounter is negative: " +
+                  kludgeyInterimParserCounter);
+    }
+    return flushWhenIdle &&
+      kludgeyInterimParserCounter == 0 &&
+      activePdfBoxDocs.isEmpty();
+  }
+
+  /** Called by PdfBoxDocument when it's closed.  Flush caches if it's
+   * time */
+  void documentClosed(PdfBoxDocument pbdoc) {
+    activePdfBoxDocs.remove(pbdoc);
+    log.debug2("documentClosed: " + pbdoc + ", " + kludgeyInterimParserCounter +
+               ", " + activePdfBoxDocs);
+    if (okToFlushCaches()) {
+      flushCaches();
+    }
+  }
+
+  private void flushCaches() {
+    log.info("Clearing PDF caches");
+    PDFont.clearResources();
+    COSName.clearResources();
+    flushWhenIdle = false;
+    flushCtr++;
+  }
+
+  int getFlushCtr() {
+    return flushCtr;
+  }
+
+  /** Called by org.lockss.config.MiscConfig
+   */
+  public void setConfig(Configuration config,
+                        Configuration oldConfig,
+                        Configuration.Differences diffs) {
+    if (diffs.contains(PREFIX)) {
+      long interval = config.getTimeInterval(PARAM_CACHE_FLUSH_INTERVAL,
+                                             DEFAULT_CACHE_FLUSH_INTERVAL);
+      if (interval != cacheFlushInterval && timerReq != null) {
+        TimerQueue.cancel(timerReq);
+      }
+      cacheFlushInterval = interval;
+      if (cacheFlushInterval > 0) {
+        timerReq =
+          TimerQueue.schedule(Deadline.in(cacheFlushInterval),
+                              cacheFlushInterval,
+                              new TimerQueue.Callback() {
+                                public void timerExpired(Object cookie) {
+                                  needCacheFlush();
+                                }},
+                              null);
+      }
+    }
+  }
+
 }

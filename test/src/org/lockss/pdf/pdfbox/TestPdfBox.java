@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -39,21 +39,23 @@ import org.lockss.pdf.*;
 import org.lockss.test.*;
 import org.lockss.util.FileBackedList;
 import org.lockss.util.Logger;
+import org.lockss.util.TimeBase;
 
-public class TestPdfBoxTokenStream extends LockssTestCase {
-  private static Logger log = Logger.getLogger("TestPdfBoxTokenStream");
+public class TestPdfBox extends LockssTestCase {
+  private static Logger log = Logger.getLogger(TestPdfBox.class);
 
   public void testExcessiveTokenStream() throws Exception {
     List<PdfToken> tok = null;
     try {
       ConfigurationUtil.addFromArgs(PdfBoxTokenStream.PARAM_FILE_BACKED_LISTS_THRESHOLD, "1000");
-      PdfDocumentFactory fact = new PdfBoxDocumentFactory();
+      PdfDocumentFactory fact = PdfBoxDocumentFactory.SINGLETON;
       PdfDocument doc = fact.makeDocument(getClass().getResourceAsStream("lorem.pdf"));
       PdfPage page = doc.getPage(0);
       PdfTokenStream strm = page.getPageTokenStream();
       tok = strm.getTokens();
       assertEquals(8011, tok.size()); // expected size of this manufactured token stream
       assertTrue(tok instanceof FileBackedList); // check that it exceeded the in-memory limit
+      doc.close();
     } finally {
       if (tok instanceof FileBackedList) {
 	try {
@@ -65,5 +67,38 @@ public class TestPdfBoxTokenStream extends LockssTestCase {
       ConfigurationUtil.resetConfig();
     }
   }
-  
+
+  public void testCacheFlush() throws Exception {
+    TimeBase.setSimulated(1);
+    ConfigurationUtil.addFromArgs(PdfBoxDocumentFactory.PARAM_CACHE_FLUSH_INTERVAL, "1000");
+    PdfBoxDocumentFactory fact = PdfBoxDocumentFactory.SINGLETON;
+    PdfDocument doc = fact.makeDocument(getClass().getResourceAsStream("lorem.pdf"));
+    assertFalse(fact.okToFlushCaches());
+    TimeBase.step(1000);
+    assertFalse(fact.okToFlushCaches());
+    doc.close();
+    assertEquals(1, fact.getFlushCtr());
+    assertFalse(fact.okToFlushCaches());
+
+    doc = fact.makeDocument(getClass().getResourceAsStream("lorem.pdf"));
+    assertEquals(1, fact.getFlushCtr());
+    assertFalse(fact.okToFlushCaches());
+    doc.close();
+    assertEquals(1, fact.getFlushCtr());
+    assertFalse(fact.okToFlushCaches());
+    TimeBase.step(1000);
+    assertEquals(2, fact.getFlushCtr());
+    assertFalse(fact.okToFlushCaches());
+
+    doc = fact.makeDocument(getClass().getResourceAsStream("lorem.pdf"));
+    PdfDocument doc2 = fact.makeDocument(getClass().getResourceAsStream("lorem.pdf"));
+    assertEquals(2, fact.getFlushCtr());
+    doc.close();
+    assertEquals(2, fact.getFlushCtr());
+    TimeBase.step(1000);
+    assertEquals(2, fact.getFlushCtr());
+    doc2.close();
+    assertEquals(3, fact.getFlushCtr());
+  }
+
 }
