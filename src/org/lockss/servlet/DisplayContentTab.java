@@ -716,6 +716,9 @@ public class DisplayContentTab extends LockssServlet {
      * @param name
      * @return Returns sanitised string
      */
+    // XXX Should move to utility class, but we have several
+    // sanitize/clean methods in use in different places so need to
+    // rationalize them and come up with a meaningful naming scheme.
     public static String cleanName(String name) {
       return HtmlUtil.encode(Normalizer.normalize(name, Normalizer.Form.NFC)
                              .replace(" ", "_")
