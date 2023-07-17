@@ -73,8 +73,19 @@ public class GovInfoHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("meta", "rel", "x-prerender-render-id"),
         HtmlNodeFilters.tagWithAttribute("meta", "rel", "x-prerender-render-at"),
     
-        // Share by e-mail tag with a unique tracking identifier, e.g. <a href="/cdn-cgi/l/email-protection#b788...858f" id="email-share-search" target="_blank">
+        /*
+         * "Share by e-mail" (and similar) have had a variety of tracking identifiers:
+         * 
+         * - At one point, a <div> with the 'id' attribute set to email-share-search
+         * - https://www.govinfo.gov/content/pkg/LSA-2022-01/html/LSA-2022-01-pg1.htm 02:55:30 06/20/23 has:
+
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="452320213720226b2c2b232a052b2437246b222a336b">[email&#160;protected]</a>
+
+         * Keep these cumulatively.
+         */
         HtmlNodeFilters.tagWithAttribute("a", "id", "email-share-search"),
+        HtmlNodeFilters.tagWithAttribute("a", "class", "__cf_email__"),
+        HtmlNodeFilters.tagWithAttribute("a", "data-cfemail"),
         // A few things in this <div> started having random numeric suffixes in 'id' attributes, ostensibly to support toggling and similar dynamic behaviors
         HtmlNodeFilters.tagWithAttribute("div", "id", "contentdetaildocinContextview"),
     };
