@@ -296,7 +296,7 @@ Args:
   <property name="javatar.jar" value="${lib}/javagnutar.jar" />
   <property name="concurrent.jar" value="${lib}/concurrent.jar"/>
   <property name="htmlparser.jar" value="${lib}/htmlparser-1.6p.jar"/>
-  <property name="jsoup.jar" value="${lib}/jsoup-1.14.3.jar"/>
+  <property name="jsoup.jar" value="${lib}/jsoup-1.16.1.jar"/>
   <property name="marc4j.jar" value="${lib}/marc4j-2.9.2.jar" />
   <!-- Next 6 needed for Jonix -->
   <property name="jonix.version" value="2022-08" />
