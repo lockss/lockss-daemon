@@ -15,18 +15,18 @@
     #Journals
     plugin = org.lockss.plugin.clockss.kluwerlaw.ClockssKluwerLawJournalsSourcePlugin
     implicit < status ; status2 ; year ; name ; param[directory] >
-    #param[base_url] = https://clockss-test.lockss.org/sourcefiles/kluwerlaw-released/ - tested by developer
+    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/kluwerlaw-released/
 
-    #au < manifest ; exists ; 2023 ; Kluwer Law Journals Content 2023_01 ; 2023_01 >
+    au < exists ; exists ; 2023 ; Kluwer Law Journals Content 2023_01 ; 2023_01 >
 
     }
     {
     #Books
     plugin = org.lockss.plugin.clockss.kluwerlaw.ClockssKluwerLawBooksSourcePlugin
     implicit < status ; status2 ; year ; name ; param[directory] >
-    #param[base_url] = https://clockss-test.lockss.org/sourcefiles/kluwerlawjnls-released/ - tested by developer
+    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/kluwerlawjnls-released/
 
-    #au < manifest ; exists ; 2023 ; Kluwer Law Books Content 2023_01 ; 2023_01 >
+    au < exists ; exists ; 2023 ; Kluwer Law Books Content 2023_01 ; 2023_01 >
 
     }
 
