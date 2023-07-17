@@ -70,8 +70,8 @@ public class GovInfoHtmlHashFilterFactory implements FilterFactory {
 <meta rel="x-prerender-render-at" content="2023-06-05T02:59:25.940Z" />
 
          */
-        HtmlNodeFilters.tagWithAttribute("meta", "ref", "x-prerender-render-id"),
-        HtmlNodeFilters.tagWithAttribute("meta", "ref", "x-prerender-render-at"),
+        HtmlNodeFilters.tagWithAttribute("meta", "rel", "x-prerender-render-id"),
+        HtmlNodeFilters.tagWithAttribute("meta", "rel", "x-prerender-render-at"),
     
         // Share by e-mail tag with a unique tracking identifier, e.g. <a href="/cdn-cgi/l/email-protection#b788...858f" id="email-share-search" target="_blank">
         HtmlNodeFilters.tagWithAttribute("a", "id", "email-share-search"),
