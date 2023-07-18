@@ -9,6 +9,7 @@
     info[platform] = CopernicusPublicationsPlugin
   >
     #Do not process titles which end in "Discussions"
+    #Exception: Aerosol Research Discussions
 
   {
     plugin = org.lockss.plugin.copernicus.ClockssCopernicusPublicationsPlugin
@@ -169,6 +170,19 @@
       au < manifest ; exists ; 2023 ; 2023 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 9 ; 9 ; >
 
   }
+
+#  {
+#    title <
+#      name = Aerosol Research Discussions ;
+#      eissn = 2940-3405
+#    >
+#      attr[journal_id] = ar
+#      param[base_url] = https://ar.copernicus.org/preprints/
+#      param[home_url] = https://www.aerosol-research.net/preprints/
+#
+#      au < exists ; exists ; 2023 ; 2023 ; Aerosol Research Volume 1 ; 1 ; >
+#
+#  }
 
   {
     title <
