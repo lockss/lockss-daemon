@@ -344,7 +344,7 @@
     au < released ; 2019 ; 2019 ; Age and Ageing Volume 48 ; 48 >
     au < released ; 2020 ; 2020 ; Age and Ageing Volume 49 ; 49 >
     au < released ; 2021 ; 2021 ; Age and Ageing Volume 50 ; 50 >
-    au < manifest ; 2022 ; 2022 ; Age and Ageing Volume 51 ; 51 >
+    au < ready ; 2022 ; 2022 ; Age and Ageing Volume 51 ; 51 >
     au < manifest ; 2023 ; 2023 ; Age and Ageing Volume 52 ; 52 >
 
   }
@@ -779,7 +779,7 @@
     au < released ; 2019 ; 2019 ; American Journal of Health-System Pharmacy Volume 76 ; 76 >
     au < released ; 2020 ; 2020 ; American Journal of Health-System Pharmacy Volume 77 ; 77 >
     au < released ; 2021 ; 2021 ; American Journal of Health-System Pharmacy Volume 78 ; 78 >
-    au < manifest ; 2022 ; 2022 ; American Journal of Health-System Pharmacy Volume 79 ; 79 >
+    au < ready ; 2022 ; 2022 ; American Journal of Health-System Pharmacy Volume 79 ; 79 >
     au < manifest ; 2023 ; 2023 ; American Journal of Health-System Pharmacy Volume 80 ; 80 >
 
   }
@@ -829,7 +829,7 @@
     au < released ; 2019 ; 2019 ; American Journal of Hypertension Volume 32 ; 32 >
     au < released ; 2020 ; 2020 ; American Journal of Hypertension Volume 33 ; 33 >
     au < released ; 2021 ; 2021 ; American Journal of Hypertension Volume 34 ; 34 >
-    au < manifest ; 2022 ; 2022 ; American Journal of Hypertension Volume 35 ; 35 >
+    au < ready ; 2022 ; 2022 ; American Journal of Hypertension Volume 35 ; 35 >
     au < manifest ; 2023 ; 2023 ; American Journal of Hypertension Volume 36 ; 36 >
 
   }
@@ -950,7 +950,7 @@
     au < released ; 2019 ; 2019 ; American Literary History Volume 31 ; 31 >
     au < released ; 2020 ; 2020 ; American Literary History Volume 32 ; 32 >
     au < released ; 2021 ; 2021 ; American Literary History Volume 33 ; 33 >
-    au < manifest ; 2022 ; 2022 ; American Literary History Volume 34 ; 34 >
+    au < ready ; 2022 ; 2022 ; American Literary History Volume 34 ; 34 >
     au < manifest ; 2023 ; 2023 ; American Literary History Volume 35 ; 35 >
 
   }
@@ -1112,7 +1112,7 @@
     au < released ; 2019 ; 2019 ; Journal of Animal Science Volume 96 ; 96 >
     au < released ; 2020 ; 2020 ; Journal of Animal Science Volume 97 ; 97 >
     au < released ; 2021 ; 2021 ; Journal of Animal Science Volume 98 ; 98 >
-    au < manifest ; 2022 ; 2022 ; Journal of Animal Science Volume 99 ; 99 >
+    au < ready ; 2022 ; 2022 ; Journal of Animal Science Volume 99 ; 99 >
     au < manifest ; 2023 ; 2023 ; Journal of Animal Science Volume 100 ; 100 >
 
   }
@@ -1132,7 +1132,7 @@
     au < released ; 2019 ; 2019 ; Annals of Behavioral Medicine Volume 2 ; 2 >
     au < released ; 2020 ; 2020 ; Annals of Behavioral Medicine Volume 3 ; 3 >
     au < released ; 2021 ; 2021 ; Annals of Behavioral Medicine Volume 4 ; 4 >
-    au < manifest ; 2022 ; 2022 ; Annals of Behavioral Medicine Volume 5 ; 5 >
+    au < ready ; 2022 ; 2022 ; Annals of Behavioral Medicine Volume 5 ; 5 >
     au < manifest ; 2023 ; 2023 ; Annals of Behavioral Medicine Volume 6 ; 6 >
 
   }
@@ -1415,8 +1415,8 @@
     param[journal_id] = jaoac
     #content available from 1915 Volume 1 to 2007 Volume 90
 
-    au < manifest ; 2008 ; 2008 ; Journal of AOAC INTERNATIONAL Volume 91 ; 91 >
-    au < manifest ; 2009 ; 2009 ; Journal of AOAC INTERNATIONAL Volume 92 ; 92 >
+    au < ready ; 2008 ; 2008 ; Journal of AOAC INTERNATIONAL Volume 91 ; 91 >
+    au < ready ; 2009 ; 2009 ; Journal of AOAC INTERNATIONAL Volume 92 ; 92 >
     au < released ; 2010 ; 2010 ; Journal of AOAC INTERNATIONAL Volume 93 ; 93 >
     au < released ; 2011 ; 2011 ; Journal of AOAC INTERNATIONAL Volume 94 ; 94 >
     au < released ; 2012 ; 2012 ; Journal of AOAC INTERNATIONAL Volume 95 ; 95 >
@@ -1429,7 +1429,7 @@
     au < released ; 2019 ; 2019 ; Journal of AOAC INTERNATIONAL Volume 102 ; 102 >
     au < released ; 2020 ; 2020 ; Journal of AOAC INTERNATIONAL Volume 103 ; 103 >
     au < released ; 2021 ; 2021 ; Journal of AOAC INTERNATIONAL Volume 104 ; 104 >
-    au < manifest ; 2022 ; 2022 ; Journal of AOAC INTERNATIONAL Volume 105 ; 105 >
+    au < ready ; 2022 ; 2022 ; Journal of AOAC INTERNATIONAL Volume 105 ; 105 >
     au < manifest ; 2023 ; 2023 ; Journal of AOAC INTERNATIONAL Volume 106 ; 106 >
 
   }
@@ -1561,7 +1561,7 @@
     au < released ; 2019 ; 2019 ; Applied Linguistics Volume 40 ; 40 >
     au < released ; 2020 ; 2020 ; Applied Linguistics Volume 41 ; 41 >
     au < released ; 2021 ; 2021 ; Applied Linguistics Volume 42 ; 42 >
-    au < manifest ; 2022 ; 2022 ; Applied Linguistics Volume 43 ; 43 >
+    au < ready ; 2022 ; 2022 ; Applied Linguistics Volume 43 ; 43 >
     au < manifest ; 2023 ; 2023 ; Applied Linguistics Volume 44 ; 44 >
 
   }
@@ -2049,7 +2049,7 @@
     param[journal_id] = bjd
     #move from Wiley, 2023
 
-    au < manifest ; 2022 ; 2022 ; British Journal of Dermatology Volume 186-187 ; 186-187 >
+    au < ready ; 2022 ; 2022 ; British Journal of Dermatology Volume 186-187 ; 186-187 >
     au < manifest ; 2023 ; 2023 ; British Journal of Dermatology Volume 188-189 ; 188-189 >
 
   }
@@ -2097,7 +2097,7 @@
     au < released ; 2019 ; 2019 ; Behavioral Ecology Volume 30 ; 30 >
     au < released ; 2020 ; 2020 ; Behavioral Ecology Volume 31 ; 31 >
     au < released ; 2021 ; 2021 ; Behavioral Ecology Volume 32 ; 32 >
-    au < manifest ; 2022 ; 2022 ; Behavioral Ecology Volume 33 ; 33 >
+    au < ready ; 2022 ; 2022 ; Behavioral Ecology Volume 33 ; 33 >
     au < manifest ; 2023 ; 2023 ; Behavioral Ecology Volume 34 ; 34 >
 
   }
@@ -2244,7 +2244,7 @@
     au < released ; 2019 ; 2019 ; Bioinformatics Volume 35 ; 35 >
     au < released ; 2020 ; 2020 ; Bioinformatics Volume 36 ; 36 >
     au < released ; 2021 ; 2021 ; Bioinformatics Volume 37 ; 37 >
-    au < manifest ; 2022 ; 2022 ; Bioinformatics Volume 38 ; 38 >
+    au < ready ; 2022 ; 2022 ; Bioinformatics Volume 38 ; 38 >
     au < manifest ; 2023 ; 2023 ; Bioinformatics Volume 39 ; 39 >
 
   }
@@ -2779,7 +2779,7 @@
     au < released ; 2019 ; 2019 ; Brain Volume 142 ; 142 >
     au < released ; 2020 ; 2020 ; Brain Volume 143 ; 143 >
     au < released ; 2021 ; 2021 ; Brain Volume 144 ; 144 >
-    au < manifest ; 2022 ; 2022 ; Brain Volume 145 ; 145 >
+    au < ready ; 2022 ; 2022 ; Brain Volume 145 ; 145 >
     au < manifest ; 2023 ; 2023 ; Brain Volume 146 ; 146 >
 
   }
@@ -3079,7 +3079,7 @@
     au < released ; 2019 ; 2019 ; CESifo Economic Studies Volume 65 ; 65 >
     au < released ; 2020 ; 2020 ; CESifo Economic Studies Volume 66 ; 66 >
     au < released ; 2021 ; 2021 ; CESifo Economic Studies Volume 67 ; 67 >
-    au < manifest ; 2022 ; 2022 ; CESifo Economic Studies Volume 68 ; 68 >
+    au < ready ; 2022 ; 2022 ; CESifo Economic Studies Volume 68 ; 68 >
     au < manifest ; 2023 ; 2023 ; CESifo Economic Studies Volume 69 ; 69 >
 
   }
@@ -3260,7 +3260,7 @@
     au < released ; 2019 ; 2019 ; Carcinogenesis Volume 40 ; 40 >
     au < released ; 2020 ; 2020 ; Carcinogenesis Volume 41 ; 41 >
     au < released ; 2021 ; 2021 ; Carcinogenesis Volume 42 ; 42 >
-    au < manifest ; 2022 ; 2022 ; Carcinogenesis Volume 43 ; 43 >
+    au < ready ; 2022 ; 2022 ; Carcinogenesis Volume 43 ; 43 >
     au < manifest ; 2023 ; 2023 ; Carcinogenesis Volume 44 ; 44 >
 
   }
@@ -3534,7 +3534,7 @@
     au < released ; 2019 ; 2019 ; Chinese Journal of International Law Volume 18 ; 18 >
     au < released ; 2020 ; 2020 ; Chinese Journal of International Law Volume 19 ; 19 >
     au < released ; 2021 ; 2021 ; Chinese Journal of International Law Volume 20 ; 20 >
-    au < manifest ; 2022 ; 2022 ; Chinese Journal of International Law Volume 21 ; 21 >
+    au < ready ; 2022 ; 2022 ; Chinese Journal of International Law Volume 21 ; 21 >
     au < manifest ; 2023 ; 2023 ; Chinese Journal of International Law Volume 22 ; 22 >
 
   }
@@ -3607,7 +3607,7 @@
     au < released ; 2019 ; 2019 ; Classical Receptions Journal Volume 11 ; 11 >
     au < released ; 2020 ; 2020 ; Classical Receptions Journal Volume 12 ; 12 >
     au < released ; 2021 ; 2021 ; Classical Receptions Journal Volume 13 ; 13 >
-    au < manifest ; 2022 ; 2022 ; Classical Receptions Journal Volume 14 ; 14 >
+    au < ready ; 2022 ; 2022 ; Classical Receptions Journal Volume 14 ; 14 >
     au < manifest ; 2023 ; 2023 ; Classical Receptions Journal Volume 15 ; 15 >
 
   }
@@ -3861,7 +3861,7 @@
     au < released ; 2019 ; 2019 ; Clinical Kidney Journal Volume 12 ; 12 >
     au < released ; 2020 ; 2020 ; Clinical Kidney Journal Volume 13 ; 13 >
     au < released ; 2021 ; 2021 ; Clinical Kidney Journal Volume 14 ; 14 >
-    au < manifest ; 2022 ; 2022 ; Clinical Kidney Journal Volume 15 ; 15 >
+    au < ready ; 2022 ; 2022 ; Clinical Kidney Journal Volume 15 ; 15 >
     au < manifest ; 2023 ; 2023 ; Clinical Kidney Journal Volume 16 ; 16 >
 
   }
@@ -4191,7 +4191,7 @@
     au < released ; 2019 ; 2019 ; Current Developments in Nutrition Volume 3 ; 3 >
     au < released ; 2020 ; 2020 ; Current Developments in Nutrition Volume 4 ; 4 >
     au < released ; 2021 ; 2021 ; Current Developments in Nutrition Volume 5 ; 5 >
-    au < manifest ; 2022 ; 2022 ; Current Developments in Nutrition Volume 6 ; 6 >
+    au < ready ; 2022 ; 2022 ; Current Developments in Nutrition Volume 6 ; 6 >
 
   }
 
@@ -4235,7 +4235,7 @@
     au < released ; 2018 ; 2018 ; Current Legal Problems Volume 71 ; 71 >
     au < released ; 2019 ; 2019 ; Current Legal Problems Volume 72 ; 72 >
     au < released ; 2021 ; 2021 ; Current Legal Problems Volume 73 ; 73 >
-    au < manifest ; 2022 ; 2022 ; Current Legal Problems Volume 74 ; 74 >
+    au < ready ; 2022 ; 2022 ; Current Legal Problems Volume 74 ; 74 >
     au < expected ; 2023 ; 2023 ; Current Legal Problems Volume 75 ; 75 >
 
   }
@@ -4305,7 +4305,7 @@
     au < released ; 2019 ; 2019 ; DNA Research Volume 26 ; 26 >
     au < released ; 2020 ; 2020 ; DNA Research Volume 27 ; 27 >
     au < released ; 2021 ; 2021 ; DNA Research Volume 28 ; 28 >
-    au < manifest ; 2022 ; 2022 ; DNA Research Volume 29 ; 29 >
+    au < ready ; 2022 ; 2022 ; DNA Research Volume 29 ; 29 >
     au < manifest ; 2023 ; 2023 ; DNA Research Volume 30 ; 30 >
 
   }
@@ -4713,7 +4713,7 @@
     au < released ; 2019 ; 2019 ; Early Music Volume 47 ; 47 >
     au < released ; 2020 ; 2020 ; Early Music Volume 48 ; 48 >
     au < released ; 2021 ; 2021 ; Early Music Volume 49 ; 49 >
-    au < manifest ; 2022 ; 2022 ; Early Music Volume 50 ; 50 >
+    au < ready ; 2022 ; 2022 ; Early Music Volume 50 ; 50 >
     au < manifest ; 2023 ; 2023 ; Early Music Volume 51 ; 51 >
 
   }
@@ -4753,7 +4753,7 @@
     au < released ; 2019 ; 2019 ; The Econometrics Journal Volume 22 ; 22 >
     au < released ; 2020 ; 2020 ; The Econometrics Journal Volume 23 ; 23 >
     au < released ; 2021 ; 2021 ; The Econometrics Journal Volume 24 ; 24 >
-    au < manifest ; 2022 ; 2022 ; The Econometrics Journal Volume 25 ; 25 >
+    au < ready ; 2022 ; 2022 ; The Econometrics Journal Volume 25 ; 25 >
     au < manifest ; 2023 ; 2023 ; The Econometrics Journal Volume 26 ; 26 >
 
   }
@@ -4953,7 +4953,7 @@
     au < released ; 2019 ; 2019 ; Economic Policy Volume 34 ; 34 >
     au < released ; 2020 ; 2020 ; Economic Policy Volume 35 ; 35 >
     au < released ; 2021 ; 2021 ; Economic Policy Volume 36 ; 36 >
-    au < manifest ; 2022 ; 2022 ; Economic Policy Volume 37 ; 37 >
+    au < ready ; 2022 ; 2022 ; Economic Policy Volume 37 ; 37 >
     au < manifest ; 2023 ; 2023 ; Economic Policy Volume 38 ; 38 >
 
   }
@@ -5175,7 +5175,7 @@
     au < released ; 2019 ; 2019 ; Environmental Epigenetics Volume 5 ; 5 >
     au < released ; 2020 ; 2020 ; Environmental Epigenetics Volume 6 ; 6 >
     au < released ; 2021 ; 2021 ; Environmental Epigenetics Volume 7 ; 7 >
-    au < manifest ; 2022 ; 2022 ; Environmental Epigenetics Volume 8 ; 8 >
+    au < ready ; 2022 ; 2022 ; Environmental Epigenetics Volume 8 ; 8 >
     au < manifest ; 2023 ; 2023 ; Environmental Epigenetics Volume 9 ; 9 >
 
   }
@@ -5592,7 +5592,7 @@
     au < released ; 2019 ; 2019 ; European Heart Journal Supplements Volume 21 ; 21 >
     au < released ; 2020 ; 2020 ; European Heart Journal Supplements Volume 22 ; 22 >
     au < released ; 2021 ; 2021 ; European Heart Journal Supplements Volume 23 ; 23 >
-    au < manifest ; 2022 ; 2022 ; European Heart Journal Supplements Volume 24 ; 24 >
+    au < ready ; 2022 ; 2022 ; European Heart Journal Supplements Volume 24 ; 24 >
     au < manifest ; 2023 ; 2023 ; European Heart Journal Supplements Volume 25 ; 25 >
 
   }
@@ -5643,7 +5643,7 @@
     au < released ; 2019 ; 2019 ; European Journal of Cardio-Thoracic Surgery Volume 55-56 ; 55-56 >
     au < released ; 2020 ; 2020 ; European Journal of Cardio-Thoracic Surgery Volume 57-58 ; 57-58 >
     au < released ; 2021 ; 2021 ; European Journal of Cardio-Thoracic Surgery Volume 59-60 ; 59-60 >
-    au < manifest ; 2022 ; 2022 ; European Journal of Cardio-Thoracic Surgery Volume 61-62 ; 61-62 >
+    au < ready ; 2022 ; 2022 ; European Journal of Cardio-Thoracic Surgery Volume 61-62 ; 61-62 >
     au < manifest ; 2023 ; 2023 ; European Journal of Cardio-Thoracic Surgery Volume 63-64 ; 63-64 >
 
   }
@@ -5696,7 +5696,7 @@
     #move from Bioscientifica, 2023-01-01
     #contents 2021 and prior processed under Bioscientifica, ingenta/pubfactory
 
-    au < manifest ; 2022 ; 2022 ; European Journal of Endocrinology Volume 186-187 ; 186-187 >
+    au < ready ; 2022 ; 2022 ; European Journal of Endocrinology Volume 186-187 ; 186-187 >
     au < manifest ; 2023 ; 2023 ; European Journal of Endocrinology Volume 188-189 ; 188-189 >
 
   }
@@ -5803,7 +5803,7 @@
     au < released ; 2019 ; 2019 ; European Journal of Orthodontics Volume 41 ; 41 >
     au < released ; 2020 ; 2020 ; European Journal of Orthodontics Volume 42 ; 42 >
     au < released ; 2021 ; 2021 ; European Journal of Orthodontics Volume 43 ; 43 >
-    au < manifest ; 2022 ; 2022 ; European Journal of Orthodontics Volume 44 ; 44 >
+    au < ready ; 2022 ; 2022 ; European Journal of Orthodontics Volume 44 ; 44 >
     au < manifest ; 2023 ; 2023 ; European Journal of Orthodontics Volume 45 ; 45 >
 
   }
@@ -5878,7 +5878,7 @@
     au < released ; 2019 ; 2019 ; European Journal of Preventive Cardiology Volume 26 ; 26 >
     au < released ; 2020 ; 2020 ; European Journal of Preventive Cardiology Volume 27 ; 27 >
     au < released ; 2021 ; 2021 ; European Journal of Preventive Cardiology Volume 28 ; 28 >
-    au < manifest ; 2022 ; 2022 ; European Journal of Preventive Cardiology Volume 29 ; 29 >
+    au < ready ; 2022 ; 2022 ; European Journal of Preventive Cardiology Volume 29 ; 29 >
     au < manifest ; 2023 ; 2023 ; European Journal of Preventive Cardiology Volume 30 ; 30 >
 
   }
@@ -5942,7 +5942,7 @@
     au < released ; 2019 ; 2019 ; European Review of Agricultural Economics Volume 46 ; 46 >
     au < released ; 2020 ; 2020 ; European Review of Agricultural Economics Volume 47 ; 47 >
     au < released ; 2021 ; 2021 ; European Review of Agricultural Economics Volume 48 ; 48 >
-    au < manifest ; 2022 ; 2022 ; European Review of Agricultural Economics Volume 49 ; 49 >
+    au < ready ; 2022 ; 2022 ; European Review of Agricultural Economics Volume 49 ; 49 >
     au < manifest ; 2023 ; 2023 ; European Review of Agricultural Economics Volume 50 ; 50 >
 
   }
@@ -5983,7 +5983,7 @@
     au < released ; 2019 ; 2019 ; European Review of Economic History Volume 23 ; 23 >
     au < released ; 2020 ; 2020 ; European Review of Economic History Volume 24 ; 24 >
     au < released ; 2021 ; 2021 ; European Review of Economic History Volume 25 ; 25 >
-    au < manifest ; 2022 ; 2022 ; European Review of Economic History Volume 26 ; 26 >
+    au < ready ; 2022 ; 2022 ; European Review of Economic History Volume 26 ; 26 >
     au < manifest ; 2023 ; 2023 ; European Review of Economic History Volume 27 ; 27 >
 
   }
@@ -6053,7 +6053,7 @@
     param[journal_id] = evolut
     #move from Wiley by 2023-01-01
 
-    au < manifest ; 2022 ; 2022 ; Evolution Volume 76 ; 76 >
+    au < ready ; 2022 ; 2022 ; Evolution Volume 76 ; 76 >
     au < manifest ; 2023 ; 2023 ; Evolution Volume 77 ; 77 >
 
   }
@@ -6069,7 +6069,7 @@
     param[journal_id] = evlett
     #move from Wiley by 2023-01-01
 
-    au < manifest ; 2022 ; 2022 ; Evolution Letters Volume 6 ; 6 >
+    au < ready ; 2022 ; 2022 ; Evolution Letters Volume 6 ; 6 >
     au < manifest ; 2023 ; 2023 ; Evolution Letters Volume 7 ; 7 >
 
   }
@@ -6264,7 +6264,7 @@
     au < released ; 2019 ; 2019 ; FEMS Microbiology Reviews Volume 43 ; 43 >
     au < released ; 2020 ; 2020 ; FEMS Microbiology Reviews Volume 44 ; 44 >
     au < released ; 2021 ; 2021 ; FEMS Microbiology Reviews Volume 45 ; 45 >
-    au < manifest ; 2022 ; 2022 ; FEMS Microbiology Reviews Volume 46 ; 46 >
+    au < ready ; 2022 ; 2022 ; FEMS Microbiology Reviews Volume 46 ; 46 >
     au < manifest ; 2023 ; 2023 ; FEMS Microbiology Reviews Volume 47 ; 47 >
 
   }
@@ -6555,7 +6555,7 @@
     au < released ; 2019 ; 2019 ; Forest Science Volume 65 ; 65 >
     au < released ; 2020 ; 2020 ; Forest Science Volume 66 ; 66 >
     au < released ; 2021 ; 2021 ; Forest Science Volume 67 ; 67 >
-    au < manifest ; 2022 ; 2022 ; Forest Science Volume 68 ; 68 >
+    au < ready ; 2022 ; 2022 ; Forest Science Volume 68 ; 68 >
     au < manifest ; 2023 ; 2023 ; Forest Science Volume 69 ; 69 >
 
   }
@@ -6665,7 +6665,7 @@
     au < released ; 2019 ; 2019 ; Forestry: An International Journal of Forest Research Volume 92 ; 92 >
     au < released ; 2020 ; 2020 ; Forestry: An International Journal of Forest Research Volume 93 ; 93 >
     au < released ; 2021 ; 2021 ; Forestry: An International Journal of Forest Research Volume 94 ; 94 >
-    au < manifest ; 2022 ; 2022 ; Forestry: An International Journal of Forest Research Volume 95 ; 95 >
+    au < ready ; 2022 ; 2022 ; Forestry: An International Journal of Forest Research Volume 95 ; 95 >
     au < manifest ; 2023 ; 2023 ; Forestry: An International Journal of Forest Research Volume 96 ; 96 >
 
   }
@@ -7024,7 +7024,7 @@
     au < released ; 2019 ; 2019 ; Genome Biology and Evolution Volume 11 ; 11 >
     au < released ; 2020 ; 2020 ; Genome Biology and Evolution Volume 12 ; 12 >
     au < released ; 2021 ; 2021 ; Genome Biology and Evolution Volume 13 ; 13 >
-    au < manifest ; 2022 ; 2022 ; Genome Biology and Evolution Volume 14 ; 14 >
+    au < ready ; 2022 ; 2022 ; Genome Biology and Evolution Volume 14 ; 14 >
     au < manifest ; 2023 ; 2023 ; Genome Biology and Evolution Volume 15 ; 15 >
 
   }
@@ -7104,7 +7104,7 @@
     au < released ; 2019 ; 2019 ; Geophysical Journal International Volume 216-219 ; 216-219 >
     au < released ; 2020 ; 2020 ; Geophysical Journal International Volume 220-223 ; 220-223 >
     au < released ; 2021 ; 2021 ; Geophysical Journal International Volume 224-227 ; 224-227 >
-    au < manifest ; 2022 ; 2022 ; Geophysical Journal International Volume 228-231 ; 228-231 >
+    au < ready ; 2022 ; 2022 ; Geophysical Journal International Volume 228-231 ; 228-231 >
     au < manifest ; 2023 ; 2023 ; Geophysical Journal International Volume 232-235 ; 232-235 >
 
   }
@@ -7295,7 +7295,7 @@
     au < released ; 2019 ; 2019 ; Glycobiology Volume 29 ; 29 >
     au < released ; 2020 ; 2020 ; Glycobiology Volume 30 ; 30 >
     au < released ; 2021 ; 2021 ; Glycobiology Volume 31 ; 31 >
-    au < manifest ; 2022 ; 2022 ; Glycobiology Volume 32 ; 32 >
+    au < ready ; 2022 ; 2022 ; Glycobiology Volume 32 ; 32 >
     au < manifest ; 2023 ; 2023 ; Glycobiology Volume 33 ; 33 >
 
   }
@@ -7409,7 +7409,7 @@
     au < released ; 2019 ; 2019 ; Health Education Research Volume 34 ; 34 >
     au < released ; 2020 ; 2020 ; Health Education Research Volume 35 ; 35 >
     au < released ; 2021 ; 2021 ; Health Education Research Volume 36 ; 36 >
-    au < manifest ; 2022 ; 2022 ; Health Education Research Volume 37 ; 37 >
+    au < ready ; 2022 ; 2022 ; Health Education Research Volume 37 ; 37 >
     au < manifest ; 2023 ; 2023 ; Health Education Research Volume 38 ; 38 >
 
   }
@@ -7461,7 +7461,7 @@
     au < released ; 2019 ; 2019 ; Health Policy and Planning Volume 34 ; 34 >
     au < released ; 2020 ; 2020 ; Health Policy and Planning Volume 35 ; 35 >
     au < released ; 2021 ; 2021 ; Health Policy and Planning Volume 36 ; 36 >
-    au < manifest ; 2022 ; 2022 ; Health Policy and Planning Volume 37 ; 37 >
+    au < ready ; 2022 ; 2022 ; Health Policy and Planning Volume 37 ; 37 >
     au < manifest ; 2023 ; 2023 ; Health Policy and Planning Volume 38 ; 38 >
 
   }
@@ -7672,7 +7672,7 @@
     au < released ; 2019 ; 2019 ; Human Molecular Genetics Volume 28 ; 28 >
     au < released ; 2020 ; 2020 ; Human Molecular Genetics Volume 29 ; 29 >
     au < released ; 2021 ; 2021 ; Human Molecular Genetics Volume 30 ; 30 >
-    au < manifest ; 2022 ; 2022 ; Human Molecular Genetics Volume 31 ; 31 >
+    au < ready ; 2022 ; 2022 ; Human Molecular Genetics Volume 31 ; 31 >
     au < manifest ; 2023 ; 2023 ; Human Molecular Genetics Volume 32 ; 32 >
 
   }
@@ -7807,7 +7807,7 @@
     au < released ; 2019 ; 2019 ; Human Communication Research Volume 2 ; 2 >
     au < released ; 2020 ; 2020 ; Human Communication Research Volume 3 ; 3 >
     au < released ; 2021 ; 2021 ; Human Communication Research Volume 4 ; 4 >
-    au < manifest ; 2022 ; 2022 ; Human Communication Research Volume 5 ; 5 >
+    au < ready ; 2022 ; 2022 ; Human Communication Research Volume 5 ; 5 >
     au < manifest ; 2023 ; 2023 ; Human Communication Research Volume 6 ; 6 >
 
   }
@@ -7844,7 +7844,7 @@
     au < released ; 2019 ; 2019 ; Human Rights Law Review Volume 19 ; 19 >
     au < released ; 2020 ; 2020 ; Human Rights Law Review Volume 20 ; 20 >
     au < released ; 2021 ; 2021 ; Human Rights Law Review Volume 21 ; 21 >
-    au < manifest ; 2022 ; 2022 ; Human Rights Law Review Volume 22 ; 22 >
+    au < ready ; 2022 ; 2022 ; Human Rights Law Review Volume 22 ; 22 >
     au < manifest ; 2023 ; 2023 ; Human Rights Law Review Volume 23 ; 23 >
 
   }
@@ -7990,7 +7990,7 @@
     au < released ; 2018 ; 2018 ; ICSID Review: Foreign Investment Law Journal Volume 33 ; 33 >
     au < released ;  2019 ; 2019 ; ICSID Review: Foreign Investment Law Journal Volume 34 ; 34 >
     au < released ;  2021 ; 2021 ; ICSID Review: Foreign Investment Law Journal Volume 35 ; 35 >
-    au < manifest ;  2022 ; 2022 ; ICSID Review: Foreign Investment Law Journal Volume 36 ; 36 >
+    au < ready ;  2022 ; 2022 ; ICSID Review: Foreign Investment Law Journal Volume 36 ; 36 >
     au < manifest ;  2023 ; 2023 ; ICSID Review: Foreign Investment Law Journal Volume 37 ; 37 >
 
   }
@@ -8477,7 +8477,7 @@
     au < released ; 2019 ; 2019 ; Innovation in Aging Volume 3 ; 3 >
     au < released ; 2020 ; 2020 ; Innovation in Aging Volume 4 ; 4 >
     au < released ; 2021 ; 2021 ; Innovation in Aging Volume 5 ; 5 >
-    au < manifest ; 2022 ; 2022 ; Innovation in Aging Volume 6 ; 6 >
+    au < ready ; 2022 ; 2022 ; Innovation in Aging Volume 6 ; 6 >
     au < manifest ; 2023 ; 2023 ; Innovation in Aging Volume 7 ; 7 >
 
   }
@@ -8497,7 +8497,7 @@
     au < released ; 2019 ; 2019 ; Insect Systematics and Diversity Volume 3 ; 3 >
     au < released ; 2020 ; 2020 ; Insect Systematics and Diversity Volume 4 ; 4 >
     au < released ; 2021 ; 2021 ; Insect Systematics and Diversity Volume 5 ; 5 >
-    au < manifest ; 2022 ; 2022 ; Insect Systematics and Diversity Volume 6 ; 6 >
+    au < ready ; 2022 ; 2022 ; Insect Systematics and Diversity Volume 6 ; 6 >
     au < manifest ; 2023 ; 2023 ; Insect Systematics and Diversity Volume 7 ; 7 >
 
   }
@@ -8638,7 +8638,7 @@
     au < released ; 2019 ; 2019 ; Interactive CardioVascular and Thoracic Surgery Volume 26 ; 26 >
     au < released ; 2020 ; 2020 ; Interactive CardioVascular and Thoracic Surgery Volume 27 ; 27 >
     au < released ; 2021 ; 2021 ; Interactive CardioVascular and Thoracic Surgery Volume 28 ; 28 >
-    au < manifest ; 2022 ; 2022 ; Interactive CardioVascular and Thoracic Surgery Volume 29 ; 29 >
+    au < ready ; 2022 ; 2022 ; Interactive CardioVascular and Thoracic Surgery Volume 29 ; 29 >
     au < manifest ; 2023 ; 2023 ; Interactive CardioVascular and Thoracic Surgery Volume 30 ; 30 >
 
   }
@@ -8722,7 +8722,7 @@
     au < released ; 2019 ; 2019 ; International Health Volume 11 ; 11 >
     au < released ; 2020 ; 2020 ; International Health Volume 12 ; 12 >
     au < released ; 2021 ; 2021 ; International Health Volume 13 ; 13 >
-    au < manifest ; 2022 ; 2022 ; International Health Volume 14 ; 14 >
+    au < ready ; 2022 ; 2022 ; International Health Volume 14 ; 14 >
     au < manifest ; 2023 ; 2023 ; International Health Volume 15 ; 15 >
 
   }
@@ -9719,7 +9719,7 @@
     au < released ; 2019 ; 2019 ; Japanese Journal of Clinical Oncology Volume 49 ; 49 >
     au < released ; 2020 ; 2020 ; Japanese Journal of Clinical Oncology Volume 50 ; 50 >
     au < released ; 2021 ; 2021 ; Japanese Journal of Clinical Oncology Volume 51 ; 51 >
-    au < manifest ; 2022 ; 2022 ; Japanese Journal of Clinical Oncology Volume 52 ; 52 >
+    au < ready ; 2022 ; 2022 ; Japanese Journal of Clinical Oncology Volume 52 ; 52 >
     au < manifest ; 2023 ; 2023 ; Japanese Journal of Clinical Oncology Volume 53 ; 53 >
 
   }
@@ -10065,7 +10065,7 @@
     au < released ; 2019 ; 2019 ; Journal of Antitrust Enforcement Volume 7 ; 7 >
     au < released ; 2020 ; 2020 ; Journal of Antitrust Enforcement Volume 8 ; 8 >
     au < released ; 2021 ; 2021 ; Journal of Antitrust Enforcement Volume 9 ; 9 >
-    au < manifest ; 2022 ; 2022 ; Journal of Antitrust Enforcement Volume 10 ; 10 >
+    au < ready ; 2022 ; 2022 ; Journal of Antitrust Enforcement Volume 10 ; 10 >
     au < manifest ; 2023 ; 2023 ; Journal of Antitrust Enforcement Volume 11 ; 11 >
 
   }
@@ -10377,7 +10377,7 @@
     au < released ; 2019 ; 2019 ; Journal of Computational Design and Engineering Volume 6 ; 6 >
     au < released ; 2020 ; 2020 ; Journal of Computational Design and Engineering Volume 7 ; 7 >
     au < released ; 2021 ; 2021 ; Journal of Computational Design and Engineering Volume 8 ; 8 >
-    au < manifest ; 2022 ; 2022 ; Journal of Computational Design and Engineering Volume 9 ; 9 >
+    au < ready ; 2022 ; 2022 ; Journal of Computational Design and Engineering Volume 9 ; 9 >
     au < manifest ; 2023 ; 2023 ; Journal of Computational Design and Engineering Volume 10 ; 10 >
 
   }
@@ -10469,7 +10469,7 @@
     au < released ; 2019 ; 2019 ; Journal of Consumer Research Volume 46-47 ; 46-47 >
     au < released ; 2020 ; 2020 ; Journal of Consumer Research Volume 48-49 ; 48-49 >
     au < released ; 2021 ; 2021 ; Journal of Consumer Research Volume 50-51 ; 50-51 >
-    au < manifest ; 2022 ; 2022 ; Journal of Consumer Research Volume 52-53 ; 52-53 >
+    au < ready ; 2022 ; 2022 ; Journal of Consumer Research Volume 52-53 ; 52-53 >
     au < manifest ; 2023 ; 2023 ; Journal of Consumer Research Volume 54-55 ; 54-55 >
 
   }
@@ -10500,7 +10500,7 @@
     au < released ; 2019 ; 2019 ; Journal of Crohn's and Colitis Volume 13 ; 13 >
     au < released ; 2020 ; 2020 ; Journal of Crohn's and Colitis Volume 14 ; 14 >
     au < released ; 2021 ; 2021 ; Journal of Crohn's and Colitis Volume 15 ; 15 >
-    au < manifest ; 2022 ; 2022 ; Journal of Crohn's and Colitis Volume 16 ; 16 >
+    au < ready ; 2022 ; 2022 ; Journal of Crohn's and Colitis Volume 16 ; 16 >
     au < manifest ; 2023 ; 2023 ; Journal of Crohn's and Colitis Volume 17 ; 17 >
 
   }
@@ -11548,7 +11548,7 @@
     au < released ; 2019 ; 2019 ; Journal of Islamic Studies Volume 30 ; 30 >
     au < released ; 2020 ; 2020 ; Journal of Islamic Studies Volume 31 ; 31 >
     au < released ; 2021 ; 2021 ; Journal of Islamic Studies Volume 32 ; 32 >
-    au < manifest ; 2022 ; 2022 ; Journal of Islamic Studies Volume 33 ; 33 >
+    au < ready ; 2022 ; 2022 ; Journal of Islamic Studies Volume 33 ; 33 >
     au < manifest ; 2023 ; 2023 ; Journal of Islamic Studies Volume 34 ; 34 >
 
   }
@@ -11621,7 +11621,7 @@
     au < exists ; 2019 ; 2019 ; Journal of Legal Analysis Volume 11 ; 11 >
     au < exists ; 2020 ; 2020 ; Journal of Legal Analysis Volume 12 ; 12 >
     au < released ; 2021 ; 2021 ; Journal of Legal Analysis Volume 13 ; 13 >
-    au < manifest ; 2022 ; 2022 ; Journal of Legal Analysis Volume 14 ; 14 >
+    au < ready ; 2022 ; 2022 ; Journal of Legal Analysis Volume 14 ; 14 >
     au < expected ; 2023 ; 2023 ; Journal of Legal Analysis Volume 15 ; 15 >
 
   }
@@ -11637,7 +11637,7 @@
     param[journal_id] = jleukbio
     #move from Wiley on 2023
 
-    au < manifest ; 2022 ; 2022 ; Journal of Leukocyte Biology Volume 112 ; 112 >
+    au < ready ; 2022 ; 2022 ; Journal of Leukocyte Biology Volume 112 ; 112 >
     au < manifest ; 2023 ; 2023 ; Journal of Leukocyte Biology Volume 113 ; 113 >
 
   }
@@ -12243,7 +12243,7 @@
     au < released ; 2019 ; 2019 ; Journal of Plankton Research Volume 41 ; 41 >
     au < released ; 2020 ; 2020 ; Journal of Plankton Research Volume 42 ; 42 >
     au < released ; 2021 ; 2021 ; Journal of Plankton Research Volume 43 ; 43 >
-    au < manifest ; 2022 ; 2022 ; Journal of Plankton Research Volume 44 ; 44 >
+    au < ready ; 2022 ; 2022 ; Journal of Plankton Research Volume 44 ; 44 >
     au < manifest ; 2023 ; 2023 ; Journal of Plankton Research Volume 45 ; 45 >
 
   }
@@ -12356,7 +12356,7 @@
     au < released ; 2019 ; 2019 ; Journal of Pharmacy and Pharmacology Volume 71 ; 71 >
     au < released ; 2020 ; 2020 ; Journal of Pharmacy and Pharmacology Volume 72 ; 72 >
     au < released ; 2021 ; 2021 ; Journal of Pharmacy and Pharmacology Volume 73 ; 73 >
-    au < manifest ; 2022 ; 2022 ; Journal of Pharmacy and Pharmacology Volume 74 ; 74 >
+    au < ready ; 2022 ; 2022 ; Journal of Pharmacy and Pharmacology Volume 74 ; 74 >
     au < manifest ; 2023 ; 2023 ; Journal of Pharmacy and Pharmacology Volume 75 ; 75 >
 
   }
@@ -12388,7 +12388,7 @@
     au < released ; 2019 ; 2019 ; Journal of Philosophy of Education Volume 53 ; 53 >
     au < released ; 2020 ; 2020 ; Journal of Philosophy of Education Volume 54 ; 54 >
     au < released ; 2021 ; 2021 ; Journal of Philosophy of Education Volume 55 ; 55 >
-    au < manifest ; 2022 ; 2022 ; Journal of Philosophy of Education Volume 56 ; 56 >
+    au < ready ; 2022 ; 2022 ; Journal of Philosophy of Education Volume 56 ; 56 >
     au < manifest ; 2023 ; 2023 ; Journal of Philosophy of Education Volume 57 ; 57 >
 
   }
@@ -12809,7 +12809,7 @@
     au < released ; 2019 ; 2019 ; The Journal of Sexual Medicine Volume 16 ; 16 >
     au < released ; 2020 ; 2020 ; The Journal of Sexual Medicine Volume 17 ; 17 >
     au < released ; 2021 ; 2021 ; The Journal of Sexual Medicine Volume 18 ; 18 >
-    au < manifest ; 2022 ; 2022 ; The Journal of Sexual Medicine Volume 19 ; 19 >
+    au < ready ; 2022 ; 2022 ; The Journal of Sexual Medicine Volume 19 ; 19 >
     au < manifest ; 2023 ; 2023 ; The Journal of Sexual Medicine Volume 20 ; 20 >
 
   }
@@ -12834,7 +12834,7 @@
     au < ready ; 2019 ; 2019 ; Sexual Medicine Volume 7 ; 7 >
     au < ready ; 2020 ; 2020 ; Sexual Medicine Volume 8 ; 8 >
     au < ready ; 2021 ; 2021 ; Sexual Medicine Volume 9 ; 9 >
-    au < manifest ; 2022 ; 2022 ; Sexual Medicine Volume 10 ; 10 >
+    au < ready ; 2022 ; 2022 ; Sexual Medicine Volume 10 ; 10 >
     au < manifest ; 2023 ; 2023 ; Sexual Medicine Volume 11 ; 11 >
 
   }
@@ -12860,7 +12860,7 @@
     au < ready ; 2019 ; 2019 ; Sexual Medicine Reviews Volume 7 ; 7 >
     au < ready ; 2020 ; 2020 ; Sexual Medicine Reviews Volume 8 ; 8 >
     au < ready ; 2021 ; 2021 ; Sexual Medicine Reviews Volume 9 ; 9 >
-    au < manifest ; 2022 ; 2022 ; Sexual Medicine Reviews Volume 10 ; 10 >
+    au < ready ; 2022 ; 2022 ; Sexual Medicine Reviews Volume 10 ; 10 >
     au < manifest ; 2023 ; 2023 ; Sexual Medicine Reviews Volume 11 ; 11 >
 
   }
@@ -13112,7 +13112,7 @@
     au < released ; 2019 ; 2019 ; Journal of Victorian Culture Volume 2 ; 2 >
     au < released ; 2020 ; 2020 ; Journal of Victorian Culture Volume 3 ; 3 >
     au < released ; 2021 ; 2021 ; Journal of Victorian Culture Volume 4 ; 4 >
-    au < manifest ; 2022 ; 2022 ; Journal of Victorian Culture Volume 5 ; 5 >
+    au < ready ; 2022 ; 2022 ; Journal of Victorian Culture Volume 5 ; 5 >
     au < manifest ; 2023 ; 2023 ; Journal of Victorian Culture Volume 6 ; 6 >
 
   }
@@ -13555,7 +13555,7 @@
     param[journal_id] = jrsssa
     #move from Wiley by 2023-01-01
 
-    au < manifest ; 2022 ; 2022 ; Journal of the Royal Statistical Society, Series A: Statistics in Society Volume 185 ; 185 >
+    au < ready ; 2022 ; 2022 ; Journal of the Royal Statistical Society, Series A: Statistics in Society Volume 185 ; 185 >
     au < manifest ; 2023 ; 2023 ; Journal of the Royal Statistical Society, Series A: Statistics in Society Volume 186 ; 186 >
 
   }
@@ -13572,7 +13572,7 @@
     param[journal_id] = jrsssb
     #move from Wiley by 2023-01-01
 
-    au < manifest ; 2022 ; 2022 ; Journal of the Royal Statistical Society, Series B: Statistical Methodology Volume 84 ; 84 >
+    au < ready ; 2022 ; 2022 ; Journal of the Royal Statistical Society, Series B: Statistical Methodology Volume 84 ; 84 >
     au < manifest ; 2023 ; 2023 ; Journal of the Royal Statistical Society, Series B: Statistical Methodology Volume 85 ; 85 >
 
   }
@@ -13589,7 +13589,7 @@
     param[journal_id] = jrsssc
     #move from Wiley by 2023-01-01
 
-    au < manifest ; 2022 ; 2022 ; Journal of the Royal Statistical Society, Series C: Applied Statistics Volume 71 ; 71 >
+    au < ready ; 2022 ; 2022 ; Journal of the Royal Statistical Society, Series C: Applied Statistics Volume 71 ; 71 >
     au < manifest ; 2023 ; 2023 ; Journal of the Royal Statistical Society, Series C: Applied Statistics Volume 72 ; 72 >
 
   }
@@ -13727,7 +13727,7 @@
     param[journal_id] = lambio
     #move from Wiley by 2022-12-19
 
-    au < manifest ; 2022 ; 2022 ; Letters in Applied Microbiology Volume 75 ; 75 >
+    au < ready ; 2022 ; 2022 ; Letters in Applied Microbiology Volume 75 ; 75 >
     au < manifest ; 2023 ; 2023 ; Letters in Applied Microbiology Volume 76 ; 76 >
 
   }
@@ -13862,7 +13862,7 @@
     au < released ; 2019 ; 2019 ; Logic Journal of the IGPL Volume 27 ; 27 >
     au < released ; 2020 ; 2020 ; Logic Journal of the IGPL Volume 28 ; 28 >
     au < released ; 2021 ; 2021 ; Logic Journal of the IGPL Volume 29 ; 29 >
-    au < manifest ; 2022 ; 2022 ; Logic Journal of the IGPL Volume 30 ; 30 >
+    au < ready ; 2022 ; 2022 ; Logic Journal of the IGPL Volume 30 ; 30 >
     au < manifest ; 2023 ; 2023 ; Logic Journal of the IGPL Volume 31 ; 31 >
 
   }
@@ -14230,7 +14230,7 @@
     au < released ; 2019 ; 2019 ; Microscopy Volume 68 ; 68 >
     au < released ; 2020 ; 2020 ; Microscopy Volume 69 ; 69 >
     au < released ; 2021 ; 2021 ; Microscopy Volume 70 ; 70 >
-    au < manifest ; 2022 ; 2022 ; Microscopy Volume 71 ; 71 >
+    au < ready ; 2022 ; 2022 ; Microscopy Volume 71 ; 71 >
     au < manifest ; 2023 ; 2023 ; Microscopy Volume 72 ; 72 >
 
   }
@@ -14262,7 +14262,7 @@
     au < released ; 2019 ; 2019 ; Microscopy Today Volume 27 ; 27 >
     au < released ; 2020 ; 2020 ; Microscopy Today Volume 28 ; 28 >
     au < released ; 2021 ; 2021 ; Microscopy Today Volume 29 ; 29 >
-    au < manifest ; 2022 ; 2022 ; Microscopy Today Volume 30 ; 30 >
+    au < ready ; 2022 ; 2022 ; Microscopy Today Volume 30 ; 30 >
     au < manifest ; 2023 ; 2023 ; Microscopy Today Volume 31 ; 31 >
 
   }
@@ -14575,7 +14575,7 @@
     param[journal_id] = mr
     #Content had been processed by T&F from 1986 volume 1 to 2021 volume 31
 
-    au < manifest ; 2022 ; 2022 ; Modern Rheumatology Volume 32 ; 32 >
+    au < ready ; 2022 ; 2022 ; Modern Rheumatology Volume 32 ; 32 >
     au < manifest ; 2023 ; 2023 ; Modern Rheumatology Volume 33 ; 33 >
 
   }
@@ -16071,7 +16071,7 @@
     au < released ; 2019 ; 2019 ; Oxford Economic Papers Volume 71 ; 71 >
     au < released ; 2020 ; 2020 ; Oxford Economic Papers Volume 72 ; 72 >
     au < released ; 2021 ; 2021 ; Oxford Economic Papers Volume 73 ; 73 >
-    au < manifest ; 2022 ; 2022 ; Oxford Economic Papers Volume 74 ; 74 >
+    au < ready ; 2022 ; 2022 ; Oxford Economic Papers Volume 74 ; 74 >
     au < manifest ; 2023 ; 2023 ; Oxford Economic Papers Volume 75 ; 75 >
 
   }
@@ -16272,7 +16272,7 @@
     au < released ; 2019 ; 2019 ; Paediatrics & Child Health Volume 24 ; 24 >
     au < released ; 2020 ; 2020 ; Paediatrics & Child Health Volume 25 ; 25 >
     au < released ; 2021 ; 2021 ; Paediatrics & Child Health Volume 26 ; 26 >
-    au < manifest ; 2022 ; 2022 ; Paediatrics & Child Health Volume 27 ; 27 >
+    au < ready ; 2022 ; 2022 ; Paediatrics & Child Health Volume 27 ; 27 >
     au < manifest ; 2023 ; 2023 ; Paediatrics & Child Health Volume 28 ; 28 >
 
   }
@@ -17278,7 +17278,7 @@
     au < released ; 2019 ; 2019 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2019 ; 2019 >
     au < released ; 2020 ; 2020 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2020 ; 2020 >
     au < released ; 2021 ; 2021 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2021 ; 2021 >
-    au < manifest ; 2022 ; 2022 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2022 ; 2022 >
+    au < ready ; 2022 ; 2022 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2022 ; 2022 >
     au < manifest ; 2023 ; 2023 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2023 ; 2023 >
 
   }
@@ -17377,7 +17377,7 @@
     au < released ; 2019 ; 2019 ; Public Health Ethics Volume 12 ; 12 >
     au < released ; 2020 ; 2020 ; Public Health Ethics Volume 13 ; 13 >
     au < released ; 2021 ; 2021 ; Public Health Ethics Volume 14 ; 14 >
-    au < manifest ; 2022 ; 2022 ; Public Health Ethics Volume 15 ; 15 >
+    au < ready ; 2022 ; 2022 ; Public Health Ethics Volume 15 ; 15 >
     au < manifest ; 2023 ; 2023 ; Public Health Ethics Volume 16 ; 16 >
 
   }
@@ -17840,7 +17840,7 @@
     au < released ; 2019 ; 2019 ; Refugee Survey Quarterly Volume 38 ; 38 >
     au < released ; 2020 ; 2020 ; Refugee Survey Quarterly Volume 39 ; 39 >
     au < released ; 2021 ; 2021 ; Refugee Survey Quarterly Volume 40 ; 40 >
-    au < manifest ; 2022 ; 2022 ; Refugee Survey Quarterly Volume 41 ; 41 >
+    au < ready ; 2022 ; 2022 ; Refugee Survey Quarterly Volume 41 ; 41 >
     au < manifest ; 2023 ; 2023 ; Refugee Survey Quarterly Volume 42 ; 42 >
 
   }
@@ -18186,7 +18186,7 @@
     au < released ; 2019 ; 2019 ; Schizophrenia Bulletin Volume 45 ; 45 >
     au < released ; 2020 ; 2020 ; Schizophrenia Bulletin Volume 46 ; 46 >
     au < released ; 2021 ; 2021 ; Schizophrenia Bulletin Volume 47 ; 47 >
-    au < manifest ; 2022 ; 2022 ; Schizophrenia Bulletin Volume 48 ; 48 >
+    au < ready ; 2022 ; 2022 ; Schizophrenia Bulletin Volume 48 ; 48 >
     au < manifest ; 2023 ; 2023 ; Schizophrenia Bulletin Volume 49 ; 49 >
 
   }
@@ -18400,7 +18400,7 @@
     au < released ; 2019 ; 2019 ; Shakespeare Quarterly Volume 70 ; 70 >
     au < released ; 2020 ; 2020 ; Shakespeare Quarterly Volume 71 ; 71 >
     au < released ; 2021 ; 2021 ; Shakespeare Quarterly Volume 72 ; 72 >
-    au < manifest ; 2022 ; 2022 ; Shakespeare Quarterly Volume 73 ; 73 >
+    au < ready ; 2022 ; 2022 ; Shakespeare Quarterly Volume 73 ; 73 >
     au < manifest ; 2023 ; 2023 ; Shakespeare Quarterly Volume 74 ; 74 >
 
   }
@@ -18625,7 +18625,7 @@
     au < released ; 2019 ; 2019 ; Social Forces Volume 98 ; 98 >
     au < released ; 2020 ; 2020 ; Social Forces Volume 99 ; 99 >
     au < released ; 2021 ; 2021 ; Social Forces Volume 100 ; 100 >
-    au < manifest ; 2022 ; 2022 ; Social Forces Volume 101 ; 101 >
+    au < ready ; 2022 ; 2022 ; Social Forces Volume 101 ; 101 >
     au < manifest ; 2023 ; 2023 ; Social Forces Volume 102 ; 102 >
 
   }
@@ -20071,7 +20071,7 @@
     au < released ; 2019 ; 2019 ; The Chinese Journal of International Politics Volume 12 ; 12 >
     au < released ; 2020 ; 2020 ; The Chinese Journal of International Politics Volume 13 ; 13 >
     au < released ; 2021 ; 2021 ; The Chinese Journal of International Politics Volume 14 ; 14 >
-    au < manifest ; 2022 ; 2022 ; The Chinese Journal of International Politics Volume 15 ; 15 >
+    au < ready ; 2022 ; 2022 ; The Chinese Journal of International Politics Volume 15 ; 15 >
     au < manifest ; 2023 ; 2023 ; The Chinese Journal of International Politics Volume 16 ; 16 >
 
   }
@@ -20380,7 +20380,7 @@
     au < released ; 2019 ; 2019 ; The Gerontologist Volume 59 ; 59 >
     au < released ; 2020 ; 2020 ; The Gerontologist Volume 60 ; 60 >
     au < released ; 2021 ; 2021 ; The Gerontologist Volume 61 ; 61 >
-    au < manifest ; 2022 ; 2022 ; The Gerontologist Volume 62 ; 62 >
+    au < ready ; 2022 ; 2022 ; The Gerontologist Volume 62 ; 62 >
     au < manifest ; 2023 ; 2023 ; The Gerontologist Volume 63 ; 63 >
 
   }
@@ -20938,7 +20938,7 @@
     au < released ; 2019 ; 2019 ; The Journal of Law, Economics, and Organization Volume 35 ; 35 >
     au < released ; 2020 ; 2020 ; The Journal of Law, Economics, and Organization Volume 36 ; 36 >
     au < released ; 2021 ; 2021 ; The Journal of Law, Economics, and Organization Volume 37 ; 37 >
-    au < manifest ; 2022 ; 2022 ; The Journal of Law, Economics, and Organization Volume 38 ; 38 >
+    au < ready ; 2022 ; 2022 ; The Journal of Law, Economics, and Organization Volume 38 ; 38 >
     au < manifest ; 2023 ; 2023 ; The Journal of Law, Economics, and Organization Volume 39 ; 39 >
 
   }
@@ -21176,7 +21176,7 @@
     au < released ; 2019 ; 2019 ; The Journal of Theological Studies Volume 70 ; 70 >
     au < released ; 2020 ; 2020 ; The Journal of Theological Studies Volume 71 ; 71 >
     au < released ; 2021 ; 2021 ; The Journal of Theological Studies Volume 72 ; 72 >
-    au < manifest ; 2022 ; 2022 ; The Journal of Theological Studies Volume 73 ; 73 >
+    au < ready ; 2022 ; 2022 ; The Journal of Theological Studies Volume 73 ; 73 >
     au < manifest ; 2023 ; 2023 ; The Journal of Theological Studies Volume 74 ; 74 >
 
   }
@@ -21206,7 +21206,7 @@
     au < released ; 2019 ; 2019 ; The Journal of World Energy Law & Business Volume 12 ; 12 >
     au < released ; 2020 ; 2020 ; The Journal of World Energy Law & Business Volume 13 ; 13 >
     au < released ; 2021 ; 2021 ; The Journal of World Energy Law & Business Volume 14 ; 14 >
-    au < manifest ; 2022 ; 2022 ; The Journal of World Energy Law & Business Volume 15 ; 15 >
+    au < ready ; 2022 ; 2022 ; The Journal of World Energy Law & Business Volume 15 ; 15 >
     au < manifest ; 2023 ; 2023 ; The Journal of World Energy Law & Business Volume 16 ; 16 >
 
   }
@@ -21885,7 +21885,7 @@
     au < released ; 2019 ; 2019 ; The Philosophical Quarterly Volume 69 ; 69 >
     au < released ; 2020 ; 2020 ; The Philosophical Quarterly Volume 70 ; 70 >
     au < released ; 2021 ; 2021 ; The Philosophical Quarterly Volume 71 ; 71 >
-    au < manifest ; 2022 ; 2022 ; The Philosophical Quarterly Volume 72 ; 72 >
+    au < ready ; 2022 ; 2022 ; The Philosophical Quarterly Volume 72 ; 72 >
     au < manifest ; 2023 ; 2023 ; The Philosophical Quarterly Volume 73 ; 73 >
 
   }
@@ -22868,7 +22868,7 @@
     au < released ; 2019 ; 2019 ; Toxicological Sciences Volume 167-172 ; 167-172 >
     au < released ; 2020 ; 2020 ; Toxicological Sciences Volume 173-178 ; 173-178 >
     au < released ; 2021 ; 2021 ; Toxicological Sciences Volume 179-184 ; 179-184 >
-    au < manifest ; 2022 ; 2022 ; Toxicological Sciences Volume 185-190 ; 185-190 >
+    au < ready ; 2022 ; 2022 ; Toxicological Sciences Volume 185-190 ; 185-190 >
     au < manifest ; 2023 ; 2023 ; Toxicological Sciences Volume 191-196 ; 191-196 >
 
   }
