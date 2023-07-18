@@ -78,18 +78,19 @@ public class Emerald2020ArticleIteratorFactory implements ArticleIteratorFactory
     builder.setSpec(target,
             ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
 
-    // set up PDF to be an aspect that will trigger an ArticleFiles
-    builder.addAspect(
-            PDF_PATTERN,
-            PDF_REPLACEMENT,
-            ArticleFiles.ROLE_FULL_TEXT_PDF);
-
     // set up Fulltext to be an aspect that will trigger an ArticleFiles
     builder.addAspect(
             FULLTEXT_PATTERN,
             FULLTEXT_REPLACEMENT,
             ArticleFiles.ROLE_FULL_TEXT_HTML,
             ArticleFiles.ROLE_ARTICLE_METADATA);
+
+    // set up PDF to be an aspect that will trigger an ArticleFiles
+    builder.addAspect(
+            PDF_PATTERN,
+            PDF_REPLACEMENT,
+            ArticleFiles.ROLE_FULL_TEXT_PDF);
+
 
     return builder.getSubTreeArticleIterator();
   }
