@@ -172,6 +172,19 @@
 
   {
     title <
+      name = Aerosol Research ;
+      eissn = 2940-3391
+    >
+      attr[journal_id] = ar
+      param[base_url] = https://ar.copernicus.org/
+      param[home_url] = https://www.aerosol-research.net/
+
+      au < manifest ; exists ; 2023 ; 2023 ; Aerosol Research Volume 1 ; 1 ; >
+
+  }
+
+  {
+    title <
       name = AGILE: GIScience Series ;
       eissn = 2700-8150
     >
