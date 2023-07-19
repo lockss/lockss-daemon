@@ -53,7 +53,9 @@
 
          au < manifest ; exists ; 2023 ; Association for Computing Machinery Source Content 2023_01 ; 2023_01 >
          au < manifest ; exists ; 2023 ; Association for Computing Machinery Source Content 2023_02 ; 2023_02 >
-
+         au < testing ; exists ; 2023 ; Association for Computing Machinery Source Content 2023_03 ; 2023_03 >
+         au < doNotProcess ; exists ; 2023 ; Association for Computing Machinery Source Content 2023_04 ; 2023_04 >
+         #ACM delivers big content, so AUs should never be added to clockss without review
        }
     }
 
