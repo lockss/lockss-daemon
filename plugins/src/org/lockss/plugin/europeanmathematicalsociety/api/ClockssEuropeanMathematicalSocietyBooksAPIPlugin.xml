@@ -121,10 +121,12 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>"%srobots.txt", base_url</string>
     </entry>
     -->
+    <!--
     <entry>
         <string>au_permission_url</string>
         <string>"http://clockss-ingest.lockss.org/clockss.txt"</string>
     </entry>
+    -->
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
@@ -166,22 +168,12 @@ POSSIBILITY OF SUCH DAMAGE.
         </map>
     </entry>
     -->
-    <entry>
-        <string>au_permitted_host_pattern</string>
-        <list>
-            <string>"archive\.org"</string>
-        </list>
-    </entry>
     <!--
     <entry>
         <string>plugin_crawl_url_comparator_factory</string>
         <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyCrawlUrlComparatorFactory</string>
     </entry>
     -->
-    <entry>
-        <string>plugin_archive_file_types</string>
-        <string>standard</string>
-    </entry>
     <entry>
         <string>au_url_mime_type_map</string>
         <list>
@@ -209,11 +201,12 @@ POSSIBILITY OF SUCH DAMAGE.
             </entry>
         </map>
     </entry>
+    <!--
     <entry>
         <string>au_permitted_host_pattern</string>
         <list>
-            <!--  special case to allow one time collection with our own permission -->
             <string>"content\.ems\.press"</string>
         </list>
     </entry>
+    -->
 </map>

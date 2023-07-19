@@ -54,7 +54,9 @@ public class EuropeanMathematicalSocietyUrlFetcher extends BaseUrlFetcher {
 
   /** Auth string returned from POST */
   public static final String FACADE_KEY_AUTHORIZATION_STRING =
-    "authorizationString";
+          "authorizationString";
+    //"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJvdDpDTE9DS1NTIEJvdCIsImFjY291bnQiOnsiaWQiOjI2NDg5NzgwLCJyZWYiOiJib3Q6Y2xvY2tzcyIsIm5hbWUiOiJDTE9DS1NTIEJvdCJ9LCJhdXRob3JpemF0aW9ucyI6W3siY29udGVudFJpZ2h0cyI6WyJ2aWV3Il0sImNvbnRlbnRVbml0cyI6WyJlYm9va3M6YWxsIiwiam91cm5hbHM6YWxsIl19XSwiaWF0IjoxNjg5NzIwNzg4LCJleHAiOjE2ODk4MDcxODh9.q_dlKZXHSfQzWuTTy5t_SVNV-E220m6sDGF0KJwaXZw";
+
   /** Signal to EuropeanMathematicalSocietyUrlFetcherFactory to make a EuropeanMathematicalSocietyUrlPoster
    * UrlFetcher */
   public static String FACADE_KEY_MAKE_POSTER = "makePostFetcher";
@@ -71,7 +73,7 @@ public class EuropeanMathematicalSocietyUrlFetcher extends BaseUrlFetcher {
 
   @Override
   public FetchResult fetch() throws CacheException {
-    //establishSessionIfNeeded();
+    establishSessionIfNeeded();
     return super.fetch();
   }
 
@@ -86,7 +88,9 @@ public class EuropeanMathematicalSocietyUrlFetcher extends BaseUrlFetcher {
     }
     log.debug2("Attempting to establish a session");
 
-    String postUrl = String.format("%sservices/xauthn/?op=login",
+    //auth/identify url==https://clockss.org
+    //identify?url=https://clockss.org
+    String postUrl = String.format("%sauth/identify?url=https%3A%2F%2Fclockss.org",
                                    au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()));
     crawlFacade.putStateObj(FACADE_KEY_MAKE_POSTER, "true");
     UrlFetcher uf;
@@ -116,26 +120,6 @@ public class EuropeanMathematicalSocietyUrlFetcher extends BaseUrlFetcher {
       return LockssUrlConnection.METHOD_POST;
     }
 
-    @Override
-    protected void customizeConnection(LockssUrlConnection conn)
-        throws IOException {
-      super.customizeConnection(conn);
-      try {
-        String userPassStr =
-          au.getConfiguration().get(ConfigParamDescr.USER_CREDENTIALS.getKey());
-        List<String> userPass =
-          (List<String>)AuParamType.UserPasswd.parse(userPassStr);
-        conn.setRequestProperty("content-type", Constants.FORM_ENCODING_URL);
-        conn.setRequestEntity(String.format("email=%s&password=%s",
-                                            UrlUtil.encodeUrl(userPass.get(0)),
-                                            UrlUtil.encodeUrl(userPass.get(1))));
-      } catch (AuParamType.InvalidFormatException e) {
-        CacheException ce =
-          new CacheException.PermissionException("Malformed credentials");
-        ce.initCause(e);
-        throw ce;
-      }
-    }
 
     @Override
     protected void consume(FetchedUrlData fud) throws IOException {
