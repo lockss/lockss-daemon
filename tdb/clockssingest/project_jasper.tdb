@@ -18,6 +18,7 @@
       name = Alphaville: Journal of Film and Screen Media ;
       eissn = 2009-4078
     >
+    provider = Alphaville: Journal of Film and Screen Media #Correct
 
     au < testing ; exists ; 2022 ; Alphaville: Journal of Film and Screen Media ; Alphaville_2009-4078 >
 
@@ -29,6 +30,7 @@
       name = Annales Scientia Politica ;
       issn = 1339-0732
     >
+    provider = Annales Scientia Politica
 
     au < expected ; exists ; 2022 ; Annales Scientia Politica ; UNKNOWN >
 
@@ -41,6 +43,7 @@
       eissn = 2579-2210 ;
       issn = 1800-363X
     >
+    provider = Faculty of Management and Finance, University of Colombo #Correct
 
     au < testing ; exists ; 2022 ; Colombo Business Journal ; Colombo_Business_Journal_-_2579-2210 >
 
@@ -49,9 +52,10 @@
   {
 
     title <
-      name = Dysona. Life Science   ;
+      name = Dysona. Life Science ;
       eissn = 2708-6291
     >
+    provider = E-NAMTILA Publishing #Correct
 
     au < testing ; exists ; 2022 ; Dysona. Life Science ; Daysona_Life_Science_2708-6291 >
 
@@ -60,15 +64,14 @@
   {
 
     title <
-      name =   Dysona. Applied Sciences ;
+      name = Dysona. Applied Sciences ;
       eissn = 2708-6283
     >
+    provider = E-NAMTILA Publishing #Correct
 
     au < expected ; exists ; 2022 ; Dysona. Applied Sciences ; UNKNOWN >
 
   }
-
-
 
   {
 
@@ -76,6 +79,7 @@
       name = Educational Journal of Living Theories ;
       eissn = 2009-1788
     >
+    provider = Educational Journal of Living Theories #Correct
 
     au < testing ; exists ; 2022 ; Educational Journal of Living Theories ; Educational_Journal_of_Living_Theories__ISSN_2009-1788 >
   }
@@ -86,6 +90,7 @@
       name = Finnish Society for Science Fiction and Fantasy Research ;
       eissn = 2342-2009
     >
+    provider = Finnish Society for Science Fiction and Fantasy Research
 
     au < testing ; exists ; 2022 ; Finnish Society for Science Fiction and Fantasy Research ; Fafnir_2342-2009 >
 
@@ -97,6 +102,7 @@
       name = Aposta ;
       eissn = 1696-7348
     >
+    provider = Aposta
 
     au < testing ; exists ; 2022 ; Aposta ; aposta_1696-7348 >
 
@@ -108,6 +114,7 @@
       name = History of Classical Scholarship ;
       eissn = 2632-4091
     >
+    provider = History of Classical Scholarship
 
     au < testing ; exists ; 2022 ; History of Classical Scholarship ; history_of_classical_scholarship_2632-4091 >
 
@@ -119,6 +126,7 @@
       name = Santander, Estudios de Patrimonio ;
       eissn = 2632-4091
     >
+    provider = Santander, Estudios de Patrimonio
 
     au < testing ; exists ; 2022 ; Santander, Estudios de Patrimonio ; santander_estudios_de_patrimonio_2605-5317 >
 
@@ -130,6 +138,7 @@
       name = 027.7 ;
       issn = 2296-0597
     >
+    provider = 027.7
 
     au < testing ; exists ; 2022 ; 027.7 ; 277_2296-0597 >
 
