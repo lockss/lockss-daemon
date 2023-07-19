@@ -14572,7 +14572,7 @@
     param[journal_id] = mrcr
     #Content had been processed under T&F from 2017 volume 1 to 2021 volume 5
 
-    au < ready ; exists ; 2022 ; 2022 ; Modern Rheumatology Case Reports Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Modern Rheumatology Case Reports Volume 6 ; 6 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Modern Rheumatology Case Reports Volume 7 ; 7 ; >
 
   }
@@ -16887,7 +16887,7 @@
     param[journal_id] = psq
     #move from Wiley by 2023-01-01
 
-    au < ready ; exists ; 2022 ; 2022 ; Political Science Quarterly Volume 137 ; 137 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Political Science Quarterly Volume 137 ; 137 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Political Science Quarterly Volume 138 ; 138 ; >
 
   }
@@ -16903,7 +16903,7 @@
     param[journal_id] = pmj
     #move from BMJ by 2023-01-01
 
-    au < ready ; exists ; 2022 ; 2022 ; Postgraduate Medical Journal Volume 98 ; 98 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Postgraduate Medical Journal Volume 98 ; 98 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Postgraduate Medical Journal Volume 99 ; 99 ; >
 
   }
@@ -18398,7 +18398,7 @@
     param[journal_id] = jrssig
     #move from Wiley by 2023-01-01
 
-    au < ready ; exists ; 2022 ; 2022 ; Significance Volume 185 ; 185 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Significance Volume 185 ; 185 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Significance Volume 186 ; 186 ; >
 
   }
@@ -19524,7 +19524,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; The American Journal of Comparative Law Volume 67 ; 67 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The American Journal of Comparative Law Volume 68 ; 68 ; >
     au < frozen ; exists ; 2021 ; 2021 ; The American Journal of Comparative Law Volume 69 ; 69 ; >
-    au < ready ; exists ; 2022 ; 2022 ; The American Journal of Comparative Law Volume 70 ; 70 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; The American Journal of Comparative Law Volume 70 ; 70 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; The American Journal of Comparative Law Volume 71 ; 71 ; >
 
   }
@@ -21355,7 +21355,7 @@
     au < finished ; manifest ; 2018 ; 2018 ; The Leo Baeck Institute Year Book Volume 63 ; 63 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2019 ; 2019 ; The Leo Baeck Institute Year Book Volume 64 ; 64 ; >
     au < frozen ; exists ; 2021 ; 2021 ; The Leo Baeck Institute Year Book Volume 65 ; 65 ; >
-    au < ready ; exists ; 2022 ; 2022 ; The Leo Baeck Institute Year Book Volume 66 ; 66 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; The Leo Baeck Institute Year Book Volume 66 ; 66 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; The Leo Baeck Institute Year Book Volume 67 ; 67 ; >
 
   }
@@ -21718,7 +21718,7 @@
     au < finished ; manifest ; 2018 ; 2018 ; The Opera Quarterly Volume 34 ; 34 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2019 ; 2019 ; The Opera Quarterly Volume 35 (2019) ; 35 ; >
     au < frozen ; exists ; 2021 ; 2021 ; The Opera Quarterly Volume 36 (2021) ; 36 ; >
-    au < ready ; exists ; 2022 ; 2022 ; The Opera Quarterly Volume 37 (2022) ; 37 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; The Opera Quarterly Volume 37 (2022) ; 37 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; The Opera Quarterly Volume 38 (2023) ; 38 ; >
 
   }
