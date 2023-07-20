@@ -520,7 +520,7 @@
 
     param[journal_issn] = 2949-7973
 
-    au < releasing ; 2022 ; Bangladesh Journal of Endocrinology and Metabolism Volume 1 ; 2022 ; 1 ; https://www.bjem.org/ >
+    au < released ; 2022 ; Bangladesh Journal of Endocrinology and Metabolism Volume 1 ; 2022 ; 1 ; https://www.bjem.org/ >
     au < manifest ; 2023 ; Bangladesh Journal of Endocrinology and Metabolism Volume 2 ; 2023 ; 2 ; https://www.bjem.org/ >
 
   }
@@ -537,7 +537,7 @@
     param[journal_issn] = 2773-1332
 
     au < released ; 2021 ; Bengal Journal of Cancer Volume 1 ; 2021 ; 1 ; https://www.bengaljcancer.org/ >
-    au < releasing ; 2022 ; Bengal Journal of Cancer Volume 2 ; 2022 ; 2 ; https://www.bengaljcancer.org/ >
+    au < released ; 2022 ; Bengal Journal of Cancer Volume 2 ; 2022 ; 2 ; https://www.bengaljcancer.org/ >
     au < expected ; 2023 ; Bengal Journal of Cancer Volume 3 ; 2023 ; 3 ; https://www.bengaljcancer.org/ >
 
   }
@@ -571,7 +571,7 @@
 
     param[journal_issn] = 2773-1316
 
-    au < releasing ; 2022 ; Chronicle of Diabetes Research and Practice Volume 1 ; 2022 ; 1 ; https://cdrpj.org/ >
+    au < released ; 2022 ; Chronicle of Diabetes Research and Practice Volume 1 ; 2022 ; 1 ; https://cdrpj.org/ >
     au < manifest ; 2023 ; Chronicle of Diabetes Research and Practice Volume 2 ; 2023 ; 2 ; https://cdrpj.org/ >
 
   }
@@ -731,7 +731,7 @@
     au < released ; 2019 ; Heart Views Volume 20 ; 2019 ; 20 ; https://www.heartviews.org/ >
     au < released ; 2020 ; Heart Views Volume 21 ; 2020 ; 21 ; https://www.heartviews.org/ >
     au < released ; 2021 ; Heart Views Volume 22 ; 2021 ; 22 ; https://www.heartviews.org/ >
-    au < releasing ; 2022 ; Heart Views Volume 23 ; 2022 ; 23 ; https://www.heartviews.org/ >
+    au < released ; 2022 ; Heart Views Volume 23 ; 2022 ; 23 ; https://www.heartviews.org/ >
     au < manifest ; 2023 ; Heart Views Volume 24 ; 2023 ; 24 ; https://www.heartviews.org/ >
 
   }
@@ -3430,14 +3430,14 @@
     #move to Brieflands, 2023-01-01
 
     au < released ; 2014 ; Journal of Nursing and Midwifery Sciences Volume 1 ; 2014 ; 1 ; https://www.jnmsjournal.org/ >
-    au < releasing ; 2015 ; Journal of Nursing and Midwifery Sciences Volume 2 ; 2015 ; 2 ; https://www.jnmsjournal.org/ >
+    au < released ; 2015 ; Journal of Nursing and Midwifery Sciences Volume 2 ; 2015 ; 2 ; https://www.jnmsjournal.org/ >
     au < manifest ; 2016 ; Journal of Nursing and Midwifery Sciences Volume 3 ; 2016 ; 3 ; https://www.jnmsjournal.org/ >
-    au < releasing ; 2017 ; Journal of Nursing and Midwifery Sciences Volume 4 ; 2017 ; 4 ; https://www.jnmsjournal.org/ >
-    au < releasing ; 2018 ; Journal of Nursing and Midwifery Sciences Volume 5 ; 2018 ; 5 ; https://www.jnmsjournal.org/ >
-    au < releasing ; 2019 ; Journal of Nursing and Midwifery Sciences Volume 6 ; 2019 ; 6 ; https://www.jnmsjournal.org/ >
+    au < released ; 2017 ; Journal of Nursing and Midwifery Sciences Volume 4 ; 2017 ; 4 ; https://www.jnmsjournal.org/ >
+    au < released ; 2018 ; Journal of Nursing and Midwifery Sciences Volume 5 ; 2018 ; 5 ; https://www.jnmsjournal.org/ >
+    au < released ; 2019 ; Journal of Nursing and Midwifery Sciences Volume 6 ; 2019 ; 6 ; https://www.jnmsjournal.org/ >
     au < manifest ; 2020 ; Journal of Nursing and Midwifery Sciences Volume 7 ; 2020 ; 7 ; https://www.jnmsjournal.org/ >
     au < released ; 2021 ; Journal of Nursing and Midwifery Sciences Volume 8 ; 2021 ; 8 ; https://www.jnmsjournal.org/ >
-    au < releasing ; 2022 ; Journal of Nursing and Midwifery Sciences Volume 9 ; 2022 ; 9 ; https://www.jnmsjournal.org/ >
+    au < released ; 2022 ; Journal of Nursing and Midwifery Sciences Volume 9 ; 2022 ; 9 ; https://www.jnmsjournal.org/ >
       #deactivated
     au < expected ; 2023 ; Journal of Nursing and Midwifery Sciences Volume 10 ; 2023 ; 10 ; https://www.jnmsjournal.org/ >
 
@@ -3720,7 +3720,7 @@
 
     param[journal_issn] = 2949-6594
 
-    au < releasing ; 2022 ; Journal of Preventive, Diagnostic and Treatment Strategies in Medicine Volume 1 ; 2022 ; 1 ; https://www.jpdtsm.com/ >
+    au < released ; 2022 ; Journal of Preventive, Diagnostic and Treatment Strategies in Medicine Volume 1 ; 2022 ; 1 ; https://www.jpdtsm.com/ >
     au < manifest ; 2023 ; Journal of Preventive, Diagnostic and Treatment Strategies in Medicine Volume 2 ; 2023 ; 2 ; https://www.jpdtsm.com/ >
 
   }
@@ -4642,7 +4642,7 @@
       au < released ; 2019 ; Advanced Biomedical Research Volume 8 ; 2019 ; 8 ; https://www.advbiores.net/ >
       au < released ; 2020 ; Advanced Biomedical Research Volume 9 ; 2020 ; 9 ; https://www.advbiores.net/ >
       au < released ; 2021 ; Advanced Biomedical Research Volume 10 ; 2021 ; 10 ; https://www.advbiores.net/ >
-      au < releasing ; 2022 ; Advanced Biomedical Research Volume 11 ; 2022 ; 11 ; https://www.advbiores.net/ >
+      au < released ; 2022 ; Advanced Biomedical Research Volume 11 ; 2022 ; 11 ; https://www.advbiores.net/ >
       au < manifest ; 2023 ; Advanced Biomedical Research Volume 12 ; 2023 ; 12 ; https://www.advbiores.net/ >
 
   }
@@ -5280,7 +5280,7 @@
       au < released ; 2019 ; Delta Journal of Ophthalmology Volume 20 ; 2019 ; 20 ; https://www.djo.eg.net/ >
       au < released ; 2020 ; Delta Journal of Ophthalmology Volume 21 ; 2020 ; 21 ; https://www.djo.eg.net/ >
       au < released ; 2021 ; Delta Journal of Ophthalmology Volume 22 ; 2021 ; 22 ; https://www.djo.eg.net/ >
-      au < releasing ; 2022 ; Delta Journal of Ophthalmology Volume 23 ; 2022 ; 23 ; https://www.djo.eg.net/ >
+      au < released ; 2022 ; Delta Journal of Ophthalmology Volume 23 ; 2022 ; 23 ; https://www.djo.eg.net/ >
       au < manifest ; 2023 ; Delta Journal of Ophthalmology Volume 24 ; 2023 ; 24 ; https://www.djo.eg.net/ >
 
   }
@@ -5533,7 +5533,7 @@
       au < released ; 2019 ; Egyptian Retina Journal Volume 6 ; 2019 ; 6 ; https://www.egyptretinaj.com/ >
       au < released ; 2020 ; Egyptian Retina Journal Volume 7 ; 2020 ; 7 ; https://www.egyptretinaj.com/ >
       au < released ; 2021 ; Egyptian Retina Journal Volume 8 ; 2021 ; 8 ; https://www.egyptretinaj.com/ >
-      au < releasing ; 2022 ; Egyptian Retina Journal Volume 9 ; 2022 ; 9 ; https://www.egyptretinaj.com/ >
+      au < released ; 2022 ; Egyptian Retina Journal Volume 9 ; 2022 ; 9 ; https://www.egyptretinaj.com/ >
       au < expected ; 2023 ; Egyptian Retina Journal Volume 10 ; 2023 ; 10 ; https://www.egyptretinaj.com/ >
 
   }
@@ -7450,7 +7450,7 @@
       au < released ; 2019 ; Journal of Radiation and Cancer Research Volume 10 ; 2019 ; 10 ; https://www.journalrcr.org/ >
       au < released ; 2020 ; Journal of Radiation and Cancer Research Volume 11 ; 2020 ; 11 ; https://www.journalrcr.org/ >
       au < released ; 2021 ; Journal of Radiation and Cancer Research Volume 12 ; 2021 ; 12 ; https://www.journalrcr.org/ >
-      au < releasing ; 2022 ; Journal of Radiation and Cancer Research Volume 13 ; 2022 ; 13 ; https://www.journalrcr.org/ >
+      au < released ; 2022 ; Journal of Radiation and Cancer Research Volume 13 ; 2022 ; 13 ; https://www.journalrcr.org/ >
       au < manifest ; 2023 ; Journal of Radiation and Cancer Research Volume 14 ; 2023 ; 14 ; https://www.journalrcr.org/ >
       }
       {
@@ -8282,7 +8282,7 @@
       au < released ; 2019 ; Saudi Journal for Health Sciences Volume 8 ; 2019 ; 8 ; https://www.saudijhealthsci.org/ >
       au < released ; 2020 ; Saudi Journal for Health Sciences Volume 9 ; 2020 ; 9 ; https://www.saudijhealthsci.org/ >
       au < released ; 2021 ; Saudi Journal for Health Sciences Volume 10 ; 2021 ; 10 ; https://www.saudijhealthsci.org/ >
-      au < releasing ; 2022 ; Saudi Journal for Health Sciences Volume 11 ; 2022 ; 11 ; https://www.saudijhealthsci.org/ >
+      au < released ; 2022 ; Saudi Journal for Health Sciences Volume 11 ; 2022 ; 11 ; https://www.saudijhealthsci.org/ >
       au < manifest ; 2023 ; Saudi Journal for Health Sciences Volume 12 ; 2023 ; 12 ; https://www.saudijhealthsci.org/ >
 
   }
@@ -8466,7 +8466,7 @@
       au < released ; 2019 ; SRM Journal of Research in Dental Sciences Volume 10 ; 2019 ; 10 ; https://www.srmjrds.in/ >
       au < released ; 2020 ; SRM Journal of Research in Dental Sciences Volume 11 ; 2020 ; 11 ; https://www.srmjrds.in/ >
       au < released ; 2021 ; SRM Journal of Research in Dental Sciences Volume 12 ; 2021 ; 12 ; https://www.srmjrds.in/ >
-      au < releasing ; 2022 ; SRM Journal of Research in Dental Sciences Volume 13 ; 2022 ; 13 ; https://www.srmjrds.in/ >
+      au < released ; 2022 ; SRM Journal of Research in Dental Sciences Volume 13 ; 2022 ; 13 ; https://www.srmjrds.in/ >
       au < manifest ; 2023 ; SRM Journal of Research in Dental Sciences Volume 14 ; 2023 ; 14 ; https://www.srmjrds.in/ >
 
   }
@@ -8585,7 +8585,7 @@
       au < released ; 2019 ; The Egyptian Journal of Haematology Volume 44 ; 2019 ; 44 ; https://www.ehj.eg.net/ >
       au < released ; 2020 ; The Egyptian Journal of Haematology Volume 45 ; 2020 ; 45 ; https://www.ehj.eg.net/ >
       au < released ; 2021 ; The Egyptian Journal of Haematology Volume 46 ; 2021 ; 46 ; https://www.ehj.eg.net/ >
-      au < releasing ; 2022 ; The Egyptian Journal of Haematology Volume 47 ; 2022 ; 47 ; https://www.ehj.eg.net/ >
+      au < released ; 2022 ; The Egyptian Journal of Haematology Volume 47 ; 2022 ; 47 ; https://www.ehj.eg.net/ >
       au < expected ; 2023 ; The Egyptian Journal of Haematology Volume 48 ; 2023 ; 48 ; https://www.ehj.eg.net/ >
 
   }
@@ -9660,7 +9660,7 @@
       au < released ; 2019 ; Heart and Mind Volume 3 ; 2019 ; 3 ; https://www.heartmindjournal.org/ >
       au < released ; 2020 ; Heart and Mind Volume 4 ; 2020 ; 4 ; https://www.heartmindjournal.org/ >
       au < released ; 2021 ; Heart and Mind Volume 5 ; 2021 ; 5 ; https://www.heartmindjournal.org/ >
-      au < releasing ; 2022 ; Heart and Mind Volume 6 ; 2022 ; 6 ; https://www.heartmindjournal.org/ >
+      au < released ; 2022 ; Heart and Mind Volume 6 ; 2022 ; 6 ; https://www.heartmindjournal.org/ >
       au < manifest ; 2023 ; Heart and Mind Volume 7 ; 2023 ; 7 ; https://www.heartmindjournal.org/ >
 
   }
@@ -10470,7 +10470,7 @@
       au < released ; 2019 ; Journal of Medical Sciences Volume 39 ; 2019 ; 39 ; https://www.jmedscindmc.com/ >
       au < released ; 2020 ; Journal of Medical Sciences Volume 40 ; 2020 ; 40 ; https://www.jmedscindmc.com/ >
       au < released ; 2021 ; Journal of Medical Sciences Volume 41 ; 2021 ; 41 ; https://www.jmedscindmc.com/ >
-      au < releasing ; 2022 ; Journal of Medical Sciences Volume 42 ; 2022 ; 42 ; https://www.jmedscindmc.com/ >
+      au < released ; 2022 ; Journal of Medical Sciences Volume 42 ; 2022 ; 42 ; https://www.jmedscindmc.com/ >
       au < manifest ; 2023 ; Journal of Medical Sciences Volume 43 ; 2023 ; 43 ; https://www.jmedscindmc.com/ >
 
   }
@@ -11072,7 +11072,7 @@
       au < released ; 2019 ; Saudi Critical Care Journal Volume 3 ; 2019 ; 3 ; https://www.sccj-sa.org/ >
       au < released ; 2020 ; Saudi Critical Care Journal Volume 4 ; 2020 ; 4 ; https://www.sccj-sa.org/ >
       au < released ; 2021 ; Saudi Critical Care Journal Volume 5 ; 2021 ; 5 ; https://www.sccj-sa.org/ >
-      au < releasing ; 2022 ; Saudi Critical Care Journal Volume 6 ; 2022 ; 6 ; https://www.sccj-sa.org/ >
+      au < released ; 2022 ; Saudi Critical Care Journal Volume 6 ; 2022 ; 6 ; https://www.sccj-sa.org/ >
       au < manifest ; 2023 ; Saudi Critical Care Journal Volume 7 ; 2023 ; 7 ; https://www.sccj-sa.org/ >
 
   }
@@ -11240,7 +11240,7 @@
       au < released ; 2019 ; Urological Science Volume 30 ; 2019 ; 30 ; https://www.e-urol-sci.com/ >
       au < released ; 2020 ; Urological Science Volume 31 ; 2020 ; 31 ; https://www.e-urol-sci.com/ >
       au < released ; 2021 ; Urological Science Volume 32 ; 2021 ; 32 ; https://www.e-urol-sci.com/ >
-      au < releasing ; 2022 ; Urological Science Volume 33 ; 2022 ; 33 ; https://www.e-urol-sci.com/ >
+      au < released ; 2022 ; Urological Science Volume 33 ; 2022 ; 33 ; https://www.e-urol-sci.com/ >
       au < manifest ; 2023 ; Urological Science Volume 34 ; 2023 ; 34 ; https://www.e-urol-sci.com/ >
 
   }
@@ -11260,7 +11260,7 @@
       au < released ; 2019 ; World Journal of Colorectal Surgery Volume 8 ; 2019 ; 8 ; https://www.wjcs.us.com/ >
       au < released ; 2020 ; World Journal of Colorectal Surgery Volume 9 ; 2020 ; 9 ; https://www.wjcs.us.com/ >
       au < released ; 2021 ; World Journal of Colorectal Surgery Volume 10 ; 2021 ; 10 ; https://www.wjcs.us.com/ >
-      au < releasing ; 2022 ; World Journal of Colorectal Surgery Volume 11 ; 2022 ; 11 ; https://www.wjcs.us.com/ >
+      au < released ; 2022 ; World Journal of Colorectal Surgery Volume 11 ; 2022 ; 11 ; https://www.wjcs.us.com/ >
       au < expected ; 2023 ; World Journal of Colorectal Surgery Volume 12 ; 2023 ; 12 ; https://www.wjcs.us.com/ >
 
   }
@@ -11494,7 +11494,7 @@
       au < released ; 2019 ; Assam Journal of Internal Medicine Volume 9 ; 2019 ; 9 ; https://www.ajimedicine.com/ >
       au < released ; 2020 ; Assam Journal of Internal Medicine Volume 10 ; 2020 ; 10 ; https://www.ajimedicine.com/ >
       au < released ; 2021 ; Assam Journal of Internal Medicine Volume 11 ; 2021 ; 11 ; https://www.ajimedicine.com/ >
-      au < releasing ; 2022 ; Assam Journal of Internal Medicine Volume 12 ; 2022 ; 12 ; https://www.ajimedicine.com/ >
+      au < released ; 2022 ; Assam Journal of Internal Medicine Volume 12 ; 2022 ; 12 ; https://www.ajimedicine.com/ >
       au < manifest ; 2023 ; Assam Journal of Internal Medicine Volume 13 ; 2023 ; 13 ; https://www.ajimedicine.com/ >
 
   }
@@ -11852,14 +11852,14 @@
       au < released ; 2015 ; Indian Journal of Psychiatric Nursing Volume 9 ; 2015 ; 9 ; https://www.ijpn.in/ >
       au < released ; 2015 ; Indian Journal of Psychiatric Nursing Volume 10 ; 2015 ; 10 ; https://www.ijpn.in/ >
       au < released ; 2016 ; Indian Journal of Psychiatric Nursing Volume 11 ; 2016 ; 11 ; https://www.ijpn.in/ >
-      au < releasing ; 2016 ; Indian Journal of Psychiatric Nursing Volume 12 ; 2016 ; 12 ; https://www.ijpn.in/ >
+      au < released ; 2016 ; Indian Journal of Psychiatric Nursing Volume 12 ; 2016 ; 12 ; https://www.ijpn.in/ >
       au < released ; 2017 ; Indian Journal of Psychiatric Nursing Volume 13 ; 2017 ; 13 ; https://www.ijpn.in/ >
       au < released ; 2017 ; Indian Journal of Psychiatric Nursing Volume 14 ; 2017 ; 14 ; https://www.ijpn.in/ >
       au < released ; 2018 ; Indian Journal of Psychiatric Nursing Volume 15 ; 2018 ; 15 ; https://www.ijpn.in/ >
       au < released ; 2019 ; Indian Journal of Psychiatric Nursing Volume 16 ; 2019 ; 16 ; https://www.ijpn.in/ >
       au < released ; 2020 ; Indian Journal of Psychiatric Nursing Volume 17 ; 2020 ; 17 ; https://www.ijpn.in/ >
       au < released ; 2021 ; Indian Journal of Psychiatric Nursing Volume 18 ; 2021 ; 18 ; https://www.ijpn.in/ >
-      au < releasing ; 2022 ; Indian Journal of Psychiatric Nursing Volume 19 ; 2022 ; 19 ; https://www.ijpn.in/ >
+      au < released ; 2022 ; Indian Journal of Psychiatric Nursing Volume 19 ; 2022 ; 19 ; https://www.ijpn.in/ >
       au < manifest ; 2023 ; Indian Journal of Psychiatric Nursing Volume 20 ; 2023 ; 20 ; https://www.ijpn.in/ >
 
   }
@@ -12038,11 +12038,11 @@
       param[journal_issn] = 2349-7319
       #param[base_url] = https://www.ijpcdr.org/
 
-      au < releasing ; 2018 ; International Journal of Preventive and Clinical Dental Research Volume 5 ; 2018 ; 5 ; https://www.ijpcdr.org/ >
-      au < releasing ; 2019 ; International Journal of Preventive and Clinical Dental Research Volume 6 ; 2019 ; 6 ; https://www.ijpcdr.org/ >
-      au < releasing ; 2020 ; International Journal of Preventive and Clinical Dental Research Volume 7 ; 2020 ; 7 ; https://www.ijpcdr.org/ >
+      au < released ; 2018 ; International Journal of Preventive and Clinical Dental Research Volume 5 ; 2018 ; 5 ; https://www.ijpcdr.org/ >
+      au < released ; 2019 ; International Journal of Preventive and Clinical Dental Research Volume 6 ; 2019 ; 6 ; https://www.ijpcdr.org/ >
+      au < released ; 2020 ; International Journal of Preventive and Clinical Dental Research Volume 7 ; 2020 ; 7 ; https://www.ijpcdr.org/ >
       au < released ; 2021 ; International Journal of Preventive and Clinical Dental Research Volume 8 ; 2021 ; 8 ; https://www.ijpcdr.org/ >
-      au < releasing ; 2022 ; International Journal of Preventive and Clinical Dental Research Volume 9 ; 2022 ; 9 ; https://www.ijpcdr.org/ >
+      au < released ; 2022 ; International Journal of Preventive and Clinical Dental Research Volume 9 ; 2022 ; 9 ; https://www.ijpcdr.org/ >
       au < manifest ; 2023 ; International Journal of Preventive and Clinical Dental Research Volume 10 ; 2023 ; 10 ; https://www.ijpcdr.org/ >
 
   }
@@ -12866,7 +12866,7 @@
       au < manifest ; 2016 ; Journal on Recent Advances in Pain Volume 2 ; 2016 ; 2 ; https://www.jorapain.com/ >
       au < manifest ; 2017 ; Journal on Recent Advances in Pain Volume 3 ; 2017 ; 3 ; https://www.jorapain.com/ >
       au < released ; 2018 ; Journal on Recent Advances in Pain Volume 4 ; 2018 ; 4 ; https://www.jorapain.com/ >
-      au < releasing ; 2019 ; Journal on Recent Advances in Pain Volume 5 ; 2019 ; 5 ; https://www.jorapain.com/ >
+      au < released ; 2019 ; Journal on Recent Advances in Pain Volume 5 ; 2019 ; 5 ; https://www.jorapain.com/ >
       au < manifest ; 2020 ; Journal on Recent Advances in Pain Volume 6 ; 2020 ; 6 ; https://www.jorapain.com/ >
 
   }
@@ -13371,7 +13371,7 @@
       au < released ; 2019 ; The Indian Journal of Occupational Therapy Volume 51 ; 2019 ; 51 ; https://www.ijotonweb.org/ >
       au < released ; 2020 ; The Indian Journal of Occupational Therapy Volume 52 ; 2020 ; 52 ; https://www.ijotonweb.org/ >
       au < released ; 2021 ; The Indian Journal of Occupational Therapy Volume 53 ; 2021 ; 53 ; https://www.ijotonweb.org/ >
-      au < releasing ; 2022 ; The Indian Journal of Occupational Therapy Volume 54 ; 2022 ; 54 ; https://www.ijotonweb.org/ >
+      au < released ; 2022 ; The Indian Journal of Occupational Therapy Volume 54 ; 2022 ; 54 ; https://www.ijotonweb.org/ >
       au < manifest ; 2023 ; The Indian Journal of Occupational Therapy Volume 55 ; 2023 ; 55 ; https://www.ijotonweb.org/ >
 
   }
