@@ -3725,8 +3725,8 @@
   >
 
     provider = Ubiquity Press
-    implicit < status ; year ; volume ; name ; param[year] >
-    plugin = org.lockss.plugin.ojs3.Ojs3Plugin
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
     attr[start_stem] = index.php/
 
   {
@@ -3740,30 +3740,30 @@
       param[base_url] =  https://www.raco.cat/
       param[journal_id] = Digithum
 
-      au < exists ; 1999 ; 1 ; Digithum Volume 1999 ; 1999 >
-      au < exists ; 2000 ; 2 ; Digithum Volume 2000 ; 2000 >
-      au < exists ; 2001 ; 3 ; Digithum Volume 2001 ; 2001 >
-      au < exists ; 2002 ; 4 ; Digithum Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 5 ; Digithum Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 6 ; Digithum Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 7 ; Digithum Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 8 ; Digithum Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 9 ; Digithum Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 10 ; Digithum Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 11 ; Digithum Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 12 ; Digithum Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 13 ; Digithum Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 14 ; Digithum Volume 2012 ; 2012 >
-      au < exists ; 2013 ; 15 ; Digithum Volume 2013 ; 2013 >
-      au < exists ; 2014 ; 16 ; Digithum Volume 2014 ; 2014 >
-      au < exists ; 2015 ; 17 ; Digithum Volume 2015 ; 2015 >
-      au < exists ; 2016 ; 18 ; Digithum Volume 2016 ; 2016 >
-      au < exists ; 2017 ; 19-20 ; Digithum Volume 2017 ; 2017 >
-      au < exists ; 2018 ; 21-22 ; Digithum Volume 2018 ; 2018 >
-      au < exists ; 2019 ; 23-24 ; Digithum Volume 2019 ; 2019 >
-      au < exists ; 2020 ; 25-26 ; Digithum Volume 2020 ; 2020 >
-      au < exists ; 2021 ; 27-28 ; Digithum Volume 2021 ; 2021 >
-      au < exists ; 2022 ; 29 ; Digithum Volume 2022 ; 2022 >
+      au < exists ; exists ; 1999 ; 1 ; Digithum Volume 1999 ; 1999 ; >
+      au < exists ; exists ; 2000 ; 2 ; Digithum Volume 2000 ; 2000 ; >
+      au < exists ; exists ; 2001 ; 3 ; Digithum Volume 2001 ; 2001 ; >
+      au < exists ; exists ; 2002 ; 4 ; Digithum Volume 2002 ; 2002 ; >
+      au < exists ; exists ; 2003 ; 5 ; Digithum Volume 2003 ; 2003 ; >
+      au < exists ; exists ; 2004 ; 6 ; Digithum Volume 2004 ; 2004 ; >
+      au < exists ; exists ; 2005 ; 7 ; Digithum Volume 2005 ; 2005 ; >
+      au < exists ; exists ; 2006 ; 8 ; Digithum Volume 2006 ; 2006 ; >
+      au < exists ; exists ; 2007 ; 9 ; Digithum Volume 2007 ; 2007 ; >
+      au < exists ; exists ; 2008 ; 10 ; Digithum Volume 2008 ; 2008 ; >
+      au < exists ; exists ; 2009 ; 11 ; Digithum Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 12 ; Digithum Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2011 ; 13 ; Digithum Volume 2011 ; 2011 ; >
+      au < exists ; exists ; 2012 ; 14 ; Digithum Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2013 ; 15 ; Digithum Volume 2013 ; 2013 ; >
+      au < exists ; exists ; 2014 ; 16 ; Digithum Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2015 ; 17 ; Digithum Volume 2015 ; 2015 ; >
+      au < exists ; exists ; 2016 ; 18 ; Digithum Volume 2016 ; 2016 ; >
+      au < exists ; exists ; 2017 ; 19-20 ; Digithum Volume 2017 ; 2017 ; >
+      au < exists ; exists ; 2018 ; 21-22 ; Digithum Volume 2018 ; 2018 ; >
+      au < exists ; exists ; 2019 ; 23-24 ; Digithum Volume 2019 ; 2019 ; >
+      au < exists ; exists ; 2020 ; 25-26 ; Digithum Volume 2020 ; 2020 ; >
+      au < exists ; exists ; 2021 ; 27-28 ; Digithum Volume 2021 ; 2021 ; >
+      au < exists ; exists ; 2022 ; 29 ; Digithum Volume 2022 ; 2022 ; >
 
   }
 
