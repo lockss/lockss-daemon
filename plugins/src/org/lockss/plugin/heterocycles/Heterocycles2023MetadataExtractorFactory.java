@@ -232,7 +232,7 @@ public class Heterocycles2023MetadataExtractorFactory
 
           String nthDivSelector = "div#mainContainer > div#mainContent > div.contentBox:nth-child(" + Integer.toString(i) + ")";
           String doiSelector = "div#mainContainer > div#mainContent > div.contentBox:nth-child(" + Integer.toString(i) + ") > div:nth-child(4)";
-          String articleSelector = "div#mainContainer > div#mainContent > div.contentBox:nth-child(" + Integer.toString(i) + ") > h5:nth-child(5) > b:nth-child(1) > span:nth-child(1)";
+          String articleSelector = "div#mainContainer > div#mainContent > div.contentBox:nth-child(" + Integer.toString(i) + ")";
           String pdfSelector = "div#mainContainer > div#mainContent > div.contentBox:nth-child(" + Integer.toString(i) + ") > a:nth-child(11)";
           String pdfAlterSelector = "div#mainContainer > div#mainContent > div.contentBox:nth-child(" + Integer.toString(i) + ") > a:nth-child(9)";
           String pdfAlterSelector2 = "div#mainContainer > div#mainContent > div.contentBox:nth-child(" + Integer.toString(i) + ") > a:nth-child(7)";
@@ -267,8 +267,8 @@ public class Heterocycles2023MetadataExtractorFactory
 
           nthDivHolderElement = doc.select(nthDivSelector);
           doiElement = doc.select(doiSelector);
-          articleElement = doc.select(articleSelector);
 
+          articleElement = doc.select(articleSelector);
 
           if (nthDivHolderElement == null) {
             log.debug3("=========Processing DIV: Article div#" + Integer.toString(i) + ", for url = " + url + ", nthDivHolder = " + nthDivHolderElement.text());
@@ -290,14 +290,12 @@ public class Heterocycles2023MetadataExtractorFactory
 
               if (articleElement != null) {
 
-                articleTitle = articleElement.text().trim().toLowerCase();
+                articleTitle = articleElement.text().replace("<span>", "").replace("</span>", "").trim().toLowerCase();
                 log.debug3("Raw article text: = " + articleTitle + ", url = " + url + ", div#" + Integer.toString(i));
                 if (articleTitle != null && articleTitle.length() > 0) {
                   am.put(MetadataField.FIELD_ARTICLE_TITLE, articleTitle.trim());
                 }
               }
-
-
 
               Matcher mat = ISSUE_PATTERN.matcher(cu.getUrl());
               if (mat.find()) {
