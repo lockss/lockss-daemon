@@ -185,7 +185,7 @@
       {
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
 
-      au < ready ; 2022 ; Ecological Restoration Volume 40 ; 40 ; https://er.uwpress.org/ >
+      au < releasing ; 2022 ; Ecological Restoration Volume 40 ; 40 ; https://er.uwpress.org/ >
       #No 2023 content as of 4/19/2023
       au < manifest ; 2023 ; Ecological Restoration Volume 41 ; 41 ; https://er.uwpress.org/ >
       }
@@ -292,7 +292,7 @@
       param[base_url] = https://le.uwpress.org/
 
       au < released ; 2021 ; Land Economics Volume 97 ; 97 >
-      au < ready ; 2022 ; Land Economics Volume 98 ; 98 >
+      au < releasing ; 2022 ; Land Economics Volume 98 ; 98 >
       au < manifest ; 2023 ; Land Economics Volume 99 ; 99 >
 
       }
@@ -359,7 +359,7 @@
       param[base_url] = https://lj.uwpress.org/
 
       au < released ; 2021 ; Landscape Journal: design, planning, and management of the land Volume 40 ; 40 >
-      au < ready ; 2022 ; Landscape Journal: design, planning, and management of the land Volume 41 ; 41 >
+      au < releasing ; 2022 ; Landscape Journal: design, planning, and management of the land Volume 41 ; 41 >
       #No 2023 content as of 4/19/2023
       au < manifest ; 2023 ; Landscape Journal: design, planning, and management of the land Volume 42 ; 42 >
       }
@@ -442,7 +442,7 @@
       param[base_url] = https://mon.uwpress.org/
 
       au < released ; 2021 ; Monatshefte Volume 113 ; 113 >
-      au < ready ; 2022 ; Monatshefte Volume 114 ; 114 >
+      au < releasing ; 2022 ; Monatshefte Volume 114 ; 114 >
       au < manifest ; 2023 ; Monatshefte Volume 115 ; 115 >
 
       }

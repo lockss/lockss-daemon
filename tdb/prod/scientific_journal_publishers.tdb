@@ -20,7 +20,7 @@
     param[journal_id] = sbp 
     implicit < status ; year ; param[year] ; name ; volume >
 
-    au < ready ; 2022 ; 2022 ; Social Behavior and Personality Volume 50 ; 50 >
+    au < releasing ; 2022 ; 2022 ; Social Behavior and Personality Volume 50 ; 50 >
     au < manifest ; 2023 ; 2023 ; Social Behavior and Personality Volume 51 ; 51 >
 
     }
