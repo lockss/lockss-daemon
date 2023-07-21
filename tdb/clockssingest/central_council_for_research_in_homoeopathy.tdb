@@ -25,8 +25,8 @@
     param[journal_abbr] = journal
 
     au < finished ; finished ; 2021 ; Indian Journal of Research in Homoeopathy Volume 15 ; 15 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2022 ; Indian Journal of Research in Homoeopathy Volume 16 ; 16 ; >
-    au < testing ; exists ; 2023 ; Indian Journal of Research in Homoeopathy Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2022 ; Indian Journal of Research in Homoeopathy Volume 16 ; 16 ; >
+    au < notReady ; exists ; 2023 ; Indian Journal of Research in Homoeopathy Volume 17 ; 17 ; > #moved to https://www.ijrh.org/journal/
 
   }
 

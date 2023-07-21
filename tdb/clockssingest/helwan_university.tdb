@@ -25,7 +25,7 @@
     param[journal_abbr] = journal
 
     au < deepCrawl ; exists ; 2022 ; Journal of Art, Design and Music Volume 1 ; 1 ; >
-    au < testing ; exists ; 2023 ; Journal of Art, Design and Music Volume 2 ; 2 ; >
+    au < ready ; exists ; 2023 ; Journal of Art, Design and Music Volume 2 ; 2 ; >
 
   }
 

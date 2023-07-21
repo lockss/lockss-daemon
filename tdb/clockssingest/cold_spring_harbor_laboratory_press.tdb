@@ -33,7 +33,7 @@
       au < finished ; finished ; 2021 ; Cold Spring Harbor Molecular Case Studies Volume 7 ; 7 ; http://molecularcasestudies.cshlp.org/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2022 ; Cold Spring Harbor Molecular Case Studies Volume 8 [superseded] ; 8 ; http://molecularcasestudies.cshlp.org/ ; >
       au < frozen ; exists ; 2022 ; Cold Spring Harbor Molecular Case Studies Volume 8 ; 8 ; https://molecularcasestudies.cshlp.org/ ; >
-      au < testing ; exists ; 2023 ; Cold Spring Harbor Molecular Case Studies Volume 9 ; 9 ; https://molecularcasestudies.cshlp.org/ ; >
+      au < ready ; exists ; 2023 ; Cold Spring Harbor Molecular Case Studies Volume 9 ; 9 ; https://molecularcasestudies.cshlp.org/ ; >
 
     }
 
@@ -136,7 +136,7 @@
       au < deepCrawl ; exists ; 2021 ; Cold Spring Harbor Protocols Volume 2021 ; 2021 ; http://cshprotocols.cshlp.org/ ; >
       au < superseded ; exists ; 2022 ; Cold Spring Harbor Protocols Volume 2022 [superseded] ; 2022 ; http://cshprotocols.cshlp.org/ ; >
       au < frozen ; exists ; 2022 ; Cold Spring Harbor Protocols Volume 2022 ; 2022 ; https://cshprotocols.cshlp.org/ ; >
-      au < testing ; exists ; 2023 ; Cold Spring Harbor Protocols Volume 2023 ; 2023 ; https://cshprotocols.cshlp.org/ ; >
+      au < ready ; exists ; 2023 ; Cold Spring Harbor Protocols Volume 2023 ; 2023 ; https://cshprotocols.cshlp.org/ ; >
 
     }
     
@@ -299,7 +299,7 @@
       au < deepCrawl ; exists ; 2021 ; Genes & Development Volume 35 ; 35 ; http://genesdev.cshlp.org/ ; >
       au < superseded ; exists ; 2022 ; Genes & Development Volume 36 [superseded] ; 36 ; http://genesdev.cshlp.org/ ; >
       au < frozen ; exists ; 2022 ; Genes & Development Volume 36 ; 36 ; https://genesdev.cshlp.org/ ; >
-      au < testing ; exists ; 2023 ; Genes & Development Volume 37 ; 37 ; https://genesdev.cshlp.org/ ; >
+      au < ready ; exists ; 2023 ; Genes & Development Volume 37 ; 37 ; https://genesdev.cshlp.org/ ; >
 
     }
 
@@ -449,7 +449,7 @@
       au < finished ; crawling ; 2020 ; RNA Volume 26 ; 26 ; https://rnajournal.cshlp.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; RNA Volume 27 ; 27 ; https://rnajournal.cshlp.org/ ; >
       au < deepCrawl ; exists ; 2022 ; RNA Volume 28 ; 28 ; https://rnajournal.cshlp.org/ ; >
-      au < testing ; exists ; 2023 ; RNA Volume 29 ; 29 ; https://rnajournal.cshlp.org/ ; >
+      au < ready ; exists ; 2023 ; RNA Volume 29 ; 29 ; https://rnajournal.cshlp.org/ ; >
 
     }
 
