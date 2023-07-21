@@ -30,17 +30,17 @@
       param[base_url] = https://www.authorship.ugent.be/
       #param[journal_id] = authorship
 
-      au < exists ; exists ; 2011 ; 2011 ; 2011 ; Authorship Volume 2011 ; >
-      au < exists ; exists ; 2012 ; 2012 ; 2012 ; Authorship Volume 2012 ; >
-      au < exists ; exists ; 2013 ; 2013 ; 2013 ; Authorship Volume 2013 ; >
-      au < exists ; exists ; 2014 ; 2014 ; 2014 ; Authorship Volume 2014 ; >
-      au < exists ; exists ; 2015 ; 2015 ; 2015 ; Authorship Volume 2015 ; >
-      au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Authorship Volume 2016 ; >
-      au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Authorship Volume 2017 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Authorship Volume 2018 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; 2019 ; Authorship Volume 2019 ; >
+      au < ready ; exists ; 2011 ; 2011 ; 2011 ; Authorship Volume 2011 ; >
+      au < ready ; exists ; 2012 ; 2012 ; 2012 ; Authorship Volume 2012 ; >
+      au < ready ; exists ; 2013 ; 2013 ; 2013 ; Authorship Volume 2013 ; >
+      au < ready ; exists ; 2014 ; 2014 ; 2014 ; Authorship Volume 2014 ; >
+      au < ready ; exists ; 2015 ; 2015 ; 2015 ; Authorship Volume 2015 ; >
+      au < ready ; exists ; 2016 ; 2016 ; 2016 ; Authorship Volume 2016 ; >
+      au < ready ; exists ; 2017 ; 2017 ; 2017 ; Authorship Volume 2017 ; >
+      au < ready ; exists ; 2018 ; 2018 ; 2018 ; Authorship Volume 2018 ; >
+      au < ready ; exists ; 2019 ; 2019 ; 2019 ; Authorship Volume 2019 ; >
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Authorship Volume 2020 ; >
-      au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Authorship Volume 2021 ; >
+      au < ready ; exists ; 2021 ; 2021 ; 2021 ; Authorship Volume 2021 ; >
       au < expected ; exists ; 2022 ; 2022 ; 2022 ; Authorship Volume 2022 ; >
       au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Authorship Volume 2023 ; >
 
@@ -84,17 +84,17 @@
       au < exists ; exists ; 2007 ; 2007 ; 2007 ; Documenta Volume 2007 ; >
       au < exists ; exists ; 2008 ; 2008 ; 2008 ; Documenta Volume 2008 ; >
       au < exists ; exists ; 2009 ; 2009 ; 2009 ; Documenta Volume 2009 ; >
-      au < exists ; exists ; 2010 ; 2010 ; 2010 ; Documenta Volume 2010 ; >
-      au < exists ; exists ; 2011 ; 2011 ; 2011 ; Documenta Volume 2011 ; >
-      au < exists ; exists ; 2012 ; 2012 ; 2012 ; Documenta Volume 2012 ; >
-      au < exists ; exists ; 2013 ; 2013 ; 2013 ; Documenta Volume 2013 ; >
-      au < exists ; exists ; 2014 ; 2014 ; 2014 ; Documenta Volume 2014 ; >
-      au < exists ; exists ; 2015 ; 2015 ; 2015 ; Documenta Volume 2015 ; >
-      au < exists ; exists ; 2016 ; 2016 ; 2016 ; Documenta Volume 2016 ; >
+      au < ready ; exists ; 2010 ; 2010 ; 2010 ; Documenta Volume 2010 ; >
+      au < ready ; exists ; 2011 ; 2011 ; 2011 ; Documenta Volume 2011 ; >
+      au < ready ; exists ; 2012 ; 2012 ; 2012 ; Documenta Volume 2012 ; >
+      au < ready ; exists ; 2013 ; 2013 ; 2013 ; Documenta Volume 2013 ; >
+      au < ready ; exists ; 2014 ; 2014 ; 2014 ; Documenta Volume 2014 ; >
+      au < ready ; exists ; 2015 ; 2015 ; 2015 ; Documenta Volume 2015 ; >
+      au < ready ; exists ; 2016 ; 2016 ; 2016 ; Documenta Volume 2016 ; >
       au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Documenta Volume 2017 ; >
-      au < exists ; exists ; 2018 ; 2018 ; 2018 ; Documenta Volume 2018 ; >
-      au < exists ; exists ; 2019 ; 2019 ; 2019 ; Documenta Volume 2019 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Documenta Volume 2020 ; >
+      au < ready ; exists ; 2018 ; 2018 ; 2018 ; Documenta Volume 2018 ; >
+      au < ready ; exists ; 2019 ; 2019 ; 2019 ; Documenta Volume 2019 ; >
+      au < ready ; exists ; 2020 ; 2020 ; 2020 ; Documenta Volume 2020 ; >
 
   }
 
@@ -110,9 +110,9 @@
       param[base_url] = https://www.digest.ugent.be/
       #param[journal_id] = digest
 
-      au < manifest ; exists ; 2020 ; 2020 ; 2020 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2020 ; >
+      au < ready ; exists ; 2020 ; 2020 ; 2020 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2020 ; >
       au < frozen ; exists ; 2021 ; 2021 ; 2021 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2021 ; >
-      au < manifest ; exists ; 2022 ; 2022 ; 2022 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2022 ; >
+      au < ready ; exists ; 2022 ; 2022 ; 2022 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2022 ; >
       au < manifest ; exists ; 2023 ; 2023 ; 2023 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2023 ; >
 
   }
@@ -148,12 +148,12 @@
       param[base_url] = https://www.philosophica.ugent.be/
       #param[journal_id] = philosophica
 
-      au < exists ; exists ; 2010 ; 2010 ; 83 ; Philosophica Volume 83 ; >
-      au < manifest ; exists ; 2012 ; 2012 ; 84-87 ; Philosophica Volume 84-87 ; >
-      au < manifest ; exists ; 2013 ; 2013 ; 88 ; Philosophica Volume 88 ; >
-      au < manifest ; exists ; 2014 ; 2014 ; 89 ; Philosophica Volume 89 ; >
-      au < manifest ; exists ; 2015 ; 2015 ; 90 ; Philosophica Volume 90 ; >
-      au < manifest ; exists ; 2017 ; 2017 ; 91-92 ; Philosophica Volume 91-92 ; >
+      au < ready ; exists ; 2010 ; 2010 ; 83 ; Philosophica Volume 83 ; >
+      au < ready ; exists ; 2012 ; 2012 ; 84-87 ; Philosophica Volume 84-87 ; >
+      au < ready ; exists ; 2013 ; 2013 ; 88 ; Philosophica Volume 88 ; >
+      au < ready ; exists ; 2014 ; 2014 ; 89 ; Philosophica Volume 89 ; >
+      au < ready ; exists ; 2015 ; 2015 ; 90 ; Philosophica Volume 90 ; >
+      au < ready ; exists ; 2017 ; 2017 ; 91-92 ; Philosophica Volume 91-92 ; >
 
   }
 
