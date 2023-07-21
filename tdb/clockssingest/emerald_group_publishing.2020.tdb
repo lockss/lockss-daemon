@@ -13674,15 +13674,15 @@
 
     param[journal_issn] = 2056-3515
 
-    au < frozen ; exists ; 2015 ; Annals in Social Responsibility Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2016 ; Annals in Social Responsibility Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2017 ; Annals in Social Responsibility Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2018 ; Annals in Social Responsibility Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2019 ; Annals in Social Responsibility Volume 6 ; 6 ; >
-    au < frozen ; exists ; 2020 ; Annals in Social Responsibility Volume 7 ; 7 ; >
-    au < frozen ; exists ; 2021 ; Annals in Social Responsibility Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2022 ; Annals in Social Responsibility Volume 9 ; 9 ; >
-    au < expected ; exists ; 2023 ; Annals in Social Responsibility Volume 10 ; 10 ; >
+    au < exists ; exists ; 2015 ; Annals in Social Responsibility Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2016 ; Annals in Social Responsibility Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2017 ; Annals in Social Responsibility Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2018 ; Annals in Social Responsibility Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2019 ; Annals in Social Responsibility Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2020 ; Annals in Social Responsibility Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2021 ; Annals in Social Responsibility Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2022 ; Annals in Social Responsibility Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2023 ; Annals in Social Responsibility Volume 9 ; 9 ; >
 
   }
 
@@ -14008,30 +14008,29 @@
     param[journal_issn] = 1464-6668
 
     au < finished ; manifest ; 1999 ; International Journal of Sports Marketing and Sponsorship Volume 1 ; 1 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2000 ; International Journal of Sports Marketing and Sponsorship Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2001 ; International Journal of Sports Marketing and Sponsorship Volume 3 ; 3 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2002 ; International Journal of Sports Marketing and Sponsorship Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2003 ; International Journal of Sports Marketing and Sponsorship Volume 5 ; 5 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2004 ; International Journal of Sports Marketing and Sponsorship Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2005 ; International Journal of Sports Marketing and Sponsorship Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2006 ; International Journal of Sports Marketing and Sponsorship Volume 8 ; 8 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2007 ; International Journal of Sports Marketing and Sponsorship Volume 9 ; 9 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2008 ; International Journal of Sports Marketing and Sponsorship Volume 10 ; 10 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2009 ; International Journal of Sports Marketing and Sponsorship Volume 11 ; 11 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2010 ; International Journal of Sports Marketing and Sponsorship Volume 12 ; 12 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2011 ; International Journal of Sports Marketing and Sponsorship Volume 13 ; 13 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2012 ; International Journal of Sports Marketing and Sponsorship Volume 14 ; 14 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2013 ; International Journal of Sports Marketing and Sponsorship Volume 15 ; 15 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2014 ; International Journal of Sports Marketing and Sponsorship Volume 16 ; 16 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2015 ; International Journal of Sports Marketing and Sponsorship Volume 17 ; 17 ; >
-    au < frozen ; exists ; 2016 ; International Journal of Sports Marketing and Sponsorship Volume 18 ; 18 ; >
-    au < frozen ; exists ; 2017 ; International Journal of Sports Marketing and Sponsorship Volume 19 ; 19 ; >
-    au < finished ; manifest ; 2018 ; International Journal of Sports Marketing and Sponsorship Volume 20 ; 20 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; International Journal of Sports Marketing and Sponsorship Volume 21 ; 21 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2020 ; International Journal of Sports Marketing and Sponsorship Volume 22 ; 22 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2021 ; International Journal of Sports Marketing and Sponsorship Volume 23 ; 23 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2022 ; International Journal of Sports Marketing and Sponsorship Volume 24 ; 24 ; reingest5.clockss.org:8082 >
-    au < expected ; exists ; 2023 ; International Journal of Sports Marketing and Sponsorship Volume 25 ; 25 ; >
+    au < finished ; manifest ; 2000-2001 ; International Journal of Sports Marketing and Sponsorship Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2001-2002 ; International Journal of Sports Marketing and Sponsorship Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2002-2003 ; International Journal of Sports Marketing and Sponsorship Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2003-2004 ; International Journal of Sports Marketing and Sponsorship Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2004-2005 ; International Journal of Sports Marketing and Sponsorship Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2005-2006 ; International Journal of Sports Marketing and Sponsorship Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2006-2007 ; International Journal of Sports Marketing and Sponsorship Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2007-2008 ; International Journal of Sports Marketing and Sponsorship Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2008-2009 ; International Journal of Sports Marketing and Sponsorship Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2009-2010 ; International Journal of Sports Marketing and Sponsorship Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2010-2011 ; International Journal of Sports Marketing and Sponsorship Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2011-2012 ; International Journal of Sports Marketing and Sponsorship Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2012-2013 ; International Journal of Sports Marketing and Sponsorship Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2013-2014 ; International Journal of Sports Marketing and Sponsorship Volume 15 ; 15 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2014-2015 ; International Journal of Sports Marketing and Sponsorship Volume 16 ; 16 ; reingest3.clockss.org:8083 >
+    au < frozen ; exists ; 2016 ; International Journal of Sports Marketing and Sponsorship Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2017 ; International Journal of Sports Marketing and Sponsorship Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2018 ; International Journal of Sports Marketing and Sponsorship Volume 19 ; 19 ; >
+    au < finished ; manifest ; 2019 ; International Journal of Sports Marketing and Sponsorship Volume 20 ; 20 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; International Journal of Sports Marketing and Sponsorship Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2021 ; International Journal of Sports Marketing and Sponsorship Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2022 ; International Journal of Sports Marketing and Sponsorship Volume 23 ; 23 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2023 ; International Journal of Sports Marketing and Sponsorship Volume 24 ; 24 ; reingest5.clockss.org:8082 >
 
   }
 

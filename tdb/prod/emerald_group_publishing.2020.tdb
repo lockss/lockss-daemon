@@ -13699,15 +13699,15 @@
 
     param[journal_issn] = 2056-3515
 
-    au < released ; 2015 ; Annals in Social Responsibility Volume 2 ; 2 >
-    au < released ; 2016 ; Annals in Social Responsibility Volume 3 ; 3 >
-    au < released ; 2017 ; Annals in Social Responsibility Volume 4 ; 4 >
-    au < released ; 2018 ; Annals in Social Responsibility Volume 5 ; 5 >
-    au < released ; 2019 ; Annals in Social Responsibility Volume 6 ; 6 >
-    au < released ; 2020 ; Annals in Social Responsibility Volume 7 ; 7 >
-    au < released ; 2021 ; Annals in Social Responsibility Volume 8 ; 8 >
-    au < manifest ; 2022 ; Annals in Social Responsibility Volume 9 ; 9 >
-    au < expected ; 2023 ; Annals in Social Responsibility Volume 10 ; 10 >
+    au < exists ; 2015 ; Annals in Social Responsibility Volume 1 ; 1 >
+    au < released ; 2016 ; Annals in Social Responsibility Volume 2 ; 2 >
+    au < released ; 2017 ; Annals in Social Responsibility Volume 3 ; 3 >
+    au < released ; 2018 ; Annals in Social Responsibility Volume 4 ; 4 >
+    au < released ; 2019 ; Annals in Social Responsibility Volume 5 ; 5 >
+    au < released ; 2020 ; Annals in Social Responsibility Volume 6 ; 6 >
+    au < released ; 2021 ; Annals in Social Responsibility Volume 7 ; 7 >
+    au < released ; 2022 ; Annals in Social Responsibility Volume 8 ; 8 >
+    au < manifest ; 2023 ; Annals in Social Responsibility Volume 9 ; 9 >
 
   }
 
@@ -14033,30 +14033,29 @@
     param[journal_issn] = 1464-6668
 
     au < manifest ; 1999 ; International Journal of Sports Marketing and Sponsorship Volume 1 ; 1 >
-    au < released ; 2000 ; International Journal of Sports Marketing and Sponsorship Volume 2 ; 2 >
-    au < released ; 2001 ; International Journal of Sports Marketing and Sponsorship Volume 3 ; 3 >
-    au < released ; 2002 ; International Journal of Sports Marketing and Sponsorship Volume 4 ; 4 >
-    au < released ; 2003 ; International Journal of Sports Marketing and Sponsorship Volume 5 ; 5 >
-    au < released ; 2004 ; International Journal of Sports Marketing and Sponsorship Volume 6 ; 6 >
-    au < released ; 2005 ; International Journal of Sports Marketing and Sponsorship Volume 7 ; 7 >
-    au < released ; 2006 ; International Journal of Sports Marketing and Sponsorship Volume 8 ; 8 >
-    au < released ; 2007 ; International Journal of Sports Marketing and Sponsorship Volume 9 ; 9 >
-    au < released ; 2008 ; International Journal of Sports Marketing and Sponsorship Volume 10 ; 10 >
-    au < released ; 2009 ; International Journal of Sports Marketing and Sponsorship Volume 11 ; 11 >
-    au < released ; 2010 ; International Journal of Sports Marketing and Sponsorship Volume 12 ; 12 >
-    au < released ; 2011 ; International Journal of Sports Marketing and Sponsorship Volume 13 ; 13 >
-    au < released ; 2012 ; International Journal of Sports Marketing and Sponsorship Volume 14 ; 14 >
-    au < released ; 2013 ; International Journal of Sports Marketing and Sponsorship Volume 15 ; 15 >
-    au < released ; 2014 ; International Journal of Sports Marketing and Sponsorship Volume 16 ; 16 >
-    au < released ; 2015 ; International Journal of Sports Marketing and Sponsorship Volume 17 ; 17 >
-    au < released ; 2016 ; International Journal of Sports Marketing and Sponsorship Volume 18 ; 18 >
-    au < released ; 2017 ; International Journal of Sports Marketing and Sponsorship Volume 19 ; 19 >
-    au < released ; 2018 ; International Journal of Sports Marketing and Sponsorship Volume 20 ; 20 >
-    au < released ; 2019 ; International Journal of Sports Marketing and Sponsorship Volume 21 ; 21 >
-    au < released ; 2020 ; International Journal of Sports Marketing and Sponsorship Volume 22 ; 22 >
-    au < released ; 2021 ; International Journal of Sports Marketing and Sponsorship Volume 23 ; 23 >
-    au < released ; 2022 ; International Journal of Sports Marketing and Sponsorship Volume 24 ; 24 >
-    au < expected ; 2023 ; International Journal of Sports Marketing and Sponsorship Volume 25 ; 25 >
+    au < released ; 2000-2001 ; International Journal of Sports Marketing and Sponsorship Volume 2 ; 2 >
+    au < released ; 2001-2002 ; International Journal of Sports Marketing and Sponsorship Volume 3 ; 3 >
+    au < released ; 2002-2003 ; International Journal of Sports Marketing and Sponsorship Volume 4 ; 4 >
+    au < released ; 2003-2004 ; International Journal of Sports Marketing and Sponsorship Volume 5 ; 5 >
+    au < released ; 2004-2005 ; International Journal of Sports Marketing and Sponsorship Volume 6 ; 6 >
+    au < released ; 2005-2006 ; International Journal of Sports Marketing and Sponsorship Volume 7 ; 7 >
+    au < released ; 2006-2007 ; International Journal of Sports Marketing and Sponsorship Volume 8 ; 8 >
+    au < released ; 2007-2008 ; International Journal of Sports Marketing and Sponsorship Volume 9 ; 9 >
+    au < released ; 2008-2009 ; International Journal of Sports Marketing and Sponsorship Volume 10 ; 10 >
+    au < released ; 2009-2010 ; International Journal of Sports Marketing and Sponsorship Volume 11 ; 11 >
+    au < released ; 2010-2011 ; International Journal of Sports Marketing and Sponsorship Volume 12 ; 12 >
+    au < released ; 2011-2012 ; International Journal of Sports Marketing and Sponsorship Volume 13 ; 13 >
+    au < released ; 2012-2013 ; International Journal of Sports Marketing and Sponsorship Volume 14 ; 14 >
+    au < released ; 2013-2014 ; International Journal of Sports Marketing and Sponsorship Volume 15 ; 15 >
+    au < released ; 2014-2015 ; International Journal of Sports Marketing and Sponsorship Volume 16 ; 16 >
+    au < released ; 2016 ; International Journal of Sports Marketing and Sponsorship Volume 17 ; 17 >
+    au < released ; 2017 ; International Journal of Sports Marketing and Sponsorship Volume 18 ; 18 >
+    au < released ; 2018 ; International Journal of Sports Marketing and Sponsorship Volume 19 ; 19 >
+    au < released ; 2019 ; International Journal of Sports Marketing and Sponsorship Volume 20 ; 20 >
+    au < released ; 2020 ; International Journal of Sports Marketing and Sponsorship Volume 21 ; 21 >
+    au < released ; 2021 ; International Journal of Sports Marketing and Sponsorship Volume 22 ; 22 >
+    au < released ; 2022 ; International Journal of Sports Marketing and Sponsorship Volume 23 ; 23 >
+    au < released ; 2023 ; International Journal of Sports Marketing and Sponsorship Volume 24 ; 24 >
 
   }
 
