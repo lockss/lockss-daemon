@@ -25,8 +25,8 @@
     param[base_url] = https://majms.alkafeel.edu.iq/
     param[journal_abbr] = journal
 
-    au < manifest ; exists ; 2022 ; Ma'aen Journal for Medical Sciences (MAJMS) Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2023 ; Ma'aen Journal for Medical Sciences (MAJMS) Volume 2 ; 2 ; >
+    au < testing ; exists ; 2022 ; Ma'aen Journal for Medical Sciences (MAJMS) Volume 1 ; 1 ; >
+    au < testing ; exists ; 2023 ; Ma'aen Journal for Medical Sciences (MAJMS) Volume 2 ; 2 ; >
 
   }
 
@@ -41,8 +41,8 @@
     param[base_url] = https://bjeps.alkafeel.edu.iq/
     param[journal_abbr] = journal
 
-    au < manifest ; exists ; 2022 ; Al-Bahir Journal for Engineering and Pure Sciences Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2023 ; Al-Bahir Journal for Engineering and Pure Sciences Volume 2 ; 2 ; >
+    au < testing ; exists ; 2022 ; Al-Bahir Journal for Engineering and Pure Sciences Volume 1 ; 1 ; >
+    au < testing ; exists ; 2023 ; Al-Bahir Journal for Engineering and Pure Sciences Volume 2 ; 2 ; >
 
   }
 
