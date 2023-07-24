@@ -6,8 +6,7 @@
     info[back] = 2000 ; 
     info[min_year] = 1948 ; 
     info[tester] = 5 ;
-    info[poller] = 2 ;
-    info[platform] = SC
+    info[platform] = Silverchair
   >
   
   plugin = org.lockss.plugin.silverchair.aap.ClockssAAPSilverchairPlugin

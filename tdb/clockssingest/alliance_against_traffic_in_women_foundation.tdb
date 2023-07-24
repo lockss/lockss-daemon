@@ -7,7 +7,7 @@
     info[back] = 2012 ;
     info[min_year] = 2012 ;
     info[tester] = 8 ;
-    info[poller] = 8
+    info[platform] = OJS3
   >
   
      implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >

@@ -6,7 +6,7 @@
     info[back] = 2006 ;
     info[min_year] = 2006 ;
     info[tester] = 8 ;
-    info[poller] = 8
+    info[platform] = OJS3
   >
 
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin

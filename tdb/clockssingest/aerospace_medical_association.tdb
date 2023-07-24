@@ -6,7 +6,7 @@
     info[back] = 2003 ;
     info[min_year] = 2003 ;
     info[tester] = 5 ;
-    info[poller] = 6
+    info[platform] = Ingenta
   >
 
   plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
