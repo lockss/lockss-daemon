@@ -29,7 +29,7 @@
     {
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/pages-released/
 
-    au < manifest ; exists ; 2023 ; Past Global Changes Source Content 2023 ; 2023 >
+    au < ready ; exists ; 2023 ; Past Global Changes Source Content 2023 ; 2023 >
     }
   }
 
