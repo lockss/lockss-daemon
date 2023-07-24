@@ -20,15 +20,15 @@
       param[base_url] = https://jat.afreximbank.com/
       param[journal_abbr] = journal
 
-      au < ready ; exists ; 2014 ; The Journal of African Trade Volume 1 ; 1 ; >
-      au < ready ; exists ; 2015 ; The Journal of African Trade Volume 2 ; 2 ; >
-      au < ready ; exists ; 2016 ; The Journal of African Trade Volume 3 ; 3 ; >
-      au < ready ; exists ; 2017 ; The Journal of African Trade Volume 4 ; 4 ; >
-      au < ready ; exists ; 2018 ; The Journal of African Trade Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2014 ; The Journal of African Trade Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2015 ; The Journal of African Trade Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2016 ; The Journal of African Trade Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2017 ; The Journal of African Trade Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2018 ; The Journal of African Trade Volume 5 ; 5 ; >
       au < ready ; exists ; 2019 ; The Journal of African Trade Volume 6 ; 6 ; >
       au < ready ; exists ; 2020 ; The Journal of African Trade Volume 7 ; 7 ; >
-      au < ready ; exists ; 2021 ; The Journal of African Trade Volume 8 ; 8 ; >
-      au < ready ; exists ; 2022 ; The Journal of African Trade Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2021 ; The Journal of African Trade Volume 8 ; 8 ; >
+      au < crawling ; exists ; 2022 ; The Journal of African Trade Volume 9 ; 9 ; >
       au < expected ; exists ; 2023 ; The Journal of African Trade Volume 10 ; 10 ; >
 
   }

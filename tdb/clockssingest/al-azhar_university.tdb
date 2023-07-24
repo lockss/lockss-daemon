@@ -21,10 +21,10 @@
       param[base_url] = https://aimj.researchcommons.org/
       param[journal_abbr] = journal
 
-      au < ready ; exists ; 2020 ; Al-Azhar International Medical Journal (AIMJ) Volume 1 ; 1 ; >
-      au < ready ; exists ; 2021 ; Al-Azhar International Medical Journal (AIMJ) Volume 2 ; 2 ; >
-      au < ready ; exists ; 2022 ; Al-Azhar International Medical Journal (AIMJ) Volume 3 ; 3 ; >
-      au < ready ; exists ; 2023 ; Al-Azhar International Medical Journal (AIMJ) Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2020 ; Al-Azhar International Medical Journal (AIMJ) Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2021 ; Al-Azhar International Medical Journal (AIMJ) Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2022 ; Al-Azhar International Medical Journal (AIMJ) Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2023 ; Al-Azhar International Medical Journal (AIMJ) Volume 4 ; 4 ; >
 
   }
 
@@ -47,14 +47,14 @@
       au < manifest ; exists ; 2010 ; Al-Azhar Bulletin of Science Volume 21 ; 21 ; >
       au < manifest ; exists ; 2011 ; Al-Azhar Bulletin of Science Volume 22 ; 22 ; >
       au < ready ; exists ; 2012 ; Al-Azhar Bulletin of Science Volume 23 ; 23 ; >
-      au < ready ; exists ; 2013 ; Al-Azhar Bulletin of Science Volume 24 ; 24 ; >
+      au < crawling ; exists ; 2013 ; Al-Azhar Bulletin of Science Volume 24 ; 24 ; >
       au < ready ; exists ; 2014 ; Al-Azhar Bulletin of Science Volume 25 ; 25 ; >
       au < ready ; exists ; 2015 ; Al-Azhar Bulletin of Science Volume 26 ; 26 ; >
-      au < ready ; exists ; 2016 ; Al-Azhar Bulletin of Science Volume 27 ; 27 ; >
-      au < ready ; exists ; 2017 ; Al-Azhar Bulletin of Science Volume 28 ; 28 ; >
+      au < crawling ; exists ; 2016 ; Al-Azhar Bulletin of Science Volume 27 ; 27 ; >
+      au < crawling ; exists ; 2017 ; Al-Azhar Bulletin of Science Volume 28 ; 28 ; >
       au < ready ; exists ; 2018 ; Al-Azhar Bulletin of Science Volume 29 ; 29 ; >
-      au < ready ; exists ; 2019 ; Al-Azhar Bulletin of Science Volume 30 ; 30 ; >
-      au < ready ; exists ; 2020 ; Al-Azhar Bulletin of Science Volume 31 ; 31 ; >
+      au < crawling ; exists ; 2019 ; Al-Azhar Bulletin of Science Volume 30 ; 30 ; >
+      au < crawling ; exists ; 2020 ; Al-Azhar Bulletin of Science Volume 31 ; 31 ; >
       au < ready ; exists ; 2021 ; Al-Azhar Bulletin of Science Volume 32 ; 32 ; >
       au < ready ; exists ; 2022 ; Al-Azhar Bulletin of Science Volume 33 ; 33 ; >
       au < expected ; exists ; 2023 ; Al-Azhar Bulletin of Science Volume 34 ; 34 ; >
