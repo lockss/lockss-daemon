@@ -12044,7 +12044,7 @@
     au < deepCrawl ; exists ; 2020 ; Records Management Journal Volume 30 ; 30 ; >
     au < deepCrawl ; exists ; 2021 ; Records Management Journal Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2022 ; Records Management Journal Volume 32 ; 32 ; >
-    au < expected ; exists ; 2023 ; Records Management Journal Volume 33 ; 33 ; >
+    au < manifest ; exists ; 2023 ; Records Management Journal Volume 33 ; 33 ; >
 
   }
 
@@ -13674,7 +13674,7 @@
 
     param[journal_issn] = 2056-3515
 
-    au < exists ; exists ; 2015 ; Annals in Social Responsibility Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2015 ; Annals in Social Responsibility Volume 1 ; 1 ; >
     au < frozen ; exists ; 2016 ; Annals in Social Responsibility Volume 2 ; 2 ; >
     au < frozen ; exists ; 2017 ; Annals in Social Responsibility Volume 3 ; 3 ; >
     au < frozen ; exists ; 2018 ; Annals in Social Responsibility Volume 4 ; 4 ; >
