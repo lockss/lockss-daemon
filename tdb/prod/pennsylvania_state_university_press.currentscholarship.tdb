@@ -594,7 +594,6 @@
 
       param[journal_id] = pcp
 
-      au < exists ; 2010 ; Pacific Coast Philology Volume 45 ; 45 ; 2010 >
       au < doNotProcess ; 2011 ; Pacific Coast Philology Volume 46 ; 46 ; 2011 >
       au < doNotProcess ; 2012 ; Pacific Coast Philology Volume 47 ; 47 ; 2012 >
       au < doNotProcess ; 2013 ; Pacific Coast Philology Volume 48 ; 48 ; 2013 >
@@ -606,7 +605,6 @@
       au < doNotProcess ; 2019 ; Pacific Coast Philology Volume 54 ; 54 ; 2019 >
       au < doNotProcess ; 2020 ; Pacific Coast Philology Volume 55 ; 55 ; 2020 >
       au < doNotProcess ; 2021 ; Pacific Coast Philology Volume 56 ; 56 ; 2021 >
-      au < expected ; 2023 ; Pacific Coast Philology Volume 57 ; 57 ; 2023 >
 
   }
 
@@ -1258,8 +1256,8 @@
       au < doNotProcess ; 2019 ; International Journal of Persian Literature Volume 2019 ; 2019 ; 2019 >
       au < doNotProcess ; 2020 ; International Journal of Persian Literature Volume 2020 ; 2020 ; 2020 >
       au < doNotProcess ; 2021 ; International Journal of Persian Literature Volume 2021 ; 2021 ; 2021 >
-      au < exists ; 2022 ; International Journal of Persian Literature Volume 2022 ; 2022 ; 2022 >
-      au < expected ; 2023 ; International Journal of Persian Literature Volume 2023 ; 2023 ; 2023 >
+      au < exists ; 2022 ; International Journal of Persian Literature Volume 7 ; 7 ; 2022 >
+      au < expected ; 2023 ; International Journal of Persian Literature Volume 8 ; 8 ; 2023 >
 
   }
 
@@ -1540,7 +1538,7 @@
       au < manifest ; 1993 ; Resources for American Literary Study Volume 19 ; 19 ; 1993 >
       au < manifest ; 1994 ; Resources for American Literary Study Volume 20 ; 20 ; 1994 >
       au < manifest ; 1995 ; Resources for American Literary Study Volume 21 ; 21 ; 1995 >
-      au < doesNotExist ; 1996 ; Resources for American Literary Study Volume 22 ; 22 ; 1996 >
+
       au < manifest ; 1997 ; Resources for American Literary Study Volume 23 ; 23 ; 1997 >
       au < manifest ; 1998 ; Resources for American Literary Study Volume 24 ; 24 ; 1998 >
       au < manifest ; 1999 ; Resources for American Literary Study Volume 25 ; 25 ; 1999 >

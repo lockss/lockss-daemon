@@ -1322,7 +1322,7 @@
       param[au_oai_set] = biosystecol
 
       au < crawling ; exists ; 2021 ; 2021 ; Biosystematics and Ecology Volume 2021 ; 2021 ; https://biosystecol.oeaw.ac.at/ ; >
-      au < exists ; exists ; 2022 ; 2022 ; Biosystematics and Ecology Volume 2022 ; 2022 ; https://biosystecol.oeaw.ac.at/ ; >
+      au < expected ; exists ; 2022 ; 2022 ; Biosystematics and Ecology Volume 2022 ; 2022 ; https://biosystecol.oeaw.ac.at/ ; >
       au < expected ; exists ; 2023 ; 2023 ; Biosystematics and Ecology Volume 2023 ; 2023 ; https://biosystecol.oeaw.ac.at/ ; >
 
   }

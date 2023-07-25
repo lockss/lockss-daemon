@@ -39,8 +39,7 @@
     au < released ; 2019 ; 2019 ; Acta Biochimica et Biophysica Sinica Volume 51 ; 51 >
     au < released ; 2020 ; 2020 ; Acta Biochimica et Biophysica Sinica Volume 52 ; 52 >
     au < released ; 2021 ; 2021 ; Acta Biochimica et Biophysica Sinica Volume 53 ; 53 >
-    au < expected ; 2022 ; 2022 ; Acta Biochimica et Biophysica Sinica Volume 54 ; 54 >
-    au < expected ; 2023 ; 2023 ; Acta Biochimica et Biophysica Sinica Volume 55 ; 55 >
+    #Moved to Sciengine. 2004-2021 on OUP 4/3/2023
 
   }
 
@@ -6422,6 +6421,7 @@
     #move from T&F by 2023-01-01
 
     au < doNotProcess ; 2022 ; 2022 ; Forensic Sciences Research Volume 7 ; 7 >
+    au < exists ; 2023 ; 2023 ; Forensic Sciences Research Volume 8 ; 8 >
 
   }
 
@@ -11330,15 +11330,12 @@
 
     param[journal_id] = integrablesystems
 
-    au < doNotProcess ; 2015 ; 2015 ; Journal of Integrable Systems Volume 1 ; 1 > #doesNotExist
     au < released ; 2016 ; 2016 ; Journal of Integrable Systems Volume 1 ; 1 >
     au < released ; 2017 ; 2017 ; Journal of Integrable Systems Volume 2 ; 2 >
     au < released ; 2018 ; 2018 ; Journal of Integrable Systems Volume 3 ; 3 >
     au < released ; 2019 ; 2019 ; Journal of Integrable Systems Volume 4 ; 4 >
     au < released ; 2020 ; 2020 ; Journal of Integrable Systems Volume 5 ; 5 >
-    au < expected ; 2021 ; 2021 ; Journal of Integrable Systems Volume 6 ; 6 >
-    au < expected ; 2022 ; 2022 ; Journal of Integrable Systems Volume 7 ; 7 >
-    au < expected ; 2023 ; 2023 ; Journal of Integrable Systems Volume 8 ; 8 >
+    #Ceased publication
 
   }
 
@@ -14217,6 +14214,7 @@
     param[journal_id] = jmicro
     #content available from 1953 volume 1 to 2008 volume 57
 
+    au < exists ; 2008 ; 2008 ; Microscopy Volume 57 ; 57 >
     au < released ; 2009 ; 2009 ; Microscopy Volume 58 ; 58 >
     au < released ; 2010 ; 2010 ; Microscopy Volume 59 ; 59 >
     au < released ; 2011 ; 2011 ; Microscopy Volume 60 ; 60 >
@@ -16922,7 +16920,8 @@
     param[journal_id] = pmj
     #move from BMJ by 2023-01-01
 
-    au < doNotProcess ; 2022 ; 2022 ; Postgraduate Medical Journal Volume 98 ; 98 >
+    au < exists ; 2022 ; 2022 ; Postgraduate Medical Journal Volume 98 ; 98 >
+    au < exists ; 2023 ; 2023 ; Postgraduate Medical Journal Volume 99 ; 99 >
 
   }
 

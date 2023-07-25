@@ -762,6 +762,20 @@
   {
 
       title <
+        name = Journal of Digital Legal History ;
+        eissn = 2796-0226
+      >
+
+      #published 2023-present
+      param[journal_id] = dlh
+
+      au < exists ; 2023 ; 2023 ; 2023 ; Journal for Digital Legal History Volume 2023 >
+
+  }
+
+  {
+
+      title <
         name = Journal for the History of Environment and Society ;
         issn = 2506-6730 ;
         eissn = 2506-6749
@@ -886,6 +900,22 @@
       au < exists ; 2000 ; 2000 ; 2000 ; Oostvlaamse Zanten Volume 2000 >
       au < manifest ; 2001 ; 2001 ; 2001 ; Oostvlaamse Zanten Volume 2001 >
       au < manifest ; 2002 ; 2002 ; 2002 ; Oostvlaamse Zanten Volume 2002 >
+
+  }
+
+  {
+
+      title <
+        name = Radices ;
+        eissn = 2736-7770
+      >
+
+      #published 2021-present
+      param[journal_id] = radices
+
+      au < exists ; 2021 ; 2021 ; 2021 ; Radices Volume 2021 >
+      au < exists ; 2022 ; 2022 ; 2022 ; Radices Volume 2022 >
+      au < exists ; 2023 ; 2023 ; 2023 ; Radices Volume 2023 >
 
   }
 
@@ -1034,6 +1064,27 @@
       au < manifest ; 1999 ; 1999 ; 1999 ; Silva Gandavensis Volume 1999 >
       au < manifest ; 2000 ; 2000 ; 2000 ; Silva Gandavensis Volume 2000 >
       au < manifest ; 2001 ; 2001 ; 2001 ; Silva Gandavensis Volume 2001 >
+
+  }
+
+  {
+
+      title <
+        name = Studies on National Movements ;
+        eissn = 2295-1466
+      >
+
+      #published 2013-present
+      param[journal_id] = snm
+
+      au < exists ; 2013 ; 2013 ; 2013 ; Studies on National Movements Volume 2013 >
+      au < exists ; 2014 ; 2014 ; 2014 ; Studies on National Movements Volume 2014 >
+      au < exists ; 2015 ; 2015 ; 2015 ; Studies on National Movements Volume 2015 >
+      au < exists ; 2019 ; 2019 ; 2019 ; Studies on National Movements Volume 2019 >
+      au < exists ; 2020 ; 2020 ; 2020 ; Studies on National Movements Volume 2020 >
+      au < exists ; 2021 ; 2021 ; 2021 ; Studies on National Movements Volume 2021 >
+      au < exists ; 2022 ; 2022 ; 2022 ; Studies on National Movements Volume 2022 >
+      au < expected ; 2023 ; 2023 ; 2023 ; Studies on National Movements Volume 2023 >
 
   }
 

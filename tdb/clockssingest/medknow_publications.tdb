@@ -11829,13 +11829,17 @@
         eissn = 2772-8390
       >
 
-      param[journal_issn] = WKMP-0208
       #param[base_url] = https://www.aort.info/
-
+      {
+      param[journal_issn] = WKMP-0208
+      #journal_issn changed after 2022
       au < frozen ; exists ; 2021 ; Annals of Oncology Research and Therapy Volume 1 ; 2021 ; 1 ; https://www.aort.info/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Annals of Oncology Research and Therapy Volume 2 ; 2022 ; 2 ; https://www.aort.info/ ; ; >
+      au < frozen ; exists ; 2022 ; Annals of Oncology Research and Therapy Volume 2 ; 2022 ; 2 ; https://www.aort.info/ ; ; >
+      }
+      {
+      param[journal_issn] = 2772-8382
       au < expected ; exists ; 2023 ; Annals of Oncology Research and Therapy Volume 3 ; 2023 ; 3 ; https://www.aort.info/ ; ; >
-
+      }
   }
 
 

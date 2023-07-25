@@ -3616,6 +3616,7 @@
     au < down ; 2018 ; Journal of Pharmacology and Pharmacotherapeutics Volume 9 ; 2018 ; 9 ; http://www.jpharmacol.com/ >
     au < down ; 2019 ; Journal of Pharmacology and Pharmacotherapeutics Volume 10 ; 2019 ; 10 ; https://www.jpharmacol.com/ >
     au < down ; 2020 ; Journal of Pharmacology and Pharmacotherapeutics Volume 11 ; 2020 ; 11 ; https://www.jpharmacol.com/ >
+    au < doNotProcess ; 2021 ; Journal of Pharmacology and Pharmacotherapeutics Volume 12 ; 2021 ; 12 ; https://www.jpharmacol.com/ >
 
   }
 
@@ -7444,8 +7445,6 @@
       {
       param[journal_issn] = 2588-9273
 
-      au < doNotProcess ; 2016 ; Journal of Radiation and Cancer Research Volume 7 ; 2016 ; 7 ; http://www.journalrcr.org/ >
-      au < doNotProcess ; 2017 ; Journal of Radiation and Cancer Research Volume 8 ; 2017 ; 8 ; http://www.journalrcr.org/ >
       au < released ; 2018 ; Journal of Radiation and Cancer Research Volume 9 ; 2018 ; 9 ; https://www.journalrcr.org/ >
       au < released ; 2019 ; Journal of Radiation and Cancer Research Volume 10 ; 2019 ; 10 ; https://www.journalrcr.org/ >
       au < released ; 2020 ; Journal of Radiation and Cancer Research Volume 11 ; 2020 ; 11 ; https://www.journalrcr.org/ >
@@ -7459,10 +7458,6 @@
       au < down ; 2016 ; Journal of Radiation and Cancer Research Volume 7 ; 2016 ; 7 ; http://www.journalrcr.org/ >
       au < down ; 2017 ; Journal of Radiation and Cancer Research Volume 8 ; 2017 ; 8 ; http://www.journalrcr.org/ >
       au < doNotProcess ; 2018 ; Journal of Radiation and Cancer Research Volume 9 ; 2018 ; 9 ; https://www.journalrcr.org/ >
-      au < doNotProcess ; 2019 ; Journal of Radiation and Cancer Research Volume 10 ; 2019 ; 10 ; https://www.journalrcr.org/ >
-      au < doNotProcess ; 2020 ; Journal of Radiation and Cancer Research Volume 11 ; 2020 ; 11 ; https://www.journalrcr.org/ >
-      au < doNotProcess ; 2021 ; Journal of Radiation and Cancer Research Volume 12 ; 2021 ; 12 ; https://www.journalrcr.org/ >
-      au < doNotProcess ; 2022 ; Journal of Radiation and Cancer Research Volume 13 ; 2022 ; 13 ; https://www.journalrcr.org/ >
       }
   }
 
@@ -8980,7 +8975,6 @@
       au < down ; 2020 ; Yoga Mimamsa Volume 52 ; 2020 ; 52 ; https://www.ym-kdham.in/ >
       au < down ; 2021 ; Yoga Mimamsa Volume 53 ; 2021 ; 53 ; https://www.ym-kdham.in/ >
       au < doNotProcess ; 2022 ; Yoga Mimamsa Volume 54 ; 2022 ; 54 ; https://www.ym-kdham.in/ >
-      au < doNotProcess ; 2023 ; Yoga Mimamsa Volume 55 ; 2023 ; 55 ; https://www.ym-kdham.in/ >
 
   }
 

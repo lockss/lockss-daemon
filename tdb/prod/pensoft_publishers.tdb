@@ -1330,4 +1330,203 @@
 
   }
 
+  {
+
+      title <
+        name = Aquatic Invasions ;
+        issn = 1798-6540 ;
+        eissn = 1818-5487
+      >
+
+      param[au_oai_set] = aquaticinvasions
+
+      au < exists ; 2023 ; 2023 ; Aquatic Invasions Volume 2023 ; 2023 ; https://aquaticinvasions.arphahub.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Atomic Layer Deposition ;
+        eissn = 2772-2570
+      >
+
+      param[au_oai_set] = atomiclayerdeposition
+
+      au < exists ; 2023 ; 2023 ; Atomic Layer Deposition Volume 2023 ; 2023 ; https://journal.atomiclayerdeposition.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Biosystematics and Ecology ;
+        issn = 1026-4949 ;
+        eissn = 2710-298X
+      >
+
+      param[au_oai_set] = biosystecol
+
+      au < exists ; 2021 ; 2021 ; Biosystematics and Ecology Volume 2021 ; 2021 ; https://biosystecol.oeaw.ac.at/ >
+      au < expected ; 2022 ; 2022 ; Biosystematics and Ecology Volume 2022 ; 2022 ; https://biosystecol.oeaw.ac.at/ >
+      au < expected ; 2023 ; 2023 ; Biosystematics and Ecology Volume 2023 ; 2023 ; https://biosystecol.oeaw.ac.at/ >
+
+  }
+
+  {
+
+      title <
+        name = BRICS Journal of Economics ;
+        issn = 2712-7702 ;
+        eissn = 2712-7508
+      >
+
+      param[au_oai_set] = brics-econ
+
+      au < exists ; 2020 ; 2020 ; BRICS Journal of Economics Volume 2020 ; 2020 ; https://brics-econ.arphahub.com/ >
+      au < exists ; 2021 ; 2021 ; BRICS Journal of Economics Volume 2021 ; 2021 ; https://brics-econ.arphahub.com/ >
+      au < exists ; 2022 ; 2022 ; BRICS Journal of Economics Volume 2022 ; 2022 ; https://brics-econ.arphahub.com/ >
+      au < exists ; 2023 ; 2023 ; BRICS Journal of Economics Volume 2023 ; 2023 ; https://brics-econ.arphahub.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Contributions to Entomology (Beiträge zur Entomologie) ;
+        issn = 0005-805X ;
+        eissn = 2511-6428
+      >
+
+      param[au_oai_set] = contributions-to-entomology
+
+      au < exists ; 2022 ; 2022 ; Contributions to Entomology (Beiträge zur Entomologie) Volume 2022 ; 2022 ; https://contributions-to-entomology.arphahub.com/ >
+      au < exists ; 2023 ; 2023 ; Contributions to Entomology (Beiträge zur Entomologie) Volume 2023 ; 2023 ; https://contributions-to-entomology.arphahub.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Fossil Record ;
+        issn = 2193-0066 ;
+        eissn = 2193-0074
+      >
+
+      param[au_oai_set] = fr
+
+      au < exists ; 1998 ; 1998 ; Fossil Record Volume 1998 ; 1998 ; https://fr.pensoft.net/ >
+      au < exists ; 1999 ; 1999 ; Fossil Record Volume 1999 ; 1999 ; https://fr.pensoft.net/ >
+      au < exists ; 2000 ; 2000 ; Fossil Record Volume 2000 ; 2000 ; https://fr.pensoft.net/ >
+      au < exists ; 2001 ; 2001 ; Fossil Record Volume 2001 ; 2001 ; https://fr.pensoft.net/ >
+      au < exists ; 2002 ; 2002 ; Fossil Record Volume 2002 ; 2002 ; https://fr.pensoft.net/ >
+      au < exists ; 2003 ; 2003 ; Fossil Record Volume 2003 ; 2003 ; https://fr.pensoft.net/ >
+      au < exists ; 2004 ; 2004 ; Fossil Record Volume 2004 ; 2004 ; https://fr.pensoft.net/ >
+      au < exists ; 2005 ; 2005 ; Fossil Record Volume 2005 ; 2005 ; https://fr.pensoft.net/ >
+      au < exists ; 2006 ; 2006 ; Fossil Record Volume 2006 ; 2006 ; https://fr.pensoft.net/ >
+      au < exists ; 2007 ; 2007 ; Fossil Record Volume 2007 ; 2007 ; https://fr.pensoft.net/ >
+      au < exists ; 2008 ; 2008 ; Fossil Record Volume 2008 ; 2008 ; https://fr.pensoft.net/ >
+      au < exists ; 2009 ; 2009 ; Fossil Record Volume 2009 ; 2009 ; https://fr.pensoft.net/ >
+      au < exists ; 2010 ; 2010 ; Fossil Record Volume 2010 ; 2010 ; https://fr.pensoft.net/ >
+      au < exists ; 2011 ; 2011 ; Fossil Record Volume 2011 ; 2011 ; https://fr.pensoft.net/ >
+      au < exists ; 2012 ; 2012 ; Fossil Record Volume 2012 ; 2012 ; https://fr.pensoft.net/ >
+      au < exists ; 2013 ; 2013 ; Fossil Record Volume 2013 ; 2013 ; https://fr.pensoft.net/ >
+      au < exists ; 2014 ; 2014 ; Fossil Record Volume 2014 ; 2014 ; https://fr.pensoft.net/ >
+      au < exists ; 2015 ; 2015 ; Fossil Record Volume 2015 ; 2015 ; https://fr.pensoft.net/ >
+      au < exists ; 2016 ; 2016 ; Fossil Record Volume 2016 ; 2016 ; https://fr.pensoft.net/ >
+      au < exists ; 2017 ; 2017 ; Fossil Record Volume 2017 ; 2017 ; https://fr.pensoft.net/ >
+      au < exists ; 2018 ; 2018 ; Fossil Record Volume 2018 ; 2018 ; https://fr.pensoft.net/ >
+      au < exists ; 2019 ; 2019 ; Fossil Record Volume 2019 ; 2019 ; https://fr.pensoft.net/ >
+      au < exists ; 2020 ; 2020 ; Fossil Record Volume 2020 ; 2020 ; https://fr.pensoft.net/ >
+      au < exists ; 2021 ; 2021 ; Fossil Record Volume 2021 ; 2021 ; https://fr.pensoft.net/ >
+      au < exists ; 2022 ; 2022 ; Fossil Record Volume 2022 ; 2022 ; https://fr.pensoft.net/ >
+      au < exists ; 2023 ; 2023 ; Fossil Record Volume 2023 ; 2023 ; https://fr.pensoft.net/ >
+
+  }
+
+  {
+
+      title <
+        name = Geologica Saxonica ;
+        issn = 1617-8467 ;
+        eissn = 2750-8242
+      >
+
+      param[au_oai_set] = geologica-saxonica
+
+      au < exists ; 2021 ; 2021 ; Geologica Saxonica Volume 2021 ; 2021 ; https://geologica-saxonica.arphahub.com/ >
+      au < exists ; 2022 ; 2022 ; Geologica Saxonica Volume 2022 ; 2022 ; https://geologica-saxonica.arphahub.com/ >
+      au < expected ; 2023 ; 2023 ; Geologica Saxonica Volume 2023 ; 2023 ; https://geologica-saxonica.arphahub.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Interventional Cardiology Forum ;
+        eissn = 2738-8972
+      >
+
+      param[au_oai_set] = interventionalcardioforum
+
+      au < exists ; 2021 ; 2021 ; Interventional Cardiology Forum Volume 2021 ; 2021 ; https://interventionalcardioforum.net/ >
+      au < exists ; 2022 ; 2022 ; Interventional Cardiology Forum Volume 2022 ; 2022 ; https://interventionalcardioforum.net/ >
+      au < exists ; 2023 ; 2023 ; Interventional Cardiology Forum Volume 2023 ; 2023 ; https://interventionalcardioforum.net/ >
+
+  }
+
+  {
+
+      title <
+        name = Languages and Modalities (LaMo) ;
+        eissn = 2782-5744
+      >
+
+      param[au_oai_set] = languagesandmodalities
+
+      au < exists ; 2021 ; 2021 ; Languages and Modalities (LaMo) Volume 2021 ; 2021 ; https://languagesandmodalities.ru/ >
+      au < exists ; 2022 ; 2022 ; Languages and Modalities (LaMo) Volume 2022 ; 2022 ; https://languagesandmodalities.ru/ >
+      au < expected ; 2023 ; 2023 ; Languages and Modalities (LaMo) Volume 2023 ; 2023 ; https://languagesandmodalities.ru/ >
+
+  }
+
+  {
+
+      title <
+        name = Plant Ecology and Evolution ;
+        issn = 2032-3913 ;
+        eissn = 2032-3921
+      >
+
+      param[au_oai_set] = plecevo
+
+      au < exists ; 2013 ; 2013 ; Plant Ecology and Evolution Volume 2013 ; 2013 ; https://plecevo.eu/ >
+      au < exists ; 2014 ; 2014 ; Plant Ecology and Evolution Volume 2014 ; 2014 ; https://plecevo.eu/ >
+      au < exists ; 2015 ; 2015 ; Plant Ecology and Evolution Volume 2015 ; 2015 ; https://plecevo.eu/ >
+      au < exists ; 2016 ; 2016 ; Plant Ecology and Evolution Volume 2016 ; 2016 ; https://plecevo.eu/ >
+      au < exists ; 2017 ; 2017 ; Plant Ecology and Evolution Volume 2017 ; 2017 ; https://plecevo.eu/ >
+      au < exists ; 2018 ; 2018 ; Plant Ecology and Evolution Volume 2018 ; 2018 ; https://plecevo.eu/ >
+      au < exists ; 2019 ; 2019 ; Plant Ecology and Evolution Volume 2019 ; 2019 ; https://plecevo.eu/ >
+      au < exists ; 2020 ; 2020 ; Plant Ecology and Evolution Volume 2020 ; 2020 ; https://plecevo.eu/ >
+      au < exists ; 2021 ; 2021 ; Plant Ecology and Evolution Volume 2021 ; 2021 ; https://plecevo.eu/ >
+      au < exists ; 2022 ; 2022 ; Plant Ecology and Evolution Volume 2022 ; 2022 ; https://plecevo.eu/ >
+      au < exists ; 2023 ; 2023 ; Plant Ecology and Evolution Volume 2023 ; 2023 ; https://plecevo.eu/ >
+
+  }
+
+  {
+
+      title <
+        name = Tuhinga ;
+        issn = 1173-4337 ;
+        eissn = 2253-5861
+      >
+
+      param[au_oai_set] = tuhinga
+
+      au < exists ; 2022 ; 2022 ; Tuhinga Volume 2022 ; 2022 ; https://tuhinga.arphahub.com/ >
+      au < exists ; 2023 ; 2023 ; Tuhinga Volume 2023 ; 2023 ; https://tuhinga.arphahub.com/ >
+
+  }
+
 }
