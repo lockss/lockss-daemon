@@ -51,8 +51,8 @@
        {
          param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/acmjats-released/
 
-         au < ready ; exists ; 2023 ; Association for Computing Machinery Source Content 2023_01 ; 2023_01 >
-         au < ready ; exists ; 2023 ; Association for Computing Machinery Source Content 2023_02 ; 2023_02 >
+         au < readySource ; crawling ; 2023 ; Association for Computing Machinery Source Content 2023_01 ; 2023_01 >
+         au < readySource ; crawling ; 2023 ; Association for Computing Machinery Source Content 2023_02 ; 2023_02 >
          au < testing ; exists ; 2023 ; Association for Computing Machinery Source Content 2023_03 ; 2023_03 >
          au < doNotProcess ; exists ; 2023 ; Association for Computing Machinery Source Content 2023_04 ; 2023_04 >
          #ACM delivers big content, so AUs should never be added to clockss without review

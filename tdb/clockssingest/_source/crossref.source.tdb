@@ -31,7 +31,7 @@
 
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/crossref-released/
 
-      au < ready ; exists ; 2023 ; Crossref Source Content 2023 ; 2023 >
+      au < readySource ; crawling ; 2023 ; Crossref Source Content 2023 ; 2023 >
 
     }
 
