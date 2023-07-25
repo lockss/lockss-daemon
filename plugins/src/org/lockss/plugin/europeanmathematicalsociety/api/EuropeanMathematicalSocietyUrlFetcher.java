@@ -55,7 +55,6 @@ public class EuropeanMathematicalSocietyUrlFetcher extends BaseUrlFetcher {
   /** Auth string returned from POST */
   public static final String FACADE_KEY_AUTHORIZATION_STRING =
           "authorizationString";
-    //"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJvdDpDTE9DS1NTIEJvdCIsImFjY291bnQiOnsiaWQiOjI2NDg5NzgwLCJyZWYiOiJib3Q6Y2xvY2tzcyIsIm5hbWUiOiJDTE9DS1NTIEJvdCJ9LCJhdXRob3JpemF0aW9ucyI6W3siY29udGVudFJpZ2h0cyI6WyJ2aWV3Il0sImNvbnRlbnRVbml0cyI6WyJlYm9va3M6YWxsIiwiam91cm5hbHM6YWxsIl19XSwiaWF0IjoxNjg5NzIwNzg4LCJleHAiOjE2ODk4MDcxODh9.q_dlKZXHSfQzWuTTy5t_SVNV-E220m6sDGF0KJwaXZw";
 
   /** Signal to EuropeanMathematicalSocietyUrlFetcherFactory to make a EuropeanMathematicalSocietyUrlPoster
    * UrlFetcher */
@@ -82,15 +81,13 @@ public class EuropeanMathematicalSocietyUrlFetcher extends BaseUrlFetcher {
   }
 
   protected void establishSessionIfNeeded() throws CacheException {
-    log.debug3("Check if a session needs to be established");
     if (getAuthorizationString() != null) {
       return;
     }
     log.debug2("Attempting to establish a session");
 
     //auth/identify url==https://clockss.org
-    //identify?url=https://clockss.org
-    String postUrl = String.format("%sauth/identify?url=https%3A%2F%2Fclockss.org",
+    String postUrl = String.format("%sauth/identify?url=https%%2E%%2F%%2Fclockss.org",
                                    au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()));
     crawlFacade.putStateObj(FACADE_KEY_MAKE_POSTER, "true");
     UrlFetcher uf;
@@ -125,11 +122,11 @@ public class EuropeanMathematicalSocietyUrlFetcher extends BaseUrlFetcher {
     protected void consume(FetchedUrlData fud) throws IOException {
       ObjectMapper objectMapper = new ObjectMapper();
       JsonNode json = objectMapper.readTree(fud.getInputStream());
-      String authStr = String.format("LOW %s:%s",
-                                     json.get("values").get("s3").get("access").asText(),
-                                     json.get("values").get("s3").get("secret").asText());
+      String authStr = String.format("Bearer %s",
+              json.get("authToken").asText().trim());
       log.debug3(String.format("Resulting authorization string: %s", authStr));
       crawlFacade.putStateObj(FACADE_KEY_AUTHORIZATION_STRING, authStr);
+      log.debug3("Successfully setup AUTHORIZATION_STRING");
     }
 
   }

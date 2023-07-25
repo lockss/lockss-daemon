@@ -206,7 +206,8 @@ public class EuropeanMathematicalSocietyCrawlSeed extends BaseCrawlSeed {
 
     }
     Collections.sort(allUrls);
-    makeStartUrlContent(allUrls, storeUrl);
+    //makeStartUrlContent(allUrls, storeUrl);
+    storeStartUrls(allUrls, storeUrl);
   }
 
   protected String makeApiUrl(int page) {
@@ -284,6 +285,7 @@ public class EuropeanMathematicalSocietyCrawlSeed extends BaseCrawlSeed {
    * @param url
    * @throws IOException
    */
+  /*
   protected void makeStartUrlContent(Collection<String> urlList,
                                      String url)
       throws IOException {
@@ -319,6 +321,26 @@ public class EuropeanMathematicalSocietyCrawlSeed extends BaseCrawlSeed {
     );
     UrlCacher cacher = facade.makeUrlCacher(ud);
     cacher.storeContent();
+  }
+
+  */
+
+    protected void storeStartUrls(Collection<String> urlList, String url) throws IOException {
+	  StringBuilder sb = new StringBuilder();
+	  sb.append("<html>\n");
+	  for (String u : urlList) {
+          //String completeUrl = u + "?include=bookFiles";
+          String completeUrl = u;
+		  sb.append("<a href=\"" + completeUrl  + "\">" + completeUrl  + "</a><br/>\n");
+          log.debug3(" storeStartUrl = " + completeUrl);
+	  }
+	  sb.append("</html>");
+	  CIProperties headers = new CIProperties();
+	  //Should use a constant here
+	  headers.setProperty("content-type", "text/html; charset=utf-8");
+      UrlData ud = new UrlData(new ByteArrayInputStream(sb.toString().getBytes(Constants.ENCODING_UTF_8)), headers, url);
+      UrlCacher cacher = facade.makeUrlCacher(ud);
+      cacher.storeContent();
   }
 
   protected List<String> getOnlyNeedFetchedUrls(List<Map.Entry<String, Integer>> urlsAndTimes) {

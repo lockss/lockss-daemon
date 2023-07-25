@@ -49,8 +49,10 @@ import java.util.*;
 public class EuropeanMathematicalSocietyJsonLinkExtractor {
 
   public static final Logger log = Logger.getLogger(EuropeanMathematicalSocietyJsonLinkExtractor.class);
-  // https://content.ems.press/books
-  // https://content.ems.press/books/123
+  // https://content.ems.press/books - all books
+  // https://content.ems.press/books/123 - single book
+  // https://content.ems.press/books/123?include=bookFiles - single book with PDF files
+  // https://content.ems.press/books/123?include=bookFiles,personGroups,personGroups.members - single book with PDF files and authors
   // https://content.ems.press/serials
   // https://content.ems.press/serials filter[code]==jems // journal by code JEMS
 
@@ -85,34 +87,27 @@ public class EuropeanMathematicalSocietyJsonLinkExtractor {
       }
     }
 
-    int count = rootNode.path("files_count").asInt(-1);
-    int last_updated = rootNode.path("item_last_updated").asInt(-1);
-    JsonNode filesNode = rootNode.path("files");
-    String directory = rootNode.path("dir").asText(null);
-    JsonNode domains =  rootNode.path("workable_servers"); // subdomains of archive.org, accessible via "d<n>" as well
+    JsonNode filesNode = rootNode.path("data");
+
 
     List<Map.Entry<String, Integer>> urlsAndTimes = new ArrayList<>();
 
     if (!filesNode.isMissingNode() && filesNode.isArray()) {
+
       Iterator<JsonNode> fileIter = filesNode.elements();
       for (int i = 1 ; fileIter.hasNext() ; ++i) {
         JsonNode file = fileIter.next();
-        String filename =  file.path("name").asText(null); // "23422009-2021-11-03-12-16-05.tar.gz"
-        String filetype =  file.path("format").asText(null); // GZIP, Metadata
-        String md5 =  file.path("md5").asText(null); // checksum
-        String sha1 =  file.path("sha1").asText(null); // checksum
-        String crc32 =  file.path("crc32").asText(null); // checksum
-        int size =  file.path("size").asInt(-1);
-        Integer mtime =  file.path("mtime").asInt(-1); // 1636066696
+
+        log.debug3("Processingnode array...... node# = " + Integer.toString(i));
+        log.debug3("Node " + file.toString());
+        String filename =  file.path("links").path("self").asText() + "?include=bookFiles";
+        log.debug3("Processing node array, node# = " + Integer.toString(i) + ", filename= " + filename);
 
         if (filename != null) {
           urlsAndTimes.add(
             new AbstractMap.SimpleEntry<>(
-              DOWNLOAD_URL
-                + item
-                + "/"
-                + filename,
-              mtime
+                    filename,
+              i
             )
           );
         }
@@ -123,7 +118,7 @@ public class EuropeanMathematicalSocietyJsonLinkExtractor {
 
       if (urlsAndTimes.size() == 0) {
         // What to do?
-        log.debug(String.format("No GZIPS founds: %s", srcUrl));
+        log.debug(String.format("No single url founds: %s", srcUrl));
         return;
       }
 

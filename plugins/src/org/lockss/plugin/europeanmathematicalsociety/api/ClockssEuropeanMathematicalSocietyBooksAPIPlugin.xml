@@ -113,7 +113,8 @@ POSSIBILITY OF SUCH DAMAGE.
         books page: https://content.ems.press/books
         -->
         <string>au_start_url</string>
-        <string>"%s%s", base_url, item</string>
+        <!--<string>"%s%s", base_url, item</string>-->
+        <string>"%sbooks",base_url</string>
     </entry>
     <!--
     <entry>
@@ -123,14 +124,18 @@ POSSIBILITY OF SUCH DAMAGE.
     -->
     <!--
     <entry>
-        <string>au_permission_url</string>
-        <string>"http://clockss-ingest.lockss.org/clockss.txt"</string>
-    </entry>
-    -->
-    <entry>
         <string>au_substance_url_pattern</string>
         <list>
             <string>"^%s.*\.tar\.gz$", base_url</string>
+        </list>
+    </entry>
+    -->
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <string>1,"%sbooks",base_url</string>
+            <string>1,"%sbooks/\d+\?include=bookFiles",base_url</string>
+            <string>1,"%s/assets/public/full-texts/books/\d+/supplementary-files/.*",base_url</string>
         </list>
     </entry>
     <entry>
@@ -167,13 +172,11 @@ POSSIBILITY OF SUCH DAMAGE.
             </entry>
         </map>
     </entry>
-    -->
-    <!--
     <entry>
         <string>plugin_crawl_url_comparator_factory</string>
         <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyCrawlUrlComparatorFactory</string>
     </entry>
-    -->
+-->
     <entry>
         <string>au_url_mime_type_map</string>
         <list>
