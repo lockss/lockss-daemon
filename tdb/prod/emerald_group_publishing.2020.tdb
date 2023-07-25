@@ -14698,23 +14698,22 @@
 
     au < manifest ; 2005 ; Asian Association of Open Universities Journal Volume 1 ; 1 >
     au < manifest ; 2006 ; Asian Association of Open Universities Journal Volume 2 ; 2 >
-    au < manifest ; 2007 ; Asian Association of Open Universities Journal Volume 3 ; 3 >
-    au < manifest ; 2008 ; Asian Association of Open Universities Journal Volume 4 ; 4 >
-    au < manifest ; 2009 ; Asian Association of Open Universities Journal Volume 5 ; 5 >
-    au < manifest ; 2010 ; Asian Association of Open Universities Journal Volume 6 ; 6 >
-    au < manifest ; 2011 ; Asian Association of Open Universities Journal Volume 7 ; 7 >
-    au < released ; 2012 ; Asian Association of Open Universities Journal Volume 8 ; 8 >
-    au < released ; 2013 ; Asian Association of Open Universities Journal Volume 9 ; 9 >
-    au < released ; 2014 ; Asian Association of Open Universities Journal Volume 10 ; 10 >
-    au < released ; 2015 ; Asian Association of Open Universities Journal Volume 11 ; 11 >
-    au < released ; 2016 ; Asian Association of Open Universities Journal Volume 12 ; 12 >
-    au < released ; 2017 ; Asian Association of Open Universities Journal Volume 13 ; 13 >
-    au < released ; 2018 ; Asian Association of Open Universities Journal Volume 14 ; 14 >
-    au < released ; 2019 ; Asian Association of Open Universities Journal Volume 15 ; 15 >
-    au < released ; 2020 ; Asian Association of Open Universities Journal Volume 16 ; 16 >
-    au < released ; 2021 ; Asian Association of Open Universities Journal Volume 17 ; 17 >
-    au < manifest ; 2022 ; Asian Association of Open Universities Journal Volume 18 ; 18 >
-    au < expected ; 2023 ; Asian Association of Open Universities Journal Volume 19 ; 19 >
+    au < manifest ; 2008 ; Asian Association of Open Universities Journal Volume 3 ; 3 >
+    au < manifest ; 2009 ; Asian Association of Open Universities Journal Volume 4 ; 4 >
+    au < manifest ; 2010 ; Asian Association of Open Universities Journal Volume 5 ; 5 >
+    au < manifest ; 2011 ; Asian Association of Open Universities Journal Volume 6 ; 6 >
+    au < manifest ; 2012 ; Asian Association of Open Universities Journal Volume 7 ; 7 >
+    au < released ; 2013 ; Asian Association of Open Universities Journal Volume 8 ; 8 >
+    au < released ; 2014 ; Asian Association of Open Universities Journal Volume 9 ; 9 >
+    au < released ; 2015 ; Asian Association of Open Universities Journal Volume 10 ; 10 >
+    au < released ; 2016 ; Asian Association of Open Universities Journal Volume 11 ; 11 >
+    au < released ; 2017 ; Asian Association of Open Universities Journal Volume 12 ; 12 >
+    au < released ; 2018 ; Asian Association of Open Universities Journal Volume 13 ; 13 >
+    au < released ; 2019 ; Asian Association of Open Universities Journal Volume 14 ; 14 >
+    au < released ; 2020 ; Asian Association of Open Universities Journal Volume 15 ; 15 >
+    au < released ; 2021 ; Asian Association of Open Universities Journal Volume 16 ; 16 >
+    au < released ; 2022 ; Asian Association of Open Universities Journal Volume 17 ; 17 >
+    au < manifest ; 2023 ; Asian Association of Open Universities Journal Volume 18 ; 18 >
 
   }
 
@@ -14727,7 +14726,7 @@
         eissn = 2443-4175
     >
 
-    param[journal_issn] = 2443-4175
+    param[journal_issn] = 2459-9700
 
     au < exists ; 2016 ; Asian Journal of Accounting Research Volume 1 ; 1 >
     au < exists ; 2017 ; Asian Journal of Accounting Research Volume 2 ; 2 >
@@ -14903,14 +14902,13 @@
     >
 
     param[journal_issn] = 2398-7294
+    #Moved to Tsinghua University Press
 
     au < released ; 2017 ; International Journal of Crowd Science Volume 1 ; 1 >
     au < released ; 2018 ; International Journal of Crowd Science Volume 2 ; 2 >
     au < released ; 2019 ; International Journal of Crowd Science Volume 3 ; 3 >
     au < released ; 2020 ; International Journal of Crowd Science Volume 4 ; 4 >
     au < released ; 2021 ; International Journal of Crowd Science Volume 5 ; 5 >
-    au < exists ; 2022 ; International Journal of Crowd Science Volume 6 ; 6 >
-    au < expected ; 2023 ; International Journal of Crowd Science Volume 7 ; 7 >
 
   }
 
@@ -15092,12 +15090,6 @@
     au < released ; 2015 ; Journal of Centrum Catherdra Volume 8 ; 8 >
     au < released ; 2016 ; Journal of Centrum Catherdra Volume 9 ; 9 >
     au < released ; 2017 ; Journal of Centrum Catherdra Volume 10 ; 10 >
-    au < exists ; 2018 ; Journal of Centrum Catherdra Volume 11 ; 11 >
-    au < exists ; 2019 ; Journal of Centrum Catherdra Volume 12 ; 12 >
-    au < exists ; 2020 ; Journal of Centrum Catherdra Volume 13 ; 13 >
-    au < exists ; 2021 ; Journal of Centrum Catherdra Volume 14 ; 14 >
-    au < exists ; 2022 ; Journal of Centrum Catherdra Volume 15 ; 15 >
-    au < expected ; 2023 ; Journal of Centrum Catherdra Volume 16 ; 16 >
 
   }
 
@@ -15322,9 +15314,6 @@
     au < released ; 2018 ; Journal of Tourism Analysis: Revista de Análisis Turístico Volume 25 ; 25 >
     au < released ; 2019 ; Journal of Tourism Analysis: Revista de Análisis Turístico Volume 26 ; 26 >
     au < released ; 2020 ; Journal of Tourism Analysis: Revista de Análisis Turístico Volume 27 ; 27 >
-    au < exists ; 2021 ; Journal of Tourism Analysis: Revista de Análisis Turístico Volume 28 ; 28 >
-    au < exists ; 2022 ; Journal of Tourism Analysis: Revista de Análisis Turístico Volume 29 ; 29 >
-    au < expected ; 2023 ; Journal of Tourism Analysis: Revista de Análisis Turístico Volume 30 ; 30 >
 
   }
 
@@ -15733,10 +15722,9 @@
     au < released ; 2017 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 14 ; 14 >
     au < released ; 2018 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 15 ; 15 >
     au < released ; 2019 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 16 ; 16 >
-    au < released ; 2020 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 17 ; 17 >
-    au < released ; 2021 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 18 ; 18 >
-    au < exists ; 2022 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 19 ; 19 >
-    au < expected ; 2023 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 20 ; 20 >
+    au < released ; 2021 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 17 ; 17 >
+    au < released ; 2022 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 18 ; 18 >
+    au < expected ; 2023 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 19 ; 19 >
 
   }
 
