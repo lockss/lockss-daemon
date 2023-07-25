@@ -41,7 +41,7 @@
     param[base_url] = https://bjeps.alkafeel.edu.iq/
     param[journal_abbr] = journal
 
-    au < ready ; exists ; 2022 ; Al-Bahir Journal for Engineering and Pure Sciences Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2022 ; Al-Bahir Journal for Engineering and Pure Sciences Volume 1 ; 1 ; >
     au < crawling ; exists ; 2023 ; Al-Bahir Journal for Engineering and Pure Sciences Volume 2 ; 2 ; >
 
   }
