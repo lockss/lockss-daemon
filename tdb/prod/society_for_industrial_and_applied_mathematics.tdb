@@ -79,31 +79,40 @@
   {
 
     title <
+      name = Journal of the Society for Industrial and Applied Mathematics ;
+      issn = 0368-4245
+    >
+
+    {
+      param[journal_id] = smjmap.1
+
+      au < manifest ; 1953 ; Journal of the Society for Industrial and Applied Mathematics Volume 1 ; 1 ; https://epubs.siam.org/ >
+      au < manifest ; 1954 ; Journal of the Society for Industrial and Applied Mathematics Volume 2 ; 2 ; https://epubs.siam.org/ >
+      au < manifest ; 1955 ; Journal of the Society for Industrial and Applied Mathematics Volume 3 ; 3 ; https://epubs.siam.org/ >
+      au < manifest ; 1956 ; Journal of the Society for Industrial and Applied Mathematics Volume 4 ; 4 ; https://epubs.siam.org/ >
+      au < manifest ; 1957 ; Journal of the Society for Industrial and Applied Mathematics Volume 5 ; 5 ; https://epubs.siam.org/ >
+      au < manifest ; 1958 ; Journal of the Society for Industrial and Applied Mathematics Volume 6 ; 6 ; https://epubs.siam.org/ >
+      au < manifest ; 1959 ; Journal of the Society for Industrial and Applied Mathematics Volume 7 ; 7 ; https://epubs.siam.org/ >
+      au < manifest ; 1960 ; Journal of the Society for Industrial and Applied Mathematics Volume 8 ; 8 ; https://epubs.siam.org/ >
+      au < manifest ; 1961 ; Journal of the Society for Industrial and Applied Mathematics Volume 9 ; 9 ; https://epubs.siam.org/ >
+      au < manifest ; 1962 ; Journal of the Society for Industrial and Applied Mathematics Volume 10 ; 10 ; https://epubs.siam.org/ >
+      au < manifest ; 1963 ; Journal of the Society for Industrial and Applied Mathematics Volume 11 ; 11 ; https://epubs.siam.org/ >
+      au < manifest ; 1964 ; Journal of the Society for Industrial and Applied Mathematics Volume 12 ; 12 ; https://epubs.siam.org/ >
+      au < manifest ; 1965 ; Journal of the Society for Industrial and Applied Mathematics Volume 13 ; 13 ; https://epubs.siam.org/ >
+    }
+
+  }
+
+  {
+
+    title <
       name = Journal on Applied Mathematics ;
       issn = 0036-1399 ;
       eissn = 1095-712X
     >
 
     {
-      param[journal_id] = smjmap.1
-
-      au < manifest ; 1953 ; Journal on Applied Mathematics Volume 1 ; 1 ; https://epubs.siam.org/ > 
-      au < manifest ; 1954 ; Journal on Applied Mathematics Volume 2 ; 2 ; https://epubs.siam.org/ > 
-      au < manifest ; 1955 ; Journal on Applied Mathematics Volume 3 ; 3 ; https://epubs.siam.org/ > 
-      au < manifest ; 1956 ; Journal on Applied Mathematics Volume 4 ; 4 ; https://epubs.siam.org/ > 
-      au < manifest ; 1957 ; Journal on Applied Mathematics Volume 5 ; 5 ; https://epubs.siam.org/ > 
-      au < manifest ; 1958 ; Journal on Applied Mathematics Volume 6 ; 6 ; https://epubs.siam.org/ > 
-      au < manifest ; 1959 ; Journal on Applied Mathematics Volume 7 ; 7 ; https://epubs.siam.org/ > 
-      au < manifest ; 1960 ; Journal on Applied Mathematics Volume 8 ; 8 ; https://epubs.siam.org/ > 
-      au < manifest ; 1961 ; Journal on Applied Mathematics Volume 9 ; 9 ; https://epubs.siam.org/ > 
-      au < manifest ; 1962 ; Journal on Applied Mathematics Volume 10 ; 10 ; https://epubs.siam.org/ > 
-      au < manifest ; 1963 ; Journal on Applied Mathematics Volume 11 ; 11 ; https://epubs.siam.org/ > 
-      au < manifest ; 1964 ; Journal on Applied Mathematics Volume 12 ; 12 ; https://epubs.siam.org/ > 
-      au < manifest ; 1965 ; Journal on Applied Mathematics Volume 13 ; 13 ; https://epubs.siam.org/ > 
-
-    }
-
-    {
+      #volumes 1-13 are in the previous block.
       param[journal_id] = smjmap
     
       au < manifest ; 1966 ; Journal on Applied Mathematics Volume 14 ; 14 ; https://epubs.siam.org/ > 
