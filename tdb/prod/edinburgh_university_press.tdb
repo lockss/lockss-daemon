@@ -2939,4 +2939,55 @@
 
   }
 
+  {
+
+    title <
+      name = International Review of Scottish Studies ;
+      issn = 1923-5755 ;
+      eissn = 1923-5763 ;
+      issnl = 1923-5755
+     >
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
+    param[journal_id] = irss
+
+    au < exists ; 2023 ; International Review of Scottish Studies Volume 48 ; 48 ; https://www.euppublishing.com/ >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Arabic Sociolinguistics ;
+      issn = 2755-1911 ;
+      eissn = 2755-192X ;
+      issnl = 2755-1911
+     >
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
+    param[journal_id] = arabic
+
+    au < exists ; 2023 ; Journal of Arabic Sociolinguistics Volume 1 ; 1 ; https://www.euppublishing.com/ >
+
+  }
+
+  {
+
+    title <
+      name = The New Americanist ;
+      issn = 2545-3556 ;
+      eissn = 2753-6521 ;
+      issnl = 2545-3556
+     >
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
+    param[journal_id] = tna
+
+    au < exists ; 2023 ; The New Americanist Volume 2 ; 2 ; https://www.euppublishing.com/ >
+
+  }
+
 }
