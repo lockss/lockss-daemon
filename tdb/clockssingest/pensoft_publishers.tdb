@@ -447,8 +447,6 @@
       au < finished ; crawling ; 2019 ; 2019 ; Arctic Environmental Research Volume 2019 ; 2019 ; https://aer.pensoft.net/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Arctic Environmental Research Volume 2020 ; 2020 ; https://aer.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Arctic Environmental Research Volume 2021 ; 2021 ; https://aer.pensoft.net/ ; >
-      au < expected ; exists ; 2022 ; 2022 ; Arctic Environmental Research Volume 2022 ; 2022 ; https://aer.pensoft.net/ ; >
-      au < expected ; exists ; 2023 ; 2023 ; Arctic Environmental Research Volume 2023 ; 2023 ; https://aer.pensoft.net/ ; >
 
   }
 
@@ -490,7 +488,7 @@
       au < finished ; crawling ; 2018 ; 2018 ; BioDiscovery Volume 2018 ; 2018 ; https://biodiscovery.pensoft.net/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; 2019 ; BioDiscovery Volume 2019 ; 2019 ; https://biodiscovery.pensoft.net/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; BioDiscovery Volume 2020 ; 2020 ; https://biodiscovery.pensoft.net/ ; >
-      au < expected ; exists ; 2021 ; 2021 ; BioDiscovery Volume 2021 ; 2021 ; https://biodiscovery.pensoft.net/ ; >
+
       au < deepCrawl ; exists ; 2022 ; 2022 ; BioDiscovery Volume 2022 ; 2022 ; https://biodiscovery.pensoft.net/ ; >
       au < expected ; exists ; 2023 ; 2023 ; BioDiscovery Volume 2023 ; 2023 ; https://biodiscovery.pensoft.net/ ; >
 
@@ -541,6 +539,7 @@
       au < manifest ; exists ; 2023 ; 2023 ; Check List Volume 2023 ; 2023 ; https://checklist.pensoft.net/ ; >
 
   }
+
 #  {
 #
 #      title <
@@ -872,7 +871,6 @@
       au < finished ; crawling ; 2019 ; 2019 ; Rethinking Ecology Volume 2019 ; 2019 ; https://rethinkingecology.pensoft.net/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Rethinking Ecology Volume 2020 ; 2020 ; https://rethinkingecology.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Rethinking Ecology Volume 2021 ; 2021 ; https://rethinkingecology.pensoft.net/ ; >
-      au < expected ; exists ; 2023 ; 2023 ; Rethinking Ecology Volume 2023 ; 2023 ; https://rethinkingecology.pensoft.net/ ; >
 
   }
 
@@ -898,6 +896,7 @@
       au < manifest ; exists ; 2023 ; 2023 ; Russian Journal of Economics Volume 2023 ; 2023 ; https://rujec.org/ ; >
 
   }
+
 #  {
 #
 #      title <
@@ -928,7 +927,6 @@
       au < finished ; crawling ; 2019 ; 2019 ; Viticulture Data Journal Volume 2019 ; 2019 ; https://vdj.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Viticulture Data Journal Volume 2020 ; 2020 ; https://vdj.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Viticulture Data Journal Volume 2021 ; 2021 ; https://vdj.pensoft.net/ ; >
-      au < expected ; exists ; 2023 ; 2023 ; Viticulture Data Journal Volume 2023 ; 2023 ; https://vdj.pensoft.net/ ; >
 
   }
 
@@ -949,7 +947,6 @@
       au < finished ; crawling ; 2019 ; 36 ; Zoologia Volume 2019 ; 2019 ; https://zoologia.pensoft.net/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; 37 ; Zoologia Volume 2020 ; 2020 ; https://zoologia.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2021 ; 38 ; Zoologia Volume 2021 ; 2021 ; https://zoologia.pensoft.net/ ; >
-      au < expected ; exists ; 2023 ; 39 ; Zoologia Volume 2023 ; 2023 ; https://zoologia.pensoft.net/ ; >
 
   }
 
@@ -983,8 +980,6 @@
 
       au < finished ; crawling ; 2020 ; 2020 ; Acta Biologica Sibirica Volume 2020 ; 2020 ; https://abs.pensoft.net/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Acta Biologica Sibirica Volume 2021 ; 2021 ; https://abs.pensoft.net/ ; >
-      au < expected ; exists ; 2022 ; 2022 ; Acta Biologica Sibirica Volume 2022 ; 2022 ; https://abs.pensoft.net/ ; >
-      au < expected ; exists ; 2023 ; 2023 ; Acta Biologica Sibirica Volume 2023 ; 2023 ; https://abs.pensoft.net/ ; >
 
   }
 
@@ -1322,8 +1317,6 @@
       param[au_oai_set] = biosystecol
 
       au < crawling ; exists ; 2021 ; 2021 ; Biosystematics and Ecology Volume 2021 ; 2021 ; https://biosystecol.oeaw.ac.at/ ; >
-      au < expected ; exists ; 2022 ; 2022 ; Biosystematics and Ecology Volume 2022 ; 2022 ; https://biosystecol.oeaw.ac.at/ ; >
-      au < expected ; exists ; 2023 ; 2023 ; Biosystematics and Ecology Volume 2023 ; 2023 ; https://biosystecol.oeaw.ac.at/ ; >
 
   }
 

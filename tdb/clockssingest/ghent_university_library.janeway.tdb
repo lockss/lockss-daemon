@@ -41,7 +41,7 @@
       au < crawling ; exists ; 2019 ; 2019 ; 2019 ; Authorship Volume 2019 ; >
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Authorship Volume 2020 ; >
       au < crawling ; exists ; 2021 ; 2021 ; 2021 ; Authorship Volume 2021 ; >
-      au < expected ; exists ; 2022 ; 2022 ; 2022 ; Authorship Volume 2022 ; >
+      au < exists ; exists ; 2022 ; 2022 ; 2022 ; Authorship Volume 2022 ; >
       au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Authorship Volume 2023 ; >
 
   }
@@ -126,7 +126,7 @@
 
       #published 2019-present
       param[base_url] = https://jolcel.ugent.be/
-      param[journal_id] = jolcel
+      #param[journal_id] = jolcel
 
       au < manifest ; exists ; 2019 ; 2019 ; 2019 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2019 ; >
       au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2020 ; >
@@ -555,7 +555,7 @@
         eissn = 0774-286X
       >
 
-      #published 1894-2022
+      #published 1894-present
       param[journal_id] = hmgog
 
       au < exists ; exists ; 1894 ; 1894 ; 1894 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1894 ; >
