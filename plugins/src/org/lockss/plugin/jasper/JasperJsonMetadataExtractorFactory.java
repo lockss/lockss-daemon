@@ -423,12 +423,23 @@ public class JasperJsonMetadataExtractorFactory implements FileMetadataExtractor
               // ONLY USE JSON DATA FOR METADATA
               log.debug3("=====Handle issns: setting value from JSON") ;
               if  (issnFromJsonPissn != null) {
-                log.debug3("=====Handle issns: setting value from JSON issnFromJsonPissn = " +  issnFromSrcUrl);
+                log.debug3("=====Handle issns: setting ISSN value from JSON issnFromJsonPissn = " +  issnFromSrcUrl);
                 am.put(MetadataField.FIELD_ISSN, issnFromJsonPissn);
+
+                if ( eissnFromJsonEissn == null) {
+                  log.debug3("=====Handle issns: setting ESSIN value from JSON issnFromJsonPissn = " +  eissnFromJsonEissn);
+                  am.put(MetadataField.FIELD_EISSN, issnFromJsonPissn);
+                }
               }
               if ( eissnFromJsonEissn != null) {
-                log.debug3("=====Handle issns: setting value from JSON eissnFromJsonEissn = " +  eissnFromJsonEissn);
+                log.debug3("=====Handle issns: setting EISSN value from JSON eissnFromJsonEissn = " +  eissnFromJsonEissn);
                 am.put(MetadataField.FIELD_EISSN, eissnFromJsonEissn);
+
+                if  (issnFromJsonPissn == null) {
+                  log.debug3("=====Handle issns: setting ISSN value from JSON eissnFromJsonEissn = = " +  issnFromSrcUrl);
+                  am.put(MetadataField.FIELD_ISSN, eissnFromJsonEissn);
+
+                }
               }
             }
             // if issnFromSrcUrlMatchJson is false, which means the issn/eissn of the folder is does not match any pissn/eissn in JSON
