@@ -2144,7 +2144,7 @@ while (my $line = <>) {
       } else {
           $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
       }
-      sleep(2);
+      sleep(1);
 
   } elsif ($plugin eq "ClockssAmericanMathematicalSocietyPlugin") {
     $url = sprintf("%sclockssdata/?p=%s&y=%d",
