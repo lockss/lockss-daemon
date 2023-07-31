@@ -1,0 +1,35 @@
+{
+
+  publisher <
+    name = Australasian Journal of Plastic Surgery  ;
+    info[contract] = 2023 ;
+    info[back] = 2020 ;
+    info[min_year] = 2020 ;
+    info[tester] = 5 ;
+    info[platform] = Scholastica https://scholasticahq.com/
+  >
+
+    plugin = needs.plugin
+    implicit < status ; status2 ; year ; param[year] ; param[doi] ; name ; volume ; hidden[proxy] >
+
+  {
+  
+    title < 
+      name = Australasian Journal of Plastic Surgery ;
+      issn = 0122-8706 ;
+      eissn = 2209-170X 
+    >
+
+      #published 2020 to present
+      {
+      param[base_url] = https://ajops.com/
+
+      au < exists ; exists ; 2020 ; 2020 ; 10.34239/ajops.v3 ; Australasian Journal of Plastic Surgery Volume 2020 ; 3 ; >
+      au < exists ; exists ; 2021 ; 2021 ; 10.34239/ajops.v4 ; Australasian Journal of Plastic Surgery Volume 2021 ; 4 ; >
+      au < exists ; exists ; 2022 ; 2022 ; 10.34239/ajops.v5 ; Australasian Journal of Plastic Surgery Volume 2022 ; 5 ; >
+      au < exists ; exists ; 2023 ; 2023 ; 10.34239/ajops.v6 ; Australasian Journal of Plastic Surgery Volume 2023 ; 6 ; >
+
+      }
+  }
+
+}
