@@ -1005,6 +1005,9 @@ public class ArchivalUnitStatus
       res.add(new StatusTable.SummaryInfo("Volume",
 					  ColumnDescriptor.TYPE_STRING,
 					  au.getName()));
+      res.add(new StatusTable.SummaryInfo("AUID",
+                                          ColumnDescriptor.TYPE_STRING,
+                                          au.getAuId()));
       TdbAu tau = au.getTdbAu();
       if (tau != null) {
 	addStringIfNotNull(res, tau.getJournalTitle(), "Journal Title");
