@@ -37,7 +37,7 @@ import java.util.regex.*;
 
 import org.apache.commons.lang3.StringUtils;
 import org.lockss.daemon.PluginException;
-import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.*;
 
 // subclass the BaseUrlHttpHttpsUrlNormalizer - which redirects protocol to that of declared base_url
 // and then does whatever specific "additionalNormalization that is specified
