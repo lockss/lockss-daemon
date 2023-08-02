@@ -156,12 +156,12 @@
         plugin = org.lockss.plugin.ojs3.Ojs3Plugin
         attr[start_stem] = index.php/
 
-        au < manifest ; 2015 ; Zwingliana Volume 42 ; 42 ; 2015 ; https://www.zwingliana.ch/ >
-        au < manifest ; 2016 ; Zwingliana Volume 43 ; 43 ; 2016 ; https://www.zwingliana.ch/ >
-        au < manifest ; 2017 ; Zwingliana Volume 44 ; 44 ; 2017 ; https://www.zwingliana.ch/ >
-        au < doNotProcess ; 2018 ; Zwingliana Volume 45 [abstract only] ; 44 ; 2017 ; https://www.zwingliana.ch/ >
-        au < doNotProcess ; 2019 ; Zwingliana Volume 46 [abstract only] ; 44 ; 2017 ; https://www.zwingliana.ch/ >
-        au < doNotProcess ; 2020 ; Zwingliana Volume 47 [abstract only] ; 44 ; 2017 ; https://www.zwingliana.ch/ >
+        au < ready ; 2015 ; Zwingliana Volume 42 ; 42 ; 2015 ; https://www.zwingliana.ch/ >
+        au < ready ; 2016 ; Zwingliana Volume 43 ; 43 ; 2016 ; https://www.zwingliana.ch/ >
+        au < ready ; 2017 ; Zwingliana Volume 44 ; 44 ; 2017 ; https://www.zwingliana.ch/ >
+        au < doNotProcess ; 2018 ; Zwingliana Volume 45 [abstract only] ; 45 ; 2018 ; https://www.zwingliana.ch/ >
+        au < doNotProcess ; 2019 ; Zwingliana Volume 46 [abstract only] ; 46 ; 2019 ; https://www.zwingliana.ch/ >
+        au < doNotProcess ; 2020 ; Zwingliana Volume 47 [abstract only] ; 47 ; 2020 ; https://www.zwingliana.ch/ >
       }
 
       {
