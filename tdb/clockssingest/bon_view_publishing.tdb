@@ -24,7 +24,7 @@
       #Manifest page exists for 2022 AU but is malformed with a pre-publication volume
 
       au < superseded ; exists ; 2022 ; Artificial Intelligence and Applications Volume 1 [superseded] ; 1 ; 2022 ; >
-      au < manifest ; exists ; 2023 ; Artificial Intelligence and Applications Volume 1 ; 1 ; 2023 ; >
+      au < testing ; exists ; 2023 ; Artificial Intelligence and Applications Volume 1 ; 1 ; 2023 ; >
 
   }
 
@@ -38,7 +38,7 @@
       param[journal_id] = JCCE
 
       au < finished ; manifest ; 2022 ; Journal of Computational and Cognitive Engineering Volume 1 ; 1 ; 2022 ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2023 ; Journal of Computational and Cognitive Engineering Volume 2 ; 2 ; 2023 ; >
+      au < testing ; exists ; 2023 ; Journal of Computational and Cognitive Engineering Volume 2 ; 2 ; 2023 ; >
 
   }
 
@@ -51,7 +51,7 @@
       param[journal_id] = jdsis
 
       au < expected ; exists ; 2022 ; Journal of Data Science and Intelligence Systems Volume 1 ; 1 ; 2022 ; >
-      au < manifest ; exists ; 2023 ; Journal of Data Science and Intelligence Systems Volume 2 ; 2 ; 2023 ; >
+      au < testing ; exists ; 2023 ; Journal of Data Science and Intelligence Systems Volume 2 ; 2 ; 2023 ; >
 
   }
 
@@ -63,7 +63,7 @@
     >
       param[journal_id] = GLCE
 
-      au < manifest ; exists ; 2023 ; Green and Low-Carbon Economy Volume 1 ; 1 ; 2023 ; >
+      au < testing ; exists ; 2023 ; Green and Low-Carbon Economy Volume 1 ; 1 ; 2023 ; >
 
   }
 
