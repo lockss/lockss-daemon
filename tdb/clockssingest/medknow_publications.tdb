@@ -5638,7 +5638,7 @@
       au < finished ; frozen ; 2017 ; Clinical Trials in Orthopedic Disorders Volume 2 ; 2017 ; 2 ; http://www.clinicalto.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2018 ; Clinical Trials in Orthopedic Disorders Volume 3 ; 2018 ; 3 ; http://www.clinicalto.com/ ; ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2019 ; Clinical Trials in Orthopedic Disorders Volume 4 ; 2019 ; 4 ; https://www.clinicalto.com/ ; ; >
-      au < superseded ; exists ; 2020 ; Clinical Trials in Orthopedic Disorders Volume 5 [Superseded] ; 2020 ; 5 ; https://www.clinicalto.com/ ; ; >
+      au < superseded ; exists ; 2020 ; Clinical Trials in Orthopedic Disorders Volume 5 [superseded] ; 2020 ; 5 ; https://www.clinicalto.com/ ; ; >
 
   }
 
@@ -7907,6 +7907,7 @@
       }
       {
       param[journal_issn] = 2588-9273
+      au < doNotProcess ; doNotProcess ; 2018 ; Journal of Radiation and Cancer Research Volume 9 ; 2018 ; 9 ; https://www.journalrcr.org/ ; ; >
       au < crawling ; exists ; 2019 ; Journal of Radiation and Cancer Research Volume 10 ; 2019 ; 10 ; https://www.journalrcr.org/ ; ; >
       au < crawling ; exists ; 2020 ; Journal of Radiation and Cancer Research Volume 11 ; 2020 ; 11 ; https://www.journalrcr.org/ ; ; >
       au < crawling ; exists ; 2021 ; Journal of Radiation and Cancer Research Volume 12 ; 2021 ; 12 ; https://www.journalrcr.org/ ; ; >
@@ -11838,6 +11839,8 @@
       }
       {
       param[journal_issn] = 2772-8382
+      au < doNotProcess ; doNotProcess ; 2021 ; Annals of Oncology Research and Therapy Volume 1 ; 2021 ; 1 ; https://www.aort.info/ ; ; >
+      au < doNotProcess ; doNotProcess ; 2022 ; Annals of Oncology Research and Therapy Volume 2 ; 2022 ; 2 ; https://www.aort.info/ ; ; >
       au < manifest ; exists ; 2023 ; Annals of Oncology Research and Therapy Volume 3 ; 2023 ; 3 ; https://www.aort.info/ ; ; >
       }
   }

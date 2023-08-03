@@ -7443,6 +7443,13 @@
 
 #      param[base_url] = http://www.journalrcr.org/
       {
+      param[journal_issn] = 0973-0168
+
+      au < down ; 2016 ; Journal of Radiation and Cancer Research Volume 7 ; 2016 ; 7 ; http://www.journalrcr.org/ >
+      au < down ; 2017 ; Journal of Radiation and Cancer Research Volume 8 ; 2017 ; 8 ; http://www.journalrcr.org/ >
+      au < doNotProcess ; 2018 ; Journal of Radiation and Cancer Research Volume 9 ; 2018 ; 9 ; https://www.journalrcr.org/ >
+      }
+      {
       param[journal_issn] = 2588-9273
 
       au < released ; 2018 ; Journal of Radiation and Cancer Research Volume 9 ; 2018 ; 9 ; https://www.journalrcr.org/ >
@@ -7451,13 +7458,6 @@
       au < released ; 2021 ; Journal of Radiation and Cancer Research Volume 12 ; 2021 ; 12 ; https://www.journalrcr.org/ >
       au < released ; 2022 ; Journal of Radiation and Cancer Research Volume 13 ; 2022 ; 13 ; https://www.journalrcr.org/ >
       au < manifest ; 2023 ; Journal of Radiation and Cancer Research Volume 14 ; 2023 ; 14 ; https://www.journalrcr.org/ >
-      }
-      {
-      param[journal_issn] = 0973-0168
-
-      au < down ; 2016 ; Journal of Radiation and Cancer Research Volume 7 ; 2016 ; 7 ; http://www.journalrcr.org/ >
-      au < down ; 2017 ; Journal of Radiation and Cancer Research Volume 8 ; 2017 ; 8 ; http://www.journalrcr.org/ >
-      au < doNotProcess ; 2018 ; Journal of Radiation and Cancer Research Volume 9 ; 2018 ; 9 ; https://www.journalrcr.org/ >
       }
   }
 
@@ -11369,14 +11369,21 @@
         issn = 2772-8382 ;
         eissn = 2772-8390
       >
+      {
+      param[journal_issn] = WKMP-0208
+      #param[base_url] = https://www.aort.info/
 
+      au < doNotProcess ; 2021 ; Annals of Oncology Research and Therapy Volume 1 ; 2021 ; 1 ; https://www.aort.info/ >
+      au < doNotProcess ; 2022 ; Annals of Oncology Research and Therapy Volume 2 ; 2022 ; 2 ; https://www.aort.info/ >
+      }
+      {
       param[journal_issn] = 2772-8382
       #param[base_url] = https://www.aort.info/
 
       au < released ; 2021 ; Annals of Oncology Research and Therapy Volume 1 ; 2021 ; 1 ; https://www.aort.info/ >
       au < manifest ; 2022 ; Annals of Oncology Research and Therapy Volume 2 ; 2022 ; 2 ; https://www.aort.info/ >
       au < manifest ; 2023 ; Annals of Oncology Research and Therapy Volume 3 ; 2023 ; 3 ; https://www.aort.info/ >
-
+      }
   }
 
 
