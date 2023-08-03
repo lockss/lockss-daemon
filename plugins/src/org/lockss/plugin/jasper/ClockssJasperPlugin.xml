@@ -1,6 +1,6 @@
 <!--
 
-Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -40,11 +40,11 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>7</string>
+        <string>8</string>
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>Jasper Plugin (CLOCKSS)</string>
+        <string>Project JASPER Plugin (CLOCKSS)</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -96,7 +96,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Jasper Plugin (CLOCKSS), Base URL %s, Item %s", base_url, item</string>
+        <string>"Project JASPER Plugin (CLOCKSS), Base URL %s, Item %s", base_url, item</string>
     </entry>
     <entry>
         <string>au_def_pause_time</string>
@@ -120,6 +120,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>1,"^%sProjectJasper\?item=", base_url</string>
         </list>
     </entry>
+<!--
     <entry>
         <string>au_start_url</string>
         <string>"%sProjectJasper?item=%s", base_url, item</string>
@@ -128,6 +129,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_permission_url</string>
         <string>"%srobots.txt", base_url</string>
     </entry>
+-->
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
@@ -187,6 +189,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>.*\.json$,application/json</string>
         </list>
     </entry>
+<!--
     <entry>
         <string>clockss_override</string>
         <map>
@@ -208,4 +211,5 @@ POSSIBILITY OF SUCH DAMAGE.
             </entry>
         </map>
     </entry>
+-->
 </map>
