@@ -160,7 +160,7 @@
     au < doesNotExist ; doesNotExist ; 2020 ; 9781624105937 ; ; 9781624105937 ; Design of Rockets and Space Launch Vehicles ; https://arc.aiaa.org/ ; >
     au < doesNotExist ; doesNotExist ; 2020 ; 9781624105999 ; ; 9781624105999 ; Active Spanwise Lift Control: A Distributed Parameter Approach ; https://arc.aiaa.org/ ; >
     au < doesNotExist ; doesNotExist ; 2021 ; 9781624105920 ; ; 9781624105920 ; Operational Aircraft Performance and Flight Test Practices ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2016 ; 9781624106293 ; 9781624103261 ; 9781624106293 ; Composite Materials for Aircraft Structures, Third Edition (9781624106293) ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 2016 ; 9781624103261 ; 9781624106293 ; 9781624106293 ; Composite Materials for Aircraft Structures, Third Edition (9781624106293) ; https://arc.aiaa.org/ ; >
 
     #Not available for download, see for example: https://arc-aiaa-org.stanford.idm.oclc.org/doi/book/10.2514/4.867057
     au < doesNotExist ; doesNotExist ; 2009 ; 9781600867385 ; 9781600867057 ; 9781600867385 ; Aircraft Engine Controls: Design, System Analysis, and Health Monitoring (9781600867385) ; https://arc.aiaa.org/ ; >
@@ -788,20 +788,22 @@
     au < finished ; frozen ; 2021 ;  ; 9781624106156 ; 9781624106156 ; The Business of Aerospace: Industry Dynamics, Corporate Strategies, Innovation Models, and the Big(ger) Picture ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2021 ;  ; 9781624106217 ; 9781624106217 ; Gamera: A Human Powered Helicopter - In Pursuit of an Aviation Milestone ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2021 ;  ; 9781624106255 ; 9781624106255 ; The RAH-66 Comanche Helicopter ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
-    au < manifest ; exists ; 1978 ; 9781624105104 ; 9781563472770 ; 9781624105104 ; A Case Study in Aircraft Design: The Boeing 727 (9781624105104) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 1978 ; 9781624104732 ; 9780915928279 ; 9781624104732 ; Space Transportation Systems (9781624104732) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 1979 ; 9781624104718 ; 9780915928347 ; 9781624104718 ; Potential Applications of Aerospace Technology in the Marine Transport Industry (9781624104718) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 1979 ; 9781624104763 ; 9780915928316 ; 9781624104763 ; Utilization of Alternative Fuels for Transportation (9781624104763) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 1981 ; 9781624104749 ; 9780915928590 ; 9781624104749 ; Aeronautics in China (9781624104749) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 1982 ; 9781624104725 ; 9780915928699 ; 9781624104725 ; Aerospace Technology and Commercial Nuclear Power (9781624104725) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 1982 ; 9781624104756 ; 9780915928682 ; 9781624104756 ; Global Implications of Space Activities (9781624104756) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 1984 ; 9781624104695 ; 9780915928880 ; 9781624104695 ; Radar Cross Section Lectures (9781624104695) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1993 ; 9781624104855 ; 9781563470615 ; 9781624104855 ; Space Biology and Medicine - Volume I, Space and Its Exploration (9781624104855) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1994 ; 9781624104664 ; 9781563470820 ; 9781624104664 ; Space Biology and Medicine - Volume II, Life Support and Habitability (9781624104664) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1996 ; 9781624104671 ; 9781563471803 ; 9781624104671 ; Space Biology and Medicine - Volume III Books 1 & 2 - Humans in Spaceflight (9781624104671) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2004 ; 9781624104862 ; 9781563476600 ; 9781624104862 ; Space Biology and Medicine - Volume IV, Health, Performance, and Safety of Space Crews (9781624104862) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2009 ; 9781624104879 ; 9781563479960 ; 9781624104879 ; Space Biology and Medicine - Volume V, U.S. and Russian Cooperation in Space Biology and Medicine (9781624104879) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2022 ; 9781624106378 ; 9781624106361 ; 9781624106378 ; Planetary Exploration with Ingenuity and Dragonfly (9781624106378) ; https://arc.aiaa.org/ ; >
+
+    au < doNotProcess ; doNotProcess ; 1978 ; 9781624105104 ; 9781563472770 ; 9781624105104 ; A Case Study in Aircraft Design: The Boeing 727 (9781624105104) ; https://arc.aiaa.org/ ; > #duplicate
+    au < doNotProcess ; doNotProcess ; 1978 ; 9781624104732 ; 9780915928279 ; 9781624104732 ; Space Transportation Systems (9781624104732) ; https://arc.aiaa.org/ ; > #duplicate
+    au < doNotProcess ; doNotProcess ; 1979 ; 9781624104718 ; 9780915928347 ; 9781624104718 ; Potential Applications of Aerospace Technology in the Marine Transport Industry (9781624104718) ; https://arc.aiaa.org/ ; > #duplicate
+    au < doNotProcess ; doNotProcess ; 1979 ; 9781624104763 ; 9780915928316 ; 9781624104763 ; Utilization of Alternative Fuels for Transportation (9781624104763) ; https://arc.aiaa.org/ ; > #duplicate
+    au < doNotProcess ; doNotProcess ; 1981 ; 9781624104749 ; 9780915928590 ; 9781624104749 ; Aeronautics in China (9781624104749) ; https://arc.aiaa.org/ ; > #duplicate
+    au < doNotProcess ; doNotProcess ; 1982 ; 9781624104725 ; 9780915928699 ; 9781624104725 ; Aerospace Technology and Commercial Nuclear Power (9781624104725) ; https://arc.aiaa.org/ ; > #duplicate
+    au < doNotProcess ; doNotProcess ; 1982 ; 9781624104756 ; 9780915928682 ; 9781624104756 ; Global Implications of Space Activities (9781624104756) ; https://arc.aiaa.org/ ; > #duplicate
+
+    au < doNotProcess ; doNotProcess ; 1984 ; 9781624104695 ; 9780915928880 ; 9781624104695 ; Radar Cross Section Lectures (9781624104695) ; https://arc.aiaa.org/ ; > #duplicate
+    au < superseded ; exists ; 1993 ; 9781563470615 ; 9781624104855 ; 9781624104855 ; Space Biology and Medicine - Volume I, Space and Its Exploration (9781624104855) [superseded] ; https://arc.aiaa.org/ ; > #duplicate
+    au < superseded ; exists ; 1994 ; 9781563470820 ; 9781624104664 ; 9781624104664 ; Space Biology and Medicine - Volume II, Life Support and Habitability (9781624104664) [superseded] ; https://arc.aiaa.org/ ; > #duplicate
+    au < superseded ; exists ; 1996 ; 9781563471803 ; 9781624104671 ; 9781624104671 ; Space Biology and Medicine - Volume III Books 1 & 2 - Humans in Spaceflight (9781624104671) [superseded] ; https://arc.aiaa.org/ ; > #duplicate
+    au < superseded ; exists ; 2004 ; 9781563476600 ; 9781624104862 ; 9781624104862 ; Space Biology and Medicine - Volume IV, Health, Performance, and Safety of Space Crews (9781624104862) [superseded] ; https://arc.aiaa.org/ ; > #duplicate
+    au < superseded ; exists ; 2009 ; 9781563479960 ; 9781624104879 ; 9781624104879 ; Space Biology and Medicine - Volume V, U.S. and Russian Cooperation in Space Biology and Medicine (9781624104879) [superseded] ; https://arc.aiaa.org/ ; > #duplicate
+    au < superseded ; exists ; 2022 ; 9781624106361 ; 9781624106378; 9781624106378 ; Planetary Exploration with Ingenuity and Dragonfly (9781624106378) [superseded] ; https://arc.aiaa.org/ ; > #duplicate
 
  }
 
