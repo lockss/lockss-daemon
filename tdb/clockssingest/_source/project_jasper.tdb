@@ -16,9 +16,9 @@
 
     title <
       name = 027.7 ;
-      issn = 2296-0597
+      eissn = 2296-0597
     >
-    provider = 027.7 #Correct
+    provider = 027.7
 
     au < manifest ; exists ; 2022 ; 027.7 ; 277_2296-0597 >
 
@@ -30,7 +30,7 @@
       name = Alphaville: Journal of Film and Screen Media ;
       eissn = 2009-4078
     >
-    provider = Alphaville: Journal of Film and Screen Media #Correct
+    provider = Alphaville: Journal of Film and Screen Media
 
     au < readySource ; crawling ; 2022 ; Alphaville: Journal of Film and Screen Media ; Alphaville_2009-4078 >
 
@@ -52,10 +52,10 @@
 
     title <
       name = Colombo Business Journal ;
-      eissn = 2579-2210 ;
-      issn = 1800-363X
+      issn = 1800-363X ;
+      eissn = 2579-2210
     >
-    provider = Faculty of Management and Finance, University of Colombo #Correct
+    provider = Faculty of Management and Finance, University of Colombo
 
     au < manifest ; exists ; 2022 ; Colombo Business Journal ; Colombo_Business_Journal_-_2579-2210 >
 
@@ -67,7 +67,7 @@
       name = Dysona. Life Science ;
       eissn = 2708-6291
     >
-    provider = E-NAMTILA Publishing #Correct
+    provider = E-NAMTILA Publishing
     #Also includes Dysona Applied Sciences
 
     au < manifest ; exists ; 2022 ; Dysona. Life Science ; Daysona_Life_Science_2708-6291 >
@@ -80,7 +80,7 @@
 #      name = Dysona. Applied Sciences ;
 #      eissn = 2708-6283
 #    >
-#    provider = E-NAMTILA Publishing #Correct
+#    provider = E-NAMTILA Publishing
 #
 #    au < expected ; exists ; 2022 ; Dysona. Applied Sciences ; UNKNOWN >
 #
@@ -92,7 +92,7 @@
       name = Educational Journal of Living Theories ;
       eissn = 2009-1788
     >
-    provider = Educational Journal of Living Theories #Correct
+    provider = Educational Journal of Living Theories
 
     au < manifest ; exists ; 2022 ; Educational Journal of Living Theories ; Educational_Journal_of_Living_Theories__ISSN_2009-1788 >
   }
@@ -103,7 +103,7 @@
       name = Finnish Society for Science Fiction and Fantasy Research ;
       eissn = 2342-2009
     >
-    provider = Finnish Society for Science Fiction and Fantasy Research - Fafnir #Correct
+    provider = Finnish Society for Science Fiction and Fantasy Research - Fafnir
 
     au < manifest ; exists ; 2022 ; Finnish Society for Science Fiction and Fantasy Research ; Fafnir_2342-2009 >
 
@@ -115,7 +115,7 @@
       name = Aposta: Revista de Ciencias Sociales ;
       eissn = 1696-7348
     >
-    provider = Aposta: Revista de Ciencias Sociales #Correct
+    provider = Aposta: Revista de Ciencias Sociales
 
     au < manifest ; exists ; 2022 ; Aposta ; aposta_1696-7348 >
 
@@ -127,7 +127,7 @@
       name = History of Classical Scholarship ;
       eissn = 2632-4091
     >
-    provider = History of Classical Scholarship #Correct
+    provider = History of Classical Scholarship
 
     au < manifest ; exists ; 2022 ; History of Classical Scholarship ; history_of_classical_scholarship_2632-4091 >
 
@@ -137,9 +137,10 @@
 
     title <
       name = Santander, Estudios de Patrimonio ;
-      eissn = 2632-4091
+      issn = 2605-4450 ;
+      eissn = 2605-5317
     >
-    provider = Universidad de Cantabria #Correct
+    provider = Universidad de Cantabria
 
     au < manifest ; exists ; 2022 ; Santander, Estudios de Patrimonio ; santander_estudios_de_patrimonio_2605-5317 >
 
