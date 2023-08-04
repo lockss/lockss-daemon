@@ -143,7 +143,7 @@
       au < finished ; crawling ; 2020 ; British Journal of Radiology Volume 93 ; 93 ; https://www.birpublications.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2021 ; British Journal of Radiology Volume 94 ; 94 ; https://www.birpublications.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; British Journal of Radiology Volume 95 ; 95 ; https://www.birpublications.org/ ; >
-      au < testing ; exists ; 2023 ; British Journal of Radiology Volume 96 ; 96 ; https://www.birpublications.org/ ; >
+      au < ready ; exists ; 2023 ; British Journal of Radiology Volume 96 ; 96 ; https://www.birpublications.org/ ; >
 
     }
     
@@ -170,7 +170,7 @@
       au < finished ; crawling ; 2020 ; BJR|case reports Volume 6 ; 6 ; https://www.birpublications.org/ ; reingest2.clockss.org:8085 >
       au < notReady ; exists ; 2021 ; BJR|case reports Volume 7 ; 7 ; https://www.birpublications.org/ ; > #524 https://www.birpublications.org/specs/ux3/releasedAssets/images/widgets/ad-placeholder/placeholder.png
       au < deepCrawl ; exists ; 2022 ; BJR|case reports Volume 8 ; 8 ; https://www.birpublications.org/ ; >
-      au < testing ; exists ; 2023 ; BJR|case reports Volume 9 ; 9 ; https://www.birpublications.org/ ; >
+      au < ready ; exists ; 2023 ; BJR|case reports Volume 9 ; 9 ; https://www.birpublications.org/ ; >
 
   }
 
@@ -191,7 +191,7 @@
       au < finished ; crawling ; 2020 ; BJR|Open Volume 2 ; 2 ; https://www.birpublications.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; BJR|Open Volume 3 ; 3 ; https://www.birpublications.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; BJR|Open Volume 4 ; 4 ; https://www.birpublications.org/ ; >
-      au < testing ; exists ; 2023 ; BJR|Open Volume 5 ; 5 ; https://www.birpublications.org/ ; >
+      au < ready ; exists ; 2023 ; BJR|Open Volume 5 ; 5 ; https://www.birpublications.org/ ; >
 
   }
 
@@ -274,7 +274,7 @@
       au < finished ; crawling ; 2020 ; Dentomaxillofacial Radiology Volume 49 ; 49 ; https://www.birpublications.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Dentomaxillofacial Radiology Volume 50 ; 50 ; https://www.birpublications.org/ ; >
       au < deepCrawl ; exists ; 2022 ; Dentomaxillofacial Radiology Volume 51 ; 51 ; https://www.birpublications.org/ ; >
-      au < testing ; exists ; 2023 ; Dentomaxillofacial Radiology Volume 52 ; 52 ; https://www.birpublications.org/ ; >
+      au < ready ; exists ; 2023 ; Dentomaxillofacial Radiology Volume 52 ; 52 ; https://www.birpublications.org/ ; >
 
     }
 
