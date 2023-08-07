@@ -68,7 +68,7 @@
     au < doNotProcess ; exists ; 2010 ; Bulletin of the American Meteorological Society Volume 91 ; 91 ; >
     au < doNotProcess ; exists ; 2011 ; Bulletin of the American Meteorological Society Volume 92 ; 92 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Bulletin of the American Meteorological Society Volume 93 ; 93 ; >
-    au < ready ; exists ; 2013 ; Bulletin of the American Meteorological Society Volume 94 ; 94 ; >
+    au < crawling ; exists ; 2013 ; Bulletin of the American Meteorological Society Volume 94 ; 94 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Bulletin of the American Meteorological Society Volume 95 ; 95 ; >
     au < testing ; exists ; 2015 ; Bulletin of the American Meteorological Society Volume 96 ; 96 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Bulletin of the American Meteorological Society Volume 97 ; 97 ; >
@@ -78,7 +78,7 @@
     au < frozen ; exists ; 2020 ; Bulletin of the American Meteorological Society Volume 101 ; 101 ; >
     au < frozen ; exists ; 2021 ; Bulletin of the American Meteorological Society Volume 102 ; 102 ; >
     au < deepCrawl ; exists ; 2022 ; Bulletin of the American Meteorological Society Volume 103 ; 103 ; >
-    au < ready ; exists ; 2023 ; Bulletin of the American Meteorological Society Volume 104 ; 104 ; >
+    au < crawling ; exists ; 2023 ; Bulletin of the American Meteorological Society Volume 104 ; 104 ; >
 
   }
 
@@ -118,7 +118,7 @@
     au < frozen ; exists ; 2020 ; Earth Interactions Volume 24 ; 24 ; >
     au < frozen ; exists ; 2021 ; Earth Interactions Volume 25 ; 25 ; >
     au < deepCrawl ; exists ; 2022 ; Earth Interactions Volume 26 ; 26 ; >
-    au < ready ; exists ; 2023 ; Earth Interactions Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2023 ; Earth Interactions Volume 27 ; 27 ; >
 
   }
 
@@ -232,7 +232,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Applied Meteorology and Climatology Volume 51 ; 51 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Applied Meteorology and Climatology Volume 52 ; 52 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Applied Meteorology and Climatology Volume 53 ; 53 ; >
-    au < ready ; exists ; 2015 ; Journal of Applied Meteorology and Climatology Volume 54 ; 54 ; >
+    au < crawling ; exists ; 2015 ; Journal of Applied Meteorology and Climatology Volume 54 ; 54 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Applied Meteorology and Climatology Volume 55 ; 55 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Applied Meteorology and Climatology Volume 56 ; 56 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Applied Meteorology and Climatology Volume 57 ; 57 ; >
@@ -240,7 +240,7 @@
     au < frozen ; exists ; 2020 ; Journal of Applied Meteorology and Climatology Volume 59 ; 59 ; >
     au < frozen ; exists ; 2021 ; Journal of Applied Meteorology and Climatology Volume 60 ; 60 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Applied Meteorology and Climatology Volume 61 ; 61 ; >
-    au < ready ; exists ; 2023 ; Journal of Applied Meteorology and Climatology Volume 62 ; 62 ; >
+    au < crawling ; exists ; 2023 ; Journal of Applied Meteorology and Climatology Volume 62 ; 62 ; >
 
   }
 
@@ -284,9 +284,9 @@
     au < doNotProcess ; exists ; 2010 ; Journal of Atmospheric and Oceanic Technology Volume 27 ; 27 ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Atmospheric and Oceanic Technology Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Atmospheric and Oceanic Technology Volume 29 ; 29 ; >
-    au < ready ; exists ; 2013 ; Journal of Atmospheric and Oceanic Technology Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2013 ; Journal of Atmospheric and Oceanic Technology Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Atmospheric and Oceanic Technology Volume 31 ; 31 ; >
-    au < ready ; exists ; 2015 ; Journal of Atmospheric and Oceanic Technology Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2015 ; Journal of Atmospheric and Oceanic Technology Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Atmospheric and Oceanic Technology Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Atmospheric and Oceanic Technology Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Atmospheric and Oceanic Technology Volume 35 ; 35 ; >
@@ -294,7 +294,7 @@
     au < frozen ; exists ; 2020 ; Journal of Atmospheric and Oceanic Technology Volume 37 ; 37 ; >
     au < frozen ; exists ; 2021 ; Journal of Atmospheric and Oceanic Technology Volume 38 ; 38 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Atmospheric and Oceanic Technology Volume 39 ; 39 ; >
-    au < ready ; exists ; 2023 ; Journal of Atmospheric and Oceanic Technology Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2023 ; Journal of Atmospheric and Oceanic Technology Volume 40 ; 40 ; >
 
   }
 
