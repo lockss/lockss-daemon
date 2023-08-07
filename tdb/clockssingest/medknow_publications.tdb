@@ -4149,24 +4149,24 @@
      #Site appears to still be on http, but has errors. Is moving to https.
 
     param[journal_issn] = 0974-9233
+    #move to LWW in 2023, moved https://journals.lww.com/mejo/
 
-    au < manifest ; exists ; 2007 ; Middle East African Journal of Ophthalmology Volume 14 ; 2007 ; 14 ; http://www.meajo.org/ ; ; >
-    au < manifest ; exists ; 2008 ; Middle East African Journal of Ophthalmology Volume 15 ; 2008 ; 15 ; http://www.meajo.org/ ; ; >
-    au < manifest ; exists ; 2009 ; Middle East African Journal of Ophthalmology Volume 16 ; 2009 ; 16 ; http://www.meajo.org/ ; ; >
-    au < manifest ; exists ; 2010 ; Middle East African Journal of Ophthalmology Volume 17 ; 2010 ; 17 ; http://www.meajo.org/ ; ; >
+    au < doNotProcess ; exists ; 2007 ; Middle East African Journal of Ophthalmology Volume 14 ; 2007 ; 14 ; http://www.meajo.org/ ; ; >
+    au < doNotProcess ; exists ; 2008 ; Middle East African Journal of Ophthalmology Volume 15 ; 2008 ; 15 ; http://www.meajo.org/ ; ; >
+    au < doNotProcess ; exists ; 2009 ; Middle East African Journal of Ophthalmology Volume 16 ; 2009 ; 16 ; http://www.meajo.org/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Middle East African Journal of Ophthalmology Volume 17 ; 2010 ; 17 ; http://www.meajo.org/ ; ; >
     au < finished ; frozen ; 2011 ; Middle East African Journal of Ophthalmology Volume 18 ; 2011 ; 18 ; http://www.meajo.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2012 ; Middle East African Journal of Ophthalmology Volume 19 ; 2012 ; 19 ; http://www.meajo.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2013 ; Middle East African Journal of Ophthalmology Volume 20 ; 2013 ; 20 ; http://www.meajo.org/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2014 ; Middle East African Journal of Ophthalmology Volume 21 ; 2014 ; 21 ; http://www.meajo.org/ ; ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Middle East African Journal of Ophthalmology Volume 22 ; 2015 ; 22 ; http://www.meajo.org/ ; ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2016 ; Middle East African Journal of Ophthalmology Volume 23 ; 2016 ; 23 ; http://www.meajo.org/ ; ; >
+    au < frozen ; exists ; 2016 ; Middle East African Journal of Ophthalmology Volume 23 ; 2016 ; 23 ; http://www.meajo.org/ ; ; >
     au < finished ; finished ; 2017 ; Middle East African Journal of Ophthalmology Volume 24 ; 2017 ; 24 ; http://www.meajo.org/ ; ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2018 ; Middle East African Journal of Ophthalmology Volume 25 ; 2018 ; 25 ; http://www.meajo.org/ ; ; >
-    au < manifest ; exists ; 2019 ; Middle East African Journal of Ophthalmology Volume 26 ; 2019 ; 26 ; http://www.meajo.org/ ; ; >
-    au < manifest ; exists ; 2020 ; Middle East African Journal of Ophthalmology Volume 27 ; 2020 ; 27 ; http://www.meajo.org/ ; ; >
-    au < manifest ; exists ; 2021 ; Middle East African Journal of Ophthalmology Volume 28 ; 2021 ; 28 ; http://www.meajo.org/ ; ; >
-    au < deepCrawl ; exists ; 2022 ; Middle East African Journal of Ophthalmology Volume 29 ; 2022 ; 29 ; http://www.meajo.org/ ; ; >
-    au < expected ; exists ; 2023 ; Middle East African Journal of Ophthalmology Volume 30 ; 2023 ; 30 ; http://www.meajo.org/ ; ; >
+    au < frozen ; exists ; 2018 ; Middle East African Journal of Ophthalmology Volume 25 ; 2018 ; 25 ; http://www.meajo.org/ ; ; >
+    au < doNotProcess ; exists ; 2019 ; Middle East African Journal of Ophthalmology Volume 26 ; 2019 ; 26 ; http://www.meajo.org/ ; ; >
+    au < doNotProcess ; exists ; 2020 ; Middle East African Journal of Ophthalmology Volume 27 ; 2020 ; 27 ; http://www.meajo.org/ ; ; >
+    au < doNotProcess ; exists ; 2021 ; Middle East African Journal of Ophthalmology Volume 28 ; 2021 ; 28 ; http://www.meajo.org/ ; ; >
+    au < frozen ; exists ; 2022 ; Middle East African Journal of Ophthalmology Volume 29 ; 2022 ; 29 ; http://www.meajo.org/ ; ; >
 
   }
 
@@ -13084,11 +13084,7 @@
 
       param[journal_issn] = 2772-3615
       #param[base_url] = https://www.jpcsonline.org/
-
-      au < exists ; exists ; 2020 ; Journal of Primary Care Specialties Volume 2 ; 2020 ; 2 ; https://www.jpcsonline.org/ ; ; >
-      au < exists ; exists ; 2021 ; Journal of Primary Care Specialties Volume 3 ; 2021 ; 3 ; https://www.jpcsonline.org/ ; ; >
-      au < expected ; exists ; 2022 ; Journal of Primary Care Specialties Volume 4 ; 2022 ; 4 ; https://www.jpcsonline.org/ ; ; >
-      au < expected ; exists ; 2023 ; Journal of Primary Care Specialties Volume 5 ; 2023 ; 5 ; https://www.jpcsonline.org/ ; ; >
+      #move to LWW in 2023, moved https://journals.lww.com/jopc/
 
   }
 
