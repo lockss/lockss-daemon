@@ -6421,7 +6421,7 @@
     #move from T&F by 2023-01-01
 
     au < doNotProcess ; 2022 ; 2022 ; Forensic Sciences Research Volume 7 ; 7 >
-    au < exists ; 2023 ; 2023 ; Forensic Sciences Research Volume 8 ; 8 >
+    au < manifest ; 2023 ; 2023 ; Forensic Sciences Research Volume 8 ; 8 >
 
   }
 
@@ -7627,7 +7627,7 @@
     au < released ; 2020 ; 2020 ; Holocaust and Genocide Studies Volume 34 ; 34 >
     au < released ; 2021 ; 2021 ; Holocaust and Genocide Studies Volume 35 ; 35 >
     au < released ; 2022 ; 2022 ; Holocaust and Genocide Studies Volume 36 ; 36 >
-    au < expected ; 2023 ; 2023 ; Holocaust and Genocide Studies Volume 37 ; 37 >
+    au < manifest ; 2023 ; 2023 ; Holocaust and Genocide Studies Volume 37 ; 37 >
 
   }
 
@@ -8967,7 +8967,7 @@
     au < released ; 2020 ; 2020 ; International Journal of Law and Information Technology Volume 28 ; 28 >
     au < released ; 2021 ; 2021 ; International Journal of Law and Information Technology Volume 29 ; 29 >
     au < released ; 2022 ; 2022 ; International Journal of Law and Information Technology Volume 30 ; 30 >
-    au < expected ; 2023 ; 2023 ; International Journal of Law and Information Technology Volume 31 ; 31 >
+    au < manifest ; 2023 ; 2023 ; International Journal of Law and Information Technology Volume 31 ; 31 >
 
   }
 
@@ -14214,7 +14214,7 @@
     param[journal_id] = jmicro
     #content available from 1953 volume 1 to 2008 volume 57
 
-    au < exists ; 2008 ; 2008 ; Microscopy Volume 57 ; 57 >
+    au < manifest ; 2008 ; 2008 ; Microscopy Volume 57 ; 57 >
     au < released ; 2009 ; 2009 ; Microscopy Volume 58 ; 58 >
     au < released ; 2010 ; 2010 ; Microscopy Volume 59 ; 59 >
     au < released ; 2011 ; 2011 ; Microscopy Volume 60 ; 60 >
@@ -16920,8 +16920,8 @@
     param[journal_id] = pmj
     #move from BMJ by 2023-01-01
 
-    au < exists ; 2022 ; 2022 ; Postgraduate Medical Journal Volume 98 ; 98 >
-    au < exists ; 2023 ; 2023 ; Postgraduate Medical Journal Volume 99 ; 99 >
+    au < manifest ; 2022 ; 2022 ; Postgraduate Medical Journal Volume 98 ; 98 >
+    au < manifest ; 2023 ; 2023 ; Postgraduate Medical Journal Volume 99 ; 99 >
 
   }
 

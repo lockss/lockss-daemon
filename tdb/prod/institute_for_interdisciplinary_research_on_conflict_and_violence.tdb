@@ -19,11 +19,11 @@
     param[base_url] = https://www.ijcv.org/
     param[journal_id] = ijcv
 
-    au < exists ; 2019 ; International Journal of Conflict and Violence Volume 13 ; 13 ; 2019 >
-    au < exists ; 2020 ; International Journal of Conflict and Violence Volume 14 ; 14 ; 2020 >
-    au < exists ; 2021 ; International Journal of Conflict and Violence Volume 15 ; 15 ; 2021 >
-    au < expected ; 2022 ; International Journal of Conflict and Violence Volume 16 ; 16 ; 2022 >
-    au < expected ; 2023 ; International Journal of Conflict and Violence Volume 17 ; 17 ; 2023 >
+    au < manifest ; 2019 ; International Journal of Conflict and Violence Volume 13 ; 13 ; 2019 >
+    au < manifest ; 2020 ; International Journal of Conflict and Violence Volume 14 ; 14 ; 2020 >
+    au < manifest ; 2021 ; International Journal of Conflict and Violence Volume 15 ; 15 ; 2021 >
+    au < manifest ; 2022 ; International Journal of Conflict and Violence Volume 16 ; 16 ; 2022 >
+    au < manifest ; 2023 ; International Journal of Conflict and Violence Volume 17 ; 17 ; 2023 >
 
     }
 
