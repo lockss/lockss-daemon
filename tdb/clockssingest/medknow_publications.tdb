@@ -6240,6 +6240,7 @@
 
       param[journal_issn] = 0972-6691
 #      param[base_url] = http://www.ijaai.in/
+      #Moved to LWW https://journals.lww.com/IJAA
 
       au < finished ; frozen ; 2012 ; Indian Journal of Allergy, Asthma and Immunology Volume 26 ; 2012 ; 26 ; http://www.ijaai.in/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2013 ; Indian Journal of Allergy, Asthma and Immunology Volume 27 ; 2013 ; 27 ; http://www.ijaai.in/ ; ; reingest3.clockss.org:8083 >
@@ -6251,8 +6252,8 @@
       au < finished ; finished ; 2019 ; Indian Journal of Allergy, Asthma and Immunology Volume 33 ; 2019 ; 33 ; https://www.ijaai.in/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2020 ; Indian Journal of Allergy, Asthma and Immunology Volume 34 ; 2020 ; 34 ; https://www.ijaai.in/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; Indian Journal of Allergy, Asthma and Immunology Volume 35 ; 2021 ; 35 ; https://www.ijaai.in/ ; ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2022 ; Indian Journal of Allergy, Asthma and Immunology Volume 36 ; 2022 ; 36 ; https://www.ijaai.in/ ; ; >
-      au < manifest ; exists ; 2023 ; Indian Journal of Allergy, Asthma and Immunology Volume 37 ; 2023 ; 37 ; https://www.ijaai.in/ ; ; >
+      au < superseded ; exists ; 2022 ; Indian Journal of Allergy, Asthma and Immunology Volume 36 [superseded] ; 2022 ; 36 ; https://www.ijaai.in/ ; ; >
+      au < doNotProcess ; exists ; 2023 ; Indian Journal of Allergy, Asthma and Immunology Volume 37 ; 2023 ; 37 ; https://www.ijaai.in/ ; ; >
 
   }
 
@@ -12478,13 +12479,13 @@
 
       param[journal_issn] = 2347-6249
       #param[base_url] = https://www.ijocr.org/
+      #Moved to LLW https://journals.lww.com/INJO
 
-      au < manifest ; exists ; 2018 ; International Journal of Oral Care and Research Volume 6 ; 2018 ; 6 ; https://www.ijocr.org/ ; ; >
-      au < manifest ; exists ; 2019 ; International Journal of Oral Care and Research Volume 7 ; 2019 ; 7 ; https://www.ijocr.org/ ; ; >
-      au < crawling ; exists ; 2020 ; International Journal of Oral Care and Research Volume 8 ; 2020 ; 8 ; https://www.ijocr.org/ ; ; >
+      au < doNotProcess ; exists ; 2018 ; International Journal of Oral Care and Research Volume 6 ; 2018 ; 6 ; https://www.ijocr.org/ ; ; >
+      au < doNotProcess ; exists ; 2019 ; International Journal of Oral Care and Research Volume 7 ; 2019 ; 7 ; https://www.ijocr.org/ ; ; >
+      au < superseded ; exists ; 2020 ; International Journal of Oral Care and Research Volume 8 [superseded] ; 2020 ; 8 ; https://www.ijocr.org/ ; ; >
       au < frozen ; exists ; 2021 ; International Journal of Oral Care and Research Volume 9 ; 2021 ; 9 ; https://www.ijocr.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; International Journal of Oral Care and Research Volume 10 ; 2022 ; 10 ; https://www.ijocr.org/ ; ; >
-      au < manifest ; exists ; 2023 ; International Journal of Oral Care and Research Volume 11 ; 2023 ; 11 ; https://www.ijocr.org/ ; ; >
+      au < frozen ; exists ; 2022 ; International Journal of Oral Care and Research Volume 10 ; 2022 ; 10 ; https://www.ijocr.org/ ; ; >
 
   }
 

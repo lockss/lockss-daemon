@@ -5789,6 +5789,7 @@
 
       param[journal_issn] = 0972-6691
 #      param[base_url] = http://www.ijaai.in/
+      #Moved to LWW https://journals.lww.com/IJAA
 
       au < released ; 2012 ; Indian Journal of Allergy, Asthma and Immunology Volume 26 ; 2012 ; 26 ; http://www.ijaai.in/ >
       au < released ; 2013 ; Indian Journal of Allergy, Asthma and Immunology Volume 27 ; 2013 ; 27 ; http://www.ijaai.in/ >
@@ -5800,8 +5801,8 @@
       au < released ; 2019 ; Indian Journal of Allergy, Asthma and Immunology Volume 33 ; 2019 ; 33 ; https://www.ijaai.in/ >
       au < released ; 2020 ; Indian Journal of Allergy, Asthma and Immunology Volume 34 ; 2020 ; 34 ; https://www.ijaai.in/ >
       au < released ; 2021 ; Indian Journal of Allergy, Asthma and Immunology Volume 35 ; 2021 ; 35 ; https://www.ijaai.in/ >
-      au < manifest ; 2022 ; Indian Journal of Allergy, Asthma and Immunology Volume 36 ; 2022 ; 36 ; https://www.ijaai.in/ >
-      au < manifest ; 2023 ; Indian Journal of Allergy, Asthma and Immunology Volume 37 ; 2023 ; 37 ; https://www.ijaai.in/ >
+      au < doNotProcess ; 2022 ; Indian Journal of Allergy, Asthma and Immunology Volume 36 ; 2022 ; 36 ; https://www.ijaai.in/ >
+      au < doNotProcess ; 2023 ; Indian Journal of Allergy, Asthma and Immunology Volume 37 ; 2023 ; 37 ; https://www.ijaai.in/ >
 
   }
 
@@ -12017,13 +12018,13 @@
 
       param[journal_issn] = 2347-6249
       #param[base_url] = https://www.ijocr.org/
+      #Moved to LLW https://journals.lww.com/INJO
 
-      au < manifest ; 2018 ; International Journal of Oral Care and Research Volume 6 ; 2018 ; 6 ; https://www.ijocr.org/ >
-      au < manifest ; 2019 ; International Journal of Oral Care and Research Volume 7 ; 2019 ; 7 ; https://www.ijocr.org/ >
-      au < manifest ; 2020 ; International Journal of Oral Care and Research Volume 8 ; 2020 ; 8 ; https://www.ijocr.org/ >
-      au < released ; 2021 ; International Journal of Oral Care and Research Volume 9 ; 2021 ; 9 ; https://www.ijocr.org/ >
-      au < manifest ; 2022 ; International Journal of Oral Care and Research Volume 10 ; 2022 ; 10 ; https://www.ijocr.org/ >
-      au < manifest ; 2023 ; International Journal of Oral Care and Research Volume 11 ; 2023 ; 11 ; https://www.ijocr.org/ >
+      au < doNotProcess ; 2018 ; International Journal of Oral Care and Research Volume 6 ; 2018 ; 6 ; https://www.ijocr.org/ >
+      au < doNotProcess ; 2019 ; International Journal of Oral Care and Research Volume 7 ; 2019 ; 7 ; https://www.ijocr.org/ >
+      au < doNotProcess ; 2020 ; International Journal of Oral Care and Research Volume 8 ; 2020 ; 8 ; https://www.ijocr.org/ >
+      au < down ; 2021 ; International Journal of Oral Care and Research Volume 9 ; 2021 ; 9 ; https://www.ijocr.org/ >
+      au < doNotProcess ; 2022 ; International Journal of Oral Care and Research Volume 10 ; 2022 ; 10 ; https://www.ijocr.org/ >
 
   }
 
