@@ -572,7 +572,7 @@
     au < finished ; finished ; 2019 ; 2019 ; Annals of Otology and Neurotology Volume 2 ; 2 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Annals of Otology and Neurotology Volume 3 ; 3 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Annals of Otology and Neurotology Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2022 ; 2022 ; Annals of Otology and Neurotology Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2022 ; 2022 ; Annals of Otology and Neurotology Volume 5 ; 5 ; >
     au < expected ; exists ; 2023 ; 2023 ; Annals of Otology and Neurotology Volume 6 ; 6 ; >
 
    }
@@ -690,7 +690,7 @@
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Asian Journal of Neurosurgery Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Asian Journal of Neurosurgery Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Asian Journal of Neurosurgery Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2022 ; 2022 ; Asian Journal of Neurosurgery Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2022 ; 2022 ; Asian Journal of Neurosurgery Volume 17 ; 17 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Asian Journal of Neurosurgery Volume 18 ; 18 ; >
 
    }
@@ -2501,7 +2501,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 13 ; 13 ; >
-      au < crawling ; exists ; 2022 ; 2022 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 14 ; 14 ; >
+      au < frozen ; exists ; 2022 ; 2022 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 14 ; 14 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 15 ; 15 ; >
 
   }

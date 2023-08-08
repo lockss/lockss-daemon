@@ -30,17 +30,17 @@
       param[base_url] = https://www.authorship.ugent.be/
       #param[journal_id] = authorship
 
-      au < crawling ; exists ; 2011 ; 2011 ; 2011 ; Authorship Volume 2011 ; >
-      au < crawling ; exists ; 2012 ; 2012 ; 2012 ; Authorship Volume 2012 ; >
-      au < crawling ; exists ; 2013 ; 2013 ; 2013 ; Authorship Volume 2013 ; >
-      au < crawling ; exists ; 2014 ; 2014 ; 2014 ; Authorship Volume 2014 ; >
-      au < crawling ; exists ; 2015 ; 2015 ; 2015 ; Authorship Volume 2015 ; >
-      au < crawling ; exists ; 2016 ; 2016 ; 2016 ; Authorship Volume 2016 ; >
-      au < crawling ; exists ; 2017 ; 2017 ; 2017 ; Authorship Volume 2017 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; 2018 ; Authorship Volume 2018 ; >
-      au < crawling ; exists ; 2019 ; 2019 ; 2019 ; Authorship Volume 2019 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Authorship Volume 2011 ; >
+      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Authorship Volume 2012 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Authorship Volume 2013 ; >
+      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Authorship Volume 2014 ; >
+      au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Authorship Volume 2015 ; >
+      au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Authorship Volume 2016 ; >
+      au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Authorship Volume 2017 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Authorship Volume 2018 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Authorship Volume 2019 ; >
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Authorship Volume 2020 ; >
-      au < crawling ; exists ; 2021 ; 2021 ; 2021 ; Authorship Volume 2021 ; >
+      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Authorship Volume 2021 ; >
       au < exists ; exists ; 2022 ; 2022 ; 2022 ; Authorship Volume 2022 ; >
       au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Authorship Volume 2023 ; >
 
@@ -84,17 +84,17 @@
       au < exists ; exists ; 2007 ; 2007 ; 2007 ; Documenta Volume 2007 ; >
       au < exists ; exists ; 2008 ; 2008 ; 2008 ; Documenta Volume 2008 ; >
       au < exists ; exists ; 2009 ; 2009 ; 2009 ; Documenta Volume 2009 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; 2010 ; Documenta Volume 2010 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; 2011 ; Documenta Volume 2011 ; >
-      au < crawling ; exists ; 2012 ; 2012 ; 2012 ; Documenta Volume 2012 ; >
-      au < crawling ; exists ; 2013 ; 2013 ; 2013 ; Documenta Volume 2013 ; >
-      au < crawling ; exists ; 2014 ; 2014 ; 2014 ; Documenta Volume 2014 ; >
-      au < crawling ; exists ; 2015 ; 2015 ; 2015 ; Documenta Volume 2015 ; >
-      au < crawling ; exists ; 2016 ; 2016 ; 2016 ; Documenta Volume 2016 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Documenta Volume 2010 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Documenta Volume 2011 ; >
+      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Documenta Volume 2012 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Documenta Volume 2013 ; >
+      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Documenta Volume 2014 ; >
+      au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Documenta Volume 2015 ; >
+      au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Documenta Volume 2016 ; >
       au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Documenta Volume 2017 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; 2018 ; Documenta Volume 2018 ; >
-      au < crawling ; exists ; 2019 ; 2019 ; 2019 ; Documenta Volume 2019 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; 2020 ; Documenta Volume 2020 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Documenta Volume 2018 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Documenta Volume 2019 ; >
+      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Documenta Volume 2020 ; >
 
   }
 
@@ -110,9 +110,9 @@
       param[base_url] = https://www.digest.ugent.be/
       #param[journal_id] = digest
 
-      au < crawling ; exists ; 2020 ; 2020 ; 2020 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2020 ; >
+      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2020 ; >
       au < frozen ; exists ; 2021 ; 2021 ; 2021 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2021 ; >
-      au < crawling ; exists ; 2022 ; 2022 ; 2022 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2022 ; >
+      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2022 ; >
       au < manifest ; exists ; 2023 ; 2023 ; 2023 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2023 ; >
 
   }
@@ -148,12 +148,12 @@
       param[base_url] = https://www.philosophica.ugent.be/
       #param[journal_id] = philosophica
 
-      au < crawling ; exists ; 2010 ; 2010 ; 83 ; Philosophica Volume 83 ; >
-      au < crawling ; exists ; 2012 ; 2012 ; 84-87 ; Philosophica Volume 84-87 ; >
-      au < crawling ; exists ; 2013 ; 2013 ; 88 ; Philosophica Volume 88 ; >
-      au < crawling ; exists ; 2014 ; 2014 ; 89 ; Philosophica Volume 89 ; >
-      au < crawling ; exists ; 2015 ; 2015 ; 90 ; Philosophica Volume 90 ; >
-      au < crawling ; exists ; 2017 ; 2017 ; 91-92 ; Philosophica Volume 91-92 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; 83 ; Philosophica Volume 83 ; >
+      au < frozen ; exists ; 2012 ; 2012 ; 84-87 ; Philosophica Volume 84-87 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; 88 ; Philosophica Volume 88 ; >
+      au < frozen ; exists ; 2014 ; 2014 ; 89 ; Philosophica Volume 89 ; >
+      au < frozen ; exists ; 2015 ; 2015 ; 90 ; Philosophica Volume 90 ; >
+      au < frozen ; exists ; 2017 ; 2017 ; 91-92 ; Philosophica Volume 91-92 ; >
 
   }
 
@@ -359,7 +359,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Agora Magazine Volume 2019 ; >
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Agora Magazine Volume 2020 ; >
       au < exists ; exists ; 2021 ; 2021 ; 2021 ; Agora Magazine Volume 2021 ; >
-      au < crawling ; exists ; 2022 ; 2022 ; 2022 ; Agora Magazine Volume 2022 ; >
+      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Agora Magazine Volume 2022 ; >
       au < expected ; exists ; 2023 ; 2023 ; 2023 ; Agora Magazine Volume 2023 ; >
 
   }
@@ -388,7 +388,7 @@
       au < manifest ; exists ; 1993 ; 1993 ; 1993 ; Amsab Tijdingen Volume 1993 ; >
       au < manifest ; exists ; 1994 ; 1994 ; 1994 ; Amsab Tijdingen Volume 1994 ; >
       au < manifest ; exists ; 1995 ; 1995 ; 1995 ; Amsab Tijdingen Volume 1995 ; >
-      au < crawling ; exists ; 2019 ; 2019 ; 2019 ; Amsab Tijdingen Volume 2019 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Amsab Tijdingen Volume 2019 ; >
 
   }
 
@@ -425,8 +425,8 @@
       au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Brood & Rozen Volume 2016 ; >
       au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Brood & Rozen Volume 2017 ; >
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Brood & Rozen Volume 2018 ; >
-      au < crawling ; exists ; 2019 ; 2019 ; 2019 ; Brood & Rozen Volume 2019 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; 2020 ; Brood & Rozen Volume 2020 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Brood & Rozen Volume 2019 ; >
+      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Brood & Rozen Volume 2020 ; >
 
   }
 
@@ -477,7 +477,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; De Uil van Minerva Volume 2019 ; >
       au < exists ; exists ; 2020 ; 2020 ; 2020 ; De Uil van Minerva Volume 2020 ; >
       au < exists ; exists ; 2021 ; 2021 ; 2021 ; De Uil van Minerva Volume 2021 ; >
-      au < crawling ; exists ; 2022 ; 2022 ; 2022 ; De Uil van Minerva Volume 2022 ; >
+      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; De Uil van Minerva Volume 2022 ; >
       au < manifest ; exists ; 2023 ; 2023 ; 2023 ; De Uil van Minerva Volume 2023 ; >
 
   }
@@ -541,8 +541,8 @@
       au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Ghendtsche Tydinghen Volume 2017 ; >
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Ghendtsche Tydinghen Volume 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Ghendtsche Tydinghen Volume 2019 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; 2020 ; Ghendtsche Tydinghen Volume 2020 ; >
-      au < crawling ; exists ; 2021 ; 2021 ; 2021 ; Ghendtsche Tydinghen Volume 2021 ; >
+      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Ghendtsche Tydinghen Volume 2020 ; >
+      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Ghendtsche Tydinghen Volume 2021 ; >
       au < exists ; exists ; 2022 ; 2022 ; 2022 ; Ghendtsche Tydinghen Volume 2022 ; >
       au < expected ; exists ; 2023 ; 2023 ; 2023 ; Ghendtsche Tydinghen Volume 2023 ; >
 
@@ -653,16 +653,16 @@
       au < exists ; exists ; 2010 ; 2010 ; 2010 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2010 ; >
       au < exists ; exists ; 2011 ; 2011 ; 2011 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2011 ; >
       au < exists ; exists ; 2012 ; 2012 ; 2012 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2012 ; >
-      au < crawling ; exists ; 2013 ; 2013 ; 2013 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2013 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2013 ; >
       au < exists ; exists ; 2014 ; 2014 ; 2014 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2014 ; >
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2015 ; >
       au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2016 ; >
       au < exists ; exists ; 2017 ; 2017 ; 2017 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2017 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; 2018 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2018 ; >
-      au < crawling ; exists ; 2019 ; 2019 ; 2019 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2019 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2018 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2019 ; >
 
-      au < crawling ; exists ; 2021 ; 2021 ; 2021 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2021 ; >
-      au < crawling ; exists ; 2022 ; 2022 ; 2022 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2022 ; >
+      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2021 ; >
+      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2022 ; >
       au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2023 ; >
 
   }
@@ -748,9 +748,9 @@
       au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2017 ; >
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2019 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; 2020 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2020 ; >
-      au < crawling ; exists ; 2021 ; 2021 ; 2021 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2021 ; >
-      au < crawling ; exists ; 2022 ; 2022 ; 2022 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2022 ; >
+      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2020 ; >
+      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2021 ; >
+      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2022 ; >
       au < expected ; exists ; 2023 ; 2023 ; 2023 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2023 ; >
 
   }
@@ -832,10 +832,10 @@
       au < exists ; exists ; 2008 ; 2008 ; 2008 ; Handelingen van het Genootschap voor Geschiedenis Volume 2008 ; >
       au < exists ; exists ; 2009 ; 2009 ; 2009 ; Handelingen van het Genootschap voor Geschiedenis Volume 2009 ; >
       au < exists ; exists ; 2010 ; 2010 ; 2010 ; Handelingen van het Genootschap voor Geschiedenis Volume 2010 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; 2011 ; Handelingen van het Genootschap voor Geschiedenis Volume 2011 ; >
-      au < crawling ; exists ; 2012 ; 2012 ; 2012 ; Handelingen van het Genootschap voor Geschiedenis Volume 2012 ; >
-      au < crawling ; exists ; 2013 ; 2013 ; 2013 ; Handelingen van het Genootschap voor Geschiedenis Volume 2013 ; >
-      au < crawling ; exists ; 2014 ; 2014 ; 2014 ; Handelingen van het Genootschap voor Geschiedenis Volume 2014 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Handelingen van het Genootschap voor Geschiedenis Volume 2011 ; >
+      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Handelingen van het Genootschap voor Geschiedenis Volume 2012 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Handelingen van het Genootschap voor Geschiedenis Volume 2013 ; >
+      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Handelingen van het Genootschap voor Geschiedenis Volume 2014 ; >
 
   }
 
@@ -854,7 +854,7 @@
       au < exists ; exists ; 2011 ; 2011 ; 2011 ; International Journal Sustainable Construction & Design Volume 2011 ; >
       au < exists ; exists ; 2012 ; 2012 ; 2012 ; International Journal Sustainable Construction & Design Volume 2012 ; >
       au < exists ; exists ; 2013 ; 2013 ; 2013 ; International Journal Sustainable Construction & Design Volume 2013 ; >
-      au < crawling ; exists ; 2014 ; 2014 ; 2014 ; International Journal Sustainable Construction & Design Volume 2014 ; >
+      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; International Journal Sustainable Construction & Design Volume 2014 ; >
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; International Journal Sustainable Construction & Design Volume 2015 ; >
       au < frozen ; exists ; 2016 ; 2016 ; 2016 ; International Journal Sustainable Construction & Design Volume 2016 ; >
       au < frozen ; exists ; 2017 ; 2017 ; 2017 ; International Journal Sustainable Construction & Design Volume 2017 ; >
@@ -995,10 +995,10 @@
       #published 2011-2022
       param[journal_id] = reng
 
-      au < crawling ; exists ; 2011 ; 2011 ; 2011 ; Relaties en Nieuwe Gezinnen Volume 2011 ; >
-      au < crawling ; exists ; 2012 ; 2012 ; 2012 ; Relaties en Nieuwe Gezinnen Volume 2012 ; >
-      au < crawling ; exists ; 2013 ; 2013 ; 2013 ; Relaties en Nieuwe Gezinnen Volume 2013 ; >
-      au < crawling ; exists ; 2014 ; 2014 ; 2014 ; Relaties en Nieuwe Gezinnen Volume 2014 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Relaties en Nieuwe Gezinnen Volume 2011 ; >
+      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Relaties en Nieuwe Gezinnen Volume 2012 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Relaties en Nieuwe Gezinnen Volume 2013 ; >
+      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Relaties en Nieuwe Gezinnen Volume 2014 ; >
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Relaties en Nieuwe Gezinnen Volume 2015 ; >
       au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Relaties en Nieuwe Gezinnen Volume 2016 ; >
 
@@ -1006,7 +1006,7 @@
 
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Relaties en Nieuwe Gezinnen Volume 2020 ; >
 
-      au < crawling ; exists ; 2022 ; 2022 ; 2022 ; Relaties en Nieuwe Gezinnen Volume 2022 ; >
+      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Relaties en Nieuwe Gezinnen Volume 2022 ; >
       au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Relaties en Nieuwe Gezinnen Volume 2023 ; >
 
   }
@@ -1082,7 +1082,7 @@
       au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Res Publica Volume 2017 ; >
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Res Publica Volume 2018 ; >
 
-      au < crawling ; exists ; 2021 ; 2021 ; 2021 ; Res Publica Volume 2021 ; >
+      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Res Publica Volume 2021 ; >
 
   }
 
@@ -1184,9 +1184,9 @@
       au < exists ; exists ; 2008 ; 2008 ; 2008 ; Tijdschrift voor industriële cultuur Volume 2008 ; >
       au < exists ; exists ; 2009 ; 2009 ; 2009 ; Tijdschrift voor industriële cultuur Volume 2009 ; >
       au < exists ; exists ; 2010 ; 2010 ; 2010 ; Tijdschrift voor industriële cultuur Volume 2010 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; 2011 ; Tijdschrift voor industriële cultuur Volume 2011 ; >
-      au < crawling ; exists ; 2012 ; 2012 ; 2012 ; Tijdschrift voor industriële cultuur Volume 2012 ; >
-      au < crawling ; exists ; 2013 ; 2013 ; 2013 ; Tijdschrift voor industriële cultuur Volume 2013 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Tijdschrift voor industriële cultuur Volume 2011 ; >
+      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Tijdschrift voor industriële cultuur Volume 2012 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Tijdschrift voor industriële cultuur Volume 2013 ; >
 
   }
 
@@ -1211,7 +1211,7 @@
       au < exists ; exists ; 2011 ; 2011 ; 2011 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2011 ; >
       au < exists ; exists ; 2012 ; 2012 ; 2012 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2012 ; >
       au < exists ; exists ; 2013 ; 2013 ; 2013 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2013 ; >
-      au < crawling ; exists ; 2014 ; 2014 ; 2014 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2014 ; >
+      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2014 ; >
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2015 ; >
       au < exists ; exists ; 2016 ; 2016 ; 2016 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2016 ; >
       au < exists ; exists ; 2017 ; 2017 ; 2017 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2017 ; >
@@ -1260,9 +1260,9 @@
       au < exists ; exists ; 2014 ; 2014 ; 2014 ; Studies on National Movements Volume 2014 ; >
       au < exists ; exists ; 2015 ; 2015 ; 2015 ; Studies on National Movements Volume 2015 ; >
       au < exists ; exists ; 2019 ; 2019 ; 2019 ; Studies on National Movements Volume 2019 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; 2020 ; Studies on National Movements Volume 2020 ; >
-      au < crawling ; exists ; 2021 ; 2021 ; 2021 ; Studies on National Movements Volume 2021 ; >
-      au < crawling ; exists ; 2022 ; 2022 ; 2022 ; Studies on National Movements Volume 2022 ; >
+      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Studies on National Movements Volume 2020 ; >
+      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Studies on National Movements Volume 2021 ; >
+      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Studies on National Movements Volume 2022 ; >
       au < expected ; exists ; 2023 ; 2023 ; 2023 ; Studies on National Movements Volume 2023 ; >
 
   }
@@ -1278,7 +1278,7 @@
       param[journal_id] = radices
 
       au < exists ; exists ; 2021 ; 2021 ; 2021 ; Radices Volume 2021 ; >
-      au < crawling ; exists ; 2022 ; 2022 ; 2022 ; Radices Volume 2022 ; >
+      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Radices Volume 2022 ; >
       au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Radices Volume 2023 ; >
 
   }
