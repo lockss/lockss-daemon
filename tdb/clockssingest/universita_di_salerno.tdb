@@ -20,8 +20,8 @@
       param[base_url] = https://tmj.unisa.it/
       param[journal_abbr] = journal
 
-      au < crawling ; exists ; 2020 ; Translational Medicine @ UniSa Volume 23 ; 23 ; >
-      au < crawling ; exists ; 2021 ; Translational Medicine @ UniSa Volume 24 ; 24 ; >
+      au < frozen ; exists ; 2020 ; Translational Medicine @ UniSa Volume 23 ; 23 ; >
+      au < frozen ; exists ; 2021 ; Translational Medicine @ UniSa Volume 24 ; 24 ; >
       au < exists ; exists ; 2022 ; Translational Medicine @ UniSa Volume 25 ; 25 ; >
       au < expected ; exists ; 2023 ; Translational Medicine @ UniSa Volume 26 ; 26 ; >
 
