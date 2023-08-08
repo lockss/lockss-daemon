@@ -57,8 +57,8 @@ public class HashSvcSchedImpl
   public static final String HASH_STATUS_TABLE = "HashQ";
 
   private SchedService sched = null;
-  private long estPadConstant = 0;
-  private long estPadPercent = 0;
+  private long estPadConstant = DEFAULT_ESTIMATE_PAD_CONSTANT;
+  private long estPadPercent = DEFAULT_ESTIMATE_PAD_PERCENT;
   private List queue = new LinkedList();
   private HistoryList completed = new HistoryList(DEFAULT_COMPLETED_MAX);
   // lock object for both queue and completed
@@ -97,8 +97,8 @@ public class HashSvcSchedImpl
 
   public void setConfig(Configuration config, Configuration prevConfig,
 			Configuration.Differences changedKeys) {
-    estPadConstant = config.getLong(PARAM_ESTIMATE_PAD_CONSTANT,
-				    DEFAULT_ESTIMATE_PAD_CONSTANT);
+    estPadConstant = config.getTimeInterval(PARAM_ESTIMATE_PAD_CONSTANT,
+                                            DEFAULT_ESTIMATE_PAD_CONSTANT);
     estPadPercent = config.getLong(PARAM_ESTIMATE_PAD_PERCENT,
 				   DEFAULT_ESTIMATE_PAD_PERCENT);
     hashStepBytes = config.getInt(PARAM_STEP_BYTES, DEFAULT_STEP_BYTES);

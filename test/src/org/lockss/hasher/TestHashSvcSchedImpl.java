@@ -99,6 +99,17 @@ public class TestHashSvcSchedImpl extends LockssTestCase {
 			    deadline, cb, null);
   }
 
+  public void testPadHashEstimate() throws Exception {
+    // Defaults are 10% + 10ms
+    assertEquals(1110, svc.padHashEstimate(1000));
+    // Change to 50% + 10ms
+    ConfigurationUtil.addFromArgs(HashService.PARAM_ESTIMATE_PAD_PERCENT, "50");
+    assertEquals(1510, svc.padHashEstimate(1000));
+    // Change to 50% + 1 minute
+    ConfigurationUtil.addFromArgs(HashService.PARAM_ESTIMATE_PAD_CONSTANT, "1m");
+    assertEquals(1500 + Constants.MINUTE, svc.padHashEstimate(1000));
+  }
+
   public void testCancel() throws Exception {
     TimeBase.setSimulated();
     assertTrue(hashContent("1", 300, -100, 500, null));
