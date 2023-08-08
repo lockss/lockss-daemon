@@ -1455,7 +1455,7 @@
     au < finished ; finished ; 2011 ; Campus-Wide Information Systems Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; Campus-Wide Information Systems Volume 29 ; 29 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Campus-Wide Information Systems Volume 30 ; 30 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2014 ; Campus-Wide Information Systems Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2014 ; Campus-Wide Information Systems Volume 31 ; 31 ; >
 
   }
 
@@ -14629,7 +14629,7 @@
 
     param[journal_issn] = 2632-7627
 
-    au < crawling ; exists ; 2019 ; Applied Economic Analysis Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2019 ; Applied Economic Analysis Volume 27 ; 27 ; >
     au < finished ; manifest ; 2020 ; Applied Economic Analysis Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; Applied Economic Analysis Volume 29 ; 29 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Applied Economic Analysis Volume 30 ; 30 ; reingest3.clockss.org:8083 >
@@ -14648,10 +14648,10 @@
 
     param[journal_issn] = 2398-7812
 
-    au < crawling ; exists ; 2016 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2017 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2018 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2019 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2016 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2017 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2018 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2019 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 13 ; 13 ; >
     au < finished ; manifest ; 2020 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 15 ; 15 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 16 ; 16 ; reingest1.clockss.org:8082 >
@@ -14677,13 +14677,13 @@
     au < manifest ; exists ; 2010 ; Asian Association of Open Universities Journal Volume 5 ; 5 ; >
     au < manifest ; exists ; 2011 ; Asian Association of Open Universities Journal Volume 6 ; 6 ; >
     au < manifest ; exists ; 2012 ; Asian Association of Open Universities Journal Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2013 ; Asian Association of Open Universities Journal Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2014 ; Asian Association of Open Universities Journal Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2015 ; Asian Association of Open Universities Journal Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2016 ; Asian Association of Open Universities Journal Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2017 ; Asian Association of Open Universities Journal Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2018 ; Asian Association of Open Universities Journal Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2019 ; Asian Association of Open Universities Journal Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2013 ; Asian Association of Open Universities Journal Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2014 ; Asian Association of Open Universities Journal Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2015 ; Asian Association of Open Universities Journal Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2016 ; Asian Association of Open Universities Journal Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2017 ; Asian Association of Open Universities Journal Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2018 ; Asian Association of Open Universities Journal Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2019 ; Asian Association of Open Universities Journal Volume 14 ; 14 ; >
     au < finished ; manifest ; 2020 ; Asian Association of Open Universities Journal Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; Asian Association of Open Universities Journal Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2022 ; Asian Association of Open Universities Journal Volume 17 ; 17 ; reingest3.clockss.org:8083 >
@@ -14702,13 +14702,13 @@
 
     param[journal_issn] = 2459-9700
 
-    au < crawling ; exists ; 2016 ; Asian Journal of Accounting Research Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2017 ; Asian Journal of Accounting Research Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2018 ; Asian Journal of Accounting Research Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2019 ; Asian Journal of Accounting Research Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2020 ; Asian Journal of Accounting Research Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2021 ; Asian Journal of Accounting Research Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2022 ; Asian Journal of Accounting Research Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2016 ; Asian Journal of Accounting Research Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2017 ; Asian Journal of Accounting Research Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2018 ; Asian Journal of Accounting Research Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2019 ; Asian Journal of Accounting Research Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2020 ; Asian Journal of Accounting Research Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2021 ; Asian Journal of Accounting Research Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2022 ; Asian Journal of Accounting Research Volume 7 ; 7 ; >
     au < manifest ; exists ; 2023 ; Asian Journal of Accounting Research Volume 8 ; 8 ; >
 
   }
