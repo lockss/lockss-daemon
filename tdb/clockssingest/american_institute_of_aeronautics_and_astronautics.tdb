@@ -576,9 +576,9 @@
     param[journal_id] = arsj
     #ARS Journal, 1959-1962, param[journal_id] = arsj
 
-    au < crawling ; exists ; 1959 ; ARS Journal Volume 29 ; 29 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1959 ; ARS Journal Volume 29 ; 29 ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 1960 ; ARS Journal Volume 30 ; 30 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 1961 ; ARS Journal Volume 31 ; 31 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1961 ; ARS Journal Volume 31 ; 31 ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 1962 ; ARS Journal Volume 32 ; 32 ; https://arc.aiaa.org/ ; >
 
   }
@@ -592,19 +592,19 @@
     param[journal_id] = jastn
     #Astronautics, 1932-1944, param[journal_id] = jastn
 
-    au < crawling ; exists ; 1932 ; Astronautics Volume 2 ; 2 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 1933 ; Astronautics Volume 3 ; 3 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1932 ; Astronautics Volume 2 ; 2 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1933 ; Astronautics Volume 3 ; 3 ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 1934 ; Astronautics Volume 4 ; 4 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 1935 ; Astronautics Volume 5 ; 5 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 1936 ; Astronautics Volume 6 ; 6 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1935 ; Astronautics Volume 5 ; 5 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1936 ; Astronautics Volume 6 ; 6 ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 1937 ; Astronautics Volume 7 ; 7 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 1938 ; Astronautics Volume 8 ; 8 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1938 ; Astronautics Volume 8 ; 8 ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 1939 ; Astronautics Volume 9 ; 9 ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 1940 ; Astronautics Volume 10 ; 10 ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 1941 ; Astronautics Volume 11 ; 11 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 1942 ; Astronautics Volume 12 ; 12 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1942 ; Astronautics Volume 12 ; 12 ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 1943 ; Astronautics Volume 13 ; 13 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 1944 ; Astronautics Volume 14 ; 14 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1944 ; Astronautics Volume 14 ; 14 ; https://arc.aiaa.org/ ; >
 
   }
   {
@@ -617,9 +617,9 @@
     param[journal_id] = bais
     #Bulletin of the American Interplanetary Society, 1930-1932, param[journal_id] = bais
 
-    au < crawling ; exists ; 1930 ; Bulletin of the American Interplanetary Society Volume 0 ; 0 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 1931 ; Bulletin of the American Interplanetary Society Volume 1 ; 1 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 1932 ; Bulletin of the American Interplanetary Society Volume 2 ; 2 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1930 ; Bulletin of the American Interplanetary Society Volume 0 ; 0 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1931 ; Bulletin of the American Interplanetary Society Volume 1 ; 1 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1932 ; Bulletin of the American Interplanetary Society Volume 2 ; 2 ; https://arc.aiaa.org/ ; >
 
   }
   {
@@ -633,7 +633,7 @@
     #Journal of Jet Propulsion, 1954-1958, param[journal_id] = jjp
 
     au < ready ; exists ; 1954 ; Journal of Jet Propulsion Volume 24 ; 24 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 1955 ; Journal of Jet Propulsion Volume 25 ; 25 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1955 ; Journal of Jet Propulsion Volume 25 ; 25 ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 1956 ; Journal of Jet Propulsion Volume 26 ; 26 ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 1957 ; Journal of Jet Propulsion Volume 27 ; 27 ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 1958 ; Journal of Jet Propulsion Volume 28 ; 28 ; https://arc.aiaa.org/ ; >
@@ -651,23 +651,23 @@
     #Many manifest pages have intermittant 403 errors.
 
     au < ready ; exists ; 1934 ; Journal of the Aeronautical Sciences Volume 1 ; 1 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 1935 ; Journal of the Aeronautical Sciences Volume 2 ; 2 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1935 ; Journal of the Aeronautical Sciences Volume 2 ; 2 ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 1936 ; Journal of the Aeronautical Sciences Volume 3 ; 3 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 1937 ; Journal of the Aeronautical Sciences Volume 4 ; 4 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1937 ; Journal of the Aeronautical Sciences Volume 4 ; 4 ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 1938 ; Journal of the Aeronautical Sciences Volume 5 ; 5 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 1939 ; Journal of the Aeronautical Sciences Volume 6 ; 6 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 1940 ; Journal of the Aeronautical Sciences Volume 7 ; 7 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1939 ; Journal of the Aeronautical Sciences Volume 6 ; 6 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1940 ; Journal of the Aeronautical Sciences Volume 7 ; 7 ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 1941 ; Journal of the Aeronautical Sciences Volume 8 ; 8 ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 1942 ; Journal of the Aeronautical Sciences Volume 9 ; 9 ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 1943 ; Journal of the Aeronautical Sciences Volume 10 ; 10 ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 1944 ; Journal of the Aeronautical Sciences Volume 11 ; 11 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 1945 ; Journal of the Aeronautical Sciences Volume 12 ; 12 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 1946 ; Journal of the Aeronautical Sciences Volume 13 ; 13 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1945 ; Journal of the Aeronautical Sciences Volume 12 ; 12 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1946 ; Journal of the Aeronautical Sciences Volume 13 ; 13 ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 1947 ; Journal of the Aeronautical Sciences Volume 14 ; 14 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 1948 ; Journal of the Aeronautical Sciences Volume 15 ; 15 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1948 ; Journal of the Aeronautical Sciences Volume 15 ; 15 ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 1949 ; Journal of the Aeronautical Sciences Volume 16 ; 16 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 1950 ; Journal of the Aeronautical Sciences Volume 17 ; 17 ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 1951 ; Journal of the Aeronautical Sciences Volume 18 ; 18 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1950 ; Journal of the Aeronautical Sciences Volume 17 ; 17 ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 1951 ; Journal of the Aeronautical Sciences Volume 18 ; 18 ; https://arc.aiaa.org/ ; >
     au < manifest ; exists ; 1952 ; Journal of the Aeronautical Sciences Volume 19 ; 19 ; https://arc.aiaa.org/ ; >
     au < manifest ; exists ; 1953 ; Journal of the Aeronautical Sciences Volume 20 ; 20 ; https://arc.aiaa.org/ ; >
     au < manifest ; exists ; 1954 ; Journal of the Aeronautical Sciences Volume 21 ; 21 ; https://arc.aiaa.org/ ; >

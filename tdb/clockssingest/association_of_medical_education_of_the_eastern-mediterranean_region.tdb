@@ -21,8 +21,8 @@
       param[journal_abbr] = journal
       #Move from ScienceDirect, Volume 1 to 6 remain at https://www.sciencedirect.com/journal/health-professions-education/issues
 
-      au < crawling ; exists ; 2021 ; Journal Name: Health Professions Education Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2022 ; Journal Name: Health Professions Education Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2021 ; Journal Name: Health Professions Education Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2022 ; Journal Name: Health Professions Education Volume 8 ; 8 ; >
       au < crawling ; exists ; 2023 ; Journal Name: Health Professions Education Volume 9 ; 9 ; >
 
   }
