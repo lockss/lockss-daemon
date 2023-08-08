@@ -21,7 +21,7 @@
       param[base_url] = https://www.ijemd.com/
       param[journal_abbr] = journal
 
-      au < crawling ; exists ; 2022 ; International Journal of Emerging Multidisciplinaries: Mathematics (IJEMD-M) Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2022 ; International Journal of Emerging Multidisciplinaries: Mathematics (IJEMD-M) Volume 1 ; 1 ; >
       au < crawling ; exists ; 2023 ; International Journal of Emerging Multidisciplinaries: Mathematics (IJEMD-M) Volume 2 ; 2 ; >
 
   }
