@@ -218,9 +218,9 @@
     au < finished ; finished ; 2019 ; Memoirs of the American Mathematical Society 2019 ; 2019 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Memoirs of the American Mathematical Society 2020 ; 2020 ; http://www.ams.org/ ; >
     au < deepCrawl ; exists ; 2021 ; Memoirs of the American Mathematical Society 2021 ; 2021 ; http://www.ams.org/ ; >
-    au < doNotProcess ; exists ; 2022 ; Memoirs of the American Mathematical Society 2022 ; 2022 ; http://www.ams.org/ ; >
-    au < doNotProcess ; exists ; 2023 ; Memoirs of the American Mathematical Society 2023 ; 2023 ; http://www.ams.org/ ; >
-#Not in contract. Move doNotProcess to manifest when contract is approved.
+    au < expected ; exists ; 2022 ; Memoirs of the American Mathematical Society 2022 ; 2022 ; http://www.ams.org/ ; >
+    au < expected ; exists ; 2023 ; Memoirs of the American Mathematical Society 2023 ; 2023 ; http://www.ams.org/ ; >
+
     }
 
     {
