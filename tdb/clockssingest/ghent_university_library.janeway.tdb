@@ -42,7 +42,7 @@
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Authorship Volume 2020 ; >
       au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Authorship Volume 2021 ; >
       au < exists ; exists ; 2022 ; 2022 ; 2022 ; Authorship Volume 2022 ; >
-      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Authorship Volume 2023 ; >
+      au < ready ; exists ; 2023 ; 2023 ; 2023 ; Authorship Volume 2023 ; >
 
   }
 
@@ -113,7 +113,7 @@
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2020 ; >
       au < frozen ; exists ; 2021 ; 2021 ; 2021 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2021 ; >
       au < frozen ; exists ; 2022 ; 2022 ; 2022 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2022 ; >
-      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2023 ; >
+      au < ready ; exists ; 2023 ; 2023 ; 2023 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2023 ; >
 
   }
 
@@ -186,7 +186,7 @@
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Journal of European Periodical Studies Volume 2020 ; >
       au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Journal of European Periodical Studies Volume 2021 ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; 2022 ; Journal of European Periodical Studies Volume 2022 ; >
-      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Journal of European Periodical Studies Volume 2023 ; >
+      au < ready ; exists ; 2023 ; 2023 ; 2023 ; Journal of European Periodical Studies Volume 2023 ; >
 
   }
 
@@ -216,7 +216,7 @@
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Vlaams Diergeneeskundig Tijdschrift Volume 2020 ; >
       au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Vlaams Diergeneeskundig Tijdschrift Volume 2021 ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; 2022 ; Vlaams Diergeneeskundig Tijdschrift Volume 2022 ; >
-      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Vlaams Diergeneeskundig Tijdschrift Volume 2023 ; >
+      au < ready ; exists ; 2023 ; 2023 ; 2023 ; Vlaams Diergeneeskundig Tijdschrift Volume 2023 ; >
 
   }
 
@@ -478,7 +478,7 @@
       au < exists ; exists ; 2020 ; 2020 ; 2020 ; De Uil van Minerva Volume 2020 ; >
       au < exists ; exists ; 2021 ; 2021 ; 2021 ; De Uil van Minerva Volume 2021 ; >
       au < frozen ; exists ; 2022 ; 2022 ; 2022 ; De Uil van Minerva Volume 2022 ; >
-      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; De Uil van Minerva Volume 2023 ; >
+      au < ready ; exists ; 2023 ; 2023 ; 2023 ; De Uil van Minerva Volume 2023 ; >
 
   }
 
@@ -663,7 +663,7 @@
 
       au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2021 ; >
       au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2022 ; >
-      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2023 ; >
+      au < ready ; exists ; 2023 ; 2023 ; 2023 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2023 ; >
 
   }
 
@@ -871,7 +871,7 @@
       #published 2023-present
       param[journal_id] = dlh
 
-      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Journal for Digital Legal History Volume 2023 ; >
+      au < ready ; exists ; 2023 ; 2023 ; 2023 ; Journal for Digital Legal History Volume 2023 ; >
 
   }
 
@@ -1007,7 +1007,7 @@
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Relaties en Nieuwe Gezinnen Volume 2020 ; >
 
       au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Relaties en Nieuwe Gezinnen Volume 2022 ; >
-      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Relaties en Nieuwe Gezinnen Volume 2023 ; >
+      au < ready ; exists ; 2023 ; 2023 ; 2023 ; Relaties en Nieuwe Gezinnen Volume 2023 ; >
 
   }
 
@@ -1279,7 +1279,7 @@
 
       au < exists ; exists ; 2021 ; 2021 ; 2021 ; Radices Volume 2021 ; >
       au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Radices Volume 2022 ; >
-      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Radices Volume 2023 ; >
+      au < ready ; exists ; 2023 ; 2023 ; 2023 ; Radices Volume 2023 ; >
 
   }
 

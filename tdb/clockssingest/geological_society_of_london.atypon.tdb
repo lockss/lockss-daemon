@@ -93,7 +93,7 @@
     au < doNotProcess ; doNotProcess ; 2020 ; Geochemistry: Exploration, Environment, Analysis Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; Geochemistry: Exploration, Environment, Analysis Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2022 ; Geochemistry: Exploration, Environment, Analysis Volume 22 [superseded] ; 22 ; >
-    au < manifest ; exists ; 2023 ; Geochemistry: Exploration, Environment, Analysis Volume 23 [superseded] ; 23 ; >
+    au < ready ; exists ; 2023 ; Geochemistry: Exploration, Environment, Analysis Volume 23 [superseded] ; 23 ; >
 
   }
 
@@ -725,13 +725,13 @@
     au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 534 ; 534 ; >
     au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 535 ; 535 ; >
     au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 536 ; 536 ; >
-    au < manifest ; exists ; 2023 ; Geological Society of London Special Publications Volume 537 ; 537 ; >
-    au < manifest ; exists ; 2023 ; Geological Society of London Special Publications Volume 538 ; 538 ; >
-    au < manifest ; exists ; 2023 ; Geological Society of London Special Publications Volume 539 ; 539 ; >
-    au < manifest ; exists ; 2023 ; Geological Society of London Special Publications Volume 540 ; 540 ; >
-    au < manifest ; exists ; 2023 ; Geological Society of London Special Publications Volume 541 ; 541 ; >
-    au < manifest ; exists ; 2023 ; Geological Society of London Special Publications Volume 542 ; 542 ; >
-    au < manifest ; exists ; 2023 ; Geological Society of London Special Publications Volume 543 ; 543 ; >
+    au < ready ; exists ; 2023 ; Geological Society of London Special Publications Volume 537 ; 537 ; >
+    au < ready ; exists ; 2023 ; Geological Society of London Special Publications Volume 538 ; 538 ; >
+    au < ready ; exists ; 2023 ; Geological Society of London Special Publications Volume 539 ; 539 ; >
+    au < ready ; exists ; 2023 ; Geological Society of London Special Publications Volume 540 ; 540 ; >
+    au < ready ; exists ; 2023 ; Geological Society of London Special Publications Volume 541 ; 541 ; >
+    au < ready ; exists ; 2023 ; Geological Society of London Special Publications Volume 542 ; 542 ; >
+    au < ready ; exists ; 2023 ; Geological Society of London Special Publications Volume 543 ; 543 ; >
     au < expected ; exists ; 2023 ; Geological Society of London Special Publications Volume 544 ; 544 ; >
     au < expected ; exists ; 2023 ; Geological Society of London Special Publications Volume 545 ; 545 ; >
     au < expected ; exists ; 2023 ; Geological Society of London Special Publications Volume 546 ; 546 ; >
@@ -958,7 +958,7 @@
     au < doNotProcess ; doNotProcess ; 2020 ; Journal of the Geological Society of London Volume 177 ; 177 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; Journal of the Geological Society of London Volume 178 ; 178 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of the Geological Society of London Volume 179 ; 179 ; >
-    au < manifest ; exists ; 2023 ; Journal of the Geological Society of London Volume 180 ; 180 ; >
+    au < ready ; exists ; 2023 ; Journal of the Geological Society of London Volume 180 ; 180 ; >
 
   }
 
@@ -1002,7 +1002,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Petroleum Geoscience Volume 26 ; 26 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Petroleum Geoscience Volume 27 ; 27 ; >
       au < deepCrawl ; exists ; 2022 ; Petroleum Geoscience Volume 28 ; 28 ; >
-      au < manifest ; exists ; 2023 ; Petroleum Geoscience Volume 29 ; 29 ; >
+      au < ready ; exists ; 2023 ; Petroleum Geoscience Volume 29 ; 29 ; >
 
   }
 
@@ -1093,7 +1093,7 @@
     au < doNotProcess ; doNotProcess ; 2020 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 54 ; 54 ; >
     au < deepCrawl ; exists ; 2022 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 55 ; 55 ; >
-    au < manifest ; exists ; 2023 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 56 ; 56 ; >
+    au < ready ; exists ; 2023 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 56 ; 56 ; >
 
   }
 
@@ -1168,7 +1168,7 @@
     au < doNotProcess ; doNotProcess ; 2020 ; Scottish Journal of Geology Volume 56 ; 56 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; Scottish Journal of Geology Volume 57 ; 57 ; >
     au < deepCrawl ; exists ; 2022 ; Scottish Journal of Geology Volume 58 ; 58 ; >
-    au < manifest ; exists ; 2023 ; Scottish Journal of Geology Volume 59 ; 59 ; >
+    au < ready ; exists ; 2023 ; Scottish Journal of Geology Volume 59 ; 59 ; >
 
   }
 
