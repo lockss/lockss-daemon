@@ -1710,6 +1710,9 @@ while (my $line = <>) {
                   ($man_contents =~ m/\/toc\/$jid\/*$param{volume_name}\"/) || 
                   ##Royal Society Publishing: "/toc/rsbl/2014/10/12"  or "/toc/rsbm/2018/64"  
                   ($man_contents =~ m/\"\/toc\/$jid\/[12][67890]\d\d\/$param{volume_name}(\/[-0-9]*)?\"/) || 
+                  ##Liverpool Journals Back Content: such as "/toc/10.3828/labourhistory.2004.issue-87"
+                  ($man_contents =~ m/\"\/toc\/10.3828\/$jid.[12][67890]\d\d.issue-$param{volume_name}\"/) || 
+
                   ($man_contents =~ m/\/$jid\S*volume=$param{volume_name}/)))) {
               if ($man_contents =~ m/<title>\s*(.*) LOCKSS Manifest Page\s*<\/title>/si) {
                   $vol_title = $1;

@@ -306,8 +306,9 @@
     au < doNotProcess ; 2018 ; Comma Volume 2018 ; 2018 >
     au < doNotProcess ; 2019 ; Comma Volume 2019 ; 2019 >
     au < doNotProcess ; 2020 ; Comma Volume 2020 (2021) ; 2020 >
-    au < exists ; 2022 ; Comma Volume 2022 ; 2022 >
-    au < expected ; 2023 ; Comma Volume 2023 ; 2023 >
+    au < manifest ; 2021 ; Comma Volume 2021 (2022) ; 2021 >
+    au < expected ; 2022 ; Comma Volume 2022 (2023) ; 2022 >
+    au < expected ; 2023 ; Comma Volume 2023 (2023) ; 2023 >
 
   }
 
@@ -638,6 +639,8 @@
     param[journal_id] = hsir
     #Published 1996-present
     #jounral_num = 63
+    #Back content, not yet processed 1996-2005, first half of 2006, 2008.
+    #Unexpected journal number in the issue links on the manifest pages. See https://www.liverpooluniversitypress.co.uk/lockss/hsir/2/index.html
 
     au < exists ; 1996 ; Historical Studies in Industrial Relations Volume 1 ; 1 >
     au < exists ; 1996 ; Historical Studies in Industrial Relations Volume 2 ; 2 >
@@ -1933,5 +1936,47 @@
     au < manifest ; 2023 ; T. S. Eliot Studies Annual Volume 5 ; 5 >
 
   }
+  {
 
+    title <
+      name = CFC Intersections ;
+      issn = 2752-552X ; 
+      eissn = 2752-5538
+    >
+
+    param[journal_id] = cfci
+
+    au < exists ; 2022 ; CFC Intersections Volume 1 ; 1 >
+    au < exists ; 2023 ; CFC Intersections Volume 2 ; 2 >
+
+  }
+  
+  {
+
+    title <
+      name = Journal of Beatles Studies ;
+      eissn = 2754-7019
+    >
+
+    param[journal_id] = jbs
+
+    au < exists ; 2022 ; Journal of Beatles Studies Volume 2022 ; 2022 >
+    au < expected ; 2023 ; Journal of Beatles Studies Volume 2023 ; 2023 >
+
+  }
+  
+  {
+
+    title <
+      name = Revista Iberoamericana ;
+      issn = 0034-9631 ;
+      eissn = 2154-4794
+    >
+
+    param[journal_id] = revista
+
+    au < exists ; 2023 ; Revista Iberoamericana Volume 89 ; 89 >
+
+  }
+  
 }
