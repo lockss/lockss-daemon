@@ -135,7 +135,7 @@
     au < doNotProcess ; exists ; 2020 ; Bulletin of Contemporary Hispanic Studies Volume 2 ; 2 ; >
     au < doNotProcess ; exists ; 2021 ; Bulletin of Contemporary Hispanic Studies Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2022 ; Bulletin of Contemporary Hispanic Studies Volume 4 ; 4 ; >
-    au < ready ; exists ; 2023 ; Bulletin of Contemporary Hispanic Studies Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2023 ; Bulletin of Contemporary Hispanic Studies Volume 5 ; 5 ; >
 
   }
 
@@ -236,7 +236,7 @@
     au < doNotProcess ; exists ; 2020 ; Bulletin of Hispanic Studies Volume 97 ; 97 ; >
     au < doNotProcess ; exists ; 2021 ; Bulletin of Hispanic Studies Volume 98 ; 98 ; >
     au < deepCrawl ; exists ; 2022 ; Bulletin of Hispanic Studies Volume 99 ; 99 ; >
-    au < ready ; exists ; 2023 ; Bulletin of Hispanic Studies Volume 100 ; 100 ; >
+    au < crawling ; exists ; 2023 ; Bulletin of Hispanic Studies Volume 100 ; 100 ; >
 
   }
 
@@ -411,7 +411,7 @@
 
     au < doNotProcess ; exists ; 2021 ; Developing Academic Practice Volume 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Developing Academic Practice Volume 2022 ; 2022 ; >
-    au < ready ; exists ; 2023 ; Developing Academic Practice Volume 2023 ; 2023 ; >
+    au < crawling ; exists ; 2023 ; Developing Academic Practice Volume 2023 ; 2023 ; >
 
   }
 
@@ -511,7 +511,7 @@
     au < doNotProcess ; exists ; 2020 ; Essays in Romanticism Volume 27 ; 27 ; >
     au < doNotProcess ; exists ; 2021 ; Essays in Romanticism Volume 28 ; 28 ; >
     au < deepCrawl ; exists ; 2022 ; Essays in Romanticism Volume 29 ; 29 ; >
-    au < ready ; exists ; 2023 ; Essays in Romanticism Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2023 ; Essays in Romanticism Volume 30 ; 30 ; >
 
   }
 
@@ -887,7 +887,7 @@
     au < doNotProcess ; exists ; 2020 ; Journal of Romance Studies Volume 20 ; 20 ; >
     au < doNotProcess ; exists ; 2021 ; Journal of Romance Studies Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Romance Studies Volume 22 ; 22 ; >
-    au < ready ; exists ; 2023 ; Journal of Romance Studies Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2023 ; Journal of Romance Studies Volume 23 ; 23 ; >
 
   }
 
@@ -1906,7 +1906,7 @@
     #jounral_num = 111
 
     au < deepCrawl ; exists ; 2022 ; Global Nineteenth-Century Studies Volume 1 ; 1 ; >
-    au < ready ; exists ; 2023 ; Global Nineteenth-Century Studies Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2023 ; Global Nineteenth-Century Studies Volume 2 ; 2 ; >
 
   }
   
