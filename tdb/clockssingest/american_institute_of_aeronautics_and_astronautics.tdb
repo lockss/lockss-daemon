@@ -668,12 +668,12 @@
     au < crawling ; exists ; 1949 ; Journal of the Aeronautical Sciences Volume 16 ; 16 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1950 ; Journal of the Aeronautical Sciences Volume 17 ; 17 ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 1951 ; Journal of the Aeronautical Sciences Volume 18 ; 18 ; https://arc.aiaa.org/ ; >
-    au < testing ; exists ; 1952 ; Journal of the Aeronautical Sciences Volume 19 ; 19 ; https://arc.aiaa.org/ ; >
-    au < testing ; exists ; 1953 ; Journal of the Aeronautical Sciences Volume 20 ; 20 ; https://arc.aiaa.org/ ; >
-    au < testing ; exists ; 1954 ; Journal of the Aeronautical Sciences Volume 21 ; 21 ; https://arc.aiaa.org/ ; >
-    au < testing ; exists ; 1955 ; Journal of the Aeronautical Sciences Volume 22 ; 22 ; https://arc.aiaa.org/ ; >
-    au < testing ; exists ; 1956 ; Journal of the Aeronautical Sciences Volume 23 ; 23 ; https://arc.aiaa.org/ ; >
-    au < testing ; exists ; 1957 ; Journal of the Aeronautical Sciences Volume 24 ; 24 ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 1952 ; Journal of the Aeronautical Sciences Volume 19 ; 19 ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 1953 ; Journal of the Aeronautical Sciences Volume 20 ; 20 ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 1954 ; Journal of the Aeronautical Sciences Volume 21 ; 21 ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 1955 ; Journal of the Aeronautical Sciences Volume 22 ; 22 ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 1956 ; Journal of the Aeronautical Sciences Volume 23 ; 23 ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 1957 ; Journal of the Aeronautical Sciences Volume 24 ; 24 ; https://arc.aiaa.org/ ; >
 
   }
   {
@@ -686,11 +686,11 @@
     param[journal_id] = jasps
     #Journal of the Aerospace Sciences, 1958-1962, param[journal_id] = jasps
 
-    au < testing ; exists ; 1958 ; Journal of the Aerospace Sciences Volume 25 ; 25 ; https://arc.aiaa.org/ ; >
-    au < testing ; exists ; 1959 ; Journal of the Aerospace Sciences Volume 26 ; 26 ; https://arc.aiaa.org/ ; >
-    au < testing ; exists ; 1960 ; Journal of the Aerospace Sciences Volume 27 ; 27 ; https://arc.aiaa.org/ ; >
-    au < testing ; exists ; 1961 ; Journal of the Aerospace Sciences Volume 28 ; 28 ; https://arc.aiaa.org/ ; >
-    au < testing ; exists ; 1962 ; Journal of the Aerospace Sciences Volume 29 ; 29 ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 1958 ; Journal of the Aerospace Sciences Volume 25 ; 25 ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 1959 ; Journal of the Aerospace Sciences Volume 26 ; 26 ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 1960 ; Journal of the Aerospace Sciences Volume 27 ; 27 ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 1961 ; Journal of the Aerospace Sciences Volume 28 ; 28 ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 1962 ; Journal of the Aerospace Sciences Volume 29 ; 29 ; https://arc.aiaa.org/ ; >
 
   }
   {
@@ -703,10 +703,10 @@
     param[journal_id] = jars
     #Journal of the American Rocket Society, 1945-1953, param[journal_id] = jars
 
-    au < testing ; exists ; 1945-1950 ; Journal of the American Rocket Society Volume 00 ; 00 ; https://arc.aiaa.org/ ; >
-    au < testing ; exists ; 1951 ; Journal of the American Rocket Society Volume 21 ; 21 ; https://arc.aiaa.org/ ; >
-    au < testing ; exists ; 1952 ; Journal of the American Rocket Society Volume 22 ; 22 ; https://arc.aiaa.org/ ; >
-    au < testing ; exists ; 1953 ; Journal of the American Rocket Society Volume 23 ; 23 ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 1945-1950 ; Journal of the American Rocket Society Volume 00 ; 00 ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 1951 ; Journal of the American Rocket Society Volume 21 ; 21 ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 1952 ; Journal of the American Rocket Society Volume 22 ; 22 ; https://arc.aiaa.org/ ; >
+    au < ready ; exists ; 1953 ; Journal of the American Rocket Society Volume 23 ; 23 ; https://arc.aiaa.org/ ; >
 
   }
 }
