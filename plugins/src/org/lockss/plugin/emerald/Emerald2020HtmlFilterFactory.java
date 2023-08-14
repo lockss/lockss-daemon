@@ -97,6 +97,10 @@ public class Emerald2020HtmlFilterFactory implements FilterFactory {
              */
             HtmlNodeFilters.tagWithAttributeRegex("a", "id", "earlycite-tab"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "id", "earlycite"),
+            // Overcrawl articles from "References" om this page:
+            // https://www.emerald.com/insight/content/doi/10.1108/AEDS-06-2020-0129/full/html
+
+            HtmlNodeFilters.tagWithAttributeRegex("p", "class", "Reference"),
 
     };
     InputStream filteredStream = new HtmlFilterInputStream(in, encoding,

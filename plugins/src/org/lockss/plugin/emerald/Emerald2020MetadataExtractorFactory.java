@@ -144,16 +144,30 @@ public class Emerald2020MetadataExtractorFactory implements FileMetadataExtracto
       String dc_date = am.get(MetadataField.DC_FIELD_DATE);
       String tdb_date = null;
 
+      String dc_volume = am.get(MetadataField.FIELD_VOLUME);
+      String tdb_volume = null;
+
       ArchivalUnit au = cu.getArchivalUnit();
       TdbAu tdbau = au.getTdbAu();
       if (tdbau != null) {
+
         tdb_date = tdbau.getYear();
+        tdb_volume = tdbau.getVolume();
+
         if (tdbau != null && dc_date != null) {
           log.debug3("Emerald date check: dc_date = " + dc_date + ", tdb_dat = " + tdb_date);
           log.debug3("Emerald date check: dc_date = " + dc_date.substring(0, 4) + ", tdb_date = " + tdb_date.substring(0, 4));
           if (Integer.parseInt(dc_date.substring(0, 4)) <= Integer.parseInt(tdb_date.substring(0, 04))) {
             log.debug3("Emerald date check: date In Au , dc_date = " + dc_date.substring(0, 4) + ", tdb_dat = " + tdb_date.substring(0, 4));
-            emitter.emitMetadata(cu, am);
+
+            //check volume
+            if (dc_volume.equalsIgnoreCase(tdb_volume)) {
+              log.debug3("Emerald volume check: date In Au , dc_volume = " + dc_volume + ", tdb_volume = " + tdb_volume);
+              emitter.emitMetadata(cu, am);
+            } else {
+              log.debug3("Emerald volume check: failed, volume In Au , dc_volume = " + dc_volume + ", tdb_volume = " + tdb_volume);
+            }
+
           } else {
             log.debug3("Emerald date check: date NOT In Au , dc_date = " + dc_date.substring(0, 4) + ", tdb_dat = " + tdb_date.substring(0, 4));
           }
