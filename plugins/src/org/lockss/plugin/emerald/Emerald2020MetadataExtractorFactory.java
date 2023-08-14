@@ -161,7 +161,7 @@ public class Emerald2020MetadataExtractorFactory implements FileMetadataExtracto
             log.debug3("Emerald date check: date In Au , dc_date = " + dc_date.substring(0, 4) + ", tdb_dat = " + tdb_date.substring(0, 4));
 
             //check volume
-            if (dc_volume.equalsIgnoreCase(tdb_volume)) {
+            if (dc_volume != null && tdb_volume != null && dc_volume.equalsIgnoreCase(tdb_volume)) {
               log.debug3("Emerald volume check: date In Au , dc_volume = " + dc_volume + ", tdb_volume = " + tdb_volume);
               emitter.emitMetadata(cu, am);
             } else {
