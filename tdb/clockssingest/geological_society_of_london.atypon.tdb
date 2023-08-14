@@ -93,7 +93,7 @@
     au < doNotProcess ; doNotProcess ; 2020 ; Geochemistry: Exploration, Environment, Analysis Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; Geochemistry: Exploration, Environment, Analysis Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2022 ; Geochemistry: Exploration, Environment, Analysis Volume 22 [superseded] ; 22 ; >
-    au < ready ; exists ; 2023 ; Geochemistry: Exploration, Environment, Analysis Volume 23 [superseded] ; 23 ; >
+    au < crawling ; exists ; 2023 ; Geochemistry: Exploration, Environment, Analysis Volume 23 [superseded] ; 23 ; >
 
   }
 
@@ -726,11 +726,11 @@
     au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 535 ; 535 ; >
     au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 536 ; 536 ; >
     au < ready ; exists ; 2023 ; Geological Society of London Special Publications Volume 537 ; 537 ; >
-    au < ready ; exists ; 2023 ; Geological Society of London Special Publications Volume 538 ; 538 ; >
+    au < crawling ; exists ; 2023 ; Geological Society of London Special Publications Volume 538 ; 538 ; >
     au < ready ; exists ; 2023 ; Geological Society of London Special Publications Volume 539 ; 539 ; >
     au < crawling ; exists ; 2023 ; Geological Society of London Special Publications Volume 540 ; 540 ; >
     au < ready ; exists ; 2023 ; Geological Society of London Special Publications Volume 541 ; 541 ; >
-    au < ready ; exists ; 2023 ; Geological Society of London Special Publications Volume 542 ; 542 ; >
+    au < crawling ; exists ; 2023 ; Geological Society of London Special Publications Volume 542 ; 542 ; >
     au < ready ; exists ; 2023 ; Geological Society of London Special Publications Volume 543 ; 543 ; >
     au < expected ; exists ; 2023 ; Geological Society of London Special Publications Volume 544 ; 544 ; >
     au < expected ; exists ; 2023 ; Geological Society of London Special Publications Volume 545 ; 545 ; >
@@ -958,7 +958,7 @@
     au < doNotProcess ; doNotProcess ; 2020 ; Journal of the Geological Society of London Volume 177 ; 177 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; Journal of the Geological Society of London Volume 178 ; 178 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of the Geological Society of London Volume 179 ; 179 ; >
-    au < ready ; exists ; 2023 ; Journal of the Geological Society of London Volume 180 ; 180 ; >
+    au < crawling ; exists ; 2023 ; Journal of the Geological Society of London Volume 180 ; 180 ; >
 
   }
 
