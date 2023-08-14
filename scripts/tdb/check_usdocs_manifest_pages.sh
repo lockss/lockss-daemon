@@ -8,7 +8,7 @@ tpath="/home/$LOGNAME/tmp"
 #list of Down AUs in old tdb file.
 tdbout -Dc param[collection_id],param[year] tdb/usdocspln/united_states_government_printing_office.fdsys.tdb | sort > $tpath/list1a 
 #list of pending and released AUs in new tdb file.
-tdbout -EMTYRc param[collection_id],param[year] tdb/usdocspln/united_states_government_printing_office.tdb | sort > $tpath/list1b 
+tdbout -EMTYRDc param[collection_id],param[year] tdb/usdocspln/united_states_government_printing_office.tdb | sort > $tpath/list1b 
 #list of pending and released AUs in COURTS tdb file.
 tdbout -c param[court_id],param[year] tdb/usdocspln/united_states_government_printing_office.uscourts.tdb | sed 's/^/USCOURTS_/' | sort > $tpath/list1e 
 
