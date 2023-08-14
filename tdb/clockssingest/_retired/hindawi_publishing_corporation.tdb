@@ -3089,7 +3089,7 @@
     param[journal_id] = cmmi
     #Content published prior to 2017 is hosted on the Wiley Online Library.
 
-    au < finished ; crawling ; 2017 ; Contrast Media & Molecular Imaging Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; Contrast Media & Molecular Imaging Volume 2017 ; 2017 ; 2017 ; http://www.hindawi.com/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; Contrast Media & Molecular Imaging Volume 2018 ; 2018 ; 2018 ; https://www.hindawi.com/ ; >
     au < frozen ; exists ; 2019 ; Contrast Media & Molecular Imaging Volume 2019 ; 2019 ; 2019 ; https://www.hindawi.com/ ; >
 

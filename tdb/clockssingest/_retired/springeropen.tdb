@@ -26,7 +26,7 @@
         param[journal_issn] = 2213-7467 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; crawling ; 2014 ; Advanced Modeling and Simulation in Engineering Sciences Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+        au < finished ; frozen ; 2014 ; Advanced Modeling and Simulation in Engineering Sciences Volume 1 ; 1 ; reingest2.clockss.org:8085 >
         au < doNotProcess ; exists ; 2015 ; Advanced Modeling and Simulation in Engineering Sciences Volume 2 ; 2 ; >
   
     }
@@ -101,7 +101,7 @@
   
         au < doNotProcess ; exists ; 2011 ; Annals of Intensive Care Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2012 ; Annals of Intensive Care Volume 2 ; 2 ; >
-        au < finished ; crawling ; 2013 ; Annals of Intensive Care Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2013 ; Annals of Intensive Care Volume 3 ; 3 ; reingest3.clockss.org:8083 >
         au < finished ; finished ; 2014 ; Annals of Intensive Care Volume 4 ; 4 ; >
         au < superseded ; exists ; 2015 ; Annals of Intensive Care Volume 5 [superseded] ; 5 ; >
   
@@ -381,8 +381,8 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; Critical Ultrasound Journal Volume 4 ; 4 ; >
-        au < finished ; crawling ; 2013 ; Critical Ultrasound Journal Volume 5 ; 5 ; reingest3.clockss.org:8083 >
-        au < finished ; crawling ; 2014 ; Critical Ultrasound Journal Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2013 ; Critical Ultrasound Journal Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2014 ; Critical Ultrasound Journal Volume 6 ; 6 ; reingest3.clockss.org:8083 >
         au < superseded ; exists ; 2015 ; Critical Ultrasound Journal Volume 7 [superseded] ; 7 ; >
   
     }
@@ -447,7 +447,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; Ecological Processes Volume 1 ; 1 ; >
-        au < finished ; crawling ; 2013 ; Ecological Processes Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+        au < finished ; frozen ; 2013 ; Ecological Processes Volume 2 ; 2 ; reingest2.clockss.org:8085 >
         au < finished ; finished ; 2014 ; Ecological Processes Volume 3 ; 3 ; reingest3.clockss.org:8083 >
         au < superseded ; exists ; 2015 ; Ecological Processes Volume 4 [superseded] ; 4 ; >
   
@@ -482,7 +482,7 @@
   
         au < doNotProcess ; exists ; 2011 ; EJNMMI Research Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2012 ; EJNMMI Research Volume 2 ; 2 ; >
-        au < finished ; crawling ; 2013 ; EJNMMI Research Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2013 ; EJNMMI Research Volume 3 ; 3 ; reingest5.clockss.org:8082 >
         au < finished ; finished ; 2014 ; EJNMMI Research Volume 4 ; 4 ; reingest1.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; EJNMMI Research Volume 5 [superseded] ; 5 ; >
   
@@ -537,7 +537,7 @@
   
         au < doNotProcess ; exists ; 2011 ; Environmental Sciences Europe Volume 23 ; 23 ; >
         au < doNotProcess ; exists ; 2012 ; Environmental Sciences Europe Volume 24 ; 24 ; >
-        au < finished ; crawling ; 2013 ; Environmental Sciences Europe Volume 25 ; 25 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2013 ; Environmental Sciences Europe Volume 25 ; 25 ; reingest5.clockss.org:8082 >
         au < finished ; finished ; 2014 ; Environmental Sciences Europe Volume 26 ; 26 ; reingest1.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Environmental Sciences Europe Volume 27 [superseded] ; 27 ; >
   
@@ -574,7 +574,7 @@
   
         au < doNotProcess ; exists ; 2012 ; EPJ Data Science Volume 1 ; 1 ; >
         au < finished ; finished ; 2013 ; EPJ Data Science Volume 2 ; 2 ; reingest4.clockss.org:8082 >
-        au < finished ; crawling ; 2014 ; EPJ Data Science Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2014 ; EPJ Data Science Volume 3 ; 3 ; reingest5.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; EPJ Data Science Volume 4 [superseded] ; 4 ; >
   
     }
@@ -661,7 +661,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < superseded ; exists ; 2013 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2013 [superseded] ; 2013 ; > #no completed crawl. Fetch error. 
-        au < finished ; crawling ; 2014 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2014 ; 2014 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2014 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2014 ; 2014 ; reingest5.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2015 [superseded] ; 2015 ; >
 
     }
@@ -679,7 +679,7 @@
         param[journal_issn] = 1687-4145
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; crawling ; 2013 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2013 ; 2013 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2013 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2013 ; 2013 ; reingest1.clockss.org:8082 >
         au < finished ; finished ; 2014 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2014 ; 2014 ; reingest2.clockss.org:8085 >
         au < superseded ; exists ; 2015 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2015 [superseded] ; 2015 ; >
         }
@@ -719,7 +719,7 @@
         param[journal_issn] = 1687-5176
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; crawling ; 2013 ; EURASIP Journal on Image and Video Processing Volume 2013 ; 2013 ; reingest4.clockss.org:8082 >
+        au < finished ; frozen ; 2013 ; EURASIP Journal on Image and Video Processing Volume 2013 ; 2013 ; reingest4.clockss.org:8082 >
         au < finished ; finished ; 2014 ; EURASIP Journal on Image and Video Processing Volume 2014 ; 2014 ; reingest1.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; EURASIP Journal on Image and Video Processing Volume 2015 [superseded] ; 2015 ; >
         }
@@ -1039,7 +1039,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < finished ; finished ; 2013 ; Intensive Care Medicine Experimental Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-        au < finished ; crawling ; 2014 ; Intensive Care Medicine Experimental Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2014 ; Intensive Care Medicine Experimental Volume 2 ; 2 ; reingest1.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Intensive Care Medicine Experimental Volume 3 [superseded] ; 3 ; >
   
     }
@@ -1344,8 +1344,8 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2012 ; Journal of Applied Volcanology Volume 1 ; 1 ; >
-        au < finished ; crawling ; 2013 ; Journal of Applied Volcanology Volume 2 ; 2 ; reingest1.clockss.org:8082 >
-        au < finished ; crawling ; 2014 ; Journal of Applied Volcanology Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+        au < finished ; frozen ; 2013 ; Journal of Applied Volcanology Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2014 ; Journal of Applied Volcanology Volume 3 ; 3 ; reingest2.clockss.org:8085 >
         au < superseded ; exists ; 2015 ; Journal of Applied Volcanology Volume 4 [superseded] ; 4 ; >
   
     }
@@ -1395,7 +1395,7 @@
         param[journal_issn] = 2194-3990 
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; crawling ; 2014 ; Journal of Computational Surgery Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2014 ; Journal of Computational Surgery Volume 1 ; 1 ; reingest1.clockss.org:8082 >
         au < superseded ; exists ; 2015 ; Journal of Computational Surgery Volume 2 [superseded] ; 2 ; >
   
     }
@@ -1527,7 +1527,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < doNotProcess ; exists ; 2013 ; Journal of Interaction Science Volume 1 ; 1 ; >
-        au < finished ; crawling ; 2014 ; Journal of Interaction Science Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2014 ; Journal of Interaction Science Volume 2 ; 2 ; reingest5.clockss.org:8082 >
         au < doNotProcess ; exists ; 2015 ; Journal of Interaction Science Volume 3 ; 3 ; >
   
     }
@@ -2008,7 +2008,7 @@
         param[journal_issn] = 2197-4284
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; crawling ; 2014 ; Progress in Earth and Planetary Science Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+        au < finished ; frozen ; 2014 ; Progress in Earth and Planetary Science Volume 1 ; 1 ; reingest2.clockss.org:8085 >
         au < superseded ; exists ; 2015 ; Progress in Earth and Planetary Science Volume 2 [superseded] ; 2 ; >
   
     }
@@ -2096,7 +2096,7 @@
         param[journal_issn] = 2197-4225
         comment[platform] = BioMedCentralPlugin
   
-        au < finished ; crawling ; 2014 ; ROBOMECH Journal Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+        au < finished ; frozen ; 2014 ; ROBOMECH Journal Volume 1 ; 1 ; reingest2.clockss.org:8085 >
         au < doNotProcess ; exists ; 2015 ; ROBOMECH Journal Volume 2 ; 2 ; >
   
     }
@@ -2148,7 +2148,7 @@
   
         au < doNotProcess ; exists ; 2012 ; SpringerPlus Volume 1 ; 1 ; >
         au < doNotProcess ; exists ; 2013 ; SpringerPlus Volume 2 ; 2 ; >
-        au < finished ; crawling ; 2014 ; SpringerPlus Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2014 ; SpringerPlus Volume 3 ; 3 ; reingest5.clockss.org:8082 >
         au < doNotProcess ; exists ; 2015 ; SpringerPlus Volume 4 ; 4 ; >
   
     }

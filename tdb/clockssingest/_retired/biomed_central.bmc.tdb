@@ -116,11 +116,11 @@
       au < doNotProcess ; exists ; 2005 ; BMC Biology Volume 3 ; 3 ; >
       au < doNotProcess ; exists ; 2006 ; BMC Biology Volume 4 ; 4 ; >
       au < doNotProcess ; exists ; 2007 ; BMC Biology Volume 5 ; 5 ; >
-      au < finished ; crawling ; 2008 ; BMC Biology Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 2008 ; BMC Biology Volume 6 ; 6 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2009 ; BMC Biology Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2010 ; BMC Biology Volume 8 ; 8 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2011 ; BMC Biology Volume 9 ; 9 ; >
-      au < finished ; crawling ; 2012 ; BMC Biology Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 2012 ; BMC Biology Volume 10 ; 10 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2013 ; BMC Biology Volume 11 ; 11 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; BMC Biology Volume 12 ; 12 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Biology Volume 13 [superseded] ; 13 ; >
@@ -150,7 +150,7 @@
         au < superseded ; exists ; 2009 ; BMC Biophysics Volume 2 [superseded] ; 2 ; >
         au < doNotProcess ; exists ; 2010 ; BMC Biophysics Volume 3 ; 3 ; >
         au < finished ; finished ; 2011 ; BMC Biophysics Volume 4 ; 4 ; reingest1.clockss.org:8082 >
-        au < finished ; crawling ; 2012 ; BMC Biophysics Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2012 ; BMC Biophysics Volume 5 ; 5 ; reingest1.clockss.org:8082 >
         au < finished ; finished ; 2013 ; BMC Biophysics Volume 6 ; 6 ; reingest1.clockss.org:8082 >
         au < finished ; finished ; 2014 ; BMC Biophysics Volume 7 ; 7 ; reingest3.clockss.org:8083 >
         au < superseded ; exists ; 2015 ; BMC Biophysics Volume 8 [superseded] ; 8 ; >
@@ -532,7 +532,7 @@
       au < doNotProcess ; exists ; 2007 ; BMC Ecology Volume 7 ; 7 ; >
       au < finished ; finished ; 2008 ; BMC Ecology Volume 8 ; 8 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2009 ; BMC Ecology Volume 9 ; 9 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2010 ; BMC Ecology Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; BMC Ecology Volume 10 ; 10 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2011 ; BMC Ecology Volume 11 ; 11 ; >
       au < finished ; finished ; 2012 ; BMC Ecology Volume 12 ; 12 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2013 ; BMC Ecology Volume 13 ; 13 ; reingest4.clockss.org:8082 >
@@ -903,7 +903,7 @@
       au < finished ; finished ; 2010 ; BMC Medical Education Volume 10 ; 10 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2011 ; BMC Medical Education Volume 11 ; 11 ; >
       au < finished ; finished ; 2012 ; BMC Medical Education Volume 12 ; 12 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2013 ; BMC Medical Education Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2013 ; BMC Medical Education Volume 13 ; 13 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2014 ; BMC Medical Education Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2015 ; BMC Medical Education Volume 15 [superseded] ; 15 ; >
 
@@ -1035,7 +1035,7 @@
       au < doNotProcess ; exists ; 2007 ; BMC Medical Informatics and Decision Making Volume 7 ; 7 ; >
       au < finished ; crawling ; 2008 ; BMC Medical Informatics and Decision Making Volume 8 ; 8 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2009 ; BMC Medical Informatics and Decision Making Volume 9 ; 9 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2010 ; BMC Medical Informatics and Decision Making Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2010 ; BMC Medical Informatics and Decision Making Volume 10 ; 10 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2011 ; BMC Medical Informatics and Decision Making Volume 11 ; 11 ; >
       au < finished ; crawling ; 2012 ; BMC Medical Informatics and Decision Making Volume 12 ; 12 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2013 ; BMC Medical Informatics and Decision Making Volume 13 ; 13 ; reingest1.clockss.org:8082 >
@@ -1871,7 +1871,7 @@
       au < doNotProcess ; exists ; 2006 ; BMC Veterinary Research Volume 2 ; 2 ; >
       au < doNotProcess ; exists ; 2007 ; BMC Veterinary Research Volume 3 ; 3 ; >
       au < finished ; finished ; 2008 ; BMC Veterinary Research Volume 4 ; 4 ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2009 ; BMC Veterinary Research Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2009 ; BMC Veterinary Research Volume 5 ; 5 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2010 ; BMC Veterinary Research Volume 6 ; 6 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2011 ; BMC Veterinary Research Volume 7 ; 7 ; >
       au < finished ; finished ; 2012 ; BMC Veterinary Research Volume 8 ; 8 ; reingest5.clockss.org:8082 >

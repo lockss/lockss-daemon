@@ -219,13 +219,13 @@
         au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; The Journal of Immunology Volume 194 ; 194 ; http://www.jimmunol.org/ ; reingest5.clockss.org:8082 >
         au < ClockssHighWirePressH20Plugin ; finished ; finished ; 2015 ; The Journal of Immunology Volume 195 ; 195 ; http://www.jimmunol.org/ ; reingest1.clockss.org:8082 > #incomplete on ingest4
         au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2016 ; The Journal of Immunology Volume 196 [superseded] ; 196 ; http://www.jimmunol.org/ ; >
-        au < aai.ClockssAAIDrupalPlugin ; finished ; crawling ; 2016 ; The Journal of Immunology Volume 196 ; 196 ; http://www.jimmunol.org/ ; reingest4.clockss.org:8082 >
+        au < aai.ClockssAAIDrupalPlugin ; finished ; frozen ; 2016 ; The Journal of Immunology Volume 196 ; 196 ; http://www.jimmunol.org/ ; reingest4.clockss.org:8082 >
         au < ClockssHighWirePressH20Plugin ; superseded ; exists ; 2016 ; The Journal of Immunology Volume 197 [superseded] ; 197 ; http://www.jimmunol.org/ ; >
         au < aai.ClockssAAIDrupalPlugin ; finished ; finished ; 2016 ; The Journal of Immunology Volume 197 ; 197 ; http://www.jimmunol.org/ ; reingest3.clockss.org:8083 >
-        au < aai.ClockssAAIDrupalPlugin ; finished ; crawling ; 2017 ; The Journal of Immunology Volume 198 ; 198 ; http://www.jimmunol.org/ ; reingest4.clockss.org:8082 >
+        au < aai.ClockssAAIDrupalPlugin ; finished ; frozen ; 2017 ; The Journal of Immunology Volume 198 ; 198 ; http://www.jimmunol.org/ ; reingest4.clockss.org:8082 >
         au < aai.ClockssAAIDrupalPlugin ; finished ; finished ; 2017 ; The Journal of Immunology Volume 199 ; 199 ; http://www.jimmunol.org/ ; reingest2.clockss.org:8085 >
-        au < aai.ClockssAAIDrupalPlugin ; finished ; crawling ; 2018 ; The Journal of Immunology Volume 200 ; 200 ; http://www.jimmunol.org/ ; reingest2.clockss.org:8085 >
-        au < aai.ClockssAAIDrupalPlugin ; finished ; crawling ; 2018 ; The Journal of Immunology Volume 201 ; 201 ; http://www.jimmunol.org/ ; reingest4.clockss.org:8082 >
+        au < aai.ClockssAAIDrupalPlugin ; finished ; frozen ; 2018 ; The Journal of Immunology Volume 200 ; 200 ; http://www.jimmunol.org/ ; reingest2.clockss.org:8085 >
+        au < aai.ClockssAAIDrupalPlugin ; finished ; frozen ; 2018 ; The Journal of Immunology Volume 201 ; 201 ; http://www.jimmunol.org/ ; reingest4.clockss.org:8082 >
         au < aai.ClockssAAIDrupalPlugin ; frozen ; exists ; 2019 ; The Journal of Immunology Volume 202 ; 202 ; https://www.jimmunol.org/ ; >
         au < aai.ClockssAAIDrupalPlugin ; finished ; finished ; 2019 ; The Journal of Immunology Volume 203 ; 203 ; https://www.jimmunol.org/ ; reingest1.clockss.org:8082 >
         au < aai.ClockssAAIDrupalPlugin ; finished ; finished ; 2020 ; The Journal of Immunology Volume 204 ; 204 ; https://www.jimmunol.org/ ; reingest1.clockss.org:8082 >
