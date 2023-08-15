@@ -36,7 +36,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_identifier</string>
-        <string>org.lockss.plugin.europeanmathematicalsociety.api.ClockssEuropeanMathematicalSocietyBooksAPIPlugin</string>
+        <string>org.lockss.plugin.europeanmathematicalsociety.api.ClockssEuropeanMathematicalSocietyJournalsAPIPlugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>European Mathematical Society Books API Plugin (CLOCKSS)</string>
+        <string>European Mathematical Society Journals API Plugin (CLOCKSS)</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -98,7 +98,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"European Mathematical Society Books API Plugin (CLOCKSS), Base URL %s, Item %s", base_url, item</string>
+        <string>"European Mathematical Society Journals API Plugin (CLOCKSS), Base URL %s, Item %s", base_url, item</string>
     </entry>
     <entry>
         <string>au_def_pause_time</string>
@@ -114,7 +114,8 @@ POSSIBILITY OF SUCH DAMAGE.
         -->
         <string>au_start_url</string>
         <!--<string>"%s%s", base_url, item</string>-->
-        <string>"%sbooks",base_url</string>
+        <!--item is either "books" or "serial"-->
+        <string>"%s%s-issues?filter[serial]=11",base_url, item</string>
     </entry>
     <!--
     <entry>
@@ -131,17 +132,16 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_crawlrules</string>
         <list>
-            <string>1,"%sbooks",base_url</string>
-            <string>1,"%sbooks/\d+\?include=bookFiles",base_url</string>
+            <string>1,"%sserials/.*",base_url</string>
+            <string>1,"%sserials?filter",base_url</string>
+            <string>1,"%sserial-issues",base_url</string>
+            <string>1,"%sserial-issues\?filter",base_url</string>
+            <!--https://content.ems.press/serial-articles?filter[serialIssue]=1&include=serialIssue,serialArticleFiles-->
+            <string>1,"%sserial-articles\?filter",base_url</string>
             <!--
-            https://content.ems.press/assets/public/full-texts/books/5/online-pdf/978-3-03719-503-1.pdf
-            https://content.ems.press/assets/public/full-texts/books/5/supplementary-files/3037190035_intro.pdf
-            https://content.ems.press/assets/public/full-texts/books/5/supplementary-files/3037190035_TOC.pdf
-            https://content.ems.press/assets/public/full-texts/books/6/online-pdf/978-3-03719-521-5.pdf
+            https://content.ems.press/assets/public/full-texts/serials/jems/25/5/4990387-10.4171-jems-1224-print.pdf
             -->
-            <!--EXCLUDED for now, since not authorized by publihser yet -->
-            <string>2,"%sassets/public/full-texts/books/\d+/online-pdf/.*",base_url</string>
-            <string>1,"%sassets/public/full-texts/books/\d+/supplementary-files/.*",base_url</string>
+            <string>1,"%sassets/public/full-texts/serials/",base_url</string>
         </list>
     </entry>
     <entry>

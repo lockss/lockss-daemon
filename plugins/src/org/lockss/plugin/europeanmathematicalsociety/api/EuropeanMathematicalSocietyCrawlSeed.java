@@ -211,10 +211,10 @@ public class EuropeanMathematicalSocietyCrawlSeed extends BaseCrawlSeed {
   }
 
   protected String makeApiUrl(int page) {
-    return String.format("%s%s",
-        API_URL,
-        item
-    );
+      return String.format("%s%ss",
+              API_URL,
+              item
+      );
   }
 
   protected UrlFetcher makeApiUrlFetcher(final EuropeanMathematicalSocietyJsonLinkExtractor ems,
@@ -329,10 +329,8 @@ public class EuropeanMathematicalSocietyCrawlSeed extends BaseCrawlSeed {
 	  StringBuilder sb = new StringBuilder();
 	  sb.append("<html>\n");
 	  for (String u : urlList) {
-          //String completeUrl = u + "?include=bookFiles";
-          String completeUrl = u;
-		  sb.append("<a href=\"" + completeUrl  + "\">" + completeUrl  + "</a><br/>\n");
-          log.debug3(" storeStartUrl = " + completeUrl);
+		  sb.append("<a href=\"" + u  + "\">" + u  + "</a><br/>\n");
+          log.debug3(" storeStartUrl = " + u);
 	  }
 	  sb.append("</html>");
 	  CIProperties headers = new CIProperties();

@@ -100,7 +100,20 @@ public class EuropeanMathematicalSocietyJsonLinkExtractor {
 
         log.debug3("Processingnode array...... node# = " + Integer.toString(i));
         log.debug3("Node " + file.toString());
-        String filename =  file.path("links").path("self").asText() + "?include=bookFiles";
+
+        String filename = null;
+
+        if (item.contains("book")) {
+          filename = file.path("links").path("self").asText() + "?include=bookFiles";
+        } else if (item.contains("serial")) {
+          //from "https://content.ems.press/serial-issues?filter[serial]=11": get "https://content.ems.press/serials/2678"
+          //filename = file.path("links").path("self").asText();
+          // want to get "https://content.ems.press/serial-articles filter[serialIssue]==2076
+          //include==serial,serialIssue,personGroups,personGroups.members,serialArticleFiles
+          filename = file.path("links").path("self").asText().
+                  replace("serials/", "serial-articles?filter[serialIssue]=") +
+                  "&include=serialIssue,serialArticleFiles";
+        }
         log.debug3("Processing node array, node# = " + Integer.toString(i) + ", filename= " + filename);
 
         if (filename != null) {
