@@ -642,29 +642,29 @@
     #Back content, not yet processed 1996-2005, first half of 2006, 2008.
     #Unexpected journal number in the issue links on the manifest pages. See https://www.liverpooluniversitypress.co.uk/lockss/hsir/2/index.html
 
-    au < exists ; 1996 ; Historical Studies in Industrial Relations Volume 1 ; 1 >
-    au < exists ; 1996 ; Historical Studies in Industrial Relations Volume 2 ; 2 >
-    au < exists ; 1997 ; Historical Studies in Industrial Relations Volume 3 ; 3 >
-    au < exists ; 1997 ; Historical Studies in Industrial Relations Volume 4 ; 4 >
-    au < exists ; 1998 ; Historical Studies in Industrial Relations Volume 5 ; 5 >
-    au < exists ; 1998 ; Historical Studies in Industrial Relations Volume 6 ; 6 >
-    au < exists ; 1999 ; Historical Studies in Industrial Relations Volume 7 ; 7 >
-    au < exists ; 1999 ; Historical Studies in Industrial Relations Volume 8 ; 8 >
-    au < exists ; 2000 ; Historical Studies in Industrial Relations Volume 9 ; 9 >
-    au < exists ; 2000 ; Historical Studies in Industrial Relations Volume 10 ; 10 >
-    au < exists ; 2001 ; Historical Studies in Industrial Relations Volume 11 ; 11 >
-    au < exists ; 2001 ; Historical Studies in Industrial Relations Volume 12 ; 12 >
-    au < exists ; 2002 ; Historical Studies in Industrial Relations Volume 13 ; 13 >
-    au < exists ; 2002 ; Historical Studies in Industrial Relations Volume 14 ; 14 >
-    au < exists ; 2003 ; Historical Studies in Industrial Relations Volume 15 ; 15 >
-    au < exists ; 2003 ; Historical Studies in Industrial Relations Volume 16 ; 16 >
-    au < exists ; 2004 ; Historical Studies in Industrial Relations Volume 17 ; 17 >
-    au < exists ; 2004 ; Historical Studies in Industrial Relations Volume 18 ; 18 >
-    au < exists ; 2005 ; Historical Studies in Industrial Relations Volume 19 ; 19 >
-    au < exists ; 2005 ; Historical Studies in Industrial Relations Volume 20 ; 20 >
-    au < exists ; 2006 ; Historical Studies in Industrial Relations Volume 21 ; 21 >
+    au < manifest ; 1996 ; Historical Studies in Industrial Relations Volume 1 ; 1 >
+    au < manifest ; 1996 ; Historical Studies in Industrial Relations Volume 2 ; 2 >
+    au < manifest ; 1997 ; Historical Studies in Industrial Relations Volume 3 ; 3 >
+    au < manifest ; 1997 ; Historical Studies in Industrial Relations Volume 4 ; 4 >
+    au < manifest ; 1998 ; Historical Studies in Industrial Relations Volume 5 ; 5 >
+    au < manifest ; 1998 ; Historical Studies in Industrial Relations Volume 6 ; 6 >
+    au < manifest ; 1999 ; Historical Studies in Industrial Relations Volume 7 ; 7 >
+    au < manifest ; 1999 ; Historical Studies in Industrial Relations Volume 8 ; 8 >
+    au < manifest ; 2000 ; Historical Studies in Industrial Relations Volume 9 ; 9 >
+    au < manifest ; 2000 ; Historical Studies in Industrial Relations Volume 10 ; 10 >
+    au < manifest ; 2001 ; Historical Studies in Industrial Relations Volume 11 ; 11 >
+    au < manifest ; 2001 ; Historical Studies in Industrial Relations Volume 12 ; 12 >
+    au < manifest ; 2002 ; Historical Studies in Industrial Relations Volume 13 ; 13 >
+    au < manifest ; 2002 ; Historical Studies in Industrial Relations Volume 14 ; 14 >
+    au < manifest ; 2003 ; Historical Studies in Industrial Relations Volume 15 ; 15 >
+    au < manifest ; 2003 ; Historical Studies in Industrial Relations Volume 16 ; 16 >
+    au < manifest ; 2004 ; Historical Studies in Industrial Relations Volume 17 ; 17 >
+    au < manifest ; 2004 ; Historical Studies in Industrial Relations Volume 18 ; 18 >
+    au < manifest ; 2005 ; Historical Studies in Industrial Relations Volume 19 ; 19 >
+    au < manifest ; 2005 ; Historical Studies in Industrial Relations Volume 20 ; 20 >
+    au < manifest ; 2006 ; Historical Studies in Industrial Relations Volume 21 ; 21 >
     au < doNotProcess ; 2006 ; Historical Studies in Industrial Relations Volume 22 ; 22 >
-    au < exists ; 2007 ; Historical Studies in Industrial Relations Volume 23-24 ; 23-24 >
+    au < manifest ; 2007 ; Historical Studies in Industrial Relations Volume 23-24 ; 23-24 >
     au < doNotProcess ; 2008 ; Historical Studies in Industrial Relations Volume 25-26 ; 25-26 >
     au < doNotProcess ; 2009 ; Historical Studies in Industrial Relations Volume 27-28 ; 27-28 >
     au < doNotProcess ; 2010 ; Historical Studies in Industrial Relations Volume 29-30 ; 29-30 >
@@ -931,96 +931,96 @@
     #Published 1963-present
     #jounral_num = 55
 
-    au < exists ; 1963 ; Labour History: A Journal of Labour and Social History Volume 4 ; 4 >
-    au < exists ; 1963 ; Labour History: A Journal of Labour and Social History Volume 5 ; 5 >
-    au < exists ; 1964 ; Labour History: A Journal of Labour and Social History Volume 6 ; 6 >
-    au < exists ; 1964 ; Labour History: A Journal of Labour and Social History Volume 7 ; 7 >
+    au < manifest ; 1963 ; Labour History: A Journal of Labour and Social History Volume 4 ; 4 >
+    au < manifest ; 1963 ; Labour History: A Journal of Labour and Social History Volume 5 ; 5 >
+    au < manifest ; 1964 ; Labour History: A Journal of Labour and Social History Volume 6 ; 6 >
+    au < manifest ; 1964 ; Labour History: A Journal of Labour and Social History Volume 7 ; 7 >
     au < doesNotExist ; 1965 ; Labour History: A Journal of Labour and Social History Volume 8 ; 8 >
     au < doesNotExist ; 1965 ; Labour History: A Journal of Labour and Social History Volume 9 ; 9 >
-    au < exists ; 1966 ; Labour History: A Journal of Labour and Social History Volume 10 ; 10 >
-    au < exists ; 1966 ; Labour History: A Journal of Labour and Social History Volume 11 ; 11 >
-    au < exists ; 1967 ; Labour History: A Journal of Labour and Social History Volume 12 ; 12 >
-    au < exists ; 1967 ; Labour History: A Journal of Labour and Social History Volume 13 ; 13 >
-    au < exists ; 1968 ; Labour History: A Journal of Labour and Social History Volume 14 ; 14 >
-    au < exists ; 1968 ; Labour History: A Journal of Labour and Social History Volume 15 ; 15 >
-    au < exists ; 1969 ; Labour History: A Journal of Labour and Social History Volume 16 ; 16 >
-    au < exists ; 1969 ; Labour History: A Journal of Labour and Social History Volume 17 ; 17 >
-    au < exists ; 1970 ; Labour History: A Journal of Labour and Social History Volume 18 ; 18 >
-    au < exists ; 1970 ; Labour History: A Journal of Labour and Social History Volume 19 ; 19 >
-    au < exists ; 1971 ; Labour History: A Journal of Labour and Social History Volume 20 ; 20 >
-    au < exists ; 1971 ; Labour History: A Journal of Labour and Social History Volume 21 ; 21 >
-    au < exists ; 1972 ; Labour History: A Journal of Labour and Social History Volume 22 ; 22 >
-    au < exists ; 1972 ; Labour History: A Journal of Labour and Social History Volume 23 ; 23 >
-    au < exists ; 1973 ; Labour History: A Journal of Labour and Social History Volume 24 ; 24 >
-    au < exists ; 1973 ; Labour History: A Journal of Labour and Social History Volume 25 ; 25 >
-    au < exists ; 1974 ; Labour History: A Journal of Labour and Social History Volume 26 ; 26 >
-    au < exists ; 1974 ; Labour History: A Journal of Labour and Social History Volume 27 ; 27 >
-    au < exists ; 1975 ; Labour History: A Journal of Labour and Social History Volume 28 ; 28 >
-    au < exists ; 1975 ; Labour History: A Journal of Labour and Social History Volume 29 ; 29 >
-    au < exists ; 1976 ; Labour History: A Journal of Labour and Social History Volume 30 ; 30 >
-    au < exists ; 1976 ; Labour History: A Journal of Labour and Social History Volume 31 ; 31 >
-    au < exists ; 1977 ; Labour History: A Journal of Labour and Social History Volume 32 ; 32 >
-    au < exists ; 1977 ; Labour History: A Journal of Labour and Social History Volume 33 ; 33 >
-    au < exists ; 1978 ; Labour History: A Journal of Labour and Social History Volume 34 ; 34 >
-    au < exists ; 1978 ; Labour History: A Journal of Labour and Social History Volume 35 ; 35 >
-    au < exists ; 1979 ; Labour History: A Journal of Labour and Social History Volume 36 ; 36 >
-    au < exists ; 1979 ; Labour History: A Journal of Labour and Social History Volume 37 ; 37 >
-    au < exists ; 1980 ; Labour History: A Journal of Labour and Social History Volume 38 ; 38 >
-    au < exists ; 1980 ; Labour History: A Journal of Labour and Social History Volume 39 ; 39 >
-    au < exists ; 1981 ; Labour History: A Journal of Labour and Social History Volume 40 ; 40 >
-    au < exists ; 1981 ; Labour History: A Journal of Labour and Social History Volume 41 ; 41 >
-    au < exists ; 1982 ; Labour History: A Journal of Labour and Social History Volume 42 ; 42 >
-    au < exists ; 1982 ; Labour History: A Journal of Labour and Social History Volume 43 ; 43 >
-    au < exists ; 1983 ; Labour History: A Journal of Labour and Social History Volume 44 ; 44 >
-    au < exists ; 1983 ; Labour History: A Journal of Labour and Social History Volume 45 ; 45 >
-    au < exists ; 1984 ; Labour History: A Journal of Labour and Social History Volume 46 ; 46 >
-    au < exists ; 1984 ; Labour History: A Journal of Labour and Social History Volume 47 ; 47 >
-    au < exists ; 1985 ; Labour History: A Journal of Labour and Social History Volume 48 ; 48 >
-    au < exists ; 1985 ; Labour History: A Journal of Labour and Social History Volume 49 ; 49 >
-    au < exists ; 1986 ; Labour History: A Journal of Labour and Social History Volume 50 ; 50 >
-    au < exists ; 1986 ; Labour History: A Journal of Labour and Social History Volume 51 ; 51 >
-    au < exists ; 1987 ; Labour History: A Journal of Labour and Social History Volume 52 ; 52 >
-    au < exists ; 1987 ; Labour History: A Journal of Labour and Social History Volume 53 ; 53 >
-    au < exists ; 1988 ; Labour History: A Journal of Labour and Social History Volume 54 ; 54 >
-    au < exists ; 1988 ; Labour History: A Journal of Labour and Social History Volume 55 ; 55 >
-    au < exists ; 1989 ; Labour History: A Journal of Labour and Social History Volume 56 ; 56 >
-    au < exists ; 1989 ; Labour History: A Journal of Labour and Social History Volume 57 ; 57 >
-    au < exists ; 1990 ; Labour History: A Journal of Labour and Social History Volume 58 ; 58 >
-    au < exists ; 1990 ; Labour History: A Journal of Labour and Social History Volume 59 ; 59 >
-    au < exists ; 1991 ; Labour History: A Journal of Labour and Social History Volume 60 ; 60 >
-    au < exists ; 1991 ; Labour History: A Journal of Labour and Social History Volume 61 ; 61 >
-    au < exists ; 1992 ; Labour History: A Journal of Labour and Social History Volume 62 ; 62 >
-    au < exists ; 1992 ; Labour History: A Journal of Labour and Social History Volume 63 ; 63 >
-    au < exists ; 1993 ; Labour History: A Journal of Labour and Social History Volume 64 ; 64 >
-    au < exists ; 1993 ; Labour History: A Journal of Labour and Social History Volume 65 ; 65 >
-    au < exists ; 1994 ; Labour History: A Journal of Labour and Social History Volume 66 ; 66 >
-    au < exists ; 1994 ; Labour History: A Journal of Labour and Social History Volume 67 ; 67 >
-    au < exists ; 1995 ; Labour History: A Journal of Labour and Social History Volume 68 ; 68 >
-    au < exists ; 1995 ; Labour History: A Journal of Labour and Social History Volume 69 ; 69 >
-    au < exists ; 1996 ; Labour History: A Journal of Labour and Social History Volume 70 ; 70 >
-    au < exists ; 1996 ; Labour History: A Journal of Labour and Social History Volume 71 ; 71 >
-    au < exists ; 1997 ; Labour History: A Journal of Labour and Social History Volume 72 ; 72 >
-    au < exists ; 1997 ; Labour History: A Journal of Labour and Social History Volume 73 ; 73 >
-    au < exists ; 1998 ; Labour History: A Journal of Labour and Social History Volume 74 ; 74 >
-    au < exists ; 1998 ; Labour History: A Journal of Labour and Social History Volume 75 ; 75 >
-    au < exists ; 1999 ; Labour History: A Journal of Labour and Social History Volume 76 ; 76 >
-    au < exists ; 1999 ; Labour History: A Journal of Labour and Social History Volume 77 ; 77 >
-    au < exists ; 2000 ; Labour History: A Journal of Labour and Social History Volume 78 ; 78 >
-    au < exists ; 2000 ; Labour History: A Journal of Labour and Social History Volume 79 ; 79 >
-    au < exists ; 2001 ; Labour History: A Journal of Labour and Social History Volume 80 ; 80 >
-    au < exists ; 2001 ; Labour History: A Journal of Labour and Social History Volume 81 ; 81 >
-    au < exists ; 2002 ; Labour History: A Journal of Labour and Social History Volume 82 ; 82 >
-    au < exists ; 2002 ; Labour History: A Journal of Labour and Social History Volume 83 ; 83 >
-    au < exists ; 2003 ; Labour History: A Journal of Labour and Social History Volume 84 ; 84 >
-    au < exists ; 2003 ; Labour History: A Journal of Labour and Social History Volume 85 ; 85 >
-    au < exists ; 2004 ; Labour History: A Journal of Labour and Social History Volume 86 ; 86 >
-    au < exists ; 2004 ; Labour History: A Journal of Labour and Social History Volume 87 ; 87 >
-    au < exists ; 2005 ; Labour History: A Journal of Labour and Social History Volume 88 ; 88 >
-    au < exists ; 2005 ; Labour History: A Journal of Labour and Social History Volume 89 ; 89 >
-    au < exists ; 2006 ; Labour History: A Journal of Labour and Social History Volume 90 ; 90 >
-    au < exists ; 2006 ; Labour History: A Journal of Labour and Social History Volume 91 ; 91 >
-    au < exists ; 2007 ; Labour History: A Journal of Labour and Social History Volume 92 ; 92 >
-    au < exists ; 2007 ; Labour History: A Journal of Labour and Social History Volume 93 ; 93 >
+    au < manifest ; 1966 ; Labour History: A Journal of Labour and Social History Volume 10 ; 10 >
+    au < manifest ; 1966 ; Labour History: A Journal of Labour and Social History Volume 11 ; 11 >
+    au < manifest ; 1967 ; Labour History: A Journal of Labour and Social History Volume 12 ; 12 >
+    au < manifest ; 1967 ; Labour History: A Journal of Labour and Social History Volume 13 ; 13 >
+    au < manifest ; 1968 ; Labour History: A Journal of Labour and Social History Volume 14 ; 14 >
+    au < manifest ; 1968 ; Labour History: A Journal of Labour and Social History Volume 15 ; 15 >
+    au < manifest ; 1969 ; Labour History: A Journal of Labour and Social History Volume 16 ; 16 >
+    au < manifest ; 1969 ; Labour History: A Journal of Labour and Social History Volume 17 ; 17 >
+    au < manifest ; 1970 ; Labour History: A Journal of Labour and Social History Volume 18 ; 18 >
+    au < manifest ; 1970 ; Labour History: A Journal of Labour and Social History Volume 19 ; 19 >
+    au < manifest ; 1971 ; Labour History: A Journal of Labour and Social History Volume 20 ; 20 >
+    au < manifest ; 1971 ; Labour History: A Journal of Labour and Social History Volume 21 ; 21 >
+    au < manifest ; 1972 ; Labour History: A Journal of Labour and Social History Volume 22 ; 22 >
+    au < manifest ; 1972 ; Labour History: A Journal of Labour and Social History Volume 23 ; 23 >
+    au < manifest ; 1973 ; Labour History: A Journal of Labour and Social History Volume 24 ; 24 >
+    au < manifest ; 1973 ; Labour History: A Journal of Labour and Social History Volume 25 ; 25 >
+    au < manifest ; 1974 ; Labour History: A Journal of Labour and Social History Volume 26 ; 26 >
+    au < manifest ; 1974 ; Labour History: A Journal of Labour and Social History Volume 27 ; 27 >
+    au < manifest ; 1975 ; Labour History: A Journal of Labour and Social History Volume 28 ; 28 >
+    au < manifest ; 1975 ; Labour History: A Journal of Labour and Social History Volume 29 ; 29 >
+    au < manifest ; 1976 ; Labour History: A Journal of Labour and Social History Volume 30 ; 30 >
+    au < manifest ; 1976 ; Labour History: A Journal of Labour and Social History Volume 31 ; 31 >
+    au < manifest ; 1977 ; Labour History: A Journal of Labour and Social History Volume 32 ; 32 >
+    au < manifest ; 1977 ; Labour History: A Journal of Labour and Social History Volume 33 ; 33 >
+    au < manifest ; 1978 ; Labour History: A Journal of Labour and Social History Volume 34 ; 34 >
+    au < manifest ; 1978 ; Labour History: A Journal of Labour and Social History Volume 35 ; 35 >
+    au < manifest ; 1979 ; Labour History: A Journal of Labour and Social History Volume 36 ; 36 >
+    au < manifest ; 1979 ; Labour History: A Journal of Labour and Social History Volume 37 ; 37 >
+    au < manifest ; 1980 ; Labour History: A Journal of Labour and Social History Volume 38 ; 38 >
+    au < manifest ; 1980 ; Labour History: A Journal of Labour and Social History Volume 39 ; 39 >
+    au < manifest ; 1981 ; Labour History: A Journal of Labour and Social History Volume 40 ; 40 >
+    au < manifest ; 1981 ; Labour History: A Journal of Labour and Social History Volume 41 ; 41 >
+    au < manifest ; 1982 ; Labour History: A Journal of Labour and Social History Volume 42 ; 42 >
+    au < manifest ; 1982 ; Labour History: A Journal of Labour and Social History Volume 43 ; 43 >
+    au < manifest ; 1983 ; Labour History: A Journal of Labour and Social History Volume 44 ; 44 >
+    au < manifest ; 1983 ; Labour History: A Journal of Labour and Social History Volume 45 ; 45 >
+    au < manifest ; 1984 ; Labour History: A Journal of Labour and Social History Volume 46 ; 46 >
+    au < manifest ; 1984 ; Labour History: A Journal of Labour and Social History Volume 47 ; 47 >
+    au < manifest ; 1985 ; Labour History: A Journal of Labour and Social History Volume 48 ; 48 >
+    au < manifest ; 1985 ; Labour History: A Journal of Labour and Social History Volume 49 ; 49 >
+    au < manifest ; 1986 ; Labour History: A Journal of Labour and Social History Volume 50 ; 50 >
+    au < manifest ; 1986 ; Labour History: A Journal of Labour and Social History Volume 51 ; 51 >
+    au < manifest ; 1987 ; Labour History: A Journal of Labour and Social History Volume 52 ; 52 >
+    au < manifest ; 1987 ; Labour History: A Journal of Labour and Social History Volume 53 ; 53 >
+    au < manifest ; 1988 ; Labour History: A Journal of Labour and Social History Volume 54 ; 54 >
+    au < manifest ; 1988 ; Labour History: A Journal of Labour and Social History Volume 55 ; 55 >
+    au < manifest ; 1989 ; Labour History: A Journal of Labour and Social History Volume 56 ; 56 >
+    au < manifest ; 1989 ; Labour History: A Journal of Labour and Social History Volume 57 ; 57 >
+    au < manifest ; 1990 ; Labour History: A Journal of Labour and Social History Volume 58 ; 58 >
+    au < manifest ; 1990 ; Labour History: A Journal of Labour and Social History Volume 59 ; 59 >
+    au < manifest ; 1991 ; Labour History: A Journal of Labour and Social History Volume 60 ; 60 >
+    au < manifest ; 1991 ; Labour History: A Journal of Labour and Social History Volume 61 ; 61 >
+    au < manifest ; 1992 ; Labour History: A Journal of Labour and Social History Volume 62 ; 62 >
+    au < manifest ; 1992 ; Labour History: A Journal of Labour and Social History Volume 63 ; 63 >
+    au < manifest ; 1993 ; Labour History: A Journal of Labour and Social History Volume 64 ; 64 >
+    au < manifest ; 1993 ; Labour History: A Journal of Labour and Social History Volume 65 ; 65 >
+    au < manifest ; 1994 ; Labour History: A Journal of Labour and Social History Volume 66 ; 66 >
+    au < manifest ; 1994 ; Labour History: A Journal of Labour and Social History Volume 67 ; 67 >
+    au < manifest ; 1995 ; Labour History: A Journal of Labour and Social History Volume 68 ; 68 >
+    au < manifest ; 1995 ; Labour History: A Journal of Labour and Social History Volume 69 ; 69 >
+    au < manifest ; 1996 ; Labour History: A Journal of Labour and Social History Volume 70 ; 70 >
+    au < manifest ; 1996 ; Labour History: A Journal of Labour and Social History Volume 71 ; 71 >
+    au < manifest ; 1997 ; Labour History: A Journal of Labour and Social History Volume 72 ; 72 >
+    au < manifest ; 1997 ; Labour History: A Journal of Labour and Social History Volume 73 ; 73 >
+    au < manifest ; 1998 ; Labour History: A Journal of Labour and Social History Volume 74 ; 74 >
+    au < manifest ; 1998 ; Labour History: A Journal of Labour and Social History Volume 75 ; 75 >
+    au < manifest ; 1999 ; Labour History: A Journal of Labour and Social History Volume 76 ; 76 >
+    au < manifest ; 1999 ; Labour History: A Journal of Labour and Social History Volume 77 ; 77 >
+    au < manifest ; 2000 ; Labour History: A Journal of Labour and Social History Volume 78 ; 78 >
+    au < manifest ; 2000 ; Labour History: A Journal of Labour and Social History Volume 79 ; 79 >
+    au < manifest ; 2001 ; Labour History: A Journal of Labour and Social History Volume 80 ; 80 >
+    au < manifest ; 2001 ; Labour History: A Journal of Labour and Social History Volume 81 ; 81 >
+    au < manifest ; 2002 ; Labour History: A Journal of Labour and Social History Volume 82 ; 82 >
+    au < manifest ; 2002 ; Labour History: A Journal of Labour and Social History Volume 83 ; 83 >
+    au < manifest ; 2003 ; Labour History: A Journal of Labour and Social History Volume 84 ; 84 >
+    au < manifest ; 2003 ; Labour History: A Journal of Labour and Social History Volume 85 ; 85 >
+    au < manifest ; 2004 ; Labour History: A Journal of Labour and Social History Volume 86 ; 86 >
+    au < manifest ; 2004 ; Labour History: A Journal of Labour and Social History Volume 87 ; 87 >
+    au < manifest ; 2005 ; Labour History: A Journal of Labour and Social History Volume 88 ; 88 >
+    au < manifest ; 2005 ; Labour History: A Journal of Labour and Social History Volume 89 ; 89 >
+    au < manifest ; 2006 ; Labour History: A Journal of Labour and Social History Volume 90 ; 90 >
+    au < manifest ; 2006 ; Labour History: A Journal of Labour and Social History Volume 91 ; 91 >
+    au < manifest ; 2007 ; Labour History: A Journal of Labour and Social History Volume 92 ; 92 >
+    au < manifest ; 2007 ; Labour History: A Journal of Labour and Social History Volume 93 ; 93 >
     au < doNotProcess ; 2008 ; Labour History: A Journal of Labour and Social History Volume 94 ; 94 >
     au < doNotProcess ; 2008 ; Labour History: A Journal of Labour and Social History Volume 95 ; 95 >
     au < doNotProcess ; 2009 ; Labour History: A Journal of Labour and Social History Volume 96 ; 96 >
@@ -1561,22 +1561,22 @@
     #Published 1983-present
     #jounral_num = 51
 
-    au < exists ; 2000 ; Quebec Studies Volume 29 ; 29 >
-    au < exists ; 2000 ; Quebec Studies Volume 30 ; 30 >
-    au < exists ; 2001 ; Quebec Studies Volume 31 ; 31 >
-    au < exists ; 2001 ; Quebec Studies Volume 32 ; 32 >
-    au < exists ; 2002 ; Quebec Studies Volume 33 ; 33 >
-    au < exists ; 2002 ; Quebec Studies Volume 34 ; 34 >
-    au < exists ; 2003 ; Quebec Studies Volume 35 ; 35 >
-    au < exists ; 2003 ; Quebec Studies Volume 36 ; 36 >
-    au < exists ; 2004 ; Quebec Studies Volume 37 ; 37 >
-    au < exists ; 2004 ; Quebec Studies Volume 38 ; 38 >
-    au < exists ; 2005 ; Quebec Studies Volume 39 ; 39 >
-    au < exists ; 2005 ; Quebec Studies Volume 40 ; 40 >
-    au < exists ; 2006 ; Quebec Studies Volume 41 ; 41 >
-    au < exists ; 2006 ; Quebec Studies Volume 42 ; 42 >
-    au < exists ; 2007 ; Quebec Studies Volume 43 ; 43 >
-    au < exists ; 2007 ; Quebec Studies Volume 44 ; 44 >
+    au < manifest ; 2000 ; Quebec Studies Volume 29 ; 29 >
+    au < manifest ; 2000 ; Quebec Studies Volume 30 ; 30 >
+    au < manifest ; 2001 ; Quebec Studies Volume 31 ; 31 >
+    au < manifest ; 2001 ; Quebec Studies Volume 32 ; 32 >
+    au < manifest ; 2002 ; Quebec Studies Volume 33 ; 33 >
+    au < manifest ; 2002 ; Quebec Studies Volume 34 ; 34 >
+    au < manifest ; 2003 ; Quebec Studies Volume 35 ; 35 >
+    au < manifest ; 2003 ; Quebec Studies Volume 36 ; 36 >
+    au < manifest ; 2004 ; Quebec Studies Volume 37 ; 37 >
+    au < manifest ; 2004 ; Quebec Studies Volume 38 ; 38 >
+    au < manifest ; 2005 ; Quebec Studies Volume 39 ; 39 >
+    au < manifest ; 2005 ; Quebec Studies Volume 40 ; 40 >
+    au < manifest ; 2006 ; Quebec Studies Volume 41 ; 41 >
+    au < manifest ; 2006 ; Quebec Studies Volume 42 ; 42 >
+    au < manifest ; 2007 ; Quebec Studies Volume 43 ; 43 >
+    au < manifest ; 2007 ; Quebec Studies Volume 44 ; 44 >
     au < doNotProcess ; 2008 ; Quebec Studies Volume 45 ; 45 >
     au < doNotProcess ; 2008 ; Quebec Studies Volume 46 ; 46 >
     au < doNotProcess ; 2009 ; Quebec Studies Volume 47 ; 47 >
@@ -1898,7 +1898,7 @@
     param[journal_id] = transactions
     #jounral_num = 57
 
-    au < exists ; 2007 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 156 ; 156 >
+    au < manifest ; 2007 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 156 ; 156 >
     au < doNotProcess ; 2008 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 157 ; 157 >
     au < doNotProcess ; 2009 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 158 ; 158 >
     au < doNotProcess ; 2010 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 159 ; 159 >
@@ -1946,8 +1946,8 @@
 
     param[journal_id] = cfci
 
-    au < exists ; 2022 ; CFC Intersections Volume 1 ; 1 >
-    au < exists ; 2023 ; CFC Intersections Volume 2 ; 2 >
+    au < manifest ; 2022 ; CFC Intersections Volume 1 ; 1 >
+    au < manifest ; 2023 ; CFC Intersections Volume 2 ; 2 >
 
   }
   
@@ -1960,7 +1960,7 @@
 
     param[journal_id] = jbs
 
-    au < exists ; 2022 ; Journal of Beatles Studies Volume 2022 ; 2022 >
+    au < manifest ; 2022 ; Journal of Beatles Studies Volume 2022 ; 2022 >
     au < expected ; 2023 ; Journal of Beatles Studies Volume 2023 ; 2023 >
 
   }
@@ -1975,7 +1975,7 @@
 
     param[journal_id] = revista
 
-    au < exists ; 2023 ; Revista Iberoamericana Volume 89 ; 89 >
+    au < manifest ; 2023 ; Revista Iberoamericana Volume 89 ; 89 >
 
   }
   
