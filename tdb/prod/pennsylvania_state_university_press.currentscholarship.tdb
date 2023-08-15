@@ -288,8 +288,8 @@
       au < doNotProcess ; 2017 ; Journal of Assessment and Institutional Effectiveness Volume 6 ; 6 ; 2017 >
       au < doNotProcess ; 2018 ; Journal of Assessment and Institutional Effectiveness Volume 7 ; 7 ; 2018 >
       au < doNotProcess ; 2019 ; Journal of Assessment and Institutional Effectiveness Volume 8 ; 8 ; 2019 >
-      au < manifest ; 2020 ; Journal of Assessment and Institutional Effectiveness Volume 10 ; 10 ; 2020 >
-      au < manifest ; 2021 ; Journal of Assessment and Institutional Effectiveness Volume 11 ; 11 ; 2021 >
+      au < ready ; 2020 ; Journal of Assessment and Institutional Effectiveness Volume 10 ; 10 ; 2020 >
+      au < ready ; 2021 ; Journal of Assessment and Institutional Effectiveness Volume 11 ; 11 ; 2021 >
       au < ready ; 2022 ; Journal of Assessment and Institutional Effectiveness Volume 12 ; 12 ; 2022 >
       au < expected ; 2023 ; Journal of Assessment and Institutional Effectiveness Volume 13 ; 13 ; 2023 >
 
@@ -546,7 +546,7 @@
       au < doNotProcess ; 2018 ; The Mark Twain Annual Volume 16 ; 16 ; 2018 >
       au < doNotProcess ; 2019 ; The Mark Twain Annual Volume 17 ; 17 ; 2019 >
       au < doNotProcess ; 2020 ; The Mark Twain Annual Volume 18 ; 18 ; 2020 >
-      au < manifest ; 2021 ; The Mark Twain Annual Volume 19 ; 19 ; 2021 >
+      au < ready ; 2021 ; The Mark Twain Annual Volume 19 ; 19 ; 2021 >
       au < ready ; 2022 ; The Mark Twain Annual Volume 20 ; 20 ; 2022 >
       au < expected ; 2023 ; The Mark Twain Annual Volume 21 ; 21 ; 2023 >
 
@@ -1225,7 +1225,7 @@
       au < ready ; 2010 ; Gestalt Review Volume 14 ; 14 ; 2010 >
       au < ready ; 2011 ; Gestalt Review Volume 15 ; 15 ; 2011 >
       au < ready ; 2012 ; Gestalt Review Volume 16 ; 16 ; 2012 >
-      au < manifest ; 2013 ; Gestalt Review Volume 17 ; 17 ; 2013 >
+      au < ready ; 2013 ; Gestalt Review Volume 17 ; 17 ; 2013 >
       au < doNotProcess ; 2014 ; Gestalt Review Volume 18 ; 18 ; 2014 >
       au < doNotProcess ; 2015 ; Gestalt Review Volume 19 ; 19 ; 2015 >
       au < doNotProcess ; 2016 ; Gestalt Review Volume 20 ; 20 ; 2016 >
@@ -1272,9 +1272,9 @@
 
       param[journal_id] = study-of-paul
 
-      au < manifest ; 2011 ; Journal for the Study of Paul and His Letters Volume 1 ; 1 ; 2011 >
-      au < manifest ; 2012 ; Journal for the Study of Paul and His Letters Volume 2 ; 2 ; 2012 >
-      au < manifest ; 2013 ; Journal for the Study of Paul and His Letters Volume 3 ; 3 ; 2013 >
+      au < ready ; 2011 ; Journal for the Study of Paul and His Letters Volume 1 ; 1 ; 2011 >
+      au < ready ; 2012 ; Journal for the Study of Paul and His Letters Volume 2 ; 2 ; 2012 >
+      au < ready ; 2013 ; Journal for the Study of Paul and His Letters Volume 3 ; 3 ; 2013 >
       au < doNotProcess ; 2014 ; Journal for the Study of Paul and His Letters Volume 4 ; 4 ; 2014 >
       au < doNotProcess ; 2015 ; Journal for the Study of Paul and His Letters Volume 5 ; 5 ; 2015 >
       au < doNotProcess ; 2016 ; Journal for the Study of Paul and His Letters Volume 6 ; 6 ; 2016 >
@@ -1370,10 +1370,10 @@
       param[journal_id] = jnrpr
 
       au < manifest ; 2009 ; Journal of Natural Resources Policy Research Volume 1 ; 1 ; 2009 >
-      au < manifest ; 2010 ; Journal of Natural Resources Policy Research Volume 2 ; 2 ; 2010 >
-      au < manifest ; 2011 ; Journal of Natural Resources Policy Research Volume 3 ; 3 ; 2011 >
-      au < manifest ; 2012 ; Journal of Natural Resources Policy Research Volume 4 ; 4 ; 2012 >
-      au < manifest ; 2013 ; Journal of Natural Resources Policy Research Volume 5 ; 5 ; 2013 >
+      au < ready ; 2010 ; Journal of Natural Resources Policy Research Volume 2 ; 2 ; 2010 >
+      au < ready ; 2011 ; Journal of Natural Resources Policy Research Volume 3 ; 3 ; 2011 >
+      au < ready ; 2012 ; Journal of Natural Resources Policy Research Volume 4 ; 4 ; 2012 >
+      au < ready ; 2013 ; Journal of Natural Resources Policy Research Volume 5 ; 5 ; 2013 >
       au < doNotProcess ; 2014 ; Journal of Natural Resources Policy Research Volume 6 ; 6 ; 2014 >
       au < doNotProcess ; 2015 ; Journal of Natural Resources Policy Research Volume 7 ; 7 ; 2015 >
       au < doNotProcess ; 2018 ; Journal of Natural Resources Policy Research Volume 8 ; 8 ; 2018 >
@@ -1397,7 +1397,7 @@
       au < doNotProcess ; 2018 ; Journal of Posthuman Studies Volume 2018 ; 2018 ; 2018 >
       au < doNotProcess ; 2019 ; Journal of Posthuman Studies Volume 2019 ; 2019 ; 2019 >
       au < doNotProcess ; 2020 ; Journal of Posthuman Studies Volume 2020 ; 2020 ; 2020 >
-      au < manifest ; 2021 ; Journal of Posthuman Studies Volume 5 ; 5 ; 2021 >
+      au < ready ; 2021 ; Journal of Posthuman Studies Volume 5 ; 5 ; 2021 >
       au < ready ; 2022 ; Journal of Posthuman Studies Volume 6 ; 6 ; 2022 >
       au < expected ; 2023 ; Journal of Posthuman Studies Volume 7 ; 7 ; 2023 >
 
@@ -1443,10 +1443,10 @@
       au < manifest ; 2007 ; Journal of Theological Interpretation Volume 1 ; 1 ; 2007 >
       au < manifest ; 2008 ; Journal of Theological Interpretation Volume 2 ; 2 ; 2008 >
       au < manifest ; 2009 ; Journal of Theological Interpretation Volume 3 ; 3 ; 2009 >
-      au < manifest ; 2010 ; Journal of Theological Interpretation Volume 4 ; 4 ; 2010 >
-      au < manifest ; 2011 ; Journal of Theological Interpretation Volume 5 ; 5 ; 2011 >
-      au < manifest ; 2012 ; Journal of Theological Interpretation Volume 6 ; 6 ; 2012 >
-      au < manifest ; 2013 ; Journal of Theological Interpretation Volume 7 ; 7 ; 2013 >
+      au < ready ; 2010 ; Journal of Theological Interpretation Volume 4 ; 4 ; 2010 >
+      au < ready ; 2011 ; Journal of Theological Interpretation Volume 5 ; 5 ; 2011 >
+      au < ready ; 2012 ; Journal of Theological Interpretation Volume 6 ; 6 ; 2012 >
+      au < ready ; 2013 ; Journal of Theological Interpretation Volume 7 ; 7 ; 2013 >
       au < doNotProcess ; 2014 ; Journal of Theological Interpretation Volume 8 ; 8 ; 2014 >
       au < doNotProcess ; 2015 ; Journal of Theological Interpretation Volume 9 ; 9 ; 2015 >
       au < doNotProcess ; 2016 ; Journal of Theological Interpretation Volume 10 ; 10 ; 2016 >
@@ -1551,8 +1551,8 @@
       au < manifest ; 2007 ; Resources for American Literary Study Volume 32 ; 32 ; 2007 >
       au < manifest ; 2008 ; Resources for American Literary Study Volume 33 ; 33 ; 2008 >
       au < manifest ; 2009 ; Resources for American Literary Study Volume 34 ; 34 ; 2009 >
-      au < manifest ; 2010 ; Resources for American Literary Study Volume 35 ; 35 ; 2010 >
-      au < manifest ; 2011 ; Resources for American Literary Study Volume 36 ; 36 ; 2011 >
+      au < ready ; 2010 ; Resources for American Literary Study Volume 35 ; 35 ; 2010 >
+      au < ready ; 2011 ; Resources for American Literary Study Volume 36 ; 36 ; 2011 >
       au < doNotProcess ; 2014 ; Resources for American Literary Study Volume 37 ; 37 ; 2014 >
       au < doNotProcess ; 2015 ; Resources for American Literary Study Volume 38 ; 38 ; 2015 >
       au < doNotProcess ; 2017 ; Resources for American Literary Study Volume 39 ; 39 ; 2017 >
@@ -1841,10 +1841,10 @@
 
       param[journal_id] = hiperboreea
 
-      au < manifest ; 2012 ; Hiperboreea Volume A1 ; A1 ; 2012 >
-      au < manifest ; 2013 ; Hiperboreea Volume A2 ; A2 ; 2013 >
-      au < manifest ; 2014 ; Hiperboreea Volume 1 ; 1 ; 2014 >
-      au < manifest ; 2015 ; Hiperboreea Volume 2 ; 2 ; 2015 >
+      au < ready ; 2012 ; Hiperboreea Volume A1 ; A1 ; 2012 >
+      au < ready ; 2013 ; Hiperboreea Volume A2 ; A2 ; 2013 >
+      au < ready ; 2014 ; Hiperboreea Volume 1 ; 1 ; 2014 >
+      au < ready ; 2015 ; Hiperboreea Volume 2 ; 2 ; 2015 >
       au < doNotProcess ; 2016 ; Hiperboreea Volume 3 ; 3 ; 2016 >
       au < doNotProcess ; 2017 ; Hiperboreea Volume 4 ; 4 ; 2017 >
       au < doNotProcess ; 2018 ; Hiperboreea Volume 5 ; 5 ; 2018 >
@@ -2008,9 +2008,9 @@
       au < manifest ; 2009 ; Milton Studies Volume 49 ; 49 ; 2009 >
       au < manifest ; 2009 ; Milton Studies Volume 50 ; 50 ; 2009 >
       au < manifest ; 2010 ; Milton Studies Volume 51 ; 51 ; 2010 >
-      au < manifest ; 2011 ; Milton Studies Volume 52 ; 52 ; 2011 >
-      au < manifest ; 2012 ; Milton Studies Volume 53 ; 53 ; 2012 >
-      au < manifest ; 2013 ; Milton Studies Volume 54 ; 54 ; 2013 >
+      au < ready ; 2011 ; Milton Studies Volume 52 ; 52 ; 2011 >
+      au < ready ; 2012 ; Milton Studies Volume 53 ; 53 ; 2012 >
+      au < ready ; 2013 ; Milton Studies Volume 54 ; 54 ; 2013 >
       au < doNotProcess ; 2014 ; Milton Studies Volume 55 ; 55 ; 2014 >
       au < doNotProcess ; 2015 ; Milton Studies Volume 56 ; 56 ; 2015 >
       au < doNotProcess ; 2016 ; Milton Studies Volume 57 ; 57 ; 2016 >
@@ -2019,7 +2019,7 @@
       au < doNotProcess ; 2018 ; Milton Studies Volume 60 ; 60 ; 2018 >
       au < doNotProcess ; 2019 ; Milton Studies Volume 61 ; 61 ; 2019 >
       au < doNotProcess ; 2020 ; Milton Studies Volume 62 ; 62 ; 2020 >
-      au < manifest ; 2021 ; Milton Studies Volume 63 ; 63 ; 2021 >
+      au < ready ; 2021 ; Milton Studies Volume 63 ; 63 ; 2021 >
       au < ready ; 2022 ; Milton Studies Volume 64 ; 64 ; 2022 >
       au < manifest ; 2023 ; Milton Studies Volume 65 ; 65 ; 2023 >
 
@@ -2059,17 +2059,17 @@
       au < manifest ; 2007 ; Nineteenth Century Studies Volume 21 ; 21 ; 2007 >
       au < manifest ; 2008 ; Nineteenth Century Studies Volume 22 ; 22 ; 2008 >
       au < manifest ; 2009 ; Nineteenth Century Studies Volume 23 ; 23 ; 2009 >
-      au < manifest ; 2010 ; Nineteenth Century Studies Volume 24 ; 24 ; 2010 >
+      au < ready ; 2010 ; Nineteenth Century Studies Volume 24 ; 24 ; 2010 >
       au < doNotProcess ; 2011 ; Nineteenth Century Studies Volume 2011 ; 2011 ; 2011 >
       au < doNotProcess ; 2012 ; Nineteenth Century Studies Volume 2012 ; 2012 ; 2012 >
       au < doNotProcess ; 2013 ; Nineteenth Century Studies Volume 2013 ; 2013 ; 2013 >
       au < doNotProcess ; 2014 ; Nineteenth Century Studies Volume 2014 ; 2014 ; 2014 >
       au < doNotProcess ; 2015 ; Nineteenth Century Studies Volume 2015 ; 2015 ; 2015 >
-      au < manifest ; 2016 ; Nineteenth Century Studies Volume 29 ; 29 ; 2016 >
+      au < ready ; 2016 ; Nineteenth Century Studies Volume 29 ; 29 ; 2016 >
       au < doNotProcess ; 2018 ; Nineteenth Century Studies Volume 30 ; 30 ; 2018 >
       au < doNotProcess ; 2019 ; Nineteenth Century Studies Volume 31 ; 31 ; 2019 >
       au < doNotProcess ; 2020 ; Nineteenth Century Studies Volume 32 ; 32 ; 2020 >
-      au < manifest ; 2021 ; Nineteenth Century Studies Volume 33 ; 33 ; 2021 >
+      au < ready ; 2021 ; Nineteenth Century Studies Volume 33 ; 33 ; 2021 >
       au < ready ; 2022 ; Nineteenth Century Studies Volume 34 ; 34 ; 2022 >
       au < expected ; 2023 ; Nineteenth Century Studies Volume 35 ; 35 ; 2023 >
 
@@ -2165,17 +2165,17 @@
       au < manifest ; 2007 ; Journal for the History of Rhetoric Volume 10 ; 10 ; 2007 >
       au < manifest ; 2009 ; Journal for the History of Rhetoric Volume 11-12 ; 11-12 ; 2009 >
       au < doesNotExist ; 2010 ; Journal for the History of Rhetoric Volume 13 ; 13 ; 2010 >
-      au < manifest ; 2011 ; Journal for the History of Rhetoric Volume 14 ; 14 ; 2011 >
-      au < manifest ; 2012 ; Journal for the History of Rhetoric Volume 15 ; 15 ; 2012 >
-      au < manifest ; 2013 ; Journal for the History of Rhetoric Volume 16 ; 16 ; 2013 >
-      au < manifest ; 2014 ; Journal for the History of Rhetoric Volume 17 ; 17 ; 2014 >
-      au < manifest ; 2015 ; Journal for the History of Rhetoric Volume 18 ; 18 ; 2015 >
-      au < manifest ; 2016 ; Journal for the History of Rhetoric Volume 19 ; 19 ; 2016 >
-      au < manifest ; 2017 ; Journal for the History of Rhetoric Volume 20 ; 20 ; 2017 >
-      au < manifest ; 2018 ; Journal for the History of Rhetoric Volume 21 ; 21 ; 2018 >
-      au < manifest ; 2019 ; Journal for the History of Rhetoric Volume 22 ; 22 ; 2019 >
-      au < manifest ; 2020 ; Journal for the History of Rhetoric Volume 23 ; 23 ; 2020 >
-      au < manifest ; 2021 ; Journal for the History of Rhetoric Volume 24 ; 24 ; 2021 >
+      au < ready ; 2011 ; Journal for the History of Rhetoric Volume 14 ; 14 ; 2011 >
+      au < ready ; 2012 ; Journal for the History of Rhetoric Volume 15 ; 15 ; 2012 >
+      au < ready ; 2013 ; Journal for the History of Rhetoric Volume 16 ; 16 ; 2013 >
+      au < ready ; 2014 ; Journal for the History of Rhetoric Volume 17 ; 17 ; 2014 >
+      au < ready ; 2015 ; Journal for the History of Rhetoric Volume 18 ; 18 ; 2015 >
+      au < ready ; 2016 ; Journal for the History of Rhetoric Volume 19 ; 19 ; 2016 >
+      au < ready ; 2017 ; Journal for the History of Rhetoric Volume 20 ; 20 ; 2017 >
+      au < ready ; 2018 ; Journal for the History of Rhetoric Volume 21 ; 21 ; 2018 >
+      au < ready ; 2019 ; Journal for the History of Rhetoric Volume 22 ; 22 ; 2019 >
+      au < ready ; 2020 ; Journal for the History of Rhetoric Volume 23 ; 23 ; 2020 >
+      au < ready ; 2021 ; Journal for the History of Rhetoric Volume 24 ; 24 ; 2021 >
       au < ready ; 2022 ; Journal for the History of Rhetoric Volume 25 ; 25 ; 2022 >
       au < manifest ; 2023 ; Journal for the History of Rhetoric Volume 26 ; 26 ; 2023 >
 
@@ -2191,11 +2191,11 @@
 
       param[journal_id] = methodist-history
 
-      au < manifest ; 2017 ; Methodist History Volume 55 ; 55 ; 2017 >
-      au < manifest ; 2018 ; Methodist History Volume 56 ; 56 ; 2018 >
-      au < manifest ; 2019 ; Methodist History Volume 57 ; 57 ; 2019 >
-      au < manifest ; 2020 ; Methodist History Volume 58 ; 58 ; 2020 >
-      au < manifest ; 2021 ; Methodist History Volume 59 ; 59 ; 2021 >
+      au < ready ; 2017 ; Methodist History Volume 55 ; 55 ; 2017 >
+      au < ready ; 2018 ; Methodist History Volume 56 ; 56 ; 2018 >
+      au < ready ; 2019 ; Methodist History Volume 57 ; 57 ; 2019 >
+      au < ready ; 2020 ; Methodist History Volume 58 ; 58 ; 2020 >
+      au < ready ; 2021 ; Methodist History Volume 59 ; 59 ; 2021 >
       au < ready ; 2022 ; Methodist History Volume 60 ; 60 ; 2022 >
       au < manifest ; 2023 ; Methodist History Volume 61 ; 61 ; 2023 >
 
@@ -2220,15 +2220,15 @@
       au < manifest ; 2007 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 10 ; 10 ; 2007 >
       au < manifest ; 2008 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 11 ; 11 ; 2008 >
       au < manifest ; 2009 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 12 ; 12 ; 2009 >
-      au < manifest ; 2010 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 13 (2010) ; 13 ; 2010 >
-      au < manifest ; 2011 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 13 (2011) ; 13 ; 2011 >
-      au < manifest ; 2012 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 14 ; 14 ; 2012 >
-      au < manifest ; 2013 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 15 ; 15 ; 2013 >
-      au < manifest ; 2014 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 16 ; 16 ; 2014 >
-      au < manifest ; 2015 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 17 ; 17 ; 2015 >
-      au < manifest ; 2016 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 18 ; 18 ; 2016 >
-      au < manifest ; 2020 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 19 ; 19 ; 2020 >
-      au < manifest ; 2021 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 20 ; 20 ; 2021 >
+      au < ready ; 2010 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 13 (2010) ; 13 ; 2010 >
+      au < ready ; 2011 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 13 (2011) ; 13 ; 2011 >
+      au < ready ; 2012 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 14 ; 14 ; 2012 >
+      au < ready ; 2013 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 15 ; 15 ; 2013 >
+      au < ready ; 2014 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 16 ; 16 ; 2014 >
+      au < ready ; 2015 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 17 ; 17 ; 2015 >
+      au < ready ; 2016 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 18 ; 18 ; 2016 >
+      au < ready ; 2020 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 19 ; 19 ; 2020 >
+      au < ready ; 2021 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 20 ; 20 ; 2021 >
       au < ready ; 2022 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 21 ; 21 ; 2022 >
       au < expected ; 2023 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 22 ; 22 ; 2023 >
 
@@ -2244,10 +2244,10 @@
 
       param[journal_id] = rectr
 
-      au < manifest ; 2015 ; Restoration and Eighteenth-Century Theatre Research Volume 30 ; 30 ; 2015 >
-      au < manifest ; 2016 ; Restoration and Eighteenth-Century Theatre Research Volume 31 ; 31 ; 2016 >
-      au < manifest ; 2017 ; Restoration and Eighteenth-Century Theatre Research Volume 32 ; 32 ; 2017 >
-      au < manifest ; 2021 ; Restoration and Eighteenth-Century Theatre Research Volume 33 ; 33 ; 2021 >
+      au < ready ; 2015 ; Restoration and Eighteenth-Century Theatre Research Volume 30 ; 30 ; 2015 >
+      au < ready ; 2016 ; Restoration and Eighteenth-Century Theatre Research Volume 31 ; 31 ; 2016 >
+      au < ready ; 2017 ; Restoration and Eighteenth-Century Theatre Research Volume 32 ; 32 ; 2017 >
+      au < ready ; 2021 ; Restoration and Eighteenth-Century Theatre Research Volume 33 ; 33 ; 2021 >
       au < ready ; 2022 ; Restoration and Eighteenth-Century Theatre Research Volume 34 ; 34 ; 2022 >
       au < expected ; 2023 ; Restoration and Eighteenth-Century Theatre Research Volume 35 ; 35 ; 2023 >
 
@@ -2263,17 +2263,17 @@
 
       param[journal_id] = scriblerian
 
-      au < manifest ; 2016 ; The Scriblerian and the Kit-Cats Volume 48-49 ; 48-49 ; 2016 >
-      au < manifest ; 2017 ; The Scriblerian and the Kit-Cats Volume 49 ; 49 ; 2017 >
-      au < manifest ; 2017 ; The Scriblerian and the Kit-Cats Volume 50 (2017) ; 50 ; 2017 >
-      au < manifest ; 2018 ; The Scriblerian and the Kit-Cats Volume 50 (2018) ; 50 ; 2018 >
-      au < manifest ; 2018 ; The Scriblerian and the Kit-Cats Volume 51 (2018) ; 51 ; 2018 >
-      au < manifest ; 2019 ; The Scriblerian and the Kit-Cats Volume 51 (2019) ; 51 ; 2019 >
-      au < manifest ; 2019 ; The Scriblerian and the Kit-Cats Volume 52 (2019) ; 52 ; 2019 >
-      au < manifest ; 2020 ; The Scriblerian and the Kit-Cats Volume 52 (2020) ; 52 ; 2020 >
-      au < manifest ; 2020 ; The Scriblerian and the Kit-Cats Volume 53 (2020) ; 53 ; 2020 >
-      au < manifest ; 2021 ; The Scriblerian and the Kit-Cats Volume 53 (2021) ; 53 ; 2021 >
-      au < manifest ; 2021 ; The Scriblerian and the Kit-Cats Volume 54 ; 54 ; 2021 >
+      au < ready ; 2016 ; The Scriblerian and the Kit-Cats Volume 48-49 ; 48-49 ; 2016 >
+      au < ready ; 2017 ; The Scriblerian and the Kit-Cats Volume 49 ; 49 ; 2017 >
+      au < ready ; 2017 ; The Scriblerian and the Kit-Cats Volume 50 (2017) ; 50 ; 2017 >
+      au < ready ; 2018 ; The Scriblerian and the Kit-Cats Volume 50 (2018) ; 50 ; 2018 >
+      au < ready ; 2018 ; The Scriblerian and the Kit-Cats Volume 51 (2018) ; 51 ; 2018 >
+      au < ready ; 2019 ; The Scriblerian and the Kit-Cats Volume 51 (2019) ; 51 ; 2019 >
+      au < ready ; 2019 ; The Scriblerian and the Kit-Cats Volume 52 (2019) ; 52 ; 2019 >
+      au < ready ; 2020 ; The Scriblerian and the Kit-Cats Volume 52 (2020) ; 52 ; 2020 >
+      au < ready ; 2020 ; The Scriblerian and the Kit-Cats Volume 53 (2020) ; 53 ; 2020 >
+      au < ready ; 2021 ; The Scriblerian and the Kit-Cats Volume 53 (2021) ; 53 ; 2021 >
+      au < ready ; 2021 ; The Scriblerian and the Kit-Cats Volume 54 ; 54 ; 2021 >
       au < ready ; 2022 ; The Scriblerian and the Kit-Cats Volume 55 ; 55 ; 2022 >
       au < expected ; 2023 ; The Scriblerian and the Kit-Cats Volume 56 ; 56 ; 2023 >
 
@@ -2289,13 +2289,13 @@
 
       param[journal_id] = victorians-institute
 
-      au < manifest ; 2014 ; Victorians Institute Journal Volume 42 ; 42 ; 2014 >
-      au < manifest ; 2015 ; Victorians Institute Journal Volume 43 ; 43 ; 2015 >
-      au < manifest ; 2016 ; Victorians Institute Journal Volume 44 ; 44 ; 2016 >
-      au < manifest ; 2017 ; Victorians Institute Journal Volume 45 ; 45 ; 2017 >
-      au < manifest ; 2018 ; Victorians Institute Journal Volume 46 ; 46 ; 2018 >
-      au < manifest ; 2020 ; Victorians Institute Journal Volume 47 ; 47 ; 2020 >
-      au < manifest ; 2021 ; Victorians Institute Journal Volume 48 ; 48 ; 2021 >
+      au < ready ; 2014 ; Victorians Institute Journal Volume 42 ; 42 ; 2014 >
+      au < ready ; 2015 ; Victorians Institute Journal Volume 43 ; 43 ; 2015 >
+      au < ready ; 2016 ; Victorians Institute Journal Volume 44 ; 44 ; 2016 >
+      au < ready ; 2017 ; Victorians Institute Journal Volume 45 ; 45 ; 2017 >
+      au < ready ; 2018 ; Victorians Institute Journal Volume 46 ; 46 ; 2018 >
+      au < ready ; 2020 ; Victorians Institute Journal Volume 47 ; 47 ; 2020 >
+      au < ready ; 2021 ; Victorians Institute Journal Volume 48 ; 48 ; 2021 >
       au < ready ; 2022 ; Victorians Institute Journal Volume 49 ; 49 ; 2022 >
       au < expected ; 2023 ; Victorians Institute Journal Volume 50 ; 50 ; 2023 >
 
