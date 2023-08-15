@@ -276,7 +276,7 @@
     au < doNotProcess ; exists ; 2020 ; The Byron Journal Volume 48 ; 48 ; >
     au < doNotProcess ; exists ; 2021 ; The Byron Journal Volume 49 ; 49 ; >
     au < deepCrawl ; exists ; 2022 ; The Byron Journal Volume 50 ; 50 ; >
-    au < manifest ; exists ; 2023 ; The Byron Journal Volume 51 ; 51 ; >
+    au < ready ; exists ; 2023 ; The Byron Journal Volume 51 ; 51 ; >
 
   }
 
@@ -310,7 +310,7 @@
     au < doNotProcess ; exists ; 2018 ; Comma Volume 2018 ; 2018 ; >
     au < doNotProcess ; exists ; 2019 ; Comma Volume 2019 ; 2019 ; >
     au < doNotProcess ; exists ; 2020 ; Comma Volume 2020 (2021) ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Comma Volume 2021 (2022) ; 2021 ; >
+    au < ready ; exists ; 2021 ; Comma Volume 2021 (2022) ; 2021 ; >
     au < expected ; exists ; 2022 ; Comma Volume 2022 (2023) ; 2022 ; >
     au < expected ; exists ; 2023 ; Comma Volume 2023 (2023) ; 2023 ; >
 
@@ -352,7 +352,7 @@
     au < doNotProcess ; exists ; 2020 ; Catalan Review Volume 34 ; 34 ; >
     au < doNotProcess ; exists ; 2021 ; Catalan Review Volume 35 ; 35 ; >
     au < deepCrawl ; exists ; 2022 ; Catalan Review Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2023 ; Catalan Review Volume 37 ; 37 ; >
+    au < ready ; exists ; 2023 ; Catalan Review Volume 37 ; 37 ; >
 
   }
 
@@ -1956,7 +1956,7 @@
     param[journal_id] = cfci
 
     au < frozen ; exists ; 2022 ; CFC Intersections Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2023 ; CFC Intersections Volume 2 ; 2 ; >
+    au < ready ; exists ; 2023 ; CFC Intersections Volume 2 ; 2 ; >
 
   }
   
