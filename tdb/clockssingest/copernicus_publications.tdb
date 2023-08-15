@@ -7,8 +7,7 @@
     info[tester] = 5 ;
     info[platform] = CopernicusPublicationsPlugin
   >
-    #Do not process titles which end in "Discussions"
-    #Exception: Aerosol Research Discussions
+    #Do not process titles which end in "Discussions". They require a different plugin
 
   {
     plugin = org.lockss.plugin.copernicus.ClockssCopernicusPublicationsPlugin

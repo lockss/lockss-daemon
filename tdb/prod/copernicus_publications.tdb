@@ -5,13 +5,14 @@
     info[tester] = 5 ;
     info[platform] = CopernicusPublicationsPlugin
   >
+    #Do not process titles which end in "Discussions". They require a different plugin
+
   {
     plugin = org.lockss.plugin.copernicus.CopernicusPublicationsPlugin
+    #moved to https in summer 2017
     implicit < status ; year ; param[year] ; name ; param[volume_name] >
     comment[year] = year as param, not really use in plugin
     
-    #Do not process titles which end in "Discussions"
-
   {
     title <
       name = Advances in Geosciences ;
@@ -164,6 +165,32 @@
       au < manifest ; 2023 ; 2023 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 9 ; 9 >
 
    }
+
+#  {
+#    title <
+#      name = Aerosol Research Discussions ;
+#      eissn = 2940-3405
+#    >
+#      attr[journal_id] = ar
+#      param[base_url] = https://ar.copernicus.org/preprints/
+#      param[home_url] = https://www.aerosol-research.net/preprints/
+#
+#      au < exists ; exists ; 2023 ; 2023 ; Aerosol Research Volume 1 ; 1 ; >
+#
+#  }
+
+  {
+    title <
+      name = Aerosol Research ;
+      eissn = 2940-3391
+    >
+      attr[journal_id] = ar
+      param[base_url] = https://ar.copernicus.org/
+      param[home_url] = https://www.aerosol-research.net/
+
+      au < manifest ; 2023 ; 2023 ; Aerosol Research Volume 1 ; 1 >
+
+  }
 
   {
     title <
