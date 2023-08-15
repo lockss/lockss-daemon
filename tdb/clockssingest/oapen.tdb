@@ -6,22 +6,36 @@
     info[tester] = 5 ;
     info[platform] = Custom. See LXPUB-718
   >
+    
+    plugin = org.lockss.plugin.oapen.ClockssOAPENBooksPlugin
+    implicit < status ; status2 ; name ; param[resource_id]; hidden[proxy] >
+    param[base_url] = https://library.oapen.org/
 
   {
-
-    plugin = needs.plugin
-    implicit < status ; status2 ; year ; isbn ; eisbn ; name ; param[book_id] ; hidden[proxy] >
-
-  {
-
-      title <
+     title <
         name = OAPEN Books
       >
 
-      param[base_url] = https://library.oapen.org/
-
-      au < expected ; exists ; 2023 ; ; ; Placeholder Volume 2023 ; 41485 ; >
-
-  }
+    au < testing ; exists ;  Press ; handle/20.500.12657/41485	The Human Side of Innovation Systems ; >
+    au < testing ; exists ;  Press ; handle/20.500.12657/53473	Distance og Involverethed ; >
+    au < testing ; exists ;  Lengua ; handle/20.500.12657/33109	Beltraneja ; >
+    au < testing ; exists ;  Vantilt ; handle/20.500.12657/55803	Schrijverschap in de Belgische belle époque. Een sociaal-culturele geschiedenis ; >
+    au < testing ; exists ;  e.K. ; handle/20.500.12657/51448	Vergängliche Kunst und fortwährende Macht ; >
+    au < testing ; exists ;  (ASCL) ; handle/20.500.12657/33878	Magnifying perspectives  ; >
+    au < testing ; exists ;  Limited ; handle/20.500.12657/41509	Farming as Financial Asset ; >
+    au < testing ; exists ;  Limited ; handle/20.500.12657/34840	The Rise of State Capital ; >
+    au < testing ; exists ;  Verlag ; handle/20.500.12657/53092	Populationen – Zeit-Räume – Protokollieren ; >
+    au < testing ; exists ;  Verlag ; handle/20.500.12657/49860	Traumata  ; >
+    au < testing ; exists ;  Verlag ; handle/20.500.12657/34594	Populationen - Zeit-Räume - Protokollieren  ; >
+    au < testing ; exists ;  Verlag ; handle/20.500.12657/41479	Approaches to World Literature  ; >
+    au < testing ; exists ;  Sciences ; handle/20.500.12657/54077	Data Mining in MRO  ; >
+    au < testing ; exists ;  University ; handle/20.500.12657/49963	The Many Faces of Appalachia ; >
+    au < testing ; exists ;  Kontext	Arco ; handle/20.500.12657/33115	Bilderbuch-Heimkehr? Remigration im Kontext  ; >
+    au < testing ; exists ;  Beethoven	Argus ; handle/20.500.12657/49951	Rund um Beethoven  ; >
+    au < testing ; exists ;  editore ; handle/20.500.12657/31283	Gli altri noi  ; >
+    au < testing ; exists ;  Verlag ; handle/20.500.12657/30752	Unwiederholbares Gottessiegel  ; >
+    au < testing ; exists ;  Verlag ; handle/20.500.12657/32367	Homo Novus ; >
+    au < testing ; exists ;  Verlag ; handle/20.500.12657/61716	Alles kann, nichts muss?!  ; >
   }
 }
+
