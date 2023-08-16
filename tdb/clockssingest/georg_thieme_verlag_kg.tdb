@@ -8846,7 +8846,8 @@
     >
 
     param[journal_id] = 10.1055/s-00042120
-    comment[years] = 2015-current
+    comment[years] = 2015-2023
+    #move to ScientificScholar, https://ijrsms.com on 2023-04-04
 
     au < frozen ; exists ; 2015 ; 2015 ; International Journal of Recent Surgical and Medical Sciences Volume 1 ; 1 ; >
     au < frozen ; exists ; 2016 ; 2016 ; International Journal of Recent Surgical and Medical Sciences Volume 2 ; 2 ; >
@@ -8854,10 +8855,10 @@
     au < frozen ; exists ; 2018 ; 2018 ; International Journal of Recent Surgical and Medical Sciences Volume 4 ; 4 ; >
     au < frozen ; exists ; 2019 ; 2019 ; International Journal of Recent Surgical and Medical Sciences Volume 5 ; 5 ; >
     au < frozen ; exists ; 2020 ; 2020 ; International Journal of Recent Surgical and Medical Sciences Volume 6 ; 6 ; >
-    au < deepCrawl ; exists ; 2021 ; 2021 ; International Journal of Recent Surgical and Medical Sciences Volume 7 ; 7 ; >
-    au < deepCrawl ; exists ; 2022 ; 2022 ; International Journal of Recent Surgical and Medical Sciences Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2023 ; 2023 ; International Journal of Recent Surgical and Medical Sciences Volume 9 ; 9 ; >
-
+    au < frozen ; exists ; 2021 ; 2021 ; International Journal of Recent Surgical and Medical Sciences Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2022 ; 2022 ; International Journal of Recent Surgical and Medical Sciences Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2023 ; 2023 ; International Journal of Recent Surgical and Medical Sciences Volume 9 ; 9 ; >
+    #moved
   }
 
   {
