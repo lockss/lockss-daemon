@@ -171,7 +171,7 @@
     au < doNotProcess ; exists ; 2020 ; British Journal of Canadian Studies Volume 32 ; 32 ; >
     au < doNotProcess ; exists ; 2021 ; British Journal of Canadian Studies Volume 33 ; 33 ; >
     au < deepCrawl ; exists ; 2022 ; British Journal of Canadian Studies Volume 34 ; 34 ; >
-    au < ready ; exists ; 2023 ; British Journal of Canadian Studies Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2023 ; British Journal of Canadian Studies Volume 35 ; 35 ; >
 
   }
 
@@ -276,7 +276,7 @@
     au < doNotProcess ; exists ; 2020 ; The Byron Journal Volume 48 ; 48 ; >
     au < doNotProcess ; exists ; 2021 ; The Byron Journal Volume 49 ; 49 ; >
     au < deepCrawl ; exists ; 2022 ; The Byron Journal Volume 50 ; 50 ; >
-    au < ready ; exists ; 2023 ; The Byron Journal Volume 51 ; 51 ; >
+    au < crawling ; exists ; 2023 ; The Byron Journal Volume 51 ; 51 ; >
 
   }
 
@@ -352,7 +352,7 @@
     au < doNotProcess ; exists ; 2020 ; Catalan Review Volume 34 ; 34 ; >
     au < doNotProcess ; exists ; 2021 ; Catalan Review Volume 35 ; 35 ; >
     au < deepCrawl ; exists ; 2022 ; Catalan Review Volume 36 ; 36 ; >
-    au < ready ; exists ; 2023 ; Catalan Review Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2023 ; Catalan Review Volume 37 ; 37 ; >
 
   }
 
@@ -1063,7 +1063,7 @@
     au < doNotProcess ; exists ; 2020 ; Labour History Review Volume 85 ; 85 ; >
     au < doNotProcess ; exists ; 2021 ; Labour History Review Volume 86 ; 86 ; >
     au < deepCrawl ; exists ; 2022 ; Labour History Review Volume 87 ; 87 ; >
-    au < ready ; exists ; 2023 ; Labour History Review Volume 88 ; 88 ; >
+    au < crawling ; exists ; 2023 ; Labour History Review Volume 88 ; 88 ; >
 
   }
 
@@ -1722,7 +1722,7 @@
     au < doNotProcess ; exists ; 2020 ; Theory & Struggle Volume 121 ; 121 ; >
     au < doNotProcess ; exists ; 2021 ; Theory & Struggle Volume 122 ; 122 ; >
     au < deepCrawl ; exists ; 2022 ; Theory & Struggle Volume 123 ; 123 ; >
-    au < ready ; exists ; 2023 ; Theory & Struggle Volume 124 ; 124 ; >
+    au < crawling ; exists ; 2023 ; Theory & Struggle Volume 124 ; 124 ; >
 
 
   }
@@ -1922,7 +1922,7 @@
     #jounral_num = 115
 
     au < deepCrawl ; exists ; 2022 ; Journal of Romanian Studies Volume 4 ; 4 ; >
-    au < ready ; exists ; 2023 ; Journal of Romanian Studies Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2023 ; Journal of Romanian Studies Volume 5 ; 5 ; >
 
   }
   
@@ -1941,7 +1941,7 @@
     au < doNotProcess ; exists ; 2018 ; T. S. Eliot Studies Annual Volume 2 ; 2 ; >
     au < doNotProcess ; exists ; 2021 ; T. S. Eliot Studies Annual Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2022 ; T. S. Eliot Studies Annual Volume 4 ; 4 ; >
-    au < ready ; exists ; 2023 ; T. S. Eliot Studies Annual Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2023 ; T. S. Eliot Studies Annual Volume 5 ; 5 ; >
 
   }
   
@@ -1956,7 +1956,7 @@
     param[journal_id] = cfci
 
     au < frozen ; exists ; 2022 ; CFC Intersections Volume 1 ; 1 ; >
-    au < ready ; exists ; 2023 ; CFC Intersections Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2023 ; CFC Intersections Volume 2 ; 2 ; >
 
   }
   
