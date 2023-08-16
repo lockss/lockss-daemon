@@ -25,18 +25,18 @@
     param[base_url] = https://pajr.researchcommons.org/
     param[journal_abbr] = journal
 
-    au < frozen ; exists ; 2011 ; Pan Arab Journal of Rhinology (PAJR) Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2012 ; Pan Arab Journal of Rhinology (PAJR) Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2013 ; Pan Arab Journal of Rhinology (PAJR) Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2014 ; Pan Arab Journal of Rhinology (PAJR) Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2015 ; Pan Arab Journal of Rhinology (PAJR) Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2016 ; Pan Arab Journal of Rhinology (PAJR) Volume 6 ; 6 ; >
-    au < frozen ; exists ; 2017 ; Pan Arab Journal of Rhinology (PAJR) Volume 7 ; 7 ; >
-    au < frozen ; exists ; 2018 ; Pan Arab Journal of Rhinology (PAJR) Volume 8 ; 8 ; >
-    au < frozen ; exists ; 2019 ; Pan Arab Journal of Rhinology (PAJR) Volume 9 ; 9 ; >
-    au < frozen ; exists ; 2020 ; Pan Arab Journal of Rhinology (PAJR) Volume 10 ; 10 ; >
-    au < frozen ; exists ; 2021 ; Pan Arab Journal of Rhinology (PAJR) Volume 11 ; 11 ; >
-    au < frozen ; exists ; 2022 ; Pan Arab Journal of Rhinology (PAJR) Volume 12 ; 12 ; >
+    au < finished ; manifest ; 2011 ; Pan Arab Journal of Rhinology (PAJR) Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Pan Arab Journal of Rhinology (PAJR) Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Pan Arab Journal of Rhinology (PAJR) Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Pan Arab Journal of Rhinology (PAJR) Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2015 ; Pan Arab Journal of Rhinology (PAJR) Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2016 ; Pan Arab Journal of Rhinology (PAJR) Volume 6 ; 6 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; Pan Arab Journal of Rhinology (PAJR) Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; Pan Arab Journal of Rhinology (PAJR) Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Pan Arab Journal of Rhinology (PAJR) Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2020 ; Pan Arab Journal of Rhinology (PAJR) Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2021 ; Pan Arab Journal of Rhinology (PAJR) Volume 11 ; 11 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2022 ; Pan Arab Journal of Rhinology (PAJR) Volume 12 ; 12 ; reingest5.clockss.org:8082 >
     au < exists ; exists ; 2023 ; Pan Arab Journal of Rhinology (PAJR) Volume 13 ; 13 ; >
 
   }
