@@ -47,6 +47,7 @@
 
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/eastviewbooks-released/
 
+      #tested this directory using testing url, https://clockss-test.lockss.org/sourcefiles/eastviewbooks-released/2023_01, it is ready
       au < expected ; exists ; 2023 ; East View Information Services Book Source Content 2023_01 ; 2023_01 >
 
     }
