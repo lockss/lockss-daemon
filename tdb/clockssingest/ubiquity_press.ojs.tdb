@@ -521,7 +521,7 @@
 
       comment[publisher] = Stockholm University Press
       param[base_url] = https://account.sjwop.com/
-      param[journal_id] = 
+      param[journal_id] = su-j-sjwop
 
       au < doNotProcess ; doNotProcess ; 2016 ; 1 ; Scandinavian Journal of Work and Organizational Psychology Volume 2016 ; 2016 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2 ; Scandinavian Journal of Work and Organizational Psychology Volume 2017 ; 2017 ; >
@@ -543,7 +543,7 @@
 
       comment[publisher] = Stockholm University Press
       param[base_url] = https://account.iberoamericana.se/
-      param[journal_id] = 
+      param[journal_id] = su-j-injlacs
 
       au < doNotProcess ; doNotProcess ; 2001 ; 31 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2001 ; 2001 ; >
       au < doNotProcess ; doNotProcess ; 2002 ; 32 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2002 ; 2002 ; >
@@ -579,7 +579,7 @@
 
       comment[publisher] = Stockholm University Press
       param[base_url] = https://account.franorfon.org/
-      param[journal_id] = 
+      param[journal_id] = su-j-njfsr
 
       au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2018 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2019 ; 2019 ; >
@@ -598,7 +598,7 @@
 
       comment[publisher] = Stockholm University Press
       param[base_url] = https://account.jhlr.org/
-      param[journal_id] = 
+      param[journal_id] = su-j-jhlr
 
       au < doNotProcess ; doNotProcess ; 2016 ; 1 ; Journal of Home Language Research Volume 2016 ; 2016 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2 ; Journal of Home Language Research Volume 2017 ; 2017 ; >
@@ -629,8 +629,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.ancient-asia-journal.com/
-      param[journal_id] = 
-       #move to edtech, https://account.arfjournals.com/ancient-asia
+      param[journal_id] = up-j-aa
 
       au < doNotProcess ; doNotProcess ; 2006 ; 1 ; Ancient Asia Volume 2006 ; 2006 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; 2 ; Ancient Asia Volume 2010 ; 2010 ; >
@@ -657,7 +656,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.journal-buildingscities.org/
-      param[journal_id] = 
+      param[journal_id] = up-j-bc
 
       au < exists ; exists ; 2020 ; 1 ; Building and Cities Volume 2020 ; 2020 ; >
       au < exists ; exists ; 2021 ; 2 ; Building and Cities Volume 2021 ; 2021 ; > #403 forbidden cloudfront.net
@@ -675,9 +674,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.current-journal.com/
-      param[journal_id] = 
-      #No substance on testing. Start url malformed.
-      #notReady - no content available on webpage
+      param[journal_id] = up-j-ctjme
 
       au < exists ; exists ; 2003 ; 19 ; Current: Journal of Marine Education Volume 2003 ; 2003 ; >
       au < doesNotExist ; doesNotExist ; 2004 ; 20 ; Current: Journal of Marine Education Volume 2004 ; 2004 ; >
@@ -712,7 +709,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.revista-anglo-saxonica.org/
-      param[journal_id] = 
+      param[journal_id] = up-j-as
       #2019 AUs are published on the 2020 manifest page. See https://account.revista-anglo-saxonica.org/lockss/year/2020/
 
       au < doNotProcess ; doNotProcess ; 2019 ; 17 ; Anglo Saxonica Volume 2019 ; 2019 ; >
@@ -731,8 +728,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://ajar.arena-architecture.eu/
-      param[journal_id] = 
+      param[base_url] = https://account.ajar.arena-architecture.eu/
+      param[journal_id] = up-j-arenajar
 
       au < doNotProcess ; doNotProcess ; 2016 ; 1 ; ARENA Journal of Architectural Research Volume 2016 ; 2016 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2 ; ARENA Journal of Architectural Research Volume 2017 ; 2017 ; >
@@ -755,7 +752,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.archaeologybulletin.org/
-      param[journal_id] = 
+      param[journal_id] = up-j-bha
 
       au < exists ; exists ; 1991 ; 1 ; Bulletin of the History of Archaeology Volume 1991 ; 1991 ; >
       au < exists ; exists ; 1992 ; 2 ; Bulletin of the History of Archaeology Volume 1992 ; 1992 ; >
@@ -801,8 +798,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://theoryandpractice.citizenscienceassociation.org/
-      param[journal_id] = 
+      param[base_url] = https://account.theoryandpractice.citizenscienceassociation.org/
+      param[journal_id] = up-j-cstp
 
       au < doNotProcess ; doNotProcess ; 2016 ; 1 ; Citizen Science: Theory and Practice Volume 2016 ; 2016 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2 ; Citizen Science: Theory and Practice Volume 2017 ; 2017 ; >
@@ -824,7 +821,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.cpsyjournal.org/
-      param[journal_id] = 
+      param[journal_id] = up-j-cp
 
       au < doNotProcess ; doNotProcess ; 2017 ; 1 ; Computational Psychiatry Volume 2017 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2 ; Computational Psychiatry Volume 2018 ; 2018 ; >
@@ -844,8 +841,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://datascience.codata.org/
-      param[journal_id] = 
+      param[base_url] = https://account.datascience.codata.org/
+      param[journal_id] = up-j-dsj
 
       au < doesNotExist ; doesNotExist ; 2002 ; 1 ; Data Science Journal Volume 2002 ; 2002 ; > #M exists. No articles for that year.
       au < doNotProcess ; doNotProcess ; 2003 ; 2 ; Data Science Journal Volume 2003 ; 2003 ; >
@@ -901,7 +898,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.glocality.eu/
-      param[journal_id] = 
+      param[journal_id] = up-j-g
 
       au < doNotProcess ; doNotProcess ; 2015 ; 1 ; Glocality: Undergraduate Academic Journal Volume 2015 ; 2015 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2 ; Glocality: Undergraduate Academic Journal Volume 2016 ; 2016 ; >
@@ -923,7 +920,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.ijic.org/
-      param[journal_id] = 
+      param[journal_id] = up-j-ijic
 
       au < doNotProcess ; doNotProcess ; 2000 ; 1 ; International Journal of Integrated Care Volume 2000 ; 2000 ; >
       au < doNotProcess ; doNotProcess ; 2001 ; 2 ; International Journal of Integrated Care Volume 2001 ; 2001 ; >
@@ -961,7 +958,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.rips-irsp.com/
-      param[journal_id] = 
+      param[journal_id] = up-j-irsp
 
       au < doNotProcess ; doNotProcess ; 2016 ; 1 ; International Review of Social Psychology Volume 2016 ; 2016 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2 ; International Review of Social Psychology Volume 2017 ; 2017 ; >
@@ -1068,7 +1065,7 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://jeps.efpsa.org/
+      param[base_url] = https://account.jeps.efpsa.org/
       param[journal_id] = 
       #nothing published 2011
 
@@ -1139,6 +1136,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.jmolecularsignaling.com/
+      param[journal_id] = 
 
       au < doNotProcess ; doNotProcess ; 2006 ; 1 ; Journal of Molecular Signaling Volume 2006 ; 2006 ; >
       au < doNotProcess ; doNotProcess ; 2007 ; 2 ; Journal of Molecular Signaling Volume 2007 ; 2007 ; >
@@ -1168,7 +1166,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://openarchaeologydata.metajnl.com/
+      param[base_url] = https://account.openarchaeologydata.metajnl.com/
+      param[journal_id] = 
 
       au < doNotProcess ; exists ; 2012 ; 1 ; Journal of Open Archaeology Data Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 2 ; Journal of Open Archaeology Data Volume 2013 ; 2013 ; >
@@ -1193,6 +1192,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://openhealthdata.metajnl.com/
+      param[journal_id] = 
       # continued by Open Health Data
 
       au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Public Health Data Volume 2013 ; 2013 ; >
@@ -1208,6 +1208,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://openhealthdata.metajnl.com/
+      param[journal_id] = 
       # continues Journal of Open Public Health Data
 
       au < doNotProcess ; doNotProcess ; 2014 ; 2 ; Open Health Data Volume 2014 ; 2014 ; >
@@ -1231,6 +1232,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://openhumanitiesdata.metajnl.com/
+      param[journal_id] = 
 
       au < doNotProcess ; doNotProcess ; 2015 ; 1 ; Journal of Open Humanities Data Volume 2015 ; 2015 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2 ; Journal of Open Humanities Data Volume 2016 ; 2016 ; >
@@ -1253,6 +1255,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://openpsychologydata.metajnl.com/
+      param[journal_id] = 
 
       au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Psychology Data Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Psychology Data Volume 2014 ; 2014 ; >
@@ -1277,6 +1280,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://openresearchsoftware.metajnl.com/
+      param[journal_id] = 
 
       au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Research Software Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Research Software Volume 2014 ; 2014 ; >
@@ -1302,6 +1306,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.jbsr.be/
+      param[journal_id] = 
       #volume 1-98 this title. As of volume 99, name changed to Journal of the Belgian Society of Radiology 2514-8281
 
       au < doNotProcess ; doNotProcess ; 2010 ; 94 ; JBR-BTR Volume 2010 ; 2010 ; >
@@ -1321,6 +1326,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.jbsr.be/
+      param[journal_id] = 
 
       au < doNotProcess ; doNotProcess ; 2015 ; 99 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2015 ; 2015 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 100 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2016 ; 2016 ; >
@@ -1343,6 +1349,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.mahkuscript.com/
+      param[journal_id] = 
 
       au < doNotProcess ; doNotProcess ; 2016 ; 1 ; MaHKUscript: Journal of Fine Art Research Volume 1 Issue 1 (2016) ; 2016 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 1 ; MaHKUscript: Journal of Fine Art Research Volume 1 Issue 2 (2017) ; 2017 ; >
@@ -1360,7 +1367,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://openbioresources.metajnl.com/
+      param[base_url] = https://account.openbioresources.metajnl.com/
+      param[journal_id] = 
 
       au < doNotProcess ; exists ; 2014 ; 1 ; Open Journal of Bioresources Volume 2014 ; 2014 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2 ; Open Journal of Bioresources Volume 2015 ; 2015 ; >
@@ -2718,7 +2726,7 @@
       >
 
       comment[publisher] = United Kingdom Serials Group
-      param[base_url] = https://insights.uksg.org/
+      param[base_url] = https://accounts.insights.uksg.org/
 
       au < doNotProcess ; doNotProcess ; 2012 ; 1 ; Insights: the UKSG journal Volume 2012 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2 ; Insights: the UKSG journal Volume 2013 ; 2013 ; >
