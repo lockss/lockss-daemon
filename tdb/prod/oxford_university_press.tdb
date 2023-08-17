@@ -16918,8 +16918,10 @@
     >
 
     param[journal_id] = pmj
-    #move from BMJ by 2023-01-01
+    #move from BMJ by 2023-01-01.
 
+    au < exists ; 2020 ; 2020 ; Postgraduate Medical Journal Volume 96 ; 96 >
+    au < exists ; 2021 ; 2021 ; Postgraduate Medical Journal Volume 97 ; 97 >
     au < manifest ; 2022 ; 2022 ; Postgraduate Medical Journal Volume 98 ; 98 >
     au < manifest ; 2023 ; 2023 ; Postgraduate Medical Journal Volume 99 ; 99 >
 

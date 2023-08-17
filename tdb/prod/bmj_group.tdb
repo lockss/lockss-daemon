@@ -2596,12 +2596,12 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; down ; 2013 ; Postgraduate Medical Journal Volume 89 ; 89 ; http://pmj.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2014 ; Postgraduate Medical Journal Volume 90 ; 90 ; http://pmj.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; Postgraduate Medical Journal Volume 91 ; 91 ; http://pmj.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; released ; 2016 ; Postgraduate Medical Journal Volume 92 ; 92 ; https://pmj.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; released ; 2017 ; Postgraduate Medical Journal Volume 93 ; 93 ; https://pmj.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; released ; 2018 ; Postgraduate Medical Journal Volume 94 ; 94 ; https://pmj.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; released ; 2019 ; Postgraduate Medical Journal Volume 95 ; 95 ; https://pmj.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; released ; 2020 ; Postgraduate Medical Journal Volume 96 ; 96 ; https://pmj.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; released ; 2021 ; Postgraduate Medical Journal Volume 97 ; 97 ; https://pmj.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; down ; 2016 ; Postgraduate Medical Journal Volume 92 ; 92 ; https://pmj.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; down ; 2017 ; Postgraduate Medical Journal Volume 93 ; 93 ; https://pmj.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; down ; 2018 ; Postgraduate Medical Journal Volume 94 ; 94 ; https://pmj.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; down ; 2019 ; Postgraduate Medical Journal Volume 95 ; 95 ; https://pmj.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; superseded ; 2020 ; Postgraduate Medical Journal Volume 96 [superseded] ; 96 ; https://pmj.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; superseded ; 2021 ; Postgraduate Medical Journal Volume 97 [superseded] ; 97 ; https://pmj.bmj.com/ >
     #Moved to OUP
   }
 
