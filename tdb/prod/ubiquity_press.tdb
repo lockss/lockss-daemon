@@ -3681,6 +3681,8 @@
       comment[publisher] = Open University of Catalonia
       param[base_url] =  https://raco.cat/
       param[journal_id] = Digithum
+      #"Open Journal Systems 3.1.1.4" This version of OJS has a malformed permission statement for the GLN only.
+      #"LOCKSS system has permission to ingest, preserve, and serve this Archival Unit."
 
       au < exists ; 1999 ; 1 ; Digithum Volume 1999 ; 1999 >
       au < exists ; 2000 ; 2 ; Digithum Volume 2000 ; 2000 >
@@ -3694,18 +3696,18 @@
       au < exists ; 2008 ; 10 ; Digithum Volume 2008 ; 2008 >
       au < exists ; 2009 ; 11 ; Digithum Volume 2009 ; 2009 >
       au < exists ; 2010 ; 12 ; Digithum Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 13 ; Digithum Volume 2011 ; 2011 >
-      au < manifest ; 2012 ; 14 ; Digithum Volume 2012 ; 2012 >
-      au < manifest ; 2013 ; 15 ; Digithum Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 16 ; Digithum Volume 2014 ; 2014 >
-      au < manifest ; 2015 ; 17 ; Digithum Volume 2015 ; 2015 >
-      au < manifest ; 2016 ; 18 ; Digithum Volume 2016 ; 2016 >
-      au < manifest ; 2017 ; 19-20 ; Digithum Volume 2017 ; 2017 >
-      au < manifest ; 2018 ; 21-22 ; Digithum Volume 2018 ; 2018 >
-      au < manifest ; 2019 ; 23-24 ; Digithum Volume 2019 ; 2019 >
-      au < manifest ; 2020 ; 25-26 ; Digithum Volume 2020 ; 2020 >
-      au < manifest ; 2021 ; 27-28 ; Digithum Volume 2021 ; 2021 >
-      au < manifest ; 2022 ; 29 ; Digithum Volume 2022 ; 2022 >
+      au < exists ; 2011 ; 13 ; Digithum Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 14 ; Digithum Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 15 ; Digithum Volume 2013 ; 2013 >
+      au < exists ; 2014 ; 16 ; Digithum Volume 2014 ; 2014 >
+      au < exists ; 2015 ; 17 ; Digithum Volume 2015 ; 2015 >
+      au < exists ; 2016 ; 18 ; Digithum Volume 2016 ; 2016 >
+      au < exists ; 2017 ; 19-20 ; Digithum Volume 2017 ; 2017 >
+      au < exists ; 2018 ; 21-22 ; Digithum Volume 2018 ; 2018 >
+      au < exists ; 2019 ; 23-24 ; Digithum Volume 2019 ; 2019 >
+      au < exists ; 2020 ; 25-26 ; Digithum Volume 2020 ; 2020 >
+      au < exists ; 2021 ; 27-28 ; Digithum Volume 2021 ; 2021 >
+      au < exists ; 2022 ; 29 ; Digithum Volume 2022 ; 2022 >
 
   }
 
