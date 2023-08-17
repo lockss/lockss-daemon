@@ -3682,7 +3682,7 @@
       param[base_url] =  https://raco.cat/
       param[journal_id] = Digithum
       #"Open Journal Systems 3.1.1.4" This version of OJS has a malformed permission statement for the GLN only.
-      #"LOCKSS system has permission to ingest, preserve, and serve this Archival Unit."
+      #"LOCKSS system has permission to ingest, preserve, and serve this Archival Unit." See RT 11633
 
       au < exists ; 1999 ; 1 ; Digithum Volume 1999 ; 1999 >
       au < exists ; 2000 ; 2 ; Digithum Volume 2000 ; 2000 >
