@@ -310,7 +310,7 @@
     au < doNotProcess ; exists ; 2018 ; Comma Volume 2018 ; 2018 ; >
     au < doNotProcess ; exists ; 2019 ; Comma Volume 2019 ; 2019 ; >
     au < doNotProcess ; exists ; 2020 ; Comma Volume 2020 (2021) ; 2020 ; >
-    au < ready ; exists ; 2021 ; Comma Volume 2021 (2022) ; 2021 ; >
+    au < crawling ; exists ; 2021 ; Comma Volume 2021 (2022) ; 2021 ; >
     au < expected ; exists ; 2022 ; Comma Volume 2022 (2023) ; 2022 ; >
     au < expected ; exists ; 2023 ; Comma Volume 2023 (2023) ; 2023 ; >
 
@@ -393,7 +393,7 @@
     au < doNotProcess ; exists ; 2020 ; Contemporary French Civilization Volume 45 ; 45 ; >
     au < doNotProcess ; exists ; 2021 ; Contemporary French Civilization Volume 46 ; 46 ; >
     au < deepCrawl ; exists ; 2022 ; Contemporary French Civilization Volume 47 ; 47 ; >
-    au < ready ; exists ; 2023 ; Contemporary French Civilization Volume 48 ; 48 ; >
+    au < crawling ; exists ; 2023 ; Contemporary French Civilization Volume 48 ; 48 ; >
 
   }
 
@@ -744,7 +744,7 @@
     au < doNotProcess ; exists ; 2020 ; International Development Planning Review Volume 42 ; 42 ; >
     au < doNotProcess ; exists ; 2021 ; International Development Planning Review Volume 43 ; 43 ; >
     au < deepCrawl ; exists ; 2022 ; International Development Planning Review Volume 44 ; 44 ; >
-    au < ready ; exists ; 2023 ; International Development Planning Review Volume 45 ; 45 ; >
+    au < crawling ; exists ; 2023 ; International Development Planning Review Volume 45 ; 45 ; >
 
   }
 
@@ -1579,7 +1579,7 @@
     au < doNotProcess ; exists ; 2021 ; Quebec Studies Volume 71 ; 71 ; >
     au < doNotProcess ; exists ; 2021 ; Quebec Studies Volume 72 ; 72 ; >
     au < deepCrawl ; exists ; 2022 ; Quebec Studies Volume 73 ; 73 ; >
-    au < ready ; exists ; 2023 ; Quebec Studies Volume 74 ; 74 ; >
+    au < crawling ; exists ; 2023 ; Quebec Studies Volume 74 ; 74 ; >
 
   }
 
@@ -1857,7 +1857,7 @@
     au < doNotProcess ; exists ; 2020 ; Town Planning Review Volume 91 ; 91 ; >
     au < doNotProcess ; exists ; 2021 ; Town Planning Review Volume 92 ; 92 ; >
     au < deepCrawl ; exists ; 2022 ; Town Planning Review Volume 93 ; 93 ; >
-    au < ready ; exists ; 2023 ; Town Planning Review Volume 94 ; 94 ; >
+    au < crawling ; exists ; 2023 ; Town Planning Review Volume 94 ; 94 ; >
 
 
   }
@@ -1984,7 +1984,7 @@
 
     param[journal_id] = revista
 
-    au < ready ; exists ; 2023 ; Revista Iberoamericana Volume 89 ; 89 ; >
+    au < crawling ; exists ; 2023 ; Revista Iberoamericana Volume 89 ; 89 ; >
 
   }
   
