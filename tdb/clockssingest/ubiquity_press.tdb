@@ -2331,37 +2331,6 @@
 
 {
   publisher <
-    name = University of East Anglia ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
-
-    provider = Ubiquity Press
-    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
-
-  {
-
-      title <
-        name = New Area Studies ;
-        eissn = 2633-3716
-      >
-
-      comment[publisher] = University of East Anglia
-#      param[base_url] = https://newareastudies.com/
-
-      au < exists ; exists ; 2020 ; 1 ; New Area Studies Volume 2020 ; 2020 ; https://newareastudies.com/ ; >
-      au < exists ; exists ; 2021 ; 2 ; New Area Studies Volume 2021 ; 2021 ; https://newareastudies.com/ ; >
-      au < exists ; exists ; 2022 ; 3 ; New Area Studies Volume 2022 ; 2022 ; https://newareastudies.com/ ; >
-      au < expected ; exists ; 2023 ; 4 ; New Area Studies Volume 2023 ; 2023 ; https://newareastudies.com/ ; >
-
-  }
-}
-
-{
-  publisher <
     name = University of New South Wales ;
     info[contract] = 2011 ;
     info[back] = 2000 ;
@@ -3736,8 +3705,6 @@
   >
 
     provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    #implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
     attr[start_stem] = index.php/
@@ -3776,4 +3743,39 @@
 
   }
 
+}
+{
+  publisher <
+    name = University of East Anglia ;
+    info[contract] = 2011 ;
+    info[back] = 2000 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    #provider = Ubiquity Press
+    #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+    #implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+    provider = Ubiquity Press
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+
+  {
+
+      title <
+        name = New Area Studies ;
+        eissn = 2633-3716
+      >
+
+      comment[publisher] = University of East Anglia
+      param[base_url] = https://account.newareastudies.com/
+      param[journal_id] = up-j-nas
+
+      au < manifest ; exists ; 2020 ; 1 ; New Area Studies Volume 2020 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; 2 ; New Area Studies Volume 2021 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; 3 ; New Area Studies Volume 2022 ; 2022 ; >
+      au < expected ; exists ; 2023 ; 4 ; New Area Studies Volume 2023 ; 2023 ; >
+
+  }
 }
