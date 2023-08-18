@@ -1098,42 +1098,42 @@
      type = bookSeries
     >
 
-    au < manifest ; exists ; 1992 ; 9781563474057 ; 9781563470523 ; 9781563474057 ; Guide: Guide to the Serviceable Spacecraft Grasping/Berthing/Docking Interfaces (AIAA G-056-1992) (9781563474057) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 1993 ; 9781563474101 ; 9781563470493 ; 9781563474101 ; Guide: Reusable Software: Assessment Criteria for Aerospace Applications (AIAA G-010-1993) (9781563474101) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1993 ; 9781563474187 ;  ; 9781563474187 ; Recommended Practice: Recommended Practice for Reporting Earth-to-Orbit Mission Profiles (AIAA R-060-1993) (9781563474187) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 1994 ; 9781563474231 ; 9781563471087 ; 9781563474231 ; Special Project: Contemporary Models of the Orbital Environment (AIAA SP-069-1994) (9781563474231) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 1995 ; 9781563474125 ; 9781563471346 ; 9781563474125 ; Guide: Guide for Utility Connector Interfaces for Serviceable Spacecraft (AIAA G-072-1995) (9781563474125) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 1995 ; 9781563474309 ; 9781563471322 ; 9781563474309 ; Standard: Standard Vocabulary for Space Automation and Robotics (AIAA S-066-1995) (9781563474309) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1998 ; 9781563472855 ;  ; 9781563472855 ; Guide: Guide for the Verification and Validation of Computational Fluid Dynamics Simulations (AIAA G-077-1998(2002)) (9781563472855) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1998 ; 9781563473661 ;  ; 9781563473661 ; Standard: Commercial Launch Safety (AIAA S-061-1998) (9781563473661) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 1999 ; 9781563473692 ; 9781563473487 ; 9781563473692 ; Guide: Guide to Global Aerosol Models (GAM) (AIAA G-065-1999) (9781563473692) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 1999 ; 9781563473678 ; 9781563473494 ; 9781563473678 ; Guide: Guide to Modeling Earth‚Äôs Trapped Radiation Environment (AIAA G-083-1999) (9781563473678) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1999 ; 9781563473463 ;  ; 9781563473463 ; Special Project: Fire, Explosion, Compatibility, and Safety Hazards of Hypergols - Hydrazine (AIAA SP-084-1999) (9781563473463) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1999 ; 9781563473623 ;  ; 9781563473623 ; Special Project: Fire, Explosion, Compatibility, and Safety Hazards of Hypergols - Monomethylhydrazine (AIAA SP-085-1999) (9781563473623) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 1999 ; 9781563473647 ; 9781563473630 ; 9781563473647 ; Standard: Assessment of Experimental Uncertainty With Application to Wind Tunnel Testing (AIAA S-071A-1999) (9781563473647) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2000 ; 9781563474521 ;  ; 9781563474521 ; Guide: Guide to Human Performance Measurements (AIAA G-035A-2000) (9781563474521) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 2001 ; 9781563474712 ; 9781563474705 ; 9781563474712 ; Recommended Practice: Recommended Practice for Parts Management (AIAA R-100A-2001) (9781563474712) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 2001 ; 9781563475283 ; 9781563475276 ; 9781563475283 ; Recommended Practice: Space Launch Integration (AIAA R-099-2001) (9781563475283) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2001 ; 9781563474965 ;  ; 9781563474965 ; Special Project: Fire, Explosion, Compatibility, and Safety Hazards of Nitrogen Tetroxide (AIAA SP-086-2001) (9781563474965) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 2003 ; 9781563476648 ; 9781563476631 ; 9781563476648 ; Guide: Assessing Experimental Uncertainty ‚Äî Supplement to AIAA S-071A-1999 (AIAA G-045-2003) (9781563476648) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2003 ; 9781563476464 ; 9781563476457 ; 9781563476464 ; Recommended Practice: Calibration and Use of Internal Strain-Gage Balances with Application to Wind Tunnel Testing (AIAA R-091-2003) (9781563476464) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 2003 ; 9781563476624 ; 9781563476617 ; 9781563476624 ; Recommended Practice: Calibration of Subsonic and Transonic Wind Tunnels (AIAA R-093-2003(2018)) (9781563476624) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 2003 ; 9781563476518 ; 9781563476501 ; 9781563476518 ; Recommended Practice: Wind Tunnel Testing ‚Äî Part 1: Management Volume (AIAA R-092-1-2003(2018)) (9781563476518) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 2003 ; 9781563476532 ; 9781563476525 ; 9781563476532 ; Recommended Practice: Wind Tunnel Testing ‚Äî Part 2: Practitioners Volume (AIAA R-092-2-2003(2018)) (9781563476532) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 2004 ; 9781563477072 ; 9781563477065 ; 9781563477072 ; Recommended Practice: Terminology for Unmanned Aerial Vehicles and Remotely Operated Aircraft (AIAA R-103-2004) (9781563477072) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 2004 ; 9781563477522 ; 9781563477515 ; 9781563477522 ; Special Project: Recommended Design Practices for Conceptual Nuclear Fusion Space Propulsion Systems (AIAA SP-108-2004) (9781563477522) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 2004 ; 9781563477423 ; 9781563477416 ; 9781563477423 ; Standard: Space Systems ‚Äì Flywheel Rotor Assemblies (AIAA S-096-2004) (9781563477423) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2005 ; 9781563479304 ;  ; 9781563479304 ; Recommended Practice: The CFD General Notation System ‚Äì Standard Interface Data Structures (AIAA R-101A-2005) (9781563479304) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2005 ; 9781563477737 ; 9781563477720 ; 9781563477737 ; Standard: Criteria for Explosive Systems and Devices on Space and Launch Vehicles (AIAA S-113-2005) (9781563477737) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2005 ; 9781563477751 ; 9781563477744 ; 9781563477751 ; Standard: Moving Mechanical Assemblies for Space and Launch Vehicles (AIAA S-114-2005) (9781563477751) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 2005 ; 9781563477713 ; 9781563477706 ; 9781563477713 ; Standard: Space Systems ‚Äî Structures, Structural Components, and Structural Assemblies (AIAA S-110-2005) (9781563477713) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2006 ; 9781563479168 ;  ; 9781563479168 ; Guide: Managing the Use of Commercial Off the Shelf (COTS) Software Components for Mission-Critical Systems (AIAA G-118-2006) (9781563479168) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 2007 ; 9781563479236 ; 9781563479229 ; 9781563479236 ; Standard: Adaptations and Conversions of CCSDS Space Link Extension Forward Communications Link Transmission Unit Transfer Service (ANSI/AIAA S-123-2007(2017)) (9781563479236) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 2007 ; 9781563479250 ; 9781563479243 ; 9781563479250 ; Standard: Adaptations and Conversions of CCSDS Space Link Extension Return All Frames Transfer Service (ANSI/AIAA S-124-2007(2017)) (9781563479250) ; https://arc.aiaa.org/ ; >
-    au < manifest ; exists ; 2007 ; 9781563479144 ; 9781563479137 ; 9781563479144 ; Standard: Electrical Power Systems for Unmanned Spacecraft (AIAA S-122-2007) (9781563479144) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2009 ; 9781624106224 ;  ; 9781624106224 ; Paper Airplane Design (AIAA S-999-2009) (9781624106224) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2009 ; 9781600867095 ;  ; 9781600867095 ; Standard: Performance-Based Anomaly Detection and Response Analysis (ANSI/AIAA S-102.2.11-2019) (9781600867095) ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2009 ; 9781600867064 ;  ; 9781600867064 ; Standard: Performance-Based Failure Reporting, Analysis & Corrective Action System (FRACAS) Requirements (ANSI/AIAA S-102.1.4-2019) (9781600867064) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 1992 ; 9781563474057 ; 9781563470523 ; 9781563474057 ; Guide: Guide to the Serviceable Spacecraft Grasping/Berthing/Docking Interfaces (AIAA G-056-1992) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 1993 ; 9781563474101 ; 9781563470493 ; 9781563474101 ; Guide: Reusable Software: Assessment Criteria for Aerospace Applications (AIAA G-010-1993) ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 1993 ; 9781563474187 ;  ; 9781563474187 ; Recommended Practice: Recommended Practice for Reporting Earth-to-Orbit Mission Profiles (AIAA R-060-1993) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 1994 ; 9781563474231 ; 9781563471087 ; 9781563474231 ; Special Project: Contemporary Models of the Orbital Environment (AIAA SP-069-1994) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 1995 ; 9781563474125 ; 9781563471346 ; 9781563474125 ; Guide: Guide for Utility Connector Interfaces for Serviceable Spacecraft (AIAA G-072-1995) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 1995 ; 9781563474309 ; 9781563471322 ; 9781563474309 ; Standard: Standard Vocabulary for Space Automation and Robotics (AIAA S-066-1995) ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 1998 ; 9781563472855 ;  ; 9781563472855 ; Guide: Guide for the Verification and Validation of Computational Fluid Dynamics Simulations (AIAA G-077-1998(2002)) ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 1998 ; 9781563473661 ;  ; 9781563473661 ; Standard: Commercial Launch Safety (AIAA S-061-1998) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 1999 ; 9781563473692 ; 9781563473487 ; 9781563473692 ; Guide: Guide to Global Aerosol Models (GAM) (AIAA G-065-1999) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 1999 ; 9781563473678 ; 9781563473494 ; 9781563473678 ; Guide: Guide to Modeling Earth‚Äôs Trapped Radiation Environment (AIAA G-083-1999) ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 1999 ; 9781563473463 ;  ; 9781563473463 ; Special Project: Fire, Explosion, Compatibility, and Safety Hazards of Hypergols - Hydrazine (AIAA SP-084-1999) ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 1999 ; 9781563473623 ;  ; 9781563473623 ; Special Project: Fire, Explosion, Compatibility, and Safety Hazards of Hypergols - Monomethylhydrazine (AIAA SP-085-1999) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 1999 ; 9781563473647 ; 9781563473630 ; 9781563473647 ; Standard: Assessment of Experimental Uncertainty With Application to Wind Tunnel Testing (AIAA S-071A-1999) ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2000 ; 9781563474521 ;  ; 9781563474521 ; Guide: Guide to Human Performance Measurements (AIAA G-035A-2000) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 2001 ; 9781563474712 ; 9781563474705 ; 9781563474712 ; Recommended Practice: Recommended Practice for Parts Management (AIAA R-100A-2001) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 2001 ; 9781563475283 ; 9781563475276 ; 9781563475283 ; Recommended Practice: Space Launch Integration (AIAA R-099-2001) ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2001 ; 9781563474965 ;  ; 9781563474965 ; Special Project: Fire, Explosion, Compatibility, and Safety Hazards of Nitrogen Tetroxide (AIAA SP-086-2001) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 2003 ; 9781563476648 ; 9781563476631 ; 9781563476648 ; Guide: Assessing Experimental Uncertainty ‚Äî Supplement to AIAA S-071A-1999 (AIAA G-045-2003) ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2003 ; 9781563476464 ; 9781563476457 ; 9781563476464 ; Recommended Practice: Calibration and Use of Internal Strain-Gage Balances with Application to Wind Tunnel Testing (AIAA R-091-2003) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 2003 ; 9781563476624 ; 9781563476617 ; 9781563476624 ; Recommended Practice: Calibration of Subsonic and Transonic Wind Tunnels (AIAA R-093-2003(2018)) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 2003 ; 9781563476518 ; 9781563476501 ; 9781563476518 ; Recommended Practice: Wind Tunnel Testing ‚Äî Part 1: Management Volume (AIAA R-092-1-2003(2018)) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 2003 ; 9781563476532 ; 9781563476525 ; 9781563476532 ; Recommended Practice: Wind Tunnel Testing ‚Äî Part 2: Practitioners Volume (AIAA R-092-2-2003(2018)) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 2004 ; 9781563477072 ; 9781563477065 ; 9781563477072 ; Recommended Practice: Terminology for Unmanned Aerial Vehicles and Remotely Operated Aircraft (AIAA R-103-2004) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 2004 ; 9781563477522 ; 9781563477515 ; 9781563477522 ; Special Project: Recommended Design Practices for Conceptual Nuclear Fusion Space Propulsion Systems (AIAA SP-108-2004) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 2004 ; 9781563477423 ; 9781563477416 ; 9781563477423 ; Standard: Space Systems ‚Äì Flywheel Rotor Assemblies (AIAA S-096-2004) ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2005 ; 9781563479304 ;  ; 9781563479304 ; Recommended Practice: The CFD General Notation System ‚Äì Standard Interface Data Structures (AIAA R-101A-2005) ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2005 ; 9781563477737 ; 9781563477720 ; 9781563477737 ; Standard: Criteria for Explosive Systems and Devices on Space and Launch Vehicles (AIAA S-113-2005) ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2005 ; 9781563477751 ; 9781563477744 ; 9781563477751 ; Standard: Moving Mechanical Assemblies for Space and Launch Vehicles (AIAA S-114-2005) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 2005 ; 9781563477713 ; 9781563477706 ; 9781563477713 ; Standard: Space Systems ‚Äî Structures, Structural Components, and Structural Assemblies (AIAA S-110-2005) ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2006 ; 9781563479168 ;  ; 9781563479168 ; Guide: Managing the Use of Commercial Off the Shelf (COTS) Software Components for Mission-Critical Systems (AIAA G-118-2006) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 2007 ; 9781563479236 ; 9781563479229 ; 9781563479236 ; Standard: Adaptations and Conversions of CCSDS Space Link Extension Forward Communications Link Transmission Unit Transfer Service (ANSI/AIAA S-123-2007(2017)) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 2007 ; 9781563479250 ; 9781563479243 ; 9781563479250 ; Standard: Adaptations and Conversions of CCSDS Space Link Extension Return All Frames Transfer Service (ANSI/AIAA S-124-2007(2017)) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 2007 ; 9781563479144 ; 9781563479137 ; 9781563479144 ; Standard: Electrical Power Systems for Unmanned Spacecraft (AIAA S-122-2007) ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2009 ; 9781624106224 ;  ; 9781624106224 ; Paper Airplane Design (AIAA S-999-2009) ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2009 ; 9781600867095 ;  ; 9781600867095 ; Standard: Performance-Based Anomaly Detection and Response Analysis (ANSI/AIAA S-102.2.11-2019) ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2009 ; 9781600867064 ;  ; 9781600867064 ; Standard: Performance-Based Failure Reporting, Analysis & Corrective Action System (FRACAS) Requirements (ANSI/AIAA S-102.1.4-2019) ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2009 ; 9781600867071 ;  ; 9781600867071 ; Standard: Performance-Based Failure Review Board (FRB) Requirements (ANSI/AIAA S-102.1.5-2019) (9781600867071) ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2009 ; 9781600867101 ;  ; 9781600867101 ; Standard: Performance-Based Fault Tree Analysis Requirements (ANSI/AIAA S-102.2.18-2019) (9781600867101) ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2009 ; 9781600867163 ;  ; 9781600867163 ; Standard: Performance-Based Sneak Circuit Analysis (SCA) Requirements (AIAA S-102.2.5-2009) (9781600867163) ; https://arc.aiaa.org/ ; >
@@ -1180,7 +1180,7 @@
     au < frozen ; exists ; 2021 ; 9781624106385 ;  ; 9781624106385 ; Recommended Practice for Code Verification in Computational Fluid Dynamics (AIAA R-141-2021) (9781624106385) ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2021 ; 9781624106231 ;  ; 9781624106231 ; Recommended Practice: When Flight Modelling Is Used to Reduce Flight Testing Supporting Aircraft Certification (AIAA R-154-2021) (9781624106231) ; https://arc.aiaa.org/ ; >
     au < frozen ; exists ; 2022 ; 9781624107009 ;  ; 9781624107009 ; Guide to Lithium Battery Safety for Space Applications (AIAA G-136-2022) (9781624107009) ; https://arc.aiaa.org/ ; >
-    au < crawling ; exists ; 2023 ; 9781624107061 ;  ; 9781624107061 ; Guide: Space Systems ‚Äî Composite Overwrapped Pressure Vessels with a Plastic Liner (AIAA G-082-2022) (9781624107061) ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 2023 ; 9781624107061 ;  ; 9781624107061 ; Guide: Space Systems ‚Äî Composite Overwrapped Pressure Vessels with a Plastic Liner (AIAA G-082-2022) ; https://arc.aiaa.org/ ; >
 
  }
 
