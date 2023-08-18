@@ -979,8 +979,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.journalhistoryknowledge.org/
-      param[journal_id] = 
+      param[base_url] = https://journalhistoryknowledge.org/
+      param[journal_id] = unknown
 
       au < doNotProcess ; doNotProcess ; 2020 ; 1 ; Journal for the History of Knowledge Volume 2020 ; 2020 ; >
       au < exists ; exists ; 2021 ; 2 ; Journal for the History of Knowledge Volume 2021 ; 2021 ; >
@@ -998,7 +998,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.jcircadianrhythms.com/
-      param[journal_id] = 
+      param[journal_id] = up-j-jcr
 
       au < doNotProcess ; doNotProcess ; 2003 ; 1 ; Journal of Circadian Rhythms Volume 2003 ; 2003 ; >
       au < doNotProcess ; doNotProcess ; 2004 ; 2 ; Journal of Circadian Rhythms Volume 2004 ; 2004 ; >
@@ -1033,7 +1033,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.jcms-journal.com/
-      param[journal_id] = 
+      param[journal_id] = up-j-jcms
 
       au < exists ; exists ; 1996 ; 1 ; Journal of Conservation and Museum Studies Volume 1996 ; 1996 ; >
       au < exists ; exists ; 1997 ; 2-3 ; Journal of Conservation and Museum Studies Volume 1997 ; 1997 ; >
@@ -1066,7 +1066,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.jeps.efpsa.org/
-      param[journal_id] = 
+      param[journal_id] = up-j-jeps
       #nothing published 2011
 
       au < doNotProcess ; doNotProcess ; 2009 ; 1 ; Journal of European Psychology Students Volume 2009 ; 2009 ; >
@@ -1094,9 +1094,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-    {
-#      changed to https://account.jime.open.ac.uk/  ####no www
-#      use this
+      param[base_url] = https://account.jime.open.ac.uk/
+      param[journal_id] = up-j-jime
       #nothing published in 2011
 
       au < exists ; exists ; 1998 ; 1998 ; Journal of Interactive Media in Education Volume 1998 ; 1998 ; >
@@ -1124,7 +1123,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Interactive Media in Education Volume 2021 ; 2021 ; >
       au < exists ; exists ; 2022 ; 2022 ; Journal of Interactive Media in Education Volume 2022 ; 2022 ; >
       au < expected ; exists ; 2023 ; 2023 ; Journal of Interactive Media in Education Volume 2023 ; 2023 ; >
-    }
+
   }
 
   {
@@ -1136,7 +1135,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.jmolecularsignaling.com/
-      param[journal_id] = 
+      param[journal_id] = up-j-jms
 
       au < doNotProcess ; doNotProcess ; 2006 ; 1 ; Journal of Molecular Signaling Volume 2006 ; 2006 ; >
       au < doNotProcess ; doNotProcess ; 2007 ; 2 ; Journal of Molecular Signaling Volume 2007 ; 2007 ; >
@@ -1167,7 +1166,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.openarchaeologydata.metajnl.com/
-      param[journal_id] = 
+      param[journal_id] = up-j-joad
 
       au < doNotProcess ; exists ; 2012 ; 1 ; Journal of Open Archaeology Data Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 2 ; Journal of Open Archaeology Data Volume 2013 ; 2013 ; >
@@ -1191,8 +1190,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://openhealthdata.metajnl.com/
-      param[journal_id] = 
+      param[base_url] = https://account.openhealthdata.metajnl.com/
+      param[journal_id] = up-j-ohd
       # continued by Open Health Data
 
       au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Public Health Data Volume 2013 ; 2013 ; >
@@ -1207,8 +1206,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://openhealthdata.metajnl.com/
-      param[journal_id] = 
+      param[base_url] = https://account.openhealthdata.metajnl.com/
+      param[journal_id] = up-j-ohd
       # continues Journal of Open Public Health Data
 
       au < doNotProcess ; doNotProcess ; 2014 ; 2 ; Open Health Data Volume 2014 ; 2014 ; >
@@ -1231,8 +1230,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://openhumanitiesdata.metajnl.com/
-      param[journal_id] = 
+      param[base_url] = https://account.openhumanitiesdata.metajnl.com/
+      param[journal_id] = up-j-johd
 
       au < doNotProcess ; doNotProcess ; 2015 ; 1 ; Journal of Open Humanities Data Volume 2015 ; 2015 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2 ; Journal of Open Humanities Data Volume 2016 ; 2016 ; >
@@ -1488,6 +1487,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.openquaternary.com/
+      param[journal_id] = 
 
       au < doNotProcess ; doNotProcess ; 2015 ; 1 ; Open Quaternary Volume 2015 ; 2015 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2 ; Open Quaternary Volume 2016 ; 2016 ; >
@@ -1557,6 +1557,7 @@
     {
       #Moved to https anaccount.d removed account.
       param[base_url] = https://account.presentpasts.info/  #no account. use this
+      param[journal_id] = 
 
       au < doesNotExist ; doesNotExist ; 2009 ; 1 ; Present Pasts Volume 2009 ; 2009 ; > #Articles in 2010.
       au < doNotProcess ; doNotProcess ; 2010 ; 2 ; Present Pasts Volume 2010 ; 2010 ; >
@@ -1740,32 +1741,6 @@
   }
 
   {
-      title <
-        name = Cultural Science Journal ;
-        eissn = 1836-0416
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.culturalscience.org/
-      #Moved to Sciendo platform
-
-      au < doNotProcess ; doNotProcess ; 2008 ; 1 ; Cultural Science Journal Volume 2008 ; 2008 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 2 ; Cultural Science Journal Volume 2009 ; 2009 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 3 ; Cultural Science Journal Volume 2010 ; 2010 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 4 ; Cultural Science Journal Volume 2011 ; 2011 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 5 ; Cultural Science Journal Volume 2012 ; 2012 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 6 ; Cultural Science Journal Volume 2013 ; 2013 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 7 ; Cultural Science Journal Volume 2014 ; 2014 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 8 ; Cultural Science Journal Volume 2015 ; 2015 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 9 ; Cultural Science Journal Volume 2016 ; 2016 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 0 ; Cultural Science Journal Volume 2017 ; 2017 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 10 ; Cultural Science Journal Volume 2018 ; 2018 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 11 ; Cultural Science Journal Volume 2019 ; 2019 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 12 ; Cultural Science Journal Volume 2020 ; 2020 ; >
-
-  }
-
-  {
 
       title <
         name = eGEMs ;
@@ -1774,6 +1749,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.egems.academyhealth.org/
+      param[journal_id] = 
 #     Moved to Elsevier 2019. https://account.academyhealth.org/publications/2017-04/egems-journal-electronic-health-data-and-methods
 
       au < doNotProcess ; doNotProcess ; 2013 ; 1 ; eGEMs Volume 2013 ; 2013 ; >
@@ -1795,6 +1771,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.ejmcm.com/
+      param[journal_id] = 
       #moved to eJournalPlus
 
       au < doNotProcess ; doNotProcess ; 2014 ; 1 ; European Journal of Molecular and Clinical Medicine Volume 2014 ; 2014 ; >
@@ -2056,9 +2033,6 @@
     info[poller] = 8
   >
 
-    #provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    #implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
@@ -2098,9 +2072,6 @@
     info[poller] = 8
   >
 
-    #provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    #implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
@@ -2232,6 +2203,7 @@
 
       comment[publisher] = University of Westminster Press
       param[base_url] = https://account.westminsterpapers.org/
+      param[journal_id] = 
 
       au < doNotProcess ; doNotProcess ; 2009 ; 6 ; Westminster Papers in Communication and Culture Volume 2009 ; 2009 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; 7 ; Westminster Papers in Communication and Culture Volume 2010 ; 2010 ; >
@@ -2258,9 +2230,6 @@
     info[poller] = 8
   >
 
-    #provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    #implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
@@ -2274,7 +2243,8 @@
       >
 
       comment[publisher] = Utrecht University Library
-      param[base_url] = https://account.bmgn-lchr.nl/
+      param[base_url] = https://bmgn-lchr.nl/
+      param[journal_id] = lchr #a guess
       #Moved to OJS3 and KNHG
 
       au < doNotProcess ; exists ; 1970 ; 85 ; BMGN - Low Countries Historical Review Volume 1970 ; 1970 ; >
@@ -2334,52 +2304,13 @@
   {
 
       title <
-        name = De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief ;
-        eissn = 2212-7402
-      >
-
-      comment[publisher] = Utrecht University Library
-      param[base_url] = https://account.de-zeventiende-eeuw.nl/
-#     stopped publication after 2016
-      #website gone
-
-      au < doNotProcess ; doNotProcess ; 2012 ; 28 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2012 ; 2012 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 29 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2013 ; 2013 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 30 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2014 ; 2014 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 31 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2015 ; 2015 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 32 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2016 ; 2016 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 33 ; De Zeventiende Eeuw. Cultuur in de Nederlanden in interdisciplinair perspectief Volume 2017 ; 2017 ; >
-
-  }
-#  {
-#
-#      title <
-#        name = Early Modern Low Countries ;
-#        eissn = 2543-1587
-#      >
-#
-#      comment[publisher] = Utrecht University Library
-#      param[base_url] = https://account.emlc-journal.org/
-##     refresh of De Zeventiende Eeuw
-#
-#      au < exists ; exists ; 2017 ; 1 ; Early Modern Low Countries Volume 2017 ; 2017 ; >
-#      au < exists ; exists ; 2018 ; 2 ; Early Modern Low Countries Volume 2018 ; 2018 ; >
-#      au < exists ; exists ; 2019 ; 3 ; Early Modern Low Countries Volume 2019 ; 2019 ; >
-#      au < expected ; exists ; 2020 ; 4 ; Early Modern Low Countries Volume 2020 ; 2020 ; >
-#      au < expected ; exists ; 2021 ; 5 ; Early Modern Low Countries Volume 2021 ; 2021 ; >
-#
-#  }
-
-
-  {
-
-      title <
         name = ERLACS ;
         eissn = 1879-4750
       >
 
       comment[publisher] = Utrecht University Library
       param[base_url] = https://account.erlacs.org/
+      param[journal_id] = lasa-j-erlacs
 
       au < doNotProcess ; doNotProcess ; 2003 ; 1 ; ERLACS Volume 2003 ; 2003 ; >
       au < doNotProcess ; doNotProcess ; 2004 ; 2 ; ERLACS Volume 2004 ; 2004 ; >
@@ -2413,7 +2344,8 @@
       >
 
       comment[publisher] = Utrecht University Library
-      param[base_url] = https://account.rivista-incontri.nl/
+      param[base_url] = https://rivista-incontri.nl/
+      param[journal_id] = incontri #a guess
       #Moved to OJS / Werkgroep Italië Studies
 
       au < doNotProcess ; doNotProcess ; 2011 ; 26 ; Incontri. Rivista europea di studi italiani Volume 2011 ; 2011 ; >
@@ -2426,7 +2358,9 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 33 ; Incontri. Rivista europea di studi italiani Volume 2018 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 34 ; Incontri. Rivista europea di studi italiani Volume 2019 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 35 ; Incontri. Rivista europea di studi italiani Volume 2020 ; 2020 ; >
-      #Moved to OJS / Werkgroep Italië Studies
+      au < exists ; exists ; 2021 ; 36 ; Incontri. Rivista europea di studi italiani Volume 2021 ; 2021 ; >
+      au < exists ; exists ; 2022 ; 37 ; Incontri. Rivista europea di studi italiani Volume 2022 ; 2022 ; >
+
   }
 
   {
@@ -2438,6 +2372,7 @@
 
       comment[publisher] = Utrecht University Library
       param[base_url] = https://account.iacajournal.org/
+      param[journal_id] = up-j-ijca
 
       au < doNotProcess ; doNotProcess ; 2008 ; 1 ; International Journal for Court Administration Volume 2008 ; 2008 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; 2 ; International Journal for Court Administration Volume 2009 ; 2009 ; >
@@ -2461,34 +2396,13 @@
   {
 
       title <
-        name = International Journal for History, Culture and Modernity ;
-        eissn = 2213-0624
-      >
-
-      comment[publisher] = Utrecht University Library
-      param[base_url] = https://account.history-culture-modernity.org/
-#      move to Brill in 2020
-
-      au < doNotProcess ; doNotProcess ; 2013 ; 1 ; International Journal for History, Culture and Modernity Volume 2013 ; 2013 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2 ; International Journal for History, Culture and Modernity Volume 2014 ; 2014 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 3 ; International Journal for History, Culture and Modernity Volume 2015 ; 2015 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 4 ; International Journal for History, Culture and Modernity Volume 2016 ; 2016 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 5 ; International Journal for History, Culture and Modernity Volume 2017 ; 2017 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 6 ; International Journal for History, Culture and Modernity Volume 2018 ; 2018 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 7 ; International Journal for History, Culture and Modernity Volume 2019 ; 2019 ; >
-
-  }
-
-  {
-
-      title <
         name = Journal of Social Intervention ;
         eissn = 1876-8830
       >
 
       comment[publisher] = Utrecht University Library
       param[base_url] = https://account.journalsi.org/
-      param[journal_id] = 
+      param[journal_id] = up-j-jsitp
 
       au < doNotProcess ; doNotProcess ; 2005 ; 1 ; Journal of Social Intervention Volume 2005 ; 2005 ; >
       au < doNotProcess ; doNotProcess ; 2006 ; 2 ; Journal of Social Intervention Volume 2006 ; 2006 ; >
@@ -2520,8 +2434,8 @@
       >
 
       comment[publisher] = Utrecht University Library
-      param[base_url] = https://account.liberquarterly.eu/
-      #Moved to
+      param[base_url] = https://liberquarterly.eu/
+      param[journal_id] = liber #a guess
 
       au < doNotProcess ; exists ; 1999 ; 1 ; LIBER Quarterly Volume 1999 ; 1999 ; >
       au < doNotProcess ; doNotProcess ; 2000 ; 2 ; LIBER Quarterly Volume 2000 ; 2000 ; >
@@ -2549,121 +2463,38 @@
 
   }
 
-  {
-
-      title <
-        name = RELIEF ;
-        eissn = 1873-5045
-      >
-
-      comment[publisher] = Utrecht University Library
-      param[base_url] = https://account.revue-relief.org/
-      #Moved to OJS https://account.revue-relief.org/
-
-      au < doNotProcess ; doNotProcess ; 2007 ; 1 ; RELIEF Volume 2007 ; 2007 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 2 ; RELIEF Volume 2008 ; 2008 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 3 ; RELIEF Volume 2009 ; 2009 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 4 ; RELIEF Volume 2010 ; 2010 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 5 ; RELIEF Volume 2011 ; 2011 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 6 ; RELIEF Volume 2012 ; 2012 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 7 ; RELIEF Volume 2013 ; 2013 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 8 ; RELIEF Volume 2014 ; 2014 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 9 ; RELIEF Volume 2015 ; 2015 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 10 ; RELIEF Volume 2016 ; 2016 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 11 ; RELIEF Volume 2017 ; 2017 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 12 ; RELIEF Volume 2018 ; 2018 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 13 ; RELIEF Volume 2019 ; 2019 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 14 ; RELIEF Volume 2020 ; 2020 ; >
-
-  }
-
-  {
-
-      title <
-        name = Religion and Gender ;
-        issn = 2589-8051 ;
-        eissn = 1878-5417
-      >
-
-      comment[publisher] = Utrecht University Library
-      param[base_url] = https://account.religionandgender.org/
-      #move to Brill in 2019-01-01
-
-      au < doNotProcess ; doNotProcess ; 2011 ; 1 ; Religion and Gender Volume 2011 ; 2011 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 2 ; Religion and Gender Volume 2012 ; 2012 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 3 ; Religion and Gender Volume 2013 ; 2013 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 4 ; Religion and Gender Volume 2014 ; 2014 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 5 ; Religion and Gender Volume 2015 ; 2015 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 6 ; Religion and Gender Volume 2016 ; 2016 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 7 ; Religion and Gender Volume 2017 ; 2017 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 8 ; Religion and Gender Volume 2018 ; 2018 ; >
-      #Moved to Brill
-  }
-
-  {
-
-      title <
-        name = Studium ;
-        issn = 1876-9055 ;
-        eissn = 2212-7283
-      >
-
-      comment[publisher] = Utrecht University Library
-      param[base_url] = https://account.gewina-studium.nl/
-
-      au < doNotProcess ; doNotProcess ; 2008 ; 1 ; Studium Volume 2008 ; 2008 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 2 ; Studium Volume 2009 ; 2009 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 3 ; Studium Volume 2010 ; 2010 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 4 ; Studium Volume 2011 ; 2011 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 5 ; Studium Volume 2012 ; 2012 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 6 ; Studium Volume 2013 ; 2013 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 7 ; Studium Volume 2014 ; 2014 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 8 ; Studium Volume 2015 ; 2015 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 9 ; Studium Volume 2016 ; 2016 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 10 ; Studium Volume 2017 ; 2017 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 11 ; Studium Volume 2018 ; 2018 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 12 ; Studium Volume 2019 ; 2019 ; >
-      # This additional AU is needed because the last two TOCs of 2019 only
-      # appear on a 2020 manifest page. Note how only the param[year] is 2020.
-
-      au < doNotProcess ; doNotProcess ; 2019 ; 12 ; Studium Volume 2019 [additional tables of contents] ; 2020 ; >
-      # Trigger approved late 2020
-
-
-  }
-
-  {
-
-      title <
-        name = Tijdschrift voor Tijdschriftstudies ;
-        eissn = 2214-8965
-      >
-
-      comment[publisher] = Utrecht University Library
-      param[base_url] = https://account.tijdschriftstudies.nl/
-      param[journal_id] = 
-
-      au < doNotProcess ; doNotProcess ; 1997 ; 1 ; Tijdschrift voor Tijdschriftstudies Volume 1997 ; 1997 ; >
-      au < doNotProcess ; doNotProcess ; 1998 ; 2 ; Tijdschrift voor Tijdschriftstudies Volume 1998 ; 1998 ; >
-      au < doNotProcess ; doNotProcess ; 1999 ; 3 ; Tijdschrift voor Tijdschriftstudies Volume 1999 ; 1999 ; >
-      au < doNotProcess ; doNotProcess ; 2000 ; 4 ; Tijdschrift voor Tijdschriftstudies Volume 2000 ; 2000 ; >
-      au < doNotProcess ; doNotProcess ; 2001 ; 5 ; Tijdschrift voor Tijdschriftstudies Volume 2001 ; 2001 ; >
-      au < doNotProcess ; doNotProcess ; 2002 ; 6 ; Tijdschrift voor Tijdschriftstudies Volume 2002 ; 2002 ; > #2 extra css files
-      au < doNotProcess ; doNotProcess ; 2003 ; 7 ; Tijdschrift voor Tijdschriftstudies Volume 2003 ; 2003 ; >
-      au < doNotProcess ; doNotProcess ; 2004 ; 8 ; Tijdschrift voor Tijdschriftstudies Volume 2004 ; 2004 ; >
-      au < doNotProcess ; doNotProcess ; 2005 ; 9 ; Tijdschrift voor Tijdschriftstudies Volume 2005 ; 2005 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 10 ; Tijdschrift voor Tijdschriftstudies Volume 2006 ; 2006 ; > #2 extra css files
-      au < doNotProcess ; doNotProcess ; 2007 ; 11 ; Tijdschrift voor Tijdschriftstudies Volume 2007 ; 2007 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 12 ; Tijdschrift voor Tijdschriftstudies Volume 2008 ; 2008 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 13 ; Tijdschrift voor Tijdschriftstudies Volume 2009 ; 2009 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 14 ; Tijdschrift voor Tijdschriftstudies Volume 2010 ; 2010 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 15 ; Tijdschrift voor Tijdschriftstudies Volume 2011 ; 2011 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 16 ; Tijdschrift voor Tijdschriftstudies Volume 2012 ; 2012 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 17 ; Tijdschrift voor Tijdschriftstudies Volume 2013 ; 2013 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 18 ; Tijdschrift voor Tijdschriftstudies Volume 2014 ; 2014 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 19 ; Tijdschrift voor Tijdschriftstudies Volume 2015 ; 2015 ; >
-
-  }
+#  {
+#
+#      title <
+#        name = Tijdschrift voor Tijdschriftstudies ;
+#        eissn = 2214-8965
+#      >
+#
+#      comment[publisher] = Utrecht University Library
+#      param[base_url] = https://account.tijdschriftstudies.nl/
+#      param[journal_id] = 
+#
+#      au < doNotProcess ; doNotProcess ; 1997 ; 1 ; Tijdschrift voor Tijdschriftstudies Volume 1997 ; 1997 ; >
+#      au < doNotProcess ; doNotProcess ; 1998 ; 2 ; Tijdschrift voor Tijdschriftstudies Volume 1998 ; 1998 ; >
+#      au < doNotProcess ; doNotProcess ; 1999 ; 3 ; Tijdschrift voor Tijdschriftstudies Volume 1999 ; 1999 ; >
+#      au < doNotProcess ; doNotProcess ; 2000 ; 4 ; Tijdschrift voor Tijdschriftstudies Volume 2000 ; 2000 ; >
+#      au < doNotProcess ; doNotProcess ; 2001 ; 5 ; Tijdschrift voor Tijdschriftstudies Volume 2001 ; 2001 ; >
+#      au < doNotProcess ; doNotProcess ; 2002 ; 6 ; Tijdschrift voor Tijdschriftstudies Volume 2002 ; 2002 ; > #2 extra css files
+#      au < doNotProcess ; doNotProcess ; 2003 ; 7 ; Tijdschrift voor Tijdschriftstudies Volume 2003 ; 2003 ; >
+#      au < doNotProcess ; doNotProcess ; 2004 ; 8 ; Tijdschrift voor Tijdschriftstudies Volume 2004 ; 2004 ; >
+#      au < doNotProcess ; doNotProcess ; 2005 ; 9 ; Tijdschrift voor Tijdschriftstudies Volume 2005 ; 2005 ; >
+#      au < doNotProcess ; doNotProcess ; 2006 ; 10 ; Tijdschrift voor Tijdschriftstudies Volume 2006 ; 2006 ; > #2 extra css files
+#      au < doNotProcess ; doNotProcess ; 2007 ; 11 ; Tijdschrift voor Tijdschriftstudies Volume 2007 ; 2007 ; >
+#      au < doNotProcess ; doNotProcess ; 2008 ; 12 ; Tijdschrift voor Tijdschriftstudies Volume 2008 ; 2008 ; >
+#      au < doNotProcess ; doNotProcess ; 2009 ; 13 ; Tijdschrift voor Tijdschriftstudies Volume 2009 ; 2009 ; >
+#      au < doNotProcess ; doNotProcess ; 2010 ; 14 ; Tijdschrift voor Tijdschriftstudies Volume 2010 ; 2010 ; >
+#      au < doNotProcess ; doNotProcess ; 2011 ; 15 ; Tijdschrift voor Tijdschriftstudies Volume 2011 ; 2011 ; >
+#      au < doNotProcess ; doNotProcess ; 2012 ; 16 ; Tijdschrift voor Tijdschriftstudies Volume 2012 ; 2012 ; >
+#      au < doNotProcess ; doNotProcess ; 2013 ; 17 ; Tijdschrift voor Tijdschriftstudies Volume 2013 ; 2013 ; >
+#      au < doNotProcess ; doNotProcess ; 2014 ; 18 ; Tijdschrift voor Tijdschriftstudies Volume 2014 ; 2014 ; >
+#      au < doNotProcess ; doNotProcess ; 2015 ; 19 ; Tijdschrift voor Tijdschriftstudies Volume 2015 ; 2015 ; >
+#
+#  }
 
   {
 
@@ -2674,7 +2505,7 @@
 
       comment[publisher] = Utrecht University Library
       param[base_url] = https://account.utrechtlawreview.org/
-      param[journal_id] = 
+      param[journal_id] = up-j-ulr
 
       au < doNotProcess ; doNotProcess ; 2005 ; 1 ; Utrecht Law Review Volume 2005 ; 2005 ; >
       au < doNotProcess ; doNotProcess ; 2006 ; 2 ; Utrecht Law Review Volume 2006 ; 2006 ; >
@@ -2710,9 +2541,6 @@
     info[poller] = 8
   >
 
-    #provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    #implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
@@ -2726,7 +2554,8 @@
       >
 
       comment[publisher] = United Kingdom Serials Group
-      param[base_url] = https://accounts.insights.uksg.org/
+      param[base_url] = https://account.insights.uksg.org/
+      param[journal_id] = up-j-i
 
       au < doNotProcess ; doNotProcess ; 2012 ; 1 ; Insights: the UKSG journal Volume 2012 ; 2012 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2 ; Insights: the UKSG journal Volume 2013 ; 2013 ; >
@@ -2752,7 +2581,8 @@
       >
 
       comment[publisher] = United Kingdom Serials Group
-      param[base_url] = https://serials.uksg.org/
+      param[base_url] = https://account.serials.uksg.org/
+      param[journal_id] = up-j-s
       #all processed through metapress
 
       au < doNotProcess ; doNotProcess ; 1988 ; 1 ; Serials: The Journal for the Serials Community Volume 1988 ; 1988 ; >
@@ -2807,7 +2637,7 @@
 
       comment[publisher] = White Rose University Press
       param[base_url] = https://account.bioj-online.com/
-      param[journal_id] = 
+      param[journal_id] = wr-j-bioj
 
       au < doNotProcess ; doNotProcess ; 2009 ; 6 ; British and Irish Orthoptic Journal Volume 2009 ; 2009 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; 7 ; British and Irish Orthoptic Journal Volume 2010 ; 2010 ; >
@@ -2835,7 +2665,7 @@
 
       comment[publisher] = White Rose University Press
       param[base_url] = https://account.euroslajournal.org/
-      param[journal_id] = 
+      param[journal_id] = wr-j-jesla
 
       au < doNotProcess ; doNotProcess ; 2017 ; 1 ; Journal of the European Second Language Association Volume 2017 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2 ; Journal of the European Second Language Association Volume 2018 ; 2018 ; >
@@ -2856,7 +2686,7 @@
 
       comment[publisher] = White Rose University Press
       param[base_url] = https://account.ujpir-journal.com/
-      param[journal_id] = 
+      param[journal_id] = wr-j-ujpir
 
       au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Undergraduate Journal of Politics and International Relations Volume 2018 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2 ; Undergraduate Journal of Politics and International Relations Volume 2019 ; 2019 ; >
@@ -2871,7 +2701,7 @@
 
       comment[publisher] = White Rose University Press
       param[base_url] = https://account.writingchinesejournal.org/
-      param[journal_id] = 
+      param[journal_id] = wr-j-wcajcsl
 
       au < exists ; exists ; 2022 ; 1 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2022 ; 2022 ; >
       au < expected ; exists ; 2023 ; 2 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2023 ; 2023 ; >
@@ -2903,6 +2733,7 @@
 
       comment[publisher] = Centre for Security Governance
       param[base_url] = https://account.stabilityjournal.org/
+      param[journal_id] = up-j-sijsd
 
       au < doNotProcess ; exists ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; >
@@ -2943,7 +2774,7 @@
 
       comment[publisher] = Scandinavian Military Studies
       param[base_url] = https://account.sjms.nu/
-      param[journal_id] = 
+      param[journal_id] = sms-j-sjms
 
       au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Scandinavian Military Studies Volume 2018 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2 ; Scandinavian Military Studies Volume 2019 ; 2019 ; >
@@ -2977,7 +2808,7 @@
 
       comment[publisher] = Aperio
       param[base_url] = https://account.jmphil.org/
-      param[journal_id] = 
+      param[journal_id] = uv1-j-jmp
 
       au < doNotProcess ; doNotProcess ; 2019 ; 1 ; Journal of Modern Philosophy Volume 2019 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 2 ; Journal of Modern Philosophy Volume 2020 ; 2020 ; >
@@ -3012,7 +2843,7 @@
 
       comment[publisher] = Virginia Tech Publishing
       param[base_url] = https://account.seejournal.org/
-      param[journal_id] = 
+      param[journal_id] = vt-j-see
 
       au < doNotProcess ; doNotProcess ; 2020 ; 1 ; Studies in Engineering Education Volume 2020 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; 2 ; Studies in Engineering Education Volume 2021 ; 2021 ; >
@@ -3030,7 +2861,7 @@
 
       comment[publisher] = Virginia Tech Publishing
       param[base_url] = https://account.jte-journal.org/
-      param[journal_id] = 
+      param[journal_id] = vt-j-jte
 
       au < exists ; exists ; 1989 ; 1 ; Journal of Technology Education Volume 1989 ; 1989 ; >
       au < exists ; exists ; 1990 ; 2 ; Journal of Technology Education Volume 1990 ; 1990 ; >
@@ -3080,9 +2911,6 @@
     info[poller] = 8
   >
 
-    #provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    #implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
@@ -3097,7 +2925,7 @@
 
       comment[publisher] = Gonzaga Library Publishing
       param[base_url] = https://account.ibapa.org/
-      param[journal_id] = 
+      param[journal_id] = gl-j-ibpa
 
       au < exists ; exists ; 2022 ; 1 ; Indigenous Business & Public Administration Volume 2022 ; 2022 ; >
       au < expected ; exists ; 2023 ; 2 ; Indigenous Business & Public Administration Volume 2023 ; 2023 ; >
@@ -3114,9 +2942,6 @@
     info[poller] = 8
   >
 
-    #provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    #implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
@@ -3131,7 +2956,7 @@
 
       comment[publisher] = De Montfort University Press
       param[base_url] = https://account.jcss.demontfortuniversitypress.org/
-      param[journal_id] = 
+      param[journal_id] = dmu-j-jcss
 
       au < exists ; exists ; 2013 ; 1 ; Journal of Critical Southern Studies Volume 2013 ; 2013 ; >
       au < exists ; exists ; 2014 ; 2 ; Journal of Critical Southern Studies Volume 2014 ; 2014 ; >
@@ -3147,7 +2972,7 @@
 
       comment[publisher] = De Montfort University Press
       param[base_url] = https://account.gp.demontfortuniversitypress.org/
-      param[journal_id] = 
+      param[journal_id] = dmu-j-gpajepr
 
       au < exists ; exists ; 2010 ; 1 ; Gateway Papers Volume 2010 ; 2010 ; >
       au < exists ; exists ; 2021 ; 12 ; Gateway Papers Volume 2021 ; 2021 ; >
@@ -3185,7 +3010,7 @@
 
       comment[publisher] = Stockholm University Press
       param[base_url] = https://account.a.tellusjournals.se/
-      param[journal_id] = 
+      param[journal_id] = su-j-tadmo
       #2000-2016 processed under the publisher Co-action.
 
       au < exists ; exists ; 1949 ; 1 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1949 ; 1949 ; >
@@ -3276,7 +3101,7 @@
 
       comment[publisher] = Stockholm University Press
       param[base_url] = https://account.b.tellusjournals.se/
-      param[journal_id] = 
+      param[journal_id] = su-j-tbcpm
       #2000-2016 processed under the publisher Co-action.
 
       au < exists ; exists ; 1983 ; 35 ; Tellus B: Chemical and Physical Meteorology Volume 1983 ; 1983 ; >
