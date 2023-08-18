@@ -101,6 +101,11 @@ public class OAPENBooksMetadataExtractorFactory implements FileMetadataExtractor
       tagMap.put("citation_author", MetadataField.FIELD_AUTHOR);
       tagMap.put("citation_doi", MetadataField.FIELD_DOI);
       tagMap.put("citation_title", MetadataField.FIELD_PUBLICATION_TITLE);
+
+      tagMap.put("DC.creator", MetadataField.DC_FIELD_CREATOR);
+      tagMap.put("DC.title", MetadataField.DC_FIELD_TITLE);
+      tagMap.put("DC.type", MetadataField.DC_FIELD_TYPE);
+
     }
 
     @Override
@@ -111,7 +116,7 @@ public class OAPENBooksMetadataExtractorFactory implements FileMetadataExtractor
       if (am.isEmpty()) {
         return;
       }
-
+      am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_BOOK);
       emitter.emitMetadata(cu, am);
     }
   }
