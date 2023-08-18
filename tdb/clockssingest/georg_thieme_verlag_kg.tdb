@@ -6070,8 +6070,8 @@
     au < finished ; manifest ; 1985 ; 1985 ; Seminars in Speech and Language Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1986 ; 1986 ; Seminars in Speech and Language Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1987 ; 1987 ; Seminars in Speech and Language Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 1988 ; 1988 ; Seminars in Speech and Language Volume 9 ; 9 ; >
-    au < frozen ; exists ; 1989 ; 1989 ; Seminars in Speech and Language Volume 10 ; 10 ; >
+    au < finished ; manifest ; 1988 ; 1988 ; Seminars in Speech and Language Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1989 ; 1989 ; Seminars in Speech and Language Volume 10 ; 10 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 1990 ; 1990 ; Seminars in Speech and Language Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 1991 ; 1991 ; Seminars in Speech and Language Volume 12 ; 12 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 1992 ; 1992 ; Seminars in Speech and Language Volume 13 ; 13 ; reingest5.clockss.org:8082 >
@@ -6127,16 +6127,16 @@
     au < manifest ; exists ; 1977 ; 1977 ; Seminars in Thrombosis and Hemostasis Volume 3 ; 3 ; >
     au < manifest ; exists ; 1978 ; 1978 ; Seminars in Thrombosis and Hemostasis Volume 4 ; 4 ; >
     au < manifest ; exists ; 1979 ; 1979 ; Seminars in Thrombosis and Hemostasis Volume 5 ; 5 ; >
-    au < frozen ; exists ; 1980 ; 1980 ; Seminars in Thrombosis and Hemostasis Volume 6 ; 6 ; >
-    au < frozen ; exists ; 1981 ; 1981 ; Seminars in Thrombosis and Hemostasis Volume 7 ; 7 ; >
-    au < frozen ; exists ; 1982 ; 1982 ; Seminars in Thrombosis and Hemostasis Volume 8 ; 8 ; >
-    au < frozen ; exists ; 1983 ; 1983 ; Seminars in Thrombosis and Hemostasis Volume 9 ; 9 ; >
-    au < frozen ; exists ; 1984 ; 1984 ; Seminars in Thrombosis and Hemostasis Volume 10 ; 10 ; >
-    au < frozen ; exists ; 1985 ; 1985 ; Seminars in Thrombosis and Hemostasis Volume 11 ; 11 ; >
-    au < frozen ; exists ; 1986 ; 1986 ; Seminars in Thrombosis and Hemostasis Volume 12 ; 12 ; >
-    au < frozen ; exists ; 1987 ; 1987 ; Seminars in Thrombosis and Hemostasis Volume 13 ; 13 ; >
-    au < frozen ; exists ; 1988 ; 1988 ; Seminars in Thrombosis and Hemostasis Volume 14 ; 14 ; >
-    au < frozen ; exists ; 1989 ; 1989 ; Seminars in Thrombosis and Hemostasis Volume 15 ; 15 ; >
+    au < finished ; manifest ; 1980 ; 1980 ; Seminars in Thrombosis and Hemostasis Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1981 ; 1981 ; Seminars in Thrombosis and Hemostasis Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1982 ; 1982 ; Seminars in Thrombosis and Hemostasis Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1983 ; 1983 ; Seminars in Thrombosis and Hemostasis Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1984 ; 1984 ; Seminars in Thrombosis and Hemostasis Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1985 ; 1985 ; Seminars in Thrombosis and Hemostasis Volume 11 ; 11 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1986 ; 1986 ; Seminars in Thrombosis and Hemostasis Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1987 ; 1987 ; Seminars in Thrombosis and Hemostasis Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1988 ; 1988 ; Seminars in Thrombosis and Hemostasis Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1989 ; 1989 ; Seminars in Thrombosis and Hemostasis Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 1990 ; 1990 ; Seminars in Thrombosis and Hemostasis Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1991 ; 1991 ; Seminars in Thrombosis and Hemostasis Volume 17 ; 17 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 1992 ; 1992 ; Seminars in Thrombosis and Hemostasis Volume 18 ; 18 ; reingest4.clockss.org:8082 >
@@ -6284,7 +6284,7 @@
     param[journal_id] = 10.1055/s-00000080
     comment[years] = 1999-2004
 
-    au < frozen ; exists ; 1999 ; 1999 ; Sleep and Breathing Volume 3 ; 3 ; >
+    au < finished ; manifest ; 1999 ; 1999 ; Sleep and Breathing Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2000 ; 2000 ; Sleep and Breathing Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2001 ; 2001 ; Sleep and Breathing Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2002 ; 2002 ; Sleep and Breathing Volume 6 ; 6 ; reingest4.clockss.org:8082 >
@@ -6352,9 +6352,9 @@
     param[journal_id] = 10.1055/s-00000081
     comment[years] = 1987-current
 
-   au < frozen ; exists ; 1987 ; 1987 ; Sportverletzung - Sportschaden Volume 1 ; 1 ; >
-   au < frozen ; exists ; 1988 ; 1988 ; Sportverletzung - Sportschaden Volume 2 ; 2 ; >
-   au < frozen ; exists ; 1989 ; 1989 ; Sportverletzung - Sportschaden Volume 3 ; 3 ; >
+   au < finished ; manifest ; 1987 ; 1987 ; Sportverletzung - Sportschaden Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+   au < finished ; manifest ; 1988 ; 1988 ; Sportverletzung - Sportschaden Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+   au < finished ; manifest ; 1989 ; 1989 ; Sportverletzung - Sportschaden Volume 3 ; 3 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 1990 ; 1990 ; Sportverletzung - Sportschaden Volume 4 ; 4 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1991 ; 1991 ; Sportverletzung - Sportschaden Volume 5 ; 5 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 1992 ; 1992 ; Sportverletzung - Sportschaden Volume 6 ; 6 ; reingest3.clockss.org:8083 >
@@ -6540,7 +6540,7 @@
     param[journal_id] = 10.1055/s-00000083
     comment[years] = 1989-current
 
-   au < frozen ; exists ; 1989 ; 1989 ; SYNLETT Volume 1 (1989) ; 1 ; >
+   au < finished ; manifest ; 1989 ; 1989 ; SYNLETT Volume 1 (1989) ; 1 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 1990 ; 1990 ; SYNLETT Volume 1 (1990) ; 1 ; reingest3.clockss.org:8083 >
    au < finished ; frozen ; 1991 ; 1991 ; SYNLETT Volume 2 ; 2 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 1992 ; 1992 ; SYNLETT Volume 3 ; 3 ; reingest3.clockss.org:8083 >
@@ -6611,7 +6611,7 @@
     param[journal_id] = 10.1055/s-00000084
     comment[years] = 1989-current
 
-   au < frozen ; exists ; 1989 ; 1989 ; SYNTHESIS Volume 21 ; 21 ; >
+   au < finished ; manifest ; 1989 ; 1989 ; SYNTHESIS Volume 21 ; 21 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 1990 ; 1990 ; SYNTHESIS Volume 22 ; 22 ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 1991 ; 1991 ; SYNTHESIS Volume 23 ; 23 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1992 ; 1992 ; SYNTHESIS Volume 24 ; 24 ; reingest2.clockss.org:8085 >
@@ -6714,16 +6714,16 @@
 
     #10.1055/s-002-13370
     au < manifest ; exists ; 1979 ; 1979 ; The Thoracic and Cardiovascular Surgeon Volume 27 ; 27 ; >
-    au < frozen ; exists ; 1980 ; 1980 ; The Thoracic and Cardiovascular Surgeon Volume 28 ; 28 ; >
-    au < frozen ; exists ; 1981 ; 1981 ; The Thoracic and Cardiovascular Surgeon Volume 29 ; 29 ; >
-    au < frozen ; exists ; 1982 ; 1982 ; The Thoracic and Cardiovascular Surgeon Volume 30 ; 30 ; >
-    au < frozen ; exists ; 1983 ; 1983 ; The Thoracic and Cardiovascular Surgeon Volume 31 ; 31 ; >
-    au < frozen ; exists ; 1984 ; 1984 ; The Thoracic and Cardiovascular Surgeon Volume 32 ; 32 ; >
-    au < frozen ; exists ; 1985 ; 1985 ; The Thoracic and Cardiovascular Surgeon Volume 33 ; 33 ; >
-    au < frozen ; exists ; 1986 ; 1986 ; The Thoracic and Cardiovascular Surgeon Volume 34 ; 34 ; >
-    au < frozen ; exists ; 1987 ; 1987 ; The Thoracic and Cardiovascular Surgeon Volume 35 ; 35 ; >
-    au < frozen ; exists ; 1988 ; 1988 ; The Thoracic and Cardiovascular Surgeon Volume 36 ; 36 ; >
-    au < frozen ; exists ; 1989 ; 1989 ; The Thoracic and Cardiovascular Surgeon Volume 37 ; 37 ; >
+    au < finished ; manifest ; 1980 ; 1980 ; The Thoracic and Cardiovascular Surgeon Volume 28 ; 28 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1981 ; 1981 ; The Thoracic and Cardiovascular Surgeon Volume 29 ; 29 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1982 ; 1982 ; The Thoracic and Cardiovascular Surgeon Volume 30 ; 30 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1983 ; 1983 ; The Thoracic and Cardiovascular Surgeon Volume 31 ; 31 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1984 ; 1984 ; The Thoracic and Cardiovascular Surgeon Volume 32 ; 32 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1985 ; 1985 ; The Thoracic and Cardiovascular Surgeon Volume 33 ; 33 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1986 ; 1986 ; The Thoracic and Cardiovascular Surgeon Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1987 ; 1987 ; The Thoracic and Cardiovascular Surgeon Volume 35 ; 35 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1988 ; 1988 ; The Thoracic and Cardiovascular Surgeon Volume 36 ; 36 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1989 ; 1989 ; The Thoracic and Cardiovascular Surgeon Volume 37 ; 37 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 1990 ; 1990 ; The Thoracic and Cardiovascular Surgeon Volume 38 ; 38 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1991 ; 1991 ; The Thoracic and Cardiovascular Surgeon Volume 39 ; 39 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 1992 ; 1992 ; The Thoracic and Cardiovascular Surgeon Volume 40 ; 40 ; reingest5.clockss.org:8082 >
@@ -6886,16 +6886,16 @@
     param[journal_id] = 10.1055/s-00000089
     comment[years] = 1980-current
 
-    au < frozen ; exists ; 1980 ; 1980 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 1 ; 1 ; >
-    au < frozen ; exists ; 1981 ; 1981 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2 ; 2 ; >
-    au < frozen ; exists ; 1982 ; 1982 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 3 ; 3 ; >
-    au < frozen ; exists ; 1983 ; 1983 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 4 ; 4 ; >
-    au < frozen ; exists ; 1984 ; 1984 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 5 ; 5 ; >
-    au < frozen ; exists ; 1985 ; 1985 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 6 ; 6 ; >
-    au < frozen ; exists ; 1986 ; 1986 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 7 ; 7 ; >
-    au < frozen ; exists ; 1987 ; 1987 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 8 ; 8 ; >
-    au < frozen ; exists ; 1988 ; 1988 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 9 ; 9 ; >
-    au < frozen ; exists ; 1989 ; 1989 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 10 ; 10 ; >
+    au < finished ; manifest ; 1980 ; 1980 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1981 ; 1981 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1982 ; 1982 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1983 ; 1983 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1984 ; 1984 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1985 ; 1985 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 6 ; 6 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1986 ; 1986 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1987 ; 1987 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1988 ; 1988 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1989 ; 1989 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 10 ; 10 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 1990 ; 1990 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1991 ; 1991 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1992 ; 1992 ; Ultraschall in der Medizin - European Journal of Ultrasound Volume 13 ; 13 ; reingest3.clockss.org:8083 >
@@ -7276,16 +7276,16 @@
     au < manifest ; exists ; 1977 ; 1977 ; Zeitschrift für Klassische Homöopathie Volume 21 ; 21 ; >
     au < manifest ; exists ; 1978 ; 1978 ; Zeitschrift für Klassische Homöopathie Volume 22 ; 22 ; >
     au < manifest ; exists ; 1979 ; 1979 ; Zeitschrift für Klassische Homöopathie Volume 23 ; 23 ; >
-    au < frozen ; exists ; 1980 ; 1980 ; Zeitschrift für Klassische Homöopathie Volume 24 ; 24 ; >
-    au < frozen ; exists ; 1981 ; 1981 ; Zeitschrift für Klassische Homöopathie Volume 25 ; 25 ; >
-    au < frozen ; exists ; 1982 ; 1982 ; Zeitschrift für Klassische Homöopathie Volume 26 ; 26 ; >
-    au < frozen ; exists ; 1983 ; 1983 ; Zeitschrift für Klassische Homöopathie Volume 27 ; 27 ; >
-    au < frozen ; exists ; 1984 ; 1984 ; Zeitschrift für Klassische Homöopathie Volume 28 ; 28 ; >
-    au < frozen ; exists ; 1985 ; 1985 ; Zeitschrift für Klassische Homöopathie Volume 29 ; 29 ; >
-    au < frozen ; exists ; 1986 ; 1986 ; Zeitschrift für Klassische Homöopathie Volume 30 ; 30 ; >
-    au < frozen ; exists ; 1987 ; 1987 ; Zeitschrift für Klassische Homöopathie Volume 31 ; 31 ; >
-    au < frozen ; exists ; 1988 ; 1988 ; Zeitschrift für Klassische Homöopathie Volume 32 ; 32 ; >
-    au < frozen ; exists ; 1989 ; 1989 ; Zeitschrift für Klassische Homöopathie Volume 33 ; 33 ; >
+    au < finished ; manifest ; 1980 ; 1980 ; Zeitschrift für Klassische Homöopathie Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1981 ; 1981 ; Zeitschrift für Klassische Homöopathie Volume 25 ; 25 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1982 ; 1982 ; Zeitschrift für Klassische Homöopathie Volume 26 ; 26 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1983 ; 1983 ; Zeitschrift für Klassische Homöopathie Volume 27 ; 27 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1984 ; 1984 ; Zeitschrift für Klassische Homöopathie Volume 28 ; 28 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1985 ; 1985 ; Zeitschrift für Klassische Homöopathie Volume 29 ; 29 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1986 ; 1986 ; Zeitschrift für Klassische Homöopathie Volume 30 ; 30 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1987 ; 1987 ; Zeitschrift für Klassische Homöopathie Volume 31 ; 31 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1988 ; 1988 ; Zeitschrift für Klassische Homöopathie Volume 32 ; 32 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1989 ; 1989 ; Zeitschrift für Klassische Homöopathie Volume 33 ; 33 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 1990 ; 1990 ; Zeitschrift für Klassische Homöopathie Volume 34 ; 34 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 1991 ; 1991 ; Zeitschrift für Klassische Homöopathie Volume 35 ; 35 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 1992 ; 1992 ; Zeitschrift für Klassische Homöopathie Volume 36 ; 36 ; reingest4.clockss.org:8082 >
@@ -7425,13 +7425,13 @@
     comment[years] = 1980-2007
     comment[id] = continued as 10.1055/s-00000099 mid-2007
 
-    au < frozen ; exists ; 1980 ; 1980 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1980 ; 118 ; >
-    au < frozen ; exists ; 1981 ; 1981 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1981 ; 119 ; >
-    au < frozen ; exists ; 1982 ; 1982 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1982 ; 120 ; >
-    au < frozen ; exists ; 1983 ; 1983 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1983 ; 0 ; >
-    au < frozen ; exists ; 1984 ; 1984 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1984 ; 0 ; >
-    au < frozen ; exists ; 1985 ; 1985 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1985 ; 0 ; >
-    au < frozen ; exists ; 1986 ; 1986 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1986 ; 0 ; >
+    au < finished ; manifest ; 1980 ; 1980 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1980 ; 118 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1981 ; 1981 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1981 ; 119 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1982 ; 1982 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1982 ; 120 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1983 ; 1983 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1983 ; 0 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1984 ; 1984 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1984 ; 0 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1985 ; 1985 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1985 ; 0 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1986 ; 1986 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1986 ; 0 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1987 ; 1987 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1987 ; 0 ; >
     au < frozen ; exists ; 1988 ; 1988 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1988 ; 0 ; >
     au < frozen ; exists ; 1989 ; 1989 ; Zeitschrift für Orthopädie und ihre Grenzgebiete Volume 1989 ; 0 ; >
