@@ -9,8 +9,7 @@
     info[platform] = Silverchair Books
   >
 
-  plugin = needs.plugin
-  #plugin = org.lockss.plugin.silverchair.geoscienceworld.ClockssGeoscienceWorldSilverchairBooksPlugin
+  plugin = org.lockss.plugin.silverchair.rsc.ClockssRoyalSocietyChemistrySilverchairBooksPlugin
   implicit < status ; status2 ; year ; isbn ; eisbn ; name ; param[resource_id] ; hidden[proxy] >
   param[base_url] = https://books.rsc.org/
 
@@ -29,14 +28,14 @@
       au < manifest ; exists ; 2023 ; ; ; Astrochemistry ; books/monograph/2060/Astrochemistry ; >
       au < manifest ; exists ; 2023 ; ; ; The Handbook of Medicinal Chemistry ; books/edited-volume/2061/The-Handbook-of-Medicinal-Chemistry ; >
       au < manifest ; exists ; 2023 ; ; ; Bird and Reptile Species in Environmental Risk Assessment Strategies ; books/edited-volume/2065/Bird-and-Reptile-Species-in-Environmental-Risk ; >
-      au < manifest ; exists ; 2023 ; ; ; Chalcogen Chemistry: Fundamentals and Applications ; books/edited-volume/2066/Chalcogen-Chemistry-Fundamentals-and-Applications ; >
+      au < manifest ; exists ; 2023 ; 978-1-83916-738-6 ; 978-1-83916-739-3 ; Chalcogen Chemistry: Fundamentals and Applications ; books/edited-volume/2066/Chalcogen-Chemistry-Fundamentals-and-Applications ; >
       au < manifest ; exists ; 2023 ; ; ; Green Sample Preparation Techniques: Concepts, Novel Materials and Solvents, and Applications ; books/edited-volume/2073/Green-Sample-Preparation-TechniquesConcepts-Novel ; >
       au < manifest ; exists ; 2023 ; ; ; Chemical Diversity of Plant Specialized Metabolites: Biosynthetic Approach ; books/monograph/2074/Chemical-Diversity-of-Plant-Specialized ; >
       au < manifest ; exists ; 2023 ; ; ; Digital Learning and Teaching in Chemistry ; books/edited-volume/2075/Digital-Learning-and-Teaching-in-Chemistry ; >
       au < manifest ; exists ; 2023 ; ; ; Mechanochemistry: Fundamentals, Applications and Future: Faraday Discussion 241 ; books/edited-volume/2079/Mechanochemistry-Fundamentals-Applications-and ; >
       au < manifest ; exists ; 2023 ; ; ; Nanoalloys: Recent Developments and Future Perspectives: Faraday Discussion 242 ; books/edited-volume/2080/Nanoalloys-Recent-Developments-and-Future ; >
       au < manifest ; exists ; 2023 ; ; ; Transition Metal-containing Dendrimers in Biomedicine: Current Trends ; books/monograph/2081/Transition-Metal-containing-Dendrimers-in ; >
-      au < manifest ; exists ; 2023 ; ; ; Carrier-mediated Gene and Drug Delivery for Dermal Wound Healing ; books/edited-volume/2082/Carrier-mediated-Gene-and-Drug-Delivery-for-Dermal ; >
+      au < manifest ; exists ; 2023 ; 978-1-83767-154-0 ; 978-1-83767-155-7 ; Carrier-mediated Gene and Drug Delivery for Dermal Wound Healing ; books/edited-volume/2082/Carrier-mediated-Gene-and-Drug-Delivery-for-Dermal ; >
       au < manifest ; exists ; 2023 ; ; ; Recent Developments in Functional Materials for Artificial Photosynthesis ; books/edited-volume/2083/Recent-Developments-in-Functional-Materials-for ; >
       au < manifest ; exists ; 2023 ; ; ; Cheminformatics and Bioinformatics at the Interface with Systems Biology: Bridging Chemistry and Medicine ; books/edited-volume/2084/Cheminformatics-and-Bioinformatics-at-the ; >
       au < manifest ; exists ; 2023 ; ; ; Handbook of Cheese Chemistry ; books/edited-volume/2085/Handbook-of-Cheese-Chemistry ; >

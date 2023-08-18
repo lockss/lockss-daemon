@@ -45,9 +45,9 @@ public class SilverchairCommonThemeBooksArticleIteratorFactory implements Articl
     private static String PATTERN_TEMPLATE =  "\"%s%s\", base_url, resource_id";
 
 
-    private static Pattern PDF_LANDING_PAGE_PATTERN = Pattern.compile("/([^/]+)/books/book/([^\\.]+)$", Pattern.CASE_INSENSITIVE);
+    private static Pattern PDF_LANDING_PAGE_PATTERN = Pattern.compile("/([^/]+)/books/(book|edited-volume)/([^\\.]+)$", Pattern.CASE_INSENSITIVE);
 
-    private static String PDF_LANDING_PAGE_REPLACEMENT = "/$1/books/book/$2";
+    private static String PDF_LANDING_PAGE_REPLACEMENT = "/$1/books/$2/$3";
 
     protected static Logger getLog() {
         return Logger.getLogger(SilverchairCommonThemeBooksArticleIteratorFactory.class);

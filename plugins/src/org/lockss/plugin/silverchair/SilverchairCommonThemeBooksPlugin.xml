@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>5</string>
+        <string>6</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -112,18 +112,27 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>1,"%sCitation/Download\?resourceId=[^&amp;]+&amp;resourceType=[^&amp;]+&amp;citationFormat=2", base_url</string>
             <string>1,"^https?://([^/]+\.silverchair-cdn\.com)/[^?]+\?Expires=2147483647"</string>
             <string>1,"%s%s/", base_url, resource_id</string>
-            <!--https://pubs.geoscienceworld.org/books/book/2160/chapter-pdf/4705971/01_sp471-18-052.pdf-->
-            <string>1,"%sbooks/book/[^/]+/chapter(-pdf)?/.*", base_url</string>
-            <!--https://pubs.geoscienceworld.org/sepm/books/book/1872/chapter-pdf/3800602/9781565762381_ch01.pdf-->
-            <string>1,"%s[^/]+/books/[^/]+/[^/]+/chapter(-pdf)?/.*", base_url</string>
+            <!--
+            https://pubs.geoscienceworld.org/books/book/2160/chapter-pdf/4705971/01_sp471-18-052.pdf
+            https://books.rsc.org/books/edited-volume/2066/chapter/7493655/Computational-Methods-to-Study-Chalcogen-Bonds
+            -->
+            <string>1,"%sbooks/(book|edited-volume)/[^/]+/chapter(-pdf)?/.*", base_url</string>
+            <!--
+            https://pubs.geoscienceworld.org/sepm/books/book/1872/chapter-pdf/3800602/9781565762381_ch01.pdf
+            https://books.rsc.org/books/edited-volume/chapter-pdf/1716368/bk9781839164224-00001.pdf
+            -->
+            <string>1,"%s([^/]+/)?books(/[^/]+)?/[^/]+/chapter(-pdf)?/.*", base_url</string>
             <string>2,"%s.*javascript;:", base_url</string>
         </list>
     </entry>
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
-            <!--https://pubs.geoscienceworld.org/books/book/2160/chapter-pdf/4705971/01_sp471-18-052.pdf-->
-            <string>"%s/books/book/[^/]+/chapter-pdf/", base_url</string>
+            <!--
+            https://pubs.geoscienceworld.org/books/book/2160/chapter-pdf/4705971/01_sp471-18-052.pdf
+            https://books.rsc.org/books/edited-volume/chapter-pdf/1716079/bk9781839164224-00280.pdf
+            -->
+            <string>"%sbooks/(book|edited-volume)/([^/]+/)?chapter-pdf/", base_url</string>
             <!--https://pubs.geoscienceworld.org/sepm/books/book/1872/chapter-pdf/3800602/9781565762381_ch01.pdf-->
             <string>"%s[^/]+/books/[^/]+/[^/]+/chapter-pdf/", base_url</string>
             <string>"^https?://([^/]+\.silverchair-cdn\.com)/[^?]+pdf\?Expires=2147483647"</string>
