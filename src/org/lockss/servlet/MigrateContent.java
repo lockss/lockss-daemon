@@ -298,7 +298,7 @@ public class MigrateContent extends LockssServlet {
   private void doMigratePluginAus() {
     V2AuMover.Args args = getCommonFormArgs();
     if (ALL_PLUGINS_ID.equals(pluginId)) {
-      args.setPlugins(pluginMgr.getRegisteredPlugins());
+      args.setPlugins(null);
     } else {
       Plugin plug = pluginMgr.getPluginFromId(pluginId);
       if (plug == null) {
