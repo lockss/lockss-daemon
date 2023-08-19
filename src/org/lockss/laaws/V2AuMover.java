@@ -546,6 +546,7 @@ s api client with long timeout */
    */
   void initRequest(Args args, String whichAus) throws IllegalArgumentException {
     currentStatus = "Initializing";
+    this.whichAus = whichAus;
     running = true;
     hasBeenStarted = true;
     hostName = args.host;
@@ -1772,6 +1773,7 @@ s api client with long timeout */
   private PrintWriter errorWriter;
 
   private String currentStatus;
+  private String whichAus;
   private boolean running = true; // init true avoids race while starting
   private boolean hasBeenStarted = false;
 
@@ -1815,8 +1817,8 @@ s api client with long timeout */
         sb.append("Aborting");
       }
 
-      sb.append(", AUs in ");
-      StringUtil.separatedString(args.plugins, ",", sb);
+      sb.append(", ");
+      sb.append(whichAus);
 
       sb.append(" to ");
       sb.append(hostName);
