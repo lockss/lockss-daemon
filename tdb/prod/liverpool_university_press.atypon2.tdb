@@ -306,7 +306,7 @@
     au < doNotProcess ; 2018 ; Comma Volume 2018 ; 2018 >
     au < doNotProcess ; 2019 ; Comma Volume 2019 ; 2019 >
     au < doNotProcess ; 2020 ; Comma Volume 2020 (2021) ; 2020 >
-    au < manifest ; 2021 ; Comma Volume 2021 (2022) ; 2021 >
+    au < ready ; 2021 ; Comma Volume 2021 (2022) ; 2021 >
     au < expected ; 2022 ; Comma Volume 2022 (2023) ; 2022 >
     au < expected ; 2023 ; Comma Volume 2023 (2023) ; 2023 >
 
@@ -1946,7 +1946,7 @@
 
     param[journal_id] = cfci
 
-    au < manifest ; 2022 ; CFC Intersections Volume 1 ; 1 >
+    au < ready ; 2022 ; CFC Intersections Volume 1 ; 1 >
     au < manifest ; 2023 ; CFC Intersections Volume 2 ; 2 >
 
   }
@@ -1960,7 +1960,7 @@
 
     param[journal_id] = jbs
 
-    au < manifest ; 2022 ; Journal of Beatles Studies Volume 2022 ; 2022 >
+    au < ready ; 2022 ; Journal of Beatles Studies Volume 2022 ; 2022 >
     au < expected ; 2023 ; Journal of Beatles Studies Volume 2023 ; 2023 >
 
   }

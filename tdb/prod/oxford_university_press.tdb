@@ -14589,7 +14589,7 @@
     param[journal_id] = mrcr
     #Content had been processed under T&F from 2017 volume 1 to 2021 volume 5
 
-    au < manifest ; 2022 ; 2022 ; Modern Rheumatology Case Reports Volume 6 ; 6 >
+    au < ready ; 2022 ; 2022 ; Modern Rheumatology Case Reports Volume 6 ; 6 >
     au < manifest ; 2023 ; 2023 ; Modern Rheumatology Case Reports Volume 7 ; 7 >
 
   }
@@ -16228,7 +16228,7 @@
     au < released ; 2019 ; 2019 ; Oxford Review of Economic Policy Volume 35 ; 35 >
     au < released ; 2020 ; 2020 ; Oxford Review of Economic Policy Volume 36 ; 36 >
     au < released ; 2021 ; 2021 ; Oxford Review of Economic Policy Volume 37 ; 37 >
-    au < manifest ; 2022 ; 2022 ; Oxford Review of Economic Policy Volume 38 ; 38 >
+    au < ready ; 2022 ; 2022 ; Oxford Review of Economic Policy Volume 38 ; 38 >
     au < manifest ; 2023 ; 2023 ; Oxford Review of Economic Policy Volume 39 ; 39 >
 
   }
@@ -16904,7 +16904,7 @@
     param[journal_id] = psq
     #move from Wiley by 2023-01-01
 
-    au < manifest ; 2022 ; 2022 ; Political Science Quarterly Volume 137 ; 137 >
+    au < ready ; 2022 ; 2022 ; Political Science Quarterly Volume 137 ; 137 >
     au < manifest ; 2023 ; 2023 ; Political Science Quarterly Volume 138 ; 138 >
 
   }
@@ -16922,7 +16922,7 @@
 
     au < exists ; 2020 ; 2020 ; Postgraduate Medical Journal Volume 96 ; 96 >
     au < exists ; 2021 ; 2021 ; Postgraduate Medical Journal Volume 97 ; 97 >
-    au < manifest ; 2022 ; 2022 ; Postgraduate Medical Journal Volume 98 ; 98 >
+    au < ready ; 2022 ; 2022 ; Postgraduate Medical Journal Volume 98 ; 98 >
     au < manifest ; 2023 ; 2023 ; Postgraduate Medical Journal Volume 99 ; 99 >
 
   }
@@ -18418,7 +18418,7 @@
     param[journal_id] = jrssig
     #move from Wiley by 2023-01-01
 
-    au < manifest ; 2022 ; 2022 ; Significance Volume 185 ; 185 >
+    au < ready ; 2022 ; 2022 ; Significance Volume 185 ; 185 >
     au < manifest ; 2023 ; 2023 ; Significance Volume 186 ; 186 >
 
   }
@@ -19544,7 +19544,7 @@
     au < released ; 2019 ; 2019 ; The American Journal of Comparative Law Volume 67 ; 67 >
     au < released ; 2020 ; 2020 ; The American Journal of Comparative Law Volume 68 ; 68 >
     au < released ; 2021 ; 2021 ; The American Journal of Comparative Law Volume 69 ; 69 >
-    au < manifest ; 2022 ; 2022 ; The American Journal of Comparative Law Volume 70 ; 70 >
+    au < ready ; 2022 ; 2022 ; The American Journal of Comparative Law Volume 70 ; 70 >
     au < expected ; 2023 ; 2023 ; The American Journal of Comparative Law Volume 71 ; 71 >
 
   }
@@ -21374,7 +21374,7 @@
     au < released ; 2018 ; 2018 ; The Leo Baeck Institute Year Book Volume 63 ; 63 >
     au < released ; 2019 ; 2019 ; The Leo Baeck Institute Year Book Volume 64 ; 64 >
     au < released ; 2021 ; 2021 ; The Leo Baeck Institute Year Book Volume 65 ; 65 >
-    au < manifest ; 2022 ; 2022 ; The Leo Baeck Institute Year Book Volume 66 ; 66 >
+    au < ready ; 2022 ; 2022 ; The Leo Baeck Institute Year Book Volume 66 ; 66 >
     au < expected ; 2023 ; 2023 ; The Leo Baeck Institute Year Book Volume 67 ; 67 >
 
   }
@@ -21737,7 +21737,7 @@
     au < released ; 2018 ; 2018 ; The Opera Quarterly Volume 34 ; 34 >
     au < released ; 2019 ; 2019 ; The Opera Quarterly Volume 35 (2019) ; 35 >
     au < released ; 2021 ; 2021 ; The Opera Quarterly Volume 36 (2021) ; 36 >
-    au < manifest ; 2022 ; 2022 ; The Opera Quarterly Volume 37 (2022) ; 37 >
+    au < ready ; 2022 ; 2022 ; The Opera Quarterly Volume 37 (2022) ; 37 >
     au < expected ; 2023 ; 2023 ; The Opera Quarterly Volume 38 (2023) ; 38 >
 
   }
@@ -22234,7 +22234,7 @@
     au < released ; 2019 ; 2019 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 72 ; 72 >
     au < released ; 2020 ; 2020 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 73 ; 73 >
     au < released ; 2021 ; 2021 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 74 ; 74 >
-    au < manifest ; 2022 ; 2022 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 75 ; 75 >
+    au < ready ; 2022 ; 2022 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 75 ; 75 >
     au < manifest ; 2023 ; 2023 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 76 ; 76 >
 
   }
