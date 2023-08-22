@@ -3296,7 +3296,7 @@
     au < released ; 2019 ; Human Resource Management International Digest Volume 27 ; 27 >
     au < released ; 2020 ; Human Resource Management International Digest Volume 28 ; 28 >
     au < released ; 2021 ; Human Resource Management International Digest Volume 29 ; 29 >
-    au < ready ; 2022 ; Human Resource Management International Digest Volume 30 ; 30 >
+    au < releasing ; 2022 ; Human Resource Management International Digest Volume 30 ; 30 >
     au < manifest ; 2023 ; Human Resource Management International Digest Volume 31 ; 31 >
 
   }
@@ -14728,13 +14728,13 @@
 
     param[journal_issn] = 2459-9700
 
-    au < ready ; 2016 ; Asian Journal of Accounting Research Volume 1 ; 1 >
-    au < ready ; 2017 ; Asian Journal of Accounting Research Volume 2 ; 2 >
-    au < ready ; 2018 ; Asian Journal of Accounting Research Volume 3 ; 3 >
-    au < ready ; 2019 ; Asian Journal of Accounting Research Volume 4 ; 4 >
-    au < ready ; 2020 ; Asian Journal of Accounting Research Volume 5 ; 5 >
-    au < ready ; 2021 ; Asian Journal of Accounting Research Volume 6 ; 6 >
-    au < ready ; 2022 ; Asian Journal of Accounting Research Volume 7 ; 7 >
+    au < releasing ; 2016 ; Asian Journal of Accounting Research Volume 1 ; 1 >
+    au < releasing ; 2017 ; Asian Journal of Accounting Research Volume 2 ; 2 >
+    au < releasing ; 2018 ; Asian Journal of Accounting Research Volume 3 ; 3 >
+    au < releasing ; 2019 ; Asian Journal of Accounting Research Volume 4 ; 4 >
+    au < releasing ; 2020 ; Asian Journal of Accounting Research Volume 5 ; 5 >
+    au < releasing ; 2021 ; Asian Journal of Accounting Research Volume 6 ; 6 >
+    au < releasing ; 2022 ; Asian Journal of Accounting Research Volume 7 ; 7 >
     au < manifest ; 2023 ; Asian Journal of Accounting Research Volume 8 ; 8 >
 
   }
@@ -15199,11 +15199,11 @@
 
     param[journal_issn] = 2586-940X
 
-    au < ready ; 2018 ; Journal of Health Research Volume 32 ; 32 >
-    au < ready ; 2019 ; Journal of Health Research Volume 33 ; 33 >
-    au < ready ; 2020 ; Journal of Health Research Volume 34 ; 34 >
-    au < ready ; 2021 ; Journal of Health Research Volume 35 ; 35 >
-    au < ready ; 2022 ; Journal of Health Research Volume 36 ; 36 >
+    au < releasing ; 2018 ; Journal of Health Research Volume 32 ; 32 >
+    au < releasing ; 2019 ; Journal of Health Research Volume 33 ; 33 >
+    au < releasing ; 2020 ; Journal of Health Research Volume 34 ; 34 >
+    au < releasing ; 2021 ; Journal of Health Research Volume 35 ; 35 >
+    au < releasing ; 2022 ; Journal of Health Research Volume 36 ; 36 >
 
   }
 
@@ -15672,9 +15672,9 @@
 
     param[journal_issn] = 2633-1225
 
-    au < ready ; 2020 ; Tourism Critiques Volume 1 ; 1 >
-    au < ready ; 2021 ; Tourism Critiques Volume 2 ; 2 >
-    au < ready ; 2022 ; Tourism Critiques Volume 3 ; 3 >
+    au < releasing ; 2020 ; Tourism Critiques Volume 1 ; 1 >
+    au < releasing ; 2021 ; Tourism Critiques Volume 2 ; 2 >
+    au < releasing ; 2022 ; Tourism Critiques Volume 3 ; 3 >
     au < expected ; 2023 ; Tourism Critiques Volume 4 ; 4 >
 
   }
