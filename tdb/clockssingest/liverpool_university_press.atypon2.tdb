@@ -255,7 +255,7 @@
 
     au < doNotProcess ; exists ; 2000 ; The Byron Journal Volume 28 ; 28 ; >
     au < doNotProcess ; exists ; 2001 ; The Byron Journal Volume 29 ; 29 ; >
-    au < ready ; exists ; 2002 ; The Byron Journal Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2002 ; The Byron Journal Volume 30 ; 30 ; >
     au < doNotProcess ; exists ; 2003 ; The Byron Journal Volume 31 ; 31 ; >
     au < doNotProcess ; exists ; 2004 ; The Byron Journal Volume 32 ; 32 ; >
     au < doNotProcess ; exists ; 2005 ; The Byron Journal Volume 33 ; 33 ; >
@@ -296,7 +296,7 @@
     au < doNotProcess ; exists ; 2004 ; Comma Volume 2004 ; 2004 ; >
     au < doNotProcess ; exists ; 2005 ; Comma Volume 2005 ; 2005 ; >
     au < doNotProcess ; exists ; 2006 ; Comma Volume 2006 ; 2006 ; >
-    au < ready ; exists ; 2007 ; Comma Volume 2007 ; 2007 ; >
+    au < crawling ; exists ; 2007 ; Comma Volume 2007 ; 2007 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Comma Volume 2008 ; 2008 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Comma Volume 2009 ; 2009 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Comma Volume 2010 ; 2010 ; >
