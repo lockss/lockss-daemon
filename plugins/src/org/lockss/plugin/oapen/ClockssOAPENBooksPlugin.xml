@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -148,7 +148,6 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_permitted_host_pattern</string>
     <list>
-      <string>library\.oapen\.org</string>
       <string>fonts\.googleapis\.com</string>
       <string>unpkg\.com</string>
     </list>
