@@ -31,8 +31,8 @@
       nondefparam[user_pass] = cgipln_U_P
       implicit < status ; name ; param[collection] >
 
-      au < ready ; Government of Canada Publications (Archive-It Collection 3572) ; 3572 >
-      au < ready ; Government of Canada Web Content (Archive-It Collection 5060) ; 5060 >
+      au < released ; Government of Canada Publications (Archive-It Collection 3572) ; 3572 >
+      au < released ; Government of Canada Web Content (Archive-It Collection 5060) ; 5060 >
       au < expected ; Nova Scotia Government Information (Archive-It Collection 7620) ; 7620 >
       au < expected ; Yukon Government Information (Archive-It Collection 7655) ; 7655 >
       au < expected ; British Columbia Government Information (Archive-It Collection 7711) ; 7711 >
