@@ -673,7 +673,7 @@
     au < crawling ; exists ; 1954 ; Journal of the Aeronautical Sciences Volume 21 ; 21 ; https://arc.aiaa.org/ ; >
     au < crawling ; exists ; 1955 ; Journal of the Aeronautical Sciences Volume 22 ; 22 ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 1956 ; Journal of the Aeronautical Sciences Volume 23 ; 23 ; https://arc.aiaa.org/ ; >
-    au < ready ; exists ; 1957 ; Journal of the Aeronautical Sciences Volume 24 ; 24 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 1957 ; Journal of the Aeronautical Sciences Volume 24 ; 24 ; https://arc.aiaa.org/ ; >
 
   }
   {
@@ -686,7 +686,7 @@
     param[journal_id] = jasps
     #Journal of the Aerospace Sciences, 1958-1962, param[journal_id] = jasps
 
-    au < ready ; exists ; 1958 ; Journal of the Aerospace Sciences Volume 25 ; 25 ; https://arc.aiaa.org/ ; >
+    au < crawling ; exists ; 1958 ; Journal of the Aerospace Sciences Volume 25 ; 25 ; https://arc.aiaa.org/ ; >
     au < crawling ; exists ; 1959 ; Journal of the Aerospace Sciences Volume 26 ; 26 ; https://arc.aiaa.org/ ; >
     au < ready ; exists ; 1960 ; Journal of the Aerospace Sciences Volume 27 ; 27 ; https://arc.aiaa.org/ ; >
     au < crawling ; exists ; 1961 ; Journal of the Aerospace Sciences Volume 28 ; 28 ; https://arc.aiaa.org/ ; >
