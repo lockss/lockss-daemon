@@ -13673,6 +13673,7 @@
     >
 
     param[journal_issn] = 2056-3515
+    #frozen, no metadata
 
     au < manifest ; exists ; 2015 ; Annals in Social Responsibility Volume 1 ; 1 ; >
     au < frozen ; exists ; 2016 ; Annals in Social Responsibility Volume 2 ; 2 ; >
@@ -13967,6 +13968,7 @@
     >
 
     param[journal_issn] = 1093-4537
+    #frozen, no metadata
 
     au < finished ; manifest ; 1998 ; International Journal of Organization Theory & Behavior Volume 1 ; 1 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1999 ; International Journal of Organization Theory & Behavior Volume 2 ; 2 ; reingest4.clockss.org:8082 >
@@ -14006,6 +14008,7 @@
     >
 
     param[journal_issn] = 1464-6668
+    #frozen, no metadata
 
     au < finished ; manifest ; 1999 ; International Journal of Sports Marketing and Sponsorship Volume 1 ; 1 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2000-2001 ; International Journal of Sports Marketing and Sponsorship Volume 2 ; 2 ; reingest3.clockss.org:8083 >
@@ -15764,7 +15767,7 @@
 #    au < exists ; exists ; 2016 ; Archnet-IJAR Volume 10 ; 10 ; >
 #    au < exists ; exists ; 2017 ; Archnet-IJAR Volume 11 ; 11 ; >
 #    au < exists ; exists ; 2018 ; Archnet-IJAR Volume 12 ; 12 ; >
-    au < frozen ; exists ; 2019 ; Archnet-IJAR Volume 13 ; 13 ; >
+    au < finished ; manifest ; 2019 ; Archnet-IJAR Volume 13 ; 13 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Archnet-IJAR Volume 14 ; 14 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Archnet-IJAR Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Archnet-IJAR Volume 16 ; 16 ; reingest2.clockss.org:8085 >
