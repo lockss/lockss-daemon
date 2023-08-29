@@ -686,11 +686,11 @@
     au < ready ; 2011 ; USCOURTS_cod 2011 ; USCOURTS ; cod ; 2011 >
     au < doNotProcess ; 2012 ; USCOURTS_cod 2012 ; USCOURTS ; cod ; 2012 >
     au < released ; 2013 ; USCOURTS_cod 2013 ; USCOURTS ; cod ; 2013 >
-    au < manifest ; 2014 ; USCOURTS_cod 2014 ; USCOURTS ; cod ; 2014 >
-    au < manifest ; 2015 ; USCOURTS_cod 2015 ; USCOURTS ; cod ; 2015 >
-    au < manifest ; 2016 ; USCOURTS_cod 2016 ; USCOURTS ; cod ; 2016 >
-    au < manifest ; 2017 ; USCOURTS_cod 2017 ; USCOURTS ; cod ; 2017 >
-    au < manifest ; 2018 ; USCOURTS_cod 2018 ; USCOURTS ; cod ; 2018 >
+    au < ready ; 2014 ; USCOURTS_cod 2014 ; USCOURTS ; cod ; 2014 >
+    au < ready ; 2015 ; USCOURTS_cod 2015 ; USCOURTS ; cod ; 2015 >
+    au < ready ; 2016 ; USCOURTS_cod 2016 ; USCOURTS ; cod ; 2016 >
+    au < ready ; 2017 ; USCOURTS_cod 2017 ; USCOURTS ; cod ; 2017 >
+    au < ready ; 2018 ; USCOURTS_cod 2018 ; USCOURTS ; cod ; 2018 >
     au < manifest ; 2019 ; USCOURTS_cod 2019 ; USCOURTS ; cod ; 2019 >
     au < manifest ; 2020 ; USCOURTS_cod 2020 ; USCOURTS ; cod ; 2020 >
     au < manifest ; 2021 ; USCOURTS_cod 2021 ; USCOURTS ; cod ; 2021 >
@@ -1251,7 +1251,7 @@
     au < manifest ; 2019 ; USCOURTS_kywd 2019 ; USCOURTS ; kywd ; 2019 >
     au < manifest ; 2020 ; USCOURTS_kywd 2020 ; USCOURTS ; kywd ; 2020 >
     au < manifest ; 2021 ; USCOURTS_kywd 2021 ; USCOURTS ; kywd ; 2021 >
-    au < manifest ; 2022 ; USCOURTS_kywd 2022 ; USCOURTS ; kywd ; 2022 >
+    au < ready ; 2022 ; USCOURTS_kywd 2022 ; USCOURTS ; kywd ; 2022 >
 
     au < doNotProcess ; 2004 ; USCOURTS_laeb 2004 ; USCOURTS ; laeb ; 2004 >
     au < doNotProcess ; 2005 ; USCOURTS_laeb 2005 ; USCOURTS ; laeb ; 2005 >
