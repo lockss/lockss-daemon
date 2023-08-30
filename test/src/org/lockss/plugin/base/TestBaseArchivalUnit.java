@@ -309,7 +309,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.setConfiguration(config);
-    assertEquals(6000, mbau.findFetchRateLimiter().getInterval());
+    assertEquals(3000, mbau.findFetchRateLimiter().getInterval());
   }
 
   public void testMinFetchDelayLowerWithPluginLower() throws Exception {
@@ -326,7 +326,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
   public void testFindFetchRateLimiterDefault() throws Exception {
     RateLimiter limit = mbau.findFetchRateLimiter();
-    assertEquals("1/6000ms", limit.getRate());
+    assertEquals("1/3000ms", limit.getRate());
     assertSame(limit, mbau.findFetchRateLimiter());
     assertNull(mbau.getFetchRateLimiterKey());
   }
@@ -341,7 +341,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 				 "au");
     mbau.setConfiguration(config);
     RateLimiter limit = mbau.findFetchRateLimiter();
-    assertEquals("1/6000ms", limit.getRate());
+    assertEquals("1/3000ms", limit.getRate());
     assertSame(limit, mbau.findFetchRateLimiter());
     config.put(BaseArchivalUnit.KEY_PAUSE_TIME, "7s");
     mbau.setConfiguration(config);
@@ -364,7 +364,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     RateLimiter limit = mbau.findFetchRateLimiter();
     RateLimiter limit2 = mbau2.findFetchRateLimiter();
     RateLimiter limit3 = mbau3.findFetchRateLimiter();
-    assertEquals("1/6000ms", limit.getRate());
+    assertEquals("1/3000ms", limit.getRate());
     assertSame(limit, limit2);
     assertNotSame(limit, limit3);
     assertEquals(mbau.getPlugin().getPluginId(), mbau.getFetchRateLimiterKey());
@@ -380,7 +380,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     RateLimiter limit = mbau.findFetchRateLimiter();
     RateLimiter limit2 = mbau2.findFetchRateLimiter();
     RateLimiter limit3 = mbau3.findFetchRateLimiter();
-    assertEquals("1/6000ms", limit.getRate());
+    assertEquals("1/3000ms", limit.getRate());
     assertSame(limit, limit2);
     assertSame(limit, limit3);
     assertEquals(mbau.getPlugin().getPluginId(), mbau.getFetchRateLimiterKey());
@@ -393,7 +393,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
     RateLimiter limit = mbau.findFetchRateLimiter();
     RateLimiter limit2 = mbau2.findFetchRateLimiter();
-    assertEquals("1/6000ms", limit.getRate());
+    assertEquals("1/3000ms", limit.getRate());
     assertNotSame(limit, limit2);
   }
 
@@ -420,7 +420,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     RateLimiter limit = mbau.findFetchRateLimiter();
     RateLimiter limit2 = mbau2.findFetchRateLimiter();
     RateLimiter limit3 = mbau3.findFetchRateLimiter();
-    assertEquals("1/6000ms", limit.getRate());
+    assertEquals("1/3000ms", limit.getRate());
     assertSame(limit, limit2);
     assertNotSame(limit, limit3);
     RateLimiter.Pool pool = RateLimiter.getPool();

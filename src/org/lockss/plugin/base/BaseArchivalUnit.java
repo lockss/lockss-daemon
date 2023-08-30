@@ -55,13 +55,13 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   private static final Logger log = Logger.getLogger(BaseArchivalUnit.class);
 
   public static final long
-    DEFAULT_FETCH_DELAY = 6 * Constants.SECOND;
+    DEFAULT_FETCH_DELAY = 3 * Constants.SECOND;
 
   /** Minimum fetch delay.  Plugin-specified fetch delay may be used only
    * to increase the delay. */
   public static final String PARAM_MIN_FETCH_DELAY =
     Configuration.PREFIX+"baseau.minFetchDelay";
-  public static final long DEFAULT_MIN_FETCH_DELAY = 6 * Constants.SECOND;;
+  public static final long DEFAULT_MIN_FETCH_DELAY = 3 * Constants.SECOND;;
 
   /** Default fetch rate limiter source for plugins that don't specify
    * au_fetch_rate_limiter_source.  Can be "au" or "plugin"; default is
