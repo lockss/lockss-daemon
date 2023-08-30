@@ -146,5 +146,31 @@
 
   }
 
+  {
+
+    title <
+      name = Análisis Filosófico ;
+      issn = 0326-1301 ;
+      eissn = 1851-9636
+    >
+    provider = Sociedad Argentina de Análisis Filosófico
+
+    au < expected ; exists ; 2023 ; Análisis Filosófico ; analisis_filosofico_0326-1301 >
+
+  }
+
+  {
+
+    title <
+      name = Voces de la educación ;
+      issn = 1665-1596 ;
+      eissn = 2448-6248
+    >
+    provider = Voces de la educación
+
+    au < expected ; exists ; 2023 ; Voces de la educación ; voces_de_la_educacion_1665-1596 >
+
+  }
+
 
 }
