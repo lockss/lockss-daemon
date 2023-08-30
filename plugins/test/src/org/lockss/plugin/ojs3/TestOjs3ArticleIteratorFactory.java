@@ -30,7 +30,6 @@ package org.lockss.plugin.ojs3;
 
 import java.io.*;
 
-import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match;
 import org.apache.commons.io.IOUtils;
 
 import java.util.*;
