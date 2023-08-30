@@ -75,7 +75,7 @@ public class TestSageAtyponHtmlMetadataExtractorFactory extends LockssTestCase {
 
     private Configuration thisAuConfig() {
         Configuration conf = ConfigManager.newConfiguration();
-        conf.put("base_url", "http://www.sample.com/");
+        conf.put("base_url", BASE_URL);
         conf.put("journal_id", "abc");
         conf.put("volume_name", "99");
         return conf;
@@ -83,7 +83,8 @@ public class TestSageAtyponHtmlMetadataExtractorFactory extends LockssTestCase {
 
     public void testExtractGoodHtmlContent() throws Exception {
 
-        List<ArticleMetadata> mdlist = setupContentForAU(mau, BASE_URL, goodHtmlContent, true);
+      log.critical("XXXXXXXXX config: " + mau.getConfiguration());
+        List<ArticleMetadata> mdlist = setupContentForAU(mau, BASE_URL + "foo.css", goodHtmlContent, true);
         assertNotEmpty(mdlist);
         ArticleMetadata md = mdlist.get(0);
         assertNotNull(md);
