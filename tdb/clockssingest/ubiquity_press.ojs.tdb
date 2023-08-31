@@ -159,8 +159,8 @@
 
       au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Journal of Altmetrics Volume 2018 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2 ; Journal of Altmetrics Volume 2019 ; 2019 ; >
-      au < manifest ; exists ; 2020 ; 3 ; Journal of Altmetrics Volume 2020 ; 2020 ; > #502 upstream error https://account.d39af2mgp1pqhg.cloudfront.net/widget-popup.js,"Unknown host: d39af2mgp1pqhg.cloudfront.net"
-      au < manifest ; exists ; 2021 ; 4 ; Journal of Altmetrics Volume 2021 ; 2021 ; > #Unknown host: d39af2mgp1pqhg.cloudfront.net
+      au < manifest ; exists ; 2020 ; 3 ; Journal of Altmetrics Volume 2020 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; 4 ; Journal of Altmetrics Volume 2021 ; 2021 ; >
       au < expected ; exists ; 2023 ; 5 ; Journal of Altmetrics Volume 2023 ; 2023 ; >
 
   }
@@ -687,10 +687,10 @@
       au < manifest ; exists ; 2011 ; 27 ; Current: Journal of Marine Education Volume 2011 ; 2011 ; >
       au < manifest ; exists ; 2012 ; 28 ; Current: Journal of Marine Education Volume 2012 ; 2012 ; >
       au < doesNotExist ; doesNotExist ; 2013 ; 29 ; Current: Journal of Marine Education Volume 2013 ; 2013 ; >
-      au < manifest ; exists ; 2014 ; 30 ; Current: Journal of Marine Education Volume 2014 ; 2014 ; > #malformed start url https://account.current-journal.com/lockss/year/2014
-      au < manifest ; exists ; 2015 ; 31 ; Current: Journal of Marine Education Volume 2015 ; 2015 ; > #malformed start url
-      au < manifest ; exists ; 2016 ; 32 ; Current: Journal of Marine Education Volume 2016 ; 2016 ; > #malformed start url
-      au < manifest ; exists ; 2017 ; 33 ; Current: Journal of Marine Education Volume 2017 ; 2017 ; > #malformed start url
+      au < manifest ; exists ; 2014 ; 30 ; Current: Journal of Marine Education Volume 2014 ; 2014 ; > 
+      au < manifest ; exists ; 2015 ; 31 ; Current: Journal of Marine Education Volume 2015 ; 2015 ; > 
+      au < manifest ; exists ; 2016 ; 32 ; Current: Journal of Marine Education Volume 2016 ; 2016 ; > 
+      au < manifest ; exists ; 2017 ; 33 ; Current: Journal of Marine Education Volume 2017 ; 2017 ; > 
       au < doNotProcess ; doNotProcess ; 2018 ; 34 ; Current: Journal of Marine Education Volume 2018 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 35 ; Current: Journal of Marine Education Volume 2019 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 36 ; Current: Journal of Marine Education Volume 2020 ; 2020 ; >
@@ -1182,21 +1182,21 @@
 
   }
 
-  {
-
-      title <
-        name = Journal of Open Public Health Data ;
-        eissn = 2053-2407
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.openhealthdata.metajnl.com/
-      param[journal_id] = up-j-ohd
-      # continued by Open Health Data
-
-      au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Public Health Data Volume 2013 ; 2013 ; >
-
-  }
+#  {
+#
+#      title <
+#        name = Journal of Open Public Health Data ;
+#        eissn = 2053-2407
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://account.openhealthdata.metajnl.com/
+#      param[journal_id] = up-j-ohd
+#      # continued by Open Health Data
+#
+#      au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Public Health Data Volume 2013 ; 2013 ; >
+#
+#  }
 
   {
 
@@ -1295,26 +1295,26 @@
 
   }
 
-  {
-
-      title <
-        name = JBR-BTR ;
-        issn = 0302-7430 ;
-        eissn = 1780-2393
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.jbsr.be/
-      param[journal_id] = up-j-jbsr
-      #volume 1-98 this title. As of volume 99, name changed to Journal of the Belgian Society of Radiology 2514-8281
-
-      au < doNotProcess ; doNotProcess ; 2010 ; 94 ; JBR-BTR Volume 2010 ; 2010 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 95 ; JBR-BTR Volume 2011 ; 2011 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 96 ; JBR-BTR Volume 2012 ; 2012 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 97 ; JBR-BTR Volume 2013 ; 2013 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 98 ; JBR-BTR Volume 2014 ; 2014 ; >
-
-  }
+#  {
+#
+#      title <
+#        name = JBR-BTR ;
+#        issn = 0302-7430 ;
+#        eissn = 1780-2393
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://account.jbsr.be/
+#      param[journal_id] = up-j-jbsr
+#      #volume 1-98 this title. As of volume 99, name changed to Journal of the Belgian Society of Radiology 2514-8281
+#
+#      au < doNotProcess ; doNotProcess ; 2010 ; 94 ; JBR-BTR Volume 2010 ; 2010 ; >
+#      au < doNotProcess ; doNotProcess ; 2011 ; 95 ; JBR-BTR Volume 2011 ; 2011 ; >
+#      au < doNotProcess ; doNotProcess ; 2012 ; 96 ; JBR-BTR Volume 2012 ; 2012 ; >
+#      au < doNotProcess ; doNotProcess ; 2013 ; 97 ; JBR-BTR Volume 2013 ; 2013 ; >
+#      au < doNotProcess ; doNotProcess ; 2014 ; 98 ; JBR-BTR Volume 2014 ; 2014 ; >
+#
+#  }
 
   {
 
@@ -2975,20 +2975,20 @@
       #2000-2016 processed under the publisher Co-action.
 
       au < manifest ; exists ; 1949 ; 1 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1949 ; 1949 ; >
-      au < exists ; exists ; 1950 ; 2 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1950 ; 1950 ; >
-      au < exists ; exists ; 1951 ; 3 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1951 ; 1951 ; >
-      au < exists ; exists ; 1952 ; 4 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1952 ; 1952 ; >
-      au < exists ; exists ; 1953 ; 5 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1953 ; 1953 ; >
-      au < exists ; exists ; 1954 ; 6 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1954 ; 1954 ; >
-      au < exists ; exists ; 1955 ; 7 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1955 ; 1955 ; >
-      au < exists ; exists ; 1956 ; 8 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1956 ; 1956 ; >
-      au < exists ; exists ; 1957 ; 9 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1957 ; 1957 ; >
-      au < exists ; exists ; 1958 ; 10 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1958 ; 1958 ; >
-      au < exists ; exists ; 1959 ; 11 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1959 ; 1959 ; >
-      au < exists ; exists ; 1960 ; 12 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1960 ; 1960 ; >
-      au < exists ; exists ; 1961 ; 13 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1961 ; 1961 ; >
-      au < exists ; exists ; 1962 ; 14 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1962 ; 1962 ; >
-      au < exists ; exists ; 1963 ; 15 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1963 ; 1963 ; >
+      au < doesNotExist ; doesNotExist ; 1950 ; 2 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1950 ; 1950 ; >
+      au < doesNotExist ; doesNotExist ; 1951 ; 3 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1951 ; 1951 ; >
+      au < doesNotExist ; doesNotExist ; 1952 ; 4 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1952 ; 1952 ; >
+      au < doesNotExist ; doesNotExist ; 1953 ; 5 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1953 ; 1953 ; >
+      au < doesNotExist ; doesNotExist ; 1954 ; 6 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1954 ; 1954 ; >
+      au < doesNotExist ; doesNotExist ; 1955 ; 7 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1955 ; 1955 ; >
+      au < doesNotExist ; doesNotExist ; 1956 ; 8 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1956 ; 1956 ; >
+      au < doesNotExist ; doesNotExist ; 1957 ; 9 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1957 ; 1957 ; >
+      au < doesNotExist ; doesNotExist ; 1958 ; 10 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1958 ; 1958 ; >
+      au < doesNotExist ; doesNotExist ; 1959 ; 11 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1959 ; 1959 ; >
+      au < doesNotExist ; doesNotExist ; 1960 ; 12 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1960 ; 1960 ; >
+      au < doesNotExist ; doesNotExist ; 1961 ; 13 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1961 ; 1961 ; >
+      au < doesNotExist ; doesNotExist ; 1962 ; 14 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1962 ; 1962 ; >
+      au < doesNotExist ; doesNotExist ; 1963 ; 15 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1963 ; 1963 ; >
       au < manifest ; exists ; 1964 ; 16 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1964 ; 1964 ; >
       au < manifest ; exists ; 1965 ; 17 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1965 ; 1965 ; >
       au < manifest ; exists ; 1966 ; 18 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1966 ; 1966 ; >
