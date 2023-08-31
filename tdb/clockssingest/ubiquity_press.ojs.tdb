@@ -1253,8 +1253,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://openpsychologydata.metajnl.com/
-      param[journal_id] = 
+      param[base_url] = https://account.openpsychologydata.metajnl.com/
+      param[journal_id] = up-j-jopd
 
       au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Psychology Data Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Psychology Data Volume 2014 ; 2014 ; >
@@ -1278,8 +1278,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://openresearchsoftware.metajnl.com/
-      param[journal_id] = 
+      param[base_url] = https://account.openresearchsoftware.metajnl.com/
+      param[journal_id] = up-j-jors
 
       au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Research Software Volume 2013 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Research Software Volume 2014 ; 2014 ; >
@@ -1305,7 +1305,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.jbsr.be/
-      param[journal_id] = 
+      param[journal_id] = up-j-jbsr
       #volume 1-98 this title. As of volume 99, name changed to Journal of the Belgian Society of Radiology 2514-8281
 
       au < doNotProcess ; doNotProcess ; 2010 ; 94 ; JBR-BTR Volume 2010 ; 2010 ; >
@@ -1325,7 +1325,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.jbsr.be/
-      param[journal_id] = 
+      param[journal_id] = up-j-jbsr
 
       au < doNotProcess ; doNotProcess ; 2015 ; 99 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2015 ; 2015 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 100 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2016 ; 2016 ; >
@@ -1348,7 +1348,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.mahkuscript.com/
-      param[journal_id] = 
+      param[journal_id] = up-j-mhkujfar
 
       au < doNotProcess ; doNotProcess ; 2016 ; 1 ; MaHKUscript: Journal of Fine Art Research Volume 1 Issue 1 (2016) ; 2016 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 1 ; MaHKUscript: Journal of Fine Art Research Volume 1 Issue 2 (2017) ; 2017 ; >
@@ -1367,7 +1367,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.openbioresources.metajnl.com/
-      param[journal_id] = 
+      param[journal_id] = up-j-ojb
 
       au < doNotProcess ; exists ; 2014 ; 1 ; Open Journal of Bioresources Volume 2014 ; 2014 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2 ; Open Journal of Bioresources Volume 2015 ; 2015 ; >
@@ -1391,7 +1391,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.journalofmore.org/
-      param[journal_id] = 
+      param[journal_id] = su-j-jmre
 
       au < doNotProcess ; doNotProcess ; 2016 ; 4 ; Journal of Montessori Research & Education Volume 2016 ; 2016 ; >
 
@@ -1406,7 +1406,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.continuityineducation.org/
-      param[journal_id] = 
+      param[journal_id] = up-j-ce
 
       au < doNotProcess ; doNotProcess ; 2020 ; 1 ; Continuity in Education Volume 2020 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; 2 ; Continuity in Education Volume 2021 ; 2021 ; >
@@ -1424,7 +1424,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.thecommonsjournal.org/
-      param[journal_id] = 
+      param[journal_id] = up-j-ijc
 
       au < doNotProcess ; doNotProcess ; 2007 ; 1 ; International Journal of the Commons Volume 2007 ; 2007 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; 2 ; International Journal of the Commons Volume 2008 ; 2008 ; >
@@ -1455,7 +1455,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.globalheartjournal.com/
-      param[journal_id] = 
+      param[journal_id] = up-j-gh
 
       au < doNotProcess ; doNotProcess ; 2006 ; 1 ; Global Heart Volume 2006 ; 2006 ; >
       au < doesNotExist ; doesNotExist ; 2007 ; 2 ; Global Heart Volume 2007 ; 2007 ; >
@@ -1487,7 +1487,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.openquaternary.com/
-      param[journal_id] = 
+      param[journal_id] = up-j-oq
 
       au < doNotProcess ; doNotProcess ; 2015 ; 1 ; Open Quaternary Volume 2015 ; 2015 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2 ; Open Quaternary Volume 2016 ; 2016 ; >
@@ -1511,7 +1511,7 @@
       comment[publisher] = Ubiquity Press
     {
       #journal moved to https anaccount.d removed account.
-      param[base_url] = https://account.pia-journal.co.uk/
+      param[base_url] = https://student-journals.ucl.ac.uk/pia/
       param[journal_id] = 
 
       au < doNotProcess ; exists ; 1990 ; 1 ; Papers from the Institute of Archaeology Volume 1990 ; 1990 ; >
@@ -1556,8 +1556,8 @@
       comment[publisher] = Ubiquity Press
     {
       #Moved to https anaccount.d removed account.
-      param[base_url] = https://account.presentpasts.info/  #no account. use this
-      param[journal_id] = 
+      param[base_url] = https://account.presentpasts.info/
+      param[journal_id] = up-j-pp
 
       au < doesNotExist ; doesNotExist ; 2009 ; 1 ; Present Pasts Volume 2009 ; 2009 ; > #Articles in 2010.
       au < doNotProcess ; doNotProcess ; 2010 ; 2 ; Present Pasts Volume 2010 ; 2010 ; >
@@ -1586,7 +1586,7 @@
     {
       #moved to https
       param[base_url] = https://account.psychologicabelgica.com/
-      param[journal_id] = 
+      param[journal_id] = up-j-pb
 
       au < doNotProcess ; doNotProcess ; 2005 ; 1 ; Psychologica Belgica Volume 2005 ; 2005 ; >
       au < doNotProcess ; doNotProcess ; 2006 ; 2 ; Psychologica Belgica Volume 2006 ; 2006 ; >
@@ -1622,7 +1622,7 @@
     {
       #moved to https anaccount.d lost account.
       param[base_url] = https://account.secularismandnonreligion.org/
-      param[journal_id] = 
+      param[journal_id] = up-j-sn
 
       au < doNotProcess ; exists ; 2012 ; 1 ; Secularism and Nonreligion Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; 2 ; Secularism and Nonreligion Volume 2013 ; 2013 ; >
@@ -1651,7 +1651,7 @@
     {
       #moved to https anaccount.d lost account.
       param[base_url] = https://account.utrechtjournal.org/
-      param[journal_id] = 
+      param[journal_id] = up-j-ujiel
 
       au < doNotProcess ; exists ; 2010 ; 1 ; Utrecht Journal of International and European Law Volume 2010 ; 2010 ; >
       au < doNotProcess ; exists ; 2011 ; 2 ; Utrecht Journal of International and European Law Volume 2011 ; 2011 ; >
@@ -1701,7 +1701,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.tremorjournal.org/
-      param[journal_id] = 
+      param[journal_id] = up-j-tohm
 
       au < doNotProcess ; doNotProcess ; 2011 ; 1 ; Tremor and Other Hyperkinetic Movements Volume 2011 ; 2011 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2 ; Tremor and Other Hyperkinetic Movements Volume 2012 ; 2012 ; >
@@ -1728,7 +1728,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.openhardware.metajnl.com/
-      param[journal_id] = 
+      param[journal_id] = up-j-joh
 
       au < doNotProcess ; doNotProcess ; 2017 ; 1 ; Journal of Open Hardware Volume 2017 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2 ; Journal of Open Hardware Volume 2018 ; 2018 ; >
@@ -1743,55 +1743,13 @@
   {
 
       title <
-        name = eGEMs ;
-        eissn = 2327-9214
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.egems.academyhealth.org/
-      param[journal_id] = 
-#     Moved to Elsevier 2019. https://account.academyhealth.org/publications/2017-04/egems-journal-electronic-health-data-and-methods
-
-      au < doNotProcess ; doNotProcess ; 2013 ; 1 ; eGEMs Volume 2013 ; 2013 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2 ; eGEMs Volume 2014 ; 2014 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 3 ; eGEMs Volume 2015 ; 2015 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 4 ; eGEMs Volume 2016 ; 2016 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 5 ; eGEMs Volume 2017 ; 2017 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 6 ; eGEMs Volume 2018 ; 2018 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 7 ; eGEMs Volume 2019 ; 2019 ; >
-
-  }
-
-  {
-
-      title <
-        name = European Journal of Molecular and Clinical Medicine ;
-        eissn = 2515-8260
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.ejmcm.com/
-      param[journal_id] = 
-      #moved to eJournalPlus
-
-      au < doNotProcess ; doNotProcess ; 2014 ; 1 ; European Journal of Molecular and Clinical Medicine Volume 2014 ; 2014 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 2 ; European Journal of Molecular and Clinical Medicine Volume 2015 ; 2015 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 3 ; European Journal of Molecular and Clinical Medicine Volume 2016 ; 2016 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 4 ; European Journal of Molecular and Clinical Medicine Volume 2017 ; 2017 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 5 ; European Journal of Molecular and Clinical Medicine Volume 2018 ; 2018 ; >
-
-  }
-
-  {
-
-      title <
         name = Journal of Cognition ;
         eissn = 2514-4820
       >
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.journalofcognition.org/
-      param[journal_id] = 
+      param[journal_id] = up-j-jc
 
       au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Journal of Cognition Volume 2018 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2 ; Journal of Cognition Volume 2019 ; 2019 ; >
@@ -1811,7 +1769,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.journal.caa-international.org/
-      param[journal_id] = 
+      param[journal_id] = up-j-jcaa
 
       au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Journal of Computer Applications in Archaeology Volume 2018 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2 ; Journal of Computer Applications in Archaeology Volume 2019 ; 2019 ; >
@@ -1830,13 +1788,17 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.kula.uvic.ca/
+      param[base_url] = https://kula.uvic.ca/
+      param[journal_id] = kula
       #Moved to OJS https://account.kula.uvic.ca/index.php/kula
 
       au < doNotProcess ; doNotProcess ; 2017 ; 1 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2017 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2018 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 3 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2019 ; 2019 ; >
-      au < exists ; exists ; 2020 ; 4 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2020 [superseded] ; 2020 ; >
+      au < exists ; exists ; 2020 ; 4 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2020 ; 2020 ; >
+      au < exists ; exists ; 2021 ; 5 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2021 ; 2021 ; >
+      au < exists ; exists ; 2022 ; 6 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2022 ; 2022 ; >
+      au < expected ; exists ; 2023 ; 7 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2023 ; 2023 ; >
 
   }
 
@@ -1849,7 +1811,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.metaphysicsjournal.com/
-      param[journal_id] = 
+      param[journal_id] = up-j-m
 
       au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Metaphysics Volume 2018 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2 ; Metaphysics Volume 2019 ; 2019 ; >
@@ -1869,7 +1831,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.paahjournal.com/
-      param[journal_id] = 
+      param[journal_id] = up-j-pah
 
       au < doNotProcess ; doNotProcess ; 2017 ; 1 ; Physical Activity and Health Volume 2017 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2 ; Physical Activity and Health Volume 2018 ; 2018 ; >
@@ -1890,6 +1852,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.tilburglawreview.com/
+      param[journal_id] = up-j-tlr
       #name changed in 2008 to: Tilburg Law Review: Journal of International and Comparative Law.
 
       au < doNotProcess ; doNotProcess ; 2012 ; 17 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2012 ; 2012 ; >
@@ -1916,7 +1879,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.ssas-yearbook.com/
-      param[journal_id] = 
+      param[journal_id] = up-j-jsv
 
       au < doNotProcess ; doNotProcess ; 2010 ; 1 ; Yearbook of Swiss Administrative Science Volume 2010 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; 2 ; Yearbook of Swiss Administrative Science Volume 2011 ; 2011 ; >
@@ -1935,20 +1898,20 @@
 
   }
 
-  {
-
-      title <
-        name = International Journal of Driving Science ;
-        eissn = 2397-1959
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.ijds.eu/
-      param[journal_id] = 
-
-      au < doNotProcess ; doNotProcess ; 2018 ; 1 ; International Journal of Driving Science Volume 2018 ; 2018 ; >
-
-  }
+#  {
+#
+#      title <
+#        name = International Journal of Driving Science ;
+#        eissn = 2397-1959
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://account.ijds.eu/
+#      param[journal_id] = 
+#
+#      au < doNotProcess ; doNotProcess ; 2018 ; 1 ; International Journal of Driving Science Volume 2018 ; 2018 ; >
+#
+#  }
 
   {
 
@@ -1959,7 +1922,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.worldwidewastejournal.com/
-      param[journal_id] = 
+      param[journal_id] = up-j-wwjis
 
       au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2018 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2019 ; 2019 ; >
@@ -1979,7 +1942,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.transactions.ismir.net/
-      param[journal_id] = 
+      param[journal_id] = up-j-tismir
 
       au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Transactions of the International Society for Music Information Retrieval Volume 2018 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2 ; Transactions of the International Society for Music Information Retrieval Volume 2019 ; 2019 ; >
@@ -1999,7 +1962,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.ijelt.dundee.ac.uk/
-      param[journal_id] = 
+      param[journal_id] = up-j-ijelt
 
       au < expected ; exists ; 2022 ; 1 ; International Journal of Educational and Life Transitions Volume 2022 ; 2022 ; >
       au < expected ; exists ; 2023 ; 2 ; International Journal of Educational and Life Transitions Volume 2023 ; 2023 ; >
@@ -2015,7 +1978,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.swisspsychologyopen.com/
-      param[journal_id] = 
+      param[journal_id] = up-j-sposps
 
       au < doNotProcess ; doNotProcess ; 2021 ; 1 ; Swiss Psychology Open Volume 2021 ; 2021 ; >
       au < exists ; exists ; 2022 ; 2 ; Swiss Psychology Open Volume 2022 ; 2022 ; >
@@ -2047,7 +2010,7 @@
 
       comment[publisher] = University of Birmingham
       param[base_url] = https://account.jps.bham.ac.uk/
-      param[journal_id] = 
+      param[journal_id] = up-j-jps
 
       au < doNotProcess ; doNotProcess ; 2014 ; 1 ; Journal of Philosophy in Schools Volume 2014 ; 2014 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2 ; Journal of Philosophy in Schools Volume 2015 ; 2015 ; >
@@ -2086,7 +2049,7 @@
 
       comment[publisher] = University of New South Wales
       param[base_url] = https://account.jglobalbiosecurity.com/
-      param[journal_id] = 
+      param[journal_id] = up-j-gb
 
       au < doNotProcess ; doNotProcess ; 2019 ; 1 ; Global Biosecurity Volume 2019 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 2 ; Global Biosecurity Volume 2020 ; 2020 ; >
@@ -2106,9 +2069,6 @@
     info[poller] = 8
   >
 
-    #provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    #implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
@@ -2122,7 +2082,8 @@
       >
 
       comment[publisher] = University of Westminster Press
-      param[base_url] = https://account.entsportslawjournal.com/
+      param[base_url] = https://www.entsportslawjournal.com/
+      param[journal_id] = 
 
       au < doNotProcess ; doNotProcess ; 2002 ; 1 ; Entertainment and Sports Law Journal Volume 2002 ; 2002 ; >
       au < doNotProcess ; doNotProcess ; 2003 ; 2 ; Entertainment and Sports Law Journal Volume 2003 ; 2003 ; >
@@ -3214,17 +3175,17 @@
       param[base_url] =  https://raco.cat/
       param[journal_id] = Digithum
 
-      au < exists ; exists ; 1999 ; 1 ; Digithum Volume 1999 ; 1999 ; >
-      au < exists ; exists ; 2000 ; 2 ; Digithum Volume 2000 ; 2000 ; >
-      au < exists ; exists ; 2001 ; 3 ; Digithum Volume 2001 ; 2001 ; >
-      au < exists ; exists ; 2002 ; 4 ; Digithum Volume 2002 ; 2002 ; >
-      au < exists ; exists ; 2003 ; 5 ; Digithum Volume 2003 ; 2003 ; >
-      au < exists ; exists ; 2004 ; 6 ; Digithum Volume 2004 ; 2004 ; >
-      au < exists ; exists ; 2005 ; 7 ; Digithum Volume 2005 ; 2005 ; >
-      au < exists ; exists ; 2006 ; 8 ; Digithum Volume 2006 ; 2006 ; >
-      au < exists ; exists ; 2007 ; 9 ; Digithum Volume 2007 ; 2007 ; >
-      au < exists ; exists ; 2008 ; 10 ; Digithum Volume 2008 ; 2008 ; >
-      au < exists ; exists ; 2009 ; 11 ; Digithum Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 1999 ; 1 ; Digithum Volume 1999 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; 2 ; Digithum Volume 2000 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; 3 ; Digithum Volume 2001 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; 4 ; Digithum Volume 2002 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; 5 ; Digithum Volume 2003 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; 6 ; Digithum Volume 2004 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 7 ; Digithum Volume 2005 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 8 ; Digithum Volume 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 9 ; Digithum Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 10 ; Digithum Volume 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 11 ; Digithum Volume 2009 ; 2009 ; >
       au < crawling ; exists ; 2010 ; 12 ; Digithum Volume 2010 ; 2010 ; >
       au < crawling ; exists ; 2011 ; 13 ; Digithum Volume 2011 ; 2011 ; >
       au < crawling ; exists ; 2012 ; 14 ; Digithum Volume 2012 ; 2012 ; >
