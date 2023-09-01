@@ -154,11 +154,30 @@ public class Emerald2020MetadataExtractorFactory implements FileMetadataExtracto
         tdb_date = tdbau.getYear();
         tdb_volume = tdbau.getVolume();
 
+        boolean dateCheckPasssed = false;
+
         if (tdbau != null && dc_date != null) {
           log.debug3("Emerald date check: dc_date = " + dc_date + ", tdb_dat = " + tdb_date);
           log.debug3("Emerald date check: dc_date = " + dc_date.substring(0, 4) + ", tdb_date = " + tdb_date.substring(0, 4));
-          if (Integer.parseInt(dc_date.substring(0, 4)) <= Integer.parseInt(tdb_date.substring(0, 04))) {
-            log.debug3("Emerald date check: date In Au , dc_date = " + dc_date.substring(0, 4) + ", tdb_dat = " + tdb_date.substring(0, 4));
+
+          if (tdb_date.contains("-")) {
+            int startYear = Integer.parseInt(tdb_date.substring(0, 4));
+            int endYear = Integer.parseInt(tdb_date.substring(tdb_date.indexOf("-") + 1));
+
+            log.debug3("Emerald date check: tdb_date is range " + tdb_date + ", startYear=" + Integer.toString(startYear)
+              + ", endYear = " + Integer.toString(endYear) + ", dc_date = " + dc_date.substring(0, 4));
+
+            if ( (Integer.parseInt(dc_date.substring(0, 4)) >= startYear) && (Integer.parseInt(dc_date.substring(0, 4)) <= endYear)) {
+              dateCheckPasssed = true;
+            }
+          } else {
+            if (Integer.parseInt(dc_date.substring(0, 4)) <= Integer.parseInt(tdb_date.substring(0, 4))) {
+              dateCheckPasssed = true;
+            }
+          }
+
+          if (dateCheckPasssed) {
+            log.debug3("Emerald date check: date In Au , dc_date = " + dc_date.substring(0, 4) + ", tdb_dat = " + tdb_date);
 
             //check volume
             if (dc_volume != null && tdb_volume != null && dc_volume.equalsIgnoreCase(tdb_volume)) {
@@ -169,7 +188,7 @@ public class Emerald2020MetadataExtractorFactory implements FileMetadataExtracto
             }
 
           } else {
-            log.debug3("Emerald date check: date NOT In Au , dc_date = " + dc_date.substring(0, 4) + ", tdb_dat = " + tdb_date.substring(0, 4));
+            log.debug3("Emerald date check: date NOT In Au , dc_date = " + dc_date.substring(0, 4) + ", tdb_dat = " + tdb_date);
           }
         }
       } else {
