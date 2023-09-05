@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -83,7 +83,7 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -93,9 +93,9 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_start_url</string>
-    <!--The publisher did not provide another link for lockss-->
     <list>
-      <string>"%sarkivoc-journal/browse-arkivoc/%d/", base_url, year</string>
+      <string>"%sarkivoc-journal/browse-arkivoc/%d", base_url, year</string>
+      <!--The publisher did not provide another link for lockss-->
       <string>"%sarkatusa/clockss/?year=%d", base_url, year</string>
     </list>
   </entry>
@@ -108,6 +108,11 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <!--https://www.arkat-usa.org/arkivoc-journal/browse-arkivoc/2023/authors-index-->
       <string>2,"^%sarkivoc-journal/browse-arkivoc/%d/authors-index", base_url, year</string>
+      <!--
+        https://www.arkat-usa.org/arkivoc-journal/browse-arkivoc/ark.5550190.p011.765
+      -->
+      <string>1,"^%sarkivoc-journal/browse-arkivoc/ark\.", base_url, year</string>
+      <string>1,"https://doi\.org/10\.\d{4,}/ark\."</string>
       <string>1,"^%s[^?]*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", base_url</string>
       <string>1,"^%sarkivoc-journal/browse-arkivoc/%d/", base_url, year</string>
       <string>1,"^%sarkivoc-journal/(browse-arkivoc/)?$", base_url</string>
@@ -146,6 +151,12 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>edu.fcla.plugin.arkivoc.ArkivocXmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>"doi\.org"</string>
+    </list>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
