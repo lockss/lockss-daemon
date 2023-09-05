@@ -145,6 +145,14 @@
             https://scholarlypublishingcollective.org/psup/arthur-miller/issue/16/2
             https://scholarlypublishingcollective.org/psup/victorians-institute/issue/volume/49 - this one is special
             https://scholarlypublishingcollective.org/psup/victorians-institute/article/doi/10.5325/victinstj.49.2022.0055/319224/Behold-we-know-not-anything-Tennyson-s
+
+            The following information is from Silverchair Jira
+            For journals that only have one issue a year, the URL pattern will be:
+            https://domain/journal/issue/volume/vol#
+            https://domain/umbrella/journal/issue/volume/vol#
+            For journals that have more than one issue a year, the URL pattern will be:
+            https://domain/journal/issue/vol#/iss#
+            https://domain/umbrella/journal/issue/vol#/iss#
             -->
             <string>1,"%s%s/%s/(issue|article|article-abstract|article-standard)/(volume/)?%s", base_url, college_id, journal_id, volume_name</string>
             <string>1,"%s%s/%s/article/doi/.*%s.*", base_url, college_id, journal_id, volume_name</string>
