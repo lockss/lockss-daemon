@@ -28,13 +28,13 @@
       param[journal_id] = ESSD
       param[base_url] = https://press.ierek.com/
 
-      au < crawling ; exists ; 2016 ; Environmental Sciences and Sustainable Development Volume 2016 ; 1 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; Environmental Sciences and Sustainable Development Volume 2017 ; 2 ; 2017 ; >
-      au < crawling ; exists ; 2018 ; Environmental Sciences and Sustainable Development Volume 2018 ; 3 ; 2018 ; >
-      au < crawling ; exists ; 2019 ; Environmental Sciences and Sustainable Development Volume 2019 ; 4 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; Environmental Sciences and Sustainable Development Volume 2020 ; 5 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Environmental Sciences and Sustainable Development Volume 2021 ; 6 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; Environmental Sciences and Sustainable Development Volume 2022 ; 7 ; 2022 ; >
+      au < frozen ; exists ; 2016 ; Environmental Sciences and Sustainable Development Volume 2016 ; 1 ; 2016 ; >
+      au < frozen ; exists ; 2017 ; Environmental Sciences and Sustainable Development Volume 2017 ; 2 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; Environmental Sciences and Sustainable Development Volume 2018 ; 3 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; Environmental Sciences and Sustainable Development Volume 2019 ; 4 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; Environmental Sciences and Sustainable Development Volume 2020 ; 5 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; Environmental Sciences and Sustainable Development Volume 2021 ; 6 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; Environmental Sciences and Sustainable Development Volume 2022 ; 7 ; 2022 ; >
       au < crawling ; exists ; 2023 ; Environmental Sciences and Sustainable Development Volume 2023 ; 8 ; 2023 ; >
 
   }
@@ -51,12 +51,12 @@
       param[journal_id] = ARChive
       param[base_url] = https://press.ierek.com/
 
-      au < crawling ; exists ; 2017 ; The Academic Research Community Publication Volume 2017 ; 1 ; 2017 ; >
-      au < crawling ; exists ; 2018 ; The Academic Research Community Publication Volume 2018 ; 2 ; 2018 ; >
-      au < crawling ; exists ; 2019 ; The Academic Research Community Publication Volume 2019 ; 3 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; The Academic Research Community Publication Volume 2020 ; 4 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; The Academic Research Community Publication Volume 2021 ; 5 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; The Academic Research Community Publication Volume 2022 ; 6 ; 2022 ; >
+      au < frozen ; exists ; 2017 ; The Academic Research Community Publication Volume 2017 ; 1 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; The Academic Research Community Publication Volume 2018 ; 2 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; The Academic Research Community Publication Volume 2019 ; 3 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; The Academic Research Community Publication Volume 2020 ; 4 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; The Academic Research Community Publication Volume 2021 ; 5 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; The Academic Research Community Publication Volume 2022 ; 6 ; 2022 ; >
       au < crawling ; exists ; 2023 ; The Academic Research Community Publication Volume 2023 ; 7 ; 2023 ; >
 
   }
@@ -74,7 +74,7 @@
       param[base_url] = https://press.ierek.com/
 
       au < manifest ; exists ; 2018 ; Resourceedings Volume 2018 ; 1 ; 2018 ; >
-      au < crawling ; exists ; 2019 ; Resourceedings Volume 2019 ; 2 ; 2019 ; >
+      au < frozen ; exists ; 2019 ; Resourceedings Volume 2019 ; 2 ; 2019 ; >
 
   }
 
@@ -90,8 +90,8 @@
       param[journal_id] = Baheth
       param[base_url] = https://ierekpress.com/
 
-      au < crawling ; exists ; 2018 ; Baheth Volume 2018 ; 1 ; 2018 ; >
-      au < crawling ; exists ; 2019 ; Baheth Volume 2019 ; 2 ; 2019 ; >
+      au < frozen ; exists ; 2018 ; Baheth Volume 2018 ; 1 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; Baheth Volume 2019 ; 2 ; 2019 ; >
 
   }
 
