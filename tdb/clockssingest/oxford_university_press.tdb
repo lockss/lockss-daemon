@@ -6423,7 +6423,7 @@
     #move from T&F by 2023-01-01
 
     au < frozen ; exists ; 2022 ; 2022 ; Forensic Sciences Research Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2023 ; 2023 ; Forensic Sciences Research Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 2023 ; 2023 ; Forensic Sciences Research Volume 8 ; 8 ; >
 
   }
 
@@ -16903,7 +16903,7 @@
     #move from BMJ by 2023-01-01
 
     au < frozen ; exists ; 2022 ; 2022 ; Postgraduate Medical Journal Volume 98 ; 98 ; >
-    au < manifest ; exists ; 2023 ; 2023 ; Postgraduate Medical Journal Volume 99 ; 99 ; >
+    au < doNotProcess ; exists ; 2023 ; 2023 ; Postgraduate Medical Journal Volume 99 ; 99 ; >
 
   }
 
