@@ -98,5 +98,47 @@
       au < expected ; 2021 ; 6 ; Karib: Nordic Journal for Caribbean Studies Volume 2021 ; 2021 ; https://www.karib.no/ >
 
   }
+}
+
+{
+  publisher <
+    name = IJS Publishing Group ;
+    info[contract] = 2011 ;
+    info[back] = 2000 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+
+  {
+
+      title <
+        name = Annals of Medicine and Surgery Case Reports ;
+        eissn = 2515-8872
+      >
+
+      comment[publisher] = IJS Publishing Group
+#      param[base_url] = https://www.amscasereports.com/
+
+      au < expected ; 2018 ; 1 ; Annals of Medicine and Surgery Case Reports Volume 2018 ; 2018 ; https://www.amscasereports.com/ >
+      au < expected ; 2021 ; 2 ; Annals of Medicine and Surgery Case Reports Volume 2021 ; 2021 ; https://www.amscasereports.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Annals of Medicine and Surgery Protocols ;
+        eissn = 2515-8902
+      >
+
+      comment[publisher] = IJS Publishing Group
+#      param[base_url] = https://www.amsprotocols.com/
+
+      au < expected ; 2018 ; 1 ; Annals of Medicine and Surgery Protocols Volume 2018 ; 2018 ; https://www.amsprotocols.com/ >
+  }
 
 }
