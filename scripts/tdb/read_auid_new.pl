@@ -3333,7 +3333,8 @@ while (my $line = <>) {
     sleep(4);
 
 # GSW Books Silverchair CLOCKSS
-  } elsif (($plugin eq "ClockssGeoscienceWorldSilverchairBooksPlugin")) {
+  } elsif (($plugin eq "ClockssGeoscienceWorldSilverchairBooksPlugin") ||
+           ($plugin eq "ClockssRoyalSocietyChemistrySilverchairBooksPlugin")) {
     $url = sprintf("%s%s",
       $param{base_url}, $param{resource_id});
     $man_url = uri_unescape($url);
