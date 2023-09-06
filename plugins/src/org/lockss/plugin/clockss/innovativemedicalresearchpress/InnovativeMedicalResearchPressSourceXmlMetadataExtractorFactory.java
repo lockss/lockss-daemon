@@ -67,9 +67,16 @@ public class InnovativeMedicalResearchPressSourceXmlMetadataExtractorFactory ext
                 String filenameValue = oneAM.getRaw(JatsPublishingSchemaHelper.JATS_article_related_pdf);
 
                 if (filenameValue != null) {
-                    log.debug3("PDF file path is : " + cuBase + filenameValue);
+                    log.debug3("InnovativeMedicalResearchPress: PDF file path from old schema is : " + cuBase + filenameValue);
                     returnList.add(cuBase + filenameValue);
-                } 
+                } else {
+                    //"2023" bucket is a mixed bucket, it has 8 files using old schema and the rest using new
+                    //"new" means one-pdf-one-xml matching starting from 2023
+                    String xml_url = cu.getUrl();
+                    String pdf_url = xml_url.replace(".xml", ".pdf");
+                    log.debug3("InnovativeMedicalResearchPress: PDF file path from new schema is : " + pdf_url);
+                    returnList.add(pdf_url);
+                }
             }
             return returnList;
         }
