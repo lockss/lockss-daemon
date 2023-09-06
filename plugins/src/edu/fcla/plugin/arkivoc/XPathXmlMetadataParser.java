@@ -41,7 +41,6 @@ import org.lockss.extractor.MetadataTarget;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.clockss.XmlFilteringInputStream;
 import org.lockss.util.CharsetUtil;
 import org.lockss.util.Constants;
 import org.lockss.util.Logger;
