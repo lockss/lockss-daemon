@@ -58,6 +58,8 @@ public class SilverchairCommonThemeHtmlHashFilterFactory implements FilterFactor
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "global-footer-link-wrap"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "issue-browse-top"),
             HtmlNodeFilters.tagWithAttributeRegex("li", "class", "geoRef-coordinate"),
+            //https://journals.biologists.com/dev/article/65/1/1/50812/Cytoskeletal-coordination-and-intercellular
+            HtmlNodeFilters.tagWithAttributeRegex("div", "id", "Sidebar"),
             
     };
 
