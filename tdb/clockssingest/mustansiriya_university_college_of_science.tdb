@@ -5,7 +5,6 @@
     info[contract] = 2023 ;
     info[back] = 2020 ;
     info[tester] = 8 ;
-    info[poller] = 8 ;
     info[platform] = OJS3 3.3.0.8
   >
 
@@ -16,23 +15,23 @@
   {
 
     title <
-      name = Al-Adab Journal ;
-      issn = 1994-473X ;
-      eissn = 2706-9931
+      name = Al-Mustansiriyah Journal of Science ;
+      issn = 1814-635X ;
+      eissn = 2521-3520
     >
 
       param[base_url] = https://mjs.uomustansiriyah.edu.iq/
       param[journal_id] = MJS
 
 
-      au < manifest ; exists ; 2016 ; Al-Adab Journal Volume 2016 ; 27 ; 2016 ; >
-      au < manifest ; exists ; 2017 ; Al-Adab Journal Volume 2017 ; 28 ; 2017 ; >
-      au < manifest ; exists ; 2018 ; Al-Adab Journal Volume 2018 ; 29 ; 2018 ; >
-      au < manifest ; exists ; 2019 ; Al-Adab Journal Volume 2019 ; 30 ; 2019 ; >
-      au < manifest ; exists ; 2020 ; Al-Adab Journal Volume 2020 ; 31 ; 2020 ; >
-      au < manifest ; exists ; 2021 ; Al-Adab Journal Volume 2021 ; 32 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; Al-Adab Journal Volume 2022 ; 33 ; 2022 ; >
-      au < manifest ; exists ; 2023 ; Al-Adab Journal Volume 2023 ; 34 ; 2023 ; >
+      au < manifest ; exists ; 2016 ; Al-Mustansiriyah Journal of Science Volume 2016 ; 27 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; Al-Mustansiriyah Journal of Science Volume 2017 ; 28 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Al-Mustansiriyah Journal of Science Volume 2018 ; 29 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; Al-Mustansiriyah Journal of Science Volume 2019 ; 30 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; Al-Mustansiriyah Journal of Science Volume 2020 ; 31 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Al-Mustansiriyah Journal of Science Volume 2021 ; 32 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Al-Mustansiriyah Journal of Science Volume 2022 ; 33 ; 2022 ; >
+      au < manifest ; exists ; 2023 ; Al-Mustansiriyah Journal of Science Volume 2023 ; 34 ; 2023 ; >
 
   }
 
