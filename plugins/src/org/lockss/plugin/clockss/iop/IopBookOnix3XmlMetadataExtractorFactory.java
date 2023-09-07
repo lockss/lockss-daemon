@@ -66,7 +66,7 @@ public class IopBookOnix3XmlMetadataExtractorFactory extends SourceXmlMetadataEx
         @Override
         protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
 
-            log.debug3("Fei: IopBook Onix3BooksSchemaHelper");
+            log.debug3("IopBook Onix3BooksSchemaHelper");
 
 
             if (Onix3Helper == null) {
@@ -87,7 +87,7 @@ public class IopBookOnix3XmlMetadataExtractorFactory extends SourceXmlMetadataEx
         protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
                                        CachedUrl cu, ArticleMetadata thisAM) {
 
-            log.debug3("Fei: in IopBook postCookProcess");
+            log.debug3("in IopBook postCookProcess");
 
             String access = thisAM.getRaw(Onix3BooksSchemaHelper.ONIX_idtype_proprietary);
             if (access != null) {
@@ -106,7 +106,7 @@ public class IopBookOnix3XmlMetadataExtractorFactory extends SourceXmlMetadataEx
         protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
                                                                 ArticleMetadata oneAM) {
 
-            log.debug3("Fei: in IopBook getFilenamesAssociatedWithRecord");
+            log.debug3("in IopBook getFilenamesAssociatedWithRecord");
 
             String filenameValue = oneAM.getRaw(Onix3BooksSchemaHelper.ONIX_RR);
             String cuBase = FilenameUtils.getFullPath(cu.getUrl());
