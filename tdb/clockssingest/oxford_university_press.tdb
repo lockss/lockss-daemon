@@ -17081,7 +17081,7 @@
     au < finished ; finished ; 2018 ; 2018 ; Proceedings of the Aristotelian Society Volume 118 ; 118 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Proceedings of the Aristotelian Society Volume 119 ; 119 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Proceedings of the Aristotelian Society Volume 120 ; 120 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Proceedings of the Aristotelian Society Volume 121 ; 121 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Proceedings of the Aristotelian Society Volume 121 ; 121 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Proceedings of the Aristotelian Society Volume 122 ; 122 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Proceedings of the Aristotelian Society Volume 123 ; 123 ; >
 
@@ -17325,8 +17325,8 @@
     au < finished ; manifest ; 2017 ; 2017 ; Protein Engineering, Design and Selection (PEDS) Volume 30 ; 30 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; 2018 ; Protein Engineering, Design and Selection (PEDS) Volume 31 ; 31 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Protein Engineering, Design and Selection (PEDS) Volume 32 ; 32 ; >
-    au < ready ; exists ; 2020 ; 2020 ; Protein Engineering, Design and Selection (PEDS) Volume 33 ; 33 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Protein Engineering, Design and Selection (PEDS) Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Protein Engineering, Design and Selection (PEDS) Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Protein Engineering, Design and Selection (PEDS) Volume 34 ; 34 ; >
     au < exists ; exists ; 2022 ; 2022 ; Protein Engineering, Design and Selection (PEDS) Volume 35 ; 35 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Protein Engineering, Design and Selection (PEDS) Volume 36 ; 36 ; >
 
@@ -17343,7 +17343,7 @@
 
     param[journal_id] = phe
 
-    au < ready ; exists ; 2008 ; 2008 ; Public Health Ethics Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Public Health Ethics Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Public Health Ethics Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Public Health Ethics Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Public Health Ethics Volume 4 ; 4 ; >
@@ -17356,7 +17356,7 @@
     au < finished ; finished ; 2018 ; 2018 ; Public Health Ethics Volume 11 ; 11 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Public Health Ethics Volume 12 ; 12 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Public Health Ethics Volume 13 ; 13 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Public Health Ethics Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Public Health Ethics Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Public Health Ethics Volume 15 ; 15 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Public Health Ethics Volume 16 ; 16 ; >
 
@@ -17491,7 +17491,7 @@
     au < finished ; manifest ; 2018 ; 2018 ; Public Policy & Aging Report Volume 28 ; 28 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Public Policy & Aging Report Volume 29 ; 29 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Public Policy & Aging Report Volume 30 ; 30 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Public Policy & Aging Report Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Public Policy & Aging Report Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Public Policy & Aging Report Volume 32 ; 32 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Public Policy & Aging Report Volume 33 ; 33 ; >
 
@@ -17600,7 +17600,7 @@
     au < finished ; finished ; 2018 ; 2018 ; Publius: The Journal of Federalism Volume 48 ; 48 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Publius: The Journal of Federalism Volume 49 ; 49 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Publius: The Journal of Federalism Volume 50 ; 50 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Publius: The Journal of Federalism Volume 51 ; 51 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Publius: The Journal of Federalism Volume 51 ; 51 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Publius: The Journal of Federalism Volume 52 ; 52 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Publius: The Journal of Federalism Volume 53 ; 53 ; >
 
@@ -17819,7 +17819,7 @@
     au < finished ; manifest ; 2018 ; 2018 ; Refugee Survey Quarterly Volume 37 ; 37 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Refugee Survey Quarterly Volume 38 ; 38 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Refugee Survey Quarterly Volume 39 ; 39 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Refugee Survey Quarterly Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Refugee Survey Quarterly Volume 40 ; 40 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Refugee Survey Quarterly Volume 41 ; 41 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Refugee Survey Quarterly Volume 42 ; 42 ; >
 
@@ -17949,7 +17949,7 @@
     au < finished ; finished ; 2018 ; 2018 ; Research Evaluation Volume 27 ; 27 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Research Evaluation Volume 28 ; 28 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Research Evaluation Volume 29 ; 29 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Research Evaluation Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Research Evaluation Volume 30 ; 30 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Research Evaluation Volume 31 ; 31 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Research Evaluation Volume 32 ; 32 ; >
 
