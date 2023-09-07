@@ -1,0 +1,31 @@
+{ 
+
+  publisher <
+    name = Amherst College Press ;
+    #info[contract] = 2018 ;
+    #info[back] = 1980 ;
+    #info[tester] = 8 ;
+    #info[poller] = 8 ;
+    comment[platform] = Fulcrum
+  >
+
+  provider = Amherst College Press
+  plugin = org.lockss.plugin.michigan.acp.ClockssAmherstCollegePressBooksPlugin
+  param[base_url] = https://www.fulcrum.org/
+  implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_uri] ; name ; hidden[proxy] >  
+
+  {
+  
+    title <
+      name = Amherst College Press Books ;
+      type = bookSeries
+    >
+
+    
+    au <  manifest ; exists ; 2022 ; 978-1-943208-39-5 ; 978-1-943208-39-5 ; concern/monographs/sx61dp467 ; Studies into Darkness: The Perils and Promise of Freedom of Speech ; >
+    au <  manifest ; exists ; 2023 ; 978-1-943208-33-3 ; 978-1-943208-33-3 ; concern/monographs/p5547t831 ; Race and the Law in South Carolina: From Slavery to Jim Crow ; >
+    au <  manifest ; exists ; 2021 ; 978-1-943208-23-4 ; 978-1-943208-23-4 ; concern/monographs/rn301359v ; Public Scholarship in Literary Studies ; >
+    au <  manifest ; exists ; 2020 ; 978-0-943184-21-0 ; 978-0-943184-21-0 ; concern/monographs/6q182m93x ; Amherst in the World ; >
+    au <  manifest ; exists ; 1991 ; 978-1-943208-51-7 ; 978-1-943208-51-7 ; concern/monographs/08612r30x ; Reimagining Nabokov: Pedagogies for the 21st Century ; >
+  }
+}
