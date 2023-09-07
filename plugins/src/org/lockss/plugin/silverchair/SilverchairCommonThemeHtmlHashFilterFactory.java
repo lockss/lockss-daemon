@@ -60,6 +60,9 @@ public class SilverchairCommonThemeHtmlHashFilterFactory implements FilterFactor
             HtmlNodeFilters.tagWithAttributeRegex("li", "class", "geoRef-coordinate"),
             //https://journals.biologists.com/dev/article/65/1/1/50812/Cytoskeletal-coordination-and-intercellular
             HtmlNodeFilters.tagWithAttributeRegex("div", "id", "Sidebar"),
+            //https://pubs.geoscienceworld.org/canmin/article-standard/60/2/229/612767/A-proposed-new-mineralogical-classification-system
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related-content"),
+            HtmlNodeFilters.tagWithAttributeRegex("a", "class", "related-content"),
             
     };
 
