@@ -379,7 +379,7 @@
       au < manifest ; exists ; 2019 ; 20 ; Economía Volume 2019 ; 2019 ; >
       au < manifest ; exists ; 2020 ; 21 ; Economía Volume 2020 ; 2020 ; >
       au < manifest ; exists ; 2021 ; 22 ; Economía Volume 2021 ; 2021 ; >
-      au < exists ; exists ; 2022 ; 23 ; Economía Volume 2022 ; 2022 ; >
+      au < doesNotExist ; doesNotExist ; 2022 ; 23 ; Economía Volume 2022 ; 2022 ; >
       au < manifest ; exists ; 2023 ; 24 ; Economía Volume 2023 ; 2023 ; >
 
   }
@@ -980,7 +980,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://journalhistoryknowledge.org/
-      param[journal_id] = unknown
+      param[journal_id] = up-j-jhok
 
       au < doNotProcess ; doNotProcess ; 2020 ; 1 ; Journal for the History of Knowledge Volume 2020 ; 2020 ; >
       au < exists ; exists ; 2021 ; 2 ; Journal for the History of Knowledge Volume 2021 ; 2021 ; >
@@ -1377,7 +1377,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 6 ; Open Journal of Bioresources Volume 2019 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 7 ; Open Journal of Bioresources Volume 2020 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; 8 ; Open Journal of Bioresources Volume 2021 ; 2021 ; >
-      au < expected ; exists ; 2022 ; 9 ; Open Journal of Bioresources Volume 2022 ; 2022 ; >
+      au < doesNotExist ; doesNotExist ; 2022 ; 9 ; Open Journal of Bioresources Volume 2022 ; 2022 ; >
       au < expected ; exists ; 2023 ; 10 ; Open Journal of Bioresources Volume 2023 ; 2023 ; >
 
   }
@@ -1512,7 +1512,7 @@
     {
       #journal moved to https anaccount.d removed account.
       param[base_url] = https://student-journals.ucl.ac.uk/pia/
-      param[journal_id] = 
+      param[journal_id] = up-j-pia
 
       au < doNotProcess ; exists ; 1990 ; 1 ; Papers from the Institute of Archaeology Volume 1990 ; 1990 ; >
       au < doNotProcess ; exists ; 1991 ; 2 ; Papers from the Institute of Archaeology Volume 1991 ; 1991 ; >
@@ -1570,8 +1570,7 @@
       au < doNotProcess ; doNotProcess ; 2017 ; 8 ; Present Pasts Volume 2017 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 9 ; Present Pasts Volume 2019 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 10 ; Present Pasts Volume 2020 ; 2020 ; >
-      au < expected ; exists ; 2022 ; 11 ; Present Pasts Volume 2022 ; 2022 ; >
-      au < expected ; exists ; 2023 ; 12 ; Present Pasts Volume 2023 ; 2023 ; >
+      #no new content since 2020. 20230906
 
     }
   }
@@ -1680,7 +1679,7 @@
 
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.healthpsychologybulletin.com/
-      param[journal_id] = 
+      param[journal_id] = up-j-hpb
 
       au < doNotProcess ; doNotProcess ; 2017 ; 1 ; Health Psychology Bulletin Volume 2017 ; 2017 ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2 ; Health Psychology Bulletin Volume 2018 ; 2018 ; >
@@ -2083,7 +2082,7 @@
 
       comment[publisher] = University of Westminster Press
       param[base_url] = https://www.entsportslawjournal.com/
-      param[journal_id] = 
+      param[journal_id] = uwp-j-eslj
 
       au < doNotProcess ; doNotProcess ; 2002 ; 1 ; Entertainment and Sports Law Journal Volume 2002 ; 2002 ; >
       au < doNotProcess ; doNotProcess ; 2003 ; 2 ; Entertainment and Sports Law Journal Volume 2003 ; 2003 ; >
@@ -2116,7 +2115,7 @@
 
       comment[publisher] = University of Westminster Press
       param[base_url] = https://account.delibdemjournal.org/
-      param[journal_id] = 
+      param[journal_id] = uwp-j-jdd
 
       au < doNotProcess ; doNotProcess ; 2005 ; 1 ; Journal of Deliberative Democracy Volume 2005 ; 2005 ; >
       au < doNotProcess ; doNotProcess ; 2006 ; 2 ; Journal of Deliberative Democracy Volume 2006 ; 2006 ; >
@@ -2147,7 +2146,7 @@
 
       comment[publisher] = University of Westminster Press
       param[base_url] = https://account.silkroadjournal.online/
-      param[journal_id] = 
+      param[journal_id] = uwp-j-sr
 
       au < doNotProcess ; doNotProcess ; 2019 ; 1 ; Silk Road Volume 2019 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 2 ; Silk Road Volume 2020 ; 2020 ; >
@@ -2164,7 +2163,7 @@
 
       comment[publisher] = University of Westminster Press
       param[base_url] = https://account.westminsterpapers.org/
-      param[journal_id] = 
+      param[journal_id] = uwp-j-wpcc
 
       au < doNotProcess ; doNotProcess ; 2009 ; 6 ; Westminster Papers in Communication and Culture Volume 2009 ; 2009 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; 7 ; Westminster Papers in Communication and Culture Volume 2010 ; 2010 ; >
@@ -2306,7 +2305,7 @@
 
       comment[publisher] = Utrecht University Library
       param[base_url] = https://rivista-incontri.nl/
-      param[journal_id] = incontri #a guess
+      param[journal_id] = inc #a guess
       #Moved to OJS / Werkgroep Italië Studies
 
       au < doNotProcess ; doNotProcess ; 2011 ; 26 ; Incontri. Rivista europea di studi italiani Volume 2011 ; 2011 ; >
@@ -2396,31 +2395,33 @@
 
       comment[publisher] = Utrecht University Library
       param[base_url] = https://liberquarterly.eu/
-      param[journal_id] = liber #a guess
+      param[journal_id] = lq #a guess
 
-      au < doNotProcess ; exists ; 1999 ; 1 ; LIBER Quarterly Volume 1999 ; 1999 ; >
-      au < doNotProcess ; doNotProcess ; 2000 ; 2 ; LIBER Quarterly Volume 2000 ; 2000 ; >
-      au < doNotProcess ; doNotProcess ; 2001 ; 3 ; LIBER Quarterly Volume 2001 ; 2001 ; >
-      au < doNotProcess ; doNotProcess ; 2002 ; 4 ; LIBER Quarterly Volume 2002 ; 2002 ; >
-      au < doNotProcess ; doNotProcess ; 2003 ; 5 ; LIBER Quarterly Volume 2003 ; 2003 ; >
-      au < doNotProcess ; doNotProcess ; 2004 ; 6 ; LIBER Quarterly Volume 2004 ; 2004 ; >
-      au < doNotProcess ; doNotProcess ; 2005 ; 7 ; LIBER Quarterly Volume 2005 ; 2005 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 8 ; LIBER Quarterly Volume 2006 ; 2006 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 9 ; LIBER Quarterly Volume 2007 ; 2007 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 10 ; LIBER Quarterly Volume 2008 ; 2008 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 11 ; LIBER Quarterly Volume 2009 ; 2009 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 12 ; LIBER Quarterly Volume 2010 ; 2010 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 13 ; LIBER Quarterly Volume 2011 ; 2011 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 14 ; LIBER Quarterly Volume 2012 ; 2012 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 15 ; LIBER Quarterly Volume 2013 ; 2013 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 16 ; LIBER Quarterly Volume 2014 ; 2014 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 17 ; LIBER Quarterly Volume 2015 ; 2015 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 18 ; LIBER Quarterly Volume 2016 ; 2016 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 19 ; LIBER Quarterly Volume 2017 ; 2017 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 20 ; LIBER Quarterly Volume 2018 ; 2018 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 21 ; LIBER Quarterly Volume 2019 ; 2019 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 22 ; LIBER Quarterly Volume 2020 ; 2020 ; >
-      au < doNotProcess ; exists ; 2021 ; 23 ; LIBER Quarterly Volume 2021 ; 2021 ; >
+      au < doNotProcess ; exists ; 1999 ; 9 ; LIBER Quarterly Volume 1999 ; 1999 ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; 10 ; LIBER Quarterly Volume 2000 ; 2000 ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; 11 ; LIBER Quarterly Volume 2001 ; 2001 ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; 12 ; LIBER Quarterly Volume 2002 ; 2002 ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; 13 ; LIBER Quarterly Volume 2003 ; 2003 ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; 14 ; LIBER Quarterly Volume 2004 ; 2004 ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; 15 ; LIBER Quarterly Volume 2005 ; 2005 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; 16 ; LIBER Quarterly Volume 2006 ; 2006 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 17 ; LIBER Quarterly Volume 2007 ; 2007 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 18 ; LIBER Quarterly Volume 2008 ; 2008 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 19 ; LIBER Quarterly Volume 2009 ; 2009 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 20 ; LIBER Quarterly Volume 2010 ; 2010 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 21 ; LIBER Quarterly Volume 2011 ; 2011 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 22 ; LIBER Quarterly Volume 2012 ; 2012 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 23 ; LIBER Quarterly Volume 2013 ; 2013 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 24 ; LIBER Quarterly Volume 2014 ; 2014 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 25 ; LIBER Quarterly Volume 2015 ; 2015 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 26 ; LIBER Quarterly Volume 2016 ; 2016 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 27 ; LIBER Quarterly Volume 2017 ; 2017 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 28 ; LIBER Quarterly Volume 2018 ; 2018 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; 29 ; LIBER Quarterly Volume 2019 ; 2019 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; 30 ; LIBER Quarterly Volume 2020 ; 2020 ; >
+      au < doNotProcess ; exists ; 2021 ; 31 ; LIBER Quarterly Volume 2021 ; 2021 ; >
+      au < exists ; exists ; 2022 ; 32 ; LIBER Quarterly Volume 2022 ; 2022 ; >
+      au < exists ; exists ; 2023 ; 33 ; LIBER Quarterly Volume 2023 ; 2023 ; >
 
   }
 
@@ -2705,7 +2706,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 7 ; Stability: International Journal of Security & Development Volume 2018 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 8 ; Stability: International Journal of Security & Development Volume 2019 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 9 ; Stability: International Journal of Security & Development Volume 2020 ; 2020 ; >
-      au < expected ; exists ; 2021 ; 10 ; Stability: International Journal of Security & Development Volume 2021 ; 2021 ; >
+      au < doesNotExist ; doesNotExist ; 2021 ; 10 ; Stability: International Journal of Security & Development Volume 2021 ; 2021 ; >
       au < manifest ; exists ; 2022 ; 11 ; Stability: International Journal of Security & Development Volume 2022 ; 2022 ; >
       au < manifest ; exists ; 2023 ; 12 ; Stability: International Journal of Security & Development Volume 2023 ; 2023 ; >
 
