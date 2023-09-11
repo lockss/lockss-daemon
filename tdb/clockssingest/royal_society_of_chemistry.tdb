@@ -55,7 +55,7 @@
       au < deepCrawl ; exists ; 2020 ; The Analyst Volume 145 ; 145 ; 2020 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2021 ; The Analyst Volume 146 ; 146 ; 2021 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2022 ; The Analyst Volume 147 ; 147 ; 2022 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2023 ; The Analyst Volume 148 ; 148 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2023 ; The Analyst Volume 148 ; 148 ; 2023 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -84,7 +84,7 @@
       au < deepCrawl ; exists ; 2020 ; Analytical Methods Volume 12 ; 12 ; 2020 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2021 ; Analytical Methods Volume 13 ; 13 ; 2021 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2022 ; Analytical Methods Volume 14 ; 14 ; 2022 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2023 ; Analytical Methods Volume 15 ; 15 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2023 ; Analytical Methods Volume 15 ; 15 ; 2023 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -205,7 +205,7 @@
       au < deepCrawl ; exists ; 2020 ; CBiomaterials Science Volume 8 ; 8 ; 2020 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2021 ; CBiomaterials Science Volume 9 ; 9 ; 2021 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2022 ; CBiomaterials Science Volume 10 ; 10 ; 2022 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2023 ; CBiomaterials Science Volume 11 ; 11 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2023 ; CBiomaterials Science Volume 11 ; 11 ; 2023 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -290,7 +290,7 @@
       au < deepCrawl ; exists ; 2020 ; Chemical Society Reviews Volume 49 ; 49 ; 2020 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2021 ; Chemical Society Reviews Volume 50 ; 50 ; 2021 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2022 ; Chemical Society Reviews Volume 51 ; 51 ; 2022 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2023 ; Chemical Society Reviews Volume 52 ; 52 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2023 ; Chemical Society Reviews Volume 52 ; 52 ; 2023 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -426,7 +426,7 @@
       au < deepCrawl ; exists ; 2020 ; Energy & Environmental Science Volume 13 ; 13 ; 2020 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2021 ; Energy & Environmental Science Volume 14 ; 14 ; 2021 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2022 ; Energy & Environmental Science Volume 15 ; 15 ; 2022 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2023 ; Energy & Environmental Science Volume 16 ; 16 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2023 ; Energy & Environmental Science Volume 16 ; 16 ; 2023 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -607,10 +607,10 @@
       au < frozen ; exists ; 2022 ; Faraday Discussions Volume 238 ; 238 ; 2022 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2022 ; Faraday Discussions Volume 239 ; 239 ; 2022 ; https://pubs.rsc.org/ ; >
       au < frozen ; exists ; 2022 ; Faraday Discussions Volume 240 ; 240 ; 2022 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2023 ; Faraday Discussions Volume 241 ; 241 ; 2023 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2023 ; Faraday Discussions Volume 242 ; 242 ; 2023 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2023 ; Faraday Discussions Volume 243 ; 243 ; 2023 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2023 ; Faraday Discussions Volume 244 ; 244 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2023 ; Faraday Discussions Volume 241 ; 241 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2023 ; Faraday Discussions Volume 242 ; 242 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2023 ; Faraday Discussions Volume 243 ; 243 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2023 ; Faraday Discussions Volume 244 ; 244 ; 2023 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2023 ; Faraday Discussions Volume 245 ; 245 ; 2023 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2023 ; Faraday Discussions Volume 246 ; 246 ; 2023 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2023 ; Faraday Discussions Volume 247 ; 247 ; 2023 ; https://pubs.rsc.org/ ; >
