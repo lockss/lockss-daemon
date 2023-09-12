@@ -32,11 +32,11 @@
       au < ready ; exists ; 2015 ; Journal of Physical Education Volume 2015 ; 27 ; 2015 ; >
       au < ready ; exists ; 2016 ; Journal of Physical Education Volume 2016 ; 28 ; 2016 ; >
       au < ready ; exists ; 2017 ; Journal of Physical Education Volume 2017 ; 29 ; 2017 ; >
-      au < ready ; exists ; 2018 ; Journal of Physical Education Volume 2018 ; 30 ; 2018 ; >
-      au < ready ; exists ; 2019 ; Journal of Physical Education Volume 2019 ; 31 ; 2019 ; >
+      au < crawling ; exists ; 2018 ; Journal of Physical Education Volume 2018 ; 30 ; 2018 ; >
+      au < crawling ; exists ; 2019 ; Journal of Physical Education Volume 2019 ; 31 ; 2019 ; >
       au < ready ; exists ; 2020 ; Journal of Physical Education Volume 2020 ; 32 ; 2020 ; >
-      au < ready ; exists ; 2021 ; Journal of Physical Education Volume 2021 ; 33 ; 2021 ; >
-      au < ready ; exists ; 2023 ; Journal of Physical Education Volume 2023 ; 34 ; 2023 ; >
+      au < crawling ; exists ; 2021 ; Journal of Physical Education Volume 2021 ; 33 ; 2021 ; >
+      au < crawling ; exists ; 2023 ; Journal of Physical Education Volume 2023 ; 34 ; 2023 ; >
 
   }
 
@@ -69,7 +69,7 @@
       au < finished ; crawling ; 2020 ; Modern Sport Volume 2020 ; 19 ; 2020 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2021 ; Modern Sport Volume 2021 ; 20 ; 2021 ; >
       au < finished ; crawling ; 2022 ; Modern Sport Volume 2022 ; 21 ; 2022 ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2023 ; Modern Sport Volume 2023 ; 22 ; 2023 ; >
+      au < crawling ; exists ; 2023 ; Modern Sport Volume 2023 ; 22 ; 2023 ; >
 
   }
 
