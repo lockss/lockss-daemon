@@ -1,5 +1,34 @@
 {
   publisher <
+    name = frommann-holzboog ;
+    info[contract] = 2011 ;
+    info[back] = 2000 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Steiner Studies ;
+        eissn = 2698-217X
+      >
+
+      comment[publisher] = frommann-holzboog
+#      param[base_url] = https://steiner-studies.org/
+
+      au < doNotProcess ; doNotProcess ; 2020 ; 1 ; Steiner Studies Volume 2020 ; 2020 ; https://steiner-studies.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 2 ; Steiner Studies Volume 2021 ; 2021 ; https://steiner-studies.org/ ; >
+
+  }
+}
+
+{
+  publisher <
     name = Gonzaga Library Publishing ;
     info[contract] = 2011 ;
     info[back] = 2000 ;
@@ -2326,6 +2355,35 @@
       au < frozen ; exists ; 2021 ; 8 ; Journal of Philosophy in Schools Volume 2021 ; 2021 ; https://jps.bham.ac.uk/ ; > #no substance
       au < superseded ; exists ; 2022 ; 9 ; Journal of Philosophy in Schools Volume 2022 [superseded] ; 2022 ; https://jps.bham.ac.uk/ ; > #no substance
       au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Journal of Philosophy in Schools Volume 2023 ; 2023 ; https://jps.bham.ac.uk/ ; > #no substance
+
+  }
+}
+
+{
+  publisher <
+    name = University of East Anglia ;
+    info[contract] = 2011 ;
+    info[back] = 2000 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = New Area Studies ;
+        eissn = 2633-3716
+      >
+
+      comment[publisher] = University of East Anglia
+#      param[base_url] = https://newareastudies.com/
+
+      au < doNotProcess ; doNotProcess ; 2020 ; 1 ; New Area Studies Volume 2020 ; 2020 ; https://newareastudies.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 2 ; New Area Studies Volume 2021 ; 2021 ; https://newareastudies.com/ ; >
 
   }
 }
