@@ -20,9 +20,9 @@
     # This content collected using wget and provided for preservation as a
     # set of WARC files
     # WARC content from http://emed.library.gov.ua/jspui/handle/123456789/168
-    param[base_url] = https://clockss-ingest.lockss.org/warcfiles/NEEDS-PLUGIN-released/
+    param[base_url] = https://clockss-ingest.lockss.org/warcfiles/ukrainian-dental-association-released/
 
-    au < expected ; exists ; 2023 ; Ukrainian Dental Association Warc Content 2023 ; 2023 >
+    au < ready ; exists ; 2023 ; Ukrainian Dental Association Warc Content 2023 ; 2023 >
 
     }
 
