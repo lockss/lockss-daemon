@@ -25,7 +25,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/promed-released/
 
     # tested https://clockss-test.lockss.org/sourcefiles/promed-released/2023_01, it has one less xml than PDF.
-    au < manifest ; exists ; 2023 ; Pro Medicina Foundation Source Content 2023_01 ; 2023_01 >
+    au < ready ; exists ; 2023 ; Pro Medicina Foundation Source Content 2023_01 ; 2023_01 >
     }
   }
 
