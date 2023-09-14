@@ -7,7 +7,7 @@
     info[poller] = 8
   >
 
-    plugin = org.lockss.plugin.ojs3.Ojs3Plugin
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
     implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
     #OJS3
     attr[start_stem] = index.php/
