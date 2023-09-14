@@ -2644,8 +2644,9 @@ while (my $line = <>) {
     }
     sleep(4);
 
-  #University of Michigan Press Books
-  } elsif ($plugin eq "ClockssUMichFulcrumBooksPlugin") {
+  #University of Michigan Press Books, Amherst College Press Books
+  } elsif (($plugin eq "ClockssUMichFulcrumBooksPlugin") ||
+           ($plugin eq "ClockssAmherstCollegePressBooksPlugin")) {
     $url = sprintf("%s%s",
       $param{base_url}, $param{book_uri});
     $man_url = uri_unescape($url);

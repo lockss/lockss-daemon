@@ -1,18 +1,21 @@
+#Permission for all content provided at: http://clockss-ingest.lockss.org/clockss.txt
+#Permission for all content provided at: http://clockss-ingest.lockss.org/lockss.txt
+
 { 
 
   publisher <
     name = Amherst College Press ;
-    #info[contract] = 2018 ;
-    #info[back] = 1980 ;
-    #info[tester] = 8 ;
-    #info[poller] = 8 ;
+    info[contract] = 2023 ;
+    info[back] = 2015 ;
+    info[tester] = 8 ;
+    info[poller] = 8 ;
     comment[platform] = Fulcrum
   >
 
   provider = Amherst College Press
   plugin = org.lockss.plugin.michigan.acp.ClockssAmherstCollegePressBooksPlugin
   param[base_url] = https://www.fulcrum.org/
-  implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_uri] ; name ; hidden[proxy] >  
+  implicit < status ; status2 ; year ; isbn ; param[book_uri] ; name ; hidden[proxy] >  
 
   {
   
@@ -21,11 +24,35 @@
       type = bookSeries
     >
 
-    
-    au <  manifest ; exists ; 2022 ; 978-1-943208-39-5 ; 978-1-943208-39-5 ; concern/monographs/sx61dp467 ; Studies into Darkness: The Perils and Promise of Freedom of Speech ; >
-    au <  manifest ; exists ; 2023 ; 978-1-943208-33-3 ; 978-1-943208-33-3 ; concern/monographs/p5547t831 ; Race and the Law in South Carolina: From Slavery to Jim Crow ; >
-    au <  manifest ; exists ; 2021 ; 978-1-943208-23-4 ; 978-1-943208-23-4 ; concern/monographs/rn301359v ; Public Scholarship in Literary Studies ; >
-    au <  manifest ; exists ; 2020 ; 978-0-943184-21-0 ; 978-0-943184-21-0 ; concern/monographs/6q182m93x ; Amherst in the World ; >
-    au <  manifest ; exists ; 1991 ; 978-1-943208-51-7 ; 978-1-943208-51-7 ; concern/monographs/08612r30x ; Reimagining Nabokov: Pedagogies for the 21st Century ; >
+    au < manifest ; exists ; 2015 ; 9781943208012 ; concern/monographs/5m60qt39t ; Intersecting Colors: Josef Albers and His Contemporaries ; >
+    au < manifest ; exists ; 2016 ; 9781943208036 ; concern/monographs/8910jw37s ; The Rise of Trum: America’s Authoritarian Spring ; >
+    au < manifest ; exists ; 2017 ; 9181943208074 ; concern/monographs/6t053h579 ; The Networked Recluse: The Connected World of Emily Dickinson ; >
+    au < manifest ; exists ; 2017 ; 9781943208098 ; concern/monographs/bc386k85c ; Sentencing in Time ; >
+    au < manifest ; exists ; 2016 ; 9781943208050 ; concern/monographs/z603r0199 ; The Limits of Religious Tolerance ; >
+    au < manifest ; exists ; 2017 ; 9781943208401 ; concern/monographs/k06989494 ; Video Game Art Reader Volume 1 ; >
+    au < manifest ; exists ; 2018 ; 9781943208111 ; concern/monographs/hd76s176d ; Unburied Bodies: Subversive Corpses and the Authority of the Dead ; >
+    au < exists ; exists ; 2019 ; 9781943208135 ; concern/monographs/rv042v80g ; Mobilizing Pedagogy: Two Social Practice Projects in the Americas ; >
+    au < manifest ; exists ; 2018 ; 9781943208418 ; concern/monographs/8c97ks79s ; Video Game Art Reader 2 ; >
+    au < manifest ; exists ; 2019 ; 9781943208456 ; concern/monographs/8c97ks80j ; Video Game Art Reader 3 ; >
+    au < manifest ; exists ; 2020 ; 9780943184210 ; concern/monographs/6q182m93x ; Amherst in the World ; >
+    au < manifest ; exists ; 2020 ; 9781943208159 ; concern/monographs/6h440v48j ; A Sense of Brutality: Philosophy after Narco-Culture ; >
+    au < manifest ; exists ; 2021 ; 9781943208173 ; concern/monographs/70795980v ; A Journey to Inner Africa ; >
+    au < manifest ; exists ; 2021 ; 9781943208197 ; concern/monographs/gf06g491w ; Writing in Time: Emily Dickinson’s Master Hours ; >
+    au < manifest ; exists ; 2021 ; 9781943208234 ; concern/monographs/rn301359v ; Public Scholarship in Literary Studies ; >
+    au < manifest ; exists ; 2021 ; 9781943208258 ; concern/monographs/ms35tb924 ; Twining: Critical and Creative Approaches to Hypertext ; >
+    au < manifest ; exists ; 2021 ; 9781943208272 ; concern/monographs/1v53k057r ; The Border of Lights Reader: Bearing Witness to Genocide in the Dominican Republic ; >
+    au < manifest ; exists ; 2021 ; 9781943208210 ; concern/monographs/rf55z988p ; Radical Roots: Public History and a Tradition of Social Justice Activism ; >
+    au < manifest ; exists ; 2022 ; 9781943208296 ; concern/monographs/pc289m47x ; Netprove: Networked Improvised Literature for the Classroom and Beyond ; >
+    au < manifest ; exists ; 2022 ; 9781943208357 ; concern/monographs/t435gg48k ; Video Game Art Reader 4 ; >
+    au < manifest ; exists ; 2022 ; 9781943208371 ; concern/monographs/rn301377s ; Jamon and Halal: Lessons in Tolerance from Rural Andalucia ; >
+    au < manifest ; exists ; 2022 ; 9781943208319 ; concern/monographs/cz30pv92z ; Interwar Itineraries: Authenticity in Anglophone and French Travel Writing ; >
+    au < manifest ; exists ; 2022 ; 9781943208395 ; concern/monographs/sx61dp467 ; Studies into Darkness: The Perils and Promise of Freedom of Speech ; >
+    au < manifest ; exists ; 2022 ; 9781943208517 ; concern/monographs/08612r30x ; Reimagining Nabokov: Pedagogies for the 21st Century ; >
+    au < manifest ; exists ; 2023 ; 9781943208333 ; concern/monographs/p5547t831 ; Race and the Law in South Carolina: From Slavery to Jim Crow ; >
+    au < manifest ; exists ; 2023 ; 9781943208494 ; concern/monographs/dr26z097w ; Maria Theresa Alves: Seeds of Change ; >
+    au < manifest ; exists ; 2023 ; 9781943208470 ; concern/monographs/b2773z23s ; Judicial Rhapsodies: Rhetoric and Fundamental Rights in the Supreme Court ; >
+    au < manifest ; exists ; 2023 ; 9781943208555 ; concern/monographs/5138jh50q ; Italy to Argentina: Travel Writing and Emigrant Colonialism ; >
+    au < manifest ; exists ; 2023 ; 9781943208531 ; concern/monographs/t148fk74z ; Game Poems: Videogame Design as Lyric Practice ; >
+
   }
 }
