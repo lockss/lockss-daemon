@@ -35,11 +35,11 @@
     title <
       name = Cancer Discovery ;
       issn = 2159-8274 ;
-      eissn = 2159-8290 
+      eissn = 2159-8290
 
     >
       param[journal_id] = cancerdiscovery
-    
+
       au < manifest ; exists ; 2011 ; 2011 ; Cancer Discovery Volume 1 ; 1 ; >
       au < manifest ; exists ; 2012 ; 2012 ; Cancer Discovery Volume 2 ; 2 ; >
       au < manifest ; exists ; 2013 ; 2013 ; Cancer Discovery Volume 3 ; 3 ; >
@@ -263,7 +263,7 @@
 
     >
       param[journal_id] = cancerrescommun
-    
+
       au < manifest ; exists ; 2021 ; 2021 ; Cancer Research Communications Volume 1 ; 1 ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Cancer Research Communications Volume 2 ; 2 ; >
       au < manifest ; exists ; 2023 ; 2023 ; Cancer Research Communications Volume 3 ; 3 ; >
@@ -271,7 +271,7 @@
   }
 
   {
-  
+
     title <
       name = Clinical Cancer Research ;
       issn = 1078-0432 ;
@@ -314,7 +314,7 @@
   }
 
   {
-  
+
     title <
       name = Molecular Cancer Research ;
       issn = 1541-7786 ;
@@ -350,7 +350,7 @@
   }
 
   {
-  
+
     title <
       name = Molecular Cancer Therapeutics ;
       issn = 1535-7163 ;
