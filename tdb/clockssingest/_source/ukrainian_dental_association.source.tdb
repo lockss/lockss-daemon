@@ -22,7 +22,7 @@
     # WARC content from http://emed.library.gov.ua/jspui/handle/123456789/168
     param[base_url] = https://clockss-ingest.lockss.org/warcfiles/ukrainian-dental-association-released/
 
-    au < ready ; exists ; 2023 ; Ukrainian Dental Association Warc Content 2023 ; 2023 >
+    au < readySource ; crawling ; 2023 ; Ukrainian Dental Association Warc Content 2023 ; 2023 >
 
     }
 
