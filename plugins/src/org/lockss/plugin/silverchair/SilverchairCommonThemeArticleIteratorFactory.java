@@ -39,16 +39,19 @@ public class SilverchairCommonThemeArticleIteratorFactory implements ArticleIter
     //https://research.aota.org/ajot/article/74/1/7401090010p1/ajot
     //https://research.aota.org/ajot/article/74/1/7401090010p1/contact-us
 
+    /*
+    Silverchair confirmed in Jira ticket - SCS-77294, that we can use "article" only, since article-abstract
+    and article-standard have been stopped around 05/2023.
+     */
+
 
     private static String ROOT_TEMPLATE = "\"%s\", base_url";
-    private static String PATTERN_TEMPLATE =  "\"%s([^/]+/)?%s/(article-abstract|article)/\", base_url, journal_id";
+    private static String PATTERN_TEMPLATE =  "\"%s([^/]+/)?%s/(article)/\", base_url, journal_id";
 
     private static Pattern HTML_PATTERN = Pattern.compile("/article/([^/]+)/(.*)$", Pattern.CASE_INSENSITIVE);
-    private static Pattern HTML_ABSTRACT_PATTERN = Pattern.compile("/article-abstract/([^/]+)/(.*)$", Pattern.CASE_INSENSITIVE);
 
 
     private static String HTML_REPLACEMENT = "/article/$1/$2";
-    private static String ABSTRACT_REPLACEMENT = "/article-abstract/$1/$2";
     private static String CITATION_REPLACEMENT = "/downloadcitation/$1?format=ris";
 
     protected static Logger getLog() {
@@ -65,11 +68,6 @@ public class SilverchairCommonThemeArticleIteratorFactory implements ArticleIter
                         ROOT_TEMPLATE,
                         PATTERN_TEMPLATE,
                         Pattern.CASE_INSENSITIVE);
-        
-        builder.addAspect(  HTML_ABSTRACT_PATTERN,
-                            ABSTRACT_REPLACEMENT,
-                            ArticleFiles.ROLE_ABSTRACT,
-                            ArticleFiles.ROLE_ARTICLE_METADATA);
 
         builder.addAspect(  HTML_PATTERN,
                             HTML_REPLACEMENT,
