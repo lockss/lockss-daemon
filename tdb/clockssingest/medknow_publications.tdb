@@ -128,7 +128,7 @@
     au < finished ; finished ; 2020 ; Annals of African Medicine Volume 19 ; 2020 ; 19 ; https://www.annalsafrmed.org/ ; ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2021 ; Annals of African Medicine Volume 20 ; 2021 ; 20 ; https://www.annalsafrmed.org/ ; ; >
     au < deepCrawl ; exists ; 2022 ; Annals of African Medicine Volume 21 ; 2022 ; 21 ; https://www.annalsafrmed.org/ ; ; >
-    au < manifest ; exists ; 2023 ; Annals of African Medicine Volume 22 ; 2023 ; 22 ; https://www.annalsafrmed.org/ ; ; >
+    au < ready ; exists ; 2023 ; Annals of African Medicine Volume 22 ; 2023 ; 22 ; https://www.annalsafrmed.org/ ; ; >
 
   }
 
@@ -536,7 +536,7 @@
     au < finished ; finished ; 2020 ; AYUHOM Volume 7 ; 2020 ; 7 ; https://www.ayuhom.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; AYUHOM Volume 8 ; 2021 ; 8 ; https://www.ayuhom.com/ ; ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; AYUHOM Volume 9 ; 2022 ; 9 ; https://www.ayuhom.com/ ; ; >
-    au < manifest ; exists ; 2023 ; AYUHOM Volume 10 ; 2023 ; 10 ; https://www.ayuhom.com/ ; ; >
+    au < ready ; exists ; 2023 ; AYUHOM Volume 10 ; 2023 ; 10 ; https://www.ayuhom.com/ ; ; >
 
   }
 
@@ -551,7 +551,7 @@
     param[journal_issn] = 2949-7973
 
     au < frozen ; exists ; 2022 ; Bangladesh Journal of Endocrinology and Metabolism Volume 1 ; 2022 ; 1 ; https://www.bjem.org/ ; ; >
-    au < manifest ; exists ; 2023 ; Bangladesh Journal of Endocrinology and Metabolism Volume 2 ; 2023 ; 2 ; https://www.bjem.org/ ; ; >
+    au < ready ; exists ; 2023 ; Bangladesh Journal of Endocrinology and Metabolism Volume 2 ; 2023 ; 2 ; https://www.bjem.org/ ; ; >
 
   }
 
@@ -727,7 +727,7 @@
     au < finished ; frozen ; 2020 ; Dental Research Journal Volume 17 ; 2020 ; 17 ; https://www.drjjournal.net/ ; ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Dental Research Journal Volume 18 ; 2021 ; 18 ; https://www.drjjournal.net/ ; ; >
     au < deepCrawl ; exists ; 2022 ; Dental Research Journal Volume 19 ; 2022 ; 19 ; https://www.drjjournal.net/ ; ; >
-    au < manifest ; exists ; 2023 ; Dental Research Journal Volume 20 ; 2023 ; 20 ; https://www.drjjournal.net/ ; ; >
+    au < ready ; exists ; 2023 ; Dental Research Journal Volume 20 ; 2023 ; 20 ; https://www.drjjournal.net/ ; ; >
 
   }
 
@@ -763,7 +763,7 @@
     au < finished ; frozen ; 2020 ; Heart Views Volume 21 ; 2020 ; 21 ; https://www.heartviews.org/ ; ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2021 ; Heart Views Volume 22 ; 2021 ; 22 ; https://www.heartviews.org/ ; ; >
     au < deepCrawl ; exists ; 2022 ; Heart Views Volume 23 ; 2022 ; 23 ; https://www.heartviews.org/ ; ; >
-    au < manifest ; exists ; 2023 ; Heart Views Volume 24 ; 2023 ; 24 ; https://www.heartviews.org/ ; ; >
+    au < ready ; exists ; 2023 ; Heart Views Volume 24 ; 2023 ; 24 ; https://www.heartviews.org/ ; ; >
 
   }
 
@@ -999,7 +999,7 @@
     au < finished ; frozen ; 2020 ; Indian Journal of Dental Research Volume 31 ; 2020 ; 31 ; https://www.ijdr.in/ ; ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Indian Journal of Dental Research Volume 32 ; 2021 ; 32 ; https://www.ijdr.in/ ; ; >
     au < deepCrawl ; exists ; 2022 ; Indian Journal of Dental Research Volume 33 ; 2022 ; 33 ; https://www.ijdr.in/ ; ; >
-    au < manifest ; exists ; 2023 ; Indian Journal of Dental Research Volume 34 ; 2023 ; 34 ; https://www.ijdr.in/ ; ; >
+    au < ready ; exists ; 2023 ; Indian Journal of Dental Research Volume 34 ; 2023 ; 34 ; https://www.ijdr.in/ ; ; >
 
   }
 
@@ -1063,7 +1063,7 @@
     au < finished ; frozen ; 2020 ; Indian Journal of Dermatology Volume 65 ; 2020 ; 65 ; https://www.e-ijd.org/ ; ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Indian Journal of Dermatology Volume 66 ; 2021 ; 66 ; https://www.e-ijd.org/ ; ; >
     au < deepCrawl ; exists ; 2022 ; Indian Journal of Dermatology Volume 67 ; 2022 ; 67 ; https://www.e-ijd.org/ ; ; >
-    au < manifest ; exists ; 2023 ; Indian Journal of Dermatology Volume 68 ; 2023 ; 68 ; https://www.e-ijd.org/ ; ; >
+    au < ready ; exists ; 2023 ; Indian Journal of Dermatology Volume 68 ; 2023 ; 68 ; https://www.e-ijd.org/ ; ; >
 
   }
 
@@ -5073,7 +5073,7 @@
       au < finished ; frozen ; 2020 ; Advanced Biomedical Research Volume 9 ; 2020 ; 9 ; https://www.advbiores.net/ ; ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Advanced Biomedical Research Volume 10 ; 2021 ; 10 ; https://www.advbiores.net/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Advanced Biomedical Research Volume 11 ; 2022 ; 11 ; https://www.advbiores.net/ ; ; >
-      au < manifest ; exists ; 2023 ; Advanced Biomedical Research Volume 12 ; 2023 ; 12 ; https://www.advbiores.net/ ; ; >
+      au < ready ; exists ; 2023 ; Advanced Biomedical Research Volume 12 ; 2023 ; 12 ; https://www.advbiores.net/ ; ; >
 
   }
 
@@ -5364,7 +5364,7 @@
       #Moved to https://www.bnmjournal.com/
 
       au < deepCrawl ; exists ; 2022 ; Brain Network and Modulation Volume 1 ; 2022 ; 1 ; https://www.bnmjournal.com/ ; ; >
-      au < manifest ; exists ; 2023 ; Brain Network and Modulation Volume 2 ; 2023 ; 2 ; https://www.bnmjournal.com/ ; ; >
+      au < ready ; exists ; 2023 ; Brain Network and Modulation Volume 2 ; 2023 ; 2 ; https://www.bnmjournal.com/ ; ; >
 
   }
 
@@ -5465,7 +5465,7 @@
       au < finished ; finished ; 2020 ; BLDE University Journal of Health Sciences Volume 5 ; 2020 ; 5 ; https://www.bldeujournalhs.in/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; BLDE University Journal of Health Sciences Volume 6 ; 2021 ; 6 ; https://www.bldeujournalhs.in/ ; ; >
       au < deepCrawl ; exists ; 2022 ; BLDE University Journal of Health Sciences Volume 7 ; 2022 ; 7 ; https://www.bldeujournalhs.in/ ; ; >
-      au < manifest ; exists ; 2023 ; BLDE University Journal of Health Sciences Volume 8 ; 2023 ; 8 ; https://www.bldeujournalhs.in/ ; ; >
+      au < ready ; exists ; 2023 ; BLDE University Journal of Health Sciences Volume 8 ; 2023 ; 8 ; https://www.bldeujournalhs.in/ ; ; >
 
   }
 
@@ -9458,7 +9458,7 @@
       au < finished ; finished ; 2020 ; Acta Medica International Volume 7 ; 2020 ; 7 ; https://www.actamedicainternational.com/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2021 ; Acta Medica International Volume 8 ; 2021 ; 8 ; https://www.actamedicainternational.com/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Acta Medica International Volume 9 ; 2022 ; 9 ; https://www.actamedicainternational.com/ ; ; >
-      au < manifest ; exists ; 2023 ; Acta Medica International Volume 10 ; 2023 ; 10 ; https://www.actamedicainternational.com/ ; ; >
+      au < ready ; exists ; 2023 ; Acta Medica International Volume 10 ; 2023 ; 10 ; https://www.actamedicainternational.com/ ; ; >
 
   }
 
@@ -9739,7 +9739,7 @@
       au < finished ; finished ; 2020 ; Archives of Trauma Research Volume 9 ; 2020 ; 9 ; https://www.archtrauma.com/ ; ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2021 ; Archives of Trauma Research Volume 10 ; 2021 ; 10 ; https://www.archtrauma.com/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Archives of Trauma Research Volume 11 ; 2022 ; 11 ; https://www.archtrauma.com/ ; ; >
-      au < manifest ; exists ; 2023 ; Archives of Trauma Research Volume 12 ; 2023 ; 12 ; https://www.archtrauma.com/ ; ; >
+      au < ready ; exists ; 2023 ; Archives of Trauma Research Volume 12 ; 2023 ; 12 ; https://www.archtrauma.com/ ; ; >
 
   }
 
@@ -11697,7 +11697,7 @@
       au < finished ; finished ; 2020 ; Urological Science Volume 31 ; 2020 ; 31 ; https://www.e-urol-sci.com/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Urological Science Volume 32 ; 2021 ; 32 ; https://www.e-urol-sci.com/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Urological Science Volume 33 ; 2022 ; 33 ; https://www.e-urol-sci.com/ ; ; >
-      au < manifest ; exists ; 2023 ; Urological Science Volume 34 ; 2023 ; 34 ; https://www.e-urol-sci.com/ ; ; >
+      au < ready ; exists ; 2023 ; Urological Science Volume 34 ; 2023 ; 34 ; https://www.e-urol-sci.com/ ; ; >
 
   }
 
@@ -11842,7 +11842,7 @@
       param[journal_issn] = 2772-8382
       au < doNotProcess ; doNotProcess ; 2021 ; Annals of Oncology Research and Therapy Volume 1 ; 2021 ; 1 ; https://www.aort.info/ ; ; >
       au < doNotProcess ; doNotProcess ; 2022 ; Annals of Oncology Research and Therapy Volume 2 ; 2022 ; 2 ; https://www.aort.info/ ; ; >
-      au < manifest ; exists ; 2023 ; Annals of Oncology Research and Therapy Volume 3 ; 2023 ; 3 ; https://www.aort.info/ ; ; >
+      au < ready ; exists ; 2023 ; Annals of Oncology Research and Therapy Volume 3 ; 2023 ; 3 ; https://www.aort.info/ ; ; >
       }
   }
 
@@ -11911,7 +11911,7 @@
 
       au < frozen ; exists ; 2021 ; Asian Journal of Social Health and Behavior Volume 4 ; 2021 ; 4 ; https://www.healthandbehavior.com/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Asian Journal of Social Health and Behavior Volume 5 ; 2022 ; 5 ; https://www.healthandbehavior.com/ ; ; >
-      au < manifest ; exists ; 2023 ; Asian Journal of Social Health and Behavior Volume 6 ; 2023 ; 6 ; https://www.healthandbehavior.com/ ; ; >
+      au < ready ; exists ; 2023 ; Asian Journal of Social Health and Behavior Volume 6 ; 2023 ; 6 ; https://www.healthandbehavior.com/ ; ; >
 
   }
 
@@ -11928,7 +11928,7 @@
       #param[base_url] = https://www.ajprhc.com/
 
       au < deepCrawl ; exists ; 2022 ; Asian Journal of Pharmaceutical Research and Health Care Volume 14 ; 2022 ; 14 ; https://www.ajprhc.com/ ; ; >
-      au < manifest ; exists ; 2023 ; Asian Journal of Pharmaceutical Research and Health Care Volume 15 ; 2023 ; 15 ; https://www.ajprhc.com/ ; ; >
+      au < ready ; exists ; 2023 ; Asian Journal of Pharmaceutical Research and Health Care Volume 15 ; 2023 ; 15 ; https://www.ajprhc.com/ ; ; >
 
   }
 
@@ -11956,7 +11956,7 @@
       au < frozen ; exists ; 2020 ; Assam Journal of Internal Medicine Volume 10 ; 2020 ; 10 ; https://www.ajimedicine.com/ ; ; >
       au < frozen ; exists ; 2021 ; Assam Journal of Internal Medicine Volume 11 ; 2021 ; 11 ; https://www.ajimedicine.com/ ; ; >
       au < frozen ; exists ; 2022 ; Assam Journal of Internal Medicine Volume 12 ; 2022 ; 12 ; https://www.ajimedicine.com/ ; ; >
-      au < manifest ; exists ; 2023 ; Assam Journal of Internal Medicine Volume 13 ; 2023 ; 13 ; https://www.ajimedicine.com/ ; ; >
+      au < ready ; exists ; 2023 ; Assam Journal of Internal Medicine Volume 13 ; 2023 ; 13 ; https://www.ajimedicine.com/ ; ; >
 
   }
 
@@ -12022,7 +12022,7 @@
       au < frozen ; exists ; 2020 ; Canadian Journal of Rural Medicine Volume 25 ; 2020 ; 25 ; https://www.cjrm.ca/ ; ; >
       au < frozen ; exists ; 2021 ; Canadian Journal of Rural Medicine Volume 26 ; 2021 ; 26 ; https://www.cjrm.ca/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Canadian Journal of Rural Medicine Volume 27 ; 2022 ; 27 ; https://www.cjrm.ca/ ; ; >
-      au < manifest ; exists ; 2023 ; Canadian Journal of Rural Medicine Volume 28 ; 2023 ; 28 ; https://www.cjrm.ca/ ; ; >
+      au < ready ; exists ; 2023 ; Canadian Journal of Rural Medicine Volume 28 ; 2023 ; 28 ; https://www.cjrm.ca/ ; ; >
 
   }
 
@@ -12042,7 +12042,7 @@
       au < frozen ; exists ; 2020 ; Chinese Journal of Physiology Volume 63 ; 2020 ; 63 ; https://www.cjphysiology.org/ ; ; >
       au < frozen ; exists ; 2021 ; Chinese Journal of Physiology Volume 64 ; 2021 ; 64 ; https://www.cjphysiology.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Chinese Journal of Physiology Volume 65 ; 2022 ; 65 ; https://www.cjphysiology.org/ ; ; >
-      au < manifest ; exists ; 2023 ; Chinese Journal of Physiology Volume 66 ; 2023 ; 66 ; https://www.cjphysiology.org/ ; ; >
+      au < ready ; exists ; 2023 ; Chinese Journal of Physiology Volume 66 ; 2023 ; 66 ; https://www.cjphysiology.org/ ; ; >
 
   }
 
@@ -12070,7 +12070,7 @@
       au < frozen ; exists ; 2020 ; Current Medicine Research and Practice Volume 10 ; 2020 ; 10 ; https://www.cmrpjournal.org/ ; ; >
       au < frozen ; exists ; 2021 ; Current Medicine Research and Practice Volume 11 ; 2021 ; 11 ; https://www.cmrpjournal.org/ ; ; >
       au < notReady ; exists ; 2022 ; Current Medicine Research and Practice Volume 12 ; 2022 ; 12 ; https://www.cmrpjournal.org/ ; ; > #524
-      au < manifest ; exists ; 2023 ; Current Medicine Research and Practice Volume 13 ; 2023 ; 13 ; https://www.cmrpjournal.org/ ; ; >
+      au < ready ; exists ; 2023 ; Current Medicine Research and Practice Volume 13 ; 2023 ; 13 ; https://www.cmrpjournal.org/ ; ; >
 
   }
 
@@ -12108,7 +12108,7 @@
       au < frozen ; exists ; 2020 ; Dermatologica Sinica Volume 38 ; 2020 ; 38 ; https://www.dermsinica.org/ ; ; >
       au < frozen ; exists ; 2021 ; Dermatologica Sinica Volume 39 ; 2021 ; 39 ; https://www.dermsinica.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Dermatologica Sinica Volume 40 ; 2022 ; 40 ; https://www.dermsinica.org/ ; ; >
-      au < manifest ; exists ; 2023 ; Dermatologica Sinica Volume 41 ; 2023 ; 41 ; https://www.dermsinica.org/ ; ; >
+      au < ready ; exists ; 2023 ; Dermatologica Sinica Volume 41 ; 2023 ; 41 ; https://www.dermsinica.org/ ; ; >
 
   }
 
@@ -12233,7 +12233,7 @@
       au < manifest ; exists ; 2020 ; Indian Journal of Continuing Nursing Education Volume 21 ; 2020 ; 21 ; https://www.ijcne.org/ ; ; >
       au < frozen ; exists ; 2021 ; Indian Journal of Continuing Nursing Education Volume 22 ; 2021 ; 22 ; https://www.ijcne.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Indian Journal of Continuing Nursing Education Volume 23 ; 2022 ; 23 ; https://www.ijcne.org/ ; ; >
-      au < manifest ; exists ; 2023 ; Indian Journal of Continuing Nursing Education Volume 24 ; 2023 ; 24 ; https://www.ijcne.org/ ; ; >
+      au < ready ; exists ; 2023 ; Indian Journal of Continuing Nursing Education Volume 24 ; 2023 ; 24 ; https://www.ijcne.org/ ; ; >
 
   }
 
@@ -12445,7 +12445,7 @@
       au < frozen ; exists ; 2020 ; International Journal of Medicine and Health Development Volume 25 ; 2020 ; 25 ; https://www.ijmhdev.com/ ; ; >
       au < frozen ; exists ; 2021 ; International Journal of Medicine and Health Development Volume 26 ; 2021 ; 26 ; https://www.ijmhdev.com/ ; ; >
       au < deepCrawl ; exists ; 2022 ; International Journal of Medicine and Health Development Volume 27 ; 2022 ; 27 ; https://www.ijmhdev.com/ ; ; >
-      au < manifest ; exists ; 2023 ; International Journal of Medicine and Health Development Volume 28 ; 2023 ; 28 ; https://www.ijmhdev.com/ ; ; >
+      au < ready ; exists ; 2023 ; International Journal of Medicine and Health Development Volume 28 ; 2023 ; 28 ; https://www.ijmhdev.com/ ; ; >
 
   }
 
@@ -13306,7 +13306,7 @@
       au < frozen ; exists ; 2020 ; Journal of West African College of Surgeons Volume 10 ; 2020 ; 10 ; https://jwacs-jcoac.com/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of West African College of Surgeons Volume 11 ; 2021 ; 11 ; https://jwacs-jcoac.com/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Journal of West African College of Surgeons Volume 12 ; 2022 ; 12 ; https://jwacs-jcoac.com/ ; ; >
-      au < manifest ; exists ; 2023 ; Journal of West African College of Surgeons Volume 13 ; 2023 ; 13 ; https://jwacs-jcoac.com/ ; ; >
+      au < ready ; exists ; 2023 ; Journal of West African College of Surgeons Volume 13 ; 2023 ; 13 ; https://jwacs-jcoac.com/ ; ; >
 
   }
 
