@@ -609,9 +609,9 @@
     au < released ; 2022 ; Congressional Documents 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < manifest ; 2023 ; CDOC 2023 ; 2023 ; https://www.govinfo.gov/ >
 
-    au < exists ; 2025 ; CDOC 2025 ; 2025 ; https://www.govinfo.gov/ > #bad date
+    au < manifest ; 2025 ; CDOC 2025 ; 2025 ; https://www.govinfo.gov/ > #bad date
     au < exists ; 2027 ; Congressional Documents 2027 ; 2027 ; https://www.govinfo.gov/ > #bad date
-    au < exists ; 2047 ; Congressional Documents 2047 ; 2047 ; https://www.govinfo.gov/ > #bad date
+    au < manifest ; 2047 ; Congressional Documents 2047 ; 2047 ; https://www.govinfo.gov/ > #bad date
 
   }
 
