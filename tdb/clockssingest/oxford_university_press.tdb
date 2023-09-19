@@ -58,7 +58,7 @@
 
     param[journal_id] = adaptation
 
-    au < manifest ; exists ; 2008 ; 2008 ; Adaptation Volume 1 ; 1 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Adaptation Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Adaptation Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Adaptation Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Adaptation Volume 4 ; 4 ; >
@@ -129,7 +129,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Aesthetic Surgery Journal Volume 25 ; 25 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Aesthetic Surgery Journal Volume 26 ; 26 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Aesthetic Surgery Journal Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Aesthetic Surgery Journal Volume 28 ; 28 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Aesthetic Surgery Journal Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Aesthetic Surgery Journal Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Aesthetic Surgery Journal Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Aesthetic Surgery Journal Volume 31 ; 31 ; >
@@ -601,7 +601,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; American Journal of Clinical Pathology Volume 123-124 ; 123-124 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; American Journal of Clinical Pathology Volume 125-126 ; 125-126 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; American Journal of Clinical Pathology Volume 127-128 ; 127-128 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; American Journal of Clinical Pathology Volume 129-130 ; 129-130 ; >
+    au < ready ; exists ; 2008 ; 2008 ; American Journal of Clinical Pathology Volume 129-130 ; 129-130 ; >
     au < finished ; crawling ; 2009 ; 2009 ; American Journal of Clinical Pathology Volume 131-132 ; 131-132 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2010 ; 2010 ; American Journal of Clinical Pathology Volume 133-134 ; 133-134 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2011 ; 2011 ; American Journal of Clinical Pathology Volume 135-136 ; 135-136 ; reingest2.clockss.org:8085 >
@@ -768,7 +768,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; American Journal of Health-System Pharmacy Volume 62 ; 62 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; American Journal of Health-System Pharmacy Volume 63 ; 63 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; American Journal of Health-System Pharmacy Volume 64 ; 64 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; American Journal of Health-System Pharmacy Volume 65 ; 65 ; >
+    au < ready ; exists ; 2008 ; 2008 ; American Journal of Health-System Pharmacy Volume 65 ; 65 ; >
     au < manifest ; exists ; 2009 ; 2009 ; American Journal of Health-System Pharmacy Volume 66 ; 66 ; > #LXQUEUE-1779
     au < finished ; crawling ; 2010 ; 2010 ; American Journal of Health-System Pharmacy Volume 67 ; 67 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; 2011 ; American Journal of Health-System Pharmacy Volume 68 ; 68 ; reingest2.clockss.org:8085 >
@@ -1036,7 +1036,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Analysis Volume 65 ; 65 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Analysis Volume 66 ; 66 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Analysis Volume 67 ; 67 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Analysis Volume 68 ; 68 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Analysis Volume 68 ; 68 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Analysis Volume 69 ; 69 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Analysis Volume 70 ; 70 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Analysis Volume 71 ; 71 ; >
@@ -1101,7 +1101,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Journal of Animal Science Volume 82 ; 82 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Journal of Animal Science Volume 83 ; 83 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Animal Science Volume 84 ; 84 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Journal of Animal Science Volume 85 ; 85 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Journal of Animal Science Volume 85 ; 85 ; >
     au < finished ; crawling ; 2009 ; 2009 ; Journal of Animal Science Volume 86 ; 86 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2010 ; 2010 ; Journal of Animal Science Volume 87 ; 87 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; 2011 ; Journal of Animal Science Volume 88 ; 88 ; reingest3.clockss.org:8083 >
@@ -1388,7 +1388,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Annals of the Entomological Society of America Volume 98 ; 98 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Annals of the Entomological Society of America Volume 99 ; 99 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Annals of the Entomological Society of America Volume 100 ; 100 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Annals of the Entomological Society of America Volume 101 ; 101 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Annals of the Entomological Society of America Volume 101 ; 101 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Annals of the Entomological Society of America Volume 102 ; 102 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Annals of the Entomological Society of America Volume 103 ; 103 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Annals of the Entomological Society of America Volume 104 ; 104 ; >
@@ -1634,7 +1634,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Arbitration International Volume 21 ; 21 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Arbitration International Volume 22 ; 22 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Arbitration International Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Arbitration International Volume 24 ; 24 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Arbitration International Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Arbitration International Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Arbitration International Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Arbitration International Volume 27 ; 27 ; >
@@ -1922,7 +1922,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; BJA Education Volume 5 ; 5 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; BJA Education Volume 6 ; 6 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; BJA Education Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; BJA Education Volume 8 ; 8 ; >
+    au < ready ; exists ; 2008 ; 2008 ; BJA Education Volume 8 ; 8 ; >
     au < finished ; crawling ; 2009 ; 2009 ; BJA Education Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; 2010 ; BJA Education Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2011 ; 2011 ; BJA Education Volume 11 ; 11 ; reingest2.clockss.org:8085 >
@@ -7024,7 +7024,7 @@
     au < finished ; manifest ; 2018 ; 2018 ; Genome Biology and Evolution Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Genome Biology and Evolution Volume 11 ; 11 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Genome Biology and Evolution Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Genome Biology and Evolution Volume 13 ; 13 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Genome Biology and Evolution Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Genome Biology and Evolution Volume 14 ; 14 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Genome Biology and Evolution Volume 15 ; 15 ; >
 
@@ -10897,7 +10897,7 @@
     au < finished ; manifest ; 2018 ; 2018 ; Journal of Experimental Botany Volume 69 ; 69 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Experimental Botany Volume 70 ; 70 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Experimental Botany Volume 71 ; 71 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Journal of Experimental Botany Volume 72 ; 72 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Journal of Experimental Botany Volume 72 ; 72 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Experimental Botany Volume 73 ; 73 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Journal of Experimental Botany Volume 74 ; 74 ; >
 
@@ -11719,7 +11719,7 @@
     au < finished ; manifest ; 2018 ; 2018 ; Journal of Mammalogy Volume 99 ; 99 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Mammalogy Volume 100 ; 100 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Mammalogy Volume 101 ; 101 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Journal of Mammalogy Volume 102 ; 102 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Journal of Mammalogy Volume 102 ; 102 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Mammalogy Volume 103 ; 103 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Journal of Mammalogy Volume 104 ; 104 ; >
 
@@ -11759,7 +11759,7 @@
     au < finished ; manifest ; 2018 ; 2018 ; Journal of Medical Entomology Volume 55 ; 55 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Medical Entomology Volume 56 ; 56 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Medical Entomology Volume 57 ; 57 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Journal of Medical Entomology Volume 58 ; 58 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Journal of Medical Entomology Volume 58 ; 58 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Medical Entomology Volume 59 ; 59 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Journal of Medical Entomology Volume 60 ; 60 ; >
 
@@ -22679,7 +22679,7 @@
     au < finished ; manifest ; 2018 ; 2018 ; The Year's Work in Critical and Cultural Theory Volume 26 ; 26 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2019 ; 2019 ; The Year's Work in Critical and Cultural Theory Volume 27 ; 27 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2021 ; 2021 ; The Year's Work in Critical and Cultural Theory Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2022 ; 2022 ; The Year's Work in Critical and Cultural Theory Volume 29 ; 29 ; >
+    au < ready ; exists ; 2022 ; 2022 ; The Year's Work in Critical and Cultural Theory Volume 29 ; 29 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; The Year's Work in Critical and Cultural Theory Volume 30 ; 30 ; >
 
   }
