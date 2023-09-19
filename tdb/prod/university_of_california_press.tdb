@@ -579,9 +579,9 @@
     >
       param[journal_id] = cs
 
-      au < ready ; 2020 ; 2020 ; Civic Sociology Volume 1 ; 1 >
-      au < ready ; 2021 ; 2021 ; Civic Sociology Volume 2 ; 2 >
-      au < ready ; 2022 ; 2022 ; Civic Sociology Volume 3 ; 3 >
+      au < releasing ; 2020 ; 2020 ; Civic Sociology Volume 1 ; 1 >
+      au < releasing ; 2021 ; 2021 ; Civic Sociology Volume 2 ; 2 >
+      au < releasing ; 2022 ; 2022 ; Civic Sociology Volume 3 ; 3 >
       au < manifest ; 2023 ; 2023 ; Civic Sociology Volume 4 ; 4 >
 
   }
@@ -809,9 +809,9 @@
       au < doNotProcess ; 2020 ; 2020 ; Federal Sentencing Reporter Volume 32 [2020] ; 32 >
       au < released ; 2020 ; 2020 ; Federal Sentencing Reporter Volume 33 [2020] ; 33 >
       au < released ; 2021 ; 2021 ; Federal Sentencing Reporter Volume 33 [2021] ; 33 >
-      au < ready ; 2021 ; 2021 ; Federal Sentencing Reporter Volume 34 [2021] ; 34 >
+      au < releasing ; 2021 ; 2021 ; Federal Sentencing Reporter Volume 34 [2021] ; 34 >
       au < released ; 2022 ; 2022 ; Federal Sentencing Reporter Volume 34 [2022] ; 34 >
-      au < ready ; 2022 ; 2022 ; Federal Sentencing Reporter Volume 35 [2022] ; 35 >
+      au < releasing ; 2022 ; 2022 ; Federal Sentencing Reporter Volume 35 [2022] ; 35 >
       au < manifest ; 2023 ; 2023 ; Federal Sentencing Reporter Volume 35 [2023] ; 35 >
 
   }
@@ -930,7 +930,7 @@
       au < released ; 2020 ; 2020 ; Film Quarterly Volume 74 [2020] ; 74 >
       au < released ; 2021 ; 2021 ; Film Quarterly Volume 74 [2021] ; 74 >
       au < released ; 2021 ; 2021 ; Film Quarterly Volume 75 [2021] ; 75 >
-      au < ready ; 2022 ; 2022 ; Film Quarterly Volume 75 [2022] ; 75 >
+      au < releasing ; 2022 ; 2022 ; Film Quarterly Volume 75 [2022] ; 75 >
       au < released ; 2022 ; 2022 ; Film Quarterly Volume 76 [2022] ; 76 >
       au < manifest ; 2023 ; 2023 ; Film Quarterly Volume 76 [2023] ; 76 >
 
@@ -1620,11 +1620,11 @@
       au < doNotProcess ; 2017 ; 2017 ; Music Perception: An Interdisciplinary Journal Volume 35 ; 35 >
       au < doNotProcess ; 2018 ; 2018 ; Music Perception: An Interdisciplinary Journal Volume 36 ; 36 >
       au < doNotProcess ; 2019 ; 2019 ; Music Perception: An Interdisciplinary Journal Volume 37 ; 37 >
-      au < ready ; 2020 ; 2020 ; Music Perception: An Interdisciplinary Journal Volume 37 (2020) ; 37 >
+      au < releasing ; 2020 ; 2020 ; Music Perception: An Interdisciplinary Journal Volume 37 (2020) ; 37 >
       au < released ; 2020 ; 2020 ; Music Perception: An Interdisciplinary Journal Volume 38 (2020) ; 38 >
-      au < ready ; 2021 ; 2021 ; Music Perception: An Interdisciplinary Journal Volume 38 (2021) ; 38 >
+      au < releasing ; 2021 ; 2021 ; Music Perception: An Interdisciplinary Journal Volume 38 (2021) ; 38 >
       au < released ; 2021 ; 2021 ; Music Perception: An Interdisciplinary Journal Volume 39 (2021) ; 39 >
-      au < ready ; 2022 ; 2022 ; Music Perception: An Interdisciplinary Journal Volume 39 (2022) ; 39 >
+      au < releasing ; 2022 ; 2022 ; Music Perception: An Interdisciplinary Journal Volume 39 (2022) ; 39 >
       au < released ; 2022 ; 2022 ; Music Perception: An Interdisciplinary Journal Volume 40 (2022) ; 40 >
       au < manifest ; 2023 ; 2023 ; Music Perception: An Interdisciplinary Journal Volume 40 (2023) ; 40 >
 
@@ -1847,7 +1847,7 @@
       au < released ; 2020 ; 2020 ; 19th-Century Music Volume 44 [2020] ; 44 >
       au < released ; 2021 ; 2021 ; 19th-Century Music Volume 44 [2021] ; 44 >
       au < released ; 2021 ; 2021 ; 19th-Century Music Volume 45 [2021] ; 45 >
-      au < ready ; 2022 ; 2022 ; 19th-Century Music Volume 45 [2022] ; 45 >
+      au < releasing ; 2022 ; 2022 ; 19th-Century Music Volume 45 [2022] ; 45 >
       au < released ; 2022 ; 2022 ; 19th-Century Music Volume 46 [2022] ; 46 >
       au < manifest ; 2023 ; 2023 ; 19th-Century Music Volume 46 [2023] ; 46 >
 
@@ -1888,11 +1888,11 @@
 #      au < doNotProcess ; 2019-2020 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 23 ; 23 >
 
 
-      au < ready ; 2020 ; 2020 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 23 [2020] ; 23 >
+      au < releasing ; 2020 ; 2020 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 23 [2020] ; 23 >
       au < released ; 2020 ; 2020 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 24 [2020] ; 24 >
-      au < ready ; 2021 ; 2021 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 24 [2021] ; 24 >
+      au < releasing ; 2021 ; 2021 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 24 [2021] ; 24 >
       au < released ; 2021 ; 2021 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 25 [2021] ; 25 >
-      au < ready ; 2022 ; 2022 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 25 [2022] ; 25 >
+      au < releasing ; 2022 ; 2022 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 25 [2022] ; 25 >
       au < released ; 2022 ; 2022 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 26 [2022] ; 26 >
       au < manifest ; 2023 ; 2023 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 26 [2023] ; 26 >
       au < manifest ; 2023 ; 2023 ; Nova Religio: The Journal of Alternative and Emergent Religions Volume 27 [2023] ; 27 >
