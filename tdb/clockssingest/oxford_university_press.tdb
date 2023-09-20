@@ -1884,7 +1884,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; The Auk: Ornithological Advances Volume 120 ; 120 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; The Auk: Ornithological Advances Volume 121 ; 121 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; The Auk: Ornithological Advances Volume 122 ; 122 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; The Auk: Ornithological Advances Volume 123 ; 123 ; >
+    au < ready ; exists ; 2008 ; 2008 ; The Auk: Ornithological Advances Volume 123 ; 123 ; >
     au < finished ; crawling ; 2009 ; 2009 ; The Auk: Ornithological Advances Volume 124 ; 124 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; 2010 ; The Auk: Ornithological Advances Volume 125 ; 125 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; 2011 ; The Auk: Ornithological Advances Volume 126 ; 126 ; reingest4.clockss.org:8082 >
@@ -2302,7 +2302,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Biological Journal of the Linnean Society Volume 84-86 ; 84-86 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Biological Journal of the Linnean Society Volume 87-89 ; 87-89 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Biological Journal of the Linnean Society Volume 90-92 ; 90-92 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Biological Journal of the Linnean Society Volume 93-95 ; 93-95 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Biological Journal of the Linnean Society Volume 93-95 ; 93-95 ; >
     au < finished ; crawling ; 2009 ; 2009 ; Biological Journal of the Linnean Society Volume 96-98 ; 96-98 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; 2010 ; Biological Journal of the Linnean Society Volume 99-101 ; 99-101 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2011 ; 2011 ; Biological Journal of the Linnean Society Volume 102-104 ; 102-104 ; reingest1.clockss.org:8082 >
@@ -2392,7 +2392,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Biology of Reproduction Volume 72-73 ; 72-73 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Biology of Reproduction Volume 74-75 ; 74-75 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Biology of Reproduction Volume 76-77 ; 76-77 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Biology of Reproduction Volume 78-79 ; 78-79 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Biology of Reproduction Volume 78-79 ; 78-79 ; >
     au < finished ; crawling ; 2009 ; 2009 ; Biology of Reproduction Volume 80-81 ; 80-81 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2010 ; 2010 ; Biology of Reproduction Volume 82-83 ; 82-83 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; 2011 ; Biology of Reproduction Volume 84-85 ; 84-85 ; reingest4.clockss.org:8082 >
@@ -2545,7 +2545,7 @@
     param[journal_id] = biohorizons
     #ceasing publication at the end of 2018
 
-    au < manifest ; exists ; 2008 ; 2008 ; Bioscience Horizons: The International Journal of Student Research Volume 1 ; 1 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Bioscience Horizons: The International Journal of Student Research Volume 1 ; 1 ; >
     au < finished ; crawling ; 2009 ; 2009 ; Bioscience Horizons: The International Journal of Student Research Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; 2010 ; Bioscience Horizons: The International Journal of Student Research Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; 2011 ; Bioscience Horizons: The International Journal of Student Research Volume 4 ; 4 ; reingest3.clockss.org:8083 >
@@ -2886,7 +2886,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; British Journal of Surgery Volume 92 ; 92 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; British Journal of Surgery Volume 93 ; 93 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; British Journal of Surgery Volume 94 ; 94 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; British Journal of Surgery Volume 95 ; 95 ; >
+    au < ready ; exists ; 2008 ; 2008 ; British Journal of Surgery Volume 95 ; 95 ; >
     au < finished ; frozen ; 2009 ; 2009 ; British Journal of Surgery Volume 96 ; 96 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; 2010 ; British Journal of Surgery Volume 97 ; 97 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; 2011 ; British Journal of Surgery Volume 98 ; 98 ; reingest5.clockss.org:8082 >
@@ -3628,19 +3628,19 @@
     #content available from 1976 Volume 1 to 2007 Volume 32
     #move from Wiley, 2023
 
-    au < manifest ; exists ; 2008 ; 2008 ; Clinical and Experimental Dermatology Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Clinical and Experimental Dermatology Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Clinical and Experimental Dermatology Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Clinical and Experimental Dermatology Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Clinical and Experimental Dermatology Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Clinical and Experimental Dermatology Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Clinical and Experimental Dermatology Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Clinical and Experimental Dermatology Volume 30 ; 30 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Clinical and Experimental Dermatology Volume 33 ; 33 ; >
+    au < ready ; exists ; 2009 ; 2009 ; Clinical and Experimental Dermatology Volume 34 ; 34 ; >
+    au < ready ; exists ; 2010 ; 2010 ; Clinical and Experimental Dermatology Volume 35 ; 35 ; >
+    au < ready ; exists ; 2011 ; 2011 ; Clinical and Experimental Dermatology Volume 36 ; 36 ; >
+    au < ready ; exists ; 2012 ; 2012 ; Clinical and Experimental Dermatology Volume 37 ; 37 ; >
+    au < ready ; exists ; 2013 ; 2013 ; Clinical and Experimental Dermatology Volume 38 ; 38 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Clinical and Experimental Dermatology Volume 39 ; 39 ; >
+    au < ready ; exists ; 2015 ; 2015 ; Clinical and Experimental Dermatology Volume 30 ; 30 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Clinical and Experimental Dermatology Volume 41 ; 41 ; >
     au < manifest ; exists ; 2017 ; 2017 ; Clinical and Experimental Dermatology Volume 42 ; 42 ; >
-    au < manifest ; exists ; 2018 ; 2018 ; Clinical and Experimental Dermatology Volume 43 ; 43 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; Clinical and Experimental Dermatology Volume 44 ; 44 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Clinical and Experimental Dermatology Volume 45 ; 45 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Clinical and Experimental Dermatology Volume 43 ; 43 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Clinical and Experimental Dermatology Volume 44 ; 44 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Clinical and Experimental Dermatology Volume 45 ; 45 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Clinical and Experimental Dermatology Volume 46 ; 46 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Clinical and Experimental Dermatology Volume 47 ; 47 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Clinical and Experimental Dermatology Volume 48 ; 48 ; >
