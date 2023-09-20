@@ -300,6 +300,7 @@ public class JasperJsonMetadataExtractorFactory implements FileMetadataExtractor
         String issnFromSrcUrl = null;
         String issnFromJsonPissn = null;
         String eissnFromJsonEissn = null;
+        String doiFromJson = null;
 
         Boolean tdbIssnMatchJson = false;
         Boolean tdbEissnMatchJson = false;
@@ -319,6 +320,11 @@ public class JasperJsonMetadataExtractorFactory implements FileMetadataExtractor
 
         issnFromJsonPissn = getIdentifierIdFromJsonFile(rootNode, "pissn");
         eissnFromJsonEissn = getIdentifierIdFromJsonFile(rootNode, "eissn");
+        doiFromJson = getIdentifierIdFromJsonFile(rootNode, "doi").replace("https://doi.org/", "");
+
+        if (doiFromJson != null) {
+          am.put(MetadataField.FIELD_DOI, doiFromJson);
+        }
 
         log.debug3("Handle issns: getIdentifierIdFromJsonFile, issnFromJsonPissn = " + issnFromJsonPissn + ", eissnFromJsonEissn = " + eissnFromJsonEissn);
 
