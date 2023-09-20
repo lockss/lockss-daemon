@@ -36,6 +36,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import java.text.*;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.*;
 
 import org.lockss.plugin.*;
@@ -898,7 +899,8 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     ud = new UrlData(input, new CIProperties(), TEST_URL);
     cacher = new MyDefaultUrlCacher(mau, ud);
     try {
-      cacher.storeContentIn0(TEST_URL, input, ud.headers, false, null);
+      RepositoryNode leaf = repo.createNewNode(TEST_URL);
+      cacher.storeContentInLeaf(leaf, TEST_URL, input, ud.headers, false, null);
       fail("Copy should have thrown StreamUtil.InputException");
     } catch (StreamUtil.InputException e) {
       IOException t = e.getIOCause();
@@ -923,6 +925,34 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     }
   }
 
+  public void testChunkingErrorThenRetry() throws Exception {
+    String str = StringUtils.repeat("1234567890", 1000);
+    String exmsg = "chunked stream ended unexpectedly";
+
+    ThrowingInputStream is1 =
+      new ThrowingInputStream(new StringInputStream("1 " + str), null, null);
+    is1.setThrowOnRead(new IOException(exmsg), 1000);
+    ud = new UrlData(is1, new CIProperties(), TEST_URL);
+    cacher = new MyDefaultUrlCacher(mau, ud);
+    try {
+      cacher.storeContent();
+      fail("Copy should have thrown CacheException");
+    } catch (CacheException e) {
+      assertClass(IOException.class, e);
+      assertMatchesRE("UnknownExceptionException: Unmapped exception: java.io.IOException: " + exmsg,
+                      e.toString());
+    }
+    RepositoryNode node = repo.getNode(TEST_URL);
+    assertFalse(node.hasContent());
+
+    InputStream is2 = new StringInputStream("2 " + str);
+    ud = new UrlData(is2, new CIProperties(), TEST_URL);
+    cacher = new MyDefaultUrlCacher(mau, ud);
+    cacher.storeContent();
+    node = repo.getNode(TEST_URL);
+    assertTrue(node.hasContent());
+  }
+
   // Should throw exception derived from IOException thrown by InputStream
   // in close()
   public void testCopyInputErrorOnCloseUnmapped() throws Exception {
@@ -932,7 +962,8 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     ud = new UrlData(input, new CIProperties(), TEST_URL);
     cacher = new MyDefaultUrlCacher(mau, ud);
     try {
-      cacher.storeContentIn0(TEST_URL, input, ud.headers, false, null);
+      RepositoryNode leaf = repo.createNewNode(TEST_URL);
+      cacher.storeContentInLeaf(leaf, TEST_URL, input, ud.headers, false, null);
       fail("Copy should have thrown StreamUtil.InputException");
     } catch (StreamUtil.InputException e) {
       Throwable t = e.getCause();

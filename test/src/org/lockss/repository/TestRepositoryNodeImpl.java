@@ -2116,6 +2116,23 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals(RepositoryNodeImpl.INACTIVE_VERSION, leaf.getCurrentVersion());
   }
 
+  public void testAbandonNewVersion() throws Exception {
+    RepositoryNode leaf =
+        createLeaf("http://www.example.com/test1", "test stream", null);
+    assertTrue(leaf.hasContent());
+    props.setProperty("test 1", "value 2");
+    leaf.makeNewVersion();
+    leaf.setNewProperties(props);
+    writeToLeaf(leaf, "test stream 2");
+    leaf.abandonNewVersion();
+
+    props.setProperty("test 1", "value 3");
+    leaf.makeNewVersion();
+    leaf.setNewProperties(props);
+    writeToLeaf(leaf, "test stream 3");
+    leaf.sealNewVersion();
+  }
+
   public void testIsLeaf() throws Exception {
     createLeaf("http://www.example.com/testDir/test1", "test stream", null);
     createLeaf("http://www.example.com/testDir/branch1", "test stream", null);
