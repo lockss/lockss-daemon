@@ -234,12 +234,24 @@ public class JasperJsonMetadataExtractorFactory implements FileMetadataExtractor
       try {
         JsonNode identifierArray = jsonNode.at("/bibjson/identifier");
 
+        String idValue = null;
+
+        log.debug3("Handle identifier : identifierType = " + identifierType);
+
         for (JsonNode identifier : identifierArray) {
           String type = identifier.at("/type").asText();
+
+          log.debug3("Handle identifier : type = " + type);
+
           if (type.equals(identifierType)) {
-            return identifier.at("/id").asText();
+            idValue = identifier.at("/id").asText();
+
+            log.debug3("Handle identifier : identifierType = " + identifierType + ", idValue = " + idValue);
+            return idValue;
           }
         }
+
+        return idValue;
       } catch (Exception e) {
         e.printStackTrace();
       }
@@ -320,10 +332,10 @@ public class JasperJsonMetadataExtractorFactory implements FileMetadataExtractor
 
         issnFromJsonPissn = getIdentifierIdFromJsonFile(rootNode, "pissn");
         eissnFromJsonEissn = getIdentifierIdFromJsonFile(rootNode, "eissn");
-        doiFromJson = getIdentifierIdFromJsonFile(rootNode, "doi").replace("https://doi.org/", "");
+        doiFromJson = getIdentifierIdFromJsonFile(rootNode, "doi");
 
         if (doiFromJson != null) {
-          am.put(MetadataField.FIELD_DOI, doiFromJson);
+          am.put(MetadataField.FIELD_DOI, doiFromJson.replace("https://doi.org/", ""));
         }
 
         log.debug3("Handle issns: getIdentifierIdFromJsonFile, issnFromJsonPissn = " + issnFromJsonPissn + ", eissnFromJsonEissn = " + eissnFromJsonEissn);
@@ -418,7 +430,7 @@ public class JasperJsonMetadataExtractorFactory implements FileMetadataExtractor
             }
 
             if (tdbIssnMatchJson) {
-              log.debug3("=====Handle issns: setting Issn value from TDB Issn to " + tdbIssn);
+              log.debug3("Handle issns: setting Issn value from TDB Issn to " + tdbIssn);
               am.put(MetadataField.FIELD_ISSN, tdbIssn);
             }
             if (tdbEissnMatchJson) {
@@ -427,22 +439,22 @@ public class JasperJsonMetadataExtractorFactory implements FileMetadataExtractor
             }
             if (issnFromSrcUrlMatchJson && tdbIssnMatchJson == false && tdbEissnMatchJson == false ){
               // ONLY USE JSON DATA FOR METADATA
-              log.debug3("=====Handle issns: setting value from JSON") ;
+              log.debug3("Handle issns: setting value from JSON") ;
               if  (issnFromJsonPissn != null) {
-                log.debug3("=====Handle issns: setting ISSN value from JSON issnFromJsonPissn = " +  issnFromSrcUrl);
+                log.debug3("Handle issns: setting ISSN value from JSON issnFromJsonPissn = " +  issnFromSrcUrl);
                 am.put(MetadataField.FIELD_ISSN, issnFromJsonPissn);
 
                 if ( eissnFromJsonEissn == null) {
-                  log.debug3("=====Handle issns: setting ESSIN value from JSON issnFromJsonPissn = " +  eissnFromJsonEissn);
+                  log.debug3("Handle issns: setting ESSIN value from JSON issnFromJsonPissn = " +  eissnFromJsonEissn);
                   am.put(MetadataField.FIELD_EISSN, issnFromJsonPissn);
                 }
               }
               if ( eissnFromJsonEissn != null) {
-                log.debug3("=====Handle issns: setting EISSN value from JSON eissnFromJsonEissn = " +  eissnFromJsonEissn);
+                log.debug3("Handle issns: setting EISSN value from JSON eissnFromJsonEissn = " +  eissnFromJsonEissn);
                 am.put(MetadataField.FIELD_EISSN, eissnFromJsonEissn);
 
                 if  (issnFromJsonPissn == null) {
-                  log.debug3("=====Handle issns: setting ISSN value from JSON eissnFromJsonEissn = = " +  issnFromSrcUrl);
+                  log.debug3("Handle issns: setting ISSN value from JSON eissnFromJsonEissn = = " +  issnFromSrcUrl);
                   am.put(MetadataField.FIELD_ISSN, eissnFromJsonEissn);
 
                 }
