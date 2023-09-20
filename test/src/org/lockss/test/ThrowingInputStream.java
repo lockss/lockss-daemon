@@ -38,6 +38,8 @@ import java.util.*;
 /** An input stream that can throw an exception on demand. */
 public class ThrowingInputStream extends FilterInputStream {
   private IOException throwOnRead;
+  private long throwAtPos = 0;
+  private long curPos = 0;
   private IOException throwOnClose;
   private Error errorOnRead;
 
@@ -54,11 +56,19 @@ public class ThrowingInputStream extends FilterInputStream {
   }
 
   public void setThrowOnRead(IOException ioe) {
+    setThrowOnRead(ioe, 0);
+  }
+
+  /* Cause the stream to throw the specified IOException when it
+   * reaches the sprcified position (more-or-less - accurate only to
+   * within the buffer size) */
+  public void setThrowOnRead(IOException ioe, long atPos) {
     throwOnRead = ioe;
+    throwAtPos = atPos;
   }
 
   private void checkReadError() throws IOException {
-    if (throwOnRead != null) {
+    if (throwOnRead != null && (curPos >= throwAtPos)) {
       throw throwOnRead;
     } else if (errorOnRead != null) {
       throw errorOnRead;
@@ -67,17 +77,21 @@ public class ThrowingInputStream extends FilterInputStream {
 
   public int read() throws IOException {
     checkReadError();
-    return in.read();
+    int res = in.read();
+    curPos++;
+    return res;
   }
 
   public int read(byte[] b, int off, int len) throws IOException {
     checkReadError();
-    return in.read(b, off, len);
+    int res = in.read(b, off, len);
+    checkReadError();
+    curPos += res;
+    return res;
   }
 
   public int read(byte[] b) throws IOException {
-    checkReadError();
-    return in.read(b);
+    return in.read(b, 0, b.length);
   }
 
   public void close() throws IOException {
