@@ -16,33 +16,6 @@
   {
 
     title <
-      name = Journal of Physical Education ;
-      issn = 2073-6452 ;
-      eissn = 2707-5729
-    >
-      param[base_url] = https://jcope.uobaghdad.edu.iq/
-      param[journal_id] = jcope
-      #published 2010-present
-
-      au < manifest ; exists ; 2010 ; Journal of Physical Education Volume 2010 ; 22 ; 2010 ; >
-      au < manifest ; exists ; 2011 ; Journal of Physical Education Volume 2011 ; 23 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; Journal of Physical Education Volume 2012 ; 24 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; Journal of Physical Education Volume 2013 ; 25 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; Journal of Physical Education Volume 2014 ; 26 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; Journal of Physical Education Volume 2015 ; 27 ; 2015 ; >
-      au < frozen ; exists ; 2016 ; Journal of Physical Education Volume 2016 ; 28 ; 2016 ; >
-      au < frozen ; exists ; 2017 ; Journal of Physical Education Volume 2017 ; 29 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; Journal of Physical Education Volume 2018 ; 30 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; Journal of Physical Education Volume 2019 ; 31 ; 2019 ; >
-      au < frozen ; exists ; 2020 ; Journal of Physical Education Volume 2020 ; 32 ; 2020 ; >
-      au < frozen ; exists ; 2021 ; Journal of Physical Education Volume 2021 ; 33 ; 2021 ; >
-      au < crawling ; exists ; 2023 ; Journal of Physical Education Volume 2023 ; 34 ; 2023 ; >
-
-  }
-
-  {
-
-    title <
       name = Modern Sport ;
       issn = 1992-0091 ;
       eissn = 2708-3454
