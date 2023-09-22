@@ -138,3 +138,28 @@
   }
 
 }
+
+{
+  publisher <
+    name = Ubiquity Press
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+
+  {
+
+      title <
+        name = International Journal of Driving Science ;
+        eissn = 2397-1959
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://www.ijds.eu/
+
+      au < exists ; 2018 ; 2 ; International Journal of Driving Science Volume 2021 ; 2021 ; https://up-j-ijds.ubiquityjournal.website/ >
+
+  }
+
+}
