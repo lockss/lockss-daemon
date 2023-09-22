@@ -58,7 +58,7 @@
 
     param[journal_id] = adaptation
 
-    au < ready ; exists ; 2008 ; 2008 ; Adaptation Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Adaptation Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Adaptation Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Adaptation Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Adaptation Volume 4 ; 4 ; >
@@ -129,7 +129,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Aesthetic Surgery Journal Volume 25 ; 25 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Aesthetic Surgery Journal Volume 26 ; 26 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Aesthetic Surgery Journal Volume 27 ; 27 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Aesthetic Surgery Journal Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Aesthetic Surgery Journal Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Aesthetic Surgery Journal Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Aesthetic Surgery Journal Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Aesthetic Surgery Journal Volume 31 ; 31 ; >
@@ -601,7 +601,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; American Journal of Clinical Pathology Volume 123-124 ; 123-124 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; American Journal of Clinical Pathology Volume 125-126 ; 125-126 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; American Journal of Clinical Pathology Volume 127-128 ; 127-128 ; >
-    au < ready ; exists ; 2008 ; 2008 ; American Journal of Clinical Pathology Volume 129-130 ; 129-130 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; American Journal of Clinical Pathology Volume 129-130 ; 129-130 ; >
     au < finished ; crawling ; 2009 ; 2009 ; American Journal of Clinical Pathology Volume 131-132 ; 131-132 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2010 ; 2010 ; American Journal of Clinical Pathology Volume 133-134 ; 133-134 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2011 ; 2011 ; American Journal of Clinical Pathology Volume 135-136 ; 135-136 ; reingest2.clockss.org:8085 >
@@ -768,7 +768,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; American Journal of Health-System Pharmacy Volume 62 ; 62 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; American Journal of Health-System Pharmacy Volume 63 ; 63 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; American Journal of Health-System Pharmacy Volume 64 ; 64 ; >
-    au < ready ; exists ; 2008 ; 2008 ; American Journal of Health-System Pharmacy Volume 65 ; 65 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; American Journal of Health-System Pharmacy Volume 65 ; 65 ; >
     au < manifest ; exists ; 2009 ; 2009 ; American Journal of Health-System Pharmacy Volume 66 ; 66 ; > #LXQUEUE-1779
     au < finished ; crawling ; 2010 ; 2010 ; American Journal of Health-System Pharmacy Volume 67 ; 67 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; 2011 ; American Journal of Health-System Pharmacy Volume 68 ; 68 ; reingest2.clockss.org:8085 >
@@ -1036,7 +1036,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Analysis Volume 65 ; 65 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Analysis Volume 66 ; 66 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Analysis Volume 67 ; 67 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Analysis Volume 68 ; 68 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Analysis Volume 68 ; 68 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Analysis Volume 69 ; 69 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Analysis Volume 70 ; 70 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Analysis Volume 71 ; 71 ; >
@@ -1101,7 +1101,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Journal of Animal Science Volume 82 ; 82 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Journal of Animal Science Volume 83 ; 83 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Animal Science Volume 84 ; 84 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Journal of Animal Science Volume 85 ; 85 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Journal of Animal Science Volume 85 ; 85 ; >
     au < finished ; crawling ; 2009 ; 2009 ; Journal of Animal Science Volume 86 ; 86 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2010 ; 2010 ; Journal of Animal Science Volume 87 ; 87 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; 2011 ; Journal of Animal Science Volume 88 ; 88 ; reingest3.clockss.org:8083 >
@@ -1388,7 +1388,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Annals of the Entomological Society of America Volume 98 ; 98 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Annals of the Entomological Society of America Volume 99 ; 99 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Annals of the Entomological Society of America Volume 100 ; 100 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Annals of the Entomological Society of America Volume 101 ; 101 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Annals of the Entomological Society of America Volume 101 ; 101 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Annals of the Entomological Society of America Volume 102 ; 102 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Annals of the Entomological Society of America Volume 103 ; 103 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Annals of the Entomological Society of America Volume 104 ; 104 ; >
@@ -1634,7 +1634,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Arbitration International Volume 21 ; 21 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Arbitration International Volume 22 ; 22 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Arbitration International Volume 23 ; 23 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Arbitration International Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Arbitration International Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Arbitration International Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Arbitration International Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Arbitration International Volume 27 ; 27 ; >
@@ -1884,7 +1884,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; The Auk: Ornithological Advances Volume 120 ; 120 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; The Auk: Ornithological Advances Volume 121 ; 121 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; The Auk: Ornithological Advances Volume 122 ; 122 ; >
-    au < ready ; exists ; 2008 ; 2008 ; The Auk: Ornithological Advances Volume 123 ; 123 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; The Auk: Ornithological Advances Volume 123 ; 123 ; >
     au < finished ; crawling ; 2009 ; 2009 ; The Auk: Ornithological Advances Volume 124 ; 124 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; 2010 ; The Auk: Ornithological Advances Volume 125 ; 125 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; 2011 ; The Auk: Ornithological Advances Volume 126 ; 126 ; reingest4.clockss.org:8082 >
@@ -1922,7 +1922,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; BJA Education Volume 5 ; 5 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; BJA Education Volume 6 ; 6 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; BJA Education Volume 7 ; 7 ; >
-    au < ready ; exists ; 2008 ; 2008 ; BJA Education Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; BJA Education Volume 8 ; 8 ; >
     au < finished ; crawling ; 2009 ; 2009 ; BJA Education Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; 2010 ; BJA Education Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2011 ; 2011 ; BJA Education Volume 11 ; 11 ; reingest2.clockss.org:8085 >
@@ -2302,7 +2302,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Biological Journal of the Linnean Society Volume 84-86 ; 84-86 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Biological Journal of the Linnean Society Volume 87-89 ; 87-89 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Biological Journal of the Linnean Society Volume 90-92 ; 90-92 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Biological Journal of the Linnean Society Volume 93-95 ; 93-95 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Biological Journal of the Linnean Society Volume 93-95 ; 93-95 ; >
     au < finished ; crawling ; 2009 ; 2009 ; Biological Journal of the Linnean Society Volume 96-98 ; 96-98 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; 2010 ; Biological Journal of the Linnean Society Volume 99-101 ; 99-101 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2011 ; 2011 ; Biological Journal of the Linnean Society Volume 102-104 ; 102-104 ; reingest1.clockss.org:8082 >
@@ -2392,7 +2392,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Biology of Reproduction Volume 72-73 ; 72-73 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Biology of Reproduction Volume 74-75 ; 74-75 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Biology of Reproduction Volume 76-77 ; 76-77 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Biology of Reproduction Volume 78-79 ; 78-79 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Biology of Reproduction Volume 78-79 ; 78-79 ; >
     au < finished ; crawling ; 2009 ; 2009 ; Biology of Reproduction Volume 80-81 ; 80-81 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2010 ; 2010 ; Biology of Reproduction Volume 82-83 ; 82-83 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; 2011 ; Biology of Reproduction Volume 84-85 ; 84-85 ; reingest4.clockss.org:8082 >
@@ -2545,7 +2545,7 @@
     param[journal_id] = biohorizons
     #ceasing publication at the end of 2018
 
-    au < ready ; exists ; 2008 ; 2008 ; Bioscience Horizons: The International Journal of Student Research Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Bioscience Horizons: The International Journal of Student Research Volume 1 ; 1 ; >
     au < finished ; crawling ; 2009 ; 2009 ; Bioscience Horizons: The International Journal of Student Research Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; 2010 ; Bioscience Horizons: The International Journal of Student Research Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; 2011 ; Bioscience Horizons: The International Journal of Student Research Volume 4 ; 4 ; reingest3.clockss.org:8083 >
@@ -2886,7 +2886,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; British Journal of Surgery Volume 92 ; 92 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; British Journal of Surgery Volume 93 ; 93 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; British Journal of Surgery Volume 94 ; 94 ; >
-    au < ready ; exists ; 2008 ; 2008 ; British Journal of Surgery Volume 95 ; 95 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; British Journal of Surgery Volume 95 ; 95 ; >
     au < finished ; frozen ; 2009 ; 2009 ; British Journal of Surgery Volume 96 ; 96 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; 2010 ; British Journal of Surgery Volume 97 ; 97 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; 2011 ; British Journal of Surgery Volume 98 ; 98 ; reingest5.clockss.org:8082 >
@@ -3628,19 +3628,19 @@
     #content available from 1976 Volume 1 to 2007 Volume 32
     #move from Wiley, 2023
 
-    au < ready ; exists ; 2008 ; 2008 ; Clinical and Experimental Dermatology Volume 33 ; 33 ; >
-    au < ready ; exists ; 2009 ; 2009 ; Clinical and Experimental Dermatology Volume 34 ; 34 ; >
-    au < ready ; exists ; 2010 ; 2010 ; Clinical and Experimental Dermatology Volume 35 ; 35 ; >
-    au < ready ; exists ; 2011 ; 2011 ; Clinical and Experimental Dermatology Volume 36 ; 36 ; >
-    au < ready ; exists ; 2012 ; 2012 ; Clinical and Experimental Dermatology Volume 37 ; 37 ; >
-    au < ready ; exists ; 2013 ; 2013 ; Clinical and Experimental Dermatology Volume 38 ; 38 ; >
-    au < ready ; exists ; 2014 ; 2014 ; Clinical and Experimental Dermatology Volume 39 ; 39 ; >
-    au < ready ; exists ; 2015 ; 2015 ; Clinical and Experimental Dermatology Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Clinical and Experimental Dermatology Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2009 ; 2009 ; Clinical and Experimental Dermatology Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2010 ; 2010 ; Clinical and Experimental Dermatology Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2011 ; 2011 ; Clinical and Experimental Dermatology Volume 36 ; 36 ; >
+    au < crawling ; exists ; 2012 ; 2012 ; Clinical and Experimental Dermatology Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2013 ; 2013 ; Clinical and Experimental Dermatology Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; Clinical and Experimental Dermatology Volume 39 ; 39 ; >
+    au < crawling ; exists ; 2015 ; 2015 ; Clinical and Experimental Dermatology Volume 30 ; 30 ; >
     au < manifest ; exists ; 2016 ; 2016 ; Clinical and Experimental Dermatology Volume 41 ; 41 ; >
     au < manifest ; exists ; 2017 ; 2017 ; Clinical and Experimental Dermatology Volume 42 ; 42 ; >
-    au < ready ; exists ; 2018 ; 2018 ; Clinical and Experimental Dermatology Volume 43 ; 43 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Clinical and Experimental Dermatology Volume 44 ; 44 ; >
-    au < ready ; exists ; 2020 ; 2020 ; Clinical and Experimental Dermatology Volume 45 ; 45 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Clinical and Experimental Dermatology Volume 43 ; 43 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Clinical and Experimental Dermatology Volume 44 ; 44 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Clinical and Experimental Dermatology Volume 45 ; 45 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Clinical and Experimental Dermatology Volume 46 ; 46 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Clinical and Experimental Dermatology Volume 47 ; 47 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Clinical and Experimental Dermatology Volume 48 ; 48 ; >
@@ -7024,7 +7024,7 @@
     au < finished ; manifest ; 2018 ; 2018 ; Genome Biology and Evolution Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Genome Biology and Evolution Volume 11 ; 11 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Genome Biology and Evolution Volume 12 ; 12 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Genome Biology and Evolution Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Genome Biology and Evolution Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Genome Biology and Evolution Volume 14 ; 14 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Genome Biology and Evolution Volume 15 ; 15 ; >
 
@@ -10897,7 +10897,7 @@
     au < finished ; manifest ; 2018 ; 2018 ; Journal of Experimental Botany Volume 69 ; 69 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Experimental Botany Volume 70 ; 70 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Experimental Botany Volume 71 ; 71 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Journal of Experimental Botany Volume 72 ; 72 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Journal of Experimental Botany Volume 72 ; 72 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Experimental Botany Volume 73 ; 73 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Journal of Experimental Botany Volume 74 ; 74 ; >
 
@@ -11719,7 +11719,7 @@
     au < finished ; manifest ; 2018 ; 2018 ; Journal of Mammalogy Volume 99 ; 99 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Mammalogy Volume 100 ; 100 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Mammalogy Volume 101 ; 101 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Journal of Mammalogy Volume 102 ; 102 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Journal of Mammalogy Volume 102 ; 102 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Mammalogy Volume 103 ; 103 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Journal of Mammalogy Volume 104 ; 104 ; >
 
