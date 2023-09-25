@@ -3636,12 +3636,12 @@
     au < crawling ; exists ; 2013 ; 2013 ; Clinical and Experimental Dermatology Volume 38 ; 38 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Clinical and Experimental Dermatology Volume 39 ; 39 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Clinical and Experimental Dermatology Volume 30 ; 30 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Clinical and Experimental Dermatology Volume 41 ; 41 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Clinical and Experimental Dermatology Volume 41 ; 41 ; >
     au < manifest ; exists ; 2017 ; 2017 ; Clinical and Experimental Dermatology Volume 42 ; 42 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Clinical and Experimental Dermatology Volume 43 ; 43 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Clinical and Experimental Dermatology Volume 44 ; 44 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Clinical and Experimental Dermatology Volume 45 ; 45 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Clinical and Experimental Dermatology Volume 46 ; 46 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Clinical and Experimental Dermatology Volume 46 ; 46 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Clinical and Experimental Dermatology Volume 47 ; 47 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Clinical and Experimental Dermatology Volume 48 ; 48 ; >
 
@@ -3677,18 +3677,18 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Clinical & Experimental Immunology Volume 143-146 ; 143-146 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Clinical & Experimental Immunology Volume 147-150 ; 147-150 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Clinical & Experimental Immunology Volume 151-154 ; 151-154 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Clinical & Experimental Immunology Volume 155-158 ; 155-158 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Clinical & Experimental Immunology Volume 159-162 ; 159-162 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Clinical & Experimental Immunology Volume 163-166 ; 163-166 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Clinical & Experimental Immunology Volume 167-170 ; 167-170 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Clinical & Experimental Immunology Volume 171-174 ; 171-174 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Clinical & Experimental Immunology Volume 175-178 ; 175-178 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Clinical & Experimental Immunology Volume 179-182 ; 179-182 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Clinical & Experimental Immunology Volume 183-186 ; 183-186 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Clinical & Experimental Immunology Volume 187-190 ; 187-190 ; >
-    au < manifest ; exists ; 2018 ; 2018 ; Clinical & Experimental Immunology Volume 191-194 ; 191-194 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; Clinical & Experimental Immunology Volume 195-198 ; 195-198 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Clinical & Experimental Immunology Volume 199-202 ; 199-202 ; >
+    au < ready ; exists ; 2009 ; 2009 ; Clinical & Experimental Immunology Volume 155-158 ; 155-158 ; >
+    au < ready ; exists ; 2010 ; 2010 ; Clinical & Experimental Immunology Volume 159-162 ; 159-162 ; >
+    au < ready ; exists ; 2011 ; 2011 ; Clinical & Experimental Immunology Volume 163-166 ; 163-166 ; >
+    au < ready ; exists ; 2012 ; 2012 ; Clinical & Experimental Immunology Volume 167-170 ; 167-170 ; >
+    au < ready ; exists ; 2013 ; 2013 ; Clinical & Experimental Immunology Volume 171-174 ; 171-174 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Clinical & Experimental Immunology Volume 175-178 ; 175-178 ; >
+    au < ready ; exists ; 2015 ; 2015 ; Clinical & Experimental Immunology Volume 179-182 ; 179-182 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Clinical & Experimental Immunology Volume 183-186 ; 183-186 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Clinical & Experimental Immunology Volume 187-190 ; 187-190 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Clinical & Experimental Immunology Volume 191-194 ; 191-194 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Clinical & Experimental Immunology Volume 195-198 ; 195-198 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Clinical & Experimental Immunology Volume 199-202 ; 199-202 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Clinical & Experimental Immunology Volume 203-206 ; 203-206 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Clinical & Experimental Immunology Volume 207-210 ; 207-210 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Clinical & Experimental Immunology Volume 211-214 ; 211-214 ; >
@@ -4373,7 +4373,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Digital Scholarship in the Humanities Volume 20 ; 20 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Digital Scholarship in the Humanities Volume 21 ; 21 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Digital Scholarship in the Humanities Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Digital Scholarship in the Humanities Volume 23 ; 23 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Digital Scholarship in the Humanities Volume 23 ; 23 ; >
     au < finished ; crawling ; 2009 ; 2009 ; Digital Scholarship in the Humanities Volume 24 ; 24 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2010 ; 2010 ; Digital Scholarship in the Humanities Volume 25 ; 25 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; 2011 ; Digital Scholarship in the Humanities Volume 26 ; 26 ; reingest1.clockss.org:8082 >
@@ -4888,7 +4888,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; The Economic Journal Volume 115 ; 115 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; The Economic Journal Volume 116 ; 116 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; The Economic Journal Volume 117 ; 117 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; The Economic Journal Volume 118 ; 118 ; >
+    au < ready ; exists ; 2008 ; 2008 ; The Economic Journal Volume 118 ; 118 ; >
     au < finished ; crawling ; 2009 ; 2009 ; The Economic Journal Volume 119 ; 119 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; 2010 ; The Economic Journal Volume 120 ; 120 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; 2011 ; The Economic Journal Volume 121 ; 121 ; reingest4.clockss.org:8082 >
@@ -12799,14 +12799,14 @@
     au < manifest ; exists ; 2011 ; 2011 ; The Journal of Sexual Medicine Volume 8 ; 8 ; >
     au < manifest ; exists ; 2012 ; 2012 ; The Journal of Sexual Medicine Volume 9 ; 9 ; >
     au < manifest ; exists ; 2013 ; 2013 ; The Journal of Sexual Medicine Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; The Journal of Sexual Medicine Volume 11 ; 11 ; >
+    au < ready ; exists ; 2014 ; 2014 ; The Journal of Sexual Medicine Volume 11 ; 11 ; >
     au < manifest ; exists ; 2015 ; 2015 ; The Journal of Sexual Medicine Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; The Journal of Sexual Medicine Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; The Journal of Sexual Medicine Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2018 ; 2018 ; The Journal of Sexual Medicine Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; The Journal of Sexual Medicine Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; The Journal of Sexual Medicine Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; The Journal of Sexual Medicine Volume 18 ; 18 ; >
+    au < ready ; exists ; 2016 ; 2016 ; The Journal of Sexual Medicine Volume 13 ; 13 ; >
+    au < ready ; exists ; 2017 ; 2017 ; The Journal of Sexual Medicine Volume 14 ; 14 ; >
+    au < ready ; exists ; 2018 ; 2018 ; The Journal of Sexual Medicine Volume 15 ; 15 ; >
+    au < ready ; exists ; 2019 ; 2019 ; The Journal of Sexual Medicine Volume 16 ; 16 ; >
+    au < ready ; exists ; 2020 ; 2020 ; The Journal of Sexual Medicine Volume 17 ; 17 ; >
+    au < ready ; exists ; 2021 ; 2021 ; The Journal of Sexual Medicine Volume 18 ; 18 ; >
     au < frozen ; exists ; 2022 ; 2022 ; The Journal of Sexual Medicine Volume 19 ; 19 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; The Journal of Sexual Medicine Volume 20 ; 20 ; >
 
@@ -22469,7 +22469,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; The Review of English Studies Volume 56 ; 56 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; The Review of English Studies Volume 57 ; 57 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; The Review of English Studies Volume 58 ; 58 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; The Review of English Studies Volume 59 ; 59 ; >
+    au < ready ; exists ; 2008 ; 2008 ; The Review of English Studies Volume 59 ; 59 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; The Review of English Studies Volume 60 ; 60 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; The Review of English Studies Volume 61 ; 61 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; The Review of English Studies Volume 62 ; 62 ; >
@@ -22835,7 +22835,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Toxicological Sciences Volume 83-88 ; 83-88 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Toxicological Sciences Volume 89-94 ; 89-94 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Toxicological Sciences Volume 99-100 ; 99-100 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Toxicological Sciences Volume 101-106 ; 101-106 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Toxicological Sciences Volume 101-106 ; 101-106 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Toxicological Sciences Volume 107-112 ; 107-112 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Toxicological Sciences Volume 113-118 ; 113-118 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Toxicological Sciences Volume 119-124 ; 119-124 ; >
@@ -23064,7 +23064,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Tree Physiology Volume 25 ; 25 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Tree Physiology Volume 26 ; 26 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Tree Physiology Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Tree Physiology Volume 28 ; 28 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Tree Physiology Volume 28 ; 28 ; >
     au < finished ; crawling ; 2009 ; 2009 ; Tree Physiology Volume 29 ; 29 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Tree Physiology Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Tree Physiology Volume 31 ; 31 ; >
@@ -23205,7 +23205,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Uniform Law Review - Revue de droit uniforme Volume 10 ; 10 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Uniform Law Review - Revue de droit uniforme Volume 11 ; 11 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Uniform Law Review - Revue de droit uniforme Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Uniform Law Review - Revue de droit uniforme Volume 13 ; 13 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Uniform Law Review - Revue de droit uniforme Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Uniform Law Review - Revue de droit uniforme Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Uniform Law Review - Revue de droit uniforme Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Uniform Law Review - Revue de droit uniforme Volume 16 ; 16 ; >
@@ -23294,7 +23294,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Western Historical Quarterly Volume 36 ; 36 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Western Historical Quarterly Volume 37 ; 37 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Western Historical Quarterly Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Western Historical Quarterly Volume 39 ; 39 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Western Historical Quarterly Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Western Historical Quarterly Volume 40 ; 40 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Western Historical Quarterly Volume 41 ; 41 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Western Historical Quarterly Volume 42 ; 42 ; >
@@ -23373,7 +23373,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Yearbook of European Law Volume 24 ; 24 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Yearbook of European Law Volume 25 ; 25 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Yearbook of European Law Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Yearbook of European Law Volume 27 ; 27 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Yearbook of European Law Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Yearbook of European Law Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Yearbook of European Law Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Yearbook of European Law Volume 30 ; 30 ; >
