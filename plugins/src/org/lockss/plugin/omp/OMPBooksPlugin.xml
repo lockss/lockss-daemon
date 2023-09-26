@@ -1,0 +1,229 @@
+<!--
+
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>development</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.omp.OMPBooksPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_config_props</string>
+        <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url</key>
+                <displayName>Base URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>publisher_id</key>
+                <displayName>Publisher Identifier</displayName>
+                <description>Identifier for publisher (often used as part of file names)</description>
+                <type>1</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>isbn</key>
+                <displayName>ISBN</displayName>
+                <description>ISBN</description>
+                <type>1</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+        </list>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Poll</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
+        </map>
+        </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>Open Monograph Press Books Plugin</string>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"Open Monograph Press Books Plugin, Base URL %s, Publisher ID %s, ISBN %s", base_url, publisher_id, isbn</string>
+    </entry>
+    <entry>
+        <string>au_start_url</string>
+        <!-- https://books.ed.ac.uk/edinburgh-diamond/catalog/book/ed-9781912669325 -->
+        <list>
+            <string>"%s%s/catalog/book/[^/]+-%s", to_https(base_url), publisher_id, isbn</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <list>
+            <!-- https://books.ed.ac.uk/edinburgh-diamond/catalog/download/ED-9781912669585/16/434?inline=1 -->
+            <string>"%s%s/catalog/download/",to_https(base_url), publisher_id</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+        <!--
+           https://books.ed.ac.uk/public/site/images/ed_omp_admin/oaspa-logo.png
+           https://books.ed.ac.uk/public/site/images/ed_omp_admin/alpsp-digital-badge-member-2020.jpg
+           https://books.ed.ac.uk/templates/images/omp_brand.png
+           https://books.ed.ac.uk/lib/pkp/lib/vendor/components/jquery/jquery.min.js?v=3.3.0.14
+           https://books.ed.ac.uk/lib/pkp/lib/vendor/components/jqueryui/jquery-ui.min.js?v=3.3.0.14
+           https://books.ed.ac.uk/plugins/themes/default/js/lib/popper/popper.js?v=3.3.0.14
+           https://books.ed.ac.uk/plugins/themes/default/js/lib/bootstrap/util.js?v=3.3.0.14
+           https://books.ed.ac.uk/plugins/themes/default/js/lib/bootstrap/dropdown.js?v=3.3.0.14
+           https://books.ed.ac.uk/plugins/themes/default/js/main.js?v=3.3.0.14
+           https://books.ed.ac.uk/public/presses/1/submission_7_7_coverImage_en_US_t.jpg
+           https://books.ed.ac.uk/edinburgh-diamond/catalog/view/ed-9781912669325/13/379
+           https://books.ed.ac.uk/public/presses/1/favicon_en_US.png
+
+            https://books.ed.ac.uk/edinburgh-diamond/$$$call$$$/page/page/css?name=stylesheet
+            https://books.ed.ac.uk/edinburgh-diamond/$$$call$$$/page/page/css?name=font
+            https://books.ed.ac.uk/lib/pkp/styles/fontawesome/fontawesome.css?v=3.3.0.14
+            https://books.ed.ac.uk/public/presses/1/styleSheet.css?d=2021-11-16+15%3A01%3A09
+            https://books.ed.ac.uk/public/presses/1/styleSheet.css?v=3.3.0.14
+            https://books.ed.ac.uk/edinburgh-diamond/index
+            https://books.ed.ac.uk/public/presses/1/pageHeaderLogoImage_en_US.png
+            https://books.ed.ac.uk/edinburgh-diamond
+            https://books.ed.ac.uk/edinburgh-diamond/catalog
+            https://books.ed.ac.uk/edinburgh-diamond/book-series
+            http://journals.ed.ac.uk/
+            https://books.ed.ac.uk/edinburgh-diamond/about
+            https://books.ed.ac.uk/edinburgh-diamond/about/privacy
+            https://books.ed.ac.uk/edinburgh-diamond/about/contact
+            https://www.ed.ac.uk/information-services/research-support/edinburgh-diamond/book-hosting-service/submit-book-proposal
+            https://books.ed.ac.uk/edinburgh-diamond/search
+            https://books.ed.ac.uk/edinburgh-diamond/login
+            https://doi.org/10.2218/ED.9781912669325
+            https://books.ed.ac.uk/public/presses/1/submission_7_7_coverImage_en_US_t.jpg
+            https://creativecommons.org/licenses/by/4.0/
+            https://i.creativecommons.org/l/by/4.0/88x31.png
+            https://www.crossref.org/
+            https://assets.crossref.org/logo/crossref-logo-landscape-200.svg
+            https://www.ed.ac.uk/information-services/research-support/edinburgh-diamond/journal-hosting-service/accessibility-statement-for-journal-hosting-site
+            http://www.ed.ac.uk/about/website/freedom-information
+            http://www.ed.ac.uk/about/website/website-terms-conditions
+            https://www.ed.ac.uk/information-services/research-support/edinburgh-diamond/book-hosting-service
+            https://www.ed.ac.uk/information-services/research-support/edinburgh-diamond/resources
+            https://books.ed.ac.uk/edinburgh-diamond/about/aboutThisPublishingSystem
+            https://books.ed.ac.uk/public/presses/1/submission_11_11_coverImage_en_US_t.png
+            https://books.ed.ac.uk/public/presses/1/submission_9_9_coverImage_en_US_t.png
+            https://books.ed.ac.uk/plugins/generic/pdfJsViewer/pdf.js/build/pdf.js
+            https://books.ed.ac.uk/plugins/generic/pdfJsViewer/pdf.js/web/viewer.js
+       -->
+            <string>1,"https://i.creativecommons.org/l/by/4.0/88x31.png"</string>
+            <string>1,"%s(public/site|templates|public/presses)/images/", to_https(base_url)</string>
+            <string>1,"%spublic/presses/*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)?$"", to_https(base_url)</string>
+            <string>1,"%s(lib/pkp|plugins)/", to_https(base_url), publisher_id</string>
+            <string>1,"%s%s/catalog/(book|view|download)/[^/]+-%s", to_https(base_url), publisher_id,isbn</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_url_normalizer</string>
+        <string>org.lockss.plugin.omp.OMPBooksUrlNormalizer</string>
+    </entry>
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.omp.OMPBooksArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.omp.OMPBooksArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*</string>
+                <string>org.lockss.plugin.omp.OMPBooksMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>au_permitted_host_pattern</string>
+        <list>
+            <string>.+\.cloudfront\.net</string>
+            <string>cdnjs\.cloudflare\.com</string>
+            <string>.+\.mathjax\.org</string>
+            <string>.+\.gstatic\.com</string>
+            <string>(fonts|ajax)\.googleapis\.com</string>
+            <string>docs\.lib\.purdue\.edu</string>
+            <string>i\.creativecommons\.org</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_repair_from_peer_if_missing_url_pattern</string>
+        <list>
+        <string>/(plugins/(generic|themes)|lib/pkp|public/journals)/.+[.](css|eot|gif|png|jpe?g|js|svg|ttf|woff)([?]((itok|v)=)?[^&amp;]+)?$</string>
+        </list>
+    </entry>
+    <entry>
+        <!-- these will not count towards poll results but will replicate from peer if above -->
+        <string>au_url_poll_result_weight</string>
+        <list>
+        <string>"/(plugins/(generic|themes)|lib/pkp|public/journals)/.+[.](css|eot|gif|png|jpe?g|js|svg|ttf|woff)([?]((itok|v)=)?[^&amp;]+)?$", 0</string>
+        <string>"/pdfJsViewer/pdf.js/web/viewer.html.*[?]file=.+$", 0</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_def_pause_time</string>
+        <long>3000</long>
+    </entry>
+    <entry>
+        <string>au_def_new_content_crawl</string>
+        <long>1209600000</long>
+    </entry>
+</map>
