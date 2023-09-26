@@ -119,6 +119,9 @@ public class TaylorAndFrancisHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlF
     //and if you get to TOC, don't follow links in header (next/prev)
     HtmlNodeFilters.tagWithAttribute("div", "class", "hd"),
 
+    //x-lockss-node-url: 	https://www.tandfonline.com/doi/10.1057/ejis.2013.27 -- overcrawlled from citation
+    //x-lockss-referrer: 	https://www.tandfonline.com/doi/figure/10.1080/08874417.2021.1913671
+    HtmlNodeFilters.tagWithAttributeRegex("li",  "id", "cit"),
   };
 
   @Override
