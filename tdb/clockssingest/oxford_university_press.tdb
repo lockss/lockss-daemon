@@ -3676,7 +3676,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Clinical & Experimental Immunology Volume 139-142 ; 139-142 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Clinical & Experimental Immunology Volume 143-146 ; 143-146 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Clinical & Experimental Immunology Volume 147-150 ; 147-150 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Clinical & Experimental Immunology Volume 151-154 ; 151-154 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Clinical & Experimental Immunology Volume 151-154 ; 151-154 ; >
     au < crawling ; exists ; 2009 ; 2009 ; Clinical & Experimental Immunology Volume 155-158 ; 155-158 ; >
     au < crawling ; exists ; 2010 ; 2010 ; Clinical & Experimental Immunology Volume 159-162 ; 159-162 ; >
     au < crawling ; exists ; 2011 ; 2011 ; Clinical & Experimental Immunology Volume 163-166 ; 163-166 ; >
@@ -3689,7 +3689,7 @@
     au < crawling ; exists ; 2018 ; 2018 ; Clinical & Experimental Immunology Volume 191-194 ; 191-194 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Clinical & Experimental Immunology Volume 195-198 ; 195-198 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Clinical & Experimental Immunology Volume 199-202 ; 199-202 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Clinical & Experimental Immunology Volume 203-206 ; 203-206 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Clinical & Experimental Immunology Volume 203-206 ; 203-206 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Clinical & Experimental Immunology Volume 207-210 ; 207-210 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Clinical & Experimental Immunology Volume 211-214 ; 211-214 ; >
 
@@ -3759,7 +3759,7 @@
       au < doNotProcess ; exists ; 2005 ; 2005 ; Clinical Chemistry Volume 51 ; 51 ; >
       au < doNotProcess ; exists ; 2006 ; 2006 ; Clinical Chemistry Volume 52 ; 52 ; >
       au < doNotProcess ; exists ; 2007 ; 2007 ; Clinical Chemistry Volume 53 ; 53 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; Clinical Chemistry Volume 54 ; 54 ; >
+      au < ready ; exists ; 2008 ; 2008 ; Clinical Chemistry Volume 54 ; 54 ; >
       au < finished ; crawling ; 2009 ; 2009 ; Clinical Chemistry Volume 55 ; 55 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2010 ; 2010 ; Clinical Chemistry Volume 56 ; 56 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2011 ; 2011 ; Clinical Chemistry Volume 57 ; 57 ; reingest1.clockss.org:8082 >
@@ -4020,7 +4020,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; The Condor: Ornithological Applications Volume 107 ; 107 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; The Condor: Ornithological Applications Volume 108 ; 108 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; The Condor: Ornithological Applications Volume 109 ; 109 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; The Condor: Ornithological Applications Volume 110 ; 110 ; >
+    au < ready ; exists ; 2008 ; 2008 ; The Condor: Ornithological Applications Volume 110 ; 110 ; >
     au < finished ; crawling ; 2009 ; 2009 ; The Condor: Ornithological Applications Volume 111 ; 111 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; 2010 ; The Condor: Ornithological Applications Volume 112 ; 112 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2011 ; 2011 ; The Condor: Ornithological Applications Volume 113 ; 113 ; reingest2.clockss.org:8085 >
@@ -4483,7 +4483,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Diseases of the Esophagus Volume 18 ; 18 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Diseases of the Esophagus Volume 19 ; 19 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Diseases of the Esophagus Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Diseases of the Esophagus Volume 21 ; 21 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Diseases of the Esophagus Volume 21 ; 21 ; >
     au < finished ; crawling ; 2009 ; 2009 ; Diseases of the Esophagus Volume 22 ; 22 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2010 ; 2010 ; Diseases of the Esophagus Volume 23 ; 23 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2011 ; 2011 ; Diseases of the Esophagus Volume 24 ; 24 ; reingest2.clockss.org:8085 >
@@ -4741,7 +4741,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; The Econometrics Journal Volume 8 ; 8 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; The Econometrics Journal Volume 9 ; 9 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; The Econometrics Journal Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; The Econometrics Journal Volume 11 ; 11 ; >
+    au < ready ; exists ; 2008 ; 2008 ; The Econometrics Journal Volume 11 ; 11 ; >
     au < finished ; crawling ; 2009 ; 2009 ; The Econometrics Journal Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2010 ; 2010 ; The Econometrics Journal Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2011 ; 2011 ; The Econometrics Journal Volume 14 ; 14 ; reingest3.clockss.org:8083 >
@@ -5307,7 +5307,7 @@
     au < finished ; manifest ; 2018 ; 2018 ; Epidemiologic Reviews Volume 40 ; 40 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; 2019 ; Epidemiologic Reviews Volume 41 ; 41 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2020 ; 2020 ; Epidemiologic Reviews Volume 42 ; 42 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Epidemiologic Reviews Volume 43 ; 43 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Epidemiologic Reviews Volume 43 ; 43 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Epidemiologic Reviews Volume 44 ; 44 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Epidemiologic Reviews Volume 45 ; 45 ; >
 
@@ -10110,7 +10110,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Journal of Burn Care & Research Volume 26 ; 26 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Journal of Burn Care & Research Volume 27 ; 27 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Burn Care & Research Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Journal of Burn Care & Research Volume 29 ; 29 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Journal of Burn Care & Research Volume 29 ; 29 ; >
     au < finished ; crawling ; 2009 ; 2009 ; Journal of Burn Care & Research Volume 30 ; 30 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2010 ; 2010 ; Journal of Burn Care & Research Volume 31 ; 31 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2011 ; 2011 ; Journal of Burn Care & Research Volume 32 ; 32 ; reingest3.clockss.org:8083 >
@@ -12373,19 +12373,19 @@
     #content avilable online from 1967 Volume 1 to 2007 Volume 41
 
     au < manifest ; exists ; 2008 ; 2008 ; Journal of Philosophy of Education Volume 42 ; 42 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Journal of Philosophy of Education Volume 43 ; 43 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Journal of Philosophy of Education Volume 44 ; 44 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Journal of Philosophy of Education Volume 45 ; 45 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Journal of Philosophy of Education Volume 46 ; 46 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Journal of Philosophy of Education Volume 47 ; 47 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Journal of Philosophy of Education Volume 48 ; 48 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Journal of Philosophy of Education Volume 49 ; 49 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Journal of Philosophy of Education Volume 50 ; 50 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Journal of Philosophy of Education Volume 51 ; 51 ; >
-    au < manifest ; exists ; 2018 ; 2018 ; Journal of Philosophy of Education Volume 52 ; 52 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; Journal of Philosophy of Education Volume 53 ; 53 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Journal of Philosophy of Education Volume 54 ; 54 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Journal of Philosophy of Education Volume 55 ; 55 ; >
+    au < ready ; exists ; 2009 ; 2009 ; Journal of Philosophy of Education Volume 43 ; 43 ; >
+    au < ready ; exists ; 2010 ; 2010 ; Journal of Philosophy of Education Volume 44 ; 44 ; >
+    au < ready ; exists ; 2011 ; 2011 ; Journal of Philosophy of Education Volume 45 ; 45 ; >
+    au < ready ; exists ; 2012 ; 2012 ; Journal of Philosophy of Education Volume 46 ; 46 ; >
+    au < ready ; exists ; 2013 ; 2013 ; Journal of Philosophy of Education Volume 47 ; 47 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Journal of Philosophy of Education Volume 48 ; 48 ; >
+    au < ready ; exists ; 2015 ; 2015 ; Journal of Philosophy of Education Volume 49 ; 49 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Journal of Philosophy of Education Volume 50 ; 50 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Journal of Philosophy of Education Volume 51 ; 51 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Journal of Philosophy of Education Volume 52 ; 52 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Journal of Philosophy of Education Volume 53 ; 53 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Journal of Philosophy of Education Volume 54 ; 54 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Journal of Philosophy of Education Volume 55 ; 55 ; >
     au < frozen ; exists ; 2022 ; 2022 ; Journal of Philosophy of Education Volume 56 ; 56 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Journal of Philosophy of Education Volume 57 ; 57 ; >
 
@@ -12793,14 +12793,14 @@
     au < exists ; exists ; 2005 ; 2005 ; The Journal of Sexual Medicine Volume 2 ; 2 ; >
     au < exists ; exists ; 2006 ; 2006 ; The Journal of Sexual Medicine Volume 3 ; 3 ; >
     au < exists ; exists ; 2007 ; 2007 ; The Journal of Sexual Medicine Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; The Journal of Sexual Medicine Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; The Journal of Sexual Medicine Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; The Journal of Sexual Medicine Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; The Journal of Sexual Medicine Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; The Journal of Sexual Medicine Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; The Journal of Sexual Medicine Volume 10 ; 10 ; >
+    au < ready ; exists ; 2008 ; 2008 ; The Journal of Sexual Medicine Volume 5 ; 5 ; >
+    au < ready ; exists ; 2009 ; 2009 ; The Journal of Sexual Medicine Volume 6 ; 6 ; >
+    au < ready ; exists ; 2010 ; 2010 ; The Journal of Sexual Medicine Volume 7 ; 7 ; >
+    au < ready ; exists ; 2011 ; 2011 ; The Journal of Sexual Medicine Volume 8 ; 8 ; >
+    au < ready ; exists ; 2012 ; 2012 ; The Journal of Sexual Medicine Volume 9 ; 9 ; >
+    au < ready ; exists ; 2013 ; 2013 ; The Journal of Sexual Medicine Volume 10 ; 10 ; >
     au < crawling ; exists ; 2014 ; 2014 ; The Journal of Sexual Medicine Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; The Journal of Sexual Medicine Volume 12 ; 12 ; >
+    au < ready ; exists ; 2015 ; 2015 ; The Journal of Sexual Medicine Volume 12 ; 12 ; >
     au < crawling ; exists ; 2016 ; 2016 ; The Journal of Sexual Medicine Volume 13 ; 13 ; >
     au < crawling ; exists ; 2017 ; 2017 ; The Journal of Sexual Medicine Volume 14 ; 14 ; >
     au < crawling ; exists ; 2018 ; 2018 ; The Journal of Sexual Medicine Volume 15 ; 15 ; >
@@ -23386,7 +23386,7 @@
     au < finished ; manifest ; 2018 ; 2018 ; Yearbook of European Law Volume 37 ; 37 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2019 ; 2019 ; Yearbook of European Law Volume 38 ; 38 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Yearbook of European Law Volume 39 (2020) ; 39 ; >
-    au < manifest ; exists ; 2022 ; 2022 ; Yearbook of European Law Volume 40 (2021) ; 40 ; >
+    au < ready ; exists ; 2022 ; 2022 ; Yearbook of European Law Volume 40 (2021) ; 40 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Yearbook of European Law Volume 41 (2022) ; 41 ; >
 
   }
