@@ -1912,11 +1912,11 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.ijelt.dundee.ac.uk/
+      param[base_url] = https://account.ijelt.dundee.ac.uk/ #login found
       param[journal_id] = up-j-ijelt
 
-      au < expected ; exists ; 2022 ; 1 ; International Journal of Educational and Life Transitions Volume 2022 ; 2022 ; >
-      au < expected ; exists ; 2023 ; 2 ; International Journal of Educational and Life Transitions Volume 2023 ; 2023 ; >
+      au < expected ; exists ; 2022 ; 1 ; International Journal of Educational and Life Transitions Volume 2022 ; 2022 ; > #login found
+      au < expected ; exists ; 2023 ; 2 ; International Journal of Educational and Life Transitions Volume 2023 ; 2023 ; > #login found
 
   }
 
@@ -1936,6 +1936,23 @@
       au < crawling ; exists ; 2023 ; 3 ; Swiss Psychology Open Volume 2023 ; 2023 ; >
 
   }
+
+  {
+
+      title <
+        name = International Journal of Driving Science ;
+        eissn = 2397-1959
+      >
+
+      param[base_url] = https://account.up-j-ijds.ubiquityjournal.website/
+      param[journal_id] = up-j-ijds
+      #LXPUB-876
+
+      au < manifest ; exists ; 2018 ; 1 ; International Journal of Driving Science Volume 2018 (OJS3) ; 2018 ; >
+      au < manifest ; exists ; 2021 ; 2 ; International Journal of Driving Science Volume 2021 (OJS3) ; 2021 ; >
+
+  }
+
 }
 
 {

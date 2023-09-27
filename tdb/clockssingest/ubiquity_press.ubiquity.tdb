@@ -2321,34 +2321,6 @@
 
 {
   publisher <
-    name = Ubiquity Press ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 5 ;
-    info[poller] = 8
-  >
-
-    provider = Ubiquity Press
-    plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
-
-  {
-
-      title <
-        name = International Journal of Driving Science ;
-        eissn = 2397-1959
-      >
-
-      comment[publisher] = Ubiquity Press
-      #LXPUB-876
-
-      au < manifest ; exists ; 2021 ; 2 ; International Journal of Driving Science Volume 2021 ; 2021 ; https://account.up-j-ijds.ubiquityjournal.website/ ; >
-
-  }
-}
-
-{
-  publisher <
     name = University of Birmingham ;
     info[contract] = 2011 ;
     info[back] = 2000 ;
