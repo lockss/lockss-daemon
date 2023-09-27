@@ -58,17 +58,6 @@ public class TestTafHtmlHashFilterFactory extends LockssTestCase {
         getResourceAsStream(fName),
         Constants.ENCODING_UTF_8);
     String fStr = StringUtil.fromInputStream(actIn);
-
-    String currentDirectory = System.getProperty("user.dir");
-    String pathname = currentDirectory +
-            "/plugins/test/src/org/lockss/plugin/taylorandfrancis/generated.html";
-    if (fStr.length() > 0) {
-      FileUtils.writeStringToFile(new File(pathname), fStr, Constants.DEFAULT_ENCODING);
-    } else {
-      FileUtils.writeStringToFile(new File(pathname), "Empty", Constants.DEFAULT_ENCODING);
-    }
-
-
     return fStr;
   }
 
