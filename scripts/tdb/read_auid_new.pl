@@ -3573,7 +3573,7 @@ while (my $line = <>) {
             $vol_title =~ s/\s*\n\s*/ /g;
         }
     }
-    sleep(4);
+    sleep(5);
 
   #Silverchair CLOCKSS. Includes year/volume_name. Common Theme
   } elsif (($plugin eq "ClockssAAPSilverchairPlugin") || 
@@ -3608,7 +3608,7 @@ while (my $line = <>) {
             $vol_title =~ s/\s*\n\s*/ /g;
         }
     }
-    sleep(4);
+    sleep(5);
     
   #Silverchair GLN. Includes year/volume_name. SilverchairScholarlyPublishingCollectivePlugin
   } elsif (($plugin eq "PSUPSilverchairPlugin")) {
@@ -3698,7 +3698,7 @@ while (my $line = <>) {
             $vol_title =~ s/\s*\n\s*/ /g;
         }
     }
-  sleep(4);
+  sleep(5);
     
   #Silverchair CLOCKSS OUP & DUP. No year/volume_name
   } elsif (($plugin eq "OupSilverchairPlugin") || 
@@ -3728,7 +3728,7 @@ while (my $line = <>) {
             $vol_title =~ s/\s*\n\s*/ /g;
         }
     }
-  sleep(4);
+  sleep(5);
     
   } elsif (($plugin eq "ClockssAnuPlugin")) {
     #$url = sprintf("%spublications/%s", $param{base_url}, $param{journal_id});
