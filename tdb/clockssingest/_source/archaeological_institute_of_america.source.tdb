@@ -34,7 +34,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/warcfiles/american-journal-of-archaeology-open-access-released/
 
     #Open Access materials for 8/1/2018-12/31/2021. After 1/1/2022, content is listed with the volume
-    au < expected ; exists ; 2023 ; American Journal of Archaeology WARC Content 2023 ; 2023 >
+    au < manifest ; exists ; 2023 ; American Journal of Archaeology WARC Content 2023 ; 2023 >
     }
 
   }
