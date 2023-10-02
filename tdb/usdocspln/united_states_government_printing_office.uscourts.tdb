@@ -397,7 +397,7 @@
     au < released ; 2019 ; USCOURTS_ca4 2019 ; USCOURTS ; ca4 ; 2019 >
     au < manifest ; 2020 ; USCOURTS_ca4 2020 ; USCOURTS ; ca4 ; 2020 >
     au < manifest ; 2021 ; USCOURTS_ca4 2021 ; USCOURTS ; ca4 ; 2021 >
-    au < manifest ; 2022 ; USCOURTS_ca4 2022 ; USCOURTS ; ca4 ; 2022 >
+    au < ready ; 2022 ; USCOURTS_ca4 2022 ; USCOURTS ; ca4 ; 2022 >
 
     au < manifest ; 1995 ; USCOURTS_ca5 1995 ; USCOURTS ; ca5 ; 1995 >
     au < manifest ; 1996 ; USCOURTS_ca5 1996 ; USCOURTS ; ca5 ; 1996 >
@@ -1089,7 +1089,7 @@
     au < manifest ; 2019 ; USCOURTS_ilnd 2019 ; USCOURTS ; ilnd ; 2019 >
     au < manifest ; 2020 ; USCOURTS_ilnd 2020 ; USCOURTS ; ilnd ; 2020 >
     au < manifest ; 2021 ; USCOURTS_ilnd 2021 ; USCOURTS ; ilnd ; 2021 >
-    au < manifest ; 2022 ; USCOURTS_ilnd 2022 ; USCOURTS ; ilnd ; 2022 >
+    au < ready ; 2022 ; USCOURTS_ilnd 2022 ; USCOURTS ; ilnd ; 2022 >
 
     au < doNotProcess ; 2006 ; USCOURTS_ilsb 2006 ; USCOURTS ; ilsb ; 2006 >
     au < doNotProcess ; 2007 ; USCOURTS_ilsb 2007 ; USCOURTS ; ilsb ; 2007 >
@@ -1232,7 +1232,7 @@
     au < manifest ; 2019 ; USCOURTS_kywb 2019 ; USCOURTS ; kywb ; 2019 >
     au < manifest ; 2020 ; USCOURTS_kywb 2020 ; USCOURTS ; kywb ; 2020 >
     au < manifest ; 2021 ; USCOURTS_kywb 2021 ; USCOURTS ; kywb ; 2021 >
-    au < manifest ; 2022 ; USCOURTS_kywb 2022 ; USCOURTS ; kywb ; 2022 >
+    au < ready ; 2022 ; USCOURTS_kywb 2022 ; USCOURTS ; kywb ; 2022 >
 
     au < doNotProcess ; 2005 ; USCOURTS_kywd 2005 ; USCOURTS ; kywd ; 2005 >
     au < doNotProcess ; 2006 ; USCOURTS_kywd 2006 ; USCOURTS ; kywd ; 2006 >
@@ -1636,7 +1636,7 @@
     au < manifest ; 2019 ; USCOURTS_mtb 2019 ; USCOURTS ; mtb ; 2019 >
     au < manifest ; 2020 ; USCOURTS_mtb 2020 ; USCOURTS ; mtb ; 2020 >
     au < manifest ; 2021 ; USCOURTS_mtb 2021 ; USCOURTS ; mtb ; 2021 >
-    au < manifest ; 2022 ; USCOURTS_mtb 2022 ; USCOURTS ; mtb ; 2022 >
+    au < ready ; 2022 ; USCOURTS_mtb 2022 ; USCOURTS ; mtb ; 2022 >
 
     au < manifest ; 1997 ; USCOURTS_mtd 1997 ; USCOURTS ; mtd ; 1997 >
     au < manifest ; 2010 ; USCOURTS_mtd 2010 ; USCOURTS ; mtd ; 2010 >
@@ -2088,7 +2088,7 @@
     au < manifest ; 2019 ; USCOURTS_okwb 2019 ; USCOURTS ; okwb ; 2019 >
     au < manifest ; 2020 ; USCOURTS_okwb 2020 ; USCOURTS ; okwb ; 2020 >
     au < manifest ; 2021 ; USCOURTS_okwb 2021 ; USCOURTS ; okwb ; 2021 >
-    au < manifest ; 2022 ; USCOURTS_okwb 2022 ; USCOURTS ; okwb ; 2022 >
+    au < ready ; 2022 ; USCOURTS_okwb 2022 ; USCOURTS ; okwb ; 2022 >
 
     au < released ; 2010 ; USCOURTS_okwd 2010 ; USCOURTS ; okwd ; 2010 >
     au < released ; 2011 ; USCOURTS_okwd 2011 ; USCOURTS ; okwd ; 2011 >
@@ -2598,7 +2598,7 @@
     au < manifest ; 2019 ; USCOURTS_vid 2019 ; USCOURTS ; vid ; 2019 >
     au < manifest ; 2020 ; USCOURTS_vid 2020 ; USCOURTS ; vid ; 2020 >
     au < manifest ; 2021 ; USCOURTS_vid 2021 ; USCOURTS ; vid ; 2021 >
-    au < manifest ; 2022 ; USCOURTS_vid 2022 ; USCOURTS ; vid ; 2022 >
+    au < ready ; 2022 ; USCOURTS_vid 2022 ; USCOURTS ; vid ; 2022 >
 
     au < doNotProcess ; 2007 ; USCOURTS_vtd 2007 ; USCOURTS ; vtd ; 2007 >
     au < doNotProcess ; 2008 ; USCOURTS_vtd 2008 ; USCOURTS ; vtd ; 2008 >
@@ -2788,7 +2788,7 @@
     au < manifest ; 2019 ; USCOURTS_wyd 2019 ; USCOURTS ; wyd ; 2019 >
     au < manifest ; 2020 ; USCOURTS_wyd 2020 ; USCOURTS ; wyd ; 2020 >
     au < manifest ; 2021 ; USCOURTS_wyd 2021 ; USCOURTS ; wyd ; 2021 >
-    au < manifest ; 2022 ; USCOURTS_wyd 2022 ; USCOURTS ; wyd ; 2022 >
+    au < ready ; 2022 ; USCOURTS_wyd 2022 ; USCOURTS ; wyd ; 2022 >
 
     au < manifest ; 2023 ; USCOURTS_akb 2023 ; USCOURTS ; akb ; 2023 >
     au < manifest ; 2023 ; USCOURTS_akd 2023 ; USCOURTS ; akd ; 2023 >
@@ -2944,7 +2944,7 @@
     au < manifest ; 2019 ; USCOURTS_nynb 2019 ; USCOURTS ; nynb ; 2019 >
     au < manifest ; 2020 ; USCOURTS_nynb 2020 ; USCOURTS ; nynb ; 2020 >
     au < manifest ; 2021 ; USCOURTS_nynb 2021 ; USCOURTS ; nynb ; 2021 >
-    au < manifest ; 2022 ; USCOURTS_nynb 2022 ; USCOURTS ; nynb ; 2022 >
+    au < ready ; 2022 ; USCOURTS_nynb 2022 ; USCOURTS ; nynb ; 2022 >
     au < manifest ; 2023 ; USCOURTS_nynb 2023 ; USCOURTS ; nynb ; 2023 >
     au < manifest ; 2023 ; USCOURTS_nynd 2023 ; USCOURTS ; nynd ; 2023 >
     au < manifest ; 2023 ; USCOURTS_nysb 2023 ; USCOURTS ; nysb ; 2023 >
