@@ -26,7 +26,7 @@
     au < manifest ; exists ; 2019 ; 2019 ; Blue-Green Systems Volume 1 ; 1 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Blue-Green Systems Volume 2 ; 2 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Blue-Green Systems Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2022 ; 2022 ; Blue-Green Systems Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2022 ; 2022 ; Blue-Green Systems Volume 4 ; 4 ; >
     au < manifest ; exists ; 2023 ; 2023 ; Blue-Green Systems Volume 5 ; 5 ; >
 
   }
@@ -45,7 +45,7 @@
     au < frozen ; exists ; 2019 ; 2019 ; H2Open Journal Volume 2 ; 2 ; >
     au < crawling ; exists ; 2020 ; 2020 ; H2Open Journal Volume 3 ; 3 ; >
     au < crawling ; exists ; 2021 ; 2021 ; H2Open Journal Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2022 ; 2022 ; H2Open Journal Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2022 ; 2022 ; H2Open Journal Volume 5 ; 5 ; >
     au < manifest ; exists ; 2023 ; 2023 ; H2Open Journal Volume 6 ; 6 ; >
 
   }
@@ -115,7 +115,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Hydrology Research Volume 50 ; 50 ; reingest4.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2020 ; 2020 ; Hydrology Research Volume 51 ; 51 ; > 
     au < crawling ; exists ; 2021 ; 2021 ; Hydrology Research Volume 52 ; 52 ; > 
-    au < crawling ; exists ; 2022 ; 2022 ; Hydrology Research Volume 53 ; 53 ; > 
+    au < frozen ; exists ; 2022 ; 2022 ; Hydrology Research Volume 53 ; 53 ; > 
     au < manifest ; exists ; 2023 ; 2023 ; Hydrology Research Volume 54 ; 54 ; > 
 
   }
@@ -139,11 +139,11 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Water and Climate Change Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Water and Climate Change Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Water and Climate Change Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Journal of Water and Climate Change Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Journal of Water and Climate Change Volume 9 ; 9 ; >
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Water and Climate Change Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2020 ; 2020 ; Journal of Water and Climate Change Volume 11 ; 11 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Water and Climate Change Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2022 ; 2022 ; Journal of Water and Climate Change Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2022 ; 2022 ; Journal of Water and Climate Change Volume 13 ; 13 ; >
     au < manifest ; exists ; 2023 ; 2023 ; Journal of Water and Climate Change Volume 14 ; 14 ; >
 
   }
@@ -247,7 +247,7 @@
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Water, Sanitation and Hygiene for Development Volume 8 ; 8 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Journal of Water, Sanitation and Hygiene for Development Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Water, Sanitation and Hygiene for Development Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Journal of Water, Sanitation and Hygiene for Development Volume 11 ; 11 ; > #403 forbidden, https://iwa.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
+    au < frozen ; exists ; 2021 ; 2021 ; Journal of Water, Sanitation and Hygiene for Development Volume 11 ; 11 ; > #403 forbidden, https://iwa.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Water, Sanitation and Hygiene for Development Volume 12 ; 12 ; >
     au < manifest ; exists ; 2023 ; 2023 ; Journal of Water, Sanitation and Hygiene for Development Volume 13 ; 13 ; >
 
