@@ -4199,6 +4199,49 @@ while (my $line = <>) {
         }
     }
   sleep(4);
+  # End ClockssWroclawMedicalUniversityJournalsPlugin
+
+  # Start Arkat Arkivoc.
+  #https://www.arkat-usa.org/arkivoc-journal #list of volumes
+  #https://www.arkat-usa.org/arkivoc-journal/browse-arkivoc/2022 #toc
+  #https://www.arkat-usa.org/arkatusa/clockss/?year=2022 #metadata
+  } elsif ($plugin eq "ClockssArkivoc2022Plugin" || $plugin eq "Arkivoc2022Plugin") {
+      $url_p = sprintf("%sarkivoc-journal/", $param{base_url});
+      #printf("url_p is %s\n",$url_p);
+      $man_url_p = uri_unescape($url_p);
+      my $p_req = HTTP::Request->new(GET, $man_url_p);
+      my $p_resp = $ua->request($p_req);
+      #printf("resp is %s\n",$p_resp->status_line);
+      my $perm_contents = $p_resp->is_success ? $p_resp->content : "";
+      ###
+      $url_s = sprintf("%sarkivoc-journal/browse-arkivoc/%s", $param{base_url}, $param{year});
+      $man_url_s = uri_unescape($url_s);
+      my $s_req = HTTP::Request->new(GET, $man_url_s);
+      my $s_resp = $ua->request($s_req);
+      #printf("resp is %s\n",$s_resp->status_line);
+      my $start_contents = $s_resp->is_success ? $s_resp->content : "";
+      ###
+      $man_url = $man_url_s;
+      if (! $s_resp->is_success || ! $p_resp->is_success ) {
+        $result = "--REQ_FAIL--" . $p_resp->code() . " " . $p_resp->message() . " " . $s_resp->code() . " " . $s_resp->message();
+      } elsif ($p_req->url ne $p_resp->request->uri) {
+        $vol_title = $p_resp->request->uri;
+        $result = "Redirected";
+      } elsif (! defined($perm_contents)) {
+        $result = "--NOT_DEF--";
+      } elsif ($perm_contents !~ m/$clockss_tag/ || $perm_contents !~ m/$lockss_tag/) {
+        $result = "--NO_TAG--";
+      #} elsif ($start_contents !~ m/\/arkivoc-journal\/browse-arkivoc\/$param{year}\/%d\d/) {
+      } elsif ($start_contents !~ m/\/arkivoc-journal\/browse-arkivoc\/$param{year}\/\d*\//s) {
+        $result = "--NO_ART--";
+      } else {
+        $result = "Manifest";
+        if ($start_contents =~ m/<title>(.*)<\/title>/si) {
+            $vol_title = $1; # . " Volume " . $param{volume_name} . " Year " . $param{year};
+            $vol_title =~ s/\s*\n\s*/ /g;
+        }
+      }
+  sleep(4);
 
 #  # OECD Publisher
 #  # Books and Working Papers
