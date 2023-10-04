@@ -91,57 +91,49 @@ public class KluwerLawOnix3BooksSourceXmlMetadataExtractorFactory extends Source
     protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
 
-      String filenameValue = oneAM.getRaw(helper.getFilenameXPathKey());
+      String relatedProductIDValue = null;
+      String filenameValue = null;
+      String pdf = null;
+      String epub = null;
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
       List<String> returnList = new ArrayList<>();
 
-      String pdf = cuBase + filenameValue + ".pdf";
-      String epub = cuBase + filenameValue + ".epub";
-
-      returnList.add(cuBase + filenameValue + ".pdf");
-      returnList.add(cuBase + filenameValue + ".epub");
-
-      log.debug3("File pdf = " + pdf + ", epub = " + epub);
-
-      return returnList;
-    }
-
-    @Override
-    protected boolean preEmitCheck(SourceXmlSchemaHelper schemaHelper,
-                                   CachedUrl cu, ArticleMetadata thisAM) {
-
-      log.debug3("in KluwerLawOnix3BooksSourceXmlMetadataExtractorFactory preEmitCheck");
-
-      List<String> filesToCheck;
-
-      // If no files get returned in the list, nothing to check
-      if ((filesToCheck = getFilenamesAssociatedWithRecord(schemaHelper, cu,thisAM)) == null) {
-        return true;
-      }
+      relatedProductIDValue = oneAM.getRaw(Onix3BooksSchemaHelper.ONIX_PRODUCT_RELATED_PRODUCT_ID);
+      filenameValue = oneAM.getRaw(helper.getFilenameXPathKey());
 
       TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
       String directory = null;
 
+
       if (tdbau != null) {
-        directory  = tdbau.getParam("directory");
-        log.debug3("Suppressing emit of metadata directory = " + directory );
-      } else {
-        log.debug3("Suppressing emit of metadata in Null extractor tdbau directory is null");
+        directory = tdbau.getParam("directory");
+
+        log.debug3("getFilenamesAssociatedWithRecord directory = " + directory);
+
+        if (directory != null && (directory.equals("2023_02"))) {
+
+          if (relatedProductIDValue != null) {
+            pdf = cuBase + relatedProductIDValue + "/" + filenameValue + "_WEB.pdf";
+
+            log.debug3("relatedProductIDValue =" + relatedProductIDValue + ", filenameValue + " + filenameValue + ", File pdf = " + pdf);
+
+            returnList.add(pdf);
+          }
+
+        } else {
+          pdf = cuBase + filenameValue + ".pdf";
+          epub = cuBase + filenameValue + ".epub";
+
+          returnList.add(pdf);
+          returnList.add(epub);
+        }
       }
 
-      if ( directory != null && (directory.equals("2023_02"))) {
-        log.debug3("Suppressing emit of metadata in Null extractor. contains 2023_02 back content " + directory);
 
-        return true; // Do not check existances of 2023_02 back content folder
-      } else {
-        log.debug3("Suppressing emit of metadata in Null extractor. Not contains 2023_02 back content " + directory);
-      }
+      log.debug3("filenameValue + " + filenameValue + ", File pdf = " + pdf + ", epub = " + epub);
 
-      log.debug3("Let parent check existance of file for directory : " + cu.getUrl());
-
-      return super.preEmitCheck(schemaHelper, cu, thisAM);
+      return returnList;
     }
-
 
     /*
      * For this plugin, if the schema sets the deDupKey use that to determine
