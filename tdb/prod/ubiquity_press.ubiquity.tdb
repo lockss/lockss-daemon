@@ -194,8 +194,8 @@
 #      param[base_url] = https://www.amscasereports.com/
       #content not available
 
-      au < down ; 2018 ; 1 ; Annals of Medicine and Surgery Case Reports Volume 2018 ; 2018 ; https://www.amscasereports.com/ >
-      au < down ; 2021 ; 2 ; Annals of Medicine and Surgery Case Reports Volume 2021 ; 2021 ; https://www.amscasereports.com/ >
+      au < down ; 2018 ; 1 ; Annals of Medicine and Surgery Case Reports Volume 1 ; 2018 ; https://www.amscasereports.com/ >
+      au < down ; 2021 ; 2 ; Annals of Medicine and Surgery Case Reports Volume 2 ; 2021 ; https://www.amscasereports.com/ >
 
   }
 
@@ -210,7 +210,7 @@
 #      param[base_url] = https://www.amsprotocols.com/
       #content not available
 
-      au < down ; 2018 ; 1 ; Annals of Medicine and Surgery Protocols Volume 2018 ; 2018 ; https://www.amsprotocols.com/ >
+      au < down ; 2018 ; 1 ; Annals of Medicine and Surgery Protocols Volume 1 ; 2018 ; https://www.amsprotocols.com/ >
 
   }
 
