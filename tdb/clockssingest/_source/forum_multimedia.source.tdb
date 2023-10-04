@@ -1,0 +1,24 @@
+{
+
+  publisher <
+    name = Forum Multimedia Journals ;
+    #info[contract] = 2023 ;
+    #info[tester] = S
+    info[platform] = Source/FTP
+  >
+    hidden[proxy] = DIRECT
+
+  {
+    title <
+      name = Forum Multimedia Journals Source Content
+    >
+
+    plugin = org.lockss.plugin.clockss.forummultimedia.ClockssForumMultimediaJournalsSourcePlugin
+    #param[base_url] = https://clockss-test.lockss.org/sourcefiles/forummmpub-released/
+    implicit < status ; status2 ; year ; name ; param[directory] >
+
+    au < exists ; exists ; 2023 ; Forum Multimedia Journals Source Source Content 2023 ; 2023_01 >
+
+  }
+
+}
