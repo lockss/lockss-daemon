@@ -51,7 +51,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>25</string>
+    <string>26</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -66,7 +66,7 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
       <entry>
         <string>Substance</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
     </map>
   </entry>
@@ -131,7 +131,8 @@ POSSIBILITY OF SUCH DAMAGE.
 <!--  related articles live at <filename>-relations.html -->      
       <string>2,"^https?://%s/(articles/)?%s/.*-relations.html$",url_host(base_url),volume_name</string>
 <!--  article level discussions/"peer review" live at <filename>-discussion.html -->
-      <string>2,"^https?://%s/(articles/)?%s/.*-discussion.html$",url_host(base_url),volume_name</string>
+      <!-- At Oct/2023, Clockss decideds to collect discussion page-->
+      <string>1,"^https?://%s/(articles/)?%s/.*-discussion.html$",url_host(base_url),volume_name</string>
 <!--article at <base_url>/14/4/2012/<filename>.(html|.pdf|.xml|.ris|.bib) -->
 <!--issue TOC at <base_url>/14/index.html or <base_url>/68/issue2.html -->
       <!--
@@ -149,6 +150,16 @@ POSSIBILITY OF SUCH DAMAGE.
 <!--  this used to be one of the permission urls; leave it in for AUs that already have it-->
       <string>1,"^https?://%s/(articles/)?%s/index.html",url_host(base_url), volume_name</string>
 <!--  anything not explicitly collected is inherently excluded so you don't need a statement-->
+      <!-- At Oct/2023, Clockss decideds to collect preprint-->
+      <!--
+        https://ar.copernicus.org/preprints/ar-2023-1/ar-2023-1-AC1-supplement.pdf
+        https://ar.copernicus.org/preprints/ar-2023-1/ar-2023-1-AC2-supplement.pdf
+        https://ar.copernicus.org/preprints/ar-2023-1/ar-2023-1-AR1.pdf
+        https://ar.copernicus.org/preprints/ar-2023-1/ar-2023-1-ATC1.pdf
+        https://ar.copernicus.org/preprints/ar-2023-1/ar-2023-1-manuscript-version4.pdf
+        https://ar.copernicus.org/preprints/ar-2023-1/ar-2023-1.pdf
+      -->
+      <string>1, "^https?://%s/preprints/.*\.pdf",url_host(base_url)</string>
     </list>
   </entry>
   <entry>
