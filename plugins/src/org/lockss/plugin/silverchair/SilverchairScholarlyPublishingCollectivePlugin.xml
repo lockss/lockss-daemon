@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>2</string>
+        <string>3</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -309,7 +309,7 @@
     </entry>
     <entry>
         <string>au_def_pause_time</string>
-        <long>3000</long>
+        <long>10000</long>
     </entry>
         <entry>
         <string>plugin_fetch_rate_limiter_source</string>

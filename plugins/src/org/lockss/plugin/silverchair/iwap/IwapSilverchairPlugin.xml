@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>15</string>
+    <string>16</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -257,5 +257,17 @@
       <string>"https?://(iwaponline|iwa\.silverchair-cdn)\.com/(cassette\.axd/file/.*/(css|js)/|[^.]+/back_matter\.pdf\?Expires=2147483647)", 0</string>
       <string>"https?://(fonts\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com|iwa\.silverchair-cdn)/.*(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)", 0</string>
     </list>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3600</long>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>host:base_url</string>
   </entry>
 </map>

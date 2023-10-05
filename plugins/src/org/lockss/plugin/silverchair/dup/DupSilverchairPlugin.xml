@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -253,5 +253,17 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>"https?://dup\.silverchair-cdn\.com/(cassette\.axd|data|UI)/.*(JS|CSS|\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff))(\?.*)?$", 0</string>
       <string>"https?://(fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|[^.]+\.silverchair-?cdn\.com|cdn\.mathjax\.org|cdnjs\.cloudflare\.com|watermark\.silverchair\.com|dup\.silverchair-cdn\.com/.*(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", 0</string>
     </list>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>10000</long>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>host:base_url</string>
   </entry>
 </map>

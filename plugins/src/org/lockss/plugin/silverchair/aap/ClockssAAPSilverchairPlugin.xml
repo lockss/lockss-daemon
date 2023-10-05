@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>7</string>
+        <string>8</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -48,7 +48,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>7</string>
+        <string>8</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -57,5 +57,14 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_name</string>
         <string>"American Academy of Pediatrics Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s,  Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
+    </entry>
+    <entry>
+        <string>clockss_override</string>
+        <map>
+            <entry>
+                <string>au_def_pause_time</string>
+                <long>10000</long>
+            </entry>
+        </map>
     </entry>
 </map>
