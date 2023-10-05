@@ -400,7 +400,6 @@
    au < finished ; finished ; 2014 ; 9781925021646 ; 9781925021653 ; The Boy from Boort ; state-society-and-governance-melanesia ; series/state-society-and-governance-melanesia/boy-boort ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2014 ; 9781921934179 ; 9781921934186 ; The Coombs: A House of Memories ;  ; coombs-house-memories ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2014 ; 9781925022032 ; 9781925022025 ; The Naturalist and his "Beautiful Islands" ;  ; naturalist-and-his-beautiful-islands ; reingest3.clockss.org:8083 >
-   au < finished ; finished ; 2014 ; 9781925022155 ; 9781925022162 ; Wives and Wanderers in a New Guinea Highlands Society ;  ; wives-and-wanderers-new-guinea-highlands-society ; reingest4.clockss.org:8082 >
 
    au < finished ; finished ; 2015 ; 9781925022100 ; 9781925022094 ; Abbott's Gambit ;  ; abbotts-gambit ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 9781925022544 ; 9781925022551 ; A Dissident Liberal ; australia-and-new-zealand-school-government-anzsog ; series/australia-and-new-zealand-school-government-anzsog/dissident-liberal ; reingest1.clockss.org:8082 >
@@ -616,7 +615,6 @@
    au < frozen ; exists ; 2019 ; 9781760462826 ; 9781760462833 ; Zhang Peili:From Painting to Video ;  ; zhang-peili ; >
    au < frozen ; exists ; 2019 ; 9781760462901 ; 9781760462918 ; The Spice Islands in Prehistory ; terra-australis ; series/terra-australis/spice-islands-prehistory ; >
    au < frozen ; exists ; 2019 ; 9781760462888 ; 9781760462895 ; Understanding Oceania ; pacific ; series/pacific/understanding-oceania ; >
-   au < frozen ; down ; 2019 ; 9781760462864 ; 9781760462871 ; Dictionary of World Biography, Various edition ; anu-lives-series-biography ; series/anu-lives-series-biography/dictionary-world-biography ; >
    au < frozen ; exists ; 2019 ; 9781760462789 ; 9781760462796 ; Successful Public Policy ; anzsog ; series/anzsog/successful-public-policy ; >
    au < frozen ; exists ; 2019 ; 9781760462741 ; 9781760462758 ; 'True Biographies of Nations?': The Cultural Journeys of Dictionaries of National Biography ; anu-lives-series-biography ; series/anu-lives-series-biography/true-biographies-nations ; >
    au < frozen ; exists ; 2019 ; 9781760462802 ; 9781760462819 ; Power ; china-story-yearbook ; series/china-story-yearbook/power ; >
@@ -708,7 +706,6 @@
    au < manifest ; exists ; 2022 ; 9781760465223 ; 9781760465230 ; China Story yearbook: Contradiction ; ; series/china-story-yearbook/contradiction ; >
    au < manifest ; exists ; 2022 ; 9781760465575 ; 9781760465582 ; China’s Transition to a New Phase of Development ; ; series/china-update/chinas-transition-new-phase-development ; >
    au < manifest ; exists ; 2022 ; 9781760465315 ; 9781760465322 ; Designing Social Service Markets ; ; designing-social-service-markets ; >
-   au < manifest ; exists ; 2022 ; 9781760465513 ; 9781760465520 ; Dictionary of World Biography ; anu-lives-series-biography ; series/anu-lives-series-biography/dictionary-world-biography ; >
    au < manifest ; exists ; 2022 ; 9781760465292 ; 9781760465308 ; Experiments with Marxism-Leninism in Cold War Southeast Asia ; ; series/asian-studies/experiments-marxism-leninism-cold-war-southeast-asia ; >
    au < manifest ; exists ; 2022 ; 9781760464622 ; 9781760464639 ; Georges River Blues: Swamps, Mangroves and Resident Action, 1945–1980 ; ; series/world-forest-history/georges-river-blues ; >
    au < manifest ; exists ; 2022 ; 9781760465353 ; 9781760465360 ; Histories of Australian Rock Art Research ; ; series/terra-australis/histories-australian-rock-art-research ; >
@@ -729,9 +726,16 @@
    au < manifest ; exists ; 2022 ; 9781760465438 ; 9781760465445 ; Unsung Land, Aspiring Nation: Journeys in Bougainville ; ; series/pacific/unsung-land-aspiring-nation ; >
    au < manifest ; exists ; 2022 ; 9781760465377 ; 9781760465384 ; Vietnam Task ; ; vietnam-task ; >
    au < manifest ; exists ; 2022 ; 9781760465049 ; 9781760465056 ; Voluntary Assisted Dying ; ; voluntary-assisted-dying ; >
-   au < manifest ; exists ; 2022 ; 9781760464707 ; 9781760464714 ; Wives and Wanderers in a New Guinea Highlands Society ; ; wives-and-wanderers-new-guinea-highlands-society ; >
    au < manifest ; exists ; 2022 ; 9781760464943 ; 9781760464950 ; Xinjiang Year Zero ; ; xinjiang-year-zero ; >
    au < manifest ; exists ; 2022 ; 9781760465148 ; 9781760465155 ; Youth in Fiji and Solomon Islands ; ; series/pacific/youth-fiji-solomon-islands ; >
+
+   #This AU was revised by the publisher. We preserved the 2019 edition, and now are preserving the 2022 edition.
+   #au < exists ; exists ; 2019 ; 9781760462864 ; 9781760462871 ; Dictionary of World Biography, Various edition ; anu-lives-series-biography ; series/anu-lives-series-biography/dictionary-world-biography ; >
+   au < crawling ; down ; 2022 ; 9781760465513 ; 9781760465520 ; Dictionary of World Biography ; anu-lives-series-biography ; series/anu-lives-series-biography/dictionary-world-biography ; >
+
+   #This AU was revised by the publisher. We preserved the 2014 edition, and now are preserving the 2022 edition.
+   #au < exists ; exists ; 2014 ; 9781925022155 ; 9781925022162 ; Wives and Wanderers in a New Guinea Highlands Society ;  ; wives-and-wanderers-new-guinea-highlands-society ; reingest4.clockss.org:8082 >
+   au < crawling ; down ; 2022 ; 9781760464707 ; 9781760464714 ; Wives and Wanderers in a New Guinea Highlands Society ; ; wives-and-wanderers-new-guinea-highlands-society ; reingest4.clockss.org:8082 >
 
    au < manifest ; exists ; 2023 ; 9781760465537 ; 9781760465544 ; Come Hell or High Fever: Readying the World's Megacities for Disaster ; ; come-hell-or-high-fever ; >
    au < manifest ; exists ; 2023 ; ; 9781760465261 ; Marhaba! An Introduction to Modern Standard Arabic ; ; textbooks/marhaba-introduction-modern-standard-arabic ; >
