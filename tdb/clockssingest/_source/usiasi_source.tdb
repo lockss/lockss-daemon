@@ -1,0 +1,24 @@
+{
+
+  publisher <
+    name = Iasi University of Life Sciences Journals ;
+    #info[contract] = 2023 ;
+    #info[tester] = S
+    info[platform] = Source/FTP
+  >
+    hidden[proxy] = DIRECT
+
+  {
+    title <
+      name = Iasi University of Life Sciences Journals Source Content
+    >
+
+    plugin = org.lockss.plugin.clockss.uaiasi.ClockssIasiUniversityLifeSciencesSourcePlugin
+    #param[base_url] = https://clockss-test.lockss.org/sourcefiles/uaiasi-released/
+    implicit < status ; status2 ; year ; name ; param[directory] >
+
+    au < exists ; exists ; 2023 ; Iasi University of Life Sciences Source Content 2023 ; 2023_01 >
+
+  }
+
+}
