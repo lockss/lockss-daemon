@@ -157,6 +157,10 @@ public class AdminServletManager extends BaseServletManager {
     return mi;
   }
 
+  public static final String PARAM_SOAP_ENABLED =
+    Configuration.PREFIX + "soap.enabled";
+  public static final boolean DEFAULT_SOAP_ENABLED = true;
+
   /** Absolute path to directory in which configured platform ISO images
    * are stored */
   public static final String PARAM_ISODIR =
@@ -588,7 +592,11 @@ public class AdminServletManager extends BaseServletManager {
                        "JAX-WS CXF Servlet",
 		       "ws/*",
 		       0,
-	               "JAX-WS CXF Web Services");
+	               "JAX-WS CXF Web Services") {
+	public boolean isEnabled(LockssDaemon daemon) {
+          return CurrentConfig.getBooleanParam(PARAM_SOAP_ENABLED,
+              DEFAULT_SOAP_ENABLED);
+	}};
 
   protected static final ServletDescr SERVLET_SUB_MANAGEMENT =
       new ServletDescr("SubscriptionManagement",
