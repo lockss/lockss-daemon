@@ -73,6 +73,10 @@ public class DisabledServlet extends LockssServlet {
     }
   }
 
+  protected boolean isServletEnabled() {
+    return false;
+  }
+
   void displayError(int result, String error) throws IOException {
     Page page = newPage();
     Composite comp = new Composite();
