@@ -56,6 +56,7 @@ public class TestListHoldings extends LockssServletTestCase {
    */
   protected void setUp() throws Exception {
     super.setUp();
+    ConfigurationUtil.addFromArgs(ListHoldings.PARAM_ENABLE_HOLDINGS, "true");
     //lh = new ListHoldings();
     statSvc = theDaemon.getStatusService();
     ssi = (StatusServiceImpl)statSvc;
@@ -67,7 +68,7 @@ public class TestListHoldings extends LockssServletTestCase {
     super.initServletRunner();
     sRunner.registerServlet("/TitleList", ListHoldings.class.getName() );
     // ListHoldings wants there to be a local ip address
-    ConfigurationUtil.setFromArgs(LockssServlet.PARAM_LOCAL_IP, "2.4.6.8");
+    ConfigurationUtil.addFromArgs(LockssServlet.PARAM_LOCAL_IP, "2.4.6.8");
   }
 
   /**
