@@ -568,7 +568,22 @@
       au < released ; 2014 ; International Journal of Aerodynamics Volume 4 ; 4 ; http://www.inderscienceonline.com/ >
       au < released ; 2015-2016 ; International Journal of Aerodynamics Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
       au < released ; 2018 ; International Journal of Aerodynamics Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
-      au < released ; 2020-2021 ; International Journal of Aerodynamics Volume 7 [partial] ; 7 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
+      au < released ; 2020-2022 ; International Journal of Aerodynamics Volume 7 [partial] ; 7 ; https://www.inderscienceonline.com/ > #issue 4 not online
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Aerospace System Science and Engineering ;
+        issn = 2053-3950 ;
+        eissn = 2053-3969 ;
+        issnl = 2053-3950
+      >
+
+      param[journal_id] = ijasse
+
+      au < exists ; 2021-2024 ; International Journal of Aerospace System Science and Engineering Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ > #issue 2, 3, 4 not online
 
     }
 
@@ -635,6 +650,23 @@
       au < released ; 2021 ; International Journal of Agile Systems and Management Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
       au < released ; 2022 ; International Journal of Agile Systems and Management Volume 15 ; 15 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2023 ; International Journal of Agile Systems and Management Volume 16 ; 16 ; https://www.inderscienceonline.com/ >
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Agriculture Innovation, Technology and Globalisation ;
+        issn = 2516-1962 ;
+        eissn = 2516-1970 ;
+        issnl = 2516-1962
+      >
+
+      param[journal_id] = ijaitg
+
+      au < exists ; 2019-2020 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2021 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2022-2023 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ > #issue 2, 3, 4 not online
 
     }
 
@@ -887,8 +919,7 @@
       au < released ; 2019 ; International Journal of Arts and Technology Volume 11 ; 11 ; https://www.inderscienceonline.com/ >
       au < released ; 2020 ; International Journal of Arts and Technology Volume 12 ; 12 ; https://www.inderscienceonline.com/ >
       au < released ; 2021 ; International Journal of Arts and Technology Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
-      au < released ; 2022 ; International Journal of Arts and Technology Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2023 ; International Journal of Arts and Technology Volume 15 ; 15 ; https://www.inderscienceonline.com/ >
+      au < released ; 2022-2023 ; International Journal of Arts and Technology Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -1159,6 +1190,23 @@
     {
 
       title <
+        name = International Journal of Big Data Management ;
+        issn = 2631-8679 ;
+        eissn = 2631-8687 ;
+        issnl = 2631-8679
+      >
+
+      param[journal_id] = ijbdm
+
+      au < exists ; 2020 ; International Journal of Big Data Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2022 ; International Journal of Big Data Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2023 ; International Journal of Big Data Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
+
+    }
+
+    {
+
+      title <
         name = International Journal of Bioinformatics Research and Applications ;
         issn = 1744-5485 ;
         eissn = 1744-5493 ;
@@ -1378,6 +1426,24 @@
     {
 
       title <
+        name = International Journal of Blockchains and Cryptocurrencies ;
+        issn = 2516-6425 ;
+        eissn = 2516-6433 ;
+        issnl = 2516-6425
+      >
+
+      param[journal_id] = ijbc
+
+      au < exists ; 2019-2020 ; International Journal of Blockchains and Cryptocurrencies Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2021 ; International Journal of Blockchains and Cryptocurrencies Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2022 ; International Journal of Blockchains and Cryptocurrencies Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2023 ; International Journal of Blockchains and Cryptocurrencies Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
+
+    }
+
+   {
+
+      title <
         name = International Journal of Masonry Research and Innovation ;
         issn = 2056-9459 ;
         eissn = 2056-9467 ;
@@ -1416,6 +1482,22 @@
       au < released ; 2020 ; International Journal of Migration and Border Studies Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
       au < released ; 2022 ; International Journal of Migration and Border Studies Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
       au < expected ; 2023 ; International Journal of Migration and Border Studies Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Business and Data Analytics ;
+        issn = 2515-9100 ;
+        eissn = 2515-9119 ;
+        issnl = 2515-9100
+      >
+
+      param[journal_id] = ijbda
+
+      au < exists ; 2019-2020 ; International Journal of Business and Data Analytics Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2022-2023 ; International Journal of Business and Data Analytics Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -2766,6 +2848,21 @@
     {
 
       title <
+        name = International Journal of Cybernetics and Cyber-Physical Systems ;
+        issn = 2517-2573 ;
+        eissn = 2517-2581 ;
+        issnl = 2517-2573
+      >
+
+      param[journal_id] = ijccps
+
+      au < exists ; 2021-2024 ; International Journal of Cybernetics and Cyber-Physical Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+
+    }
+
+    {
+
+      title <
         name = International Journal of Data Analysis Techniques and Strategies ;
         issn = 1755-8050 ;
         eissn = 1755-8069 ;
@@ -2981,6 +3078,25 @@
 
       au < released ; 2015-2016 ; International Journal of the Digital Human Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
       au < released ; 2018 ; International Journal of the Digital Human Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ > # issue 3, 4 not online
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Digital Signals and Smart Systems ;
+        issn = 2398-0311 ;
+        eissn = 2398-032X ;
+        issnl = 2398-0311
+      >
+
+      param[journal_id] = ijdsss
+
+      au < exists ; 2017 ; International Journal of Digital Signals and Smart Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2018 ; International Journal of Digital Signals and Smart Systems Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2019 ; International Journal of Digital Signals and Smart Systems Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2020 ; International Journal of Digital Signals and Smart Systems Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2021-2023 ; International Journal of Digital Signals and Smart Systems Volume 5 [partial] ; 5 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
 
     }
 
@@ -4175,6 +4291,21 @@
     {
 
       title <
+        name = International Journal of Family Business and Regional Development ;
+        issn = 2054-6580 ;
+        eissn = 2054-6599 ;
+        issnl = 2054-6580
+      >
+
+      param[journal_id] = ijfbrd
+
+      au < exists ; 2020-2024 ; International Journal of Family Business and Regional Development Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ > #issue 2, 3, 4 not online
+
+    }
+
+    {
+
+      title <
         name = International Journal of Financial Engineering and Risk Management ;
         issn = 2049-0909 ;
         eissn = 2049-0917 ;
@@ -4560,6 +4691,21 @@
     {
 
       title <
+        name = International Journal of Governance and Financial Intermediation ;
+        issn = 2399-5025 ;
+        eissn = 2399-5033 ;
+        issnl = 2399-5025
+      >
+
+      param[journal_id] = ijgfi
+
+      au < exists ; 2018-2023 ; International Journal of Governance and Financial Intermediation Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+
+    }
+
+    {
+
+      title <
         name = International Journal of Granular Computing, Rough Sets and Intelligent Systems ;
         issn = 1757-2703 ;
         eissn = 1757-2711 ;
@@ -4654,6 +4800,21 @@
       au < released ; 2020-2021 ; International Journal of Happiness and Development Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
       au < released ; 2022 ; International Journal of Happiness and Development Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2023 ; International Journal of Happiness and Development Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Healthcare Policy ;
+        issn = 2056-9491 ;
+        eissn = 2056-9505 ;
+        issnl = 2056-9491
+      >
+
+      param[journal_id] = ijhp
+
+      au < exists ; 2019-2023 ; International Journal of Healthcare Policy Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ > #issue 2, 3, 4 not online
 
     }
 
@@ -4868,6 +5029,37 @@
     {
 
       title <
+        name = International Journal of Humanitarian Technology ;
+        issn = 2056-6549 ;
+        eissn = 2056-6557 ;
+        issnl = 2056-6549
+      >
+
+      param[journal_id] = ijht
+
+      au < exists ; 2018-2023 ; International Journal of Humanitarian Technology Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Hybrid Intelligence ;
+        issn = 2515-4273 ;
+        eissn = 2515-4281 ;
+        issnl = 2515-4273
+      >
+
+      param[journal_id] = ijhi
+
+      au < exists ; 2019 ; International Journal of Hybrid Intelligence Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2021-2023 ; International Journal of Hybrid Intelligence Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
+
+    }
+
+    {
+
+      title <
         name = International Journal of Hydrology Science and Technology ;
         issn = 2042-7808 ;
         eissn = 2042-7816 ;
@@ -4891,6 +5083,26 @@
       au < manifest ; 2023 ; International Journal of Hydrology Science and Technology Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
 
     }
+
+     {
+
+       title <
+         name = International Journal of Hydromechatronics ;
+         issn = 2515-0464 ;
+         eissn = 2515-0472 ;
+         issnl = 2515-0464
+       >
+
+       param[journal_id] = ijhm
+
+       au < exists ; 2018 ; International Journal of Hydromechatronics Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+       au < exists ; 2019 ; International Journal of Hydromechatronics Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
+       au < exists ; 2020 ; International Journal of Hydromechatronics Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
+       au < exists ; 2021 ; International Journal of Hydromechatronics Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
+       au < exists ; 2022 ; International Journal of Hydromechatronics Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
+       au < exists ; 2023 ; International Journal of Hydromechatronics Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
+
+     }
 
     {
 
@@ -5543,6 +5755,21 @@
     {
 
       title <
+        name = International Journal of Intelligence and Sustainable Computing ;
+        issn = 2517-763X ;
+        eissn = 2517-7648 ;
+        issnl = 2517-763X
+      >
+
+      param[journal_id] = ijisc
+
+      au < exists ; 2020-2023 ; International Journal of Intelligence and Sustainable Computing Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ > #issue 4 not online
+
+    }
+
+    {
+
+      title <
         name = International Journal of Intelligent Defence Support Systems ;
         issn = 1755-1587 ;
         eissn = 1755-1595 ;
@@ -5636,6 +5863,22 @@
       au < released ; 2021 ; International Journal of Intelligent Information and Database Systems Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
       au < released ; 2022 ; International Journal of Intelligent Information and Database Systems Volume 15 ; 15 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2023 ; International Journal of Intelligent Information and Database Systems Volume 16 ; 16 ; https://www.inderscienceonline.com/ >
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Intelligent Internet of Things Computing ;
+        issn = 2631-7060 ;
+        eissn = 2631-7079 ;
+        issnl = 2631-7060
+      >
+
+      param[journal_id] = ijiitc
+
+      au < exists ; 2019-2022 ; International Journal of Intelligent Internet of Things Computing Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2023-2026 ; International Journal of Intelligent Internet of Things Computing Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -5797,6 +6040,22 @@
       au < released ; 2021 ; International Journal of Internet Protocol Technology Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
       au < released ; 2022 ; International Journal of Internet Protocol Technology Volume 15 ; 15 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2023 ; International Journal of Internet Protocol Technology Volume 16 ; 16 ; https://www.inderscienceonline.com/ >
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Internet of Things and Cyber-Assurance ;
+        issn = 2059-7967 ;
+        eissn = 2059-7975 ;
+        issnl = 2059-7967
+      >
+
+      param[journal_id] = ijitca
+
+      au < exists ; 2018-2020 ; International Journal of Internet of Things and Cyber-Assurance Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2022-2023 ; International Journal of Internet of Things and Cyber-Assurance Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ > #issue 2, 3, 4 not online
 
     }
 
