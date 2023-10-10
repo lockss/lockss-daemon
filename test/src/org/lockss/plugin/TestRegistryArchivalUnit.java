@@ -93,6 +93,45 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
     assertEquals("org|lockss|plugin|TestRegistryArchivalUnit$MyRegistryPlugin&base_url~http%3A%2F%2Ffoo%2Ecom%2Fbar", au.getAuId());
   }
 
+  public void testCrawlRules() throws Exception {
+    Configuration auConfig =
+      ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(),
+                                 "http://foo.com/bar");
+    ArchivalUnit au = regPlugin.createAu(auConfig);
+    assertTrue(au.shouldBeCached("http://foo.com/bar"));
+    assertTrue(au.shouldBeCached("HTTP://foo.com/bar"));
+    assertTrue(au.shouldBeCached("https://foo.com/bar"));
+    assertTrue(au.shouldBeCached("HTTPS://foo.com/bar"));
+    assertTrue(au.shouldBeCached("http://foo.com/bar/"));
+    assertTrue(au.shouldBeCached("HTTP://foo.com/bar/"));
+    assertTrue(au.shouldBeCached("https://foo.com/bar/"));
+    assertTrue(au.shouldBeCached("HTTPS://foo.com/bar/"));
+    assertFalse(au.shouldBeCached("http://foo.com/bar/file"));
+    assertFalse(au.shouldBeCached("https://foo.com/bar/file"));
+    assertTrue(au.shouldBeCached("http://foo.com/bar/file.jar"));
+    assertTrue(au.shouldBeCached("https://foo.com/bar/file.jar"));
+    assertFalse(au.shouldBeCached("https://foo.com/bar/file.jar.baz"));
+
+    auConfig =
+      ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(),
+                                 "https://foo.com/bar");
+    au = regPlugin.createAu(auConfig);
+    assertFalse(au.shouldBeCached("http://foo.com/bar"));
+    assertFalse(au.shouldBeCached("HTTP://foo.com/bar"));
+    assertTrue(au.shouldBeCached("https://foo.com/bar"));
+    assertTrue(au.shouldBeCached("HTTPS://foo.com/bar"));
+    assertFalse(au.shouldBeCached("http://foo.com/bar/"));
+    assertFalse(au.shouldBeCached("HTTP://foo.com/bar/"));
+    assertTrue(au.shouldBeCached("https://foo.com/bar/"));
+    assertTrue(au.shouldBeCached("HTTPS://foo.com/bar/"));
+    assertFalse(au.shouldBeCached("http://foo.com/bar/file"));
+    assertFalse(au.shouldBeCached("https://foo.com/bar/file"));
+    assertTrue(au.shouldBeCached("http://foo.com/bar/file.jar"));
+    assertTrue(au.shouldBeCached("https://foo.com/bar/file.jar"));
+    assertFalse(au.shouldBeCached("http://foo.com/bar/file.jar.baz"));
+    assertFalse(au.shouldBeCached("https://foo.com/bar/file.jar.baz"));
+  }
+
   public void testCrawlProxy()
       throws ArchivalUnit.ConfigurationException {
     Configuration auConfig =
