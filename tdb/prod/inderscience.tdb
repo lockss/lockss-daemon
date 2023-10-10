@@ -1441,50 +1441,6 @@
 
     }
 
-   {
-
-      title <
-        name = International Journal of Masonry Research and Innovation ;
-        issn = 2056-9459 ;
-        eissn = 2056-9467 ;
-        issnl = 2056-9459
-      >
-
-      param[journal_id] = ijmri
-
-      au < released ; 2016 ; International Journal of Masonry Research and Innovation Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
-      au < released ; 2017 ; International Journal of Masonry Research and Innovation Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
-      au < released ; 2018 ; International Journal of Masonry Research and Innovation Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
-      au < released ; 2019 ; International Journal of Masonry Research and Innovation Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
-      au < released ; 2020 ; International Journal of Masonry Research and Innovation Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
-      au < released ; 2021 ; International Journal of Masonry Research and Innovation Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
-      au < released ; 2022 ; International Journal of Masonry Research and Innovation Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2023 ; International Journal of Masonry Research and Innovation Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
-
-    }
-
-    {
-
-      title <
-        name = International Journal of Migration and Border Studies ;
-        issn = 1755-2419 ;
-        eissn = 1755-2427 ;
-        issnl = 1755-2419
-      >
-
-      param[journal_id] = ijmbs
-
-      au < released ; 2014-2015 ; International Journal of Migration and Border Studies Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
-      au < released ; 2016 ; International Journal of Migration and Border Studies Volume 2 ; 2 ; http://www.inderscienceonline.com/ >
-      au < released ; 2017 ; International Journal of Migration and Border Studies Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
-      au < released ; 2018 ; International Journal of Migration and Border Studies Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
-      au < released ; 2019 ; International Journal of Migration and Border Studies Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
-      au < released ; 2020 ; International Journal of Migration and Border Studies Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
-      au < released ; 2022 ; International Journal of Migration and Border Studies Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2023 ; International Journal of Migration and Border Studies Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
-
-    }
-
     {
 
       title <
@@ -5884,6 +5840,37 @@
 
     {
 
+        title <
+          name = International Journal of Intelligent Machines and Robotics ;
+          issn = 2398-7510 ;
+          eissn = 2398-7529 ;
+          issnl = 2398-7510
+        >
+
+        param[journal_id] = ijimr
+
+        au < exists ; 2018-2019 ; International Journal of Intelligent Machines and Robotics Volume 1 [partial] ; 1 ; http://www.inderscienceonline.com/ > #issue 4 not online
+
+    }
+
+    {
+
+        title <
+          name = International Journal of Intelligent Systems Design and Computing ;
+          issn = 2052-8477 ;
+          eissn = 2052-8485
+        >
+
+        param[journal_id] = ijisdc
+
+        au < released ; 2017 ; International Journal of Intelligent Systems Design and Computing Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+        au < released ; 2018 ; International Journal of Intelligent Systems Design and Computing Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
+        au < released ; 2019-2020 ; International Journal of Intelligent Systems Design and Computing Volume 3 [partial]  ; 3 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
+
+    }
+
+    {
+
       title <
         name = International Journal of Intelligent Systems Technologies and Applications ;
         issn = 1740-8865 ;
@@ -6947,6 +6934,28 @@
 
     }
 
+   {
+
+      title <
+        name = International Journal of Masonry Research and Innovation ;
+        issn = 2056-9459 ;
+        eissn = 2056-9467 ;
+        issnl = 2056-9459
+      >
+
+      param[journal_id] = ijmri
+
+      au < released ; 2016 ; International Journal of Masonry Research and Innovation Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
+      au < released ; 2017 ; International Journal of Masonry Research and Innovation Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
+      au < released ; 2018 ; International Journal of Masonry Research and Innovation Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
+      au < released ; 2019 ; International Journal of Masonry Research and Innovation Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
+      au < released ; 2020 ; International Journal of Masonry Research and Innovation Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
+      au < released ; 2021 ; International Journal of Masonry Research and Innovation Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
+      au < released ; 2022 ; International Journal of Masonry Research and Innovation Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2023 ; International Journal of Masonry Research and Innovation Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
+
+    }
+
     {
 
       title <
@@ -7348,6 +7357,28 @@
       au < released ; 2020 ; International Journal of Microstructure and Materials Properties Volume 15 ; 15 ; https://www.inderscienceonline.com/ >
       au < released ; 2022 ; International Journal of Microstructure and Materials Properties Volume 16 ; 16 ; https://www.inderscienceonline.com/ >
       au < expected ; 2023 ; International Journal of Microstructure and Materials Properties Volume 17 ; 17 ; https://www.inderscienceonline.com/ >
+
+    }
+
+    {
+
+      title <
+        name = International Journal of Migration and Border Studies ;
+        issn = 1755-2419 ;
+        eissn = 1755-2427 ;
+        issnl = 1755-2419
+      >
+
+      param[journal_id] = ijmbs
+
+      au < released ; 2014-2015 ; International Journal of Migration and Border Studies Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
+      au < released ; 2016 ; International Journal of Migration and Border Studies Volume 2 ; 2 ; http://www.inderscienceonline.com/ >
+      au < released ; 2017 ; International Journal of Migration and Border Studies Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
+      au < released ; 2018 ; International Journal of Migration and Border Studies Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
+      au < released ; 2019 ; International Journal of Migration and Border Studies Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
+      au < released ; 2020 ; International Journal of Migration and Border Studies Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
+      au < released ; 2022 ; International Journal of Migration and Border Studies Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2023 ; International Journal of Migration and Border Studies Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -7819,6 +7850,22 @@
       au < released ; 2021 ; International Journal of Networking and Virtual Organisations Volume 21 ; 21 ; https://www.inderscienceonline.com/ >
       au < released ; 2022 ; International Journal of Networking and Virtual Organisations Volume 22 ; 22 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2023 ; International Journal of Networking and Virtual Organisations Volume 23 ; 23 ; https://www.inderscienceonline.com/ >
+
+    }
+
+    {
+
+       title <
+         name = International Journal of Nonlinear Dynamics and Control ;
+         issn = 2050-6902 ;
+         eissn = 2050-6910 ;
+         issnl = 2050-6902
+       >
+
+       param[journal_id] = ijndc
+
+      au < exists ; 2017-2019 ; International Journal of Nonlinear Dynamics and Control Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2021-2023 ; International Journal of Nonlinear Dynamics and Control Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -9543,7 +9590,22 @@
       au < released ; 2015 ; International Journal of Space Science and Engineering Volume 3 ; 3 ; http://www.inderscienceonline.com/ >
       au < released ; 2016-2017 ; International Journal of Space Science and Engineering Volume 4 ; 4 ; http://www.inderscienceonline.com/ >
       au < released ; 2018-2019 ; International Journal of Space Science and Engineering Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
-      au < released ; 2020-2021 ; International Journal of Space Science and Engineering Volume 6 [partial] ; 6 ; https://www.inderscienceonline.com/ > #issue4 not online
+      au < released ; 2020-2023 ; International Journal of Space Science and Engineering Volume 6 ; 6 ; https://www.inderscienceonline.com/ > #issue4 not online
+
+    }
+
+    {
+
+       title <
+         name = International Journal of Spatio-Temporal Data Science ;
+         issn = 2399-1275 ;
+         eissn = 2399-1283 ;
+         issnl = 2399-1275
+       >
+
+       param[journal_id] = ijstds
+
+      au < exists ; 2019-2021 ; Spatio-Temporal Data Science Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ > #isuue 4 not online
 
     }
 
@@ -9666,6 +9728,21 @@
       au < released ; 2021 ; International Journal of Structural Engineering Volume 11 ; 11 ; https://www.inderscienceonline.com/ >
       au < released ; 2022 ; International Journal of Structural Engineering Volume 12 ; 12 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2023 ; International Journal of Structural Engineering Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
+
+    }
+
+    {
+
+       title <
+         name = International Journal of Student Project Reporting ;
+         issn = 2634-1948 ;
+         eissn = 2634-1956 ;
+         issnl = 2634-1948
+       >
+
+       param[journal_id] = ijspr
+
+      au < exists ; 2022-2023 ; International Journal of Student Project Reporting Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -11962,20 +12039,19 @@
 
   }
 
-  {
+    {
 
-      title <
-        name = International Journal of Intelligent Systems Design and Computing ;
-        issn = 2052-8477 ;
-        eissn = 2052-8485
-      >
+       title <
+         name = MENA Journal of Cross-Cultural Management ;
+         issn = 2398-3175 ;
+         eissn = 2398-3183 ;
+         issnl = 2398-3175
+       >
 
-      param[journal_id] = ijisdc
+       param[journal_id] = mjccm
 
-      au < released ; 2017 ; International Journal of Intelligent Systems Design and Computing Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
-      au < released ; 2018 ; International Journal of Intelligent Systems Design and Computing Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
-      au < released ; 2019-2020 ; International Journal of Intelligent Systems Design and Computing Volume 3 [partial]  ; 3 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
+      au < exists ; 2020-2024 ; MENA Journal of Cross-Cultural Management Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
 
-  }
+    }
 
 }
