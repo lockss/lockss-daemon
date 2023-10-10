@@ -155,7 +155,7 @@ public class PlatformConfigStatus extends BaseLockssDaemonManager {
       if (propsUrls != null) {
 	addSum(res, "Props", StringUtil.separatedString(propsUrls, ", "));
 	if (!propsUrls.equals(loadedUrls)) {
-	  addSum(res, "Loaded from local failover",
+	  addSum(res, "Loaded from",
 		 StringUtil.separatedString(loadedUrls, ", "));
 	}
       }
