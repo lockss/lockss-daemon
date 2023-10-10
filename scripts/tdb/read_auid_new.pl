@@ -1090,6 +1090,36 @@ while (my $line = <>) {
         }
         sleep(4);
 
+  # Start ClockssOMPBooksPlugin.
+  } elsif ($plugin eq "ClockssOMPBooksPlugin") {
+    $url = sprintf("%s%s/catalog/book/ed-%s",
+        $param{base_url}, $param{publisher_id}, $param{isbn});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    #printf("resp is %s\n",$resp->status_line);
+    my $man_contents = $resp->is_success ? $resp->content : "";
+    if (! $resp->is_success) {
+        $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+    } elsif ($req->url ne $resp->request->uri) {
+        $vol_title = $resp->request->uri;
+        $result = "Redirected";
+    } elsif (! defined($man_contents)) {
+        $result = "--NOT_DEF--";
+    } elsif ($man_contents !~ m/$clockss_tag/) {
+        $result = "--NO_TAG--";
+    } elsif ($man_contents !~ m/\/issue\/$param{year}\/$param{volume_name}\/\d/) {
+        $result = "--NO_VOL--";
+    } else {
+        $result = "Manifest";
+        if ($man_contents =~ m/<title>(.*)<\/title>/si) {
+            $vol_title = $1 . " Volume " . $param{volume_name} . " Year " . $param{year};
+            $vol_title =~ s/\s*\n\s*/ /g;
+        }
+    }
+  sleep(4);
+  # End ClockssOMPBooksPlugin
+
 # thin child of OJS2 but with a different start_url and no permission_url
   } elsif ($plugin eq "Ojs3Plugin") {
     #OJS3 allows an attr to define variants for location of manifest
