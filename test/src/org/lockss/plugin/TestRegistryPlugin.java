@@ -68,11 +68,11 @@ public class TestRegistryPlugin extends LockssTestCase {
   }
 
   public void testGetVersion() throws Exception {
-    assertEquals("1", m_plugin.getVersion());
+    assertEquals("2", m_plugin.getVersion());
   }
 
   public void testGetPluginName() throws Exception {
-    assertEquals("Registry", m_plugin.getPluginName());
+    assertEquals("Plugin Registry Plugin", m_plugin.getPluginName());
   }
 
   public void testGetAuConfigDescrs() throws Exception {
