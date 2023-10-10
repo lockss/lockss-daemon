@@ -541,6 +541,10 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
       return url;
     }
 
+    public org.apache.commons.httpclient.URI getURI() throws URIException {
+      return new org.apache.commons.httpclient.URI(this.url);
+    }
+
     void setRes(int res) {
       this.res = res;
     }

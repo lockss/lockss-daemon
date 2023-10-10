@@ -545,15 +545,10 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 
   public String getActualUrl() {
     try {
-      String path = method.getPath();
-      String query = method.getQueryString();
-      if (!StringUtil.isNullString(query)) {
-	path = path + "?" + query;
-      }
-      URI uri = new URI(new URI(urlString, false), path, true);
-      return uri.toString();
-    } catch(URIException e) {
-      log.warning("getActualUrl(): ", e);
+      URI actual = method.getURI();
+      return actual != null ? actual.toString() : urlString;
+    } catch (URIException e) {
+      log.error("Couldn't get actual URI", e);
       return urlString;
     }
   }
