@@ -50,8 +50,8 @@ import org.lockss.util.urlconn.*;
 public class RegistryPlugin extends BasePlugin {
   protected static final Logger log = Logger.getLogger("RegistryPlugin");
 
-  private static String PLUGIN_NAME = "Registry";
-  private static String CURRENT_VERSION = "1";
+  private static String PLUGIN_NAME = "Plugin Registry Plugin";
+  private static String CURRENT_VERSION = "2";
 
   public static final String PLUGIN_ID = "org.lockss.plugin.RegistryPlugin";
   public static final String PREFIX =
