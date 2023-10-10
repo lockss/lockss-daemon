@@ -34,8 +34,7 @@ package org.lockss.plugin;
 
 import java.io.FileNotFoundException;
 import java.net.*;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.htmlparser.*;
@@ -217,7 +216,7 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
    * @return CrawlRule
    */
   protected CrawlRule makeRule() {
-    return new RegistryRule();
+    return new RegistryRule(m_registryUrl);
   }
 
   // Might need to recompute name if refetch start page
@@ -255,9 +254,25 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
   }
 
   // Registry AU crawl rule implementation
-  private class RegistryRule implements CrawlRule {
+  private static class RegistryRule implements CrawlRule {
+    private List<String> registryUrls = new ArrayList<>(4);
+
+    RegistryRule(String registryUrl) {
+      registryUrls.add(registryUrl);
+      if (!registryUrl.endsWith("/")) {
+        registryUrls.add(registryUrl + "/");
+      }
+      if (UrlUtil.isHttpUrl(registryUrl)) {
+        String httpsUrl = UrlUtil.replaceScheme(registryUrl, "http", "https");
+        registryUrls.add(httpsUrl);
+        if (!httpsUrl.endsWith("/")) {
+          registryUrls.add(httpsUrl + "/");
+        }
+      }
+    }
+
     public int match(String url) {
-      if (StringUtil.equalStringsIgnoreCase(url, m_registryUrl) ||
+      if (registryUrls.stream().anyMatch(url::equalsIgnoreCase) ||
 	  StringUtil.endsWithIgnoreCase(url, ".jar")) {
 	return CrawlRule.INCLUDE;
       } else {
