@@ -337,7 +337,7 @@
       au < released ; 2018 ; International Journal of Accounting and Finance Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
       au < released ; 2019 ; International Journal of Accounting and Finance Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
       au < released ; 2020 ; International Journal of Accounting and Finance Volume 10 ; 10 ; https://www.inderscienceonline.com/ >
-      au < released ; 2021 ; International Journal of Accounting and Finance Volume 11 [partial] ; 11 ; https://www.inderscienceonline.com/ > # isssue 2, 3, 4 not online
+      au < released ; 2021-2022 ; International Journal of Accounting and Finance Volume 11 [partial] ; 11 ; https://www.inderscienceonline.com/ > # isssue 3, 4 not online
 
     }
 
@@ -583,7 +583,7 @@
 
       param[journal_id] = ijasse
 
-      au < exists ; 2021-2024 ; International Journal of Aerospace System Science and Engineering Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ > #issue 2, 3, 4 not online
+      au < exists ; 2021 ; International Journal of Aerospace System Science and Engineering Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ > #issue 2, 3, 4 not online
 
     }
 
@@ -809,7 +809,8 @@
 
       au < released ; 2013-2014 ; International Journal of Applied Nonlinear Science Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
       au < released ; 2015-2016 ; International Journal of Applied Nonlinear Science Volume 2 ; 2 ; http://www.inderscienceonline.com/ >
-      au < released ; 2018-2023 ; International Journal of Applied Nonlinear Science Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ > # issue 4 not online
+      au < released ; 2018-2022 ; International Journal of Applied Nonlinear Science Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2023-2024 ; International Journal of Applied Nonlinear Science Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -830,7 +831,7 @@
       au < released ; 2017 ; International Journal of Applied Pattern Recognition Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
       au < released ; 2018 ; International Journal of Applied Pattern Recognition Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
       au < released ; 2019-2021 ; International Journal of Applied Pattern Recognition Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2022-2023 ; International Journal of Applied Pattern Recognition Volume 7 [partial] ; 7 ; https://www.inderscienceonline.com/ > #issue2, 3, 4 not online
+      au < manifest ; 2022-2023 ; International Journal of Applied Pattern Recognition Volume 7 [partial] ; 7 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
 
     }
 
@@ -891,7 +892,8 @@
       au < released ; 2014 ; International Journal of Artificial Intelligence and Soft Computing Volume 4 ; 4 ; http://www.inderscienceonline.com/ >
       au < released ; 2015-2016 ; International Journal of Artificial Intelligence and Soft Computing Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
       au < released ; 2017-2018 ; International Journal of Artificial Intelligence and Soft Computing Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
-      au < released ; 2019-2023 ; International Journal of Artificial Intelligence and Soft Computing Volume 7 [partial] ; 7 ; https://www.inderscienceonline.com/ > #issue 4 not online
+      au < released ; 2019-2022 ; International Journal of Artificial Intelligence and Soft Computing Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2023-2024 ; International Journal of Artificial Intelligence and Soft Computing Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -2797,7 +2799,7 @@
       au < released ; 2018 ; International Journal of Comparative Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
       au < released ; 2019 ; International Journal of Comparative Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
       au < released ; 2020 ; International Journal of Comparative Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
-      au < released ; 2021 ; International Journal of Comparative Management Volume 4 [partial] ; 4 ; https://www.inderscienceonline.com/ > # issue2, 3, 4 not online
+      au < released ; 2021-2022 ; International Journal of Comparative Management Volume 4 [partial] ; 4 ; https://www.inderscienceonline.com/ > # issue 3, 4 not online
 
     }
 
@@ -3033,7 +3035,7 @@
       param[journal_id] = ijdh
 
       au < released ; 2015-2016 ; International Journal of the Digital Human Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
-      au < released ; 2018 ; International Journal of the Digital Human Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ > # issue 3, 4 not online
+      au < released ; 2018-2023 ; International Journal of the Digital Human Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ > # issue 4 not online
 
     }
 
@@ -4064,7 +4066,8 @@
       au < doNotProcess ; 2007 ; International Journal of Environment, Workplace and Employment Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
       au < released ; 2008-2018 ; International Journal of Environment, Workplace and Employment Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
       au < released ; 2019 ; International Journal of Environment, Workplace and Employment Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
-      au < released ; 2020-2021 ; International Journal of Environment, Workplace and Employment Volume 6 [partial] ; 6 ; https://www.inderscienceonline.com/ > #issue 4 not online
+      au < released ; 2020-2022 ; International Journal of Environment, Workplace and Employment Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2023-2024 ; International Journal of Environment, Workplace and Employment Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
 
     }
 
