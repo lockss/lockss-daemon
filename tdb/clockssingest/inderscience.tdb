@@ -338,7 +338,7 @@
       au < finished ; finished ; 2018 ; International Journal of Accounting and Finance Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2019 ; International Journal of Accounting and Finance Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2020 ; International Journal of Accounting and Finance Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2021 ; International Journal of Accounting and Finance Volume 11 [partial] ; 11 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 > #issue2, 3, 4 not online
+      au < ingNotReady ; crawling ; 2021-2022 ; International Journal of Accounting and Finance Volume 11 [partial] ; 11 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 > #issue3, 4 not online
 
     }
 
@@ -584,7 +584,7 @@
 
       param[journal_id] = ijasse
 
-      au < exists ; exists ; 2021-2024 ; International Journal of Aerospace System Science and Engineering Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
+      au < exists ; exists ; 2021 ; International Journal of Aerospace System Science and Engineering Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
 
@@ -810,7 +810,8 @@
 
       au < finished ; finished ; 2013-2014 ; International Journal of Applied Nonlinear Science Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015-2016 ; International Journal of Applied Nonlinear Science Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < ingNotReady ; crawling ; 2018-2023 ; International Journal of Applied Nonlinear Science Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 > # issue 4 not exists
+      au < ingNotReady ; crawling ; 2018-2022 ; International Journal of Applied Nonlinear Science Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
+      au < exists ; exists ; 2023-2024 ; International Journal of Applied Nonlinear Science Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -831,7 +832,7 @@
       au < finished ; finished ; 2017 ; International Journal of Applied Pattern Recognition Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; International Journal of Applied Pattern Recognition Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2019-2021 ; International Journal of Applied Pattern Recognition Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < ingNotReady ; exists ; 2022-2023 ; International Journal of Applied Pattern Recognition Volume 7 [partial] ; 7 ; https://www.inderscienceonline.com/ ; > #issue2, 3, 4 not online
+      au < ingNotReady ; exists ; 2022-2023 ; International Journal of Applied Pattern Recognition Volume 7 [partial] ; 7 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
     }
 
@@ -892,7 +893,8 @@
       au < finished ; finished ; 2014 ; International Journal of Artificial Intelligence and Soft Computing Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015-2016 ; International Journal of Artificial Intelligence and Soft Computing Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017-2018 ; International Journal of Artificial Intelligence and Soft Computing Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < ingNotReady ; exists ; 2019-2023 ; International Journal of Artificial Intelligence and Soft Computing Volume 7 [partial] ; 7 ; https://www.inderscienceonline.com/ ; > #issue 4 not online
+      au < deepCrawl ; exists ; 2019-2022 ; International Journal of Artificial Intelligence and Soft Computing Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
+      au < expected ; exists ; 2023-2024 ; International Journal of Artificial Intelligence and Soft Computing Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -2211,7 +2213,7 @@
 
       param[journal_id] = ijccia
 
-      au < ingNotReady ; exists ; 2016-2020 ; International Journal of Computational Complexity and Intelligent Algorithms Volume 1 [partial] ; 1 ; http://www.inderscienceonline.com/ ; > #issue 4 not online yet
+      au < deepCrawl ; exists ; 2016-2020 ; International Journal of Computational Complexity and Intelligent Algorithms Volume 1 [partial] ; 1 ; http://www.inderscienceonline.com/ ; > #issue 4 not online yet
 
     }
 
@@ -2797,7 +2799,7 @@
       au < finished ; finished ; 2018 ; International Journal of Comparative Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2019 ; International Journal of Comparative Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2020 ; International Journal of Comparative Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2021 ; International Journal of Comparative Management Volume 4 [partial] ; 4 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 > # issue2, 3, 4 not online
+      au < ingNotReady ; crawling ; 2021-2022 ; International Journal of Comparative Management Volume 4 [partial] ; 4 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 > # issue 3, 4 not online
 
     }
 
@@ -3033,7 +3035,7 @@
       param[journal_id] = ijdh
 
       au < finished ; finished ; 2015-2016 ; International Journal of the Digital Human Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; International Journal of the Digital Human Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 > # issue 3, 4 not online
+      au < ingNotReady ; crawling ; 2018-2023 ; International Journal of the Digital Human Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 > # issue 4 not online
 
     }
 
@@ -4065,7 +4067,8 @@
       au < doNotProcess ; exists ; 2007 ; International Journal of Environment, Workplace and Employment Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2008-2018 ; International Journal of Environment, Workplace and Employment Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2019 ; International Journal of Environment, Workplace and Employment Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2020-2021 ; International Journal of Environment, Workplace and Employment Volume 6 [partial] ; 6 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 > #issue 4 not online
+      au < ingNotReady ; crawling ; 2020-2022 ; International Journal of Environment, Workplace and Employment Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
+      au < exists ; exists ; 2023-2024 ; International Journal of Environment, Workplace and Employment Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
 
     }
 
