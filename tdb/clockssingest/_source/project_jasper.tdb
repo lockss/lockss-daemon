@@ -3,7 +3,7 @@
   publisher <
     name = Project JASPER ;
     info[contract] = 2022 ;
-    info[tester] = 7 ;
+    info[tester] = S ;
     info[platform] = Internet Archive JASPER. https://doaj.org/preservation/
   >
   hidden[proxy] = DIRECT
@@ -155,7 +155,7 @@
     >
     provider = Sociedad Argentina de Análisis Filosófico
 
-    au < testing ; exists ; 2023 ; Análisis Filosófico ; analisis_filosofico_1851-9636 >
+    au < ready ; exists ; 2023 ; Análisis Filosófico ; analisis_filosofico_1851-9636 >
 
   }
 
