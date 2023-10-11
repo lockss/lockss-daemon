@@ -1,0 +1,29 @@
+{
+
+  publisher <
+    name = Mansoura University Faculty of Medicine ;
+    info[contract] = 2015 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+  {
+  
+    title <
+      name = Menoufia Medical Journal ;
+      eissn = 2411-3514 
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    #param[base_url] = https://www.menoufia-med-j.com/journal/
+    param[journal_abbr] = journal
+    implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
+
+    au < manifest ; exists ; 2023 ; Menoufia Medical Journal Volume 36 ; 36 ; https://www.menoufia-med-j.com/ ; >
+
+  }
+
+}
