@@ -5727,7 +5727,9 @@
    au < finished ; manifest ; 2021 ; 9781799852957 ; 9781799852971 ; 10.4018/978-1-7998-5295-7 ; 246485 ; Principles of Islamic Ethics for Contemporary Workplaces ; ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
    au < finished ; manifest ; 2021 ; 9781799857532 ; 9781799857549 ; 10.4018/978-1-7998-5753-2 ; 252572 ; Describing Nature Through Visual Data ; ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
 
-   au < finished ; manifest ; 2022 ; 9781799889342 ; 9781799888741 ; 10.4018/978-1-7998-8874-1 ; 274021 ; Technology-Supported Interventions for Students With Special Needs in the 21st Century ; ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
+   #The following 2022 AU isbn should be eisbn, eisbn should be isbn
+   au < finished ; manifest ; 2022 ; 9781799888741 ; 9781799889342 ; 10.4018/978-1-7998-8874-1 ; 274021 ; Technology-Supported Interventions for Students With Special Needs in the 21st Century ; ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
+
    au < manifest ; exists ; 2022 ; 9781799848127 ; 9781799848110 ; 10.4018/978-1-7998-4811-0 ; 244582 ; Preservation and Restoration Techniques for Ancient Egyptian Textiles ; ; https://www.igi-global.com/ ; >
    au < notReady ; exists ; 2022 ; 9781799855545 ; 9781799855521 ; 10.4018/978-1-7998-5552-1 ; 248932 ; Knowledge Management and Big Data Analytics for Strategic Decision Making ; ; https://www.igi-global.com/ ; >
    au < manifest ; exists ; 2022 ; 9781668449523 ; 9781668449509 ; 10.4018/978-1-6684-4950-9 ; 293045 ; Revolutionizing Business Practices Through Artificial Intelligence and Data-Rich Environments ; ; https://www.igi-global.com/ ; >
