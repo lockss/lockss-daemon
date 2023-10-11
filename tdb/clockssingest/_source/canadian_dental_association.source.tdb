@@ -22,7 +22,7 @@
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/cda-released/
 
       au < zapped ; finished ; 2018 ; Journal of the Canadian Dental Association Source Content 2018 ; 2018 >
-      au < readySource ; finished ; 2020 ; Journal of the Canadian Dental Association Source Content 2020 ; 2020 >
+      au < zapped ; finished ; 2020 ; Journal of the Canadian Dental Association Source Content 2020 ; 2020 >
       au < readySource ; finished ; 2021 ; Journal of the Canadian Dental Association Source Content 2021 ; 2021 >
       au < readySource ; finished ; 2022 ; Journal of the Canadian Dental Association Source Content 2022 ; 2022 >
       #No more AUs. Moved to https.
