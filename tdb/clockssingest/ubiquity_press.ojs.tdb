@@ -1749,28 +1749,6 @@
   {
 
       title <
-        name = KULA: knowledge creation, dissemination, and preservation studies ;
-        eissn = 2398-4112
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://kula.uvic.ca/
-      param[journal_id] = kula
-      #Moved to OJS https://account.kula.uvic.ca/index.php/kula
-
-      au < doNotProcess ; doNotProcess ; 2017 ; 1 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2017 ; 2017 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 2 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2018 ; 2018 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 3 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2019 ; 2019 ; >
-      au < exists ; exists ; 2020 ; 4 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2020 ; 2020 ; >
-      au < exists ; exists ; 2021 ; 5 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2021 ; 2021 ; >
-      au < exists ; exists ; 2022 ; 6 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2022 ; 2022 ; >
-      au < expected ; exists ; 2023 ; 7 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2023 ; 2023 ; >
-
-  }
-
-  {
-
-      title <
         name = Metaphysics ;
         eissn = 2515-8279
       >
