@@ -1,0 +1,45 @@
+{
+
+  publisher <
+    name = H-Net: Humanities & Social Sciences Online ;
+    info[contract] = 2023 ;
+    info[tester] = 8 ;
+    info[platform] = Open Journal Systems 3.3.0.15
+  >
+
+  implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
+
+  {
+    title <
+      name = Journal of Festive Studies ;
+      eissn = 2641-9939
+    >
+    
+    param[base_url] = https://journals.h-net.org/
+    param[journal_id] = jfs
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+
+    au < manifest ; exists ; 2019 ; 2019 ; Journal of Festive Studies Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Journal of Festive Studies Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2021 ; 2021 ; Journal of Festive Studies Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Journal of Festive Studies Volume 4 ; 4 ; >
+    au < expected ; exists ; 2023 ; 2023 ; Journal of Festive Studies Volume 5 ; 5 ; >
+
+  }
+
+  {
+    title <
+      name = The Proceedings of the H-Net Teaching Conference ;
+      eissn = 2993-9550
+    >
+    
+    param[base_url] = https://journals.h-net.org/
+    param[journal_id] = phtc
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+
+    au < manifest ; exists ; 2023 ; 2023 ; The Proceedings of the H-Net Teaching Conference Volume 1 ; 1 ; >
+
+  }
+}
