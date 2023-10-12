@@ -63,7 +63,8 @@ import java.util.TimeZone;
 public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
   private static final Logger logger = 
       Logger.getLogger(BaseOaiPmhCrawlSeed.class);
-  
+
+  public static final String DATETIME_FORMAT = "yyyy-MM-dd'T'hh:mm:ss'Z'";
   public static final String DATE_FORMAT = "yyyy-MM-dd";
   public static final String KEY_AU_OAI_FROM_DATE = "oai_from_date";
   public static final String KEY_AU_OAI_UNTIL_DATE = "oai_until_date";
@@ -188,7 +189,7 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
   protected void setDates(String from, String until)
       throws ConfigurationException {
     TimeZone utc = TimeZoneUtil.getExactTimeZone("UTC");
-    DateFormat df = new SimpleDateFormat(DATE_FORMAT);
+    DateFormat df = new SimpleDateFormat(DATETIME_FORMAT);
     df.setTimeZone(utc);
     this.from = parseDate(from, df, "from");
     this.until = parseDate(until, df, "until");
@@ -200,10 +201,16 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
   protected Date parseDate(String date, DateFormat df, String name) 
       throws ConfigurationException {
     Date ret;
-    
-    if(date.length() == 10) {
-      date = date + "T00:00:00";
+
+    //https://lifewritingannual.openlibhums.org/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2014-01-01T00:00:00Z&until=2014-12-31T23:59:59Z
+    if((date.length() == 10) && name.contains("from")) {
+      date = date + "T00:00:00Z";
     }
+
+    if((date.length() == 10) && name.contains("until")) {
+      date = date + "T23:59:59Z";
+    }
+
     try {
       ret = df.parse(date);
     } catch (ParseException e) {
