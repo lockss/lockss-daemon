@@ -51,6 +51,14 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>Janeway</string>
   </entry>
   <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.janeway.JanewayDirectoryAccessorPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
