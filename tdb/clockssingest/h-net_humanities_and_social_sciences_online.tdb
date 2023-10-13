@@ -3,7 +3,7 @@
   publisher <
     name = H-Net: Humanities & Social Sciences Online ;
     info[contract] = 2023 ;
-    info[tester] = 8 ;
+    info[tester] = 2 ;
     info[platform] = Open Journal Systems 3.3.0.15
   >
 
@@ -22,8 +22,8 @@
 
     au < manifest ; exists ; 2019 ; 2019 ; Journal of Festive Studies Volume 1 ; 1 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Journal of Festive Studies Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Journal of Festive Studies Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2022 ; 2022 ; Journal of Festive Studies Volume 4 ; 4 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Journal of Festive Studies Volume 3 ; 3 ; >
+    au < testing ; exists ; 2022 ; 2022 ; Journal of Festive Studies Volume 4 ; 4 ; >
     au < expected ; exists ; 2023 ; 2023 ; Journal of Festive Studies Volume 5 ; 5 ; >
 
   }
