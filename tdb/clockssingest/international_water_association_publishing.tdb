@@ -174,8 +174,8 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Water and Health Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Water and Health Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Water and Health Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Journal of Water and Health Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Water and Health Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Journal of Water and Health Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Journal of Water and Health Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Water and Health Volume 18 ; 18 ; >
     au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Water and Health Volume 19 ; 19 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Water and Health Volume 20 ; 20 ; >
@@ -219,7 +219,7 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Water Reuse and Desalination Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Water Reuse and Desalination Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Water Reuse and Desalination Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Journal of Water Reuse and Desalination Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Journal of Water Reuse and Desalination Volume 8 ; 8 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Journal of Water Reuse and Desalination Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Water Reuse and Desalination Volume 10 ; 10 ; >
     #name and issn changed to Water Reuse
@@ -245,7 +245,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Water, Sanitation and Hygiene for Development Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Water, Sanitation and Hygiene for Development Volume 7 ; 7 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Water, Sanitation and Hygiene for Development Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Water, Sanitation and Hygiene for Development Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Journal of Water, Sanitation and Hygiene for Development Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Water, Sanitation and Hygiene for Development Volume 10 ; 10 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Journal of Water, Sanitation and Hygiene for Development Volume 11 ; 11 ; > #403 forbidden, https://iwa.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Water, Sanitation and Hygiene for Development Volume 12 ; 12 ; >
@@ -302,7 +302,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Water Supply: Research and Technology - Aqua Volume 65 ; 65 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Water Supply: Research and Technology - Aqua Volume 66 ; 66 ; >
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Water Supply: Research and Technology - Aqua Volume 67 ; 67 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Water Supply: Research and Technology - Aqua Volume 68 ; 68 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Journal of Water Supply: Research and Technology - Aqua Volume 68 ; 68 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Water Supply: Research and Technology - Aqua Volume 69 ; 69 ; >
     #publisher changed name, issn AQUA: Water Infrastructure, Ecosystems and Society
   }
@@ -337,8 +337,8 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Hydroinformatics Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Hydroinformatics Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Hydroinformatics Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Journal of Hydroinformatics Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Journal of Hydroinformatics Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Journal of Hydroinformatics Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Journal of Hydroinformatics Volume 21 ; 21 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Journal of Hydroinformatics Volume 22 ; 22 ; >
     au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Hydroinformatics Volume 23 ; 23 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Hydroinformatics Volume 24 ; 24 ; >
@@ -403,8 +403,8 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Water Policy Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Water Policy Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Water Policy Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Water Policy Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Water Policy Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Water Policy Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Water Policy Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Water Policy Volume 22 ; 22 ; >
     au < deepCrawl ; exists ; 2021 ; 2021 ; Water Policy Volume 23 ; 23 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Water Policy Volume 24 ; 24 ; >
@@ -425,7 +425,7 @@
     #param[base_url] = http://wqrjc.iwaponline.com/
     #name = Water Quality Research Journal of Canada ; title removed the of Canada in 2018
 
-    au < crawling ; exists ; 2018 ; 2018 ; Water Quality Research Journal Volume 53 ; 53 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Water Quality Research Journal Volume 53 ; 53 ; >
     au < finished ; crawling ; 2019 ; 2019 ; Water Quality Research Journal Volume 54 ; 54 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Water Quality Research Journal Volume 55 ; 55 ; >
     au < deepCrawl ; exists ; 2021 ; 2021 ; Water Quality Research Journal Volume 56 ; 56 ; >
@@ -551,7 +551,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Water Science and Technology Volume 73-74 ; 73-74 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Water Science and Technology Volume 75-76 ; 75-76 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Water Science and Technology Volume 77-78 ; 77-78 ; >
-    au < crawling ; exists ; 2019 ; 2019 ; Water Science and Technology Volume 79-80 ; 79-80 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Water Science and Technology Volume 79-80 ; 79-80 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Water Science and Technology Volume 81-82 ; 81-82 ; >
     au < deepCrawl ; exists ; 2021 ; 2021 ; Water Science and Technology Volume 83-84 ; 83-84 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Water Science and Technology Volume 85-86 ; 85-86 ; >
