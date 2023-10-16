@@ -584,7 +584,7 @@
 
       param[journal_id] = ijasse
 
-      au < exists ; exists ; 2021 ; International Journal of Aerospace System Science and Engineering Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
+      au < manifest ; exists ; 2021 ; International Journal of Aerospace System Science and Engineering Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
 
@@ -665,9 +665,9 @@
 
       param[journal_id] = ijaitg
 
-      au < exists ; exists ; 2019-2020 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < exists ; exists ; 2021 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < exists ; exists ; 2022-2023 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
+      au < manifest ; exists ; 2019-2020 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2021 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2022-2023 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
 
@@ -811,7 +811,7 @@
       au < finished ; finished ; 2013-2014 ; International Journal of Applied Nonlinear Science Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015-2016 ; International Journal of Applied Nonlinear Science Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < ingNotReady ; crawling ; 2018-2022 ; International Journal of Applied Nonlinear Science Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < exists ; exists ; 2023-2024 ; International Journal of Applied Nonlinear Science Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2023-2024 ; International Journal of Applied Nonlinear Science Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -1201,9 +1201,9 @@
 
       param[journal_id] = ijbdm
 
-      au < exists ; exists ; 2020 ; International Journal of Big Data Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < exists ; exists ; 2022 ; International Journal of Big Data Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < exists ; exists ; 2023 ; International Journal of Big Data Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2020 ; International Journal of Big Data Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2022 ; International Journal of Big Data Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2023 ; International Journal of Big Data Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -1436,10 +1436,10 @@
 
       param[journal_id] = ijbc
 
-      au < exists ; exists ; 2019-2020 ; International Journal of Blockchains and Cryptocurrencies Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < exists ; exists ; 2021 ; International Journal of Blockchains and Cryptocurrencies Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < exists ; exists ; 2022 ; International Journal of Blockchains and Cryptocurrencies Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
-      au < exists ; exists ; 2023 ; International Journal of Blockchains and Cryptocurrencies Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2019-2020 ; International Journal of Blockchains and Cryptocurrencies Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2021 ; International Journal of Blockchains and Cryptocurrencies Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2022 ; International Journal of Blockchains and Cryptocurrencies Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2023 ; International Journal of Blockchains and Cryptocurrencies Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -1454,8 +1454,8 @@
 
       param[journal_id] = ijbda
 
-      au < exists ; exists ; 2019-2020 ; International Journal of Business and Data Analytics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < exists ; exists ; 2022-2023 ; International Journal of Business and Data Analytics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2019-2020 ; International Journal of Business and Data Analytics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2022-2023 ; International Journal of Business and Data Analytics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -2532,7 +2532,7 @@
       au < finished ; manifest ; 2022 ; International Journal of Computer Applications in Technology Volume 70 ; 70 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2023 ; International Journal of Computer Applications in Technology Volume 71 ; 71 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2023 ; International Journal of Computer Applications in Technology Volume 72 ; 72 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2023 ; International Journal of Computer Applications in Technology Volume 73 ; 73 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2023 ; International Journal of Computer Applications in Technology Volume 73 ; 73 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -2814,7 +2814,7 @@
 
       param[journal_id] = ijccps
 
-      au < exists ; exists ; 2021-2024 ; International Journal of Cybernetics and Cyber-Physical Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2021-2024 ; International Journal of Cybernetics and Cyber-Physical Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -3050,11 +3050,11 @@
 
       param[journal_id] = ijdsss
 
-      au < exists ; exists ; 2017 ; International Journal of Digital Signals and Smart Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < exists ; exists ; 2018 ; International Journal of Digital Signals and Smart Systems Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < exists ; exists ; 2019 ; International Journal of Digital Signals and Smart Systems Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
-      au < exists ; exists ; 2020 ; International Journal of Digital Signals and Smart Systems Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
-      au < exists ; exists ; 2021-2023 ; International Journal of Digital Signals and Smart Systems Volume 5 [partial] ; 5 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
+      au < manifest ; exists ; 2017 ; International Journal of Digital Signals and Smart Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2018 ; International Journal of Digital Signals and Smart Systems Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2019 ; International Journal of Digital Signals and Smart Systems Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2020 ; International Journal of Digital Signals and Smart Systems Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2021-2023 ; International Journal of Digital Signals and Smart Systems Volume 5 [partial] ; 5 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
     }
 
@@ -4068,7 +4068,7 @@
       au < finished ; finished ; 2008-2018 ; International Journal of Environment, Workplace and Employment Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2019 ; International Journal of Environment, Workplace and Employment Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < ingNotReady ; crawling ; 2020-2022 ; International Journal of Environment, Workplace and Employment Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < exists ; exists ; 2023-2024 ; International Journal of Environment, Workplace and Employment Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2023-2024 ; International Journal of Environment, Workplace and Employment Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -4260,7 +4260,7 @@
 
       param[journal_id] = ijfbrd
 
-      au < exists ; exists ; 2020-2024 ; International Journal of Family Business and Regional Development Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
+      au < manifest ; exists ; 2020-2024 ; International Journal of Family Business and Regional Development Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
 
@@ -4660,7 +4660,7 @@
 
       param[journal_id] = ijgfi
 
-      au < exists ; exists ; 2018-2023 ; International Journal of Governance and Financial Intermediation Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2018-2023 ; International Journal of Governance and Financial Intermediation Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -4774,7 +4774,7 @@
 
       param[journal_id] = ijhp
 
-      au < exists ; exists ; 2019-2023 ; International Journal of Healthcare Policy Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
+      au < manifest ; exists ; 2019-2023 ; International Journal of Healthcare Policy Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
 
@@ -4997,7 +4997,7 @@
 
       param[journal_id] = ijht
 
-      au < exists ; exists ; 2018-2023 ; International Journal of Humanitarian Technology Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
+      au < manifest ; exists ; 2018-2023 ; International Journal of Humanitarian Technology Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
     }
 
@@ -5012,8 +5012,8 @@
 
       param[journal_id] = ijhi
 
-      au < exists ; exists ; 2019 ; International Journal of Hybrid Intelligence Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < exists ; exists ; 2021-2023 ; International Journal of Hybrid Intelligence Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2019 ; International Journal of Hybrid Intelligence Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2021-2023 ; International Journal of Hybrid Intelligence Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -5055,12 +5055,12 @@
 
       param[journal_id] = ijhm
 
-      au < exists ; exists ; 2018 ; International Journal of Hydromechatronics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < exists ; exists ; 2019 ; International Journal of Hydromechatronics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < exists ; exists ; 2020 ; International Journal of Hydromechatronics Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
-      au < exists ; exists ; 2021 ; International Journal of Hydromechatronics Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
-      au < exists ; exists ; 2022 ; International Journal of Hydromechatronics Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
-      au < exists ; exists ; 2023 ; International Journal of Hydromechatronics Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2018 ; International Journal of Hydromechatronics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2019 ; International Journal of Hydromechatronics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2020 ; International Journal of Hydromechatronics Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2021 ; International Journal of Hydromechatronics Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2022 ; International Journal of Hydromechatronics Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2023 ; International Journal of Hydromechatronics Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -5723,7 +5723,7 @@
 
       param[journal_id] = ijisc
 
-      au < exists ; exists ; 2020-2023 ; International Journal of Intelligence and Sustainable Computing Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 4 not online
+      au < manifest ; exists ; 2020-2023 ; International Journal of Intelligence and Sustainable Computing Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 4 not online
 
     }
 
@@ -5837,7 +5837,7 @@
 
       param[journal_id] = ijiitc
 
-      au < exists ; exists ; 2019-2022 ; International Journal of Intelligent Internet of Things Computing Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2019-2022 ; International Journal of Intelligent Internet of Things Computing Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2023-2026 ; International Journal of Intelligent Internet of Things Computing Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -6045,8 +6045,8 @@
 
       param[journal_id] = ijitca
 
-      au < exists ; exists ; 2018-2020 ; International Journal of Internet of Things and Cyber-Assurance Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < exists ; exists ; 2022-2023 ; International Journal of Internet of Things and Cyber-Assurance Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
+      au < manifest ; exists ; 2018-2020 ; International Journal of Internet of Things and Cyber-Assurance Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2022-2023 ; International Journal of Internet of Things and Cyber-Assurance Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
 
@@ -7869,8 +7869,8 @@
  
        param[journal_id] = ijndc
  
-      au < exists ; exists ; 2017-2019 ; International Journal of Nonlinear Dynamics and Control Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < exists ; exists ; 2021-2023 ; International Journal of Nonlinear Dynamics and Control Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2017-2019 ; International Journal of Nonlinear Dynamics and Control Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2021-2023 ; International Journal of Nonlinear Dynamics and Control Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -9616,7 +9616,7 @@
 
        param[journal_id] = ijstds
 
-      au < exists ; exists ; 2019-2021 ; Spatio-Temporal Data Science Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #isuue 4 not online
+      au < manifest ; exists ; 2019-2021 ; Spatio-Temporal Data Science Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #isuue 4 not online
 
     }
 
@@ -9753,7 +9753,7 @@
 
        param[journal_id] = ijspr
 
-      au < exists ; exists ; 2022-2023 ; International Journal of Student Project Reporting Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2022-2023 ; International Journal of Student Project Reporting Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -12060,7 +12060,7 @@
 
        param[journal_id] = mjccm
 
-      au < exists ; exists ; 2020-2024 ; MENA Journal of Cross-Cultural Management Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
+      au < manifest ; exists ; 2020-2024 ; MENA Journal of Cross-Cultural Management Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
     }
 
