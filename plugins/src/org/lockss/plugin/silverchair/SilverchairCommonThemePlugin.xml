@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>21</string>
+        <string>22</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -171,6 +171,10 @@
             <string>1,"^https?://(ajot2\.silverchair-cdn\.com)/"</string>
             <string>2,"%s.*javascript;:", base_url</string>
             <string>2,"%s.*javascript:;", base_url</string>
+            <!--Allow movies from CDN/Subdomain goes through, company of biologies need to collect movies-->
+            <!--https://journals.biologists.com/jcs/article/135/18/jcs259657/276793/Mitotic-spindle-disassembly-in-human-cells-relies-->
+            <string>1,"^https?://movie\.biologists\.com/video/"</string>
+            <!--https://rupress.org/jcb/article/221/3/e202111095/212952/Vps13-like-proteins-provide-->
         </list>
     </entry>
     <entry>
@@ -253,6 +257,7 @@
             <string>ucp\.silverchair-cdn\.com</string>
             <string>watermark\.silverchair\.com</string>
             <string>ajot2\.silverchair-cdn\.com</string>
+            <string>movie\.biologists\.com</string>
         </list>
     </entry>
     <entry>
