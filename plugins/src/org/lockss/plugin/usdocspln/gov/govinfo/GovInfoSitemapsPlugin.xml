@@ -40,14 +40,14 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>21</string>
+    <string>22</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -126,6 +126,8 @@ POSSIBILITY OF SUCH DAMAGE.
     https://www.govinfo.gov/sites/all/themes/custom/bootstrap-fdsys/font-awesome/fonts/fontawesome-webfont.svg%3Fv=4.3.0
     -->
     <list>
+      <!-- Improperly relative links that don't return 404 e.g. https://www.govinfo.gov/content/pkg/GPO-USCC-2013/html/GPO-USCC-2013-1.htm has https://www.govinfo.gov/content/pkg/GPO-USCC-2013/html/www.fatf-gafi.org/media/fatf/documents/reports/Vulnerabilities-%20-of-%20-Casinos-%20-and-%20-Gaming-%20-Sector -->
+      <string>2,"^%s.*/html/www\.", base_url</string>
 <!-- https://www.govinfo.gov/content/pkg/DCPD-201800002.zip-->
       <string>2,"^%scontent/(granule|pkg)/[^/]+\.zip$", base_url</string>
       <string>1,"^%scontent/(granule|pkg)/%s-", base_url, collection_id</string>
