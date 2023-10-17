@@ -21,7 +21,7 @@
 
       au < doNotProcess ; 2020 ; 1 ; Steiner Studies Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 2 ; Steiner Studies Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 3 ; Steiner Studies Volume 2022 ; 2022 >
+      au < released ; 2022 ; 3 ; Steiner Studies Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 4 ; Steiner Studies Volume 2023 ; 2023 >
 
   }
@@ -48,21 +48,21 @@
       param[base_url] = https://account.estetikajournal.org/
       param[journal_id] = uh-j-eteja
 
-      au < releasing ; 2008 ; 45 ; Estetika: The European Journal of Aesthetics Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 46 ; Estetika: The European Journal of Aesthetics Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 47 ; Estetika: The European Journal of Aesthetics Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 48 ; Estetika: The European Journal of Aesthetics Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 49 ; Estetika: The European Journal of Aesthetics Volume 2012 ; 2012 >
-      au < releasing ; 2013 ; 50 ; Estetika: The European Journal of Aesthetics Volume 2013 ; 2013 >
-      au < releasing ; 2014 ; 51 ; Estetika: The European Journal of Aesthetics Volume 2014 ; 2014 >
-      au < releasing ; 2015 ; 52 ; Estetika: The European Journal of Aesthetics Volume 2015 ; 2015 >
-      au < releasing ; 2016 ; 53 ; Estetika: The European Journal of Aesthetics Volume 2016 ; 2016 >
-      au < releasing ; 2017 ; 54 ; Estetika: The European Journal of Aesthetics Volume 2017 ; 2017 >
-      au < releasing ; 2018 ; 55 ; Estetika: The European Journal of Aesthetics Volume 2018 ; 2018 >
-      au < releasing ; 2019 ; 56 ; Estetika: The European Journal of Aesthetics Volume 2019 ; 2019 >
+      au < released ; 2008 ; 45 ; Estetika: The European Journal of Aesthetics Volume 2008 ; 2008 >
+      au < released ; 2009 ; 46 ; Estetika: The European Journal of Aesthetics Volume 2009 ; 2009 >
+      au < released ; 2010 ; 47 ; Estetika: The European Journal of Aesthetics Volume 2010 ; 2010 >
+      au < released ; 2011 ; 48 ; Estetika: The European Journal of Aesthetics Volume 2011 ; 2011 >
+      au < released ; 2012 ; 49 ; Estetika: The European Journal of Aesthetics Volume 2012 ; 2012 >
+      au < released ; 2013 ; 50 ; Estetika: The European Journal of Aesthetics Volume 2013 ; 2013 >
+      au < released ; 2014 ; 51 ; Estetika: The European Journal of Aesthetics Volume 2014 ; 2014 >
+      au < released ; 2015 ; 52 ; Estetika: The European Journal of Aesthetics Volume 2015 ; 2015 >
+      au < released ; 2016 ; 53 ; Estetika: The European Journal of Aesthetics Volume 2016 ; 2016 >
+      au < released ; 2017 ; 54 ; Estetika: The European Journal of Aesthetics Volume 2017 ; 2017 >
+      au < released ; 2018 ; 55 ; Estetika: The European Journal of Aesthetics Volume 2018 ; 2018 >
+      au < released ; 2019 ; 56 ; Estetika: The European Journal of Aesthetics Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 57 ; Estetika: The European Journal of Aesthetics Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 58 ; Estetika: The European Journal of Aesthetics Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 59 ; Estetika: The European Journal of Aesthetics Volume 2022 ; 2022 >
+      au < released ; 2022 ; 59 ; Estetika: The European Journal of Aesthetics Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 60 ; Estetika: The European Journal of Aesthetics Volume 2023 ; 2023 >
   }
 
@@ -88,7 +88,7 @@
       au < doNotProcess ; 2019 ; 9 ; Nordic Journal of Migration Research Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 10 ; Nordic Journal of Migration Research Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 11 ; Nordic Journal of Migration Research Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 12 ; Nordic Journal of Migration Research Volume 2022 ; 2022 >
+      au < released ; 2022 ; 12 ; Nordic Journal of Migration Research Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 13 ; Nordic Journal of Migration Research Volume 2023 ; 2023 >
   }
 
@@ -185,8 +185,8 @@
 
       au < doNotProcess ; 2018 ; 1 ; Journal of Altmetrics Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 2 ; Journal of Altmetrics Volume 2019 ; 2019 >
-      au < releasing ; 2020 ; 3 ; Journal of Altmetrics Volume 2020 ; 2020 > #502 upstream error https://d39af2mgp1pqhg.cloudfront.net/widget-popup.js,"Unknown host: d39af2mgp1pqhg.cloudfront.net"
-      au < releasing ; 2021 ; 4 ; Journal of Altmetrics Volume 2021 ; 2021 >
+      au < released ; 2020 ; 3 ; Journal of Altmetrics Volume 2020 ; 2020 > #502 upstream error https://d39af2mgp1pqhg.cloudfront.net/widget-popup.js,"Unknown host: d39af2mgp1pqhg.cloudfront.net"
+      au < released ; 2021 ; 4 ; Journal of Altmetrics Volume 2021 ; 2021 >
       au < expected ; 2022 ; 5 ; Journal of Altmetrics Volume 2022 ; 2022 >
       au < expected ; 2023 ; 6 ; Journal of Altmetrics Volume 2023 ; 2023 >
 
@@ -223,7 +223,7 @@
       param[base_url] = https://account.practicalimplementationofnursingscience.org/
       param[journal_id] = ll-j-pins
 
-      au < releasing ; 2022 ; 1 ; Practical Implementation of Nursing Science Volume 2022 ; 2022 >
+      au < released ; 2022 ; 1 ; Practical Implementation of Nursing Science Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 2 ; Practical Implementation of Nursing Science Volume 2023 ; 2023 >
 
   }
@@ -308,7 +308,7 @@
       au < doNotProcess ; 2019 ; 5 ; Journal of Long-Term Care Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 6 ; Journal of Long-Term Care Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 8 ; Journal of Long-Term Care Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 9 ; Journal of Long-Term Care Volume 2022 ; 2022 >
+      au < released ; 2022 ; 9 ; Journal of Long-Term Care Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 10 ; Journal of Long-Term Care Volume 2023 ; 2023 >
 
   }
@@ -358,28 +358,28 @@
       param[base_url] = https://account.economia.lse.ac.uk/
       param[journal_id] = lse-j-elaceaj
 
-      au < releasing ; 2000 ; 1 ; Economía Volume 2000 ; 2000 >
-      au < releasing ; 2001 ; 2 ; Economía Volume 2001 ; 2001 >
-      au < releasing ; 2002 ; 3 ; Economía Volume 2002 ; 2002 >
-      au < releasing ; 2003 ; 4 ; Economía Volume 2003 ; 2003 >
-      au < releasing ; 2004 ; 5 ; Economía Volume 2004 ; 2004 >
-      au < releasing ; 2005 ; 6 ; Economía Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 7 ; Economía Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 8 ; Economía Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 9 ; Economía Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 10 ; Economía Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 11 ; Economía Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 12 ; Economía Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 13 ; Economía Volume 2012 ; 2012 >
-      au < releasing ; 2013 ; 14 ; Economía Volume 2013 ; 2013 >
-      au < releasing ; 2014 ; 15 ; Economía Volume 2014 ; 2014 >
-      au < releasing ; 2015 ; 16 ; Economía Volume 2015 ; 2015 >
-      au < releasing ; 2016 ; 17 ; Economía Volume 2016 ; 2016 >
-      au < releasing ; 2017 ; 18 ; Economía Volume 2017 ; 2017 >
-      au < releasing ; 2018 ; 19 ; Economía Volume 2018 ; 2018 >
-      au < releasing ; 2019 ; 20 ; Economía Volume 2019 ; 2019 >
-      au < releasing ; 2020 ; 21 ; Economía Volume 2020 ; 2020 >
-      au < releasing ; 2021 ; 22 ; Economía Volume 2021 ; 2021 >
+      au < released ; 2000 ; 1 ; Economía Volume 2000 ; 2000 >
+      au < released ; 2001 ; 2 ; Economía Volume 2001 ; 2001 >
+      au < released ; 2002 ; 3 ; Economía Volume 2002 ; 2002 >
+      au < released ; 2003 ; 4 ; Economía Volume 2003 ; 2003 >
+      au < released ; 2004 ; 5 ; Economía Volume 2004 ; 2004 >
+      au < released ; 2005 ; 6 ; Economía Volume 2005 ; 2005 >
+      au < released ; 2006 ; 7 ; Economía Volume 2006 ; 2006 >
+      au < released ; 2007 ; 8 ; Economía Volume 2007 ; 2007 >
+      au < released ; 2008 ; 9 ; Economía Volume 2008 ; 2008 >
+      au < released ; 2009 ; 10 ; Economía Volume 2009 ; 2009 >
+      au < released ; 2010 ; 11 ; Economía Volume 2010 ; 2010 >
+      au < released ; 2011 ; 12 ; Economía Volume 2011 ; 2011 >
+      au < released ; 2012 ; 13 ; Economía Volume 2012 ; 2012 >
+      au < released ; 2013 ; 14 ; Economía Volume 2013 ; 2013 >
+      au < released ; 2014 ; 15 ; Economía Volume 2014 ; 2014 >
+      au < released ; 2015 ; 16 ; Economía Volume 2015 ; 2015 >
+      au < released ; 2016 ; 17 ; Economía Volume 2016 ; 2016 >
+      au < released ; 2017 ; 18 ; Economía Volume 2017 ; 2017 >
+      au < released ; 2018 ; 19 ; Economía Volume 2018 ; 2018 >
+      au < released ; 2019 ; 20 ; Economía Volume 2019 ; 2019 >
+      au < released ; 2020 ; 21 ; Economía Volume 2020 ; 2020 >
+      au < released ; 2021 ; 22 ; Economía Volume 2021 ; 2021 >
       au < exists ; 2022 ; 23 ; Economía Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 24 ; Economía Volume 2023 ; 2023 >
 
@@ -421,7 +421,7 @@
       au < doNotProcess ; 2019 ; 11 ; Designs for Learning Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 12 ; Designs for Learning Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 13 ; Designs for Learning Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 14 ; Designs for Learning Volume 2022 ; 2022 >
+      au < released ; 2022 ; 14 ; Designs for Learning Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 15 ; Designs for Learning Volume 2023 ; 2023 >
 
   }
@@ -439,7 +439,7 @@
 
       au < doNotProcess ; 2020 ; 1 ; Nordic Journal of Transitions, Careers and Guidance Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 2 ; Nordic Journal of Transitions, Careers and Guidance Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 3 ; Nordic Journal of Transitions, Careers and Guidance Volume 2022 ; 2022 >
+      au < released ; 2022 ; 3 ; Nordic Journal of Transitions, Careers and Guidance Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 4 ; Nordic Journal of Transitions, Careers and Guidance Volume 2023 ; 2023 >
 
   }
@@ -463,7 +463,7 @@
       au < doNotProcess ; 2019 ; 6 ; Rural Landscapes: Society, Environment, History Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 7 ; Rural Landscapes: Society, Environment, History Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 8 ; Rural Landscapes: Society, Environment, History Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 9 ; Rural Landscapes: Society, Environment, History Volume 2022 ; 2022 >
+      au < released ; 2022 ; 9 ; Rural Landscapes: Society, Environment, History Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 10 ; Rural Landscapes: Society, Environment, History Volume 2023 ; 2023 >
 
   }
@@ -505,7 +505,7 @@
     au < doNotProcess ; 2019 ; 21 ; Scandinavian Journal of Disability Research Volume 21 ; 2019 >
     au < doNotProcess ; 2020 ; 22 ; Scandinavian Journal of Disability Research Volume 22 ; 2020 >
     au < doNotProcess ; 2021 ; 23 ; Scandinavian Journal of Disability Research Volume 23 ; 2021 >
-    au < releasing ; 2022 ; 24 ; Scandinavian Journal of Disability Research Volume 24 ; 2022 >
+    au < released ; 2022 ; 24 ; Scandinavian Journal of Disability Research Volume 24 ; 2022 >
     au < manifest ; 2023 ; 25 ; Scandinavian Journal of Disability Research Volume 25 ; 2023 >
 
   }
@@ -564,7 +564,7 @@
       au < doNotProcess ; 2019 ; 19 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 20 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 21 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 22 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2022 ; 2022 >
+      au < released ; 2022 ; 22 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 23 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2023 ; 2023 >
 
   }
@@ -584,7 +584,7 @@
       au < doNotProcess ; 2019 ; 2 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 3 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 4 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 5 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2022 ; 2022 >
+      au < released ; 2022 ; 5 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 6 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2023 ; 2023 >
 
   }
@@ -676,26 +676,26 @@
       param[base_url] = https://account.current-journal.com/
       param[journal_id] = up-j-ctjme
 
-      au < releasing ; 2003 ; 19 ; Current: Journal of Marine Education Volume 2003 ; 2003 >
+      au < released ; 2003 ; 19 ; Current: Journal of Marine Education Volume 2003 ; 2003 >
       au < doesNotExist ; 2004 ; 20 ; Current: Journal of Marine Education Volume 2004 ; 2004 >
-      au < releasing ; 2005 ; 21 ; Current: Journal of Marine Education Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 22 ; Current: Journal of Marine Education Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 23 ; Current: Journal of Marine Education Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 24 ; Current: Journal of Marine Education Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 25 ; Current: Journal of Marine Education Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 26 ; Current: Journal of Marine Education Volume 2010 ; 2010 > #no substance
-      au < releasing ; 2011 ; 27 ; Current: Journal of Marine Education Volume 2011 ; 2011 > #no substance
-      au < releasing ; 2012 ; 28 ; Current: Journal of Marine Education Volume 2012 ; 2012 > #no substance
+      au < released ; 2005 ; 21 ; Current: Journal of Marine Education Volume 2005 ; 2005 >
+      au < released ; 2006 ; 22 ; Current: Journal of Marine Education Volume 2006 ; 2006 >
+      au < released ; 2007 ; 23 ; Current: Journal of Marine Education Volume 2007 ; 2007 >
+      au < released ; 2008 ; 24 ; Current: Journal of Marine Education Volume 2008 ; 2008 >
+      au < released ; 2009 ; 25 ; Current: Journal of Marine Education Volume 2009 ; 2009 >
+      au < released ; 2010 ; 26 ; Current: Journal of Marine Education Volume 2010 ; 2010 > #no substance
+      au < released ; 2011 ; 27 ; Current: Journal of Marine Education Volume 2011 ; 2011 > #no substance
+      au < released ; 2012 ; 28 ; Current: Journal of Marine Education Volume 2012 ; 2012 > #no substance
       au < doesNotExist ; 2013 ; 29 ; Current: Journal of Marine Education Volume 2013 ; 2013 >
-      au < releasing ; 2014 ; 30 ; Current: Journal of Marine Education Volume 2014 ; 2014 > #no substance
-      au < releasing ; 2015 ; 31 ; Current: Journal of Marine Education Volume 2015 ; 2015 > #no substance
-      au < releasing ; 2016 ; 32 ; Current: Journal of Marine Education Volume 2016 ; 2016 > #no substance
-      au < releasing ; 2017 ; 33 ; Current: Journal of Marine Education Volume 2017 ; 2017 > #no substance
+      au < released ; 2014 ; 30 ; Current: Journal of Marine Education Volume 2014 ; 2014 > #no substance
+      au < released ; 2015 ; 31 ; Current: Journal of Marine Education Volume 2015 ; 2015 > #no substance
+      au < released ; 2016 ; 32 ; Current: Journal of Marine Education Volume 2016 ; 2016 > #no substance
+      au < released ; 2017 ; 33 ; Current: Journal of Marine Education Volume 2017 ; 2017 > #no substance
       au < doNotProcess ; 2018 ; 34 ; Current: Journal of Marine Education Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 35 ; Current: Journal of Marine Education Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 36 ; Current: Journal of Marine Education Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 37 ; Current: Journal of Marine Education Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 38 ; Current: Journal of Marine Education Volume 2022 ; 2022 >
+      au < released ; 2022 ; 38 ; Current: Journal of Marine Education Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 39 ; Current: Journal of Marine Education Volume 2023 ; 2023 >
 
   }
@@ -715,7 +715,7 @@
       au < doNotProcess ; 2019 ; 17 ; Anglo Saxonica Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 18 ; Anglo Saxonica Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 19 ; Anglo Saxonica Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 20 ; Anglo Saxonica Volume 2022 ; 2022 >
+      au < released ; 2022 ; 20 ; Anglo Saxonica Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 21 ; Anglo Saxonica Volume 2023 ; 2023 >
 
   }
@@ -737,7 +737,7 @@
       au < doNotProcess ; 2019 ; 4 ; ARENA Journal of Architectural Research Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 5 ; ARENA Journal of Architectural Research Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 6 ; ARENA Journal of Architectural Research Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 7 ; ARENA Journal of Architectural Research Volume 2022 ; 2022 >
+      au < released ; 2022 ; 7 ; ARENA Journal of Architectural Research Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 8 ; ARENA Journal of Architectural Research Volume 2023 ; 2023 >
 
   }
@@ -805,9 +805,9 @@
       au < doNotProcess ; 2017 ; 2 ; Citizen Science: Theory and Practice Volume 2017 ; 2017 >
       au < doNotProcess ; 2018 ; 3 ; Citizen Science: Theory and Practice Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 4 ; Citizen Science: Theory and Practice Volume 2019 ; 2019 >
-      au < releasing ; 2020 ; 5 ; Citizen Science: Theory and Practice Volume 2020 ; 2020 > #403 Forbidden cloudfront.net
+      au < released ; 2020 ; 5 ; Citizen Science: Theory and Practice Volume 2020 ; 2020 > #403 Forbidden cloudfront.net
       au < doNotProcess ; 2021 ; 6 ; Citizen Science: Theory and Practice Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 7 ; Citizen Science: Theory and Practice Volume 2022 ; 2022 >
+      au < released ; 2022 ; 7 ; Citizen Science: Theory and Practice Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 8 ; Citizen Science: Theory and Practice Volume 2023 ; 2023 >
 
   }
@@ -828,7 +828,7 @@
       au < manifest ; 2019 ; 3 ; Computational Psychiatry Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 4 ; Computational Psychiatry Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 5 ; Computational Psychiatry Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 6 ; Computational Psychiatry Volume 2022 ; 2022 >
+      au < released ; 2022 ; 6 ; Computational Psychiatry Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 7 ; Computational Psychiatry Volume 2023 ; 2023 >
 
   }
@@ -883,7 +883,7 @@
       au < doNotProcess ; 2019 ; 2 ; Future Cities and Environment Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 3 ; Future Cities and Environment Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 4 ; Future Cities and Environment Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 5 ; Future Cities and Environment Volume 2022 ; 2022 >
+      au < released ; 2022 ; 5 ; Future Cities and Environment Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 6 ; Future Cities and Environment Volume 2023 ; 2023 >
 
   }
@@ -905,7 +905,7 @@
       au < expected ; 2019 ; 4 ; Glocality: Undergraduate Academic Journal Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 5 ; Glocality: Undergraduate Academic Journal Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 6 ; Glocality: Undergraduate Academic Journal Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 7 ; Glocality: Undergraduate Academic Journal Volume 2022 ; 2022 >
+      au < released ; 2022 ; 7 ; Glocality: Undergraduate Academic Journal Volume 2022 ; 2022 >
       au < expected ; 2023 ; 8 ; Glocality: Undergraduate Academic Journal Volume 2023 ; 2023 >
 
   }
@@ -965,7 +965,7 @@
       au < doNotProcess ; 2019 ; 4 ; International Review of Social Psychology Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 5 ; International Review of Social Psychology Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 6 ; International Review of Social Psychology Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 7 ; International Review of Social Psychology Volume 2022 ; 2022 >
+      au < released ; 2022 ; 7 ; International Review of Social Psychology Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 8 ; International Review of Social Psychology Volume 2023 ; 2023 >
 
   }
@@ -1018,7 +1018,7 @@
       au < doNotProcess ; 2019 ; 17 ; Journal of Circadian Rhythms Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 18 ; Journal of Circadian Rhythms Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 19 ; Journal of Circadian Rhythms Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 20 ; Journal of Circadian Rhythms Volume 2022 ; 2022 >
+      au < released ; 2022 ; 20 ; Journal of Circadian Rhythms Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 21 ; Journal of Circadian Rhythms Volume 2023 ; 2023 >
 
   }
@@ -1051,7 +1051,7 @@
       au < doNotProcess ; 2019 ; 17 ; Journal of Conservation and Museum Studies Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 18 ; Journal of Conservation and Museum Studies Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 19 ; Journal of Conservation and Museum Studies Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 20 ; Journal of Conservation and Museum Studies Volume 2022 ; 2022 >
+      au < released ; 2022 ; 20 ; Journal of Conservation and Museum Studies Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 21 ; Journal of Conservation and Museum Studies Volume 2023 ; 2023 >
 
   }
@@ -1120,7 +1120,7 @@
       au < doNotProcess ; 2019 ; 2019 ; Journal of Interactive Media in Education Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 2020 ; Journal of Interactive Media in Education Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 2021 ; Journal of Interactive Media in Education Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 2022 ; Journal of Interactive Media in Education Volume 2022 ; 2022 >
+      au < released ; 2022 ; 2022 ; Journal of Interactive Media in Education Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 2023 ; Journal of Interactive Media in Education Volume 2023 ; 2023 >
   }
 
@@ -1150,7 +1150,7 @@
       au < doNotProcess ; 2018 ; 13 ; Journal of Molecular Signaling Volume 2018 ; 2018 >
       au < doNotProcess ; 2020 ; 14 ; Journal of Molecular Signaling Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 15 ; Journal of Molecular Signaling Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 16 ; Journal of Molecular Signaling Volume 2022 ; 2022 >
+      au < released ; 2022 ; 16 ; Journal of Molecular Signaling Volume 2022 ; 2022 >
       au < expected ; 2023 ; 17 ; Journal of Molecular Signaling Volume 2023 ; 2023 >
 
   }
@@ -1175,7 +1175,7 @@
       au < doNotProcess ; 2019 ; 7 ; Journal of Open Archaeology Data Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 8 ; Journal of Open Archaeology Data Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 9 ; Journal of Open Archaeology Data Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 10 ; Journal of Open Archaeology Data Volume 2022 ; 2022 >
+      au < released ; 2022 ; 10 ; Journal of Open Archaeology Data Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 11 ; Journal of Open Archaeology Data Volume 2023 ; 2023 >
 
   }
@@ -1199,7 +1199,7 @@
       au < doNotProcess ; 2019 ; 6 ; Open Health Data Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 7 ; Open Health Data Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 8 ; Open Health Data Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 9 ; Open Health Data Volume 2022 ; 2022 >
+      au < released ; 2022 ; 9 ; Open Health Data Volume 2022 ; 2022 >
       au < expected ; 2023 ; 10 ; Open Health Data Volume 2023 ; 2023 >
 
   }
@@ -1222,7 +1222,7 @@
       au < doNotProcess ; 2019 ; 5 ; Journal of Open Humanities Data Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 6 ; Journal of Open Humanities Data Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 7 ; Journal of Open Humanities Data Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 8 ; Journal of Open Humanities Data Volume 2022 ; 2022 >
+      au < released ; 2022 ; 8 ; Journal of Open Humanities Data Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 9 ; Journal of Open Humanities Data Volume 2023 ; 2023 >
 
   }
@@ -1247,7 +1247,7 @@
       au < doNotProcess ; 2019 ; 7 ; Journal of Open Psychology Data Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 8 ; Journal of Open Psychology Data Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 9 ; Journal of Open Psychology Data Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 10 ; Journal of Open Psychology Data Volume 2022 ; 2022 >
+      au < released ; 2022 ; 10 ; Journal of Open Psychology Data Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 11 ; Journal of Open Psychology Data Volume 2023 ; 2023 >
 
   }
@@ -1272,7 +1272,7 @@
       au < doNotProcess ; 2019 ; 7 ; Journal of Open Research Software Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 8 ; Journal of Open Research Software Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 9 ; Journal of Open Research Software Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 10 ; Journal of Open Research Software Volume 2022 ; 2022 >
+      au < released ; 2022 ; 10 ; Journal of Open Research Software Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 11 ; Journal of Open Research Software Volume 2023 ; 2023 >
 
   }
@@ -1371,7 +1371,7 @@
 
       au < doNotProcess ; 2020 ; 1 ; Continuity in Education Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 2 ; Continuity in Education Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 3 ; Continuity in Education Volume 2022 ; 2022 >
+      au < released ; 2022 ; 3 ; Continuity in Education Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 4 ; Continuity in Education Volume 2023 ; 2023 >
 
   }
@@ -1434,7 +1434,7 @@
       au < doNotProcess ; 2019 ; 14 ; Global Heart Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 15 ; Global Heart Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 16 ; Global Heart Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 17 ; Global Heart Volume 2022 ; 2022 >
+      au < released ; 2022 ; 17 ; Global Heart Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 18 ; Global Heart Volume 2023 ; 2023 >
 
   }
@@ -1457,7 +1457,7 @@
       au < doNotProcess ; 2019 ; 5 ; Open Quaternary Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 6 ; Open Quaternary Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 7 ; Open Quaternary Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 8 ; Open Quaternary Volume 2022 ; 2022 >
+      au < released ; 2022 ; 8 ; Open Quaternary Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 9 ; Open Quaternary Volume 2023 ; 2023 >
 
   }
@@ -1585,7 +1585,7 @@
       au < doNotProcess ; 2019 ; 8 ; Secularism and Nonreligion Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 9 ; Secularism and Nonreligion Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 10 ; Secularism and Nonreligion Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 11 ; Secularism and Nonreligion Volume 2022 ; 2022 >
+      au < released ; 2022 ; 11 ; Secularism and Nonreligion Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 12 ; Secularism and Nonreligion Volume 2023 ; 2023 >
 
   }
@@ -1613,7 +1613,7 @@
       au < expected ; 2019 ; 10 ; Utrecht Journal of International and European Law Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 11 ; Utrecht Journal of International and European Law Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 12 ; Utrecht Journal of International and European Law Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 13 ; Utrecht Journal of International and European Law Volume 2022 ; 2022 >
+      au < released ; 2022 ; 13 ; Utrecht Journal of International and European Law Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 14 ; Utrecht Journal of International and European Law Volume 2023 ; 2023 >
   }
 
@@ -1660,7 +1660,7 @@
       au < doNotProcess ; 2019 ; 9 ; Tremor and Other Hyperkinetic Movements Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 10 ; Tremor and Other Hyperkinetic Movements Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 11 ; Tremor and Other Hyperkinetic Movements Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 12 ; Tremor and Other Hyperkinetic Movements Volume 2022 ; 2022 >
+      au < released ; 2022 ; 12 ; Tremor and Other Hyperkinetic Movements Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 13 ; Tremor and Other Hyperkinetic Movements Volume 2023 ; 2023 >
 
   }
@@ -1680,7 +1680,7 @@
       au < doNotProcess ; 2019 ; 3 ; Journal of Open Hardware Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 4 ; Journal of Open Hardware Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 5 ; Journal of Open Hardware Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 6 ; Journal of Open Hardware Volume 2022 ; 2022 >
+      au < released ; 2022 ; 6 ; Journal of Open Hardware Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 7 ; Journal of Open Hardware Volume 2023 ; 2023 >
 
   }
@@ -1740,7 +1740,7 @@
       au < doNotProcess ; 2019 ; 2 ; Metaphysics Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 3 ; Metaphysics Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 4 ; Metaphysics Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 5 ; Metaphysics Volume 2022 ; 2022 >
+      au < released ; 2022 ; 5 ; Metaphysics Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 6 ; Metaphysics Volume 2023 ; 2023 >
 
   }
@@ -1761,7 +1761,7 @@
       au < doNotProcess ; 2019 ; 3 ; Physical Activity and Health Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 4 ; Physical Activity and Health Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 5 ; Physical Activity and Health Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 6 ; Physical Activity and Health Volume 2022 ; 2022 >
+      au < released ; 2022 ; 6 ; Physical Activity and Health Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 7 ; Physical Activity and Health Volume 2023 ; 2023 >
 
   }
@@ -1788,7 +1788,7 @@
       au < doNotProcess ; 2019 ; 24 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 25 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 26 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 27 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2022 ; 2022 >
+      au < released ; 2022 ; 27 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2022 ; 2022 >
       au < expected ; 2023 ; 28 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2023 ; 2023 >
 
   }
@@ -1816,7 +1816,7 @@
       au < doNotProcess ; 2019 ; 10 ; Yearbook of Swiss Administrative Science Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 11 ; Yearbook of Swiss Administrative Science Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 12 ; Yearbook of Swiss Administrative Science Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 13 ; Yearbook of Swiss Administrative Science Volume 2022 ; 2022 >
+      au < released ; 2022 ; 13 ; Yearbook of Swiss Administrative Science Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 14 ; Yearbook of Swiss Administrative Science Volume 2023 ; 2023 >
 
   }
@@ -1836,7 +1836,7 @@
       au < doNotProcess ; 2019 ; 2 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 3 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 4 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 5 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2022 ; 2022 >
+      au < released ; 2022 ; 5 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 6 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2023 ; 2023 >
 
   }
@@ -1856,7 +1856,7 @@
       au < doNotProcess ; 2019 ; 2 ; Transactions of the International Society for Music Information Retrieval Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 3 ; Transactions of the International Society for Music Information Retrieval Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 4 ; Transactions of the International Society for Music Information Retrieval Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 5 ; Transactions of the International Society for Music Information Retrieval Volume 2022 ; 2022 >
+      au < released ; 2022 ; 5 ; Transactions of the International Society for Music Information Retrieval Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 6 ; Transactions of the International Society for Music Information Retrieval Volume 2023 ; 2023 >
 
   }
@@ -1889,7 +1889,7 @@
       param[journal_id] = up-j-sposps
 
       au < manifest ; 2021 ; 1 ; Swiss Psychology Open Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 2 ; Swiss Psychology Open Volume 2022 ; 2022 >
+      au < released ; 2022 ; 2 ; Swiss Psychology Open Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 3 ; Swiss Psychology Open Volume 2023 ; 2023 >
 
   }
@@ -1929,7 +1929,7 @@
       au < doNotProcess ; 2019 ; 8 ; Insights: the UKSG journal Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 9 ; Insights: the UKSG journal Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 10 ; Insights: the UKSG journal Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 11 ; Insights: the UKSG journal Volume 2022 ; 2022 >
+      au < released ; 2022 ; 11 ; Insights: the UKSG journal Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 12 ; Insights: the UKSG journal Volume 2023 ; 2023 >
 
   }
@@ -2039,7 +2039,7 @@
 
       au < doNotProcess ; 2020 ; 1 ; New Area Studies Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 2 ; New Area Studies Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 3 ; New Area Studies Volume 2022 ; 2022 >
+      au < released ; 2022 ; 3 ; New Area Studies Volume 2022 ; 2022 >
       au < expected ; 2023 ; 4 ; New Area Studies Volume 2023 ; 2023 >
 
   }
@@ -2072,7 +2072,7 @@
       au < doNotProcess ; 2019 ; 1 ; Global Biosecurity Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 2 ; Global Biosecurity Volume 2020 ; 2020 >
       au < manifest ; 2021 ; 3 ; Global Biosecurity Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 4 ; Global Biosecurity Volume 2022 ; 2022 >
+      au < released ; 2022 ; 4 ; Global Biosecurity Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 5 ; Global Biosecurity Volume 2023 ; 2023 >
 
   }
@@ -2307,7 +2307,7 @@
       au < doNotProcess ; 2019 ; 17 ; ERLACS Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 18 ; ERLACS Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 19 ; ERLACS Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 20 ; ERLACS Volume 2022 ; 2022 >
+      au < released ; 2022 ; 20 ; ERLACS Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 21 ; ERLACS Volume 2023 ; 2023 >
 
   }
@@ -2397,7 +2397,7 @@
       au < doNotProcess ; 2019 ; 15 ; Journal of Social Intervention Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 16 ; Journal of Social Intervention Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 17 ; Journal of Social Intervention Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 18 ; Journal of Social Intervention Volume 2022 ; 2022 >
+      au < released ; 2022 ; 18 ; Journal of Social Intervention Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 19 ; Journal of Social Intervention Volume 2023 ; 2023 >
 
   }
@@ -2469,7 +2469,7 @@
       au < doNotProcess ; 2019 ; 15 ; Utrecht Law Review Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 16 ; Utrecht Law Review Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 17 ; Utrecht Law Review Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 18 ; Utrecht Law Review Volume 2022 ; 2022 >
+      au < released ; 2022 ; 18 ; Utrecht Law Review Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 19 ; Utrecht Law Review Volume 2023 ; 2023 >
 
   }
@@ -2511,7 +2511,7 @@
       au < doNotProcess ; 2019 ; 16 ; British and Irish Orthoptic Journal Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 17 ; British and Irish Orthoptic Journal Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 18 ; British and Irish Orthoptic Journal Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 19 ; British and Irish Orthoptic Journal Volume 2022 ; 2022 >
+      au < released ; 2022 ; 19 ; British and Irish Orthoptic Journal Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 20 ; British and Irish Orthoptic Journal Volume 2023 ; 2023 >
 
   }
@@ -2532,7 +2532,7 @@
       au < doNotProcess ; 2019 ; 3 ; Journal of the European Second Language Association Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 4 ; Journal of the European Second Language Association Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 5 ; Journal of the European Second Language Association Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 6 ; Journal of the European Second Language Association Volume 2022 ; 2022 >
+      au < released ; 2022 ; 6 ; Journal of the European Second Language Association Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 7 ; Journal of the European Second Language Association Volume 2023 ; 2023 >
 
   }
@@ -2563,7 +2563,7 @@
       param[base_url] = https://account.writingchinesejournal.org/
       param[journal_id] = wr-j-wcajcsl
 
-      au < releasing ; 2022 ; 1 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2022 ; 2022 >
+      au < released ; 2022 ; 1 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2022 ; 2022 >
       au < expected ; 2023 ; 2 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2023 ; 2023 >
 
   }
@@ -2599,7 +2599,7 @@
       au < doNotProcess ; 2019 ; 8 ; Stability: International Journal of Security & Development Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 9 ; Stability: International Journal of Security & Development Volume 2020 ; 2020 >
       au < expected ; 2021 ; 10 ; Stability: International Journal of Security & Development Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 11 ; Stability: International Journal of Security & Development Volume 2022 ; 2022 >
+      au < released ; 2022 ; 11 ; Stability: International Journal of Security & Development Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 12 ; Stability: International Journal of Security & Development Volume 2023 ; 2023 >
 
   }
@@ -2666,7 +2666,7 @@
       au < doNotProcess ; 2019 ; 1 ; Journal of Modern Philosophy Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 2 ; Journal of Modern Philosophy Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 3 ; Journal of Modern Philosophy Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 4 ; Journal of Modern Philosophy Volume 2022 ; 2022 >
+      au < released ; 2022 ; 4 ; Journal of Modern Philosophy Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 5 ; Journal of Modern Philosophy Volume 2023 ; 2023 >
 
   }
@@ -2699,7 +2699,7 @@
 
       au < manifest ; 2020 ; 1 ; Studies in Engineering Education Volume 2020 ; 2020 >
       au < manifest ; 2021 ; 2 ; Studies in Engineering Education Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 3 ; Studies in Engineering Education Volume 2022 ; 2022 >
+      au < released ; 2022 ; 3 ; Studies in Engineering Education Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 4 ; Studies in Engineering Education Volume 2023 ; 2023 >
 
   }
@@ -2726,29 +2726,29 @@
       au < manifest ; 1997 ; 9 ; Journal of Technology Education Volume 1997 ; 1997 >
       au < manifest ; 1998 ; 10 ; Journal of Technology Education Volume 1998 ; 1998 >
       au < manifest ; 1999 ; 11 ; Journal of Technology Education Volume 1999 ; 1999 >
-      au < releasing ; 2000 ; 12 ; Journal of Technology Education Volume 2000 ; 2000 >
-      au < releasing ; 2001 ; 13 ; Journal of Technology Education Volume 2001 ; 2001 >
-      au < releasing ; 2002 ; 14 ; Journal of Technology Education Volume 2002 ; 2002 >
-      au < releasing ; 2003 ; 15 ; Journal of Technology Education Volume 2003 ; 2003 >
-      au < releasing ; 2004 ; 16 ; Journal of Technology Education Volume 2004 ; 2004 >
-      au < releasing ; 2005 ; 17 ; Journal of Technology Education Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 18 ; Journal of Technology Education Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 19 ; Journal of Technology Education Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 20 ; Journal of Technology Education Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 21 ; Journal of Technology Education Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 22 ; Journal of Technology Education Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 23 ; Journal of Technology Education Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 24 ; Journal of Technology Education Volume 2012 ; 2012 >
-      au < releasing ; 2013 ; 25 ; Journal of Technology Education Volume 2013 ; 2013 >
-      au < releasing ; 2014 ; 26 ; Journal of Technology Education Volume 2014 ; 2014 >
-      au < releasing ; 2015 ; 27 ; Journal of Technology Education Volume 2015 ; 2015 >
-      au < releasing ; 2016 ; 28 ; Journal of Technology Education Volume 2016 ; 2016 >
-      au < releasing ; 2017 ; 29 ; Journal of Technology Education Volume 2017 ; 2017 >
-      au < releasing ; 2018 ; 30 ; Journal of Technology Education Volume 2018 ; 2018 >
-      au < releasing ; 2019 ; 31 ; Journal of Technology Education Volume 2019 ; 2019 >
-      au < releasing ; 2020 ; 32 ; Journal of Technology Education Volume 2020 ; 2020 >
-      au < releasing ; 2021 ; 33 ; Journal of Technology Education Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 34 ; Journal of Technology Education Volume 2022 ; 2022 >
+      au < released ; 2000 ; 12 ; Journal of Technology Education Volume 2000 ; 2000 >
+      au < released ; 2001 ; 13 ; Journal of Technology Education Volume 2001 ; 2001 >
+      au < released ; 2002 ; 14 ; Journal of Technology Education Volume 2002 ; 2002 >
+      au < released ; 2003 ; 15 ; Journal of Technology Education Volume 2003 ; 2003 >
+      au < released ; 2004 ; 16 ; Journal of Technology Education Volume 2004 ; 2004 >
+      au < released ; 2005 ; 17 ; Journal of Technology Education Volume 2005 ; 2005 >
+      au < released ; 2006 ; 18 ; Journal of Technology Education Volume 2006 ; 2006 >
+      au < released ; 2007 ; 19 ; Journal of Technology Education Volume 2007 ; 2007 >
+      au < released ; 2008 ; 20 ; Journal of Technology Education Volume 2008 ; 2008 >
+      au < released ; 2009 ; 21 ; Journal of Technology Education Volume 2009 ; 2009 >
+      au < released ; 2010 ; 22 ; Journal of Technology Education Volume 2010 ; 2010 >
+      au < released ; 2011 ; 23 ; Journal of Technology Education Volume 2011 ; 2011 >
+      au < released ; 2012 ; 24 ; Journal of Technology Education Volume 2012 ; 2012 >
+      au < released ; 2013 ; 25 ; Journal of Technology Education Volume 2013 ; 2013 >
+      au < released ; 2014 ; 26 ; Journal of Technology Education Volume 2014 ; 2014 >
+      au < released ; 2015 ; 27 ; Journal of Technology Education Volume 2015 ; 2015 >
+      au < released ; 2016 ; 28 ; Journal of Technology Education Volume 2016 ; 2016 >
+      au < released ; 2017 ; 29 ; Journal of Technology Education Volume 2017 ; 2017 >
+      au < released ; 2018 ; 30 ; Journal of Technology Education Volume 2018 ; 2018 >
+      au < released ; 2019 ; 31 ; Journal of Technology Education Volume 2019 ; 2019 >
+      au < released ; 2020 ; 32 ; Journal of Technology Education Volume 2020 ; 2020 >
+      au < released ; 2021 ; 33 ; Journal of Technology Education Volume 2021 ; 2021 >
+      au < released ; 2022 ; 34 ; Journal of Technology Education Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 35 ; Journal of Technology Education Volume 2023 ; 2023 >
 
   }
@@ -2778,7 +2778,7 @@
       param[base_url] = https://account.ibapa.org/
       param[journal_id] = gl-j-ibpa
 
-      au < releasing ; 2022 ; 1 ; Indigenous Business & Public Administration Volume 2022 ; 2022 >
+      au < released ; 2022 ; 1 ; Indigenous Business & Public Administration Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 2 ; Indigenous Business & Public Administration Volume 2023 ; 2023 >
 
   }
@@ -2808,9 +2808,9 @@
       param[base_url] = https://account.jcss.demontfortuniversitypress.org/
       param[journal_id] = dmu-j-jcss
 
-      au < releasing ; 2013 ; 1 ; Journal of Critical Southern Studies Volume 2013 ; 2013 >
-      au < releasing ; 2014 ; 2 ; Journal of Critical Southern Studies Volume 2014 ; 2014 >
-      au < releasing ; 2015 ; 3 ; Journal of Critical Southern Studies Volume 2015 ; 2015 >
+      au < released ; 2013 ; 1 ; Journal of Critical Southern Studies Volume 2013 ; 2013 >
+      au < released ; 2014 ; 2 ; Journal of Critical Southern Studies Volume 2014 ; 2014 >
+      au < released ; 2015 ; 3 ; Journal of Critical Southern Studies Volume 2015 ; 2015 >
 
   }
   {
@@ -2824,9 +2824,9 @@
       param[base_url] = https://account.gp.demontfortuniversitypress.org/
       param[journal_id] = dmu-j-gpajepr
 
-      au < releasing ; 2010 ; 1 ; Gateway Papers Volume 2010 ; 2010 >
-      au < releasing ; 2021 ; 12 ; Gateway Papers Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 13 ; Gateway Papers Volume 2022 ; 2022 >
+      au < released ; 2010 ; 1 ; Gateway Papers Volume 2010 ; 2010 >
+      au < released ; 2021 ; 12 ; Gateway Papers Volume 2021 ; 2021 >
+      au < released ; 2022 ; 13 ; Gateway Papers Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 14 ; Gateway Papers Volume 2023 ; 2023 >
 
   }
@@ -2860,21 +2860,21 @@
       au < manifest ; 2005 ; 2 ; Methodist DeBakey Cardiovascular Journal Volume 2005 ; 2005 >
       au < manifest ; 2006 ; 3 ; Methodist DeBakey Cardiovascular Journal Volume 2006 ; 2006 >
       au < manifest ; 2007 ; 4 ; Methodist DeBakey Cardiovascular Journal Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 5 ; Methodist DeBakey Cardiovascular Journal Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 6 ; Methodist DeBakey Cardiovascular Journal Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 7 ; Methodist DeBakey Cardiovascular Journal Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 8 ; Methodist DeBakey Cardiovascular Journal Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 9 ; Methodist DeBakey Cardiovascular Journal Volume 2012 ; 2012 >
-      au < releasing ; 2013 ; 10 ; Methodist DeBakey Cardiovascular Journal Volume 2013 ; 2013 >
-      au < releasing ; 2014 ; 11 ; Methodist DeBakey Cardiovascular Journal Volume 2014 ; 2014 >
-      au < releasing ; 2015 ; 12 ; Methodist DeBakey Cardiovascular Journal Volume 2015 ; 2015 >
-      au < releasing ; 2016 ; 13 ; Methodist DeBakey Cardiovascular Journal Volume 2016 ; 2016 >
-      au < releasing ; 2017 ; 14 ; Methodist DeBakey Cardiovascular Journal Volume 2017 ; 2017 >
-      au < releasing ; 2018 ; 15 ; Methodist DeBakey Cardiovascular Journal Volume 2018 ; 2018 >
-      au < releasing ; 2019 ; 16 ; Methodist DeBakey Cardiovascular Journal Volume 2019 ; 2019 >
-      au < releasing ; 2020 ; 17 ; Methodist DeBakey Cardiovascular Journal Volume 2020 ; 2020 >
-      au < releasing ; 2021 ; 18 ; Methodist DeBakey Cardiovascular Journal Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 19 ; Methodist DeBakey Cardiovascular Journal Volume 2022 ; 2022 >
+      au < released ; 2008 ; 5 ; Methodist DeBakey Cardiovascular Journal Volume 2008 ; 2008 >
+      au < released ; 2009 ; 6 ; Methodist DeBakey Cardiovascular Journal Volume 2009 ; 2009 >
+      au < released ; 2010 ; 7 ; Methodist DeBakey Cardiovascular Journal Volume 2010 ; 2010 >
+      au < released ; 2011 ; 8 ; Methodist DeBakey Cardiovascular Journal Volume 2011 ; 2011 >
+      au < released ; 2012 ; 9 ; Methodist DeBakey Cardiovascular Journal Volume 2012 ; 2012 >
+      au < released ; 2013 ; 10 ; Methodist DeBakey Cardiovascular Journal Volume 2013 ; 2013 >
+      au < released ; 2014 ; 11 ; Methodist DeBakey Cardiovascular Journal Volume 2014 ; 2014 >
+      au < released ; 2015 ; 12 ; Methodist DeBakey Cardiovascular Journal Volume 2015 ; 2015 >
+      au < released ; 2016 ; 13 ; Methodist DeBakey Cardiovascular Journal Volume 2016 ; 2016 >
+      au < released ; 2017 ; 14 ; Methodist DeBakey Cardiovascular Journal Volume 2017 ; 2017 >
+      au < released ; 2018 ; 15 ; Methodist DeBakey Cardiovascular Journal Volume 2018 ; 2018 >
+      au < released ; 2019 ; 16 ; Methodist DeBakey Cardiovascular Journal Volume 2019 ; 2019 >
+      au < released ; 2020 ; 17 ; Methodist DeBakey Cardiovascular Journal Volume 2020 ; 2020 >
+      au < released ; 2021 ; 18 ; Methodist DeBakey Cardiovascular Journal Volume 2021 ; 2021 >
+      au < released ; 2022 ; 19 ; Methodist DeBakey Cardiovascular Journal Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 20 ; Methodist DeBakey Cardiovascular Journal Volume 2023 ; 2023 >
 
   }
@@ -2967,19 +2967,19 @@
       au < manifest ; 2007 ; 59 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2007 ; 2007 >
       au < manifest ; 2008 ; 60 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2008 ; 2008 >
       au < manifest ; 2009 ; 61 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 62 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 63 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 64 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2012 ; 2012 >
-      au < releasing ; 2013 ; 65 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2013 ; 2013 >
-      au < releasing ; 2014 ; 66 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2014 ; 2014 >
-      au < releasing ; 2015 ; 67 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2015 ; 2015 >
-      au < releasing ; 2016 ; 68 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2016 ; 2016 >
-      au < releasing ; 2017 ; 69 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2017 ; 2017 >
-      au < releasing ; 2018 ; 70 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2018 ; 2018 >
-      au < releasing ; 2019 ; 71 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2019 ; 2019 >
+      au < released ; 2010 ; 62 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2010 ; 2010 >
+      au < released ; 2011 ; 63 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2011 ; 2011 >
+      au < released ; 2012 ; 64 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2012 ; 2012 >
+      au < released ; 2013 ; 65 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2013 ; 2013 >
+      au < released ; 2014 ; 66 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2014 ; 2014 >
+      au < released ; 2015 ; 67 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2015 ; 2015 >
+      au < released ; 2016 ; 68 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2016 ; 2016 >
+      au < released ; 2017 ; 69 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2017 ; 2017 >
+      au < released ; 2018 ; 70 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2018 ; 2018 >
+      au < released ; 2019 ; 71 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2019 ; 2019 >
       au < manifest ; 2020 ; 72 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2020 ; 2020 >
-      au < releasing ; 2021 ; 73 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 74 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2022 ; 2022 > #Lists all volumes.
+      au < released ; 2021 ; 73 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2021 ; 2021 >
+      au < released ; 2022 ; 74 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2022 ; 2022 > #Lists all volumes.
       au < manifest ; 2023 ; 75 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2023 ; 2023 >
 
   }
@@ -3024,19 +3024,19 @@
       au < manifest ; 2007 ; 25 ; Tellus B: Chemical and Physical Meteorology Volume 2007 ; 2007 >
       au < manifest ; 2008 ; 26 ; Tellus B: Chemical and Physical Meteorology Volume 2008 ; 2008 >
       au < manifest ; 2009 ; 27 ; Tellus B: Chemical and Physical Meteorology Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 28 ; Tellus B: Chemical and Physical Meteorology Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 29 ; Tellus B: Chemical and Physical Meteorology Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 30 ; Tellus B: Chemical and Physical Meteorology Volume 2012 ; 2012 >
-      au < releasing ; 2013 ; 31 ; Tellus B: Chemical and Physical Meteorology Volume 2013 ; 2013 >
-      au < releasing ; 2014 ; 32 ; Tellus B: Chemical and Physical Meteorology Volume 2014 ; 2014 >
-      au < releasing ; 2015 ; 33 ; Tellus B: Chemical and Physical Meteorology Volume 2015 ; 2015 >
-      au < releasing ; 2016 ; 34 ; Tellus B: Chemical and Physical Meteorology Volume 2016 ; 2016 >
-      au < releasing ; 2017 ; 35 ; Tellus B: Chemical and Physical Meteorology Volume 2017 ; 2017 >
-      au < releasing ; 2018 ; 36 ; Tellus B: Chemical and Physical Meteorology Volume 2018 ; 2018 >
-      au < releasing ; 2019 ; 37 ; Tellus B: Chemical and Physical Meteorology Volume 2019 ; 2019 >
-      au < releasing ; 2020 ; 38 ; Tellus B: Chemical and Physical Meteorology Volume 2020 ; 2020 >
-      au < releasing ; 2021 ; 39 ; Tellus B: Chemical and Physical Meteorology Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 40 ; Tellus B: Chemical and Physical Meteorology Volume 2022 ; 2022 > # Lists all volumes.
+      au < released ; 2010 ; 28 ; Tellus B: Chemical and Physical Meteorology Volume 2010 ; 2010 >
+      au < released ; 2011 ; 29 ; Tellus B: Chemical and Physical Meteorology Volume 2011 ; 2011 >
+      au < released ; 2012 ; 30 ; Tellus B: Chemical and Physical Meteorology Volume 2012 ; 2012 >
+      au < released ; 2013 ; 31 ; Tellus B: Chemical and Physical Meteorology Volume 2013 ; 2013 >
+      au < released ; 2014 ; 32 ; Tellus B: Chemical and Physical Meteorology Volume 2014 ; 2014 >
+      au < released ; 2015 ; 33 ; Tellus B: Chemical and Physical Meteorology Volume 2015 ; 2015 >
+      au < released ; 2016 ; 34 ; Tellus B: Chemical and Physical Meteorology Volume 2016 ; 2016 >
+      au < released ; 2017 ; 35 ; Tellus B: Chemical and Physical Meteorology Volume 2017 ; 2017 >
+      au < released ; 2018 ; 36 ; Tellus B: Chemical and Physical Meteorology Volume 2018 ; 2018 >
+      au < released ; 2019 ; 37 ; Tellus B: Chemical and Physical Meteorology Volume 2019 ; 2019 >
+      au < released ; 2020 ; 38 ; Tellus B: Chemical and Physical Meteorology Volume 2020 ; 2020 >
+      au < released ; 2021 ; 39 ; Tellus B: Chemical and Physical Meteorology Volume 2021 ; 2021 >
+      au < released ; 2022 ; 40 ; Tellus B: Chemical and Physical Meteorology Volume 2022 ; 2022 > # Lists all volumes.
       au < manifest ; 2023 ; 41 ; Tellus B: Chemical and Physical Meteorology Volume 2023 ; 2023 > # Lists all volumes.
 
   }
