@@ -1,5 +1,6 @@
-{
+### Please alphabetize by provider/publisher.
 
+{
   publisher <
     name = Project JASPER ;
     info[contract] = 2022 ;
@@ -51,6 +52,18 @@
   {
 
     title <
+      name = Aposta: Revista de Ciencias Sociales ;
+      eissn = 1696-7348
+    >
+    provider = Aposta: Revista de Ciencias Sociales
+
+    au < readySource ; crawling ; 2022-2023 ; Aposta ; aposta_1696-7348 >
+
+  }
+
+  {
+
+    title <
       name = Geriatrics, Gerontology and Aging ;
       issn = 2447-2115 ;
       eissn = 2447-2123
@@ -58,6 +71,41 @@
     provider = Brazilian Society of Geriatrics and Gerontology
 
     au < expected ; exists ; 2023 ; Geriatrics, Gerontology and Aging ; UNKNOWN >
+
+  }
+
+  {
+
+    title <
+      name = Educational Journal of Living Theories ;
+      eissn = 2009-1788
+    >
+    provider = Educational Journal of Living Theories
+
+    au < readySource ; crawling ; 2022-2023 ; Educational Journal of Living Theories ; Educational_Journal_of_Living_Theories__ISSN_2009-1788 >
+  }
+
+  {
+
+    title <
+      name = EuroAmerican Journal of Applied Linguistics and Languages ;
+      eissn = 2376-905X
+    >
+    provider = EuroAmerican Journal of Applied Linguistics and Languages
+
+    au < expected ; exists ; 2023 ; EuroAmerican Journal of Applied Linguistics and Languages ; UNKNOWN >
+  }
+
+  {
+
+    title <
+      name = Dysona. Life Science ;
+      eissn = 2708-6291
+    >
+    provider = E-NAMTILA Publishing
+    #Also includes Dysona Applied Sciences
+
+    au < readySource ; crawling ; 2022-2023 ; Dysona. Life Science ; Daysona_Life_Science_2708-6291 >
 
   }
 
@@ -77,60 +125,12 @@
   {
 
     title <
-      name = Dysona. Life Science ;
-      eissn = 2708-6291
-    >
-    provider = E-NAMTILA Publishing
-    #Also includes Dysona Applied Sciences
-
-    au < readySource ; crawling ; 2022-2023 ; Dysona. Life Science ; Daysona_Life_Science_2708-6291 >
-
-  }
-
-#  {
-#
-#    title <
-#      name = Dysona. Applied Sciences ;
-#      eissn = 2708-6283
-#    >
-#    provider = E-NAMTILA Publishing
-#
-#    au < expected ; exists ; 2022 ; Dysona. Applied Sciences ; UNKNOWN >
-#
-#  }
-
-  {
-
-    title <
-      name = Educational Journal of Living Theories ;
-      eissn = 2009-1788
-    >
-    provider = Educational Journal of Living Theories
-
-    au < readySource ; crawling ; 2022-2023 ; Educational Journal of Living Theories ; Educational_Journal_of_Living_Theories__ISSN_2009-1788 >
-  }
-
-  {
-
-    title <
       name = Finnish Society for Science Fiction and Fantasy Research ;
       eissn = 2342-2009
     >
     provider = Finnish Society for Science Fiction and Fantasy Research - Fafnir
 
     au < readySource ; crawling ; 2022-2023 ; Finnish Society for Science Fiction and Fantasy Research ; Fafnir_2342-2009 >
-
-  }
-
-  {
-
-    title <
-      name = Aposta: Revista de Ciencias Sociales ;
-      eissn = 1696-7348
-    >
-    provider = Aposta: Revista de Ciencias Sociales
-
-    au < readySource ; crawling ; 2022-2023 ; Aposta ; aposta_1696-7348 >
 
   }
 
@@ -149,19 +149,6 @@
   {
 
     title <
-      name = Santander, Estudios de Patrimonio ;
-      issn = 2605-4450 ;
-      eissn = 2605-5317
-    >
-    provider = Universidad de Cantabria
-
-    au < readySource ; crawling ; 2022-2023 ; Santander, Estudios de Patrimonio ; santander_estudios_de_patrimonio_2605-5317 >
-
-  }
-
-  {
-
-    title <
       name = Análisis Filosófico ;
       issn = 0326-1301 ;
       eissn = 1851-9636
@@ -169,6 +156,19 @@
     provider = Sociedad Argentina de Análisis Filosófico
 
     au < ready ; exists ; 2023 ; Análisis Filosófico ; analisis_filosofico_1851-9636 >
+
+  }
+
+  {
+
+    title <
+      name = Santander, Estudios de Patrimonio ;
+      issn = 2605-4450 ;
+      eissn = 2605-5317
+    >
+    provider = Universidad de Cantabria
+
+    au < readySource ; crawling ; 2022-2023 ; Santander, Estudios de Patrimonio ; santander_estudios_de_patrimonio_2605-5317 >
 
   }
 
