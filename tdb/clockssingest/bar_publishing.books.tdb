@@ -13,7 +13,8 @@
   >
 
   provider = Bar Publishing
-  plugin = org.lockss.plugin.michigan.acp.ClockssAmherstCollegePressBooksPlugin
+  plugin = needs.plugin
+  #plugin = org.lockss.plugin.michigan.acp.ClockssAmherstCollegePressBooksPlugin
   param[base_url] = https://www.fulcrum.org/
   implicit < status ; status2 ; year ; isbn ; param[book_uri] ; name ; hidden[proxy] >
 
