@@ -1,0 +1,30 @@
+#Permission for all content provided at: http://clockss-ingest.lockss.org/clockss.txt
+#Permission for all content provided at: http://clockss-ingest.lockss.org/lockss.txt
+
+{ 
+
+  publisher <
+    name = Bar Publishing ;
+    info[contract] = 2023 ;
+    info[back] = 2015 ;
+    info[tester] = 8 ;
+    info[poller] = 8 ;
+    comment[platform] = Fulcrum
+  >
+
+  provider = Bar Publishing
+  plugin = org.lockss.plugin.michigan.acp.ClockssAmherstCollegePressBooksPlugin
+  param[base_url] = https://www.fulcrum.org/
+  implicit < status ; status2 ; year ; isbn ; param[book_uri] ; name ; hidden[proxy] >
+
+  {
+  
+    title <
+      name = Bar Publishing Books ;
+      type = bookSeries
+    >
+
+    au < exists ; exists ; 2023 ; 9781407315355 ; concern/monographs/6q182n888 ; Aegypto Adiecta ; >
+
+  }
+}
