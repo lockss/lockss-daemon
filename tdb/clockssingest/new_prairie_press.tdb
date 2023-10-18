@@ -6,7 +6,8 @@
     info[contract] = 2013 ;
     # Under the auspices of Kansas State University on Digital Commons ;
     info[tester] = 5 ;
-    info[poller] = 8
+    info[poller] = 8 ;
+    info[platform] = bepress & OJS
   >
   provider = bepress
   
