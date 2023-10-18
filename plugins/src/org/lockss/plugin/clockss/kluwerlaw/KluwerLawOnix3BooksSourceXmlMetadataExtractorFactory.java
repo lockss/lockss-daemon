@@ -98,6 +98,9 @@ public class KluwerLawOnix3BooksSourceXmlMetadataExtractorFactory extends Source
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
       List<String> returnList = new ArrayList<>();
 
+
+      //For both 2023_01 and 2023_02 folder, we agree to the following:
+      //relatedProductIDValue is ISBN, product is EISBN
       relatedProductIDValue = oneAM.getRaw(Onix3BooksSchemaHelper.ONIX_PRODUCT_RELATED_PRODUCT_ID);
       filenameValue = oneAM.getRaw(helper.getFilenameXPathKey());
 
@@ -115,7 +118,7 @@ public class KluwerLawOnix3BooksSourceXmlMetadataExtractorFactory extends Source
           if (relatedProductIDValue != null) {
             pdf = cuBase + relatedProductIDValue + "/" + filenameValue + "_WEB.pdf";
 
-            log.debug3("relatedProductIDValue =" + relatedProductIDValue + ", filenameValue + " + filenameValue + ", File pdf = " + pdf);
+            log.debug3("relatedProductIDValue =" + relatedProductIDValue + ", filenameValue = " + filenameValue + ", File pdf = " + pdf);
 
             returnList.add(pdf);
           }
@@ -128,7 +131,6 @@ public class KluwerLawOnix3BooksSourceXmlMetadataExtractorFactory extends Source
           returnList.add(epub);
         }
       }
-
 
       log.debug3("filenameValue + " + filenameValue + ", File pdf = " + pdf + ", epub = " + epub);
 
@@ -178,6 +180,17 @@ public class KluwerLawOnix3BooksSourceXmlMetadataExtractorFactory extends Source
     	// this is a book volume
     	thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE,MetadataField.PUBLICATION_TYPE_BOOK);
     	thisAM.put(MetadataField.FIELD_ARTICLE_TYPE,MetadataField.ARTICLE_TYPE_BOOKVOLUME);
+
+      //For both 2023_01 and 2023_02 folder, we agree to the following:
+      //relatedProductIDValue is ISBN, productidentifier is EISBN
+      String eisbn = thisAM.getRaw(schemaHelper.getFilenameXPathKey());
+      String isbn = thisAM.getRaw(Onix3BooksSchemaHelper.ONIX_PRODUCT_RELATED_PRODUCT_ID);
+
+      log.debug3("isbn raw key = " + Onix3BooksSchemaHelper.ONIX_PRODUCT_RELATED_PRODUCT_ID + ", value = " + isbn
+      + ", eisb = " + eisbn);
+
+      thisAM.replace(MetadataField.FIELD_ISBN, isbn);
+      thisAM.put(MetadataField.FIELD_EISBN,eisbn);
     }
 
   }
