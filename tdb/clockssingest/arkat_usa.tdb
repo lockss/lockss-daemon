@@ -2,10 +2,10 @@
   publisher <
     name = ARKAT USA ;
     info[contract] = 2023 ;
-    info[back] = 2020 ;
+    info[back] = 2000 ;
     info[tester] = 5 ;
     info[poller] = 3 ;
-    info[platform] = Custom. Daemon sees one item.
+    info[platform] = Custom. Note: article count is 1 for each AU.
   >
   
   {
@@ -16,8 +16,7 @@
       eissn = 1551-7012 ;
       issnl = 1551-7004
 
-    >  
-
+    >
       rights = openaccess
       plugin = edu.fcla.plugin.arkivoc.ClockssArkivoc2022Plugin
       param[base_url] = https://www.arkat-usa.org/

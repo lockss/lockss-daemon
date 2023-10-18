@@ -1,5 +1,4 @@
 {
-
   publisher <
     name = ARKAT USA
   >
@@ -11,29 +10,10 @@
       issn = 1551-7004 ;
       eissn = 1551-7012 ;
       issnl = 1551-7004
-
-    >  
-
+    >
     rights = openaccess  
 
     {
-
-      plugin = edu.fcla.plugin.arkivoc.ArkivocPlugin
-      implicit < status ; year ; volume ; name ; param[base_url] ; param[year] >
-
-      au < superseded ; 2000 ; 2000 ; Arkivoc Volume 2000 [superseded] ; http://www.arkat-usa.org/ ; 2000 >
-      au < superseded ; 2001 ; 2001 ; Arkivoc Volume 2001 [superseded] ; http://www.arkat-usa.org/ ; 2001 >
-      au < superseded ; 2002 ; 2002 ; Arkivoc Volume 2002 [superseded] ; http://www.arkat-usa.org/ ; 2002 >
-      au < superseded ; 2003 ; 2003 ; Arkivoc Volume 2003 [superseded] ; http://www.arkat-usa.org/ ; 2003 >
-      au < superseded ; 2004 ; 2004 ; Arkivoc Volume 2004 [superseded 1] ; http://www.arkat-usa.org/ark/arkivoc/ ; 2004 >
-      au < superseded ; 2004 ; 2004 ; Arkivoc Volume 2004 [superseded 2] ; http://www.arkat-usa.org/ark/journal/ ; 2004 >
-      au < superseded ; 2004 ; 2004 ; Arkivoc Volume 2004 [superseded 3] ; http://www.arkat-usa.org/ ; 2004 >
-      au < superseded ; 2005 ; 2005 ; Arkivoc Volume 2005 [superseded] ; http://www.arkat-usa.org/ ; 2005 >
-    
-    }
-    
-    {
-    
       plugin = edu.fcla.plugin.arkivoc.Arkivoc2022Plugin
       param[base_url] = https://www.arkat-usa.org/
       implicit < status ; year ; volume ; name ; param[year] >
@@ -65,6 +45,22 @@
       au < manifest ; 2023 ; 2023 ; Arkivoc Volume 2023 ; 2023 >
     }
       
+    {
+
+      plugin = edu.fcla.plugin.arkivoc.ArkivocPlugin
+      implicit < status ; year ; volume ; name ; param[base_url] ; param[year] >
+
+      au < superseded ; 2000 ; 2000 ; Arkivoc Volume 2000 [superseded] ; http://www.arkat-usa.org/ ; 2000 >
+      au < superseded ; 2001 ; 2001 ; Arkivoc Volume 2001 [superseded] ; http://www.arkat-usa.org/ ; 2001 >
+      au < superseded ; 2002 ; 2002 ; Arkivoc Volume 2002 [superseded] ; http://www.arkat-usa.org/ ; 2002 >
+      au < superseded ; 2003 ; 2003 ; Arkivoc Volume 2003 [superseded] ; http://www.arkat-usa.org/ ; 2003 >
+      au < superseded ; 2004 ; 2004 ; Arkivoc Volume 2004 [superseded 1] ; http://www.arkat-usa.org/ark/arkivoc/ ; 2004 >
+      au < superseded ; 2004 ; 2004 ; Arkivoc Volume 2004 [superseded 2] ; http://www.arkat-usa.org/ark/journal/ ; 2004 >
+      au < superseded ; 2004 ; 2004 ; Arkivoc Volume 2004 [superseded 3] ; http://www.arkat-usa.org/ ; 2004 >
+      au < superseded ; 2005 ; 2005 ; Arkivoc Volume 2005 [superseded] ; http://www.arkat-usa.org/ ; 2005 >
+    
+    }
+    
   }
   
 }
