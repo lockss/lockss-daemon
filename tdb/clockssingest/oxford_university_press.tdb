@@ -14241,7 +14241,7 @@
     au < crawling ; exists ; 2018 ; 2018 ; Microscopy and Microanalysis Volume 24 ; 24 ; >
     au < crawling ; exists ; 2019 ; 2019 ; Microscopy and Microanalysis Volume 25 ; 25 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Microscopy and Microanalysis Volume 26 ; 26 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Microscopy and Microanalysis Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Microscopy and Microanalysis Volume 27 ; 27 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Microscopy and Microanalysis Volume 28 ; 28 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Microscopy and Microanalysis Volume 29 ; 29 ; >
 
@@ -14260,20 +14260,20 @@
     #move from Cambridge University Press in 2023
     #content available from 1992 volume 1 to 2007 volume 15
 
-    au < ready ; exists ; 2008 ; 2008 ; Microscopy Today Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Microscopy Today Volume 16 ; 16 ; >
     au < crawling ; exists ; 2009 ; 2009 ; Microscopy Today Volume 17 ; 17 ; >
-    au < ready ; exists ; 2010 ; 2010 ; Microscopy Today Volume 18 ; 18 ; >
-    au < ready ; exists ; 2011 ; 2011 ; Microscopy Today Volume 19 ; 19 ; >
-    au < ready ; exists ; 2012 ; 2012 ; Microscopy Today Volume 20 ; 20 ; >
-    au < ready ; exists ; 2013 ; 2013 ; Microscopy Today Volume 21 ; 21 ; >
-    au < ready ; exists ; 2014 ; 2014 ; Microscopy Today Volume 22 ; 22 ; >
-    au < ready ; exists ; 2015 ; 2015 ; Microscopy Today Volume 23 ; 23 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Microscopy Today Volume 24 ; 24 ; >
-    au < ready ; exists ; 2017 ; 2017 ; Microscopy Today Volume 25 ; 25 ; >
-    au < ready ; exists ; 2018 ; 2018 ; Microscopy Today Volume 26 ; 26 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Microscopy Today Volume 27 ; 27 ; >
-    au < ready ; exists ; 2020 ; 2020 ; Microscopy Today Volume 28 ; 28 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Microscopy Today Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2010 ; 2010 ; Microscopy Today Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2011 ; 2011 ; Microscopy Today Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2012 ; 2012 ; Microscopy Today Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2013 ; 2013 ; Microscopy Today Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2014 ; 2014 ; Microscopy Today Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2015 ; 2015 ; Microscopy Today Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Microscopy Today Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Microscopy Today Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Microscopy Today Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Microscopy Today Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Microscopy Today Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Microscopy Today Volume 29 ; 29 ; >
     au < frozen ; exists ; 2022 ; 2022 ; Microscopy Today Volume 30 ; 30 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Microscopy Today Volume 31 ; 31 ; >
 
@@ -14467,7 +14467,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Mind Volume 114 ; 114 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Mind Volume 115 ; 115 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Mind Volume 116 ; 116 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Mind Volume 117 ; 117 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Mind Volume 117 ; 117 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Mind Volume 118 ; 118 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Mind Volume 119 ; 119 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Mind Volume 120 ; 120 ; >
@@ -14711,8 +14711,8 @@
     au < finished ; manifest ; 2018 ; 2018 ; Monthly Notices of the Royal Astronomical Society Volume 473-481 ; 473-481 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2019 ; 2019 ; Monthly Notices of the Royal Astronomical Society Volume 482-490 ; 482-490 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Monthly Notices of the Royal Astronomical Society Volume 491-499 ; 491-499 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Monthly Notices of the Royal Astronomical Society Volume 500-508 ; 500-508 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Monthly Notices of the Royal Astronomical Society Volume 509-517 ; 509-517 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Monthly Notices of the Royal Astronomical Society Volume 500-508 ; 500-508 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Monthly Notices of the Royal Astronomical Society Volume 509-517 ; 509-517 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Monthly Notices of the Royal Astronomical Society Volume 518-526 ; 518-526 ; >
 
   }
@@ -14731,7 +14731,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 356-364 ; 356-364 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 365-373 ; 365-373 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 374-382 ; 374-382 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 383-391 ; 383-391 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 383-391 ; 383-391 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 392-400 ; 392-400 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 401-409 ; 401-409 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 410-418 ; 410-418 ; >
@@ -14790,7 +14790,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Music Theory Spectrum Volume 27 ; 27 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Music Theory Spectrum Volume 28 ; 28 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Music Theory Spectrum Volume 29 ; 29 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Music Theory Spectrum Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Music Theory Spectrum Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Music Theory Spectrum Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Music Theory Spectrum Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Music Theory Spectrum Volume 33 ; 33 ; >
@@ -14871,7 +14871,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Music Therapy Perspectives Volume 23 ; 23 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Music Therapy Perspectives Volume 24 ; 24 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Music Therapy Perspectives Volume 25 ; 25 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Music Therapy Perspectives Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Music Therapy Perspectives Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Music Therapy Perspectives Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Music Therapy Perspectives Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Music Therapy Perspectives Volume 29 ; 29 ; >
@@ -15117,7 +15117,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Nephrology Dialysis Transplantation Volume 20 ; 20 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Nephrology Dialysis Transplantation Volume 21 ; 21 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Nephrology Dialysis Transplantation Volume 22 ; 22 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Nephrology Dialysis Transplantation Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Nephrology Dialysis Transplantation Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Nephrology Dialysis Transplantation Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Nephrology Dialysis Transplantation Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Nephrology Dialysis Transplantation Volume 26 ; 26 ; >
@@ -15156,7 +15156,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Neuro-Oncology Volume 7 ; 7 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Neuro-Oncology Volume 8 ; 8 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Neuro-Oncology Volume 9 ; 9 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Neuro-Oncology Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Neuro-Oncology Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Neuro-Oncology Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Neuro-Oncology Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Neuro-Oncology Volume 13 ; 13 ; >
@@ -15672,7 +15672,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Nutrition Reviews Volume 63 ; 63 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Nutrition Reviews Volume 64 ; 64 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Nutrition Reviews Volume 65 ; 65 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Nutrition Reviews Volume 66 ; 66 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Nutrition Reviews Volume 66 ; 66 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Nutrition Reviews Volume 67 ; 67 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Nutrition Reviews Volume 68 ; 68 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Nutrition Reviews Volume 69 ; 69 ; >
@@ -15705,7 +15705,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; OAH Magazine of History Volume 19 ; 19 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; OAH Magazine of History Volume 20 ; 20 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; OAH Magazine of History Volume 21 ; 21 ; >
-    au < ready ; exists ; 2008 ; 2008 ; OAH Magazine of History Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; OAH Magazine of History Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; OAH Magazine of History Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; OAH Magazine of History Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; OAH Magazine of History Volume 25 ; 25 ; >
@@ -15825,7 +15825,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; The Oncologist Volume 10 ; 10 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; The Oncologist Volume 11 ; 11 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; The Oncologist Volume 12 ; 12 ; >
-    au < ready ; exists ; 2008 ; 2008 ; The Oncologist Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; The Oncologist Volume 13 ; 13 ; >
     au < finished ; finished ; 2009 ; 2009 ; The Oncologist Volume 14 ; 14 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; 2010 ; The Oncologist Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2011 ; 2011 ; The Oncologist Volume 16 ; 16 ; reingest2.clockss.org:8085 >
@@ -16037,7 +16037,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Oxford Economic Papers Volume 57 ; 57 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Oxford Economic Papers Volume 58 ; 58 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Oxford Economic Papers Volume 59 ; 59 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Oxford Economic Papers Volume 60 ; 60 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Oxford Economic Papers Volume 60 ; 60 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Oxford Economic Papers Volume 61 ; 61 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Oxford Economic Papers Volume 62 ; 62 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Oxford Economic Papers Volume 63 ; 63 ; >
@@ -16275,7 +16275,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Pain Medicine Volume 6 ; 6 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Pain Medicine Volume 7 ; 7 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Pain Medicine Volume 8 ; 8 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Pain Medicine Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Pain Medicine Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Pain Medicine Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Pain Medicine Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Pain Medicine Volume 12 ; 12 ; >
@@ -16499,7 +16499,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Pathogens and Disease Volume 43-45 ; 43-45 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Pathogens and Disease Volume 46-48 ; 46-48 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Pathogens and Disease Volume 49-51 ; 49-51 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Pathogens and Disease Volume 52-54 ; 52-54 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Pathogens and Disease Volume 52-54 ; 52-54 ; >
     au < finished ; crawling ; 2009 ; 2009 ; Pathogens and Disease Volume 55-57 ; 55-57 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; 2010 ; Pathogens and Disease Volume 58-60 ; 58-60 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; 2011 ; Pathogens and Disease Volume 61-63 ; 61-63 ; reingest2.clockss.org:8085 >
@@ -16819,8 +16819,8 @@
       #doNotProcess = had been processed in American Society of Plant Biologists
       #Only 2020-present exist on website as of 11/2022
 
-      au < ready ; exists ; 2020 ; 2020 ; Plant Physiology Volume 182-184 ; 182-184 ; >
-      au < ready ; exists ; 2021 ; 2021 ; Plant Physiology Volume 185-187 ; 185-187 ; >
+      au < crawling ; exists ; 2020 ; 2020 ; Plant Physiology Volume 182-184 ; 182-184 ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Plant Physiology Volume 185-187 ; 185-187 ; >
       au < crawling ; exists ; 2022 ; 2022 ; Plant Physiology Volume 188-190 ; 188-190 ; >
       au < doNotProcess ; exists ; 2023 ; 2023 ; Plant Physiology Volume 191-193 ; 191-193 ; >
 
@@ -17068,7 +17068,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Proceedings of the Aristotelian Society Volume 105 ; 105 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Proceedings of the Aristotelian Society Volume 106 ; 106 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Proceedings of the Aristotelian Society Volume 107 ; 107 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Proceedings of the Aristotelian Society Volume 108 ; 108 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Proceedings of the Aristotelian Society Volume 108 ; 108 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Proceedings of the Aristotelian Society Volume 109 ; 109 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Proceedings of the Aristotelian Society Volume 110 ; 110 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Proceedings of the Aristotelian Society Volume 111 ; 111 ; >

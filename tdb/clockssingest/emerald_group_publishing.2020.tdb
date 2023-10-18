@@ -5858,7 +5858,7 @@
     au < manifest ; exists ; 1991 ; International Journal of Social Economics Volume 18 ; 18 ; >
     au < manifest ; exists ; 1992 ; International Journal of Social Economics Volume 19 ; 19 ; >
     au < manifest ; exists ; 1993 ; International Journal of Social Economics Volume 20 ; 20 ; >
-    au < ready ; exists ; 1994 ; International Journal of Social Economics Volume 21 ; 21 ; >
+    au < crawling ; exists ; 1994 ; International Journal of Social Economics Volume 21 ; 21 ; >
     au < finished ; crawling ; 1995 ; International Journal of Social Economics Volume 22 ; 22 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; International Journal of Social Economics Volume 23 ; 23 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1997 ; International Journal of Social Economics Volume 24 ; 24 ; reingest3.clockss.org:8083 >
@@ -10230,7 +10230,7 @@
     au < manifest ; exists ; 1991 ; Managerial Auditing Journal Volume 6 ; 6 ; >
     au < manifest ; exists ; 1992 ; Managerial Auditing Journal Volume 7 ; 7 ; >
     au < manifest ; exists ; 1993 ; Managerial Auditing Journal Volume 8 ; 8 ; >
-    au < ready ; exists ; 1994 ; Managerial Auditing Journal Volume 9 ; 9 ; >
+    au < crawling ; exists ; 1994 ; Managerial Auditing Journal Volume 9 ; 9 ; >
     au < finished ; manifest ; 1995 ; Managerial Auditing Journal Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Managerial Auditing Journal Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; Managerial Auditing Journal Volume 12 ; 12 ; reingest2.clockss.org:8085 >
@@ -10293,7 +10293,7 @@
     au < manifest ; exists ; 1991 ; Managerial Finance Volume 17 ; 17 ; >
     au < manifest ; exists ; 1992 ; Managerial Finance Volume 18 ; 18 ; >
     au < manifest ; exists ; 1993 ; Managerial Finance Volume 19 ; 19 ; >
-    au < ready ; exists ; 1994 ; Managerial Finance Volume 20 ; 20 ; >
+    au < crawling ; exists ; 1994 ; Managerial Finance Volume 20 ; 20 ; >
     au < finished ; manifest ; 1995 ; Managerial Finance Volume 21 ; 21 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1996 ; Managerial Finance Volume 22 ; 22 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1997 ; Managerial Finance Volume 23 ; 23 ; reingest4.clockss.org:8082 >
@@ -13323,7 +13323,7 @@
     au < manifest ; exists ; 1991 ; VINE Volume 21 ; 21 ; >
     au < manifest ; exists ; 1992 ; VINE Volume 22 ; 22 ; >
     au < manifest ; exists ; 1993 ; VINE Volume 23 ; 23 ; >
-    au < ready ; exists ; 1994 ; VINE Volume 24 ; 24 ; >
+    au < crawling ; exists ; 1994 ; VINE Volume 24 ; 24 ; >
     au < finished ; manifest ; 1995 ; VINE Volume 25 ; 25 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; VINE Volume 26 ; 26 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; VINE Volume 27 ; 27 ; reingest5.clockss.org:8082 >
@@ -14674,9 +14674,9 @@
     param[journal_issn] = 2414-6994
 
     au < ready ; exists ; 2005 ; Asian Association of Open Universities Journal Volume 1 ; 1 ; >
-    au < ready ; exists ; 2006 ; Asian Association of Open Universities Journal Volume 2 ; 2 ; >
-    au < ready ; exists ; 2008 ; Asian Association of Open Universities Journal Volume 3 ; 3 ; >
-    au < ready ; exists ; 2009 ; Asian Association of Open Universities Journal Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2006 ; Asian Association of Open Universities Journal Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2008 ; Asian Association of Open Universities Journal Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2009 ; Asian Association of Open Universities Journal Volume 4 ; 4 ; >
     au < ready ; exists ; 2010 ; Asian Association of Open Universities Journal Volume 5 ; 5 ; >
     au < crawling ; exists ; 2011 ; Asian Association of Open Universities Journal Volume 6 ; 6 ; >
     au < crawling ; exists ; 2012 ; Asian Association of Open Universities Journal Volume 7 ; 7 ; >
@@ -15397,7 +15397,7 @@
     au < ready ; exists ; 2009 ; Mental Illness Volume 1 ; 1 ; >
     au < ready ; exists ; 2010 ; Mental Illness Volume 2 ; 2 ; >
     au < ready ; exists ; 2011 ; Mental Illness Volume 3 ; 3 ; >
-    au < ready ; exists ; 2012 ; Mental Illness Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2012 ; Mental Illness Volume 4 ; 4 ; >
     au < finished ; manifest ; 2013 ; Mental Illness Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2014 ; Mental Illness Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; Mental Illness Volume 7 ; 7 ; reingest2.clockss.org:8085 >
@@ -15439,21 +15439,21 @@
 
     param[journal_issn] = 2574-8904
 
-    au < ready ; exists ; 1998 ; New England Journal of Entrepreneurship Volume 1 ; 1 ; >
-    au < ready ; exists ; 1999 ; New England Journal of Entrepreneurship Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1998 ; New England Journal of Entrepreneurship Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1999 ; New England Journal of Entrepreneurship Volume 2 ; 2 ; >
     au < ready ; exists ; 2000 ; New England Journal of Entrepreneurship Volume 3 ; 3 ; >
-    au < ready ; exists ; 2001 ; New England Journal of Entrepreneurship Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2001 ; New England Journal of Entrepreneurship Volume 4 ; 4 ; >
     au < ready ; exists ; 2002 ; New England Journal of Entrepreneurship Volume 5 ; 5 ; >
     au < manifest ; exists ; 2003 ; New England Journal of Entrepreneurship Volume 6 ; 6 ; >
     au < manifest ; exists ; 2004 ; New England Journal of Entrepreneurship Volume 7 ; 7 ; >
     au < ready ; exists ; 2005 ; New England Journal of Entrepreneurship Volume 8 ; 8 ; >
-    au < ready ; exists ; 2006 ; New England Journal of Entrepreneurship Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2006 ; New England Journal of Entrepreneurship Volume 9 ; 9 ; >
     au < ready ; exists ; 2007 ; New England Journal of Entrepreneurship Volume 10 ; 10 ; >
     au < ready ; exists ; 2008 ; New England Journal of Entrepreneurship Volume 11 ; 11 ; >
-    au < ready ; exists ; 2009 ; New England Journal of Entrepreneurship Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2009 ; New England Journal of Entrepreneurship Volume 12 ; 12 ; >
     au < ready ; exists ; 2010 ; New England Journal of Entrepreneurship Volume 13 ; 13 ; >
     au < ready ; exists ; 2011 ; New England Journal of Entrepreneurship Volume 14 ; 14 ; >
-    au < ready ; exists ; 2012 ; New England Journal of Entrepreneurship Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2012 ; New England Journal of Entrepreneurship Volume 15 ; 15 ; >
     au < ready ; exists ; 2013 ; New England Journal of Entrepreneurship Volume 16 ; 16 ; >
     au < finished ; manifest ; 2014 ; New England Journal of Entrepreneurship Volume 17 ; 17 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2015 ; New England Journal of Entrepreneurship Volume 18 ; 18 ; reingest4.clockss.org:8082 >
@@ -15687,11 +15687,11 @@
     param[journal_issn] = 2077-5504
 
     au < crawling ; exists ; 2004 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 1 ; 1 ; >
-    au < ready ; exists ; 2005 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 2 ; 2 ; >
-    au < ready ; exists ; 2006 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2005 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2006 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 3 ; 3 ; >
     au < ready ; exists ; 2007 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 4 ; 4 ; >
-    au < ready ; exists ; 2008 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 5 ; 5 ; >
-    au < ready ; exists ; 2009 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2008 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2009 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 6 ; 6 ; >
     au < ready ; exists ; 2010 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 7 ; 7 ; >
     au < ready ; exists ; 2011 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 8 ; 8 ; >
     au < ready ; exists ; 2012 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 9 ; 9 ; >

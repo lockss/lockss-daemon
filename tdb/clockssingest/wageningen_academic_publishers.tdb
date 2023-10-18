@@ -23,7 +23,7 @@
 
       param[journal_id] = bm
     
-      au < ready ; exists ; 2010 ; Beneficial Microbes Volume 1 ; 1 ; https://www.wageningenacademic.com/ ; >
+      au < crawling ; exists ; 2010 ; Beneficial Microbes Volume 1 ; 1 ; https://www.wageningenacademic.com/ ; >
       au < ready ; exists ; 2011 ; Beneficial Microbes Volume 2 ; 2 ; https://www.wageningenacademic.com/ ; >
       au < finished ; finished ; 2012 ; Beneficial Microbes Volume 3 ; 3 ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2013 ; Beneficial Microbes Volume 4 ; 4 ; http://www.wageningenacademic.com/ ; >
@@ -115,7 +115,7 @@
 
       param[journal_id] = jcns
 
-      au < ready ; exists ; 2001 ; Journal on Chain and Network Science Volume 1 ; 1 ; https://www.wageningenacademic.com/ ; >
+      au < crawling ; exists ; 2001 ; Journal on Chain and Network Science Volume 1 ; 1 ; https://www.wageningenacademic.com/ ; >
       au < frozen ; exists ; 2002 ; Journal on Chain and Network Science Volume 2 ; 2 ; https://www.wageningenacademic.com/ ; >
       au < ready ; exists ; 2003 ; Journal on Chain and Network Science Volume 3 ; 3 ; https://www.wageningenacademic.com/ ; >
       au < ready ; exists ; 2004 ; Journal on Chain and Network Science Volume 4 ; 4 ; https://www.wageningenacademic.com/ ; >
@@ -166,7 +166,7 @@
       param[journal_id] = wmj
 
       au < finished ; frozen ; 2008 ; World Mycotoxin Journal Volume 1 ; 1 ; https://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2009 ; World Mycotoxin Journal Volume 2 ; 2 ; https://www.wageningenacademic.com/ ; >
+      au < crawling ; exists ; 2009 ; World Mycotoxin Journal Volume 2 ; 2 ; https://www.wageningenacademic.com/ ; >
       au < frozen ; exists ; 2010 ; World Mycotoxin Journal Volume 3 ; 3 ; https://www.wageningenacademic.com/ ; >
       au < finished ; finished ; 2011 ; World Mycotoxin Journal Volume 4 ; 4 ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2012 ; World Mycotoxin Journal Volume 5 ; 5 ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
