@@ -46,7 +46,7 @@
       title <
         name = Comparative Exercise Physiology ;
         issn = 1755-2540 ;
-        eissn = 1755-2559 
+        eissn = 1755-2559
       >
 
       param[journal_id] = cep
@@ -87,7 +87,7 @@
 
       title <
         name =  Journal of Insects as Food and Feed ;
-        eissn = 2352-4588 
+        eissn = 2352-4588
       >
 
       param[journal_id] = jiff
@@ -110,21 +110,21 @@
       title <
         name = Journal on Chain and Network Science ;
         issn = 1569-1829 ;
-        eissn = 1875-0931 
+        eissn = 1875-0931
       >
 
       param[journal_id] = jcns
 
       au < crawling ; exists ; 2001 ; Journal on Chain and Network Science Volume 1 ; 1 ; https://www.wageningenacademic.com/ ; >
-      au < frozen ; exists ; 2002 ; Journal on Chain and Network Science Volume 2 ; 2 ; https://www.wageningenacademic.com/ ; >
+      au < finished ; manifest ; 2002 ; Journal on Chain and Network Science Volume 2 ; 2 ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2003 ; Journal on Chain and Network Science Volume 3 ; 3 ; https://www.wageningenacademic.com/ ; >
       au < crawling ; exists ; 2004 ; Journal on Chain and Network Science Volume 4 ; 4 ; https://www.wageningenacademic.com/ ; >
-      au < frozen ; exists ; 2005 ; Journal on Chain and Network Science Volume 5 ; 5 ; https://www.wageningenacademic.com/ ; >
+      au < finished ; manifest ; 2005 ; Journal on Chain and Network Science Volume 5 ; 5 ; https://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2006 ; Journal on Chain and Network Science Volume 6 ; 6 ; https://www.wageningenacademic.com/ ; >
-      au < frozen ; exists ; 2007 ; Journal on Chain and Network Science Volume 7 ; 7 ; https://www.wageningenacademic.com/ ; >
-      au < frozen ; exists ; 2008 ; Journal on Chain and Network Science Volume 8 ; 8 ; https://www.wageningenacademic.com/ ; >
+      au < finished ; manifest ; 2007 ; Journal on Chain and Network Science Volume 7 ; 7 ; https://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2008 ; Journal on Chain and Network Science Volume 8 ; 8 ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2009 ; Journal on Chain and Network Science Volume 9 ; 9 ; https://www.wageningenacademic.com/ ; >
-      au < frozen ; exists ; 2010 ; Journal on Chain and Network Science Volume 10 ; 10 ; https://www.wageningenacademic.com/ ; >
+      au < finished ; manifest ; 2010 ; Journal on Chain and Network Science Volume 10 ; 10 ; https://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2011 ; Journal on Chain and Network Science Volume 11 ; 11 ; https://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2012 ; Journal on Chain and Network Science Volume 12 ; 12 ; http://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2013 ; Journal on Chain and Network Science Volume 13 ; 13 ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
@@ -139,7 +139,7 @@
       title <
         name = Quality Assurance and Safety of Crops & Foods ;
         issn = 1757-8361 ;
-        eissn = 1757-837X 
+        eissn = 1757-837X
       >
 
       param[journal_id] = qas
@@ -160,14 +160,14 @@
       title <
         name = World Mycotoxin Journal ;
         issn = 1875-0710 ;
-        eissn = 1875-0796 
+        eissn = 1875-0796
       >
 
       param[journal_id] = wmj
 
       au < finished ; frozen ; 2008 ; World Mycotoxin Journal Volume 1 ; 1 ; https://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2009 ; World Mycotoxin Journal Volume 2 ; 2 ; https://www.wageningenacademic.com/ ; >
-      au < frozen ; exists ; 2010 ; World Mycotoxin Journal Volume 3 ; 3 ; https://www.wageningenacademic.com/ ; >
+      au < finished ; manifest ; 2010 ; World Mycotoxin Journal Volume 3 ; 3 ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2011 ; World Mycotoxin Journal Volume 4 ; 4 ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2012 ; World Mycotoxin Journal Volume 5 ; 5 ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2013 ; World Mycotoxin Journal Volume 6 ; 6 ; http://www.wageningenacademic.com/ ; >
