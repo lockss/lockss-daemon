@@ -1,37 +1,39 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 */
+
 package org.lockss.daemon;
 
 import java.util.*;
+
 import org.lockss.state.*;
 
 /** The acceptable permission statements, one of which LOCKSS needs to see
@@ -39,14 +41,21 @@ import org.lockss.state.*;
  */
 
 public class LockssPermission {
+  
+  /**
+   * The Standard LOCKSS Permission Statement
+   */
   public static final String LOCKSS_PERMISSION_STRING =
-    "LOCKSS system has permission to collect, preserve, and serve this Archival Unit";
+      "LOCKSS system has permission to collect, preserve, and serve this Archival Unit";
 
+  /**
+   * The Standard LOCKSS Permission Statement with Open Access Qualification
+   */
   public static final String LOCKSS_OPEN_ACCESS_PERMISSION_STRING =
-    "LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit";
+      "LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit";
 
   public static final String LOCKSS_OJS_PERMISSION_STRING =
-    "This journal utilizes the LOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration";
+      "This journal utilizes the LOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration";
 
   List<PermissionChecker> permissionList;
 
@@ -55,22 +64,23 @@ public class LockssPermission {
     StringPermissionChecker spc;
 
     spc = new StringPermissionChecker(LOCKSS_PERMISSION_STRING,
-				      new StringPermissionChecker.StringFilterRule());
+                                      new StringPermissionChecker.StringFilterRule());
     spc.doSetAccessType(AuState.AccessType.Subscription);
     lst.add(spc);
 
     spc = new StringPermissionChecker(LOCKSS_OPEN_ACCESS_PERMISSION_STRING,
-				      new StringPermissionChecker.StringFilterRule());
+                                      new StringPermissionChecker.StringFilterRule());
     spc.doSetAccessType(AuState.AccessType.OpenAccess);
     lst.add(spc);
 
     spc = new StringPermissionChecker(LOCKSS_OJS_PERMISSION_STRING,
-				      new StringPermissionChecker.StringFilterRule());
+                                      new StringPermissionChecker.StringFilterRule());
     spc.doSetAccessType(AuState.AccessType.Subscription);
     lst.add(spc);
 
-    lst.add(new CreativeCommonsRdfPermissionChecker());
     lst.add(new CreativeCommonsPermissionChecker());
+    lst.add(new CreativeCommonsRdfPermissionChecker());
+
     lst.trimToSize();
     permissionList = Collections.unmodifiableList(lst);
   }
@@ -78,4 +88,5 @@ public class LockssPermission {
   public List<PermissionChecker> getCheckers() {
     return permissionList;
   }
+  
 }
