@@ -106,6 +106,8 @@ public class DebugPanel extends LockssServlet {
   static final String ACTION_SLEEP = "Sleep";
   public static final String ACTION_DISABLE_METADATA_INDEXING =
       "Disable Indexing";
+  public static final String ACTION_ENABLE_METADATA_INDEXING =
+      "Enable Indexing";
 
   /** Set of actions for which audit alerts shouldn't be generated */
   public static final Set noAuditActions = SetUtil.set(ACTION_FIND_URL);
@@ -232,6 +234,9 @@ public class DebugPanel extends LockssServlet {
     if (ACTION_DISABLE_METADATA_INDEXING.equals(action)) {
       doDisableMetadataIndexing();
     }
+    if (ACTION_ENABLE_METADATA_INDEXING.equals(action)) {
+      doEnableMetadataIndexing();
+    }
     if (showForm) {
       displayPage();
     }
@@ -296,6 +301,17 @@ public class DebugPanel extends LockssServlet {
       disableMetadataIndexing(au, false);
     } catch (RuntimeException e) {
       log.error("Can't disable metadata indexing", e);
+      errMsg = "Error: " + e.toString();
+    }
+  }
+
+  private void doEnableMetadataIndexing() {
+    ArchivalUnit au = getAu();
+    if (au == null) return;
+    try {
+      enableMetadataIndexing(au, false);
+    } catch (RuntimeException e) {
+      log.error("Can't enable metadata indexing", e);
       errMsg = "Error: " + e.toString();
     }
   }
@@ -511,7 +527,24 @@ public class DebugPanel extends LockssServlet {
       return true;
     } catch (Exception e) {
       errMsg =
-	  "Cannot reindex metadata for " + au.getName() + ": " + e.getMessage();
+	  "Cannot disable metadata indexing for " + au.getName() + ": " + e.getMessage();
+      return false;
+    }
+  }
+
+  private boolean enableMetadataIndexing(ArchivalUnit au, boolean force) {
+    if (metadataMgr == null) {
+      errMsg = "Metadata processing is not enabled.";
+      return false;
+    }
+
+    try {
+      metadataMgr.enableAuIndexing(au);
+      statusMsg = "Enabled metadata indexing for " + au.getName();
+      return true;
+    } catch (Exception e) {
+      errMsg =
+          "Cannot enable metadata indexing for " + au.getName() + ": " + e.getMessage();
       return false;
     }
   }
@@ -676,6 +709,10 @@ public class DebugPanel extends LockssServlet {
                                         ACTION_DISABLE_METADATA_INDEXING);
       frm.add(" ");
       frm.add(disableIndexing);
+      Input enableIndexing = new Input(Input.Submit, KEY_ACTION,
+                                       ACTION_ENABLE_METADATA_INDEXING);
+      frm.add(" ");
+      frm.add(enableIndexing);
     }
     if (CurrentConfig.getBooleanParam(PARAM_ENABLE_COPY_TO_V2REPO,
 				      DEFAULT_ENABLE_COPY_TO_V2REPO)) {
