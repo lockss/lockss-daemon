@@ -23,7 +23,7 @@
     >
       param[journal_id] = bloodcancerdiscov
     
-      au < crawling ; exists ; 2020 ; 2020 ; Blood Cancer Discovery Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2020 ; 2020 ; Blood Cancer Discovery Volume 1 ; 1 ; >
       au < manifest ; exists ; 2021 ; 2021 ; Blood Cancer Discovery Volume 2 ; 2 ; >
       au < crawling ; exists ; 2022 ; 2022 ; Blood Cancer Discovery Volume 3 ; 3 ; >
       au < manifest ; exists ; 2023 ; 2023 ; Blood Cancer Discovery Volume 4 ; 4 ; >
@@ -89,8 +89,8 @@
       au < crawling ; exists ; 2010 ; 2010 ; Cancer Epidemiology Biomarkers & Prevention Volume 19 ; 19 ; >
       au < manifest ; exists ; 2011 ; 2011 ; Cancer Epidemiology Biomarkers & Prevention Volume 20 ; 20 ; >
       au < doesNotExist ; doesNotExist ; 2012 ; 2012 ; Cancer Epidemiology Biomarkers & Prevention Volume 21 ; 21 ; >
-      au < crawling ; exists ; 2013 ; 2013 ; Cancer Epidemiology Biomarkers & Prevention Volume 22 ; 22 ; >
-      au < crawling ; exists ; 2014 ; 2014 ; Cancer Epidemiology Biomarkers & Prevention Volume 23 ; 23 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; Cancer Epidemiology Biomarkers & Prevention Volume 22 ; 22 ; >
+      au < frozen ; exists ; 2014 ; 2014 ; Cancer Epidemiology Biomarkers & Prevention Volume 23 ; 23 ; >
       au < crawling ; exists ; 2015 ; 2015 ; Cancer Epidemiology Biomarkers & Prevention Volume 24 ; 24 ; >
       au < crawling ; exists ; 2016 ; 2016 ; Cancer Epidemiology Biomarkers & Prevention Volume 25 ; 25 ; >
       au < crawling ; exists ; 2017 ; 2017 ; Cancer Epidemiology Biomarkers & Prevention Volume 26 ; 26 ; >
