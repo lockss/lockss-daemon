@@ -769,7 +769,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; American Journal of Health-System Pharmacy Volume 63 ; 63 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; American Journal of Health-System Pharmacy Volume 64 ; 64 ; >
     au < frozen ; exists ; 2008 ; 2008 ; American Journal of Health-System Pharmacy Volume 65 ; 65 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; American Journal of Health-System Pharmacy Volume 66 ; 66 ; > #LXQUEUE-1779
+    au < ready ; exists ; 2009 ; 2009 ; American Journal of Health-System Pharmacy Volume 66 ; 66 ; > #LXQUEUE-1779
     au < finished ; crawling ; 2010 ; 2010 ; American Journal of Health-System Pharmacy Volume 67 ; 67 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; 2011 ; American Journal of Health-System Pharmacy Volume 68 ; 68 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2012 ; 2012 ; American Journal of Health-System Pharmacy Volume 69 ; 69 ; reingest3.clockss.org:8083 >
@@ -2591,7 +2591,7 @@
     au < finished ; manifest ; 2018 ; 2018 ; Biostatistics Volume 19 ; 19 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2019 ; 2019 ; Biostatistics Volume 20 ; 20 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Biostatistics Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Biostatistics Volume 22 ; 22 ; > #500 internal server error
+    au < ready ; exists ; 2021 ; 2021 ; Biostatistics Volume 22 ; 22 ; > #500 internal server error
     au < deepCrawl ; exists ; 2022 ; 2022 ; Biostatistics Volume 23 ; 23 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Biostatistics Volume 24 ; 24 ; >
 
@@ -2615,7 +2615,7 @@
     au < finished ; crawling ; 2012 ; 2012 ; Botanical Journal of the Linnean Society Volume 168-170 ; 168-170 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2013 ; 2013 ; Botanical Journal of the Linnean Society Volume 171-173 ; 171-173 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2014 ; 2014 ; Botanical Journal of the Linnean Society Volume 174-176 ; 174-176 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2015 ; 2015 ; Botanical Journal of the Linnean Society Volume 177-179 ; 177-179 ; > #LXQUEUE-1592
+    au < ready ; exists ; 2015 ; 2015 ; Botanical Journal of the Linnean Society Volume 177-179 ; 177-179 ; > #LXQUEUE-1592
     au < finished ; manifest ; 2016 ; 2016 ; Botanical Journal of the Linnean Society Volume 180-182 ; 180-182 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2017 ; 2017 ; Botanical Journal of the Linnean Society Volume 183-185 ; 183-185 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; 2018 ; Botanical Journal of the Linnean Society Volume 186-188 ; 186-188 ; reingest1.clockss.org:8082 >
@@ -8920,7 +8920,7 @@
     au < finished ; manifest ; 2017 ; 2017 ; International Journal of Epidemiology Volume 46 ; 46 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; 2018 ; International Journal of Epidemiology Volume 47 ; 47 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; International Journal of Epidemiology Volume 48 ; 48 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; International Journal of Epidemiology Volume 49 ; 49 ; >
+    au < ready ; exists ; 2020 ; 2020 ; International Journal of Epidemiology Volume 49 ; 49 ; >
     au < frozen ; exists ; 2021 ; 2021 ; International Journal of Epidemiology Volume 50 ; 50 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; International Journal of Epidemiology Volume 51 ; 51 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; International Journal of Epidemiology Volume 52 ; 52 ; >
@@ -12688,7 +12688,7 @@
     au < finished ; manifest ; 2017 ; 2017 ; Journal of Semantics Volume 34 ; 34 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2018 ; 2018 ; Journal of Semantics Volume 35 ; 35 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Semantics Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Journal of Semantics Volume 37 ; 37 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Journal of Semantics Volume 37 ; 37 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Journal of Semantics Volume 38 ; 38 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Semantics Volume 39 ; 39 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Journal of Semantics Volume 40 ; 40 ; >
@@ -12824,7 +12824,7 @@
     #move from Elsevier on 2023
 
     au < crawling ; exists ; 2013 ; 2013 ; Sexual Medicine Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Sexual Medicine Volume 2 ; 2 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Sexual Medicine Volume 2 ; 2 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Sexual Medicine Volume 3 ; 3 ; >
     au < crawling ; exists ; 2016 ; 2016 ; Sexual Medicine Volume 4 ; 4 ; >
     au < crawling ; exists ; 2017 ; 2017 ; Sexual Medicine Volume 5 ; 5 ; >
@@ -12916,7 +12916,7 @@
     au < finished ; manifest ; 2017 ; 2017 ; Journal of Surgical Case Reports Volume 2017 ; 2017 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; 2018 ; Journal of Surgical Case Reports Volume 2018 ; 2018 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Surgical Case Reports Volume 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Journal of Surgical Case Reports Volume 2020 ; 2020 ; > #LXQUEUE-1592
+    au < testing ; exists ; 2020 ; 2020 ; Journal of Surgical Case Reports Volume 2020 ; 2020 ; > #LXQUEUE-1592
     au < frozen ; exists ; 2021 ; 2021 ; Journal of Surgical Case Reports Volume 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Surgical Case Reports Volume 2022 ; 2022 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Journal of Surgical Case Reports Volume 2023 ; 2023 ; >
@@ -13066,7 +13066,7 @@
     au < finished ; manifest ; 2017 ; 2017 ; Journal of Tropical Pediatrics Volume 63 ; 63 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; 2018 ; Journal of Tropical Pediatrics Volume 64 ; 64 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Tropical Pediatrics Volume 65 ; 65 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Journal of Tropical Pediatrics Volume 66 ; 66 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Journal of Tropical Pediatrics Volume 66 ; 66 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Tropical Pediatrics Volume 67 ; 67 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Tropical Pediatrics Volume 68 ; 68 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Journal of Tropical Pediatrics Volume 69 ; 69 ; >
@@ -14710,7 +14710,7 @@
     au < finished ; manifest ; 2017 ; 2017 ; Monthly Notices of the Royal Astronomical Society Volume 464-472 ; 464-472 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; 2018 ; Monthly Notices of the Royal Astronomical Society Volume 473-481 ; 473-481 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2019 ; 2019 ; Monthly Notices of the Royal Astronomical Society Volume 482-490 ; 482-490 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Monthly Notices of the Royal Astronomical Society Volume 491-499 ; 491-499 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Monthly Notices of the Royal Astronomical Society Volume 491-499 ; 491-499 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Monthly Notices of the Royal Astronomical Society Volume 500-508 ; 500-508 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Monthly Notices of the Royal Astronomical Society Volume 509-517 ; 509-517 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Monthly Notices of the Royal Astronomical Society Volume 518-526 ; 518-526 ; >
@@ -15329,7 +15329,7 @@
     au < finished ; manifest ; 2017 ; 2017 ; Nicotine & Tobacco Research Volume 19 ; 19 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; Nicotine & Tobacco Research Volume 20 ; 20 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Nicotine & Tobacco Research Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Nicotine & Tobacco Research Volume 22 ; 22 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Nicotine & Tobacco Research Volume 22 ; 22 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Nicotine & Tobacco Research Volume 23 ; 23 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Nicotine & Tobacco Research Volume 24 ; 24 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Nicotine & Tobacco Research Volume 25 ; 25 ; >
@@ -18377,7 +18377,7 @@
     au < finished ; manifest ; 2016 ; 2016 ; Shakespeare Quarterly Volume 67 ; 67 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; 2017 ; Shakespeare Quarterly Volume 68 ; 68 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; 2018 ; Shakespeare Quarterly Volume 69 ; 69 ; reingest2.clockss.org:8085 >
-    au < manifest ; exists ; 2019 ; 2019 ; Shakespeare Quarterly Volume 70 ; 70 ; >
+    au < testing ; exists ; 2019 ; 2019 ; Shakespeare Quarterly Volume 70 ; 70 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Shakespeare Quarterly Volume 71 ; 71 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Shakespeare Quarterly Volume 72 ; 72 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Shakespeare Quarterly Volume 73 ; 73 ; >
