@@ -233,35 +233,26 @@ public class Heterocycles2023MetadataExtractorFactory
           String nthDivSelector = "div#mainContainer > div#mainContent > div.contentBox:nth-child(" + Integer.toString(i) + ")";
           String doiSelector = "div#mainContainer > div#mainContent > div.contentBox:nth-child(" + Integer.toString(i) + ") > div:nth-child(4)";
           String articleSelector = "div#mainContainer > div#mainContent > div.contentBox:nth-child(" + Integer.toString(i) + ")";
-          String pdfSelector = "div#mainContainer > div#mainContent > div.contentBox:nth-child(" + Integer.toString(i) + ") > a:nth-child(11)";
-          String pdfAlterSelector = "div#mainContainer > div#mainContent > div.contentBox:nth-child(" + Integer.toString(i) + ") > a:nth-child(9)";
-          String pdfAlterSelector2 = "div#mainContainer > div#mainContent > div.contentBox:nth-child(" + Integer.toString(i) + ") > a:nth-child(7)";
-
-          String[] pdfSelectors = new String[3];
-          pdfSelectors[0] = pdfSelector;
-          pdfSelectors[1] = pdfAlterSelector;
-          pdfSelectors[2] = pdfAlterSelector2;
 
 
-          for (int pi = 0; pi < pdfSelectors.length; pi++) {
+          String pdfSelector = "div#mainContainer > div#mainContent > div.contentBox > a";
+          pdfElement = doc.select(pdfSelector);
 
-            log.debug3("=========Processing DIV: PDF div#" + Integer.toString(i) + ", for url = " + url + ", pdfSelectors#" + Integer.toString(pi) + ", pdfSelector = " + pdfSelectors[pi]);
-
-            pdfElement = doc.select(pdfSelectors[pi]);
-
-            if (pdfElement != null) {
-              pdfLink = pdfElement.attr("href").trim().toLowerCase();
+          if ( pdfElement != null) {
+            for (Element pdfLinkElement : pdfElement) {
+              pdfLink = pdfLinkElement.attr("href").trim().toLowerCase();
               finalPDFLink = url.substring(0, url.indexOf("/clockss")) + pdfLink;
-              log.debug3("final pdf text: = " + finalPDFLink + ", url = " + url + ", div#" + Integer.toString(i) + ", pdfSelectors#" + Integer.toString(pi));
+              log.debug3("final pdf text: = " + finalPDFLink + ", url = " + url );
               if (finalPDFLink != null && finalPDFLink.length() > 0 && finalPDFLink.contains("downloads/pdf")) {
 
-                log.debug3("final pdf text: = " + finalPDFLink + ", url = " + url + ", div#" + Integer.toString(i) + ", pdfSelectors#" + Integer.toString(pi) + ", set FIELD_ACCESS_URL");
+                log.debug3("final pdf text: = " + finalPDFLink + ", url = " + url  + ", set FIELD_ACCESS_URL");
 
                 am.put(MetadataField.FIELD_ACCESS_URL, finalPDFLink.trim());
+                break;
               }
-            } else {
-              log.debug3("=========Processing DIV: PDF div#" + Integer.toString(i) + ", for url = " + url + ", pdfSelectors#" + Integer.toString(pi) + ", PDFElement null");
             }
+          } else {
+            log.debug3("----contentBox count is not selected =========== ");
           }
 
 
