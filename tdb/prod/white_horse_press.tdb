@@ -2,6 +2,14 @@
   publisher <
     name = White Horse Press
   >
+  #Moving to LUP’s ATYPON 2024
+  #Global Environment, ISSN 1973-3739
+
+  #HOSTED ON WHP's OJS 2024
+  #Worldwide Waste, E-ISSN: 2399-7117 [formerly with Ubiquity]
+  #Climates and Cultures in History, ISSN (online): 2635-1331 [brand new journal]
+  #Plant Perspectives, ISSN (online): 2753-3603 [brand new journal]
+
  {
     plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -17,6 +25,7 @@
       issnl = 0967-3407
   >
     
+    #Moving to LUP/ATYPON in 2024
     param[journal_id] = eh
     param[journal_issn] = 0967-3407
     
@@ -59,7 +68,8 @@
     au < released ; 2020 ; Environment and History Volume 26 ; 26 >
     au < released ; 2021 ; Environment and History Volume 27 ; 27 >
     au < released ; 2022 ; Environment and History Volume 28 ; 28 >
-    au < manifest ; 2023 ; Environment and History Volume 29 ; 29 >
+    au < doNotProcess ; 2023 ; Environment and History Volume 29 ; 29 >
+    #Moving to LUP/ATYPON in 2024
 
     }
   }
@@ -134,13 +144,13 @@
       eissn = 1752-2366 ;
       issnl = 0822-7942
     >
+    #Moving to LUP/ATYPON in 2024
     param[journal_id] = nomp
     param[journal_issn] = 0822-7942
     
     {
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
-
     comment[moving] = At start of 2014, moving from Berghan.
         
     au < doNotProcess ; 1997 ; Nomadic Peoples Volume 1 ; 1 >
@@ -176,7 +186,8 @@
     au < released ; 2020 ; Nomadic Peoples Volume 24 ; 24 >
     au < released ; 2021 ; Nomadic Peoples Volume 25 ; 25 >
     au < released ; 2022 ; Nomadic Peoples Volume 26 ; 26 >
-    au < manifest ; 2023 ; Nomadic Peoples Volume 27 ; 27 >
+    au < doNotProcess ; 2023 ; Nomadic Peoples Volume 27 ; 27 >
+    #Moving to LUP/ATYPON in 2024
 
     }
   }
