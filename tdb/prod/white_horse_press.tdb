@@ -1,12 +1,9 @@
 {
-
   publisher <
     name = White Horse Press
   >
-
+ {
     plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
-#    param[base_url] = http://www.ingentaconnect.com/
-#    param[api_url] = http://api.ingentaconnect.com/
     param[graphics_url] = http://graphics.ingentaconnect.com/
     param[publisher_id] = whp
     implicit < status ; year ; name ; param[volume_name] >
@@ -183,5 +180,32 @@
 
     }
   }
+ }
+ {
+    implicit < status ; year ; param[year] ; name ; volume >
+    plugin = org.lockss.plugin.ojs3.Ojs3Plugin
+    attr[start_stem] = index.php/
 
+  {
+
+    title <
+      name = The Journal of Population and Sustainability ;
+      issn = 2398-5488 ;
+      eissn = 2398-5496
+     >
+     
+     param[journal_id] = JPS
+     param[base_url] = https://www.whp-journals.co.uk/
+     
+     au < manifest ; 2016 ; 2016 ; The Journal of Population and Sustainability Volume 2016 ; 1 >
+     au < manifest ; 2017 ; 2017 ; The Journal of Population and Sustainability Volume 2017 ; 1-2 >
+     au < manifest ; 2018 ; 2018 ; The Journal of Population and Sustainability Volume 2018 ; 2-3 >
+     au < manifest ; 2019 ; 2019 ; The Journal of Population and Sustainability Volume 2019 ; 3-4 >
+     au < manifest ; 2020 ; 2020 ; The Journal of Population and Sustainability Volume 2020 ; 4-5 >
+     au < manifest ; 2021 ; 2021 ; The Journal of Population and Sustainability Volume 2021 ; 5-6 >
+     au < manifest ; 2022 ; 2022 ; The Journal of Population and Sustainability Volume 2022 ; 6-7 >
+     au < manifest ; 2023 ; 2023 ; The Journal of Population and Sustainability Volume 2023 ; 7-8 >
+  } 
+
+ }
 }
