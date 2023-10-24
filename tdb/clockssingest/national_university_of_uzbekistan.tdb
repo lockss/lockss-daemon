@@ -23,11 +23,11 @@
     param[journal_abbr] = journal
     implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
 
-    au < testing ; exists ; 2018 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 1 ; 1 ; https://bulletin.nuu.uz/ ; >
-    au < testing ; exists ; 2019 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 2 ; 2 ; https://bulletin.nuu.uz/ ; >
-    au < testing ; exists ; 2020 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 3 ; 3 ; https://bulletin.nuu.uz/ ; >
-    au < testing ; exists ; 2021 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 4 ; 4 ; https://bulletin.nuu.uz/ ; >
-    au < testing ; exists ; 2022 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 5 ; 5 ; https://bulletin.nuu.uz/ ; >
+    au < ready ; exists ; 2018 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 1 ; 1 ; https://bulletin.nuu.uz/ ; >
+    au < ready ; exists ; 2019 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 2 ; 2 ; https://bulletin.nuu.uz/ ; >
+    au < ready ; exists ; 2020 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 3 ; 3 ; https://bulletin.nuu.uz/ ; >
+    au < ready ; exists ; 2021 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 4 ; 4 ; https://bulletin.nuu.uz/ ; >
+    au < ready ; exists ; 2022 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 5 ; 5 ; https://bulletin.nuu.uz/ ; >
     au < expected ; exists ; 2023 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 6 ; 6 ; https://bulletin.nuu.uz/ ; >
 
   }

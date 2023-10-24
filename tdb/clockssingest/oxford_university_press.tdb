@@ -7020,7 +7020,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Genome Biology and Evolution Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Genome Biology and Evolution Volume 7 ; 7 ; >
     au < finished ; manifest ; 2016 ; 2016 ; Genome Biology and Evolution Volume 8 ; 8 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2017 ; 2017 ; Genome Biology and Evolution Volume 9 ; 9 ; > # 403 error on cdn back file
+    au < manifest ; exists ; 2017 ; 2017 ; Genome Biology and Evolution Volume 9 ; 9 ; > # 403 error on https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/gbe/PAP/10.1093_gbe_evx190/1/evx190_Supp1.pdf?Expires=1506012303&Signature=KJSlDl5h6Z8l9hTgBaG3IAm6SOtwhW1vz5IoPVF~by-kibVitre8n0E-kVeAvZqDsN-q1ybWR3RaPzZK57OpAiHye127cQ18okNX1g8GrIboyIfILXaZpBnpt4yce2G6YkwLEsPBpVS64-ZxH8x-77XzOWhoa3fmWOu5Fr0dKdBw3AVFYMceInTqo3FyCciAACTA7qz6DqwFmyf0vhY0KbMtNYDcPyVhK9ZV~tNhMFZTuhe9-IdTVzNrqnZ9b594dGRlUZ9cOebllSRA71W2syq60IU705ritc30FaB2DEWLEghq8P5QbS0Ts-SawUHPPnKzcUlJiq8ULL3d-jAHgg__&Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q
     au < finished ; manifest ; 2018 ; 2018 ; Genome Biology and Evolution Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Genome Biology and Evolution Volume 11 ; 11 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Genome Biology and Evolution Volume 12 ; 12 ; >
@@ -12372,7 +12372,7 @@
     #move from Wiley by 2023-01-01
     #content avilable online from 1967 Volume 1 to 2007 Volume 41
 
-    au < manifest ; exists ; 2008 ; 2008 ; Journal of Philosophy of Education Volume 42 ; 42 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Journal of Philosophy of Education Volume 42 ; 42 ; >
     au < frozen ; exists ; 2009 ; 2009 ; Journal of Philosophy of Education Volume 43 ; 43 ; >
     au < frozen ; exists ; 2010 ; 2010 ; Journal of Philosophy of Education Volume 44 ; 44 ; >
     au < frozen ; exists ; 2011 ; 2011 ; Journal of Philosophy of Education Volume 45 ; 45 ; >
@@ -13066,7 +13066,7 @@
     au < finished ; manifest ; 2017 ; 2017 ; Journal of Tropical Pediatrics Volume 63 ; 63 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; 2018 ; Journal of Tropical Pediatrics Volume 64 ; 64 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Tropical Pediatrics Volume 65 ; 65 ; >
-    au < testing ; exists ; 2020 ; 2020 ; Journal of Tropical Pediatrics Volume 66 ; 66 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Journal of Tropical Pediatrics Volume 66 ; 66 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Tropical Pediatrics Volume 67 ; 67 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Tropical Pediatrics Volume 68 ; 68 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Journal of Tropical Pediatrics Volume 69 ; 69 ; >
@@ -15329,7 +15329,7 @@
     au < finished ; manifest ; 2017 ; 2017 ; Nicotine & Tobacco Research Volume 19 ; 19 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; Nicotine & Tobacco Research Volume 20 ; 20 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Nicotine & Tobacco Research Volume 21 ; 21 ; >
-    au < testing ; exists ; 2020 ; 2020 ; Nicotine & Tobacco Research Volume 22 ; 22 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Nicotine & Tobacco Research Volume 22 ; 22 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Nicotine & Tobacco Research Volume 23 ; 23 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Nicotine & Tobacco Research Volume 24 ; 24 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Nicotine & Tobacco Research Volume 25 ; 25 ; >
@@ -18377,7 +18377,7 @@
     au < finished ; manifest ; 2016 ; 2016 ; Shakespeare Quarterly Volume 67 ; 67 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; 2017 ; Shakespeare Quarterly Volume 68 ; 68 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; 2018 ; Shakespeare Quarterly Volume 69 ; 69 ; reingest2.clockss.org:8085 >
-    au < testing ; exists ; 2019 ; 2019 ; Shakespeare Quarterly Volume 70 ; 70 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Shakespeare Quarterly Volume 70 ; 70 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Shakespeare Quarterly Volume 71 ; 71 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Shakespeare Quarterly Volume 72 ; 72 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Shakespeare Quarterly Volume 73 ; 73 ; >

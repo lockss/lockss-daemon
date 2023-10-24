@@ -908,8 +908,8 @@
 
       param[journal_id] = JAFH
 
-      au < manifest ; exists ; 2013 ; Journal of Aquaculture and Fish Health Volume 2 ; 2 ; 2013 ; >
-      au < manifest ; exists ; 2014 ; Journal of Aquaculture and Fish Health Volume 3 ; 3 ; 2014 ; >
+      au < ready ; exists ; 2013 ; Journal of Aquaculture and Fish Health Volume 2 ; 2 ; 2013 ; >
+      au < ready ; exists ; 2014 ; Journal of Aquaculture and Fish Health Volume 3 ; 3 ; 2014 ; >
       au < frozen ; exists ; 2016 ; Journal of Aquaculture and Fish Health Volume 5 ; 5 ; 2016 ; >
       au < frozen ; exists ; 2017 ; Journal of Aquaculture and Fish Health Volume 6 ; 6 ; 2017 ; >
       au < frozen ; exists ; 2018 ; Journal of Aquaculture and Fish Health Volume 7 ; 7 ; 2018 ; >
@@ -1019,7 +1019,7 @@
 
       param[journal_id] = PMNJ
 
-      au < manifest ; exists ; 2014 ; Pediomaternal Nursing Journal Volume 2 ; 2 ; 2014 ; >
+      au < ready ; exists ; 2014 ; Pediomaternal Nursing Journal Volume 2 ; 2 ; 2014 ; >
       au < doesNotExist ; doesNotExist ; 2015 ; Pediomaternal Nursing Journal Volume 3 ; 3 ; 2015 ; >
       au < frozen ; exists ; 2016 ; Pediomaternal Nursing Journal Volume 4 ; 4 ; 2016 ; >
       au < frozen ; exists ; 2017 ; Pediomaternal Nursing Journal Volume 5 ; 5 ; 2017 ; >
@@ -1042,9 +1042,9 @@
 
       param[journal_id] = CMSNJ
 
-      au < manifest ; exists ; 2012 ; Critical, Medical and Surgical Nursing Journal Volume 1 ; 1 ; 2012 ; >
-      au < manifest ; exists ; 2013 ; Critical, Medical and Surgical Nursing Journal Volume 2 ; 2 ; 2013 ; >
-      au < manifest ; exists ; 2014 ; Critical, Medical and Surgical Nursing Journal Volume 3 ; 3 ; 2014 ; >
+      au < ready ; exists ; 2012 ; Critical, Medical and Surgical Nursing Journal Volume 1 ; 1 ; 2012 ; >
+      au < ready ; exists ; 2013 ; Critical, Medical and Surgical Nursing Journal Volume 2 ; 2 ; 2013 ; >
+      au < ready ; exists ; 2014 ; Critical, Medical and Surgical Nursing Journal Volume 3 ; 3 ; 2014 ; >
       au < finished ; finished ; 2015 ; Critical, Medical and Surgical Nursing Journal Volume 4 ; 4 ; 2015 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; Critical, Medical and Surgical Nursing Journal Volume 5 ; 5 ; 2016 ; >
       au < doesNotExist ; doesNotExist ; 2017 ; Critical, Medical and Surgical Nursing Journal Volume 6 ; 6 ; 2017 ; >
@@ -1385,9 +1385,9 @@
 
       param[journal_id] = lakon
 
-      au < manifest ; exists ; 2012 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 1 ; 1 ; 2012 ; >
-      au < manifest ; exists ; 2013 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 2 ; 2 ; 2013 ; >
-      au < manifest ; exists ; 2014 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 3 ; 3 ; 2014 ; >
+      au < ready ; exists ; 2012 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 1 ; 1 ; 2012 ; >
+      au < ready ; exists ; 2013 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 2 ; 2 ; 2013 ; >
+      au < ready ; exists ; 2014 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 3 ; 3 ; 2014 ; >
       au < finished ; finished ; 2015 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 4 ; 4 ; 2015 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 5 ; 5 ; 2016 ; >
       au < frozen ; exists ; 2017 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 6 ; 6 ; 2017 ; >
@@ -1853,7 +1853,7 @@
 
       au < finished ; finished ; 2021 ; Buletin Riset Psikologi dan Kesehatan Mental Volume 1 ; 1 ; 2021 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; Buletin Riset Psikologi dan Kesehatan Mental Volume 2 ; 2 ; 2022 ; >
-      au < manifest ; exists ; 2023 ; Buletin Riset Psikologi dan Kesehatan Mental Volume 3 ; 3 ; 2023 ; >
+      au < ready ; exists ; 2023 ; Buletin Riset Psikologi dan Kesehatan Mental Volume 3 ; 3 ; 2023 ; >
 
   }
 
