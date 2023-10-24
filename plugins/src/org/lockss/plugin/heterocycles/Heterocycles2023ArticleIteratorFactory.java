@@ -91,11 +91,16 @@ implements ArticleIteratorFactory,
 
     return builder.getSubTreeArticleIterator();
   }  
-  
+
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
-    throws PluginException {
-    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
+          throws PluginException {
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA) {
+      @Override
+      protected boolean isCheckAccessUrl() {
+        return true;
+      }
+    };
   }
 
 }
