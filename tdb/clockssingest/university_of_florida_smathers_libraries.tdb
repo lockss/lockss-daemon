@@ -78,12 +78,12 @@
       au < manifest ; exists ; 2012 ; Chemical Engineering Education Volume 2012 ; 2012 ; 2012 ; >
       au < manifest ; exists ; 2013 ; Chemical Engineering Education Volume 2013 ; 2013 ; 2013 ; >
       au < manifest ; exists ; 2014 ; Chemical Engineering Education Volume 2014 ; 2014 ; 2014 ; >
-      au < ready ; exists ; 2015 ; Chemical Engineering Education Volume 2015 ; 2015 ; 2015 ; >
-      au < ready ; exists ; 2016 ; Chemical Engineering Education Volume 2016 ; 2016 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Chemical Engineering Education Volume 2017 ; 2017 ; 2017 ; >
-      au < ready ; exists ; 2018 ; Chemical Engineering Education Volume 2018 ; 2018 ; 2018 ; >
-      au < ready ; exists ; 2019 ; Chemical Engineering Education Volume 2019 ; 2019 ; 2019 ; >
-      au < ready ; exists ; 2020 ; Chemical Engineering Education Volume 2020 ; 2020 ; 2020 ; >
+      au < crawling ; exists ; 2015 ; Chemical Engineering Education Volume 2015 ; 2015 ; 2015 ; >
+      au < crawling ; exists ; 2016 ; Chemical Engineering Education Volume 2016 ; 2016 ; 2016 ; >
+      au < crawling ; exists ; 2017 ; Chemical Engineering Education Volume 2017 ; 2017 ; 2017 ; >
+      au < crawling ; exists ; 2018 ; Chemical Engineering Education Volume 2018 ; 2018 ; 2018 ; >
+      au < crawling ; exists ; 2019 ; Chemical Engineering Education Volume 2019 ; 2019 ; 2019 ; >
+      au < crawling ; exists ; 2020 ; Chemical Engineering Education Volume 2020 ; 2020 ; 2020 ; >
       au < testing ; exists ; 2021 ; Chemical Engineering Education Volume 2021 ; 2021 ; 2021 ; >
       au < testing ; exists ; 2022 ; Chemical Engineering Education Volume 2022 ; 2022 ; 2022 ; >
       au < testing ; exists ; 2023 ; Chemical Engineering Education Volume 2023 ; 2023 ; 2023 ; >
@@ -198,15 +198,15 @@
       au < manifest ; exists ; 2012 ; Florida Entomologist Volume 96 ; 96 ; 2012 ; >
       au < manifest ; exists ; 2013 ; Florida Entomologist Volume 97 ; 97 ; 2013 ; >
       au < manifest ; exists ; 2014 ; Florida Entomologist Volume 98 ; 98 ; 2014 ; >
-      au < ready ; exists ; 2015 ; Florida Entomologist Volume 99 ; 99 ; 2015 ; >
-      au < ready ; exists ; 2016 ; Florida Entomologist Volume 100 ; 100 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Florida Entomologist Volume 101 ; 101 ; 2017 ; >
+      au < crawling ; exists ; 2015 ; Florida Entomologist Volume 99 ; 99 ; 2015 ; >
+      au < crawling ; exists ; 2016 ; Florida Entomologist Volume 100 ; 100 ; 2016 ; >
+      au < crawling ; exists ; 2017 ; Florida Entomologist Volume 101 ; 101 ; 2017 ; >
       au < ready ; exists ; 2018 ; Florida Entomologist Volume 102 ; 102 ; 2018 ; >
-      au < ready ; exists ; 2019 ; Florida Entomologist Volume 103 ; 103 ; 2019 ; >
-      au < ready ; exists ; 2020 ; Florida Entomologist Volume 104 ; 104 ; 2020 ; >
-      au < ready ; exists ; 2021 ; Florida Entomologist Volume 105 ; 105 ; 2021 ; >
+      au < crawling ; exists ; 2019 ; Florida Entomologist Volume 103 ; 103 ; 2019 ; >
+      au < crawling ; exists ; 2020 ; Florida Entomologist Volume 104 ; 104 ; 2020 ; >
+      au < crawling ; exists ; 2021 ; Florida Entomologist Volume 105 ; 105 ; 2021 ; >
       au < ready ; exists ; 2022 ; Florida Entomologist Volume 106 ; 106 ; 2022 ; >
-      au < ready ; exists ; 2023 ; Florida Entomologist Volume 107 ; 107 ; 2023 ; >
+      au < crawling ; exists ; 2023 ; Florida Entomologist Volume 107 ; 107 ; 2023 ; >
 
   }
 
@@ -230,10 +230,10 @@
       au < manifest ; exists ; 1996 ; The International FLAIRS Conference Proceedings Volume 9 ; 9 ; 1996 ; >
       au < manifest ; exists ; 1997 ; The International FLAIRS Conference Proceedings Volume 10 ; 10 ; 1997 ; >
       #No issues between 1998 and 2019
-      au < ready ; exists ; 2020 ; The International FLAIRS Conference Proceedings Volume 33 ; 33 ; 2020 ; >
+      au < crawling ; exists ; 2020 ; The International FLAIRS Conference Proceedings Volume 33 ; 33 ; 2020 ; >
       au < testing ; exists ; 2021 ; The International FLAIRS Conference Proceedings Volume 34 ; 34 ; 2021 ; >
       au < testing ; exists ; 2022 ; The International FLAIRS Conference Proceedings Volume 35 ; 35 ; 2022 ; >
-      au < ready ; exists ; 2023 ; The International FLAIRS Conference Proceedings Volume 36 ; 36 ; 2023 ; >
+      au < crawling ; exists ; 2023 ; The International FLAIRS Conference Proceedings Volume 36 ; 36 ; 2023 ; >
 
   }
 
@@ -246,9 +246,9 @@
 
       param[journal_id] = assessment
 
-      au < ready ; exists ; 2020 ; Journal of Assessment in Higher Education Volume 1 ; 1 ; 2020 ; >
-      au < ready ; exists ; 2021 ; Journal of Assessment in Higher Education Volume 2 ; 2 ; 2021 ; >
-      au < ready ; exists ; 2022 ; Journal of Assessment in Higher Education Volume 3 ; 3 ; 2022 ; >
+      au < crawling ; exists ; 2020 ; Journal of Assessment in Higher Education Volume 1 ; 1 ; 2020 ; >
+      au < crawling ; exists ; 2021 ; Journal of Assessment in Higher Education Volume 2 ; 2 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; Journal of Assessment in Higher Education Volume 3 ; 3 ; 2022 ; >
       au < exists ; exists ; 2023 ; Journal of Assessment in Higher Education Volume 4 ; 4 ; 2023 ; >
 
   }
@@ -262,11 +262,11 @@
 
       param[journal_id] = civic
 
-      au < ready ; exists ; 2019 ; The Journal of Civic Information Volume 1 ; 1 ; 2019 ; >
-      au < ready ; exists ; 2020 ; The Journal of Civic Information Volume 2 ; 2 ; 2020 ; >
-      au < ready ; exists ; 2021 ; The Journal of Civic Information Volume 3 ; 3 ; 2021 ; >
-      au < ready ; exists ; 2022 ; The Journal of Civic Information Volume 4 ; 4 ; 2022 ; >
-      au < ready ; exists ; 2023 ; The Journal of Civic Information Volume 5 ; 5 ; 2023 ; >
+      au < crawling ; exists ; 2019 ; The Journal of Civic Information Volume 1 ; 1 ; 2019 ; >
+      au < crawling ; exists ; 2020 ; The Journal of Civic Information Volume 2 ; 2 ; 2020 ; >
+      au < crawling ; exists ; 2021 ; The Journal of Civic Information Volume 3 ; 3 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; The Journal of Civic Information Volume 4 ; 4 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; The Journal of Civic Information Volume 5 ; 5 ; 2023 ; >
 
   }
 
@@ -279,13 +279,13 @@
 
       param[journal_id] = jpic
 
-      au < ready ; exists ; 2017 ; The Journal of Public Interest Communications Volume 1 ; 1 ; 2017 ; >
-      au < ready ; exists ; 2018 ; The Journal of Public Interest Communications Volume 2 ; 2 ; 2018 ; >
-      au < ready ; exists ; 2019 ; The Journal of Public Interest Communications Volume 3 ; 3 ; 2019 ; >
-      au < ready ; exists ; 2020 ; The Journal of Public Interest Communications Volume 4 ; 4 ; 2020 ; >
-      au < ready ; exists ; 2021 ; The Journal of Public Interest Communications Volume 5 ; 5 ; 2021 ; >
-      au < ready ; exists ; 2022 ; The Journal of Public Interest Communications Volume 6 ; 6 ; 2022 ; >
-      au < ready ; exists ; 2023 ; The Journal of Public Interest Communications Volume 7 ; 7 ; 2023 ; >
+      au < crawling ; exists ; 2017 ; The Journal of Public Interest Communications Volume 1 ; 1 ; 2017 ; >
+      au < crawling ; exists ; 2018 ; The Journal of Public Interest Communications Volume 2 ; 2 ; 2018 ; >
+      au < crawling ; exists ; 2019 ; The Journal of Public Interest Communications Volume 3 ; 3 ; 2019 ; >
+      au < crawling ; exists ; 2020 ; The Journal of Public Interest Communications Volume 4 ; 4 ; 2020 ; >
+      au < crawling ; exists ; 2021 ; The Journal of Public Interest Communications Volume 5 ; 5 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; The Journal of Public Interest Communications Volume 6 ; 6 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; The Journal of Public Interest Communications Volume 7 ; 7 ; 2023 ; >
 
   }
 
@@ -299,8 +299,8 @@
 
       param[journal_id] = jfmca
 
-      au < ready ; exists ; 2021 ; Journal of the Florida Mosquito Control Association Volume 68 ; 68 ; 2021 ; >
-      au < ready ; exists ; 2022 ; Journal of the Florida Mosquito Control Association Volume 69 ; 69 ; 2022 ; >
+      au < crawling ; exists ; 2021 ; Journal of the Florida Mosquito Control Association Volume 68 ; 68 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; Journal of the Florida Mosquito Control Association Volume 69 ; 69 ; 2022 ; >
       au < testing ; exists ; 2023 ; Journal of the Florida Mosquito Control Association Volume 70 ; 70 ; 2023 ; >
 
   }
@@ -315,10 +315,10 @@
       param[journal_id] = UFJUR
 
       au < ready ; exists ; 2018 ; UF Journal of Undergraduate Research Volume 20 ; 20 ; 2018 ; >
-      au < ready ; exists ; 2019 ; UF Journal of Undergraduate Research Volume 21 ; 21 ; 2019 ; >
-      au < ready ; exists ; 2020 ; UF Journal of Undergraduate Research Volume 22 ; 22 ; 2020 ; >
-      au < ready ; exists ; 2021 ; UF Journal of Undergraduate Research Volume 23 ; 23 ; 2021 ; >
-      au < ready ; exists ; 2022 ; UF Journal of Undergraduate Research Volume 24 ; 24 ; 2022 ; >
+      au < crawling ; exists ; 2019 ; UF Journal of Undergraduate Research Volume 21 ; 21 ; 2019 ; >
+      au < crawling ; exists ; 2020 ; UF Journal of Undergraduate Research Volume 22 ; 22 ; 2020 ; >
+      au < crawling ; exists ; 2021 ; UF Journal of Undergraduate Research Volume 23 ; 23 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; UF Journal of Undergraduate Research Volume 24 ; 24 ; 2022 ; >
       au < manifest ; exists ; 2023 ; UF Journal of Undergraduate Research Volume 25 ; 25 ; 2023 ; >
 
   }
@@ -332,10 +332,10 @@
 
       param[journal_id] = JVFS
 
-      au < ready ; exists ; 2020 ; Journal of Veterinary Forensic Sciences Volume 1 ; 1 ; 2020 ; >
+      au < crawling ; exists ; 2020 ; Journal of Veterinary Forensic Sciences Volume 1 ; 1 ; 2020 ; >
       au < exists ; exists ; 2021 ; Journal of Veterinary Forensic Sciences Volume 2 ; 2 ; 2021 ; >
       au < exists ; exists ; 2022 ; Journal of Veterinary Forensic Sciences Volume 3 ; 3 ; 2022 ; >
-      au < ready ; exists ; 2023 ; Journal of Veterinary Forensic Sciences Volume 4 ; 4 ; 2023 ; >
+      au < crawling ; exists ; 2023 ; Journal of Veterinary Forensic Sciences Volume 4 ; 4 ; 2023 ; >
 
   }
 
@@ -349,8 +349,8 @@
 
       param[journal_id] = NFJA
 
-      au < ready ; exists ; 2021 ; New Florida Journal of Anthropology Volume 1 ; 1 ; 2021 ; >
-      au < ready ; exists ; 2022 ; New Florida Journal of Anthropology Volume 2 ; 2 ; 2022 ; >
+      au < crawling ; exists ; 2021 ; New Florida Journal of Anthropology Volume 1 ; 1 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; New Florida Journal of Anthropology Volume 2 ; 2 ; 2022 ; >
       au < exists ; exists ; 2023 ; New Florida Journal of Anthropology Volume 3 ; 3 ; 2023 ; >
 
   }
@@ -364,8 +364,8 @@
 
       param[journal_id] = PCGSS
 
-      au < ready ; exists ; 2022 ; Selected Proceedings of the Classics Graduate Student Symposia Volume 1 ; 1 ; 2022 ; >
-      au < ready ; exists ; 2023 ; Selected Proceedings of the Classics Graduate Student Symposia Volume 2 ; 2 ; 2023 ; >
+      au < crawling ; exists ; 2022 ; Selected Proceedings of the Classics Graduate Student Symposia Volume 1 ; 1 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; Selected Proceedings of the Classics Graduate Student Symposia Volume 2 ; 2 ; 2023 ; >
 
   }
 
@@ -497,8 +497,8 @@
       au < testing ; exists ; 2019 ; Tropical Lepidoptera Research Volume 30 ; 30 ; 2019 ; >
       au < testing ; exists ; 2020 ; Tropical Lepidoptera Research Volume 31 ; 31 ; 2020 ; >
       au < testing ; exists ; 2021 ; Tropical Lepidoptera Research Volume 32 ; 32 ; 2021 ; >
-      au < ready ; exists ; 2022 ; Tropical Lepidoptera Research Volume 33 ; 33 ; 2022 ; >
-      au < ready ; exists ; 2023 ; Tropical Lepidoptera Research Volume 34 ; 34 ; 2023 ; >
+      au < crawling ; exists ; 2022 ; Tropical Lepidoptera Research Volume 33 ; 33 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; Tropical Lepidoptera Research Volume 34 ; 34 ; 2023 ; >
 
   }
 
@@ -660,7 +660,7 @@
 
       param[journal_id] = ysr
 
-      au < ready ; exists ; 2017 ; Yorùbá Studies Review Volume 1 ; 1 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; Yorùbá Studies Review Volume 1 ; 1 ; 2017 ; >
       au < testing ; exists ; 2018 ; Yorùbá Studies Review Volume 2 ; 2 ; 2018 ; >
       au < testing ; exists ; 2019 ; Yorùbá Studies Review Volume 3 ; 3 ; 2019 ; >
       au < testing ; exists ; 2020 ; Yorùbá Studies Review Volume 4 ; 4 ; 2020 ; >
@@ -683,8 +683,8 @@
       au < testing ; exists ; 2015 ; Florida Linguistics Papers Volume 2 ; 2 ; 2015 ; >
       au < testing ; exists ; 2016 ; Florida Linguistics Papers Volume 3 ; 3 ; 2016 ; >
       au < testing ; exists ; 2017 ; Florida Linguistics Papers Volume 4 ; 4 ; 2017 ; >
-      au < ready ; exists ; 2018 ; Florida Linguistics Papers Volume 5 ; 5 ; 2018 ; >
-      au < ready ; exists ; 2019 ; Florida Linguistics Papers Volume 6 ; 6 ; 2019 ; >
+      au < crawling ; exists ; 2018 ; Florida Linguistics Papers Volume 5 ; 5 ; 2018 ; >
+      au < crawling ; exists ; 2019 ; Florida Linguistics Papers Volume 6 ; 6 ; 2019 ; >
 
   }
 

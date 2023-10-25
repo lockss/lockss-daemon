@@ -39,7 +39,7 @@
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
     attr[start_stem] = index.php/
 
-    au < ready ; exists ; 2023 ; 2023 ; The Proceedings of the H-Net Teaching Conference Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2023 ; 2023 ; The Proceedings of the H-Net Teaching Conference Volume 1 ; 1 ; >
 
   }
 }

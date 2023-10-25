@@ -13489,8 +13489,8 @@
       param[journal_issn] = 2321-7006
       #param[base_url] = https://www.mrimsjournal.com/
 
-      au < ready ; exists ; 2013 ; MRIMS Journal of Health Sciences Volume 1 ; 2013 ; 1 ; https://www.mrimsjournal.com/ ; ; >
-      au < ready ; exists ; 2014 ; MRIMS Journal of Health Sciences Volume 2 ; 2014 ; 2 ; https://www.mrimsjournal.com/ ; ; >
+      au < crawling ; exists ; 2013 ; MRIMS Journal of Health Sciences Volume 1 ; 2013 ; 1 ; https://www.mrimsjournal.com/ ; ; >
+      au < crawling ; exists ; 2014 ; MRIMS Journal of Health Sciences Volume 2 ; 2014 ; 2 ; https://www.mrimsjournal.com/ ; ; >
       au < frozen ; exists ; 2015 ; MRIMS Journal of Health Sciences Volume 3 ; 2015 ; 3 ; https://www.mrimsjournal.com/ ; ; >
       au < frozen ; exists ; 2016 ; MRIMS Journal of Health Sciences Volume 4 ; 2016 ; 4 ; https://www.mrimsjournal.com/ ; ; >
       au < frozen ; exists ; 2017 ; MRIMS Journal of Health Sciences Volume 5 ; 2017 ; 5 ; https://www.mrimsjournal.com/ ; ; >
@@ -13779,7 +13779,7 @@
       #param[base_url] = https://www.tdj.eg.net/
 
       au < manifest ; exists ; 2013 ; Tanta Medical Journal Volume 41 ; 2013 ; 41 ; https://www.tdj.eg.net/ ; ; >
-      au < ready ; exists ; 2014 ; Tanta Medical Journal Volume 42 ; 2014 ; 42 ; https://www.tdj.eg.net/ ; ; >
+      au < crawling ; exists ; 2014 ; Tanta Medical Journal Volume 42 ; 2014 ; 42 ; https://www.tdj.eg.net/ ; ; >
       au < manifest ; exists ; 2015 ; Tanta Medical Journal Volume 43 ; 2015 ; 43 ; https://www.tdj.eg.net/ ; ; >
       au < frozen ; exists ; 2016 ; Tanta Medical Journal Volume 44 ; 2016 ; 44 ; https://www.tdj.eg.net/ ; ; >
       au < frozen ; exists ; 2017 ; Tanta Medical Journal Volume 45 ; 2017 ; 45 ; https://www.tdj.eg.net/ ; ; >
