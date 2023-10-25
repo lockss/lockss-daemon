@@ -94,6 +94,8 @@ public class TestIasiUniversityLifeSciencesSourceXmlMetadataExtractorFactory ext
             assertEquals("2021-6-25", AM.get(MetadataField.FIELD_DATE));
             assertEquals("185", AM.get(MetadataField.FIELD_VOLUME));
             assertEquals("1", AM.get(MetadataField.FIELD_ISSUE));
+            assertEquals("2784-0360", AM.get(MetadataField.FIELD_EISSN));
+            assertEquals("2784-0379", AM.get(MetadataField.FIELD_ISSN));
 
         } finally {
             IOUtil.safeClose(file_input);

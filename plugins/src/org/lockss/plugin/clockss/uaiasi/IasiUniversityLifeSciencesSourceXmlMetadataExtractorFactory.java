@@ -77,24 +77,10 @@ public class IasiUniversityLifeSciencesSourceXmlMetadataExtractorFactory extends
 
             String PUBLISHER_NAME = "Iasi University of Life Sciences";
 
-
-            String rawISSN = thisAM.getRaw(schemaHelper.getConsolidationXPathKey());
-
-            if (rawISSN != null) {
-                log.debug3("rawISSN = " + rawISSN);
-                if (rawISSN.contains(",")) {
-                    thisAM.put(MetadataField.FIELD_EISSN, rawISSN.substring(0, rawISSN.indexOf(",")).trim());
-                    thisAM.put(MetadataField.FIELD_ISSN, rawISSN.substring(rawISSN.indexOf(",") +  1).trim());
-                } else {
-                    thisAM.put(MetadataField.FIELD_ISSN, rawISSN.substring(0, rawISSN.indexOf(",")).trim());
-                }
-            }
-
             thisAM.put(MetadataField.FIELD_PUBLISHER,PUBLISHER_NAME);
             thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE,MetadataField.PUBLICATION_TYPE_JOURNAL);
             thisAM.put(MetadataField.FIELD_ARTICLE_TYPE,MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
         }
-
     }
 }
 
