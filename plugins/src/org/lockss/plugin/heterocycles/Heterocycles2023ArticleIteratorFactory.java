@@ -53,16 +53,22 @@ implements ArticleIteratorFactory,
   protected static Logger log = 
       Logger.getLogger(Heterocycles2023ArticleIteratorFactory.class);
 
+  //http://www.heterocycles.jp/clockss/libraries/journal/10/1
+  //http://www.heterocycles.jp/clockss/libraries/journal/10/1/page:1
+  //http://www.heterocycles.jp/clockss/libraries/journal/10/1/page:2
+  //Need make sure page 1 only counted once to prevent duplicated article on metadata page
+  
+
   protected static final String ROOT_TEMPLATE = "\"%sclockss/\", base_url";
 
 
   protected static final String PATTERN_TEMPLATE =
-          "\"^%sclockss/libraries/journal/%s/[^/]+$\", base_url, volume_name";
+          "\"^%sclockss/libraries/journal/%s/([^/]+(/page:[2-9]\\d*)?)$\", base_url, volume_name";
   
-  private Pattern PDF_PATTERN = Pattern.compile(
-      "/libraries/journal/([^/]+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
+  private Pattern ISSUE_PAGE_PATTERN = Pattern.compile(
+      "/libraries/journal/(.*)$", Pattern.CASE_INSENSITIVE);
 
-  private static String ISSUE_LEVEL_METADATA_REPLACEMENT = "/libraries/journal/$1/$2";
+  private static String ISSUE_LEVEL_METADATA_REPLACEMENT = "/libraries/journal/$1";
       
   // article content may look like:
   // <heterocyclesbase>.com/clockss/libraries/fulltext/21568/83/1
@@ -83,11 +89,9 @@ implements ArticleIteratorFactory,
         ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
 
 
-    builder.addAspect(PDF_PATTERN,
+    builder.addAspect(ISSUE_PAGE_PATTERN,
             ISSUE_LEVEL_METADATA_REPLACEMENT,
             ArticleFiles.ROLE_ARTICLE_METADATA);
-
-
 
     return builder.getSubTreeArticleIterator();
   }  
