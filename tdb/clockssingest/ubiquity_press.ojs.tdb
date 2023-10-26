@@ -677,7 +677,7 @@
       param[base_url] = https://account.journal-buildingscities.org/
       param[journal_id] = up-j-bc
 
-      au < crawling ; exists ; 2020 ; 1 ; Building and Cities Volume 2020 ; 2020 ; >
+      au < frozen ; exists ; 2020 ; 1 ; Building and Cities Volume 2020 ; 2020 ; >
       au < manifest ; exists ; 2021 ; 2 ; Building and Cities Volume 2021 ; 2021 ; > #403 forbidden cloudfront.net
       au < manifest ; exists ; 2022 ; 3 ; Building and Cities Volume 2022 ; 2022 ; > #403 forbidden cloudfront.net
       au < manifest ; exists ; 2023 ; 4 ; Building and Cities Volume 2023 ; 2023 ; > #404 forbidden cloudfront.net
@@ -963,7 +963,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 20 ; International Journal of Integrated Care Volume 2019 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 21 ; International Journal of Integrated Care Volume 2020 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; 22 ; International Journal of Integrated Care Volume 2021 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; 23 ; International Journal of Integrated Care Volume 2022 ; 2022 ; >
+      au < frozen ; exists ; 2022 ; 23 ; International Journal of Integrated Care Volume 2022 ; 2022 ; >
       au < manifest ; exists ; 2023 ; 24 ; International Journal of Integrated Care Volume 2023 ; 2023 ; >
 
   }
@@ -2295,7 +2295,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 12 ; International Journal for Court Administration Volume 2019 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 13 ; International Journal for Court Administration Volume 2020 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; 14 ; International Journal for Court Administration Volume 2021 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; 15 ; International Journal for Court Administration Volume 2022 ; 2022 ; >
+      au < frozen ; exists ; 2022 ; 15 ; International Journal for Court Administration Volume 2022 ; 2022 ; >
       au < crawling ; exists ; 2023 ; 16 ; International Journal for Court Administration Volume 2023 ; 2023 ; >
 
   }
@@ -2657,7 +2657,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2 ; Scandinavian Military Studies Volume 2019 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 3 ; Scandinavian Military Studies Volume 2020 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; 4 ; Scandinavian Military Studies Volume 2021 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; 5 ; Scandinavian Military Studies Volume 2022 ; 2022 ; >
+      au < frozen ; exists ; 2022 ; 5 ; Scandinavian Military Studies Volume 2022 ; 2022 ; >
       au < manifest ; exists ; 2023 ; 6 ; Scandinavian Military Studies Volume 2023 ; 2023 ; >
 
   }

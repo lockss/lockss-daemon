@@ -584,7 +584,7 @@
 
       param[journal_id] = ijasse
 
-      au < crawling ; exists ; 2021 ; International Journal of Aerospace System Science and Engineering Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
+      au < frozen ; exists ; 2021 ; International Journal of Aerospace System Science and Engineering Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
 
@@ -1436,7 +1436,7 @@
 
       param[journal_id] = ijbc
 
-      au < crawling ; exists ; 2019-2020 ; International Journal of Blockchains and Cryptocurrencies Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < frozen ; exists ; 2019-2020 ; International Journal of Blockchains and Cryptocurrencies Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2021 ; International Journal of Blockchains and Cryptocurrencies Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2022 ; International Journal of Blockchains and Cryptocurrencies Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2023 ; International Journal of Blockchains and Cryptocurrencies Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
