@@ -63,6 +63,20 @@
 
     {
     title <
+      name = Decisions of the Roman Rota ;
+      issn = 2835-9127 ;
+      eissn = 2835-9143
+
+    >
+
+      attr[journal_id] = 857
+
+      au < manifest ; 2023 ; Decisions of the Roman Rota Volume 1 [2023] ; 17737 >
+
+    }
+
+    {
+    title <
       name = International Journal of Evangelization and Catechetics ;
       issn = 2689-6206 ;
       eissn = 2689-6214
@@ -74,6 +88,20 @@
       au < released ; 2020 ; International Journal of Evangelization and Catechetics Volume 1 [2020] ; 14985 >
       au < released ; 2021 ; International Journal of Evangelization and Catechetics Volume 2 [2021] ; 15836 >
       au < released ; 2022 ; International Journal of Evangelization and Catechetics Volume 3 [2022] ; 17780 >
+
+    }
+
+    {
+    title <
+      name = International Journal of Sport and Religion ;
+      issn = 2836-3205 ;
+      eissn = 2836-3213
+
+    >
+
+      attr[journal_id] = 858
+
+      au < manifest ; 2023 ; International Journal of Sport and Religion Volume 1 [2023] ; 17738 >
 
     }
 
@@ -115,6 +143,20 @@
         au < released ; 2017-2018 ; Quaestiones Disputatae Volume 8 [2017-2018] ; 13029 >
         au < released ; 2018-2019 ; Quaestiones Disputatae Volume 9 [2018-2019] ; 13997 >
         au < released ; 2019-2020 ; Quaestiones Disputatae Volume 10 [2019-2020] ; 15198 >
+
+    }
+
+    {
+    title <
+      name = St Nersess Theological Review ;
+      issn = 1086-2080 ;
+      eissn = 2835-0359
+
+    >
+
+      attr[journal_id] = 856
+
+      au < manifest ; 2023 ; St Nersess Theological Review Volume 14 [2023] ; 17736 >
 
     }
 
