@@ -247,8 +247,8 @@ public class Heterocycles2023MetadataExtractorFactory
 
                 log.debug3("final pdf text: = " + finalPDFLink + ", url = " + url  + ", set FIELD_ACCESS_URL");
 
-                //Has to do this, otherwise,
-                am.put(MetadataField.FIELD_ACCESS_URL, finalPDFLink.trim());
+                //Has to do this, otherwise, it will fail hascontent check
+                am.put(MetadataField.FIELD_ACCESS_URL, finalPDFLink.trim().replace("/pdf/","/PDF/"));
                 break;
               }
             }
