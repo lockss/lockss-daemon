@@ -45,6 +45,7 @@ scripts/tdb/tdbout -t plugin tdb/*/ | sort -u | sed 's/\./\//g' > $tpath/ac.txt
 #plugins that don't exist, but are listed in tdb files
 diff $tpath/ab.txt $tpath/ac.txt | grep "^> "
 echo " "
+
 #
 # Find all reingest
 echo "---------------------"
@@ -55,7 +56,8 @@ scripts/tdb/tdbout -F -t "au:hidden[proxy]" -Q 'status2 is "manifest"' tdb/clock
 echo "No reingest set."
 scripts/tdb/tdbout -F -t "publisher,title" -Q 'status2 is "manifest" and au:hidden[proxy] is ""' tdb/clockssingest/ | sort | uniq -c
 echo " "
-#
+
+# GLN
 # Find duplicate auids in the gln title database
 echo "---------------------"
 echo "---------------------"
@@ -77,17 +79,6 @@ echo "GLN. All plugin/names = $allAUs"
 echo "GLN. Plugin/names without duplicates = $uniqAUs"
 diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 #
-# Find duplicate released names in the gln title database
-echo "---------------------"
-echo "GLN. Duplicate Released Names. Commented out."
-#scripts/tdb/tdbout -P -c name tdb/prod/ | sort > $tpath/allAUs
-#uniq $tpath/allAUs > $tpath/dedupedAUs
-#allAUs=`cat $tpath/allAUs | wc -l`
-#uniqAUs=`cat $tpath/dedupedAUs | wc -l`
-#echo "GLN. All Released names = $allAUs"
-#echo "GLN. Released names without duplicates = $uniqAUs"
-#diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
-#
 # Find number of AUs ready for release in the prod title database
 echo "----------------------"
 ./scripts/tdb/tdbout -Y -t status tdb/prod/ | sort | uniq -c
@@ -96,7 +87,8 @@ echo "----------------------"
 echo "----------------------"
 ./scripts/tdb/tdbout -t publisher,name,plugin -Q 'plugin ~ "Clockss" and plugin !~ "needs"' tdb/prod/{,*/}*.tdb
 echo " "
-#
+
+# CLOCKSS
 # Find duplicate auids in the clockss title database
 echo "---------------------"
 echo "---------------------"
@@ -118,17 +110,6 @@ echo "CLOCKSS. All plugin/names = $allAUs"
 echo "CLOCKSS. Plugin/names without duplicates = $uniqAUs"
 diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 #
-# Find duplicate released names in the clockss title database
-echo "---------------------"
-echo "Clockss. Duplicate Released Names. Commented out."
-#scripts/tdb/tdbout -PCZI -c name tdb/clockssingest/ | sort > $tpath/allAUs
-#uniq $tpath/allAUs > $tpath/dedupedAUs
-#allAUs=`cat $tpath/allAUs | wc -l`
-#uniqAUs=`cat $tpath/dedupedAUs | wc -l`
-#echo "CLOCKSS. All Released names = $allAUs"
-#echo "CLOCKSS. Released names without duplicates = $uniqAUs"
-#diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
-#
 # Find number of AUs ready for release in the clockssingest title database
 echo "----------------------"
 ./scripts/tdb/tdbout -Y -t status tdb/clockssingest/ | sort | uniq -c
@@ -138,40 +119,37 @@ echo "----------------------"
 ./scripts/tdb/tdbout -t publisher,name,plugin -Q 'plugin !~ "Clockss" and plugin !~ "needs"' tdb/clockssingest/{,*/}*.tdb
 echo " "
 
-# Find duplicate auids in the whole database. Not exists or expected
-#echo "---------------------"
-#echo "---------------------"
-#scripts/tdb/tdbout -Aa tdb/*/ | sort > $tpath/allAUs
-#uniq $tpath/allAUs > $tpath/dedupedAUs
-#allAUs=`cat $tpath/allAUs | wc -l`
-#uniqAUs=`cat $tpath/dedupedAUs | wc -l`
-#echo "All AUids = $allAUs"
-#echo "AUids without duplicates = $uniqAUs"
-#diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
-#echo " "
+# USDOCS
+# Find duplicate auids in the usdocs title database
+echo "---------------------"
+echo "---------------------"
+scripts/tdb/tdbout -AXEa tdb/usdocspln/ | sort > $tpath/allAUs
+uniq $tpath/allAUs > $tpath/dedupedAUs
+allAUs=`cat $tpath/allAUs | wc -l`
+uniqAUs=`cat $tpath/dedupedAUs | wc -l`
+echo "USDOCS. All AUids = $allAUs"
+echo "USDOCS. AUids without duplicates = $uniqAUs"
+diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 #
+# Find duplicate name/plugin pairs in the gln title database
+echo "---------------------"
+scripts/tdb/tdbout -AXE -c plugin,name tdb/usdocspln/ | sort > $tpath/allAUs
+uniq $tpath/allAUs > $tpath/dedupedAUs
+allAUs=`cat $tpath/allAUs | wc -l`
+uniqAUs=`cat $tpath/dedupedAUs | wc -l`
+echo "USDOCS. All plugin/names = $allAUs"
+echo "USDOCS. Plugin/names without duplicates = $uniqAUs"
+diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 #
-# Find HighWire plugin dupes
-#echo "---------------------"
-#echo "---------------------"
-#echo "GLN. HighWire Dupe AUs across plugins"
-#scripts/tdb/tdbout -Q 'plugin ~ "highwire"' -URD -t param[base_url],param[volume_name],param[volume],status,publisher tdb/prod/ | perl -pe 's/\t+/ /g' | sort -k 1,2 > $tpath/HW_g_all
-#scripts/tdb/tdbout -Q 'plugin ~ "highwire"' -URD -t param[base_url],param[volume_name],param[volume],status,publisher tdb/prod/ | perl -pe 's/\t+/ /g' | sort -k 1,2 -u > $tpath/HW_g_dedupe
-#cat $tpath/HW_g_all | wc -l
-#cat $tpath/HW_g_dedupe | wc -l
-#diff $tpath/HW_g_all $tpath/HW_g_dedupe
-#diff $tpath/HW_g_all $tpath/HW_g_dedupe | grep "< " | wc -l
-#echo "expect 19"
-#echo " "
-#echo "---------------------"
-#echo "---------------------"
-#echo "CLOCKSS. HighWire Dupe AUs across plugins"
-#scripts/tdb/tdbout -Q 'plugin ~ "highwire"' -URD -t param[base_url],param[volume_name],param[volume],status,publisher tdb/clockssingest/ | perl -pe 's/\t+/ /g' | sort -k 1,2 > $tpath/HW_c_all
-#scripts/tdb/tdbout -Q 'plugin ~ "highwire"' -URD -t param[base_url],param[volume_name],param[volume],status,publisher tdb/clockssingest/ | perl -pe 's/\t+/ /g' | sort -k 1,2 -u > $tpath/HW_c_dedupe
-#diff $tpath/HW_c_all $tpath/HW_c_dedupe | grep "< " | sort
-#diff $tpath/HW_c_all $tpath/HW_c_dedupe | grep "< " | wc -l
-#echo "expect 89"
-#echo " "
+# Find number of AUs ready for release in the prod title database
+echo "----------------------"
+./scripts/tdb/tdbout -Y -t status tdb/usdocspln/ | sort | uniq -c
+#
+# Find plugin names with "Clockss" in the usdocs title database
+echo "----------------------"
+./scripts/tdb/tdbout -t publisher,name,plugin -Q 'plugin ~ "Clockss" and plugin !~ "needs"' tdb/usdocspln/{,*/}*.tdb
+echo " "
+
 #
 # Find tdb files possibly ready to be moved to retirement.
 echo "---------------------"
