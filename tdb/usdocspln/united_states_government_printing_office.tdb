@@ -623,6 +623,11 @@
 
     param[collection_id] = CHRG
 
+    au < manifest ; 1952 ; CHRG 1952 ; 1952 ; https://www.govinfo.gov/ >
+    au < manifest ; 2013 ; CHRG 2013 ; 2013 ; https://www.govinfo.gov/ >
+    au < manifest ; 2016 ; CHRG 2016 ; 2016 ; https://www.govinfo.gov/ >
+    au < manifest ; 2017 ; CHRG 2017 ; 2017 ; https://www.govinfo.gov/ >
+    au < manifest ; 2018 ; CHRG 2018 ; 2018 ; https://www.govinfo.gov/ >
 
     au < down ; 1933 ; Congressional Hearings 1933 ; 1933 ; https://www.govinfo.gov/ > #no substance
     au < down ; 1934 ; Congressional Hearings 1934 ; 1934 ; https://www.govinfo.gov/ > #no substance
@@ -684,10 +689,10 @@
     au < doNotProcess ; 2010 ; Congressional Hearings 2010 ; 2010 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 2011 ; Congressional Hearings 2011 ; 2011 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 2012 ; Congressional Hearings 2012 ; 2012 ; https://www.govinfo.gov/ >
-    #au < doNotProcess ; 2013 ; Congressional Hearings 2013 ; 2013 ; https://www.govinfo.gov/ >
+    au < doNotProcess ; 2013 ; Congressional Hearings 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 2014 ; Congressional Hearings 2014 ; 2014 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 2015 ; Congressional Hearings 2015 ; 2015 ; https://www.govinfo.gov/ >
-    #au < doNotProcess ; 2016 ; Congressional Hearings 2016 ; 2016 ; https://www.govinfo.gov/ >
+    au < doNotProcess ; 2016 ; Congressional Hearings 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 2017 ; Congressional Hearings 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 2018 ; Congressional Hearings 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Congressional Hearings 2019 ; 2019 ; https://www.govinfo.gov/ >
@@ -698,12 +703,7 @@
 
     au < manifest ; 1936 ; CHRG 1936 ; 1936 ; https://www.govinfo.gov/ >
     au < manifest ; 1950 ; CHRG 1950 ; 1950 ; https://www.govinfo.gov/ >
-    au < manifest ; 1952 ; CHRG 1952 ; 1952 ; https://www.govinfo.gov/ >
     au < manifest ; 1991 ; CHRG 1991 ; 1991 ; https://www.govinfo.gov/ >
-    au < manifest ; 2013 ; CHRG 2013 ; 2013 ; https://www.govinfo.gov/ >
-    au < manifest ; 2016 ; CHRG 2016 ; 2016 ; https://www.govinfo.gov/ >
-    au < manifest ; 2017 ; CHRG 2017 ; 2017 ; https://www.govinfo.gov/ >
-    au < manifest ; 2018 ; CHRG 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < manifest ; 2023 ; CHRG 2023 ; 2023 ; https://www.govinfo.gov/ >
 
   }
