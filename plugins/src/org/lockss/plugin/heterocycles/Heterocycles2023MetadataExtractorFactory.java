@@ -232,7 +232,7 @@ public class Heterocycles2023MetadataExtractorFactory
 
           String nthDivSelector = "div#mainContainer > div#mainContent > div.contentBox:nth-child(" + Integer.toString(i) + ")";
           String doiSelector = "div#mainContainer > div#mainContent > div.contentBox:nth-child(" + Integer.toString(i) + ") > div:nth-child(4)";
-          String articleSelector = "div#mainContainer > div#mainContent > div.contentBox:nth-child(" + Integer.toString(i) + ")";
+          String articleSelector = "div#mainContainer > div#mainContent > div.contentBox:nth-child(" + Integer.toString(i) + ") > h5:nth-child(5) > b:nth-child(1)";
 
 
           String pdfSelector = "div#mainContainer > div#mainContent > div.contentBox:nth-child(" + Integer.toString(i) + ") > a";
@@ -243,12 +243,12 @@ public class Heterocycles2023MetadataExtractorFactory
               pdfLink = pdfLinkElement.attr("href").trim().toLowerCase();
               finalPDFLink = url.substring(0, url.indexOf("/clockss")) + pdfLink;
               log.debug3("final pdf text: = " + finalPDFLink + ", url = " + url );
-              if (finalPDFLink != null && finalPDFLink.length() > 0 && finalPDFLink.contains("downloads/pdf")) {
+              if (finalPDFLink != null && finalPDFLink.length() > 0 && (finalPDFLink.contains("downloads/pdf") || finalPDFLink.contains("downloads/PDF")) ) {
 
                 log.debug3("final pdf text: = " + finalPDFLink + ", url = " + url  + ", set FIELD_ACCESS_URL");
 
                 //Has to do this, otherwise,
-                am.put(MetadataField.FIELD_ACCESS_URL, finalPDFLink.trim().replace("/pdf/","/PDF/"));
+                am.put(MetadataField.FIELD_ACCESS_URL, finalPDFLink.trim());
                 break;
               }
             }
