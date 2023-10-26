@@ -4774,7 +4774,7 @@
 
       param[journal_id] = ijhp
 
-      au < ready ; exists ; 2019-2023 ; International Journal of Healthcare Policy Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
+      au < crawling ; exists ; 2019-2023 ; International Journal of Healthcare Policy Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
 
@@ -5013,7 +5013,7 @@
       param[journal_id] = ijhi
 
       au < ready ; exists ; 2019 ; International Journal of Hybrid Intelligence Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2021-2023 ; International Journal of Hybrid Intelligence Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2021-2023 ; International Journal of Hybrid Intelligence Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -6046,7 +6046,7 @@
       param[journal_id] = ijitca
 
       au < ready ; exists ; 2018-2020 ; International Journal of Internet of Things and Cyber-Assurance Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2022-2023 ; International Journal of Internet of Things and Cyber-Assurance Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
+      au < crawling ; exists ; 2022-2023 ; International Journal of Internet of Things and Cyber-Assurance Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
 
@@ -9753,7 +9753,7 @@
 
        param[journal_id] = ijspr
 
-      au < ready ; exists ; 2022-2023 ; International Journal of Student Project Reporting Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2022-2023 ; International Journal of Student Project Reporting Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
 
     }
 

@@ -201,11 +201,11 @@
       au < crawling ; exists ; 2015 ; Florida Entomologist Volume 99 ; 99 ; 2015 ; >
       au < crawling ; exists ; 2016 ; Florida Entomologist Volume 100 ; 100 ; 2016 ; >
       au < crawling ; exists ; 2017 ; Florida Entomologist Volume 101 ; 101 ; 2017 ; >
-      au < ready ; exists ; 2018 ; Florida Entomologist Volume 102 ; 102 ; 2018 ; >
+      au < crawling ; exists ; 2018 ; Florida Entomologist Volume 102 ; 102 ; 2018 ; >
       au < crawling ; exists ; 2019 ; Florida Entomologist Volume 103 ; 103 ; 2019 ; >
       au < crawling ; exists ; 2020 ; Florida Entomologist Volume 104 ; 104 ; 2020 ; >
       au < crawling ; exists ; 2021 ; Florida Entomologist Volume 105 ; 105 ; 2021 ; >
-      au < ready ; exists ; 2022 ; Florida Entomologist Volume 106 ; 106 ; 2022 ; >
+      au < crawling ; exists ; 2022 ; Florida Entomologist Volume 106 ; 106 ; 2022 ; >
       au < crawling ; exists ; 2023 ; Florida Entomologist Volume 107 ; 107 ; 2023 ; >
 
   }
@@ -314,7 +314,7 @@
 
       param[journal_id] = UFJUR
 
-      au < ready ; exists ; 2018 ; UF Journal of Undergraduate Research Volume 20 ; 20 ; 2018 ; >
+      au < crawling ; exists ; 2018 ; UF Journal of Undergraduate Research Volume 20 ; 20 ; 2018 ; >
       au < crawling ; exists ; 2019 ; UF Journal of Undergraduate Research Volume 21 ; 21 ; 2019 ; >
       au < crawling ; exists ; 2020 ; UF Journal of Undergraduate Research Volume 22 ; 22 ; 2020 ; >
       au < crawling ; exists ; 2021 ; UF Journal of Undergraduate Research Volume 23 ; 23 ; 2021 ; >
