@@ -240,7 +240,7 @@ public class Heterocycles2023MetadataExtractorFactory
 
           if ( pdfElement != null) {
             for (Element pdfLinkElement : pdfElement) {
-              pdfLink = pdfLinkElement.attr("href").trim().toLowerCase();
+              pdfLink = pdfLinkElement.attr("href").trim();
               finalPDFLink = url.substring(0, url.indexOf("/clockss")) + pdfLink;
               log.debug3("final pdf text: = " + finalPDFLink + ", url = " + url );
               if (finalPDFLink != null && finalPDFLink.length() > 0 && (finalPDFLink.contains("downloads/pdf") || finalPDFLink.contains("downloads/PDF")) ) {
@@ -248,7 +248,7 @@ public class Heterocycles2023MetadataExtractorFactory
                 log.debug3("final pdf text: = " + finalPDFLink + ", url = " + url  + ", set FIELD_ACCESS_URL");
 
                 //Has to do this, otherwise, it will fail hascontent check
-                am.put(MetadataField.FIELD_ACCESS_URL, finalPDFLink.trim().replace("/pdf/","/PDF/"));
+                am.put(MetadataField.FIELD_ACCESS_URL, finalPDFLink.trim());
                 break;
               }
             }
