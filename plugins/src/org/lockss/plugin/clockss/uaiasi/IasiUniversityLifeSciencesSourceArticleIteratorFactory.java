@@ -41,7 +41,6 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.ArticleIteratorFactory;
 import org.lockss.plugin.SubTreeArticleIteratorBuilder;
-import org.lockss.plugin.clockss.chineseuniversityhongkong.CUHKArticleIteratorFactory;
 import org.lockss.util.Logger;
 
 import java.util.Iterator;
@@ -49,7 +48,7 @@ import java.util.regex.Pattern;
 
 public class IasiUniversityLifeSciencesSourceArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-  protected static Logger log = Logger.getLogger(CUHKArticleIteratorFactory.class);
+  protected static Logger log = Logger.getLogger(IasiUniversityLifeSciencesSourceArticleIteratorFactory.class);
 
   protected static final String ROOT_TEMPLATE = "\"%s%s\",base_url,directory";
   private static final String PATTERN_TEMPLATE = "\"%s%s/.*\",base_url,directory";
