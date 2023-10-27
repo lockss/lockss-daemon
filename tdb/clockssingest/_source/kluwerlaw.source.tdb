@@ -17,7 +17,7 @@
     plugin = org.lockss.plugin.clockss.kluwerlaw.ClockssKluwerLawJournalsSourcePlugin
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/kluwerlawjnls-released/
 
-    au < ready ; exists ; 2023 ; Kluwer Law Journals Content 2023_01 ; 2023_01 >
+    au < readySource ; crawling ; 2023 ; Kluwer Law Journals Content 2023_01 ; 2023_01 >
 
     }
 
