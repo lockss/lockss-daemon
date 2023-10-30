@@ -1071,7 +1071,7 @@
     au < finished ; manifest ; 1991 ; The Bottom Line: Managing Library Finances Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1992 ; The Bottom Line: Managing Library Finances Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1993 ; The Bottom Line: Managing Library Finances Volume 6 ; 6 ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 1994 ; The Bottom Line: Managing Library Finances Volume 7 ; 7 ; >
+    au < crawling ; exists ; 1994 ; The Bottom Line: Managing Library Finances Volume 7 ; 7 ; >
     au < finished ; manifest ; 1995 ; The Bottom Line: Managing Library Finances Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; The Bottom Line: Managing Library Finances Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 1997 ; The Bottom Line: Managing Library Finances Volume 10 ; 10 ; reingest3.clockss.org:8083 >
@@ -2553,7 +2553,7 @@
     param[journal_issn] = 0969-9988
     comment[journal_id] = ecam
 
-    au < ready ; exists ; 1994 ; Engineering, Construction and Architectural Management Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1994 ; Engineering, Construction and Architectural Management Volume 1 ; 1 ; >
     au < finished ; crawling ; 1995 ; Engineering, Construction and Architectural Management Volume 2 ; 2 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1996 ; Engineering, Construction and Architectural Management Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1997 ; Engineering, Construction and Architectural Management Volume 4 ; 4 ; reingest3.clockss.org:8083 >
@@ -3157,7 +3157,7 @@
 
     au < manifest ; exists ; 1992 ; Health Manpower Management Volume 18 ; 18 ; >
     au < manifest ; exists ; 1993 ; Health Manpower Management Volume 19 ; 19 ; >
-    au < ready ; exists ; 1994 ; Health Manpower Management Volume 20 ; 20 ; >
+    au < crawling ; exists ; 1994 ; Health Manpower Management Volume 20 ; 20 ; >
     au < finished ; crawling ; 1995 ; Health Manpower Management Volume 21 ; 21 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1996 ; Health Manpower Management Volume 22 ; 22 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1997 ; Health Manpower Management Volume 23 ; 23 ; reingest5.clockss.org:8082 >
@@ -3754,7 +3754,7 @@
     comment[journal_id] = imcs
 
     au < manifest ; exists ; 1993 ; Information Management & Computer Security Volume 1 ; 1 ; >
-    au < ready ; exists ; 1994 ; Information Management & Computer Security Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1994 ; Information Management & Computer Security Volume 2 ; 2 ; >
     au < finished ; manifest ; 1995 ; Information Management & Computer Security Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Information Management & Computer Security Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; Information Management & Computer Security Volume 5 ; 5 ; reingest2.clockss.org:8085 >
@@ -4116,7 +4116,7 @@
     au < manifest ; exists ; 1991 ; International Journal of Career Management Volume 3 ; 3 ; >
     au < manifest ; exists ; 1992 ; International Journal of Career Management Volume 4 ; 4 ; >
     au < manifest ; exists ; 1993 ; International Journal of Career Management Volume 5 ; 5 ; >
-    au < ready ; exists ; 1994 ; International Journal of Career Management Volume 6 ; 6 ; >
+    au < crawling ; exists ; 1994 ; International Journal of Career Management Volume 6 ; 6 ; >
     au < finished ; manifest ; 1995 ; International Journal of Career Management Volume 7 ; 7 ; reingest5.clockss.org:8082 >
 
   }
@@ -4705,7 +4705,7 @@
     au < manifest ; exists ; 1991 ; International Journal of Health Care Quality Assurance Volume 4 ; 4 ; >
     au < manifest ; exists ; 1992 ; International Journal of Health Care Quality Assurance Volume 5 ; 5 ; >
     au < manifest ; exists ; 1993 ; International Journal of Health Care Quality Assurance Volume 6 ; 6 ; >
-    au < ready ; exists ; 1994 ; International Journal of Health Care Quality Assurance Volume 7 ; 7 ; >
+    au < crawling ; exists ; 1994 ; International Journal of Health Care Quality Assurance Volume 7 ; 7 ; >
     au < finished ; manifest ; 1995 ; International Journal of Health Care Quality Assurance Volume 8 ; 8 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; International Journal of Health Care Quality Assurance Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; International Journal of Health Care Quality Assurance Volume 10 ; 10 ; reingest2.clockss.org:8085 >
@@ -5217,7 +5217,7 @@
     au < manifest ; exists ; 1991 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 1 ; 1 ; >
     au < manifest ; exists ; 1992 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 2 ; 2 ; >
     au < manifest ; exists ; 1993 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 3 ; 3 ; >
-    au < ready ; exists ; 1994 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1994 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 4 ; 4 ; >
     au < finished ; manifest ; 1995 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 5 ; 5 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 7 ; 7 ; reingest4.clockss.org:8082 >
@@ -5493,7 +5493,7 @@
     au < manifest ; exists ; 1991 ; International Journal of Physical Distribution & Logistics Management Volume 21 ; 21 ; >
     au < manifest ; exists ; 1992 ; International Journal of Physical Distribution & Logistics Management Volume 22 ; 22 ; >
     au < manifest ; exists ; 1993 ; International Journal of Physical Distribution & Logistics Management Volume 23 ; 23 ; >
-    au < ready ; exists ; 1994 ; International Journal of Physical Distribution & Logistics Management Volume 24 ; 24 ; >
+    au < crawling ; exists ; 1994 ; International Journal of Physical Distribution & Logistics Management Volume 24 ; 24 ; >
     au < finished ; manifest ; 1995 ; International Journal of Physical Distribution & Logistics Management Volume 25 ; 25 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; International Journal of Physical Distribution & Logistics Management Volume 26 ; 26 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; International Journal of Physical Distribution & Logistics Management Volume 27 ; 27 ; reingest5.clockss.org:8082 >
@@ -6602,7 +6602,7 @@
     au < manifest ; exists ; 1991 ; Journal of Business & Industrial Marketing Volume 6 ; 6 ; >
     au < manifest ; exists ; 1992 ; Journal of Business & Industrial Marketing Volume 7 ; 7 ; >
     au < manifest ; exists ; 1993 ; Journal of Business & Industrial Marketing Volume 8 ; 8 ; >
-    au < ready ; exists ; 1994 ; Journal of Business & Industrial Marketing Volume 9 ; 9 ; >
+    au < crawling ; exists ; 1994 ; Journal of Business & Industrial Marketing Volume 9 ; 9 ; >
     au < finished ; manifest ; 1995 ; Journal of Business & Industrial Marketing Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Journal of Business & Industrial Marketing Volume 11 ; 11 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1997 ; Journal of Business & Industrial Marketing Volume 12 ; 12 ; reingest3.clockss.org:8083 >
@@ -7214,7 +7214,7 @@
     au < manifest ; exists ; 1991 ; Journal of Educational Administration Volume 29 ; 29 ; >
     au < manifest ; exists ; 1992 ; Journal of Educational Administration Volume 30 ; 30 ; >
     au < manifest ; exists ; 1993 ; Journal of Educational Administration Volume 31 ; 31 ; >
-    au < ready ; exists ; 1994 ; Journal of Educational Administration Volume 32 ; 32 ; >
+    au < crawling ; exists ; 1994 ; Journal of Educational Administration Volume 32 ; 32 ; >
     au < finished ; manifest ; 1995 ; Journal of Educational Administration Volume 33 ; 33 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1996 ; Journal of Educational Administration Volume 34 ; 34 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1997 ; Journal of Educational Administration Volume 35 ; 35 ; reingest4.clockss.org:8082 >
@@ -9446,7 +9446,7 @@
     au < manifest ; exists ; 1991 ; Kybernetes Volume 20 ; 20 ; >
     au < manifest ; exists ; 1992 ; Kybernetes Volume 21 ; 21 ; >
     au < manifest ; exists ; 1993 ; Kybernetes Volume 22 ; 22 ; >
-    au < ready ; exists ; 1994 ; Kybernetes Volume 23 ; 23 ; >
+    au < crawling ; exists ; 1994 ; Kybernetes Volume 23 ; 23 ; >
     au < finished ; manifest ; 1995 ; Kybernetes Volume 24 ; 24 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1996 ; Kybernetes Volume 25 ; 25 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1997 ; Kybernetes Volume 26 ; 26 ; reingest4.clockss.org:8082 >
@@ -9605,7 +9605,7 @@
     param[journal_issn] = 0969-6474
     comment[journal_id] = tlo
 
-    au < ready ; exists ; 1994 ; The Learning Organization Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1994 ; The Learning Organization Volume 1 ; 1 ; >
     au < finished ; manifest ; 1995 ; The Learning Organization Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1996 ; The Learning Organization Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1997 ; The Learning Organization Volume 4 ; 4 ; reingest4.clockss.org:8082 >
@@ -9697,7 +9697,7 @@
     au < manifest ; exists ; 1991 ; Library Hi Tech Volume 9 ; 9 ; >
     au < manifest ; exists ; 1992 ; Library Hi Tech Volume 10 ; 10 ; >
     au < manifest ; exists ; 1993 ; Library Hi Tech Volume 11 ; 11 ; >
-    au < ready ; exists ; 1994 ; Library Hi Tech Volume 12 ; 12 ; >
+    au < crawling ; exists ; 1994 ; Library Hi Tech Volume 12 ; 12 ; >
     au < finished ; manifest ; 1995 ; Library Hi Tech Volume 13 ; 13 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Library Hi Tech Volume 14 ; 14 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; Library Hi Tech Volume 15 ; 15 ; reingest1.clockss.org:8082 >
@@ -10058,7 +10058,7 @@
 
     au < manifest ; exists ; 1992 ; Management Development Review Volume 5 ; 5 ; >
     au < manifest ; exists ; 1993 ; Management Development Review Volume 6 ; 6 ; >
-    au < ready ; exists ; 1994 ; Management Development Review Volume 7 ; 7 ; >
+    au < crawling ; exists ; 1994 ; Management Development Review Volume 7 ; 7 ; >
     au < finished ; manifest ; 1995 ; Management Development Review Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; Management Development Review Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; Management Development Review Volume 10 ; 10 ; reingest5.clockss.org:8082 >
@@ -10942,7 +10942,7 @@
     au < manifest ; exists ; 1991 ; New Library World Volume 92 ; 92 ; >
     au < manifest ; exists ; 1992 ; New Library World Volume 93 ; 93 ; >
     au < manifest ; exists ; 1993 ; New Library World Volume 94 ; 94 ; >
-    au < ready ; exists ; 1994 ; New Library World Volume 95 ; 95 ; >
+    au < crawling ; exists ; 1994 ; New Library World Volume 95 ; 95 ; >
     au < finished ; manifest ; 1995 ; New Library World Volume 96 ; 96 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; New Library World Volume 97 ; 97 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; New Library World Volume 98 ; 98 ; reingest5.clockss.org:8082 >
@@ -12464,7 +12464,7 @@
     au < manifest ; exists ; 1991 ; Soldering & Surface Mount Technology Volume 3 ; 3 ; >
     au < manifest ; exists ; 1992 ; Soldering & Surface Mount Technology Volume 4 ; 4 ; >
     au < manifest ; exists ; 1993 ; Soldering & Surface Mount Technology Volume 5 ; 5 ; >
-    au < ready ; exists ; 1994 ; Soldering & Surface Mount Technology Volume 6 ; 6 ; >
+    au < crawling ; exists ; 1994 ; Soldering & Surface Mount Technology Volume 6 ; 6 ; >
     au < finished ; manifest ; 1995 ; Soldering & Surface Mount Technology Volume 7 ; 7 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 1996 ; Soldering & Surface Mount Technology Volume 8 ; 8 ; >
     au < notReady ; exists ; 1997 ; Soldering & Surface Mount Technology Volume 9 ; 9 ; > #no substance
@@ -13234,7 +13234,7 @@
     comment[merged_into] = 0954-478X
 
     au < manifest ; exists ; 1993 ; Training for Quality Volume 1 ; 1 ; >
-    au < ready ; exists ; 1994 ; Training for Quality Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1994 ; Training for Quality Volume 2 ; 2 ; >
     au < finished ; manifest ; 1995 ; Training for Quality Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Training for Quality Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; Training for Quality Volume 5 ; 5 ; reingest1.clockss.org:8082 >
@@ -13368,7 +13368,7 @@
     au < manifest ; exists ; 1991 ; Women in Management Review Volume 6 ; 6 ; >
     au < manifest ; exists ; 1992 ; Women in Management Review Volume 7 ; 7 ; >
     au < manifest ; exists ; 1993 ; Women in Management Review Volume 8 ; 8 ; >
-    au < ready ; exists ; 1994 ; Women in Management Review Volume 9 ; 9 ; >
+    au < crawling ; exists ; 1994 ; Women in Management Review Volume 9 ; 9 ; >
     au < finished ; manifest ; 1995 ; Women in Management Review Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Women in Management Review Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; Women in Management Review Volume 12 ; 12 ; reingest2.clockss.org:8085 >
