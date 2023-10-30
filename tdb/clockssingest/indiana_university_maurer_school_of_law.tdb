@@ -227,7 +227,7 @@
     au < notReady ; exists ; 2020 ; IP Theory Volume 10 ; 10 ; https://www.repository.law.indiana.edu/ ; > #no metadata found
     au < finished ; manifest ; 2021 ; IP Theory Volume 11 ; 11 ; https://www.repository.law.indiana.edu/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; IP Theory Volume 12 ; 12 ; https://www.repository.law.indiana.edu/ ; reingest1.clockss.org:8082 >
-    au < expected ; exists ; 2023 ; IP Theory Volume 13 ; 13 ; https://www.repository.law.indiana.edu/ ; >
+    au < manifest ; exists ; 2023 ; IP Theory Volume 13 ; 13 ; https://www.repository.law.indiana.edu/ ; >
 
   }
 
