@@ -169,7 +169,7 @@
       #plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       param[journal_id] = neoreviews
     
-      au < crawling ; exists ; 2000 ; 2000 ; NeoReviews Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2000 ; 2000 ; NeoReviews Volume 1 ; 1 ; >
       au < frozen ; exists ; 2001 ; 2001 ; NeoReviews Volume 2 ; 2 ; >
       au < frozen ; exists ; 2002 ; 2002 ; NeoReviews Volume 3 ; 3 ; >
       au < frozen ; exists ; 2003 ; 2003 ; NeoReviews Volume 4 ; 4 ; >
@@ -399,7 +399,7 @@
       au < frozen ; exists ; 2003 ; 2003 ; Pediatrics in Review Volume 24 ; 24 ; >
       au < frozen ; exists ; 2004 ; 2004 ; Pediatrics in Review Volume 25 ; 25 ; >
       au < frozen ; exists ; 2005 ; 2005 ; Pediatrics in Review Volume 26 ; 26 ; >
-      au < crawling ; exists ; 2006 ; 2006 ; Pediatrics in Review Volume 27 ; 27 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; Pediatrics in Review Volume 27 ; 27 ; >
       au < frozen ; exists ; 2007 ; 2007 ; Pediatrics in Review Volume 28 ; 28 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Pediatrics in Review Volume 29 ; 29 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Pediatrics in Review Volume 30 ; 30 ; >
