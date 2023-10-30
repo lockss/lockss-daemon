@@ -1,0 +1,54 @@
+{
+
+  publisher <
+    name = University of Baghdad, College of Engineering ;
+    info[contract] = 2022 ;
+    info[back] = 2013 ;
+    info[tester] = 5 ;
+    info[poller] = 3 ;
+    info[platform] = OJS3. Open Journal Systems 3.3.0.13
+  >
+
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+
+  {
+
+    title <
+      name = Iraqi Journal of Chemical and Petroleum Engineering ;
+      issn = 1997-4884 ;
+      eissn = 2618-0707
+    >
+      param[base_url] = https://ijcpe.uobaghdad.edu.iq/
+      param[journal_id] = ijcpe
+      #published 2000-present
+
+      au < manifest ; exists ; 2000 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2000 ; 1 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2001 ; 2 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2002 ; 3 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2003 ; 4 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2004 ; 5 ; 2004 ; >
+      #au < manifest ; exists ; 2005 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2005 ; 6 ; 2005 ; >
+      #au < manifest ; exists ; 2006 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2006 ; 7 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2007 ; 8 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2008 ; 9 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2009 ; 10 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2010 ; 11 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2011 ; 12 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2012 ; 13 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2013 ; 14 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2014 ; 15 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2015 ; 16 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2016 ; 17 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2017 ; 18 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2018 ; 19 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2019 ; 20 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2020 ; 21 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2021 ; 22 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2022 ; 23 ; 2022 ; >
+      au < manifest ; exists ; 2023 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2023 ; 24 ; 2023 ; >
+
+  }
+
+}
