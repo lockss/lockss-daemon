@@ -2165,7 +2165,7 @@
 
     au < manifest ; exists ; 1992 ; Disaster Prevention and Management Volume 1 ; 1 ; >
     au < manifest ; exists ; 1993 ; Disaster Prevention and Management Volume 2 ; 2 ; >
-    au < ready ; exists ; 1994 ; Disaster Prevention and Management Volume 3 ; 3 ; >
+    au < crawling ; exists ; 1994 ; Disaster Prevention and Management Volume 3 ; 3 ; >
     au < finished ; manifest ; 1995 ; Disaster Prevention and Management Volume 4 ; 4 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Disaster Prevention and Management Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; Disaster Prevention and Management Volume 6 ; 6 ; reingest1.clockss.org:8082 >
@@ -3320,7 +3320,7 @@
     au < manifest ; exists ; 1991 ; Humanomics Volume 7 ; 7 ; >
     au < manifest ; exists ; 1992 ; Humanomics Volume 8 ; 8 ; >
     au < doesNotExist ; doesNotExist ; 1993 ; Humanomics Volume 9 ; 9 ; >
-    au < ready ; exists ; 1994 ; Humanomics Volume 10 ; 10 ; >
+    au < crawling ; exists ; 1994 ; Humanomics Volume 10 ; 10 ; >
     au < finished ; crawling ; 1995 ; Humanomics Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1996 ; Humanomics Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1997 ; Humanomics Volume 13 ; 13 ; reingest3.clockss.org:8083 >
@@ -4166,7 +4166,7 @@
     au < manifest ; exists ; 1991 ; International Journal of Clothing Science and Technology Volume 3 ; 3 ; >
     au < manifest ; exists ; 1992 ; International Journal of Clothing Science and Technology Volume 4 ; 4 ; >
     au < manifest ; exists ; 1993 ; International Journal of Clothing Science and Technology Volume 5 ; 5 ; >
-    au < ready ; exists ; 1994 ; International Journal of Clothing Science and Technology Volume 6 ; 6 ; >
+    au < crawling ; exists ; 1994 ; International Journal of Clothing Science and Technology Volume 6 ; 6 ; >
     au < finished ; manifest ; 1995 ; International Journal of Clothing Science and Technology Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; International Journal of Clothing Science and Technology Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1997 ; International Journal of Clothing Science and Technology Volume 9 ; 9 ; reingest1.clockss.org:8082 >
@@ -12015,7 +12015,7 @@
     au < manifest ; exists ; 1989 ; Records Management Journal Volume 1 ; 1 ; >
     au < manifest ; exists ; 1990 ; Records Management Journal Volume 2 ; 2 ; >
     au < manifest ; exists ; 1991 ; Records Management Journal Volume 3 ; 3 ; >
-    au < ready ; exists ; 1994 ; Records Management Journal Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1994 ; Records Management Journal Volume 4 ; 4 ; >
     au < finished ; manifest ; 1995 ; Records Management Journal Volume 5 ; 5 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Records Management Journal Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; Records Management Journal Volume 7 ; 7 ; reingest1.clockss.org:8082 >

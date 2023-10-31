@@ -665,7 +665,7 @@
 
       param[journal_id] = ijaitg
 
-      au < ready ; exists ; 2019-2020 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2019-2020 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2021 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2022-2023 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
@@ -4660,7 +4660,7 @@
 
       param[journal_id] = ijgfi
 
-      au < ready ; exists ; 2018-2023 ; International Journal of Governance and Financial Intermediation Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2018-2023 ; International Journal of Governance and Financial Intermediation Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -5056,8 +5056,8 @@
       param[journal_id] = ijhm
 
       au < ready ; exists ; 2018 ; International Journal of Hydromechatronics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2019 ; International Journal of Hydromechatronics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2020 ; International Journal of Hydromechatronics Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2019 ; International Journal of Hydromechatronics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2020 ; International Journal of Hydromechatronics Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2021 ; International Journal of Hydromechatronics Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2022 ; International Journal of Hydromechatronics Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2023 ; International Journal of Hydromechatronics Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
@@ -5837,7 +5837,7 @@
 
       param[journal_id] = ijiitc
 
-      au < ready ; exists ; 2019-2022 ; International Journal of Intelligent Internet of Things Computing Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2019-2022 ; International Journal of Intelligent Internet of Things Computing Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2023-2026 ; International Journal of Intelligent Internet of Things Computing Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -9616,7 +9616,7 @@
 
        param[journal_id] = ijstds
 
-      au < ready ; exists ; 2019-2021 ; Spatio-Temporal Data Science Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #isuue 4 not online
+      au < crawling ; exists ; 2019-2021 ; Spatio-Temporal Data Science Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #isuue 4 not online
 
     }
 
