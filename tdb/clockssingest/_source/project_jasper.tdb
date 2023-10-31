@@ -137,6 +137,18 @@
   {
 
     title <
+      name = Sciences, Eaux & Territoires ;
+      eissn = 2632-4091
+    >
+    provider = Institut national de recherche pour l'agriculture, l'alimentation et l'environnement
+
+    au < expected ; exists ; 2023 ; Sciences, Eaux & Territoires ; sciences_eaux_territoires_1775-3783 >
+
+  }
+
+  {
+
+    title <
       name = Análisis Filosófico ;
       issn = 0326-1301 ;
       eissn = 1851-9636
@@ -169,7 +181,7 @@
     >
     provider = Voces de la educación
 
-    au < expected ; exists ; 2023 ; Voces de la educación ; voces_de_la_educacion_1665-1596 >
+    au < expected ; exists ; 2023 ; Voces de la educación ; UNKNOWN >
 
   }
 
