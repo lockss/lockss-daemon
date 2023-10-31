@@ -4428,7 +4428,7 @@
 
     param[journal_issn] = 2949-8619
 
-    au < manifest ; exists ; 2022 ; Pediatric Companion Volume 1 ; 2022 ; 1 ; https://www.pediatriccompanionkerala.in/ ; ; >
+    au < ready ; exists ; 2022 ; Pediatric Companion Volume 1 ; 2022 ; 1 ; https://www.pediatriccompanionkerala.in/ ; ; >
     au < expected ; exists ; 2023 ; Pediatric Companion Volume 2 ; 2023 ; 2 ; https://www.pediatriccompanionkerala.in/ ; ; >
 
   }
@@ -8851,7 +8851,7 @@
       au < finished ; frozen ; 2020 ; Saudi Journal of Sports Medicine Volume 20 ; 2020 ; 20 ; https://www.sjosm.org/ ; ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Saudi Journal of Sports Medicine Volume 21 ; 2021 ; 21 ; https://www.sjosm.org/ ; ; >
       au < deepCrawl ; exists ; 2022 ; Saudi Journal of Sports Medicine Volume 22 ; 2022 ; 22 ; https://www.sjosm.org/ ; ; >
-      au < manifest ; exists ; 2023 ; Saudi Journal of Sports Medicine Volume 23 ; 2023 ; 23 ; https://www.sjosm.org/ ; ; >
+      au < ready ; exists ; 2023 ; Saudi Journal of Sports Medicine Volume 23 ; 2023 ; 23 ; https://www.sjosm.org/ ; ; >
 
   }
 
