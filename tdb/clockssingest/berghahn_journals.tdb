@@ -803,6 +803,7 @@
     
     param[journal_id] = journeys
     #param[journal_issn] = 1465-2609
+    #Journeys will cease publication as of 2022
        
     au < manifest ; exists ; 2000 ; Journeys Volume 1 ; 1 ; >
     au < manifest ; exists ; 2001 ; Journeys Volume 2 ; 2 ; >
@@ -826,8 +827,6 @@
     au < finished ; crawling ; 2019 ; Journeys Volume 20 ; 20 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2020 ; Journeys Volume 21 ; 21 ; >
     au < finished ; finished ; 2021 ; Journeys Volume 22 ; 22 ; reingest3.clockss.org:8083 >
-    au < expected ; exists ; 2022 ; Journeys Volume 23 ; 23 ; >
-    au < expected ; exists ; 2023 ; Journeys Volume 24 ; 24 ; >
 
   }
 
