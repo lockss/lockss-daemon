@@ -664,7 +664,7 @@
       param[journal_id] = ijaitg
 
       au < crawling ; exists ; 2019-2020 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2021 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2021 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2022-2023 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
@@ -1451,7 +1451,7 @@
 
       param[journal_id] = ijbda
 
-      au < ready ; exists ; 2019-2020 ; International Journal of Business and Data Analytics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2019-2020 ; International Journal of Business and Data Analytics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2022-2023 ; International Journal of Business and Data Analytics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -4986,7 +4986,7 @@
 
       param[journal_id] = ijht
 
-      au < ready ; exists ; 2018-2023 ; International Journal of Humanitarian Technology Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
+      au < crawling ; exists ; 2018-2023 ; International Journal of Humanitarian Technology Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
     }
 

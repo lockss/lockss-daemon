@@ -12916,7 +12916,7 @@
     au < finished ; manifest ; 2017 ; 2017 ; Journal of Surgical Case Reports Volume 2017 ; 2017 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; 2018 ; Journal of Surgical Case Reports Volume 2018 ; 2018 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Surgical Case Reports Volume 2019 ; 2019 ; >
-    au < ready ; exists ; 2020 ; 2020 ; Journal of Surgical Case Reports Volume 2020 ; 2020 ; > #LXQUEUE-1592
+    au < crawling ; exists ; 2020 ; 2020 ; Journal of Surgical Case Reports Volume 2020 ; 2020 ; > #LXQUEUE-1592
     au < frozen ; exists ; 2021 ; 2021 ; Journal of Surgical Case Reports Volume 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Surgical Case Reports Volume 2022 ; 2022 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Journal of Surgical Case Reports Volume 2023 ; 2023 ; >
@@ -14698,7 +14698,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Monthly Notices of the Royal Astronomical Society Volume 356-364 ; 356-364 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Monthly Notices of the Royal Astronomical Society Volume 365-373 ; 365-373 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Monthly Notices of the Royal Astronomical Society Volume 374-382 ; 374-382 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Monthly Notices of the Royal Astronomical Society Volume 383-391 ; 383-391 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Monthly Notices of the Royal Astronomical Society Volume 383-391 ; 383-391 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 392-400 ; 392-400 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 401-409 ; 401-409 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 410-418 ; 410-418 ; >
