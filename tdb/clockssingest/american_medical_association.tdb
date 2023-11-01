@@ -33,8 +33,8 @@
     au < finished ; finished ; 2019 ; JAMA Cardiology Volume 4 ; 2019 ; https://jamanetwork.com/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2020 ; JAMA Cardiology Volume 5 ; 2020 ; https://jamanetwork.com/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; JAMA Cardiology Volume 6 ; 2021 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
-    au < testing ; exists ; 2022 ; JAMA Cardiology Volume 7 ; 2022 ; https://jamanetwork.com/ ; >
-    au < testing ; exists ; 2023 ; JAMA Cardiology Volume 8 ; 2023 ; https://jamanetwork.com/ ; >
+    au < ready ; exists ; 2022 ; JAMA Cardiology Volume 7 ; 2022 ; https://jamanetwork.com/ ; >
+    au < ready ; exists ; 2023 ; JAMA Cardiology Volume 8 ; 2023 ; https://jamanetwork.com/ ; >
 
   }
 
@@ -59,8 +59,8 @@
     au < finished ; finished ; 2019 ; JAMA Dermatology Volume 155 ; 2019 ; https://jamanetwork.com/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2020 ; JAMA Dermatology Volume 156 ; 2020 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; JAMA Dermatology Volume 157 ; 2021 ; https://jamanetwork.com/ ; reingest3.clockss.org:8083 >
-    au < testing ; exists ; 2022 ; JAMA Dermatology Volume 158 ; 2022 ; https://jamanetwork.com/ ; >
-    au < testing ; exists ; 2023 ; JAMA Dermatology Volume 159 ; 2023 ; https://jamanetwork.com/ ; >
+    au < ready ; exists ; 2022 ; JAMA Dermatology Volume 158 ; 2022 ; https://jamanetwork.com/ ; >
+    au < ready ; exists ; 2023 ; JAMA Dermatology Volume 159 ; 2023 ; https://jamanetwork.com/ ; >
 
   }
 
@@ -108,7 +108,7 @@
     au < finished ; finished ; 2019 ; JAMA Internal Medicine Volume 179 ; 2019 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2020 ; JAMA Internal Medicine Volume 180 ; 2020 ; https://jamanetwork.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; JAMA Internal Medicine Volume 181 ; 2021 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
-    au < testing ; exists ; 2022 ; JAMA Internal Medicine Volume 182 ; 2022 ; https://jamanetwork.com/ ; >
+    au < ready ; exists ; 2022 ; JAMA Internal Medicine Volume 182 ; 2022 ; https://jamanetwork.com/ ; >
     au < testing ; exists ; 2023 ; JAMA Internal Medicine Volume 183 ; 2023 ; https://jamanetwork.com/ ; >
 
   }
@@ -238,7 +238,7 @@
     au < finished ; finished ; 2019 ; JAMA Ophthalmology Volume 137 ; 2019 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2020 ; JAMA Ophthalmology Volume 138 ; 2020 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2021 ; JAMA Ophthalmology Volume 139 ; 2021 ; https://jamanetwork.com/ ; reingest3.clockss.org:8083 >
-    au < testing ; exists ; 2022 ; JAMA Ophthalmology Volume 140 ; 2022 ; https://jamanetwork.com/ ; >
+    au < notReady ; exists ; 2022 ; JAMA Ophthalmology Volume 140 ; 2022 ; https://jamanetwork.com/ ; > #403 forbidden, https://cdn.jamanetwork.com/ama/content_public/journal/ophth/938883/eoi210084f2_1646935168.68667.png?Expires=2147483647&Signature=e2NuQLOr0jumvoHClWfHv2YprbuatOYmFmVDTPXy9YgQavc0T55j59Yf3NtUnAVjyjYWFEupWIyzpYPlLKwZsetSk88oVCkom~JvoDHV4zCgMdognrXuuxjlQ4GunTDIz0FDSN5x3N5nD~-Q2AlY2vh8xUsqDcLFprQzyfxgr4JY2zYh~MDzaGG~fQfeegO2tbsq91prof3krbsZKnvyk2KrZA1fVON9KBAtNfURBqrNWETu0jGk3L9acgfCMkVTWnWDUHijlXomr5zpax5c5TOtUn0JP81k5cIm1eREpOqClNOk9BKi34SJ8Bny63gPRqtJy7Bz5EZ495fiofRL3w__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
     au < testing ; exists ; 2023 ; JAMA Ophthalmology Volume 141 ; 2023 ; https://jamanetwork.com/ ; >
 
   }
@@ -342,7 +342,7 @@
     au < finished ; finished ; 2019 ; JAMA Surgery Volume 154 ; 2019 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2020 ; JAMA Surgery Volume 155 ; 2020 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2021 ; JAMA Surgery Volume 156 ; 2021 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
-    au < manifest ; exists ; 2022 ; JAMA Surgery Volume 157 ; 2022 ; https://jamanetwork.com/ ; >
+    au < ready ; exists ; 2022 ; JAMA Surgery Volume 157 ; 2022 ; https://jamanetwork.com/ ; >
     au < testing ; exists ; 2023 ; JAMA Surgery Volume 158 ; 2023 ; https://jamanetwork.com/ ; >
 
   }
