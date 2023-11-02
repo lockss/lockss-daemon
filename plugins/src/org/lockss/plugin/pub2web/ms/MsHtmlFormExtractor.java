@@ -63,7 +63,7 @@ public class MsHtmlFormExtractor extends HtmlFormExtractor {
 
             String srcUrl = node.baseUri();
 
-            log.debug3("Fei: MsHtmlFormExtractor custom tagBegin for" + srcUrl);
+            log.debug3("MsHtmlFormExtractor custom tagBegin for" + srcUrl);
 
             if (node.hasAttr(ACTION_ATTR)) {
                 if ("action".equalsIgnoreCase((node.attr(ACTION_ATTR)))) {
@@ -71,7 +71,7 @@ public class MsHtmlFormExtractor extends HtmlFormExtractor {
 
                     String base = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
                     String newUrl = base + pdfLink;
-                    log.debug3("Fei: MsHtmlFormExtractor PDF link: " + newUrl);
+                    log.debug3("MsHtmlFormExtractor PDF link: " + newUrl);
                     cb.foundLink(newUrl);
                 }
             }

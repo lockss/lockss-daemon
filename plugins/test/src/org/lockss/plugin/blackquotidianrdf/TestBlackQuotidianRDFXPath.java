@@ -166,14 +166,14 @@ public class TestBlackQuotidianRDFXPath extends LockssTestCase {
 
     private void doSomething(Node node) {
         // do something with the current node instead of System.out
-        log.info("Fei - node: " + node.getNodeName());
+        log.info("node: " + node.getNodeName());
 
         NodeList nodeList = node.getChildNodes();
         for (int i = 0; i < nodeList.getLength(); i++) {
             Node currentNode = nodeList.item(i);
             if (currentNode.getNodeType() == Node.ELEMENT_NODE) {
                 //calls this method for all the children which is Element
-                log.info("Fei - node -------- Element_Node: " + node.getNodeName());
+                log.info("node -------- Element_Node: " + node.getNodeName());
                 doSomething(currentNode);
             }
         }
