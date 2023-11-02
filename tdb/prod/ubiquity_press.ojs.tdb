@@ -644,6 +644,7 @@
       au < doNotProcess ; 2020 ; 11 ; Ancient Asia Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 12 ; Ancient Asia Volume 2021 ; 2021 >
       au < doNotProcess ; 2022 ; 13 ; Ancient Asia Volume 2022 ; 2022 >
+      au < exists ; 2023 ; 14 ; Ancient Asia Volume 2023 ; 2023 >
 
   }
 
@@ -1891,6 +1892,22 @@
       au < manifest ; 2021 ; 1 ; Swiss Psychology Open Volume 2021 ; 2021 >
       au < released ; 2022 ; 2 ; Swiss Psychology Open Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 3 ; Swiss Psychology Open Volume 2023 ; 2023 >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Driving Science ;
+        eissn = 2397-1959
+      >
+
+      param[base_url] = https://account.up-j-ijds.ubiquityjournal.website/
+      param[journal_id] = up-j-ijds
+      #LXPUB-876
+
+      au < manifest ; 2018 ; 1 ; International Journal of Driving Science Volume 2018 (OJS3) ; 2018 >
+      au < manifest ; 2021 ; 2 ; International Journal of Driving Science Volume 2021 (OJS3) ; 2021 >
 
   }
 
