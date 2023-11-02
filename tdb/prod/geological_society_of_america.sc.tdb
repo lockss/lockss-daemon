@@ -12,6 +12,19 @@
   {
 
     title <
+      name = Geoenergy ;
+      eissn = 2755-1725 ;
+      issnl = 2755-1725
+    >
+
+      param[journal_id] = geoenergy
+
+      au < expected ; 2023 ; 2023 ; Geological Society of America Bulletin Volume 1 ; 1 >
+  }
+
+  {
+
+    title <
       name = Geological Society of America Bulletin ;
       issn = 0016-7606 ;
       eissn = 1943-2674 ;
