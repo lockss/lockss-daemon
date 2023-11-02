@@ -65,10 +65,10 @@ public class ScalarWebHtmlLinkExtractorFactory implements LinkExtractorFactory {
 						new Callback() {
 					@Override
 					public void foundLink(String url) {
-						log.debug3("Fei - found url = " + url);
+						log.debug3("found url = " + url);
 						if (url.contains(BOOTSTRAP_CSS_PATH)) {
 							String mapCss = url.replace(BOOTSTRAP_CSS_PATH, BOOTSTRAP_CSS_MAP_PATH);
-							log.debug3("Fei - found bootstrap, mapCss= " + mapCss);
+							log.debug3("found bootstrap, mapCss= " + mapCss);
 							cb.foundLink(mapCss);
 						}
 					}
