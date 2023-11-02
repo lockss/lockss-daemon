@@ -1,12 +1,12 @@
 {
 
   publisher <
-    name = Boston College Libraries
+    name = Boston College Libraries ;
+    info[platform] = Most recent: Open Journal Systems 3.3.0.14
   >
   
   rights = openaccess
-  
-  #Moved to OJS3. This version of OJS3 (V3.1.2) has a malformed permission statement. Is fixed in future versions.
+
 {
     pluginPrefix = org.lockss.plugin.
     implicit < pluginSuffix ; status ; year ; name ; volume ; param[year] ; param[base_url] >
@@ -79,9 +79,9 @@
       au < ojs2.OJS2Plugin ; down ; 2015 ; Information Technology and Libraries Volume 34 (2015) ; 34 ; 2015 ; http://ejournals.bc.edu/ojs/ >
       au < ojs2.OJS2Plugin ; down ; 2016 ; Information Technology and Libraries Volume 35 (2016) ; 35 ; 2016 ; http://ejournals.bc.edu/ojs/ >
       au < ojs2.OJS2Plugin ; down ; 2017 ; Information Technology and Libraries Volume 36 (2017) ; 36 ; 2017 ; https://ejournals.bc.edu/ojs/ >
-      au < ojs3.Ojs3Plugin ; manifest ; 2018 ; Information Technology and Libraries Volume 37 (2018) ; 37 ; 2018 ; https://ejournals.bc.edu/ >
-      au < ojs3.Ojs3Plugin ; manifest ; 2019 ; Information Technology and Libraries Volume 38 (2019) ; 38 ; 2019 ; https://ejournals.bc.edu/ >
-
+      au < ojs3.Ojs3Plugin ; doNotProcess ; 2018 ; Information Technology and Libraries Volume 37 (2018) ; 37 ; 2018 ; https://ital.corejournals.org/ >
+      au < ojs3.Ojs3Plugin ; doNotProcess ; 2019 ; Information Technology and Libraries Volume 38 (2019) ; 38 ; 2019 ; https://ital.corejournals.org/ >
+      #Moved to ALA Production Services
     }
 
   
