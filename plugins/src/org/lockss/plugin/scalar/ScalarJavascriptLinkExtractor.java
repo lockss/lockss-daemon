@@ -79,7 +79,7 @@ public class ScalarJavascriptLinkExtractor implements LinkExtractor {
                             Callback cb)
             throws IOException {
 
-        log.debug3("Fei - JS Parsing " + srcUrl + ", enc " + encoding);
+        log.debug3("JS Parsing " + srcUrl + ", enc " + encoding);
 
         if (in == null) {
             throw new IllegalArgumentException("Called with null InputStream");
@@ -92,11 +92,11 @@ public class ScalarJavascriptLinkExtractor implements LinkExtractor {
         if (srcUrl.contains("main.js")) {
 
             String base = srcUrl.substring(0,(srcUrl.indexOf(".org/") + 4));
-            log.debug3("Fei - baseUrl = " + base);
+            log.debug3("baseUrl = " + base);
 
             URL baseUrl = new URL(base + BASE_URI);
             URL widgetUrl = new URL(base + WIDGET_URI);
-            log.debug3("Fei - found main.js");
+            log.debug3("found main.js");
 
             Reader rdr = new BufferedReader(StringUtil.getLineReader(in, encoding));
             rdr = StringUtil.getLineContinuationReader(rdr);
@@ -107,13 +107,13 @@ public class ScalarJavascriptLinkExtractor implements LinkExtractor {
                 while (StringUtil.fillFromReader(rdr, sb, maxBuf - sb.length())) {
                     // handle "/image/tutorial/*.png"
                     Matcher baseUriPatternMatch = BASE_URI_IMAGE_SRC_PAT.matcher(sb);
-                    log.debug3("Fei - main.js before baseUriPatternMatch match");
+                    log.debug3("main.js before baseUriPatternMatch match");
                     while (baseUriPatternMatch.find()) {
                         String url = baseUriPatternMatch.group(1);
                         if (!StringUtil.isNullString(url)) {
                             //String resolved = UrlUtil.resolveUri(baseUrl, url);
                             String resolved = baseUrl + url;
-                            log.debug3("Fei - mainjs, Found base uri: " + url + " which resolves to " + resolved);
+                            log.debug3("mainjs, Found base uri: " + url + " which resolves to " + resolved);
                             cb.foundLink(resolved);
                         }
                     }
@@ -122,10 +122,10 @@ public class ScalarJavascriptLinkExtractor implements LinkExtractor {
                     Matcher widgetUriPatternMatch = WIDGET_URI_SRC_PAT.matcher(sb);
                     while (widgetUriPatternMatch.find()) {
                         String url = widgetUriPatternMatch.group(1);
-                        log.debug3(" Fei - json url = " + url);
+                        log.debug3(" json url = " + url);
                         if (!StringUtil.isNullString(url)) {
                             String resolved = widgetUrl + url;
-                            log.debug3("Fei - mainjs, Found widget uri " + url + " which resolves to " + resolved);
+                            log.debug3("mainjs, Found widget uri " + url + " which resolves to " + resolved);
                             cb.foundLink(resolved);
 
                         }
