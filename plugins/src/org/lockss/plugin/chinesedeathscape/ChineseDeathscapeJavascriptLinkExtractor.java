@@ -56,7 +56,7 @@ public class ChineseDeathscapeJavascriptLinkExtractor implements LinkExtractor {
                             LinkExtractor.Callback cb)
             throws IOException {
 
-        log.debug3("Fei - JS Parsing " + srcUrl + ", enc " + encoding);
+        log.debug3("JS Parsing " + srcUrl + ", enc " + encoding);
 
         if (in == null) {
             throw new IllegalArgumentException("Called with null InputStream");
@@ -69,7 +69,7 @@ public class ChineseDeathscapeJavascriptLinkExtractor implements LinkExtractor {
         if (srcUrl.contains("read.js")) {
 
             URL baseUrl = new URL(srcUrl);
-            log.debug3("Fei - found read.js");
+            log.debug3("found read.js");
 
             Reader rdr = new BufferedReader(StringUtil.getLineReader(in, encoding));
             rdr = StringUtil.getLineContinuationReader(rdr);
@@ -80,13 +80,13 @@ public class ChineseDeathscapeJavascriptLinkExtractor implements LinkExtractor {
                 while (StringUtil.fillFromReader(rdr, sb, maxBuf - sb.length())) {
                     // handle "/image/tutorial/*.png"
                     Matcher tutorialImagePatternMatch = READ_IS_IMAGE_SRC_PAT.matcher(sb);
-                    log.debug3("Fei - read.js before tutorialImagePatternMatch match");
+                    log.debug3("read.js before tutorialImagePatternMatch match");
                     while (tutorialImagePatternMatch.find()) {
                         String url = tutorialImagePatternMatch.group(1);
                         if (!StringUtil.isNullString(url)) {
                             try {
                                 String resolved = UrlUtil.resolveUri(baseUrl, url);
-                                log.debug3("Fei - readjs, Found tutorial images: " + url + " which resolves to " + resolved);
+                                log.debug3("readjs, Found tutorial images: " + url + " which resolves to " + resolved);
                                 cb.foundLink(resolved);
                             } catch (MalformedURLException e) {
                                 log.siteError("Resolving " + url + " in JS at " + baseUrl
@@ -99,11 +99,11 @@ public class ChineseDeathscapeJavascriptLinkExtractor implements LinkExtractor {
                     Matcher apiJsonPatternMatch = API_JSON_SRC_PAT.matcher(sb);
                     while (apiJsonPatternMatch.find()) {
                         String url = apiJsonPatternMatch.group(1);
-                        log.debug3(" Fei - json url = " + url);
+                        log.debug3(" json url = " + url);
                         if (!StringUtil.isNullString(url)) {
                             try {
                                 String resolved = UrlUtil.resolveUri(baseUrl, url);
-                                log.debug3("Fei - readjs, Found api json " + url + " which resolves to " + resolved);
+                                log.debug3("readjs, Found api json " + url + " which resolves to " + resolved);
                                 cb.foundLink(resolved);
                             } catch (MalformedURLException e) {
                                 log.siteError("Resolving " + url + " in JS at " + baseUrl
