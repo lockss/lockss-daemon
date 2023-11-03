@@ -8567,7 +8567,7 @@
   {
 
       title <
-        name = Pan Arab Journal of Rhinology ;
+        name = Pan Arab Journal of Rhinology (PAJR) ;
         issn = 2090-7540 ;
         eissn = 2090-7559
       >
@@ -8575,7 +8575,9 @@
       param[journal_issn] = 2090-7540
 #      param[base_url] = http://www.pajr.eg.net/
 
-      au < finished ; finished ; 2016 ; Pan Arab Journal of Rhinology Volume 6 ; 2016 ; 6 ; http://www.pajr.eg.net/ ; ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; Pan Arab Journal of Rhinology (PAJR) Volume 6 ; 2016 ; 6 ; http://www.pajr.eg.net/ ; ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2020 ; Pan Arab Journal of Rhinology (PAJR) Volume 10 ; 2020 ; 10 ; https://www.pajr.eg.net/ ; ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; Pan Arab Journal of Rhinology (PAJR) Volume 11 ; 2021 ; 11 ; https://www.pajr.eg.net/ ; ; >
 
   }
 
