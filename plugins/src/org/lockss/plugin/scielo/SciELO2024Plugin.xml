@@ -133,4 +133,8 @@ POSSIBILITY OF SUCH DAMAGE.
           <string>cdn\.plu\.mx</string>
         </list>
     </entry>
+    <entry>
+      <string>au_url_normalizer</string>
+      <string>org.lockss.plugin.scielo.SciELO2024UrlNormalizer</string>
+  </entry>
 </map>

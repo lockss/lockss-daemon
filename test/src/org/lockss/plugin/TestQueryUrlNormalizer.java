@@ -46,6 +46,7 @@ public class TestQueryUrlNormalizer extends LockssTestCase{
         assertEquals("https://wwww.abc/a=1&b=2&c=3",norm.normalizeUrl("https://wwww.abc/a=1&b=2&c=3", null));
         assertEquals("https://wwww.abc/",norm.normalizeUrl("https://wwww.abc/?", null));
         assertEquals("https://wwww.abc/?a=1&b=&c",norm.normalizeUrl("https://wwww.abc/?a=1&b=&c", null));
+        assertEquals("https://wwww.abc/?a=1&b=2&b=2",norm.normalizeUrl("https://wwww.abc/?a=1&b=2&b=2", null));
     }
 
     public void testKeyComparator() throws Exception{
