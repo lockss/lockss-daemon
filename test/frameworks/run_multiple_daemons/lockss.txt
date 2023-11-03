@@ -66,3 +66,6 @@ org.lockss.blockHasher.ignoreFilesOutsideCrawlSpec=true
 
 org.lockss.baseau.minFetchDelay=3000
 org.lockss.plugin.restartAusWithNewPlugin=true
+
+# Allow all plugin permitted hosts
+org.lockss.crawler.allowedPluginPermittedHosts=.*
