@@ -1616,7 +1616,7 @@
     au < manifest ; exists ; 1990 ; Circuit World Volume 16 ; 16 ; >
     au < manifest ; exists ; 1991 ; Circuit World Volume 17 ; 17 ; >
     au < manifest ; exists ; 1992 ; Circuit World Volume 18 ; 18 ; >
-    au < ready ; exists ; 1993 ; Circuit World Volume 19 ; 19 ; >
+    au < crawling ; exists ; 1993 ; Circuit World Volume 19 ; 19 ; >
     au < frozen ; exists ; 1994 ; Circuit World Volume 20 ; 20 ; >
     au < finished ; manifest ; 1995 ; Circuit World Volume 21 ; 21 ; reingest4.clockss.org:8082 >
     au < notReady ; exists ; 1996 ; Circuit World Volume 22 ; 22 ; > #no substance
@@ -2279,7 +2279,7 @@
     au < manifest ; exists ; 1990 ; Education + Training Volume 32 ; 32 ; >
     au < manifest ; exists ; 1991 ; Education + Training Volume 33 ; 33 ; >
     au < manifest ; exists ; 1992 ; Education + Training Volume 34 ; 34 ; >
-    au < ready ; exists ; 1993 ; Education + Training Volume 35 ; 35 ; >
+    au < crawling ; exists ; 1993 ; Education + Training Volume 35 ; 35 ; >
     au < finished ; manifest ; 1994 ; Education + Training Volume 36 ; 36 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1995 ; Education + Training Volume 37 ; 37 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Education + Training Volume 38 ; 38 ; reingest5.clockss.org:8082 >
@@ -2600,7 +2600,7 @@
     au < manifest ; exists ; 1990 ; Environmental Management and Health Volume 1 ; 1 ; >
     au < manifest ; exists ; 1991 ; Environmental Management and Health Volume 2 ; 2 ; >
     au < manifest ; exists ; 1992 ; Environmental Management and Health Volume 3 ; 3 ; >
-    au < ready ; exists ; 1993 ; Environmental Management and Health Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1993 ; Environmental Management and Health Volume 4 ; 4 ; >
     au < frozen ; exists ; 1994 ; Environmental Management and Health Volume 5 ; 5 ; >
     au < finished ; crawling ; 1995 ; Environmental Management and Health Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 1996 ; Environmental Management and Health Volume 7 ; 7 ; reingest2.clockss.org:8085 >
@@ -3857,7 +3857,7 @@
     au < manifest ; exists ; 1990 ; Integrated Manufacturing Systems Volume 1 ; 1 ; >
     au < manifest ; exists ; 1991 ; Integrated Manufacturing Systems Volume 2 ; 2 ; >
     au < manifest ; exists ; 1992 ; Integrated Manufacturing Systems Volume 3 ; 3 ; >
-    au < ready ; exists ; 1993 ; Integrated Manufacturing Systems Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1993 ; Integrated Manufacturing Systems Volume 4 ; 4 ; >
     au < frozen ; exists ; 1994 ; Integrated Manufacturing Systems Volume 5 ; 5 ; >
     au < finished ; manifest ; 1995 ; Integrated Manufacturing Systems Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; Integrated Manufacturing Systems Volume 7 ; 7 ; reingest4.clockss.org:8082 >
@@ -4211,7 +4211,7 @@
 
     au < manifest ; exists ; 1991 ; International Journal of Commerce and Management Volume 1 ; 1 ; >
     au < manifest ; exists ; 1992 ; International Journal of Commerce and Management Volume 2 ; 2 ; >
-    au < ready ; exists ; 1993 ; International Journal of Commerce and Management Volume 3 ; 3 ; >
+    au < crawling ; exists ; 1993 ; International Journal of Commerce and Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 1994 ; International Journal of Commerce and Management Volume 4 ; 4 ; >
     au < finished ; manifest ; 1995 ; International Journal of Commerce and Management Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; International Journal of Commerce and Management Volume 6 ; 6 ; reingest4.clockss.org:8082 >
@@ -5490,7 +5490,7 @@
     au < manifest ; exists ; 1990 ; International Journal of Physical Distribution & Logistics Management Volume 20 ; 20 ; >
     au < manifest ; exists ; 1991 ; International Journal of Physical Distribution & Logistics Management Volume 21 ; 21 ; >
     au < manifest ; exists ; 1992 ; International Journal of Physical Distribution & Logistics Management Volume 22 ; 22 ; >
-    au < ready ; exists ; 1993 ; International Journal of Physical Distribution & Logistics Management Volume 23 ; 23 ; >
+    au < crawling ; exists ; 1993 ; International Journal of Physical Distribution & Logistics Management Volume 23 ; 23 ; >
     au < frozen ; exists ; 1994 ; International Journal of Physical Distribution & Logistics Management Volume 24 ; 24 ; >
     au < finished ; manifest ; 1995 ; International Journal of Physical Distribution & Logistics Management Volume 25 ; 25 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; International Journal of Physical Distribution & Logistics Management Volume 26 ; 26 ; reingest4.clockss.org:8082 >
@@ -7670,7 +7670,7 @@
     comment[journal_id] = jfrc
 
     au < manifest ; exists ; 1993 ; Journal of Financial Regulation and Compliance Volume 1 ; 1 ; >
-    au < ready ; exists ; 1994 ; Journal of Financial Regulation and Compliance Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1994 ; Journal of Financial Regulation and Compliance Volume 2 ; 2 ; >
     au < finished ; manifest ; 1995 ; Journal of Financial Regulation and Compliance Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1996 ; Journal of Financial Regulation and Compliance Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1997 ; Journal of Financial Regulation and Compliance Volume 5 ; 5 ; reingest4.clockss.org:8082 >
