@@ -1,0 +1,136 @@
+<!--
+
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
+
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>development</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.scielo.SciELO2024Plugin</string>
+  </entry>
+  <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>SciELO Journals Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"SciELO Journals Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <list>
+      <string>"%sj/%s/grid", base_url, journal_id</string> 
+    </list>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <!-- examples
+        https://www.scielo.br/j/aob/a/9rQ95PXmRBxDNsxhhr4hB6k/abstract/?lang=en
+        https://www.scielo.br/j/aob/a/9rQ95PXmRBxDNsxhhr4hB6k/?lang=en
+        https://www.scielo.br/j/aob/a/9rQ95PXmRBxDNsxhhr4hB6k/?format=pdf&lang=en
+        https://www.scielo.br/j/abcd/i/2007.v20n2/
+        https://www.scielo.br/j/abcd/i/2016.v29suppl1/
+        https://www.scielo.br/j/abcd/i/2022.v35/
+        https://www.scielo.br/j/afro/i/2013.n47/
+        https://minio.scielo.br/documentstore/2317-6326/V83s5FPhKPnx9JGzDmkJRJn/d91f457afb9a1773c27fb8e959b5e334c23de546.png
+        https://licensebuttons.net/l/by/4.0//88x31.png image associated with document license 
+        https://cdn.plu.mx/widget-popup.js
+        https://www.scielo.br/citation/export/pxcdNKK6rRJDcHggdvdtSvS/?format=ris
+
+        Question: how to capture tables? https://www.scielo.br/j/abcd/a/Fqvzxw3C4wk4BTJqGqBPMHD/?lang=en#ModalTablet1
+        Answer: Looks like data is captured in HTML (use cURL command to check source)
+     --> 
+    <list>
+      <string>2,"^%sj/%s/a/[^/]+/.*[?&amp;]goto=", base_url, journal_id</string>
+      <!--<string>2,"^%sj/%s/i/%d\.[^/]+/.*[?&amp;]goto=", base_url, journal_id, year</string>-->
+      <string>1,"^%s(j/%s/a|citation/export)/[^/]+", base_url, journal_id</string>
+      <string>1,"^%sj/%s/i/%d\.[^/]+/", base_url, journal_id, year</string>
+      <string>1,"https?://minio\.scielo\.br/documentstore/"</string>
+      <!--<string>1, "^https?://minio\.scielo\.br/"</string> -->
+      <string>1,"^https?://cdnjs\.cloudflare\.com/"</string>
+      <string>1,"^https?://.+\.cloudfront\.net/"</string>
+      <string>1,"^https?://.*cdn\.jsdelivr\.net/"</string>
+      <string>1,"^https?://licensebuttons\.net/"</string>
+      <string>1,"^https?://cdn\.plu\.mx/"</string>
+      <string>1,"^%s.+\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|webp|woff2?)(\?v=)?", base_url</string>
+    </list>
+  </entry>
+      <entry>
+        <string>au_permitted_host_pattern</string>
+        <list>
+          <string>www.scielo.br</string> <!-- fix me-->
+          <string>minio\.scielo\.br</string>
+          <string>cdnjs\.cloudflare\.com</string>
+          <string>.+\.cloudfront\.net</string>
+          <string>.*cdn\.jsdelivr\.net</string>
+          <string>licensebuttons\.net</string>
+          <string>cdn\.plu\.mx</string>
+        </list>
+    </entry>
+</map>
