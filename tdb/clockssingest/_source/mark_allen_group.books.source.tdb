@@ -1,5 +1,4 @@
 {
-
   publisher <
     name = Mark Allen Group ;
     info[contract] = 2013 ;
@@ -9,13 +8,9 @@
     hidden[proxy] = DIRECT
 
   {
-
     title <
        name = Mark Allen Group Books Source Content
     >
-
-    {
-
       plugin = org.lockss.plugin.clockss.markallen.ClockssMarkAllenGroupBooksSourcePlugin
       implicit < status ; status2 ; year ; name ; param[year] >
       {
@@ -28,10 +23,8 @@
       {
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/markallen-released/
 
-      au < expected ; exists ; 2023 ; Mark Allen Group Books Source Content 2023 ; 2023 >
+      #au < expected ; exists ; 2023 ; Mark Allen Group Books Source Content 2023 ; 2023 >
+      #RT 12186 no future books in the current pipeline.
       }
-    }
-
   }
-
 }
