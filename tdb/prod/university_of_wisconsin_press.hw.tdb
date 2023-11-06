@@ -78,9 +78,9 @@
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
       param[base_url] = https://aa.uwpress.org/
 
-      au < exists ; 2020 ; Arctic Anthropology Volume 56 ; 56 >
-      au < exists ; 2021 ; Arctic Anthropology Volume 57 ; 57 >
-      au < exists ; 2022 ; Arctic Anthropology Volume 58 ; 58 >
+      au < manifest ; 2020 ; Arctic Anthropology Volume 56 ; 56 >
+      au < manifest ; 2021 ; Arctic Anthropology Volume 57 ; 57 >
+      au < manifest ; 2022 ; Arctic Anthropology Volume 58 ; 58 >
       au < manifest ; 2023 ; Arctic Anthropology Volume 59 ; 59 >
 
       }
@@ -124,9 +124,9 @@
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
       param[base_url] = https://cl.uwpress.org/
 
-      au < exists ; 2019-2020 ; Contemporary Literature Volume 60 ; 60 >
-      au < exists ; 2021 ; Contemporary Literature Volume 61 ; 61 >
-      au < exists ; 2022 ; Contemporary Literature Volume 62 ; 62 >
+      au < manifest ; 2019-2020 ; Contemporary Literature Volume 60 ; 60 >
+      au < manifest ; 2021 ; Contemporary Literature Volume 61 ; 61 >
+      au < manifest ; 2022 ; Contemporary Literature Volume 62 ; 62 >
       au < manifest ; 2023 ; Contemporary Literature Volume 63 ; 63 >
       }
 
