@@ -5401,7 +5401,7 @@
       au < finished ; finished ; 2018 ; International Journal of Information Systems and Change Management Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; International Journal of Information Systems and Change Management Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; crawling ; 2020-2021 ; International Journal of Information Systems and Change Management Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < exists ; exists ; 2022-2023 ; International Journal of Information Systems and Change Management Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2022-2023 ; International Journal of Information Systems and Change Management Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -5842,7 +5842,7 @@
 
         param[journal_id] = ijimr
 
-        au < exists ; exists ; 2018-2019 ; International Journal of Intelligent Machines and Robotics Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 4 not online
+        au < manifest ; exists ; 2018-2019 ; International Journal of Intelligent Machines and Robotics Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 4 not online
 
     }
 
@@ -12012,7 +12012,7 @@
       au < finished ; finished ; 2018-2019 ; International Journal of Research, Innovation and Commercialisation Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2020-2021 ; International Journal of Research, Innovation and Commercialisation Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2022 ; International Journal of Research, Innovation and Commercialisation Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
-      au < exists ; exists ; 2023 ; International Journal of Research, Innovation and Commercialisation Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2023 ; International Journal of Research, Innovation and Commercialisation Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
 
   }
 

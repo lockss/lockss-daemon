@@ -88,7 +88,7 @@
     au < notReady ; exists ; 2020 ; The Journal of Tourism Insights Volume 10 ; 10 ; https://scholarworks.gvsu.edu/ ; > #Bad breadcrumb https://scholarworks.gvsu.edu/jti/vol10 403 forbidden
     au < finished ; crawling ; 2021 ; The Journal of Tourism Insights Volume 11 ; 11 ; https://scholarworks.gvsu.edu/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2022 ; The Journal of Tourism Insights Volume 12 ; 12 ; https://scholarworks.gvsu.edu/ ; reingest1.clockss.org:8082 >
-    au < expected ; exists ; 2023 ; The Journal of Tourism Insights Volume 13 ; 13 ; https://scholarworks.gvsu.edu/ ; >
+    au < manifest ; exists ; 2023 ; The Journal of Tourism Insights Volume 13 ; 13 ; https://scholarworks.gvsu.edu/ ; >
 
   }
   
