@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2023 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,6 +31,7 @@ package org.lockss.hasher;
 import java.io.InputStream;
 import java.security.*;
 import java.util.*;
+import java.io.*;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.oro.text.regex.*;
@@ -43,6 +40,8 @@ import org.lockss.plugin.*;
 import org.lockss.repository.AuSuspectUrlVersions;
 import org.lockss.state.*;
 import org.lockss.util.*;
+import org.lockss.rewriter.*;
+import org.lockss.extractor.*;
 
 /**
  * General class to handle content hashing
@@ -88,12 +87,116 @@ public class BlockHasher extends GenericHasher {
   private HashBlock hblock;
   private byte[] contentBytes = null;
 
+  class V2CompatCU implements CachedUrl {
+    CachedUrl cu;
+    String v2Url;
+
+    V2CompatCU(CachedUrl cu, String v2Url) {
+      this.cu = cu;
+      this.v2Url = v2Url;
+    }
+
+    public String getUrl() {
+      return v2Url;
+    }
+    public CachedUrl getCuVersion(int version) {
+      return cu.getCuVersion(version);
+    }
+    public CachedUrl[] getCuVersions() {
+      return cu.getCuVersions();
+    }
+    public CachedUrl[] getCuVersions(int maxVersions) {
+      return cu.getCuVersions(maxVersions);
+    }
+    public int getVersion() {
+      return cu.getVersion();
+    }
+    public void delete() throws UnsupportedOperationException, IOException {
+      cu.delete();
+    }
+    public void setOption(String option, String val) {
+      cu.setOption(option, val);
+    }
+    public InputStream getUnfilteredInputStream() {
+      return cu.getUnfilteredInputStream();
+    }
+    public InputStream getUnfilteredInputStream(HashedInputStream.Hasher hasher) {
+      return cu.getUnfilteredInputStream(hasher);
+    }
+    public InputStream getUncompressedInputStream() {
+      return cu.getUncompressedInputStream();
+    }
+    public InputStream getUncompressedInputStream(HashedInputStream.Hasher
+                                                  hasher) {
+      return cu.getUncompressedInputStream(hasher);
+    }
+    public InputStream openForHashing() {
+      return cu.openForHashing();
+    }
+    public InputStream openForHashing(HashedInputStream.Hasher hasher) {
+      return cu.openForHashing(hasher);
+    }
+    public Reader openForReading() {
+      return cu.openForReading();
+    }
+    public LinkRewriterFactory getLinkRewriterFactory() {
+      return cu.getLinkRewriterFactory();
+    }
+    public CIProperties getProperties() {
+      return cu.getProperties();
+    }
+    public void addProperty(String key, String value) {
+      cu.addProperty(key, value);
+    }
+    public long getContentSize() {
+      return cu.getContentSize();
+    }
+    public String getContentType() {
+      return cu.getContentType();
+    }
+    public String getEncoding() {
+      return cu.getEncoding();
+    }
+    public ArchivalUnit getArchivalUnit() {
+      return cu.getArchivalUnit();
+    }
+    public void release() {
+      cu.release();
+    }
+    public FileMetadataExtractor getFileMetadataExtractor(MetadataTarget target) {
+      return cu.getFileMetadataExtractor(target);
+    }
+    public CachedUrl getArchiveMemberCu(ArchiveMemberSpec ams) {
+      return cu.getArchiveMemberCu(ams);
+    }
+    public boolean isArchiveMember() {
+      return cu.isArchiveMember();
+    }
+    public boolean isLeaf() {
+      return cu.isLeaf();
+    }
+    public boolean hasContent() {
+      return cu.hasContent();
+    }
+    public int getType() {
+      return cu.getType();
+    }
+
+    public String toString() {
+      return "[V2CU: " + getUrl() + ": " + cu + "]";
+    }
+  }
+
   CachedUrl[] cuVersions;
   CachedUrl curVer;
+  List<V2CompatCU> pendingV2CompatCUs = null;
+  List<V2CompatCU> processingV2CompatCUs = null;
+  boolean isV2Compat = true;
   int vix = -1;
   private long verBytesRead;
   private long verBytesHashed;
   InputStream is = null;
+  CIProperties verProps;
   MessageDigest[] peerDigests;
   List<Pattern> excludeUrlPats;
   private HashMap<String,MessageDigest> localHashDigestMap = null;
@@ -296,41 +399,72 @@ public class BlockHasher extends GenericHasher {
   
   // return false iff no more versions
   protected boolean startVersion() {
-    if (++vix >= cuVersions.length) {
-      return false;
-    }
-    curVer = cuVersions[vix];
-    verBytesRead = 0;
-    cloneDigests();
-
-    String useHashAlgorithm = startVersionLocalHash();
-
-    // Account for nonce in hash count
-    verBytesHashed = nonceLength();
-    try {
-      HashedInputStream.Hasher hasher = null;
-      if (useHashAlgorithm != null) {
-	hasher = getStreamHasher(useHashAlgorithm);
-      }
-      if (hasher == null) {
-	is = getInputStream(curVer);
+    while (true) {
+      if (++vix >= cuVersions.length) {
+        return false;
       } else {
-	if (isTrace) log.debug3("Local hash for " + curVer.getUrl());
-	currentVersionLocalHasher = hasher;
-	is = getInputStream(curVer, currentVersionLocalHasher);
+        curVer = cuVersions[vix];
       }
-      return true;
-    } catch (OutOfMemoryError e) {
-      // Log and rethrow OutOfMemoryError so can see what file caused it.
-      // No stack trace, as it's uninformative and reduces chance message
-      // will actually be logged.
-      log.error("OutOfMemoryError opening CU for hashing: " + curVer);
-      throw e;
-    } catch (RuntimeException e) {
-      log.error("Error opening CU for hashing: " + curVer, e);
-      endVersion(e);
-      return true;
+      verProps = curVer.getProperties();
+      verBytesRead = 0;
+      cloneDigests();
+
+      String useHashAlgorithm = startVersionLocalHash();
+
+      // Account for nonce in hash count
+      verBytesHashed = nonceLength();
+      try {
+        HashedInputStream.Hasher hasher = null;
+        if (useHashAlgorithm != null) {
+          hasher = getStreamHasher(useHashAlgorithm);
+        }
+        if (hasher == null) {
+          // If we're in V2 compatibility mode and not already
+          // processing the V2 URLs ...
+          if (isV2Compat && processingV2CompatCUs == null) {
+            // Handle URLs ending with slash, which V1 repo
+            // incorrectly stores without final slash
+            String url = curVer.getUrl();
+            String nodeUrl = verProps.getProperty(CachedUrl.PROPERTY_NODE_URL);
+            String redirTo = verProps.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO);
+            if (UrlUtil.isDirectoryRedirection(url, nodeUrl)) {
+              // This was collected as "foo/", not the result of a
+              // redirect.  Defer it and process only as "foo/"
+              enqueueSlashCU(curVer, nodeUrl);
+              continue;
+            } else if (UrlUtil.isDirectoryRedirection(url, redirTo)) {
+              // This was redirected from "foo" to "foo/".  Process
+              // as "foo" and again as "foo/" to match what V2 would
+              // have done.
+              enqueueSlashCU(curVer, redirTo);
+            }
+          }
+          is = getInputStream(curVer);
+        } else {
+          if (isTrace) log.debug3("Local hash for " + curVer.getUrl());
+          currentVersionLocalHasher = hasher;
+          is = getInputStream(curVer, currentVersionLocalHasher);
+        }
+        return true;
+      } catch (OutOfMemoryError e) {
+        // Log and rethrow OutOfMemoryError so can see what file caused it.
+        // No stack trace, as it's uninformative and reduces chance message
+        // will actually be logged.
+        log.error("OutOfMemoryError opening CU for hashing: " + curVer);
+        throw e;
+      } catch (RuntimeException e) {
+        log.error("Error opening CU for hashing: " + curVer, e);
+        endVersion(e);
+        return true;
+      }
     }
+  }
+
+  private void enqueueSlashCU(CachedUrl cu, String v2Url) {
+    if (pendingV2CompatCUs == null) {
+      pendingV2CompatCUs = new ArrayList<>(maxVersions);
+    }
+    pendingV2CompatCUs.add(new V2CompatCU(cu, v2Url));
   }
 
   /** Return the algorithm to use for local hash for the current file, or
@@ -342,7 +476,6 @@ public class BlockHasher extends GenericHasher {
       // hash in properties
       useAlg = localHashAlgorithm;
       currentVersionStoredHash = null;
-      CIProperties verProps = curVer.getProperties();
       if (verProps.containsKey(CachedUrl.PROPERTY_CHECKSUM)) {
 	// Parse the hash in the properties
 	String cksumProp = verProps.getProperty(CachedUrl.PROPERTY_CHECKSUM);
@@ -411,16 +544,39 @@ public class BlockHasher extends GenericHasher {
     return new HashedInputStream.Hasher(dig);
   }
 
-  protected void startNode() {
-    getCurrentCu();
-    if (isTrace) log.debug3("startNode(" + curCu + ")");
-    hblock = new HashBlock(curCu);    
-    vix = -1;
-    if (isExcludeSuspectVersions) {
-      cuVersions = pruneSuspectVersions(curCu);
-    } else {
-      cuVersions = curCu.getCuVersions(getMaxVersions());
+  protected CachedUrlSetNode getNextNode() {
+    if (pendingV2CompatCUs != null) {
+      if (!iterator.hasNext() ||
+          StringUtil.preOrderCompareTo(pendingV2CompatCUs.get(0).getUrl(),
+                                       ((CachedUrl)iterator.peek()).getUrl()) <= 0) {
+        processingV2CompatCUs = pendingV2CompatCUs;
+        pendingV2CompatCUs = null;
+        return processingV2CompatCUs.get(0);
+      }
     }
+    return super.getNextNode();
+  }
+
+  protected void startNode() {
+    if (processingV2CompatCUs != null &&
+        StringUtil.preOrderCompareTo(processingV2CompatCUs.get(0).v2Url,
+                                     curNode.getUrl())
+        <= 0) {
+      cuVersions = processingV2CompatCUs.stream()
+        .toArray(CachedUrl[]::new);
+      curCu = cuVersions[0];
+      vix = -1;
+    } else {
+      getCurrentCu();
+      if (isTrace) log.debug3("startNode(" + curCu + ")");
+      vix = -1;
+      if (isExcludeSuspectVersions) {
+        cuVersions = pruneSuspectVersions(curCu);
+      } else {
+        cuVersions = curCu.getCuVersions(getMaxVersions());
+      }
+    }
+    hblock = new HashBlock(curCu);
   }
   
   private CachedUrl[] pruneSuspectVersions(CachedUrl cu) {
@@ -447,6 +603,7 @@ public class BlockHasher extends GenericHasher {
   }
 
   protected void endOfNode() {
+    processingV2CompatCUs = null;
     super.endOfNode();
     if (hblock != null) {
       if (cb != null) cb.blockDone(hblock);
@@ -468,7 +625,7 @@ public class BlockHasher extends GenericHasher {
 	return 0;
       }
       if (includeUrl) {
-	byte [] nameBytes = curCu.getUrl().getBytes();
+	byte [] nameBytes = curVer.getUrl().getBytes();
 	int hashed = updateDigests(nameBytes, nameBytes.length);
 	bytesHashed += hashed;
       }
