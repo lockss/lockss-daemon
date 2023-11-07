@@ -582,7 +582,7 @@
 
       param[journal_id] = ijasse
 
-      au < frozen ; exists ; 2021 ; International Journal of Aerospace System Science and Engineering Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
+      au < finished ; manifest ; 2021 ; International Journal of Aerospace System Science and Engineering Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 > #issue 2, 3, 4 not online
 
     }
 
@@ -663,8 +663,8 @@
 
       param[journal_id] = ijaitg
 
-      au < frozen ; exists ; 2019-2020 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2021 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2019-2020 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2022-2023 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
@@ -1433,8 +1433,8 @@
 
       param[journal_id] = ijbc
 
-      au < frozen ; exists ; 2019-2020 ; International Journal of Blockchains and Cryptocurrencies Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2021 ; International Journal of Blockchains and Cryptocurrencies Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2019-2020 ; International Journal of Blockchains and Cryptocurrencies Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; International Journal of Blockchains and Cryptocurrencies Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2022 ; International Journal of Blockchains and Cryptocurrencies Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2023 ; International Journal of Blockchains and Cryptocurrencies Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
 
@@ -1451,7 +1451,7 @@
 
       param[journal_id] = ijbda
 
-      au < frozen ; exists ; 2019-2020 ; International Journal of Business and Data Analytics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2019-2020 ; International Journal of Business and Data Analytics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2022-2023 ; International Journal of Business and Data Analytics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -3043,10 +3043,10 @@
 
       param[journal_id] = ijdsss
 
-      au < frozen ; exists ; 2017 ; International Journal of Digital Signals and Smart Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2018 ; International Journal of Digital Signals and Smart Systems Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2019 ; International Journal of Digital Signals and Smart Systems Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2020 ; International Journal of Digital Signals and Smart Systems Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2017 ; International Journal of Digital Signals and Smart Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; International Journal of Digital Signals and Smart Systems Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2019 ; International Journal of Digital Signals and Smart Systems Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; International Journal of Digital Signals and Smart Systems Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2021-2023 ; International Journal of Digital Signals and Smart Systems Volume 5 [partial] ; 5 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
     }
@@ -5001,7 +5001,7 @@
 
       param[journal_id] = ijhi
 
-      au < frozen ; exists ; 2019 ; International Journal of Hybrid Intelligence Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2019 ; International Journal of Hybrid Intelligence Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2021-2023 ; International Journal of Hybrid Intelligence Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -5045,10 +5045,10 @@
       param[journal_id] = ijhm
 
       au < crawling ; exists ; 2018 ; International Journal of Hydromechatronics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2019 ; International Journal of Hydromechatronics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2020 ; International Journal of Hydromechatronics Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2019 ; International Journal of Hydromechatronics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2020 ; International Journal of Hydromechatronics Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2021 ; International Journal of Hydromechatronics Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2022 ; International Journal of Hydromechatronics Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2022 ; International Journal of Hydromechatronics Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2023 ; International Journal of Hydromechatronics Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -5712,7 +5712,7 @@
 
       param[journal_id] = ijisc
 
-      au < frozen ; exists ; 2020-2021 ; International Journal of Intelligence and Sustainable Computing Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #issue 4 not online
+      au < finished ; manifest ; 2020-2021 ; International Journal of Intelligence and Sustainable Computing Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 > #issue 4 not online
 
     }
 
@@ -5826,7 +5826,7 @@
 
       param[journal_id] = ijiitc
 
-      au < frozen ; exists ; 2019-2022 ; International Journal of Intelligent Internet of Things Computing Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2019-2022 ; International Journal of Intelligent Internet of Things Computing Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2023-2026 ; International Journal of Intelligent Internet of Things Computing Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -8184,7 +8184,7 @@
 
       au < doNotProcess ; doNotProcess ; 2011-2013 ; International Journal of Planning and Scheduling Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2018 ; International Journal of Planning and Scheduling Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2019-2021 ; International Journal of Planning and Scheduling Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
+      au < finished ; manifest ; 2019-2021 ; International Journal of Planning and Scheduling Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 > #issue 3, 4 not online
 
     }
 
@@ -9443,7 +9443,7 @@
       au < doNotProcess ; doNotProcess ; 2008-2012 ; International Journal of Social and Humanistic Computing Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2013-2017 ; International Journal of Social and Humanistic Computing Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2018-2020 ; International Journal of Social and Humanistic Computing Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2021 ; International Journal of Social and Humanistic Computing Volume 4 [partial] ; 4 ; https://www.inderscienceonline.com/ ; > #issue2, 3, 4 not online
+      au < finished ; manifest ; 2021 ; International Journal of Social and Humanistic Computing Volume 4 [partial] ; 4 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 > #issue2, 3, 4 not online
 
     }
 
@@ -9459,7 +9459,7 @@
       param[journal_id] = ijsccps
 
       au < finished ; finished ; 2011-2016 ; International Journal of Social Computing and Cyber-Physical Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2017-2021 ; International Journal of Social Computing and Cyber-Physical Systems Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ ; > #issue 4 not online
+      au < finished ; manifest ; 2017-2021 ; International Journal of Social Computing and Cyber-Physical Systems Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 > #issue 4 not online
 
     }
 
@@ -9598,7 +9598,7 @@
 
        param[journal_id] = ijstds
 
-      au < frozen ; exists ; 2019-2021 ; Spatio-Temporal Data Science Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; > #isuue 4 not online
+      au < finished ; manifest ; 2019-2021 ; Spatio-Temporal Data Science Volume 1 [partial] ; 1 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 > #isuue 4 not online
 
     }
 
@@ -11040,7 +11040,7 @@
 
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Web Science Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Web Science Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2017-2022 ; International Journal of Web Science Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ ; > #issue 4 not online
+      au < finished ; manifest ; 2017-2022 ; International Journal of Web Science Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 > #issue 4 not online
 
     }
 
@@ -11860,7 +11860,7 @@
 
       au < finished ; finished ; 2016 ; International Journal of Multinational Corporation Strategy Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017-2018 ; International Journal of Multinational Corporation Strategy Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2020 ; International Journal of Multinational Corporation Strategy Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
+      au < finished ; manifest ; 2020 ; International Journal of Multinational Corporation Strategy Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 > #issue 3, 4 not online
 
   }
 
@@ -12011,7 +12011,7 @@
       au < finished ; finished ; 2017 ; International Journal of Research, Innovation and Commercialisation Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018-2019 ; International Journal of Research, Innovation and Commercialisation Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2020-2021 ; International Journal of Research, Innovation and Commercialisation Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2022 ; International Journal of Research, Innovation and Commercialisation Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2022 ; International Journal of Research, Innovation and Commercialisation Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < manifest ; exists ; 2023 ; International Journal of Research, Innovation and Commercialisation Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
 
   }
