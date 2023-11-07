@@ -1198,8 +1198,8 @@
 
       param[journal_id] = ijbdm
 
-      au < crawling ; exists ; 2020 ; International Journal of Big Data Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < crawling ; exists ; 2022 ; International Journal of Big Data Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < frozen ; exists ; 2020 ; International Journal of Big Data Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < frozen ; exists ; 2022 ; International Journal of Big Data Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2023 ; International Journal of Big Data Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -5047,7 +5047,7 @@
       au < crawling ; exists ; 2018 ; International Journal of Hydromechatronics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < frozen ; exists ; 2019 ; International Journal of Hydromechatronics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < frozen ; exists ; 2020 ; International Journal of Hydromechatronics Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
-      au < crawling ; exists ; 2021 ; International Journal of Hydromechatronics Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < frozen ; exists ; 2021 ; International Journal of Hydromechatronics Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < frozen ; exists ; 2022 ; International Journal of Hydromechatronics Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2023 ; International Journal of Hydromechatronics Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
@@ -6034,7 +6034,7 @@
 
       param[journal_id] = ijitca
 
-      au < crawling ; exists ; 2018-2020 ; International Journal of Internet of Things and Cyber-Assurance Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < frozen ; exists ; 2018-2020 ; International Journal of Internet of Things and Cyber-Assurance Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < ingNotReady ; exists ; 2022-2023 ; International Journal of Internet of Things and Cyber-Assurance Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
@@ -7854,7 +7854,7 @@
  
        param[journal_id] = ijndc
  
-      au < crawling ; exists ; 2017-2019 ; International Journal of Nonlinear Dynamics and Control Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < frozen ; exists ; 2017-2019 ; International Journal of Nonlinear Dynamics and Control Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2021-2023 ; International Journal of Nonlinear Dynamics and Control Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
     }
