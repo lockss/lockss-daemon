@@ -529,14 +529,15 @@
 #    param[base_url] = https://www.ayuhom.com/
 
     param[journal_issn] = 2349-2422
+    #move to LWW in 2023, moved https://journals.lww.com/ayuh/
 
-    au < notReady ; exists ; 2017 ; AYUHOM Volume 4 ; 2017 ; 4 ; https://www.ayuhom.com/ ; ; > #500 error
+    au < doNotProcess ; exists ; 2017 ; AYUHOM Volume 4 ; 2017 ; 4 ; https://www.ayuhom.com/ ; ; > #500 error
     au < finished ; frozen ; 2018 ; AYUHOM Volume 5 ; 2018 ; 5 ; https://www.ayuhom.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2019 ; AYUHOM Volume 6 ; 2019 ; 6 ; https://www.ayuhom.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2020 ; AYUHOM Volume 7 ; 2020 ; 7 ; https://www.ayuhom.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; AYUHOM Volume 8 ; 2021 ; 8 ; https://www.ayuhom.com/ ; ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2022 ; AYUHOM Volume 9 ; 2022 ; 9 ; https://www.ayuhom.com/ ; ; >
-    au < crawling ; exists ; 2023 ; AYUHOM Volume 10 ; 2023 ; 10 ; https://www.ayuhom.com/ ; ; >
+    au < frozen ; exists ; 2022 ; AYUHOM Volume 9 ; 2022 ; 9 ; https://www.ayuhom.com/ ; ; >
+    au < frozen ; exists ; 2023 ; AYUHOM Volume 10 ; 2023 ; 10 ; https://www.ayuhom.com/ ; ; >
 
   }
 
@@ -549,9 +550,10 @@
    >
 
     param[journal_issn] = 2949-7973
+    #move to LWW in 2023, moved https://journals.lww.com/bjem/
 
     au < frozen ; exists ; 2022 ; Bangladesh Journal of Endocrinology and Metabolism Volume 1 ; 2022 ; 1 ; https://www.bjem.org/ ; ; >
-    au < crawling ; exists ; 2023 ; Bangladesh Journal of Endocrinology and Metabolism Volume 2 ; 2023 ; 2 ; https://www.bjem.org/ ; ; >
+    au < frozen ; exists ; 2023 ; Bangladesh Journal of Endocrinology and Metabolism Volume 2 ; 2023 ; 2 ; https://www.bjem.org/ ; ; >
 
   }
 
@@ -718,6 +720,7 @@
 #    param[base_url] = http://www.drjjournal.net/
 
     param[journal_issn] = 1735-3327
+      #move to LWW in 2023, moved https://journals.lww.com/derj/
 
     au < finished ; finished ; 2015 ; Dental Research Journal Volume 12 ; 2015 ; 12 ; http://www.drjjournal.net/ ; ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2016 ; Dental Research Journal Volume 13 ; 2016 ; 13 ; http://www.drjjournal.net/ ; ; reingest3.clockss.org:8083 >
@@ -725,9 +728,9 @@
     au < finished ; finished ; 2018 ; Dental Research Journal Volume 15 ; 2018 ; 15 ; http://www.drjjournal.net/ ; ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2019 ; Dental Research Journal Volume 16 ; 2019 ; 16 ; https://www.drjjournal.net/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2020 ; Dental Research Journal Volume 17 ; 2020 ; 17 ; https://www.drjjournal.net/ ; ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2021 ; Dental Research Journal Volume 18 ; 2021 ; 18 ; https://www.drjjournal.net/ ; ; >
-    au < deepCrawl ; exists ; 2022 ; Dental Research Journal Volume 19 ; 2022 ; 19 ; https://www.drjjournal.net/ ; ; >
-    au < crawling ; exists ; 2023 ; Dental Research Journal Volume 20 ; 2023 ; 20 ; https://www.drjjournal.net/ ; ; >
+    au < frozen ; exists ; 2021 ; Dental Research Journal Volume 18 ; 2021 ; 18 ; https://www.drjjournal.net/ ; ; >
+    au < frozen ; exists ; 2022 ; Dental Research Journal Volume 19 ; 2022 ; 19 ; https://www.drjjournal.net/ ; ; >
+    au < frozen ; exists ; 2023 ; Dental Research Journal Volume 20 ; 2023 ; 20 ; https://www.drjjournal.net/ ; ; >
 
   }
 
@@ -4640,8 +4643,9 @@
 #    param[base_url] = http://www.rpe.org.in/
 
     param[journal_issn] = 0972-0464
+    #move to LWW in 2023, moved https://journals.lww.com/rpae/
 
-    au < manifest ; exists ; 2010 ; Radiation Protection and Environment Volume 33 ; 2010 ; 33 ; https://www.rpe.org.in/ ; ; >
+    au < doNotProcess ; exists ; 2010 ; Radiation Protection and Environment Volume 33 ; 2010 ; 33 ; https://www.rpe.org.in/ ; ; >
     au < finished ; finished ; 2011 ; Radiation Protection and Environment Volume 34 ; 2011 ; 34 ; http://www.rpe.org.in/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2012 ; Radiation Protection and Environment Volume 35 ; 2012 ; 35 ; http://www.rpe.org.in/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2013 ; Radiation Protection and Environment Volume 36 ; 2013 ; 36 ; http://www.rpe.org.in/ ; ; reingest4.clockss.org:8082 >
@@ -4652,9 +4656,9 @@
     au < finished ; finished ; 2018 ; Radiation Protection and Environment Volume 41 ; 2018 ; 41 ; http://www.rpe.org.in/ ; ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2019 ; Radiation Protection and Environment Volume 42 ; 2019 ; 42 ; https://www.rpe.org.in/ ; ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2020 ; Radiation Protection and Environment Volume 43 ; 2020 ; 43 ; https://www.rpe.org.in/ ; ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2021 ; Radiation Protection and Environment Volume 44 ; 2021 ; 44 ; https://www.rpe.org.in/ ; ; >
-    au < deepCrawl ; exists ; 2022 ; Radiation Protection and Environment Volume 45 ; 2022 ; 45 ; https://www.rpe.org.in/ ; ; >
-    au < crawling ; exists ; 2023 ; Radiation Protection and Environment Volume 46 ; 2023 ; 46 ; https://www.rpe.org.in/ ; ; >
+    au < frozen ; exists ; 2021 ; Radiation Protection and Environment Volume 44 ; 2021 ; 44 ; https://www.rpe.org.in/ ; ; >
+    au < frozen ; exists ; 2022 ; Radiation Protection and Environment Volume 45 ; 2022 ; 45 ; https://www.rpe.org.in/ ; ; >
+    au < frozen ; exists ; 2023 ; Radiation Protection and Environment Volume 46 ; 2023 ; 46 ; https://www.rpe.org.in/ ; ; >
 
   }
 #  {
@@ -5061,19 +5065,20 @@
       param[journal_issn] = 2277-9175
 #      param[base_url] = http://www.advbiores.net/
       #browse. no back issues page.
+      #move to LWW in 2023, moved https://journals.lww.com/adbm/
 
       au < finished ; frozen ; 2012 ; Advanced Biomedical Research Volume 1 ; 2012 ; 1 ; https://www.advbiores.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2013 ; Advanced Biomedical Research Volume 2 ; 2013 ; 2 ; https://www.advbiores.net/ ; ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2014 ; Advanced Biomedical Research Volume 3 ; 2014 ; 3 ; https://www.advbiores.net/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2015 ; Advanced Biomedical Research Volume 4 ; 2015 ; 4 ; https://www.advbiores.net/ ; ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2016 ; Advanced Biomedical Research Volume 5 ; 2016 ; 5 ; https://www.advbiores.net/ ; ; reingest5.clockss.org:8082 >
-      au < notReady ; exists ; 2017 ; Advanced Biomedical Research Volume 6 ; 2017 ; 6 ; https://www.advbiores.net/ ; ; >#500 error
+      au < doNotProcess ; exists ; 2017 ; Advanced Biomedical Research Volume 6 ; 2017 ; 6 ; https://www.advbiores.net/ ; ; >#500 error
       au < finished ; frozen ; 2018 ; Advanced Biomedical Research Volume 7 ; 2018 ; 7 ; https://www.advbiores.net/ ; ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2019 ; Advanced Biomedical Research Volume 8 ; 2019 ; 8 ; https://www.advbiores.net/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2020 ; Advanced Biomedical Research Volume 9 ; 2020 ; 9 ; https://www.advbiores.net/ ; ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Advanced Biomedical Research Volume 10 ; 2021 ; 10 ; https://www.advbiores.net/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Advanced Biomedical Research Volume 11 ; 2022 ; 11 ; https://www.advbiores.net/ ; ; >
-      au < crawling ; exists ; 2023 ; Advanced Biomedical Research Volume 12 ; 2023 ; 12 ; https://www.advbiores.net/ ; ; >
+      au < frozen ; exists ; 2021 ; Advanced Biomedical Research Volume 10 ; 2021 ; 10 ; https://www.advbiores.net/ ; ; >
+      au < frozen ; exists ; 2022 ; Advanced Biomedical Research Volume 11 ; 2022 ; 11 ; https://www.advbiores.net/ ; ; >
+      au < frozen ; exists ; 2023 ; Advanced Biomedical Research Volume 12 ; 2023 ; 12 ; https://www.advbiores.net/ ; ; >
 
   }
 
@@ -5457,15 +5462,16 @@
 
       param[journal_issn] = 2468-838X
 #      param[base_url] = http://www.bldeujournalhs.in/
+      #move to LWW in 2023, moved https://journals.lww.com/blde/
 
       au < finished ; finished ; 2016 ; BLDE University Journal of Health Sciences Volume 1 ; 2016 ; 1 ; http://www.bldeujournalhs.in/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; BLDE University Journal of Health Sciences Volume 2 ; 2017 ; 2 ; http://www.bldeujournalhs.in/ ; ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2018 ; BLDE University Journal of Health Sciences Volume 3 ; 2018 ; 3 ; http://www.bldeujournalhs.in/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2019 ; BLDE University Journal of Health Sciences Volume 4 ; 2019 ; 4 ; https://www.bldeujournalhs.in/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2020 ; BLDE University Journal of Health Sciences Volume 5 ; 2020 ; 5 ; https://www.bldeujournalhs.in/ ; ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; BLDE University Journal of Health Sciences Volume 6 ; 2021 ; 6 ; https://www.bldeujournalhs.in/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; BLDE University Journal of Health Sciences Volume 7 ; 2022 ; 7 ; https://www.bldeujournalhs.in/ ; ; >
-      au < crawling ; exists ; 2023 ; BLDE University Journal of Health Sciences Volume 8 ; 2023 ; 8 ; https://www.bldeujournalhs.in/ ; ; >
+      au < frozen ; exists ; 2021 ; BLDE University Journal of Health Sciences Volume 6 ; 2021 ; 6 ; https://www.bldeujournalhs.in/ ; ; >
+      au < frozen ; exists ; 2022 ; BLDE University Journal of Health Sciences Volume 7 ; 2022 ; 7 ; https://www.bldeujournalhs.in/ ; ; >
+      au < frozen ; exists ; 2023 ; BLDE University Journal of Health Sciences Volume 8 ; 2023 ; 8 ; https://www.bldeujournalhs.in/ ; ; >
 
   }
 
@@ -7817,6 +7823,7 @@
 
       param[journal_issn] = 2278-0203
 #      param[base_url] = http://www.jorthodsci.org/
+      #move to LWW in 2023, moved https://journals.lww.com/joos/
 
       au < finished ; finished ; 2012 ; Journal of Orthodontic Science Volume 1 ; 2012 ; 1 ; http://www.jorthodsci.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Journal of Orthodontic Science Volume 2 ; 2013 ; 2 ; http://www.jorthodsci.org/ ; ; reingest2.clockss.org:8085 >
@@ -7827,9 +7834,9 @@
       au < finished ; frozen ; 2018 ; Journal of Orthodontic Science Volume 7 ; 2018 ; 7 ; http://www.jorthodsci.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2019 ; Journal of Orthodontic Science Volume 8 ; 2019 ; 8 ; https://www.jorthodsci.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2020 ; Journal of Orthodontic Science Volume 9 ; 2020 ; 9 ; https://www.jorthodsci.org/ ; ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Journal of Orthodontic Science Volume 10 ; 2021 ; 10 ; https://www.jorthodsci.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of Orthodontic Science Volume 11 ; 2022 ; 11 ; https://www.jorthodsci.org/ ; ; >
-      au < crawling ; exists ; 2023 ; Journal of Orthodontic Science Volume 12 ; 2023 ; 12 ; https://www.jorthodsci.org/ ; ; >
+      au < frozen ; exists ; 2021 ; Journal of Orthodontic Science Volume 10 ; 2021 ; 10 ; https://www.jorthodsci.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of Orthodontic Science Volume 11 ; 2022 ; 11 ; https://www.jorthodsci.org/ ; ; >
+      au < frozen ; exists ; 2023 ; Journal of Orthodontic Science Volume 12 ; 2023 ; 12 ; https://www.jorthodsci.org/ ; ; >
 
   }
 
@@ -8162,6 +8169,7 @@
 
       param[journal_issn] = 2394-7438
 #      param[base_url] = http://www.mamcjms.in/
+      #move to LWW in 2023, moved https://journals.lww.com/mamc/
 
       au < finished ; frozen ; 2015 ; MAMC Journal of Medical Sciences Volume 1 ; 2015 ; 1 ; http://www.mamcjms.in/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; MAMC Journal of Medical Sciences Volume 2 ; 2016 ; 2 ; http://www.mamcjms.in/ ; ; reingest3.clockss.org:8083 >
@@ -8169,9 +8177,9 @@
       au < finished ; frozen ; 2018 ; MAMC Journal of Medical Sciences Volume 4 ; 2018 ; 4 ; http://www.mamcjms.in/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; MAMC Journal of Medical Sciences Volume 5 ; 2019 ; 5 ; https://www.mamcjms.in/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2020 ; MAMC Journal of Medical Sciences Volume 6 ; 2020 ; 6 ; https://www.mamcjms.in/ ; ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2021 ; MAMC Journal of Medical Sciences Volume 7 ; 2021 ; 7 ; https://www.mamcjms.in/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; MAMC Journal of Medical Sciences Volume 8 ; 2022 ; 8 ; https://www.mamcjms.in/ ; ; >
-      au < crawling ; exists ; 2023 ; MAMC Journal of Medical Sciences Volume 9 ; 2023 ; 9 ; https://www.mamcjms.in/ ; ; >
+      au < frozen ; exists ; 2021 ; MAMC Journal of Medical Sciences Volume 7 ; 2021 ; 7 ; https://www.mamcjms.in/ ; ; >
+      au < frozen ; exists ; 2022 ; MAMC Journal of Medical Sciences Volume 8 ; 2022 ; 8 ; https://www.mamcjms.in/ ; ; >
+      au < frozen ; exists ; 2023 ; MAMC Journal of Medical Sciences Volume 9 ; 2023 ; 9 ; https://www.mamcjms.in/ ; ; >
 
   }
 
@@ -8346,6 +8354,7 @@
 
       param[journal_issn] = 0331-8540
 #      param[base_url] = http://www.njbcs.net/
+      #move to LWW in 2023, moved https://journals.lww.com/nbcs/
 
       au < finished ; finished ; 2012 ; Nigerian Journal of Basic and Clinical Sciences Volume 9 ; 2012 ; 9 ; http://www.njbcs.net/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Nigerian Journal of Basic and Clinical Sciences Volume 10 ; 2013 ; 10 ; http://www.njbcs.net/ ; ; reingest4.clockss.org:8082 >
@@ -8356,9 +8365,9 @@
       au < finished ; finished ; 2018 ; Nigerian Journal of Basic and Clinical Sciences Volume 15 ; 2018 ; 15 ; http://www.njbcs.net/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Nigerian Journal of Basic and Clinical Sciences Volume 16 ; 2019 ; 16 ; https://www.njbcs.net/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2020 ; Nigerian Journal of Basic and Clinical Sciences Volume 17 ; 2020 ; 17 ; https://www.njbcs.net/ ; ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2021 ; Nigerian Journal of Basic and Clinical Sciences Volume 18 ; 2021 ; 18 ; https://www.njbcs.net/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Nigerian Journal of Basic and Clinical Sciences Volume 19 ; 2022 ; 19 ; https://www.njbcs.net/ ; ; >
-      au < crawling ; exists ; 2023 ; Nigerian Journal of Basic and Clinical Sciences Volume 20 ; 2023 ; 20 ; https://www.njbcs.net/ ; ; >
+      au < frozen ; exists ; 2021 ; Nigerian Journal of Basic and Clinical Sciences Volume 18 ; 2021 ; 18 ; https://www.njbcs.net/ ; ; >
+      au < frozen ; exists ; 2022 ; Nigerian Journal of Basic and Clinical Sciences Volume 19 ; 2022 ; 19 ; https://www.njbcs.net/ ; ; >
+      au < frozen ; exists ; 2023 ; Nigerian Journal of Basic and Clinical Sciences Volume 20 ; 2023 ; 20 ; https://www.njbcs.net/ ; ; >
 
   }
 
@@ -8726,6 +8735,7 @@
 
       param[journal_issn] = 2278-0521
 #      param[base_url] = http://www.saudijhealthsci.org/
+      #move to LWW in 2023, moved https://journals.lww.com/sjhs/
 
       au < finished ; frozen ; 2012 ; Saudi Journal for Health Sciences Volume 1 ; 2012 ; 1 ; http://www.saudijhealthsci.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2013 ; Saudi Journal for Health Sciences Volume 2 ; 2013 ; 2 ; http://www.saudijhealthsci.org/ ; ; reingest4.clockss.org:8082 >
@@ -8736,9 +8746,9 @@
       au < finished ; finished ; 2018 ; Saudi Journal for Health Sciences Volume 7 ; 2018 ; 7 ; http://www.saudijhealthsci.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2019 ; Saudi Journal for Health Sciences Volume 8 ; 2019 ; 8 ; https://www.saudijhealthsci.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2020 ; Saudi Journal for Health Sciences Volume 9 ; 2020 ; 9 ; https://www.saudijhealthsci.org/ ; ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; Saudi Journal for Health Sciences Volume 10 ; 2021 ; 10 ; https://www.saudijhealthsci.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Saudi Journal for Health Sciences Volume 11 ; 2022 ; 11 ; https://www.saudijhealthsci.org/ ; ; >
-      au < crawling ; exists ; 2023 ; Saudi Journal for Health Sciences Volume 12 ; 2023 ; 12 ; https://www.saudijhealthsci.org/ ; ; >
+      au < frozen ; exists ; 2021 ; Saudi Journal for Health Sciences Volume 10 ; 2021 ; 10 ; https://www.saudijhealthsci.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Saudi Journal for Health Sciences Volume 11 ; 2022 ; 11 ; https://www.saudijhealthsci.org/ ; ; >
+      au < frozen ; exists ; 2023 ; Saudi Journal for Health Sciences Volume 12 ; 2023 ; 12 ; https://www.saudijhealthsci.org/ ; ; >
 
   }
 
@@ -8909,8 +8919,9 @@
 
       param[journal_issn] = 0976-433X
 #      param[base_url] = http://www.srmjrds.in/
+      #move to LWW in 2023, moved https://journals.lww.com/srmj/
 
-      au < manifest ; exists ; 2010 ; SRM Journal of Research in Dental Sciences Volume 1 ; 2010 ; 1 ; https://www.srmjrds.in/ ; ; >
+      au < doNotProcess ; exists ; 2010 ; SRM Journal of Research in Dental Sciences Volume 1 ; 2010 ; 1 ; https://www.srmjrds.in/ ; ; >
       au < finished ; finished ; 2011 ; SRM Journal of Research in Dental Sciences Volume 2 ; 2011 ; 2 ; http://www.srmjrds.in/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2012 ; SRM Journal of Research in Dental Sciences Volume 3 ; 2012 ; 3 ; http://www.srmjrds.in/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2013 ; SRM Journal of Research in Dental Sciences Volume 4 ; 2013 ; 4 ; http://www.srmjrds.in/ ; ; reingest4.clockss.org:8082 >
@@ -8921,9 +8932,9 @@
       au < finished ; finished ; 2018 ; SRM Journal of Research in Dental Sciences Volume 9 ; 2018 ; 9 ; http://www.srmjrds.in/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; SRM Journal of Research in Dental Sciences Volume 10 ; 2019 ; 10 ; https://www.srmjrds.in/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2020 ; SRM Journal of Research in Dental Sciences Volume 11 ; 2020 ; 11 ; https://www.srmjrds.in/ ; ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; SRM Journal of Research in Dental Sciences Volume 12 ; 2021 ; 12 ; https://www.srmjrds.in/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; SRM Journal of Research in Dental Sciences Volume 13 ; 2022 ; 13 ; https://www.srmjrds.in/ ; ; >
-      au < crawling ; exists ; 2023 ; SRM Journal of Research in Dental Sciences Volume 14 ; 2023 ; 14 ; https://www.srmjrds.in/ ; ; >
+      au < frozen ; exists ; 2021 ; SRM Journal of Research in Dental Sciences Volume 12 ; 2021 ; 12 ; https://www.srmjrds.in/ ; ; >
+      au < frozen ; exists ; 2022 ; SRM Journal of Research in Dental Sciences Volume 13 ; 2022 ; 13 ; https://www.srmjrds.in/ ; ; >
+      au < frozen ; exists ; 2023 ; SRM Journal of Research in Dental Sciences Volume 14 ; 2023 ; 14 ; https://www.srmjrds.in/ ; ; >
 
   }
 
@@ -9450,6 +9461,7 @@
 
       param[journal_issn] = 2349-0578
 #      param[base_url] = http://www.actamedicainternational.com/
+    #move to LWW in 2023, moved https://journals.lww.com/amit/
 
       au < finished ; finished ; 2014 ; Acta Medica International Volume 1 ; 2014 ; 1 ; https://www.actamedicainternational.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Acta Medica International Volume 2 ; 2015 ; 2 ; https://www.actamedicainternational.com/ ; ; reingest2.clockss.org:8085 >
@@ -9458,9 +9470,9 @@
       au < finished ; finished ; 2018 ; Acta Medica International Volume 5 ; 2018 ; 5 ; https://www.actamedicainternational.com/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Acta Medica International Volume 6 ; 2019 ; 6 ; https://www.actamedicainternational.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2020 ; Acta Medica International Volume 7 ; 2020 ; 7 ; https://www.actamedicainternational.com/ ; ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2021 ; Acta Medica International Volume 8 ; 2021 ; 8 ; https://www.actamedicainternational.com/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Acta Medica International Volume 9 ; 2022 ; 9 ; https://www.actamedicainternational.com/ ; ; >
-      au < crawling ; exists ; 2023 ; Acta Medica International Volume 10 ; 2023 ; 10 ; https://www.actamedicainternational.com/ ; ; >
+      au < frozen ; exists ; 2021 ; Acta Medica International Volume 8 ; 2021 ; 8 ; https://www.actamedicainternational.com/ ; ; >
+      au < frozen ; exists ; 2022 ; Acta Medica International Volume 9 ; 2022 ; 9 ; https://www.actamedicainternational.com/ ; ; >
+      au < frozen ; exists ; 2023 ; Acta Medica International Volume 10 ; 2023 ; 10 ; https://www.actamedicainternational.com/ ; ; >
 
   }
 
@@ -10809,14 +10821,15 @@
 
       param[journal_issn] = 2543-1463
 #      param[base_url] = http://www.jiaecho.org/
+      #move to LWW in 2023, moved https://journals.lww.com/jiae/
 
       au < finished ; finished ; 2017 ; Journal of Indian Academy of Echocardiography & Cardiovascular Imaging Volume 1 ; 2017 ; 1 ; https://www.jiaecho.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2018 ; Journal of Indian Academy of Echocardiography & Cardiovascular Imaging Volume 2 ; 2018 ; 2 ; https://www.jiaecho.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2019 ; Journal of Indian Academy of Echocardiography & Cardiovascular Imaging Volume 3 ; 2019 ; 3 ; https://www.jiaecho.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; Journal of Indian Academy of Echocardiography & Cardiovascular Imaging Volume 4 ; 2020 ; 4 ; https://www.jiaecho.org/ ; ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2021 ; Journal of Indian Academy of Echocardiography & Cardiovascular Imaging Volume 5 ; 2021 ; 5 ; https://www.jiaecho.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of Indian Academy of Echocardiography & Cardiovascular Imaging Volume 6 ; 2022 ; 6 ; https://www.jiaecho.org/ ; ; >
-      au < crawling ; exists ; 2023 ; Journal of Indian Academy of Echocardiography & Cardiovascular Imaging Volume 7 ; 2023 ; 7 ; https://www.jiaecho.org/ ; ; >
+      au < frozen ; exists ; 2021 ; Journal of Indian Academy of Echocardiography & Cardiovascular Imaging Volume 5 ; 2021 ; 5 ; https://www.jiaecho.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of Indian Academy of Echocardiography & Cardiovascular Imaging Volume 6 ; 2022 ; 6 ; https://www.jiaecho.org/ ; ; >
+      au < frozen ; exists ; 2023 ; Journal of Indian Academy of Echocardiography & Cardiovascular Imaging Volume 7 ; 2023 ; 7 ; https://www.jiaecho.org/ ; ; >
 
   }
 
@@ -11280,13 +11293,14 @@
 
       param[journal_issn] = 1812-156X
 #      param[base_url] = http://www.medjbabylon.org/
+      #move to LWW in 2023, moved https://journals.lww.com/mjby/
 
       au < finished ; finished ; 2018 ; Medical Journal of Babylon Volume 15 ; 2018 ; 15 ; https://www.medjbabylon.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Medical Journal of Babylon Volume 16 ; 2019 ; 16 ; https://www.medjbabylon.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; Medical Journal of Babylon Volume 17 ; 2020 ; 17 ; https://www.medjbabylon.org/ ; ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2021 ; Medical Journal of Babylon Volume 18 ; 2021 ; 18 ; https://www.medjbabylon.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Medical Journal of Babylon Volume 19 ; 2022 ; 19 ; https://www.medjbabylon.org/ ; ; >
-      au < crawling ; exists ; 2023 ; Medical Journal of Babylon Volume 20 ; 2023 ; 20 ; https://www.medjbabylon.org/ ; ; >
+      au < frozen ; exists ; 2021 ; Medical Journal of Babylon Volume 18 ; 2021 ; 18 ; https://www.medjbabylon.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Medical Journal of Babylon Volume 19 ; 2022 ; 19 ; https://www.medjbabylon.org/ ; ; >
+      au < frozen ; exists ; 2023 ; Medical Journal of Babylon Volume 20 ; 2023 ; 20 ; https://www.medjbabylon.org/ ; ; >
 
   }
 
@@ -11453,14 +11467,15 @@
 
       param[journal_issn] = 0973-6549
 #      param[base_url] = http://www.pjiap.org/
+      #move to LWW in 2023, moved https://journals.lww.com/iaph/
 
       au < finished ; finished ; 2017 ; Physiotherapy - The Journal of Indian Association of Physiotherapists Volume 11 ; 2017 ; 11 ; https://www.pjiap.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Physiotherapy - The Journal of Indian Association of Physiotherapists Volume 12 ; 2018 ; 12 ; https://www.pjiap.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Physiotherapy - The Journal of Indian Association of Physiotherapists Volume 13 ; 2019 ; 13 ; https://www.pjiap.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; Physiotherapy - The Journal of Indian Association of Physiotherapists Volume 14 ; 2020 ; 14 ; https://www.pjiap.org/ ; ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2021 ; Physiotherapy - The Journal of Indian Association of Physiotherapists Volume 15 ; 2021 ; 15 ; https://www.pjiap.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Physiotherapy - The Journal of Indian Association of Physiotherapists Volume 16 ; 2022 ; 16 ; https://www.pjiap.org/ ; ; >
-      au < crawling ; exists ; 2023 ; Physiotherapy - The Journal of Indian Association of Physiotherapists Volume 17 ; 2023 ; 17 ; https://www.pjiap.org/ ; ; >
+      au < frozen ; exists ; 2021 ; Physiotherapy - The Journal of Indian Association of Physiotherapists Volume 15 ; 2021 ; 15 ; https://www.pjiap.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Physiotherapy - The Journal of Indian Association of Physiotherapists Volume 16 ; 2022 ; 16 ; https://www.pjiap.org/ ; ; >
+      au < frozen ; exists ; 2023 ; Physiotherapy - The Journal of Indian Association of Physiotherapists Volume 17 ; 2023 ; 17 ; https://www.pjiap.org/ ; ; >
 
   }
 
@@ -11842,9 +11857,10 @@
       }
       {
       param[journal_issn] = 2772-8382
+
       au < doNotProcess ; doNotProcess ; 2021 ; Annals of Oncology Research and Therapy Volume 1 ; 2021 ; 1 ; https://www.aort.info/ ; ; >
       au < doNotProcess ; doNotProcess ; 2022 ; Annals of Oncology Research and Therapy Volume 2 ; 2022 ; 2 ; https://www.aort.info/ ; ; >
-      au < crawling ; exists ; 2023 ; Annals of Oncology Research and Therapy Volume 3 ; 2023 ; 3 ; https://www.aort.info/ ; ; >
+      au < frozen ; exists ; 2023 ; Annals of Oncology Research and Therapy Volume 3 ; 2023 ; 3 ; https://www.aort.info/ ; ; >
       }
   }
 
@@ -11928,9 +11944,10 @@
 
       param[journal_issn] = 2250-1444
       #param[base_url] = https://www.ajprhc.com/
+      #move to LWW in 2023, moved https://journals.lww.com/ajpr/
 
-      au < deepCrawl ; exists ; 2022 ; Asian Journal of Pharmaceutical Research and Health Care Volume 14 ; 2022 ; 14 ; https://www.ajprhc.com/ ; ; >
-      au < crawling ; exists ; 2023 ; Asian Journal of Pharmaceutical Research and Health Care Volume 15 ; 2023 ; 15 ; https://www.ajprhc.com/ ; ; >
+      au < frozen ; exists ; 2022 ; Asian Journal of Pharmaceutical Research and Health Care Volume 14 ; 2022 ; 14 ; https://www.ajprhc.com/ ; ; >
+      au < frozen ; exists ; 2023 ; Asian Journal of Pharmaceutical Research and Health Care Volume 15 ; 2023 ; 15 ; https://www.ajprhc.com/ ; ; >
 
   }
 
@@ -12019,12 +12036,13 @@
 
       param[journal_issn] = 1203-7796
       #param[base_url] = https://www.cjrm.ca/
+      #move to LWW in 2023, moved https://journals.lww.com/cjrm/
 
       au < frozen ; exists ; 2019 ; Canadian Journal of Rural Medicine Volume 24 ; 2019 ; 24 ; https://www.cjrm.ca/ ; ; >
       au < frozen ; exists ; 2020 ; Canadian Journal of Rural Medicine Volume 25 ; 2020 ; 25 ; https://www.cjrm.ca/ ; ; >
       au < frozen ; exists ; 2021 ; Canadian Journal of Rural Medicine Volume 26 ; 2021 ; 26 ; https://www.cjrm.ca/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Canadian Journal of Rural Medicine Volume 27 ; 2022 ; 27 ; https://www.cjrm.ca/ ; ; >
-      au < crawling ; exists ; 2023 ; Canadian Journal of Rural Medicine Volume 28 ; 2023 ; 28 ; https://www.cjrm.ca/ ; ; >
+      au < frozen ; exists ; 2022 ; Canadian Journal of Rural Medicine Volume 27 ; 2022 ; 27 ; https://www.cjrm.ca/ ; ; >
+      au < frozen ; exists ; 2023 ; Canadian Journal of Rural Medicine Volume 28 ; 2023 ; 28 ; https://www.cjrm.ca/ ; ; >
 
   }
 
@@ -12059,20 +12077,21 @@
 
       param[journal_issn] = 2352-0817
       #param[base_url] = https://www.cmrpjournal.org/
+      #move to LWW in 2023, moved https://journals.lww.com/cmre/
 
       au < frozen ; exists ; 2011 ; Current Medicine Research and Practice Volume 1 ; 2011 ; 1 ; https://www.cmrpjournal.org/ ; ; >
       au < frozen ; exists ; 2012 ; Current Medicine Research and Practice Volume 2 ; 2012 ; 2 ; https://www.cmrpjournal.org/ ; ; >
       au < frozen ; exists ; 2013 ; Current Medicine Research and Practice Volume 3 ; 2013 ; 3 ; https://www.cmrpjournal.org/ ; ; >
-      au < exists ; exists ; 2014 ; Current Medicine Research and Practice Volume 4 ; 2014 ; 4 ; https://www.cmrpjournal.org/ ; ; >
-      au < exists ; exists ; 2015 ; Current Medicine Research and Practice Volume 5 ; 2015 ; 5 ; https://www.cmrpjournal.org/ ; ; >
-      au < exists ; exists ; 2016 ; Current Medicine Research and Practice Volume 6 ; 2016 ; 6 ; https://www.cmrpjournal.org/ ; ; >
-      au < exists ; exists ; 2017 ; Current Medicine Research and Practice Volume 7 ; 2017 ; 7 ; https://www.cmrpjournal.org/ ; ; >
-      au < exists ; exists ; 2018 ; Current Medicine Research and Practice Volume 8 ; 2018 ; 8 ; https://www.cmrpjournal.org/ ; ; >
-      au < exists ; exists ; 2019 ; Current Medicine Research and Practice Volume 9 ; 2019 ; 9 ; https://www.cmrpjournal.org/ ; ; >
+      au < doNotProcess ; exists ; 2014 ; Current Medicine Research and Practice Volume 4 ; 2014 ; 4 ; https://www.cmrpjournal.org/ ; ; >
+      au < doNotProcess ; exists ; 2015 ; Current Medicine Research and Practice Volume 5 ; 2015 ; 5 ; https://www.cmrpjournal.org/ ; ; >
+      au < doNotProcess ; exists ; 2016 ; Current Medicine Research and Practice Volume 6 ; 2016 ; 6 ; https://www.cmrpjournal.org/ ; ; >
+      au < doNotProcess ; exists ; 2017 ; Current Medicine Research and Practice Volume 7 ; 2017 ; 7 ; https://www.cmrpjournal.org/ ; ; >
+      au < doNotProcess ; exists ; 2018 ; Current Medicine Research and Practice Volume 8 ; 2018 ; 8 ; https://www.cmrpjournal.org/ ; ; >
+      au < doNotProcess ; exists ; 2019 ; Current Medicine Research and Practice Volume 9 ; 2019 ; 9 ; https://www.cmrpjournal.org/ ; ; >
       au < frozen ; exists ; 2020 ; Current Medicine Research and Practice Volume 10 ; 2020 ; 10 ; https://www.cmrpjournal.org/ ; ; >
       au < frozen ; exists ; 2021 ; Current Medicine Research and Practice Volume 11 ; 2021 ; 11 ; https://www.cmrpjournal.org/ ; ; >
-      au < notReady ; exists ; 2022 ; Current Medicine Research and Practice Volume 12 ; 2022 ; 12 ; https://www.cmrpjournal.org/ ; ; > #524
-      au < crawling ; exists ; 2023 ; Current Medicine Research and Practice Volume 13 ; 2023 ; 13 ; https://www.cmrpjournal.org/ ; ; >
+      au < doNotProcess ; exists ; 2022 ; Current Medicine Research and Practice Volume 12 ; 2022 ; 12 ; https://www.cmrpjournal.org/ ; ; > #524
+      au < frozen ; exists ; 2023 ; Current Medicine Research and Practice Volume 13 ; 2023 ; 13 ; https://www.cmrpjournal.org/ ; ; >
 
   }
 
@@ -12105,12 +12124,13 @@
 
       param[journal_issn] = 1027-8117
       #param[base_url] = https://www.dermsinica.org/
+    #move to LWW in 2023, moved https://journals.lww.com/ders/
 
       au < frozen ; exists ; 2019 ; Dermatologica Sinica Volume 37 ; 2019 ; 37 ; https://www.dermsinica.org/ ; ; >
       au < frozen ; exists ; 2020 ; Dermatologica Sinica Volume 38 ; 2020 ; 38 ; https://www.dermsinica.org/ ; ; >
       au < frozen ; exists ; 2021 ; Dermatologica Sinica Volume 39 ; 2021 ; 39 ; https://www.dermsinica.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Dermatologica Sinica Volume 40 ; 2022 ; 40 ; https://www.dermsinica.org/ ; ; >
-      au < crawling ; exists ; 2023 ; Dermatologica Sinica Volume 41 ; 2023 ; 41 ; https://www.dermsinica.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Dermatologica Sinica Volume 40 ; 2022 ; 40 ; https://www.dermsinica.org/ ; ; >
+      au < frozen ; exists ; 2023 ; Dermatologica Sinica Volume 41 ; 2023 ; 41 ; https://www.dermsinica.org/ ; ; >
 
   }
 
@@ -12226,16 +12246,17 @@
 
       param[journal_issn] = 2230-7354
       #param[base_url] = https://www.ijcne.org/
+      #move to LWW in 2023, moved https://journals.lww.com/ijcn/
 
       au < frozen ; exists ; 2015 ; Indian Journal of Continuing Nursing Education Volume 16 ; 2015 ; 16 ; https://www.ijcne.org/ ; ; >
       au < frozen ; exists ; 2016 ; Indian Journal of Continuing Nursing Education Volume 17 ; 2016 ; 17 ; https://www.ijcne.org/ ; ; >
       au < frozen ; exists ; 2017 ; Indian Journal of Continuing Nursing Education Volume 18 ; 2017 ; 18 ; https://www.ijcne.org/ ; ; >
       au < frozen ; exists ; 2018 ; Indian Journal of Continuing Nursing Education Volume 19 ; 2018 ; 19 ; https://www.ijcne.org/ ; ; >
       au < frozen ; exists ; 2019 ; Indian Journal of Continuing Nursing Education Volume 20 ; 2019 ; 20 ; https://www.ijcne.org/ ; ; >
-      au < manifest ; exists ; 2020 ; Indian Journal of Continuing Nursing Education Volume 21 ; 2020 ; 21 ; https://www.ijcne.org/ ; ; >
+      au < doNotProcess ; exists ; 2020 ; Indian Journal of Continuing Nursing Education Volume 21 ; 2020 ; 21 ; https://www.ijcne.org/ ; ; >
       au < frozen ; exists ; 2021 ; Indian Journal of Continuing Nursing Education Volume 22 ; 2021 ; 22 ; https://www.ijcne.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Indian Journal of Continuing Nursing Education Volume 23 ; 2022 ; 23 ; https://www.ijcne.org/ ; ; >
-      au < crawling ; exists ; 2023 ; Indian Journal of Continuing Nursing Education Volume 24 ; 2023 ; 24 ; https://www.ijcne.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Indian Journal of Continuing Nursing Education Volume 23 ; 2022 ; 23 ; https://www.ijcne.org/ ; ; >
+      au < frozen ; exists ; 2023 ; Indian Journal of Continuing Nursing Education Volume 24 ; 2023 ; 24 ; https://www.ijcne.org/ ; ; >
 
   }
 
@@ -12289,12 +12310,13 @@
 
       param[journal_issn] = 2666-3481
       #param[base_url] = https://www.ijptr.org/
+      #move to LWW in 2023, moved https://journals.lww.com/ijpt/
 
       au < frozen ; exists ; 2019 ; Indian Journal of Physical Therapy and Research Volume 1 ; 2019 ; 1 ; https://www.ijptr.org/ ; ; >
       au < frozen ; exists ; 2020 ; Indian Journal of Physical Therapy and Research Volume 2 ; 2020 ; 2 ; https://www.ijptr.org/ ; ; >
       au < frozen ; exists ; 2021 ; Indian Journal of Physical Therapy and Research Volume 3 ; 2021 ; 3 ; https://www.ijptr.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Indian Journal of Physical Therapy and Research Volume 4 ; 2022 ; 4 ; https://www.ijptr.org/ ; ; >
-      au < crawling ; exists ; 2023 ; Indian Journal of Physical Therapy and Research Volume 5 ; 2023 ; 5 ; https://www.ijptr.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Indian Journal of Physical Therapy and Research Volume 4 ; 2022 ; 4 ; https://www.ijptr.org/ ; ; >
+      au < frozen ; exists ; 2023 ; Indian Journal of Physical Therapy and Research Volume 5 ; 2023 ; 5 ; https://www.ijptr.org/ ; ; >
 
   }
 
@@ -12419,26 +12441,27 @@
 
       param[journal_issn] = 2635-3695
       #param[base_url] = https://www.ijmhdev.com/
+      #move to LWW in 2023, moved https://journals.lww.com/ijmh/
 
-      au < manifest ; exists ; 1996 ; International Journal of Medicine and Health Development Volume 1 ; 1996 ; 1 ; https://www.ijmhdev.com/ ; ; >
-      au < manifest ; exists ; 1997 ; International Journal of Medicine and Health Development Volume 2 ; 1997 ; 2 ; https://www.ijmhdev.com/ ; ; >
-      au < manifest ; exists ; 1998 ; International Journal of Medicine and Health Development Volume 3 ; 1998 ; 3 ; https://www.ijmhdev.com/ ; ; >
-      au < manifest ; exists ; 1999 ; International Journal of Medicine and Health Development Volume 4 ; 1999 ; 4 ; https://www.ijmhdev.com/ ; ; >
-      au < manifest ; exists ; 2000 ; International Journal of Medicine and Health Development Volume 5 ; 2000 ; 5 ; https://www.ijmhdev.com/ ; ; >
-      au < manifest ; exists ; 2001 ; International Journal of Medicine and Health Development Volume 6 ; 2001 ; 6 ; https://www.ijmhdev.com/ ; ; >
-      au < manifest ; exists ; 2002 ; International Journal of Medicine and Health Development Volume 7 ; 2002 ; 7 ; https://www.ijmhdev.com/ ; ; >
-      au < manifest ; exists ; 2003 ; International Journal of Medicine and Health Development Volume 8 ; 2003 ; 8 ; https://www.ijmhdev.com/ ; ; >
-      au < manifest ; exists ; 2004 ; International Journal of Medicine and Health Development Volume 9 ; 2004 ; 9 ; https://www.ijmhdev.com/ ; ; >
-      au < manifest ; exists ; 2005 ; International Journal of Medicine and Health Development Volume 10 ; 2005 ; 10 ; https://www.ijmhdev.com/ ; ; >
-      au < manifest ; exists ; 2006 ; International Journal of Medicine and Health Development Volume 11 ; 2006 ; 11 ; https://www.ijmhdev.com/ ; ; >
-      au < manifest ; exists ; 2007 ; International Journal of Medicine and Health Development Volume 12 ; 2007 ; 12 ; https://www.ijmhdev.com/ ; ; >
-      au < manifest ; exists ; 2008 ; International Journal of Medicine and Health Development Volume 13 ; 2008 ; 13 ; https://www.ijmhdev.com/ ; ; >
-      au < manifest ; exists ; 2009 ; International Journal of Medicine and Health Development Volume 14 ; 2009 ; 14 ; https://www.ijmhdev.com/ ; ; >
-      au < manifest ; exists ; 2010 ; International Journal of Medicine and Health Development Volume 15 ; 2010 ; 15 ; https://www.ijmhdev.com/ ; ; >
-      au < manifest ; exists ; 2011 ; International Journal of Medicine and Health Development Volume 16 ; 2011 ; 16 ; https://www.ijmhdev.com/ ; ; >
-      au < manifest ; exists ; 2012 ; International Journal of Medicine and Health Development Volume 17 ; 2012 ; 17 ; https://www.ijmhdev.com/ ; ; >
-      au < manifest ; exists ; 2013 ; International Journal of Medicine and Health Development Volume 18 ; 2013 ; 18 ; https://www.ijmhdev.com/ ; ; >
-      au < manifest ; exists ; 2014 ; International Journal of Medicine and Health Development Volume 19 ; 2014 ; 19 ; https://www.ijmhdev.com/ ; ; >
+      au < doNotProcess ; exists ; 1996 ; International Journal of Medicine and Health Development Volume 1 ; 1996 ; 1 ; https://www.ijmhdev.com/ ; ; >
+      au < doNotProcess ; exists ; 1997 ; International Journal of Medicine and Health Development Volume 2 ; 1997 ; 2 ; https://www.ijmhdev.com/ ; ; >
+      au < doNotProcess ; exists ; 1998 ; International Journal of Medicine and Health Development Volume 3 ; 1998 ; 3 ; https://www.ijmhdev.com/ ; ; >
+      au < doNotProcess ; exists ; 1999 ; International Journal of Medicine and Health Development Volume 4 ; 1999 ; 4 ; https://www.ijmhdev.com/ ; ; >
+      au < doNotProcess ; exists ; 2000 ; International Journal of Medicine and Health Development Volume 5 ; 2000 ; 5 ; https://www.ijmhdev.com/ ; ; >
+      au < doNotProcess ; exists ; 2001 ; International Journal of Medicine and Health Development Volume 6 ; 2001 ; 6 ; https://www.ijmhdev.com/ ; ; >
+      au < doNotProcess ; exists ; 2002 ; International Journal of Medicine and Health Development Volume 7 ; 2002 ; 7 ; https://www.ijmhdev.com/ ; ; >
+      au < doNotProcess ; exists ; 2003 ; International Journal of Medicine and Health Development Volume 8 ; 2003 ; 8 ; https://www.ijmhdev.com/ ; ; >
+      au < doNotProcess ; exists ; 2004 ; International Journal of Medicine and Health Development Volume 9 ; 2004 ; 9 ; https://www.ijmhdev.com/ ; ; >
+      au < doNotProcess ; exists ; 2005 ; International Journal of Medicine and Health Development Volume 10 ; 2005 ; 10 ; https://www.ijmhdev.com/ ; ; >
+      au < doNotProcess ; exists ; 2006 ; International Journal of Medicine and Health Development Volume 11 ; 2006 ; 11 ; https://www.ijmhdev.com/ ; ; >
+      au < doNotProcess ; exists ; 2007 ; International Journal of Medicine and Health Development Volume 12 ; 2007 ; 12 ; https://www.ijmhdev.com/ ; ; >
+      au < doNotProcess ; exists ; 2008 ; International Journal of Medicine and Health Development Volume 13 ; 2008 ; 13 ; https://www.ijmhdev.com/ ; ; >
+      au < doNotProcess ; exists ; 2009 ; International Journal of Medicine and Health Development Volume 14 ; 2009 ; 14 ; https://www.ijmhdev.com/ ; ; >
+      au < doNotProcess ; exists ; 2010 ; International Journal of Medicine and Health Development Volume 15 ; 2010 ; 15 ; https://www.ijmhdev.com/ ; ; >
+      au < doNotProcess ; exists ; 2011 ; International Journal of Medicine and Health Development Volume 16 ; 2011 ; 16 ; https://www.ijmhdev.com/ ; ; >
+      au < doNotProcess ; exists ; 2012 ; International Journal of Medicine and Health Development Volume 17 ; 2012 ; 17 ; https://www.ijmhdev.com/ ; ; >
+      au < doNotProcess ; exists ; 2013 ; International Journal of Medicine and Health Development Volume 18 ; 2013 ; 18 ; https://www.ijmhdev.com/ ; ; >
+      au < doNotProcess ; exists ; 2014 ; International Journal of Medicine and Health Development Volume 19 ; 2014 ; 19 ; https://www.ijmhdev.com/ ; ; >
       au < frozen ; exists ; 2015 ; International Journal of Medicine and Health Development Volume 20 ; 2015 ; 20 ; https://www.ijmhdev.com/ ; ; >
       au < frozen ; exists ; 2016 ; International Journal of Medicine and Health Development Volume 21 ; 2016 ; 21 ; https://www.ijmhdev.com/ ; ; >
       au < frozen ; exists ; 2017 ; International Journal of Medicine and Health Development Volume 22 ; 2017 ; 22 ; https://www.ijmhdev.com/ ; ; >
@@ -12446,8 +12469,8 @@
       au < frozen ; exists ; 2019 ; International Journal of Medicine and Health Development Volume 24 ; 2019 ; 24 ; https://www.ijmhdev.com/ ; ; >
       au < frozen ; exists ; 2020 ; International Journal of Medicine and Health Development Volume 25 ; 2020 ; 25 ; https://www.ijmhdev.com/ ; ; >
       au < frozen ; exists ; 2021 ; International Journal of Medicine and Health Development Volume 26 ; 2021 ; 26 ; https://www.ijmhdev.com/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; International Journal of Medicine and Health Development Volume 27 ; 2022 ; 27 ; https://www.ijmhdev.com/ ; ; >
-      au < crawling ; exists ; 2023 ; International Journal of Medicine and Health Development Volume 28 ; 2023 ; 28 ; https://www.ijmhdev.com/ ; ; >
+      au < frozen ; exists ; 2022 ; International Journal of Medicine and Health Development Volume 27 ; 2022 ; 27 ; https://www.ijmhdev.com/ ; ; >
+      au < frozen ; exists ; 2023 ; International Journal of Medicine and Health Development Volume 28 ; 2023 ; 28 ; https://www.ijmhdev.com/ ; ; >
 
   }
 
@@ -12462,10 +12485,11 @@
 
       param[journal_issn] = 2590-2652
       #param[base_url] = https://www.internationaljneurooncology.com/
+      #move to LWW in 2023, moved https://journals.lww.com/ijno/
 
-      au < manifest ; exists ; 2018 ; International Journal of Neuro-Oncology Volume 1 ; 2018 ; 1 ; https://www.internationaljneurooncology.com/ ; ; >
-      au < manifest ; exists ; 2019 ; International Journal of Neuro-Oncology Volume 2 ; 2019 ; 2 ; https://www.internationaljneurooncology.com/ ; ; >
-      au < crawling ; exists ; 2020 ; International Journal of Neuro-Oncology Volume 3 ; 2020 ; 3 ; https://www.internationaljneurooncology.com/ ; ; >
+      au < doNotProcess ; exists ; 2018 ; International Journal of Neuro-Oncology Volume 1 ; 2018 ; 1 ; https://www.internationaljneurooncology.com/ ; ; >
+      au < doNotProcess ; exists ; 2019 ; International Journal of Neuro-Oncology Volume 2 ; 2019 ; 2 ; https://www.internationaljneurooncology.com/ ; ; >
+      au < frozen ; exists ; 2020 ; International Journal of Neuro-Oncology Volume 3 ; 2020 ; 3 ; https://www.internationaljneurooncology.com/ ; ; >
       au < frozen ; exists ; 2021 ; International Journal of Neuro-Oncology Volume 4 ; 2021 ; 4 ; https://www.internationaljneurooncology.com/ ; ; >
 
   }
@@ -12623,11 +12647,12 @@
 
       param[journal_issn] = 2772-364X
       #param[base_url] = https://www.jascp.org/
+      #move to LWW in 2023, moved https://journals.lww.com/jasc/
 
       au < frozen ; exists ; 2020 ; Journal of Applied Sciences and Clinical Practice Volume 1 ; 2020 ; 1 ; https://www.jascp.org/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Applied Sciences and Clinical Practice Volume 2 ; 2021 ; 2 ; https://www.jascp.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of Applied Sciences and Clinical Practice Volume 3 ; 2022 ; 3 ; https://www.jascp.org/ ; ; >
-      au < crawling ; exists ; 2023 ; Journal of Applied Sciences and Clinical Practice Volume 4 ; 2023 ; 4 ; https://www.jascp.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of Applied Sciences and Clinical Practice Volume 3 ; 2022 ; 3 ; https://www.jascp.org/ ; ; >
+      au < frozen ; exists ; 2023 ; Journal of Applied Sciences and Clinical Practice Volume 4 ; 2023 ; 4 ; https://www.jascp.org/ ; ; >
 
   }
 
@@ -12832,10 +12857,11 @@
 
       param[journal_issn] = 2279-0357
       #param[base_url] = https://www.jdrasccras.com/
+      #move to LWW in 2023, moved https://journals.lww.com/jdra/
 
       au < frozen ; exists ; 2021 ; Journal of Drug Research in Ayurvedic Sciences Volume 6 ; 2021 ; 6 ; https://www.jdrasccras.com/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of Drug Research in Ayurvedic Sciences Volume 7 ; 2022 ; 7 ; https://www.jdrasccras.com/ ; ; >
-      au < crawling ; exists ; 2023 ; Journal of Drug Research in Ayurvedic Sciences Volume 8 ; 2023 ; 8 ; https://www.jdrasccras.com/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of Drug Research in Ayurvedic Sciences Volume 7 ; 2022 ; 7 ; https://www.jdrasccras.com/ ; ; >
+      au < frozen ; exists ; 2023 ; Journal of Drug Research in Ayurvedic Sciences Volume 8 ; 2023 ; 8 ; https://www.jdrasccras.com/ ; ; >
 
   }
 
@@ -13139,10 +13165,11 @@
 
       param[journal_issn] = 2456-5601
       #param[base_url] = https://www.jrasccras.com/
+      #move to LWW in 2023, moved https://journals.lww.com/jras/
 
       au < frozen ; exists ; 2021 ; Journal of Research in Ayurvedic Sciences Volume 5 ; 2021 ; 5 ; https://www.jrasccras.com/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of Research in Ayurvedic Sciences Volume 6 ; 2022 ; 6 ; https://www.jrasccras.com/ ; ; >
-      au < crawling ; exists ; 2023 ; Journal of Research in Ayurvedic Sciences Volume 7 ; 2023 ; 7 ; https://www.jrasccras.com/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of Research in Ayurvedic Sciences Volume 6 ; 2022 ; 6 ; https://www.jrasccras.com/ ; ; >
+      au < frozen ; exists ; 2023 ; Journal of Research in Ayurvedic Sciences Volume 7 ; 2023 ; 7 ; https://www.jrasccras.com/ ; ; >
 
   }
 
@@ -13175,14 +13202,15 @@
 
       param[journal_issn] = 2456-7787
       #param[base_url] = https://www.jsip-physio.org/
+      #move to LWW in 2023, moved https://journals.lww.com/jsip/
 
       au < frozen ; exists ; 2017 ; Journal of Society of Indian Physiotherapists Volume 1 ; 2017 ; 1 ; https://www.jsip-physio.org/ ; ; >
       au < frozen ; exists ; 2018 ; Journal of Society of Indian Physiotherapists Volume 2 ; 2018 ; 2 ; https://www.jsip-physio.org/ ; ; >
       au < frozen ; exists ; 2019 ; Journal of Society of Indian Physiotherapists Volume 3 ; 2019 ; 3 ; https://www.jsip-physio.org/ ; ; >
       au < frozen ; exists ; 2020 ; Journal of Society of Indian Physiotherapists Volume 4 ; 2020 ; 4 ; https://www.jsip-physio.org/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of Society of Indian Physiotherapists Volume 5 ; 2021 ; 5 ; https://www.jsip-physio.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of Society of Indian Physiotherapists Volume 6 ; 2022 ; 6 ; https://www.jsip-physio.org/ ; ; >
-      au < crawling ; exists ; 2023 ; Journal of Society of Indian Physiotherapists Volume 7 ; 2023 ; 7 ; https://www.jsip-physio.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of Society of Indian Physiotherapists Volume 6 ; 2022 ; 6 ; https://www.jsip-physio.org/ ; ; >
+      au < frozen ; exists ; 2023 ; Journal of Society of Indian Physiotherapists Volume 7 ; 2023 ; 7 ; https://www.jsip-physio.org/ ; ; >
 
   }
 
@@ -13303,12 +13331,13 @@
 
       param[journal_issn] = 2276-6944
       #param[base_url] = https://jwacs-jcoac.com/
+      #move to LWW in 2023, moved https://journals.lww.com/jwas/
 
       au < frozen ; exists ; 2019 ; Journal of West African College of Surgeons Volume 9 ; 2019 ; 9 ; https://jwacs-jcoac.com/ ; ; >
       au < frozen ; exists ; 2020 ; Journal of West African College of Surgeons Volume 10 ; 2020 ; 10 ; https://jwacs-jcoac.com/ ; ; >
       au < frozen ; exists ; 2021 ; Journal of West African College of Surgeons Volume 11 ; 2021 ; 11 ; https://jwacs-jcoac.com/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Journal of West African College of Surgeons Volume 12 ; 2022 ; 12 ; https://jwacs-jcoac.com/ ; ; >
-      au < crawling ; exists ; 2023 ; Journal of West African College of Surgeons Volume 13 ; 2023 ; 13 ; https://jwacs-jcoac.com/ ; ; >
+      au < frozen ; exists ; 2022 ; Journal of West African College of Surgeons Volume 12 ; 2022 ; 12 ; https://jwacs-jcoac.com/ ; ; >
+      au < frozen ; exists ; 2023 ; Journal of West African College of Surgeons Volume 13 ; 2023 ; 13 ; https://jwacs-jcoac.com/ ; ; >
 
   }
 
@@ -13590,10 +13619,11 @@
 
       param[journal_issn] = 2709-0450
       #param[base_url] = https://www.pnjb-online.org/
+      #move to LWW in 2023, moved https://journals.lww.com/pnjb/
 
       au < frozen ; exists ; 2021 ; Paediatric Nephrology Journal of Bangladesh Volume 6 ; 2021 ; 6 ; https://www.pnjb-online.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Paediatric Nephrology Journal of Bangladesh Volume 7 ; 2022 ; 7 ; https://www.pnjb-online.org/ ; ; >
-      au < crawling ; exists ; 2023 ; Paediatric Nephrology Journal of Bangladesh Volume 8 ; 2023 ; 8 ; https://www.pnjb-online.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Paediatric Nephrology Journal of Bangladesh Volume 7 ; 2022 ; 7 ; https://www.pnjb-online.org/ ; ; >
+      au < frozen ; exists ; 2023 ; Paediatric Nephrology Journal of Bangladesh Volume 8 ; 2023 ; 8 ; https://www.pnjb-online.org/ ; ; >
 
   }
 
@@ -13626,10 +13656,11 @@
 
       param[journal_issn] = 2352-6211
       #param[base_url] = https://www.ridiseases.org/
+      #move to LWW in 2023, moved https://journals.lww.com/roid/
 
-      au < manifest ; exists ; 2021 ; Radiology of Infectious Diseases Volume 8 ; 2021 ; 8 ; https://www.ridiseases.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Radiology of Infectious Diseases Volume 9 ; 2022 ; 9 ; https://www.ridiseases.org/ ; ; >
-      au < crawling ; exists ; 2023 ; Radiology of Infectious Diseases Volume 10 ; 2023 ; 10 ; https://www.ridiseases.org/ ; ; >
+      au < doNotProcess ; exists ; 2021 ; Radiology of Infectious Diseases Volume 8 ; 2021 ; 8 ; https://www.ridiseases.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Radiology of Infectious Diseases Volume 9 ; 2022 ; 9 ; https://www.ridiseases.org/ ; ; >
+      au < frozen ; exists ; 2023 ; Radiology of Infectious Diseases Volume 10 ; 2023 ; 10 ; https://www.ridiseases.org/ ; ; >
 
   }
 
@@ -13679,32 +13710,33 @@
 
       param[journal_issn] = 1319-8491
       #param[base_url] = https://www.sjohns.org/
+      #move to LWW in 2023, moved https://journals.lww.com/sjoh/
 
-      au < manifest ; exists ; 1999 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 1 ; 1999 ; 1 ; https://www.sjohns.org/ ; ; >
-      au < manifest ; exists ; 2000 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 2 ; 2000 ; 2 ; https://www.sjohns.org/ ; ; >
-      au < manifest ; exists ; 2001 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 3 ; 2001 ; 3 ; https://www.sjohns.org/ ; ; >
-      au < manifest ; exists ; 2002 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 4 ; 2002 ; 4 ; https://www.sjohns.org/ ; ; >
-      au < manifest ; exists ; 2003 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 5 ; 2003 ; 5 ; https://www.sjohns.org/ ; ; >
-      au < manifest ; exists ; 2004 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 6 ; 2004 ; 6 ; https://www.sjohns.org/ ; ; >
-      au < manifest ; exists ; 2005 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 7 ; 2005 ; 7 ; https://www.sjohns.org/ ; ; >
-      au < manifest ; exists ; 2006 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 8 ; 2006 ; 8 ; https://www.sjohns.org/ ; ; >
-      au < manifest ; exists ; 2007 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 9 ; 2007 ; 9 ; https://www.sjohns.org/ ; ; >
-      au < manifest ; exists ; 2008 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 10 ; 2008 ; 10 ; https://www.sjohns.org/ ; ; >
-      au < manifest ; exists ; 2009 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 11 ; 2009 ; 11 ; https://www.sjohns.org/ ; ; >
-      au < manifest ; exists ; 2010 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 12 ; 2010 ; 12 ; https://www.sjohns.org/ ; ; >
-      au < manifest ; exists ; 2011 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 13 ; 2011 ; 13 ; https://www.sjohns.org/ ; ; >
-      au < manifest ; exists ; 2012 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 14 ; 2012 ; 14 ; https://www.sjohns.org/ ; ; >
-      au < manifest ; exists ; 2013 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 15 ; 2013 ; 15 ; https://www.sjohns.org/ ; ; >
-      au < manifest ; exists ; 2014 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 16 ; 2014 ; 16 ; https://www.sjohns.org/ ; ; >
-      au < manifest ; exists ; 2015 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 17 ; 2015 ; 17 ; https://www.sjohns.org/ ; ; >
+      au < doNotProcess ; exists ; 1999 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 1 ; 1999 ; 1 ; https://www.sjohns.org/ ; ; >
+      au < doNotProcess ; exists ; 2000 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 2 ; 2000 ; 2 ; https://www.sjohns.org/ ; ; >
+      au < doNotProcess ; exists ; 2001 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 3 ; 2001 ; 3 ; https://www.sjohns.org/ ; ; >
+      au < doNotProcess ; exists ; 2002 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 4 ; 2002 ; 4 ; https://www.sjohns.org/ ; ; >
+      au < doNotProcess ; exists ; 2003 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 5 ; 2003 ; 5 ; https://www.sjohns.org/ ; ; >
+      au < doNotProcess ; exists ; 2004 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 6 ; 2004 ; 6 ; https://www.sjohns.org/ ; ; >
+      au < doNotProcess ; exists ; 2005 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 7 ; 2005 ; 7 ; https://www.sjohns.org/ ; ; >
+      au < doNotProcess ; exists ; 2006 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 8 ; 2006 ; 8 ; https://www.sjohns.org/ ; ; >
+      au < doNotProcess ; exists ; 2007 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 9 ; 2007 ; 9 ; https://www.sjohns.org/ ; ; >
+      au < doNotProcess ; exists ; 2008 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 10 ; 2008 ; 10 ; https://www.sjohns.org/ ; ; >
+      au < doNotProcess ; exists ; 2009 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 11 ; 2009 ; 11 ; https://www.sjohns.org/ ; ; >
+      au < doNotProcess ; exists ; 2010 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 12 ; 2010 ; 12 ; https://www.sjohns.org/ ; ; >
+      au < doNotProcess ; exists ; 2011 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 13 ; 2011 ; 13 ; https://www.sjohns.org/ ; ; >
+      au < doNotProcess ; exists ; 2012 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 14 ; 2012 ; 14 ; https://www.sjohns.org/ ; ; >
+      au < doNotProcess ; exists ; 2013 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 15 ; 2013 ; 15 ; https://www.sjohns.org/ ; ; >
+      au < doNotProcess ; exists ; 2014 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 16 ; 2014 ; 16 ; https://www.sjohns.org/ ; ; >
+      au < doNotProcess ; exists ; 2015 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 17 ; 2015 ; 17 ; https://www.sjohns.org/ ; ; >
       au < frozen ; exists ; 2016 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 18 ; 2016 ; 18 ; https://www.sjohns.org/ ; ; >
       au < frozen ; exists ; 2017 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 19 ; 2017 ; 19 ; https://www.sjohns.org/ ; ; >
       au < frozen ; exists ; 2018 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 20 ; 2018 ; 20 ; https://www.sjohns.org/ ; ; >
       au < frozen ; exists ; 2019 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 21 ; 2019 ; 21 ; https://www.sjohns.org/ ; ; >
       au < frozen ; exists ; 2020 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 22 ; 2020 ; 22 ; https://www.sjohns.org/ ; ; >
-      au < manifest ; exists ; 2021 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 23 ; 2021 ; 23 ; https://www.sjohns.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 24 ; 2022 ; 24 ; https://www.sjohns.org/ ; ; >
-      au < crawling ; exists ; 2023 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 25 ; 2023 ; 25 ; https://www.sjohns.org/ ; ; >
+      au < doNotProcess ; exists ; 2021 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 23 ; 2021 ; 23 ; https://www.sjohns.org/ ; ; >
+      au < frozen ; exists ; 2022 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 24 ; 2022 ; 24 ; https://www.sjohns.org/ ; ; >
+      au < frozen ; exists ; 2023 ; Saudi Journal of Otorhinolaryngology Head and Neck Surgery Volume 25 ; 2023 ; 25 ; https://www.sjohns.org/ ; ; >
 
   }
 
@@ -13719,14 +13751,15 @@
 
       param[journal_issn] = 2580-6548
       #param[base_url] = https://www.scidentj.com/
+      #move to LWW in 2023, moved https://journals.lww.com/sdjr/
 
       au < frozen ; exists ; 2017 ; Scientific Dental Journal Volume 1 ; 2017 ; 1 ; https://www.scidentj.com/ ; ; >
       au < frozen ; exists ; 2018 ; Scientific Dental Journal Volume 2 ; 2018 ; 2 ; https://www.scidentj.com/ ; ; >
       au < frozen ; exists ; 2019 ; Scientific Dental Journal Volume 3 ; 2019 ; 3 ; https://www.scidentj.com/ ; ; >
       au < frozen ; exists ; 2020 ; Scientific Dental Journal Volume 4 ; 2020 ; 4 ; https://www.scidentj.com/ ; ; >
       au < frozen ; exists ; 2021 ; Scientific Dental Journal Volume 5 ; 2021 ; 5 ; https://www.scidentj.com/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; Scientific Dental Journal Volume 6 ; 2022 ; 6 ; https://www.scidentj.com/ ; ; >
-      au < crawling ; exists ; 2023 ; Scientific Dental Journal Volume 7 ; 2023 ; 7 ; https://www.scidentj.com/ ; ; >
+      au < frozen ; exists ; 2022 ; Scientific Dental Journal Volume 6 ; 2022 ; 6 ; https://www.scidentj.com/ ; ; >
+      au < frozen ; exists ; 2023 ; Scientific Dental Journal Volume 7 ; 2023 ; 7 ; https://www.scidentj.com/ ; ; >
 
   }
 
@@ -13828,13 +13861,14 @@
 
       param[journal_issn] = 0445-7706
       #param[base_url] = https://www.ijotonweb.org/
+      #move to LWW in 2023, moved https://journals.lww.com/iopt/
 
       au < frozen ; exists ; 2018 ; The Indian Journal of Occupational Therapy Volume 50 ; 2018 ; 50 ; https://www.ijotonweb.org/ ; ; >
       au < frozen ; exists ; 2019 ; The Indian Journal of Occupational Therapy Volume 51 ; 2019 ; 51 ; https://www.ijotonweb.org/ ; ; >
       au < frozen ; exists ; 2020 ; The Indian Journal of Occupational Therapy Volume 52 ; 2020 ; 52 ; https://www.ijotonweb.org/ ; ; >
       au < frozen ; exists ; 2021 ; The Indian Journal of Occupational Therapy Volume 53 ; 2021 ; 53 ; https://www.ijotonweb.org/ ; ; >
-      au < deepCrawl ; exists ; 2022 ; The Indian Journal of Occupational Therapy Volume 54 ; 2022 ; 54 ; https://www.ijotonweb.org/ ; ; >
-      au < crawling ; exists ; 2023 ; The Indian Journal of Occupational Therapy Volume 55 ; 2023 ; 55 ; https://www.ijotonweb.org/ ; ; >
+      au < frozen ; exists ; 2022 ; The Indian Journal of Occupational Therapy Volume 54 ; 2022 ; 54 ; https://www.ijotonweb.org/ ; ; >
+      au < frozen ; exists ; 2023 ; The Indian Journal of Occupational Therapy Volume 55 ; 2023 ; 55 ; https://www.ijotonweb.org/ ; ; >
 
   }
 
@@ -13867,10 +13901,11 @@
 
       param[journal_issn] = 2589-9597
       #param[base_url] = https://www.tofjonline.org/
+      #move to LWW in 2023, moved https://journals.lww.com/oftj/
 
-      au < manifest ; exists ; 2018 ; The Onco Fertility Journal Volume 1 ; 2018 ; 1 ; https://www.tofjonline.org/ ; ; >
-      au < manifest ; exists ; 2019 ; The Onco Fertility Journal Volume 2 ; 2019 ; 2 ; https://www.tofjonline.org/ ; ; >
-      au < crawling ; exists ; 2020 ; The Onco Fertility Journal Volume 3 ; 2020 ; 3 ; https://www.tofjonline.org/ ; ; >
+      au < doNotProcess ; exists ; 2018 ; The Onco Fertility Journal Volume 1 ; 2018 ; 1 ; https://www.tofjonline.org/ ; ; >
+      au < doNotProcess ; exists ; 2019 ; The Onco Fertility Journal Volume 2 ; 2019 ; 2 ; https://www.tofjonline.org/ ; ; >
+      au < frozen ; exists ; 2020 ; The Onco Fertility Journal Volume 3 ; 2020 ; 3 ; https://www.tofjonline.org/ ; ; >
       au < frozen ; exists ; 2021 ; The Onco Fertility Journal Volume 4 ; 2021 ; 4 ; https://www.tofjonline.org/ ; ; >
 
   }
