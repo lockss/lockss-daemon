@@ -89,6 +89,7 @@ test/run-classpath
 test/run-classpath-win
 test/test-classpath
 test/test-p-classpath
+test/test-plugin-classpath
 generated/*
 
 lib/lockss-*.jar
