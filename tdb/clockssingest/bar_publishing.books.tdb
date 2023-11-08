@@ -13,8 +13,7 @@
   >
 
   provider = Bar Publishing
-  plugin = needs.plugin
-  #plugin = org.lockss.plugin.michigan.acp.ClockssAmherstCollegePressBooksPlugin
+  plugin =  org.lockss.plugin.michigan.ClockssUMichFulcrumBooksPlugin
   param[base_url] = https://www.fulcrum.org/
   implicit < status ; status2 ; year ; isbn ; param[book_uri] ; name ; hidden[proxy] >
 
@@ -25,7 +24,14 @@
       type = bookSeries
     >
 
-    au < exists ; exists ; 2023 ; 9781407315355 ; concern/monographs/6q182n888 ; Aegypto Adiecta ; >
+    au < testing ; exists ; 2023 ; 9781407315355 ; concern/monographs/6q182n888 ; Aegypto Adiecta ; >
+    au < testing ; exists ; 2023 ; 9781407314969 ; concern/monographs/f4752k80x ; Celtiform Pendants from Pre-Columbian Costa Rica: Production, distribution, and experimental replication ; >
+    au < testing ; exists ; 2023 ; 9781407360355 ; concern/monographs/tm70mx88m ; Urbanism and its Impact on Human Health: A long-term study at Knossos, Crete ; >
+    au < testing ; exists ; 2022 ; 9781407359816 ; concern/monographs/xp68kj88d ; The Hellenistic and Roman Harbours of Delos and Kenchreai: Their Construction, Use and Evolution ; >
+    au < testing ; exists ; 2022 ; 9781407359762 ; concern/monographs/8c97ks94w ; Communal Solitude: The Carthusian Lay Brethren in Great Britain & Ireland, 1178-1569 ; >
+    au < testing ; exists ; 2021 ; 9781407358086 ; concern/monographs/5425kc953 ; Carved in Stone: The archaeology of rock-cut sites and stone quarries ; >
+    au < testing ; exists ; 2022 ; 9781407359816 ; concern/monographs/xp68kj88d ; The Hellenistic and Roman Harbours of Delos and Kenchreai: Their Construction, Use and Evolution ; >
+    au < testing ; exists ; 1976 ; 9780904531459 ; concern/monographs/r781wh57x ; Roman Military Stone-built Granaries in Britain ; >
 
   }
 }
