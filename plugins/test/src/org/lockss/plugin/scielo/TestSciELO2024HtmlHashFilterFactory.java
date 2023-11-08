@@ -26,13 +26,18 @@ public class TestSciELO2024HtmlHashFilterFactory extends LockssTestCase{
                             "<header>"+
                                 "FAIL"+
                             "</header>"+
+                            "<!-- FAIL FAIL FAIL -->"+
                             "<div class='alternativeHeader'>"+
                                 "FAIL"+
                             "</div>"+
                             "<section class='journalContent'>"+
                                 "<div class='issueIndex'>"+
                                     "<div class='issueIndex'>"+
-                                        "FAIL"+
+                                        "<div class='${box-filtro}'>"+
+                                            "<div class='selectBox'>"+
+                                                "FAIL"+
+                                            "</div>"+
+                                        "</div>"+
                                     "</div>"+
                                 "</div>"+
                             "</section>"+
@@ -86,11 +91,13 @@ public class TestSciELO2024HtmlHashFilterFactory extends LockssTestCase{
                     values.put("floatingBtnError", floatingBtnError);
                     for(String floatingMenuMobile:Arrays.asList("floatingMenuMobile FAIL FAIL FAIL", "FAIL FAIL floatingMenuMobile FAIL FAIL", "FAIL FAIL FAIL FAIL floatingMenuMobile"))
                         values.put("floatingMenuMobile",floatingMenuMobile);
-                        StringSubstitutor sub = new StringSubstitutor(values);
-                        InputStream in = IOUtils.toInputStream(sub.replace(page),Constants.DEFAULT_ENCODING);
-                        InputStream out = fact.createFilteredInputStream(null, in, Constants.DEFAULT_ENCODING);
-                        String result = IOUtils.toString(out, Constants.DEFAULT_ENCODING);
-                        assertFalse(result.contains("FAIL")); //TODO: add fail message
+                        for(String boxFiltro:Arrays.asList("box-filtro FAIL FAIL FAIL", "FAIL FAIL box-filtro FAIL FAIL", "FAIL FAIL FAIL FAIL box-filtro"))
+                            values.put("box-filtro",boxFiltro);
+                            StringSubstitutor sub = new StringSubstitutor(values);
+                            InputStream in = IOUtils.toInputStream(sub.replace(page),Constants.DEFAULT_ENCODING);
+                            InputStream out = fact.createFilteredInputStream(null, in, Constants.DEFAULT_ENCODING);
+                            String result = IOUtils.toString(out, Constants.DEFAULT_ENCODING);
+                            assertFalse("Your test case failed! \n"+result, result.contains("FAIL")); 
             }
         }
     }
