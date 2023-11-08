@@ -1537,7 +1537,8 @@ public class TestBlockHasher extends LockssTestCase {
     return PropUtil.fromArgs(CachedUrl.PROPERTY_NODE_URL, url);
   }
 
-  public void testDirRedir1() throws Exception {
+  public void testDirRedir() throws Exception {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_V2_COMPAT, "true");
     setUpRedirTest();
     String str = "top index";
     storeCu(dirAu, DIR_BASE, str, redirProps(DIR_BASE, DIR_BASE + "/"));
@@ -1556,6 +1557,7 @@ public class TestBlockHasher extends LockssTestCase {
   }
 
   public void testDirNoRedir() throws Exception {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_V2_COMPAT, "true");
     setUpRedirTest();
     String str = "top index";
     storeCu(dirAu, DIR_BASE + "/", str, null);
@@ -1570,6 +1572,42 @@ public class TestBlockHasher extends LockssTestCase {
     List<Event> events = handRec.getEvents();
     assertEquals(1, events.size());
     assertEvent(DIR_BASE + "/", str.length(), "top index", events.get(0), false);
+  }
+
+  public void testDirRedirDisabled() throws Exception {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_V2_COMPAT, "false");
+    setUpRedirTest();
+    String str = "top index";
+    storeCu(dirAu, DIR_BASE, str, redirProps(DIR_BASE, DIR_BASE + "/"));
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    CachedUrlSet cus = dirAu.getAuCachedUrlSet();
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
+    hasher.setFiltered(false);
+    assertEquals(str.length(), hashToEnd(hasher, 100));
+    assertTrue(hasher.finished());
+    List<Event> events = handRec.getEvents();
+    assertEquals(1, events.size());
+    assertEvent(DIR_BASE, str.length(), "top index", events.get(0), false);
+  }
+
+  public void testDirNoRedirDisabled() throws Exception {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_V2_COMPAT, "false");
+    setUpRedirTest();
+    String str = "top index";
+    storeCu(dirAu, DIR_BASE + "/", str, null);
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    CachedUrlSet cus = dirAu.getAuCachedUrlSet();
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
+    hasher.setFiltered(false);
+    assertEquals(str.length(), hashToEnd(hasher, 100));
+    assertTrue(hasher.finished());
+    List<Event> events = handRec.getEvents();
+    assertEquals(1, events.size());
+    assertEvent(DIR_BASE, str.length(), "top index", events.get(0), false);
   }
 
 

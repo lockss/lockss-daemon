@@ -68,6 +68,13 @@ public class BlockHasher extends GenericHasher {
   // This MUST NOT be null - see PollManager.processConfigMacros()
   public static final String DEFAULT_LOCAL_HASH_ALGORITHM = "SHA-1";
 
+  /** If true, V2-compatible hashes are produced.  Currently this
+   * handles only "foo" -> "foo/" directory reirection and other cases
+   * where V2 doesn't handle final slash correctly.. */
+  public static final String PARAM_V2_COMPAT =
+    Configuration.PREFIX + "blockHasher.v2Compatible";
+  public static final boolean DEFAULT_V2_COMPAT = false;
+
   private static final Logger log = Logger.getLogger(BlockHasher.class);
 
   private int maxVersions = DEFAULT_HASH_MAX_VERSIONS;
@@ -87,6 +94,9 @@ public class BlockHasher extends GenericHasher {
   private HashBlock hblock;
   private byte[] contentBytes = null;
 
+  /** A CU that should hashed and recorded with the URL that V2 would
+   * use.  Currently used only for URLs with final slash, which V1
+   * repo doesn't represent correctly */
   class V2CompatCU implements CachedUrl {
     CachedUrl cu;
     String v2Url;
@@ -96,6 +106,7 @@ public class BlockHasher extends GenericHasher {
       this.v2Url = v2Url;
     }
 
+    /** Return the V2-compatible URL */
     public String getUrl() {
       return v2Url;
     }
@@ -181,7 +192,6 @@ public class BlockHasher extends GenericHasher {
     public int getType() {
       return cu.getType();
     }
-
     public String toString() {
       return "[V2CU: " + getUrl() + ": " + cu + "]";
     }
@@ -189,9 +199,12 @@ public class BlockHasher extends GenericHasher {
 
   CachedUrl[] cuVersions;
   CachedUrl curVer;
+  // While processing versions of a single node, accumulates CUs that
+  // should be hashed under a V2-compatible URL
   List<V2CompatCU> pendingV2CompatCUs = null;
+  // The V2-compatible versions that are currently being processed
   List<V2CompatCU> processingV2CompatCUs = null;
-  boolean isV2Compat = true;
+  boolean isV2Compat = DEFAULT_V2_COMPAT;
   int vix = -1;
   private long verBytesRead;
   private long verBytesHashed;
@@ -272,6 +285,7 @@ public class BlockHasher extends GenericHasher {
     Configuration config = ConfigManager.getCurrentConfig();
     maxVersions = config.getInt(PARAM_HASH_MAX_VERSIONS,
 				DEFAULT_HASH_MAX_VERSIONS);
+    isV2Compat = config.getBoolean(PARAM_V2_COMPAT, DEFAULT_V2_COMPAT);
     ignoreFilesOutsideCrawlSpec =
       config.getBoolean(PARAM_IGNORE_FILES_OUTSIDE_CRAWL_SPEC,
 			DEFAULT_IGNORE_FILES_OUTSIDE_CRAWL_SPEC);
@@ -399,6 +413,8 @@ public class BlockHasher extends GenericHasher {
   
   // return false iff no more versions
   protected boolean startVersion() {
+    // V2 compat may result in some versions not being hashed with the
+    // current URL
     while (true) {
       if (++vix >= cuVersions.length) {
         return false;
@@ -420,7 +436,7 @@ public class BlockHasher extends GenericHasher {
         }
         if (hasher == null) {
           // If we're in V2 compatibility mode and not already
-          // processing the V2 URLs ...
+          // processing the V2 URLs for this node ...
           if (isV2Compat && processingV2CompatCUs == null) {
             // Handle URLs ending with slash, which V1 repo
             // incorrectly stores without final slash
