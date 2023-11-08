@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>16</string>
+        <string>17</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -72,7 +72,7 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
       <entry>
         <string>Substance</string>
-        <string>3</string>
+        <string>4</string>
       </entry>
     </map>
   </entry>
@@ -98,7 +98,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <!--  a strange redundant argument that causes a 503 now normalized-->
             <!-- <string>2,"^https?://%s/%s.*\?utf8=", url_host(base_url), book_uri</string>-->
             <string>1,"^%s%s", base_url, book_uri</string>
-            <string>1,"^%s(concern/file_sets|downloads|ebooks|epubs|image-service)/", base_url</string>
+            <string>1,"^%s(concern/file_sets|downloads|ebooks|epubs|image-service|epubs_download_interval)/", base_url</string>
         </list>
     </entry>
     <entry>
@@ -119,6 +119,11 @@ POSSIBILITY OF SUCH DAMAGE.
               No    https://www.fulcrum.org/downloads/vq27zq50v
             -->
             <string>"^%sdownloads/[^?/]+", base_url</string>
+            <!--
+             https://www.fulcrum.org/epubs_download_interval/bk128d57w?chapter_index=138&title=1.+Augustus		1		350053		-		-
+             https://www.fulcrum.org/epubs_download_interval/bk128d57w?chapter_index=139&title=2.+Tiberius
+            -->
+            <string>"^%s(downloads|epubs_download_interval)/[^?/]+", base_url</string>
         </list>
     </entry>
     <entry>
