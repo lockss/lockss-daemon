@@ -765,7 +765,7 @@
     au < doNotProcess ; 2006 ; 2006 ; American Journal of Health-System Pharmacy Volume 63 ; 63 >
     au < doNotProcess ; 2007 ; 2007 ; American Journal of Health-System Pharmacy Volume 64 ; 64 >
     au < released ; 2008 ; 2008 ; American Journal of Health-System Pharmacy Volume 65 ; 65 >
-    au < releasing ; 2009 ; 2009 ; American Journal of Health-System Pharmacy Volume 66 ; 66 >
+    au < released ; 2009 ; 2009 ; American Journal of Health-System Pharmacy Volume 66 ; 66 >
     au < released ; 2010 ; 2010 ; American Journal of Health-System Pharmacy Volume 67 ; 67 >
     au < released ; 2011 ; 2011 ; American Journal of Health-System Pharmacy Volume 68 ; 68 >
     au < released ; 2012 ; 2012 ; American Journal of Health-System Pharmacy Volume 69 ; 69 >
@@ -11745,7 +11745,7 @@
     au < doNotProcess ; 2005 ; 2005 ; Journal of Medical Entomology Volume 42 ; 42 >
     au < doNotProcess ; 2006 ; 2006 ; Journal of Medical Entomology Volume 43 ; 43 >
     au < doNotProcess ; 2007 ; 2007 ; Journal of Medical Entomology Volume 44 ; 44 >
-    au < releasing ; 2008 ; 2008 ; Journal of Medical Entomology Volume 45 ; 45 > #403 error on cdn back file
+    au < released ; 2008 ; 2008 ; Journal of Medical Entomology Volume 45 ; 45 > #403 error on cdn back file
     au < doNotProcess ; 2009 ; 2009 ; Journal of Medical Entomology Volume 46 ; 46 >
     au < doNotProcess ; 2010 ; 2010 ; Journal of Medical Entomology Volume 47 ; 47 >
     au < doNotProcess ; 2011 ; 2011 ; Journal of Medical Entomology Volume 48 ; 48 >
@@ -12371,7 +12371,7 @@
     #move from Wiley by 2023-01-01
     #content avilable online from 1967 Volume 1 to 2007 Volume 41
 
-    au < releasing ; 2008 ; 2008 ; Journal of Philosophy of Education Volume 42 ; 42 >
+    au < released ; 2008 ; 2008 ; Journal of Philosophy of Education Volume 42 ; 42 >
     au < released ; 2009 ; 2009 ; Journal of Philosophy of Education Volume 43 ; 43 >
     au < released ; 2010 ; 2010 ; Journal of Philosophy of Education Volume 44 ; 44 >
     au < released ; 2011 ; 2011 ; Journal of Philosophy of Education Volume 45 ; 45 >
@@ -13707,7 +13707,7 @@
     param[journal_id] = jambio
     #move from Wiley by 2022-12-12
 
-    au < releasing ; 2022 ; 2022 ; Journal of Applied Microbiology Volume 133 ; 133 >
+    au < released ; 2022 ; 2022 ; Journal of Applied Microbiology Volume 133 ; 133 >
     au < manifest ; 2023 ; 2023 ; Journal of Applied Microbiology Volume 134 ; 134 >
 
   }
@@ -14214,7 +14214,7 @@
     param[journal_id] = jmicro
     #content available from 1953 volume 1 to 2008 volume 57
 
-    au < releasing ; 2008 ; 2008 ; Microscopy Volume 57 ; 57 >
+    au < released ; 2008 ; 2008 ; Microscopy Volume 57 ; 57 >
     au < released ; 2009 ; 2009 ; Microscopy Volume 58 ; 58 >
     au < released ; 2010 ; 2010 ; Microscopy Volume 59 ; 59 >
     au < released ; 2011 ; 2011 ; Microscopy Volume 60 ; 60 >
@@ -14246,8 +14246,8 @@
     #move from Cambridge University Press in 2023
     #content available from 1992 volume 1 to 2007 volume 15
 
-    au < releasing ; 2008 ; 2008 ; Microscopy Today Volume 16 ; 16 >
-    au < releasing ; 2009 ; 2009 ; Microscopy Today Volume 17 ; 17 >
+    au < released ; 2008 ; 2008 ; Microscopy Today Volume 16 ; 16 >
+    au < released ; 2009 ; 2009 ; Microscopy Today Volume 17 ; 17 >
     au < released ; 2010 ; 2010 ; Microscopy Today Volume 18 ; 18 >
     au < released ; 2011 ; 2011 ; Microscopy Today Volume 19 ; 19 >
     au < released ; 2012 ; 2012 ; Microscopy Today Volume 20 ; 20 >
@@ -14278,8 +14278,8 @@
     #move from Cambridge University Press in 2023
     #content available from 1995 volume 1 to 2007 volume 13
 
-    au < releasing ; 2008 ; 2008 ; Microscopy and Microanalysis Volume 14 ; 14 >
-    au < releasing ; 2009 ; 2009 ; Microscopy and Microanalysis Volume 15 ; 15 >
+    au < released ; 2008 ; 2008 ; Microscopy and Microanalysis Volume 14 ; 14 >
+    au < released ; 2009 ; 2009 ; Microscopy and Microanalysis Volume 15 ; 15 >
     au < released ; 2010 ; 2010 ; Microscopy and Microanalysis Volume 16 ; 16 >
     au < released ; 2011 ; 2011 ; Microscopy and Microanalysis Volume 17 ; 17 >
     au < released ; 2012 ; 2012 ; Microscopy and Microanalysis Volume 18 ; 18 >
@@ -14292,7 +14292,7 @@
     au < released ; 2019 ; 2019 ; Microscopy and Microanalysis Volume 25 ; 25 >
     au < released ; 2020 ; 2020 ; Microscopy and Microanalysis Volume 26 ; 26 >
     au < released ; 2021 ; 2021 ; Microscopy and Microanalysis Volume 27 ; 27 >
-    au < releasing ; 2022 ; 2022 ; Microscopy and Microanalysis Volume 28 ; 28 >
+    au < released ; 2022 ; 2022 ; Microscopy and Microanalysis Volume 28 ; 28 >
     au < manifest ; 2023 ; 2023 ; Microscopy and Microanalysis Volume 29 ; 29 >
 
   }
@@ -14485,7 +14485,7 @@
     au < doNotProcess ; 2005 ; 2005 ; Mind Volume 114 ; 114 >
     au < doNotProcess ; 2006 ; 2006 ; Mind Volume 115 ; 115 >
     au < doNotProcess ; 2007 ; 2007 ; Mind Volume 116 ; 116 >
-    au < releasing ; 2008 ; 2008 ; Mind Volume 117 ; 117 >
+    au < released ; 2008 ; 2008 ; Mind Volume 117 ; 117 >
     au < doNotProcess ; 2009 ; 2009 ; Mind Volume 118 ; 118 >
     au < doNotProcess ; 2010 ; 2010 ; Mind Volume 119 ; 119 >
     au < doNotProcess ; 2011 ; 2011 ; Mind Volume 120 ; 120 >
@@ -14729,8 +14729,8 @@
     au < released ; 2018 ; 2018 ; Monthly Notices of the Royal Astronomical Society Volume 473-481 ; 473-481 >
     au < released ; 2019 ; 2019 ; Monthly Notices of the Royal Astronomical Society Volume 482-490 ; 482-490 >
     au < released ; 2020 ; 2020 ; Monthly Notices of the Royal Astronomical Society Volume 491-499 ; 491-499 >
-    au < releasing ; 2021 ; 2021 ; Monthly Notices of the Royal Astronomical Society Volume 500-508 ; 500-508 >
-    au < releasing ; 2022 ; 2022 ; Monthly Notices of the Royal Astronomical Society Volume 509-517 ; 509-517 >
+    au < released ; 2021 ; 2021 ; Monthly Notices of the Royal Astronomical Society Volume 500-508 ; 500-508 >
+    au < released ; 2022 ; 2022 ; Monthly Notices of the Royal Astronomical Society Volume 509-517 ; 509-517 >
     au < manifest ; 2023 ; 2023 ; Monthly Notices of the Royal Astronomical Society Volume 518-526 ; 518-526 >
 
   }
@@ -14749,7 +14749,7 @@
     au < doNotProcess ; 2005 ; 2005 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 356-364 ; 356-364 >
     au < doNotProcess ; 2006 ; 2006 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 365-373 ; 365-373 >
     au < doNotProcess ; 2007 ; 2007 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 374-382 ; 374-382 >
-    au < releasing ; 2008 ; 2008 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 383-391 ; 383-391 >
+    au < released ; 2008 ; 2008 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 383-391 ; 383-391 >
     au < doNotProcess ; 2009 ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 392-400 ; 392-400 >
     au < doNotProcess ; 2010 ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 401-409 ; 401-409 >
     au < doNotProcess ; 2011 ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 410-418 ; 410-418 >
@@ -14808,7 +14808,7 @@
     au < doNotProcess ; 2005 ; 2005 ; Music Theory Spectrum Volume 27 ; 27 >
     au < doNotProcess ; 2006 ; 2006 ; Music Theory Spectrum Volume 28 ; 28 >
     au < doNotProcess ; 2007 ; 2007 ; Music Theory Spectrum Volume 29 ; 29 >
-    au < releasing ; 2008 ; 2008 ; Music Theory Spectrum Volume 30 ; 30 >
+    au < released ; 2008 ; 2008 ; Music Theory Spectrum Volume 30 ; 30 >
     au < doNotProcess ; 2009 ; 2009 ; Music Theory Spectrum Volume 31 ; 31 >
     au < doNotProcess ; 2010 ; 2010 ; Music Theory Spectrum Volume 32 ; 32 >
     au < doNotProcess ; 2011 ; 2011 ; Music Theory Spectrum Volume 33 ; 33 >
@@ -14889,7 +14889,7 @@
     au < doNotProcess ; 2005 ; 2005 ; Music Therapy Perspectives Volume 23 ; 23 >
     au < doNotProcess ; 2006 ; 2006 ; Music Therapy Perspectives Volume 24 ; 24 >
     au < doNotProcess ; 2007 ; 2007 ; Music Therapy Perspectives Volume 25 ; 25 >
-    au < releasing ; 2008 ; 2008 ; Music Therapy Perspectives Volume 26 ; 26 >
+    au < released ; 2008 ; 2008 ; Music Therapy Perspectives Volume 26 ; 26 >
     au < doNotProcess ; 2009 ; 2009 ; Music Therapy Perspectives Volume 27 ; 27 >
     au < doNotProcess ; 2010 ; 2010 ; Music Therapy Perspectives Volume 28 ; 28 >
     au < doNotProcess ; 2011 ; 2011 ; Music Therapy Perspectives Volume 29 ; 29 >
@@ -15135,7 +15135,7 @@
     au < doNotProcess ; 2005 ; 2005 ; Nephrology Dialysis Transplantation Volume 20 ; 20 >
     au < doNotProcess ; 2006 ; 2006 ; Nephrology Dialysis Transplantation Volume 21 ; 21 >
     au < doNotProcess ; 2007 ; 2007 ; Nephrology Dialysis Transplantation Volume 22 ; 22 >
-    au < releasing ; 2008 ; 2008 ; Nephrology Dialysis Transplantation Volume 23 ; 23 >
+    au < released ; 2008 ; 2008 ; Nephrology Dialysis Transplantation Volume 23 ; 23 >
     au < doNotProcess ; 2009 ; 2009 ; Nephrology Dialysis Transplantation Volume 24 ; 24 >
     au < doNotProcess ; 2010 ; 2010 ; Nephrology Dialysis Transplantation Volume 25 ; 25 >
     au < doNotProcess ; 2011 ; 2011 ; Nephrology Dialysis Transplantation Volume 26 ; 26 >
@@ -15690,7 +15690,7 @@
     au < doNotProcess ; 2005 ; 2005 ; Nutrition Reviews Volume 63 ; 63 >
     au < doNotProcess ; 2006 ; 2006 ; Nutrition Reviews Volume 64 ; 64 >
     au < doNotProcess ; 2007 ; 2007 ; Nutrition Reviews Volume 65 ; 65 >
-    au < releasing ; 2008 ; 2008 ; Nutrition Reviews Volume 66 ; 66 >
+    au < released ; 2008 ; 2008 ; Nutrition Reviews Volume 66 ; 66 >
     au < doNotProcess ; 2009 ; 2009 ; Nutrition Reviews Volume 67 ; 67 >
     au < doNotProcess ; 2010 ; 2010 ; Nutrition Reviews Volume 68 ; 68 >
     au < doNotProcess ; 2011 ; 2011 ; Nutrition Reviews Volume 69 ; 69 >
@@ -15723,7 +15723,7 @@
     au < doNotProcess ; 2005 ; 2005 ; OAH Magazine of History Volume 19 ; 19 >
     au < doNotProcess ; 2006 ; 2006 ; OAH Magazine of History Volume 20 ; 20 >
     au < doNotProcess ; 2007 ; 2007 ; OAH Magazine of History Volume 21 ; 21 >
-    au < releasing ; 2008 ; 2008 ; OAH Magazine of History Volume 22 ; 22 >
+    au < released ; 2008 ; 2008 ; OAH Magazine of History Volume 22 ; 22 >
     au < doNotProcess ; 2009 ; 2009 ; OAH Magazine of History Volume 23 ; 23 >
     au < doNotProcess ; 2010 ; 2010 ; OAH Magazine of History Volume 24 ; 24 >
     au < doNotProcess ; 2011 ; 2011 ; OAH Magazine of History Volume 25 ; 25 >
@@ -15843,7 +15843,7 @@
     au < doNotProcess ; 2005 ; 2005 ; The Oncologist Volume 10 ; 10 >
     au < doNotProcess ; 2006 ; 2006 ; The Oncologist Volume 11 ; 11 >
     au < doNotProcess ; 2007 ; 2007 ; The Oncologist Volume 12 ; 12 >
-    au < releasing ; 2008 ; 2008 ; The Oncologist Volume 13 ; 13 >
+    au < released ; 2008 ; 2008 ; The Oncologist Volume 13 ; 13 >
     au < released ; 2009 ; 2009 ; The Oncologist Volume 14 ; 14 >
     au < released ; 2010 ; 2010 ; The Oncologist Volume 15 ; 15 >
     au < released ; 2011 ; 2011 ; The Oncologist Volume 16 ; 16 >
@@ -16055,7 +16055,7 @@
     au < doNotProcess ; 2005 ; 2005 ; Oxford Economic Papers Volume 57 ; 57 >
     au < doNotProcess ; 2006 ; 2006 ; Oxford Economic Papers Volume 58 ; 58 >
     au < doNotProcess ; 2007 ; 2007 ; Oxford Economic Papers Volume 59 ; 59 >
-    au < releasing ; 2008 ; 2008 ; Oxford Economic Papers Volume 60 ; 60 >
+    au < released ; 2008 ; 2008 ; Oxford Economic Papers Volume 60 ; 60 >
     au < doNotProcess ; 2009 ; 2009 ; Oxford Economic Papers Volume 61 ; 61 >
     au < doNotProcess ; 2010 ; 2010 ; Oxford Economic Papers Volume 62 ; 62 >
     au < doNotProcess ; 2011 ; 2011 ; Oxford Economic Papers Volume 63 ; 63 >
@@ -16517,7 +16517,7 @@
     au < doNotProcess ; 2005 ; 2005 ; Pathogens and Disease Volume 43-45 ; 43-45 >
     au < doNotProcess ; 2006 ; 2006 ; Pathogens and Disease Volume 46-48 ; 46-48 >
     au < doNotProcess ; 2007 ; 2007 ; Pathogens and Disease Volume 49-51 ; 49-51 >
-    au < releasing ; 2008 ; 2008 ; Pathogens and Disease Volume 52-54 ; 52-54 >
+    au < released ; 2008 ; 2008 ; Pathogens and Disease Volume 52-54 ; 52-54 >
     au < released ; 2009 ; 2009 ; Pathogens and Disease Volume 55-57 ; 55-57 >
     au < released ; 2010 ; 2010 ; Pathogens and Disease Volume 58-60 ; 58-60 >
     au < released ; 2011 ; 2011 ; Pathogens and Disease Volume 61-63 ; 61-63 >
@@ -16839,7 +16839,7 @@
 
       au < released ; 2020 ; 2020 ; Plant Physiology Volume 182-184 ; 182-184 >
       au < released ; 2021 ; 2021 ; Plant Physiology Volume 185-187 ; 185-187 >
-      au < releasing ; 2022 ; 2022 ; Plant Physiology Volume 188-190 ; 188-190 >
+      au < released ; 2022 ; 2022 ; Plant Physiology Volume 188-190 ; 188-190 >
       au < manifest ; 2023 ; 2023 ; Plant Physiology Volume 191-193 ; 191-193 >
 
     }
