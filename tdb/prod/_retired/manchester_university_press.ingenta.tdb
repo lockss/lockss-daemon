@@ -28,7 +28,7 @@
      param[api_url] = https://api.ingentaconnect.com/
      param[journal_id] = bjrl
      param[journal_issn] = 2054-9326
-	# Why are 2003-2006 dNP - they weren't processed previously
+     # Why are 2003-2006 dNP - they weren't processed previously
 
      au < doNotProcess ; 2003 ; Bulletin of the John Rylands Library Volume 85 ; 85 >
      au < doNotProcess ; 2004 ; Bulletin of the John Rylands Library Volume 86 ; 86 >
@@ -115,7 +115,7 @@
      param[api_url] = https://api.ingentaconnect.com/
      param[journal_id] = redes
      param[journal_issn] = 2308-0906
-	# not sure why 1997-2010 are dNP - they weren't processed previously
+     # not sure why 1997-2010 are dNP - they weren't processed previously
 
      au < doNotProcess ; 1997 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 1 ; 1 >
      au < doNotProcess ; 1998 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 2 ; 2 >

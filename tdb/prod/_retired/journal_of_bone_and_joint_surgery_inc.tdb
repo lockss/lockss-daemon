@@ -143,7 +143,7 @@
     
     plugin = org.lockss.plugin.highwire.jbjs.JBJSDrupalPlugin 
     param[base_url] = http://surgicaltechniques.jbjs.org/
-    implicit < status ; year ; name ; param[volume_name] >	
+    implicit < status ; year ; name ; param[volume_name] >
     #Unable to fetch probe permission page
 
     au < doNotProcess ; 2004 ; JBJS Essential Surgical Techniques Volume os-86 ; os-86 >

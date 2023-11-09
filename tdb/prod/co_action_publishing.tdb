@@ -216,7 +216,7 @@
     param[journal_id] = zfnr20
     #published by SNF Swedish Nutrition Foundation in cooperation with Open Academia
 
-	comment[fnr2008] = 502 Proxy Error
+    comment[fnr2008] = 502 Proxy Error
 
     au < doNotProcess ; 2008 ; Food & Nutrition Research Volume 52 ; 52 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2009 ; Food & Nutrition Research [including Supplements] Volume 53 ; 53 ; https://www.tandfonline.com/ >

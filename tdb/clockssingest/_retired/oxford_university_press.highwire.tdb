@@ -9907,7 +9907,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     
     # Fatal error http://intimmabs.oxfordjournals.org/content/22/Suppl_1_Pt_1.author-index   ;   Connection reset
-	# HW 
+    # HW 
     au < superseded ; exists ; 2010 ; International Immunology Meeting Abstracts Volume 22 [superseded] ; 22 ; >
 
   }
@@ -16766,7 +16766,7 @@
       eissn = 1460-2407 ;
       issnl = 1360-9947
     >
-	
+
     {
 
     param[base_url] = http://molehr.oxfordjournals.org/
@@ -24988,7 +24988,7 @@
 
       param[base_url] = http://jnen.oxfordjournals.org/
       pluginSuffix = oup.ClockssOUPDrupalPlugin
-      #content available from 1985 volume 44 to 1999 volume 58	
+      #content available from 1985 volume 44 to 1999 volume 58
 
       au < doNotProcess ; exists ; 2000 ; Journal of Neuropathology & Experimental Neurology Volume 59 ; 59 ; >
       au < doNotProcess ; exists ; 2001 ; Journal of Neuropathology & Experimental Neurology Volume 60 ; 60 ; >

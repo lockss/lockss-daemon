@@ -220,7 +220,7 @@
     param[base_url] = http://www.foodandnutritionresearch.net/
     param[journal_id] = fnr
 
-	comment[fnr2008] = 502 Proxy Error
+    comment[fnr2008] = 502 Proxy Error
 
     au < down ; 2008 ; Food & Nutrition Research Volume 52 ; 52 ; 2008 >
     au < down ; 2009 ; Food & Nutrition Research [including Supplements] Volume 53 ; 53 ; 2009 >

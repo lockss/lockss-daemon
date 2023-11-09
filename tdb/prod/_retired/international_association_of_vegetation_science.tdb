@@ -21,13 +21,13 @@
       au < down ; 2004 ; Applied Vegetation Science Volume 7 ; 7 >
 
     }
-	{
+    {
       implicit < status ; year ; name ; param[volume_name] >
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = apve
-  	  comment[defunct] = Last issue published was Dec. 2008
-  	  
+      comment[defunct] = Last issue published was Dec. 2008
+
       au < down ; 2002 ; Applied Vegetation Science Volume 5 ; 5 >
       au < down ; 2003 ; Applied Vegetation Science Volume 6 ; 6 >
       au < doNotProcess ; 2004 ; Applied Vegetation Science Volume 7 ; 7 >
@@ -58,7 +58,7 @@
 
     {
 
-	  implicit < status ; year ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = vegs

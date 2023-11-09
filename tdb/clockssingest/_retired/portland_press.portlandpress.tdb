@@ -503,7 +503,7 @@
 
     param[base_url] = http://www.biochemsoctrans.org/
     param[journal_id] = bst
-	
+
     au < doNotProcess ; doNotProcess ; 1973 ; Biochemical Society Transactions Volume 1 ; 001 ; >
     au < doNotProcess ; doNotProcess ; 1974 ; Biochemical Society Transactions Volume 2 ; 002 ; >
     au < doNotProcess ; doNotProcess ; 1975 ; Biochemical Society Transactions Volume 3 ; 003 ; >
