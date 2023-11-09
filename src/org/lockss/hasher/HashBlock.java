@@ -60,7 +60,7 @@ public class HashBlock {
   }
 
   public String toString() {
-    return "[HBlock: " + getUrl() + "]";
+    return "[HBlock: " + getUrl() + ": " + versions + "]";
   }
   
   public void addVersion(long unfilteredOffset,
@@ -317,6 +317,10 @@ public class HashBlock {
       }
       
       return EQUAL;
+    }
+
+    public String toString() {
+      return "[ver " + repositoryVersion + ", len: " + filteredLength + "]";
     }
   }
 }
