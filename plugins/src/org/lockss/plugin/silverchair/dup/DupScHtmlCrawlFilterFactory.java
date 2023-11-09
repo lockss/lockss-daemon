@@ -91,6 +91,10 @@ public class DupScHtmlCrawlFilterFactory implements FilterFactory {
 
         // https://read.dukeupress.edu/theater/issue/27/2_and_3, this inclue prev/next issue, will cause overcrawl
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-IssueInfo"),
+
+        // https://read.dukeupress.edu/trans-asia-photography/article-standard/doi/10.1215/215820251_6-2-202/312709/Kowloon-Walled-City-Revisited-Photography-and, this inclue prev/next article
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-ArticleNavLinks"),
+
               
         })
       )
