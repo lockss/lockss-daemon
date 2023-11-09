@@ -1520,6 +1520,11 @@ public class TestBlockHasher extends LockssTestCase {
   }
 
   private void storeCu(ArchivalUnit au, String url,
+                       String content) throws Exception {
+    storeCu(au, url, content, null);
+  }
+
+  private void storeCu(ArchivalUnit au, String url,
                        String content, Properties props) throws Exception {
     UrlData ud = new UrlData(new StringInputStream(content),
                              props == null ? new CIProperties() : CIProperties.fromProperties(props),
@@ -1529,12 +1534,7 @@ public class TestBlockHasher extends LockssTestCase {
   }
 
   Properties redirProps(String url, String toUrl) {
-    return PropUtil.fromArgs(CachedUrl.PROPERTY_NODE_URL, url,
-                             CachedUrl.PROPERTY_REDIRECTED_TO, toUrl);
-  }
-
-  Properties nonRedirProps(String url) {
-    return PropUtil.fromArgs(CachedUrl.PROPERTY_NODE_URL, url);
+    return PropUtil.fromArgs(CachedUrl.PROPERTY_REDIRECTED_TO, toUrl);
   }
 
   public void testDirRedir() throws Exception {
@@ -1560,7 +1560,7 @@ public class TestBlockHasher extends LockssTestCase {
     ConfigurationUtil.addFromArgs(BlockHasher.PARAM_V2_COMPAT, "true");
     setUpRedirTest();
     String str = "top index";
-    storeCu(dirAu, DIR_BASE + "/", str, null);
+    storeCu(dirAu, DIR_BASE + "/", str);
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
     CachedUrlSet cus = dirAu.getAuCachedUrlSet();
@@ -1596,7 +1596,7 @@ public class TestBlockHasher extends LockssTestCase {
     ConfigurationUtil.addFromArgs(BlockHasher.PARAM_V2_COMPAT, "false");
     setUpRedirTest();
     String str = "top index";
-    storeCu(dirAu, DIR_BASE + "/", str, null);
+    storeCu(dirAu, DIR_BASE + "/", str);
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
     CachedUrlSet cus = dirAu.getAuCachedUrlSet();
@@ -1610,6 +1610,39 @@ public class TestBlockHasher extends LockssTestCase {
     assertEvent(DIR_BASE, str.length(), "top index", events.get(0), false);
   }
 
+  public void testDirRedirVers() throws Exception {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_V2_COMPAT, "true");
+    setUpRedirTest();
+    String base = DIR_BASE;
+    String str = "some content";
+
+    // Three versions of foo->foo/ redirect
+    storeCu(dirAu, base, str, redirProps(DIR_BASE, DIR_BASE + "/"));
+    storeCu(dirAu, base, str+"1", redirProps(DIR_BASE, DIR_BASE + "/"));
+    storeCu(dirAu, base, str+"2", redirProps(DIR_BASE, DIR_BASE + "/"));
+    storeCu(dirAu, base+"/", str+"3", null);
+    storeCu(dirAu, base+"1", str+"xx", null);
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    CachedUrlSet cus = dirAu.getAuCachedUrlSet();
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
+    hasher.setFiltered(false);
+
+    int len = str.length();
+    int len1 = len+1;
+    assertEquals(len*2 + len1*4 + len1 + len+2, hashToEnd(hasher, 100));
+    assertTrue(hasher.finished());
+    List<Event> events = handRec.getEvents();
+    log.critical("events: " + events);
+    assertEquals(3, events.size());
+    assertEquals(3, events.get(0).hblock.getVersions().length);
+    assertEvent(base, len1, str+"2", events.get(0), false);
+    assertEquals(4, events.get(1).hblock.getVersions().length);
+    assertEvent(base+"/", len1, str+"3", events.get(1), false);
+    assertEquals(1, events.get(2).hblock.getVersions().length);
+    assertEvent(base+"1", len+2, str+"xx", events.get(2), false);
+  }
 
 //  static byte[] bytes = ByteArray.makeRandomBytes(40);
 //  static final int multiple = 100000000;

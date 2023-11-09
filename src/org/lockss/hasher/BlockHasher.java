@@ -574,12 +574,8 @@ public class BlockHasher extends GenericHasher {
   }
 
   protected void startNode() {
-    if (processingV2CompatCUs != null &&
-        StringUtil.preOrderCompareTo(processingV2CompatCUs.get(0).v2Url,
-                                     curNode.getUrl())
-        <= 0) {
-      cuVersions = processingV2CompatCUs.stream()
-        .toArray(CachedUrl[]::new);
+    if (processingV2CompatCUs != null) {
+      cuVersions = processingV2CompatCUs.stream().toArray(CachedUrl[]::new);
       curCu = cuVersions[0];
       vix = -1;
     } else {
