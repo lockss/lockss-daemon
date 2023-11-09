@@ -1083,7 +1083,7 @@
         issn = 0955-7490 ;
         eissn = 2050-4551
     >
-	
+
       param[base_url] = http://ala.sagepub.com/
       pluginSuffix = HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
