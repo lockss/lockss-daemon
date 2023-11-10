@@ -58,6 +58,9 @@ public class SilverchairCommonThemeHtmlCrawlFilterFactory implements FilterFacto
             //https://pubs.geoscienceworld.org/canmin/article-standard/60/2/229/612767/A-proposed-new-mineralogical-classification-system
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related-content"),
             HtmlNodeFilters.tagWithAttributeRegex("a", "class", "related-content"),
+            //We saw Silverchair add those to non-common-theme plugins, for cautious, we added it here
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-IssueInfo"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-ArticleNavLinks"),
         };
 
         return new HtmlFilterInputStream(in,
