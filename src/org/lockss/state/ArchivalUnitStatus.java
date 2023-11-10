@@ -1,28 +1,32 @@
 /*
 
-Copyright (c) 2000-2022 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 */
 
@@ -187,12 +191,26 @@ public class ArchivalUnitStatus
   }
 
 
-  /** By default the AuSummary table omits the size columns.  Specify
-   * columns=* to include them */
-  static final String DEFAULT_AU_SUMMARY_COLUMNS = "-AuSize;DiskUsage";
-
   static class AuSummary implements StatusAccessor {
     static final String TABLE_TITLE = "Archival Units";
+    static final String COL_AU_NAME = "AuName";
+    static final String COL_AU_SIZE = "AuSize";
+    static final String COL_DISK_USAGE = "DiskUsage";
+    static final String COL_PEERS = "Peers";
+    static final String COL_AU_POLLS = "AuPolls";
+    static final String COL_DAMAGED = "Damaged";
+    static final String COL_AU_LAST_POLL = "AuLastPoll";
+    static final String COL_AU_LAST_CRAWL_ATTEMPT = "AuLastCrawlAttempt";
+    static final String COL_AU_LAST_CRAWL_RESULT_MSG = "AuLastCrawlResultMsg";
+    static final String COL_AU_LAST_CRAWL = "AuLastCrawl";
+    static final String COL_SUBSCRIBED = "Subscribed";
+
+    /** By default the AuSummary table omits the size columns.  Specify
+     * columns=* to include them */
+    static final String DEFAULT_AU_SUMMARY_COLUMNS =
+        String.format("-%s;%s",
+                      COL_AU_SIZE,
+                      COL_DISK_USAGE);
 
     static final String FOOT_STATUS = "Flags may follow status: C means the AU is complete, D means that the AU is no longer available from the publisher, NS means the AU has no files containing substantial content.";
 
@@ -200,31 +218,31 @@ public class ArchivalUnitStatus
 
 
     private static final List columnDescriptors = ListUtil.list(
-      new ColumnDescriptor("AuName", "Volume", ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor(COL_AU_NAME, "AU Name", ColumnDescriptor.TYPE_STRING),
 //       new ColumnDescriptor("AuNodeCount", "Nodes", ColumnDescriptor.TYPE_INT),
-      new ColumnDescriptor("AuSize", "Content Size",
+      new ColumnDescriptor(COL_AU_SIZE, "Content Size",
 			   ColumnDescriptor.TYPE_INT, FOOT_SIZE),
-      new ColumnDescriptor("DiskUsage", "Disk Usage (MB)",
+      new ColumnDescriptor(COL_DISK_USAGE, "Disk Usage (MB)",
 			   ColumnDescriptor.TYPE_FLOAT, FOOT_SIZE),
-      new ColumnDescriptor("Peers", "Peers", ColumnDescriptor.TYPE_INT),
-      new ColumnDescriptor("AuPolls", "Recent Polls",
+      new ColumnDescriptor(COL_PEERS, "Peers", ColumnDescriptor.TYPE_INT),
+      new ColumnDescriptor(COL_AU_POLLS, "Recent Polls",
                            ColumnDescriptor.TYPE_INT),
-      new ColumnDescriptor("Damaged", "Status",
+      new ColumnDescriptor(COL_DAMAGED, "Status",
                            ColumnDescriptor.TYPE_STRING,
 			   FOOT_STATUS),
-      new ColumnDescriptor("AuLastPoll", "Last Poll",
+      new ColumnDescriptor(COL_AU_LAST_POLL, "Last Poll",
                            ColumnDescriptor.TYPE_DATE),
-      new ColumnDescriptor("AuLastCrawlAttempt", "Last Crawl Start",
+      new ColumnDescriptor(COL_AU_LAST_CRAWL_ATTEMPT, "Last Crawl Start",
                            ColumnDescriptor.TYPE_DATE),
-      new ColumnDescriptor("AuLastCrawlResultMsg", "Last Crawl Result",
+      new ColumnDescriptor(COL_AU_LAST_CRAWL_RESULT_MSG, "Last Crawl Result",
                            ColumnDescriptor.TYPE_STRING),
-      new ColumnDescriptor("AuLastCrawl", "Last Successful Crawl",
+      new ColumnDescriptor(COL_AU_LAST_CRAWL, "Last Successful Crawl",
                            ColumnDescriptor.TYPE_DATE)
       );
 
     private static final List sortRules =
       ListUtil.list(new
-		    StatusTable.SortRule("AuName",
+		    StatusTable.SortRule(COL_AU_NAME,
 					 CatalogueOrderComparator.SINGLETON));
 
     private LockssDaemon theDaemon;
@@ -251,7 +269,7 @@ public class ArchivalUnitStatus
       if (theDaemon.isDetectClockssSubscription()) {
 	cols = new ArrayList(cols);
 	cols.remove(cols.size() - 1);
-	cols.add(new ColumnDescriptor("Subscribed", "Subscribed",
+	cols.add(new ColumnDescriptor(COL_SUBSCRIBED, "Subscribed",
 				      ColumnDescriptor.TYPE_STRING));
       }
       table.setColumnDescriptors(cols, DEFAULT_AU_SUMMARY_COLUMNS);
@@ -324,18 +342,18 @@ public class ArchivalUnitStatus
       // refactored.
       boolean isV3 = AuUtil.getProtocolVersion(au) == Poll.V3_PROTOCOL;
       //"AuID"
-      rowMap.put("AuName", AuStatus.makeAuRef(au.getName(), au.getAuId()));
+      rowMap.put(COL_AU_NAME, AuStatus.makeAuRef(au.getName(), au.getAuId()));
 //       rowMap.put("AuNodeCount", new Integer(-1));
-      if (inclCols.contains("AuSize")) {
+      if (inclCols.contains(COL_AU_SIZE)) {
 	long contentSize = AuUtil.getAuContentSize(au, false);
 	if (contentSize != -1) {
-	  rowMap.put("AuSize", new Long(contentSize));
+	  rowMap.put(COL_AU_SIZE, new Long(contentSize));
 	}
       }
-      if (inclCols.contains("DiskUsage")) {
+      if (inclCols.contains(COL_DISK_USAGE)) {
 	long du = AuUtil.getAuDiskUsage(au, false);
 	if (du != -1) {
-	  rowMap.put("DiskUsage", new Double(((double)du) / (1024*1024)));
+	  rowMap.put(COL_DISK_USAGE, new Double(((double)du) / (1024*1024)));
 	}
       }
       long lastCrawl = auState.getLastCrawlTime();
@@ -343,7 +361,7 @@ public class ArchivalUnitStatus
       int lastResultCode = auState.getLastCrawlResult();
       String lastResult = auState.getLastCrawlResultMsg();
       
-      rowMap.put("AuLastCrawl", new Long(lastCrawl));
+      rowMap.put(COL_AU_LAST_CRAWL, new Long(lastCrawl));
       // AuState files that show a successful crawl but no lastAttempt just
       // have uninitialized lastXxx fields.  Display time and status of
       // last successful instead
@@ -352,7 +370,7 @@ public class ArchivalUnitStatus
 	lastResultCode = Crawler.STATUS_SUCCESSFUL;
 	lastResult = "Successful";
       }
-      rowMap.put("AuLastCrawlAttempt", new Long(lastAttempt));
+      rowMap.put(COL_AU_LAST_CRAWL_ATTEMPT, new Long(lastAttempt));
       Object lastCrawlStatus =
 	lastCrawlStatus(au, lastCrawl, lastResultCode, lastResult);
       if (lastCrawlStatus != null) {
@@ -361,16 +379,16 @@ public class ArchivalUnitStatus
 	  lastCrawlStatus =
 	    new StatusTable.DisplayedValue(lastCrawlStatus).addFootnote(SingleCrawlStatusAccessor.FOOT_NO_SUBSTANCE_CRAWL_STATUS);
 	}
-	rowMap.put("AuLastCrawlResultMsg", lastCrawlStatus);
+	rowMap.put(COL_AU_LAST_CRAWL_RESULT_MSG, lastCrawlStatus);
       }
 
-      rowMap.put("Peers", PeerRepair.makeAuRef("peers", au.getAuId()));
-      rowMap.put("AuLastPoll", new Long(auState.getLastTimePollCompleted()));
+      rowMap.put(COL_PEERS, PeerRepair.makeAuRef("peers", au.getAuId()));
+      rowMap.put(COL_AU_LAST_POLL, new Long(auState.getLastTimePollCompleted()));
       
       Object stat;
       if (isV3) {
 	int numPolls = v3status.getNumPolls(au.getAuId());
-	rowMap.put("AuPolls", pollsRef(new Integer(numPolls), au));
+	rowMap.put(COL_AU_POLLS, pollsRef(new Integer(numPolls), au));
         // Percent damaged.  It's scary to see '0% Agreement' if there's no
         // history, so we just show a friendlier message.
         //
@@ -391,7 +409,7 @@ public class ArchivalUnitStatus
           stat = agreeStatus(auState.getHighestV3Agreement());
         }
       } else {
-        rowMap.put("AuPolls",
+        rowMap.put(COL_AU_POLLS,
                    theDaemon.getStatusService().
                    getReference(PollerStatus.MANAGER_STATUS_TABLE_NAME,
                                 au));
@@ -420,10 +438,10 @@ public class ArchivalUnitStatus
 	stat = ListUtil.list(stat, flagStr);
       }
 
-      rowMap.put("Damaged", stat);
+      rowMap.put(COL_DAMAGED, stat);
 
       if (theDaemon.isDetectClockssSubscription()) {
-	rowMap.put("Subscribed",
+	rowMap.put(COL_SUBSCRIBED,
 		   AuUtil.getAuState(au).getClockssSubscriptionStatusString());
       }
 
@@ -465,7 +483,7 @@ public class ArchivalUnitStatus
 					    ColumnDescriptor.TYPE_STRING,
 					    stats.restarting + " restarting"));
       }
-      if (inclCols.contains("AuSize") || inclCols.contains("DiskUsage")) {
+      if (inclCols.contains(COL_AU_SIZE) || inclCols.contains(COL_DISK_USAGE)) {
 	int n = repoMgr.sizeCalcQueueLen();
 	if (n != 0) {
 	  res.add(new StatusTable.SummaryInfo(null,
@@ -494,24 +512,29 @@ public class ArchivalUnitStatus
   }
 
   static class AuIds implements StatusAccessor {
-    static final String TABLE_TITLE = "AU Ids";
-
+    static final String TABLE_TITLE = "AU Ids"; // FIXME
+    static final String COL_AU_NAME = "AuName";
+    static final String COL_AUID = "AuId";
+    static final String COL_CRAWL_POOL = "CrawlPool";
+    static final String COL_PUBLISHER = "Publisher";
+    static final String COL_YEAR = "Year";
+    
     private static final List columnDescriptors = ListUtil.list(
-      new ColumnDescriptor("AuName", "Volume", ColumnDescriptor.TYPE_STRING),
-      new ColumnDescriptor("AuId", "AU Id", ColumnDescriptor.TYPE_STRING),
-      new ColumnDescriptor("CrawlPool", "Crawl Pool",
+      new ColumnDescriptor(COL_AU_NAME, "AU Name", ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor(COL_AUID, "AUID", ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor(COL_CRAWL_POOL, "Crawl Pool",
 			   ColumnDescriptor.TYPE_STRING),
-      new ColumnDescriptor("Publisher", "Publisher",
+      new ColumnDescriptor(COL_PUBLISHER, "Publisher",
 			   ColumnDescriptor.TYPE_STRING),
-      new ColumnDescriptor("Year", "Year", ColumnDescriptor.TYPE_STRING)
+      new ColumnDescriptor(COL_YEAR, "Year", ColumnDescriptor.TYPE_STRING)
       );
 
     private static final List<String> defaultCols =
-      ListUtil.list("AuName", "AuId");
+      ListUtil.list(COL_AU_NAME, COL_AUID);
 
     private static final List sortRules =
       ListUtil.list(new
-		    StatusTable.SortRule("AuName",
+		    StatusTable.SortRule(COL_AU_NAME,
 					 CatalogueOrderComparator.SINGLETON));
 
     private LockssDaemon theDaemon;
@@ -564,22 +587,22 @@ public class ArchivalUnitStatus
     private Map makeRow(StatusTable table,
 			ArchivalUnit au) {
       HashMap rowMap = new HashMap();
-      rowMap.put("AuId", au.getAuId());
-      rowMap.put("AuName", AuStatus.makeAuRef(au.getName(), au.getAuId()));
-      if (table.isIncludeColumn("CrawlPool")) {
+      rowMap.put(COL_AUID, au.getAuId());
+      rowMap.put(COL_AU_NAME, AuStatus.makeAuRef(au.getName(), au.getAuId()));
+      if (table.isIncludeColumn(COL_CRAWL_POOL)) {
 	String rateKey = au.getFetchRateLimiterKey();
-	rowMap.put("CrawlPool", rateKey != null ? rateKey : au.getAuId());
+	rowMap.put(COL_CRAWL_POOL, rateKey != null ? rateKey : au.getAuId());
       }
-      if (table.isIncludeColumn("Publisher")) {
+      if (table.isIncludeColumn(COL_PUBLISHER)) {
 	String pub = AuUtil.getTitleAttribute(au, "publisher");
 	if (!StringUtil.isNullString(pub)) {
-	  rowMap.put("Publisher", pub);
+	  rowMap.put(COL_PUBLISHER, pub);
 	}
       }
-      if (table.isIncludeColumn("Year")) {
+      if (table.isIncludeColumn(COL_YEAR)) {
 	String year = AuUtil.getTitleAttribute(au, "year");
 	if (!StringUtil.isNullString(year)) {
-	  rowMap.put("Year", year);
+	  rowMap.put(COL_YEAR, year);
 	}
       }
       return rowMap;
@@ -1002,7 +1025,7 @@ public class ArchivalUnitStatus
       long du = AuUtil.getAuDiskUsage(au, false);
 
       List res = new ArrayList();
-      res.add(new StatusTable.SummaryInfo("Volume",
+      res.add(new StatusTable.SummaryInfo("AU Name",
 					  ColumnDescriptor.TYPE_STRING,
 					  au.getName()));
       res.add(new StatusTable.SummaryInfo("AUID",

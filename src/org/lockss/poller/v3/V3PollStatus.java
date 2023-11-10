@@ -1,32 +1,32 @@
 /*
-* $Id$
- */
 
-/*
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 */
 
@@ -35,18 +35,17 @@ package org.lockss.poller.v3;
 import java.util.*;
 import java.text.*;
 import java.io.*;
-import org.apache.commons.collections.ListUtils;
+
+import org.apache.commons.collections4.ListUtils;
 
 import org.lockss.daemon.status.*;
 import org.lockss.daemon.status.StatusService.*;
 import org.lockss.daemon.status.StatusTable.SummaryInfo;
 import org.lockss.config.*;
 import org.lockss.util.*;
-import org.lockss.app.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.poller.PollManager.*;
-import org.lockss.poller.v3.*;
 import org.lockss.hasher.LocalHashResult;
 import org.lockss.state.*;
 import org.lockss.protocol.*;
@@ -134,6 +133,19 @@ public class V3PollStatus {
       extends V3PollStatus implements StatusAccessor {
 
     static final String TABLE_TITLE = "Polls";
+    static final String COL_AU_ID = "auId"; // FIXME
+    static final String COL_VARIANT = "variant";
+    static final String COL_PARTICIPANTS = "participants";
+    static final String COL_STATUS = "status";
+    static final String COL_TALLIED_URLS = "talliedUrls";
+    static final String COL_ERRORS = "Errors";
+    static final String COL_COMPLETED_REPAIRS = "completedRepairs";
+    static final String COL_AGREEMENT = "agreement";
+    static final String COL_START = "start";
+    static final String COL_DEADLINE = "deadline";
+    static final String COL_END = "end";
+    static final String COL_POLL_ID = "pollId";
+    static final String COL_HASH_ERRORS = "hashErrors";
 
     // Sort by (status, suborder):
     // (active, descending start time)
@@ -145,52 +157,52 @@ public class V3PollStatus {
 		    new StatusTable.SortRule(SORT_KEY2, false));
 
     private final List colDescs =
-      ListUtil.list(new ColumnDescriptor("auId", "Volume",
+      ListUtil.list(new ColumnDescriptor(COL_AU_ID, "AU Name",
                                          ColumnDescriptor.TYPE_STRING),
-                    new ColumnDescriptor("variant", "Type",
+                    new ColumnDescriptor(COL_VARIANT, "Type",
                                          ColumnDescriptor.TYPE_STRING),
-                    new ColumnDescriptor("participants", "Participants",
+                    new ColumnDescriptor(COL_PARTICIPANTS, "Participants",
                                          ColumnDescriptor.TYPE_INT),
-                    new ColumnDescriptor("status", "Status",
+                    new ColumnDescriptor(COL_STATUS, "Status",
                                          ColumnDescriptor.TYPE_STRING),
-                    new ColumnDescriptor("talliedUrls", "URLs Tallied",
+                    new ColumnDescriptor(COL_TALLIED_URLS, "URLs Tallied",
                                          ColumnDescriptor.TYPE_INT,
                                          "Total number of URLs examined so " +
                                          "far in this poll."),
-                    new ColumnDescriptor("Errors", "Hash Errors",
+                    new ColumnDescriptor(COL_ERRORS, "Hash Errors",
                                          ColumnDescriptor.TYPE_INT,
                                          "Errors encountered while hashing content."),
-                    new ColumnDescriptor("completedRepairs", "Repairs",
+                    new ColumnDescriptor(COL_COMPLETED_REPAIRS, "Repairs",
                                          ColumnDescriptor.TYPE_INT,
                                          "Completed repairs."),
-                    new ColumnDescriptor("agreement", "Agreement",
+                    new ColumnDescriptor(COL_AGREEMENT, "Agreement",
                                          ColumnDescriptor.TYPE_AGREEMENT),
-                    new ColumnDescriptor("start", "Start",
+                    new ColumnDescriptor(COL_START, "Start",
                                          ColumnDescriptor.TYPE_DATE),
-                    new ColumnDescriptor("deadline", "Deadline",
+                    new ColumnDescriptor(COL_DEADLINE, "Deadline",
                                          ColumnDescriptor.TYPE_DATE),
-                    new ColumnDescriptor("end", "End",
+                    new ColumnDescriptor(COL_END, "End",
                                          ColumnDescriptor.TYPE_DATE),
-                    new ColumnDescriptor("pollId", "Poll ID",
+                    new ColumnDescriptor(COL_POLL_ID, "Poll ID",
                                          ColumnDescriptor.TYPE_STRING));
 
     private static final List<String> defaultCols =
       ListUtil.list(
-		    "auId",
-		    "variant",
-		    "participants",
-		    "status",
-		    "talliedUrls",
-		    "Errors",
-		    "completedRepairs",
-		    "agreement",
-		    "start",
-		    "deadline",
-		    "pollId"
+		    COL_AU_ID,
+		    COL_VARIANT,
+		    COL_PARTICIPANTS,
+		    COL_STATUS,
+		    COL_TALLIED_URLS,
+		    COL_ERRORS,
+		    COL_COMPLETED_REPAIRS,
+		    COL_AGREEMENT,
+		    COL_START,
+		    COL_DEADLINE,
+		    COL_POLL_ID
 		    );
 
     private static final List<String> pollPolicyOnlyCols =
-      ListUtil.list("variant");
+      ListUtil.list(COL_VARIANT);
 
     public V3PollerStatus(PollManager pollManager) {
       super(pollManager);
@@ -301,40 +313,40 @@ public class V3PollStatus {
     private Map makeRow(V3Poller poller) {
       Map row = new HashMap();
       ArchivalUnit au = poller.getAu();
-      row.put("auId", makeAuRef(au, ArchivalUnitStatus.AU_STATUS_TABLE_NAME));
-      row.put("variant", poller.getPollVariant().shortName());
-      row.put("status", poller.getStatusString());
+      row.put(COL_AU_ID, makeAuRef(au, ArchivalUnitStatus.AU_STATUS_TABLE_NAME));
+      row.put(COL_VARIANT, poller.getPollVariant().shortName());
+      row.put(COL_STATUS, poller.getStatusString());
       if (poller.isLocalPoll()) {
 	LocalHashResult lhr = poller.getLocalHashResult();
 	if (lhr != null) {
-	  row.put("talliedUrls", new Integer(lhr.getTotalUrls()));
+	  row.put(COL_TALLIED_URLS, new Integer(lhr.getTotalUrls()));
 	}
       } else {
-	row.put("participants", new Integer(poller.getPollSize()));
-	row.put("talliedUrls", new Integer(poller.getTalliedUrls().size()));
+	row.put(COL_PARTICIPANTS, new Integer(poller.getPollSize()));
+	row.put(COL_TALLIED_URLS, new Integer(poller.getTalliedUrls().size()));
 	if (poller.getErrorUrls() != null) {
-	  row.put("hashErrors", new Integer(poller.getErrorUrls().size()));
+	  row.put(COL_HASH_ERRORS, new Integer(poller.getErrorUrls().size()));
 	} else {
-	  row.put("hashErrors", "--");
+	  row.put(COL_HASH_ERRORS, "--");
 	}
-	row.put("completedRepairs", new Integer(poller.getCompletedRepairs().size()));
+	row.put(COL_COMPLETED_REPAIRS, new Integer(poller.getCompletedRepairs().size()));
 	Object agmt = (poller.getStatus() == V3Poller.POLLER_STATUS_COMPLETE)
 	  ? poller.getPercentAgreement()
 	  : new StatusTable.DisplayedValue(StatusTable.NO_VALUE, "--");
-	row.put("agreement", agmt);
+	row.put(COL_AGREEMENT, agmt);
       }
-      row.put("start", new Long(poller.getCreateTime()));
-      row.put("deadline", poller.getDeadline());
+      row.put(COL_START, new Long(poller.getCreateTime()));
+      row.put(COL_DEADLINE, poller.getDeadline());
       if (poller.isPollActive()) {
 	row.put(SORT_KEY1, SORT_BASE_ACTIVE);
-	row.put(SORT_KEY2, row.get("start"));
+	row.put(SORT_KEY2, row.get(COL_START));
       } else {
-	row.put("end", poller.getEndTime());
+	row.put(COL_END, poller.getEndTime());
 	row.put(SORT_KEY1, SORT_BASE_DONE);
-	row.put(SORT_KEY2, row.get("end"));
+	row.put(SORT_KEY2, row.get(COL_END));
       }
       String skey = PollUtil.makeShortPollKey(poller.getKey());
-      row.put("pollId", new StatusTable.Reference(skey,
+      row.put(COL_POLL_ID, new StatusTable.Reference(skey,
 						  POLLER_DETAIL_TABLE_NAME,
 						  poller.getKey()));
       return row;
@@ -342,8 +354,8 @@ public class V3PollStatus {
 
     private Map makePendingRow(ArchivalUnit au, int rowNum) {
       Map row = new HashMap();
-      row.put("auId", makeAuRef(au, ArchivalUnitStatus.AU_STATUS_TABLE_NAME));
-      row.put("status", "Pending");
+      row.put(COL_AU_ID, makeAuRef(au, ArchivalUnitStatus.AU_STATUS_TABLE_NAME));
+      row.put(COL_STATUS, "Pending");
       row.put(SORT_KEY1, SORT_BASE_PENDING);
       row.put(SORT_KEY2, Integer.MAX_VALUE - rowNum);
       return row;
@@ -358,6 +370,12 @@ public class V3PollStatus {
         extends V3PollStatus implements StatusAccessor {
 
     static final String TABLE_TITLE = "Votes";
+    static final String COL_AU_ID = "auId"; // FIXME
+    static final String COL_CALLER = "caller";
+    static final String COL_STATUS = "status";
+    static final String COL_START = "start";
+    static final String COL_DEADLINE = "deadline";
+    static final String COL_POLL_ID = "pollId";
 
   // Sort by (status, suborder):
   // (active, descending start time)
@@ -368,17 +386,17 @@ public class V3PollStatus {
 		    new StatusTable.SortRule(SORT_KEY2, false));
 
     private final List colDescs =
-      ListUtil.list(new ColumnDescriptor("auId", "Volume",
+      ListUtil.list(new ColumnDescriptor(COL_AU_ID, "AU Name",
                                          ColumnDescriptor.TYPE_STRING),
-                    new ColumnDescriptor("caller", "Caller",
+                    new ColumnDescriptor(COL_CALLER, "Caller",
                                          ColumnDescriptor.TYPE_STRING),
-                    new ColumnDescriptor("status", "Status",
+                    new ColumnDescriptor(COL_STATUS, "Status",
                                          ColumnDescriptor.TYPE_STRING),
-                    new ColumnDescriptor("start", "Start",
+                    new ColumnDescriptor(COL_START, "Start",
                                          ColumnDescriptor.TYPE_DATE),
-                    new ColumnDescriptor("deadline", "Deadline",
+                    new ColumnDescriptor(COL_DEADLINE, "Deadline",
                                          ColumnDescriptor.TYPE_DATE),
-                    new ColumnDescriptor("pollId", "Poll ID",
+                    new ColumnDescriptor(COL_POLL_ID, "Poll ID",
                                          ColumnDescriptor.TYPE_STRING));
 
     public V3VoterStatus(PollManager pollManager) {
@@ -416,13 +434,13 @@ public class V3PollStatus {
     private Map makeRow(V3Voter voter) {
       Map row = new HashMap();
       ArchivalUnit au = voter.getAu();
-      row.put("auId", makeAuRef(au, ArchivalUnitStatus.AU_STATUS_TABLE_NAME));
-      row.put("caller", voter.getPollerId().getIdString());
-      row.put("status", voter.getStatusString());
-      row.put("start", voter.getCreateTime());
-      row.put("deadline", voter.getDeadline());
+      row.put(COL_AU_ID, makeAuRef(au, ArchivalUnitStatus.AU_STATUS_TABLE_NAME));
+      row.put(COL_CALLER, voter.getPollerId().getIdString());
+      row.put(COL_STATUS, voter.getStatusString());
+      row.put(COL_START, voter.getCreateTime());
+      row.put(COL_DEADLINE, voter.getDeadline());
       String skey = PollUtil.makeShortPollKey(voter.getKey());
-      row.put("pollId", new StatusTable.Reference(skey,
+      row.put(COL_POLL_ID, new StatusTable.Reference(skey,
 						  VOTER_DETAIL_TABLE_NAME,
 						  voter.getKey()));
       if (voter.isPollActive()) {
@@ -581,75 +599,91 @@ public class V3PollStatus {
       extends V3PollStatus implements StatusAccessor {
 
     static final String TABLE_TITLE = "V3 Poll Status";
+    static final String COL_IDENTITY = "identity";
+    static final String COL_PEER_STATUS = "peerStatus";
+    static final String COL_AGREEMENT = "agreement";
+    static final String COL_W_AGREEMENT = "w.agreement";
+    static final String COL_NUM_AGREE = "numagree";
+    static final String COL_W_NUM_AGREE = "w.numagree";
+    static final String COL_NUM_DISAGREE = "numdisagree";
+    static final String COL_W_NUM_DISAGREE = "w.numdisagree";
+    static final String COL_NUM_POLLER_ONLY = "numpolleronly";
+    static final String COL_W_NUM_POLLER_ONLY = "w.numpolleronly";
+    static final String COL_NUM_VOTER_ONLY = "numvoteronly";
+    static final String COL_W_NUM_VOTER_ONLY = "w.numvoteronly";
+    static final String COL_BYTES_HASHED = "byteshashed";
+    static final String COL_BYTES_READ = "bytesread";
+    static final String COL_STATE = "state";
+    static final String COL_WHEN = "when";
 
     private final List sortRules =
       ListUtil.list(new StatusTable.SortRule("sort", true),
-		    new StatusTable.SortRule("identity",
+		    new StatusTable.SortRule(COL_IDENTITY,
                                              CatalogueOrderComparator.SINGLETON));
-    private String FOOT_AGREE_PRE_REPAIR =
+    private final static String FOOT_AGREE_PRE_REPAIR =
       "Agreement values and URL counts are not updated to reflect repairs. " +
       "See org.lockss.poll.v3.recordPeerUrlLists.";
 
-    private String FOOT_AGREE_POST_REPAIR =
+    private final static String FOOT_AGREE_POST_REPAIR =
       "Agreement values and URL counts/lists are updated to reflect any repairs.";
 
     private ColumnDescriptor AGREE_COLDESC_PRE_REPAIR =
-      new ColumnDescriptor("agreement", "Agreement",
+      new ColumnDescriptor(COL_AGREEMENT, "Agreement",
 			   ColumnDescriptor.TYPE_AGREEMENT,
 			   FOOT_AGREE_PRE_REPAIR);
 
     private ColumnDescriptor AGREE_COLDESC_POST_REPAIR =
-      new ColumnDescriptor("agreement", "Agreement",
+      new ColumnDescriptor(COL_AGREEMENT, "Agreement",
 			   ColumnDescriptor.TYPE_AGREEMENT,
 			   FOOT_AGREE_POST_REPAIR);
 
     private final List<ColumnDescriptor> colDescs =
-      ListUtil.list(new ColumnDescriptor("identity", "Peer",
+      ListUtil.list(new ColumnDescriptor(COL_IDENTITY, "Peer",
                                          ColumnDescriptor.TYPE_STRING),
-                    new ColumnDescriptor("peerStatus", "Status",
+                    new ColumnDescriptor(COL_PEER_STATUS, "Status",
                                          ColumnDescriptor.TYPE_STRING),
-                    new ColumnDescriptor("agreement", "Agreement",
+                    new ColumnDescriptor(COL_AGREEMENT, "Agreement",
                                          ColumnDescriptor.TYPE_AGREEMENT),
-                    new ColumnDescriptor("w.agreement", "WAgreement",
+                    new ColumnDescriptor(COL_W_AGREEMENT, "WAgreement",
                                          ColumnDescriptor.TYPE_AGREEMENT),
-                    new ColumnDescriptor("numagree", "Agreeing URLs",
+                    new ColumnDescriptor(COL_NUM_AGREE, "Agreeing URLs",
                                          ColumnDescriptor.TYPE_INT),
-                    new ColumnDescriptor("w.numagree", "WAgreeing URLs",
+                    new ColumnDescriptor(COL_W_NUM_AGREE, "WAgreeing URLs",
                                          ColumnDescriptor.TYPE_FLOAT),
-                    new ColumnDescriptor("numdisagree", "Disagreeing URLs",
+                    new ColumnDescriptor(COL_NUM_DISAGREE, "Disagreeing URLs",
                                          ColumnDescriptor.TYPE_INT),
-                    new ColumnDescriptor("w.numdisagree", "WDisagreeing URLs",
+                    new ColumnDescriptor(COL_W_NUM_DISAGREE, "WDisagreeing URLs",
                                          ColumnDescriptor.TYPE_FLOAT),
-                    new ColumnDescriptor("numpolleronly", "Poller-only URLs",
+                    new ColumnDescriptor(COL_NUM_POLLER_ONLY, "Poller-only URLs",
                                          ColumnDescriptor.TYPE_INT),
-                    new ColumnDescriptor("w.numpolleronly", "WPoller-only URLs",
+                    new ColumnDescriptor(COL_W_NUM_POLLER_ONLY, "WPoller-only URLs",
                                          ColumnDescriptor.TYPE_FLOAT),
-                    new ColumnDescriptor("numvoteronly", "Voter-only URLs",
+                    new ColumnDescriptor(COL_NUM_VOTER_ONLY, "Voter-only URLs",
                                          ColumnDescriptor.TYPE_INT),
-                    new ColumnDescriptor("w.numvoteronly", "WVoter-only URLs",
+                    new ColumnDescriptor(COL_W_NUM_VOTER_ONLY, "WVoter-only URLs",
                                          ColumnDescriptor.TYPE_FLOAT),
-                    new ColumnDescriptor("byteshashed", "Bytes Hashed",
+                    new ColumnDescriptor(COL_BYTES_HASHED, "Bytes Hashed",
                                          ColumnDescriptor.TYPE_INT),
-                    new ColumnDescriptor("bytesread", "Bytes Read",
+                    new ColumnDescriptor(COL_BYTES_READ, "Bytes Read",
                                          ColumnDescriptor.TYPE_INT),
-                    new ColumnDescriptor("state", "PSM State",
+                    new ColumnDescriptor(COL_STATE, "PSM State",
                                          ColumnDescriptor.TYPE_STRING),
-                    new ColumnDescriptor("when", "When",
+                    new ColumnDescriptor(COL_WHEN, "When",
                                          ColumnDescriptor.TYPE_DATE));
 
     private static final List<String> defaultCols =
-      ListUtil.list("identity",
-		    "peerStatus",
-		    "agreement",
-		    "w.agreement",
-		    "numagree",
-		    "w.numagree",
-		    "numdisagree",
-		    "w.numdisagree",
-		    "numpolleronly",
-		    "w.numpolleronly",
-		    "numvoteronly",
-		    "w.numvoteronly");
+      ListUtil.list(COL_IDENTITY,
+		    COL_PEER_STATUS,
+		    COL_AGREEMENT,
+		    COL_W_AGREEMENT,
+		    COL_NUM_AGREE,
+		    COL_W_NUM_AGREE,
+		    COL_NUM_DISAGREE,
+		    COL_W_NUM_DISAGREE,
+		    COL_NUM_POLLER_ONLY,
+		    COL_W_NUM_POLLER_ONLY,
+		    COL_NUM_VOTER_ONLY,
+		    COL_W_NUM_VOTER_ONLY);
 
 
     public V3PollerStatusDetail(PollManager pollManager) {
@@ -681,7 +715,7 @@ public class V3PollStatus {
       List<ColumnDescriptor> res = new ArrayList<ColumnDescriptor>();
       for (ColumnDescriptor desc : colDescs) {
 	switch (desc.getColumnName()) {
-	case "agreement":
+	case COL_AGREEMENT:
 	  if (poller.isRecordPeerUrlLists()) {
 	    res.add(AGREE_COLDESC_POST_REPAIR);
 	  } else {
@@ -707,12 +741,12 @@ public class V3PollStatus {
 	}
       }
       if (poll.isEnableHashStats()) {
-	res.add("byteshashed");
-	res.add("bytesread");
+	res.add(COL_BYTES_HASHED);
+	res.add(COL_BYTES_READ);
       }
       if (table.getOptions().get(StatusTable.OPTION_DEBUG_USER)) {
-	res.add("state");
-	res.add("when");
+	res.add(COL_STATE);
+	res.add(COL_WHEN);
       }
       return res;
     }
@@ -733,48 +767,48 @@ public class V3PollStatus {
 			Object sort, boolean isDebug) {
       Map row = new HashMap();
       PeerIdentity peer = voter.getVoterId();
-      row.put("identity",
+      row.put(COL_IDENTITY,
 	      isDebug ? makeVoteRef(peer.getIdString(), peer, poll.getKey())
 	      : peer.getIdString());
-      row.put("peerStatus", voter.getStatusString());
+      row.put(COL_PEER_STATUS, voter.getStatusString());
       row.put("sort", sort);
       if (voter.hasVoted()) {
 	ParticipantUserData.VoteCounts voteCounts = voter.getVoteCounts();
-	row.put("agreement", voteCounts.getPercentAgreement());
-	row.put("numagree",
+	row.put(COL_AGREEMENT, voteCounts.getPercentAgreement());
+	row.put(COL_NUM_AGREE,
 		participantDataRef(voteCounts.getAgreedVotes(),
 				   poll, voter,
 				   PEER_AGREE_URLS_TABLE_NAME));
-	row.put("numdisagree",
+	row.put(COL_NUM_DISAGREE,
 		participantDataRef(voteCounts.getDisagreedVotes(),
 				   poll, voter,
 				   PEER_DISAGREE_URLS_TABLE_NAME));
-	row.put("numpolleronly",
+	row.put(COL_NUM_POLLER_ONLY,
 		participantDataRef(voteCounts.getPollerOnlyVotes(),
 				   poll, voter,
 				   PEER_POLLER_ONLY_URLS_TABLE_NAME));
-	row.put("numvoteronly",
+	row.put(COL_NUM_VOTER_ONLY,
 		participantDataRef(voteCounts.getVoterOnlyVotes(),
 				   poll, voter,
 				   PEER_VOTER_ONLY_URLS_TABLE_NAME));
-	row.put("byteshashed", voter.getBytesHashed());
-	row.put("bytesread", voter.getBytesRead());
+	row.put(COL_BYTES_HASHED, voter.getBytesHashed());
+	row.put(COL_BYTES_READ, voter.getBytesRead());
 	if (poll.hasResultWeightMap()) {
-	  row.put("w.agreement", voteCounts.getWeightedPercentAgreement());
-	  row.put("w.numagree", voteCounts.getWeightedAgreedVotes());
-	  row.put("w.numdisagree", voteCounts.getWeightedDisagreedVotes());
-	  row.put("w.numpolleronly", voteCounts.getWeightedPollerOnlyVotes());
-	  row.put("w.numvoteronly", voteCounts.getWeightedVoterOnlyVotes());
+	  row.put(COL_W_AGREEMENT, voteCounts.getWeightedPercentAgreement());
+	  row.put(COL_W_NUM_AGREE, voteCounts.getWeightedAgreedVotes());
+	  row.put(COL_W_NUM_DISAGREE, voteCounts.getWeightedDisagreedVotes());
+	  row.put(COL_W_NUM_POLLER_ONLY, voteCounts.getWeightedPollerOnlyVotes());
+	  row.put(COL_W_NUM_VOTER_ONLY, voteCounts.getWeightedVoterOnlyVotes());
 	}
       }
       PsmInterp interp = voter.getPsmInterp();
       if (interp != null) {
 	PsmState state = interp.getCurrentState();
 	if (state != null) {
-	  row.put("state", state.getName());
+	  row.put(COL_STATE, state.getName());
 	  long when = interp.getLastStateChange();
 	  if (when > 0) {
-	    row.put("when", when);
+	    row.put(COL_WHEN, when);
 	  }
 	}
       }	
@@ -798,7 +832,7 @@ public class V3PollStatus {
       boolean isDebug = table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
       PollerStateBean pollerState = poll.getPollerStateBean();
       List summary = new ArrayList();
-      summary.add(new SummaryInfo("Volume",
+      summary.add(new SummaryInfo("AU Name",
                                   ColumnDescriptor.TYPE_STRING,
 				  makeAuRef(poll.getAu(),
 					    ArchivalUnitStatus.AU_STATUS_TABLE_NAME)));
@@ -863,7 +897,7 @@ public class V3PollStatus {
       if (isDebug) {
 	File stateDir = poll.getStateDir();
         if (stateDir != null) {
-	  summary.add(new SummaryInfo("State Dir",
+	  summary.add(new SummaryInfo("State Directory",
 				      ColumnDescriptor.TYPE_STRING,
 				      stateDir));
 	}
@@ -982,11 +1016,14 @@ public class V3PollStatus {
 
   public static abstract class V3UrlList extends V3PollStatus
       implements StatusAccessor {
+    
+    static final String COL_URL = "url";
+    
     protected final List sortRules =
-      ListUtil.list(new StatusTable.SortRule("url",
+      ListUtil.list(new StatusTable.SortRule(COL_URL,
                                              CatalogueOrderComparator.SINGLETON));
     protected static final List colDescs =
-      ListUtil.list(new ColumnDescriptor("url", "URL",
+      ListUtil.list(new ColumnDescriptor(COL_URL, "URL",
                                          ColumnDescriptor.TYPE_STRING));
     public V3UrlList(PollManager manager) {
       super(manager);
@@ -1012,7 +1049,7 @@ public class V3PollStatus {
       List rows = new ArrayList();
       for (String url : getUrlList(poller)) {
         Map row = new HashMap();
-        row.put("url", url);
+        row.put(COL_URL, url);
         rows.add(row);
       }
       return rows;
@@ -1035,10 +1072,12 @@ public class V3PollStatus {
 
   public static abstract class V3RepairUrlList extends V3UrlList {
 
+    static final String COL_REPAIR_FROM = "repairFrom";
+    
     protected final List colDescs =
-      ListUtil.list(new ColumnDescriptor("url", "URL",
+      ListUtil.list(new ColumnDescriptor(V3UrlList.COL_URL, "URL",
                                          ColumnDescriptor.TYPE_STRING),
-                    new ColumnDescriptor("repairFrom", "Repaired From",
+                    new ColumnDescriptor(COL_REPAIR_FROM, "Repaired From",
                                          ColumnDescriptor.TYPE_STRING));
 
     public V3RepairUrlList(PollManager manager) {
@@ -1049,11 +1088,11 @@ public class V3PollStatus {
       List rows = new ArrayList();
       for (PollerStateBean.Repair rp: getRepairBeans(poller)) {
         Map row = new HashMap();
-        row.put("url", rp.getUrl());
+        row.put(V3UrlList.COL_URL, rp.getUrl());
         if (rp.isPublisherRepair()) {
-          row.put("repairFrom", "Publisher");
+          row.put(COL_REPAIR_FROM, "Publisher");
         } else {
-          row.put("repairFrom", rp.getRepairFrom().getIdString());
+          row.put(COL_REPAIR_FROM, rp.getRepairFrom().getIdString());
         }
         rows.add(row);
       }
@@ -1111,7 +1150,7 @@ public class V3PollStatus {
       List rows = new ArrayList();
       for (String url : getUrlList(poller, pid)) {
         Map row = new HashMap();
-        row.put("url", url);
+        row.put(V3UrlList.COL_URL, url);
         rows.add(row);
       }
       return rows;
@@ -1298,11 +1337,12 @@ public class V3PollStatus {
   public static class V3ErrorURLs extends V3PollStatus 
       implements StatusAccessor {
     static final String TABLE_TITLE = "V3 Poll Details - URLs with Hash Errors";
+    static final String COL_URL = "url";
     private final List sortRules =
-      ListUtil.list(new StatusTable.SortRule("url",
+      ListUtil.list(new StatusTable.SortRule(COL_URL,
                                              CatalogueOrderComparator.SINGLETON));
     private final List colDescs =
-      ListUtil.list(new ColumnDescriptor("url", "URL",
+      ListUtil.list(new ColumnDescriptor(V3UrlList.COL_URL, "URL",
                                          ColumnDescriptor.TYPE_STRING),
                     new ColumnDescriptor("erorr", "Error",
                                          ColumnDescriptor.TYPE_STRING));
@@ -1333,7 +1373,7 @@ public class V3PollStatus {
           String url = (String)it.next();
           String exceptionMessage = (String)errorUrls.get(url);
           Map row = new HashMap();
-          row.put("url", url);
+          row.put(COL_URL, url);
           row.put("error", exceptionMessage);
           rows.add(row);
         }
@@ -1380,7 +1420,7 @@ public class V3PollStatus {
       boolean isDebug = table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
       VoterUserData userData = voter.getVoterUserData();
       List summary = new ArrayList();
-      summary.add(new SummaryInfo("Volume",
+      summary.add(new SummaryInfo("AU Name",
                                   ColumnDescriptor.TYPE_STRING,
 				  makeAuRef(voter.getAu(),
 					    ArchivalUnitStatus.AU_STATUS_TABLE_NAME)));
@@ -1391,7 +1431,7 @@ public class V3PollStatus {
       if (isDebug) {
 	File stateDir = voter.getStateDir();
         if (stateDir != null) {
-	  summary.add(new SummaryInfo("State Dir",
+	  summary.add(new SummaryInfo("State Directory",
 				      ColumnDescriptor.TYPE_STRING,
 				      stateDir));
         }
