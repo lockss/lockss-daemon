@@ -1,32 +1,32 @@
 /*
-* $Id$
- */
 
-/*
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 */
 
@@ -63,7 +63,16 @@ public class PollerStatus {
 
   static class ManagerStatus
     extends PollerStatus implements StatusAccessor {
+    
     static final String TABLE_NAME = MANAGER_STATUS_TABLE_NAME;
+    static final String COL_AU_NAME = "AuName";
+    static final String COL_URL = "URL";
+    static final String COL_RANGE = "Range";
+    static final String COL_POLL_TYPE = "PollType";
+    static final String COL_STATUS = "Status";
+    static final String COL_DEADLINE = "Deadline";
+    static final String COL_POLL_ID = "PollID";
+
     private static String POLLMANAGER_TABLE_TITLE = "V1 Polls";
 
     static final int STRINGTYPE = ColumnDescriptor.TYPE_STRING;
@@ -71,19 +80,19 @@ public class PollerStatus {
 
     private static final List sortRules =
       ListUtil.list(
-		    new StatusTable.SortRule("AuName", CatalogueOrderComparator.SINGLETON),
+		    new StatusTable.SortRule(COL_AU_NAME, CatalogueOrderComparator.SINGLETON),
 //		    new StatusTable.SortRule("URL", true),
-		    new StatusTable.SortRule("Deadline", false)
+		    new StatusTable.SortRule(COL_DEADLINE, false)
 		    );
     private static final List columnDescriptors =
         ListUtil.list(
-		      new ColumnDescriptor("AuName", "Volume", STRINGTYPE),
-		      new ColumnDescriptor("URL", "URL", STRINGTYPE),
-		      new ColumnDescriptor("Range", "Range", STRINGTYPE),
-		      new ColumnDescriptor("PollType", "Type", STRINGTYPE),
-		      new ColumnDescriptor("Status", "Status", STRINGTYPE),
-		      new ColumnDescriptor("Deadline", "Deadline", DATETYPE),
-		      new ColumnDescriptor("PollID", "Poll ID", STRINGTYPE)
+		      new ColumnDescriptor(COL_AU_NAME, "AU Name", STRINGTYPE),
+		      new ColumnDescriptor(COL_URL, "URL", STRINGTYPE),
+		      new ColumnDescriptor(COL_RANGE, "Range", STRINGTYPE),
+		      new ColumnDescriptor(COL_POLL_TYPE, "Type", STRINGTYPE),
+		      new ColumnDescriptor(COL_STATUS, "Status", STRINGTYPE),
+		      new ColumnDescriptor(COL_DEADLINE, "Deadline", DATETYPE),
+		      new ColumnDescriptor(COL_POLL_ID, "Poll ID", STRINGTYPE)
 		      );
 
     static final String TITLE_FOOT =
@@ -163,21 +172,21 @@ public class PollerStatus {
       HashMap rowMap = new HashMap();
       PollSpec spec = entry.getPollSpec();
       //"AuName"
-      rowMap.put("AuName", spec.getCachedUrlSet().getArchivalUnit().getName());
+      rowMap.put(COL_AU_NAME, spec.getCachedUrlSet().getArchivalUnit().getName());
       //"URL"
-      rowMap.put("URL", spec.getUrl());
+      rowMap.put(COL_URL, spec.getUrl());
       //"Range"
-      rowMap.put("Range", spec.getRangeString());
+      rowMap.put(COL_RANGE, spec.getRangeString());
       //"PollType"
-      rowMap.put("PollType", getTypeCharString(entry.getType()));
+      rowMap.put(COL_POLL_TYPE, getTypeCharString(entry.getType()));
       //"Status"
-      rowMap.put("Status", entry.getStatusString());
+      rowMap.put(COL_STATUS, entry.getStatusString());
       //"Deadline"
       if (entry.getPollDeadline() != null) {
-        rowMap.put("Deadline", entry.getPollDeadline());
+        rowMap.put(COL_DEADLINE, entry.getPollDeadline());
       }
       //"PollID"
-      rowMap.put("PollID", PollStatus.makePollRef(entry.getShortKey(),
+      rowMap.put(COL_POLL_ID, PollStatus.makePollRef(entry.getShortKey(),
 						  entry.getKey()));
       return rowMap;
     }
@@ -200,17 +209,17 @@ public class PollerStatus {
 	    return false;
 	  }
 	}
-	else if (key.equals("URL")) {
+	else if (key.equals(COL_URL)) {
 	  if (!spec.getUrl().equals(val)) {
 	    return false;
 	  }
 	}
-	else if (key.equals("PollType")) {
+	else if (key.equals(COL_POLL_TYPE)) {
 	  if (!entry.getTypeString().equals(val)) {
 	    return false;
 	  }
 	}
-	else if (key.equals("Status")) {
+	else if (key.equals(COL_STATUS)) {
 	  if (!entry.getStatusString().equals(val)) {
 	    return false;
 	  }
@@ -234,7 +243,7 @@ public class PollerStatus {
 	if (cnt > 0) {
 	  total += cnt;
 	  Properties combinedProps = PropUtil.copy(props);
-	  combinedProps.setProperty("Status", type);
+	  combinedProps.setProperty(COL_STATUS, type);
 	  list.add(makeRef((cnt + " " + type), combinedProps));
 	  if (iter.hasNext()) {
 	    list.add(", ");
@@ -242,7 +251,7 @@ public class PollerStatus {
 	}
       }
       Properties combinedProps = PropUtil.copy(props);
-      combinedProps.remove("Status");
+      combinedProps.remove(COL_STATUS);
       list.addFirst(": ");
       list.addFirst(makeRef((total + " Total"), combinedProps));
       res.add(new StatusTable.SummaryInfo("Poll Summary",
@@ -258,11 +267,11 @@ public class PollerStatus {
       // generate string: {type}, {status} Polls {for AU}, {on URL}
       List prefix = new ArrayList();
       List suffix = new ArrayList();
-      String type = props.getProperty("PollType");
+      String type = props.getProperty(COL_POLL_TYPE);
       if (type != null) {
 	prefix.add(type);
       }
-      String status = props.getProperty("Status");
+      String status = props.getProperty(COL_STATUS);
       if (status != null) {
 	prefix.add(status);
       }
@@ -278,7 +287,7 @@ public class PollerStatus {
 	}
 	suffix.add("for " + name);
       }
-      String url = props.getProperty("URL");
+      String url = props.getProperty(COL_URL);
       if (url != null) {
 	suffix.add("on " + url);
       }
@@ -307,15 +316,15 @@ public class PollerStatus {
     }
 
     public StatusTable.Reference makeURLRef(Object value, String key) {
-      return makeRef(value, "URL", key);
+      return makeRef(value, COL_URL, key);
     }
 
     public StatusTable.Reference makePollTypeRef(Object value, String key) {
-      return makeRef(value, "PollType", key);
+      return makeRef(value, COL_POLL_TYPE, key);
     }
 
     public StatusTable.Reference makeStatusRef(Object value, String key) {
-      return makeRef(value, "Status", key);
+      return makeRef(value, COL_STATUS, key);
     }
   }
 
@@ -361,22 +370,29 @@ public class PollerStatus {
   }
 
   static class PollStatus extends PollerStatus implements StatusAccessor {
+
     static final String TABLE_NAME = POLL_STATUS_TABLE_NAME;
+    static final String COL_IDENTITY = "Identity";
+    static final String COL_REPUTATION = "Reputation";
+    static final String COL_AGREE = "Agree";
+    static final String COL_CHALLENGE = "Challenge";
+    static final String COL_VERIFIER = "Verifier";
+    static final String COL_HASH = "Hash";
 
     static final int INTTYPE = ColumnDescriptor.TYPE_INT;
     static final int STRINGTYPE = ColumnDescriptor.TYPE_STRING;
 
     private static final List columnDescriptors =
-        ListUtil.list(new ColumnDescriptor("Identity", "Identity", STRINGTYPE),
-        new ColumnDescriptor("Reputation", "Reputation", INTTYPE),
-        new ColumnDescriptor("Agree", "Agree", STRINGTYPE),
-        new ColumnDescriptor("Challenge", "Challenge", STRINGTYPE),
-        new ColumnDescriptor("Verifier", "Verifier", STRINGTYPE),
-        new ColumnDescriptor("Hash", "Hash", STRINGTYPE)
+        ListUtil.list(new ColumnDescriptor(COL_IDENTITY, "Identity", STRINGTYPE),
+        new ColumnDescriptor(COL_REPUTATION, "Reputation", INTTYPE),
+        new ColumnDescriptor(COL_AGREE, "Agree", STRINGTYPE),
+        new ColumnDescriptor(COL_CHALLENGE, "Challenge", STRINGTYPE),
+        new ColumnDescriptor(COL_VERIFIER, "Verifier", STRINGTYPE),
+        new ColumnDescriptor(COL_HASH, "Hash", STRINGTYPE)
         );
 
     private static final List sortRules =
-        ListUtil.list(new StatusTable.SortRule("Identity", true));
+        ListUtil.list(new StatusTable.SortRule(COL_IDENTITY, true));
 
     public PollStatus(PollManager pollManager) {
       super(pollManager);
@@ -416,7 +432,7 @@ public class PollerStatus {
       PollManager.PollManagerEntry entry =
 	pollManager.getCurrentOrRecentV1PollEntry(poll.getKey());
 
-      list.add(new StatusTable.SummaryInfo("Volume" , STRINGTYPE,
+      list.add(new StatusTable.SummaryInfo("AU Name" , STRINGTYPE,
 					   tally.getArchivalUnit().getName()));
       if (entry != null) {
 	list.add(new StatusTable.SummaryInfo("Status" , STRINGTYPE,
@@ -494,13 +510,13 @@ public class PollerStatus {
       HashMap rowMap = new HashMap();
 
       PeerIdentity pid = vote.getVoterIdentity();
-      rowMap.put("Identity", pid.getIdString());
+      rowMap.put(COL_IDENTITY, pid.getIdString());
       int reputation = pollManager.getIdentityManager().getReputation(pid);
-      rowMap.put("Reputation", String.valueOf(reputation));
-      rowMap.put("Agree", String.valueOf(vote.agree));
-      rowMap.put("Challenge", vote.getChallengeString());
-      rowMap.put("Verifier",vote.getVerifierString());
-      rowMap.put("Hash",vote.getHashString());
+      rowMap.put(COL_REPUTATION, String.valueOf(reputation));
+      rowMap.put(COL_AGREE, String.valueOf(vote.agree));
+      rowMap.put(COL_CHALLENGE, vote.getChallengeString());
+      rowMap.put(COL_VERIFIER,vote.getVerifierString());
+      rowMap.put(COL_HASH,vote.getHashString());
 
       return rowMap;
     }
