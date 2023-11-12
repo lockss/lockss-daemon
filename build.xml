@@ -252,7 +252,7 @@ Args:
   <property name="log4j2-1.2-compat.jar" value="${lib}/log4j-1.2-api-${log4j2.version}.jar" />
 
   <property name="commons.beanutils.jar" value="${lib}/commons-beanutils-1.9.4.jar" />
-  <property name="commons.cli.jar" value="${lib}/commons-cli-1.5.0.jar" />
+  <property name="commons.cli.jar" value="${lib}/commons-cli-1.6.0.jar" />
   <property name="commons.codec.jar" value="${lib}/commons-codec-1.16.0.jar" />
   <property name="commons.collections.jar" value="${lib}/commons-collections-3.2.2.jar" />
   <property name="commons.collections4.jar" value="${lib}/commons-collections4-4.4.jar" />
@@ -261,13 +261,13 @@ Args:
   <!-- commons-csv -->
   <!-- commons-digester -->
   <!-- commons-fileupload -->
-  <property name="commons.io.jar" value="${lib}/commons-io-2.13.0.jar" />
+  <property name="commons.io.jar" value="${lib}/commons-io-2.15.0.jar" />
   <property name="commons.jxpath.jar" value="${lib}/commons-jxpath-1.3.jar" />
   <property name="commons.lang.jar" value="${lib}/commons-lang-2.6.jar" />
   <property name="commons.lang3.jar" value="${lib}/commons-lang3-3.13.0.jar" />
   <property name="commons.logging.jar" value="${lib}/commons-logging-1.2.jar" />
   <property name="commons.primitives.jar" value="${lib}/commons-primitives-1.0.jar" />
-  <property name="commons.text.jar" value="${lib}/commons-text-1.10.0.jar" />
+  <property name="commons.text.jar" value="${lib}/commons-text-1.11.0.jar" />
   <property name="commons.validator.jar" value="${lib}/commons-validator-1.7.jar" />
 
   <property name="commons.httpclient.jar"
@@ -296,10 +296,10 @@ Args:
   <property name="javatar.jar" value="${lib}/javagnutar.jar" />
   <property name="concurrent.jar" value="${lib}/concurrent.jar"/>
   <property name="htmlparser.jar" value="${lib}/htmlparser-1.6p.jar"/>
-  <property name="jsoup.jar" value="${lib}/jsoup-1.16.1.jar"/>
+  <property name="jsoup.jar" value="${lib}/jsoup-1.16.2.jar"/>
   <property name="marc4j.jar" value="${lib}/marc4j-2.9.5.jar" />
   <!-- Next 6 needed for Jonix -->
-  <property name="jonix.version" value="2023-05" />
+  <property name="jonix.version" value="2023-10" />
   <property name="jonix.jar" value="${lib}/jonix-${jonix.version}.jar" />
   <property name="jonix-common.jar" value="${lib}/jonix-common-${jonix.version}.jar" />
   <property name="jonix-xml.jar" value="${lib}/jonix-xml-${jonix.version}.jar" />
@@ -348,10 +348,10 @@ Args:
   <property name="fontbox.jar" value="${lib}/fontbox-${pdfbox.version}.jar" />
   <property name="jempbox.jar" value="${lib}/jempbox-${pdfbox.version}.jar" />
   <property name="bouncycastle.variant" value="jdk18on" />
-  <property name="bouncycastle.version" value="1.72" />
+  <property name="bouncycastle.version" value="1.76" />
   <property name="bouncycastle-provider.jar" value="${lib}/bcprov-${bouncycastle.variant}-${bouncycastle.version}.jar" />
   <property name="bouncycastle-mail.jar" value="${lib}/bcmail-${bouncycastle.variant}-${bouncycastle.version}.jar" />
-  <property name="icu4j.version" value="71.1" />
+  <property name="icu4j.version" value="74.1" />
   <property name="icu4j.jar" value="${lib}/icu4j-${icu4j.version}.jar" />
   <property name="icu4j-charset.jar" value="${lib}/icu4j-charset-${icu4j.version}.jar" />
   <property name="icu4j-localespi.jar" value="${lib}/icu4j-localespi-${icu4j.version}.jar" />
