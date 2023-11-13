@@ -1337,14 +1337,15 @@ public class V3PollStatus {
   public static class V3ErrorURLs extends V3PollStatus 
       implements StatusAccessor {
     static final String TABLE_TITLE = "V3 Poll Details - URLs with Hash Errors";
-    static final String COL_URL = "url";
+    static final String COL_ERROR = "erorr"; // FIXME
+    
     private final List sortRules =
-      ListUtil.list(new StatusTable.SortRule(COL_URL,
+      ListUtil.list(new StatusTable.SortRule(V3UrlList.COL_URL,
                                              CatalogueOrderComparator.SINGLETON));
     private final List colDescs =
       ListUtil.list(new ColumnDescriptor(V3UrlList.COL_URL, "URL",
                                          ColumnDescriptor.TYPE_STRING),
-                    new ColumnDescriptor("erorr", "Error",
+                    new ColumnDescriptor(COL_ERROR, "Error",
                                          ColumnDescriptor.TYPE_STRING));
     public V3ErrorURLs(PollManager manager) {
       super(manager);
@@ -1373,8 +1374,8 @@ public class V3PollStatus {
           String url = (String)it.next();
           String exceptionMessage = (String)errorUrls.get(url);
           Map row = new HashMap();
-          row.put(COL_URL, url);
-          row.put("error", exceptionMessage);
+          row.put(V3UrlList.COL_URL, url);
+          row.put(COL_ERROR, exceptionMessage);
           rows.add(row);
         }
       }
