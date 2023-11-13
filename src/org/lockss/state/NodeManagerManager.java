@@ -179,7 +179,7 @@ public class NodeManagerManager
     static final String COL_TREE_WALK = "TreeWalk";
 
     private static final List columnDescriptors = ListUtil.list(
-         new ColumnDescriptor(COL_AU_NAME, "AU Name",
+         new ColumnDescriptor(COL_AU_NAME, "AU",
 			      ColumnDescriptor.TYPE_STRING),
          new ColumnDescriptor(COL_CRAWL_TIME, "Last Crawl Time",
                               ColumnDescriptor.TYPE_DATE),

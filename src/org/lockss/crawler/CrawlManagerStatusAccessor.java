@@ -97,7 +97,7 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 
   private List<ColumnDescriptor> colDescs =
     ListUtil.fromArray(new ColumnDescriptor[] {
-      new ColumnDescriptor(AU_COL_NAME, "AU Name",
+      new ColumnDescriptor(AU_COL_NAME, "AU",
 			   ColumnDescriptor.TYPE_STRING)
       .setComparator(CatalogueOrderComparator.SINGLETON),
       new ColumnDescriptor(PLUGIN, "Plugin",

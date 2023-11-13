@@ -399,7 +399,7 @@ public class HashSvcSchedImpl
 				       ColumnDescriptor.TYPE_INT, FOOT_IN),
 		  new ColumnDescriptor(COL_STATE, "State",
 				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor(COL_AU, "AU Name",
+		  new ColumnDescriptor(COL_AU, "AU",
 				       ColumnDescriptor.TYPE_STRING),
 		  new ColumnDescriptor(COL_CUS, "Cached Url Set",
 				       ColumnDescriptor.TYPE_STRING),

@@ -97,7 +97,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
 
   final private List<ColumnDescriptor> colDescs =
       ListUtil.fromArray(new ColumnDescriptor[] {
-        new ColumnDescriptor(AU_COL_NAME, "AU Name",
+        new ColumnDescriptor(AU_COL_NAME, "AU",
                              ColumnDescriptor.TYPE_STRING)
         .setComparator(CatalogueOrderComparator.SINGLETON),
         new ColumnDescriptor(INDEX_TYPE, "Index Type",
@@ -190,7 +190,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
     } else {
       // report information for specified task
       res.add(new StatusTable.SummaryInfo(
-          "AU Name",
+          "AU",
           ColumnDescriptor.TYPE_STRING,
           task.getAuName()));
       ArchivalUnit au = task.getAu();

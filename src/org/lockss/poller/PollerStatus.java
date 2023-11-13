@@ -86,7 +86,7 @@ public class PollerStatus {
 		    );
     private static final List columnDescriptors =
         ListUtil.list(
-		      new ColumnDescriptor(COL_AU_NAME, "AU Name", STRINGTYPE),
+		      new ColumnDescriptor(COL_AU_NAME, "AU", STRINGTYPE),
 		      new ColumnDescriptor(COL_URL, "URL", STRINGTYPE),
 		      new ColumnDescriptor(COL_RANGE, "Range", STRINGTYPE),
 		      new ColumnDescriptor(COL_POLL_TYPE, "Type", STRINGTYPE),
@@ -432,7 +432,7 @@ public class PollerStatus {
       PollManager.PollManagerEntry entry =
 	pollManager.getCurrentOrRecentV1PollEntry(poll.getKey());
 
-      list.add(new StatusTable.SummaryInfo("AU Name" , STRINGTYPE,
+      list.add(new StatusTable.SummaryInfo("AU" , STRINGTYPE,
 					   tally.getArchivalUnit().getName()));
       if (entry != null) {
 	list.add(new StatusTable.SummaryInfo("Status" , STRINGTYPE,

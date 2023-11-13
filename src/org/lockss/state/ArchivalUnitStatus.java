@@ -218,7 +218,7 @@ public class ArchivalUnitStatus
 
 
     private static final List columnDescriptors = ListUtil.list(
-      new ColumnDescriptor(COL_AU_NAME, "AU Name", ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor(COL_AU_NAME, "AU", ColumnDescriptor.TYPE_STRING),
 //       new ColumnDescriptor("AuNodeCount", "Nodes", ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor(COL_AU_SIZE, "Content Size",
 			   ColumnDescriptor.TYPE_INT, FOOT_SIZE),
@@ -520,7 +520,7 @@ public class ArchivalUnitStatus
     static final String COL_YEAR = "Year";
     
     private static final List columnDescriptors = ListUtil.list(
-      new ColumnDescriptor(COL_AU_NAME, "AU Name", ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor(COL_AU_NAME, "AU", ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor(COL_AUID, "AUID", ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor(COL_CRAWL_POOL, "Crawl Pool",
 			   ColumnDescriptor.TYPE_STRING),
@@ -633,7 +633,7 @@ public class ArchivalUnitStatus
     static final String COL_VERSIONS = "Versions";
 
     private static final List columnDescriptors = ListUtil.list(
-      new ColumnDescriptor(COL_AU_NAME, "AU Name", ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor(COL_AU_NAME, "AU", ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor(COL_SIZE, "Size", ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor(COL_COLLECTED_DATE, "Date Collected",
 			   ColumnDescriptor.TYPE_DATE),
@@ -1040,7 +1040,7 @@ public class ArchivalUnitStatus
       long du = AuUtil.getAuDiskUsage(au, false);
 
       List res = new ArrayList();
-      res.add(new StatusTable.SummaryInfo("AU Name",
+      res.add(new StatusTable.SummaryInfo("AU",
 					  ColumnDescriptor.TYPE_STRING,
 					  au.getName()));
       res.add(new StatusTable.SummaryInfo("AUID",

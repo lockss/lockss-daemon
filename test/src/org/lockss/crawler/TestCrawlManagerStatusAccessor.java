@@ -74,7 +74,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
 
   private static List expectedColDescs =
     ListUtil.fromArray(new ColumnDescriptor[] {
-      new ColumnDescriptor(AU_COL_NAME, "AU Name",
+      new ColumnDescriptor(AU_COL_NAME, "AU",
 			   ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor(CRAWL_TYPE, "Crawl Type",
 			   ColumnDescriptor.TYPE_STRING),

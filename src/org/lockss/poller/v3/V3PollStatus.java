@@ -157,7 +157,7 @@ public class V3PollStatus {
 		    new StatusTable.SortRule(SORT_KEY2, false));
 
     private final List colDescs =
-      ListUtil.list(new ColumnDescriptor(COL_AU_ID, "AU Name",
+      ListUtil.list(new ColumnDescriptor(COL_AU_ID, "AU",
                                          ColumnDescriptor.TYPE_STRING),
                     new ColumnDescriptor(COL_VARIANT, "Type",
                                          ColumnDescriptor.TYPE_STRING),
@@ -386,7 +386,7 @@ public class V3PollStatus {
 		    new StatusTable.SortRule(SORT_KEY2, false));
 
     private final List colDescs =
-      ListUtil.list(new ColumnDescriptor(COL_AU_ID, "AU Name",
+      ListUtil.list(new ColumnDescriptor(COL_AU_ID, "AU",
                                          ColumnDescriptor.TYPE_STRING),
                     new ColumnDescriptor(COL_CALLER, "Caller",
                                          ColumnDescriptor.TYPE_STRING),
@@ -832,7 +832,7 @@ public class V3PollStatus {
       boolean isDebug = table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
       PollerStateBean pollerState = poll.getPollerStateBean();
       List summary = new ArrayList();
-      summary.add(new SummaryInfo("AU Name",
+      summary.add(new SummaryInfo("AU",
                                   ColumnDescriptor.TYPE_STRING,
 				  makeAuRef(poll.getAu(),
 					    ArchivalUnitStatus.AU_STATUS_TABLE_NAME)));
@@ -1421,7 +1421,7 @@ public class V3PollStatus {
       boolean isDebug = table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
       VoterUserData userData = voter.getVoterUserData();
       List summary = new ArrayList();
-      summary.add(new SummaryInfo("AU Name",
+      summary.add(new SummaryInfo("AU",
                                   ColumnDescriptor.TYPE_STRING,
 				  makeAuRef(voter.getAu(),
 					    ArchivalUnitStatus.AU_STATUS_TABLE_NAME)));
