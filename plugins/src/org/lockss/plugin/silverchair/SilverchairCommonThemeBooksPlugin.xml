@@ -123,6 +123,10 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>2,"%sbooks/(book|edited-volume)/[^/]+/chapter/.*/[^/]+\.(com|net|org|edu|gov)/", base_url</string>
             <string>2,"%sbooks/(book|edited-volume)/[^/]+/chapter/.*/(javascript;:|javascript:;)$", base_url</string>
 
+            <string>2,"%s([^/]+/)?books(/[^/]+)?/[^/]+/chapter(-pdf)?/.*/[^/]+\.(com|net|org|edu|gov)/", base_url</string>
+            <string>2,"%s([^/]+/)?books(/[^/]+)?/[^/]+/chapter(-pdf)?/.*/(https?//|www\.)", base_url</string>
+            <string>2,"%s([^/]+/)?books(/[^/]+)?/[^/]+/chapter(-pdf)?/.*/(javascript;:|javascript:;)$", base_url</string>
+
             <string>2,"^https?://([^/]+\.silverchair-cdn\.com)/cassette\.axd/.*"</string>
             <string>2, "^https://api\.addthis\.com/oexchange/.*"</string>
             <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com)/"</string>
@@ -145,7 +149,6 @@ POSSIBILITY OF SUCH DAMAGE.
             https://books.rsc.org/books/edited-volume/chapter-pdf/1716368/bk9781839164224-00001.pdf
             -->
             <string>1,"%s([^/]+/)?books(/[^/]+)?/[^/]+/chapter(-pdf)?/.*", base_url</string>
-            <string>2,"%s.*javascript;:", base_url</string>
         </list>
     </entry>
     <entry>
