@@ -46,7 +46,7 @@ public class MigrationTask {
     FINISH_AU_BULK,
     FINISH_ALL;
 
-    private V2AuMover.Phase phase;;
+    private V2AuMover.Phase phase;
 
     static {
       COPY_CU_VERSIONS.phase = V2AuMover.Phase.COPY;
