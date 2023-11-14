@@ -770,6 +770,63 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
     return getName().compareTo(other.getName());
   }
 
+  public static ObjectMapper getUserAccountObjectMapper() {
+    ObjectMapper objMapper = new ObjectMapper();
+    setFieldsOnly(objMapper);
+    objMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+    return objMapper;
+  }
+
+  public static ObjectMapper setFieldsOnly(ObjectMapper mapper) {
+    mapper.setVisibilityChecker(mapper.getSerializationConfig().getDefaultVisibilityChecker()
+        .withFieldVisibility(JsonAutoDetect.Visibility.ANY)
+        .withGetterVisibility(JsonAutoDetect.Visibility.NONE)
+        .withIsGetterVisibility(JsonAutoDetect.Visibility.NONE)
+        .withSetterVisibility(JsonAutoDetect.Visibility.NONE)
+        .withCreatorVisibility(JsonAutoDetect.Visibility.NONE));
+    return mapper;
+  }
+
+  public UserAccount updateFromJson(String json) throws IOException {
+    // Ignore unknown properties on deserialization
+    ObjectMapper objMapper = getUserAccountObjectMapper();
+
+    ObjectReader objReader = objMapper.readerForUpdating(this);
+    objReader.readValue(json);
+    return this;
+  }
+
+  public static String jsonFromUserAccount(UserAccount acct, Set<String> fields)
+      throws JsonProcessingException {
+    return getUserAccountObjectWriter(fields).writeValueAsString(acct);
+  }
+
+  public static ObjectReader getUserAccountObjectReader() {
+    ObjectMapper objMapper = getUserAccountObjectMapper();
+    return objMapper.readerFor(UserAccount.class);
+  }
+
+  public static ObjectWriter getUserAccountObjectWriter() {
+    return getUserAccountObjectWriter(null);
+  }
+
+  private static ObjectWriter getUserAccountObjectWriter(Set<String> fields) {
+    ObjectMapper mapper = getUserAccountObjectMapper();
+    SimpleBeanPropertyFilter propFilter;
+    if (fields == null || fields.isEmpty()) {
+      propFilter = SimpleBeanPropertyFilter.serializeAll();
+    } else {
+      propFilter = SimpleBeanPropertyFilter.filterOutAllExcept(fields);
+    }
+    FilterProvider filters =
+        new SimpleFilterProvider().addFilter("userAccountFilter", propFilter);
+    return mapper.writer(filters);
+  }
+
+  public String toJson() throws JsonProcessingException {
+    return jsonFromUserAccount(this, null);
+  }
+
   public class NullCredential extends Credential {
     public boolean check(Object credentials) {
       return false;
