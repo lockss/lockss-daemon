@@ -32,6 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.account;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.lockss.config.*;
 import org.lockss.util.*;
 
@@ -39,13 +41,16 @@ import org.lockss.util.*;
  */
 public class StaticUserAccount extends BasicUserAccount {
 
-  public StaticUserAccount(String name) {
+  @JsonCreator
+  public StaticUserAccount(@JsonProperty("userName") String name) {
     super(name);
   }
 
   public String getType() {
-    return "Static";
+    return USER_ACCOUNT_TYPE;
   }
+
+  public static final String USER_ACCOUNT_TYPE = "Static";
 
   @Override
   public boolean isStaticUser() {

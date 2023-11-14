@@ -32,6 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.account;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.lockss.config.*;
 
 /** User account data with parameters for standard rules set from config
@@ -88,7 +90,8 @@ public class BasicUserAccount extends UserAccount {
     PREFIX + "failedAttemptResetInterval";
   static final long DEFAULT_FAILED_ATTEMPT_RESET_INTERVAL = -1;
 
-  public BasicUserAccount(String name) {
+  @JsonCreator
+  public BasicUserAccount(@JsonProperty("userName")  String name) {
     super(name);
   }
 
@@ -97,8 +100,10 @@ public class BasicUserAccount extends UserAccount {
   }
 
   public String getType() {
-    return "Basic";
+    return USER_ACCOUNT_TYPE;
   }
+
+  public static final String USER_ACCOUNT_TYPE = "Basic";
 
   protected Configuration getConfig() {
     return CurrentConfig.getCurrentConfig();
