@@ -33,9 +33,7 @@ import static org.lockss.laaws.V2AuMover.isMatch;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.time.Instant;
 import java.util.*;
-import java.util.concurrent.ThreadLocalRandom;
 import java.util.regex.Pattern;
 import java.util.stream.*;
 import javax.servlet.ServletConfig;
@@ -55,7 +53,6 @@ import org.mortbay.html.Element;
 import org.mortbay.html.Form;
 import org.mortbay.html.Input;
 import org.mortbay.html.Page;
-import org.mortbay.html.Script;
 import org.mortbay.html.Select;
 import org.mortbay.html.Table;
 import org.mortbay.html.StyleLink;
@@ -203,10 +200,8 @@ public class MigrateContent extends LockssServlet {
       }
 
       if (ACTION_START.equals(action)) {
-        if (!StringUtil.isNullString(auid)) {
-          doMigrateAu();
-        } else if (!StringUtil.isNullString(pluginId)) {
-          doMigratePluginAus();
+        if (!StringUtil.isNullString(pluginId)) {
+          doBuildArgsAndRun();
         } else {
           errMsg = "Please select a plugin";
         }
@@ -280,7 +275,7 @@ public class MigrateContent extends LockssServlet {
       .setOpType(opType);
   }
 
-  private void startRunner(V2AuMover.Args args) {
+  private void startRunner(List<V2AuMover.Args> args) {
     try {
       migrationMgr.startRunner(args);
     } catch (Exception e) {
@@ -289,42 +284,36 @@ public class MigrateContent extends LockssServlet {
     }
   }
 
-  private void doMigrateAll() {
-    V2AuMover.Args args = getCommonFormArgs()
-      .setSelPatterns(auSelectPatterns);
-    startRunner(args);
+  private void doBuildArgsAndRun() {
+    try {
+      startRunner(ListUtil.list(
+          getArgsToMigrateSystemSettings(),
+          getArgsToMigratePluginAus()));
+    } catch (Exception e) {
+      log.error("Could not start runner", e);
+    }
   }
 
-  private void doMigratePluginAus() {
+  private V2AuMover.Args getArgsToMigrateSystemSettings() {
+    return getCommonFormArgs()
+        .setOpType(OpType.CopySystemSettings);
+  }
+
+  private V2AuMover.Args getArgsToMigratePluginAus() {
     V2AuMover.Args args = getCommonFormArgs();
+
     if (ALL_PLUGINS_ID.equals(pluginId)) {
       args.setPlugins(null);
     } else {
       Plugin plug = pluginMgr.getPluginFromId(pluginId);
       if (plug == null) {
         errMsg = "No plugin with ID: " + pluginId;
-        return;
+        throw new IllegalArgumentException(errMsg);
       }
       args.setPlugins(Collections.singletonList(plug));
     }
-    startRunner(args);
-  }
 
-  private void doMigrateAu() {
-    ArchivalUnit au = getAu();
-    if (au == null) {
-      if (errMsg == null) {
-        errMsg = "No AU selected";
-      }
-      return;
-    }
-    if (pluginMgr.isInternalAu(au)) {
-      errMsg = "Can't migrate internal AUs";
-      return;
-    }
-    V2AuMover.Args args = getCommonFormArgs()
-      .setAu(au);
-    startRunner(args);
+    return args;
   }
 
   private void doAbort() {
