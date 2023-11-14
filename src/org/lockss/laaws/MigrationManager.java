@@ -124,7 +124,7 @@ public class MigrationManager extends BaseLockssManager
     return mover != null && mover.isRunning();
   }
 
-  public synchronized void startRunner(V2AuMover.Args args) throws IOException {
+  public synchronized void startRunner(List<V2AuMover.Args> args) throws IOException {
     if (isRunning()) {
       throw new IOException("Migration is already running, can't start a new one");
     }
@@ -143,9 +143,9 @@ public class MigrationManager extends BaseLockssManager
   }
 
   public class Runner extends LockssRunnable {
-    V2AuMover.Args args;
+    List<V2AuMover.Args> args;
 
-    public Runner(V2AuMover.Args args) {
+    public Runner(List<V2AuMover.Args> args) {
       super("V2AuMover");
       this.args = args;
     }
@@ -154,7 +154,9 @@ public class MigrationManager extends BaseLockssManager
       idleError = null;
       try {
         log.debug("Starting mover");
-        mover.executeRequest(args);
+        for (V2AuMover.Args myArgs : args) {
+          mover.executeRequest(myArgs);
+        }
         log.debug("Mover returned");
       } catch (Exception e) {
         log.error("V2AuMover failed to start", e);
