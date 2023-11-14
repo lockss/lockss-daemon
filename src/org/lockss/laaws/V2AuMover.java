@@ -352,6 +352,9 @@ s api client with long timeout */
   /** V2 State api client */
   private org.lockss.laaws.api.cfg.AusApi cfgAusApiClient;
 
+  /** V2 Users API client */
+  private org.lockss.laaws.api.cfg.UsersApi cfgUsersApiClient;
+
   /** Configuration service port */
   private int cfgPort;
 
@@ -586,6 +589,7 @@ s api client with long timeout */
       // Assign the client to the status api and aus api
       cfgStatusApiClient = new org.lockss.laaws.api.cfg.StatusApi(cfgApiStatusClient);
       cfgAusApiClient = new org.lockss.laaws.api.cfg.AusApi(configClient);
+      cfgUsersApiClient = new org.lockss.laaws.api.cfg.UsersApi(configClient);
     }
     catch (MalformedURLException mue) {
       totalCounters.addError("Error parsing REST Configuration Service URL: "
@@ -1555,6 +1559,10 @@ s api client with long timeout */
 
   public org.lockss.laaws.api.cfg.AusApi getCfgAusApiClient() {
     return cfgAusApiClient;
+  }
+
+  public org.lockss.laaws.api.cfg.UsersApi getCfgUsersApiClient() {
+    return cfgUsersApiClient;
   }
 
   // Cookie not needed in this context
