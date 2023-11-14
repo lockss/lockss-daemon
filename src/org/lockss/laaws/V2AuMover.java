@@ -52,7 +52,6 @@ import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.V2RestClient;
 import org.lockss.laaws.model.rs.AuidPageInfo;
 import org.lockss.plugin.*;
-import org.lockss.servlet.MigrateContent;
 import org.lockss.uiapi.util.DateFormatter;
 import org.lockss.util.*;
 import static org.lockss.laaws.Counters.CounterType;
@@ -295,6 +294,8 @@ public class V2AuMover {
 
   /** Flag to getCurrentStatus() to build status string on the fly. */
   private static final String STATUS_RUNNING = "**Running**";
+  private static final String STATUS_COPYING_SYSTEM_SETTINGS = "Copying system settings";
+  private static final String STATUS_DONE_COPYING_SYSTEM_SETTINGS = "Done copying system settings";
 
   public static final ThreadLocal<NumberFormat> TH_BIGINT_FMT =
     new ThreadLocal<NumberFormat>() {
@@ -636,7 +637,11 @@ s api client with long timeout */
 
     // Must be called after config & args are processed
     initPhaseMap();
-    openReportFiles(args, whichAus);
+
+    // Open report files for AU operations only
+    if (opType != OpType.CopySystemSettings) {
+      openReportFiles(args, whichAus);
+    }
 
     startTime = now();
   }
@@ -689,18 +694,21 @@ s api client with long timeout */
     this.args = args;
 
     try {
-      if (args.au != null) {
-        // If an AU was supplied, copy it
-        moveOneAu(args);
-      } else if (args.plugins != null) {
-        // If a plugin was supplied, copy its AUs
-        movePluginAus(args);
-
+      if (args.opType == OpType.CopySystemSettings) {
+        moveSystemSettings(args);
       } else {
-        // else copy all AUs (that match sel pattern)
-        moveAllAus(args);
+        if (args.au != null) {
+          // If an AU was supplied, copy it
+          moveOneAu(args);
+        } else if (args.plugins != null) {
+          // If a plugin was supplied, copy its AUs
+          movePluginAus(args);
+        } else {
+          // else copy all AUs (that match sel pattern)
+          moveAllAus(args);
+        }
+        waitUntilDone();
       }
-      waitUntilDone();
     } catch (IOException e) {
       log.error("Unexpected exception", e);
       currentStatus = e.getMessage();
@@ -826,6 +834,20 @@ s api client with long timeout */
     }
     ausLatch.countDown();
     enqueueFinishAll();
+  }
+
+  private void moveSystemSettings(Args args) {
+    currentStatus = STATUS_COPYING_SYSTEM_SETTINGS;
+
+    // Q: Mainly(?) needed to initialize cfgUsersApiClient - what else?
+    initRequest(args, null);
+
+    // Move user accounts
+    MigrationTask task = MigrationTask.copyUserAccounts(this);
+    UserAccountMover userAcctMover = new UserAccountMover(this, task);
+    userAcctMover.run();
+
+    currentStatus = STATUS_DONE_COPYING_SYSTEM_SETTINGS;
   }
 
   /**
@@ -1807,34 +1829,39 @@ s api client with long timeout */
     sb.append("Status: ");
     if (STATUS_RUNNING.equals(currentStatus)) {
 
-      if (!isAbort()) {
-        switch (opType) {
-          case CopyOnly:
-            sb.append("Copying");
-            break;
-          case CopyAndVerify:
-            sb.append("Copying and verifying");
-            break;
-          case VerifyOnly:
-            sb.append("Verifying");
-            break;
+      if (opType == OpType.CopySystemSettings) {
+        sb.append(STATUS_COPYING_SYSTEM_SETTINGS);
+      } else {
+        if (!isAbort()) {
+          switch (opType) {
+            case CopyOnly:
+              sb.append("Copying");
+              break;
+            case CopyAndVerify:
+              sb.append("Copying and verifying");
+              break;
+            case VerifyOnly:
+              sb.append("Verifying");
+              break;
+          }
+
+          if (isCompareBytes) sb.append(" and comparing");
+        } else {
+          sb.append("Aborting");
         }
 
-        if (isCompareBytes) sb.append(" and comparing");
-      } else {
-        sb.append("Aborting");
+        sb.append(", ");
+        sb.append(whichAus);
+
+        sb.append(" to ");
+        sb.append(hostName);
+        sb.append(", processed ");
+        sb.append(totalAusMoved);
+        sb.append(" of ");
+        sb.append(totalAusToMove);
+        sb.append(" AUs");
       }
 
-      sb.append(", ");
-      sb.append(whichAus);
-
-      sb.append(" to ");
-      sb.append(hostName);
-      sb.append(", processed ");
-      sb.append(totalAusMoved);
-      sb.append(" of ");
-      sb.append(totalAusToMove);
-      sb.append(" AUs");
       if (errstat.length() != 0) {
         sb.append(", ");
         sb.append(errstat);

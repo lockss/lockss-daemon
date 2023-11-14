@@ -169,6 +169,7 @@ public class MigrationManager extends BaseLockssManager
   private static final int VERIFY_BIT = 2;
 
   public enum OpType {
+    CopySystemSettings("Copy System Settings", COPY_BIT),
     CopyOnly("Copy Only", COPY_BIT),
     CopyAndVerify("Copy and Verify", COPY_BIT | VERIFY_BIT),
     VerifyOnly("Verify Only", VERIFY_BIT);
