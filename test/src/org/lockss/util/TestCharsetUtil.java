@@ -1,34 +1,35 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
-Copyright (c) 2015-2016 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 */
+
 package org.lockss.util;
 
 import java.io.*;
@@ -175,7 +176,7 @@ public class TestCharsetUtil extends LockssTestCase {
    * Method: guessCharsetFromBytes(byte[] bytes)
    */
   public void testGuessCharsetFromBytes() throws Exception {
-    byte[] html_bytes = HTML_FILE.getBytes();
+    byte[] html_bytes = HTML_FILE.getBytes(Constants.DEFAULT_ENCODING);
     // 1) a utf-8 document with no declared encoding
     assertEquals("UTF-8",
                  CharsetUtil.guessCharsetFromBytes(html_bytes));
@@ -199,7 +200,7 @@ public class TestCharsetUtil extends LockssTestCase {
   public void testGuessCharsetFromStream() throws Exception {
     // 1) a utf-8 document with no declared encoding
     ByteArrayInputStream bais =
-      new ByteArrayInputStream(HTML_FILE.getBytes());
+      new ByteArrayInputStream(HTML_FILE.getBytes(Constants.DEFAULT_ENCODING));
     assertEquals("UTF-8", CharsetUtil.guessCharsetFromStream(bais));
     //2 a utf-8 document encoded as utf-8
     bais =
@@ -285,26 +286,26 @@ public class TestCharsetUtil extends LockssTestCase {
       = "<?xml version=\"1.0\" encoding=\"UTF-16\" standalone=\"yes\"?>";
 
     // this has a html4 content-type charset
-    byte[] buf = HTML_HEADER.getBytes();
+    byte[] buf = HTML_HEADER.getBytes(Constants.DEFAULT_ENCODING);
     assertEquals("ISO-8859-1", CharsetUtil.findCharsetInText(buf, buf.length));
 
     // this has a html5 charset=  utf-8
-    buf = html1.getBytes();
+    buf = html1.getBytes(Constants.DEFAULT_ENCODING);
     assertEquals("UTF-8",CharsetUtil.findCharsetInText(buf,buf.length));
 
     // this has a charset= in the title so it's ignored.
-    buf = html2.getBytes();
+    buf = html2.getBytes(Constants.DEFAULT_ENCODING);
     assertEquals(null,CharsetUtil.findCharsetInText(buf,buf.length));
 
     //xml no declaration
-    buf = xml1.getBytes();
+    buf = xml1.getBytes(Constants.DEFAULT_ENCODING);
     assertEquals(null,CharsetUtil.findCharsetInText(buf,buf.length));
 
     // xml utf 8 declaration
-    buf = xml2.getBytes();
+    buf = xml2.getBytes(Constants.DEFAULT_ENCODING);
     assertEquals("UTF-8",CharsetUtil.findCharsetInText(buf,buf.length));
     // xml utf 16 declaration & standalone attribute
-    buf = xml3.getBytes();
+    buf = xml3.getBytes(Constants.DEFAULT_ENCODING);
     assertEquals("UTF-16",CharsetUtil.findCharsetInText(buf,buf.length));
   }
 
@@ -319,12 +320,12 @@ public class TestCharsetUtil extends LockssTestCase {
       new ByteArrayInputStream(HTML_FILE.getBytes("UTF-8"));
     // read the first 100 bytes.
     int in_length = bais.available(); // returns an estimate
-//    assertEquals(in_length, HTML_FILE.getBytes().length);
+//    assertEquals(in_length, HTML_FILE.getBytes(Constants.DEFAULT_ENCODING).length);
     bais.read(buf,0,buf.length);
     // convert the first 100 bytes into a string
     buf_string = new String(buf,"UTF-8");
     int str_length = buf_string.length();
-    assertEquals(100, buf_string.getBytes().length);
+    assertEquals(100, buf_string.getBytes(Constants.DEFAULT_ENCODING).length);
     // create a new CharsetReader
     InputStream is = CharsetUtil.joinStreamsWithCharset(buf,bais,"UTF-8");
     Reader rdr = new InputStreamReader(is,"UTF-8");
