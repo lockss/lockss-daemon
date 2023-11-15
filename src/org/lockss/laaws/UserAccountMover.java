@@ -71,8 +71,7 @@ public class UserAccountMover extends Worker {
     } catch (Exception e) {
       String err = "Attempt to move user accounts failed: " + e.getMessage();
       log.error(err, e);
-      // FIXME: Throws an NPE because auStat is not set
-//      task.addError(err);
+      auMover.addError(err);
     }
   }
 }

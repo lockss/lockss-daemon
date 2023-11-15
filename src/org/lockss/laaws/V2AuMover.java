@@ -2148,6 +2148,10 @@ s api client with long timeout */
     }
   }
 
+  void addError(String errMsg) {
+    totalCounters.addError(errMsg);
+  }
+
   void writeErrors(PrintWriter writer, AuStatus auStat) {
     for (String err : auStat.getErrors()) {
       writer.println(" " + err);
