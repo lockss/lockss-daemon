@@ -1,32 +1,32 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 */
 
@@ -51,6 +51,17 @@ import org.lockss.plugin.*;
  */
 public class HashSvcSchedImpl
   extends BaseLockssDaemonManager implements HashService, ConfigurableManager {
+
+  static final String COL_SCHED = "sched";
+  static final String COL_STATE = "state";
+  static final String COL_AU = "au";
+  static final String COL_CUS = "cus";
+  static final String COL_TYPE = "type";
+  static final String COL_DEADLINE = "deadline";
+  static final String COL_ESTIMATE = "estimate";
+  static final String COL_TIME_USED = "timeused";
+  static final String COL_BYTES_HASHED = "bytesHashed";
+  static final String COL_RATE = "rate";
 
   protected static Logger log = Logger.getLogger("HashSvcSchedImpl");
 
@@ -369,7 +380,7 @@ public class HashSvcSchedImpl
   // status table
 
   private static final List statusSortRules =
-    ListUtil.list(new StatusTable.SortRule("state", true),
+    ListUtil.list(new StatusTable.SortRule(COL_STATE, true),
 		  new StatusTable.SortRule("sort", true),
 		  new StatusTable.SortRule("sort2", true));
 
@@ -384,26 +395,26 @@ public class HashSvcSchedImpl
 
   private static final List statusColDescs =
     ListUtil.list(
-		  new ColumnDescriptor("sched", "Req",
+		  new ColumnDescriptor(COL_SCHED, "Req",
 				       ColumnDescriptor.TYPE_INT, FOOT_IN),
-		  new ColumnDescriptor("state", "State",
+		  new ColumnDescriptor(COL_STATE, "State",
 				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor("au", "Volume",
+		  new ColumnDescriptor(COL_AU, "AU",
 				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor("cus", "Cached Url Set",
+		  new ColumnDescriptor(COL_CUS, "Cached Url Set",
 				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor("type", "Type",
+		  new ColumnDescriptor(COL_TYPE, "Type",
 				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor("deadline", "Deadline",
+		  new ColumnDescriptor(COL_DEADLINE, "Deadline",
 				       ColumnDescriptor.TYPE_DATE),
-		  new ColumnDescriptor("estimate", "Estimated",
+		  new ColumnDescriptor(COL_ESTIMATE, "Estimated",
 				       ColumnDescriptor.TYPE_TIME_INTERVAL),
-		  new ColumnDescriptor("timeused", "Used",
+		  new ColumnDescriptor(COL_TIME_USED, "Used",
 				       ColumnDescriptor.TYPE_TIME_INTERVAL,
 				       FOOT_OVER),
-		  new ColumnDescriptor("bytesHashed", "Bytes<br>Hashed",
+		  new ColumnDescriptor(COL_BYTES_HASHED, "Bytes<br>Hashed",
 				       ColumnDescriptor.TYPE_INT),
-		  new ColumnDescriptor("rate", "Bytes/ms",
+		  new ColumnDescriptor(COL_RATE, "Bytes/ms",
 				       ColumnDescriptor.TYPE_STRING)
 		  );
 
@@ -460,13 +471,13 @@ public class HashSvcSchedImpl
 	      new Long((done ? -task.getFinishDate().getTime() :
 			task.getLatestFinish().getExpiration().getTime())));
       row.put("sort2", new Long(task.hashReqSeq));
-      row.put("sched", new Integer(task.hashReqSeq));
-      row.put("state", task.getState(done));
-      row.put("au", task.urlset.getArchivalUnit().getName());
-      row.put("cus", task.urlset.getSpec());
-      row.put("type", task.typeString());
-      row.put("deadline", task.getLatestFinish());
-      row.put("estimate", new Long(task.getOrigEst()));
+      row.put(COL_SCHED, new Integer(task.hashReqSeq));
+      row.put(COL_STATE, task.getState(done));
+      row.put(COL_AU, task.urlset.getArchivalUnit().getName());
+      row.put(COL_CUS, task.urlset.getSpec());
+      row.put(COL_TYPE, task.typeString());
+      row.put(COL_DEADLINE, task.getLatestFinish());
+      row.put(COL_ESTIMATE, new Long(task.getOrigEst()));
       long timeUsed = task.getTimeUsed();
       Object used = new Long(timeUsed);
       if (task.hasOverrun()) {
@@ -474,10 +485,10 @@ public class HashSvcSchedImpl
 	val.setColor("red");
 	used = val;
       }
-      row.put("timeused", used);
-      row.put("bytesHashed", new Long(task.bytesHashed));
+      row.put(COL_TIME_USED, used);
+      row.put(COL_BYTES_HASHED, new Long(task.bytesHashed));
       if (timeUsed > 0 && task.bytesHashed > 0) {
-	row.put("rate", hashRate(BigInteger.valueOf(task.bytesHashed),
+	row.put(COL_RATE, hashRate(BigInteger.valueOf(task.bytesHashed),
 				 timeUsed));
       }
       return row;
