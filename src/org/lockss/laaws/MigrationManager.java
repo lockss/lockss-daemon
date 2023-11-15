@@ -153,11 +153,17 @@ public class MigrationManager extends BaseLockssManager
     public void lockssRun() {
       idleError = null;
       try {
-        log.debug("Starting mover");
-        for (V2AuMover.Args myArgs : args) {
-          mover.executeRequest(myArgs);
+        if (args.size() > 0) {
+          log.debug("Starting mover");
+          if (args.size() > 1) {
+            log.debug("Using client configuration from first operation");
+          }
+          mover.initClients(args.get(0));
+          for (V2AuMover.Args myArgs : args) {
+            mover.executeRequest(myArgs);
+          }
+          log.debug("Mover returned");
         }
-        log.debug("Mover returned");
       } catch (Exception e) {
         log.error("V2AuMover failed to start", e);
         idleError = "V2AuMover failed to start: " + e;

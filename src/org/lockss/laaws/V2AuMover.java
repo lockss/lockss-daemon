@@ -541,23 +541,11 @@ s api client with long timeout */
     }
   }
 
-  /**
-   * Create the REST clients to access the remote repo & cfgsvc
-   * specified in the args, and initialize the status.
-   *
-   * @param args the arguments for this request.
-   * @throws IllegalArgumentException
-   */
-  void initRequest(Args args, String whichAus) throws IllegalArgumentException {
-    currentStatus = "Initializing";
-    this.whichAus = whichAus;
-    running = true;
-    hasBeenStarted = true;
+  void initClients(Args args) {
+    currentStatus = "Initializing clients";
     hostName = args.host;
     userName = args.uname;
     userPass = args.upass;
-    opType = args.opType;
-    isCompareBytes = args.isCompareContent;
 
     if (StringUtil.isNullString(hostName)) {
       String msg = "Destination hostname must be supplied.";
@@ -569,6 +557,7 @@ s api client with long timeout */
       totalCounters.addError(msg);
       throw new IllegalArgumentException(msg);
     }
+
     try {
       cfgAccessUrl = new URL("http", hostName, cfgPort, "").toString();
       if (cfgAccessUrl == null || UrlUtil.isMalformedUrl(cfgAccessUrl)) {
@@ -579,14 +568,14 @@ s api client with long timeout */
       // Rest client for short-timeout API status calls
       cfgApiStatusClient = makeV2RestClient();
       setTimeouts(cfgApiStatusClient, "status", statusConnectTimeout,
-                  statusReadTimeout);
+          statusReadTimeout);
       setClientParams(cfgApiStatusClient, userName, userPass, userAgent,
-                      cfgAccessUrl, debugRepoReq);
+          cfgAccessUrl, debugRepoReq);
 
       configClient = makeV2RestClient();
       setTimeouts(configClient, "config", connectTimeout, readTimeout);
       setClientParams(configClient, userName, userPass, userAgent,
-                      cfgAccessUrl, debugRepoReq);
+          cfgAccessUrl, debugRepoReq);
       // Assign the client to the status api and aus api
       cfgStatusApiClient = new org.lockss.laaws.api.cfg.StatusApi(cfgApiStatusClient);
       cfgAusApiClient = new org.lockss.laaws.api.cfg.AusApi(configClient);
@@ -612,19 +601,19 @@ s api client with long timeout */
       repoLongCallClient = makeV2RestClient(repoClient);
       setTimeouts(repoLongCallClient, "index", connectTimeout, longReadTimeout);
       setClientParams(repoClient, userName, userPass, userAgent,
-                      repoAccessUrl, debugRepoReq);
+          repoAccessUrl, debugRepoReq);
       setClientParams(repoLongCallClient, userName, userPass, userAgent,
-                      repoAccessUrl, debugRepoReq);
+          repoAccessUrl, debugRepoReq);
 
       // Rest client for short-timeout API status calls
       repoApiStatusClient = makeV2RestClient();
       setTimeouts(repoApiStatusClient, "status", statusConnectTimeout,
-                  statusReadTimeout);
+          statusReadTimeout);
       setClientParams(repoApiStatusClient, userName, userPass, userAgent,
-                      repoAccessUrl, debugRepoReq);
+          repoAccessUrl, debugRepoReq);
 
       repoStatusApiClient =
-        new org.lockss.laaws.api.rs.StatusApi(repoApiStatusClient);
+          new org.lockss.laaws.api.rs.StatusApi(repoApiStatusClient);
       repoArtifactsApiClient = new StreamingArtifactsApi(repoClient);
       repoAusApiClient = new org.lockss.laaws.api.rs.AusApi(repoClient);
       repoAusApiLongCallClient = new org.lockss.laaws.api.rs.AusApi(repoLongCallClient);
@@ -634,6 +623,22 @@ s api client with long timeout */
       throw new IllegalArgumentException(
           "Missing or invalid configuration service hostName: " + hostName + " port: " + repoPort);
     }
+  }
+
+  /**
+   * Create the REST clients to access the remote repo & cfgsvc
+   * specified in the args, and initialize the status.
+   *
+   * @param args the arguments for this request.
+   * @throws IllegalArgumentException
+   */
+  void initRequest(Args args, String whichAus) throws IllegalArgumentException {
+    currentStatus = "Initializing";
+    this.whichAus = whichAus;
+    running = true;
+    hasBeenStarted = true;
+    opType = args.opType;
+    isCompareBytes = args.isCompareContent;
 
     // Must be called after config & args are processed
     initPhaseMap();
