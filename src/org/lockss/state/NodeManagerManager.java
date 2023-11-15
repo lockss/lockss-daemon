@@ -1,28 +1,34 @@
 /*
- * $Id$
- */
 
-/*
- Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
- all rights reserved.
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
- STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
- IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- Except as contained in this notice, the name of Stanford University shall not
- be used in advertising or otherwise to promote the sale, use or other dealings
- in this Software without prior written authorization from Stanford University.
- */
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+*/
 
 package org.lockss.state;
 
@@ -43,7 +49,7 @@ import org.lockss.app.*;
 public class NodeManagerManager
   extends BaseLockssDaemonManager implements ConfigurableManager {
 
-  private static Logger logger = Logger.getLogger("NodeManagerManager");
+  private static Logger logger = Logger.getLogger(NodeManagerManager.class);
 
   static final String PREFIX = Configuration.PREFIX + "state.";
 
@@ -165,21 +171,26 @@ public class NodeManagerManager
   }
 
   static class ServiceStatus implements StatusAccessor {
+
     static final String TABLE_TITLE = "NodeManager Service Table";
+    static final String COL_AU_NAME = "AuName";
+    static final String COL_CRAWL_TIME = "CrawlTime";
+    static final String COL_TOP_LEVEL_POLL = "TopLevelPoll";
+    static final String COL_TREE_WALK = "TreeWalk";
 
     private static final List columnDescriptors = ListUtil.list(
-         new ColumnDescriptor("AuName", "Volume",
+         new ColumnDescriptor(COL_AU_NAME, "AU",
 			      ColumnDescriptor.TYPE_STRING),
-         new ColumnDescriptor("CrawlTime", "Last Crawl Time",
+         new ColumnDescriptor(COL_CRAWL_TIME, "Last Crawl Time",
                               ColumnDescriptor.TYPE_DATE),
-         new ColumnDescriptor("TopLevelPoll", "Last Top Level Poll",
+         new ColumnDescriptor(COL_TOP_LEVEL_POLL, "Last Top Level Poll",
                               ColumnDescriptor.TYPE_DATE),
-         new ColumnDescriptor("TreeWalk", "Last Tree Walk",
+         new ColumnDescriptor(COL_TREE_WALK, "Last Tree Walk",
                               ColumnDescriptor.TYPE_DATE)
          );
 
     private static final List sortRules =
-      ListUtil.list(new StatusTable.SortRule("AuName", CatalogueOrderComparator.SINGLETON));
+      ListUtil.list(new StatusTable.SortRule(COL_AU_NAME, CatalogueOrderComparator.SINGLETON));
 
     private NodeManagerManager mgr;
     private PluginManager pluginMgr;
@@ -227,13 +238,13 @@ public class NodeManagerManager
       ArchivalUnit au = state.getArchivalUnit();
 
       //"AuID"
-      rowMap.put("AuName", ManagerStatus.makeNodeManagerRef(au.getName(),
+      rowMap.put(COL_AU_NAME, ManagerStatus.makeNodeManagerRef(au.getName(),
           au.getAuId()));
 
       //"Status"
-      rowMap.put("CrawlTime", new Long(state.getLastCrawlTime()));
-      rowMap.put("TopLevelPoll", new Long(state.getLastTopLevelPollTime()));
-      rowMap.put("TreeWalk", new Long(state.getLastTreeWalkTime()));
+      rowMap.put(COL_CRAWL_TIME, new Long(state.getLastCrawlTime()));
+      rowMap.put(COL_TOP_LEVEL_POLL, new Long(state.getLastTopLevelPollTime()));
+      rowMap.put(COL_TREE_WALK, new Long(state.getLastTreeWalkTime()));
 
       return rowMap;
     }
@@ -242,33 +253,44 @@ public class NodeManagerManager
   static class ManagerStatus implements StatusAccessor {
 
     static final String TABLE_TITLE = "NodeManager Status Table";
+    static final String COL_URL = "URL";
+    static final String COL_STATE = "State";
+    static final String COL_CRAWL_TIME = "CrawlTime";
+    static final String COL_CRAWL_TYPE = "CrawlType";
+    static final String COL_CRAWL_STATUS = "CrawlStatus";
+    static final String COL_NUM_POLLS = "NumPolls";
+    static final String COL_ACTIVE_POLLS = "ActivePolls";
+    static final String COL_POLL_TIME = "PollTime";
+    static final String COL_POLL_TYPE = "PollType";
+    static final String COL_POLL_RANGE = "PollRange";
+    static final String COL_POLL_STATUS = "PollStatus";
 
     private static final List columnDescriptors = ListUtil.list(
-        new ColumnDescriptor("URL", "URL", ColumnDescriptor.TYPE_STRING),
-        new ColumnDescriptor("State", "State", ColumnDescriptor.TYPE_STRING),
-        new ColumnDescriptor("CrawlTime", "Last Crawl",
+        new ColumnDescriptor(COL_URL, "URL", ColumnDescriptor.TYPE_STRING),
+        new ColumnDescriptor(COL_STATE, "State", ColumnDescriptor.TYPE_STRING),
+        new ColumnDescriptor(COL_CRAWL_TIME, "Last Crawl",
                              ColumnDescriptor.TYPE_DATE),
-        new ColumnDescriptor("CrawlType", "Crawl Type",
+        new ColumnDescriptor(COL_CRAWL_TYPE, "Crawl Type",
                              ColumnDescriptor.TYPE_STRING),
-        new ColumnDescriptor("CrawlStatus", "Crawl Status",
+        new ColumnDescriptor(COL_CRAWL_STATUS, "Crawl Status",
                              ColumnDescriptor.TYPE_STRING),
-        new ColumnDescriptor("NumPolls", "Polls Run",
+        new ColumnDescriptor(COL_NUM_POLLS, "Polls Run",
                              ColumnDescriptor.TYPE_INT),
-        new ColumnDescriptor("ActivePolls", "Active Polls",
+        new ColumnDescriptor(COL_ACTIVE_POLLS, "Active Polls",
                              ColumnDescriptor.TYPE_INT),
-        new ColumnDescriptor("PollTime", "Last Poll",
+        new ColumnDescriptor(COL_POLL_TIME, "Last Poll",
                              ColumnDescriptor.TYPE_DATE),
-        new ColumnDescriptor("PollType", "Poll Type",
+        new ColumnDescriptor(COL_POLL_TYPE, "Poll Type",
                              ColumnDescriptor.TYPE_STRING),
-        new ColumnDescriptor("PollRange", "Poll Range",
+        new ColumnDescriptor(COL_POLL_RANGE, "Poll Range",
                              ColumnDescriptor.TYPE_STRING),
-        new ColumnDescriptor("PollStatus", "Poll Status",
+        new ColumnDescriptor(COL_POLL_STATUS, "Poll Status",
                              ColumnDescriptor.TYPE_STRING)
         );
 
     private static final List sortRules = ListUtil.list(
-        new StatusTable.SortRule("PollTime", false),
-        new StatusTable.SortRule("URL", true)
+        new StatusTable.SortRule(COL_POLL_TIME, false),
+        new StatusTable.SortRule(COL_URL, true)
         );
 
     private NodeManagerManager mgr;
@@ -332,18 +354,18 @@ public class NodeManagerManager
       HashMap rowMap = new HashMap();
       String url = state.getCachedUrlSet().getUrl();
       // URL
-      rowMap.put("URL", url);
+      rowMap.put(COL_URL, url);
 
       // State
-      rowMap.put("State", state.getStateString());
+      rowMap.put(COL_STATE, state.getStateString());
 
       CrawlState crawl_state = state.getCrawlState();
       // CrawlTime
-      rowMap.put("CrawlTime", new Long(crawl_state.getStartTime()));
+      rowMap.put(COL_CRAWL_TIME, new Long(crawl_state.getStartTime()));
       // CrawlType
-      rowMap.put("CrawlType", crawl_state.getTypeString());
+      rowMap.put(COL_CRAWL_TYPE, crawl_state.getTypeString());
       // CrawlStatus
-      rowMap.put("CrawlStatus", crawl_state.getStatusString());
+      rowMap.put(COL_CRAWL_STATUS, crawl_state.getStatusString());
 
       // ActivePolls with a reference to a active poll history table
       StatusTable.Reference ref = PollHistoryStatus.makeNodeRef(
@@ -351,7 +373,7 @@ public class NodeManagerManager
           auId,
           url,
           PollHistoryStatus.ACTIVE_POLLS_FILTER);
-      rowMap.put("ActivePolls", ref);
+      rowMap.put(COL_ACTIVE_POLLS, ref);
 
       // NumPolls with a reference to a all poll history table
       ref = PollHistoryStatus.makeNodeRef(
@@ -359,23 +381,23 @@ public class NodeManagerManager
           auId,
           url,
           PollHistoryStatus.ALL_POLLS_FILTER);
-      rowMap.put("NumPolls", ref);
+      rowMap.put(COL_NUM_POLLS, ref);
 
       // our most recent poll data
       PollHistory poll_history = state.getLastPollHistory();
       if (poll_history != null) {
         // PollTime
-        rowMap.put("PollTime",
+        rowMap.put(COL_POLL_TIME,
                    new Long(poll_history.getStartTime()));
         // PollType
-        rowMap.put("PollType", poll_history.getTypeString());
+        rowMap.put(COL_POLL_TYPE, poll_history.getTypeString());
         // PollRange
-        rowMap.put("PollRange", poll_history.getRangeString());
+        rowMap.put(COL_POLL_RANGE, poll_history.getRangeString());
         // PollStatus
-        rowMap.put("PollStatus", poll_history.getStatusString());
+        rowMap.put(COL_POLL_STATUS, poll_history.getStatusString());
       }
       else {
-        rowMap.put("PollTime", new Long(0));
+        rowMap.put(COL_POLL_TIME, new Long(0));
       }
 
       return rowMap;
@@ -403,30 +425,38 @@ public class NodeManagerManager
   }
 
   static class PollHistoryStatus implements StatusAccessor {
+
     static final String TABLE_TITLE = "Node Poll History Table";
+    static final String COL_START_TIME = "StartTime";
+    static final String COL_DURATION = "Duration";
+    static final String COL_TYPE = "Type";
+    static final String COL_RANGE = "Range";
+    static final String COL_STATUS = "Status";
+    static final String COL_NUM_AGREE = "NumAgree";
+    static final String COL_NUM_DISAGREE = "NumDisagree";
 
     public static String ALL_POLLS_FILTER = "ALLPOLLS:";
     public static String ACTIVE_POLLS_FILTER = "ACTIVEPOLLS:";
 
     private static final List columnDescriptors = ListUtil.list(
-        new ColumnDescriptor("StartTime", "Start Time",
+        new ColumnDescriptor(COL_START_TIME, "Start Time",
                              ColumnDescriptor.TYPE_DATE),
-        new ColumnDescriptor("Duration", "Duration",
+        new ColumnDescriptor(COL_DURATION, "Duration",
                              ColumnDescriptor.TYPE_TIME_INTERVAL),
-        new ColumnDescriptor("Type", "Type",
+        new ColumnDescriptor(COL_TYPE, "Type",
                              ColumnDescriptor.TYPE_STRING),
-        new ColumnDescriptor("Range", "Range",
+        new ColumnDescriptor(COL_RANGE, "Range",
                              ColumnDescriptor.TYPE_STRING),
-        new ColumnDescriptor("Status", "Status",
+        new ColumnDescriptor(COL_STATUS, "Status",
                              ColumnDescriptor.TYPE_STRING),
-        new ColumnDescriptor("NumAgree", "Agree",
+        new ColumnDescriptor(COL_NUM_AGREE, "Agree",
                              ColumnDescriptor.TYPE_INT),
-        new ColumnDescriptor("NumDisagree", "Disagree",
+        new ColumnDescriptor(COL_NUM_DISAGREE, "Disagree",
                              ColumnDescriptor.TYPE_INT)
         );
 
     private static final List sortRules =
-        ListUtil.list(new StatusTable.SortRule("StartTime", false));
+        ListUtil.list(new StatusTable.SortRule(COL_START_TIME, false));
 
     private NodeManagerManager mgr;
 
@@ -494,19 +524,19 @@ public class NodeManagerManager
     private Map makeRow(PollState history) {
       HashMap rowMap = new HashMap();
       // PollTime
-      rowMap.put("StartTime", new Long(history.getStartTime()));
+      rowMap.put(COL_START_TIME, new Long(history.getStartTime()));
       long duration = 0;
       if (history instanceof PollHistory) {
         // Duration
         duration = ((PollHistory)history).getDuration();
       }
-      rowMap.put("Duration", new Long(duration));
+      rowMap.put(COL_DURATION, new Long(duration));
      // PollType
-      rowMap.put("Type", history.getTypeString());
+      rowMap.put(COL_TYPE, history.getTypeString());
       // PollRange
-      rowMap.put("Range", history.getRangeString());
+      rowMap.put(COL_RANGE, history.getRangeString());
       // PollStatus
-      rowMap.put("Status", history.getStatusString());
+      rowMap.put(COL_STATUS, history.getStatusString());
 
       int agree = 0;
       int disagree = 0;
@@ -523,9 +553,9 @@ public class NodeManagerManager
         }
       }
       // YesVotes
-      rowMap.put("NumAgree", new Integer(agree));
+      rowMap.put(COL_NUM_AGREE, new Integer(agree));
       // NoVotes
-      rowMap.put("NumDisagree", new Integer(disagree));
+      rowMap.put(COL_NUM_DISAGREE, new Integer(disagree));
 
       return rowMap;
     }
