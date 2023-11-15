@@ -141,4 +141,8 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.scielo.SciELO2024HtmlHashFilterFactory</string>
   </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.scielo.SciELO2024ArticleIteratorFactory</string>
+  </entry>
 </map>

@@ -33,19 +33,68 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.scielo;
 
 import java.util.Iterator;
+import java.util.regex.Pattern;
 
 import org.lockss.daemon.PluginException;
+import org.lockss.extractor.ArticleMetadataExtractor;
+import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.ArticleIteratorFactory;
+import org.lockss.plugin.SubTreeArticleIteratorBuilder;
+import org.lockss.plugin.oapen.OAPENBooksArticleIteratorFactory;
+import org.lockss.util.Logger;
+
+/**
+ * full-text HTML URL:
+ * https://www.scielo.br/j/abcd/a/V83s5FPhKPnx9JGzDmkJRJn/?lang=en
+ * 
+ * PDF URL:
+ * https://www.scielo.br/j/abcd/a/V83s5FPhKPnx9JGzDmkJRJn/?format=pdf&lang=en
+ * 
+ * Abstract URL:
+ * https://www.scielo.br/j/abcd/a/V83s5FPhKPnx9JGzDmkJRJn/abstract/?lang=en
+ */
 
 public class SciELO2024ArticleIteratorFactory implements ArticleIteratorFactory{
 
+    protected static Logger log =
+        Logger.getLogger(OAPENBooksArticleIteratorFactory.class);
+
+    private static final String ROOT_TEMPLATE = "\"%s\", base_url";
+    private static final String PATTERN_TEMPLATE = "\"%sj/%s/a/[^/]+/(abstract/)?\\?(format=pdf&)?lang=en\", base_url, journal_id";
+
+    private static final Pattern HTML_PATTERN = Pattern.compile("(/a/[^/]+/)(\\?lang=en)", Pattern.CASE_INSENSITIVE);
+    private static final Pattern PDF_PATTERN = Pattern.compile("(/a/[^/]+/)(\\?format=pdf&lang=en)", Pattern.CASE_INSENSITIVE);
+    private static final Pattern ABSTRACT_PATTERN = Pattern.compile("(/a/[^/]+/)(abstract/\\?lang=en)", Pattern.CASE_INSENSITIVE);
+
+    private static final String HTML_REPLACEMENT = "$1?lang=en"; 
+    private static final String PDF_REPLACEMENT = "$1?format=pdf&lang=en";
+    private static final String ABSTRACT_REPLACEMENT = "$1abstract/?lang=en";
+
+    
+  
     @Override
-    public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit arg0, MetadataTarget arg1) throws PluginException {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createArticleIterator'");
+    public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
+        SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
+
+        builder.setSpec(target,
+        ROOT_TEMPLATE,
+        PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+
+        builder.addAspect(HTML_PATTERN, HTML_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_HTML);
+
+        builder.addAspect(PDF_PATTERN,
+        PDF_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF);
+
+        builder.addAspect(ABSTRACT_PATTERN,
+        ABSTRACT_REPLACEMENT,
+        ArticleFiles.ROLE_ABSTRACT);
+
+        return builder.getSubTreeArticleIterator();
     }
     
 }
