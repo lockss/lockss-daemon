@@ -39,6 +39,7 @@ import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
+import org.lockss.filter.html.HtmlTags.Article;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.ArticleIteratorFactory;
@@ -55,6 +56,9 @@ import org.lockss.util.Logger;
  * 
  * Abstract URL:
  * https://www.scielo.br/j/abcd/a/V83s5FPhKPnx9JGzDmkJRJn/abstract/?lang=en
+ * 
+ * https://www.scielo.br/citation/export/37GVXdWqMdYMtNx7NcD86xF/?format=bib
+ * https://www.scielo.br/citation/export/37GVXdWqMdYMtNx7NcD86xF/?format=ris
  */
 
 public class SciELO2024ArticleIteratorFactory implements ArticleIteratorFactory{
@@ -65,15 +69,16 @@ public class SciELO2024ArticleIteratorFactory implements ArticleIteratorFactory{
     private static final String ROOT_TEMPLATE = "\"%s\", base_url";
     private static final String PATTERN_TEMPLATE = "\"%sj/%s/a/[^/]+/(abstract/)?\\?(format=pdf&)?lang=en\", base_url, journal_id";
 
-    private static final Pattern HTML_PATTERN = Pattern.compile("(/a/[^/]+/)(\\?lang=en)", Pattern.CASE_INSENSITIVE);
-    private static final Pattern PDF_PATTERN = Pattern.compile("(/a/[^/]+/)(\\?format=pdf&lang=en)", Pattern.CASE_INSENSITIVE);
-    private static final Pattern ABSTRACT_PATTERN = Pattern.compile("(/a/[^/]+/)(abstract/\\?lang=en)", Pattern.CASE_INSENSITIVE);
+    private static final Pattern HTML_PATTERN = Pattern.compile("(/j/[^/]+/a/)([^/]+/)\\?lang=en", Pattern.CASE_INSENSITIVE);
+    private static final Pattern PDF_PATTERN = Pattern.compile("(/j/[^/]+/a/)([^/]+/)\\?format=pdf&lang=en", Pattern.CASE_INSENSITIVE);
+    private static final Pattern ABSTRACT_PATTERN = Pattern.compile("(/j/[^/]+/a/)([^/]+/)abstract/\\?lang=en", Pattern.CASE_INSENSITIVE);
 
-    private static final String HTML_REPLACEMENT = "$1?lang=en"; 
-    private static final String PDF_REPLACEMENT = "$1?format=pdf&lang=en";
-    private static final String ABSTRACT_REPLACEMENT = "$1abstract/?lang=en";
+    private static final String HTML_REPLACEMENT = "$1$2?lang=en"; 
+    private static final String PDF_REPLACEMENT = "$1$2?format=pdf&lang=en";
+    private static final String ABSTRACT_REPLACEMENT = "$1$2abstract/?lang=en";
 
-    
+    private static final String CITATION_BIBTEX_REPLACEMENT = "/citation/export/$2?format=bib";
+    private static final String CITATION_RIS_REPLACEMENT = "/citation/export/$2?format=ris";
   
     @Override
     public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
@@ -93,6 +98,14 @@ public class SciELO2024ArticleIteratorFactory implements ArticleIteratorFactory{
         builder.addAspect(ABSTRACT_PATTERN,
         ABSTRACT_REPLACEMENT,
         ArticleFiles.ROLE_ABSTRACT);
+
+        builder.addAspect(CITATION_BIBTEX_REPLACEMENT,
+        ArticleFiles.ROLE_CITATION_BIBTEX);
+
+        builder.addAspect(CITATION_RIS_REPLACEMENT,
+        ArticleFiles.ROLE_CITATION_RIS);
+
+        builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, ArticleFiles.ROLE_ABSTRACT, ArticleFiles.ROLE_FULL_TEXT_HTML);
 
         return builder.getSubTreeArticleIterator();
     }
