@@ -33,15 +33,20 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.scielo;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
+import org.lockss.daemon.TitleConfig;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.FileMetadataExtractorFactory;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.extractor.SimpleHtmlMetaTagMetadataExtractor;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.hindawi.Hindawi2020HtmlMetadataExtractorFactory;
 import org.lockss.plugin.medknow.MedknowHtmlMetadataExtractorFactory.MedknowHtmlMetadataExtractor;
@@ -49,7 +54,7 @@ import org.lockss.util.Logger;
 
 import dk.itst.oiosaml.sp.metadata.IdpMetadata.Metadata;
 
-public class SciELO2024HtmlMetadataExtractorFactory implements FileMetadataExtractor {
+public class SciELO2024HtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
 
     static Logger log = Logger.getLogger(SciELO2024HtmlMetadataExtractorFactory.class);
 
@@ -63,32 +68,57 @@ public class SciELO2024HtmlMetadataExtractorFactory implements FileMetadataExtra
     private static MultiMap tagMap = new MultiValueMap();
     
     static {
-        tagMap.put("citation_author", MetadataField.FIELD_AUTHOR); //multiple authors- how is this handled? 
-        //tagMap.put("citation_author_affiliation",????);
+        tagMap.put("citation_author", MetadataField.FIELD_AUTHOR); 
+        //tagMap.put("citation_author_affiliation",????); No available metadatafield, so will not be added
         //tagMap.put("citation_author_orcid", ?????); No available metadatafield, so will not be added
         tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
-        tagMap.put("citation_journal_abbrev", MetadataField.DC_FIELD_IDENTIFIER); //check that this is correct
+        //tagMap.put("citation_journal_abbrev", ????); No available metadatafield, so will not be added
         tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
         tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
-        tagMap.put("citation_number", MetadataField.FIELD_ITEM_NUMBER); //chcek that this is correct
-        tagMap.put("citation_pdf_url", MetadataField.FIELD_ACCESS_URL); //do I use both pdf and xml URL?
-        tagMap.put("citation_xml_url", MetadataField.FIELD_ACCESS_URL);
+        tagMap.put("citation_number", MetadataField.FIELD_ISSUE); 
         tagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
+        tagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
         tagMap.put("citation_doi", MetadataField.FIELD_DOI);
-        //tagMap.put("citation_fulltext_world_readable", ?????);
+        //tagMap.put("citation_fulltext_world_readable", ?????); No available metadatafield, so will not be added
         tagMap.put("citation_issn", MetadataField.FIELD_ISSN); //there are two metadata tags that are labeled 'issn' but one is for online
+        tagMap.put("citation_eissn", MetadataField.FIELD_EISSN); //as of 2023, SciELO has 2 metatags of citation_issn
         tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
         tagMap.put("citation_language", MetadataField.FIELD_LANGUAGE);
         tagMap.put("citation_abstract", MetadataField.FIELD_ABSTRACT);
         tagMap.put("citation_article_type", MetadataField.FIELD_ARTICLE_TYPE);
         tagMap.put("citation_publication_date", MetadataField.FIELD_DATE);
         tagMap.put("citation_keywords", MetadataField.FIELD_KEYWORDS);
-            
     }
 
     @Override
     public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
       throws IOException {
+        ArticleMetadata am = super.extract(target, cu);
+
+        //Trying to fix up both issn metatags so that one will be mapped to FIELD_ISSN and the other to FIELD_EISSN
+        //get issn from au, compare with issn from metadata
+        List<String> listOfIssns = am.getRawList("citation_issn");
+        if(listOfIssns != null && listOfIssns.size() > 1){
+            ArchivalUnit au = cu.getArchivalUnit();
+            TitleConfig tc = au.getTitleConfig();
+            if(tc != null){
+                TdbAu tdbAu = tc.getTdbAu();
+                if(tdbAu != null){
+                    am.putRaw("citation_issn", (String)null);
+                    String issn = tdbAu.getIssn();
+                    String eissn = tdbAu.getEissn();
+                    if(issn != null){
+                        am.putRaw("citation_issn", issn);
+                    }
+                    if(eissn != null){
+                        am.putRaw("citation_eissn", eissn);
+                    }
+                }
+            }
+            
+        }
+        am.cook(tagMap);
+        return am;
       }
-    
+}
 }

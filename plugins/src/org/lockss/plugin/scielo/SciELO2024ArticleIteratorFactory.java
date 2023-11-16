@@ -106,6 +106,7 @@ public class SciELO2024ArticleIteratorFactory implements ArticleIteratorFactory{
         ArticleFiles.ROLE_CITATION_RIS);
 
         builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, ArticleFiles.ROLE_ABSTRACT, ArticleFiles.ROLE_FULL_TEXT_HTML);
+        builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_HTML, ArticleFiles.ROLE_FULL_TEXT_PDF, ArticleFiles.ROLE_ABSTRACT);
 
         return builder.getSubTreeArticleIterator();
     }
