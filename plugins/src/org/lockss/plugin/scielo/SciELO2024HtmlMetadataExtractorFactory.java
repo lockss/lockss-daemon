@@ -100,6 +100,7 @@ public class SciELO2024HtmlMetadataExtractorFactory implements FileMetadataExtra
                 TdbAu tdbAu = tc.getTdbAu();
                 if(tdbAu != null){
                     am.putRaw("citation_issn", (String)null);
+                    am.putRaw("citation_eissn", (String)null);
                     String issn = tdbAu.getIssn();
                     String eissn = tdbAu.getEissn();
                     if(issn != null){
