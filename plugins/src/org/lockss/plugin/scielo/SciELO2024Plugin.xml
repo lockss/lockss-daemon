@@ -158,4 +158,8 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
     </map>
   </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.scielo.SciELO2024HtmlLinkExtractorFactory</string>
+  </entry>
 </map>

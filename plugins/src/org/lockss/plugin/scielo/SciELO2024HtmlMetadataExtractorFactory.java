@@ -76,8 +76,8 @@ public class SciELO2024HtmlMetadataExtractorFactory implements FileMetadataExtra
         tagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
         tagMap.put("citation_doi", MetadataField.FIELD_DOI);
         //tagMap.put("citation_fulltext_world_readable", ?????); No available metadatafield, so will not be added
-        tagMap.put("citation_issn", MetadataField.FIELD_ISSN); //there are two metadata tags that are labeled 'issn' but one is for online
-        tagMap.put("citation_eissn", MetadataField.FIELD_EISSN); //as of 2023, SciELO has 2 metatags of citation_issn
+        tagMap.put("correct_issn", MetadataField.FIELD_ISSN); //there are two metadata tags that are labeled 'issn' but one is for online
+        tagMap.put("correct_eissn", MetadataField.FIELD_EISSN); //as of 2023, SciELO has 2 metatags of citation_issn
         tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
         tagMap.put("citation_language", MetadataField.FIELD_LANGUAGE);
         tagMap.put("citation_abstract", MetadataField.FIELD_ABSTRACT);
@@ -92,24 +92,19 @@ public class SciELO2024HtmlMetadataExtractorFactory implements FileMetadataExtra
         ArticleMetadata am = super.extract(target, cu);
         //Trying to fix up both issn metatags so that one will be mapped to FIELD_ISSN and the other to FIELD_EISSN
         //get issn from au, compare with issn from metadata
-        List<String> listOfIssns = am.getRawList("citation_issn");
-        if(listOfIssns != null && listOfIssns.size() > 1){
-            ArchivalUnit au = cu.getArchivalUnit();
-            TitleConfig tc = au.getTitleConfig();
-            if(tc != null){
-                TdbAu tdbAu = tc.getTdbAu();
-                if(tdbAu != null){
-                    am.putRaw("citation_issn", (String)null);
-                    am.putRaw("citation_eissn", (String)null);
-                    String issn = tdbAu.getIssn();
-                    String eissn = tdbAu.getEissn();
-                    if(issn != null){
-                        am.putRaw("citation_issn", issn);
-                    }
-                    if(eissn != null){
-                        am.putRaw("citation_eissn", eissn);
-                    }
+        ArchivalUnit au = cu.getArchivalUnit();
+        TitleConfig tc = au.getTitleConfig();
+        if(tc != null){
+            TdbAu tdbAu = tc.getTdbAu();
+            if(tdbAu != null){
+                String issn = tdbAu.getIssn();
+                String eissn = tdbAu.getEissn();
+                if(issn != null){
+                    am.putRaw("correct_issn", issn);
                 }
+                if(eissn != null){
+                    am.putRaw("correct_eissn", eissn);
+                } 
             }
         }
         am.cook(tagMap);

@@ -1,0 +1,20 @@
+{
+    publisher <
+      name = SciELO Brazil
+    >
+
+    plugin = org.lockss.plugin.scielo.SciELO2024Plugin
+    param[base_url] = https://www.scielo.br/
+    implicit < status ; year ; volume ; name ; param[year] >
+
+    {
+        title <
+          name = Acta Botanica Brasilica ;
+          issn = 0102-3306 ;
+          eissn = 1677-941X 
+        >
+        param[journal_id] = abb
+        au < manifest ; 2022 ; 36 ; ABB. Acta Botanica Brasilica Volume 36 ; 2022 >
+    }
+
+}
