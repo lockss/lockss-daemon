@@ -23,8 +23,8 @@
 
       param[journal_id] = bm
     
-      au < frozen ; exists ; 2010 ; Beneficial Microbes Volume 1 ; 1 ; https://www.wageningenacademic.com/ ; >
-      au < frozen ; exists ; 2011 ; Beneficial Microbes Volume 2 ; 2 ; https://www.wageningenacademic.com/ ; >
+      au < finished ; manifest ; 2010 ; Beneficial Microbes Volume 1 ; 1 ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; Beneficial Microbes Volume 2 ; 2 ; https://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2012 ; Beneficial Microbes Volume 3 ; 3 ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2013 ; Beneficial Microbes Volume 4 ; 4 ; http://www.wageningenacademic.com/ ; >
       au < finished ; finished ; 2014 ; Beneficial Microbes Volume 5 ; 5 ; http://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
@@ -115,15 +115,15 @@
 
       param[journal_id] = jcns
 
-      au < frozen ; exists ; 2001 ; Journal on Chain and Network Science Volume 1 ; 1 ; https://www.wageningenacademic.com/ ; >
+      au < finished ; manifest ; 2001 ; Journal on Chain and Network Science Volume 1 ; 1 ; https://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2002 ; Journal on Chain and Network Science Volume 2 ; 2 ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2003 ; Journal on Chain and Network Science Volume 3 ; 3 ; https://www.wageningenacademic.com/ ; >
-      au < frozen ; exists ; 2004 ; Journal on Chain and Network Science Volume 4 ; 4 ; https://www.wageningenacademic.com/ ; >
+      au < finished ; manifest ; 2003 ; Journal on Chain and Network Science Volume 3 ; 3 ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; Journal on Chain and Network Science Volume 4 ; 4 ; https://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2005 ; Journal on Chain and Network Science Volume 5 ; 5 ; https://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2006 ; Journal on Chain and Network Science Volume 6 ; 6 ; https://www.wageningenacademic.com/ ; >
+      au < finished ; manifest ; 2006 ; Journal on Chain and Network Science Volume 6 ; 6 ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2007 ; Journal on Chain and Network Science Volume 7 ; 7 ; https://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2008 ; Journal on Chain and Network Science Volume 8 ; 8 ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2009 ; Journal on Chain and Network Science Volume 9 ; 9 ; https://www.wageningenacademic.com/ ; >
+      au < finished ; manifest ; 2009 ; Journal on Chain and Network Science Volume 9 ; 9 ; https://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2010 ; Journal on Chain and Network Science Volume 10 ; 10 ; https://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2011 ; Journal on Chain and Network Science Volume 11 ; 11 ; https://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2012 ; Journal on Chain and Network Science Volume 12 ; 12 ; http://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
@@ -166,7 +166,7 @@
       param[journal_id] = wmj
 
       au < finished ; frozen ; 2008 ; World Mycotoxin Journal Volume 1 ; 1 ; https://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2009 ; World Mycotoxin Journal Volume 2 ; 2 ; https://www.wageningenacademic.com/ ; >
+      au < finished ; manifest ; 2009 ; World Mycotoxin Journal Volume 2 ; 2 ; https://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2010 ; World Mycotoxin Journal Volume 3 ; 3 ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2011 ; World Mycotoxin Journal Volume 4 ; 4 ; http://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2012 ; World Mycotoxin Journal Volume 5 ; 5 ; http://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
