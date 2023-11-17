@@ -623,6 +623,8 @@ s api client with long timeout */
       throw new IllegalArgumentException(
           "Missing or invalid configuration service hostName: " + hostName + " port: " + repoPort);
     }
+
+    openReportFiles(args);
   }
 
   /**
@@ -643,9 +645,8 @@ s api client with long timeout */
     // Must be called after config & args are processed
     initPhaseMap();
 
-    // Open report files for AU operations only
-    if (opType != OpType.CopySystemSettings) {
-      openReportFiles(args, whichAus);
+    if (whichAus != null) {
+      logReport("Moving: " + whichAus);
     }
 
     startTime = now();
@@ -843,8 +844,8 @@ s api client with long timeout */
 
   private void moveSystemSettings(Args args) {
     currentStatus = STATUS_COPYING_SYSTEM_SETTINGS;
+    logReport(currentStatus);
 
-    // Q: Mainly(?) needed to initialize cfgUsersApiClient - what else?
     initRequest(args, null);
 
     // Move user accounts
@@ -1835,7 +1836,7 @@ s api client with long timeout */
     if (STATUS_RUNNING.equals(currentStatus)) {
 
       if (opType == OpType.CopySystemSettings) {
-        sb.append(STATUS_COPYING_SYSTEM_SETTINGS);
+        sb.append(currentStatus);
       } else {
         if (!isAbort()) {
           switch (opType) {
@@ -2064,13 +2065,13 @@ s api client with long timeout */
   /**
    * Open (append) the Report file and error file
    */
-  void openReportFiles(Args args, String whichAUs) {
+  void openReportFiles(Args args) {
     String now = DateFormatter.now();
-    reportWriter = openReportFile(reportFile, args, whichAUs, "Report", now);
-    errorWriter = openReportFile(errorFile, args, whichAUs, "Error Report", now);
+    reportWriter = openReportFile(reportFile, args, "Report", now);
+    errorWriter = openReportFile(errorFile, args, "Error Report", now);
   }
 
-  PrintWriter openReportFile(File file, Args args, String whichAUs,
+  PrintWriter openReportFile(File file, Args args,
                              String title, String now) {
     PrintWriter res = null;
     try {
@@ -2083,7 +2084,6 @@ s api client with long timeout */
       res.println("  Migrating (" + args.opType
                   + (args.isCompareContent ? " with compare" : "")
                   + ") to " + args.host);
-      res.println("  " + whichAUs);
       res.println("--------------------------------------------------");
       res.println();
       if (res.checkError()) {
@@ -2095,6 +2095,15 @@ s api client with long timeout */
                 e.getMessage());
     }
     return res;
+  }
+
+  public void logReport(String msg) {
+    if (reportWriter == null) {
+      log.error("updateReport called when no reportWriter",
+          new Throwable());
+      return;
+    }
+    reportWriter.println(msg);
   }
 
   /**

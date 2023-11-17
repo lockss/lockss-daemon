@@ -910,13 +910,11 @@ public class V2RestClient {
         }
       }
     }
-    String respBody;
+    String respBody = null;
     try {
-      if (response.body() != null) {
-        respBody = response.body().string();
-      }
-      else {
-        respBody = null;
+      ResponseBody body = response.body();
+      if (body != null) {
+        respBody = body.string();
       }
     }
     catch (IOException e) {

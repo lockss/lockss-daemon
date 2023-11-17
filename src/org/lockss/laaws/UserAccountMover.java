@@ -68,6 +68,7 @@ public class UserAccountMover extends Worker {
     try {
       cfgUsersApiClient.postUsers(accts);
       log.info("Successfully moved user accounts");
+      auMover.logReport("Moved user accounts");
     } catch (Exception e) {
       String err = "Attempt to move user accounts failed: " + e.getMessage();
       log.error(err, e);
