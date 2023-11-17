@@ -145,4 +145,17 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.scielo.SciELO2024ArticleIteratorFactory</string>
   </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.scielo.SciELO2024ArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.sielo.SciELO2024HtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
 </map>

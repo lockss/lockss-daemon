@@ -37,6 +37,7 @@ import java.util.regex.Pattern;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
+import org.lockss.extractor.ArticleMetadataExtractorFactory;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.filter.html.HtmlTags.Article;
@@ -61,7 +62,7 @@ import org.lockss.util.Logger;
  * https://www.scielo.br/citation/export/37GVXdWqMdYMtNx7NcD86xF/?format=ris
  */
 
-public class SciELO2024ArticleIteratorFactory implements ArticleIteratorFactory{
+public class SciELO2024ArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory{
 
     protected static Logger log =
         Logger.getLogger(OAPENBooksArticleIteratorFactory.class);
@@ -110,5 +111,12 @@ public class SciELO2024ArticleIteratorFactory implements ArticleIteratorFactory{
 
         return builder.getSubTreeArticleIterator();
     }
-    
+
+
+    @Override
+    public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
+        throws PluginException {
+        return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
+    }
+        
 }

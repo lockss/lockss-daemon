@@ -48,11 +48,7 @@ import org.lockss.extractor.MetadataTarget;
 import org.lockss.extractor.SimpleHtmlMetaTagMetadataExtractor;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.hindawi.Hindawi2020HtmlMetadataExtractorFactory;
-import org.lockss.plugin.medknow.MedknowHtmlMetadataExtractorFactory.MedknowHtmlMetadataExtractor;
 import org.lockss.util.Logger;
-
-import dk.itst.oiosaml.sp.metadata.IdpMetadata.Metadata;
 
 public class SciELO2024HtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
 
@@ -94,7 +90,6 @@ public class SciELO2024HtmlMetadataExtractorFactory implements FileMetadataExtra
     public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
       throws IOException {
         ArticleMetadata am = super.extract(target, cu);
-
         //Trying to fix up both issn metatags so that one will be mapped to FIELD_ISSN and the other to FIELD_EISSN
         //get issn from au, compare with issn from metadata
         List<String> listOfIssns = am.getRawList("citation_issn");
@@ -115,7 +110,6 @@ public class SciELO2024HtmlMetadataExtractorFactory implements FileMetadataExtra
                     }
                 }
             }
-            
         }
         am.cook(tagMap);
         return am;
