@@ -32,9 +32,14 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.scielo;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
 import java.util.regex.Pattern;
 
+import org.apache.commons.collections.MultiMap;
+import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractorFactory;
@@ -67,16 +72,32 @@ public class SciELO2024ArticleIteratorFactory implements ArticleIteratorFactory,
     protected static Logger log =
         Logger.getLogger(OAPENBooksArticleIteratorFactory.class);
 
+    private static final List<String> languageCodes = Arrays.asList("en", "pt", "es");
+
     private static final String ROOT_TEMPLATE = "\"%s\", base_url";
-    private static final String PATTERN_TEMPLATE = "\"%sj/%s/a/[^/]+/(abstract/)?\\?(format=pdf&)?lang=en\", base_url, journal_id";
+    private static final String PATTERN_TEMPLATE = "\"%sj/%s/a/[^/]+/(abstract/)?\\?(format=pdf&)?lang=(en|pt|es)\", base_url, journal_id";
 
-    private static final Pattern HTML_PATTERN = Pattern.compile("(/j/[^/]+/a/)([^/]+/)\\?lang=en", Pattern.CASE_INSENSITIVE);
-    private static final Pattern PDF_PATTERN = Pattern.compile("(/j/[^/]+/a/)([^/]+/)\\?format=pdf&lang=en", Pattern.CASE_INSENSITIVE);
-    private static final Pattern ABSTRACT_PATTERN = Pattern.compile("(/j/[^/]+/a/)([^/]+/)abstract/\\?lang=en", Pattern.CASE_INSENSITIVE);
+    private static final List<Pattern> HTML_PATTERNS = new ArrayList<Pattern>(); 
+    private static final List<Pattern> PDF_PATTERNS = new ArrayList<Pattern>(); 
+    private static final List<Pattern> ABSTRACT_PATTERNS = new ArrayList<Pattern>(); 
+    static {
+        for(String code: languageCodes){
+            HTML_PATTERNS.add(Pattern.compile("(/j/[^/]+/a/)([^/]+/)\\?lang=" + code, Pattern.CASE_INSENSITIVE));
+            PDF_PATTERNS.add(Pattern.compile("(/j/[^/]+/a/)([^/]+/)\\?format=pdf&lang=" + code, Pattern.CASE_INSENSITIVE));
+            ABSTRACT_PATTERNS.add(Pattern.compile("(/j/[^/]+/a/)([^/]+/)abstract/\\?lang=" + code, Pattern.CASE_INSENSITIVE));
+        }
+    }
 
-    private static final String HTML_REPLACEMENT = "$1$2?lang=en"; 
-    private static final String PDF_REPLACEMENT = "$1$2?format=pdf&lang=en";
-    private static final String ABSTRACT_REPLACEMENT = "$1$2abstract/?lang=en";
+    private static final List<String> HTML_REPLACEMENTS = new ArrayList<String>();
+    private static final List<String> PDF_REPLACEMENTS = new ArrayList<String>();
+    private static final List<String> ABSTRACTS_REPLACEMENTS = new ArrayList<String>();
+    static{
+        for(String code: languageCodes){
+            HTML_REPLACEMENTS.add("$1$2?lang=" + code);
+            PDF_REPLACEMENTS.add("$1$2?format=pdf&lang=" + code);
+            ABSTRACTS_REPLACEMENTS.add("$1$2abstract/?lang=" + code);
+        }
+    }
 
     private static final String CITATION_BIBTEX_REPLACEMENT = "/citation/export/$2?format=bib";
     private static final String CITATION_RIS_REPLACEMENT = "/citation/export/$2?format=ris";
@@ -89,15 +110,15 @@ public class SciELO2024ArticleIteratorFactory implements ArticleIteratorFactory,
         ROOT_TEMPLATE,
         PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
 
-        builder.addAspect(HTML_PATTERN, HTML_REPLACEMENT,
+        builder.addAspect(HTML_PATTERNS, HTML_REPLACEMENTS,
         ArticleFiles.ROLE_FULL_TEXT_HTML);
 
-        builder.addAspect(PDF_PATTERN,
-        PDF_REPLACEMENT,
+        builder.addAspect(PDF_PATTERNS,
+        PDF_REPLACEMENTS,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
 
-        builder.addAspect(ABSTRACT_PATTERN,
-        ABSTRACT_REPLACEMENT,
+        builder.addAspect(ABSTRACT_PATTERNS,
+        ABSTRACTS_REPLACEMENTS,
         ArticleFiles.ROLE_ABSTRACT);
 
         builder.addAspect(CITATION_BIBTEX_REPLACEMENT,
