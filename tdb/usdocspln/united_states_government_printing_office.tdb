@@ -894,7 +894,7 @@
 
     au < ready ; 2016 ; CRI 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < ready ; 2017 ; CRI 2017 ; 2017 ; https://www.govinfo.gov/ >
-    au < manifest ; 2018 ; CRI 2018 ; 2018 ; https://www.govinfo.gov/ >
+    au < ready ; 2018 ; CRI 2018 ; 2018 ; https://www.govinfo.gov/ >
 
     au < released ; 1998 ; Congressional Record Index 1998 ; 1998 ; https://www.govinfo.gov/ > #no substance
     au < released ; 2019 ; Congressional Record Index 2019 ; 2019 ; https://www.govinfo.gov/ >
@@ -919,9 +919,9 @@
     au < released ; 2021 ; Congressional Reports 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Congressional Reports 2022 ; 2022 ; https://www.govinfo.gov/ >
 
-    au < manifest ; 2016 ; CRPT 2016 ; 2016 ; https://www.govinfo.gov/ >
-    au < manifest ; 2017 ; CRPT 2017 ; 2017 ; https://www.govinfo.gov/ >
-    au < manifest ; 2018 ; CRPT 2018 ; 2018 ; https://www.govinfo.gov/ >
+    au < ready ; 2016 ; CRPT 2016 ; 2016 ; https://www.govinfo.gov/ >
+    au < ready ; 2017 ; CRPT 2017 ; 2017 ; https://www.govinfo.gov/ >
+    au < ready ; 2018 ; CRPT 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < manifest ; 2023 ; CRPT 2023 ; 2023 ; https://www.govinfo.gov/ >
   }
 
@@ -940,7 +940,7 @@
     au < released ; 2021 ; Daily Compilation of Presidential Documents 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Daily Compilation of Presidential Documents 2022 ; 2022 ; https://www.govinfo.gov/ >
 
-    au < manifest ; 2016 ; DCPD 2016 ; 2016 ; https://www.govinfo.gov/ >
+    au < ready ; 2016 ; DCPD 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < manifest ; 2023 ; DCPD 2023 ; 2023 ; https://www.govinfo.gov/ >
   }
 
@@ -957,9 +957,9 @@
     au < released ; 2021 ; Economic Indicators 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Economic Indicators 2022 ; 2022 ; https://www.govinfo.gov/ >
 
-    au < manifest ; 2013 ; ECONI 2013 ; 2013 ; https://www.govinfo.gov/ >
-    au < manifest ; 2016 ; ECONI 2016 ; 2016 ; https://www.govinfo.gov/ >
-    au < manifest ; 2018 ; ECONI 2018 ; 2018 ; https://www.govinfo.gov/ >
+    au < ready ; 2013 ; ECONI 2013 ; 2013 ; https://www.govinfo.gov/ >
+    au < ready ; 2016 ; ECONI 2016 ; 2016 ; https://www.govinfo.gov/ >
+    au < ready ; 2018 ; ECONI 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < manifest ; 2023 ; ECONI 2023 ; 2023 ; https://www.govinfo.gov/ >
 
   }
@@ -978,7 +978,7 @@
     au < released ; 2021 ; Economic Report of the President 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Economic Report of the President 2022 ; 2022 ; https://www.govinfo.gov/ >
 
-    au < manifest ; 2016 ; ERP 2016 ; 2016 ; https://www.govinfo.gov/ >
+    au < ready ; 2016 ; ERP 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < manifest ; 2017 ; ERP 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < manifest ; 2018 ; ERP 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < manifest ; 2023 ; ERP 2023 ; 2023 ; https://www.govinfo.gov/ >
