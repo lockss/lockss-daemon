@@ -60,7 +60,8 @@ public class HashBlock {
   }
 
   public String toString() {
-    return "[HBlock: " + getUrl() + ": " + versions + "]";
+    return "[HBlock: " + getUrl() + " " + versions.size() + " vers: "
+      + versions + "]";
   }
   
   public void addVersion(long unfilteredOffset,
@@ -152,7 +153,6 @@ public class HashBlock {
     return retVal;
   }
    
-
   /**
    * Internal representation of a version of a hash block.  Natural sort
    * order is by repository version.

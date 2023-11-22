@@ -241,11 +241,13 @@ public class HashCUS extends LockssServlet {
 
       if (HasherStatus.Error == result.getRunnerStatus()) {
 	displayPage(resType, reqId, params, result);
+        return;
       }
 
       if (params.isAsynchronous() && resType == ResultType.Inline) {
 	errMsg = "Cannot select both Background and Inline result";
 	displayPage(resType, reqId, params, result);
+        return;
       }
 
       if (StringUtil.isNullString(errMsg)) {
