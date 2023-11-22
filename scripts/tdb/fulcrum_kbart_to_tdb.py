@@ -67,7 +67,7 @@ def resolve_csv_to_info(file_path):
                     info['csv_isbn'] = row.get(isbn_column, '').strip()
                     info['csv_eisbn'] = row.get(eisbn_column, '').strip()
                     dois_info.append(info)
-                    time.sleep(1)  # Sleep for 1 second between requests
+                    time.sleep(0.1)  # Sleep for 1 second between requests
 
     return dois_info
 
