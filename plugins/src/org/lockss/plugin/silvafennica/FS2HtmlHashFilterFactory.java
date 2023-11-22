@@ -55,8 +55,7 @@ public class FS2HtmlHashFilterFactory implements FilterFactory {
   private static final Logger log = Logger.getLogger(FS2HtmlHashFilterFactory.class);
   
   protected static NodeFilter[] excludeFilters = new NodeFilter[] {
-    HtmlNodeFilters.tagWithText("span", "Views"),
-    HtmlNodeFilters.tagWithText("span", "Katselukerrat"), //Finnish for 'Views'
+    HtmlNodeFilters.tagWithTextRegex("span", "^(Views|Katselukerrat)$"),
       // DROP scripts, styles, comments
       /*HtmlNodeFilters.tag("script"),
       HtmlNodeFilters.tag("noscript"),

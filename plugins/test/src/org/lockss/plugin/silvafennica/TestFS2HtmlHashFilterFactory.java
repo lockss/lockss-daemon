@@ -53,6 +53,11 @@ public class TestFS2HtmlHashFilterFactory extends LockssTestCase{
                             "</p>"+
                             "<p class='abstract'>"+
                               "<span class='whatever'>"+
+                                "Views other stuff"+
+                              "</span>"+
+                            "</p>"+
+                            "<p class='abstract'>"+
+                              "<span class='whatever'>"+
                                 "PASS"+
                               "</span>"+
                             "</p>"+
@@ -62,7 +67,7 @@ public class TestFS2HtmlHashFilterFactory extends LockssTestCase{
         InputStream out = fact.createFilteredInputStream(null, in, Constants.DEFAULT_ENCODING);
         String result = IOUtils.toString(out, Constants.DEFAULT_ENCODING);
         System.out.println(result);
-        assertFalse("Your test case failed! \n"+result, !result.contains("PASS") || result.contains("Views")); 
-        
+        assertFalse("Your test case failed! \n"+result, !result.contains("PASS")); 
+        assertTrue(result.contains("Views other stuff"));
     }
 }
