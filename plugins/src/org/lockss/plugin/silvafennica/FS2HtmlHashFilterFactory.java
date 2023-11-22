@@ -55,6 +55,8 @@ public class FS2HtmlHashFilterFactory implements FilterFactory {
   private static final Logger log = Logger.getLogger(FS2HtmlHashFilterFactory.class);
   
   protected static NodeFilter[] excludeFilters = new NodeFilter[] {
+    HtmlNodeFilters.tagWithText("span", "Views"),
+    HtmlNodeFilters.tagWithText("span", "Katselukerrat"), //Finnish for 'Views'
       // DROP scripts, styles, comments
       /*HtmlNodeFilters.tag("script"),
       HtmlNodeFilters.tag("noscript"),
@@ -97,6 +99,9 @@ public class FS2HtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tag("h1"),
       HtmlNodeFilters.tag("h2"),
       HtmlNodeFilters.tagWithAttribute("p", "class", "body-text"),
+      HtmlNodeFilters.tagWithAttribute("p", "class", "authors"),
+      HtmlNodeFilters.tagWithAttribute("p", "class", "article-title"),
+      HtmlNodeFilters.tagWithAttribute("p", "class", "abstract"),
       // https://www.silvafennica.fi/raw/1442
       HtmlNodeFilters.tagWithAttribute("div", "id", "raw_content"),
       // https://www.silvafennica.fi/large_tables/article1514_table1.html
