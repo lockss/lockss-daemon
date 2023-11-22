@@ -15,7 +15,7 @@
   provider = Bar Publishing
   plugin =  org.lockss.plugin.michigan.ClockssUMichFulcrumBooksPlugin
   param[base_url] = https://www.fulcrum.org/
-  implicit < status ; status2 ; year ; isbn ; param[book_uri] ; name ; hidden[proxy] >
+  implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_uri] ; name ; hidden[proxy] >
 
   {
   
@@ -24,13 +24,24 @@
       type = bookSeries
     >
 
-    au < crawling ; exists ; 2023 ; 9781407315355 ; concern/monographs/6q182n888 ; Aegypto Adiecta ; >
-    au < crawling ; exists ; 2023 ; 9781407314969 ; concern/monographs/f4752k80x ; Celtiform Pendants from Pre-Columbian Costa Rica: Production, distribution, and experimental replication ; >
-    au < crawling ; exists ; 2023 ; 9781407360355 ; concern/monographs/tm70mx88m ; Urbanism and its Impact on Human Health: A long-term study at Knossos, Crete ; >
-    au < frozen ; exists ; 2022 ; 9781407359762 ; concern/monographs/8c97ks94w ; Communal Solitude: The Carthusian Lay Brethren in Great Britain & Ireland, 1178-1569 ; >
-    au < frozen ; exists ; 2021 ; 9781407358086 ; concern/monographs/5425kc953 ; Carved in Stone: The archaeology of rock-cut sites and stone quarries ; >
-    au < frozen ; exists ; 2022 ; 9781407359816 ; concern/monographs/xp68kj88d ; The Hellenistic and Roman Harbours of Delos and Kenchreai: Their Construction, Use and Evolution ; >
-    au < frozen ; exists ; 1976 ; 9780904531459 ; concern/monographs/r781wh57x ; Roman Military Stone-built Granaries in Britain ; >
+    au < crawling ; exists ; 2023 ; 9781407315355 ;  ; concern/monographs/6q182n888 ; Aegypto Adiecta ; >
+    au < crawling ; exists ; 2023 ; 9781407314969 ;  ; concern/monographs/f4752k80x ; Celtiform Pendants from Pre-Columbian Costa Rica: Production, distribution, and experimental replication ; >
+    au < crawling ; exists ; 2023 ; 9781407360355 ;  ; concern/monographs/tm70mx88m ; Urbanism and its Impact on Human Health: A long-term study at Knossos, Crete ; >
+    au < frozen ; exists ; 2022 ; 9781407359762 ;  ; concern/monographs/8c97ks94w ; Communal Solitude: The Carthusian Lay Brethren in Great Britain & Ireland, 1178-1569 ; >
+    au < frozen ; exists ; 2021 ; 9781407358093 ; 9781407358086 ; concern/monographs/5425kc953 ; Carved in Stone: The archaeology of rock-cut sites and stone quarries ; >
+    au < frozen ; exists ; 2022 ; 9781407359816 ; 9781407359823 ; concern/monographs/xp68kj88d ; The Hellenistic and Roman Harbours of Delos and Kenchreai: Their Construction, Use and Evolution ; >
+    au < frozen ; exists ; 1976 ; 9780904531459 ; 9781407319674 ; concern/monographs/r781wh57x ; Roman Military Stone-built Granaries in Britain ; >
+
+    au < exists ; exists ; 2008 ; 9781407302089 ; 9781407332352 ; concern/monographs/j3860878z ; Scythians is a name given them by the Greeks: An analysis of six barrow burials on the West Eurasian Steppe ; >
+    au < exists ; exists ; 2015 ; 9781407314105 ; 9781407343679 ; concern/monographs/f4752j586 ; Sein Zum Tode...: Untersuchungen zu den gesellschaftlichen Strukturen anhand der Nekropolen und Gräber der protogeometrischen und geometrischen Epoche aus Mittel-und Ostkreta ; >
+    au < exists ; exists ; 2010 ; 9781407305554 ; 9781407336121 ; concern/monographs/3484zj457 ; The True and Exact Dresses and Fashion Archaeological Clothing Remains and their Social Contexts in Sixteenth- and Seventeenth-Century Hungary ; >
+    au < exists ; exists ; 2009 ; 9781407305806 ; 9781407335292 ; concern/monographs/r494vm707 ; A Hybrid Burial Practice': Situated Practices and the Production of Situated Knowledges in the Archaeology of the Vestland Cauldron ; >
+    au < exists ; exists ; 2005 ; 9781841718675 ; 9781407320465 ; concern/monographs/3197xn69k ; A pillar curiously engraven: with some inscription upon it': What is the Ruthwell Cross? ; >
+    au < exists ; exists ; 2009 ; 9781407305943 ; 9781407335452 ; concern/monographs/cc08hh37k ; Being in Ancient Egypt'. Thoughts on Agency, Materiality and Cognition: Proceedings of the seminar held in Copenhagen, September 29-30, 2006 ; >
+    au < exists ; exists ; 1997 ; 9780860549277 ; 9781407349992 ; concern/monographs/xd07gv45n ; Home is Where the Hearth is': The Spatial Organisation of the Upper Palaeolithic Rockshelter Occupations at Klithi and Kastritsa in Northwest Greece ; >
+    au < exists ; exists ; 2014 ; 9781407313269 ; 9781407343006 ; concern/monographs/5d86p181h ; My Life is like the Summer Rose' Maurizio Tosi e l'Archeologia come modo di vivere: Papers in honour of Maurizio Tosi for his 70th birthday ; >
+    au < exists ; exists ; 2011 ; 9781407307626 ; 9781407322001 ; concern/monographs/9019s427v ; Northeton .. a praty uplandyshe towne ..': Building Recording, Excavation and Documentary Research in King's Norton, Birmingham, 2005–2007 ; >
+    au < exists ; exists ; 2005 ; 9781841718798 ; 9781407320519 ; concern/monographs/gt54kp82r ; Of Fish and Men' ('De iasg agus dhaoine'): A Study of the Utilization of Marine Resources as Recovered from Selected Hebridean Archaeological Sites ; >
 
   }
 }
