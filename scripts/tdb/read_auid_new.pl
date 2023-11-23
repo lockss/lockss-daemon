@@ -2696,7 +2696,8 @@ while (my $line = <>) {
               $result = "Redirected";
       } elsif (defined($man_contents) && ($perm_contents =~ m/$clockss_tag/)) {
         #Make sure we have access or there is open access, and there is a pdf
-        if (($man_contents !~ m/Your institution does not have access to this book/) && ($man_contents =~ m/locale=en/) && ($man_contents =~ m/a data-rep-type=\"pdf\"/ || $man_contents =~ m/a data-rep-type=\"epub\"/ ) && ($man_contents =~ m/Access to this book has been provided by your Library/ || ($man_contents =~ m/Open Access/ && $man_contents =~ m/\(open access\)/ ) )) {
+        #if (($man_contents !~ m/Your institution does not have access to this book/) && ($man_contents =~ m/locale=en/) && ($man_contents =~ m/a data-rep-type=\"pdf\"/ || $man_contents =~ m/a data-rep-type=\"epub\"/) && ($man_contents =~ m/Access to this book has been provided by your Library/ || ($man_contents =~ m/Open Access/ && $man_contents =~ m/\(open access\)/ ) )) {
+         if (($man_contents !~ m/Your institution does not have access to this book/) && ($man_contents =~ m/locale=en/) && ($man_contents =~ m/a data-rep-type=\"pdf\"/ || $man_contents =~ m/a data-rep-type=\"epub\"/ || $man_contents =~ m/a\s+id=\"monograph-read-btn\"\s+href=\"\/epubs\/\S+\"/) && ($man_contents =~ m/Access to this book has been provided by your Library/ || ($man_contents =~ m/Open Access/ && $man_contents =~ m/\(open access\)/ ) )) {
           if ($man_contents =~ m/<title>\s*(\S[^<]*\S)\s*<\/title>/si) {
             $vol_title = $1;
             $vol_title =~ s/\s*\n\s*/ /g;
