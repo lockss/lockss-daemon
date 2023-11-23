@@ -7,9 +7,9 @@
     name = Bar Publishing ;
     info[contract] = 2023 ;
     info[back] = 2015 ;
-    info[tester] = 8 ;
-    info[poller] = 8 ;
-    comment[platform] = Fulcrum
+    info[min_year] = 1974 ;
+    info[tester] = 5 ;
+    info[platform] = Fulcrum
   >
 
   provider = Bar Publishing

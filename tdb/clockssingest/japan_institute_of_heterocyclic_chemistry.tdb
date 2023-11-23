@@ -4,8 +4,8 @@
     name = Japan Institute of Heterocyclic Chemistry ;
     info[contract] = 2011 ;
     info[back] = 1973 ;
-    info[tester] = 5 ;
-    info[poller] = 6
+    info[tester] = 8 ;
+    info[platform] = Custom
   >
 
   plugin = org.lockss.plugin.heterocycles.ClockssHeterocyclesPlugin
