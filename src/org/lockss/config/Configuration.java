@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2001-2021 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2001-2023 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -186,7 +186,13 @@ public abstract class Configuration {
    */
   public Configuration copy() {
     Configuration copy = ConfigManager.newConfiguration();
-    copy.copyFrom(this);
+    copy.copyFrom(this, null, null);
+    return copy;
+  }
+
+  public Configuration copyIntern(StringPool pool) {
+    Configuration copy = ConfigManager.newConfiguration();
+    copy.copyFrom(this, null, pool);
     return copy;
   }
 
@@ -208,10 +214,18 @@ public abstract class Configuration {
    * @pse null, or an event to be called for every param copied
    */
   public void copyFrom(Configuration other, ParamCopyEvent pse) {
+    copyFrom(other, pse, null);
+  }
+
+  public void copyFrom(Configuration other, ParamCopyEvent pse, StringPool pool) {
     // merge other config tree into this one
     for (Iterator iter = other.keyIterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
       String val = other.get(key);
+      if (pool != null) {
+        key = pool.intern(key);
+        val = pool.internMapValue(key, val);
+      }
       if (pse != null) {
 	pse.paramCopied(key, val);
       }
@@ -883,6 +897,33 @@ public abstract class Configuration {
    */
   public abstract Iterator nodeIterator(String key);
 
+  public Map<String,String> toStringMap() {
+    Map<String,String> res = new HashMap<String,String>();
+    for (Iterator iter = keyIterator(); iter.hasNext();) {
+      String key = (String)iter.next();
+      String val = get(key);
+      res.put(key, val);
+    }
+    return res;
+  }
+
+  /**
+   * Provides a loggable version of the contents of a Configuration.
+   *
+   * @param config
+   *          A Configuration with the configuartion to be logged.
+   * @return a String with the loggable version of the contents of the
+   *         configuration.
+   */
+  public static String loggableConfiguration(Configuration config,
+      String name) {
+    if (config == null || config.keySet().size() < 10) {
+	return name + " = " + config;
+    }
+
+    return name + ".keySet().size() = " + config.keySet().size();
+  }
+
   // static convenience methods
 
 
@@ -915,6 +956,9 @@ public abstract class Configuration {
    * configurationChanged().
    */
   static public class Differences  {
+    public static Differences ALL =
+      new Differences(ConfigManager.newConfiguration(), null);
+
     private final boolean containsAllKeys;
     private final Set<String> diffKeys;
     private final Tdb.Differences tdbDiffs;

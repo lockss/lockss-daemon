@@ -247,7 +247,6 @@
       issn = 0072-1077
     >
     
-    # not in usual HighWire shape
     param[base_url] = http://specialpapers.gsapubs.org/
     implicit < status ; status2 ; year ; doi ; isbn ; name ; param[volume_name] ; hidden[proxy] >
 

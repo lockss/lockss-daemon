@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>3</string>
+        <string>5</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -108,7 +108,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_start_url</string>
         <!--http://residenciapediatrica.com.br/oai?verb=ListRecords&metadataPrefix=oai_dc&from=2012-01-01&until=2012-12-31-->
-        <string>"%soai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", base_url, year, year</string>
+        <string>"%slockss?oai_granularity=%s&amp;au_oai_date=%d", base_url, oai_granularity, year</string>
     </entry>
     <entry>
         <string>au_permission_url</string>
@@ -134,7 +134,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>1,"^https?://s3-sa-east-1\.amazonaws\.com/.*\.pdf"</string>
             <string>1,"^%s(detalhes|exportar-citacao|exportar-pdf)/", base_url</string>
             <!-- for the synthetic OAI start page -->
-            <string>1,"^%sauid=", base_url</string>
+            <string>1,"^https?://%s/lockss\?", url_host(base_url)</string>
         </list>
     </entry>
     <entry>

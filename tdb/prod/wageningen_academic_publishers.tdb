@@ -30,7 +30,9 @@
       au < released ; 2019 ; Beneficial Microbes Volume 10 ; 10 ; https://www.wageningenacademic.com/ >
       au < released ; 2020 ; Beneficial Microbes Volume 11 ; 11 ; https://www.wageningenacademic.com/ >
       au < released ; 2021 ; Beneficial Microbes Volume 12 ; 12 ; https://www.wageningenacademic.com/ >
-      au < manifest ; 2022 ; Beneficial Microbes Volume 13 ; 13 ; https://www.wageningenacademic.com/ >
+      au < released ; 2022 ; Beneficial Microbes Volume 13 ; 13 ; https://www.wageningenacademic.com/ >
+      au < released ; 2023 ; Beneficial Microbes Volume 14 ; 14 ; https://www.wageningenacademic.com/ >
+      au < doNotProcess ; 2024 ; Beneficial Microbes Volume 15 ; 15 ; https://www.wageningenacademic.com/ >
 
     }
 
@@ -54,7 +56,9 @@
       au < released ; 2019 ; Comparative Exercise Physiology Volume 15 ; 15 ; https://www.wageningenacademic.com/ >
       au < released ; 2020 ; Comparative Exercise Physiology Volume 16 ; 16 ; https://www.wageningenacademic.com/ >
       au < released ; 2021 ; Comparative Exercise Physiology Volume 17 ; 17 ; https://www.wageningenacademic.com/ >
-      au < manifest ; 2022 ; Comparative Exercise Physiology Volume 18 ; 18 ; https://www.wageningenacademic.com/ >
+      au < released ; 2022 ; Comparative Exercise Physiology Volume 18 ; 18 ; https://www.wageningenacademic.com/ >
+      au < released ; 2023 ; Comparative Exercise Physiology Volume 19 ; 19 ; https://www.wageningenacademic.com/ >
+      au < doNotProcess ; 2024 ; Comparative Exercise Physiology Volume 20 ; 20 ; https://www.wageningenacademic.com/ >
 
     }
 
@@ -66,17 +70,11 @@
       >
 
       param[journal_id] = jaan
+      #move to Brill
 
-      au < exists ; 2012 ; Journal of Applied Animal Nutrition Volume 1 ; 1 ; https://www.wageningenacademic.com/ >
-      au < exists ; 2013 ; Journal of Applied Animal Nutrition Volume 2 ; 2 ; https://www.wageningenacademic.com/ >
-      au < exists ; 2015 ; Journal of Applied Animal Nutrition Volume 3 ; 3 ; https://www.wageningenacademic.com/ >
-      au < exists ; 2016 ; Journal of Applied Animal Nutrition Volume 4 ; 4 ; https://www.wageningenacademic.com/ >
-      au < exists ; 2017 ; Journal of Applied Animal Nutrition Volume 5 ; 5 ; https://www.wageningenacademic.com/ >
-      au < exists ; 2018 ; Journal of Applied Animal Nutrition Volume 6 ; 6 ; https://www.wageningenacademic.com/ >
-      au < exists ; 2019 ; Journal of Applied Animal Nutrition Volume 7 ; 7 ; https://www.wageningenacademic.com/ >
       au < released ; 2020 ; Journal of Applied Animal Nutrition Volume 8 ; 8 ; https://www.wageningenacademic.com/ >
       au < released ; 2021 ; Journal of Applied Animal Nutrition Volume 9 ; 9 ; https://www.wageningenacademic.com/ >
-      au < manifest ; 2022 ; Journal of Applied Animal Nutrition Volume 10 ; 10 ; https://www.wageningenacademic.com/ >
+      au < released ; 2022 ; Journal of Applied Animal Nutrition Volume 10 ; 10 ; https://www.wageningenacademic.com/ >
 
     }
 
@@ -96,7 +94,9 @@
       au < released ; 2019 ; Journal of Insects as Food and Feed Volume 5 ; 5 ; https://www.wageningenacademic.com/ >
       au < released ; 2020 ; Journal of Insects as Food and Feed Volume 6 ; 6 ; https://www.wageningenacademic.com/ >
       au < released ; 2021 ; Journal of Insects as Food and Feed Volume 7 ; 7 ; https://www.wageningenacademic.com/ >
-      au < manifest ; 2022 ; Journal of Insects as Food and Feed Volume 8 ; 8 ; https://www.wageningenacademic.com/ >
+      au < released ; 2022 ; Journal of Insects as Food and Feed Volume 8 ; 8 ; https://www.wageningenacademic.com/ >
+      au < released ; 2023 ; Journal of Insects as Food and Feed Volume 9 ; 9 ; https://www.wageningenacademic.com/ >
+      au < doNotProcess ; 2024 ; Journal of Insects as Food and Feed Volume 10 ; 10 ; https://www.wageningenacademic.com/ >
 
     }
 
@@ -174,7 +174,9 @@
       au < released ; 2019 ; World Mycotoxin Journal Volume 12 ; 12 ; https://www.wageningenacademic.com/ >
       au < released ; 2020 ; World Mycotoxin Journal Volume 13 ; 13 ; https://www.wageningenacademic.com/ >
       au < released ; 2021 ; World Mycotoxin Journal Volume 14 ; 14 ; https://www.wageningenacademic.com/ >
-      au < manifest ; 2022 ; World Mycotoxin Journal Volume 15 ; 15 ; https://www.wageningenacademic.com/ >
+      au < released ; 2022 ; World Mycotoxin Journal Volume 15 ; 15 ; https://www.wageningenacademic.com/ >
+      au < released ; 2023 ; World Mycotoxin Journal Volume 16 ; 16 ; https://www.wageningenacademic.com/ >
+      au < doNotProcess ; 2024 ; World Mycotoxin Journal Volume 17 ; 17 ; https://www.wageningenacademic.com/ >
 
     }
 

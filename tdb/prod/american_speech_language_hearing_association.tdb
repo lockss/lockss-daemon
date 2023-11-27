@@ -4,7 +4,8 @@
   >
   
   comment[moving] = Publisher moved from Silverchair to Atypon.
-  
+
+{
   plugin = org.lockss.plugin.atypon.aslha.AmericanSpeechLanguageHearingAssocAtyponPlugin
   #param[base_url] = https://pubs.asha.org/
   implicit < status ; year ; name ; param[volume_name] >
@@ -50,7 +51,8 @@
       au < released ; 2019 ; American Journal of Audiology Volume 28 ; 28 >
       au < released ; 2020 ; American Journal of Audiology Volume 29 ; 29 >
       au < released ; 2021 ; American Journal of Audiology Volume 30 ; 30 >
-      au < manifest ; 2022 ; American Journal of Audiology Volume 31 ; 31 >
+      au < released ; 2022 ; American Journal of Audiology Volume 31 ; 31 >
+      au < manifest ; 2023 ; American Journal of Audiology Volume 32 ; 32 >
 
   }
 
@@ -95,7 +97,8 @@
       au < released ; 2019 ; American Journal of Speech-Language Pathology Volume 28 ; 28 >
       au < released ; 2020 ; American Journal of Speech-Language Pathology Volume 29 ; 29 >
       au < released ; 2021 ; American Journal of Speech-Language Pathology Volume 30 ; 30 >
-      au < manifest ; 2022 ; American Journal of Speech-Language Pathology Volume 31 ; 31 >
+      au < released ; 2022 ; American Journal of Speech-Language Pathology Volume 31 ; 31 >
+      au < manifest ; 2023 ; American Journal of Speech-Language Pathology Volume 32 ; 32 >
 
   }
 
@@ -276,7 +279,8 @@
       au < released ; 2019 ; Journal of Speech, Language, and Hearing Research Volume 62 ; 62 >
       au < released ; 2020 ; Journal of Speech, Language, and Hearing Research Volume 63 ; 63 >
       au < released ; 2021 ; Journal of Speech, Language, and Hearing Research Volume 64 ; 64 >
-      au < manifest ; 2022 ; Journal of Speech, Language, and Hearing Research Volume 65 ; 65 >
+      au < released ; 2022 ; Journal of Speech, Language, and Hearing Research Volume 65 ; 65 >
+      au < manifest ; 2023 ; Journal of Speech, Language, and Hearing Research Volume 66 ; 66 >
 
   }
 
@@ -343,7 +347,8 @@
       au < released ; 2019 ; Language, Speech, and Hearing Services in Schools Volume 50 ; 50 >
       au < released ; 2020 ; Language, Speech, and Hearing Services in Schools Volume 51 ; 51 >
       au < released ; 2021 ; Language, Speech, and Hearing Services in Schools Volume 52 ; 52 >
-      au < manifest ; 2022 ; Language, Speech, and Hearing Services in Schools Volume 53 ; 53 >
+      au < released ; 2022 ; Language, Speech, and Hearing Services in Schools Volume 53 ; 53 >
+      au < manifest ; 2023 ; Language, Speech, and Hearing Services in Schools Volume 54 ; 54 >
 
   }
 
@@ -378,8 +383,6 @@
       au < released ; 2018 ; ASHA Leader Volume 23 ; 23 >
       au < released ; 2019 ; ASHA Leader Volume 24 ; 24 >
       au < released ; 2020 ; ASHA Leader Volume 25 ; 25 >
-      au < expected ; 2021 ; ASHA Leader Volume 26 ; 26 >
-      au < expected ; 2022 ; ASHA Leader Volume 27 ; 27 >
   }
 
   {
@@ -398,7 +401,29 @@
       au < released ; 2019 ; Perspectives of the ASHA Special Interest Groups Volume 4 ; 4 >
       au < released ; 2020 ; Perspectives of the ASHA Special Interest Groups Volume 5 ; 5 >
       au < released ; 2021 ; Perspectives of the ASHA Special Interest Groups Volume 6 ; 6 >
-      au < manifest ; 2022 ; Perspectives of the ASHA Special Interest Groups Volume 7 ; 7 >
+      au < released ; 2022 ; Perspectives of the ASHA Special Interest Groups Volume 7 ; 7 >
+      au < manifest ; 2023 ; Perspectives of the ASHA Special Interest Groups Volume 8 ; 8 >
   }
+}
+{
+  plugin = needs.plugin
+  implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+
+  {
+    title <
+      name = ASHA Leader ;
+      eissn = 1085-9586 
+    >
+
+      param[journal_id] = leader
+      param[base_url] = https://leader.pubs.asha.org/
+
+      au < exists ; exists ; 2020 ; ASHA Leader Magazine Volume 25 ; 25 ; >
+      au < exists ; exists ; 2021 ; ASHA Leader Magazine Volume 26 ; 26 ; >
+      au < exists ; exists ; 2022 ; ASHA Leader Magazine Volume 27 ; 27 ; >
+      au < exists ; exists ; 2023 ; ASHA Leader Magazine Volume 28 ; 28 ; >
+      #Changed from a journal to a magazine as of April 2020.
+  }
+}
 
 }

@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2023 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,6 +28,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import org.apache.commons.lang3.builder.*;
 import org.apache.oro.text.regex.*;
 import org.lockss.util.*;
 
@@ -40,7 +38,40 @@ import org.lockss.util.*;
   */
 public class CrawlRules {
 
-  private static Logger logger = Logger.getLogger("CrawlRules");
+  private static Logger logger = Logger.getLogger(CrawlRules.class);
+
+  public static CrawlRule createRE(Pattern regexp, int action) {
+    return intern(new CrawlRules.RE(regexp, action));
+  }
+
+  public static CrawlRule createRE(String reString, int action)
+      throws LockssRegexpException {
+    return intern(new CrawlRules.RE(reString, action));
+  }
+
+  public static CrawlRule createRE(String reString, boolean ignoreCase,
+                                   int action)
+      throws LockssRegexpException {
+    return intern(new CrawlRules.RE(reString, ignoreCase, action));
+  }
+
+  private static Map<RE,RE> RE_CACHE = new ConcurrentHashMap<>();
+
+  private static synchronized CrawlRule intern(CrawlRule rule) {
+    if (rule instanceof RE) {
+      CrawlRules.RE reRule = (CrawlRules.RE)rule;
+      CrawlRule res = RE_CACHE.get(reRule);
+      if (res != null) {
+        logger.debug2("hit: " + rule);
+        return res;
+      }
+      logger.debug2("miss: " + rule);
+      RE_CACHE.put(reRule, reRule);
+      return reRule;
+    } else {
+      return rule;
+    }
+  }
 
   /**
    * CrawlRule.RE is a w3mir-type rule, which consists of a regular
@@ -50,6 +81,7 @@ public class CrawlRules {
   public static class RE implements CrawlRule {
     protected Pattern regexp;
     private int action;
+    private boolean ignoreCase;
 
     /** Include if match, else ignore */
     public static final int MATCH_INCLUDE = 1;
@@ -64,7 +96,7 @@ public class CrawlRules {
     /** Exclude if match, else include */
     public static final int MATCH_EXCLUDE_ELSE_INCLUDE = 6;
 
-    String actionNames[] = {
+    static String actionNames[] = {
       "match_incl",
       "match_excl",
       "no_match_incl",
@@ -113,6 +145,7 @@ public class CrawlRules {
 	if (ignoreCase) flags |= Perl5Compiler.CASE_INSENSITIVE_MASK;
 	regexp = RegexpUtil.getCompiler().compile(reString, flags);
 	this.action = action;
+        this.ignoreCase = ignoreCase;
       } catch (MalformedPatternException e) {
 	throw new LockssRegexpException(e.getMessage());
       }
@@ -169,15 +202,24 @@ public class CrawlRules {
       return IGNORE;
     }
 
-    public boolean equals(Object o) {
-      if (o instanceof RE) {
-	RE ore = (RE)o;
- 	return
-	  action == ore.action &&
-	  this.getClass() == ore.getClass() &&
-	  regexp.getPattern().equals(ore.regexp.getPattern());
+    public boolean equals(Object obj) {
+      if (obj == null) { return false; }
+      if (obj == this) { return true; }
+      if (obj.getClass() != getClass()) {
+        return false;
       }
-      return false;
+      RE other = (RE)obj;
+      return action == other.action &&
+        ignoreCase == other.ignoreCase &&
+        regexp.getPattern().equals(other.regexp.getPattern());
+    }
+
+    public int hashCode() {
+      return new HashCodeBuilder(31, 41)
+        .append(regexp.getPattern())
+        .append(ignoreCase)
+        .append(action)
+        .toHashCode();
     }
 
     protected String subToString() {
@@ -344,22 +386,6 @@ public class CrawlRules {
       return false;
     }
 
-    public boolean equals(Object o) {
-      if (o instanceof REMatchRange && super.equals(o)) {
-	REMatchRange ore = (REMatchRange)o;
-	if (mode == ore.mode) {
-	  switch (mode) {
-	  case LONG:
-	    return minLong == ore.minLong && maxLong == ore.maxLong;
-	  case COMP:
-	  case COMP_IGN_CASE:
-	    return minComp.equals(maxComp);
-	  }
-	}
-      }
-      return false;
-    }
-
     protected String subToString() {
       switch (mode) {
       case LONG:
@@ -370,6 +396,32 @@ public class CrawlRules {
 	return " In_CI_Alpha_Range " + minComp + "-" + maxComp;
       }
       return "";
+    }
+
+    public int hashCode() {
+      return new HashCodeBuilder(31, 41)
+        .appendSuper(super.hashCode())
+        .append(minLong)
+        .append(maxLong)
+        .append(minComp)
+        .append(maxComp)
+        .toHashCode();
+    }
+
+    public boolean equals(Object obj) {
+      if (obj == null) { return false; }
+      if (obj == this) { return true; }
+      if (obj.getClass() != getClass()) {
+        return false;
+      }
+      REMatchRange other = (REMatchRange)obj;
+      return new EqualsBuilder()
+        .appendSuper(super.equals(obj))
+             .append(minLong, other.minLong)
+             .append(maxLong, other.maxLong)
+             .append(minComp, other.minComp)
+             .append(maxComp, other.maxComp)
+             .isEquals();
     }
   }
 
@@ -447,14 +499,6 @@ public class CrawlRules {
       return set.contains(sub);
     }
 
-    public boolean equals(Object o) {
-      if (o instanceof REMatchSet && super.equals(o)) {
-	REMatchSet ore = (REMatchSet)o;
-	return mode.equals(ore.mode) && set.equals(ore.set);
-      }
-      return false;
-    }
-
     protected String subToString() {
       switch (mode) {
       case IGN_CASE:
@@ -463,6 +507,28 @@ public class CrawlRules {
 	return " In_Set " + new TreeSet(set);
       }
       return "";
+    }
+
+    public int hashCode() {
+      return new HashCodeBuilder(31, 41)
+        .appendSuper(super.hashCode())
+        .append(mode)
+        .append(set)
+        .toHashCode();
+    }
+
+    public boolean equals(Object obj) {
+      if (obj == null) { return false; }
+      if (obj == this) { return true; }
+      if (obj.getClass() != getClass()) {
+        return false;
+      }
+      REMatchSet other = (REMatchSet)obj;
+      return new EqualsBuilder()
+        .appendSuper(super.equals(obj))
+             .append(mode, other.mode)
+             .append(set, other.set)
+             .isEquals();
     }
   }
 
@@ -502,12 +568,20 @@ public class CrawlRules {
       return IGNORE;
     }
 
-    public boolean equals(Object o) {
-      if (o instanceof FirstMatch) {
-	FirstMatch ore = (FirstMatch)o;
-	return rules.equals(ore.rules);
+    public int hashCode() {
+      return new HashCodeBuilder(31, 47)
+        .append(rules)
+        .toHashCode();
+    }
+
+    public boolean equals(Object obj) {
+      if (obj == null) { return false; }
+      if (obj == this) { return true; }
+      if (obj.getClass() != getClass()) {
+        return false;
       }
-      return false;
+      FirstMatch other = (FirstMatch)obj;
+      return rules.equals(other.rules);
     }
 
     public String toString() {

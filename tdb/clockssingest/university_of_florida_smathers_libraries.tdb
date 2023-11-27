@@ -1,0 +1,745 @@
+{
+  publisher <
+    name = University of Florida George A. Smathers Libraries ;
+    info[contract] = 2023 ;
+    info[back] = 2015 ;
+    info[min_year] = 1888 ;
+    info[tester] = 5 ;
+    info[poller] = 6 ;
+    info[platform] = OJS3
+  >
+
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    param[base_url] = https://journals.flvc.org/
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+    #OJS3
+    attr[start_stem] = index.php/
+
+  {
+
+      title <
+        name = Chemical Engineering Education ;
+        issn = 2165-6428 ;
+        eissn = 0009-2479
+      >
+
+      param[journal_id] = cee
+
+      au < manifest ; exists ; 1962 ; Chemical Engineering Education Volume 1962 ; 1962 ; 1962 ; >
+      au < manifest ; exists ; 1963 ; Chemical Engineering Education Volume 1963 ; 1963 ; 1963 ; >
+      au < manifest ; exists ; 1964 ; Chemical Engineering Education Volume 1964 ; 1964 ; 1964 ; >
+      au < manifest ; exists ; 1965 ; Chemical Engineering Education Volume 1965 ; 1965 ; 1965 ; >
+      au < manifest ; exists ; 1966 ; Chemical Engineering Education Volume 1966 ; 1966 ; 1966 ; >
+      au < doesNotExist ; doesNotExist ; 1967 ; Chemical Engineering Education Volume 1967 ; 1967 ; 1967 ; >
+      au < manifest ; exists ; 1968 ; Chemical Engineering Education Volume 1968 ; 1968 ; 1968 ; >
+      au < manifest ; exists ; 1969 ; Chemical Engineering Education Volume 1969 ; 1969 ; 1969 ; >
+      au < manifest ; exists ; 1970 ; Chemical Engineering Education Volume 1970 ; 1970 ; 1970 ; >
+      au < manifest ; exists ; 1971 ; Chemical Engineering Education Volume 1971 ; 1971 ; 1971 ; >
+      au < manifest ; exists ; 1972 ; Chemical Engineering Education Volume 1972 ; 1972 ; 1972 ; >
+      au < manifest ; exists ; 1973 ; Chemical Engineering Education Volume 1973 ; 1973 ; 1973 ; >
+      au < manifest ; exists ; 1974 ; Chemical Engineering Education Volume 1974 ; 1974 ; 1974 ; >
+      au < manifest ; exists ; 1975 ; Chemical Engineering Education Volume 1975 ; 1975 ; 1975 ; >
+      au < manifest ; exists ; 1976 ; Chemical Engineering Education Volume 1976 ; 1976 ; 1976 ; >
+      au < manifest ; exists ; 1977 ; Chemical Engineering Education Volume 1977 ; 1977 ; 1977 ; >
+      au < manifest ; exists ; 1978 ; Chemical Engineering Education Volume 1978 ; 1978 ; 1978 ; >
+      au < manifest ; exists ; 1979 ; Chemical Engineering Education Volume 1979 ; 1979 ; 1979 ; >
+      au < manifest ; exists ; 1980 ; Chemical Engineering Education Volume 1980 ; 1980 ; 1980 ; >
+      au < manifest ; exists ; 1981 ; Chemical Engineering Education Volume 1981 ; 1981 ; 1981 ; >
+      au < manifest ; exists ; 1982 ; Chemical Engineering Education Volume 1982 ; 1982 ; 1982 ; >
+      au < manifest ; exists ; 1983 ; Chemical Engineering Education Volume 1983 ; 1983 ; 1983 ; >
+      au < manifest ; exists ; 1984 ; Chemical Engineering Education Volume 1984 ; 1984 ; 1984 ; >
+      au < manifest ; exists ; 1985 ; Chemical Engineering Education Volume 1985 ; 1985 ; 1985 ; >
+      au < manifest ; exists ; 1986 ; Chemical Engineering Education Volume 1986 ; 1986 ; 1986 ; >
+      au < manifest ; exists ; 1987 ; Chemical Engineering Education Volume 1987 ; 1987 ; 1987 ; >
+      au < manifest ; exists ; 1988 ; Chemical Engineering Education Volume 1988 ; 1988 ; 1988 ; >
+      au < manifest ; exists ; 1989 ; Chemical Engineering Education Volume 1989 ; 1989 ; 1989 ; >
+      au < manifest ; exists ; 1990 ; Chemical Engineering Education Volume 1990 ; 1990 ; 1990 ; >
+      au < manifest ; exists ; 1991 ; Chemical Engineering Education Volume 1991 ; 1991 ; 1991 ; >
+      au < manifest ; exists ; 1992 ; Chemical Engineering Education Volume 1992 ; 1992 ; 1992 ; >
+      au < manifest ; exists ; 1993 ; Chemical Engineering Education Volume 1993 ; 1993 ; 1993 ; >
+      au < manifest ; exists ; 1994 ; Chemical Engineering Education Volume 1994 ; 1994 ; 1994 ; >
+      au < manifest ; exists ; 1995 ; Chemical Engineering Education Volume 1995 ; 1995 ; 1995 ; >
+      au < manifest ; exists ; 1996 ; Chemical Engineering Education Volume 1996 ; 1996 ; 1996 ; >
+      au < manifest ; exists ; 1997 ; Chemical Engineering Education Volume 1997 ; 1997 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; Chemical Engineering Education Volume 1998 ; 1998 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; Chemical Engineering Education Volume 1999 ; 1999 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; Chemical Engineering Education Volume 2000 ; 2000 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; Chemical Engineering Education Volume 2001 ; 2001 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; Chemical Engineering Education Volume 2002 ; 2002 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; Chemical Engineering Education Volume 2003 ; 2003 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; Chemical Engineering Education Volume 2004 ; 2004 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; Chemical Engineering Education Volume 2005 ; 2005 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; Chemical Engineering Education Volume 2006 ; 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; Chemical Engineering Education Volume 2007 ; 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Chemical Engineering Education Volume 2008 ; 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; Chemical Engineering Education Volume 2009 ; 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; Chemical Engineering Education Volume 2010 ; 2010 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Chemical Engineering Education Volume 2011 ; 2011 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Chemical Engineering Education Volume 2012 ; 2012 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Chemical Engineering Education Volume 2013 ; 2013 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Chemical Engineering Education Volume 2014 ; 2014 ; 2014 ; >
+      au < frozen ; exists ; 2015 ; Chemical Engineering Education Volume 2015 ; 2015 ; 2015 ; >
+      au < frozen ; exists ; 2016 ; Chemical Engineering Education Volume 2016 ; 2016 ; 2016 ; >
+      au < frozen ; exists ; 2017 ; Chemical Engineering Education Volume 2017 ; 2017 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; Chemical Engineering Education Volume 2018 ; 2018 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; Chemical Engineering Education Volume 2019 ; 2019 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; Chemical Engineering Education Volume 2020 ; 2020 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; Chemical Engineering Education Volume 2021 ; 2021 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; Chemical Engineering Education Volume 2022 ; 2022 ; 2022 ; >
+      au < notReady ; exists ; 2023 ; Chemical Engineering Education Volume 2023 ; 2023 ; 2023 ; > #login found, https://journals.flvc.org/cee/article/view/132637/136584
+
+  }
+
+  {
+
+      title <
+        name = EMIC ;
+        issn = 2994-8916
+      >
+
+      param[journal_id] = EMIC
+
+      au < manifest ; exists ; 2023 ; EMIC Volume 1 ; 1 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = Florida Entomologist ;
+        issn = 0015-4040 ;
+        eissn = 1938-5102
+      >
+
+      param[journal_id] = flaent
+
+      au < manifest ; exists ; 1917 ; Florida Entomologist Volume 1 ; 1 ; 1917 ; >
+      au < manifest ; exists ; 1918 ; Florida Entomologist Volume 2 ; 2 ; 1918 ; >
+      au < manifest ; exists ; 1919 ; Florida Entomologist Volume 3 ; 3 ; 1919 ; >
+      au < manifest ; exists ; 1920 ; Florida Entomologist Volume 4 ; 4 ; 1920 ; >
+      au < manifest ; exists ; 1921 ; Florida Entomologist Volume 5 ; 5 ; 1921 ; >
+      au < manifest ; exists ; 1922 ; Florida Entomologist Volume 6 ; 6 ; 1922 ; >
+      au < manifest ; exists ; 1923 ; Florida Entomologist Volume 7 ; 7 ; 1923 ; >
+      au < manifest ; exists ; 1924 ; Florida Entomologist Volume 8 ; 8 ; 1924 ; >
+      au < manifest ; exists ; 1925 ; Florida Entomologist Volume 9 ; 9 ; 1925 ; >
+      au < manifest ; exists ; 1926 ; Florida Entomologist Volume 10 ; 10 ; 1926 ; >
+      au < manifest ; exists ; 1927 ; Florida Entomologist Volume 11 ; 11 ; 1927 ; >
+      au < manifest ; exists ; 1928 ; Florida Entomologist Volume 12 ; 12 ; 1928 ; >
+      au < manifest ; exists ; 1929 ; Florida Entomologist Volume 13 ; 13 ; 1929 ; >
+      au < manifest ; exists ; 1930 ; Florida Entomologist Volume 14 ; 14 ; 1930 ; >
+      au < manifest ; exists ; 1931 ; Florida Entomologist Volume 15 ; 15 ; 1931 ; >
+      au < manifest ; exists ; 1932 ; Florida Entomologist Volume 16 ; 16 ; 1932 ; >
+      au < manifest ; exists ; 1933 ; Florida Entomologist Volume 17 ; 17 ; 1933 ; >
+      au < manifest ; exists ; 1934 ; Florida Entomologist Volume 18 ; 18 ; 1934 ; >
+      au < manifest ; exists ; 1935 ; Florida Entomologist Volume 19 ; 19 ; 1935 ; >
+      au < manifest ; exists ; 1936 ; Florida Entomologist Volume 20 ; 20 ; 1936 ; >
+      au < manifest ; exists ; 1937 ; Florida Entomologist Volume 21 ; 21 ; 1937 ; >
+      au < manifest ; exists ; 1938 ; Florida Entomologist Volume 22 ; 22 ; 1938 ; >
+      au < manifest ; exists ; 1939 ; Florida Entomologist Volume 23 ; 23 ; 1939 ; >
+      au < manifest ; exists ; 1940 ; Florida Entomologist Volume 24 ; 24 ; 1940 ; >
+      au < manifest ; exists ; 1941 ; Florida Entomologist Volume 25 ; 25 ; 1941 ; >
+      au < manifest ; exists ; 1942 ; Florida Entomologist Volume 26 ; 26 ; 1942 ; >
+      au < manifest ; exists ; 1943 ; Florida Entomologist Volume 27 ; 27 ; 1943 ; >
+      au < manifest ; exists ; 1944 ; Florida Entomologist Volume 28 ; 28 ; 1944 ; >
+      au < manifest ; exists ; 1945 ; Florida Entomologist Volume 29 ; 29 ; 1945 ; >
+      au < manifest ; exists ; 1946 ; Florida Entomologist Volume 30 ; 30 ; 1946 ; >
+      au < manifest ; exists ; 1947 ; Florida Entomologist Volume 31 ; 31 ; 1947 ; >
+      au < manifest ; exists ; 1948 ; Florida Entomologist Volume 32 ; 32 ; 1948 ; >
+      au < manifest ; exists ; 1949 ; Florida Entomologist Volume 33 ; 33 ; 1949 ; >
+      au < manifest ; exists ; 1950 ; Florida Entomologist Volume 34 ; 34 ; 1950 ; >
+      au < manifest ; exists ; 1951 ; Florida Entomologist Volume 35 ; 35 ; 1951 ; >
+      au < manifest ; exists ; 1952 ; Florida Entomologist Volume 36 ; 36 ; 1952 ; >
+      au < manifest ; exists ; 1953 ; Florida Entomologist Volume 37 ; 37 ; 1953 ; >
+      au < manifest ; exists ; 1954 ; Florida Entomologist Volume 38 ; 38 ; 1954 ; >
+      au < manifest ; exists ; 1955 ; Florida Entomologist Volume 39 ; 39 ; 1955 ; >
+      au < manifest ; exists ; 1956 ; Florida Entomologist Volume 40 ; 40 ; 1956 ; >
+      au < manifest ; exists ; 1957 ; Florida Entomologist Volume 41 ; 41 ; 1957 ; >
+      au < manifest ; exists ; 1958 ; Florida Entomologist Volume 42 ; 42 ; 1958 ; >
+      au < manifest ; exists ; 1959 ; Florida Entomologist Volume 43 ; 43 ; 1959 ; >
+      au < manifest ; exists ; 1960 ; Florida Entomologist Volume 44 ; 44 ; 1960 ; >
+      au < manifest ; exists ; 1961 ; Florida Entomologist Volume 45 ; 45 ; 1961 ; >
+      au < manifest ; exists ; 1962 ; Florida Entomologist Volume 46 ; 46 ; 1962 ; >
+      au < manifest ; exists ; 1963 ; Florida Entomologist Volume 47 ; 47 ; 1963 ; >
+      au < manifest ; exists ; 1964 ; Florida Entomologist Volume 48 ; 48 ; 1964 ; >
+      au < manifest ; exists ; 1965 ; Florida Entomologist Volume 49 ; 49 ; 1965 ; >
+      au < manifest ; exists ; 1966 ; Florida Entomologist Volume 50 ; 50 ; 1966 ; >
+      au < manifest ; exists ; 1967 ; Florida Entomologist Volume 51 ; 51 ; 1967 ; >
+      au < manifest ; exists ; 1968 ; Florida Entomologist Volume 52 ; 52 ; 1968 ; >
+      au < manifest ; exists ; 1969 ; Florida Entomologist Volume 53 ; 53 ; 1969 ; >
+      au < manifest ; exists ; 1970 ; Florida Entomologist Volume 54 ; 54 ; 1970 ; >
+      au < manifest ; exists ; 1971 ; Florida Entomologist Volume 55 ; 55 ; 1971 ; >
+      au < manifest ; exists ; 1972 ; Florida Entomologist Volume 56 ; 56 ; 1972 ; >
+      au < manifest ; exists ; 1973 ; Florida Entomologist Volume 57 ; 57 ; 1973 ; >
+      au < manifest ; exists ; 1974 ; Florida Entomologist Volume 58 ; 58 ; 1974 ; >
+      au < manifest ; exists ; 1975 ; Florida Entomologist Volume 59 ; 59 ; 1975 ; >
+      au < manifest ; exists ; 1976 ; Florida Entomologist Volume 60 ; 60 ; 1976 ; >
+      au < manifest ; exists ; 1977 ; Florida Entomologist Volume 61 ; 61 ; 1977 ; >
+      au < manifest ; exists ; 1978 ; Florida Entomologist Volume 62 ; 62 ; 1978 ; >
+      au < manifest ; exists ; 1979 ; Florida Entomologist Volume 63 ; 63 ; 1979 ; >
+      au < manifest ; exists ; 1980 ; Florida Entomologist Volume 64 ; 64 ; 1980 ; >
+      au < manifest ; exists ; 1981 ; Florida Entomologist Volume 65 ; 65 ; 1981 ; >
+      au < manifest ; exists ; 1982 ; Florida Entomologist Volume 66 ; 66 ; 1982 ; >
+      au < manifest ; exists ; 1983 ; Florida Entomologist Volume 67 ; 67 ; 1983 ; >
+      au < manifest ; exists ; 1984 ; Florida Entomologist Volume 68 ; 68 ; 1984 ; >
+      au < manifest ; exists ; 1985 ; Florida Entomologist Volume 69 ; 69 ; 1985 ; >
+      au < manifest ; exists ; 1986 ; Florida Entomologist Volume 70 ; 70 ; 1986 ; >
+      au < manifest ; exists ; 1987 ; Florida Entomologist Volume 71 ; 71 ; 1987 ; >
+      au < manifest ; exists ; 1988 ; Florida Entomologist Volume 72 ; 72 ; 1988 ; >
+      au < manifest ; exists ; 1989 ; Florida Entomologist Volume 73 ; 73 ; 1989 ; >
+      au < manifest ; exists ; 1990 ; Florida Entomologist Volume 74 ; 74 ; 1990 ; >
+      au < manifest ; exists ; 1991 ; Florida Entomologist Volume 75 ; 75 ; 1991 ; >
+      au < manifest ; exists ; 1992 ; Florida Entomologist Volume 76 ; 76 ; 1992 ; >
+      au < manifest ; exists ; 1993 ; Florida Entomologist Volume 77 ; 77 ; 1993 ; >
+      au < manifest ; exists ; 1994 ; Florida Entomologist Volume 78 ; 78 ; 1994 ; >
+      au < manifest ; exists ; 1995 ; Florida Entomologist Volume 79 ; 79 ; 1995 ; >
+      au < manifest ; exists ; 1996 ; Florida Entomologist Volume 80 ; 80 ; 1996 ; >
+      au < manifest ; exists ; 1997 ; Florida Entomologist Volume 81 ; 81 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; Florida Entomologist Volume 82 ; 82 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; Florida Entomologist Volume 83 ; 83 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; Florida Entomologist Volume 84 ; 84 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; Florida Entomologist Volume 85 ; 85 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; Florida Entomologist Volume 86 ; 86 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; Florida Entomologist Volume 87 ; 87 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; Florida Entomologist Volume 88 ; 88 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; Florida Entomologist Volume 89 ; 89 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; Florida Entomologist Volume 90 ; 90 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; Florida Entomologist Volume 91 ; 91 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Florida Entomologist Volume 92 ; 92 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; Florida Entomologist Volume 93 ; 93 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; Florida Entomologist Volume 94 ; 94 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Florida Entomologist Volume 95 ; 95 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Florida Entomologist Volume 96 ; 96 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Florida Entomologist Volume 97 ; 97 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Florida Entomologist Volume 98 ; 98 ; 2014 ; >
+      au < frozen ; exists ; 2015 ; Florida Entomologist Volume 99 ; 99 ; 2015 ; >
+      au < frozen ; exists ; 2016 ; Florida Entomologist Volume 100 ; 100 ; 2016 ; >
+      au < frozen ; exists ; 2017 ; Florida Entomologist Volume 101 ; 101 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; Florida Entomologist Volume 102 ; 102 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; Florida Entomologist Volume 103 ; 103 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; Florida Entomologist Volume 104 ; 104 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; Florida Entomologist Volume 105 ; 105 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; Florida Entomologist Volume 106 ; 106 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; Florida Entomologist Volume 107 ; 107 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = The International FLAIRS Conference Proceedings ;
+        issn = 2334-0762
+      >
+
+      param[journal_id] = FLAIRS
+
+      au < manifest ; exists ; 1988 ; The International FLAIRS Conference Proceedings Volume 1 ; 1 ; 1988 ; >
+      au < manifest ; exists ; 1989 ; The International FLAIRS Conference Proceedings Volume 2 ; 2 ; 1989 ; >
+      au < manifest ; exists ; 1990 ; The International FLAIRS Conference Proceedings Volume 3 ; 3 ; 1990 ; >
+      au < manifest ; exists ; 1991 ; The International FLAIRS Conference Proceedings Volume 4 ; 4 ; 1991 ; >
+      au < manifest ; exists ; 1992 ; The International FLAIRS Conference Proceedings Volume 5 ; 5 ; 1992 ; >
+      au < manifest ; exists ; 1993 ; The International FLAIRS Conference Proceedings Volume 6 ; 6 ; 1993 ; >
+      au < doesNotExist ; doesNotExist ; 1994 ; The International FLAIRS Conference Proceedings Volume 7 ; 7 ; 1994 ; >
+      au < manifest ; exists ; 1995 ; The International FLAIRS Conference Proceedings Volume 8 ; 8 ; 1995 ; >
+      au < manifest ; exists ; 1996 ; The International FLAIRS Conference Proceedings Volume 9 ; 9 ; 1996 ; >
+      au < manifest ; exists ; 1997 ; The International FLAIRS Conference Proceedings Volume 10 ; 10 ; 1997 ; >
+      #No issues between 1998 and 2019
+      au < frozen ; exists ; 2020 ; The International FLAIRS Conference Proceedings Volume 33 ; 33 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; The International FLAIRS Conference Proceedings Volume 34 ; 34 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; The International FLAIRS Conference Proceedings Volume 35 ; 35 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; The International FLAIRS Conference Proceedings Volume 36 ; 36 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Assessment in Higher Education ;
+        issn = 2642-0694
+      >
+
+      param[journal_id] = assessment
+
+      au < frozen ; exists ; 2020 ; Journal of Assessment in Higher Education Volume 1 ; 1 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; Journal of Assessment in Higher Education Volume 2 ; 2 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; Journal of Assessment in Higher Education Volume 3 ; 3 ; 2022 ; >
+      au < exists ; exists ; 2023 ; Journal of Assessment in Higher Education Volume 4 ; 4 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = The Journal of Civic Information ;
+        eissn = 2641-970X
+      >
+
+      param[journal_id] = civic
+
+      au < frozen ; exists ; 2019 ; The Journal of Civic Information Volume 1 ; 1 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; The Journal of Civic Information Volume 2 ; 2 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; The Journal of Civic Information Volume 3 ; 3 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; The Journal of Civic Information Volume 4 ; 4 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; The Journal of Civic Information Volume 5 ; 5 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = The Journal of Public Interest Communications ;
+        issn = 2573-4342
+      >
+
+      param[journal_id] = jpic
+
+      au < frozen ; exists ; 2017 ; The Journal of Public Interest Communications Volume 1 ; 1 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; The Journal of Public Interest Communications Volume 2 ; 2 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; The Journal of Public Interest Communications Volume 3 ; 3 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; The Journal of Public Interest Communications Volume 4 ; 4 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; The Journal of Public Interest Communications Volume 5 ; 5 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; The Journal of Public Interest Communications Volume 6 ; 6 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; The Journal of Public Interest Communications Volume 7 ; 7 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of the Florida Mosquito Control Association ;
+        issn = 1055-355X ;
+        eissn = 2638-6054
+      >
+
+      param[journal_id] = jfmca
+
+      au < frozen ; exists ; 2021 ; Journal of the Florida Mosquito Control Association Volume 68 ; 68 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; Journal of the Florida Mosquito Control Association Volume 69 ; 69 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; Journal of the Florida Mosquito Control Association Volume 70 ; 70 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = UF Journal of Undergraduate Research ;
+        eissn = 2638-0668
+      >
+
+      param[journal_id] = UFJUR
+
+      au < frozen ; exists ; 2018 ; UF Journal of Undergraduate Research Volume 20 ; 20 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; UF Journal of Undergraduate Research Volume 21 ; 21 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; UF Journal of Undergraduate Research Volume 22 ; 22 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; UF Journal of Undergraduate Research Volume 23 ; 23 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; UF Journal of Undergraduate Research Volume 24 ; 24 ; 2022 ; >
+      au < manifest ; exists ; 2023 ; UF Journal of Undergraduate Research Volume 25 ; 25 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Veterinary Forensic Sciences ;
+        issn = 2690-3660
+      >
+
+      param[journal_id] = JVFS
+
+      au < frozen ; exists ; 2020 ; Journal of Veterinary Forensic Sciences Volume 1 ; 1 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Journal of Veterinary Forensic Sciences Volume 2 ; 2 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Journal of Veterinary Forensic Sciences Volume 3 ; 3 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; Journal of Veterinary Forensic Sciences Volume 4 ; 4 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = New Florida Journal of Anthropology ;
+        issn = 2691-2260 ;
+        eissn = 2691-2252
+      >
+
+      param[journal_id] = NFJA
+
+      au < frozen ; exists ; 2021 ; New Florida Journal of Anthropology Volume 1 ; 1 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; New Florida Journal of Anthropology Volume 2 ; 2 ; 2022 ; >
+      au < exists ; exists ; 2023 ; New Florida Journal of Anthropology Volume 3 ; 3 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = Selected Proceedings of the Classics Graduate Student Symposia ;
+        eissn = 2831-588X
+      >
+
+      param[journal_id] = PCGSS
+
+      au < frozen ; exists ; 2022 ; Selected Proceedings of the Classics Graduate Student Symposia Volume 1 ; 1 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; Selected Proceedings of the Classics Graduate Student Symposia Volume 2 ; 2 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = SOURCE Magazine ;
+        issn = 2576-5817 ;
+        eissn = 2576-5825
+      >
+
+      param[journal_id] = source
+
+      au < frozen ; exists ; 2018 ; SOURCE Magazine Volume 1 ; 1 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; SOURCE Magazine Volume 2 ; 2 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; SOURCE Magazine Volume 3 ; 3 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; SOURCE Magazine Volume 4 ; 4 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; SOURCE Magazine Volume 5 ; 5 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; SOURCE Magazine Volume 6 ; 6 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = Studies in African Linguistics ;
+        issn = 2154-428X ;
+        eissn = 0039-3533
+      >
+
+      param[journal_id] = sal
+
+      au < manifest ; exists ; 1970 ; Studies in African Linguistics Volume 1 ; 1 ; 1970 ; >
+      au < manifest ; exists ; 1971 ; Studies in African Linguistics Volume 2 ; 2 ; 1971 ; >
+      au < manifest ; exists ; 1972 ; Studies in African Linguistics Volume 3 ; 3 ; 1972 ; >
+      au < manifest ; exists ; 1973 ; Studies in African Linguistics Volume 4 ; 4 ; 1973 ; >
+      au < manifest ; exists ; 1974 ; Studies in African Linguistics Volume 5 ; 5 ; 1974 ; >
+      au < manifest ; exists ; 1975 ; Studies in African Linguistics Volume 6 ; 6 ; 1975 ; >
+      au < manifest ; exists ; 1976 ; Studies in African Linguistics Volume 7 ; 7 ; 1976 ; >
+      au < manifest ; exists ; 1977 ; Studies in African Linguistics Volume 8 ; 8 ; 1977 ; >
+      au < manifest ; exists ; 1978 ; Studies in African Linguistics Volume 9 ; 9 ; 1978 ; >
+      au < manifest ; exists ; 1979 ; Studies in African Linguistics Volume 10 ; 10 ; 1979 ; >
+      au < manifest ; exists ; 1980 ; Studies in African Linguistics Volume 11 ; 11 ; 1980 ; >
+      au < manifest ; exists ; 1981 ; Studies in African Linguistics Volume 12 ; 12 ; 1981 ; >
+      au < manifest ; exists ; 1982 ; Studies in African Linguistics Volume 13 ; 13 ; 1982 ; >
+      au < manifest ; exists ; 1983 ; Studies in African Linguistics Volume 14 ; 14 ; 1983 ; >
+      au < manifest ; exists ; 1984 ; Studies in African Linguistics Volume 15 ; 15 ; 1984 ; >
+      au < manifest ; exists ; 1985 ; Studies in African Linguistics Volume 16 ; 16 ; 1985 ; >
+      au < manifest ; exists ; 1986 ; Studies in African Linguistics Volume 17 ; 17 ; 1986 ; >
+      au < manifest ; exists ; 1987 ; Studies in African Linguistics Volume 18 ; 18 ; 1987 ; >
+      au < manifest ; exists ; 1988 ; Studies in African Linguistics Volume 19 ; 19 ; 1988 ; >
+      au < manifest ; exists ; 1989 ; Studies in African Linguistics Volume 20 ; 20 ; 1989 ; >
+      au < manifest ; exists ; 1990 ; Studies in African Linguistics Volume 21 ; 21 ; 1990 ; >
+      au < manifest ; exists ; 1991 ; Studies in African Linguistics Volume 22 ; 22 ; 1991 ; >
+      au < manifest ; exists ; 1992 ; Studies in African Linguistics Volume 23 ; 23 ; 1992 ; >
+      au < manifest ; exists ; 1993 ; Studies in African Linguistics Volume 24 ; 24 ; 1993 ; >
+      au < manifest ; exists ; 1994 ; Studies in African Linguistics Volume 25 ; 25 ; 1994 ; >
+      au < manifest ; exists ; 1995 ; Studies in African Linguistics Volume 26 ; 26 ; 1995 ; >
+      au < manifest ; exists ; 1996 ; Studies in African Linguistics Volume 27 ; 27 ; 1996 ; >
+      au < manifest ; exists ; 1997 ; Studies in African Linguistics Volume 28 ; 28 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; Studies in African Linguistics Volume 29 ; 29 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; Studies in African Linguistics Volume 30 ; 30 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; Studies in African Linguistics Volume 31 ; 31 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; Studies in African Linguistics Volume 32 ; 32 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; Studies in African Linguistics Volume 33 ; 33 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; Studies in African Linguistics Volume 34 ; 34 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; Studies in African Linguistics Volume 35 ; 35 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; Studies in African Linguistics Volume 36 ; 36 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; Studies in African Linguistics Volume 37 ; 37 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; Studies in African Linguistics Volume 38 ; 38 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Studies in African Linguistics Volume 39 ; 39 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; Studies in African Linguistics Volume 40 ; 40 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; Studies in African Linguistics Volume 41 ; 41 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Studies in African Linguistics Volume 42 ; 42 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Studies in African Linguistics Volume 43 ; 43 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Studies in African Linguistics Volume 44 ; 44 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Studies in African Linguistics Volume 45 ; 45 ; 2014 ; >
+      au < frozen ; exists ; 2015 ; Studies in African Linguistics Volume 46 ; 46 ; 2015 ; >
+      au < frozen ; exists ; 2016 ; Studies in African Linguistics Volume 47 ; 47 ; 2016 ; >
+      au < frozen ; exists ; 2017 ; Studies in African Linguistics Volume 48 ; 48 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; Studies in African Linguistics Volume 49 ; 49 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; Studies in African Linguistics Volume 50 ; 50 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; Studies in African Linguistics Volume 51 ; 51 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; Studies in African Linguistics Volume 52 ; 52 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; Studies in African Linguistics Volume 53 ; 53 ; 2022 ; >
+      au < exists ; exists ; 2023 ; Studies in African Linguistics Volume 54 ; 54 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = Tropical Lepidoptera Research ;
+        issn = 1941-7659 ;
+        eissn = 2575-9256
+      >
+
+      param[journal_id] = troplep
+
+      au < manifest ; exists ; 1990 ; Tropical Lepidoptera Research Volume 1 ; 1 ; 1990 ; >
+      au < manifest ; exists ; 1991 ; Tropical Lepidoptera Research Volume 2 ; 2 ; 1991 ; >
+      au < manifest ; exists ; 1992 ; Tropical Lepidoptera Research Volume 3 ; 3 ; 1992 ; >
+      au < manifest ; exists ; 1993 ; Tropical Lepidoptera Research Volume 4 ; 4 ; 1993 ; >
+      au < manifest ; exists ; 1994 ; Tropical Lepidoptera Research Volume 5 ; 5 ; 1994 ; >
+      au < manifest ; exists ; 1995 ; Tropical Lepidoptera Research Volume 6 ; 6 ; 1995 ; >
+      au < manifest ; exists ; 1996 ; Tropical Lepidoptera Research Volume 7 ; 7 ; 1996 ; >
+      au < manifest ; exists ; 1997 ; Tropical Lepidoptera Research Volume 8 ; 8 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; Tropical Lepidoptera Research Volume 9 ; 9 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; Tropical Lepidoptera Research Volume 10 ; 10 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; Tropical Lepidoptera Research Volume 11 ; 11 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; Tropical Lepidoptera Research Volume 12 ; 12 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; Tropical Lepidoptera Research Volume 13 ; 13 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; Tropical Lepidoptera Research Volume 14 ; 14 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; Tropical Lepidoptera Research Volume 15 ; 15 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; Tropical Lepidoptera Research Volume 16 ; 16 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; Tropical Lepidoptera Research Volume 17 ; 17 ; 2006 ; >
+      au < exists ; exists ; 2007 ; Tropical Lepidoptera Research Volume 18 ; 18 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Tropical Lepidoptera Research Volume 19 ; 19 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; Tropical Lepidoptera Research Volume 20 ; 20 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; Tropical Lepidoptera Research Volume 21 ; 21 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Tropical Lepidoptera Research Volume 22 ; 22 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Tropical Lepidoptera Research Volume 23 ; 23 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Tropical Lepidoptera Research Volume 24 ; 24 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Tropical Lepidoptera Research Volume 25 ; 25 ; 2014 ; >
+      au < frozen ; exists ; 2015 ; Tropical Lepidoptera Research Volume 26 ; 26 ; 2015 ; >
+      au < frozen ; exists ; 2016 ; Tropical Lepidoptera Research Volume 27 ; 27 ; 2016 ; >
+      au < frozen ; exists ; 2017 ; Tropical Lepidoptera Research Volume 28 ; 28 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; Tropical Lepidoptera Research Volume 29 ; 29 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; Tropical Lepidoptera Research Volume 30 ; 30 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; Tropical Lepidoptera Research Volume 31 ; 31 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; Tropical Lepidoptera Research Volume 32 ; 32 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; Tropical Lepidoptera Research Volume 33 ; 33 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; Tropical Lepidoptera Research Volume 34 ; 34 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = Proceedings of the Florida State Horticultural Society ;
+        issn = 0886-7283
+      >
+
+      param[journal_id] = fshs
+
+      au < manifest ; exists ; 1888 ; Proceedings of the Florida State Horticultural Society Volume 1 ; 1 ; 1888 ; >
+      au < manifest ; exists ; 1889 ; Proceedings of the Florida State Horticultural Society Volume 2 ; 2 ; 1889 ; >
+      au < manifest ; exists ; 1890 ; Proceedings of the Florida State Horticultural Society Volume 3 ; 3 ; 1890 ; >
+      au < manifest ; exists ; 1891 ; Proceedings of the Florida State Horticultural Society Volume 4 ; 4 ; 1891 ; >
+      au < exists ; exists ; 1892 ; Proceedings of the Florida State Horticultural Society Volume 5 ; 5 ; 1892 ; >
+      au < exists ; exists ; 1893 ; Proceedings of the Florida State Horticultural Society Volume 6 ; 6 ; 1893 ; >
+      au < exists ; exists ; 1894 ; Proceedings of the Florida State Horticultural Society Volume 7 ; 7 ; 1894 ; >
+      au < manifest ; exists ; 1895 ; Proceedings of the Florida State Horticultural Society Volume 8 ; 8 ; 1895 ; >
+      au < manifest ; exists ; 1896 ; Proceedings of the Florida State Horticultural Society Volume 9 ; 9 ; 1896 ; >
+      au < manifest ; exists ; 1897 ; Proceedings of the Florida State Horticultural Society Volume 10 ; 10 ; 1897 ; >
+      au < manifest ; exists ; 1898 ; Proceedings of the Florida State Horticultural Society Volume 11 ; 11 ; 1898 ; >
+      au < manifest ; exists ; 1899 ; Proceedings of the Florida State Horticultural Society Volume 12 ; 12 ; 1899 ; >
+      au < manifest ; exists ; 1900 ; Proceedings of the Florida State Horticultural Society Volume 13 ; 13 ; 1900 ; >
+      au < manifest ; exists ; 1901 ; Proceedings of the Florida State Horticultural Society Volume 14 ; 14 ; 1901 ; >
+      au < manifest ; exists ; 1902 ; Proceedings of the Florida State Horticultural Society Volume 15 ; 15 ; 1902 ; >
+      au < manifest ; exists ; 1903 ; Proceedings of the Florida State Horticultural Society Volume 16 ; 16 ; 1903 ; >
+      au < manifest ; exists ; 1904 ; Proceedings of the Florida State Horticultural Society Volume 17 ; 17 ; 1904 ; >
+      au < manifest ; exists ; 1905 ; Proceedings of the Florida State Horticultural Society Volume 18 ; 18 ; 1905 ; >
+      au < manifest ; exists ; 1906 ; Proceedings of the Florida State Horticultural Society Volume 19 ; 19 ; 1906 ; >
+      au < manifest ; exists ; 1907 ; Proceedings of the Florida State Horticultural Society Volume 20 ; 20 ; 1907 ; >
+      au < manifest ; exists ; 1908 ; Proceedings of the Florida State Horticultural Society Volume 21 ; 21 ; 1908 ; >
+      au < manifest ; exists ; 1909 ; Proceedings of the Florida State Horticultural Society Volume 22 ; 22 ; 1909 ; >
+      au < manifest ; exists ; 1910 ; Proceedings of the Florida State Horticultural Society Volume 23 ; 23 ; 1910 ; >
+      au < manifest ; exists ; 1911 ; Proceedings of the Florida State Horticultural Society Volume 24 ; 24 ; 1911 ; >
+      au < manifest ; exists ; 1912 ; Proceedings of the Florida State Horticultural Society Volume 25 ; 25 ; 1912 ; >
+      au < manifest ; exists ; 1913 ; Proceedings of the Florida State Horticultural Society Volume 26 ; 26 ; 1913 ; >
+      au < manifest ; exists ; 1914 ; Proceedings of the Florida State Horticultural Society Volume 27 ; 27 ; 1914 ; >
+      au < manifest ; exists ; 1915 ; Proceedings of the Florida State Horticultural Society Volume 28 ; 28 ; 1915 ; >
+      au < exists ; exists ; 1916 ; Proceedings of the Florida State Horticultural Society Volume 29 ; 29 ; 1916 ; >
+      au < manifest ; exists ; 1917 ; Proceedings of the Florida State Horticultural Society Volume 30 ; 30 ; 1917 ; >
+      au < manifest ; exists ; 1918 ; Proceedings of the Florida State Horticultural Society Volume 31 ; 31 ; 1918 ; >
+      au < manifest ; exists ; 1919 ; Proceedings of the Florida State Horticultural Society Volume 32 ; 32 ; 1919 ; >
+      au < manifest ; exists ; 1920 ; Proceedings of the Florida State Horticultural Society Volume 33 ; 33 ; 1920 ; >
+      au < manifest ; exists ; 1921 ; Proceedings of the Florida State Horticultural Society Volume 34 ; 34 ; 1921 ; >
+      au < manifest ; exists ; 1922 ; Proceedings of the Florida State Horticultural Society Volume 35 ; 35 ; 1922 ; >
+      au < manifest ; exists ; 1923 ; Proceedings of the Florida State Horticultural Society Volume 36 ; 36 ; 1923 ; >
+      au < manifest ; exists ; 1924 ; Proceedings of the Florida State Horticultural Society Volume 37 ; 37 ; 1924 ; >
+      au < manifest ; exists ; 1925 ; Proceedings of the Florida State Horticultural Society Volume 38 ; 38 ; 1925 ; >
+      au < manifest ; exists ; 1926 ; Proceedings of the Florida State Horticultural Society Volume 39 ; 39 ; 1926 ; >
+      au < manifest ; exists ; 1927 ; Proceedings of the Florida State Horticultural Society Volume 40 ; 40 ; 1927 ; >
+      au < manifest ; exists ; 1928 ; Proceedings of the Florida State Horticultural Society Volume 41 ; 41 ; 1928 ; >
+      au < manifest ; exists ; 1929 ; Proceedings of the Florida State Horticultural Society Volume 42 ; 42 ; 1929 ; >
+      au < manifest ; exists ; 1930 ; Proceedings of the Florida State Horticultural Society Volume 43 ; 43 ; 1930 ; >
+      au < manifest ; exists ; 1931 ; Proceedings of the Florida State Horticultural Society Volume 44 ; 44 ; 1931 ; >
+      au < manifest ; exists ; 1932 ; Proceedings of the Florida State Horticultural Society Volume 45 ; 45 ; 1932 ; >
+      au < manifest ; exists ; 1933 ; Proceedings of the Florida State Horticultural Society Volume 46 ; 46 ; 1933 ; >
+      au < manifest ; exists ; 1934 ; Proceedings of the Florida State Horticultural Society Volume 47 ; 47 ; 1934 ; >
+      au < manifest ; exists ; 1935 ; Proceedings of the Florida State Horticultural Society Volume 48 ; 48 ; 1935 ; >
+      au < manifest ; exists ; 1936 ; Proceedings of the Florida State Horticultural Society Volume 49 ; 49 ; 1936 ; >
+      au < manifest ; exists ; 1937 ; Proceedings of the Florida State Horticultural Society Volume 50 ; 50 ; 1937 ; >
+      au < manifest ; exists ; 1938 ; Proceedings of the Florida State Horticultural Society Volume 51 ; 51 ; 1938 ; >
+      au < manifest ; exists ; 1939 ; Proceedings of the Florida State Horticultural Society Volume 52 ; 52 ; 1939 ; >
+      au < manifest ; exists ; 1940 ; Proceedings of the Florida State Horticultural Society Volume 53 ; 53 ; 1940 ; >
+      au < manifest ; exists ; 1941 ; Proceedings of the Florida State Horticultural Society Volume 54 ; 54 ; 1941 ; >
+      au < manifest ; exists ; 1942 ; Proceedings of the Florida State Horticultural Society Volume 55 ; 55 ; 1942 ; >
+      au < manifest ; exists ; 1943 ; Proceedings of the Florida State Horticultural Society Volume 56 ; 56 ; 1943 ; >
+      au < manifest ; exists ; 1944 ; Proceedings of the Florida State Horticultural Society Volume 57 ; 57 ; 1944 ; >
+      au < manifest ; exists ; 1945 ; Proceedings of the Florida State Horticultural Society Volume 58 ; 58 ; 1945 ; >
+      au < manifest ; exists ; 1946 ; Proceedings of the Florida State Horticultural Society Volume 59 ; 59 ; 1946 ; >
+      au < manifest ; exists ; 1947 ; Proceedings of the Florida State Horticultural Society Volume 60 ; 60 ; 1947 ; >
+      au < manifest ; exists ; 1948 ; Proceedings of the Florida State Horticultural Society Volume 61 ; 61 ; 1948 ; >
+      au < manifest ; exists ; 1949 ; Proceedings of the Florida State Horticultural Society Volume 62 ; 62 ; 1949 ; >
+      au < manifest ; exists ; 1950 ; Proceedings of the Florida State Horticultural Society Volume 63 ; 63 ; 1950 ; >
+      au < manifest ; exists ; 1951 ; Proceedings of the Florida State Horticultural Society Volume 64 ; 64 ; 1951 ; >
+      au < manifest ; exists ; 1952 ; Proceedings of the Florida State Horticultural Society Volume 65 ; 65 ; 1952 ; >
+      au < manifest ; exists ; 1953 ; Proceedings of the Florida State Horticultural Society Volume 66 ; 66 ; 1953 ; >
+      au < manifest ; exists ; 1954 ; Proceedings of the Florida State Horticultural Society Volume 67 ; 67 ; 1954 ; >
+      au < manifest ; exists ; 1955 ; Proceedings of the Florida State Horticultural Society Volume 68 ; 68 ; 1955 ; >
+      au < manifest ; exists ; 1956 ; Proceedings of the Florida State Horticultural Society Volume 69 ; 69 ; 1956 ; >
+      au < manifest ; exists ; 1957 ; Proceedings of the Florida State Horticultural Society Volume 70 ; 70 ; 1957 ; >
+      au < manifest ; exists ; 1958 ; Proceedings of the Florida State Horticultural Society Volume 71 ; 71 ; 1958 ; >
+      au < manifest ; exists ; 1959 ; Proceedings of the Florida State Horticultural Society Volume 72 ; 72 ; 1959 ; >
+      au < manifest ; exists ; 1960 ; Proceedings of the Florida State Horticultural Society Volume 73 ; 73 ; 1960 ; >
+      au < manifest ; exists ; 1961 ; Proceedings of the Florida State Horticultural Society Volume 74 ; 74 ; 1961 ; >
+      au < manifest ; exists ; 1962 ; Proceedings of the Florida State Horticultural Society Volume 75 ; 75 ; 1962 ; >
+      au < manifest ; exists ; 1963 ; Proceedings of the Florida State Horticultural Society Volume 76 ; 76 ; 1963 ; >
+      au < manifest ; exists ; 1964 ; Proceedings of the Florida State Horticultural Society Volume 77 ; 77 ; 1964 ; >
+      au < manifest ; exists ; 1965 ; Proceedings of the Florida State Horticultural Society Volume 78 ; 78 ; 1965 ; >
+      au < manifest ; exists ; 1966 ; Proceedings of the Florida State Horticultural Society Volume 79 ; 79 ; 1966 ; >
+      au < manifest ; exists ; 1967 ; Proceedings of the Florida State Horticultural Society Volume 80 ; 80 ; 1967 ; >
+      au < manifest ; exists ; 1968 ; Proceedings of the Florida State Horticultural Society Volume 81 ; 81 ; 1968 ; >
+      au < manifest ; exists ; 1969 ; Proceedings of the Florida State Horticultural Society Volume 82 ; 82 ; 1969 ; >
+      au < manifest ; exists ; 1970 ; Proceedings of the Florida State Horticultural Society Volume 83 ; 83 ; 1970 ; >
+      au < manifest ; exists ; 1971 ; Proceedings of the Florida State Horticultural Society Volume 84 ; 84 ; 1971 ; >
+      au < manifest ; exists ; 1972 ; Proceedings of the Florida State Horticultural Society Volume 85 ; 85 ; 1972 ; >
+      au < manifest ; exists ; 1973 ; Proceedings of the Florida State Horticultural Society Volume 86 ; 86 ; 1973 ; >
+      au < manifest ; exists ; 1974 ; Proceedings of the Florida State Horticultural Society Volume 87 ; 87 ; 1974 ; >
+      au < manifest ; exists ; 1975 ; Proceedings of the Florida State Horticultural Society Volume 88 ; 88 ; 1975 ; >
+      au < manifest ; exists ; 1976 ; Proceedings of the Florida State Horticultural Society Volume 89 ; 89 ; 1976 ; >
+      au < manifest ; exists ; 1977 ; Proceedings of the Florida State Horticultural Society Volume 90 ; 90 ; 1977 ; >
+      au < manifest ; exists ; 1978 ; Proceedings of the Florida State Horticultural Society Volume 91 ; 91 ; 1978 ; >
+      au < manifest ; exists ; 1979 ; Proceedings of the Florida State Horticultural Society Volume 92 ; 92 ; 1979 ; >
+      au < manifest ; exists ; 1980 ; Proceedings of the Florida State Horticultural Society Volume 93 ; 93 ; 1980 ; >
+      au < manifest ; exists ; 1981 ; Proceedings of the Florida State Horticultural Society Volume 94 ; 94 ; 1981 ; >
+      au < manifest ; exists ; 1982 ; Proceedings of the Florida State Horticultural Society Volume 95 ; 95 ; 1982 ; >
+      au < manifest ; exists ; 1983 ; Proceedings of the Florida State Horticultural Society Volume 96 ; 96 ; 1983 ; >
+      au < manifest ; exists ; 1984 ; Proceedings of the Florida State Horticultural Society Volume 97 ; 97 ; 1984 ; >
+      au < manifest ; exists ; 1985 ; Proceedings of the Florida State Horticultural Society Volume 98 ; 98 ; 1985 ; >
+      au < manifest ; exists ; 1986 ; Proceedings of the Florida State Horticultural Society Volume 99 ; 99 ; 1986 ; >
+      au < manifest ; exists ; 1987 ; Proceedings of the Florida State Horticultural Society Volume 100 ; 100 ; 1987 ; >
+      au < manifest ; exists ; 1988 ; Proceedings of the Florida State Horticultural Society Volume 101 ; 101 ; 1988 ; >
+      au < manifest ; exists ; 1989 ; Proceedings of the Florida State Horticultural Society Volume 102 ; 102 ; 1989 ; >
+      au < manifest ; exists ; 1990 ; Proceedings of the Florida State Horticultural Society Volume 103 ; 103 ; 1990 ; >
+      au < manifest ; exists ; 1991 ; Proceedings of the Florida State Horticultural Society Volume 104 ; 104 ; 1991 ; >
+      au < manifest ; exists ; 1992 ; Proceedings of the Florida State Horticultural Society Volume 105 ; 105 ; 1992 ; >
+      au < manifest ; exists ; 1993 ; Proceedings of the Florida State Horticultural Society Volume 106 ; 106 ; 1993 ; >
+      au < manifest ; exists ; 1994 ; Proceedings of the Florida State Horticultural Society Volume 107 ; 107 ; 1994 ; >
+      au < manifest ; exists ; 1995 ; Proceedings of the Florida State Horticultural Society Volume 108 ; 108 ; 1995 ; >
+      au < manifest ; exists ; 1996 ; Proceedings of the Florida State Horticultural Society Volume 109 ; 109 ; 1996 ; >
+      au < manifest ; exists ; 1997 ; Proceedings of the Florida State Horticultural Society Volume 110 ; 110 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; Proceedings of the Florida State Horticultural Society Volume 111 ; 111 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; Proceedings of the Florida State Horticultural Society Volume 112 ; 112 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; Proceedings of the Florida State Horticultural Society Volume 113 ; 113 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; Proceedings of the Florida State Horticultural Society Volume 114 ; 114 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; Proceedings of the Florida State Horticultural Society Volume 115 ; 115 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; Proceedings of the Florida State Horticultural Society Volume 116 ; 116 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; Proceedings of the Florida State Horticultural Society Volume 117 ; 117 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; Proceedings of the Florida State Horticultural Society Volume 118 ; 118 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; Proceedings of the Florida State Horticultural Society Volume 119 ; 119 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; Proceedings of the Florida State Horticultural Society Volume 120 ; 120 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Proceedings of the Florida State Horticultural Society Volume 121 ; 121 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; Proceedings of the Florida State Horticultural Society Volume 122 ; 122 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; Proceedings of the Florida State Horticultural Society Volume 123 ; 123 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Proceedings of the Florida State Horticultural Society Volume 124 ; 124 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Proceedings of the Florida State Horticultural Society Volume 125 ; 125 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Proceedings of the Florida State Horticultural Society Volume 126 ; 126 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Proceedings of the Florida State Horticultural Society Volume 127 ; 127 ; 2014 ; >
+      au < frozen ; exists ; 2015 ; Proceedings of the Florida State Horticultural Society Volume 128 ; 128 ; 2015 ; >
+      au < frozen ; exists ; 2016 ; Proceedings of the Florida State Horticultural Society Volume 129 ; 129 ; 2016 ; >
+      au < frozen ; exists ; 2017 ; Proceedings of the Florida State Horticultural Society Volume 130 ; 130 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; Proceedings of the Florida State Horticultural Society Volume 131 ; 131 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; Proceedings of the Florida State Horticultural Society Volume 132 ; 132 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; Proceedings of the Florida State Horticultural Society Volume 133 ; 133 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; Proceedings of the Florida State Horticultural Society Volume 134 ; 134 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Proceedings of the Florida State Horticultural Society Volume 135 ; 135 ; 2022 ; >
+      au < exists ; exists ; 2023 ; Proceedings of the Florida State Horticultural Society Volume 136 ; 136 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = Yorùbá Studies Review ;
+        issn = 2473-4713 ;
+        eissn = 2578-692X
+      >
+
+      param[journal_id] = ysr
+
+      au < frozen ; exists ; 2017 ; Yorùbá Studies Review Volume 1 ; 1 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; Yorùbá Studies Review Volume 2 ; 2 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; Yorùbá Studies Review Volume 3 ; 3 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; Yorùbá Studies Review Volume 4 ; 4 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; Yorùbá Studies Review Volume 5 ; 5 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; Yorùbá Studies Review Volume 6 ; 6 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; Yorùbá Studies Review Volume 7 ; 7 ; 2023 ; >
+
+  }
+
+  {
+
+      title <
+        name = Florida Linguistics Papers ;
+        eissn = 2836-6549
+      >
+
+      param[journal_id] = floridalinguisticspapers
+
+      au < manifest ; exists ; 2014 ; Florida Linguistics Papers Volume 1 ; 1 ; 2014 ; >
+      au < frozen ; exists ; 2015 ; Florida Linguistics Papers Volume 2 ; 2 ; 2015 ; >
+      au < frozen ; exists ; 2016 ; Florida Linguistics Papers Volume 3 ; 3 ; 2016 ; >
+      au < frozen ; exists ; 2017 ; Florida Linguistics Papers Volume 4 ; 4 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; Florida Linguistics Papers Volume 5 ; 5 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; Florida Linguistics Papers Volume 6 ; 6 ; 2019 ; >
+
+  }
+
+  {
+
+      title <
+        name = Holarctic Lepidoptera ;
+        eissn = 1070-4140
+      >
+
+      param[journal_id] = holarctic
+
+      au < manifest ; exists ; 1994 ; Holarctic Lepidoptera Volume 1 ; 1 ; 1994 ; >
+      au < manifest ; exists ; 1995 ; Holarctic Lepidoptera Volume 2 ; 2 ; 1995 ; >
+      au < manifest ; exists ; 1996 ; Holarctic Lepidoptera Volume 3 ; 3 ; 1996 ; >
+      au < manifest ; exists ; 1997 ; Holarctic Lepidoptera Volume 4 ; 4 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; Holarctic Lepidoptera Volume 5 ; 5 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; Holarctic Lepidoptera Volume 6 ; 6 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; Holarctic Lepidoptera Volume 7 ; 7 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; Holarctic Lepidoptera Volume 8 ; 8 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; Holarctic Lepidoptera Volume 9 ; 9 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; Holarctic Lepidoptera Volume 10 ; 10 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; Holarctic Lepidoptera Volume 11 ; 11 ; 2004 ; >
+      au < manifest ; exists ; 2008 ; Holarctic Lepidoptera Volume 15 ; 15 ; 2008 ; >
+      au < frozen ; exists ; 2019 ; Holarctic Lepidoptera Volume 26 ; 26 ; 2019 ; >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Student Scholarship in Physical Therapy ;
+        eissn = 2151-2868
+      >
+
+      param[journal_id] = ijsrpt
+
+      au < frozen ; exists ; 2015 ; International Journal of Student Scholarship in Physical Therapy Volume 1 ; 1 ; 2015 ; >
+      au < frozen ; exists ; 2016 ; International Journal of Student Scholarship in Physical Therapy Volume 2 ; 2 ; 2016 ; >
+      au < frozen ; exists ; 2017 ; International Journal of Student Scholarship in Physical Therapy Volume 3 ; 3 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; International Journal of Student Scholarship in Physical Therapy Volume 4 ; 4 ; 2018 ; >
+
+  }
+
+}

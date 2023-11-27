@@ -1,0 +1,35 @@
+{
+
+  publisher <
+    name = National University of Uzbekistan ;
+    info[contract] = 2015 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+  {
+  
+    title <
+      name = Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences ;
+      issn = 2181-130X ;
+      eissn = 2181-1318
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    #param[base_url] = https://bulletin.nuu.uz/journal/
+    param[journal_abbr] = journal
+    implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
+
+    au < frozen ; exists ; 2018 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 1 ; 1 ; https://bulletin.nuu.uz/ ; >
+    au < frozen ; exists ; 2019 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 2 ; 2 ; https://bulletin.nuu.uz/ ; >
+    au < frozen ; exists ; 2020 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 3 ; 3 ; https://bulletin.nuu.uz/ ; >
+    au < frozen ; exists ; 2021 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 4 ; 4 ; https://bulletin.nuu.uz/ ; >
+    au < frozen ; exists ; 2022 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 5 ; 5 ; https://bulletin.nuu.uz/ ; >
+    au < expected ; exists ; 2023 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 6 ; 6 ; https://bulletin.nuu.uz/ ; >
+
+  }
+
+}

@@ -32,7 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
     <entry>
         <string>plugin_status</string>
-        <string>development</string>
+        <string>ready</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>3</string>
+        <string>9</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -48,7 +48,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>12</string>
+        <string>22</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -64,5 +64,17 @@ POSSIBILITY OF SUCH DAMAGE.
         <list>
             <string>"%s%s/issue/browse-by-year/%d", base_url, journal_id, year</string>
         </list>
+    </entry>
+    <entry>
+        <string>au_def_new_content_crawl</string>
+        <long>1209600000</long>
+    </entry>
+    <entry>
+        <string>au_def_pause_time</string>
+        <long>10000</long>
+    </entry>
+    <entry>
+        <string>plugin_fetch_rate_limiter_source</string>
+        <string>host:base_url</string>
     </entry>
 </map>

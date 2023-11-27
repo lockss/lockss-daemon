@@ -24,7 +24,8 @@
     param[base_url] = https://www.jadm.eg.net/
     param[journal_abbr] = journal
 
-    au < crawling ; exists ; 2022 ; Journal of Art, Design and Music Volume 1 ; 1 ; >
+    au < deepCrawl ; exists ; 2022 ; Journal of Art, Design and Music Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2023 ; Journal of Art, Design and Music Volume 2 ; 2 ; >
 
   }
 

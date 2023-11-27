@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+    <front>
+        <journal-meta>
+            <journal-id journal-id-type="publisher">ISPRS-Archives</journal-id>
+            <journal-title-group>
+                <journal-title>The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences</journal-title>
+                <abbrev-journal-title abbrev-type="publisher">ISPRS-Archives</abbrev-journal-title>
+                <abbrev-journal-title abbrev-type="nlm-ta">Int. Arch. Photogramm. Remote Sens. Spatial Inf. Sci.</abbrev-journal-title>
+            </journal-title-group>
+            <issn pub-type="epub">2194-9034</issn>
+            <publisher><publisher-name>Copernicus Publications</publisher-name>
+                <publisher-loc>Göttingen, Germany</publisher-loc>
+            </publisher>
+        </journal-meta>
+        <article-meta>
+            <article-id pub-id-type="doi">10.5194/isprs-archives-XLVIII-M-1-2023-145-2023</article-id>
+            <title-group>
+                <article-title>MODELLING AND VISUALIZING URBAN GROWTH TRAJECTORY IN ABU DHABI USING TIME SERIES SATELLITE IMAGERY</article-title>
+            </title-group>
+            <contrib-group><contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Issa</surname>
+                <given-names>S.</given-names>
+            </name>
+                <xref ref-type="aff" rid="aff1">
+                    <sup>1</sup>
+                </xref>
+            </contrib>
+                <contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Al Ameeri</surname>
+                    <given-names>M.</given-names>
+                </name>
+                    <xref ref-type="aff" rid="aff1">
+                        <sup>1</sup>
+                    </xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Abouhaligah</surname>
+                    <given-names>H.</given-names>
+                </name>
+                    <xref ref-type="aff" rid="aff2">
+                        <sup>2</sup>
+                    </xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Alkaabi</surname>
+                    <given-names>N.</given-names>
+                </name>
+                    <xref ref-type="aff" rid="aff1">
+                        <sup>1</sup>
+                    </xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Sultan</surname>
+                    <given-names>M.</given-names>
+                </name>
+                    <xref ref-type="aff" rid="aff1">
+                        <sup>1</sup>
+                    </xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Dahy</surname>
+                    <given-names>B.</given-names>
+                </name>
+                    <xref ref-type="aff" rid="aff3">
+                        <sup>3</sup>
+                    </xref>
+                </contrib>
+            </contrib-group><aff id="aff1">
+            <label>1</label>
+            <addr-line>Department of Geosciences, College of Science, United Arab Emirates University, Al Ain, Abu Dhabi, UAE</addr-line>
+        </aff>
+            <aff id="aff2">
+                <label>2</label>
+                <addr-line>Department of Physics, College of Science, United Arab Emirates, Al Ain, Abu Dhabi, UAE</addr-line>
+            </aff>
+            <aff id="aff3">
+                <label>3</label>
+                <addr-line>CITIES Center, New York University - Abu Dhabi, PO Box 129188, Abu Dhabi, UAE</addr-line>
+            </aff>
+            <pub-date pub-type="epub">
+                <day>21</day>
+                <month>04</month>
+                <year>2023</year>
+            </pub-date>
+            <volume>XLVIII-M-1-2023</volume>
+            <fpage>145</fpage>
+            <lpage>151</lpage>
+            <permissions>
+                <copyright-statement>Copyright: &#x000a9; 2023 S. Issa et al.</copyright-statement>
+                <copyright-year>2023</copyright-year>
+                <license license-type="open-access">
+                    <license-p>This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this licence, visit <ext-link ext-link-type="uri"  xlink:href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</ext-link></license-p>
+                </license>
+            </permissions>
+            <self-uri xlink:href="https://isprs-archives.copernicus.org/articles/XLVIII-M-1-2023/145/2023/isprs-archives-XLVIII-M-1-2023-145-2023.html">This article is available from https://isprs-archives.copernicus.org/articles/XLVIII-M-1-2023/145/2023/isprs-archives-XLVIII-M-1-2023-145-2023.html</self-uri>
+            <self-uri xlink:href="https://isprs-archives.copernicus.org/articles/XLVIII-M-1-2023/145/2023/isprs-archives-XLVIII-M-1-2023-145-2023.pdf">The full text article is available as a PDF file from https://isprs-archives.copernicus.org/articles/XLVIII-M-1-2023/145/2023/isprs-archives-XLVIII-M-1-2023-145-2023.pdf</self-uri>
+            <abstract>
+                <p>Anthropogenic activities are leading to massive changes in the natural environment. An assessment of these changes is crucial for sustainable development. The present study aims to characterize and geo-visualize the spatial and temporal changes in the capital city of Abu Dhabi (AD) in the United Arab Emirates (UAE) and to assess and identify the driving forces behind this process. The temporal assessment of urban growth in AD was carried out using eight Landsat images for the period between 1990 and 2022. Initially the images were classified into seven land use land cover (LULC) classes namely: Urban, Sparse vegetation, Dense vegetation, Shallow water, Deep Water, Sand, and Sabkha. The 7 classes were then collapsed and merged to create a binary mask showing urban/non-urban areas. The post-classification approach was implemented to track the dynamic changes and to quantify the urbanization process of the capital city during the study period. The study showed a rise of 21.4% in urban area at the expense of a significant fall in the sand and sabkha classes. It was also found that, unlike most world urban centers, AD city is not developing at the cost of green areas. To the contrary, vegetated areas (sparse and dense vegetation classes) of AD have doubled more than 60 times over the years 1972 to 2021. We concluded that urbanization in the UAE is supporting the sustainable environmental development in the region and is responding positively to the United Nations (UN)’ Sustainable Development Goals (SDGs).</p>
+            </abstract>
+            <counts><page-count count="7"/></counts>
+        </article-meta>
+    </front>
+    <body/>
+    <back>
+    </back>
+</article>

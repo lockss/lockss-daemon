@@ -20,7 +20,7 @@
 
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/hando-released/
 
-      au < readySource ; frozen ; 2022 ; healthbook TIMES Oncology Hematology Source Content 2022_01 ; 2022_01 >
+      au < readySource ; finished ; 2022 ; healthbook TIMES Oncology Hematology Source Content 2022_01 ; 2022_01 >
       #No more AUs. Moved to https.
 
     }
@@ -28,7 +28,7 @@
 
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/hando-released/
 
-      au < expected ; exists ; 2023 ; healthbook TIMES Oncology Hematology Source Content 2023_01 ; 2023_01 >
+      au < readySource ; crawling ; 2023 ; healthbook TIMES Oncology Hematology Source Content 2023_01 ; 2023_01 >
 
     }
 

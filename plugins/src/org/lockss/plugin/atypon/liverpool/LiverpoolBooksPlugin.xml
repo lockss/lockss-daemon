@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>22</string>
+    <string>25</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -54,7 +54,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>51</string>
+    <string>54</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -93,5 +93,13 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.atypon.liverpool.LiverpoolBooksHtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.atypon.liverpool.LiverpoolArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.atypon.liverpool.LiverpoolArticleIteratorFactory</string>
   </entry>
 </map>

@@ -983,6 +983,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   public synchronized void abandonNewVersion() {
+    logger.debug2("abandonNewVersion: " + url);
     try {
       if (!newVersionOpen) {
         throw new UnsupportedOperationException("New version not initialized.");

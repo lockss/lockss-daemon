@@ -57,6 +57,12 @@ public class Emerald2020MetadataExtractorFactory implements FileMetadataExtracto
 
   /*
      // From journal
+     <meta name="citation_journal_title" content="Journal of Social Marketing">
+      <meta name="citation_volume" content="12">
+      <meta name="citation_issue" content="2">
+      <meta name="citation_firstpage" content="275">
+      <meta name="citation_lastpage" content="291">
+
      <meta name="dc.Title" content="Point cloud measurements-uncertainty calculation on spatial-feature based registration">
       <meta name="citation_journal_title" content="Sensor Review">
       <meta name="dc.Subject" content="Algorithmic model,Measurement uncertainty,Registered point cloud,Spatial feature">
@@ -106,6 +112,7 @@ public class Emerald2020MetadataExtractorFactory implements FileMetadataExtracto
           implements FileMetadataExtractor {
     private static MultiMap tagMap = new MultiValueMap();
     static {
+      tagMap.put("dc.Identifier", MetadataField.DC_FIELD_LANGUAGE);
       tagMap.put("dc.Language", MetadataField.DC_FIELD_LANGUAGE);
       tagMap.put("dc.Title", MetadataField.DC_FIELD_TITLE);
       tagMap.put("dc.Identifier", MetadataField.DC_FIELD_IDENTIFIER);
@@ -113,6 +120,13 @@ public class Emerald2020MetadataExtractorFactory implements FileMetadataExtracto
       tagMap.put("dc.Publisher", MetadataField.DC_FIELD_PUBLISHER);
       tagMap.put("dc.Contributor", MetadataField.DC_FIELD_CONTRIBUTOR);
       tagMap.put("dc.Subject", MetadataField.DC_FIELD_SUBJECT);
+
+      tagMap.put("dc.Identifier", MetadataField.FIELD_DOI);
+      tagMap.put("dc.Title", MetadataField.FIELD_ARTICLE_TITLE);
+      tagMap.put("dc.Publisher", MetadataField.FIELD_PUBLISHER);
+      tagMap.put("DC.Date", MetadataField.FIELD_DATE);
+      tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
+      tagMap.put("citation_issue", MetadataField.FIELD_ISSUE);
     }
 
     @Override
@@ -130,18 +144,51 @@ public class Emerald2020MetadataExtractorFactory implements FileMetadataExtracto
       String dc_date = am.get(MetadataField.DC_FIELD_DATE);
       String tdb_date = null;
 
+      String dc_volume = am.get(MetadataField.FIELD_VOLUME);
+      String tdb_volume = null;
+
       ArchivalUnit au = cu.getArchivalUnit();
       TdbAu tdbau = au.getTdbAu();
       if (tdbau != null) {
+
         tdb_date = tdbau.getYear();
+        tdb_volume = tdbau.getVolume();
+
+        boolean dateCheckPasssed = false;
+
         if (tdbau != null && dc_date != null) {
           log.debug3("Emerald date check: dc_date = " + dc_date + ", tdb_dat = " + tdb_date);
           log.debug3("Emerald date check: dc_date = " + dc_date.substring(0, 4) + ", tdb_date = " + tdb_date.substring(0, 4));
-          if (Integer.parseInt(dc_date.substring(0, 4)) <= Integer.parseInt(tdb_date.substring(0, 04))) {
-            log.debug3("Emerald date check: date In Au , dc_date = " + dc_date.substring(0, 4) + ", tdb_dat = " + tdb_date.substring(0, 4));
-            emitter.emitMetadata(cu, am);
+
+          if (tdb_date.contains("-")) {
+            int startYear = Integer.parseInt(tdb_date.substring(0, 4));
+            int endYear = Integer.parseInt(tdb_date.substring(tdb_date.indexOf("-") + 1));
+
+            log.debug3("Emerald date check: tdb_date is range " + tdb_date + ", startYear=" + Integer.toString(startYear)
+              + ", endYear = " + Integer.toString(endYear) + ", dc_date = " + dc_date.substring(0, 4));
+
+            if ( (Integer.parseInt(dc_date.substring(0, 4)) >= startYear) && (Integer.parseInt(dc_date.substring(0, 4)) <= endYear)) {
+              dateCheckPasssed = true;
+            }
           } else {
-            log.debug3("Emerald date check: date NOT In Au , dc_date = " + dc_date.substring(0, 4) + ", tdb_dat = " + tdb_date.substring(0, 4));
+            if (Integer.parseInt(dc_date.substring(0, 4)) <= Integer.parseInt(tdb_date.substring(0, 4))) {
+              dateCheckPasssed = true;
+            }
+          }
+
+          if (dateCheckPasssed) {
+            log.debug3("Emerald date check: date In Au , dc_date = " + dc_date.substring(0, 4) + ", tdb_dat = " + tdb_date);
+
+            //check volume
+            if (dc_volume != null && tdb_volume != null && dc_volume.equalsIgnoreCase(tdb_volume)) {
+              log.debug3("Emerald volume check: date In Au , dc_volume = " + dc_volume + ", tdb_volume = " + tdb_volume);
+              emitter.emitMetadata(cu, am);
+            } else {
+              log.debug3("Emerald volume check: failed, volume In Au , dc_volume = " + dc_volume + ", tdb_volume = " + tdb_volume);
+            }
+
+          } else {
+            log.debug3("Emerald date check: date NOT In Au , dc_date = " + dc_date.substring(0, 4) + ", tdb_dat = " + tdb_date);
           }
         }
       } else {

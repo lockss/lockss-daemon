@@ -71,7 +71,7 @@ public class KeyStoreUtil {
   public static final String PROP_SIG_ALGORITHM = "SigAlgorithm";
   /** X500Name.  Default 5 years */
   public static final String PROP_X500_NAME = "X500Name";
-  /** Default 1024 */
+  /** Default 2048 */
   public static final String PROP_KEY_BITS = "KeyBits";
   /** Seconds.  Default 5 years */
   public static final String PROP_EXPIRE_IN = "ExpireIn";
@@ -85,7 +85,7 @@ public class KeyStoreUtil {
   public static final String DEFAULT_KEY_ALGORITHM = "RSA";
   public static final String DEFAULT_SIG_ALGORITHM = "SHA256WithRSA";
   public static final String DEFAULT_X500_NAME = "CN=LOCKSS box";
-  public static final int DEFAULT_KEY_BITS = 1024;
+  public static final int DEFAULT_KEY_BITS = 2048;
   public static final long DEFAULT_EXPIRE_IN = 5 * Constants.YEAR / 1000;
 
 

@@ -330,7 +330,11 @@ implements SourceXmlSchemaHelper {
       "PublishingDetail/CopyrightStatement/CopyrightYear | publishingdetail/copyrightstatement/b087";
   /* components under MarketPublishingDetail */
   private static String ONIX_mkt_date =
-      "ProductSupply/MarketPublishingDetail/MarketDate | productsupply/marketpublishingdetail/marketdate"; 
+      "ProductSupply/MarketPublishingDetail/MarketDate | productsupply/marketpublishingdetail/marketdate";
+
+  // "sourcefiles/kluwerlaw-released/2023_02" directory use this one as folder name
+  public static String ONIX_PRODUCT_RELATED_PRODUCT_ID =
+          "RelatedMaterial/RelatedProduct/ProductIdentifier[ProductIDType='15']";
 
   /*
    *  The following 3 variables are needed to construct the XPathXmlMetadataParser
@@ -356,6 +360,7 @@ implements SourceXmlSchemaHelper {
     ONIX_articleMap.put(ONIX_copy_date, XmlDomMetadataExtractor.TEXT_VALUE);
     ONIX_articleMap.put(ONIX_product_seriestitle, ONIX_TITLE_VALUE);
     ONIX_articleMap.put(ONIX_product_seriesISSN, ONIX_ID_VALUE);
+    ONIX_articleMap.put(ONIX_PRODUCT_RELATED_PRODUCT_ID, ONIX_ID_VALUE);
 
   }
 

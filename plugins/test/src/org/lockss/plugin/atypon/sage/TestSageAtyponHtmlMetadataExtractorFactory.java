@@ -52,17 +52,6 @@ public class TestSageAtyponHtmlMetadataExtractorFactory extends LockssTestCase {
             + "<meta name=\"citation_journal_title\" content=\"" + goodJournalTitle  + "\"></meta>"
             + "<meta name=\"dc.Date\" scheme=\"WTN8601\" content=\"" + goodDCDate  + "\"></meta>";
 
-    MockArchivalUnit makeAu() throws ArchivalUnit.ConfigurationException {
-        MockArchivalUnit mau = new MockArchivalUnit();
-        Configuration config = ConfigurationUtil.fromArgs(
-                "base_url", "http://www.xyz.com/");
-        mau.setConfiguration(config);
-        mau.setUrlStems(ListUtil.list(
-                "http://www.xyz.com/"
-        ));
-        return mau;
-    }
-
     public void setUp() throws Exception {
         super.setUp();
         tempDirPath = setUpDiskSpace();
@@ -86,7 +75,7 @@ public class TestSageAtyponHtmlMetadataExtractorFactory extends LockssTestCase {
 
     private Configuration thisAuConfig() {
         Configuration conf = ConfigManager.newConfiguration();
-        conf.put("base_url", "http://www.example.com/");
+        conf.put("base_url", BASE_URL);
         conf.put("journal_id", "abc");
         conf.put("volume_name", "99");
         return conf;
@@ -94,7 +83,8 @@ public class TestSageAtyponHtmlMetadataExtractorFactory extends LockssTestCase {
 
     public void testExtractGoodHtmlContent() throws Exception {
 
-        List<ArticleMetadata> mdlist = setupContentForAU(mau, BASE_URL, goodHtmlContent, true);
+      log.critical("XXXXXXXXX config: " + mau.getConfiguration());
+        List<ArticleMetadata> mdlist = setupContentForAU(mau, BASE_URL + "foo.css", goodHtmlContent, true);
         assertNotEmpty(mdlist);
         ArticleMetadata md = mdlist.get(0);
         assertNotNull(md);

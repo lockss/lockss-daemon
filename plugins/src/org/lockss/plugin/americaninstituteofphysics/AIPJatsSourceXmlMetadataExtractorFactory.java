@@ -35,6 +35,7 @@ package org.lockss.plugin.americaninstituteofphysics;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -103,6 +104,33 @@ public class AIPJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
       List<String> returnList = new ArrayList<String>();
       returnList.add(pdfPath);
       return returnList;
+    }
+
+    @Override
+    protected boolean preEmitCheck(SourceXmlSchemaHelper schemaHelper,
+                                   CachedUrl cu, ArticleMetadata thisAM) {
+
+      log.debug3("in AIPJatsSourceXmlMetadataExtractorFactory preEmitCheck");
+
+      List<String> filesToCheck;
+
+      // If no files get returned in the list, nothing to check
+      if ((filesToCheck = getFilenamesAssociatedWithRecord(schemaHelper, cu,thisAM)) == null) {
+        return true;
+      }
+      ArchivalUnit B_au = cu.getArchivalUnit();
+      CachedUrl fileCu;
+      for (int i=0; i < filesToCheck.size(); i++)
+      {
+        fileCu = B_au.makeCachedUrl(filesToCheck.get(i));
+        log.debug3("Check for existence of " + filesToCheck.get(i));
+        if(fileCu != null && (fileCu.hasContent())) {
+          thisAM.put(MetadataField.FIELD_ACCESS_URL, fileCu.getUrl());
+          return true; // return true based on business requirement, publisher will only provide some PDFs
+        }
+      }
+      log.debug3("No file exists associated with this record: " + cu.getUrl());
+      return true; //No files found that match this record
     }
     
     @Override

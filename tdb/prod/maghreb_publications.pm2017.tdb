@@ -1,0 +1,39 @@
+{
+  publisher <
+    name = Maghreb Publications
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:457
+
+    {
+    title <
+      name = The Maghreb Review ;
+      issn = 0309-457X ;
+      eissn = 2754-6772
+
+    >
+
+      attr[journal_id] = 859
+
+      au < released ; 2009 ; The Maghreb Review Volume 34 [2009] ; 17448 >
+      au < released ; 2010 ; The Maghreb Review Volume 35 [2010] ; 17449 >
+      au < released ; 2011 ; The Maghreb Review Volume 36 [2011] ; 17450 >
+      au < released ; 2012 ; The Maghreb Review Volume 37 [2012] ; 17451 >
+      au < released ; 2013 ; The Maghreb Review Volume 38 [2013] ; 17452 >
+      au < released ; 2014 ; The Maghreb Review Volume 39 [2014] ; 17453 >
+      au < released ; 2015 ; The Maghreb Review Volume 40 [2015] ; 17454 >
+      au < released ; 2016 ; The Maghreb Review Volume 41 [2016] ; 17455 >
+      au < released ; 2017 ; The Maghreb Review Volume 42 [2017] ; 17456 >
+      au < released ; 2018 ; The Maghreb Review Volume 43 [2018] ; 17457 >
+      au < released ; 2019 ; The Maghreb Review Volume 44 [2019] ; 17458 >
+      au < released ; 2020 ; The Maghreb Review Volume 45 [2020] ; 17459 >
+      au < released ; 2021 ; The Maghreb Review Volume 46 [2021] ; 17460 >
+      au < released ; 2022 ; The Maghreb Review Volume 47 [2022] ; 17461 >
+      au < manifest ; 2023 ; The Maghreb Review Volume 48 [2023] ; 17630 >
+
+    }
+
+}

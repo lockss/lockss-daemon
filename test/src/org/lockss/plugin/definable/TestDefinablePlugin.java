@@ -155,7 +155,7 @@ public class TestDefinablePlugin extends LockssTestCase {
                   factMap);
     definablePlugin.initPlugin(daemon, defMap);
 
-    mti = definablePlugin.getMimeTypeInfo("text/html");
+    mti = definablePlugin.getMimeTypeInfo("text/html;charset=UTF-8");
     assertClass(LinkExtractorFactoryWrapper.class,
 		mti.getLinkExtractorFactory());
     assertClass(MockLinkExtractorFactory.class,

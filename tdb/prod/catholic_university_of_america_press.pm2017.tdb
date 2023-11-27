@@ -33,6 +33,7 @@
         au < released ; 2020 ; Antiphon: A Journal for Liturgical Renewal Volume 24 [2020] ; 14898 >
         au < released ; 2021 ; Antiphon: A Journal for Liturgical Renewal Volume 25 [2021] ; 15682 >
         au < released ; 2022 ; Antiphon: A Journal for Liturgical Renewal Volume 26 [2022] ; 17232 >
+        au < manifest ; 2023 ; Antiphon: A Journal for Liturgical Renewal Volume 27 [2023] ; 18009 >
 
     }
 
@@ -56,6 +57,21 @@
         au < released ; 2019 ; Bulletin of Medieval Canon Law Volume 36 [2019] ; 14830 >
         au < released ; 2020 ; Bulletin of Medieval Canon Law Volume 37 [2020] ; 15529 >
         au < released ; 2021 ; Bulletin of Medieval Canon Law Volume 38 [2021] ; 17008 >
+        au < manifest ; 2022 ; Bulletin of Medieval Canon Law Volume 39 [2022] ; 18249 >
+
+    }
+
+    {
+    title <
+      name = Decisions of the Roman Rota ;
+      issn = 2835-9127 ;
+      eissn = 2835-9143
+
+    >
+
+      attr[journal_id] = 857
+
+      au < manifest ; 2023 ; Decisions of the Roman Rota Volume 1 [2023] ; 17737 >
 
     }
 
@@ -77,6 +93,20 @@
 
     {
     title <
+      name = International Journal of Sport and Religion ;
+      issn = 2836-3205 ;
+      eissn = 2836-3213
+
+    >
+
+      attr[journal_id] = 858
+
+      au < manifest ; 2023 ; International Journal of Sport and Religion Volume 1 [2023] ; 17738 >
+
+    }
+
+    {
+    title <
       name = Old Testament Abstracts ;
       issn = 0364-8591 ;
       eissn = 2639-2003 ;
@@ -92,6 +122,7 @@
         au < released ; 2020 ; Old Testament Abstracts Volume 43 [2020] ; 14542 >
         au < released ; 2021 ; Old Testament Abstracts Volume 44 [2021] ; 15471 >
         au < released ; 2022 ; Old Testament Abstracts Volume 45 [2022] ; 16919 >
+        au < manifest ; 2023 ; Old Testament Abstracts Volume 46 [2023] ; 18137 >
 
     }
     
@@ -117,6 +148,20 @@
 
     {
     title <
+      name = St Nersess Theological Review ;
+      issn = 1086-2080 ;
+      eissn = 2835-0359
+
+    >
+
+      attr[journal_id] = 856
+
+      au < manifest ; 2023 ; St Nersess Theological Review Volume 14 [2023] ; 17736 >
+
+    }
+
+    {
+    title <
       name = The Catholic Biblical Quarterly ;
       issn = 0008-7912 ;
       eissn = 2163-2529 ;
@@ -131,7 +176,8 @@
         au < released ; 2019 ; The Catholic Biblical Quarterly Volume 81 [2019] ; 13991 >
         au < released ; 2020 ; The Catholic Biblical Quarterly Volume 82 [2020] ; 14531 >
         au < released ; 2021 ; The Catholic Biblical Quarterly Volume 83 [2021] ; 15466 >
-        au < testing ; 2022 ; The Catholic Biblical Quarterly Volume 84 [2022] ; 16840 >
+        au < released ; 2022 ; The Catholic Biblical Quarterly Volume 84 [2022] ; 16840 >
+        au < manifest ; 2023 ; The Catholic Biblical Quarterly Volume 85 [2023] ; 17640 >
 
     }
 
@@ -174,6 +220,7 @@
         au < released ; 2020-2021 ; The Catholic Historical Review Volume 106 [2020-2021] ; 14895 >
         au < released ; 2021 ; The Catholic Historical Review Volume 107 [2021] ; 15528 >
         au < released ; 2022 ; The Catholic Historical Review Volume 108 [2022] ; 17121 >
+        au < manifest ; 2023 ; The Catholic Historical Review Volume 109 [2023] ; 17756 >
 
     }
 
@@ -232,6 +279,7 @@
         au < released ; 2020 ; Newman Studies Journal Volume 17 [2020] ; 15138 >
         au < released ; 2021 ; Newman Studies Journal Volume 18 [2021] ; 16499 >
         au < released ; 2022 ; Newman Studies Journal Volume 19 [2022] ; 17463 >
+        au < manifest ; 2023 ; Newman Studies Journal Volume 20 [2023] ; 18002 >
 
     }
 
@@ -285,6 +333,7 @@
       au < released ; 2019-2020 ; St. Anselm Journal Volume 15 [2019-2020] ; 14565 >
       au < released ; 2020-2021 ; Saint Anselm Journal Volume 16 [2020-2021] ; 15285 >
       au < released ; 2021-2022 ; Saint Anselm Journal Volume 17 [2021-2022] ; 16789 >
+      au < released ; 2022 ; Saint Anselm Journal Volume 18 [2022] ; 18026 >
 
     }
 
@@ -383,6 +432,7 @@
         au < released ; 2020 ; The Thomist: A Speculative Quarterly Review Volume 84 [2020] ; 15230 >
         au < released ; 2021 ; The Thomist: A Speculative Quarterly Review Volume 85 [2021] ; 16613 >
         au < released ; 2022 ; The Thomist: A Speculative Quarterly Review Volume 86 [2022] ; 17284 >
+        au < manifest ; 2023 ; The Thomist: A Speculative Quarterly Review Volume 87 [2023] ; 17992 >
 
     }
 
@@ -413,6 +463,7 @@
         au < released ; 2020 ; U.S. Catholic Historian Volume 38 [2020] ; 14677 >
         au < released ; 2021 ; U.S. Catholic Historian Volume 39 [2021] ; 15445 >
         au < released ; 2022 ; U.S. Catholic Historian Volume 40 [2022] ; 16859 >
+        au < manifest ; 2023 ; U.S. Catholic Historian Volume 41 [2023] ; 17530 >
 
     }
 

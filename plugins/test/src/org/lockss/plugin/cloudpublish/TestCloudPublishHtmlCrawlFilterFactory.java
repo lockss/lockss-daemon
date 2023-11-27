@@ -5,7 +5,6 @@ import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.StringInputStream;
 import org.lockss.util.Constants;
 import org.lockss.util.StringUtil;
-import sun.security.action.OpenFileInputStreamAction;
 
 import java.io.FileInputStream;
 import java.io.InputStream;

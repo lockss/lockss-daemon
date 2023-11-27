@@ -269,6 +269,10 @@ public class RepositoryManager
   }
 
 
+  private String localRepoSpec(String path) {
+    return StringPool.REPO_SPEC.intern("local:" + path);
+  }
+
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
     //  Build list of repositories from list of disk (fs) paths).  Needs to
@@ -277,10 +281,10 @@ public class RepositoryManager
       List lst = new ArrayList();
       String dspace =
 	config.get(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, "");
-      List paths = StringUtil.breakAt(dspace, ';');
+      List<String> paths = StringUtil.breakAt(dspace, ';');
       if (paths != null) {
-	for (Iterator iter = paths.iterator(); iter.hasNext(); ) {
-	  lst.add("local:" + (String)iter.next());
+	for (String path : paths) {
+	  lst.add(localRepoSpec(path));
 	}
       }
       repoList = lst;

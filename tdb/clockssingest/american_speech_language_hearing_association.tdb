@@ -9,10 +9,10 @@
   
   comment[moving] = Publisher moved from Silverchair to Atypon.
 
+{
   plugin = org.lockss.plugin.atypon.aslha.ClockssAmericanSpeechLanguageHearingAssocAtyponPlugin
   #param[base_url] = https://pubs.asha.org/
   implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
-
 
   {
     title <
@@ -55,7 +55,8 @@
       au < finished ; finished ; 2019 ; American Journal of Audiology Volume 28 ; 28 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; American Journal of Audiology Volume 29 ; 29 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; American Journal of Audiology Volume 30 ; 30 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2022 ; American Journal of Audiology Volume 31 ; 31 ; >
+      au < deepCrawl ; exists ; 2022 ; American Journal of Audiology Volume 31 ; 31 ; >
+      au < crawling ; exists ; 2023 ; American Journal of Audiology Volume 32 ; 32 ; >
 
   }
 
@@ -100,7 +101,8 @@
       au < finished ; finished ; 2019 ; American Journal of Speech-Language Pathology Volume 28 ; 28 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; American Journal of Speech-Language Pathology Volume 29 ; 29 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2021 ; American Journal of Speech-Language Pathology Volume 30 ; 30 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2022 ; American Journal of Speech-Language Pathology Volume 31 ; 31 ; >
+      au < deepCrawl ; exists ; 2022 ; American Journal of Speech-Language Pathology Volume 31 ; 31 ; >
+      au < crawling ; exists ; 2023 ; American Journal of Speech-Language Pathology Volume 32 ; 32 ; >
 
   }
 
@@ -283,7 +285,8 @@
       au < finished ; finished ; 2019 ; Journal of Speech, Language, and Hearing Research Volume 62 ; 62 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2020 ; Journal of Speech, Language, and Hearing Research Volume 63 ; 63 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; Journal of Speech, Language, and Hearing Research Volume 64 ; 64 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2022 ; Journal of Speech, Language, and Hearing Research Volume 65 ; 65 ; >
+      au < deepCrawl ; exists ; 2022 ; Journal of Speech, Language, and Hearing Research Volume 65 ; 65 ; >
+      au < crawling ; exists ; 2023 ; Journal of Speech, Language, and Hearing Research Volume 66 ; 66 ; >
 
   }
 
@@ -350,7 +353,8 @@
       au < finished ; finished ; 2019 ; Language, Speech, and Hearing Services in Schools Volume 50 ; 50 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; Language, Speech, and Hearing Services in Schools Volume 51 ; 51 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2021 ; Language, Speech, and Hearing Services in Schools Volume 52 ; 52 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2022 ; Language, Speech, and Hearing Services in Schools Volume 53 ; 53 ; >
+      au < deepCrawl ; exists ; 2022 ; Language, Speech, and Hearing Services in Schools Volume 53 ; 53 ; >
+      au < crawling ; exists ; 2023 ; Language, Speech, and Hearing Services in Schools Volume 54 ; 54 ; >
 
   }
 
@@ -385,8 +389,7 @@
       au < finished ; finished ; 2018 ; ASHA Leader Volume 23 ; 23 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2019 ; ASHA Leader Volume 24 ; 24 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; ASHA Leader Volume 25 ; 25 ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2021 ; ASHA Leader Volume 26 ; 26 ; >
-      au < expected ; exists ; 2022 ; ASHA Leader Volume 27 ; 27 ; >
+      #Changed from a journal to a magazine as of April 2020.
   }
 
   {
@@ -403,9 +406,30 @@
       au < finished ; finished ; 2017 ; Perspectives of the ASHA Special Interest Groups Volume 2 ; 2 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Perspectives of the ASHA Special Interest Groups Volume 3 ; 3 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Perspectives of the ASHA Special Interest Groups Volume 4 ; 4 ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2020 ; Perspectives of the ASHA Special Interest Groups Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; Perspectives of the ASHA Special Interest Groups Volume 5 ; 5 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; Perspectives of the ASHA Special Interest Groups Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2022 ; Perspectives of the ASHA Special Interest Groups Volume 7 ; 7 ; >
+      au < deepCrawl ; exists ; 2022 ; Perspectives of the ASHA Special Interest Groups Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2023 ; Perspectives of the ASHA Special Interest Groups Volume 8 ; 8 ; >
   }
+}
+{
+  plugin = needs.plugin
+  implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
+  {
+    title <
+      name = ASHA Leader ;
+      eissn = 1085-9586 
+    >
+
+      param[journal_id] = leader
+      param[base_url] = https://leader.pubs.asha.org/
+
+      au < exists ; exists ; 2020 ; ASHA Leader Magazine Volume 25 ; 25 ; >
+      au < exists ; exists ; 2021 ; ASHA Leader Magazine Volume 26 ; 26 ; >
+      au < exists ; exists ; 2022 ; ASHA Leader Magazine Volume 27 ; 27 ; >
+      au < exists ; exists ; 2023 ; ASHA Leader Magazine Volume 28 ; 28 ; >
+      #Changed from a journal to a magazine as of April 2020.
+  }
+}
 }

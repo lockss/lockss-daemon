@@ -426,8 +426,12 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
 //                HtmlNodeFilters.tag("span")
 //            ),
         // there is a div.class.hlFld-Abstract parent of a hlFld-Abstract child, causing duplicate abstract text,
-        //HtmlNodeFilters.tagWithAttributeRegex("div", "class","hlFld-Abstract"),
-        // hopefully grabbing the inner will work
+        // Uncomment the change from above because of 0 hash found on abs url, like: https://www.tandfonline.com/doi/abs/10.1080/07421222.1998.11518187
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class","hlFld-Abstract"),
+
+        //need has this url: https://www.tandfonline.com/doi/suppl/10.1080/07421222.2015.1138374
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class","supplement-box"),
+            // hopefully grabbing the inner will work
         HtmlNodeFilters.tagWithAttributeRegex("div", "class","abstractSection"),
 
         /// This commented out section is needed to get the Abstract text from Cancer Biology & Therapy /abs/ pages

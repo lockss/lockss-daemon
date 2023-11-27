@@ -1,7 +1,6 @@
 <!--
 
-Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -33,7 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
     <entry>
         <string>plugin_status</string>
-        <string>testing</string>
+        <string>development</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
@@ -45,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>4</string>
+        <string>8</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -70,7 +69,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>6</string>
+        <string>7</string>
     </entry>
     <entry>
         <string>au_name</string>
@@ -111,7 +110,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_start_url</string>
         <list>
             <!-- https://www.oecd-ilibrary.org/science-and-technology/bridging-digital-divides-in-g20-countries_35c1d850-en -->
-            <string>"%s%s_%s", base_url, pub_path, pub_id</string>
+            <string>"%s%s%s", base_url, pub_path, pub_id</string>
             <!-- https://www.oecd-ilibrary.org/content/publication/35c1d850-en -->
             <string>"%scontent/publication/%s", base_url, pub_id</string>
         </list>
@@ -142,7 +141,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <!-- ibid
             <string>1,"^%s.+\.xlsx?\?itemId=.+&amp;mimeType=", base_url</string> -->
             <!-- pdf & epub files -->
-            <string>1,"^%s.+\.pdf\?itemId=.+&amp;mimeType=pdf$", base_url</string>
+            <string>1,"^%s.+\.(pdf|epub)\?itemId=.+&amp;mimeType=(pdf|epub)$", base_url</string>
             <!-- pdf redirect
                  https://www.oecd-ilibrary.org/docserver/7a3b07d2-en.pdf?expires=1643843528&id=id&accname=ocid194777&checksum=063C56734FAFCB0F81A2F8646E0B6DEC -->
             <string>1,"^%sdocserver", base_url</string>
@@ -165,13 +164,9 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_substance_url_pattern</string>
         <list>
             <!-- start_page, and pdfs -->
-            <string>"%s%s_%s$", base_url, pub_path, pub_id</string>
+            <!--<string>"%s%s%s$", base_url, pub_path, pub_id</string>-->
             <string>"%s.+\.pdf", base_url</string>
         </list>
-    </entry>
-    <entry>
-        <string>text/html_crawl_filter_factory</string>
-        <string>org.lockss.plugin.oecd.OecdBooksHtmlCrawlFilterFactory</string>
     </entry>
     <entry>
         <string>plugin_article_iterator_factory</string>

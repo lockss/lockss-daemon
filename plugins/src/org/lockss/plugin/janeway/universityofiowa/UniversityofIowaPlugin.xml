@@ -45,6 +45,14 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
+    <string>5</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.janeway.JanewayDirectoryAccessorPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
     <string>1</string>
   </entry>
   <entry>
@@ -115,7 +123,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_permission_url</string>
-    <string>"%s%s/plugins/clockss", base_url, journal_id</string>
+    <string>"%s%s/plugins/clockss/", base_url, journal_id</string>
   </entry>
   <entry>
     <string>au_start_url</string>

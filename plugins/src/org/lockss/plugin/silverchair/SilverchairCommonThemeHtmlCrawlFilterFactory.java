@@ -47,6 +47,20 @@ public class SilverchairCommonThemeHtmlCrawlFilterFactory implements FilterFacto
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "ref-list"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "global-footer"),
             HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^10[.]"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "id", "Sidebar"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "global-nav"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "new-and-popular"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "global-footer-link-wrap"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "issue-browse-top"),
+            HtmlNodeFilters.tagWithAttributeRegex("li", "class", "geoRef-coordinate"),
+            //https://journals.biologists.com/dev/article/65/1/1/50812/Cytoskeletal-coordination-and-intercellular
+            HtmlNodeFilters.tagWithAttributeRegex("div", "id", "Sidebar"),
+            //https://pubs.geoscienceworld.org/canmin/article-standard/60/2/229/612767/A-proposed-new-mineralogical-classification-system
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related-content"),
+            HtmlNodeFilters.tagWithAttributeRegex("a", "class", "related-content"),
+            //We saw Silverchair add those to non-common-theme plugins, for cautious, we added it here
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-IssueInfo"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-ArticleNavLinks"),
         };
 
         return new HtmlFilterInputStream(in,

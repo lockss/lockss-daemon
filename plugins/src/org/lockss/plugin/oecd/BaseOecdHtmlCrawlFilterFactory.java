@@ -1,6 +1,6 @@
 /*
-Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -27,7 +27,9 @@ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
 CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
+
 */
+
 package org.lockss.plugin.oecd;
 
 import org.htmlparser.NodeFilter;
@@ -69,9 +71,8 @@ public class BaseOecdHtmlCrawlFilterFactory implements FilterFactory {
       // get rid of all the links in the landing page except the csv file(s)
       HtmlNodeFilters.allExceptSubtree(
           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "section-title"),
-          // per OECD we are only to collect the pdfs
-          //HtmlNodeFilters.tagWithAttributeRegex("a", "class", "action-(web|epub|csv|pdf|read)")
-          HtmlNodeFilters.tagWithAttributeRegex("a", "class", "action-pdf")
+          // per OECD we are only to collect the pdfs and epubs
+          HtmlNodeFilters.tagWithAttributeRegex("a", "class", "action-(epub|pdf)")
       )
   };
 

@@ -16,7 +16,7 @@ https://pubs.geoscienceworld.org/rmg/article-pdf/52/1/1/2315810/1-16.pdf
 Location: https://gsw.silverchair-cdn.com/gsw/Content_public/Journal/rmg/52/1/10.24872_rmgjournal.52.1.1/1/1-16.pdf?Expires=1581014679&Signature=let2Z6hadTnDi3xGWwaY1EaMS2knLVY9ro2X02eRB64WRihfinMwNsGMoG9CcnAK8GRcJYRCpFdniYJuwyYuqxjKBAbRN5QKHNTPZgGCKtvgKuczXx-MAfLctW12mJEMR74Yswfyq2LX7zJKroC8Wi0MV5xONFJ4xxyXjTGYNdd1noUBjqkQBksEFKOfnCAjj5KvXlqLZcDGBWS5vXrBKf1xgasxy8AcLb3ey6o1Nc2euXmsX9VA10-tm15LkCuT0nfJFbBKN2EM9q93mo95o1X0DsX5Mqp2DGSQkKb15oVtLN~F-BNtPB8WqiV4t2KuxPAcgnYAsCzoauXvgrEr6w__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA [following]
 
 
-(python27) feili18s-MacBook-Pro:Desktop feili18$ ./wget-url.sh "https://pubs.geoscienceworld.org/rmg/article-pdf/52/1/1/2315810/1-16.pdf" delete.pdf
+./wget-url.sh "https://pubs.geoscienceworld.org/rmg/article-pdf/52/1/1/2315810/1-16.pdf" delete.pdf
   HTTP/1.1 301 Moved Permanently
   Location: https://pubs.geoscienceworld.org/uwyo/rmg/article-pdf/52/1/1/2315810/1-16.pdf [following]
 

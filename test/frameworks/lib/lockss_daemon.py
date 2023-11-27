@@ -174,7 +174,7 @@ class LockssDaemon:
     def start( self ):
         if not self.daemon:
             args = [self.javaBin, '-server', '-cp', self.classpath, '-Dorg.lockss.defaultLogLevel=debug']
-            tmpdir = os.environ[ 'java.io.tmpdir' ]
+            tmpdir = os.environ.get('java.io.tmpdir')
             if tmpdir is not None:
                 args.append('-Djava.io.tmpdir=%s' % tmpdir)
             args.append('org.lockss.app.LockssDaemon')

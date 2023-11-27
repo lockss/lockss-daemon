@@ -28,7 +28,8 @@
     au < released ; 2019 ; 9 ; African Invertebrates Volume 2019 ; 2019 ; https://africaninvertebrates.pensoft.net/ >
     au < released ; 2020 ; 9 ; African Invertebrates Volume 2020 ; 2020 ; https://africaninvertebrates.pensoft.net/ >
     au < released ; 2021 ; 10 ; African Invertebrates Volume 2021 ; 2021 ; https://africaninvertebrates.pensoft.net/ >
-    au < manifest ; 2022 ; 11 ; African Invertebrates Volume 2022 ; 2022 ; https://africaninvertebrates.pensoft.net/ >
+    au < released ; 2022 ; 11 ; African Invertebrates Volume 2022 ; 2022 ; https://africaninvertebrates.pensoft.net/ >
+    au < manifest ; 2023 ; 12 ; African Invertebrates Volume 2023 ; 2023 ; https://africaninvertebrates.pensoft.net/ >
 
   }
 
@@ -52,7 +53,8 @@
     au < released ; 2019 ; 6 ; Biodiversity Data Journal Volume 2019 ; 2019 ; https://bdj.pensoft.net/ >
     au < released ; 2020 ; 6 ; Biodiversity Data Journal Volume 2020 ; 2020 ; https://bdj.pensoft.net/ >
     au < released ; 2021 ; 7 ; Biodiversity Data Journal Volume 2021 ; 2021 ; https://bdj.pensoft.net/ >
-    au < manifest ; 2022 ; 8 ; Biodiversity Data Journal Volume 2022 ; 2022 ; https://bdj.pensoft.net/ >
+    au < released ; 2022 ; 8 ; Biodiversity Data Journal Volume 2022 ; 2022 ; https://bdj.pensoft.net/ >
+    au < manifest ; 2023 ; 9 ; Biodiversity Data Journal Volume 2023 ; 2023 ; https://bdj.pensoft.net/ >
 
    }
 
@@ -81,7 +83,8 @@
     au < released ; 2019 ; 13 ; BioRisk Volume 2019 ; 2019 ; https://biorisk.pensoft.net/ >
     au < released ; 2020 ; 13 ; BioRisk Volume 2020 ; 2020 ; https://biorisk.pensoft.net/ >
     au < released ; 2021 ; 14 ; BioRisk Volume 2021 ; 2021 ; https://biorisk.pensoft.net/ >
-    au < manifest ; 2022 ; 15 ; BioRisk Volume 2022 ; 2022 ; https://biorisk.pensoft.net/ >
+    au < released ; 2022 ; 15 ; BioRisk Volume 2022 ; 2022 ; https://biorisk.pensoft.net/ >
+    au < manifest ; 2023 ; 16 ; BioRisk Volume 2023 ; 2023 ; https://biorisk.pensoft.net/ >
 
    }
 
@@ -96,7 +99,8 @@
     
     param[au_oai_set] = caucasiana
     
-    au < manifest ; 2022 ; 1 ; Caucasiana Volume 2022 ; 2022 ; https://caucasiana.pensoft.net/ >
+    au < released ; 2022 ; 1 ; Caucasiana Volume 2022 ; 2022 ; https://caucasiana.pensoft.net/ >
+    au < manifest ; 2023 ; 2 ; Caucasiana Volume 2023 ; 2023 ; https://caucasiana.pensoft.net/ >
 
    }
   
@@ -119,7 +123,8 @@
      au < released ; 2019 ; 65 ; Deutsche Entomologische Zeitschrift Volume 2019 ; 2019 ; https://dez.pensoft.net/ >
      au < released ; 2020 ; 65 ; Deutsche Entomologische Zeitschrift Volume 2020 ; 2020 ; https://dez.pensoft.net/ >
      au < released ; 2021 ; 66 ; Deutsche Entomologische Zeitschrift Volume 2021 ; 2021 ; https://dez.pensoft.net/ >
-     au < manifest ; 2022 ; 67 ; Deutsche Entomologische Zeitschrift Volume 2022 ; 2022 ; https://dez.pensoft.net/ >
+     au < released ; 2022 ; 67 ; Deutsche Entomologische Zeitschrift Volume 2022 ; 2022 ; https://dez.pensoft.net/ >
+     au < manifest ; 2023 ; 68 ; Deutsche Entomologische Zeitschrift Volume 2023 ; 2023 ; https://dez.pensoft.net/ >
 
    }
    
@@ -134,7 +139,8 @@
     param[au_oai_set] = ijhmc
     
     au < released ; 2021 ; 1 ; Heritage, Memory and Conflict Journal Volume 2021 ; 2021 ; https://ijhmc.arphahub.com/ >
-    au < manifest ; 2022 ; 2 ; Heritage, Memory and Conflict Journal Volume 2022 ; 2022 ; https://ijhmc.arphahub.com/ >
+    au < released ; 2022 ; 2 ; Heritage, Memory and Conflict Journal Volume 2022 ; 2022 ; https://ijhmc.arphahub.com/ >
+    au < manifest ; 2023 ; 3 ; Heritage, Memory and Conflict Journal Volume 2023 ; 2023 ; https://ijhmc.arphahub.com/ >
 
    }
   
@@ -178,7 +184,8 @@
     au < released ; 2019 ; 68-73 ; Journal of Hymenoptera Research Volume 2019 ; 2019 ; https://jhr.pensoft.net/ >
     au < released ; 2020 ; 74-80 ; Journal of Hymenoptera Research Volume 2020 ; 2020 ; https://jhr.pensoft.net/ >
     au < released ; 2021 ; 81-86 ; Journal of Hymenoptera Research Volume 2021 ; 2021 ; https://jhr.pensoft.net/ >
-    au < manifest ; 2022 ; 89-96 ; Journal of Hymenoptera Research Volume 2022 ; 2022 ; https://jhr.pensoft.net/ >
+    au < released ; 2022 ; 89-96 ; Journal of Hymenoptera Research Volume 2022 ; 2022 ; https://jhr.pensoft.net/ >
+    au < manifest ; 2023 ; 95-100 ; Journal of Hymenoptera Research Volume 2023 ; 2023 ; https://jhr.pensoft.net/ >
 
    }
 
@@ -205,7 +212,8 @@
     au < released ; 2019 ; 45-61 ; MycoKeys Volume 2019 ; 2019 ; https://mycokeys.pensoft.net/ >
     au < released ; 2020 ; 62-76 ; MycoKeys Volume 2020 ; 2020 ; https://mycokeys.pensoft.net/ >
     au < released ; 2021 ; 77-91 ; MycoKeys Volume 2021 ; 2021 ; https://mycokeys.pensoft.net/ >
-    au < manifest ; 2022 ; 86-94 ; MycoKeys Volume 2022 ; 2022 ; https://mycokeys.pensoft.net/ >
+    au < released ; 2022 ; 86-94 ; MycoKeys Volume 2022 ; 2022 ; https://mycokeys.pensoft.net/ >
+    au < manifest ; 2023 ; 95-103 ; MycoKeys Volume 2023 ; 2023 ; https://mycokeys.pensoft.net/ >
 
    }
 
@@ -229,7 +237,8 @@
     au < released ; 2019 ; 32-37 ; Nature Conservation Volume 2019 ; 2019 ; https://natureconservation.pensoft.net/ >
     au < released ; 2020 ; 38-42 ; Nature Conservation Volume 2020 ; 2020 ; https://natureconservation.pensoft.net/ >
     au < released ; 2021 ; 43-47 ; Nature Conservation Volume 2021 ; 2021 ; https://natureconservation.pensoft.net/ >
-    au < manifest ; 2022 ; 46-48 ; Nature Conservation Volume 2022 ; 2022 ; https://natureconservation.pensoft.net/ >
+    au < released ; 2022 ; 46-50 ; Nature Conservation Volume 2022 ; 2022 ; https://natureconservation.pensoft.net/ >
+    au < manifest ; 2023 ; 51-55 ; Nature Conservation Volume 2023 ; 2023 ; https://natureconservation.pensoft.net/ >
 
    }
 
@@ -256,7 +265,8 @@
     au < released ; 2019 ; 42-53 ; NeoBiota Volume 2019 ; 2019 ; https://neobiota.pensoft.net/ >
     au < released ; 2020 ; 54-63 ; NeoBiota Volume 2020 ; 2020 ; https://neobiota.pensoft.net/ >
     au < released ; 2021 ; 64-73 ; NeoBiota Volume 2021 ; 2021 ; https://neobiota.pensoft.net/ >
-    au < manifest ; 2022 ; 71-77 ; NeoBiota Volume 2022 ; 2022 ; https://neobiota.pensoft.net/ >
+    au < released ; 2022 ; 71-77 ; NeoBiota Volume 2022 ; 2022 ; https://neobiota.pensoft.net/ >
+    au < released ; 2022 ; 80-88 ; NeoBiota Volume 2023 ; 2023 ; https://neobiota.pensoft.net/ >
 
    }
 
@@ -280,7 +290,8 @@
     au < released ; 2019 ; 41 ; Nota Lepidopterologica Volume 2019 ; 2019 ; https://nl.pensoft.net/ >
     au < released ; 2020 ; 41 ; Nota Lepidopterologica Volume 2020 ; 2020 ; https://nl.pensoft.net/ >
     au < released ; 2021 ; 42 ; Nota Lepidopterologica Volume 2021 ; 2021 ; https://nl.pensoft.net/ >
-    au < manifest ; 2022 ; 43 ; Nota Lepidopterologica Volume 2022 ; 2022 ; https://nl.pensoft.net/ >
+    au < released ; 2022 ; 43 ; Nota Lepidopterologica Volume 2022 ; 2022 ; https://nl.pensoft.net/ >
+    au < manifest ; 2023 ; 44 ; Nota Lepidopterologica Volume 2023 ; 2023 ; https://nl.pensoft.net/ >
 
    }
 
@@ -308,7 +319,8 @@
     au < released ; 2019 ; 115-136 ; PhytoKeys Volume 2019 ; 2019 ; https://phytokeys.pensoft.net/ >
     au < released ; 2020 ; 137-170 ; PhytoKeys Volume 2020 ; 2020 ; https://phytokeys.pensoft.net/ >
     au < released ; 2021 ; 171-205 ; PhytoKeys Volume 2021 ; 2021 ; https://phytokeys.pensoft.net/ >
-    au < manifest ; 2022 ; 188-204 ; PhytoKeys Volume 2022 ; 2022 ; https://phytokeys.pensoft.net/ >
+    au < released ; 2022 ; 188-216 ; PhytoKeys Volume 2022 ; 2022 ; https://phytokeys.pensoft.net/ >
+    au < manifest ; 2023 ; 217-245 ; PhytoKeys Volume 2023 ; 2023 ; https://phytokeys.pensoft.net/ >
 
    }
 
@@ -335,7 +347,8 @@
     au < released ; 2019 ; 29-32 ; Subterranean Biology Volume 2019 ; 2019 ; https://subtbiol.pensoft.net/ >
     au < released ; 2020 ; 33-36 ; Subterranean Biology Volume 2020 ; 2020 ; https://subtbiol.pensoft.net/ >
     au < released ; 2021 ; 37-40 ; Subterranean Biology Volume 2021 ; 2021 ; https://subtbiol.pensoft.net/ >
-    au < manifest ; 2022 ; 42-46 ; Subterranean Biology Volume 2022 ; 2022 ; https://subtbiol.pensoft.net/ >
+    au < released ; 2022 ; 42-44 ; Subterranean Biology Volume 2022 ; 2022 ; https://subtbiol.pensoft.net/ >
+    au < manifest ; 2023 ; 45-47 ; Subterranean Biology Volume 2023 ; 2023 ; https://subtbiol.pensoft.net/ >
 
    }
 
@@ -365,7 +378,8 @@
     au < released ; 2019 ; 812-900 ; ZooKeys Volume 2019 ; 2019 ; https://zookeys.pensoft.net/ >
     au < released ; 2020 ; 901-1008 ; ZooKeys Volume 2020 ; 2020 ; https://zookeys.pensoft.net/ >
     au < released ; 2021 ; 1009-1117 ; ZooKeys Volume 2021 ; 2021 ; https://zookeys.pensoft.net/ >
-    au < manifest ; 2022 ; 1080-1150 ; ZooKeys Volume 2022 ; 2022 ; https://zookeys.pensoft.net/ >
+    au < released ; 2022 ; 1080-1150 ; ZooKeys Volume 2022 ; 2022 ; https://zookeys.pensoft.net/ >
+    au < manifest ; 2023 ; 1138-1195 ; ZooKeys Volume 2023 ; 2023 ; https://zookeys.pensoft.net/ >
 
    }
    
@@ -389,7 +403,8 @@
     au < released ; 2019 ; 94 ; Zoosystematics and Evolution Volume 2019 ; 2019 ; https://zse.pensoft.net/ >
     au < released ; 2020 ; 94 ; Zoosystematics and Evolution Volume 2020 ; 2020 ; https://zse.pensoft.net/ >
     au < released ; 2021 ; 95 ; Zoosystematics and Evolution Volume 2021 ; 2021 ; https://zse.pensoft.net/ >
-    au < manifest ; 2022 ; 96 ; Zoosystematics and Evolution Volume 2022 ; 2022 ; https://zse.pensoft.net/ >
+    au < released ; 2022 ; 96 ; Zoosystematics and Evolution Volume 2022 ; 2022 ; https://zse.pensoft.net/ >
+    au < manifest ; 2023 ; 97 ; Zoosystematics and Evolution Volume 2023 ; 2023 ; https://zse.pensoft.net/ >
 
     }
 
@@ -408,7 +423,8 @@
       au < released ; 2019 ; 2019 ; Alpine Entomology Volume 2019 ; 2019 ; https://alpineentomology.pensoft.net/ >
       au < released ; 2020 ; 2020 ; Alpine Entomology Volume 2020 ; 2020 ; https://alpineentomology.pensoft.net/ >
       au < released ; 2021 ; 2021 ; Alpine Entomology Volume 2021 ; 2021 ; https://alpineentomology.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; Alpine Entomology Volume 2022 ; 2022 ; https://alpineentomology.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; Alpine Entomology Volume 2022 ; 2022 ; https://alpineentomology.pensoft.net/ >
+      au < manifest ; 2023 ; 2023 ; Alpine Entomology Volume 2023 ; 2023 ; https://alpineentomology.pensoft.net/ >
 
   }
 
@@ -426,7 +442,6 @@
       au < released ; 2019 ; 2019 ; Arctic Environmental Research Volume 2019 ; 2019 ; https://aer.pensoft.net/ >
       au < released ; 2020 ; 2020 ; Arctic Environmental Research Volume 2020 ; 2020 ; https://aer.pensoft.net/ >
       au < released ; 2021 ; 2021 ; Arctic Environmental Research Volume 2021 ; 2021 ; https://aer.pensoft.net/ >
-      au < expected ; 2022 ; 2022 ; Arctic Environmental Research Volume 2022 ; 2022 ; https://aer.pensoft.net/ >
 
   }
 
@@ -444,7 +459,8 @@
       au < released ; 2019 ; 2019 ; ARPHA Conference Abstracts Volume 2019 ; 2019 ; https://aca.pensoft.net/ >
       au < released ; 2020 ; 2020 ; ARPHA Conference Abstracts Volume 2020 ; 2020 ; https://aca.pensoft.net/ >
       au < released ; 2021 ; 2021 ; ARPHA Conference Abstracts Volume 2021 ; 2021 ; https://aca.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; ARPHA Conference Abstracts Volume 2022 ; 2022 ; https://aca.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; ARPHA Conference Abstracts Volume 2022 ; 2022 ; https://aca.pensoft.net/ >
+      au < manifest ; 2023 ; 2023 ; ARPHA Conference Abstracts Volume 2023 ; 2023 ; https://aca.pensoft.net/ >
 
   }
 
@@ -467,8 +483,9 @@
       au < released ; 2018 ; 2018 ; BioDiscovery Volume 2018 ; 2018 ; https://biodiscovery.pensoft.net/ >
       au < released ; 2019 ; 2019 ; BioDiscovery Volume 2019 ; 2019 ; https://biodiscovery.pensoft.net/ >
       au < released ; 2020 ; 2020 ; BioDiscovery Volume 2020 ; 2020 ; https://biodiscovery.pensoft.net/ >
-      au < expected ; 2021 ; 2021 ; BioDiscovery Volume 2021 ; 2021 ; https://biodiscovery.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; BioDiscovery Volume 2022 ; 2022 ; https://biodiscovery.pensoft.net/ >
+
+      au < released ; 2022 ; 2022 ; BioDiscovery Volume 2022 ; 2022 ; https://biodiscovery.pensoft.net/ >
+      au < expected ; 2023 ; 2023 ; BioDiscovery Volume 2023 ; 2023 ; https://biodiscovery.pensoft.net/ >
 
   }
 
@@ -486,7 +503,8 @@
       au < released ; 2019 ; 2019 ; Biodiversity Information Science and Standards Volume 2019 ; 2019 ; https://biss.pensoft.net/ >
       au < released ; 2020 ; 2020 ; Biodiversity Information Science and Standards Volume 2020 ; 2020 ; https://biss.pensoft.net/ >
       au < released ; 2021 ; 2021 ; Biodiversity Information Science and Standards Volume 2021 ; 2021 ; https://biss.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; Biodiversity Information Science and Standards Volume 2022 ; 2022 ; https://biss.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; Biodiversity Information Science and Standards Volume 2022 ; 2022 ; https://biss.pensoft.net/ >
+      au < manifest ; 2023 ; 2023 ; Biodiversity Information Science and Standards Volume 2023 ; 2023 ; https://biss.pensoft.net/ >
 
   }
 
@@ -512,9 +530,11 @@
       au < released ; 2019 ; 2019 ; Check List Volume 2019 ; 2019 ; https://checklist.pensoft.net/ >
       au < released ; 2020 ; 2020 ; Check List Volume 2020 ; 2020 ; https://checklist.pensoft.net/ >
       au < released ; 2021 ; 2021 ; Check List Volume 2021 ; 2021 ; https://checklist.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; Check List Volume 2022 ; 2022 ; https://checklist.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; Check List Volume 2022 ; 2022 ; https://checklist.pensoft.net/ >
+      au < manifest ; 2023 ; 2023 ; Check List Volume 2023 ; 2023 ; https://checklist.pensoft.net/ >
 
   }
+
 #  {
 #
 #      title <
@@ -545,7 +565,8 @@
       au < released ; 2019 ; 2019 ; Evolutionary Systematics Volume 2019 ; 2019 ; https://evolsyst.pensoft.net/ >
       au < released ; 2020 ; 2020 ; Evolutionary Systematics Volume 2020 ; 2020 ; https://evolsyst.pensoft.net/ >
       au < released ; 2021 ; 2021 ; Evolutionary Systematics Volume 2021 ; 2021 ; https://evolsyst.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; Evolutionary Systematics Volume 2022 ; 2022 ; https://evolsyst.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; Evolutionary Systematics Volume 2022 ; 2022 ; https://evolsyst.pensoft.net/ >
+      au < manifest ; 2023 ; 2023 ; Evolutionary Systematics Volume 2023 ; 2023 ; https://evolsyst.pensoft.net/ >
 
   }
 
@@ -576,7 +597,8 @@
       param[au_oai_set] = fmj
 
       #Changed from 2603-4301 Food Modeling Journal (FMJ)
-      au < manifest ; 2022 ; 2022 ; Food and Ecological Systems Modelling Journal Volume 2022 ; 2022 ; https://fesmj.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; Food and Ecological Systems Modelling Journal Volume 2022 ; 2022 ; https://fesmj.pensoft.net/ >
+      au < manifest ; 2023 ; 2023 ; Food and Ecological Systems Modelling Journal Volume 2023 ; 2023 ; https://fesmj.pensoft.net/ >
 
   }
 
@@ -613,7 +635,8 @@
       au < released ; 2019 ; 2019 ; Italian Botanist Volume 2019 ; 2019 ; https://italianbotanist.pensoft.net/ >
       au < released ; 2020 ; 2020 ; Italian Botanist Volume 2020 ; 2020 ; https://italianbotanist.pensoft.net/ >
       au < released ; 2021 ; 2021 ; Italian Botanist Volume 2021 ; 2021 ; https://italianbotanist.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; Italian Botanist Volume 2022 ; 2022 ; https://italianbotanist.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; Italian Botanist Volume 2022 ; 2022 ; https://italianbotanist.pensoft.net/ >
+      au < manifest ; 2023 ; 2023 ; Italian Botanist Volume 2023 ; 2023 ; https://italianbotanist.pensoft.net/ >
 
   }
 
@@ -642,7 +665,8 @@
     au < released ; 2019 ; 13 ; Comparative Cytogenetics Volume 2019 ; 2019 ; https://compcytogen.pensoft.net/ >
     au < released ; 2020 ; 13 ; Comparative Cytogenetics Volume 2020 ; 2020 ; https://compcytogen.pensoft.net/ >
     au < released ; 2021 ; 14 ; Comparative Cytogenetics Volume 2021 ; 2021 ; https://compcytogen.pensoft.net/ >
-    au < manifest ; 2022 ; 15 ; Comparative Cytogenetics Volume 2022 ; 2022 ; https://compcytogen.pensoft.net/ >
+    au < released ; 2022 ; 15 ; Comparative Cytogenetics Volume 2022 ; 2022 ; https://compcytogen.pensoft.net/ >
+    au < manifest ; 2023 ; 16 ; Comparative Cytogenetics Volume 2023 ; 2023 ; https://compcytogen.pensoft.net/ >
 
    }
 
@@ -661,7 +685,8 @@
       au < released ; 2019 ; 2019 ; Journal of Orthoptera Research Volume 2019 ; 2019 ; https://jor.pensoft.net/ >
       au < released ; 2020 ; 2020 ; Journal of Orthoptera Research Volume 2020 ; 2020 ; https://jor.pensoft.net/ >
       au < released ; 2021 ; 2021 ; Journal of Orthoptera Research Volume 2021 ; 2021 ; https://jor.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; Journal of Orthoptera Research Volume 2022 ; 2022 ; https://jor.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; Journal of Orthoptera Research Volume 2022 ; 2022 ; https://jor.pensoft.net/ >
+      au < manifest ; 2023 ; 2023 ; Journal of Orthoptera Research Volume 2023 ; 2023 ; https://jor.pensoft.net/ >
 
   }
 
@@ -697,7 +722,8 @@
       au < released ; 2019 ; 2019 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2019 ; 2019 ; https://mab-online.nl/ >
       au < released ; 2020 ; 2020 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2020 ; 2020 ; https://mab-online.nl/ >
       au < released ; 2021 ; 2021 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2021 ; 2021 ; https://mab-online.nl/ >
-      au < manifest ; 2022 ; 2022 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2022 ; 2022 ; https://mab-online.nl/ >
+      au < released ; 2022 ; 2022 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2022 ; 2022 ; https://mab-online.nl/ >
+      au < manifest ; 2023 ; 2023 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2023 ; 2023 ; https://mab-online.nl/ >
 
   }
 
@@ -716,7 +742,8 @@
       au < released ; 2019 ; 2019 ; Metabarcoding and Metagenomics Volume 2019 ; 2019 ; https://mbmg.pensoft.net/ >
       au < released ; 2020 ; 2020 ; Metabarcoding and Metagenomics Volume 2020 ; 2020 ; https://mbmg.pensoft.net/ >
       au < released ; 2021 ; 2021 ; Metabarcoding and Metagenomics Volume 2021 ; 2021 ; https://mbmg.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; Metabarcoding and Metagenomics Volume 2022 ; 2022 ; https://mbmg.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; Metabarcoding and Metagenomics Volume 2022 ; 2022 ; https://mbmg.pensoft.net/ >
+      au < manifest ; 2023 ; 2023 ; Metabarcoding and Metagenomics Volume 2023 ; 2023 ; https://mbmg.pensoft.net/ >
 
   }
 
@@ -735,7 +762,8 @@
       au < released ; 2019 ; 2019 ; Modern Electronic Materials Volume 2019 ; 2019 ; https://moem.pensoft.net/ >
       au < released ; 2020 ; 2020 ; Modern Electronic Materials Volume 2020 ; 2020 ; https://moem.pensoft.net/ >
       au < released ; 2021 ; 2021 ; Modern Electronic Materials Volume 2021 ; 2021 ; https://moem.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; Modern Electronic Materials Volume 2022 ; 2022 ; https://moem.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; Modern Electronic Materials Volume 2022 ; 2022 ; https://moem.pensoft.net/ >
+      au < manifest ; 2023 ; 2023 ; Modern Electronic Materials Volume 2023 ; 2023 ; https://moem.pensoft.net/ >
 
   }
 
@@ -753,7 +781,8 @@
       au < released ; 2019 ; 2019 ; Nuclear Energy and Technology Volume 2019 ; 2019 ; https://nucet.pensoft.net/ >
       au < released ; 2020 ; 2020 ; Nuclear Energy and Technology Volume 2020 ; 2020 ; https://nucet.pensoft.net/ >
       au < released ; 2021 ; 2021 ; Nuclear Energy and Technology Volume 2021 ; 2021 ; https://nucet.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; Nuclear Energy and Technology Volume 2022 ; 2022 ; https://nucet.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; Nuclear Energy and Technology Volume 2022 ; 2022 ; https://nucet.pensoft.net/ >
+      au < manifest ; 2023 ; 2023 ; Nuclear Energy and Technology Volume 2023 ; 2023 ; https://nucet.pensoft.net/ >
 
   }
 
@@ -773,7 +802,8 @@
       au < released ; 2019 ; 2019 ; One Ecosystem Volume 2019 ; 2019 ; https://oneecosystem.pensoft.net/ >
       au < released ; 2020 ; 2020 ; One Ecosystem Volume 2020 ; 2020 ; https://oneecosystem.pensoft.net/ >
       au < released ; 2021 ; 2021 ; One Ecosystem Volume 2021 ; 2021 ; https://oneecosystem.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; One Ecosystem Volume 2022 ; 2022 ; https://oneecosystem.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; One Ecosystem Volume 2022 ; 2022 ; https://oneecosystem.pensoft.net/ >
+      au < manifest ; 2023 ; 2023 ; One Ecosystem Volume 2023 ; 2023 ; https://oneecosystem.pensoft.net/ >
 
   }
 
@@ -794,7 +824,8 @@
       au < released ; 2019 ; 2019 ; Research Ideas and Outcomes Volume 2019 ; 2019 ; https://riojournal.com/ >
       au < released ; 2020 ; 2020 ; Research Ideas and Outcomes Volume 2020 ; 2020 ; https://riojournal.com/ >
       au < released ; 2021 ; 2021 ; Research Ideas and Outcomes Volume 2021 ; 2021 ; https://riojournal.com/ >
-      au < manifest ; 2022 ; 2022 ; Research Ideas and Outcomes Volume 2022 ; 2022 ; https://riojournal.com/ >
+      au < released ; 2022 ; 2022 ; Research Ideas and Outcomes Volume 2022 ; 2022 ; https://riojournal.com/ >
+      au < manifest ; 2023 ; 2023 ; Research Ideas and Outcomes Volume 2023 ; 2023 ; https://riojournal.com/ >
 
   }
 
@@ -808,14 +839,16 @@
 
       param[au_oai_set] = rrpharmacology
 
-      au < released ; 2015 ; 2015 ; Research results in Pharmacology Volume 2015 ; 2015 ; https://rrpharmacology.pensoft.net/ >
-      au < released ; 2016 ; 2016 ; Research results in Pharmacology Volume 2016 ; 2016 ; https://rrpharmacology.pensoft.net/ >
-      au < released ; 2017 ; 2017 ; Research results in Pharmacology Volume 2017 ; 2017 ; https://rrpharmacology.pensoft.net/ >
-      au < released ; 2018 ; 2018 ; Research results in Pharmacology Volume 2018 ; 2018 ; https://rrpharmacology.pensoft.net/ >
-      au < released ; 2019 ; 2019 ; Research results in Pharmacology Volume 2019 ; 2019 ; https://rrpharmacology.pensoft.net/ >
-      au < released ; 2020 ; 2020 ; Research results in Pharmacology Volume 2020 ; 2020 ; https://rrpharmacology.pensoft.net/ >
-      au < manifest ; 2021 ; 2021 ; Research results in Pharmacology Volume 2021 ; 2021 ; https://rrpharmacology.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; Research results in Pharmacology Volume 2022 ; 2022 ; https://rrpharmacology.ru/ >
+      au < down ; 2015 ; 2015 ; Research results in Pharmacology Volume 2015 ; 2015 ; https://rrpharmacology.pensoft.net/ >
+      au < down ; 2016 ; 2016 ; Research results in Pharmacology Volume 2016 ; 2016 ; https://rrpharmacology.pensoft.net/ >
+      au < down ; 2017 ; 2017 ; Research results in Pharmacology Volume 2017 ; 2017 ; https://rrpharmacology.pensoft.net/ >
+      au < down ; 2018 ; 2018 ; Research results in Pharmacology Volume 2018 ; 2018 ; https://rrpharmacology.pensoft.net/ >
+      au < down ; 2019 ; 2019 ; Research results in Pharmacology Volume 2019 ; 2019 ; https://rrpharmacology.pensoft.net/ >
+      au < down ; 2020 ; 2020 ; Research results in Pharmacology Volume 2020 ; 2020 ; https://rrpharmacology.pensoft.net/ >
+      au < doNotProcess ; 2021 ; 2021 ; Research results in Pharmacology Volume 2021 ; 2021 ; https://rrpharmacology.pensoft.net/ >
+      au < doNotProcess ; 2022 ; 2022 ; Research results in Pharmacology Volume 2022 ; 2022 ; https://rrpharmacology.ru/ >
+      au < doNotProcess ; 2023 ; 2023 ; Research results in Pharmacology Volume 2023 ; 2023 ; https://rrpharmacology.ru/ >
+      #Moved to OJS https://rrpharmacology.ru/
 
   }
 
@@ -835,7 +868,6 @@
       au < released ; 2019 ; 2019 ; Rethinking Ecology Volume 2019 ; 2019 ; https://rethinkingecology.pensoft.net/ >
       au < released ; 2020 ; 2020 ; Rethinking Ecology Volume 2020 ; 2020 ; https://rethinkingecology.pensoft.net/ >
       au < released ; 2021 ; 2021 ; Rethinking Ecology Volume 2021 ; 2021 ; https://rethinkingecology.pensoft.net/ >
-      au < expected ; 2022 ; 2022 ; Rethinking Ecology Volume 2022 ; 2022 ; https://rethinkingecology.pensoft.net/ >
 
   }
 
@@ -856,9 +888,11 @@
       au < released ; 2019 ; 2019 ; Russian Journal of Economics Volume 2019 ; 2019 ; https://rujec.org/ >
       au < released ; 2020 ; 2020 ; Russian Journal of Economics Volume 2020 ; 2020 ; https://rujec.org/ >
       au < released ; 2021 ; 2021 ; Russian Journal of Economics Volume 2021 ; 2021 ; https://rujec.org/ >
-      au < manifest ; 2022 ; 2022 ; Russian Journal of Economics Volume 2022 ; 2022 ; https://rujec.org/ >
+      au < released ; 2022 ; 2022 ; Russian Journal of Economics Volume 2022 ; 2022 ; https://rujec.org/ >
+      au < manifest ; 2023 ; 2023 ; Russian Journal of Economics Volume 2023 ; 2023 ; https://rujec.org/ >
 
   }
+
 #  {
 #
 #      title <
@@ -909,7 +943,6 @@
       au < released ; 2019 ; 2019 ; Viticulture Data Journal Volume 2019 ; 2019 ; https://vdj.pensoft.net/ >
       au < released ; 2020 ; 2020 ; Viticulture Data Journal Volume 2020 ; 2020 ; https://vdj.pensoft.net/ >
       au < released ; 2021 ; 2021 ; Viticulture Data Journal Volume 2021 ; 2021 ; https://vdj.pensoft.net/ >
-      au < expected ; 2022 ; 2022 ; Viticulture Data Journal Volume 2022 ; 2022 ; https://vdj.pensoft.net/ >
 
   }
 
@@ -930,7 +963,6 @@
       au < released ; 2019 ; 36 ; Zoologia Volume 2019 ; 2019 ; https://zoologia.pensoft.net/ >
       au < released ; 2020 ; 36 ; Zoologia Volume 2020 ; 2020 ; https://zoologia.pensoft.net/ >
       au < released ; 2021 ; 37 ; Zoologia Volume 2021 ; 2021 ; https://zoologia.pensoft.net/ >
-      au < expected ; 2022 ; 38 ; Zoologia Volume 2022 ; 2022 ; https://zoologia.pensoft.net/ >
 
   }
 
@@ -947,7 +979,8 @@
       au < released ; 2019 ; 2019 ; ARPHA Proceedings Volume 2019 ; 2019 ; https://ap.pensoft.net/ >
       au < released ; 2020 ; 2020 ; ARPHA Proceedings Volume 2020 ; 2020 ; https://ap.pensoft.net/ >
       au < released ; 2021 ; 2021 ; ARPHA Proceedings Volume 2021 ; 2021 ; https://ap.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; ARPHA Proceedings Volume 2022 ; 2022 ; https://ap.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; ARPHA Proceedings Volume 2022 ; 2022 ; https://ap.pensoft.net/ >
+      au < expected ; 2023 ; 2023 ; ARPHA Proceedings Volume 2023 ; 2023 ; https://ap.pensoft.net/ >
 
   }
 
@@ -963,7 +996,6 @@
 
       au < released ; 2020 ; 2020 ; Acta Biologica Sibirica Volume 2020 ; 2020 ; https://abs.pensoft.net/ >
       au < released ; 2021 ; 2021 ; Acta Biologica Sibirica Volume 2021 ; 2021 ; https://abs.pensoft.net/ >
-      au < expected ; 2022 ; 2022 ; Acta Biologica Sibirica Volume 2022 ; 2022 ; https://abs.pensoft.net/ >
 
   }
 
@@ -981,7 +1013,8 @@
       au < released ; 2019 ; 2019 ; NeoTropical Biology and Conservation Volume 2019 ; 2019 ; https://neotropical.pensoft.net/ >
       au < released ; 2020 ; 2020 ; NeoTropical Biology and Conservation Volume 2020 ; 2020 ; https://neotropical.pensoft.net/ >
       au < released ; 2021 ; 2021 ; NeoTropical Biology and Conservation Volume 2021 ; 2021 ; https://neotropical.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; NeoTropical Biology and Conservation Volume 2022 ; 2022 ; https://neotropical.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; NeoTropical Biology and Conservation Volume 2022 ; 2022 ; https://neotropical.pensoft.net/ >
+      au < manifest ; 2023 ; 2023 ; NeoTropical Biology and Conservation Volume 2023 ; 2023 ; https://neotropical.pensoft.net/ >
 
   }
 
@@ -999,7 +1032,8 @@
       au < released ; 2019 ; 2019 ; OGH Herpetozoa Volume 2019 ; 2019 ; https://herpetozoa.pensoft.net/ >
       au < released ; 2020 ; 2020 ; OGH Herpetozoa Volume 2020 ; 2020 ; https://herpetozoa.pensoft.net/ >
       au < released ; 2021 ; 2021 ; OGH Herpetozoa Volume 2021 ; 2021 ; https://herpetozoa.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; OGH Herpetozoa Volume 2022 ; 2022 ; https://herpetozoa.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; OGH Herpetozoa Volume 2022 ; 2022 ; https://herpetozoa.pensoft.net/ >
+      au < manifest ; 2023 ; 2023 ; OGH Herpetozoa Volume 2023 ; 2023 ; https://herpetozoa.pensoft.net/ >
 
   }
 
@@ -1016,7 +1050,8 @@
 
       au < released ; 2020 ; 2020 ; European Science Editing (ESE) Volume 2020 ; 2020 ; https://ese.arphahub.com/ >
       au < released ; 2021 ; 2021 ; European Science Editing (ESE) Volume 2021 ; 2021 ; https://ese.arphahub.com/ >
-      au < manifest ; 2022 ; 2022 ; European Science Editing (ESE) Volume 2022 ; 2022 ; https://ese.arphahub.com/ >
+      au < released ; 2022 ; 2022 ; European Science Editing (ESE) Volume 2022 ; 2022 ; https://ese.arphahub.com/ >
+      au < manifest ; 2023 ; 2023 ; European Science Editing (ESE) Volume 2023 ; 2023 ; https://ese.arphahub.com/ >
 
   }
 
@@ -1034,7 +1069,8 @@
       au < released ; 2019 ; 2019 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2019 ; 2019 ; https://travaux.pensoft.net/ >
       au < released ; 2020 ; 2020 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2020 ; 2020 ; https://travaux.pensoft.net/ >
       au < released ; 2021 ; 2021 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2021 ; 2021 ; https://travaux.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2022 ; 2022 ; https://travaux.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2022 ; 2022 ; https://travaux.pensoft.net/ >
+      au < manifest ; 2023 ; 2023 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2023 ; 2023 ; https://travaux.pensoft.net/ >
 
   }
 
@@ -1052,7 +1088,8 @@
       au < released ; 2019 ; 2019 ; Pharmacia Volume 2019 ; 2019 ; https://pharmacia.pensoft.net/ >
       au < released ; 2020 ; 2020 ; Pharmacia Volume 2020 ; 2020 ; https://pharmacia.pensoft.net/ >
       au < released ; 2021 ; 2021 ; Pharmacia Volume 2021 ; 2021 ; https://pharmacia.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; Pharmacia Volume 2022 ; 2022 ; https://pharmacia.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; Pharmacia Volume 2022 ; 2022 ; https://pharmacia.pensoft.net/ >
+      au < manifest ; 2023 ; 2023 ; Pharmacia Volume 2023 ; 2023 ; https://pharmacia.pensoft.net/ >
 
   }
 
@@ -1069,6 +1106,7 @@
       au < released ; 2020 ; 2020 ; Bulgarian Cardiology Volume 2020 ; 2020 ; http://journal.bgcardio.org/ >
       au < released ; 2021 ; 2021 ; Bulgarian Cardiology Volume 2021 ; 2021 ; http://journal.bgcardio.org/ >
       au < manifest ; 2022 ; 2022 ; Bulgarian Cardiology Volume 2022 ; 2022 ; http://journal.bgcardio.org/ >
+      au < expected ; 2023 ; 2023 ; Bulgarian Cardiology Volume 2023 ; 2023 ; http://journal.bgcardio.org/ >
 
   }
 
@@ -1084,7 +1122,8 @@
 
       au < released ; 2020 ; 2020 ; Silva Balcanica Volume 2020 ; 2020 ; https://silvabalcanica.pensoft.net/ >
       au < released ; 2021 ; 2021 ; Silva Balcanica Volume 2021 ; 2021 ; https://silvabalcanica.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; Silva Balcanica Volume 2022 ; 2022 ; https://silvabalcanica.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; Silva Balcanica Volume 2022 ; 2022 ; https://silvabalcanica.pensoft.net/ >
+      au < manifest ; 2023 ; 2023 ; Silva Balcanica Volume 2023 ; 2023 ; https://silvabalcanica.pensoft.net/ >
 
   }
 
@@ -1101,6 +1140,7 @@
       au < released ; 2020 ; 2020 ; Journal of European Landscapes Volume 2020 ; 2020 ; https://journalofeuropeanlandscapes.eu/ >
       au < released ; 2021 ; 2021 ; Journal of European Landscapes Volume 2021 ; 2021 ; https://journalofeuropeanlandscapes.eu/ >
       au < manifest ; 2022 ; 2022 ; Journal of European Landscapes Volume 2022 ; 2022 ; https://journalofeuropeanlandscapes.eu/ >
+      au < expected ; 2023 ; 2023 ; Journal of European Landscapes Volume 2023 ; 2023 ; https://journalofeuropeanlandscapes.eu/ >
 
   }
 
@@ -1116,7 +1156,8 @@
 
       au < released ; 2020 ; 2020 ; Vegetation Classification and Survey Volume 2020 ; 2020 ; https://vcs.pensoft.net/ >
       au < released ; 2021 ; 2021 ; Vegetation Classification and Survey Volume 2021 ; 2021 ; https://vcs.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; Vegetation Classification and Survey Volume 2022 ; 2022 ; https://vcs.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; Vegetation Classification and Survey Volume 2022 ; 2022 ; https://vcs.pensoft.net/ >
+      au < manifest ; 2023 ; 2023 ; Vegetation Classification and Survey Volume 2023 ; 2023 ; https://vcs.pensoft.net/ >
 
   }
 
@@ -1132,7 +1173,8 @@
       param[au_oai_set] = aiep
 
       au < released ; 2021 ; 2021 ; Acta Ichthyologica et Piscatoria Volume 2021 ; 2021 ; https://aiep.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; Acta Ichthyologica et Piscatoria Volume 2022 ; 2022 ; https://aiep.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; Acta Ichthyologica et Piscatoria Volume 2022 ; 2022 ; https://aiep.pensoft.net/ >
+      au < manifest ; 2023 ; 2023 ; Acta Ichthyologica et Piscatoria Volume 2023 ; 2023 ; https://aiep.pensoft.net/ >
 
   }
 
@@ -1148,7 +1190,8 @@
       param[au_oai_set] = arthropod-systematics
 
       au < released ; 2021 ; 2021 ; Arthropod Systematics & Phylogeny Volume 2021 ; 2021 ; https://arthropod-systematics.arphahub.com/ >
-      au < manifest ; 2022 ; 2022 ; Arthropod Systematics & Phylogeny Volume 2022 ; 2022 ; https://arthropod-systematics.arphahub.com/ >
+      au < released ; 2022 ; 2022 ; Arthropod Systematics & Phylogeny Volume 2022 ; 2022 ; https://arthropod-systematics.arphahub.com/ >
+      au < manifest ; 2023 ; 2023 ; Arthropod Systematics & Phylogeny Volume 2023 ; 2023 ; https://arthropod-systematics.arphahub.com/ >
 
   }
 
@@ -1166,7 +1209,8 @@
       au < released ; 2019 ; 2019 ; Folia Medica Volume 2019 ; 2019 ; https://foliamedica.bg/ >
       au < released ; 2020 ; 2020 ; Folia Medica Volume 2020 ; 2020 ; https://foliamedica.bg/ >
       au < released ; 2021 ; 2021 ; Folia Medica Volume 2021 ; 2021 ; https://foliamedica.bg/ >
-      au < manifest ; 2022 ; 2022 ; Folia Medica Volume 2022 ; 2022 ; https://foliamedica.bg/ >
+      au < released ; 2022 ; 2022 ; Folia Medica Volume 2022 ; 2022 ; https://foliamedica.bg/ >
+      au < manifest ; 2023 ; 2023 ; Folia Medica Volume 2023 ; 2023 ; https://foliamedica.bg/ >
 
   }
 
@@ -1182,7 +1226,8 @@
       param[au_oai_set] = jbgs
 
       au < released ; 2021 ; 2021 ; Journal of the Bulgarian Geographical Society Volume 2021 ; 2021 ; https://jbgs.arphahub.com/ >
-      au < manifest ; 2022 ; 2022 ; Journal of the Bulgarian Geographical Society Volume 2022 ; 2022 ; https://jbgs.arphahub.com/ >
+      au < released ; 2022 ; 2022 ; Journal of the Bulgarian Geographical Society Volume 2022 ; 2022 ; https://jbgs.arphahub.com/ >
+      au < manifest ; 2023 ; 2023 ; Journal of the Bulgarian Geographical Society Volume 2023 ; 2023 ; https://jbgs.arphahub.com/ >
 
   }
 
@@ -1200,7 +1245,8 @@
       au < released ; 2019 ; 2019 ; Journal of Universal Computer Science Volume 2019 ; 2019 ; https://lib.jucs.org/ >
       au < released ; 2020 ; 2020 ; Journal of Universal Computer Science Volume 2020 ; 2020 ; https://lib.jucs.org/ >
       au < released ; 2021 ; 2021 ; Journal of Universal Computer Science Volume 2021 ; 2021 ; https://lib.jucs.org/ >
-      au < manifest ; 2022 ; 2022 ; Journal of Universal Computer Science Volume 2022 ; 2022 ; https://lib.jucs.org/ >
+      au < released ; 2022 ; 2022 ; Journal of Universal Computer Science Volume 2022 ; 2022 ; https://lib.jucs.org/ >
+      au < manifest ; 2023 ; 2023 ; Journal of Universal Computer Science Volume 2023 ; 2023 ; https://lib.jucs.org/ >
 
   }
 
@@ -1217,7 +1263,8 @@
 
       au < released ; 2020 ; 2020 ; Plant Sociology Volume 2020 ; 2020 ; https://plantsociology.arphahub.com/ >
       au < released ; 2021 ; 2021 ; Plant Sociology Volume 2021 ; 2021 ; https://plantsociology.arphahub.com/ >
-      au < manifest ; 2022 ; 2022 ; Plant Sociology Volume 2022 ; 2022 ; https://plantsociology.arphahub.com/ >
+      au < released ; 2022 ; 2022 ; Plant Sociology Volume 2022 ; 2022 ; https://plantsociology.arphahub.com/ >
+      au < manifest ; 2023 ; 2023 ; Plant Sociology Volume 2023 ; 2023 ; https://plantsociology.arphahub.com/ >
 
   }
 
@@ -1236,7 +1283,8 @@
       au < released ; 2019 ; 2019 ; Population and Economics Volume 2019 ; 2019 ; https://populationandeconomics.pensoft.net/ >
       au < released ; 2020 ; 2020 ; Population and Economics Volume 2020 ; 2020 ; https://populationandeconomics.pensoft.net/ >
       au < released ; 2021 ; 2021 ; Population and Economics Volume 2021 ; 2021 ; https://populationandeconomics.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; Population and Economics Volume 2022 ; 2022 ; https://populationandeconomics.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; Population and Economics Volume 2022 ; 2022 ; https://populationandeconomics.pensoft.net/ >
+      au < manifest ; 2023 ; 2023 ; Population and Economics Volume 2023 ; 2023 ; https://populationandeconomics.pensoft.net/ >
 
   }
 
@@ -1252,7 +1300,8 @@
       param[au_oai_set] = vertebrate-zoology
 
       au < released ; 2021 ; 2021 ; Vertebrate Zoology Volume 2021 ; 2021 ; https://vertebrate-zoology.arphahub.com/ >
-      au < manifest ; 2022 ; 2022 ; Vertebrate Zoology Volume 2022 ; 2022 ; https://vertebrate-zoology.arphahub.com/ >
+      au < released ; 2022 ; 2022 ; Vertebrate Zoology Volume 2022 ; 2022 ; https://vertebrate-zoology.arphahub.com/ >
+      au < manifest ; 2023 ; 2023 ; Vertebrate Zoology Volume 2023 ; 2023 ; https://vertebrate-zoology.arphahub.com/ >
 
   }
 
@@ -1268,7 +1317,205 @@
       param[au_oai_set] = zitteliana
 
       au < released ; 2021 ; 2021 ; Zitteliana Volume 2021 ; 2021 ; https://zitteliana.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; Zitteliana Volume 2022 ; 2022 ; https://zitteliana.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; Zitteliana Volume 2022 ; 2022 ; https://zitteliana.pensoft.net/ >
+      au < expected ; 2023 ; 2023 ; Zitteliana Volume 2023 ; 2023 ; https://zitteliana.pensoft.net/ >
+
+  }
+
+  {
+
+      title <
+        name = Aquatic Invasions ;
+        issn = 1798-6540 ;
+        eissn = 1818-5487
+      >
+
+      param[au_oai_set] = aquaticinvasions
+
+      au < manifest ; 2023 ; 2023 ; Aquatic Invasions Volume 2023 ; 2023 ; https://aquaticinvasions.arphahub.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Atomic Layer Deposition ;
+        eissn = 2772-2570
+      >
+
+      param[au_oai_set] = atomiclayerdeposition
+
+      au < manifest ; 2023 ; 2023 ; Atomic Layer Deposition Volume 2023 ; 2023 ; https://journal.atomiclayerdeposition.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Biosystematics and Ecology ;
+        issn = 1026-4949 ;
+        eissn = 2710-298X
+      >
+
+      param[au_oai_set] = biosystecol
+
+      au < released ; 2021 ; 2021 ; Biosystematics and Ecology Volume 2021 ; 2021 ; https://biosystecol.oeaw.ac.at/ >
+
+  }
+
+  {
+
+      title <
+        name = BRICS Journal of Economics ;
+        issn = 2712-7702 ;
+        eissn = 2712-7508
+      >
+
+      param[au_oai_set] = brics-econ
+
+      au < released ; 2020 ; 2020 ; BRICS Journal of Economics Volume 2020 ; 2020 ; https://brics-econ.arphahub.com/ >
+      au < released ; 2021 ; 2021 ; BRICS Journal of Economics Volume 2021 ; 2021 ; https://brics-econ.arphahub.com/ >
+      au < released ; 2022 ; 2022 ; BRICS Journal of Economics Volume 2022 ; 2022 ; https://brics-econ.arphahub.com/ >
+      au < manifest ; 2023 ; 2023 ; BRICS Journal of Economics Volume 2023 ; 2023 ; https://brics-econ.arphahub.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Contributions to Entomology (Beiträge zur Entomologie) ;
+        issn = 0005-805X ;
+        eissn = 2511-6428
+      >
+
+      param[au_oai_set] = contributions-to-entomology
+
+      au < released ; 2022 ; 2022 ; Contributions to Entomology (Beiträge zur Entomologie) Volume 2022 ; 2022 ; https://contributions-to-entomology.arphahub.com/ >
+      au < manifest ; 2023 ; 2023 ; Contributions to Entomology (Beiträge zur Entomologie) Volume 2023 ; 2023 ; https://contributions-to-entomology.arphahub.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Fossil Record ;
+        issn = 2193-0066 ;
+        eissn = 2193-0074
+      >
+
+      param[au_oai_set] = fr
+
+      au < manifest ; 1998 ; 1998 ; Fossil Record Volume 1998 ; 1998 ; https://fr.pensoft.net/ >
+      au < manifest ; 1999 ; 1999 ; Fossil Record Volume 1999 ; 1999 ; https://fr.pensoft.net/ >
+      au < manifest ; 2000 ; 2000 ; Fossil Record Volume 2000 ; 2000 ; https://fr.pensoft.net/ >
+      au < manifest ; 2001 ; 2001 ; Fossil Record Volume 2001 ; 2001 ; https://fr.pensoft.net/ >
+      au < manifest ; 2002 ; 2002 ; Fossil Record Volume 2002 ; 2002 ; https://fr.pensoft.net/ >
+      au < manifest ; 2003 ; 2003 ; Fossil Record Volume 2003 ; 2003 ; https://fr.pensoft.net/ >
+      au < manifest ; 2004 ; 2004 ; Fossil Record Volume 2004 ; 2004 ; https://fr.pensoft.net/ >
+      au < manifest ; 2005 ; 2005 ; Fossil Record Volume 2005 ; 2005 ; https://fr.pensoft.net/ >
+      au < manifest ; 2006 ; 2006 ; Fossil Record Volume 2006 ; 2006 ; https://fr.pensoft.net/ >
+      au < manifest ; 2007 ; 2007 ; Fossil Record Volume 2007 ; 2007 ; https://fr.pensoft.net/ >
+      au < manifest ; 2008 ; 2008 ; Fossil Record Volume 2008 ; 2008 ; https://fr.pensoft.net/ >
+      au < manifest ; 2009 ; 2009 ; Fossil Record Volume 2009 ; 2009 ; https://fr.pensoft.net/ >
+      au < manifest ; 2010 ; 2010 ; Fossil Record Volume 2010 ; 2010 ; https://fr.pensoft.net/ >
+      au < manifest ; 2011 ; 2011 ; Fossil Record Volume 2011 ; 2011 ; https://fr.pensoft.net/ >
+      au < released ; 2012 ; 2012 ; Fossil Record Volume 2012 ; 2012 ; https://fr.pensoft.net/ >
+      au < released ; 2013 ; 2013 ; Fossil Record Volume 2013 ; 2013 ; https://fr.pensoft.net/ >
+      au < released ; 2014 ; 2014 ; Fossil Record Volume 2014 ; 2014 ; https://fr.pensoft.net/ >
+      au < released ; 2015 ; 2015 ; Fossil Record Volume 2015 ; 2015 ; https://fr.pensoft.net/ >
+      au < released ; 2016 ; 2016 ; Fossil Record Volume 2016 ; 2016 ; https://fr.pensoft.net/ >
+      au < released ; 2017 ; 2017 ; Fossil Record Volume 2017 ; 2017 ; https://fr.pensoft.net/ >
+      au < released ; 2018 ; 2018 ; Fossil Record Volume 2018 ; 2018 ; https://fr.pensoft.net/ >
+      au < released ; 2019 ; 2019 ; Fossil Record Volume 2019 ; 2019 ; https://fr.pensoft.net/ >
+      au < released ; 2020 ; 2020 ; Fossil Record Volume 2020 ; 2020 ; https://fr.pensoft.net/ >
+      au < released ; 2021 ; 2021 ; Fossil Record Volume 2021 ; 2021 ; https://fr.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; Fossil Record Volume 2022 ; 2022 ; https://fr.pensoft.net/ >
+      au < manifest ; 2023 ; 2023 ; Fossil Record Volume 2023 ; 2023 ; https://fr.pensoft.net/ >
+
+  }
+
+  {
+
+      title <
+        name = Geologica Saxonica ;
+        issn = 1617-8467 ;
+        eissn = 2750-8242
+      >
+
+      param[au_oai_set] = geologica-saxonica
+
+      au < released ; 2021 ; 2021 ; Geologica Saxonica Volume 2021 ; 2021 ; https://geologica-saxonica.arphahub.com/ >
+      au < released ; 2022 ; 2022 ; Geologica Saxonica Volume 2022 ; 2022 ; https://geologica-saxonica.arphahub.com/ >
+      au < manifest ; 2023 ; 2023 ; Geologica Saxonica Volume 2023 ; 2023 ; https://geologica-saxonica.arphahub.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Interventional Cardiology Forum ;
+        eissn = 2738-8972
+      >
+
+      param[au_oai_set] = interventionalcardioforum
+
+      au < manifest ; 2021 ; 2021 ; Interventional Cardiology Forum Volume 2021 ; 2021 ; https://interventionalcardioforum.net/ >
+      au < manifest ; 2022 ; 2022 ; Interventional Cardiology Forum Volume 2022 ; 2022 ; https://interventionalcardioforum.net/ >
+      au < manifest ; 2023 ; 2023 ; Interventional Cardiology Forum Volume 2023 ; 2023 ; https://interventionalcardioforum.net/ >
+
+  }
+
+  {
+
+      title <
+        name = Languages and Modalities (LaMo) ;
+        eissn = 2782-5744
+      >
+
+      param[au_oai_set] = languagesandmodalities
+
+      au < released ; 2021 ; 2021 ; Languages and Modalities (LaMo) Volume 2021 ; 2021 ; https://languagesandmodalities.ru/ >
+      au < released ; 2022 ; 2022 ; Languages and Modalities (LaMo) Volume 2022 ; 2022 ; https://languagesandmodalities.ru/ >
+      au < expected ; 2023 ; 2023 ; Languages and Modalities (LaMo) Volume 2023 ; 2023 ; https://languagesandmodalities.ru/ >
+
+  }
+
+  {
+
+      title <
+        name = Plant Ecology and Evolution ;
+        issn = 2032-3913 ;
+        eissn = 2032-3921
+      >
+
+      param[au_oai_set] = plecevo
+
+      au < released ; 2013 ; 2013 ; Plant Ecology and Evolution Volume 2013 ; 2013 ; https://plecevo.eu/ >
+      au < released ; 2014 ; 2014 ; Plant Ecology and Evolution Volume 2014 ; 2014 ; https://plecevo.eu/ >
+      au < released ; 2015 ; 2015 ; Plant Ecology and Evolution Volume 2015 ; 2015 ; https://plecevo.eu/ >
+      au < released ; 2016 ; 2016 ; Plant Ecology and Evolution Volume 2016 ; 2016 ; https://plecevo.eu/ >
+      au < released ; 2017 ; 2017 ; Plant Ecology and Evolution Volume 2017 ; 2017 ; https://plecevo.eu/ >
+      au < released ; 2018 ; 2018 ; Plant Ecology and Evolution Volume 2018 ; 2018 ; https://plecevo.eu/ >
+      au < released ; 2019 ; 2019 ; Plant Ecology and Evolution Volume 2019 ; 2019 ; https://plecevo.eu/ >
+      au < released ; 2020 ; 2020 ; Plant Ecology and Evolution Volume 2020 ; 2020 ; https://plecevo.eu/ >
+      au < released ; 2021 ; 2021 ; Plant Ecology and Evolution Volume 2021 ; 2021 ; https://plecevo.eu/ >
+      au < released ; 2022 ; 2022 ; Plant Ecology and Evolution Volume 2022 ; 2022 ; https://plecevo.eu/ >
+      au < manifest ; 2023 ; 2023 ; Plant Ecology and Evolution Volume 2023 ; 2023 ; https://plecevo.eu/ >
+
+  }
+
+  {
+
+      title <
+        name = Tuhinga ;
+        issn = 1173-4337 ;
+        eissn = 2253-5861
+      >
+
+      param[au_oai_set] = tuhinga
+
+      au < released ; 2022 ; 2022 ; Tuhinga Volume 2022 ; 2022 ; https://tuhinga.arphahub.com/ >
+      au < manifest ; 2023 ; 2023 ; Tuhinga Volume 2023 ; 2023 ; https://tuhinga.arphahub.com/ >
 
   }
 

@@ -63,6 +63,7 @@ public class ResPediatricaOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
   protected Collection<String> startUrls;
   protected int year;
   protected Pattern yearPattern = Pattern.compile("^([0-9]{4})-[0-9]{2}-[0-9]{2}");
+  private static final String OAI_GRANULARITY = "YYYY-MM-DD";
   public static final String OAI_DC_METADATA_PREFIX = "oai_dc";
   private static Logger logger =
 	      Logger.getLogger(ResPediatricaOaiCrawlSeed.class);
@@ -93,7 +94,13 @@ public class ResPediatricaOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
 
       String url = UrlUtil.encodeUrl(au.getAuId());
 
-      String storeUrl = baseUrl + "auid=" + UrlUtil.encodeUrl(au.getAuId());
+      /*
+       * Sample OAI call, one thing to notice is ResPediatrica did not implement "set"
+       * http://residenciapediatrica.com.br/oai?verb=ListRecords&metadataPrefix=oai_dc&from=2012-01-01&until=2012-12-31
+       * Sample auid:
+       * org|lockss|plugin|respediatrica|ClockssResPediatricaOaiPlugin&base_url~http%3A%2F%2Fresidenciapediatrica%2Ecom%2Ebr%2F&oai_granularity~YYYY-MM-DD&year~2023
+       */
+      String storeUrl = String.format("%slockss?oai_granularity=%s&au_oai_date=%d", baseUrl, UrlUtil.encodeUrl(OAI_GRANULARITY), year);
 
       logger.debug3("baseUrl = " + baseUrl + ", url = " + url + ", storeUrl = " + storeUrl);
 

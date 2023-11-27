@@ -26,16 +26,16 @@
       param[journal_id] = cfmb
       #not accepting submissions. Still OJS2. 20200304
 
-      au < crawling ; exists ; 2000 ; Canadian Folk Music / Musique folklorique canadienne Volume 34 ; 34 ; 2000 ; >
-      au < crawling ; exists ; 2001 ; Canadian Folk Music / Musique folklorique canadienne Volume 35 ; 35 ; 2001 ; >
-      au < crawling ; exists ; 2002 ; Canadian Folk Music / Musique folklorique canadienne Volume 36 ; 36 ; 2002 ; >
-      au < crawling ; exists ; 2003 ; Canadian Folk Music / Musique folklorique canadienne Volume 37 ; 37 ; 2003 ; >
-      au < crawling ; exists ; 2004 ; Canadian Folk Music / Musique folklorique canadienne Volume 38 ; 38 ; 2004 ; >
-      au < crawling ; exists ; 2005 ; Canadian Folk Music / Musique folklorique canadienne Volume 39 ; 39 ; 2005 ; >
-      au < crawling ; exists ; 2006 ; Canadian Folk Music / Musique folklorique canadienne Volume 40 ; 40 ; 2006 ; >
-      au < crawling ; exists ; 2007 ; Canadian Folk Music / Musique folklorique canadienne Volume 41 ; 41 ; 2007 ; >
-      au < crawling ; exists ; 2008 ; Canadian Folk Music / Musique folklorique canadienne Volume 42 ; 42 ; 2008 ; >
-      au < crawling ; exists ; 2009 ; Canadian Folk Music / Musique folklorique canadienne Volume 43 ; 43 ; 2009 ; >
+      au < frozen ; exists ; 2000 ; Canadian Folk Music / Musique folklorique canadienne Volume 34 ; 34 ; 2000 ; >
+      au < frozen ; exists ; 2001 ; Canadian Folk Music / Musique folklorique canadienne Volume 35 ; 35 ; 2001 ; >
+      au < frozen ; exists ; 2002 ; Canadian Folk Music / Musique folklorique canadienne Volume 36 ; 36 ; 2002 ; >
+      au < frozen ; exists ; 2003 ; Canadian Folk Music / Musique folklorique canadienne Volume 37 ; 37 ; 2003 ; >
+      au < frozen ; exists ; 2004 ; Canadian Folk Music / Musique folklorique canadienne Volume 38 ; 38 ; 2004 ; >
+      au < frozen ; exists ; 2005 ; Canadian Folk Music / Musique folklorique canadienne Volume 39 ; 39 ; 2005 ; >
+      au < frozen ; exists ; 2006 ; Canadian Folk Music / Musique folklorique canadienne Volume 40 ; 40 ; 2006 ; >
+      au < frozen ; exists ; 2007 ; Canadian Folk Music / Musique folklorique canadienne Volume 41 ; 41 ; 2007 ; >
+      au < frozen ; exists ; 2008 ; Canadian Folk Music / Musique folklorique canadienne Volume 42 ; 42 ; 2008 ; >
+      au < frozen ; exists ; 2009 ; Canadian Folk Music / Musique folklorique canadienne Volume 43 ; 43 ; 2009 ; >
       au < ingNotReady ; exists ; 2010 ; Canadian Folk Music / Musique folklorique canadienne Volume 44 ; 44 ; 2010 ; > #manifest page passes. no substance on ingest. LXPLUG-1982
       au < ingNotReady ; exists ; 2011 ; Canadian Folk Music / Musique folklorique canadienne Volume 45 ; 45 ; 2011 ; > #manifest page passes. no substance on ingest. LXPLUG-1982
       au < finished ; finished ; 2012 ; Canadian Folk Music / Musique folklorique canadienne Volume 46 ; 46 ; 2012 ; >
@@ -47,10 +47,11 @@
     
   }
 
+  # changed from 'Distance Learning' to 'Distributed Learning' to match the website 2023-03-21
   {
   
     title < 
-      name = International Review of Research in Open and Distance Learning (IRRODL) ;
+      name = International Review of Research in Open and Distributed Learning (IRRODL) ;
       eissn = 1492-3831 
     >
 
@@ -60,14 +61,14 @@
       param[base_url] = http://www.irrodl.org/
       param[journal_id] = irrodl
 
-      au < doNotProcess ; exists ; 2011 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 12 ; 12 ; 2011 ; >
-      au < zapped ; finished ; 2012 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 13 ; 13 ; 2012 ; >
-      au < zapped ; finished ; 2013 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 14 ; 14 ; 2013 ; reingest3.clockss.org:8083 >
-      au < zapped ; finished ; 2014  ; International Review of Research in Open and Distance Learning (IRRODL) Volume 15 ; 15 ; 2014 ; >
-      au < zapped ; finished ; 2015 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 16 ; 16 ; 2015 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2016 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 17 ; 17 ; 2016 ; >
-      au < superseded ; exists ; 2017 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 18 [superseded] ; 18 ; 2017 ; >
-      au < superseded ; exists ; 2018 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 19 [superseded] ; 19 ; 2018 ; >
+      au < doNotProcess ; exists ; 2011 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 12 ; 12 ; 2011 ; >
+      au < zapped ; finished ; 2012 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 13 ; 13 ; 2012 ; >
+      au < zapped ; finished ; 2013 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 14 ; 14 ; 2013 ; reingest3.clockss.org:8083 >
+      au < zapped ; finished ; 2014  ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 15 ; 15 ; 2014 ; >
+      au < zapped ; finished ; 2015 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 16 ; 16 ; 2015 ; reingest2.clockss.org:8085 >
+      au < frozen ; exists ; 2016 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 17 ; 17 ; 2016 ; >
+      au < superseded ; exists ; 2017 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 18 [superseded] ; 18 ; 2017 ; >
+      au < superseded ; exists ; 2018 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 19 [superseded] ; 19 ; 2018 ; >
       }
       {
       implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
@@ -75,13 +76,14 @@
       param[base_url] = http://www.irrodl.org/
       param[journal_id] = irrodl
 
-      au < frozen ; exists ; 2011 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 12 ; 12 ; 2011 ; >
-      au < frozen ; exists ; 2017 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 18 ; 18 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 19 ; 19 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 20 ; 20 ; 2019 ; >
-      au < frozen ; exists ; 2020 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 21 ; 21 ; 2020 ; >
-      au < frozen ; exists ; 2021 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 22 ; 22 ; 2021 ; >
-      au < notReady ; exists ; 2022 ; International Review of Research in Open and Distance Learning (IRRODL) Volume 23 ; 23 ; 2022 ; > #no substance urls
+      au < frozen ; exists ; 2011 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 12 ; 12 ; 2011 ; >
+      au < frozen ; exists ; 2017 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 18 ; 18 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 19 ; 19 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 20 ; 20 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 21 ; 21 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 22 ; 22 ; 2021 ; >
+      au < notReady ; exists ; 2022 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 23 ; 23 ; 2022 ; > #no substance urls
+      au < expected ; exists ; 2023 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 24 ; 24 ; 2023 ; > #no substance urls
       }
     
   }
@@ -104,15 +106,15 @@
       #still ojs3 20201015
       #gone from site
 
-      au < manifest ; exists ; 2000 ; Journal of Distance Education Volume 15 ; 15 ; 2000 ; >
-      au < manifest ; exists ; 2001 ; Journal of Distance Education Volume 16 ; 16 ; 2001 ; >
-      au < manifest ; exists ; 2002 ; Journal of Distance Education Volume 17 ; 17 ; 2002 ; >
-      au < manifest ; exists ; 2003 ; Journal of Distance Education Volume 18 ; 18 ; 2003 ; >
-      au < manifest ; exists ; 2004 ; Journal of Distance Education Volume 19 ; 19 ; 2004 ; >
-      au < manifest ; exists ; 2005 ; Journal of Distance Education Volume 20 ; 20 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; Journal of Distance Education Volume 21 ; 21 ; 2006 ; >
+      au < frozen ; exists ; 2000 ; Journal of Distance Education Volume 15 ; 15 ; 2000 ; >
+      au < frozen ; exists ; 2001 ; Journal of Distance Education Volume 16 ; 16 ; 2001 ; >
+      au < frozen ; exists ; 2002 ; Journal of Distance Education Volume 17 ; 17 ; 2002 ; >
+      au < frozen ; exists ; 2003 ; Journal of Distance Education Volume 18 ; 18 ; 2003 ; >
+      au < frozen ; exists ; 2004 ; Journal of Distance Education Volume 19 ; 19 ; 2004 ; >
+      au < frozen ; exists ; 2005 ; Journal of Distance Education Volume 20 ; 20 ; 2005 ; >
+      au < frozen ; exists ; 2006 ; Journal of Distance Education Volume 21 ; 21 ; 2006 ; >
       au < manifest ; exists ; 2007 ; Journal of Distance Education Volume 21-22 ; 21-22 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; Journal of Distance Education Volume 22 ; 22 ; 2008 ; >
+      au < frozen ; exists ; 2008 ; Journal of Distance Education Volume 22 ; 22 ; 2008 ; >
       au < manifest ; exists ; 2009 ; Journal of Distance Education Volume 23 ; 23 ; 2009 ; >
       au < frozen ; exists ; 2010 ; Journal of Distance Education Volume 24 ; 24 ; 2010 ; >
       au < frozen ; exists ; 2011 ; Journal of Distance Education Volume 25 ; 25 ; 2011 ; >
@@ -193,11 +195,11 @@
       param[base_url] = http://jrp.icaap.org/
       param[journal_id] = jrp
 
-      au < manifest ; exists ; 2005 ; Journal of Research Practice Volume 1 ; 1 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; Journal of Research Practice Volume 2 ; 2 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; Journal of Research Practice Volume 3 ; 3 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; Journal of Research Practice Volume 4 ; 4 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; Journal of Research Practice Volume 5 ; 5 ; 2009 ; >
+      au < frozen ; exists ; 2005 ; Journal of Research Practice Volume 1 ; 1 ; 2005 ; >
+      au < frozen ; exists ; 2006 ; Journal of Research Practice Volume 2 ; 2 ; 2006 ; >
+      au < frozen ; exists ; 2007 ; Journal of Research Practice Volume 3 ; 3 ; 2007 ; >
+      au < frozen ; exists ; 2008 ; Journal of Research Practice Volume 4 ; 4 ; 2008 ; >
+      au < frozen ; exists ; 2009 ; Journal of Research Practice Volume 5 ; 5 ; 2009 ; >
       au < frozen ; exists ; 2010 ; Journal of Research Practice Volume 6 ; 6 ; 2010 ; >
       au < frozen ; exists ; 2011 ; Journal of Research Practice Volume 7 ; 7 ; 2011 ; >
       au < frozen ; exists ; 2017 ; Journal of Research Practice Volume 13 ; 13 ; 2017 ; >
@@ -328,14 +330,14 @@
       au < manifest ; exists ; 1995 ; Oral History Forum d'histoire orale Volume 15 ; 15 ; 1995 ; >
       au < finished ; finished ; 1996-1997 ; Oral History Forum d'histoire orale Volume 16-17 ; 16-17 ; 1997 ; reingest5.clockss.org:8082 >
       au < manifest ; exists ; 1998 ; Oral History Forum d'histoire orale Volume 18 ; 18 ; 1998 ; >
-      au < crawling ; exists ; 1999-2000 ; Oral History Forum d'histoire orale Volume 19-20 ; 19-20 ; 2000 ; >
-      au < crawling ; exists ; 2001-2002 ; Oral History Forum d'histoire orale Volume 21-22 ; 21-22 ; 2002 ; >
-      au < manifest ; exists ; 2003 ; Oral History Forum d'histoire orale Volume 23 ; 23 ; 2003 ; >
-      au < manifest ; exists ; 2004 ; Oral History Forum d'histoire orale Volume 24 ; 24 ; 2004 ; >
-      au < manifest ; exists ; 2005 ; Oral History Forum d'histoire orale Volume 25 ; 25 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; Oral History Forum d'histoire orale Volume 26 ; 26 ; 2006 ; >
-      au < crawling ; exists ; 2007-2008 ; Oral History Forum d'histoire orale Volume 27-28 ; 27-28 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; Oral History Forum d'histoire orale Volume 29 ; 29 ; 2009 ; >
+      au < frozen ; exists ; 1999-2000 ; Oral History Forum d'histoire orale Volume 19-20 ; 19-20 ; 2000 ; >
+      au < frozen ; exists ; 2001-2002 ; Oral History Forum d'histoire orale Volume 21-22 ; 21-22 ; 2002 ; >
+      au < frozen ; exists ; 2003 ; Oral History Forum d'histoire orale Volume 23 ; 23 ; 2003 ; >
+      au < frozen ; exists ; 2004 ; Oral History Forum d'histoire orale Volume 24 ; 24 ; 2004 ; >
+      au < frozen ; exists ; 2005 ; Oral History Forum d'histoire orale Volume 25 ; 25 ; 2005 ; >
+      au < frozen ; exists ; 2006 ; Oral History Forum d'histoire orale Volume 26 ; 26 ; 2006 ; >
+      au < frozen ; exists ; 2007-2008 ; Oral History Forum d'histoire orale Volume 27-28 ; 27-28 ; 2008 ; >
+      au < frozen ; exists ; 2009 ; Oral History Forum d'histoire orale Volume 29 ; 29 ; 2009 ; >
       au < frozen ; exists ; 2010 ; Oral History Forum d'histoire orale Volume 30 ; 30 ; 2010 ; >
       au < frozen ; exists ; 2011 ; Oral History Forum d'histoire orale Volume 31 ; 31 ; 2011 ; >
 
@@ -380,7 +382,7 @@
       au < superseded ; exists ; 2010 ; The Trumpeter Volume 26 [superseded] ; 26 ; 2010 ; >
       au < superseded ; exists ; 2011 ; The Trumpeter Volume 27 [superseded] ; 27 ; 2011 ; >
       au < superseded ; exists ; 2018 ; The Trumpeter Volume 34 [superseded] ; 34 ; 2018 ; >
-      au < finished ; frozen ; 2019 ; The Trumpeter Volume 35 ; 35 ; 2019 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; The Trumpeter Volume 35 ; 35 ; 2019 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2020 ; The Trumpeter Volume 36 [superseded] ; 36 ; 2020 ; >
       au < superseded ; exists ; 2021 ; The Trumpeter Volume 37 [superseded] ; 37 ; 2021 ; >
 
@@ -408,22 +410,23 @@
       au < manifest ; exists ; 1997 ; The Trumpeter Volume 14 ; 14 ; 1997 ; >
       au < manifest ; exists ; 1998 ; The Trumpeter Volume 15 ; 15 ; 1998 ; >
       au < doNotProcess ; doNotProcess ; 2000 ; The Trumpeter Volume 16 ; 16 ; 2000 ; >
-      au < manifest ; exists ; 2001 ; The Trumpeter Volume 17 ; 17 ; 2001 ; >
-      au < manifest ; exists ; 2002 ; The Trumpeter Volume 18 ; 18 ; 2002 ; >
-      au < manifest ; exists ; 2003 ; The Trumpeter Volume 19 ; 19 ; 2003 ; >
-      au < manifest ; exists ; 2004 ; The Trumpeter Volume 20 ; 20 ; 2004 ; >
-      au < manifest ; exists ; 2005 ; The Trumpeter Volume 21 ; 21 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; The Trumpeter Volume 22 ; 22 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; The Trumpeter Volume 23 ; 23 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; The Trumpeter Volume 24 ; 24 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; The Trumpeter Volume 25 ; 25 ; 2009 ; >
-      au < manifest ; exists ; 2010 ; The Trumpeter Volume 26 ; 26 ; 2010 ; >
-      au < manifest ; exists ; 2011 ; The Trumpeter Volume 27 ; 27 ; 2011 ; >
-      au < manifest ; exists ; 2018 ; The Trumpeter Volume 34 ; 34 ; 2018 ; >
+      au < frozen ; exists ; 2001 ; The Trumpeter Volume 17 ; 17 ; 2001 ; >
+      au < frozen ; exists ; 2002 ; The Trumpeter Volume 18 ; 18 ; 2002 ; >
+      au < frozen ; exists ; 2003 ; The Trumpeter Volume 19 ; 19 ; 2003 ; >
+      au < frozen ; exists ; 2004 ; The Trumpeter Volume 20 ; 20 ; 2004 ; >
+      au < frozen ; exists ; 2005 ; The Trumpeter Volume 21 ; 21 ; 2005 ; >
+      au < frozen ; exists ; 2006 ; The Trumpeter Volume 22 ; 22 ; 2006 ; >
+      au < frozen ; exists ; 2007 ; The Trumpeter Volume 23 ; 23 ; 2007 ; >
+      au < frozen ; exists ; 2008 ; The Trumpeter Volume 24 ; 24 ; 2008 ; >
+      au < frozen ; exists ; 2009 ; The Trumpeter Volume 25 ; 25 ; 2009 ; >
+      au < frozen ; exists ; 2010 ; The Trumpeter Volume 26 ; 26 ; 2010 ; >
+      au < frozen ; exists ; 2011 ; The Trumpeter Volume 27 ; 27 ; 2011 ; >
+      au < frozen ; exists ; 2018 ; The Trumpeter Volume 34 ; 34 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; The Trumpeter Volume 35 ; 35 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; The Trumpeter Volume 36 ; 36 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; The Trumpeter Volume 37 ; 37 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; The Trumpeter Volume 38 ; 38 ; 2022 ; >
+      au < frozen ; exists ; 2020 ; The Trumpeter Volume 36 ; 36 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; The Trumpeter Volume 37 ; 37 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; The Trumpeter Volume 38 ; 38 ; 2022 ; >
+      au < expected ; exists ; 2023 ; The Trumpeter Volume 39 ; 39 ; 2023 ; >
 
     }
     

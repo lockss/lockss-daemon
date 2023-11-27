@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>51</string>
+    <string>54</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -63,7 +63,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <map>
       <entry>
         <string>Metadata</string>
-        <string>8</string>
+        <string>9</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -120,7 +120,7 @@ POSSIBILITY OF SUCH DAMAGE.
         https://epubs.siam.org/doi/reader/10.1137/1.9781611976953.ch9
         https://epubs.siam.org/doi/reader/10.1137/1.9781611976953.fm
       -->
-      <string>1,"^https?://%s/doi/((e?pdf|e?pdfplus|full|abs|ref(erences)?|suppl|figure|video[^/]+|reader)/)?[0-9.]+/", url_host(base_url)</string>
+      <string>1,"^https?://%s/doi/((e?pdf|e?pdfplus|epub|full|abs|ref(erences)?|suppl|figure|video[^/]+|reader)/)?[0-9.]+/", url_host(base_url)</string>
       <!--<string>1,"^https?://%s/doi/(reader|pdf|epdf)/[0-9.]+/([^\?&amp;]+$)?", url_host(base_url)</string>-->
       <string>1,"^https?://%s/action/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]+&amp;)*doi=", url_host(base_url)</string>
       <string>1,"^https?://%s/action/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", url_host(base_url)</string>
@@ -152,7 +152,7 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^https?://%s/doi/(e?pdf|e?pdfplus|full)/[.0-9]+/[^\?&amp;]+$", url_host(base_url)</string>
+      <string>"^https?://%s/doi/(e?pdf|e?pdfplus|full|epub)/[.0-9]+/[^\?&amp;]+$", url_host(base_url)</string>
     </list>
   </entry>
   <entry>

@@ -40,18 +40,22 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
+        <string>Metadata</string>
+        <string>2</string>
+      </entry>
+      <entry>
         <string>Poll</string>
-	<string>3</string>
+	    <string>3</string>
       </entry>
       <entry>
         <string>Substance</string>
-	<string>3</string>
+	    <string>3</string>
       </entry>
     </map>
   </entry>
@@ -87,11 +91,17 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%s", base_url</string>
+    <list>
+      <string>"%s", to_http(base_url)</string>
+      <string>"%s", to_https(base_url)</string>
+    </list>
   </entry>
   <entry>
     <string>au_permission_url</string>
-    <string>"%sLOCKSSmanifest.html", base_url</string>
+    <list>
+      <string>"%sLOCKSSmanifest.html", to_http(base_url)</string>
+      <string>"%sLOCKSSmanifest.html", to_https(base_url)</string>
+    </list>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -137,6 +147,39 @@ POSSIBILITY OF SUCH DAMAGE.
       <entry>
       	<string>au_issue</string>
       	<string>"%s/%s-%s/infres%s%s.html", base_url, volume_name, issue, volume_name, issue</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>uk.org.lockss.plugin.informationresearch.InformationResearchHttpHttpsUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>uk.org.lockss.plugin.informationresearch.InformationResearchHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>uk.org.lockss.plugin.informationresearch.InformationResearchHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>uk.org.lockss.plugin.informationresearch.InformationResearchArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>uk.org.lockss.plugin.informationresearch.InformationResearchArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>uk.org.lockss.plugin.informationresearch.InformationResearchHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>

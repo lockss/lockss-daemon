@@ -3,8 +3,10 @@
   publisher <
     name = American Academy of Psychiatry and the Law ;
     info[contract] = 2011 ;
+    info[back] = 1973 ;
+    info[min_year] = 1973 ;
     info[tester] = 5 ;
-    info[poller] = 6
+    info[platform] = HW Drupal
   >
     pluginPrefix = org.lockss.plugin.highwire.
     implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
@@ -18,17 +20,24 @@
       issnl = 1093-6793
     >
     {
+    #base_url moved to https.
+    param[base_url] = https://jaapl.org/
+
+    au < aapl.ClockssAAPLDrupalPlugin ; crawling ; exists ; 2023 ; Journal of the American Academy of Psychiatry and the Law Online Volume 51 ; 51 ; >
+
+    }
+
+    {
     #base_url changed upon move to Drupal.
     param[base_url] = http://jaapl.org/
 
-    au < aapl.ClockssAAPLDrupalPlugin ; finished ; crawling ; 2016 ; Journal of the American Academy of Psychiatry and the Law Online Volume 44 ; 44 ; reingest4.clockss.org:8082 >
+    au < aapl.ClockssAAPLDrupalPlugin ; finished ; frozen ; 2016 ; Journal of the American Academy of Psychiatry and the Law Online Volume 44 ; 44 ; reingest4.clockss.org:8082 >
     au < aapl.ClockssAAPLDrupalPlugin ; finished ; frozen ; 2017 ; Journal of the American Academy of Psychiatry and the Law Online Volume 45 ; 45 ; reingest5.clockss.org:8082 > #Probe url error
     au < aapl.ClockssAAPLDrupalPlugin ; finished ; frozen ; 2018 ; Journal of the American Academy of Psychiatry and the Law Online Volume 46 ; 46 ; reingest1.clockss.org:8082 > #Probe url error
     au < aapl.ClockssAAPLDrupalPlugin ; finished ; frozen ; 2019 ; Journal of the American Academy of Psychiatry and the Law Online Volume 47 ; 47 ; reingest1.clockss.org:8082 >
-    au < aapl.ClockssAAPLDrupalPlugin ; finished ; frozen ; 2020 ; Journal of the American Academy of Psychiatry and the Law Online Volume 48 ; 48 ; reingest2.clockss.org:8085 >
+    au < aapl.ClockssAAPLDrupalPlugin ; finished ; finished ; 2020 ; Journal of the American Academy of Psychiatry and the Law Online Volume 48 ; 48 ; reingest2.clockss.org:8085 >
     au < aapl.ClockssAAPLDrupalPlugin ; finished ; frozen ; 2021 ; Journal of the American Academy of Psychiatry and the Law Online Volume 49 ; 49 ; reingest3.clockss.org:8083 >
-    au < aapl.ClockssAAPLDrupalPlugin ; crawling ; exists ; 2022 ; Journal of the American Academy of Psychiatry and the Law Online Volume 50 ; 50 ; >
-
+    au < aapl.ClockssAAPLDrupalPlugin ; deepCrawl ; exists ; 2022 ; Journal of the American Academy of Psychiatry and the Law Online Volume 50 ; 50 ; >
     }
 
     {

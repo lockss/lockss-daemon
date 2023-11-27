@@ -1,0 +1,48 @@
+{
+
+  publisher <
+    name = University of Baghdad, College of Medicine ;
+    info[contract] = 2023 ;
+    info[back] = 2014 ;
+    info[tester] = 5 ;
+    info[poller] = 3 ;
+    info[platform] = OJS3
+  >
+
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+
+  {
+
+    title <
+      name = Journal of the Faculty of Medicine Baghdad ;
+      issn = 0041-9419 ;
+      eissn = 2410-8057
+    >
+      param[base_url] = https://iqjmc.uobaghdad.edu.iq/
+      param[journal_id] = 19JFacMedBaghdad36
+
+      au < manifest ; exists ; 2005 ; Journal of the Faculty of Medicine Baghdad Volume 47 ; 47 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; Journal of the Faculty of Medicine Baghdad Volume 48 ; 48 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; Journal of the Faculty of Medicine Baghdad Volume 49 ; 49 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Journal of the Faculty of Medicine Baghdad Volume 50 ; 50 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; Journal of the Faculty of Medicine Baghdad Volume 51 ; 51 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; Journal of the Faculty of Medicine Baghdad Volume 52 ; 52 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Journal of the Faculty of Medicine Baghdad Volume 53 ; 53 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Journal of the Faculty of Medicine Baghdad Volume 54 ; 54 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Journal of the Faculty of Medicine Baghdad Volume 55 ; 55 ; 2013 ; >
+      au < frozen ; exists ; 2014 ; Journal of the Faculty of Medicine Baghdad Volume 56 ; 56 ; 2014 ; >
+      au < frozen ; exists ; 2015 ; Journal of the Faculty of Medicine Baghdad Volume 57 ; 57 ; 2015 ; >
+      au < frozen ; exists ; 2016 ; Journal of the Faculty of Medicine Baghdad Volume 58 ; 58 ; 2016 ; >
+      au < frozen ; exists ; 2017 ; Journal of the Faculty of Medicine Baghdad Volume 59 ; 59 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; Journal of the Faculty of Medicine Baghdad Volume 60 ; 60 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; Journal of the Faculty of Medicine Baghdad Volume 61 ; 61 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; Journal of the Faculty of Medicine Baghdad Volume 62 ; 62 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; Journal of the Faculty of Medicine Baghdad Volume 63 ; 63 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; Journal of the Faculty of Medicine Baghdad Volume 64 ; 64 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; Journal of the Faculty of Medicine Baghdad Volume 65 ; 65 ; 2023 ; >
+
+  }
+
+}

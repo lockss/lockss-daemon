@@ -123,8 +123,8 @@
     >
 
     param[journal_dir] = international_organization
-	attr[journal_id] = ino
-	
+    attr[journal_id] = ino
+
     {
 
       param[base_url] = http://muse.jhu.edu/

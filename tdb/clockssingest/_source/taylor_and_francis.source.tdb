@@ -30,37 +30,37 @@
     au < zapped ; finished ; 2019 ; Taylor & Francis Source Content 2019_4 ; 2019_4 >
     au < zapped ; finished ; 2019 ; Taylor & Francis Source Content 2019_5 ; 2019_5 >
 
-    au < readySource ; finished ; 2020 ; Taylor & Francis Source Content 2020_1 ; 2020_1 >
-    au < readySource ; finished ; 2020 ; Taylor & Francis Source Content 2020_2 ; 2020_2 >
-    au < readySource ; finished ; 2020 ; Taylor & Francis Source Content 2020_3 ; 2020_3 >
-    au < readySource ; finished ; 2020 ; Taylor & Francis Source Content 2020_4 ; 2020_4 >
-    au < readySource ; finished ; 2020 ; Taylor & Francis Source Content 2020_5 ; 2020_5 >
-    au < readySource ; finished ; 2020 ; Taylor & Francis Source Content 2020_6 ; 2020_6 >
-    au < readySource ; finished ; 2020 ; Taylor & Francis Source Content 2020_7 ; 2020_7 >
-    au < readySource ; finished ; 2020 ; Taylor & Francis Source Content 2020_8 ; 2020_8 >
-    au < readySource ; finished ; 2020 ; Taylor & Francis Source Content 2020_9 ; 2020_9 >
-    au < readySource ; finished ; 2020 ; Taylor & Francis Source Content 2020_10 ; 2020_10 >
-    au < readySource ; finished ; 2020 ; Taylor & Francis Source Content 2020_11 ; 2020_11 >
-    au < readySource ; finished ; 2020 ; Taylor & Francis Source Content 2020_12 ; 2020_12 >
+    au < zapped ; finished ; 2020 ; Taylor & Francis Source Content 2020_1 ; 2020_1 >
+    au < zapped ; finished ; 2020 ; Taylor & Francis Source Content 2020_2 ; 2020_2 >
+    au < zapped ; finished ; 2020 ; Taylor & Francis Source Content 2020_3 ; 2020_3 >
+    au < zapped ; finished ; 2020 ; Taylor & Francis Source Content 2020_4 ; 2020_4 >
+    au < zapped ; finished ; 2020 ; Taylor & Francis Source Content 2020_5 ; 2020_5 >
+    au < zapped ; finished ; 2020 ; Taylor & Francis Source Content 2020_6 ; 2020_6 >
+    au < zapped ; finished ; 2020 ; Taylor & Francis Source Content 2020_7 ; 2020_7 >
+    au < zapped ; finished ; 2020 ; Taylor & Francis Source Content 2020_8 ; 2020_8 >
+    au < zapped ; finished ; 2020 ; Taylor & Francis Source Content 2020_9 ; 2020_9 >
+    au < zapped ; finished ; 2020 ; Taylor & Francis Source Content 2020_10 ; 2020_10 >
+    au < zapped ; finished ; 2020 ; Taylor & Francis Source Content 2020_11 ; 2020_11 >
+    au < zapped ; finished ; 2020 ; Taylor & Francis Source Content 2020_12 ; 2020_12 >
 
     au < readySource ; finished ; 2021 ; Taylor & Francis Source Content 2021_01 ; 2021_01 >
     au < readySource ; finished ; 2021 ; Taylor & Francis Source Content 2021_02 ; 2021_02 >
-    au < readySource ; frozen ; 2021 ; Taylor & Francis Source Content 2021_03 ; 2021_03 >
+    au < readySource ; finished ; 2021 ; Taylor & Francis Source Content 2021_03 ; 2021_03 >
     au < readySource ; finished ; 2021 ; Taylor & Francis Source Content 2021_04 ; 2021_04 >
-    au < readySource ; frozen ; 2021 ; Taylor & Francis Source Content 2021_05 ; 2021_05 >
+    au < readySource ; finished ; 2021 ; Taylor & Francis Source Content 2021_05 ; 2021_05 >
     au < readySource ; finished ; 2021 ; Taylor & Francis Source Content 2021_06 ; 2021_06 >
-    au < readySource ; frozen ; 2021 ; Taylor & Francis Source Content 2021_07 ; 2021_07 >
+    au < readySource ; finished ; 2021 ; Taylor & Francis Source Content 2021_07 ; 2021_07 >
 
-    au < readySource ; frozen ; 2022 ; Taylor & Francis Source Content 2022_01 ; 2022_01 >
-    au < readySource ; frozen ; 2022 ; Taylor & Francis Source Content 2022_02 ; 2022_02 >
-    au < readySource ; frozen ; 2022 ; Taylor & Francis Source Content 2022_03 ; 2022_03 >
+    au < readySource ; finished ; 2022 ; Taylor & Francis Source Content 2022_01 ; 2022_01 >
+    au < readySource ; finished ; 2022 ; Taylor & Francis Source Content 2022_02 ; 2022_02 >
+    au < readySource ; finished ; 2022 ; Taylor & Francis Source Content 2022_03 ; 2022_03 >
     #No more AUs. Moving to https.
     }
     {
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/taylorfrancis-released/
 
     au < readySource ; crawling ; 2023 ; Taylor & Francis Source Content 2023_01 ; 2023_01 >
-    au < expected ; exists ; 2023 ; Taylor & Francis Source Content 2023_02 ; 2023_02 >
+    au < readySource ; crawling ; 2023 ; Taylor & Francis Source Content 2023_02 ; 2023_02 >
     au < expected ; exists ; 2023 ; Taylor & Francis Source Content 2023_03 ; 2023_03 >
     au < expected ; exists ; 2023 ; Taylor & Francis Source Content 2023_04 ; 2023_04 >
     }
@@ -80,7 +80,7 @@
       au < readySource ; finished ; 2021 ; Taylor & Francis Back Content 2021_03 ; 2021_03 >
       au < readySource ; finished ; 2021 ; Taylor & Francis Back Content 2021_04 ; 2021_04 >
       au < readySource ; finished ; 2021 ; Taylor & Francis Back Content 2021_05 ; 2021_05 >
-      au < readySource ; frozen ; 2021 ; Taylor & Francis Back Content 2021_06 ; 2021_06 >
+      au < readySource ; finished ; 2021 ; Taylor & Francis Back Content 2021_06 ; 2021_06 >
       au < readySource ; finished ; 2021 ; Taylor & Francis Back Content 2021_07 ; 2021_07 >
       #No more AUs expected using this plugin
 

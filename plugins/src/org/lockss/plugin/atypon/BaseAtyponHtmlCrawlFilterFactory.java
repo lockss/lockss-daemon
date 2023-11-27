@@ -219,6 +219,12 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     <div class="inline-core-relations"><a href="/doi/10.1177/03635465221082057" class="relation--item">View correction</a></div>
     */
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "inline-core-relations"),
+
+    //Startin March/2023, Need to filtered out related volume and related books on right side
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-sections"),
+    //https://www.liverpooluniversitypress.co.uk/doi/book/10.3828/9781873592960
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "slide-item"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "header__menu"),
     
     // Not all Atypon plugins necessarily need this but MANY do and it is
     // an insidious source of over crawling

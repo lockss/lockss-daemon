@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = American School of Classical Studies at Athens ;
+    info[contract] = 2014 ;
+    info[tester] = S ;
+    info[platform] = Source. BLOCKED-Awaiting content. LXPIPE-69. LXPUB-29. GLN & CLOCKSS
+  >
+  hidden[proxy] = DIRECT
+
+  {
+
+    title <
+      name = American School of Classical Studies at Athens Books Source Content
+    >
+
+     plugin = needs.plugin
+     implicit < status ; status2 ; year ; name ; param[directory] >
+     param[base_url] = https://clockss-test.lockss.org/sourcefiles/ascsa-released/
+
+     au < expected ; exists ; 2023 ; American School of Classical Studies at Athens Books Source Content 2023 ; 2023 >
+
+  }
+
+}

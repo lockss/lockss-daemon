@@ -1,7 +1,8 @@
 {
 
   publisher <
-    name = Scientific Journal Publishers
+    name = Scientific Journal Publishers ;
+    info[platform] = OJS3 now. Ingenta still active 2023/03/15
   >
 
   {
@@ -11,6 +12,20 @@
       issn = 0301-2212
     >
 
+    {
+    
+    plugin = org.lockss.plugin.ojs3.Ojs3Plugin
+    attr[start_stem] = index.php/ 
+    param[base_url] = https://www.sbp-journal.com/
+    param[journal_id] = sbp 
+    implicit < status ; year ; param[year] ; name ; volume >
+
+    au < released ; 2022 ; 2022 ; Social Behavior and Personality Volume 50 ; 50 >
+    au < manifest ; 2023 ; 2023 ; Social Behavior and Personality Volume 51 ; 51 >
+
+    }
+
+    {
     plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
 #    param[base_url] = http://www.ingentaconnect.com/
 #    param[api_url] = http://api.ingentaconnect.com/
@@ -24,38 +39,38 @@
     param[base_url] = https://www.ingentaconnect.com/
     param[api_url] = https://api.ingentaconnect.com/
 
-    au < manifest ; 1973 ; Social Behavior and Personality Volume 1 ; 1 >
-    au < manifest ; 1974 ; Social Behavior and Personality Volume 2 ; 2 >
-    au < manifest ; 1975 ; Social Behavior and Personality Volume 3 ; 3 >
-    au < manifest ; 1976 ; Social Behavior and Personality Volume 4 ; 4 >
-    au < manifest ; 1977 ; Social Behavior and Personality Volume 5 ; 5 >
-    au < manifest ; 1978 ; Social Behavior and Personality Volume 6 ; 6 >
-    au < manifest ; 1979 ; Social Behavior and Personality Volume 7 ; 7 >
-    au < manifest ; 1980 ; Social Behavior and Personality Volume 8 ; 8 >
-    au < manifest ; 1981 ; Social Behavior and Personality Volume 9 ; 9 >
-    au < manifest ; 1982 ; Social Behavior and Personality Volume 10 ; 10 >
-    au < manifest ; 1983 ; Social Behavior and Personality Volume 11 ; 11 >
-    au < manifest ; 1984 ; Social Behavior and Personality Volume 12 ; 12 >
-    au < manifest ; 1985 ; Social Behavior and Personality Volume 13 ; 13 >
-    au < manifest ; 1986 ; Social Behavior and Personality Volume 14 ; 14 >
-    au < manifest ; 1987 ; Social Behavior and Personality Volume 15 ; 15 >
-    au < manifest ; 1988 ; Social Behavior and Personality Volume 16 ; 16 >
-    au < manifest ; 1989 ; Social Behavior and Personality Volume 17 ; 17 >
-    au < manifest ; 1990 ; Social Behavior and Personality Volume 18 ; 18 >
-    au < manifest ; 1991 ; Social Behavior and Personality Volume 19 ; 19 >
-    au < manifest ; 1992 ; Social Behavior and Personality Volume 20 ; 20 >
-    au < manifest ; 1993 ; Social Behavior and Personality Volume 21 ; 21 >
-    au < manifest ; 1994 ; Social Behavior and Personality Volume 22 ; 22 >
-    au < manifest ; 1995 ; Social Behavior and Personality Volume 23 ; 23 >
-    au < manifest ; 1996 ; Social Behavior and Personality Volume 24 ; 24 >
-    au < manifest ; 1997 ; Social Behavior and Personality Volume 25 ; 25 >
-    au < manifest ; 1998 ; Social Behavior and Personality Volume 26 ; 26 >
-    au < manifest ; 1999 ; Social Behavior and Personality Volume 27 ; 27 >
-    au < manifest ; 2000 ; Social Behavior and Personality Volume 28 ; 28 >
-    au < manifest ; 2001 ; Social Behavior and Personality Volume 29 ; 29 >
-    au < manifest ; 2002 ; Social Behavior and Personality Volume 30 ; 30 >
-    au < manifest ; 2003 ; Social Behavior and Personality Volume 31 ; 31 >
-    au < manifest ; 2004 ; Social Behavior and Personality Volume 32 ; 32 >
+    au < doNotProcess ; 1973 ; Social Behavior and Personality Volume 1 ; 1 >
+    au < doNotProcess ; 1974 ; Social Behavior and Personality Volume 2 ; 2 >
+    au < doNotProcess ; 1975 ; Social Behavior and Personality Volume 3 ; 3 >
+    au < doNotProcess ; 1976 ; Social Behavior and Personality Volume 4 ; 4 >
+    au < doNotProcess ; 1977 ; Social Behavior and Personality Volume 5 ; 5 >
+    au < doNotProcess ; 1978 ; Social Behavior and Personality Volume 6 ; 6 >
+    au < doNotProcess ; 1979 ; Social Behavior and Personality Volume 7 ; 7 >
+    au < doNotProcess ; 1980 ; Social Behavior and Personality Volume 8 ; 8 >
+    au < doNotProcess ; 1981 ; Social Behavior and Personality Volume 9 ; 9 >
+    au < doNotProcess ; 1982 ; Social Behavior and Personality Volume 10 ; 10 >
+    au < doNotProcess ; 1983 ; Social Behavior and Personality Volume 11 ; 11 >
+    au < doNotProcess ; 1984 ; Social Behavior and Personality Volume 12 ; 12 >
+    au < doNotProcess ; 1985 ; Social Behavior and Personality Volume 13 ; 13 >
+    au < doNotProcess ; 1986 ; Social Behavior and Personality Volume 14 ; 14 >
+    au < doNotProcess ; 1987 ; Social Behavior and Personality Volume 15 ; 15 >
+    au < doNotProcess ; 1988 ; Social Behavior and Personality Volume 16 ; 16 >
+    au < doNotProcess ; 1989 ; Social Behavior and Personality Volume 17 ; 17 >
+    au < doNotProcess ; 1990 ; Social Behavior and Personality Volume 18 ; 18 >
+    au < doNotProcess ; 1991 ; Social Behavior and Personality Volume 19 ; 19 >
+    au < doNotProcess ; 1992 ; Social Behavior and Personality Volume 20 ; 20 >
+    au < doNotProcess ; 1993 ; Social Behavior and Personality Volume 21 ; 21 >
+    au < doNotProcess ; 1994 ; Social Behavior and Personality Volume 22 ; 22 >
+    au < doNotProcess ; 1995 ; Social Behavior and Personality Volume 23 ; 23 >
+    au < doNotProcess ; 1996 ; Social Behavior and Personality Volume 24 ; 24 >
+    au < doNotProcess ; 1997 ; Social Behavior and Personality Volume 25 ; 25 >
+    au < doNotProcess ; 1998 ; Social Behavior and Personality Volume 26 ; 26 >
+    au < doNotProcess ; 1999 ; Social Behavior and Personality Volume 27 ; 27 >
+    au < doNotProcess ; 2000 ; Social Behavior and Personality Volume 28 ; 28 >
+    au < doNotProcess ; 2001 ; Social Behavior and Personality Volume 29 ; 29 >
+    au < doNotProcess ; 2002 ; Social Behavior and Personality Volume 30 ; 30 >
+    au < doNotProcess ; 2003 ; Social Behavior and Personality Volume 31 ; 31 >
+    au < doNotProcess ; 2004 ; Social Behavior and Personality Volume 32 ; 32 >
 
     }
 
@@ -75,7 +90,6 @@
     au < released ; 2014 ; Social Behavior and Personality Volume 42 ; 42 >
     au < released ; 2015 ; Social Behavior and Personality Volume 43 ; 43 >
     au < released ; 2016 ; Social Behavior and Personality Volume 44 ; 44 >
-
     }
 
     {
@@ -87,9 +101,10 @@
     au < released ; 2019 ; Social Behavior and Personality Volume 47 ; 47 >
     au < released ; 2020 ; Social Behavior and Personality Volume 48 ; 48 >
     au < released ; 2021 ; Social Behavior and Personality Volume 49 ; 49 >
-    au < manifest ; 2022 ; Social Behavior and Personality Volume 50 ; 50 >
+    au < doNotProcess ; 2022 ; Social Behavior and Personality Volume 50 ; 50 >
 
     }
+  }
   }
   
 }

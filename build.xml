@@ -226,7 +226,7 @@ Args:
 <!--  <property name="derby.jar"      value="${lib}/derby-${derby.version}.jar"/>-->
 <!--  <property name="derbyclient.jar" value="${lib}/derbyclient-${derby.version}.jar"/>-->
 <!--  <property name="derbynet.jar"   value="${lib}/derbynet-${derby.version}.jar"/>-->
-  <property name="postgresql-jdbc.jar" value="${lib}/postgresql-42.5.0.jar" />
+  <property name="postgresql-jdbc.jar" value="${lib}/postgresql-42.6.0.jar" />
   <property name="mysql-connector-j.jar"
 				  value="${lib}/mysql-connector-j-8.0.31.jar" />
   <property name="mailapi.jar"    value="${lib}/javamail-mailapi-1.3.2.jar"/>
@@ -246,28 +246,28 @@ Args:
                                   value="${lib}/ziplet-2.4.1.jar"/>
   <property name="jaxp.jar"       value="${lib}/javax.xml.jaxp.jar"/>
 <!--    <property name="xml.jar"  value="${lib}/org.apache.crimson.jar"/> -->
-  <property name="log4j2.version" value="2.19.0" />
+  <property name="log4j2.version" value="2.21.1" />
   <property name="log4j2-api.jar" value="${lib}/log4j-api-${log4j2.version}.jar" />
   <property name="log4j2-core.jar" value="${lib}/log4j-core-${log4j2.version}.jar" />
   <property name="log4j2-1.2-compat.jar" value="${lib}/log4j-1.2-api-${log4j2.version}.jar" />
 
   <property name="commons.beanutils.jar" value="${lib}/commons-beanutils-1.9.4.jar" />
-  <property name="commons.cli.jar" value="${lib}/commons-cli-1.5.0.jar" />
-  <property name="commons.codec.jar" value="${lib}/commons-codec-1.15.jar" />
+  <property name="commons.cli.jar" value="${lib}/commons-cli-1.6.0.jar" />
+  <property name="commons.codec.jar" value="${lib}/commons-codec-1.16.0.jar" />
   <property name="commons.collections.jar" value="${lib}/commons-collections-3.2.2.jar" />
   <property name="commons.collections4.jar" value="${lib}/commons-collections4-4.4.jar" />
-  <property name="commons.compress.jar" value="${lib}/commons-compress-1.21.jar" />
+  <property name="commons.compress.jar" value="${lib}/commons-compress-1.23.0.jar" />
   <property name="commons.configuration.jar" value="${lib}/commons-configuration-1.10.jar" />
   <!-- commons-csv -->
   <!-- commons-digester -->
   <!-- commons-fileupload -->
-  <property name="commons.io.jar" value="${lib}/commons-io-2.11.0.jar" />
+  <property name="commons.io.jar" value="${lib}/commons-io-2.15.0.jar" />
   <property name="commons.jxpath.jar" value="${lib}/commons-jxpath-1.3.jar" />
   <property name="commons.lang.jar" value="${lib}/commons-lang-2.6.jar" />
-  <property name="commons.lang3.jar" value="${lib}/commons-lang3-3.12.0.jar" />
+  <property name="commons.lang3.jar" value="${lib}/commons-lang3-3.13.0.jar" />
   <property name="commons.logging.jar" value="${lib}/commons-logging-1.2.jar" />
   <property name="commons.primitives.jar" value="${lib}/commons-primitives-1.0.jar" />
-  <property name="commons.text.jar" value="${lib}/commons-text-1.10.0.jar" />
+  <property name="commons.text.jar" value="${lib}/commons-text-1.11.0.jar" />
   <property name="commons.validator.jar" value="${lib}/commons-validator-1.7.jar" />
 
   <property name="commons.httpclient.jar"
@@ -296,10 +296,10 @@ Args:
   <property name="javatar.jar" value="${lib}/javagnutar.jar" />
   <property name="concurrent.jar" value="${lib}/concurrent.jar"/>
   <property name="htmlparser.jar" value="${lib}/htmlparser-1.6p.jar"/>
-  <property name="jsoup.jar" value="${lib}/jsoup-1.14.3.jar"/>
-  <property name="marc4j.jar" value="${lib}/marc4j-2.9.2.jar" />
+  <property name="jsoup.jar" value="${lib}/jsoup-1.16.2.jar"/>
+  <property name="marc4j.jar" value="${lib}/marc4j-2.9.5.jar" />
   <!-- Next 6 needed for Jonix -->
-  <property name="jonix.version" value="2022-08" />
+  <property name="jonix.version" value="2023-10" />
   <property name="jonix.jar" value="${lib}/jonix-${jonix.version}.jar" />
   <property name="jonix-common.jar" value="${lib}/jonix-common-${jonix.version}.jar" />
   <property name="jonix-xml.jar" value="${lib}/jonix-xml-${jonix.version}.jar" />
@@ -310,7 +310,7 @@ Args:
   <property name="jbibtex.jar" value="${lib}/jbibtex-1.0.20.jar" />
   <!-- W3C RDF Parser -->
   <property name="rdf.jar"        value="${lib}/rdf-api-2001-01-19.jar" />
-  <property name="xstream.jar"    value="${lib}/xstream-1.1.3.jar" />
+  <property name="xstream.jar"    value="${lib}/xstream-1.4.20.jar" />
   <property name="xmlunit.jar"    value="${lib}/xmlunit-1.6.jar" />
   <property name="oai-harvester.jar" value="${lib}/harvester2-0.1.12-p1.jar"/>
   <!-- Needed by OAI harvester: Xalan, Xerces, XML-APIs, Log4j -->
@@ -348,10 +348,10 @@ Args:
   <property name="fontbox.jar" value="${lib}/fontbox-${pdfbox.version}.jar" />
   <property name="jempbox.jar" value="${lib}/jempbox-${pdfbox.version}.jar" />
   <property name="bouncycastle.variant" value="jdk18on" />
-  <property name="bouncycastle.version" value="1.72" />
+  <property name="bouncycastle.version" value="1.76" />
   <property name="bouncycastle-provider.jar" value="${lib}/bcprov-${bouncycastle.variant}-${bouncycastle.version}.jar" />
   <property name="bouncycastle-mail.jar" value="${lib}/bcmail-${bouncycastle.variant}-${bouncycastle.version}.jar" />
-  <property name="icu4j.version" value="71.1" />
+  <property name="icu4j.version" value="74.1" />
   <property name="icu4j.jar" value="${lib}/icu4j-${icu4j.version}.jar" />
   <property name="icu4j-charset.jar" value="${lib}/icu4j-charset-${icu4j.version}.jar" />
   <property name="icu4j-localespi.jar" value="${lib}/icu4j-localespi-${icu4j.version}.jar" />
@@ -394,9 +394,9 @@ Args:
   <property name="swagger-annotations.jar" value="${lib}/swagger-annotations-1.5.24.jar" />
   <property name="jsr305.jar" value="${lib}/jsr305-3.0.2.jar" />
 
-  <property name="json-path.jar" value="${lib}/json-path-2.7.0.jar" />
+  <property name="json-path.jar" value="${lib}/json-path-2.8.0.jar" />
 
-  <property name="antlr.version" value="4.9.3" />
+  <property name="antlr.version" value="4.9.3" /><!-- 4.9.3 is the last Java 8 version before 4.10 -->
   <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-${antlr.version}.jar" />
   <property name="antlr.tools.jar" value="${lib}/antlr-${antlr.version}-complete.jar" />
 
@@ -547,7 +547,7 @@ Args:
     <pathelement path="${derby.jar}" />
     <pathelement path="${derbyclient.jar}" />
     <pathelement path="${derbynet.jar}" />
-	<pathelement path="${postgresql-jdbc.jar}" />
+    <pathelement path="${postgresql-jdbc.jar}" />
     <pathelement path="${mysql-connector-j.jar}" />
     <pathelement path="${mailapi.jar}" />
     <pathelement path="${activation.jar}" />
@@ -814,7 +814,8 @@ Args:
         <include name="**/*.tdb"/>
       </fileset>
       <mapper type="glob" from="*.tdb" to="*.xml"/>
-      <arg value="-A"/>
+      <arg value="--viable" />
+      <arg value="--expected" />
       <arg value="-i"/>
       <srcfile/>
       <arg value="-o"/>
@@ -840,7 +841,8 @@ Args:
 					<include name="*.tdb"/>
 				</fileset>
 				<mapper type="glob" from="*.tdb" to="*.xml"/>
-				<arg value="--all" />
+				<arg value="--viable" />
+				<arg value="--expected" />
 				<arg value="--output-dir=@{destdir}" />
 			</apply>
 		</sequential>

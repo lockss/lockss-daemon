@@ -87,6 +87,7 @@
     au < released ; 2020 ; AIAA Journal Volume 58 ; 58 ; https://arc.aiaa.org/ >
     au < manifest ; 2021 ; AIAA Journal Volume 59 ; 59 ; https://arc.aiaa.org/ >
     au < manifest ; 2022 ; AIAA Journal Volume 60 ; 60 ; https://arc.aiaa.org/ >
+    au < manifest ; 2023 ; AIAA Journal Volume 61 ; 61 ; https://arc.aiaa.org/ >
 
   }
 
@@ -168,7 +169,8 @@
     au < released ; 2019 ; Journal of Aerospace Computing, Information, and Communication Volume 16 ; 16 ; https://arc.aiaa.org/ >
     au < released ; 2020 ; Journal of Aerospace Computing, Information, and Communication Volume 17 ; 17 ; https://arc.aiaa.org/ >
     au < released ; 2021 ; Journal of Aerospace Computing, Information, and Communication Volume 18 ; 18 ; https://arc.aiaa.org/ >
-    au < manifest ; 2022 ; Journal of Aerospace Computing, Information, and Communication Volume 19 ; 19 ; https://arc.aiaa.org/ >
+    au < released ; 2022 ; Journal of Aerospace Computing, Information, and Communication Volume 19 ; 19 ; https://arc.aiaa.org/ >
+    au < manifest ; 2023 ; Journal of Aerospace Computing, Information, and Communication Volume 20 ; 20 ; https://arc.aiaa.org/ >
 
   }
   
@@ -190,7 +192,8 @@
     au < released ;  2019 ; Journal of Air Transportation Volume 27 ; 27 ; https://arc.aiaa.org/ >
     au < released ;  2020 ; Journal of Air Transportation Volume 28 ; 28 ; https://arc.aiaa.org/ >
     au < released ;  2021 ; Journal of Air Transportation Volume 29 ; 29 ; https://arc.aiaa.org/ >
-    au < manifest ;  2022 ; Journal of Air Transportation Volume 30 ; 30 ; https://arc.aiaa.org/ >
+    au < released ;  2022 ; Journal of Air Transportation Volume 30 ; 30 ; https://arc.aiaa.org/ >
+    au < manifest ;  2023 ; Journal of Air Transportation Volume 31 ; 31 ; https://arc.aiaa.org/ >
 
   }  
 
@@ -262,7 +265,8 @@
     au < released ; 2019 ; Journal of Aircraft Volume 56 ; 56 ; https://arc.aiaa.org/ >
     au < released ; 2020 ; Journal of Aircraft Volume 57 ; 57 ; https://arc.aiaa.org/ >
     au < released ; 2021 ; Journal of Aircraft Volume 58 ; 58 ; https://arc.aiaa.org/ >
-    au < manifest ; 2022 ; Journal of Aircraft Volume 59 ; 59 ; https://arc.aiaa.org/ >
+    au < released ; 2022 ; Journal of Aircraft Volume 59 ; 59 ; https://arc.aiaa.org/ >
+    au < manifest ; 2023 ; Journal of Aircraft Volume 60 ; 60 ; https://arc.aiaa.org/ >
 
   }
 
@@ -358,7 +362,8 @@
     au < released ; 2019 ; Journal of Guidance, Control, and Dynamics Volume 42 ; 42 ; https://arc.aiaa.org/ >
     au < released ; 2020 ; Journal of Guidance, Control, and Dynamics Volume 43 ; 43 ; https://arc.aiaa.org/ >
     au < released ; 2021 ; Journal of Guidance, Control, and Dynamics Volume 44 ; 44 ; https://arc.aiaa.org/ >
-    au < manifest ; 2022 ; Journal of Guidance, Control, and Dynamics Volume 45 ; 45 ; https://arc.aiaa.org/ >
+    au < released ; 2022 ; Journal of Guidance, Control, and Dynamics Volume 45 ; 45 ; https://arc.aiaa.org/ >
+    au < manifest ; 2023 ; Journal of Guidance, Control, and Dynamics Volume 46 ; 46 ; https://arc.aiaa.org/ >
 
   }
 
@@ -437,7 +442,8 @@
     au < released ; 2019 ; Journal of Propulsion and Power Volume 35 ; 35 ; https://arc.aiaa.org/ >
     au < released ; 2020 ; Journal of Propulsion and Power Volume 36 ; 36 ; https://arc.aiaa.org/ >
     au < released ; 2021 ; Journal of Propulsion and Power Volume 37 ; 37 ; https://arc.aiaa.org/ >
-    au < manifest ; 2022 ; Journal of Propulsion and Power Volume 38 ; 38 ; https://arc.aiaa.org/ >
+    au < released ; 2022 ; Journal of Propulsion and Power Volume 38 ; 38 ; https://arc.aiaa.org/ >
+    au < manifest ; 2023 ; Journal of Propulsion and Power Volume 39 ; 39 ; https://arc.aiaa.org/ >
 
   }
 
@@ -509,7 +515,8 @@
     au < released ; 2019 ; Journal of Spacecraft and Rockets Volume 56 ; 56 ; https://arc.aiaa.org/ >
     au < released ; 2020 ; Journal of Spacecraft and Rockets Volume 57 ; 57 ; https://arc.aiaa.org/ >
     au < released ; 2021 ; Journal of Spacecraft and Rockets Volume 58 ; 58 ; https://arc.aiaa.org/ >
-    au < manifest ; 2022 ; Journal of Spacecraft and Rockets Volume 59 ; 59 ; https://arc.aiaa.org/ >
+    au < released ; 2022 ; Journal of Spacecraft and Rockets Volume 59 ; 59 ; https://arc.aiaa.org/ >
+    au < manifest ; 2023 ; Journal of Spacecraft and Rockets Volume 60 ; 60 ; https://arc.aiaa.org/ >
 
   }
 
@@ -558,9 +565,154 @@
     au < released ; 2019 ; Journal of Thermophysics and Heat Transfer Volume 33 ; 33 ; https://arc.aiaa.org/ >
     au < released ; 2020 ; Journal of Thermophysics and Heat Transfer Volume 34 ; 34 ; https://arc.aiaa.org/ >
     au < released ; 2021 ; Journal of Thermophysics and Heat Transfer Volume 35 ; 35 ; https://arc.aiaa.org/ >
-    au < manifest ; 2022 ; Journal of Thermophysics and Heat Transfer Volume 36 ; 36 ; https://arc.aiaa.org/ >
+    au < released ; 2022 ; Journal of Thermophysics and Heat Transfer Volume 36 ; 36 ; https://arc.aiaa.org/ >
+    au < manifest ; 2023 ; Journal of Thermophysics and Heat Transfer Volume 37 ; 37 ; https://arc.aiaa.org/ >
 
   } 
+
+  {
+
+    title <
+      name = ARS Journal ;
+      eissn = 1936-9972 ;
+      issnl = 1936-9972
+    >
+    param[journal_id] = arsj
+    #ARS Journal, 1959-1962, param[journal_id] = arsj
+
+    au < manifest ; 1959 ; ARS Journal Volume 29 ; 29 ; https://arc.aiaa.org/ >
+    au < manifest ; 1960 ; ARS Journal Volume 30 ; 30 ; https://arc.aiaa.org/ >
+    au < manifest ; 1961 ; ARS Journal Volume 31 ; 31 ; https://arc.aiaa.org/ >
+    au < manifest ; 1962 ; ARS Journal Volume 32 ; 32 ; https://arc.aiaa.org/ >
+
+  }
+  {
+
+    title <
+      name = Astronautics ;
+      eissn = 1937-1322 ;
+      issnl = 1937-1322
+    >
+    param[journal_id] = jastn
+    #Astronautics, 1932-1944, param[journal_id] = jastn
+
+    au < manifest ; 1932 ; Astronautics Volume 2 ; 2 ; https://arc.aiaa.org/ >
+    au < manifest ; 1933 ; Astronautics Volume 3 ; 3 ; https://arc.aiaa.org/ >
+    au < manifest ; 1934 ; Astronautics Volume 4 ; 4 ; https://arc.aiaa.org/ >
+    au < manifest ; 1935 ; Astronautics Volume 5 ; 5 ; https://arc.aiaa.org/ >
+    au < manifest ; 1936 ; Astronautics Volume 6 ; 6 ; https://arc.aiaa.org/ >
+    au < manifest ; 1937 ; Astronautics Volume 7 ; 7 ; https://arc.aiaa.org/ >
+    au < manifest ; 1938 ; Astronautics Volume 8 ; 8 ; https://arc.aiaa.org/ >
+    au < manifest ; 1939 ; Astronautics Volume 9 ; 9 ; https://arc.aiaa.org/ >
+    au < manifest ; 1940 ; Astronautics Volume 10 ; 10 ; https://arc.aiaa.org/ >
+    au < manifest ; 1941 ; Astronautics Volume 11 ; 11 ; https://arc.aiaa.org/ >
+    au < manifest ; 1942 ; Astronautics Volume 12 ; 12 ; https://arc.aiaa.org/ >
+    au < manifest ; 1943 ; Astronautics Volume 13 ; 13 ; https://arc.aiaa.org/ >
+    au < manifest ; 1944 ; Astronautics Volume 14 ; 14 ; https://arc.aiaa.org/ >
+
+  }
+  {
+
+    title <
+      name = Bulletin of the American Interplanetary Society ;
+      eissn = 1937-1314 ;
+      issnl = 1937-1314
+    >
+    param[journal_id] = bais
+    #Bulletin of the American Interplanetary Society, 1930-1932, param[journal_id] = bais
+
+    au < manifest ; 1930 ; Bulletin of the American Interplanetary Society Volume 0 ; 0 ; https://arc.aiaa.org/ >
+    au < manifest ; 1931 ; Bulletin of the American Interplanetary Society Volume 1 ; 1 ; https://arc.aiaa.org/ >
+    au < manifest ; 1932 ; Bulletin of the American Interplanetary Society Volume 2 ; 2 ; https://arc.aiaa.org/ >
+
+  }
+  {
+
+    title <
+      name = Journal of Jet Propulsion ;
+      eissn = 1936-9980 ;
+      issnl = 1936-9980
+    >
+    param[journal_id] = jjp
+    #Journal of Jet Propulsion, 1954-1958, param[journal_id] = jjp
+
+    au < manifest ; 1954 ; Journal of Jet Propulsion Volume 24 ; 24 ; https://arc.aiaa.org/ >
+    au < manifest ; 1955 ; Journal of Jet Propulsion Volume 25 ; 25 ; https://arc.aiaa.org/ >
+    au < manifest ; 1956 ; Journal of Jet Propulsion Volume 26 ; 26 ; https://arc.aiaa.org/ >
+    au < manifest ; 1957 ; Journal of Jet Propulsion Volume 27 ; 27 ; https://arc.aiaa.org/ >
+    au < manifest ; 1958 ; Journal of Jet Propulsion Volume 28 ; 28 ; https://arc.aiaa.org/ >
+
+  }
+  {
+
+    title <
+      name = Journal of the Aeronautical Sciences ;
+      eissn = 1936-9956 ;
+      issnl = 1936-9956
+    >
+    param[journal_id] = jans
+    #Journal of the Aeronautical Sciences (Institute of the Aeronautical Sciences), 1934-1957, param[journal_id] = jans
+    #Many manifest pages have intermittant 403 errors.
+
+    au < manifest ; 1934 ; Journal of the Aeronautical Sciences Volume 1 ; 1 ; https://arc.aiaa.org/ >
+    au < manifest ; 1935 ; Journal of the Aeronautical Sciences Volume 2 ; 2 ; https://arc.aiaa.org/ >
+    au < manifest ; 1936 ; Journal of the Aeronautical Sciences Volume 3 ; 3 ; https://arc.aiaa.org/ >
+    au < manifest ; 1937 ; Journal of the Aeronautical Sciences Volume 4 ; 4 ; https://arc.aiaa.org/ >
+    au < manifest ; 1938 ; Journal of the Aeronautical Sciences Volume 5 ; 5 ; https://arc.aiaa.org/ >
+    au < manifest ; 1939 ; Journal of the Aeronautical Sciences Volume 6 ; 6 ; https://arc.aiaa.org/ >
+    au < manifest ; 1940 ; Journal of the Aeronautical Sciences Volume 7 ; 7 ; https://arc.aiaa.org/ >
+    au < manifest ; 1941 ; Journal of the Aeronautical Sciences Volume 8 ; 8 ; https://arc.aiaa.org/ >
+    au < manifest ; 1942 ; Journal of the Aeronautical Sciences Volume 9 ; 9 ; https://arc.aiaa.org/ >
+    au < manifest ; 1943 ; Journal of the Aeronautical Sciences Volume 10 ; 10 ; https://arc.aiaa.org/ >
+    au < manifest ; 1944 ; Journal of the Aeronautical Sciences Volume 11 ; 11 ; https://arc.aiaa.org/ >
+    au < manifest ; 1945 ; Journal of the Aeronautical Sciences Volume 12 ; 12 ; https://arc.aiaa.org/ >
+    au < manifest ; 1946 ; Journal of the Aeronautical Sciences Volume 13 ; 13 ; https://arc.aiaa.org/ >
+    au < manifest ; 1947 ; Journal of the Aeronautical Sciences Volume 14 ; 14 ; https://arc.aiaa.org/ >
+    au < manifest ; 1948 ; Journal of the Aeronautical Sciences Volume 15 ; 15 ; https://arc.aiaa.org/ >
+    au < manifest ; 1949 ; Journal of the Aeronautical Sciences Volume 16 ; 16 ; https://arc.aiaa.org/ >
+    au < manifest ; 1950 ; Journal of the Aeronautical Sciences Volume 17 ; 17 ; https://arc.aiaa.org/ >
+    au < manifest ; 1951 ; Journal of the Aeronautical Sciences Volume 18 ; 18 ; https://arc.aiaa.org/ >
+    au < manifest ; 1952 ; Journal of the Aeronautical Sciences Volume 19 ; 19 ; https://arc.aiaa.org/ >
+    au < manifest ; 1953 ; Journal of the Aeronautical Sciences Volume 20 ; 20 ; https://arc.aiaa.org/ >
+    au < manifest ; 1954 ; Journal of the Aeronautical Sciences Volume 21 ; 21 ; https://arc.aiaa.org/ >
+    au < manifest ; 1955 ; Journal of the Aeronautical Sciences Volume 22 ; 22 ; https://arc.aiaa.org/ >
+    au < manifest ; 1956 ; Journal of the Aeronautical Sciences Volume 23 ; 23 ; https://arc.aiaa.org/ >
+    au < manifest ; 1957 ; Journal of the Aeronautical Sciences Volume 24 ; 24 ; https://arc.aiaa.org/ >
+
+  }
+  {
+
+    title <
+      name = Journal of the Aerospace Sciences ;
+      eissn = 1936-9999 ;
+      issnl = 1936-9999
+    >
+    param[journal_id] = jasps
+    #Journal of the Aerospace Sciences, 1958-1962, param[journal_id] = jasps
+
+    au < manifest ; 1958 ; Journal of the Aerospace Sciences Volume 25 ; 25 ; https://arc.aiaa.org/ >
+    au < manifest ; 1959 ; Journal of the Aerospace Sciences Volume 26 ; 26 ; https://arc.aiaa.org/ >
+    au < manifest ; 1960 ; Journal of the Aerospace Sciences Volume 27 ; 27 ; https://arc.aiaa.org/ >
+    au < manifest ; 1961 ; Journal of the Aerospace Sciences Volume 28 ; 28 ; https://arc.aiaa.org/ >
+    au < manifest ; 1962 ; Journal of the Aerospace Sciences Volume 29 ; 29 ; https://arc.aiaa.org/ >
+
+  }
+  {
+
+    title <
+      name = Journal of the American Rocket Society ;
+      eissn = 1936-9964 ;
+      issnl = 1936-9964
+    >
+    param[journal_id] = jars
+    #Journal of the American Rocket Society, 1945-1953, param[journal_id] = jars
+
+    au < manifest ; 1945-1950 ; Journal of the American Rocket Society Volume 00 ; 00 ; https://arc.aiaa.org/ >
+    au < manifest ; 1951 ; Journal of the American Rocket Society Volume 21 ; 21 ; https://arc.aiaa.org/ >
+    au < manifest ; 1952 ; Journal of the American Rocket Society Volume 22 ; 22 ; https://arc.aiaa.org/ >
+    au < manifest ; 1953 ; Journal of the American Rocket Society Volume 23 ; 23 ; https://arc.aiaa.org/ >
+
+  }
   
 }
   

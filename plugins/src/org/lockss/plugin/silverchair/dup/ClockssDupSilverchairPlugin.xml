@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -48,7 +48,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>10</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -61,10 +61,10 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>clockss_override</string>
     <map>
-     <entry>
+      <entry>
         <string>au_def_pause_time</string>
-        <long>100</long>
-     </entry>
+        <long>10000</long>
+      </entry>
     </map>
   </entry>
  </map>

@@ -11,7 +11,8 @@
   {
     title <
       name = Academia Revista Latinoamericana de Administración ;
-      eissn = 1012-8255 ;
+      issn = 1012-8255 ;
+      eissn = 2056-5127 ;
       issnl = 1012-8255
     >
 
@@ -6031,7 +6032,7 @@
 
   {
     title <
-      name = Journal of Children’s Services: Research informing policy and practice ;
+      name = Journal of Children's Services: Research informing policy and practice ;
       issn = 1746-6660 ;
       eissn = 2042-8677 ;
       issnl = 1746-6660
@@ -6040,14 +6041,14 @@
     comment[journal_issn] = 1746-6660
     param[journal_id] = jcs
 
-    au < doNotProcess ; 2006 ; Journal of Children’s Services: Research informing policy and practice Volume 1 ; 1 ; https://www.emeraldinsight.com/ >
-    au < doNotProcess ; 2007 ; Journal of Children’s Services: Research informing policy and practice Volume 2 ; 2 ; https://www.emeraldinsight.com/ >
-    au < doNotProcess ; 2008 ; Journal of Children’s Services: Research informing policy and practice Volume 3 ; 3 ; https://www.emeraldinsight.com/ >
-    au < doNotProcess ; 2009 ; Journal of Children’s Services: Research informing policy and practice Volume 4 ; 4 ; https://www.emeraldinsight.com/ >
-    au < doNotProcess ; 2010 ; Journal of Children’s Services: Research informing policy and practice Volume 5 ; 5 ; https://www.emeraldinsight.com/ >
-    au < doNotProcess ; 2011 ; Journal of Children’s Services: Research informing policy and practice Volume 6 ; 6 ; https://www.emeraldinsight.com/ >
-    au < doNotProcess ; 2012 ; Journal of Children’s Services: Research informing policy and practice Volume 7 ; 7 ; https://www.emeraldinsight.com/ >
-    au < down ; 2013 ; Journal of Children’s Services: Research informing policy and practice Volume 8 ; 8 ; http://www.emeraldinsight.com/ >
+    au < doNotProcess ; 2006 ; Journal of Children's Services: Research informing policy and practice Volume 1 ; 1 ; https://www.emeraldinsight.com/ >
+    au < doNotProcess ; 2007 ; Journal of Children's Services: Research informing policy and practice Volume 2 ; 2 ; https://www.emeraldinsight.com/ >
+    au < doNotProcess ; 2008 ; Journal of Children's Services: Research informing policy and practice Volume 3 ; 3 ; https://www.emeraldinsight.com/ >
+    au < doNotProcess ; 2009 ; Journal of Children's Services: Research informing policy and practice Volume 4 ; 4 ; https://www.emeraldinsight.com/ >
+    au < doNotProcess ; 2010 ; Journal of Children's Services: Research informing policy and practice Volume 5 ; 5 ; https://www.emeraldinsight.com/ >
+    au < doNotProcess ; 2011 ; Journal of Children's Services: Research informing policy and practice Volume 6 ; 6 ; https://www.emeraldinsight.com/ >
+    au < doNotProcess ; 2012 ; Journal of Children's Services: Research informing policy and practice Volume 7 ; 7 ; https://www.emeraldinsight.com/ >
+    au < down ; 2013 ; Journal of Children's Services: Research informing policy and practice Volume 8 ; 8 ; http://www.emeraldinsight.com/ >
     au < down ; 2014 ; Journal of Children's Services: Research informing policy and practice Volume 9 ; 9 ; http://www.emeraldinsight.com/ >
     au < down ; 2015 ; Journal of Children's Services: Research informing policy and practice Volume 10 ; 10 ; http://www.emeraldinsight.com/ >
     au < down ; 2016 ; Journal of Children's Services: Research informing policy and practice Volume 11 ; 11 ; http://www.emeraldinsight.com/ >

@@ -1,7 +1,6 @@
 /*
 
-Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -35,8 +34,10 @@ package org.lockss.extractor;
 
 import java.util.*;
 import org.lockss.util.*;
-import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.text.StringEscapeUtils;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -325,7 +326,7 @@ public class MetadataField {
       KEY_SERIES_TITLE, Cardinality.Single, seriestitlevalid);
 
   public static final String KEY_PROPRIETARY_SERIES_IDENTIFIER =
-      "propietary_series_identifier";
+      "proprietary_series_identifier";
   public static final MetadataField FIELD_PROPRIETARY_SERIES_IDENTIFIER =
       new MetadataField(KEY_PROPRIETARY_SERIES_IDENTIFIER, Cardinality.Single);
 
@@ -867,6 +868,16 @@ public class MetadataField {
 
   public boolean hasExtractor() {
     return extractor != null;
+  }
+
+  public String toString() {
+    return new ToStringBuilder(this)
+      .append("key", key)
+      .append("cardinality", cardinality)
+      .append("validator", validator)
+      .append("splitter", splitter)
+      .append("extractor", extractor)
+      .toString();
   }
 
   /** Cardinality of a MetadataField: single-valued or multi-valued */

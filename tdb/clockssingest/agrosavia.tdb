@@ -4,8 +4,8 @@
     name = Agrosavia ;
     info[contract] = 2021 ;
     info[back] = 1996 ;
+    info[min_year] = 1996 ;
     info[tester] = 5 ;
-    info[poller] = 8 ;
     info[platform] = OJS3. Open Journal Systems 3.2.1.4
   >
 
@@ -54,17 +54,21 @@
       au < doNotProcess ; exists ; 2020 ; Ciencia y Tecnología Agropecuaria Volume 2020 ; 21 ; 2020 ; >
       au < doNotProcess ; exists ; 2021 ; Ciencia y Tecnología Agropecuaria Volume 2021 ; 22 ; 2021 ; >
       au < doNotProcess ; exists ; 2022 ; Ciencia y Tecnología Agropecuaria Volume 2022 ; 23 ; 2022 ; >
-
       }
       {
       param[base_url] = http://revistacta.agrosavia.co/
 
       au < frozen ; exists ; 2017 ; Ciencia y Tecnología Agropecuaria Volume 2017 ; 18 ; 2017 ; >
       au < finished ; frozen ; 2018 ; Ciencia y Tecnología Agropecuaria Volume 2018 ; 19 ; 2018 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2019 ; Ciencia y Tecnología Agropecuaria Volume 2019 ; 20 ; 2019 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2019 ; Ciencia y Tecnología Agropecuaria Volume 2019 ; 20 ; 2019 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2020 ; Ciencia y Tecnología Agropecuaria Volume 2020 ; 21 ; 2020 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2021 ; Ciencia y Tecnología Agropecuaria Volume 2021 ; 22 ; 2021 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2022 ; Ciencia y Tecnología Agropecuaria Volume 2022 [superseded] ; 23 ; 2022 ; >
+      au < deepCrawl ; exists ; 2022 ; Ciencia y Tecnología Agropecuaria Volume 2022 ; 23 ; 2022 ; >
+      }
+      {
+      param[base_url] = https://revistacta.agrosavia.co/
+
+      au < crawling ; exists ; 2023 ; Ciencia y Tecnología Agropecuaria Volume 2023 ; 24 ; 2023 ; >
       }
   }
 

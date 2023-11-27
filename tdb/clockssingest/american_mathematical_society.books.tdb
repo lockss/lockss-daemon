@@ -8,13 +8,13 @@
     info[poller] = 3
 
   >
-  
+
     plugin = org.lockss.plugin.americanmathematicalsociety.ClockssAmericanMathematicalSocietyBooksPlugin
-    param[base_url] = http://www.ams.org/
+    #param[base_url] = http://www.ams.org/
     comment[type] = bookSeries
-    implicit < status ; status2 ; year ; name ; param[year_string] ; hidden[proxy] >
-    #the AUs were split between ingest1 and ingest2 and only collected on 1 ingest machine
-    
+    implicit < status ; status2 ; year ; name ; param[year_string] ; param[base_url] ; hidden[proxy] >
+    #Before 2014, the AUs were split between ingest1 and ingest2 and only collected on 1 ingest machine
+
     {
   
     title < 
@@ -25,49 +25,50 @@
     >
     param[collection_id] = conm
     
-    au < finished ; finished ; 1980 ; Contemporary Mathematics 1980 ; 1980 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1981 ; Contemporary Mathematics 1981 ; 1981 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1982 ; Contemporary Mathematics 1982 ; 1982 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1983 ; Contemporary Mathematics 1983 ; 1983 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1984 ; Contemporary Mathematics 1984 ; 1984 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1985 ; Contemporary Mathematics 1985 ; 1985 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1986 ; Contemporary Mathematics 1986 ; 1986 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1987 ; Contemporary Mathematics 1987 ; 1987 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1988 ; Contemporary Mathematics 1988 ; 1988 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1989 ; Contemporary Mathematics 1989 ; 1989 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1990 ; Contemporary Mathematics 1990 ; 1990 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1991 ; Contemporary Mathematics 1991 ; 1991 ; reingest2.clockss.org:8085 >
-    au < zapped ; finished ; 1992 ; Contemporary Mathematics 1992 ; 1992 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1993 ; Contemporary Mathematics 1993 ; 1993 ; reingest2.clockss.org:8085 >
-    au < zapped ; finished ; 1994 ; Contemporary Mathematics 1994 ; 1994 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1995 ; Contemporary Mathematics 1995 ; 1995 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1996 ; Contemporary Mathematics 1996 ; 1996 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1997 ; Contemporary Mathematics 1997 ; 1997 ; reingest2.clockss.org:8085 >
-    au < zapped ; finished ; 1998 ; Contemporary Mathematics 1998 ; 1998 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1999 ; Contemporary Mathematics 1999 ; 1999 ; reingest2.clockss.org:8085 >
-    au < zapped ; finished ; 2000 ; Contemporary Mathematics 2000 ; 2000 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2001 ; Contemporary Mathematics 2001 ; 2001 ; reingest2.clockss.org:8085 >
-    au < zapped ; finished ; 2002 ; Contemporary Mathematics 2002 ; 2002 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2003 ; Contemporary Mathematics 2003 ; 2003 ; reingest2.clockss.org:8085 >
-    au < zapped ; finished ; 2004 ; Contemporary Mathematics 2004 ; 2004 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2005 ; Contemporary Mathematics 2005 ; 2005 ; reingest2.clockss.org:8085 >
-    au < zapped ; finished ; 2006 ; Contemporary Mathematics 2006 ; 2006 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2007 ; Contemporary Mathematics 2007 ; 2007 ; reingest2.clockss.org:8085 >
-    au < zapped ; finished ; 2008 ; Contemporary Mathematics 2008 ; 2008 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2009 ; Contemporary Mathematics 2009 ; 2009 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2010 ; Contemporary Mathematics 2010 ; 2010 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2011 ; Contemporary Mathematics 2011 ; 2011 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2012 ; Contemporary Mathematics 2012 ; 2012 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2013 ; Contemporary Mathematics 2013 ; 2013 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2014 ; Contemporary Mathematics 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2015 ; Contemporary Mathematics 2015 ; 2015 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2016 ; Contemporary Mathematics 2016 ; 2016 ; reingest4.clockss.org:8082 >
-    au < finished ; finished ; 2017 ; Contemporary Mathematics 2017 ; 2017 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2018 ; Contemporary Mathematics 2018 ; 2018 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2019 ; Contemporary Mathematics 2019 ; 2019 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2020 ; Contemporary Mathematics 2020 ; 2020 ; >
-    au < deepCrawl ; exists ; 2021 ; Contemporary Mathematics 2021 ; 2021 ; >
-#assign a reingest - the plugin is currently set up to collect one copy and has no hash filter
+    au < finished ; finished ; 1980 ; Contemporary Mathematics 1980 ; 1980 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1981 ; Contemporary Mathematics 1981 ; 1981 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1982 ; Contemporary Mathematics 1982 ; 1982 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1983 ; Contemporary Mathematics 1983 ; 1983 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1984 ; Contemporary Mathematics 1984 ; 1984 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1985 ; Contemporary Mathematics 1985 ; 1985 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1986 ; Contemporary Mathematics 1986 ; 1986 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1987 ; Contemporary Mathematics 1987 ; 1987 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1988 ; Contemporary Mathematics 1988 ; 1988 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1989 ; Contemporary Mathematics 1989 ; 1989 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1990 ; Contemporary Mathematics 1990 ; 1990 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1991 ; Contemporary Mathematics 1991 ; 1991 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1992 ; Contemporary Mathematics 1992 ; 1992 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1993 ; Contemporary Mathematics 1993 ; 1993 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1994 ; Contemporary Mathematics 1994 ; 1994 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1995 ; Contemporary Mathematics 1995 ; 1995 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1996 ; Contemporary Mathematics 1996 ; 1996 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1997 ; Contemporary Mathematics 1997 ; 1997 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1998 ; Contemporary Mathematics 1998 ; 1998 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1999 ; Contemporary Mathematics 1999 ; 1999 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2000 ; Contemporary Mathematics 2000 ; 2000 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2001 ; Contemporary Mathematics 2001 ; 2001 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2002 ; Contemporary Mathematics 2002 ; 2002 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2003 ; Contemporary Mathematics 2003 ; 2003 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2004 ; Contemporary Mathematics 2004 ; 2004 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2005 ; Contemporary Mathematics 2005 ; 2005 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2006 ; Contemporary Mathematics 2006 ; 2006 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2007 ; Contemporary Mathematics 2007 ; 2007 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2008 ; Contemporary Mathematics 2008 ; 2008 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2009 ; Contemporary Mathematics 2009 ; 2009 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2010 ; Contemporary Mathematics 2010 ; 2010 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; Contemporary Mathematics 2011 ; 2011 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2012 ; Contemporary Mathematics 2012 ; 2012 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; Contemporary Mathematics 2013 ; 2013 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Contemporary Mathematics 2014 ; 2014 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Contemporary Mathematics 2015 ; 2015 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; Contemporary Mathematics 2016 ; 2016 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; Contemporary Mathematics 2017 ; 2017 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2018 ; Contemporary Mathematics 2018 ; 2018 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; Contemporary Mathematics 2019 ; 2019 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2020 ; Contemporary Mathematics 2020 ; 2020 ; http://www.ams.org/ ; >
+    au < deepCrawl ; exists ; 2021 ; Contemporary Mathematics 2021 ; 2021 ; http://www.ams.org/ ; >
+    au < frozen ; exists ; 2022 ; Contemporary Mathematics 2022 ; 2022 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
+    au < manifest ; exists ; 2023 ; Contemporary Mathematics 2023 ; 2023 ; https://www.ams.org/ ; >
 
     }
 
@@ -81,56 +82,58 @@
     >
     param[collection_id] = surv
     
-    au < finished ; finished ; 1943 ; Mathematical Surveys and Monographs 1943 ; 1943 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1949 ; Mathematical Surveys and Monographs 1949 ; 1949 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1950 ; Mathematical Surveys and Monographs 1950 ; 1950 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1951 ; Mathematical Surveys and Monographs 1951 ; 1951 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1961 ; Mathematical Surveys and Monographs 1961 ; 1961 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1963 ; Mathematical Surveys and Monographs 1963 ; 1963 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1964 ; Mathematical Surveys and Monographs 1964 ; 1964 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1967 ; Mathematical Surveys and Monographs 1967 ; 1967 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1974 ; Mathematical Surveys and Monographs 1974 ; 1974 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1977 ; Mathematical Surveys and Monographs 1977 ; 1977 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1978 ; Mathematical Surveys and Monographs 1978 ; 1978 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1980 ; Mathematical Surveys and Monographs 1980 ; 1980 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1981 ; Mathematical Surveys and Monographs 1981 ; 1981 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1984 ; Mathematical Surveys and Monographs 1984 ; 1984 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1986 ; Mathematical Surveys and Monographs 1986 ; 1986 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1987 ; Mathematical Surveys and Monographs 1987 ; 1987 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1988 ; Mathematical Surveys and Monographs 1988 ; 1988 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1989 ; Mathematical Surveys and Monographs 1989 ; 1989 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1990 ; Mathematical Surveys and Monographs 1990 ; 1990 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1991 ; Mathematical Surveys and Monographs 1991 ; 1991 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1993 ; Mathematical Surveys and Monographs 1993 ; 1993 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1994 ; Mathematical Surveys and Monographs 1994 ; 1994 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1995 ; Mathematical Surveys and Monographs 1995 ; 1995 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1996 ; Mathematical Surveys and Monographs 1996 ; 1996 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1997 ; Mathematical Surveys and Monographs 1997 ; 1997 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1998 ; Mathematical Surveys and Monographs 1998 ; 1998 ; reingest2.clockss.org:8085 >
-    au < zapped ; finished ; 1999 ; Mathematical Surveys and Monographs 1999 ; 1999 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2000 ; Mathematical Surveys and Monographs 2000 ; 2000 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2001 ; Mathematical Surveys and Monographs 2001 ; 2001 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2002 ; Mathematical Surveys and Monographs 2002 ; 2002 ; reingest2.clockss.org:8085 >
-    au < zapped ; finished ; 2003 ; Mathematical Surveys and Monographs 2003 ; 2003 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2004 ; Mathematical Surveys and Monographs 2004 ; 2004 ; reingest2.clockss.org:8085 >
-    au < zapped ; finished ; 2005 ; Mathematical Surveys and Monographs 2005 ; 2005 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2006 ; Mathematical Surveys and Monographs 2006 ; 2006 ; reingest2.clockss.org:8085 >
-    au < zapped ; finished ; 2007 ; Mathematical Surveys and Monographs 2007 ; 2007 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2008 ; Mathematical Surveys and Monographs 2008 ; 2008 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2009 ; Mathematical Surveys and Monographs 2009 ; 2009 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2010 ; Mathematical Surveys and Monographs 2010 ; 2010 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2011 ; Mathematical Surveys and Monographs 2011 ; 2011 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2012 ; Mathematical Surveys and Monographs 2012 ; 2012 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2013 ; Mathematical Surveys and Monographs 2013 ; 2013 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2014 ; Mathematical Surveys and Monographs 2014 ; 2014 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2015 ; Mathematical Surveys and Monographs 2015 ; 2015 ; reingest5.clockss.org:8082 >
-    au < finished ; finished ; 2016 ; Mathematical Surveys and Monographs 2016 ; 2016 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2017 ; Mathematical Surveys and Monographs 2017 ; 2017 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2018 ; Mathematical Surveys and Monographs 2018 ; 2018 ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2019 ; Mathematical Surveys and Monographs 2019 ; 2019 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2020 ; Mathematical Surveys and Monographs 2020 ; 2020 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2021 ; Mathematical Surveys and Monographs 2021 ; 2021 ; reingest5.clockss.org:8082 >
-#assign a reingest - the plugin is currently set up to collect one copy and has no hash filter
+    au < finished ; finished ; 1943 ; Mathematical Surveys and Monographs 1943 ; 1943 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1949 ; Mathematical Surveys and Monographs 1949 ; 1949 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1950 ; Mathematical Surveys and Monographs 1950 ; 1950 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1951 ; Mathematical Surveys and Monographs 1951 ; 1951 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1961 ; Mathematical Surveys and Monographs 1961 ; 1961 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1963 ; Mathematical Surveys and Monographs 1963 ; 1963 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1964 ; Mathematical Surveys and Monographs 1964 ; 1964 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1967 ; Mathematical Surveys and Monographs 1967 ; 1967 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1974 ; Mathematical Surveys and Monographs 1974 ; 1974 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1977 ; Mathematical Surveys and Monographs 1977 ; 1977 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1978 ; Mathematical Surveys and Monographs 1978 ; 1978 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1980 ; Mathematical Surveys and Monographs 1980 ; 1980 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1981 ; Mathematical Surveys and Monographs 1981 ; 1981 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1984 ; Mathematical Surveys and Monographs 1984 ; 1984 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1986 ; Mathematical Surveys and Monographs 1986 ; 1986 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1987 ; Mathematical Surveys and Monographs 1987 ; 1987 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1988 ; Mathematical Surveys and Monographs 1988 ; 1988 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1989 ; Mathematical Surveys and Monographs 1989 ; 1989 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1990 ; Mathematical Surveys and Monographs 1990 ; 1990 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1991 ; Mathematical Surveys and Monographs 1991 ; 1991 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1993 ; Mathematical Surveys and Monographs 1993 ; 1993 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1994 ; Mathematical Surveys and Monographs 1994 ; 1994 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1995 ; Mathematical Surveys and Monographs 1995 ; 1995 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1996 ; Mathematical Surveys and Monographs 1996 ; 1996 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1997 ; Mathematical Surveys and Monographs 1997 ; 1997 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1998 ; Mathematical Surveys and Monographs 1998 ; 1998 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1999 ; Mathematical Surveys and Monographs 1999 ; 1999 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2000 ; Mathematical Surveys and Monographs 2000 ; 2000 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2001 ; Mathematical Surveys and Monographs 2001 ; 2001 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2002 ; Mathematical Surveys and Monographs 2002 ; 2002 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2003 ; Mathematical Surveys and Monographs 2003 ; 2003 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2004 ; Mathematical Surveys and Monographs 2004 ; 2004 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2005 ; Mathematical Surveys and Monographs 2005 ; 2005 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2006 ; Mathematical Surveys and Monographs 2006 ; 2006 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 2007 ; Mathematical Surveys and Monographs 2007 ; 2007 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2008 ; Mathematical Surveys and Monographs 2008 ; 2008 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2009 ; Mathematical Surveys and Monographs 2009 ; 2009 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; Mathematical Surveys and Monographs 2010 ; 2010 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2011 ; Mathematical Surveys and Monographs 2011 ; 2011 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; Mathematical Surveys and Monographs 2012 ; 2012 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; Mathematical Surveys and Monographs 2013 ; 2013 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2014 ; Mathematical Surveys and Monographs 2014 ; 2014 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Mathematical Surveys and Monographs 2015 ; 2015 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Mathematical Surveys and Monographs 2016 ; 2016 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; Mathematical Surveys and Monographs 2017 ; 2017 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2018 ; Mathematical Surveys and Monographs 2018 ; 2018 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2019 ; Mathematical Surveys and Monographs 2019 ; 2019 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; Mathematical Surveys and Monographs 2020 ; 2020 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ; Mathematical Surveys and Monographs 2021 ; 2021 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2022 ; Mathematical Surveys and Monographs 2022 ; 2022 ; https://www.ams.org/ ; >
+    au < doNotProcess ; exists ; 2023 ; Mathematical Surveys and Monographs 2023 ; 2023 ; https://www.ams.org/ ; >
+#Not in contract. Move doNotProcess to manifest when contract is approved.
     }
 
     {
@@ -143,79 +146,80 @@
     >
     param[collection_id] = memo
     
-    au < finished ; finished ; 1950 ; Memoirs of the American Mathematical Society 1950 ; 1950 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1951 ; Memoirs of the American Mathematical Society 1951 ; 1951 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1952 ; Memoirs of the American Mathematical Society 1952 ; 1952 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1953 ; Memoirs of the American Mathematical Society 1953 ; 1953 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1954 ; Memoirs of the American Mathematical Society 1954 ; 1954 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1955 ; Memoirs of the American Mathematical Society 1955 ; 1955 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1956 ; Memoirs of the American Mathematical Society 1956 ; 1956 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1957 ; Memoirs of the American Mathematical Society 1957 ; 1957 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1958 ; Memoirs of the American Mathematical Society 1958 ; 1958 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1959 ; Memoirs of the American Mathematical Society 1959 ; 1959 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1960 ; Memoirs of the American Mathematical Society 1960 ; 1960 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1961 ; Memoirs of the American Mathematical Society 1961 ; 1961 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1962 ; Memoirs of the American Mathematical Society 1962 ; 1962 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1963 ; Memoirs of the American Mathematical Society 1963 ; 1963 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1964 ; Memoirs of the American Mathematical Society 1964 ; 1964 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1965 ; Memoirs of the American Mathematical Society 1965 ; 1965 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1966 ; Memoirs of the American Mathematical Society 1966 ; 1966 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1967 ; Memoirs of the American Mathematical Society 1967 ; 1967 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1968 ; Memoirs of the American Mathematical Society 1968 ; 1968 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1969 ; Memoirs of the American Mathematical Society 1969 ; 1969 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1970 ; Memoirs of the American Mathematical Society 1970 ; 1970 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1971 ; Memoirs of the American Mathematical Society 1971 ; 1971 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1972 ; Memoirs of the American Mathematical Society 1972 ; 1972 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1973 ; Memoirs of the American Mathematical Society 1973 ; 1973 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1974 ; Memoirs of the American Mathematical Society 1974 ; 1974 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1975 ; Memoirs of the American Mathematical Society 1975 ; 1975 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1976 ; Memoirs of the American Mathematical Society 1976 ; 1976 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1977 ; Memoirs of the American Mathematical Society 1977 ; 1977 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1978 ; Memoirs of the American Mathematical Society 1978 ; 1978 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1979 ; Memoirs of the American Mathematical Society 1979 ; 1979 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1980 ; Memoirs of the American Mathematical Society 1980 ; 1980 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1981 ; Memoirs of the American Mathematical Society 1981 ; 1981 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1982 ; Memoirs of the American Mathematical Society 1982 ; 1982 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1983 ; Memoirs of the American Mathematical Society 1983 ; 1983 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1984 ; Memoirs of the American Mathematical Society 1984 ; 1984 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1985 ; Memoirs of the American Mathematical Society 1985 ; 1985 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1986 ; Memoirs of the American Mathematical Society 1986 ; 1986 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1987 ; Memoirs of the American Mathematical Society 1987 ; 1987 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1988 ; Memoirs of the American Mathematical Society 1988 ; 1988 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1989 ; Memoirs of the American Mathematical Society 1989 ; 1989 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1990 ; Memoirs of the American Mathematical Society 1990 ; 1990 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1991 ; Memoirs of the American Mathematical Society 1991 ; 1991 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1992 ; Memoirs of the American Mathematical Society 1992 ; 1992 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1993 ; Memoirs of the American Mathematical Society 1993 ; 1993 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1994 ; Memoirs of the American Mathematical Society 1994 ; 1994 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1995 ; Memoirs of the American Mathematical Society 1995 ; 1995 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1996 ; Memoirs of the American Mathematical Society 1996 ; 1996 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1997 ; Memoirs of the American Mathematical Society 1997 ; 1997 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1998 ; Memoirs of the American Mathematical Society 1998 ; 1998 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1999 ; Memoirs of the American Mathematical Society 1999 ; 1999 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2000 ; Memoirs of the American Mathematical Society 2000 ; 2000 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2001 ; Memoirs of the American Mathematical Society 2001 ; 2001 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2002 ; Memoirs of the American Mathematical Society 2002 ; 2002 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2003 ; Memoirs of the American Mathematical Society 2003 ; 2003 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2004 ; Memoirs of the American Mathematical Society 2004 ; 2004 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2005 ; Memoirs of the American Mathematical Society 2005 ; 2005 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2006 ; Memoirs of the American Mathematical Society 2006 ; 2006 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2007 ; Memoirs of the American Mathematical Society 2007 ; 2007 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2008 ; Memoirs of the American Mathematical Society 2008 ; 2008 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2009 ; Memoirs of the American Mathematical Society 2009 ; 2009 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2010 ; Memoirs of the American Mathematical Society 2010 ; 2010 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2011 ; Memoirs of the American Mathematical Society 2011 ; 2011 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2012 ; Memoirs of the American Mathematical Society 2012 ; 2012 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2013 ; Memoirs of the American Mathematical Society 2013 ; 2013 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2014 ; Memoirs of the American Mathematical Society 2014 ; 2014 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2015 ; Memoirs of the American Mathematical Society 2015 ; 2015 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2016 ; Memoirs of the American Mathematical Society 2016 ; 2016 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2017 ; Memoirs of the American Mathematical Society 2017 ; 2017 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2018 ; Memoirs of the American Mathematical Society 2018 ; 2018 ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2019 ; Memoirs of the American Mathematical Society 2019 ; 2019 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2020 ; Memoirs of the American Mathematical Society 2020 ; 2020 ; >
-    au < deepCrawl ; exists ; 2021 ; Memoirs of the American Mathematical Society 2021 ; 2021 ; >
-#assign a reingest - the plugin is currently set up to collect one copy and has no hash filter
+    au < finished ; finished ; 1950 ; Memoirs of the American Mathematical Society 1950 ; 1950 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1951 ; Memoirs of the American Mathematical Society 1951 ; 1951 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1952 ; Memoirs of the American Mathematical Society 1952 ; 1952 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1953 ; Memoirs of the American Mathematical Society 1953 ; 1953 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1954 ; Memoirs of the American Mathematical Society 1954 ; 1954 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1955 ; Memoirs of the American Mathematical Society 1955 ; 1955 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1956 ; Memoirs of the American Mathematical Society 1956 ; 1956 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1957 ; Memoirs of the American Mathematical Society 1957 ; 1957 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1958 ; Memoirs of the American Mathematical Society 1958 ; 1958 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1959 ; Memoirs of the American Mathematical Society 1959 ; 1959 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1960 ; Memoirs of the American Mathematical Society 1960 ; 1960 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1961 ; Memoirs of the American Mathematical Society 1961 ; 1961 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1962 ; Memoirs of the American Mathematical Society 1962 ; 1962 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1963 ; Memoirs of the American Mathematical Society 1963 ; 1963 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1964 ; Memoirs of the American Mathematical Society 1964 ; 1964 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1965 ; Memoirs of the American Mathematical Society 1965 ; 1965 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1966 ; Memoirs of the American Mathematical Society 1966 ; 1966 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1967 ; Memoirs of the American Mathematical Society 1967 ; 1967 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1968 ; Memoirs of the American Mathematical Society 1968 ; 1968 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1969 ; Memoirs of the American Mathematical Society 1969 ; 1969 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1970 ; Memoirs of the American Mathematical Society 1970 ; 1970 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1971 ; Memoirs of the American Mathematical Society 1971 ; 1971 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1972 ; Memoirs of the American Mathematical Society 1972 ; 1972 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1973 ; Memoirs of the American Mathematical Society 1973 ; 1973 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1974 ; Memoirs of the American Mathematical Society 1974 ; 1974 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1975 ; Memoirs of the American Mathematical Society 1975 ; 1975 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1976 ; Memoirs of the American Mathematical Society 1976 ; 1976 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1977 ; Memoirs of the American Mathematical Society 1977 ; 1977 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1978 ; Memoirs of the American Mathematical Society 1978 ; 1978 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1979 ; Memoirs of the American Mathematical Society 1979 ; 1979 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1980 ; Memoirs of the American Mathematical Society 1980 ; 1980 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1981 ; Memoirs of the American Mathematical Society 1981 ; 1981 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1982 ; Memoirs of the American Mathematical Society 1982 ; 1982 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1983 ; Memoirs of the American Mathematical Society 1983 ; 1983 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1984 ; Memoirs of the American Mathematical Society 1984 ; 1984 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1985 ; Memoirs of the American Mathematical Society 1985 ; 1985 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1986 ; Memoirs of the American Mathematical Society 1986 ; 1986 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1987 ; Memoirs of the American Mathematical Society 1987 ; 1987 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1988 ; Memoirs of the American Mathematical Society 1988 ; 1988 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1989 ; Memoirs of the American Mathematical Society 1989 ; 1989 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1990 ; Memoirs of the American Mathematical Society 1990 ; 1990 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1991 ; Memoirs of the American Mathematical Society 1991 ; 1991 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1992 ; Memoirs of the American Mathematical Society 1992 ; 1992 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1993 ; Memoirs of the American Mathematical Society 1993 ; 1993 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1994 ; Memoirs of the American Mathematical Society 1994 ; 1994 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1995 ; Memoirs of the American Mathematical Society 1995 ; 1995 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1996 ; Memoirs of the American Mathematical Society 1996 ; 1996 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1997 ; Memoirs of the American Mathematical Society 1997 ; 1997 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1998 ; Memoirs of the American Mathematical Society 1998 ; 1998 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1999 ; Memoirs of the American Mathematical Society 1999 ; 1999 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2000 ; Memoirs of the American Mathematical Society 2000 ; 2000 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2001 ; Memoirs of the American Mathematical Society 2001 ; 2001 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2002 ; Memoirs of the American Mathematical Society 2002 ; 2002 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2003 ; Memoirs of the American Mathematical Society 2003 ; 2003 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2004 ; Memoirs of the American Mathematical Society 2004 ; 2004 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2005 ; Memoirs of the American Mathematical Society 2005 ; 2005 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2006 ; Memoirs of the American Mathematical Society 2006 ; 2006 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2007 ; Memoirs of the American Mathematical Society 2007 ; 2007 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2008 ; Memoirs of the American Mathematical Society 2008 ; 2008 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2009 ; Memoirs of the American Mathematical Society 2009 ; 2009 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2010 ; Memoirs of the American Mathematical Society 2010 ; 2010 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; Memoirs of the American Mathematical Society 2011 ; 2011 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2012 ; Memoirs of the American Mathematical Society 2012 ; 2012 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2013 ; Memoirs of the American Mathematical Society 2013 ; 2013 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2014 ; Memoirs of the American Mathematical Society 2014 ; 2014 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Memoirs of the American Mathematical Society 2015 ; 2015 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2016 ; Memoirs of the American Mathematical Society 2016 ; 2016 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; Memoirs of the American Mathematical Society 2017 ; 2017 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2018 ; Memoirs of the American Mathematical Society 2018 ; 2018 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Memoirs of the American Mathematical Society 2019 ; 2019 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
+    au < deepCrawl ; exists ; 2020 ; Memoirs of the American Mathematical Society 2020 ; 2020 ; http://www.ams.org/ ; >
+    au < deepCrawl ; exists ; 2021 ; Memoirs of the American Mathematical Society 2021 ; 2021 ; http://www.ams.org/ ; >
+    au < manifest ; exists ; 2022 ; Memoirs of the American Mathematical Society 2022 ; 2022 ; http://www.ams.org/ ; >
+    au < manifest ; exists ; 2023 ; Memoirs of the American Mathematical Society 2023 ; 2023 ; http://www.ams.org/ ; >
 
     }
 
@@ -228,13 +232,13 @@
     
     param[collection_id] = pspum
     
-    au < finished ; finished ; 1950-1959 ; Proceedings of Symposia in Pure Mathematics 1950-1959 ; 1950-1959 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1960-1969 ; Proceedings of Symposia in Pure Mathematics 1960-1969 ; 1960-1969 ; reingest2.clockss.org:8085 >
-    au < zapped ; finished ; 1970-1979 ; Proceedings of Symposia in Pure Mathematics 1970-1979 ; 1970-1979 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1980-1989 ; Proceedings of Symposia in Pure Mathematics 1980-1989 ; 1980-1989 ; reingest2.clockss.org:8085 >
-    au < zapped ; finished ; 1990-1999 ; Proceedings of Symposia in Pure Mathematics 1990-1999 ; 1990-1999 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2000-2009 ; Proceedings of Symposia in Pure Mathematics 2000-2009 ; 2000-2009 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2010-2019 ; Proceedings of Symposia in Pure Mathematics 2010-2019 ; 2010-2019 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1950-1959 ; Proceedings of Symposia in Pure Mathematics 1950-1959 ; 1950-1959 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1960-1969 ; Proceedings of Symposia in Pure Mathematics 1960-1969 ; 1960-1969 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1970-1979 ; Proceedings of Symposia in Pure Mathematics 1970-1979 ; 1970-1979 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1980-1989 ; Proceedings of Symposia in Pure Mathematics 1980-1989 ; 1980-1989 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < zapped ; finished ; 1990-1999 ; Proceedings of Symposia in Pure Mathematics 1990-1999 ; 1990-1999 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2000-2009 ; Proceedings of Symposia in Pure Mathematics 2000-2009 ; 2000-2009 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2010-2019 ; Proceedings of Symposia in Pure Mathematics 2010-2019 ; 2010-2019 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
 
     }
    
@@ -247,14 +251,555 @@
     
     param[collection_id] = psapm
     
-    au < finished ; frozen ; 1940-1949 ; Proceedings of Symposia in Applied Mathematics 1940-1949 ; 1940-1949 ; reingest1.clockss.org:8082 > #prod complete, but no successful crawl, and no polling
-    au < finished ; frozen ; 1950-1959 ; Proceedings of Symposia in Applied Mathematics 1950-1959 ; 1950-1959 ; reingest2.clockss.org:8085 > #prod complete, but no successful crawl, and no polling
-    au < finished ; frozen ; 1960-1969 ; Proceedings of Symposia in Applied Mathematics 1960-1969 ; 1960-1969 ; reingest1.clockss.org:8082 > #prod complete, but no successful crawl, and no polling
-    au < finished ; frozen ; 1970-1979 ; Proceedings of Symposia in Applied Mathematics 1970-1979 ; 1970-1979 ; reingest2.clockss.org:8085 > #prod complete, but no successful crawl, and no polling
-    au < finished ; frozen ; 1980-1989 ; Proceedings of Symposia in Applied Mathematics 1980-1989 ; 1980-1989 ; reingest1.clockss.org:8082 > #prod complete, but no successful crawl, and no polling
-    au < finished ; frozen ; 1990-1999 ; Proceedings of Symposia in Applied Mathematics 1990-1999 ; 1990-1999 ; reingest2.clockss.org:8085 > #prod complete, but no successful crawl, and no polling
-    au < finished ; frozen ; 2000-2009 ; Proceedings of Symposia in Applied Mathematics 2000-2009 ; 2000-2009 ; reingest1.clockss.org:8082 > #prod complete, but no successful crawl, and no polling
-    au < finished ; frozen ; 2010-2019 ; Proceedings of Symposia in Applied Mathematics 2010-2019 ; 2010-2019 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1940-1949 ; Proceedings of Symposia in Applied Mathematics 1940-1949 ; 1940-1949 ; http://www.ams.org/ ; reingest1.clockss.org:8082 > #prod complete, but no successful crawl, and no polling
+    au < finished ; frozen ; 1950-1959 ; Proceedings of Symposia in Applied Mathematics 1950-1959 ; 1950-1959 ; http://www.ams.org/ ; reingest2.clockss.org:8085 > #prod complete, but no successful crawl, and no polling
+    au < finished ; frozen ; 1960-1969 ; Proceedings of Symposia in Applied Mathematics 1960-1969 ; 1960-1969 ; http://www.ams.org/ ; reingest1.clockss.org:8082 > #prod complete, but no successful crawl, and no polling
+    au < finished ; frozen ; 1970-1979 ; Proceedings of Symposia in Applied Mathematics 1970-1979 ; 1970-1979 ; http://www.ams.org/ ; reingest2.clockss.org:8085 > #prod complete, but no successful crawl, and no polling
+    au < finished ; frozen ; 1980-1989 ; Proceedings of Symposia in Applied Mathematics 1980-1989 ; 1980-1989 ; http://www.ams.org/ ; reingest1.clockss.org:8082 > #prod complete, but no successful crawl, and no polling
+    au < finished ; frozen ; 1990-1999 ; Proceedings of Symposia in Applied Mathematics 1990-1999 ; 1990-1999 ; http://www.ams.org/ ; reingest2.clockss.org:8085 > #prod complete, but no successful crawl, and no polling
+    au < finished ; frozen ; 2000-2009 ; Proceedings of Symposia in Applied Mathematics 2000-2009 ; 2000-2009 ; http://www.ams.org/ ; reingest1.clockss.org:8082 > #prod complete, but no successful crawl, and no polling
+    au < finished ; frozen ; 2010-2019 ; Proceedings of Symposia in Applied Mathematics 2010-2019 ; 2010-2019 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
+    au < manifest ; exists ; 2020-2029 ; Proceedings of Symposia in Applied Mathematics 2020-2029 ; 2020-2029 ; https://www.ams.org/ ; >
 
+    }
+    {
+  
+    title < 
+      name = AMS Chelsea Publishing ;
+      type = bookSeries
+    >
+    
+    param[collection_id] = chel
+    #Not formatted the same as the other journals
+    
+    au < exists ; exists ; 1893 ; AMS Chelsea Publishing Volume 339 ; 339 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1992 ; AMS Chelsea Publishing Volume 340 ; 340 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1962 ; AMS Chelsea Publishing Volume 341 ; 341 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1989 ; AMS Chelsea Publishing Volume 342 ; 342 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1984 ; AMS Chelsea Publishing Volume 343 ; 343 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1964 ; AMS Chelsea Publishing Volume 344 ; 344 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2002 ; AMS Chelsea Publishing Volume 345 ; 345 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 346 ; 346 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 347 ; 347 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 348 ; 348 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 349 ; 349 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 350 ; 350 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 351 ; 351 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 352 ; 352 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 353 ; 353 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 354 ; 354 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 355 ; 355 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 356 ; 356 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 357 ; 357 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 358 ; 358 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 359 ; 359 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 360 ; 360 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 361 ; 361 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 362 ; 362 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 363 ; 363 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 364 ; 364 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 365 ; 365 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 366 ; 366 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 367 ; 367 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 368 ; 368 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 369 ; 369 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 370 ; 370 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 371 ; 371 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 372 ; 372 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 373 ; 373 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 374 ; 374 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 375 ; 375 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 376 ; 376 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 377 ; 377 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 378 ; 378 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 379 ; 379 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 380 ; 380 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 381 ; 381 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 382 ; 382 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 383 ; 383 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 384 ; 384 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 385 ; 385 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 386 ; 386 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; AMS Chelsea Publishing Volume 387 ; 387 ; https://www.ams.org/ ; >
+
+    }
+    
+    {
+  
+    title < 
+      name = AMS Non-Series Monographs ;
+      type = bookSeries
+    >
+    
+    param[collection_id] = mbk
+    
+    au < frozen ; exists ; 2007 ; AMS Non-Series Monographs 2007 ; 2007 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
+    au < manifest ; exists ; 2008 ; AMS Non-Series Monographs 2008 ; 2008 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2009 ; AMS Non-Series Monographs 2009 ; 2009 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
+    au < manifest ; exists ; 2010 ; AMS Non-Series Monographs 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2011 ; AMS Non-Series Monographs 2011 ; 2011 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2013 ; AMS Non-Series Monographs 2013 ; 2013 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
+    au < manifest ; exists ; 2014 ; AMS Non-Series Monographs 2014 ; 2014 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2015 ; AMS Non-Series Monographs 2015 ; 2015 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2016 ; AMS Non-Series Monographs 2016 ; 2016 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2017 ; AMS Non-Series Monographs 2017 ; 2017 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
+    au < frozen ; exists ; 2018 ; AMS Non-Series Monographs 2018 ; 2018 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
+    au < frozen ; exists ; 2019 ; AMS Non-Series Monographs 2019 ; 2019 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
+    au < manifest ; exists ; 2020 ; AMS Non-Series Monographs 2020 ; 2020 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2021 ; AMS Non-Series Monographs 2021 ; 2021 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2022 ; AMS Non-Series Monographs 2022 ; 2022 ; https://www.ams.org/ ; >
+
+    }
+
+    {
+  
+    title < 
+      name = CBMS Regional Conference Series in Mathematics ;
+      type = bookSeries
+    >
+    
+    param[collection_id] = cbms
+    
+    au < manifest ; exists ; 1970 ; CBMS Regional Conference Series in Mathematics 1970 ; 1970 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 1971 ; CBMS Regional Conference Series in Mathematics 1971 ; 1971 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
+    au < manifest ; exists ; 1972 ; CBMS Regional Conference Series in Mathematics 1972 ; 1972 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1973 ; CBMS Regional Conference Series in Mathematics 1973 ; 1973 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1974 ; CBMS Regional Conference Series in Mathematics 1974 ; 1974 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1975 ; CBMS Regional Conference Series in Mathematics 1975 ; 1975 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1976 ; CBMS Regional Conference Series in Mathematics 1976 ; 1976 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1977 ; CBMS Regional Conference Series in Mathematics 1977 ; 1977 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 1978 ; CBMS Regional Conference Series in Mathematics 1978 ; 1978 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
+    au < manifest ; exists ; 1979 ; CBMS Regional Conference Series in Mathematics 1979 ; 1979 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 1980 ; CBMS Regional Conference Series in Mathematics 1980 ; 1980 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
+    au < frozen ; exists ; 1981 ; CBMS Regional Conference Series in Mathematics 1981 ; 1981 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
+    au < manifest ; exists ; 1982 ; CBMS Regional Conference Series in Mathematics 1982 ; 1982 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1983 ; CBMS Regional Conference Series in Mathematics 1983 ; 1983 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1984 ; CBMS Regional Conference Series in Mathematics 1984 ; 1984 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1985 ; CBMS Regional Conference Series in Mathematics 1985 ; 1985 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 1986 ; CBMS Regional Conference Series in Mathematics 1986 ; 1986 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
+    au < frozen ; exists ; 1987 ; CBMS Regional Conference Series in Mathematics 1987 ; 1987 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
+    au < manifest ; exists ; 1989 ; CBMS Regional Conference Series in Mathematics 1989 ; 1989 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1990 ; CBMS Regional Conference Series in Mathematics 1990 ; 1990 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 1991 ; CBMS Regional Conference Series in Mathematics 1991 ; 1991 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
+    au < manifest ; exists ; 1993 ; CBMS Regional Conference Series in Mathematics 1993 ; 1993 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 1994 ; CBMS Regional Conference Series in Mathematics 1994 ; 1994 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
+    au < manifest ; exists ; 1995 ; CBMS Regional Conference Series in Mathematics 1995 ; 1995 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 1996 ; CBMS Regional Conference Series in Mathematics 1996 ; 1996 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
+    au < manifest ; exists ; 1997 ; CBMS Regional Conference Series in Mathematics 1997 ; 1997 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1999 ; CBMS Regional Conference Series in Mathematics 1999 ; 1999 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2000 ; CBMS Regional Conference Series in Mathematics 2000 ; 2000 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
+    au < manifest ; exists ; 2002 ; CBMS Regional Conference Series in Mathematics 2002 ; 2002 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2003 ; CBMS Regional Conference Series in Mathematics 2003 ; 2003 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2004 ; CBMS Regional Conference Series in Mathematics 2004 ; 2004 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
+    au < manifest ; exists ; 2005 ; CBMS Regional Conference Series in Mathematics 2005 ; 2005 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2006 ; CBMS Regional Conference Series in Mathematics 2006 ; 2006 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2008 ; CBMS Regional Conference Series in Mathematics 2008 ; 2008 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2009 ; CBMS Regional Conference Series in Mathematics 2009 ; 2009 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2010 ; CBMS Regional Conference Series in Mathematics 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2011 ; CBMS Regional Conference Series in Mathematics 2011 ; 2011 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2012 ; CBMS Regional Conference Series in Mathematics 2012 ; 2012 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2013 ; CBMS Regional Conference Series in Mathematics 2013 ; 2013 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2014 ; CBMS Regional Conference Series in Mathematics 2014 ; 2014 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2015 ; CBMS Regional Conference Series in Mathematics 2015 ; 2015 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2017 ; CBMS Regional Conference Series in Mathematics 2017 ; 2017 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2018 ; CBMS Regional Conference Series in Mathematics 2018 ; 2018 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2019 ; CBMS Regional Conference Series in Mathematics 2019 ; 2019 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2020 ; CBMS Regional Conference Series in Mathematics 2020 ; 2020 ; https://www.ams.org/ ; >
+
+    }
+
+    {
+  
+    title < 
+      name = AMS Current Lecture Notes ;
+      type = bookSeries
+    >
+    
+    param[collection_id] = cln
+    
+    au < manifest ; exists ; 2000 ; Current Lecture Notes 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2001 ; Current Lecture Notes 2001 ; 2001 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2002 ; Current Lecture Notes 2002 ; 2002 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2003 ; Current Lecture Notes 2003 ; 2003 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2004 ; Current Lecture Notes 2004 ; 2004 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2005 ; Current Lecture Notes 2005 ; 2005 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2006 ; Current Lecture Notes 2006 ; 2006 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2007 ; Current Lecture Notes 2007 ; 2007 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2008 ; Current Lecture Notes 2008 ; 2008 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2009 ; Current Lecture Notes 2009 ; 2009 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2010 ; Current Lecture Notes 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2011 ; Current Lecture Notes 2011 ; 2011 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2013 ; Current Lecture Notes 2013 ; 2013 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2014 ; Current Lecture Notes 2014 ; 2014 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2015 ; Current Lecture Notes 2015 ; 2015 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2016 ; Current Lecture Notes 2016 ; 2016 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2017 ; Current Lecture Notes 2017 ; 2017 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2019 ; Current Lecture Notes 2019 ; 2019 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2020 ; Current Lecture Notes 2020 ; 2020 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2022 ; Current Lecture Notes 2022 ; 2022 ; https://www.ams.org/ ; >
+
+    }
+
+    {
+  
+    title < 
+      name = AMS Colloquium Publications ;
+      type = bookSeries
+    >
+    
+    param[collection_id] = coll
+    
+    au < manifest ; exists ; 1905 ; Colloquium Publications 1905 ; 1905 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1910 ; Colloquium Publications 1910 ; 1910 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1913 ; Colloquium Publications 1913 ; 1913 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1914 ; Colloquium Publications 1914 ; 1914 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1918 ; Colloquium Publications 1918 ; 1918 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1927 ; Colloquium Publications 1927 ; 1927 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1929 ; Colloquium Publications 1929 ; 1929 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1930 ; Colloquium Publications 1930 ; 1930 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1932 ; Colloquium Publications 1932 ; 1932 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1933 ; Colloquium Publications 1933 ; 1933 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1934 ; Colloquium Publications 1934 ; 1934 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1935 ; Colloquium Publications 1935 ; 1935 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1937 ; Colloquium Publications 1937 ; 1937 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1938 ; Colloquium Publications 1938 ; 1938 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1939 ; Colloquium Publications 1939 ; 1939 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1940 ; Colloquium Publications 1940 ; 1940 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1942 ; Colloquium Publications 1942 ; 1942 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1946 ; Colloquium Publications 1946 ; 1946 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1948 ; Colloquium Publications 1948 ; 1948 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1949 ; Colloquium Publications 1949 ; 1949 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1950 ; Colloquium Publications 1950 ; 1950 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1955 ; Colloquium Publications 1955 ; 1955 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1956 ; Colloquium Publications 1956 ; 1956 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1962 ; Colloquium Publications 1962 ; 1962 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1968 ; Colloquium Publications 1968 ; 1968 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1983 ; Colloquium Publications 1983 ; 1983 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1987 ; Colloquium Publications 1987 ; 1987 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1991 ; Colloquium Publications 1991 ; 1991 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1995 ; Colloquium Publications 1995 ; 1995 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1996 ; Colloquium Publications 1996 ; 1996 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1998 ; Colloquium Publications 1998 ; 1998 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1999 ; Colloquium Publications 1999 ; 1999 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2000 ; Colloquium Publications 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2002 ; Colloquium Publications 2002 ; 2002 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2004 ; Colloquium Publications 2004 ; 2004 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2005 ; Colloquium Publications 2005 ; 2005 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2008 ; Colloquium Publications 2008 ; 2008 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2010 ; Colloquium Publications 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2012 ; Colloquium Publications 2012 ; 2012 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2013 ; Colloquium Publications 2013 ; 2013 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2016 ; Colloquium Publications 2016 ; 2016 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2017 ; Colloquium Publications 2017 ; 2017 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2018 ; Colloquium Publications 2018 ; 2018 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2019 ; Colloquium Publications 2019 ; 2019 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2020 ; Colloquium Publications 2020 ; 2020 ; https://www.ams.org/ ; >
+
+    }
+
+    {
+  
+    title < 
+      name = AMS Current Lecture Notes ;
+      type = bookSeries
+    >
+    
+    param[collection_id] = fic
+    
+    au < manifest ; exists ; 1993 ; Fields Institute Communications 1993 ; 1993 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1994 ; Fields Institute Communications 1994 ; 1994 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1995 ; Fields Institute Communications 1995 ; 1995 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1996 ; Fields Institute Communications 1996 ; 1996 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1997 ; Fields Institute Communications 1997 ; 1997 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1998 ; Fields Institute Communications 1998 ; 1998 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1999 ; Fields Institute Communications 1999 ; 1999 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2000 ; Fields Institute Communications 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2001 ; Fields Institute Communications 2001 ; 2001 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2002 ; Fields Institute Communications 2002 ; 2002 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2003 ; Fields Institute Communications 2003 ; 2003 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2004 ; Fields Institute Communications 2004 ; 2004 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2005 ; Fields Institute Communications 2005 ; 2005 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2006 ; Fields Institute Communications 2006 ; 2006 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2007 ; Fields Institute Communications 2007 ; 2007 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2008 ; Fields Institute Communications 2008 ; 2008 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2009 ; Fields Institute Communications 2009 ; 2009 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2010 ; Fields Institute Communications 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2011 ; Fields Institute Communications 2011 ; 2011 ; https://www.ams.org/ ; >
+
+    }
+
+    {
+  
+    title < 
+      name = AMS Fields Institute Monographs ;
+      type = bookSeries
+    >
+    
+    param[collection_id] = fim
+    
+    au < manifest ; exists ; 1993 ; Fields Institute Monographs 1993 ; 1993 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1994 ; Fields Institute Monographs 1994 ; 1994 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1996 ; Fields Institute Monographs 1996 ; 1996 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1997 ; Fields Institute Monographs 1997 ; 1997 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1998 ; Fields Institute Monographs 1998 ; 1998 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1999 ; Fields Institute Monographs 1999 ; 1999 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2000 ; Fields Institute Monographs 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2002 ; Fields Institute Monographs 2002 ; 2002 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2003 ; Fields Institute Monographs 2003 ; 2003 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2004 ; Fields Institute Monographs 2004 ; 2004 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2005 ; Fields Institute Monographs 2005 ; 2005 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2006 ; Fields Institute Monographs 2006 ; 2006 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2008 ; Fields Institute Monographs 2008 ; 2008 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2009 ; Fields Institute Monographs 2009 ; 2009 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2010 ; Fields Institute Monographs 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2011 ; Fields Institute Monographs 2011 ; 2011 ; https://www.ams.org/ ; >
+
+    }
+
+    {
+  
+    title < 
+      name = AMS Graduate Studies in Mathematics ;
+      type = bookSeries
+    >
+    
+    param[collection_id] = gsm
+    
+    au < manifest ; exists ; 1993 ; Graduate Studies in Mathematics 1993 ; 1993 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1994 ; Graduate Studies in Mathematics 1994 ; 1994 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1995 ; Graduate Studies in Mathematics 1995 ; 1995 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1996 ; Graduate Studies in Mathematics 1996 ; 1996 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1997 ; Graduate Studies in Mathematics 1997 ; 1997 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1998 ; Graduate Studies in Mathematics 1998 ; 1998 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1999 ; Graduate Studies in Mathematics 1999 ; 1999 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2000 ; Graduate Studies in Mathematics 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2001 ; Graduate Studies in Mathematics 2001 ; 2001 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2002 ; Graduate Studies in Mathematics 2002 ; 2002 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2003 ; Graduate Studies in Mathematics 2003 ; 2003 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2004 ; Graduate Studies in Mathematics 2004 ; 2004 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2005 ; Graduate Studies in Mathematics 2005 ; 2005 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2006 ; Graduate Studies in Mathematics 2006 ; 2006 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2007 ; Graduate Studies in Mathematics 2007 ; 2007 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2008 ; Graduate Studies in Mathematics 2008 ; 2008 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2009 ; Graduate Studies in Mathematics 2009 ; 2009 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2010 ; Graduate Studies in Mathematics 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2011 ; Graduate Studies in Mathematics 2011 ; 2011 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2012 ; Graduate Studies in Mathematics 2012 ; 2012 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2013 ; Graduate Studies in Mathematics 2013 ; 2013 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2014 ; Graduate Studies in Mathematics 2014 ; 2014 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2015 ; Graduate Studies in Mathematics 2015 ; 2015 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2016 ; Graduate Studies in Mathematics 2016 ; 2016 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2017 ; Graduate Studies in Mathematics 2017 ; 2017 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2018 ; Graduate Studies in Mathematics 2018 ; 2018 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2019 ; Graduate Studies in Mathematics 2019 ; 2019 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2020 ; Graduate Studies in Mathematics 2020 ; 2020 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2021 ; Graduate Studies in Mathematics 2021 ; 2021 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2022 ; Graduate Studies in Mathematics 2022 ; 2022 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2023 ; Graduate Studies in Mathematics 2023 ; 2023 ; https://www.ams.org/ ; >
+
+    }
+
+    {
+  
+    title < 
+      name = AMS Graduate Studies in Mathematics ;
+      type = bookSeries
+    >
+    
+    param[collection_id] = mawrld
+    
+    au < manifest ; exists ; 1991 ; Mathematical World 1991 ; 1991 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1993 ; Mathematical World 1993 ; 1993 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1994 ; Mathematical World 1994 ; 1994 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1996 ; Mathematical World 1996 ; 1996 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1997 ; Mathematical World 1997 ; 1997 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1998 ; Mathematical World 1998 ; 1998 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1999 ; Mathematical World 1999 ; 1999 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2000 ; Mathematical World 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2002 ; Mathematical World 2002 ; 2002 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2003 ; Mathematical World 2003 ; 2003 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2004 ; Mathematical World 2004 ; 2004 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2005 ; Mathematical World 2005 ; 2005 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2006 ; Mathematical World 2006 ; 2006 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2007 ; Mathematical World 2007 ; 2007 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2009 ; Mathematical World 2009 ; 2009 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2013 ; Mathematical World 2013 ; 2013 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2018 ; Mathematical World 2018 ; 2018 ; https://www.ams.org/ ; >
+
+    }
+
+    {
+  
+    title < 
+      name = AMS Graduate Studies in Mathematics ;
+      type = bookSeries
+    >
+    
+    param[collection_id] = stml
+    
+    au < manifest ; exists ; 1999 ; The Student Mathematical Library 1999 ; 1999 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2000 ; The Student Mathematical Library 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2001 ; The Student Mathematical Library 2001 ; 2001 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2002 ; The Student Mathematical Library 2002 ; 2002 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2003 ; The Student Mathematical Library 2003 ; 2003 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2004 ; The Student Mathematical Library 2004 ; 2004 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2005 ; The Student Mathematical Library 2005 ; 2005 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2006 ; The Student Mathematical Library 2006 ; 2006 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2007 ; The Student Mathematical Library 2007 ; 2007 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2008 ; The Student Mathematical Library 2008 ; 2008 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2009 ; The Student Mathematical Library 2009 ; 2009 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2010 ; The Student Mathematical Library 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2011 ; The Student Mathematical Library 2011 ; 2011 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2012 ; The Student Mathematical Library 2012 ; 2012 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2013 ; The Student Mathematical Library 2013 ; 2013 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2014 ; The Student Mathematical Library 2014 ; 2014 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2015 ; The Student Mathematical Library 2015 ; 2015 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2016 ; The Student Mathematical Library 2016 ; 2016 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2017 ; The Student Mathematical Library 2017 ; 2017 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2018 ; The Student Mathematical Library 2018 ; 2018 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2019 ; The Student Mathematical Library 2019 ; 2019 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2020 ; The Student Mathematical Library 2020 ; 2020 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2021 ; The Student Mathematical Library 2021 ; 2021 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2022 ; The Student Mathematical Library 2022 ; 2022 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2023 ; The Student Mathematical Library 2023 ; 2023 ; https://www.ams.org/ ; >
+
+    }
+
+    {
+  
+    title < 
+      name = University Lecture Series ;
+      type = bookSeries
+    >
+    
+    param[collection_id] = ulect
+    
+    au < manifest ; exists ; 1989 ; University Lecture Series 1989 ; 1989 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1990 ; University Lecture Series 1990 ; 1990 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1991 ; University Lecture Series 1991 ; 1991 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1992 ; University Lecture Series 1992 ; 1992 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1993 ; University Lecture Series 1993 ; 1993 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1994 ; University Lecture Series 1994 ; 1994 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1995 ; University Lecture Series 1995 ; 1995 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1996 ; University Lecture Series 1996 ; 1996 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1997 ; University Lecture Series 1997 ; 1997 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1998 ; University Lecture Series 1998 ; 1998 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1999 ; University Lecture Series 1999 ; 1999 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2000 ; University Lecture Series 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2001 ; University Lecture Series 2001 ; 2001 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2002 ; University Lecture Series 2002 ; 2002 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2003 ; University Lecture Series 2003 ; 2003 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2004 ; University Lecture Series 2004 ; 2004 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2005 ; University Lecture Series 2005 ; 2005 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2006 ; University Lecture Series 2006 ; 2006 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2007 ; University Lecture Series 2007 ; 2007 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2008 ; University Lecture Series 2008 ; 2008 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2009 ; University Lecture Series 2009 ; 2009 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2010 ; University Lecture Series 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2011 ; University Lecture Series 2011 ; 2011 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2012 ; University Lecture Series 2012 ; 2012 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2013 ; University Lecture Series 2013 ; 2013 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2014 ; University Lecture Series 2014 ; 2014 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2015 ; University Lecture Series 2015 ; 2015 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2016 ; University Lecture Series 2016 ; 2016 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2017 ; University Lecture Series 2017 ; 2017 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2018 ; University Lecture Series 2018 ; 2018 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2019 ; University Lecture Series 2019 ; 2019 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2020 ; University Lecture Series 2020 ; 2020 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2021 ; University Lecture Series 2021 ; 2021 ; https://www.ams.org/ ; >
+    }
+
+    {
+  
+    title < 
+      name = CBMS Issues in Mathematics Education ;
+      type = bookSeries
+    >
+    
+    param[collection_id] = cbmath
+    
+    au < manifest ; exists ; 1990 ; CBMS Issues in Mathematics Education 1990 ; 1990 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1991 ; CBMS Issues in Mathematics Education 1991 ; 1991 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1993 ; CBMS Issues in Mathematics Education 1993 ; 1993 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1994 ; CBMS Issues in Mathematics Education 1994 ; 1994 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1995 ; CBMS Issues in Mathematics Education 1995 ; 1995 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1996 ; CBMS Issues in Mathematics Education 1996 ; 1996 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1998 ; CBMS Issues in Mathematics Education 1998 ; 1998 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2000 ; CBMS Issues in Mathematics Education 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2001 ; CBMS Issues in Mathematics Education 2001 ; 2001 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2003 ; CBMS Issues in Mathematics Education 2003 ; 2003 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2006 ; CBMS Issues in Mathematics Education 2006 ; 2006 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2007 ; CBMS Issues in Mathematics Education 2007 ; 2007 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2008 ; CBMS Issues in Mathematics Education 2008 ; 2008 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2010 ; CBMS Issues in Mathematics Education 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2012 ; CBMS Issues in Mathematics Education 2012 ; 2012 ; https://www.ams.org/ ; >
+    }
+
+    {
+  
+    title < 
+      name = AMS Translations: Series 2 ;
+      type = bookSeries
+    >
+    
+    param[collection_id] = trans2
+    
+    au < manifest ; exists ; 1955 ; AMS Translations: Series 2 1955 ; 1955 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1956 ; AMS Translations: Series 2 1956 ; 1956 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1957 ; AMS Translations: Series 2 1957 ; 1957 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1958 ; AMS Translations: Series 2 1958 ; 1958 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1959 ; AMS Translations: Series 2 1959 ; 1959 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1960 ; AMS Translations: Series 2 1960 ; 1960 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1961 ; AMS Translations: Series 2 1961 ; 1961 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1962 ; AMS Translations: Series 2 1962 ; 1962 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1963 ; AMS Translations: Series 2 1963 ; 1963 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1964 ; AMS Translations: Series 2 1964 ; 1964 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1965 ; AMS Translations: Series 2 1965 ; 1965 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1966 ; AMS Translations: Series 2 1966 ; 1966 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1967 ; AMS Translations: Series 2 1967 ; 1967 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1968 ; AMS Translations: Series 2 1968 ; 1968 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1969 ; AMS Translations: Series 2 1969 ; 1969 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1970 ; AMS Translations: Series 2 1970 ; 1970 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1971 ; AMS Translations: Series 2 1971 ; 1971 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1972 ; AMS Translations: Series 2 1972 ; 1972 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1973 ; AMS Translations: Series 2 1973 ; 1973 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1974 ; AMS Translations: Series 2 1974 ; 1974 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1975 ; AMS Translations: Series 2 1975 ; 1975 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1976 ; AMS Translations: Series 2 1976 ; 1976 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1977 ; AMS Translations: Series 2 1977 ; 1977 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1978 ; AMS Translations: Series 2 1978 ; 1978 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1979 ; AMS Translations: Series 2 1979 ; 1979 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1980 ; AMS Translations: Series 2 1980 ; 1980 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1981 ; AMS Translations: Series 2 1981 ; 1981 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1982 ; AMS Translations: Series 2 1982 ; 1982 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1983 ; AMS Translations: Series 2 1983 ; 1983 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1984 ; AMS Translations: Series 2 1984 ; 1984 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1985 ; AMS Translations: Series 2 1985 ; 1985 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1986 ; AMS Translations: Series 2 1986 ; 1986 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1987 ; AMS Translations: Series 2 1987 ; 1987 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1988 ; AMS Translations: Series 2 1988 ; 1988 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1989 ; AMS Translations: Series 2 1989 ; 1989 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1990 ; AMS Translations: Series 2 1990 ; 1990 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1991 ; AMS Translations: Series 2 1991 ; 1991 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1992 ; AMS Translations: Series 2 1992 ; 1992 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1993 ; AMS Translations: Series 2 1993 ; 1993 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1994 ; AMS Translations: Series 2 1994 ; 1994 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1995 ; AMS Translations: Series 2 1995 ; 1995 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1996 ; AMS Translations: Series 2 1996 ; 1996 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1997 ; AMS Translations: Series 2 1997 ; 1997 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1998 ; AMS Translations: Series 2 1998 ; 1998 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1999 ; AMS Translations: Series 2 1999 ; 1999 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2000 ; AMS Translations: Series 2 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2001 ; AMS Translations: Series 2 2001 ; 2001 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2002 ; AMS Translations: Series 2 2002 ; 2002 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2003 ; AMS Translations: Series 2 2003 ; 2003 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2004 ; AMS Translations: Series 2 2004 ; 2004 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2005 ; AMS Translations: Series 2 2005 ; 2005 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2006 ; AMS Translations: Series 2 2006 ; 2006 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2007 ; AMS Translations: Series 2 2007 ; 2007 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2008 ; AMS Translations: Series 2 2008 ; 2008 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2009 ; AMS Translations: Series 2 2009 ; 2009 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2010 ; AMS Translations: Series 2 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2014 ; AMS Translations: Series 2 2014 ; 2014 ; https://www.ams.org/ ; >
     }
 }

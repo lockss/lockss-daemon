@@ -24,15 +24,16 @@
       param[journal_id] = UJIRCO
       #published 2014-present
 
-      au < ready ; exists ; 2014 ; Alusthath Journal for Human and Social Sciences Volume 2014 ; 53 ; 2014 ; >
-      au < finished ; crawling ; 2015 ; Alusthath Journal for Human and Social Sciences Volume 2015 ; 54 ; 2015 ; reingest2.clockss.org:8085 >
-      au < ready ; exists ; 2016 ; Alusthath Journal for Human and Social Sciences Volume 2016 ; 55 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Alusthath Journal for Human and Social Sciences Volume 2017 ; 56 ; 2017 ; >
-      au < ready ; exists ; 2018 ; Alusthath Journal for Human and Social Sciences Volume 2018 ; 57 ; 2018 ; >
-      au < ready ; exists ; 2019 ; Alusthath Journal for Human and Social Sciences Volume 2019 ; 58 ; 2019 ; >
-      au < ready ; exists ; 2020 ; Alusthath Journal for Human and Social Sciences Volume 2020 ; 59 ; 2020 ; >
-      au < finished ; crawling ; 2021 ; Alusthath Journal for Human and Social Sciences Volume 2021 ; 60 ; 2021 ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2022 ; Alusthath Journal for Human and Social Sciences Volume 2022 ; 61 ; 2022 ; >
+      au < frozen ; exists ; 2014 ; Alusthath Journal for Human and Social Sciences Volume 2014 ; 53 ; 2014 ; >
+      au < finished ; frozen ; 2015 ; Alusthath Journal for Human and Social Sciences Volume 2015 ; 54 ; 2015 ; reingest2.clockss.org:8085 >
+      au < frozen ; exists ; 2016 ; Alusthath Journal for Human and Social Sciences Volume 2016 ; 55 ; 2016 ; >
+      au < frozen ; exists ; 2017 ; Alusthath Journal for Human and Social Sciences Volume 2017 ; 56 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; Alusthath Journal for Human and Social Sciences Volume 2018 ; 57 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; Alusthath Journal for Human and Social Sciences Volume 2019 ; 58 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; Alusthath Journal for Human and Social Sciences Volume 2020 ; 59 ; 2020 ; >
+      au < finished ; finished ; 2021 ; Alusthath Journal for Human and Social Sciences Volume 2021 ; 60 ; 2021 ; reingest3.clockss.org:8083 >
+      au < frozen ; exists ; 2022 ; Alusthath Journal for Human and Social Sciences Volume 2022 ; 61 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; Alusthath Journal for Human and Social Sciences Volume 2023 ; 62 ; 2023 ; >
 
   }
 

@@ -6,7 +6,7 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
   param[base_url] = https://muse.jhu.edu/
   implicit < status ; year ; name ; param[resource_id] >
-  #publisher_id:806
+  #publisher_id:421
 
     {
     title <
@@ -17,24 +17,25 @@
 
       attr[journal_id] = 806
 
-      au < manifest ; 2022 ; Max Weber Studies Volume 22 [2022] ; 17369 >
-      au < manifest ; 2005 ; Max Weber Studies Volume 5 [2005] ; 16463 >
-      au < manifest ; 2006 ; Max Weber Studies Volume 6 [2006] ; 16462 >
-      au < manifest ; 2007 ; Max Weber Studies Volume 7 [2007] ; 16461 >
-      au < manifest ; 2008 ; Max Weber Studies Volume 8 [2008] ; 16460 >
-      au < manifest ; 2009 ; Max Weber Studies Volume 9 [2009] ; 16459 >
-      au < manifest ; 2010 ; Max Weber Studies Volume 10 [2010] ; 16458 >
-      au < manifest ; 2011 ; Max Weber Studies Volume 11 [2011] ; 16457 >
-      au < manifest ; 2012 ; Max Weber Studies Volume 12 [2012] ; 16456 >
-      au < manifest ; 2013 ; Max Weber Studies Volume 13 [2013] ; 16455 >
-      au < manifest ; 2014 ; Max Weber Studies Volume 14 [2014] ; 16454 >
-      au < manifest ; 2015 ; Max Weber Studies Volume 15 [2015] ; 16453 >
-      au < manifest ; 2016 ; Max Weber Studies Volume 16 [2016] ; 16452 >
-      au < manifest ; 2017 ; Max Weber Studies Volume 17 [2017] ; 16451 >
-      au < manifest ; 2018 ; Max Weber Studies Volume 18 [2018] ; 16450 >
-      au < manifest ; 2019 ; Max Weber Studies Volume 19 [2019] ; 16449 >
-      au < manifest ; 2020 ; Max Weber Studies Volume 20 [2020] ; 16448 >
-      au < manifest ; 2021 ; Max Weber Studies Volume 21 [2021] ; 16447 >
+      au < released ; 2005 ; Max Weber Studies Volume 5 [2005] ; 16463 >
+      au < released ; 2006 ; Max Weber Studies Volume 6 [2006] ; 16462 >
+      au < released ; 2007 ; Max Weber Studies Volume 7 [2007] ; 16461 >
+      au < released ; 2008 ; Max Weber Studies Volume 8 [2008] ; 16460 >
+      au < released ; 2009 ; Max Weber Studies Volume 9 [2009] ; 16459 >
+      au < released ; 2010 ; Max Weber Studies Volume 10 [2010] ; 16458 >
+      au < released ; 2011 ; Max Weber Studies Volume 11 [2011] ; 16457 >
+      au < released ; 2012 ; Max Weber Studies Volume 12 [2012] ; 16456 >
+      au < released ; 2013 ; Max Weber Studies Volume 13 [2013] ; 16455 >
+      au < released ; 2014 ; Max Weber Studies Volume 14 [2014] ; 16454 >
+      au < released ; 2015 ; Max Weber Studies Volume 15 [2015] ; 16453 >
+      au < released ; 2016 ; Max Weber Studies Volume 16 [2016] ; 16452 >
+      au < released ; 2017 ; Max Weber Studies Volume 17 [2017] ; 16451 >
+      au < released ; 2018 ; Max Weber Studies Volume 18 [2018] ; 16450 >
+      au < released ; 2019 ; Max Weber Studies Volume 19 [2019] ; 16449 >
+      au < released ; 2020 ; Max Weber Studies Volume 20 [2020] ; 16448 >
+      au < released ; 2021 ; Max Weber Studies Volume 21 [2021] ; 16447 >
+      au < released ; 2022 ; Max Weber Studies Volume 22 [2022] ; 17369 >
+      au < manifest ; 2023 ; Max Weber Studies Volume 23 [2023] ; 17387 >
 
     }
 

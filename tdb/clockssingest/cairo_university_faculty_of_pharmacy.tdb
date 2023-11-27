@@ -24,10 +24,11 @@
 
     param[journal_abbr] = journal
 
-    au < finished ; frozen ; 2019 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 57 ; 57 ; reingest4.clockss.org:8082 >
-    au < finished ; frozen ; 2020 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 58 ; 58 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 57 ; 57 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2020 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 58 ; 58 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 59 ; 59 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2022 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 60 ; 60 ; >
+    au < deepCrawl ; exists ; 2022 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 60 ; 60 ; >
+    au < crawling ; exists ; 2023 ; Bulletin of the Faculty of Pharmacy Cairo University Volume 61 ; 61 ; >
 
   }
 

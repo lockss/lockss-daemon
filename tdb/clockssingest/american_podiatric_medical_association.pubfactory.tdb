@@ -1,0 +1,87 @@
+{
+
+  publisher <
+    name = American Podiatric Medical Association ;
+    info[contract] = 2020 ;
+    info[back] = 2010 ;
+    info[min_year] = 1965 ;
+    info[tester] = 5 ;
+    info[platform] = PubFactory
+  >
+    #Source publisher for 2020 and 2021 (processed 2019-2021).
+
+  {
+
+    title <
+      name = The Journal of the American Podiatric Medical Association ;
+      issn = 8750-7315
+    >
+
+    plugin = org.lockss.plugin.pubfactory.apma.ClockssAPMAJournalsPlugin
+    param[base_url] = https://japmaonline.org/
+    param[journal_id] = apms
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+    #This journal publisher 1965-present (V55-)
+
+    au < manifest ; exists ; 1965 ; Journal of the American Podiatric Medical Association Volume 55 ; 55 ; >
+    au < manifest ; exists ; 1966 ; Journal of the American Podiatric Medical Association Volume 56 ; 56 ; >
+    au < manifest ; exists ; 1967 ; Journal of the American Podiatric Medical Association Volume 57 ; 57 ; >
+    au < manifest ; exists ; 1968 ; Journal of the American Podiatric Medical Association Volume 58 ; 58 ; >
+    au < manifest ; exists ; 1969 ; Journal of the American Podiatric Medical Association Volume 59 ; 59 ; >
+    au < manifest ; exists ; 1970 ; Journal of the American Podiatric Medical Association Volume 60 ; 60 ; >
+    au < manifest ; exists ; 1971 ; Journal of the American Podiatric Medical Association Volume 61 ; 61 ; >
+    au < manifest ; exists ; 1972 ; Journal of the American Podiatric Medical Association Volume 62 ; 62 ; >
+    au < manifest ; exists ; 1973 ; Journal of the American Podiatric Medical Association Volume 63 ; 63 ; >
+    au < manifest ; exists ; 1974 ; Journal of the American Podiatric Medical Association Volume 64 ; 64 ; >
+    au < manifest ; exists ; 1975 ; Journal of the American Podiatric Medical Association Volume 65 ; 65 ; >
+    au < manifest ; exists ; 1976 ; Journal of the American Podiatric Medical Association Volume 66 ; 66 ; >
+    au < manifest ; exists ; 1977 ; Journal of the American Podiatric Medical Association Volume 67 ; 67 ; >
+    au < manifest ; exists ; 1978 ; Journal of the American Podiatric Medical Association Volume 68 ; 68 ; >
+    au < manifest ; exists ; 1979 ; Journal of the American Podiatric Medical Association Volume 69 ; 69 ; >
+    au < manifest ; exists ; 1980 ; Journal of the American Podiatric Medical Association Volume 70 ; 70 ; >
+    au < manifest ; exists ; 1981 ; Journal of the American Podiatric Medical Association Volume 71 ; 71 ; >
+    au < manifest ; exists ; 1982 ; Journal of the American Podiatric Medical Association Volume 72 ; 72 ; >
+    au < manifest ; exists ; 1983 ; Journal of the American Podiatric Medical Association Volume 73 ; 73 ; >
+    au < manifest ; exists ; 1984 ; Journal of the American Podiatric Medical Association Volume 74 ; 74 ; >
+    au < manifest ; exists ; 1985 ; Journal of the American Podiatric Medical Association Volume 75 ; 75 ; >
+    au < manifest ; exists ; 1986 ; Journal of the American Podiatric Medical Association Volume 76 ; 76 ; >
+    au < manifest ; exists ; 1987 ; Journal of the American Podiatric Medical Association Volume 77 ; 77 ; >
+    au < manifest ; exists ; 1988 ; Journal of the American Podiatric Medical Association Volume 78 ; 78 ; >
+    au < manifest ; exists ; 1989 ; Journal of the American Podiatric Medical Association Volume 79 ; 79 ; >
+    au < manifest ; exists ; 1990 ; Journal of the American Podiatric Medical Association Volume 80 ; 80 ; >
+    au < manifest ; exists ; 1991 ; Journal of the American Podiatric Medical Association Volume 81 ; 81 ; >
+    au < manifest ; exists ; 1992 ; Journal of the American Podiatric Medical Association Volume 82 ; 82 ; >
+    au < manifest ; exists ; 1993 ; Journal of the American Podiatric Medical Association Volume 83 ; 83 ; >
+    au < manifest ; exists ; 1994 ; Journal of the American Podiatric Medical Association Volume 84 ; 84 ; >
+    au < manifest ; exists ; 1995 ; Journal of the American Podiatric Medical Association Volume 85 ; 85 ; >
+    au < manifest ; exists ; 1996 ; Journal of the American Podiatric Medical Association Volume 86 ; 86 ; >
+    au < manifest ; exists ; 1997 ; Journal of the American Podiatric Medical Association Volume 87 ; 87 ; >
+    au < manifest ; exists ; 1998 ; Journal of the American Podiatric Medical Association Volume 88 ; 88 ; >
+    au < manifest ; exists ; 1999 ; Journal of the American Podiatric Medical Association Volume 89 ; 89 ; >
+    au < manifest ; exists ; 2000 ; Journal of the American Podiatric Medical Association Volume 90 ; 90 ; >
+    au < manifest ; exists ; 2001 ; Journal of the American Podiatric Medical Association Volume 91 ; 91 ; >
+    au < manifest ; exists ; 2002 ; Journal of the American Podiatric Medical Association Volume 92 ; 92 ; >
+    au < manifest ; exists ; 2003 ; Journal of the American Podiatric Medical Association Volume 93 ; 93 ; >
+    au < manifest ; exists ; 2004 ; Journal of the American Podiatric Medical Association Volume 94 ; 94 ; >
+    au < manifest ; exists ; 2005 ; Journal of the American Podiatric Medical Association Volume 95 ; 95 ; >
+    au < manifest ; exists ; 2006 ; Journal of the American Podiatric Medical Association Volume 96 ; 96 ; >
+    au < manifest ; exists ; 2007 ; Journal of the American Podiatric Medical Association Volume 97 ; 97 ; >
+    au < manifest ; exists ; 2008 ; Journal of the American Podiatric Medical Association Volume 98 ; 98 ; >
+    au < manifest ; exists ; 2009 ; Journal of the American Podiatric Medical Association Volume 99 ; 99 ; >
+    au < frozen ; exists ; 2010 ; Journal of the American Podiatric Medical Association Volume 100 ; 100 ; >
+    au < frozen ; exists ; 2011 ; Journal of the American Podiatric Medical Association Volume 101 ; 101 ; >
+    au < frozen ; exists ; 2012 ; Journal of the American Podiatric Medical Association Volume 102 ; 102 ; >
+    au < frozen ; exists ; 2013 ; Journal of the American Podiatric Medical Association Volume 103 ; 103 ; >
+    au < frozen ; exists ; 2014 ; Journal of the American Podiatric Medical Association Volume 104 ; 104 ; >
+    au < frozen ; exists ; 2015 ; Journal of the American Podiatric Medical Association Volume 105 ; 105 ; >
+    au < frozen ; exists ; 2016 ; Journal of the American Podiatric Medical Association Volume 106 ; 106 ; >
+    au < frozen ; exists ; 2017 ; Journal of the American Podiatric Medical Association Volume 107 ; 107 ; >
+    au < frozen ; exists ; 2018 ; Journal of the American Podiatric Medical Association Volume 108 ; 108 ; >
+    au < doNotProcess ; exists ; 2019 ; Journal of the American Podiatric Medical Association Volume 109 ; 109 ; >
+    au < doNotProcess ; exists ; 2020 ; Journal of the American Podiatric Medical Association Volume 110 ; 110 ; >
+    au < doNotProcess ; exists ; 2021 ; Journal of the American Podiatric Medical Association Volume 111 ; 111 ; >
+    au < frozen ; exists ; 2022 ; Journal of the American Podiatric Medical Association Volume 112 ; 112 ; >
+    au < manifest ; exists ; 2023 ; Journal of the American Podiatric Medical Association Volume 113 ; 113 ; >
+
+  }
+}

@@ -1,0 +1,55 @@
+{
+
+  publisher <
+    name = Forum Multimedia Publishing, LLC ;
+    info[contract] = 2016 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+    hidden[proxy] = DIRECT
+
+  {
+
+    title <
+      name = European Cells and Materials ;
+      issn = 1473-2262
+    >
+
+    {
+      plugin = org.lockss.plugin.clockss.forummultimedia.ClockssForumMultimediaJournalsSourcePlugin
+      #param[base_url] = https://clockss-test.lockss.org/sourcefiles/forummmpub-released/
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/forummmpub-released/
+      implicit < status ; status2 ; year ; name ; param[directory] >
+      #Content sold to new publisher.
+
+      au < readySource ; crawling ; 2023 ; European Cells and Materials Source Content 2023 ; 2023_01 >
+
+    }
+
+    {
+      plugin = org.lockss.plugin.clockss.aofoundation.ClockssAOFoundationSourcePlugin
+      implicit < status ; status2 ; year ; name ; param[year] >
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/aofoundation-released/
+
+      au < readySource ; crawling ; 2023 ; European Cells and Materials Source Content 2023 ; 2023 >
+    }
+
+    {
+      plugin = org.lockss.plugin.clockss.aofoundation.ClockssAOFoundationSourcePlugin
+      implicit < status ; status2 ; year ; name ; param[year] >
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/aofoundation-released/
+
+      au < zapped ; finished ; 2016 ; European Cells and Materials Source Content 2016 ; 2016 >
+      au < zapped ; finished ; 2017 ; European Cells and Materials Source Content 2017 ; 2017 >
+      au < zapped ; finished ; 2018 ; European Cells and Materials Source Content 2018 ; 2018 >
+      au < zapped ; finished ; 2019 ; European Cells and Materials Source Content 2019 ; 2019 >
+      au < zapped ; finished ; 2020 ; European Cells and Materials Source Content 2020 ; 2020 >
+      au < readySource ; finished ; 2021 ; European Cells and Materials Source Content 2021 ; 2021 >
+      au < readySource ; finished ; 2022 ; European Cells and Materials Source Content 2022 ; 2022 >
+      #No more AUs.  Moved to https.
+
+    }
+
+  }
+
+}

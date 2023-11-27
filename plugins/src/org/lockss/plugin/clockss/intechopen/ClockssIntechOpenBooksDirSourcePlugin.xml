@@ -9,7 +9,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>5</string>
+        <string>7</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -24,7 +24,7 @@
         <map>
             <entry>
                 <string>Metadata</string>
-                <string>5</string>
+                <string>6</string>
             </entry>
             <entry>
                 <string>Poll</string>
@@ -51,12 +51,6 @@
         </list>
     </entry>
     <entry>
-        <string>au_crawlrules</string>
-        <list>
-            <string>1,"%s2020/2005-2008", base_url</string>
-        </list>
-    </entry>
-    <entry>
         <string>plugin_article_iterator_factory</string>
         <string>org.lockss.plugin.clockss.intechopen.IntechOpenBookDirSourceArticleIteratorFactory</string>
     </entry>
@@ -69,7 +63,7 @@
         <map>
             <entry>
                 <string>*</string>
-                <string>org.lockss.plugin.clockss.intechopen.IntechOpenBookOnix3XmlMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.clockss.intechopen.IntechOpenBooksDirOnix3XmlMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
@@ -78,7 +72,7 @@
         <map>
             <entry>
                 <string>*</string>
-                <string>org.lockss.plugin.clockss.intechopen.IntechOpenBookOnix3XmlMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.clockss.intechopen.IntechOpenBooksDirOnix3XmlMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>

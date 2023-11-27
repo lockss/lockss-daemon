@@ -3,9 +3,9 @@
   publisher <
     name = University of Baghdad, College of Arts ;
     info[contract] = 2023 ;
-    info[back] = 2022 ;
+    info[back] = 2015 ;
+    info[min_year] = 1960 ;
     info[tester] = 8 ;
-    info[poller] = 8 ;
     info[platform] = OJS3 3.3.0.13
   >
 
@@ -76,7 +76,8 @@
       au < manifest ; exists ; 2019 ; Al-Adab Journal Volume 2019 ; 128-131 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Al-Adab Journal Volume 2020 ; 132-135 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Al-Adab Journal Volume 2021 ; 136-139 ; 2021 ; >
-      au < testing ; exists ; 2022 ; Al-Adab Journal Volume 2022 ; 140-143 ; 2022 ; >
+      au < manifest ; exists ; 2022 ; Al-Adab Journal Volume 2022 ; 140-143 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; Al-Adab Journal Volume 2023 ; 144-147 ; 2023 ; >
 
   }
 

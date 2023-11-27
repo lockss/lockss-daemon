@@ -21,34 +21,34 @@
     au < released ; 2006 ; Illiesia International Journal of Stonefly Research Volume 2 ; 2 ; 2006 > 
     au < released ; 2007 ; Illiesia International Journal of Stonefly Research Volume 3 ; 3 ; 2007 > 
     au < released ; 2008 ; Illiesia International Journal of Stonefly Research Volume 4 ; 4 ; 2008 > 
-    au < doNotProcess ; 2009 ; Illiesia International Journal of Stonefly Research Volume 5 ; 5 ; 2009 >
-    au < doNotProcess ; 2010 ; Illiesia International Journal of Stonefly Research Volume 6 ; 6 ; 2010 >
-    au < doNotProcess ; 2011 ; Illiesia International Journal of Stonefly Research Volume 7 ; 7 ; 2011 >
-    au < doNotProcess ; 2012 ; Illiesia International Journal of Stonefly Research Volume 8 ; 8 ; 2012 >
-    au < doNotProcess ; 2013 ; Illiesia International Journal of Stonefly Research Volume 9 ; 9 ; 2013 >
-    au < doNotProcess ; 2014 ; Illiesia International Journal of Stonefly Research Volume 10 ; 10 ; 2014 >
-    au < doNotProcess ; 2015 ; Illiesia International Journal of Stonefly Research Volume 11 ; 11 ; 2015 >
-    au < released ; 2016 ; Illiesia International Journal of Stonefly Research Volume 12 ; 12 ; 2016 >
-    au < released ; 2017 ; Illiesia International Journal of Stonefly Research Volume 13 ; 13 ; 2017 >
-    au < exists ; 2018 ; Illiesia International Journal of Stonefly Research Volume 14 ; 14 ; 2018 >
-    au < expected ; 2019 ; Illiesia International Journal of Stonefly Research Volume 15 ; 15 ; 2019 >
-
-    }
-
-    {
-    param[base_url] = http://www2.pms-lj.si/illiesia/
-
-    au < doNotProcess ; 2005 ; Illiesia International Journal of Stonefly Research Volume 1 ; 1 ; 2005 > #no substance. crawl rules?
-    au < doNotProcess ; 2006 ; Illiesia International Journal of Stonefly Research Volume 2 ; 2 ; 2006 > #no substance. crawl rules?
-    au < doNotProcess ; 2007 ; Illiesia International Journal of Stonefly Research Volume 3 ; 3 ; 2007 > #no substance. crawl rules?
-    au < doNotProcess ; 2008 ; Illiesia International Journal of Stonefly Research Volume 4 ; 4 ; 2008 > #no substance. crawl rules?
-    au < released ; 2009 ; Illiesia International Journal of Stonefly Research Volume 5 ; 5 ; 2009 >
+    au < manifest ; 2009 ; Illiesia International Journal of Stonefly Research Volume 5 ; 5 ; 2009 >
     au < released ; 2010 ; Illiesia International Journal of Stonefly Research Volume 6 ; 6 ; 2010 >
     au < released ; 2011 ; Illiesia International Journal of Stonefly Research Volume 7 ; 7 ; 2011 >
     au < released ; 2012 ; Illiesia International Journal of Stonefly Research Volume 8 ; 8 ; 2012 >
     au < released ; 2013 ; Illiesia International Journal of Stonefly Research Volume 9 ; 9 ; 2013 >
     au < released ; 2014 ; Illiesia International Journal of Stonefly Research Volume 10 ; 10 ; 2014 >
     au < released ; 2015 ; Illiesia International Journal of Stonefly Research Volume 11 ; 11 ; 2015 >
+    au < released ; 2016 ; Illiesia International Journal of Stonefly Research Volume 12 ; 12 ; 2016 >
+    au < released ; 2017 ; Illiesia International Journal of Stonefly Research Volume 13 ; 13 ; 2017 >
+    au < released ; 2018 ; Illiesia International Journal of Stonefly Research Volume 14 ; 14 ; 2018 >
+    au < released ; 2019 ; Illiesia International Journal of Stonefly Research Volume 15 ; 15 ; 2019 >
+
+    }
+
+    {
+    param[base_url] = http://www2.pms-lj.si/illiesia/
+
+    au < doNotProcess ; 2005 ; Illiesia International Journal of Stonefly Research Volume 1 ; 1 ; 2005 >
+    au < doNotProcess ; 2006 ; Illiesia International Journal of Stonefly Research Volume 2 ; 2 ; 2006 >
+    au < doNotProcess ; 2007 ; Illiesia International Journal of Stonefly Research Volume 3 ; 3 ; 2007 >
+    au < doNotProcess ; 2008 ; Illiesia International Journal of Stonefly Research Volume 4 ; 4 ; 2008 >
+    au < superseded ; 2009 ; Illiesia International Journal of Stonefly Research Volume 5 [superseded] ; 5 ; 2009 >
+    au < superseded ; 2010 ; Illiesia International Journal of Stonefly Research Volume 6 [superseded] ; 6 ; 2010 >
+    au < superseded ; 2011 ; Illiesia International Journal of Stonefly Research Volume 7 [superseded] ; 7 ; 2011 >
+    au < superseded ; 2012 ; Illiesia International Journal of Stonefly Research Volume 8 [superseded] ; 8 ; 2012 >
+    au < superseded ; 2013 ; Illiesia International Journal of Stonefly Research Volume 9 [superseded] ; 9 ; 2013 >
+    au < superseded ; 2014 ; Illiesia International Journal of Stonefly Research Volume 10 [superseded] ; 10 ; 2014 >
+    au < superseded ; 2015 ; Illiesia International Journal of Stonefly Research Volume 11 [superseded] ; 11 ; 2015 >
     au < doNotProcess ; 2016 ; Illiesia International Journal of Stonefly Research Volume 12 ; 12 ; 2016 >
     au < doNotProcess ; 2017 ; Illiesia International Journal of Stonefly Research Volume 13 ; 13 ; 2017 >
     au < doNotProcess ; 2018 ; Illiesia International Journal of Stonefly Research Volume 14 ; 14 ; 2018 >

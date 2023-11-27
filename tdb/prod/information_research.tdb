@@ -14,9 +14,11 @@
 
     rights = openaccess
     plugin = uk.org.lockss.plugin.informationresearch.InformationResearchPlugin
-    param[base_url] = http://www.informationr.net/ir/
     implicit < status ; year ; name ; param[volume_name] >
     #NO MANIFEST PAGE CHECKER
+
+    {
+    param[base_url] = http://www.informationr.net/ir/
 
     au < released ; 1995-1996 ; Information Research Volume 1 ; 1 >
     au < released ; 1996-1997 ; Information Research Volume 2 ; 2 >
@@ -42,9 +44,15 @@
     au < released ; 2017 ; Information Research Volume 22 ; 22 >
     au < released ; 2018 ; Information Research Volume 23 ; 23 >
     au < released ; 2019 ; Information Research Volume 24 ; 24 >
-    au < notReady ; 2020 ; Information Research Volume 25 ; 25 > #no substance
-    au < expected ; 2021 ; Information Research Volume 26 ; 26 >
-    au < expected ; 2022 ; Information Research Volume 27 ; 27 >
+    }
+    {
+     param[base_url] = https://www.informationr.net/ir/
+
+    au < manifest ; 2020 ; Information Research Volume 25 ; 25 > #Failed to fetch start url with http
+    au < manifest ; 2021 ; Information Research Volume 26 ; 26 >
+    au < manifest ; 2022 ; Information Research Volume 27 ; 27 >
+    au < expected ; 2023 ; Information Research Volume 28 ; 28 >
+    }
 
   }
   

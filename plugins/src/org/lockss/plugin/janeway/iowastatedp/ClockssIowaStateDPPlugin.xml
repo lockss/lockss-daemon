@@ -13,11 +13,19 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
     <string>Janeway</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.janeway.JanewayDirectoryAccessorPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>

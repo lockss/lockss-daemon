@@ -40,14 +40,14 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>14</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -124,23 +124,36 @@ POSSIBILITY OF SUCH DAMAGE.
     </list>
   </entry>
   <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.heterocycles.HeterocyclesUrlNormalizer</string>
+  </entry>
+  <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.heterocycles.HeterocyclesHtmlHashFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.heterocycles.HeterocyclesArticleIteratorFactory</string>
+    <string>org.lockss.plugin.heterocycles.Heterocycles2023ArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.heterocycles.HeterocyclesArticleIteratorFactory</string>
+    <string>org.lockss.plugin.heterocycles.Heterocycles2023ArticleIteratorFactory</string>
   </entry>
   <entry>
   <string>application/pdf_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.heterocycles.HeterocyclesMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.heterocycles.Heterocycles2023MetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.heterocycles.Heterocycles2023MetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>

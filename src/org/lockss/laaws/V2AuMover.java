@@ -359,6 +359,9 @@ s api client with long timeout */
   /** V2 cfgsvc REST access URL */
   private String cfgAccessUrl = null;
 
+  /** Original args to V2AuMover **/
+  private Args args;
+
   /** V2 host name */
   private String hostName;
 
@@ -542,9 +545,9 @@ s api client with long timeout */
    * @param args the arguments for this request.
    * @throws IllegalArgumentException
    */
-  void initRequest(Args args) throws IllegalArgumentException {
-
+  void initRequest(Args args, String whichAus) throws IllegalArgumentException {
     currentStatus = "Initializing";
+    this.whichAus = whichAus;
     running = true;
     hasBeenStarted = true;
     hostName = args.host;
@@ -630,7 +633,7 @@ s api client with long timeout */
 
     // Must be called after config & args are processed
     initPhaseMap();
-    openReportFiles();
+    openReportFiles(args, whichAus);
 
     startTime = now();
   }
@@ -679,6 +682,9 @@ s api client with long timeout */
   /** Entry point from MigrateContent servlet.  Synchronous - doesn't
    * return until all AUs in request have been copied. */
   public void executeRequest(Args args) {
+    // Remember original Args from request
+    this.args = args;
+
     try {
       if (args.au != null) {
         // If an AU was supplied, copy it
@@ -730,7 +736,7 @@ s api client with long timeout */
       throw new IllegalArgumentException("Can't move internal AUs");
     }
     startTotalTimers();
-    initRequest(args);
+    initRequest(args, ("AU: " + args.au.getName()));
     currentStatus = "Checking V2 services";
     checkV2ServicesAvailable();
     // get the aus known to the v2 repository
@@ -747,7 +753,7 @@ s api client with long timeout */
    */
   public void moveAllAus(Args args) throws IOException {
     startTotalTimers();
-    initRequest(args);
+    initRequest(args, "All AUs");
     currentStatus = "Checking V2 services";
     checkV2ServicesAvailable();
     // get the aus known to the v2 repo
@@ -775,7 +781,11 @@ s api client with long timeout */
    */
   public void movePluginAus(Args args) throws IOException {
     startTotalTimers();
-    initRequest(args);
+    initRequest(args,
+                "AUs in plugin(s): " +
+                StringUtil.separatedString(args.plugins.stream()
+                                           .map(x -> x.getPluginName())
+                                           .collect(Collectors.toList())));
     currentStatus = "Checking V2 services";
     checkV2ServicesAvailable();
     // get the aus known to the v2 repo
@@ -1791,6 +1801,7 @@ s api client with long timeout */
   private PrintWriter errorWriter;
 
   private String currentStatus;
+  private String whichAus;
   private boolean running = true; // init true avoids race while starting
   private boolean hasBeenStarted = false;
 
@@ -1812,10 +1823,33 @@ s api client with long timeout */
   public List<String> getCurrentStatus() {
     List<String> res = new ArrayList<>();
     String errstat = getErrorStatus();
+    StringBuilder sb = new StringBuilder();
+    sb.append("Status: ");
     if (STATUS_RUNNING.equals(currentStatus)) {
-      StringBuilder sb = new StringBuilder();
-      sb.append("Status: ");
-      sb.append(isAbort() ? "Aborting" : "Running");
+
+      if (!isAbort()) {
+        switch (opType) {
+          case CopyOnly:
+            sb.append("Copying");
+            break;
+          case CopyAndVerify:
+            sb.append("Copying and verifying");
+            break;
+          case VerifyOnly:
+            sb.append("Verifying");
+            break;
+        }
+
+        if (isCompareBytes) sb.append(" and comparing");
+      } else {
+        sb.append("Aborting");
+      }
+
+      sb.append(", ");
+      sb.append(whichAus);
+
+      sb.append(" to ");
+      sb.append(hostName);
       sb.append(", processed ");
       sb.append(totalAusMoved);
       sb.append(" of ");
@@ -1830,8 +1864,6 @@ s api client with long timeout */
       totalTimers.addCounterStatus(sb, opType);
       res.add(sb.toString());
     } else {
-      StringBuilder sb = new StringBuilder();
-      sb.append("Status: ");
       sb.append(getIdleStatus());
       if (errstat.length() != 0) {
         sb.append(", ");
@@ -2020,13 +2052,14 @@ s api client with long timeout */
   /**
    * Open (append) the Report file and error file
    */
-  void openReportFiles() {
+  void openReportFiles(Args args, String whichAUs) {
     String now = DateFormatter.now();
-    reportWriter = openReportFile(reportFile, "Report", now);
-    errorWriter = openReportFile(errorFile, "Error Report", now);
+    reportWriter = openReportFile(reportFile, args, whichAUs, "Report", now);
+    errorWriter = openReportFile(errorFile, args, whichAUs, "Error Report", now);
   }
 
-  PrintWriter openReportFile(File file, String title, String now) {
+  PrintWriter openReportFile(File file, Args args, String whichAUs,
+                             String title, String now) {
     PrintWriter res = null;
     try {
       log.info("Writing " + title + " to " + file.getAbsolutePath());
@@ -2035,6 +2068,10 @@ s api client with long timeout */
                             true);
       res.println("--------------------------------------------------");
       res.println("  V2 AU Migration " + title + " - " + now);
+      res.println("  Migrating (" + args.opType
+                  + (args.isCompareContent ? " with compare" : "")
+                  + ") to " + args.host);
+      res.println("  " + whichAUs);
       res.println("--------------------------------------------------");
       res.println();
       if (res.checkError()) {

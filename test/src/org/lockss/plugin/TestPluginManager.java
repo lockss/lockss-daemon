@@ -81,7 +81,12 @@ public class TestPluginManager extends LockssTestCase {
   static String p1a2param = p1param + mauauidKey2 + ".";
   static String p1a3param = p1param + mauauidKey3 + ".";
 
-  private String pluginJar;
+  static String badplug = "org/lockss/test/plugins/unknown-sig.jar";
+
+  private String pluginJar = "org/lockss/test/plugins/good-plugin.jar";
+  private String pluginJarV2 = "org/lockss/test/plugins/good-plugin2.jar";
+  private String pluginJarV3 = "org/lockss/test/plugins/good-plugin3.jar";
+;
   private String pubKeystore = "org/lockss/test/public.keystore";
   private String password = "f00bar";
 
@@ -1577,7 +1582,6 @@ public class TestPluginManager extends LockssTestCase {
   }
 
   private void prepareLoadablePluginTests(Properties p) throws Exception {
-    pluginJar = "org/lockss/test/good-plugin.jar";
     if (p == null) {
       p = new Properties();
     }
@@ -1695,7 +1699,6 @@ public class TestPluginManager extends LockssTestCase {
   /** Runtime errors loading plugins should be caught. */
   public void testErrorProcessingRegistryAu() throws Exception {
     mgr.startService();
-    String badplug = "org/lockss/test/bad-plugin.jar";
     Properties p = new Properties();
     p.setProperty(PluginManager.PARAM_PREFER_LOADABLE_PLUGIN, "true");
     prepareLoadablePluginTests(p);
@@ -1767,8 +1770,7 @@ public class TestPluginManager extends LockssTestCase {
     // Create a second registry AU (because it also doesn't matter which AU
     // a plugin jar comes from).
     MyMockRegistryArchivalUnit mmau2 =
-      new MyMockRegistryArchivalUnit(ListUtil.list(pluginJar,
-						   "org/lockss/test/good-plugin2.jar"));
+      new MyMockRegistryArchivalUnit(ListUtil.list(pluginJar, pluginJarV2));
     assertSame(au1, mgr.getAuFromId(auid));
     mgr.processRegistryAus(ListUtil.list(mmau2));
 
@@ -1831,9 +1833,7 @@ public class TestPluginManager extends LockssTestCase {
     // Ensure that the jars have names different from those in the previous
     // AU load, or they will not be processed (because CU version is faked)
     MyMockRegistryArchivalUnit mmau2 =
-      new MyMockRegistryArchivalUnit(ListUtil.list(
-						   "org/lockss/test/good-plugin3.jar",
-						   "org/lockss/test/good-plugin2.jar"),
+      new MyMockRegistryArchivalUnit(ListUtil.list(pluginJarV3, pluginJarV2),
                                      2);
     assertSame(au1, mgr.getAuFromId(auid));
     mgr.processRegistryAus(ListUtil.list(mmau2));

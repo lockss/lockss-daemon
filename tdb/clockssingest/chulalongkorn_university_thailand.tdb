@@ -1,0 +1,31 @@
+{
+
+  publisher <
+    name = College of Public Health Sciences, Chulalongkorn University, Thailand ;
+    info[contract] = 2023 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+
+  {
+  
+    title <
+      name = Journal of Health Research ;
+      issn = 0857-4421 ;
+      eissn = 2586-940X
+    >
+    
+    param[base_url] = https://digital.car.chula.ac.th/
+    param[journal_abbr] = jhr
+    #move from Emerald, 2023
+
+    au < crawling ; exists ; 2023 ; Journal of Health Research Volume 37 ; 37 ; >
+
+  }
+
+}

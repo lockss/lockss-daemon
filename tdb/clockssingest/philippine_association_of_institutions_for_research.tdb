@@ -27,17 +27,18 @@
       param[journal_id] = jpair
       #published 2012 to present
 
-      au < finished ; manifest ; 2012 ; JPAIR Multidisciplinary Research Volume 2012 ; 7 ; 2012 ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2012 ; JPAIR Multidisciplinary Research Volume 2012 ; 7 ; 2012 ; reingest2.clockss.org:8085 >
       au < manifest ; exists ; 2013 ; JPAIR Multidisciplinary Research Volume 2013 ; 8 ; 2013 ; >
       au < manifest ; exists ; 2014 ; JPAIR Multidisciplinary Research Volume 2014 ; 9 ; 2014 ; >
       au < manifest ; exists ; 2015 ; JPAIR Multidisciplinary Research Volume 2015 ; 10 ; 2015 ; >
-      au < finished ; manifest ; 2016 ; JPAIR Multidisciplinary Research Volume 2016 ; 11 ; 2016 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2016 ; JPAIR Multidisciplinary Research Volume 2016 ; 11 ; 2016 ; reingest3.clockss.org:8083 >
       au < manifest ; exists ; 2017 ; JPAIR Multidisciplinary Research Volume 2017 ; 12 ; 2017 ; >
-      au < ready ; exists ; 2018 ; JPAIR Multidisciplinary Research Volume 2018 ; 13 ; 2018 ; >
-      au < finished ; manifest ; 2019 ; JPAIR Multidisciplinary Research Volume 2019 ; 14 ; 2019 ; reingest4.clockss.org:8082 >
-      au < ready ; exists ; 2020 ; JPAIR Multidisciplinary Research Volume 2020 ; 15 ; 2020 ; >
-      au < ready ; exists ; 2021 ; JPAIR Multidisciplinary Research Volume 2021 ; 16 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; JPAIR Multidisciplinary Research Volume 2022 ; 17 ; 2022 ; >
+      au < finished ; manifest ; 2018 ; JPAIR Multidisciplinary Research Volume 2018 ; 13 ; 2018 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2019 ; JPAIR Multidisciplinary Research Volume 2019 ; 14 ; 2019 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; JPAIR Multidisciplinary Research Volume 2020 ; 15 ; 2020 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; JPAIR Multidisciplinary Research Volume 2021 ; 16 ; 2021 ; reingest3.clockss.org:8083 >
+      au < deepCrawl ; exists ; 2022 ; JPAIR Multidisciplinary Research Volume 2022 ; 17 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; JPAIR Multidisciplinary Research Volume 2023 ; 18 ; 2023 ; >
 
   }
 

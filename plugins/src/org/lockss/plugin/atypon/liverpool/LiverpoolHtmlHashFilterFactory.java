@@ -88,6 +88,9 @@ public class LiverpoolHtmlHashFilterFactory
         // toc - contents only
         // http://online.liverpooluniversitypress.co.uk/toc/bjcs/26/1
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "tocListWidget"),
+        HtmlNodeFilters.tagWithAttributeRegex("section", "class", "book__information"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "book__tab"),
+            
         // abs, ref - contents only
         // http://online.liverpooluniversitypress.co.uk/doi/abs/10.3828/bjcs.2013.2
         // http://online.liverpooluniversitypress.co.uk/doi/ref/10.3828/bjcs.2013.3
@@ -100,7 +103,13 @@ public class LiverpoolHtmlHashFilterFactory
                                               "downloadCitationsWidget"),
         // early 2017- changed to <div class 
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", 
-                                              "downloadCitationsWidget"), 
+                                              "downloadCitationsWidget"),
+
+
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class",
+                    "core-container"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class",
+                    "meta-panel"),
     };
     
     // handled by parent: script, sfxlink, stylesheet, pdfplus file sise

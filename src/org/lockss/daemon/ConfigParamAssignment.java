@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2023 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -102,7 +98,8 @@ public class ConfigParamAssignment {
    * @param value the new value
    */
   public void setValue(String value) {
-    this.value = value;
+    this.value = StringPool.AU_CONFIG_PROPS.internMapValue(paramDescr.getKey(),
+                                                           value);
     isEditable = StringUtil.isNullString(value);
   }
 

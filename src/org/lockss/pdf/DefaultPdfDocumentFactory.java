@@ -48,15 +48,6 @@ public class DefaultPdfDocumentFactory {
 
   /**
    * <p>
-   * Our singleton instance.
-   * </p>
-   * 
-   * @since 1.56
-   */
-  private static final PdfDocumentFactory singleton = new PdfBoxDocumentFactory();
-
-  /**
-   * <p>
    * Obtains a default PDF document factory.
    * </p>
    * 
@@ -64,7 +55,7 @@ public class DefaultPdfDocumentFactory {
    * @since 1.56
    */
   public static PdfDocumentFactory getInstance() {
-    return singleton;
+    return PdfBoxDocumentFactory.SINGLETON;
   }
   
   /**

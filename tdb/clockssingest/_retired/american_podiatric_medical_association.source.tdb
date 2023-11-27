@@ -1,0 +1,35 @@
+{
+
+  publisher <
+    name = American Podiatric Medical Association ;
+    info[contract] = 2020 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+
+  {
+
+    title <
+      name = American Podiatric Medical Association
+    >
+    hidden[proxy] = DIRECT
+
+    plugin = org.lockss.plugin.clockss.apma.ClockssAmericanPodiatricMedicalAssociationSourcePlugin
+    implicit < status ; status2 ; year ; name ; param[directory] >
+
+    {
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/apma-released/
+
+      au < readySource ; finished ; 2020 ; American Podiatric Medical Association Source Content 2020 ; 2020 >
+      au < readySource ; finished ; 2021 ; American Podiatric Medical Association Source Content 2021 ; 2021 >
+      #No more AUs.  Moved to harvest.
+    }
+
+    {
+#      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/apma-released/
+
+#      au < expected ; exists ; 2023 ; American Podiatric Medical Association Source Content 2023 ; 2023 >
+
+    }
+  }
+}

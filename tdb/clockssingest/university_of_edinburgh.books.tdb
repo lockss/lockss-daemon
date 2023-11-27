@@ -1,0 +1,34 @@
+{
+
+  publisher <
+    name = University of Edinburgh ;
+    info[contract] = 2023 ;
+    info[back] = 2020 ;
+    info[tester] = 8 ;
+    info[poller] = 8 ;
+    info[platform] = Open Monograph Press 3.3.0.14
+  >
+
+    plugin = org.lockss.plugin.omp.ClockssOMPBooksPlugin
+    param[base_url] = https://books.ed.ac.uk/
+    param[publisher_id] = edinburgh-diamond
+
+    implicit < status ; status2 ; year ; isbn ; param[isbn] ; name ; hidden[proxy] >
+
+  {
+
+    title <
+      name = University of Edinburgh Books
+    >
+
+      au < exists ; exists ; 2013 ; 9781907443404 ; 9781907443404 ; The Carrying Stream Flows On: Celebrating the Diamond Jubilee of the School of Scottish Studies ; >
+      au < exists ; exists ; 2021 ; 9781912669318 ; 9781912669318 ; Cooking Without A Cooker: A recipe book for people experiencing homelessness ; >
+      au < exists ; exists ; 2021 ; 9781912669226 ; 9781912669226 ; Fundamentals of Music Theory ; >
+      au < exists ; exists ; 2022 ; 9781912669363 ; 9781912669363 ; Shame, Stigma and Colorectal Health for Bottoms ; >
+      au < exists ; exists ; 2022 ; 9781912669462 ; 9781912669462 ; Stories of HIV activists during COVID-19 in the UK ; >
+      au < exists ; exists ; 2019 ; 9781912669325 ; 9781912669325 ; We Have Great Stuff: Colouring Book Volume 1 ; >
+      au < exists ; exists ; 2021 ; 9781912669332 ; 9781912669332 ; We Have Great Stuff: Colouring Book Volume 2 ; >
+
+  }
+
+}

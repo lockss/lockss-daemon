@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2023 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -59,13 +55,13 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   private static final Logger log = Logger.getLogger(BaseArchivalUnit.class);
 
   public static final long
-    DEFAULT_FETCH_DELAY = 6 * Constants.SECOND;
+    DEFAULT_FETCH_DELAY = 3 * Constants.SECOND;
 
   /** Minimum fetch delay.  Plugin-specified fetch delay may be used only
    * to increase the delay. */
   public static final String PARAM_MIN_FETCH_DELAY =
     Configuration.PREFIX+"baseau.minFetchDelay";
-  public static final long DEFAULT_MIN_FETCH_DELAY = 6 * Constants.SECOND;;
+  public static final long DEFAULT_MIN_FETCH_DELAY = 3 * Constants.SECOND;;
 
   /** Default fetch rate limiter source for plugins that don't specify
    * au_fetch_rate_limiter_source.  Can be "au" or "plugin"; default is
@@ -165,7 +161,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     } else {
       if (log.isDebug3()) log.debug3("setConfiguration: " + config);
       checkLegalConfigChange(config);
-      auConfig = config.copy();
+      auConfig = config.copyIntern(StringPool.AU_CONFIG_PROPS);
       loadAuConfigDescrs(config);
       addImpliedConfigParams();
       setBaseAuParams(config);
@@ -245,7 +241,15 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       if (config.containsKey(key)) {
         try {
           Object val = descr.getValueOfType(config.get(key));
-          paramMap.setMapElement(key, val);
+          if (val instanceof String) {
+            paramMap.putString(StringPool.AU_CONFIG_PROPS.intern(key),
+                               StringPool.AU_CONFIG_PROPS.internMapValue(key, (String)val));
+          } else if (val instanceof URL) {
+            paramMap.putString(StringPool.AU_CONFIG_PROPS.intern(key),
+                               StringPool.AU_CONFIG_PROPS.internMapValue(key, val.toString()));
+          } else {
+            paramMap.setMapElement(StringPool.AU_CONFIG_PROPS.intern(key), val);
+          }
         } catch (Exception ex) {
           throw new ConfigurationException("Error configuring: " + key, ex);
         }
@@ -269,7 +273,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
     // get the base url
     URL baseUrl = loadConfigUrl(ConfigParamDescr.BASE_URL, config);
-    paramMap.putUrl(KEY_AU_BASE_URL, baseUrl);
+    paramMap.putString(KEY_AU_BASE_URL,
+                       StringPool.AU_CONFIG_PROPS.intern(baseUrl.toString()));
 
     // get the fetch delay
     long minFetchDelay = CurrentConfig.getLongParam(PARAM_MIN_FETCH_DELAY,
@@ -325,9 +330,9 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
             URL url = (URL)val;
             if(url != null) {
               paramMap.putString(pool.intern(key + SUFFIX_AU_HOST),
-                                 url.getHost());
+                                 pool.intern(url.getHost()));
               paramMap.putString(pool.intern(key + SUFFIX_AU_PATH),
-                                 url.getPath());
+                                 pool.intern(url.getPath()));
               if (log.isDebug3()) {
                 log.debug3("Inferred " + key + SUFFIX_AU_HOST +
                               " = " + url.getHost());
@@ -467,7 +472,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
         set.addAll(cdnStems);
         set.addAll(getAdditionalUrlStems());
         res.addAll(set);
-        urlStems = res;
+        urlStems = StringPool.URL_STEMS.internList(res);
       } catch (MalformedURLException e) {
         log.error("getUrlStems(" + getName() + ")", e);
         // XXX should throw
@@ -965,27 +970,35 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   protected static class ParamHandlerMap extends TypedEntryMap {
-    HashMap<String,ParamHandler> handlerMap = new HashMap<String,ParamHandler>();
+    HashMap<String,ParamHandler> handlerMap;
 
     protected ParamHandlerMap() {
       super();
     }
 
-    protected void addParamHandler(String paramKey, ParamHandler handler) {
-      handlerMap.put(paramKey, handler);
+    private HashMap<String,ParamHandler> getHandlerMap() {
+      if (handlerMap == null) {
+        handlerMap = new HashMap<>();
+      }
+      return handlerMap;
     }
 
-    protected ParamHandler removeParamHandler(String paramKey) {
-      synchronized (handlerMap) {
-        return (ParamHandler) handlerMap.remove(paramKey);
-      }
+    protected synchronized void addParamHandler(String paramKey,
+                                                ParamHandler handler) {
+      getHandlerMap().put(paramKey, handler);
+    }
+
+    protected synchronized ParamHandler removeParamHandler(String paramKey) {
+      return (ParamHandler) getHandlerMap().remove(paramKey);
     }
 
     public Object getMapElement(String paramKey) {
-      synchronized (handlerMap) {
-        ParamHandler handler = (ParamHandler)handlerMap.get(paramKey);
-        if(handler != null) {
-          return handler.getParamValue(paramKey);
+      if (handlerMap != null) {
+        synchronized (this) {
+          ParamHandler handler = (ParamHandler)handlerMap.get(paramKey);
+          if(handler != null) {
+            return handler.getParamValue(paramKey);
+          }
         }
       }
       return super.getMapElement(paramKey);

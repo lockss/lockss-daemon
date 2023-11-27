@@ -56,27 +56,34 @@ public class InformationResearchHtmlMetadataExtractorFactory implements FileMeta
   public static class InformationResearchHtmlMetadataExtractor 
     implements FileMetadataExtractor {
 
+      /*
+      <meta name="dcterms.title" content="Trust or do not trust: evaluation strategies used by online health information consumers in South East Asia" />
+      <meta name="citation_author" content="Inthiran, Anushia" />
+      <meta name="dcterms.subject" content="Health information searching is a popular activity conducted on the Internet. However, the focus of past research studies has been on health consumers from the western world. Thus, there is a gap of information pertaining to online health information searching behaviour from the South East Asian region. In this study, trust evaluation strategies used by South East Asian health consumers are described." />
+      <meta name="description" content="Health information searching is a popular activity conducted on the Internet. However, the focus of past research studies has been on health consumers from the western world. Thus, there is a gap of information pertaining to online health information searching behaviour from the South East Asian region. In this study, trust evaluation strategies used by South East Asian health consumers are described. A grounded theory approach was used. A total of 80 participants were interviewed.  Interviews were analysed using qualitative analysis methods. Open coding and thematic analysis methods were employed.  Results indicate most participants evaluate information for trustworthiness. The most popular technique used is evaluating the quality of the source. In addition, South East Asian health consumers place high trust value on information based on personal experiences.  This research study extends current understanding of trustworthiness evaluations and points to the need for education and training mechanisms to be in place." />
+      <meta name="keywords" content="health information, information searching, South East Asia, trust, grounded theory," />
+      <meta name="dcterms.publisher" content="University of Borås" />
+      <meta name="dcterms.type" content="text" />
+      <meta name="dcterms.identifier" content="ISSN-1368-1613" />
+      <meta name="dcterms.identifier" content="http://InformationR.net/ir/26-1/paper886.html" />
+      <meta name="dcterms.IsPartOf" content="http://InformationR.net/ir/26-1/infres261.html" />
+      <meta name="dcterms.format" content="text/html" />
+      <meta name="dc.language" content="en" />
+      <meta name="dcterms.rights" content="http://creativecommons.org/licenses/by-nd-nc/1.0/" />
+      <meta  name="dcterms.issued" content="2020-09-15" />
+   </head>
+       */
+
     // Map Taylor & Francis DublinCore HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
     static {
-      tagMap.put("dc.date.available", MetadataField.FIELD_DATE);
-      tagMap.put("dc.date.available", MetadataField.DC_FIELD_DATE);
-      tagMap.put("dc.title", MetadataField.FIELD_ARTICLE_TITLE);
-      tagMap.put("dc.title", MetadataField.DC_FIELD_TITLE);
-      tagMap.put("dc.creator", MetadataField.FIELD_AUTHOR);
+      tagMap.put("dcterms.issued", MetadataField.FIELD_DATE);
+      tagMap.put("dcterms.title", MetadataField.FIELD_ARTICLE_TITLE);
+      tagMap.put("citation_author", MetadataField.FIELD_AUTHOR);
+      tagMap.put("dcterms.publisher", MetadataField.FIELD_PUBLISHER);
       tagMap.put("dc.creator", MetadataField.DC_FIELD_CREATOR);
-      tagMap.put("dc.creator", new MetadataField(MetadataField.FIELD_AUTHOR, MetadataField.splitAt(",")));
-      tagMap.put("dc.identifier", MetadataField.DC_FIELD_IDENTIFIER);
-      tagMap.put("dc.subject", MetadataField.DC_FIELD_SUBJECT);
-      tagMap.put("dc.description", MetadataField.DC_FIELD_DESCRIPTION);
-      tagMap.put("dc.publisher", MetadataField.DC_FIELD_PUBLISHER);
-      tagMap.put("dc.publisher", MetadataField.FIELD_PUBLISHER);
-      tagMap.put("dc.type", MetadataField.DC_FIELD_TYPE);
-      tagMap.put("dc.format", MetadataField.DC_FIELD_FORMAT);
-      tagMap.put("dc.Source", MetadataField.DC_FIELD_SOURCE);
-      tagMap.put("dc.language", MetadataField.DC_FIELD_LANGUAGE);
-      tagMap.put("dc.coverage.placename", MetadataField.DC_FIELD_COVERAGE);
-      tagMap.put("dc.subject.keywords", new MetadataField(MetadataField.FIELD_KEYWORDS, MetadataField.splitAt(",")));
+      tagMap.put("dc.date.available:", MetadataField.DC_FIELD_DATE);
+      tagMap.put("dc.description:", MetadataField.DC_FIELD_DESCRIPTION);
     }
 
     @Override
@@ -85,83 +92,17 @@ public class InformationResearchHtmlMetadataExtractorFactory implements FileMeta
       ArticleMetadata am = 
         new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       am.cook(tagMap);
-      
-      // Strip the extra whitespace found in the HTML around and within the "dc.Creator" and "dc.Publisher" fields
-      TrimWhitespace(am, MetadataField.DC_FIELD_CREATOR);
-      TrimWhitespace(am, MetadataField.FIELD_AUTHOR);
-      TrimWhitespace(am, MetadataField.DC_FIELD_PUBLISHER);
-      TrimWhitespace(am, MetadataField.FIELD_PUBLISHER);
-      
-      // Parse the dc.Identifier fields with scheme values "publisher-id", "doi", and "coden".
-      List<String> cookedIdentifierList = am.getList(MetadataField.DC_FIELD_IDENTIFIER);
-      List<String> rawIdentifierList = am.getRawList("dc.Identifier");
-      
-      String journalTitle = "";
-      String volume = "";
-      String issue = "";
-      String spage = "";
-      String epage = "";
-      String doi = "";
-      
-      for (int j = 0; j < cookedIdentifierList.size(); j++) {
-    	  
-    	  // If our dc.Identifier field has a comma in it, its content is a comma-delimited list of
-    	  // the journal title, volume, issue, and page range associated with the article.
-    	  // The journal title itself may contain commas, so the list is parsed backwards and all content
-    	  // before ", Vol." is assumed to be part of the journal title.
-    	  if (cookedIdentifierList.get(j).contains(", ")) {
-    		  String content = cookedIdentifierList.get(j);
-    		  String[] biblioInfo = content.split(", ");
-    		  
-    		  for (int k = biblioInfo.length-1; k >= 0; k--) {
-    			  if (biblioInfo[k].startsWith("pp. ")) {
-    				  spage = biblioInfo[k].substring("pp. ".length(), biblioInfo[k].indexOf('-'));
-    				  epage = biblioInfo[k].substring(biblioInfo[k].indexOf('-'), biblioInfo[k].length());
-    			  }
-    			  else if (biblioInfo[k].startsWith("No. ")) {
-    				 issue = biblioInfo[k].substring("No. ".length(), biblioInfo[k].length());
-    			  }
-    			  else if (biblioInfo[k].startsWith("Vol. ")) {
-     				 volume = biblioInfo[k].substring("Vol. ".length(), biblioInfo[k].length());
-    			  }
-    			  else if (!volume.isEmpty()) {
-    				  journalTitle = biblioInfo[k].concat(journalTitle);
-    				  
-    				  // If we're not at the beginning of the comma-separated list
-    				  // (i.e. the journal title itself contains commas),
-    				  // reinsert the comma that we lost in content.split(", ").
-    				  if (k != 0) journalTitle = ", ".concat(journalTitle);
-    			  }
-    		  }
-    		  
-    		  // org.apache.commons.lang.StringEscapeUtils contains a method for unescaping HTML codes
-    		  // (like &amp;) that may appear in the journal title
-    		  journalTitle = StringEscapeUtils.unescapeHtml(journalTitle);
-    		  
-    		  am.put(MetadataField.FIELD_JOURNAL_TITLE, journalTitle);
-    		  am.put(MetadataField.FIELD_VOLUME, volume);
-              am.put(MetadataField.FIELD_ISSUE, issue);
-              am.put(MetadataField.FIELD_START_PAGE, spage);
-    	  }
-    	  else if (MetadataUtil.isDOI(cookedIdentifierList.get(j))) {
-    		  doi = cookedIdentifierList.get(j);
-    		  am.put(MetadataField.FIELD_DOI, doi);
-    	  }
-    	  
-    	  // vol. 16  no. 1, March, 2011
-    	  // Information research //
+
+      if (am.getRaw("dcterms.identifier")!= null ){
+        if (am.getRaw("dcterms.identifier").contains("ISSN-")) {
+          am.put(MetadataField.FIELD_ISSN, am.getRaw("dcterms.identifier").replace("ISSN-", ""));
+        } else if (am.getRaw("dcterms.identifier").contains("DOI:")) {
+          am.put(MetadataField.FIELD_DOI, am.getRaw("dcterms.identifier").replace("DOI: ", ""));
+
+        }
       }
+
       emitter.emitMetadata(cu, am);
-    }
-    
-    private void TrimWhitespace(ArticleMetadata am, MetadataField md) {
-    	List<String> list = am.getList(md);
-    	for (int i = 0; i < list.size(); i++) {
-      	  String curEntry = list.get(i);
-          curEntry = curEntry.trim();
-      	  curEntry = curEntry.replace("   ", " ");
-      	  list.set(i, curEntry);
-    	}
     }
   }
 }

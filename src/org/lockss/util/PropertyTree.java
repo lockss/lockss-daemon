@@ -127,7 +127,7 @@ public class PropertyTree extends Properties
 	Object k=e.nextElement();
 	String v=(String)properties.get(k);
 	v=expandMacros(v);
-	put(k,trim?v.trim():v);
+	put(k,trim?intern(v.trim()):intern(v));
       }
   }
 
@@ -174,7 +174,7 @@ public class PropertyTree extends Properties
   /* ------------------------------------------------------------ */
   public Object setProperty(String key,String value)
   {
-    return (String)put(key,value);
+    return (String)put(key,intern(value));
   }
 
   /* ------------------------------------------------------------ */

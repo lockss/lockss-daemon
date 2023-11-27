@@ -1,0 +1,56 @@
+{
+  publisher <
+    name = Xiamen Dianhuaxue Bianjibu ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[poller] = 6
+  >
+
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Journal of Electrochemistry ;
+        issn = 1006-3471 ;
+        eissn = 2993-074X
+      >
+
+      comment[publisher] = Xiamen Dianhuaxue Bianjibu
+      param[base_url] = https://jelectrochem.xmu.edu.cn/
+      param[journal_abbr] = journal
+
+      au < manifest ; exists ; 1995 ; Journal of Electrochemistry Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1996 ; Journal of Electrochemistry Volume 2 ; 2 ; >
+      au < manifest ; exists ; 1997 ; Journal of Electrochemistry Volume 3 ; 3 ; >
+      au < manifest ; exists ; 1998 ; Journal of Electrochemistry Volume 4 ; 4 ; >
+      au < manifest ; exists ; 1999 ; Journal of Electrochemistry Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2000 ; Journal of Electrochemistry Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2001 ; Journal of Electrochemistry Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2002 ; Journal of Electrochemistry Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2003 ; Journal of Electrochemistry Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2004 ; Journal of Electrochemistry Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2005 ; Journal of Electrochemistry Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2006 ; Journal of Electrochemistry Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2007 ; Journal of Electrochemistry Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2008 ; Journal of Electrochemistry Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2009 ; Journal of Electrochemistry Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2010 ; Journal of Electrochemistry Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2011 ; Journal of Electrochemistry Volume 17 ; 17 ; >
+      au < finished ; manifest ; 2012 ; Journal of Electrochemistry Volume 18 ; 18 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; Journal of Electrochemistry Volume 19 ; 19 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; Journal of Electrochemistry Volume 20 ; 20 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; Journal of Electrochemistry Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; Journal of Electrochemistry Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2017 ; Journal of Electrochemistry Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Journal of Electrochemistry Volume 24 ; 24 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Journal of Electrochemistry Volume 25 ; 25 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Journal of Electrochemistry Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; Journal of Electrochemistry Volume 27 ; 27 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2022 ; Journal of Electrochemistry Volume 28 ; 28 ; reingest4.clockss.org:8082 >
+      au < crawling ; exists ; 2023 ; Journal of Electrochemistry Volume 29 ; 29 ; >
+
+  }
+
+}

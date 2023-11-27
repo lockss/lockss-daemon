@@ -3,6 +3,8 @@
   publisher <
     name = Mathematical Sciences Publishers ;
     info[contract] = 2012 ;
+    info[back] = 2010 ;
+    info[min_year] = 1997 ;
     info[tester] = 8 ;
     info[poller] = 2
   >
@@ -15,6 +17,28 @@
     #####
     ### Only has manifest pages for completed years. So for example, 2013 must be processed in 2014.
     #####
+
+######Books
+  {
+  
+    title < 
+      name = The Open Book Series ;
+      type = bookSeries 
+      >
+      
+      param[journal_id] = obs
+      #See https://msp.org/obs/index.xhtml
+      #No volumes for 2021 or 2022.
+    
+      au < finished ; finished ; 2013 ; The Open Book Series Volume 2013 ; 1 ; 2013 ; http://msp.org/ ; >
+      au < finished ; crawling ; 2019 ; The Open Book Series Volume 2019 ; 2 ; 2019 ; https://msp.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2020 ; The Open Book Series Volume 2020 ; 3-4 ; 2020 ; https://msp.org/ ; reingest3.clockss.org:8083 >
+      au < frozen ; exists ; 2022 ; The Open Book Series Volume 2022 ; 5 ; 2022 ; https://msp.org/ ; >
+      au < expected ; exists ; 2023 ; The Open Book Series Volume 2023 ; 6 ; 2023 ; https://msp.org/ ; >
+
+  }
+   
+######Journals
   {
   
     title < 
@@ -34,19 +58,20 @@
      au < manifest ; exists ; 2007 ; Algebraic & Geometric Topology Volume 7 ; 7 ; 2007 ; https://msp.org/ ; >
      au < manifest ; exists ; 2008 ; Algebraic & Geometric Topology Volume 8 ; 8 ; 2008 ; https://msp.org/ ; >
      au < manifest ; exists ; 2009 ; Algebraic & Geometric Topology Volume 9 ; 9 ; 2009 ; https://msp.org/ ; >
-     au < manifest ; exists ; 2010 ; Algebraic & Geometric Topology Volume 10 ; 10 ; 2010 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2011 ; Algebraic & Geometric Topology Volume 11 ; 11 ; 2011 ; http://msp.org/ ; >
+     au < frozen ; exists ; 2010 ; Algebraic & Geometric Topology Volume 10 ; 10 ; 2010 ; https://msp.org/ ; >
+     au < finished ; crawling ; 2011 ; Algebraic & Geometric Topology Volume 11 ; 11 ; 2011 ; http://msp.org/ ; reingest5.clockss.org:8082 >
      au < finished ; finished ; 2012 ; Algebraic & Geometric Topology Volume 12 ; 12 ; 2012 ; http://msp.org/ ; >
      au < finished ; finished ; 2013 ; Algebraic & Geometric Topology Volume 13 ; 13 ; 2013 ; http://msp.org/ ; >
      au < finished ; finished ; 2014 ; Algebraic & Geometric Topology Volume 14 ; 14 ; 2014 ; http://msp.org/ ; >
      au < finished ; finished ; 2015 ; Algebraic & Geometric Topology Volume 15 ; 15 ; 2015 ; http://msp.org/ ; reingest2.clockss.org:8085 >
      au < finished ; finished ; 2016 ; Algebraic & Geometric Topology Volume 16 ; 16 ; 2016 ; http://msp.org/ ; reingest5.clockss.org:8082 >
-     au < frozen ; exists ; 2017 ; Algebraic & Geometric Topology Volume 17 ; 17 ; 2017 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2018 ; Algebraic & Geometric Topology Volume 18 ; 18 ; 2018 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2019 ; Algebraic & Geometric Topology Volume 19 ; 19 ; 2019 ; https://msp.org/ ; >
-     au < deepCrawl ; exists ; 2020 ; Algebraic & Geometric Topology Volume 20 ; 20 ; 2020 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2021 ; Algebraic & Geometric Topology Volume 21 ; 21 ; 2021 ; https://msp.org/ ; >
-     au < manifest ; exists ; 2022 ; Algebraic & Geometric Topology Volume 22 ; 22 ; 2022 ; https://msp.org/ ; >
+     au < finished ; crawling ; 2017 ; Algebraic & Geometric Topology Volume 17 ; 17 ; 2017 ; https://msp.org/ ; reingest1.clockss.org:8082 >
+     au < finished ; crawling ; 2018 ; Algebraic & Geometric Topology Volume 18 ; 18 ; 2018 ; https://msp.org/ ; reingest2.clockss.org:8085 >
+     au < finished ; crawling ; 2019 ; Algebraic & Geometric Topology Volume 19 ; 19 ; 2019 ; https://msp.org/ ; reingest3.clockss.org:8083 >
+     au < finished ; crawling ; 2020 ; Algebraic & Geometric Topology Volume 20 ; 20 ; 2020 ; https://msp.org/ ; reingest3.clockss.org:8083 >
+     au < finished ; crawling ; 2021 ; Algebraic & Geometric Topology Volume 21 ; 21 ; 2021 ; https://msp.org/ ; reingest4.clockss.org:8082 >
+     au < frozen ; exists ; 2022 ; Algebraic & Geometric Topology Volume 22 ; 22 ; 2022 ; https://msp.org/ ; >
+     au < expected ; exists ; 2023 ; Algebraic & Geometric Topology Volume 23 ; 23 ; 2023 ; https://msp.org/ ; >
 
   }
   
@@ -64,19 +89,20 @@
      au < manifest ; exists ; 2007 ; Algebra & Number Theory Volume 1 ; 1 ; 2007 ; https://msp.org/ ; >
      au < manifest ; exists ; 2008 ; Algebra & Number Theory Volume 2 ; 2 ; 2008 ; https://msp.org/ ; >
      au < manifest ; exists ; 2009 ; Algebra & Number Theory Volume 3 ; 3 ; 2009 ; https://msp.org/ ; >
-     au < manifest ; exists ; 2010 ; Algebra & Number Theory Volume 4 ; 4 ; 2010 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2011 ; Algebra & Number Theory Volume 5 ; 5 ; 2011 ; http://msp.org/ ; >
+     au < frozen ; exists ; 2010 ; Algebra & Number Theory Volume 4 ; 4 ; 2010 ; https://msp.org/ ; >
+     au < finished ; crawling ; 2011 ; Algebra & Number Theory Volume 5 ; 5 ; 2011 ; http://msp.org/ ; reingest1.clockss.org:8082 >
      au < finished ; finished ; 2012 ; Algebra & Number Theory Volume 6 ; 6 ; 2012 ; http://msp.org/ ; >
      au < finished ; finished ; 2013 ; Algebra & Number Theory Volume 7 ; 7 ; 2013 ; http://msp.org/ ; >
      au < finished ; finished ; 2014 ; Algebra & Number Theory Volume 8 ; 8 ; 2014 ; http://msp.org/ ; reingest5.clockss.org:8082 >
      au < finished ; finished ; 2015 ; Algebra & Number Theory Volume 9 ; 9 ; 2015 ; http://msp.org/ ; reingest5.clockss.org:8082 >
      au < finished ; finished ; 2016 ; Algebra & Number Theory Volume 10 ; 10 ; 2016 ; http://msp.org/ ; reingest1.clockss.org:8082 >
-     au < frozen ; exists ; 2017 ; Algebra & Number Theory Volume 11 ; 11 ; 2017 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2018 ; Algebra & Number Theory Volume 12 ; 12 ; 2018 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2019 ; Algebra & Number Theory Volume 13 ; 13 ; 2019 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2020 ; Algebra & Number Theory Volume 14 ; 14 ; 2020 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2021 ; Algebra & Number Theory Volume 15 ; 15 ; 2021 ; https://msp.org/ ; >
-     au < manifest ; exists ; 2022 ; Algebra & Number Theory Volume 16 ; 16 ; 2022 ; https://msp.org/ ; >
+     au < finished ; crawling ; 2017 ; Algebra & Number Theory Volume 11 ; 11 ; 2017 ; https://msp.org/ ; reingest2.clockss.org:8085 >
+     au < finished ; crawling ; 2018 ; Algebra & Number Theory Volume 12 ; 12 ; 2018 ; https://msp.org/ ; reingest3.clockss.org:8083 >
+     au < finished ; crawling ; 2019 ; Algebra & Number Theory Volume 13 ; 13 ; 2019 ; https://msp.org/ ; reingest4.clockss.org:8082 >
+     au < finished ; crawling ; 2020 ; Algebra & Number Theory Volume 14 ; 14 ; 2020 ; https://msp.org/ ; reingest5.clockss.org:8082 >
+     au < finished ; crawling ; 2021 ; Algebra & Number Theory Volume 15 ; 15 ; 2021 ; https://msp.org/ ; reingest1.clockss.org:8082 >
+     au < frozen ; exists ; 2022 ; Algebra & Number Theory Volume 16 ; 16 ; 2022 ; https://msp.org/ ; >
+     au < expected ; exists ; 2023 ; Algebra & Number Theory Volume 17 ; 17 ; 2023 ; https://msp.org/ ; >
 
   }
   
@@ -92,19 +118,20 @@
 
      au < manifest ; exists ; 2008 ; Analysis & PDE Volume 1 ; 1 ; 2008 ; https://msp.org/ ; >
      au < manifest ; exists ; 2009 ; Analysis & PDE Volume 2 ; 2 ; 2009 ; https://msp.org/ ; >
-     au < manifest ; exists ; 2010 ; Analysis & PDE Volume 3 ; 3 ; 2010 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2011 ; Analysis & PDE Volume 4 ; 4 ; 2011 ; http://msp.org/ ; >
+     au < frozen ; exists ; 2010 ; Analysis & PDE Volume 3 ; 3 ; 2010 ; https://msp.org/ ; >
+     au < finished ; crawling ; 2011 ; Analysis & PDE Volume 4 ; 4 ; 2011 ; http://msp.org/ ; reingest2.clockss.org:8085 >
      au < finished ; finished ; 2012 ; Analysis & PDE Volume 5 ; 5 ; 2012 ; http://msp.org/ ; >
      au < finished ; finished ; 2013 ; Analysis & PDE Volume 6 ; 6 ; 2013 ; http://msp.org/ ; >
      au < finished ; finished ; 2014 ; Analysis & PDE Volume 7 ; 7 ; 2014 ; http://msp.org/ ; >
      au < finished ; finished ; 2015 ; Analysis & PDE Volume 8 ; 8 ; 2015 ; http://msp.org/ ; reingest5.clockss.org:8082 >
      au < finished ; finished ; 2016 ; Analysis & PDE Volume 9 ; 9 ; 2016 ; http://msp.org/ ; reingest2.clockss.org:8085 >
      au < finished ; finished ; 2017 ; Analysis & PDE Volume 10 ; 10 ; 2017 ; https://msp.org/ ; reingest1.clockss.org:8082 >
-     au < frozen ; exists ; 2018 ; Analysis & PDE Volume 11 ; 11 ; 2018 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2019 ; Analysis & PDE Volume 12 ; 12 ; 2019 ; https://msp.org/ ; >
-     au < deepCrawl ; exists ; 2020 ; Analysis & PDE Volume 13 ; 13 ; 2020 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2021 ; Analysis & PDE Volume 14 ; 14 ; 2021 ; https://msp.org/ ; >
-     au < manifest ; exists ; 2022 ; Analysis & PDE Volume 15 ; 15 ; 2022 ; https://msp.org/ ; >
+     au < finished ; crawling ; 2018 ; Analysis & PDE Volume 11 ; 11 ; 2018 ; https://msp.org/ ; reingest3.clockss.org:8083 >
+     au < finished ; crawling ; 2019 ; Analysis & PDE Volume 12 ; 12 ; 2019 ; https://msp.org/ ; reingest4.clockss.org:8082 >
+     au < finished ; crawling ; 2020 ; Analysis & PDE Volume 13 ; 13 ; 2020 ; https://msp.org/ ; reingest1.clockss.org:8082 >
+     au < finished ; crawling ; 2021 ; Analysis & PDE Volume 14 ; 14 ; 2021 ; https://msp.org/ ; reingest5.clockss.org:8082 >
+     au < frozen ; exists ; 2022 ; Analysis & PDE Volume 15 ; 15 ; 2022 ; https://msp.org/ ; >
+     au < expected ; exists ; 2023 ; Analysis & PDE Volume 16 ; 16 ; 2023 ; https://msp.org/ ; >
 
   }
    
@@ -122,19 +149,20 @@
      au < manifest ; exists ; 2007 ; Communications in Applied Mathematics and Computational Science Volume 2 ; 2 ; 2007 ; https://msp.org/ ; >
      au < manifest ; exists ; 2008 ; Communications in Applied Mathematics and Computational Science Volume 3 ; 3 ; 2008 ; https://msp.org/ ; >
      au < manifest ; exists ; 2009 ; Communications in Applied Mathematics and Computational Science Volume 4 ; 4 ; 2009 ; https://msp.org/ ; >
-     au < manifest ; exists ; 2010 ; Communications in Applied Mathematics and Computational Science Volume 5 ; 5 ; 2010 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2011 ; Communications in Applied Mathematics and Computational Science Volume 6 ; 6 ; 2011 ; http://msp.org/ ; >
+     au < frozen ; exists ; 2010 ; Communications in Applied Mathematics and Computational Science Volume 5 ; 5 ; 2010 ; https://msp.org/ ; >
+     au < finished ; crawling ; 2011 ; Communications in Applied Mathematics and Computational Science Volume 6 ; 6 ; 2011 ; http://msp.org/ ; reingest5.clockss.org:8082 >
      au < finished ; finished ; 2012 ; Communications in Applied Mathematics and Computational Science Volume 7 ; 7 ; 2012 ; http://msp.org/ ; >
      au < finished ; finished ; 2013 ; Communications in Applied Mathematics and Computational Science Volume 8 ; 8 ; 2013 ; http://msp.org/ ; >
      au < finished ; finished ; 2014 ; Communications in Applied Mathematics and Computational Science Volume 9 ; 9 ; 2014 ; http://msp.org/ ; reingest1.clockss.org:8082 >
      au < finished ; finished ; 2015 ; Communications in Applied Mathematics and Computational Science Volume 10 ; 10 ; 2015 ; http://msp.org/ ; reingest3.clockss.org:8083 >
      au < finished ; finished ; 2016 ; Communications in Applied Mathematics and Computational Science Volume 11 ; 11 ; 2016 ; http://msp.org/ ; reingest3.clockss.org:8083 >
-     au < frozen ; exists ; 2017 ; Communications in Applied Mathematics and Computational Science Volume 12 ; 12 ; 2017 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2018 ; Communications in Applied Mathematics and Computational Science Volume 13 ; 13 ; 2018 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2019 ; Communications in Applied Mathematics and Computational Science Volume 14 ; 14 ; 2019 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2020 ; Communications in Applied Mathematics and Computational Science Volume 15 ; 15 ; 2020 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2021 ; Communications in Applied Mathematics and Computational Science Volume 16 ; 16 ; 2021 ; https://msp.org/ ; >
-     au < manifest ; exists ; 2022 ; Communications in Applied Mathematics and Computational Science Volume 17 ; 17 ; 2022 ; https://msp.org/ ; >
+     au < finished ; crawling ; 2017 ; Communications in Applied Mathematics and Computational Science Volume 12 ; 12 ; 2017 ; https://msp.org/ ; reingest1.clockss.org:8082 >
+     au < finished ; crawling ; 2018 ; Communications in Applied Mathematics and Computational Science Volume 13 ; 13 ; 2018 ; https://msp.org/ ; reingest2.clockss.org:8085 >
+     au < finished ; crawling ; 2019 ; Communications in Applied Mathematics and Computational Science Volume 14 ; 14 ; 2019 ; https://msp.org/ ; reingest3.clockss.org:8083 >
+     au < finished ; crawling ; 2020 ; Communications in Applied Mathematics and Computational Science Volume 15 ; 15 ; 2020 ; https://msp.org/ ; reingest4.clockss.org:8082 >
+     au < finished ; crawling ; 2021 ; Communications in Applied Mathematics and Computational Science Volume 16 ; 16 ; 2021 ; https://msp.org/ ; reingest5.clockss.org:8082 >
+     au < frozen ; exists ; 2022 ; Communications in Applied Mathematics and Computational Science Volume 17 ; 17 ; 2022 ; https://msp.org/ ; >
+     au < expected ; exists ; 2023 ; Communications in Applied Mathematics and Computational Science Volume 18 ; 18 ; 2023 ; https://msp.org/ ; >
 
   }
 
@@ -161,19 +189,20 @@
      au < manifest ; exists ; 2007 ; Geometric Topology Volume 11 ; 11 ; 2007 ; https://msp.org/ ; >
      au < manifest ; exists ; 2008 ; Geometric Topology Volume 12 ; 12 ; 2008 ; https://msp.org/ ; >
      au < manifest ; exists ; 2009 ; Geometric Topology Volume 13 ; 13 ; 2009 ; https://msp.org/ ; >
-     au < manifest ; exists ; 2010 ; Geometric Topology Volume 14 ; 14 ; 2010 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2011 ; Geometric Topology Volume 15 ; 15 ; 2011 ; http://msp.org/ ; >
+     au < frozen ; exists ; 2010 ; Geometric Topology Volume 14 ; 14 ; 2010 ; https://msp.org/ ; >
+     au < finished ; crawling ; 2011 ; Geometric Topology Volume 15 ; 15 ; 2011 ; http://msp.org/ ; reingest1.clockss.org:8082 >
      au < finished ; finished ; 2012 ; Geometric Topology Volume 16 ; 16 ; 2012 ; http://msp.org/ ; >
-     au < frozen ; exists ; 2013 ; Geometric Topology Volume 17 ; 17 ; 2013 ; http://msp.org/ ; >
+     au < finished ; crawling ; 2013 ; Geometric Topology Volume 17 ; 17 ; 2013 ; http://msp.org/ ; reingest2.clockss.org:8085 >
      au < finished ; finished ; 2014 ; Geometric Topology Volume 18 ; 18 ; 2014 ; http://msp.org/ ; reingest2.clockss.org:8085 >
      au < finished ; finished ; 2015 ; Geometric Topology Volume 19 ; 19 ; 2015 ; http://msp.org/ ; reingest4.clockss.org:8082 >
      au < finished ; finished ; 2016 ; Geometric Topology Volume 20 ; 20 ; 2016 ; http://msp.org/ ; reingest4.clockss.org:8082 >
-     au < frozen ; exists ; 2017 ; Geometric Topology Volume 21 ; 21 ; 2017 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2018 ; Geometric Topology Volume 22 ; 22 ; 2018 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2019 ; Geometric Topology Volume 23 ; 23 ; 2019 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2020 ; Geometric Topology Volume 24 ; 24 ; 2020 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2021 ; Geometric Topology Volume 25 ; 25 ; 2021 ; https://msp.org/ ; >
-     au < manifest ; exists ; 2022 ; Geometric Topology Volume 26 ; 26 ; 2022 ; https://msp.org/ ; >
+     au < finished ; crawling ; 2017 ; Geometric Topology Volume 21 ; 21 ; 2017 ; https://msp.org/ ; reingest3.clockss.org:8083 >
+     au < finished ; crawling ; 2018 ; Geometric Topology Volume 22 ; 22 ; 2018 ; https://msp.org/ ; reingest4.clockss.org:8082 >
+     au < finished ; crawling ; 2019 ; Geometric Topology Volume 23 ; 23 ; 2019 ; https://msp.org/ ; reingest5.clockss.org:8082 >
+     au < finished ; crawling ; 2020 ; Geometric Topology Volume 24 ; 24 ; 2020 ; https://msp.org/ ; reingest1.clockss.org:8082 >
+     au < finished ; crawling ; 2021 ; Geometric Topology Volume 25 ; 25 ; 2021 ; https://msp.org/ ; reingest2.clockss.org:8085 >
+     au < frozen ; exists ; 2022 ; Geometric Topology Volume 26 ; 26 ; 2022 ; https://msp.org/ ; >
+     au < expected ; exists ; 2023 ; Geometric Topology Volume 27 ; 27 ; 2023 ; https://msp.org/ ; >
 
   }
   
@@ -196,7 +225,7 @@
      au < finished ; finished ; 2006 ; Geometry & Topology Monographs in 2006 ; 8-9 ; 2006 ; http://msp.org/ ; reingest2.clockss.org:8085 >
      au < finished ; finished ; 2007 ; Geometry & Topology Monographs in 2007 ; 10-12 ; 2007 ; http://msp.org/ ; >
      au < finished ; finished ; 2008 ; Geometry & Topology Monographs in 2008 ; 13-15 ; 2008 ; http://msp.org/ ; reingest2.clockss.org:8085 >
-     au < frozen ; exists ; 2009 ; Geometry & Topology Monographs in 2009 ; 16 ; 2009 ; http://msp.org/ ; >
+     au < finished ; crawling ; 2009 ; Geometry & Topology Monographs in 2009 ; 16 ; 2009 ; http://msp.org/ ; reingest3.clockss.org:8083 >
      au < finished ; finished ; 2011 ; Geometry & Topology Monographs in 2011 ; 17 ; 2011 ; http://msp.org/ ; >
      au < finished ; finished ; 2012 ; Geometry & Topology Monographs in 2012 ; 18 ; 2012 ; http://msp.org/ ; reingest2.clockss.org:8085 >
      au < finished ; finished ; 2015 ; Geometry & Topology Monographs in 2015 ; 19 ; 2015 ; http://msp.org/ ; reingest5.clockss.org:8082 >
@@ -215,19 +244,20 @@
  
      au < manifest ; exists ; 2008 ; Involve, a journal of mathematics Volume 1 ; 1 ; 2008 ; https://msp.org/ ; >
      au < manifest ; exists ; 2009 ; Involve, a journal of mathematics Volume 2 ; 2 ; 2009 ; https://msp.org/ ; >
-     au < manifest ; exists ; 2010 ; Involve, a journal of mathematics Volume 3 ; 3 ; 2010 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2011 ; Involve, a journal of mathematics Volume 4 ; 4 ; 2011 ; http://msp.org/ ; >
+     au < frozen ; exists ; 2010 ; Involve, a journal of mathematics Volume 3 ; 3 ; 2010 ; https://msp.org/ ; >
+     au < finished ; crawling ; 2011 ; Involve, a journal of mathematics Volume 4 ; 4 ; 2011 ; http://msp.org/ ; reingest4.clockss.org:8082 >
      au < finished ; finished ; 2012 ; Involve, a journal of mathematics Volume 5 ; 5 ; 2012 ; http://msp.org/ ; >
      au < finished ; finished ; 2013 ; Involve, a journal of mathematics Volume 6 ; 6 ; 2013 ; http://msp.org/ ; >
      au < finished ; finished ; 2014 ; Involve, a journal of mathematics Volume 7 ; 7 ; 2014 ; http://msp.org/ ; >
      au < finished ; finished ; 2015 ; Involve, a journal of mathematics Volume 8 ; 8 ; 2015 ; http://msp.org/ ; reingest1.clockss.org:8082 >
      au < finished ; finished ; 2016 ; Involve, a journal of mathematics Volume 9 ; 9 ; 2016 ; http://msp.org/ ; reingest5.clockss.org:8082 >
-     au < frozen ; exists ; 2017 ; Involve, a journal of mathematics Volume 10 ; 10 ; 2017 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2018 ; Involve, a journal of mathematics Volume 11 ; 11 ; 2018 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2019 ; Involve, a journal of mathematics Volume 12 ; 12 ; 2019 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2020 ; Involve, a journal of mathematics Volume 13 ; 13 ; 2020 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2021 ; Involve, a journal of mathematics Volume 14 ; 14 ; 2021 ; https://msp.org/ ; >
-     au < manifest ; exists ; 2022 ; Involve, a journal of mathematics Volume 15 ; 15 ; 2022 ; https://msp.org/ ; >
+     au < finished ; crawling ; 2017 ; Involve, a journal of mathematics Volume 10 ; 10 ; 2017 ; https://msp.org/ ; reingest5.clockss.org:8082 >
+     au < finished ; crawling ; 2018 ; Involve, a journal of mathematics Volume 11 ; 11 ; 2018 ; https://msp.org/ ; reingest1.clockss.org:8082 >
+     au < finished ; crawling ; 2019 ; Involve, a journal of mathematics Volume 12 ; 12 ; 2019 ; https://msp.org/ ; reingest2.clockss.org:8085 >
+     au < finished ; crawling ; 2020 ; Involve, a journal of mathematics Volume 13 ; 13 ; 2020 ; https://msp.org/ ; reingest3.clockss.org:8083 >
+     au < finished ; crawling ; 2021 ; Involve, a journal of mathematics Volume 14 ; 14 ; 2021 ; https://msp.org/ ; reingest4.clockss.org:8082 >
+     au < frozen ; exists ; 2022 ; Involve, a journal of mathematics Volume 15 ; 15 ; 2022 ; https://msp.org/ ; >
+     au < expected ; exists ; 2023 ; Involve, a journal of mathematics Volume 16 ; 16 ; 2023 ; https://msp.org/ ; >
 
    }
    
@@ -244,19 +274,20 @@
      au < manifest ; exists ; 2007 ; Journal of Mechanics of Materials and Structures Volume 2 ; 2 ; 2007 ; https://msp.org/ ; >
      au < manifest ; exists ; 2008 ; Journal of Mechanics of Materials and Structures Volume 3 ; 3 ; 2008 ; https://msp.org/ ; >
      au < manifest ; exists ; 2009 ; Journal of Mechanics of Materials and Structures Volume 4 ; 4 ; 2009 ; https://msp.org/ ; >
-     au < manifest ; exists ; 2010 ; Journal of Mechanics of Materials and Structures Volume 5 ; 5 ; 2010 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2011 ; Journal of Mechanics of Materials and Structures Volume 6 ; 6 ; 2011 ; http://msp.org/ ; >
+     au < frozen ; exists ; 2010 ; Journal of Mechanics of Materials and Structures Volume 5 ; 5 ; 2010 ; https://msp.org/ ; >
+     au < finished ; crawling ; 2011 ; Journal of Mechanics of Materials and Structures Volume 6 ; 6 ; 2011 ; http://msp.org/ ; reingest1.clockss.org:8082 >
      au < finished ; finished ; 2012 ; Journal of Mechanics of Materials and Structures Volume 7 ; 7 ; 2012 ; http://msp.org/ ; >
      au < finished ; finished ; 2013 ; Journal of Mechanics of Materials and Structures Volume 8 ; 8 ; 2013 ; http://msp.org/ ; >
      au < finished ; finished ; 2014 ; Journal of Mechanics of Materials and Structures Volume 9 ; 9 ; 2014 ; http://msp.org/ ; reingest2.clockss.org:8085 >
      au < finished ; finished ; 2015 ; Journal of Mechanics of Materials and Structures Volume 10 ; 10 ; 2015 ; http://msp.org/ ; reingest5.clockss.org:8082 >
      au < finished ; finished ; 2016 ; Journal of Mechanics of Materials and Structures Volume 11 ; 11 ; 2016 ; http://msp.org/ ; reingest1.clockss.org:8082 >
-     au < frozen ; exists ; 2017 ; Journal of Mechanics of Materials and Structures Volume 12 ; 12 ; 2017 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2018 ; Journal of Mechanics of Materials and Structures Volume 13 ; 13 ; 2018 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2019 ; Journal of Mechanics of Materials and Structures Volume 14 ; 14 ; 2019 ; https://msp.org/ ; >
-     au < deepCrawl ; exists ; 2020 ; Journal of Mechanics of Materials and Structures Volume 15 ; 15 ; 2020 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2021 ; Journal of Mechanics of Materials and Structures Volume 16 ; 16 ; 2021 ; https://msp.org/ ; >
-     au < manifest ; exists ; 2022 ; Journal of Mechanics of Materials and Structures Volume 17 ; 17 ; 2022 ; https://msp.org/ ; >
+     au < finished ; crawling ; 2017 ; Journal of Mechanics of Materials and Structures Volume 12 ; 12 ; 2017 ; https://msp.org/ ; reingest2.clockss.org:8085 >
+     au < finished ; crawling ; 2018 ; Journal of Mechanics of Materials and Structures Volume 13 ; 13 ; 2018 ; https://msp.org/ ; reingest3.clockss.org:8083 >
+     au < finished ; crawling ; 2019 ; Journal of Mechanics of Materials and Structures Volume 14 ; 14 ; 2019 ; https://msp.org/ ; reingest4.clockss.org:8082 >
+     au < finished ; crawling ; 2020 ; Journal of Mechanics of Materials and Structures Volume 15 ; 15 ; 2020 ; https://msp.org/ ; reingest2.clockss.org:8085 >
+     au < finished ; crawling ; 2021 ; Journal of Mechanics of Materials and Structures Volume 16 ; 16 ; 2021 ; https://msp.org/ ; reingest5.clockss.org:8082 >
+     au < frozen ; exists ; 2022 ; Journal of Mechanics of Materials and Structures Volume 17 ; 17 ; 2022 ; https://msp.org/ ; >
+     au < expected ; exists ; 2023 ; Journal of Mechanics of Materials and Structures Volume 18 ; 18 ; 2023 ; https://msp.org/ ; >
 
    }
    
@@ -270,8 +301,8 @@
       param[journal_id] = jsag
  
      au < manifest ; exists ; 2009 ; Journal of Software for Algebra and Geometry Volume 1 ; 1 ; 2009 ; https://msp.org/ ; >
-     au < manifest ; exists ; 2010 ; Journal of Software for Algebra and Geometry Volume 2 ; 2 ; 2010 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2011 ; Journal of Software for Algebra and Geometry Volume 3 ; 3 ; 2011 ; http://msp.org/ ; >
+     au < frozen ; exists ; 2010 ; Journal of Software for Algebra and Geometry Volume 2 ; 2 ; 2010 ; https://msp.org/ ; >
+     au < finished ; crawling ; 2011 ; Journal of Software for Algebra and Geometry Volume 3 ; 3 ; 2011 ; http://msp.org/ ; reingest1.clockss.org:8082 >
      au < finished ; finished ; 2012 ; Journal of Software for Algebra and Geometry Volume 4 ; 4 ; 2012 ; http://msp.org/ ; reingest2.clockss.org:8085 >
      au < finished ; finished ; 2013 ; Journal of Software for Algebra and Geometry Volume 5 ; 5 ; 2013 ; http://msp.org/ ; >
      au < finished ; finished ; 2014 ; Journal of Software for Algebra and Geometry Volume 6 ; 6 ; 2014 ; http://msp.org/ ; >
@@ -294,30 +325,16 @@
      au < finished ; finished ; 2014 ; Mathematics and Mechanics of Complex Systems Volume 2 ; 2 ; 2014 ; http://msp.org/ ; >
      au < finished ; finished ; 2015 ; Mathematics and Mechanics of Complex Systems Volume 3 ; 3 ; 2015 ; http://msp.org/ ; reingest4.clockss.org:8082 >
      au < finished ; finished ; 2016 ; Mathematics and Mechanics of Complex Systems Volume 4 ; 4 ; 2016 ; http://msp.org/ ; reingest2.clockss.org:8085 >
-     au < frozen ; exists ; 2017 ; Mathematics and Mechanics of Complex Systems Volume 5 ; 5 ; 2017 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2018 ; Mathematics and Mechanics of Complex Systems Volume 6 ; 6 ; 2018 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2019 ; Mathematics and Mechanics of Complex Systems Volume 7 ; 7 ; 2019 ; https://msp.org/ ; >
-     au < deepCrawl ; exists ; 2020 ; Mathematics and Mechanics of Complex Systems Volume 8 ; 8 ; 2020 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2021 ; Mathematics and Mechanics of Complex Systems Volume 9 ; 9 ; 2021 ; https://msp.org/ ; >
-     au < manifest ; exists ; 2022 ; Mathematics and Mechanics of Complex Systems Volume 10 ; 10 ; 2022 ; https://msp.org/ ; >
+     au < finished ; crawling ; 2017 ; Mathematics and Mechanics of Complex Systems Volume 5 ; 5 ; 2017 ; https://msp.org/ ; reingest5.clockss.org:8082 >
+     au < finished ; crawling ; 2018 ; Mathematics and Mechanics of Complex Systems Volume 6 ; 6 ; 2018 ; https://msp.org/ ; reingest1.clockss.org:8082 >
+     au < finished ; crawling ; 2019 ; Mathematics and Mechanics of Complex Systems Volume 7 ; 7 ; 2019 ; https://msp.org/ ; reingest2.clockss.org:8085 >
+     au < finished ; crawling ; 2020 ; Mathematics and Mechanics of Complex Systems Volume 8 ; 8 ; 2020 ; https://msp.org/ ; reingest4.clockss.org:8082 >
+     au < finished ; crawling ; 2021 ; Mathematics and Mechanics of Complex Systems Volume 9 ; 9 ; 2021 ; https://msp.org/ ; reingest3.clockss.org:8083 >
+     au < frozen ; exists ; 2022 ; Mathematics and Mechanics of Complex Systems Volume 10 ; 10 ; 2022 ; https://msp.org/ ; >
+     au < expected ; exists ; 2023 ; Mathematics and Mechanics of Complex Systems Volume 11 ; 11 ; 2023 ; https://msp.org/ ; >
 
   }
   
-  {
-  
-    title < 
-      name = The Open Book Series ;
-      type = bookSeries 
-      >
-      
-      param[journal_id] = obs
-    
-     au < finished ; finished ; 2013 ; The Open Book Series Volume 2013 ; 1 ; 2013 ; http://msp.org/ ; >
-     au < frozen ; exists ; 2019 ; The Open Book Series Volume 2019 ; 2 ; 2019 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2020 ; The Open Book Series Volume 2020 ; 3-4 ; 2020 ; https://msp.org/ ; >
-
-  }
-   
   {
   
      title <
@@ -388,19 +405,20 @@
      au < manifest ; exists ; 2007 ; Pacific Journal of Mathematics Volume 229-233 ; 229-233 ; 2007 ; https://msp.org/ ; >
      au < manifest ; exists ; 2008 ; Pacific Journal of Mathematics Volume 234-238 ; 234-238 ; 2008 ; https://msp.org/ ; >
      au < manifest ; exists ; 2009 ; Pacific Journal of Mathematics Volume 239-243 ; 239-243 ; 2009 ; https://msp.org/ ; >
-     au < manifest ; exists ; 2010 ; Pacific Journal of Mathematics Volume 244-248 ; 244-248 ; 2010 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2011 ; Pacific Journal of Mathematics Volume 249-254 ; 249-254 ; 2011 ; http://msp.org/ ; >
+     au < frozen ; exists ; 2010 ; Pacific Journal of Mathematics Volume 244-248 ; 244-248 ; 2010 ; https://msp.org/ ; >
+     au < finished ; crawling ; 2011 ; Pacific Journal of Mathematics Volume 249-254 ; 249-254 ; 2011 ; http://msp.org/ ; reingest4.clockss.org:8082 >
      au < finished ; finished ; 2012 ; Pacific Journal of Mathematics Volume 255-260 ; 255-260 ; 2012 ; http://msp.org/ ; >
      au < finished ; finished ; 2013 ; Pacific Journal of Mathematics Volume 261-266 ; 261-266 ; 2013 ; http://msp.org/ ; >
      au < finished ; finished ; 2014 ; Pacific Journal of Mathematics Volume 267-272 ; 267-272 ; 2014 ; http://msp.org/ ; >
      au < finished ; finished ; 2015 ; Pacific Journal of Mathematics Volume 273-278 ; 273-278 ; 2015 ; http://msp.org/ ; reingest5.clockss.org:8082 >
      au < finished ; finished ; 2016 ; Pacific Journal of Mathematics Volume 279-284 ; 279-284 ; 2016 ; http://msp.org/ ; reingest3.clockss.org:8083 >
-     au < frozen ; exists ; 2017 ; Pacific Journal of Mathematics Volume 285-291 ; 285-291 ; 2017 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2018 ; Pacific Journal of Mathematics Volume 292-297 ; 292-297 ; 2018 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2019 ; Pacific Journal of Mathematics Volume 298-303 ; 298-303 ; 2019 ; https://msp.org/ ; >
-     au < deepCrawl ; exists ; 2020 ; Pacific Journal of Mathematics Volume 304-309 ; 304-309 ; 2020 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2021 ; Pacific Journal of Mathematics Volume 310-315 ; 310-315 ; 2021 ; https://msp.org/ ; >
-     au < manifest ; exists ; 2022 ; Pacific Journal of Mathematics Volume 316-321 ; 316-321 ; 2022 ; https://msp.org/ ; >
+     au < finished ; crawling ; 2017 ; Pacific Journal of Mathematics Volume 285-291 ; 285-291 ; 2017 ; https://msp.org/ ; reingest5.clockss.org:8082 >
+     au < finished ; crawling ; 2018 ; Pacific Journal of Mathematics Volume 292-297 ; 292-297 ; 2018 ; https://msp.org/ ; reingest1.clockss.org:8082 >
+     au < finished ; crawling ; 2019 ; Pacific Journal of Mathematics Volume 298-303 ; 298-303 ; 2019 ; https://msp.org/ ; reingest2.clockss.org:8085 >
+     au < finished ; crawling ; 2020 ; Pacific Journal of Mathematics Volume 304-309 ; 304-309 ; 2020 ; https://msp.org/ ; reingest5.clockss.org:8082 >
+     au < finished ; crawling ; 2021 ; Pacific Journal of Mathematics Volume 310-315 ; 310-315 ; 2021 ; https://msp.org/ ; reingest3.clockss.org:8083 >
+     au < frozen ; exists ; 2022 ; Pacific Journal of Mathematics Volume 316-321 ; 316-321 ; 2022 ; https://msp.org/ ; >
+     au < expected ; exists ; 2023 ; Pacific Journal of Mathematics Volume 322-327 ; 322-327 ; 2023 ; https://msp.org/ ; >
 
   }   
   
@@ -412,8 +430,8 @@
     
      param[journal_id] = siaps
 
-     au < manifest ; exists ; 2010 ; Seismic Isolation and Protection Systems Volume 1 ; 1 ; 2010 ; https://msp.org/ ; >
-     au < frozen ; exists ; 2011 ; Seismic Isolation and Protection Systems Volume 2 ; 2 ; 2011 ; http://msp.org/ ; >
+     au < frozen ; exists ; 2010 ; Seismic Isolation and Protection Systems Volume 1 ; 1 ; 2010 ; https://msp.org/ ; >
+     au < finished ; crawling ; 2011 ; Seismic Isolation and Protection Systems Volume 2 ; 2 ; 2011 ; http://msp.org/ ; reingest4.clockss.org:8082 >
 
   }
   

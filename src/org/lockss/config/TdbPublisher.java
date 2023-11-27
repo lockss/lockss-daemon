@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2019 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2023 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -71,7 +71,7 @@ public class TdbPublisher {
     if (name == null) {
       throw new IllegalArgumentException("name cannot be null");
     }
-    this.name = name;
+    this.name = StringPool.PUBLISHERS.intern(name);
   }
   
   /**

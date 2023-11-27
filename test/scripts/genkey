@@ -145,7 +145,7 @@ def __display_certificate(options):
 
 def __export_certificate(options):
     cmd = [_keytool,
-           '-export',
+           '-exportcert',
            '-file', '{}.cer'.format(options.alias),
            '-keystore', '{}.keystore'.format(options.alias),
            '-alias', options.alias,

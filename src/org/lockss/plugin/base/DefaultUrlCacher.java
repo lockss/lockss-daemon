@@ -271,13 +271,12 @@ public class DefaultUrlCacher implements UrlCacher {
 				CIProperties headers,
 				boolean doValidate, List<String> redirUrls)
       throws IOException {
-    RepositoryNode leaf = null;
     OutputStream os = null;
     boolean currentWasSuspect = isCurrentVersionSuspect();
+    RepositoryNode leaf = repository.createNewNode(url);
+
     try {
-
-      storeContentIn0(url, input, headers, doValidate, redirUrls);
-
+      storeContentInLeaf(leaf, url, input, headers, doValidate, redirUrls);
     } catch (StreamUtil.OutputException ex) {
       abandonNewVersion(leaf);
       throw resultMap.getRepositoryException(ex.getIOCause());
@@ -300,15 +299,13 @@ public class DefaultUrlCacher implements UrlCacher {
 
   // Seperate so test can check exception before mapping or extracting
   // cause
-  protected void storeContentIn0(String url, InputStream input,
-				 CIProperties headers,
-				 boolean doValidate, List<String> redirUrls)
+  protected void storeContentInLeaf(RepositoryNode leaf, String url,
+                                    InputStream input, CIProperties headers,
+                                    boolean doValidate, List<String> redirUrls)
       throws IOException {
-    RepositoryNode leaf = null;
     OutputStream os = null;
     boolean currentWasSuspect = isCurrentVersionSuspect();
     try {
-      leaf = repository.createNewNode(url);
       alreadyHasContent = leaf.hasContent();
       leaf.makeNewVersion();
       
@@ -398,10 +395,12 @@ public class DefaultUrlCacher implements UrlCacher {
   }
   
   void abandonNewVersion(RepositoryNode node) {
+    logger.debug2("abandonNewVersion(" + node + ")");
     if (node != null) {
       try {
 	node.abandonNewVersion();
       } catch (Exception e) {
+        logger.error("abandonNewVersion(" + node + ") threw", e);
 	// just being paranoid
       }
     }

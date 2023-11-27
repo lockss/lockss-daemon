@@ -1,7 +1,6 @@
 /*
 
-Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -36,10 +35,9 @@ package org.lockss.plugin.ubiquitypress.upn;
 import java.util.Arrays;
 import java.util.regex.*;
 
-import org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer;
 import org.apache.commons.lang3.StringUtils;
 import org.lockss.daemon.PluginException;
-import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.*;
 
 // subclass the BaseUrlHttpHttpsUrlNormalizer - which redirects protocol to that of declared base_url
 // and then does whatever specific "additionalNormalization that is specified

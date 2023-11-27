@@ -1,8 +1,4 @@
 /*
- * $Id$
- */
-
-/*
 
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -33,6 +29,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.util.*;
+import org.apache.commons.lang3.builder.*;
 
 import org.lockss.app.LockssApp;
 import org.lockss.util.*;
@@ -522,13 +519,15 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
   }
 
   public ConfigParamDescr getDerivedDescr(String derivedKey) {
-    ConfigParamDescr res = new ConfigParamDescr(derivedKey)
+    ConfigParamDescr res = new ConfigParamDescr()
+      .setKey(derivedKey)
       .setDerived(true)
       .setDefinitional(false)
       .setDefaultOnly(false)
       .setDisplayName(derivedKey + " (derived from " + getDisplayName() + ")")
+      .setSize(getSize())
       .setType(getType());
-    return uniqueInstance(res);
+    return res;
   }
 
 
@@ -575,31 +574,35 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
   }
 
   public String toString() {
-    StringBuilder sb = new StringBuilder(40);
-    sb.append("[CPD: key: ");
-    sb.append(getKey());
-    sb.append("]");
-    return sb.toString();
+    return toDetailedString();
   }
 
-  public boolean equals(Object o) {
-    if (! (o instanceof ConfigParamDescr)) {
+  public boolean equals(Object obj) {
+    if (obj == null) { return false; }
+    if (obj == this) { return true; }
+    if (obj.getClass() != getClass()) {
       return false;
     }
-    ConfigParamDescr opd = (ConfigParamDescr)o;
-    return key.equals(opd.getKey())
-      && type == opd.getType()
-      && getSize() == opd.getSize()
-      && derived == opd.isDerived()
-      && definitional == opd.isDefinitional();
+    ConfigParamDescr other = (ConfigParamDescr)obj;
+    return new EqualsBuilder()
+      .append(getKey(), other.getKey())
+      .append(getType(), other.getType())
+      .append(getSize(), other.getSize())
+      .append(isDerived(), other.isDerived())
+      .append(isDefinitional(), other.isDefinitional())
+      .append(isDefaultOnly(), other.isDefaultOnly())
+      .isEquals();
   }
 
   public int hashCode() {
-    int hash = 0x46600555;
-    hash += type;
-    hash += getSize();
-    hash += key.hashCode();
-    return hash;
+    return new HashCodeBuilder(23, 43)
+      .append(getKey())
+      .append(getType())
+      .append(getSize())
+      .append(isDerived())
+      .append(isDefinitional())
+      .append(isDefaultOnly())
+      .toHashCode();
   }
 
   static String PREFIX_RESERVED =
@@ -635,18 +638,17 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
    * @return A canonicalized object (see caveat above).
    */
   protected Object postUnmarshalResolve(LockssApp context) {
-    return uniqueInstance(this);
+    return intern(this);
   }
 
   /**
-   * <p>Implements {@link #postUnmarshalResolve}.</p>
+   * Intern the ConfigParamDescr and return a unique instance
    * @param descr A candidate descriptor.
    * @return A canonicalized descriptor (see caveat in
    * {@link #postUnmarshalResolve})
    * @see #postUnmarshalResolve
    */
-  protected static synchronized
-    ConfigParamDescr uniqueInstance(ConfigParamDescr descr) {
+  public static synchronized ConfigParamDescr intern(ConfigParamDescr descr) {
 
     /* Access to the map is protected by the synchronization */
     // Lazy instantiation
@@ -657,9 +659,8 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
       }
     }
 
-    ConfigParamDescr ret = uniqueInstances.get(descr);
+    ConfigParamDescr ret = uniqueInstances.putIfAbsent(descr, descr);
     if (ret == null) {
-      uniqueInstances.put(descr, descr);
       return descr;
     }
     else {

@@ -1,0 +1,52 @@
+{
+  publisher <
+    name = Forum Multimedia Publishing, LLC ;
+    info[contract] = 2023 ;
+    info[back] = 2015 ;
+    info[min_year] = 1888 ;
+    info[tester] = 5 ;
+    info[poller] = 6 ;
+    info[platform] = OJS3
+  >
+
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    param[base_url] = https://journal.hsforum.com/
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+    #OJS3
+    attr[start_stem] = index.php/
+
+  {
+
+      title <
+        name = Heart Surgery Forum ;
+        issn = 1098-3511 ;
+        eissn = 1522-6662
+      >
+
+      param[journal_id] = HSF
+
+      au < manifest ; exists ; 2003 ; Heart Surgery Forum Volume 2003 ; 2003 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; Heart Surgery Forum Volume 2004 ; 2004 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; Heart Surgery Forum Volume 2005 ; 2005 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; Heart Surgery Forum Volume 2006 ; 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; Heart Surgery Forum Volume 2007 ; 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Heart Surgery Forum Volume 2008 ; 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; Heart Surgery Forum Volume 2009 ; 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; Heart Surgery Forum Volume 2010 ; 2010 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Heart Surgery Forum Volume 2011 ; 2011 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Heart Surgery Forum Volume 2012 ; 2012 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Heart Surgery Forum Volume 2013 ; 2013 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Heart Surgery Forum Volume 2014 ; 2014 ; 2014 ; >
+      au < frozen ; exists ; 2015 ; Heart Surgery Forum Volume 2015 ; 2015 ; 2015 ; >
+      au < frozen ; exists ; 2016 ; Heart Surgery Forum Volume 2016 ; 2016 ; 2016 ; >
+      au < frozen ; exists ; 2017 ; Heart Surgery Forum Volume 2017 ; 2017 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; Heart Surgery Forum Volume 2018 ; 2018 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; Heart Surgery Forum Volume 2019 ; 2019 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; Heart Surgery Forum Volume 2020 ; 2020 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; Heart Surgery Forum Volume 2021 ; 2021 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; Heart Surgery Forum Volume 2022 ; 2022 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; Heart Surgery Forum Volume 2023 ; 2023 ; 2023 ; >
+
+  }
+
+}

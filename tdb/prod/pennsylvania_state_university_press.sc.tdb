@@ -1,0 +1,2304 @@
+{
+
+  publisher <
+    name = Penn State University Press ;
+    info[platform] = scholarlypublishingcollective
+  >
+
+  # years and volumes don't line up - use volume year, not volume number
+  # manifest pages on this platform from 2005 onward only
+
+  plugin = org.lockss.plugin.silverchair.psup.PSUPSilverchairPlugin
+  param[base_url] = https://scholarlypublishingcollective.org/
+  param[college_id] = psup
+  implicit < status ; year ; name ; param[volume_name] ; param[year] >
+  #implicit < status ; year ; name ; param[year] >
+
+  {
+
+    title <
+      name = The Chaucer Review ;
+      issn = 0009-2002 ;
+      eissn = 1528-4204 ;
+      issnl = 0009-2002
+    >
+
+      param[journal_id] = chaucer
+      # opted to make all viable though vols 46-49 (2012-2014 superset) were collected
+
+      au < manifest ; 2005 ; The Chaucer Review Volume 40 ; 40 ; 2005 >
+      au < manifest ; 2006 ; The Chaucer Review Volume 41 ; 41 ; 2006 >
+      au < manifest ; 2007 ; The Chaucer Review Volume 42 ; 42 ; 2007 >
+      au < manifest ; 2008 ; The Chaucer Review Volume 43 ; 43 ; 2008 >
+      au < doNotProcess ; 2009 ; The Chaucer Review Volume 44 ; 44 ; 2009 >
+      au < doNotProcess ; 2010 ; The Chaucer Review Volume 45 ; 45 ; 2010 >
+      au < doNotProcess ; 2011 ; The Chaucer Review Volume 46 ; 46 ; 2011 >
+      au < doNotProcess ; 2012 ; The Chaucer Review Volume 47 ; 47 ; 2012 >
+      au < doNotProcess ; 2013 ; The Chaucer Review Volume 48 ; 48 ; 2013 >
+      au < doNotProcess ; 2014 ; The Chaucer Review Volume 49 ; 49 ; 2014 >
+      au < doNotProcess ; 2015 ; The Chaucer Review Volume 50 ; 50 ; 2015 >
+      au < doNotProcess ; 2016 ; The Chaucer Review Volume 51 ; 51 ; 2016 >
+      au < doNotProcess ; 2017 ; The Chaucer Review Volume 52 ; 52 ; 2017 >
+      au < doNotProcess ; 2018 ; The Chaucer Review Volume 53 ; 53 ; 2018 >
+      au < doNotProcess ; 2019 ; The Chaucer Review Volume 54 ; 54 ; 2019 >
+      au < doNotProcess ; 2020 ; The Chaucer Review Volume 55 ; 55 ; 2020 >
+      au < doNotProcess ; 2021 ; The Chaucer Review Volume 56 ; 56 ; 2021 >
+      au < released ; 2022 ; The Chaucer Review Volume 57 ; 57 ; 2022 >
+      au < manifest ; 2023 ; The Chaucer Review Volume 58 ; 58 ; 2023 >
+
+  }
+  
+  {
+
+    title <
+      name = Comparative Literature Studies ;
+      issn = 0010-4132 ;
+      eissn = 1528-4212 ;
+      issnl = 0010-4132
+    >
+      param[journal_id] = cls
+      
+ 
+      au < doNotProcess ; 2010 ; Comparative Literature Studies Volume 47 ; 47 ; 2010 >
+      au < doNotProcess ; 2011 ; Comparative Literature Studies Volume 48 ; 48 ; 2011 >
+      au < doNotProcess ; 2012 ; Comparative Literature Studies Volume 49 ; 49 ; 2012 >
+      au < doNotProcess ; 2013 ; Comparative Literature Studies Volume 50 ; 50 ; 2013 >
+      au < doNotProcess ; 2014 ; Comparative Literature Studies Volume 51 ; 51 ; 2014 >
+      au < doNotProcess ; 2015 ; Comparative Literature Studies Volume 52 ; 52 ; 2015 >
+      au < doNotProcess ; 2016 ; Comparative Literature Studies Volume 53 ; 53 ; 2016 >
+      au < doNotProcess ; 2017 ; Comparative Literature Studies Volume 54 ; 54 ; 2017 >
+      au < doNotProcess ; 2018 ; Comparative Literature Studies Volume 55 ; 55 ; 2018 >
+      au < doNotProcess ; 2019 ; Comparative Literature Studies Volume 56 ; 56 ; 2019 >
+      au < doNotProcess ; 2020 ; Comparative Literature Studies Volume 57 ; 57 ; 2020 >
+      au < doNotProcess ; 2021 ; Comparative Literature Studies Volume 58 ; 58 ; 2021 >
+      au < released ; 2022 ; Comparative Literature Studies Volume 59 ; 59 ; 2022 >
+      au < manifest ; 2023 ; Comparative Literature Studies Volume 60 ; 60 ; 2023 >
+
+  }
+
+  {
+  
+    title <
+      name = Critical Philosophy of Race ;
+      issn = 2165-8684 ;
+      eissn = 2165-8692 ;
+      issnl = 2165-8684
+    >
+    
+      param[journal_id] = cpr
+
+      au < doNotProcess ; 2013 ; Critical Philosophy of Race Volume 1 ; 1 ; 2013 >
+      au < doNotProcess ; 2014 ; Critical Philosophy of Race Volume 2 ; 2 ; 2014 >
+      au < doNotProcess ; 2015 ; Critical Philosophy of Race Volume 3 ; 3 ; 2015 >
+      au < doNotProcess ; 2016 ; Critical Philosophy of Race Volume 4 ; 4 ; 2016 >
+      au < doNotProcess ; 2017 ; Critical Philosophy of Race Volume 5 ; 5 ; 2017 >
+      au < doNotProcess ; 2018 ; Critical Philosophy of Race Volume 6 ; 6 ; 2018 >
+      au < doNotProcess ; 2019 ; Critical Philosophy of Race Volume 7 ; 7 ; 2019 >
+      au < doNotProcess ; 2020 ; Critical Philosophy of Race Volume 8 ; 8 ; 2020 >
+      au < doNotProcess ; 2021 ; Critical Philosophy of Race Volume 9 ; 9 ; 2021 >
+      au < released ; 2022 ; Critical Philosophy of Race Volume 10 ; 10 ; 2022 >
+      au < manifest ; 2023 ; Critical Philosophy of Race Volume 11 ; 11 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = The Edgar Allan Poe Review ;
+      issn = 2150-0428 ;
+      eissn = 2166-2932 ;
+      issnl = 2150-0428
+    >
+      param[journal_id] = edgar-allan-poe
+
+      au < doNotProcess ; 2010 ; The Edgar Allan Poe Review Volume 11 ; 11 ; 2010 >
+      au < doNotProcess ; 2011 ; The Edgar Allan Poe Review Volume 12 ; 12 ; 2011 >
+      au < doNotProcess ; 2012 ; The Edgar Allan Poe Review Volume 13 ; 13 ; 2012 >
+      au < doNotProcess ; 2013 ; The Edgar Allan Poe Review Volume 14 ; 14 ; 2013 >
+      au < doNotProcess ; 2014 ; The Edgar Allan Poe Review Volume 15 ; 15 ; 2014 >
+      au < doNotProcess ; 2015 ; The Edgar Allan Poe Review Volume 16 ; 16 ; 2015 >
+      au < doNotProcess ; 2016 ; The Edgar Allan Poe Review Volume 17 ; 17 ; 2016 >
+      au < doNotProcess ; 2017 ; The Edgar Allan Poe Review Volume 18 ; 18 ; 2017 >
+      au < doNotProcess ; 2018 ; The Edgar Allan Poe Review Volume 19 ; 19 ; 2018 >
+      au < doNotProcess ; 2019 ; The Edgar Allan Poe Review Volume 20 ; 20 ; 2019 >
+      au < doNotProcess ; 2020 ; The Edgar Allan Poe Review Volume 21 ; 21 ; 2020 >
+      au < doNotProcess ; 2021 ; The Edgar Allan Poe Review Volume 22 ; 22 ; 2021 >
+      au < released ; 2022 ; The Edgar Allan Poe Review Volume 23 ; 23 ; 2022 >
+      au < manifest ; 2023 ; The Edgar Allan Poe Review Volume 24 ; 24 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = The Eugene O'Neill Review ;
+      issn = 1040-9483 ;
+      eissn = 2161-4318 ;
+      issnl = 1040-9483
+    >
+      param[journal_id] = eugene-oneill
+
+      au < doNotProcess ; 2010 ; The Eugene O'Neill Review Volume 32 ; 32 ; 2010 >
+      au < doNotProcess ; 2012 ; The Eugene O'Neill Review Volume 33 ; 33 ; 2012 >
+      au < doNotProcess ; 2013 ; The Eugene O'Neill Review Volume 34 ; 34 ; 2013 >
+      au < doNotProcess ; 2014 ; The Eugene O'Neill Review Volume 35 ; 35 ; 2014 >
+      au < doNotProcess ; 2015 ; The Eugene O'Neill Review Volume 36 ; 36 ; 2015 >
+      au < doNotProcess ; 2016 ; The Eugene O'Neill Review Volume 37 ; 37 ; 2016 >
+      au < doNotProcess ; 2017 ; The Eugene O'Neill Review Volume 38 ; 38 ; 2017 >
+      au < doNotProcess ; 2018 ; The Eugene O'Neill Review Volume 39 ; 39 ; 2018 >
+      au < doNotProcess ; 2019 ; The Eugene O'Neill Review Volume 40 ; 40 ; 2019 >
+      au < doNotProcess ; 2020 ; The Eugene O'Neill Review Volume 41 ; 41 ; 2020 >
+      au < doNotProcess ; 2021 ; The Eugene O'Neill Review Volume 42 ; 42 ; 2021 >
+      au < released ; 2022 ; The Eugene O'Neill Review Volume 43 ; 43 ; 2022 >
+      au < manifest ; 2023 ; The Eugene O'Neill Review Volume 44 ; 44 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = The F. Scott Fitzgerald Review ;
+      issn = 1543-3951 ;
+      eissn = 1755-6333 ;
+      issnl = 1543-3951
+    >
+
+      param[journal_id] = f-scott-fitzgerald
+
+
+      au < doNotProcess ; 2010 ; The F. Scott Fitzgerald Review Volume 8 ; 8 ; 2010 >
+      au < doNotProcess ; 2011 ; The F. Scott Fitzgerald Review Volume 9 ; 9 ; 2011 >
+      au < doNotProcess ; 2012 ; The F. Scott Fitzgerald Review Volume 10 ; 10 ; 2012 >
+      au < doNotProcess ; 2013 ; The F. Scott Fitzgerald Review Volume 11 ; 11 ; 2013 >
+      au < doNotProcess ; 2014 ; The F. Scott Fitzgerald Review Volume 12 ; 12 ; 2014 >
+      au < doNotProcess ; 2015 ; The F. Scott Fitzgerald Review Volume 13 ; 13 ; 2015 >
+      au < doNotProcess ; 2016 ; The F. Scott Fitzgerald Review Volume 14 ; 14 ; 2016 >
+      au < doNotProcess ; 2017 ; The F. Scott Fitzgerald Review Volume 15 ; 15 ; 2017 >
+      au < doNotProcess ; 2018 ; The F. Scott Fitzgerald Review Volume 16 ; 16 ; 2018 >
+      au < doNotProcess ; 2019 ; The F. Scott Fitzgerald Review Volume 17 ; 17 ; 2019 >
+      au < doNotProcess ; 2020 ; The F. Scott Fitzgerald Review Volume 18 ; 18 ; 2020 >
+      au < released ; 2021 ; The F. Scott Fitzgerald Review Volume 19 ; 19 ; 2021 >
+      au < expected ; 2023 ; The F. Scott Fitzgerald Review Volume 20 ; 20 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = The Good Society ;
+      issn = 1089-0017 ;
+      eissn = 1538-9731 ;
+      issnl = 1089-0017
+    >
+
+      param[journal_id] = good-society
+      comment[continues] = 2157-2968
+
+      au < doNotProcess ; 2010 ; The Good Society Volume 19 ; 19 ; 2010 >
+      au < doNotProcess ; 2011 ; The Good Society Volume 20 ; 20 ; 2011 >
+      au < doNotProcess ; 2012 ; The Good Society Volume 21 ; 21 ; 2012 >
+      au < doNotProcess ; 2013 ; The Good Society Volume 22 ; 22 ; 2013 >
+      au < doNotProcess ; 2014 ; The Good Society Volume 23 ; 23 ; 2014 >
+      au < doNotProcess ; 2015 ; The Good Society Volume 24 ; 24 ; 2015 >
+      au < doNotProcess ; 2016 ; The Good Society Volume 25 ; 25 ; 2016 >
+      au < doNotProcess ; 2017 ; The Good Society Volume 26 ; 26 ; 2017 >
+      au < doNotProcess ; 2018 ; The Good Society Volume 27 ; 27 ; 2018 >
+      au < doNotProcess ; 2019 ; The Good Society Volume 28 ; 28 ; 2019 >
+      au < doNotProcess ; 2020 ; The Good Society Volume 29 ; 29 ; 2020 >
+      au < doNotProcess ; 2021 ; The Good Society Volume 30 ; 30 ; 2021 >
+      au < expected ; 2023 ; The Good Society Volume 31 ; 31 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = Interdisciplinary Literary Studies ;
+      issn = 1524-8429 ;
+      eissn = 2161-427X ;
+      issnl = 1524-8429
+    >
+
+      param[journal_id] = ils
+      # 2009, 2010 volume numbers don't line up with years
+
+      au < manifest ; 2007 ; Interdisciplinary Literary Studies Volume 8 (2007) ; 8 ; 2007 >
+      au < manifest ; 2007 ; Interdisciplinary Literary Studies Volume 9 (2007) ; 9 ; 2007 >
+      au < manifest ; 2008 ; Interdisciplinary Literary Studies Volume 9 (2008) ; 9 ; 2008 >
+      au < manifest ; 2008 ; Interdisciplinary Literary Studies Volume 10 (2008) ; 10 ; 2008 >
+      au < doNotProcess ; 2009 ; Interdisciplinary Literary Studies Volume 10-11 ; 10-11 ; 2009 >
+      au < doNotProcess ; 2010 ; Interdisciplinary Literary Studies Volume 11-12 ; 11-12 ; 2010 >
+      au < doNotProcess ; 2011 ; Interdisciplinary Literary Studies Volume 12-13 ; 12-13 ; 2011 >
+      au < doNotProcess ; 2012 ; Interdisciplinary Literary Studies Volume 14 ; 14 ; 2012 >
+      au < doNotProcess ; 2013 ; Interdisciplinary Literary Studies Volume 15 ; 15 ; 2013 >
+      au < doNotProcess ; 2014 ; Interdisciplinary Literary Studies Volume 16 ; 16 ; 2014 >
+      au < doNotProcess ; 2015 ; Interdisciplinary Literary Studies Volume 17 ; 17 ; 2015 >
+      au < doNotProcess ; 2016 ; Interdisciplinary Literary Studies Volume 18 ; 18 ; 2016 >
+      au < doNotProcess ; 2017 ; Interdisciplinary Literary Studies Volume 19 ; 19 ; 2017 >
+      au < doNotProcess ; 2018 ; Interdisciplinary Literary Studies Volume 20 ; 20 ; 2018 >
+      au < doNotProcess ; 2019 ; Interdisciplinary Literary Studies Volume 21 ; 21 ; 2019 >
+      au < doNotProcess ; 2020 ; Interdisciplinary Literary Studies Volume 22 ; 22 ; 2020 >
+      au < doNotProcess ; 2021 ; Interdisciplinary Literary Studies Volume 23 ; 23 ; 2021 >
+      au < released ; 2022 ; Interdisciplinary Literary Studies Volume 24 ; 24 ; 2022 >
+      au < manifest ; 2023 ; Interdisciplinary Literary Studies Volume 25 ; 25 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Africana Religions ;
+      issn = 2165-5405 ;
+      eissn = 2165-5413 ;
+      issnl = 2165-5405
+    >
+
+      param[journal_id] = africana-religions
+
+      au < doNotProcess ; 2013 ; Journal of Africana Religions Volume 1 ; 1 ; 2013 >
+      au < doNotProcess ; 2014 ; Journal of Africana Religions Volume 2 ; 2 ; 2014 >
+      au < doNotProcess ; 2015 ; Journal of Africana Religions Volume 3 ; 3 ; 2015 >
+      au < doNotProcess ; 2016 ; Journal of Africana Religions Volume 4 ; 4 ; 2016 >
+      au < doNotProcess ; 2017 ; Journal of Africana Religions Volume 5 ; 5 ; 2017 >
+      au < doNotProcess ; 2018 ; Journal of Africana Religions Volume 6 ; 6 ; 2018 >
+      au < doNotProcess ; 2019 ; Journal of Africana Religions Volume 7 ; 7 ; 2019 >
+      au < doNotProcess ; 2020 ; Journal of Africana Religions Volume 8 ; 8 ; 2020 >
+      au < doNotProcess ; 2021 ; Journal of Africana Religions Volume 9 ; 9 ; 2021 >
+      au < released ; 2022 ; Journal of Africana Religions Volume 10 ; 10 ; 2022 >
+      au < manifest ; 2023 ; Journal of Africana Religions Volume 11 ; 11 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Assessment and Institutional Effectiveness ;
+      issn = 2160-6765 ;
+      eissn = 2160-6757 ;
+      issnl = 2160-6757
+    >
+
+      param[journal_id] = jaie
+
+      au < doNotProcess ; 2010 ; Journal of Assessment and Institutional Effectiveness Volume 1 ; 1 ; 2010 >
+      au < doNotProcess ; 2012 ; Journal of Assessment and Institutional Effectiveness Volume 2 ; 2 ; 2012 >
+      au < doNotProcess ; 2013 ; Journal of Assessment and Institutional Effectiveness Volume 3 ; 3 ; 2013 >
+      au < doNotProcess ; 2015 ; Journal of Assessment and Institutional Effectiveness Volume 4-5 ; 4-5 ; 2015 >
+      au < doNotProcess ; 2016 ; Journal of Assessment and Institutional Effectiveness Volume 5-6 ; 5-6 ; 2016 >
+      au < doNotProcess ; 2017 ; Journal of Assessment and Institutional Effectiveness Volume 6 ; 6 ; 2017 >
+      au < doNotProcess ; 2018 ; Journal of Assessment and Institutional Effectiveness Volume 7 ; 7 ; 2018 >
+      au < doNotProcess ; 2019 ; Journal of Assessment and Institutional Effectiveness Volume 8 ; 8 ; 2019 >
+      au < released ; 2020 ; Journal of Assessment and Institutional Effectiveness Volume 10 ; 10 ; 2020 >
+      au < released ; 2021 ; Journal of Assessment and Institutional Effectiveness Volume 11 ; 11 ; 2021 >
+      au < released ; 2022 ; Journal of Assessment and Institutional Effectiveness Volume 12 ; 12 ; 2022 >
+      au < expected ; 2023 ; Journal of Assessment and Institutional Effectiveness Volume 13 ; 13 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Ayn Rand Studies ;
+      issn = 1526-1018 ;
+      eissn = 2169-7132 ;
+      issnl = 1526-1018
+    >
+
+      param[journal_id] = ayn-rand
+
+      au < manifest ; 2007 ; The Journal of Ayn Rand Studies Volume 8 ; 8 ; 2007 >
+      au < manifest ; 2007 ; The Journal of Ayn Rand Studies Volume 9 (2007) ; 9 ; 2007 >
+      au < manifest ; 2008 ; The Journal of Ayn Rand Studies Volume 9 (2008) ; 9 ; 2008 >
+      au < manifest ; 2008 ; The Journal of Ayn Rand Studies Volume 10 (2008) ; 10 ; 2008 >
+      au < manifest ; 2009 ; The Journal of Ayn Rand Studies Volume 10 (2009) ; 10 ; 2009 >
+      au < doNotProcess ; 2011 ; The Journal of Ayn Rand Studies Volume 11 ; 11 ; 2011 >
+      au < doNotProcess ; 2012 ; The Journal of Ayn Rand Studies Volume 12 ; 12 ; 2012 >
+      au < doNotProcess ; 2013 ; The Journal of Ayn Rand Studies Volume 13 ; 13 ; 2013 >
+      au < doNotProcess ; 2014 ; The Journal of Ayn Rand Studies Volume 14 ; 14 ; 2014 >
+      au < doNotProcess ; 2015 ; The Journal of Ayn Rand Studies Volume 15 ; 15 ; 2015 >
+      au < doNotProcess ; 2016 ; The Journal of Ayn Rand Studies Volume 16 ; 16 ; 2016 >
+      au < doNotProcess ; 2017 ; The Journal of Ayn Rand Studies Volume 17 ; 17 ; 2017 >
+      au < doNotProcess ; 2018 ; The Journal of Ayn Rand Studies Volume 18 ; 18 ; 2018 >
+      au < doNotProcess ; 2019 ; The Journal of Ayn Rand Studies Volume 19 ; 19 ; 2019 >
+      au < doNotProcess ; 2020 ; The Journal of Ayn Rand Studies Volume 20 ; 20 ; 2020 >
+      au < doNotProcess ; 2021 ; The Journal of Ayn Rand Studies Volume 21 ; 21 ; 2021 >
+      au < released ; 2022 ; The Journal of Ayn Rand Studies Volume 22 ; 22 ; 2022 >
+      au < manifest ; 2023 ; The Journal of Ayn Rand Studies Volume 23 ; 23 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Eastern Mediterranean Archaeology & Heritage Studies ;
+      issn = 2166-3548 ;
+      eissn = 2166-3556 ;
+      issnl = 2166-3548
+    >
+
+      param[journal_id] = jemahs
+
+      au < doNotProcess ; 2013 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 1 ; 1 ; 2013 >
+      au < doNotProcess ; 2014 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 2 ; 2 ; 2014 >
+      au < doNotProcess ; 2015 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 3 ; 3 ; 2015 >
+      au < doNotProcess ; 2016 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 4 ; 4 ; 2016 >
+      au < doNotProcess ; 2017 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 5 ; 5 ; 2017 >
+      au < doNotProcess ; 2018 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 6 ; 6 ; 2018 >
+      au < doNotProcess ; 2019 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 7 ; 7 ; 2019 >
+      au < doNotProcess ; 2020 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 8 ; 8 ; 2020 >
+      au < doNotProcess ; 2021 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 9 ; 9 ; 2021 >
+      au < released ; 2022 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 10 ; 10 ; 2022 >
+      au < manifest ; 2023 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 11 ; 11 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = The Journal of General Education ;
+      issn = 0021-3667 ;
+      eissn = 1527-2060 ;
+      issnl = 0021-3667
+    >
+
+      param[journal_id] = general-education
+
+      au < doNotProcess ; 2010 ; The Journal of General Education Volume 59 ; 59 ; 2010 >
+      au < doNotProcess ; 2011 ; The Journal of General Education Volume 60 ; 60 ; 2011 >
+      au < doNotProcess ; 2012 ; The Journal of General Education Volume 61 ; 61 ; 2012 >
+      au < doNotProcess ; 2013 ; The Journal of General Education Volume 62 ; 62 ; 2013 >
+      au < doNotProcess ; 2014 ; The Journal of General Education Volume 63 ; 63 ; 2014 >
+      au < doNotProcess ; 2015 ; The Journal of General Education Volume 64 ; 64 ; 2015 >
+      au < doNotProcess ; 2016 ; The Journal of General Education Volume 65 ; 65 ; 2016 >
+      au < doNotProcess ; 2017 ; The Journal of General Education Volume 66 ; 66 ; 2017 >
+      au < doNotProcess ; 2018 ; The Journal of General Education Volume 67 ; 67 ; 2018 >
+      au < doNotProcess ; 2019 ; The Journal of General Education Volume 68 ; 68 ; 2019 >
+      au < released ; 2020 ; The Journal of General Education Volume 69 ; 69 ; 2020 >
+      au < doNotProcess ; 2021 ; The Journal of General Education Volume 70 ; 70 ; 2021 >
+      au < expected ; 2023 ; The Journal of General Education Volume 71 ; 71 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Medieval Religious Cultures ;
+      issn = 1947-6566 ;
+      eissn = 2153-9650 ;
+      issnl = 1947-6566
+    >
+
+      param[journal_id] = jmrc
+      comment[continues] = Mystics Quarterly 0742-5503
+
+      au < doNotProcess ; 2010 ; Journal of Medieval Religious Cultures Volume 36 ; 36 ; 2010 >
+      au < doNotProcess ; 2011 ; Journal of Medieval Religious Cultures Volume 37 ; 37 ; 2011 >
+      au < doNotProcess ; 2012 ; Journal of Medieval Religious Cultures Volume 38 ; 38 ; 2012 >
+      au < doNotProcess ; 2013 ; Journal of Medieval Religious Cultures Volume 39 ; 39 ; 2013 >
+      au < doNotProcess ; 2014 ; Journal of Medieval Religious Cultures Volume 40 ; 40 ; 2014 >
+      au < doNotProcess ; 2015 ; Journal of Medieval Religious Cultures Volume 41 ; 41 ; 2015 >
+      au < doNotProcess ; 2016 ; Journal of Medieval Religious Cultures Volume 42 ; 42 ; 2016 >
+      au < doNotProcess ; 2017 ; Journal of Medieval Religious Cultures Volume 43 ; 43 ; 2017 >
+      au < doNotProcess ; 2018 ; Journal of Medieval Religious Cultures Volume 44 ; 44 ; 2018 >
+      au < doNotProcess ; 2019 ; Journal of Medieval Religious Cultures Volume 45 ; 45 ; 2019 >
+      au < doNotProcess ; 2020 ; Journal of Medieval Religious Cultures Volume 46 ; 46 ; 2020 >
+      au < doNotProcess ; 2021 ; Journal of Medieval Religious Cultures Volume 47 ; 47 ; 2021 >
+      au < released ; 2022 ; Journal of Medieval Religious Cultures Volume 48 ; 48 ; 2022 >
+      au < manifest ; 2023 ; Journal of Medieval Religious Cultures Volume 49 ; 49 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Modern Periodical Studies ;
+      issn = 1947-6574 ;
+      eissn = 2152-9272 ;
+      issnl = 1947-6574
+    >
+
+      param[journal_id] = jmps
+
+      au < doNotProcess ; 2010 ; Journal of Modern Periodical Studies Volume 1 ; 1 ; 2010 >
+      au < doNotProcess ; 2011 ; Journal of Modern Periodical Studies Volume 2 ; 2 ; 2011 >
+      au < doNotProcess ; 2012 ; Journal of Modern Periodical Studies Volume 3 ; 3 ; 2012 >
+      au < doNotProcess ; 2013-2014 ; Journal of Modern Periodical Studies Volume 4 ; 4 ; 2013 >
+      au < doNotProcess ; 2014-2015 ; Journal of Modern Periodical Studies Volume 4-5 ; 4-5 ; 2014 >
+      au < doNotProcess ; 2015 ; Journal of Modern Periodical Studies Volume 5-6 ; 5-6 ; 2015 >
+      au < doNotProcess ; 2016 ; Journal of Modern Periodical Studies Volume 6 ; 6 ; 2016 >
+      au < doNotProcess ; 2017 ; Journal of Modern Periodical Studies Volume 7 ; 7 ; 2017 >
+      au < doNotProcess ; 2018 ; Journal of Modern Periodical Studies Volume 8 ; 8 ; 2018 >
+      au < doNotProcess ; 2019 ; Journal of Modern Periodical Studies Volume 9 ; 9 ; 2019 >
+      au < doNotProcess ; 2020 ; Journal of Modern Periodical Studies Volume 11 ; 11 ; 2020 >
+      au < doNotProcess ; 2021 ; Journal of Modern Periodical Studies Volume 12 ; 12 ; 2021 >
+      au < released ; 2022 ; Journal of Modern Periodical Studies Volume 13 ; 13 ; 2022 >
+      au < manifest ; 2023 ; Journal of Modern Periodical Studies Volume 14 ; 14 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Moravian History ;
+      issn = 1933-6632 ;
+      eissn = 2161-6310 ;
+      issnl = 1933-6632
+    >
+
+      param[journal_id] = moravian-history
+
+      au < manifest ; 2007 ; Journal of Moravian History Volume 2 ; 2 ; 2007 >
+      au < manifest ; 2007 ; Journal of Moravian History Volume 3 ; 3 ; 2007 >
+      au < manifest ; 2008 ; Journal of Moravian History Volume 4 ; 4 ; 2008 >
+      au < manifest ; 2008 ; Journal of Moravian History Volume 5 ; 5 ; 2008 >
+      au < doNotProcess ; 2009 ; Journal of Moravian History Volume 2009 ; 2009 ; 2009 >
+      au < doNotProcess ; 2010 ; Journal of Moravian History Volume 2010 ; 2010 ; 2010 >
+      au < doNotProcess ; 2011 ; Journal of Moravian History Volume 2011 ; 2011 ; 2011 >
+      au < doNotProcess ; 2012 ; Journal of Moravian History Volume 12 ; 12 ; 2012 >
+      au < doNotProcess ; 2013 ; Journal of Moravian History Volume 13 ; 13 ; 2013 >
+      au < doNotProcess ; 2014 ; Journal of Moravian History Volume 14 ; 14 ; 2014 >
+      au < doNotProcess ; 2015 ; Journal of Moravian History Volume 15 ; 15 ; 2015 >
+      au < doNotProcess ; 2016 ; Journal of Moravian History Volume 16 ; 16 ; 2016 >
+      au < doNotProcess ; 2017 ; Journal of Moravian History Volume 17 ; 17 ; 2017 >
+      au < doNotProcess ; 2018 ; Journal of Moravian History Volume 18 ; 18 ; 2018 >
+      au < doNotProcess ; 2019 ; Journal of Moravian History Volume 19 ; 19 ; 2019 >
+      au < doNotProcess ; 2020 ; Journal of Moravian History Volume 20 ; 20 ; 2020 >
+      au < doNotProcess ; 2021 ; Journal of Moravian History Volume 21 ; 21 ; 2021 >
+      au < released ; 2022 ; Journal of Moravian History Volume 22 ; 22 ; 2022 >
+      au < manifest ; 2023 ; Journal of Moravian History Volume 23 ; 23 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Nietzsche Studies ;
+      issn = 1538-4594 ;
+      eissn = 0968-8005 ;
+      issnl = 0968-8005
+    >
+
+      param[journal_id] = nietzsche-studies
+
+      au < doNotProcess ; 2011 ; The Journal of Nietzsche Studies Volume 41-42 ; 41-42 ; 2011 >
+      au < doNotProcess ; 2012 ; The Journal of Nietzsche Studies Volume 43 ; 43 ; 2012 >
+      au < doNotProcess ; 2013 ; The Journal of Nietzsche Studies Volume 44 ; 44 ; 2013 >
+      au < doNotProcess ; 2014 ; The Journal of Nietzsche Studies Volume 45 ; 45 ; 2014 >
+      au < doNotProcess ; 2015 ; The Journal of Nietzsche Studies Volume 46 ; 46 ; 2015 >
+      au < doNotProcess ; 2016 ; The Journal of Nietzsche Studies Volume 47 ; 47 ; 2016 >
+      au < doNotProcess ; 2017 ; The Journal of Nietzsche Studies Volume 48 ; 48 ; 2017 >
+      au < doNotProcess ; 2018 ; The Journal of Nietzsche Studies Volume 49 ; 49 ; 2018 >
+      au < doNotProcess ; 2019 ; The Journal of Nietzsche Studies Volume 50 ; 50 ; 2019 >
+      au < doNotProcess ; 2020 ; The Journal of Nietzsche Studies Volume 51 ; 51 ; 2020 >
+      au < doNotProcess ; 2021 ; The Journal of Nietzsche Studies Volume 52 ; 52 ; 2021 >
+      au < released ; 2022 ; The Journal of Nietzsche Studies Volume 53 ; 53 ; 2022 >
+      au < manifest ; 2023 ; The Journal of Nietzsche Studies Volume 54 ; 54 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Speculative Philosophy ;
+      issn = 0891-625X ;
+      eissn = 1527-9383 ;
+      issnl = 0891-625X
+    >
+
+      param[journal_id] = speculative-philosophy
+
+      au < doNotProcess ; 2010 ; The Journal of Speculative Philosophy Volume 24 ; 24 ; 2010 >
+      au < doNotProcess ; 2011 ; The Journal of Speculative Philosophy Volume 25 ; 25 ; 2011 >
+      au < doNotProcess ; 2012 ; The Journal of Speculative Philosophy Volume 26 ; 26 ; 2012 >
+      au < doNotProcess ; 2013 ; The Journal of Speculative Philosophy Volume 27 ; 27 ; 2013 >
+      au < doNotProcess ; 2014 ; The Journal of Speculative Philosophy Volume 28 ; 28 ; 2014 >
+      au < doNotProcess ; 2015 ; The Journal of Speculative Philosophy Volume 29 ; 29 ; 2015 >
+      au < doNotProcess ; 2016 ; The Journal of Speculative Philosophy Volume 30 ; 30 ; 2016 >
+      au < doNotProcess ; 2017 ; The Journal of Speculative Philosophy Volume 31 ; 31 ; 2017 >
+      au < doNotProcess ; 2018 ; The Journal of Speculative Philosophy Volume 32 ; 32 ; 2018 >
+      au < doNotProcess ; 2019 ; The Journal of Speculative Philosophy Volume 33 ; 33 ; 2019 >
+      au < doNotProcess ; 2020 ; The Journal of Speculative Philosophy Volume 34 ; 34 ; 2020 >
+      au < doNotProcess ; 2021 ; The Journal of Speculative Philosophy Volume 35 ; 35 ; 2021 >
+      au < released ; 2022 ; The Journal of Speculative Philosophy Volume 36 ; 36 ; 2022 >
+      au < manifest ; 2023 ; The Journal of Speculative Philosophy Volume 37 ; 37 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = The Mark Twain Annual ;
+      issn = 1553-0981 ;
+      eissn = 1756-2597 ;
+      issnl = 1553-0981
+    >
+
+      param[journal_id] = mark-twain
+
+      au < doNotProcess ; 2010 ; The Mark Twain Annual Volume 8 ; 8 ; 2010 >
+      au < doNotProcess ; 2011 ; The Mark Twain Annual Volume 9 ; 9 ; 2011 >
+      au < doNotProcess ; 2012 ; The Mark Twain Annual Volume 10 ; 10 ; 2012 >
+      au < doNotProcess ; 2013 ; The Mark Twain Annual Volume 11 ; 11 ; 2013 >
+      au < doNotProcess ; 2014 ; The Mark Twain Annual Volume 12 ; 12 ; 2014 >
+      au < doNotProcess ; 2015 ; The Mark Twain Annual Volume 13 ; 13 ; 2015 >
+      au < doNotProcess ; 2016 ; The Mark Twain Annual Volume 14 ; 14 ; 2016 >
+      au < doNotProcess ; 2017 ; The Mark Twain Annual Volume 15 ; 15 ; 2017 >
+      au < doNotProcess ; 2018 ; The Mark Twain Annual Volume 16 ; 16 ; 2018 >
+      au < doNotProcess ; 2019 ; The Mark Twain Annual Volume 17 ; 17 ; 2019 >
+      au < doNotProcess ; 2020 ; The Mark Twain Annual Volume 18 ; 18 ; 2020 >
+      au < released ; 2021 ; The Mark Twain Annual Volume 19 ; 19 ; 2021 >
+      au < released ; 2022 ; The Mark Twain Annual Volume 20 ; 20 ; 2022 >
+      au < manifest ; 2023 ; The Mark Twain Annual Volume 21 ; 21 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = Mediterranean Studies ;
+      issn = 1074-164X ;
+      eissn = 2161-4741 ;
+      issnl = 1074-164X
+    >
+    # This title moved from Manchester University Press to Pennsylvania State University Press
+    # See pennsylvania_state_university_press.ingenta.tdb for 2005-2010
+
+
+      param[journal_id] = mediterranean-studies
+
+      au < doNotProcess ; 2010 ; Mediterranean Studies Volume 19 ; 19 ; 2010 >
+      au < doNotProcess ; 2012 ; Mediterranean Studies Volume 20 ; 20 ; 2012 >
+      au < doNotProcess ; 2013 ; Mediterranean Studies Volume 21 ; 21 ; 2013 >
+      au < doNotProcess ; 2014 ; Mediterranean Studies Volume 22 ; 22 ; 2014 >
+      au < doNotProcess ; 2015 ; Mediterranean Studies Volume 23 ; 23 ; 2015 >
+      au < doNotProcess ; 2016 ; Mediterranean Studies Volume 24 ; 24 ; 2016 >
+      au < doNotProcess ; 2017 ; Mediterranean Studies Volume 25 ; 25 ; 2017 >
+      au < doNotProcess ; 2018 ; Mediterranean Studies Volume 26 ; 26 ; 2018 >
+      au < doNotProcess ; 2019 ; Mediterranean Studies Volume 27 ; 27 ; 2019 >
+      au < doNotProcess ; 2020 ; Mediterranean Studies Volume 28 ; 28 ; 2020 >
+      au < doNotProcess ; 2021 ; Mediterranean Studies Volume 29 ; 29 ; 2021 >
+      au < released ; 2022 ; Mediterranean Studies Volume 30 ; 30 ; 2022 >
+      au < manifest ; 2023 ; Mediterranean Studies Volume 31 ; 31 ; 2023 >
+
+  }
+
+  {
+    title <
+      name = Pacific Coast Philology ;
+      issn = 0078-7469 ;
+      eissn = 2326-067X ;
+      issnl = 0078-7469
+    >
+    
+      #45 = no manifest page available
+
+      param[journal_id] = pcp
+
+      au < doNotProcess ; 2011 ; Pacific Coast Philology Volume 46 ; 46 ; 2011 >
+      au < doNotProcess ; 2012 ; Pacific Coast Philology Volume 47 ; 47 ; 2012 >
+      au < doNotProcess ; 2013 ; Pacific Coast Philology Volume 48 ; 48 ; 2013 >
+      au < doNotProcess ; 2014 ; Pacific Coast Philology Volume 49 ; 49 ; 2014 >
+      au < doNotProcess ; 2015 ; Pacific Coast Philology Volume 50 ; 50 ; 2015 >
+      au < doNotProcess ; 2016 ; Pacific Coast Philology Volume 51 ; 51 ; 2016 >
+      au < doNotProcess ; 2017 ; Pacific Coast Philology Volume 52 ; 52 ; 2017 >
+      au < doNotProcess ; 2018 ; Pacific Coast Philology Volume 53 ; 53 ; 2018 >
+      au < doNotProcess ; 2019 ; Pacific Coast Philology Volume 54 ; 54 ; 2019 >
+      au < doNotProcess ; 2020 ; Pacific Coast Philology Volume 55 ; 55 ; 2020 >
+      au < doNotProcess ; 2021 ; Pacific Coast Philology Volume 56 ; 56 ; 2021 >
+
+  }
+
+  {
+    title <
+      name = Pennsylvania History: A Journal of Mid-Atlantic Studies ;
+      issn = 0031-4528 ;
+      eissn = 2153-2109 ;
+      issnl = 0031-4528
+    >
+
+      param[journal_id] = pa-history
+
+      au < doNotProcess ; 2010 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77 ; 77 ; 2010 >
+      au < doNotProcess ; 2011 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 78 ; 78 ; 2011 >
+      au < doNotProcess ; 2012 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 79 ; 79 ; 2012 >
+      au < doNotProcess ; 2013 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 80 ; 80 ; 2013 >
+      au < doNotProcess ; 2014 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 81 ; 81 ; 2014 >
+      au < doNotProcess ; 2015 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 82 ; 82 ; 2015 >
+      au < doNotProcess ; 2016 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 83 ; 83 ; 2016 >
+      au < doNotProcess ; 2017 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 84 ; 84 ; 2017 >
+      au < doNotProcess ; 2018 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 85 ; 85 ; 2018 >
+      au < doNotProcess ; 2019 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 86 ; 86 ; 2019 >
+      au < doNotProcess ; 2020 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 87 ; 87 ; 2020 >
+      au < doNotProcess ; 2021 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 88 ; 88 ; 2021 >
+      au < released ; 2022 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 89 ; 89 ; 2022 >
+      au < manifest ; 2023 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 90 ; 90 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = Philosophy and Rhetoric ;
+      issn = 1527-2079 ;
+      eissn = 0031-8213 ;
+      issnl = 0031-8213
+    >
+
+      param[journal_id] = p-n-r
+
+      au < doNotProcess ; 2010 ; Philosophy and Rhetoric Volume 43 ; 43 ; 2010 >
+      au < doNotProcess ; 2011 ; Philosophy and Rhetoric Volume 44 ; 44 ; 2011 >
+      au < doNotProcess ; 2012 ; Philosophy and Rhetoric Volume 45 ; 45 ; 2012 >
+      au < doNotProcess ; 2013 ; Philosophy and Rhetoric Volume 46 ; 46 ; 2013 >
+      au < doNotProcess ; 2014 ; Philosophy and Rhetoric Volume 47 ; 47 ; 2014 >
+      au < doNotProcess ; 2015 ; Philosophy and Rhetoric Volume 48 ; 48 ; 2015 >
+      au < doNotProcess ; 2016 ; Philosophy and Rhetoric Volume 49 ; 49 ; 2016 >
+      au < doNotProcess ; 2017 ; Philosophy and Rhetoric Volume 50 ; 50 ; 2017 >
+      au < doNotProcess ; 2018 ; Philosophy and Rhetoric Volume 51 ; 51 ; 2018 >
+      au < doNotProcess ; 2019 ; Philosophy and Rhetoric Volume 52 ; 52 ; 2019 >
+      au < doNotProcess ; 2020 ; Philosophy and Rhetoric Volume 53 ; 53 ; 2020 >
+      au < doNotProcess ; 2021 ; Philosophy and Rhetoric Volume 54 ; 54 ; 2021 >
+      au < released ; 2022 ; Philosophy and Rhetoric Volume 55 ; 55 ; 2022 >
+      au < manifest ; 2023 ; Philosophy and Rhetoric Volume 56 ; 56 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = Preternature: Critical and Historical Studies on the Preternatural ;
+      issn = 2161-2196 ;
+      eissn = 2161-2188 ;
+      issnl = 2161-2188
+    >
+
+      param[journal_id] = preternature
+
+      au < doNotProcess ; 2012 ; Preternature: Critical and Historical Studies on the Preternatural Volume 1 ; 1 ; 2012 >
+      au < doNotProcess ; 2013 ; Preternature: Critical and Historical Studies on the Preternatural Volume 2 ; 2 ; 2013 >
+      au < doNotProcess ; 2014 ; Preternature: Critical and Historical Studies on the Preternatural Volume 3 ; 3 ; 2014 >
+      au < doNotProcess ; 2015 ; Preternature: Critical and Historical Studies on the Preternatural Volume 4 ; 4 ; 2015 >
+      au < doNotProcess ; 2016 ; Preternature: Critical and Historical Studies on the Preternatural Volume 5 ; 5 ; 2016 >
+      au < doNotProcess ; 2017 ; Preternature: Critical and Historical Studies on the Preternatural Volume 6 ; 6 ; 2017 >
+      au < doNotProcess ; 2018 ; Preternature: Critical and Historical Studies on the Preternatural Volume 7 ; 7 ; 2018 >
+      au < doNotProcess ; 2019 ; Preternature: Critical and Historical Studies on the Preternatural Volume 8 ; 8 ; 2019 >
+      au < doNotProcess ; 2020 ; Preternature: Critical and Historical Studies on the Preternatural Volume 9 ; 9 ; 2020 >
+      au < doNotProcess ; 2021 ; Preternature: Critical and Historical Studies on the Preternatural Volume 10 ; 10 ; 2021 >
+      au < released ; 2022 ; Preternature: Critical and Historical Studies on the Preternatural Volume 11 ; 11 ; 2022 >
+      au < manifest ; 2023 ; Preternature: Critical and Historical Studies on the Preternatural Volume 12 ; 12 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = Reception: Texts, Readers, Audiences, History ;
+      issn = 2168-0604 ;
+      eissn = 2155-7888 ;
+      issnl = 2168-0604
+    >
+    
+
+    
+      param[journal_id] = reception
+
+      au < doNotProcess ; 2008 ; Reception: Texts, Readers, Audiences, History Volume 1 ; 1 ; 2008 >
+      au < doNotProcess ; 2010 ; Reception: Texts, Readers, Audiences, History Volume 2 ; 2 ; 2010 >
+      au < doNotProcess ; 2011 ; Reception: Texts, Readers, Audiences, History Volume 3 ; 3 ; 2011 >
+      au < doNotProcess ; 2012 ; Reception: Texts, Readers, Audiences, History Volume 4 ; 4 ; 2012 >
+      au < doNotProcess ; 2013 ; Reception: Texts, Readers, Audiences, History Volume 5 ; 5 ; 2013 >
+      au < doNotProcess ; 2014 ; Reception: Texts, Readers, Audiences, History Volume 6 ; 6 ; 2014 >
+      au < doNotProcess ; 2015 ; Reception: Texts, Readers, Audiences, History Volume 7 ; 7 ; 2015 >
+      au < doNotProcess ; 2016 ; Reception: Texts, Readers, Audiences, History Volume 8 ; 8 ; 2016 >
+      au < doNotProcess ; 2017 ; Reception: Texts, Readers, Audiences, History Volume 9 ; 9 ; 2017 >
+      au < doNotProcess ; 2018 ; Reception: Texts, Readers, Audiences, History Volume 10 ; 10 ; 2018 >
+      au < doNotProcess ; 2019 ; Reception: Texts, Readers, Audiences, History Volume 11 ; 11 ; 2019 >
+      au < doNotProcess ; 2020 ; Reception: Texts, Readers, Audiences, History Volume 12 ; 12 ; 2020 >
+      au < doNotProcess ; 2021 ; Reception: Texts, Readers, Audiences, History Volume 13 ; 13 ; 2021 >
+      au < released ; 2022 ; Reception: Texts, Readers, Audiences, History Volume 14 ; 14 ; 2022 >
+      au < manifest ; 2023 ; Reception: Texts, Readers, Audiences, History Volume 15 ; 15 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = SHAW: The Journal of Bernard Shaw Studies ;
+      issn = 0741-5842 ;
+      eissn = 1529-1480 ;
+      issnl = 0741-5842
+    >
+
+      param[journal_id] = shaw
+
+      au < doNotProcess ; 2010 ; SHAW The Annual of Bernard Shaw Studies Volume 30 ; 30 ; 2010 >
+      au < doNotProcess ; 2011 ; SHAW The Annual of Bernard Shaw Studies Volume 31 ; 31 ; 2011 >
+      au < doNotProcess ; 2012 ; SHAW The Annual of Bernard Shaw Studies Volume 32 ; 32 ; 2012 >
+      au < doNotProcess ; 2013 ; SHAW The Annual of Bernard Shaw Studies Volume 33 ; 33 ; 2013 >
+      au < doNotProcess ; 2014 ; SHAW The Annual of Bernard Shaw Studies Volume 34 ; 34 ; 2014 >
+      au < doNotProcess ; 2015 ; SHAW: The Journal of Bernard Shaw Studies Volume 35 ; 35 ; 2015 >
+      au < doNotProcess ; 2016 ; SHAW: The Journal of Bernard Shaw Studies Volume 36 ; 36 ; 2016 >
+      au < doNotProcess ; 2017 ; SHAW: The Journal of Bernard Shaw Studies Volume 37 ; 37 ; 2017 >
+      au < doNotProcess ; 2018 ; SHAW: The Journal of Bernard Shaw Studies Volume 38 ; 38 ; 2018 >
+      au < doNotProcess ; 2019 ; SHAW: The Journal of Bernard Shaw Studies Volume 39 ; 39 ; 2019 >
+      au < doNotProcess ; 2020 ; SHAW: The Journal of Bernard Shaw Studies Volume 40 ; 40 ; 2020 >
+      au < doNotProcess ; 2021 ; SHAW: The Journal of Bernard Shaw Studies Volume 41 ; 41 ; 2021 >
+      au < released ; 2022 ; SHAW: The Journal of Bernard Shaw Studies Volume 42 ; 42 ; 2022 >
+      au < manifest ; 2023 ; SHAW: The Journal of Bernard Shaw Studies Volume 43 ; 43 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = Soundings: An Interdisciplinary Journal ;
+      issn = 0038-1861 ;
+      eissn = 2161-6302 ;
+      issnl = 0038-1861
+    >
+
+      param[journal_id] = soundings
+
+      au < doNotProcess ; 2010 ; Soundings: An Interdisciplinary Journal Volume 93 ; 93 ; 2010 >
+      au < doNotProcess ; 2011 ; Soundings: An Interdisciplinary Journal Volume 94 ; 94 ; 2011 >
+      au < doNotProcess ; 2012 ; Soundings: An Interdisciplinary Journal Volume 95 ; 95 ; 2012 >
+      au < doNotProcess ; 2013 ; Soundings: An Interdisciplinary Journal Volume 96 ; 96 ; 2013 >
+      au < doNotProcess ; 2014 ; Soundings: An Interdisciplinary Journal Volume 97 ; 97 ; 2014 >
+      au < doNotProcess ; 2015 ; Soundings: An Interdisciplinary Journal Volume 98 ; 98 ; 2015 >
+      au < doNotProcess ; 2016 ; Soundings: An Interdisciplinary Journal Volume 99 ; 99 ; 2016 >
+      au < doNotProcess ; 2017 ; Soundings: An Interdisciplinary Journal Volume 100 ; 100 ; 2017 >
+      au < doNotProcess ; 2018 ; Soundings: An Interdisciplinary Journal Volume 101 ; 101 ; 2018 >
+      au < doNotProcess ; 2019 ; Soundings: An Interdisciplinary Journal Volume 102 ; 102 ; 2019 >
+      au < doNotProcess ; 2020 ; Soundings: An Interdisciplinary Journal Volume 103 ; 103 ; 2020 >
+      au < doNotProcess ; 2021 ; Soundings: An Interdisciplinary Journal Volume 104 ; 104 ; 2021 >
+      au < released ; 2022 ; Soundings: An Interdisciplinary Journal Volume 105 ; 105 ; 2022 >
+      au < expected ; 2023 ; Soundings: An Interdisciplinary Journal Volume 106 ; 106 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = Steinbeck Review ;
+      issn = 1546-007X ;
+      eissn = 1754-6087 ;
+      issnl = 1546-007X
+    >
+
+      param[journal_id] = steinbeck
+
+      au < doNotProcess ; 2010 ; Steinbeck Review Volume 7 ; 7 ; 2010 >
+      au < doNotProcess ; 2011 ; Steinbeck Review Volume 8 ; 8 ; 2011 >
+      au < doNotProcess ; 2012 ; Steinbeck Review Volume 9 ; 9 ; 2012 >
+      au < doNotProcess ; 2013 ; Steinbeck Review Volume 10 ; 10 ; 2013 >
+      au < doNotProcess ; 2014 ; Steinbeck Review Volume 11 ; 11 ; 2014 >
+      au < doNotProcess ; 2015 ; Steinbeck Review Volume 12 ; 12 ; 2015 >
+      au < doNotProcess ; 2016 ; Steinbeck Review Volume 13 ; 13 ; 2016 >
+      au < doNotProcess ; 2017 ; Steinbeck Review Volume 14 ; 14 ; 2017 >
+      au < doNotProcess ; 2018 ; Steinbeck Review Volume 15 ; 15 ; 2018 >
+      au < doNotProcess ; 2019 ; Steinbeck Review Volume 16 ; 16 ; 2019 >
+      au < doNotProcess ; 2020 ; Steinbeck Review Volume 17 ; 17 ; 2020 >
+      au < doNotProcess ; 2021 ; Steinbeck Review Volume 18 ; 18 ; 2021 >
+      au < released ; 2022 ; Steinbeck Review Volume 19 ; 19 ; 2022 >
+      au < expected ; 2023 ; Steinbeck Review Volume 20 ; 20 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = Studies in American Jewish Literature ;
+      issn = 0271-9274 ;
+      eissn = 1948-5077 ;
+      issnl = 0271-9274
+    >
+
+      param[journal_id] = sajl
+
+      au < doNotProcess ; 2010 ; Studies in American Jewish Literature Volume 29 ; 29 ; 2010 >
+      au < doNotProcess ; 2011 ; Studies in American Jewish Literature Volume 30 ; 30 ; 2011 >
+      au < doNotProcess ; 2012 ; Studies in American Jewish Literature Volume 31 ; 31 ; 2012 >
+      au < doNotProcess ; 2013 ; Studies in American Jewish Literature Volume 32 ; 32 ; 2013 >
+      au < doNotProcess ; 2014 ; Studies in American Jewish Literature Volume 33 ; 33 ; 2014 >
+      au < doNotProcess ; 2015 ; Studies in American Jewish Literature Volume 34 ; 34 ; 2015 >
+      au < doNotProcess ; 2016 ; Studies in American Jewish Literature Volume 35 ; 35 ; 2016 >
+      au < doNotProcess ; 2017 ; Studies in American Jewish Literature Volume 36 ; 36 ; 2017 >
+      au < doNotProcess ; 2018 ; Studies in American Jewish Literature Volume 37 ; 37 ; 2018 >
+      au < doNotProcess ; 2019 ; Studies in American Jewish Literature Volume 38 ; 38 ; 2019 >
+      au < doNotProcess ; 2020 ; Studies in American Jewish Literature Volume 39 ; 39 ; 2020 >
+      au < doNotProcess ; 2021 ; Studies in American Jewish Literature Volume 40 ; 40 ; 2021 >
+      au < released ; 2022 ; Studies in American Jewish Literature Volume 41 ; 41 ; 2022 >
+      au < manifest ; 2023 ; Studies in American Jewish Literature Volume 42 ; 42 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = Transportation Journal ;
+      issn = 0041-1612 ;
+      eissn = 2157-328X ;
+      issnl = 0041-1612
+    >
+
+      param[journal_id] = transportation-journal
+
+      au < doNotProcess ; 2010 ; Transportation Journal Volume 49 ; 49 ; 2010 >
+      au < doNotProcess ; 2011 ; Transportation Journal Volume 50 ; 50 ; 2011 >
+      au < doNotProcess ; 2012 ; Transportation Journal Volume 51 ; 51 ; 2012 >
+      au < doNotProcess ; 2013 ; Transportation Journal Volume 52 ; 52 ; 2013 >
+      au < doNotProcess ; 2014 ; Transportation Journal Volume 53 ; 53 ; 2014 >
+      au < doNotProcess ; 2015 ; Transportation Journal Volume 54 ; 54 ; 2015 >
+      au < doNotProcess ; 2016 ; Transportation Journal Volume 55 ; 55 ; 2016 >
+      au < doNotProcess ; 2017 ; Transportation Journal Volume 56 ; 56 ; 2017 >
+      au < doNotProcess ; 2018 ; Transportation Journal Volume 57 ; 57 ; 2018 >
+      au < doNotProcess ; 2019 ; Transportation Journal Volume 58 ; 58 ; 2019 >
+      au < doNotProcess ; 2020 ; Transportation Journal Volume 59 ; 59 ; 2020 >
+      au < doNotProcess ; 2021 ; Transportation Journal Volume 60 ; 60 ; 2021 >
+      au < released ; 2022 ; Transportation Journal Volume 61 ; 61 ; 2022 >
+      au < manifest ; 2023 ; Transportation Journal Volume 62 ; 62 ; 2023 >
+
+  }
+
+  {
+
+    title <
+      name = Utopian Studies ;
+      issn = 1045-991X ;
+      eissn = 2154-9648 ;
+      issnl = 1045-991X
+    >
+
+      param[journal_id] = utopian-studies
+
+      au < doNotProcess ; 2010 ; Utopian Studies Volume 21 ; 21 ; 2010 >
+      au < doNotProcess ; 2011 ; Utopian Studies Volume 22 ; 22 ; 2011 >
+      au < doNotProcess ; 2012 ; Utopian Studies Volume 23 ; 23 ; 2012 >
+      au < doNotProcess ; 2013 ; Utopian Studies Volume 24 ; 24 ; 2013 >
+      au < doNotProcess ; 2014 ; Utopian Studies Volume 25 ; 25 ; 2014 >
+      au < doNotProcess ; 2015 ; Utopian Studies Volume 26 ; 26 ; 2015 >
+      au < doNotProcess ; 2016 ; Utopian Studies Volume 27 ; 27 ; 2016 >
+      au < doNotProcess ; 2017 ; Utopian Studies Volume 28 ; 28 ; 2017 >
+      au < doNotProcess ; 2018 ; Utopian Studies Volume 29 ; 29 ; 2018 >
+      au < doNotProcess ; 2019 ; Utopian Studies Volume 30 ; 30 ; 2019 >
+      au < doNotProcess ; 2020 ; Utopian Studies Volume 31 ; 31 ; 2020 >
+      au < doNotProcess ; 2021 ; Utopian Studies Volume 32 ; 32 ; 2021 >
+      au < released ; 2022 ; Utopian Studies Volume 33 ; 33 ; 2022 >
+      au < manifest ; 2023 ; Utopian Studies Volume 34 ; 34 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = ab-Original ;
+        issn = 2471-0938 ;
+        eissn = 2470-6221
+      >
+
+      param[journal_id] = ab-original
+
+      au < doNotProcess ; 2017 ; ab-Original Volume 1 ; 1 ; 2017 >
+      au < doNotProcess ; 2018 ; ab-Original Volume 2 ; 2 ; 2018 >
+      au < doNotProcess ; 2019 ; ab-Original Volume 3 (2019) ; 3 ; 2019 >
+      au < doNotProcess ; 2020 ; ab-Original Volume 3 (2020) ; 3 ; 2020 >
+      au < released ; 2021 ; ab-Original Volume 4 ; 4 ; 2021 >
+      au < expected ; 2023 ; ab-Original Volume 5 ; 5 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Bulletin for Biblical Research ;
+        issn = 1065-223X ;
+        eissn = 2576-0998
+      >
+
+      param[journal_id] = biblical-research
+
+      au < manifest ; 1991 ; Bulletin for Biblical Research Volume 1 ; 1 ; 1991 >
+      au < manifest ; 1992 ; Bulletin for Biblical Research Volume 2 ; 2 ; 1992 >
+      au < manifest ; 1993 ; Bulletin for Biblical Research Volume 3 ; 3 ; 1993 >
+      au < manifest ; 1994 ; Bulletin for Biblical Research Volume 4 ; 4 ; 1994 >
+      au < manifest ; 1995 ; Bulletin for Biblical Research Volume 5 ; 5 ; 1995 >
+      au < manifest ; 1996 ; Bulletin for Biblical Research Volume 6 ; 6 ; 1996 >
+      au < manifest ; 1997 ; Bulletin for Biblical Research Volume 7 ; 7 ; 1997 >
+      au < manifest ; 1998 ; Bulletin for Biblical Research Volume 8 ; 8 ; 1998 >
+      au < manifest ; 1999 ; Bulletin for Biblical Research Volume 9 ; 9 ; 1999 >
+      au < manifest ; 2000 ; Bulletin for Biblical Research Volume 10 ; 10 ; 2000 >
+      au < manifest ; 2001 ; Bulletin for Biblical Research Volume 11 ; 11 ; 2001 >
+      au < manifest ; 2002 ; Bulletin for Biblical Research Volume 12 ; 12 ; 2002 >
+      au < manifest ; 2003 ; Bulletin for Biblical Research Volume 13 ; 13 ; 2003 >
+      au < manifest ; 2004 ; Bulletin for Biblical Research Volume 14 ; 14 ; 2004 >
+      au < manifest ; 2005 ; Bulletin for Biblical Research Volume 15 ; 15 ; 2005 >
+      au < manifest ; 2006 ; Bulletin for Biblical Research Volume 16 ; 16 ; 2006 >
+      au < manifest ; 2007 ; Bulletin for Biblical Research Volume 17 ; 17 ; 2007 >
+      au < manifest ; 2008 ; Bulletin for Biblical Research Volume 18 ; 18 ; 2008 >
+      au < manifest ; 2009 ; Bulletin for Biblical Research Volume 19 ; 19 ; 2009 >
+      au < released ; 2010 ; Bulletin for Biblical Research Volume 20 ; 20 ; 2010 >
+      au < released ; 2011 ; Bulletin for Biblical Research Volume 21 ; 21 ; 2011 >
+      au < released ; 2012 ; Bulletin for Biblical Research Volume 22 ; 22 ; 2012 >
+      au < released ; 2013 ; Bulletin for Biblical Research Volume 23 ; 23 ; 2013 >
+      au < doNotProcess ; 2014 ; Bulletin for Biblical Research Volume 24 ; 24 ; 2014 >
+      au < doNotProcess ; 2015 ; Bulletin for Biblical Research Volume 25 ; 25 ; 2015 >
+      au < doNotProcess ; 2016 ; Bulletin for Biblical Research Volume 26 ; 26 ; 2016 >
+      au < doNotProcess ; 2017 ; Bulletin for Biblical Research Volume 27 ; 27 ; 2017 >
+      au < doNotProcess ; 2018 ; Bulletin for Biblical Research Volume 28 ; 28 ; 2018 >
+      au < doNotProcess ; 2019 ; Bulletin for Biblical Research Volume 29 ; 29 ; 2019 >
+      au < doNotProcess ; 2020 ; Bulletin for Biblical Research Volume 30 ; 30 ; 2020 >
+      au < doNotProcess ; 2021 ; Bulletin for Biblical Research Volume 31 ; 31 ; 2021 >
+      au < released ; 2022 ; Bulletin for Biblical Research Volume 32 ; 32 ; 2022 >
+      au < manifest ; 2023 ; Bulletin for Biblical Research Volume 33 ; 33 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Bustan - The Middle East Book Review ;
+        issn = 1878-5301 ;
+        eissn = 1878-5328
+      >
+
+      param[journal_id] = bustan
+
+      au < doNotProcess ; 2010 ; Bustan - The Middle East Book Review Volume 1 ; 1 ; 2010 >
+      au < doNotProcess ; 2011 ; Bustan - The Middle East Book Review Volume 2 ; 2 ; 2011 >
+      au < doNotProcess ; 2012 ; Bustan - The Middle East Book Review Volume 3 ; 3 ; 2012 >
+      au < doNotProcess ; 2013 ; Bustan - The Middle East Book Review Volume 4 ; 4 ; 2013 >
+      au < doNotProcess ; 2014 ; Bustan - The Middle East Book Review Volume 5 ; 5 ; 2014 >
+      au < doNotProcess ; 2015 ; Bustan - The Middle East Book Review Volume 6 ; 6 ; 2015 >
+      au < doNotProcess ; 2016 ; Bustan - The Middle East Book Review Volume 7 ; 7 ; 2016 >
+      au < doNotProcess ; 2017 ; Bustan - The Middle East Book Review Volume 8 ; 8 ; 2017 >
+      au < doNotProcess ; 2018 ; Bustan - The Middle East Book Review Volume 9 ; 9 ; 2018 >
+      au < doNotProcess ; 2019 ; Bustan - The Middle East Book Review Volume 10 ; 10 ; 2019 >
+      au < doNotProcess ; 2020 ; Bustan - The Middle East Book Review Volume 11 ; 11 ; 2020 >
+      au < doNotProcess ; 2021 ; Bustan - The Middle East Book Review Volume 12 ; 12 ; 2021 >
+      au < released ; 2022 ; Bustan - The Middle East Book Review Volume 13 ; 13 ; 2022 >
+      au < expected ; 2023 ; Bustan - The Middle East Book Review Volume 14 ; 14 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = The Arthur Miller Journal ;
+        issn = 1558-8831 ;
+        eissn = 2333-3154
+      >
+
+      param[journal_id] = arthur-miller
+
+      au < exists ; 2006 ; The Arthur Miller Journal Volume 1 ; 1 ; 2006 >
+      au < exists ; 2007 ; The Arthur Miller Journal Volume 2 ; 2 ; 2007 >
+      au < exists ; 2008 ; The Arthur Miller Journal Volume 3 ; 3 ; 2008 >
+      au < exists ; 2009 ; The Arthur Miller Journal Volume 4 ; 4 ; 2009 >
+      au < exists ; 2010 ; The Arthur Miller Journal Volume 5 ; 5 ; 2010 >
+      au < doNotProcess ; 2011 ; The Arthur Miller Journal Volume 6 ; 6 ; 2011 >
+      au < doNotProcess ; 2012 ; The Arthur Miller Journal Volume 7 ; 7 ; 2012 >
+      au < doNotProcess ; 2013 ; The Arthur Miller Journal Volume 8 ; 8 ; 2013 >
+      au < doNotProcess ; 2014 ; The Arthur Miller Journal Volume 9 ; 9 ; 2014 >
+      au < doNotProcess ; 2015 ; The Arthur Miller Journal Volume 10 ; 10 ; 2015 >
+      au < doNotProcess ; 2016 ; The Arthur Miller Journal Volume 11 ; 11 ; 2016 >
+      au < doNotProcess ; 2017 ; The Arthur Miller Journal Volume 12 ; 12 ; 2017 >
+      au < doNotProcess ; 2018 ; The Arthur Miller Journal Volume 13 ; 13 ; 2018 >
+      au < doNotProcess ; 2019 ; The Arthur Miller Journal Volume 14 ; 14 ; 2019 >
+      au < doNotProcess ; 2020 ; The Arthur Miller Journal Volume 15 ; 15 ; 2020 >
+      au < doNotProcess ; 2021 ; The Arthur Miller Journal Volume 16 ; 16 ; 2021 >
+      au < released ; 2022 ; The Arthur Miller Journal Volume 17 ; 17 ; 2022 >
+      au < manifest ; 2023 ; The Arthur Miller Journal Volume 18 ; 18 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry ;
+        issn = 1084-1490 ;
+        eissn = 2377-9551
+      >
+
+      param[journal_id] = caliope
+
+      au < manifest ; 1995 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 1 ; 1 ; 1995 >
+      au < manifest ; 1996 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 2 ; 2 ; 1996 >
+      au < manifest ; 1997 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 3 ; 3 ; 1997 >
+      au < manifest ; 1998 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 4 ; 4 ; 1998 >
+      au < manifest ; 1999 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 5 ; 5 ; 1999 >
+      au < manifest ; 2000 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 6 ; 6 ; 2000 >
+      au < manifest ; 2001 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 7 ; 7 ; 2001 >
+      au < manifest ; 2002 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 8 ; 8 ; 2002 >
+      au < manifest ; 2003 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 9 ; 9 ; 2003 >
+      au < manifest ; 2004 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 10 ; 10 ; 2004 >
+      au < manifest ; 2005 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 11 ; 11 ; 2005 >
+      au < manifest ; 2006 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 12 ; 12 ; 2006 >
+      au < manifest ; 2007 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 13 ; 13 ; 2007 >
+      au < manifest ; 2008 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 14 ; 14 ; 2008 >
+      au < manifest ; 2009 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 15 ; 15 ; 2009 >
+      au < released ; 2010 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 16 ; 16 ; 2010 >
+      au < released ; 2011 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 17 ; 17 ; 2011 >
+      au < released ; 2012 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 18 (2012) ; 18 ; 2012 >
+      au < released ; 2013 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 18 (2013) ; 18 ; 2013 >
+      au < released ; 2014 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 19 ; 19 ; 2014 >
+      au < doNotProcess ; 2015 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 20 ; 20 ; 2015 >
+      au < doNotProcess ; 2016 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 21 ; 21 ; 2016 >
+      au < doNotProcess ; 2017 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 22 ; 22 ; 2017 >
+      au < doNotProcess ; 2018 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 23 ; 23 ; 2018 >
+      au < doNotProcess ; 2019 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 24 ; 24 ; 2019 >
+      au < doNotProcess ; 2020 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 25 ; 25 ; 2020 >
+      au < doNotProcess ; 2021 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 26 ; 26 ; 2021 >
+      au < released ; 2022 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 27 ; 27 ; 2022 >
+      au < manifest ; 2023 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 28 ; 28 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Comedia Performance: Journal of the Association for Hispanic Classical Theater ;
+        issn = 1553-6505 ;
+        eissn = 2572-4428
+      >
+
+      param[journal_id] = comedia-performance
+
+      au < manifest ; 2004 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 1 ; 1 ; 2004 >
+      au < manifest ; 2005 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 2 ; 2 ; 2005 >
+      au < manifest ; 2006 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 3 ; 3 ; 2006 >
+      au < manifest ; 2007 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 4 ; 4 ; 2007 >
+      au < manifest ; 2008 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 5 ; 5 ; 2008 >
+      au < manifest ; 2009 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 6 ; 6 ; 2009 >
+      au < released ; 2010 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 7 ; 7 ; 2010 >
+      au < released ; 2011 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 8 ; 8 ; 2011 >
+      au < released ; 2012 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 9 ; 9 ; 2012 >
+      au < released ; 2013 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 10 ; 10 ; 2013 >
+      au < doNotProcess ; 2014 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 11 ; 11 ; 2014 >
+      au < doNotProcess ; 2015 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 12 ; 12 ; 2015 >
+      au < doNotProcess ; 2016 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 13 ; 13 ; 2016 >
+      au < doNotProcess ; 2017 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 14 ; 14 ; 2017 >
+      au < doNotProcess ; 2018 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 15 ; 15 ; 2018 >
+      au < doNotProcess ; 2019 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 16 ; 16 ; 2019 >
+      au < doNotProcess ; 2020 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 17 ; 17 ; 2020 >
+      au < doNotProcess ; 2021 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 18 ; 18 ; 2021 >
+      au < released ; 2022 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 19 ; 19 ; 2022 >
+      au < manifest ; 2023 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 20 ; 20 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Dickens Studies Annual: Essays on Victorian Fiction ;
+        issn = 0084-9812 ;
+        eissn = 2167-8510
+      >
+
+      param[journal_id] = dickens
+
+      au < doNotProcess ; 2017 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 48 ; 48 ; 2017 >
+      au < doNotProcess ; 2018 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 49 ; 49 ; 2018 >
+      au < doNotProcess ; 2019 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 50 ; 50 ; 2019 >
+      au < doNotProcess ; 2020 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 51 ; 51 ; 2020 >
+      au < doNotProcess ; 2021 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 52 ; 52 ; 2021 >
+      au < released ; 2022 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 53 ; 53 ; 2022 >
+      au < manifest ; 2023 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 54 ; 54 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Ecumenica: Performance and Religion ;
+        issn = 1942-4558 ;
+        eissn = 2578-2185
+      >
+
+      param[journal_id] = ecumenica
+
+      au < manifest ; 2008 ; Ecumenica: Performance and Religion Volume 1 ; 1 ; 2008 >
+      au < manifest ; 2009 ; Ecumenica: Performance and Religion Volume 2 ; 2 ; 2009 >
+      au < released ; 2010 ; Ecumenica: Performance and Religion Volume 3 ; 3 ; 2010 >
+      au < released ; 2011 ; Ecumenica: Performance and Religion Volume 4 ; 4 ; 2011 >
+      au < released ; 2012 ; Ecumenica: Performance and Religion Volume 5 ; 5 ; 2012 >
+      au < released ; 2013 ; Ecumenica: Performance and Religion Volume 6 ; 6 ; 2013 >
+      au < released ; 2014 ; Ecumenica: Performance and Religion Volume 7 ; 7 ; 2014 >
+      au < doNotProcess ; 2015 ; Ecumenica: Performance and Religion Volume 8 ; 8 ; 2015 >
+      au < doNotProcess ; 2016 ; Ecumenica: Performance and Religion Volume 9 ; 9 ; 2016 >
+      au < doNotProcess ; 2017 ; Ecumenica: Performance and Religion Volume 10 ; 10 ; 2017 >
+      au < doNotProcess ; 2018 ; Ecumenica: Performance and Religion Volume 11 ; 11 ; 2018 >
+      au < doNotProcess ; 2019 ; Ecumenica: Performance and Religion Volume 12 ; 12 ; 2019 >
+      au < doNotProcess ; 2020 ; Ecumenica: Performance and Religion Volume 13 ; 13 ; 2020 >
+      au < doNotProcess ; 2021 ; Ecumenica: Performance and Religion Volume 14 ; 14 ; 2021 >
+      au < released ; 2022 ; Ecumenica: Performance and Religion Volume 15 ; 15 ; 2022 >
+      au < manifest ; 2023 ; Ecumenica: Performance and Religion Volume 16 ; 16 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Edith Wharton Review ;
+        issn = 2330-3964 ;
+        eissn = 2330-3980
+      >
+
+      param[journal_id] = edith-wharton
+
+      au < doNotProcess ; 2012 ; Edith Wharton Review Volume 28 ; 28 ; 2012 >
+      au < doNotProcess ; 2013 ; Edith Wharton Review Volume 29 ; 29 ; 2013 >
+      au < doNotProcess ; 2014 ; Edith Wharton Review Volume 30 ; 30 ; 2014 >
+      au < doNotProcess ; 2015 ; Edith Wharton Review Volume 31 ; 31 ; 2015 >
+      au < doNotProcess ; 2016 ; Edith Wharton Review Volume 32 ; 32 ; 2016 >
+      au < doNotProcess ; 2017 ; Edith Wharton Review Volume 33 ; 33 ; 2017 >
+      au < doNotProcess ; 2018 ; Edith Wharton Review Volume 34 ; 34 ; 2018 >
+      au < doNotProcess ; 2019 ; Edith Wharton Review Volume 35 ; 35 ; 2019 >
+      au < doNotProcess ; 2020 ; Edith Wharton Review Volume 36 (2020) ; 36 ; 2020 >
+      au < doNotProcess ; 2021 ; Edith Wharton Review Volume 36 (2021) ; 36 ; 2021 >
+      au < released ; 2022 ; Edith Wharton Review Volume 38 (2022) ; 38 ; 2022 >
+      au < expected ; 2023 ; Edith Wharton Review Volume 39 (2023) ; 39 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = George Eliot-George Henry Lewes Studies ;
+        issn = 2372-1901 ;
+        eissn = 2372-191X
+      >
+
+      param[journal_id] = george-eliot
+
+      au < manifest ; 2009 ; George Eliot-George Henry Lewes Studies Volume 56-57 ; 56-57 ; 2009 >
+      au < doNotProcess ; 2010 ; George Eliot-George Henry Lewes Studies Volume 2010 ; 2010 ; 2010 >
+      au < doNotProcess ; 2011 ; George Eliot-George Henry Lewes Studies Volume 2011 ; 2011 ; 2011 >
+      au < doNotProcess ; 2012 ; George Eliot-George Henry Lewes Studies Volume 2012 ; 2012 ; 2012 >
+      au < doNotProcess ; 2013 ; George Eliot-George Henry Lewes Studies Volume 2013 ; 2013 ; 2013 >
+      au < doNotProcess ; 2014 ; George Eliot-George Henry Lewes Studies Volume 66 ; 66 ; 2014 >
+      au < doNotProcess ; 2015 ; George Eliot-George Henry Lewes Studies Volume 67 ; 67 ; 2015 >
+      au < doNotProcess ; 2016 ; George Eliot-George Henry Lewes Studies Volume 68 ; 68 ; 2016 >
+      au < doNotProcess ; 2017 ; George Eliot-George Henry Lewes Studies Volume 69 ; 69 ; 2017 >
+      au < doNotProcess ; 2018 ; George Eliot-George Henry Lewes Studies Volume 70 ; 70 ; 2018 >
+      au < doNotProcess ; 2019 ; George Eliot-George Henry Lewes Studies Volume 71 ; 71 ; 2019 >
+      au < doNotProcess ; 2020 ; George Eliot-George Henry Lewes Studies Volume 72 ; 72 ; 2020 >
+      au < doNotProcess ; 2021 ; George Eliot-George Henry Lewes Studies Volume 73 ; 73 ; 2021 >
+      au < released ; 2022 ; George Eliot-George Henry Lewes Studies Volume 74 ; 74 ; 2022 >
+      au < expected ; 2023 ; George Eliot-George Henry Lewes Studies Volume 75 ; 75 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Gestalt Review ;
+        issn = 1084-8657 ;
+        eissn = 1945-4023
+      >
+
+      param[journal_id] = gestalt-review
+
+      au < manifest ; 1997 ; Gestalt Review Volume 1 ; 1 ; 1997 >
+      au < manifest ; 1998 ; Gestalt Review Volume 2 ; 2 ; 1998 >
+      au < manifest ; 1999 ; Gestalt Review Volume 3 ; 3 ; 1999 >
+      au < manifest ; 2000 ; Gestalt Review Volume 4 ; 4 ; 2000 >
+      au < manifest ; 2001 ; Gestalt Review Volume 5 ; 5 ; 2001 >
+      au < manifest ; 2002 ; Gestalt Review Volume 6 ; 6 ; 2002 >
+      au < manifest ; 2003 ; Gestalt Review Volume 7 ; 7 ; 2003 >
+      au < manifest ; 2004 ; Gestalt Review Volume 8 ; 8 ; 2004 >
+      au < manifest ; 2005 ; Gestalt Review Volume 9 ; 9 ; 2005 >
+      au < manifest ; 2006 ; Gestalt Review Volume 10 ; 10 ; 2006 >
+      au < manifest ; 2007 ; Gestalt Review Volume 11 ; 11 ; 2007 >
+      au < manifest ; 2008 ; Gestalt Review Volume 12 ; 12 ; 2008 >
+      au < manifest ; 2009 ; Gestalt Review Volume 13 ; 13 ; 2009 >
+      au < released ; 2010 ; Gestalt Review Volume 14 ; 14 ; 2010 >
+      au < released ; 2011 ; Gestalt Review Volume 15 ; 15 ; 2011 >
+      au < released ; 2012 ; Gestalt Review Volume 16 ; 16 ; 2012 >
+      au < released ; 2013 ; Gestalt Review Volume 17 ; 17 ; 2013 >
+      au < doNotProcess ; 2014 ; Gestalt Review Volume 18 ; 18 ; 2014 >
+      au < doNotProcess ; 2015 ; Gestalt Review Volume 19 ; 19 ; 2015 >
+      au < doNotProcess ; 2016 ; Gestalt Review Volume 20 ; 20 ; 2016 >
+      au < doNotProcess ; 2017 ; Gestalt Review Volume 21 ; 21 ; 2017 >
+      au < doNotProcess ; 2018 ; Gestalt Review Volume 22 ; 22 ; 2018 >
+      au < doNotProcess ; 2019 ; Gestalt Review Volume 23 ; 23 ; 2019 >
+      au < doNotProcess ; 2020 ; Gestalt Review Volume 24 ; 24 ; 2020 >
+      au < doNotProcess ; 2021 ; Gestalt Review Volume 25 ; 25 ; 2021 >
+      au < released ; 2022 ; Gestalt Review Volume 26 ; 26 ; 2022 >
+      au < manifest ; 2023 ; Gestalt Review Volume 27 ; 27 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = International Journal of Persian Literature ;
+        issn = 2376-5739 ;
+        eissn = 2376-5755
+      >
+
+      param[journal_id] = persian-lit
+
+      au < doNotProcess ; 2016 ; International Journal of Persian Literature Volume 2016 ; 2016 ; 2016 >
+      au < doNotProcess ; 2017 ; International Journal of Persian Literature Volume 2017 ; 2017 ; 2017 >
+      au < doNotProcess ; 2018 ; International Journal of Persian Literature Volume 2018 ; 2018 ; 2018 >
+      au < doNotProcess ; 2019 ; International Journal of Persian Literature Volume 2019 ; 2019 ; 2019 >
+      au < doNotProcess ; 2020 ; International Journal of Persian Literature Volume 2020 ; 2020 ; 2020 >
+      au < doNotProcess ; 2021 ; International Journal of Persian Literature Volume 2021 ; 2021 ; 2021 >
+      au < released ; 2022 ; International Journal of Persian Literature Volume 7 ; 7 ; 2022 >
+      au < manifest ; 2023 ; International Journal of Persian Literature Volume 8 ; 8 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal for the Study of Paul and His Letters ;
+        issn = 2159-2063 ;
+        eissn = 2576-7941
+      >
+
+      param[journal_id] = study-of-paul
+
+      au < released ; 2011 ; Journal for the Study of Paul and His Letters Volume 1 ; 1 ; 2011 >
+      au < released ; 2012 ; Journal for the Study of Paul and His Letters Volume 2 ; 2 ; 2012 >
+      au < released ; 2013 ; Journal for the Study of Paul and His Letters Volume 3 ; 3 ; 2013 >
+      au < doNotProcess ; 2014 ; Journal for the Study of Paul and His Letters Volume 4 ; 4 ; 2014 >
+      au < doNotProcess ; 2015 ; Journal for the Study of Paul and His Letters Volume 5 ; 5 ; 2015 >
+      au < doNotProcess ; 2016 ; Journal for the Study of Paul and His Letters Volume 6 ; 6 ; 2016 >
+      au < doNotProcess ; 2017 ; Journal for the Study of Paul and His Letters Volume 7 ; 7 ; 2017 >
+      au < doNotProcess ; 2018 ; Journal for the Study of Paul and His Letters Volume 8 ; 8 ; 2018 >
+      au < doNotProcess ; 2019 ; Journal for the Study of Paul and His Letters Volume 9 ; 9 ; 2019 >
+      au < doNotProcess ; 2020 ; Journal for the Study of Paul and His Letters Volume 10 ; 10 ; 2020 >
+      #Last volume V10 2020
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Asia-Pacific Pop Culture ;
+        issn = 2380-7679 ;
+        eissn = 2380-7687
+      >
+
+      param[journal_id] = jappc
+
+      au < doNotProcess ; 2016 ; Journal of Asia-Pacific Pop Culture Volume 2016 ; 2016 ; 2016 >
+      au < doNotProcess ; 2017 ; Journal of Asia-Pacific Pop Culture Volume 2017 ; 2017 ; 2017 >
+      au < doNotProcess ; 2018 ; Journal of Asia-Pacific Pop Culture Volume 2018 ; 2018 ; 2018 >
+      au < doNotProcess ; 2019 ; Journal of Asia-Pacific Pop Culture Volume 2019 ; 2019 ; 2019 >
+      au < doNotProcess ; 2020 ; Journal of Asia-Pacific Pop Culture Volume 2020 ; 2020 ; 2020 >
+      au < doNotProcess ; 2021 ; Journal of Asia-Pacific Pop Culture Volume 2021 ; 2021 ; 2021 >
+      au < released ; 2022 ; Journal of Asia-Pacific Pop Culture Volume 7 ; 7 ; 2022 >
+      au < manifest ; 2023 ; Journal of Asia-Pacific Pop Culture Volume 8 ; 8 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Information Policy ;
+        issn = 2381-5892 ;
+        eissn = 2158-3897
+      >
+
+      param[journal_id] = information-policy
+
+      au < doNotProcess ; 2011 ; Journal of Information Policy Volume 2011 ; 2011 ; 2011 >
+      au < doNotProcess ; 2012 ; Journal of Information Policy Volume 2012 ; 2012 ; 2012 >
+      au < doNotProcess ; 2013 ; Journal of Information Policy Volume 2013 ; 2013 ; 2013 >
+      au < doNotProcess ; 2014 ; Journal of Information Policy Volume 2014 ; 2014 ; 2014 >
+      au < doNotProcess ; 2015 ; Journal of Information Policy Volume 2015 ; 2015 ; 2015 >
+      au < doNotProcess ; 2016 ; Journal of Information Policy Volume 2016 ; 2016 ; 2016 >
+      au < doNotProcess ; 2017 ; Journal of Information Policy Volume 2017 ; 2017 ; 2017 >
+      au < doNotProcess ; 2018 ; Journal of Information Policy Volume 2018 ; 2018 ; 2018 >
+      au < doNotProcess ; 2019 ; Journal of Information Policy Volume 2019 ; 2019 ; 2019 >
+      au < doNotProcess ; 2020 ; Journal of Information Policy Volume 2020 ; 2020 ; 2020 >
+      au < doNotProcess ; 2021 ; Journal of Information Policy Volume 2021 ; 2021 ; 2021 >
+      au < released ; 2022 ; Journal of Information Policy Volume 12 ; 12 ; 2022 >
+      au < expected ; 2023 ; Journal of Information Policy Volume 13 ; 13 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Jewish Ethics ;
+        issn = 2334-1777 ;
+        eissn = 2334-1785
+      >
+
+      param[journal_id] = jewish-ethics
+
+      au < doNotProcess ; 2015 ; Journal of Jewish Ethics Volume 2015 ; 2015 ; 2015 >
+      au < doNotProcess ; 2016 ; Journal of Jewish Ethics Volume 2016 ; 2016 ; 2016 >
+      au < doNotProcess ; 2017 ; Journal of Jewish Ethics Volume 2017 ; 2017 ; 2017 >
+      au < doNotProcess ; 2018 ; Journal of Jewish Ethics Volume 2018 ; 2018 ; 2018 >
+      au < doNotProcess ; 2019 ; Journal of Jewish Ethics Volume 2019 ; 2019 ; 2019 >
+      au < doNotProcess ; 2020 ; Journal of Jewish Ethics Volume 2020 ; 2020 ; 2020 >
+      au < doNotProcess ; 2021 ; Journal of Jewish Ethics Volume 2021 ; 2021 ; 2021 >
+      au < released ; 2022 ; Journal of Jewish Ethics Volume 8 ; 8 ; 2022 >
+      au < expected ; 2023 ; Journal of Jewish Ethics Volume 9 ; 9 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Natural Resources Policy Research ;
+        issn = 1939-0459 ;
+        eissn = 1939-0467
+      >
+
+      param[journal_id] = jnrpr
+
+      au < manifest ; 2009 ; Journal of Natural Resources Policy Research Volume 1 ; 1 ; 2009 >
+      au < released ; 2010 ; Journal of Natural Resources Policy Research Volume 2 ; 2 ; 2010 >
+      au < released ; 2011 ; Journal of Natural Resources Policy Research Volume 3 ; 3 ; 2011 >
+      au < released ; 2012 ; Journal of Natural Resources Policy Research Volume 4 ; 4 ; 2012 >
+      au < released ; 2013 ; Journal of Natural Resources Policy Research Volume 5 ; 5 ; 2013 >
+      au < doNotProcess ; 2014 ; Journal of Natural Resources Policy Research Volume 6 ; 6 ; 2014 >
+      au < doNotProcess ; 2015 ; Journal of Natural Resources Policy Research Volume 7 ; 7 ; 2015 >
+      au < doNotProcess ; 2018 ; Journal of Natural Resources Policy Research Volume 8 ; 8 ; 2018 >
+      au < doNotProcess ; 2019 ; Journal of Natural Resources Policy Research Volume 9 ; 9 ; 2019 >
+      au < manifest ; 2020 ; Journal of Natural Resources Policy Research Volume 10 ; 10 ; 2020 >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Posthuman Studies ;
+        issn = 2472-4513 ;
+        eissn = 2471-4461
+      >
+
+      param[journal_id] = posthuman-studies
+
+      au < doNotProcess ; 2017 ; Journal of Posthuman Studies Volume 2017 ; 2017 ; 2017 >
+      au < doNotProcess ; 2018 ; Journal of Posthuman Studies Volume 2018 ; 2018 ; 2018 >
+      au < doNotProcess ; 2019 ; Journal of Posthuman Studies Volume 2019 ; 2019 ; 2019 >
+      au < doNotProcess ; 2020 ; Journal of Posthuman Studies Volume 2020 ; 2020 ; 2020 >
+      au < released ; 2021 ; Journal of Posthuman Studies Volume 5 ; 5 ; 2021 >
+      au < released ; 2022 ; Journal of Posthuman Studies Volume 6 ; 6 ; 2022 >
+      au < expected ; 2023 ; Journal of Posthuman Studies Volume 7 ; 7 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of the Pennsylvania Academy of Science ;
+        issn = 1044-6753 ;
+        eissn = 2475-1898
+      >
+
+      param[journal_id] = pa-academy-of-science
+
+      au < doNotProcess ; 2011 ; Journal of the Pennsylvania Academy of Science Volume 85 ; 85 ; 2011 >
+      au < doNotProcess ; 2012 ; Journal of the Pennsylvania Academy of Science Volume 86 ; 86 ; 2012 >
+      au < doNotProcess ; 2013 ; Journal of the Pennsylvania Academy of Science Volume 87 ; 87 ; 2013 >
+      au < doNotProcess ; 2014 ; Journal of the Pennsylvania Academy of Science Volume 88 ; 88 ; 2014 >
+      au < doNotProcess ; 2015 ; Journal of the Pennsylvania Academy of Science Volume 89 ; 89 ; 2015 >
+      au < doNotProcess ; 2016 ; Journal of the Pennsylvania Academy of Science Volume 90 ; 90 ; 2016 >
+      au < doNotProcess ; 2017 ; Journal of the Pennsylvania Academy of Science Volume 91 ; 91 ; 2017 >
+      au < doNotProcess ; 2018 ; Journal of the Pennsylvania Academy of Science Volume 92 ; 92 ; 2018 >
+      au < doNotProcess ; 2019 ; Journal of the Pennsylvania Academy of Science Volume 93 ; 93 ; 2019 >
+      au < doNotProcess ; 2020 ; Journal of the Pennsylvania Academy of Science Volume 94 ; 94 ; 2020 >
+      au < doNotProcess ; 2021 ; Journal of the Pennsylvania Academy of Science Volume 95 ; 95 ; 2021 >
+      au < expected ; 2023 ; Journal of the Pennsylvania Academy of Science Volume 96 ; 96 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Theological Interpretation ;
+        issn = 1936-0843 ;
+        eissn = 2576-7933
+      >
+
+      param[journal_id] = theological-interpretation
+
+      au < manifest ; 2007 ; Journal of Theological Interpretation Volume 1 ; 1 ; 2007 >
+      au < manifest ; 2008 ; Journal of Theological Interpretation Volume 2 ; 2 ; 2008 >
+      au < manifest ; 2009 ; Journal of Theological Interpretation Volume 3 ; 3 ; 2009 >
+      au < released ; 2010 ; Journal of Theological Interpretation Volume 4 ; 4 ; 2010 >
+      au < released ; 2011 ; Journal of Theological Interpretation Volume 5 ; 5 ; 2011 >
+      au < released ; 2012 ; Journal of Theological Interpretation Volume 6 ; 6 ; 2012 >
+      au < released ; 2013 ; Journal of Theological Interpretation Volume 7 ; 7 ; 2013 >
+      au < doNotProcess ; 2014 ; Journal of Theological Interpretation Volume 8 ; 8 ; 2014 >
+      au < doNotProcess ; 2015 ; Journal of Theological Interpretation Volume 9 ; 9 ; 2015 >
+      au < doNotProcess ; 2016 ; Journal of Theological Interpretation Volume 10 ; 10 ; 2016 >
+      au < doNotProcess ; 2017 ; Journal of Theological Interpretation Volume 11 ; 11 ; 2017 >
+      au < doNotProcess ; 2018 ; Journal of Theological Interpretation Volume 12 ; 12 ; 2018 >
+      au < doNotProcess ; 2019 ; Journal of Theological Interpretation Volume 13 ; 13 ; 2019 >
+      au < doNotProcess ; 2020 ; Journal of Theological Interpretation Volume 14 ; 14 ; 2020 >
+      au < doNotProcess ; 2021 ; Journal of Theological Interpretation Volume 15 ; 15 ; 2021 >
+      au < released ; 2022 ; Journal of Theological Interpretation Volume 16 ; 16 ; 2022 >
+      au < manifest ; 2023 ; Journal of Theological Interpretation Volume 17 ; 17 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Libraries: Culture, History, and Society ;
+        issn = 2473-0343 ;
+        eissn = 2473-036X
+      >
+
+      param[journal_id] = libraries
+
+      au < doNotProcess ; 2017 ; Libraries: Culture, History, and Society Volume 1 ; 1 ; 2017 >
+      au < doNotProcess ; 2018 ; Libraries: Culture, History, and Society Volume 2 ; 2 ; 2018 >
+      au < doNotProcess ; 2019 ; Libraries: Culture, History, and Society Volume 3 ; 3 ; 2019 >
+      au < doNotProcess ; 2020 ; Libraries: Culture, History, and Society Volume 4 ; 4 ; 2020 >
+      au < doNotProcess ; 2021 ; Libraries: Culture, History, and Society Volume 5 ; 5 ; 2021 >
+      au < released ; 2022 ; Libraries: Culture, History, and Society Volume 6 ; 6 ; 2022 >
+      au < manifest ; 2023 ; Libraries: Culture, History, and Society Volume 7 ; 7 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Nathaniel Hawthorne Review ;
+        issn = 0890-4197 ;
+        eissn = 2573-6973
+      >
+
+      param[journal_id] = nathaniel-hawthorne
+
+      au < doNotProcess ; 2014 ; Nathaniel Hawthorne Review Volume 40 ; 40 ; 2014 >
+      au < doNotProcess ; 2015 ; Nathaniel Hawthorne Review Volume 41 ; 41 ; 2015 >
+      au < doNotProcess ; 2016 ; Nathaniel Hawthorne Review Volume 42 ; 42 ; 2016 >
+      au < doNotProcess ; 2017 ; Nathaniel Hawthorne Review Volume 43 ; 43 ; 2017 >
+      au < doNotProcess ; 2018 ; Nathaniel Hawthorne Review Volume 44 ; 44 ; 2018 >
+      au < doNotProcess ; 2019 ; Nathaniel Hawthorne Review Volume 45 ; 45 ; 2019 >
+      au < doNotProcess ; 2020 ; Nathaniel Hawthorne Review Volume 46 ; 46 ; 2020 >
+      au < doNotProcess ; 2021 ; Nathaniel Hawthorne Review Volume 47 ; 47 ; 2021 >
+      au < released ; 2022 ; Nathaniel Hawthorne Review Volume 48 ; 48 ; 2022 >
+      au < expected ; 2023 ; Nathaniel Hawthorne Review Volume 49 ; 49 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Resources for American Literary Study ;
+        issn = 0048-7384 ;
+        eissn = 1529-1502
+      >
+
+      param[journal_id] = rals
+
+      au < manifest ; 1971 ; Resources for American Literary Study Volume 1 ; 1 ; 1971 >
+      au < manifest ; 1972 ; Resources for American Literary Study Volume 2 ; 2 ; 1972 >
+      au < manifest ; 1973 ; Resources for American Literary Study Volume 3 ; 3 ; 1973 >
+      au < manifest ; 1974 ; Resources for American Literary Study Volume 4 ; 4 ; 1974 >
+      au < manifest ; 1975 ; Resources for American Literary Study Volume 5 ; 5 ; 1975 >
+      au < manifest ; 1976 ; Resources for American Literary Study Volume 6 ; 6 ; 1976 >
+      au < manifest ; 1977 ; Resources for American Literary Study Volume 7 ; 7 ; 1977 >
+      au < manifest ; 1978 ; Resources for American Literary Study Volume 8 ; 8 ; 1978 >
+      au < manifest ; 1979 ; Resources for American Literary Study Volume 9 ; 9 ; 1979 >
+      au < manifest ; 1980 ; Resources for American Literary Study Volume 10 ; 10 ; 1980 >
+      au < manifest ; 1981 ; Resources for American Literary Study Volume 11 ; 11 ; 1981 >
+      au < manifest ; 1982 ; Resources for American Literary Study Volume 12 ; 12 ; 1982 >
+      au < manifest ; 1983 ; Resources for American Literary Study Volume 13 ; 13 ; 1983 >
+      au < manifest ; 1984 ; Resources for American Literary Study Volume 14 ; 14 ; 1984 >
+      au < manifest ; 1985 ; Resources for American Literary Study Volume 15 ; 15 ; 1985 >
+      au < manifest ; 1989 ; Resources for American Literary Study Volume 16 ; 16 ; 1989 >
+      au < manifest ; 1990 ; Resources for American Literary Study Volume 17 (1990) ; 17 ; 1990 >
+      au < manifest ; 1991 ; Resources for American Literary Study Volume 17 (1991) ; 17 ; 1991 >
+      au < manifest ; 1992 ; Resources for American Literary Study Volume 18 ; 18 ; 1992 >
+      au < manifest ; 1993 ; Resources for American Literary Study Volume 19 ; 19 ; 1993 >
+      au < manifest ; 1994 ; Resources for American Literary Study Volume 20 ; 20 ; 1994 >
+      au < manifest ; 1995 ; Resources for American Literary Study Volume 21 ; 21 ; 1995 >
+
+      au < manifest ; 1997 ; Resources for American Literary Study Volume 23 ; 23 ; 1997 >
+      au < manifest ; 1998 ; Resources for American Literary Study Volume 24 ; 24 ; 1998 >
+      au < manifest ; 1999 ; Resources for American Literary Study Volume 25 ; 25 ; 1999 >
+      au < manifest ; 2000 ; Resources for American Literary Study Volume 26 ; 26 ; 2000 >
+      au < manifest ; 2001 ; Resources for American Literary Study Volume 27 ; 27 ; 2001 >
+      au < manifest ; 2002 ; Resources for American Literary Study Volume 28 ; 28 ; 2002 >
+      au < manifest ; 2004 ; Resources for American Literary Study Volume 29 ; 29 ; 2004 >
+      au < manifest ; 2005 ; Resources for American Literary Study Volume 30 ; 30 ; 2005 >
+      au < manifest ; 2006 ; Resources for American Literary Study Volume 31 ; 31 ; 2006 >
+      au < manifest ; 2007 ; Resources for American Literary Study Volume 32 ; 32 ; 2007 >
+      au < manifest ; 2008 ; Resources for American Literary Study Volume 33 ; 33 ; 2008 >
+      au < manifest ; 2009 ; Resources for American Literary Study Volume 34 ; 34 ; 2009 >
+      au < released ; 2010 ; Resources for American Literary Study Volume 35 ; 35 ; 2010 >
+      au < released ; 2011 ; Resources for American Literary Study Volume 36 ; 36 ; 2011 >
+      au < doNotProcess ; 2014 ; Resources for American Literary Study Volume 37 ; 37 ; 2014 >
+      au < doNotProcess ; 2015 ; Resources for American Literary Study Volume 38 ; 38 ; 2015 >
+      au < doNotProcess ; 2017 ; Resources for American Literary Study Volume 39 ; 39 ; 2017 >
+      au < doNotProcess ; 2018 ; Resources for American Literary Study Volume 40 ; 40 ; 2018 >
+      au < doNotProcess ; 2019 ; Resources for American Literary Study Volume 41 ; 41 ; 2019 >
+      au < doNotProcess ; 2021 ; Resources for American Literary Study Volume 42 ; 42 ; 2021 >
+      au < expected ; 2023 ; Resources for American Literary Study Volume 43 ; 43 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Studies in American Humor ;
+        issn = 0095-280X ;
+        eissn = 2333-9934
+      >
+
+      param[journal_id] = american-humor
+
+      au < manifest ; 2009 ; Studies in American Humor Volume 19 ; 19 ; 2009 >
+      au < manifest ; 2009 ; Studies in American Humor Volume 20 ; 20 ; 2009 >
+      au < doNotProcess ; 2010 ; Studies in American Humor Volume 2010 ; 2010 ; 2010 >
+      au < doNotProcess ; 2011 ; Studies in American Humor Volume 2011 ; 2011 ; 2011 >
+      au < doNotProcess ; 2012 ; Studies in American Humor Volume 2012 ; 2012 ; 2012 >
+      au < doNotProcess ; 2013 ; Studies in American Humor Volume 2013 ; 2013 ; 2013 >
+      au < doNotProcess ; 2014 ; Studies in American Humor Volume 2014 ; 2014 ; 2014 >
+      au < doNotProcess ; 2015 ; Studies in American Humor Volume 1 ; 1 ; 2015 >
+      au < doNotProcess ; 2016 ; Studies in American Humor Volume 2 ; 2 ; 2016 >
+      au < doNotProcess ; 2017 ; Studies in American Humor Volume 3 ; 3 ; 2017 >
+      au < doNotProcess ; 2018 ; Studies in American Humor Volume 4 ; 4 ; 2018 >
+      au < doNotProcess ; 2019 ; Studies in American Humor Volume 5 ; 5 ; 2019 >
+      au < doNotProcess ; 2020 ; Studies in American Humor Volume 6 ; 6 ; 2020 >
+      au < doNotProcess ; 2021 ; Studies in American Humor Volume 7 ; 7 ; 2021 >
+      au < released ; 2022 ; Studies in American Humor Volume 8 ; 8 ; 2022 >
+      au < manifest ; 2023 ; Studies in American Humor Volume 9 ; 9 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Style ;
+        issn = 0039-4238 ;
+        eissn = 2374-6629
+      >
+
+      param[journal_id] = style
+
+      au < manifest ; 2009 ; Style Volume 43 ; 43 ; 2009 >
+      au < doNotProcess ; 2010 ; Style Volume 2010 ; 2010 ; 2010 >
+      au < doNotProcess ; 2011 ; Style Volume 2011 ; 2011 ; 2011 >
+      au < doNotProcess ; 2012 ; Style Volume 2012 ; 2012 ; 2012 >
+      au < doNotProcess ; 2013 ; Style Volume 2013 ; 2013 ; 2013 >
+      au < doNotProcess ; 2014 ; Style Volume 2014 ; 2014 ; 2014 >
+      au < doNotProcess ; 2015 ; Style Volume 2015 ; 2015 ; 2015 >
+      au < doNotProcess ; 2016 ; Style Volume 2016 ; 2016 ; 2016 >
+      au < doNotProcess ; 2017 ; Style Volume 2017 ; 2017 ; 2017 >
+      au < doNotProcess ; 2018 ; Style Volume 2018 ; 2018 ; 2018 >
+      au < doNotProcess ; 2019 ; Style Volume 2019 ; 2019 ; 2019 >
+      au < doNotProcess ; 2020 ; Style Volume 2020 ; 2020 ; 2020 >
+      au < doNotProcess ; 2021 ; Style Volume 2021 ; 2021 ; 2021 >
+      au < released ; 2022 ; Style Volume 56 ; 56 ; 2022 >
+      au < manifest ; 2023 ; Style Volume 57 ; 57 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = The Cormac McCarthy Journal ;
+        issn = 2333-3073 ;
+        eissn = 2333-3065
+      >
+
+      param[journal_id] = cormac-mccarthy
+
+      au < doNotProcess ; 2011 ; The Cormac McCarthy Journal Volume 9 ; 9 ; 2011 >
+      au < doNotProcess ; 2012 ; The Cormac McCarthy Journal Volume 10 ; 10 ; 2012 >
+      au < doNotProcess ; 2013 ; The Cormac McCarthy Journal Volume 11 ; 11 ; 2013 >
+      au < doNotProcess ; 2014 ; The Cormac McCarthy Journal Volume 12 ; 12 ; 2014 >
+      au < doNotProcess ; 2015 ; The Cormac McCarthy Journal Volume 13 ; 13 ; 2015 >
+      au < doNotProcess ; 2016 ; The Cormac McCarthy Journal Volume 14 ; 14 ; 2016 >
+      au < doNotProcess ; 2017 ; The Cormac McCarthy Journal Volume 15 ; 15 ; 2017 >
+      au < doNotProcess ; 2018 ; The Cormac McCarthy Journal Volume 16 ; 16 ; 2018 >
+      au < doNotProcess ; 2019 ; The Cormac McCarthy Journal Volume 17 ; 17 ; 2019 >
+      au < doNotProcess ; 2020 ; The Cormac McCarthy Journal Volume 18 ; 18 ; 2020 >
+      au < doNotProcess ; 2021 ; The Cormac McCarthy Journal Volume 19 ; 19 ; 2021 >
+      au < released ; 2022 ; The Cormac McCarthy Journal Volume 20 ; 20 ; 2022 >
+      au < manifest ; 2023 ; The Cormac McCarthy Journal Volume 21 ; 21 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = The Harold Pinter Review: Essays on Contemporary Drama ;
+        issn = 2473-8433 ;
+        eissn = 2473-8441
+      >
+
+      param[journal_id] = harold-pinter
+
+      au < doNotProcess ; 2017 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2017 ; 2017 ; 2017 >
+      au < doNotProcess ; 2018 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2018 ; 2018 ; 2018 >
+      au < doNotProcess ; 2019 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2019 ; 2019 ; 2019 >
+      au < doNotProcess ; 2020 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2020 ; 2020 ; 2020 >
+      au < doNotProcess ; 2021 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2021 ; 2021 ; 2021 >
+      au < released ; 2022 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 6 ; 6 ; 2022 >
+      au < manifest ; 2023 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 7 ; 7 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = The Journal of Development Perspectives ;
+        issn = 2375-0456 ;
+        eissn = 2375-0464
+      >
+
+      param[journal_id] = development-perspectives
+
+      au < doNotProcess ; 2017 ; The Journal of Development Perspectives Volume 1 ; 1 ; 2017 >
+      au < doNotProcess ; 2018 ; The Journal of Development Perspectives Volume 2 ; 2 ; 2018 >
+      au < doNotProcess ; 2019 ; The Journal of Development Perspectives Volume 3 ; 3 ; 2019 >
+      au < released ; 2020 ; The Journal of Development Perspectives Volume 4 ; 4 ; 2020 >
+
+  }
+
+
+  {
+
+      title <
+        name = The Journal of World Christianity ;
+        issn = 2377-8784 ;
+        eissn = 1943-1538
+      >
+
+      param[journal_id] = world-christianity
+
+      au < doNotProcess ; 2012 ; The Journal of World Christianity Volume 5 ; 5 ; 2012 >
+      au < doNotProcess ; 2016 ; The Journal of World Christianity Volume 6 ; 6 ; 2016 >
+      au < doNotProcess ; 2017 ; The Journal of World Christianity Volume 7 ; 7 ; 2017 >
+      au < doNotProcess ; 2018 ; The Journal of World Christianity Volume 8 ; 8 ; 2018 >
+      au < doNotProcess ; 2019 ; The Journal of World Christianity Volume 9 ; 9 ; 2019 >
+      au < doNotProcess ; 2020 ; The Journal of World Christianity Volume 10 ; 10 ; 2020 >
+      au < doNotProcess ; 2021 ; The Journal of World Christianity Volume 11 ; 11 ; 2021 >
+      au < released ; 2022 ; The Journal of World Christianity Volume 12 ; 12 ; 2022 >
+      au < manifest ; 2023 ; The Journal of World Christianity Volume 13 ; 13 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = The Korean Language in America ;
+        issn = 2332-0346 ;
+        eissn = 2374-670X
+      >
+
+      param[journal_id] = korean-language
+
+      au < manifest ; 2009 ; The Korean Language in America Volume 14 ; 14 ; 2009 >
+      au < doNotProcess ; 2010 ; The Korean Language in America Volume 15 ; 15 ; 2010 >
+      au < doNotProcess ; 2011 ; The Korean Language in America Volume 16 ; 16 ; 2011 >
+      au < doNotProcess ; 2012 ; The Korean Language in America Volume 17 ; 17 ; 2012 >
+      au < doNotProcess ; 2013 ; The Korean Language in America Volume 18 ; 18 ; 2013 >
+      au < doNotProcess ; 2015 ; The Korean Language in America Volume 19 ; 19 ; 2015 >
+      au < doNotProcess ; 2016 ; The Korean Language in America Volume 19-20 ; 19-20 ; 2016 >
+      au < doNotProcess ; 2017 ; The Korean Language in America Volume 20-21 ; 20-21 ; 2017 >
+      au < doNotProcess ; 2018 ; The Korean Language in America Volume 21-22 ; 21-22 ; 2018 >
+      au < doNotProcess ; 2019 ; The Korean Language in America Volume 23 ; 23 ; 2019 >
+      au < doNotProcess ; 2020 ; The Korean Language in America Volume 24 ; 24 ; 2020 >
+      au < doNotProcess ; 2021 ; The Korean Language in America Volume 25 ; 25 ; 2021 >
+      au < expected ; 2023 ; The Korean Language in America Volume 26 ; 26 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = The Langston Hughes Review ;
+        issn = 0737-0555 ;
+        eissn = 2576-649X
+      >
+
+      param[journal_id] = langston-hughes
+
+      au < doNotProcess ; 2019 ; The Langston Hughes Review Volume 25 ; 25 ; 2019 >
+      au < doNotProcess ; 2020 ; The Langston Hughes Review Volume 26 ; 26 ; 2020 >
+      au < doNotProcess ; 2021 ; The Langston Hughes Review Volume 27 ; 27 ; 2021 >
+      au < released ; 2022 ; The Langston Hughes Review Volume 28 ; 28 ; 2022 >
+      au < manifest ; 2023 ; The Langston Hughes Review Volume 29 ; 29 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Transformations: The Journal of Inclusive Scholarship and Pedagogy ;
+        issn = 1052-5017 ;
+        eissn = 2377-9578
+      >
+
+      param[journal_id] = transformations
+
+      au < doNotProcess ; 2012 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 22-23 ; 22-23 ; 2012 >
+      au < doNotProcess ; 2013 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 23 ; 23 ; 2013 >
+      au < doNotProcess ; 2014 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 24-25 ; 24-25 ; 2014 >
+      au < doNotProcess ; 2016 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 25-26 ; 25-26 ; 2016 >
+      au < doNotProcess ; 2017 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 27 ; 27 ; 2017 >
+      au < doNotProcess ; 2018 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 28 ; 28 ; 2018 >
+      au < doNotProcess ; 2019 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 29 ; 29 ; 2019 >
+      au < doNotProcess ; 2020 ; Transformations: The Journal of Inclusive Scholarship and Pedagogy Volume 30 ; 30 ; 2020 >
+
+  }
+
+
+  {
+
+      title <
+        name = Wesley and Methodist Studies ;
+        issn = 2291-1723 ;
+        eissn = 2291-1731
+      >
+
+      param[journal_id] = wms
+
+      au < doNotProcess ; 2011 ; Wesley and Methodist Studies Volume 3 ; 3 ; 2011 >
+      au < doNotProcess ; 2012 ; Wesley and Methodist Studies Volume 4 ; 4 ; 2012 >
+      au < doNotProcess ; 2013 ; Wesley and Methodist Studies Volume 5 ; 5 ; 2013 >
+      au < doNotProcess ; 2014 ; Wesley and Methodist Studies Volume 6 ; 6 ; 2014 >
+      au < doNotProcess ; 2015 ; Wesley and Methodist Studies Volume 7 ; 7 ; 2015 >
+      au < doNotProcess ; 2016 ; Wesley and Methodist Studies Volume 8 ; 8 ; 2016 >
+      au < doNotProcess ; 2017 ; Wesley and Methodist Studies Volume 9 ; 9 ; 2017 >
+      au < doNotProcess ; 2018 ; Wesley and Methodist Studies Volume 10 ; 10 ; 2018 >
+      au < doNotProcess ; 2019 ; Wesley and Methodist Studies Volume 11 ; 11 ; 2019 >
+      au < doNotProcess ; 2020 ; Wesley and Methodist Studies Volume 12 ; 12 ; 2020 >
+      au < doNotProcess ; 2021 ; Wesley and Methodist Studies Volume 13 ; 13 ; 2021 >
+      au < released ; 2022 ; Wesley and Methodist Studies Volume 14 ; 14 ; 2022 >
+      au < manifest ; 2023 ; Wesley and Methodist Studies Volume 15 ; 15 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = William Carlos Williams Review ;
+        issn = 0196-6286 ;
+        eissn = 1935-0244
+      >
+
+      param[journal_id] = william-carlos-williams
+
+      au < doNotProcess ; 2013 ; William Carlos Williams Review Volume 30 ; 30 ; 2013 >
+      au < doNotProcess ; 2014 ; William Carlos Williams Review Volume 31 ; 31 ; 2014 >
+      au < doNotProcess ; 2015 ; William Carlos Williams Review Volume 32 ; 32 ; 2015 >
+      au < doNotProcess ; 2016 ; William Carlos Williams Review Volume 33 ; 33 ; 2016 >
+      au < doNotProcess ; 2017 ; William Carlos Williams Review Volume 34 ; 34 ; 2017 >
+      au < doNotProcess ; 2018 ; William Carlos Williams Review Volume 35 ; 35 ; 2018 >
+      au < doNotProcess ; 2019 ; William Carlos Williams Review Volume 36 ; 36 ; 2019 >
+      au < doNotProcess ; 2020 ; William Carlos Williams Review Volume 37 ; 37 ; 2020 >
+      au < doNotProcess ; 2021 ; William Carlos Williams Review Volume 38 ; 38 ; 2021 >
+      au < released ; 2022 ; William Carlos Williams Review Volume 39 ; 39 ; 2022 >
+      au < manifest ; 2023 ; William Carlos Williams Review Volume 40 ; 40 ; 2023 >
+
+  }
+
+  {
+
+      title <
+        name = Hiperboreea ;
+        issn = 2688-8211 ;
+        eissn = 2284-5666
+      >
+
+      param[journal_id] = hiperboreea
+
+      au < released ; 2012 ; Hiperboreea Volume A1 ; A1 ; 2012 >
+      au < released ; 2013 ; Hiperboreea Volume A2 ; A2 ; 2013 >
+      au < released ; 2014 ; Hiperboreea Volume 1 ; 1 ; 2014 >
+      au < released ; 2015 ; Hiperboreea Volume 2 ; 2 ; 2015 >
+      au < doNotProcess ; 2016 ; Hiperboreea Volume 3 ; 3 ; 2016 >
+      au < doNotProcess ; 2017 ; Hiperboreea Volume 4 ; 4 ; 2017 >
+      au < doNotProcess ; 2018 ; Hiperboreea Volume 5 ; 5 ; 2018 >
+      au < doNotProcess ; 2019 ; Hiperboreea Volume 6 ; 6 ; 2019 >
+      au < doNotProcess ; 2020 ; Hiperboreea Volume 7 ; 7 ; 2020 >
+      au < doNotProcess ; 2021 ; Hiperboreea Volume 8 ; 8 ; 2021 >
+      au < released ; 2022 ; Hiperboreea Volume 9 ; 9 ; 2022 >
+      au < manifest ; 2023 ; Hiperboreea Volume 10 ; 10 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Hungarian Studies Review ;
+        issn = 0713-8083 ;
+        eissn = 1705-8422
+      >
+
+      param[journal_id] = hungarian-studies
+
+      au < doNotProcess ; 2016 ; Hungarian Studies Review Volume 43 ; 43 ; 2016 >
+      au < doNotProcess ; 2017 ; Hungarian Studies Review Volume 44 ; 44 ; 2017 >
+      au < doNotProcess ; 2018 ; Hungarian Studies Review Volume 45 ; 45 ; 2018 >
+      au < doNotProcess ; 2020 ; Hungarian Studies Review Volume 46-47 ; 46-47 ; 2020 >
+      au < doNotProcess ; 2021 ; Hungarian Studies Review Volume 48 ; 48 ; 2021 >
+      au < released ; 2022 ; Hungarian Studies Review Volume 49 ; 49 ; 2022 >
+      au < expected ; 2023 ; Hungarian Studies Review Volume 50 ; 50 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of African Development ;
+        issn = 2689-4092 ;
+        eissn = 2689-4084
+      >
+
+      param[journal_id] = african-development
+
+      au < manifest ; 2005 ; Journal of African Development Volume 7 ; 7 ; 2005 >
+      au < manifest ; 2006 ; Journal of African Development Volume 8 ; 8 ; 2006 >
+      au < manifest ; 2007 ; Journal of African Development Volume 9 ; 9 ; 2007 >
+      au < manifest ; 2008 ; Journal of African Development Volume 10 ; 10 ; 2008 >
+      au < manifest ; 2009 ; Journal of African Development Volume 11 ; 11 ; 2009 >
+      au < doNotProcess ; 2010 ; Journal of African Development Volume 12 ; 12 ; 2010 >
+      au < doNotProcess ; 2011 ; Journal of African Development Volume 13 ; 13 ; 2011 >
+      au < doNotProcess ; 2012 ; Journal of African Development Volume 14 ; 14 ; 2012 >
+      au < doNotProcess ; 2013 ; Journal of African Development Volume 15 ; 15 ; 2013 >
+      au < doNotProcess ; 2014 ; Journal of African Development Volume 16 ; 16 ; 2014 >
+      au < doNotProcess ; 2015 ; Journal of African Development Volume 17 ; 17 ; 2015 >
+      au < doNotProcess ; 2016 ; Journal of African Development Volume 18 ; 18 ; 2016 >
+      au < doNotProcess ; 2017 ; Journal of African Development Volume 19 ; 19 ; 2017 >
+      au < doNotProcess ; 2018 ; Journal of African Development Volume 20 ; 20 ; 2018 >
+      au < doNotProcess ; 2020 ; Journal of African Development Volume 21 ; 21 ; 2020 >
+      au < released ; 2021 ; Journal of African Development Volume 22 ; 22 ; 2021 >
+      au < released ; 2022 ; Journal of African Development Volume 23 ; 23 ; 2022 >
+      au < manifest ; 2023 ; Journal of African Development Volume 24 ; 24 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Austrian-American History ;
+        eissn = 2475-0913
+      >
+
+      param[journal_id] = austrian-american-history
+
+      au < doNotProcess ; 2017 ; Journal of Austrian-American History Volume 2017 ; 2017 ; 2017 >
+      au < doNotProcess ; 2018 ; Journal of Austrian-American History Volume 2018 ; 2018 ; 2018 >
+      au < doNotProcess ; 2019 ; Journal of Austrian-American History Volume 2019 ; 2019 ; 2019 >
+      au < doNotProcess ; 2020 ; Journal of Austrian-American History Volume 2020 ; 2020 ; 2020 >
+      au < released ; 2021 ; Journal of Austrian-American History Volume 5 ; 5 ; 2021 >
+      au < released ; 2022 ; Journal of Austrian-American History Volume 6 ; 6 ; 2022 >
+      au < manifest ; 2023 ; Journal of Austrian-American History Volume 7 ; 7 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Journal of Minority Achievement, Creativity, and Leadership ;
+        issn = 2688-7983 ;
+        eissn = 2688-7991
+      >
+
+      param[journal_id] = jmacl
+
+      au < doNotProcess ; 2020 ; Journal of Minority Achievement, Creativity, and Leadership Volume 1 ; 1 ; 2020 >
+      au < manifest ; 2021 ; Journal of Minority Achievement, Creativity, and Leadership Volume 2 ; 2 ; 2021 >
+      au < expected ; 2023 ; Journal of Minority Achievement, Creativity, and Leadership Volume 3 ; 3 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Milton Studies ;
+        issn = 0076-8820 ;
+        eissn = 2330-796X
+      >
+
+      param[journal_id] = milton-studies
+
+      au < manifest ; 1969 ; Milton Studies Volume 1 ; 1 ; 1969 >
+      au < manifest ; 1970 ; Milton Studies Volume 2 ; 2 ; 1970 >
+      au < manifest ; 1971 ; Milton Studies Volume 3 ; 3 ; 1971 >
+      au < manifest ; 1972 ; Milton Studies Volume 4 ; 4 ; 1972 >
+      au < manifest ; 1973 ; Milton Studies Volume 5 ; 5 ; 1973 >
+      au < manifest ; 1974 ; Milton Studies Volume 6 ; 6 ; 1974 >
+      au < manifest ; 1975 ; Milton Studies Volume 7 ; 7 ; 1975 >
+      au < manifest ; 1975 ; Milton Studies Volume 8 ; 8 ; 1975 >
+      au < manifest ; 1976 ; Milton Studies Volume 9 ; 9 ; 1976 >
+      au < manifest ; 1977 ; Milton Studies Volume 10 ; 10 ; 1977 >
+      au < manifest ; 1978 ; Milton Studies Volume 11 ; 11 ; 1978 >
+      au < manifest ; 1978 ; Milton Studies Volume 12 ; 12 ; 1978 >
+      au < manifest ; 1979 ; Milton Studies Volume 13 ; 13 ; 1979 >
+      au < manifest ; 1980 ; Milton Studies Volume 14 ; 14 ; 1980 >
+      au < manifest ; 1981 ; Milton Studies Volume 15 ; 15 ; 1981 >
+      au < manifest ; 1982 ; Milton Studies Volume 16 ; 16 ; 1982 >
+      au < manifest ; 1983 ; Milton Studies Volume 17 ; 17 ; 1983 >
+      au < manifest ; 1983 ; Milton Studies Volume 18 ; 18 ; 1983 >
+      au < manifest ; 1984 ; Milton Studies Volume 19 ; 19 ; 1984 >
+      au < manifest ; 1984 ; Milton Studies Volume 20 ; 20 ; 1984 >
+      au < manifest ; 1985 ; Milton Studies Volume 21 ; 21 ; 1985 >
+      au < manifest ; 1986 ; Milton Studies Volume 22 ; 22 ; 1986 >
+      au < manifest ; 1987 ; Milton Studies Volume 23 ; 23 ; 1987 >
+      au < manifest ; 1988 ; Milton Studies Volume 24 ; 24 ; 1988 >
+      au < manifest ; 1989 ; Milton Studies Volume 25 ; 25 ; 1989 >
+      au < manifest ; 1990 ; Milton Studies Volume 26 ; 26 ; 1990 >
+      au < manifest ; 1991 ; Milton Studies Volume 27 ; 27 ; 1991 >
+      au < manifest ; 1992 ; Milton Studies Volume 28 ; 28 ; 1992 >
+      au < manifest ; 1992 ; Milton Studies Volume 29 ; 29 ; 1992 >
+      au < manifest ; 1993 ; Milton Studies Volume 30 ; 30 ; 1993 >
+      au < manifest ; 1994 ; Milton Studies Volume 31 ; 31 ; 1994 >
+      au < manifest ; 1995 ; Milton Studies Volume 32 ; 32 ; 1995 >
+      au < manifest ; 1996 ; Milton Studies Volume 33 ; 33 ; 1996 >
+      au < manifest ; 1996 ; Milton Studies Volume 34 ; 34 ; 1996 >
+      au < manifest ; 1997 ; Milton Studies Volume 35 ; 35 ; 1997 >
+      au < manifest ; 1998 ; Milton Studies Volume 36 ; 36 ; 1998 >
+      au < manifest ; 1999 ; Milton Studies Volume 37 ; 37 ; 1999 >
+      au < manifest ; 2000 ; Milton Studies Volume 38 ; 38 ; 2000 >
+      au < manifest ; 2000 ; Milton Studies Volume 39 ; 39 ; 2000 >
+      au < manifest ; 2001 ; Milton Studies Volume 40 ; 40 ; 2001 >
+      au < manifest ; 2002 ; Milton Studies Volume 41 ; 41 ; 2002 >
+      au < manifest ; 2002 ; Milton Studies Volume 42 ; 42 ; 2002 >
+      au < manifest ; 2004 ; Milton Studies Volume 43 ; 43 ; 2004 >
+      au < manifest ; 2005 ; Milton Studies Volume 44 ; 44 ; 2005 >
+      au < manifest ; 2006 ; Milton Studies Volume 45 ; 45 ; 2006 >
+      au < manifest ; 2007 ; Milton Studies Volume 46 ; 46 ; 2007 >
+      au < manifest ; 2008 ; Milton Studies Volume 47 ; 47 ; 2008 >
+      au < manifest ; 2008 ; Milton Studies Volume 48 ; 48 ; 2008 >
+      au < manifest ; 2009 ; Milton Studies Volume 49 ; 49 ; 2009 >
+      au < manifest ; 2009 ; Milton Studies Volume 50 ; 50 ; 2009 >
+      au < manifest ; 2010 ; Milton Studies Volume 51 ; 51 ; 2010 >
+      au < released ; 2011 ; Milton Studies Volume 52 ; 52 ; 2011 >
+      au < released ; 2012 ; Milton Studies Volume 53 ; 53 ; 2012 >
+      au < released ; 2013 ; Milton Studies Volume 54 ; 54 ; 2013 >
+      au < doNotProcess ; 2014 ; Milton Studies Volume 55 ; 55 ; 2014 >
+      au < doNotProcess ; 2015 ; Milton Studies Volume 56 ; 56 ; 2015 >
+      au < doNotProcess ; 2016 ; Milton Studies Volume 57 ; 57 ; 2016 >
+      au < doNotProcess ; 2017 ; Milton Studies Volume 58 ; 58 ; 2017 >
+      au < doNotProcess ; 2017 ; Milton Studies Volume 59 ; 59 ; 2017 >
+      au < doNotProcess ; 2018 ; Milton Studies Volume 60 ; 60 ; 2018 >
+      au < doNotProcess ; 2019 ; Milton Studies Volume 61 ; 61 ; 2019 >
+      au < doNotProcess ; 2020 ; Milton Studies Volume 62 ; 62 ; 2020 >
+      au < released ; 2021 ; Milton Studies Volume 63 ; 63 ; 2021 >
+      au < released ; 2022 ; Milton Studies Volume 64 ; 64 ; 2022 >
+      au < manifest ; 2023 ; Milton Studies Volume 65 ; 65 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Nineteenth Century Studies ;
+        issn = 0893-7931 ;
+        eissn = 2688-5190
+      >
+
+      param[journal_id] = ncs
+
+      au < manifest ; 1987 ; Nineteenth Century Studies Volume 1 ; 1 ; 1987 >
+      au < manifest ; 1988 ; Nineteenth Century Studies Volume 2 ; 2 ; 1988 >
+      au < manifest ; 1989 ; Nineteenth Century Studies Volume 3 ; 3 ; 1989 >
+      au < manifest ; 1990 ; Nineteenth Century Studies Volume 4 ; 4 ; 1990 >
+      au < manifest ; 1991 ; Nineteenth Century Studies Volume 5 ; 5 ; 1991 >
+      au < manifest ; 1992 ; Nineteenth Century Studies Volume 6 ; 6 ; 1992 >
+      au < manifest ; 1993 ; Nineteenth Century Studies Volume 7 ; 7 ; 1993 >
+      au < manifest ; 1994 ; Nineteenth Century Studies Volume 8 ; 8 ; 1994 >
+      au < manifest ; 1995 ; Nineteenth Century Studies Volume 9 ; 9 ; 1995 >
+      au < manifest ; 1996 ; Nineteenth Century Studies Volume 10 ; 10 ; 1996 >
+      au < manifest ; 1997 ; Nineteenth Century Studies Volume 11 ; 11 ; 1997 >
+      au < manifest ; 1998 ; Nineteenth Century Studies Volume 12 ; 12 ; 1998 >
+      au < manifest ; 1999 ; Nineteenth Century Studies Volume 13 ; 13 ; 1999 >
+      au < manifest ; 2000 ; Nineteenth Century Studies Volume 14 ; 14 ; 2000 >
+      au < manifest ; 2001 ; Nineteenth Century Studies Volume 15 ; 15 ; 2001 >
+      au < manifest ; 2002 ; Nineteenth Century Studies Volume 16 ; 16 ; 2002 >
+      au < manifest ; 2003 ; Nineteenth Century Studies Volume 17 ; 17 ; 2003 >
+      au < manifest ; 2004 ; Nineteenth Century Studies Volume 18 ; 18 ; 2004 >
+      au < manifest ; 2005 ; Nineteenth Century Studies Volume 19 ; 19 ; 2005 >
+      au < manifest ; 2006 ; Nineteenth Century Studies Volume 20 ; 20 ; 2006 >
+      au < manifest ; 2007 ; Nineteenth Century Studies Volume 21 ; 21 ; 2007 >
+      au < manifest ; 2008 ; Nineteenth Century Studies Volume 22 ; 22 ; 2008 >
+      au < manifest ; 2009 ; Nineteenth Century Studies Volume 23 ; 23 ; 2009 >
+      au < released ; 2010 ; Nineteenth Century Studies Volume 24 ; 24 ; 2010 >
+      au < doNotProcess ; 2011 ; Nineteenth Century Studies Volume 2011 ; 2011 ; 2011 >
+      au < doNotProcess ; 2012 ; Nineteenth Century Studies Volume 2012 ; 2012 ; 2012 >
+      au < doNotProcess ; 2013 ; Nineteenth Century Studies Volume 2013 ; 2013 ; 2013 >
+      au < doNotProcess ; 2014 ; Nineteenth Century Studies Volume 2014 ; 2014 ; 2014 >
+      au < doNotProcess ; 2015 ; Nineteenth Century Studies Volume 2015 ; 2015 ; 2015 >
+      au < released ; 2016 ; Nineteenth Century Studies Volume 29 ; 29 ; 2016 >
+      au < doNotProcess ; 2018 ; Nineteenth Century Studies Volume 30 ; 30 ; 2018 >
+      au < doNotProcess ; 2019 ; Nineteenth Century Studies Volume 31 ; 31 ; 2019 >
+      au < doNotProcess ; 2020 ; Nineteenth Century Studies Volume 32 ; 32 ; 2020 >
+      au < released ; 2021 ; Nineteenth Century Studies Volume 33 ; 33 ; 2021 >
+      au < released ; 2022 ; Nineteenth Century Studies Volume 34 ; 34 ; 2022 >
+      au < manifest ; 2023 ; Nineteenth Century Studies Volume 35 ; 35 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Studies in the American Short Story ;
+        issn = 2688-1926 ;
+        eissn = 2688-1942
+      >
+
+      param[journal_id] = sass
+
+      au < doNotProcess ; 2020 ; Studies in the American Short Story Volume 1 ; 1 ; 2020 >
+      au < doNotProcess ; 2021 ; Studies in the American Short Story Volume 2 ; 2 ; 2021 >
+      au < released ; 2022 ; Studies in the American Short Story Volume 3 ; 3 ; 2022 >
+      au < manifest ; 2023 ; Studies in the American Short Story Volume 4 ; 4 ; 2023 >
+
+  }
+
+
+  {
+
+      title <
+        name = Thornton Wilder Journal ;
+        issn = 2688-1985 ;
+        eissn = 2688-1993
+      >
+
+      param[journal_id] = thornton-wilder
+
+      au < doNotProcess ; 2020 ; Thornton Wilder Journal Volume 1 ; 1 ; 2020 >
+      au < doNotProcess ; 2021 ; Thornton Wilder Journal Volume 2 ; 2 ; 2021 >
+      au < released ; 2022 ; Thornton Wilder Journal Volume 3 ; 3 ; 2022 >
+      au < manifest ; 2023 ; Thornton Wilder Journal Volume 4 ; 4 ; 2023 >
+
+  }
+
+  {
+
+      title <
+        name = AMP: American Music Perspectives ;
+        issn = 2688-3635 ;
+        eissn = 2688-3643
+      >
+
+      param[journal_id] = amp
+
+      au < released ; 2020 ; AMP: American Music Perspectives Volume 1 ; 1 ; 2020 >
+      au < released ; 2021 ; AMP: American Music Perspectives Volume 2 ; 2 ; 2021 >
+      au < expected ; 2023 ; AMP: American Music Perspectives Volume 3 ; 3 ; 2023 >
+
+  }
+
+  {
+
+      title <
+        name = Bishop–Lowell Studies ;
+        issn = 2692-9481 ;
+        eissn = 2692-949X
+      >
+
+      param[journal_id] = bishop-lowell
+
+      au < released ; 2021 ; Bishop–Lowell Studies Volume 1 ; 1 ; 2021 >
+      au < released ; 2022 ; Bishop–Lowell Studies Volume 2 ; 2 ; 2022 >
+      au < expected ; 2023 ; Bishop–Lowell Studies Volume 3 ; 3 ; 2023 >
+
+  }
+
+  {
+
+      title <
+        name = Journal for the History of Rhetoric ;
+        issn = 2687-8003 ;
+        eissn = 2687-8011
+      >
+
+      param[journal_id] = jhr
+
+      au < manifest ; 1998 ; Journal for the History of Rhetoric Volume 1 ; 1 ; 1998 >
+      au < manifest ; 1999 ; Journal for the History of Rhetoric Volume 2 ; 2 ; 1999 >
+      au < manifest ; 2000 ; Journal for the History of Rhetoric Volume 3 ; 3 ; 2000 >
+      au < manifest ; 2001 ; Journal for the History of Rhetoric Volume 4 ; 4 ; 2001 >
+      au < manifest ; 2002 ; Journal for the History of Rhetoric Volume 5 ; 5 ; 2002 >
+      au < manifest ; 2003 ; Journal for the History of Rhetoric Volume 6 ; 6 ; 2003 >
+      au < manifest ; 2004 ; Journal for the History of Rhetoric Volume 7 ; 7 ; 2004 >
+      au < manifest ; 2005 ; Journal for the History of Rhetoric Volume 8 ; 8 ; 2005 >
+      au < manifest ; 2006 ; Journal for the History of Rhetoric Volume 9 ; 9 ; 2006 >
+      au < manifest ; 2007 ; Journal for the History of Rhetoric Volume 10 ; 10 ; 2007 >
+      au < manifest ; 2009 ; Journal for the History of Rhetoric Volume 11-12 ; 11-12 ; 2009 >
+      au < doesNotExist ; 2010 ; Journal for the History of Rhetoric Volume 13 ; 13 ; 2010 >
+      au < released ; 2011 ; Journal for the History of Rhetoric Volume 14 ; 14 ; 2011 >
+      au < released ; 2012 ; Journal for the History of Rhetoric Volume 15 ; 15 ; 2012 >
+      au < released ; 2013 ; Journal for the History of Rhetoric Volume 16 ; 16 ; 2013 >
+      au < released ; 2014 ; Journal for the History of Rhetoric Volume 17 ; 17 ; 2014 >
+      au < released ; 2015 ; Journal for the History of Rhetoric Volume 18 ; 18 ; 2015 >
+      au < released ; 2016 ; Journal for the History of Rhetoric Volume 19 ; 19 ; 2016 >
+      au < released ; 2017 ; Journal for the History of Rhetoric Volume 20 ; 20 ; 2017 >
+      au < released ; 2018 ; Journal for the History of Rhetoric Volume 21 ; 21 ; 2018 >
+      au < released ; 2019 ; Journal for the History of Rhetoric Volume 22 ; 22 ; 2019 >
+      au < released ; 2020 ; Journal for the History of Rhetoric Volume 23 ; 23 ; 2020 >
+      au < released ; 2021 ; Journal for the History of Rhetoric Volume 24 ; 24 ; 2021 >
+      au < released ; 2022 ; Journal for the History of Rhetoric Volume 25 ; 25 ; 2022 >
+      au < manifest ; 2023 ; Journal for the History of Rhetoric Volume 26 ; 26 ; 2023 >
+
+  }
+
+  {
+
+      title <
+        name = Methodist History ;
+        issn = 0026-1238 ;
+        eissn = 2769-3244
+      >
+
+      param[journal_id] = methodist-history
+
+      au < released ; 2017 ; Methodist History Volume 55 ; 55 ; 2017 >
+      au < released ; 2018 ; Methodist History Volume 56 ; 56 ; 2018 >
+      au < released ; 2019 ; Methodist History Volume 57 ; 57 ; 2019 >
+      au < released ; 2020 ; Methodist History Volume 58 ; 58 ; 2020 >
+      au < released ; 2021 ; Methodist History Volume 59 ; 59 ; 2021 >
+      au < released ; 2022 ; Methodist History Volume 60 ; 60 ; 2022 >
+      au < manifest ; 2023 ; Methodist History Volume 61 ; 61 ; 2023 >
+
+  }
+
+  {
+
+      title <
+        name = Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora ;
+        issn = 1539-8250 ;
+        eissn = 1944-7914
+      >
+
+      param[journal_id] = philosophia-africana
+
+      au < manifest ; 2001 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 4 ; 4 ; 2001 >
+      au < manifest ; 2002 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 5 ; 5 ; 2002 >
+      au < manifest ; 2003 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 6 ; 6 ; 2003 >
+      au < manifest ; 2004 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 7 ; 7 ; 2004 >
+      au < manifest ; 2005 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 8 ; 8 ; 2005 >
+      au < manifest ; 2006 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 9 ; 9 ; 2006 >
+      au < manifest ; 2007 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 10 ; 10 ; 2007 >
+      au < manifest ; 2008 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 11 ; 11 ; 2008 >
+      au < manifest ; 2009 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 12 ; 12 ; 2009 >
+      au < released ; 2010 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 13 (2010) ; 13 ; 2010 >
+      au < released ; 2011 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 13 (2011) ; 13 ; 2011 >
+      au < released ; 2012 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 14 ; 14 ; 2012 >
+      au < released ; 2013 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 15 ; 15 ; 2013 >
+      au < released ; 2014 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 16 ; 16 ; 2014 >
+      au < released ; 2015 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 17 ; 17 ; 2015 >
+      au < released ; 2016 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 18 ; 18 ; 2016 >
+      au < released ; 2020 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 19 ; 19 ; 2020 >
+      au < released ; 2021 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 20 ; 20 ; 2021 >
+      au < released ; 2022 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 21 ; 21 ; 2022 >
+      au < expected ; 2023 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 22 ; 22 ; 2023 >
+
+  }
+
+  {
+
+      title <
+        name = Restoration and Eighteenth-Century Theatre Research ;
+        issn = 0034-5822 ;
+        eissn = 2769-2221
+      >
+
+      param[journal_id] = rectr
+
+      au < released ; 2015 ; Restoration and Eighteenth-Century Theatre Research Volume 30 ; 30 ; 2015 >
+      au < released ; 2016 ; Restoration and Eighteenth-Century Theatre Research Volume 31 ; 31 ; 2016 >
+      au < released ; 2017 ; Restoration and Eighteenth-Century Theatre Research Volume 32 ; 32 ; 2017 >
+      au < released ; 2021 ; Restoration and Eighteenth-Century Theatre Research Volume 33 ; 33 ; 2021 >
+      au < released ; 2022 ; Restoration and Eighteenth-Century Theatre Research Volume 34 ; 34 ; 2022 >
+      au < expected ; 2023 ; Restoration and Eighteenth-Century Theatre Research Volume 35 ; 35 ; 2023 >
+
+  }
+
+  {
+
+      title <
+        name = The Scriblerian and the Kit-Cats ;
+        issn = 0190-731X ;
+        eissn = 2165-0624
+      >
+
+      param[journal_id] = scriblerian
+
+      au < released ; 2016 ; The Scriblerian and the Kit-Cats Volume 48-49 ; 48-49 ; 2016 >
+      au < released ; 2017 ; The Scriblerian and the Kit-Cats Volume 49 ; 49 ; 2017 >
+      au < released ; 2017 ; The Scriblerian and the Kit-Cats Volume 50 (2017) ; 50 ; 2017 >
+      au < released ; 2018 ; The Scriblerian and the Kit-Cats Volume 50 (2018) ; 50 ; 2018 >
+      au < released ; 2018 ; The Scriblerian and the Kit-Cats Volume 51 (2018) ; 51 ; 2018 >
+      au < released ; 2019 ; The Scriblerian and the Kit-Cats Volume 51 (2019) ; 51 ; 2019 >
+      au < released ; 2019 ; The Scriblerian and the Kit-Cats Volume 52 (2019) ; 52 ; 2019 >
+      au < released ; 2020 ; The Scriblerian and the Kit-Cats Volume 52 (2020) ; 52 ; 2020 >
+      au < released ; 2020 ; The Scriblerian and the Kit-Cats Volume 53 (2020) ; 53 ; 2020 >
+      au < released ; 2021 ; The Scriblerian and the Kit-Cats Volume 53 (2021) ; 53 ; 2021 >
+      au < released ; 2021 ; The Scriblerian and the Kit-Cats Volume 54 ; 54 ; 2021 >
+      au < released ; 2022 ; The Scriblerian and the Kit-Cats Volume 55 ; 55 ; 2022 >
+      au < expected ; 2023 ; The Scriblerian and the Kit-Cats Volume 56 ; 56 ; 2023 >
+
+  }
+
+  {
+
+      title <
+        name = Victorians Institute Journal ;
+        issn = 0886-3865 ;
+        eissn = 2693-3411
+      >
+
+      param[journal_id] = victorians-institute
+
+      au < released ; 2014 ; Victorians Institute Journal Volume 42 ; 42 ; 2014 >
+      au < released ; 2015 ; Victorians Institute Journal Volume 43 ; 43 ; 2015 >
+      au < released ; 2016 ; Victorians Institute Journal Volume 44 ; 44 ; 2016 >
+      au < released ; 2017 ; Victorians Institute Journal Volume 45 ; 45 ; 2017 >
+      au < released ; 2018 ; Victorians Institute Journal Volume 46 ; 46 ; 2018 >
+      au < released ; 2020 ; Victorians Institute Journal Volume 47 ; 47 ; 2020 >
+      au < released ; 2021 ; Victorians Institute Journal Volume 48 ; 48 ; 2021 >
+      au < released ; 2022 ; Victorians Institute Journal Volume 49 ; 49 ; 2022 >
+      au < manifest ; 2023 ; Victorians Institute Journal Volume 50 ; 50 ; 2023 >
+
+  }
+
+}

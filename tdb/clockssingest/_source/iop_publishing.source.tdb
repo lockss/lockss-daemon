@@ -4,7 +4,7 @@
     name = IOP Publishing ;
     info[contract] = 2015 ;
     info[tester] = S ;
-    info[platform] = Source
+    info[platform] = Blocked-waiting for publihser. Source
   >
     hidden[proxy] = DIRECT
     provider = IOP Publishing
@@ -19,23 +19,26 @@
      {
      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/iopjats-released/
 
-     au < readySource ; frozen ; 2022 ; IOP Publishing JATS Source Content 2022_01 ; 2022_01 >
-     au < readySource ; frozen ; 2022 ; IOP Publishing JATS Source Content 2022_02 ; 2022_02 >
+     au < readySource ; finished ; 2022 ; IOP Publishing JATS Source Content 2022_01 ; 2022_01 >
+     au < readySource ; finished ; 2022 ; IOP Publishing JATS Source Content 2022_02 ; 2022_02 >
      #No more AUs. Moving to https.
      }
      {
      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/iopjatsrp1-released/
 
-     au < readySource ; frozen ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V1 ; 2022_01 >
-     au < readySource ; frozen ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V2 ; 2022_02 >
-     au < readySource ; frozen ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V3 ; 2022_03 >
-     au < readySource ; frozen ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V4 ; 2022_04 >
+     au < readySource ; finished ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V1 ; 2022_01 >
+     au < readySource ; finished ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V2 ; 2022_02 >
+     au < readySource ; finished ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V3 ; 2022_03 >
+     au < readySource ; finished ; 2022 ; IOP Publishing JATS Source Replace Content 2020-2021 V4 ; 2022_04 >
      #no more buckets for this set
      }
      {
      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/iopjats-released/
 
      au < readySource ; crawling ; 2023 ; IOP Publishing JATS Source Content 2023_01 ; 2023_01 >
+     au < readySource ; crawling ; 2023 ; IOP Publishing JATS Source Content 2023_02 ; 2023_02 >
+     au < readySource ; crawling ; 2023 ; IOP Publishing JATS Source Content 2023_03 ; 2023_03 >
+     au < expected ; exists ; 2023 ; IOP Publishing JATS Source Content 2023_04 ; 2023_04 >
 
      }
    }
@@ -67,7 +70,7 @@
 #      au < readySource ; finished ; 2021 ; IOP Publishing Source Content 2021_03 ; 2021_03 >
 #      au < readySource ; finished ; 2021 ; IOP Publishing Source Content 2021_04 ; 2021_04 >
 
-      au < readySource ; frozen ; 2022 ; IOP Publishing Source Content 2022_01 ; 2022_01 >
+      au < readySource ; finished ; 2022 ; IOP Publishing Source Content 2022_01 ; 2022_01 >
       #no more buckets for this plugin
     }
     {
@@ -91,13 +94,13 @@
        name = IOP Publishing Books Source Content
     >
     {
-    plugin = needs.plugin
+    #plugin = needs.plugin
     #####Testing
-    param[base_url] = https://clockss-test.lockss.org/sourcefiles/iopbooksbits-released/
-    implicit < status ; status2 ; year ; name ; param[directory] >
+    #param[base_url] = https://clockss-test.lockss.org/sourcefiles/iopbooksbits-released/
+    #implicit < status ; status2 ; year ; name ; param[directory] >
 
     #Books Bits
-    au < expected ; exists ; 2022 ; IOP Publishing Books Source Content 2022_01 ; 2022_01 >
+    #au < expected ; exists ; 2022 ; IOP Publishing Books Source Content 2022_01 ; 2022_01 >
 
     }
     {
@@ -151,7 +154,7 @@
      {
      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/iopecs2019-released/
 
-     au < readySource ; frozen ; 2022 ; IOP Publishing ECS Backfile Source Content 2022_01 ; 2022_01 >
+     au < readySource ; finished ; 2022 ; IOP Publishing ECS Backfile Source Content 2022_01 ; 2022_01 >
      }
 
 #     #Deleted from production UI, but content exists.

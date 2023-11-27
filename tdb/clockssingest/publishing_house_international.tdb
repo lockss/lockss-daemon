@@ -1,0 +1,29 @@
+{
+  publisher <
+    name = Publishing House International ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[poller] = 6
+  >
+    provider = bepress
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = International Journal of Emerging Multidisciplinaries: Mathematics (IJEMD-M) ;
+        issn = 2790-1998 ;
+        eissn = 2790-3257
+      >
+
+      comment[publisher] = Publishing House International
+      param[base_url] = https://www.ijemd.com/
+      param[journal_abbr] = journal
+
+      au < frozen ; exists ; 2022 ; International Journal of Emerging Multidisciplinaries: Mathematics (IJEMD-M) Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2023 ; International Journal of Emerging Multidisciplinaries: Mathematics (IJEMD-M) Volume 2 ; 2 ; >
+
+  }
+
+}

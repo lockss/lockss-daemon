@@ -37,12 +37,16 @@ import java.io.*;
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
 
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 
 
 public class Pub2WebHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
+
+  static Logger log = Logger.getLogger(Pub2WebHtmlMetadataExtractorFactory.class);
   
 
   @Override
@@ -121,8 +125,27 @@ public class Pub2WebHtmlMetadataExtractorFactory implements FileMetadataExtracto
       }
       // leave this method here in case we need to make modifications 
       // note that access.url isn't set to allow for default full_text_cu value (pdf)
-      emitter.emitMetadata(cu, am);
+
+
+      String citation_volume = am.get(MetadataField.FIELD_VOLUME);
+      String tdb_volume = null;
+
+      ArchivalUnit au = cu.getArchivalUnit();
+      TdbAu tdbau = au.getTdbAu();
+
+      String pubName = (tdbau == null) ? null : tdbau.getPublisherName();
+      
+      if (tdbau != null) {
+        tdb_volume = tdbau.getVolume();
+
+        //check volume
+        if (pubName != null && pubName.equals("Microbiology Society") && citation_volume != null && tdb_volume != null && citation_volume.equalsIgnoreCase(tdb_volume)) {
+          log.debug3("Pub2web volume check: date In Au , citation_volume = " + citation_volume + ", tdb_volume = " + tdb_volume + ", pubName = " + pubName);
+          emitter.emitMetadata(cu, am);
+        } else {
+          log.debug3("Pub2web volume check: failed, volume In Au , citation_volume = " + citation_volume + ", tdb_volume = " + ", pubName = " + pubName);
+        }
+      }
     }
-    
   }
 }

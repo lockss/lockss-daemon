@@ -3,9 +3,10 @@
   publisher <
     name = Al-Kindy College of Medicine ;
     info[contract] = 2022 ;
-    info[back] = 2015 ;
+    info[back] = 2006 ;
+    info[min_year] = 2006 ;
     info[tester] = 8 ;
-    info[poller] = 8
+    info[platform] = OJS3
   >
 
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
@@ -27,14 +28,14 @@
       #published 2006 to present
 
       au < frozen ; exists ; 2006 ; Al-Kindy College Medical Journal Volume 2006 ; 3 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; Al-Kindy College Medical Journal Volume 2007 ; 4 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; Al-Kindy College Medical Journal Volume 2008 ; 4 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; Al-Kindy College Medical Journal Volume 2009 ; 5 ; 2009 ; >
+      au < frozen ; exists ; 2007 ; Al-Kindy College Medical Journal Volume 2007 ; 4 ; 2007 ; >
+      au < frozen ; exists ; 2008 ; Al-Kindy College Medical Journal Volume 2008 ; 4 ; 2008 ; >
+      au < frozen ; exists ; 2009 ; Al-Kindy College Medical Journal Volume 2009 ; 5 ; 2009 ; >
       au < frozen ; exists ; 2010 ; Al-Kindy College Medical Journal Volume 2010 ; 6 ; 2010 ; >
-      au < manifest ; exists ; 2011 ; Al-Kindy College Medical Journal Volume 2011 ; 7 ; 2011 ; >
-      au < manifest ; exists ; 2012 ; Al-Kindy College Medical Journal Volume 2012 ; 8 ; 2012 ; >
-      au < manifest ; exists ; 2013 ; Al-Kindy College Medical Journal Volume 2013 ; 9 ; 2013 ; >
-      au < manifest ; exists ; 2014 ; Al-Kindy College Medical Journal Volume 2014 ; 10 ; 2014 ; >
+      au < frozen ; exists ; 2011 ; Al-Kindy College Medical Journal Volume 2011 ; 7 ; 2011 ; >
+      au < frozen ; exists ; 2012 ; Al-Kindy College Medical Journal Volume 2012 ; 8 ; 2012 ; >
+      au < frozen ; exists ; 2013 ; Al-Kindy College Medical Journal Volume 2013 ; 9 ; 2013 ; >
+      au < frozen ; exists ; 2014 ; Al-Kindy College Medical Journal Volume 2014 ; 10 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Al-Kindy College Medical Journal Volume 2015 ; 11 ; 2015 ; >
       au < frozen ; exists ; 2016 ; Al-Kindy College Medical Journal Volume 2016 ; 12 ; 2016 ; >
       au < frozen ; exists ; 2017 ; Al-Kindy College Medical Journal Volume 2017 ; 13 ; 2017 ; >
@@ -42,7 +43,8 @@
       au < frozen ; exists ; 2019 ; Al-Kindy College Medical Journal Volume 2019 ; 15 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Al-Kindy College Medical Journal Volume 2020 ; 16 ; 2020 ; >
       au < frozen ; exists ; 2021 ; Al-Kindy College Medical Journal Volume 2021 ; 17 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; Al-Kindy College Medical Journal Volume 2022 ; 18 ; 2022 ; >
+      au < deepCrawl ; exists ; 2022 ; Al-Kindy College Medical Journal Volume 2022 ; 18 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; Al-Kindy College Medical Journal Volume 2023 ; 19 ; 2023 ; >
 
   }
 

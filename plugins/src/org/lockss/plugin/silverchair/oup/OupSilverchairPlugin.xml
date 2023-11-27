@@ -32,7 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down. waiting for publisher toc fix</string>
+    <string>ready</string>
   </entry>
   <!-- NOTE: this plugin uses shared code (validation, response handler) from parent directory! -->
   <entry>
@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>37</string>
+    <string>39</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -56,7 +56,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <map>
       <entry>
         <string>Poll</string>
-        <string>14</string>
+        <string>15</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -115,6 +115,10 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_start_url</string>
+    <!--
+    https://academic.oup.com/eurheartj/issue/39/22
+    https://academic.oup.com/eurheartj/issue/39/suppl_1
+    -->
     <string>"%s%s/list-of-issues/%d", base_url, journal_id, year</string>
   </entry>
   <entry>
@@ -143,6 +147,9 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>2,"^https?://%s/%s/issue/(volume/)?[^?]+\?browseBy=volume", url_host(base_url), journal_id</string>
       <!-- don't allow bad relative link ending in [XSLTImagePath] -->
       <string>2,"^https?://%s/%s/(article(-(pdf|abstract))?|issue(-pdf)?)/(volume/)?([0-9i]+|doi).*/(%%5B|\[)XSLTImagePath(%%5D|\])$", url_host(base_url), journal_id</string>
+      <!--  https://academic.oup.com/mnras/article/476/2/1765/4848297?login=true-->
+      <string>2,"^https?://%s/.*\?login=true", url_host(base_url)</string>
+      <string>2,"%s.*\?login=true", base_url</string>
       <!-- negative lookahead for www... -->
 --    <string>1,"^https?://%s/%s/(article(-(pdf|abstract))?|issue(-pdf)?)/(volume/)?([0-9i]+|doi)(?!.*/www\.)", url_host(base_url), journal_id</string>
       <!-- meeting abstract supplemental issues use a search query to fill toc -->
@@ -150,6 +157,20 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://%s/%s/search-results\?q=&amp;f_IssueNo=", url_host(base_url), journal_id</string>
       <string>1,"^https?://%s/%s/downloadcitation/[^?]+\?format=ris", url_host(base_url), journal_id</string>
       <string>1,"^https?://%s/view-large/[^?/]+$", url_host(base_url)</string>
+      <string>1,"^https?://(ucp\.silverchair-cdn\.com)/"</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.silverchair.SilverchairScholarlyPublishingCollectiveUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>(fonts|ajax)\.googleapis\.com</string>
+      <string>(fonts|ajax)\.gstatic\.com</string>
+      <string>.*cdn\.jsdelivr\.net</string>
+      <string>.*silverchair-?cdn\.com</string>
     </list>
   </entry>
   <entry>
@@ -269,6 +290,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>https?://academic\.oup\.com/(cassette\.axd|data|UI)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?Expires=[^?]+)?$</string>
       <string>https?://oup\.silverchair-cdn\.com/(cassette\.axd|data|UI)/.*(JS|CSS|\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff))(\?.*)?$</string>
       <string>https?://(fonts\.googleapis\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com|fonts\.gstatic\.com)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?</string>
+      <string>https://academic.oup.com/[^/]+/search-results\?q=&amp;f_IssueNo</string>
     </list>
   </entry>
   <entry>
@@ -277,6 +299,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>"https?://academic\.oup\.com/(cassette\.axd|data|UI)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?Expires=[^?]+)?$", 0</string>
       <string>"https?://oup\.silverchair-cdn\.com/(cassette\.axd|data|UI)/.*(JS|CSS|\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff))(\?.*)?$", 0</string>
       <string>"https?://(fonts\.googleapis\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com|fonts\.gstatic\.com)/.*(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", 0</string>
+      <string>"https://academic.oup.com/[^/]+/search-results\?q=&amp;f_IssueNo=", 0</string>
     </list>
   </entry>
 </map>

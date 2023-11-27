@@ -60,14 +60,14 @@
 
       param[base_url] = https://bmcr.brynmawr.edu/
 
-      au < expected ; Bryn Mawr Classical Review 2016 ; 2016 >
-      au < expected ; Bryn Mawr Classical Review 2017 ; 2017 >
-      au < expected ; Bryn Mawr Classical Review 2018 ; 2018 >
-      au < expected ; Bryn Mawr Classical Review 2019 ; 2019 >
-      au < expected ; Bryn Mawr Classical Review 2020 ; 2020 >
-      
-      au < expected ; Bryn Mawr Classical Review 2021 ; 2021 >
-      au < expected ; Bryn Mawr Classical Review 2022 ; 2022 >
+      au < exists ; Bryn Mawr Classical Review 2016 ; 2016 >
+      au < exists ; Bryn Mawr Classical Review 2017 ; 2017 >
+      au < exists ; Bryn Mawr Classical Review 2018 ; 2018 >
+      au < exists ; Bryn Mawr Classical Review 2019 ; 2019 >
+      au < exists ; Bryn Mawr Classical Review 2020 ; 2020 >
+      au < exists ; Bryn Mawr Classical Review 2021 ; 2021 >
+      au < exists ; Bryn Mawr Classical Review 2022 ; 2022 >
+      au < expected ; Bryn Mawr Classical Review 2023 ; 2023 >
     }
   
   }

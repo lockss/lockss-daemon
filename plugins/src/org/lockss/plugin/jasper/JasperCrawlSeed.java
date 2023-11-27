@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -40,9 +40,7 @@ import org.lockss.state.AuState;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.net.URLEncoder;
 import java.time.Instant;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
@@ -93,7 +91,7 @@ public class JasperCrawlSeed extends BaseCrawlSeed {
   protected List<String> allUrls;
 
   protected String baseUrl;
-  protected String collection;
+  protected String item;
   protected String storeUrl;
 
   /**
@@ -113,15 +111,15 @@ public class JasperCrawlSeed extends BaseCrawlSeed {
   @Override
   protected void initialize() {
     this.baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
-    this.collection = au.getConfiguration().get(ConfigParamDescr.COLLECTION.getKey());
+    this.item = au.getConfiguration().get("item");
     this.fetchUrls = null;
     this.allUrls = null;
     // synthetic url, if you want to update the pattern you must update it in all of these places
     // 1. crawl_rules & start_url
     // 2. JasperCrawlSeed.initialize()
     this.storeUrl = baseUrl
-        + "ProjectJasper?collection="
-        + UrlUtil.encodeUrl(collection);
+        + "ProjectJasper?item="
+        + UrlUtil.encodeUrl(item);
   }
 
   @Override
@@ -201,7 +199,7 @@ public class JasperCrawlSeed extends BaseCrawlSeed {
   protected String makeApiUrl(int page) {
     return String.format("%s%s",
         API_URL,
-        collection
+        item
     );
   }
 
@@ -276,38 +274,38 @@ public class JasperCrawlSeed extends BaseCrawlSeed {
   protected void makeStartUrlContent(Collection<String> urlList,
                                      String url)
       throws IOException {
-    StringBuilder sb = new StringBuilder();
-    sb.append("<html>\n");
-    try {
-      sb.append("<h1>").append(au.getTdbAu().getName()).append("</h1>");
-    } catch (NullPointerException npe) {
-      log.debug2("could not get name from tdb au");
-      sb.append("<h1>").append(au.getName()).append("</h1>");
-    }
-    sb.append("<h3>Collected and preserved urls:</h3>");
-    for (String u : urlList) {
-      sb.append("<a href=\"/ViewContent?url=")
-          .append(URLEncoder.encode(u, Constants.ENCODING_UTF_8))
-          .append("&frame=content&auid=")
-          .append(URLEncoder.encode(au.getAuId(), Constants.ENCODING_UTF_8))
-          .append("\">")
-          .append(u)
-          .append("</a><br/>\n");
-    }
-    sb.append("</html>");
-    CIProperties headers = new CIProperties();
-    //Should use a constant here
-    headers.setProperty("content-type", "text/html; charset=utf-8");
-    UrlData ud = new UrlData(new ByteArrayInputStream(
-                                  sb.toString().getBytes(
-                                      Constants.ENCODING_UTF_8
-                                  )
-                             ),
-                             headers,
-                             url
-    );
-    UrlCacher cacher = facade.makeUrlCacher(ud);
-    cacher.storeContent();
+//    StringBuilder sb = new StringBuilder();
+//    sb.append("<html>\n");
+//    try {
+//      sb.append("<h1>").append(au.getTdbAu().getName()).append("</h1>");
+//    } catch (NullPointerException npe) {
+//      log.debug2("could not get name from tdb au");
+//      sb.append("<h1>").append(au.getName()).append("</h1>");
+//    }
+//    sb.append("<h3>Collected and preserved urls:</h3>");
+//    for (String u : urlList) {
+//      sb.append("<a href=\"/ViewContent?url=")
+//          .append(URLEncoder.encode(u, Constants.ENCODING_UTF_8))
+//          .append("&frame=content&auid=")
+//          .append(URLEncoder.encode(au.getAuId(), Constants.ENCODING_UTF_8))
+//          .append("\">")
+//          .append(u)
+//          .append("</a><br/>\n");
+//    }
+//    sb.append("</html>");
+//    CIProperties headers = new CIProperties();
+//    //Should use a constant here
+//    headers.setProperty("content-type", "text/html; charset=utf-8");
+//    UrlData ud = new UrlData(new ByteArrayInputStream(
+//                                  sb.toString().getBytes(
+//                                      Constants.ENCODING_UTF_8
+//                                  )
+//                             ),
+//                             headers,
+//                             url
+//    );
+//    UrlCacher cacher = facade.makeUrlCacher(ud);
+//    cacher.storeContent();
   }
 
   protected List<String> getOnlyNeedFetchedUrls(List<Map.Entry<String, Integer>> urlsAndTimes) {

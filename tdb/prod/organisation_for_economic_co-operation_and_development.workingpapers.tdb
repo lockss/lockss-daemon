@@ -2,8 +2,18 @@
 
   publisher <
     name = Organisation for Economic Co-operation and Development ;
+    info[tester] = 1 ;
     info[platform] = See LXPLUG-1730
   >
+  
+  #
+  #
+  #
+  # Under heavy development, subject to significant change
+  #
+  #
+  #
+  
   param[base_url] = https://www.oecd-ilibrary.org/
   plugin = org.lockss.plugin.oecd.OecdWorkingpapersPlugin # needs.plugin
 
@@ -129,7 +139,7 @@
         au < manifest ; 2002 ; OECD Guidelines for the Testing of Chemicals Test No. 307 ; environment/test-no-307-aerobic-and-anaerobic-transformation-in-soil ; 9789264070509-en >
         au < manifest ; 2002 ; OECD Guidelines for the Testing of Chemicals Test No. 308 ; environment/test-no-308-aerobic-and-anaerobic-transformation-in-aquatic-sediment-systems ; 9789264070523-en >
         au < manifest ; 2004 ; OECD Guidelines for the Testing of Chemicals Test No. 309 ; environment/test-no-309-aerobic-mineralisation-in-surface-water-simulation-biodegradation-test ; 9789264070547-en >
-        au < ready ; 2014 ; OECD Guidelines for the Testing of Chemicals Test No. 310 ; environment/test-no-310-ready-biodegradability-co2-in-sealed-vessels-headspace-test ; 9789264224506-en >
+        au < testing ; 2014 ; OECD Guidelines for the Testing of Chemicals Test No. 310 ; environment/test-no-310-ready-biodegradability-co2-in-sealed-vessels-headspace-test ; 9789264224506-en >
         au < manifest ; 2006 ; OECD Guidelines for the Testing of Chemicals Test No. 311 ; environment/test-no-311-anaerobic-biodegradability-of-organic-compounds-in-digested-sludge-by-measurement-of-gas-production ; 9789264016842-en >
         au < manifest ; 2004 ; OECD Guidelines for the Testing of Chemicals Test No. 312 ; environment/test-no-312-leaching-in-soil-columns ; 9789264070561-en >
         au < manifest ; 2007 ; OECD Guidelines for the Testing of Chemicals Test No. 313 ; environment/test-no-313-estimation-of-emissions-from-preservative-treated-wood-to-the-environment ; 9789264067370-en >
@@ -284,6 +294,7 @@
         au < manifest ; 2021 ; Gas Market Reports Volume 2021 Issue 3 ; energy/gas-market-report/volume-2021/issue-3 ; e2d51e8b-en >
         au < manifest ; 2021 ; Gas Market Reports Volume 2021 Issue 4 ; energy/gas-market-report/volume-2021/issue-4 ; 8073ac38-en >
         au < manifest ; 2022 ; Gas Market Reports Volume 2022 Issue 1 ; energy/gas-market-reports/volume-2022/issue-1 ; 4a6dc268-en >
+        au < expected ; 2023 ; Gas Market Reports Volume 2023 Issue 1 ; energy/gas-market-reports/volume-2023/issue-1 ; 4a6dc268-en >
     }
 
     {
@@ -303,13 +314,13 @@
     {
 
       title <
-        name = Africa’s Development Dynamics ;
+        name = Africa's Development Dynamics ;
         eissn = 2790-2773
       >
 
-      au < manifest ; 2018 ; Africa’s Development Dynamics Volume 2018 ; development/africa-s-development-dynamics-2018 ; 9789264302501-en >
-      au < manifest ; 2019 ; Africa’s Development Dynamics Volume 2019 ; development/africa-s-development-dynamics-2019 ; c1cd7de0-en >
-      au < manifest ; 2021 ; Africa’s Development Dynamics Volume 2021 ; development/africa-s-development-dynamics-2021 ; 0a5c9314-en >
+      au < manifest ; 2018 ; Africa's Development Dynamics Volume 2018 ; development/africa-s-development-dynamics-2018 ; 9789264302501-en >
+      au < manifest ; 2019 ; Africa's Development Dynamics Volume 2019 ; development/africa-s-development-dynamics-2019 ; c1cd7de0-en >
+      au < manifest ; 2021 ; Africa's Development Dynamics Volume 2021 ; development/africa-s-development-dynamics-2021 ; 0a5c9314-en >
 
 
     }
@@ -956,6 +967,7 @@
       au < manifest ; 2010 ; OECD Transfer Pricing Guidelines for Multinational Enterprises and Tax Administrations Volume 2010 ; taxation/oecd-transfer-pricing-guidelines-for-multinational-enterprises-and-tax-administrations-2010 ; tpg-2010-en >
       au < testing ; 2017 ; OECD Transfer Pricing Guidelines for Multinational Enterprises and Tax Administrations Volume 2017 ; taxation/oecd-transfer-pricing-guidelines-for-multinational-enterprises-and-tax-administrations-2017 ; tpg-2017-en >
       au < manifest ; 2022 ; OECD Transfer Pricing Guidelines for Multinational Enterprises and Tax Administrations Volume 2022 ; taxation/oecd-transfer-pricing-guidelines-for-multinational-enterprises-and-tax-administrations-2022 ; 0e655865-en >
+      au < expected ; 2023 ; OECD Transfer Pricing Guidelines for Multinational Enterprises and Tax Administrations Volume 2023 ; taxation/oecd-transfer-pricing-guidelines-for-multinational-enterprises-and-tax-administrations-2023 ; 0e655865-en >
 
     }
 
@@ -1175,6 +1187,7 @@
       au < manifest ; 2016 ; Trends Shaping Education Volume 2016 ; education/trends-shaping-education-2016 ; trends_edu-2016-en >
       au < manifest ; 2019 ; Trends Shaping Education Volume 2019 ; education/trends-shaping-education-2019 ; trends_edu-2019-en >
       au < testing ; 2022 ; Trends Shaping Education Volume 2022 ; education/trends-shaping-education-2022 ; 6ae8771a-en >
+      au < expected ; 2023 ; Trends Shaping Education Volume 2023 ; education/trends-shaping-education-2023 ; 6ae8771a-en >
 
     }
 

@@ -163,7 +163,7 @@ public class TestCopernicusArchivalUnit extends LockssTestCase {
     // related articles
     shouldCacheTest(ROOT_URL+"123/14/tc-123-18-2012-relations.html", false, ABAu, cus);
     // discussion/"peer review"
-    shouldCacheTest(ROOT_URL+"123/14/tc-123-18-2012-discussion.html", false, ABAu, cus);
+    shouldCacheTest(ROOT_URL+"123/14/tc-123-18-2012-discussion.html", true, ABAu, cus);
 
   }
   

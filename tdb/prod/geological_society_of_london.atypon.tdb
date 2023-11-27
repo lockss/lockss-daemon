@@ -88,7 +88,8 @@
     au < doNotProcess ; 2019 ; Geochemistry: Exploration, Environment, Analysis Volume 19 ; 19 >
     au < doNotProcess ; 2020 ; Geochemistry: Exploration, Environment, Analysis Volume 20 ; 20 >
     au < doNotProcess ; 2021 ; Geochemistry: Exploration, Environment, Analysis Volume 21 ; 21 >
-    au < manifest ; 2022 ; Geochemistry: Exploration, Environment, Analysis Volume 22 ; 22 >
+    au < released ; 2022 ; Geochemistry: Exploration, Environment, Analysis Volume 22 ; 22 >
+    au < manifest ; 2023 ; Geochemistry: Exploration, Environment, Analysis Volume 23 ; 23 >
 
   }
 
@@ -162,10 +163,14 @@
     au < doNotProcess ; 2021 ; Geological Society of London Memoirs Volume 55 ; 55 >
     au < released ; 2021 ; Geological Society of London Memoirs Volume 56 ; 56 >
     au < released ; 2021 ; Geological Society of London Memoirs Volume 57 ; 57 >
-    au < manifest ; 2022 ; Geological Society of London Memoirs Volume 58 ; 58 >
-    au < manifest ; 2022 ; Geological Society of London Memoirs Volume 59 ; 59 >
+    au < released ; 2022 ; Geological Society of London Memoirs Volume 58 ; 58 >
+    au < released ; 2022 ; Geological Society of London Memoirs Volume 59 ; 59 >
     au < exists ; 2022 ; Geological Society of London Memoirs Volume 60 ; 60 >
     au < exists ; 2022 ; Geological Society of London Memoirs Volume 61 ; 61 >
+    au < expected ; 2023 ; Geological Society of London Memoirs Volume 62 ; 62 >
+    au < expected ; 2023 ; Geological Society of London Memoirs Volume 63 ; 63 >
+    au < expected ; 2023 ; Geological Society of London Memoirs Volume 64 ; 64 >
+    au < expected ; 2023 ; Geological Society of London Memoirs Volume 65 ; 65 >
 
   }
 
@@ -697,27 +702,48 @@
     au < released ; 2021 ; Geological Society of London Special Publications Volume 513 ; 513 >
     au < released ; 2021 ; Geological Society of London Special Publications Volume 514 ; 514 >
     au < released ; 2021 ; Geological Society of London Special Publications Volume 515 ; 515 >
-    au < manifest ; 2022 ; Geological Society of London Special Publications Volume 516 ; 516 >
-    au < manifest ; 2022 ; Geological Society of London Special Publications Volume 517 ; 517 >
+    au < released ; 2022 ; Geological Society of London Special Publications Volume 516 ; 516 >
+    au < released ; 2022 ; Geological Society of London Special Publications Volume 517 ; 517 >
     au < manifest ; 2022 ; Geological Society of London Special Publications Volume 518 ; 518 >
-    au < manifest ; 2022 ; Geological Society of London Special Publications Volume 519 ; 519 >
-    au < manifest ; 2022 ; Geological Society of London Special Publications Volume 520 ; 520 >
-    au < manifest ; 2022 ; Geological Society of London Special Publications Volume 521 ; 521 >
-    au < manifest ; 2022 ; Geological Society of London Special Publications Volume 522 ; 522 >
-    au < manifest ; 2022 ; Geological Society of London Special Publications Volume 523 ; 523 >
-    au < manifest ; 2022 ; Geological Society of London Special Publications Volume 524 ; 524 >
-    au < manifest ; 2022 ; Geological Society of London Special Publications Volume 525 ; 525 >
-    au < manifest ; 2022 ; Geological Society of London Special Publications Volume 526 ; 526 >
-    au < manifest ; 2022 ; Geological Society of London Special Publications Volume 527 ; 527 >
-    au < manifest ; 2022 ; Geological Society of London Special Publications Volume 528 ; 528 >
-    au < manifest ; 2022 ; Geological Society of London Special Publications Volume 529 ; 529 >
-    au < manifest ; 2022 ; Geological Society of London Special Publications Volume 530 ; 530 >
-    au < manifest ; 2022 ; Geological Society of London Special Publications Volume 531 ; 531 >
-    au < manifest ; 2022 ; Geological Society of London Special Publications Volume 532 ; 532 >
-    au < manifest ; 2022 ; Geological Society of London Special Publications Volume 533 ; 533 >
-    au < manifest ; 2022 ; Geological Society of London Special Publications Volume 534 ; 534 >
-    au < manifest ; 2022 ; Geological Society of London Special Publications Volume 535 ; 535 >
-    au < manifest ; 2022 ; Geological Society of London Special Publications Volume 536 ; 536 >
+    au < released ; 2022 ; Geological Society of London Special Publications Volume 519 ; 519 >
+    au < released ; 2022 ; Geological Society of London Special Publications Volume 520 ; 520 >
+    au < released ; 2022 ; Geological Society of London Special Publications Volume 521 ; 521 >
+    au < released ; 2022 ; Geological Society of London Special Publications Volume 522 ; 522 >
+    au < released ; 2022 ; Geological Society of London Special Publications Volume 523 ; 523 >
+    au < released ; 2022 ; Geological Society of London Special Publications Volume 524 ; 524 >
+    au < released ; 2022 ; Geological Society of London Special Publications Volume 525 ; 525 >
+    au < released ; 2022 ; Geological Society of London Special Publications Volume 526 ; 526 >
+    au < released ; 2022 ; Geological Society of London Special Publications Volume 527 ; 527 >
+    au < released ; 2022 ; Geological Society of London Special Publications Volume 528 ; 528 >
+    au < released ; 2022 ; Geological Society of London Special Publications Volume 529 ; 529 >
+    au < released ; 2022 ; Geological Society of London Special Publications Volume 530 ; 530 >
+    au < released ; 2022 ; Geological Society of London Special Publications Volume 531 ; 531 >
+    au < released ; 2022 ; Geological Society of London Special Publications Volume 532 ; 532 >
+    au < released ; 2022 ; Geological Society of London Special Publications Volume 533 ; 533 >
+    au < released ; 2022 ; Geological Society of London Special Publications Volume 534 ; 534 >
+    au < released ; 2022 ; Geological Society of London Special Publications Volume 535 ; 535 >
+    au < released ; 2022 ; Geological Society of London Special Publications Volume 536 ; 536 >
+    au < manifest ; 2023 ; Geological Society of London Special Publications Volume 537 ; 537 >
+    au < manifest ; 2023 ; Geological Society of London Special Publications Volume 538 ; 538 >
+    au < manifest ; 2023 ; Geological Society of London Special Publications Volume 539 ; 539 >
+    au < manifest ; 2023 ; Geological Society of London Special Publications Volume 540 ; 540 >
+    au < manifest ; 2023 ; Geological Society of London Special Publications Volume 541 ; 541 >
+    au < manifest ; 2023 ; Geological Society of London Special Publications Volume 542 ; 542 >
+    au < manifest ; 2023 ; Geological Society of London Special Publications Volume 543 ; 543 >
+    au < manifest ; 2023 ; Geological Society of London Special Publications Volume 544 ; 544 >
+    au < manifest ; 2023 ; Geological Society of London Special Publications Volume 545 ; 545 >
+    au < expected ; 2023 ; Geological Society of London Special Publications Volume 546 ; 546 >
+    au < expected ; 2023 ; Geological Society of London Special Publications Volume 547 ; 547 >
+    au < expected ; 2023 ; Geological Society of London Special Publications Volume 548 ; 548 >
+    au < expected ; 2023 ; Geological Society of London Special Publications Volume 549 ; 549 >
+    au < expected ; 2023 ; Geological Society of London Special Publications Volume 550 ; 550 >
+    au < expected ; 2023 ; Geological Society of London Special Publications Volume 551 ; 551 >
+    au < expected ; 2023 ; Geological Society of London Special Publications Volume 552 ; 552 >
+    au < expected ; 2023 ; Geological Society of London Special Publications Volume 553 ; 553 >
+    au < expected ; 2023 ; Geological Society of London Special Publications Volume 554 ; 554 >
+    au < expected ; 2023 ; Geological Society of London Special Publications Volume 555 ; 555 >
+    au < expected ; 2023 ; Geological Society of London Special Publications Volume 556 ; 556 >
+    au < expected ; 2023 ; Geological Society of London Special Publications Volume 557 ; 557 >
 
   }
 
@@ -927,7 +953,8 @@
     au < doNotProcess ; 2019 ; Journal of the Geological Society of London Volume 176 ; 176 >
     au < doNotProcess ; 2020 ; Journal of the Geological Society of London Volume 177 ; 177 >
     au < doNotProcess ; 2021 ; Journal of the Geological Society of London Volume 178 ; 178 >
-    au < manifest ; 2022 ; Journal of the Geological Society of London Volume 179 ; 179 >
+    au < released ; 2022 ; Journal of the Geological Society of London Volume 179 ; 179 >
+    au < manifest ; 2023 ; Journal of the Geological Society of London Volume 180 ; 180 >
 
   }
 
@@ -970,7 +997,8 @@
       au < doNotProcess ; 2019 ; Petroleum Geoscience Volume 25 ; 25 >
       au < doNotProcess ; 2020 ; Petroleum Geoscience Volume 26 ; 26 >
       au < doNotProcess ; 2021 ; Petroleum Geoscience Volume 27 ; 27 >
-      au < manifest ; 2022 ; Petroleum Geoscience Volume 28 ; 28 >
+      au < released ; 2022 ; Petroleum Geoscience Volume 28 ; 28 >
+      au < manifest ; 2023 ; Petroleum Geoscience Volume 29 ; 29 >
 
   }
 
@@ -1061,7 +1089,8 @@
       au < doNotProcess ; 2019 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 52 ; 52 >
       au < doNotProcess ; 2020 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 53 ; 53 >
       au < doNotProcess ; 2021 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 54 ; 54 >
-      au < manifest ; 2022 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 55 ; 55 >
+      au < released ; 2022 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 55 ; 55 >
+      au < manifest ; 2023 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 56 ; 56 >
 
   }
 
@@ -1247,6 +1276,7 @@
     au < doNotProcess ; 2018-2019 ; Proceedings of the Yorkshire Geological Society Volume 62 ; 62 >
     au < doNotProcess ; 2020-2021 ; Proceedings of the Yorkshire Geological Society Volume 63 ; 63 >
     au < manifest ; 2022-2023 ; Proceedings of the Yorkshire Geological Society Volume 64 ; 64 >
+    au < expected ; 2023-2024 ; Proceedings of the Yorkshire Geological Society Volume 65 ; 65 >
 
   }
 
@@ -1322,7 +1352,8 @@
     au < doNotProcess ; 2019 ; Scottish Journal of Geology Volume 55 ; 55 >
     au < doNotProcess ; 2020 ; Scottish Journal of Geology Volume 56 ; 56 >
     au < doNotProcess ; 2021 ; Scottish Journal of Geology Volume 57 ; 57 >
-    au < manifest ; 2022 ; Scottish Journal of Geology Volume 58 ; 58 >
+    au < released ; 2022 ; Scottish Journal of Geology Volume 58 ; 58 >
+    au < manifest ; 2023 ; Scottish Journal of Geology Volume 59 ; 59 >
 
     }
     

@@ -226,6 +226,10 @@ public abstract class LockssServlet extends HttpServlet
       clientAddr = getLocalIPAddr();
 
       // check that current user has permission to run this servlet
+      if (!isServletEnabled()) {
+        resp.sendError(HttpServletResponse.SC_SERVICE_UNAVAILABLE, "Disabled");
+	return;
+      }
       if (!isServletAllowed(myServletDescr())) {
 	displayWarningInLieuOfPage("You are not authorized to use " +
 				   myServletDescr().heading);
@@ -570,6 +574,10 @@ public abstract class LockssServlet extends HttpServlet
     if (d.needsContentAccessRole() && !doesUserHaveRole(ROLE_CONTENT_ACCESS))
       return false;
     return true;
+  }
+
+  protected boolean isServletEnabled() {
+    return isServletEnabled(myServletDescr());
   }
 
   protected boolean isServletEnabled(ServletDescr d) {

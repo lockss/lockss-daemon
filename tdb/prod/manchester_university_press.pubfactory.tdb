@@ -36,7 +36,8 @@
     au < released ; 2019 ; Bulletin of the John Rylands Library Volume 95 ; 95 >
     au < released ; 2020 ; Bulletin of the John Rylands Library Volume 96 ; 96 >
     au < released ; 2021 ; Bulletin of the John Rylands Library Volume 97 ; 97 >
-    au < manifest ; 2022 ; Bulletin of the John Rylands Library Volume 98 ; 98 >
+    au < released ; 2022 ; Bulletin of the John Rylands Library Volume 98 ; 98 >
+    au < expected ; 2023 ; Bulletin of the John Rylands Library Volume 99 ; 99 >
 
   }
     
@@ -73,8 +74,6 @@
     au < released ; 2019 ; Film Studies Volume 20 ; 20 >
     au < released ; 2019 ; Film Studies Volume 21 ; 21 >
     au < released ; 2020 ; Film Studies Volume 22 ; 22 >
-    au < expected ; 2021 ; Film Studies Volume 23 ; 23 >
-    au < expected ; 2022 ; Film Studies Volume 24 ; 24 >
 
   }
 
@@ -110,8 +109,6 @@
     au < released ; 2016 ; Gothic Studies Volume 18 ; 18 >
     au < released ; 2017 ; Gothic Studies Volume 19 ; 19 >
     au < released ; 2018 ; Gothic Studies Volume 20 ; 20 >
-    au < expected ; 2021 ; Gothic Studies Volume 21 ; 21 >
-    au < expected ; 2022 ; Gothic Studies Volume 22 ; 22 >
 
   }
 
@@ -130,13 +127,15 @@
 
       param[base_url] = https://www.manchesterhive.com/
 
-      au < doNotProcess ; 2015 ; Human Remains and Violence Volume 1 ; 1 >
-      au < doNotProcess ; 2016 ; Human Remains and Violence Volume 2 ; 2 >
-      au < doNotProcess ; 2017 ; Human Remains and Violence Volume 3 ; 3 >
-      au < superseded ; 2018 ; Human Remains and Violence Volume 4 [superseded] ; 4 >
-      au < superseded ; 2019 ; Human Remains and Violence Volume 5 [superseded] ; 5 >
-      au < superseded ; 2020 ; Human Remains and Violence Volume 6 [superseded] ; 6 >
-      au < doNotProcess ; 2021 ; Human Remains and Violence Volume 7 ; 7 >
+      au < manifest ; 2015 ; Human Remains and Violence Volume 1 ; 1 >
+      au < manifest ; 2016 ; Human Remains and Violence Volume 2 ; 2 >
+      au < manifest ; 2017 ; Human Remains and Violence Volume 3 ; 3 >
+      au < released ; 2018 ; Human Remains and Violence Volume 4 ; 4 >
+      au < released ; 2019 ; Human Remains and Violence Volume 5 ; 5 >
+      au < released ; 2020 ; Human Remains and Violence Volume 6 ; 6 >
+      au < manifest ; 2021 ; Human Remains and Violence Volume 7 ; 7 >
+      au < manifest ; 2022 ; Human Remains and Violence Volume 8 ; 8 >
+      au < manifest ; 2023 ; Human Remains and Violence Volume 9 ; 9 >
 
     }
 
@@ -147,11 +146,12 @@
       au < doNotProcess ; 2015 ; Human Remains and Violence Volume 1 ; 1 >
       au < doNotProcess ; 2016 ; Human Remains and Violence Volume 2 ; 2 >
       au < doNotProcess ; 2017 ; Human Remains and Violence Volume 3 ; 3 >
-      au < released ; 2018 ; Human Remains and Violence Volume 4 ; 4 >
-      au < released ; 2019 ; Human Remains and Violence Volume 5 ; 5 >
-      au < released ; 2020 ; Human Remains and Violence Volume 6 ; 6 >
-      au < released ; 2021 ; Human Remains and Violence Volume 7 ; 7 >
-      au < manifest ; 2022 ; Human Remains and Violence Volume 8 ; 8 >
+      au < superseded ; 2018 ; Human Remains and Violence Volume 4 [superseded] ; 4 >
+      au < superseded ; 2019 ; Human Remains and Violence Volume 5 [superseded] ; 5 >
+      au < superseded ; 2020 ; Human Remains and Violence Volume 6 [superseded] ; 6 >
+      au < superseded ; 2021 ; Human Remains and Violence Volume 7 [superseded] ; 7 >
+      au < superseded ; 2022 ; Human Remains and Violence Volume 8 [superseded] ; 8 >
+      au < doNotProcess ; 2023 ; Human Remains and Violence Volume 9 ; 9 >
 
     }
 
@@ -170,13 +170,15 @@
 
       param[base_url] = https://www.manchesterhive.com/
 
-      au < superseded ; 2015 ; James Baldwin Journal Volume 1 [superseded] ; 1 >
-      au < superseded ; 2016 ; James Baldwin Journal Volume 2 [superseded] ; 2 >
-      au < superseded ; 2017 ; James Baldwin Journal Volume 3 [superseded] ; 3 >
-      au < superseded ; 2018 ; James Baldwin Journal Volume 4 [superseded] ; 4 >
-      au < superseded ; 2019 ; James Baldwin Journal Volume 5 [superseded] ; 5 >
-      au < doNotProcess ; 2020 ; James Baldwin Journal Volume 6 ; 6 >
-      au < doNotProcess ; 2021 ; James Baldwin Journal Volume 7 ; 7 >
+      au < released ; 2015 ; James Baldwin Journal Volume 1 ; 1 >
+      au < released ; 2016 ; James Baldwin Journal Volume 2 ; 2 >
+      au < released ; 2017 ; James Baldwin Journal Volume 3 ; 3 >
+      au < released ; 2018 ; James Baldwin Journal Volume 4 ; 4 >
+      au < released ; 2019 ; James Baldwin Journal Volume 5 ; 5 >
+      au < manifest ; 2020 ; James Baldwin Journal Volume 6 ; 6 >
+      au < manifest ; 2021 ; James Baldwin Journal Volume 7 ; 7 >
+      au < manifest ; 2022 ; James Baldwin Journal Volume 8 ; 8 >
+      au < manifest ; 2023 ; James Baldwin Journal Volume 9 ; 9 >
 
     }
 
@@ -184,14 +186,15 @@
 
       param[base_url] = https://www.manchesteropenhive.com/
 
-      au < released ; 2015 ; James Baldwin Journal Volume 1 ; 1 >
-      au < released ; 2016 ; James Baldwin Journal Volume 2 ; 2 >
-      au < released ; 2017 ; James Baldwin Journal Volume 3 ; 3 >
-      au < released ; 2018 ; James Baldwin Journal Volume 4 ; 4 >
-      au < released ; 2019 ; James Baldwin Journal Volume 5 ; 5 >
-      au < released ; 2020 ; James Baldwin Journal Volume 6 ; 6 >
-      au < released ; 2021 ; James Baldwin Journal Volume 7 ; 7 >
-      au < manifest ; 2022 ; James Baldwin Journal Volume 8 ; 8 >
+      au < superseded ; 2015 ; James Baldwin Journal Volume 1 [superseded] ; 1 >
+      au < superseded ; 2016 ; James Baldwin Journal Volume 2 [superseded] ; 2 >
+      au < superseded ; 2017 ; James Baldwin Journal Volume 3 [superseded] ; 3 >
+      au < superseded ; 2018 ; James Baldwin Journal Volume 4 [superseded] ; 4 >
+      au < superseded ; 2019 ; James Baldwin Journal Volume 5 [superseded] ; 5 >
+      au < superseded ; 2020 ; James Baldwin Journal Volume 6 [superseded] ; 6 >
+      au < superseded ; 2021 ; James Baldwin Journal Volume 7 [superseded] ; 7 >
+      au < doNotProcess ; 2022 ; James Baldwin Journal Volume 8 ; 8 >
+      au < doNotProcess ; 2023 ; James Baldwin Journal Volume 9 ; 9 >
 
     }
   }

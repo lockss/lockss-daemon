@@ -29,14 +29,14 @@
       au < zapped ; finished ; 2019 ; Business Expert Press Source Content 2019 ; 2019 >
       au < zapped ; finished ; 2020 ; Business Expert Press Source Content 2020 ; 2020 >
       au < readySource ; finished ; 2021 ; Business Expert Press Source Content 2021 ; 2021 >
-      au < readySource ; frozen ; 2022 ; Business Expert Press Source Content 2022 ; 2022 >
+      au < readySource ; finished ; 2022 ; Business Expert Press Source Content 2022 ; 2022 >
       #No more AUs. Moved to https.
 
     }
     {
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/bexpress-released/
 
-      au < readySource ; crawling ; 2023 ; Business Expert Press Source Content 2023 ; 2023 >
+      au < ready ; crawling ; 2023 ; Business Expert Press Source Content 2023 ; 2023 >
 
     }
   }

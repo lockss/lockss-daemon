@@ -67,7 +67,10 @@ public class Ojs3HtmlCrawlFilterFactory implements FilterFactory {
 		// on the article page - most read articles by this author
 		HtmlNodeFilters.tagWithAttributeRegex("div", "id", "articlesBySameAuthor"),
 		// ignore the setLocale urls, we dont want the other languages until they stop redirecting to the landing pages.
-		HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/user/setLocale")
+		HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/user/setLocale"),
+		// on https://revistas.udea.edu.co/index.php/lecturasdeeconomia/issue/view/3884,
+		// <ul class="most_read"> on right will cause over crawl
+		HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "most_read"),
 	};
  
   @Override

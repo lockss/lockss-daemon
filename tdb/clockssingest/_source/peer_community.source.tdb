@@ -19,9 +19,9 @@
     {
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/pci-released/
 
-    au < readySource ; finished ; 2020 ; Peer Community In Source Content 2020 ; 2020 >
+    au < zapped ; finished ; 2020 ; Peer Community In Source Content 2020 ; 2020 >
     au < readySource ; finished ; 2021 ; Peer Community In Source Content 2021 ; 2021 >
-    au < readySource ; frozen ; 2022 ; Peer Community In Source Content 2022 ; 2022 >
+    au < readySource ; finished ; 2022 ; Peer Community In Source Content 2022 ; 2022 >
     #No more AUs. Moving to https.
     }
     {

@@ -188,6 +188,7 @@ public class HTTPConfigFile extends BaseConfigFile {
     switch (resp) {
     case HttpURLConnection.HTTP_OK:
       m_loadError = null;
+      m_loadedUrl = conn.getActualUrl(); // remember possibly-redirected URL
       m_httpLastModifiedString = conn.getResponseHeaderValue("last-modified");
       log.debug2("New file, or file changed.  Loading file from " +
 		 "remote connection:" + url);
@@ -373,7 +374,6 @@ public class HTTPConfigFile extends BaseConfigFile {
       in = getUrlInputStream(m_fileUrl);
     }
     if (in != null) {
-      m_loadedUrl = null; // we're no longer loaded from failover, if we were.
       File tmpCacheFile;
       // If so configured, save the contents of the remote file in a locally
       // cached copy.

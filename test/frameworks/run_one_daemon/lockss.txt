@@ -7,7 +7,7 @@ org.lockss.proxy.access.ip.logForbidden=true
 
 org.lockss.platform.diskSpacePaths=./cache
 
-org.lockss.config.reloadInterval = 5m
+org.lockss.config.reloadInterval=5m
 org.lockss.ui.allowPluginConfig=true
 
 org.lockss.ui.start=yes
@@ -49,3 +49,9 @@ org.lockss.plugin.restartAusWithNewPlugin=true
 org.lockss.titleSet.allaus.class=allaus
 org.lockss.titleSet.activeaus.class=activeaus
 org.lockss.titleSet.inactiveaus.class=inactiveaus
+
+# Allow all plugin permitted hosts
+org.lockss.crawler.allowedPluginPermittedHosts=.*
+
+# Frequently needed in testing
+org.lockss.debugPanel.deepCrawlEnabled=true

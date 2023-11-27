@@ -1,32 +1,32 @@
 /*
 
-Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University,
-All rights reserved.
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
-Redistribution and use in source and binary forms, with or without modification,
-are permitted provided that the following conditions are met:
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-1. Redistributions of source code must retain the above copyright notice, this
-list of conditions and the following disclaimer.
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
 2. Redistributions in binary form must reproduce the above copyright notice,
-this list of conditions and the following disclaimer in the documentation and/or
-other materials provided with the distribution.
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
 3. Neither the name of the copyright holder nor the names of its contributors
 may be used to endorse or promote products derived from this software without
 specific prior written permission.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
-ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
-ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
-ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 */
 
@@ -73,6 +73,7 @@ public class Au implements Serializable {
   public Au(Token tok, Au other) {
     this(tok);
     this.computedPlugin = other.computedPlugin;
+    this.doi = other.doi;
     this.eisbn = other.eisbn;
     this.implicit = other.implicit;
     this.isbn = other.isbn;
@@ -224,6 +225,13 @@ public class Au implements Serializable {
             attrsMap = new HashMap<String, String>();
           }
           return attrsMap.put(key.substring(ATTR_PREFIX.length(), key.length() - 1), value);
+        }
+      } break;
+      case 'd': {
+        if (DOI.equals(key)) {
+          String ret = doi;
+          doi = value;
+          return ret;
         }
       } break;
       case 'e': {
@@ -479,6 +487,36 @@ public class Au implements Serializable {
       }
     }
     return computedPlugin;
+  }
+  
+  /**
+   * <p>
+   * The AU's DOI (key).
+   * </p>
+   * 
+   * @since 1.77
+   */
+  protected static final String DOI = "doi";
+  
+  /**
+   * <p>
+   * The AU's DOI (field).
+   * </p>
+   * 
+   * @since 1.77
+   */
+  protected String doi = null;
+  
+  /**
+   * <p>
+   * Retrieves the AU's DOI.
+   * </p>
+   * 
+   * @return The AU's DOI.
+   * @since 1.77
+   */
+  public String getDoi() {
+    return doi;
   }
   
   /**
@@ -1280,6 +1318,7 @@ public class Au implements Serializable {
     }
     m.put("au:auid", new A() { @Override String a(Au a) { return a.getAuid(); } });
     m.put("au:auidplus", new A() { @Override String a(Au a) { return a.getAuidPlus(); } });
+    m.put("au:doi", new A() { @Override String a(Au a) { return a.getDoi(); } });
     m.put("au:edition", new A() { @Override String a(Au a) { return a.getEdition(); } });
     m.put("au:eisbn", new A() { @Override String a(Au a) { return a.getEisbn(); } });
     m.put("au:file", new A() { @Override String a(Au a) { return a.getFile(); } });
@@ -1318,7 +1357,7 @@ public class Au implements Serializable {
     // Convenient abbreviations
     m.put("auid", m.get("au:auid"));
     m.put("auidplus", m.get("au:auidplus"));
-    m.put("doi", m.get("title:doi"));
+    m.put("doi", m.get("au:doi"));
     m.put("edition", m.get("au:edition"));
     m.put("eisbn", m.get("au:eisbn"));
     m.put("eissn", m.get("title:eissn"));

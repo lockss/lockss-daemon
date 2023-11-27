@@ -1,32 +1,32 @@
 /*
 
-Copyright (c) 2000-2017, Board of Trustees of Leland Stanford Jr. University,
-All rights reserved.
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
-Redistribution and use in source and binary forms, with or without modification,
-are permitted provided that the following conditions are met:
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-1. Redistributions of source code must retain the above copyright notice, this
-list of conditions and the following disclaimer.
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
 2. Redistributions in binary form must reproduce the above copyright notice,
-this list of conditions and the following disclaimer in the documentation and/or
-other materials provided with the distribution.
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
 3. Neither the name of the copyright holder nor the names of its contributors
 may be used to endorse or promote products derived from this software without
 specific prior written permission.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
-ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
-ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
-ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 */
 
@@ -38,10 +38,11 @@ import org.lockss.test.LockssTestCase;
 
 public class TestAu extends LockssTestCase {
 
-  public static final String NAME_VALUE = "AU Name";
+  public static final String DOI_VALUE = "10.0000/DOIValue";
   public static final String EDITION_VALUE = "Edition Value";
   public static final String EISBN_VALUE = "eISBN Value";
   public static final String ISBN_VALUE = "ISBN Value";
+  public static final String NAME_VALUE = "AU Name";
   public static final String PLUGIN_VALUE = "Plugin Value";
   public static final String PLUGIN_PREFIX_VALUE = "Plugin Prefix Value";
   public static final String PLUGIN_SUFFIX_VALUE = "Plugin Suffix Value";
@@ -56,16 +57,18 @@ public class TestAu extends LockssTestCase {
   public static final List<String> IMPLICIT_VALUE =
       AppUtil.ul("implicit1", "implicit2", "implicit3");
   
-  public static final String PARAM1_KEY = "p1";
-  public static final String PARAM1_VALUE = "v1";
-  public static final String PARAM2_KEY = "p2";
-  public static final String PARAM2_VALUE = "v2";
-  public static final String NONDEFPARAM1_KEY = "ndp1";
-  public static final String NONDEFPARAM1_VALUE = "ndv1";
-  public static final String NONDEFPARAM2_KEY = "ndp2";
-  public static final String NONDEFPARAM2_VALUE = "ndv2";
-  public static final String ATTR1_KEY = "attr1";
-  public static final String ATTR1_VALUE = "attr1v";
+  public static final String PARAM1_KEY = "pk1";
+  public static final String PARAM1_VALUE = "pv1";
+  public static final String PARAM2_KEY = "pk2";
+  public static final String PARAM2_VALUE = "pv2";
+  public static final String NONDEFPARAM1_KEY = "ndpk1";
+  public static final String NONDEFPARAM1_VALUE = "ndpv1";
+  public static final String NONDEFPARAM2_KEY = "ndpk2";
+  public static final String NONDEFPARAM2_VALUE = "ndpv2";
+  public static final String ATTR1_KEY = "ak1";
+  public static final String ATTR1_VALUE = "av1";
+  public static final String ATTR2_KEY = "ak2";
+  public static final String ATTR2_VALUE = "av2";
   
   public static final String FOO_KEY = "aufookey";
   public static final String FOO_VALUE = "aufooval";
@@ -85,6 +88,7 @@ public class TestAu extends LockssTestCase {
                                                        NONDEFPARAM2_VALUE);
   
   public void testKeys() throws Exception {
+    assertEquals("doi", Au.DOI);
     assertEquals("edition", Au.EDITION);
     assertEquals("eisbn", Au.EISBN);
     assertEquals("isbn", Au.ISBN);
@@ -132,6 +136,7 @@ public class TestAu extends LockssTestCase {
     assertNull(au.getAuid());
     assertNull(au.getAuidPlus());
     assertNull(au.getComputedPlugin());
+    assertNull(au.getDoi());
     assertNull(au.getEdition());
     assertNull(au.getEisbn());
     assertNull(au.getIsbn());
@@ -161,6 +166,8 @@ public class TestAu extends LockssTestCase {
     assertSame(publisher, au.getTitle().getPublisher());
     au.put(Au.NAME, NAME_VALUE);
     assertEquals(NAME_VALUE, au.getName());
+    au.put(Au.DOI, DOI_VALUE);
+    assertEquals(DOI_VALUE, au.getDoi());
     au.put(Au.EDITION, EDITION_VALUE);
     assertEquals(EDITION_VALUE, au.getEdition());
     au.put(Au.EISBN, EISBN_VALUE);
@@ -303,6 +310,8 @@ public class TestAu extends LockssTestCase {
     Au au = new Au(null, title);
     
     // Test AU traits
+    au.put(Au.DOI, DOI_VALUE);
+    assertEquals(DOI_VALUE, Au.traitFunctor("au:doi").apply(au));
     au.put(Au.EDITION, EDITION_VALUE);
     assertEquals(EDITION_VALUE, Au.traitFunctor("au:edition").apply(au));
     assertSame(Au.traitFunctor("au:edition"), Au.traitFunctor("edition"));
@@ -375,7 +384,7 @@ public class TestAu extends LockssTestCase {
     assertSame(Au.traitFunctor("title:name"), Au.traitFunctor("title"));
     titleMap.put(Title.DOI, TestTitle.DOI_VALUE);
     assertEquals(TestTitle.DOI_VALUE, Au.traitFunctor("title:doi").apply(au));
-    assertSame(Au.traitFunctor("title:doi"), Au.traitFunctor("doi"));
+    assertSame(Au.traitFunctor("title:doi"), Au.traitFunctor("title:doi"));
     titleMap.put(Title.EISSN, TestTitle.EISSN_VALUE);
     assertEquals(TestTitle.EISSN_VALUE, Au.traitFunctor("title:eissn").apply(au));
     assertSame(Au.traitFunctor("title:eissn"), Au.traitFunctor("eissn"));

@@ -5,6 +5,7 @@ import java.util.Calendar;
 import java.util.Properties;
 import java.util.logging.Logger;
 import org.lockss.config.Tdb.TdbException;
+import org.lockss.test.ConfigurationUtil;
 
 /**
  * A utility class providing static methods for constructing Tdb
@@ -78,12 +79,8 @@ public class TdbTestUtil {
    * @throws Exception
    */
   public static final void setUpConfig() throws Exception {
-    // Create a new ConfigManager and set the current configuration
-    ConfigManager mgr = ConfigManager.makeConfigManager();
-    mgr.setCurrentConfig(ConfigManager.newConfiguration());
     // Create a test tdb and set it in the current config
-    ConfigManager.getCurrentConfig().setTdb(TdbTestUtil.makeTestTdb());
-    //CurrentConfig.getCurrentConfig().setTdb(TdbTestUtil.makeTestTdb());
+    ConfigurationUtil.setTdb(TdbTestUtil.makeTestTdb());
   }
 
   /**

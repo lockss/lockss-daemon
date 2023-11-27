@@ -67,6 +67,11 @@ public class HBKUHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "nav"),
             HtmlNodeFilters.tagWithAttributeRegex("nav", "class", "transformer-tabs"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-pub2web-element"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "metricsEndDate"),
+            HtmlNodeFilters.tagWithAttributeRegex("span", "class", "__cf_email__"),
+            HtmlNodeFilters.tagWithAttributeRegex("a", "class", "affilLinkToEncode"),
+            HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/cdn-cgi/")
+
 
     };
     return (new HtmlFilterInputStream(in, encoding, HtmlNodeFilterTransform.exclude(new OrFilter(filters))));

@@ -1,3 +1,35 @@
+/*
+
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+*/
+
 package org.lockss.plugin.oecd;
 
 import org.lockss.daemon.PluginException;
@@ -16,7 +48,7 @@ public class OecdBooksArticleIteratorFactory implements ArticleIteratorFactory, 
   private static final Logger log = Logger.getLogger(OecdBooksArticleIteratorFactory.class);
 
   private static final String PATTERN_TEMPLATE =
-      "\"%s(%s_%s|deliver/)\", base_url, pub_path, pub_id";
+      "\"%s(%s%s|deliver/)\", base_url, pub_path, pub_id";
 
   // full text html
   // https://www.oecd-ilibrary.org/sites/6ef36f4b-en/index.html?itemId=/content/publication/6ef36f4b-en
@@ -41,8 +73,8 @@ public class OecdBooksArticleIteratorFactory implements ArticleIteratorFactory, 
     // landing page
     // https://www.oecd-ilibrary.org/social-issues-migration-health/housing-and-inclusive-growth_6ef36f4b-en
     Pattern LANDING_PATTERN = Pattern.compile(
-        String.format("/(%s_(%s))$", pub_path, pub_id));
-    String LANDING_REPLACEMENT = String.format("/%s_$2", pub_path);
+        String.format("/(%s(%s))$", pub_path, pub_id));
+    String LANDING_REPLACEMENT = String.format("/%s$2", pub_path);
 
     String PDF_REPLACEMENT = "/deliver/$2.pdf?itemId=%2Fcontent%2Fpublication%2F$2&mimeType=pdf";
     //String EPUB_REPLACEMENT = "/deliver/$2.epub?itemId=%2Fcontent%2Fpublication%2F$2&mimeType=epub";
@@ -61,13 +93,15 @@ public class OecdBooksArticleIteratorFactory implements ArticleIteratorFactory, 
         LANDING_PATTERN,
         LANDING_REPLACEMENT,
         ArticleFiles.ROLE_ABSTRACT,
-        ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE);
+        ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
 
     builder.addAspect(
         PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
 
     /*
+    Not every article/book has epub
     builder.addAspect(
         EPUB_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_EPUB);

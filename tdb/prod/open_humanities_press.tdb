@@ -48,6 +48,7 @@
 
       au < ojs3.Ojs3Plugin ; released ; 2021 ; Cosmos and History Volume 17 ; 17 ; 2021 >
       au < ojs3.Ojs3Plugin ; manifest ; 2022 ; Cosmos and History Volume 18 ; 18 ; 2022 >
+      au < ojs3.Ojs3Plugin ; expected ; 2023 ; Cosmos and History Volume 19 ; 19 ; 2023 >
       }
     }
   
@@ -150,10 +151,11 @@
         eissn = 1780-678X ;
         issnl = 1780-678X
       >
-
-      param[base_url] = http://www.imageandnarrative.be/
-      param[journal_id] = imagenarrative
+      
       #Currently Open Journal Systems 3.1.1.4. Waiting for update to 3.1.2 or higher
+      param[journal_id] = imagenarrative
+      {
+      param[base_url] = http://www.imageandnarrative.be/
    
       au < ojs2.OJS2Plugin ; down ; 2000 ; Image and Narrative Volume 1 [malformed] ; 1 ; 2000 >
       au < ojs2.OJS2Plugin ; down ; 2001 ; Image and Narrative Volume 2 [malformed] ; 2 ; 2001 >
@@ -173,12 +175,17 @@
       au < ojs2.OJS2Plugin ; released ; 2015 ; Image and Narrative Volume 16 ; 16 ; 2015 >
       au < ojs2.OJS2Plugin ; released ; 2016 ; Image and Narrative Volume 17 ; 17 ; 2016 >
       au < ojs2.OJS2Plugin ; released ; 2017 ; Image and Narrative Volume 18 ; 18 ; 2017 >
-      au < ojs3.Ojs3Plugin ; exists ; 2018 ; Image and Narrative Volume 19 ; 19 ; 2018 >
-      au < ojs3.Ojs3Plugin ; exists ; 2019 ; Image and Narrative Volume 20 ; 20 ; 2019 >
-      au < ojs3.Ojs3Plugin ; exists ; 2020 ; Image and Narrative Volume 21 ; 21 ; 2020 >
-      au < ojs3.Ojs3Plugin ; exists ; 2021 ; Image and Narrative Volume 22 ; 22 ; 2021 >
-      au < ojs3.Ojs3Plugin ; exists ; 2022 ; Image and Narrative Volume 23 ; 23 ; 2022 >
-
+      }
+      {
+      param[base_url] = https://www.imageandnarrative.be/
+   
+      au < ojs3.Ojs3Plugin ; released ; 2018 ; Image and Narrative Volume 19 ; 19 ; 2018 >
+      au < ojs3.Ojs3Plugin ; released ; 2019 ; Image and Narrative Volume 20 ; 20 ; 2019 >
+      au < ojs3.Ojs3Plugin ; released ; 2020 ; Image and Narrative Volume 21 ; 21 ; 2020 >
+      au < ojs3.Ojs3Plugin ; released ; 2021 ; Image and Narrative Volume 22 ; 22 ; 2021 >
+      au < ojs3.Ojs3Plugin ; released ; 2022 ; Image and Narrative Volume 23 ; 23 ; 2022 >
+      au < ojs3.Ojs3Plugin ; manifest ; 2023 ; Image and Narrative Volume 24 ; 24 ; 2023 >
+      }
     }
 
     {
@@ -207,7 +214,8 @@
       au < ojs2.OJS2Plugin ; released ; 2019 ; International Journal of Žižek Studies Volume 13 ; 13 ; 2019 >
       au < ojs2.OJS2Plugin ; released ; 2020 ; International Journal of Žižek Studies Volume 14 ; 14 ; 2020 >
       au < ojs2.OJS2Plugin ; released ; 2021 ; International Journal of Žižek Studies Volume 15 ; 15 ; 2021 >
-      au < ojs2.OJS2Plugin ; manifest ; 2022 ; International Journal of Žižek Studies Volume 16 ; 16 ; 2022 >
+      au < ojs2.OJS2Plugin ; released ; 2022 ; International Journal of Žižek Studies Volume 16 ; 16 ; 2022 >
+      au < ojs2.OJS2Plugin ; manifest ; 2023 ; International Journal of Žižek Studies Volume 17 ; 17 ; 2023 >
 
     }
     
@@ -259,13 +267,14 @@
 
       param[base_url] = https://www.postcolonial.org/
       param[journal_id] = pct
-      #Still OJS 2 20220324
+      #Still OJS Open Journal Systems 2.4.8.5 20230627. Malformed permission statement: LOCKSS system has permission to ingest, preserve, and serve this Archival Unit.
 
       au < ojs2.OJS2Plugin ; exists ; 2018 ; Postcolonial Text Volume 13 ; 13 ; 2018 > #Permission statement malformed: LOCKSS system has permission to ingest...
       au < ojs2.OJS2Plugin ; exists ; 2019 ; Postcolonial Text Volume 14 ; 14 ; 2019 > #Permission statement malformed: LOCKSS system has permission to ingest...
       au < ojs2.OJS2Plugin ; exists ; 2020 ; Postcolonial Text Volume 15 ; 15 ; 2020 > #Permission statement malformed: LOCKSS system has permission to ingest...
       au < ojs2.OJS2Plugin ; expected ; 2021 ; Postcolonial Text Volume 16 ; 16 ; 2021 > #Crawl completed with no substance
       au < ojs2.OJS2Plugin ; expected ; 2022 ; Postcolonial Text Volume 17 ; 17 ; 2022 > #Crawl completed with no substance
+      au < ojs2.OJS2Plugin ; expected ; 2023 ; Postcolonial Text Volume 18 ; 18 ; 2023 > #Crawl completed with no substance
 
       }
     }

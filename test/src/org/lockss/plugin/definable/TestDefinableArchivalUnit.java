@@ -885,14 +885,14 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     DefinableArchivalUnit au = (DefinableArchivalUnit)plug.createAu(auConfig);
 
     assertFalse(au.isLoginPageUrl(("http://example.com/baz/")));
-    assertEquals("1/6000ms", au.findFetchRateLimiter().getRate());
+    assertEquals("1/3000ms", au.findFetchRateLimiter().getRate());
 
     String u1 = "http://example.com/baz/";
     assertSame(u1, au.siteNormalizeUrl(u1));
 
     assertNull(au.getFetchRateLimiterKey());
     assertEquals("au", au.getFetchRateLimiterSource());
-    assertEquals(new RateLimiterInfo(null, "1/6000"), au.getRateLimiterInfo());
+    assertEquals(new RateLimiterInfo(null, "1/3000"), au.getRateLimiterInfo());
     assertClass(SimpleUrlConsumerFactory.class, au.getUrlConsumerFactory());
     assertClass(BaseCrawlSeed.class, au.makeCrawlSeed(null));
     assertClass(BaseUrlFetcher.class, 
@@ -1430,18 +1430,32 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   CrawlRule makeExpRule() {
     try {
       CrawlRules.RE expRules[] = {
-	new CrawlRules.RE("^(http\\:\\/\\/base\\.foo\\/base_path\\/|http\\:\\/\\/resolv\\.er\\/path\\/)", 4),
-	new CrawlRules.RE("^http\\:\\/\\/base\\.foo\\/base_path\\/publishing/journals/lockss/\\?journalcode=J47&year=1984", 1),
-	new CrawlRules.RE("^http\\:\\/\\/resolv\\.er\\/path\\/\\?DOI=", 1),
-	new CrawlRules.RE("^http\\:\\/\\/base\\.foo\\/base_path\\/errorpage\\.asp", 2),
-	new CrawlRules.RE("^http\\:\\/\\/base\\.foo\\/base_path\\/host/base\\.foo", 2),
-
-	new CrawlRules.RE("^http\\:\\/\\/base\\.foo\\/base_path\\/publishing/journals/J47/article\\.asp\\?Type=Issue&VolumeYear=1984&JournalCode=J47", 1),
-	new CrawlRules.RE("^http\\:\\/\\/base\\.foo\\/base_path\\/.*\\.(bmp|css|ico|gif|jpe?g|js|mol|png|tif?f)$", 1),
+	new CrawlRules.RE("^(http\\:\\/\\/base\\.foo\\/base_path\\/|http\\:\\/\\/resolv\\.er\\/path\\/)",
+                          DefinableArchivalUnit.DEFAULT_CRAWL_RULES_IGNORE_CASE,
+                          4),
+	new CrawlRules.RE("^http\\:\\/\\/base\\.foo\\/base_path\\/publishing/journals/lockss/\\?journalcode=J47&year=1984",
+                          DefinableArchivalUnit.DEFAULT_CRAWL_RULES_IGNORE_CASE,
+                          1),
+	new CrawlRules.RE("^http\\:\\/\\/resolv\\.er\\/path\\/\\?DOI=",
+                          DefinableArchivalUnit.DEFAULT_CRAWL_RULES_IGNORE_CASE,
+                          1),
+	new CrawlRules.RE("^http\\:\\/\\/base\\.foo\\/base_path\\/errorpage\\.asp",
+                          DefinableArchivalUnit.DEFAULT_CRAWL_RULES_IGNORE_CASE,
+                          2),
+	new CrawlRules.RE("^http\\:\\/\\/base\\.foo\\/base_path\\/host/base\\.foo",
+                          DefinableArchivalUnit.DEFAULT_CRAWL_RULES_IGNORE_CASE,
+                          2),
+	new CrawlRules.RE("^http\\:\\/\\/base\\.foo\\/base_path\\/publishing/journals/J47/article\\.asp\\?Type=Issue&VolumeYear=1984&JournalCode=J47",
+                          DefinableArchivalUnit.DEFAULT_CRAWL_RULES_IGNORE_CASE,
+                          1),
+	new CrawlRules.RE("^http\\:\\/\\/base\\.foo\\/base_path\\/.*\\.(bmp|css|ico|gif|jpe?g|js|mol|png|tif?f)$",
+                          DefinableArchivalUnit.DEFAULT_CRAWL_RULES_IGNORE_CASE,
+                          1),
 	new CrawlRules.RE("http\\:\\/\\/base\\.foo\\/base_path\\/issueset/issue-(?:1|2|3|3a)/.*",
-				  DefinableArchivalUnit.DEFAULT_CRAWL_RULES_IGNORE_CASE,
-				  1),
+                          DefinableArchivalUnit.DEFAULT_CRAWL_RULES_IGNORE_CASE,
+                          1),
 	new CrawlRules.REMatchRange("http\\:\\/\\/base\\.foo\\/base_path\\/issuerange/issue-(\\d+)/.*",
+                                    DefinableArchivalUnit.DEFAULT_CRAWL_RULES_IGNORE_CASE,
 				    1, 3, 7),
       };
       return new CrawlRules.FirstMatch(ListUtil.fromArray(expRules));

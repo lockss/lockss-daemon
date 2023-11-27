@@ -29,6 +29,7 @@
       au < released ; 2020 ; Echo Research and Practice Volume 7 ; 7 >
       au < released ; 2021 ; Echo Research and Practice Volume 8 ; 8 >
       au < expected ; 2022 ; Echo Research and Practice Volume 9 ; 9 >
+      au < expected ; 2023 ; Echo Research and Practice Volume 10 ; 10 >
 
   }
   
@@ -51,7 +52,8 @@
     au < doNotProcess ; 2019 ; EFORT Open Reviews Volume 4 ; 4 >
     au < doNotProcess ; 2020 ; EFORT Open Reviews Volume 5 ; 5 >
     au < released ; 2021 ; EFORT Open Reviews Volume 6 ; 6 >
-    au < manifest ; 2022 ; EFORT Open Reviews Volume 7 ; 7 >
+    au < released ; 2022 ; EFORT Open Reviews Volume 7 ; 7 >
+    au < manifest ; 2023 ; EFORT Open Reviews Volume 8 ; 8 >
 
   }
 
@@ -76,7 +78,8 @@
       au < released ; 2019 ; Endocrine Connections Volume 8 ; 8 >
       au < released ; 2020 ; Endocrine Connections Volume 9 ; 9 >
       au < released ; 2021 ; Endocrine Connections Volume 10 ; 10 >
-      au < manifest ; 2022 ; Endocrine Connections Volume 11 ; 11 >
+      au < released ; 2022 ; Endocrine Connections Volume 11 ; 11 >
+      au < manifest ; 2023 ; Endocrine Connections Volume 12 ; 12 >
 
   }
   
@@ -93,8 +96,8 @@
       ## http://www.eje-online.org/
       #move to OUP, 2023-01-01
 
-      au < released ; 1993 ; European Journal of Endocrinology Volume 128 ; 128 >
-      au < released ; 1993 ; European Journal of Endocrinology Volume 129 ; 129 >
+      au < down ; 1993 ; European Journal of Endocrinology Volume 128 ; 128 >
+      au < down ; 1993 ; European Journal of Endocrinology Volume 129 ; 129 >
       au < doNotProcess ; 1994 ; European Journal of Endocrinology Volume 130 ; 130 >
       au < doNotProcess ; 1994 ; European Journal of Endocrinology Volume 131 ; 131 >
       au < doNotProcess ; 1995 ; European Journal of Endocrinology Volume 132 ; 132 >
@@ -143,16 +146,16 @@
       au < doNotProcess ; 2016 ; European Journal of Endocrinology Volume 175 ; 175 >
       au < doNotProcess ; 2017 ; European Journal of Endocrinology Volume 176 ; 176 >
       au < doNotProcess ; 2017 ; European Journal of Endocrinology Volume 177 ; 177 >
-      au < released ; 2018 ; European Journal of Endocrinology Volume 178 ; 178 >
-      au < released ; 2018 ; European Journal of Endocrinology Volume 179 ; 179 >
-      au < released ; 2019 ; European Journal of Endocrinology Volume 180 ; 180 >
-      au < released ; 2019 ; European Journal of Endocrinology Volume 181 ; 181 >
-      au < released ; 2020 ; European Journal of Endocrinology Volume 182 ; 182 >
-      au < released ; 2020 ; European Journal of Endocrinology Volume 183 ; 183 >
-      au < released ; 2021 ; European Journal of Endocrinology Volume 184 ; 184 >
-      au < released ; 2021 ; European Journal of Endocrinology Volume 185 ; 185 >
-      au < manifest ; 2022 ; European Journal of Endocrinology Volume 186 ; 186 >
-      au < manifest ; 2022 ; European Journal of Endocrinology Volume 187 ; 187 >
+      au < down ; 2018 ; European Journal of Endocrinology Volume 178 ; 178 >
+      au < down ; 2018 ; European Journal of Endocrinology Volume 179 ; 179 >
+      au < down ; 2019 ; European Journal of Endocrinology Volume 180 ; 180 >
+      au < down ; 2019 ; European Journal of Endocrinology Volume 181 ; 181 >
+      au < down ; 2020 ; European Journal of Endocrinology Volume 182 ; 182 >
+      au < down ; 2020 ; European Journal of Endocrinology Volume 183 ; 183 >
+      au < down ; 2021 ; European Journal of Endocrinology Volume 184 ; 184 >
+      au < down ; 2021 ; European Journal of Endocrinology Volume 185 ; 185 >
+      au < doNotProcess ; 2022 ; European Journal of Endocrinology Volume 186 ; 186 >
+      au < doNotProcess ; 2022 ; European Journal of Endocrinology Volume 187 ; 187 >
 
   }
   
@@ -330,8 +333,10 @@
       au < released ; 2020 ; Reproduction Volume 160 ; 160 >
       au < released ; 2021 ; Reproduction Volume 161 ; 161 >
       au < released ; 2021 ; Reproduction Volume 162 ; 162 >
-      au < manifest ; 2022 ; Reproduction Volume 163 ; 163 >
-      au < manifest ; 2022 ; Reproduction Volume 164 ; 164 >
+      au < released ; 2022 ; Reproduction Volume 163 ; 163 >
+      au < released ; 2022 ; Reproduction Volume 164 ; 164 >
+      au < manifest ; 2023 ; Reproduction Volume 165 ; 165 >
+      au < manifest ; 2023 ; Reproduction Volume 166 ; 166 >
 
   }
 

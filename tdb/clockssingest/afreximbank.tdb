@@ -1,0 +1,36 @@
+{
+  publisher <
+    name = Afreximbank ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[platform] = Bepress
+  >
+    provider = bepress
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = The Journal of African Trade ;
+        eissn = 2214-8523
+      >
+
+      comment[publisher] = Afreximbank
+      param[base_url] = https://jat.afreximbank.com/
+      param[journal_abbr] = journal
+
+      au < finished ; manifest ; 2014 ; The Journal of African Trade Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2015 ; The Journal of African Trade Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; The Journal of African Trade Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; The Journal of African Trade Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; The Journal of African Trade Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; The Journal of African Trade Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2020 ; The Journal of African Trade Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; The Journal of African Trade Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; The Journal of African Trade Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+      au < expected ; exists ; 2023 ; The Journal of African Trade Volume 10 ; 10 ; >
+
+  }
+
+}

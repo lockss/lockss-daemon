@@ -2,10 +2,11 @@
 
   publisher <
     name = Scientific Journal Publishers ;
-    info[back] = 2010 ;
+    info[back] = 2005 ;
     info[contract] = 2012 ;
     info[tester] = 8 ;
-    info[poller] = 6
+    info[poller] = 6 ;
+    info[platform] = OJS3 now. Ingenta still active 2023/03/15
   >
   
   provider = Social Behavior and Personality Journal
@@ -17,6 +18,20 @@
       issn = 0301-2212
     >
 
+    {
+    
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/ 
+    param[base_url] = https://www.sbp-journal.com/
+    param[journal_id] = sbp 
+    implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
+
+    au < frozen ; exists ; 2022 ; 2022 ; Social Behavior and Personality Volume 50 ; 50 ; >
+    au < crawling ; exists ; 2023 ; 2023 ; Social Behavior and Personality Volume 51 ; 51 ; >
+
+    }
+
+    {
     plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
 #    param[base_url] = http://www.ingentaconnect.com/
 #    param[api_url] = http://api.ingentaconnect.com/
@@ -63,11 +78,11 @@
     au < manifest ; exists ; 2002 ; Social Behavior and Personality Volume 30 ; 30 ; >
     au < manifest ; exists ; 2003 ; Social Behavior and Personality Volume 31 ; 31 ; >
     au < manifest ; exists ; 2004 ; Social Behavior and Personality Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2005 ; Social Behavior and Personality Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2006 ; Social Behavior and Personality Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2007 ; Social Behavior and Personality Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2008 ; Social Behavior and Personality Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2009 ; Social Behavior and Personality Volume 37 ; 37 ; >
+    au < frozen ; exists ; 2005 ; Social Behavior and Personality Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2006 ; Social Behavior and Personality Volume 34 ; 34 ; >
+    au < frozen ; exists ; 2007 ; Social Behavior and Personality Volume 35 ; 35 ; >
+    au < frozen ; exists ; 2008 ; Social Behavior and Personality Volume 36 ; 36 ; >
+    au < frozen ; exists ; 2009 ; Social Behavior and Personality Volume 37 ; 37 ; >
 
     }
 
@@ -89,15 +104,15 @@
     param[base_url] = https://www.ingentaconnect.com/
     param[api_url] = https://api.ingentaconnect.com/
 
-    au < finished ; crawling ; 2017 ; Social Behavior and Personality Volume 45 ; 45 ; reingest2.clockss.org:8085 > #LXQUEUE-1208
-    au < finished ; crawling ; 2018 ; Social Behavior and Personality Volume 46 ; 46 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2019 ; Social Behavior and Personality Volume 47 ; 47 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; Social Behavior and Personality Volume 45 ; 45 ; reingest2.clockss.org:8085 > #LXQUEUE-1208
+    au < finished ; finished ; 2018 ; Social Behavior and Personality Volume 46 ; 46 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2019 ; Social Behavior and Personality Volume 47 ; 47 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Social Behavior and Personality Volume 48 ; 48 ; >
     au < deepCrawl ; exists ; 2021 ; Social Behavior and Personality Volume 49 ; 49 ; >
-    au < crawling ; exists ; 2022 ; Social Behavior and Personality Volume 50 ; 50 ; >
+    au < deepCrawl ; exists ; 2022 ; Social Behavior and Personality Volume 50 ; 50 ; >
 
     }
-
+    }
   }
   
 }

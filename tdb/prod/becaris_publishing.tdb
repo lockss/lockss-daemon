@@ -1,0 +1,39 @@
+{
+
+  publisher <
+    name = Becaris Publishing ;
+    info[platform] = Atypon
+  >
+
+  plugin = org.lockss.plugin.atypon.becaris.BecarisPublishingPlugin
+  implicit < status ; year ; name ; param[volume_name] >
+
+
+  {
+  
+    title < 
+      name = Journal of Comparative Effectiveness Research ;
+      issn = 2042-6305 ;
+      eissn = 2042-6313
+    >
+    
+    param[journal_id] = cer
+    param[base_url] = https://becarispublishing.com/
+    #Moved from http://www.futuremedicine.com/journal/cer. 2019-2022 still there.
+
+    au < doNotProcess ; 2012 ; Journal of Comparative Effectiveness Research Volume 1 ; 1 >
+    au < doNotProcess ; 2013 ; Journal of Comparative Effectiveness Research Volume 2 ; 2 >
+    au < doNotProcess ; 2014 ; Journal of Comparative Effectiveness Research Volume 3 ; 3 >
+    au < doNotProcess ; 2015 ; Journal of Comparative Effectiveness Research Volume 4 ; 4 >
+    au < doNotProcess ; 2016 ; Journal of Comparative Effectiveness Research Volume 5 ; 5 >
+    au < doNotProcess ; 2017 ; Journal of Comparative Effectiveness Research Volume 6 ; 6 >
+    au < doNotProcess ; 2018 ; Journal of Comparative Effectiveness Research Volume 7 ; 7 >
+    au < doNotProcess ; 2019 ; Journal of Comparative Effectiveness Research Volume 8 ; 8 >
+    au < doNotProcess ; 2020 ; Journal of Comparative Effectiveness Research Volume 9 ; 9 >
+    au < doNotProcess ; 2021 ; Journal of Comparative Effectiveness Research Volume 10 ; 10 >
+    au < released ; 2022 ; Journal of Comparative Effectiveness Research Volume 11 ; 11 >
+    au < manifest ; 2023 ; Journal of Comparative Effectiveness Research Volume 12 ; 12 >
+
+  }
+
+}

@@ -1,7 +1,6 @@
 /*
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -56,13 +55,13 @@ public class TestJasperArticleIteratorFactory extends ArticleIteratorTestCase {
 
   private final String PLUGIN_NAME = "org.lockss.plugin.jasper.ClockssJasperPlugin";
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
-  static final String COLLECTION_KEY = ConfigParamDescr.COLLECTION.getKey();
+  static final String ITEM_KEY = "item";
   private final String BASE_URL = "https://archive.org/";
   private final String DOWNLOAD_URL = "https://archive.org/download/";
-  private final String COLLECTION = "111113";
+  private final String ITEM = "111113";
   private final Configuration AU_CONFIG = ConfigurationUtil.fromArgs(
       BASE_URL_KEY, BASE_URL,
-      COLLECTION_KEY, COLLECTION,
+      ITEM_KEY, ITEM,
       "user_pass", "user:pass");
   private static final int DEFAULT_FILESIZE = 3000;
 
@@ -112,7 +111,7 @@ public class TestJasperArticleIteratorFactory extends ArticleIteratorTestCase {
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
     log.info("Pattern is: " + pat.toString());
-    String targzPath = COLLECTION + "/rama-2021-06-25-11-25-53.tar.gz!";
+    String targzPath = ITEM + "/rama-2021-06-25-11-25-53.tar.gz!";
     String metadataPath = "/2051-5960/00003741594643f4996e2555a01e03c7/data/metadata/metadata.json";
     String pdfPath = "/2051-5960/00003741594643f4996e2555a01e03c7/data/ArticleFoo.pdf";
     String htmlPath = "/2051-5960/00003741594643f4996e2555a01e03c7/data/ArticleFoo.html";

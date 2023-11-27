@@ -199,6 +199,7 @@ implements SourceXmlSchemaHelper {
     cookMap.put(ACM_booknode + "/" + ACM_isbn, MetadataField.FIELD_ISBN);
     cookMap.put(ACM_booknode + "/" + ACM_bookauthor, MetadataField.FIELD_AUTHOR);
     cookMap.put(ACM_booknode + "/" + ACM_booktitle, MetadataField.FIELD_PUBLICATION_TITLE);
+    cookMap.put(ACM_booknode + "/" + ACM_bookpubdate, MetadataField.FIELD_DATE);
     cookMap.put(ACM_booknode + "/" + ACM_bookcopyright, MetadataField.FIELD_DATE);
     // chapter level only
     cookMap.put(ACM_chapterdoi, MetadataField.FIELD_DOI);    

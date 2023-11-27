@@ -1,34 +1,35 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
- Copyright (c) 2012-2015 Board of Trustees of Leland Stanford Jr. University,
- all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
- STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
- IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
- Except as contained in this notice, the name of Stanford University shall not
- be used in advertising or otherwise to promote the sale, use or other dealings
- in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
- */
+*/
+
 package org.lockss.metadata;
 
 import java.io.PrintWriter;
@@ -38,6 +39,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import org.lockss.daemon.status.ColumnDescriptor;
 import org.lockss.daemon.status.StatusAccessor;
 import org.lockss.daemon.status.StatusService.NoSuchTableException;
@@ -84,6 +86,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
   private static final String NUM_INDEXED_COL_NAME = "num_indexed";
   private static final String NUM_ERROR_COL_NAME = "num_error";
   private static final String NUM_UPDATED_COL_NAME = "num_updated";
+  private static final String AUID_COL_NAME = "auid";
   // Sort keys, not visible columns
   private static final String SORT_KEY1 = "sort1";
   private static final String SORT_KEY2 = "sort2";
@@ -94,7 +97,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
 
   final private List<ColumnDescriptor> colDescs =
       ListUtil.fromArray(new ColumnDescriptor[] {
-        new ColumnDescriptor(AU_COL_NAME, "Journal Volume",
+        new ColumnDescriptor(AU_COL_NAME, "AU",
                              ColumnDescriptor.TYPE_STRING)
         .setComparator(CatalogueOrderComparator.SINGLETON),
         new ColumnDescriptor(INDEX_TYPE, "Index Type",
@@ -121,6 +124,8 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
                              "Duration of updating stored metadata."),
         new ColumnDescriptor(NUM_UPDATED_COL_NAME, "Articles Updated",
                              ColumnDescriptor.TYPE_INT),
+        new ColumnDescriptor(AUID_COL_NAME, "AUID",
+                             ColumnDescriptor.TYPE_STRING),
       });
 
   // ascending by category, descending start or end time
@@ -185,7 +190,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
     } else {
       // report information for specified task
       res.add(new StatusTable.SummaryInfo(
-          "Volume",
+          "AU",
           ColumnDescriptor.TYPE_STRING,
           task.getAuName()));
       ArchivalUnit au = task.getAu();
@@ -480,6 +485,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
       long curTime = TimeBase.nowMs();
       
       Map<String,Object> row = new HashMap<String,Object>();
+      row.put(AUID_COL_NAME, auId);
       row.put(AU_COL_NAME,
               new StatusTable.Reference(auName,
                                         ArchivalUnitStatus.AU_STATUS_TABLE_NAME,
@@ -567,17 +573,6 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
     return rows;
   }
 
-  private List<ColumnDescriptor> getColDescs() {
-    List<ColumnDescriptor> res =
-	new ArrayList<ColumnDescriptor>(colDescs.size());
-
-    for (ColumnDescriptor desc : colDescs) {
-      res.add(desc);
-    }
-
-    return res;
-  }
-
   @Override
   public void populateTable(StatusTable table) throws NoSuchTableException {
     key = (table.getKey() == null) ? "indexing" : table.getKey();
@@ -601,7 +596,7 @@ public class MetadataManagerStatusAccessor implements StatusAccessor {
         table.setRows(getTaskRows(metadataMgr.getReindexingTasks()));
       }
       table.setDefaultSortRules(sortRules);
-      table.setColumnDescriptors(getColDescs());
+      table.setColumnDescriptors(colDescs, "-" + AUID_COL_NAME);
       table.setSummaryInfo(getSummaryInfo());
     }
   }

@@ -62,6 +62,7 @@ public class MiscConfig {
 	  org.lockss.alert.Alert.setConfig(config, oldConfig, diffs);
 	  CharsetUtil.setConfig(config,oldConfig,diffs);
 	  SubscriptionManagement.setConfig(config, oldConfig, diffs);
+	  org.lockss.pdf.pdfbox.PdfBoxDocumentFactory.SINGLETON.setConfig(config, oldConfig, diffs);
 	}
       };
   }

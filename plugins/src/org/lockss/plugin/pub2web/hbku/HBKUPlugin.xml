@@ -9,7 +9,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>3</string>
+        <string>6</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -21,7 +21,24 @@
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>28</string>
+        <string>30</string>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Metadata</string>
+                <string>13</string>
+            </entry>
+            <entry>
+                <string>Poll</string>
+                <string>18</string>
+            </entry>
+            <entry>
+                <string>Substance</string>
+                <string>10</string>
+            </entry>
+        </map>
     </entry>
     <entry>
         <string>au_name</string>
@@ -39,7 +56,20 @@
         <string>org.lockss.plugin.pub2web.hbku.HBKUHtmlHashFilterFactory</string>
     </entry>
     <entry>
+        <string>text/html_crawl_filter_factory</string>
+        <string>org.lockss.plugin.pub2web.hbku.HBKUHtmlCrawlFilterFactory</string>
+    </entry>
+    <entry>
         <string>text/html_link_extractor_factory</string>
         <string>org.lockss.plugin.pub2web.hbku.HBKUHtmlLinkExtractorFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*</string>
+                <string>org.lockss.plugin.pub2web.hbku.HBKUHtmlMetadataExtractorFactory</string>
+            </entry>
+        </map>
     </entry>
 </map>

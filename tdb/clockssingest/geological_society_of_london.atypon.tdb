@@ -55,7 +55,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Engineering Geology Special Publications Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Engineering Geology Special Publications Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Engineering Geology Special Publications Volume 28 ; 28 ; >
-    au < frozen ; exists ; 2020 ; Engineering Geology Special Publications Volume 29 ; 29 ; >
+    au < finished ; crawling ; 2020 ; Engineering Geology Special Publications Volume 29 ; 29 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -92,7 +92,8 @@
     au < doNotProcess ; doNotProcess ; 2019 ; Geochemistry: Exploration, Environment, Analysis Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; Geochemistry: Exploration, Environment, Analysis Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; Geochemistry: Exploration, Environment, Analysis Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2022 ; Geochemistry: Exploration, Environment, Analysis Volume 22 [superseded] ; 22 ; >
+    au < deepCrawl ; exists ; 2022 ; Geochemistry: Exploration, Environment, Analysis Volume 22 [superseded] ; 22 ; >
+    au < crawling ; exists ; 2023 ; Geochemistry: Exploration, Environment, Analysis Volume 23 [superseded] ; 23 ; >
 
   }
 
@@ -161,14 +162,18 @@
     au < doNotProcess ; doNotProcess ; 2020 ; Geological Society of London Memoirs Volume 51 ; 51 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; Geological Society of London Memoirs Volume 52 ; 52 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; Geological Society of London Memoirs Volume 53 ; 53 ; >
-    au < doNotProcess ; doNotProcess ; 2021 ; Geological Society of London Memoirs Volume 54 ; 54 ;  >
-    au < doNotProcess ; doNotProcess ; 2021 ; Geological Society of London Memoirs Volume 55 ; 55 ;  >
-    au < frozen ; exists ; 2021 ; Geological Society of London Memoirs Volume 56 ; 56 ;  >
-    au < frozen ; exists ; 2021 ; Geological Society of London Memoirs Volume 57 ; 57 ;  >
-    au < crawling ; exists ; 2022 ; Geological Society of London Memoirs Volume 58 ; 58 ;  >
-    au < crawling ; exists ; 2022 ; Geological Society of London Memoirs Volume 59 ; 59 ;  >
-    au < exists ; exists ; 2022 ; Geological Society of London Memoirs Volume 60 ; 60 ;  >
-    au < exists ; exists ; 2022 ; Geological Society of London Memoirs Volume 61 ; 61 ;  >
+    au < doNotProcess ; doNotProcess ; 2021 ; Geological Society of London Memoirs Volume 54 ; 54 ; >
+    au < doNotProcess ; doNotProcess ; 2021 ; Geological Society of London Memoirs Volume 55 ; 55 ; >
+    au < finished ; crawling ; 2021 ; Geological Society of London Memoirs Volume 56 ; 56 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2021 ; Geological Society of London Memoirs Volume 57 ; 57 ; reingest1.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2022 ; Geological Society of London Memoirs Volume 58 ; 58 ; >
+    au < deepCrawl ; exists ; 2022 ; Geological Society of London Memoirs Volume 59 ; 59 ; >
+    au < exists ; exists ; 2022 ; Geological Society of London Memoirs Volume 60 ; 60 ; >
+    au < exists ; exists ; 2022 ; Geological Society of London Memoirs Volume 61 ; 61 ; >
+    au < expected ; exists ; 2023 ; Geological Society of London Memoirs Volume 62 ; 62 ; >
+    au < expected ; exists ; 2023 ; Geological Society of London Memoirs Volume 63 ; 63 ; >
+    au < expected ; exists ; 2023 ; Geological Society of London Memoirs Volume 64 ; 64 ; >
+    au < expected ; exists ; 2023 ; Geological Society of London Memoirs Volume 65 ; 65 ; >
 
   }
 
@@ -678,7 +683,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; Geological Society of London Special Publications Volume 492 ; 492 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; Geological Society of London Special Publications Volume 493 ; 493 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; Geological Society of London Special Publications Volume 494 ; 494 ; >
-    au < frozen ; exists ; 2021 ; Geological Society of London Special Publications Volume 495 ; 495 ; >
+    au < finished ; crawling ; 2021 ; Geological Society of London Special Publications Volume 495 ; 495 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2020 ; Geological Society of London Special Publications Volume 496 ; 496 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; Geological Society of London Special Publications Volume 497 ; 497 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; Geological Society of London Special Publications Volume 498 ; 498 ; >
@@ -688,7 +693,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; Geological Society of London Special Publications Volume 502 ; 502 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; Geological Society of London Special Publications Volume 503 ; 503 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; Geological Society of London Special Publications Volume 504 ; 504 ; >
-    au < frozen ; exists ; 2021 ; Geological Society of London Special Publications Volume 505 ; 505 ; >
+    au < finished ; crawling ; 2021 ; Geological Society of London Special Publications Volume 505 ; 505 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2021 ; Geological Society of London Special Publications Volume 506 ; 506 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; Geological Society of London Special Publications Volume 507 ; 507 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; Geological Society of London Special Publications Volume 508 ; 508 ; >
@@ -698,28 +703,49 @@
     au < doNotProcess ; doNotProcess ; 2021 ; Geological Society of London Special Publications Volume 512 ; 512 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; Geological Society of London Special Publications Volume 513 ; 513 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; Geological Society of London Special Publications Volume 514 ; 514 ; >
-    au < frozen ; exists ; 2021 ; Geological Society of London Special Publications Volume 515 ; 515 ; >
-    au < crawling ; exists ; 2022 ; Geological Society of London Special Publications Volume 516 ; 516 ; >
-    au < crawling ; exists ; 2022 ; Geological Society of London Special Publications Volume 517 ; 517 ; >
+    au < finished ; crawling ; 2021 ; Geological Society of London Special Publications Volume 515 ; 515 ; reingest4.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 516 ; 516 ; >
+    au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 517 ; 517 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; Geological Society of London Special Publications Volume 518 ; 518 ; >
-    au < crawling ; exists ; 2022 ; Geological Society of London Special Publications Volume 519 ; 519 ; >
-    au < crawling ; exists ; 2022 ; Geological Society of London Special Publications Volume 520 ; 520 ; >
-    au < crawling ; exists ; 2022 ; Geological Society of London Special Publications Volume 521 ; 521 ; >
-    au < crawling ; exists ; 2022 ; Geological Society of London Special Publications Volume 522 ; 522 ; >
-    au < crawling ; exists ; 2022 ; Geological Society of London Special Publications Volume 523 ; 523 ; >
-    au < crawling ; exists ; 2022 ; Geological Society of London Special Publications Volume 524 ; 524 ; >
-    au < crawling ; exists ; 2022 ; Geological Society of London Special Publications Volume 525 ; 525 ; >
-    au < crawling ; exists ; 2022 ; Geological Society of London Special Publications Volume 526 ; 526 ; >
-    au < crawling ; exists ; 2022 ; Geological Society of London Special Publications Volume 527 ; 527 ; >
-    au < crawling ; exists ; 2022 ; Geological Society of London Special Publications Volume 528 ; 528 ; >
-    au < crawling ; exists ; 2022 ; Geological Society of London Special Publications Volume 529 ; 529 ; >
-    au < crawling ; exists ; 2022 ; Geological Society of London Special Publications Volume 530 ; 530 ; >
-    au < crawling ; exists ; 2022 ; Geological Society of London Special Publications Volume 531 ; 531 ; >
-    au < crawling ; exists ; 2022 ; Geological Society of London Special Publications Volume 532 ; 532 ; >
-    au < crawling ; exists ; 2022 ; Geological Society of London Special Publications Volume 533 ; 533 ; >
-    au < crawling ; exists ; 2022 ; Geological Society of London Special Publications Volume 534 ; 534 ; >
-    au < crawling ; exists ; 2022 ; Geological Society of London Special Publications Volume 535 ; 535 ; >
-    au < crawling ; exists ; 2022 ; Geological Society of London Special Publications Volume 536 ; 536 ; >
+    au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 519 ; 519 ; >
+    au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 520 ; 520 ; >
+    au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 521 ; 521 ; >
+    au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 522 ; 522 ; >
+    au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 523 ; 523 ; >
+    au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 524 ; 524 ; >
+    au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 525 ; 525 ; >
+    au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 526 ; 526 ; >
+    au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 527 ; 527 ; >
+    au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 528 ; 528 ; >
+    au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 529 ; 529 ; >
+    au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 530 ; 530 ; >
+    au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 531 ; 531 ; >
+    au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 532 ; 532 ; >
+    au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 533 ; 533 ; >
+    au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 534 ; 534 ; >
+    au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 535 ; 535 ; >
+    au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 536 ; 536 ; >
+    au < crawling ; exists ; 2023 ; Geological Society of London Special Publications Volume 537 ; 537 ; >
+    au < crawling ; exists ; 2023 ; Geological Society of London Special Publications Volume 538 ; 538 ; >
+    au < crawling ; exists ; 2023 ; Geological Society of London Special Publications Volume 539 ; 539 ; >
+    au < crawling ; exists ; 2023 ; Geological Society of London Special Publications Volume 540 ; 540 ; >
+    au < crawling ; exists ; 2023 ; Geological Society of London Special Publications Volume 541 ; 541 ; >
+    au < crawling ; exists ; 2023 ; Geological Society of London Special Publications Volume 542 ; 542 ; >
+    au < crawling ; exists ; 2023 ; Geological Society of London Special Publications Volume 543 ; 543 ; >
+    au < manifest ; exists ; 2023 ; Geological Society of London Special Publications Volume 544 ; 544 ; >
+    au < manifest ; exists ; 2023 ; Geological Society of London Special Publications Volume 545 ; 545 ; >
+    au < expected ; exists ; 2023 ; Geological Society of London Special Publications Volume 546 ; 546 ; >
+    au < expected ; exists ; 2023 ; Geological Society of London Special Publications Volume 547 ; 547 ; >
+    au < expected ; exists ; 2023 ; Geological Society of London Special Publications Volume 548 ; 548 ; >
+    au < expected ; exists ; 2023 ; Geological Society of London Special Publications Volume 549 ; 549 ; >
+    au < expected ; exists ; 2023 ; Geological Society of London Special Publications Volume 550 ; 550 ; >
+    au < expected ; exists ; 2023 ; Geological Society of London Special Publications Volume 551 ; 551 ; >
+    au < expected ; exists ; 2023 ; Geological Society of London Special Publications Volume 552 ; 552 ; >
+    au < expected ; exists ; 2023 ; Geological Society of London Special Publications Volume 553 ; 553 ; >
+    au < expected ; exists ; 2023 ; Geological Society of London Special Publications Volume 554 ; 554 ; >
+    au < expected ; exists ; 2023 ; Geological Society of London Special Publications Volume 555 ; 555 ; >
+    au < expected ; exists ; 2023 ; Geological Society of London Special Publications Volume 556 ; 556 ; >
+    au < expected ; exists ; 2023 ; Geological Society of London Special Publications Volume 557 ; 557 ; >
 
   }
 
@@ -931,7 +957,8 @@
     au < doNotProcess ; doNotProcess ; 2019 ; Journal of the Geological Society of London Volume 176 ; 176 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; Journal of the Geological Society of London Volume 177 ; 177 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; Journal of the Geological Society of London Volume 178 ; 178 ; >
-    au < crawling ; exists ; 2022 ; Journal of the Geological Society of London Volume 179 ; 179 ; >
+    au < deepCrawl ; exists ; 2022 ; Journal of the Geological Society of London Volume 179 ; 179 ; >
+    au < crawling ; exists ; 2023 ; Journal of the Geological Society of London Volume 180 ; 180 ; >
 
   }
 
@@ -974,7 +1001,8 @@
       au < doNotProcess ; doNotProcess ; 2019 ; Petroleum Geoscience Volume 25 ; 25 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; Petroleum Geoscience Volume 26 ; 26 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Petroleum Geoscience Volume 27 ; 27 ; >
-      au < crawling ; exists ; 2022 ; Petroleum Geoscience Volume 28 ; 28 ; >
+      au < deepCrawl ; exists ; 2022 ; Petroleum Geoscience Volume 28 ; 28 ; >
+      au < crawling ; exists ; 2023 ; Petroleum Geoscience Volume 29 ; 29 ; >
 
   }
 
@@ -1064,7 +1092,8 @@
     au < doNotProcess ; doNotProcess ; 2019 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 52 ; 52 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 54 ; 54 ; >
-    au < crawling ; exists ; 2022 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 55 ; 55 ; >
+    au < deepCrawl ; exists ; 2022 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 55 ; 55 ; >
+    au < crawling ; exists ; 2023 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 56 ; 56 ; >
 
   }
 
@@ -1138,7 +1167,8 @@
     au < doNotProcess ; doNotProcess ; 2019 ; Scottish Journal of Geology Volume 55 ; 55 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; Scottish Journal of Geology Volume 56 ; 56 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; Scottish Journal of Geology Volume 57 ; 57 ; >
-    au < crawling ; exists ; 2022 ; Scottish Journal of Geology Volume 58 ; 58 ; >
+    au < deepCrawl ; exists ; 2022 ; Scottish Journal of Geology Volume 58 ; 58 ; >
+    au < crawling ; exists ; 2023 ; Scottish Journal of Geology Volume 59 ; 59 ; >
 
   }
 
@@ -1321,6 +1351,7 @@
     au < doNotProcess ; doNotProcess ; 2018-2019 ; Proceedings of the Yorkshire Geological Society Volume 62 ; 62 ; >
     au < doNotProcess ; doNotProcess ; 2020-2021 ; Proceedings of the Yorkshire Geological Society Volume 63 ; 63 ; >
     au < manifest ; exists ; 2022-2023 ; Proceedings of the Yorkshire Geological Society Volume 64 ; 64 ; >
+    au < expected ; exists ; 2023-2024 ; Proceedings of the Yorkshire Geological Society Volume 65 ; 65 ; >
 
   }
 

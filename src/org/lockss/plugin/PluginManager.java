@@ -156,6 +156,13 @@ public class PluginManager
     PREFIX + "acceptExpiredCertificates";
   static final boolean DEFAULT_ACCEPT_EXPIRED_CERTS = true;
 
+  /** If true, validate all files in plugin jars (except in meta-inf/
+   * dir).  If false, validate only those files listed in the
+   * manifest. */
+  static final String PARAM_VALIDATE_ALL_JAR_ENTRIES =
+    PREFIX + "validateAllJarEntries";
+  static final boolean DEFAULT_VALIDATE_ALL_JAR_ENTRIES = true;
+
   /** The amount of time to wait when processing loadable plugins.
       This process delays the start of AUs, so the timeout should not
       be too long. */
@@ -326,6 +333,7 @@ public class PluginManager
   private boolean paramDisableURLConnectionCache =
     DEFAULT_DISABLE_URL_CONNECTION_CACHE;
   private boolean acceptExpiredCertificates = DEFAULT_ACCEPT_EXPIRED_CERTS;
+  private boolean validateAllJarEntries = DEFAULT_VALIDATE_ALL_JAR_ENTRIES;
   private IntStepFunction auSearchCacheSizeFunc = 
     new IntStepFunction(DEFAULT_AU_SEARCH_CACHE_SIZE);
   private IntStepFunction auSearch404CacheSizeFunc =
@@ -504,6 +512,9 @@ public class PluginManager
       acceptExpiredCertificates =
 	config.getBoolean(PARAM_ACCEPT_EXPIRED_CERTS,
 			  DEFAULT_ACCEPT_EXPIRED_CERTS);
+      validateAllJarEntries =
+	config.getBoolean(PARAM_VALIDATE_ALL_JAR_ENTRIES,
+			  DEFAULT_VALIDATE_ALL_JAR_ENTRIES);
 
       // must set retract before loadablePluginsReady is true as
       // retrievePlugin() may be called before that
@@ -3131,6 +3142,7 @@ public class PluginManager
       jarValidator = new JarValidator(keystore, pluginDir);
     }
     jarValidator.allowExpired(acceptExpiredCertificates);
+    jarValidator.checkAllEntries(validateAllJarEntries);
 
     // Create temporary plugin and classloader maps
     HashMap<String,PluginInfo> tmpMap = new HashMap<String,PluginInfo>();

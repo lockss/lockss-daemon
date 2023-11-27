@@ -15,6 +15,38 @@
   {
   
     title < 
+      name = Scandinavian Journal of Urology ;
+      eissn = 2168-1813 
+    >
+
+      param[base_url] = https://medicaljournalssweden.se/
+      param[journal_id] = SJU
+      attr[start_stem] = 
+      #First publication Volume 58, 1923. Older content not online 20221201
+
+      au < crawling ; exists ; 2023 ; Scandinavian Journal of Urology Volume 2023 ; 58 ; 2023 ; >
+
+  }
+
+  {
+  
+    title < 
+      name = Journal of Plastic Surgery and Hand Surgery ;
+      eissn = 2000-6764 
+    >
+
+      param[base_url] = https://medicaljournalssweden.se/
+      param[journal_id] = JPHS
+      attr[start_stem] = 
+      #First publication Volume 58, 1923. Older content not online 20221201
+
+      au < crawling ; exists ; 2023 ; Journal of Plastic Surgery and Hand Surgery Volume 2023 ; 58 ; 2023 ; >
+
+  }
+
+  {
+  
+    title < 
       name = Acta Dermato-Venereologica ;
       eissn = 1651-2057 
     >
@@ -31,12 +63,13 @@
       #au < exists ; exists ; 2014 ; Acta Dermato-Venereologica Volume 2014 ; 94 ; 2014 ; >
       #au < exists ; exists ; 2015 ; Acta Dermato-Venereologica Volume 2015 ; 95 ; 2015 ; >
       #au < exists ; exists ; 2016 ; Acta Dermato-Venereologica Volume 2016 ; 96 ; 2016 ; >
-      au < manifest ; exists ; 2017 ; Acta Dermato-Venereologica Volume 2017 ; 97 ; 2017 ; >
-      au < manifest ; exists ; 2018 ; Acta Dermato-Venereologica Volume 2018 ; 98 ; 2018 ; >
+      au < frozen ; exists ; 2017 ; Acta Dermato-Venereologica Volume 2017 ; 97 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; Acta Dermato-Venereologica Volume 2018 ; 98 ; 2018 ; >
       au < notReady ; exists ; 2019 ; Acta Dermato-Venereologica Volume 2019 ; 99 ; 2019 ; > #500 Error
       au < finished ; crawling ; 2020 ; Acta Dermato-Venereologica Volume 2020 ; 100 ; 2020 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; Acta Dermato-Venereologica Volume 2021 ; 101 ; 2021 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2022 ; Acta Dermato-Venereologica Volume 2022 ; 102 ; 2022 ; >
+      au < deepCrawl ; exists ; 2022 ; Acta Dermato-Venereologica Volume 2022 ; 102 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; Acta Dermato-Venereologica Volume 2023 ; 103 ; 2023 ; >
 
   }
 
@@ -64,7 +97,8 @@
       au < finished ; crawling ; 2019 ; Acta Orthopaedica Volume 2019 ; 90 ; 2019 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Acta Orthopaedica Volume 2020 ; 91 ; 2020 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; Acta Orthopaedica Volume 2021 ; 92 ; 2021 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2022 ; Acta Orthopaedica Volume 2022 ; 93 ; 2022 ; >
+      au < deepCrawl ; exists ; 2022 ; Acta Orthopaedica Volume 2022 ; 93 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; Acta Orthopaedica Volume 2023 ; 94 ; 2023 ; >
 
   }
 

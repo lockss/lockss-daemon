@@ -1,7 +1,6 @@
 <!--
 
-Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -33,7 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
     <entry>
         <string>plugin_status</string>
-        <string>testing</string>
+        <string>development</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
@@ -45,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>5</string>
+        <string>8</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -70,11 +69,11 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>5</string>
+        <string>7</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"OECD iLibrary Journals Plugin, Base URL %s, Volume %s, Journal Directory %s, Topic %s, Journal ISSN %s", base_url, volume_name, journal_dir, topic, journal_issn</string>
+        <string>"OECD iLibrary Journals Plugin, Base URL %s, Topic %s, Journal Directory %s, Journal ISSN %s, Volume %s", base_url, topic, journal_dir, journal_issn, volume_name</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -107,8 +106,8 @@ POSSIBILITY OF SUCH DAMAGE.
             </org.lockss.daemon.ConfigParamDescr>
             <org.lockss.daemon.ConfigParamDescr>
                 <key>topic</key>
-                <displayName>Journal Topic</displayName>
-                <description>Topic of journal</description>
+                <displayName>Topic</displayName>
+                <description>Topic or main thematic section</description>
                 <type>1</type>
                 <size>40</size>
                 <definitional>true</definitional>

@@ -32,15 +32,16 @@
     au < manifest ; exists ; 2011 ; Business Review Volume 6 ; 6 ; >
     au < manifest ; exists ; 2012 ; Business Review Volume 7 ; 7 ; >
     au < manifest ; exists ; 2013 ; Business Review Volume 8 ; 8 ; >
-    au < finished ; crawling ; 2014 ; Business Review Volume 9 ; 9 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2015 ; Business Review Volume 10 ; 10 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Business Review Volume 11 ; 11 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2017 ; Business Review Volume 12 ; 12 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2018 ; Business Review Volume 13 ; 13 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2019 ; Business Review Volume 14 ; 14 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2020 ; Business Review Volume 15 ; 15 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2021 ; Business Review Volume 16 ; 16 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2022 ; Business Review Volume 17 ; 17 ; >
+    au < finished ; finished ; 2014 ; Business Review Volume 9 ; 9 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2015 ; Business Review Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Business Review Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2017 ; Business Review Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2018 ; Business Review Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2019 ; Business Review Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2020 ; Business Review Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ; Business Review Volume 16 ; 16 ; reingest1.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2022 ; Business Review Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2023 ; Business Review Volume 18 ; 18 ; >
 
   }
 

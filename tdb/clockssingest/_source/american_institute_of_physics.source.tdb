@@ -6,20 +6,20 @@
     info[tester] = S ;
     info[platform] = Source
   >
+  hidden[proxy] = DIRECT
 
   {
 
     title <
       name = American Institute of Physics Books Source Content
     >
-    hidden[proxy] = DIRECT
 
     plugin = org.lockss.plugin.clockss.aippublishing.ClockssAIPPublishingBooksSourcePlugin
     implicit < status ; status2 ; year ; name ; param[directory] >
     {
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/aipbooks-released/
 
-      au < readySource ; frozen ; 2022 ; American Institute of Physics Books Source Content 2022_01 ; 2022_01 >
+      au < readySource ; finished ; 2022 ; American Institute of Physics Books Source Content 2022_01 ; 2022_01 >
     }
     {
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/aipbooks-released/
@@ -33,7 +33,6 @@
     title <
       name = American Institute of Physics Source Content (JATS)
     >
-    hidden[proxy] = DIRECT
 
     {
       plugin = org.lockss.plugin.americaninstituteofphysics.ClockssAIPJatsSourcePlugin
@@ -48,7 +47,7 @@
       au < zapped ; finished ; 2019 ; American Institute of Physics JATS Source Content 2019 ; 2019 >
       au < zapped ; finished ; 2020 ; American Institute of Physics JATS Source Content 2020 ; 2020 >
       au < readySource ; finished ; 2021 ; American Institute of Physics JATS Source Content 2021 ; 2021 >
-      au < readySource ; frozen ; 2022 ; American Institute of Physics JATS Source Content 2022 ; 2022 >
+      au < readySource ; finished ; 2022 ; American Institute of Physics JATS Source Content 2022 ; 2022 >
       #Change to directory base plugin
 
     }
@@ -57,7 +56,7 @@
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/aipjats-released/
       implicit < status ; status2 ; year ; name ; param[directory] >
 
-      au < readySource ; frozen ; 2022 ; American Institute of Physics JATS Source Content 2022_01 ; 2022_01 >
+      au < readySource ; finished ; 2022 ; American Institute of Physics JATS Source Content 2022_01 ; 2022_01 >
       #No more AUs. Moved to https.
 
     }
@@ -79,7 +78,6 @@
 
     plugin = org.lockss.plugin.americaninstituteofphysics.ClockssAmericanInstituteOfPhysicsSourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/aip-released/
-    hidden[proxy] = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
 
     au < zapped ; finished ; 2010 ; American Institute of Physics Source Content 2010 ; 2010 >

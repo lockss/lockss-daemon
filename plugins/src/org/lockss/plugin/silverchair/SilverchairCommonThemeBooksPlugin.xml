@@ -1,0 +1,251 @@
+<!--
+
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>down</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.silverchair.SilverchairCommonThemeBooksPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>8</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>Silverchair Common Theme Books Plugin</string>
+    </entry>
+    <!--
+    https://pubs.geoscienceworld.org/minersoc/books/edited-volume/2209/The-Contribution-of-Mineralogy-to-Cultural
+    https://pubs.geoscienceworld.org/segweb/books/monograph/2414/Paradox-Basin-Fluids-and-Colorado-Plateau-Copper
+    https://pubs.geoscienceworld.org/books/book/2160/Paleozoic-Plays-of-NW-Europe
+    -->
+    <entry>
+        <string>plugin_config_props</string>
+        <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url</key>
+                <displayName>Base URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <!--
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>journal_id</key>
+                <displayName>Journal Identifier</displayName>
+                <description>Identifier for journal</description>
+                <type>1</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            -->
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>resource_id</key>
+                <displayName>Resource ID</displayName>
+                <description>Internal resource ID</description>
+                <type>1</type>
+                <size>100</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+        </list>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Poll</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Substance</string>
+                <string>3</string>
+            </entry>
+            <entry>
+                <string>Metadata</string>
+                <string>3</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <!--<string>"Silverchair Common Theme Books Plugin, Base URL %s, Journal ID %s, Resource Id %s", base_url, journal_id, resource_id</string>-->
+        <string>"Silverchair Common Theme Books Plugin, Base URL %s, Resource Id %s", base_url, resource_id</string>
+    </entry>
+    <entry>
+        <string>au_start_url</string>
+        <list>
+            <string>"%s%s", base_url, resource_id</string>
+            <!--<string>"%s%s/books/([^/]+)/%s", base_url, journal_id, resource_id</string>-->
+        </list>
+    </entry>
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <!--Exclude improperly relative URLs, e.g. those with 'http// or 'https//' or 'www', or those that end with .com, .net, .org, etc. 
+            Also need to exclude links that end with javascript:;-->
+            <string>2,"%sbooks/(book|edited-volume)/[^/]+/chapter/.*/(https?//|www\.)", base_url</string>
+            <string>2,"%sbooks/(book|edited-volume)/[^/]+/chapter/.*/[^/]+\.(com|net|org|edu|gov)/", base_url</string>
+            <string>2,"%sbooks/(book|edited-volume)/[^/]+/chapter/.*/(javascript;:|javascript:;)$", base_url</string>
+
+            <string>2,"%s([^/]+/)?books(/[^/]+)?/[^/]+/chapter(-pdf)?/.*/[^/]+\.(com|net|org|edu|gov)/", base_url</string>
+            <string>2,"%s([^/]+/)?books(/[^/]+)?/[^/]+/chapter(-pdf)?/.*/(https?//|www\.)", base_url</string>
+            <string>2,"%s([^/]+/)?books(/[^/]+)?/[^/]+/chapter(-pdf)?/.*/(javascript;:|javascript:;)$", base_url</string>
+
+            <string>2,"^https?://([^/]+\.silverchair-cdn\.com)/cassette\.axd/.*"</string>
+            <string>2, "^https://api\.addthis\.com/oexchange/.*"</string>
+            <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com)/"</string>
+            <string>2,"%sDownloadFile", base_url</string>
+            <string>2,"^https?://([^/]+\.silverchair-cdn\.com)/DownloadFile"</string>
+            <string>2,"%sdownloadimage.aspx?image=", base_url</string>
+            <string>2,"^https?://([^/]+\.silverchair-cdn\.com)/.*\.xlsx"</string>
+            <string>2,"%smy-account/register", base_url</string>
+            <string>1,"^https?://(%s|[^.]+\.(silverchair-?cdn\.com/|cloudfront\.net/|brightcove\.net/)).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
+            <string>1,"%sCitation/Download\?resourceId=[^&amp;]+&amp;resourceType=[^&amp;]+&amp;citationFormat=2", base_url</string>
+            <string>1,"^https?://([^/]+\.silverchair-cdn\.com)/[^?]+\?Expires=2147483647"</string>
+            <string>1,"%s%s/", base_url, resource_id</string>
+            <!--
+            https://pubs.geoscienceworld.org/books/book/2160/chapter-pdf/4705971/01_sp471-18-052.pdf
+            https://books.rsc.org/books/edited-volume/2066/chapter/7493655/Computational-Methods-to-Study-Chalcogen-Bonds
+            -->
+            <string>1,"%sbooks/(book|edited-volume)/[^/]+/chapter(-pdf)?/.*", base_url</string>
+            <!--
+            https://pubs.geoscienceworld.org/sepm/books/book/1872/chapter-pdf/3800602/9781565762381_ch01.pdf
+            https://books.rsc.org/books/edited-volume/chapter-pdf/1716368/bk9781839164224-00001.pdf
+            -->
+            <string>1,"%s([^/]+/)?books(/[^/]+)?/[^/]+/chapter(-pdf)?/.*", base_url</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <list>
+            <!--
+            https://pubs.geoscienceworld.org/books/book/2160/chapter-pdf/4705971/01_sp471-18-052.pdf
+            https://books.rsc.org/books/edited-volume/chapter-pdf/1716079/bk9781839164224-00280.pdf
+            -->
+            <string>"%sbooks/[^/]+/([^/]+/)?chapter-pdf/", base_url</string>
+            <!--https://pubs.geoscienceworld.org/sepm/books/book/1872/chapter-pdf/3800602/9781565762381_ch01.pdf-->
+            <string>"%s[^/]+/books/[^/]+/[^/]+/chapter-pdf/", base_url</string>
+            <string>"^https?://([^/]+\.silverchair-cdn\.com)/[^?]+pdf\?Expires=2147483647"</string>
+        </list>
+    </entry>
+    <entry>
+        <string>plugin_url_consumer_factory</string>
+        <string>org.lockss.plugin.silverchair.SilverchairCommonThemeBooksUrlConsumerFactory</string>
+    </entry>
+    <entry>
+        <string>application/x-research-info-systems_filter_factory</string>
+        <string>org.lockss.plugin.silverchair.SilverchairRisFilterFactory</string>
+    </entry>
+    <!--  RIS citation URLs come in as text/plain; we do additional RIS check in the factory -->
+    <entry>
+        <string>text/plain_filter_factory</string>
+        <string>org.lockss.plugin.silverchair.SilverchairRisFilterFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.silverchair.SilverchairCommonThemeBooksArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.silverchair.SilverchairCommonThemeBooksArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*</string>
+                <string>org.lockss.plugin.silverchair.SilverchairCommonThemeBooksHtmlMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>au_permitted_host_pattern</string>
+        <list>
+            <string>(fonts|ajax)\.googleapis\.com</string>
+            <string>(fonts|ajax)\.gstatic\.com</string>
+            <string>.*cdn\.jsdelivr\.net</string>
+            <string>.*silverchair-?cdn\.com</string>
+            <string>.*\.brightcove\.net</string>
+            <string>.*\.cloudfront\.net</string>
+            <string>cdnjs\.cloudflare\.com</string>
+            <string>gsw\.silverchair-cdn\.com</string>
+            <string>watermark\.silverchair\.com</string>
+            <string>pub\.silverchair\.com</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_repair_from_peer_if_missing_url_pattern</string>
+        <list>
+            <string>[.](css|js)(\?.+)?$</string>
+            <string>"(%s|silverchair-?cdn\.com/)UI/app/", base_url</string>
+            <string>.+[.](bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff.?)(\?.*)?$</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_url_poll_result_weight</string>
+        <list>
+            <string>"[.](css|js)(\?.+)?$", 0</string>
+            <string>"(%s|silverchair-?cdn\.com/)UI/app/", base_url, 0</string>
+            <string>"/(Script|Web)Resource\.axd\?d=", 0</string>
+            <string>"/combres\.axd/[^/]+-(js|css)/-?[0-9]+$", 0</string>
+            <string>"/multimediaPlayer.aspx\?", 0</string>
+            <string>"/errors/404\.aspx\?aspxerrorpath=", 0</string>
+            <string>"silverchaircdn\.com/(CSS|Images)/", 0</string>
+            <string>"\?v=[0-9]+$", 0</string>
+            <string>"\.axd/(file|script|stylesheet)/", 0</string>
+            <string>".+[.](bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff.?)(\?.*)?$", 0</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_refetch_depth</string>
+        <int>2</int>
+    </entry>
+    <entry>
+        <string>au_def_new_content_crawl</string>
+        <long>1209600000</long>
+    </entry>
+    <entry>
+        <string>au_def_pause_time</string>
+        <long>3000</long>
+    </entry>
+    <entry>
+        <string>plugin_fetch_rate_limiter_source</string>
+        <string>host:base_url</string>
+    </entry>
+</map>
