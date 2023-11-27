@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -122,6 +122,10 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>"^%sclockss/libraries/fulltext/[^/]+/%s/[^/]+$", base_url, volume_name</string>
       <string>"^%sclockss/downloads/PDF/[^/]+/%s/[^/]+$", base_url, volume_name</string>
     </list>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.heterocycles.HeterocyclesUrlNormalizer</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
