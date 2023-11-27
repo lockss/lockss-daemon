@@ -48,18 +48,21 @@ public class TestFS2HtmlHashFilterFactory extends LockssTestCase{
                         "<body>"+
                             "<p class='abstract'>"+
                               "<span class='whatever'>"+
-                                "Views"+
+                              "Views"+
                               "</span>"+
+                              "71"+
                             "</p>"+
                             "<p class='abstract'>"+
                               "<span class='whatever'>"+
-                                "Views other stuff"+
+                              "Views other stuff"+
                               "</span>"+
+                              "72"+
                             "</p>"+
                             "<p class='abstract'>"+
                               "<span class='whatever'>"+
                                 "PASS"+
                               "</span>"+
+                              "73"+
                             "</p>"+
                         "</body>"+
                       "</html>";
@@ -69,5 +72,6 @@ public class TestFS2HtmlHashFilterFactory extends LockssTestCase{
         System.out.println(result);
         assertFalse("Your test case failed! \n"+result, !result.contains("PASS")); 
         assertTrue(result.contains("Views other stuff"));
+        assertFalse("Your test case failed! \n", result.contains("71"));
     }
 }
