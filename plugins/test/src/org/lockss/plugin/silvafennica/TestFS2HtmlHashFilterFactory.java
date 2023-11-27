@@ -48,13 +48,19 @@ public class TestFS2HtmlHashFilterFactory extends LockssTestCase{
                         "<body>"+
                             "<p class='abstract'>"+
                               "<span class='whatever'>"+
-                              "Views"+
+                                "Views"+
                               "</span>"+
-                              "71"+
+                              " 71 "+
                             "</p>"+
                             "<p class='abstract'>"+
                               "<span class='whatever'>"+
-                              "Views other stuff"+
+                                "Katselukerrat"+
+                              "</span>"+
+                              " 71 "+
+                            "</p>"+
+                            "<p class='abstract'>"+
+                              "<span class='whatever'>"+
+                                "Views other stuff"+
                               "</span>"+
                               "72"+
                             "</p>"+
