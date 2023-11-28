@@ -4,7 +4,8 @@
     info[contract] = 2023 ;
     info[back] = 2020 ;
     info[tester] = 8 ;
-    info[poller] = 8
+    info[poller] = 8 ;
+    info[platform] = Currently OJS V3.1.1.2. Need V3.1.3.
   >
 
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin

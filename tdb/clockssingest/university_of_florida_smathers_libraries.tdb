@@ -84,9 +84,22 @@
       au < frozen ; exists ; 2018 ; Chemical Engineering Education Volume 2018 ; 2018 ; 2018 ; >
       au < frozen ; exists ; 2019 ; Chemical Engineering Education Volume 2019 ; 2019 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Chemical Engineering Education Volume 2020 ; 2020 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Chemical Engineering Education Volume 2021 ; 2021 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; Chemical Engineering Education Volume 2022 ; 2022 ; 2022 ; >
+      au < frozen ; exists ; 2021 ; Chemical Engineering Education Volume 2021 ; 2021 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; Chemical Engineering Education Volume 2022 ; 2022 ; 2022 ; >
       au < notReady ; exists ; 2023 ; Chemical Engineering Education Volume 2023 ; 2023 ; 2023 ; > #login found, https://journals.flvc.org/cee/article/view/132637/136584
+
+  }
+
+  {
+
+      title <
+        name = EMIC ;
+        issn = 2994-8916
+      >
+
+      param[journal_id] = EMIC
+
+      au < manifest ; exists ; 2023 ; EMIC Volume 1 ; 1 ; 2023 ; >
 
   }
 

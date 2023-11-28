@@ -66,12 +66,7 @@ import org.lockss.remote.RemoteApi;
 import org.lockss.servlet.AdminServletManager;
 import org.lockss.servlet.LockssServlet;
 import org.lockss.servlet.ServletManager;
-import org.lockss.test.ConfigurationUtil;
-import org.lockss.test.LockssTestCase;
-import org.lockss.test.MockArchivalUnit;
-import org.lockss.test.MockLockssDaemon;
-import org.lockss.test.MockPlugin;
-import org.lockss.test.TcpTestUtil;
+import org.lockss.test.*;
 import org.lockss.util.ListUtil;
 import org.lockss.util.RegexpUtil;
 import org.lockss.ws.cxf.AuthorizationInterceptor;
@@ -96,6 +91,7 @@ public class FuncAuControlService extends LockssTestCase {
       "http://control.ws.lockss.org/";
   private static final String SERVICE_NAME = "AuControlServiceImplService";
 
+  private MockLockssDaemon theDaemon;
   private PluginManager pluginMgr;
   private MockPlugin plugin;
   private AccountManager accountManager;
@@ -126,7 +122,7 @@ public class FuncAuControlService extends LockssTestCase {
 	ServletManager.PARAM_PLATFORM_USERNAME, USER_NAME,
 	ServletManager.PARAM_PLATFORM_PASSWORD, PASSWORD_SHA1);
 
-    MockLockssDaemon theDaemon = getMockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
 
     accountManager = theDaemon.getAccountManager();
@@ -236,6 +232,10 @@ public class FuncAuControlService extends LockssTestCase {
     mau = MockArchivalUnit.newInited(theDaemon);
     mau0 = (MockArchivalUnit)pluginMgr.getAuFromId(auId0);
     mau1 = (MockArchivalUnit)pluginMgr.getAuFromId(auId1);
+
+    PluginTestUtil.startAu(mau);
+    PluginTestUtil.startAu(mau0);
+    PluginTestUtil.startAu(mau1);
   }
 
   /**
@@ -249,20 +249,20 @@ public class FuncAuControlService extends LockssTestCase {
 
     CheckSubstanceResult result = proxy.checkSubstanceById("");
     assertEquals("", result.getId());
-    assertNull(result.getOldState());
-    assertNull(result.getNewState());
+    assertEquals(null, result.getOldState());
+    assertEquals(null, result.getNewState());
     assertEquals(MISSING_AU_ID_ERROR_MESSAGE, result.getErrorMessage());
 
     result = proxy.checkSubstanceById(mau.getAuId());
     assertEquals(mau.getAuId(), result.getId());
-    assertNull(result.getOldState());
-    assertNull(result.getNewState());
+    assertEquals(null, result.getOldState());
+    assertEquals(null, result.getNewState());
     assertEquals(NO_SUCH_AU_ERROR_MESSAGE, result.getErrorMessage());
 
     result = proxy.checkSubstanceById(mau0.getAuId());
     assertEquals(mau0.getAuId(), result.getId());
-    assertNull(result.getOldState());
-    assertNull(result.getNewState());
+    assertEquals(null, result.getOldState());
+    assertEquals(null, result.getNewState());
     assertEquals(NO_SUBSTANCE_ERROR_MESSAGE, result.getErrorMessage());
 
     mau0.setSubstanceUrlPatterns(RegexpUtil.compileRegexps(ListUtil.list("one",
@@ -271,8 +271,8 @@ public class FuncAuControlService extends LockssTestCase {
     result = proxy.checkSubstanceById(mau0.getAuId());
     log.info("result = " + result);
     assertEquals(mau0.getAuId(), result.getId());
-    assertNull(result.getOldState());
-    assertNull(result.getNewState());
+    assertEquals(CheckSubstanceResult.State.Unknown, result.getOldState());
+    assertEquals(null, result.getNewState());
     assertEquals(UNEXPECTED_SUBSTANCE_CHECKER_ERROR_MESSAGE,
 	result.getErrorMessage());
 
@@ -283,9 +283,9 @@ public class FuncAuControlService extends LockssTestCase {
     result = proxy.checkSubstanceById(mau0.getAuId());
     log.info("result = " + result);
     assertEquals(mau0.getAuId(), result.getId());
-    assertNull(result.getOldState());
+    assertEquals(CheckSubstanceResult.State.Unknown, result.getOldState());
     assertEquals(CheckSubstanceResult.State.No, result.getNewState());
-    assertNull(result.getErrorMessage());
+    assertEquals(null, result.getErrorMessage());
 
     mau1.setSubstanceUrlPatterns(RegexpUtil.compileRegexps(ListUtil.list("one",
 	"two" )));
@@ -296,9 +296,9 @@ public class FuncAuControlService extends LockssTestCase {
     result = proxy.checkSubstanceById(mau1.getAuId());
     log.info("result = " + result);
     assertEquals(mau1.getAuId(), result.getId());
-    assertNull(result.getOldState());
+    assertEquals(CheckSubstanceResult.State.Unknown, result.getOldState());
     assertEquals(CheckSubstanceResult.State.Yes, result.getNewState());
-    assertNull(result.getErrorMessage());
+    assertEquals(null, result.getErrorMessage());
 
     // User "contentAdminRole" should fail.
     userAccount.setRoles(LockssServlet.ROLE_CONTENT_ADMIN);
@@ -340,8 +340,8 @@ public class FuncAuControlService extends LockssTestCase {
 
     result = proxy.checkSubstanceById(mau.getAuId());
     assertEquals(mau.getAuId(), result.getId());
-    assertNull(result.getOldState());
-    assertNull(result.getNewState());
+    assertEquals(null, result.getOldState());
+    assertEquals(null, result.getNewState());
     assertEquals(NO_SUCH_AU_ERROR_MESSAGE, result.getErrorMessage());
   }
 
@@ -362,14 +362,14 @@ public class FuncAuControlService extends LockssTestCase {
     List<CheckSubstanceResult> results = proxy.checkSubstanceByIdList(auIds);
     CheckSubstanceResult result = results.get(0);
     assertEquals(auId0, result.getId());
-    assertNull(result.getOldState());
-    assertNull(result.getNewState());
+    assertEquals(null, result.getOldState());
+    assertEquals(null, result.getNewState());
     assertEquals(NO_SUBSTANCE_ERROR_MESSAGE, result.getErrorMessage());
 
     result = results.get(1);
     assertEquals(auId1, result.getId());
-    assertNull(result.getOldState());
-    assertNull(result.getNewState());
+    assertEquals(null, result.getOldState());
+    assertEquals(null, result.getNewState());
     assertEquals(NO_SUBSTANCE_ERROR_MESSAGE, result.getErrorMessage());
 
     // User "contentAdminRole" should fail.
@@ -416,14 +416,14 @@ public class FuncAuControlService extends LockssTestCase {
     results = proxy.checkSubstanceByIdList(auIds);
     result = results.get(0);
     assertEquals(auId0, result.getId());
-    assertNull(result.getOldState());
-    assertNull(result.getNewState());
+    assertEquals(null, result.getOldState());
+    assertEquals(null, result.getNewState());
     assertEquals(NO_SUBSTANCE_ERROR_MESSAGE, result.getErrorMessage());
 
     result = results.get(1);
     assertEquals(auId1, result.getId());
-    assertNull(result.getOldState());
-    assertNull(result.getNewState());
+    assertEquals(null, result.getOldState());
+    assertEquals(null, result.getNewState());
     assertEquals(NO_SUBSTANCE_ERROR_MESSAGE, result.getErrorMessage());
   }
 
@@ -439,13 +439,13 @@ public class FuncAuControlService extends LockssTestCase {
     RequestCrawlResult result = proxy.requestCrawlById("", null, false);
     assertEquals("", result.getId());
     assertFalse(result.isSuccess());
-    assertNull(result.getDelayReason());
+    assertEquals(null, result.getDelayReason());
     assertEquals(MISSING_AU_ID_ERROR_MESSAGE, result.getErrorMessage());
 
     result = proxy.requestCrawlById(mau.getAuId(), new Integer(10), true);
     assertEquals(mau.getAuId(), result.getId());
     assertFalse(result.isSuccess());
-    assertNull(result.getDelayReason());
+    assertEquals(null, result.getDelayReason());
     assertEquals(NO_SUCH_AU_ERROR_MESSAGE, result.getErrorMessage());
 
     // User "contentAdminRole" should fail.
@@ -489,8 +489,8 @@ public class FuncAuControlService extends LockssTestCase {
     result = proxy.requestCrawlById(auId0, new Integer(10), true);
     assertEquals(auId0, result.getId());
     assertTrue(result.isSuccess());
-    assertNull(result.getDelayReason());
-    assertNull(result.getErrorMessage());
+    assertEquals(null, result.getDelayReason());
+    assertEquals(null, result.getErrorMessage());
   }
 
   /**
@@ -511,14 +511,14 @@ public class FuncAuControlService extends LockssTestCase {
     RequestCrawlResult result = results.get(0);
     assertEquals(auId0, result.getId());
     assertTrue(result.isSuccess());
-    assertNull(result.getDelayReason());
-    assertNull(result.getErrorMessage());
+    assertEquals(null, result.getDelayReason());
+    assertEquals(null, result.getErrorMessage());
 
     result = results.get(1);
     assertEquals(auId1, result.getId());
     assertTrue(result.isSuccess());
-    assertNull(result.getDelayReason());
-    assertNull(result.getErrorMessage());
+    assertEquals(null, result.getDelayReason());
+    assertEquals(null, result.getErrorMessage());
 
     // User "contentAdminRole" should fail.
     userAccount.setRoles(LockssServlet.ROLE_CONTENT_ADMIN);
@@ -562,14 +562,14 @@ public class FuncAuControlService extends LockssTestCase {
     result = results.get(0);
     assertEquals(auId0, result.getId());
     assertTrue(result.isSuccess());
-    assertNull(result.getDelayReason());
-    assertNull(result.getErrorMessage());
+    assertEquals(null, result.getDelayReason());
+    assertEquals(null, result.getErrorMessage());
 
     result = results.get(1);
     assertEquals(auId1, result.getId());
     assertTrue(result.isSuccess());
-    assertNull(result.getDelayReason());
-    assertNull(result.getErrorMessage());
+    assertEquals(null, result.getDelayReason());
+    assertEquals(null, result.getErrorMessage());
   }
 
   /**
@@ -632,7 +632,7 @@ public class FuncAuControlService extends LockssTestCase {
     result = proxy.requestPollById(auId0);
     assertEquals(auId0, result.getId());
     assertTrue(result.isSuccess());
-    assertNull(result.getErrorMessage());
+    assertEquals(null, result.getErrorMessage());
   }
 
   /**
@@ -652,12 +652,12 @@ public class FuncAuControlService extends LockssTestCase {
     RequestAuControlResult result = results.get(0);
     assertEquals(auId0, result.getId());
     assertTrue(result.isSuccess());
-    assertNull(result.getErrorMessage());
+    assertEquals(null, result.getErrorMessage());
 
     result = results.get(1);
     assertEquals(auId1, result.getId());
     assertTrue(result.isSuccess());
-    assertNull(result.getErrorMessage());
+    assertEquals(null, result.getErrorMessage());
 
     // User "contentAdminRole" should fail.
     userAccount.setRoles(LockssServlet.ROLE_CONTENT_ADMIN);
@@ -701,12 +701,12 @@ public class FuncAuControlService extends LockssTestCase {
     result = results.get(0);
     assertEquals(auId0, result.getId());
     assertTrue(result.isSuccess());
-    assertNull(result.getErrorMessage());
+    assertEquals(null, result.getErrorMessage());
 
     result = results.get(1);
     assertEquals(auId1, result.getId());
     assertTrue(result.isSuccess());
-    assertNull(result.getErrorMessage());
+    assertEquals(null, result.getErrorMessage());
   }
 
   /**
@@ -798,28 +798,28 @@ public class FuncAuControlService extends LockssTestCase {
       result = proxy.disableMdIndexingById(sau0.getAuId());
       assertEquals(sau0.getAuId(), result.getId());
       assertTrue(result.isSuccess());
-      assertNull(result.getErrorMessage());
+      assertEquals(null, result.getErrorMessage());
 
       assertEquals(1, countDisabledAus(conn));
 
       result = proxy.disableMdIndexingById(sau1.getAuId());
       assertEquals(sau1.getAuId(), result.getId());
       assertTrue(result.isSuccess());
-      assertNull(result.getErrorMessage());
+      assertEquals(null, result.getErrorMessage());
 
       assertEquals(2, countDisabledAus(conn));
 
       result = proxy.enableMdIndexingById(sau0.getAuId());
       assertEquals(sau0.getAuId(), result.getId());
       assertTrue(result.isSuccess());
-      assertNull(result.getErrorMessage());
+      assertEquals(null, result.getErrorMessage());
 
       assertEquals(1, countDisabledAus(conn));
 
       result = proxy.enableMdIndexingById(sau1.getAuId());
       assertEquals(sau1.getAuId(), result.getId());
       assertTrue(result.isSuccess());
-      assertNull(result.getErrorMessage());
+      assertEquals(null, result.getErrorMessage());
 
       assertEquals(0, countDisabledAus(conn));
     } finally {
@@ -835,7 +835,10 @@ public class FuncAuControlService extends LockssTestCase {
     result = proxy.requestMdIndexingById(sau0.getAuId(), true);
     assertEquals(sau0.getAuId(), result.getId());
     assertTrue(result.isSuccess());
-    assertNull(result.getErrorMessage());
+    assertEquals(null, result.getErrorMessage());
+
+    TimerUtil.guaranteedSleep(1000);
+    metadataManager.stopService();
   }
 
   /**
@@ -930,12 +933,12 @@ public class FuncAuControlService extends LockssTestCase {
       result = results.get(0);
       assertEquals(sau0.getAuId(), result.getId());
       assertTrue(result.isSuccess());
-      assertNull(result.getErrorMessage());
+      assertEquals(null, result.getErrorMessage());
 
       result = results.get(1);
       assertEquals(sau1.getAuId(), result.getId());
       assertTrue(result.isSuccess());
-      assertNull(result.getErrorMessage());
+      assertEquals(null, result.getErrorMessage());
 
       assertEquals(2, countDisabledAus(conn));
 
@@ -943,12 +946,12 @@ public class FuncAuControlService extends LockssTestCase {
       result = results.get(0);
       assertEquals(sau0.getAuId(), result.getId());
       assertTrue(result.isSuccess());
-      assertNull(result.getErrorMessage());
+      assertEquals(null, result.getErrorMessage());
 
       result = results.get(1);
       assertEquals(sau1.getAuId(), result.getId());
       assertTrue(result.isSuccess());
-      assertNull(result.getErrorMessage());
+      assertEquals(null, result.getErrorMessage());
 
       assertEquals(0, countDisabledAus(conn));
     } finally {
@@ -959,12 +962,15 @@ public class FuncAuControlService extends LockssTestCase {
     result = results.get(0);
     assertEquals(sau0.getAuId(), result.getId());
     assertTrue(result.isSuccess());
-    assertNull(result.getErrorMessage());
+    assertEquals(null, result.getErrorMessage());
 
     result = results.get(1);
     assertEquals(sau1.getAuId(), result.getId());
     assertTrue(result.isSuccess());
-    assertNull(result.getErrorMessage());
+    assertEquals(null, result.getErrorMessage());
+
+    TimerUtil.guaranteedSleep(1000);
+    metadataManager.stopService();
   }
 
   private Configuration simAuConfig(String rootPath) {

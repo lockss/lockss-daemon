@@ -35,8 +35,13 @@ package org.lockss.plugin.silvafennica;
 import java.io.*;
 
 import org.apache.commons.io.input.CountingInputStream;
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
+import org.htmlparser.Tag;
+import org.htmlparser.filters.AndFilter;
 import org.htmlparser.filters.OrFilter;
+import org.htmlparser.util.ParserException;
+import org.htmlparser.visitors.NodeVisitor;
 //import org.htmlparser.Node;
 //import org.htmlparser.tags.Span;
 //import org.htmlparser.tags.ParagraphTag;
@@ -55,6 +60,38 @@ public class FS2HtmlHashFilterFactory implements FilterFactory {
   private static final Logger log = Logger.getLogger(FS2HtmlHashFilterFactory.class);
   
   protected static NodeFilter[] excludeFilters = new NodeFilter[] {
+    //number of views is displayed so will need to be excluded since it is dynamic
+        new AndFilter(HtmlNodeFilters.tagWithAttribute("p", "class", "abstract"), new NodeFilter(){
+          @Override
+          public boolean accept(Node node){
+            if(!(node instanceof Tag)){
+              return false;
+            }
+            class MyVisitor extends NodeVisitor {
+              private boolean accepted = false;
+              private boolean nested = false;
+
+              @Override
+              public void visitTag(Tag tag){
+                if(HtmlNodeFilters.tagWithTextRegex("span", "^(Views|Katselukerrat)$").accept(tag)){
+                  accepted = true;
+                }
+                if(HtmlNodeFilters.tagWithAttribute("p", "class", "abstract").accept(tag)){
+                  nested = true;
+                }
+                super.visitTag(tag);
+              }
+            };
+            MyVisitor visitor = new MyVisitor();
+            try {
+              node.getChildren().visitAllNodesWith(visitor);
+              return (!visitor.nested && visitor.accepted);
+            } catch (ParserException e) {
+              // TODO Auto-generated catch block
+              return false;
+            }
+          }
+        })
       // DROP scripts, styles, comments
       /*HtmlNodeFilters.tag("script"),
       HtmlNodeFilters.tag("noscript"),
@@ -97,6 +134,9 @@ public class FS2HtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tag("h1"),
       HtmlNodeFilters.tag("h2"),
       HtmlNodeFilters.tagWithAttribute("p", "class", "body-text"),
+      HtmlNodeFilters.tagWithAttribute("p", "class", "authors"),
+      HtmlNodeFilters.tagWithAttribute("p", "class", "article-title"),
+      HtmlNodeFilters.tagWithAttribute("p", "class", "abstract"),
       // https://www.silvafennica.fi/raw/1442
       HtmlNodeFilters.tagWithAttribute("div", "id", "raw_content"),
       // https://www.silvafennica.fi/large_tables/article1514_table1.html

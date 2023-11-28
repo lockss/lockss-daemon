@@ -1,7 +1,6 @@
 /*
 
-Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -435,8 +434,8 @@ public class SubTreeArticleIteratorBuilder {
       this.aspects = new ArrayList<Aspect>();
       this.rolesForFullText = new ArrayList<String>();
       this.rolesFromOtherRoles = new LinkedHashMap<String, List<String>>();
-      if (logger.isDebug2()) {
-        logger.debug2(String.format("Processing AU: %s", au.getName()));
+      if (log.isDebug2()) {
+        log.debug2(String.format("Processing AU: %s", au.getName()));
       }
     }
     
@@ -455,12 +454,12 @@ public class SubTreeArticleIteratorBuilder {
     
     @Override
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
-      boolean isDebug2 = logger.isDebug2();
+      boolean isDebug2 = log.isDebug2();
       
       // Process this CU
       String url = cu.getUrl();
       if (isDebug2) {
-        logger.debug2(String.format("Processing: %s", url));
+        log.debug2(String.format("Processing: %s", url));
       }
       
       // Try each aspect
@@ -475,7 +474,7 @@ public class SubTreeArticleIteratorBuilder {
             if (higherCu != null) {
               // Defer
               if (isDebug2) {
-                logger.debug2(String.format("Deferring to: %s", higherCu.getUrl()));
+                log.debug2(String.format("Deferring to: %s", higherCu.getUrl()));
               }
               AuUtil.safeRelease(higherCu);
               return null;
@@ -486,12 +485,12 @@ public class SubTreeArticleIteratorBuilder {
           af.setFullTextCu(cu);
           aspect.processRoles(af, cu);
           if (isDebug2) {
-            logger.debug2(String.format("Full text CU set to: %s", url));
+            log.debug2(String.format("Full text CU set to: %s", url));
           }
           // Process lower aspects (unless only counting articles)
           if (spec.getTarget() != null && !spec.getTarget().isArticle()) {
             if (isDebug2) {
-              logger.debug2("Processing additional aspects");
+              log.debug2("Processing additional aspects");
             }
             for (int cj = ci + 1; cj < aspects.size(); ++cj) {
               Aspect lowerAspect = aspects.get(cj);
@@ -504,7 +503,7 @@ public class SubTreeArticleIteratorBuilder {
           }
           else {
             if (isDebug2) {
-              logger.debug2("Skipping additional aspects");
+              log.debug2("Skipping additional aspects");
             }
           }
           // Set roles from other roles if orders specified (unless only counting articles)
@@ -515,7 +514,7 @@ public class SubTreeArticleIteratorBuilder {
                 CachedUrl foundCu = af.getRoleCu(otherRole); 
                 if (foundCu != null) {
                   if (isDebug2) {
-                    logger.debug2(String.format("CU for %s set to: %s", otherRole, foundCu.getUrl()));
+                    log.debug2(String.format("CU for %s set to: %s", otherRole, foundCu.getUrl()));
                   }
                   af.setRoleCu(role, foundCu);
                   break;
@@ -526,14 +525,14 @@ public class SubTreeArticleIteratorBuilder {
           // Override full text CU if order specified
           if (rolesForFullText.size() > 0) {
             if (isDebug2) {
-              logger.debug2("Overriding full text CU");
+              log.debug2("Overriding full text CU");
             }
             af.setFullTextCu(null);
             for (String role : rolesForFullText) {
               CachedUrl foundCu = af.getRoleCu(role);
               if (foundCu != null) {
                 if (isDebug2) {
-                  logger.debug2(String.format("Full text CU reset to: %s", foundCu.getUrl()));
+                  log.debug2(String.format("Full text CU reset to: %s", foundCu.getUrl()));
                 }
                 af.setFullTextCu(foundCu);
                 break;
@@ -544,7 +543,7 @@ public class SubTreeArticleIteratorBuilder {
           return af;
         }
       }
-      logger.debug(String.format("%s in %s did not match any expected patterns", url, au.getName()));
+      log.debug(String.format("%s in %s did not match any expected patterns", url, au.getName()));
       return null;
     }
 
@@ -571,7 +570,7 @@ public class SubTreeArticleIteratorBuilder {
    * 
    * @since 1.60
    */
-  private static final Logger logger = Logger.getLogger(SubTreeArticleIteratorBuilder.class);
+  private static final Logger log = Logger.getLogger(SubTreeArticleIteratorBuilder.class);
   
   /**
    * <p>

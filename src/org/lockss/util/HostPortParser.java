@@ -61,6 +61,11 @@ public class HostPortParser {
     }
   }
 
+  @Override
+  public String toString() {
+    return host + ":" + port;
+  }
+
   public String getHost() {
     return host;
   }

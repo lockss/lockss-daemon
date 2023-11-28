@@ -104,6 +104,7 @@ public class MsHtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "journal-volume-issue-container"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-access-icon-and-access"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "hidden-js-div"),
+    HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/cdn-cgi/")
           
   };
 

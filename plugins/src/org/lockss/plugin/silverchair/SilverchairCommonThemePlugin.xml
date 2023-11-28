@@ -174,8 +174,6 @@
             <string>1,"^https?://(ucp\.silverchair-cdn\.com)/"</string>
             <string>1,"^https?://(watermark\.silverchair\.com)/"</string>
             <string>1,"^https?://(ajot2\.silverchair-cdn\.com)/"</string>
-            <string>2,"%s.*javascript;:", base_url</string>
-            <string>2,"%s.*javascript:;", base_url</string>
             <!--Allow movies from CDN/Subdomain goes through, company of biologies need to collect movies-->
             <!--https://journals.biologists.com/jcs/article/135/18/jcs259657/276793/Mitotic-spindle-disassembly-in-human-cells-relies-->
             <string>1,"^https?://movie\.biologists\.com/video/"</string>

@@ -1183,6 +1183,13 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       throw new NotEligibleException.RateLimiter("Exceeds crawl-start rate: " +
 						 limiter.getRate());
     }
+
+    AuState aus = AuUtil.getAuState(au);
+    AuState.MigrationState ms = aus.getMigrationState();
+    if (ms == AuState.MigrationState.InProgress ||
+        ms == AuState.MigrationState.Finished) {
+      throw new NotEligibleException("AU migrated or migrating");
+    }
   }
 
   public void checkEligibleForNewContentCrawl(ArchivalUnit au)

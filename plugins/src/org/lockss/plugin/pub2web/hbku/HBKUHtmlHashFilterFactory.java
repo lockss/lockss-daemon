@@ -70,6 +70,7 @@ public class HBKUHtmlHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "metricsEndDate"),
             HtmlNodeFilters.tagWithAttributeRegex("span", "class", "__cf_email__"),
             HtmlNodeFilters.tagWithAttributeRegex("a", "class", "affilLinkToEncode"),
+            HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/cdn-cgi/")
 
 
     };

@@ -733,6 +733,7 @@ public class TestAuState extends LockssTestCase {
     AuState newaus = deser(edser);
     assertEquals(-1, newaus.getNumAgreePeersLastPoR());
     assertEquals(Collections.EMPTY_LIST, newaus.getCdnStems());
+    assertEquals(AuState.MigrationState.NotStarted, aus.getMigrationState());
   }
 
   public static void main(String[] argv) {

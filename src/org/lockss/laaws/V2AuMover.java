@@ -45,6 +45,7 @@ import java.util.stream.*;
 import okhttp3.*;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
+import org.lockss.crawler.CrawlManager;
 import org.lockss.daemon.LockssRunnable;
 import org.lockss.laaws.MigrationManager.OpType;
 import org.lockss.laaws.api.rs.StreamingArtifactsApi;
@@ -52,6 +53,7 @@ import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.V2RestClient;
 import org.lockss.laaws.model.rs.AuidPageInfo;
 import org.lockss.plugin.*;
+import org.lockss.state.AuState;
 import org.lockss.uiapi.util.DateFormatter;
 import org.lockss.util.*;
 import static org.lockss.laaws.Counters.CounterType;
@@ -842,6 +844,30 @@ s api client with long timeout */
     enqueueFinishAll();
   }
 
+  private void setAuMigrationState(ArchivalUnit au,
+                                   AuState.MigrationState state) {
+
+    AuState auState = AuUtil.getAuState(au);
+
+    if (auState.getMigrationState() == state) {
+      log.warning("AU migration state is already " + state);
+      return;
+    }
+
+    auState.setMigrationState(state);
+
+    switch (state) {
+      case Aborted:
+        // Migration state is checked when determining crawling and polling
+        // eligibility; nothing further to do to signal those activities can
+        // be resumed.
+        break;
+      case InProgress:
+        // TODO: Abort any crawls and polls on AU
+        break;
+    }
+  }
+
   private void moveSystemSettings(Args args) {
     currentStatus = STATUS_COPYING_SYSTEM_SETTINGS;
     logReport(currentStatus);
@@ -856,6 +882,20 @@ s api client with long timeout */
     currentStatus = STATUS_DONE_COPYING_SYSTEM_SETTINGS;
   }
 
+//  private void moveSystemSettings(Args args) {
+//    currentStatus = STATUS_COPYING_SYSTEM_SETTINGS;
+//    logReport(currentStatus);
+//
+//    initRequest(args, null);
+//
+//    // Move user accounts
+//    MigrationTask task = MigrationTask.copyUserAccounts(this);
+//    UserAccountMover userAcctMover = new UserAccountMover(this, task);
+//    userAcctMover.run();
+//
+//    currentStatus = STATUS_DONE_COPYING_SYSTEM_SETTINGS;
+//  }
+
   /**
    * Start the state machine for an AU
    */
@@ -866,6 +906,7 @@ s api client with long timeout */
     String auName = au.getName();
     log.debug("Starting state machine for AU: " + auName);
 
+    setAuMigrationState(au, AuState.MigrationState.InProgress);
     auStat.setPhase(Phase.QUEUE);       // For display purposes only,
                                         // unlikely to be seen.
     switch (opType) {
@@ -1147,8 +1188,10 @@ s api client with long timeout */
       addFinishedAu(au, auStat);
       updateReport(auStat);
       if (auStat.isAbort()) {
+        setAuMigrationState(au, AuState.MigrationState.Aborted);
         enterPhase(auStat, Phase.ABORT);
       } else {
+        setAuMigrationState(au, AuState.MigrationState.Finished);
         totalAusMoved++;
         if (checkMissingContent && existsInV2(auStat.getAuId())) {
           Counters ctrs = auStat.getCounters();

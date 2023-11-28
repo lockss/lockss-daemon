@@ -630,9 +630,23 @@ public class UrlUtil {
    */
   // http://hostname.com:80/mywebapp/servlet/MyServlet/a/b;c=123?d=789
   public static String getRequestURL(HttpServletRequest req) {
+    return rewriteRequestURL(req.getServerName(), req.getServerPort(), req);
+  }
+
+  public static String getRequestURLWithQuery(HttpServletRequest req) {
+    String queryString = req.getQueryString();
+
+    StringBuffer sb = new StringBuffer(getRequestURL(req));
+    if (queryString != null) {
+      sb.append("?");
+      sb.append(queryString);
+    }
+
+    return sb.toString();
+  }
+
+  public static String rewriteRequestURL(String serverName, int serverPort, HttpServletRequest req) {
     String scheme = req.getScheme();             // http
-    String serverName = req.getServerName();     // hostname.com
-    int serverPort = req.getServerPort();        // 80
     String contextPath = req.getContextPath();   // /mywebapp
     String servletPath = req.getServletPath();   // /servlet/MyServlet
     String pathInfo = req.getPathInfo();         // /a/b;c=123
@@ -654,6 +668,18 @@ public class UrlUtil {
 //       sb.append("?");
 //       sb.append(queryString);
 //     }
+    return sb.toString();
+  }
+
+  public static String rewriteRequestURLWithQuery(String serverName, int serverPort, HttpServletRequest req) {
+    String queryString = req.getQueryString();
+
+    StringBuffer sb = new StringBuffer(rewriteRequestURL(serverName, serverPort, req));
+    if (queryString != null) {
+      sb.append("?");
+      sb.append(queryString);
+    }
+
     return sb.toString();
   }
 
