@@ -137,6 +137,9 @@ public class AmericanMathematicalSocietyHtmlMetadataExtractorFactory
                             MetadataField.splitAt(",")));
       tagMap.put("citation_pdf_url", MetadataField.FIELD_ACCESS_URL);
       tagMap.put("citation_series_title", MetadataField.FIELD_SERIES_TITLE);
+      tagMap.put("citation_keywords", 
+          new MetadataField(MetadataField.FIELD_KEYWORDS, 
+                            MetadataField.splitAt(",")));
     }
     
     
