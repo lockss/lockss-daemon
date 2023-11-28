@@ -61,7 +61,7 @@ public class ProxyManager extends BaseProxyManager {
    * Forwards proxy requests to the specified machine if set
    **/
   static final String PARAM_FORWARD_PROXY =
-      Configuration.PREFIX + "proxy.forwardProxy";
+      Configuration.PREFIX + "proxy.forwardTo";
   public static final String DEFAULT_FORWARD_PROXY = null;
 
   private HostPortParser forwardProxy = null;

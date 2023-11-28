@@ -103,6 +103,15 @@ public class ServeContent extends LockssServlet {
   /** Prefix for this server's config tree */
   public static final String PREFIX = Configuration.PREFIX + "serveContent.";
 
+  /**
+   * Forwards ServeContent requests to the specified machine if set
+   **/
+  static final String PARAM_FORWARD_SERVE_CONTENT =
+      PREFIX + ".forwardTo";
+  public static final String DEFAULT_FORWARD_SERVE_CONTENT = null;
+
+  private static HostPortParser forwardTo = null;
+
   /** Determines action taken when a requested file is not cached locally,
    * and it's not available from the publisher.  "Not available" means any
    * of:
@@ -372,6 +381,15 @@ public class ServeContent extends LockssServlet {
         log.error("Couldn't set access log level", e);
         paramAccessLogLevel = -1;
       }
+      try {
+        String forwardToParam =
+            config.get(PARAM_FORWARD_SERVE_CONTENT, DEFAULT_FORWARD_SERVE_CONTENT);
+        forwardTo = new HostPortParser(forwardToParam);
+      } catch (HostPortParser.InvalidSpec e) {
+        log.error("Error parsing forwardTo parameter", e);
+        forwardTo = null;
+      }
+
       paramAccessAlertsEnabled =
 	config.getBoolean(PARAM_ACCESS_ALERTS_ENABLED,
 			  DEFAULT_ACCESS_ALERTS_ENABLED);
@@ -1171,7 +1189,7 @@ public class ServeContent extends LockssServlet {
     try {
       try {
         // Forward the ServeContent request to "migrating to" machine
-        HostPortParser fwdProxy = proxyMgr.getForwardProxy();
+        HostPortParser fwdProxy = forwardTo;
         String fwdUrl = UrlUtil.rewriteRequestURLWithQuery(fwdProxy.getHost(), fwdProxy.getPort(), req);
         conn = openLockssUrlConnection(fwdUrl, connPool);
 
@@ -2228,7 +2246,7 @@ public class ServeContent extends LockssServlet {
 
     try {
       // Construct URL to "migrating to" ServeContent
-      HostPortParser fp = proxyMgr.getForwardProxy();
+      HostPortParser fp = forwardTo;
       // Q: Do we always want to use the same protocol? Assuming yes.
       String migratingToStem = reqURL.getProtocol() + "://" + fp.getHost() + ":" + fp.getPort();
       String srvContentUrl = srvURLFromStem(migratingToStem, myServletDescr(), null);
