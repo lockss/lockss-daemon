@@ -882,20 +882,6 @@ s api client with long timeout */
     currentStatus = STATUS_DONE_COPYING_SYSTEM_SETTINGS;
   }
 
-//  private void moveSystemSettings(Args args) {
-//    currentStatus = STATUS_COPYING_SYSTEM_SETTINGS;
-//    logReport(currentStatus);
-//
-//    initRequest(args, null);
-//
-//    // Move user accounts
-//    MigrationTask task = MigrationTask.copyUserAccounts(this);
-//    UserAccountMover userAcctMover = new UserAccountMover(this, task);
-//    userAcctMover.run();
-//
-//    currentStatus = STATUS_DONE_COPYING_SYSTEM_SETTINGS;
-//  }
-
   /**
    * Start the state machine for an AU
    */
