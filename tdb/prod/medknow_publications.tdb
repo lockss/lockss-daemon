@@ -537,10 +537,11 @@
 #    param[base_url] = https://www.bengaljcancer.org/
 
     param[journal_issn] = 2773-1332
+    #move to LWW in 2023, moved https://journals.lww.com/bjoc/
 
-    au < released ; 2021 ; Bengal Journal of Cancer Volume 1 ; 2021 ; 1 ; https://www.bengaljcancer.org/ >
-    au < released ; 2022 ; Bengal Journal of Cancer Volume 2 ; 2022 ; 2 ; https://www.bengaljcancer.org/ >
-    au < expected ; 2023 ; Bengal Journal of Cancer Volume 3 ; 2023 ; 3 ; https://www.bengaljcancer.org/ >
+    au < down ; 2021 ; Bengal Journal of Cancer Volume 1 ; 2021 ; 1 ; https://www.bengaljcancer.org/ >
+    au < down ; 2022 ; Bengal Journal of Cancer Volume 2 ; 2022 ; 2 ; https://www.bengaljcancer.org/ >
+    au < doNotProcess ; 2023 ; Bengal Journal of Cancer Volume 3 ; 2023 ; 3 ; https://www.bengaljcancer.org/ >
 
   }
 
@@ -554,7 +555,7 @@
 
       param[journal_issn] = 2589-9627
 #      param[base_url] = https://www.cmaconweb.org/
-      #Moved to Wolters Kluwer LWW
+      #move to LWW in 2023, moved https://journals.lww.com/cmc/
 
     au < down ; 2018 ; Chinese Medicine and Culture Volume 1 ; 2018 ; 1 ; https://www.cmaconweb.org/ >
     au < down ; 2019 ; Chinese Medicine and Culture Volume 2 ; 2019 ; 2 ; https://www.cmaconweb.org/ >
@@ -2776,20 +2777,21 @@
 #    param[base_url] = http://www.jdionline.org/
 
     param[journal_issn] = 0974-6781
+    #move to LWW in 2023, moved https://journals.lww.com/jodi/
 
-    au < released ; 2011 ; Journal of Dental Implants Volume 1 ; 2011 ; 1 ; http://www.jdionline.org/ >
-    au < released ; 2012 ; Journal of Dental Implants Volume 2 ; 2012 ; 2 ; http://www.jdionline.org/ >
-    au < released ; 2013 ; Journal of Dental Implants Volume 3 ; 2013 ; 3 ; http://www.jdionline.org/ >
-    au < released ; 2014 ; Journal of Dental Implants Volume 4 ; 2014 ; 4 ; http://www.jdionline.org/ >
-    au < released ; 2015 ; Journal of Dental Implants Volume 5 ; 2015 ; 5 ; http://www.jdionline.org/ >
-    au < released ; 2016 ; Journal of Dental Implants Volume 6 ; 2016 ; 6 ; http://www.jdionline.org/ >
-    au < released ; 2017 ; Journal of Dental Implants Volume 7 ; 2017 ; 7 ; http://www.jdionline.org/ >
-    au < released ; 2018 ; Journal of Dental Implants Volume 8 ; 2018 ; 8 ; http://www.jdionline.org/ >
-    au < released ; 2019 ; Journal of Dental Implants Volume 9 ; 2019 ; 9 ; https://www.jdionline.org/ >
-    au < released ; 2020 ; Journal of Dental Implants Volume 10 ; 2020 ; 10 ; https://www.jdionline.org/ >
-    au < released ; 2021 ; Journal of Dental Implants Volume 11 ; 2021 ; 11 ; https://www.jdionline.org/ >
-    au < manifest ; 2022 ; Journal of Dental Implants Volume 12 ; 2022 ; 12 ; https://www.jdionline.org/ >
-    au < expected ; 2023 ; Journal of Dental Implants Volume 13 ; 2023 ; 13 ; https://www.jdionline.org/ >
+    au < down ; 2011 ; Journal of Dental Implants Volume 1 ; 2011 ; 1 ; http://www.jdionline.org/ >
+    au < down ; 2012 ; Journal of Dental Implants Volume 2 ; 2012 ; 2 ; http://www.jdionline.org/ >
+    au < down ; 2013 ; Journal of Dental Implants Volume 3 ; 2013 ; 3 ; http://www.jdionline.org/ >
+    au < down ; 2014 ; Journal of Dental Implants Volume 4 ; 2014 ; 4 ; http://www.jdionline.org/ >
+    au < down ; 2015 ; Journal of Dental Implants Volume 5 ; 2015 ; 5 ; http://www.jdionline.org/ >
+    au < down ; 2016 ; Journal of Dental Implants Volume 6 ; 2016 ; 6 ; http://www.jdionline.org/ >
+    au < down ; 2017 ; Journal of Dental Implants Volume 7 ; 2017 ; 7 ; http://www.jdionline.org/ >
+    au < down ; 2018 ; Journal of Dental Implants Volume 8 ; 2018 ; 8 ; http://www.jdionline.org/ >
+    au < down ; 2019 ; Journal of Dental Implants Volume 9 ; 2019 ; 9 ; https://www.jdionline.org/ >
+    au < down ; 2020 ; Journal of Dental Implants Volume 10 ; 2020 ; 10 ; https://www.jdionline.org/ >
+    au < down ; 2021 ; Journal of Dental Implants Volume 11 ; 2021 ; 11 ; https://www.jdionline.org/ >
+    au < doNotProcess ; 2022 ; Journal of Dental Implants Volume 12 ; 2022 ; 12 ; https://www.jdionline.org/ >
+    au < doNotProcess ; 2023 ; Journal of Dental Implants Volume 13 ; 2023 ; 13 ; https://www.jdionline.org/ >
 
   }
 
@@ -2914,17 +2916,17 @@
     >
 #    param[base_url] = http://www.jfmpc.com/
     param[journal_issn] = 2249-4863
-    #Moved to lww
+    #Moved to lww https://journals.lww.com/jfmpc/
 
-    au < released ; 2012 ; Journal of Family Medicine and Primary Care Volume 1 ; 2012 ; 1 ; http://www.jfmpc.com/ >
-    au < released ; 2013 ; Journal of Family Medicine and Primary Care Volume 2 ; 2013 ; 2 ; http://www.jfmpc.com/ >
-    au < released ; 2014 ; Journal of Family Medicine and Primary Care Volume 3 ; 2014 ; 3 ; http://www.jfmpc.com/ >
-    au < released ; 2015 ; Journal of Family Medicine and Primary Care Volume 4 ; 2015 ; 4 ; http://www.jfmpc.com/ >
-    au < released ; 2016 ; Journal of Family Medicine and Primary Care Volume 5 ; 2016 ; 5 ; http://www.jfmpc.com/ >
-    au < released ; 2017 ; Journal of Family Medicine and Primary Care Volume 6 ; 2017 ; 6 ; http://www.jfmpc.com/ >
-    au < released ; 2018 ; Journal of Family Medicine and Primary Care Volume 7 ; 2018 ; 7 ; http://www.jfmpc.com/ >
-    au < released ; 2019 ; Journal of Family Medicine and Primary Care Volume 8 ; 2019 ; 8 ; https://www.jfmpc.com/ >
-    au < released ; 2020 ; Journal of Family Medicine and Primary Care Volume 9 ; 2020 ; 9 ; https://www.jfmpc.com/ >
+    au < down ; 2012 ; Journal of Family Medicine and Primary Care Volume 1 ; 2012 ; 1 ; http://www.jfmpc.com/ >
+    au < down ; 2013 ; Journal of Family Medicine and Primary Care Volume 2 ; 2013 ; 2 ; http://www.jfmpc.com/ >
+    au < down ; 2014 ; Journal of Family Medicine and Primary Care Volume 3 ; 2014 ; 3 ; http://www.jfmpc.com/ >
+    au < down ; 2015 ; Journal of Family Medicine and Primary Care Volume 4 ; 2015 ; 4 ; http://www.jfmpc.com/ >
+    au < down ; 2016 ; Journal of Family Medicine and Primary Care Volume 5 ; 2016 ; 5 ; http://www.jfmpc.com/ >
+    au < down ; 2017 ; Journal of Family Medicine and Primary Care Volume 6 ; 2017 ; 6 ; http://www.jfmpc.com/ >
+    au < down ; 2018 ; Journal of Family Medicine and Primary Care Volume 7 ; 2018 ; 7 ; http://www.jfmpc.com/ >
+    au < down ; 2019 ; Journal of Family Medicine and Primary Care Volume 8 ; 2019 ; 8 ; https://www.jfmpc.com/ >
+    au < down ; 2020 ; Journal of Family Medicine and Primary Care Volume 9 ; 2020 ; 9 ; https://www.jfmpc.com/ >
     au < doNotProcess ; 2021 ; Journal of Family Medicine and Primary Care Volume 10 ; 2021 ; 10 ; https://www.jfmpc.com/ >
     au < doNotProcess ; 2022 ; Journal of Family Medicine and Primary Care Volume 11 ; 2022 ; 11 ; https://www.jfmpc.com/ >
 
@@ -3233,20 +3235,21 @@
 #    param[base_url] = http://www.laryngologyandvoice.org/
 
     param[journal_issn] = 2230-9748
+    #Moved to LWW https://journals.lww.com/jolv/
 
-    au < released ; 2011 ; Journal of Laryngology and Voice Volume 1 ; 2011 ; 1 ; http://www.laryngologyandvoice.org/ >
-    au < released ; 2012 ; Journal of Laryngology and Voice Volume 2 ; 2012 ; 2 ; http://www.laryngologyandvoice.org/ >
-    au < released ; 2013 ; Journal of Laryngology and Voice Volume 3 ; 2013 ; 3 ; http://www.laryngologyandvoice.org/ >
-    au < released ; 2014 ; Journal of Laryngology and Voice Volume 4 ; 2014 ; 4 ; http://www.laryngologyandvoice.org/ >
-    au < released ; 2015 ; Journal of Laryngology and Voice Volume 5 ; 2015 ; 5 ; http://www.laryngologyandvoice.org/ >
-    au < released ; 2016 ; Journal of Laryngology and Voice Volume 6 ; 2016 ; 6 ; http://www.laryngologyandvoice.org/ >
-    au < released ; 2017 ; Journal of Laryngology and Voice Volume 7 ; 2017 ; 7 ; http://www.laryngologyandvoice.org/ >
-    au < released ; 2018 ; Journal of Laryngology and Voice Volume 8 ; 2018 ; 8 ; https://www.laryngologyandvoice.org/ >
-    au < released ; 2019 ; Journal of Laryngology and Voice Volume 9 ; 2019 ; 9 ; https://www.laryngologyandvoice.org/ >
-    au < released ; 2020 ; Journal of Laryngology and Voice Volume 10 ; 2020 ; 10 ; https://www.laryngologyandvoice.org/ >
-    au < released ; 2021 ; Journal of Laryngology and Voice Volume 11 ; 2021 ; 11 ; https://www.laryngologyandvoice.org/ >
-    au < released ; 2022 ; Journal of Laryngology and Voice Volume 12 ; 2022 ; 12 ; https://www.laryngologyandvoice.org/ >
-    au < expected ; 2023 ; Journal of Laryngology and Voice Volume 13 ; 2023 ; 13 ; https://www.laryngologyandvoice.org/ >
+    au < down ; 2011 ; Journal of Laryngology and Voice Volume 1 ; 2011 ; 1 ; http://www.laryngologyandvoice.org/ >
+    au < down ; 2012 ; Journal of Laryngology and Voice Volume 2 ; 2012 ; 2 ; http://www.laryngologyandvoice.org/ >
+    au < down ; 2013 ; Journal of Laryngology and Voice Volume 3 ; 2013 ; 3 ; http://www.laryngologyandvoice.org/ >
+    au < down ; 2014 ; Journal of Laryngology and Voice Volume 4 ; 2014 ; 4 ; http://www.laryngologyandvoice.org/ >
+    au < down ; 2015 ; Journal of Laryngology and Voice Volume 5 ; 2015 ; 5 ; http://www.laryngologyandvoice.org/ >
+    au < down ; 2016 ; Journal of Laryngology and Voice Volume 6 ; 2016 ; 6 ; http://www.laryngologyandvoice.org/ >
+    au < down ; 2017 ; Journal of Laryngology and Voice Volume 7 ; 2017 ; 7 ; http://www.laryngologyandvoice.org/ >
+    au < down ; 2018 ; Journal of Laryngology and Voice Volume 8 ; 2018 ; 8 ; https://www.laryngologyandvoice.org/ >
+    au < down ; 2019 ; Journal of Laryngology and Voice Volume 9 ; 2019 ; 9 ; https://www.laryngologyandvoice.org/ >
+    au < down ; 2020 ; Journal of Laryngology and Voice Volume 10 ; 2020 ; 10 ; https://www.laryngologyandvoice.org/ >
+    au < down ; 2021 ; Journal of Laryngology and Voice Volume 11 ; 2021 ; 11 ; https://www.laryngologyandvoice.org/ >
+    au < down ; 2022 ; Journal of Laryngology and Voice Volume 12 ; 2022 ; 12 ; https://www.laryngologyandvoice.org/ >
+    au < doNotProcess ; 2023 ; Journal of Laryngology and Voice Volume 13 ; 2023 ; 13 ; https://www.laryngologyandvoice.org/ >
 
   }
 
@@ -3442,7 +3445,6 @@
     au < released ; 2021 ; Journal of Nursing and Midwifery Sciences Volume 8 ; 2021 ; 8 ; https://www.jnmsjournal.org/ >
     au < released ; 2022 ; Journal of Nursing and Midwifery Sciences Volume 9 ; 2022 ; 9 ; https://www.jnmsjournal.org/ >
       #deactivated
-    au < expected ; 2023 ; Journal of Nursing and Midwifery Sciences Volume 10 ; 2023 ; 10 ; https://www.jnmsjournal.org/ >
 
   }
 
@@ -4167,9 +4169,10 @@
     >
 
     param[journal_issn] = 2949-8619
+    #Moved to LWW https://journals.lww.com/pedi/
 
-    au < manifest ; 2022 ; Pediatric Companion Volume 1 ; 2022 ; 1 ; https://www.pediatriccompanionkerala.in/ >
-    au < expected ; 2023 ; Pediatric Companion Volume 2 ; 2023 ; 2 ; https://www.pediatriccompanionkerala.in/ >
+    au < doNotProcess ; 2022 ; Pediatric Companion Volume 1 ; 2022 ; 1 ; https://www.pediatriccompanionkerala.in/ >
+    au < doNotProcess ; 2023 ; Pediatric Companion Volume 2 ; 2023 ; 2 ; https://www.pediatriccompanionkerala.in/ >
 
   }
 
@@ -4722,14 +4725,15 @@
 
       param[journal_issn] = 1858-6538
 #      param[base_url] = http://www.bijojournal.org/
+      #Moved to LWW https://journals.lww.com/aijo/
 
-      au < released ; 2015 ; Al-Basar International Journal of Ophthalmology Volume 3 ; 2015 ; 3 ; http://www.bijojournal.org/ >
-      au < released ; 2017 ; Al-Basar International Journal of Ophthalmology Volume 4 ; 2017 ; 4 ; http://www.bijojournal.org/ >
-      au < released ; 2018 ; Al-Basar International Journal of Ophthalmology Volume 5 ; 2018 ; 5 ; https://www.bijojournal.org/ >
-      au < released ; 2019 ; Al-Basar International Journal of Ophthalmology Volume 6 ; 2019 ; 6 ; https://www.bijojournal.org/ >
-      au < released ; 2020 ; Al-Basar International Journal of Ophthalmology Volume 7 ; 2020 ; 7 ; https://www.bijojournal.org/ >
-      au < expected ; 2022 ; Al-Basar International Journal of Ophthalmology Volume 8 ; 2022 ; 8 ; https://www.bijojournal.org/ >
-      au < expected ; 2023 ; Al-Basar International Journal of Ophthalmology Volume 9 ; 2023 ; 9 ; https://www.bijojournal.org/ >
+      au < down ; 2015 ; Al-Basar International Journal of Ophthalmology Volume 3 ; 2015 ; 3 ; http://www.bijojournal.org/ >
+      au < down ; 2017 ; Al-Basar International Journal of Ophthalmology Volume 4 ; 2017 ; 4 ; http://www.bijojournal.org/ >
+      au < down ; 2018 ; Al-Basar International Journal of Ophthalmology Volume 5 ; 2018 ; 5 ; https://www.bijojournal.org/ >
+      au < down ; 2019 ; Al-Basar International Journal of Ophthalmology Volume 6 ; 2019 ; 6 ; https://www.bijojournal.org/ >
+      au < down ; 2020 ; Al-Basar International Journal of Ophthalmology Volume 7 ; 2020 ; 7 ; https://www.bijojournal.org/ >
+      au < doNotProcess ; 2022 ; Al-Basar International Journal of Ophthalmology Volume 8 ; 2022 ; 8 ; https://www.bijojournal.org/ >
+      au < doNotProcess ; 2023 ; Al-Basar International Journal of Ophthalmology Volume 9 ; 2023 ; 9 ; https://www.bijojournal.org/ >
 
   }
 
@@ -5243,8 +5247,8 @@
       au < down ; 2020 ; Clinical Cancer Investigation Journal Volume 9 ; 2020 ; 9 ; https://www.ccij-online.org/ >
       au < down ; 2021 ; Clinical Cancer Investigation Journal Volume 10 ; 2021 ; 10 ; https://www.ccij-online.org/ >
       au < exists ; 2022 ; Clinical Cancer Investigation Journal Volume 11 ; 2022 ; 11 ; https://ccij-online.org/ >
+      au < exists ; 2023 ; Clinical Cancer Investigation Journal Volume 12 ; 2023 ; 12 ; https://ccij-online.org/ >
       #deactivated
-      au < expected ; 2023 ; Clinical Cancer Investigation Journal Volume 12 ; 2023 ; 12 ; https://ccij-online.org/ >
 
   }
 
@@ -6325,15 +6329,16 @@
 
       param[journal_issn] = 2352-4197
 #      param[base_url] = http://www.ijhronline.org/
+      #Moved to LWW https://journals.lww.com/ijhr/
 
-      au < released ; 2016 ; International Journal of Heart Rhythm Volume 1 ; 2016 ; 1 ; http://www.ijhronline.org/ >
-      au < released ; 2017 ; International Journal of Heart Rhythm Volume 2 ; 2017 ; 2 ; http://www.ijhronline.org/ >
-      au < released ; 2018 ; International Journal of Heart Rhythm Volume 3 ; 2018 ; 3 ; http://www.ijhronline.org/ >
-      au < released ; 2019 ; International Journal of Heart Rhythm Volume 4 ; 2019 ; 4 ; https://www.ijhronline.org/ >
-      au < released ; 2020 ; International Journal of Heart Rhythm Volume 5 ; 2020 ; 5 ; https://www.ijhronline.org/ >
-      au < released ; 2021 ; International Journal of Heart Rhythm Volume 6 ; 2021 ; 6 ; https://www.ijhronline.org/ >
-      au < released ; 2022 ; International Journal of Heart Rhythm Volume 7 ; 2022 ; 7 ; https://www.ijhronline.org/ >
-      au < expected ; 2023 ; International Journal of Heart Rhythm Volume 8 ; 2023 ; 8 ; https://www.ijhronline.org/ >
+      au < down ; 2016 ; International Journal of Heart Rhythm Volume 1 ; 2016 ; 1 ; http://www.ijhronline.org/ >
+      au < down ; 2017 ; International Journal of Heart Rhythm Volume 2 ; 2017 ; 2 ; http://www.ijhronline.org/ >
+      au < down ; 2018 ; International Journal of Heart Rhythm Volume 3 ; 2018 ; 3 ; http://www.ijhronline.org/ >
+      au < down ; 2019 ; International Journal of Heart Rhythm Volume 4 ; 2019 ; 4 ; https://www.ijhronline.org/ >
+      au < down ; 2020 ; International Journal of Heart Rhythm Volume 5 ; 2020 ; 5 ; https://www.ijhronline.org/ >
+      au < down ; 2021 ; International Journal of Heart Rhythm Volume 6 ; 2021 ; 6 ; https://www.ijhronline.org/ >
+      au < down ; 2022 ; International Journal of Heart Rhythm Volume 7 ; 2022 ; 7 ; https://www.ijhronline.org/ >
+      au < doNotProcess ; 2023 ; International Journal of Heart Rhythm Volume 8 ; 2023 ; 8 ; https://www.ijhronline.org/ >
 
   }
 
@@ -6369,18 +6374,19 @@
 
       param[journal_issn] = 2231-6027
 #      param[base_url] = http://www.ijohsjournal.org/
+      #Moved to LWW https://journals.lww.com/ijoh/
 
-      au < released ; 2013 ; International Journal of Oral Health Sciences Volume 3 ; 2013 ; 3 ; http://www.ijohsjournal.org/ >
-      au < released ; 2014 ; International Journal of Oral Health Sciences Volume 4 ; 2014 ; 4 ; http://www.ijohsjournal.org/ >
-      au < released ; 2015 ; International Journal of Oral Health Sciences Volume 5 ; 2015 ; 5 ; http://www.ijohsjournal.org/ >
-      au < released ; 2016 ; International Journal of Oral Health Sciences Volume 6 ; 2016 ; 6 ; http://www.ijohsjournal.org/ >
-      au < released ; 2017 ; International Journal of Oral Health Sciences Volume 7 ; 2017 ; 7 ; http://www.ijohsjournal.org/ >
-      au < released ; 2018 ; International Journal of Oral Health Sciences Volume 8 ; 2018 ; 8 ; http://www.ijohsjournal.org/ >
-      au < released ; 2019 ; International Journal of Oral Health Sciences Volume 9 ; 2019 ; 9 ; https://www.ijohsjournal.org/ >
-      au < released ; 2020 ; International Journal of Oral Health Sciences Volume 10 ; 2020 ; 10 ; https://www.ijohsjournal.org/ >
-      au < released ; 2021 ; International Journal of Oral Health Sciences Volume 11 ; 2021 ; 11 ; https://www.ijohsjournal.org/ >
-      au < released ; 2022 ; International Journal of Oral Health Sciences Volume 12 ; 2022 ; 12 ; https://www.ijohsjournal.org/ >
-      au < expected ; 2023 ; International Journal of Oral Health Sciences Volume 13 ; 2023 ; 13 ; https://www.ijohsjournal.org/ >
+      au < down ; 2013 ; International Journal of Oral Health Sciences Volume 3 ; 2013 ; 3 ; http://www.ijohsjournal.org/ >
+      au < down ; 2014 ; International Journal of Oral Health Sciences Volume 4 ; 2014 ; 4 ; http://www.ijohsjournal.org/ >
+      au < down ; 2015 ; International Journal of Oral Health Sciences Volume 5 ; 2015 ; 5 ; http://www.ijohsjournal.org/ >
+      au < down ; 2016 ; International Journal of Oral Health Sciences Volume 6 ; 2016 ; 6 ; http://www.ijohsjournal.org/ >
+      au < down ; 2017 ; International Journal of Oral Health Sciences Volume 7 ; 2017 ; 7 ; http://www.ijohsjournal.org/ >
+      au < down ; 2018 ; International Journal of Oral Health Sciences Volume 8 ; 2018 ; 8 ; http://www.ijohsjournal.org/ >
+      au < down ; 2019 ; International Journal of Oral Health Sciences Volume 9 ; 2019 ; 9 ; https://www.ijohsjournal.org/ >
+      au < down ; 2020 ; International Journal of Oral Health Sciences Volume 10 ; 2020 ; 10 ; https://www.ijohsjournal.org/ >
+      au < down ; 2021 ; International Journal of Oral Health Sciences Volume 11 ; 2021 ; 11 ; https://www.ijohsjournal.org/ >
+      au < down ; 2022 ; International Journal of Oral Health Sciences Volume 12 ; 2022 ; 12 ; https://www.ijohsjournal.org/ >
+      au < doNotProcess ; 2023 ; International Journal of Oral Health Sciences Volume 13 ; 2023 ; 13 ; https://www.ijohsjournal.org/ >
 
   }
 
@@ -6613,27 +6619,28 @@
 
       param[journal_issn] = 2468-6859
 #      param[base_url] = http://www.jcsjournal.org/
+      #Moved to LWW https://journals.lww.com/jocs/
 
-      au < manifest ; 2001 ; Journal of Clinical Sciences Volume 1 ; 2001 ; 1 ; https://www.jcsjournal.org/ >
-      au < exists ; 2002 ; Journal of Clinical Sciences Volume 2 ; 2002 ; 2 ; https://www.jcsjournal.org/ >
-      au < manifest ; 2003 ; Journal of Clinical Sciences Volume 3 ; 2003 ; 3 ; https://www.jcsjournal.org/ >
-      au < manifest ; 2004 ; Journal of Clinical Sciences Volume 4 ; 2004 ; 4 ; https://www.jcsjournal.org/ >
-      au < manifest ; 2005 ; Journal of Clinical Sciences Volume 5 ; 2005 ; 5 ; https://www.jcsjournal.org/ >
-      au < manifest ; 2006 ; Journal of Clinical Sciences Volume 6 ; 2006 ; 6 ; https://www.jcsjournal.org/ >
-      au < manifest ; 2007 ; Journal of Clinical Sciences Volume 7 ; 2007 ; 7 ; https://www.jcsjournal.org/ >
-      au < manifest ; 2008 ; Journal of Clinical Sciences Volume 8 ; 2008 ; 8 ; https://www.jcsjournal.org/ >
-      au < released ; 2012 ; Journal of Clinical Sciences Volume 9 ; 2012 ; 9 ; http://www.jcsjournal.org/ >
-      au < released ; 2013 ; Journal of Clinical Sciences Volume 10 ; 2013 ; 10 ; http://www.jcsjournal.org/ >
-      au < released ; 2014 ; Journal of Clinical Sciences Volume 11 ; 2014 ; 11 ; http://www.jcsjournal.org/ >
-      au < released ; 2015 ; Journal of Clinical Sciences Volume 12 ; 2015 ; 12 ; http://www.jcsjournal.org/ >
-      au < released ; 2016 ; Journal of Clinical Sciences Volume 13 ; 2016 ; 13 ; http://www.jcsjournal.org/ >
-      au < released ; 2017 ; Journal of Clinical Sciences Volume 14 ; 2017 ; 14 ; http://www.jcsjournal.org/ >
-      au < released ; 2018 ; Journal of Clinical Sciences Volume 15 ; 2018 ; 15 ; http://www.jcsjournal.org/ >
-      au < released ; 2019 ; Journal of Clinical Sciences Volume 16 ; 2019 ; 16 ; https://www.jcsjournal.org/ >
-      au < released ; 2020 ; Journal of Clinical Sciences Volume 17 ; 2020 ; 17 ; https://www.jcsjournal.org/ >
-      au < released ; 2021 ; Journal of Clinical Sciences Volume 18 ; 2021 ; 18 ; https://www.jcsjournal.org/ >
-      au < released ; 2022 ; Journal of Clinical Sciences Volume 19 ; 2022 ; 19 ; https://www.jcsjournal.org/ >
-      au < manifest ; 2023 ; Journal of Clinical Sciences Volume 20 ; 2023 ; 20 ; https://www.jcsjournal.org/ >
+      au < doNotProcess ; 2001 ; Journal of Clinical Sciences Volume 1 ; 2001 ; 1 ; https://www.jcsjournal.org/ >
+      au < doNotProcess ; 2002 ; Journal of Clinical Sciences Volume 2 ; 2002 ; 2 ; https://www.jcsjournal.org/ >
+      au < doNotProcess ; 2003 ; Journal of Clinical Sciences Volume 3 ; 2003 ; 3 ; https://www.jcsjournal.org/ >
+      au < doNotProcess ; 2004 ; Journal of Clinical Sciences Volume 4 ; 2004 ; 4 ; https://www.jcsjournal.org/ >
+      au < doNotProcess ; 2005 ; Journal of Clinical Sciences Volume 5 ; 2005 ; 5 ; https://www.jcsjournal.org/ >
+      au < doNotProcess ; 2006 ; Journal of Clinical Sciences Volume 6 ; 2006 ; 6 ; https://www.jcsjournal.org/ >
+      au < doNotProcess ; 2007 ; Journal of Clinical Sciences Volume 7 ; 2007 ; 7 ; https://www.jcsjournal.org/ >
+      au < doNotProcess ; 2008 ; Journal of Clinical Sciences Volume 8 ; 2008 ; 8 ; https://www.jcsjournal.org/ >
+      au < down ; 2012 ; Journal of Clinical Sciences Volume 9 ; 2012 ; 9 ; http://www.jcsjournal.org/ >
+      au < down ; 2013 ; Journal of Clinical Sciences Volume 10 ; 2013 ; 10 ; http://www.jcsjournal.org/ >
+      au < down ; 2014 ; Journal of Clinical Sciences Volume 11 ; 2014 ; 11 ; http://www.jcsjournal.org/ >
+      au < down ; 2015 ; Journal of Clinical Sciences Volume 12 ; 2015 ; 12 ; http://www.jcsjournal.org/ >
+      au < down ; 2016 ; Journal of Clinical Sciences Volume 13 ; 2016 ; 13 ; http://www.jcsjournal.org/ >
+      au < down ; 2017 ; Journal of Clinical Sciences Volume 14 ; 2017 ; 14 ; http://www.jcsjournal.org/ >
+      au < down ; 2018 ; Journal of Clinical Sciences Volume 15 ; 2018 ; 15 ; http://www.jcsjournal.org/ >
+      au < down ; 2019 ; Journal of Clinical Sciences Volume 16 ; 2019 ; 16 ; https://www.jcsjournal.org/ >
+      au < down ; 2020 ; Journal of Clinical Sciences Volume 17 ; 2020 ; 17 ; https://www.jcsjournal.org/ >
+      au < down ; 2021 ; Journal of Clinical Sciences Volume 18 ; 2021 ; 18 ; https://www.jcsjournal.org/ >
+      au < down ; 2022 ; Journal of Clinical Sciences Volume 19 ; 2022 ; 19 ; https://www.jcsjournal.org/ >
+      au < doNotProcess ; 2023 ; Journal of Clinical Sciences Volume 20 ; 2023 ; 20 ; https://www.jcsjournal.org/ >
 
   }
 
@@ -6849,17 +6856,18 @@
 
       param[journal_issn] = 2348-9995
 #      param[base_url] = http://www.jgmh.org/
+      #Moved to LWW https://journals.lww.com/jgmh/
 
-      au < released ; 2014 ; Journal of Geriatric Mental Health Volume 1 ; 2014 ; 1 ; http://www.jgmh.org/ >
-      au < released ; 2015 ; Journal of Geriatric Mental Health Volume 2 ; 2015 ; 2 ; http://www.jgmh.org/ >
-      au < released ; 2016 ; Journal of Geriatric Mental Health Volume 3 ; 2016 ; 3 ; http://www.jgmh.org/ >
-      au < released ; 2017 ; Journal of Geriatric Mental Health Volume 4 ; 2017 ; 4 ; http://www.jgmh.org/ >
-      au < released ; 2018 ; Journal of Geriatric Mental Health Volume 5 ; 2018 ; 5 ; http://www.jgmh.org/ >
-      au < released ; 2019 ; Journal of Geriatric Mental Health Volume 6 ; 2019 ; 6 ; https://www.jgmh.org/ >
-      au < released ; 2020 ; Journal of Geriatric Mental Health Volume 7 ; 2020 ; 7 ; https://www.jgmh.org/ >
-      au < released ; 2021 ; Journal of Geriatric Mental Health Volume 8 ; 2021 ; 8 ; https://www.jgmh.org/ >
-      au < released ; 2022 ; Journal of Geriatric Mental Health Volume 9 ; 2022 ; 9 ; https://www.jgmh.org/ >
-      au < expected ; 2023 ; Journal of Geriatric Mental Health Volume 10 ; 2023 ; 10 ; https://www.jgmh.org/ >
+      au < down ; 2014 ; Journal of Geriatric Mental Health Volume 1 ; 2014 ; 1 ; http://www.jgmh.org/ >
+      au < down ; 2015 ; Journal of Geriatric Mental Health Volume 2 ; 2015 ; 2 ; http://www.jgmh.org/ >
+      au < down ; 2016 ; Journal of Geriatric Mental Health Volume 3 ; 2016 ; 3 ; http://www.jgmh.org/ >
+      au < down ; 2017 ; Journal of Geriatric Mental Health Volume 4 ; 2017 ; 4 ; http://www.jgmh.org/ >
+      au < down ; 2018 ; Journal of Geriatric Mental Health Volume 5 ; 2018 ; 5 ; http://www.jgmh.org/ >
+      au < down ; 2019 ; Journal of Geriatric Mental Health Volume 6 ; 2019 ; 6 ; https://www.jgmh.org/ >
+      au < down ; 2020 ; Journal of Geriatric Mental Health Volume 7 ; 2020 ; 7 ; https://www.jgmh.org/ >
+      au < down ; 2021 ; Journal of Geriatric Mental Health Volume 8 ; 2021 ; 8 ; https://www.jgmh.org/ >
+      au < down ; 2022 ; Journal of Geriatric Mental Health Volume 9 ; 2022 ; 9 ; https://www.jgmh.org/ >
+      au < doNotProcess ; 2023 ; Journal of Geriatric Mental Health Volume 10 ; 2023 ; 10 ; https://www.jgmh.org/ >
 
   }
 
@@ -7170,18 +7178,19 @@
 
       param[journal_issn] = 2276-7096
 #      param[base_url] = http://www.jmedtropics.org/
+      #Moved to LWW https://journals.lww.com/jomt/
 
-      au < released ; 2013 ; Journal of Medicine in the Tropics Volume 15 ; 2013 ; 15 ; http://www.jmedtropics.org/ >
-      au < released ; 2014 ; Journal of Medicine in the Tropics Volume 16 ; 2014 ; 16 ; http://www.jmedtropics.org/ >
-      au < released ; 2015 ; Journal of Medicine in the Tropics Volume 17 ; 2015 ; 17 ; http://www.jmedtropics.org/ >
-      au < released ; 2016 ; Journal of Medicine in the Tropics Volume 18 ; 2016 ; 18 ; http://www.jmedtropics.org/ >
-      au < released ; 2017 ; Journal of Medicine in the Tropics Volume 19 ; 2017 ; 19 ; http://www.jmedtropics.org/ >
-      au < released ; 2018 ; Journal of Medicine in the Tropics Volume 20 ; 2018 ; 20 ; http://www.jmedtropics.org/ >
-      au < released ; 2019 ; Journal of Medicine in the Tropics Volume 21 ; 2019 ; 21 ; https://www.jmedtropics.org/ >
-      au < released ; 2020 ; Journal of Medicine in the Tropics Volume 22 ; 2020 ; 22 ; https://www.jmedtropics.org/ >
-      au < released ; 2021 ; Journal of Medicine in the Tropics Volume 23 ; 2021 ; 23 ; https://www.jmedtropics.org/ >
-      au < expected ; 2022 ; Journal of Medicine in the Tropics Volume 24 ; 2022 ; 24 ; https://www.jmedtropics.org/ >
-      au < expected ; 2023 ; Journal of Medicine in the Tropics Volume 25 ; 2023 ; 25 ; https://www.jmedtropics.org/ >
+      au < down ; 2013 ; Journal of Medicine in the Tropics Volume 15 ; 2013 ; 15 ; http://www.jmedtropics.org/ >
+      au < down ; 2014 ; Journal of Medicine in the Tropics Volume 16 ; 2014 ; 16 ; http://www.jmedtropics.org/ >
+      au < down ; 2015 ; Journal of Medicine in the Tropics Volume 17 ; 2015 ; 17 ; http://www.jmedtropics.org/ >
+      au < down ; 2016 ; Journal of Medicine in the Tropics Volume 18 ; 2016 ; 18 ; http://www.jmedtropics.org/ >
+      au < down ; 2017 ; Journal of Medicine in the Tropics Volume 19 ; 2017 ; 19 ; http://www.jmedtropics.org/ >
+      au < down ; 2018 ; Journal of Medicine in the Tropics Volume 20 ; 2018 ; 20 ; http://www.jmedtropics.org/ >
+      au < down ; 2019 ; Journal of Medicine in the Tropics Volume 21 ; 2019 ; 21 ; https://www.jmedtropics.org/ >
+      au < down ; 2020 ; Journal of Medicine in the Tropics Volume 22 ; 2020 ; 22 ; https://www.jmedtropics.org/ >
+      au < down ; 2021 ; Journal of Medicine in the Tropics Volume 23 ; 2021 ; 23 ; https://www.jmedtropics.org/ >
+      au < doNotProcess ; 2022 ; Journal of Medicine in the Tropics Volume 24 ; 2022 ; 24 ; https://www.jmedtropics.org/ >
+      au < doNotProcess ; 2023 ; Journal of Medicine in the Tropics Volume 25 ; 2023 ; 25 ; https://www.jmedtropics.org/ >
 
   }
 
