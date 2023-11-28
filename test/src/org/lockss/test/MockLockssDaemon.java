@@ -927,6 +927,7 @@ public class MockLockssDaemon extends LockssDaemon {
     try {
       return super.getActivityRegulator(au);
     } catch (IllegalArgumentException e) {
+      log.error("...creating one");
       return (ActivityRegulator)newAuManager(LockssDaemon.ACTIVITY_REGULATOR,
 					     au);
     }
@@ -937,6 +938,7 @@ public class MockLockssDaemon extends LockssDaemon {
     try {
       return super.getLockssRepository(au);
     } catch (IllegalArgumentException e) {
+      log.error("...creating one");
       return (LockssRepository)newAuManager(LockssDaemon.LOCKSS_REPOSITORY,
 					    au);
     }
@@ -947,6 +949,7 @@ public class MockLockssDaemon extends LockssDaemon {
     try {
       return super.getNodeManager(au);
     } catch (IllegalArgumentException e) {
+      log.error("...creating one");
       return (NodeManager)newAuManager(LockssDaemon.NODE_MANAGER, au);
     }
   }
@@ -956,6 +959,7 @@ public class MockLockssDaemon extends LockssDaemon {
     try {
       return super.getHistoryRepository(au);
     } catch (IllegalArgumentException e) {
+      log.error("...creating one");
       return (HistoryRepository)newAuManager(LockssDaemon.HISTORY_REPOSITORY,
           au);
     }

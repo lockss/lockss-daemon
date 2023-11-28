@@ -66,12 +66,7 @@ import org.lockss.remote.RemoteApi;
 import org.lockss.servlet.AdminServletManager;
 import org.lockss.servlet.LockssServlet;
 import org.lockss.servlet.ServletManager;
-import org.lockss.test.ConfigurationUtil;
-import org.lockss.test.LockssTestCase;
-import org.lockss.test.MockArchivalUnit;
-import org.lockss.test.MockLockssDaemon;
-import org.lockss.test.MockPlugin;
-import org.lockss.test.TcpTestUtil;
+import org.lockss.test.*;
 import org.lockss.util.ListUtil;
 import org.lockss.util.RegexpUtil;
 import org.lockss.ws.cxf.AuthorizationInterceptor;
@@ -96,6 +91,7 @@ public class FuncAuControlService extends LockssTestCase {
       "http://control.ws.lockss.org/";
   private static final String SERVICE_NAME = "AuControlServiceImplService";
 
+  private MockLockssDaemon theDaemon;
   private PluginManager pluginMgr;
   private MockPlugin plugin;
   private AccountManager accountManager;
@@ -126,7 +122,7 @@ public class FuncAuControlService extends LockssTestCase {
 	ServletManager.PARAM_PLATFORM_USERNAME, USER_NAME,
 	ServletManager.PARAM_PLATFORM_PASSWORD, PASSWORD_SHA1);
 
-    MockLockssDaemon theDaemon = getMockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
 
     accountManager = theDaemon.getAccountManager();
@@ -236,6 +232,10 @@ public class FuncAuControlService extends LockssTestCase {
     mau = MockArchivalUnit.newInited(theDaemon);
     mau0 = (MockArchivalUnit)pluginMgr.getAuFromId(auId0);
     mau1 = (MockArchivalUnit)pluginMgr.getAuFromId(auId1);
+
+    PluginTestUtil.startAu(mau);
+    PluginTestUtil.startAu(mau0);
+    PluginTestUtil.startAu(mau1);
   }
 
   /**
@@ -836,6 +836,9 @@ public class FuncAuControlService extends LockssTestCase {
     assertEquals(sau0.getAuId(), result.getId());
     assertTrue(result.isSuccess());
     assertNull(result.getErrorMessage());
+
+    TimerUtil.guaranteedSleep(1000);
+    metadataManager.stopService();
   }
 
   /**
@@ -965,6 +968,9 @@ public class FuncAuControlService extends LockssTestCase {
     assertEquals(sau1.getAuId(), result.getId());
     assertTrue(result.isSuccess());
     assertNull(result.getErrorMessage());
+
+    TimerUtil.guaranteedSleep(1000);
+    metadataManager.stopService();
   }
 
   private Configuration simAuConfig(String rootPath) {
