@@ -334,10 +334,10 @@
     au < doNotProcess ; exists ; 2009 ; Journal of Climate Volume 22 ; 22 ; >
     au < doNotProcess ; exists ; 2010 ; Journal of Climate Volume 23 ; 23 ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Climate Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2012 ; Journal of Climate Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2013 ; Journal of Climate Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2012 ; Journal of Climate Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2013 ; Journal of Climate Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Climate Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2015 ; Journal of Climate Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2015 ; Journal of Climate Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Climate Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Climate Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Climate Volume 31 ; 31 ; >
@@ -376,9 +376,9 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Hydrometeorology Volume 13 ; 13 ; >
     au < frozen ; exists ; 2013 ; Journal of Hydrometeorology Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Hydrometeorology Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2015 ; Journal of Hydrometeorology Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2015 ; Journal of Hydrometeorology Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Hydrometeorology Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2017 ; Journal of Hydrometeorology Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2017 ; Journal of Hydrometeorology Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Hydrometeorology Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Journal of Hydrometeorology Volume 20 ; 20 ; >
     au < frozen ; exists ; 2020 ; Journal of Hydrometeorology Volume 21 ; 21 ; >
@@ -441,10 +441,10 @@
     au < doNotProcess ; exists ; 2010 ; Journal of Physical Oceanography Volume 40 ; 40 ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Physical Oceanography Volume 41 ; 41 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Physical Oceanography Volume 42 ; 42 ; >
-    au < crawling ; exists ; 2013 ; Journal of Physical Oceanography Volume 43 ; 43 ; >
+    au < frozen ; exists ; 2013 ; Journal of Physical Oceanography Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Physical Oceanography Volume 44 ; 44 ; >
-    au < crawling ; exists ; 2015 ; Journal of Physical Oceanography Volume 45 ; 45 ; >
-    au < crawling ; exists ; 2016 ; Journal of Physical Oceanography Volume 46 ; 46 ; >
+    au < frozen ; exists ; 2015 ; Journal of Physical Oceanography Volume 45 ; 45 ; >
+    au < frozen ; exists ; 2016 ; Journal of Physical Oceanography Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Physical Oceanography Volume 47 ; 47 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Physical Oceanography Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Journal of Physical Oceanography Volume 49 ; 49 ; >
@@ -534,9 +534,9 @@
     au < doNotProcess ; exists ; 2009 ; Journal of the Atmospheric Sciences Volume 66 ; 66 ; >
     au < doNotProcess ; exists ; 2010 ; Journal of the Atmospheric Sciences Volume 67 ; 67 ; >
     au < doNotProcess ; exists ; 2011 ; Journal of the Atmospheric Sciences Volume 68 ; 68 ; >
-    au < crawling ; exists ; 2012 ; Journal of the Atmospheric Sciences Volume 69 ; 69 ; >
-    au < crawling ; exists ; 2013 ; Journal of the Atmospheric Sciences Volume 70 ; 70 ; >
-    au < crawling ; exists ; 2014 ; Journal of the Atmospheric Sciences Volume 71 ; 71 ; >
+    au < frozen ; exists ; 2012 ; Journal of the Atmospheric Sciences Volume 69 ; 69 ; >
+    au < frozen ; exists ; 2013 ; Journal of the Atmospheric Sciences Volume 70 ; 70 ; >
+    au < frozen ; exists ; 2014 ; Journal of the Atmospheric Sciences Volume 71 ; 71 ; >
     au < testing ; exists ; 2015 ; Journal of the Atmospheric Sciences Volume 72 ; 72 ; >
     au < testing ; exists ; 2016 ; Journal of the Atmospheric Sciences Volume 73 ; 73 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of the Atmospheric Sciences Volume 74 ; 74 ; >
@@ -729,8 +729,8 @@
     au < doNotProcess ; exists ; 2009 ; Monthly Weather Review Volume 137 ; 137 ; >
     au < doNotProcess ; exists ; 2010 ; Monthly Weather Review Volume 138 ; 138 ; >
     au < doNotProcess ; exists ; 2011 ; Monthly Weather Review Volume 139 ; 139 ; >
-    au < crawling ; exists ; 2012 ; Monthly Weather Review Volume 140 ; 140 ; >
-    au < crawling ; exists ; 2013 ; Monthly Weather Review Volume 141 ; 141 ; >
+    au < frozen ; exists ; 2012 ; Monthly Weather Review Volume 140 ; 140 ; >
+    au < frozen ; exists ; 2013 ; Monthly Weather Review Volume 141 ; 141 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Monthly Weather Review Volume 142 ; 142 ; >
     au < testing ; exists ; 2015 ; Monthly Weather Review Volume 143 ; 143 ; >
     au < testing ; exists ; 2016 ; Monthly Weather Review Volume 144 ; 144 ; >
@@ -761,7 +761,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Weather, Climate, and Society Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Weather, Climate, and Society Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Weather, Climate, and Society Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2015 ; Weather, Climate, and Society Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2015 ; Weather, Climate, and Society Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Weather, Climate, and Society Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Weather, Climate, and Society Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Weather, Climate, and Society Volume 10 ; 10 ; >
@@ -813,7 +813,7 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Weather and Forecasting Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Weather and Forecasting Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Weather and Forecasting Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2015 ; Weather and Forecasting Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2015 ; Weather and Forecasting Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Weather and Forecasting Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Weather and Forecasting Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Weather and Forecasting Volume 33 ; 33 ; >
