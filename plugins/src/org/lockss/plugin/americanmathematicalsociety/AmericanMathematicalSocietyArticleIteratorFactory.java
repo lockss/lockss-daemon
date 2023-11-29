@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.americanmathematicalsociety;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
@@ -72,13 +73,14 @@ implements ArticleIteratorFactory,
       "/journals/([^/]+/[0-9-]+)/([^/]+)/\\2[.]pdf$",
       Pattern.CASE_INSENSITIVE);
   protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
-      "/journals/([^/]+/[0-9-]+)/([^/]+)/\\?active=current",
+      "/journals/([^/]+/[0-9-]+)/([^/]+)(/\\?active=current|)$",
       Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
   protected static final String HTML_REPLACEMENT = "/journals/$1/$2/viewer";
   protected static final String PDF_REPLACEMENT = "/journals/$1/$2/$2.pdf";
-  protected static final String ABSTRACT_REPLACEMENT = "/journals/$1/$2/?active=current";
+  protected static final String ABSTRACT_REPLACEMENT_1 = "/journals/$1/$2/?active=current";
+  protected static final String ABSTRACT_REPLACEMENT_2 = "/journals/$1/$2";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) 
@@ -103,10 +105,10 @@ implements ArticleIteratorFactory,
 
     // set up abstract to be an aspect that will trigger an ArticleFiles
     builder.addAspect(
-        ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT,
+        ABSTRACT_PATTERN, Arrays.asList(ABSTRACT_REPLACEMENT_1, ABSTRACT_REPLACEMENT_2),
         ArticleFiles.ROLE_ABSTRACT);
 
-    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, ArticleFiles.ROLE_ABSTRACT, ArticleFiles.ROLE_FULL_TEXT_HTML);
+    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, ArticleFiles.ROLE_ABSTRACT);
     builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_HTML, ArticleFiles.ROLE_FULL_TEXT_PDF, ArticleFiles.ROLE_ABSTRACT);
 
     return builder.getSubTreeArticleIterator();

@@ -33,10 +33,17 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.americanmathematicalsociety;
 
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.text.StringEscapeUtils;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -90,24 +97,6 @@ public class AmericanMathematicalSocietyHtmlMetadataExtractorFactory
   static Logger log = Logger.getLogger(
       AmericanMathematicalSocietyHtmlMetadataExtractorFactory.class);
   
-  public static final String URL_PREFIX_DOI = "https?://dx.doi.org/";
-  public static MetadataField AMS_DOI = new MetadataField(
-      MetadataField.KEY_DOI, Cardinality.Single, 
-      new Validator() {
-        public String validate(ArticleMetadata am, MetadataField field, String val)
-            throws MetadataException.ValidationException {
-          // remove leading "doi:" before checking validity
-          String doi = StringUtils.removeStartIgnoreCase(val, MetadataField.PROTOCOL_DOI);
-          if (!MetadataUtil.isDoi(doi)) {
-            doi = val.replaceFirst(URL_PREFIX_DOI, "");
-            if (!MetadataUtil.isDoi(doi)) {
-              throw new MetadataException.ValidationException("Illegal DOI: " + val);
-            }
-          }
-          return doi;
-        }
-      });
-  
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
         String contentType)
@@ -143,16 +132,60 @@ public class AmericanMathematicalSocietyHtmlMetadataExtractorFactory
     }
     
     
+    /* 
+     * Trying to pull metadata from Book Reviews using HTML. 
+     * Example: https://www.ams.org/journals/bull/2022-59-01/S0273-0979-2021-01733-2/
+     * <section id="additionalinformation">
+     *    <details>
+     *        <ul>
+     *            <li></li>
+     *            <li>
+     *              "DOI: https://doi.org/10.1090/bull/1733"
+     *            </li>
+     *            <li></li>
+     *            <li></li>
+     *        </ul>
+     *    </details>
+     * </section>
+     * 
+    */
+    
     @Override
     public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
         throws IOException {
+
       ArticleMetadata am = super.extract(target, cu);
       
+      //check if doi is pulled from metadata
+      String doi = am.getRaw("citation_doi");
+      if(doi != null){
+        log.debug3("The doi is " + doi);
+      }
+      //if not doi is found, add doi from html page
+      if (doi == null) {
+        Document doc = Jsoup.parse(cu.getUnfilteredInputStream(), cu.getEncoding() ,cu.getUrl());
+        Elements listItems = doc.select("section#additionalinformation > details > ul > li");
+        for(Element listItem : listItems){
+          if(listItem.text().contains("DOI: ")){
+            putDoiValue(am, "citation_doi", listItem.text());
+          }
+        }
+        
+      }
       am.cook(tagMap);
       am.putIfBetter(MetadataField.FIELD_PUBLISHER, "American Mathematical Society");
       return am;
     }
     
+    protected void putDoiValue(ArticleMetadata am, String name, String content) {
+      // filter raw HTML tags embedded within content -- publishers get sloppy
+      content = HtmlUtil.stripHtmlTags(content);
+      // remove character entities from content
+      content = StringEscapeUtils.unescapeHtml4(content);
+      String finalDoi = content.substring(content.indexOf("https://doi.org/")+16);
+      if (log.isDebug3()) log.debug3("Add: " + name + " = " + finalDoi);
+      am.putRaw(name, finalDoi);
+    }
   }
   
 }
