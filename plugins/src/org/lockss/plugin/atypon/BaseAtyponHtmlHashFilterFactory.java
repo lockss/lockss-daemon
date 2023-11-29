@@ -198,6 +198,12 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "temis-related"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "citing-articles"),
 
+    //https://www.lyellcollection.org/doi/10.1144/SP505-2019-208 need to filter out related articles
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "relatedTab3"),
+
+    //https://epubs.siam.org/doi/10.1137/S0040585X97T989143 need to filter out cited by articles
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "citedBy"),
+
     // A number of children add a link item "Cited By" only after the article
     // has been cited...remove the entire list item - look for text pattern
     new NodeFilter() {
