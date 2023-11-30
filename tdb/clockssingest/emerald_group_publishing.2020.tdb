@@ -1208,7 +1208,7 @@
     au < manifest ; exists ; 1989 ; British Food Journal Volume 91 ; 91 ; >
     au < manifest ; exists ; 1990 ; British Food Journal Volume 92 ; 92 ; >
     au < manifest ; exists ; 1991 ; British Food Journal Volume 93 ; 93 ; >
-    au < ready ; exists ; 1992 ; British Food Journal Volume 94 ; 94 ; >
+    au < crawling ; exists ; 1992 ; British Food Journal Volume 94 ; 94 ; >
     au < frozen ; exists ; 1993 ; British Food Journal Volume 95 ; 95 ; >
     au < finished ; manifest ; 1994 ; British Food Journal Volume 96 ; 96 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1995 ; British Food Journal Volume 97 ; 97 ; reingest5.clockss.org:8082 >
@@ -5663,7 +5663,7 @@
     au < manifest ; exists ; 1990 ; International Journal of Quality & Reliability Management Volume 7 ; 7 ; >
     au < manifest ; exists ; 1991 ; International Journal of Quality & Reliability Management Volume 8 ; 8 ; >
     au < manifest ; exists ; 1992 ; International Journal of Quality & Reliability Management Volume 9 ; 9 ; >
-    au < ready ; exists ; 1993 ; International Journal of Quality & Reliability Management Volume 10 ; 10 ; >
+    au < crawling ; exists ; 1993 ; International Journal of Quality & Reliability Management Volume 10 ; 10 ; >
     au < finished ; manifest ; 1994 ; International Journal of Quality & Reliability Management Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1995 ; International Journal of Quality & Reliability Management Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; International Journal of Quality & Reliability Management Volume 13 ; 13 ; reingest2.clockss.org:8085 >
@@ -6221,7 +6221,7 @@
 
     au < manifest ; exists ; 1991 ; Internet Research Volume 1 ; 1 ; >
     au < manifest ; exists ; 1992 ; Internet Research Volume 2 ; 2 ; >
-    au < ready ; exists ; 1993 ; Internet Research Volume 3 ; 3 ; >
+    au < crawling ; exists ; 1993 ; Internet Research Volume 3 ; 3 ; >
     au < manifest ; exists ; 1994 ; Internet Research Volume 4 ; 4 ; >
     au < finished ; manifest ; 1995 ; Internet Research Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; Internet Research Volume 6 ; 6 ; reingest4.clockss.org:8082 >
@@ -6656,7 +6656,7 @@
     au < manifest ; exists ; 1990 ; Journal of Business Strategy Volume 11 ; 11 ; >
     au < manifest ; exists ; 1991 ; Journal of Business Strategy Volume 12 ; 12 ; >
     au < manifest ; exists ; 1992 ; Journal of Business Strategy Volume 13 ; 13 ; >
-    au < ready ; exists ; 1993 ; Journal of Business Strategy Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1993 ; Journal of Business Strategy Volume 14 ; 14 ; >
     au < frozen ; exists ; 1994 ; Journal of Business Strategy Volume 15 ; 15 ; >
     au < finished ; manifest ; 1995 ; Journal of Business Strategy Volume 16 ; 16 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; Journal of Business Strategy Volume 17 ; 17 ; reingest4.clockss.org:8082 >
@@ -7211,7 +7211,7 @@
     au < manifest ; exists ; 1990 ; Journal of Educational Administration Volume 28 ; 28 ; >
     au < manifest ; exists ; 1991 ; Journal of Educational Administration Volume 29 ; 29 ; >
     au < manifest ; exists ; 1992 ; Journal of Educational Administration Volume 30 ; 30 ; >
-    au < ready ; exists ; 1993 ; Journal of Educational Administration Volume 31 ; 31 ; >
+    au < crawling ; exists ; 1993 ; Journal of Educational Administration Volume 31 ; 31 ; >
     au < frozen ; exists ; 1994 ; Journal of Educational Administration Volume 32 ; 32 ; >
     au < finished ; manifest ; 1995 ; Journal of Educational Administration Volume 33 ; 33 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1996 ; Journal of Educational Administration Volume 34 ; 34 ; reingest3.clockss.org:8083 >
@@ -8660,7 +8660,7 @@
     au < manifest ; exists ; 1990 ; Journal of Organizational Change Management Volume 3 ; 3 ; >
     au < manifest ; exists ; 1991 ; Journal of Organizational Change Management Volume 4 ; 4 ; >
     au < manifest ; exists ; 1992 ; Journal of Organizational Change Management Volume 5 ; 5 ; >
-    au < ready ; exists ; 1993 ; Journal of Organizational Change Management Volume 6 ; 6 ; >
+    au < crawling ; exists ; 1993 ; Journal of Organizational Change Management Volume 6 ; 6 ; >
     au < frozen ; exists ; 1994 ; Journal of Organizational Change Management Volume 7 ; 7 ; >
     au < finished ; manifest ; 1995 ; Journal of Organizational Change Management Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; Journal of Organizational Change Management Volume 9 ; 9 ; reingest4.clockss.org:8082 >
@@ -8759,7 +8759,7 @@
     comment[journal_id] = jpbm
 
     au < manifest ; exists ; 1992 ; Journal of Product & Brand Management Volume 1 ; 1 ; >
-    au < ready ; exists ; 1993 ; Journal of Product & Brand Management Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1993 ; Journal of Product & Brand Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 1994 ; Journal of Product & Brand Management Volume 3 ; 3 ; >
     au < finished ; manifest ; 1995 ; Journal of Product & Brand Management Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Journal of Product & Brand Management Volume 5 ; 5 ; reingest2.clockss.org:8085 >
@@ -9787,7 +9787,7 @@
     au < manifest ; exists ; 1989 ; Library Management Volume 10 ; 10 ; >
     au < manifest ; exists ; 1990 ; Library Management Volume 11 ; 11 ; >
     au < manifest ; exists ; 1991 ; Library Management Volume 12 ; 12 ; >
-    au < ready ; exists ; 1992 ; Library Management Volume 13 ; 13 ; >
+    au < crawling ; exists ; 1992 ; Library Management Volume 13 ; 13 ; >
     au < ready ; exists ; 1993 ; Library Management Volume 14 ; 14 ; >
     au < finished ; manifest ; 1994 ; Library Management Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1995 ; Library Management Volume 16 ; 16 ; reingest3.clockss.org:8083 >
@@ -10225,7 +10225,7 @@
     au < manifest ; exists ; 1990 ; Managerial Auditing Journal Volume 5 ; 5 ; >
     au < manifest ; exists ; 1991 ; Managerial Auditing Journal Volume 6 ; 6 ; >
     au < manifest ; exists ; 1992 ; Managerial Auditing Journal Volume 7 ; 7 ; >
-    au < ready ; exists ; 1993 ; Managerial Auditing Journal Volume 8 ; 8 ; >
+    au < crawling ; exists ; 1993 ; Managerial Auditing Journal Volume 8 ; 8 ; >
     au < frozen ; exists ; 1994 ; Managerial Auditing Journal Volume 9 ; 9 ; >
     au < finished ; manifest ; 1995 ; Managerial Auditing Journal Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Managerial Auditing Journal Volume 11 ; 11 ; reingest1.clockss.org:8082 >
@@ -10399,7 +10399,7 @@
 
     au < manifest ; exists ; 1991 ; Managing Service Quality Volume 1 ; 1 ; >
     au < manifest ; exists ; 1992 ; Managing Service Quality Volume 2 ; 2 ; >
-    au < ready ; exists ; 1993 ; Managing Service Quality Volume 3 ; 3 ; >
+    au < crawling ; exists ; 1993 ; Managing Service Quality Volume 3 ; 3 ; >
     au < frozen ; exists ; 1994 ; Managing Service Quality Volume 4 ; 4 ; >
     au < finished ; manifest ; 1995 ; Managing Service Quality Volume 5 ; 5 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Managing Service Quality Volume 6 ; 6 ; reingest5.clockss.org:8082 >
@@ -10445,7 +10445,7 @@
     au < manifest ; exists ; 1990 ; Marketing Intelligence & Planning Volume 8 ; 8 ; >
     au < manifest ; exists ; 1991 ; Marketing Intelligence & Planning Volume 9 ; 9 ; >
     au < manifest ; exists ; 1992 ; Marketing Intelligence & Planning Volume 10 ; 10 ; >
-    au < ready ; exists ; 1993 ; Marketing Intelligence & Planning Volume 11 ; 11 ; >
+    au < crawling ; exists ; 1993 ; Marketing Intelligence & Planning Volume 11 ; 11 ; >
     au < finished ; manifest ; 1994 ; Marketing Intelligence & Planning Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1995 ; Marketing Intelligence & Planning Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; Marketing Intelligence & Planning Volume 14 ; 14 ; reingest4.clockss.org:8082 >
@@ -10684,7 +10684,7 @@
     au < manifest ; exists ; 1990 ; Microelectronics International Volume 7 ; 7 ; >
     au < manifest ; exists ; 1991 ; Microelectronics International Volume 8 ; 8 ; >
     au < manifest ; exists ; 1992 ; Microelectronics International Volume 9 ; 9 ; >
-    au < ready ; exists ; 1993 ; Microelectronics International Volume 10 ; 10 ; >
+    au < crawling ; exists ; 1993 ; Microelectronics International Volume 10 ; 10 ; >
     au < frozen ; exists ; 1994 ; Microelectronics International Volume 11 ; 11 ; >
     au < finished ; manifest ; 1995 ; Microelectronics International Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 1996 ; Microelectronics International Volume 13 ; 13 ; >
@@ -11458,7 +11458,7 @@
     au < manifest ; exists ; 1990 ; Pigment & Resin Technology Volume 19 ; 19 ; >
     au < manifest ; exists ; 1991 ; Pigment & Resin Technology Volume 20 ; 20 ; >
     au < manifest ; exists ; 1992 ; Pigment & Resin Technology Volume 21 ; 21 ; >
-    au < ready ; exists ; 1993 ; Pigment & Resin Technology Volume 22 ; 22 ; >
+    au < crawling ; exists ; 1993 ; Pigment & Resin Technology Volume 22 ; 22 ; >
     au < frozen ; exists ; 1994 ; Pigment & Resin Technology Volume 23 ; 23 ; >
     au < finished ; manifest ; 1995 ; Pigment & Resin Technology Volume 24 ; 24 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; Pigment & Resin Technology Volume 25 ; 25 ; reingest4.clockss.org:8082 >
@@ -11673,7 +11673,7 @@
     au < manifest ; exists ; 1990 ; Property Management Volume 8 ; 8 ; >
     au < manifest ; exists ; 1991 ; Property Management Volume 9 ; 9 ; >
     au < manifest ; exists ; 1992 ; Property Management Volume 10 ; 10 ; >
-    au < ready ; exists ; 1993 ; Property Management Volume 11 ; 11 ; >
+    au < crawling ; exists ; 1993 ; Property Management Volume 11 ; 11 ; >
     au < finished ; manifest ; 1994 ; Property Management Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1995 ; Property Management Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; Property Management Volume 14 ; 14 ; reingest4.clockss.org:8082 >
@@ -11882,7 +11882,7 @@
     param[journal_issn] = 0968-4883
     comment[journal_id] = qae
 
-    au < ready ; exists ; 1993 ; Quality Assurance in Education Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1993 ; Quality Assurance in Education Volume 1 ; 1 ; >
     au < frozen ; exists ; 1994 ; Quality Assurance in Education Volume 2 ; 2 ; >
     au < finished ; manifest ; 1995 ; Quality Assurance in Education Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1996 ; Quality Assurance in Education Volume 4 ; 4 ; reingest3.clockss.org:8083 >
@@ -12702,8 +12702,8 @@
     au < manifest ; exists ; 1989 ; Planning Review Volume 17 ; 17 ; >
     au < manifest ; exists ; 1990 ; Planning Review Volume 18 ; 18 ; >
     au < manifest ; exists ; 1991 ; Planning Review Volume 19 ; 19 ; >
-    au < ready ; exists ; 1992 ; Planning Review Volume 20 ; 20 ; >
-    au < ready ; exists ; 1993 ; Planning Review Volume 21 ; 21 ; >
+    au < crawling ; exists ; 1992 ; Planning Review Volume 20 ; 20 ; >
+    au < crawling ; exists ; 1993 ; Planning Review Volume 21 ; 21 ; >
     au < finished ; manifest ; 1994 ; Planning Review Volume 22 ; 22 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1995 ; Planning Review Volume 23 ; 23 ; reingest1.clockss.org:8082 >
 
@@ -13318,7 +13318,7 @@
     au < manifest ; exists ; 1990 ; VINE Volume 20 ; 20 ; >
     au < manifest ; exists ; 1991 ; VINE Volume 21 ; 21 ; >
     au < manifest ; exists ; 1992 ; VINE Volume 22 ; 22 ; >
-    au < ready ; exists ; 1993 ; VINE Volume 23 ; 23 ; >
+    au < crawling ; exists ; 1993 ; VINE Volume 23 ; 23 ; >
     au < frozen ; exists ; 1994 ; VINE Volume 24 ; 24 ; >
     au < finished ; manifest ; 1995 ; VINE Volume 25 ; 25 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; VINE Volume 26 ; 26 ; reingest4.clockss.org:8082 >
