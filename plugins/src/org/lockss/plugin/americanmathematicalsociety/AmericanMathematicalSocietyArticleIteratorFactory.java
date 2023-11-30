@@ -56,7 +56,7 @@ implements ArticleIteratorFactory,
       "\"%sjournals/%s/\", base_url, journal_id";
   
   protected static final String PATTERN_TEMPLATE =
-      "\"^%sjournals/%s/%d-[0-9-]+/\", base_url, journal_id, year";
+      "\"^%sjournals/%s/%d-[0-9-]+/([^/?&.]+)(?:/\\1[.]pdf|/viewer|/?\\?active=current)?$\", base_url, journal_id, year";
   
   /*
     various files
@@ -67,20 +67,21 @@ implements ArticleIteratorFactory,
   
   // Identify groups in the pattern
   protected static final Pattern HTML_PATTERN = Pattern.compile(
-      "/journals/([^/]+/[0-9-]+)/([^/]+)/viewer$",
+      "/journals/([^/]+/[0-9-]+)/([^/?.]+)/viewer$",
       Pattern.CASE_INSENSITIVE);
   protected static final Pattern PDF_PATTERN = Pattern.compile(
-      "/journals/([^/]+/[0-9-]+)/([^/]+)/\\2[.]pdf$",
+      "/journals/([^/]+/[0-9-]+)/([^/?.]+)/\\2[.]pdf$",
       Pattern.CASE_INSENSITIVE);
   protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
-      "/journals/([^/]+/[0-9-]+)/([^/]+)(/\\?active=current|)$",
+      "/journals/([^/]+/[0-9-]+)/([^/?.]+)(/\\?active=current|\\?active=current)?$",
       Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
   protected static final String HTML_REPLACEMENT = "/journals/$1/$2/viewer";
   protected static final String PDF_REPLACEMENT = "/journals/$1/$2/$2.pdf";
   protected static final String ABSTRACT_REPLACEMENT_1 = "/journals/$1/$2/?active=current";
-  protected static final String ABSTRACT_REPLACEMENT_2 = "/journals/$1/$2";
+  protected static final String ABSTRACT_REPLACEMENT_2 = "/journals/$1/$2?active=current";
+  protected static final String ABSTRACT_REPLACEMENT_3 = "/journals/$1/$2";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) 
@@ -105,11 +106,11 @@ implements ArticleIteratorFactory,
 
     // set up abstract to be an aspect that will trigger an ArticleFiles
     builder.addAspect(
-        ABSTRACT_PATTERN, Arrays.asList(ABSTRACT_REPLACEMENT_1, ABSTRACT_REPLACEMENT_2),
+        ABSTRACT_PATTERN, Arrays.asList(ABSTRACT_REPLACEMENT_1, ABSTRACT_REPLACEMENT_2, ABSTRACT_REPLACEMENT_3),
         ArticleFiles.ROLE_ABSTRACT);
 
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, ArticleFiles.ROLE_ABSTRACT);
-    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_HTML, ArticleFiles.ROLE_FULL_TEXT_PDF, ArticleFiles.ROLE_ABSTRACT);
+    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_HTML, ArticleFiles.ROLE_FULL_TEXT_PDF);
 
     return builder.getSubTreeArticleIterator();
   }
