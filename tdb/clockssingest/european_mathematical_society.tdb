@@ -5,7 +5,8 @@
     info[contract] = 2015 ;
     info[back] = 2010 ;
     info[tester] = 8 ;
-    info[poller] = 2
+    info[poller] = 2 ;
+    info[platform] = EMS Custom. Deprecated
   >
   
   plugin = org.lockss.plugin.europeanmathematicalsociety.ClockssEuropeanMathematicalSocietyPlugin
@@ -31,7 +32,7 @@
 #    au < doNotProcess ; exists ; 2014 ; Algebraic Geometry Volume 2 ; 2 ; >
 #
 #  }
-#
+
   {
   
     title < 

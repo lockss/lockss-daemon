@@ -5,13 +5,25 @@
         info[back] = 1900 ; 
         info[tester] = 8 ; 
         info[poller] = 2 ;
-        info[platform] = Custom
+        info[platform] = Custom. Publisher moved to new URL/platform https://ems.press/
   >
-    plugin = org.lockss.plugin.europeanmathematicalsociety.ClockssEuropeanMathematicalSocietyBooksPlugin
-    param[base_url] = https://www.ems-ph.org/
-    #param[base_url] = https://ems.press/content/  #Publisher moved to new URL, new platform.
+    plugin = needs.plugin
+    #plugin = org.lockss.plugin.europeanmathematicalsociety.ClockssEuropeanMathematicalSocietyBooksPlugin
+    param[base_url] = https://ems.press/  #Publisher moved to new URL, new platform.
+    #param[base_url] = https://www.ems-ph.org/
     implicit < status ; status2 ; year ; isbn ; eisbn ; name ; param[book_number] ; hidden[proxy] >
 
+
+  {
+    title <
+      name = EMS Books ;
+      type = bookSeries
+    >
+      #Books that are not in a series
+
+      au < exists ; exists ; 2021 ; 978-3-98547-006-8 ; 978-3-98547-506-3 ; Handbook of Automata Theory ; 248 ; >
+
+  }
 
   {
     title <
@@ -380,6 +392,9 @@
       au < finished ; finished ; 2018 ; 978-3-03719-189-7 ; 978-3-03719-689-2 ; Geometric and Topological Aspects of Coxeter Groups and Buildings ; 234 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; 978-3-03719-200-9 ; 978-3-03719-700-4 ; Hyperbolic Flows ; 247 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2021 ; 978-3-98547-000-6 ; 978-3-98547-500-1 ; Geometry and Topology of Surfaces ; 261 ; reingest3.clockss.org:8083 >
+      au < exists ; exists ; 2022 ; 978-3-98547-015-0 ; 978-3-98547-515-5 ; Quantum Ergodicity and Delocalization of Schrödinger Eigenfunctions ; 237 ; >
+      au < exists ; exists ; 2022 ; 978-3-98547-026-6 ; 978-3-98547-526-1 ; A Infinity - Structures and Moduli Spaces ; 240 ; >
+      au < exists ; exists ; 2022 ; 978-3-98547-028-0 ; 978-3-98547-528-5 ; Regularity Theory for Elliptic PDE ; 239 ; >
 
   }
 
