@@ -123,6 +123,8 @@ public class TestAmericanMathematicalSocietyArticleIteratorFactory extends Artic
     // we match to "%sjournals/%s/%d[^/]+/.+", base, jid, year
     assertMatchesRE(pat, "http://www.ams.org/journals/jid/2008-26-04/S0894-0347-2008-00769-9");
     assertMatchesRE(pat, "http://www.ams.org/journals/jid/2008-26-04/S0894-0347-2008-00769-9/S0894-0347-2008-00769-9.pdf");
+    assertMatchesRE(pat, "http://www.ams.org/journals/jid/2008-26-04/S0894-0347-2008-00769-9/viewer");
+    assertMatchesRE(pat, "http://www.ams.org/journals/jid/2008-26-04/S0894-0347-2008-00769-9/?active=current");
     
     // but not to pdf or image
     assertNotMatchesRE(pat, "http://www.ams.org/jid/2008-26-04/S0894-0347-2008-00769-9");

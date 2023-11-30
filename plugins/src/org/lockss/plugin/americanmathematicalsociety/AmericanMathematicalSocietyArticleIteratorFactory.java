@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.americanmathematicalsociety;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
@@ -55,29 +56,32 @@ implements ArticleIteratorFactory,
       "\"%sjournals/%s/\", base_url, journal_id";
   
   protected static final String PATTERN_TEMPLATE =
-      "\"^%sjournals/%s/%d-[0-9-]{2,9}/([^/?&.]+)(?:/\\1[.]pdf)?$\", base_url, journal_id, year";
+      "\"^%sjournals/%s/%d-[0-9-]+/([^/?&.]+)(?:/\\1[.]pdf|/viewer|/?\\?active=current)?$\", base_url, journal_id, year";
   
   /*
     various files
-    http://www.ams.org/jams/2013-26-01  text/html 17703 (going to ignore)
-    http://www.ams.org/journals/jams/2013-26-01 text/html 17703
-  http://www.ams.org/jams/2013-26-01/S0894-0347-2012-00742-5  text/html 73965 (going to ignore)
-  http://www.ams.org/journals/jams/2013-26-01/S0894-0347-2012-00742-5 text/html 73965
-http://www.ams.org/journals/jams/2013-26-01/S0894-0347-2012-00742-5/S0894-0347-2012-00742-5.pdf
+      html - https://www.ams.org/journals/bull/2023-60-04/S0273-0979-2023-01805-3/viewer
+      pdf - https://www.ams.org/journals/bull/2023-60-04/S0273-0979-2023-01805-3/S0273-0979-2023-01805-3.pdf
+      abstract - https://www.ams.org/journals/bull/2023-60-04/S0273-0979-2023-01805-3/?active=current
    */
   
   // Identify groups in the pattern
   protected static final Pattern HTML_PATTERN = Pattern.compile(
-      "/journals/([^/]+/[0-9-]{7,14})/([^/?&]+)$",
+      "/journals/([^/]+/[0-9-]+)/([^/?.]+)/viewer$",
       Pattern.CASE_INSENSITIVE);
   protected static final Pattern PDF_PATTERN = Pattern.compile(
-      "/journals/([^/]+/[0-9-]{7,14})/([^/?&]+)/\\2[.]pdf$",
+      "/journals/([^/]+/[0-9-]+)/([^/?.]+)/\\2[.]pdf$",
+      Pattern.CASE_INSENSITIVE);
+  protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
+      "/journals/([^/]+/[0-9-]+)/([^/?.]+)(/\\?active=current|\\?active=current)?$",
       Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
-  protected static final String HTML_REPLACEMENT = "/journals/$1/$2";
+  protected static final String HTML_REPLACEMENT = "/journals/$1/$2/viewer";
   protected static final String PDF_REPLACEMENT = "/journals/$1/$2/$2.pdf";
-  
+  protected static final String ABSTRACT_REPLACEMENT_1 = "/journals/$1/$2/?active=current";
+  protected static final String ABSTRACT_REPLACEMENT_2 = "/journals/$1/$2?active=current";
+  protected static final String ABSTRACT_REPLACEMENT_3 = "/journals/$1/$2";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) 
@@ -93,13 +97,20 @@ http://www.ams.org/journals/jams/2013-26-01/S0894-0347-2012-00742-5/S0894-0347-2
     // set up html to be an aspect that will trigger an ArticleFiles
     builder.addAspect(
         HTML_PATTERN, HTML_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_HTML,
-        ArticleFiles.ROLE_ARTICLE_METADATA);
+        ArticleFiles.ROLE_FULL_TEXT_HTML);
 
     // set up PDF to be an aspect that will trigger an ArticleFiles
     builder.addAspect(
         PDF_PATTERN, PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
+
+    // set up abstract to be an aspect that will trigger an ArticleFiles
+    builder.addAspect(
+        ABSTRACT_PATTERN, Arrays.asList(ABSTRACT_REPLACEMENT_1, ABSTRACT_REPLACEMENT_2, ABSTRACT_REPLACEMENT_3),
+        ArticleFiles.ROLE_ABSTRACT);
+
+    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, ArticleFiles.ROLE_ABSTRACT);
+    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_HTML, ArticleFiles.ROLE_FULL_TEXT_PDF);
 
     return builder.getSubTreeArticleIterator();
   }
