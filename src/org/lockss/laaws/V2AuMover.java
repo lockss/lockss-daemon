@@ -45,6 +45,7 @@ import java.util.stream.*;
 import okhttp3.*;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
+import org.lockss.crawler.CrawlManager;
 import org.lockss.daemon.LockssRunnable;
 import org.lockss.laaws.MigrationManager.OpType;
 import org.lockss.laaws.api.rs.StreamingArtifactsApi;
@@ -52,7 +53,7 @@ import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.V2RestClient;
 import org.lockss.laaws.model.rs.AuidPageInfo;
 import org.lockss.plugin.*;
-import org.lockss.servlet.MigrateContent;
+import org.lockss.state.AuState;
 import org.lockss.uiapi.util.DateFormatter;
 import org.lockss.util.*;
 import static org.lockss.laaws.Counters.CounterType;
@@ -295,6 +296,8 @@ public class V2AuMover {
 
   /** Flag to getCurrentStatus() to build status string on the fly. */
   private static final String STATUS_RUNNING = "**Running**";
+  private static final String STATUS_COPYING_SYSTEM_SETTINGS = "Copying system settings";
+  private static final String STATUS_DONE_COPYING_SYSTEM_SETTINGS = "Done copying system settings";
 
   public static final ThreadLocal<NumberFormat> TH_BIGINT_FMT =
     new ThreadLocal<NumberFormat>() {
@@ -326,11 +329,9 @@ public class V2AuMover {
   /** V2 repo REST status api client */
   private org.lockss.laaws.api.rs.StatusApi repoStatusApiClient;
 
-  /** V2 repo REST namespace
-s api client */
+  /** V2 repo REST namespace api client */
   private StreamingArtifactsApi repoArtifactsApiClient;
-  /** V2 repo REST namespace
-s api client with long timeout */
+  /** V2 repo REST namespace api client with long timeout */
   private StreamingArtifactsApi repoArtifactsApiLongCallClient;
 
   private org.lockss.laaws.api.rs.AusApi repoAusApiClient;
@@ -351,6 +352,9 @@ s api client with long timeout */
 
   /** V2 State api client */
   private org.lockss.laaws.api.cfg.AusApi cfgAusApiClient;
+
+  /** V2 Users API client */
+  private org.lockss.laaws.api.cfg.UsersApi cfgUsersApiClient;
 
   /** Configuration service port */
   private int cfgPort;
@@ -537,23 +541,11 @@ s api client with long timeout */
     }
   }
 
-  /**
-   * Create the REST clients to access the remote repo & cfgsvc
-   * specified in the args, and initialize the status.
-   *
-   * @param args the arguments for this request.
-   * @throws IllegalArgumentException
-   */
-  void initRequest(Args args, String whichAus) throws IllegalArgumentException {
-    currentStatus = "Initializing";
-    this.whichAus = whichAus;
-    running = true;
-    hasBeenStarted = true;
+  void initClients(Args args) {
+    currentStatus = "Initializing clients";
     hostName = args.host;
     userName = args.uname;
     userPass = args.upass;
-    opType = args.opType;
-    isCompareBytes = args.isCompareContent;
 
     if (StringUtil.isNullString(hostName)) {
       String msg = "Destination hostname must be supplied.";
@@ -565,6 +557,7 @@ s api client with long timeout */
       totalCounters.addError(msg);
       throw new IllegalArgumentException(msg);
     }
+
     try {
       cfgAccessUrl = new URL("http", hostName, cfgPort, "").toString();
       if (cfgAccessUrl == null || UrlUtil.isMalformedUrl(cfgAccessUrl)) {
@@ -575,17 +568,18 @@ s api client with long timeout */
       // Rest client for short-timeout API status calls
       cfgApiStatusClient = makeV2RestClient();
       setTimeouts(cfgApiStatusClient, "status", statusConnectTimeout,
-                  statusReadTimeout);
+          statusReadTimeout);
       setClientParams(cfgApiStatusClient, userName, userPass, userAgent,
-                      cfgAccessUrl, debugRepoReq);
+          cfgAccessUrl, debugRepoReq);
 
       configClient = makeV2RestClient();
       setTimeouts(configClient, "config", connectTimeout, readTimeout);
       setClientParams(configClient, userName, userPass, userAgent,
-                      cfgAccessUrl, debugRepoReq);
+          cfgAccessUrl, debugRepoReq);
       // Assign the client to the status api and aus api
       cfgStatusApiClient = new org.lockss.laaws.api.cfg.StatusApi(cfgApiStatusClient);
       cfgAusApiClient = new org.lockss.laaws.api.cfg.AusApi(configClient);
+      cfgUsersApiClient = new org.lockss.laaws.api.cfg.UsersApi(configClient);
     }
     catch (MalformedURLException mue) {
       totalCounters.addError("Error parsing REST Configuration Service URL: "
@@ -607,19 +601,19 @@ s api client with long timeout */
       repoLongCallClient = makeV2RestClient(repoClient);
       setTimeouts(repoLongCallClient, "index", connectTimeout, longReadTimeout);
       setClientParams(repoClient, userName, userPass, userAgent,
-                      repoAccessUrl, debugRepoReq);
+          repoAccessUrl, debugRepoReq);
       setClientParams(repoLongCallClient, userName, userPass, userAgent,
-                      repoAccessUrl, debugRepoReq);
+          repoAccessUrl, debugRepoReq);
 
       // Rest client for short-timeout API status calls
       repoApiStatusClient = makeV2RestClient();
       setTimeouts(repoApiStatusClient, "status", statusConnectTimeout,
-                  statusReadTimeout);
+          statusReadTimeout);
       setClientParams(repoApiStatusClient, userName, userPass, userAgent,
-                      repoAccessUrl, debugRepoReq);
+          repoAccessUrl, debugRepoReq);
 
       repoStatusApiClient =
-        new org.lockss.laaws.api.rs.StatusApi(repoApiStatusClient);
+          new org.lockss.laaws.api.rs.StatusApi(repoApiStatusClient);
       repoArtifactsApiClient = new StreamingArtifactsApi(repoClient);
       repoAusApiClient = new org.lockss.laaws.api.rs.AusApi(repoClient);
       repoAusApiLongCallClient = new org.lockss.laaws.api.rs.AusApi(repoLongCallClient);
@@ -630,9 +624,30 @@ s api client with long timeout */
           "Missing or invalid configuration service hostName: " + hostName + " port: " + repoPort);
     }
 
+    openReportFiles(args);
+  }
+
+  /**
+   * Create the REST clients to access the remote repo & cfgsvc
+   * specified in the args, and initialize the status.
+   *
+   * @param args the arguments for this request.
+   * @throws IllegalArgumentException
+   */
+  void initRequest(Args args, String whichAus) throws IllegalArgumentException {
+    currentStatus = "Initializing";
+    this.whichAus = whichAus;
+    running = true;
+    hasBeenStarted = true;
+    opType = args.opType;
+    isCompareBytes = args.isCompareContent;
+
     // Must be called after config & args are processed
     initPhaseMap();
-    openReportFiles(args, whichAus);
+
+    if (whichAus != null) {
+      logReport("Moving: " + whichAus);
+    }
 
     startTime = now();
   }
@@ -685,18 +700,21 @@ s api client with long timeout */
     this.args = args;
 
     try {
-      if (args.au != null) {
-        // If an AU was supplied, copy it
-        moveOneAu(args);
-      } else if (args.plugins != null) {
-        // If a plugin was supplied, copy its AUs
-        movePluginAus(args);
-
+      if (args.opType == OpType.CopySystemSettings) {
+        moveSystemSettings(args);
       } else {
-        // else copy all AUs (that match sel pattern)
-        moveAllAus(args);
+        if (args.au != null) {
+          // If an AU was supplied, copy it
+          moveOneAu(args);
+        } else if (args.plugins != null) {
+          // If a plugin was supplied, copy its AUs
+          movePluginAus(args);
+        } else {
+          // else copy all AUs (that match sel pattern)
+          moveAllAus(args);
+        }
+        waitUntilDone();
       }
-      waitUntilDone();
     } catch (IOException e) {
       log.error("Unexpected exception", e);
       currentStatus = e.getMessage();
@@ -824,6 +842,44 @@ s api client with long timeout */
     enqueueFinishAll();
   }
 
+  private void setAuMigrationState(ArchivalUnit au,
+                                   AuState.MigrationState state) {
+
+    AuState auState = AuUtil.getAuState(au);
+
+    if (auState.getMigrationState() == state) {
+      log.warning("AU migration state is already " + state);
+      return;
+    }
+
+    auState.setMigrationState(state);
+
+    switch (state) {
+      case Aborted:
+        // Migration state is checked when determining crawling and polling
+        // eligibility; nothing further to do to signal those activities can
+        // be resumed.
+        break;
+      case InProgress:
+        // TODO: Abort any crawls and polls on AU
+        break;
+    }
+  }
+
+  private void moveSystemSettings(Args args) {
+    currentStatus = STATUS_COPYING_SYSTEM_SETTINGS;
+    logReport(currentStatus);
+
+    initRequest(args, null);
+
+    // Move user accounts
+    MigrationTask task = MigrationTask.copyUserAccounts(this);
+    UserAccountMover userAcctMover = new UserAccountMover(this, task);
+    userAcctMover.run();
+
+    currentStatus = STATUS_DONE_COPYING_SYSTEM_SETTINGS;
+  }
+
   /**
    * Start the state machine for an AU
    */
@@ -834,6 +890,7 @@ s api client with long timeout */
     String auName = au.getName();
     log.debug("Starting state machine for AU: " + auName);
 
+    setAuMigrationState(au, AuState.MigrationState.InProgress);
     auStat.setPhase(Phase.QUEUE);       // For display purposes only,
                                         // unlikely to be seen.
     switch (opType) {
@@ -1115,8 +1172,10 @@ s api client with long timeout */
       addFinishedAu(au, auStat);
       updateReport(auStat);
       if (auStat.isAbort()) {
+        setAuMigrationState(au, AuState.MigrationState.Aborted);
         enterPhase(auStat, Phase.ABORT);
       } else {
+        setAuMigrationState(au, AuState.MigrationState.Finished);
         totalAusMoved++;
         if (checkMissingContent && existsInV2(auStat.getAuId())) {
           Counters ctrs = auStat.getCounters();
@@ -1557,6 +1616,10 @@ s api client with long timeout */
     return cfgAusApiClient;
   }
 
+  public org.lockss.laaws.api.cfg.UsersApi getCfgUsersApiClient() {
+    return cfgUsersApiClient;
+  }
+
   // Cookie not needed in this context
   public synchronized String makeCookie() {
     return null;
@@ -1799,34 +1862,39 @@ s api client with long timeout */
     sb.append("Status: ");
     if (STATUS_RUNNING.equals(currentStatus)) {
 
-      if (!isAbort()) {
-        switch (opType) {
-          case CopyOnly:
-            sb.append("Copying");
-            break;
-          case CopyAndVerify:
-            sb.append("Copying and verifying");
-            break;
-          case VerifyOnly:
-            sb.append("Verifying");
-            break;
+      if (opType == OpType.CopySystemSettings) {
+        sb.append(currentStatus);
+      } else {
+        if (!isAbort()) {
+          switch (opType) {
+            case CopyOnly:
+              sb.append("Copying");
+              break;
+            case CopyAndVerify:
+              sb.append("Copying and verifying");
+              break;
+            case VerifyOnly:
+              sb.append("Verifying");
+              break;
+          }
+
+          if (isCompareBytes) sb.append(" and comparing");
+        } else {
+          sb.append("Aborting");
         }
 
-        if (isCompareBytes) sb.append(" and comparing");
-      } else {
-        sb.append("Aborting");
+        sb.append(", ");
+        sb.append(whichAus);
+
+        sb.append(" to ");
+        sb.append(hostName);
+        sb.append(", processed ");
+        sb.append(totalAusMoved);
+        sb.append(" of ");
+        sb.append(totalAusToMove);
+        sb.append(" AUs");
       }
 
-      sb.append(", ");
-      sb.append(whichAus);
-
-      sb.append(" to ");
-      sb.append(hostName);
-      sb.append(", processed ");
-      sb.append(totalAusMoved);
-      sb.append(" of ");
-      sb.append(totalAusToMove);
-      sb.append(" AUs");
       if (errstat.length() != 0) {
         sb.append(", ");
         sb.append(errstat);
@@ -2024,13 +2092,13 @@ s api client with long timeout */
   /**
    * Open (append) the Report file and error file
    */
-  void openReportFiles(Args args, String whichAUs) {
+  void openReportFiles(Args args) {
     String now = DateFormatter.now();
-    reportWriter = openReportFile(reportFile, args, whichAUs, "Report", now);
-    errorWriter = openReportFile(errorFile, args, whichAUs, "Error Report", now);
+    reportWriter = openReportFile(reportFile, args, "Report", now);
+    errorWriter = openReportFile(errorFile, args, "Error Report", now);
   }
 
-  PrintWriter openReportFile(File file, Args args, String whichAUs,
+  PrintWriter openReportFile(File file, Args args,
                              String title, String now) {
     PrintWriter res = null;
     try {
@@ -2043,7 +2111,6 @@ s api client with long timeout */
       res.println("  Migrating (" + args.opType
                   + (args.isCompareContent ? " with compare" : "")
                   + ") to " + args.host);
-      res.println("  " + whichAUs);
       res.println("--------------------------------------------------");
       res.println();
       if (res.checkError()) {
@@ -2055,6 +2122,15 @@ s api client with long timeout */
                 e.getMessage());
     }
     return res;
+  }
+
+  public void logReport(String msg) {
+    if (reportWriter == null) {
+      log.error("updateReport called when no reportWriter",
+          new Throwable());
+      return;
+    }
+    reportWriter.println(msg);
   }
 
   /**
@@ -2111,6 +2187,10 @@ s api client with long timeout */
     if (reportWriter.checkError()) {
       log.warning("Error writing report file.");
     }
+  }
+
+  void addError(String errMsg) {
+    totalCounters.addError(errMsg);
   }
 
   void writeErrors(PrintWriter writer, AuStatus auStat) {

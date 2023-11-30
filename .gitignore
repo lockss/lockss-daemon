@@ -89,6 +89,7 @@ test/run-classpath
 test/run-classpath-win
 test/test-classpath
 test/test-p-classpath
+test/test-plugin-classpath
 generated/*
 
 lib/lockss-*.jar
@@ -437,3 +438,7 @@ okhttp-4.9.3-javadoc.jar
 okhttp-4.9.3-sources.jar
 okio-2.8.0-javadoc.jar
 okio-2.8.0-sources.jar
+
+# Common when people experiment with Python scripting
+/.venv/
+

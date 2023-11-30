@@ -124,7 +124,7 @@ public class MigrationManager extends BaseLockssManager
     return mover != null && mover.isRunning();
   }
 
-  public synchronized void startRunner(V2AuMover.Args args) throws IOException {
+  public synchronized void startRunner(List<V2AuMover.Args> args) throws IOException {
     if (isRunning()) {
       throw new IOException("Migration is already running, can't start a new one");
     }
@@ -143,9 +143,9 @@ public class MigrationManager extends BaseLockssManager
   }
 
   public class Runner extends LockssRunnable {
-    V2AuMover.Args args;
+    List<V2AuMover.Args> args;
 
-    public Runner(V2AuMover.Args args) {
+    public Runner(List<V2AuMover.Args> args) {
       super("V2AuMover");
       this.args = args;
     }
@@ -153,9 +153,17 @@ public class MigrationManager extends BaseLockssManager
     public void lockssRun() {
       idleError = null;
       try {
-        log.debug("Starting mover");
-        mover.executeRequest(args);
-        log.debug("Mover returned");
+        if (args.size() > 0) {
+          log.debug("Starting mover");
+          if (args.size() > 1) {
+            log.debug("Using client configuration from first operation");
+          }
+          mover.initClients(args.get(0));
+          for (V2AuMover.Args myArgs : args) {
+            mover.executeRequest(myArgs);
+          }
+          log.debug("Mover returned");
+        }
       } catch (Exception e) {
         log.error("V2AuMover failed to start", e);
         idleError = "V2AuMover failed to start: " + e;
@@ -169,6 +177,7 @@ public class MigrationManager extends BaseLockssManager
   private static final int VERIFY_BIT = 2;
 
   public enum OpType {
+    CopySystemSettings("Copy System Settings", COPY_BIT),
     CopyOnly("Copy Only", COPY_BIT),
     CopyAndVerify("Copy and Verify", COPY_BIT | VERIFY_BIT),
     VerifyOnly("Verify Only", VERIFY_BIT);

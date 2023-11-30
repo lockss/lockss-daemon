@@ -169,6 +169,30 @@
   {
 
       title <
+        name = Journal of Applied Marketing Theory ;
+        eissn = 2151-3236
+      >
+
+      comment[publisher] = Georgia Southern University
+      param[base_url] = https://digitalcommons.georgiasouthern.edu/
+      param[journal_abbr] = jamt
+
+      au < manifest ; exists ; 2010 ; Journal of Applied Marketing Theory Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2011 ; Journal of Applied Marketing Theory Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2012 ; Journal of Applied Marketing Theory Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2013 ; Journal of Applied Marketing Theory Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2014 ; Journal of Applied Marketing Theory Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2015 ; Journal of Applied Marketing Theory Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2017 ; Journal of Applied Marketing Theory Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2018 ; Journal of Applied Marketing Theory Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2022 ; Journal of Applied Marketing Theory Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2023 ; Journal of Applied Marketing Theory Volume 10 ; 10 ; >
+
+  }
+
+  {
+
+      title <
         name = Journal of the Georgia Public Health Association ;
         eissn = 2471-9773
       >

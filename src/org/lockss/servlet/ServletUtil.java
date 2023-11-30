@@ -1,32 +1,32 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
-Copyright (c) 2000-2015 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 */
 
@@ -40,7 +40,7 @@ import java.util.*;
 import java.util.List;
 import java.util.regex.Pattern;
 
-import org.apache.commons.collections.*;
+import org.apache.commons.collections4.*;
 import org.apache.commons.lang3.mutable.*;
 import org.apache.commons.lang3.time.FastDateFormat;
 import org.lockss.config.*;
@@ -124,10 +124,10 @@ public class ServletUtil {
 
   /** URL of third party logo image */
   static final String PARAM_THIRD_PARTY_LOGO_IMAGE = PREFIX + "logo.img";
-  
+
   /** loading spinner image for subscription management page **/
   static final String LOADING_SPINNER = "images/ajax-loader.gif";
-  
+
   /** URL of third party logo link */
   static final String PARAM_THIRD_PARTY_LOGO_LINK = PREFIX + "logo.link";
 
@@ -145,17 +145,17 @@ public class ServletUtil {
     new SimpleDateFormat("HH:mm:ss MM/dd/yy");
 
   static final Image IMAGE_LOGO_LARGE =
-    image("lockss-logo-large.gif", 160, 160, 0);
+      (Image)image("lockss-160x160.gif", 160, 160, 0).style("margin: 5px;");
 
   static final Image IMAGE_LOGO_SMALL =
-    image("lockss-logo-small.gif", 80, 81, 0);
+      (Image)image("lockss-80x80.gif", 80, 80, 0).style("margin: 5px;");
 
   /* private */static final Image IMAGE_TM =
     image("tm.gif", 16, 16, 0);
 
   private static final String ALIGN_CENTER = "align=\"center\""; /* (a) */
 
-  private static final String ALIGN_LEFT = "align=\"left\""; /* (a) */
+  static final String ALIGN_LEFT = "align=\"left\""; /* (a) */
 
   private static final String ALIGN_RIGHT = "align=\"right\""; /* (a) */
 
@@ -205,7 +205,7 @@ public class ServletUtil {
   private static final String AUSUMMARY_TABLE_ATTRIBUTES =
     "align=\"center\" cellspacing=\"4\" cellpadding=\"0\"";
 
-  private static final int AUSUMMARY_TABLE_BORDER = 0;
+  static final int AUSUMMARY_TABLE_BORDER = 0;
 
   private static final String AUSUMMARY_TEXTCELL_ATTRIBUTES =
     "valign=\"center\"";
@@ -780,7 +780,7 @@ public class ServletUtil {
       sslPortFieldId = "id_" + sslPortFieldName;
       sslPortElem.setSize(6);
       sslPortElem.attribute("id", sslPortFieldId);
-    }    
+    }
     enaElem.attribute("onchange",
 		      "selectEnable(this,'" +
 		      portFieldId + "','" + sslPortFieldId + "')");
@@ -881,10 +881,10 @@ public class ServletUtil {
     table.newRow();
     table.newCell("valign=\"top\" align=\"center\" width=\"20%\"");
     table.add(new Link(Constants.LOCKSS_HOME_URL, logo));
-    table.add(IMAGE_TM);
     if (thirdPartyLogo != null) {
       Image img = new Image(thirdPartyLogo);
       img.border(0);
+      img.style("margin: 5px;");
       table.add(new Link(thirdPartyLogoLink, img));
     }
 
@@ -1493,7 +1493,7 @@ public class ServletUtil {
       color = Constants.COLOR_RED;
     } else if (df.isFullerThan(repoMgr.getDiskWarnThreshold())) {
       color = Constants.COLOR_ORANGE;
-    }      
+    }
     if (color != null) {
       return "<font color=\"" + color + "\">" + s + "</font>";
     } else {
@@ -1585,12 +1585,12 @@ public class ServletUtil {
     }
     else {
       Composite c = new Composite();
-      c.add(in); c.add(" "); 
+      c.add(in); c.add(" ");
       c.add(enabled ? text : gray(text));
       return c;
     }
   }
-  
+
   private static String encodeAttr(String str) {
     return HtmlUtil.encode(str, HtmlUtil.ENCODE_ATTR);
   }
@@ -2041,13 +2041,13 @@ public class ServletUtil {
   }
 
   public static Element manifestIndex(PluginManager pluginMgr,
-				      Collection<ArchivalUnit> aus,
-				      Predicate pred,
-				      String header,
-				      ManifestUrlTransform xform,
-				      boolean checkCollected) {
+                                      Collection<ArchivalUnit> aus,
+                                      Predicate pred,
+                                      String header,
+                                      ManifestUrlTransform xform,
+                                      boolean checkCollected) {
     Table tbl = new Table(AUSUMMARY_TABLE_BORDER,
-			  "cellspacing=\"4\" cellpadding=\"0\"");
+        "cellspacing=\"4\" cellpadding=\"0\"");
     if (header != null) {
       tbl.newRow();
       tbl.newCell("align=\"center\" colspan=\"3\"");
@@ -2065,7 +2065,7 @@ public class ServletUtil {
     tbl.addHeading("Manifest", "align=left");
     for (ArchivalUnit au : aus) {
       if (pred != null && !pred.evaluate(au)) {
-	continue;
+        continue;
       }
       tbl.newRow();
       tbl.newCell(ALIGN_LEFT);
@@ -2074,19 +2074,19 @@ public class ServletUtil {
       tbl.add("&nbsp;");
       tbl.newCell(ALIGN_LEFT);
       try {
-	Collection<String> urls = au.getAccessUrls();
-	for (Iterator uiter = urls.iterator(); uiter.hasNext(); ) {
-	  String url = (String)uiter.next();
-	  tbl.add(xform.transformUrl(url, au));
-	  if (checkCollected && !AuUtil.hasCrawled(au)) {
-	    tbl.add(" (not fully collected)");
-	  }
-	  if (uiter.hasNext()) {
-	    tbl.add("<br>");
-	  }
-	}
+        Collection<String> urls = au.getAccessUrls();
+        for (Iterator uiter = urls.iterator(); uiter.hasNext(); ) {
+          String url = (String)uiter.next();
+          tbl.add(xform.transformUrl(url, au));
+          if (checkCollected && !AuUtil.hasCrawled(au)) {
+            tbl.add(" (not fully collected)");
+          }
+          if (uiter.hasNext()) {
+            tbl.add("<br>");
+          }
+        }
       } catch (RuntimeException e) {
-	tbl.add("Plugin error: " + e.getMessage());
+        tbl.add("Plugin error: " + e.getMessage());
       }
     }
     return tbl;
@@ -2099,9 +2099,9 @@ public class ServletUtil {
 
   /**
    * Creates the table-containing tabs used to divide the display of content.
-   * 
+   *
    * WP: The tabs for the subscription Add page are manages differently.
-   * 
+   *
    * @param alphabetLetterCount
    *          An int with the count of the letters of the alphabet to be used.
    * @param lettersPerTabCount
@@ -2187,7 +2187,7 @@ public class ServletUtil {
 
   /**
    * Provides a map with a set of tabs start and end letters.
-   * 
+   *
    * @param alphabetLetterCount
    *          An int with the count of the letters of the alphabet to be used.
    * @param lettersPerTabCount
@@ -2243,10 +2243,10 @@ public class ServletUtil {
 
   /**
    * Creates the spans required by jQuery to build the desired tabs.
-   * 
+   *
    * WP: Made some changes to the tabs on the add subscription page 
    *     in order to load tabs content only when they are opened.
-   * 
+   *
    * @param lettersPerTabCount
    *          An int with the count of the letters per tab to be used.
    * @param tabLetters
@@ -2281,7 +2281,7 @@ public class ServletUtil {
 
     int tabCount = 1;
     List<Block> loadingDivs = new ArrayList<Block>();
-    
+
     // Loop through all the tab letter groups.
     while (iterator.hasNext()) {
       // Get the start and end letters of the tab letter group.
@@ -2312,11 +2312,11 @@ public class ServletUtil {
       tabLink = new Link("SubscriptionManagement?lockssAction=" + action + "&start=" + startLetter + "&amp;end=" + endLetter);
 
       tabLink.add(tabSpan);
-      
+
       // Add the tab to the list.
       tabListItem = tabList.newItem();
       tabListItem.add(tabLink);
-      
+
       // Add loading spinner image
       Block loadingDiv = new Block(Block.Div, "id='ui-tabs-" + tabCount++ + "'");
       Image loadingImage = new Image(LOADING_SPINNER);
@@ -2327,18 +2327,18 @@ public class ServletUtil {
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-    
+
     tabsDiv.add(tabList);
     for(Block loadingDiv : loadingDivs){
       tabsDiv.add(loadingDiv);
     }
-    
+
     return tabList;
   }
 
   /**
    * Provides an indication of whether a tab is populated with content.
-   * 
+   *
    * @param lettersPerTabCount
    *          An int with the count of the letters per tab to be used.
    * @param startLetter
@@ -2377,9 +2377,9 @@ public class ServletUtil {
 
   /**
    * Creates the table for a tab.
-   * 
+   *
    * WP: Need to be public to be called by SubscriptionManagement.populateTab
-   * 
+   *
    * @param letter
    *          A String with the start letter of the tab group.
    * @param columnHeaderNames
@@ -2440,7 +2440,7 @@ public class ServletUtil {
 
   /**
    * Provides a CSS class based on the row number and the size of a row block.
-   * 
+   *
    * @param rowIndex
    *          An int with the row number.
    * @param blockSize

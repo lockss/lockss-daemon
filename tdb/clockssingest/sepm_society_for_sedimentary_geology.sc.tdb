@@ -164,7 +164,7 @@
       au < finished ; finished ; 2018 ; 2018 ; PALAIOS Volume 33 ; 33 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2019 ; 2019 ; PALAIOS Volume 34 ; 34 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; 2020 ; PALAIOS Volume 35 ; 35 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2021 ; 2021 ; PALAIOS Volume 36 ; 36 ; >
+      au < ingNotReady ; exists ; 2021 ; 2021 ; PALAIOS Volume 36 ; 36 ; > #400 Bad Request on javascript file
       au < deepCrawl ; exists ; 2022 ; 2022 ; PALAIOS Volume 37 ; 37 ; >
       au < crawling ; exists ; 2023 ; 2023 ; PALAIOS Volume 38 ; 38 ; >
 

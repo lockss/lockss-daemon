@@ -35,6 +35,16 @@ package org.lockss.account;
 import java.io.*;
 import java.util.*;
 import java.security.*;
+
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectReader;
+import com.fasterxml.jackson.databind.ObjectWriter;
+import com.fasterxml.jackson.databind.ser.FilterProvider;
+import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
+import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;
 import org.apache.oro.text.regex.*;
 import org.apache.commons.lang3.*;
 import org.apache.commons.lang3.time.*;
@@ -51,6 +61,16 @@ import org.lockss.servlet.*;
 
 /** User account data.
  */
+@JsonTypeInfo(
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
+    property = "type")
+@JsonSubTypes({
+    @JsonSubTypes.Type(value = BasicUserAccount.class, name = BasicUserAccount.USER_ACCOUNT_TYPE),
+    @JsonSubTypes.Type(value = LCUserAccount.class, name = LCUserAccount.USER_ACCOUNT_TYPE),
+    @JsonSubTypes.Type(value = NobodyAccount.class, name = NobodyAccount.USER_ACCOUNT_TYPE),
+    @JsonSubTypes.Type(value = StaticUserAccount.class, name = StaticUserAccount.USER_ACCOUNT_TYPE)})
+@JsonFilter("userAccountFilter")
 public abstract class UserAccount implements LockssSerializable, Comparable {
   
   private static final Logger log = Logger.getLogger(UserAccount.class);
@@ -90,7 +110,8 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   protected transient boolean isChanged = false;
   protected transient StringBuilder eventsToReport;
 
-  public UserAccount(String name) {
+  @JsonCreator
+  public UserAccount(@JsonProperty("userName") String name) {
     this.userName = name;
   }
 
@@ -188,6 +209,7 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   // Must be implemented by subclasses
 
   /** Return the account type */
+  @JsonProperty
   abstract public String getType();
 
   /** Return the minimum password length */
@@ -746,6 +768,63 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
 
   public int compareTo(UserAccount other) {
     return getName().compareTo(other.getName());
+  }
+
+  public static ObjectMapper getUserAccountObjectMapper() {
+    ObjectMapper objMapper = new ObjectMapper();
+    setFieldsOnly(objMapper);
+    objMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+    return objMapper;
+  }
+
+  public static ObjectMapper setFieldsOnly(ObjectMapper mapper) {
+    mapper.setVisibilityChecker(mapper.getSerializationConfig().getDefaultVisibilityChecker()
+        .withFieldVisibility(JsonAutoDetect.Visibility.ANY)
+        .withGetterVisibility(JsonAutoDetect.Visibility.NONE)
+        .withIsGetterVisibility(JsonAutoDetect.Visibility.NONE)
+        .withSetterVisibility(JsonAutoDetect.Visibility.NONE)
+        .withCreatorVisibility(JsonAutoDetect.Visibility.NONE));
+    return mapper;
+  }
+
+  public UserAccount updateFromJson(String json) throws IOException {
+    // Ignore unknown properties on deserialization
+    ObjectMapper objMapper = getUserAccountObjectMapper();
+
+    ObjectReader objReader = objMapper.readerForUpdating(this);
+    objReader.readValue(json);
+    return this;
+  }
+
+  public static String jsonFromUserAccount(UserAccount acct, Set<String> fields)
+      throws JsonProcessingException {
+    return getUserAccountObjectWriter(fields).writeValueAsString(acct);
+  }
+
+  public static ObjectReader getUserAccountObjectReader() {
+    ObjectMapper objMapper = getUserAccountObjectMapper();
+    return objMapper.readerFor(UserAccount.class);
+  }
+
+  public static ObjectWriter getUserAccountObjectWriter() {
+    return getUserAccountObjectWriter(null);
+  }
+
+  private static ObjectWriter getUserAccountObjectWriter(Set<String> fields) {
+    ObjectMapper mapper = getUserAccountObjectMapper();
+    SimpleBeanPropertyFilter propFilter;
+    if (fields == null || fields.isEmpty()) {
+      propFilter = SimpleBeanPropertyFilter.serializeAll();
+    } else {
+      propFilter = SimpleBeanPropertyFilter.filterOutAllExcept(fields);
+    }
+    FilterProvider filters =
+        new SimpleFilterProvider().addFilter("userAccountFilter", propFilter);
+    return mapper.writer(filters);
+  }
+
+  public String toJson() throws JsonProcessingException {
+    return jsonFromUserAccount(this, null);
   }
 
   public class NullCredential extends Credential {

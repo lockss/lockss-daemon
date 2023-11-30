@@ -796,7 +796,8 @@
     
     param[journal_id] = journeys
     #param[journal_issn] = 1465-2609
-       
+    #Journeys will cease publication as of 2022
+
     au < doNotProcess ; 2000 ; Journeys Volume 1 ; 1 >
     au < doNotProcess ; 2001 ; Journeys Volume 2 ; 2 >
     au < doNotProcess ; 2002 ; Journeys Volume 3 ; 3 >
@@ -819,8 +820,6 @@
     au < released ; 2019 ; Journeys Volume 20 ; 20 >
     au < released ; 2020 ; Journeys Volume 21 ; 21 >
     au < released ; 2021 ; Journeys Volume 22 ; 22 >
-    au < expected ; 2022 ; Journeys Volume 23 ; 23 >
-    au < expected ; 2023 ; Journeys Volume 24 ; 24 >
 
   }
 

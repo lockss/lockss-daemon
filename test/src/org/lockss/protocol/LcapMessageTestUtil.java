@@ -49,14 +49,16 @@ public class LcapMessageTestUtil {
     11, 12, 13, 14, 15, 16, 17, 18, 19, 20
   };
 
-  public static V3LcapMessage makeTestVoteMessage(PeerIdentity peer,
+  public static V3LcapMessage makeTestVoteMessage(PeerIdentity origId,
+                                                  PeerIdentity destId,
                                                   File tempDir,
                                                   LockssApp daemon) 
       throws IOException {
-    return makeTestVoteMessage(peer, null, tempDir, daemon);
+    return makeTestVoteMessage(origId, destId, null, tempDir, daemon);
   }
 
-  public static V3LcapMessage makeTestVoteMessage(PeerIdentity peer,
+  public static V3LcapMessage makeTestVoteMessage(PeerIdentity origId,
+                                                  PeerIdentity destId,
 						  Collection voteBlocks,
                                                   File tempDir,
                                                   LockssApp daemon)
@@ -65,7 +67,9 @@ public class LcapMessageTestUtil {
                                           ByteArray.makeRandomBytes(20),
                                           ByteArray.makeRandomBytes(20),
                                           V3LcapMessage.MSG_REPAIR_REQ,
-                                          987654321, peer, tempDir, daemon);
+                                          987654321, origId, tempDir, daemon);
+
+    msg.setDestinationId(destId);
 
     // Set msg vote blocks.
     if (voteBlocks != null) {

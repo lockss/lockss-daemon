@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -60,7 +60,7 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -139,7 +139,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://(%s|dup\.silverchair-cdn\.com).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
       <!--  pdf can go through regardless of Expiry because it gets consumed, and JS and CSS have no expiry -->
       <string>1,"^https?://dup\.silverchair-cdn\.com/.*(CSS|JS|\.pdf)(\?.*)?$"</string>
-      <string>1,"^https?://%s/%s/(article(-(pdf|abstract))?|issue(-pdf)?)/(volume/)?([0-9i]+|doi)(?!.*/www\.)", url_host(base_url), journal_id</string>
+      <string>1,"^https?://%s/%s/(article(-(pdf|abstract|standard))?|issue(-pdf)?)/(volume/)?([0-9i]+|doi)(?!.*/www\.)", url_host(base_url), journal_id</string>
       <!--  PDF content is going through watermarking SOME of the time; we will consume -->
       <string>1,"^https?://watermark\.silverchair\.com/[^/]+\.pdf\?token="</string>
       <string>1,"^https?://%s/%s/downloadcitation/[^?]+\?format=ris", url_host(base_url), journal_id</string>
@@ -226,6 +226,10 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_substance_url_pattern</string>
     <list>
       <string>"^%s%s/article-pdf/.+\.pdf$", base_url, journal_id</string>
+      <!--
+      Use article as PDF, it is confirmed by the publisher, there is no PDF
+      https://read.dukeupress.edu/trans-asia-photography/article/doi/10.1215/215820251_6-2-202/312709/Kowloon-Walled-City-Revisited-Photography-and-->
+      <string>"^%s%s/article/([0-9i]+|doi)(?!.*/www\.)", base_url, journal_id</string>
     </list>
   </entry>
   <entry>

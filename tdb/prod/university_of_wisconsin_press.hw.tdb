@@ -53,32 +53,34 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://aa.uwpress.org/
 
-      au < released ; 2003 ; Arctic Anthropology Volume 40 ; 40 >
-      au < released ; 2004 ; Arctic Anthropology Volume 41 ; 41 >
-      au < released ; 2005 ; Arctic Anthropology Volume 42 ; 42 >
-      au < released ; 2006 ; Arctic Anthropology Volume 43 ; 43 >
-      au < released ; 2007 ; Arctic Anthropology Volume 44 ; 44 >
-      au < released ; 2008 ; Arctic Anthropology Volume 45 ; 45 >
-      au < released ; 2009 ; Arctic Anthropology Volume 46 ; 46 >
-      au < released ; 2010 ; Arctic Anthropology Volume 47 ; 47 >
-      au < released ; 2011 ; Arctic Anthropology Volume 48 ; 48 >
-      au < released ; 2012 ; Arctic Anthropology Volume 49 ; 49 >
-      au < released ; 2013 ; Arctic Anthropology Volume 50 ; 50 >
-      au < released ; 2014 ; Arctic Anthropology Volume 51 ; 51 >
-      au < released ; 2015 ; Arctic Anthropology Volume 52 ; 52 >
-      au < released ; 2016 ; Arctic Anthropology Volume 53 ; 53 >
-      au < released ; 2017 ; Arctic Anthropology Volume 54 ; 54 >
-      au < released ; 2018 ; Arctic Anthropology Volume 55 ; 55 >
-      au < released ; 2019 ; Arctic Anthropology Volume 56 ; 56 >
-      au < released ; 2020 ; Arctic Anthropology Volume 57 ; 57 >
-      au < released ; 2021 ; Arctic Anthropology Volume 58 ; 58 >
+      au < down ; 2003 ; Arctic Anthropology Volume 40 ; 40 >
+      au < down ; 2004 ; Arctic Anthropology Volume 41 ; 41 >
+      au < down ; 2005 ; Arctic Anthropology Volume 42 ; 42 >
+      au < down ; 2006 ; Arctic Anthropology Volume 43 ; 43 >
+      au < down ; 2007 ; Arctic Anthropology Volume 44 ; 44 >
+      au < down ; 2008 ; Arctic Anthropology Volume 45 ; 45 >
+      au < down ; 2009 ; Arctic Anthropology Volume 46 ; 46 >
+      au < down ; 2010 ; Arctic Anthropology Volume 47 ; 47 >
+      au < down ; 2011 ; Arctic Anthropology Volume 48 ; 48 >
+      au < down ; 2012 ; Arctic Anthropology Volume 49 ; 49 >
+      au < down ; 2013 ; Arctic Anthropology Volume 50 ; 50 >
+      au < down ; 2014 ; Arctic Anthropology Volume 51 ; 51 >
+      au < down ; 2015 ; Arctic Anthropology Volume 52 ; 52 >
+      au < down ; 2016 ; Arctic Anthropology Volume 53 ; 53 >
+      au < down ; 2017 ; Arctic Anthropology Volume 54 ; 54 >
+      au < down ; 2018 ; Arctic Anthropology Volume 55 ; 55 >
+      au < superseded ; 2020 ; Arctic Anthropology Volume 56 [superseded] ; 56 >
+      au < superseded ; 2021 ; Arctic Anthropology Volume 57 [superseded] ; 57 >
+      au < superseded ; 2022 ; Arctic Anthropology Volume 58 [superseded] ; 58 >
 
       }
       {
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
       param[base_url] = https://aa.uwpress.org/
 
-      #No 2023 content as of 4/19/2023
+      au < manifest ; 2020 ; Arctic Anthropology Volume 56 ; 56 >
+      au < manifest ; 2021 ; Arctic Anthropology Volume 57 ; 57 >
+      au < manifest ; 2022 ; Arctic Anthropology Volume 58 ; 58 >
       au < manifest ; 2023 ; Arctic Anthropology Volume 59 ; 59 >
 
       }
@@ -98,31 +100,33 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://cl.uwpress.org/
 
-      au < released ; 2003 ; Contemporary Literature Volume 44 ; 44 >
-      au < released ; 2004 ; Contemporary Literature Volume 45 ; 45 >
-      au < released ; 2005 ; Contemporary Literature Volume 46 ; 46 >
-      au < released ; 2006 ; Contemporary Literature Volume 47 ; 47 >
-      au < released ; 2007 ; Contemporary Literature Volume 48 ; 48 >
-      au < released ; 2008 ; Contemporary Literature Volume 49 ; 49 >
-      au < released ; 2009 ; Contemporary Literature Volume 50 ; 50 >
-      au < released ; 2010 ; Contemporary Literature Volume 51 ; 51 >
-      au < released ; 2011 ; Contemporary Literature Volume 52 ; 52 >
-      au < released ; 2012 ; Contemporary Literature Volume 53 ; 53 >
-      au < released ; 2013 ; Contemporary Literature Volume 54 ; 54 >
-      au < released ; 2014 ; Contemporary Literature Volume 55 ; 55 >
-      au < released ; 2015 ; Contemporary Literature Volume 56 ; 56 >
-      au < released ; 2016 ; Contemporary Literature Volume 57 ; 57 >
-      au < released ; 2017 ; Contemporary Literature Volume 58 ; 58 >
-      au < released ; 2018 ; Contemporary Literature Volume 59 ; 59 >
-      au < released ; 2019-2020 ; Contemporary Literature Volume 60 ; 60 >
-      au < released ; 2021 ; Contemporary Literature Volume 61 ; 61 >
-      au < released ; 2022 ; Contemporary Literature Volume 62 ; 62 >
+      au < down ; 2003 ; Contemporary Literature Volume 44 ; 44 >
+      au < down ; 2004 ; Contemporary Literature Volume 45 ; 45 >
+      au < down ; 2005 ; Contemporary Literature Volume 46 ; 46 >
+      au < down ; 2006 ; Contemporary Literature Volume 47 ; 47 >
+      au < down ; 2007 ; Contemporary Literature Volume 48 ; 48 >
+      au < down ; 2008 ; Contemporary Literature Volume 49 ; 49 >
+      au < down ; 2009 ; Contemporary Literature Volume 50 ; 50 >
+      au < down ; 2010 ; Contemporary Literature Volume 51 ; 51 >
+      au < down ; 2011 ; Contemporary Literature Volume 52 ; 52 >
+      au < down ; 2012 ; Contemporary Literature Volume 53 ; 53 >
+      au < down ; 2013 ; Contemporary Literature Volume 54 ; 54 >
+      au < down ; 2014 ; Contemporary Literature Volume 55 ; 55 >
+      au < down ; 2015 ; Contemporary Literature Volume 56 ; 56 >
+      au < down ; 2016 ; Contemporary Literature Volume 57 ; 57 >
+      au < down ; 2017 ; Contemporary Literature Volume 58 ; 58 >
+      au < down ; 2018 ; Contemporary Literature Volume 59 ; 59 >
+      au < superseded ; 2019-2020 ; Contemporary Literature Volume 60 [superseded] ; 60 >
+      au < superseded ; 2021 ; Contemporary Literature Volume 61 [superseded] ; 61 >
+      au < superseded ; 2022 ; Contemporary Literature Volume 62 [superseded] ; 62 >
       }
       {
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
       param[base_url] = https://cl.uwpress.org/
 
-      #No 2023 content as of 4/19/2023
+      au < manifest ; 2019-2020 ; Contemporary Literature Volume 60 ; 60 >
+      au < manifest ; 2021 ; Contemporary Literature Volume 61 ; 61 >
+      au < manifest ; 2022 ; Contemporary Literature Volume 62 ; 62 >
       au < manifest ; 2023 ; Contemporary Literature Volume 63 ; 63 >
       }
 

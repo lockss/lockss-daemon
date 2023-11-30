@@ -34,8 +34,15 @@ package org.lockss.plugin.usdocspln.gov.govinfo;
 
 import java.io.InputStream;
 
+import org.apache.commons.lang3.mutable.MutableBoolean;
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
+import org.htmlparser.Tag;
+import org.htmlparser.filters.AndFilter;
 import org.htmlparser.filters.OrFilter;
+import org.htmlparser.util.NodeList;
+import org.htmlparser.util.ParserException;
+import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
 import org.lockss.filter.html.*;
@@ -88,7 +95,41 @@ public class GovInfoHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("a", "data-cfemail"),
         // A few things in this <div> started having random numeric suffixes in 'id' attributes, ostensibly to support toggling and similar dynamic behaviors
         HtmlNodeFilters.tagWithAttribute("div", "id", "contentdetaildocinContextview"),
+
+        new AndFilter(HtmlNodeFilters.tagWithAttribute("div", "class", "row"), new NodeFilter(){
+          @Override
+          public boolean accept(Node node){
+            if(!(node instanceof Tag)){
+              return false;
+            }
+            class MyVisitor extends NodeVisitor {
+              private boolean accepted = false;
+              private boolean nested = false;
+
+              @Override
+              public void visitTag(Tag tag){
+                if(HtmlNodeFilters.tagWithAttributeRegex("div", "class", "\\bmessage-current-flag\\b").accept(tag)){
+                  accepted = true;
+                }
+                if(HtmlNodeFilters.tagWithAttribute("div", "class", "row").accept(tag)){
+                  nested = true;
+                }
+                super.visitTag(tag);
+              }
+            };
+            MyVisitor visitor = new MyVisitor();
+            try {
+              node.getChildren().visitAllNodesWith(visitor);
+              return (!visitor.nested && visitor.accepted);
+            } catch (ParserException e) {
+              // TODO Auto-generated catch block
+              return false;
+            }
+          }
+        })
     };
+
+
 
     HtmlFilterInputStream htmlFiltered = new HtmlFilterInputStream(in,
                                              encoding,

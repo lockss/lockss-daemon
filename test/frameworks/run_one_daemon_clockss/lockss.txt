@@ -1,16 +1,14 @@
 # Don't make local changes in this file; put local settings in lockss.opt
 
-# LOCKSS & LCAP tuning parameters
-
-org.lockss.log.default.level=info
+org.lockss.log.default.level=debug
 
 org.lockss.ui.access.ip.logForbidden=true
 org.lockss.proxy.access.ip.logForbidden=true
 
-
-
 org.lockss.platform.diskSpacePaths=./cache
 
+org.lockss.config.reloadInterval=5m
+org.lockss.ui.allowPluginConfig=true
 
 # spepcific paths not used, computed from platform.diskSpacePaths
 #lockss repository settings
@@ -20,7 +18,6 @@ org.lockss.platform.diskSpacePaths=./cache
 #lockss state settings
 #org.lockss.history.location=./history
 
-org.lockss.config.reloadInterval = 30m
 
 #hasher settings
 #org.lockss.hasher.numSteps
@@ -61,7 +58,7 @@ org.lockss.proxy.icp.enabled=true
 org.lockss.proxy.icp.port=3131
 
 org.lockss.crawler.startCrawlsInterval=5m
-org.lockss.crawler.globallyPermittedHosts=ajax\.googleapis\.com|fonts\.gstatic\.com|cdn\.mathjax\.org|ajax\.microsoft\.com
+
 org.lockss.crawlStatus.keepUrls=all
 
 org.lockss.platform.project=CLOCKSS
@@ -85,3 +82,9 @@ org.lockss.platform.ui.password=SHA1:ac4fc8fa9930a24c8d002d541c37ca993e1bc40f
 #org.lockss.v2.passwd=lockss-p
 #org.lockss.v2.cfg.debug=false
 #org.lockss.v2.repo.debug=false
+
+# Allow all plugin permitted hosts
+org.lockss.crawler.allowedPluginPermittedHosts=.*
+
+# Frequently needed in testing
+org.lockss.debugPanel.deepCrawlEnabled=true

@@ -1830,7 +1830,7 @@
     au < released ; 2020 ; International Journal of Human Capital and Information Technology Professionals (IJHCITP) Volume 11 ; 11 ; https://www.igi-global.com/ >
     au < released ; 2021 ; International Journal of Human Capital and Information Technology Professionals (IJHCITP) Volume 12 ; 12 ; https://www.igi-global.com/ >
     au < released ; 2022 ; International Journal of Human Capital and Information Technology Professionals (IJHCITP) Volume 13 ; 13 ; https://www.igi-global.com/ >
-    au < expected ; 2023 ; International Journal of Human Capital and Information Technology Professionals (IJHCITP) Volume 14 ; 14 ; https://www.igi-global.com/ >
+    au < manifest ; 2023 ; International Journal of Human Capital and Information Technology Professionals (IJHCITP) Volume 14 ; 14 ; https://www.igi-global.com/ >
 
   }
 
@@ -2537,7 +2537,7 @@
     au < released ; 2020 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 10 ; 10 ; https://www.igi-global.com/ >
     au < released ; 2021 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 11 ; 11 ; https://www.igi-global.com/ >
     au < released ; 2022 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 12 ; 12 ; https://www.igi-global.com/ >
-    au < expected ; 2023 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 13 ; 13 ; https://www.igi-global.com/ >
+    au < manifest ; 2023 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 13 ; 13 ; https://www.igi-global.com/ >
 
   }
 
@@ -2706,7 +2706,7 @@
     au < released ; 2020 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 11 ; 11 ; https://www.igi-global.com/ >
     au < released ; 2021 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 12 ; 12 ; https://www.igi-global.com/ >
     au < released ; 2022 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 13 ; 13 ; https://www.igi-global.com/ >
-    au < expected ; 2023 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 14 ; 14 ; https://www.igi-global.com/ >
+    au < manifest ; 2023 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 14 ; 14 ; https://www.igi-global.com/ >
 
   }
 
@@ -3502,11 +3502,11 @@
 
     title <
       name = Journal of Affective Computing and Human Interfaces (JACHI) ;
-      issn = aaaa-aaaa ;
-      eissn = aaaa-aaaa ;
-      issnl = aaaa-aaaa
+      issn = 2837-4622 ;
+      eissn = 2837-4630 ;
+      issnl = 2837-4622
     >
-    param[journal_issn] = aaaa-aaaa
+    param[journal_issn] = 2837-4622
     #continues = 1947-9093
 
     au < expected ; 2023 ; Journal of Affective Computing and Human Interfaces (JACHI) Volume 12 ; 12 ; https://www.igi-global.com/ >

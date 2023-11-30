@@ -908,8 +908,8 @@
 
       param[journal_id] = JAFH
 
-      au < crawling ; exists ; 2013 ; Journal of Aquaculture and Fish Health Volume 2 ; 2 ; 2013 ; >
-      au < crawling ; exists ; 2014 ; Journal of Aquaculture and Fish Health Volume 3 ; 3 ; 2014 ; >
+      au < frozen ; exists ; 2013 ; Journal of Aquaculture and Fish Health Volume 2 ; 2 ; 2013 ; >
+      au < frozen ; exists ; 2014 ; Journal of Aquaculture and Fish Health Volume 3 ; 3 ; 2014 ; >
       au < frozen ; exists ; 2016 ; Journal of Aquaculture and Fish Health Volume 5 ; 5 ; 2016 ; >
       au < frozen ; exists ; 2017 ; Journal of Aquaculture and Fish Health Volume 6 ; 6 ; 2017 ; >
       au < frozen ; exists ; 2018 ; Journal of Aquaculture and Fish Health Volume 7 ; 7 ; 2018 ; >
@@ -924,7 +924,8 @@
   {
       title <
         name = Jurist-Diction ;
-        issn = 2655-8297 ;
+        issn = 2721-8392 ;
+        eissn = 2655-8297 ;
         issnl = 2655-8297
       >
 
@@ -943,8 +944,7 @@
 
       title <
         name = Contemporary Mathematics and Applications ;
-        issn =  2721-8392 ;
-        eissn = 2655-8297
+        eissn = 2686-5564
       >
 
       param[journal_id] = CONMATHA
@@ -961,7 +961,8 @@
 
       title <
         name = JUXTA: Jurnal Ilmiah Mahasiswa Kedokteran Universitas Airlangga ;
-        eissn = 2686-5564
+        issn = 1907-3623 ;
+        eissn = 2684-9453
       >
 
       param[journal_id] = JUXTA
@@ -978,8 +979,8 @@
 
       title <
         name = Journal of Vocational Nursing ;
-        issn = 1907-3623 ;
-        eissn = 2684-9453
+        issn = 2775-0280 ;
+        eissn = 2722-7251
       >
 
       param[journal_id] = JoViN
@@ -995,8 +996,8 @@
 
       title <
         name = Psychiatry Nursing Journal ;
-        issn = 2775-0280 ;
-        eissn = 2722-7251 
+        issn = 2656-3894 ;
+        eissn = 2656-4637
       >
 
       param[journal_id] = PNJ
@@ -1019,7 +1020,7 @@
 
       param[journal_id] = PMNJ
 
-      au < crawling ; exists ; 2014 ; Pediomaternal Nursing Journal Volume 2 ; 2 ; 2014 ; >
+      au < frozen ; exists ; 2014 ; Pediomaternal Nursing Journal Volume 2 ; 2 ; 2014 ; >
       au < doesNotExist ; doesNotExist ; 2015 ; Pediomaternal Nursing Journal Volume 3 ; 3 ; 2015 ; >
       au < frozen ; exists ; 2016 ; Pediomaternal Nursing Journal Volume 4 ; 4 ; 2016 ; >
       au < frozen ; exists ; 2017 ; Pediomaternal Nursing Journal Volume 5 ; 5 ; 2017 ; >
@@ -1042,9 +1043,9 @@
 
       param[journal_id] = CMSNJ
 
-      au < crawling ; exists ; 2012 ; Critical, Medical and Surgical Nursing Journal Volume 1 ; 1 ; 2012 ; >
-      au < crawling ; exists ; 2013 ; Critical, Medical and Surgical Nursing Journal Volume 2 ; 2 ; 2013 ; >
-      au < crawling ; exists ; 2014 ; Critical, Medical and Surgical Nursing Journal Volume 3 ; 3 ; 2014 ; >
+      au < frozen ; exists ; 2012 ; Critical, Medical and Surgical Nursing Journal Volume 1 ; 1 ; 2012 ; >
+      au < frozen ; exists ; 2013 ; Critical, Medical and Surgical Nursing Journal Volume 2 ; 2 ; 2013 ; >
+      au < frozen ; exists ; 2014 ; Critical, Medical and Surgical Nursing Journal Volume 3 ; 3 ; 2014 ; >
       au < finished ; finished ; 2015 ; Critical, Medical and Surgical Nursing Journal Volume 4 ; 4 ; 2015 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; Critical, Medical and Surgical Nursing Journal Volume 5 ; 5 ; 2016 ; >
       au < doesNotExist ; doesNotExist ; 2017 ; Critical, Medical and Surgical Nursing Journal Volume 6 ; 6 ; 2017 ; >
@@ -1385,9 +1386,9 @@
 
       param[journal_id] = lakon
 
-      au < crawling ; exists ; 2012 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 1 ; 1 ; 2012 ; >
-      au < crawling ; exists ; 2013 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 2 ; 2 ; 2013 ; >
-      au < crawling ; exists ; 2014 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 3 ; 3 ; 2014 ; >
+      au < frozen ; exists ; 2012 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 1 ; 1 ; 2012 ; >
+      au < frozen ; exists ; 2013 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 2 ; 2 ; 2013 ; >
+      au < frozen ; exists ; 2014 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 3 ; 3 ; 2014 ; >
       au < finished ; finished ; 2015 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 4 ; 4 ; 2015 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 5 ; 5 ; 2016 ; >
       au < frozen ; exists ; 2017 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 6 ; 6 ; 2017 ; >
@@ -1936,7 +1937,7 @@
       au < finished ; crawling ; 2020 ; Jejaring Administrasi Publik (JAP) Volume 12 ; 12 ; 2020 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2021 ; Jejaring Administrasi Publik (JAP) Volume 13 ; 13 ; 2021 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2022 ; Jejaring Administrasi Publik (JAP) Volume 14 ; 14 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Jejaring Administrasi Publik (JAP) Volume 15 ; 15 ; 2023 ; >
+      au < manifest ; exists ; 2023 ; Jejaring Administrasi Publik (JAP) Volume 15 ; 15 ; 2023 ; >
 
   }
 

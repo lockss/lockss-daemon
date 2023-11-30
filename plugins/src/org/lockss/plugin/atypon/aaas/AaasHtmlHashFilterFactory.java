@@ -47,6 +47,10 @@ public class AaasHtmlHashFilterFactory  extends BaseAtyponHtmlHashFilterFactory 
                                                InputStream in,
                                                String encoding) {
     NodeFilter[] filters = new NodeFilter[] {
+        HtmlNodeFilters.tag("header"),
+        HtmlNodeFilters.tag("footer"),
+        HtmlNodeFilters.tag("aside"),
+
         // menu which prints logged in status and institution
         HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "main-menu"),
         // other types of headers
@@ -67,6 +71,9 @@ public class AaasHtmlHashFilterFactory  extends BaseAtyponHtmlHashFilterFactory 
 
         // copyright info, metrics, etc, which are subject to change are all in a big core-collatoral div
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "core-collateral"),
+
+        // Publisher add "modified" articles in the main body
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related-item"),
 
     };
     // super.createFilteredInputStream adds aaas filter to the baseAtyponFilters

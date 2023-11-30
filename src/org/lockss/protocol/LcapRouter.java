@@ -32,12 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.protocol;
 import java.io.*;
-import java.net.*;
 import java.util.*;
 import org.lockss.app.*;
+import org.lockss.state.AuState;
 import org.lockss.util.*;
 import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
 
@@ -59,16 +58,22 @@ public class LcapRouter
     PREFIX + "v3LcapMessageDataDir";
   private static final String DEFAULT_V3_LCAP_MESSAGE_DATA_DIR =
     "System tmpdir";
+
+  public static final String PARAM_MIGRATE_TO =
+      PREFIX + "migrateTo";
+  public static final String DEFAULT_MIGRATE_TO = null;
   
   static Logger log = Logger.getLogger("Router");
 
   private IdentityManager idMgr;
+  private PluginManager pluginMgr;
   private LcapStreamComm scomm = null;
   private LcapDatagramRouter drouter = null;
   private LcapDatagramRouter.MessageHandler drouterHandler;
 
   private List messageHandlers = new ArrayList();
   private File dataDir = null;
+  private PeerIdentity migrateTo = null;
 
   public void startService() {
     super.startService();
@@ -90,13 +95,14 @@ public class LcapRouter
 				   new LcapStreamComm.MessageHandler() {
 				     public void handleMessage(PeerMessage
 							       msg) {
-				       handleIncomingPeerMessage(msg);
+               handleOrForwardInboundPeerMessage(msg);
 				     }});
     } catch (IllegalArgumentException e) {
       log.warning("No stream comm");
       scomm = null;
     }
     idMgr = daemon.getIdentityManager();
+    pluginMgr = daemon.getPluginManager();
   }
 
   public void stopService() {
@@ -111,7 +117,7 @@ public class LcapRouter
 
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
-    if (changedKeys.contains(PARAM_V3_LCAP_MESSAGE_DATA_DIR)) {
+    if (changedKeys.contains(PREFIX)) {
       String paramDataDir = config.get(PARAM_V3_LCAP_MESSAGE_DATA_DIR,
 				       PlatformUtil.getSystemTempDir());
       File dir = new File(paramDataDir);
@@ -121,6 +127,20 @@ public class LcapRouter
       } else {
 	log.warning("No V3LcapMessage data dir: " + dir);
 	dataDir = null;
+      }
+
+      String migrateToVal =
+          config.get(PARAM_MIGRATE_TO, DEFAULT_MIGRATE_TO);
+      if (!StringUtil.isNullString(migrateToVal)) {
+        try {
+          migrateTo = idMgr.findPeerIdentity(migrateToVal);
+        } catch (IdentityManager.MalformedIdentityKeyException e) {
+          log.error("Malformed migrateTo peer identity: " +
+              migrateToVal);
+          migrateTo = null;
+        }
+      } else {
+        migrateTo = null;
       }
     }
   }
@@ -153,6 +173,11 @@ public class LcapRouter
    */
   public void sendTo(V3LcapMessage msg, PeerIdentity id)
       throws IOException {
+    // If no destination was specified in the message, set it to the
+    // destination ID specified in this call
+    if (msg.getDestinationId() == null) {
+      msg.setDestinationId(id);
+    }
     PeerMessage pm = makePeerMessage(msg);
     scomm.sendTo(pm, id);
   }
@@ -200,10 +225,71 @@ public class LcapRouter
     return scomm.newPeerMessage(estSize);
   }
 
-  // Incoming peer message - decode to V3LcapMessage and run handlers
-  void handleIncomingPeerMessage(PeerMessage pmsg) {
+  void handleOrForwardInboundPeerMessage(PeerMessage pmsg) {
+    LcapMessage lmsg;
+
     try {
-      LcapMessage lmsg = makeV3LcapMessage(pmsg);
+      lmsg = makeV3LcapMessage(pmsg);
+    } catch (IOException e) {
+      log.warning("Exception decoding peer message: " + pmsg, e);
+      return;
+    }
+
+    PeerIdentity myPeerId = idMgr.getLocalPeerIdentity(Poll.V3_PROTOCOL);
+
+    if (migrateTo != null) {
+      if (lmsg.getDestinationId() != myPeerId) {
+        // Forward-outbound message from V2: Send message to destination peer
+        try {
+          scomm.sendTo(pmsg, lmsg.getDestinationId());
+        } catch (IOException e) {
+          log.error("Could not forward peer message to destination", e);
+        }
+
+        return;
+      } else {
+        // Inbound message: Determine whether to handle locally or forward to V2
+        // based on AU's presence or migration state
+        boolean forward = false;
+        ArchivalUnit au = pluginMgr.getAuFromId(lmsg.getArchivalId());
+        if (au == null) {
+          forward = true;
+        } else {
+          AuState auState = AuUtil.getAuState(au);
+          switch (auState.getMigrationState()) {
+          case InProgress:
+            // TODO: Ideally we'd send a NAK, but easier to just drop
+            // the message, which will have a similar effect
+            log.warning("Dropping message for AU being migrated: " +
+                        au.getName());
+            return;
+          case Finished:
+            forward = true;
+            break;
+          default:
+            // Fallthrough to handle locally...
+          }
+        }
+        if (forward) {
+          try {
+            scomm.sendTo(pmsg, migrateTo);
+          } catch (IOException e) {
+            log.error("Could not forward peer message to V2", e);
+          }
+          return;
+        }
+      }
+    }
+    if (lmsg.getDestinationId() == myPeerId) {
+      handleLocalInboundMessage(pmsg, lmsg);
+    } else {
+      log.warning("Forwarding disabled and message not addressed to me; dropping message: " + pmsg);
+    }
+  }
+
+  // Local-inbound message - run handlers
+  protected void handleLocalInboundMessage(PeerMessage pmsg, LcapMessage lmsg) {
+    try {
       runHandlers(lmsg);
     } catch (Exception e) {
       log.warning("Exception while processing incoming " + pmsg, e);

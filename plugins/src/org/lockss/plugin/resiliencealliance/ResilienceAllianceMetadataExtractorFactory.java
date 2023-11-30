@@ -61,7 +61,7 @@ public class ResilienceAllianceMetadataExtractorFactory implements FileMetadataE
         @Override
         public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
                 throws IOException {
-            log.debug3("Fei: ResilienceAllianceMetadataExtractorFactory");
+            log.debug3("ResilienceAllianceMetadataExtractorFactory");
             ArticleMetadata am = super.extract(target, cu);
             am.cook(tagMap);
             return am;

@@ -77,6 +77,7 @@
         au < released ; 2018 ; Anthropological Linguistics Volume 60 [2018] ; 14031 >
         au < released ; 2019 ; Anthropological Linguistics Volume 61 [2019] ; 14837 >
         au < released ; 2020 ; Anthropological Linguistics Volume 62 [2020] ; 16605 >
+        au < ready ; 2021 ; Anthropological Linguistics Volume 63 [2021] ; 17613 >
 
 
     }
@@ -142,6 +143,7 @@
         au < released ; 2020 ; Frontiers: A Journal of Women Studies Volume 41 [2020] ; 14944 >
         au < released ; 2021 ; Frontiers: A Journal of Women Studies Volume 42 [2021] ; 15773 >
         au < released ; 2022 ; Frontiers: A Journal of Women Studies Volume 43 [2022] ; 16876 >
+        au < manifest ; 2023 ; Frontiers: A Journal of Women Studies Volume 44 [2023] ; 17852 >
 
     }
 
@@ -160,6 +162,7 @@
       au < released ; 2018 ; German Yearbook of Contemporary History Volume 3 [2018] ; 16853 >
       au < released ; 2019 ; German Yearbook of Contemporary History Volume 4 [2019] ; 16854 >
       au < released ; 2021 ; German Yearbook of Contemporary History Volume 5 [2021] ; 16527 >
+      au < manifest ; 2023 ; German Yearbook of Contemporary History Volume 7 [2023] ; 18301 >
 
     }
 
@@ -205,6 +208,7 @@
         au < released ; 2020 ; Great Plains Quarterly Volume 40 [2020] ; 14615 >
         au < released ; 2022 ; Great Plains Quarterly Volume 42 [2022] ; 17472 >
         au < released ; 2021 ; Great Plains Quarterly Volume 41 [2021] ; 16885 >
+        au < manifest ; 2023 ; Great Plains Quarterly Volume 43 [2023] ; 18380 >
 
     }
 
@@ -228,6 +232,7 @@
         au < released ; 2020 ; Great Plains Research Volume 30 [2020] ; 14867 >
         au < released ; 2021 ; Great Plains Research Volume 31 [2021] ; 15761 >
         au < released ; 2022 ; Great Plains Research Volume 32 [2022] ; 16997 >
+        au < manifest ; 2023 ; Great Plains Research Volume 33 [2023] ; 18259 >
 
     }
 
@@ -246,6 +251,7 @@
         au < released ; 2018 ; Historical Geography Volume 46 [2018] ; 14172 >
         au < released ; 2019 ; Historical Geography Volume 47 [2019] ; 14924 >
         au < released ; 2020 ; Historical Geography Volume 48 [2020] ; 16592 >
+        au < ready ; 2021 ; Historical Geography Volume 49 [2021] ; 18299 >
 
     }
 
@@ -321,6 +327,7 @@
         au < released ; 2007 ; Intertexts Volume 11 [2007] ; 16927 >
         au < released ; 2008 ; Intertexts Volume 12 [2008] ; 16928 >
         au < released ; 2022 ; Intertexts Volume 26 [2022] ; 17187 >
+        au < manifest ; 2023 ; Intertexts Volume 27 [2023] ; 18629 >
 
     }
 
@@ -345,6 +352,7 @@
         au < released ; 2020 ; Journal of Austrian Studies Volume 53 [2020] ; 15119 >
         au < released ; 2021 ; Journal of Austrian Studies Volume 54 [2021] ; 15552 >
         au < released ; 2022 ; Journal of Austrian Studies Volume 55 [2022] ; 16866 >
+        au < manifest ; 2023 ; Journal of Austrian Studies Volume 56 [2023] ; 18024 >
 
     }
 
@@ -420,6 +428,7 @@
         au < released ; 2019-2020 ; Journal of Magazine Media Volume 20 [2019-2020] ; 15158 >
         au < released ; 2020-2021 ; Journal of Magazine Media Volume 21 [2020-2021] ; 15841 >
         au < released ; 2021-2022 ; Journal of Magazine Media Volume 22 [2021-2022] ; 17294 >
+        au < manifest ; 2022-2023 ; Journal of Magazine Media Volume 23 [2022-2023] ; 18300 >
 
     }
 
@@ -487,6 +496,7 @@
         au < released ; 2019 ; Legacy: A Journal of American Women Writers Volume 36 [2019] ; 14242 >
         au < released ; 2020 ; Legacy: A Journal of American Women Writers Volume 37 [2020] ; 15040 >
         au < released ; 2021 ; Legacy: A Journal of American Women Writers Volume 38 [2021] ; 17445 >
+        au < ready ; 2022 ; Legacy: A Journal of American Women Writers Volume 39 [2022] ; 17446 >
 
     }
 
@@ -545,6 +555,7 @@
         au < released ; 2020-2021 ; NINE: A Journal of Baseball History and Culture Volume 29 [2020-2021] ; 16101 >
         au < released ; 2021-2022 ; NINE: A Journal of Baseball History and Culture Volume 30 [2021-2022] ; 16841 >
         au < released ; 2022 ; NINE: A Journal of Baseball History and Culture Volume 31 [2022] ; 17415 >
+        au < manifest ; 2023-3024 ; NINE: A Journal of Baseball History and Culture Volume 32 [2023-3024] ; 18143 >
 
     }
 
@@ -615,6 +626,19 @@
 
     {
     title <
+      name = North Dakota Quarterly ;
+      issn = 0029-277X ;
+      eissn = 2836-175X
+    >
+
+      attr[journal_id] = 862
+
+      au < manifest ; 2023 ; North Dakota Quarterly Volume 90 [2023] ; 17982 >
+
+    }
+
+    {
+    title <
       name = Nouvelles Études Francophones ;
       issn = 1552-3152  ;
       eissn = 2156-9428  ;
@@ -635,8 +659,9 @@
         au < released ; 2018 ; Nouvelles Études Francophones Volume 33 [2018] ; 13653 >
         au < released ; 2019 ; Nouvelles Études Francophones Volume 34 [2019] ; 14405 >
         au < released ; 2020 ; Nouvelles Études Francophones Volume 35 [2020] ; 15236 >
-        au < released ; 2021 ; Nouvelles Ãtudes Francophones Volume 36 [2021] ; 16834 >
-        au < released ; 2022 ; Nouvelles Ãtudes Francophones Volume 37 [2022] ; 17470 >
+        au < released ; 2021 ; Nouvelles Études Francophones Volume 36 [2021] ; 16834 >
+        au < released ; 2022 ; Nouvelles Études Francophones Volume 37 [2022] ; 17470 >
+        au < ready ; 2022 ; Nouvelles Études Francophones Volume 38 [2022] ; 18100 >
 
     }
 
@@ -670,6 +695,7 @@
         au < released ; 2019 ; Prairie Schooner Volume 93 [2019] ; 14113 >
         au < released ; 2020 ; Prairie Schooner Volume 94 [2020] ; 15096 >
         au < released ; 2021 ; Prairie Schooner Volume 95 [2021] ; 16602 >
+        au < ready ; 2022 ; Prairie Schooner Volume 96 [2022] ; 17745 >
 
     }
 
@@ -692,6 +718,7 @@
         au < released ; 2019-2020 ; Resilience: A Journal of the Environmental Humanities Volume 7 [2019-2020] ; 14545 >
         au < released ; 2020-2021 ; Resilience: A Journal of the Environmental Humanities Volume 8 [2020-2021] ; 15535 >
         au < released ; 2021-2022 ; Resilience: A Journal of the Environmental Humanities Volume 9 [2021-2022] ; 17096 >
+        au < manifest ; 2022-2023 ; Resilience: A Journal of the Environmental Humanities Volume 10 [2022-2023] ; 17496 >
 
     }
     
@@ -717,6 +744,8 @@
         au < released ; 2017 ; Storyworlds: A Journal of Narrative Studies Volume 9 [2017] ; 14307 >
         au < released ; 2018 ; Storyworlds: A Journal of Narrative Studies Volume 10 [2018] ; 15005 >
         au < released ; 2019 ; Storyworlds: A Journal of Narrative Studies Volume 11 [2019] ; 16087 >
+        au < ready ; 2020 ; Storyworlds: A Journal of Narrative Studies Volume 12 [2020] ; 18406 >
+        au < ready ; 2021 ; Storyworlds: A Journal of Narrative Studies Volume 13 [2021] ; 18544 >
 
     }
 
@@ -750,6 +779,7 @@
         au < released ; 2020 ; Studies in American Indian Literatures Volume 32 [2020] ; 15152 >
         au < released ; 2021 ; Studies in American Indian Literatures Volume 33 [2021] ; 16126 >
         au < released ; 2022 ; Studies in American Indian Literatures Volume 34 [2022] ; 17442 >
+        au < manifest ; 2023 ; Studies in American Indian Literatures Volume 35 [2023] ; 18448 >
 
     }
 
@@ -815,6 +845,7 @@
         au < released ; 2020 ; The American Indian Quarterly Volume 44 [2020] ; 14845 >
         au < released ; 2021 ; The American Indian Quarterly Volume 45 [2021] ; 15294 >
         au < released ; 2022 ; The American Indian Quarterly Volume 46 [2022] ; 17282 >
+        au < manifest ; 2023 ; The American Indian Quarterly Volume 47 [2023] ; 18235 >
 
     }
 
@@ -925,6 +956,7 @@
         au < released ; 2020 ; Western American Literature Volume 55 [2020] ; 14941 >
         au < released ; 2021 ; Western American Literature Volume 56 [2021] ; 15840 >
         au < released ; 2022 ; Western American Literature Volume 57 [2022] ; 17060 >
+        au < manifest ; 2023-2024 ; Western American Literature Volume 58 [2023-2024] ; 18232 >
 
     }
 
@@ -1010,6 +1042,7 @@
         au < released ; 2020 ; Feminist German Studies Volume 36 [2020] ; 15019 >
         au < released ; 2021 ; Feminist German Studies Volume 37 [2021] ; 15941 >
         au < released ; 2022 ; Feminist German Studies Volume 38 [2022] ; 17307 >
+        au < manifest ; 2023 ; Feminist German Studies Volume 39 [2023] ; 17843 >
 
     }
 
@@ -1065,6 +1098,7 @@
         au < released ; 2019 ; symploke Volume 27 [2019] ; 14394 >
         au < released ; 2020 ; symploke Volume 28 [2020] ; 15262 >
         au < released ; 2021 ; symploke Volume 29 [2021] ; 16731 >
+        au < ready ; 2022 ; symploke Volume 30 [2022] ; 18260 >
 
     }
 

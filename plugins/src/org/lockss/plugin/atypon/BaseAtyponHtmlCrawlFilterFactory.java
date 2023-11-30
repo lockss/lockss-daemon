@@ -225,6 +225,13 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     //https://www.liverpooluniversitypress.co.uk/doi/book/10.3828/9781873592960
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "slide-item"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "header__menu"),
+
+    //https://www.lyellcollection.org/doi/10.1144/SP505-2019-208 need to filter out related articles
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "relatedTab3"),
+
+    //https://epubs.siam.org/doi/10.1137/S0040585X97T989143 need to filter out cited by articles
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "citedBy"),
+
     
     // Not all Atypon plugins necessarily need this but MANY do and it is
     // an insidious source of over crawling

@@ -84,6 +84,8 @@ public class AuStateBean extends AuState {
 				      auState.numCurrentSuspectVersions,
 				      auState.cdnStems,
 				      null);
+
+		setMigrationState(auState.getMigrationState());
   }
 
   /**

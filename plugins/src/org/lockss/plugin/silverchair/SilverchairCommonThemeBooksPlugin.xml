@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>7</string>
+        <string>8</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -117,6 +117,16 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_crawlrules</string>
         <list>
+            <!--Exclude improperly relative URLs, e.g. those with 'http// or 'https//' or 'www', or those that end with .com, .net, .org, etc. 
+            Also need to exclude links that end with javascript:;-->
+            <string>2,"%sbooks/(book|edited-volume)/[^/]+/chapter/.*/(https?//|www\.)", base_url</string>
+            <string>2,"%sbooks/(book|edited-volume)/[^/]+/chapter/.*/[^/]+\.(com|net|org|edu|gov)/", base_url</string>
+            <string>2,"%sbooks/(book|edited-volume)/[^/]+/chapter/.*/(javascript;:|javascript:;)$", base_url</string>
+
+            <string>2,"%s([^/]+/)?books(/[^/]+)?/[^/]+/chapter(-pdf)?/.*/[^/]+\.(com|net|org|edu|gov)/", base_url</string>
+            <string>2,"%s([^/]+/)?books(/[^/]+)?/[^/]+/chapter(-pdf)?/.*/(https?//|www\.)", base_url</string>
+            <string>2,"%s([^/]+/)?books(/[^/]+)?/[^/]+/chapter(-pdf)?/.*/(javascript;:|javascript:;)$", base_url</string>
+
             <string>2,"^https?://([^/]+\.silverchair-cdn\.com)/cassette\.axd/.*"</string>
             <string>2, "^https://api\.addthis\.com/oexchange/.*"</string>
             <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com)/"</string>
@@ -139,7 +149,6 @@ POSSIBILITY OF SUCH DAMAGE.
             https://books.rsc.org/books/edited-volume/chapter-pdf/1716368/bk9781839164224-00001.pdf
             -->
             <string>1,"%s([^/]+/)?books(/[^/]+)?/[^/]+/chapter(-pdf)?/.*", base_url</string>
-            <string>2,"%s.*javascript;:", base_url</string>
         </list>
     </entry>
     <entry>

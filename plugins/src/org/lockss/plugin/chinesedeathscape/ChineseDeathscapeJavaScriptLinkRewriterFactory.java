@@ -21,7 +21,7 @@ public class ChineseDeathscapeJavaScriptLinkRewriterFactory implements LinkRewri
             final ServletUtil.LinkTransform srvLinkXform)
             throws PluginException, IOException {
 
-        logger.debug3("Fei - JavaScriptLinkRewriterFactory src = " + srcUrl + ", mimeType = " + mimeType);
+        logger.debug3("JavaScriptLinkRewriterFactory src = " + srcUrl + ", mimeType = " + mimeType);
 
         if (in == null) {
             throw new IllegalArgumentException("Called with null InputStream");
@@ -39,7 +39,7 @@ public class ChineseDeathscapeJavaScriptLinkRewriterFactory implements LinkRewri
             public String rewriteLine(String line) {
                 // handle tutorial-image part
                 if (srcUrl.contains(localReadJSFile)) {
-                    logger.debug3("Fei - rewriteLine" + line);
+                    logger.debug3("rewriteLine" + line);
 
                     String serveContentUrl =  "/ServeContent?url=" + srcUrl.replace(localReadJSFile, "");
                     String serverImageUrl = serveContentUrl + tutorialModelImagePath;

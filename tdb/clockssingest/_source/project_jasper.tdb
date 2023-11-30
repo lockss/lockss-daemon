@@ -58,7 +58,7 @@
     >
     provider = Brazilian Society of Geriatrics and Gerontology
 
-    au < ready ; exists ; 2023 ; Geriatrics, Gerontology and Aging ; geriatrics_gerontology_and_aging_2447-2123 >
+    au < readySource ; crawling ; 2023 ; Geriatrics, Gerontology and Aging ; geriatrics_gerontology_and_aging_2447-2123 >
 
   }
 
@@ -137,13 +137,25 @@
   {
 
     title <
+      name = Sciences, Eaux & Territoires ;
+      eissn = 1775-3783
+    >
+    provider = Institut national de recherche pour l'agriculture, l'alimentation et l'environnement
+
+    au < ready ; exists ; 2023 ; Sciences, Eaux & Territoires ; sciences_eaux_territoires_1775-3783 >
+
+  }
+
+  {
+
+    title <
       name = Análisis Filosófico ;
       issn = 0326-1301 ;
       eissn = 1851-9636
     >
     provider = Sociedad Argentina de Análisis Filosófico
 
-    au < ready ; exists ; 2023 ; Análisis Filosófico ; analisis_filosofico_1851-9636 >
+    au < readySource ; crawling ; 2023 ; Análisis Filosófico ; analisis_filosofico_1851-9636 >
 
   }
 
@@ -169,7 +181,7 @@
     >
     provider = Voces de la educación
 
-    au < expected ; exists ; 2023 ; Voces de la educación ; voces_de_la_educacion_1665-1596 >
+    au < expected ; exists ; 2023 ; Voces de la educación ; UNKNOWN >
 
   }
 

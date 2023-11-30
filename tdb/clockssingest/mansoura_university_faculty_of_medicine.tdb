@@ -14,7 +14,8 @@
   
     title <
       name = Menoufia Medical Journal ;
-      eissn = 2411-3514 
+      issn = 1110-2098 ;
+      eissn = 2314-6788 
     >
     
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 

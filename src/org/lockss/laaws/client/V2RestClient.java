@@ -85,6 +85,13 @@ import javax.net.ssl.SSLSession;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
+
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectReader;
+import com.google.gson.reflect.TypeToken;
 import okhttp3.*;
 import okhttp3.internal.http.HttpMethod;
 import okhttp3.internal.tls.OkHostnameVerifier;
@@ -93,6 +100,7 @@ import okhttp3.logging.HttpLoggingInterceptor.Level;
 import okio.BufferedSink;
 import okio.Okio;
 import org.apache.commons.io.IOUtils;
+import org.lockss.account.UserAccount;
 import org.lockss.laaws.DigestCachedUrl;
 import org.lockss.laaws.client.auth.ApiKeyAuth;
 import org.lockss.laaws.client.auth.Authentication;
@@ -902,13 +910,11 @@ public class V2RestClient {
         }
       }
     }
-    String respBody;
+    String respBody = null;
     try {
-      if (response.body() != null) {
-        respBody = response.body().string();
-      }
-      else {
-        respBody = null;
+      ResponseBody body = response.body();
+      if (body != null) {
+        respBody = body.string();
       }
     }
     catch (IOException e) {
@@ -925,7 +931,27 @@ public class V2RestClient {
       contentType = "application/json";
     }
     if (isJsonMime(contentType)) {
-      return json.deserialize(respBody, returnType);
+      // Special handling if we're expecting UserAccount response
+      try {
+        ObjectMapper objMapper = UserAccount.getUserAccountObjectMapper();
+        Type userAccountArrayType = new TypeToken<UserAccount[]>() {}.getType();
+        if (returnType.equals(userAccountArrayType)) {
+          ObjectReader objReader = objMapper.readerFor(UserAccount[].class);
+          return objReader.readValue(respBody);
+        } else if (returnType.equals(UserAccount.class)) {
+          ObjectReader objReader = objMapper.readerFor(UserAccount.class);
+          return objReader.readValue(respBody);
+        } else {
+          // Deserialize with Gson
+          return json.deserialize(respBody, returnType);
+        }
+      } catch (JsonProcessingException e) {
+        throw new ApiException(
+            "Could not deserialize JSON response for type: " + returnType,
+            response.code(),
+            response.headers().toMultimap(),
+            respBody);
+      }
     }
     else if (returnType.equals(String.class)) {
       // Expecting string, return the raw response body.

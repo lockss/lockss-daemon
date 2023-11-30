@@ -57,6 +57,15 @@ public class ProxyManager extends BaseProxyManager {
   public static final String PARAM_PORT = PREFIX + "port";
   public static final int DEFAULT_PORT = 9090;
 
+  /**
+   * Forwards proxy requests to the specified machine if set
+   **/
+  static final String PARAM_FORWARD_PROXY =
+      Configuration.PREFIX + "proxy.forwardTo";
+  public static final String DEFAULT_FORWARD_PROXY = null;
+
+  private HostPortParser forwardProxy = null;
+
   /** List of IP addresses to which to bind listen socket.  If not set,
    * server listens on all interfaces.  All listeners must be on the same
    * port, given by the <tt>port</tt> parameter.  Changing this requires
@@ -316,6 +325,16 @@ public class ProxyManager extends BaseProxyManager {
   private boolean paramNormalizeAuidRequest =
     DEFAULT_NORMALIZE_AUID_REQUEST;
 
+  public HostPortParser getForwardProxy() {
+    return forwardProxy;
+  }
+
+  /**
+   * Returns a boolean indicating whether this is the "migrating from" machine.
+   **/
+  public boolean isMigratingFrom() {
+    return forwardProxy != null;
+  }
 
   public void setConfig(Configuration config, Configuration prevConfig,
 			Configuration.Differences changedKeys) {
@@ -328,6 +347,16 @@ public class ProxyManager extends BaseProxyManager {
       log.debug("Installing new ip filter: incl: " + includeIps +
 		", excl: " + excludeIps);
       setIpFilter();
+
+      try {
+        String forwardProxyParam =
+            config.get(PARAM_FORWARD_PROXY, DEFAULT_FORWARD_PROXY);
+        forwardProxy = new HostPortParser(forwardProxyParam);
+      } catch (HostPortParser.InvalidSpec e) {
+        log.error("Error parsing forwardProxy parameter", e);
+        forwardProxy = null;
+      }
+
       // access log is called by other components (ServeContent) so
       // configure even if not starting proxy.  Should be moved elsewhere
       try {

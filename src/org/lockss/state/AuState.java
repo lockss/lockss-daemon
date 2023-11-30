@@ -58,6 +58,10 @@ public class AuState implements LockssSerializable {
 
   public enum AccessType {OpenAccess, Subscription};
 
+  public enum MigrationState {
+    Aborted, NotStarted, InProgress, Finished
+  };
+
 
   // Persistent state vars
 
@@ -81,6 +85,7 @@ public class AuState implements LockssSerializable {
   protected double v3Agreement = -1.0;
   protected double highestV3Agreement = -1.0;
   protected AccessType accessType;
+  protected MigrationState migrationState = MigrationState.NotStarted;
   protected SubstanceChecker.State hasSubstance;
   protected String substanceVersion;
   protected String metadataVersion;
@@ -189,6 +194,7 @@ public class AuState implements LockssSerializable {
     this.lastTreeWalk = aus.lastTreeWalk;
     this.crawlUrls = aus.crawlUrls;
     this.accessType = aus.accessType;
+    this.migrationState = aus.migrationState;
     this.clockssSubscriptionStatus = aus.clockssSubscriptionStatus;
     this.v3Agreement = aus.v3Agreement;
     this.highestV3Agreement = aus.highestV3Agreement;
@@ -722,7 +728,7 @@ public class AuState implements LockssSerializable {
   }
 
   private AuState copy() {
-    return new AuState(au,
+    AuState auState = new AuState(au,
 		       lastCrawlTime, lastCrawlAttempt,
 		       lastCrawlResult, lastCrawlResultMsg,
 		       lastDeepCrawlTime, lastDeepCrawlAttempt,
@@ -745,6 +751,9 @@ public class AuState implements LockssSerializable {
 		       numCurrentSuspectVersions,
 		       cdnStems,
 		       null);
+
+    auState.setMigrationState(migrationState);
+    return auState;
   }
 
   /**
@@ -910,6 +919,17 @@ public class AuState implements LockssSerializable {
 
   public AccessType getAccessType() {
     return accessType;
+  }
+
+  public void setMigrationState(MigrationState migrationState) {
+    if (getMigrationState() != migrationState) {
+      this.migrationState = migrationState;
+      needSave();
+    }
+  }
+
+  public MigrationState getMigrationState() {
+    return migrationState;
   }
 
   public boolean isOpenAccess() {

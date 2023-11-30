@@ -14531,7 +14531,7 @@
     param[base_url] = http://jnen.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.oup.OUPDrupalPlugin
     implicit < status ; year ; name ; param[volume_name] >
-    #content available from 1985 volume 44 to 1999 volume 58	
+    #content available from 1985 volume 44 to 1999 volume 58
 
     au < doNotProcess ; 2000 ; Journal of Neuropathology & Experimental Neurology Volume 59 ; 59 >
     au < doNotProcess ; 2001 ; Journal of Neuropathology & Experimental Neurology Volume 60 ; 60 >

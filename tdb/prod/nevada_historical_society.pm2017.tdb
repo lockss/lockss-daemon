@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = Nevada Historical Society
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:471
+
+    {
+    title <
+      name = Nevada Historical Society Q ;
+      issn = 0047-9462 ;
+      eissn = 2992-930X
+
+    >
+
+      attr[journal_id] = 864
+
+      au < manifest ; 2023 ; Nevada Historical Society Q Volume 66 [2023] ; 18548 >
+
+    }
+
+}
