@@ -187,19 +187,20 @@ public class TestLcapRouter extends LockssTestCase {
 
     // Forwarding enabled; InProgress -> forward-inbound message to V2
     {
+      LcapRouter s_rtr = spy(rtr);
       String auid = "testAuid";
       mockAuMigrationState(auid, AuState.MigrationState.InProgress);
       V3LcapMessage lmsg = LcapMessageTestUtil
           .makeTestVoteMessage(pid1, myPeerId, tempDir, daemon);
       lmsg.setArchivalId(auid);
-      PeerMessage pmsg = rtr.makePeerMessage(lmsg);
+      PeerMessage pmsg = s_rtr.makePeerMessage(lmsg);
       reset(scomm);
-      rtr.handleOrForwardInboundPeerMessage(pmsg);
+      s_rtr.handleOrForwardInboundPeerMessage(pmsg);
       ArgumentCaptor<PeerIdentity> peerIdCaptor =
           ArgumentCaptor.forClass(PeerIdentity.class);
-      verify(scomm, times(1))
-          .sendTo(eq(pmsg), peerIdCaptor.capture());
-      assertEquals(forwardToV2, peerIdCaptor.getValue().getKey());
+      verifyZeroInteractions(scomm);
+      verify(s_rtr, times(0))
+          .handleLocalInboundMessage(pmsg, lmsg);
     }
 
     // Forwarding enabled; Finished -> forward-inbound message to V2

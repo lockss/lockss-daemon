@@ -249,24 +249,37 @@ public class LcapRouter
         return;
       } else {
         // Inbound message: Determine whether to handle locally or forward to V2
-        // based on AU's migration state
+        // based on AU's presence or migration state
+        boolean forward = false;
         ArchivalUnit au = pluginMgr.getAuFromId(lmsg.getArchivalId());
-        AuState auState = AuUtil.getAuState(au);
-        switch (auState.getMigrationState()) {
+        if (au == null) {
+          forward = true;
+        } else {
+          AuState auState = AuUtil.getAuState(au);
+          switch (auState.getMigrationState()) {
           case InProgress:
-          case Finished:
-            try {
-              scomm.sendTo(pmsg, migrateTo);
-            } catch (IOException e) {
-              log.error("Could not forward peer message to V2", e);
-            }
+            // TODO: Ideally we'd send a NAK, but easier to just drop
+            // the message, which will have a similar effect
+            log.warning("Dropping message for AU being migrated: " +
+                        au.getName());
             return;
+          case Finished:
+            forward = true;
+            break;
           default:
             // Fallthrough to handle locally...
+          }
+        }
+        if (forward) {
+          try {
+            scomm.sendTo(pmsg, migrateTo);
+          } catch (IOException e) {
+            log.error("Could not forward peer message to V2", e);
+          }
+          return;
         }
       }
     }
-
     if (lmsg.getDestinationId() == myPeerId) {
       handleLocalInboundMessage(pmsg, lmsg);
     } else {
