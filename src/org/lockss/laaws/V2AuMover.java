@@ -329,11 +329,9 @@ public class V2AuMover {
   /** V2 repo REST status api client */
   private org.lockss.laaws.api.rs.StatusApi repoStatusApiClient;
 
-  /** V2 repo REST namespace
-s api client */
+  /** V2 repo REST namespace api client */
   private StreamingArtifactsApi repoArtifactsApiClient;
-  /** V2 repo REST namespace
-s api client with long timeout */
+  /** V2 repo REST namespace api client with long timeout */
   private StreamingArtifactsApi repoArtifactsApiLongCallClient;
 
   private org.lockss.laaws.api.rs.AusApi repoAusApiClient;
