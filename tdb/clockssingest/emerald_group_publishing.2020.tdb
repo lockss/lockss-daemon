@@ -5758,7 +5758,7 @@
     au < manifest ; exists ; 1990 ; International Journal of Retail & Distribution Management Volume 18 ; 18 ; >
     au < manifest ; exists ; 1991 ; International Journal of Retail & Distribution Management Volume 19 ; 19 ; >
     au < manifest ; exists ; 1992 ; International Journal of Retail & Distribution Management Volume 20 ; 20 ; >
-    au < ready ; exists ; 1993 ; International Journal of Retail & Distribution Management Volume 21 ; 21 ; >
+    au < crawling ; exists ; 1993 ; International Journal of Retail & Distribution Management Volume 21 ; 21 ; >
     au < frozen ; exists ; 1994 ; International Journal of Retail & Distribution Management Volume 22 ; 22 ; >
     au < finished ; manifest ; 1995 ; International Journal of Retail & Distribution Management Volume 23 ; 23 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1996 ; International Journal of Retail & Distribution Management Volume 24 ; 24 ; reingest3.clockss.org:8083 >
@@ -5855,7 +5855,7 @@
     au < manifest ; exists ; 1990 ; International Journal of Social Economics Volume 17 ; 17 ; >
     au < manifest ; exists ; 1991 ; International Journal of Social Economics Volume 18 ; 18 ; >
     au < manifest ; exists ; 1992 ; International Journal of Social Economics Volume 19 ; 19 ; >
-    au < ready ; exists ; 1993 ; International Journal of Social Economics Volume 20 ; 20 ; >
+    au < crawling ; exists ; 1993 ; International Journal of Social Economics Volume 20 ; 20 ; >
     au < frozen ; exists ; 1994 ; International Journal of Social Economics Volume 21 ; 21 ; >
     au < finished ; crawling ; 1995 ; International Journal of Social Economics Volume 22 ; 22 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; International Journal of Social Economics Volume 23 ; 23 ; reingest2.clockss.org:8085 >
@@ -6093,7 +6093,7 @@
     au < manifest ; exists ; 1990 ; International Journal of Wine Marketing Volume 2 ; 2 ; >
     au < manifest ; exists ; 1991 ; International Journal of Wine Marketing Volume 3 ; 3 ; >
     au < manifest ; exists ; 1992 ; International Journal of Wine Marketing Volume 4 ; 4 ; >
-    au < ready ; exists ; 1993 ; International Journal of Wine Marketing Volume 5 ; 5 ; >
+    au < crawling ; exists ; 1993 ; International Journal of Wine Marketing Volume 5 ; 5 ; >
     au < frozen ; exists ; 1994 ; International Journal of Wine Marketing Volume 6 ; 6 ; >
     au < finished ; manifest ; 1995 ; International Journal of Wine Marketing Volume 7 ; 7 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; International Journal of Wine Marketing Volume 8 ; 8 ; reingest5.clockss.org:8082 >
@@ -6855,7 +6855,7 @@
     au < manifest ; exists ; 1990 ; Journal of Consumer Marketing Volume 7 ; 7 ; >
     au < manifest ; exists ; 1991 ; Journal of Consumer Marketing Volume 8 ; 8 ; >
     au < manifest ; exists ; 1992 ; Journal of Consumer Marketing Volume 9 ; 9 ; >
-    au < ready ; exists ; 1993 ; Journal of Consumer Marketing Volume 10 ; 10 ; >
+    au < crawling ; exists ; 1993 ; Journal of Consumer Marketing Volume 10 ; 10 ; >
     au < frozen ; exists ; 1994 ; Journal of Consumer Marketing Volume 11 ; 11 ; >
     au < finished ; manifest ; 1995 ; Journal of Consumer Marketing Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; Journal of Consumer Marketing Volume 13 ; 13 ; reingest4.clockss.org:8082 >
@@ -7669,7 +7669,7 @@
     param[journal_issn] = 1358-1988
     comment[journal_id] = jfrc
 
-    au < ready ; exists ; 1993 ; Journal of Financial Regulation and Compliance Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1993 ; Journal of Financial Regulation and Compliance Volume 1 ; 1 ; >
     au < frozen ; exists ; 1994 ; Journal of Financial Regulation and Compliance Volume 2 ; 2 ; >
     au < finished ; manifest ; 1995 ; Journal of Financial Regulation and Compliance Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1996 ; Journal of Financial Regulation and Compliance Volume 4 ; 4 ; reingest3.clockss.org:8083 >
@@ -8420,7 +8420,7 @@
     au < manifest ; exists ; 1990 ; Journal of Management in Medicine Volume 4 ; 4 ; >
     au < manifest ; exists ; 1991 ; Journal of Management in Medicine Volume 5 ; 5 ; >
     au < manifest ; exists ; 1992 ; Journal of Management in Medicine Volume 6 ; 6 ; >
-    au < ready ; exists ; 1993 ; Journal of Management in Medicine Volume 7 ; 7 ; >
+    au < crawling ; exists ; 1993 ; Journal of Management in Medicine Volume 7 ; 7 ; >
     au < frozen ; exists ; 1994 ; Journal of Management in Medicine Volume 8 ; 8 ; >
     au < finished ; manifest ; 1995 ; Journal of Management in Medicine Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Journal of Management in Medicine Volume 10 ; 10 ; reingest2.clockss.org:8085 >
@@ -8451,7 +8451,7 @@
     au < manifest ; exists ; 1990 ; Journal of Managerial Psychology Volume 5 ; 5 ; >
     au < manifest ; exists ; 1991 ; Journal of Managerial Psychology Volume 6 ; 6 ; >
     au < manifest ; exists ; 1992 ; Journal of Managerial Psychology Volume 7 ; 7 ; >
-    au < ready ; exists ; 1993 ; Journal of Managerial Psychology Volume 8 ; 8 ; >
+    au < crawling ; exists ; 1993 ; Journal of Managerial Psychology Volume 8 ; 8 ; >
     au < finished ; manifest ; 1994 ; Journal of Managerial Psychology Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1995 ; Journal of Managerial Psychology Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; Journal of Managerial Psychology Volume 11 ; 11 ; reingest4.clockss.org:8082 >
@@ -9788,7 +9788,7 @@
     au < manifest ; exists ; 1990 ; Library Management Volume 11 ; 11 ; >
     au < manifest ; exists ; 1991 ; Library Management Volume 12 ; 12 ; >
     au < frozen ; exists ; 1992 ; Library Management Volume 13 ; 13 ; >
-    au < ready ; exists ; 1993 ; Library Management Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1993 ; Library Management Volume 14 ; 14 ; >
     au < finished ; manifest ; 1994 ; Library Management Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1995 ; Library Management Volume 16 ; 16 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; Library Management Volume 17 ; 17 ; reingest4.clockss.org:8082 >
@@ -9874,8 +9874,8 @@
     au < manifest ; exists ; 1989 ; Library Review Volume 38 ; 38 ; >
     au < manifest ; exists ; 1990 ; Library Review Volume 39 ; 39 ; >
     au < manifest ; exists ; 1991 ; Library Review Volume 40 ; 40 ; >
-    au < ready ; exists ; 1992 ; Library Review Volume 41 ; 41 ; >
-    au < ready ; exists ; 1993 ; Library Review Volume 42 ; 42 ; >
+    au < crawling ; exists ; 1992 ; Library Review Volume 41 ; 41 ; >
+    au < crawling ; exists ; 1993 ; Library Review Volume 42 ; 42 ; >
     au < finished ; manifest ; 1994 ; Library Review Volume 43 ; 43 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1995 ; Library Review Volume 44 ; 44 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Library Review Volume 45 ; 45 ; reingest5.clockss.org:8082 >
@@ -9955,7 +9955,7 @@
     au < manifest ; exists ; 1990 ; Logistics Information Management Volume 3 ; 3 ; >
     au < manifest ; exists ; 1991 ; Logistics Information Management Volume 4 ; 4 ; >
     au < manifest ; exists ; 1992 ; Logistics Information Management Volume 5 ; 5 ; >
-    au < ready ; exists ; 1993 ; Logistics Information Management Volume 6 ; 6 ; >
+    au < crawling ; exists ; 1993 ; Logistics Information Management Volume 6 ; 6 ; >
     au < frozen ; exists ; 1994 ; Logistics Information Management Volume 7 ; 7 ; >
     au < finished ; manifest ; 1995 ; Logistics Information Management Volume 8 ; 8 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Logistics Information Management Volume 9 ; 9 ; reingest1.clockss.org:8082 >
@@ -10005,7 +10005,7 @@
     au < manifest ; exists ; 1989 ; Management Decision Volume 27 ; 27 ; >
     au < manifest ; exists ; 1990 ; Management Decision Volume 28 ; 28 ; >
     au < manifest ; exists ; 1991 ; Management Decision Volume 29 ; 29 ; >
-    au < ready ; exists ; 1992 ; Management Decision Volume 30 ; 30 ; >
+    au < crawling ; exists ; 1992 ; Management Decision Volume 30 ; 30 ; >
     au < frozen ; exists ; 1993 ; Management Decision Volume 31 ; 31 ; >
     au < finished ; manifest ; 1994 ; Management Decision Volume 32 ; 32 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1995 ; Management Decision Volume 33 ; 33 ; reingest5.clockss.org:8082 >
@@ -10368,7 +10368,7 @@
     au < manifest ; exists ; 1990 ; Managerial Law Volume 32 ; 32 ; >
     au < manifest ; exists ; 1991 ; Managerial Law Volume 33 ; 33 ; >
     au < manifest ; exists ; 1992 ; Managerial Law Volume 34 ; 34 ; >
-    au < ready ; exists ; 1993 ; Managerial Law Volume 35 ; 35 ; >
+    au < crawling ; exists ; 1993 ; Managerial Law Volume 35 ; 35 ; >
     au < frozen ; exists ; 1994 ; Managerial Law Volume 36 ; 36 ; >
     au < finished ; manifest ; 1995 ; Managerial Law Volume 37 ; 37 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1996 ; Managerial Law Volume 38 ; 38 ; reingest3.clockss.org:8083 >
@@ -11019,7 +11019,7 @@
     au < manifest ; exists ; 1989 ; Nutrition & Food Science Volume 89 ; 89 ; >
     au < manifest ; exists ; 1990 ; Nutrition & Food Science Volume 90 ; 90 ; >
     au < manifest ; exists ; 1991 ; Nutrition & Food Science Volume 91 ; 91 ; >
-    au < ready ; exists ; 1992 ; Nutrition & Food Science Volume 92 ; 92 ; >
+    au < crawling ; exists ; 1992 ; Nutrition & Food Science Volume 92 ; 92 ; >
     au < ready ; exists ; 1993 ; Nutrition & Food Science Volume 93 ; 93 ; >
     au < finished ; manifest ; 1994 ; Nutrition & Food Science Volume 94 ; 94 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1995 ; Nutrition & Food Science Volume 95 ; 95 ; reingest1.clockss.org:8082 >
@@ -11391,8 +11391,8 @@
     au < manifest ; exists ; 1989 ; Personnel Review Volume 18 ; 18 ; >
     au < manifest ; exists ; 1990 ; Personnel Review Volume 19 ; 19 ; >
     au < manifest ; exists ; 1991 ; Personnel Review Volume 20 ; 20 ; >
-    au < ready ; exists ; 1992 ; Personnel Review Volume 21 ; 21 ; >
-    au < ready ; exists ; 1993 ; Personnel Review Volume 22 ; 22 ; >
+    au < crawling ; exists ; 1992 ; Personnel Review Volume 21 ; 21 ; >
+    au < crawling ; exists ; 1993 ; Personnel Review Volume 22 ; 22 ; >
     au < finished ; manifest ; 1994 ; Personnel Review Volume 23 ; 23 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1995 ; Personnel Review Volume 24 ; 24 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Personnel Review Volume 25 ; 25 ; reingest2.clockss.org:8085 >
@@ -12459,7 +12459,7 @@
     au < manifest ; exists ; 1990 ; Soldering & Surface Mount Technology Volume 2 ; 2 ; >
     au < manifest ; exists ; 1991 ; Soldering & Surface Mount Technology Volume 3 ; 3 ; >
     au < manifest ; exists ; 1992 ; Soldering & Surface Mount Technology Volume 4 ; 4 ; >
-    au < ready ; exists ; 1993 ; Soldering & Surface Mount Technology Volume 5 ; 5 ; >
+    au < crawling ; exists ; 1993 ; Soldering & Surface Mount Technology Volume 5 ; 5 ; >
     au < frozen ; exists ; 1994 ; Soldering & Surface Mount Technology Volume 6 ; 6 ; >
     au < finished ; manifest ; 1995 ; Soldering & Surface Mount Technology Volume 7 ; 7 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 1996 ; Soldering & Surface Mount Technology Volume 8 ; 8 ; >
@@ -12847,7 +12847,7 @@
     au < manifest ; exists ; 1987 ; Studies in Economics and Finance Volume 11 ; 11 ; >
     au < manifest ; exists ; 1989 ; Studies in Economics and Finance Volume 12 ; 12 ; >
     au < manifest ; exists ; 1990 ; Studies in Economics and Finance Volume 13 ; 13 ; >
-    au < ready ; exists ; 1993 ; Studies in Economics and Finance Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1993 ; Studies in Economics and Finance Volume 14 ; 14 ; >
     au < frozen ; exists ; 1994 ; Studies in Economics and Finance Volume 15 ; 15 ; >
     au < finished ; manifest ; 1996 ; Studies in Economics and Finance Volume 16 ; 16 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; Studies in Economics and Finance Volume 17 ; 17 ; reingest2.clockss.org:8085 >
