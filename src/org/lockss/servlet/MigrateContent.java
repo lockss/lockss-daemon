@@ -65,9 +65,14 @@ public class MigrateContent extends LockssServlet {
   static final String PREFIX = Configuration.PREFIX + "v2.migrate.";
   public static final String PARAM_ENABLE_MIGRATION = PREFIX + "enabled";
   public static final boolean DEFAULT_ENABLE_MIGRATION = true;
-
+  public static final String PARAM_MIGRATION_READY = PREFIX + "ready";
+  public static final boolean DEFAULT_MIGRATION_READY = false;
+  public static final String PARAM_DEBUG_MODE = PREFIX + "debug";
+  public static final boolean DEFAULT_DEBUG_MODE = false;
   public static final String PARAM_HOSTNAME=PREFIX +"hostname";
   static final String DEFAULT_HOSTNAME="localhost";
+  public static final String PARAM_DELETE_AFTER_MIGRATION = PREFIX + "deleteAusAfterMigration";
+  public static final String DEFAULT_DELETE_AFTER_MIGRATION = "false";
   public static final String PARAM_AU_SELECT_FILTER=PREFIX +"au_select_filter";
   public static final List<String> DEFAULT_AU_SELECT_FILTER =
     Collections.emptyList();
@@ -124,6 +129,8 @@ public class MigrateContent extends LockssServlet {
   boolean isCompareContent;
   List<String> auSelectFilter;
   List<Pattern> auSelectPatterns;
+  boolean isDaemonInMigrationMode;
+  boolean isMigrationInDebugMode;
 
 
   protected void resetLocals() {
@@ -144,6 +151,11 @@ public class MigrateContent extends LockssServlet {
     if(auSelectFilter != DEFAULT_AU_SELECT_FILTER) {
       auSelectPatterns = compileRegexps(auSelectFilter);
     }
+
+    isDaemonInMigrationMode =
+        config.getBoolean(PARAM_MIGRATION_READY, DEFAULT_MIGRATION_READY);
+    isMigrationInDebugMode =
+        config.getBoolean(PARAM_DEBUG_MODE, DEFAULT_DEBUG_MODE);
   }
 
   public void init(ServletConfig config) throws ServletException {
@@ -339,6 +351,20 @@ public class MigrateContent extends LockssServlet {
     return au;
   }
 
+  private void displayStartMigration() throws IOException {
+    Page page = newPage();
+    addCssLocations(page);
+    layoutErrorBlock(page);
+    ServletUtil.layoutExplanationBlock(page, "");
+
+    if (isDaemonInMigrationMode || isMigrationInDebugMode) {
+      // TODO: Display existing AU migration form
+    } else {
+      // TODO: Display migrator configuration form
+    }
+
+    endPage(page);
+  }
 
   private void displayPage() throws IOException {
     Page page = newPage();
