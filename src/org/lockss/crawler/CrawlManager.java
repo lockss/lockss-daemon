@@ -95,6 +95,13 @@ public interface CrawlManager {
    */
   public void startNewContentCrawl(CrawlReq req, ActivityRegulator.Lock lock);
 
+  /**
+   * Aborts all crawls of an AU and optionally, remove AU from all queues.
+   *
+   * @param au The {@link ArchivalUnit} to abort crawls of.
+   */
+  public void abortAuCrawls(ArchivalUnit au);
+
   /** Return the CrawlRateLimiter assigned to the crawler. */
   public CrawlRateLimiter getCrawlRateLimiter(Crawler crawler);
 

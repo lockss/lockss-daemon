@@ -945,20 +945,30 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     default:
       removeAuFromQueues(au);
     }
-    synchronized(runningCrawlersLock) {
-      for (PoolCrawlers pc : poolMap.values()) {
-	for (Crawler crawler : pc.getCrawlers()) {
-	  if (au == crawler.getAu()) {
-	    crawler.abortCrawl();
-            // If it hadn't actually started yet, ensure status removed
-            cmStatus.removeCrawlerStatusIfPending(crawler.getCrawlerStatus());
-	  }
-	}
-      }
-    }
+    abortAuCrawls0(au);
     // Notify CrawlerStatus objects to discard any pointer to this AU
     for (CrawlerStatus status : cmStatus.getCrawlerStatusList()) {
       status.auDeleted(au);
+    }
+  }
+
+  @Override
+  public void abortAuCrawls(ArchivalUnit au) {
+    removeAuFromQueues(au);
+    abortAuCrawls0(au);
+  }
+
+  private void abortAuCrawls0(ArchivalUnit au) {
+    synchronized(runningCrawlersLock) {
+      for (PoolCrawlers pc : poolMap.values()) {
+        for (Crawler crawler : pc.getCrawlers()) {
+          if (au == crawler.getAu()) {
+            crawler.abortCrawl();
+            // If it hadn't actually started yet, ensure status removed
+            cmStatus.removeCrawlerStatusIfPending(crawler.getCrawlerStatus());
+          }
+        }
+      }
     }
   }
 
