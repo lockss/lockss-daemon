@@ -1,0 +1,46 @@
+{
+  publisher <
+    name = University of Thi-Qar, College of Science ;
+    info[contract] = 2023 ;
+    info[back] = 2020 ;
+    info[tester] = 5 ;
+    info[platform] = OJS3. Open Journal Systems 3.3.0.14
+  >
+
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    param[base_url] = https://jsci.utq.edu.iq/
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+    #OJS3
+    attr[start_stem] = index.php/
+
+  {
+  
+    title < 
+      name = University of Thi-Qar Journal of Science ;
+      issn = 1991-8690 ;
+      eissn = 2709-0256 
+    >
+
+      param[journal_id] = main
+      #published 2008 to present
+
+      au < manifest ; exists ; 2008 ; University of Thi-Qar Journal of Science Volume 2008 ; 1 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; University of Thi-Qar Journal of Science Volume 2009 ; 1 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; University of Thi-Qar Journal of Science Volume 2010 ; 2 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; University of Thi-Qar Journal of Science Volume 2011 ; 2 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; University of Thi-Qar Journal of Science Volume 2012 ; 3 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; University of Thi-Qar Journal of Science Volume 2013 ; 3 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; University of Thi-Qar Journal of Science Volume 2014 ; 4 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; University of Thi-Qar Journal of Science Volume 2015 ; 5 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; University of Thi-Qar Journal of Science Volume 2016 ; 6 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; University of Thi-Qar Journal of Science Volume 2017 ; 6 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; University of Thi-Qar Journal of Science Volume 2018 ; 6 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; University of Thi-Qar Journal of Science Volume 2019 ; 7 ; 2019 ; >
+      au < doesNotExist ; doesNotExist ; 2020 ; University of Thi-Qar Journal of Science Volume 2020 ; 7 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; University of Thi-Qar Journal of Science Volume 2021 ; 8 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; University of Thi-Qar Journal of Science Volume 2022 ; 9 ; 2022 ; >
+      au < manifest ; exists ; 2023 ; University of Thi-Qar Journal of Science Volume 2023 ; 10 ; 2023 ; >
+
+  }
+
+}
