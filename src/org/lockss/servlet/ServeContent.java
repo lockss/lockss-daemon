@@ -106,8 +106,8 @@ public class ServeContent extends LockssServlet {
   /**
    * Forwards ServeContent requests to the specified machine if set
    **/
-  static final String PARAM_FORWARD_SERVE_CONTENT =
-      PREFIX + ".forwardTo";
+  public static final String PARAM_FORWARD_SERVE_CONTENT =
+      PREFIX + "forwardTo";
   public static final String DEFAULT_FORWARD_SERVE_CONTENT = null;
 
   private static HostPortParser forwardTo = null;
