@@ -1,25 +1,11 @@
 package org.lockss.laaws;
 
-import static org.lockss.laaws.V2AuMover.compileRegexps;
-
-import java.io.File;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.regex.Pattern;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.PluginManager;
-import org.lockss.protocol.MockIdentityManager;
-import org.lockss.util.Logger;
-import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
-import org.lockss.test.MockArchivalUnit;
-import org.lockss.test.MockLockssDaemon;
-import org.lockss.test.MockPlugin;
+
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import java.util.Properties;
 
 public class TestV2AuMover extends LockssTestCase {
   // make tests succeed
@@ -38,6 +24,32 @@ public class TestV2AuMover extends LockssTestCase {
     assertFalse(V2AuMover.isEqualUpToFinalSlash("foo", "foo//"));
     assertFalse(V2AuMover.isEqualUpToFinalSlash("foo/", "foo"));
     assertTrue(V2AuMover.isEqualUpToFinalSlash("foo", "foo/"));
+  }
+
+  public void testMapFromCsvStream() throws Exception {
+    final String CSV = "Name,Value\n" +
+        "org.lockss.contentui.port,24680\n" +
+        "org.lockss.contentui.start,true\n" +
+        "org.lockss.proxy.port,24670\n" +
+        "org.lockss.proxy.start,true\n" +
+        "org.lockss.localV3Identity,TCP:[127.0.0.1]:9729\n" +
+        "org.lockss.metadataDbManager.datasource.className,org.apache.derby.jdbc.ClientDataSource\n" +
+        "org.lockss.metadataDbManager.datasource.dbcp.enabled,true\n" +
+        "org.lockss.metadataDbManager.datasource.portNumber,1527\n";
+
+    InputStream csvStream = new ByteArrayInputStream(CSV.getBytes(StandardCharsets.UTF_8));
+
+    Properties csvMap = V2AuMover.mapFromCsvStream(csvStream);
+
+    assertEquals("24680", csvMap.get("org.lockss.contentui.port"));
+    assertEquals("true", csvMap.get("org.lockss.contentui.start"));
+    assertEquals("24670", csvMap.get("org.lockss.proxy.port"));
+    assertEquals("true", csvMap.get("org.lockss.proxy.start"));
+    assertEquals("TCP:[127.0.0.1]:9729", csvMap.get("org.lockss.localV3Identity"));
+    assertEquals("org.apache.derby.jdbc.ClientDataSource",
+        csvMap.get("org.lockss.metadataDbManager.datasource.className"));
+    assertEquals("true", csvMap.get("org.lockss.metadataDbManager.datasource.dbcp.enabled"));
+    assertEquals("1527", csvMap.get("org.lockss.metadataDbManager.datasource.portNumber"));
   }
 
 //   V2AuMover auMover;

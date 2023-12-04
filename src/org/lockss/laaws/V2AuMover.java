@@ -27,35 +27,53 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.laaws;
 
-import static java.nio.file.StandardOpenOption.APPEND;
-import static java.nio.file.StandardOpenOption.CREATE;
-
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.nio.file.Files;
-import java.text.*;
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.util.stream.*;
-import okhttp3.*;
+import okhttp3.Interceptor;
+import okhttp3.Request;
+import okhttp3.Response;
+import okhttp3.ResponseBody;
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVParser;
 import org.lockss.app.LockssDaemon;
-import org.lockss.config.*;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.crawler.CrawlManager;
 import org.lockss.daemon.LockssRunnable;
+import org.lockss.db.DbManager;
+import org.lockss.db.DbManagerSql;
 import org.lockss.laaws.MigrationManager.OpType;
 import org.lockss.laaws.api.rs.StreamingArtifactsApi;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.V2RestClient;
 import org.lockss.laaws.model.rs.AuidPageInfo;
 import org.lockss.plugin.*;
+import org.lockss.poller.PollManager;
+import org.lockss.protocol.IdentityManager;
+import org.lockss.protocol.LcapRouter;
+import org.lockss.proxy.ProxyManager;
+import org.lockss.repository.RepositoryManager;
+import org.lockss.servlet.ContentServletManager;
+import org.lockss.servlet.MigrateContent;
+import org.lockss.servlet.ServeContent;
 import org.lockss.state.AuState;
 import org.lockss.uiapi.util.DateFormatter;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.LockssUrlConnection;
+
+import java.io.*;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.file.Files;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
+
+import static java.nio.file.StandardOpenOption.APPEND;
+import static java.nio.file.StandardOpenOption.CREATE;
 import static org.lockss.laaws.Counters.CounterType;
 
 public class V2AuMover {
@@ -70,8 +88,8 @@ public class V2AuMover {
   /**
    * User agent that the migrator will use when connecting to V2 services
    */
-  public static final String PARAM_V2_USER_AGENT = PREFIX + "user_agent";
-  public static final String DEFAULT_V2_USER_AGENT = "lockss";
+  public static final String V2_PARAM_USER_AGENT = PREFIX + "user_agent";
+  public static final String V2_DEFAULT_USER_AGENT = "lockss";
 
   /**
    * Enable debugging for the configuration service network endpoints.
@@ -171,9 +189,9 @@ public class V2AuMover {
   /**
    * V2 namespace to migrate into
    */
-  public static final String PARAM_V2_NAMESPACE
+  public static final String V2_PARAM_NAMESPACE
  = PREFIX + "namespace";
-  public static final String DEFAULT_V2_NAMESPACE
+  public static final String V2_DEFAULT_NAMESPACE
  = "lockss";
 
   /**
@@ -187,6 +205,12 @@ public class V2AuMover {
    */
   public static final String PARAM_CFG_PORT = PREFIX + "cfg.port";
   public static final int DEFAULT_CFG_PORT = 24620;
+
+  /**
+   * Configuration service port
+   */
+  public static final String PARAM_CFG_UI_PORT = PREFIX + "cfg.ui.port";
+  public static final int DEFAULT_CFG_UI_PORT = 24621;
 
   /**
    * Maximum number of retries for REST request failures
@@ -359,6 +383,9 @@ public class V2AuMover {
   /** Configuration service port */
   private int cfgPort;
 
+  /** Configuration service UI port */
+  private int cfgUiPort;
+
   /** V2 cfgsvc REST access URL */
   private String cfgAccessUrl = null;
 
@@ -440,13 +467,18 @@ public class V2AuMover {
   private boolean globalAbort = false;
 
   PluginManager pluginManager;
+  private final CrawlManager crawlMgr;
+  private final PollManager pollMgr;
 
   //////////////////////////////////////////////////////////////////////
   // Constructor, config, init
   //////////////////////////////////////////////////////////////////////
 
   public V2AuMover() {
-    pluginManager = LockssDaemon.getLockssDaemon().getPluginManager();
+    LockssDaemon theDaemon = LockssDaemon.getLockssDaemon();
+    pluginManager = theDaemon.getPluginManager();
+    crawlMgr = theDaemon.getCrawlManager();
+    pollMgr = theDaemon.getPollManager();
     Configuration config = ConfigManager.getCurrentConfig();
     setInitialConfig(config);
     setConfig(config, null, config.differences(null));
@@ -457,9 +489,10 @@ public class V2AuMover {
    * start of a request.
    */
   private void setInitialConfig(Configuration config) {
-    userAgent = config.get(PARAM_V2_USER_AGENT, DEFAULT_V2_USER_AGENT);
-    namespace = config.get(PARAM_V2_NAMESPACE, DEFAULT_V2_NAMESPACE);
-    cfgPort = config.getInt(PARAM_CFG_PORT, DEFAULT_CFG_PORT);
+    userAgent = config.get(V2_PARAM_USER_AGENT, V2_DEFAULT_USER_AGENT);
+    namespace = config.get(V2_PARAM_NAMESPACE, V2_DEFAULT_NAMESPACE);
+    cfgPort = config.getInt(PARAM_CFG_UI_PORT, DEFAULT_CFG_UI_PORT);
+    cfgUiPort = config.getInt(PARAM_CFG_UI_PORT, DEFAULT_CFG_UI_PORT);
     repoPort = config.getInt(PARAM_RS_PORT, DEFAULT_RS_PORT);
     debugRepoReq = config.getBoolean(DEBUG_REPO_REQUEST,
                                      DEFAULT_DEBUG_REPO_REQUEST);
@@ -625,6 +658,142 @@ public class V2AuMover {
     }
 
     openReportFiles(args);
+  }
+
+  private Properties getMigrationConfig(String targetHost, Properties targetProps) {
+    Configuration targetCfg = ConfigManager.fromProperties(targetProps);
+    Properties mProps = new Properties();
+
+    // Proxy forwarding settings
+    if (targetCfg.getBoolean(ProxyManager.PARAM_START, false)) {
+      mProps.put(ProxyManager.PARAM_FORWARD_PROXY,
+          targetHost + ":" + targetCfg.getInt(
+              V2_PARAM_PROXYMANAGER_FORWARD_PROXY, V2_DEFAULT_PROXYMANAGER_PORT));
+    }
+
+    // ServeContent forwarding settings
+    if (targetCfg.getBoolean(ContentServletManager.PARAM_START, false)) {
+      mProps.put(ServeContent.PARAM_FORWARD_SERVE_CONTENT,
+          targetHost + ":" + targetCfg.getInt(
+              V2_PARAM_CONTENTSERVLETMANAGER_PORT, V2_DEFAULT_CONTENTSERVLETMANAGER_PORT));
+    }
+
+    // LCAP forwarding settings
+    mProps.put(LcapRouter.PARAM_MIGRATE_TO,
+        targetCfg.get(IdentityManager.PARAM_LOCAL_V3_IDENTITY));
+
+    // AU migration settings (provided by user input)
+    mProps.put(MigrateContent.PARAM_DELETE_AFTER_MIGRATION,
+        MigrateContent.DEFAULT_DELETE_AFTER_MIGRATION);
+    mProps.put(RepositoryManager.PARAM_MOVE_DELETED_AUS_TO, "MIGRATED");
+    mProps.put(RepositoryManager.PARAM_DELETEAUS_INTERVAL,
+        RepositoryManager.DEFAULT_DELETEAUS_INTERVAL);
+
+    // Database settings
+    String dbClassName = targetCfg.get(V2_PARAM_METADATADBMANAGER_DATASOURCE_CLASSNAME,
+        V2_DEFAULT_METADATADBMANAGER_DATASOURCE_CLASSNAME);
+    mProps.put(DbManager.PARAM_DATASOURCE_CLASSNAME, dbClassName);
+
+    mProps.put(DbManager.PARAM_DATASOURCE_SERVERNAME,
+        targetCfg.get(V2_PARAM_METADATADBMANAGER_DATASOURCE_SERVERNAME,
+            V2_DEFAULT_METADATADBMANAGER_DATASOURCE_SERVERNAME));
+
+    String defaultDbPortNumber = V2_DEFAULT_METADATADBMANAGER_DATASOURCE_PORTNUMBER;
+    if (DbManagerSql.isTypePostgresql(dbClassName)) {
+      defaultDbPortNumber = V2_DEFAULT_METADATADBMANAGER_DATASOURCE_PORTNUMBER_PG;
+    } else if (DbManagerSql.isTypeMysql(dbClassName)) {
+      defaultDbPortNumber = V2_DEFAULT_METADATADBMANAGER_DATASOURCE_PORTNUMBER_MYSQL;
+    }
+
+    mProps.put(DbManager.PARAM_DATASOURCE_PORTNUMBER,
+        targetCfg.get(V2_PARAM_METADATADBMANAGER_DATASOURCE_PORTNUMBER, defaultDbPortNumber));
+
+    mProps.put(DbManager.PARAM_DATASOURCE_DATABASENAME,
+        targetCfg.get(V2_PARAM_METADATADBMANAGER_DATASOURCE_DATABASENAME,
+            V2_DEFAULT_METADATADBMANAGER_DATASOURCE_DATABASENAME));
+
+    mProps.put(DbManager.PARAM_DATASOURCE_USER,
+        targetCfg.get(V2_PARAM_METADATADBMANAGER_DATASOURCE_USER,
+            V2_DEFAULT_METADATADBMANAGER_DATASOURCE_USER));
+
+    mProps.put(DbManager.PARAM_DATASOURCE_PASSWORD,
+        targetCfg.get(V2_PARAM_METADATADBMANAGER_DATASOURCE_PASSWORD,
+            V2_DEFAULT_METADATADBMANAGER_DATASOURCE_PASSWORD)); // needs to come from user input
+
+    return mProps;
+  }
+
+  private static final String V2_PARAM_PROXYMANAGER_FORWARD_PROXY =
+      ProxyManager.PARAM_FORWARD_PROXY;
+  private static final String V2_PARAM_CONTENTSERVLETMANAGER_PORT =
+    ContentServletManager.PARAM_PORT;
+  private static final String V2_PARAM_METADATADBMANAGER_PREFIX =
+      "org.lockss.metadataDbManager.";
+  public static final String V2_PARAM_DERBY_DB_DIR = "org.lockss.db.derbyDbDir";
+
+  private static final String V2_PARAM_METADATADBMANAGER_DATASOURCE_ROOT =
+      V2_PARAM_METADATADBMANAGER_PREFIX + "datasource";
+  private static final String V2_PARAM_METADATADBMANAGER_DATASOURCE_CLASSNAME =
+      V2_PARAM_METADATADBMANAGER_DATASOURCE_ROOT + ".className";
+  private static final String V2_PARAM_METADATADBMANAGER_DATASOURCE_SERVERNAME =
+      V2_PARAM_METADATADBMANAGER_DATASOURCE_ROOT + ".serverName";
+  private static final String V2_PARAM_METADATADBMANAGER_DATASOURCE_PORTNUMBER =
+      V2_PARAM_METADATADBMANAGER_DATASOURCE_ROOT + ".portNumber";
+  private static final String V2_PARAM_METADATADBMANAGER_DATASOURCE_DATABASENAME =
+      V2_PARAM_METADATADBMANAGER_DATASOURCE_ROOT + ".databaseName";
+  private static final String V2_PARAM_METADATADBMANAGER_DATASOURCE_USER =
+      V2_PARAM_METADATADBMANAGER_DATASOURCE_ROOT + ".user";
+  private static final String V2_PARAM_METADATADBMANAGER_DATASOURCE_PASSWORD =
+      V2_PARAM_METADATADBMANAGER_DATASOURCE_ROOT + ".password";
+
+  private static final int V2_DEFAULT_PROXYMANAGER_PORT = 24670;
+  private static final int V2_DEFAULT_CONTENTSERVLETMANAGER_PORT = 24680;
+  private static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_CLASSNAME = "localhost";
+  private static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_SERVERNAME = "localhost";
+  private static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_PORTNUMBER = "1527";
+  private static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_PORTNUMBER_PG = "5432";
+  private static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_PORTNUMBER_MYSQL = "3306";
+  private static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_DATABASENAME = "LockssMetadataDbManager";
+  private static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_USER = "LOCKSS";
+  private static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_PASSWORD = "insecure";
+
+  private void writeMigrationConfig(Properties mProps) throws IOException {
+    ConfigManager cfgMgr = ConfigManager.getConfigManager();
+    File cfgFile = cfgMgr.getCacheConfigFile(ConfigManager.CONFIG_FILE_MIGRATION);
+    try (FileWriter cfgWriter = new FileWriter(cfgFile)) {
+      mProps.store(cfgWriter, null); // TODO: Add timestamp of entering migration mode
+    }
+  }
+
+  private Properties getConfigFromMigrationTarget() {
+    try {
+      URL cfgStatUrl = new URL("http", hostName, cfgUiPort,
+          "/DaemonStatus?table=ConfigStatus&output=csv");
+
+      LockssUrlConnection rsp = UrlUtil.openConnection(cfgStatUrl.toString());
+      rsp.setCredentials(userName, userPass);
+      rsp.setUserAgent(userAgent);
+      rsp.execute();
+
+      if (rsp.getResponseCode() == 200) {
+        return mapFromCsvStream(rsp.getResponseInputStream());
+      }
+    } catch (IOException e) {
+      totalCounters.addError(
+          "Could not fetch configuration from migration target: " + e.getMessage());
+      // Fallthrough...
+    }
+
+    throw new IllegalArgumentException(
+        "Could not fetch configuration from migration target: " + hostName + " port: " + cfgUiPort);
+  }
+
+  public static Properties mapFromCsvStream(InputStream csvStream) throws IOException {
+    Properties result = new Properties();
+    InputStreamReader csvReader = new InputStreamReader(csvStream);
+    CSVParser csvParser = new CSVParser(csvReader, CSVFormat.DEFAULT.withHeader("Name", "Value"));
+    csvParser.forEach(record -> result.put(record.get("Name"), record.get("Value")));
+    return result;
   }
 
   /**
@@ -861,8 +1030,11 @@ public class V2AuMover {
         // be resumed.
         break;
       case InProgress:
-        // TODO: Abort any crawls and polls on AU
+        crawlMgr.abortAuCrawls(au);
+        pollMgr.cancelAuPolls(au);
         break;
+      case Finished:
+        // TODO: Optionally delete the content; if deleting content -> delete AU (or deactivate?)
     }
   }
 
