@@ -40,8 +40,7 @@ import org.lockss.plugin.*;
 import org.lockss.repository.AuSuspectUrlVersions;
 import org.lockss.state.*;
 import org.lockss.util.*;
-import org.lockss.rewriter.*;
-import org.lockss.extractor.*;
+import org.lockss.laaws.V2CompatCachedUrl;
 
 /**
  * General class to handle content hashing
@@ -94,116 +93,13 @@ public class BlockHasher extends GenericHasher {
   private HashBlock hblock;
   private byte[] contentBytes = null;
 
-  /** A CU that should hashed and recorded with the URL that V2 would
-   * use.  Currently used only for URLs with final slash, which V1
-   * repo doesn't represent correctly */
-  class V2CompatCU implements CachedUrl {
-    CachedUrl cu;
-    String v2Url;
-
-    V2CompatCU(CachedUrl cu, String v2Url) {
-      this.cu = cu;
-      this.v2Url = v2Url;
-    }
-
-    /** Return the V2-compatible URL */
-    public String getUrl() {
-      return v2Url;
-    }
-    public CachedUrl getCuVersion(int version) {
-      return cu.getCuVersion(version);
-    }
-    public CachedUrl[] getCuVersions() {
-      return cu.getCuVersions();
-    }
-    public CachedUrl[] getCuVersions(int maxVersions) {
-      return cu.getCuVersions(maxVersions);
-    }
-    public int getVersion() {
-      return cu.getVersion();
-    }
-    public void delete() throws UnsupportedOperationException, IOException {
-      cu.delete();
-    }
-    public void setOption(String option, String val) {
-      cu.setOption(option, val);
-    }
-    public InputStream getUnfilteredInputStream() {
-      return cu.getUnfilteredInputStream();
-    }
-    public InputStream getUnfilteredInputStream(HashedInputStream.Hasher hasher) {
-      return cu.getUnfilteredInputStream(hasher);
-    }
-    public InputStream getUncompressedInputStream() {
-      return cu.getUncompressedInputStream();
-    }
-    public InputStream getUncompressedInputStream(HashedInputStream.Hasher
-                                                  hasher) {
-      return cu.getUncompressedInputStream(hasher);
-    }
-    public InputStream openForHashing() {
-      return cu.openForHashing();
-    }
-    public InputStream openForHashing(HashedInputStream.Hasher hasher) {
-      return cu.openForHashing(hasher);
-    }
-    public Reader openForReading() {
-      return cu.openForReading();
-    }
-    public LinkRewriterFactory getLinkRewriterFactory() {
-      return cu.getLinkRewriterFactory();
-    }
-    public CIProperties getProperties() {
-      return cu.getProperties();
-    }
-    public void addProperty(String key, String value) {
-      cu.addProperty(key, value);
-    }
-    public long getContentSize() {
-      return cu.getContentSize();
-    }
-    public String getContentType() {
-      return cu.getContentType();
-    }
-    public String getEncoding() {
-      return cu.getEncoding();
-    }
-    public ArchivalUnit getArchivalUnit() {
-      return cu.getArchivalUnit();
-    }
-    public void release() {
-      cu.release();
-    }
-    public FileMetadataExtractor getFileMetadataExtractor(MetadataTarget target) {
-      return cu.getFileMetadataExtractor(target);
-    }
-    public CachedUrl getArchiveMemberCu(ArchiveMemberSpec ams) {
-      return cu.getArchiveMemberCu(ams);
-    }
-    public boolean isArchiveMember() {
-      return cu.isArchiveMember();
-    }
-    public boolean isLeaf() {
-      return cu.isLeaf();
-    }
-    public boolean hasContent() {
-      return cu.hasContent();
-    }
-    public int getType() {
-      return cu.getType();
-    }
-    public String toString() {
-      return "[V2CU: " + getUrl() + ": " + cu + "]";
-    }
-  }
-
   CachedUrl[] cuVersions;
   CachedUrl curVer;
   // While processing versions of a single node, accumulates CUs that
   // should be hashed under a V2-compatible URL
-  List<V2CompatCU> pendingV2CompatCUs = null;
+  List<V2CompatCachedUrl> pendingV2CompatCUs = null;
   // The V2-compatible versions that are currently being processed
-  List<V2CompatCU> processingV2CompatCUs = null;
+  List<V2CompatCachedUrl> processingV2CompatCUs = null;
   boolean isV2Compat = DEFAULT_V2_COMPAT;
   int vix = -1;
   private long verBytesRead;
@@ -480,7 +376,7 @@ public class BlockHasher extends GenericHasher {
     if (pendingV2CompatCUs == null) {
       pendingV2CompatCUs = new ArrayList<>(maxVersions);
     }
-    pendingV2CompatCUs.add(new V2CompatCU(cu, v2Url));
+    pendingV2CompatCUs.add(new V2CompatCachedUrl(cu, v2Url));
   }
 
   /** Return the algorithm to use for local hash for the current file, or
@@ -574,8 +470,12 @@ public class BlockHasher extends GenericHasher {
   }
 
   protected void startNode() {
-    if (processingV2CompatCUs != null) {
-      cuVersions = processingV2CompatCUs.stream().toArray(CachedUrl[]::new);
+    if (processingV2CompatCUs != null &&
+        StringUtil.preOrderCompareTo(processingV2CompatCUs.get(0).getUrl(),
+                                     curNode.getUrl())
+        <= 0) {
+      cuVersions = processingV2CompatCUs.stream()
+        .toArray(CachedUrl[]::new);
       curCu = cuVersions[0];
       vix = -1;
     } else {
