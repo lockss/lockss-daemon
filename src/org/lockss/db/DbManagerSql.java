@@ -2587,6 +2587,10 @@ public class DbManagerSql {
    *         <code>false</code> otherwise.
    */
   boolean isTypeDerby() {
+    return isTypeDerby(dataSourceClassName);
+  }
+
+  public static boolean isTypeDerby(String dataSourceClassName) {
     final String DEBUG_HEADER = "isTypeDerby(): ";
 
     boolean result = "org.apache.derby.jdbc.EmbeddedDataSource"
@@ -2607,6 +2611,10 @@ public class DbManagerSql {
    *         <code>false</code> otherwise.
    */
   boolean isTypePostgresql() {
+    return isTypePostgresql(dataSourceClassName);
+  }
+
+  public static boolean isTypePostgresql(String dataSourceClassName) {
     final String DEBUG_HEADER = "isTypePostgresql(): ";
 
     boolean result = "org.postgresql.ds.PGSimpleDataSource"
@@ -2623,6 +2631,10 @@ public class DbManagerSql {
    *         <code>false</code> otherwise.
    */
   boolean isTypeMysql() {
+    return isTypeMysql(dataSourceClassName);
+  }
+
+  public static boolean isTypeMysql(String dataSourceClassName) {
     final String DEBUG_HEADER = "isTypeMysql(): ";
 
     boolean result = "com.mysql.cj.jdbc.MysqlDataSource"
