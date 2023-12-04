@@ -259,6 +259,7 @@ Args:
   <property name="commons.compress.jar" value="${lib}/commons-compress-1.23.0.jar" />
   <property name="commons.configuration.jar" value="${lib}/commons-configuration-1.10.jar" />
   <!-- commons-csv -->
+  <property name="commons.csv.jar" value="${lib}/commons-csv-1.10.0.jar" />
   <!-- commons-digester -->
   <!-- commons-fileupload -->
   <property name="commons.io.jar" value="${lib}/commons-io-2.15.0.jar" />
@@ -520,6 +521,7 @@ Args:
     <pathelement path="${commons.cli.jar}" />
     <pathelement path="${commons.codec.jar}" />
     <pathelement path="${commons.configuration.jar}" />
+    <pathelement path="${commons.csv.jar}" />
     <pathelement path="${commons.compress.jar}" />
     <pathelement path="${commons.httpclient.jar}" />
     <pathelement path="${commons.io.jar}" />
