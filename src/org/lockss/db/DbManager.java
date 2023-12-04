@@ -263,6 +263,12 @@ public class DbManager extends BaseLockssDaemonManager
     this.skipAsynchronousUpdates = skipAsynchronousUpdates;
   }
 
+  public void restartService() {
+    stopService();
+    resetConfig();
+    startService();
+  }
+
   /**
    * Starts the DbManager service.
    */
