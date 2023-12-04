@@ -9,11 +9,9 @@
     hidden[proxy] = DIRECT
 
   {
-
     title <
       name = University of Alberta Press Books Source Content
     >
-
 
     plugin = org.lockss.plugin.clockss.onixbooks.ClockssUniversityOfAlbertaPressBooksSourcePlugin
     implicit < status ; status2 ; year ; name ; param[year] >
@@ -34,6 +32,8 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/ualbertapress-released/
 
     au < readySource ; crawling ; 2023 ; University of Alberta Books Source Content 2023 ; 2023 >
+    au < expected ; exists ; 2024 ; University of Alberta Books Source Content 2024 ; 2024 >
+
     }
   }
 

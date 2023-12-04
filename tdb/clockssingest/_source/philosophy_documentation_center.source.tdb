@@ -18,7 +18,6 @@
     >
 
     {
-
       plugin = org.lockss.plugin.clockss.phildoc.ClockssPhilosophyDocumentationCenterSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/phildoccenter-released/
       implicit < status ; status2 ; year ; name ; param[year] >
@@ -47,6 +46,7 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/phildoccenter-released/
 
       au < readySource ; crawling ; 2023 ; Philosophy Documentation Center Source Content 2023_01 ; 2023_01 >
+      au < expected ; exists ; 2024 ; Philosophy Documentation Center Source Content 2024_01 ; 2024_01 >
 
       }
     }

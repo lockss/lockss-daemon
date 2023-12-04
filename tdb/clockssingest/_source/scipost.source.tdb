@@ -9,7 +9,6 @@
     hidden[proxy] = DIRECT
 
   {
-
     title <
        name = SciPost Source Content
     >
@@ -29,6 +28,8 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/scipost-released/
 
     au < expected ; exists ; 2023 ; SciPost Source Content 2023 ; 2023 >
+    au < expected ; exists ; 2024 ; SciPost Source Content 2024 ; 2024 >
+
     }
   }
 

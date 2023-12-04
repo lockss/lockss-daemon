@@ -1,5 +1,4 @@
 {
-
   publisher <
     name = Verein zur Förderung des Open Access Publizierens in den Quantenwissenschaften ;
     info[contract] = 2018 ;
@@ -10,7 +9,6 @@
     provider = Quantum
 
   {
-
     title <
        name = Quantum  ;
        issn = 2521-327X
@@ -32,6 +30,8 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/quantum-released/
 
     au < readySource ; crawling ; 2023 ; Quantum Source Content 2023 ; 2023 >
+    au < expected ; exists ; 2024 ; Quantum Source Content 2024 ; 2024 >
+
     }
   }
 

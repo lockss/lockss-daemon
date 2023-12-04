@@ -6,11 +6,11 @@
     info[tester] = S ;
     info[platform] = WARC
   >
-    plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
     hidden[proxy] = DIRECT
+    plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
     implicit < status ; status2 ; year ; name ; param[year] >
-  {
 
+  {
     title <
       name =  Sociological Science WARC Content ;
       issn = 2330-6696
@@ -19,7 +19,6 @@
     # This content was collected using wget and provided for preservation as a
     # set of WARC files
     # WARC content collected from https://www.sociologicalscience.com/
-
     {
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/sociological-science-released/
 
@@ -32,6 +31,8 @@
     param[base_url] = https://clockss-ingest.lockss.org/warcfiles/sociological-science-released/
 
     au < expected ; exists ; 2023 ; Sociological Science WARC Content 2023 ; 2023 >
+    au < expected ; exists ; 2025 ; Sociological Science WARC Content 2025 ; 2025 >
+
     }
   }
 }

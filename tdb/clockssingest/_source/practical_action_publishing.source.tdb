@@ -24,6 +24,8 @@
     param[base_url] = https://clockss-test.lockss.org/sourcefiles/practicalaction-released/
 
     au < manifest ; exists ; 2023 ; Practical Action Publishing Source Content 2023 ; 2023_01 >
+    au < expected ; exists ; 2024 ; Practical Action Publishing Source Content 2024 ; 2024_01 >
+
     }
   }
 
