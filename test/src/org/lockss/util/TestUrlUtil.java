@@ -931,6 +931,8 @@ public class TestUrlUtil extends LockssTestCase {
   }
 
   public void testIsDirectoryRedirection() {
+    assertFalse(UrlUtil.isDirectoryRedirection("http://xx.com/foo", null));
+    assertFalse(UrlUtil.isDirectoryRedirection(null, "http://xx.com/foo"));
     assertTrue(UrlUtil.isDirectoryRedirection("http://xx.com/foo",
 					      "http://xx.com/foo/"));
     assertTrue(UrlUtil.isDirectoryRedirection("http://xx.com/foo",

@@ -361,9 +361,10 @@ public class SimpleHasher {
     }
       
     public void blockDone(HashBlock block) {
-      filesHashed++;
+      if (log.isDebug3()) log.debug3("Block: " + block);
       HashBlock.Version ver = block.currentVersion();
       if (ver != null) {
+        filesHashed++;
 	String out;
 	if (ver.getHashError() != null) {
 	  // Pylorus' diff() depends upon the first 20 characters of this string

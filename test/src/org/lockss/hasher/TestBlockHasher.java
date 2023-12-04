@@ -152,64 +152,63 @@ public class TestBlockHasher extends LockssTestCase {
   static final byte[][] EMPTY_BYTE_ARRAY_ARRAY = new byte[0][];
 
   void assertEvent(String expectedUrl, String expectedString,
-		   Object eventObj) {
-    assertEvent(expectedUrl, expectedString, eventObj, false);
+		   Event event) {
+    assertEvent(expectedUrl, expectedString, event, false);
   }
 
   void assertEvent(String expectedUrl, String expectedString,
-		   Object eventObj, boolean includeUrl) {
+		   Event event, boolean includeUrl) {
     assertEvent(expectedUrl, expectedString.length(), expectedString,
-		eventObj, includeUrl);
+		event, includeUrl);
   }
 
   void assertEvent(String expectedUrl, int expectedLength,
 		   String expectedString,
-		   Object eventObj, boolean includeUrl) {
+		   Event event, boolean includeUrl) {
     if (includeUrl) {
       assertEvent(expectedUrl, expectedLength,
 		  ListUtil.list(bytes(expectedUrl + expectedString)),
-		  eventObj);
+		  event);
     } else {
       assertEvent(expectedUrl, expectedLength,
-		  ListUtil.list(bytes(expectedString)), eventObj);
+		  ListUtil.list(bytes(expectedString)), event);
     }
   }
 
   void assertEvent(String expectedUrl, long expectedLength, List hashed,
-		   Object eventObj) {
+		   Event event) {
     assertEvent(expectedUrl, expectedLength,
 		(byte[][])hashed.toArray(EMPTY_BYTE_ARRAY_ARRAY),
-		eventObj);
+		event);
   }
 
   void assertEvent(String expectedUrl,
 		   long expectedUnfilteredLength, long expectedFilteredLength,
-		   String expectedString, Object eventObj, boolean includeUrl) {
+		   String expectedString, Event event, boolean includeUrl) {
     assertEvent(expectedUrl, expectedUnfilteredLength, expectedFilteredLength,
 		( includeUrl
 		  ? ListUtil.list(bytes(expectedUrl + expectedString))
 		  : ListUtil.list(bytes(expectedString))),
-		eventObj);
+		event);
   }
 
   void assertEvent(String expectedUrl,
 		   long expectedUnfilteredLength, long expectedFilteredLength,
-		   List hashed, Object eventObj) {
+		   List hashed, Event event) {
     assertEvent(expectedUrl, expectedUnfilteredLength, expectedFilteredLength,
 		(byte[][])hashed.toArray(EMPTY_BYTE_ARRAY_ARRAY),
-		eventObj);
+		event);
   }
 
   void assertEvent(String expectedUrl, long expectedLength,
-		   byte[][]expectedHashed, Object eventObj) {
+		   byte[][]expectedHashed, Event event) {
     assertEvent(expectedUrl, expectedLength, expectedLength,
-		expectedHashed, eventObj);
+		expectedHashed, event);
   }
 
   void assertEvent(String expectedUrl, long expectedUnfilteredLength,
 		   long expectedFilteredLength,
-		   byte[][]expectedHashed, Object eventObj) {
-    Event event = (Event)eventObj;
+		   byte[][]expectedHashed, Event event) {
     HashBlock hblock = event.hblock;
     assertEquals(expectedUrl, hblock.getUrl());
     HashBlock.Version curver = hblock.currentVersion();
@@ -223,8 +222,7 @@ public class TestBlockHasher extends LockssTestCase {
     }
   }
 
-  public void assertEventWithError(String url, Object eventObj) {
-    Event event = (Event)eventObj;
+  public void assertEventWithError(String url, Event event) {
     HashBlock hblock = event.hblock;
     assertEquals(event.hblock.url, url);
     for (HashBlock.Version v : hblock.getVersions()) {
@@ -233,8 +231,7 @@ public class TestBlockHasher extends LockssTestCase {
     }
   }
 
-  public void assertEventWithError(String url, Object eventObj, String exPat) {
-    Event event = (Event)eventObj;
+  public void assertEventWithError(String url, Event event, String exPat) {
     HashBlock hblock = event.hblock;
     assertEquals(event.hblock.url, url);
     for (HashBlock.Version v : hblock.getVersions()) {
@@ -1162,7 +1159,7 @@ public class TestBlockHasher extends LockssTestCase {
     }
     assertEquals(len, hashToEnd(hasher, stepSize));
     assertTrue(hasher.finished());
-    List events = handRec.getEvents();
+    List<Event> events = handRec.getEvents();
     assertEquals(ignoreFilesOutsideCrawlSpec ? 5 : 6,
 		 events.size());
     assertEvent(urls[4], s1, events.get(0), includeUrl);
@@ -1195,7 +1192,7 @@ public class TestBlockHasher extends LockssTestCase {
 
     hashToEnd(hasher, stepSize);
     assertTrue(hasher.finished());
-    List events = handRec.getEvents();
+    List<Event> events = handRec.getEvents();
     assertEquals(5, events.size());
     assertEvent(urls[4], s1, events.get(0));
     assertEventWithError(urls[6], events.get(1));
@@ -1418,7 +1415,7 @@ public class TestBlockHasher extends LockssTestCase {
       urls[4].length() + urls[6].length() + urls[7].length();
     assertEquals(len, hashToEnd(hasher, stepSize));
     assertTrue(hasher.finished());
-    List events = handRec.getEvents();
+    List<Event> events = handRec.getEvents();
     assertEquals(3, events.size());
     assertEvent(urls[4], s1.length(), chal + urls[4] + s1, events.get(0),
 		false);
@@ -1452,7 +1449,7 @@ public class TestBlockHasher extends LockssTestCase {
       urls[4].length() + urls[6].length() + urls[7].length();
     assertEquals(len * digs.length, hashToEnd(hasher, stepSize));
     assertTrue(hasher.finished());
-    List events = handRec.getEvents();
+    List<Event> events = handRec.getEvents();
     assertEquals(3, events.size());
     assertEvent(urls[4], s1.length(),
 		ListUtil.list(bytes(urls[4] + s1), bytes(urls[4] + s1)),
@@ -1488,7 +1485,7 @@ public class TestBlockHasher extends LockssTestCase {
       urls[4].length() + urls[6].length() + urls[7].length();
     assertEquals(len * digs.length, hashToEnd(hasher, stepSize));
     assertTrue(hasher.finished());
-    List events = handRec.getEvents();
+    List<Event> events = handRec.getEvents();
     assertEquals(3, events.size());
     assertEvent(urls[4], s1.length(),
 		ListUtil.list(bytes(urls[4] + s1),
@@ -1510,6 +1507,141 @@ public class TestBlockHasher extends LockssTestCase {
   public void testMultipleDigestsWithInit() throws Exception {
     testMultipleDigestsWithInit(1);
     testMultipleDigestsWithInit(1000);
+  }
+
+  private static final String DIR_BASE = "http://site/dir";
+  private ArchivalUnit dirAu;
+
+  private void setUpRedirTest() throws Exception {
+    dirAu =
+      PluginTestUtil.createAndStartAu("org.lockss.plugin.DirTreePlugin",
+                                      ConfigurationUtil.fromArgs("base_url",
+                                                                 DIR_BASE));
+  }
+
+  private void storeCu(ArchivalUnit au, String url,
+                       String content) throws Exception {
+    storeCu(au, url, content, null);
+  }
+
+  private void storeCu(ArchivalUnit au, String url,
+                       String content, Properties props) throws Exception {
+    UrlData ud = new UrlData(new StringInputStream(content),
+                             props == null ? new CIProperties() : CIProperties.fromProperties(props),
+                             url);
+    UrlCacher uc = au.makeUrlCacher(ud);
+    uc.storeContent();
+  }
+
+  Properties redirProps(String url, String toUrl) {
+    return PropUtil.fromArgs(CachedUrl.PROPERTY_REDIRECTED_TO, toUrl);
+  }
+
+  public void testDirRedir() throws Exception {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_V2_COMPAT, "true");
+    setUpRedirTest();
+    String str = "top index";
+    storeCu(dirAu, DIR_BASE, str, redirProps(DIR_BASE, DIR_BASE + "/"));
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    CachedUrlSet cus = dirAu.getAuCachedUrlSet();
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
+    hasher.setFiltered(false);
+    assertEquals(str.length() * 2, hashToEnd(hasher, 100));
+    assertTrue(hasher.finished());
+    List<Event> events = handRec.getEvents();
+    assertEquals(2, events.size());
+    assertEvent(DIR_BASE, str.length(), "top index", events.get(0), false);
+    assertEvent(DIR_BASE + "/", str.length(), "top index", events.get(1), false);
+  }
+
+  public void testDirNoRedir() throws Exception {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_V2_COMPAT, "true");
+    setUpRedirTest();
+    String str = "top index";
+    storeCu(dirAu, DIR_BASE + "/", str);
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    CachedUrlSet cus = dirAu.getAuCachedUrlSet();
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
+    hasher.setFiltered(false);
+    assertEquals(str.length(), hashToEnd(hasher, 100));
+    assertTrue(hasher.finished());
+    List<Event> events = handRec.getEvents();
+    assertEquals(1, events.size());
+    assertEvent(DIR_BASE + "/", str.length(), "top index", events.get(0), false);
+  }
+
+  public void testDirRedirDisabled() throws Exception {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_V2_COMPAT, "false");
+    setUpRedirTest();
+    String str = "top index";
+    storeCu(dirAu, DIR_BASE, str, redirProps(DIR_BASE, DIR_BASE + "/"));
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    CachedUrlSet cus = dirAu.getAuCachedUrlSet();
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
+    hasher.setFiltered(false);
+    assertEquals(str.length(), hashToEnd(hasher, 100));
+    assertTrue(hasher.finished());
+    List<Event> events = handRec.getEvents();
+    assertEquals(1, events.size());
+    assertEvent(DIR_BASE, str.length(), "top index", events.get(0), false);
+  }
+
+  public void testDirNoRedirDisabled() throws Exception {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_V2_COMPAT, "false");
+    setUpRedirTest();
+    String str = "top index";
+    storeCu(dirAu, DIR_BASE + "/", str);
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    CachedUrlSet cus = dirAu.getAuCachedUrlSet();
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
+    hasher.setFiltered(false);
+    assertEquals(str.length(), hashToEnd(hasher, 100));
+    assertTrue(hasher.finished());
+    List<Event> events = handRec.getEvents();
+    assertEquals(1, events.size());
+    assertEvent(DIR_BASE, str.length(), "top index", events.get(0), false);
+  }
+
+  public void testDirRedirVers() throws Exception {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_V2_COMPAT, "true");
+    setUpRedirTest();
+    String base = DIR_BASE;
+    String str = "some content";
+
+    // Three versions of foo->foo/ redirect
+    storeCu(dirAu, base, str, redirProps(DIR_BASE, DIR_BASE + "/"));
+    storeCu(dirAu, base, str+"1", redirProps(DIR_BASE, DIR_BASE + "/"));
+    storeCu(dirAu, base, str+"2", redirProps(DIR_BASE, DIR_BASE + "/"));
+    storeCu(dirAu, base+"/", str+"3", null);
+    storeCu(dirAu, base+"1", str+"xx", null);
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    CachedUrlSet cus = dirAu.getAuCachedUrlSet();
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
+    hasher.setFiltered(false);
+
+    int len = str.length();
+    int len1 = len+1;
+    assertEquals(len*2 + len1*4 + len1 + len+2, hashToEnd(hasher, 100));
+    assertTrue(hasher.finished());
+    List<Event> events = handRec.getEvents();
+    log.critical("events: " + events);
+    assertEquals(3, events.size());
+    assertEquals(3, events.get(0).hblock.getVersions().length);
+    assertEvent(base, len1, str+"2", events.get(0), false);
+    assertEquals(4, events.get(1).hblock.getVersions().length);
+    assertEvent(base+"/", len1, str+"3", events.get(1), false);
+    assertEquals(1, events.get(2).hblock.getVersions().length);
+    assertEvent(base+"1", len+2, str+"xx", events.get(2), false);
   }
 
 //  static byte[] bytes = ByteArray.makeRandomBytes(40);

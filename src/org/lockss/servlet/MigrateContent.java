@@ -296,7 +296,8 @@ public class MigrateContent extends LockssServlet {
 
   private V2AuMover.Args getArgsToMigrateSystemSettings() {
     return getCommonFormArgs()
-        .setOpType(OpType.CopySystemSettings);
+      .setCompareContent(false)
+      .setOpType(OpType.CopySystemSettings);
   }
 
   private V2AuMover.Args getArgsToMigratePluginAus() {

@@ -10,6 +10,7 @@ public abstract class Worker {
   protected V2AuMover auMover;
   protected MigrationTask task;
   protected ArchivalUnit au;
+  protected String auid;
   protected boolean terminated = false;
   protected Counters ctrs;
 
@@ -21,6 +22,9 @@ public abstract class Worker {
     this.auMover = auMover;
     this.task = task;
     this.au = task.getAu();
+    if (this.au != null) {
+      this.auid = au.getAuId();
+    }
     this.ctrs = task.getCounters();
     artifactsApi = auMover.getRepoArtifactsApiClient();
     cfgApiClient = auMover.getCfgAusApiClient();
