@@ -92,6 +92,13 @@ public class V2AuMover {
     "generate_test_errors";
   public static final boolean DEFAULT_GENERATE_TEST_ERRORS = false;
 
+  /**
+   * If true, lots of errors will be recorded (for testing UI)
+   */
+  public static final String PARAM_COMPARE_EVEN_IF_VERSION_MISMATCH = PREFIX +
+    "compare_even_if_version_mismatch";
+  public static final boolean DEFAULT_COMPARE_EVEN_IF_VERSION_MISMATCH = true;
+
   public static final String EXEC_PREFIX = PREFIX + "executor.";
 
   /**
@@ -296,7 +303,7 @@ public class V2AuMover {
 
   /** Flag to getCurrentStatus() to build status string on the fly. */
   private static final String STATUS_RUNNING = "**Running**";
-  private static final String STATUS_COPYING_SYSTEM_SETTINGS = "Copying system settings";
+  private static final String STATUS_COPYING_USER_ACCOUNTS = "Copying user accounts";
   private static final String STATUS_DONE_COPYING_SYSTEM_SETTINGS = "Done copying system settings";
 
   public static final ThreadLocal<NumberFormat> TH_BIGINT_FMT =
@@ -390,6 +397,7 @@ public class V2AuMover {
   private boolean isShowInstrumentation = DEFAULT_INSTRUMENTATION;
 
   private boolean isGenerateTestErrors;
+  private boolean isCompareEvenIfVersionMismatch;
 
   // Retries and timeouts
   /** the time to wait for a connection before timing out */
@@ -510,6 +518,9 @@ public class V2AuMover {
 
       isGenerateTestErrors = config.getBoolean(PARAM_GENERATE_TEST_ERRORS,
                                                DEFAULT_GENERATE_TEST_ERRORS);
+      isCompareEvenIfVersionMismatch =
+        config.getBoolean(PARAM_COMPARE_EVEN_IF_VERSION_MISMATCH,
+                          DEFAULT_COMPARE_EVEN_IF_VERSION_MISMATCH);
       copyIterExecutor =
         createOrReConfigureExecutor(copyIterExecutor, config,
                                     PARAM_COPY_ITER_EXECUTOR_SPEC,
@@ -698,6 +709,8 @@ public class V2AuMover {
   public void executeRequest(Args args) {
     // Remember original Args from request
     this.args = args;
+    writeOpHeader(reportWriter, args);
+    writeOpHeader(errorWriter, args);
 
     try {
       if (args.opType == OpType.CopySystemSettings) {
@@ -844,7 +857,8 @@ public class V2AuMover {
 
   private void setAuMigrationState(ArchivalUnit au,
                                    AuState.MigrationState state) {
-
+    if (true) return;
+    // TODO I think this should be conditional on migrationMode && !debugMode
     AuState auState = AuUtil.getAuState(au);
 
     if (auState.getMigrationState() == state) {
@@ -867,7 +881,7 @@ public class V2AuMover {
   }
 
   private void moveSystemSettings(Args args) {
-    currentStatus = STATUS_COPYING_SYSTEM_SETTINGS;
+    currentStatus = STATUS_COPYING_USER_ACCOUNTS;
     logReport(currentStatus);
 
     initRequest(args, null);
@@ -878,6 +892,7 @@ public class V2AuMover {
     userAcctMover.run();
 
     currentStatus = STATUS_DONE_COPYING_SYSTEM_SETTINGS;
+    logReport(currentStatus);
   }
 
   /**
@@ -1604,6 +1619,10 @@ public class V2AuMover {
     return isCompareBytes;
   }
 
+  public boolean isCompareEvenIfVersionMismatch() {
+    return isCompareEvenIfVersionMismatch;
+  }
+
   StreamingArtifactsApi getRepoArtifactsApiClient() {
     return repoArtifactsApiClient;
   }
@@ -2106,11 +2125,10 @@ public class V2AuMover {
       res = new PrintWriter(Files.newOutputStream(file.toPath(),
                                                   CREATE, APPEND),
                             true);
-      res.println("--------------------------------------------------");
+      res.println("===================================================");
       res.println("  V2 AU Migration " + title + " - " + now);
-      res.println("  Migrating (" + args.opType
-                  + (args.isCompareContent ? " with compare" : "")
-                  + ") to " + args.host);
+      res.println("  Migrating from " + PlatformUtil.getLocalHostname() +
+                  " to " + args.host);
       res.println("--------------------------------------------------");
       res.println();
       if (res.checkError()) {
@@ -2122,6 +2140,10 @@ public class V2AuMover {
                 e.getMessage());
     }
     return res;
+  }
+
+  void writeOpHeader(PrintWriter wrtr, Args args) {
+    wrtr.println(args.opType + (args.isCompareContent ? " with compare" : ""));
   }
 
   public void logReport(String msg) {
