@@ -392,6 +392,7 @@ public class ConfigManager implements LockssManager {
     "access_groups_config.txt"; // not yet in use
   public static final String CONFIG_FILE_CRAWL_PROXY = "crawl_proxy.txt";
   public static final String CONFIG_FILE_EXPERT = "expert_config.txt";
+  public static final String CONFIG_FILE_MIGRATION = "migration_config.txt";
 
   /** Obsolescent - replaced by CONFIG_FILE_CONTENT_SERVERS */
   public static final String CONFIG_FILE_ICP_SERVER = "icp_server_config.txt";
@@ -599,6 +600,7 @@ public class ConfigManager implements LockssManager {
     new LocalFileDescr(CONFIG_FILE_CONTENT_SERVERS),
     new LocalFileDescr(CONFIG_FILE_ACCESS_GROUPS), // not yet in use
     new LocalFileDescr(CONFIG_FILE_CRAWL_PROXY),
+    new LocalFileDescr(CONFIG_FILE_MIGRATION),
     new LocalFileDescr(CONFIG_FILE_EXPERT)
     .setKeyPredicate(expertConfigKeyPredicate)
     .setIncludePredicate(expertConfigIncludePredicate),
