@@ -33,6 +33,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/sup-released/
 
     au < expected ; exists ; 2023 ; Stanford University Press Source Content 2023 ; 2023 >
+    au < expected ; exists ; 2024 ; Stanford University Press Source Content 2024 ; 2024 >
 
     }
   }

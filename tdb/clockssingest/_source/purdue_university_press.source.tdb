@@ -7,7 +7,6 @@
     info[platform] = WARC
   >
   hidden[proxy] = DIRECT
-
   plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
   implicit < status ; status2 ; year ; name ; param[year] >
 
@@ -28,6 +27,8 @@
     param[base_url] = https://clockss-ingest.lockss.org/warcfiles/jtrp-technical-reports-released/
 
     au < readySource ; crawling ; 2023 ; JTRP Technical Reports WARC Content 2023 ; 2023 >
+    au < expected ; exists ; 2025 ; JTRP Technical Reports WARC Content 2025 ; 2025 >
+
     }
   }
 

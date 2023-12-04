@@ -9,13 +9,11 @@
       hidden[proxy] = DIRECT
 
   {
-
     title <
       name = Springer Source Content
     >
 
     {
-
       plugin = org.lockss.plugin.springer.ClockssSpringerSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/springer-released/
       implicit < status ; status2 ; year ; name ; param[year] >
@@ -32,7 +30,6 @@
       #No more AUs expected using this plugin
     }
     {
-
       plugin = org.lockss.plugin.springer.ClockssSpringerDirSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/springer-released/
       implicit < status ; status2 ; year ; name ; param[directory] >
@@ -103,7 +100,6 @@
       au < readySource ; finished ; 2022 ; Springer Source Content 2022_16 ; 2022_16 >
       au < readySource ; finished ; 2022 ; Springer Source Content 2022_17 ; 2022_17 >
       #No more AUs. Moving to https.
-
       }
       {
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/springerjats-released/
@@ -123,6 +119,23 @@
       au < readySource ; crawling ; 2023 ; Springer Source Content 2023_13 ; 2023_13 >
       au < manifest ; exists ; 2023 ; Springer Source Content 2023_14 ; 2023_14 >
       au < manifest ; exists ; 2023 ; Springer Source Content 2023_15 ; 2023_15 >
+      au < manifest ; exists ; 2023 ; Springer Source Content 2023_16 ; 2023_16 >
+      au < manifest ; exists ; 2023 ; Springer Source Content 2023_17 ; 2023_17 >
+      au < manifest ; exists ; 2023 ; Springer Source Content 2023_18 ; 2023_18 >
+      au < expected ; exists ; 2023 ; Springer Source Content 2023_19 ; 2023_19 >
+      au < expected ; exists ; 2023 ; Springer Source Content 2023_20 ; 2023_20 >
+
+      au < expected ; exists ; 2024 ; Springer Source Content 2024_01 ; 2024_01 >
+      au < expected ; exists ; 2024 ; Springer Source Content 2024_02 ; 2024_02 >
+      au < expected ; exists ; 2024 ; Springer Source Content 2024_03 ; 2024_03 >
+      au < expected ; exists ; 2024 ; Springer Source Content 2024_04 ; 2024_04 >
+      au < expected ; exists ; 2024 ; Springer Source Content 2024_05 ; 2024_05 >
+      au < expected ; exists ; 2024 ; Springer Source Content 2024_06 ; 2024_06 >
+      au < expected ; exists ; 2024 ; Springer Source Content 2024_07 ; 2024_07 >
+      au < expected ; exists ; 2024 ; Springer Source Content 2024_08 ; 2024_08 >
+      au < expected ; exists ; 2024 ; Springer Source Content 2024_09 ; 2024_09 >
+      au < expected ; exists ; 2024 ; Springer Source Content 2024_10 ; 2024_10 >
+
       }
     }
 
@@ -195,7 +208,6 @@
       au < readySource ; finished ; 2022 ; Springer Delivered Source Content 2022_10 ; 2022_10 >
       au < readySource ; finished ; 2022 ; Springer Delivered Source Content 2022_11 ; 2022_11 >
       au < readySource ; finished ; 2022 ; Springer Delivered Source Content 2022_12 ; 2022_12 >
-
     }
   }
 

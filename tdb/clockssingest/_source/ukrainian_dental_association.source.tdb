@@ -12,7 +12,6 @@
     implicit < status ; status2 ; year ; name ; param[year] >
 
     {
-
     title <
       name = Ukrainian Dental Association Warc Content
     >
@@ -23,6 +22,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/warcfiles/ukrainian-dental-association-released/
 
     au < readySource ; crawling ; 2023 ; Ukrainian Dental Association Warc Content 2023 ; 2023 >
+    au < expected ; exists ; 2025 ; Ukrainian Dental Association Warc Content 2025 ; 2025 >
 
     }
 

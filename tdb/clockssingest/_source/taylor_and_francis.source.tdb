@@ -8,9 +8,7 @@
   >
     hidden[proxy] = DIRECT
 
-
   {
-
     title <
       name = Taylor & Francis Source Content
     >
@@ -63,6 +61,7 @@
     au < readySource ; crawling ; 2023 ; Taylor & Francis Source Content 2023_02 ; 2023_02 >
     au < expected ; exists ; 2023 ; Taylor & Francis Source Content 2023_03 ; 2023_03 >
     au < expected ; exists ; 2023 ; Taylor & Francis Source Content 2023_04 ; 2023_04 >
+    au < expected ; exists ; 2024 ; Taylor & Francis Source Content 2024_01 ; 2024_01 >
     }
   }
 
