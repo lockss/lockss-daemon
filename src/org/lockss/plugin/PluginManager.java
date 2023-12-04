@@ -255,6 +255,11 @@ public class PluginManager
   static final String TITLE_SET_CLASS_ACTIVE_AUS = "ActiveAus";
   static final String TITLE_SET_CLASS_INACTIVE_AUS = "InactiveAus";
 
+  /** If true, standard TitleSets (AllAus, ActiveAus, InactiveAus)
+   * will be added automatically.  */
+  public static final String PARAM_ADD_STANDARD_TITLESETS =
+    Configuration.PREFIX + "addStandardTitleSets";
+  public static final boolean DEFAULT_ADD_STANDARD_TITLESETS = true;
 
   // prefix for non-plugin AU params
   public static final String AU_PARAM_RESERVED = "reserved";
@@ -375,7 +380,6 @@ public class PluginManager
     alertMgr = getDaemon().getAlertManager();
     // Initialize the plugin directory.
     initPluginDir();
-    configureDefaultTitleSets();
     PluginStatus.register(getDaemon(), this);
     // watch for changes to plugin registry AUs and AUs with stems in hostAus
     registerAuEventHandler(myAuEventHandler);
@@ -640,16 +644,6 @@ public class PluginManager
     }
   }
 
-  private void configureDefaultTitleSets() {
-    if (titleSets == null || titleSets.isEmpty()) {
-      TreeSet<TitleSet> list = new TreeSet<TitleSet>();
-      list.add(new TitleSetAllAus(getDaemon()));
-      list.add(new TitleSetActiveAus(getDaemon()));
-      list.add(new TitleSetInactiveAus(getDaemon()));
-      installTitleSets(list);
-    }
-  }
-
   private void configureTitleSets(Configuration config) {
     TreeSet<TitleSet> list = new TreeSet<TitleSet>();
     Configuration allSets = config.getConfigTree(PARAM_TITLE_SETS);
@@ -670,7 +664,18 @@ public class PluginManager
 	log.warning("Error creating TitleSet from: " + setDef, e);
       }
     }
+    addStandardTitleSets(config, list);
     installTitleSets(list);
+  }
+
+  private void addStandardTitleSets(Configuration config,
+                                   TreeSet<TitleSet> list) {
+    if (config.getBoolean(PARAM_ADD_STANDARD_TITLESETS,
+                          DEFAULT_ADD_STANDARD_TITLESETS)) {
+      list.add(new TitleSetAllAus(getDaemon()));
+      list.add(new TitleSetActiveAus(getDaemon()));
+      list.add(new TitleSetInactiveAus(getDaemon()));
+    }
   }
 
   private void installTitleSets(TreeSet<TitleSet> sets) {
