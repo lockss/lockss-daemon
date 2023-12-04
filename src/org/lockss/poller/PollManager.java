@@ -1207,7 +1207,7 @@ public class PollManager
   /** Cancel all polls on the specified AU.
    * @param au the AU
    */
-  void cancelAuPolls(ArchivalUnit au) {
+  public void cancelAuPolls(ArchivalUnit au) {
     // first remove from queues, so none will run.
     pollQueue.cancelAuPolls(au);
 
