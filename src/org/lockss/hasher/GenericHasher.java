@@ -34,6 +34,7 @@ package org.lockss.hasher;
 import java.io.*;
 import java.util.*;
 import java.security.*;
+import org.apache.commons.collections4.iterators.PeekingIterator;
 
 import org.lockss.app.*;
 import org.lockss.util.*;
@@ -54,7 +55,7 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
   protected CachedUrl curCu = null;
   protected CrawlManager crawlMgr = null;
 
-  protected Iterator iterator = null;
+  protected PeekingIterator iterator = null;
   protected boolean isFinished = false;
   protected boolean isAborted = false;
   protected boolean isFiltered = true;
@@ -67,10 +68,11 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
     }
     this.cus = cus;
     au = cus.getArchivalUnit();
-    iterator = getIterator(cus);
-    if (iterator == null) {
+    Iterator iter = getIterator(cus);
+    if (iter == null) {
       throw new IllegalArgumentException(cus + " returned null iterator");
     }
+    iterator = new PeekingIterator(iter);
     LockssDaemon daemon = AuUtil.getDaemon(au);
     if (daemon != null) {
       crawlMgr = daemon.getCrawlManager();

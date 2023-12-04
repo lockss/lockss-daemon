@@ -9,7 +9,6 @@
     hidden[proxy] = DIRECT
 
   {
-
     title <
       name = Peer Community In
     >
@@ -28,6 +27,8 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/pci-released/
 
     au < readySource ; crawling ; 2023 ; Peer Community In Source Content 2023 ; 2023 >
+    au < expected ; exists ; 2024 ; Peer Community In Source Content 2024 ; 2024 >
+
     }
   }
 }

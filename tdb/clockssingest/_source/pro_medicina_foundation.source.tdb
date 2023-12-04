@@ -9,7 +9,6 @@
     hidden[proxy] = DIRECT
 
   {
-
     title <
       name = Pro Medicina Foundation Source Content
     >
@@ -26,6 +25,8 @@
 
     # tested https://clockss-test.lockss.org/sourcefiles/promed-released/2023_01, it has one less xml than PDF.
     au < readySource ; crawling ; 2023 ; Pro Medicina Foundation Source Content 2023_01 ; 2023_01 >
+    au < expected ; exists ; 2024 ; Pro Medicina Foundation Source Content 2024_01 ; 2024_01 >
+
     }
   }
 

@@ -9,7 +9,6 @@
     hidden[proxy] = DIRECT
 
   {
-
     title <
        name = Trans Tech Publications Source Content
     >
@@ -31,6 +30,8 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/transtech-released/
 
     au < readySource ; crawling ; 2023 ; Trans Tech Publications Source Content 2023 ; 2023 >
+    au < expected ; exists ; 2024 ; Trans Tech Publications Source Content 2024 ; 2024 >
+
     }
   }
 

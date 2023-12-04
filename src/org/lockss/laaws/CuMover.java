@@ -1,7 +1,7 @@
 /*
 
-Copyright (c) 2021-2022 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+  Copyright (c) 2021-2022 Board of Trustees of Leland Stanford Jr. University,
+  all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -29,6 +29,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.laaws;
 
 import com.google.gson.Gson;
+import org.apache.commons.collections4.ListValuedMap;
+import org.apache.commons.collections4.multimap.ArrayListValuedHashMap;
 import org.apache.http.*;
 import org.apache.http.message.BasicHttpResponse;
 import org.apache.http.message.BasicStatusLine;
@@ -42,18 +44,15 @@ import org.lockss.repository.*;
 import org.lockss.util.CIProperties;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
+import org.lockss.util.UrlUtil;
 import java.util.*;
 
 import static org.lockss.laaws.Counters.CounterType;
 
-public class CuMover extends Worker {
+public class CuMover extends CuBase {
   private static final Logger log = Logger.getLogger(CuMover.class);
 
-  private CachedUrl cu;
-  private String v1Url;
   private String v2Url;
-  private boolean isPartialContent;
-  private String namespace;
 
   protected static StatusLine STATUS_LINE_OK =
     new BasicStatusLine(new ProtocolVersion("HTTP", 1, 1), 200, "OK");
@@ -61,8 +60,38 @@ public class CuMover extends Worker {
 
   public CuMover(V2AuMover auMover, MigrationTask task) {
     super(auMover, task);
-    this.cu = task.getCu();
-    namespace = auMover.getNamespace();
+  }
+
+  // This causes an InputStream to be opened on each CU, which 1) may
+  // take some time, and 2) consumes a number of File Descriptors
+  // equal to the number of versions.  The time to open the files
+  // shouldn't be much of an issue as this is running concurrently
+  // with several other CU copies.  If the FD consumption is a
+  // problem, that would require a not-simple refactoring, or might be
+  // more easily dealt with by limiting the number of versions that
+  // are copied (with a config param?)
+  void buildCompatMap(CachedUrl cu) {
+    CachedUrl[] v1Versions = cu.getCuVersions();
+    for (CachedUrl cuVer : v1Versions) {
+      CIProperties verProps = cu.getProperties();
+      String nodeUrl = verProps.getProperty(CachedUrl.PROPERTY_NODE_URL);
+      String redirTo = verProps.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO);
+      if (UrlUtil.isDirectoryRedirection(v1Url, nodeUrl)) {
+        // This was collected as "foo/", not the result of a redirect.
+        // Copy it only as "foo/"
+        V2CompatCachedUrl v2cuVer = new V2CompatCachedUrl(cuVer, nodeUrl);
+        mappedCus.put(nodeUrl, v2cuVer);
+      } else if (UrlUtil.isDirectoryRedirection(v1Url, redirTo)) {
+        // This was redirected from "foo" to "foo/".  Copy as both
+        // "foo" and "foo/" to match what V2 would have collected
+        V2CompatCachedUrl v2cuVer = new V2CompatCachedUrl(cuVer, redirTo);
+        mappedCus.put(v1Url, cuVer);
+        mappedCus.put(redirTo, v2cuVer);
+      } else {
+        // No slash - V2 name is the same
+        mappedCus.put(v1Url, cuVer);
+      }
+    }
   }
 
   public void run() {
@@ -71,57 +100,58 @@ public class CuMover extends Worker {
     }
     try {
       log.debug2("Starting CuMover: " + au + ", " + cu);
-      v1Url=cu.getUrl();
-      v2Url=auMover.getV2Url(au, cu);
-      List<Artifact> cuArtifacts = Collections.emptyList();
-      try {
-        cuArtifacts = getV2ArtifactsForUrl(au.getAuId(), v2Url);
+      buildCompatMap(cu);
+      for (String v2Url : mappedCus.keySet()) {
+        try {
+          List<Artifact> v2Arts = getV2ArtifactsForUrl(auid, v2Url);
+          moveCuVersions(v2Url, mappedCus.get(v2Url), v2Arts);
+        } catch (ApiException e) {
+          log.warning("Can't get list of existing V2 artifacts for " +
+                      v2Url + ", continuing.");
+        }
       }
-      catch (ApiException e) {
-        log.warning("Unable to determine which V2 Urls have already been moved, continuing.");
-      }
-      moveCuVersions(v2Url, cu, cuArtifacts);
-      ctrs.incr(CounterType.URLS_MOVED);
+
+      ctrs.add(CounterType.URLS_MOVED, mappedCus.keySet().size());
     } finally {
-      AuUtil.safeRelease(cu);
+      for (CachedUrl cu : mappedCus.values()) {
+        AuUtil.safeRelease(cu);
+      }
     }
   }
   
   /**
-   * Move all versions of a cachedUrl.
+   * Move all versions of one v2 URL for a cachedUrl.
    *
    * @param v2Url       The uri for the current cached url.
    * @param cachedUrl   The cachedUrl we which to move
    * @param v2Artifacts The list of artifacts which already match this cachedUrl uri.
    */
-  void moveCuVersions(String v2Url, CachedUrl cachedUrl, List<Artifact> v2Artifacts) {
+  void moveCuVersions(String v2Url, List<CachedUrl> localVersions,
+                      List<Artifact> v2Artifacts) {
     log.debug3("moveCuVersions("+v2Url+")");
-    String auid = cachedUrl.getArchivalUnit().getAuId();
-    CachedUrl[] localVersions = cachedUrl.getCuVersions();
-    Queue<CachedUrl> cuQueue = Collections.asLifoQueue(new ArrayDeque<>());
+    Queue<CachedUrl> cuQueue = new ArrayDeque<>();
     int v2Count = v2Artifacts.size();
     //If we have more v1 versions than the v2 repo - copy the missing items
+    int v1Count = localVersions.size();
     if (v2Count > 0) {
       log.debug3("v2 versions available=" + v2Count + " v1 versions available="
-                 + localVersions.length);
+                 + v1Count);
     }
     // if the v2 repository has fewer versions than the v1 repository
     // then move the missing versions or release the cu version.
-    int vers_to_move = localVersions.length - v2Count;
-    log.debug3("Queueing " + vers_to_move + "/" + localVersions.length + " versions...");
-    if (vers_to_move > 0) {
-      for (int vx = 0; vx < localVersions.length; vx++) {
-        CachedUrl ver = localVersions[vx];
-        if (vx < vers_to_move) {
-          cuQueue.add(ver);
-        }
-        else {
-          AuUtil.safeRelease(ver);
-        }
+    int vers_to_move = v1Count - v2Count;
+    log.debug3("Queueing " + vers_to_move + "/" + v1Count + " versions...");
+    for (int vx = v1Count - 1; vx >= 0; vx--) {
+      CachedUrl ver = localVersions.get(vx);
+      if (vx < vers_to_move) {
+        cuQueue.add(ver);
       }
-      while(!isAbort() && cuQueue.peek() != null) {
-        moveNextCuVersion(auid, v2Url, cuQueue);
+      else {
+        AuUtil.safeRelease(ver);
       }
+    }
+    while(!isAbort() && cuQueue.peek() != null) {
+      moveNextCuVersion(auid, v2Url, cuQueue);
     }
   }
 
@@ -146,7 +176,7 @@ public class CuMover extends Worker {
         collectionDate = Long.parseLong(fetchTime);
       }
       else {
-        log.debug2(v2Url + ":version: " + cu.getVersion() + " is missing fetch time.");
+        log.debug2(v2Url + ": version " + cu.getVersion() + " is missing fetch time.");
       }
       if (log.isDebug3()) {
         log.debug3("Moving cu version " + cu.getVersion() + " - fetched at " + fetchTime);
@@ -173,18 +203,6 @@ public class CuMover extends Worker {
     finally {
       AuUtil.safeRelease(cu);
     }
-  }
-
-  private String cuVersionString(CachedUrl cu) {
-    StringBuilder sb = new StringBuilder();
-    sb.append(" (ver: ");
-    if (cu.getVersion() == 0) {
-      sb.append("unknown");
-    } else {
-      sb.append(cu.getVersion());
-    }
-    sb.append(")");
-    return sb.toString();
   }
 
   /**
@@ -295,25 +313,6 @@ public class CuMover extends Worker {
     }
   }
 
-  private List<Artifact> getV2ArtifactsForUrl(String auId,  String v2Url)
-      throws ApiException {
-    ArtifactPageInfo pageInfo;
-    String token = null;
-    List<Artifact> cuArtifacts = new ArrayList<>();
-    // if the v2 repo knows about this au we need to call getArtifacts.
-    if (auMover.existsInV2(auId)) {
-      isPartialContent = true;
-      log.debug2("Checking for unmoved content: " + v2Url);
-      do {
-        pageInfo = artifactsApi.getArtifacts(auId, namespace,
-            v2Url, null, "all", false, null, token);
-        cuArtifacts.addAll(pageInfo.getArtifacts());
-        token = pageInfo.getPageInfo().getContinuationToken();
-      } while (!isAbort() && !StringUtil.isNullString(token));
-      log.debug2("Found " + cuArtifacts.size() + " matches for " + v2Url);
-    }
-    return cuArtifacts;
-  }
 
 
 }

@@ -6,8 +6,8 @@
     info[tester] = S ;
     info[platform] = WARC
   >
-    comment[publisherName] = The publisher requested we list the following publications under the new publisher name Martin Paul Eve.
-    #And October 2017 the publisher name is changing to Open Library of Humanities and adding 2 titles 
+    comment[publisherName] = The publisher requested we the publisher name Martin Paul Eve.
+    #October 2017 the publisher name is changing to Open Library of Humanities and added 2 titles 
 
     hidden[proxy] = DIRECT
     plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
@@ -34,6 +34,8 @@
     param[base_url] = https://clockss-ingest.lockss.org/warcfiles/alluvium-released/
 
     au < readySource ; crawling ; 2023 ; Alluvium WARC Content 2023 ; 2023 ; >
+    au < expected ; exists ; 2025 ; Alluvium WARC Content 2025 ; 2025 ; >
+
     }
   }
   

@@ -16,51 +16,74 @@ import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
-public class CuChecker extends Worker {
+public class CuChecker extends CuBase {
   private static final Logger log = Logger.getLogger(CuChecker.class);
-  private final CachedUrl cu;
-  private final String namespace;
 
   public CuChecker(V2AuMover auMover, MigrationTask task) {
     super(auMover, task);
-    this.cu = task.cu;
-    namespace = auMover.getNamespace();
   }
 
   public void run() {
     if (isAbort()) {
       return;
     }
-    log.debug2("Starting CuChecker: " + au + ", " + cu);
-    String v2Url = null;
     try {
-      CachedUrl[] v1Versions = cu.getCuVersions();
-      v2Url = auMover.getV2Url(au, cu);
-      List<Artifact> v2Versions;
-      v2Versions = getAllCuArtifacts(au, v2Url);
-      if (v2Versions.size() != v1Versions.length) {
-        String msg = "Mismatched version count for: " + cu.getUrl() + 
-          ": V1: " + v1Versions.length +
-          ", V2: " + v2Versions.size();
-        if (!v2Url.equals(cu.getUrl())) {
-          msg += " v2Url: " + v2Url;
+      log.debug2("Starting CuChecker: " + au + ", " + cu);
+      buildCompatMap(cu);
+      for (String v2Url : mappedCus.keySet()) {
+        try {
+          List<Artifact> v2Arts = getV2ArtifactsForUrl(auid, v2Url);
+          checkCuVersions(v2Url, mappedCus.get(v2Url), v2Arts);
+        } catch (ApiException e) {
+          log.warning("Can't get list of V2 artifacts for " +
+                      v2Url + ", continuing.");
         }
-        addError(msg);
-        log.error(msg);
-        // stop processing cu
-        terminated = true;
+      }
+      ctrs.add(CounterType.URLS_VERIFIED, mappedCus.keySet().size());
+    } finally {
+      for (CachedUrl cu : mappedCus.values()) {
+        AuUtil.safeRelease(cu);
+      }
+    }
+  }
+
+  /**
+   * Check all V2 artifacts for a cachedUrl.
+   *
+   * @param v2Url       The uri for the current cached url.
+   * @param cachedUrl   The cachedUrl we which to move
+   * @param v2Artifacts The list of artifacts which already match this cachedUrl uri.
+   */
+  void checkCuVersions(String v2Url, List<CachedUrl> localVersions,
+                       List<Artifact> v2Artifacts) {
+    log.debug3("checkCuVersions("+v2Url+")");
+    int v2Count = v2Artifacts.size();
+    try {
+      int minCount = Math.min(localVersions.size(), v2Artifacts.size());
+      if (v2Artifacts.size() != localVersions.size()) {
+        String msg = "Mismatched version count for: " + v2Url +
+          ": V1: " + localVersions.size() +
+          ", V2: " + v2Artifacts.size() + ".";
+        if (auMover.isCompareEvenIfVersionMismatch() && minCount > 0) {
+          msg += "  Attempting to compare the most recent " + minCount +
+            " versions.";
+          addError(msg);
+          log.error(msg);
+        } else {
+          // stop processing cu
+          terminated = true;
+        }
       }
       if (!terminated) {
         log.debug2(v2Url + ":Checking Artifact...");
-        for (int ver = 0; ver < v1Versions.length; ver++) {
+        for (int ver = 0; ver < minCount; ver++) {
           if (isAbort()) {
             break;
           }
-          CachedUrl v1Version = v1Versions[ver];
-          Artifact v2Artifact = v2Versions.get(ver);
-          compareCuToArtifact(v1Version, v2Artifact);
+          CachedUrl v1Version = localVersions.get(ver);
+          Artifact v2Artifact = v2Artifacts.get(ver);
+          compareCuToArtifact(v1Version, v2Artifact, ver + 1);
         }
-        ctrs.incr(CounterType.URLS_VERIFIED);
       }
     }
     catch (Exception ex) {
@@ -70,18 +93,15 @@ public class CuChecker extends Worker {
       task.addError(err);
       terminated = true;
     }
-    finally {
-      AuUtil.safeRelease(cu);
-    }
   }
 
-  private String mdMismatchMsg(ArchivalUnit au, CachedUrl cu, String field,
-                               String v1, String v2) {
-    return "Metadata mismatch in " + au.getName() + " for " + field +
+  private String mdMismatchMsg(ArchivalUnit au, CachedUrl cu, int ver,
+                               String field, String v1, String v2) {
+    return "Metadata mismatch: " + au.getName() + ", url: " + cu.getUrl() + ", ver: " + ver + ", " + field  +
       ": V1: " + v1 + ", V2: " + v2;
   }
 
-  List<String> compareMetadata(ArchivalUnit au, CachedUrl cu,
+  List<String> compareMetadata(ArchivalUnit au, CachedUrl cu, int ver,
                                Artifact artifact, Long v1CollectionDate) {
     List<String> res = new ArrayList<>();
 
@@ -93,33 +113,33 @@ public class CuChecker extends Worker {
       return res;
     }
     if (!artifact.getAuid().equals(au.getAuId())) {
-      String msg = mdMismatchMsg(au, cu, "AUID",
+      String msg = mdMismatchMsg(au, cu, ver, "AUID",
                                  au.getAuId(), artifact.getAuid());
       log.warning(msg);
       res.add(msg);
     }
     if (!artifact.getNamespace().equals(namespace)) {
-      String msg = mdMismatchMsg(au, cu, "Namespace",
+      String msg = mdMismatchMsg(au, cu, ver, "Namespace",
                                  namespace, artifact.getNamespace());
       log.warning(msg);
       res.add(msg);
     }
     if (!artifact.getCollectionDate().equals(collDate)) {
-      String msg = mdMismatchMsg(au, cu, "Collection date",
+      String msg = mdMismatchMsg(au, cu, ver, "Collection date",
                                  Long.toString(collDate),
                                  Long.toString(artifact.getCollectionDate()));
       log.warning(msg);
       res.add(msg);
     }
     if (!artifact.getCommitted()) {
-      String msg = mdMismatchMsg(au, cu, "Committed", "true", "false");
+      String msg = mdMismatchMsg(au, cu, ver, "Committed", "true", "false");
       log.warning(msg);
       res.add(msg);
     }
     return res;
   }
 
-  void compareCuToArtifact(CachedUrl cu, Artifact artifact) {
+  void compareCuToArtifact(CachedUrl cu, Artifact artifact, int ver) {
     Long collectionDate = null;
     ArtifactData artifactData=null;
     try {
@@ -128,7 +148,8 @@ public class CuChecker extends Worker {
       if (!StringUtil.isNullString(fetchTime)) {
         collectionDate = Long.parseLong(fetchTime);
       }
-      List<String> mderrs = compareMetadata(au, cu, artifact, collectionDate);
+      List<String> mderrs = compareMetadata(au, cu, ver,
+                                            artifact, collectionDate);
       boolean isMatch = mderrs.isEmpty();
       if (!isMatch) {
         for (String msg : mderrs) {
@@ -139,14 +160,14 @@ public class CuChecker extends Worker {
         log.debug3(cu.getUrl() + ": metadata matches.");
       }
       if (mderrs.isEmpty() && auMover.isCompareBytes()) {
-        log.debug3("Fetching  content for byte compare");
+        log.debug3("Fetching content for byte compare");
         artifactData = artifactsApi.getMultipartArtifact(artifact.getUuid(),namespace,"ALWAYS");
         log.debug3("Successfully fetched Artifact Data");
         isMatch = IOUtils.contentEquals(artifactData.getInputStream(),
             cu.getUncompressedInputStream());
         if (!isMatch) {
           String err = "Artifact content mistmatch between V1 and V2: " +
-            cu.getUrl() + " in: " + au;
+            cu.getUrl() + " Ver: " + ver + ": " + " in: " + au;
           log.warning(err);
           task.addError(err);
         }
@@ -167,10 +188,11 @@ public class CuChecker extends Worker {
                        (v2Hdr == null ? "missing" : v2Hdr.getValue()));
           }
           if (v2Hdr == null) {
-            task.addError(cu.getUrl() + "V1 header '" + v2Key + "' missing from V2.");
+            task.addError(cu.getUrl() + " V1 header " + v2Key + " = " + v1Val +
+                          " missing from V2.");
           } else if (!StringUtil.equalStrings(v2Hdr.getValue(), v1Val)) {
-            task.addError(cu.getUrl() + "V1 header '" + v1Key
-                          + "' value mismatch, V1: " + v1Val
+            task.addError(cu.getUrl() + " V1 header " + v1Key
+                          + " value mismatch, V1: " + v1Val
                           + ", V2: " + v2Hdr.getValue());
           }
         }

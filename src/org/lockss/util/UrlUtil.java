@@ -1042,6 +1042,7 @@ public class UrlUtil {
    * to it. */
   // XXX does this need to be insensitive to differently encoded URLs?
   public static boolean isDirectoryRedirection(String from, String to) {
+    if (from == null || to == null) return false;
     if (to.length() != (from.length() + 1)) return false;
     try {
       URL ufrom = new URL(from);

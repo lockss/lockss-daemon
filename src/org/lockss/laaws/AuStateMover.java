@@ -37,6 +37,7 @@ import org.lockss.laaws.model.cfg.AuConfiguration;
 import org.lockss.laaws.model.cfg.V2AuStateBean;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
+import org.lockss.plugin.PluginManager;
 import org.lockss.poller.PollManager;
 import org.lockss.protocol.AuAgreements;
 import org.lockss.protocol.DatedPeerIdSet;
@@ -93,8 +94,9 @@ public class AuStateMover extends Worker {
     if (v1config != null) {
       try {
         // copy the keys
-        v1config.keySet().stream().filter(key -> !key.equalsIgnoreCase("reserved.repository"))
-            .forEach(key -> v2config.putAuConfigItem(key, v1config.get(key)));
+        v1config.keySet().stream()
+          .filter(key -> !key.equalsIgnoreCase(PluginManager.AU_PARAM_REPOSITORY))
+          .forEach(key -> v2config.putAuConfigItem(key, v1config.get(key)));
         // send the configuration
         cfgApiClient.putAuConfig(au.getAuId(), v2config);
         log.info("Successfully moved AU Configuration: " + auName);

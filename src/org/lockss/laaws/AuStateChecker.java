@@ -44,6 +44,7 @@ import org.lockss.laaws.model.cfg.AuConfiguration;
 import org.lockss.laaws.model.cfg.V2AuStateBean;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
+import org.lockss.plugin.PluginManager;
 import org.lockss.poller.PollManager;
 import org.lockss.protocol.AgreementType;
 import org.lockss.protocol.AuAgreements;
@@ -224,13 +225,15 @@ public class AuStateChecker extends Worker {
     AuConfiguration v2Config;
     String auName = au.getName();
     String err = null;
-    Configuration v1 = au.getConfiguration();
+    Configuration v1 = au.getConfiguration().copy();
+    v1.remove(PluginManager.AU_PARAM_REPOSITORY);
     AuConfiguration v1Config = new AuConfiguration().auId(au.getAuId());
     try {
       if (v1 != null) {
         v1.keySet().stream().filter(key -> !key.equalsIgnoreCase("reserved.repository"))
             .forEach(key -> v1Config.putAuConfigItem(key, v1.get(key)));
         v2Config = cfgApiClient.getAuConfig(au.getAuId());
+        v2Config.getAuConfig().remove(PluginManager.AU_PARAM_REPOSITORY);
         if (v2Config == null) {
           if (!v1Config.getAuConfig().isEmpty()) {
             err = "AU not configured in V2: " + auName;
