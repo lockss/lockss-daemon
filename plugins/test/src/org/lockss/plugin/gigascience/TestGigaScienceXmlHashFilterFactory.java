@@ -48,7 +48,7 @@ public class TestGigaScienceXmlHashFilterFactory extends LockssTestCase{
                             "<samples> </samples>"+
                             "<experiments> </experiments>"+
                             "<files>"+
-                                "<file id='419285' download_count='4'>"+
+                                "<file id='419285' download_count='3'>"+
                                     "<name>The-species-list-of-phase-I_Supp-tab3.csv</name>"+
                                     "<type id='7'>Other</type>"+
                                     "<format id='37'>CSV</format>"+
@@ -68,6 +68,34 @@ public class TestGigaScienceXmlHashFilterFactory extends LockssTestCase{
         InputStream in = IOUtils.toInputStream(page,Constants.DEFAULT_ENCODING);
         InputStream out = fact.createFilteredInputStream(null, in, Constants.DEFAULT_ENCODING);
         String result = IOUtils.toString(out, Constants.DEFAULT_ENCODING);
-        System.out.println(result);
+
+        String correctPage =   "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"+
+                        "<gigadb_entry>"+
+                            "<dataset doi=\"100661\" id=\"2082\"/>"+
+                            "<samples> </samples>"+
+                            "<experiments> </experiments>"+
+                            "<files>"+
+                                "<file id=\"419283\">"+
+                                    "<name>Phylogenetic_tree_of_8_species.nwk</name>"+
+                                    "<type id=\"130\">Phylogenetic tree</type>"+
+                                    "<format id=\"48\">Newick</format>"+
+                                "</file>"+
+                                "<file id=\"419284\">"+
+                                    "<name>public-fish-assembly-info_Supp-Tab1.tsv</name>"+
+                                    "<type id=\"131\">Tabular data</type>"+
+                                    "<format id=\"43\">TSV</format>"+
+                                "</file>"+
+                                "<file id=\"419285\">"+
+                                    "<name>The-species-list-of-phase-I_Supp-tab3.csv</name>"+
+                                    "<type id=\"7\">Other</type>"+
+                                    "<format id=\"37\">CSV</format>"+
+                                "</file>"+
+                            "</files>"+
+                        "</gigadb_entry>";
+                
+        //System.out.println(result);
+        //System.out.println(correctPage);
+        assertTrue(result.equals(correctPage));
+        
     }
 }

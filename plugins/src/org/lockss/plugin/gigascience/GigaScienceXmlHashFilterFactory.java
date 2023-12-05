@@ -30,24 +30,18 @@ POSSIBILITY OF SUCH DAMAGE.
 
 */
 package org.lockss.plugin.gigascience;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 import java.io.InputStream;
-import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.IllegalFormatException;
 import java.util.List;
-import java.util.stream.Stream;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
@@ -57,6 +51,7 @@ import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
 import org.lockss.util.DeferredTempFileOutputStream;
+import org.lockss.util.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -65,32 +60,31 @@ import org.xml.sax.SAXException;
 
 public class GigaScienceXmlHashFilterFactory implements FilterFactory{
 
+    private static final Logger logger = Logger.getLogger(GigaScienceXmlHashFilterFactory.class); 
+
     @Override
     public InputStream createFilteredInputStream(ArchivalUnit au, InputStream in, String encoding)
-            throws PluginException {
-        
-        DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
-        try {
-            DocumentBuilder builder = builderFactory.newDocumentBuilder();
-            Document doc = builder.parse(in);
+            throws PluginException{
+
+        try{
+            Document doc = createDoc(in);
             NodeList filesNodeList = doc.getElementsByTagName("files");
 
             //there should be only one files tag
             if(filesNodeList.getLength() != 1){
-                //handle exception
+                throw new PluginException("There should only be one files tag in document.");
             }
-
+            
             Node filesNode = filesNodeList.item(0); 
             NodeList nodes = doc.getElementsByTagName("file");
-            System.out.println("Node is" + nodes.item(0).getTextContent());
             List<Element> sortedElements = sort(nodes); 
-            System.out.println("Node is" + sortedElements.get(0).getAttribute("id"));
 
             for(int i=0; i < nodes.getLength(); i++){
                 filesNode.removeChild(nodes.item(i));
             }
-
+            
             for(Element sortedElement: sortedElements){
+                sortedElement.removeAttribute("download_count");
                 filesNode.appendChild(sortedElement);
             }
 
@@ -101,10 +95,12 @@ public class GigaScienceXmlHashFilterFactory implements FilterFactory{
             StreamResult result = new StreamResult(out);
             transformer.transform(source, result);
             return out.getDeleteOnCloseInputStream();
-
-        } catch (ParserConfigurationException | SAXException | IOException | TransformerException e) {
-            e.printStackTrace();
         }
+        catch ( IOException | TransformerException | ParserConfigurationException | SAXException e) {
+            e.getStackTrace();
+            //throw e;
+        }
+        
         return in;
     }
 
@@ -123,6 +119,14 @@ public class GigaScienceXmlHashFilterFactory implements FilterFactory{
         });
 
         return sortedNodes;
+    }
+
+    //create document object from input stream
+    public Document createDoc(InputStream in) throws ParserConfigurationException, SAXException, IOException{
+        DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = builderFactory.newDocumentBuilder();
+        Document doc = builder.parse(in);
+        return doc;
     }
     
 }
