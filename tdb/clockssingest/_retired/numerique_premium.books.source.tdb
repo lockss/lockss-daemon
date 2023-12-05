@@ -9,7 +9,6 @@
     hidden[proxy] = DIRECT
 
   {
-
     title <
       name = Numerique Premium Books Source Content
     >
@@ -25,7 +24,7 @@
     {
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/numerique-released/
 
-    au < expected ; exists ; 2023 ; Numerique Premium Books Source Content 2023 ; 2023 >
+    #au < expected ; exists ; 2023 ; Numerique Premium Books Source Content 2023 ; 2023 >
     #No plans to deliver more content as of 20230213
     }
   }
