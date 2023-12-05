@@ -33,6 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>plugin_status</string>
     <string>ready</string>
+    <!-- https transition enabled -->
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -44,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -73,26 +74,41 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sbooks/%s/year/%s/", base_url, collection_id, year_string</string>
+    <list>
+      <string>"%sbooks/%s/year/%s/", to_http(base_url), collection_id, year_string</string>
+      <string>"%sbooks/%s/year/%s/", to_https(base_url), collection_id, year_string</string>
+    </list>
   </entry>
   <entry>
     <string>au_permission_url</string>
-    <string>"%sclockssdata?p=%s", base_url, collection_id</string>
+    <list>
+      <string>"%sclockssdata?p=%s", to_http(base_url), collection_id</string>
+      <string>"%sclockssdata?p=%s", to_https(base_url), collection_id</string>
+    </list>
   </entry>
   <entry> 
     <string>au_feature_urls</string>
     <map>
       <entry>
         <string>au_title</string>
-        <string>"%sbooks/%s/?", base_url, collection_id</string>
+        <list>
+          <string>"%sbooks/%s/?", to_http(base_url), collection_id</string>
+          <string>"%sbooks/%s/?", to_https(base_url), collection_id</string>
+        </list>
       </entry>
       <entry>
         <string>au_volume</string>
-        <string>"%sbooks/%s/year/%s/?", base_url, collection_id, year_string</string>
+        <list>
+          <string>"%sbooks/%s/year/%s/?", to_http(base_url), collection_id, year_string</string>
+          <string>"%sbooks/%s/year/%s/?", to_https(base_url), collection_id, year_string</string>
+        </list>
       </entry>
       <entry>
         <string>au_article</string>
-        <string>"%sbooks/%s/%s/?", base_url, collection_id, book_num</string>
+        <list>
+          <string>"%sbooks/%s/%s/?", to_http(base_url), collection_id, book_num</string>
+          <string>"%sbooks/%s/%s/?", to_https(base_url), collection_id, book_num</string>
+        </list>
       </entry>
     </map>
   </entry>
@@ -102,9 +118,9 @@ POSSIBILITY OF SUCH DAMAGE.
       <!-- all content from CDN -->
       <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|[^.]+\.(jquery|bootstrapcdn)\.com|cdn\.mathjax\.org)/."</string>
       <string>1,"^https?://%s/[^?]+[.](bmp|css|gif|ico|jpe?g|js|png|tif?f|eot|svg|ttf|woff.?)$", url_host(base_url)</string>
-      <string>4,"^%s", base_url</string>
-      <string>1, "%sbooks/%s/year/%s/?", base_url, collection_id, year_string</string>
-      <string>1,"^%sbooks/%s/[0-9.]+", base_url, collection_id</string>
+      <string>4,"^https?://%s/",url_host(base_url) </string>
+      <string>1, "^https?://%s/books/%s/year/%s/?", url_host(base_url), collection_id, year_string</string>
+      <string>1,"^https?://%s/books/%s/[0-9.]+", url_host(base_url), collection_id</string>
     </list>
   </entry>
   <entry>
@@ -147,13 +163,23 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%sbooks/(%s)/([0-9.]+)/\1\2[.]pdf$", base_url, collection_id</string>
+      <string>"^https?://%s/books/(%s)/([0-9.]+)/\1\2[.]pdf$", url_host(base_url), collection_id</string>
     </list>
   </entry>
   <!-- entry>
     <string>text/html_filter_factory</string>
     no html hash filter needed for single crawl plugin
   </entry -->
+  <!--  also for https conversion -->
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+  </entry>
+  <!--  end for https conversion -->
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.americanmathematicalsociety.AmericanMathematicalSocietyBooksArticleIteratorFactory</string>
