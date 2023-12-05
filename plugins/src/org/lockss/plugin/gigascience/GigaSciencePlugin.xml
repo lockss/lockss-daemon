@@ -91,6 +91,10 @@
         <int>2</int>
     </entry>
     <entry>
+        <string>text/xml_filter_factory</string>
+        <string>org.lockss.plugin.gigascience.GigaScienceXmlHashFilterFactory</string>
+    </entry>
+    <entry>
         <string>plugin_crawl_seed_factory</string>
         <string>org.lockss.plugin.gigascience.GigaScienceCrawlSeedFactory</string>
     </entry>
