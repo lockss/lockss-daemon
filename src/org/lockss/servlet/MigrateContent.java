@@ -346,7 +346,7 @@ public class MigrateContent extends LockssServlet {
     layoutErrorBlock(page);
     ServletUtil.layoutExplanationBlock(page, "");
 
-    if (isDaemonInMigrationMode || isMigrationInDebugMode) {
+    if (migrationMgr.isDaemonInMigrationMode() || migrationMgr.isMigrationInDebugMode()) {
       // TODO: Display existing AU migration form
     } else {
       // TODO: Display migrator configuration form

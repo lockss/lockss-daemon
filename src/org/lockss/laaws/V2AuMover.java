@@ -477,6 +477,7 @@ public class V2AuMover {
   PluginManager pluginManager;
   private final CrawlManager crawlMgr;
   private final PollManager pollMgr;
+  MigrationManager migrationMgr;
 
   //////////////////////////////////////////////////////////////////////
   // Constructor, config, init
@@ -487,6 +488,7 @@ public class V2AuMover {
     pluginManager = theDaemon.getPluginManager();
     crawlMgr = theDaemon.getCrawlManager();
     pollMgr = theDaemon.getPollManager();
+    migrationMgr = theDaemon.getMigrationManager();
     Configuration config = ConfigManager.getCurrentConfig();
     setInitialConfig(config);
     setConfig(config, null, config.differences(null));
@@ -1026,8 +1028,10 @@ public class V2AuMover {
 
   private void setAuMigrationState(ArchivalUnit au,
                                    AuState.MigrationState state) {
-    if (true) return;
-    // TODO I think this should be conditional on migrationMode && !debugMode
+    if (!(migrationMgr.isDaemonInMigrationMode() || migrationMgr.isMigrationInDebugMode())) {
+      return;
+    }
+
     AuState auState = AuUtil.getAuState(au);
 
     if (auState.getMigrationState() == state) {
