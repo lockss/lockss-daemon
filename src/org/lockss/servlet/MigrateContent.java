@@ -65,10 +65,6 @@ public class MigrateContent extends LockssServlet {
   static final String PREFIX = Configuration.PREFIX + "v2.migrate.";
   public static final String PARAM_ENABLE_MIGRATION = PREFIX + "enabled";
   public static final boolean DEFAULT_ENABLE_MIGRATION = true;
-  public static final String PARAM_MIGRATION_READY = PREFIX + "ready";
-  public static final boolean DEFAULT_MIGRATION_READY = false;
-  public static final String PARAM_DEBUG_MODE = PREFIX + "debug";
-  public static final boolean DEFAULT_DEBUG_MODE = false;
   public static final String PARAM_HOSTNAME=PREFIX +"hostname";
   static final String DEFAULT_HOSTNAME="localhost";
   public static final String PARAM_DELETE_AFTER_MIGRATION = PREFIX + "deleteAusAfterMigration";
@@ -129,9 +125,6 @@ public class MigrateContent extends LockssServlet {
   boolean isCompareContent;
   List<String> auSelectFilter;
   List<Pattern> auSelectPatterns;
-  boolean isDaemonInMigrationMode;
-  boolean isMigrationInDebugMode;
-
 
   protected void resetLocals() {
     auid = null;
@@ -151,11 +144,6 @@ public class MigrateContent extends LockssServlet {
     if(auSelectFilter != DEFAULT_AU_SELECT_FILTER) {
       auSelectPatterns = compileRegexps(auSelectFilter);
     }
-
-    isDaemonInMigrationMode =
-        config.getBoolean(PARAM_MIGRATION_READY, DEFAULT_MIGRATION_READY);
-    isMigrationInDebugMode =
-        config.getBoolean(PARAM_DEBUG_MODE, DEFAULT_DEBUG_MODE);
   }
 
   public void init(ServletConfig config) throws ServletException {

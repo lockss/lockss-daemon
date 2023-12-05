@@ -56,10 +56,18 @@ public class MigrationManager extends BaseLockssManager
   static final String STATUS_ERRORS = "errors";
   static final String STATUS_PROGRESS = "progress";
 
+  public static final String PARAM_MIGRATION_READY = PREFIX + "ready";
+  public static final boolean DEFAULT_MIGRATION_READY = false;
+  public static final String PARAM_DEBUG_MODE = PREFIX + "debug";
+  public static final boolean DEFAULT_DEBUG_MODE = false;
+
   private V2AuMover mover;
   private Runner runner;
   private String idleError;
   private long startTime = 0;
+
+  boolean isDaemonInMigrationMode;
+  boolean isMigrationInDebugMode;
 
   public void startService() {
     super.startService();
@@ -69,6 +77,14 @@ public class MigrationManager extends BaseLockssManager
     super.stopService();
   }
 
+  public boolean isDaemonInMigrationMode() {
+    return isDaemonInMigrationMode;
+  }
+
+  public boolean isMigrationInDebugMode() {
+    return isMigrationInDebugMode;
+  }
+
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
     if (changedKeys.contains(PREFIX)) {
@@ -76,6 +92,11 @@ public class MigrationManager extends BaseLockssManager
       if (m != null) {
         m.setConfig(config, oldConfig, changedKeys);
       }
+
+      isDaemonInMigrationMode =
+          config.getBoolean(PARAM_MIGRATION_READY, DEFAULT_MIGRATION_READY);
+      isMigrationInDebugMode =
+          config.getBoolean(PARAM_DEBUG_MODE, DEFAULT_DEBUG_MODE);
     }
   }
 
