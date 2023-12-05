@@ -74,13 +74,13 @@ public class TestLcapRouter extends LockssTestCase {
     ConfigurationUtil.addFromArgs(IdentityManager.PARAM_LOCAL_V3_IDENTITY,
         "TCP:[127.0.0.1]:1234");
     daemon = getMockLockssDaemon();
-    // V3LcapMessage.decode needs idmgr
-    daemon.getIdentityManager().startService();
     scomm = spy(new MyBlockingStreamComm());
     scomm.initService(daemon);
     daemon.setStreamCommManager(scomm);
     rtr = new MyLcapRouter();
     rtr.initService(daemon);
+    // V3LcapMessage.decode needs idmgr
+    daemon.getIdentityManager().startService();
     daemon.setRouterManager(rtr);
     rtr.startService();
     myPeerId = daemon.getIdentityManager()
