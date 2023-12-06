@@ -10,19 +10,19 @@
 
   {
      title <
-      name = Association of Research Libraries Source Content
+      name = Association of Research Libraries WARC Content
     >
     plugin = org.lockss.plugin.clockss.arl.ClockssARLSourcePlugin 
     implicit < status ; status2 ; year ; name ; param[year] >
     {
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/arl-released/
     
-    au < zapped ; finished ; 2016 ; Association of Research Libraries Source Content 2016 ; 2016 >
+    au < zapped ; finished ; 2016 ; Association of Research Libraries WARC Content 2016 ; 2016 >
     }
     {
     param[base_url] = https://clockss-ingest.lockss.org/warcfiles/arl-released/
     
-    au < expected ; exists ; 2023 ; Association of Research Libraries Source Content 2023 ; 2023 >
+    au < expected ; exists ; 2023 ; Association of Research Libraries WARC Content 2023 ; 2023 >
     }
   }
 }
