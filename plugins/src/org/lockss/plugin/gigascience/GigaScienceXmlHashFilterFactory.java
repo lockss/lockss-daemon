@@ -63,8 +63,7 @@ public class GigaScienceXmlHashFilterFactory implements FilterFactory{
     private static final Logger logger = Logger.getLogger(GigaScienceXmlHashFilterFactory.class); 
 
     @Override
-    public InputStream createFilteredInputStream(ArchivalUnit au, InputStream in, String encoding)
-            throws PluginException{
+    public InputStream createFilteredInputStream(ArchivalUnit au, InputStream in, String encoding) throws PluginException{
 
         try{
             Document doc = createDoc(in);
@@ -96,12 +95,10 @@ public class GigaScienceXmlHashFilterFactory implements FilterFactory{
             transformer.transform(source, result);
             return out.getDeleteOnCloseInputStream();
         }
-        catch ( IOException | TransformerException | ParserConfigurationException | SAXException e) {
+        catch (PluginException | ParserConfigurationException | SAXException | IOException | TransformerException e) {
             e.getStackTrace();
-            //throw e;
+            throw new PluginException(e);
         }
-        
-        return in;
     }
 
     private static List<Element> sort(NodeList nodes) {
