@@ -12,7 +12,7 @@
 
     {
     title <
-      name = Southwest Journal of Pulmonary and Critical Care Warc Content ;
+      name = Southwest Journal of Pulmonary and Critical Care WARC Content ;
       eissn = 2160-6773
     >
 
@@ -23,14 +23,14 @@
     {
     param[base_url] = http://clockss-ingest.lockss.org/warcfiles/swjpcc-released/
 
-    au < readySource ; finished ; 2021 ; Southwest Journal of Pulmonary and Critical Care Warc Content 2021 ; 2021 >
+    au < readySource ; finished ; 2021 ; Southwest Journal of Pulmonary and Critical Care WARC Content 2021 ; 2021 >
     # No more AUs. Moved to https.
     }
     {
     param[base_url] = https://clockss-ingest.lockss.org/warcfiles/swjpcc-released/
 
-    au < expected ; exists ; 2023 ; Southwest Journal of Pulmonary and Critical Care Warc Content 2023 ; 2023 >
-    au < expected ; exists ; 2025 ; Southwest Journal of Pulmonary and Critical Care Warc Content 2025 ; 2025 >
+    au < expected ; exists ; 2023 ; Southwest Journal of Pulmonary and Critical Care WARC Content 2023 ; 2023 >
+    au < expected ; exists ; 2025 ; Southwest Journal of Pulmonary and Critical Care WARC Content 2025 ; 2025 >
 
     }
     }
