@@ -13,7 +13,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>6</string>
+        <string>7</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -51,7 +51,7 @@
             </entry>
             <entry>
                 <string>Poll</string>
-                <string>1</string>
+                <string>2</string>
             </entry>
             <entry>
                 <string>Substance</string>
@@ -89,6 +89,10 @@
     <entry>
         <string>au_refetch_depth</string>
         <int>2</int>
+    </entry>
+    <entry>
+        <string>text/xml_filter_factory</string>
+        <string>org.lockss.plugin.gigascience.GigaScienceXmlHashFilterFactory</string>
     </entry>
     <entry>
         <string>plugin_crawl_seed_factory</string>
