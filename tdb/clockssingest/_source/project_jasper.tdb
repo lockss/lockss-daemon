@@ -125,6 +125,18 @@
   {
 
     title <
+      name = Lilloa ;
+      eissn = 2346-9641
+    >
+    provider = Fundación Miguel Lillo
+
+    au < expected ; exists ; 2023 ; Lillo ; UNKNOWN >
+
+  }
+
+  {
+
+    title <
       name = History of Classical Scholarship ;
       eissn = 2632-4091
     >
