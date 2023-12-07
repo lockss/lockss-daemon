@@ -1,7 +1,8 @@
 <map>
+    <!--The CLOCKSS plugin uses this as a parent but this is not currently a GLN plugin-->
     <entry>
         <string>plugin_status</string>
-        <string>ready</string>
+        <string>down</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
@@ -13,7 +14,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>7</string>
+        <string>8</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -51,7 +52,7 @@
             </entry>
             <entry>
                 <string>Poll</string>
-                <string>2</string>
+                <string>3</string>
             </entry>
             <entry>
                 <string>Substance</string>

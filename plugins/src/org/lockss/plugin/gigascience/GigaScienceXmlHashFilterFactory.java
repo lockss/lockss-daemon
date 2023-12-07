@@ -67,24 +67,48 @@ public class GigaScienceXmlHashFilterFactory implements FilterFactory{
 
         try{
             Document doc = createDoc(in);
+
             NodeList filesNodeList = doc.getElementsByTagName("files");
 
-            //there should be only one files tag
-            if(filesNodeList.getLength() != 1){
-                throw new PluginException("There should only be one files tag in document.");
-            }
-            
-            Node filesNode = filesNodeList.item(0); 
-            NodeList nodes = doc.getElementsByTagName("file");
-            List<Element> sortedElements = sort(nodes); 
+            NodeList sampleAttributesList = doc.getElementsByTagName("sample_attributes");
 
-            for(int i=0; i < nodes.getLength(); i++){
-                filesNode.removeChild(nodes.item(i));
+            if(filesNodeList != null && filesNodeList.getLength() != 0){
+
+                //there should be only one files tag
+                if(filesNodeList.getLength() > 1){
+                    throw new PluginException("There should only be one files tag in document.");
+                }
+                
+                Node filesNode = filesNodeList.item(0); 
+                NodeList fileNodes = doc.getElementsByTagName("file");
+                List<Element> sortedFileNodes = sortFileNodes(fileNodes); 
+
+                for(int i=0; i < fileNodes.getLength(); i++){
+                    filesNode.removeChild(fileNodes.item(i));
+                }
+                
+                for(Element sortedFileNode: sortedFileNodes){
+                    sortedFileNode.removeAttribute("download_count");
+                    filesNode.appendChild(sortedFileNode);
+                }
             }
-            
-            for(Element sortedElement: sortedElements){
-                sortedElement.removeAttribute("download_count");
-                filesNode.appendChild(sortedElement);
+
+            if(sampleAttributesList != null && sampleAttributesList.getLength() != 0){
+                if(sampleAttributesList.getLength() > 1){
+                    throw new PluginException("There should only be one sample_attributes tag in document.");
+                }
+
+                Node sampleAttributesNode = sampleAttributesList.item(0);
+                NodeList attributeNodes = doc.getElementsByTagName("attribute");
+                List<Element> sortedAttributeNodes = sortAttributeNodes(attributeNodes);
+
+                for(int i=0; i < attributeNodes.getLength(); i++){
+                    sampleAttributesNode.removeChild(attributeNodes.item(i));
+                }
+
+                for(Element sortedAttributeNode:sortedAttributeNodes){
+                    sampleAttributesNode.appendChild(sortedAttributeNode);
+                }
             }
 
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
@@ -101,7 +125,7 @@ public class GigaScienceXmlHashFilterFactory implements FilterFactory{
         }
     }
 
-    private static List<Element> sort(NodeList nodes) {
+    private static List<Element> sortFileNodes(NodeList nodes) {
         List<Element> sortedNodes = new ArrayList<Element>();
         for (int i = 0; i < nodes.getLength(); i++) {
             sortedNodes.add((Element) nodes.item(i));
@@ -109,12 +133,23 @@ public class GigaScienceXmlHashFilterFactory implements FilterFactory{
         
         Collections.sort(sortedNodes, new Comparator<Element>() {
             public int compare(Element o1, Element o2) {
-                //System.out.println(o1.getAttribute("id"));
                 return o1.getAttribute("id").compareTo(
                         o2.getAttribute("id"));
             }
         });
-
+        return sortedNodes;
+    }
+    private static List<Element> sortAttributeNodes(NodeList nodes) {
+        List<Element> sortedNodes = new ArrayList<Element>();
+        for (int i = 0; i < nodes.getLength(); i++) {
+            sortedNodes.add((Element) nodes.item(i));
+        }
+        
+        Collections.sort(sortedNodes, new Comparator<Element>() {
+            public int compare(Element o1, Element o2) {
+                return o1.getTextContent().compareTo(o2.getTextContent());
+            }
+        });
         return sortedNodes;
     }
 
