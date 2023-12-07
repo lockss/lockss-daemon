@@ -21,16 +21,15 @@
 
     type = bookSeries
     {
-    param[base_url] = http://wio.iwaponline.com/
+    param[base_url] = https://iwaponline.com/
     plugin = needs.plugin
-    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+    #plugin = org.lockss.plugin.silverchair.geoscienceworld.ClockssGeoscienceWorldSilverchairBooksPlugin
+    implicit < status ; status2 ; year ; isbn ; eisbn ; name ; param[resource_id]; hidden[proxy] >
 
-    au < exists ; exists ; 2017 ; Water Intelligence Online Volume 16 ; 16 ; > 
-    au < exists ; exists ; 2018 ; Water Intelligence Online Volume 17 ; 17 ; > 
-    au < exists ; exists ; 2019 ; Water Intelligence Online Volume 18 ; 18 ; > 
-    au < exists ; exists ; 2020 ; Water Intelligence Online Volume 19 ; 19 ; > 
-    au < exists ; exists ; 2021 ; Water Intelligence Online Volume 20 ; 20 ; > 
-    au < exists ; exists ; 2022 ; Water Intelligence Online Volume 21 ; 21 ; > 
+    au < exists ; exists ; 2020 ;  ; 9781789060850 ; Leak Detection: Technology and Implementation ; ebooks/book/778/Leak-DetectionTechnology-and-Implementation ; > 
+    au < exists ; exists ; 2019 ;  ; 9781789061246 ; Frontier Technology for Water Treatment and Pollutant Removal ; ebooks/book/773/Frontier-Technology-for-Water-Treatment-and ; > 
+    au < exists ; exists ; 2019 ;  ; 9781789060034 ; Microplastics in Water and Wastewater ; ebooks/book/769/Microplastics-in-Water-and-Wastewater ; > 
+    au < exists ; exists ; 2020 ;  ; 9781780409320 ; Assessment of Treatment Plant Performance and Water Quality Data: A Guide for Students, Researchers and Practitioners ; ebooks/book/777/Assessment-of-Treatment-Plant-Performance-and ; > 
 
     }
     {
