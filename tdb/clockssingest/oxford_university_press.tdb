@@ -16902,8 +16902,8 @@
     param[journal_id] = pmj
     #move from BMJ by 2023-01-01
 
-    au < testing ; exists ; 2020 ; 2020 ; Postgraduate Medical Journal Volume 96 ; 96 ; >
-    au < testing ; exists ; 2021 ; 2021 ; Postgraduate Medical Journal Volume 97 ; 97 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Postgraduate Medical Journal Volume 96 ; 96 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Postgraduate Medical Journal Volume 97 ; 97 ; >
     au < frozen ; exists ; 2022 ; 2022 ; Postgraduate Medical Journal Volume 98 ; 98 ; >
     au < doNotProcess ; exists ; 2023 ; 2023 ; Postgraduate Medical Journal Volume 99 ; 99 ; >
 
