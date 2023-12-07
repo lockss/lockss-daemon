@@ -3,7 +3,7 @@
     name = University of Thi-Qar, College of Science ;
     info[contract] = 2023 ;
     info[back] = 2020 ;
-    info[tester] = 5 ;
+    info[tester] = 2 ;
     info[platform] = OJS3. Open Journal Systems 3.3.0.14
   >
 
@@ -38,8 +38,8 @@
       au < manifest ; exists ; 2019 ; University of Thi-Qar Journal of Science Volume 2019 ; 7 ; 2019 ; >
       au < doesNotExist ; doesNotExist ; 2020 ; University of Thi-Qar Journal of Science Volume 2020 ; 7 ; 2020 ; >
       au < manifest ; exists ; 2021 ; University of Thi-Qar Journal of Science Volume 2021 ; 8 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; University of Thi-Qar Journal of Science Volume 2022 ; 9 ; 2022 ; >
-      au < manifest ; exists ; 2023 ; University of Thi-Qar Journal of Science Volume 2023 ; 10 ; 2023 ; >
+      au < testing ; exists ; 2022 ; University of Thi-Qar Journal of Science Volume 2022 ; 9 ; 2022 ; >
+      au < testing ; exists ; 2023 ; University of Thi-Qar Journal of Science Volume 2023 ; 10 ; 2023 ; >
 
   }
 
