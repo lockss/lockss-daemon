@@ -8,7 +8,6 @@
     hidden[proxy] = DIRECT
 
   {
-
     title <
        name = Index Copernicus Source Content
     >
@@ -26,6 +25,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/indexcopernicus-released/
 
     au < expected ; exists ; 2023 ; Index Copernicus Source Content 2023 ; 2023 >
+    au < expected ; exists ; 2024 ; Index Copernicus Source Content 2024 ; 2024 >
 
     }
   }

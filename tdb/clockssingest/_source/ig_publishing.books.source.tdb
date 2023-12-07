@@ -9,7 +9,6 @@
     hidden[proxy] = DIRECT
 
   {
-
     title <
       name = IG Publishing Books Source Content
     >
@@ -28,6 +27,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/igroupnet-released/
 
     au < readySource ; crawling ; 2023 ; IG Publishing Books Source Content 2023 ; 2023 >
+    au < expected ; exists ; 2024 ; IG Publishing Books Source Content 2024 ; 2024 >
 
     }
   }

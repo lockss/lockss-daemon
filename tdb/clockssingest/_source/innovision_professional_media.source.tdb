@@ -8,7 +8,6 @@
     hidden[proxy] = DIRECT
 
   {
-
     title <
        name = InnoVision Professional Media Source Content
     >
@@ -26,6 +25,8 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/innovisionhm-released/
 
       au < readySource ; crawling ; 2023 ; InnoVision Professional Media Source Content 2023_01 ; 2023_01 >
+      au < expected ; exists ; 2024 ; InnoVision Professional Media Source Content 2024_01 ; 2024_01 >
+
       }
     }
   }
