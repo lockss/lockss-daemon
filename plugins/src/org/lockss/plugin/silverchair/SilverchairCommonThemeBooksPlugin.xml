@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>8</string>
+        <string>9</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -119,9 +119,9 @@ POSSIBILITY OF SUCH DAMAGE.
         <list>
             <!--Exclude improperly relative URLs, e.g. those with 'http// or 'https//' or 'www', or those that end with .com, .net, .org, etc. 
             Also need to exclude links that end with javascript:;-->
-            <string>2,"%sbooks/(book|edited-volume)/[^/]+/chapter/.*/(https?//|www\.)", base_url</string>
-            <string>2,"%sbooks/(book|edited-volume)/[^/]+/chapter/.*/[^/]+\.(com|net|org|edu|gov)", base_url</string>
-            <string>2,"%sbooks/(book|edited-volume)/[^/]+/chapter/.*/(javascript;:|javascript:;)$", base_url</string>
+            <string>2,"%sbooks/(book|edited-volume|monograph)/[^/]+/chapter/.*/(https?//|www\.)", base_url</string>
+            <string>2,"%sbooks/(book|edited-volume|monograph)/[^/]+/chapter/.*/[^/]+\.(com|net|org|edu|gov)", base_url</string>
+            <string>2,"%sbooks/(book|edited-volume|monograph)/[^/]+/chapter/.*/(javascript;:|javascript:;)$", base_url</string>
 
             <string>2,"%s([^/]+/)?books(/[^/]+)?/[^/]+/chapter(-pdf)?/.*/[^/]+\.(com|net|org|edu|gov)/", base_url</string>
             <string>2,"%s([^/]+/)?books(/[^/]+)?/[^/]+/chapter(-pdf)?/.*/(https?//|www\.)", base_url</string>
@@ -143,7 +143,7 @@ POSSIBILITY OF SUCH DAMAGE.
             https://pubs.geoscienceworld.org/books/book/2160/chapter-pdf/4705971/01_sp471-18-052.pdf
             https://books.rsc.org/books/edited-volume/2066/chapter/7493655/Computational-Methods-to-Study-Chalcogen-Bonds
             -->
-            <string>1,"%sbooks/(book|edited-volume)/[^/]+/chapter(-pdf)?/.*", base_url</string>
+            <string>1,"%sbooks/(book|edited-volume|monograph)/[^/]+/chapter(-pdf)?/.*", base_url</string>
             <!--
             https://pubs.geoscienceworld.org/sepm/books/book/1872/chapter-pdf/3800602/9781565762381_ch01.pdf
             https://books.rsc.org/books/edited-volume/chapter-pdf/1716368/bk9781839164224-00001.pdf
