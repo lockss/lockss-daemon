@@ -104,6 +104,7 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
         log.debug3("Eastview Journal Early Version(2002 - 2005): cuBase = " + cuBase);
 
       } else {
+        //EastviewHelper = new EastviewJournalMetadataXhtmlFormatHelper();
         EastviewHelper = new EastviewJournalMetadataHelper();
         log.debug3("Eastview Journal Later Version: cuBase == " + cuBase);
       }
@@ -115,7 +116,9 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
     protected boolean preEmitCheck(SourceXmlSchemaHelper schemaHelper,
                                    CachedUrl cu, ArticleMetadata thisAM) {
 
+
       String url_string = cu.getUrl();
+
 
       List<String> filesToCheck;
 
@@ -123,6 +126,7 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
       if ((filesToCheck = getFilenamesAssociatedWithRecord(schemaHelper, cu,thisAM)) == null) {
         return true;
       }
+
       ArchivalUnit B_au = cu.getArchivalUnit();
       CachedUrl fileCu;
       for (int i=0; i < filesToCheck.size(); i++)
@@ -137,7 +141,9 @@ public class EastviewJournalXmlMetadataExtractorFactory extends SourceXmlMetadat
         }
       }
       log.debug3("Eastview Journal: No file exists associated with this record");
-      return false; //No files found that match this record
+      //return false; //No files found that match this record
+
+      return true;
     }
 
     /* 

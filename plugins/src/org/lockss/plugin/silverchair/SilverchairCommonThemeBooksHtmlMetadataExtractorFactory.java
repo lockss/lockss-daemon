@@ -54,6 +54,7 @@ public class SilverchairCommonThemeBooksHtmlMetadataExtractorFactory implements 
     cookMap.put("citation_isbn", MetadataField.FIELD_ISBN);
     cookMap.put("citation_doi", MetadataField.FIELD_DOI);
     cookMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
+    cookMap.put("citation_title", MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put("citation_date", MetadataField.FIELD_DATE);
     cookMap.put("citation_publication_date", MetadataField.FIELD_DATE);
     cookMap.put("citation_author", MetadataField.FIELD_AUTHOR);

@@ -22,8 +22,7 @@
     type = bookSeries
     {
     param[base_url] = https://iwaponline.com/
-    plugin = needs.plugin
-    #plugin = org.lockss.plugin.silverchair.geoscienceworld.ClockssGeoscienceWorldSilverchairBooksPlugin
+    plugin = org.lockss.plugin.silverchair.iwap.ClockssIwapSilverchairBooksPlugin
     implicit < status ; status2 ; year ; isbn ; eisbn ; name ; param[resource_id]; hidden[proxy] >
 
     au < testing ; exists ; 2020 ;  ; 9781789060850 ; Leak Detection: Technology and Implementation ; ebooks/book/778/Leak-DetectionTechnology-and-Implementation ; > 

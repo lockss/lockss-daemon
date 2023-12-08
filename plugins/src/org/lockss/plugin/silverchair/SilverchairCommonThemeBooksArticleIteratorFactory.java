@@ -39,15 +39,17 @@ public class SilverchairCommonThemeBooksArticleIteratorFactory implements Articl
     https://pubs.geoscienceworld.org/books/book/1811/chapter/107700053/The-Hydrothermal-Synthesis-of-Kaolinite-Up-to-350
     https://pubs.geoscienceworld.org/books/book/1811/chapter/107700055/Plates
     https://pubs.geoscienceworld.org/clays/books/book/1811/Kaolin-Genesis-and-Utilization
-
+    https://pubs.geoscienceworld.org/books/monograph/chapter-pdf/5431935/csp-14-1.pdf
+    https://pubs.geoscienceworld.org/sepm/books/monograph/2330/Coccolithophores-Cenozoic-Discoasterales-Biology
+    https://iwaponline.com/ebooks/book/769/Microplastics-in-Water-and-Wastewater
      */
     private static String ROOT_TEMPLATE = "\"%s\", base_url";
     private static String PATTERN_TEMPLATE =  "\"%s%s\", base_url, resource_id";
 
 
-    private static Pattern PDF_LANDING_PAGE_PATTERN = Pattern.compile("/([^/]+)/books/(book|edited-volume|monograph)/([^\\.]+)$", Pattern.CASE_INSENSITIVE);
+    private static Pattern PDF_LANDING_PAGE_PATTERN = Pattern.compile("/([^/]+)/(books|ebooks)/(book|edited-volume|monograph)/([^\\.]+)$", Pattern.CASE_INSENSITIVE);
 
-    private static String PDF_LANDING_PAGE_REPLACEMENT = "/$1/books/$2/$3";
+    private static String PDF_LANDING_PAGE_REPLACEMENT = "/$1/$2/$3/$4";
 
     protected static Logger getLog() {
         return Logger.getLogger(SilverchairCommonThemeBooksArticleIteratorFactory.class);
