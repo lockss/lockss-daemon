@@ -26,10 +26,10 @@
     #plugin = org.lockss.plugin.silverchair.geoscienceworld.ClockssGeoscienceWorldSilverchairBooksPlugin
     implicit < status ; status2 ; year ; isbn ; eisbn ; name ; param[resource_id]; hidden[proxy] >
 
-    au < exists ; exists ; 2020 ;  ; 9781789060850 ; Leak Detection: Technology and Implementation ; ebooks/book/778/Leak-DetectionTechnology-and-Implementation ; > 
-    au < exists ; exists ; 2019 ;  ; 9781789061246 ; Frontier Technology for Water Treatment and Pollutant Removal ; ebooks/book/773/Frontier-Technology-for-Water-Treatment-and ; > 
-    au < exists ; exists ; 2019 ;  ; 9781789060034 ; Microplastics in Water and Wastewater ; ebooks/book/769/Microplastics-in-Water-and-Wastewater ; > 
-    au < exists ; exists ; 2020 ;  ; 9781780409320 ; Assessment of Treatment Plant Performance and Water Quality Data: A Guide for Students, Researchers and Practitioners ; ebooks/book/777/Assessment-of-Treatment-Plant-Performance-and ; > 
+    au < testing ; exists ; 2020 ;  ; 9781789060850 ; Leak Detection: Technology and Implementation ; ebooks/book/778/Leak-DetectionTechnology-and-Implementation ; > 
+    au < testing ; exists ; 2019 ;  ; 9781789061246 ; Frontier Technology for Water Treatment and Pollutant Removal ; ebooks/book/773/Frontier-Technology-for-Water-Treatment-and ; > 
+    au < testing ; exists ; 2019 ;  ; 9781789060034 ; Microplastics in Water and Wastewater ; ebooks/book/769/Microplastics-in-Water-and-Wastewater ; > 
+    au < testing ; exists ; 2020 ;  ; 9781780409320 ; Assessment of Treatment Plant Performance and Water Quality Data: A Guide for Students, Researchers and Practitioners ; ebooks/book/777/Assessment-of-Treatment-Plant-Performance-and ; > 
 
     }
     {
