@@ -4,7 +4,7 @@
     name = University of Baghdad, College of Engineering ;
     info[contract] = 2022 ;
     info[back] = 2013 ;
-    info[tester] = 2 ;
+    info[tester] = 5 ;
     info[poller] = 3 ;
     info[platform] = OJS3. Open Journal Systems 3.3.0.13
   >
@@ -46,8 +46,8 @@
       au < manifest ; exists ; 2019 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2019 ; 20 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2020 ; 21 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2021 ; 22 ; 2021 ; >
-      au < testing ; exists ; 2022 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2022 ; 23 ; 2022 ; >
-      au < testing ; exists ; 2023 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2023 ; 24 ; 2023 ; >
+      au < ready ; exists ; 2022 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2022 ; 23 ; 2022 ; >
+      au < ready ; exists ; 2023 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2023 ; 24 ; 2023 ; >
 
   }
 
