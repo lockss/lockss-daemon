@@ -232,7 +232,7 @@ public class Heterocycles2023MetadataExtractorFactory
 
           String nthDivSelector = "div#mainContainer > div#mainContent > div.contentBox:nth-child(" + Integer.toString(i) + ")";
           String doiSelector = "div#mainContainer > div#mainContent > div.contentBox:nth-child(" + Integer.toString(i) + ") > div:nth-child(4)";
-          String articleSelector = "div#mainContainer > div#mainContent > div.contentBox:nth-child(" + Integer.toString(i) + ") > h5:nth-child(5) > b:nth-child(1)";
+          String articleSelector = "div#mainContainer > div#mainContent > div.contentBox:nth-child(" + Integer.toString(i) + ") > h5:nth-child(5)";
 
 
           String pdfSelector = "div#mainContainer > div#mainContent > div.contentBox:nth-child(" + Integer.toString(i) + ") > a";
@@ -263,7 +263,7 @@ public class Heterocycles2023MetadataExtractorFactory
           articleElement = doc.select(articleSelector);
 
           if (nthDivHolderElement == null) {
-            log.debug3("=========Processing DIV: Article div#" + Integer.toString(i) + ", for url = " + url + ", nthDivHolder = " + nthDivHolderElement.text());
+            log.debug3("=========Processing Empty DIV: Article div#" + Integer.toString(i) + ", for url = " + url + ", nthDivHolder = " + nthDivHolderElement.text());
           }
 
           if (doiElement != null) {
@@ -282,8 +282,13 @@ public class Heterocycles2023MetadataExtractorFactory
 
               if (articleElement != null) {
 
-                articleTitle = articleElement.text().replace("<span>", "").replace("</span>", "").trim().toLowerCase();
-                log.debug3("Raw article text: = " + articleTitle + ", url = " + url + ", div#" + Integer.toString(i));
+                String rawArticleTitle = articleElement.text();
+                articleTitle = articleElement.text().replace("<span>", "").replace("</span>", "")
+                        .replace("<i>", "").replace("</i>", "")
+                        .replace("<b>", "").replace("</b>", "")
+                        .replace("■", "")
+                        .trim().toLowerCase();
+                log.debug3("Raw article text: = " + rawArticleTitle + ", cleaned_articleTitle := " + articleTitle + ", url = " + url + ", div#" + Integer.toString(i));
                 if (articleTitle != null && articleTitle.length() > 0) {
                   am.put(MetadataField.FIELD_ARTICLE_TITLE, articleTitle.trim());
                 }
