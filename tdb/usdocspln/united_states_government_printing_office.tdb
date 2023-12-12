@@ -988,8 +988,8 @@
     au < released ; 2022 ; Economic Report of the President 2022 ; 2022 ; https://www.govinfo.gov/ >
 
     au < ready ; 2016 ; ERP 2016 ; 2016 ; https://www.govinfo.gov/ >
-    au < manifest ; 2017 ; ERP 2017 ; 2017 ; https://www.govinfo.gov/ >
-    au < manifest ; 2018 ; ERP 2018 ; 2018 ; https://www.govinfo.gov/ >
+    au < ready ; 2017 ; ERP 2017 ; 2017 ; https://www.govinfo.gov/ >
+    au < ready ; 2018 ; ERP 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < manifest ; 2023 ; ERP 2023 ; 2023 ; https://www.govinfo.gov/ >
 
   }
@@ -1078,11 +1078,11 @@
     au < released ; 2019 ; Federal Register 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Federal Register 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; Federal Register 2021 ; 2021 ; https://www.govinfo.gov/ >
-    au < manifest ; 2022 ; Federal Register 2022 ; 2022 ; https://www.govinfo.gov/ >
+    au < ready ; 2022 ; Federal Register 2022 ; 2022 ; https://www.govinfo.gov/ >
 
-    au < manifest ; 2016 ; FR 2016 ; 2016 ; https://www.govinfo.gov/ >
-    au < manifest ; 2017 ; FR 2017 ; 2017 ; https://www.govinfo.gov/ >
-    au < manifest ; 2018 ; FR 2018 ; 2018 ; https://www.govinfo.gov/ >
+    au < ready ; 2016 ; FR 2016 ; 2016 ; https://www.govinfo.gov/ >
+    au < ready ; 2017 ; FR 2017 ; 2017 ; https://www.govinfo.gov/ >
+    au < ready ; 2018 ; FR 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < manifest ; 2023 ; FR 2023 ; 2023 ; https://www.govinfo.gov/ >
 
   }
@@ -1111,9 +1111,9 @@
 
     param[collection_id] = HOB
 
-    au < manifest ; 2016 ; HOB 2016 ; 2016 ; https://www.govinfo.gov/ >
-    au < manifest ; 2017 ; HOB 2017 ; 2017 ; https://www.govinfo.gov/ >
-    au < manifest ; 2018 ; HOB 2018 ; 2018 ; https://www.govinfo.gov/ >
+    au < ready ; 2016 ; HOB 2016 ; 2016 ; https://www.govinfo.gov/ >
+    au < ready ; 2017 ; HOB 2017 ; 2017 ; https://www.govinfo.gov/ >
+    au < ready ; 2018 ; HOB 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; History of Bills 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; History of Bills 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; History of Bills 2021 ; 2021 ; https://www.govinfo.gov/ >
@@ -1140,7 +1140,7 @@
     au < doesNotExist ; 2018 ; House Rules and Manual 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; House Rules and Manual 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; House Rules and Manual 2021 ; 2021 ; https://www.govinfo.gov/ >
-    au < manifest ; 2013 ; HMAN 2013 ; 2013 ; https://www.govinfo.gov/ >
+    au < ready ; 2013 ; HMAN 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < manifest ; 2023 ; HMAN 2023 ; 2023 ; https://www.govinfo.gov/ >
 
   }
