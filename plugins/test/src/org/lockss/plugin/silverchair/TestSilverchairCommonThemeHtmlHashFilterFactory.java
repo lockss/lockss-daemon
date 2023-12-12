@@ -1,13 +1,18 @@
 package org.lockss.plugin.silverchair;
 
+import org.lockss.plugin.clockss.aiaa.TestAIAAXmlMetadataExtractor;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.StringInputStream;
 import org.lockss.util.Constants;
+import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import java.io.InputStream;
 
 public class TestSilverchairCommonThemeHtmlHashFilterFactory extends LockssTestCase {
+
+    private static final Logger log = Logger.getLogger(TestSilverchairCommonThemeHtmlHashFilterFactory.class);
+
     static String ENC = Constants.DEFAULT_ENCODING;
 
     private SilverchairCommonThemeHtmlHashFilterFactory fact;
@@ -177,11 +182,114 @@ public class TestSilverchairCommonThemeHtmlHashFilterFactory extends LockssTestC
         inA = fact.createFilteredInputStream(mau, new StringInputStream(articlePage),
                 Constants.DEFAULT_ENCODING);
         a = StringUtil.fromInputStream(inA);
-        System.out.println(a);
-        System.out.println(articlePageFiltered);
+        //System.out.println(a);
+        //System.out.println(articlePageFiltered);
         assertEquals(articlePageFiltered, a);
 
     }
 
+
+    String jsRawString ="<script>window.jQuery || document.write('<script src=\"//gsw.silverchair-cdn.com/Themes/Silver/app/js/jquery.3.4.1.min.js\" type=\"text/javascript\">\\x3C/script>')</script>";
+    String jsRawStringFiltered = "";
+
+
+    public void testFiltering2() throws Exception {
+        InputStream inA;
+        String a;
+
+        log.info("filtered jsString before: " + jsRawString);
+
+        // nothing kept
+        inA = fact.createFilteredInputStream(mau, new StringInputStream(jsRawString),
+                Constants.DEFAULT_ENCODING);
+        a = StringUtil.fromInputStream(inA);
+        log.info("filtered jsString after: " + a);
+        assertEquals(jsRawStringFiltered, a);
+
+    }
+
+    //The javascript code from url: https://pubs.geoscienceworld.org/books/book/2082/NEWADVANCES-IN-DEVONIAN-CARBONATES-OUTCROP-ANALOGS
+    // pass the test
+    String jsRawString1 ="" +
+            "<script type=\"text/javascript\">\n" +
+            "\n" +
+            "        /*******************************************************************************\n" +
+            "         * JS here is only being used to assign variables from values in the model\n" +
+            "         * logic should be implemented in external JS files, like client.script.js\n" +
+            "         *******************************************************************************/\n" +
+            "\n" +
+            "        var SCM = SCM || {};\n" +
+            "        var accessIcons = [{\"id\":114313785,\"icon\":\"icon-availability_unlocked\",\"title\":\"Free\"},{\"id\":114313786,\"icon\":\"icon-availability_unlocked\",\"title\":\"Available\"},{\"id\":114313838,\"icon\":\"icon-availability_unlocked\",\"title\":\"Available\"},{\"id\":114314128,\"icon\":\"icon-availability_unlocked\",\"title\":\"Available\"},{\"id\":114314364,\"icon\":\"icon-availability_unlocked\",\"title\":\"Available\"},{\"id\":114314549,\"icon\":\"icon-availability_unlocked\",\"title\":\"Available\"},{\"id\":114314643,\"icon\":\"icon-availability_unlocked\",\"title\":\"Available\"},{\"id\":114314728,\"icon\":\"icon-availability_unlocked\",\"title\":\"Available\"},{\"id\":114314869,\"icon\":\"icon-availability_unlocked\",\"title\":\"Available\"},{\"id\":114314879,\"icon\":\"icon-availability_unlocked\",\"title\":\"Available\"},{\"id\":114315003,\"icon\":\"icon-availability_unlocked\",\"title\":\"Available\"},{\"id\":114315180,\"icon\":\"icon-availability_unlocked\",\"title\":\"Available\"},{\"id\":114315261,\"icon\":\"icon-availability_unlocked\",\"title\":\"Available\"},{\"id\":114315317,\"icon\":\"icon-availability_unlocked\",\"title\":\"Available\"},{\"id\":114315429,\"icon\":\"icon-availability_unlocked\",\"title\":\"Available\"},{\"id\":114315609,\"icon\":\"icon-availability_unlocked\",\"title\":\"Available\"},{\"id\":0,\"icon\":\"icon-availability_unlocked\",\"title\":\"Available\"}];\n" +
+            "        if (SCM.AccessIcons) {\n" +
+            "            SCM.AccessIcons = SCM.AccessIcons.concat(accessIcons);\n" +
+            "        } else {\n" +
+            "            SCM.AccessIcons = accessIcons;\n" +
+            "        }\n" +
+            "        var accessAttributes =  [{\"id\":114313785,\"availableforpurchase\":false},{\"id\":114313786,\"availableforpurchase\":false},{\"id\":114313838,\"availableforpurchase\":false},{\"id\":114314128,\"availableforpurchase\":false},{\"id\":114314364,\"availableforpurchase\":false},{\"id\":114314549,\"availableforpurchase\":false},{\"id\":114314643,\"availableforpurchase\":false},{\"id\":114314728,\"availableforpurchase\":false},{\"id\":114314869,\"availableforpurchase\":false},{\"id\":114314879,\"availableforpurchase\":false},{\"id\":114315003,\"availableforpurchase\":false},{\"id\":114315180,\"availableforpurchase\":false},{\"id\":114315261,\"availableforpurchase\":false},{\"id\":114315317,\"availableforpurchase\":false},{\"id\":114315429,\"availableforpurchase\":false},{\"id\":114315609,\"availableforpurchase\":false},{\"id\":0,\"availableforpurchase\":false}];\n" +
+            "        if (SCM.AccessAttributes) {\n" +
+            "            SCM.AccessAttributes = SCM.AccessAttributes.concat(accessAttributes);\n" +
+            "        } else {\n" +
+            "            SCM.AccessAttributes = accessAttributes;\n" +
+            "        }\n" +
+            "        \n" +
+            "    </script>";
+    String jsRawStringFiltered1 = "";
+
+    public void testFilteringScript1() throws Exception {
+        InputStream inA;
+        String a;
+
+        //log.info("filtered jsString1 before: " + jsRawString1);
+
+        // nothing kept
+        inA = fact.createFilteredInputStream(mau, new StringInputStream(jsRawString1),
+                Constants.DEFAULT_ENCODING);
+        a = StringUtil.fromInputStream(inA);
+        //log.info("filtered jsString after: " + a);
+        assertEquals(jsRawStringFiltered1, a);
+
+    }
+
+    //The javascript code from url: https://pubs.geoscienceworld.org/gsa/books/monograph/2297/Revising-the-Revisions-James-Hutton-s-Reputation
+    // pass the test
+    String jsRawString2 = "" +
+            "<script type=\"text/javascript\">\n" +
+            "\n" +
+            "        /*******************************************************************************\n" +
+            "         * JS here is only being used to assign variables from values in the model\n" +
+            "         * logic should be implemented in external JS files, like client.script.js\n" +
+            "         *******************************************************************************/\n" +
+            "\n" +
+            "        var SCM = SCM || {};\n" +
+            "        var accessIcons = [{\"id\":128386309,\"icon\":\"icon-availability_unlocked\",\"title\":\"Available\"},{\"id\":128386312,\"icon\":\"icon-availability_open\",\"title\":\"Open Access\"},{\"id\":128386315,\"icon\":\"icon-availability_unlocked\",\"title\":\"Available\"},{\"id\":128386318,\"icon\":\"icon-availability_unlocked\",\"title\":\"Available\"},{\"id\":128506320,\"icon\":\"icon-availability_unlocked\",\"title\":\"Free\"},{\"id\":0,\"icon\":\"icon-availability_unlocked\",\"title\":\"Available\"}];\n" +
+            "        if (SCM.AccessIcons) {\n" +
+            "            SCM.AccessIcons = SCM.AccessIcons.concat(accessIcons);\n" +
+            "        } else {\n" +
+            "            SCM.AccessIcons = accessIcons;\n" +
+            "        }\n" +
+            "        var accessAttributes =  [{\"id\":128386309,\"availableforpurchase\":false},{\"id\":128386312,\"availableforpurchase\":false},{\"id\":128386315,\"availableforpurchase\":false},{\"id\":128386318,\"availableforpurchase\":false},{\"id\":128506320,\"availableforpurchase\":false},{\"id\":0,\"availableforpurchase\":false}];\n" +
+            "        if (SCM.AccessAttributes) {\n" +
+            "            SCM.AccessAttributes = SCM.AccessAttributes.concat(accessAttributes);\n" +
+            "        } else {\n" +
+            "            SCM.AccessAttributes = accessAttributes;\n" +
+            "        }\n" +
+            "        \n" +
+            "    </script>";
+    String jsRawStringFiltered2 = "";
+
+    public void testFilteringScript2() throws Exception {
+        InputStream inA;
+        String a;
+
+        //log.info("filtered jsString2 before: " + jsRawString2);
+
+        // nothing kept
+        inA = fact.createFilteredInputStream(mau, new StringInputStream(jsRawString2),
+                Constants.DEFAULT_ENCODING);
+        a = StringUtil.fromInputStream(inA);
+        //log.info("filtered jsString2 after: " + a);
+        assertEquals(jsRawStringFiltered2, a);
+
+    }
 }
 
