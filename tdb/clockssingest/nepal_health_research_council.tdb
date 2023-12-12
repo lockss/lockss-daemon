@@ -5,7 +5,7 @@
     info[contract] = 2023 ;
     info[back] = 2002 ;
     info[min_year] = 2002 ;
-    info[tester] = 8 ;
+    info[tester] = 2 ;
     info[platform] = OJS3
   >
 
@@ -46,8 +46,8 @@
       au < manifest ; exists ; 2019 ; Journal of Nepal Health Research Council Volume 2019 ; 2 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Journal of Nepal Health Research Council Volume 2020 ; 3 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Journal of Nepal Health Research Council Volume 2021 ; 4 ; 2021 ; >
-      au < ready ; exists ; 2022 ; Journal of Nepal Health Research Council Volume 2022 ; 5 ; 2022 ; >
-      au < ready ; exists ; 2023 ; Journal of Nepal Health Research Council Volume 2023 ; 6 ; 2023 ; >
+      au < testing ; exists ; 2022 ; Journal of Nepal Health Research Council Volume 2022 ; 5 ; 2022 ; >
+      au < testing ; exists ; 2023 ; Journal of Nepal Health Research Council Volume 2023 ; 6 ; 2023 ; >
 
   }
 
