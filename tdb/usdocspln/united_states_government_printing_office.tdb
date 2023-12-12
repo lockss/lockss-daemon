@@ -380,10 +380,6 @@
 
 
   {
-
-
-
-
     title <
       name = Congressional Bills
     >
@@ -399,6 +395,19 @@
     au < released ; 2021 ; Congressional Bills 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < ready ; 2022 ; Congressional Bills 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < manifest ; 2023 ; Congressional Bills 2023 ; 2023 ; https://www.govinfo.gov/ >
+
+  }
+
+  {
+    title <
+      name = Congressionally Mandated Records
+    >
+
+    param[collection_id] = CMR
+
+    au < manifest ; 2021 ; CMR 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < manifest ; 2022 ; CMR 2022 ; 2022 ; https://www.govinfo.gov/ >
+    au < manifest ; 2023 ; CMR 2023 ; 2023 ; https://www.govinfo.gov/ >
 
   }
 
