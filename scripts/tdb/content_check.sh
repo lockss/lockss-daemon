@@ -147,7 +147,7 @@ echo "----------------------"
 #
 # Find plugin names with "Clockss" in the usdocs title database
 echo "----------------------"
-./scripts/tdb/tdbout -t publisher,name,plugin -Q 'plugin ~ "Clockss" and plugin !~ "needs"' tdb/usdocspln/{,*/}*.tdb
+./scripts/tdb/tdbout -t publisher,name,plugin -Q 'plugin ~ "Clockss" and plugin !~ "needs"' tdb/usdocspln/*.tdb
 echo " "
 
 #
