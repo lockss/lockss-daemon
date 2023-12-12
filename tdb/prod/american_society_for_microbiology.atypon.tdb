@@ -1016,6 +1016,59 @@
 
   {
       title <
+        name = mSphere ;
+        issn = 2379-5042 ;
+        issnl = 2379-5042
+      >
+
+      param[journal_id] = msphere
+      #continues = 1556-6811, 1535-9778
+
+      au < doNotProcess ; 2016 ; mSphere Volume 1 ; 1 >
+      au < doNotProcess ; 2017 ; mSphere Volume 2 ; 2 >
+      au < doNotProcess ; 2018 ; mSphere Volume 3 ; 3 >
+      au < released ; 2019 ; mSphere Volume 4 ; 4 >
+      au < released ; 2020 ; mSphere Volume 5 ; 5 >
+      au < released ; 2021 ; mSphere Volume 6 ; 6 >
+      au < released ; 2022 ; mSphere Volume 7 ; 7 >
+      au < manifest ; 2023 ; mSphere Volume 8 ; 8 >
+
+  }
+
+  {
+      title <
+        name = mSystems ;
+        issn = 2379-5077 ;
+        issnl = 2379-5077
+      >
+
+      param[journal_id] = msystems
+
+      au < doNotProcess ; 2016 ; mSystems Volume 1 ; 1 >
+      au < doNotProcess ; 2017 ; mSystems Volume 2 ; 2 >
+      au < doNotProcess ; 2018 ; mSystems Volume 3 ; 3 >
+      au < released ; 2019 ; mSystems Volume 4 ; 4 >
+      au < released ; 2020 ; mSystems Volume 5 ; 5 >
+      au < released ; 2021 ; mSystems Volume 6 ; 6 >
+      au < released ; 2022 ; mSystems Volume 7 ; 7 >
+      au < manifest ; 2023 ; mSystems Volume 8 ; 8 >
+
+  }
+
+}
+{
+
+  publisher <
+    name = Taylor & Francis ;
+    info[platform] = Atypon on GLN only. Source for clockss
+  >
+
+    plugin = org.lockss.plugin.atypon.asm.AsmPlugin
+    param[base_url] = https://journals.asm.org/
+    implicit < status ; year ; name ; param[volume_name] >
+
+  {
+      title <
         name = Molecular and Cellular Biology ;
         issn = 0270-7306 ;
         eissn = 1098-5549 ;
@@ -1070,45 +1123,5 @@
 
   }
 
-  {
-      title <
-        name = mSphere ;
-        issn = 2379-5042 ;
-        issnl = 2379-5042
-      >
-
-      param[journal_id] = msphere
-      #continues = 1556-6811, 1535-9778
-
-      au < doNotProcess ; 2016 ; mSphere Volume 1 ; 1 >
-      au < doNotProcess ; 2017 ; mSphere Volume 2 ; 2 >
-      au < doNotProcess ; 2018 ; mSphere Volume 3 ; 3 >
-      au < released ; 2019 ; mSphere Volume 4 ; 4 >
-      au < released ; 2020 ; mSphere Volume 5 ; 5 >
-      au < released ; 2021 ; mSphere Volume 6 ; 6 >
-      au < released ; 2022 ; mSphere Volume 7 ; 7 >
-      au < manifest ; 2023 ; mSphere Volume 8 ; 8 >
-
-  }
-
-  {
-      title <
-        name = mSystems ;
-        issn = 2379-5077 ;
-        issnl = 2379-5077
-      >
-
-      param[journal_id] = msystems
-
-      au < doNotProcess ; 2016 ; mSystems Volume 1 ; 1 >
-      au < doNotProcess ; 2017 ; mSystems Volume 2 ; 2 >
-      au < doNotProcess ; 2018 ; mSystems Volume 3 ; 3 >
-      au < released ; 2019 ; mSystems Volume 4 ; 4 >
-      au < released ; 2020 ; mSystems Volume 5 ; 5 >
-      au < released ; 2021 ; mSystems Volume 6 ; 6 >
-      au < released ; 2022 ; mSystems Volume 7 ; 7 >
-      au < manifest ; 2023 ; mSystems Volume 8 ; 8 >
-
-  }
 
 }
