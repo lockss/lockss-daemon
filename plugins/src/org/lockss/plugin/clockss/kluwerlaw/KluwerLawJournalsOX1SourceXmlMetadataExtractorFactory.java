@@ -90,15 +90,14 @@ public class KluwerLawJournalsOX1SourceXmlMetadataExtractorFactory extends Sourc
 
 
       String date = thisAM.get(MetadataField.FIELD_DATE);
-      log.info("raw date = " + date);
 
-      String newDate = date.substring(4,6) + date.substring(6,8) + date.substring(0,4);
+      if (date != null) {
 
-      log.info("raw date = " + date + ", new_date = " + newDate);
-      thisAM.replace(MetadataField.FIELD_DATE, newDate);
+        String newDate = date.substring(4, 6) + "/" + date.substring(6, 8) + "/" + date.substring(0, 4);
 
-
+        log.debug3("raw date = " + date + ", new_date = " + newDate);
+        thisAM.replace(MetadataField.FIELD_DATE, newDate);
+      }
     }
-
   }
 }
