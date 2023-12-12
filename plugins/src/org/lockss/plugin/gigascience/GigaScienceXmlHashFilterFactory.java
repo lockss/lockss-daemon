@@ -94,21 +94,21 @@ public class GigaScienceXmlHashFilterFactory implements FilterFactory{
             }
 
             if(sampleAttributesList != null && sampleAttributesList.getLength() != 0){
-                if(sampleAttributesList.getLength() > 1){
-                    throw new PluginException("There should only be one sample_attributes tag in document.");
+                for(int i=0; i < sampleAttributesList.getLength(); i++){
+                    Node sampleAttributesNode = sampleAttributesList.item(i);
+                    NodeList attributeNodes = sampleAttributesNode.getChildNodes();
+                    //logger.debug3(attributeNodes. getTextContent());
+                    List<Node> sortedAttributeNodes = sortAttributeNodes(attributeNodes);
+
+                    for(int j=0; j < attributeNodes.getLength(); j++){
+                        sampleAttributesNode.removeChild(attributeNodes.item(i));
+                    }
+
+                    for(Node sortedAttributeNode:sortedAttributeNodes){
+                        sampleAttributesNode.appendChild(sortedAttributeNode);
+                    }
                 }
 
-                Node sampleAttributesNode = sampleAttributesList.item(0);
-                NodeList attributeNodes = doc.getElementsByTagName("attribute");
-                List<Element> sortedAttributeNodes = sortAttributeNodes(attributeNodes);
-
-                for(int i=0; i < attributeNodes.getLength(); i++){
-                    sampleAttributesNode.removeChild(attributeNodes.item(i));
-                }
-
-                for(Element sortedAttributeNode:sortedAttributeNodes){
-                    sampleAttributesNode.appendChild(sortedAttributeNode);
-                }
             }
 
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
@@ -139,14 +139,15 @@ public class GigaScienceXmlHashFilterFactory implements FilterFactory{
         });
         return sortedNodes;
     }
-    private static List<Element> sortAttributeNodes(NodeList nodes) {
-        List<Element> sortedNodes = new ArrayList<Element>();
+    private static List<Node> sortAttributeNodes(NodeList nodes) {
+        List<Node> sortedNodes = new ArrayList<Node>();
         for (int i = 0; i < nodes.getLength(); i++) {
-            sortedNodes.add((Element) nodes.item(i));
+            logger.debug3(nodes.item(i).getTextContent());
+            sortedNodes.add(nodes.item(i));
         }
         
-        Collections.sort(sortedNodes, new Comparator<Element>() {
-            public int compare(Element o1, Element o2) {
+        Collections.sort(sortedNodes, new Comparator<Node>() {
+            public int compare(Node o1, Node o2) {
                 return o1.getTextContent().compareTo(o2.getTextContent());
             }
         });

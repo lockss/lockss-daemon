@@ -82,13 +82,6 @@ public class TestSilverchairCommonThemeHtmlHashFilterFactory extends LockssTestC
                     "                    </div>\n" +
                     "                </div>\n" +
                     "            </div>\n" +
-                    "            <script type=\"text/javascript\">\n"+
-                    "            /*******************************************************************************\n"+
-                    "             * JS here is only being used to assign variables from values in the model\n"+
-                    "             * logic should be implemented in external JS files, like client.script.js\n"+
-                    "            *******************************************************************************/\n"+
-                    "            var SCM = SCM || {};\n"+
-                    "             </script>\n"+
                     "            <div class=\"aside\">\n" +
                     "                    </div>\n" +
                     "                </div>\n" +
@@ -159,7 +152,6 @@ public class TestSilverchairCommonThemeHtmlHashFilterFactory extends LockssTestC
             "                    </div>\n" +
             "                </div>\n" +
             "            </div>\n" +
-            "            \n"+
             "            <div class=\"aside\">\n" +
             "                    </div>\n" +
             "                </div>\n" +
@@ -185,7 +177,6 @@ public class TestSilverchairCommonThemeHtmlHashFilterFactory extends LockssTestC
         //System.out.println(a);
         //System.out.println(articlePageFiltered);
         assertEquals(articlePageFiltered, a);
-
     }
 
 

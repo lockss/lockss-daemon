@@ -47,23 +47,44 @@ public class TestGigaScienceXmlHashFilterFactory extends LockssTestCase{
                             "<dataset id='2082' doi='100661'>"+
                             "</dataset>"+
                             "<samples>"+
-                                "<sample_attributes>"+
-                                    "<attribute>"+
-                                        "<key>geographic location (latitude)</key>"+
-                                        "<value>21.54</value>"+
-                                        "<unit id=''/>"+
-                                    "</attribute>"+
-                                    "<attribute>"+
-                                        "<key>Description</key>"+
-                                        "<value>DNA extracted from buds of two-year-old gynoecious Jatropha curcas for HiC sequencing, biological replicates 1</value>"+
-                                        "<unit id=''/>"+
-                                    "</attribute>"+
-                                    "<attribute>"+
-                                        "<key>Analyte type</key>"+
-                                        "<value>DNA</value>"+
-                                        "<unit id=''/>"+
-                                    "</attribute>"+
-                                "</sample_attributes>"+
+                                "<sample>"+
+                                    "<sample_attributes>"+
+                                        "<attribute>"+
+                                            "<key>Description</key>"+
+                                            "<value>DNA extracted from buds of two-year-old gynoecious Jatropha curcas for HiC sequencing, biological replicates 1</value>"+
+                                            "<unit id=\"\"/>"+
+                                        "</attribute>"+
+                                        "<attribute>"+
+                                            "<key>Analyte type</key>"+
+                                            "<value>DNA</value>"+
+                                            "<unit id=\"\"/>"+
+                                        "</attribute>"+
+                                        "<attribute>"+
+                                            "<key>geographic location (latitude)</key>"+
+                                            "<value>21.54</value>"+
+                                            "<unit id=\"\"/>"+
+                                        "</attribute>"+
+                                    "</sample_attributes>"+
+                                "</sample>"+
+                                "<sample>"+
+                                    "<sample_attributes>"+
+                                        "<attribute>"+
+                                            "<key>isolate</key>"+
+                                            "<value>not provided</value>"+
+                                            "<unit id=\"\"/>"+
+                                        "</attribute>"+
+                                        "<attribute>"+
+                                            "<key>Description</key>"+
+                                            "<value>random stuff</value>"+
+                                            "<unit id=\"\"/>"+
+                                        "</attribute>"+
+                                        "<attribute>"+
+                                            "<key>geographic location (latitude)</key>"+
+                                            "<value>31</value>"+
+                                            "<unit id=\"\"/>"+
+                                        "</attribute>"+
+                                    "</sample_attributes>"+
+                                "</sample>"+
                              "</samples>"+
                             "<experiments> </experiments>"+
                             "<files>"+
@@ -99,23 +120,44 @@ public class TestGigaScienceXmlHashFilterFactory extends LockssTestCase{
                         "<gigadb_entry>"+
                             "<dataset doi=\"100661\" id=\"2082\"/>"+
                             "<samples>"+
-                                "<sample_attributes>"+
-                                    "<attribute>"+
-                                        "<key>Analyte type</key>"+
-                                        "<value>DNA</value>"+
-                                        "<unit id=\"\"/>"+
-                                    "</attribute>"+
-                                    "<attribute>"+
-                                        "<key>Description</key>"+
-                                        "<value>DNA extracted from buds of two-year-old gynoecious Jatropha curcas for HiC sequencing, biological replicates 1</value>"+
-                                        "<unit id=\"\"/>"+
-                                    "</attribute>"+
-                                    "<attribute>"+
-                                        "<key>geographic location (latitude)</key>"+
-                                        "<value>21.54</value>"+
-                                        "<unit id=\"\"/>"+
-                                    "</attribute>"+
-                                "</sample_attributes>"+
+                                "<sample>"+
+                                    "<sample_attributes>"+
+                                        "<attribute>"+
+                                            "<key>Analyte type</key>"+
+                                            "<value>DNA</value>"+
+                                            "<unit id=\"\"/>"+
+                                        "</attribute>"+
+                                        "<attribute>"+
+                                            "<key>Description</key>"+
+                                            "<value>DNA extracted from buds of two-year-old gynoecious Jatropha curcas for HiC sequencing, biological replicates 1</value>"+
+                                            "<unit id=\"\"/>"+
+                                        "</attribute>"+
+                                        "<attribute>"+
+                                            "<key>geographic location (latitude)</key>"+
+                                            "<value>21.54</value>"+
+                                            "<unit id=\"\"/>"+
+                                        "</attribute>"+
+                                    "</sample_attributes>"+
+                                "</sample>"+
+                                "<sample>"+
+                                    "<sample_attributes>"+
+                                        "<attribute>"+
+                                            "<key>Description</key>"+
+                                            "<value>random stuff</value>"+
+                                            "<unit id=\"\"/>"+
+                                        "</attribute>"+
+                                        "<attribute>"+
+                                            "<key>geographic location (latitude)</key>"+
+                                            "<value>31</value>"+
+                                            "<unit id=\"\"/>"+
+                                        "</attribute>"+
+                                        "<attribute>"+
+                                            "<key>isolate</key>"+
+                                            "<value>not provided</value>"+
+                                            "<unit id=\"\"/>"+
+                                        "</attribute>"+
+                                    "</sample_attributes>"+
+                                "</sample>"+
                             "</samples>"+
                             "<experiments> </experiments>"+
                             "<files>"+
@@ -142,7 +184,6 @@ public class TestGigaScienceXmlHashFilterFactory extends LockssTestCase{
                             "<samples> </samples>"+
                             "<experiments> </experiments>"+
                         "</gigadb_entry>";
-                
         assertTrue(result.equals(correctPage));
         assertTrue(resultNoFiles.equals(correctPageNoFiles));
     }
