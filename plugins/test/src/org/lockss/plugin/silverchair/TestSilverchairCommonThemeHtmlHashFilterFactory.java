@@ -197,13 +197,13 @@ public class TestSilverchairCommonThemeHtmlHashFilterFactory extends LockssTestC
         InputStream inA;
         String a;
 
-        log.info("filtered jsString before: " + jsRawString);
+        //log.info("filtered jsString before: " + jsRawString);
 
         // nothing kept
         inA = fact.createFilteredInputStream(mau, new StringInputStream(jsRawString),
                 Constants.DEFAULT_ENCODING);
         a = StringUtil.fromInputStream(inA);
-        log.info("filtered jsString after: " + a);
+        //log.info("filtered jsString after: " + a);
         assertEquals(jsRawStringFiltered, a);
 
     }
@@ -251,7 +251,7 @@ public class TestSilverchairCommonThemeHtmlHashFilterFactory extends LockssTestC
     }
 
     //The javascript code from url: https://pubs.geoscienceworld.org/gsa/books/monograph/2297/Revising-the-Revisions-James-Hutton-s-Reputation
-    // pass the test
+    // pass the test, from content03 machine
     String jsRawString2 = "" +
             "<script type=\"text/javascript\">\n" +
             "\n" +
@@ -289,6 +289,49 @@ public class TestSilverchairCommonThemeHtmlHashFilterFactory extends LockssTestC
         a = StringUtil.fromInputStream(inA);
         //log.info("filtered jsString2 after: " + a);
         assertEquals(jsRawStringFiltered2, a);
+
+    }
+
+    //The javascript code from url: https://pubs.geoscienceworld.org/gsa/books/monograph/2297/Revising-the-Revisions-James-Hutton-s-Reputation
+    // pass the test, from content01 machine
+
+    String jsRawString3 = "" +
+            "<script type=\"text/javascript\">\n" +
+            "\n" +
+            "        /*******************************************************************************\n" +
+            "         * JS here is only being used to assign variables from values in the model\n" +
+            "         * logic should be implemented in external JS files, like client.script.js\n" +
+            "         *******************************************************************************/\n" +
+            "\n" +
+            "        var SCM = SCM || {};\n" +
+            "        var accessIcons = [{\"id\":0,\"icon\":\"icon-availability_unlocked\",\"title\":\"Available\"},{\"id\":128386309,\"icon\":\"icon-availability_unlocked\",\"title\":\"Available\"},{\"id\":128386312,\"icon\":\"icon-availability_open\",\"title\":\"Open Access\"},{\"id\":128386315,\"icon\":\"icon-availability_unlocked\",\"title\":\"Available\"},{\"id\":128386318,\"icon\":\"icon-availability_unlocked\",\"title\":\"Available\"},{\"id\":128506320,\"icon\":\"icon-availability_unlocked\",\"title\":\"Free\"}];\n" +
+            "        if (SCM.AccessIcons) {\n" +
+            "            SCM.AccessIcons = SCM.AccessIcons.concat(accessIcons);\n" +
+            "        } else {\n" +
+            "            SCM.AccessIcons = accessIcons;\n" +
+            "        }\n" +
+            "        var accessAttributes =  [{\"id\":0,\"availableforpurchase\":false},{\"id\":128386309,\"availableforpurchase\":false},{\"id\":128386312,\"availableforpurchase\":false},{\"id\":128386315,\"availableforpurchase\":false},{\"id\":128386318,\"availableforpurchase\":false},{\"id\":128506320,\"availableforpurchase\":false}];\n" +
+            "        if (SCM.AccessAttributes) {\n" +
+            "            SCM.AccessAttributes = SCM.AccessAttributes.concat(accessAttributes);\n" +
+            "        } else {\n" +
+            "            SCM.AccessAttributes = accessAttributes;\n" +
+            "        }\n" +
+            "        \n" +
+            "    </script>";
+    String jsRawStringFiltered3 = "";
+
+    public void testFilteringScript3() throws Exception {
+        InputStream inA;
+        String a;
+
+        //log.info("filtered jsString3 before: " + jsRawString3);
+
+        // nothing kept
+        inA = fact.createFilteredInputStream(mau, new StringInputStream(jsRawString3),
+                Constants.DEFAULT_ENCODING);
+        a = StringUtil.fromInputStream(inA);
+        //log.info("filtered jsString3 after: " + a);
+        assertEquals(jsRawStringFiltered3, a);
 
     }
 }
