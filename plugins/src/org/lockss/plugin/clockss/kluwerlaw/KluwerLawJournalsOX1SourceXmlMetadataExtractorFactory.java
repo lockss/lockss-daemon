@@ -35,8 +35,10 @@ package org.lockss.plugin.clockss.kluwerlaw;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.clockss.Onix3BooksSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
@@ -80,6 +82,22 @@ public class KluwerLawJournalsOX1SourceXmlMetadataExtractorFactory extends Sourc
       returnList.add(pdfName);
       returnList.add(pdfNameOld);
       return returnList;
+    }
+
+    @Override
+    protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
+                                   CachedUrl cu, ArticleMetadata thisAM) {
+
+
+      String date = thisAM.get(MetadataField.FIELD_DATE);
+      log.info("raw date = " + date);
+
+      String newDate = date.substring(4,6) + date.substring(6,8) + date.substring(0,4);
+
+      log.info("raw date = " + date + ", new_date = " + newDate);
+      thisAM.replace(MetadataField.FIELD_DATE, newDate);
+
+
     }
 
   }
