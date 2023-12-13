@@ -1,5 +1,4 @@
 {
-
   publisher <
     name = European Publisher ;
     info[contract] = 2019 ;
@@ -18,7 +17,6 @@
     implicit < status ; status2 ; year ; name ; param[directory] >
 
     {
-
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/futureacademy-released/
 
       au < zapped ; finished ; 2019 ; European Publisher Source Content 2019 ; 2019 >
@@ -26,13 +24,12 @@
       au < readySource ; finished ; 2021 ; European Publisher Source Content 2021 ; 2021 >
       au < readySource ; finished ; 2022 ; European Publisher Source Content 2022 ; 2022 >
       #No more AUs. Moved to https.
-
     }
     {
-
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/futureacademy-released/
 
       au < readySource ; crawling ; 2023 ; European Publisher Source Content 2023 ; 2023 >
+      au < expected ; exists ; 2024 ; European Publisher Source Content 2024 ; 2024 >
 
     }
 

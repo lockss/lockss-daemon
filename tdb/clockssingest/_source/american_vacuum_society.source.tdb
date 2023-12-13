@@ -1,24 +1,20 @@
 {
-
   publisher <
     name = American Vacuum Society ;
     info[contract] = 2015 ;
     info[tester] = S ;
     info[platform] = Source
   >
+    hidden[proxy] = DIRECT
+    provider = American Institute of Physics
 
   {
-
     title <
        name = American Vacuum Society Source Content
     >
-    hidden[proxy] = DIRECT
-
-    {
-
-      provider = American Institute of Physics
       plugin = org.lockss.plugin.clockss.avs.ClockssAmericanVacuumSocietySourcePlugin
       implicit < status ; status2 ; year ; name ; param[year] >
+
       {
         param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/avsjats-released/
 
@@ -30,15 +26,14 @@
         au < readySource ; finished ; 2021 ; American Vacuum Society Source Content 2021 ; 2021 >
         au < readySource ; finished ; 2022 ; American Vacuum Society Source Content 2022 ; 2022 >
         #No more AUs.  Moved to https.
-
       }
       {
         param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/avsjats-released/
 
         au < readySource ; crawling ; 2023 ; American Vacuum Society Source Content 2023 ; 2023 >
+        au < expected ; exists ; 2024 ; American Vacuum Society Source Content 2024 ; 2024 >
 
       }
-    }
 
   }
 

@@ -1,5 +1,4 @@
 {
-
   publisher <
     name = Canadian Dental Association ;
     info[contract] = 2018 ;
@@ -9,7 +8,6 @@
     hidden[proxy] = DIRECT
 
   {
-
     title <
        name = Journal of the Canadian Dental Association ;
        issn = 1488-2159
@@ -18,7 +16,6 @@
     plugin = org.lockss.plugin.clockss.canadiandental.ClockssCanadianDentalAssocSourcePlugin
     implicit < status ; status2 ; year ; name ; param[directory] >
     {
-
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/cda-released/
 
       au < zapped ; finished ; 2018 ; Journal of the Canadian Dental Association Source Content 2018 ; 2018 >
@@ -26,13 +23,12 @@
       au < readySource ; finished ; 2021 ; Journal of the Canadian Dental Association Source Content 2021 ; 2021 >
       au < readySource ; finished ; 2022 ; Journal of the Canadian Dental Association Source Content 2022 ; 2022 >
       #No more AUs. Moved to https.
-
     }
     {
-
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/cda-released/
 
       au < readySource ; crawling ; 2023 ; Journal of the Canadian Dental Association Source Content 2023 ; 2023 >
+      au < expected ; exists ; 2024 ; Journal of the Canadian Dental Association Source Content 2024 ; 2024 >
 
     }
   }

@@ -22,7 +22,8 @@
       implicit < status ; status2 ; year ; name ; param[directory] >
       #Content sold to new publisher.
 
-      au < readySource ; crawling ; 2023 ; European Cells and Materials Source Content 2023 ; 2023_01 >
+      au < readySource ; crawling ; 2023 ; European Cells and Materials Source Content 2023_01 ; 2023_01 >
+      au < expected ; exists ; 2024 ; European Cells and Materials Source Content 2024_01 ; 2024_01 >
 
     }
 
@@ -32,6 +33,7 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/aofoundation-released/
 
       au < readySource ; crawling ; 2023 ; European Cells and Materials Source Content 2023 ; 2023 >
+      #No more AUs.  Publisher changed.
     }
 
     {
@@ -47,7 +49,6 @@
       au < readySource ; finished ; 2021 ; European Cells and Materials Source Content 2021 ; 2021 >
       au < readySource ; finished ; 2022 ; European Cells and Materials Source Content 2022 ; 2022 >
       #No more AUs.  Moved to https.
-
     }
 
   }

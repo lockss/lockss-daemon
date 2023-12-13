@@ -1,5 +1,4 @@
 {
-
   publisher <
     name = Chinese University of Hong Kong ;
     info[contract] = 2021 ;
@@ -7,36 +6,38 @@
     info[platform] = Source/FTP
   >
   hidden[proxy] = DIRECT
-  implicit < status ; status2 ; year ; name ; param[directory] >
-  param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/cuhk-released/
 
   {
 
     title <
       name = Chinese University of Hong Kong Source Content
     >
+    implicit < status ; status2 ; year ; name ; param[directory] >
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/cuhk-released/
 
     {
-    #Not Zipped
-    plugin = org.lockss.plugin.clockss.chineseuniversityhongkong.ClockssCUHKSourcePlugin
+      #Not Zipped
+      plugin = org.lockss.plugin.clockss.chineseuniversityhongkong.ClockssCUHKSourcePlugin
 
-    au < readySource ; crawling ; 2023 ; Chinese University of Hong Kong Source Content 2023_01 ; 2023_01 >
+      au < readySource ; crawling ; 2023 ; Chinese University of Hong Kong Source Content 2023_01 ; 2023_01 >
+      au < expected ; exists ; 2024 ; Chinese University of Hong Kong Source Content 2024_01 ; 2024_01 >
 
     }
 
     {
-    #Zipped
-    plugin = org.lockss.plugin.clockss.chineseuniversityhongkong.ClockssChineseUniversityHongKongSourcePlugin
+      #Zipped
+      plugin = org.lockss.plugin.clockss.chineseuniversityhongkong.ClockssChineseUniversityHongKongSourcePlugin
 
-    au < readySource ; crawling ; 2023 ; Chinese University of Hong Kong Source Content 2023_02 ; 2023_02 >
+      au < readySource ; crawling ; 2023 ; Chinese University of Hong Kong Source Content 2023_02 ; 2023_02 >
+      au < expected ; exists ; 2024 ; Chinese University of Hong Kong Source Content 2024_02 ; 2024_02 >
 
     }
 
     {
-     plugin = org.lockss.plugin.clockss.chineseuniversityhongkong.ClockssChineseUniversityHongKongSourcePlugin
+      plugin = org.lockss.plugin.clockss.chineseuniversityhongkong.ClockssChineseUniversityHongKongSourcePlugin
 
-     au < readySource ; finished ; 2022 ; Chinese University of Hong Kong Source Content 2022_01 ; 2022_01 >
-     #No more AUs. Moved to https.
+      au < readySource ; finished ; 2022 ; Chinese University of Hong Kong Source Content 2022_01 ; 2022_01 >
+      #No more AUs. Moved to https.
     }
 
   }

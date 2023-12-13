@@ -1,5 +1,4 @@
 {
-
   publisher <
     name = Editura ASE ;
     info[contract] = 2022 ;
@@ -9,7 +8,6 @@
   hidden[proxy] = DIRECT
 
   {
-
     title <
       name = Editura ASE Source Content 
     >
@@ -18,17 +16,16 @@
     implicit < status ; status2 ; year ; name ; param[directory] >
 
     {
-
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/ease-released/
 
       au < readySource ; finished ; 2022 ; Editura ASE Source Content 2022_01 ; 2022_01 >
-
+      #No more AUs. Moved to https.
     }
     {
-
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/ease-released/
 
       au < readySource ; crawling ; 2023 ; Editura ASE Source Content 2023_01 ; 2023_01 >
+      au < expected ; exists ; 2024 ; Editura ASE Source Content 2024_01 ; 2024_01 >
 
     }
 

@@ -4,7 +4,7 @@
     name = European Respiratory Society ;
     info[contract] = 2011 ;
     info[tester] = S ;
-    info[platform] = ***WARC***
+    info[platform] = WARC
   >
     hidden[proxy] = DIRECT
     plugin = org.lockss.plugin.clockss.ers.ClockssEuropeanRespiratorySocietySourcePlugin

@@ -1,5 +1,4 @@
 {
-
   publisher <
     name = Cambridge University Press ;
     info[contract] = 2015 ;
@@ -18,7 +17,6 @@
     implicit < status ; status2 ; year ; name ; param[year] >
 
     {
-
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/cambridgepress-released/
 
       au < zapped ; finished ; 2016 ; Cambridge University Press Source Content 2016 ; 2016 >
@@ -29,13 +27,13 @@
       au < readySource ; finished ; 2021 ; Cambridge University Press Source Content 2021 ; 2021 >
       au < readySource ; finished ; 2022 ; Cambridge University Press Source Content 2022 ; 2022 >
       #No more AUs. Moved to https.
-
     }
     {
 
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/cambridgepress-released/
 
       au < readySource ; crawling ; 2023 ; Cambridge University Press Source Content 2023 ; 2023 >
+      au < expected ; exists ; 2024 ; Cambridge University Press Source Content 2024 ; 2024 >
 
     }
   }

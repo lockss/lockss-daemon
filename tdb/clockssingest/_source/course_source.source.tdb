@@ -1,5 +1,4 @@
 {
-
   publisher <
     name = CourseSource ;
     info[contract] = 2017 ;
@@ -9,7 +8,6 @@
   hidden[proxy] = DIRECT
 
   {
-
     title <
        name = CourseSource ;
        issn = 2332-6530
@@ -19,7 +17,6 @@
     implicit < status ; status2 ; year ; name ; param[year] >
 
     {
-
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/coursesource-released/
 
       au < zapped ; finished ; 2017 ; CourseSource Source Content 2017 ; 2017 >
@@ -32,10 +29,10 @@
 
     }
     {
-
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/coursesource-released/
 
       au < readySource ; crawling ; 2023 ; CourseSource Source Content 2023 ; 2023 >
+      au < expected ; exists ; 2024 ; CourseSource Source Content 2024 ; 2024 >
 
     }
 
