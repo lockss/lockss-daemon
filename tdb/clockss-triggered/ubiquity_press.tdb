@@ -119,8 +119,8 @@
       comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://www.amscasereports.com/
 
-      au < expected ; 2018 ; 1 ; Annals of Medicine and Surgery Case Reports Volume 1 ; 2018 ; https://www.amscasereports.com/ >
-      au < expected ; 2021 ; 2 ; Annals of Medicine and Surgery Case Reports Volume 2 ; 2021 ; https://www.amscasereports.com/ >
+      au < released ; 2018 ; 1 ; Annals of Medicine and Surgery Case Reports Volume 1 ; 2018 ; https://www.amscasereports.com/ >
+      au < released ; 2021 ; 2 ; Annals of Medicine and Surgery Case Reports Volume 2 ; 2021 ; https://www.amscasereports.com/ >
 
   }
 
@@ -134,7 +134,7 @@
       comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://www.amsprotocols.com/
 
-      au < expected ; 2018 ; 1 ; Annals of Medicine and Surgery Protocols Volume 1 ; 2018 ; https://www.amsprotocols.com/ >
+      au < released ; 2018 ; 1 ; Annals of Medicine and Surgery Protocols Volume 1 ; 2018 ; https://www.amsprotocols.com/ >
   }
 
 }
