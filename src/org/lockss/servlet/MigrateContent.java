@@ -103,13 +103,6 @@ public class MigrateContent extends LockssServlet {
 
   private static String ALL_PLUGINS_ID = "_allplugs_";
 
-  private static final String HOST_URL_FOOT =
-    "The V2 REST Service host name (localhost by default).";
-  private static final String USER_NAME_FOOT =
-    "The username used to connect to the rest interface of the V2 services.";
-  private static final String PASSWD_FOOT =
-    "The password used to connect to the rest interface of the V2 services.";
-
   private PluginManager pluginMgr;
   private MigrationManager migrationMgr;
   private V2AuMover auMover;
@@ -388,16 +381,6 @@ public class MigrateContent extends LockssServlet {
     addSelToTable(tbl);
     tbl.newRow();
     tbl.newCell();
-
-    addInputToTable(tbl,
-      "V2 Rest Services Hostname" + addFootnote(HOST_URL_FOOT),
-      KEY_HOSTNAME, hostName, 40);
-    addInputToTable(tbl,
-      "V2 Rest Services Username" + addFootnote(USER_NAME_FOOT),
-      KEY_USER_NAME, userName, 20);
-    addHiddenInputToTable(tbl,
-      "V2 Rest Services Password" + addFootnote(PASSWD_FOOT),
-      KEY_PASSWD,"", 20);
 
     OpType selOpType = opType != null ? opType : defaultOpType;
 
