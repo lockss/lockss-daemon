@@ -60,9 +60,10 @@ public class SilverchairCommonThemeHtmlHashFilterFactory implements FilterFactor
             HtmlNodeFilters.tagWithAttributeRegex("li", "class", "geoRef-coordinate"),
             //https://journals.biologists.com/dev/article/65/1/1/50812/Cytoskeletal-coordination-and-intercellular
             HtmlNodeFilters.tagWithAttributeRegex("div", "id", "Sidebar"),
+            HtmlNodeFilters.tagWithAttribute("section", "id", "Sidebar"),
             //https://pubs.geoscienceworld.org/canmin/article-standard/60/2/229/612767/A-proposed-new-mineralogical-classification-system
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related-content"),
-            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related-content__block"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "\\brelated-content__block\\b"),
             HtmlNodeFilters.tagWithAttributeRegex("a", "class", "related-content"),
             //We saw Silverchair add those to non-common-theme plugins, for cautious, we added it here
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-IssueInfo"),
