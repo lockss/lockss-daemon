@@ -269,7 +269,7 @@
      issn = 1948-7916 ;
      issnl = 1948-7916
     >
-    
+
       param[journal_id] = jsag
  
      au < manifest ; 2009 ; Journal of Software for Algebra and Geometry Volume 1 ; 1 ; 2009 ; https://msp.org/ >
@@ -279,7 +279,15 @@
      au < released ; 2013 ; Journal of Software for Algebra and Geometry Volume 5 ; 5 ; 2013 ; http://msp.org/ >
      au < released ; 2014 ; Journal of Software for Algebra and Geometry Volume 6 ; 6 ; 2014 ; http://msp.org/ >
      au < released ; 2015 ; Journal of Software for Algebra and Geometry Volume 7 ; 7 ; 2015 ; http://msp.org/ >
-     au < exists ; 2016 ; Journal of Software for Algebra and Geometry Volume 8 ; 8 ; 2016 ; https://msp.org/ >
+     au < doesNotExist ; 2016 ; Journal of Software for Algebra and Geometry Volume 8 ; 8 ; 2016 ; https://msp.org/ >
+     au < doesNotExist ; 2017 ; Journal of Software for Algebra and Geometry Volume 9 ; 9 ; 2017 ; https://msp.org/ >
+     au < exists ; 2018 ; Journal of Software for Algebra and Geometry Volume 10 ; 10 ; 2018 ; https://msp.org/ >
+     au < exists ; 2019 ; Journal of Software for Algebra and Geometry Volume 11 ; 11 ; 2019 ; https://msp.org/ >
+     au < exists ; 2020 ; Journal of Software for Algebra and Geometry Volume 12 ; 12 ; 2020 ; https://msp.org/ >
+     au < exists ; 2021 ; Journal of Software for Algebra and Geometry Volume 13 ; 13 ; 2021 ; https://msp.org/ >
+     au < exists ; 2022 ; Journal of Software for Algebra and Geometry Volume 14 ; 14 ; 2022 ; https://msp.org/ >
+     au < expected ; 2023 ; Journal of Software for Algebra and Geometry Volume 15 ; 15 ; 2023 ; https://msp.org/ >
+     au < expected ; 2024 ; Journal of Software for Algebra and Geometry Volume 16 ; 16 ; 2024 ; https://msp.org/ >
 
   }
    
@@ -424,4 +432,194 @@
 
   }
   
+  {
+
+    title <
+      name = Annals of K-Theory ;
+        issn = 2379-1683 ;
+        eissn = 2379-1691
+    >
+
+    param[journal_id] = akt
+
+    au < exists ; 2016 ; Annals of K-Theory Volume 1 ; 1 ; 2016 ; https://msp.org/ >
+    au < exists ; 2017 ; Annals of K-Theory Volume 2 ; 2 ; 2017 ; https://msp.org/ >
+    au < exists ; 2018 ; Annals of K-Theory Volume 3 ; 3 ; 2018 ; https://msp.org/ >
+    au < exists ; 2019 ; Annals of K-Theory Volume 4 ; 4 ; 2019 ; https://msp.org/ >
+    au < exists ; 2020 ; Annals of K-Theory Volume 5 ; 5 ; 2020 ; https://msp.org/ >
+    au < exists ; 2021 ; Annals of K-Theory Volume 6 ; 6 ; 2021 ; https://msp.org/ >
+    au < exists ; 2022 ; Annals of K-Theory Volume 7 ; 7 ; 2022 ; https://msp.org/ >
+    au < expected ; 2023 ; Annals of K-Theory Volume 8 ; 8 ; 2023 ; https://msp.org/ >
+    au < expected ; 2024 ; Annals of K-Theory Volume 9 ; 9 ; 2024 ; https://msp.org/ >
+
+  }
+
+
+  {
+
+    title <
+      name = Essential Number Theory ;
+        issn = 2834-4626 ;
+        eissn = 2834-4634
+    >
+
+    param[journal_id] = ent
+
+    au < exists ; 2022 ; Essential Number Theory Volume 1 ; 1 ; 2022 ; https://msp.org/ >
+    au < expected ; 2023 ; Essential Number Theory Volume 2 ; 2 ; 2023 ; https://msp.org/ >
+    au < expected ; 2024 ; Essential Number Theory Volume 3 ; 3 ; 2024 ; https://msp.org/ >
+
+  }
+
+
+  {
+
+    title <
+      name = Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial ;
+        issn = 2640-7337 ;
+        eissn = 2640-7345
+    >
+
+    param[journal_id] = iig
+
+    au < exists ; 2005 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 1 ; 1 ; 2005 ; https://msp.org/ >
+    au < exists ; 2006 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 2 ; 2 ; 2006 ; https://msp.org/ >
+    au < exists ; 2007 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 3 ; 3 ; 2007 ; https://msp.org/ >
+    au < exists ; 2008 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 4 ; 4 ; 2008 ; https://msp.org/ >
+    au < exists ; 2009 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 5 ; 5 ; 2009 ; https://msp.org/ >
+    au < exists ; 2010 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 6 ; 6 ; 2010 ; https://msp.org/ >
+    au < exists ; 2011 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 7 ; 7 ; 2011 ; https://msp.org/ >
+    au < doesNotExist ; 2012 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 8 ; 8 ; 2012 ; https://msp.org/ >
+    au < exists ; 2013 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 9 ; 9 ; 2013 ; https://msp.org/ >
+    au < doesNotExist ; 2014 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 10 ; 10 ; 2014 ; https://msp.org/ >
+    au < exists ; 2015 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 11 ; 11 ; 2015 ; https://msp.org/ >
+    au < doesNotExist ; 2016 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 12 ; 12 ; 2016 ; https://msp.org/ >
+    au < exists ; 2017 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 13 ; 13 ; 2017 ; https://msp.org/ >
+    au < exists ; 2018 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 14 ; 14 ; 2018 ; https://msp.org/ >
+    au < exists ; 2019 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 15 ; 15 ; 2019 ; https://msp.org/ >
+    au < exists ; 2020 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 16 ; 16 ; 2020 ; https://msp.org/ >
+    au < doesNotExist ; 2021 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 17 ; 17 ; 2021 ; https://msp.org/ >
+    au < exists ; 2022 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 18 ; 18 ; 2022 ; https://msp.org/ >
+    au < expected ; 2023 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 19 ; 19 ; 2023 ; https://msp.org/ >
+    au < expected ; 2024 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 20 ; 20 ; 2024 ; https://msp.org/ >
+
+  }
+
+  {
+
+    title <
+      name = Model Theory ;
+        issn = 2832-9058 ;
+        eissn = 2832-904X
+    >
+
+    param[journal_id] = mt
+
+    au < exists ; 2022 ; Model Theory Volume 1 ; 1 ; 2022 ; https://msp.org/ >
+    au < expected ; 2023 ; Model Theory Volume 2 ; 2 ; 2023 ; https://msp.org/ >
+    au < expected ; 2024 ; Model Theory Volume 3 ; 3 ; 2024 ; https://msp.org/ >
+
+  }
+
+
+  {
+
+    title <
+      name = Moscow Journal of Combinatorics and Number Theory ;
+        issn = 2220-5438 ;
+        eissn = 2640-7361
+    >
+
+    param[journal_id] = moscow
+
+    au < exists ; 2011 ; Moscow Journal of Combinatorics and Number Theory Volume 1 ; 1 ; 2011 ; https://msp.org/ >
+    au < exists ; 2012 ; Moscow Journal of Combinatorics and Number Theory Volume 2 ; 2 ; 2012 ; https://msp.org/ >
+    au < exists ; 2013 ; Moscow Journal of Combinatorics and Number Theory Volume 3 ; 3 ; 2013 ; https://msp.org/ >
+    au < exists ; 2014 ; Moscow Journal of Combinatorics and Number Theory Volume 4 ; 4 ; 2014 ; https://msp.org/ >
+    au < exists ; 2015 ; Moscow Journal of Combinatorics and Number Theory Volume 5 ; 5 ; 2015 ; https://msp.org/ >
+    au < exists ; 2016 ; Moscow Journal of Combinatorics and Number Theory Volume 6 ; 6 ; 2016 ; https://msp.org/ >
+    au < exists ; 2017 ; Moscow Journal of Combinatorics and Number Theory Volume 7 ; 7 ; 2017 ; https://msp.org/ >
+    au < doesNotExist ; 2018 ; Moscow Journal of Combinatorics and Number Theory Volume 8 ; 8 ; 2018 ; https://msp.org/ >
+    au < exists ; 2019 ; Moscow Journal of Combinatorics and Number Theory Volume 9 ; 9 ; 2019 ; https://msp.org/ >
+    au < exists ; 2020 ; Moscow Journal of Combinatorics and Number Theory Volume 10 ; 10 ; 2020 ; https://msp.org/ >
+    au < exists ; 2021 ; Moscow Journal of Combinatorics and Number Theory Volume 11 ; 11 ; 2021 ; https://msp.org/ >
+    au < exists ; 2022 ; Moscow Journal of Combinatorics and Number Theory Volume 12 ; 12 ; 2022 ; https://msp.org/ >
+    au < expected ; 2023 ; Moscow Journal of Combinatorics and Number Theory Volume 13 ; 13 ; 2023 ; https://msp.org/ >
+    au < expected ; 2024 ; Moscow Journal of Combinatorics and Number Theory Volume 14 ; 14 ; 2024 ; https://msp.org/ >
+
+  }
+
+
+  {
+
+    title <
+      name = Orbita Mathematicae ;
+        issn = 2993-6144 ;
+        eissn = 2993-6152
+    >
+
+    param[journal_id] = om
+
+    au < expected ; 2024 ; Orbita Mathematicae Volume 1 ; 1 ; 2024 ; https://msp.org/ >
+
+  }
+
+
+  {
+
+    title <
+      name = Probability and Mathematical Physics ;
+        issn = 2690-0998 ;
+        eissn = 2690-1005
+    >
+
+    param[journal_id] = pmp
+
+    au < exists ; 2020 ; Probability and Mathematical Physics Volume 1 ; 1 ; 2020 ; https://msp.org/ >
+    au < exists ; 2021 ; Probability and Mathematical Physics Volume 2 ; 2 ; 2021 ; https://msp.org/ >
+    au < exists ; 2022 ; Probability and Mathematical Physics Volume 3 ; 3 ; 2022 ; https://msp.org/ >
+    au < expected ; 2023 ; Probability and Mathematical Physics Volume 4 ; 4 ; 2023 ; https://msp.org/ >
+    au < expected ; 2024 ; Probability and Mathematical Physics Volume 5 ; 5 ; 2024 ; https://msp.org/ >
+
+  }
+
+
+  {
+
+    title <
+      name = Pure and Applied Analysis ;
+        issn = 2578-5893 ;
+        eissn = 2578-5885
+    >
+
+    param[journal_id] = paa
+
+    au < exists ; 2019 ; Pure and Applied Analysis Volume 1 ; 1 ; 2019 ; https://msp.org/ >
+    au < exists ; 2020 ; Pure and Applied Analysis Volume 2 ; 2 ; 2020 ; https://msp.org/ >
+    au < exists ; 2021 ; Pure and Applied Analysis Volume 3 ; 3 ; 2021 ; https://msp.org/ >
+    au < exists ; 2022 ; Pure and Applied Analysis Volume 4 ; 4 ; 2022 ; https://msp.org/ >
+    au < expected ; 2023 ; Pure and Applied Analysis Volume 5 ; 5 ; 2023 ; https://msp.org/ >
+    au < expected ; 2024 ; Pure and Applied Analysis Volume 6 ; 6 ; 2024 ; https://msp.org/ >
+
+  }
+
+
+  {
+
+    title <
+      name = Tunisian Journal of Mathematics ;
+        issn = 2576-7658 ;
+        eissn = 2576-7666
+    >
+
+    param[journal_id] = tunis
+
+    au < exists ; 2019 ; Tunisian Journal of Mathematics Volume 1 ; 1 ; 2019 ; https://msp.org/ >
+    au < exists ; 2020 ; Tunisian Journal of Mathematics Volume 2 ; 2 ; 2020 ; https://msp.org/ >
+    au < exists ; 2021 ; Tunisian Journal of Mathematics Volume 3 ; 3 ; 2021 ; https://msp.org/ >
+    au < exists ; 2022 ; Tunisian Journal of Mathematics Volume 4 ; 4 ; 2022 ; https://msp.org/ >
+    au < expected ; 2023 ; Tunisian Journal of Mathematics Volume 5 ; 5 ; 2023 ; https://msp.org/ >
+    au < expected ; 2024 ; Tunisian Journal of Mathematics Volume 6 ; 6 ; 2024 ; https://msp.org/ >
+
+  }
 }

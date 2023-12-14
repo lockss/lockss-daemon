@@ -7,8 +7,8 @@
     info[platform] = Source
   >
   hidden[proxy] = DIRECT
-  {
 
+  {
     title <
        name = Hellenic Psychiatric Association Source Content
     >
@@ -16,7 +16,6 @@
     plugin = org.lockss.plugin.clockss.hellenic.ClockssHellenicPsychiatricAssociationSourcePlugin
     implicit < status ; status2 ; year ; name ; param[year] >
     {
-
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/hpa-released/
 
       au < zapped ; finished ; 2016 ; Hellenic Psychiatric Association Source Content 2016 ; 2016 >
@@ -27,13 +26,13 @@
       au < readySource ; finished ; 2021 ; Hellenic Psychiatric Association Source Content 2021 ; 2021 >
       au < readySource ; finished ; 2022 ; Hellenic Psychiatric Association Source Content 2022 ; 2022 >
       #No more AUs. Moved to https.
-
     }
     {
 
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/hpa-released/
 
       au < readySource ; crawling ; 2023 ; Hellenic Psychiatric Association Source Content 2023 ; 2023 >
+      au < expected ; exists ; 2024 ; Hellenic Psychiatric Association Source Content 2024 ; 2024 >
 
     }
 

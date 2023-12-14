@@ -8964,7 +8964,7 @@
   {
 
     title <
-      name = Cultural Studies <=\> Critical Methodologies ;
+      name = Cultural Studies ↔ Critical Methodologies ;
       issn = 1532-7086 ;
       eissn = 1552-356X
     >
@@ -8976,8 +8976,8 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < finished ; finished ; 2008 ; Cultural Studies <=\> Critical Methodologies Volume 8 ; 8 ; >
-      au < zapped ; finished ; 2009 ; Cultural Studies <=\> Critical Methodologies Volume 9 ; 9 ; >
+      au < finished ; finished ; 2008 ; Cultural Studies ↔ Critical Methodologies Volume 8 ; 8 ; >
+      au < zapped ; finished ; 2009 ; Cultural Studies ↔ Critical Methodologies Volume 9 ; 9 ; >
 
     }
 
@@ -8985,22 +8985,22 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < doNotProcess ; exists ; 2001 ; Cultural Studies <=\> Critical Methodologies Volume 1 ; 1 ; >
-      au < doNotProcess ; exists ; 2002 ; Cultural Studies <=\> Critical Methodologies Volume 2 ; 2 ; >
-      au < doNotProcess ; exists ; 2003 ; Cultural Studies <=\> Critical Methodologies Volume 3 ; 3 ; >
-      au < doNotProcess ; exists ; 2004 ; Cultural Studies <=\> Critical Methodologies Volume 4 ; 4 ; >
-      au < doNotProcess ; exists ; 2005 ; Cultural Studies <=\> Critical Methodologies Volume 5 ; 5 ; >
-      au < doNotProcess ; exists ; 2006 ; Cultural Studies <=\> Critical Methodologies Volume 6 ; 6 ; >
-      au < doNotProcess ; exists ; 2007 ; Cultural Studies <=\> Critical Methodologies Volume 7 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; Cultural Studies <=\> Critical Methodologies Volume 8 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; Cultural Studies <=\> Critical Methodologies Volume 9 ; 9 ; >
-      au < zapped ; finished ; 2010 ; Cultural Studies <=\> Critical Methodologies Volume 10 ; 10 ; >
-      au < zapped ; finished ; 2011 ; Cultural Studies <=\> Critical Methodologies Volume 11 ; 11 ; >
-      au < finished ; finished ; 2012 ; Cultural Studies <=\> Critical Methodologies Volume 12 ; 12 ; >
-      au < finished ; finished ; 2013 ; Cultural Studies <=\> Critical Methodologies Volume 13 ; 13 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2014 ; Cultural Studies <=\> Critical Methodologies Volume 14 ; 14 ; >
-      au < finished ; finished ; 2015 ; Cultural Studies <=\> Critical Methodologies Volume 15 ; 15 ; reingest4.clockss.org:8082 >
-      au < doNotProcess ; exists ; 2016 ; Cultural Studies <=\> Critical Methodologies Volume 16 ; 16 ; >
+      au < doNotProcess ; exists ; 2001 ; Cultural Studies ↔ Critical Methodologies Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2002 ; Cultural Studies ↔ Critical Methodologies Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2003 ; Cultural Studies ↔ Critical Methodologies Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 2004 ; Cultural Studies ↔ Critical Methodologies Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2005 ; Cultural Studies ↔ Critical Methodologies Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2006 ; Cultural Studies ↔ Critical Methodologies Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2007 ; Cultural Studies ↔ Critical Methodologies Volume 7 ; 7 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; Cultural Studies ↔ Critical Methodologies Volume 8 ; 8 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Cultural Studies ↔ Critical Methodologies Volume 9 ; 9 ; >
+      au < zapped ; finished ; 2010 ; Cultural Studies ↔ Critical Methodologies Volume 10 ; 10 ; >
+      au < zapped ; finished ; 2011 ; Cultural Studies ↔ Critical Methodologies Volume 11 ; 11 ; >
+      au < finished ; finished ; 2012 ; Cultural Studies ↔ Critical Methodologies Volume 12 ; 12 ; >
+      au < finished ; finished ; 2013 ; Cultural Studies ↔ Critical Methodologies Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; Cultural Studies ↔ Critical Methodologies Volume 14 ; 14 ; >
+      au < finished ; finished ; 2015 ; Cultural Studies ↔ Critical Methodologies Volume 15 ; 15 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; exists ; 2016 ; Cultural Studies ↔ Critical Methodologies Volume 16 ; 16 ; >
 
     }
 

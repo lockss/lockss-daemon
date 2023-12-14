@@ -20,6 +20,8 @@
     param[base_url] = https://clockss-test.lockss.org/sourcefiles/kujss-released/
 
     au < expected ; exists ; 2022 ; Kirkuk University College of Science Source Content 2022_01 ; 2022_01 >
+    au < expected ; exists ; 2023 ; Kirkuk University College of Science Source Content 2023_01 ; 2023_01 >
+    au < expected ; exists ; 2024 ; Kirkuk University College of Science Source Content 2024_01 ; 2024_01 >
 
   }
 }

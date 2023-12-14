@@ -94,7 +94,7 @@ public class TestKluwerLawJournalsOX1SourceXmlMetadataExtractorFactory extends L
             assertNotNull(AM);
 
             assertEquals("Air and Space Law", AM.get(MetadataField.FIELD_PUBLICATION_TITLE));
-            assertEquals("19990201", AM.get(MetadataField.FIELD_DATE));
+            assertEquals("02/01/1999", AM.get(MetadataField.FIELD_DATE));
             assertEquals("24", AM.get(MetadataField.FIELD_VOLUME));
             assertEquals(" 1", AM.get(MetadataField.FIELD_ISSUE));
 

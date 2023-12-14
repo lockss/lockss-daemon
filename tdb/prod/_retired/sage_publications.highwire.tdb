@@ -9878,7 +9878,7 @@
     {
 
       title <
-        name = Cultural Studies <=\> Critical Methodologies ;
+        name = Cultural Studies ↔ Critical Methodologies ;
         issn = 1532-7086 ;
         eissn = 1552-356X ;
         issnl = 1532-7086
@@ -9890,11 +9890,11 @@
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2005 ; Cultural Studies <=\> Critical Methodologies Volume 5 ; 5 >
-        au < HighWireStrVolPlugin ; down ; 2006 ; Cultural Studies <=\> Critical Methodologies Volume 6 ; 6 >
-        au < HighWireStrVolPlugin ; down ; 2007 ; Cultural Studies <=\> Critical Methodologies Volume 7 ; 7 >
-        au < HighWirePressPlugin ; down ; 2008 ; Cultural Studies <=\> Critical Methodologies Volume 8 ; 8 >
-        au < HighWireStrVolPlugin ; down ; 2009 ; Cultural Studies <=\> Critical Methodologies Volume 9 ; 9 >
+        au < HighWireStrVolPlugin ; down ; 2005 ; Cultural Studies ↔ Critical Methodologies Volume 5 ; 5 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Cultural Studies ↔ Critical Methodologies Volume 6 ; 6 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Cultural Studies ↔ Critical Methodologies Volume 7 ; 7 >
+        au < HighWirePressPlugin ; down ; 2008 ; Cultural Studies ↔ Critical Methodologies Volume 8 ; 8 >
+        au < HighWireStrVolPlugin ; down ; 2009 ; Cultural Studies ↔ Critical Methodologies Volume 9 ; 9 >
 
       }
 

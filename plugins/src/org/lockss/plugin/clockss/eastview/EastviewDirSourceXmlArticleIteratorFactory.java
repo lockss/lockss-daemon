@@ -93,7 +93,7 @@ public class EastviewDirSourceXmlArticleIteratorFactory implements ArticleIterat
 
     builder.setSpec(builder.newSpec()
             .setPatternTemplate(getIncludePatternTemplate(), Pattern.CASE_INSENSITIVE)
-            .setExcludeSubTreePattern(getExcludeSubTreePattern())
+            //.setExcludeSubTreePattern(getExcludeSubTreePattern())
             .setVisitArchiveMembers(true)
             .setVisitArchiveMembers(getIsArchive()));
 

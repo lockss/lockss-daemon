@@ -1,5 +1,4 @@
 {
-
   publisher <
     name = Duke University Press ;
     info[contract] = 2012 ;
@@ -9,12 +8,10 @@
   hidden[proxy] = DIRECT
 
   {
-
     title <
       name = Duke University Press Source Content
 
     >
-
       # More than one journal
       #Duke Mathematical Journal
       #issn = 0012-7094 ; eissn = 1547-7398
@@ -23,7 +20,6 @@
       implicit < status ; status2 ; year ; name ; param[directory] >
 
       {
-
         param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/dukeupress-released/
 
         au < zapped ; finished ; 2018 ; Duke University Press Source Content 2018 ; 2018 >
@@ -31,13 +27,12 @@
         au < zapped ; finished ; 2020 ; Duke University Press Source Content 2020 ; 2020 >
         au < readySource ; finished ; 2021 ; Duke University Press Source Content 2021 ; 2021 >
         #No more AUs. Moved to https.
-
       }
       {
-
         param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/dukeupress-released/
 
         au < expected ; exists ; 2023 ; Duke University Press Source Content 2023 ; 2023 >
+        au < expected ; exists ; 2024 ; Duke University Press Source Content 2024 ; 2024 >
 
       }
     }

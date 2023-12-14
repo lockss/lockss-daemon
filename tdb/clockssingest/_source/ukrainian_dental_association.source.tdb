@@ -13,7 +13,7 @@
 
     {
     title <
-      name = Ukrainian Dental Association Warc Content
+      name = Ukrainian Dental Association WARC Content
     >
 
     # This content collected using wget and provided for preservation as a
@@ -21,8 +21,8 @@
     # WARC content from http://emed.library.gov.ua/jspui/handle/123456789/168
     param[base_url] = https://clockss-ingest.lockss.org/warcfiles/ukrainian-dental-association-released/
 
-    au < readySource ; crawling ; 2023 ; Ukrainian Dental Association Warc Content 2023 ; 2023 >
-    au < expected ; exists ; 2025 ; Ukrainian Dental Association Warc Content 2025 ; 2025 >
+    au < readySource ; crawling ; 2023 ; Ukrainian Dental Association WARC Content 2023 ; 2023 >
+    au < expected ; exists ; 2025 ; Ukrainian Dental Association WARC Content 2025 ; 2025 >
 
     }
 

@@ -1,5 +1,4 @@
 {
-
   publisher <
     name = Centre Mersenne for Open Scientific Publishing ;
     info[contract] = 2017 ;
@@ -9,7 +8,6 @@
   hidden[proxy] = DIRECT
 
   {
-
     title <
        name = Centre Mersenne Source Content
     >
@@ -17,7 +15,6 @@
     plugin = org.lockss.plugin.clockss.mersenne.ClockssMersenneSourcePlugin
     implicit < status ; status2 ; year ; name ; param[directory] >
     {
-
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/mersenne-released/
 
       au < zapped ; finished ; 2018 ; Centre Mersenne Source Content 2018 ; 2018 >
@@ -31,10 +28,10 @@
 
     }
     {
-
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/mersenne-released/
 
       au < readySource ; crawling ; 2023 ; Centre Mersenne Source Content 2023_01 ; 2023_01 >
+      au < expected ; exists ; 2024 ; Centre Mersenne Source Content 2024_01 ; 2024_01 >
 
     }
 

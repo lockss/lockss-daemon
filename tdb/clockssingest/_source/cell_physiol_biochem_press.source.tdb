@@ -1,5 +1,4 @@
 {
-
   publisher <
     name = Cell Physiol Biochem Press ;
     info[contract] = 2022 ;
@@ -7,28 +6,25 @@
     info[platform] = Source/FTP
   >
   hidden[proxy] = DIRECT
-  {
 
+  {
     title <
       name = Cell Physiol Biochem Press Source Content
     >
-
     plugin = org.lockss.plugin.clockss.cellphysiolbiochempress.ClockssCellPhysiolBiochemPressJournalSourcePlugin
     implicit < status ; status2 ; year ; name ; param[directory] >
 
     {
-
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/cpbp-released/
 
       au < readySource ; finished ; 2022 ; Cell Physiol Biochem Press Source Content 2022_01 ; 2022_01 >
       #No more AUs.  Moved to https.
-
     }
     {
-
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/cpbp-released/
 
       au < readySource ; crawling ; 2023 ; Cell Physiol Biochem Press Source Content 2023_01 ; 2023_01 >
+      au < expected ; exists ; 2024 ; Cell Physiol Biochem Press Source Content 2024_01 ; 2024_01 >
 
     }
   }

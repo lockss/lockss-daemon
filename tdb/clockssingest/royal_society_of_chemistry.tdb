@@ -877,6 +877,7 @@
     >
 
       param[journal_code] = mb
+      #journal changed its name in 2018 to 'Molecular Omics'
       #complete
 
       au < finished ; finished ; 2005 ; Molecular BioSystems Volume 1 ; 1 ; 2005 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
@@ -2570,8 +2571,9 @@
         eissn = 2040-2511
       >
 
-      comment[years] = Published 2010-2016
+      comment[years] = Published 2010-2019
       param[journal_code] = md
+      #journal changing its name in 2020 to 'RSC Medicinal Chemistry'
       #complete
 
       au < finished ; crawling ; 2010 ; MedChemComm Volume 1 ; 1 ; 2010 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
@@ -2584,10 +2586,24 @@
       au < finished ; finished ; 2017 ; MedChemComm Volume 8 ; 8 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; MedChemComm Volume 9 ; 9 ; 2018 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; MedChemComm Volume 10 ; 10 ; 2019 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2020 ; MedChemComm Volume 11 ; 11 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < deepCrawl ; exists ; 2021 ; MedChemComm Volume 12 ; 12 ; 2021 ; https://pubs.rsc.org/ ; >
-      au < frozen ; exists ; 2022 ; MedChemComm Volume 13 ; 13 ; 2022 ; https://pubs.rsc.org/ ; >
-      au < crawling ; exists ; 2023 ; MedChemComm Volume 14 ; 14 ; 2023 ; https://pubs.rsc.org/ ; >
+
+  }
+
+  {
+      title <
+        name = RSC Medicinal Chemistry ;
+        eissn = 2632-8682
+      >
+
+      comment[years] = Published 2020-2024
+      param[journal_code] = md
+      #journal changing its name in 2020 from 'MedChemComm'
+
+      au < deepCrawl ; exists ; 2020 ; RSC Medicinal Chemistry Volume 11 ; 11 ; 2020 ; https://pubs.rsc.org/ ; >
+      au < deepCrawl ; exists ; 2021 ; RSC Medicinal Chemistry Volume 12 ; 12 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < frozen ; exists ; 2022 ; RSC Medicinal Chemistry Volume 13 ; 13 ; 2022 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2023 ; RSC Medicinal Chemistry Volume 14 ; 14 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < expected ; exists ; 2024 ; RSC Medicinal Chemistry Volume 15 ; 15 ; 2024 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -3189,6 +3205,294 @@
       au < doNotProcess ; exists ; 1969 ; Transactions of the Faraday Society Volume 65 ; 65 ; 1969 ; https://pubs.rsc.org/ ; >
       au < doNotProcess ; exists ; 1970 ; Transactions of the Faraday Society Volume 66 ; 66 ; 1970 ; https://pubs.rsc.org/ ; >
       au < doNotProcess ; exists ; 1971 ; Transactions of the Faraday Society Volume 67 ; 67 ; 1971 ; https://pubs.rsc.org/ ; >
+
+  }
+
+  {
+      title <
+        name = Materials Chemistry Frontiers ;
+        eissn = 2052-1537
+      >
+
+      comment[years] = Published 2017-present
+      param[journal_code] = qm
+
+      au < manifest ; exists ; 2017 ; Materials Chemistry Frontiers Volume 1 ; 1 ; 2017 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2018 ; Materials Chemistry Frontiers Volume 2 ; 2 ; 2018 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2019 ; Materials Chemistry Frontiers Volume 3 ; 3 ; 2019 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2020 ; Materials Chemistry Frontiers Volume 4 ; 4 ; 2020 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2021 ; Materials Chemistry Frontiers Volume 5 ; 5 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2022 ; Materials Chemistry Frontiers Volume 6 ; 6 ; 2022 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2023 ; Materials Chemistry Frontiers Volume 7 ; 7 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < expected ; exists ; 2024 ; Materials Chemistry Frontiers Volume 8 ; 8 ; 2024 ; https://pubs.rsc.org/ ; >
+
+  }
+
+
+  {
+      title <
+        name = Sustainable Energy & Fuels ;
+        eissn = 2398-4902
+      >
+
+      comment[years] = Published 2017-present
+      param[journal_code] = se
+
+      au < manifest ; exists ; 2017 ; Sustainable Energy & Fuels Volume 1 ; 1 ; 2017 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2018 ; Sustainable Energy & Fuels Volume 2 ; 2 ; 2018 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2019 ; Sustainable Energy & Fuels Volume 3 ; 3 ; 2019 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2020 ; Sustainable Energy & Fuels Volume 4 ; 4 ; 2020 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2021 ; Sustainable Energy & Fuels Volume 5 ; 5 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2022 ; Sustainable Energy & Fuels Volume 6 ; 6 ; 2022 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2023 ; Sustainable Energy & Fuels Volume 7 ; 7 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < expected ; exists ; 2024 ; Sustainable Energy & Fuels Volume 8 ; 8 ; 2024 ; https://pubs.rsc.org/ ; >
+
+  }
+
+
+  {
+      title <
+        name = Molecular Omics ;
+        eissn = 2515-4184
+      >
+
+      comment[years] = Published 2018-present
+      param[journal_code] = mo
+      #journal changed its name in 2018 from 'Molecular BioSystems'
+
+      au < manifest ; exists ; 2018 ; Molecular Omics Volume 14 ; 14 ; 2018 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2019 ; Molecular Omics Volume 15 ; 15 ; 2019 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2020 ; Molecular Omics Volume 16 ; 16 ; 2020 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2021 ; Molecular Omics Volume 17 ; 17 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2022 ; Molecular Omics Volume 18 ; 18 ; 2022 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2023 ; Molecular Omics Volume 19 ; 19 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < expected ; exists ; 2024 ; Molecular Omics Volume 20 ; 20 ; 2024 ; https://pubs.rsc.org/ ; >
+
+  }
+
+
+  {
+      title <
+        name = Nanoscale Advances ;
+        eissn = 2516-0230
+      >
+
+      comment[years] = Published 2019-present
+      param[journal_code] = na
+
+      au < manifest ; exists ; 2019 ; Nanoscale Advances Volume 1 ; 1 ; 2019 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2020 ; Nanoscale Advances Volume 2 ; 2 ; 2020 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2021 ; Nanoscale Advances Volume 3 ; 3 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2022 ; Nanoscale Advances Volume 4 ; 4 ; 2022 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2023 ; Nanoscale Advances Volume 5 ; 5 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < expected ; exists ; 2024 ; Nanoscale Advances Volume 6 ; 6 ; 2024 ; https://pubs.rsc.org/ ; >
+
+  }
+
+
+  {
+      title <
+        name = RSC Chemical Biology ;
+        eissn = 2633-0679
+      >
+
+      comment[years] = Published 2020-present
+      param[journal_code] = cb
+
+      au < manifest ; exists ; 2020 ; RSC Chemical Biology Volume 1 ; 1 ; 2020 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2021 ; RSC Chemical Biology Volume 2 ; 2 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2022 ; RSC Chemical Biology Volume 3 ; 3 ; 2022 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2023 ; RSC Chemical Biology Volume 4 ; 4 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < expected ; exists ; 2024 ; RSC Chemical Biology Volume 5 ; 5 ; 2024 ; https://pubs.rsc.org/ ; >
+
+  }
+
+
+  {
+      title <
+        name = Materials Advances ;
+        eissn = 2633-5409
+      >
+
+      comment[years] = Published 2020-present
+      param[journal_code] = ma
+
+      au < manifest ; exists ; 2020 ; Materials Advances Volume 1 ; 1 ; 2020 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2021 ; Materials Advances Volume 2 ; 2 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2022 ; Materials Advances Volume 3 ; 3 ; 2022 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2023 ; Materials Advances Volume 4 ; 4 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < expected ; exists ; 2024 ; Materials Advances Volume 5 ; 5 ; 2024 ; https://pubs.rsc.org/ ; >
+
+  }
+
+  {
+      title <
+        name = Environmental Science: Atmospheres ;
+        eissn = 2634-3606
+      >
+
+      comment[years] = Published 2021-present
+      param[journal_code] = ea
+
+      au < manifest ; exists ; 2021 ; Environmental Science: Atmospheres Volume 1 ; 1 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2022 ; Environmental Science: Atmospheres Volume 2 ; 2 ; 2022 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2023 ; Environmental Science: Atmospheres Volume 3 ; 3 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < expected ; exists ; 2024 ; Environmental Science: Atmospheres Volume 4 ; 4 ; 2024 ; https://pubs.rsc.org/ ; >
+
+  }
+
+
+  {
+      title <
+        name = Digital Discovery ;
+        eissn = 2635-098X
+      >
+
+      comment[years] = Published 2022-present
+      param[journal_code] = dd
+
+      au < manifest ; exists ; 2022 ; Digital Discovery Volume 1 ; 1 ; 2022 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2023 ; Digital Discovery Volume 2 ; 2 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < expected ; exists ; 2024 ; Digital Discovery Volume 3 ; 3 ; 2024 ; https://pubs.rsc.org/ ; >
+
+  }
+
+
+  {
+      title <
+        name = Sensors & Diagnostics ;
+        eissn = 2635-0998
+      >
+
+      comment[years] = Published 2022-present
+      param[journal_code] = sd
+
+      au < manifest ; exists ; 2022 ; Sensors & Diagnostics Volume 1 ; 1 ; 2022 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2023 ; Sensors & Diagnostics Volume 2 ; 2 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < expected ; exists ; 2024 ; Sensors & Diagnostics Volume 3 ; 3 ; 2024 ; https://pubs.rsc.org/ ; >
+
+  }
+
+
+  {
+      title <
+        name = Environmental Science: Advances ;
+        eissn = 2754-7000
+      >
+
+      comment[years] = Published 2022-present
+      param[journal_code] = va
+
+      au < manifest ; exists ; 2022 ; Environmental Science: Advances Volume 1 ; 1 ; 2022 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2023 ; Environmental Science: Advances Volume 2 ; 2 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < expected ; exists ; 2024 ; Environmental Science: Advances Volume 3 ; 3 ; 2024 ; https://pubs.rsc.org/ ; >
+
+  }
+
+
+  {
+      title <
+        name = Energy Advances ;
+        eissn = 2753-1457
+      >
+
+      comment[years] = Published 2022-present
+      param[journal_code] = ya
+
+      au < manifest ; exists ; 2022 ; Energy Advances Volume 1 ; 1 ; 2022 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2023 ; Energy Advances Volume 2 ; 2 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < expected ; exists ; 2024 ; Energy Advances Volume 3 ; 3 ; 2024 ; https://pubs.rsc.org/ ; >
+
+  }
+
+
+  {
+      title <
+        name = EES Catalysis ;
+        eissn = 2753-801X
+      >
+
+      comment[years] = Published 2023-present
+      param[journal_code] = ey
+
+      au < manifest ; exists ; 2023 ; EES Catalysis Volume 1 ; 1 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < expected ; exists ; 2024 ; EES Catalysis Volume 2 ; 2 ; 2024 ; https://pubs.rsc.org/ ; >
+
+  }
+
+
+  {
+      title <
+        name = Sustainable Food Technology ;
+        eissn = 2753-8095
+      >
+
+      comment[years] = Published 2023-present
+      param[journal_code] = fb
+
+      au < manifest ; exists ; 2023 ; Sustainable Food Technology Volume 1 ; 1 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < expected ; exists ; 2024 ; Sustainable Food Technology Volume 2 ; 2 ; 2024 ; https://pubs.rsc.org/ ; >
+
+  }
+
+
+  {
+      title <
+        name = Industrial Chemistry & Materials ;
+        issn = 2755-2608 ;
+        eissn = 2755-2500
+      >
+
+      comment[years] = Published 2023-present
+      param[journal_code] = im
+
+      au < manifest ; exists ; 2023 ; Industrial Chemistry & Materials Volume 1 ; 1 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < expected ; exists ; 2024 ; Industrial Chemistry & Materials Volume 2 ; 2 ; 2024 ; https://pubs.rsc.org/ ; >
+
+  }
+
+
+  {
+      title <
+        name = RSC Applied Interfaces ;
+        eissn = 2755-3701
+      >
+
+      comment[years] = Published 2023-present
+      param[journal_code] = lf
+
+      au < exists ; exists ; 2023 ; RSC Applied Interfaces Volume 1 ; 1 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < expected ; exists ; 2024 ; RSC Applied Interfaces Volume 2 ; 2 ; 2024 ; https://pubs.rsc.org/ ; >
+
+  }
+
+
+  {
+      title <
+        name = RSC Applied Polymers ;
+        eissn = 2755-371X
+      >
+
+      comment[years] = Published 2023-present
+      param[journal_code] = lp
+
+      au < manifest ; exists ; 2023 ; RSC Applied Polymers Volume 1 ; 1 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < expected ; exists ; 2024 ; RSC Applied Polymers Volume 2 ; 2 ; 2024 ; https://pubs.rsc.org/ ; >
+
+  }
+
+
+  {
+      title <
+        name = RSC Sustainability ;
+        eissn = 2753-8125
+      >
+
+      comment[years] = Published 2023-present
+      param[journal_code] = su
+
+      au < manifest ; exists ; 2023 ; RSC Sustainability Volume 1 ; 1 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < expected ; exists ; 2024 ; RSC Sustainability Volume 2 ; 2 ; 2024 ; https://pubs.rsc.org/ ; >
 
   }
 

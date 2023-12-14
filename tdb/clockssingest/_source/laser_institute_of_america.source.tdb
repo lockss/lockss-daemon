@@ -10,7 +10,6 @@
       comment[publishing_platform] = Another publisher on the AIP platform
 
   {
-
     title <
        name = Laser Institute of America Source Content
     >
@@ -26,7 +25,6 @@
     }
 
     {
-
       plugin = org.lockss.plugin.clockss.lia.ClockssLiaJatsSourcePlugin
       implicit < status ; status2 ; year ; name ; param[year] >
       {
@@ -47,6 +45,8 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/liajats-released/
 
       au < readySource ; crawling ; 2023 ; Laser Institute of America Source Content 2023 ; 2023 >
+      au < expected ; exists ; 2024 ; Laser Institute of America Source Content 2024 ; 2024 >
+
       }
     }
 

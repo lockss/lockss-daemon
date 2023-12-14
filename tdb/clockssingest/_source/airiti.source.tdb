@@ -9,7 +9,6 @@
   hidden[proxy] = DIRECT
 
   {
-
     title <
       name = Airiti Source Content
     >
@@ -23,12 +22,13 @@
       au < readySource ; finished ; 2021 ; Airiti Source Content 2021 ; 2021 >
       au < readySource ; finished ; 2022 ; Airiti Source Content 2022 ; 2022 >
       # No more AUs. Moved to https.
-
     }
     {
         param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/airiti-released/
 
         au < readySource ; crawling ; 2023 ; Airiti Source Content 2023 ; 2023 >
+        au < expected ; exists ; 2024 ; Airiti Source Content 2024 ; 2024 >
+
     }
   }
 

@@ -1,0 +1,44 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.DirTreePlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Dir Tree Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Dir Tree Plugin, Base URL %s", base_url</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <list>
+      <string>"%s", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^%s", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>

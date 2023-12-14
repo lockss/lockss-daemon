@@ -1,5 +1,4 @@
 {
-
   publisher <
     name = American School of Classical Studies at Athens ;
     info[contract] = 2014 ;
@@ -9,7 +8,6 @@
   hidden[proxy] = DIRECT
 
   {
-
     title <
       name = American School of Classical Studies at Athens Books Source Content
     >
@@ -19,6 +17,7 @@
      param[base_url] = https://clockss-test.lockss.org/sourcefiles/ascsa-released/
 
      au < expected ; exists ; 2023 ; American School of Classical Studies at Athens Books Source Content 2023 ; 2023 >
+     au < expected ; exists ; 2024 ; American School of Classical Studies at Athens Books Source Content 2024 ; 2024 >
 
   }
 
