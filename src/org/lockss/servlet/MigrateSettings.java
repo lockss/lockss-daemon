@@ -301,11 +301,13 @@ public class MigrateSettings extends LockssServlet {
 
     addFieldToTable(tbl, "Hostname", mCfg.get(DbManager.PARAM_DATASOURCE_SERVERNAME));
     addFieldToTable(tbl, "Port", mCfg.get(DbManager.PARAM_DATASOURCE_PORTNUMBER));
-    addFieldToTable(tbl, "Database Type", getHumanReadableDatabaseType(mCfg.get(DbManager.PARAM_DATASOURCE_CLASSNAME)));
-    addFieldToTable(tbl, "Database Name", getShortenedDatabaseName(mCfg.get(DbManager.PARAM_DATASOURCE_DATABASENAME)));
+    addFieldToTable(tbl, "Database Type",
+        getHumanReadableDatabaseType(mCfg.get(DbManager.PARAM_DATASOURCE_CLASSNAME)));
+    addFieldToTable(tbl, "Database Name",
+        getShortenedDatabaseName(mCfg.get(DbManager.PARAM_DATASOURCE_DATABASENAME)));
     addFieldToTable(tbl, "Database User", mCfg.get(DbManager.PARAM_DATASOURCE_USER));
 
-    // Only prompt for a database if we've fetched other details
+    // Only prompt for a database password if we've fetched its other details
     if (isTargetConfigFetched) {
       addHiddenInputToTable(tbl,
           "Database Password",
