@@ -1,5 +1,6 @@
 package org.lockss.laaws;
 
+import org.lockss.servlet.MigrateSettings;
 import org.lockss.test.LockssTestCase;
 
 import java.io.ByteArrayInputStream;
@@ -39,7 +40,7 @@ public class TestV2AuMover extends LockssTestCase {
 
     InputStream csvStream = new ByteArrayInputStream(CSV.getBytes(StandardCharsets.UTF_8));
 
-    Properties csvMap = V2AuMover.mapFromCsvStream(csvStream);
+    Properties csvMap = MigrateSettings.propsFromCsv(csvStream);
 
     assertEquals("24680", csvMap.get("org.lockss.contentui.port"));
     assertEquals("true", csvMap.get("org.lockss.contentui.start"));
