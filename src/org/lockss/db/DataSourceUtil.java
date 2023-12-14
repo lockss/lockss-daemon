@@ -196,7 +196,7 @@ public class DataSourceUtil {
     if (DbManagerSql.isTypeDerby(dsClassName)) {
       if (ds instanceof ClientDataSource) {
         ClientDataSource cds = (ClientDataSource) ds;
-        startDerbyNetworkServerControl(cds);
+//        startDerbyNetworkServerControl(cds);
       }
     }
 
