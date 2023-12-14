@@ -672,7 +672,7 @@ public class DbManagerSql {
       "create database \"--databaseName--\" with template template0";
 
   // SQL statement that finds a database in PostgreSQL.
-  private static final String FIND_DATABASE_QUERY_PG = "select datname"
+  static final String FIND_DATABASE_QUERY_PG = "select datname"
       + " from pg_catalog.pg_database where datname = ?";
 
   // The SQL code used to create the necessary version 1 database tables.
@@ -1816,7 +1816,7 @@ public class DbManagerSql {
       + " rename " + OBSOLETE_RANGE_COLUMN + " to " + SUBSCRIPTION_RANGE_COLUMN;
 
   // SQL statement that finds a database in MySQL.
-  private static final String FIND_DATABASE_QUERY_MYSQL = "select schema_name"
+  static final String FIND_DATABASE_QUERY_MYSQL = "select schema_name"
       + " from schemata where schema_name = ?";
   
   // SQL statement that creates a database in MySQL.

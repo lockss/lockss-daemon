@@ -452,6 +452,16 @@ public class AdminServletManager extends BaseServletManager {
               return CurrentConfig.getBooleanParam(ExportContent.PARAM_ENABLE_EXPORT,
                       ExportContent.DEFAULT_ENABLE_EXPORT);
       }};
+  public static final ServletDescr SERVLET_MIGRATE_CONTENT_SETTINGS =
+      new ServletDescr("MigrationSettings",
+          MigrateSettings.class,
+          "Migration Settings",
+          (ServletDescr.NEED_ROLE_CONTENT_ACCESS | ServletDescr.IN_NAV),
+          "Migration mode settings") {
+        public boolean isEnabled(LockssDaemon daemon) {
+          return CurrentConfig.getBooleanParam(MigrateContent.PARAM_ENABLE_MIGRATION,
+              MigrateContent.DEFAULT_ENABLE_MIGRATION);
+        }};
   public static final ServletDescr SERVLET_MIGRATE_CONTENT =
     new ServletDescr("MigrateContent",
       MigrateContent.class,
@@ -668,6 +678,7 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_ADD_CONTENT_TAB,
     SERVLET_SERVE_CONTENT,
     SERVLET_EXPORT_CONTENT,
+    SERVLET_MIGRATE_CONTENT_SETTINGS,
     SERVLET_MIGRATE_CONTENT,
     SERVLET_LIST_OBJECTS,
     SERVLET_DEBUG_PANEL,
@@ -716,6 +727,7 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_TIME_GATE,
     SERVLET_TIME_MAP,
     SERVLET_EXPORT_CONTENT,
+    SERVLET_MIGRATE_CONTENT_SETTINGS,
     SERVLET_MIGRATE_CONTENT,
     SERVLET_LIST_OBJECTS,
     SERVLET_DEBUG_PANEL,
@@ -766,6 +778,7 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_TIME_GATE,
     SERVLET_TIME_MAP,
     SERVLET_EXPORT_CONTENT,
+    SERVLET_MIGRATE_CONTENT_SETTINGS,
     SERVLET_MIGRATE_CONTENT,
     SERVLET_LIST_OBJECTS,
     SERVLET_DEBUG_PANEL,
