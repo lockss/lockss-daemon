@@ -156,15 +156,15 @@ public class MigrateContent extends LockssServlet {
     initParams();
 
     // Is this a status request?
-    String output = getParameter(KEY_OUTPUT);
+    String outputFormat = getParameter(KEY_OUTPUT);
     String status = getParameter(KEY_STATUS);
     if (!StringUtil.isNullString(status)) {
       switch (status) {
       case "status":
-        sendCurrentStatus(output);
+        sendCurrentStatus(outputFormat);
         break;
       case "finished":
-        sendFinishedChunk(output,
+        sendFinishedChunk(outputFormat,
                           getParameter(KEY_INDEX), getParameter(KEY_SIZE));
         break;
       }
