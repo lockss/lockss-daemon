@@ -465,7 +465,7 @@ public class AdminServletManager extends BaseServletManager {
   public static final ServletDescr SERVLET_MIGRATE_CONTENT =
     new ServletDescr("MigrateContent",
       MigrateContent.class,
-      "Migrate V1 Content",
+      "Migration Control",
       (ServletDescr.NEED_ROLE_CONTENT_ACCESS | ServletDescr.IN_NAV),
       "Migrate V1 Content to V2 Repository") {
       public boolean isEnabled(LockssDaemon daemon) {
