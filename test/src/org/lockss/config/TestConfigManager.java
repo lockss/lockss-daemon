@@ -1166,6 +1166,7 @@ public class TestConfigManager extends LockssTestCase {
 		    CONFIG_FILE_CONTENT_SERVERS,
 		    CONFIG_FILE_ACCESS_GROUPS,
 		    CONFIG_FILE_CRAWL_PROXY,
+                    CONFIG_FILE_MIGRATION,
 		    CONFIG_FILE_EXPERT);
 
     List<String> names = new ArrayList<String>();
