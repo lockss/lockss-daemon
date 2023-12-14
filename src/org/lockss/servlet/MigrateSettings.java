@@ -490,7 +490,9 @@ public class MigrateSettings extends LockssServlet {
     conn.execute();
 
     if (conn.getResponseCode() == 200) {
-      return propsFromCsv(conn.getResponseInputStream());
+      try (InputStream csvInput = conn.getResponseInputStream()) {
+        return propsFromCsv(csvInput);
+      }
     }
 
     throw new IOException(
@@ -515,8 +517,7 @@ public class MigrateSettings extends LockssServlet {
     conn.execute();
 
     if (conn.getResponseCode() == 200) {
-      InputStream xmlInput = conn.getResponseInputStream();
-      try {
+      try (InputStream xmlInput = conn.getResponseInputStream()) {
         // FIXME: The factory and XPath expression could be constants
         InputSource inputSource = new InputSource(xmlInput);
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
