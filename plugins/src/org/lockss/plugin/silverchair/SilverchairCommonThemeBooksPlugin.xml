@@ -147,8 +147,9 @@ POSSIBILITY OF SUCH DAMAGE.
             <!--
             https://pubs.geoscienceworld.org/sepm/books/book/1872/chapter-pdf/3800602/9781565762381_ch01.pdf
             https://books.rsc.org/books/edited-volume/chapter-pdf/1716368/bk9781839164224-00001.pdf
+            https://iwaponline.com/ebooks/book-pdf/622664/wio9781789061246.pdf
             -->
-            <string>1,"%s([^/]+/)?(books|ebooks)(/[^/]+)?/[^/]+/chapter(-pdf)?/.*", base_url</string>
+            <string>1,"%s([^/]+/)?(books|ebooks)(/[^/]+)?(/[^/]+)?/(chapter|book)(-pdf)?/.*", base_url</string>
         </list>
     </entry>
     <entry>
@@ -157,8 +158,9 @@ POSSIBILITY OF SUCH DAMAGE.
             <!--
             https://pubs.geoscienceworld.org/books/book/2160/chapter-pdf/4705971/01_sp471-18-052.pdf
             https://books.rsc.org/books/edited-volume/chapter-pdf/1716079/bk9781839164224-00280.pdf
+            https://iwaponline.com/ebooks/book-pdf/622664/wio9781789061246.pdf
             -->
-            <string>"%s(books|ebooks)/[^/]+/([^/]+/)?(chapter-pdf|chapter)/", base_url</string>
+            <string>"%s(books|ebooks)/[^/]+/([^/]+/)?(chapter-pdf|chapter)?.*\.pdf$", base_url</string>
             <!--https://pubs.geoscienceworld.org/sepm/books/book/1872/chapter-pdf/3800602/9781565762381_ch01.pdf-->
             <string>"%s[^/]+/(books|ebooks)/[^/]+/[^/]+/(chapter-pdf|chapter)/", base_url</string>
             <string>"^https?://([^/]+\.silverchair-cdn\.com)/[^?]+pdf\?Expires=2147483647"</string>
