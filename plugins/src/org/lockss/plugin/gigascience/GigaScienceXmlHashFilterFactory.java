@@ -84,6 +84,7 @@ public class GigaScienceXmlHashFilterFactory implements FilterFactory{
                 List<Element> sortedFileNodes = sortFileNodes(fileNodes); 
 
                 for(int i=0; i < fileNodes.getLength(); i++){
+                    //logger.debug3("You are in the files node. You are about to remove: " + fileNodes.item(i));
                     filesNode.removeChild(fileNodes.item(i));
                 }
                 
@@ -96,17 +97,17 @@ public class GigaScienceXmlHashFilterFactory implements FilterFactory{
             if(sampleAttributesList != null && sampleAttributesList.getLength() != 0){
                 for(int i=0; i < sampleAttributesList.getLength(); i++){
                     Node sampleAttributesNode = sampleAttributesList.item(i);
+                    //logger.debug3("You are currently in the sample_attributes tag." + sampleAttributesNode.getTextContent());
                     NodeList attributeNodes = sampleAttributesNode.getChildNodes();
-                    //logger.debug3(attributeNodes. getTextContent());
-                    List<Node> sortedAttributeNodes = sortAttributeNodes(attributeNodes);
-
+                    List<Element> sortedAttributeNodes = sortAttributeNodes(attributeNodes);
                     for(int j=0; j < attributeNodes.getLength(); j++){
-                        sampleAttributesNode.removeChild(attributeNodes.item(i));
+                        sampleAttributesNode.removeChild(attributeNodes.item(j));
                     }
 
-                    for(Node sortedAttributeNode:sortedAttributeNodes){
+                    for(Element sortedAttributeNode:sortedAttributeNodes){
                         sampleAttributesNode.appendChild(sortedAttributeNode);
                     }
+                    //logger.debug3("You are currently in the sample_attributes tag, after sorting." + sampleAttributesNode.getTextContent());
                 }
 
             }
@@ -128,7 +129,7 @@ public class GigaScienceXmlHashFilterFactory implements FilterFactory{
     private static List<Element> sortFileNodes(NodeList nodes) {
         List<Element> sortedNodes = new ArrayList<Element>();
         for (int i = 0; i < nodes.getLength(); i++) {
-            sortedNodes.add((Element) nodes.item(i));
+            sortedNodes.add((Element)nodes.item(i));
         }
         
         Collections.sort(sortedNodes, new Comparator<Element>() {
@@ -139,15 +140,18 @@ public class GigaScienceXmlHashFilterFactory implements FilterFactory{
         });
         return sortedNodes;
     }
-    private static List<Node> sortAttributeNodes(NodeList nodes) {
-        List<Node> sortedNodes = new ArrayList<Node>();
+    private static List<Element> sortAttributeNodes(NodeList nodes) {
+        List<Element> sortedNodes = new ArrayList<Element>();
         for (int i = 0; i < nodes.getLength(); i++) {
-            logger.debug3(nodes.item(i).getTextContent());
-            sortedNodes.add(nodes.item(i));
-        }
+            //make sure that nodes have content, otherwise the Element case will throw an error
+            if(nodes.item(i).hasChildNodes()){
+                //logger.debug("You are adding nodes to the sortedNodes list. You are adding: " + nodes.item(i).getTextContent());
+                sortedNodes.add((Element)nodes.item(i));
+            }
+        } 
         
-        Collections.sort(sortedNodes, new Comparator<Node>() {
-            public int compare(Node o1, Node o2) {
+        Collections.sort(sortedNodes, new Comparator<Element>() {
+            public int compare(Element o1, Element o2) {
                 return o1.getTextContent().compareTo(o2.getTextContent());
             }
         });
