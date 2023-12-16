@@ -13693,7 +13693,7 @@
       param[journal_issn] = 1319-4534
       #param[base_url] = https://www.saudijophthalmol.org/
 
-      au < frozen ; exists ; 2020 ; Saudi Journal of Ophthalmology Volume 34 ; 2020 ; 34 ; https://www.saudijophthalmol.org/ ; ; >
+      au < finished ; manifest ; 2020 ; Saudi Journal of Ophthalmology Volume 34 ; 2020 ; 34 ; https://www.saudijophthalmol.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; Saudi Journal of Ophthalmology Volume 35 ; 2021 ; 35 ; https://www.saudijophthalmol.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022 ; Saudi Journal of Ophthalmology Volume 36 ; 2022 ; 36 ; https://www.saudijophthalmol.org/ ; ; reingest4.clockss.org:8082 >
       au < doNotProcess ; exists ; 2023 ; Saudi Journal of Ophthalmology Volume 37 ; 2023 ; 37 ; https://www.saudijophthalmol.org/ ; ; >
