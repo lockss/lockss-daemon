@@ -406,7 +406,7 @@
     param[collection_id] = CMR
 
     au < manifest ; 2021 ; CMR 2021 ; 2021 ; https://www.govinfo.gov/ >
-    au < manifest ; 2022 ; CMR 2022 ; 2022 ; https://www.govinfo.gov/ >
+    au < ready ; 2022 ; CMR 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < manifest ; 2023 ; CMR 2023 ; 2023 ; https://www.govinfo.gov/ >
 
   }
@@ -1163,9 +1163,9 @@
 
     param[collection_id] = LSA
 
-    au < manifest ; 2016 ; LSA 2016 ; 2016 ; https://www.govinfo.gov/ >
-    au < manifest ; 2017 ; LSA 2017 ; 2017 ; https://www.govinfo.gov/ >
-    au < manifest ; 2018 ; LSA 2018 ; 2018 ; https://www.govinfo.gov/ >
+    au < ready ; 2016 ; LSA 2016 ; 2016 ; https://www.govinfo.gov/ >
+    au < ready ; 2017 ; LSA 2017 ; 2017 ; https://www.govinfo.gov/ >
+    au < ready ; 2018 ; LSA 2018 ; 2018 ; https://www.govinfo.gov/ >
 
     au < released ; 2019 ; List of CFR Sections Affected 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; List of CFR Sections Affected 2020 ; 2020 ; https://www.govinfo.gov/ >
@@ -1208,14 +1208,14 @@
     au < manifest ; 1913 ; PLAW 1913 ; 1913 ; https://www.govinfo.gov/ >
     au < manifest ; 1925 ; Public and Private Laws 1925 ; 1925 ; https://www.govinfo.gov/ >
     au < exists ; 1946 ; Public and Private Laws 1946 ; 1946 ; https://www.govinfo.gov/ >#no substance
-    au < manifest ; 2013 ; PLAW 2013 ; 2013 ; https://www.govinfo.gov/ >
-    au < manifest ; 2017 ; PLAW 2017 ; 2017 ; https://www.govinfo.gov/ >
-    au < manifest ; 2018 ; PLAW 2018 ; 2018 ; https://www.govinfo.gov/ >
+    au < ready ; 2013 ; PLAW 2013 ; 2013 ; https://www.govinfo.gov/ >
+    au < ready ; 2017 ; PLAW 2017 ; 2017 ; https://www.govinfo.gov/ >
+    au < ready ; 2018 ; PLAW 2018 ; 2018 ; https://www.govinfo.gov/ >
 
     au < released ; 2019 ; Public and Private Laws 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Public and Private Laws 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; Public and Private Laws 2021 ; 2021 ; https://www.govinfo.gov/ >
-    au < manifest ; 2022 ; Public and Private Laws 2022 ; 2022 ; https://www.govinfo.gov/ >
+    au < ready ; 2022 ; Public and Private Laws 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < manifest ; 2023 ; Public and Private Laws 2023 ; 2023 ; https://www.govinfo.gov/ >
 
   }
@@ -1299,7 +1299,7 @@
 
     au < released ; 2014 ; Senate Manual 2014 ; 2014 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Senate Manual 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < manifest ; 2022 ; Senate Manual 2022 ; 2022 ; https://www.govinfo.gov/ >
+    au < ready ; 2022 ; Senate Manual 2022 ; 2022 ; https://www.govinfo.gov/ >
 
   }
 
@@ -1513,7 +1513,7 @@
     #Published 1994-2017
     param[collection_id] = USCODE
 
-    au < manifest ; 2011 ; USCODE 2011 ; 2011 ; https://www.govinfo.gov/ >
+    au < ready ; 2011 ; USCODE 2011 ; 2011 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 2012 ; United States Code 2012 ; 2012 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 2013 ; United States Code 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < released ; 2014 ; United States Code 2014 ; 2014 ; https://www.govinfo.gov/ >
