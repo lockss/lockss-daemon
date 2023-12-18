@@ -12587,32 +12587,6 @@
 
   }
 
-
-  {
-
-      title <
-        name = Journal of Orthopaedics and Spine ;
-        eissn = 2666-7150
-      >
-
-      param[journal_issn] = 2319-2585
-      #param[base_url] = https://www.joas.in/
-
-      au < exists ; 2013 ; Journal of Orthopaedics and Spine Volume 1 ; 2013 ; 1 ; https://www.joas.in/ >
-      au < exists ; 2014 ; Journal of Orthopaedics and Spine Volume 2 ; 2014 ; 2 ; https://www.joas.in/ >
-      au < exists ; 2015 ; Journal of Orthopaedics and Spine Volume 3 ; 2015 ; 3 ; https://www.joas.in/ >
-      au < exists ; 2016 ; Journal of Orthopaedics and Spine Volume 4 ; 2016 ; 4 ; https://www.joas.in/ >
-      au < exists ; 2017 ; Journal of Orthopaedics and Spine Volume 5 ; 2017 ; 5 ; https://www.joas.in/ >
-      au < exists ; 2018 ; Journal of Orthopaedics and Spine Volume 6 ; 2018 ; 6 ; https://www.joas.in/ >
-      au < exists ; 2019 ; Journal of Orthopaedics and Spine Volume 7 ; 2019 ; 7 ; https://www.joas.in/ >
-      au < exists ; 2020 ; Journal of Orthopaedics and Spine Volume 8 ; 2020 ; 8 ; https://www.joas.in/ >
-      au < exists ; 2021 ; Journal of Orthopaedics and Spine Volume 9 ; 2021 ; 9 ; https://www.joas.in/ >
-      au < expected ; 2022 ; Journal of Orthopaedics and Spine Volume 10 ; 2022 ; 10 ; https://www.joas.in/ >
-      au < expected ; 2023 ; Journal of Orthopaedics and Spine Volume 11 ; 2023 ; 11 ; https://www.joas.in/ >
-
-  }
-
-
   {
 
       title <
