@@ -202,7 +202,7 @@
         au < readySource ; crawling ; 2023 ; Elsevier Source Content 2023_47 ; 2023_47 >
         au < readySource ; crawling ; 2023 ; Elsevier Source Content 2023_48 ; 2023_48 >
         au < manifest ; exists ; 2023 ; Elsevier Source Content 2023_49 ; 2023_49 >
-        au < expected ; exists ; 2023 ; Elsevier Source Content 2023_50 ; 2023_50 >
+        au < manifest ; exists ; 2023 ; Elsevier Source Content 2023_50 ; 2023_50 >
         au < expected ; exists ; 2023 ; Elsevier Source Content 2023_51 ; 2023_51 >
         au < expected ; exists ; 2023 ; Elsevier Source Content 2023_52 ; 2023_52 >
         au < expected ; exists ; 2023 ; Elsevier Source Content 2023_53 ; 2023_53 >
@@ -221,6 +221,8 @@
         au < expected ; exists ; 2024 ; Elsevier Source Content 2024_10 ; 2024_10 >
         au < expected ; exists ; 2024 ; Elsevier Source Content 2024_11 ; 2024_11 >
         au < expected ; exists ; 2024 ; Elsevier Source Content 2024_12 ; 2024_12 >
+        au < expected ; exists ; 2024 ; Elsevier Source Content 2024_13 ; 2024_13 >
+        au < expected ; exists ; 2024 ; Elsevier Source Content 2024_14 ; 2024_14 >
 
       }
     }
