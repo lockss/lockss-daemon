@@ -50,7 +50,7 @@
     {
     param[base_url] = https://clockss-ingest.lockss.org/warcfiles/museum-victoria-science-reports-released/
 
-    au < expected ; exists ; 2023 ; Museum Victoria Science Reports WARC Content 2023 ; 2023 >
+    au < expected ; exists ; 2025 ; Museum Victoria Science Reports WARC Content 2025 ; 2025 >
     # check for new content before re-running. No new content since 2019 as of 2023-01-18
     }
   }
