@@ -3183,12 +3183,12 @@
       comment[years] = Published 2017-present
       param[journal_code] = qm
 
-      au < manifest ; 2017 ; Materials Chemistry Frontiers Volume 1 ; 1 ; 2017 ; https://pubs.rsc.org/ >
-      au < manifest ; 2018 ; Materials Chemistry Frontiers Volume 2 ; 2 ; 2018 ; https://pubs.rsc.org/ >
-      au < manifest ; 2019 ; Materials Chemistry Frontiers Volume 3 ; 3 ; 2019 ; https://pubs.rsc.org/ >
-      au < manifest ; 2020 ; Materials Chemistry Frontiers Volume 4 ; 4 ; 2020 ; https://pubs.rsc.org/ >
-      au < manifest ; 2021 ; Materials Chemistry Frontiers Volume 5 ; 5 ; 2021 ; https://pubs.rsc.org/ >
-      au < manifest ; 2022 ; Materials Chemistry Frontiers Volume 6 ; 6 ; 2022 ; https://pubs.rsc.org/ >
+      au < ready ; 2017 ; Materials Chemistry Frontiers Volume 1 ; 1 ; 2017 ; https://pubs.rsc.org/ >
+      au < ready ; 2018 ; Materials Chemistry Frontiers Volume 2 ; 2 ; 2018 ; https://pubs.rsc.org/ >
+      au < ready ; 2019 ; Materials Chemistry Frontiers Volume 3 ; 3 ; 2019 ; https://pubs.rsc.org/ >
+      au < ready ; 2020 ; Materials Chemistry Frontiers Volume 4 ; 4 ; 2020 ; https://pubs.rsc.org/ >
+      au < ready ; 2021 ; Materials Chemistry Frontiers Volume 5 ; 5 ; 2021 ; https://pubs.rsc.org/ >
+      au < ready ; 2022 ; Materials Chemistry Frontiers Volume 6 ; 6 ; 2022 ; https://pubs.rsc.org/ >
       au < manifest ; 2023 ; Materials Chemistry Frontiers Volume 7 ; 7 ; 2023 ; https://pubs.rsc.org/ >
       au < manifest ; 2024 ; Materials Chemistry Frontiers Volume 8 ; 8 ; 2024 ; https://pubs.rsc.org/ >
 
