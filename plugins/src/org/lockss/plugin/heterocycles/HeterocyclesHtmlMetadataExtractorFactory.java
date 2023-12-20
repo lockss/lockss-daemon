@@ -34,13 +34,12 @@ package org.lockss.plugin.heterocycles;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
-import org.lockss.plugin.CachedUrl;
-import org.lockss.util.Logger;
+import org.lockss.plugin.*;
+import org.lockss.util.*;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.jsoup.Jsoup;
@@ -74,46 +73,142 @@ import org.jsoup.select.Elements;
  *  doi: 87    
  * Raw Metadata (empty)
  */
-public class Heterocycles2023MetadataExtractorFactory
-  implements FileMetadataExtractorFactory {
+public class HeterocyclesHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
   
-  static Logger log = Logger.getLogger(Heterocycles2023MetadataExtractorFactory.class);
+  private static final Logger log = Logger.getLogger(HeterocyclesHtmlMetadataExtractorFactory.class);
   
-  public FileMetadataExtractor createFileMetadataExtractor(
-      MetadataTarget target, String contentType) throws PluginException {
-    return new Heterocycles2023MetadataExtractor();
+  public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
+                                                           String contentType)
+      throws PluginException {
+    return new HeterocyclesMetadataExtractor();
   }
 
   // Gets default metadata from tdb: date, journal.title, publisher, 
-  public static class Heterocycles2023MetadataExtractor
-    implements FileMetadataExtractor {
+  public static class HeterocyclesMetadataExtractor implements FileMetadataExtractor {
 
     static String PDF_ACCESS_URL = "pdf_access_url";
 
+    // Group 1: type, either PDF or PDFsi or PDFwithLinks
+    // Group 2: volume
+    // Group 3: issue
+    private static final Pattern PDF_PATTERN =
+        Pattern.compile("/(PDF|PDFsi|PDFwithLinks)/[0-9]+/([^/]+)/([^/]+)/?$", Pattern.CASE_INSENSITIVE);
+    
     private Pattern ISSUE_PATTERN = Pattern.compile(
         "/libraries/journal/([^/]+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
 
     ArrayList<String> issuePages = new ArrayList<String>();
 
     @Override
-    public void extract(MetadataTarget target, 
-        CachedUrl cu, Emitter emitter) throws IOException {
-
-      //Metadata - cachedurl pdf cu:http://www.heterocycles.jp/clockss/downloads/PDF/27526/102/12
-      log.debug3("Metadata - cachedurl pdf cu:" + cu.getUrl());
-
-      if (!issuePages.contains(cu.getUrl())) {
-
-        log.debug3("Metadata - adding unique cachedurl pdf cu:" + cu.getUrl());
-
-        issuePages.add(cu.getUrl());
-
-        getAdditionalMetadata(cu, emitter);
-
+    public void extract(MetadataTarget target,
+                        CachedUrl cu,
+                        Emitter emitter)
+        throws IOException {
+      ArchivalUnit au = cu.getArchivalUnit();
+      String tocUrl = cu.getUrl();
+      log.debug3(String.format("Processing TOC: %s", tocUrl));
+      InputStream in = null;
+      try {
+        // Get the content
+        in = cu.getUnfilteredInputStream();
+        if (in == null) {
+          log.debug3(String.format("No content for %s", tocUrl));
+          return;
+        }
+        
+        // Parse the document
+        Document doc = Jsoup.parse(in, cu.getEncoding(), tocUrl);
+        
+        // Get all the article <div>s
+        Elements articleDivs = doc.selectXpath("body/div[@id='mainContainer']/div[@id='mainContent']/div[@class='contentBox']");
+        log.debug3(String.format("Number of article <div>s: %d", articleDivs.size()));
+        
+        // For each article...
+        for (Element articleDiv : articleDivs) {
+          // Select a PDF link
+          Elements pdfWithLinksTags = articleDiv.selectXpath("a[@class='linkrow'][contains(@href, '/PDFwithLinks/')]");
+          Elements pdfTags = articleDiv.selectXpath("a[@class='linkrow'][contains(@href, '/PDF/')]");
+          Elements pdfSiTags = articleDiv.selectXpath("a[@class='linkrow'][contains(@href, '/PDFsi/')]");
+          String accessUrl = null;
+          if (!pdfWithLinksTags.isEmpty()) {
+            accessUrl = pdfWithLinksTags.get(0).absUrl("href");
+            log.debug3(String.format("Selected 'PDFwithLinks': %s", accessUrl));
+          }
+          else if (!pdfTags.isEmpty()) {
+            accessUrl = pdfTags.get(0).absUrl("href");
+            log.debug3(String.format("Selected 'PDF': %s", accessUrl));
+          }
+          else if (!pdfSiTags.isEmpty()) {
+            accessUrl = pdfSiTags.get(0).absUrl("href");
+            log.debug3(String.format("Selected 'PDFsi': %s", accessUrl));
+          }
+          else {
+            log.debug3(String.format("Could not find a PDF link: %s", articleDiv));
+            continue;
+          }
+          
+          // Extract the article title and DOI
+          Elements titleTags = articleDiv.selectXpath("h5");
+          Elements doiTags = articleDiv.selectXpath("div[starts-with(text(), 'DOI:')]");
+          
+          ArticleMetadata am = new ArticleMetadata();
+          am.putRaw("access_url", accessUrl);
+          emitter.emitMetadata(cu /* FIXME */, am);
+        }
       }
-      
+      catch (IOException ioe) {
+        log.debug3(String.format("IOException while processing %s", tocUrl), ioe);
+      }
+      finally {
+        IOUtil.safeClose(in);
+      }
     }
 
+    public void parse(InputStream in,
+                      String encoding,
+                      String url,
+                      Emitter emitter)
+        throws IOException {
+      // Parse the document
+      Document doc = Jsoup.parse(in, encoding, url);
+      
+      // Get all the article <div>s
+      Elements articleDivs = doc.selectXpath("body/div[@id='mainContainer']/div[@id='mainContent']/div[@class='contentBox']");
+      log.debug3(String.format("Number of article <div>s: %d", articleDivs.size()));
+      
+      for (Element articleDiv : articleDivs) {
+        // Select a PDF link
+        Elements pdfWithLinksTags = articleDiv.selectXpath("a[@class='linkrow'][contains(@href, '/PDFwithLinks/')]");
+        Elements pdfTags = articleDiv.selectXpath("a[@class='linkrow'][contains(@href, '/PDF/')]");
+        Elements pdfSiTags = articleDiv.selectXpath("a[@class='linkrow'][contains(@href, '/PDFsi/')]");
+        String accessUrl = null;
+        if (!pdfWithLinksTags.isEmpty()) {
+          accessUrl = pdfWithLinksTags.get(0).absUrl("href");
+          log.debug3(String.format("Selected 'PDFwithLinks': %s", accessUrl));
+        }
+        else if (!pdfTags.isEmpty()) {
+          accessUrl = pdfTags.get(0).absUrl("href");
+          log.debug3(String.format("Selected 'PDF': %s", accessUrl));
+        }
+        else if (!pdfSiTags.isEmpty()) {
+          accessUrl = pdfSiTags.get(0).absUrl("href");
+          log.debug3(String.format("Selected 'PDFsi': %s", accessUrl));
+        }
+        else {
+          log.debug3(String.format("Could not find a PDF link: %s", articleDiv));
+          continue;
+        }
+        
+        // Extract the article title and DOI
+        Elements titleTags = articleDiv.selectXpath("h5");
+        Elements doiTags = articleDiv.selectXpath("div[starts-with(text(), 'DOI:')]");
+        
+        ArticleMetadata am = new ArticleMetadata();
+        am.putRaw("access_url", accessUrl);
+        emitter.emitMetadata(null, am);
+      }
+    }
+    
     
     private void getAdditionalMetadata(CachedUrl cu, Emitter emitter)
     {

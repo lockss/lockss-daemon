@@ -32,16 +32,16 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.heterocycles;
 
-import java.util.Iterator;
-import java.util.regex.Pattern;
-
-import org.lockss.daemon.*;
+import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractorFactory;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
+
+import java.util.*;
+import java.util.regex.Pattern;
 
 public class HeterocyclesArticleIteratorFactory
 implements ArticleIteratorFactory,
@@ -50,24 +50,22 @@ implements ArticleIteratorFactory,
   protected static Logger log = 
       Logger.getLogger(HeterocyclesArticleIteratorFactory.class);
 
-  protected static final String ROOT_TEMPLATE = "\"%sclockss/\", base_url";
+  //http://www.heterocycles.jp/clockss/libraries/journal/10/1
+  //http://www.heterocycles.jp/clockss/libraries/journal/10/1/page:1
+  //http://www.heterocycles.jp/clockss/libraries/journal/10/1/page:2
+  //Need make sure page 1 only counted once to prevent duplicated article on metadata page
   
-  protected static final String PATTERN_TEMPLATE = 
-      "\"^%sclockss/(downloads|libraries)/(fulltext|PDF|PDFwithLinks|PDFsi)/"
-        + "([^/]+/%s/[^/]+)$\", base_url, volume_name";
-  
-  private Pattern PDF_PATTERN = Pattern.compile(
-      "/(downloads)/(PDF)/([^/]+/[^/]+/[^/]+)$", Pattern.CASE_INSENSITIVE);
 
-  private static String PDF_REPLACEMENT = "/$1/$2/$3";
-  private static String PDFWITHLINKS_REPLACEMENT = "/$1/PDFwithLinks/$3";
-  private static String PDFSI_REPLACEMENT = "/$1/PDFsi/$3";
-  
-  private static String FULL_TEXT_REPLACEMENT = "/libraries/fulltext/$3";
-  private static String HIDDEN_ABSTRACT_REPLACEMENT = "/libraries/abst/$3";
+  protected static final String ROOT_TEMPLATE = "\"%sclockss/libraries/journal/%s/\", base_url, volume_name";
 
-  public static final String ROLE_PDF_WITH_LINKS = "PdfWithLinks";
-  public static final String ROLE_HIDDEN_ABSTRACT = "HiddenAbstract";
+
+  protected static final String PATTERN_TEMPLATE =
+      "\"^%sclockss/libraries/journal/%s/([^/]+(/page:[2-9]\\d*)?)$\", base_url, volume_name";
+  
+  private static final Pattern ISSUE_PAGE_PATTERN = Pattern.compile(
+      "/libraries/journal/(.*)$", Pattern.CASE_INSENSITIVE);
+
+  private static final String ISSUE_LEVEL_METADATA_REPLACEMENT = "/libraries/journal/$1";
       
   // article content may look like:
   // <heterocyclesbase>.com/clockss/libraries/fulltext/21568/83/1
@@ -75,6 +73,7 @@ implements ArticleIteratorFactory,
   // <heterocyclesbase>.com/clockss/downloads/PDF/23208/83/1
   // <heterocyclesbase>.com/clockss/downloads/PDFwithLinks/23208/83/1
   // <heterocyclesbase>.com/clockss/downloads/PDFsi/23208/83/1
+  // IssuePage: http://www.heterocycles.jp/clockss/libraries/journal/102/8
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, 
@@ -85,39 +84,24 @@ implements ArticleIteratorFactory,
     
     builder.setSpec(target,
         ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
-    
-    // The order in which these aspects are added is important. They determine
-    // which will trigger the ArticleFiles and if you are only counting 
-    // articles (not pulling metadata) then the lower aspects aren't looked 
-    // for, once you get a match.
 
-    // PDF - aspect that will trigger an ArticleFiles
-    builder.addAspect(
-        PDF_PATTERN, PDF_REPLACEMENT, ArticleFiles.ROLE_FULL_TEXT_PDF);   
 
-    // full text html - aspect that will trigger an ArticleFiles
-    builder.addAspect(FULL_TEXT_REPLACEMENT, 
-        ArticleFiles.ROLE_FULL_TEXT_HTML, ArticleFiles.ROLE_ABSTRACT);
+    builder.addAspect(ISSUE_PAGE_PATTERN,
+            ISSUE_LEVEL_METADATA_REPLACEMENT,
+            ArticleFiles.ROLE_ARTICLE_METADATA);
 
-    builder.addAspect(HIDDEN_ABSTRACT_REPLACEMENT, ROLE_HIDDEN_ABSTRACT);
-        
-    builder.addAspect(PDFWITHLINKS_REPLACEMENT, ROLE_PDF_WITH_LINKS);   
-
-    builder.addAspect(
-        PDFSI_REPLACEMENT, ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS);   
-
-    // The order in which we want to define full_text_cu.
-    // First one that exists will get the job
-    builder.setFullTextFromRoles(
-        ArticleFiles.ROLE_FULL_TEXT_PDF, ArticleFiles.ROLE_FULL_TEXT_HTML);  
-                
-     return builder.getSubTreeArticleIterator();
+    return builder.getSubTreeArticleIterator();
   }  
-  
+
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
-    throws PluginException {
-    return new BaseArticleMetadataExtractor(null);
+          throws PluginException {
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA) {
+      @Override
+      protected boolean isCheckAccessUrl() {
+        return true;
+      }
+    };
   }
 
 }
