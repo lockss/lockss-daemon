@@ -366,6 +366,7 @@
 
       param[journal_id] = leader
       param[base_url] = https://leader.pubs.asha.org/
+      #Back content is on standard Atypon. April 2020, moved to magazine format; See below.
 
       au < manifest ; exists ; 1999 ; ASHA Leader Volume 4 ; 4 ; >
       au < manifest ; exists ; 2000 ; ASHA Leader Volume 5 ; 5 ; >
@@ -412,24 +413,24 @@
       au < crawling ; exists ; 2023 ; Perspectives of the ASHA Special Interest Groups Volume 8 ; 8 ; >
   }
 }
-{
-  plugin = needs.plugin
-  implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
-
-  {
-    title <
-      name = ASHA Leader ;
-      eissn = 1085-9586 
-    >
-
-      param[journal_id] = leader
-      param[base_url] = https://leader.pubs.asha.org/
-
-      au < exists ; exists ; 2020 ; ASHA Leader Magazine Volume 25 ; 25 ; >
-      au < exists ; exists ; 2021 ; ASHA Leader Magazine Volume 26 ; 26 ; >
-      au < exists ; exists ; 2022 ; ASHA Leader Magazine Volume 27 ; 27 ; >
-      au < exists ; exists ; 2023 ; ASHA Leader Magazine Volume 28 ; 28 ; >
-      #Changed from a journal to a magazine as of April 2020.
-  }
-}
+#{
+#  plugin = needs.plugin
+#  implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+#
+#  {
+#    title <
+#      name = ASHA Leader ;
+#      eissn = 1085-9586 
+#    >
+#
+#      param[journal_id] = leader
+#      param[base_url] = https://leader.pubs.asha.org/
+#
+#      au < exists ; exists ; 2020 ; ASHA Leader Magazine Volume 25 ; 25 ; >
+#      au < exists ; exists ; 2021 ; ASHA Leader Magazine Volume 26 ; 26 ; >
+#      au < exists ; exists ; 2022 ; ASHA Leader Magazine Volume 27 ; 27 ; >
+#      au < exists ; exists ; 2023 ; ASHA Leader Magazine Volume 28 ; 28 ; >
+#      #Changed from a journal to a magazine as of April 2020.
+#  }
+#}
 }
