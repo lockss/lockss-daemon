@@ -1237,7 +1237,6 @@
     param[journal_code] = se
 
       au < released ; 2017 ; Sustainable Energy & Fuels Volume 1 ; 1 ; 2017 ; http://pubs.rsc.org/ >
-    
       au < released ; 2018 ; Sustainable Energy & Fuels Volume 2 ; 2 ; 2018 ; https://pubs.rsc.org/ >
       au < released ; 2019 ; Sustainable Energy & Fuels Volume 3 ; 3 ; 2019 ; https://pubs.rsc.org/ >
       au < released ; 2020 ; Sustainable Energy & Fuels Volume 4 ; 4 ; 2020 ; https://pubs.rsc.org/ >
@@ -3192,27 +3191,6 @@
       au < manifest ; 2022 ; Materials Chemistry Frontiers Volume 6 ; 6 ; 2022 ; https://pubs.rsc.org/ >
       au < manifest ; 2023 ; Materials Chemistry Frontiers Volume 7 ; 7 ; 2023 ; https://pubs.rsc.org/ >
       au < manifest ; 2024 ; Materials Chemistry Frontiers Volume 8 ; 8 ; 2024 ; https://pubs.rsc.org/ >
-
-  }
-
-
-  {
-      title <
-        name = Sustainable Energy & Fuels ;
-        eissn = 2398-4902
-      >
-
-      comment[years] = Published 2017-present
-      param[journal_code] = se
-
-      au < manifest ; 2017 ; Sustainable Energy & Fuels Volume 1 ; 1 ; 2017 ; https://pubs.rsc.org/ >
-      au < manifest ; 2018 ; Sustainable Energy & Fuels Volume 2 ; 2 ; 2018 ; https://pubs.rsc.org/ >
-      au < manifest ; 2019 ; Sustainable Energy & Fuels Volume 3 ; 3 ; 2019 ; https://pubs.rsc.org/ >
-      au < manifest ; 2020 ; Sustainable Energy & Fuels Volume 4 ; 4 ; 2020 ; https://pubs.rsc.org/ >
-      au < manifest ; 2021 ; Sustainable Energy & Fuels Volume 5 ; 5 ; 2021 ; https://pubs.rsc.org/ >
-      au < manifest ; 2022 ; Sustainable Energy & Fuels Volume 6 ; 6 ; 2022 ; https://pubs.rsc.org/ >
-      au < manifest ; 2023 ; Sustainable Energy & Fuels Volume 7 ; 7 ; 2023 ; https://pubs.rsc.org/ >
-      au < expected ; 2024 ; Sustainable Energy & Fuels Volume 8 ; 8 ; 2024 ; https://pubs.rsc.org/ >
 
   }
 
