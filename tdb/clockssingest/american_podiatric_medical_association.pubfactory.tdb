@@ -68,19 +68,19 @@
     au < manifest ; exists ; 2007 ; Journal of the American Podiatric Medical Association Volume 97 ; 97 ; >
     au < manifest ; exists ; 2008 ; Journal of the American Podiatric Medical Association Volume 98 ; 98 ; >
     au < manifest ; exists ; 2009 ; Journal of the American Podiatric Medical Association Volume 99 ; 99 ; >
-    au < frozen ; exists ; 2010 ; Journal of the American Podiatric Medical Association Volume 100 ; 100 ; >
-    au < frozen ; exists ; 2011 ; Journal of the American Podiatric Medical Association Volume 101 ; 101 ; >
-    au < frozen ; exists ; 2012 ; Journal of the American Podiatric Medical Association Volume 102 ; 102 ; >
-    au < frozen ; exists ; 2013 ; Journal of the American Podiatric Medical Association Volume 103 ; 103 ; >
-    au < frozen ; exists ; 2014 ; Journal of the American Podiatric Medical Association Volume 104 ; 104 ; >
-    au < frozen ; exists ; 2015 ; Journal of the American Podiatric Medical Association Volume 105 ; 105 ; >
-    au < frozen ; exists ; 2016 ; Journal of the American Podiatric Medical Association Volume 106 ; 106 ; >
-    au < frozen ; exists ; 2017 ; Journal of the American Podiatric Medical Association Volume 107 ; 107 ; >
-    au < frozen ; exists ; 2018 ; Journal of the American Podiatric Medical Association Volume 108 ; 108 ; >
+    au < finished ; manifest ; 2010 ; Journal of the American Podiatric Medical Association Volume 100 ; 100 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Journal of the American Podiatric Medical Association Volume 101 ; 101 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2012 ; Journal of the American Podiatric Medical Association Volume 102 ; 102 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2013 ; Journal of the American Podiatric Medical Association Volume 103 ; 103 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Journal of the American Podiatric Medical Association Volume 104 ; 104 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2015 ; Journal of the American Podiatric Medical Association Volume 105 ; 105 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; Journal of the American Podiatric Medical Association Volume 106 ; 106 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2017 ; Journal of the American Podiatric Medical Association Volume 107 ; 107 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2018 ; Journal of the American Podiatric Medical Association Volume 108 ; 108 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2019 ; Journal of the American Podiatric Medical Association Volume 109 ; 109 ; >
     au < doNotProcess ; exists ; 2020 ; Journal of the American Podiatric Medical Association Volume 110 ; 110 ; >
     au < doNotProcess ; exists ; 2021 ; Journal of the American Podiatric Medical Association Volume 111 ; 111 ; >
-    au < frozen ; exists ; 2022 ; Journal of the American Podiatric Medical Association Volume 112 ; 112 ; >
+    au < finished ; manifest ; 2022 ; Journal of the American Podiatric Medical Association Volume 112 ; 112 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2023 ; Journal of the American Podiatric Medical Association Volume 113 ; 113 ; >
 
   }

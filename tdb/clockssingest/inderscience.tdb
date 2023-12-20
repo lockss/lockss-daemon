@@ -1198,8 +1198,8 @@
 
       param[journal_id] = ijbdm
 
-      au < frozen ; exists ; 2020 ; International Journal of Big Data Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2022 ; International Journal of Big Data Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2020 ; International Journal of Big Data Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; International Journal of Big Data Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2023 ; International Journal of Big Data Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -1435,7 +1435,7 @@
 
       au < finished ; manifest ; 2019-2020 ; International Journal of Blockchains and Cryptocurrencies Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; International Journal of Blockchains and Cryptocurrencies Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2022 ; International Journal of Blockchains and Cryptocurrencies Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2022 ; International Journal of Blockchains and Cryptocurrencies Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2023 ; International Journal of Blockchains and Cryptocurrencies Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -5044,10 +5044,10 @@
 
       param[journal_id] = ijhm
 
-      au < frozen ; exists ; 2018 ; International Journal of Hydromechatronics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2018 ; International Journal of Hydromechatronics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; International Journal of Hydromechatronics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2020 ; International Journal of Hydromechatronics Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2021 ; International Journal of Hydromechatronics Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2021 ; International Journal of Hydromechatronics Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; International Journal of Hydromechatronics Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2023 ; International Journal of Hydromechatronics Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
@@ -6034,7 +6034,7 @@
 
       param[journal_id] = ijitca
 
-      au < frozen ; exists ; 2018-2020 ; International Journal of Internet of Things and Cyber-Assurance Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2018-2020 ; International Journal of Internet of Things and Cyber-Assurance Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < ingNotReady ; exists ; 2022-2023 ; International Journal of Internet of Things and Cyber-Assurance Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
@@ -7854,7 +7854,7 @@
  
        param[journal_id] = ijndc
  
-      au < frozen ; exists ; 2017-2019 ; International Journal of Nonlinear Dynamics and Control Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2017-2019 ; International Journal of Nonlinear Dynamics and Control Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021-2023 ; International Journal of Nonlinear Dynamics and Control Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
     }
