@@ -11,6 +11,7 @@
     pluginPrefix = org.lockss.plugin.
     implicit < pluginSuffix ; status ; year ; name ; volume ; param[year] ; param[base_url] >
     #contact https://ejournals.bc.edu/index.php/colloquium/about/contact
+    attr[start_stem] = index.php/ #For OJS3
     
     {
   
