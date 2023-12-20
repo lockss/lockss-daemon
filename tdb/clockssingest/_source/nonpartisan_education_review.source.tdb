@@ -1,0 +1,22 @@
+{
+  publisher <
+    name = Nonpartisan Education Review ;
+    info[contract] = 2023 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+  hidden[proxy] = DIRECT
+
+  {
+    title <
+      name = Nonpartisan Education Review Source Content
+    >
+
+    plugin = needs.SourcePlugin
+    implicit < status ; status2 ; year ; name ; param[directory] >
+    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/NPER-released/
+
+    au < expected ; exists ; 2024 ; Nonpartisan Education Review Source Content 2024 ; 2024 >
+
+  }
+}
