@@ -58,7 +58,7 @@ public class BaseAtyponHttpResponseHandler implements CacheResultHandler {
   //
   // child can override through getter to extend or change the pattern
   protected static final Pattern DEFAULT_NON_FATAL_500_PAT = 
-      Pattern.compile("((action/(download(Table|Figures|PdfFig)|show(Popup|Cit)))|/releasedAssets/)");
+      Pattern.compile("((action/(download(Table|Figures|PdfFig|Citation)|show(Popup|Cit)))|/releasedAssets/)");
 
   // ASCE has suppl_data links that are returning 403 but should be 404
   //http://ascelibrary.org/doi/suppl/10.1061/%28ASCE%29IR.1943-4774.0000983/suppl_file/Supplemental_Data_IR.1943-4774.0000983_Guerra1
