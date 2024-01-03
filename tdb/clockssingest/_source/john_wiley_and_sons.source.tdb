@@ -26,7 +26,7 @@
       {
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/wileybooks-released/
 
-      au < expected ; exists ; 2023 ; Wiley Books Source Content 2023_01 ; 2023_01 >
+      #au < expected ; exists ; 2023 ; Wiley Books Source Content 2023_01 ; 2023_01 >
       au < expected ; exists ; 2024 ; Wiley Books Source Content 2024_01 ; 2024_01 >
 
       }
@@ -86,9 +86,9 @@
       au < readySource ; crawling ; 2023 ; Wiley Source Content 2023_02 ; 2023_02 >
       au < readySource ; crawling ; 2023 ; Wiley Source Content 2023_03 ; 2023_03 >
       au < readySource ; crawling ; 2023 ; Wiley Source Content 2023_04 ; 2023_04 >
-      au < expected ; exists ; 2023 ; Wiley Source Content 2023_05 ; 2023_05 >
 
       au < expected ; exists ; 2024 ; Wiley Source Content 2024_01 ; 2024_01 >
+      au < expected ; exists ; 2024 ; Wiley Source Content 2024_02 ; 2024_02 >
 
       }
     }
@@ -125,7 +125,7 @@
     {
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/wileymrw-released/
 
-      au < expected ; exists ; 2023 ; Wiley MRW Source Content 2023_01 ; 2023_01 >
+      #au < expected ; exists ; 2023 ; Wiley MRW Source Content 2023_01 ; 2023_01 >
       au < expected ; exists ; 2024 ; Wiley MRW Source Content 2024_01 ; 2024_01 >
 
     }
