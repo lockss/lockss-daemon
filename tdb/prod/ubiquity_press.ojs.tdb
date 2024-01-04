@@ -550,7 +550,7 @@
       au < doNotProcess ; 2005 ; 5 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2005 ; 2005 >
       au < doNotProcess ; 2006 ; 6 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2006 ; 2006 >
       au < doNotProcess ; 2007 ; 7 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2007 ; 2007 >
-      au < doesNotExist ; 2008 ; 8 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2008 ; 2008 >
+      au < manifest ; 2008 ; 8 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2008 ; 2008 >
       au < doNotProcess ; 2009 ; 9 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2009 ; 2009 >
       au < doNotProcess ; 2010 ; 10 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2010 ; 2010 >
       au < doNotProcess ; 2011 ; 11 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2011 ; 2011 >
@@ -845,9 +845,9 @@
       param[base_url] = https://account.datascience.codata.org/
       param[journal_id] = up-j-dsj
 
-      au < doesNotExist ; 2002 ; 1 ; Data Science Journal Volume 2002 ; 2002 >
+      au < manifest ; 2002 ; 1 ; Data Science Journal Volume 2002 ; 2002 >
       au < doNotProcess ; 2003 ; 2 ; Data Science Journal Volume 2003 ; 2003 >
-      au < doesNotExist ; 2004 ; 3 ; Data Science Journal Volume 2004 ; 2004 >
+      au < manifest ; 2004 ; 3 ; Data Science Journal Volume 2004 ; 2004 >
       au < doNotProcess ; 2005 ; 4 ; Data Science Journal Volume 2005 ; 2005 >
       au < doNotProcess ; 2006 ; 5 ; Data Science Journal Volume 2006 ; 2006 >
       au < doNotProcess ; 2007 ; 6 ; Data Science Journal Volume 2007 ; 2007 >
