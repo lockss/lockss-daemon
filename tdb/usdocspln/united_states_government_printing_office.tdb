@@ -178,7 +178,7 @@
     au < released ; 2020 ; Account of the Receipts and Expenditures of the United States 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; Account of the Receipts and Expenditures of the United States 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Account of the Receipts and Expenditures of the United States 2022 ; 2022 ; https://www.govinfo.gov/ >
-    au < manifest ; 2023 ; Account of the Receipts and Expenditures of the United States 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < ready ; 2023 ; Account of the Receipts and Expenditures of the United States 2023 ; 2023 ; https://www.govinfo.gov/ >
 
     au < exists ; 2029 ; Account of the Receipts and Expenditures of the United States 2029 ; 2029 ; https://www.govinfo.gov/ > #empty
     au < exists ; 2101 ; Account of the Receipts and Expenditures of the United States 2101 ; 2101 ; https://www.govinfo.gov/ > #empty
@@ -311,7 +311,7 @@
     au < released ; 2021 ; Additional Government Publications 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Additional Government Publications 2022 ; 2022 ; https://www.govinfo.gov/ >
 
-    au < manifest ; 2023 ; GPO 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < ready ; 2023 ; GPO 2023 ; 2023 ; https://www.govinfo.gov/ >
 
   }
 
@@ -333,7 +333,7 @@
     au < released ; 2020 ; Budget of the United States Government 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; Budget of the United States Government 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Budget of the United States Government 2022 ; 2022 ; https://www.govinfo.gov/ >
-    au < manifest ; 2023 ; Budget of the United States Government 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < ready ; 2023 ; Budget of the United States Government 2023 ; 2023 ; https://www.govinfo.gov/ >
 
 
   }
@@ -373,7 +373,7 @@
     au < released ; 2020 ; Code of Federal Regulations 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; Code of Federal Regulations 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Code of Federal Regulations 2022 ; 2022 ; https://www.govinfo.gov/ >
-    au < manifest ; 2023 ; Code of Federal Regulations 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < ready ; 2023 ; Code of Federal Regulations 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < exists ; 7201 ; Code of Federal Regulations 7201 ; 7201 ; https://www.govinfo.gov/ >
 
   }
@@ -388,13 +388,13 @@
 
  
     au < released ; 2016 ; BILLS 2016 ; 2016 ; https://www.govinfo.gov/ >
-    au < manifest ; 2018 ; BILLS 2018 ; 2018 ; https://www.govinfo.gov/ >
+    au < ready ; 2018 ; BILLS 2018 ; 2018 ; https://www.govinfo.gov/ >
 
     au < released ; 2019 ; Congressional Bills 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Congressional Bills 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; Congressional Bills 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Congressional Bills 2022 ; 2022 ; https://www.govinfo.gov/ >
-    au < manifest ; 2023 ; Congressional Bills 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < ready ; 2023 ; Congressional Bills 2023 ; 2023 ; https://www.govinfo.gov/ >
 
   }
 
@@ -407,7 +407,7 @@
 
     au < ready ; 2021 ; CMR 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; CMR 2022 ; 2022 ; https://www.govinfo.gov/ >
-    au < manifest ; 2023 ; CMR 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < ready ; 2023 ; CMR 2023 ; 2023 ; https://www.govinfo.gov/ >
 
   }
 
@@ -428,7 +428,7 @@
     au < released ; 2020 ; Congressional Calendars 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; Congressional Calendars 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Congressional Calendars 2022 ; 2022 ; https://www.govinfo.gov/ >
-    au < manifest ; 2023 ; Congressional Calendars 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < ready ; 2023 ; Congressional Calendars 2023 ; 2023 ; https://www.govinfo.gov/ >
 
   }
 
@@ -469,7 +469,7 @@
     au < released ; 2016 ; CPRT 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; CPRT 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; CPRT 2018 ; 2018 ; https://www.govinfo.gov/ >
-    au < manifest ; 2023 ; CPRT 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < ready ; 2023 ; CPRT 2023 ; 2023 ; https://www.govinfo.gov/ >
 
   }
 
@@ -616,7 +616,7 @@
     au < released ; 2020 ; Congressional Documents 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; Congressional Documents 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Congressional Documents 2022 ; 2022 ; https://www.govinfo.gov/ >
-    au < manifest ; 2023 ; CDOC 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < ready ; 2023 ; CDOC 2023 ; 2023 ; https://www.govinfo.gov/ >
 
     au < manifest ; 2025 ; CDOC 2025 ; 2025 ; https://www.govinfo.gov/ > #bad date
     au < exists ; 2027 ; Congressional Documents 2027 ; 2027 ; https://www.govinfo.gov/ > #bad date
@@ -640,7 +640,7 @@
     au < released ; 2016 ; CHRG 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; CHRG 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; CHRG 2018 ; 2018 ; https://www.govinfo.gov/ >
-    au < manifest ; 2023 ; CHRG 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < ready ; 2023 ; CHRG 2023 ; 2023 ; https://www.govinfo.gov/ >
 
     au < down ; 1933 ; Congressional Hearings 1933 ; 1933 ; https://www.govinfo.gov/ > #no substance
     au < down ; 1934 ; Congressional Hearings 1934 ; 1934 ; https://www.govinfo.gov/ > #no substance
