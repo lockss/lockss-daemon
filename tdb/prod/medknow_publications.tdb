@@ -3461,7 +3461,7 @@
     au < released ; 2017 ; Journal of Nursing and Midwifery Sciences Volume 4 ; 2017 ; 4 ; https://www.jnmsjournal.org/ >
     au < released ; 2018 ; Journal of Nursing and Midwifery Sciences Volume 5 ; 2018 ; 5 ; https://www.jnmsjournal.org/ >
     au < released ; 2019 ; Journal of Nursing and Midwifery Sciences Volume 6 ; 2019 ; 6 ; https://www.jnmsjournal.org/ >
-    au < manifest ; 2020 ; Journal of Nursing and Midwifery Sciences Volume 7 ; 2020 ; 7 ; https://www.jnmsjournal.org/ >
+    au < ready ; 2020 ; Journal of Nursing and Midwifery Sciences Volume 7 ; 2020 ; 7 ; https://www.jnmsjournal.org/ >
     au < released ; 2021 ; Journal of Nursing and Midwifery Sciences Volume 8 ; 2021 ; 8 ; https://www.jnmsjournal.org/ >
     au < released ; 2022 ; Journal of Nursing and Midwifery Sciences Volume 9 ; 2022 ; 9 ; https://www.jnmsjournal.org/ >
       #deactivated
@@ -10097,9 +10097,9 @@
       param[journal_issn] = WKMP-0130
       #Archive will stay with Medknow until further notice
 
-      au < manifest ; 2017 ; International Journal of Histopathological Interpretation Volume 6 ; 2017 ; 6 ; https://www.ijhi.org/ >
-      au < manifest ; 2018 ; International Journal of Histopathological Interpretation Volume 7 ; 2018 ; 7 ; https://www.ijhi.org/ >
-      au < manifest ; 2019 ; International Journal of Histopathological Interpretation Volume 8 ; 2019 ; 8 ; https://www.ijhi.org/ >
+      au < ready ; 2017 ; International Journal of Histopathological Interpretation Volume 6 ; 2017 ; 6 ; https://www.ijhi.org/ >
+      au < ready ; 2018 ; International Journal of Histopathological Interpretation Volume 7 ; 2018 ; 7 ; https://www.ijhi.org/ >
+      au < ready ; 2019 ; International Journal of Histopathological Interpretation Volume 8 ; 2019 ; 8 ; https://www.ijhi.org/ >
       #deactivated
 
   }
@@ -12186,10 +12186,10 @@
       #param[base_url] = https://www.ijsocialrehab.com/
       #move to MM Publications 2022-06, Archive will stay with Medknow until further notice
 
-      au < manifest ; 2018 ; International Journal of Social Rehabilitation Volume 3 ; 2018 ; 3 ; https://www.ijsocialrehab.com/ >
-      au < manifest ; 2019 ; International Journal of Social Rehabilitation Volume 4 ; 2019 ; 4 ; https://www.ijsocialrehab.com/ >
-      au < manifest ; 2020 ; International Journal of Social Rehabilitation Volume 5 ; 2020 ; 5 ; https://www.ijsocialrehab.com/ >
-      au < manifest ; 2021 ; International Journal of Social Rehabilitation Volume 6 ; 2021 ; 6 ; https://www.ijsocialrehab.com/ >
+      au < ready ; 2018 ; International Journal of Social Rehabilitation Volume 3 ; 2018 ; 3 ; https://www.ijsocialrehab.com/ >
+      au < ready ; 2019 ; International Journal of Social Rehabilitation Volume 4 ; 2019 ; 4 ; https://www.ijsocialrehab.com/ >
+      au < ready ; 2020 ; International Journal of Social Rehabilitation Volume 5 ; 2020 ; 5 ; https://www.ijsocialrehab.com/ >
+      au < ready ; 2021 ; International Journal of Social Rehabilitation Volume 6 ; 2021 ; 6 ; https://www.ijsocialrehab.com/ >
       #deactivated
 
   }
