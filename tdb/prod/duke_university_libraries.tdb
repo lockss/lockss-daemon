@@ -1,89 +1,92 @@
 {
-
   publisher <
     name = Duke University Libraries
-
   >
-  
-  plugin = org.lockss.plugin.ojs2.OJS2Plugin
-  #param[base_url] = http://grbs.library.duke.edu/
-  implicit < status ; year ; name ; volume ; param[year] ; param[base_url] >
-
+    implicit < status ; year ; name ; volume ; param[year] ; param[base_url] >
   
   {
-
     title < 
       name = Greek, Roman and Byzantine Studies ;
       eissn = 2159-3159 ;
       issnl = 0017-3916
-      
     >
     param[journal_id] = grbs
 
-    au < released ; 1958 ; Greek, Roman and Byzantine Studies Volume 1 ; 1 ; 1958 ; http://grbs.library.duke.edu/ >
-    au < released ; 1959 ; Greek, Roman and Byzantine Studies Volume 2 ; 2 ; 1959 ; http://grbs.library.duke.edu/ >
-    au < released ; 1960 ; Greek, Roman and Byzantine Studies Volume 3 ; 3 ; 1960 ; http://grbs.library.duke.edu/ >
-    au < released ; 1963 ; Greek, Roman and Byzantine Studies Volume 4 ; 4 ; 1963 ; http://grbs.library.duke.edu/ >
-    au < released ; 1964 ; Greek, Roman and Byzantine Studies Volume 5 ; 5 ; 1964 ; http://grbs.library.duke.edu/ >
-    au < released ; 1965 ; Greek, Roman and Byzantine Studies Volume 6 ; 6 ; 1965 ; http://grbs.library.duke.edu/ >
-    au < released ; 1966 ; Greek, Roman and Byzantine Studies Volume 7 ; 7 ; 1966 ; http://grbs.library.duke.edu/ >
-    au < released ; 1967 ; Greek, Roman and Byzantine Studies Volume 8 ; 8 ; 1967 ; http://grbs.library.duke.edu/ >
-    au < released ; 1968 ; Greek, Roman and Byzantine Studies Volume 9 ; 9 ; 1968 ; http://grbs.library.duke.edu/ >
-    au < released ; 1969 ; Greek, Roman and Byzantine Studies Volume 10 ; 10 ; 1969 ; http://grbs.library.duke.edu/ >
-    au < released ; 1970 ; Greek, Roman and Byzantine Studies Volume 11 ; 11 ; 1970 ; http://grbs.library.duke.edu/ >
-    au < released ; 1971 ; Greek, Roman and Byzantine Studies Volume 12 ; 12 ; 1971 ; http://grbs.library.duke.edu/ >
-    au < released ; 1972 ; Greek, Roman and Byzantine Studies Volume 13 ; 13 ; 1972 ; http://grbs.library.duke.edu/ >
-    au < released ; 1973 ; Greek, Roman and Byzantine Studies Volume 14 ; 14 ; 1973 ; http://grbs.library.duke.edu/ >
-    au < released ; 1974 ; Greek, Roman and Byzantine Studies Volume 15 ; 15 ; 1974 ; http://grbs.library.duke.edu/ >
-    au < released ; 1975 ; Greek, Roman and Byzantine Studies Volume 16 ; 16 ; 1975 ; http://grbs.library.duke.edu/ >
-    au < released ; 1976 ; Greek, Roman and Byzantine Studies Volume 17 ; 17 ; 1976 ; http://grbs.library.duke.edu/ >
-    au < released ; 1977 ; Greek, Roman and Byzantine Studies Volume 18 ; 18 ; 1977 ; http://grbs.library.duke.edu/ >
-    au < released ; 1978 ; Greek, Roman and Byzantine Studies Volume 19 ; 19 ; 1978 ; http://grbs.library.duke.edu/ >
-    au < released ; 1979 ; Greek, Roman and Byzantine Studies Volume 20 ; 20 ; 1979 ; http://grbs.library.duke.edu/ >
-    au < released ; 1980 ; Greek, Roman and Byzantine Studies Volume 21 ; 21 ; 1980 ; http://grbs.library.duke.edu/ >
-    au < released ; 1981 ; Greek, Roman and Byzantine Studies Volume 22 ; 22 ; 1981 ; http://grbs.library.duke.edu/ >
-    au < released ; 1982 ; Greek, Roman and Byzantine Studies Volume 23 ; 23 ; 1982 ; http://grbs.library.duke.edu/ >
-    au < released ; 1983 ; Greek, Roman and Byzantine Studies Volume 24 ; 24 ; 1983 ; http://grbs.library.duke.edu/ >
-    au < released ; 1984 ; Greek, Roman and Byzantine Studies Volume 25 ; 25 ; 1984 ; http://grbs.library.duke.edu/ >
-    au < released ; 1985 ; Greek, Roman and Byzantine Studies Volume 26 ; 26 ; 1985 ; http://grbs.library.duke.edu/ >
-    au < released ; 1986 ; Greek, Roman and Byzantine Studies Volume 27 ; 27 ; 1986 ; http://grbs.library.duke.edu/ >
-    au < released ; 1987 ; Greek, Roman and Byzantine Studies Volume 28 ; 28 ; 1987 ; http://grbs.library.duke.edu/ >
-    au < released ; 1988 ; Greek, Roman and Byzantine Studies Volume 29 ; 29 ; 1988 ; http://grbs.library.duke.edu/ >
-    au < released ; 1989 ; Greek, Roman and Byzantine Studies Volume 30 ; 30 ; 1989 ; http://grbs.library.duke.edu/ >
-    au < released ; 1990 ; Greek, Roman and Byzantine Studies Volume 31 ; 31 ; 1990 ; http://grbs.library.duke.edu/ >
-    au < released ; 1991 ; Greek, Roman and Byzantine Studies Volume 32 ; 32 ; 1991 ; http://grbs.library.duke.edu/ >
-    au < released ; 1992 ; Greek, Roman and Byzantine Studies Volume 33 ; 33 ; 1992 ; http://grbs.library.duke.edu/ >
-    au < released ; 1993 ; Greek, Roman and Byzantine Studies Volume 34 ; 34 ; 1993 ; http://grbs.library.duke.edu/ >
-    au < released ; 1994 ; Greek, Roman and Byzantine Studies Volume 35 ; 35 ; 1994 ; http://grbs.library.duke.edu/ >
-    au < released ; 1995 ; Greek, Roman and Byzantine Studies Volume 36 ; 36 ; 1995 ; http://grbs.library.duke.edu/ >
-    au < released ; 1996 ; Greek, Roman and Byzantine Studies Volume 37 ; 37 ; 1996 ; http://grbs.library.duke.edu/ >
-    au < released ; 1997 ; Greek, Roman and Byzantine Studies Volume 38 ; 38 ; 1997 ; http://grbs.library.duke.edu/ >
-    au < released ; 1998 ; Greek, Roman and Byzantine Studies Volume 39 ; 39 ; 1998 ; http://grbs.library.duke.edu/ >
-    au < released ; 1999 ; Greek, Roman and Byzantine Studies Volume 40 ; 40 ; 1999 ; http://grbs.library.duke.edu/ >
-    au < released ; 2000 ; Greek, Roman and Byzantine Studies Volume 41 ; 41 ; 2000 ; http://grbs.library.duke.edu/ >
-    au < released ; 2001 ; Greek, Roman and Byzantine Studies Volume 42 ; 42 ; 2001 ; http://grbs.library.duke.edu/ >
-    au < released ; 2003 ; Greek, Roman and Byzantine Studies Volume 43 ; 43 ; 2003 ; http://grbs.library.duke.edu/ >
-    au < released ; 2004 ; Greek, Roman and Byzantine Studies Volume 44 ; 44 ; 2004 ; http://grbs.library.duke.edu/ >
-    au < released ; 2005 ; Greek, Roman and Byzantine Studies Volume 45 ; 45 ; 2005 ; http://grbs.library.duke.edu/ >
-    au < released ; 2006 ; Greek, Roman and Byzantine Studies Volume 46 ; 46 ; 2006 ; http://grbs.library.duke.edu/ >
-    au < released ; 2007 ; Greek, Roman and Byzantine Studies Volume 47 ; 47 ; 2007 ; http://grbs.library.duke.edu/ >
-    au < released ; 2008 ; Greek, Roman and Byzantine Studies Volume 48 ; 48 ; 2008 ; http://grbs.library.duke.edu/ >
-    au < released ; 2009 ; Greek, Roman and Byzantine Studies Volume 49 ; 49 ; 2009 ; http://grbs.library.duke.edu/ >
-    au < released ; 2010 ; Greek, Roman and Byzantine Studies Volume 50 ; 50 ; 2010 ; http://grbs.library.duke.edu/ >
-    au < released ; 2011 ; Greek, Roman and Byzantine Studies Volume 51 ; 51 ; 2011 ; http://grbs.library.duke.edu/ >
-    au < released ; 2012 ; Greek, Roman and Byzantine Studies Volume 52 ; 52 ; 2012 ; http://grbs.library.duke.edu/ >
-    au < released ; 2013 ; Greek, Roman and Byzantine Studies Volume 53 ; 53 ; 2013 ; http://grbs.library.duke.edu/ >
-    au < released ; 2014 ; Greek, Roman and Byzantine Studies Volume 54 ; 54 ; 2014 ; http://grbs.library.duke.edu/ >
-    au < released ; 2015 ; Greek, Roman and Byzantine Studies Volume 55 ; 55 ; 2015 ; http://grbs.library.duke.edu/ >
-    au < released ; 2016 ; Greek, Roman and Byzantine Studies Volume 56 ; 56 ; 2016 ; http://grbs.library.duke.edu/ >
-    au < released ; 2017 ; Greek, Roman and Byzantine Studies Volume 57 ; 57 ; 2017 ; http://grbs.library.duke.edu/ >
-    au < released ; 2018 ; Greek, Roman and Byzantine Studies Volume 58 ; 58 ; 2018 ; http://grbs.library.duke.edu/ >
-    au < released ; 2019 ; Greek, Roman and Byzantine Studies Volume 59 ; 59 ; 2019 ; https://grbs.library.duke.edu/ >
-    au < released ; 2020 ; Greek, Roman and Byzantine Studies Volume 60 ; 60 ; 2020 ; https://grbs.library.duke.edu/ >
-    au < released ; 2021 ; Greek, Roman and Byzantine Studies Volume 61 ; 61 ; 2021 ; https://grbs.library.duke.edu/ >
-    au < ready ; 2022 ; Greek, Roman and Byzantine Studies Volume 62 ; 62 ; 2022 ; https://grbs.library.duke.edu/ >
-    au < expected ; 2023 ; Greek, Roman and Byzantine Studies Volume 63 ; 63 ; 2023 ; https://grbs.library.duke.edu/ >
+    {
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
 
+    au < down ; 1958 ; Greek, Roman and Byzantine Studies Volume 1 ; 1 ; 1958 ; http://grbs.library.duke.edu/ >
+    au < down ; 1959 ; Greek, Roman and Byzantine Studies Volume 2 ; 2 ; 1959 ; http://grbs.library.duke.edu/ >
+    au < down ; 1960 ; Greek, Roman and Byzantine Studies Volume 3 ; 3 ; 1960 ; http://grbs.library.duke.edu/ >
+    au < down ; 1963 ; Greek, Roman and Byzantine Studies Volume 4 ; 4 ; 1963 ; http://grbs.library.duke.edu/ >
+    au < down ; 1964 ; Greek, Roman and Byzantine Studies Volume 5 ; 5 ; 1964 ; http://grbs.library.duke.edu/ >
+    au < down ; 1965 ; Greek, Roman and Byzantine Studies Volume 6 ; 6 ; 1965 ; http://grbs.library.duke.edu/ >
+    au < down ; 1966 ; Greek, Roman and Byzantine Studies Volume 7 ; 7 ; 1966 ; http://grbs.library.duke.edu/ >
+    au < down ; 1967 ; Greek, Roman and Byzantine Studies Volume 8 ; 8 ; 1967 ; http://grbs.library.duke.edu/ >
+    au < down ; 1968 ; Greek, Roman and Byzantine Studies Volume 9 ; 9 ; 1968 ; http://grbs.library.duke.edu/ >
+    au < down ; 1969 ; Greek, Roman and Byzantine Studies Volume 10 ; 10 ; 1969 ; http://grbs.library.duke.edu/ >
+    au < down ; 1970 ; Greek, Roman and Byzantine Studies Volume 11 ; 11 ; 1970 ; http://grbs.library.duke.edu/ >
+    au < down ; 1971 ; Greek, Roman and Byzantine Studies Volume 12 ; 12 ; 1971 ; http://grbs.library.duke.edu/ >
+    au < down ; 1972 ; Greek, Roman and Byzantine Studies Volume 13 ; 13 ; 1972 ; http://grbs.library.duke.edu/ >
+    au < down ; 1973 ; Greek, Roman and Byzantine Studies Volume 14 ; 14 ; 1973 ; http://grbs.library.duke.edu/ >
+    au < down ; 1974 ; Greek, Roman and Byzantine Studies Volume 15 ; 15 ; 1974 ; http://grbs.library.duke.edu/ >
+    au < down ; 1975 ; Greek, Roman and Byzantine Studies Volume 16 ; 16 ; 1975 ; http://grbs.library.duke.edu/ >
+    au < down ; 1976 ; Greek, Roman and Byzantine Studies Volume 17 ; 17 ; 1976 ; http://grbs.library.duke.edu/ >
+    au < down ; 1977 ; Greek, Roman and Byzantine Studies Volume 18 ; 18 ; 1977 ; http://grbs.library.duke.edu/ >
+    au < down ; 1978 ; Greek, Roman and Byzantine Studies Volume 19 ; 19 ; 1978 ; http://grbs.library.duke.edu/ >
+    au < down ; 1979 ; Greek, Roman and Byzantine Studies Volume 20 ; 20 ; 1979 ; http://grbs.library.duke.edu/ >
+    au < down ; 1980 ; Greek, Roman and Byzantine Studies Volume 21 ; 21 ; 1980 ; http://grbs.library.duke.edu/ >
+    au < down ; 1981 ; Greek, Roman and Byzantine Studies Volume 22 ; 22 ; 1981 ; http://grbs.library.duke.edu/ >
+    au < down ; 1982 ; Greek, Roman and Byzantine Studies Volume 23 ; 23 ; 1982 ; http://grbs.library.duke.edu/ >
+    au < down ; 1983 ; Greek, Roman and Byzantine Studies Volume 24 ; 24 ; 1983 ; http://grbs.library.duke.edu/ >
+    au < down ; 1984 ; Greek, Roman and Byzantine Studies Volume 25 ; 25 ; 1984 ; http://grbs.library.duke.edu/ >
+    au < down ; 1985 ; Greek, Roman and Byzantine Studies Volume 26 ; 26 ; 1985 ; http://grbs.library.duke.edu/ >
+    au < down ; 1986 ; Greek, Roman and Byzantine Studies Volume 27 ; 27 ; 1986 ; http://grbs.library.duke.edu/ >
+    au < down ; 1987 ; Greek, Roman and Byzantine Studies Volume 28 ; 28 ; 1987 ; http://grbs.library.duke.edu/ >
+    au < down ; 1988 ; Greek, Roman and Byzantine Studies Volume 29 ; 29 ; 1988 ; http://grbs.library.duke.edu/ >
+    au < down ; 1989 ; Greek, Roman and Byzantine Studies Volume 30 ; 30 ; 1989 ; http://grbs.library.duke.edu/ >
+    au < down ; 1990 ; Greek, Roman and Byzantine Studies Volume 31 ; 31 ; 1990 ; http://grbs.library.duke.edu/ >
+    au < down ; 1991 ; Greek, Roman and Byzantine Studies Volume 32 ; 32 ; 1991 ; http://grbs.library.duke.edu/ >
+    au < down ; 1992 ; Greek, Roman and Byzantine Studies Volume 33 ; 33 ; 1992 ; http://grbs.library.duke.edu/ >
+    au < down ; 1993 ; Greek, Roman and Byzantine Studies Volume 34 ; 34 ; 1993 ; http://grbs.library.duke.edu/ >
+    au < down ; 1994 ; Greek, Roman and Byzantine Studies Volume 35 ; 35 ; 1994 ; http://grbs.library.duke.edu/ >
+    au < down ; 1995 ; Greek, Roman and Byzantine Studies Volume 36 ; 36 ; 1995 ; http://grbs.library.duke.edu/ >
+    au < down ; 1996 ; Greek, Roman and Byzantine Studies Volume 37 ; 37 ; 1996 ; http://grbs.library.duke.edu/ >
+    au < down ; 1997 ; Greek, Roman and Byzantine Studies Volume 38 ; 38 ; 1997 ; http://grbs.library.duke.edu/ >
+    au < down ; 1998 ; Greek, Roman and Byzantine Studies Volume 39 ; 39 ; 1998 ; http://grbs.library.duke.edu/ >
+    au < down ; 1999 ; Greek, Roman and Byzantine Studies Volume 40 ; 40 ; 1999 ; http://grbs.library.duke.edu/ >
+    au < down ; 2000 ; Greek, Roman and Byzantine Studies Volume 41 ; 41 ; 2000 ; http://grbs.library.duke.edu/ >
+    au < down ; 2001 ; Greek, Roman and Byzantine Studies Volume 42 ; 42 ; 2001 ; http://grbs.library.duke.edu/ >
+    au < down ; 2003 ; Greek, Roman and Byzantine Studies Volume 43 ; 43 ; 2003 ; http://grbs.library.duke.edu/ >
+    au < down ; 2004 ; Greek, Roman and Byzantine Studies Volume 44 ; 44 ; 2004 ; http://grbs.library.duke.edu/ >
+    au < down ; 2005 ; Greek, Roman and Byzantine Studies Volume 45 ; 45 ; 2005 ; http://grbs.library.duke.edu/ >
+    au < down ; 2006 ; Greek, Roman and Byzantine Studies Volume 46 ; 46 ; 2006 ; http://grbs.library.duke.edu/ >
+    au < down ; 2007 ; Greek, Roman and Byzantine Studies Volume 47 ; 47 ; 2007 ; http://grbs.library.duke.edu/ >
+    au < down ; 2008 ; Greek, Roman and Byzantine Studies Volume 48 ; 48 ; 2008 ; http://grbs.library.duke.edu/ >
+    au < down ; 2009 ; Greek, Roman and Byzantine Studies Volume 49 ; 49 ; 2009 ; http://grbs.library.duke.edu/ >
+    au < down ; 2010 ; Greek, Roman and Byzantine Studies Volume 50 ; 50 ; 2010 ; http://grbs.library.duke.edu/ >
+    au < down ; 2011 ; Greek, Roman and Byzantine Studies Volume 51 ; 51 ; 2011 ; http://grbs.library.duke.edu/ >
+    au < down ; 2012 ; Greek, Roman and Byzantine Studies Volume 52 ; 52 ; 2012 ; http://grbs.library.duke.edu/ >
+    au < down ; 2013 ; Greek, Roman and Byzantine Studies Volume 53 ; 53 ; 2013 ; http://grbs.library.duke.edu/ >
+    au < down ; 2014 ; Greek, Roman and Byzantine Studies Volume 54 ; 54 ; 2014 ; http://grbs.library.duke.edu/ >
+    au < down ; 2015 ; Greek, Roman and Byzantine Studies Volume 55 ; 55 ; 2015 ; http://grbs.library.duke.edu/ >
+    au < down ; 2016 ; Greek, Roman and Byzantine Studies Volume 56 ; 56 ; 2016 ; http://grbs.library.duke.edu/ >
+    au < down ; 2017 ; Greek, Roman and Byzantine Studies Volume 57 ; 57 ; 2017 ; http://grbs.library.duke.edu/ >
+    au < down ; 2018 ; Greek, Roman and Byzantine Studies Volume 58 ; 58 ; 2018 ; http://grbs.library.duke.edu/ >
+    au < down ; 2019 ; Greek, Roman and Byzantine Studies Volume 59 ; 59 ; 2019 ; https://grbs.library.duke.edu/ >
+    au < superseded ; 2020 ; Greek, Roman and Byzantine Studies Volume 60 [superseded] ; 60 ; 2020 ; https://grbs.library.duke.edu/ >
+    au < superseded ; 2021 ; Greek, Roman and Byzantine Studies Volume 61 [superseded] ; 61 ; 2021 ; https://grbs.library.duke.edu/ >
+    }
+    {
+    plugin = org.lockss.plugin.ojs3.Ojs3Plugin
+    attr[start_stem] = index.php/ 
+
+    au < manifest ; 2020 ; Greek, Roman and Byzantine Studies Volume 60 ; 60 ; 2020 ; https://grbs.library.duke.edu/ >
+    au < manifest ; 2021 ; Greek, Roman and Byzantine Studies Volume 61 ; 61 ; 2021 ; https://grbs.library.duke.edu/ >
+    au < manifest ; 2022 ; Greek, Roman and Byzantine Studies Volume 62 ; 62 ; 2022 ; https://grbs.library.duke.edu/ >
+    au < manifest ; 2023 ; Greek, Roman and Byzantine Studies Volume 63 ; 63 ; 2023 ; https://grbs.library.duke.edu/ >
+
+    }
   }
   
 }
