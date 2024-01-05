@@ -30,7 +30,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/verduci-released/
 
     au < readySource ; crawling ; 2023 ; Verduci Editore Source Content 2023 ; 2023 >
-    au < expected ; exists ; 2024 ; Verduci Editore Source Content 2024 ; 2024 >
+    au < manifest ; exists ; 2024 ; Verduci Editore Source Content 2024 ; 2024 >
 
     }
   }

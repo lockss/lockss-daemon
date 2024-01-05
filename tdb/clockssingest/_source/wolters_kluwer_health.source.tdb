@@ -37,7 +37,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/wolterskluwer-released/
 
     au < readySource ; crawling ; 2023 ; Wolters Kluwer Health Source Content 2023 ; 2023 >
-    au < expected ; exists ; 2024 ; Wolters Kluwer Health Source Content 2024 ; 2024 >
+    au < manifest ; exists ; 2024 ; Wolters Kluwer Health Source Content 2024 ; 2024 >
 
     }
   }
