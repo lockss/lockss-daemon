@@ -33,6 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.util;
 
 import java.util.*;
+import java.nio.charset.Charset;
 
 /**
  * Constants of general use
@@ -82,6 +83,11 @@ public interface Constants {
    */
   public static final String ENCODING_UTF_8 = "UTF-8";
   
+  /**
+   * <p>UTF-8 Charset.</p>
+   */
+  public static final Charset CHARSET_UTF_8 = Charset.forName(ENCODING_UTF_8);
+
   /**
    * <p>The ISO-8859-1 encoding.</p>
    */
