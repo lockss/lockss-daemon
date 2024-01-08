@@ -82,7 +82,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
     String tempDirPath = setUpDiskSpace();
 
     ConfigurationUtil.addFromArgs(MetadataManager.PARAM_INDEXING_ENABLED,
-	"true");
+	"false");
     ConfigurationUtil.addFromArgs(CounterReportsManager.PARAM_COUNTER_ENABLED,
 	"true");
     ConfigurationUtil.addFromArgs(CounterReportsManager

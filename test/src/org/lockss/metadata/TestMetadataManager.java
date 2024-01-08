@@ -223,6 +223,20 @@ public class TestMetadataManager extends LockssTestCase {
     runPublicationIntervalTest();
     runTestMandatoryMetadataFields();
     runMetadataControlTest();
+
+    metadataManager.stopService();
+    metadataManager.startService();
+
+    runTestPriorityPatterns();
+    runTestFindPublication();
+    runTestGetIndexTypeDisplayString();
+    runRemoveChildMetadataItemTest();
+    runMetadataMonitorTest();
+    runPublicationIntervalTest();
+    runTestMandatoryMetadataFields();
+    runMetadataControlTest();
+//     runCreateMetadataTest();
+
   }
 
   private void runCreateMetadataTest() throws Exception {
@@ -1503,6 +1517,9 @@ public class TestMetadataManager extends LockssTestCase {
       assertEquals(0, metadataManagerSql.removeAuChildMetadataItem(conn,
 	  results.get(mdItemSeq), mdItemSeq));
     }
+
+    long articleCount = metadataManagerSql.getArticleCount(conn);
+    assertEquals(0, articleCount);
 
     DbManager.safeRollbackAndClose(conn);
   }

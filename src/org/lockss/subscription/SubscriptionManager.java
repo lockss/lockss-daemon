@@ -444,6 +444,25 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   }
 
   /**
+   * Stops the SubscriptionManager service.
+   */
+  @Override
+  public void stopService() {
+    final String DEBUG_HEADER = "stopService(): ";
+    // TK - should we stop the starter thread?
+
+    ready = false;
+    pluginManager.unregisterAuEventHandler(auEventHandler);
+
+    subManagerSql = null;
+    remoteApi = null;
+    mdManager = null;
+    pluginManager = null;
+    dbManager = null;
+    log.debug(DEBUG_HEADER + "SubscriptionManager service stopped");
+  }
+
+  /**
    * Handler of configuration changes.
    * 
    * @param newConfig

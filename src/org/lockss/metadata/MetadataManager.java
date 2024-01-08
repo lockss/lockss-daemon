@@ -351,6 +351,25 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     log.debug(DEBUG_HEADER + "MetadataManager service successfully started");
   }
 
+  @Override
+  public void stopService() {
+    final String DEBUG_HEADER = "stopService(): ";
+    // TK - should we stop the starter thread?
+
+    stopReindexing();
+    pendingAusCount = 0;
+    metadataArticleCount = 0;
+    metadataPublicationCount = 0;
+    metadataPublisherCount = 0;
+    metadataProviderCount = 0;
+    StatusService statusServ = getDaemon().getStatusService();
+    statusServ.unregisterStatusAccessor(METADATA_STATUS_TABLE_NAME);
+    statusServ.unregisterOverviewAccessor(METADATA_STATUS_TABLE_NAME);
+    mdManagerSql = null;
+
+    log.debug(DEBUG_HEADER + "MetadataManager service stopped");
+  }
+
   /** Start the starter thread, which waits for AUs to be started,
    * registers AuEvent handler and performs initial scan of AUs
    */
@@ -960,7 +979,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * This method is only used for testing.
    */
   public void restartService() {
-    stopReindexing();
+    stopService();
 
     // Start the service
     startService();

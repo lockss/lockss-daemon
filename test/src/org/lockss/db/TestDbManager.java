@@ -628,4 +628,36 @@ public class TestDbManager extends LockssTestCase {
     assertTrue(resultSet.next());
     assertEquals(11, resultSet.getLong(MD_ITEM_TYPE_SEQ_COLUMN));
   }
+
+  public void testStopStart() throws Exception {
+    testProvider();
+    dbManager = getTestDbManager(tempDirPath);
+    assertTrue(dbManager.isReady());
+
+    Connection conn = dbManager.getConnection();
+
+//     // Add a provider with no LOCKSS identifier.
+//     Long providerSeq1 = dbManager.findProvider(conn, null, "providerName1");
+//     checkProvider(conn, providerSeq1, null, "providerName1");
+
+//     // Add the new LOCKSS identifier to the same provider.
+    Long providerSeq2 =
+	dbManager.findProvider(conn, "providerLid1", "providerName1");
+//     assertEquals(providerSeq1, providerSeq2);
+    checkProvider(conn, providerSeq2, "providerLid1", "providerName1");
+
+//     // Add a new provider with a LOCKSS identifier.
+    Long providerSeq3 =
+	dbManager.findProvider(conn, "providerLid2", "providerName2");
+//     assertNotEquals(providerSeq1, providerSeq3);
+    checkProvider(conn, providerSeq3, "providerLid2", "providerName2");
+
+//     Long providerSeq4 =
+// 	dbManager.getDbManagerSql().getAuProvider(conn, "bogusP", "bogusK");
+//     assertNull(providerSeq4);
+
+//     DbManager.commitOrRollback(conn, log);
+//     DbManager.safeCloseConnection(conn);
+  }
+
 }
