@@ -35,9 +35,7 @@ package org.lockss.poller.v3;
 import java.io.*;
 import java.util.*;
 
-import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.UrlCacher;
-import org.lockss.plugin.UrlData;
+import org.lockss.plugin.*;
 import org.lockss.plugin.base.DefaultUrlCacher;
 import org.lockss.protocol.V3LcapMessage.PollNak;
 import org.lockss.protocol.psm.*;
@@ -303,8 +301,8 @@ public class PollerActions {
 			Long.toString(TimeBase.nowMs()));
       UrlData urlData = 
           new UrlData(msg.getRepairDataInputStream(), props, repairTarget);
-      UrlCacher uc =
-          ud.getCachedUrlSet().getArchivalUnit().makeUrlCacher(urlData);
+      ArchivalUnit au = ud.getCachedUrlSet().getArchivalUnit();
+      UrlCacher uc = au.makeUrlCacher(urlData);
 
       // Suppress content validation when storing repair from peer
       BitSet repairFetchFlags = uc.getFetchFlags();
@@ -312,6 +310,10 @@ public class PollerActions {
       uc.setFetchFlags(repairFetchFlags);
 
       uc.storeContent();
+      // Might be a new stem for this AU
+      AuState aus = AuUtil.getAuState(au);
+      aus.addCdnStem(UrlUtil.getUrlPrefix(repairTarget));
+
       ud.getPoller().receivedRepair(msg.getTargetUrl());
     } catch (IOException ex) {
       log.error("Error attempting to store repair", ex);
