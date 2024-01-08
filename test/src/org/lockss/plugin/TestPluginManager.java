@@ -1847,7 +1847,7 @@ public class TestPluginManager extends LockssTestCase {
     assertEquals("AuCreated", alert1.getAttribute(Alert.ATTR_NAME));
     Alert alert2 = alertMgr.getAlerts().get(1);
     assertEquals("PluginReloaded", alert2.getAttribute(Alert.ATTR_NAME));
-    assertEquals("Plugin reloaded: Absinthe Literary Review\nVersion: 2",
+    assertEquals("Plugin reloaded: Absinthe Literary Review\nID: org.lockss.test.MockConfigurablePlugin\nVersion: 2",
                     alert2.getAttribute(Alert.ATTR_TEXT));
   }
 
@@ -1911,7 +1911,7 @@ public class TestPluginManager extends LockssTestCase {
     assertEquals("AuCreated", alert1.getAttribute(Alert.ATTR_NAME));
     Alert alert2 = alertMgr.getAlerts().get(1);
     assertEquals("PluginReloaded", alert2.getAttribute(Alert.ATTR_NAME));
-    assertEquals("Plugin reloaded: Absinthe Literary Review\nVersion: 3",
+    assertEquals("Plugin reloaded: Absinthe Literary Review\nID: org.lockss.test.MockConfigurablePlugin\nVersion: 3",
                     alert2.getAttribute(Alert.ATTR_TEXT));
   }
 

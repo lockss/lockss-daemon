@@ -1952,10 +1952,12 @@ public class PluginManager
       sb.append("Plugin reloaded: ");
       sb.append(name);
       if (!StringUtil.equalStrings(oldName, name)) {
-        sb.append(" (was ");
+        sb.append(" (renamed from ");
         sb.append(oldName);
         sb.append(")");
       }
+      sb.append("\nID: ");
+      sb.append(plugin.getPluginId());
       sb.append("\nVersion: ");
       sb.append(plugin.getVersion());
       String feats = PluginManager.pluginFeatureVersionsString(plugin);
