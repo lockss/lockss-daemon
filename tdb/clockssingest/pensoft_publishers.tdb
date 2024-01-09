@@ -1088,8 +1088,11 @@
       param[au_oai_set] = bgcardio
 
       au < finished ; crawling ; 2020 ; 2020 ; Bulgarian Cardiology Volume 2020 ; 2020 ; http://journal.bgcardio.org/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2021 ; 2021 ; Bulgarian Cardiology Volume 2021 ; 2021 ; http://journal.bgcardio.org/ ; >
-      au < deepCrawl ; exists ; 2022 ; 2022 ; Bulgarian Cardiology Volume 2022 ; 2022 ; http://journal.bgcardio.org/ ; >
+      au < superseded ; exists ; 2021 ; 2021 ; Bulgarian Cardiology Volume 2021 [superseded] ; 2021 ; http://journal.bgcardio.org/ ; >
+      au < superseded ; exists ; 2022 ; 2022 ; Bulgarian Cardiology Volume 2022 [superseded] ; 2022 ; http://journal.bgcardio.org/ ; >
+
+      au < exists ; exists ; 2021 ; 2021 ; Bulgarian Cardiology Volume 2021 ; 2021 ; http://journal.bgcardio.org/ ; >
+      au < exists ; exists ; 2022 ; 2022 ; Bulgarian Cardiology Volume 2022 ; 2022 ; http://journal.bgcardio.org/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Bulgarian Cardiology Volume 2023 ; 2023 ; https://journal.bgcardio.org/ ; >
 
   }
