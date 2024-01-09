@@ -630,17 +630,15 @@ public class MigrateSettings extends LockssServlet {
 //    mProps.put(DbManager.PARAM_DATASOURCE_SERVERNAME,
 //        targetCfg.get(V2_PARAM_METADATADBMANAGER_DATASOURCE_SERVERNAME,
 //            V2_DEFAULT_METADATADBMANAGER_DATASOURCE_SERVERNAME));
-//
-//    String defaultDbPortNumber = V2_DEFAULT_METADATADBMANAGER_DATASOURCE_PORTNUMBER;
-//    if (DbManagerSql.isTypePostgresql(dsClassName)) {
-//      defaultDbPortNumber = V2_DEFAULT_METADATADBMANAGER_DATASOURCE_PORTNUMBER_PG;
-//    } else if (DbManagerSql.isTypeMysql(dsClassName)) {
-//      defaultDbPortNumber = V2_DEFAULT_METADATADBMANAGER_DATASOURCE_PORTNUMBER_MYSQL;
-//    }
-//
-//    mProps.put(DbManager.PARAM_DATASOURCE_PORTNUMBER,
-//        targetCfg.get(V2_PARAM_METADATADBMANAGER_DATASOURCE_PORTNUMBER, defaultDbPortNumber));
-//
+
+    String dsPortNumber = dsCfg.get("portNumber");
+    if (StringUtil.isNullString(dsPortNumber)) {
+      String defaultDbPortNumber = getDefaultDatabasePortNumber(dsClassName);
+      if (!StringUtil.isNullString(defaultDbPortNumber)) {
+        dsCfg.put("portNumber", defaultDbPortNumber);
+      }
+    }
+
 //    mProps.put(DbManager.PARAM_DATASOURCE_DATABASENAME,
 //        targetCfg.get(V2_PARAM_METADATADBMANAGER_DATASOURCE_DATABASENAME,
 //            V2_DEFAULT_METADATADBMANAGER_DATASOURCE_DATABASENAME));
@@ -655,6 +653,27 @@ public class MigrateSettings extends LockssServlet {
     res.copyFrom(ConfigManager.fromProperties(mProps));
     res.addAsSubTree(dsCfg, DbManager.DATASOURCE_ROOT);
     return res;
+  }
+
+  /**
+   * Returns the default port database under V2, given the data source class name.
+   *
+   * @param dsClassName A {@link String} containing the data source class name.
+   * @return A {@link String} containing the default database port number, or {@code null}
+   * if the data source class name is not recognized.
+   */
+  private String getDefaultDatabasePortNumber(String dsClassName) {
+    String defaultDbPortNumber = null;
+
+    if (DbManagerSql.isTypeDerby(dsClassName))
+      defaultDbPortNumber = V2_DEFAULT_METADATADBMANAGER_DATASOURCE_PORTNUMBER;
+    if (DbManagerSql.isTypePostgresql(dsClassName)) {
+      defaultDbPortNumber = V2_DEFAULT_METADATADBMANAGER_DATASOURCE_PORTNUMBER_PG;
+    } else if (DbManagerSql.isTypeMysql(dsClassName)) {
+      defaultDbPortNumber = V2_DEFAULT_METADATADBMANAGER_DATASOURCE_PORTNUMBER_MYSQL;
+    }
+
+    return defaultDbPortNumber;
   }
 
   /**
