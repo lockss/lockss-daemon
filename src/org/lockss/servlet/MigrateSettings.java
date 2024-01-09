@@ -625,6 +625,12 @@ public class MigrateSettings extends LockssServlet {
       dsCfg.put("user", V2_DEFAULT_METADATADBMANAGER_DATASOURCE_USER);
     }
 
+    String dsDatabaseName = dsCfg.get("databaseName");
+    if (DbManagerSql.isTypePostgresql(dsClassName) &&
+        StringUtil.isNullString(dsDatabaseName)) {
+      dsCfg.put("databaseName", V2_DEFAULT_METADATADBMANAGER_DATASOURCE_DATABASENAME);
+    }
+
 //    mProps.put(DbManager.PARAM_DATASOURCE_CLASSNAME, dsClassName);
 //
 //    mProps.put(DbManager.PARAM_DATASOURCE_SERVERNAME,
