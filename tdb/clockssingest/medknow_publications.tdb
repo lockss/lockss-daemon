@@ -785,13 +785,13 @@
 
     param[journal_issn] = 0972-9747
 
-    au < ready ; exists ; 2004 ; Hepatitis B Annual Volume 1 ; 2004 ; 1 ; https://www.hepatitisbannual.org/ ; ; >
-    au < ready ; exists ; 2005 ; Hepatitis B Annual Volume 2 ; 2005 ; 2 ; https://www.hepatitisbannual.org/ ; ; >
-    au < ready ; exists ; 2006 ; Hepatitis B Annual Volume 3 ; 2006 ; 3 ; https://www.hepatitisbannual.org/ ; ; >
-    au < ready ; exists ; 2007 ; Hepatitis B Annual Volume 4 ; 2007 ; 4 ; https://www.hepatitisbannual.org/ ; ; >
-    au < ready ; exists ; 2008 ; Hepatitis B Annual Volume 5 ; 2008 ; 5 ; https://www.hepatitisbannual.org/ ; ; >
-    au < ready ; exists ; 2009 ; Hepatitis B Annual Volume 6 ; 2009 ; 6 ; https://www.hepatitisbannual.org/ ; ; >
-    au < ready ; exists ; 2010 ; Hepatitis B Annual Volume 7 ; 2010 ; 7 ; https://www.hepatitisbannual.org/ ; ; >
+    au < crawling ; exists ; 2004 ; Hepatitis B Annual Volume 1 ; 2004 ; 1 ; https://www.hepatitisbannual.org/ ; ; >
+    au < crawling ; exists ; 2005 ; Hepatitis B Annual Volume 2 ; 2005 ; 2 ; https://www.hepatitisbannual.org/ ; ; >
+    au < crawling ; exists ; 2006 ; Hepatitis B Annual Volume 3 ; 2006 ; 3 ; https://www.hepatitisbannual.org/ ; ; >
+    au < crawling ; exists ; 2007 ; Hepatitis B Annual Volume 4 ; 2007 ; 4 ; https://www.hepatitisbannual.org/ ; ; >
+    au < crawling ; exists ; 2008 ; Hepatitis B Annual Volume 5 ; 2008 ; 5 ; https://www.hepatitisbannual.org/ ; ; >
+    au < crawling ; exists ; 2009 ; Hepatitis B Annual Volume 6 ; 2009 ; 6 ; https://www.hepatitisbannual.org/ ; ; >
+    au < crawling ; exists ; 2010 ; Hepatitis B Annual Volume 7 ; 2010 ; 7 ; https://www.hepatitisbannual.org/ ; ; >
     au < finished ; finished ; 2011 ; Hepatitis B Annual Volume 8 ; 2011 ; 8 ; http://www.hepatitisbannual.org/ ; ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Hepatitis B Annual Volume 9 ; 2012 ; 9 ; http://www.hepatitisbannual.org/ ; ; reingest1.clockss.org:8082 >
 
@@ -3650,7 +3650,7 @@
     au < finished ; manifest ; 2017 ; Journal of Nursing and Midwifery Sciences Volume 4 ; 2017 ; 4 ; https://www.jnmsjournal.org/ ; ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Journal of Nursing and Midwifery Sciences Volume 5 ; 2018 ; 5 ; https://www.jnmsjournal.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; Journal of Nursing and Midwifery Sciences Volume 6 ; 2019 ; 6 ; https://www.jnmsjournal.org/ ; ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 2020 ; Journal of Nursing and Midwifery Sciences Volume 7 ; 2020 ; 7 ; https://www.jnmsjournal.org/ ; ; >
+    au < crawling ; exists ; 2020 ; Journal of Nursing and Midwifery Sciences Volume 7 ; 2020 ; 7 ; https://www.jnmsjournal.org/ ; ; >
     au < finished ; manifest ; 2021 ; Journal of Nursing and Midwifery Sciences Volume 8 ; 2021 ; 8 ; https://www.jnmsjournal.org/ ; ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2022 ; Journal of Nursing and Midwifery Sciences Volume 9 ; 2022 ; 9 ; https://www.jnmsjournal.org/ ; ; reingest3.clockss.org:8083 >
       #deactivated
@@ -4345,8 +4345,8 @@
 #    param[base_url] = http://www.nigeriamedj.com/
     param[journal_issn] = 0300-1652
 
-    au < ready ; exists ; 2009 ; Nigerian Medical Journal Volume 50 ; 2009 ; 50 ; https://www.nigeriamedj.com/ ; ; >
-    au < ready ; exists ; 2010 ; Nigerian Medical Journal Volume 51 ; 2010 ; 51 ; https://www.nigeriamedj.com/ ; ; >
+    au < crawling ; exists ; 2009 ; Nigerian Medical Journal Volume 50 ; 2009 ; 50 ; https://www.nigeriamedj.com/ ; ; >
+    au < crawling ; exists ; 2010 ; Nigerian Medical Journal Volume 51 ; 2010 ; 51 ; https://www.nigeriamedj.com/ ; ; >
     au < finished ; finished ; 2011 ; Nigerian Medical Journal Volume 52 ; 2011 ; 52 ; http://www.nigeriamedj.com/ ; ; >
     au < finished ; frozen ; 2012 ; Nigerian Medical Journal Volume 53 ; 2012 ; 53 ; http://www.nigeriamedj.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2013 ; Nigerian Medical Journal Volume 54 ; 2013 ; 54 ; http://www.nigeriamedj.com/ ; ; >
@@ -7193,10 +7193,10 @@
       param[journal_issn] = 2321-1385
 #      param[base_url] = http://www.jdentlasers.org/
 
-      au < ready ; exists ; 2007 ; Journal of Dental Lasers Volume 1 ; 2007 ; 1 ; https://www.jdentlasers.org/ ; ; >
-      au < ready ; exists ; 2008 ; Journal of Dental Lasers Volume 2 ; 2008 ; 2 ; https://www.jdentlasers.org/ ; ; >
-      au < ready ; exists ; 2009 ; Journal of Dental Lasers Volume 3 ; 2009 ; 3 ; https://www.jdentlasers.org/ ; ; >
-      au < ready ; exists ; 2010 ; Journal of Dental Lasers Volume 4 ; 2010 ; 4 ; https://www.jdentlasers.org/ ; ; >
+      au < crawling ; exists ; 2007 ; Journal of Dental Lasers Volume 1 ; 2007 ; 1 ; https://www.jdentlasers.org/ ; ; >
+      au < crawling ; exists ; 2008 ; Journal of Dental Lasers Volume 2 ; 2008 ; 2 ; https://www.jdentlasers.org/ ; ; >
+      au < crawling ; exists ; 2009 ; Journal of Dental Lasers Volume 3 ; 2009 ; 3 ; https://www.jdentlasers.org/ ; ; >
+      au < crawling ; exists ; 2010 ; Journal of Dental Lasers Volume 4 ; 2010 ; 4 ; https://www.jdentlasers.org/ ; ; >
       au < finished ; frozen ; 2011 ; Journal of Dental Lasers Volume 5 ; 2011 ; 5 ; http://www.jdentlasers.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2012 ; Journal of Dental Lasers Volume 6 ; 2012 ; 6 ; http://www.jdentlasers.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2013 ; Journal of Dental Lasers Volume 7 ; 2013 ; 7 ; http://www.jdentlasers.org/ ; ; reingest1.clockss.org:8082 >
@@ -8726,19 +8726,19 @@
       param[journal_issn] = 1118-8561
 #      param[base_url] = http://www.smjonline.org/
 
-      au < ready ; exists ; 1998 ; Sahel Medical Journal Volume 1 ; 1998 ; 1 ; https://www.smjonline.org/ ; ; >
-      au < ready ; exists ; 1999 ; Sahel Medical Journal Volume 2 ; 1999 ; 2 ; https://www.smjonline.org/ ; ; >
-      au < ready ; exists ; 2000 ; Sahel Medical Journal Volume 3 ; 2000 ; 3 ; https://www.smjonline.org/ ; ; >
-      au < ready ; exists ; 2001 ; Sahel Medical Journal Volume 4 ; 2001 ; 4 ; https://www.smjonline.org/ ; ; >
-      au < ready ; exists ; 2002 ; Sahel Medical Journal Volume 5 ; 2002 ; 5 ; https://www.smjonline.org/ ; ; >
-      au < ready ; exists ; 2003 ; Sahel Medical Journal Volume 6 ; 2003 ; 6 ; https://www.smjonline.org/ ; ; >
-      au < ready ; exists ; 2004 ; Sahel Medical Journal Volume 7 ; 2004 ; 7 ; https://www.smjonline.org/ ; ; >
-      au < ready ; exists ; 2005 ; Sahel Medical Journal Volume 8 ; 2005 ; 8 ; https://www.smjonline.org/ ; ; >
-      au < ready ; exists ; 2006 ; Sahel Medical Journal Volume 9 ; 2006 ; 9 ; https://www.smjonline.org/ ; ; >
-      au < ready ; exists ; 2007 ; Sahel Medical Journal Volume 10 ; 2007 ; 10 ; https://www.smjonline.org/ ; ; >
-      au < ready ; exists ; 2008 ; Sahel Medical Journal Volume 11 ; 2008 ; 11 ; https://www.smjonline.org/ ; ; >
-      au < ready ; exists ; 2009 ; Sahel Medical Journal Volume 12 ; 2009 ; 12 ; https://www.smjonline.org/ ; ; >
-      au < ready ; exists ; 2010 ; Sahel Medical Journal Volume 13 ; 2010 ; 13 ; https://www.smjonline.org/ ; ; >
+      au < crawling ; exists ; 1998 ; Sahel Medical Journal Volume 1 ; 1998 ; 1 ; https://www.smjonline.org/ ; ; >
+      au < crawling ; exists ; 1999 ; Sahel Medical Journal Volume 2 ; 1999 ; 2 ; https://www.smjonline.org/ ; ; >
+      au < crawling ; exists ; 2000 ; Sahel Medical Journal Volume 3 ; 2000 ; 3 ; https://www.smjonline.org/ ; ; >
+      au < crawling ; exists ; 2001 ; Sahel Medical Journal Volume 4 ; 2001 ; 4 ; https://www.smjonline.org/ ; ; >
+      au < crawling ; exists ; 2002 ; Sahel Medical Journal Volume 5 ; 2002 ; 5 ; https://www.smjonline.org/ ; ; >
+      au < crawling ; exists ; 2003 ; Sahel Medical Journal Volume 6 ; 2003 ; 6 ; https://www.smjonline.org/ ; ; >
+      au < crawling ; exists ; 2004 ; Sahel Medical Journal Volume 7 ; 2004 ; 7 ; https://www.smjonline.org/ ; ; >
+      au < crawling ; exists ; 2005 ; Sahel Medical Journal Volume 8 ; 2005 ; 8 ; https://www.smjonline.org/ ; ; >
+      au < crawling ; exists ; 2006 ; Sahel Medical Journal Volume 9 ; 2006 ; 9 ; https://www.smjonline.org/ ; ; >
+      au < crawling ; exists ; 2007 ; Sahel Medical Journal Volume 10 ; 2007 ; 10 ; https://www.smjonline.org/ ; ; >
+      au < crawling ; exists ; 2008 ; Sahel Medical Journal Volume 11 ; 2008 ; 11 ; https://www.smjonline.org/ ; ; >
+      au < crawling ; exists ; 2009 ; Sahel Medical Journal Volume 12 ; 2009 ; 12 ; https://www.smjonline.org/ ; ; >
+      au < crawling ; exists ; 2010 ; Sahel Medical Journal Volume 13 ; 2010 ; 13 ; https://www.smjonline.org/ ; ; >
       au < finished ; frozen ; 2011 ; Sahel Medical Journal Volume 14 ; 2011 ; 14 ; http://www.smjonline.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2012 ; Sahel Medical Journal Volume 15 ; 2012 ; 15 ; http://www.smjonline.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Sahel Medical Journal Volume 16 ; 2013 ; 16 ; http://www.smjonline.org/ ; ; reingest4.clockss.org:8082 >
