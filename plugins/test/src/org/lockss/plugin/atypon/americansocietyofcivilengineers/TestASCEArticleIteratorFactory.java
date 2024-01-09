@@ -146,7 +146,7 @@ public class TestASCEArticleIteratorFactory extends ArticleIteratorTestCase {
     // PATTERN_TEMPLATE = "\"^%sdoi/(full|pdf|pdfplus)/[.0-9]+/\", base_url";
 
     // we match to doi/(full|pdf|pdfplus)
-    assertNotMatchesRE(pat, "http://ascelibrary.org/doi/abs/10.1061/%28ASCE%291076-0431%282009%2915%3A1%2814%29"); 
+    assertNotMatchesRE(pat, "http://ascelibrary.org/doi/abs/10.1061/%28ASCE%291076-0431%282009%2915%3A1%2814%29");
     assertMatchesRE(pat, "http://ascelibrary.org/doi/full/10.1061/%28ASCE%291076-0431%282009%2915%3A1%2814%29");
     assertMatchesRE(pat, "http://ascelibrary.org/doi/pdf/10.1061/%28ASCE%291076-0431%282009%2915%3A1%2814%29");
     // but not to doi/(ref|suppl| which are supporting only

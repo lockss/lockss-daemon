@@ -367,6 +367,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
         //need to keep the second \\b so we don't pick up articleMetrics, or articleTools
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "\\barticle\\b[^-_]"), // avoid match on pageArticle, article-card
         // KEEP abstract [abs, full, ref]
+        HtmlNodeFilters.tagWithAttribute("div", "class", "firstPage"),
         /// removing this, it is too broad the string 'abstract' occurs in many div classes - markom 4/7/2021
         //HtmlNodeFilters.tagWithAttributeRegex("div", "class", "abstract"),
         // KEEP active content area [abs, full, ref, suppl]
@@ -395,6 +396,8 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
         */
         // likewise, this is too broad, grab the child divs instead, doing this lower in '//new content...' section
         // HtmlNodeFilters.tagWithAttribute("div", "class","hlFld-Fulltext"),
+        //Need to capture content from full text pages such as this one: https://www.tandfonline.com/doi/full/10.1093/ohr/ohy004 
+        HtmlNodeFilters.tagWithAttribute("div", "class", "NLM_sec NLM_sec_level_1"),
         // Figures page (may or may not have contents
         HtmlNodeFilters.tagWithAttribute("div","class","figuresContent"),
         // showCitFormats form page
@@ -1035,7 +1038,7 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
               if (text.contains("http") ||
                   text.equals("[Taylor & Francis Online]") ||
                   text.equals("[Taylor &amp; Francis Online]") ) {
-                //log.debug3("found a link to get rid of: " + text);
+                log.debug3("found a link to get rid of: " + text);
                 gen = 1;
               }
             }
