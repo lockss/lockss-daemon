@@ -31,7 +31,6 @@
       {
         param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/dukeupress-released/
 
-        au < expected ; exists ; 2023 ; Duke University Press Source Content 2023 ; 2023 >
         au < expected ; exists ; 2024 ; Duke University Press Source Content 2024 ; 2024 >
 
       }
