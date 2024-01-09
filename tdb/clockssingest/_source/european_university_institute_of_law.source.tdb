@@ -29,7 +29,6 @@
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/euilaw-released/
 
     au < readySource ; finished ; 2022 ; European University Institute of Law Source Content 2022_01 ; 2022_01 >
-    au < expected ; exists ; 2023 ; European University Institute of Law Source Content 2023_01 ; 2023_01 >
     au < expected ; exists ; 2024 ; European University Institute of Law Source Content 2024_01 ; 2024_01 >
 
     }
