@@ -631,12 +631,6 @@ public class MigrateSettings extends LockssServlet {
       dsCfg.put("databaseName", V2_DEFAULT_METADATADBMANAGER_DATASOURCE_DATABASENAME);
     }
 
-//    mProps.put(DbManager.PARAM_DATASOURCE_CLASSNAME, dsClassName);
-//
-//    mProps.put(DbManager.PARAM_DATASOURCE_SERVERNAME,
-//        targetCfg.get(V2_PARAM_METADATADBMANAGER_DATASOURCE_SERVERNAME,
-//            V2_DEFAULT_METADATADBMANAGER_DATASOURCE_SERVERNAME));
-
     String dsPortNumber = dsCfg.get("portNumber");
     if (StringUtil.isNullString(dsPortNumber)) {
       String defaultDbPortNumber = getDefaultDatabasePortNumber(dsClassName);
@@ -644,14 +638,6 @@ public class MigrateSettings extends LockssServlet {
         dsCfg.put("portNumber", defaultDbPortNumber);
       }
     }
-
-//    mProps.put(DbManager.PARAM_DATASOURCE_DATABASENAME,
-//        targetCfg.get(V2_PARAM_METADATADBMANAGER_DATASOURCE_DATABASENAME,
-//            V2_DEFAULT_METADATADBMANAGER_DATASOURCE_DATABASENAME));
-//
-//    mProps.put(DbManager.PARAM_DATASOURCE_USER,
-//        targetCfg.get(V2_PARAM_METADATADBMANAGER_DATASOURCE_USER,
-//            V2_DEFAULT_METADATADBMANAGER_DATASOURCE_USER));
 
     // Convert migration properties into a Configuration and merge the datasource
     // configuration as a subtree:
