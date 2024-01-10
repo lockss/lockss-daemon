@@ -624,6 +624,52 @@ public class RemoteApi
     }
   }
 
+  /** Backup only subscriptions and COUNTER data */
+  public File createSubscriptionsAndCounterBackupFile(File permFile)
+      throws IOException {
+    log.info("createSubscriptionsAndCounterBackupFile: " + permFile);
+    File file = FileUtil.createTempFile("cfgsave", ".zip",
+					(permFile != null
+					 ? permFile.getParentFile() : null));
+    ZipOutputStream zip = null;
+    try {
+      OutputStream out = new BufferedOutputStream(new FileOutputStream(file));
+      zip = new ZipOutputStream(out);
+
+      // Add any configured subscriptions to the zip file.
+      SubscriptionManager subMgr = getDaemon().getSubscriptionManager();
+
+      if (subMgr != null && subMgr.isReady()) {
+	subMgr.writeSubscriptionsBackupToZip(zip);
+      }
+
+      // Add any COUNTER aggregate statistics to the zip file.
+      CounterReportsManager crMgr = getDaemon().getCounterReportsManager();
+
+      if (crMgr != null && crMgr.isReady()) {
+	crMgr.writeAggregatesBackupToZip(zip);
+      }
+
+      zip.close();
+      if (permFile != null) {
+	PlatformUtil.updateAtomically(file, permFile);
+	return permFile;
+      } else {
+	return file;
+      }
+    } catch (IOException e) {
+      log.warning("createConfigBackupFile", e);
+      IOUtil.safeClose(zip);
+      file.delete();
+      throw e;
+    } catch (Exception e) {
+      log.warning("createConfigBackupFile", e);
+      IOUtil.safeClose(zip);
+      file.delete();
+      throw new IOException(e.toString());
+    }
+  }
+
   void addAusToZip(ZipOutputStream zip, List aus) throws IOException {
     int dirn = 1;
     for (Iterator iter = aus.iterator(); iter.hasNext(); ) {
