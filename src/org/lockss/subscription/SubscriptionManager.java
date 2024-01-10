@@ -2206,6 +2206,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       Collection<PublisherSubscription> publisherSubscriptions,
       Collection<Subscription> subscriptions,
       SubscriptionOperationStatus status) {
+    // Helpful to see the subscription the servlet created
+    if (log.isDebug3()) log.debug3("addSubscriptions(\n  totalSubscriptionChanged: " + totalSubscriptionChanged + "\n   updatedTotalSubscriptionSetting: " + updatedTotalSubscriptionSetting+ "\n   publisherSubscriptions: " + publisherSubscriptions + "\n   subscriptions: " + subscriptions + "\n   status: " + status);
     final String DEBUG_HEADER = "addSubscriptions(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "totalSubscriptionChanged = "

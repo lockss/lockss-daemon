@@ -28,7 +28,7 @@
 package org.lockss.subscription;
 
 import static org.lockss.db.SqlConstants.*;
-import java.io.IOException;
+import java.io.*;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -66,8 +66,7 @@ import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.MockLockssDaemon;
 import org.lockss.test.MockPlugin;
-import org.lockss.util.ListUtil;
-import org.lockss.util.PlatformUtil;
+import org.lockss.util.*;
 
 /**
  * Test class for org.lockss.subscription.SubscriptionManager.
@@ -83,6 +82,8 @@ public class TestSubscriptionManager extends LockssTestCase {
   private SubscriptionManagerSql subManagerSql;
   private DbManager dbManager;
   private MetadataManager metadataManager;
+  private RemoteApi remoteApi;
+
   private MockPlugin plugin;
 
   @Override
@@ -110,7 +111,7 @@ public class TestSubscriptionManager extends LockssTestCase {
     MockIdentityManager idm = new MockIdentityManager();
     theDaemon.setIdentityManager(idm);
 
-    RemoteApi remoteApi = theDaemon.getRemoteApi();
+    remoteApi = theDaemon.getRemoteApi();
     remoteApi.startService();
 
     dbManager = getTestDbManager(tempDirPath);
@@ -1304,8 +1305,7 @@ public class TestSubscriptionManager extends LockssTestCase {
     String auId = tc.getAuId(pluginManager);
 
     // Add the archival unit.
-    BatchAuStatus status =
-	LockssDaemon.getLockssDaemon().getRemoteApi().addByAuId(auId);
+    BatchAuStatus status = remoteApi.addByAuId(auId);
     assertEquals(0, status.getOkCnt());
 
     MockArchivalUnit au = (MockArchivalUnit)pluginManager.getAuFromId(auId);
@@ -1722,5 +1722,67 @@ public class TestSubscriptionManager extends LockssTestCase {
 	config.get(paramPrefix + "base_url"));
     assertEquals("false", config.get(paramPrefix + "pub_down"));
     assertEquals("param4value", config.get(paramPrefix + "param4key"));
+  }
+
+  public void testBackupSubscriptions() throws Exception {
+    Properties props1 =    
+      PropUtil.fromArgs("title", "MyTitle",
+                        "journalTitle", "MyJournalTitle",
+                        "plugin", "org.lockss.plugin.simulated.SimulatedPlugin",
+                        "attributes.publisher", "MyPublisher",
+                        "attributes.year", "1954",
+                        "param.1.key", "root",
+                        "param.1.value", tempDirPath + "/0",
+                        "param.2.key", "base_url",
+                        "param.2.value", "http://www.title3.org/");
+    Properties props2 =    
+      PropUtil.fromArgs("title", "Title II",
+                        "journalTitle", "MyJournalTitle II",
+                        "plugin", "org.lockss.plugin.simulated.SimulatedPlugin",
+                        "attributes.publisher", "MyPublisher II",
+                        "attributes.year", "2004",
+                        "param.1.key", "root",
+                        "param.1.value", tempDirPath + "/2",
+                        "param.2.key", "base_url",
+                        "param.2.value", "http://www.title3.org/");
+
+    Tdb tdb = new Tdb();
+    tdb.addTdbAu(createTdbAu(props1));
+    tdb.addTdbAu(createTdbAu(props2));
+    ConfigurationUtil.setTdb(tdb);
+
+    Publisher pub1 = new Publisher();
+    pub1.setAuCount(5);
+    pub1.setAvailableAuCount(10);
+    pub1.setPublisherName("MyPublisher");
+    pub1.setPublisherNumber(42L);
+    PublisherSubscription sub1 = new PublisherSubscription();
+    sub1.setPublisher(pub1);
+    sub1.setSubscribed(true);
+
+    SerialPublication sp2 = new SerialPublication();
+    sp2.setPublicationName("MyJournalTitle II");
+    sp2.setPublisherName("MyPublisher II");
+    sp2.setProviderName("MyPublisher II");
+    sp2.setUniqueName("MyPublisher II");
+    sp2.setPublicationNumber(43L);
+    sp2.setAvailableAuCount(1);
+    sp2.setAuCount(1);
+    BibliographicPeriod bp2 = new BibliographicPeriod("2000-");
+
+    Subscription sub2 = new Subscription();
+    sub2.setPublication(sp2);
+    sub2.setSubscribedRanges(ListUtil.list(bp2));
+
+    SubscriptionOperationStatus status = new SubscriptionOperationStatus();
+    subManager.addSubscriptions(false, false,
+                                ListUtil.list(sub1),
+                                ListUtil.list(sub2),
+                                status);
+    // To generate a backup file to move into laaws to test restore,
+    // run this test with -Dkeeptempfiles=true
+    File backFile = getTempFile("subscription_back", ".zip");
+    remoteApi.createSubscriptionsAndCounterBackupFile(backFile);
+    log.debug("Subscriptions written to " + backFile);
   }
 }
