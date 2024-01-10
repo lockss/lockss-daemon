@@ -83,6 +83,18 @@ public class PropUtil {
     return props;
   }
 
+  public static Properties fromArgs(String... keysVals) {
+    Properties p = new Properties();
+    if (keysVals == null) { return p; }
+    if (keysVals.length % 2 == 1) {
+      throw new IllegalArgumentException("PropUtil.fromArgs() odd number of args");
+    }
+    for (int ix = 0; ix < keysVals.length; ix+=2) {
+      p.put(keysVals[ix], keysVals[ix+1]);
+    }
+    return p;
+  }
+
   /** Load Properties from a file */
   public static Properties fromFile(File file) throws IOException {
     Properties res = new Properties();
