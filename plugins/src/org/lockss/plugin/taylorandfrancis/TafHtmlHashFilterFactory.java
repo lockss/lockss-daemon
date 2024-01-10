@@ -367,7 +367,6 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
         //need to keep the second \\b so we don't pick up articleMetrics, or articleTools
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "\\barticle\\b[^-_]"), // avoid match on pageArticle, article-card
         // KEEP abstract [abs, full, ref]
-        HtmlNodeFilters.tagWithAttribute("div", "class", "firstPage"),
         /// removing this, it is too broad the string 'abstract' occurs in many div classes - markom 4/7/2021
         //HtmlNodeFilters.tagWithAttributeRegex("div", "class", "abstract"),
         // KEEP active content area [abs, full, ref, suppl]
@@ -470,6 +469,9 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
         // we get rid of all tags at the end so won't keep links unless explicitly
         // included here
         // This includes the links on a manifest page
+
+        //include content around first page samples on abstract page such as the following: https://www.tandfonline.com/doi/abs/10.1386/jmpr.5.2.71/0
+        HtmlNodeFilters.tagWithAttribute("div", "class", "firstPage"),
         new NodeFilter() {
           @Override
           public boolean accept(Node node) {
