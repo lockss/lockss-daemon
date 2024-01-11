@@ -472,6 +472,8 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
 
         //include content around first page samples on abstract page such as the following: https://www.tandfonline.com/doi/abs/10.1386/jmpr.5.2.71/0
         HtmlNodeFilters.tagWithAttribute("div", "class", "firstPage"),
+        //include figures content: https://www.tandfonline.com/doi/figure/10.1080/1177083X.2018.1508479
+        HtmlNodeFilters.tagWithAttribute("div", "class", "figuresContent"),
         new NodeFilter() {
           @Override
           public boolean accept(Node node) {
@@ -495,7 +497,6 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
                   ((HeadingTag) child).setTagName("p");
                 }
               }
-
             }
             return false;
           }
@@ -859,11 +860,11 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
         // older content that we do not need on the ingest machines
         // many title tags we need
 
-        HtmlNodeFilters.allExceptSubtree(
-            HtmlNodeFilters.tag("h3"),
-            // in new content there is a table caption embedded in an h3 tag. wild
-            HtmlNodeFilters.tag("p")
-        ),
+        // HtmlNodeFilters.allExceptSubtree(
+        //     HtmlNodeFilters.tag("h3"),
+        //      //in new content there is a table caption embedded in an h3 tag. wild
+        //     HtmlNodeFilters.tag("p")
+        // ),
         HtmlNodeFilters.allExceptSubtree(
             HtmlNodeFilters.tagWithAttribute("div","class","description"),
             HtmlNodeFilters.tag("h1")
