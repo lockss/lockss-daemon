@@ -62,7 +62,7 @@ POSSIBILITY OF SUCH DAMAGE.
  <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%s\.%d\.%d\.%d\.pdf", base_url, year, volume, issue</string>
+      <string>"^%s%d\.%d\.%d([1-9+])\.pdf", base_url, year, volume, issue</string>
     </list>
   </entry>
 </map>
