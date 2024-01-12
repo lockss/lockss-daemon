@@ -752,7 +752,11 @@ public class V2AuMover {
     try {
       if (args.opType == OpType.CopySystemSettings) {
         moveSystemSettings(args);
-      } else {
+      }
+      else if (args.opType == OpType.CopyDatabase) {
+        moveDatabase(args);
+      }
+      else {
         if (args.au != null) {
           // If an AU was supplied, copy it
           moveOneAu(args);
@@ -921,7 +925,7 @@ public class V2AuMover {
         // TODO: Optionally delete the content; if deleting content -> delete AU (or deactivate?)
     }
   }
-  private void migrateDatabase(Args args) {
+  private void moveDatabase(Args args) {
     currentStatus = STATUS_MIGRATING_DATABASE;
     logReport(currentStatus);
 

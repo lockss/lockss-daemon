@@ -238,7 +238,7 @@ public class MigrateSettings extends LockssServlet {
             // Write migration configuration to file
             writeMigrationConfigFile(
                 addPrefixToSubtree(mCfg, DbManager.DATASOURCE_ROOT, "v2"));
-
+            ConfigManager.getConfigManager().requestReload();
             // Redirect to Migrate Content page
             String redir = srvURL(AdminServletManager.SERVLET_MIGRATE_CONTENT);
             resp.sendRedirect(redir);

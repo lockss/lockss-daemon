@@ -281,6 +281,7 @@ public class MigrateContent extends LockssServlet {
     try {
       startRunner(ListUtil.list(
           getArgsToMigrateSystemSettings(),
+          getArgsToMigrateDatabase(),
           getArgsToMigratePluginAus()));
     } catch (Exception e) {
       log.error("Could not start runner", e);
@@ -291,6 +292,12 @@ public class MigrateContent extends LockssServlet {
     return getCommonFormArgs()
       .setCompareContent(false)
       .setOpType(OpType.CopySystemSettings);
+  }
+
+  private V2AuMover.Args getArgsToMigrateDatabase() {
+    return getCommonFormArgs()
+      .setCompareContent(false)
+      .setOpType(OpType.CopyDatabase);
   }
 
   private V2AuMover.Args getArgsToMigratePluginAus() {

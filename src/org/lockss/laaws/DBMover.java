@@ -34,8 +34,8 @@ public class DBMover extends Worker {
   String v2port = DEFAULT_v2_PORT;
 
   String dbName="lockss";
-  String srcSize;
-  String dstSize;
+  long srcSize;
+  long dstSize;
 
   DbManager dbManager;
 
@@ -47,6 +47,10 @@ public class DBMover extends Worker {
   public void run() {
     String err;
     try {
+      if (dbHasMoved()) {
+        log.info("Db has already been moved.");
+        return;
+      }
       if( dbManager.isTypeDerby()) {
         log.info("Migrating Derby DB Content");
         copyDerbyDb();
@@ -76,17 +80,17 @@ public class DBMover extends Worker {
 
   boolean initParams() {
     Configuration config = ConfigManager.getCurrentConfig();
-    Configuration v1config = config.getConfigTree(DbManager.DATASOURCE_ROOT);
-    v1user = v1config.get(DB_USER_KEY, DbManager.DEFAULT_DATASOURCE_USER);
-    v1password = v1config.get(DB_PASSWORD_KEY, DbManager.DEFAULT_DATASOURCE_PASSWORD);
-    v1host = v1config.get(DB_SERVER_KEY, DbManager.DEFAULT_DATASOURCE_SERVERNAME);
-    v1port = v1config.get(DB_PORT_KEY, DbManager.DEFAULT_DATASOURCE_PORTNUMBER_MYSQL);
 
-    Configuration v2config = config.getConfigTree("v2."+DbManager.DATASOURCE_ROOT);
-    v2user = v2config.get(DB_USER_KEY,DEFAULT_DB_USER);
-    v2password = v2config.get(DB_PASSWORD_KEY);
-    v2host = v2config.get(DB_SERVER_KEY);
-    v2port = v2config.get(DB_PORT_KEY, DEFAULT_v2_PORT);
+    v1user = config.get(DbManager.PARAM_DATASOURCE_USER, DbManager.DEFAULT_DATASOURCE_USER);
+    v1password = config.get(DbManager.PARAM_DATASOURCE_PASSWORD, DbManager.DEFAULT_DATASOURCE_PASSWORD);
+    v1host = config.get(DbManager.PARAM_DATASOURCE_SERVERNAME, DbManager.DEFAULT_DATASOURCE_SERVERNAME);
+    v1port = config.get(DbManager.PARAM_DATASOURCE_PORTNUMBER, DbManager.DEFAULT_DATASOURCE_PORTNUMBER_PG);
+
+    Configuration v2config = config.getConfigTree("v2");
+    v2user = v2config.get(DbManager.PARAM_DATASOURCE_USER);
+    v2password = v2config.get(DbManager.PARAM_DATASOURCE_PASSWORD);
+    v2host = v2config.get(DbManager.PARAM_DATASOURCE_SERVERNAME);
+    v2port = v2config.get(DbManager.PARAM_DATASOURCE_PORTNUMBER);
 
     if (StringUtil.isNullString(v2host)) {
       String msg = "DbMover failed: destination hostname was not supplied.";
@@ -101,13 +105,20 @@ public class DBMover extends Worker {
     }
     return true;
   }
+  private boolean dbHasMoved() {
+    //if v1 datasource = v2 datasource then db has moved.
+    Configuration config = ConfigManager.getCurrentConfig();
+    Configuration v1 = config.getConfigTree(DbManager.DATASOURCE_ROOT);
+    Configuration v2 = config.getConfigTree("v2."+DbManager.DATASOURCE_ROOT);
+    return v1.equals(v2);
+  }
 
-  private String getDatabaseSize(String host, String port, String user, String password, String dbName) {
+  private long getDatabaseSize(String host, String port, String user, String password, String dbName) {
     Connection connection = null;
     Statement stmt = null;
     ResultSet rs = null;
     String url = "jdbc:postgresql://" + host + ":" + port + "/" + dbName;
-    String curSize = null;
+    long curSize = 0L;
 
     try {
       connection = DriverManager.getConnection(url, user, password);
@@ -115,11 +126,11 @@ public class DBMover extends Worker {
       stmt = connection.createStatement();
 
       // Execute Query to get Database Size
-      rs = stmt.executeQuery("SELECT pg_size_pretty(pg_database_size('"+ dbName +"'))");
+      rs = stmt.executeQuery("SELECT pg_database_size('"+ dbName +"')");
 
       // If result exists, print the Database Size
       if (rs.next()) {
-        curSize = rs.getString(1);
+        curSize = rs.getLong(1);
       }
     } catch (SQLException ex) {
       String err = "DBMover Connection to PostgreSQL failed or error executing query to get size.";
@@ -148,7 +159,7 @@ public class DBMover extends Worker {
   private void copyPostgresDb() {
     String err;
     StringBuilder sbcmd = new StringBuilder();
-    sbcmd.append("pg_dumpall -c --if-exists ");
+    sbcmd.append("pg_dump -c --if-exists ");
     sbcmd.append("--dbname=postgresql://");
     sbcmd.append(v1user).append(":").append(v1password).append("@");
     sbcmd.append(v1host).append(":").append(v1port).append("/");
