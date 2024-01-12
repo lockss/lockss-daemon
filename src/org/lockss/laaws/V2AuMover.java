@@ -327,6 +327,8 @@ public class V2AuMover {
 
   /** Flag to getCurrentStatus() to build status string on the fly. */
   private static final String STATUS_RUNNING = "**Running**";
+  private static final String STATUS_MIGRATING_DATABASE = "Migrating database conent";
+  private static final String STATUS_DONE_MIGRATING_DATABASE = "Done migrating database";
   private static final String STATUS_COPYING_USER_ACCOUNTS = "Copying user accounts";
   private static final String STATUS_DONE_COPYING_SYSTEM_SETTINGS = "Done copying system settings";
 
@@ -918,6 +920,20 @@ public class V2AuMover {
       case Finished:
         // TODO: Optionally delete the content; if deleting content -> delete AU (or deactivate?)
     }
+  }
+  private void migrateDatabase(Args args) {
+    currentStatus = STATUS_MIGRATING_DATABASE;
+    logReport(currentStatus);
+
+    initRequest(args, null);
+
+    // Migrate the database
+    MigrationTask task  = MigrationTask.migrateDb(this);
+    DBMover dbMover = new DBMover(this, task);
+    dbMover.run();
+
+    currentStatus = STATUS_DONE_MIGRATING_DATABASE;
+    logReport(currentStatus);
   }
 
   private void moveSystemSettings(Args args) {

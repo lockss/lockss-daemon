@@ -39,6 +39,7 @@ public class MigrationTask {
 
 
   public enum TaskType {
+    MIGRATE_DATABASE,
     COPY_USER_ACCOUNTS,
     COPY_CU_VERSIONS,
     CHECK_CU_VERSIONS,
@@ -98,6 +99,10 @@ public class MigrationTask {
 
   public V2AuMover.Phase getTaskPhase() {
     return type.getTaskPhase();
+  }
+
+  public static MigrationTask migrateDb(V2AuMover mover) {
+    return new MigrationTask(mover, TaskType.MIGRATE_DATABASE);
   }
 
   public static MigrationTask copyUserAccounts(V2AuMover mover) {
