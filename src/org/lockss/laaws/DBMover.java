@@ -12,21 +12,27 @@ import org.lockss.util.StringUtil;
 
 public class DBMover extends Worker {
   private static final Logger log = Logger.getLogger(DBMover.class);
-  public static final String DEFAULT_USER = "LOCKSS";
+
+  private static final String DB_USER_KEY = "user";
+  private static final String DB_PASSWORD_KEY = "password";
+  private static final String DB_SERVER_KEY = "serverName";
+  private static final String DB_PORT_KEY = "portNumber";
+
+  public static final String DEFAULT_DB_USER = "LOCKSS";
   public static final String DEFAULT_HOST = "localhost";
   public static final String DEFAULT_V1_PASSWORD = "goodPassword";
   public static final String DEFAULT_v2_PORT = "24602";
   // v1 connection parameters
-  String v1user = "LOCKSS";
-  String v1password = "goodPassword";
-  String v1host = "localhost";
+  String v1user = DEFAULT_DB_USER;
+  String v1password = DEFAULT_V1_PASSWORD;
+  String v1host = DEFAULT_HOST;
   String v1port = "5432";
 
   // v2 connection parameters
-  String v2user="LOCKSS";
+  String v2user=DEFAULT_DB_USER;
   String v2password;
-  String v2host = "localhost";
-  String v2port = "24602";
+  String v2host = DEFAULT_HOST;
+  String v2port = DEFAULT_v2_PORT;
 
   String dbName="lockss";
 
@@ -112,16 +118,16 @@ public class DBMover extends Worker {
   boolean initParams() {
     Configuration config = ConfigManager.getCurrentConfig();
     Configuration v1config = config.getConfigTree(DbManager.DATASOURCE_ROOT);
-    v1user = v1config.get("user", DbManager.DEFAULT_DATASOURCE_USER);
-    v1password = v1config.get("password", DbManager.DEFAULT_DATASOURCE_PASSWORD);
-    v1host = v1config.get("serverName", DbManager.DEFAULT_DATASOURCE_SERVERNAME);
-    v1port = v1config.get("portNumber", DbManager.DEFAULT_DATASOURCE_PORTNUMBER_MYSQL);
+    v1user = v1config.get(DB_USER_KEY, DbManager.DEFAULT_DATASOURCE_USER);
+    v1password = v1config.get(DB_PASSWORD_KEY, DbManager.DEFAULT_DATASOURCE_PASSWORD);
+    v1host = v1config.get(DB_SERVER_KEY, DbManager.DEFAULT_DATASOURCE_SERVERNAME);
+    v1port = v1config.get(DB_PORT_KEY, DbManager.DEFAULT_DATASOURCE_PORTNUMBER_MYSQL);
 
     Configuration v2config = config.getConfigTree("v2."+DbManager.DATASOURCE_ROOT);
-    v2user = v2config.get("user",DEFAULT_USER);
-    v2password = v2config.get("password");
-    v2host = v2config.get("serverName");
-    v2port = v2config.get("portNumber", DEFAULT_v2_PORT);
+    v2user = v2config.get(DB_USER_KEY,DEFAULT_DB_USER);
+    v2password = v2config.get(DB_PASSWORD_KEY);
+    v2host = v2config.get(DB_SERVER_KEY);
+    v2port = v2config.get(DB_PORT_KEY, DEFAULT_v2_PORT);
 
     if (StringUtil.isNullString(v2host)) {
       String msg = "DbMover failed: destination hostname was not supplied.";
