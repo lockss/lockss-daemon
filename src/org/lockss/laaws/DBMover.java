@@ -74,7 +74,7 @@ public class DBMover extends Worker {
     sbcmd.append(v1user).append(":").append(v1password).append("@");
     sbcmd.append(v1host).append(":").append(v1port).append("/");
     sbcmd.append(dbName);
-    sbcmd.append("|");
+    sbcmd.append(" | ");
     sbcmd.append("psql -q --dbname=postgresql://");
     sbcmd.append(v2user).append(":").append(v2password).append("@");
     sbcmd.append(v2host).append(":").append(v2port).append("/");
@@ -136,6 +136,5 @@ public class DBMover extends Worker {
     }
     return true;
   }
-
 }
 
