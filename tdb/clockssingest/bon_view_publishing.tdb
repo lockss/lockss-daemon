@@ -17,6 +17,18 @@
   {
 
     title <
+      name = Archives of Advanced Engineering Science ;
+      eissn = 2972-4325
+    >
+      param[journal_id] = AAES
+
+      au < manifest ; exists ; 2023 ; Archives of Advanced Engineering Science Volume 1 ; 1 ; 2023 ; >
+
+  }
+
+  {
+
+    title <
       name = Artificial Intelligence and Applications ;
       eissn = 2811-0854
     >

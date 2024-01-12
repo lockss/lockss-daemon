@@ -1,6 +1,6 @@
 <!--
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>23</string>
+    <string>24</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -239,31 +239,8 @@ POSSIBILITY OF SUCH DAMAGE.
     </list>
   </entry>
   <entry>
-    <string>au_rate_limiter_info</string><!-- note: see plugin override -->
-    <org.lockss.plugin.RateLimiterInfo>
-      <rate>1/3333ms</rate><!-- note: this default rate is actually ignored because the conditional rates cover 100% of cases -->
-      <cond>
-        <!--pause crawls Monday through Friday 9am through 9pm Eastern, except for one hit per hour to prevent the hung thread watchdog from tripping after 2 hours -->
-        <entry>
-          <org.lockss.daemon.CrawlWindows-Daily>
-            <from>9:00</from>
-            <to>21:00</to>
-            <timeZoneId>America/New_York</timeZoneId>
-            <daysOfWeek>2;3;4;5;6</daysOfWeek>
-          </org.lockss.daemon.CrawlWindows-Daily>
-          <org.lockss.plugin.RateLimiterInfo>
-            <rate>1/1h</rate>
-          </org.lockss.plugin.RateLimiterInfo>
-        </entry>
-        <!-- the rest of the time, 1/3333ms -->
-        <entry>
-          <org.lockss.daemon.CrawlWindows-Always />
-          <org.lockss.plugin.RateLimiterInfo>
-            <rate>1/3333ms</rate><!-- 9/10 of the previous rate = 10/9 of the previous interval of 3000 -->
-          </org.lockss.plugin.RateLimiterInfo>
-        </entry>
-      </cond>
-    </org.lockss.plugin.RateLimiterInfo>
+    <string>au_def_pause_time</string>
+    <long>3333</long>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
@@ -276,10 +253,6 @@ POSSIBILITY OF SUCH DAMAGE.
       <entry>
         <string>au_refetch_depth</string>
         <int>1</int>
-      </entry>
-      <entry>
-        <string>au_rate_limiter_info</string>
-        <org.lockss.util.Default />
       </entry>
       <entry>
         <string>au_def_pause_time</string>

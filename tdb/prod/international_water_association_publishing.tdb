@@ -22,9 +22,9 @@
 
     param[journal_id] = bgs
 
-    au < manifest ; 2019 ; 2019 ; Blue-Green Systems Volume 1 ; 1 >
-    au < manifest ; 2020 ; 2020 ; Blue-Green Systems Volume 2 ; 2 >
-    au < manifest ; 2021 ; 2021 ; Blue-Green Systems Volume 3 ; 3 >
+    au < ready ; 2019 ; 2019 ; Blue-Green Systems Volume 1 ; 1 >
+    au < ready ; 2020 ; 2020 ; Blue-Green Systems Volume 2 ; 2 >
+    au < ready ; 2021 ; 2021 ; Blue-Green Systems Volume 3 ; 3 >
     au < released ; 2022 ; 2022 ; Blue-Green Systems Volume 4 ; 4 >
     au < manifest ; 2023 ; 2023 ; Blue-Green Systems Volume 5 ; 5 >
 
@@ -498,7 +498,7 @@
     au < manifest ; 2007 ; 2007 ; Water Quality Research Journal of Canada Volume 42 ; 42 >
     au < manifest ; 2008 ; 2008 ; Water Quality Research Journal of Canada Volume 43 ; 43 >
     au < manifest ; 2009 ; 2009 ; Water Quality Research Journal of Canada Volume 44 ; 44 >
-    au < manifest ; 2010 ; 2010 ; Water Quality Research Journal of Canada Volume 45 ; 45 >
+    au < ready ; 2010 ; 2010 ; Water Quality Research Journal of Canada Volume 45 ; 45 >
     au < doNotProcess ; 2011 ; 2011 ; Water Quality Research Journal of Canada Volume 46 ; 46 >
     au < doNotProcess ; 2012 ; 2012 ; Water Quality Research Journal of Canada Volume 47 ; 47 >
     au < doNotProcess ; 2013 ; 2013 ; Water Quality Research Journal of Canada Volume 48 ; 48 >

@@ -30,7 +30,6 @@
       plugin = needs.plugin
       param[base_url] = https://clockss-test.lockss.org/sourcefiles/oupjournals-released/
 
-      au < expected ; exists ; 2023 ; Oxford University Press Journal Source Content 2023 ; 2023 >
       au < expected ; exists ; 2024 ; Oxford University Press Journal Source Content 2024 ; 2024 >
 
   }

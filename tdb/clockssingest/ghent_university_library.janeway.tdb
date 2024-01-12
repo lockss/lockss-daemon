@@ -128,11 +128,11 @@
       param[base_url] = https://jolcel.ugent.be/
       #param[journal_id] = jolcel
 
-      au < manifest ; exists ; 2019 ; 2019 ; 2019 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2019 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2020 ; >
-      au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2021 ; >
-      au < manifest ; exists ; 2022 ; 2022 ; 2022 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2022 ; >
-      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2023 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2019 ; >
+      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2020 ; >
+      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2021 ; >
+      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2022 ; >
+      au < crawling ; exists ; 2023 ; 2023 ; 2023 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2023 ; >
 
   }
 
@@ -259,7 +259,7 @@
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2020 ; >
       au < frozen ; exists ; 2021 ; 2021 ; 2021 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2021 ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; 2022 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2022 ; >
-      au < expected ; exists ; 2023 ; 2023 ; 2023 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2023 ; >
+      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2023 ; >
 
   } 
 
@@ -360,7 +360,7 @@
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Agora Magazine Volume 2020 ; >
       au < exists ; exists ; 2021 ; 2021 ; 2021 ; Agora Magazine Volume 2021 ; >
       au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Agora Magazine Volume 2022 ; >
-      au < expected ; exists ; 2023 ; 2023 ; 2023 ; Agora Magazine Volume 2023 ; >
+      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Agora Magazine Volume 2023 ; >
 
   }
 
@@ -543,7 +543,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Ghendtsche Tydinghen Volume 2019 ; >
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Ghendtsche Tydinghen Volume 2020 ; >
       au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Ghendtsche Tydinghen Volume 2021 ; >
-      au < manifest ; exists ; 2022 ; 2022 ; 2022 ; Ghendtsche Tydinghen Volume 2022 ; >
+      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Ghendtsche Tydinghen Volume 2022 ; >
       au < expected ; exists ; 2023 ; 2023 ; 2023 ; Ghendtsche Tydinghen Volume 2023 ; >
 
   }
@@ -1214,7 +1214,7 @@
       au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2014 ; >
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2015 ; >
       au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2016 ; >
-      au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2017 ; >
+      au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2017 ; >
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2018 ; >
 
   }
@@ -1263,7 +1263,7 @@
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Studies on National Movements Volume 2020 ; >
       au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Studies on National Movements Volume 2021 ; >
       au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Studies on National Movements Volume 2022 ; >
-      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Studies on National Movements Volume 2023 ; >
+      au < crawling ; exists ; 2023 ; 2023 ; 2023 ; Studies on National Movements Volume 2023 ; >
 
   }
 

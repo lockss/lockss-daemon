@@ -128,6 +128,14 @@ public class TestPropUtil extends LockssTestCase {
     test = PropUtil.fromArgs("k1", "v1", "k2", "v2", "k3", "v3");
     props.setProperty("k3", "v3");
     assertTrue(PropUtil.equalProps(props, test));
+
+    test = PropUtil.fromArgs("k1", "v1", "k2", "v2", "k3", "v3",
+                             "k21", "v21", "k22", "v22", "k23", "v23");
+    props.setProperty("k21", "v21");
+    props.setProperty("k22", "v22");
+    props.setProperty("k23", "v23");
+    assertEquals(6, test.size());
+    assertTrue(PropUtil.equalProps(props, test));
   }
 
   public void testFromFile() throws IOException {

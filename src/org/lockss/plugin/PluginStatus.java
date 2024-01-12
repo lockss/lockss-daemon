@@ -149,39 +149,35 @@ class Plugins extends PluginStatus implements StatusAccessor {
   public List getRows(boolean includeInternalAus) {
     List rows = new ArrayList();
 
-    Collection plugins = mgr.getRegisteredPlugins();
-    synchronized (plugins) {
-      for (Iterator iter = plugins.iterator(); iter.hasNext(); ) {
-	Plugin plugin = (Plugin)iter.next();
-	if (!includeInternalAus && mgr.isInternalPlugin(plugin)) {
-	  continue;
-	}
-	Map row = new HashMap();
-	row.put("plugin", makePlugRef(plugin.getPluginName(), plugin));
-
-	int numaus = plugin.getAllAus().size();
-	if (numaus > 0) {
-	  StatusTable.Reference auslink = 
-	    new StatusTable.Reference(numaus,
-				      ArchivalUnitStatus.SERVICE_STATUS_TABLE_NAME,
-				      "plugin:" + plugin.getPluginId());
-	  row.put("aus", auslink);
-	}
-	row.put("version", plugin.getVersion());
-	row.put("id", plugin.getPluginId());
-	row.put("type", mgr.getPluginType(plugin));
-	if (mgr.isLoadablePlugin(plugin)) {
-	  PluginManager.PluginInfo info = mgr.getLoadablePluginInfo(plugin);
-	  if (info != null) {
-// 	    row.put("cu", info.getCuUrl());
-	    ArchivalUnit au = info.getRegistryAu();
-	    if (au != null) {
-	      row.put("registry", au.getName());
-	    }
-	  }
-	}
-	rows.add(row);
+    for (Plugin plugin : mgr.getRegisteredPlugins()) {
+      if (!includeInternalAus && mgr.isInternalPlugin(plugin)) {
+        continue;
       }
+      Map row = new HashMap();
+      row.put("plugin", makePlugRef(plugin.getPluginName(), plugin));
+
+      int numaus = plugin.getAllAus().size();
+      if (numaus > 0) {
+        StatusTable.Reference auslink =
+          new StatusTable.Reference(numaus,
+                                    ArchivalUnitStatus.SERVICE_STATUS_TABLE_NAME,
+                                    "plugin:" + plugin.getPluginId());
+        row.put("aus", auslink);
+      }
+      row.put("version", plugin.getVersion());
+      row.put("id", plugin.getPluginId());
+      row.put("type", mgr.getPluginType(plugin));
+      if (mgr.isLoadablePlugin(plugin)) {
+        PluginManager.PluginInfo info = mgr.getLoadablePluginInfo(plugin);
+        if (info != null) {
+          // 	    row.put("cu", info.getCuUrl());
+          ArchivalUnit au = info.getRegistryAu();
+          if (au != null) {
+            row.put("registry", au.getName());
+          }
+        }
+      }
+      rows.add(row);
     }
     return rows;
   }

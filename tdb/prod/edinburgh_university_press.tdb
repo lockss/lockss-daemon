@@ -646,7 +646,7 @@
     param[journal_id] = lib
     #continued_by = 1758-3489
 
-    au < doesNotExist ; 1985 ; Library History Volume 1 ; 1 ; https://www.euppublishing.com/ >
+    au < manifest ; 1985 ; Library History Volume 1 ; 1 ; https://www.euppublishing.com/ >
     au < manifest ; 1986 ; Library History Volume 2 ; 2 ; https://www.euppublishing.com/ >
     au < manifest ; 1987 ; Library History Volume 3 ; 3 ; https://www.euppublishing.com/ >
     au < manifest ; 1988 ; Library History Volume 4 ; 4 ; https://www.euppublishing.com/ >
@@ -657,7 +657,7 @@
     au < manifest ; 1993 ; Library History Volume 9 ; 9 ; https://www.euppublishing.com/ >
     au < manifest ; 1994 ; Library History Volume 10 ; 10 ; https://www.euppublishing.com/ >
     au < manifest ; 1995 ; Library History Volume 11 ; 11 ; https://www.euppublishing.com/ >
-    au < doesNotExist ; 1996 ; Library History Volume 12 ; 12 ; https://www.euppublishing.com/ >
+    au < manifest ; 1996 ; Library History Volume 12 ; 12 ; https://www.euppublishing.com/ >
     au < manifest ; 1997 ; Library History Volume 13 ; 13 ; https://www.euppublishing.com/ >
     au < manifest ; 1998 ; Library History Volume 14 ; 14 ; https://www.euppublishing.com/ >
     au < manifest ; 1999 ; Library History Volume 15 ; 15 ; https://www.euppublishing.com/ >

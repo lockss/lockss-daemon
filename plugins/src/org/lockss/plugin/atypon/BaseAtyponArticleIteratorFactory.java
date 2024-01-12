@@ -74,29 +74,60 @@ ArticleMetadataExtractorFactory {
 
   // various aspects of an article
   // DOI's can have "/"s in the suffix
-  private static final Pattern PDF_PATTERN = Pattern.compile("/doi/pdf/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
-  private static final Pattern EPDF_PATTERN = Pattern.compile("/doi/epdf/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
-  private static final Pattern ABSTRACT_PATTERN = Pattern.compile("/doi/abs/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
-  private static final Pattern HTML_PATTERN = Pattern.compile("/doi/full/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
-  private static final Pattern PDFPLUS_PATTERN = Pattern.compile("/doi/pdfplus/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
-  private static final Pattern EPDFPLUS_PATTERN = Pattern.compile("/doi/epdfplus/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
-  private static final Pattern DOI_PATTERN = Pattern.compile("/doi/([.0-9]+)/([^?&]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern PDF_PATTERN_2 = Pattern.compile("/doi/pdf/([.0-9]+)/([^?&/]+)/([0-9a-zA-Z]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern PDF_PATTERN = Pattern.compile("/doi/pdf/([.0-9]+)/([^?&/]+)()$", Pattern.CASE_INSENSITIVE);
+
+  private static final Pattern EPDF_PATTERN_2 = Pattern.compile("/doi/epdf/([.0-9]+)/([^?&/]+)/([0-9a-zA-Z]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern EPDF_PATTERN = Pattern.compile("/doi/epdf/([.0-9]+)/([^?&/]+)()$", Pattern.CASE_INSENSITIVE);
+
+  private static final Pattern ABSTRACT_PATTERN_2 = Pattern.compile("/doi/abs/([.0-9]+)/([^?&/]+)/([0-9a-zA-Z]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern ABSTRACT_PATTERN = Pattern.compile("/doi/abs/([.0-9]+)/([^?&/]+)()$", Pattern.CASE_INSENSITIVE);
+
+  private static final Pattern HTML_PATTERN_2 = Pattern.compile("/doi/full/([.0-9]+)/([^?&/]+)/([0-9a-zA-Z]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern HTML_PATTERN = Pattern.compile("/doi/full/([.0-9]+)/([^?&/]+)()$", Pattern.CASE_INSENSITIVE);
+
+  private static final Pattern PDFPLUS_PATTERN_2 = Pattern.compile("/doi/pdfplus/([.0-9]+)/([^?&/]+)/([0-9a-zA-Z]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern PDFPLUS_PATTERN = Pattern.compile("/doi/pdfplus/([.0-9]+)/([^?&/]+)()$", Pattern.CASE_INSENSITIVE);
+
+  private static final Pattern EPDFPLUS_PATTERN_2 = Pattern.compile("/doi/epdfplus/([.0-9]+)/([^?&/]+)/([0-9a-zA-Z]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern EPDFPLUS_PATTERN = Pattern.compile("/doi/epdfplus/([.0-9]+)/([^?&/]+)()$", Pattern.CASE_INSENSITIVE);
+
+  private static final Pattern DOI_PATTERN_2 = Pattern.compile("/doi/([.0-9]+)/([^?&/]+)/([0-9a-zA-Z]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern DOI_PATTERN = Pattern.compile("/doi/doi/([.0-9]+)/([^?&/]+)()$", Pattern.CASE_INSENSITIVE);
 
   // how to change from one form (aspect) of article to another
+  private static final String HTML_REPLACEMENT_2 = "/doi/full/$1/$2/$3";
   private static final String HTML_REPLACEMENT = "/doi/full/$1/$2";
+
+  private static final String ABSTRACT_REPLACEMENT_2 = "/doi/abs/$1/$2/$3";
   private static final String ABSTRACT_REPLACEMENT = "/doi/abs/$1/$2";
+
+  private static final String PDF_REPLACEMENT_2 = "/doi/pdf/$1/$2/$3";
   private static final String PDF_REPLACEMENT = "/doi/pdf/$1/$2";
+
+  private static final String PDFPLUS_REPLACEMENT_2 = "/doi/pdfplus/$1/$2/$3";
   private static final String PDFPLUS_REPLACEMENT = "/doi/pdfplus/$1/$2";
+
+  private static final String EPDF_REPLACEMENT_2 = "/doi/epdf/$1/$2/$3";
   private static final String EPDF_REPLACEMENT = "/doi/epdf/$1/$2";
+
+  private static final String EPDFPLUS_REPLACEMENT_2 = "/doi/epdfplus/$1/$2/$3";
   private static final String EPDFPLUS_REPLACEMENT = "/doi/epdfplus/$1/$2";
+
   // in support of books, this is equivalent of full book abstract (landing page)
+  private static final String BOOK_REPLACEMENT_2 = "/doi/book/$1/$2/$3";
   private static final String BOOK_REPLACEMENT = "/doi/book/$1/$2";
+
+  private static final String DOI_REPLACEMENT_2 = "/doi/$1/$2/$3";
   private static final String DOI_REPLACEMENT = "/doi/$1/$2";
 
   // Things not an "article" but in support of an article
+  private static final String REFERENCES_REPLACEMENT_2 = "/doi/ref/$1/$2/$3";
   private static final String REFERENCES_REPLACEMENT = "/doi/ref/$1/$2";
+  private static final String SUPPL_REPLACEMENT_2 = "/doi/suppl/$1/$2/$3";
   private static final String SUPPL_REPLACEMENT = "/doi/suppl/$1/$2";
   // MassMedical uses this second form for SUPPL materials
+  private static final String SECOND_SUPPL_REPLACEMENT_2 = "/action/showSupplements?doi=$1%2F$2/$3";
   private static final String SECOND_SUPPL_REPLACEMENT = "/action/showSupplements?doi=$1%2F$2";
   // link extractor used forms to pick up this URL
 
@@ -113,6 +144,12 @@ ArticleMetadataExtractorFactory {
   private static final String SECOND_RIS_REPLACEMENT = "/action/downloadCitation?doi=$1%2F$2&format=ris&include=abs";
   private static final String SECOND_RIS_REPLACEMENT_WSLASH = "/action/downloadCitation?doi=$1%/$2&format=ris&include=abs";
 
+  /*
+   * URLs have been found in certain Taylor & Francis journals that have one of the following
+   * 1. An extra "%2F0" or "%2F1" (example: https://www.tandfonline.com/action/downloadCitation?doi=10.1386%2Fjvap.3.1.27%2F0&format=ris&include=cit)
+   * 2. An extra "%2F" (example: https://www.tandfonline.com/action/downloadCitation?doi=10.1093%2Fohr%2Fohu065&format=ris&include=cit)
+   */
+  private static final String THIRD_RIS_REPLACEMENT = "/action/downloadCitation?doi=$1%2F$2%2F$3&format=ris&include=cit";
 
   //
   // On an Atypon publisher, article content may look like this but you do not know
@@ -152,34 +189,33 @@ ArticleMetadataExtractorFactory {
     // lower aspects aren't looked for, once you get a match.
 
     // set up PDF to be an aspect that will trigger an ArticleFiles
-    builder.addAspect(PDF_PATTERN,
-        PDF_REPLACEMENT,
+    builder.addAspect(Arrays.asList(PDF_PATTERN, PDF_PATTERN_2),
+        Arrays.asList(PDF_REPLACEMENT, PDF_REPLACEMENT_2),
         ArticleFiles.ROLE_FULL_TEXT_PDF);
 
-    builder.addAspect(EPDF_PATTERN,
-            EPDF_REPLACEMENT,
+    builder.addAspect(Arrays.asList(EPDF_PATTERN, EPDF_PATTERN_2),
+            Arrays.asList(EPDF_REPLACEMENT, EPDF_REPLACEMENT_2),
             ArticleFiles.ROLE_FULL_TEXT_PDF);
 
-
     // set up PDFPLUS to be an aspect that will trigger an ArticleFiles
-    builder.addAspect(PDFPLUS_PATTERN,
-        PDFPLUS_REPLACEMENT,
+    builder.addAspect(Arrays.asList(PDFPLUS_PATTERN, PDFPLUS_PATTERN_2),
+        Arrays.asList(PDFPLUS_REPLACEMENT, PDFPLUS_REPLACEMENT_2),
         ROLE_PDFPLUS);
 
-    builder.addAspect(EPDFPLUS_PATTERN,
-            EPDFPLUS_REPLACEMENT,
+    builder.addAspect(Arrays.asList(EPDFPLUS_PATTERN, EPDFPLUS_PATTERN_2),
+            Arrays.asList(EPDFPLUS_REPLACEMENT, EPDFPLUS_REPLACEMENT_2),
             ROLE_PDFPLUS);
 
     // set up full text html to be an aspect that will trigger an ArticleFiles
-    builder.addAspect(HTML_PATTERN,
-        HTML_REPLACEMENT,
+    builder.addAspect(Arrays.asList(HTML_PATTERN, HTML_PATTERN_2),
+        Arrays.asList(HTML_REPLACEMENT, HTML_REPLACEMENT_2),
         ArticleFiles.ROLE_FULL_TEXT_HTML,
         ArticleFiles.ROLE_ARTICLE_METADATA); // use for metadata if abstract doesn't exist
 
     // set up full text html to be an aspect that will trigger an ArticleFiles
     // for ASCE, this is the full-text HTML now
-    builder.addAspect(DOI_PATTERN,
-        DOI_REPLACEMENT,
+    builder.addAspect(Arrays.asList(DOI_PATTERN, DOI_PATTERN_2),
+        Arrays.asList(DOI_REPLACEMENT, DOI_REPLACEMENT_2),
         ROLE_DOIHTML, // just a local name until we know what we have to chose from
         ArticleFiles.ROLE_ARTICLE_METADATA); // use for metadata if abstract doesn't exist
     
@@ -187,36 +223,36 @@ ArticleMetadataExtractorFactory {
       // When part of an abstract only AU, set up an abstract to be an aspect
       // that will trigger an articleFiles. 
       // This also means an abstract could be considered a FULL_TEXT_CU until this is deprecated
-      builder.addAspect(ABSTRACT_PATTERN,
-          ABSTRACT_REPLACEMENT,
+      builder.addAspect(Arrays.asList(ABSTRACT_PATTERN, ABSTRACT_PATTERN_2),
+          Arrays.asList(ABSTRACT_REPLACEMENT, ABSTRACT_REPLACEMENT_2),
           ArticleFiles.ROLE_ABSTRACT,
           ArticleFiles.ROLE_FULL_TEXT_HTML,
           ArticleFiles.ROLE_ARTICLE_METADATA);
     } else {
       // If this isn't an "abstracts only" AU, an abstract alone should not
       // be enough to trigger an ArticleFiles
-      builder.addAspect(ABSTRACT_REPLACEMENT,
+      builder.addAspect(Arrays.asList(ABSTRACT_REPLACEMENT, ABSTRACT_REPLACEMENT_2),
           ArticleFiles.ROLE_ABSTRACT,
           ArticleFiles.ROLE_ARTICLE_METADATA);
     }
 
     // set a role, but it isn't sufficient to trigger an ArticleFiles
-    builder.addAspect(BOOK_REPLACEMENT,
+    builder.addAspect(Arrays.asList(BOOK_REPLACEMENT, BOOK_REPLACEMENT_2),
         ArticleFiles.ROLE_ABSTRACT);
 
     // set a role, but it isn't sufficient to trigger an ArticleFiles
-    builder.addAspect(REFERENCES_REPLACEMENT,
+    builder.addAspect(Arrays.asList(REFERENCES_REPLACEMENT, REFERENCES_REPLACEMENT_2),
         ArticleFiles.ROLE_REFERENCES);
 
     // set a role, but it isn't sufficient to trigger an ArticleFiles
     builder.addAspect(Arrays.asList(
-        SUPPL_REPLACEMENT, SECOND_SUPPL_REPLACEMENT),
+        SUPPL_REPLACEMENT, SUPPL_REPLACEMENT_2, SECOND_SUPPL_REPLACEMENT, SECOND_SUPPL_REPLACEMENT_2),
         ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS);
 
     // set a role, but it isn't sufficient to trigger an ArticleFiles
     // First choice is &include=cit; second choice is &include=abs (AMetSoc)
     builder.addAspect(Arrays.asList(
-        RIS_REPLACEMENT, RIS_REPLACEMENT_WSLASH, SECOND_RIS_REPLACEMENT, SECOND_RIS_REPLACEMENT_WSLASH),
+        RIS_REPLACEMENT, RIS_REPLACEMENT_WSLASH, SECOND_RIS_REPLACEMENT, SECOND_RIS_REPLACEMENT_WSLASH, THIRD_RIS_REPLACEMENT),
         ArticleFiles.ROLE_CITATION_RIS);
 
     // The order in which we want to define what a full text HTML 

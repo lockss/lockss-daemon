@@ -1,7 +1,7 @@
 <map>
     <entry>
         <string>plugin_status</string>
-        <string>ready</string>
+        <string>deprecated</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
@@ -21,11 +21,11 @@
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>Silverchair Proceedings Plugin (CLOCKSS)</string>
+        <string>Silverchair Proceedings Plugin (Legacy, CLOCKSS)</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Silverchair Proceedings Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+        <string>"Silverchair Proceedings Plugin (Legacy, CLOCKSS), Base URL %s, Year %d", base_url, year</string>
     </entry>
     <entry>
         <string>clockss_override</string>

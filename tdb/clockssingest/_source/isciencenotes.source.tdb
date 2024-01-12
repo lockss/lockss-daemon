@@ -26,7 +26,6 @@
     {
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/isciencenotes-released/
 
-    au < expected ; exists ; 2023 ; iScience Notes Content 2023 ; 2023 >
     au < expected ; exists ; 2024 ; iScience Notes Content 2024 ; 2024 >
 
     }

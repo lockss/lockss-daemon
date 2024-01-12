@@ -1198,8 +1198,8 @@
 
       param[journal_id] = ijbdm
 
-      au < frozen ; exists ; 2020 ; International Journal of Big Data Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2022 ; International Journal of Big Data Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2020 ; International Journal of Big Data Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; International Journal of Big Data Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2023 ; International Journal of Big Data Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -1435,7 +1435,7 @@
 
       au < finished ; manifest ; 2019-2020 ; International Journal of Blockchains and Cryptocurrencies Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; International Journal of Blockchains and Cryptocurrencies Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2022 ; International Journal of Blockchains and Cryptocurrencies Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2022 ; International Journal of Blockchains and Cryptocurrencies Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2023 ; International Journal of Blockchains and Cryptocurrencies Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -3153,7 +3153,7 @@
       au < finished ; finished ; 2018-2020 ; International Journal of Economics and Accounting Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2021 ; International Journal of Economics and Accounting Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022 ; International Journal of Economics and Accounting Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2023 ; International Journal of Economics and Accounting Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2023 ; International Journal of Economics and Accounting Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -5044,10 +5044,10 @@
 
       param[journal_id] = ijhm
 
-      au < frozen ; exists ; 2018 ; International Journal of Hydromechatronics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2018 ; International Journal of Hydromechatronics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; International Journal of Hydromechatronics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2020 ; International Journal of Hydromechatronics Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2021 ; International Journal of Hydromechatronics Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2021 ; International Journal of Hydromechatronics Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; International Journal of Hydromechatronics Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2023 ; International Journal of Hydromechatronics Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
@@ -6034,7 +6034,7 @@
 
       param[journal_id] = ijitca
 
-      au < frozen ; exists ; 2018-2020 ; International Journal of Internet of Things and Cyber-Assurance Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2018-2020 ; International Journal of Internet of Things and Cyber-Assurance Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < ingNotReady ; exists ; 2022-2023 ; International Journal of Internet of Things and Cyber-Assurance Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
@@ -7753,7 +7753,7 @@
       au < finished ; finished ; 2020 ; International Journal of Nanoparticles Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2021 ; International Journal of Nanoparticles Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2022 ; International Journal of Nanoparticles Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2023 ; International Journal of Nanoparticles Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2023 ; International Journal of Nanoparticles Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -7854,7 +7854,7 @@
  
        param[journal_id] = ijndc
  
-      au < frozen ; exists ; 2017-2019 ; International Journal of Nonlinear Dynamics and Control Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2017-2019 ; International Journal of Nonlinear Dynamics and Control Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2021-2023 ; International Journal of Nonlinear Dynamics and Control Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -11844,7 +11844,7 @@
       au < finished ; finished ; 2019-2020 ; International Journal of Export Marketing Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2021 ; International Journal of Export Marketing Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; International Journal of Export Marketing Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < expected ; exists ; 2023 ; International Journal of Export Marketing Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2023 ; International Journal of Export Marketing Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
   }
 

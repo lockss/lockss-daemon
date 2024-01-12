@@ -33,7 +33,7 @@
     au < frozen ; exists ; 2020 ; Silva Fennica Volume 54 ; 54 ; >
     au < frozen ; exists ; 2021 ; Silva Fennica Volume 55 ; 55 ; >
     au < frozen ; exists ; 2022 ; Silva Fennica Volume 56 ; 56 ; >
-    au < manifest ; exists ; 2023 ; Silva Fennica Volume 57 ; 57 ; >
+    au < crawling ; exists ; 2023 ; Silva Fennica Volume 57 ; 57 ; >
 
   }
 
@@ -69,7 +69,7 @@
     au < frozen ; exists ; 2020 ; Dissertationes Forestales Volume 2020 ; 2020 ; >
     au < frozen ; exists ; 2021 ; Dissertationes Forestales Volume 2021 ; 2021 ; >
     au < frozen ; exists ; 2022 ; Dissertationes Forestales Volume 2022 ; 2022 ; >
-    au < manifest ; exists ; 2023 ; Dissertationes Forestales Volume 2023 ; 2023 ; >
+    au < crawling ; exists ; 2023 ; Dissertationes Forestales Volume 2023 ; 2023 ; >
 
   }
   
@@ -115,6 +115,6 @@
     au < frozen ; exists ; 2020 ; Metsätieteen aikakauskirja vuosikerta 2020 ; 2020 ; >
     au < frozen ; exists ; 2021 ; Metsätieteen aikakauskirja vuosikerta 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Metsätieteen aikakauskirja vuosikerta 2022 ; 2022 ; >
-    au < manifest ; exists ; 2023 ; Metsätieteen aikakauskirja vuosikerta 2023 ; 2023 ; >
+    au < crawling ; exists ; 2023 ; Metsätieteen aikakauskirja vuosikerta 2023 ; 2023 ; >
   }
 }

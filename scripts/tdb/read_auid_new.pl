@@ -1999,18 +1999,17 @@ while (my $line = <>) {
         }
         # now make sure a PDF is actually available on the book landing page
         # whole book pdf will use the same doi as the book landing page
-        #Assume the worst
-        $result = "--BAD_PDF--";
         $url = sprintf("%sdoi/book/%s/%s",$param{base_url}, $doi1, $doi2);
         my $book_url = uri_unescape($url);
         my $breq = HTTP::Request->new(GET, $book_url);
         my $bresp = $ua->request($breq);
         if ($bresp->is_success) {
             my $b_contents = $bresp->content;
-            # what we're looking for on the page is href="/doi/pdf/doi1/doi2" OR href="/doi/pdfplus/doi1/doi2
+            # what we're looking for on the page is href="/doi/pdf/doi1/doi2" OR href="/doi/pdfplus/doi1/doi2" OR href="/doi/epub/doi1/doi2"
             #printf("href=\"pdfplus/%s/%s\"",${doi1},${doi2});
             #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\/${doi2}/)) {
-            if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\//)) {  #"
+            #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\//)) {  #"
+            if (defined($b_contents) && (($b_contents =~ m/href=\"[^"]+(epdf|pdf|epub|doi\/full)(plus)?\/${doi1}\//) || ($b_contents =~ m/>Buy PDF</))) {  #"
                 $result = "Manifest";
             }
         }

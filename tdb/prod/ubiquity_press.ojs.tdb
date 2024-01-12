@@ -288,7 +288,7 @@
       au < doNotProcess ; 2019 ; 1 ; London School of Economics and Politics Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 2 ; London School of Economics and Politics Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 3 ; London School of Economics and Politics Volume 2021 ; 2021 >
-      au < manifest ; 2022 ; 4 ; London School of Economics and Politics Volume 2022 ; 2022 >
+      au < ready ; 2022 ; 4 ; London School of Economics and Politics Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 5 ; London School of Economics and Politics Volume 2023 ; 2023 >
 
   }
@@ -550,7 +550,7 @@
       au < doNotProcess ; 2005 ; 5 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2005 ; 2005 >
       au < doNotProcess ; 2006 ; 6 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2006 ; 2006 >
       au < doNotProcess ; 2007 ; 7 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2007 ; 2007 >
-      au < doesNotExist ; 2008 ; 8 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2008 ; 2008 >
+      au < manifest ; 2008 ; 8 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2008 ; 2008 >
       au < doNotProcess ; 2009 ; 9 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2009 ; 2009 >
       au < doNotProcess ; 2010 ; 10 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2010 ; 2010 >
       au < doNotProcess ; 2011 ; 11 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2011 ; 2011 >
@@ -661,7 +661,7 @@
 
       au < released ; 2020 ; 1 ; Building and Cities Volume 2020 ; 2020 > #403 forbidden cloudfront.net
       au < released ; 2021 ; 2 ; Building and Cities Volume 2021 ; 2021 > #403 forbidden cloudfront.net
-      au < manifest ; 2022 ; 3 ; Building and Cities Volume 2022 ; 2022 > #403 forbidden cloudfront.net
+      au < ready ; 2022 ; 3 ; Building and Cities Volume 2022 ; 2022 > #403 forbidden cloudfront.net
       au < manifest ; 2023 ; 4 ; Building and Cities Volume 2023 ; 2023 > #404 forbidden cloudfront.net
 
   }
@@ -845,9 +845,9 @@
       param[base_url] = https://account.datascience.codata.org/
       param[journal_id] = up-j-dsj
 
-      au < doesNotExist ; 2002 ; 1 ; Data Science Journal Volume 2002 ; 2002 >
+      au < manifest ; 2002 ; 1 ; Data Science Journal Volume 2002 ; 2002 >
       au < doNotProcess ; 2003 ; 2 ; Data Science Journal Volume 2003 ; 2003 >
-      au < doesNotExist ; 2004 ; 3 ; Data Science Journal Volume 2004 ; 2004 >
+      au < manifest ; 2004 ; 3 ; Data Science Journal Volume 2004 ; 2004 >
       au < doNotProcess ; 2005 ; 4 ; Data Science Journal Volume 2005 ; 2005 >
       au < doNotProcess ; 2006 ; 5 ; Data Science Journal Volume 2006 ; 2006 >
       au < doNotProcess ; 2007 ; 6 ; Data Science Journal Volume 2007 ; 2007 >
@@ -865,7 +865,7 @@
       au < doNotProcess ; 2019 ; 18 ; Data Science Journal Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 19 ; Data Science Journal Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 20 ; Data Science Journal Volume 2021 ; 2021 >
-      au < manifest ; 2022 ; 21 ; Data Science Journal Volume 2022 ; 2022 >
+      au < ready ; 2022 ; 21 ; Data Science Journal Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 22 ; Data Science Journal Volume 2023 ; 2023 >
 
   }
@@ -1296,7 +1296,7 @@
       au < doNotProcess ; 2019 ; 103 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 104 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 105 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2021 ; 2021 >
-      au < manifest ; 2022 ; 106 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2022 ; 2022 >
+      au < ready ; 2022 ; 106 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 107 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2023 ; 2023 >
 
   }
@@ -1560,7 +1560,7 @@
       au < doNotProcess ; 2019 ; 15 ; Psychologica Belgica Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 16 ; Psychologica Belgica Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 17 ; Psychologica Belgica Volume 2021 ; 2021 >
-      au < manifest ; 2022 ; 18 ; Psychologica Belgica Volume 2022 ; 2022 >
+      au < ready ; 2022 ; 18 ; Psychologica Belgica Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 19 ; Psychologica Belgica Volume 2023 ; 2023 >
 
   }
@@ -1790,7 +1790,7 @@
       au < doNotProcess ; 2020 ; 25 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 26 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2021 ; 2021 >
       au < released ; 2022 ; 27 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2022 ; 2022 >
-      au < expected ; 2023 ; 28 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2023 ; 2023 >
+      au < manifest ; 2023 ; 28 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2023 ; 2023 >
 
   }
 
@@ -2581,7 +2581,7 @@
       param[journal_id] = wr-j-wcajcsl
 
       au < released ; 2022 ; 1 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2022 ; 2022 >
-      au < expected ; 2023 ; 2 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2023 ; 2023 >
+      au < manifest ; 2023 ; 2 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2023 ; 2023 >
 
   }
 
@@ -2932,12 +2932,12 @@
       au < exists ; 1955 ; 7 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1955 ; 1955 >
       au < exists ; 1956 ; 8 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1956 ; 1956 >
       au < exists ; 1957 ; 9 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1957 ; 1957 >
-      au < exists ; 1958 ; 10 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1958 ; 1958 >
-      au < exists ; 1959 ; 11 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1959 ; 1959 >
-      au < exists ; 1960 ; 12 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1960 ; 1960 >
-      au < exists ; 1961 ; 13 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1961 ; 1961 >
-      au < exists ; 1962 ; 14 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1962 ; 1962 >
-      au < exists ; 1963 ; 15 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1963 ; 1963 >
+      au < manifest ; 1958 ; 10 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1958 ; 1958 >
+      au < manifest ; 1959 ; 11 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1959 ; 1959 >
+      au < manifest ; 1960 ; 12 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1960 ; 1960 >
+      au < manifest ; 1961 ; 13 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1961 ; 1961 >
+      au < manifest ; 1962 ; 14 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1962 ; 1962 >
+      au < manifest ; 1963 ; 15 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1963 ; 1963 >
       au < manifest ; 1964 ; 16 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1964 ; 1964 >
       au < manifest ; 1965 ; 17 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1965 ; 1965 >
       au < manifest ; 1966 ; 18 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1966 ; 1966 >

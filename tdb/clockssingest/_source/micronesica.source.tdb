@@ -30,8 +30,7 @@
     {
     param[base_url] = https://clockss-ingest.lockss.org/warcfiles/micronesica-released/
 
-    au < expected ; exists ; 2023 ; Micronesica WARC Content 2023 ; 2023 >
-    au < expected ; exists ; 2025 ; Micronesica WARC Content 2025 ; 2025 >
+    au < expected ; exists ; 2024 ; Micronesica WARC Content 2024 ; 2024 >
 
     }
   }

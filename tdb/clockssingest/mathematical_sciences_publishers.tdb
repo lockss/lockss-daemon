@@ -71,7 +71,7 @@
      au < finished ; crawling ; 2020 ; Algebraic & Geometric Topology Volume 20 ; 20 ; 2020 ; https://msp.org/ ; reingest3.clockss.org:8083 >
      au < finished ; crawling ; 2021 ; Algebraic & Geometric Topology Volume 21 ; 21 ; 2021 ; https://msp.org/ ; reingest4.clockss.org:8082 >
      au < frozen ; exists ; 2022 ; Algebraic & Geometric Topology Volume 22 ; 22 ; 2022 ; https://msp.org/ ; >
-     au < expected ; exists ; 2023 ; Algebraic & Geometric Topology Volume 23 ; 23 ; 2023 ; https://msp.org/ ; >
+     au < manifest ; exists ; 2023 ; Algebraic & Geometric Topology Volume 23 ; 23 ; 2023 ; https://msp.org/ ; >
 
   }
   
@@ -102,7 +102,7 @@
      au < finished ; crawling ; 2020 ; Algebra & Number Theory Volume 14 ; 14 ; 2020 ; https://msp.org/ ; reingest5.clockss.org:8082 >
      au < finished ; crawling ; 2021 ; Algebra & Number Theory Volume 15 ; 15 ; 2021 ; https://msp.org/ ; reingest1.clockss.org:8082 >
      au < frozen ; exists ; 2022 ; Algebra & Number Theory Volume 16 ; 16 ; 2022 ; https://msp.org/ ; >
-     au < expected ; exists ; 2023 ; Algebra & Number Theory Volume 17 ; 17 ; 2023 ; https://msp.org/ ; >
+     au < manifest ; exists ; 2023 ; Algebra & Number Theory Volume 17 ; 17 ; 2023 ; https://msp.org/ ; >
 
   }
   
@@ -131,7 +131,7 @@
      au < finished ; crawling ; 2020 ; Analysis & PDE Volume 13 ; 13 ; 2020 ; https://msp.org/ ; reingest1.clockss.org:8082 >
      au < finished ; crawling ; 2021 ; Analysis & PDE Volume 14 ; 14 ; 2021 ; https://msp.org/ ; reingest5.clockss.org:8082 >
      au < frozen ; exists ; 2022 ; Analysis & PDE Volume 15 ; 15 ; 2022 ; https://msp.org/ ; >
-     au < expected ; exists ; 2023 ; Analysis & PDE Volume 16 ; 16 ; 2023 ; https://msp.org/ ; >
+     au < manifest ; exists ; 2023 ; Analysis & PDE Volume 16 ; 16 ; 2023 ; https://msp.org/ ; >
 
   }
    
@@ -162,7 +162,7 @@
      au < finished ; crawling ; 2020 ; Communications in Applied Mathematics and Computational Science Volume 15 ; 15 ; 2020 ; https://msp.org/ ; reingest4.clockss.org:8082 >
      au < finished ; crawling ; 2021 ; Communications in Applied Mathematics and Computational Science Volume 16 ; 16 ; 2021 ; https://msp.org/ ; reingest5.clockss.org:8082 >
      au < frozen ; exists ; 2022 ; Communications in Applied Mathematics and Computational Science Volume 17 ; 17 ; 2022 ; https://msp.org/ ; >
-     au < expected ; exists ; 2023 ; Communications in Applied Mathematics and Computational Science Volume 18 ; 18 ; 2023 ; https://msp.org/ ; >
+     au < manifest ; exists ; 2023 ; Communications in Applied Mathematics and Computational Science Volume 18 ; 18 ; 2023 ; https://msp.org/ ; >
 
   }
 
@@ -202,7 +202,7 @@
      au < finished ; crawling ; 2020 ; Geometric Topology Volume 24 ; 24 ; 2020 ; https://msp.org/ ; reingest1.clockss.org:8082 >
      au < finished ; crawling ; 2021 ; Geometric Topology Volume 25 ; 25 ; 2021 ; https://msp.org/ ; reingest2.clockss.org:8085 >
      au < frozen ; exists ; 2022 ; Geometric Topology Volume 26 ; 26 ; 2022 ; https://msp.org/ ; >
-     au < expected ; exists ; 2023 ; Geometric Topology Volume 27 ; 27 ; 2023 ; https://msp.org/ ; >
+     au < manifest ; exists ; 2023 ; Geometric Topology Volume 27 ; 27 ; 2023 ; https://msp.org/ ; >
 
   }
   
@@ -257,7 +257,7 @@
      au < finished ; crawling ; 2020 ; Involve, a journal of mathematics Volume 13 ; 13 ; 2020 ; https://msp.org/ ; reingest3.clockss.org:8083 >
      au < finished ; crawling ; 2021 ; Involve, a journal of mathematics Volume 14 ; 14 ; 2021 ; https://msp.org/ ; reingest4.clockss.org:8082 >
      au < frozen ; exists ; 2022 ; Involve, a journal of mathematics Volume 15 ; 15 ; 2022 ; https://msp.org/ ; >
-     au < expected ; exists ; 2023 ; Involve, a journal of mathematics Volume 16 ; 16 ; 2023 ; https://msp.org/ ; >
+     au < manifest ; exists ; 2023 ; Involve, a journal of mathematics Volume 16 ; 16 ; 2023 ; https://msp.org/ ; >
 
    }
    
@@ -287,7 +287,7 @@
      au < finished ; crawling ; 2020 ; Journal of Mechanics of Materials and Structures Volume 15 ; 15 ; 2020 ; https://msp.org/ ; reingest2.clockss.org:8085 >
      au < finished ; crawling ; 2021 ; Journal of Mechanics of Materials and Structures Volume 16 ; 16 ; 2021 ; https://msp.org/ ; reingest5.clockss.org:8082 >
      au < frozen ; exists ; 2022 ; Journal of Mechanics of Materials and Structures Volume 17 ; 17 ; 2022 ; https://msp.org/ ; >
-     au < expected ; exists ; 2023 ; Journal of Mechanics of Materials and Structures Volume 18 ; 18 ; 2023 ; https://msp.org/ ; >
+     au < manifest ; exists ; 2023 ; Journal of Mechanics of Materials and Structures Volume 18 ; 18 ; 2023 ; https://msp.org/ ; >
 
    }
    
@@ -309,12 +309,12 @@
      au < finished ; finished ; 2015 ; Journal of Software for Algebra and Geometry Volume 7 ; 7 ; 2015 ; http://msp.org/ ; reingest3.clockss.org:8083 >
      au < doesNotExist ; doesNotExist ; 2016 ; Journal of Software for Algebra and Geometry Volume 8 ; 8 ; 2016 ; https://msp.org/ ; >
      au < doesNotExist ; doesNotExist ; 2017 ; Journal of Software for Algebra and Geometry Volume 9 ; 9 ; 2017 ; https://msp.org/ ; >
-     au < manifest ; exists ; 2018 ; Journal of Software for Algebra and Geometry Volume 10 ; 10 ; 2018 ; https://msp.org/ ; >
-     au < manifest ; exists ; 2019 ; Journal of Software for Algebra and Geometry Volume 11 ; 11 ; 2019 ; https://msp.org/ ; >
-     au < manifest ; exists ; 2020 ; Journal of Software for Algebra and Geometry Volume 12 ; 12 ; 2020 ; https://msp.org/ ; >
-     au < manifest ; exists ; 2021 ; Journal of Software for Algebra and Geometry Volume 13 ; 13 ; 2021 ; https://msp.org/ ; >
-     au < manifest ; exists ; 2022 ; Journal of Software for Algebra and Geometry Volume 14 ; 14 ; 2022 ; https://msp.org/ ; >
-     au < expected ; exists ; 2023 ; Journal of Software for Algebra and Geometry Volume 15 ; 15 ; 2023 ; https://msp.org/ ; >
+     au < crawling ; exists ; 2018 ; Journal of Software for Algebra and Geometry Volume 10 ; 10 ; 2018 ; https://msp.org/ ; >
+     au < crawling ; exists ; 2019 ; Journal of Software for Algebra and Geometry Volume 11 ; 11 ; 2019 ; https://msp.org/ ; >
+     au < crawling ; exists ; 2020 ; Journal of Software for Algebra and Geometry Volume 12 ; 12 ; 2020 ; https://msp.org/ ; >
+     au < crawling ; exists ; 2021 ; Journal of Software for Algebra and Geometry Volume 13 ; 13 ; 2021 ; https://msp.org/ ; >
+     au < crawling ; exists ; 2022 ; Journal of Software for Algebra and Geometry Volume 14 ; 14 ; 2022 ; https://msp.org/ ; >
+     au < manifest ; exists ; 2023 ; Journal of Software for Algebra and Geometry Volume 15 ; 15 ; 2023 ; https://msp.org/ ; >
      au < expected ; exists ; 2024 ; Journal of Software for Algebra and Geometry Volume 16 ; 16 ; 2024 ; https://msp.org/ ; >
 
   }
@@ -339,7 +339,7 @@
      au < finished ; crawling ; 2020 ; Mathematics and Mechanics of Complex Systems Volume 8 ; 8 ; 2020 ; https://msp.org/ ; reingest4.clockss.org:8082 >
      au < finished ; crawling ; 2021 ; Mathematics and Mechanics of Complex Systems Volume 9 ; 9 ; 2021 ; https://msp.org/ ; reingest3.clockss.org:8083 >
      au < frozen ; exists ; 2022 ; Mathematics and Mechanics of Complex Systems Volume 10 ; 10 ; 2022 ; https://msp.org/ ; >
-     au < expected ; exists ; 2023 ; Mathematics and Mechanics of Complex Systems Volume 11 ; 11 ; 2023 ; https://msp.org/ ; >
+     au < manifest ; exists ; 2023 ; Mathematics and Mechanics of Complex Systems Volume 11 ; 11 ; 2023 ; https://msp.org/ ; >
 
   }
   
@@ -426,7 +426,7 @@
      au < finished ; crawling ; 2020 ; Pacific Journal of Mathematics Volume 304-309 ; 304-309 ; 2020 ; https://msp.org/ ; reingest5.clockss.org:8082 >
      au < finished ; crawling ; 2021 ; Pacific Journal of Mathematics Volume 310-315 ; 310-315 ; 2021 ; https://msp.org/ ; reingest3.clockss.org:8083 >
      au < frozen ; exists ; 2022 ; Pacific Journal of Mathematics Volume 316-321 ; 316-321 ; 2022 ; https://msp.org/ ; >
-     au < expected ; exists ; 2023 ; Pacific Journal of Mathematics Volume 322-327 ; 322-327 ; 2023 ; https://msp.org/ ; >
+     au < manifest ; exists ; 2023 ; Pacific Journal of Mathematics Volume 322-327 ; 322-327 ; 2023 ; https://msp.org/ ; >
 
   }   
   
@@ -454,14 +454,14 @@
 
     param[journal_id] = akt
 
-    au < manifest ; exists ; 2016 ; Annals of K-Theory Volume 1 ; 1 ; 2016 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2017 ; Annals of K-Theory Volume 2 ; 2 ; 2017 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2018 ; Annals of K-Theory Volume 3 ; 3 ; 2018 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2019 ; Annals of K-Theory Volume 4 ; 4 ; 2019 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2020 ; Annals of K-Theory Volume 5 ; 5 ; 2020 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2021 ; Annals of K-Theory Volume 6 ; 6 ; 2021 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2022 ; Annals of K-Theory Volume 7 ; 7 ; 2022 ; https://msp.org/ ; >
-    au < expected ; exists ; 2023 ; Annals of K-Theory Volume 8 ; 8 ; 2023 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2016 ; Annals of K-Theory Volume 1 ; 1 ; 2016 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2017 ; Annals of K-Theory Volume 2 ; 2 ; 2017 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2018 ; Annals of K-Theory Volume 3 ; 3 ; 2018 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2019 ; Annals of K-Theory Volume 4 ; 4 ; 2019 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2020 ; Annals of K-Theory Volume 5 ; 5 ; 2020 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2021 ; Annals of K-Theory Volume 6 ; 6 ; 2021 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2022 ; Annals of K-Theory Volume 7 ; 7 ; 2022 ; https://msp.org/ ; >
+    au < manifest ; exists ; 2023 ; Annals of K-Theory Volume 8 ; 8 ; 2023 ; https://msp.org/ ; >
     au < expected ; exists ; 2024 ; Annals of K-Theory Volume 9 ; 9 ; 2024 ; https://msp.org/ ; >
 
   }
@@ -499,20 +499,20 @@
     au < manifest ; exists ; 2007 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 3 ; 3 ; 2007 ; https://msp.org/ ; >
     au < manifest ; exists ; 2008 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 4 ; 4 ; 2008 ; https://msp.org/ ; >
     au < manifest ; exists ; 2009 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 5 ; 5 ; 2009 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2010 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 6 ; 6 ; 2010 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2011 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 7 ; 7 ; 2011 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2010 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 6 ; 6 ; 2010 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2011 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 7 ; 7 ; 2011 ; https://msp.org/ ; >
     au < doesNotExist ; doesNotExist ; 2012 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 8 ; 8 ; 2012 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2013 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 9 ; 9 ; 2013 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2013 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 9 ; 9 ; 2013 ; https://msp.org/ ; >
     au < doesNotExist ; doesNotExist ; 2014 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 10 ; 10 ; 2014 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2015 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 11 ; 11 ; 2015 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2015 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 11 ; 11 ; 2015 ; https://msp.org/ ; >
     au < doesNotExist ; doesNotExist ; 2016 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 12 ; 12 ; 2016 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2017 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 13 ; 13 ; 2017 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2018 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 14 ; 14 ; 2018 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2019 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 15 ; 15 ; 2019 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2020 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 16 ; 16 ; 2020 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2017 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 13 ; 13 ; 2017 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2018 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 14 ; 14 ; 2018 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2019 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 15 ; 15 ; 2019 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2020 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 16 ; 16 ; 2020 ; https://msp.org/ ; >
     au < doesNotExist ; doesNotExist ; 2021 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 17 ; 17 ; 2021 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2022 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 18 ; 18 ; 2022 ; https://msp.org/ ; >
-    au < expected ; exists ; 2023 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 19 ; 19 ; 2023 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2022 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 18 ; 18 ; 2022 ; https://msp.org/ ; >
+    au < manifest ; exists ; 2023 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 19 ; 19 ; 2023 ; https://msp.org/ ; >
     au < expected ; exists ; 2024 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 20 ; 20 ; 2024 ; https://msp.org/ ; >
 
   }
@@ -552,11 +552,11 @@
     au < manifest ; exists ; 2016 ; Moscow Journal of Combinatorics and Number Theory Volume 6 ; 6 ; 2016 ; https://msp.org/ ; >
     au < manifest ; exists ; 2017 ; Moscow Journal of Combinatorics and Number Theory Volume 7 ; 7 ; 2017 ; https://msp.org/ ; >
     au < doesNotExist ; doesNotExist ; 2018 ; Moscow Journal of Combinatorics and Number Theory Volume 8 ; 8 ; 2018 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2019 ; Moscow Journal of Combinatorics and Number Theory Volume 9 ; 9 ; 2019 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2020 ; Moscow Journal of Combinatorics and Number Theory Volume 10 ; 10 ; 2020 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2021 ; Moscow Journal of Combinatorics and Number Theory Volume 11 ; 11 ; 2021 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2022 ; Moscow Journal of Combinatorics and Number Theory Volume 12 ; 12 ; 2022 ; https://msp.org/ ; >
-    au < expected ; exists ; 2023 ; Moscow Journal of Combinatorics and Number Theory Volume 13 ; 13 ; 2023 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2019 ; Moscow Journal of Combinatorics and Number Theory Volume 9 ; 9 ; 2019 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2020 ; Moscow Journal of Combinatorics and Number Theory Volume 10 ; 10 ; 2020 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2021 ; Moscow Journal of Combinatorics and Number Theory Volume 11 ; 11 ; 2021 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2022 ; Moscow Journal of Combinatorics and Number Theory Volume 12 ; 12 ; 2022 ; https://msp.org/ ; >
+    au < manifest ; exists ; 2023 ; Moscow Journal of Combinatorics and Number Theory Volume 13 ; 13 ; 2023 ; https://msp.org/ ; >
     au < expected ; exists ; 2024 ; Moscow Journal of Combinatorics and Number Theory Volume 14 ; 14 ; 2024 ; https://msp.org/ ; >
 
   }
@@ -587,10 +587,10 @@
 
     param[journal_id] = pmp
 
-    au < manifest ; exists ; 2020 ; Probability and Mathematical Physics Volume 1 ; 1 ; 2020 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2021 ; Probability and Mathematical Physics Volume 2 ; 2 ; 2021 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2022 ; Probability and Mathematical Physics Volume 3 ; 3 ; 2022 ; https://msp.org/ ; >
-    au < expected ; exists ; 2023 ; Probability and Mathematical Physics Volume 4 ; 4 ; 2023 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2020 ; Probability and Mathematical Physics Volume 1 ; 1 ; 2020 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2021 ; Probability and Mathematical Physics Volume 2 ; 2 ; 2021 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2022 ; Probability and Mathematical Physics Volume 3 ; 3 ; 2022 ; https://msp.org/ ; >
+    au < manifest ; exists ; 2023 ; Probability and Mathematical Physics Volume 4 ; 4 ; 2023 ; https://msp.org/ ; >
     au < expected ; exists ; 2024 ; Probability and Mathematical Physics Volume 5 ; 5 ; 2024 ; https://msp.org/ ; >
 
   }
@@ -606,11 +606,11 @@
 
     param[journal_id] = paa
 
-    au < manifest ; exists ; 2019 ; Pure and Applied Analysis Volume 1 ; 1 ; 2019 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2020 ; Pure and Applied Analysis Volume 2 ; 2 ; 2020 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2021 ; Pure and Applied Analysis Volume 3 ; 3 ; 2021 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2022 ; Pure and Applied Analysis Volume 4 ; 4 ; 2022 ; https://msp.org/ ; >
-    au < expected ; exists ; 2023 ; Pure and Applied Analysis Volume 5 ; 5 ; 2023 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2019 ; Pure and Applied Analysis Volume 1 ; 1 ; 2019 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2020 ; Pure and Applied Analysis Volume 2 ; 2 ; 2020 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2021 ; Pure and Applied Analysis Volume 3 ; 3 ; 2021 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2022 ; Pure and Applied Analysis Volume 4 ; 4 ; 2022 ; https://msp.org/ ; >
+    au < manifest ; exists ; 2023 ; Pure and Applied Analysis Volume 5 ; 5 ; 2023 ; https://msp.org/ ; >
     au < expected ; exists ; 2024 ; Pure and Applied Analysis Volume 6 ; 6 ; 2024 ; https://msp.org/ ; >
 
   }
@@ -626,11 +626,11 @@
 
     param[journal_id] = tunis
 
-    au < manifest ; exists ; 2019 ; Tunisian Journal of Mathematics Volume 1 ; 1 ; 2019 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2020 ; Tunisian Journal of Mathematics Volume 2 ; 2 ; 2020 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2021 ; Tunisian Journal of Mathematics Volume 3 ; 3 ; 2021 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2022 ; Tunisian Journal of Mathematics Volume 4 ; 4 ; 2022 ; https://msp.org/ ; >
-    au < expected ; exists ; 2023 ; Tunisian Journal of Mathematics Volume 5 ; 5 ; 2023 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2019 ; Tunisian Journal of Mathematics Volume 1 ; 1 ; 2019 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2020 ; Tunisian Journal of Mathematics Volume 2 ; 2 ; 2020 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2021 ; Tunisian Journal of Mathematics Volume 3 ; 3 ; 2021 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2022 ; Tunisian Journal of Mathematics Volume 4 ; 4 ; 2022 ; https://msp.org/ ; >
+    au < manifest ; exists ; 2023 ; Tunisian Journal of Mathematics Volume 5 ; 5 ; 2023 ; https://msp.org/ ; >
     au < expected ; exists ; 2024 ; Tunisian Journal of Mathematics Volume 6 ; 6 ; 2024 ; https://msp.org/ ; >
 
   }

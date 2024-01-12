@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Endocrine Society Books Plugin (CLOCKSS)</string>
+    <string>Endocrine Society Books Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -56,7 +56,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Endocrine Society Books Plugin (CLOCKSS), Base URL %s, eISBN %s", base_url, book_eisbn</string>
+    <string>"Endocrine Society Books Plugin (Legacy, CLOCKSS), Base URL %s, eISBN %s", base_url, book_eisbn</string>
   </entry>
     <entry>
     <string>au_start_url</string>

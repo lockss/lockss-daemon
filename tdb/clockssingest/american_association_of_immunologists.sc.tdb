@@ -144,8 +144,8 @@
         au < manifest ; exists ; 1976 ; 1976 ; The Journal of Immunology Volume 117 ; 117 ; >
         au < manifest ; exists ; 1977 ; 1977 ; The Journal of Immunology Volume 118 ; 118 ; >
         au < manifest ; exists ; 1977 ; 1977 ; The Journal of Immunology Volume 119 ; 119 ; >
-        au < frozen ; exists ; 1978 ; 1978 ; The Journal of Immunology Volume 120 ; 120 ; >
-        au < frozen ; exists ; 1978 ; 1978 ; The Journal of Immunology Volume 121 ; 121 ; >
+        au < finished ; manifest ; 1978 ; 1978 ; The Journal of Immunology Volume 120 ; 120 ; reingest1.clockss.org:8082 >
+        au < finished ; manifest ; 1978 ; 1978 ; The Journal of Immunology Volume 121 ; 121 ; reingest2.clockss.org:8085 >
         au < manifest ; exists ; 1979 ; 1979 ; The Journal of Immunology Volume 122 ; 122 ; >
         au < manifest ; exists ; 1979 ; 1979 ; The Journal of Immunology Volume 123 ; 123 ; >
         au < manifest ; exists ; 1980 ; 1980 ; The Journal of Immunology Volume 124 ; 124 ; >
@@ -232,8 +232,8 @@
         au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; The Journal of Immunology Volume 205 ; 205 ; >
         au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; The Journal of Immunology Volume 206 ; 206 ; >
         au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; The Journal of Immunology Volume 207 ; 207 ; >
-        au < frozen ; exists ; 2022 ; 2022 ; The Journal of Immunology Volume 208 ; 208 ; >
-        au < frozen ; exists ; 2022 ; 2022 ; The Journal of Immunology Volume 209 ; 209 ; >
+        au < finished ; manifest ; 2022 ; 2022 ; The Journal of Immunology Volume 208 ; 208 ; reingest3.clockss.org:8083 >
+        au < finished ; manifest ; 2022 ; 2022 ; The Journal of Immunology Volume 209 ; 209 ; reingest1.clockss.org:8082 >
         au < crawling ; exists ; 2023 ; 2023 ; The Journal of Immunology Volume 210 ; 210 ; >
         au < crawling ; exists ; 2023 ; 2023 ; The Journal of Immunology Volume 211 ; 211 ; >
 
@@ -254,7 +254,7 @@
         au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; ImmunoHorizons Volume 3 ; 3 ; >
         au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; ImmunoHorizons Volume 4 ; 4 ; >
         au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; ImmunoHorizons Volume 5 ; 5 ; >
-        au < frozen ; exists ; 2022 ; 2022 ; ImmunoHorizons Volume 6 ; 6 ; >
+        au < finished ; manifest ; 2022 ; 2022 ; ImmunoHorizons Volume 6 ; 6 ; reingest4.clockss.org:8082 >
         au < crawling ; exists ; 2023 ; 2023 ; ImmunoHorizons Volume 7 ; 7 ; >
 
   }

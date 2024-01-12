@@ -33,6 +33,7 @@ import java.net.*;
 import java.security.KeyStore;
 import java.util.*;
 import java.util.function.Consumer;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.jar.*;
 import java.util.regex.*;
 import org.apache.commons.collections.map.*;
@@ -291,14 +292,12 @@ public class PluginManager
     new Attributes.Name("Lockss-Plugin");
 
   // List of names of plugins not to load
-  List retract = null;
+  List<String> retract = null;
 
   // maps plugin key(not id) to plugin
-  private Map<String,Plugin> pluginMap =
-    Collections.synchronizedMap(new HashMap());
+  private Map<String,Plugin> pluginMap = new ConcurrentHashMap<>();
   // maps auid to AU
-  private Map<String,ArchivalUnit> auMap =
-    Collections.synchronizedMap(new HashMap());
+  private Map<String,ArchivalUnit> auMap = new ConcurrentHashMap<>();
   // List of all aus sorted by title.  The UI relies on this behavior.
   private List<ArchivalUnit> auList = null;
 
@@ -949,7 +948,7 @@ public class PluginManager
       throws ArchivalUnit.ConfigurationException {
     Configuration oldConfig = null;
     try {
-      ArchivalUnit oldAu = (ArchivalUnit)auMap.get(auId);
+      ArchivalUnit oldAu = auMap.get(auId);
       if (oldAu != null) {
 	oldConfig = oldAu.getConfiguration();
 	if (auConf.equals(oldConfig)) {
@@ -1039,7 +1038,7 @@ public class PluginManager
    * stale. */
   public boolean stopAu(ArchivalUnit au, AuEvent event) {
     String auid = au.getAuId();
-    ArchivalUnit mapAu = (ArchivalUnit)auMap.get(auid);
+    ArchivalUnit mapAu = auMap.get(auid);
     if (mapAu == null) {
       log.warning("stopAu(" + au.getName() + "), wasn't in map");
       return false;
@@ -1051,10 +1050,8 @@ public class PluginManager
     log.debug("Deactivating AU: " + au.getName());
     // remove from map first, so no new activity can start (poll messages,
     // RemoteAPI, etc.)
-    synchronized (auMap) {
-      auMap.remove(auid);
-      auList = null;
-    }
+    auMap.remove(auid);
+    auList = null;
     delHostAus(au);
 
     signalAuEvent(au, event, null);
@@ -1205,24 +1202,22 @@ public class PluginManager
 
   protected void putAuInMap(ArchivalUnit au) {
     log.debug2("putAuMap(" + au.getAuId() +", " + au);
-    synchronized (auMap) {
-      ArchivalUnit oldAu = auMap.put(au.getAuId(), au);
-      if (oldAu != null) {
-	if (oldAu == au) {
-	  log.debug("Warning: Redundant putAuInMap: " + au, new Throwable());
-	  return;
-	} else {
-	  log.error("Duplicate AUID in map. old: " + oldAu + ", new: " + au,
-		    new Throwable());
-	}
+    ArchivalUnit oldAu = auMap.put(au.getAuId(), au);
+    if (oldAu != null) {
+      if (oldAu == au) {
+        log.debug("Warning: Redundant putAuInMap: " + au, new Throwable());
+        return;
+      } else {
+        log.error("Duplicate AUID in map. old: " + oldAu + ", new: " + au,
+                  new Throwable());
       }
-      auList = null;
     }
+    auList = null;
     addHostAus(au);
   }
 
   public ArchivalUnit getAuFromId(String auId) {
-    ArchivalUnit au = (ArchivalUnit)auMap.get(auId);
+    ArchivalUnit au = auMap.get(auId);
     if (log.isDebug3()) log.debug3("getAu(" + auId + ") = " + au);
     return au;
   }
@@ -1957,10 +1952,12 @@ public class PluginManager
       sb.append("Plugin reloaded: ");
       sb.append(name);
       if (!StringUtil.equalStrings(oldName, name)) {
-        sb.append(" (was ");
+        sb.append(" (renamed from ");
         sb.append(oldName);
         sb.append(")");
       }
+      sb.append("\nID: ");
+      sb.append(plugin.getPluginId());
       sb.append("\nVersion: ");
       sb.append(plugin.getVersion());
       String feats = PluginManager.pluginFeatureVersionsString(plugin);
@@ -2610,19 +2607,17 @@ public class PluginManager
    * @return the List of aus
    */
   public List<ArchivalUnit> getAllAus() {
-    synchronized (auMap) {
-      if (auList == null) {
-	long startSort = TimeBase.nowMs();
-	List<ArchivalUnit> tmp = new ArrayList<ArchivalUnit>(auMap.values());
-	Collections.sort(tmp, auComparator);
-	auList = Collections.unmodifiableList(tmp);
-	if (log.isDebug2()) {
-	  long diff = TimeBase.msSince(startSort);
-	  log.debug2("Sort AUs list: " + StringUtil.timeIntervalToString(diff));
-	}
+    if (auList == null) {
+      long startSort = TimeBase.nowMs();
+      List<ArchivalUnit> tmp = new ArrayList<ArchivalUnit>(auMap.values());
+      Collections.sort(tmp, auComparator);
+      auList = Collections.unmodifiableList(tmp);
+      if (log.isDebug2()) {
+        long diff = TimeBase.msSince(startSort);
+        log.debug2("Sort AUs list: " + StringUtil.timeIntervalToString(diff));
       }
-      return auList;
     }
+    return auList;
   }
 
   /**
@@ -2631,9 +2626,7 @@ public class PluginManager
   // putting this here in PluginManager saves having to make an extra copy
   // of the list.
   public List<ArchivalUnit> getRandomizedAus() {
-    synchronized (auMap) {
-      return CollectionUtil.randomPermutation(auMap.values());
-    }
+    return CollectionUtil.randomPermutation(auMap.values());
   }
 
   /** Return the AUIDs all AU that have been explicitly deactivated */
@@ -2742,17 +2735,13 @@ public class PluginManager
 
   Map buildTitleMap() {
     Map map = new MultiValueMap();
-    synchronized (pluginMap) {
-      for (Iterator iter = getRegisteredPlugins().iterator();
-	   iter.hasNext();) {
-	Plugin p = (Plugin)iter.next();
-	Collection titles = p.getSupportedTitles();
-	for (Iterator iter2 = titles.iterator(); iter2.hasNext();) {
-	  String title = (String)iter2.next();
-	  if (title != null) {
-	    map.put(title, p);
-	  }
-	}
+    for (Plugin p : getRegisteredPlugins()) {
+      Collection titles = p.getSupportedTitles();
+      for (Iterator iter2 = titles.iterator(); iter2.hasNext();) {
+        String title = (String)iter2.next();
+        if (title != null) {
+          map.put(title, p);
+        }
       }
     }
     return map;
@@ -2762,12 +2751,8 @@ public class PluginManager
    * instance */
   public SortedMap getPluginNameMap() {
     SortedMap pMap = new TreeMap();
-    synchronized (pluginMap) {
-      for (Iterator iter = getRegisteredPlugins().iterator();
-	   iter.hasNext(); ) {
-	Plugin p = (Plugin)iter.next();
-	pMap.put(p.getPluginName(), p);
-      }
+    for (Plugin p : getRegisteredPlugins()) {
+      pMap.put(p.getPluginName(), p);
     }
     return pMap;
   }
@@ -2931,19 +2916,16 @@ public class PluginManager
 
     // remove plugins on retract list, unless they have one or more
     // configured AUs
-    synchronized (pluginMap) {
-      if (retract != null) {
-	for (Iterator iter = retract.iterator(); iter.hasNext(); ) {
-	  String name = (String)iter.next();
-	  String key = pluginKeyFromName(name);
-	  Plugin plug = getPlugin(key);
-	  if (plug != null && !isInternalPlugin(plug)) {
-	    Configuration tree = currentAllPlugs.getConfigTree(key);
-	    if (tree == null || tree.isEmpty()) {
-	      removePlugin(key);
-	    }
-	  }
-	}
+    if (retract != null) {
+      for (String name : retract) {
+        String key = pluginKeyFromName(name);
+        Plugin plug = getPlugin(key);
+        if (plug != null && !isInternalPlugin(plug)) {
+          Configuration tree = currentAllPlugs.getConfigTree(key);
+          if (tree == null || tree.isEmpty()) {
+            removePlugin(key);
+          }
+        }
       }
     }
   }

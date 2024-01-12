@@ -147,7 +147,7 @@
     au < finished ; frozen ; 2019 ; ANU Historical Journal II: Number 1 ; 1 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2020 ; ANU Historical Journal II: Number 2 ; 2 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2022 ; ANU Historical Journal II: Number 3 ; 3 ; reingest1.clockss.org:8082 >
-    au < manifest ; exists ; 2023 ; ANU Historical Journal II: Number 4 ; 4 ; >
+    au < crawling ; exists ; 2023 ; ANU Historical Journal II: Number 4 ; 4 ; >
 
   }
   
@@ -278,7 +278,7 @@
     au < finished ; frozen ; 2020 ; Made in China Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2021 ; Made in China Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < notReady ; exists ; 2022 ; Made in China Volume 7 ; 7 ; > #manifest page checker finds a volume that does not exist.
-    au < manifest ; exists ; 2023 ; Made in China Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2023 ; Made in China Volume 8 ; 8 ; >
 
   }
   

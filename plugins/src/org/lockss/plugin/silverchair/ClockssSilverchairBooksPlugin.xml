@@ -1,7 +1,7 @@
 <map>
     <entry>
         <string>plugin_status</string>
-        <string>ready</string>
+        <string>deprecated</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
@@ -21,11 +21,11 @@
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>Silverchair Books Plugin (CLOCKSS)</string>
+        <string>Silverchair Books Plugin (Legacy, CLOCKSS)</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Silverchair Books Plugin (CLOCKSS), Base URL %s, Resource Id %d",  base_url, resource_id</string>
+        <string>"Silverchair Books Plugin (Legacy, CLOCKSS), Base URL %s, Resource Id %d",  base_url, resource_id</string>
     </entry>
     <entry>
         <string>clockss_override</string>
