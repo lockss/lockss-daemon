@@ -67,6 +67,8 @@ public class MigrateContent extends LockssServlet {
   public static final boolean DEFAULT_ENABLE_MIGRATION = true;
   public static final String PARAM_HOSTNAME=PREFIX +"hostname";
   static final String DEFAULT_HOSTNAME="localhost";
+  public static final String PARAM_USERNAME = PREFIX + "username";
+  public static final String PARAM_PASSWORD = PREFIX + "password";
   public static final String PARAM_DELETE_AFTER_MIGRATION = PREFIX + "deleteAusAfterMigration";
   public static final String DEFAULT_DELETE_AFTER_MIGRATION = "false";
   public static final String PARAM_AU_SELECT_FILTER=PREFIX +"au_select_filter";
@@ -174,9 +176,9 @@ public class MigrateContent extends LockssServlet {
 
     String action = getParameter(KEY_ACTION);
     if (!StringUtil.isNullString(action)) {
-      userName=getParameter(KEY_USER_NAME);
-      userPass =getParameter(KEY_PASSWD);
-      hostName=getParameter(KEY_HOSTNAME);
+      userName = config.get(PARAM_USERNAME);
+      userPass = config.get(PARAM_PASSWORD);
+      hostName = config.get(PARAM_HOSTNAME);
       if(hostName==null) hostName="localhost";
       isCompareContent = getParameter(KEY_COMPARE_CONTENT) != null;
 

@@ -563,6 +563,11 @@ public class MigrateSettings extends LockssServlet {
     Configuration targetCfg = ConfigManager.fromProperties(targetProps);
     Properties mProps = new Properties();
 
+    // Migration target configuration
+    mProps.put(MigrateContent.PARAM_HOSTNAME, hostname);
+    mProps.put(MigrateContent.PARAM_USERNAME, userName);
+    mProps.put(MigrateContent.PARAM_PASSWORD, userPass);
+
     // Proxy forwarding settings
     if (targetCfg.getBoolean(ProxyManager.PARAM_START, false)) {
       mProps.put(ProxyManager.PARAM_FORWARD_PROXY,
