@@ -1445,25 +1445,29 @@ public class TestConfigManager extends LockssTestCase {
   }
 
   public void testXLockssInfo() throws IOException {
-    TimeBase.setSimulated(1000);
-    String u1 = FileTestUtil.urlOfString("org.lockss.foo=bar");
-    assertTrue(mgr.updateConfig(ListUtil.list(u1)));
-    BaseConfigFile cf = (BaseConfigFile)mgr.getConfigCache().find(u1);
-    String info = (String)cf.m_props.get("X-Lockss-Info");
-    assertMatchesRE("groups=nogroup", info);
-    // official build will set daemon, unofficial will set built_on
-    assertMatchesRE("daemon=|built_on=", info);
-    cf.setNeedsReload();
-    assertFalse(mgr.updateConfig(ListUtil.list(u1)));
-    info = (String)cf.m_props.get("X-Lockss-Info");
-    assertEquals(null, info);
-    TimeBase.step(ConfigManager.DEFAULT_SEND_VERSION_EVERY + 1);
-    cf.setNeedsReload();
-    assertFalse(mgr.updateConfig(ListUtil.list(u1)));
-    info = (String)cf.m_props.get("X-Lockss-Info");
-    assertMatchesRE("groups=nogroup", info);
-    // official build will set daemon, unofficial will set built_on
-    assertMatchesRE("daemon=|built_on=", info);
+    try {
+      TimeBase.setSimulated(1000);
+      String u1 = FileTestUtil.urlOfString("org.lockss.foo=bar");
+      assertTrue(mgr.updateConfig(ListUtil.list(u1)));
+      BaseConfigFile cf = (BaseConfigFile)mgr.getConfigCache().find(u1);
+      String info = (String)cf.m_props.get("X-Lockss-Info");
+      assertMatchesRE("groups=nogroup", info);
+      // official build will set daemon, unofficial will set built_on
+      assertMatchesRE("daemon=|built_on=", info);
+      cf.setNeedsReload();
+      assertFalse(mgr.updateConfig(ListUtil.list(u1)));
+      info = (String)cf.m_props.get("X-Lockss-Info");
+      assertEquals(null, info);
+      TimeBase.step(ConfigManager.DEFAULT_SEND_VERSION_EVERY + 1);
+      cf.setNeedsReload();
+      assertFalse(mgr.updateConfig(ListUtil.list(u1)));
+      info = (String)cf.m_props.get("X-Lockss-Info");
+      assertMatchesRE("groups=nogroup", info);
+      // official build will set daemon, unofficial will set built_on
+      assertMatchesRE("daemon=|built_on=", info);
+    } finally {
+      TimeBase.setReal();
+    }
   }
 
   public void testHasLocalCacheConfig() throws Exception {
