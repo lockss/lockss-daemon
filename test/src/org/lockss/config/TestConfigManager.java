@@ -1007,6 +1007,43 @@ public class TestConfigManager extends LockssTestCase {
     assertFalse(mgr.isLegalExpertConfigKey("org.lockss.config.expert.allow"));
   }
 
+  public void testReloadWait() throws Exception {
+    String tmpdir = getTempDir().toString();
+    // Make a config file, start service
+    File cfgFile = new File(tmpdir, "cfg.txt");
+    FileTestUtil.writeFile(cfgFile, "a=b");
+    mgr = ConfigManager.makeConfigManager(ListUtil.list(cfgFile.toURL().toString()), "");
+    // Force the reload to take 1/2 second to ensure that the wait
+    // really waits
+    mgr.registerConfigurationCallback(new Configuration.Callback() {
+	public void configurationChanged(Configuration newConfig,
+					 Configuration oldConfig,
+					 Configuration.Differences changedKeys) {
+          TimerUtil.guaranteedSleep(500);
+	}});
+    mgr.startService();
+
+    // Change file, request reload, ensure it happens
+    FileTestUtil.writeFile(cfgFile, "a=b\nfoo.bar=xxx");
+
+    Configuration config = ConfigManager.getCurrentConfig();
+    assertNull(config.get("foo.bar"));
+    assertTrue(mgr.reloadAndWait(Deadline.in(TIMEOUT_SHOULDNT)));
+    config = ConfigManager.getCurrentConfig();
+    assertEquals("xxx", config.get("foo.bar"));
+
+    // Make sure it words a second time
+    FileTestUtil.writeFile(cfgFile, "a=b\nfoo.bar=xxx\nbb=cc");
+    assertTrue(mgr.reloadAndWait(Deadline.in(TIMEOUT_SHOULDNT)));
+    config = ConfigManager.getCurrentConfig();
+    assertEquals("cc", config.get("bb"));
+
+    // Make sure timeout returns false
+    FileTestUtil.writeFile(cfgFile, "a=b\nfoo.bar=xxx\nbb=cc\nx=1");
+    assertFalse(mgr.reloadAndWait(Deadline.in(1)));
+
+  }
+
   void assertWriteArgs(Configuration expConfig, String expCacheConfigFileName,
 		       String expHeader, boolean expSuppressReload, List args) {
     if (expConfig != null) assertEquals(expConfig, args.get(0));

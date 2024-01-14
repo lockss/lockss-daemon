@@ -34,6 +34,7 @@ package org.lockss.config;
 
 import java.io.*;
 import java.util.*;
+import java.util.concurrent.*;
 import java.net.*;
 
 import org.apache.commons.collections.Predicate;
@@ -657,6 +658,7 @@ public class ConfigManager implements LockssManager {
   private OneShotSemaphore haveConfig = new OneShotSemaphore();
 
   private HandlerThread handlerThread; // reload handler thread
+  private CountDownLatch reloadedLatch = new CountDownLatch(1);
 
   private ConfigCache configCache;
   private volatile boolean needImmediateReload = false;
@@ -884,15 +886,15 @@ public class ConfigManager implements LockssManager {
     return haveConfig.isFull();
   }
 
-  /** Return true if the first config load has completed. */
-  public boolean haveConfig() {
-    return haveConfig.isFull();
-  }
-
   /** Wait until the system is configured.  (<i>Ie</i>, until the first
    * time a configuration has been loaded.) */
   public boolean waitConfig() {
     return waitConfig(Deadline.MAX);
+  }
+
+  /** Return true if the first config load has completed. */
+  public boolean haveConfig() {
+    return haveConfig.isFull();
   }
 
   void runCallback(Configuration.Callback cb,
@@ -1845,13 +1847,41 @@ public class ConfigManager implements LockssManager {
     }
   }
 
-  public void requestReload() {
+  /** Request a config reload
+   * @return a latch on which one can wait for the reload to complete
+   */
+  public CountDownLatch requestReload() {
     requestReloadIn(0);
+    return reloadedLatch;
   }
 
   public void requestReloadIn(long millis) {
     if (handlerThread != null) {
       handlerThread.forceReloadIn(millis);
+    }
+  }
+
+  /** Reload the config and wait until it has been reloaded
+   * @return true if/when config reloaded, false if interrupted
+   */
+  public boolean reloadAndWait() {
+    try {
+      requestReload().await();
+      return true;
+    } catch (InterruptedException e) {
+      return false;
+    }
+  }
+
+  /** Reload the config and wait until it has been reloaded or the Deadline
+   * is reached.
+   * @return true if/when config reloaded, false if timeout or interrupted
+   */
+  public boolean reloadAndWait(Deadline until) {
+    try {
+      return requestReload().await(until.getSleepTime(), TimeUnit.MILLISECONDS);
+    } catch (InterruptedException e) {
+      return false;
     }
   }
 
@@ -2946,6 +2976,9 @@ public class ConfigManager implements LockssManager {
 	log.debug2(nextReload.toString());
 	running = false;
 	if (goOn && !goAgain) {
+          reloadedLatch.countDown();    // let waiting thread proceed
+          reloadedLatch = new CountDownLatch(1); // and cause newly waiting
+                                                 // threads to wait
 	  try {
 	    nextReload.sleep();
 	  } catch (InterruptedException e) {
