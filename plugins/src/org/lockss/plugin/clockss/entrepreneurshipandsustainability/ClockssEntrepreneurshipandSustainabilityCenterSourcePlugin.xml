@@ -45,11 +45,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry> 
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.clockss.ClockssSourcePlugin</string>
+    <string>org.lockss.plugin.clockss.ClockssDirSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>15</string>
+    <string>1</string>
   </entry>   
   <entry>
     <string>plugin_name</string>
@@ -57,12 +57,16 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Entrepreneurship and Sustainability Center Journals Source Plugin (CLOCKSS), Base URL %s, Year %d, Volume %d, Issue %d", base_url, year, volume, issue</string>
+    <string>"Entrepreneurship and Sustainability Center Journals Source Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d, base_url, journal_id, year</string>
   </entry>
  <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%s%d\.%d\.%d([1-9+])\.pdf", base_url, year, volume, issue</string>
+      <string>"^%s_%s\.%d\.+.pdf$", base_url, journal_id, year</string>
     </list>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.clockss.SourceXmlArticleIteratorFactory</string>
   </entry>
 </map>
