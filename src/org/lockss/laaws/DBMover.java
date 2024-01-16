@@ -1,15 +1,18 @@
 package org.lockss.laaws;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
+import java.net.*;
 import java.sql.*;
+import org.apache.commons.httpclient.methods.multipart.*;
+import org.apache.commons.httpclient.params.*;
+
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.db.DbManager;
-import org.lockss.util.Logger;
-import org.lockss.util.StringUtil;
+import org.lockss.remote.*;
+import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 
 public class DBMover extends Worker {
   public static final String DEFAULT_DB_USER = "LOCKSS";
@@ -21,6 +24,8 @@ public class DBMover extends Worker {
   private static final String DB_PASSWORD_KEY = "password";
   private static final String DB_SERVER_KEY = "serverName";
   private static final String DB_PORT_KEY = "portNumber";
+  private static final int V2_DEFAULT_CFGSVC_UI_PORT = 24621;
+
   // v1 connection parameters
   String v1user = DEFAULT_DB_USER;
   String v1password = DEFAULT_V1_PASSWORD;
@@ -37,11 +42,15 @@ public class DBMover extends Worker {
   long srcSize;
   long dstSize;
 
+  LockssDaemon daemon;
   DbManager dbManager;
+  RemoteApi rapi;
 
   public DBMover(V2AuMover auMover, MigrationTask task) {
     super(auMover, task);
-    dbManager = LockssDaemon.getLockssDaemon().getDbManager();
+    daemon = LockssDaemon.getLockssDaemon();
+    dbManager = daemon.getDbManager();
+    rapi = daemon.getRemoteApi();
   }
 
   public void run() {
@@ -74,8 +83,42 @@ public class DBMover extends Worker {
     }
   }
 
-  private void copyDerbyDb() {
+  private void copyDerbyDb() throws IOException {
+    // Dump V1 subscriptions & COUNTER data
+    File bakDir = FileUtil.createTempDir("dbtemp", "");
+    File bakFile = new File(bakDir, "subscriptions.zip");
+    try {
+      rapi.createSubscriptionsAndCounterBackupFile(bakFile);
 
+      // Restore into V2
+      String restoreUrl = new URL("http", v2host, V2_DEFAULT_CFGSVC_UI_PORT,
+                                  "/BatchAuConfig")
+        .toString();
+      log.info("V2 restore url = " + restoreUrl);
+
+      LockssUrlConnection conn =
+        UrlUtil.openConnection(LockssUrlConnection.METHOD_POST, restoreUrl, null);
+      conn.setCredentials(v2user, v2password);
+      conn.setUserAgent("lockss");
+      Part[] parts = {
+        new StringPart("lockssAction", "SelectRestoreTitles"),
+        new StringPart("Verb", "5"),
+        new FilePart("AuConfigBackupContents", bakFile)
+      };
+      conn.setRequestEntity(new MultipartRequestEntity(parts, new HttpMethodParams()));
+
+      conn.execute();
+      int statusCode = conn.getResponseCode();
+      if (statusCode == 200) {
+        log.info("Success!");
+      } else {
+        log.error("Restore failed : " + statusCode);
+        log.error("Response: " +
+                  StringUtil.fromInputStream(conn.getResponseInputStream()));
+      }
+    } finally {
+      FileUtil.delTree(bakDir);
+    }
   }
 
   boolean initParams() {
