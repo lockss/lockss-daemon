@@ -44,9 +44,11 @@ import org.apache.oro.text.regex.*;
 
 import org.lockss.app.*;
 import org.lockss.account.*;
+import org.lockss.db.*;
 import org.lockss.clockss.*;
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;
+import org.lockss.laaws.*;
 import org.lockss.mail.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
@@ -1397,6 +1399,7 @@ public class ConfigManager implements LockssManager {
     inferMiscParams(newConfig);
     setConfigMacros(newConfig);
     setCompatibilityParams(newConfig);
+//     setMigrationParams(newConfig);
     newConfig.seal();
     Configuration oldConfig = currentConfig;
     if (!oldConfig.isEmpty() && newConfig.equals(oldConfig)) {
@@ -1578,6 +1581,20 @@ public class ConfigManager implements LockssManager {
 //     setIfNotSet(config, fromParam, IcpManager.PARAM_ICP_BIND_ADDRS);
 
     org.lockss.poller.PollManager.processConfigMacros(config);
+
+  }
+
+  private void setMigrationParams(Configuration config) {
+    if (config.getBoolean(MigrationManager.PARAM_MIGRATION_READY, false)) {
+      Configuration v2Datasource = config.getConfigTree("v2");
+      if (!v2Datasource.isEmpty()) {
+        // Replace V1 DB params with V2 DB params
+        config.removeConfigTree(DbManager.DATASOURCE_ROOT);
+        config.copyFrom(v2Datasource);
+      }
+      // Set forwarding mode: LCAP, Proxy, ServeContent, OpenURL
+      // XXX
+    }
   }
 
   // Backward compatibility for param settings
