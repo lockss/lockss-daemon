@@ -1613,7 +1613,7 @@
     au < manifest ; exists ; 1987 ; Circuit World Volume 13 ; 13 ; >
     au < manifest ; exists ; 1988 ; Circuit World Volume 14 ; 14 ; >
     au < manifest ; exists ; 1989 ; Circuit World Volume 15 ; 15 ; >
-    au < ready ; exists ; 1990 ; Circuit World Volume 16 ; 16 ; >
+    au < crawling ; exists ; 1990 ; Circuit World Volume 16 ; 16 ; >
     au < ready ; exists ; 1991 ; Circuit World Volume 17 ; 17 ; >
     au < ready ; exists ; 1992 ; Circuit World Volume 18 ; 18 ; >
     au < frozen ; exists ; 1993 ; Circuit World Volume 19 ; 19 ; >
@@ -3106,7 +3106,7 @@
     comment[journal_id] = he
     # online from 1992
 
-    au < ready ; exists ; 1992 ; Health Education Volume 92 ; 92 ; >
+    au < crawling ; exists ; 1992 ; Health Education Volume 92 ; 92 ; >
     au < frozen ; exists ; 1993 ; Health Education Volume 93 ; 93 ; >
     au < frozen ; exists ; 1994 ; Health Education Volume 94 ; 94 ; >
     au < finished ; crawling ; 1995 ; Health Education Volume 95 ; 95 ; reingest1.clockss.org:8082 >
@@ -3856,7 +3856,7 @@
 
     au < ready ; exists ; 1990 ; Integrated Manufacturing Systems Volume 1 ; 1 ; >
     au < ready ; exists ; 1991 ; Integrated Manufacturing Systems Volume 2 ; 2 ; >
-    au < ready ; exists ; 1992 ; Integrated Manufacturing Systems Volume 3 ; 3 ; >
+    au < crawling ; exists ; 1992 ; Integrated Manufacturing Systems Volume 3 ; 3 ; >
     au < frozen ; exists ; 1993 ; Integrated Manufacturing Systems Volume 4 ; 4 ; >
     au < frozen ; exists ; 1994 ; Integrated Manufacturing Systems Volume 5 ; 5 ; >
     au < finished ; manifest ; 1995 ; Integrated Manufacturing Systems Volume 6 ; 6 ; reingest3.clockss.org:8083 >
@@ -4161,7 +4161,7 @@
     comment[journal_id] = ijcst
 
     au < manifest ; exists ; 1989 ; International Journal of Clothing Science and Technology Volume 1 ; 1 ; >
-    au < ready ; exists ; 1990 ; International Journal of Clothing Science and Technology Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1990 ; International Journal of Clothing Science and Technology Volume 2 ; 2 ; >
     au < manifest ; exists ; 1991 ; International Journal of Clothing Science and Technology Volume 3 ; 3 ; >
     au < frozen ; exists ; 1992 ; International Journal of Clothing Science and Technology Volume 4 ; 4 ; >
     au < frozen ; exists ; 1993 ; International Journal of Clothing Science and Technology Volume 5 ; 5 ; >
@@ -4986,7 +4986,7 @@
     param[journal_issn] = 0957-4093
     comment[journal_id] = ijlm
 
-    au < ready ; exists ; 1990 ; The International Journal of Logistics Management Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1990 ; The International Journal of Logistics Management Volume 1 ; 1 ; >
     au < manifest ; exists ; 1991 ; The International Journal of Logistics Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 1992 ; The International Journal of Logistics Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 1993 ; The International Journal of Logistics Management Volume 4 ; 4 ; >
@@ -5213,7 +5213,7 @@
     comment[journal_id] = hff
 
     au < frozen ; exists ; 1991 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 1 ; 1 ; >
-    au < ready ; exists ; 1992 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1992 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 2 ; 2 ; >
     au < frozen ; exists ; 1993 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 3 ; 3 ; >
     au < frozen ; exists ; 1994 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 4 ; 4 ; >
     au < finished ; manifest ; 1995 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 5 ; 5 ; reingest4.clockss.org:8082 >
@@ -5606,7 +5606,7 @@
 
     au < manifest ; exists ; 1988 ; International Journal of Public Sector Management Volume 1 ; 1 ; >
     au < manifest ; exists ; 1989 ; International Journal of Public Sector Management Volume 2 ; 2 ; >
-    au < ready ; exists ; 1990 ; International Journal of Public Sector Management Volume 3 ; 3 ; >
+    au < crawling ; exists ; 1990 ; International Journal of Public Sector Management Volume 3 ; 3 ; >
     au < manifest ; exists ; 1991 ; International Journal of Public Sector Management Volume 4 ; 4 ; >
     au < frozen ; exists ; 1992 ; International Journal of Public Sector Management Volume 5 ; 5 ; >
     au < frozen ; exists ; 1993 ; International Journal of Public Sector Management Volume 6 ; 6 ; >
@@ -5805,7 +5805,7 @@
 
     au < ready ; exists ; 1990 ; International Journal of Service Industry Management Volume 1 ; 1 ; >
     au < manifest ; exists ; 1991 ; International Journal of Service Industry Management Volume 2 ; 2 ; >
-    au < ready ; exists ; 1992 ; International Journal of Service Industry Management Volume 3 ; 3 ; >
+    au < crawling ; exists ; 1992 ; International Journal of Service Industry Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 1993 ; International Journal of Service Industry Management Volume 4 ; 4 ; >
     au < frozen ; exists ; 1994 ; International Journal of Service Industry Management Volume 5 ; 5 ; >
     au < finished ; manifest ; 1995 ; International Journal of Service Industry Management Volume 6 ; 6 ; reingest3.clockss.org:8083 >
@@ -5854,7 +5854,7 @@
     au < manifest ; exists ; 1989 ; International Journal of Social Economics Volume 16 ; 16 ; >
     au < ready ; exists ; 1990 ; International Journal of Social Economics Volume 17 ; 17 ; >
     au < manifest ; exists ; 1991 ; International Journal of Social Economics Volume 18 ; 18 ; >
-    au < ready ; exists ; 1992 ; International Journal of Social Economics Volume 19 ; 19 ; >
+    au < crawling ; exists ; 1992 ; International Journal of Social Economics Volume 19 ; 19 ; >
     au < frozen ; exists ; 1993 ; International Journal of Social Economics Volume 20 ; 20 ; >
     au < frozen ; exists ; 1994 ; International Journal of Social Economics Volume 21 ; 21 ; >
     au < finished ; crawling ; 1995 ; International Journal of Social Economics Volume 22 ; 22 ; reingest1.clockss.org:8082 >
@@ -6219,7 +6219,7 @@
     param[journal_issn] = 1066-2243
     comment[journal_id] = intr
 
-    au < ready ; exists ; 1991 ; Internet Research Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1991 ; Internet Research Volume 1 ; 1 ; >
     au < ready ; exists ; 1992 ; Internet Research Volume 2 ; 2 ; >
     au < frozen ; exists ; 1993 ; Internet Research Volume 3 ; 3 ; >
     au < manifest ; exists ; 1994 ; Internet Research Volume 4 ; 4 ; >
@@ -7035,7 +7035,7 @@
     au < manifest ; exists ; 1987 ; Journal of Documentation Volume 43 ; 43 ; >
     au < manifest ; exists ; 1988 ; Journal of Documentation Volume 44 ; 44 ; >
     au < manifest ; exists ; 1989 ; Journal of Documentation Volume 45 ; 45 ; >
-    au < ready ; exists ; 1990 ; Journal of Documentation Volume 46 ; 46 ; >
+    au < crawling ; exists ; 1990 ; Journal of Documentation Volume 46 ; 46 ; >
     au < manifest ; exists ; 1991 ; Journal of Documentation Volume 47 ; 47 ; >
     au < frozen ; exists ; 1992 ; Journal of Documentation Volume 48 ; 48 ; >
     au < frozen ; exists ; 1993 ; Journal of Documentation Volume 49 ; 49 ; >
@@ -7133,7 +7133,7 @@
     au < manifest ; exists ; 1987 ; Journal of Economic Studies Volume 14 ; 14 ; >
     au < manifest ; exists ; 1988 ; Journal of Economic Studies Volume 15 ; 15 ; >
     au < manifest ; exists ; 1989 ; Journal of Economic Studies Volume 16 ; 16 ; >
-    au < ready ; exists ; 1990 ; Journal of Economic Studies Volume 17 ; 17 ; >
+    au < crawling ; exists ; 1990 ; Journal of Economic Studies Volume 17 ; 17 ; >
     au < manifest ; exists ; 1991 ; Journal of Economic Studies Volume 18 ; 18 ; >
     au < ready ; exists ; 1992 ; Journal of Economic Studies Volume 19 ; 19 ; >
     au < frozen ; exists ; 1993 ; Journal of Economic Studies Volume 20 ; 20 ; >
@@ -8758,7 +8758,7 @@
     param[journal_issn] = 1061-0421
     comment[journal_id] = jpbm
 
-    au < ready ; exists ; 1992 ; Journal of Product & Brand Management Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1992 ; Journal of Product & Brand Management Volume 1 ; 1 ; >
     au < frozen ; exists ; 1993 ; Journal of Product & Brand Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 1994 ; Journal of Product & Brand Management Volume 3 ; 3 ; >
     au < finished ; manifest ; 1995 ; Journal of Product & Brand Management Volume 4 ; 4 ; reingest1.clockss.org:8082 >
@@ -9148,7 +9148,7 @@
     au < manifest ; exists ; 1989 ; Journal of Services Marketing Volume 3 ; 3 ; >
     au < ready ; exists ; 1990 ; Journal of Services Marketing Volume 4 ; 4 ; >
     au < manifest ; exists ; 1991 ; Journal of Services Marketing Volume 5 ; 5 ; >
-    au < ready ; exists ; 1992 ; Journal of Services Marketing Volume 6 ; 6 ; >
+    au < crawling ; exists ; 1992 ; Journal of Services Marketing Volume 6 ; 6 ; >
     au < frozen ; exists ; 1993 ; Journal of Services Marketing Volume 7 ; 7 ; >
     au < frozen ; exists ; 1994 ; Journal of Services Marketing Volume 8 ; 8 ; >
     au < finished ; manifest ; 1995 ; Journal of Services Marketing Volume 9 ; 9 ; reingest4.clockss.org:8082 >
@@ -10285,7 +10285,7 @@
     au < manifest ; exists ; 1987 ; Managerial Finance Volume 13 ; 13 ; >
     au < manifest ; exists ; 1988 ; Managerial Finance Volume 14 ; 14 ; >
     au < manifest ; exists ; 1989 ; Managerial Finance Volume 15 ; 15 ; >
-    au < ready ; exists ; 1990 ; Managerial Finance Volume 16 ; 16 ; >
+    au < crawling ; exists ; 1990 ; Managerial Finance Volume 16 ; 16 ; >
     au < manifest ; exists ; 1991 ; Managerial Finance Volume 17 ; 17 ; >
     au < ready ; exists ; 1992 ; Managerial Finance Volume 18 ; 18 ; >
     au < frozen ; exists ; 1993 ; Managerial Finance Volume 19 ; 19 ; >
@@ -10683,7 +10683,7 @@
     au < manifest ; exists ; 1989 ; Microelectronics International Volume 6 ; 6 ; >
     au < ready ; exists ; 1990 ; Microelectronics International Volume 7 ; 7 ; >
     au < ready ; exists ; 1991 ; Microelectronics International Volume 8 ; 8 ; >
-    au < ready ; exists ; 1992 ; Microelectronics International Volume 9 ; 9 ; >
+    au < crawling ; exists ; 1992 ; Microelectronics International Volume 9 ; 9 ; >
     au < frozen ; exists ; 1993 ; Microelectronics International Volume 10 ; 10 ; >
     au < frozen ; exists ; 1994 ; Microelectronics International Volume 11 ; 11 ; >
     au < finished ; manifest ; 1995 ; Microelectronics International Volume 12 ; 12 ; reingest3.clockss.org:8083 >
@@ -11199,7 +11199,7 @@
     au < manifest ; exists ; 1987 ; Online Review Volume 11 ; 11 ; >
     au < manifest ; exists ; 1988 ; Online Review Volume 12 ; 12 ; >
     au < manifest ; exists ; 1989 ; Online Review Volume 13 ; 13 ; >
-    au < ready ; exists ; 1990 ; Online Review Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1990 ; Online Review Volume 14 ; 14 ; >
     au < manifest ; exists ; 1991 ; Online Review Volume 15 ; 15 ; >
     au < ready ; exists ; 1992 ; Online Review Volume 16 ; 16 ; >
 
@@ -12772,7 +12772,7 @@
     au < manifest ; exists ; 1987 ; Structural Survey Volume 5 ; 5 ; >
     au < manifest ; exists ; 1988 ; Structural Survey Volume 6 ; 6 ; >
     au < manifest ; exists ; 1989 ; Structural Survey Volume 7 ; 7 ; >
-    au < ready ; exists ; 1990 ; Structural Survey Volume 8 ; 8 ; >
+    au < crawling ; exists ; 1990 ; Structural Survey Volume 8 ; 8 ; >
     au < manifest ; exists ; 1991 ; Structural Survey Volume 9 ; 9 ; >
     au < crawling ; exists ; 1992 ; Structural Survey Volume 10 ; 10 ; >
     au < frozen ; exists ; 1993 ; Structural Survey Volume 11 ; 11 ; >
