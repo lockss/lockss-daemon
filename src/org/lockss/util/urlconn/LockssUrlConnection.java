@@ -32,6 +32,7 @@ package org.lockss.util.urlconn;
 
 import java.util.*;
 import java.io.*;
+import org.apache.commons.httpclient.methods.RequestEntity;
 
 import org.lockss.util.*;
 import org.lockss.config.Configuration;
@@ -167,6 +168,11 @@ public interface LockssUrlConnection {
 
   /** Set the request entity (e.g., for POST). */
   default public void setRequestEntity(String entity) {
+    throw new UnsupportedOperationException();
+  }
+
+  /** Set the request entity (e.g., for POST). */
+  default public void setRequestEntity(RequestEntity entity) {
     throw new UnsupportedOperationException();
   }
 

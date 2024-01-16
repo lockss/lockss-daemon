@@ -408,6 +408,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   }
 
   /** Set the body of a POST request */
+  @Override
   public void setRequestEntity(RequestEntity entity) {
     assertNotExecuted();
     if(method instanceof PostMethod) {
