@@ -32,39 +32,63 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.clockss.entrepreneurshipandsustainability;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.commons.io.FilenameUtils;
 import org.lockss.daemon.PluginException;
+import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.CrossRefSchemaHelper;
-import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
-import org.lockss.plugin.clockss.crossref.CrossrefArticleMetadataExtractor;
 import org.lockss.util.Logger;
 
 public class EntrepreneurshipandSustainabilityXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory{
 
     private static final Logger log = Logger.getLogger(EntrepreneurshipandSustainabilityXmlMetadataExtractorFactory.class);
 
-    private static SourceXmlSchemaHelper CrossRefPublishingHelper = null;
+    private static SourceXmlSchemaHelper EandSCrossRefPublishingHelper = null;
 
     @Override
     public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
         String contentType)
             throws PluginException {
-      return new CrossRefArticleMetadataExtractor();
+      return new EandSCrossRefArticleMetadataExtractor();
     }
     
-    public class CrossRefArticleMetadataExtractor extends SourceXmlMetadataExtractor {
+    public class EandSCrossRefArticleMetadataExtractor extends SourceXmlMetadataExtractor {
 
         @Override
         protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
         // Once you have it, just keep returning the same one. It won't change.
-        if (CrossRefPublishingHelper == null) {
-            CrossRefPublishingHelper = new CrossRefSchemaHelper();
+        if (EandSCrossRefPublishingHelper == null) {
+            EandSCrossRefPublishingHelper = new CrossRefSchemaHelper();
         }
-        return CrossRefPublishingHelper;
+        return EandSCrossRefPublishingHelper;
+        }
+
+        /*
+         * One issue will be mapped to one xml file. So, for example, 
+         * an xml file will look like this: 10.9770_IRD.2019.1.1.xml
+         * and map to the following pdfs: 
+         * 10.9770_IRD.2019.1.1(1).pdf, 10.9770_IRD.2019.1.1(2).pdf, 10.9770_IRD.2019.1.1(3).pdf, 
+         * 10.9770_IRD.2019.1.1(4).pdf, 10.9770_IRD.2019.1.1(5).pdf
+         */
+        @Override
+        protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
+        ArticleMetadata oneAM) {
+            String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+
+            String pubJID = oneAM.getRaw(CrossRefSchemaHelper.pub_abbrev);
+            String pubYear = oneAM.getRaw(CrossRefSchemaHelper.pub_year);
+            String pubIssue = oneAM.getRaw(CrossRefSchemaHelper.pub_issue);
+
+            List<String> returnList = new ArrayList<String>();
+
+            return returnList;
         }
     }
 }

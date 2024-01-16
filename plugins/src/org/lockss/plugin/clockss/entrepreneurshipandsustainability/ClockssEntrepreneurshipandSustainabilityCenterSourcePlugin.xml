@@ -57,16 +57,20 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Entrepreneurship and Sustainability Center Journals Source Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d, base_url, journal_id, year</string>
+    <string>"Entrepreneurship and Sustainability Center Journals Source Plugin (CLOCKSS), Base URL %s, Directory %s, base_url, directory</string>
   </entry>
  <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%s_%s\.%d\.+.pdf$", base_url, journal_id, year</string>
+      <string>"^%s%s/.+\.zip", base_url, directory</string>
     </list>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.clockss.SourceXmlArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.clockss.entrepreneurshipandsustainability.EntrepreneurshipandSustainabilityXmlMetadataExtractorFactory</string>
   </entry>
 </map>
