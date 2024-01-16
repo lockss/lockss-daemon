@@ -35,7 +35,7 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/bexpress-released/
 
       au < readySource ; crawling ; 2023 ; Business Expert Press Source Content 2023 ; 2023 >
-      au < expected ; exists ; 2024 ; Business Expert Press Source Content 2024 ; 2024 >
+      au < manifest ; exists ; 2024 ; Business Expert Press Source Content 2024 ; 2024 >
 
     }
   }
