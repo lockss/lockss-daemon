@@ -21,9 +21,11 @@
        type = bookSeries
       >
 
-      au < manifest ; exists ; 2019 ; ; 9780921294702 ; Applied Isotope Geochemistry ; mac/books/edited-volume/2436/Applied-Isotope-Geochemistry ; >
-      au < manifest ; exists ; 2020 ; ; 9780921294634 ; Fluid and Melt Inclusions: Applications to Geologic Processes ; mac/books/edited-volume/2437/Fluid-and-Melt-Inclusions-Applications-to-Geologic ; >
-      au < manifest ; exists ; 2013 ; ; 9780921294689 ; Uranium: Cradle to Grave ; mac/books/edited-volume/2435/Uranium-Cradle-to-Grave ; >
+      au < exists ; exists ; 2003 ; 9780921294328 ; 9780921294672 ; Fluid Inclusions: Analysis and Interpretation ; mac/books/edited-volume/2433/Fluid-Inclusions-Analysis-and-Interpretation ; >
+      au < manifest ; exists ; 2013 ; 9780921294535 ; 9780921294689 ; Uranium: Cradle to Grave ; mac/books/edited-volume/2435/Uranium-Cradle-to-Grave ; >
+      au < exists ; exists ; 2014 ; 9780921294542 ; 9780921294696 ; Geology of Gem Deposits Second Edition ; mac/books/edited-volume/2434/Geology-of-Gem-Deposits-Second-Edition ; >
+      au < manifest ; exists ; 2019 ; 9780921294627 ; 9780921294702 ; Applied Isotope Geochemistry ; mac/books/edited-volume/2436/Applied-Isotope-Geochemistry ; >
+      au < manifest ; exists ; 2020 ; 9780921294719 ; 9780921294634 ; Fluid and Melt Inclusions: Applications to Geologic Processes ; mac/books/edited-volume/2437/Fluid-and-Melt-Inclusions-Applications-to-Geologic ; >
 
   }
 }
