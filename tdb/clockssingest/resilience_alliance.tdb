@@ -18,7 +18,7 @@
     >
 
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Field Ornithology Volume 93 ; 93 ; https://journal.afonet.org/ ; >
-    au < manifest ; exists ; 2023 ; 2023 ; Journal of Field Ornithology Volume 94 ; 94 ; https://journal.afonet.org/ ; >
+    au < ready ; exists ; 2023 ; 2023 ; Journal of Field Ornithology Volume 94 ; 94 ; https://journal.afonet.org/ ; >
 
   }
 
@@ -47,7 +47,7 @@
     au < deepCrawl ; exists ; 2021 ; 2021 ; Avian Conservation and Ecology Volume 16 ; 16 ; https://www.ace-eco.org/ ; >
     #base_url lost the www
     au < deepCrawl ; exists ; 2022 ; 2022 ; Avian Conservation and Ecology Volume 17 ; 17 ; https://ace-eco.org/ ; >
-    au < manifest ; exists ; 2023 ; 2023 ; Avian Conservation and Ecology Volume 18 ; 18 ; https://ace-eco.org/ ; >
+    au < ready ; exists ; 2023 ; 2023 ; Avian Conservation and Ecology Volume 18 ; 18 ; https://ace-eco.org/ ; >
 
   }
 
@@ -86,7 +86,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Ecology and Society Volume 26 ; 26 ; https://www.ecologyandsociety.org/ ; >
       #base_url lost the www
       au < deepCrawl ; exists ; 2022 ; 2022 ; Ecology and Society Volume 27 ; 27 ; https://ecologyandsociety.org/ ; >
-      au < manifest ; exists ; 2023 ; 2023 ; Ecology and Society Volume 28 ; 28 ; https://ecologyandsociety.org/ ; >
+      au < ready ; exists ; 2023 ; 2023 ; Ecology and Society Volume 28 ; 28 ; https://ecologyandsociety.org/ ; >
 
     }
 }

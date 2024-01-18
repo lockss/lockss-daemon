@@ -465,7 +465,7 @@
     au < doNotProcess ; exists ; 2020 ; Eighteenth-Century Ireland Volume 35 ; 35 ; >
     au < doNotProcess ; exists ; 2021 ; Eighteenth-Century Ireland Volume 36 ; 36 ; >
     au < deepCrawl ; exists ; 2022 ; Eighteenth-Century Ireland Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2023 ; Eighteenth-Century Ireland Volume 38 ; 38 ; >
+    au < ready ; exists ; 2023 ; Eighteenth-Century Ireland Volume 38 ; 38 ; >
 
   }
 
@@ -665,7 +665,7 @@
     au < doNotProcess ; exists ; 2020 ; Historical Studies in Industrial Relations Volume 41 ; 41 ; >
     au < doNotProcess ; exists ; 2021 ; Historical Studies in Industrial Relations Volume 42 ; 42 ; >
     au < deepCrawl ; exists ; 2022 ; Historical Studies in Industrial Relations Volume 43 ; 43 ; >
-    au < manifest ; exists ; 2023 ; Historical Studies in Industrial Relations Volume 44 ; 44 ; >
+    au < ready ; exists ; 2023 ; Historical Studies in Industrial Relations Volume 44 ; 44 ; >
 
   }
 
@@ -1387,7 +1387,7 @@
     au < doNotProcess ; exists ; 2019-2020 ; Quaker Studies Volume 24 ; 24 ; >
     au < doNotProcess ; exists ; 2020-2021 ; Quaker Studies Volume 25 ; 25 ; >
     au < deepCrawl ; exists ; 2021-2022 ; Quaker Studies Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2022-2023 ; Quaker Studies Volume 27 ; 27 ; >
+    au < ready ; exists ; 2022-2023 ; Quaker Studies Volume 27 ; 27 ; >
     au < manifest ; exists ; 2023-2024 ; Quaker Studies Volume 28 ; 28 ; >
 
   }
@@ -1678,7 +1678,7 @@
     au < doNotProcess ; exists ; 2020 ; Studia Hibernica Volume 46 ; 46 ; >
     au < doNotProcess ; exists ; 2021 ; Studia Hibernica Volume 47 ; 47 ; >
     au < deepCrawl ; exists ; 2022 ; Studia Hibernica Volume 48 ; 48 ; >
-    au < manifest ; exists ; 2023 ; Studia Hibernica Volume 49 ; 49 ; >
+    au < ready ; exists ; 2023 ; Studia Hibernica Volume 49 ; 49 ; >
 
   }
   
@@ -1890,7 +1890,7 @@
     au < doNotProcess ; exists ; 2020 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 169 ; 169 ; >
     au < doNotProcess ; exists ; 2021 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 170 ; 170 ; >
     au < deepCrawl ; exists ; 2022 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 171 ; 171 ; >
-    au < manifest ; exists ; 2023 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 172 ; 172 ; >
+    au < ready ; exists ; 2023 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 172 ; 172 ; >
 
   }
 
@@ -1970,7 +1970,7 @@
     param[journal_id] = jbs
 
     au < frozen ; exists ; 2022 ; Journal of Beatles Studies Volume 2022 ; 2022 ; >
-    au < manifest ; exists ; 2023 ; Journal of Beatles Studies Volume 2023 ; 2023 ; >
+    au < ready ; exists ; 2023 ; Journal of Beatles Studies Volume 2023 ; 2023 ; >
 
   }
   
