@@ -28,7 +28,7 @@
 
     param[collection_id] = GOVPUB
 
-    au < manifest ; 1775 ; GOVPUB 1775 ; 1775 ; https://www.govinfo.gov/ >
+    au < exists ; 1775 ; GOVPUB 1775 ; 1775 ; https://www.govinfo.gov/ > #no content in XML page
     au < ready ; 1793 ; GOVPUB 1793 ; 1793 ; https://www.govinfo.gov/ >
     au < ready ; 1797 ; GOVPUB 1797 ; 1797 ; https://www.govinfo.gov/ >
     au < ready ; 1805 ; GOVPUB 1805 ; 1805 ; https://www.govinfo.gov/ >
