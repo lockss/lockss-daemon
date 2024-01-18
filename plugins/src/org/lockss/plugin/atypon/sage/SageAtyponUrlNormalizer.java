@@ -35,33 +35,15 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.HttpHttpsParamUrlNormalizer;
 import org.lockss.util.Logger;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class SageAtyponUrlNormalizer extends HttpHttpsParamUrlNormalizer {
   protected static Logger log = Logger.getLogger(SageAtyponUrlNormalizer.class);
 
-  protected static final String DOWNLOAD_STRING = "?download=true";
-  protected static final Pattern DOWNLOAD_PAT = Pattern.compile("\\?download=true", Pattern.CASE_INSENSITIVE);
-
-  protected static final String EPDF_STRING = "/doi/epdf/";
-  protected static final String PDF_STRING = "/doi/pdf/";
-  protected static final Pattern EPDF_PAT = Pattern.compile(EPDF_STRING, Pattern.CASE_INSENSITIVE);
-
   @Override
   public String normalizeUrl(String url, ArchivalUnit au) {
-    log.debug3("hi");
-    Matcher epdf_mat = EPDF_PAT.matcher(url);
-    if (epdf_mat.find()) {
-      url = url.replace(EPDF_STRING, PDF_STRING);
+    if(url.contains("?download=true") && url.contains("doi/pdf")){
+        int qmark = url.indexOf("?download=true");
+        url = url.substring(0,qmark);
     }
-
-    Matcher download_mat = DOWNLOAD_PAT.matcher(url);
-    log.debug3("This is stuff" + download_mat.toString());
-    if (download_mat.find()) {
-      url = url.replace(DOWNLOAD_STRING, "");
-    }
-
     return url;
   }
 }
