@@ -265,7 +265,7 @@ POSSIBILITY OF SUCH DAMAGE.
     To be safe, separate the pattern to two
     -->
     <list>
-      	<string>"^https?://%s/doi/(e?pdf|e?pdfplus|full)/[.0-9]+/[^\?&amp;]+$", url_host(base_url)</string>
+      	<string>"^https?://%s/doi/(e?pdf|e?pdfplus|full)/[.0-9]+/[^\?&amp;]+", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
