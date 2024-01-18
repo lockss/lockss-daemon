@@ -51,4 +51,29 @@
 
   }
 
+  {
+
+    title <
+      name = Journal of Engineering ;
+      issn = 1726-4073 ;
+      eissn = 2520-3339
+    >
+      param[base_url] = https://joe.uobaghdad.edu.iq/
+      param[journal_id] = main
+      #published 2012-present
+
+      au < manifest ; exists ; 2012 ; Iraqi Journal of Engineering Volume 2012 ; 18 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Iraqi Journal of Engineering Volume 2013 ; 19 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Iraqi Journal of Engineering Volume 2014 ; 20 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Iraqi Journal of Engineering Volume 2015 ; 21 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Iraqi Journal of Engineering Volume 2016 ; 22 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; Iraqi Journal of Engineering Volume 2017 ; 23 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Iraqi Journal of Engineering Volume 2018 ; 24 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; Iraqi Journal of Engineering Volume 2019 ; 25 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; Iraqi Journal of Engineering Volume 2020 ; 26 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Iraqi Journal of Engineering Volume 2021 ; 27 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Iraqi Journal of Engineering Volume 2022 ; 28 ; 2022 ; >
+      au < manifest ; exists ; 2023 ; Iraqi Journal of Engineering Volume 2023 ; 29 ; 2023 ; >
+
+  }
 }
