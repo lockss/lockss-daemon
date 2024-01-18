@@ -1,0 +1,198 @@
+<!--
+
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>development</string>
+  </entry>
+  <!-- https transition enabled -->  
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.michigan.deepblue.DeepBlueOaiPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>au_oai_set</key>
+        <displayName>OAI Set</displayName>
+        <description>OAI PMH set of this AU. [NONE] if you would like to include all sets</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>au_oai_date</key>
+        <displayName>OAI Date</displayName>
+        <description>Rules to filter records based upon metadata</description>
+        <type>1</type>
+        <size>128</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>University of Michigan Press Deep Blue Plugin</string>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <!-- needs new OAI library -->
+    <string>1.75.0</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"University of Michigan Press Deep Blue Plugin, Base URL %s, OAI Set %s, OAI Date %s", base_url, au_oai_set, au_oai_date</string>
+  </entry>
+  <!--
+  <entry>
+    <string>au_permission_url</string>
+    <string>"%s", to_https(base_url)</string>
+  </entry>
+  -->
+  <entry>
+    <string>au_permission_url</string>
+    <string>"http://clockss-ingest.lockss.org/clockss.txt"</string>
+  </entry>
+  <entry>
+    <string>au_additional_url_stems</string>
+    <list>
+      <string>"%s", to_http(base_url)</string>
+      <string>"%s", to_https(base_url)</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://%s/dspace-oai/", url_host(base_url)</string>
+      <string>1,"^https?://%s/(bitstream|handle|themes|static)/.*", url_host(base_url)</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^https?://%s/bitstream/handle/.*.pdf", url_host(base_url)</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <!-- https://deepblue.lib.umich.edu/dspace-oai/request?verb=ListRecords&metadataPrefix=oai_dc&set=col_2027.42_41251&from=2020-01-01&until=2020-12-31 -->
+    <string>"%sdspace-oai/request?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;set=%s&amp;from=%s-01-01&amp;until=%s-12-31", base_url, au_oai_set, au_oai_date, au_oai_date</string>
+  </entry>
+  <entry>
+    <string>plugin_crawl_seed_factory</string>
+    <string>org.lockss.plugin.michigan.deepblue.DeepBlueOaiCrawlSeedFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.michigan.deepblue.DeepBlueArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.michigan.deepblue.DeepBlueArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.michigan.deepblue.DeepBlueHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <list>
+      <string>[.](css|js|svg)([?].+)?$</string>
+      <string>/i/[^.?]+[.](gif|jpe?g|png)$</string>
+      <string>/auid=.*$</string>
+    </list>
+  </entry>
+  <entry>
+    <!-- these will not count towards poll results but will replicate from peer if above -->
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>"[.](css|js|svg)([?].+)?$", 0</string>
+      <string>"/i/[^.?]+[.](gif|jpe?g|png)$", 0</string>
+      <string>"/auid=.*$", 0</string>
+    </list>
+  </entry>
+  <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config -->
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>(fonts|ajax)\.googleapis\.com</string>
+      <string>deepblue\.lib\.umich\.edu</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+</map>
