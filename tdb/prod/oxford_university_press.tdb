@@ -4332,7 +4332,7 @@
     au < released ; 2019 ; 2019 ; Database Volume 2019 ; 2019 >
     au < released ; 2020 ; 2020 ; Database Volume 2020 ; 2020 >
     au < released ; 2021 ; 2021 ; Database Volume 2021 ; 2021 >
-    au < releasing ; 2022 ; 2022 ; Database Volume 2022 ; 2022 >
+    au < released ; 2022 ; 2022 ; Database Volume 2022 ; 2022 >
     au < expected ; 2023 ; 2023 ; Database Volume 2023 ; 2023 >
 
   }
@@ -6997,7 +6997,7 @@
     au < released ; 2019 ; 2019 ; Gastroenterology Report Volume 7 ; 7 >
     au < released ; 2020 ; 2020 ; Gastroenterology Report Volume 8 ; 8 >
     au < released ; 2021 ; 2021 ; Gastroenterology Report Volume 9 ; 9 >
-    au < releasing ; 2022 ; 2022 ; Gastroenterology Report Volume 10 ; 10 >
+    au < released ; 2022 ; 2022 ; Gastroenterology Report Volume 10 ; 10 >
     au < manifest ; 2023 ; 2023 ; Gastroenterology Report Volume 11 ; 11 >
 
   }
@@ -16920,8 +16920,8 @@
     param[journal_id] = pmj
     #move from BMJ by 2023-01-01.
 
-    au < releasing ; 2020 ; 2020 ; Postgraduate Medical Journal Volume 96 ; 96 >
-    au < releasing ; 2021 ; 2021 ; Postgraduate Medical Journal Volume 97 ; 97 >
+    au < released ; 2020 ; 2020 ; Postgraduate Medical Journal Volume 96 ; 96 >
+    au < released ; 2021 ; 2021 ; Postgraduate Medical Journal Volume 97 ; 97 >
     au < released ; 2022 ; 2022 ; Postgraduate Medical Journal Volume 98 ; 98 >
     au < manifest ; 2023 ; 2023 ; Postgraduate Medical Journal Volume 99 ; 99 >
 
@@ -17865,7 +17865,7 @@
     au < released ; 2019 ; 2019 ; Regenerative Biomaterials Volume 6 ; 6 >
     au < released ; 2020 ; 2020 ; Regenerative Biomaterials Volume 7 ; 7 >
     au < released ; 2021 ; 2021 ; Regenerative Biomaterials Volume 8 ; 8 >
-    au < releasing ; 2022 ; 2022 ; Regenerative Biomaterials Volume 9 ; 9 >
+    au < released ; 2022 ; 2022 ; Regenerative Biomaterials Volume 9 ; 9 >
     au < expected ; 2023 ; 2023 ; Regenerative Biomaterials Volume 10 ; 10 >
 
   }

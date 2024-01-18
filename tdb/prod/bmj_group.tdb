@@ -2937,7 +2937,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; Thorax Volume 74 ; 74 ; https://thorax.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; Thorax Volume 75 ; 75 ; https://thorax.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2021 ; Thorax Volume 76 ; 76 ; https://thorax.bmj.com/ > #login,https://thorax.bmj.com/content/76/4/350.full.pdf
-    au < bmj.BMJDrupalPlugin ; releasing ; 2022 ; Thorax Volume 77 ; 77 ; https://thorax.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; released ; 2022 ; Thorax Volume 77 ; 77 ; https://thorax.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2023 ; Thorax Volume 78 ; 78 ; https://thorax.bmj.com/ >
 
   }
@@ -2994,7 +2994,7 @@ comment[tc15] = recursive URL structure
       au < bmj.BMJDrupalPlugin ; released ; 2019 ; Tobacco Control Volume 28 ; 28 ; https://tobaccocontrol.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2020 ; Tobacco Control Volume 29 ; 29 ; https://tobaccocontrol.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2021 ; Tobacco Control Volume 30 ; 30 ; https://tobaccocontrol.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; releasing ; 2022 ; Tobacco Control Volume 31 ; 31 ; https://tobaccocontrol.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; released ; 2022 ; Tobacco Control Volume 31 ; 31 ; https://tobaccocontrol.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2023 ; Tobacco Control Volume 32 ; 32 ; https://tobaccocontrol.bmj.com/ >
 
     }

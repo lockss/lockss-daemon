@@ -153,7 +153,7 @@
     au < doesNotExist ; 2020 ; 9781624105937 ; ; 9781624105937 ; Design of Rockets and Space Launch Vehicles ; https://arc.aiaa.org/ >
     au < doesNotExist ; 2020 ; 9781624105999 ; ; 9781624105999 ; Active Spanwise Lift Control: A Distributed Parameter Approach ; https://arc.aiaa.org/ >
     au < doesNotExist ; 2021 ; 9781624105920 ; ; 9781624105920 ; Operational Aircraft Performance and Flight Test Practices ; https://arc.aiaa.org/ >
-    au < releasing ; 2016 ; 9781624106293 ; 9781624103261 ; 9781624106293 ; Composite Materials for Aircraft Structures, Third Edition (9781624106293) ; https://arc.aiaa.org/ >
+    au < released ; 2016 ; 9781624106293 ; 9781624103261 ; 9781624106293 ; Composite Materials for Aircraft Structures, Third Edition (9781624106293) ; https://arc.aiaa.org/ >
 
     #Not available for download, see for example: https://arc-aiaa-org.stanford.idm.oclc.org/doi/book/10.2514/4.867057
     au < doesNotExist ; 2009 ; 9781600867385 ; 9781600867057 ; 9781600867385 ; Aircraft Engine Controls: Design, System Analysis, and Health Monitoring (9781600867385) ; https://arc.aiaa.org/ >
@@ -1045,7 +1045,7 @@
     au < doesNotExist ; 2019 ; 9781624105388 ; ; 9781624105388 ; Advanced Tactical and Strategic Missile Guidance, Seventh Edition, Volume 2 ; https://arc.aiaa.org/ >
     au < released ; 2020 ; 9781624105807 ; 9781624105814 ; 9781624105814 ; High-Pressure Flows for Propulsion Applications ; https://arc.aiaa.org/ >
     au < released ; 2021 ; ; 9781624106040 ; 9781624106040 ; Fuel Effects in Operability of Aircraft Gas Turbine Combustors ; https://arc.aiaa.org/ >
-    au < releasing ; 2022 ; 9781624106279 ; 9781624106262 ; 9781624106279 ; Metal Additive Manufacturing for Propulsion Applications (9781624106279) ; https://arc.aiaa.org/ >
+    au < released ; 2022 ; 9781624106279 ; 9781624106262 ; 9781624106279 ; Metal Additive Manufacturing for Propulsion Applications (9781624106279) ; https://arc.aiaa.org/ >
     au < manifest ; 2023 ; 9781624106330 ; 9781624106323 ; 9781624106330 ; Optical Diagnostics for Reacting and Non-Reacting Flows: Theory and Practice (9781624106330) ; https://arc.aiaa.org/ >
 
   }
@@ -1094,75 +1094,75 @@
     au < manifest ; 1999 ; 9781563473463 ;  ; 9781563473463 ; Special Project: Fire, Explosion, Compatibility, and Safety Hazards of Hypergols - Hydrazine (AIAA SP-084-1999) ; https://arc.aiaa.org/ >
     au < manifest ; 1999 ; 9781563473623 ;  ; 9781563473623 ; Special Project: Fire, Explosion, Compatibility, and Safety Hazards of Hypergols - Monomethylhydrazine (AIAA SP-085-1999) ; https://arc.aiaa.org/ >
     au < manifest ; 1999 ; 9781563473647 ; 9781563473630 ; 9781563473647 ; Standard: Assessment of Experimental Uncertainty With Application to Wind Tunnel Testing (AIAA S-071A-1999) ; https://arc.aiaa.org/ >
-    au < releasing ; 2000 ; 9781563474521 ;  ; 9781563474521 ; Guide: Guide to Human Performance Measurements (AIAA G-035A-2000) ; https://arc.aiaa.org/ >
-    au < releasing ; 2001 ; 9781563474712 ; 9781563474705 ; 9781563474712 ; Recommended Practice: Recommended Practice for Parts Management (AIAA R-100A-2001) ; https://arc.aiaa.org/ >
-    au < releasing ; 2001 ; 9781563475283 ; 9781563475276 ; 9781563475283 ; Recommended Practice: Space Launch Integration (AIAA R-099-2001) ; https://arc.aiaa.org/ >
-    au < releasing ; 2001 ; 9781563474965 ;  ; 9781563474965 ; Special Project: Fire, Explosion, Compatibility, and Safety Hazards of Nitrogen Tetroxide (AIAA SP-086-2001) ; https://arc.aiaa.org/ >
-    au < releasing ; 2003 ; 9781563476648 ; 9781563476631 ; 9781563476648 ; Guide: Assessing Experimental Uncertainty ‚Äî Supplement to AIAA S-071A-1999 (AIAA G-045-2003) ; https://arc.aiaa.org/ >
-    au < releasing ; 2003 ; 9781563476464 ; 9781563476457 ; 9781563476464 ; Recommended Practice: Calibration and Use of Internal Strain-Gage Balances with Application to Wind Tunnel Testing (AIAA R-091-2003) ; https://arc.aiaa.org/ >
-    au < releasing ; 2003 ; 9781563476624 ; 9781563476617 ; 9781563476624 ; Recommended Practice: Calibration of Subsonic and Transonic Wind Tunnels (AIAA R-093-2003(2018)) ; https://arc.aiaa.org/ >
-    au < releasing ; 2003 ; 9781563476518 ; 9781563476501 ; 9781563476518 ; Recommended Practice: Wind Tunnel Testing ‚Äî Part 1: Management Volume (AIAA R-092-1-2003(2018)) ; https://arc.aiaa.org/ >
-    au < releasing ; 2003 ; 9781563476532 ; 9781563476525 ; 9781563476532 ; Recommended Practice: Wind Tunnel Testing ‚Äî Part 2: Practitioners Volume (AIAA R-092-2-2003(2018)) ; https://arc.aiaa.org/ >
-    au < releasing ; 2004 ; 9781563477072 ; 9781563477065 ; 9781563477072 ; Recommended Practice: Terminology for Unmanned Aerial Vehicles and Remotely Operated Aircraft (AIAA R-103-2004) ; https://arc.aiaa.org/ >
-    au < releasing ; 2004 ; 9781563477522 ; 9781563477515 ; 9781563477522 ; Special Project: Recommended Design Practices for Conceptual Nuclear Fusion Space Propulsion Systems (AIAA SP-108-2004) ; https://arc.aiaa.org/ >
-    au < releasing ; 2004 ; 9781563477423 ; 9781563477416 ; 9781563477423 ; Standard: Space Systems ‚Äì Flywheel Rotor Assemblies (AIAA S-096-2004) ; https://arc.aiaa.org/ >
-    au < releasing ; 2005 ; 9781563479304 ;  ; 9781563479304 ; Recommended Practice: The CFD General Notation System ‚Äì Standard Interface Data Structures (AIAA R-101A-2005) ; https://arc.aiaa.org/ >
-    au < releasing ; 2005 ; 9781563477737 ; 9781563477720 ; 9781563477737 ; Standard: Criteria for Explosive Systems and Devices on Space and Launch Vehicles (AIAA S-113-2005) ; https://arc.aiaa.org/ >
-    au < releasing ; 2005 ; 9781563477751 ; 9781563477744 ; 9781563477751 ; Standard: Moving Mechanical Assemblies for Space and Launch Vehicles (AIAA S-114-2005) ; https://arc.aiaa.org/ >
-    au < releasing ; 2005 ; 9781563477713 ; 9781563477706 ; 9781563477713 ; Standard: Space Systems ‚Äî Structures, Structural Components, and Structural Assemblies (AIAA S-110-2005) ; https://arc.aiaa.org/ >
-    au < releasing ; 2006 ; 9781563479168 ;  ; 9781563479168 ; Guide: Managing the Use of Commercial Off the Shelf (COTS) Software Components for Mission-Critical Systems (AIAA G-118-2006) ; https://arc.aiaa.org/ >
-    au < releasing ; 2007 ; 9781563479236 ; 9781563479229 ; 9781563479236 ; Standard: Adaptations and Conversions of CCSDS Space Link Extension Forward Communications Link Transmission Unit Transfer Service (ANSI/AIAA S-123-2007(2017)) ; https://arc.aiaa.org/ >
-    au < releasing ; 2007 ; 9781563479250 ; 9781563479243 ; 9781563479250 ; Standard: Adaptations and Conversions of CCSDS Space Link Extension Return All Frames Transfer Service (ANSI/AIAA S-124-2007(2017)) ; https://arc.aiaa.org/ >
-    au < releasing ; 2007 ; 9781563479144 ; 9781563479137 ; 9781563479144 ; Standard: Electrical Power Systems for Unmanned Spacecraft (AIAA S-122-2007) ; https://arc.aiaa.org/ >
-    au < releasing ; 2009 ; 9781624106224 ;  ; 9781624106224 ; Paper Airplane Design (AIAA S-999-2009) ; https://arc.aiaa.org/ >
-    au < releasing ; 2009 ; 9781600867095 ;  ; 9781600867095 ; Standard: Performance-Based Anomaly Detection and Response Analysis (ANSI/AIAA S-102.2.11-2019) ; https://arc.aiaa.org/ >
-    au < releasing ; 2009 ; 9781600867064 ;  ; 9781600867064 ; Standard: Performance-Based Failure Reporting, Analysis & Corrective Action System (FRACAS) Requirements (ANSI/AIAA S-102.1.4-2019) ; https://arc.aiaa.org/ >
+    au < released ; 2000 ; 9781563474521 ;  ; 9781563474521 ; Guide: Guide to Human Performance Measurements (AIAA G-035A-2000) ; https://arc.aiaa.org/ >
+    au < released ; 2001 ; 9781563474712 ; 9781563474705 ; 9781563474712 ; Recommended Practice: Recommended Practice for Parts Management (AIAA R-100A-2001) ; https://arc.aiaa.org/ >
+    au < released ; 2001 ; 9781563475283 ; 9781563475276 ; 9781563475283 ; Recommended Practice: Space Launch Integration (AIAA R-099-2001) ; https://arc.aiaa.org/ >
+    au < released ; 2001 ; 9781563474965 ;  ; 9781563474965 ; Special Project: Fire, Explosion, Compatibility, and Safety Hazards of Nitrogen Tetroxide (AIAA SP-086-2001) ; https://arc.aiaa.org/ >
+    au < released ; 2003 ; 9781563476648 ; 9781563476631 ; 9781563476648 ; Guide: Assessing Experimental Uncertainty ‚Äî Supplement to AIAA S-071A-1999 (AIAA G-045-2003) ; https://arc.aiaa.org/ >
+    au < released ; 2003 ; 9781563476464 ; 9781563476457 ; 9781563476464 ; Recommended Practice: Calibration and Use of Internal Strain-Gage Balances with Application to Wind Tunnel Testing (AIAA R-091-2003) ; https://arc.aiaa.org/ >
+    au < released ; 2003 ; 9781563476624 ; 9781563476617 ; 9781563476624 ; Recommended Practice: Calibration of Subsonic and Transonic Wind Tunnels (AIAA R-093-2003(2018)) ; https://arc.aiaa.org/ >
+    au < released ; 2003 ; 9781563476518 ; 9781563476501 ; 9781563476518 ; Recommended Practice: Wind Tunnel Testing ‚Äî Part 1: Management Volume (AIAA R-092-1-2003(2018)) ; https://arc.aiaa.org/ >
+    au < released ; 2003 ; 9781563476532 ; 9781563476525 ; 9781563476532 ; Recommended Practice: Wind Tunnel Testing ‚Äî Part 2: Practitioners Volume (AIAA R-092-2-2003(2018)) ; https://arc.aiaa.org/ >
+    au < released ; 2004 ; 9781563477072 ; 9781563477065 ; 9781563477072 ; Recommended Practice: Terminology for Unmanned Aerial Vehicles and Remotely Operated Aircraft (AIAA R-103-2004) ; https://arc.aiaa.org/ >
+    au < released ; 2004 ; 9781563477522 ; 9781563477515 ; 9781563477522 ; Special Project: Recommended Design Practices for Conceptual Nuclear Fusion Space Propulsion Systems (AIAA SP-108-2004) ; https://arc.aiaa.org/ >
+    au < released ; 2004 ; 9781563477423 ; 9781563477416 ; 9781563477423 ; Standard: Space Systems ‚Äì Flywheel Rotor Assemblies (AIAA S-096-2004) ; https://arc.aiaa.org/ >
+    au < released ; 2005 ; 9781563479304 ;  ; 9781563479304 ; Recommended Practice: The CFD General Notation System ‚Äì Standard Interface Data Structures (AIAA R-101A-2005) ; https://arc.aiaa.org/ >
+    au < released ; 2005 ; 9781563477737 ; 9781563477720 ; 9781563477737 ; Standard: Criteria for Explosive Systems and Devices on Space and Launch Vehicles (AIAA S-113-2005) ; https://arc.aiaa.org/ >
+    au < released ; 2005 ; 9781563477751 ; 9781563477744 ; 9781563477751 ; Standard: Moving Mechanical Assemblies for Space and Launch Vehicles (AIAA S-114-2005) ; https://arc.aiaa.org/ >
+    au < released ; 2005 ; 9781563477713 ; 9781563477706 ; 9781563477713 ; Standard: Space Systems ‚Äî Structures, Structural Components, and Structural Assemblies (AIAA S-110-2005) ; https://arc.aiaa.org/ >
+    au < released ; 2006 ; 9781563479168 ;  ; 9781563479168 ; Guide: Managing the Use of Commercial Off the Shelf (COTS) Software Components for Mission-Critical Systems (AIAA G-118-2006) ; https://arc.aiaa.org/ >
+    au < released ; 2007 ; 9781563479236 ; 9781563479229 ; 9781563479236 ; Standard: Adaptations and Conversions of CCSDS Space Link Extension Forward Communications Link Transmission Unit Transfer Service (ANSI/AIAA S-123-2007(2017)) ; https://arc.aiaa.org/ >
+    au < released ; 2007 ; 9781563479250 ; 9781563479243 ; 9781563479250 ; Standard: Adaptations and Conversions of CCSDS Space Link Extension Return All Frames Transfer Service (ANSI/AIAA S-124-2007(2017)) ; https://arc.aiaa.org/ >
+    au < released ; 2007 ; 9781563479144 ; 9781563479137 ; 9781563479144 ; Standard: Electrical Power Systems for Unmanned Spacecraft (AIAA S-122-2007) ; https://arc.aiaa.org/ >
+    au < released ; 2009 ; 9781624106224 ;  ; 9781624106224 ; Paper Airplane Design (AIAA S-999-2009) ; https://arc.aiaa.org/ >
+    au < released ; 2009 ; 9781600867095 ;  ; 9781600867095 ; Standard: Performance-Based Anomaly Detection and Response Analysis (ANSI/AIAA S-102.2.11-2019) ; https://arc.aiaa.org/ >
+    au < released ; 2009 ; 9781600867064 ;  ; 9781600867064 ; Standard: Performance-Based Failure Reporting, Analysis & Corrective Action System (FRACAS) Requirements (ANSI/AIAA S-102.1.4-2019) ; https://arc.aiaa.org/ >
     au < manifest ; 2009 ; 9781600867071 ;  ; 9781600867071 ; Standard: Performance-Based Failure Review Board (FRB) Requirements (ANSI/AIAA S-102.1.5-2019) (9781600867071) ; https://arc.aiaa.org/ >
-    au < releasing ; 2009 ; 9781600867101 ;  ; 9781600867101 ; Standard: Performance-Based Fault Tree Analysis Requirements (ANSI/AIAA S-102.2.18-2019) (9781600867101) ; https://arc.aiaa.org/ >
-    au < releasing ; 2009 ; 9781600867163 ;  ; 9781600867163 ; Standard: Performance-Based Sneak Circuit Analysis (SCA) Requirements (AIAA S-102.2.5-2009) (9781600867163) ; https://arc.aiaa.org/ >
-    au < releasing ; 2009 ; 9781600867132 ;  ; 9781600867132 ; Standard: Performance-Based System Reliability Modeling Requirements (ANSI/AIAA S-102.2.2-2019) (9781600867132) ; https://arc.aiaa.org/ >
-    au < releasing ; 2010 ; 9781600867842 ;  ; 9781600867842 ; Guide: Guide to Reference and Standard Atmosphere Models (AIAA G-003C-2010(2016)) (9781600867842) ; https://arc.aiaa.org/ >
-    au < releasing ; 2010 ; 9781600868429 ;  ; 9781600868429 ; Standard: Astrodynamics - Propagation Specifications, Technical Definitions, and Recommended Practices (ANSI/AIAA S-131-2010(2016)) (9781600868429) ; https://arc.aiaa.org/ >
-    au < releasing ; 2011 ; 9781600867965 ;  ; 9781600867965 ; Standard: Flight Dynamics Model Exchange Standard (ANSI/AIAA S-119-2011(2016)) (9781600867965) ; https://arc.aiaa.org/ >
-    au < releasing ; 2012 ; 9781600869150 ;  ; 9781600869150 ; Guide: Nomenclature and Axis Systems for Aerodynamic Wind Tunnel Testing (AIAA G-129-2012(2017)) (9781600869150) ; https://arc.aiaa.org/ >
-    au < releasing ; 2012 ; 9781624102066 ;  ; 9781624102066 ; Special Project: Status of Inflight Icing Forecasting Products and Plans for Future Development (AIAA SP-137-2012) (9781624102066) ; https://arc.aiaa.org/ >
-    au < releasing ; 2013 ; 9781624102387 ;  ; 9781624102387 ; Space Plug-and-Play Architecture Guide: System Capabilities (AIAA G-133-10-2013) (9781624102387) ; https://arc.aiaa.org/ >
-    au < releasing ; 2013 ; 9781624102332 ;  ; 9781624102332 ; Space Plug-and-Play Architecture Standard: 28V Power Service (AIAA S-133-5-2013) (9781624102332) ; https://arc.aiaa.org/ >
-    au < releasing ; 2013 ; 9781624102318 ;  ; 9781624102318 ; Space Plug-and-Play Architecture Standard: Logical Interface (AIAA S-133-3-2013) (9781624102318) ; https://arc.aiaa.org/ >
-    au < releasing ; 2013 ; 9781624102356 ;  ; 9781624102356 ; Space Plug-and-Play Architecture Standard: Ontology (AIAA S-133-7-2013) (9781624102356) ; https://arc.aiaa.org/ >
-    au < releasing ; 2013 ; 9781624102325 ;  ; 9781624102325 ; Space Plug-and-Play Architecture Standard: Physical Interface (AIAA S-133-4-2013) (9781624102325) ; https://arc.aiaa.org/ >
-    au < releasing ; 2013 ; 9781624102370 ;  ; 9781624102370 ; Space Plug-and-Play Architecture Standard: SpaceWire Subnet Adaptation (AIAA S-133-9-2013) (9781624102370) ; https://arc.aiaa.org/ >
-    au < releasing ; 2013 ; 9781624102349 ;  ; 9781624102349 ; Space Plug-and-Play Architecture Standard: System Timing (AIAA S-133-6-2013) (9781624102349) ; https://arc.aiaa.org/ >
-    au < releasing ; 2013 ; 9781624102363 ;  ; 9781624102363 ; Space Plug-and-Play Architecture Standard: Test Bypass (AIAA S-133-8-2013) (9781624102363) ; https://arc.aiaa.org/ >
-    au < releasing ; 2013 ; 9781624102301 ;  ; 9781624102301 ; Space Plug-and-Play Architecture: Networking (AIAA S-133-2-2013) (9781624102301) ; https://arc.aiaa.org/ >
+    au < released ; 2009 ; 9781600867101 ;  ; 9781600867101 ; Standard: Performance-Based Fault Tree Analysis Requirements (ANSI/AIAA S-102.2.18-2019) (9781600867101) ; https://arc.aiaa.org/ >
+    au < released ; 2009 ; 9781600867163 ;  ; 9781600867163 ; Standard: Performance-Based Sneak Circuit Analysis (SCA) Requirements (AIAA S-102.2.5-2009) (9781600867163) ; https://arc.aiaa.org/ >
+    au < released ; 2009 ; 9781600867132 ;  ; 9781600867132 ; Standard: Performance-Based System Reliability Modeling Requirements (ANSI/AIAA S-102.2.2-2019) (9781600867132) ; https://arc.aiaa.org/ >
+    au < released ; 2010 ; 9781600867842 ;  ; 9781600867842 ; Guide: Guide to Reference and Standard Atmosphere Models (AIAA G-003C-2010(2016)) (9781600867842) ; https://arc.aiaa.org/ >
+    au < released ; 2010 ; 9781600868429 ;  ; 9781600868429 ; Standard: Astrodynamics - Propagation Specifications, Technical Definitions, and Recommended Practices (ANSI/AIAA S-131-2010(2016)) (9781600868429) ; https://arc.aiaa.org/ >
+    au < released ; 2011 ; 9781600867965 ;  ; 9781600867965 ; Standard: Flight Dynamics Model Exchange Standard (ANSI/AIAA S-119-2011(2016)) (9781600867965) ; https://arc.aiaa.org/ >
+    au < released ; 2012 ; 9781600869150 ;  ; 9781600869150 ; Guide: Nomenclature and Axis Systems for Aerodynamic Wind Tunnel Testing (AIAA G-129-2012(2017)) (9781600869150) ; https://arc.aiaa.org/ >
+    au < released ; 2012 ; 9781624102066 ;  ; 9781624102066 ; Special Project: Status of Inflight Icing Forecasting Products and Plans for Future Development (AIAA SP-137-2012) (9781624102066) ; https://arc.aiaa.org/ >
+    au < released ; 2013 ; 9781624102387 ;  ; 9781624102387 ; Space Plug-and-Play Architecture Guide: System Capabilities (AIAA G-133-10-2013) (9781624102387) ; https://arc.aiaa.org/ >
+    au < released ; 2013 ; 9781624102332 ;  ; 9781624102332 ; Space Plug-and-Play Architecture Standard: 28V Power Service (AIAA S-133-5-2013) (9781624102332) ; https://arc.aiaa.org/ >
+    au < released ; 2013 ; 9781624102318 ;  ; 9781624102318 ; Space Plug-and-Play Architecture Standard: Logical Interface (AIAA S-133-3-2013) (9781624102318) ; https://arc.aiaa.org/ >
+    au < released ; 2013 ; 9781624102356 ;  ; 9781624102356 ; Space Plug-and-Play Architecture Standard: Ontology (AIAA S-133-7-2013) (9781624102356) ; https://arc.aiaa.org/ >
+    au < released ; 2013 ; 9781624102325 ;  ; 9781624102325 ; Space Plug-and-Play Architecture Standard: Physical Interface (AIAA S-133-4-2013) (9781624102325) ; https://arc.aiaa.org/ >
+    au < released ; 2013 ; 9781624102370 ;  ; 9781624102370 ; Space Plug-and-Play Architecture Standard: SpaceWire Subnet Adaptation (AIAA S-133-9-2013) (9781624102370) ; https://arc.aiaa.org/ >
+    au < released ; 2013 ; 9781624102349 ;  ; 9781624102349 ; Space Plug-and-Play Architecture Standard: System Timing (AIAA S-133-6-2013) (9781624102349) ; https://arc.aiaa.org/ >
+    au < released ; 2013 ; 9781624102363 ;  ; 9781624102363 ; Space Plug-and-Play Architecture Standard: Test Bypass (AIAA S-133-8-2013) (9781624102363) ; https://arc.aiaa.org/ >
+    au < released ; 2013 ; 9781624102301 ;  ; 9781624102301 ; Space Plug-and-Play Architecture: Networking (AIAA S-133-2-2013) (9781624102301) ; https://arc.aiaa.org/ >
     au < manifest ; 2013 ; 9781624102295 ;  ; 9781624102295 ; Space Plug-and-Play Architecture: Standards Development Guidebook (AIAA G-133-1-2013) (9781624102295) ; https://arc.aiaa.org/ >
-    au < releasing ; 2013 ; 9781624102462 ;  ; 9781624102462 ; Standard: Low Earth Orbit Spacecraft Charging Design Standard Requirement and Associated Handbook (ANSI/AIAA S-115-2013(2017)) (9781624102462) ; https://arc.aiaa.org/ >
-    au < releasing ; 2013 ; 9781624102455 ;  ; 9781624102455 ; Standard: Qualification and Quality Requirements for Electrical Components on Space Solar Panels (AIAA S-112A-2013) (9781624102455) ; https://arc.aiaa.org/ >
-    au < releasing ; 2014 ; 9781624102707 ;  ; 9781624102707 ; Guide: Guide to Reference and Standard Ionosphere Models (ANSI_AIAA_G-034A-2014(2019)) (9781624102707) ; https://arc.aiaa.org/ >
-    au < releasing ; 2014 ; 9781624102806 ;  ; 9781624102806 ; Standard: Qualification and Quality Requirements for Space Solar Cells (AIAA S-111A-2014) (9781624102806) ; https://arc.aiaa.org/ >
-    au < releasing ; 2015 ; 9781624103025 ;  ; 9781624103025 ; Guide: Terrestrial Environment Guidelines for Use in Aerospace Vehicle Development (AIAA G-140-2015) (9781624103025) ; https://arc.aiaa.org/ >
-    au < releasing ; 2015 ; 9781624103742 ;  ; 9781624103742 ; Standard: Aerodynamic Decelerator and Parachute Drawings (ANSI/AIAA S-017B-2015(2019)) (9781624103742) ; https://arc.aiaa.org/ >
-    au < releasing ; 2015 ; 9781624103773 ;  ; 9781624103773 ; Standard: Capability-Based Product Failure Mode, Effects and Criticality Analysis (FMECA) Requirements (ANSI/AIAA S-102.2.4-2015) (9781624103773) ; https://arc.aiaa.org/ >
-    au < releasing ; 2015 ; 9781624103858 ;  ; 9781624103858 ; Standard: Mass Properties Control for Space Systems (ANSI/AIAA S-120A-2015(2019)) (9781624103858) ; https://arc.aiaa.org/ >
-    au < releasing ; 2016 ; 9781624104602 ;  ; 9781624104602 ; Standard/Handbook for Multipactor Breakdown Prevention in Spacecraft Components (ANSI/AIAA S-142-2016) (9781624104602) ; https://arc.aiaa.org/ >
-    au < releasing ; 2016 ; 9781624104619 ;  ; 9781624104619 ; Standard: Criteria for Explosive Systems and Devices on Space and Launch Vehicles (AIAA S-113A-2016) (9781624104619) ; https://arc.aiaa.org/ >
-    au < releasing ; 2016 ; 9781624104626 ;  ; 9781624104626 ; Standard: Occupant-Imparted Loads for Commercial Suborbital RLVs (AIAA/CSF S-143-2016) (9781624104626) ; https://arc.aiaa.org/ >
-    au < releasing ; 2016 ; 9781624104442 ;  ; 9781624104442 ; Standard: Space Systems Verification Program and Management Process (AIAA S-117A-2016) (9781624104442) ; https://arc.aiaa.org/ >
-    au < releasing ; 2017 ; 9781624105197 ;  ; 9781624105197 ; Guide to Safety of Hydrogen and Hydrogen Systems (ANSI/AIAA G-095A-2017) (9781624105197) ; https://arc.aiaa.org/ >
-    au < releasing ; 2017 ; 9781624105203 ;  ; 9781624105203 ; Standard: Electromagnetic Compatibility Requirements for Space Equipment and Systems (AIAA S-121A-2017) (9781624105203) ; https://arc.aiaa.org/ >
-    au < releasing ; 2018 ; 9781624105487 ;  ; 9781624105487 ; Guide to the Preparation of Operational Concept Documents (ANSI/AIAA G-043B-2018) (9781624105487) ; https://arc.aiaa.org/ >
-    au < releasing ; 2018 ; 9781624105425 ;  ; 9781624105425 ; Standard: Space Systems‚ÄîComposite Overwrapped Pressure Vessels (ANSI/AIAA S-081B-2018) (9781624105425) ; https://arc.aiaa.org/ >
-    au < releasing ; 2018 ; 9781624105418 ;  ; 9781624105418 ; Standard: Space Systems‚ÄîMetallic Pressure Vessels, Pressurized Structures, and Pressure Components (ANSI/AIAA S-080A-2018) (9781624105418) ; https://arc.aiaa.org/ >
-    au < releasing ; 2019 ; 9781624105944 ;  ; 9781624105944 ; Capability-based mission assurance program ‚Äì General requirements (ANSI/AIAA S-102.0.1-2019) (9781624105944) ; https://arc.aiaa.org/ >
-    au < releasing ; 2019 ; 9781624105869 ;  ; 9781624105869 ; Qualification and Quality Requirements for Electrical Components on Space Solar Panels ‚Äì Amendment 1 (AIAA S-112A-2013/A1-2019) (9781624105869) ; https://arc.aiaa.org/ >
-    au < releasing ; 2019 ; 9781624105852 ;  ; 9781624105852 ; Qualification and Quality Requirements for Space Solar Cells ‚Äì Amendment 1 (AIAA S-111A-2014/A1-2019) (9781624105852) ; https://arc.aiaa.org/ >
-    au < releasing ; 2020 ; 9781624106019 ;  ; 9781624106019 ; Calibration and Use of Internal Strain-Gage Balances with Application to Wind Tunnel Testing (AIAA R-091A-2020) (9781624106019) ; https://arc.aiaa.org/ >
-    au < releasing ; 2020 ; 9781624105975 ;  ; 9781624105975 ; Dual Flow Reference Nozzles for Verification of Sub-Scale Thrust and Airflow Test Rigs: Dual Separate Flow Reference (DSFR) and Dual Mixed Flow Reference (DMFR) (AIAA R-146-2020) (9781624105975) ; https://arc.aiaa.org/ >
-    au < releasing ; 2020 ; 9781624106132 ;  ; 9781624106132 ; Moving Mechanical Assemblies for Space and Launch Vehicles (AIAA S-114A-2020) (9781624106132) ; https://arc.aiaa.org/ >
-    au < releasing ; 2021 ; 9781624106286 ;  ; 9781624106286 ; Human Spaceflight: Spacecraft Architecture and Systems Engineering Ontology (ANSI/AIAA S-153-2021) (9781624106286) ; https://arc.aiaa.org/ >
-    au < releasing ; 2021 ; 9781624106385 ;  ; 9781624106385 ; Recommended Practice for Code Verification in Computational Fluid Dynamics (AIAA R-141-2021) (9781624106385) ; https://arc.aiaa.org/ >
-    au < releasing ; 2021 ; 9781624106231 ;  ; 9781624106231 ; Recommended Practice: When Flight Modelling Is Used to Reduce Flight Testing Supporting Aircraft Certification (AIAA R-154-2021) (9781624106231) ; https://arc.aiaa.org/ >
-    au < releasing ; 2022 ; 9781624107009 ;  ; 9781624107009 ; Guide to Lithium Battery Safety for Space Applications (AIAA G-136-2022) (9781624107009) ; https://arc.aiaa.org/ >
+    au < released ; 2013 ; 9781624102462 ;  ; 9781624102462 ; Standard: Low Earth Orbit Spacecraft Charging Design Standard Requirement and Associated Handbook (ANSI/AIAA S-115-2013(2017)) (9781624102462) ; https://arc.aiaa.org/ >
+    au < released ; 2013 ; 9781624102455 ;  ; 9781624102455 ; Standard: Qualification and Quality Requirements for Electrical Components on Space Solar Panels (AIAA S-112A-2013) (9781624102455) ; https://arc.aiaa.org/ >
+    au < released ; 2014 ; 9781624102707 ;  ; 9781624102707 ; Guide: Guide to Reference and Standard Ionosphere Models (ANSI_AIAA_G-034A-2014(2019)) (9781624102707) ; https://arc.aiaa.org/ >
+    au < released ; 2014 ; 9781624102806 ;  ; 9781624102806 ; Standard: Qualification and Quality Requirements for Space Solar Cells (AIAA S-111A-2014) (9781624102806) ; https://arc.aiaa.org/ >
+    au < released ; 2015 ; 9781624103025 ;  ; 9781624103025 ; Guide: Terrestrial Environment Guidelines for Use in Aerospace Vehicle Development (AIAA G-140-2015) (9781624103025) ; https://arc.aiaa.org/ >
+    au < released ; 2015 ; 9781624103742 ;  ; 9781624103742 ; Standard: Aerodynamic Decelerator and Parachute Drawings (ANSI/AIAA S-017B-2015(2019)) (9781624103742) ; https://arc.aiaa.org/ >
+    au < released ; 2015 ; 9781624103773 ;  ; 9781624103773 ; Standard: Capability-Based Product Failure Mode, Effects and Criticality Analysis (FMECA) Requirements (ANSI/AIAA S-102.2.4-2015) (9781624103773) ; https://arc.aiaa.org/ >
+    au < released ; 2015 ; 9781624103858 ;  ; 9781624103858 ; Standard: Mass Properties Control for Space Systems (ANSI/AIAA S-120A-2015(2019)) (9781624103858) ; https://arc.aiaa.org/ >
+    au < released ; 2016 ; 9781624104602 ;  ; 9781624104602 ; Standard/Handbook for Multipactor Breakdown Prevention in Spacecraft Components (ANSI/AIAA S-142-2016) (9781624104602) ; https://arc.aiaa.org/ >
+    au < released ; 2016 ; 9781624104619 ;  ; 9781624104619 ; Standard: Criteria for Explosive Systems and Devices on Space and Launch Vehicles (AIAA S-113A-2016) (9781624104619) ; https://arc.aiaa.org/ >
+    au < released ; 2016 ; 9781624104626 ;  ; 9781624104626 ; Standard: Occupant-Imparted Loads for Commercial Suborbital RLVs (AIAA/CSF S-143-2016) (9781624104626) ; https://arc.aiaa.org/ >
+    au < released ; 2016 ; 9781624104442 ;  ; 9781624104442 ; Standard: Space Systems Verification Program and Management Process (AIAA S-117A-2016) (9781624104442) ; https://arc.aiaa.org/ >
+    au < released ; 2017 ; 9781624105197 ;  ; 9781624105197 ; Guide to Safety of Hydrogen and Hydrogen Systems (ANSI/AIAA G-095A-2017) (9781624105197) ; https://arc.aiaa.org/ >
+    au < released ; 2017 ; 9781624105203 ;  ; 9781624105203 ; Standard: Electromagnetic Compatibility Requirements for Space Equipment and Systems (AIAA S-121A-2017) (9781624105203) ; https://arc.aiaa.org/ >
+    au < released ; 2018 ; 9781624105487 ;  ; 9781624105487 ; Guide to the Preparation of Operational Concept Documents (ANSI/AIAA G-043B-2018) (9781624105487) ; https://arc.aiaa.org/ >
+    au < released ; 2018 ; 9781624105425 ;  ; 9781624105425 ; Standard: Space Systems‚ÄîComposite Overwrapped Pressure Vessels (ANSI/AIAA S-081B-2018) (9781624105425) ; https://arc.aiaa.org/ >
+    au < released ; 2018 ; 9781624105418 ;  ; 9781624105418 ; Standard: Space Systems‚ÄîMetallic Pressure Vessels, Pressurized Structures, and Pressure Components (ANSI/AIAA S-080A-2018) (9781624105418) ; https://arc.aiaa.org/ >
+    au < released ; 2019 ; 9781624105944 ;  ; 9781624105944 ; Capability-based mission assurance program ‚Äì General requirements (ANSI/AIAA S-102.0.1-2019) (9781624105944) ; https://arc.aiaa.org/ >
+    au < released ; 2019 ; 9781624105869 ;  ; 9781624105869 ; Qualification and Quality Requirements for Electrical Components on Space Solar Panels ‚Äì Amendment 1 (AIAA S-112A-2013/A1-2019) (9781624105869) ; https://arc.aiaa.org/ >
+    au < released ; 2019 ; 9781624105852 ;  ; 9781624105852 ; Qualification and Quality Requirements for Space Solar Cells ‚Äì Amendment 1 (AIAA S-111A-2014/A1-2019) (9781624105852) ; https://arc.aiaa.org/ >
+    au < released ; 2020 ; 9781624106019 ;  ; 9781624106019 ; Calibration and Use of Internal Strain-Gage Balances with Application to Wind Tunnel Testing (AIAA R-091A-2020) (9781624106019) ; https://arc.aiaa.org/ >
+    au < released ; 2020 ; 9781624105975 ;  ; 9781624105975 ; Dual Flow Reference Nozzles for Verification of Sub-Scale Thrust and Airflow Test Rigs: Dual Separate Flow Reference (DSFR) and Dual Mixed Flow Reference (DMFR) (AIAA R-146-2020) (9781624105975) ; https://arc.aiaa.org/ >
+    au < released ; 2020 ; 9781624106132 ;  ; 9781624106132 ; Moving Mechanical Assemblies for Space and Launch Vehicles (AIAA S-114A-2020) (9781624106132) ; https://arc.aiaa.org/ >
+    au < released ; 2021 ; 9781624106286 ;  ; 9781624106286 ; Human Spaceflight: Spacecraft Architecture and Systems Engineering Ontology (ANSI/AIAA S-153-2021) (9781624106286) ; https://arc.aiaa.org/ >
+    au < released ; 2021 ; 9781624106385 ;  ; 9781624106385 ; Recommended Practice for Code Verification in Computational Fluid Dynamics (AIAA R-141-2021) (9781624106385) ; https://arc.aiaa.org/ >
+    au < released ; 2021 ; 9781624106231 ;  ; 9781624106231 ; Recommended Practice: When Flight Modelling Is Used to Reduce Flight Testing Supporting Aircraft Certification (AIAA R-154-2021) (9781624106231) ; https://arc.aiaa.org/ >
+    au < released ; 2022 ; 9781624107009 ;  ; 9781624107009 ; Guide to Lithium Battery Safety for Space Applications (AIAA G-136-2022) (9781624107009) ; https://arc.aiaa.org/ >
     au < manifest ; 2023 ; 9781624107061 ;  ; 9781624107061 ; Guide: Space Systems ‚Äî Composite Overwrapped Pressure Vessels with a Plastic Liner (AIAA G-082-2022) (9781624107061) ; https://arc.aiaa.org/ >
 
  }

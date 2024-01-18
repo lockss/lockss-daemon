@@ -3183,12 +3183,12 @@
       comment[years] = Published 2017-present
       param[journal_code] = qm
 
-      au < releasing ; 2017 ; Materials Chemistry Frontiers Volume 1 ; 1 ; 2017 ; https://pubs.rsc.org/ >
-      au < releasing ; 2018 ; Materials Chemistry Frontiers Volume 2 ; 2 ; 2018 ; https://pubs.rsc.org/ >
-      au < releasing ; 2019 ; Materials Chemistry Frontiers Volume 3 ; 3 ; 2019 ; https://pubs.rsc.org/ >
-      au < releasing ; 2020 ; Materials Chemistry Frontiers Volume 4 ; 4 ; 2020 ; https://pubs.rsc.org/ >
-      au < releasing ; 2021 ; Materials Chemistry Frontiers Volume 5 ; 5 ; 2021 ; https://pubs.rsc.org/ >
-      au < releasing ; 2022 ; Materials Chemistry Frontiers Volume 6 ; 6 ; 2022 ; https://pubs.rsc.org/ >
+      au < released ; 2017 ; Materials Chemistry Frontiers Volume 1 ; 1 ; 2017 ; https://pubs.rsc.org/ >
+      au < released ; 2018 ; Materials Chemistry Frontiers Volume 2 ; 2 ; 2018 ; https://pubs.rsc.org/ >
+      au < released ; 2019 ; Materials Chemistry Frontiers Volume 3 ; 3 ; 2019 ; https://pubs.rsc.org/ >
+      au < released ; 2020 ; Materials Chemistry Frontiers Volume 4 ; 4 ; 2020 ; https://pubs.rsc.org/ >
+      au < released ; 2021 ; Materials Chemistry Frontiers Volume 5 ; 5 ; 2021 ; https://pubs.rsc.org/ >
+      au < released ; 2022 ; Materials Chemistry Frontiers Volume 6 ; 6 ; 2022 ; https://pubs.rsc.org/ >
       au < manifest ; 2023 ; Materials Chemistry Frontiers Volume 7 ; 7 ; 2023 ; https://pubs.rsc.org/ >
       au < manifest ; 2024 ; Materials Chemistry Frontiers Volume 8 ; 8 ; 2024 ; https://pubs.rsc.org/ >
 
@@ -3205,11 +3205,11 @@
       param[journal_code] = mo
       #journal changed its name in 2018 from 'Molecular BioSystems'
 
-      au < releasing ; 2018 ; Molecular Omics Volume 14 ; 14 ; 2018 ; https://pubs.rsc.org/ >
-      au < releasing ; 2019 ; Molecular Omics Volume 15 ; 15 ; 2019 ; https://pubs.rsc.org/ >
-      au < releasing ; 2020 ; Molecular Omics Volume 16 ; 16 ; 2020 ; https://pubs.rsc.org/ >
-      au < releasing ; 2021 ; Molecular Omics Volume 17 ; 17 ; 2021 ; https://pubs.rsc.org/ >
-      au < releasing ; 2022 ; Molecular Omics Volume 18 ; 18 ; 2022 ; https://pubs.rsc.org/ >
+      au < released ; 2018 ; Molecular Omics Volume 14 ; 14 ; 2018 ; https://pubs.rsc.org/ >
+      au < released ; 2019 ; Molecular Omics Volume 15 ; 15 ; 2019 ; https://pubs.rsc.org/ >
+      au < released ; 2020 ; Molecular Omics Volume 16 ; 16 ; 2020 ; https://pubs.rsc.org/ >
+      au < released ; 2021 ; Molecular Omics Volume 17 ; 17 ; 2021 ; https://pubs.rsc.org/ >
+      au < released ; 2022 ; Molecular Omics Volume 18 ; 18 ; 2022 ; https://pubs.rsc.org/ >
       au < manifest ; 2023 ; Molecular Omics Volume 19 ; 19 ; 2023 ; https://pubs.rsc.org/ >
       au < manifest ; 2024 ; Molecular Omics Volume 20 ; 20 ; 2024 ; https://pubs.rsc.org/ >
 
@@ -3225,10 +3225,10 @@
       comment[years] = Published 2019-present
       param[journal_code] = na
 
-      au < releasing ; 2019 ; Nanoscale Advances Volume 1 ; 1 ; 2019 ; https://pubs.rsc.org/ >
-      au < releasing ; 2020 ; Nanoscale Advances Volume 2 ; 2 ; 2020 ; https://pubs.rsc.org/ >
-      au < releasing ; 2021 ; Nanoscale Advances Volume 3 ; 3 ; 2021 ; https://pubs.rsc.org/ >
-      au < releasing ; 2022 ; Nanoscale Advances Volume 4 ; 4 ; 2022 ; https://pubs.rsc.org/ >
+      au < released ; 2019 ; Nanoscale Advances Volume 1 ; 1 ; 2019 ; https://pubs.rsc.org/ >
+      au < released ; 2020 ; Nanoscale Advances Volume 2 ; 2 ; 2020 ; https://pubs.rsc.org/ >
+      au < released ; 2021 ; Nanoscale Advances Volume 3 ; 3 ; 2021 ; https://pubs.rsc.org/ >
+      au < released ; 2022 ; Nanoscale Advances Volume 4 ; 4 ; 2022 ; https://pubs.rsc.org/ >
       au < manifest ; 2023 ; Nanoscale Advances Volume 5 ; 5 ; 2023 ; https://pubs.rsc.org/ >
       au < manifest ; 2024 ; Nanoscale Advances Volume 6 ; 6 ; 2024 ; https://pubs.rsc.org/ >
 
@@ -3244,9 +3244,9 @@
       comment[years] = Published 2020-present
       param[journal_code] = cb
 
-      au < releasing ; 2020 ; RSC Chemical Biology Volume 1 ; 1 ; 2020 ; https://pubs.rsc.org/ >
-      au < releasing ; 2021 ; RSC Chemical Biology Volume 2 ; 2 ; 2021 ; https://pubs.rsc.org/ >
-      au < releasing ; 2022 ; RSC Chemical Biology Volume 3 ; 3 ; 2022 ; https://pubs.rsc.org/ >
+      au < released ; 2020 ; RSC Chemical Biology Volume 1 ; 1 ; 2020 ; https://pubs.rsc.org/ >
+      au < released ; 2021 ; RSC Chemical Biology Volume 2 ; 2 ; 2021 ; https://pubs.rsc.org/ >
+      au < released ; 2022 ; RSC Chemical Biology Volume 3 ; 3 ; 2022 ; https://pubs.rsc.org/ >
       au < manifest ; 2023 ; RSC Chemical Biology Volume 4 ; 4 ; 2023 ; https://pubs.rsc.org/ >
       au < manifest ; 2024 ; RSC Chemical Biology Volume 5 ; 5 ; 2024 ; https://pubs.rsc.org/ >
 
@@ -3262,9 +3262,9 @@
       comment[years] = Published 2020-present
       param[journal_code] = ma
 
-      au < releasing ; 2020 ; Materials Advances Volume 1 ; 1 ; 2020 ; https://pubs.rsc.org/ >
-      au < releasing ; 2021 ; Materials Advances Volume 2 ; 2 ; 2021 ; https://pubs.rsc.org/ >
-      au < releasing ; 2022 ; Materials Advances Volume 3 ; 3 ; 2022 ; https://pubs.rsc.org/ >
+      au < released ; 2020 ; Materials Advances Volume 1 ; 1 ; 2020 ; https://pubs.rsc.org/ >
+      au < released ; 2021 ; Materials Advances Volume 2 ; 2 ; 2021 ; https://pubs.rsc.org/ >
+      au < released ; 2022 ; Materials Advances Volume 3 ; 3 ; 2022 ; https://pubs.rsc.org/ >
       au < manifest ; 2023 ; Materials Advances Volume 4 ; 4 ; 2023 ; https://pubs.rsc.org/ >
       au < manifest ; 2024 ; Materials Advances Volume 5 ; 5 ; 2024 ; https://pubs.rsc.org/ >
 
@@ -3279,8 +3279,8 @@
       comment[years] = Published 2021-present
       param[journal_code] = ea
 
-      au < releasing ; 2021 ; Environmental Science: Atmospheres Volume 1 ; 1 ; 2021 ; https://pubs.rsc.org/ >
-      au < releasing ; 2022 ; Environmental Science: Atmospheres Volume 2 ; 2 ; 2022 ; https://pubs.rsc.org/ >
+      au < released ; 2021 ; Environmental Science: Atmospheres Volume 1 ; 1 ; 2021 ; https://pubs.rsc.org/ >
+      au < released ; 2022 ; Environmental Science: Atmospheres Volume 2 ; 2 ; 2022 ; https://pubs.rsc.org/ >
       au < manifest ; 2023 ; Environmental Science: Atmospheres Volume 3 ; 3 ; 2023 ; https://pubs.rsc.org/ >
       au < expected ; 2024 ; Environmental Science: Atmospheres Volume 4 ; 4 ; 2024 ; https://pubs.rsc.org/ >
 
@@ -3296,7 +3296,7 @@
       comment[years] = Published 2022-present
       param[journal_code] = dd
 
-      au < releasing ; 2022 ; Digital Discovery Volume 1 ; 1 ; 2022 ; https://pubs.rsc.org/ >
+      au < released ; 2022 ; Digital Discovery Volume 1 ; 1 ; 2022 ; https://pubs.rsc.org/ >
       au < manifest ; 2023 ; Digital Discovery Volume 2 ; 2 ; 2023 ; https://pubs.rsc.org/ >
       au < expected ; 2024 ; Digital Discovery Volume 3 ; 3 ; 2024 ; https://pubs.rsc.org/ >
 
@@ -3312,7 +3312,7 @@
       comment[years] = Published 2022-present
       param[journal_code] = sd
 
-      au < releasing ; 2022 ; Sensors & Diagnostics Volume 1 ; 1 ; 2022 ; https://pubs.rsc.org/ >
+      au < released ; 2022 ; Sensors & Diagnostics Volume 1 ; 1 ; 2022 ; https://pubs.rsc.org/ >
       au < manifest ; 2023 ; Sensors & Diagnostics Volume 2 ; 2 ; 2023 ; https://pubs.rsc.org/ >
       au < expected ; 2024 ; Sensors & Diagnostics Volume 3 ; 3 ; 2024 ; https://pubs.rsc.org/ >
 
@@ -3328,7 +3328,7 @@
       comment[years] = Published 2022-present
       param[journal_code] = va
 
-      au < releasing ; 2022 ; Environmental Science: Advances Volume 1 ; 1 ; 2022 ; https://pubs.rsc.org/ >
+      au < released ; 2022 ; Environmental Science: Advances Volume 1 ; 1 ; 2022 ; https://pubs.rsc.org/ >
       au < manifest ; 2023 ; Environmental Science: Advances Volume 2 ; 2 ; 2023 ; https://pubs.rsc.org/ >
       au < manifest ; 2024 ; Environmental Science: Advances Volume 3 ; 3 ; 2024 ; https://pubs.rsc.org/ >
 
@@ -3344,7 +3344,7 @@
       comment[years] = Published 2022-present
       param[journal_code] = ya
 
-      au < releasing ; 2022 ; Energy Advances Volume 1 ; 1 ; 2022 ; https://pubs.rsc.org/ >
+      au < released ; 2022 ; Energy Advances Volume 1 ; 1 ; 2022 ; https://pubs.rsc.org/ >
       au < manifest ; 2023 ; Energy Advances Volume 2 ; 2 ; 2023 ; https://pubs.rsc.org/ >
       au < expected ; 2024 ; Energy Advances Volume 3 ; 3 ; 2024 ; https://pubs.rsc.org/ >
 
