@@ -31,19 +31,20 @@ POSSIBILITY OF SUCH DAMAGE.
 */
 
 package org.lockss.plugin.atypon.sage;
+import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.HttpHttpsParamUrlNormalizer;
+import org.lockss.plugin.atypon.BaseAtyponHttpHttpsUrlNormalizer;
 import org.lockss.util.Logger;
 
-public class SageAtyponUrlNormalizer extends HttpHttpsParamUrlNormalizer {
+public class SageAtyponUrlNormalizer extends BaseAtyponHttpHttpsUrlNormalizer {
   protected static Logger log = Logger.getLogger(SageAtyponUrlNormalizer.class);
 
   @Override
-  public String normalizeUrl(String url, ArchivalUnit au) {
+  public String normalizeUrl(String url, ArchivalUnit au) throws PluginException{
     if(url.contains("?download=true") && url.contains("doi/pdf")){
         int qmark = url.indexOf("?download=true");
         url = url.substring(0,qmark);
     }
-    return url;
+    return super.normalizeUrl(url, au);
   }
 }

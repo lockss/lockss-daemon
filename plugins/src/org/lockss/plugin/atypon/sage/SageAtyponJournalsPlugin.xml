@@ -75,7 +75,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlConsumerFactory</string>
+    <string>org.lockss.plugin.atypon.sage.SageAtyponHttpToHttpsUrlConsumerFactory</string>
   </entry>
   <!-- end changes for https conversion -->
   <entry>
