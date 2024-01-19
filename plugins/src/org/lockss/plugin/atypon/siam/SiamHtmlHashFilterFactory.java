@@ -59,9 +59,10 @@ public class SiamHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "class", "citation tocCitation"),
         // at top of article, list of types of format of the article will also have "Cited by" anchor once the article has been cited
         HtmlNodeFilters.tagWithAttribute("ul", "id", "articleToolList"),        
-
         // proactive removal of possible ad location although it's currently empty
         HtmlNodeFilters.tagWithAttribute("div", "class", "mainAd"),  
+        
+        HtmlNodeFilters.tagWithAttribute("div","class", "skip"),
     };
 
     // super.createFilteredInputStream adds siamfilter to the baseAtyponFilters

@@ -37,6 +37,14 @@ import org.lockss.plugin.UrlConsumer;
 import org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlConsumerFactory;
 import org.lockss.util.Logger;
 
+/* For Sage publications, there are URLs that have /reader/ in its structure but
+ * it redirect to an /epdf/ link and then redirects to a /pdf/ link. 
+ * Example: http://journals.sagepub.com/doi/reader/10.5301/GTND.2016.15860
+ * Therefore, we need to override the default atypon URL consumer factory 
+ * which is currently storing the pdf link at the reader link and 
+ * follow the redirects to get the pdf link which is what we use for article metadata. 
+ */
+
 public class SageAtyponHttpToHttpsUrlConsumerFactory extends BaseAtyponHttpToHttpsUrlConsumerFactory {
     protected static Logger log = Logger.getLogger(SageAtyponHttpToHttpsUrlConsumerFactory.class);
 
@@ -52,9 +60,12 @@ public class SageAtyponHttpToHttpsUrlConsumerFactory extends BaseAtyponHttpToHtt
 
         @Override
         public boolean shouldStoreAtOrigUrl() {
+            //log.debug3(fud.origUrl);
             if(fud.origUrl.contains("doi/reader/")){
+                //log.debug3("This is a reader link.");
                 return false;
             }else{
+                //log.debug3("This is not a reader link");
                 return super.shouldStoreAtOrigUrl();
             }
         }
