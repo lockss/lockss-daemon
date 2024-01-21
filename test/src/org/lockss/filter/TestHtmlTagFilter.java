@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2024 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -231,6 +227,13 @@ public class TestHtmlTagFilter extends LockssTestCase {
   public void testNoEndTagDefault() throws IOException {
     String content = "This "+startTag1+"is test content";
     String expectedContent = "This ";
+    assertFilterString(expectedContent, content, tagPair1);
+  }
+
+  public void testNoEndTagParamDefault() throws IOException {
+    ConfigurationUtil.addFromArgs(PARAM_THROW_IF_NO_END_TAG, "true");
+    String content = "This "+startTag1+"is test content";
+    String expectedContent = "This ";
     try {
       assertFilterString(expectedContent, content, tagPair1);
       fail("Trying to filter content with missing end tag should throw");
@@ -240,28 +243,10 @@ public class TestHtmlTagFilter extends LockssTestCase {
   }
 
   public void testNoEndTagParamFalse() throws IOException {
-    Properties p = new Properties();
-    p.setProperty(PARAM_THROW_IF_NO_END_TAG, "false");
-    ConfigurationUtil.setCurrentConfigFromProps(p);
-
+    ConfigurationUtil.addFromArgs(PARAM_THROW_IF_NO_END_TAG, "false");
     String content = "This "+startTag1+"is test content";
     String expectedContent = "This ";
     assertFilterString(expectedContent, content, tagPair1);
-  }
-
-  public void testNoEndTagParamTrue() throws IOException {
-    Properties p = new Properties();
-    p.setProperty(PARAM_THROW_IF_NO_END_TAG, "true");
-    ConfigurationUtil.setCurrentConfigFromProps(p);
-
-    String content = "This "+startTag1+"is test content";
-    String expectedContent = "This ";
-    try {
-      assertFilterString(expectedContent, content, tagPair1);
-      fail("Trying to filter content with missing end tag should throw");
-    } catch (HtmlTagFilter.MissingEndTagException ex) {
-      //expected
-    }
   }
 
   public void testFiltersSingleTagsNestingVariant1() throws IOException {
