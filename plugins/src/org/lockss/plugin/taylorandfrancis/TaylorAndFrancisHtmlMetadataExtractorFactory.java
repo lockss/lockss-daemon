@@ -83,10 +83,11 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     String foundVolume = am.get(MetadataField.FIELD_VOLUME);
     // If we got neither, don't emit
     isInAu = !(StringUtils.isEmpty(foundJournalTitle) && StringUtils.isEmpty(foundVolume));
-
     // Do Volume comparison first, it's simpler
     if (isInAu && !(StringUtils.isEmpty(foundVolume))) {
+      //log.debug3("AU_Volume: " + AU_volume + " and found Volume: " + foundVolume);
       isInAu =  ( (AU_volume != null) && (AU_volume.equals(foundVolume)));
+      //log.debug3("isInAu: "+ isInAu);
     }
 
     ////Decided on team aggreed on Oct/2021, no longer check tdb title vs metadata title
