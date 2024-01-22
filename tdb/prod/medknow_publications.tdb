@@ -4969,9 +4969,10 @@
       param[journal_issn] = 2773-2398
       #Moved from http://www.actnjournal.com/
       #Moved to https://www.bnmjournal.com/
+      #move to LWW in 2024, moved https://journals.lww.com/bnam/
 
-      au < released ; 2022 ; Brain Network and Modulation Volume 1 ; 2022 ; 1 ; https://www.bnmjournal.com/ >
-      au < manifest ; 2023 ; Brain Network and Modulation Volume 2 ; 2023 ; 2 ; https://www.bnmjournal.com/ >
+      au < down ; 2022 ; Brain Network and Modulation Volume 1 ; 2022 ; 1 ; https://www.bnmjournal.com/ >
+      au < doNotProcess ; 2023 ; Brain Network and Modulation Volume 2 ; 2023 ; 2 ; https://www.bnmjournal.com/ >
 
   }
 
@@ -10562,17 +10563,18 @@
 
       param[journal_issn] = 1011-4564
 #      param[base_url] = http://www.jmedscindmc.com/
+      #move to LWW in 2024, moved https://journals.lww.com/JOMS/
 
-      au < released ; 2014 ; Journal of Medical Sciences Volume 34 ; 2014 ; 34 ; https://www.jmedscindmc.com/ >
-      au < released ; 2015 ; Journal of Medical Sciences Volume 35 ; 2015 ; 35 ; https://www.jmedscindmc.com/ >
-      au < released ; 2016 ; Journal of Medical Sciences Volume 36 ; 2016 ; 36 ; https://www.jmedscindmc.com/ >
-      au < released ; 2017 ; Journal of Medical Sciences Volume 37 ; 2017 ; 37 ; http://www.jmedscindmc.com/ >
-      au < released ; 2018 ; Journal of Medical Sciences Volume 38 ; 2018 ; 38 ; https://www.jmedscindmc.com/ >
-      au < released ; 2019 ; Journal of Medical Sciences Volume 39 ; 2019 ; 39 ; https://www.jmedscindmc.com/ >
-      au < released ; 2020 ; Journal of Medical Sciences Volume 40 ; 2020 ; 40 ; https://www.jmedscindmc.com/ >
-      au < released ; 2021 ; Journal of Medical Sciences Volume 41 ; 2021 ; 41 ; https://www.jmedscindmc.com/ >
-      au < released ; 2022 ; Journal of Medical Sciences Volume 42 ; 2022 ; 42 ; https://www.jmedscindmc.com/ >
-      au < manifest ; 2023 ; Journal of Medical Sciences Volume 43 ; 2023 ; 43 ; https://www.jmedscindmc.com/ >
+      au < down ; 2014 ; Journal of Medical Sciences Volume 34 ; 2014 ; 34 ; https://www.jmedscindmc.com/ >
+      au < down ; 2015 ; Journal of Medical Sciences Volume 35 ; 2015 ; 35 ; https://www.jmedscindmc.com/ >
+      au < down ; 2016 ; Journal of Medical Sciences Volume 36 ; 2016 ; 36 ; https://www.jmedscindmc.com/ >
+      au < down ; 2017 ; Journal of Medical Sciences Volume 37 ; 2017 ; 37 ; http://www.jmedscindmc.com/ >
+      au < down ; 2018 ; Journal of Medical Sciences Volume 38 ; 2018 ; 38 ; https://www.jmedscindmc.com/ >
+      au < down ; 2019 ; Journal of Medical Sciences Volume 39 ; 2019 ; 39 ; https://www.jmedscindmc.com/ >
+      au < down ; 2020 ; Journal of Medical Sciences Volume 40 ; 2020 ; 40 ; https://www.jmedscindmc.com/ >
+      au < down ; 2021 ; Journal of Medical Sciences Volume 41 ; 2021 ; 41 ; https://www.jmedscindmc.com/ >
+      au < down ; 2022 ; Journal of Medical Sciences Volume 42 ; 2022 ; 42 ; https://www.jmedscindmc.com/ >
+      au < doNotProcess ; 2023 ; Journal of Medical Sciences Volume 43 ; 2023 ; 43 ; https://www.jmedscindmc.com/ >
 
   }
 
@@ -11344,13 +11346,14 @@
 
       param[journal_issn] = 1879-5226
 #      param[base_url] = http://www.e-urol-sci.com/
+      #move to LWW in 2024, moved https://journals.lww.com/ursc/
 
       au < down ; 2018 ; Urological Science Volume 29 ; 2018 ; 29 ; https://www.e-urol-sci.com/ >
-      au < released ; 2019 ; Urological Science Volume 30 ; 2019 ; 30 ; https://www.e-urol-sci.com/ >
-      au < released ; 2020 ; Urological Science Volume 31 ; 2020 ; 31 ; https://www.e-urol-sci.com/ >
-      au < released ; 2021 ; Urological Science Volume 32 ; 2021 ; 32 ; https://www.e-urol-sci.com/ >
-      au < released ; 2022 ; Urological Science Volume 33 ; 2022 ; 33 ; https://www.e-urol-sci.com/ >
-      au < manifest ; 2023 ; Urological Science Volume 34 ; 2023 ; 34 ; https://www.e-urol-sci.com/ >
+      au < down ; 2019 ; Urological Science Volume 30 ; 2019 ; 30 ; https://www.e-urol-sci.com/ >
+      au < down ; 2020 ; Urological Science Volume 31 ; 2020 ; 31 ; https://www.e-urol-sci.com/ >
+      au < down ; 2021 ; Urological Science Volume 32 ; 2021 ; 32 ; https://www.e-urol-sci.com/ >
+      au < down ; 2022 ; Urological Science Volume 33 ; 2022 ; 33 ; https://www.e-urol-sci.com/ >
+      au < doNotProcess ; 2023 ; Urological Science Volume 34 ; 2023 ; 34 ; https://www.e-urol-sci.com/ >
 
   }
 
@@ -11385,6 +11388,7 @@
 
       param[journal_issn] = 2311-8571
 #      param[base_url] = http://www.wjtcm.net/
+      #move to LWW in 2024, moved https://journals.lww.com/wtcm/
 
       au < down ; 2017 ; World Journal of Traditional Chinese Medicine Volume 3 ; 2017 ; 3 ; http://www.wjtcm.net/ >
       au < down ; 2018 ; World Journal of Traditional Chinese Medicine Volume 4 ; 2018 ; 4 ; https://www.wjtcm.net/ >
@@ -11697,12 +11701,13 @@
 
       param[journal_issn] = 0304-4920
       #param[base_url] = https://www.cjphysiology.org/
+      #move to LWW in 2024, moved https://journals.lww.com/CJOP/
 
-      au < released ; 2019 ; Chinese Journal of Physiology Volume 62 ; 2019 ; 62 ; https://www.cjphysiology.org/ >
-      au < released ; 2020 ; Chinese Journal of Physiology Volume 63 ; 2020 ; 63 ; https://www.cjphysiology.org/ >
-      au < released ; 2021 ; Chinese Journal of Physiology Volume 64 ; 2021 ; 64 ; https://www.cjphysiology.org/ >
-      au < released ; 2022 ; Chinese Journal of Physiology Volume 65 ; 2022 ; 65 ; https://www.cjphysiology.org/ >
-      au < manifest ; 2023 ; Chinese Journal of Physiology Volume 66 ; 2023 ; 66 ; https://www.cjphysiology.org/ >
+      au < down ; 2019 ; Chinese Journal of Physiology Volume 62 ; 2019 ; 62 ; https://www.cjphysiology.org/ >
+      au < down ; 2020 ; Chinese Journal of Physiology Volume 63 ; 2020 ; 63 ; https://www.cjphysiology.org/ >
+      au < down ; 2021 ; Chinese Journal of Physiology Volume 64 ; 2021 ; 64 ; https://www.cjphysiology.org/ >
+      au < down ; 2022 ; Chinese Journal of Physiology Volume 65 ; 2022 ; 65 ; https://www.cjphysiology.org/ >
+      au < doNotProcess ; 2023 ; Chinese Journal of Physiology Volume 66 ; 2023 ; 66 ; https://www.cjphysiology.org/ >
 
   }
 
