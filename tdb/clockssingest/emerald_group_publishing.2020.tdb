@@ -3,12 +3,13 @@
   publisher <
     name = Emerald Group Publishing ;
     #info[back] = 1899 ;
-    info[back] = 1990 ;
+    info[back] = 1994 ;   #Typically no pdfs before 1994
     info[contract] = 2015 ;
     info[tester] = 8 ;
     info[poller] = 3
   >
-
+  
+  #Typically no pdfs before 1994
   plugin = org.lockss.plugin.emerald.ClockssEmerald2020Plugin
   param[base_url] = https://www.emerald.com/
   implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
@@ -2163,8 +2164,8 @@
     param[journal_issn] = 0965-3562
     comment[journal_id] = dpm
 
-    au < manifest ; exists ; 1992 ; Disaster Prevention and Management Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1993 ; Disaster Prevention and Management Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 1992 ; Disaster Prevention and Management Volume 1 ; 1 ; > #Passes manifest page checking.
+    au < doNotProcess ; exists ; 1993 ; Disaster Prevention and Management Volume 2 ; 2 ; > #Passes manifest page checking.
     au < frozen ; exists ; 1994 ; Disaster Prevention and Management Volume 3 ; 3 ; >
     au < finished ; manifest ; 1995 ; Disaster Prevention and Management Volume 4 ; 4 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Disaster Prevention and Management Volume 5 ; 5 ; reingest5.clockss.org:8082 >
@@ -2478,7 +2479,7 @@
     comment[journal_id] = eio
     comment[continued_by] = 1463-4449
 
-    au < manifest ; exists ; 1993 ; Empowerment in Organizations Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 1993 ; Empowerment in Organizations Volume 1 ; 1 ; >
     au < frozen ; exists ; 1994 ; Empowerment in Organizations Volume 2 ; 2 ; >
     au < finished ; crawling ; 1995 ; Empowerment in Organizations Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1996 ; Empowerment in Organizations Volume 4 ; 4 ; reingest4.clockss.org:8082 >
@@ -2912,11 +2913,11 @@
     # online from 1989
     comment[merged_into] = 1362-0436
 
-    au < manifest ; exists ; 1989 ; Executive Development Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1990 ; Executive Development Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1991 ; Executive Development Volume 4 ; 4 ; >
-    au < manifest ; exists ; 1992 ; Executive Development Volume 5 ; 5 ; >
-    au < manifest ; exists ; 1993 ; Executive Development Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 1989 ; Executive Development Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 1990 ; Executive Development Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 1991 ; Executive Development Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 1992 ; Executive Development Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 1993 ; Executive Development Volume 6 ; 6 ; >
     au < frozen ; exists ; 1994 ; Executive Development Volume 7 ; 7 ; >
     au < finished ; crawling ; 1995 ; Executive Development Volume 8 ; 8 ; reingest2.clockss.org:8085 >
 
@@ -3154,8 +3155,8 @@
     # online from 1992
     comment[merged_into] = 0268-9235
 
-    au < manifest ; exists ; 1992 ; Health Manpower Management Volume 18 ; 18 ; >
-    au < manifest ; exists ; 1993 ; Health Manpower Management Volume 19 ; 19 ; >
+    au < doNotProcess ; exists ; 1992 ; Health Manpower Management Volume 18 ; 18 ; >
+    au < doNotProcess ; exists ; 1993 ; Health Manpower Management Volume 19 ; 19 ; >
     au < frozen ; exists ; 1994 ; Health Manpower Management Volume 20 ; 20 ; >
     au < finished ; crawling ; 1995 ; Health Manpower Management Volume 21 ; 21 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1996 ; Health Manpower Management Volume 22 ; 22 ; reingest4.clockss.org:8082 >
@@ -4111,10 +4112,10 @@
     #  online from 1990
     comment[continued_by] = 1362-0436
 
-    au < manifest ; exists ; 1990 ; International Journal of Career Management Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1991 ; International Journal of Career Management Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1992 ; International Journal of Career Management Volume 4 ; 4 ; >
-    au < manifest ; exists ; 1993 ; International Journal of Career Management Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 1990 ; International Journal of Career Management Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 1991 ; International Journal of Career Management Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 1992 ; International Journal of Career Management Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 1993 ; International Journal of Career Management Volume 5 ; 5 ; >
     au < frozen ; exists ; 1994 ; International Journal of Career Management Volume 6 ; 6 ; >
     au < finished ; manifest ; 1995 ; International Journal of Career Management Volume 7 ; 7 ; reingest5.clockss.org:8082 >
 
@@ -8805,10 +8806,10 @@
     comment[journal_id] = jpf
     comment[merged_into] = 0960-2712
 
-    au < manifest ; exists ; 1990 ; Journal of Property Finance Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1991 ; Journal of Property Finance Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1992 ; Journal of Property Finance Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1993 ; Journal of Property Finance Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 1990 ; Journal of Property Finance Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 1991 ; Journal of Property Finance Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 1992 ; Journal of Property Finance Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 1993 ; Journal of Property Finance Volume 4 ; 4 ; >
     au < frozen ; exists ; 1994 ; Journal of Property Finance Volume 5 ; 5 ; >
     au < finished ; manifest ; 1995 ; Journal of Property Finance Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; Journal of Property Finance Volume 7 ; 7 ; reingest4.clockss.org:8082 >
@@ -9646,7 +9647,7 @@
     comment[journal_id] = lcd
     comment[merged_into] = 0143-5124
 
-    au < manifest ; exists ; 1993 ; Librarian Career Development Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 1993 ; Librarian Career Development Volume 1 ; 1 ; >
     au < frozen ; exists ; 1994 ; Librarian Career Development Volume 2 ; 2 ; >
     au < finished ; manifest ; 1995 ; Librarian Career Development Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Librarian Career Development Volume 4 ; 4 ; reingest2.clockss.org:8085 >
@@ -10052,8 +10053,8 @@
     # online from 1992
     comment[merged_into] = 0967-0734
 
-    au < manifest ; exists ; 1992 ; Management Development Review Volume 5 ; 5 ; >
-    au < manifest ; exists ; 1993 ; Management Development Review Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 1992 ; Management Development Review Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 1993 ; Management Development Review Volume 6 ; 6 ; >
     au < frozen ; exists ; 1994 ; Management Development Review Volume 7 ; 7 ; >
     au < finished ; manifest ; 1995 ; Management Development Review Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; Management Development Review Volume 9 ; 9 ; reingest4.clockss.org:8082 >
@@ -13229,7 +13230,7 @@
     comment[journal_id] = tfq
     comment[merged_into] = 0954-478X
 
-    au < manifest ; exists ; 1993 ; Training for Quality Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 1993 ; Training for Quality Volume 1 ; 1 ; >
     au < frozen ; exists ; 1994 ; Training for Quality Volume 2 ; 2 ; >
     au < finished ; manifest ; 1995 ; Training for Quality Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Training for Quality Volume 4 ; 4 ; reingest5.clockss.org:8082 >
@@ -15092,25 +15093,26 @@
     >
 
     param[journal_issn] = 1229-988X
+    #No pdfs till V28
 
-    au < manifest ; exists ; 2002 ; Journal of Derivatives and Quantitative Studies Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2003 ; Journal of Derivatives and Quantitative Studies Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2004 ; Journal of Derivatives and Quantitative Studies Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2005 ; Journal of Derivatives and Quantitative Studies Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2006 ; Journal of Derivatives and Quantitative Studies Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2007 ; Journal of Derivatives and Quantitative Studies Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2008 ; Journal of Derivatives and Quantitative Studies Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2009 ; Journal of Derivatives and Quantitative Studies Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2010 ; Journal of Derivatives and Quantitative Studies Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2011 ; Journal of Derivatives and Quantitative Studies Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2012 ; Journal of Derivatives and Quantitative Studies Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2013 ; Journal of Derivatives and Quantitative Studies Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2014 ; Journal of Derivatives and Quantitative Studies Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2015 ; Journal of Derivatives and Quantitative Studies Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2016 ; Journal of Derivatives and Quantitative Studies Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2017 ; Journal of Derivatives and Quantitative Studies Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2018 ; Journal of Derivatives and Quantitative Studies Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2019 ; Journal of Derivatives and Quantitative Studies Volume 27 ; 27 ; >
+    au < doNotProcess ; exists ; 2002 ; Journal of Derivatives and Quantitative Studies Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 2003 ; Journal of Derivatives and Quantitative Studies Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 2004 ; Journal of Derivatives and Quantitative Studies Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 2005 ; Journal of Derivatives and Quantitative Studies Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 2006 ; Journal of Derivatives and Quantitative Studies Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 2007 ; Journal of Derivatives and Quantitative Studies Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 2008 ; Journal of Derivatives and Quantitative Studies Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 2009 ; Journal of Derivatives and Quantitative Studies Volume 17 ; 17 ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Derivatives and Quantitative Studies Volume 18 ; 18 ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Derivatives and Quantitative Studies Volume 19 ; 19 ; >
+    au < doNotProcess ; exists ; 2012 ; Journal of Derivatives and Quantitative Studies Volume 20 ; 20 ; >
+    au < doNotProcess ; exists ; 2013 ; Journal of Derivatives and Quantitative Studies Volume 21 ; 21 ; >
+    au < doNotProcess ; exists ; 2014 ; Journal of Derivatives and Quantitative Studies Volume 22 ; 22 ; >
+    au < doNotProcess ; exists ; 2015 ; Journal of Derivatives and Quantitative Studies Volume 23 ; 23 ; >
+    au < doNotProcess ; exists ; 2016 ; Journal of Derivatives and Quantitative Studies Volume 24 ; 24 ; >
+    au < doNotProcess ; exists ; 2017 ; Journal of Derivatives and Quantitative Studies Volume 25 ; 25 ; >
+    au < doNotProcess ; exists ; 2018 ; Journal of Derivatives and Quantitative Studies Volume 26 ; 26 ; >
+    au < doNotProcess ; exists ; 2019 ; Journal of Derivatives and Quantitative Studies Volume 27 ; 27 ; >
     au < finished ; manifest ; 2020 ; Journal of Derivatives and Quantitative Studies Volume 28 ; 28 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2021 ; Journal of Derivatives and Quantitative Studies Volume 29 ; 29 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Journal of Derivatives and Quantitative Studies Volume 30 ; 30 ; reingest5.clockss.org:8082 >
