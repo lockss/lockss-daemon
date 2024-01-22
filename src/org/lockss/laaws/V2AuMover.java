@@ -306,6 +306,8 @@ public class V2AuMover {
    */
   public static final String PARAM_DETAILED_STATS = PREFIX + "detailedStats";
   public static final boolean DEFAULT_DETAILED_STATS = true;
+  long dbBytesCopied;
+  long dbBytesTotal;
 
   enum UseFetchUrl {
     NONE,
@@ -1943,7 +1945,16 @@ public class V2AuMover {
 
       if (opType == OpType.CopySystemSettings) {
         sb.append(currentStatus);
-      } else {
+      }
+      else if (opType == OpType.CopyDatabase) {
+        sb.append(currentStatus);
+        sb.append("Copied");
+        sb.append(dbBytesCopied);
+        sb.append( " of");
+        sb.append(dbBytesTotal);
+        sb.append(" bytes");
+      }
+      else {
         if (!isAbort()) {
           switch (opType) {
             case CopyOnly:
@@ -1964,7 +1975,6 @@ public class V2AuMover {
 
         sb.append(", ");
         sb.append(whichAus);
-
         sb.append(" to ");
         sb.append(hostName);
         sb.append(", processed ");
