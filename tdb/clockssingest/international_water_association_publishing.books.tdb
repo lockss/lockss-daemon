@@ -838,6 +838,14 @@
     au < manifest ; exists ; 2023 ; 9781789063707 ; 9781789063714 ; Technological Solutions for Water Sustainability: Challenges & Prospects - towards a water-secure India ; ebooks/book/880/Technological-Solutions-for-Water-Sustainability ; >
     au < manifest ; exists ; 2023 ; 9781789064124 ; 9781789064124 ; Tecnologias ambientais para tratar a poluição por enxofre: Princípios e Engenharia – 2ª Edição ; ebooks/book/875/Tecnologias-ambientais-para-tratar-a-poluicao-por ; >
 
+    #Not included in the list from the publisher
+    au < manifest ; exists ; 2023 ; 9781789064797 ; 9781789064797 ; Advanced Oxidation Processes for Contaminants of Emerging Concern ; ebooks/book/887/Advanced-Oxidation-Processes-for-Contaminants-of ; >
+    au < manifest ; exists ; 2023 ; 9781789064780 ; 9781789064780 ; Wastewater-based Epidemiology at the Frontier of Global Public Health ; ebooks/book/888/Wastewater-based-Epidemiology-at-the-Frontier-of ; >
+    au < manifest ; exists ; 2023 ; 9781789064810 ; 9781789064810 ; Cutting-edge Research on the Action Plan for Prevention and Control of Emerging Contaminants in China ; ebooks/book/889/Cutting-edge-Research-on-the-Action-Plan-for ; >
+    au < manifest ; exists ; 2019 ; 9781789061185 ; 9781789061185 ; Drought Policies: Case Studies on Mega-droughts for the High Level Experts and Leaders Panel on Water and Disasters (HELP) ; ebooks/book/772/Drought-Policies-Case-Studies-on-Mega-droughts-for ; >
+    au < manifest ; exists ; 2019 ; 9781789061024 ; 9781789061024 ; Environmentally Friendly (Bio)Technologies for the Removal of Emerging Organic and Inorganic Pollutants from Water ; ebooks/book/763/Environmentally-Friendly-Bio-Technologies-for-the ; >
+    au < manifest ; exists ; 2019 ; 9781789060935 ; 9781789060935 ; Algal Technologies for Wastewater Treatment and Resource Recovery ; ebooks/book/760/Algal-Technologies-for-Wastewater-Treatment-and ; >
+
     }
     {
     param[base_url] = http://wio.iwaponline.com/
