@@ -100,6 +100,7 @@ public class SageAtyponHtmlHashFilterFactory
 		HtmlNodeFilters.tagWithAttributeRegex("div", "class", "login-form"),
 		HtmlNodeFilters.tagWithAttributeRegex("div", "class", "banner-widget__box"),
 		HtmlNodeFilters.tagWithAttributeRegex("div", "id", "emailAlertsModal"),
+		HtmlNodeFilters.tagWithAttributeRegex("div", "class", "rhs_container"),
 
 		// Toc Page: https://journals.sagepub.com/toc/jeda/14/1
 		HtmlNodeFilters.tagWithAttributeRegex("div", "class", "tocAuthors"),
