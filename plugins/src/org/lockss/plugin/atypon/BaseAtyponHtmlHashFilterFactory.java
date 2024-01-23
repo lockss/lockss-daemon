@@ -203,6 +203,10 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
 
     //https://epubs.siam.org/doi/10.1137/S0040585X97T989143 need to filter out cited by articles
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "citedBy"),
+    //removing university affiliated links
+    HtmlNodeFilters.tagWithAttribute("div", "class", "sfx-link-rep"),
+    HtmlNodeFilters.tagWithAttribute("div", "class", "core-xlink-openurl"),
+    HtmlNodeFilters.tagWithAttribute("img", "alt", "Open URL "),
 
     // A number of children add a link item "Cited By" only after the article
     // has been cited...remove the entire list item - look for text pattern

@@ -97,6 +97,9 @@ public class SageAtyponHtmlHashFilterFactory
 		HtmlNodeFilters.tagWithAttributeRegex("a", "class", "sf-back-to-top"),
 		HtmlNodeFilters.tagWithAttributeRegex("div", "class", "purchaseArea"),
 		HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "tab-nav"),
+		HtmlNodeFilters.tagWithAttributeRegex("div", "class", "login-form"),
+		HtmlNodeFilters.tagWithAttributeRegex("div", "class", "banner-widget__box"),
+		HtmlNodeFilters.tagWithAttributeRegex("div", "id", "emailAlertsModal"),
 
 		// Toc Page: https://journals.sagepub.com/toc/jeda/14/1
 		HtmlNodeFilters.tagWithAttributeRegex("div", "class", "tocAuthors"),
