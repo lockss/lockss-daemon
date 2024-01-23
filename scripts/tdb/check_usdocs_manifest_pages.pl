@@ -21,7 +21,7 @@ my $ua = LWP::UserAgent->new;
 # Cookies. Don't save cookies from run to run
     $ua->cookie_jar(HTTP::Cookies->new());
 
-#tdbout -Dc param[collection_id],year tdb/usdocspln/united_states_government_publishing_office.fdsys.tdb > tmp/list1a
+#tdbout -Dc param[collection_id],year tdb/usdocspln/united_states_government_printing_office.fdsys.tdb > tmp/list1a
 #tdbout -MTYRc param[collection_id],year tdb/usdocspln/united_states_government_publishing_office.tdb >> tmp/list1a
 #cat tmp/list1a | sort  > tmp/list1b
 #cat tmp/list1b | uniq > tmp/list1c
