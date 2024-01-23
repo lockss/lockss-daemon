@@ -88,14 +88,14 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
       For Journal of Tubulence, some years they use the year as the volume number. Thus, we need to
       find the publication year (PY) to compare to the volume found from the metadata.
     */
-    //String foundYear = am.get(MetadataField.FIELD_DATE);
+    String foundYear = am.get(MetadataField.FIELD_DATE).substring(0,4);
 
     // If we got neither, don't emit
     isInAu = !(StringUtils.isEmpty(foundJournalTitle) && StringUtils.isEmpty(foundVolume));
     // Do Volume comparison first, it's simpler
     if (isInAu && !(StringUtils.isEmpty(foundVolume))) {
       //log.debug3("AU_Volume: " + AU_volume + " and found year: "+ foundYear+ " and found Volume: " + foundVolume);
-      isInAu =  ( (AU_volume != null) && ((AU_volume.equals(foundVolume))));
+      isInAu =  ( (AU_volume != null) && ((AU_volume.equals(foundVolume)) || (AU_volume.equals(foundYear))));
       //log.debug3("isInAu: "+ isInAu);
     }
 
