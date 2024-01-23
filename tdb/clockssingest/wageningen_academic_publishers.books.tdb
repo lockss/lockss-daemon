@@ -50,7 +50,7 @@
    au < finished ; finished ; 2020 ; 9789086863495 ; 9789086869008 ; 9789086869008 ; Book of Abstracts of the 71st Annual Meeting of the European Federation of Animal Science (9789086869008) ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2021 ; 9789086863662 ; 9789086869183 ; 9789086869183 ; Book of Abstracts of the 72nd Annual Meeting of the European Federation of Animal Science (9789086869183) ; https://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
    au < finished ; crawling ; 2022 ; 9789086863853 ; 9789086869374 ; 9789086869374 ; Book of Abstracts of the 73rd Annual Meeting of the European Federation of Animal Science (9789086869374) ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
-   au < frozen ; exists ; 2023 ; 9789086863846 ; 9789086869367 ; 9789086869367 ; Book of Abstracts of the 74th Annual Meeting of the European Federation of Animal Science (9789086869367) ; https://www.wageningenacademic.com/ ; >
+   au < finished ; manifest ; 2023 ; 9789086863846 ; 9789086869367 ; 9789086869367 ; Book of Abstracts of the 74th Annual Meeting of the European Federation of Animal Science (9789086869367) ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
 
  }
 
@@ -185,7 +185,7 @@
    au < deepCrawl ; exists ; 2020 ; 9789086863464 ; 9789086868971 ; 9789086868971 ; The pursuit of sustainable agriculture in EU free trade agreements (9789086868971) ; https://www.wageningenacademic.com/ ;  >
    au < doNotProcess ; exists ; 2020 ; 9789086863501 ; 9789086869039 ; 9789086869039 ; EU Food Law Handbook (9789086869039) ; https://www.wageningenacademic.com/ ; > #testbook, only TOC and sample pages are available online
    au < finished ; crawling ; 2022 ; 9789086863754 ; 9789086869275 ; 9789086869275 ; Online platforms - new actors of the food chain (9789086869275) ; https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
-   au < frozen ; exists ; 2023 ; 9789086863884 ; 9789086869411 ; 9789086869411 ; Chinese Food Law (9789086869411) ; https://www.wageningenacademic.com/ ; >
+   au < finished ; manifest ; 2023 ; 9789086863884 ; 9789086869411 ; 9789086869411 ; Chinese Food Law (9789086869411) ; https://www.wageningenacademic.com/ ; reingest2.clockss.org:8085 >
 
  }
 
@@ -561,9 +561,9 @@
    au < finished ; crawling ; 2022 ; 9789086863723 ; 9789086869244 ; 9789086869244 ; Preslaughter handling and slaughter of meat animals (9789086869244) ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
    au < finished ; crawling ; 2022 ; 9789086863709 ; 9789086869220 ; 9789086869220 ; Moral design and technology (9789086869220) ; https://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
    au < finished ; crawling ; 2022 ; 9789086863686 ; 9789086869206 ; 9789086869206 ; Wat is eetbaar? (9789086869206); https://www.wageningenacademic.com/ ; reingest1.clockss.org:8082 >
-   au < frozen ; exists ; 2023 ; 9789086863938 ; 9789086869473 ; 9789086869473 ; Precision agriculture ’23 (9789086869473) ; https://www.wageningenacademic.com/ ; >
-   au < frozen ; exists ; 2023 ; 9789086863921 ; 9789086869466 ; 9789086869466 ; Impact of hybrid potato (9789086869466) ; https://www.wageningenacademic.com/ ; >
-   au < frozen ; exists ; 2023 ; 9789086863907 ; 9789086869435 ; 9789086869435 ; Applied human rights (9789086869435) ; https://www.wageningenacademic.com/ ; >
+   au < finished ; manifest ; 2023 ; 9789086863938 ; 9789086869473 ; 9789086869473 ; Precision agriculture ’23 (9789086869473) ; https://www.wageningenacademic.com/ ; reingest3.clockss.org:8083 >
+   au < finished ; manifest ; 2023 ; 9789086863921 ; 9789086869466 ; 9789086869466 ; Impact of hybrid potato (9789086869466) ; https://www.wageningenacademic.com/ ; reingest4.clockss.org:8082 >
+   au < finished ; manifest ; 2023 ; 9789086863907 ; 9789086869435 ; 9789086869435 ; Applied human rights (9789086869435) ; https://www.wageningenacademic.com/ ; reingest5.clockss.org:8082 >
 
  }
 
