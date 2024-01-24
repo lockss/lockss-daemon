@@ -52,10 +52,10 @@ public class DeepBlueHtmlMetadataExtractorFactory
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
                                String contentType)
       throws PluginException {
-    return new PensoftOaiHtmlMetadataExtractor();
+    return new DeepBlueOaiHtmlMetadataExtractor();
   }
 
-  public static class PensoftOaiHtmlMetadataExtractor
+  public static class DeepBlueOaiHtmlMetadataExtractor
     extends SimpleHtmlMetaTagMetadataExtractor {
     private static MultiMap tagMap = new MultiValueMap();
     static {

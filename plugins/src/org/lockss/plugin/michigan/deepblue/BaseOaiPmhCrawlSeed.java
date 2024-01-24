@@ -43,7 +43,6 @@ import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
-import org.lockss.plugin.pensoft.oai.UrlFetcherOaiClient;
 import org.lockss.util.Logger;
 import org.lockss.util.TimeZoneUtil;
 
@@ -120,6 +119,10 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
   protected void populateFromConfig(Configuration config) 
       throws PluginException, ConfigurationException {
     this.baseUrl = config.get(ConfigParamDescr.BASE_URL.getKey());
+
+    //Since the publisher is using "modified date" not "publication date", we need to get all the record
+    //then to filter based on our own "year" requirement
+    /*
     if(config.containsKey(ConfigParamDescr.YEAR.getKey())) {
       try {
         setDates(config.getInt(ConfigParamDescr.YEAR.getKey()));
@@ -133,11 +136,14 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
     } else {
       usesDateRange=false;
     }
+ */
+
     if(config.containsKey(KEY_AU_OAI_SET)) {
       this.set = config.get(KEY_AU_OAI_SET);
     } else {
       usesSet=false;
     }
+
     if(config.containsKey(KEY_AU_OAI_URL_POSTFIX)) {
       if(!setUrlPostfix(config.get(KEY_AU_OAI_URL_POSTFIX))){
         throw new ConfigurationException(KEY_AU_OAI_URL_POSTFIX +
@@ -270,6 +276,4 @@ public abstract class BaseOaiPmhCrawlSeed extends BaseCrawlSeed {
   @Override
   public abstract Collection<String> doGetStartUrls() 
       throws ConfigurationException, PluginException, IOException;
-
-  
 }

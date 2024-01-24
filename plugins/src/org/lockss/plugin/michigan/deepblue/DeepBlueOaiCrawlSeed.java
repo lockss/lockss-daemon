@@ -45,7 +45,6 @@ import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.plugin.UrlCacher;
 import org.lockss.plugin.UrlData;
-import org.lockss.plugin.pensoft.oai.RecordFilteringOaiPmhCrawlSeed;
 import org.lockss.util.CIProperties;
 import org.lockss.util.Constants;
 import org.lockss.util.Logger;
@@ -58,58 +57,215 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class DeepBlueOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
-  public static final String DEFAULT_DATE_TAG = "dc.date";
-  public static final String DEFAULT_IDENTIFIER_TAG = "dc.identifier";
+  public static final String DEFAULT_DATE_TAG = "dc.date.issued.en_US";
+  public static final String DEFAULT_IDENTIFIER_TAG = "dc.identifier.uri.none";
   protected Collection<String> startUrls;
   protected int year;
   protected Pattern yearPattern = Pattern.compile("^([0-9]{4})$");
   public static final String OAI_DC_METADATA_PREFIX = "oai_dc";
+  public static final String XOAI_METADATA_PREFIX = "xoai";
   private static Logger logger =
 	      Logger.getLogger(DeepBlueOaiCrawlSeed.class);
 
   /*
   Sample record:
-  https://deepblue.lib.umich.edu/dspace-oai/request?verb=ListRecords&metadataPrefix=oai_dc&set=col_2027.42_41251&from=2020-01-01&until=2020-12-31
-      <oai_dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
-       <dc:title>New Specimens of the Late Eocene Turtle Cordichelys (Pleurodira: Podocnemididae) From Wadi Al Hitan and Qasr El-Sagha in the Fayum Province of Eqypt</dc:title>
-       <dc:creator>Cherney, Michael D</dc:creator>
-       <dc:creator>Wilson Mantilla, Jeffrey A</dc:creator>
-       <dc:creator>Gingerich, Philip D.</dc:creator>
-       <dc:creator>Zalmout, Iyad</dc:creator>
-       <dc:creator>Antar, Mohammed Sameh M.</dc:creator>
-       <dc:contributor>Saudi Geological Survey, Sedimentary Rocks and Palaeontology Department, Jeddah, Saudi Arabia</dc:contributor>
-       <dc:contributor>Egyptian Environmental Affairs Agency, Wadi Al Hitan World Heritage Site, Fayum, Egypt</dc:contributor>
-       <dc:contributor>Ann Arbor</dc:contributor>
-       <dc:subject>Geology and Earth Sciences</dc:subject>
-       <dc:subject>Anthropology and Archaeology</dc:subject>
-       <dc:subject>Science</dc:subject>
-       <dc:subject>Social Sciences</dc:subject>
-       <dc:description>http://deepblue.lib.umich.edu/bitstream/2027.42/163364/2/ContributionsVol33No2_High_Res.pdf</dc:description>
-       <dc:description>http://deepblue.lib.umich.edu/bitstream/2027.42/163364/1/ContributionsVol33No2_Lo_Res.pdf</dc:description>
-       <dc:date>2020-11-03T15:38:14Z</dc:date>
-       <dc:date>2020-11-03T15:38:14Z</dc:date>
-       <dc:date>2020-11-02</dc:date>
-       <dc:type>Other</dc:type>
-       <dc:identifier>Vol 33, No2</dc:identifier>
-       <dc:identifier>http://hdl.handle.net/2027.42/163364</dc:identifier>
-       <dc:relation>Contributions</dc:relation>
-       <dc:format>29-64</dc:format>
-       <dc:format>application/pdf</dc:format>
-       <dc:format>application/pdf</dc:format>
-       <dc:publisher>Museum of Paleontology, The University of Michigan</dc:publisher>
-    </oai_dc:dc>
+  https://deepblue.lib.umich.edu/dspace-oai/request?verb=ListRecords&set=col_2027.42_41251&metadataPrefix=xoai
+
+    <metadata>
+       <element name="dc">
+          <element name="contributor">
+             <element name="author">
+                <element name="en_US">
+                   <field name="value">Ehlers, G. M.</field>
+                   <field name="value">Stumm, E. C.</field>
+                </element>
+             </element>
+             <element name="affiliationum">
+                <element name="en_US">
+                   <field name="value">Museum of Paleontology, The University of Michigan, 1109 Geddes Road, Ann Arbor, MI 48109-1079, U.S.A.</field>
+                </element>
+             </element>
+             <element name="affiliationumcampus">
+                <element name="en_US">
+                   <field name="value">Ann Arbor</field>
+                </element>
+             </element>
+          </element>
+          <element name="date">
+             <element name="accessioned">
+                <element name="none">
+                   <field name="value">2006-09-12T19:59:17Z</field>
+                </element>
+             </element>
+             <element name="available">
+                <element name="none">
+                   <field name="value">2006-09-12T19:59:17Z</field>
+                </element>
+             </element>
+             <element name="issued">
+                <element name="en_US">
+                   <field name="value">1949</field>
+                </element>
+             </element>
+          </element>
+          <element name="identifier">
+             <element name="citation">
+                <element name="en_US">
+                   <field name="value">Vol. 7, No. 8 &lt;http://hdl.handle.net/2027.42/48241&gt;</field>
+                </element>
+             </element>
+             <element name="other">
+                <element name="en_US">
+                   <field name="value">0868909 (Grad, Sci, Museums)</field>
+                </element>
+             </element>
+             <element name="uri">
+                <element name="none">
+                   <field name="value">https://hdl.handle.net/2027.42/48241</field>
+                </element>
+             </element>
+          </element>
+          <element name="description">
+             <element name="en_US">
+                <field name="value">123-130</field>
+             </element>
+             <element name="bitstreamurl">
+                <element name="en_US">
+                   <field name="value">http://deepblue.lib.umich.edu/bitstream/2027.42/48241/2/ID080.pdf</field>
+                </element>
+             </element>
+          </element>
+          <element name="format">
+             <element name="extent">
+                <element name="none">
+                   <field name="value">2946 bytes</field>
+                   <field name="value">1386240 bytes</field>
+                </element>
+             </element>
+             <element name="mimetype">
+                <element name="none">
+                   <field name="value">text/plain</field>
+                   <field name="value">application/pdf</field>
+                </element>
+             </element>
+          </element>
+          <element name="language">
+             <element name="iso">
+                <element name="none">
+                   <field name="value">en_US</field>
+                </element>
+             </element>
+          </element>
+          <element name="publisher">
+             <element name="en_US">
+                <field name="value">Museum of Paleontology, The University of Michigan</field>
+             </element>
+          </element>
+          <element name="relation">
+             <element name="ispartofseries">
+                <element name="en_US">
+                   <field name="value">Contributions</field>
+                </element>
+             </element>
+          </element>
+          <element name="title">
+             <element name="en_US">
+                <field name="value">Corals of the Devonian Traverse Group of Michigan. Part I. Spongophyllum</field>
+             </element>
+          </element>
+          <element name="type">
+             <element name="en_US">
+                <field name="value">Article</field>
+             </element>
+          </element>
+          <element name="subject">
+             <element name="hlbsecondlevel">
+                <element name="en_US">
+                   <field name="value">Anthropology and Archaeology</field>
+                   <field name="value">Geology and Earth Sciences</field>
+                </element>
+             </element>
+             <element name="hlbtoplevel">
+                <element name="en_US">
+                   <field name="value">Science</field>
+                   <field name="value">Social Sciences</field>
+                </element>
+             </element>
+          </element>
+       </element>
+       <element name="bundles">
+          <element name="bundle">
+             <field name="name">TEXT</field>
+             <element name="bitstreams">
+                <element name="bitstream">
+                   <field name="name">ID080.pdf.txt</field>
+                   <field name="originalName">ID080.pdf.txt</field>
+                   <field name="description">Extracted text</field>
+                   <field name="format">text/plain</field>
+                   <field name="size">18206</field>
+                   <field name="url">https://deepblue.lib.umich.edu/bitstream/2027.42/48241/3/ID080.pdf.txt</field>
+                   <field name="checksum">c81aa7a3299898580bbd3f29602f7ced</field>
+                   <field name="checksumAlgorithm">MD5</field>
+                   <field name="sid">3</field>
+                </element>
+             </element>
+          </element>
+          <element name="bundle">
+             <field name="name">LICENSE</field>
+             <element name="bitstreams">
+                <element name="bitstream">
+                   <field name="name">license.txt</field>
+                   <field name="format">text/plain</field>
+                   <field name="size">2946</field>
+                   <field name="url">https://deepblue.lib.umich.edu/bitstream/2027.42/48241/1/license.txt</field>
+                   <field name="checksum">d565140e788494ecc5a995fbd106a511</field>
+                   <field name="checksumAlgorithm">MD5</field>
+                   <field name="sid">1</field>
+                </element>
+             </element>
+          </element>
+          <element name="bundle">
+             <field name="name">ORIGINAL</field>
+             <element name="bitstreams">
+                <element name="bitstream">
+                   <field name="name">ID080.pdf</field>
+                   <field name="format">application/pdf</field>
+                   <field name="size">1386240</field>
+                   <field name="url">https://deepblue.lib.umich.edu/bitstream/2027.42/48241/2/ID080.pdf</field>
+                   <field name="checksum">4284f5b22721d152128619fe50b3b954</field>
+                   <field name="checksumAlgorithm">MD5</field>
+                   <field name="sid">2</field>
+                </element>
+             </element>
+          </element>
+       </element>
+       <element name="others">
+          <field name="handle">2027.42/48241</field>
+          <field name="identifier">oai:deepblue.lib.umich.edu:2027.42/48241</field>
+          <field name="lastModifyDate">2021-07-28 19:45:11.886</field>
+       </element>
+       <element name="repository">
+          <field name="name">Deep Blue</field>
+          <field name="mail">deepblue@umich.edu</field>
+       </element>
+       <element name="license">
+          <field name="bin">VGhpcyBBZ3JlZW1lbnQgaXMgbWFkZSBieSBhbmQgYmV0d2VlbiB0aGUgTXVzZXVtIG9mIFBhbGVvbnRvbG9neSBvZiB0aGUgVW5pdmVyc2l0eSBvZiBNaWNoaWdhbiAKKGhlcmVpbmFmdGVyIGNhbGxlZCB0aGUgQ29tbXVuaXR5KSwgcmVwcmVzZW50ZWQgYnkgQ2FuZGFjZSBMLiBTdGF1Y2gsIHRoZSBDb21tdW5pdHkncyBDb2xsZWN0aW9uIENvb3JkaW5hdG9yIAooaGVyZWluYWZ0ZXIgY2FsbGVkIHRoZSBEZXNpZ25lZSkgYW5kIHRoZSBVbml2ZXJzaXR5IG9mIE1pY2hpZ2FuIExpYnJhcnkncyBEZWVwIEJsdWUgSW5zdGl0dXRpb25hbCBSZXBvc2l0b3J5IAooaGVyZWluYWZ0ZXIgY2FsbGVkIHRoZSBSZXBvc2l0b3J5KSBhbmQgaXMgZW50ZXJlZCBpbnRvIG9uIHRoaXMgNXRoIGRheSBvZiBTZXB0ZW1iZXIsIDIwMDYuCgpUaGlzIGFncmVlbWVudCBhbGxvd3MgdGhlIERlc2lnbmVlIHRvIGFjdCBvbiBiZWhhbGYgb2YgaW5kaXZpZHVhbCBkZXBvc2l0b3JzIGFuZC9vciB0aGUgQ29tbXVuaXR5IGFuZCBhdXRob3JpemVzIAp0aGUgQ29vcmRpbmF0b3IgdG8gYmF0Y2ggbG9hZCBjb250ZW50IHRvIHRoZSBSZXBvc2l0b3J5LgoKT24gYmVoYWxmIG9mIHRoZSBDb21tdW5pdHksIHRoZSBEZXNpZ25lZSBhY2tub3dsZWRnZXMgaGF2aW5nIHJlYWQgYWxsIHBvbGljaWVzIG9mIHRoZSBSZXBvc2l0b3J5IGFuZCBhZ3JlZXMgdG8gCmFiaWRlIGJ5IHRoZSB0ZXJtcyBhbmQgY29uZGl0aW9ucyB0aGVyZWluLiBGb3IgY29udGVudCBlbnRydXN0ZWQgb3IgZ2lmdGVkIHRvIHRoZSBEZXNpZ25lZSwgdGhlIERlc2lnbmVlIGFncmVlcyAKdGhhdCBtYWtpbmcgdGhlIGNvbnRlbnQgYXZhaWxhYmxlIGluIHRoZSBSZXBvc2l0b3J5IGlzIGFuIGFwcHJvcHJpYXRlIGFuZCBhY2NlcHRhYmxlIGV4dGVuc2lvbiBvZiBpdHMgYWdyZWVtZW50IAp3aXRoIHRoZSBDb21tdW5pdHksIGFuZCBpcyBjb25zaXN0ZW50IHdpdGggdGhlIERlc2lnbmVlJ3MgY2hhcmdlIHRvIHByb3ZpZGUgYWNjZXNzIHRvIHRoaXMgY29udGVudC4gSW4gYWRkaXRpb24sIAp0aGUgQ29vcmRpbmF0b3IgaGFzIGNvbnZleWVkIHRvIGFwcHJvcHJpYXRlIENvbW11bml0eSByZXByZXNlbnRhdGl2ZXMgdGhlIHRlcm1zIGFuZCBjb25kaXRpb25zIG91dGxpbmVkIGluIHRob3NlIApwb2xpY2llcywgaW5jbHVkaW5nIHRoZSBsYW5ndWFnZSBvZiB0aGUgc3RhbmRhcmQgZGVwb3NpdCBsaWNlbnNlIHF1b3RlZCBiZWxvdyBhbmQgdGhhdCB0aGUgQ29tbXVuaXR5IG1lbWJlcnMgaGF2ZSAKZ3JhbnRlZCB0aGUgQ29vcmRpbmF0b3IgdGhlIGF1dGhvcml0eSB0byBkZXBvc2l0IGNvbnRlbnQgb24gdGhlaXIgYmVoYWxmLgoKVGhlIHN0YW5kYXJkIGRlcG9zaXQgbGljZW5zZSBzdGF0ZXM6CgpJIGhlcmVieSBncmFudCB0byB0aGUgUmVnZW50cyBvZiB0aGUgVW5pdmVyc2l0eSBvZiBNaWNoaWdhbiB0aGUgbm9uLWV4Y2x1c2l2ZSByaWdodCB0byByZXRhaW4sIHJlcHJvZHVjZSBhbmQgCmRpc3RyaWJ1dGUgdGhlIGRlcG9zaXRlZCB3b3JrICh0aGUgV29yaykgaW4gd2hvbGUgb3IgaW4gcGFydCwgaW4gYW5kIGZyb20gaXRzIGVsZWN0cm9uaWMgZm9ybWF0LiBUaGlzIGFncmVlbWVudCAKZG9lcyBub3QgcmVwcmVzZW50IGEgdHJhbnNmZXIgb2YgY29weXJpZ2h0IHRvIHRoZSBVbml2ZXJzaXR5IG9mIE1pY2hpZ2FuLgoKVGhlIFVuaXZlcnNpdHkgb2YgTWljaGlnYW4gbWF5IG1ha2UgYW5kIGtlZXAgbW9yZSB0aGFuIG9uZSBjb3B5IG9mIHRoZSBXb3JrIGZvciBwdXJwb3NlcyBvZiBzZWN1cml0eSwgYmFja3VwLCAKcHJlc2VydmF0aW9uIGFuZCBhY2Nlc3MsIGFuZCBtYXkgbWlncmF0ZSB0aGUgV29yayB0byBhbnkgbWVkaXVtIG9yIGZvcm1hdCBmb3IgdGhlIHB1cnBvc2Ugb2YgcHJlc2VydmF0aW9uIGFuZCAKYWNjZXNzIGluIHRoZSBmdXR1cmUuIFRoZSBVbml2ZXJzaXR5IG9mIE1pY2hpZ2FuIHdpbGwgbm90IG1ha2UgYW55IGFsdGVyYXRpb24sIG90aGVyIHRoYW4gYXMgYWxsb3dlZCBieSB0aGlzIAphZ3JlZW1lbnQsIHRvIHRoZSBXb3JrLgoKSSByZXByZXNlbnQgYW5kIHdhcnJhbnQgdG8gdGhlIFVuaXZlcnNpdHkgb2YgTWljaGlnYW4gdGhhdCB0aGUgV29yayBpcyBteSBvcmlnaW5hbCB3b3JrLiBJIGFsc28gcmVwcmVzZW50IHRoYXQgCnRoZSBXb3JrIGRvZXMgbm90LCB0byB0aGUgYmVzdCBvZiBteSBrbm93bGVkZ2UsIGluZnJpbmdlIG9yIHZpb2xhdGUgYW55IHJpZ2h0cyBvZiBvdGhlcnMuCgpJIGZ1cnRoZXIgcmVwcmVzZW50IGFuZCB3YXJyYW50IHRoYXQgSSBoYXZlIG9idGFpbmVkIGFsbCBuZWNlc3NhcnkgcmlnaHRzIHRvIHBlcm1pdCB0aGUgVW5pdmVyc2l0eSBvZiBNaWNoaWdhbiAKdG8gcmVwcm9kdWNlIGFuZCBkaXN0cmlidXRlIHRoZSBXb3JrIGFuZCB0aGF0IGFueSB0aGlyZC1wYXJ0eSBvd25lZCBjb250ZW50IGlzIGNsZWFybHkgaWRlbnRpZmllZCBhbmQgYWNrbm93bGVkZ2VkIAp3aXRoaW4gdGhlIFdvcmsuCgpCeSBncmFudGluZyB0aGlzIGxpY2Vuc2UsIEkgYWNrbm93bGVkZ2UgdGhhdCBJIGhhdmUgcmVhZCBhbmQgYWdyZWVkIHRvIHRoZSB0ZXJtcyBvZiB0aGlzIGFncmVlbWVudCBhbmQgYWxsIHJlbGF0ZWQgClVuaXZlcnNpdHkgb2YgTWljaGlnYW4gYW5kIERlZXAgQmx1ZSBwb2xpY2llcy4KCkRlc2lnbmVlClNpZ25hdHVyZTogW0NhbmRhY2UgTC4gU3RhdWNoXQpOYW1lOiBDYW5kYWNlIEwuIFN0YXVjaApUaXRsZTogTXVzZXVtIEJ1c2luZXNzIEFkbWluaXN0cmF0b3IsIE11c2V1bSBQYWxlb250b2xvZ3kKRGF0ZTogNiBTZXAgMjAwNgpFbWFpbDogY3N0YXVjaEB1bWljaC5lZHUKClJlcG9zaXRvcnkKU2lnbmF0dXJlOiBbSmltIE90dGF2aWFuaV0KTmFtZTogSmltIE90dGF2aWFuaQpUaXRsZTogQ29vcmRpbmF0b3IsIERlZXAgQmx1ZQpEYXRlOiA1IFNlcCAyMDA2CkVtYWlsOiBqaW0ub3R0YXZpYW5pQHVtaWNoLmVkdQoK</field>
+       </element>
+    </metadata>
    */
 
   public DeepBlueOaiCrawlSeed(CrawlerFacade cf) {
     super(cf);
-    setMetadataPrefix(OAI_DC_METADATA_PREFIX);
+    setMetadataPrefix(XOAI_METADATA_PREFIX);
     setUrlPostfix("dspace-oai/request");
   }
 
   @Override
   protected Context buildContext(String url) {
     Context con = super.buildContext(url);
-    con.withMetadataTransformer(OAI_DC_METADATA_PREFIX, KnownTransformer.OAI_DC);
+    //"xoai" is the default Transformer, so no need to "overwrite" it
+    //con.withMetadataTransformer(OAI_DC_METADATA_PREFIX, KnownTransformer.OAI_DC);
+    //con.withMetadataTransformer(XOAI_METADATA_PREFIX, KnownTransformer.OAI_DC);
     return con;
   }
   
@@ -125,14 +281,12 @@ public class DeepBlueOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
 
   /*
    * Here's an example of an OAI request of DeepBlue:
-   * https://deepblue.lib.umich.edu/dspace-oai/request?verb=ListRecords&metadataPrefix=oai_dc&set=col_2027.42_41251&from=2020-01-01&until=2020-12-31
+   * https://deepblue.lib.umich.edu/dspace-oai/request?verb=ListRecords&set=col_2027.42_41251&metadataPrefix=xoai
    */
   
   @Override
   protected Collection<String> getRecordList(ListRecordsParameters params)
 		  throws ConfigurationException, IOException {
-
-      logger.debug3("auid: " + au.getAuId() + ", encoded auid:" + UrlUtil.encodeUrl(au.getAuId()));
 
       String url = UrlUtil.encodeUrl(au.getAuId());
 
@@ -144,14 +298,20 @@ public class DeepBlueOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
       Boolean error = false;
       Set<String> idSet = new HashSet<String>();
       try {
+
 	      for (Iterator<Record> recIter = getServiceProvider().listRecords(params);
 	           recIter.hasNext();) {
+
+            logger.debug3("Inside for....");
+
 	        Record rec = recIter.next();
             if (rec == null) {
                 logger.debug3("Rec is null");
             }
+
 	        MetadataSearch<String> metaSearch = 
 	            rec.getMetadata().getValue().searcher();
+
 	        if (checkMetaRules(metaSearch)) {
                 logger.debug3(" -  checkMetaRules passed");
 	        	link = findRecordArticleLink(rec);
@@ -176,6 +336,9 @@ public class DeepBlueOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
             }
 	      }
       } catch (InvalidOAIResponse e) {
+
+          logger.debug3("Inside cache invalid block....Rec is null");
+
     	  if(e.getCause() != null && e.getCause().getMessage().contains("LOCKSS")) {
     		  error = true;
     		  logger.debug("OAI result errored due to LOCKSS audit proxy. Trying alternate start Url", e);
@@ -183,6 +346,9 @@ public class DeepBlueOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
     		  throw e;
     	  }
       } catch (BadArgumentException e) {
+
+          logger.debug3("Inside BadArgumentException....Rec is null");
+
     	  throw new ConfigurationException("Incorrectly formatted OAI parameter", e);
       }
       
@@ -218,11 +384,14 @@ public class DeepBlueOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
     List<String> idTags = recSearcher.findAll(DEFAULT_IDENTIFIER_TAG);
     if(idTags != null && !idTags.isEmpty()) {
       for(String value : idTags) {
-        if (value.startsWith("http")) {
+          logger.debug("To Follow value: " + value);
+        if (value.startsWith("http") || value.startsWith("https")) {
           logger.debug("To Follow: " + value);
           return value;
         }
       }
+    } else {
+        logger.debug("findRecordArticleLink find Null");
     }
     return null;
   }
@@ -246,6 +415,10 @@ public class DeepBlueOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
   protected boolean checkMetaRules(MetadataSearch<String> metaSearch) {
       List<String> matchingTags;
       matchingTags = metaSearch.findAll(DEFAULT_DATE_TAG);
+
+      logger.debug3("Inside checkMetaRules......default date tag is = " + DEFAULT_DATE_TAG);
+
+
       if(matchingTags!= null && !matchingTags.isEmpty()) {
           for(String value : matchingTags) {
               try{
@@ -255,7 +428,7 @@ public class DeepBlueOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
                       subYear = yearMatch.group(1);
                       logger.debug3(" subYear = " + subYear + " value = " + value + ", expected year = " + year);
                       if(year == Integer.parseInt(subYear)) {
-                          logger.debug3(" subYear = " + subYear + " value = " + value + " === expected year = " + year);
+                          logger.debug3(" subYear = " + subYear + " value = " + value + " ======== expected year = " + year);
                           return true;
                       }
                       return true;

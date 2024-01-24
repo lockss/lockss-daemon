@@ -33,6 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.michigan.deepblue;
 
+import org.dspace.xoai.model.oaipmh.MetadataFormat;
 import org.dspace.xoai.model.oaipmh.Record;
 import org.dspace.xoai.serviceprovider.exceptions.BadArgumentException;
 import org.dspace.xoai.serviceprovider.model.Context;
@@ -43,7 +44,6 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
-import org.lockss.plugin.pensoft.oai.BaseOaiPmhCrawlSeed;
 import org.lockss.util.Logger;
 import org.lockss.util.UrlUtil;
 
@@ -62,7 +62,7 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
   protected boolean usesSet = true;
   protected Map<String, Pattern> metadataRules;
   public static final String KEY_AU_OAI_FILTER_RULES = "au_oai_filter_rules";
-  public static final String KEY_AU_OAI_DATE = "au_oai_date";
+  public static final String KEY_AU_OAI_DATE = "year";
 
   public RecordFilteringOaiPmhCrawlSeed(CrawlerFacade cf) {
     super(cf);
@@ -78,6 +78,7 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
   protected void populateFromConfig(Configuration config) 
       throws PluginException, ConfigurationException {
     super.populateFromConfig(config);
+
     if (config.containsKey(KEY_AU_OAI_DATE)) {
       parseRules(config.get(KEY_AU_OAI_DATE));
     } else if (config.containsKey(KEY_AU_OAI_FILTER_RULES)) {
@@ -94,7 +95,12 @@ public abstract class RecordFilteringOaiPmhCrawlSeed extends BaseOaiPmhCrawlSeed
   @Override
   protected Context buildContext(String url) {
     Context con = super.buildContext(url);
-    con.withMetadataTransformer("oai_dc", KnownTransformer.OAI_DC);
+    //"xoai" is the default Transformer, so no need to "overwrite" it
+    //logger.debug3("Setting MetadataTransformer to oai_dc");
+    //con.withMetadataTransformer("oai_dc", KnownTransformer.OAI_DC);
+    //logger.debug3("Setting MetadataTransformer to xoai");
+    //con.withMetadataTransformer("xoai", KnownTransformer.OAI_DC);
+
     return con;
   }
 

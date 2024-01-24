@@ -83,11 +83,11 @@ POSSIBILITY OF SUCH DAMAGE.
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>au_oai_date</key>
-        <displayName>OAI Date</displayName>
-        <description>Rules to filter records based upon metadata</description>
-        <type>1</type>
-        <size>128</size>
+        <key>year</key>
+        <displayName>Publication Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -104,7 +104,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"University of Michigan Press Deep Blue Plugin, Base URL %s, OAI Set %s, OAI Date %s", base_url, au_oai_set, au_oai_date</string>
+    <string>"University of Michigan Press Deep Blue Plugin, Base URL %s, OAI Set %s, Year %d", base_url, au_oai_set, year</string>
   </entry>
   <!--
   <entry>
@@ -127,7 +127,13 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://%s/dspace-oai/", url_host(base_url)</string>
-      <string>1,"^https?://%s/(bitstream|handle|themes|static)/.*", url_host(base_url)</string>
+      <!--Include:
+      https://deepblue.lib.umich.edu/handle/2027.42/109436
+      https://deepblue.lib.umich.edu/handle/2027.42/109436?show=full
+      -->
+      <!--Exclude: https://deepblue.lib.umich.edu/handle/2027.42/13913/discover?filtertype_0=hlbtoplevel&filter_relational_operator_0=equals&filter_0=Engineering&filtertype=hlbtoplevel&filter_relational_operator=equals&filter=Arts-->
+      <string>1,"^https?://%s/handle/[\d\.]+/\d+(\?show=full)?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/(bitstream|themes|static)/.*", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
@@ -138,8 +144,8 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_start_url</string>
-    <!-- https://deepblue.lib.umich.edu/dspace-oai/request?verb=ListRecords&metadataPrefix=oai_dc&set=col_2027.42_41251&from=2020-01-01&until=2020-12-31 -->
-    <string>"%sdspace-oai/request?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;set=%s&amp;from=%s-01-01&amp;until=%s-12-31", base_url, au_oai_set, au_oai_date, au_oai_date</string>
+    <!-- https://deepblue.lib.umich.edu/dspace-oai/request?verb=ListRecords&set=col_2027.42_41251&metadataPrefix=xoai -->
+    <string>"%sdspace-oai/request?verb=ListRecords&amp;set=%s&amp;metadataPrefix=xoai", base_url, au_oai_set</string>
   </entry>
   <entry>
     <string>plugin_crawl_seed_factory</string>
@@ -194,5 +200,9 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_def_pause_time</string>
     <long>3000</long>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>host:base_url</string>
   </entry>
 </map>
