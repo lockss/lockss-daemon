@@ -139,7 +139,7 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^https?://%s/bitstream/handle/.*.pdf", url_host(base_url)</string>
+      <string>"^https?://%s/bitstream/handle/.*.pdf\?sequence=[^&amp;]+&amp;isAllowed=y", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
@@ -150,6 +150,10 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>plugin_crawl_seed_factory</string>
     <string>org.lockss.plugin.michigan.deepblue.DeepBlueOaiCrawlSeedFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.michigan.deepblue.DeepBlueHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>

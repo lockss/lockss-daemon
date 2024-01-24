@@ -294,6 +294,9 @@ public class DeepBlueOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
 
       logger.debug3("baseUrl = " + baseUrl + ", url = " + url + ", storeUrl = " + storeUrl);
 
+      int matchedRecCount = 0;
+      int allRecCount = 0;
+
       String link;
       Boolean error = false;
       Set<String> idSet = new HashSet<String>();
@@ -302,7 +305,7 @@ public class DeepBlueOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
 	      for (Iterator<Record> recIter = getServiceProvider().listRecords(params);
 	           recIter.hasNext();) {
 
-            logger.debug3("Inside for....");
+            allRecCount++;
 
 	        Record rec = recIter.next();
             if (rec == null) {
@@ -313,8 +316,10 @@ public class DeepBlueOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
 	            rec.getMetadata().getValue().searcher();
 
 	        if (checkMetaRules(metaSearch)) {
-                logger.debug3(" -  checkMetaRules passed");
-	        	link = findRecordArticleLink(rec);
+
+                matchedRecCount++;
+                link = findRecordArticleLink(rec);
+
                 if (link != null) {
                     logger.debug3(" - link = " + link);
                     /*
@@ -328,17 +333,10 @@ public class DeepBlueOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
                         logger.debug3(" - link = " + link + ", replaced_link = " + replaced_link);
                         idSet.add(replaced_link);
                     }
-                } else {
-                    logger.debug3(" - empty link");
                 }
-	        } else {
-                logger.debug3(" - checkMetaRules failed");
-            }
+	        }
 	      }
       } catch (InvalidOAIResponse e) {
-
-          logger.debug3("Inside cache invalid block....Rec is null");
-
     	  if(e.getCause() != null && e.getCause().getMessage().contains("LOCKSS")) {
     		  error = true;
     		  logger.debug("OAI result errored due to LOCKSS audit proxy. Trying alternate start Url", e);
@@ -346,11 +344,10 @@ public class DeepBlueOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
     		  throw e;
     	  }
       } catch (BadArgumentException e) {
-
-          logger.debug3("Inside BadArgumentException....Rec is null");
-
     	  throw new ConfigurationException("Incorrectly formatted OAI parameter", e);
       }
+
+      logger.debug3("AllRecCount = " + Integer.toString(allRecCount) + ",  matchedRecCount = " + Integer.toString(matchedRecCount) + " for expected year = " + Integer.toString(year));
       
       List<String> idList = new ArrayList<String>();
 	  if(error) {
@@ -382,11 +379,11 @@ public class DeepBlueOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
   protected String findRecordArticleLink(Record rec) { 
     MetadataSearch<String> recSearcher = rec.getMetadata().getValue().searcher();
     List<String> idTags = recSearcher.findAll(DEFAULT_IDENTIFIER_TAG);
+
     if(idTags != null && !idTags.isEmpty()) {
       for(String value : idTags) {
-          logger.debug("To Follow value: " + value);
-        if (value.startsWith("http") || value.startsWith("https")) {
-          logger.debug("To Follow: " + value);
+        if (value.contains("hdl.handle.net")) {
+          logger.debug("To Follow Handle Url: " + value);
           return value;
         }
       }
@@ -431,21 +428,19 @@ public class DeepBlueOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
                           logger.debug3(" subYear = " + subYear + " value = " + value + " ======== expected year = " + year);
                           return true;
                       }
-                      return true;
                   }
               } catch(NumberFormatException|IllegalStateException ex) {
                   logger.debug3(" yearPattern match does not expectation");
               }
           }
       } else if (matchingTags!= null) {
-          logger.debug3(" matchingTags is not null, checkMetaRules metaSearch = " + metaSearch);
           for(String value : matchingTags) {
               logger.debug3(" checkMetaRules metaSearch value = " + value);
           }
       } else if (matchingTags == null) {
           logger.debug3(" matchingTags is NULL, checkMetaRules metaSearch = " + metaSearch);
       }
-      return true;
+      return false;
   }
   
   /**

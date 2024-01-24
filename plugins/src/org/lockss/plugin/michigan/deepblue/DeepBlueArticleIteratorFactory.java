@@ -55,13 +55,14 @@ public class DeepBlueArticleIteratorFactory implements ArticleIteratorFactory, A
   //https://deepblue.lib.umich.edu/bitstream/handle/2027.42/151767/Papers%20on%20Paleontology%2038%2010-10-2019%20-%20High%20Res.pdf?sequence=1&isAllowed=y
   //https://deepblue.lib.umich.edu/bitstream/handle/2027.42/151767/Papers%20on%20Paleontology%2038%2010-10-2019%20-%20low%20res.pdf?sequence=2&isAllowed=y
 
+  protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
 
-  protected static final String PATTERN_TEMPLATE = "\"^%s(bitstream)?(/handle/[\\d\\.]+/\\d+)(/.*\\.pdf.*)?\",base_url";
+  protected static final String PATTERN_TEMPLATE = "(bitstream)?(/handle/[\\d\\.]+/\\d+)(/.*\\.pdf\\?sequence=[^&]+&isAllowed=y)?";
 
-  public static final Pattern HTML_PATTERN = Pattern.compile("(/handle/[\\d\\.]+/\\d+)", Pattern.CASE_INSENSITIVE);
+  public static final Pattern HTML_PATTERN = Pattern.compile("(/handle/[\\d\\.]+/\\d+)$", Pattern.CASE_INSENSITIVE);
   public static final String HTML_REPLACEMENT = "$2";
 
-  public static final Pattern PDF_PATTERN = Pattern.compile("/bitstream/(handle/[\\d\\.]+/\\d+)/(.*\\.pdf.*)", Pattern.CASE_INSENSITIVE);
+  public static final Pattern PDF_PATTERN = Pattern.compile("/bitstream/(handle/[\\d\\.]+/\\d+)/(.*\\.pdf\\?sequence=[^&]+&isAllowed=y)", Pattern.CASE_INSENSITIVE);
   public static final String PDF_REPLACEMENT = "/bitstream/$2/$3";
 
 
@@ -69,22 +70,25 @@ public class DeepBlueArticleIteratorFactory implements ArticleIteratorFactory, A
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
           throws PluginException {
+
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
 
+    builder.setSpec(target,
+            ROOT_TEMPLATE,
+            PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
 
-    builder.setSpec(builder.newSpec()
-            .setTarget(target)
-            .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));
-
+    /*
     builder.addAspect(PDF_PATTERN,
             PDF_REPLACEMENT,
             ArticleFiles.ROLE_FULL_TEXT_PDF);
 
+     */
+
     builder.addAspect(HTML_PATTERN,
             HTML_REPLACEMENT,
-            ArticleFiles.ROLE_FULL_TEXT_HTML);
+            ArticleFiles.ROLE_FULL_TEXT_HTML,
+            ArticleFiles.ROLE_ARTICLE_METADATA);
 
-    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF);
 
     return builder.getSubTreeArticleIterator();
   }

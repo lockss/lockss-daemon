@@ -61,7 +61,8 @@ public class DeepBlueHtmlCrawlFilterFactory implements FilterFactory {
             </li>
           </ul>
 
-          <div class="breadcrumb dropdown visible-xs">
+          <div class="col-xs-12">
+                                       <div class="breadcrumb dropdown visible-xs">
                                           <a data-toggle="dropdown" class="dropdown-toggle" role="button" href="#" id="trail-dropdown-toggle">View Item&nbsp;<b class="caret"></b></a>
                                           <ul aria-labelledby="trail-dropdown-toggle" role="menu" class="dropdown-menu">
                                              <li role="presentation">
@@ -100,6 +101,8 @@ public class DeepBlueHtmlCrawlFilterFactory implements FilterFactory {
                                              <div style="display: inline; font-size: 18px; font-weight: bold; font-family: var(--font-base-family);">View Item</div>
                                           </li>
                                        </ul>
+                                       <br>
+                                    </div>
 
            */
       throws PluginException {
