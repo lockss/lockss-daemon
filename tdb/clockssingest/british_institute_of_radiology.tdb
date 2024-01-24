@@ -120,10 +120,10 @@
       param[journal_id] = bjr
       attr[EncodingMatchRange]=200
     
-      au < ready ; exists ; 2000 ; British Journal of Radiology Volume 73 ; 73 ; https://www.birpublications.org/ ; >
+      au < crawling ; exists ; 2000 ; British Journal of Radiology Volume 73 ; 73 ; https://www.birpublications.org/ ; >
       au < ready ; exists ; 2001 ; British Journal of Radiology Volume 74 ; 74 ; https://www.birpublications.org/ ; >
       au < frozen ; exists ; 2002 ; British Journal of Radiology Volume 75 ; 75 ; https://www.birpublications.org/ ; >
-      au < ready ; exists ; 2003 ; British Journal of Radiology Volume 76 ; 76 ; https://www.birpublications.org/ ; >
+      au < crawling ; exists ; 2003 ; British Journal of Radiology Volume 76 ; 76 ; https://www.birpublications.org/ ; >
       au < ready ; exists ; 2004 ; British Journal of Radiology Volume 77 ; 77 ; https://www.birpublications.org/ ; >
       au < ready ; exists ; 2005 ; British Journal of Radiology Volume 78 ; 78 ; https://www.birpublications.org/ ; >
       au < ready ; exists ; 2006 ; British Journal of Radiology Volume 79 ; 79 ; https://www.birpublications.org/ ; >
