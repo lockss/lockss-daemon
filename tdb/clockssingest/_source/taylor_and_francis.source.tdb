@@ -60,7 +60,7 @@
     au < readySource ; crawling ; 2023 ; Taylor & Francis Source Content 2023_01 ; 2023_01 >
     au < readySource ; crawling ; 2023 ; Taylor & Francis Source Content 2023_02 ; 2023_02 >
 
-    au < manifest ; exists ; 2024 ; Taylor & Francis Source Content 2024_01 ; 2024_01 >
+    au < ready ; exists ; 2024 ; Taylor & Francis Source Content 2024_01 ; 2024_01 >
     au < expected ; exists ; 2024 ; Taylor & Francis Source Content 2024_02 ; 2024_02 >
     }
   }

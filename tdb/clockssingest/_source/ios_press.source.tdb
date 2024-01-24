@@ -56,7 +56,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/ios-released/
 
     au < readySource ; crawling ; 2023 ; IOS Press Source Content 2023 ; 2023 >
-    au < manifest ; exists ; 2024 ; IOS Press Source Content 2024 ; 2024 >
+    au < ready ; exists ; 2024 ; IOS Press Source Content 2024 ; 2024 >
 
     }
   }
