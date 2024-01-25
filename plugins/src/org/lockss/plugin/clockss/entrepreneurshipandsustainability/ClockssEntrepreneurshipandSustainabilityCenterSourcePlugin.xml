@@ -44,6 +44,19 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>1</string>
   </entry> 
   <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
     <string>plugin_parent</string>
     <string>org.lockss.plugin.clockss.ClockssDirSourcePlugin</string>
   </entry>
@@ -62,7 +75,7 @@ POSSIBILITY OF SUCH DAMAGE.
  <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%s%s/.+\.zip", base_url, directory</string>
+      <string>"^%s%s/.+\.pdf$", base_url, directory</string>
     </list>
   </entry>
   <entry>
@@ -71,6 +84,24 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.clockss.entrepreneurshipandsustainability.EntrepreneurshipandSustainabilityXmlMetadataExtractorFactory</string>
+    <string>org.lockss.plugin.clockss.SourceXmlArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.clockss.entrepreneurshipandsustainability.EntrepreneurshipandSustainabilityXmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>application/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.clockss.entrepreneurshipandsustainability.EntrepreneurshipandSustainabilityXmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
 </map>

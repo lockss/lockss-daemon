@@ -76,18 +76,21 @@ public class EntrepreneurshipandSustainabilityXmlMetadataExtractorFactory extend
          * and map to the following pdfs: 
          * 10.9770_IRD.2019.1.1(1).pdf, 10.9770_IRD.2019.1.1(2).pdf, 10.9770_IRD.2019.1.1(3).pdf, 
          * 10.9770_IRD.2019.1.1(4).pdf, 10.9770_IRD.2019.1.1(5).pdf
+         * The doi matches the pdf filename- the only thing that needs to be updated is the '/'
+         * needs to be replaced with '_'.
          */
         @Override
         protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
             String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-
-            String pubJID = oneAM.getRaw(CrossRefSchemaHelper.pub_abbrev);
-            String pubYear = oneAM.getRaw(CrossRefSchemaHelper.pub_year);
-            String pubIssue = oneAM.getRaw(CrossRefSchemaHelper.pub_issue);
-
+            log.debug3("CU Base is: " + cuBase);
+            String doi = oneAM.getRaw(helper.getFilenameXPathKey());
+            doi = doi.replace("/","_");
+            log.debug3("DOI: " + doi);
+            String pdfName = cuBase + doi + ".pdf";
+            log.debug3("The pdf is: " + pdfName);
             List<String> returnList = new ArrayList<String>();
-
+            returnList.add(pdfName);
             return returnList;
         }
     }
