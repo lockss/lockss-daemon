@@ -31,7 +31,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/sagebooks-released/
 
     au < readySource ; crawling ; 2023 ; SAGE Publications Books Source Content 2023 ; 2023 >
-    au < ready ; exists ; 2024 ; SAGE Publications Books Source Content 2024 ; 2024 >
+    au < readySource ; crawling ; 2024 ; SAGE Publications Books Source Content 2024 ; 2024 >
 
     }
   }
