@@ -94,7 +94,6 @@ public class DeepBlueHtmlMetadataExtractorFactory
     static {
       tagMap.put("citation_author", MetadataField.FIELD_AUTHOR);
       tagMap.put("citation_date", MetadataField.FIELD_DATE);
-      tagMap.put("citation_abtract_html_url", MetadataField.FIELD_ACCESS_URL);
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put("citation_pdf_url", MetadataField.FIELD_ACCESS_URL);
 
@@ -110,18 +109,26 @@ public class DeepBlueHtmlMetadataExtractorFactory
       //tagMap.put("citation_isbn", MetadataField.FIELD_ISBN);
     }
 
-    @Override
     public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
     throws IOException {
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
-      String url = am.get(MetadataField.FIELD_ACCESS_URL);
+
+      String originalUrl = am.get(MetadataField.FIELD_ACCESS_URL);
+      String url = "";
+
+      log.debug3("access_url === " + originalUrl);
+
       ArchivalUnit au = cu.getArchivalUnit();
-      if (url == null || url.isEmpty() || !au.makeCachedUrl(url).hasContent()) {
+      if (originalUrl == null || originalUrl.isEmpty() || !au.makeCachedUrl(originalUrl).hasContent()) {
         url = cu.getUrl();
+        log.debug3("access_url failed === " + url);
       }
-      am.replace(MetadataField.FIELD_ACCESS_URL,
-                 AuUtil.normalizeHttpHttpsFromBaseUrl(au, url));
+
+      log.debug3("access_url repalced with === " + originalUrl);
+
+      //Still use the originalUrl here, since the PDF link has some strange extra string at the end
+      am.replace(MetadataField.FIELD_ACCESS_URL, originalUrl);
       return am;
     }
   }

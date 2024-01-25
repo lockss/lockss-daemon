@@ -62,8 +62,8 @@ public class DeepBlueArticleIteratorFactory implements ArticleIteratorFactory, A
   public static final Pattern HTML_PATTERN = Pattern.compile("(/handle/[\\d\\.]+/\\d+)$", Pattern.CASE_INSENSITIVE);
   public static final String HTML_REPLACEMENT = "$2";
 
-  public static final Pattern PDF_PATTERN = Pattern.compile("/bitstream/(handle/[\\d\\.]+/\\d+)/(.*\\.pdf\\?sequence=[^&]+&isAllowed=y)", Pattern.CASE_INSENSITIVE);
-  public static final String PDF_REPLACEMENT = "/bitstream/$2/$3";
+  public static final Pattern PDF_PATTERN = Pattern.compile("(bitstream)(/handle/[\\d\\.]+/\\d+)(/.*\\.pdf\\?sequence=[^&]+&isAllowed=y)", Pattern.CASE_INSENSITIVE);
+  public static final String PDF_REPLACEMENT = "$1$2$3";
 
 
   @Override
@@ -77,6 +77,11 @@ public class DeepBlueArticleIteratorFactory implements ArticleIteratorFactory, A
             ROOT_TEMPLATE,
             PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
 
+    builder.addAspect(HTML_PATTERN,
+            HTML_REPLACEMENT,
+            ArticleFiles.ROLE_FULL_TEXT_HTML,
+            ArticleFiles.ROLE_ARTICLE_METADATA);
+
     /*
     builder.addAspect(PDF_PATTERN,
             PDF_REPLACEMENT,
@@ -84,19 +89,19 @@ public class DeepBlueArticleIteratorFactory implements ArticleIteratorFactory, A
 
      */
 
-    builder.addAspect(HTML_PATTERN,
-            HTML_REPLACEMENT,
-            ArticleFiles.ROLE_FULL_TEXT_HTML,
-            ArticleFiles.ROLE_ARTICLE_METADATA);
-
-
     return builder.getSubTreeArticleIterator();
   }
 
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
           throws PluginException {
-    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
+    //Do this on purpose, since its PDF has weird string
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA) {
+      @Override
+      protected boolean isCheckAccessUrl() {
+        return false;
+      }
+    };
   }
 }
 
