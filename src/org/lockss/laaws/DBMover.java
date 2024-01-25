@@ -207,9 +207,7 @@ public class DBMover extends Worker {
       auMover.addError(err);
     }
     finally {
-      if(sizeUpdater != null) {
-        sizeUpdater.stop();
-      }
+      stopUpdater();
     }
   }
 
