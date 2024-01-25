@@ -3,16 +3,12 @@ package org.lockss.laaws;
 import java.io.*;
 import java.net.*;
 import java.sql.*;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 import org.apache.commons.httpclient.methods.multipart.*;
 import org.apache.commons.httpclient.params.*;
-
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
-import org.lockss.daemon.LockssRunnable;
+import org.lockss.daemon.LockssThread;
 import org.lockss.db.DbManager;
 import org.lockss.remote.*;
 import org.lockss.util.*;
@@ -23,6 +19,7 @@ public class DBMover extends Worker {
   public static final String DEFAULT_HOST = "localhost";
   public static final String DEFAULT_V1_PASSWORD = "goodPassword";
   public static final String DEFAULT_v2_PORT = "24602";
+  private static final long DBSIZE_CHECK_INTERVAL = 2*Constants.SECOND;
   private final Logger log = Logger.getLogger(DBMover.class);
   private static final int V2_DEFAULT_CFGSVC_UI_PORT = 24621;
 
@@ -74,7 +71,6 @@ public class DBMover extends Worker {
           log.info("v1 db size = " + srcSize + ", v2 db size = " + dstSize);
           auMover.dbBytesCopied = 0;
           auMover.dbBytesTotal = srcSize;
-          sizeUpdater= new DbSizeUpdater(v2host,v2port,v2user,v2password,v2dbname);
           copyPostgresDb();
         }
       }
@@ -85,7 +81,7 @@ public class DBMover extends Worker {
       }
 
     }catch(Exception ex) {
-      log.error("DbMover failed: " + ex.getMessage());
+      log.error("DbMover failed: " + ex.getMessage(), ex);
       auMover.addError(ex.getMessage());
     }
   }
@@ -164,24 +160,24 @@ public class DBMover extends Worker {
     return v1.equals(v2);
   }
 
+  private String createPgConnectionString(String user, String password, String host, String port, String dbname) {
+    return "postgresql://"
+      + user + ":"
+      + password + "@"
+      + host + ":"
+      + port + "/"
+      + dbname;
+  }
+
 
   private void copyPostgresDb() {
     String err;
-    StringBuilder sbcmd = new StringBuilder();
-    sbcmd.append("pg_dump -a ");
-    sbcmd.append("--dbname=postgresql://");
-    sbcmd.append(v1user).append(":").append(v1password).append("@");
-    sbcmd.append(v1host).append(":").append(v1port).append("/");
-    sbcmd.append(v1dbname);
-    sbcmd.append(" | ");
-    sbcmd.append("psql -q --dbname=postgresql://");
-    sbcmd.append(v2user).append(":").append(v2password).append("@");
-    sbcmd.append(v2host).append(":").append(v2port).append("/");
-    sbcmd.append(v2dbname);
-    sbcmd.append(" && echo $?");
-    String copyCommand =  sbcmd.toString();
+    String v1ConnectionString = createPgConnectionString(v1user, v1password, v1host, v1port, v1dbname);
+    String v2ConnectionString = createPgConnectionString(v2user, v2password, v2host, v2port, v2dbname);
+
+    String copyCommand = "pg_dump -a " + v1ConnectionString + " | psql -q " + v2ConnectionString + " && echo $?";
     log.debug("Running copy command: "+copyCommand);
-    sizeUpdater.start();
+    startUpdater();
     try {
       ProcessBuilder pb = new ProcessBuilder();
       pb.command("/bin/sh", "-c", copyCommand);
@@ -199,7 +195,8 @@ public class DBMover extends Worker {
         log.error(err);
         auMover.addError(err);
       }
-      sizeUpdater.stop();
+
+      stopUpdater();
     } catch (IOException ioe) {
       err = "Request to move database failed: " + ioe.getMessage();
       log.error(err, ioe);
@@ -259,14 +256,33 @@ public class DBMover extends Worker {
     return curSize;
   }
 
-  class DbSizeUpdater extends LockssRunnable {
+  void startUpdater() {
+    if (sizeUpdater != null) {
+      log.warning("Updater already running; stopping old one first");
+      stopUpdater();
+    } else {
+      log.info("Starting handler");
+    }
+    sizeUpdater= new DbSizeUpdater(v2host,v2port,v2user,v2password,v2dbname);
+    sizeUpdater.start();
+  }
+
+  void stopUpdater() {
+    if (sizeUpdater != null) {
+      log.info("Stopping handler");
+      sizeUpdater.stopUpdater();
+      sizeUpdater = null;
+    }
+  }
+
+  class DbSizeUpdater extends LockssThread {
 
     private final String host;
     private final String port;
     private final String user;
     private final String password;
     private final String dbName;
-    private ScheduledExecutorService scheduler;
+    private  boolean goOn = true;
 
     DbSizeUpdater(String host, String port, String user, String password, String dbName) {
       super("DbMover:DBSizeUpdater");
@@ -276,31 +292,29 @@ public class DBMover extends Worker {
       this.password = password;
       this.dbName = dbName;
     }
-    public void start() {
-      final Runnable task = this::lockssRun;
-      scheduler = Executors.newScheduledThreadPool(1);
-      scheduler.scheduleAtFixedRate(task, 0, 10, TimeUnit.SECONDS);
-    }
 
     @Override
     protected void lockssRun() {
+      while (goOn) {
+        loadCurrentDatabaseSize();
+        try {
+          sleep(DBSIZE_CHECK_INTERVAL);
+        } catch (InterruptedException e) {
+          // just wakeup and check for exit
+        }
+      }
+    }
+
+    private void loadCurrentDatabaseSize() {
       long curSize = getDatabaseSize(host, port, user, password, dbName);
-      log.info("Destination database size = " + curSize);
+      log.info(String.format("Destination database size = %d", curSize));
       auMover.dbBytesCopied = curSize - dstSize;
     }
 
     // You can stop the scheduler with this method if needed
-    public void stop() {
-      if (scheduler != null) {
-        scheduler.shutdown();
-        try {
-          if (!scheduler.awaitTermination(30, TimeUnit.SECONDS)) {
-            scheduler.shutdownNow();
-          }
-        } catch (InterruptedException e) {
-          scheduler.shutdownNow();
-        }
-      }
+    private void stopUpdater() {
+      goOn = false;
+      this.interrupt();
     }
   }
 
