@@ -5241,12 +5241,12 @@
       # move to https://www.amhsr.org/
       # move to new publisher, https://www.ajol.info/index.php/amhsr (both appear to be online)
 
-      au < down ; exists ; 2011 ; Annals of Medical and Health Sciences Research Volume 1 ; 2011 ; 1 ; http://www.amhsr.org/ ; ; >
-      au < down ; exists ; 2012 ; Annals of Medical and Health Sciences Research Volume 2 ; 2012 ; 2 ; http://www.amhsr.org/ ; ; >
-      au < down ; exists ; 2013 ; Annals of Medical and Health Sciences Research Volume 3 ; 2013 ; 3 ; http://www.amhsr.org/ ; ; >
-      au < down ; exists ; 2014 ; Annals of Medical and Health Sciences Research Volume 4 ; 2014 ; 4 ; http://www.amhsr.org/ ; ; > #StepOne-Fail #GoodHosts:0   DeepCrawlDone : False
-      au < down ; exists ; 2015 ; Annals of Medical and Health Sciences Research Volume 5 ; 2015 ; 5 ; http://www.amhsr.org/ ; ; > #StepOne-Fail #GoodHosts:0   DeepCrawlDone : False
-      au < down ; exists ; 2016 ; Annals of Medical and Health Sciences Research Volume 6 ; 2016 ; 6 ; http://www.amhsr.org/ ; ; >
+      au < frozen ; exists ; 2011 ; Annals of Medical and Health Sciences Research Volume 1 ; 2011 ; 1 ; http://www.amhsr.org/ ; ; >
+      au < frozen ; exists ; 2012 ; Annals of Medical and Health Sciences Research Volume 2 ; 2012 ; 2 ; http://www.amhsr.org/ ; ; >
+      au < frozen ; exists ; 2013 ; Annals of Medical and Health Sciences Research Volume 3 ; 2013 ; 3 ; http://www.amhsr.org/ ; ; >
+      au < frozen ; exists ; 2014 ; Annals of Medical and Health Sciences Research Volume 4 ; 2014 ; 4 ; http://www.amhsr.org/ ; ; > #StepOne-Fail #GoodHosts:0   DeepCrawlDone : False
+      au < frozen ; exists ; 2015 ; Annals of Medical and Health Sciences Research Volume 5 ; 2015 ; 5 ; http://www.amhsr.org/ ; ; > #StepOne-Fail #GoodHosts:0   DeepCrawlDone : False
+      au < frozen ; exists ; 2016 ; Annals of Medical and Health Sciences Research Volume 6 ; 2016 ; 6 ; http://www.amhsr.org/ ; ; >
 
     }
 
@@ -8752,7 +8752,7 @@
       au < finished ; finished ; 2020 ; Sahel Medical Journal Volume 23 ; 2020 ; 23 ; https://www.smjonline.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; Sahel Medical Journal Volume 24 ; 2021 ; 24 ; https://www.smjonline.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2022 ; Sahel Medical Journal Volume 25 ; 2022 ; 25 ; https://www.smjonline.org/ ; ; reingest3.clockss.org:8083 >
-      au < expected ; exists ; 2023 ; Sahel Medical Journal Volume 26 ; 2023 ; 26 ; https://www.smjonline.org/ ; ; >
+      au < doNotProcess ; exists ; 2023 ; Sahel Medical Journal Volume 26 ; 2023 ; 26 ; https://www.smjonline.org/ ; ; >
 
   }
 
@@ -9721,7 +9721,7 @@
       au < finished ; finished ; 2020 ; Annals of Tropical Pathology Volume 11 ; 2020 ; 11 ; https://www.atpjournal.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2021 ; Annals of Tropical Pathology Volume 12 ; 2021 ; 12 ; https://www.atpjournal.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022 ; Annals of Tropical Pathology Volume 13 ; 2022 ; 13 ; https://www.atpjournal.org/ ; ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2023 ; Annals of Tropical Pathology Volume 14 ; 2023 ; 14 ; https://www.atpjournal.org/ ; ; >
+      au < doNotProcess ; exists ; 2023 ; Annals of Tropical Pathology Volume 14 ; 2023 ; 14 ; https://www.atpjournal.org/ ; ; >
 
   }
 
