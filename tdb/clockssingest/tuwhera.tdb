@@ -397,11 +397,11 @@
       param[base_url] = https://ojs.aut.ac.nz/
       param[journal_id] = ethnographic-edge
 
-      au < frozen ; exists ; 2017 ; Ethnographic Edge Volume 1 ; 1 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; Ethnographic Edge Volume 2 ; 2 ; 2018 ; >
+      au < finished ; manifest ; 2017 ; Ethnographic Edge Volume 1 ; 1 ; 2017 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Ethnographic Edge Volume 2 ; 2 ; 2018 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2019 ; Ethnographic Edge Volume 3 ; 3 ; 2019 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; Ethnographic Edge Volume 4 ; 4 ; 2020 ; >
-      au < frozen ; exists ; 2022 ; Ethnographic Edge Volume 5 ; 5 ; 2022 ; >
+      au < finished ; manifest ; 2020 ; Ethnographic Edge Volume 4 ; 4 ; 2020 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2022 ; Ethnographic Edge Volume 5 ; 5 ; 2022 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2023 ; Ethnographic Edge Volume 6 ; 6 ; 2023 ; >
 
   }
@@ -430,9 +430,9 @@
       param[base_url] = https://ojs.aut.ac.nz/
       param[journal_id] = linksymposium
 
-      au < frozen ; exists ; 2020 ; Link Symposium Abstracts Volume 1 ; 1 ; 2020 ; >
-      au < frozen ; exists ; 2021 ; Link Symposium Abstracts Volume 2 ; 2 ; 2021 ; >
-      au < frozen ; exists ; 2022 ; Link Symposium Abstracts Volume 3 ; 3 ; 2022 ; >
+      au < finished ; manifest ; 2020 ; Link Symposium Abstracts Volume 1 ; 1 ; 2020 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Link Symposium Abstracts Volume 2 ; 2 ; 2021 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; Link Symposium Abstracts Volume 3 ; 3 ; 2022 ; reingest2.clockss.org:8085 >
       au < manifest ; exists ; 2023 ; Link Symposium Abstracts Volume 4 ; 4 ; 2023 ; >
 
   }
@@ -448,11 +448,11 @@
       param[base_url] = https://ojs.aut.ac.nz/
       param[journal_id] = pacific-journalism-monographs
 
-      au < frozen ; exists ; 2011 ; Pacific Journalism Monographs Volume 1 ; 1 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; Pacific Journalism Monographs Volume 2 ; 2 ; 2012 ; >
-      au < frozen ; exists ; 2014 ; Pacific Journalism Monographs Volume 3-4 ; 3-4 ; 2014 ; >
-      au < frozen ; exists ; 2016 ; Pacific Journalism Monographs Volume 5 ; 5 ; 2016 ; >
-      au < frozen ; exists ; 2017 ; Pacific Journalism Monographs Volume 6-7 ; 6-7 ; 2017 ; >
+      au < finished ; manifest ; 2011 ; Pacific Journalism Monographs Volume 1 ; 1 ; 2011 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2012 ; Pacific Journalism Monographs Volume 2 ; 2 ; 2012 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; Pacific Journalism Monographs Volume 3-4 ; 3-4 ; 2014 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; Pacific Journalism Monographs Volume 5 ; 5 ; 2016 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Pacific Journalism Monographs Volume 6-7 ; 6-7 ; 2017 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -466,8 +466,8 @@
       param[base_url] = https://ojs.aut.ac.nz/
       param[journal_id] = psychotherapy-politics-international
 
-      au < frozen ; exists ; 2020 ; Psychotherapy and Politics International Volume 18 ; 18 ; 2020 ; >
-      au < frozen ; exists ; 2022 ; Psychotherapy and Politics International Volume 20 ; 20 ; 2022 ; >
+      au < finished ; manifest ; 2020 ; Psychotherapy and Politics International Volume 18 ; 18 ; 2020 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2022 ; Psychotherapy and Politics International Volume 20 ; 20 ; 2022 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2023 ; Psychotherapy and Politics International Volume 21 ; 21 ; 2023 ; >
 
   }
@@ -482,7 +482,7 @@
       param[base_url] = https://ojs.aut.ac.nz/
       param[journal_id] = rangahau-aranga
 
-      au < frozen ; exists ; 2022 ; Rangahau Aranga: AUT Graduate Review Volume 1 ; 1 ; 2022 ; >
+      au < finished ; manifest ; 2022 ; Rangahau Aranga: AUT Graduate Review Volume 1 ; 1 ; 2022 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2023 ; Rangahau Aranga: AUT Graduate Review Volume 2 ; 2 ; 2023 ; >
 
   }
