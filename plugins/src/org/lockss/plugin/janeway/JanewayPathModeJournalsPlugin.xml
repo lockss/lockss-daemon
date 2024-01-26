@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -123,7 +123,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <!--
     https://openjournals.ugent.be/jeps/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2020-01-01&until=2020-12-31
     -->
-    <string>"%s%s/api/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", base_url, journal_id, year, year</string>
+    <string>"%s%s/api/oai/?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", base_url, journal_id, year, year</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
