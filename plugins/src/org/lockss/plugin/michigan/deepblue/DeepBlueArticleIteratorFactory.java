@@ -57,13 +57,13 @@ public class DeepBlueArticleIteratorFactory implements ArticleIteratorFactory, A
 
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
 
-  protected static final String PATTERN_TEMPLATE = "(bitstream)?(/handle/[\\d\\.]+/\\d+)(/.*\\.pdf\\?sequence=[^&]+&isAllowed=y)?";
+  protected static final String PATTERN_TEMPLATE = "\"%s(bitstream/)?(handle/\\d+\\.\\d+/\\d+)(/.*\\.pdf\\?sequence=[^&]+&isAllowed=y)?\", base_url";
 
-  public static final Pattern HTML_PATTERN = Pattern.compile("(/handle/[\\d\\.]+/\\d+)$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern HTML_PATTERN = Pattern.compile("(handle/\\d+\\.\\d+/\\d+)$", Pattern.CASE_INSENSITIVE);
   public static final String HTML_REPLACEMENT = "$2";
 
-  public static final Pattern PDF_PATTERN = Pattern.compile("(bitstream)(/handle/[\\d\\.]+/\\d+)(/.*\\.pdf\\?sequence=[^&]+&isAllowed=y)", Pattern.CASE_INSENSITIVE);
-  public static final String PDF_REPLACEMENT = "$1$2$3";
+  public static final Pattern PDF_PATTERN = Pattern.compile("(bitstream/)(handle/\\d+\\.\\d+/\\d+)(/.*\\.pdf\\?sequence=[^&]+&isAllowed=y)", Pattern.CASE_INSENSITIVE);
+  public static final String PDF_REPLACEMENT = "bitstream/$2$3";
 
 
   @Override
@@ -75,19 +75,20 @@ public class DeepBlueArticleIteratorFactory implements ArticleIteratorFactory, A
 
     builder.setSpec(target,
             ROOT_TEMPLATE,
-            PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+            PATTERN_TEMPLATE,
+            Pattern.CASE_INSENSITIVE);
 
-    builder.addAspect(HTML_PATTERN,
+    builder.addAspect(
+            PDF_PATTERN,
+            PDF_REPLACEMENT,
+            ArticleFiles.ROLE_FULL_TEXT_PDF);
+
+    builder.addAspect(
+            HTML_PATTERN,
             HTML_REPLACEMENT,
             ArticleFiles.ROLE_FULL_TEXT_HTML,
             ArticleFiles.ROLE_ARTICLE_METADATA);
 
-    /*
-    builder.addAspect(PDF_PATTERN,
-            PDF_REPLACEMENT,
-            ArticleFiles.ROLE_FULL_TEXT_PDF);
-
-     */
 
     return builder.getSubTreeArticleIterator();
   }
