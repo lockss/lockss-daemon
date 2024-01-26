@@ -497,17 +497,17 @@
       name = Journal of Folklore Research Reviews ;
       eissn = 2832-8132
     >
-      #2015-2021, but have no articles
+      #2015-2021, but have no articles?
       param[journal_id] = jfrr
       #Publisher says that they only want to preserve 2022 for now. LXPUB-697
 
-      #au < manifest ; exists ; 2015 ; 2016 ; Journal of Folklore Research Reviews Volume 2015 ; 2015 ; >
-      #au < manifest ; exists ; 2016 ; 2016 ; Journal of Folklore Research Reviews Volume 2016 ; 2016 ; >
-      #au < manifest ; exists ; 2017 ; 2017 ; Journal of Folklore Research Reviews Volume 2017 ; 2017 ; >
-      #au < manifest ; exists ; 2018 ; 2018 ; Journal of Folklore Research Reviews Volume 2018 ; 2018 ; >
-      #au < manifest ; exists ; 2019 ; 2019 ; Journal of Folklore Research Reviews Volume 2019 ; 2019 ; >
-      #au < manifest ; exists ; 2020 ; 2020 ; Journal of Folklore Research Reviews Volume 2020 ; 2020 ; >
-      #au < manifest ; exists ; 2021 ; 2021 ; Journal of Folklore Research Reviews Volume 2021 ; 2021 ; >
+      au < manifest ; exists ; 2015 ; 2016 ; Journal of Folklore Research Reviews Volume 2015 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; Journal of Folklore Research Reviews Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; Journal of Folklore Research Reviews Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; Journal of Folklore Research Reviews Volume 2018 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Journal of Folklore Research Reviews Volume 2019 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; Journal of Folklore Research Reviews Volume 2020 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Journal of Folklore Research Reviews Volume 2021 ; 2021 ; >
       au < frozen ; exists ; 2022 ; 2022 ; Journal of Folklore Research Reviews Volume 2022 ; 2022 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Journal of Folklore Research Reviews Volume 2023 ; 2023 ; >
 
