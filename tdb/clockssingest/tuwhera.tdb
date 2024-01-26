@@ -399,7 +399,7 @@
 
       au < frozen ; exists ; 2017 ; Ethnographic Edge Volume 1 ; 1 ; 2017 ; >
       au < frozen ; exists ; 2018 ; Ethnographic Edge Volume 2 ; 2 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; Ethnographic Edge Volume 3 ; 3 ; 2019 ; >
+      au < finished ; manifest ; 2019 ; Ethnographic Edge Volume 3 ; 3 ; 2019 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2020 ; Ethnographic Edge Volume 4 ; 4 ; 2020 ; >
       au < frozen ; exists ; 2022 ; Ethnographic Edge Volume 5 ; 5 ; 2022 ; >
       au < crawling ; exists ; 2023 ; Ethnographic Edge Volume 6 ; 6 ; 2023 ; >
@@ -416,7 +416,7 @@
       param[base_url] = https://ojs.aut.ac.nz/
       param[journal_id] = lsc
 
-      au < frozen ; exists ; 2019 ; Library Summer Conference 2019 ; 1 ; 2019 ; >
+      au < finished ; manifest ; 2019 ; Library Summer Conference 2019 ; 1 ; 2019 ; reingest2.clockss.org:8085 >
 
   }
 
