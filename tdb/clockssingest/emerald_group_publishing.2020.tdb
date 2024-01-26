@@ -2430,7 +2430,7 @@
     au < manifest ; exists ; 1987 ; Employee Relations: An International Journal Volume 9 ; 9 ; >
     au < manifest ; exists ; 1988 ; Employee Relations: An International Journal Volume 10 ; 10 ; >
     au < manifest ; exists ; 1989 ; Employee Relations: An International Journal Volume 11 ; 11 ; >
-    au < crawling ; exists ; 1990 ; Employee Relations: An International Journal Volume 12 ; 12 ; >
+    au < frozen ; exists ; 1990 ; Employee Relations: An International Journal Volume 12 ; 12 ; >
     au < manifest ; exists ; 1991 ; Employee Relations: An International Journal Volume 13 ; 13 ; >
     au < frozen ; exists ; 1992 ; Employee Relations: An International Journal Volume 14 ; 14 ; >
     au < frozen ; exists ; 1993 ; Employee Relations: An International Journal Volume 15 ; 15 ; >
@@ -3318,7 +3318,7 @@
     au < manifest ; exists ; 1989 ; Humanomics Volume 5 ; 5 ; >
     au < crawling ; exists ; 1990 ; Humanomics Volume 6 ; 6 ; >
     au < manifest ; exists ; 1991 ; Humanomics Volume 7 ; 7 ; >
-    au < crawling ; exists ; 1992 ; Humanomics Volume 8 ; 8 ; >
+    au < frozen ; exists ; 1992 ; Humanomics Volume 8 ; 8 ; >
     au < doesNotExist ; doesNotExist ; 1993 ; Humanomics Volume 9 ; 9 ; >
     au < frozen ; exists ; 1994 ; Humanomics Volume 10 ; 10 ; >
     au < finished ; crawling ; 1995 ; Humanomics Volume 11 ; 11 ; reingest1.clockss.org:8082 >
@@ -4211,7 +4211,7 @@
     comment[journal_id] = ijcoma
 
     au < frozen ; exists ; 1991 ; International Journal of Commerce and Management Volume 1 ; 1 ; >
-    au < crawling ; exists ; 1992 ; International Journal of Commerce and Management Volume 2 ; 2 ; >
+    au < frozen ; exists ; 1992 ; International Journal of Commerce and Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 1993 ; International Journal of Commerce and Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 1994 ; International Journal of Commerce and Management Volume 4 ; 4 ; >
     au < finished ; manifest ; 1995 ; International Journal of Commerce and Management Volume 5 ; 5 ; reingest3.clockss.org:8083 >
@@ -4320,7 +4320,7 @@
     comment[journal_id] = ijchm
 
     au < manifest ; exists ; 1989 ; International Journal of Contemporary Hospitality Management Volume 1 ; 1 ; >
-    au < crawling ; exists ; 1990 ; International Journal of Contemporary Hospitality Management Volume 2 ; 2 ; >
+    au < frozen ; exists ; 1990 ; International Journal of Contemporary Hospitality Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 1991 ; International Journal of Contemporary Hospitality Management Volume 3 ; 3 ; >
     au < crawling ; exists ; 1992 ; International Journal of Contemporary Hospitality Management Volume 4 ; 4 ; >
     au < frozen ; exists ; 1993 ; International Journal of Contemporary Hospitality Management Volume 5 ; 5 ; >
@@ -4700,7 +4700,7 @@
 
     au < manifest ; exists ; 1988 ; International Journal of Health Care Quality Assurance Volume 1 ; 1 ; >
     au < manifest ; exists ; 1989 ; International Journal of Health Care Quality Assurance Volume 2 ; 2 ; >
-    au < crawling ; exists ; 1990 ; International Journal of Health Care Quality Assurance Volume 3 ; 3 ; >
+    au < frozen ; exists ; 1990 ; International Journal of Health Care Quality Assurance Volume 3 ; 3 ; >
     au < manifest ; exists ; 1991 ; International Journal of Health Care Quality Assurance Volume 4 ; 4 ; >
     au < frozen ; exists ; 1992 ; International Journal of Health Care Quality Assurance Volume 5 ; 5 ; >
     au < frozen ; exists ; 1993 ; International Journal of Health Care Quality Assurance Volume 6 ; 6 ; >
@@ -5269,7 +5269,7 @@
     au < manifest ; exists ; 1987 ; International Journal of Operations & Production Management Volume 7 ; 7 ; >
     au < manifest ; exists ; 1988 ; International Journal of Operations & Production Management Volume 8 ; 8 ; >
     au < manifest ; exists ; 1989 ; International Journal of Operations & Production Management Volume 9 ; 9 ; >
-    au < crawling ; exists ; 1990 ; International Journal of Operations & Production Management Volume 10 ; 10 ; >
+    au < frozen ; exists ; 1990 ; International Journal of Operations & Production Management Volume 10 ; 10 ; >
     au < manifest ; exists ; 1991 ; International Journal of Operations & Production Management Volume 11 ; 11 ; >
     au < frozen ; exists ; 1992 ; International Journal of Operations & Production Management Volume 12 ; 12 ; >
     au < frozen ; exists ; 1993 ; International Journal of Operations & Production Management Volume 13 ; 13 ; >
@@ -6853,9 +6853,9 @@
     au < manifest ; exists ; 1987 ; Journal of Consumer Marketing Volume 4 ; 4 ; >
     au < manifest ; exists ; 1988 ; Journal of Consumer Marketing Volume 5 ; 5 ; >
     au < manifest ; exists ; 1989 ; Journal of Consumer Marketing Volume 6 ; 6 ; >
-    au < crawling ; exists ; 1990 ; Journal of Consumer Marketing Volume 7 ; 7 ; >
+    au < frozen ; exists ; 1990 ; Journal of Consumer Marketing Volume 7 ; 7 ; >
     au < manifest ; exists ; 1991 ; Journal of Consumer Marketing Volume 8 ; 8 ; >
-    au < crawling ; exists ; 1992 ; Journal of Consumer Marketing Volume 9 ; 9 ; >
+    au < frozen ; exists ; 1992 ; Journal of Consumer Marketing Volume 9 ; 9 ; >
     au < frozen ; exists ; 1993 ; Journal of Consumer Marketing Volume 10 ; 10 ; >
     au < frozen ; exists ; 1994 ; Journal of Consumer Marketing Volume 11 ; 11 ; >
     au < finished ; manifest ; 1995 ; Journal of Consumer Marketing Volume 12 ; 12 ; reingest3.clockss.org:8083 >
@@ -9873,7 +9873,7 @@
     au < manifest ; exists ; 1987 ; Library Review Volume 36 ; 36 ; >
     au < manifest ; exists ; 1988 ; Library Review Volume 37 ; 37 ; >
     au < manifest ; exists ; 1989 ; Library Review Volume 38 ; 38 ; >
-    au < crawling ; exists ; 1990 ; Library Review Volume 39 ; 39 ; >
+    au < frozen ; exists ; 1990 ; Library Review Volume 39 ; 39 ; >
     au < manifest ; exists ; 1991 ; Library Review Volume 40 ; 40 ; >
     au < frozen ; exists ; 1992 ; Library Review Volume 41 ; 41 ; >
     au < frozen ; exists ; 1993 ; Library Review Volume 42 ; 42 ; >
@@ -10004,7 +10004,7 @@
     au < manifest ; exists ; 1987 ; Management Decision Volume 25 ; 25 ; >
     au < manifest ; exists ; 1988 ; Management Decision Volume 26 ; 26 ; >
     au < manifest ; exists ; 1989 ; Management Decision Volume 27 ; 27 ; >
-    au < crawling ; exists ; 1990 ; Management Decision Volume 28 ; 28 ; >
+    au < frozen ; exists ; 1990 ; Management Decision Volume 28 ; 28 ; >
     au < manifest ; exists ; 1991 ; Management Decision Volume 29 ; 29 ; >
     au < frozen ; exists ; 1992 ; Management Decision Volume 30 ; 30 ; >
     au < frozen ; exists ; 1993 ; Management Decision Volume 31 ; 31 ; >
@@ -10122,7 +10122,7 @@
     au < manifest ; exists ; 1987 ; Management Research News Volume 10 ; 10 ; >
     au < manifest ; exists ; 1988 ; Management Research News Volume 11 ; 11 ; >
     au < manifest ; exists ; 1989 ; Management Research News Volume 12 ; 12 ; >
-    au < crawling ; exists ; 1990 ; Management Research News Volume 13 ; 13 ; >
+    au < frozen ; exists ; 1990 ; Management Research News Volume 13 ; 13 ; >
     au < manifest ; exists ; 1991 ; Management Research News Volume 14 ; 14 ; >
     au < frozen ; exists ; 1992 ; Management Research News Volume 15 ; 15 ; >
     au < frozen ; exists ; 1993 ; Management Research News Volume 16 ; 16 ; >
@@ -10223,7 +10223,7 @@
     au < manifest ; exists ; 1987 ; Managerial Auditing Journal Volume 2 ; 2 ; >
     au < manifest ; exists ; 1988 ; Managerial Auditing Journal Volume 3 ; 3 ; >
     au < manifest ; exists ; 1989 ; Managerial Auditing Journal Volume 4 ; 4 ; >
-    au < crawling ; exists ; 1990 ; Managerial Auditing Journal Volume 5 ; 5 ; >
+    au < frozen ; exists ; 1990 ; Managerial Auditing Journal Volume 5 ; 5 ; >
     au < manifest ; exists ; 1991 ; Managerial Auditing Journal Volume 6 ; 6 ; >
     au < frozen ; exists ; 1992 ; Managerial Auditing Journal Volume 7 ; 7 ; >
     au < frozen ; exists ; 1993 ; Managerial Auditing Journal Volume 8 ; 8 ; >
@@ -10368,7 +10368,7 @@
     au < manifest ; exists ; 1989 ; Managerial Law Volume 31 ; 31 ; >
     au < crawling ; exists ; 1990 ; Managerial Law Volume 32 ; 32 ; >
     au < manifest ; exists ; 1991 ; Managerial Law Volume 33 ; 33 ; >
-    au < crawling ; exists ; 1992 ; Managerial Law Volume 34 ; 34 ; >
+    au < frozen ; exists ; 1992 ; Managerial Law Volume 34 ; 34 ; >
     au < frozen ; exists ; 1993 ; Managerial Law Volume 35 ; 35 ; >
     au < frozen ; exists ; 1994 ; Managerial Law Volume 36 ; 36 ; >
     au < finished ; manifest ; 1995 ; Managerial Law Volume 37 ; 37 ; reingest2.clockss.org:8085 >
@@ -10398,7 +10398,7 @@
     param[journal_issn] = 0960-4529
     comment[journal_id] = msq
 
-    au < crawling ; exists ; 1991 ; Managing Service Quality Volume 1 ; 1 ; >
+    au < frozen ; exists ; 1991 ; Managing Service Quality Volume 1 ; 1 ; >
     au < frozen ; exists ; 1992 ; Managing Service Quality Volume 2 ; 2 ; >
     au < frozen ; exists ; 1993 ; Managing Service Quality Volume 3 ; 3 ; >
     au < frozen ; exists ; 1994 ; Managing Service Quality Volume 4 ; 4 ; >
@@ -11072,7 +11072,7 @@
     au < manifest ; exists ; 1988 ; OCLC Micro Volume 4 ; 4 ; >
     au < manifest ; exists ; 1989 ; OCLC Micro Volume 5 ; 5 ; >
     au < frozen ; exists ; 1990 ; OCLC Micro Volume 6 ; 6 ; >
-    au < crawling ; exists ; 1991 ; OCLC Micro Volume 7 ; 7 ; >
+    au < frozen ; exists ; 1991 ; OCLC Micro Volume 7 ; 7 ; >
     au < frozen ; exists ; 1992 ; OCLC Micro Volume 8 ; 8 ; >
 
   }
@@ -12269,7 +12269,7 @@
     au < manifest ; exists ; 1989 ; Sensor Review Volume 9 ; 9 ; >
     au < frozen ; exists ; 1990 ; Sensor Review Volume 10 ; 10 ; >
     au < manifest ; exists ; 1991 ; Sensor Review Volume 11 ; 11 ; >
-    au < crawling ; exists ; 1992 ; Sensor Review Volume 12 ; 12 ; >
+    au < frozen ; exists ; 1992 ; Sensor Review Volume 12 ; 12 ; >
     au < frozen ; exists ; 1993 ; Sensor Review Volume 13 ; 13 ; >
     au < finished ; manifest ; 1994 ; Sensor Review Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1995 ; Sensor Review Volume 15 ; 15 ; reingest5.clockss.org:8082 >
@@ -12457,7 +12457,7 @@
     comment[journal_id] = ssmt
 
     au < manifest ; exists ; 1989 ; Soldering & Surface Mount Technology Volume 1 ; 1 ; >
-    au < crawling ; exists ; 1990 ; Soldering & Surface Mount Technology Volume 2 ; 2 ; >
+    au < frozen ; exists ; 1990 ; Soldering & Surface Mount Technology Volume 2 ; 2 ; >
     au < manifest ; exists ; 1991 ; Soldering & Surface Mount Technology Volume 3 ; 3 ; >
     au < frozen ; exists ; 1992 ; Soldering & Surface Mount Technology Volume 4 ; 4 ; >
     au < frozen ; exists ; 1993 ; Soldering & Surface Mount Technology Volume 5 ; 5 ; >
