@@ -26,18 +26,18 @@
       param[journal_id] = jpe
       param[base_url] = https://czasopisma.ignatianum.edu.pl/
 
-      au < manifest ; exists ; 2012 ; Multidisciplinary Journal of School Education Volume 2012 ; 1 ; 2012 ; >
-      au < manifest ; exists ; 2013 ; Multidisciplinary Journal of School Education Volume 2013 ; 2 ; 2013 ; >
-      au < manifest ; exists ; 2014 ; Multidisciplinary Journal of School Education Volume 2014 ; 3 ; 2014 ; >
-      au < manifest ; exists ; 2015 ; Multidisciplinary Journal of School Education Volume 2015 ; 4 ; 2015 ; >
-      au < manifest ; exists ; 2016 ; Multidisciplinary Journal of School Education Volume 2016 ; 5 ; 2016 ; >
-      au < manifest ; exists ; 2017 ; Multidisciplinary Journal of School Education Volume 2017 ; 6 ; 2017 ; >
-      au < manifest ; exists ; 2018 ; Multidisciplinary Journal of School Education Volume 2018 ; 7 ; 2018 ; >
-      au < manifest ; exists ; 2019 ; Multidisciplinary Journal of School Education Volume 2019 ; 8 ; 2019 ; >
-      au < manifest ; exists ; 2020 ; Multidisciplinary Journal of School Education Volume 2020 ; 9 ; 2020 ; >
-      au < manifest ; exists ; 2021 ; Multidisciplinary Journal of School Education Volume 2021 ; 10 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; Multidisciplinary Journal of School Education Volume 2022 ; 11 ; 2022 ; >
-      au < manifest ; exists ; 2023 ; Multidisciplinary Journal of School Education Volume 2023 ; 12 ; 2023 ; >
+      au < crawling ; exists ; 2012 ; Multidisciplinary Journal of School Education Volume 2012 ; 1 ; 2012 ; >
+      au < crawling ; exists ; 2013 ; Multidisciplinary Journal of School Education Volume 2013 ; 2 ; 2013 ; >
+      au < crawling ; exists ; 2014 ; Multidisciplinary Journal of School Education Volume 2014 ; 3 ; 2014 ; >
+      au < crawling ; exists ; 2015 ; Multidisciplinary Journal of School Education Volume 2015 ; 4 ; 2015 ; >
+      au < crawling ; exists ; 2016 ; Multidisciplinary Journal of School Education Volume 2016 ; 5 ; 2016 ; >
+      au < crawling ; exists ; 2017 ; Multidisciplinary Journal of School Education Volume 2017 ; 6 ; 2017 ; >
+      au < crawling ; exists ; 2018 ; Multidisciplinary Journal of School Education Volume 2018 ; 7 ; 2018 ; >
+      au < crawling ; exists ; 2019 ; Multidisciplinary Journal of School Education Volume 2019 ; 8 ; 2019 ; >
+      au < crawling ; exists ; 2020 ; Multidisciplinary Journal of School Education Volume 2020 ; 9 ; 2020 ; >
+      au < crawling ; exists ; 2021 ; Multidisciplinary Journal of School Education Volume 2021 ; 10 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; Multidisciplinary Journal of School Education Volume 2022 ; 11 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; Multidisciplinary Journal of School Education Volume 2023 ; 12 ; 2023 ; >
   }
 
 }

@@ -257,8 +257,8 @@
 
      param[journal_id] = tsr
 
-    au < crawling ; exists ; 2021 ; 2021 ; The Seismic Record Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2022 ; 2022 ; The Seismic Record Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2021 ; 2021 ; The Seismic Record Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2022 ; 2022 ; The Seismic Record Volume 2 ; 2 ; >
     au < crawling ; exists ; 2023 ; 2023 ; The Seismic Record Volume 3 ; 3 ; >
 
   }

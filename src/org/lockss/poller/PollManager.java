@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2024 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -84,7 +80,7 @@ public class PollManager
   static final String PREFIX = Configuration.PREFIX + "poll.";
   static final String PARAM_RECENT_EXPIRATION = PREFIX + "expireRecent";
 
-  static final long DEFAULT_RECENT_EXPIRATION = DAY;
+  static final long DEFAULT_RECENT_EXPIRATION = 2 * DAY;
   
   /** If true, empty poll state directories found at startup will be
    * deleted.
@@ -96,7 +92,7 @@ public class PollManager
   /** If true, discard saved poll state at startup (i.e., don't restore
    * polls that were running before exit).  */
   static final String PARAM_DISCARD_SAVED_POLLS = PREFIX + "discardSavedPolls";
-  static final boolean DEFAULT_DISCARD_SAVED_POLLS = false;
+  static final boolean DEFAULT_DISCARD_SAVED_POLLS = true;
   
   // todo(bhayes): Is PREFIX right? Should this be a "v3" param, not a
   // "poll" param?

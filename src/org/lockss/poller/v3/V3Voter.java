@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2024 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -99,7 +95,7 @@ public class V3Voter extends BasePoll {
    * an empty nomination message will be sent. */
   public static final String PARAM_MIN_NOMINATION_SIZE =
     PREFIX + "minNominationSize";
-  public static final int DEFAULT_MIN_NOMINATION_SIZE = 1;
+  public static final int DEFAULT_MIN_NOMINATION_SIZE = 0;
 
   /** The minimum number of peers to select for a nomination message. */
   public static final String PARAM_MAX_NOMINATION_SIZE = 
@@ -156,13 +152,6 @@ public class V3Voter extends BasePoll {
   public static final long DEFAULT_VOTE_SEND_PADDING = 15 * Constants.SECOND;
 
   /** 
-   * Extra time added to the poll deadline (as sent by the poller) to 
-   * wait for a receipt message.
-   */
-  public static final String PARAM_RECEIPT_PADDING = PREFIX + "receiptPadding";
-  public static final long DEFAULT_RECEIPT_PADDING = 10 * Constants.MINUTE;
-
-  /** 
    * Guess as to how long after we accept we'll get a vote request.
    * S.b. used to send vote request deadline to poller
    */
@@ -213,7 +202,7 @@ public class V3Voter extends BasePoll {
   /** If true, always request a symmetric poll */
   public static final String PARAM_ALL_SYMMETRIC_POLLS =
     PREFIX + "allSymmetricPolls";
-  public static final boolean DEFAULT_ALL_SYMMETRIC_POLLS = false;
+  public static final boolean DEFAULT_ALL_SYMMETRIC_POLLS = true;
 
   /** If true, can vote in a Proof of Possession poll - for testing */
   public static final String PARAM_ENABLE_POP_VOTING =
@@ -223,7 +212,7 @@ public class V3Voter extends BasePoll {
   /** If true, can request a symmetric poll */
   public static final String PARAM_ENABLE_SYMMETRIC_POLLS =
     PREFIX + "enableSymmetricPolls";
-  public static final boolean DEFAULT_ENABLE_SYMMETRIC_POLLS = false;
+  public static final boolean DEFAULT_ENABLE_SYMMETRIC_POLLS = true;
 
   /* Minimum weight to call a symmetric poll */
   public static final String PARAM_MIN_WEIGHT_SYMMETRIC_POLL =
@@ -270,8 +259,8 @@ public class V3Voter extends BasePoll {
       throws V3Serializer.PollSerializerException {
     this.theDaemon = daemon;
     Configuration c = ConfigManager.getCurrentConfig();
-    long padding = c.getTimeInterval(V3Voter.PARAM_RECEIPT_PADDING,
-				     V3Voter.DEFAULT_RECEIPT_PADDING);
+    long padding = c.getTimeInterval(V3Poller.PARAM_RECEIPT_PADDING,
+				     V3Poller.DEFAULT_RECEIPT_PADDING);
     long duration = msg.getDuration() + padding;
 
     log.debug3("Creating V3 Voter for poll: " + msg.getKey() +

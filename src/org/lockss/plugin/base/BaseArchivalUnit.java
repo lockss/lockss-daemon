@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2024 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -68,7 +68,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * "au". */
   public static final String PARAM_DEFAULT_FETCH_RATE_LIMITER_SOURCE =
     Configuration.PREFIX+"baseau.defaultFetchRateLimiterSource";
-  public static final String DEFAULT_DEFAULT_FETCH_RATE_LIMITER_SOURCE = "au";
+  public static final String DEFAULT_DEFAULT_FETCH_RATE_LIMITER_SOURCE =
+    "plugin";
 
   /** Override fetch rate limiter source for all plugins and AU no matter
    * what else they specify.  Can be "au" or "plugin"". */

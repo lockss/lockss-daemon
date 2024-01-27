@@ -22,7 +22,7 @@ my $ua = LWP::UserAgent->new;
     $ua->cookie_jar(HTTP::Cookies->new());
 
 #tdbout -Dc param[collection_id],year tdb/usdocspln/united_states_government_printing_office.fdsys.tdb > tmp/list1a
-#tdbout -MTYRc param[collection_id],year tdb/usdocspln/united_states_government_printing_office.tdb >> tmp/list1a
+#tdbout -MTYRc param[collection_id],year tdb/usdocspln/united_states_government_publishing_office.tdb >> tmp/list1a
 #cat tmp/list1a | sort  > tmp/list1b
 #cat tmp/list1b | uniq > tmp/list1c
 #echo "Duplicate AUs in previous and new tdb files."

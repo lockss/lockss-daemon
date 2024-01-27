@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2022 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2024 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -890,9 +890,9 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     String u1 = "http://example.com/baz/";
     assertSame(u1, au.siteNormalizeUrl(u1));
 
-    assertNull(au.getFetchRateLimiterKey());
-    assertEquals("au", au.getFetchRateLimiterSource());
-    assertEquals(new RateLimiterInfo(null, "1/3000"), au.getRateLimiterInfo());
+    assertEquals(pname, au.getFetchRateLimiterKey());
+    assertEquals("plugin", au.getFetchRateLimiterSource());
+    assertEquals(new RateLimiterInfo(pname, "1/3000"), au.getRateLimiterInfo());
     assertClass(SimpleUrlConsumerFactory.class, au.getUrlConsumerFactory());
     assertClass(BaseCrawlSeed.class, au.makeCrawlSeed(null));
     assertClass(BaseUrlFetcher.class, 

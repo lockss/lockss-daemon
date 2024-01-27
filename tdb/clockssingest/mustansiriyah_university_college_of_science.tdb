@@ -4,7 +4,7 @@
     name = Mustansiriyah University, College of Science ;
     info[contract] = 2023 ;
     info[back] = 2020 ;
-    info[tester] = 2 ;
+    info[tester] = 8 ;
     info[platform] = OJS3 3.3.0.8
   >
 
@@ -30,8 +30,8 @@
       au < manifest ; exists ; 2019 ; Al-Mustansiriyah Journal of Science Volume 2019 ; 30 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Al-Mustansiriyah Journal of Science Volume 2020 ; 31 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Al-Mustansiriyah Journal of Science Volume 2021 ; 32 ; 2021 ; >
-      au < testing ; exists ; 2022 ; Al-Mustansiriyah Journal of Science Volume 2022 ; 33 ; 2022 ; >
-      au < testing ; exists ; 2023 ; Al-Mustansiriyah Journal of Science Volume 2023 ; 34 ; 2023 ; >
+      au < frozen ; exists ; 2022 ; Al-Mustansiriyah Journal of Science Volume 2022 ; 33 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; Al-Mustansiriyah Journal of Science Volume 2023 ; 34 ; 2023 ; >
 
   }
 

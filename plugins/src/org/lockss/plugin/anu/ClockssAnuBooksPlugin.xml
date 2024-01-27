@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -55,7 +55,7 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -116,6 +116,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_substance_url_pattern</string>
     <list>
       <string>"^https?://press-files.anu.edu.au/downloads/press/[^/]+/pdf/.+\.pdf"</string>
+      <string>"^https://press-files.anu.edu.au/downloads/press/.*\.epub"</string>
     </list>
   </entry>
   <entry>

@@ -22,8 +22,8 @@
 
     au < manifest ; exists ; 2019 ; 2019 ; Journal of Festive Studies Volume 1 ; 1 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Journal of Festive Studies Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2021 ; 2021 ; Journal of Festive Studies Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2022 ; 2022 ; Journal of Festive Studies Volume 4 ; 4 ; >
+    au < finished ; manifest ; 2021 ; 2021 ; Journal of Festive Studies Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2022 ; 2022 ; Journal of Festive Studies Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2023 ; 2023 ; Journal of Festive Studies Volume 5 ; 5 ; >
 
   }

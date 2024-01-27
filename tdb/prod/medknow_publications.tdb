@@ -755,12 +755,12 @@
 
     param[journal_issn] = 0972-9747
 
-    au < manifest ; 2004 ; Hepatitis B Annual Volume 1 ; 2004 ; 1 ; https://www.hepatitisbannual.org/ >
-    au < manifest ; 2005 ; Hepatitis B Annual Volume 2 ; 2005 ; 2 ; https://www.hepatitisbannual.org/ >
-    au < manifest ; 2006 ; Hepatitis B Annual Volume 3 ; 2006 ; 3 ; https://www.hepatitisbannual.org/ >
-    au < manifest ; 2007 ; Hepatitis B Annual Volume 4 ; 2007 ; 4 ; https://www.hepatitisbannual.org/ >
-    au < manifest ; 2008 ; Hepatitis B Annual Volume 5 ; 2008 ; 5 ; https://www.hepatitisbannual.org/ >
-    au < manifest ; 2009 ; Hepatitis B Annual Volume 6 ; 2009 ; 6 ; https://www.hepatitisbannual.org/ >
+    au < released ; 2004 ; Hepatitis B Annual Volume 1 ; 2004 ; 1 ; https://www.hepatitisbannual.org/ >
+    au < released ; 2005 ; Hepatitis B Annual Volume 2 ; 2005 ; 2 ; https://www.hepatitisbannual.org/ >
+    au < released ; 2006 ; Hepatitis B Annual Volume 3 ; 2006 ; 3 ; https://www.hepatitisbannual.org/ >
+    au < released ; 2007 ; Hepatitis B Annual Volume 4 ; 2007 ; 4 ; https://www.hepatitisbannual.org/ >
+    au < released ; 2008 ; Hepatitis B Annual Volume 5 ; 2008 ; 5 ; https://www.hepatitisbannual.org/ >
+    au < released ; 2009 ; Hepatitis B Annual Volume 6 ; 2009 ; 6 ; https://www.hepatitisbannual.org/ >
     au < released ; 2010 ; Hepatitis B Annual Volume 7 ; 2010 ; 7 ; https://www.hepatitisbannual.org/ >
     au < released ; 2011 ; Hepatitis B Annual Volume 8 ; 2011 ; 8 ; http://www.hepatitisbannual.org/ >
     au < released ; 2012 ; Hepatitis B Annual Volume 9 ; 2012 ; 9 ; http://www.hepatitisbannual.org/ >
@@ -3461,7 +3461,7 @@
     au < released ; 2017 ; Journal of Nursing and Midwifery Sciences Volume 4 ; 2017 ; 4 ; https://www.jnmsjournal.org/ >
     au < released ; 2018 ; Journal of Nursing and Midwifery Sciences Volume 5 ; 2018 ; 5 ; https://www.jnmsjournal.org/ >
     au < released ; 2019 ; Journal of Nursing and Midwifery Sciences Volume 6 ; 2019 ; 6 ; https://www.jnmsjournal.org/ >
-    au < ready ; 2020 ; Journal of Nursing and Midwifery Sciences Volume 7 ; 2020 ; 7 ; https://www.jnmsjournal.org/ >
+    au < released ; 2020 ; Journal of Nursing and Midwifery Sciences Volume 7 ; 2020 ; 7 ; https://www.jnmsjournal.org/ >
     au < released ; 2021 ; Journal of Nursing and Midwifery Sciences Volume 8 ; 2021 ; 8 ; https://www.jnmsjournal.org/ >
     au < released ; 2022 ; Journal of Nursing and Midwifery Sciences Volume 9 ; 2022 ; 9 ; https://www.jnmsjournal.org/ >
       #deactivated
@@ -4084,7 +4084,7 @@
 #    param[base_url] = http://www.nigeriamedj.com/
     param[journal_issn] = 0300-1652
 
-    au < manifest ; 2009 ; Nigerian Medical Journal Volume 50 ; 2009 ; 50 ; https://www.nigeriamedj.com/ >
+    au < released ; 2009 ; Nigerian Medical Journal Volume 50 ; 2009 ; 50 ; https://www.nigeriamedj.com/ >
     au < released ; 2010 ; Nigerian Medical Journal Volume 51 ; 2010 ; 51 ; https://www.nigeriamedj.com/ >
     au < released ; 2011 ; Nigerian Medical Journal Volume 52 ; 2011 ; 52 ; http://www.nigeriamedj.com/ >
     au < released ; 2012 ; Nigerian Medical Journal Volume 53 ; 2012 ; 53 ; http://www.nigeriamedj.com/ >
@@ -4969,9 +4969,10 @@
       param[journal_issn] = 2773-2398
       #Moved from http://www.actnjournal.com/
       #Moved to https://www.bnmjournal.com/
+      #move to LWW in 2024, moved https://journals.lww.com/bnam/
 
-      au < released ; 2022 ; Brain Network and Modulation Volume 1 ; 2022 ; 1 ; https://www.bnmjournal.com/ >
-      au < manifest ; 2023 ; Brain Network and Modulation Volume 2 ; 2023 ; 2 ; https://www.bnmjournal.com/ >
+      au < down ; 2022 ; Brain Network and Modulation Volume 1 ; 2022 ; 1 ; https://www.bnmjournal.com/ >
+      au < doNotProcess ; 2023 ; Brain Network and Modulation Volume 2 ; 2023 ; 2 ; https://www.bnmjournal.com/ >
 
   }
 
@@ -6741,9 +6742,9 @@
       param[journal_issn] = 2321-1385
 #      param[base_url] = http://www.jdentlasers.org/
 
-      au < manifest ; 2007 ; Journal of Dental Lasers Volume 1 ; 2007 ; 1 ; https://www.jdentlasers.org/ >
-      au < manifest ; 2008 ; Journal of Dental Lasers Volume 2 ; 2008 ; 2 ; https://www.jdentlasers.org/ >
-      au < manifest ; 2009 ; Journal of Dental Lasers Volume 3 ; 2009 ; 3 ; https://www.jdentlasers.org/ >
+      au < released ; 2007 ; Journal of Dental Lasers Volume 1 ; 2007 ; 1 ; https://www.jdentlasers.org/ >
+      au < released ; 2008 ; Journal of Dental Lasers Volume 2 ; 2008 ; 2 ; https://www.jdentlasers.org/ >
+      au < released ; 2009 ; Journal of Dental Lasers Volume 3 ; 2009 ; 3 ; https://www.jdentlasers.org/ >
       au < released ; 2010 ; Journal of Dental Lasers Volume 4 ; 2010 ; 4 ; https://www.jdentlasers.org/ >
       au < released ; 2011 ; Journal of Dental Lasers Volume 5 ; 2011 ; 5 ; http://www.jdentlasers.org/ >
       au < released ; 2012 ; Journal of Dental Lasers Volume 6 ; 2012 ; 6 ; http://www.jdentlasers.org/ >
@@ -8275,16 +8276,16 @@
 
       au < manifest ; 1998 ; Sahel Medical Journal Volume 1 ; 1998 ; 1 ; https://www.smjonline.org/ >
       au < manifest ; 1999 ; Sahel Medical Journal Volume 2 ; 1999 ; 2 ; https://www.smjonline.org/ >
-      au < manifest ; 2000 ; Sahel Medical Journal Volume 3 ; 2000 ; 3 ; https://www.smjonline.org/ >
-      au < manifest ; 2001 ; Sahel Medical Journal Volume 4 ; 2001 ; 4 ; https://www.smjonline.org/ >
-      au < manifest ; 2002 ; Sahel Medical Journal Volume 5 ; 2002 ; 5 ; https://www.smjonline.org/ >
-      au < manifest ; 2003 ; Sahel Medical Journal Volume 6 ; 2003 ; 6 ; https://www.smjonline.org/ >
-      au < manifest ; 2004 ; Sahel Medical Journal Volume 7 ; 2004 ; 7 ; https://www.smjonline.org/ >
-      au < manifest ; 2005 ; Sahel Medical Journal Volume 8 ; 2005 ; 8 ; https://www.smjonline.org/ >
-      au < manifest ; 2006 ; Sahel Medical Journal Volume 9 ; 2006 ; 9 ; https://www.smjonline.org/ >
-      au < manifest ; 2007 ; Sahel Medical Journal Volume 10 ; 2007 ; 10 ; https://www.smjonline.org/ >
-      au < manifest ; 2008 ; Sahel Medical Journal Volume 11 ; 2008 ; 11 ; https://www.smjonline.org/ >
-      au < manifest ; 2009 ; Sahel Medical Journal Volume 12 ; 2009 ; 12 ; https://www.smjonline.org/ >
+      au < released ; 2000 ; Sahel Medical Journal Volume 3 ; 2000 ; 3 ; https://www.smjonline.org/ >
+      au < released ; 2001 ; Sahel Medical Journal Volume 4 ; 2001 ; 4 ; https://www.smjonline.org/ >
+      au < released ; 2002 ; Sahel Medical Journal Volume 5 ; 2002 ; 5 ; https://www.smjonline.org/ >
+      au < released ; 2003 ; Sahel Medical Journal Volume 6 ; 2003 ; 6 ; https://www.smjonline.org/ >
+      au < released ; 2004 ; Sahel Medical Journal Volume 7 ; 2004 ; 7 ; https://www.smjonline.org/ >
+      au < released ; 2005 ; Sahel Medical Journal Volume 8 ; 2005 ; 8 ; https://www.smjonline.org/ >
+      au < released ; 2006 ; Sahel Medical Journal Volume 9 ; 2006 ; 9 ; https://www.smjonline.org/ >
+      au < released ; 2007 ; Sahel Medical Journal Volume 10 ; 2007 ; 10 ; https://www.smjonline.org/ >
+      au < released ; 2008 ; Sahel Medical Journal Volume 11 ; 2008 ; 11 ; https://www.smjonline.org/ >
+      au < released ; 2009 ; Sahel Medical Journal Volume 12 ; 2009 ; 12 ; https://www.smjonline.org/ >
       au < down ; 2010 ; Sahel Medical Journal Volume 13 ; 2010 ; 13 ; https://www.smjonline.org/ >
       au < released ; 2011 ; Sahel Medical Journal Volume 14 ; 2011 ; 14 ; http://www.smjonline.org/ >
       au < released ; 2012 ; Sahel Medical Journal Volume 15 ; 2012 ; 15 ; http://www.smjonline.org/ >
@@ -10097,9 +10098,9 @@
       param[journal_issn] = WKMP-0130
       #Archive will stay with Medknow until further notice
 
-      au < ready ; 2017 ; International Journal of Histopathological Interpretation Volume 6 ; 2017 ; 6 ; https://www.ijhi.org/ >
-      au < ready ; 2018 ; International Journal of Histopathological Interpretation Volume 7 ; 2018 ; 7 ; https://www.ijhi.org/ >
-      au < ready ; 2019 ; International Journal of Histopathological Interpretation Volume 8 ; 2019 ; 8 ; https://www.ijhi.org/ >
+      au < released ; 2017 ; International Journal of Histopathological Interpretation Volume 6 ; 2017 ; 6 ; https://www.ijhi.org/ >
+      au < released ; 2018 ; International Journal of Histopathological Interpretation Volume 7 ; 2018 ; 7 ; https://www.ijhi.org/ >
+      au < released ; 2019 ; International Journal of Histopathological Interpretation Volume 8 ; 2019 ; 8 ; https://www.ijhi.org/ >
       #deactivated
 
   }
@@ -10562,17 +10563,18 @@
 
       param[journal_issn] = 1011-4564
 #      param[base_url] = http://www.jmedscindmc.com/
+      #move to LWW in 2024, moved https://journals.lww.com/JOMS/
 
-      au < released ; 2014 ; Journal of Medical Sciences Volume 34 ; 2014 ; 34 ; https://www.jmedscindmc.com/ >
-      au < released ; 2015 ; Journal of Medical Sciences Volume 35 ; 2015 ; 35 ; https://www.jmedscindmc.com/ >
-      au < released ; 2016 ; Journal of Medical Sciences Volume 36 ; 2016 ; 36 ; https://www.jmedscindmc.com/ >
-      au < released ; 2017 ; Journal of Medical Sciences Volume 37 ; 2017 ; 37 ; http://www.jmedscindmc.com/ >
-      au < released ; 2018 ; Journal of Medical Sciences Volume 38 ; 2018 ; 38 ; https://www.jmedscindmc.com/ >
-      au < released ; 2019 ; Journal of Medical Sciences Volume 39 ; 2019 ; 39 ; https://www.jmedscindmc.com/ >
-      au < released ; 2020 ; Journal of Medical Sciences Volume 40 ; 2020 ; 40 ; https://www.jmedscindmc.com/ >
-      au < released ; 2021 ; Journal of Medical Sciences Volume 41 ; 2021 ; 41 ; https://www.jmedscindmc.com/ >
-      au < released ; 2022 ; Journal of Medical Sciences Volume 42 ; 2022 ; 42 ; https://www.jmedscindmc.com/ >
-      au < manifest ; 2023 ; Journal of Medical Sciences Volume 43 ; 2023 ; 43 ; https://www.jmedscindmc.com/ >
+      au < down ; 2014 ; Journal of Medical Sciences Volume 34 ; 2014 ; 34 ; https://www.jmedscindmc.com/ >
+      au < down ; 2015 ; Journal of Medical Sciences Volume 35 ; 2015 ; 35 ; https://www.jmedscindmc.com/ >
+      au < down ; 2016 ; Journal of Medical Sciences Volume 36 ; 2016 ; 36 ; https://www.jmedscindmc.com/ >
+      au < down ; 2017 ; Journal of Medical Sciences Volume 37 ; 2017 ; 37 ; http://www.jmedscindmc.com/ >
+      au < down ; 2018 ; Journal of Medical Sciences Volume 38 ; 2018 ; 38 ; https://www.jmedscindmc.com/ >
+      au < down ; 2019 ; Journal of Medical Sciences Volume 39 ; 2019 ; 39 ; https://www.jmedscindmc.com/ >
+      au < down ; 2020 ; Journal of Medical Sciences Volume 40 ; 2020 ; 40 ; https://www.jmedscindmc.com/ >
+      au < down ; 2021 ; Journal of Medical Sciences Volume 41 ; 2021 ; 41 ; https://www.jmedscindmc.com/ >
+      au < down ; 2022 ; Journal of Medical Sciences Volume 42 ; 2022 ; 42 ; https://www.jmedscindmc.com/ >
+      au < doNotProcess ; 2023 ; Journal of Medical Sciences Volume 43 ; 2023 ; 43 ; https://www.jmedscindmc.com/ >
 
   }
 
@@ -11344,13 +11346,14 @@
 
       param[journal_issn] = 1879-5226
 #      param[base_url] = http://www.e-urol-sci.com/
+      #move to LWW in 2024, moved https://journals.lww.com/ursc/
 
       au < down ; 2018 ; Urological Science Volume 29 ; 2018 ; 29 ; https://www.e-urol-sci.com/ >
-      au < released ; 2019 ; Urological Science Volume 30 ; 2019 ; 30 ; https://www.e-urol-sci.com/ >
-      au < released ; 2020 ; Urological Science Volume 31 ; 2020 ; 31 ; https://www.e-urol-sci.com/ >
-      au < released ; 2021 ; Urological Science Volume 32 ; 2021 ; 32 ; https://www.e-urol-sci.com/ >
-      au < released ; 2022 ; Urological Science Volume 33 ; 2022 ; 33 ; https://www.e-urol-sci.com/ >
-      au < manifest ; 2023 ; Urological Science Volume 34 ; 2023 ; 34 ; https://www.e-urol-sci.com/ >
+      au < down ; 2019 ; Urological Science Volume 30 ; 2019 ; 30 ; https://www.e-urol-sci.com/ >
+      au < down ; 2020 ; Urological Science Volume 31 ; 2020 ; 31 ; https://www.e-urol-sci.com/ >
+      au < down ; 2021 ; Urological Science Volume 32 ; 2021 ; 32 ; https://www.e-urol-sci.com/ >
+      au < down ; 2022 ; Urological Science Volume 33 ; 2022 ; 33 ; https://www.e-urol-sci.com/ >
+      au < doNotProcess ; 2023 ; Urological Science Volume 34 ; 2023 ; 34 ; https://www.e-urol-sci.com/ >
 
   }
 
@@ -11385,6 +11388,7 @@
 
       param[journal_issn] = 2311-8571
 #      param[base_url] = http://www.wjtcm.net/
+      #move to LWW in 2024, moved https://journals.lww.com/wtcm/
 
       au < down ; 2017 ; World Journal of Traditional Chinese Medicine Volume 3 ; 2017 ; 3 ; http://www.wjtcm.net/ >
       au < down ; 2018 ; World Journal of Traditional Chinese Medicine Volume 4 ; 2018 ; 4 ; https://www.wjtcm.net/ >
@@ -11697,12 +11701,13 @@
 
       param[journal_issn] = 0304-4920
       #param[base_url] = https://www.cjphysiology.org/
+      #move to LWW in 2024, moved https://journals.lww.com/CJOP/
 
-      au < released ; 2019 ; Chinese Journal of Physiology Volume 62 ; 2019 ; 62 ; https://www.cjphysiology.org/ >
-      au < released ; 2020 ; Chinese Journal of Physiology Volume 63 ; 2020 ; 63 ; https://www.cjphysiology.org/ >
-      au < released ; 2021 ; Chinese Journal of Physiology Volume 64 ; 2021 ; 64 ; https://www.cjphysiology.org/ >
-      au < released ; 2022 ; Chinese Journal of Physiology Volume 65 ; 2022 ; 65 ; https://www.cjphysiology.org/ >
-      au < manifest ; 2023 ; Chinese Journal of Physiology Volume 66 ; 2023 ; 66 ; https://www.cjphysiology.org/ >
+      au < down ; 2019 ; Chinese Journal of Physiology Volume 62 ; 2019 ; 62 ; https://www.cjphysiology.org/ >
+      au < down ; 2020 ; Chinese Journal of Physiology Volume 63 ; 2020 ; 63 ; https://www.cjphysiology.org/ >
+      au < down ; 2021 ; Chinese Journal of Physiology Volume 64 ; 2021 ; 64 ; https://www.cjphysiology.org/ >
+      au < down ; 2022 ; Chinese Journal of Physiology Volume 65 ; 2022 ; 65 ; https://www.cjphysiology.org/ >
+      au < doNotProcess ; 2023 ; Chinese Journal of Physiology Volume 66 ; 2023 ; 66 ; https://www.cjphysiology.org/ >
 
   }
 
@@ -12186,10 +12191,10 @@
       #param[base_url] = https://www.ijsocialrehab.com/
       #move to MM Publications 2022-06, Archive will stay with Medknow until further notice
 
-      au < ready ; 2018 ; International Journal of Social Rehabilitation Volume 3 ; 2018 ; 3 ; https://www.ijsocialrehab.com/ >
-      au < ready ; 2019 ; International Journal of Social Rehabilitation Volume 4 ; 2019 ; 4 ; https://www.ijsocialrehab.com/ >
-      au < ready ; 2020 ; International Journal of Social Rehabilitation Volume 5 ; 2020 ; 5 ; https://www.ijsocialrehab.com/ >
-      au < ready ; 2021 ; International Journal of Social Rehabilitation Volume 6 ; 2021 ; 6 ; https://www.ijsocialrehab.com/ >
+      au < released ; 2018 ; International Journal of Social Rehabilitation Volume 3 ; 2018 ; 3 ; https://www.ijsocialrehab.com/ >
+      au < released ; 2019 ; International Journal of Social Rehabilitation Volume 4 ; 2019 ; 4 ; https://www.ijsocialrehab.com/ >
+      au < released ; 2020 ; International Journal of Social Rehabilitation Volume 5 ; 2020 ; 5 ; https://www.ijsocialrehab.com/ >
+      au < released ; 2021 ; International Journal of Social Rehabilitation Volume 6 ; 2021 ; 6 ; https://www.ijsocialrehab.com/ >
       #deactivated
 
   }

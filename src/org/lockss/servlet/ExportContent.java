@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2024 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -59,7 +55,7 @@ public class ExportContent extends LockssServlet {
   /** Enable AU export from UI.  Daemon restart required when set to true,
    * not when set false */
   public static final String PARAM_ENABLE_EXPORT = PREFIX + "enabled";
-  public static final boolean DEFAULT_ENABLE_EXPORT = false;
+  public static final boolean DEFAULT_ENABLE_EXPORT = true;
 
   /** Output directory for export files.  Defaults to
    * <code><i>daemon_tmpdir</i>/export</code> .  Changes require daemon

@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>61</string>
+    <string>65</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -54,7 +54,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>157</string>
+    <string>159</string>
   </entry>
   <!--  override start url from parent to support http to https conversion -->
   <entry>
@@ -64,18 +64,18 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>"%slockss/%s/%s/index.html", to_https(base_url), journal_id, volume_name</string>
     </list>
   </entry>
-  <!--  also for https conversion -->
   <entry>
     <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponHttpHttpsUrlNormalizer</string>
+    <string>org.lockss.plugin.atypon.sage.SageAtyponUrlNormalizer</string>
   </entry>
+  <!--  also for https conversion -->
   <entry>
     <string>plugin_url_fetcher_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlFetcherFactory</string>
   </entry>
   <entry>
     <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponHttpToHttpsUrlConsumerFactory</string>
+    <string>org.lockss.plugin.atypon.sage.SageAtyponHttpToHttpsUrlConsumerFactory</string>
   </entry>
   <!-- end changes for https conversion -->
   <entry>

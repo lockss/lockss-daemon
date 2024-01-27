@@ -1,0 +1,55 @@
+{
+
+  publisher <
+    name = SciELO ;
+    info[contract] = 2024 ;
+    info[back] = 2016 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+  
+  provider = Anais da Academia Brasileira de Ciências
+  rights = openaccess
+  #plugin = org.lockss.plugin.scielo.ClockssSciELO2024Plugin
+  plugin = needs.plugin
+  implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
+
+  {
+
+    title <
+      name = Anais da Academia Brasileira de Ciências ;
+      issn = 0001-3765 ;
+      eissn = 1678-2690
+    >
+
+    param[base_url] = http://www.scielo.br/
+    param[journal_id] = aabc
+
+    au < exists ; exists ; 2000 ; 72 ; Anais da Academia Brasileira de Ciências Volume 72 ; 2000 ; >
+    au < exists ; exists ; 2001 ; 73 ; Anais da Academia Brasileira de Ciências Volume 73 ; 2001 ; >
+    au < exists ; exists ; 2002 ; 74 ; Anais da Academia Brasileira de Ciências Volume 74 ; 2002 ; >
+    au < exists ; exists ; 2003 ; 75 ; Anais da Academia Brasileira de Ciências Volume 75 ; 2003 ; >
+    au < exists ; exists ; 2004 ; 76 ; Anais da Academia Brasileira de Ciências Volume 76 ; 2004 ; >
+    au < exists ; exists ; 2005 ; 77 ; Anais da Academia Brasileira de Ciências Volume 77 ; 2005 ; >
+    au < exists ; exists ; 2006 ; 78 ; Anais da Academia Brasileira de Ciências Volume 78 ; 2006 ; >
+    au < exists ; exists ; 2007 ; 79 ; Anais da Academia Brasileira de Ciências Volume 79 ; 2007 ; >
+    au < exists ; exists ; 2008 ; 80 ; Anais da Academia Brasileira de Ciências Volume 80 ; 2008 ; >
+    au < exists ; exists ; 2009 ; 81 ; Anais da Academia Brasileira de Ciências Volume 81 ; 2009 ; >
+    au < exists ; exists ; 2010 ; 82 ; Anais da Academia Brasileira de Ciências Volume 82 ; 2010 ; >
+    au < exists ; exists ; 2011 ; 83 ; Anais da Academia Brasileira de Ciências Volume 83 ; 2011 ; >
+    au < exists ; exists ; 2012 ; 84 ; Anais da Academia Brasileira de Ciências Volume 84 ; 2012 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 85 ; Anais da Academia Brasileira de Ciências Volume 85 ; 2013 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 86 ; Anais da Academia Brasileira de Ciências Volume 86 ; 2014 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 87 ; Anais da Academia Brasileira de Ciências Volume 87 ; 2015 ; >
+    au < exists ; exists ; 2016 ; 88 ; Anais da Academia Brasileira de Ciências Volume 88 ; 2016 ; >
+    au < exists ; exists ; 2017 ; 89 ; Anais da Academia Brasileira de Ciências Volume 89 ; 2017 ; >
+    au < exists ; exists ; 2018 ; 90 ; Anais da Academia Brasileira de Ciências Volume 90 ; 2018 ; >
+    au < exists ; exists ; 2019 ; 91 ; Anais da Academia Brasileira de Ciências Volume 91 ; 2019 ; >
+    au < exists ; exists ; 2020 ; 92 ; Anais da Academia Brasileira de Ciências Volume 92 ; 2020 ; >
+    au < exists ; exists ; 2021 ; 93 ; Anais da Academia Brasileira de Ciências Volume 93 ; 2021 ; >
+    au < exists ; exists ; 2022 ; 94 ; Anais da Academia Brasileira de Ciências Volume 94 ; 2022 ; >
+    au < exists ; exists ; 2023 ; 95 ; Anais da Academia Brasileira de Ciências Volume 95 ; 2023 ; >
+
+  }
+
+}

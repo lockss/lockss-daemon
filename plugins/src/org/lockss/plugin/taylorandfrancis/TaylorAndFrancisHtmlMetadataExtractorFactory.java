@@ -56,6 +56,8 @@ import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
 import org.lockss.util.TypedEntryMap;
 
+import dk.itst.oiosaml.sp.metadata.IdpMetadata.Metadata;
+
 
 public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger(TaylorAndFrancisHtmlMetadataExtractorFactory.class);
@@ -81,12 +83,21 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     // Use the journalTitle and volume name from the ArticleMetadata
     String foundJournalTitle = am.get(MetadataField.FIELD_JOURNAL_TITLE);
     String foundVolume = am.get(MetadataField.FIELD_VOLUME);
+
+    /*
+      For Journal of Tubulence, some years they use the year as the volume number. Thus, we need to
+      find the publication year (PY) to compare to the volume found from the metadata.
+    */
+    String foundYear = am.get(MetadataField.FIELD_DATE) == null  ? null : am.get(MetadataField.FIELD_DATE).substring(0,4);
+    
+
     // If we got neither, don't emit
     isInAu = !(StringUtils.isEmpty(foundJournalTitle) && StringUtils.isEmpty(foundVolume));
-
     // Do Volume comparison first, it's simpler
     if (isInAu && !(StringUtils.isEmpty(foundVolume))) {
-      isInAu =  ( (AU_volume != null) && (AU_volume.equals(foundVolume)));
+      //log.debug3("AU_Volume: " + AU_volume + " and found year: "+ foundYear+ " and found Volume: " + foundVolume);
+      isInAu =  ( (AU_volume != null) && ((AU_volume.equals(foundVolume)) || (AU_volume.equals(foundYear))));
+      //log.debug3("isInAu: "+ isInAu);
     }
 
     ////Decided on team aggreed on Oct/2021, no longer check tdb title vs metadata title

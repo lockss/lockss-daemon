@@ -26,10 +26,10 @@
       param[journal_id] = ijict
       #published 2018 to present
 
-      au < crawling ; exists ; 2018 ; Iraqi Journal of Information and Communication Technology Volume 2018 ; 1 ; 2018 ; >
-      au < crawling ; exists ; 2019 ; Iraqi Journal of Information and Communication Technology Volume 2019 ; 2 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; Iraqi Journal of Information and Communication Technology Volume 2020 ; 3 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Iraqi Journal of Information and Communication Technology Volume 2021 ; 4 ; 2021 ; >
+      au < frozen ; exists ; 2018 ; Iraqi Journal of Information and Communication Technology Volume 2018 ; 1 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; Iraqi Journal of Information and Communication Technology Volume 2019 ; 2 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; Iraqi Journal of Information and Communication Technology Volume 2020 ; 3 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; Iraqi Journal of Information and Communication Technology Volume 2021 ; 4 ; 2021 ; >
       au < frozen ; exists ; 2022 ; Iraqi Journal of Information and Communication Technology Volume 2022 ; 5 ; 2022 ; >
       au < crawling ; exists ; 2023 ; Iraqi Journal of Information and Communication Technology Volume 2023 ; 6 ; 2023 ; >
 

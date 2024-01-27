@@ -288,7 +288,7 @@
       au < doNotProcess ; 2019 ; 1 ; London School of Economics and Politics Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 2 ; London School of Economics and Politics Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 3 ; London School of Economics and Politics Volume 2021 ; 2021 >
-      au < ready ; 2022 ; 4 ; London School of Economics and Politics Volume 2022 ; 2022 >
+      au < released ; 2022 ; 4 ; London School of Economics and Politics Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 5 ; London School of Economics and Politics Volume 2023 ; 2023 >
 
   }
@@ -661,7 +661,7 @@
 
       au < released ; 2020 ; 1 ; Building and Cities Volume 2020 ; 2020 > #403 forbidden cloudfront.net
       au < released ; 2021 ; 2 ; Building and Cities Volume 2021 ; 2021 > #403 forbidden cloudfront.net
-      au < ready ; 2022 ; 3 ; Building and Cities Volume 2022 ; 2022 > #403 forbidden cloudfront.net
+      au < released ; 2022 ; 3 ; Building and Cities Volume 2022 ; 2022 > #403 forbidden cloudfront.net
       au < manifest ; 2023 ; 4 ; Building and Cities Volume 2023 ; 2023 > #404 forbidden cloudfront.net
 
   }
@@ -865,7 +865,7 @@
       au < doNotProcess ; 2019 ; 18 ; Data Science Journal Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 19 ; Data Science Journal Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 20 ; Data Science Journal Volume 2021 ; 2021 >
-      au < ready ; 2022 ; 21 ; Data Science Journal Volume 2022 ; 2022 >
+      au < released ; 2022 ; 21 ; Data Science Journal Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 22 ; Data Science Journal Volume 2023 ; 2023 >
 
   }
@@ -1296,7 +1296,7 @@
       au < doNotProcess ; 2019 ; 103 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 104 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 105 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2021 ; 2021 >
-      au < ready ; 2022 ; 106 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2022 ; 2022 >
+      au < released ; 2022 ; 106 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 107 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2023 ; 2023 >
 
   }
@@ -1560,7 +1560,7 @@
       au < doNotProcess ; 2019 ; 15 ; Psychologica Belgica Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 16 ; Psychologica Belgica Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 17 ; Psychologica Belgica Volume 2021 ; 2021 >
-      au < ready ; 2022 ; 18 ; Psychologica Belgica Volume 2022 ; 2022 >
+      au < released ; 2022 ; 18 ; Psychologica Belgica Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 19 ; Psychologica Belgica Volume 2023 ; 2023 >
 
   }
@@ -2924,14 +2924,14 @@
       #2000-2016 processed under the publisher Co-action.
 
       au < manifest ; 1949 ; 1 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1949 ; 1949 >
-      au < exists ; 1950 ; 2 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1950 ; 1950 >
-      au < exists ; 1951 ; 3 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1951 ; 1951 >
-      au < exists ; 1952 ; 4 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1952 ; 1952 >
-      au < exists ; 1953 ; 5 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1953 ; 1953 >
-      au < exists ; 1954 ; 6 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1954 ; 1954 >
-      au < exists ; 1955 ; 7 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1955 ; 1955 >
-      au < exists ; 1956 ; 8 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1956 ; 1956 >
-      au < exists ; 1957 ; 9 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1957 ; 1957 >
+      au < manifest ; 1950 ; 2 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1950 ; 1950 >
+      au < manifest ; 1951 ; 3 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1951 ; 1951 >
+      au < manifest ; 1952 ; 4 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1952 ; 1952 >
+      au < manifest ; 1953 ; 5 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1953 ; 1953 >
+      au < manifest ; 1954 ; 6 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1954 ; 1954 >
+      au < manifest ; 1955 ; 7 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1955 ; 1955 >
+      au < manifest ; 1956 ; 8 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1956 ; 1956 >
+      au < manifest ; 1957 ; 9 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1957 ; 1957 >
       au < manifest ; 1958 ; 10 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1958 ; 1958 >
       au < manifest ; 1959 ; 11 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1959 ; 1959 >
       au < manifest ; 1960 ; 12 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1960 ; 1960 >

@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -99,14 +99,14 @@ public class TestHashSvcSchedImpl extends LockssTestCase {
   }
 
   public void testPadHashEstimate() throws Exception {
-    // Defaults are 10% + 10ms
-    assertEquals(1110, svc.padHashEstimate(1000));
-    // Change to 50% + 10ms
+    // Defaults are 20% + 1min
+    assertEquals(61200, svc.padHashEstimate(1000));
+    // Change to 50% + 1min
     ConfigurationUtil.addFromArgs(HashService.PARAM_ESTIMATE_PAD_PERCENT, "50");
-    assertEquals(1510, svc.padHashEstimate(1000));
-    // Change to 50% + 1 minute
+    assertEquals(61500, svc.padHashEstimate(1000));
+    // Change to 50% + 2 minutes
     ConfigurationUtil.addFromArgs(HashService.PARAM_ESTIMATE_PAD_CONSTANT, "1m");
-    assertEquals(1500 + Constants.MINUTE, svc.padHashEstimate(1000));
+    assertEquals(61500, svc.padHashEstimate(1000));
   }
 
   public void testCancel() throws Exception {

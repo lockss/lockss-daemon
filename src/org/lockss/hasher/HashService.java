@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2024 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -64,12 +60,12 @@ public interface HashService extends LockssManager {
   /** Constant by which hash estimates are increased */
   static final String PARAM_ESTIMATE_PAD_CONSTANT =
     PREFIX + "estimate.pad.constant";
-  static final long DEFAULT_ESTIMATE_PAD_CONSTANT = 10;
+  static final long DEFAULT_ESTIMATE_PAD_CONSTANT = 1 * Constants.MINUTE;
 
   /** Percentage by which hash estimates are increased */
   static final String PARAM_ESTIMATE_PAD_PERCENT =
     PREFIX + "estimate.pad.percent";
-  static final int DEFAULT_ESTIMATE_PAD_PERCENT = 10;
+  static final int DEFAULT_ESTIMATE_PAD_PERCENT = 20;
 
 
 

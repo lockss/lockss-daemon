@@ -1091,8 +1091,8 @@
       au < superseded ; exists ; 2021 ; 2021 ; Bulgarian Cardiology Volume 2021 [superseded] ; 2021 ; http://journal.bgcardio.org/ ; >
       au < superseded ; exists ; 2022 ; 2022 ; Bulgarian Cardiology Volume 2022 [superseded] ; 2022 ; http://journal.bgcardio.org/ ; >
 
-      au < exists ; exists ; 2021 ; 2021 ; Bulgarian Cardiology Volume 2021 ; 2021 ; https://journal.bgcardio.org/ ; >
-      au < exists ; exists ; 2022 ; 2022 ; Bulgarian Cardiology Volume 2022 ; 2022 ; https://journal.bgcardio.org/ ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Bulgarian Cardiology Volume 2021 ; 2021 ; https://journal.bgcardio.org/ ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Bulgarian Cardiology Volume 2022 ; 2022 ; https://journal.bgcardio.org/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Bulgarian Cardiology Volume 2023 ; 2023 ; https://journal.bgcardio.org/ ; >
 
   }
@@ -1305,7 +1305,7 @@
 
       au < deepCrawl ; exists ; 2021 ; 2021 ; Zitteliana Volume 2021 ; 2021 ; https://zitteliana.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Zitteliana Volume 2022 ; 2022 ; https://zitteliana.pensoft.net/ ; >
-      au < manifest ; exists ; 2023 ; 2023 ; Zitteliana Volume 2023 ; 2023 ; https://zitteliana.pensoft.net/ ; >
+      au < crawling ; exists ; 2023 ; 2023 ; Zitteliana Volume 2023 ; 2023 ; https://zitteliana.pensoft.net/ ; >
 
   }
 
@@ -1406,7 +1406,7 @@
 
       au < frozen ; exists ; 2021 ; 2021 ; Geologica Saxonica Volume 2021 ; 2021 ; https://geologica-saxonica.arphahub.com/ ; >
       au < frozen ; exists ; 2022 ; 2022 ; Geologica Saxonica Volume 2022 ; 2022 ; https://geologica-saxonica.arphahub.com/ ; >
-      au < manifest ; exists ; 2023 ; 2023 ; Geologica Saxonica Volume 2023 ; 2023 ; https://geologica-saxonica.arphahub.com/ ; >
+      au < crawling ; exists ; 2023 ; 2023 ; Geologica Saxonica Volume 2023 ; 2023 ; https://geologica-saxonica.arphahub.com/ ; >
 
   }
 

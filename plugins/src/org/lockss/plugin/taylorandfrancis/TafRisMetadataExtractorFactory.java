@@ -80,7 +80,7 @@ public class TafRisMetadataExtractorFactory implements FileMetadataExtractorFact
     log.debug3("Inside TaylorAndFrancis Metadata extractor factory for RIS files");
     TaylorAndFrancisRisMetadataExtractor tfris = new TaylorAndFrancisRisMetadataExtractor();
     tfris.addRisTag("A1", MetadataField.FIELD_AUTHOR); // in case they use this 
-    // Do not add the "UR" tag because it points to dx.doi.org - not an access.url in the AU      
+    // Do not add the "UR" tag because it points to dx.doi.org - not an access.url in the AU   ;
     return tfris;
   }
   
@@ -93,7 +93,6 @@ public class TafRisMetadataExtractorFactory implements FileMetadataExtractorFact
                         FileMetadataExtractor.Emitter emitter) 
         throws IOException, PluginException {
       ArticleMetadata am = extract(target, cu); //extract but do some analysis before emitting
-
       /* if the cooked data isn't complete, we could try to pick up from secondary tags in raw data */
       if (am.get(MetadataField.FIELD_PUBLICATION_TITLE) == null) {
         if (am.getRaw("T2") != null) {
@@ -113,6 +112,7 @@ public class TafRisMetadataExtractorFactory implements FileMetadataExtractorFact
        * The method lives in the html version of the extractor factory
        */
       ArchivalUnit TandF_au = cu.getArchivalUnit();
+      //log.debug3("Article is part of AU: "+TaylorAndFrancisHtmlMetadataExtractorFactory.checkMetadataAgainstTdb(TandF_au, am));
       if (TaylorAndFrancisHtmlMetadataExtractorFactory.checkMetadataAgainstTdb(TandF_au, am)) {
         emitter.emitMetadata(cu, am);
       }

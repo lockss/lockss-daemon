@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2017 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2024 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -153,7 +149,7 @@ public class V3Poller extends BasePoll {
   /** The maximum allowable number of simultaneous V3 Pollers */
   public static final String PARAM_MAX_SIMULTANEOUS_V3_POLLERS =
     PREFIX + "maxSimultaneousV3Pollers";
-  public static final int DEFAULT_MAX_SIMULTANEOUS_V3_POLLERS = 10;
+  public static final int DEFAULT_MAX_SIMULTANEOUS_V3_POLLERS = 5;
 
   /** If true, drop participants from this poll that do not send
    * outer circle nominees. */
@@ -270,7 +266,7 @@ public class V3Poller extends BasePoll {
    * from outside our Initial Peer List into polls. */
   public static final String PARAM_ENABLE_DISCOVERY =
     PREFIX + "enableDiscovery";
-  public static final boolean DEFAULT_ENABLE_DISCOVERY = true;
+  public static final boolean DEFAULT_ENABLE_DISCOVERY = false;
 
   /** If false, just log a message rather than deleting files that are
    * considered to be missing from a majority of peers.
@@ -310,7 +306,7 @@ public class V3Poller extends BasePoll {
    */
   public static final String PARAM_VOTE_DURATION_MULTIPLIER =
     PREFIX + "voteDurationMultiplier";
-  public static final int DEFAULT_VOTE_DURATION_MULTIPLIER = 4;
+  public static final int DEFAULT_VOTE_DURATION_MULTIPLIER = 5;
 
   /**
    * Padding to add to target vote duration
@@ -349,7 +345,7 @@ public class V3Poller extends BasePoll {
   public static final String PARAM_RECEIPT_PADDING =
     PREFIX + "receiptPadding";
   public static final long DEFAULT_RECEIPT_PADDING =
-    5 * Constants.MINUTE;
+    10 * Constants.MINUTE;
 
   /**
    * Factor by which to extend poll duration and try again to find

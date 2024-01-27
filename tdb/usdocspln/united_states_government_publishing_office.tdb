@@ -1,7 +1,7 @@
 {
 
   publisher <
-    name = United States Government Printing Office
+    name = United States Government Publishing Office
   >
 
   rights = openaccess
@@ -28,59 +28,59 @@
 
     param[collection_id] = GOVPUB
 
-    au < manifest ; 1775 ; GOVPUB 1775 ; 1775 ; https://www.govinfo.gov/ >
-    au < manifest ; 1793 ; GOVPUB 1793 ; 1793 ; https://www.govinfo.gov/ >
-    au < manifest ; 1797 ; GOVPUB 1797 ; 1797 ; https://www.govinfo.gov/ >
-    au < manifest ; 1805 ; GOVPUB 1805 ; 1805 ; https://www.govinfo.gov/ >
-    au < manifest ; 1806 ; GOVPUB 1806 ; 1806 ; https://www.govinfo.gov/ >
-    au < manifest ; 1808 ; GOVPUB 1808 ; 1808 ; https://www.govinfo.gov/ >
-    au < manifest ; 1809 ; GOVPUB 1809 ; 1809 ; https://www.govinfo.gov/ >
-    au < manifest ; 1812 ; GOVPUB 1812 ; 1812 ; https://www.govinfo.gov/ >
-    au < manifest ; 1813 ; GOVPUB 1813 ; 1813 ; https://www.govinfo.gov/ >
-    au < manifest ; 1814 ; GOVPUB 1814 ; 1814 ; https://www.govinfo.gov/ >
-    au < manifest ; 1815 ; GOVPUB 1815 ; 1815 ; https://www.govinfo.gov/ >
-    au < manifest ; 1816 ; GOVPUB 1816 ; 1816 ; https://www.govinfo.gov/ >
-    au < manifest ; 1817 ; GOVPUB 1817 ; 1817 ; https://www.govinfo.gov/ >
-    au < manifest ; 1818 ; GOVPUB 1818 ; 1818 ; https://www.govinfo.gov/ >
-    au < manifest ; 1819 ; GOVPUB 1819 ; 1819 ; https://www.govinfo.gov/ >
-    au < manifest ; 1820 ; GOVPUB 1820 ; 1820 ; https://www.govinfo.gov/ >
-    au < manifest ; 1821 ; GOVPUB 1821 ; 1821 ; https://www.govinfo.gov/ >
-    au < manifest ; 1822 ; GOVPUB 1822 ; 1822 ; https://www.govinfo.gov/ >
-    au < manifest ; 1823 ; GOVPUB 1823 ; 1823 ; https://www.govinfo.gov/ >
-    au < manifest ; 1824 ; GOVPUB 1824 ; 1824 ; https://www.govinfo.gov/ >
-    au < manifest ; 1825 ; GOVPUB 1825 ; 1825 ; https://www.govinfo.gov/ >
-    au < manifest ; 1826 ; GOVPUB 1826 ; 1826 ; https://www.govinfo.gov/ >
-    au < manifest ; 1827 ; GOVPUB 1827 ; 1827 ; https://www.govinfo.gov/ >
-    au < manifest ; 1828 ; GOVPUB 1828 ; 1828 ; https://www.govinfo.gov/ >
+    au < exists ; 1775 ; GOVPUB 1775 ; 1775 ; https://www.govinfo.gov/ > #no content in XML page
+    au < ready ; 1793 ; GOVPUB 1793 ; 1793 ; https://www.govinfo.gov/ >
+    au < ready ; 1797 ; GOVPUB 1797 ; 1797 ; https://www.govinfo.gov/ >
+    au < ready ; 1805 ; GOVPUB 1805 ; 1805 ; https://www.govinfo.gov/ >
+    au < ready ; 1806 ; GOVPUB 1806 ; 1806 ; https://www.govinfo.gov/ >
+    au < ready ; 1808 ; GOVPUB 1808 ; 1808 ; https://www.govinfo.gov/ >
+    au < ready ; 1809 ; GOVPUB 1809 ; 1809 ; https://www.govinfo.gov/ >
+    au < ready ; 1812 ; GOVPUB 1812 ; 1812 ; https://www.govinfo.gov/ >
+    au < ready ; 1813 ; GOVPUB 1813 ; 1813 ; https://www.govinfo.gov/ >
+    au < ready ; 1814 ; GOVPUB 1814 ; 1814 ; https://www.govinfo.gov/ >
+    au < ready ; 1815 ; GOVPUB 1815 ; 1815 ; https://www.govinfo.gov/ >
+    au < ready ; 1816 ; GOVPUB 1816 ; 1816 ; https://www.govinfo.gov/ >
+    au < ready ; 1817 ; GOVPUB 1817 ; 1817 ; https://www.govinfo.gov/ >
+    au < ready ; 1818 ; GOVPUB 1818 ; 1818 ; https://www.govinfo.gov/ >
+    au < ready ; 1819 ; GOVPUB 1819 ; 1819 ; https://www.govinfo.gov/ >
+    au < ready ; 1820 ; GOVPUB 1820 ; 1820 ; https://www.govinfo.gov/ >
+    au < ready ; 1821 ; GOVPUB 1821 ; 1821 ; https://www.govinfo.gov/ >
+    au < ready ; 1822 ; GOVPUB 1822 ; 1822 ; https://www.govinfo.gov/ >
+    au < ready ; 1823 ; GOVPUB 1823 ; 1823 ; https://www.govinfo.gov/ >
+    au < ready ; 1824 ; GOVPUB 1824 ; 1824 ; https://www.govinfo.gov/ >
+    au < ready ; 1825 ; GOVPUB 1825 ; 1825 ; https://www.govinfo.gov/ >
+    au < ready ; 1826 ; GOVPUB 1826 ; 1826 ; https://www.govinfo.gov/ >
+    au < ready ; 1827 ; GOVPUB 1827 ; 1827 ; https://www.govinfo.gov/ >
+    au < ready ; 1828 ; GOVPUB 1828 ; 1828 ; https://www.govinfo.gov/ >
     au < manifest ; 1829 ; GOVPUB 1829 ; 1829 ; https://www.govinfo.gov/ >
-    au < manifest ; 1830 ; GOVPUB 1830 ; 1830 ; https://www.govinfo.gov/ >
-    au < manifest ; 1831 ; GOVPUB 1831 ; 1831 ; https://www.govinfo.gov/ >
-    au < manifest ; 1832 ; GOVPUB 1832 ; 1832 ; https://www.govinfo.gov/ >
-    au < manifest ; 1833 ; GOVPUB 1833 ; 1833 ; https://www.govinfo.gov/ >
-    au < manifest ; 1834 ; GOVPUB 1834 ; 1834 ; https://www.govinfo.gov/ >
-    au < manifest ; 1835 ; GOVPUB 1835 ; 1835 ; https://www.govinfo.gov/ >
-    au < manifest ; 1836 ; GOVPUB 1836 ; 1836 ; https://www.govinfo.gov/ >
-    au < manifest ; 1837 ; GOVPUB 1837 ; 1837 ; https://www.govinfo.gov/ >
-    au < manifest ; 1838 ; GOVPUB 1838 ; 1838 ; https://www.govinfo.gov/ >
-    au < manifest ; 1839 ; GOVPUB 1839 ; 1839 ; https://www.govinfo.gov/ >
-    au < manifest ; 1840 ; GOVPUB 1840 ; 1840 ; https://www.govinfo.gov/ >
-    au < manifest ; 1841 ; GOVPUB 1841 ; 1841 ; https://www.govinfo.gov/ >
-    au < manifest ; 1842 ; GOVPUB 1842 ; 1842 ; https://www.govinfo.gov/ >
-    au < manifest ; 1843 ; GOVPUB 1843 ; 1843 ; https://www.govinfo.gov/ >
-    au < manifest ; 1844 ; GOVPUB 1844 ; 1844 ; https://www.govinfo.gov/ >
-    au < manifest ; 1845 ; GOVPUB 1845 ; 1845 ; https://www.govinfo.gov/ >
-    au < manifest ; 1846 ; GOVPUB 1846 ; 1846 ; https://www.govinfo.gov/ >
+    au < ready ; 1830 ; GOVPUB 1830 ; 1830 ; https://www.govinfo.gov/ >
+    au < ready ; 1831 ; GOVPUB 1831 ; 1831 ; https://www.govinfo.gov/ >
+    au < ready ; 1832 ; GOVPUB 1832 ; 1832 ; https://www.govinfo.gov/ >
+    au < ready ; 1833 ; GOVPUB 1833 ; 1833 ; https://www.govinfo.gov/ >
+    au < ready ; 1834 ; GOVPUB 1834 ; 1834 ; https://www.govinfo.gov/ >
+    au < ready ; 1835 ; GOVPUB 1835 ; 1835 ; https://www.govinfo.gov/ >
+    au < ready ; 1836 ; GOVPUB 1836 ; 1836 ; https://www.govinfo.gov/ >
+    au < ready ; 1837 ; GOVPUB 1837 ; 1837 ; https://www.govinfo.gov/ >
+    au < ready ; 1838 ; GOVPUB 1838 ; 1838 ; https://www.govinfo.gov/ >
+    au < ready ; 1839 ; GOVPUB 1839 ; 1839 ; https://www.govinfo.gov/ >
+    au < ready ; 1840 ; GOVPUB 1840 ; 1840 ; https://www.govinfo.gov/ >
+    au < ready ; 1841 ; GOVPUB 1841 ; 1841 ; https://www.govinfo.gov/ >
+    au < ready ; 1842 ; GOVPUB 1842 ; 1842 ; https://www.govinfo.gov/ >
+    au < ready ; 1843 ; GOVPUB 1843 ; 1843 ; https://www.govinfo.gov/ >
+    au < ready ; 1844 ; GOVPUB 1844 ; 1844 ; https://www.govinfo.gov/ >
+    au < ready ; 1845 ; GOVPUB 1845 ; 1845 ; https://www.govinfo.gov/ >
+    au < ready ; 1846 ; GOVPUB 1846 ; 1846 ; https://www.govinfo.gov/ >
     au < manifest ; 1847 ; GOVPUB 1847 ; 1847 ; https://www.govinfo.gov/ >
-    au < manifest ; 1848 ; GOVPUB 1848 ; 1848 ; https://www.govinfo.gov/ >
-    au < manifest ; 1849 ; GOVPUB 1849 ; 1849 ; https://www.govinfo.gov/ >
-    au < manifest ; 1850 ; GOVPUB 1850 ; 1850 ; https://www.govinfo.gov/ >
-    au < manifest ; 1851 ; GOVPUB 1851 ; 1851 ; https://www.govinfo.gov/ >
-    au < manifest ; 1852 ; GOVPUB 1852 ; 1852 ; https://www.govinfo.gov/ >
-    au < manifest ; 1853 ; GOVPUB 1853 ; 1853 ; https://www.govinfo.gov/ >
-    au < manifest ; 1854 ; GOVPUB 1854 ; 1854 ; https://www.govinfo.gov/ >
-    au < manifest ; 1855 ; GOVPUB 1855 ; 1855 ; https://www.govinfo.gov/ >
-    au < manifest ; 1856 ; GOVPUB 1856 ; 1856 ; https://www.govinfo.gov/ >
-    au < manifest ; 1857 ; GOVPUB 1857 ; 1857 ; https://www.govinfo.gov/ >
+    au < ready ; 1848 ; GOVPUB 1848 ; 1848 ; https://www.govinfo.gov/ >
+    au < ready ; 1849 ; GOVPUB 1849 ; 1849 ; https://www.govinfo.gov/ >
+    au < ready ; 1850 ; GOVPUB 1850 ; 1850 ; https://www.govinfo.gov/ >
+    au < ready ; 1851 ; GOVPUB 1851 ; 1851 ; https://www.govinfo.gov/ >
+    au < ready ; 1852 ; GOVPUB 1852 ; 1852 ; https://www.govinfo.gov/ >
+    au < ready ; 1853 ; GOVPUB 1853 ; 1853 ; https://www.govinfo.gov/ >
+    au < ready ; 1854 ; GOVPUB 1854 ; 1854 ; https://www.govinfo.gov/ >
+    au < ready ; 1855 ; GOVPUB 1855 ; 1855 ; https://www.govinfo.gov/ >
+    au < ready ; 1856 ; GOVPUB 1856 ; 1856 ; https://www.govinfo.gov/ >
+    au < ready ; 1857 ; GOVPUB 1857 ; 1857 ; https://www.govinfo.gov/ >
     au < manifest ; 1858 ; GOVPUB 1858 ; 1858 ; https://www.govinfo.gov/ >
     au < manifest ; 1859 ; GOVPUB 1859 ; 1859 ; https://www.govinfo.gov/ >
     au < manifest ; 1860 ; GOVPUB 1860 ; 1860 ; https://www.govinfo.gov/ >
@@ -179,6 +179,7 @@
     au < released ; 2021 ; Account of the Receipts and Expenditures of the United States 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Account of the Receipts and Expenditures of the United States 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < ready ; 2023 ; Account of the Receipts and Expenditures of the United States 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < manifest ; 2024 ; GOVPUB 2024 ; 2024 ; https://www.govinfo.gov/ >
 
     au < exists ; 2029 ; Account of the Receipts and Expenditures of the United States 2029 ; 2029 ; https://www.govinfo.gov/ > #empty
     au < exists ; 2101 ; Account of the Receipts and Expenditures of the United States 2101 ; 2101 ; https://www.govinfo.gov/ > #empty
@@ -620,10 +621,11 @@
     au < released ; 2021 ; Congressional Documents 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Congressional Documents 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < ready ; 2023 ; CDOC 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < manifest ; 2024 ; CDOC 2024 ; 2024 ; https://www.govinfo.gov/ >
 
-    au < manifest ; 2025 ; CDOC 2025 ; 2025 ; https://www.govinfo.gov/ > #bad date
+    au < exists ; 2025 ; CDOC 2025 ; 2025 ; https://www.govinfo.gov/ > #bad date
     au < exists ; 2027 ; Congressional Documents 2027 ; 2027 ; https://www.govinfo.gov/ > #bad date
-    au < manifest ; 2047 ; Congressional Documents 2047 ; 2047 ; https://www.govinfo.gov/ > #bad date
+    au < exists ; 2047 ; Congressional Documents 2047 ; 2047 ; https://www.govinfo.gov/ > #bad date
 
   }
 
@@ -716,7 +718,6 @@
     au < released ; 2020 ; Congressional Hearings 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; Congressional Hearings 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Congressional Hearings 2022 ; 2022 ; https://www.govinfo.gov/ >
-    au < exists ; 2024 ; Congressional Hearings 2024 ; 2024 ; https://www.govinfo.gov/ >#empty
 
 
   }
@@ -1130,6 +1131,7 @@
     au < released ; 2021 ; History of Bills 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; History of Bills 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < manifest ; 2023 ; History of Bills 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < manifest ; 2024 ; HOB 2024 ; 2024 ; https://www.govinfo.gov/ >
 
   }
 
@@ -1205,6 +1207,7 @@
     au < released ; 2020 ; Privacy Act Issuances 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; Privacy Act Issuances 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; Privacy Act Issuances 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < exists ; 2025 ; PAI 2025 ; 2025 ; https://www.govinfo.gov/ >
 
   }
 

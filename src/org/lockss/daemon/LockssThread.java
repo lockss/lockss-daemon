@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2024 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -55,7 +51,7 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
   static final boolean DEFAULT_EXIT_DAEMON_ON_OOME = false;
 
   static final String PARAM_THREAD_WDOG_HUNG_DUMP = PREFIX + "hungThreadDump";
-  static final boolean DEFAULT_THREAD_WDOG_HUNG_DUMP = false;
+  static final boolean DEFAULT_THREAD_WDOG_HUNG_DUMP = true;
 
   public static final String PARAM_NAMED_WDOG_INTERVAL =
     PREFIX + "<name>.watchdog.interval";

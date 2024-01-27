@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -134,10 +134,6 @@ public class AdminServletManager extends BaseServletManager {
           PREFIX + SUFFIX_ENABLE_DEBUG_USER;
   public static final boolean DEFAULT_ENABLE_DEBUG_USER = true;
 
-  /** Path to directory holding daemon logs */
-  public static final String PARAM_LOGDIR =
-    Configuration.PREFIX +  "platform.logdirectory";
-
   /** Admin UI requires user auth */
   public static final boolean DO_USER_AUTH = true;
 
@@ -171,7 +167,7 @@ public class AdminServletManager extends BaseServletManager {
 
   public static final String PARAM_HELP_URL = PREFIX + "helpUrl";
   static final String DEFAULT_HELP_URL =
-          "http://www.lockss.org/lockss/Cache_Help";
+    "https://lockss.github.io/administrators/classic-lockss/";
 
   /** If set, fetches of the UI root (http://cache:8081/) will be
    * redirected to this path (on same host and port) instead of serving the
@@ -854,7 +850,7 @@ public class AdminServletManager extends BaseServletManager {
     final String DEBUG_HEADER = "setConfig(): ";
     super.setConfig(config, prevConfig, changedKeys);
     isodir = config.get(PARAM_ISODIR);
-    logdir = config.get(PARAM_LOGDIR);
+    logdir = config.get(ConfigManager.PARAM_PLATFORM_LOG_DIR);
     if (changedKeys.contains(ExportContent.PREFIX)) {
       String path = config.get(ExportContent.PARAM_EXPORT_PATH);
       if (StringUtil.isNullString(path)) {
