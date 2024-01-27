@@ -34,6 +34,8 @@ import java.io.*;
 import java.net.URL;
 import java.util.Properties;
 
+import static org.lockss.laaws.MigrationConstants.*;
+
 /**
  * LOCKSS servlet that accepts migration settings from the user and
  * can enter the daemon into migration mode.
@@ -686,7 +688,7 @@ public class MigrateSettings extends LockssServlet {
 
   /**
    * Writes a {@link Configuration} containing the Migration Configuration to the Migration Configuration
-   * File (see {@link ConfigManager.CONFIG__FILE_MIGRATION}).
+   * File (see {@link ConfigManager#CONFIG_FILE_MIGRATION}).
    *
    * @param mCfg
    * @throws IOException
@@ -700,39 +702,4 @@ public class MigrateSettings extends LockssServlet {
       mCfg.store(cfgOut, null);
     }
   }
-
-  private static final String V2_PARAM_PROXYMANAGER_PORT =
-      ProxyManager.PARAM_PORT;
-  private static final String V2_PARAM_CONTENTSERVLETMANAGER_PORT =
-      ContentServletManager.PARAM_PORT;
-  private static final String V2_PARAM_METADATADBMANAGER_PREFIX =
-      "org.lockss.metadataDbManager.";
-  public static final String V2_PARAM_DERBY_DB_DIR = "org.lockss.db.derbyDbDir";
-  private static final String V2_PARAM_METADATADBMANAGER_DATASOURCE_ROOT =
-      V2_PARAM_METADATADBMANAGER_PREFIX + "datasource";
-  private static final String V2_PARAM_METADATADBMANAGER_DATASOURCE_CLASSNAME =
-      V2_PARAM_METADATADBMANAGER_DATASOURCE_ROOT + ".className";
-  private static final String V2_PARAM_METADATADBMANAGER_DATASOURCE_SERVERNAME =
-      V2_PARAM_METADATADBMANAGER_DATASOURCE_ROOT + ".serverName";
-  private static final String V2_PARAM_METADATADBMANAGER_DATASOURCE_PORTNUMBER =
-      V2_PARAM_METADATADBMANAGER_DATASOURCE_ROOT + ".portNumber";
-  private static final String V2_PARAM_METADATADBMANAGER_DATASOURCE_DATABASENAME =
-      V2_PARAM_METADATADBMANAGER_DATASOURCE_ROOT + ".databaseName";
-  private static final String V2_PARAM_METADATADBMANAGER_DATASOURCE_USER =
-      V2_PARAM_METADATADBMANAGER_DATASOURCE_ROOT + ".user";
-  private static final String V2_PARAM_METADATADBMANAGER_DATASOURCE_PASSWORD =
-      V2_PARAM_METADATADBMANAGER_DATASOURCE_ROOT + ".password";
-
-  private static final int V2_DEFAULT_CFGSVC_UI_PORT = 24621;
-  private static final int V2_DEFAULT_PROXYMANAGER_PORT = 24670;
-  private static final int V2_DEFAULT_CONTENTSERVLETMANAGER_PORT = 24680;
-  private static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_CLASSNAME =
-      EmbeddedDataSource.class.getCanonicalName();
-  private static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_SERVERNAME = "localhost";
-  private static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_PORTNUMBER = "1527";
-  private static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_PORTNUMBER_PG = "5432";
-  private static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_PORTNUMBER_MYSQL = "3306";
-  private static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_DATABASENAME = "LockssMetadataDbManager";
-  private static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_USER = "LOCKSS";
-  private static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_PASSWORD = "insecure";
 }

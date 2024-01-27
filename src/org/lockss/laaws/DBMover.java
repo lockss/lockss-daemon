@@ -14,14 +14,14 @@ import org.lockss.remote.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 
+import static org.lockss.laaws.MigrationConstants.*;
+
 public class DBMover extends Worker {
   public static final String DEFAULT_DB_USER = "LOCKSS";
   public static final String DEFAULT_HOST = "localhost";
   public static final String DEFAULT_V1_PASSWORD = "goodPassword";
-  public static final String DEFAULT_v2_PORT = "24602";
   private static final long DBSIZE_CHECK_INTERVAL = 2*Constants.SECOND;
   private final Logger log = Logger.getLogger(DBMover.class);
-  private static final int V2_DEFAULT_CFGSVC_UI_PORT = 24621;
 
   // v1 connection parameters
   String v1user = DEFAULT_DB_USER;
@@ -31,10 +31,10 @@ public class DBMover extends Worker {
   String v1dbname = v1user;
 
   // v2 connection parameters
-  String v2user=DEFAULT_DB_USER;
-  String v2password;
-  String v2host = DEFAULT_HOST;
-  String v2port = DEFAULT_v2_PORT;
+  String v2dbuser;
+  String v2dbpassword;
+  String v2host;
+  String v2dbport;
   String v2dbname;
 
   long srcSize;
@@ -67,7 +67,7 @@ public class DBMover extends Worker {
         log.info("Migrating Postgresql Content..");
         if (initParams()) {
           srcSize = getDatabaseSize(v1host,v1port,v1user,v1password,v1dbname);
-          dstSize = getDatabaseSize(v2host,v2port,v2user,v2password,v2dbname);
+          dstSize = getDatabaseSize(v2host, v2dbport, v2dbuser, v2dbpassword,v2dbname);
           log.info("v1 db size = " + srcSize + ", v2 db size = " + dstSize);
           auMover.dbBytesCopied = 0;
           auMover.dbBytesTotal = srcSize;
@@ -101,7 +101,7 @@ public class DBMover extends Worker {
 
       LockssUrlConnection conn =
         UrlUtil.openConnection(LockssUrlConnection.METHOD_POST, restoreUrl, null);
-      conn.setCredentials(v2user, v2password);
+      conn.setCredentials(v2dbuser, v2dbpassword);
       conn.setUserAgent("lockss");
       Part[] parts = {
         new StringPart("lockssAction", "SelectRestoreTitles"),
@@ -134,17 +134,17 @@ public class DBMover extends Worker {
     v1dbname = config.get(DbManager.PARAM_DATASOURCE_DATABASENAME, v1user);
 
     Configuration v2config = config.getConfigTree("v2");
-    v2user = v2config.get(DbManager.PARAM_DATASOURCE_USER);
-    v2password = v2config.get(DbManager.PARAM_DATASOURCE_PASSWORD);
+    v2dbuser = v2config.get(DbManager.PARAM_DATASOURCE_USER);
+    v2dbpassword = v2config.get(DbManager.PARAM_DATASOURCE_PASSWORD);
     v2host = v2config.get(DbManager.PARAM_DATASOURCE_SERVERNAME);
-    v2port = v2config.get(DbManager.PARAM_DATASOURCE_PORTNUMBER);
+    v2dbport = v2config.get(DbManager.PARAM_DATASOURCE_PORTNUMBER);
     v2dbname = v2config.get(DbManager.PARAM_DATASOURCE_DATABASENAME);
     if (StringUtil.isNullString(v2host)) {
       String msg = "DbMover failed: destination hostname was not supplied.";
       auMover.addError(msg);
       return false;
     }
-    if (v2user == null || v2password == null) {
+    if (v2dbuser == null || v2dbpassword == null) {
       String msg = "DbMover failed: Missing database user name or password.";
       log.error(msg);
       auMover.addError(msg);
@@ -173,7 +173,7 @@ public class DBMover extends Worker {
   private void copyPostgresDb() {
     String err;
     String v1ConnectionString = createPgConnectionString(v1user, v1password, v1host, v1port, v1dbname);
-    String v2ConnectionString = createPgConnectionString(v2user, v2password, v2host, v2port, v2dbname);
+    String v2ConnectionString = createPgConnectionString(v2dbuser, v2dbpassword, v2host, v2dbport, v2dbname);
 
     String copyCommand = "pg_dump -a " + v1ConnectionString + " | psql -q " + v2ConnectionString + " && echo $?";
     log.debug("Running copy command: "+copyCommand);
@@ -261,7 +261,7 @@ public class DBMover extends Worker {
     } else {
       log.info("Starting handler");
     }
-    sizeUpdater= new DbSizeUpdater(v2host,v2port,v2user,v2password,v2dbname);
+    sizeUpdater= new DbSizeUpdater(v2host, v2dbport, v2dbuser, v2dbpassword,v2dbname);
     sizeUpdater.start();
   }
 
