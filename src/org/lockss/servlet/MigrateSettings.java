@@ -245,13 +245,17 @@ public class MigrateSettings extends LockssServlet {
             session.setAttribute(KEY_USERNAME, userName);
             session.setAttribute(KEY_PASSWORD, userPass);
             session.setAttribute(KEY_DELETE_AUS, isDeleteAusEnabled);
+
+            // Reset dbPass input
+            dbPass = null;
           }
           break;
 
         case ACTION_NEXT:
           if (!isTargetConfigFetched) {
             errMsg = "Missing database configuration";
-//          } else if (hasMigrationTargetChanged()) {
+          } else if (DbManagerSql.isTypeDerby(mCfg.get(DbManager.PARAM_DATASOURCE_CLASSNAME))) {
+            dbError = "Derby not supported";
           } else if (StringUtil.isNullString(dbPass)) {
             dbError = "Missing database password";
           } else if (!migrationMgr.isDaemonInMigrationMode()) {
