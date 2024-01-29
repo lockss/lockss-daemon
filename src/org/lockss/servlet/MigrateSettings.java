@@ -109,7 +109,7 @@ public class MigrateSettings extends LockssServlet {
     Configuration cfg = ConfigManager.getCurrentConfig();
 
     boolean hasMigrationConfig =
-        !cfg.getConfigTree("v2" + DbManager.PARAM_DATASOURCE_PASSWORD).isEmpty();
+        !cfg.getConfigTree("v2." + DbManager.DATASOURCE_ROOT).isEmpty();
 
     boolean isInitializedFromConfig =
         getSessionAttribute(KEY_INITIALIZED_FROM_CONFIG, false);
