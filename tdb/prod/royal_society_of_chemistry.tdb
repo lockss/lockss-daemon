@@ -2590,7 +2590,7 @@
       au < released ; 2021 ; MedChemComm Volume 12 ; 12 ; 2021 ; https://pubs.rsc.org/ >
       au < released ; 2022 ; MedChemComm Volume 13 ; 13 ; 2022 ; https://pubs.rsc.org/ >
       au < manifest ; 2023 ; MedChemComm Volume 14 ; 14 ; 2023 ; https://pubs.rsc.org/ >
-      au < expected ; 2024 ; RSC Medicinal Chemistry Volume 15 ; 15 ; 2024 ; https://pubs.rsc.org/ >
+      au < manifest ; 2024 ; RSC Medicinal Chemistry Volume 15 ; 15 ; 2024 ; https://pubs.rsc.org/ >
 
   }
 
@@ -3376,7 +3376,7 @@
       param[journal_code] = fb
 
       au < manifest ; 2023 ; Sustainable Food Technology Volume 1 ; 1 ; 2023 ; https://pubs.rsc.org/ >
-      au < expected ; 2024 ; Sustainable Food Technology Volume 2 ; 2 ; 2024 ; https://pubs.rsc.org/ >
+      au < manifest ; 2024 ; Sustainable Food Technology Volume 2 ; 2 ; 2024 ; https://pubs.rsc.org/ >
 
   }
 
@@ -3422,7 +3422,7 @@
       param[journal_code] = lp
 
       au < manifest ; 2023 ; RSC Applied Polymers Volume 1 ; 1 ; 2023 ; https://pubs.rsc.org/ >
-      au < expected ; 2024 ; RSC Applied Polymers Volume 2 ; 2 ; 2024 ; https://pubs.rsc.org/ >
+      au < manifest ; 2024 ; RSC Applied Polymers Volume 2 ; 2 ; 2024 ; https://pubs.rsc.org/ >
 
   }
 
