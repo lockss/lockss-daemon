@@ -6223,7 +6223,7 @@
     au < frozen ; exists ; 1991 ; Internet Research Volume 1 ; 1 ; >
     au < crawling ; exists ; 1992 ; Internet Research Volume 2 ; 2 ; >
     au < frozen ; exists ; 1993 ; Internet Research Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1994 ; Internet Research Volume 4 ; 4 ; >
+    au < notReady ; exists ; 1994 ; Internet Research Volume 4 ; 4 ; > #no substance
     au < finished ; manifest ; 1995 ; Internet Research Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; Internet Research Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; Internet Research Volume 7 ; 7 ; reingest5.clockss.org:8082 >
@@ -10688,7 +10688,7 @@
     au < frozen ; exists ; 1993 ; Microelectronics International Volume 10 ; 10 ; >
     au < frozen ; exists ; 1994 ; Microelectronics International Volume 11 ; 11 ; >
     au < finished ; manifest ; 1995 ; Microelectronics International Volume 12 ; 12 ; reingest3.clockss.org:8083 >
-    au < manifest ; exists ; 1996 ; Microelectronics International Volume 13 ; 13 ; >
+    au < notReady ; exists ; 1996 ; Microelectronics International Volume 13 ; 13 ; > #no substance
     au < notReady ; exists ; 1997 ; Microelectronics International Volume 14 ; 14 ; > #no substance
     au < finished ; manifest ; 1998 ; Microelectronics International Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1999 ; Microelectronics International Volume 16 ; 16 ; reingest2.clockss.org:8085 >
@@ -12463,7 +12463,7 @@
     au < frozen ; exists ; 1993 ; Soldering & Surface Mount Technology Volume 5 ; 5 ; >
     au < frozen ; exists ; 1994 ; Soldering & Surface Mount Technology Volume 6 ; 6 ; >
     au < finished ; manifest ; 1995 ; Soldering & Surface Mount Technology Volume 7 ; 7 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 1996 ; Soldering & Surface Mount Technology Volume 8 ; 8 ; > #no substance
+    au < notReady ; exists ; 1996 ; Soldering & Surface Mount Technology Volume 8 ; 8 ; > #no substance
     au < notReady ; exists ; 1997 ; Soldering & Surface Mount Technology Volume 9 ; 9 ; > #no substance
     au < finished ; manifest ; 1998 ; Soldering & Surface Mount Technology Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1999 ; Soldering & Surface Mount Technology Volume 11 ; 11 ; reingest4.clockss.org:8082 >
