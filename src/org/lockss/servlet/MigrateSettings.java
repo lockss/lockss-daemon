@@ -53,6 +53,7 @@ public class MigrateSettings extends LockssServlet {
   static final String DEFAULT_HOSTNAME = "localhost";
   static final boolean DEFAULT_DELETE_AUS_ENABLED = true;
 
+  static final String KEY_INITIALIZED_FROM_CONFIG = "initializedFromConfig";
   static final String KEY_HOSTNAME = "hostname";
   static final String KEY_CFGSVC_UI_PORT = "cfgUiPort";
   static final String KEY_USERNAME = "username";
@@ -105,7 +106,41 @@ public class MigrateSettings extends LockssServlet {
   private void initParams() {
     requestMethod = req.getMethod();
     session = getSession();
+    Configuration cfg = ConfigManager.getCurrentConfig();
 
+    boolean hasMigrationConfig =
+        !cfg.getConfigTree("v2" + DbManager.PARAM_DATASOURCE_PASSWORD).isEmpty();
+
+    boolean isInitializedFromConfig =
+        getSessionAttribute(KEY_INITIALIZED_FROM_CONFIG, false);
+
+    if (!isInitializedFromConfig && hasMigrationConfig) {
+      initParamsFromConfig(cfg);
+      session.setAttribute(KEY_INITIALIZED_FROM_CONFIG, true);
+    } else {
+      initParamsFromSession();
+    }
+
+    // Internal state
+    isTargetConfigFetched = getSessionAttribute(KEY_FETCHED_CONFIG, false);
+  }
+
+  private void initParamsFromConfig(Configuration cfg) {
+    // Migration target
+    hostname = cfg.get(MigrateContent.PARAM_HOSTNAME);
+//    cfgUiPort = cfg.get();
+    userName = cfg.get(MigrateContent.PARAM_USERNAME);
+    userPass = cfg.get(MigrateContent.PARAM_PASSWORD);
+
+    // Migration options
+    isDeleteAusEnabled = cfg.getBoolean(MigrateContent.PARAM_DELETE_AFTER_MIGRATION,
+        DEFAULT_DELETE_AUS_ENABLED);
+
+    // Migration configuration
+    mCfg = cfg.getConfigTree("v2");
+  }
+
+  private void initParamsFromSession() {
     // Migration target
     hostname = getSessionAttribute(KEY_HOSTNAME, DEFAULT_HOSTNAME);
     cfgUiPort = getSessionAttribute(KEY_CFGSVC_UI_PORT, V2_DEFAULT_CFGSVC_UI_PORT);
@@ -120,9 +155,6 @@ public class MigrateSettings extends LockssServlet {
 
     // Migration configuration
     mCfg = getSessionAttribute(KEY_MIGRATION_CONFIG, ConfigManager.newConfiguration());
-
-    // Internal state
-    isTargetConfigFetched = getSessionAttribute(KEY_FETCHED_CONFIG, false);
   }
 
   /**
@@ -193,7 +225,7 @@ public class MigrateSettings extends LockssServlet {
       switch (action) {
         case ACTION_LOAD_V2_CFG:
           try {
-            Properties v2cfg = getConfigFromMigrationTarget();
+            Configuration v2cfg = getConfigFromMigrationTarget();
             mCfg = getMigrationConfig(hostname, v2cfg);
             isTargetConfigFetched = true;
           } catch (IOException e) {
@@ -481,7 +513,7 @@ public class MigrateSettings extends LockssServlet {
    * @throws IOException Thrown if there were network errors, or if the server response was
    * not a 200.
    */
-  private Properties getConfigFromMigrationTarget() throws IOException {
+  private Configuration getConfigFromMigrationTarget() throws IOException {
     URL cfgStatUrl = new URL("http", hostname, cfgUiPort,
         "/DaemonStatus?table=ConfigStatus&output=csv");
     log.info("url = " + cfgStatUrl.toString());
@@ -493,7 +525,7 @@ public class MigrateSettings extends LockssServlet {
 
     if (conn.getResponseCode() == 200) {
       try (InputStream csvInput = conn.getResponseInputStream()) {
-        return propsFromCsv(csvInput);
+        return ConfigManager.fromProperties(propsFromCsv(csvInput));
       }
     }
 
@@ -558,11 +590,10 @@ public class MigrateSettings extends LockssServlet {
    * parameters are prefixed with "v2" as to not override this daemon's database configuration.
    *
    * @param targetHost
-   * @param targetProps
+   * @param targetCfg
    * @return
    */
-  private Configuration getMigrationConfig(String targetHost, Properties targetProps) {
-    Configuration targetCfg = ConfigManager.fromProperties(targetProps);
+  private Configuration getMigrationConfig(String targetHost, Configuration targetCfg) {
     Properties mProps = new Properties();
 
     // Migration target configuration
@@ -651,6 +682,7 @@ public class MigrateSettings extends LockssServlet {
     Configuration res = ConfigManager.newConfiguration();
     res.copyFrom(ConfigManager.fromProperties(mProps));
     res.addAsSubTree(dsCfg, DbManager.DATASOURCE_ROOT);
+
     return res;
   }
 
