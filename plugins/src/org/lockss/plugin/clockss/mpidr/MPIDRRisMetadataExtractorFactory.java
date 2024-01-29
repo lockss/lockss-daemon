@@ -102,8 +102,10 @@ public class MPIDRRisMetadataExtractorFactory implements FileMetadataExtractorFa
         ris.addRisTag("VL", MetadataField.FIELD_VOLUME);
         ris.addRisTag("IS", MetadataField.FIELD_ISSUE);
         ris.addRisTag("SN", MetadataField.FIELD_ISSN);
-        ris.addRisTag("DO", MetadataField.FIELD_DOI);
+        ris.addRisTag("N1", MetadataField.FIELD_DOI);
         ris.addRisTag("A1", MetadataField.FIELD_AUTHOR);
+        ris.addRisTag("SP", MetadataField.FIELD_START_PAGE);
+        ris.addRisTag("EP", MetadataField.FIELD_END_PAGE);
         // Do not use UR listed in the ris file! It will get set to full text CU by daemon
         return ris;
     }
