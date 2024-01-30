@@ -1784,7 +1784,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; BioMed Research International Volume 2016 ; 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; BioMed Research International Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; BioMed Research International Volume 2018 ; 2018 ; 2018 ; >
-    au < ready ; exists ; 2019 ; BioMed Research International Volume 2019 ; 2019 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; BioMed Research International Volume 2019 ; 2019 ; 2019 ; >
     au < finished ; crawling ; 2020 ; BioMed Research International Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; BioMed Research International Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; BioMed Research International Volume 2022 ; 2022 ; 2022 ; >
@@ -2239,7 +2239,7 @@
     au < finished ; frozen ; 2020 ; Case Reports in Hepatology Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Case Reports in Hepatology Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Case Reports in Hepatology Volume 2022 ; 2022 ; 2022 ; >
-    au < ready ; exists ; 2023 ; Case Reports in Hepatology Volume 2023 ; 2023 ; 2023 ; >
+    au < crawling ; exists ; 2023 ; Case Reports in Hepatology Volume 2023 ; 2023 ; 2023 ; >
 
   }
 
@@ -2420,7 +2420,7 @@
     au < finished ; frozen ; 2020 ; Case Reports in Oncological Medicine Volume 2020 ; 2020 ; 2020 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2021 ; Case Reports in Oncological Medicine Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Case Reports in Oncological Medicine Volume 2022 ; 2022 ; 2022 ; >
-    au < ready ; exists ; 2023 ; Case Reports in Oncological Medicine Volume 2023 ; 2023 ; 2023 ; >
+    au < crawling ; exists ; 2023 ; Case Reports in Oncological Medicine Volume 2023 ; 2023 ; 2023 ; >
 
   }
 
@@ -3422,7 +3422,7 @@
     au < finished ; crawling ; 2020 ; Emergency Medicine International Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Emergency Medicine International Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Emergency Medicine International Volume 2022 ; 2022 ; 2022 ; >
-    au < ready ; exists ; 2023 ; Emergency Medicine International Volume 2023 ; 2023 ; 2023 ; >
+    au < crawling ; exists ; 2023 ; Emergency Medicine International Volume 2023 ; 2023 ; 2023 ; >
 
 
   }
@@ -10567,7 +10567,7 @@
     au < finished ; crawling ; 2019 ; Wireless Communications and Mobile Computing Volume 2019 ; 2019 ; 2019 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2020 ; Wireless Communications and Mobile Computing Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2021 ; Wireless Communications and Mobile Computing Volume 2021 ; 2021 ; 2021 ; >
-    au < ready ; exists ; 2022 ; Wireless Communications and Mobile Computing Volume 2022 ; 2022 ; 2022 ; >
+    au < crawling ; exists ; 2022 ; Wireless Communications and Mobile Computing Volume 2022 ; 2022 ; 2022 ; >
     au < crawling ; exists ; 2023 ; Wireless Communications and Mobile Computing Volume 2023 ; 2023 ; 2023 ; >
 
   }
