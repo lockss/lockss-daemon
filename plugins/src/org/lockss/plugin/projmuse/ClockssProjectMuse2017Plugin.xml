@@ -64,11 +64,4 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>"%sclockss?vid=%d", base_url, resource_id</string>
     </list>
   </entry>
-  <entry>
-    <string>clockss_override</string>
-      <entry>
-        <string>au_def_pause_time</string>
-        <long>3000</long>
-      </entry>
-  </entry>
  </map>
