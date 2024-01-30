@@ -44,11 +44,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -63,5 +63,12 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <string>"%sclockss?vid=%d", base_url, resource_id</string>
     </list>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>3000</long>
+      </entry>
   </entry>
  </map>
