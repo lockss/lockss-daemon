@@ -2355,7 +2355,7 @@
     au < manifest ; exists ; 1989 ; The Electronic Library Volume 7 ; 7 ; >
     au < frozen ; exists ; 1990 ; The Electronic Library Volume 8 ; 8 ; >
     au < ready ; exists ; 1991 ; The Electronic Library Volume 9 ; 9 ; >
-    au < crawling ; exists ; 1992 ; The Electronic Library Volume 10 ; 10 ; >
+    au < frozen ; exists ; 1992 ; The Electronic Library Volume 10 ; 10 ; >
     au < ready ; exists ; 1993 ; The Electronic Library Volume 11 ; 11 ; >
     au < finished ; manifest ; 1994 ; The Electronic Library Volume 12 ; 12 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1995 ; The Electronic Library Volume 13 ; 13 ; reingest4.clockss.org:8082 >
@@ -3316,7 +3316,7 @@
     #continued_by = 2514-9369
 
     au < manifest ; exists ; 1989 ; Humanomics Volume 5 ; 5 ; >
-    au < crawling ; exists ; 1990 ; Humanomics Volume 6 ; 6 ; >
+    au < frozen ; exists ; 1990 ; Humanomics Volume 6 ; 6 ; >
     au < ready ; exists ; 1991 ; Humanomics Volume 7 ; 7 ; >
     au < frozen ; exists ; 1992 ; Humanomics Volume 8 ; 8 ; >
     au < doesNotExist ; doesNotExist ; 1993 ; Humanomics Volume 9 ; 9 ; >
@@ -3855,7 +3855,7 @@
     comment[journal_id] = ims
     comment[continued_by] = 1741-038X
 
-    au < crawling ; exists ; 1990 ; Integrated Manufacturing Systems Volume 1 ; 1 ; >
+    au < frozen ; exists ; 1990 ; Integrated Manufacturing Systems Volume 1 ; 1 ; >
     au < frozen ; exists ; 1991 ; Integrated Manufacturing Systems Volume 2 ; 2 ; >
     au < frozen ; exists ; 1992 ; Integrated Manufacturing Systems Volume 3 ; 3 ; >
     au < frozen ; exists ; 1993 ; Integrated Manufacturing Systems Volume 4 ; 4 ; >
@@ -4271,7 +4271,7 @@
     param[journal_issn] = 1044-4068
     comment[journal_id] = ijcma
 
-    au < crawling ; exists ; 1990 ; International Journal of Conflict Management Volume 1 ; 1 ; >
+    au < frozen ; exists ; 1990 ; International Journal of Conflict Management Volume 1 ; 1 ; >
     au < frozen ; exists ; 1991 ; International Journal of Conflict Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 1992 ; International Journal of Conflict Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 1993 ; International Journal of Conflict Management Volume 4 ; 4 ; >
@@ -4322,7 +4322,7 @@
     au < manifest ; exists ; 1989 ; International Journal of Contemporary Hospitality Management Volume 1 ; 1 ; >
     au < frozen ; exists ; 1990 ; International Journal of Contemporary Hospitality Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 1991 ; International Journal of Contemporary Hospitality Management Volume 3 ; 3 ; >
-    au < crawling ; exists ; 1992 ; International Journal of Contemporary Hospitality Management Volume 4 ; 4 ; >
+    au < frozen ; exists ; 1992 ; International Journal of Contemporary Hospitality Management Volume 4 ; 4 ; >
     au < frozen ; exists ; 1993 ; International Journal of Contemporary Hospitality Management Volume 5 ; 5 ; >
     au < frozen ; exists ; 1994 ; International Journal of Contemporary Hospitality Management Volume 6 ; 6 ; >
     au < finished ; manifest ; 1995 ; International Journal of Contemporary Hospitality Management Volume 7 ; 7 ; reingest5.clockss.org:8082 >
@@ -5489,7 +5489,7 @@
     #continues = 0269-8218
 
     au < frozen ; exists ; 1990 ; International Journal of Physical Distribution & Logistics Management Volume 20 ; 20 ; >
-    au < crawling ; exists ; 1991 ; International Journal of Physical Distribution & Logistics Management Volume 21 ; 21 ; >
+    au < frozen ; exists ; 1991 ; International Journal of Physical Distribution & Logistics Management Volume 21 ; 21 ; >
     au < frozen ; exists ; 1992 ; International Journal of Physical Distribution & Logistics Management Volume 22 ; 22 ; >
     au < frozen ; exists ; 1993 ; International Journal of Physical Distribution & Logistics Management Volume 23 ; 23 ; >
     au < frozen ; exists ; 1994 ; International Journal of Physical Distribution & Logistics Management Volume 24 ; 24 ; >
@@ -5804,7 +5804,7 @@
     param[journal_issn] = 0956-4233
     comment[journal_id] = ijsim
 
-    au < crawling ; exists ; 1990 ; International Journal of Service Industry Management Volume 1 ; 1 ; >
+    au < frozen ; exists ; 1990 ; International Journal of Service Industry Management Volume 1 ; 1 ; >
     au < ready ; exists ; 1991 ; International Journal of Service Industry Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 1992 ; International Journal of Service Industry Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 1993 ; International Journal of Service Industry Management Volume 4 ; 4 ; >
@@ -6221,7 +6221,7 @@
     comment[journal_id] = intr
 
     au < frozen ; exists ; 1991 ; Internet Research Volume 1 ; 1 ; >
-    au < crawling ; exists ; 1992 ; Internet Research Volume 2 ; 2 ; >
+    au < frozen ; exists ; 1992 ; Internet Research Volume 2 ; 2 ; >
     au < frozen ; exists ; 1993 ; Internet Research Volume 3 ; 3 ; >
     au < notReady ; exists ; 1994 ; Internet Research Volume 4 ; 4 ; > #no substance
     au < finished ; manifest ; 1995 ; Internet Research Volume 5 ; 5 ; reingest3.clockss.org:8083 >
@@ -6654,7 +6654,7 @@
     au < manifest ; exists ; 1987 ; Journal of Business Strategy Volume 8 ; 8 ; >
     au < manifest ; exists ; 1988 ; Journal of Business Strategy Volume 9 ; 9 ; >
     au < manifest ; exists ; 1989 ; Journal of Business Strategy Volume 10 ; 10 ; >
-    au < crawling ; exists ; 1990 ; Journal of Business Strategy Volume 11 ; 11 ; >
+    au < frozen ; exists ; 1990 ; Journal of Business Strategy Volume 11 ; 11 ; >
     au < ready ; exists ; 1991 ; Journal of Business Strategy Volume 12 ; 12 ; >
     au < frozen ; exists ; 1992 ; Journal of Business Strategy Volume 13 ; 13 ; >
     au < frozen ; exists ; 1993 ; Journal of Business Strategy Volume 14 ; 14 ; >
@@ -8420,7 +8420,7 @@
     au < manifest ; exists ; 1988 ; Journal of Management in Medicine Volume 3 ; 3 ; >
     au < crawling ; exists ; 1990 ; Journal of Management in Medicine Volume 4 ; 4 ; >
     au < ready ; exists ; 1991 ; Journal of Management in Medicine Volume 5 ; 5 ; >
-    au < crawling ; exists ; 1992 ; Journal of Management in Medicine Volume 6 ; 6 ; >
+    au < frozen ; exists ; 1992 ; Journal of Management in Medicine Volume 6 ; 6 ; >
     au < frozen ; exists ; 1993 ; Journal of Management in Medicine Volume 7 ; 7 ; >
     au < frozen ; exists ; 1994 ; Journal of Management in Medicine Volume 8 ; 8 ; >
     au < finished ; manifest ; 1995 ; Journal of Management in Medicine Volume 9 ; 9 ; reingest1.clockss.org:8082 >
@@ -8875,7 +8875,7 @@
     au < manifest ; exists ; 1987 ; Journal of Valuation Volume 5 ; 5 ; >
     au < manifest ; exists ; 1988 ; Journal of Valuation Volume 6 ; 6 ; >
     au < manifest ; exists ; 1989 ; Journal of Valuation Volume 7 ; 7 ; >
-    au < crawling ; exists ; 1990 ; Journal of Valuation Volume 8 ; 8 ; >
+    au < frozen ; exists ; 1990 ; Journal of Valuation Volume 8 ; 8 ; >
 
   }
 
@@ -9692,7 +9692,7 @@
     au < manifest ; exists ; 1989 ; Library Hi Tech Volume 7 ; 7 ; >
     au < frozen ; exists ; 1990 ; Library Hi Tech Volume 8 ; 8 ; >
     au < ready ; exists ; 1991 ; Library Hi Tech Volume 9 ; 9 ; >
-    au < crawling ; exists ; 1992 ; Library Hi Tech Volume 10 ; 10 ; >
+    au < frozen ; exists ; 1992 ; Library Hi Tech Volume 10 ; 10 ; >
     au < frozen ; exists ; 1993 ; Library Hi Tech Volume 11 ; 11 ; >
     au < frozen ; exists ; 1994 ; Library Hi Tech Volume 12 ; 12 ; >
     au < finished ; manifest ; 1995 ; Library Hi Tech Volume 13 ; 13 ; reingest4.clockss.org:8082 >
@@ -9786,7 +9786,7 @@
     au < manifest ; exists ; 1987 ; Library Management Volume 8 ; 8 ; >
     au < manifest ; exists ; 1988 ; Library Management Volume 9 ; 9 ; >
     au < manifest ; exists ; 1989 ; Library Management Volume 10 ; 10 ; >
-    au < crawling ; exists ; 1990 ; Library Management Volume 11 ; 11 ; >
+    au < frozen ; exists ; 1990 ; Library Management Volume 11 ; 11 ; >
     au < ready ; exists ; 1991 ; Library Management Volume 12 ; 12 ; >
     au < frozen ; exists ; 1992 ; Library Management Volume 13 ; 13 ; >
     au < frozen ; exists ; 1993 ; Library Management Volume 14 ; 14 ; >
@@ -10366,7 +10366,7 @@
     au < manifest ; exists ; 1987 ; Managerial Law Volume 29 ; 29 ; >
     au < manifest ; exists ; 1988 ; Managerial Law Volume 30 ; 30 ; >
     au < manifest ; exists ; 1989 ; Managerial Law Volume 31 ; 31 ; >
-    au < crawling ; exists ; 1990 ; Managerial Law Volume 32 ; 32 ; >
+    au < frozen ; exists ; 1990 ; Managerial Law Volume 32 ; 32 ; >
     au < ready ; exists ; 1991 ; Managerial Law Volume 33 ; 33 ; >
     au < frozen ; exists ; 1992 ; Managerial Law Volume 34 ; 34 ; >
     au < frozen ; exists ; 1993 ; Managerial Law Volume 35 ; 35 ; >
@@ -10937,7 +10937,7 @@
     au < manifest ; exists ; 1989 ; New Library World Volume 90 ; 90 ; >
     au < frozen ; exists ; 1990 ; New Library World Volume 91 ; 91 ; >
     au < ready ; exists ; 1991 ; New Library World Volume 92 ; 92 ; >
-    au < crawling ; exists ; 1992 ; New Library World Volume 93 ; 93 ; >
+    au < frozen ; exists ; 1992 ; New Library World Volume 93 ; 93 ; >
     au < frozen ; exists ; 1993 ; New Library World Volume 94 ; 94 ; >
     au < frozen ; exists ; 1994 ; New Library World Volume 95 ; 95 ; >
     au < finished ; manifest ; 1995 ; New Library World Volume 96 ; 96 ; reingest3.clockss.org:8083 >
@@ -11390,7 +11390,7 @@
     au < manifest ; exists ; 1987 ; Personnel Review Volume 16 ; 16 ; >
     au < manifest ; exists ; 1988 ; Personnel Review Volume 17 ; 17 ; >
     au < manifest ; exists ; 1989 ; Personnel Review Volume 18 ; 18 ; >
-    au < crawling ; exists ; 1990 ; Personnel Review Volume 19 ; 19 ; >
+    au < frozen ; exists ; 1990 ; Personnel Review Volume 19 ; 19 ; >
     au < ready ; exists ; 1991 ; Personnel Review Volume 20 ; 20 ; >
     au < frozen ; exists ; 1992 ; Personnel Review Volume 21 ; 21 ; >
     au < frozen ; exists ; 1993 ; Personnel Review Volume 22 ; 22 ; >
@@ -11671,7 +11671,7 @@
     au < manifest ; exists ; 1987 ; Property Management Volume 5 ; 5 ; >
     au < manifest ; exists ; 1988 ; Property Management Volume 6 ; 6 ; >
     au < manifest ; exists ; 1989 ; Property Management Volume 7 ; 7 ; >
-    au < crawling ; exists ; 1990 ; Property Management Volume 8 ; 8 ; >
+    au < frozen ; exists ; 1990 ; Property Management Volume 8 ; 8 ; >
     au < ready ; exists ; 1991 ; Property Management Volume 9 ; 9 ; >
     au < frozen ; exists ; 1992 ; Property Management Volume 10 ; 10 ; >
     au < frozen ; exists ; 1993 ; Property Management Volume 11 ; 11 ; >
@@ -13316,7 +13316,7 @@
     au < manifest ; exists ; 1987 ; VINE Volume 17 ; 17 ; >
     au < manifest ; exists ; 1988 ; VINE Volume 18 ; 18 ; >
     au < manifest ; exists ; 1989 ; VINE Volume 19 ; 19 ; >
-    au < crawling ; exists ; 1990 ; VINE Volume 20 ; 20 ; >
+    au < frozen ; exists ; 1990 ; VINE Volume 20 ; 20 ; >
     au < manifest ; exists ; 1991 ; VINE Volume 21 ; 21 ; >
     au < frozen ; exists ; 1992 ; VINE Volume 22 ; 22 ; >
     au < frozen ; exists ; 1993 ; VINE Volume 23 ; 23 ; >
