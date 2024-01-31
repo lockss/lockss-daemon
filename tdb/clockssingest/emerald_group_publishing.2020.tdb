@@ -2354,9 +2354,9 @@
     au < manifest ; exists ; 1988 ; The Electronic Library Volume 6 ; 6 ; >
     au < manifest ; exists ; 1989 ; The Electronic Library Volume 7 ; 7 ; >
     au < frozen ; exists ; 1990 ; The Electronic Library Volume 8 ; 8 ; >
-    au < ready ; exists ; 1991 ; The Electronic Library Volume 9 ; 9 ; >
+    au < crawling ; exists ; 1991 ; The Electronic Library Volume 9 ; 9 ; >
     au < frozen ; exists ; 1992 ; The Electronic Library Volume 10 ; 10 ; >
-    au < ready ; exists ; 1993 ; The Electronic Library Volume 11 ; 11 ; >
+    au < crawling ; exists ; 1993 ; The Electronic Library Volume 11 ; 11 ; >
     au < finished ; manifest ; 1994 ; The Electronic Library Volume 12 ; 12 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1995 ; The Electronic Library Volume 13 ; 13 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; The Electronic Library Volume 14 ; 14 ; reingest2.clockss.org:8085 >
@@ -2635,7 +2635,7 @@
     au < manifest ; exists ; 1988 ; Equal Opportunities International Volume 7 ; 7 ; >
     au < manifest ; exists ; 1989 ; Equal Opportunities International Volume 8 ; 8 ; >
     au < frozen ; exists ; 1990 ; Equal Opportunities International Volume 9 ; 9 ; >
-    au < ready ; exists ; 1991 ; Equal Opportunities International Volume 10 ; 10 ; >
+    au < crawling ; exists ; 1991 ; Equal Opportunities International Volume 10 ; 10 ; >
     au < frozen ; exists ; 1992 ; Equal Opportunities International Volume 11 ; 11 ; >
     au < frozen ; exists ; 1993 ; Equal Opportunities International Volume 12 ; 12 ; >
     au < finished ; manifest ; 1994 ; Equal Opportunities International Volume 13 ; 13 ; reingest1.clockss.org:8082 >
@@ -3588,7 +3588,7 @@
     au < manifest ; exists ; 1988 ; Industrial Management & Data Systems Volume 88 ; 88 ; >
     au < manifest ; exists ; 1989 ; Industrial Management & Data Systems Volume 89 ; 89 ; >
     au < frozen ; exists ; 1990 ; Industrial Management & Data Systems Volume 90 ; 90 ; >
-    au < ready ; exists ; 1991 ; Industrial Management & Data Systems Volume 91 ; 91 ; >
+    au < crawling ; exists ; 1991 ; Industrial Management & Data Systems Volume 91 ; 91 ; >
     au < frozen ; exists ; 1992 ; Industrial Management & Data Systems Volume 92 ; 92 ; >
     au < frozen ; exists ; 1993 ; Industrial Management & Data Systems Volume 93 ; 93 ; >
     au < finished ; manifest ; 1994 ; Industrial Management & Data Systems Volume 94 ; 94 ; reingest2.clockss.org:8085 >
@@ -4988,7 +4988,7 @@
     comment[journal_id] = ijlm
 
     au < frozen ; exists ; 1990 ; The International Journal of Logistics Management Volume 1 ; 1 ; >
-    au < ready ; exists ; 1991 ; The International Journal of Logistics Management Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1991 ; The International Journal of Logistics Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 1992 ; The International Journal of Logistics Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 1993 ; The International Journal of Logistics Management Volume 4 ; 4 ; >
     au < frozen ; exists ; 1994 ; The International Journal of Logistics Management Volume 5 ; 5 ; >
@@ -5109,7 +5109,7 @@
     au < manifest ; exists ; 1988 ; International Journal of Manpower Volume 9 ; 9 ; >
     au < manifest ; exists ; 1989 ; International Journal of Manpower Volume 10 ; 10 ; >
     au < frozen ; exists ; 1990 ; International Journal of Manpower Volume 11 ; 11 ; >
-    au < ready ; exists ; 1991 ; International Journal of Manpower Volume 12 ; 12 ; >
+    au < crawling ; exists ; 1991 ; International Journal of Manpower Volume 12 ; 12 ; >
     au < frozen ; exists ; 1992 ; International Journal of Manpower Volume 13 ; 13 ; >
     au < frozen ; exists ; 1993 ; International Journal of Manpower Volume 14 ; 14 ; >
     au < finished ; manifest ; 1994 ; International Journal of Manpower Volume 15 ; 15 ; reingest3.clockss.org:8083 >
@@ -5608,7 +5608,7 @@
     au < manifest ; exists ; 1988 ; International Journal of Public Sector Management Volume 1 ; 1 ; >
     au < manifest ; exists ; 1989 ; International Journal of Public Sector Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 1990 ; International Journal of Public Sector Management Volume 3 ; 3 ; >
-    au < ready ; exists ; 1991 ; International Journal of Public Sector Management Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1991 ; International Journal of Public Sector Management Volume 4 ; 4 ; >
     au < frozen ; exists ; 1992 ; International Journal of Public Sector Management Volume 5 ; 5 ; >
     au < frozen ; exists ; 1993 ; International Journal of Public Sector Management Volume 6 ; 6 ; >
     au < frozen ; exists ; 1994 ; International Journal of Public Sector Management Volume 7 ; 7 ; >
@@ -5911,7 +5911,7 @@
     au < manifest ; exists ; 1989 ; International Journal of Sociology and Social Policy Volume 8 ; 8 ; >
     au < manifest ; exists ; 1989 ; International Journal of Sociology and Social Policy Volume 9 ; 9 ; >
     au < frozen ; exists ; 1990 ; International Journal of Sociology and Social Policy Volume 10 ; 10 ; >
-    au < ready ; exists ; 1991 ; International Journal of Sociology and Social Policy Volume 11 ; 11 ; >
+    au < crawling ; exists ; 1991 ; International Journal of Sociology and Social Policy Volume 11 ; 11 ; >
     au < frozen ; exists ; 1992 ; International Journal of Sociology and Social Policy Volume 12 ; 12 ; >
     au < frozen ; exists ; 1993 ; International Journal of Sociology and Social Policy Volume 13 ; 13 ; >
     au < finished ; manifest ; 1994 ; International Journal of Sociology and Social Policy Volume 14 ; 14 ; reingest5.clockss.org:8082 >
@@ -6598,7 +6598,7 @@
     au < manifest ; exists ; 1988 ; Journal of Business & Industrial Marketing Volume 3 ; 3 ; >
     au < manifest ; exists ; 1989 ; Journal of Business & Industrial Marketing Volume 4 ; 4 ; >
     au < frozen ; exists ; 1990 ; Journal of Business & Industrial Marketing Volume 5 ; 5 ; >
-    au < ready ; exists ; 1991 ; Journal of Business & Industrial Marketing Volume 6 ; 6 ; >
+    au < crawling ; exists ; 1991 ; Journal of Business & Industrial Marketing Volume 6 ; 6 ; >
     au < frozen ; exists ; 1992 ; Journal of Business & Industrial Marketing Volume 7 ; 7 ; >
     au < frozen ; exists ; 1993 ; Journal of Business & Industrial Marketing Volume 8 ; 8 ; >
     au < frozen ; exists ; 1994 ; Journal of Business & Industrial Marketing Volume 9 ; 9 ; >
@@ -6655,7 +6655,7 @@
     au < manifest ; exists ; 1988 ; Journal of Business Strategy Volume 9 ; 9 ; >
     au < manifest ; exists ; 1989 ; Journal of Business Strategy Volume 10 ; 10 ; >
     au < frozen ; exists ; 1990 ; Journal of Business Strategy Volume 11 ; 11 ; >
-    au < ready ; exists ; 1991 ; Journal of Business Strategy Volume 12 ; 12 ; >
+    au < crawling ; exists ; 1991 ; Journal of Business Strategy Volume 12 ; 12 ; >
     au < frozen ; exists ; 1992 ; Journal of Business Strategy Volume 13 ; 13 ; >
     au < frozen ; exists ; 1993 ; Journal of Business Strategy Volume 14 ; 14 ; >
     au < frozen ; exists ; 1994 ; Journal of Business Strategy Volume 15 ; 15 ; >
@@ -7135,7 +7135,7 @@
     au < manifest ; exists ; 1988 ; Journal of Economic Studies Volume 15 ; 15 ; >
     au < manifest ; exists ; 1989 ; Journal of Economic Studies Volume 16 ; 16 ; >
     au < frozen ; exists ; 1990 ; Journal of Economic Studies Volume 17 ; 17 ; >
-    au < ready ; exists ; 1991 ; Journal of Economic Studies Volume 18 ; 18 ; >
+    au < crawling ; exists ; 1991 ; Journal of Economic Studies Volume 18 ; 18 ; >
     au < frozen ; exists ; 1992 ; Journal of Economic Studies Volume 19 ; 19 ; >
     au < frozen ; exists ; 1993 ; Journal of Economic Studies Volume 20 ; 20 ; >
     au < finished ; manifest ; 1994 ; Journal of Economic Studies Volume 21 ; 21 ; reingest3.clockss.org:8083 >
@@ -7396,7 +7396,7 @@
     au < manifest ; exists ; 1988 ; Journal of European Industrial Training Volume 12 ; 12 ; >
     au < manifest ; exists ; 1989 ; Journal of European Industrial Training Volume 13 ; 13 ; >
     au < frozen ; exists ; 1990 ; Journal of European Industrial Training Volume 14 ; 14 ; >
-    au < ready ; exists ; 1991 ; Journal of European Industrial Training Volume 15 ; 15 ; >
+    au < crawling ; exists ; 1991 ; Journal of European Industrial Training Volume 15 ; 15 ; >
     au < frozen ; exists ; 1992 ; Journal of European Industrial Training Volume 16 ; 16 ; >
     au < frozen ; exists ; 1993 ; Journal of European Industrial Training Volume 17 ; 17 ; >
     au < frozen ; exists ; 1994 ; Journal of European Industrial Training Volume 18 ; 18 ; >
@@ -9359,7 +9359,7 @@
 
     au < manifest ; exists ; 1989 ; Employee Counselling Today Volume 1 ; 1 ; >
     au < frozen ; exists ; 1990 ; Employee Counselling Today Volume 2 ; 2 ; >
-    au < ready ; exists ; 1991 ; Employee Counselling Today Volume 3 ; 3 ; >
+    au < crawling ; exists ; 1991 ; Employee Counselling Today Volume 3 ; 3 ; >
     au < frozen ; exists ; 1992 ; Employee Counselling Today Volume 4 ; 4 ; >
     au < frozen ; exists ; 1993 ; Employee Counselling Today Volume 5 ; 5 ; >
     au < frozen ; exists ; 1994 ; Employee Counselling Today Volume 6 ; 6 ; >
@@ -9691,7 +9691,7 @@
     au < manifest ; exists ; 1988 ; Library Hi Tech Volume 6 ; 6 ; >
     au < manifest ; exists ; 1989 ; Library Hi Tech Volume 7 ; 7 ; >
     au < frozen ; exists ; 1990 ; Library Hi Tech Volume 8 ; 8 ; >
-    au < ready ; exists ; 1991 ; Library Hi Tech Volume 9 ; 9 ; >
+    au < crawling ; exists ; 1991 ; Library Hi Tech Volume 9 ; 9 ; >
     au < frozen ; exists ; 1992 ; Library Hi Tech Volume 10 ; 10 ; >
     au < frozen ; exists ; 1993 ; Library Hi Tech Volume 11 ; 11 ; >
     au < frozen ; exists ; 1994 ; Library Hi Tech Volume 12 ; 12 ; >
@@ -9787,7 +9787,7 @@
     au < manifest ; exists ; 1988 ; Library Management Volume 9 ; 9 ; >
     au < manifest ; exists ; 1989 ; Library Management Volume 10 ; 10 ; >
     au < frozen ; exists ; 1990 ; Library Management Volume 11 ; 11 ; >
-    au < ready ; exists ; 1991 ; Library Management Volume 12 ; 12 ; >
+    au < crawling ; exists ; 1991 ; Library Management Volume 12 ; 12 ; >
     au < frozen ; exists ; 1992 ; Library Management Volume 13 ; 13 ; >
     au < frozen ; exists ; 1993 ; Library Management Volume 14 ; 14 ; >
     au < finished ; manifest ; 1994 ; Library Management Volume 15 ; 15 ; reingest2.clockss.org:8085 >
@@ -10123,7 +10123,7 @@
     au < manifest ; exists ; 1988 ; Management Research News Volume 11 ; 11 ; >
     au < manifest ; exists ; 1989 ; Management Research News Volume 12 ; 12 ; >
     au < frozen ; exists ; 1990 ; Management Research News Volume 13 ; 13 ; >
-    au < ready ; exists ; 1991 ; Management Research News Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1991 ; Management Research News Volume 14 ; 14 ; >
     au < frozen ; exists ; 1992 ; Management Research News Volume 15 ; 15 ; >
     au < frozen ; exists ; 1993 ; Management Research News Volume 16 ; 16 ; >
     au < finished ; manifest ; 1994 ; Management Research News Volume 17 ; 17 ; reingest3.clockss.org:8083 >
@@ -10367,7 +10367,7 @@
     au < manifest ; exists ; 1988 ; Managerial Law Volume 30 ; 30 ; >
     au < manifest ; exists ; 1989 ; Managerial Law Volume 31 ; 31 ; >
     au < frozen ; exists ; 1990 ; Managerial Law Volume 32 ; 32 ; >
-    au < ready ; exists ; 1991 ; Managerial Law Volume 33 ; 33 ; >
+    au < crawling ; exists ; 1991 ; Managerial Law Volume 33 ; 33 ; >
     au < frozen ; exists ; 1992 ; Managerial Law Volume 34 ; 34 ; >
     au < frozen ; exists ; 1993 ; Managerial Law Volume 35 ; 35 ; >
     au < frozen ; exists ; 1994 ; Managerial Law Volume 36 ; 36 ; >
@@ -11201,7 +11201,7 @@
     au < manifest ; exists ; 1988 ; Online Review Volume 12 ; 12 ; >
     au < manifest ; exists ; 1989 ; Online Review Volume 13 ; 13 ; >
     au < frozen ; exists ; 1990 ; Online Review Volume 14 ; 14 ; >
-    au < ready ; exists ; 1991 ; Online Review Volume 15 ; 15 ; >
+    au < crawling ; exists ; 1991 ; Online Review Volume 15 ; 15 ; >
     au < frozen ; exists ; 1992 ; Online Review Volume 16 ; 16 ; >
 
   }
