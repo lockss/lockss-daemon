@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>24</string>
+    <string>25</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -237,6 +237,15 @@ POSSIBILITY OF SUCH DAMAGE.
       <!-- "chunked stream ended unexpectedly" is currently a plain IOException -->
       <string>java.io.IOException=org.lockss.plugin.usdocspln.gov.govinfo.GovInfoSitemapsHttpResponseHandler</string>
     </list>
+  </entry>
+  <entry>
+    <string>au_mime_rate_limiter_map</string>
+    <map>
+      <entry>
+	<string>image/*,font/*,text/css,text/javascript,application/javascript,text/xml,application/xml,application/pdf</string>
+	<string>1/1s</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
