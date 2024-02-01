@@ -52,12 +52,12 @@ public class MPIDRRisArticleIteratorFactory implements ArticleIteratorFactory, A
     protected static Logger log = Logger.getLogger(MPIDRRisArticleIteratorFactory.class);
 
     /*
-    https://clockss-test.lockss.org/sourcefiles/mpidr-released/2021/special/3/9/S3-9.pdf
-    https://clockss-test.lockss.org/sourcefiles/mpidr-released/2021/special/3/9/article.ris
-    https://clockss-test.lockss.org/sourcefiles/mpidr-released/2021/special/3/9/default.htm
-    https://clockss-test.lockss.org/sourcefiles/mpidr-released/2021/volumes/vol1/1/1-1.pdf
-    https://clockss-test.lockss.org/sourcefiles/mpidr-released/2021/volumes/vol1/1/article.ris
-    https://clockss-test.lockss.org/sourcefiles/mpidr-released/2021/volumes/vol1/1/default.htm
+    sourcefiles/mpidr-released/2021/special/3/9/S3-9.pdf
+    sourcefiles/mpidr-released/2021/special/3/9/article.ris
+    sourcefiles/mpidr-released/2021/special/3/9/default.htm
+    sourcefiles/mpidr-released/2021/volumes/vol1/1/1-1.pdf
+    sourcefiles/mpidr-released/2021/volumes/vol1/1/article.ris
+    sourcefiles/mpidr-released/2021/volumes/vol1/1/default.htm
      */
 
     protected static final String PATTERN_TEMPLATE = "\"^%s%s/(.*)\\.(ris|pdf)$\",base_url, directory";

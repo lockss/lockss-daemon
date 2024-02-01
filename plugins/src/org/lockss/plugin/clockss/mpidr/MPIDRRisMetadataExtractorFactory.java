@@ -179,6 +179,8 @@ public class MPIDRRisMetadataExtractorFactory implements FileMetadataExtractorFa
             }
 
             am.put(MetadataField.FIELD_PUBLISHER, publisherName);
+            am.put(MetadataField.FIELD_PUBLICATION_TYPE,MetadataField.PUBLICATION_TYPE_JOURNAL);
+            am.put(MetadataField.FIELD_ARTICLE_TYPE,MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
 
             emitter.emitMetadata(cu, am);
         }
