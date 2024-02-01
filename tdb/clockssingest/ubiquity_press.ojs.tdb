@@ -64,12 +64,12 @@
       au < frozen ; exists ; 2012 ; 49 ; Estetika: The European Journal of Aesthetics Volume 2012 ; 2012 ; >
       au < frozen ; exists ; 2013 ; 50 ; Estetika: The European Journal of Aesthetics Volume 2013 ; 2013 ; >
       au < frozen ; exists ; 2014 ; 51 ; Estetika: The European Journal of Aesthetics Volume 2014 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; 52 ; Estetika: The European Journal of Aesthetics Volume 2015 ; 2015 ; >
+      au < frozen ; exists ; 2015 ; 52 ; Estetika: The European Journal of Aesthetics Volume 2015 ; 2015 ; >
       au < frozen ; exists ; 2016 ; 53 ; Estetika: The European Journal of Aesthetics Volume 2016 ; 2016 ; >
       au < frozen ; exists ; 2017 ; 54 ; Estetika: The European Journal of Aesthetics Volume 2017 ; 2017 ; >
       au < frozen ; exists ; 2018 ; 55 ; Estetika: The European Journal of Aesthetics Volume 2018 ; 2018 ; >
-      au < crawling ; exists ; 2019 ; 56 ; Estetika: The European Journal of Aesthetics Volume 2019 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; 57 ; Estetika: The European Journal of Aesthetics Volume 2020 ; 2020 ; >
+      au < frozen ; exists ; 2019 ; 56 ; Estetika: The European Journal of Aesthetics Volume 2019 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; 57 ; Estetika: The European Journal of Aesthetics Volume 2020 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; 58 ; Estetika: The European Journal of Aesthetics Volume 2021 ; 2021 ; >
       au < frozen ; exists ; 2022 ; 59 ; Estetika: The European Journal of Aesthetics Volume 2022 ; 2022 ; >
       au < crawling ; exists ; 2023 ; 60 ; Estetika: The European Journal of Aesthetics Volume 2023 ; 2023 ; >
@@ -505,7 +505,7 @@
       au < manifest ; exists ; 1999 ; 1 ; Scandinavian Journal of Disability Research Volume 1 ; 1999 ; >
       au < doNotProcess ; doNotProcess ; 2000 ; 2 ; Scandinavian Journal of Disability Research Volume 2 ; 2000 ; >
       au < doNotProcess ; doNotProcess ; 2001 ; 3 ; Scandinavian Journal of Disability Research Volume 3 ; 2001 ; >
-      au < crawling ; doesNotExist ; 2002 ; 4 ; Scandinavian Journal of Disability Research Volume 4 ; 2002 ; >
+      au < frozen ; doesNotExist ; 2002 ; 4 ; Scandinavian Journal of Disability Research Volume 4 ; 2002 ; >
       au < doNotProcess ; doNotProcess ; 2003 ; 5 ; Scandinavian Journal of Disability Research Volume 5 ; 2003 ; >
       au < doNotProcess ; doNotProcess ; 2004 ; 6 ; Scandinavian Journal of Disability Research Volume 6 ; 2004 ; >
       au < doNotProcess ; doNotProcess ; 2005 ; 7 ; Scandinavian Journal of Disability Research Volume 7 ; 2005 ; >
@@ -570,7 +570,7 @@
       au < doNotProcess ; doNotProcess ; 2005 ; 35 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2005 ; 2005 ; >
       au < doNotProcess ; doNotProcess ; 2006 ; 36 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2006 ; 2006 ; >
       au < doNotProcess ; doNotProcess ; 2007 ; 37 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2007 ; 2007 ; >
-      au < crawling ; doesNotExist ; 2008 ; 38 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2008 ; 2008 ; > #M exists. No articles for that year.
+      au < frozen ; doesNotExist ; 2008 ; 38 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2008 ; 2008 ; > #M exists. No articles for that year.
       au < doNotProcess ; doNotProcess ; 2009 ; 39 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2009 ; 2009 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; 40 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2010 ; 2010 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; 41 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2011 ; 2011 ; >
@@ -678,8 +678,8 @@
       param[journal_id] = up-j-bc
 
       au < frozen ; exists ; 2020 ; 1 ; Building and Cities Volume 2020 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; 2 ; Building and Cities Volume 2021 ; 2021 ; > #403 forbidden cloudfront.net
-      au < crawling ; exists ; 2022 ; 3 ; Building and Cities Volume 2022 ; 2022 ; > #403 forbidden cloudfront.net
+      au < frozen ; exists ; 2021 ; 2 ; Building and Cities Volume 2021 ; 2021 ; > #403 forbidden cloudfront.net
+      au < frozen ; exists ; 2022 ; 3 ; Building and Cities Volume 2022 ; 2022 ; > #403 forbidden cloudfront.net
       au < crawling ; exists ; 2023 ; 4 ; Building and Cities Volume 2023 ; 2023 ; > #404 forbidden cloudfront.net
 
   }
@@ -863,9 +863,9 @@
       param[base_url] = https://account.datascience.codata.org/
       param[journal_id] = up-j-dsj
 
-      au < crawling ; doesNotExist ; 2002 ; 1 ; Data Science Journal Volume 2002 ; 2002 ; > #M exists. No articles for that year.
+      au < frozen ; doesNotExist ; 2002 ; 1 ; Data Science Journal Volume 2002 ; 2002 ; > #M exists. No articles for that year.
       au < doNotProcess ; doNotProcess ; 2003 ; 2 ; Data Science Journal Volume 2003 ; 2003 ; >
-      au < crawling ; doesNotExist ; 2004 ; 3 ; Data Science Journal Volume 2004 ; 2004 ; > #M exists. No articles for that year.
+      au < frozen ; doesNotExist ; 2004 ; 3 ; Data Science Journal Volume 2004 ; 2004 ; > #M exists. No articles for that year.
       au < doNotProcess ; doNotProcess ; 2005 ; 4 ; Data Science Journal Volume 2005 ; 2005 ; >
       au < doNotProcess ; doNotProcess ; 2006 ; 5 ; Data Science Journal Volume 2006 ; 2006 ; >
       au < doNotProcess ; doNotProcess ; 2007 ; 6 ; Data Science Journal Volume 2007 ; 2007 ; >
@@ -883,7 +883,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 18 ; Data Science Journal Volume 2019 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 19 ; Data Science Journal Volume 2020 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; 20 ; Data Science Journal Volume 2021 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; 21 ; Data Science Journal Volume 2022 ; 2022 ; >
+      au < frozen ; exists ; 2022 ; 21 ; Data Science Journal Volume 2022 ; 2022 ; >
       au < crawling ; exists ; 2023 ; 22 ; Data Science Journal Volume 2023 ; 2023 ; >
 
   }
@@ -1317,7 +1317,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 103 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2019 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 104 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2020 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; 105 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2021 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; 106 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2022 ; 2022 ; >
+      au < frozen ; exists ; 2022 ; 106 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2022 ; 2022 ; >
       au < crawling ; exists ; 2023 ; 107 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2023 ; 2023 ; >
 
   }
@@ -1579,7 +1579,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 15 ; Psychologica Belgica Volume 2019 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 16 ; Psychologica Belgica Volume 2020 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; 17 ; Psychologica Belgica Volume 2021 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; 18 ; Psychologica Belgica Volume 2022 ; 2022 ; >
+      au < frozen ; exists ; 2022 ; 18 ; Psychologica Belgica Volume 2022 ; 2022 ; >
       au < crawling ; exists ; 2023 ; 19 ; Psychologica Belgica Volume 2023 ; 2023 ; >
 
   }
@@ -3145,10 +3145,10 @@
       param[base_url] = https://account.journal.houstonmethodist.org/
       param[journal_id] = up-j-mdbcj
 
-      au < crawling ; exists ; 2004 ; 1 ; Methodist DeBakey Cardiovascular Journal Volume 2004 ; 2004 ; >
-      au < crawling ; exists ; 2005 ; 2 ; Methodist DeBakey Cardiovascular Journal Volume 2005 ; 2005 ; >
-      au < crawling ; exists ; 2006 ; 3 ; Methodist DeBakey Cardiovascular Journal Volume 2006 ; 2006 ; >
-      au < crawling ; exists ; 2007 ; 4 ; Methodist DeBakey Cardiovascular Journal Volume 2007 ; 2007 ; >
+      au < frozen ; exists ; 2004 ; 1 ; Methodist DeBakey Cardiovascular Journal Volume 2004 ; 2004 ; >
+      au < frozen ; exists ; 2005 ; 2 ; Methodist DeBakey Cardiovascular Journal Volume 2005 ; 2005 ; >
+      au < frozen ; exists ; 2006 ; 3 ; Methodist DeBakey Cardiovascular Journal Volume 2006 ; 2006 ; >
+      au < frozen ; exists ; 2007 ; 4 ; Methodist DeBakey Cardiovascular Journal Volume 2007 ; 2007 ; >
       au < frozen ; exists ; 2008 ; 5 ; Methodist DeBakey Cardiovascular Journal Volume 2008 ; 2008 ; >
       au < frozen ; exists ; 2009 ; 6 ; Methodist DeBakey Cardiovascular Journal Volume 2009 ; 2009 ; >
       au < frozen ; exists ; 2010 ; 7 ; Methodist DeBakey Cardiovascular Journal Volume 2010 ; 2010 ; >
