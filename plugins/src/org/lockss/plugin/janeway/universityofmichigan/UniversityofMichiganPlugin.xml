@@ -131,6 +131,9 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>2,"https://plus.google.com"</string>
       <string>2,"https://www.linkedin.com"</string>
       <string>2,"https://www.facebook.com"</string>
+      <!--exclude improperly relative URLs-->
+      <string>2, "^https?://%s/([^/]+/)?article/.*/www\.", url_host(base_url)</string>
+      <string>2, "^https?://%s/([^/]+/)?article/.*/[^/]+\.(uk|com|net|org|edu|gov)", url_host(base_url)</string>
       <string>1,"https://cdnjs.cloudflare.com/.+\.(css|js)"</string>
       <string>1,"https://use.typekit.net/.*\.js"</string>
       <string>1,"https://maxcdn.bootstrapcdn.com/.+\.css"</string>
@@ -205,5 +208,9 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>"use\.typekit\.net"</string>
       <string>"maxcdn\.bootstrapcdn\.com"</string>
     </list>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.janeway.universityofmichigan.UniversityofMichiganHtmlCrawlFilterFactory</string>
   </entry>
 </map>
