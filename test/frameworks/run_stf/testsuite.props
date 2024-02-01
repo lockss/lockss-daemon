@@ -59,4 +59,17 @@
 # org.lockss.poll.v3.repairFromCachePercent=90
 # org.lockss.poll.v3.minPercentAgreementForRepairs=0
 
+org.lockss.baseau.defaultFetchRateLimiterSource = au
+org.lockss.poll.v3.allSymmetricPolls = false
+org.lockss.poll.v3.enableSymmetricPolls = false
+org.lockss.poll.v3.enableDiscovery = true
+org.lockss.crawler.repair.repair_from_cache_percent = 25
+org.lockss.poll.v3.repair.repair_from_cache_percent = 25
+org.lockss.poll.v3.repairFromCachePercent = 25
+org.lockss.poll.v3.minNominationSize = 1
+org.lockss.hasher.estimate.pad.constant = 10
+org.lockss.hasher.estimate.pad.percent = 10
+org.lockss.poll.v3.voteDurationMultiplier = 4
+org.lockss.poll.v3.receiptPadding = 5m
+
 org.lockss.id.pidUiStemMap = TCP:[127.0.0.1]:8801,http://127.0.0.1:8041;TCP:[127.0.0.1]:8802,http://127.0.0.1:8042;TCP:[127.0.0.1]:8803,http://127.0.0.1:8043;TCP:[127.0.0.1]:8804,http://127.0.0.1:8044;TCP:[127.0.0.1]:8805,http://127.0.0.1:8045
