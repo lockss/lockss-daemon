@@ -175,7 +175,7 @@
     au < released ; 2017 ; USCOURTS_areb 2017 ; USCOURTS ; areb ; 2017 >
     au < released ; 2018 ; USCOURTS_areb 2018 ; USCOURTS ; areb ; 2018 >
     au < released ; 2019 ; USCOURTS_areb 2019 ; USCOURTS ; areb ; 2019 >
-    au < manifest ; 2020 ; USCOURTS_areb 2020 ; USCOURTS ; areb ; 2020 >
+    au < ready ; 2020 ; USCOURTS_areb 2020 ; USCOURTS ; areb ; 2020 >
     au < manifest ; 2021 ; USCOURTS_areb 2021 ; USCOURTS ; areb ; 2021 >
     au < ready ; 2022 ; USCOURTS_areb 2022 ; USCOURTS ; areb ; 2022 >
 
@@ -197,7 +197,7 @@
     au < released ; 2018 ; USCOURTS_ared 2018 ; USCOURTS ; ared ; 2018 >
     au < released ; 2019 ; USCOURTS_ared 2019 ; USCOURTS ; ared ; 2019 >
     au < manifest ; 2020 ; USCOURTS_ared 2020 ; USCOURTS ; ared ; 2020 >
-    au < manifest ; 2021 ; USCOURTS_ared 2021 ; USCOURTS ; ared ; 2021 >
+    au < ready ; 2021 ; USCOURTS_ared 2021 ; USCOURTS ; ared ; 2021 >
     au < released ; 2022 ; USCOURTS_ared 2022 ; USCOURTS ; ared ; 2022 >
 
     au < doNotProcess ; 2006 ; USCOURTS_arwb 2006 ; USCOURTS ; arwb ; 2006 >
@@ -361,7 +361,7 @@
     au < released ; 2018 ; USCOURTS_ca2 2018 ; USCOURTS ; ca2 ; 2018 >
     au < released ; 2019 ; USCOURTS_ca2 2019 ; USCOURTS ; ca2 ; 2019 >
     au < manifest ; 2020 ; USCOURTS_ca2 2020 ; USCOURTS ; ca2 ; 2020 >
-    au < manifest ; 2021 ; USCOURTS_ca2 2021 ; USCOURTS ; ca2 ; 2021 >
+    au < ready ; 2021 ; USCOURTS_ca2 2021 ; USCOURTS ; ca2 ; 2021 >
     au < ready ; 2022 ; USCOURTS_ca2 2022 ; USCOURTS ; ca2 ; 2022 >
 
     au < doNotProcess ; 2008 ; USCOURTS_ca3 2008 ; USCOURTS ; ca3 ; 2008 >
@@ -1589,7 +1589,7 @@
     au < manifest ; 2018 ; USCOURTS_mowb 2018 ; USCOURTS ; mowb ; 2018 >
     au < manifest ; 2019 ; USCOURTS_mowb 2019 ; USCOURTS ; mowb ; 2019 >
     au < manifest ; 2020 ; USCOURTS_mowb 2020 ; USCOURTS ; mowb ; 2020 >
-    au < manifest ; 2021 ; USCOURTS_mowb 2021 ; USCOURTS ; mowb ; 2021 >
+    au < ready ; 2021 ; USCOURTS_mowb 2021 ; USCOURTS ; mowb ; 2021 >
     au < ready ; 2022 ; USCOURTS_mowb 2022 ; USCOURTS ; mowb ; 2022 >
 
     au < manifest ; 2010 ; USCOURTS_mowd 2010 ; USCOURTS ; mowd ; 2010 >
@@ -1967,7 +1967,7 @@
     au < ready ; 2022 ; USCOURTS_nysb 2022 ; USCOURTS ; nysb ; 2022 >
 
     au < manifest ; 2019 ; USCOURTS_nywb 2019 ; USCOURTS ; nywb ; 2019 >
-    au < manifest ; 2020 ; USCOURTS_nywb 2020 ; USCOURTS ; nywb ; 2020 >
+    au < ready ; 2020 ; USCOURTS_nywb 2020 ; USCOURTS ; nywb ; 2020 >
     au < manifest ; 2021 ; USCOURTS_nywb 2021 ; USCOURTS ; nywb ; 2021 >
     au < released ; 2022 ; USCOURTS_nywb 2022 ; USCOURTS ; nywb ; 2022 >
 
@@ -2347,7 +2347,7 @@
     au < manifest ; 2015 ; USCOURTS_sdb 2015 ; USCOURTS ; sdb ; 2015 >
     au < released ; 2016 ; USCOURTS_sdb 2016 ; USCOURTS ; sdb ; 2016 >
     au < manifest ; 2018 ; USCOURTS_sdb 2018 ; USCOURTS ; sdb ; 2018 >
-    au < manifest ; 2020 ; USCOURTS_sdb 2020 ; USCOURTS ; sdb ; 2020 >
+    au < ready ; 2020 ; USCOURTS_sdb 2020 ; USCOURTS ; sdb ; 2020 >
     au < manifest ; 2021 ; USCOURTS_sdb 2021 ; USCOURTS ; sdb ; 2021 >
 
     au < doNotProcess ; 2005 ; USCOURTS_tneb 2005 ; USCOURTS ; tneb ; 2005 >
@@ -2385,7 +2385,7 @@
     au < manifest ; 2017 ; USCOURTS_tned 2017 ; USCOURTS ; tned ; 2017 >
     au < released ; 2018 ; USCOURTS_tned 2018 ; USCOURTS ; tned ; 2018 >
     au < manifest ; 2019 ; USCOURTS_tned 2019 ; USCOURTS ; tned ; 2019 >
-    au < manifest ; 2020 ; USCOURTS_tned 2020 ; USCOURTS ; tned ; 2020 >
+    au < ready ; 2020 ; USCOURTS_tned 2020 ; USCOURTS ; tned ; 2020 >
     au < manifest ; 2021 ; USCOURTS_tned 2021 ; USCOURTS ; tned ; 2021 >
     au < released ; 2022 ; USCOURTS_tned 2022 ; USCOURTS ; tned ; 2022 >
 
@@ -2882,7 +2882,7 @@
     au < manifest ; 2021 ; USCOURTS_ndb 2021 ; USCOURTS ; ndb ; 2021 >
     au < ready ; 2022 ; USCOURTS_ndb 2022 ; USCOURTS ; ndb ; 2022 >
     au < manifest ; 2020 ; USCOURTS_ndd 2020 ; USCOURTS ; ndd ; 2020 >
-    au < manifest ; 2021 ; USCOURTS_ndd 2021 ; USCOURTS ; ndd ; 2021 >
+    au < ready ; 2021 ; USCOURTS_ndd 2021 ; USCOURTS ; ndd ; 2021 >
     au < ready ; 2022 ; USCOURTS_ndd 2022 ; USCOURTS ; ndd ; 2022 >
     au < manifest ; 2023 ; USCOURTS_ndd 2023 ; USCOURTS ; ndd ; 2023 >
     au < manifest ; 2020 ; USCOURTS_neb 2020 ; USCOURTS ; neb ; 2020 >
@@ -2897,7 +2897,7 @@
     au < manifest ; 2021 ; USCOURTS_nhb 2021 ; USCOURTS ; nhb ; 2021 >
     au < released ; 2022 ; USCOURTS_nhb 2022 ; USCOURTS ; nhb ; 2022 >
     au < manifest ; 2023 ; USCOURTS_nhb 2023 ; USCOURTS ; nhb ; 2023 >
-    au < manifest ; 2020 ; USCOURTS_nhd 2020 ; USCOURTS ; nhd ; 2020 >
+    au < ready ; 2020 ; USCOURTS_nhd 2020 ; USCOURTS ; nhd ; 2020 >
     au < manifest ; 2021 ; USCOURTS_nhd 2021 ; USCOURTS ; nhd ; 2021 >
     au < released ; 2022 ; USCOURTS_nhd 2022 ; USCOURTS ; nhd ; 2022 >
     au < manifest ; 2023 ; USCOURTS_nhd 2023 ; USCOURTS ; nhd ; 2023 >
@@ -2932,7 +2932,7 @@
     au < released ; 2022 ; USCOURTS_nvb 2022 ; USCOURTS ; nvb ; 2022 >
     au < manifest ; 2023 ; USCOURTS_nvb 2023 ; USCOURTS ; nvb ; 2023 >
     au < manifest ; 2023 ; USCOURTS_nyeb 2023 ; USCOURTS ; nyeb ; 2023 >
-    au < manifest ; 2023 ; USCOURTS_nyed 2023 ; USCOURTS ; nyed ; 2023 >
+    au < ready ; 2023 ; USCOURTS_nyed 2023 ; USCOURTS ; nyed ; 2023 >
     au < manifest ; 2010 ; USCOURTS_nynb 2010 ; USCOURTS ; nynb ; 2010 >
     au < manifest ; 2011 ; USCOURTS_nynb 2011 ; USCOURTS ; nynb ; 2011 >
     au < manifest ; 2012 ; USCOURTS_nynb 2012 ; USCOURTS ; nynb ; 2012 >
@@ -3028,7 +3028,7 @@
     au < manifest ; 2023 ; USCOURTS_wvnd 2023 ; USCOURTS ; wvnd ; 2023 >
     au < released ; 2022 ; USCOURTS_wyb 2022 ; USCOURTS ; wyb ; 2022 >
     au < manifest ; 2023 ; USCOURTS_azb 2023 ; USCOURTS ; azb ; 2023 >
-    au < manifest ; 2023 ; USCOURTS_kyeb 2023 ; USCOURTS ; kyeb ; 2023 >
+    au < ready ; 2023 ; USCOURTS_kyeb 2023 ; USCOURTS ; kyeb ; 2023 >
     au < manifest ; 2023 ; USCOURTS_nywb 2023 ; USCOURTS ; nywb ; 2023 >
     au < manifest ; 2023 ; USCOURTS_sdb 2023 ; USCOURTS ; sdb ; 2023 >
 
