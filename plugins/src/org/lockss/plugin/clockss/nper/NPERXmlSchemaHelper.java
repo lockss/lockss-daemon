@@ -200,7 +200,7 @@ implements SourceXmlSchemaHelper {
       StringBuilder valbuilder = new StringBuilder();
       if (tyear != null) {
         valbuilder.append(tyear);
-        if (tmonth != null) {
+        if (tmonth != null && tmonth.length()>0) {
           valbuilder.append("-" + tmonth);
         }
       } else {
@@ -218,14 +218,14 @@ implements SourceXmlSchemaHelper {
   protected static final String eissn = "/journal/issn[@type=\"electronic\"]";
 
   private static final String publisher = "/journal/publisher/publisher-name";
-  protected static final String article_title =articleNode + "/title-group[@language=\"EN\"]/title[@language=\"EN\"]";
-  protected static final String author = articleNode + "/author-group[@language=\"EN\"]/author";
-  private static final String art_pubdate = articleNode + "/pub-date[@date-type=\"pub\"]";
-  private static final String volume = articleNode + "/volume";
-  private static final String issue = articleNode +  "/issue";
+  protected static final String article_title =  "title-group[@language=\"EN\"]/title[@language=\"EN\"]";
+  protected static final String author =  "author-group[@language=\"EN\"]/author";
+  private static final String art_pubdate =  "pub-date[@date-type=\"pub\"]";
+  private static final String volume =  "volume";
+  private static final String issue =   "issue";
 
-  protected static final String start_page = articleNode + "/pages/start-page";
-  protected static final String end_page = articleNode + "/pages/end-page";
+  protected static final String start_page =  "pages/start-page";
+  protected static final String end_page =  "pages/end-page";
 
   static private final Map<String,XPathValue>     
   articleMap = new HashMap<String,XPathValue>();
