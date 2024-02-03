@@ -112,6 +112,7 @@
     au < deepCrawl ; exists ; 2021 ; Geophysics Volume 86 ; 86 ; https://library.seg.org/ ; >
     au < deepCrawl ; exists ; 2022 ; Geophysics Volume 87 ; 87 ; https://library.seg.org/ ; >
     au < notReady ; exists ; 2023 ; Geophysics Volume 88 ; 88 ; https://library.seg.org/ ; > #no metadata
+    au < expected ; exists ; 2024 ; Geophysics Volume 89 ; 89 ; https://library.seg.org/ ; > #no metadata
 
   }
 
@@ -167,6 +168,7 @@
     au < deepCrawl ; exists ; 2021 ; The Leading Edge Volume 40 ; 40 ; https://library.seg.org/ ; >
     au < deepCrawl ; exists ; 2022 ; The Leading Edge Volume 41 ; 41 ; https://library.seg.org/ ; >
     au < crawling ; exists ; 2023 ; The Leading Edge Volume 42 ; 42 ; https://library.seg.org/ ; >
+    au < expected ; exists ; 2024 ; The Leading Edge Volume 43 ; 43 ; https://library.seg.org/ ; >
 
   }
 
@@ -191,6 +193,7 @@
     au < deepCrawl ; exists ; 2021 ; Interpretation Volume 9 ; 9 ; https://library.seg.org/ ; >
     au < deepCrawl ; exists ; 2022 ; Interpretation Volume 10 ; 10 ; https://library.seg.org/ ; >
     au < crawling ; exists ; 2023 ; Interpretation Volume 11 ; 11 ; https://library.seg.org/ ; >
+    au < expected ; exists ; 2024 ; Interpretation Volume 12 ; 12 ; https://library.seg.org/ ; >
 
   }
   
@@ -232,6 +235,7 @@
     au < deepCrawl ; exists ; 2021 ; Journal of Environmental and Engineering Geophysics Volume 26 ; 26 ; https://library.seg.org/ ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Environmental and Engineering Geophysics Volume 27 ; 27 ; https://library.seg.org/ ; >
     au < manifest ; exists ; 2023 ; Journal of Environmental and Engineering Geophysics Volume 28 ; 28 ; https://library.seg.org/ ; >
+    au < expected ; exists ; 2024 ; Journal of Environmental and Engineering Geophysics Volume 29 ; 29 ; https://library.seg.org/ ; >
 
   }
 

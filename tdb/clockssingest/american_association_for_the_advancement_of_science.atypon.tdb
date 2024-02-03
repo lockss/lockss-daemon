@@ -450,6 +450,10 @@
       au < crawling ; exists ; 2023 ; Science Volume 380 ; 380 ; >
       au < crawling ; exists ; 2023 ; Science Volume 381 ; 381 ; >
       au < manifest ; exists ; 2023 ; Science Volume 382 ; 382 ; >
+      au < expected ; exists ; 2024 ; Science Volume 383 ; 383 ; >
+      au < expected ; exists ; 2024 ; Science Volume 384 ; 384 ; >
+      au < expected ; exists ; 2024 ; Science Volume 385 ; 385 ; >
+      au < expected ; exists ; 2024 ; Science Volume 386 ; 386 ; >
 
   }
 
@@ -480,6 +484,7 @@
       au < finished ; crawling ; 2021 ; Science Signaling Volume 14 ; 14 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022 ; Science Signaling Volume 15 ; 15 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2023 ; Science Signaling Volume 16 ; 16 ; >
+      au < expected ; exists ; 2024 ; Science Signaling Volume 17 ; 17 ; >
 
   }
 
@@ -509,6 +514,7 @@
       au < finished ; crawling ; 2021 ; Science Translational Medicine Volume 13 ; 13 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; Science Translational Medicine Volume 14 ; 14 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2023 ; Science Translational Medicine Volume 15 ; 15 ; >
+      au < expected ; exists ; 2024 ; Science Translational Medicine Volume 16 ; 16 ; >
 
   }
 
@@ -531,6 +537,7 @@
       au < finished ; crawling ; 2021 ; Science Advances Volume 7 ; 7 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; Science Advances Volume 8 ; 8 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2023 ; Science Advances Volume 9 ; 9 ; >
+      au < expected ; exists ; 2024 ; Science Advances Volume 10 ; 10 ; >
 
   }
 
@@ -552,6 +559,7 @@
       au < finished ; crawling ; 2021 ; Science Robotics Volume 6 ; 6 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2022 ; Science Robotics Volume 7 ; 7 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2023 ; Science Robotics Volume 8 ; 8 ; >
+      au < expected ; exists ; 2024 ; Science Robotics Volume 9 ; 9 ; >
 
   }
 
@@ -573,6 +581,7 @@
       au < finished ; crawling ; 2021 ; Science Immunology Volume 6 ; 6 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; Science Immunology Volume 7 ; 7 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2023 ; Science Immunology Volume 8 ; 8 ; >
+      au < expected ; exists ; 2024 ; Science Immunology Volume 9 ; 9 ; >
 
   }
 

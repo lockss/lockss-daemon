@@ -34,6 +34,7 @@
     param[journal_abbr] = journal
 
     au < crawling ; exists ; 2023 ; Indian Journal of Research in Homoeopathy Volume 17 ; 17 ; > #moved to https://www.ijrh.org/journal/
+    au < expected ; exists ; 2024 ; Indian Journal of Research in Homoeopathy Volume 18 ; 18 ; > #moved to https://www.ijrh.org/journal/
     }
   }
 
