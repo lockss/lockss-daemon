@@ -39,7 +39,8 @@
       au < finished ; crawling ; 2020 ; 2020 ; 635-657 ; Marine Ecology Progress Series Volume 2020 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; 2021 ; 658-680 ; Marine Ecology Progress Series Volume 2021 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2022 ; 2022 ; 681-703 ; Marine Ecology Progress Series Volume 2022 ; >
-      au < exists ; exists ; 2023 ; 2023 ; 704-726 ; Marine Ecology Progress Series Volume 2023 ; >
+      au < exists ; exists ; 2023 ; 2023 ; 704-725 ; Marine Ecology Progress Series Volume 2023 ; >
+      au < exists ; exists ; 2024 ; 2024 ; 726-747 ; Marine Ecology Progress Series Volume 2024 ; >
 
   }
 
@@ -66,7 +67,8 @@
       au < finished ; crawling ; 2020 ; 2020 ; 138-142 ; Diseases of Aquatic Organisms Volume 2020 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2021 ; 2021 ; 143-147 ; Diseases of Aquatic Organisms Volume 2021 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2022 ; 2022 ; 148-152 ; Diseases of Aquatic Organisms Volume 2022 ; >
-      au < exists ; exists ; 2023 ; 2023 ; 153-157 ; Diseases of Aquatic Organisms Volume 2023 ; >
+      au < exists ; exists ; 2023 ; 2023 ; 153-156 ; Diseases of Aquatic Organisms Volume 2023 ; >
+      au < exists ; exists ; 2024 ; 2024 ; 157-160 ; Diseases of Aquatic Organisms Volume 2024 ; >
 
   }
 
@@ -93,7 +95,8 @@
       au < finished ; crawling ; 2020 ; 2020 ; 81-83 ; Climate Research Volume 2020 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; 2021 ; 84-86 ; Climate Research Volume 2021 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2022 ; 2022 ; 87-89 ; Climate Research Volume 2022 ; >
-      au < expected ; exists ; 2023 ; 2023 ; 90-92 ; Climate Research Volume 2023 ; >
+      au < exists ; exists ; 2023 ; 2023 ; 90-91 ; Climate Research Volume 2023 ; >
+      au < exists ; exists ; 2024 ; 2024 ; 92-93 ; Climate Research Volume 2024 ; >
 
   }
 
@@ -177,6 +180,7 @@
       au < finished ; crawling ; 2021 ; 2021 ; 44-46 ; Endangered Species Research Volume 2021 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2022 ; 2022 ; 47-49 ; Endangered Species Research Volume 2022 ; >
       au < manifest ; exists ; 2023 ; 2023 ; 50-52 ; Endangered Species Research Volume 2023 ; >
+      au < exists ; exists ; 2024 ; 2024 ; 53-55 ; Endangered Species Research Volume 2024 ; >
 
   }
 
