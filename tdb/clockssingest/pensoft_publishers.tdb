@@ -31,6 +31,7 @@
     au < deepCrawl ; exists ; 2021 ; 12 ; African Invertebrates Volume 2021 ; 2021 ; https://africaninvertebrates.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2022 ; 13 ; African Invertebrates Volume 2022 ; 2022 ; https://africaninvertebrates.pensoft.net/ ; >
     au < crawling ; exists ; 2023 ; 14 ; African Invertebrates Volume 2023 ; 2023 ; https://africaninvertebrates.pensoft.net/ ; >
+    au < expected ; exists ; 2024 ; 15 ; African Invertebrates Volume 2024 ; 2024 ; https://africaninvertebrates.pensoft.net/ ; >
 
   }
 
@@ -56,6 +57,7 @@
     au < deepCrawl ; exists ; 2021 ; 9 ; Biodiversity Data Journal Volume 2021 ; 2021 ; https://bdj.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2022 ; 10 ; Biodiversity Data Journal Volume 2022 ; 2022 ; https://bdj.pensoft.net/ ; >
     au < crawling ; exists ; 2023 ; 11 ; Biodiversity Data Journal Volume 2023 ; 2023 ; https://bdj.pensoft.net/ ; >
+    au < expected ; exists ; 2024 ; 12 ; Biodiversity Data Journal Volume 2024 ; 2024 ; https://bdj.pensoft.net/ ; >
 
    }
 
@@ -87,6 +89,7 @@
     au < deepCrawl ; exists ; 2021 ; 16 ; BioRisk Volume 2021 ; 2021 ; https://biorisk.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2022 ; 17 ; BioRisk Volume 2022 ; 2022 ; https://biorisk.pensoft.net/ ; >
     au < crawling ; exists ; 2023 ; 18 ; BioRisk Volume 2023 ; 2023 ; https://biorisk.pensoft.net/ ; >
+    au < expected ; exists ; 2024 ; 19 ; BioRisk Volume 2024 ; 2024 ; https://biorisk.pensoft.net/ ; >
 
    }
    
@@ -103,6 +106,7 @@
     
     au < deepCrawl ; exists ; 2022 ; 1 ; Caucasiana Volume 2022 ; 2022 ; https://caucasiana.pensoft.net/ ; >
     au < crawling ; exists ; 2023 ; 2 ; Caucasiana Volume 2023 ; 2023 ; https://caucasiana.pensoft.net/ ; >
+    au < expected ; exists ; 2024 ; 3 ; Caucasiana Volume 2024 ; 2024 ; https://caucasiana.pensoft.net/ ; >
 
    }
   
@@ -127,6 +131,7 @@
      au < deepCrawl ; exists ; 2021 ; 68 ; Deutsche Entomologische Zeitschrift Volume 2021 ; 2021 ; https://dez.pensoft.net/ ; >
      au < deepCrawl ; exists ; 2022 ; 69 ; Deutsche Entomologische Zeitschrift Volume 2022 ; 2022 ; https://dez.pensoft.net/ ; >
      au < crawling ; exists ; 2023 ; 70 ; Deutsche Entomologische Zeitschrift Volume 2023 ; 2023 ; https://dez.pensoft.net/ ; >
+     au < expected ; exists ; 2024 ; 71 ; Deutsche Entomologische Zeitschrift Volume 2024 ; 2024 ; https://dez.pensoft.net/ ; >
 
    }
    
@@ -143,6 +148,7 @@
     au < finished ; crawling ; 2021 ; 1 ; Heritage, Memory and Conflict Journal Volume 2021 ; 2021 ; https://ijhmc.arphahub.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; 2 ; Heritage, Memory and Conflict Journal Volume 2022 ; 2022 ; https://ijhmc.arphahub.com/ ; >
     au < crawling ; exists ; 2023 ; 3 ; Heritage, Memory and Conflict Journal Volume 2023 ; 2023 ; https://ijhmc.arphahub.com/ ; >
+    au < expected ; exists ; 2024 ; 4 ; Heritage, Memory and Conflict Journal Volume 2024 ; 2024 ; https://ijhmc.arphahub.com/ ; >
 
    }
   
@@ -295,6 +301,7 @@
     au < deepCrawl ; exists ; 2021 ; 44 ; Nota Lepidopterologica Volume 2021 ; 2021 ; https://nl.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2022 ; 45 ; Nota Lepidopterologica Volume 2022 ; 2022 ; https://nl.pensoft.net/ ; >
     au < crawling ; exists ; 2023 ; 46 ; Nota Lepidopterologica Volume 2023 ; 2023 ; https://nl.pensoft.net/ ; >
+    au < expected ; exists ; 2024 ; 47 ; Nota Lepidopterologica Volume 2024 ; 2024 ; https://nl.pensoft.net/ ; >
 
    }
     
@@ -410,6 +417,7 @@
     au < deepCrawl ; exists ; 2021 ; 97 ; Zoosystematics and Evolution Volume 2021 ; 2021 ; https://zse.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2022 ; 98 ; Zoosystematics and Evolution Volume 2022 ; 2022 ; https://zse.pensoft.net/ ; >
     au < crawling ; exists ; 2023 ; 99 ; Zoosystematics and Evolution Volume 2023 ; 2023 ; https://zse.pensoft.net/ ; >
+    au < expected ; exists ; 2024 ; 100 ; Zoosystematics and Evolution Volume 2024 ; 2024 ; https://zse.pensoft.net/ ; >
 
     }
 
@@ -430,6 +438,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Alpine Entomology Volume 2021 ; 2021 ; https://alpineentomology.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Alpine Entomology Volume 2022 ; 2022 ; https://alpineentomology.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Alpine Entomology Volume 2023 ; 2023 ; https://alpineentomology.pensoft.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Alpine Entomology Volume 2024 ; 2024 ; https://alpineentomology.pensoft.net/ ; >
 
   }
 
@@ -466,6 +475,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; ARPHA Conference Abstracts Volume 2021 ; 2021 ; https://aca.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; ARPHA Conference Abstracts Volume 2022 ; 2022 ; https://aca.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; ARPHA Conference Abstracts Volume 2023 ; 2023 ; https://aca.pensoft.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; ARPHA Conference Abstracts Volume 2024 ; 2024 ; https://aca.pensoft.net/ ; >
 
   }
 
@@ -491,6 +501,7 @@
 
       au < deepCrawl ; exists ; 2022 ; 2022 ; BioDiscovery Volume 2022 ; 2022 ; https://biodiscovery.pensoft.net/ ; >
       au < expected ; exists ; 2023 ; 2023 ; BioDiscovery Volume 2023 ; 2023 ; https://biodiscovery.pensoft.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; BioDiscovery Volume 2024 ; 2024 ; https://biodiscovery.pensoft.net/ ; >
 
   }
 
@@ -510,6 +521,7 @@
       au < finished ; crawling ; 2021 ; 2021 ; Biodiversity Information Science and Standards Volume 2021 ; 2021 ; https://biss.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Biodiversity Information Science and Standards Volume 2022 ; 2022 ; https://biss.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Biodiversity Information Science and Standards Volume 2023 ; 2023 ; https://biss.pensoft.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Biodiversity Information Science and Standards Volume 2024 ; 2024 ; https://biss.pensoft.net/ ; >
 
   }
 
@@ -537,6 +549,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Check List Volume 2021 ; 2021 ; https://checklist.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Check List Volume 2022 ; 2022 ; https://checklist.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Check List Volume 2023 ; 2023 ; https://checklist.pensoft.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Check List Volume 2024 ; 2024 ; https://checklist.pensoft.net/ ; >
 
   }
 
@@ -571,6 +584,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Evolutionary Systematics Volume 2021 ; 2021 ; https://evolsyst.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Evolutionary Systematics Volume 2022 ; 2022 ; https://evolsyst.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Evolutionary Systematics Volume 2023 ; 2023 ; https://evolsyst.pensoft.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Evolutionary Systematics Volume 2024 ; 2024 ; https://evolsyst.pensoft.net/ ; >
 
   }
 
@@ -602,6 +616,7 @@
       #Changed from 2603-4301 Food Modelling Journal (FMJ)
       au < frozen ; exists ; 2022 ; 2022 ; Food and Ecological Systems Modelling Journal Volume 2022 ; 2022 ; https://fesmj.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Food and Ecological Systems Modelling Journal Volume 2023 ; 2023 ; https://fesmj.pensoft.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Food and Ecological Systems Modelling Journal Volume 2024 ; 2024 ; https://fesmj.pensoft.net/ ; >
 
   }
 
@@ -640,6 +655,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Italian Botanist Volume 2021 ; 2021 ; https://italianbotanist.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Italian Botanist Volume 2022 ; 2022 ; https://italianbotanist.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Italian Botanist Volume 2023 ; 2023 ; https://italianbotanist.pensoft.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Italian Botanist Volume 2024 ; 2024 ; https://italianbotanist.pensoft.net/ ; >
 
   }
 
@@ -670,6 +686,7 @@
     au < deepCrawl ; exists ; 2021 ; 15 ; Comparative Cytogenetics Volume 2021 ; 2021 ; https://compcytogen.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2022 ; 16 ; Comparative Cytogenetics Volume 2022 ; 2022 ; https://compcytogen.pensoft.net/ ; >
     au < crawling ; exists ; 2023 ; 17 ; Comparative Cytogenetics Volume 2023 ; 2023 ; https://compcytogen.pensoft.net/ ; >
+    au < expected ; exists ; 2024 ; 18 ; Comparative Cytogenetics Volume 2024 ; 2024 ; https://compcytogen.pensoft.net/ ; >
 
    }
 
@@ -690,6 +707,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Orthoptera Research Volume 2021 ; 2021 ; https://jor.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Orthoptera Research Volume 2022 ; 2022 ; https://jor.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Journal of Orthoptera Research Volume 2023 ; 2023 ; https://jor.pensoft.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Journal of Orthoptera Research Volume 2024 ; 2024 ; https://jor.pensoft.net/ ; >
 
   }
 
@@ -728,6 +746,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2021 ; 2021 ; https://mab-online.nl/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2022 ; 2022 ; https://mab-online.nl/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2023 ; 2023 ; https://mab-online.nl/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2024 ; 2024 ; https://mab-online.nl/ ; >
 
   }
 
@@ -748,6 +767,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Metabarcoding and Metagenomics Volume 2021 ; 2021 ; https://mbmg.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Metabarcoding and Metagenomics Volume 2022 ; 2022 ; https://mbmg.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Metabarcoding and Metagenomics Volume 2023 ; 2023 ; https://mbmg.pensoft.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Metabarcoding and Metagenomics Volume 2024 ; 2024 ; https://mbmg.pensoft.net/ ; >
 
   }
 
@@ -768,6 +788,7 @@
       au < finished ; crawling ; 2021 ; 2021 ; Modern Electronic Materials Volume 2021 ; 2021 ; https://moem.pensoft.net/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Modern Electronic Materials Volume 2022 ; 2022 ; https://moem.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Modern Electronic Materials Volume 2023 ; 2023 ; https://moem.pensoft.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Modern Electronic Materials Volume 2024 ; 2024 ; https://moem.pensoft.net/ ; >
 
   }
 
@@ -787,6 +808,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Nuclear Energy and Technology Volume 2021 ; 2021 ; https://nucet.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Nuclear Energy and Technology Volume 2022 ; 2022 ; https://nucet.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Nuclear Energy and Technology Volume 2023 ; 2023 ; https://nucet.pensoft.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Nuclear Energy and Technology Volume 2024 ; 2024 ; https://nucet.pensoft.net/ ; >
 
   }
 
@@ -808,6 +830,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; One Ecosystem Volume 2021 ; 2021 ; https://oneecosystem.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; One Ecosystem Volume 2022 ; 2022 ; https://oneecosystem.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; One Ecosystem Volume 2023 ; 2023 ; https://oneecosystem.pensoft.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; One Ecosystem Volume 2024 ; 2024 ; https://oneecosystem.pensoft.net/ ; >
 
   }
 
@@ -830,6 +853,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Research Ideas and Outcomes Volume 2021 ; 2021 ; https://riojournal.com/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Research Ideas and Outcomes Volume 2022 ; 2022 ; https://riojournal.com/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Research Ideas and Outcomes Volume 2023 ; 2023 ; https://riojournal.com/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Research Ideas and Outcomes Volume 2024 ; 2024 ; https://riojournal.com/ ; >
 
   }
 
@@ -894,6 +918,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Russian Journal of Economics Volume 2021 ; 2021 ; https://rujec.org/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Russian Journal of Economics Volume 2022 ; 2022 ; https://rujec.org/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Russian Journal of Economics Volume 2023 ; 2023 ; https://rujec.org/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Russian Journal of Economics Volume 2024 ; 2024 ; https://rujec.org/ ; >
 
   }
 
@@ -965,6 +990,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; ARPHA Proceedings Volume 2021 ; 2021 ; https://ap.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; ARPHA Proceedings Volume 2022 ; 2022 ; https://ap.pensoft.net/ ; >
       au < expected ; exists ; 2023 ; 2023 ; ARPHA Proceedings Volume 2023 ; 2023 ; https://ap.pensoft.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; ARPHA Proceedings Volume 2024 ; 2024 ; https://ap.pensoft.net/ ; >
 
   }
 
@@ -999,6 +1025,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; NeoTropical Biology and Conservation Volume 2021 ; 2021 ; https://neotropical.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; NeoTropical Biology and Conservation Volume 2022 ; 2022 ; https://neotropical.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; NeoTropical Biology and Conservation Volume 2023 ; 2023 ; https://neotropical.pensoft.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; NeoTropical Biology and Conservation Volume 2024 ; 2024 ; https://neotropical.pensoft.net/ ; >
 
   }
 
@@ -1018,6 +1045,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; OGH Herpetozoa Volume 2021 ; 2021 ; https://herpetozoa.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; OGH Herpetozoa Volume 2022 ; 2022 ; https://herpetozoa.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; OGH Herpetozoa Volume 2023 ; 2023 ; https://herpetozoa.pensoft.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; OGH Herpetozoa Volume 2024 ; 2024 ; https://herpetozoa.pensoft.net/ ; >
 
   }
 
@@ -1036,6 +1064,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; European Science Editing (ESE) Volume 2021 ; 2021 ; https://ese.arphahub.com/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; European Science Editing (ESE) Volume 2022 ; 2022 ; https://ese.arphahub.com/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; European Science Editing (ESE) Volume 2023 ; 2023 ; https://ese.arphahub.com/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; European Science Editing (ESE) Volume 2024 ; 2024 ; https://ese.arphahub.com/ ; >
 
   }
 
@@ -1055,6 +1084,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2021 ; 2021 ; https://travaux.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2022 ; 2022 ; https://travaux.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2023 ; 2023 ; https://travaux.pensoft.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2024 ; 2024 ; https://travaux.pensoft.net/ ; >
 
   }
 
@@ -1074,6 +1104,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Pharmacia Volume 2021 ; 2021 ; https://pharmacia.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Pharmacia Volume 2022 ; 2022 ; https://pharmacia.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Pharmacia Volume 2023 ; 2023 ; https://pharmacia.pensoft.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Pharmacia Volume 2024 ; 2024 ; https://pharmacia.pensoft.net/ ; >
 
   }
 
@@ -1094,6 +1125,7 @@
       au < crawling ; exists ; 2021 ; 2021 ; Bulgarian Cardiology Volume 2021 ; 2021 ; https://journal.bgcardio.org/ ; >
       au < crawling ; exists ; 2022 ; 2022 ; Bulgarian Cardiology Volume 2022 ; 2022 ; https://journal.bgcardio.org/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Bulgarian Cardiology Volume 2023 ; 2023 ; https://journal.bgcardio.org/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Bulgarian Cardiology Volume 2024 ; 2024 ; https://journal.bgcardio.org/ ; >
 
   }
 
@@ -1111,6 +1143,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Silva Balcanica Volume 2021 ; 2021 ; https://silvabalcanica.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Silva Balcanica Volume 2022 ; 2022 ; https://silvabalcanica.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Silva Balcanica Volume 2023 ; 2023 ; https://silvabalcanica.pensoft.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Silva Balcanica Volume 2024 ; 2024 ; https://silvabalcanica.pensoft.net/ ; >
 
   }
 
@@ -1146,6 +1179,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Vegetation Classification and Survey Volume 2021 ; 2021 ; https://vcs.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Vegetation Classification and Survey Volume 2022 ; 2022 ; https://vcs.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Vegetation Classification and Survey Volume 2023 ; 2023 ; https://vcs.pensoft.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Vegetation Classification and Survey Volume 2024 ; 2024 ; https://vcs.pensoft.net/ ; >
 
   }
 
@@ -1163,6 +1197,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Acta Ichthyologica et Piscatoria Volume 2021 ; 2021 ; https://aiep.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Acta Ichthyologica et Piscatoria Volume 2022 ; 2022 ; https://aiep.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Acta Ichthyologica et Piscatoria Volume 2023 ; 2023 ; https://aiep.pensoft.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Acta Ichthyologica et Piscatoria Volume 2024 ; 2024 ; https://aiep.pensoft.net/ ; >
 
   }
 
@@ -1180,6 +1215,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Arthropod Systematics & Phylogeny Volume 2021 ; 2021 ; https://arthropod-systematics.arphahub.com/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Arthropod Systematics & Phylogeny Volume 2022 ; 2022 ; https://arthropod-systematics.arphahub.com/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Arthropod Systematics & Phylogeny Volume 2023 ; 2023 ; https://arthropod-systematics.arphahub.com/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Arthropod Systematics & Phylogeny Volume 2024 ; 2024 ; https://arthropod-systematics.arphahub.com/ ; >
 
   }
 
@@ -1199,6 +1235,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Folia Medica Volume 2021 ; 2021 ; https://foliamedica.bg/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Folia Medica Volume 2022 ; 2022 ; https://foliamedica.bg/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Folia Medica Volume 2023 ; 2023 ; https://foliamedica.bg/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Folia Medica Volume 2024 ; 2024 ; https://foliamedica.bg/ ; >
 
   }
 
@@ -1216,6 +1253,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of the Bulgarian Geographical Society Volume 2021 ; 2021 ; https://jbgs.arphahub.com/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of the Bulgarian Geographical Society Volume 2022 ; 2022 ; https://jbgs.arphahub.com/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Journal of the Bulgarian Geographical Society Volume 2023 ; 2023 ; https://jbgs.arphahub.com/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Journal of the Bulgarian Geographical Society Volume 2024 ; 2024 ; https://jbgs.arphahub.com/ ; >
 
   }
 
@@ -1235,6 +1273,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Universal Computer Science Volume 2021 ; 2021 ; https://lib.jucs.org/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Universal Computer Science Volume 2022 ; 2022 ; https://lib.jucs.org/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Journal of Universal Computer Science Volume 2023 ; 2023 ; https://lib.jucs.org/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Journal of Universal Computer Science Volume 2024 ; 2024 ; https://lib.jucs.org/ ; >
 
   }
 
@@ -1253,6 +1292,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Plant Sociology Volume 2021 ; 2021 ; https://plantsociology.arphahub.com/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Plant Sociology Volume 2022 ; 2022 ; https://plantsociology.arphahub.com/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Plant Sociology Volume 2023 ; 2023 ; https://plantsociology.arphahub.com/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Plant Sociology Volume 2024 ; 2024 ; https://plantsociology.arphahub.com/ ; >
 
   }
 
@@ -1273,6 +1313,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Population and Economics Volume 2021 ; 2021 ; https://populationandeconomics.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Population and Economics Volume 2022 ; 2022 ; https://populationandeconomics.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Population and Economics Volume 2023 ; 2023 ; https://populationandeconomics.pensoft.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Population and Economics Volume 2024 ; 2024 ; https://populationandeconomics.pensoft.net/ ; >
 
   }
 
@@ -1290,6 +1331,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Vertebrate Zoology Volume 2021 ; 2021 ; https://vertebrate-zoology.arphahub.com/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Vertebrate Zoology Volume 2022 ; 2022 ; https://vertebrate-zoology.arphahub.com/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Vertebrate Zoology Volume 2023 ; 2023 ; https://vertebrate-zoology.arphahub.com/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Vertebrate Zoology Volume 2024 ; 2024 ; https://vertebrate-zoology.arphahub.com/ ; >
 
   }
 
@@ -1306,6 +1348,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Zitteliana Volume 2021 ; 2021 ; https://zitteliana.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Zitteliana Volume 2022 ; 2022 ; https://zitteliana.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Zitteliana Volume 2023 ; 2023 ; https://zitteliana.pensoft.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Zitteliana Volume 2024 ; 2024 ; https://zitteliana.pensoft.net/ ; >
 
   }
 
@@ -1337,6 +1380,7 @@
       au < frozen ; exists ; 2021 ; 2021 ; BRICS Journal of Economics Volume 2021 ; 2021 ; https://brics-econ.arphahub.com/ ; >
       au < frozen ; exists ; 2022 ; 2022 ; BRICS Journal of Economics Volume 2022 ; 2022 ; https://brics-econ.arphahub.com/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; BRICS Journal of Economics Volume 2023 ; 2023 ; https://brics-econ.arphahub.com/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; BRICS Journal of Economics Volume 2024 ; 2024 ; https://brics-econ.arphahub.com/ ; >
 
   }
 
@@ -1352,6 +1396,7 @@
 
       au < frozen ; exists ; 2022 ; 2022 ; Contributions to Entomology (Beiträge zur Entomologie) Volume 2022 ; 2022 ; https://contributions-to-entomology.arphahub.com/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Contributions to Entomology (Beiträge zur Entomologie) Volume 2023 ; 2023 ; https://contributions-to-entomology.arphahub.com/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Contributions to Entomology (Beiträge zur Entomologie) Volume 2024 ; 2024 ; https://contributions-to-entomology.arphahub.com/ ; >
 
   }
 
@@ -1391,6 +1436,7 @@
       au < frozen ; exists ; 2021 ; 2021 ; Fossil Record Volume 2021 ; 2021 ; https://fr.pensoft.net/ ; >
       au < frozen ; exists ; 2022 ; 2022 ; Fossil Record Volume 2022 ; 2022 ; https://fr.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Fossil Record Volume 2023 ; 2023 ; https://fr.pensoft.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Fossil Record Volume 2024 ; 2024 ; https://fr.pensoft.net/ ; >
 
   }
 
@@ -1407,6 +1453,7 @@
       au < frozen ; exists ; 2021 ; 2021 ; Geologica Saxonica Volume 2021 ; 2021 ; https://geologica-saxonica.arphahub.com/ ; >
       au < frozen ; exists ; 2022 ; 2022 ; Geologica Saxonica Volume 2022 ; 2022 ; https://geologica-saxonica.arphahub.com/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Geologica Saxonica Volume 2023 ; 2023 ; https://geologica-saxonica.arphahub.com/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Geologica Saxonica Volume 2024 ; 2024 ; https://geologica-saxonica.arphahub.com/ ; >
 
   }
 
@@ -1422,6 +1469,7 @@
       au < manifest ; exists ; 2021 ; 2021 ; Interventional Cardiology Forum Volume 2021 ; 2021 ; https://interventionalcardioforum.net/ ; >
       au < manifest ; exists ; 2022 ; 2022 ; Interventional Cardiology Forum Volume 2022 ; 2022 ; https://interventionalcardioforum.net/ ; >
       au < manifest ; exists ; 2023 ; 2023 ; Interventional Cardiology Forum Volume 2023 ; 2023 ; https://interventionalcardioforum.net/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Interventional Cardiology Forum Volume 2024 ; 2024 ; https://interventionalcardioforum.net/ ; >
 
   }
 
@@ -1437,6 +1485,7 @@
       au < frozen ; exists ; 2021 ; 2021 ; Languages and Modalities (LaMo) Volume 2021 ; 2021 ; https://languagesandmodalities.ru/ ; >
       au < frozen ; exists ; 2022 ; 2022 ; Languages and Modalities (LaMo) Volume 2022 ; 2022 ; https://languagesandmodalities.ru/ ; >
       au < expected ; exists ; 2023 ; 2023 ; Languages and Modalities (LaMo) Volume 2023 ; 2023 ; https://languagesandmodalities.ru/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Languages and Modalities (LaMo) Volume 2024 ; 2024 ; https://languagesandmodalities.ru/ ; >
 
   }
 
@@ -1461,6 +1510,7 @@
       au < frozen ; exists ; 2021 ; 2021 ; Plant Ecology and Evolution Volume 2021 ; 2021 ; https://plecevo.eu/ ; >
       au < frozen ; exists ; 2022 ; 2022 ; Plant Ecology and Evolution Volume 2022 ; 2022 ; https://plecevo.eu/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Plant Ecology and Evolution Volume 2023 ; 2023 ; https://plecevo.eu/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Plant Ecology and Evolution Volume 2024 ; 2024 ; https://plecevo.eu/ ; >
 
   }
 
@@ -1476,6 +1526,7 @@
 
       au < frozen ; exists ; 2022 ; 2022 ; Tuhinga Volume 2022 ; 2022 ; https://tuhinga.arphahub.com/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Tuhinga Volume 2023 ; 2023 ; https://tuhinga.arphahub.com/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Tuhinga Volume 2024 ; 2024 ; https://tuhinga.arphahub.com/ ; >
 
   }
 
@@ -1490,6 +1541,7 @@
       param[au_oai_set] = aquaticinvasions
 
       au < crawling ; exists ; 2023 ; 2023 ; Aquatic Invasions Volume 2023 ; 2023 ; https://aquaticinvasions.arphahub.com/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Aquatic Invasions Volume 2024 ; 2024 ; https://aquaticinvasions.arphahub.com/ ; >
 
   }
 
@@ -1503,6 +1555,7 @@
       param[au_oai_set] = atomiclayerdeposition
 
       au < crawling ; exists ; 2023 ; 2023 ; Atomic Layer Deposition Volume 2023 ; 2023 ; https://journal.atomiclayerdeposition.com/ ; >
+      au < expected ; exists ; 2024 ; 2024 ; Atomic Layer Deposition Volume 2024 ; 2024 ; https://journal.atomiclayerdeposition.com/ ; >
 
   }
 

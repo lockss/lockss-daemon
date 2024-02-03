@@ -236,6 +236,8 @@
         au < finished ; manifest ; 2022 ; 2022 ; The Journal of Immunology Volume 209 ; 209 ; reingest1.clockss.org:8082 >
         au < crawling ; exists ; 2023 ; 2023 ; The Journal of Immunology Volume 210 ; 210 ; >
         au < crawling ; exists ; 2023 ; 2023 ; The Journal of Immunology Volume 211 ; 211 ; >
+        au < expected ; exists ; 2024 ; 2024 ; The Journal of Immunology Volume 212 ; 212 ; >
+        au < expected ; exists ; 2024 ; 2024 ; The Journal of Immunology Volume 213 ; 213 ; >
 
   }
 
@@ -256,6 +258,7 @@
         au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; ImmunoHorizons Volume 5 ; 5 ; >
         au < finished ; manifest ; 2022 ; 2022 ; ImmunoHorizons Volume 6 ; 6 ; reingest4.clockss.org:8082 >
         au < crawling ; exists ; 2023 ; 2023 ; ImmunoHorizons Volume 7 ; 7 ; >
+        au < expected ; exists ; 2024 ; 2024 ; ImmunoHorizons Volume 8 ; 8 ; >
 
   }
 }

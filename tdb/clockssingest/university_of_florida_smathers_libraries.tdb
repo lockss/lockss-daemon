@@ -87,6 +87,7 @@
       au < frozen ; exists ; 2021 ; Chemical Engineering Education Volume 2021 ; 2021 ; 2021 ; >
       au < frozen ; exists ; 2022 ; Chemical Engineering Education Volume 2022 ; 2022 ; 2022 ; >
       au < notReady ; exists ; 2023 ; Chemical Engineering Education Volume 2023 ; 2023 ; 2023 ; > #login found, https://journals.flvc.org/cee/article/view/132637/136584
+      au < expected ; exists ; 2024 ; Chemical Engineering Education Volume 2024 ; 2024 ; 2024 ; > #login found, https://journals.flvc.org/cee/article/view/132637/136584
 
   }
 
@@ -100,6 +101,7 @@
       param[journal_id] = EMIC
 
       au < manifest ; exists ; 2023 ; EMIC Volume 1 ; 1 ; 2023 ; >
+      au < expected ; exists ; 2024 ; EMIC Volume 2 ; 2 ; 2024 ; >
 
   }
 
@@ -220,6 +222,7 @@
       au < frozen ; exists ; 2021 ; Florida Entomologist Volume 105 ; 105 ; 2021 ; >
       au < frozen ; exists ; 2022 ; Florida Entomologist Volume 106 ; 106 ; 2022 ; >
       au < crawling ; exists ; 2023 ; Florida Entomologist Volume 107 ; 107 ; 2023 ; >
+      au < expected ; exists ; 2024 ; Florida Entomologist Volume 108 ; 108 ; 2024 ; >
 
   }
 
@@ -247,6 +250,7 @@
       au < frozen ; exists ; 2021 ; The International FLAIRS Conference Proceedings Volume 34 ; 34 ; 2021 ; >
       au < frozen ; exists ; 2022 ; The International FLAIRS Conference Proceedings Volume 35 ; 35 ; 2022 ; >
       au < crawling ; exists ; 2023 ; The International FLAIRS Conference Proceedings Volume 36 ; 36 ; 2023 ; >
+      au < expected ; exists ; 2024 ; The International FLAIRS Conference Proceedings Volume 37 ; 37 ; 2024 ; >
 
   }
 
@@ -263,6 +267,7 @@
       au < frozen ; exists ; 2021 ; Journal of Assessment in Higher Education Volume 2 ; 2 ; 2021 ; >
       au < frozen ; exists ; 2022 ; Journal of Assessment in Higher Education Volume 3 ; 3 ; 2022 ; >
       au < exists ; exists ; 2023 ; Journal of Assessment in Higher Education Volume 4 ; 4 ; 2023 ; >
+      au < expected ; expected ; 2024 ; Journal of Assessment in Higher Education Volume 5 ; 5 ; 2024 ; >
 
   }
 
@@ -280,6 +285,7 @@
       au < frozen ; exists ; 2021 ; The Journal of Civic Information Volume 3 ; 3 ; 2021 ; >
       au < frozen ; exists ; 2022 ; The Journal of Civic Information Volume 4 ; 4 ; 2022 ; >
       au < crawling ; exists ; 2023 ; The Journal of Civic Information Volume 5 ; 5 ; 2023 ; >
+      au < expected ; exists ; 2024 ; The Journal of Civic Information Volume 6 ; 6 ; 2024 ; >
 
   }
 
@@ -299,6 +305,7 @@
       au < frozen ; exists ; 2021 ; The Journal of Public Interest Communications Volume 5 ; 5 ; 2021 ; >
       au < frozen ; exists ; 2022 ; The Journal of Public Interest Communications Volume 6 ; 6 ; 2022 ; >
       au < crawling ; exists ; 2023 ; The Journal of Public Interest Communications Volume 7 ; 7 ; 2023 ; >
+      au < expected ; exists ; 2024 ; The Journal of Public Interest Communications Volume 8 ; 8 ; 2024 ; >
 
   }
 
@@ -315,6 +322,7 @@
       au < frozen ; exists ; 2021 ; Journal of the Florida Mosquito Control Association Volume 68 ; 68 ; 2021 ; >
       au < frozen ; exists ; 2022 ; Journal of the Florida Mosquito Control Association Volume 69 ; 69 ; 2022 ; >
       au < crawling ; exists ; 2023 ; Journal of the Florida Mosquito Control Association Volume 70 ; 70 ; 2023 ; >
+      au < expected ; exists ; 2024 ; Journal of the Florida Mosquito Control Association Volume 71 ; 71 ; 2024 ; >
 
   }
 
@@ -333,6 +341,7 @@
       au < frozen ; exists ; 2021 ; UF Journal of Undergraduate Research Volume 23 ; 23 ; 2021 ; >
       au < frozen ; exists ; 2022 ; UF Journal of Undergraduate Research Volume 24 ; 24 ; 2022 ; >
       au < manifest ; exists ; 2023 ; UF Journal of Undergraduate Research Volume 25 ; 25 ; 2023 ; >
+      au < expected ; exists ; 2024 ; UF Journal of Undergraduate Research Volume 26 ; 26 ; 2024 ; >
 
   }
 
@@ -349,6 +358,7 @@
       au < exists ; exists ; 2021 ; Journal of Veterinary Forensic Sciences Volume 2 ; 2 ; 2021 ; >
       au < exists ; exists ; 2022 ; Journal of Veterinary Forensic Sciences Volume 3 ; 3 ; 2022 ; >
       au < crawling ; exists ; 2023 ; Journal of Veterinary Forensic Sciences Volume 4 ; 4 ; 2023 ; >
+      au < expected ; exists ; 2024 ; Journal of Veterinary Forensic Sciences Volume 5 ; 5 ; 2024 ; >
 
   }
 
@@ -365,6 +375,7 @@
       au < frozen ; exists ; 2021 ; New Florida Journal of Anthropology Volume 1 ; 1 ; 2021 ; >
       au < frozen ; exists ; 2022 ; New Florida Journal of Anthropology Volume 2 ; 2 ; 2022 ; >
       au < exists ; exists ; 2023 ; New Florida Journal of Anthropology Volume 3 ; 3 ; 2023 ; >
+      au < expected ; expected ; 2024 ; New Florida Journal of Anthropology Volume 4 ; 4 ; 2024 ; >
 
   }
 
@@ -379,6 +390,7 @@
 
       au < frozen ; exists ; 2022 ; Selected Proceedings of the Classics Graduate Student Symposia Volume 1 ; 1 ; 2022 ; >
       au < crawling ; exists ; 2023 ; Selected Proceedings of the Classics Graduate Student Symposia Volume 2 ; 2 ; 2023 ; >
+      au < expected ; exists ; 2024 ; Selected Proceedings of the Classics Graduate Student Symposia Volume 3 ; 3 ; 2024 ; >
 
   }
 
@@ -398,6 +410,7 @@
       au < frozen ; exists ; 2021 ; SOURCE Magazine Volume 4 ; 4 ; 2021 ; >
       au < frozen ; exists ; 2022 ; SOURCE Magazine Volume 5 ; 5 ; 2022 ; >
       au < crawling ; exists ; 2023 ; SOURCE Magazine Volume 6 ; 6 ; 2023 ; >
+      au < expected ; exists ; 2024 ; SOURCE Magazine Volume 7 ; 7 ; 2024 ; >
 
   }
 
@@ -465,6 +478,7 @@
       au < frozen ; exists ; 2021 ; Studies in African Linguistics Volume 52 ; 52 ; 2021 ; >
       au < frozen ; exists ; 2022 ; Studies in African Linguistics Volume 53 ; 53 ; 2022 ; >
       au < manifest ; exists ; 2023 ; Studies in African Linguistics Volume 54 ; 54 ; 2023 ; >
+      au < expected ; exists ; 2024 ; Studies in African Linguistics Volume 55 ; 55 ; 2024 ; >
 
   }
 
@@ -512,6 +526,7 @@
       au < frozen ; exists ; 2021 ; Tropical Lepidoptera Research Volume 32 ; 32 ; 2021 ; >
       au < frozen ; exists ; 2022 ; Tropical Lepidoptera Research Volume 33 ; 33 ; 2022 ; >
       au < crawling ; exists ; 2023 ; Tropical Lepidoptera Research Volume 34 ; 34 ; 2023 ; >
+      au < expected ; exists ; 2024 ; Tropical Lepidoptera Research Volume 35 ; 35 ; 2024 ; >
 
   }
 
@@ -660,6 +675,7 @@
       au < frozen ; exists ; 2021 ; Proceedings of the Florida State Horticultural Society Volume 134 ; 134 ; 2021 ; >
       au < exists ; exists ; 2022 ; Proceedings of the Florida State Horticultural Society Volume 135 ; 135 ; 2022 ; >
       au < exists ; exists ; 2023 ; Proceedings of the Florida State Horticultural Society Volume 136 ; 136 ; 2023 ; >
+      au < expected ; expected ; 2024 ; Proceedings of the Florida State Horticultural Society Volume 137 ; 137 ; 2024 ; >
 
   }
 
@@ -680,6 +696,7 @@
       au < frozen ; exists ; 2021 ; Yorùbá Studies Review Volume 5 ; 5 ; 2021 ; >
       au < frozen ; exists ; 2022 ; Yorùbá Studies Review Volume 6 ; 6 ; 2022 ; >
       au < crawling ; exists ; 2023 ; Yorùbá Studies Review Volume 7 ; 7 ; 2023 ; >
+      au < expected ; exists ; 2024 ; Yorùbá Studies Review Volume 8 ; 8 ; 2024 ; >
 
   }
 

@@ -25,6 +25,7 @@
     au < finished ; manifest ; 2021 ; 2021 ; Journal of Festive Studies Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; 2022 ; Journal of Festive Studies Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2023 ; 2023 ; Journal of Festive Studies Volume 5 ; 5 ; >
+    au < expected ; exists ; 2024 ; 2024 ; Journal of Festive Studies Volume 6 ; 6 ; >
 
   }
 
@@ -40,6 +41,7 @@
     attr[start_stem] = index.php/
 
     au < crawling ; exists ; 2023 ; 2023 ; The Proceedings of the H-Net Teaching Conference Volume 1 ; 1 ; >
+    au < expected ; exists ; 2024 ; 2024 ; The Proceedings of the H-Net Teaching Conference Volume 2 ; 2 ; >
 
   }
 }

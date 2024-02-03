@@ -74,6 +74,8 @@
       au < finished ; manifest ; 2022 ; 2022 ; AAP Grand Rounds Volume 48 ; 48 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2023 ; 2023 ; AAP Grand Rounds Volume 49 ; 49 ; >
       au < crawling ; exists ; 2023 ; 2023 ; AAP Grand Rounds Volume 50 ; 50 ; >
+      au < expected ; exists ; 2024 ; 2024 ; AAP Grand Rounds Volume 51 ; 51 ; >
+      au < expected ; exists ; 2024 ; 2024 ; AAP Grand Rounds Volume 52 ; 52 ; >
 
   }
 
@@ -155,6 +157,7 @@
       au < finished ; manifest ; 2021 ; 2021 ; Hospital Pediatrics Volume 11 ; 11 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; 2022 ; Hospital Pediatrics Volume 12 ; 12 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2023 ; 2023 ; Hospital Pediatrics Volume 13 ; 13 ; >
+      au < expected ; exists ; 2024 ; 2024 ; Hospital Pediatrics Volume 14 ; 14 ; >
 
   }
   
@@ -193,6 +196,7 @@
       au < finished ; manifest ; 2021 ; 2021 ; NeoReviews Volume 22 ; 22 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; 2022 ; NeoReviews Volume 23 ; 23 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2023 ; 2023 ; NeoReviews Volume 24 ; 24 ; >
+      au < expected ; exists ; 2024 ; 2024 ; NeoReviews Volume 25 ; 25 ; >
 
   }
 
@@ -359,6 +363,8 @@
       au < finished ; manifest ; 2022 ; 2022 ; Pediatrics Volume 150 ; 150 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2023 ; 2023 ; Pediatrics Volume 151 ; 151 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Pediatrics Volume 152 ; 152 ; >
+      au < expected ; exists ; 2024 ; 2024 ; Pediatrics Volume 153 ; 153 ; >
+      au < expected ; exists ; 2024 ; 2024 ; Pediatrics Volume 154 ; 154 ; >
 
   }
 
@@ -417,6 +423,7 @@
       au < finished ; manifest ; 2021 ; 2021 ; Pediatrics in Review Volume 42 ; 42 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; 2022 ; Pediatrics in Review Volume 43 ; 43 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2023 ; 2023 ; Pediatrics in Review Volume 44 ; 44 ; >
+      au < expected ; exists ; 2024 ; 2024 ; Pediatrics in Review Volume 45 ; 45 ; >
 
   }
 
