@@ -81,10 +81,6 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   private static final long DEFAULT_REPAIR_CRAWL_EXPIRATION =
     5 * Constants.DAY;
 
-  public static final String PARAM_REPAIR_FROM_CACHE_PERCENT =
-      PREFIX + "repair.repair_from_cache_percent";
-  public static final float DEFAULT_REPAIR_FROM_CACHE_PERCENT = 0.25F;
-
   /** Set false to prevent all crawl activity */
   public static final String PARAM_CRAWLER_ENABLED =
     PREFIX + "enabled";
@@ -327,7 +323,6 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   private long contentCrawlExpiration;
   private long repairCrawlExpiration;
-  private float percentRepairFromCache;
   private boolean crawlerEnabled = DEFAULT_CRAWLER_ENABLED;
   private boolean crawlStarterEnabled = DEFAULT_CRAWL_STARTER_ENABLED;
   private boolean paramQueueEnabled = DEFAULT_CRAWLER_QUEUE_ENABLED;
@@ -470,9 +465,6 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	config.getTimeInterval(PARAM_REPAIR_CRAWL_EXPIRATION,
 			       DEFAULT_REPAIR_CRAWL_EXPIRATION);
 
-      percentRepairFromCache =
-	config.getPercentage(PARAM_REPAIR_FROM_CACHE_PERCENT,
-			     DEFAULT_REPAIR_FROM_CACHE_PERCENT);
       crawlerEnabled =
 	config.getBoolean(PARAM_CRAWLER_ENABLED,
 			  DEFAULT_CRAWLER_ENABLED);
