@@ -105,6 +105,15 @@ org.lockss.poll.v3.voteDurationMultiplier=3
 org.lockss.poll.v3.tallyDurationMultiplier=3
 org.lockss.poll.v3.receiptPadding=30s
 
+org.lockss.poll.v3.allSymmetricPolls = false
+org.lockss.poll.v3.enableSymmetricPolls = false
+org.lockss.poll.v3.repairFromCachePercent = 0
+org.lockss.poll.v3.minNominationSize = 1
+org.lockss.hasher.estimate.pad.constant = 10
+org.lockss.hasher.estimate.pad.percent = 10
+org.lockss.poll.v3.voteDurationMultiplier = 4
+org.lockss.poll.v3.receiptPadding = 5m
+
 # Set the v3 poll state dir to /tmp
 org.lockss.poll.v3.messageDir=/tmp
 
