@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -105,16 +105,6 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_name</string>
     <string>"University of Michigan Press Deep Blue Plugin, Base URL %s, OAI Set %s, Year %d", base_url, au_oai_set, year</string>
-  </entry>
-  <!--
-  <entry>
-    <string>au_permission_url</string>
-    <string>"%s", to_https(base_url)</string>
-  </entry>
-  -->
-  <entry>
-    <string>au_permission_url</string>
-    <string>"http://clockss-ingest.lockss.org/clockss.txt"</string>
   </entry>
   <entry>
     <string>au_additional_url_stems</string>
@@ -194,7 +184,6 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_permitted_host_pattern</string>
     <list>
       <string>(fonts|ajax)\.googleapis\.com</string>
-      <string>deepblue\.lib\.umich\.edu</string>
     </list>
   </entry>
   <entry>
