@@ -24,7 +24,7 @@
     implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
 
     au < notReady ; exists ; 2023 ; Menoufia Medical Journal Volume 36 ; 36 ; https://www.menoufia-med-j.com/ ; > #login needed on https://www.menoufia-med-j.com/cgi/viewcontent.cgi?article=1098&context=journal
-    au < expected ; exists ; 2024 ; Menoufia Medical Journal Volume 37 ; 37 ; https://www.menoufia-med-j.com/ ; > #login needed on https://www.menoufia-med-j.com/cgi/viewcontent.cgi?article=1098&context=journal
+    au < manifest ; exists ; 2024 ; Menoufia Medical Journal Volume 37 ; 37 ; https://www.menoufia-med-j.com/ ; > #login needed on https://www.menoufia-med-j.com/cgi/viewcontent.cgi?article=1098&context=journal
 
   }
 

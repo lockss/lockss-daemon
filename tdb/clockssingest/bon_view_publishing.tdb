@@ -23,7 +23,7 @@
       param[journal_id] = AAES
 
       au < manifest ; exists ; 2023 ; Archives of Advanced Engineering Science Volume 1 ; 1 ; 2023 ; >
-      au < expected ; exists ; 2024 ; Archives of Advanced Engineering Science Volume 2 ; 2 ; 2024 ; >
+      au < manifest ; exists ; 2024 ; Archives of Advanced Engineering Science Volume 2 ; 2 ; 2024 ; >
 
   }
 
@@ -38,7 +38,7 @@
 
       au < superseded ; exists ; 2022 ; Artificial Intelligence and Applications Volume 1 [superseded] ; 1 ; 2022 ; >
       au < crawling ; exists ; 2023 ; Artificial Intelligence and Applications Volume 1 ; 1 ; 2023 ; >
-      au < expected ; exists ; 2024 ; Artificial Intelligence and Applications Volume 2 ; 2 ; 2024 ; >
+      au < manifest ; exists ; 2024 ; Artificial Intelligence and Applications Volume 2 ; 2 ; 2024 ; >
 
   }
 
@@ -66,7 +66,7 @@
       param[journal_id] = jdsis
 
       au < crawling ; exists ; 2023 ; Journal of Data Science and Intelligence Systems Volume 1 ; 1 ; 2023 ; >
-      au < expected ; exists ; 2024 ; Journal of Data Science and Intelligence Systems Volume 2 ; 2 ; 2024 ; >
+      au < manifest ; exists ; 2024 ; Journal of Data Science and Intelligence Systems Volume 2 ; 2 ; 2024 ; >
 
   }
 
@@ -79,7 +79,7 @@
       param[journal_id] = GLCE
 
       au < crawling ; exists ; 2023 ; Green and Low-Carbon Economy Volume 1 ; 1 ; 2023 ; >
-      au < expected ; exists ; 2024 ; Green and Low-Carbon Economy Volume 2 ; 2 ; 2024 ; >
+      au < manifest ; exists ; 2024 ; Green and Low-Carbon Economy Volume 2 ; 2 ; 2024 ; >
 
   }
 

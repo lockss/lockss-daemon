@@ -265,7 +265,7 @@
       au < frozen ; exists ; 2021 ; 2021 ; 2021 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2021 ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; 2022 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2022 ; >
       au < crawling ; exists ; 2023 ; 2023 ; 2023 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2023 ; >
-      au < expected ; exists ; 2024 ; 2024 ; 2024 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2024 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; 2024 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2024 ; >
 
   } 
 
@@ -673,7 +673,7 @@
       au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2021 ; >
       au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2022 ; >
       au < crawling ; exists ; 2023 ; 2023 ; 2023 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2023 ; >
-      au < expected ; exists ; 2024 ; 2024 ; 2024 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2024 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; 2024 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2024 ; >
 
   }
 
@@ -883,7 +883,7 @@
       param[journal_id] = dlh
 
       au < crawling ; exists ; 2023 ; 2023 ; 2023 ; Journal for Digital Legal History Volume 2023 ; >
-      au < expected ; exists ; 2024 ; 2024 ; 2024 ; Journal for Digital Legal History Volume 2024 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; 2024 ; Journal for Digital Legal History Volume 2024 ; >
 
   }
 

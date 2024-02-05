@@ -33,7 +33,7 @@
     au < deepCrawl ; exists ; 2021 ; 11 ; The Comics Grid Volume 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; 12 ; The Comics Grid Volume 2022 ; 2022 ; >
     au < expected ; exists ; 2023 ; 13 ; The Comics Grid Volume 2023 ; 2023 ; >
-    au < expected ; exists ; 2024 ; 14 ; The Comics Grid Volume 2024 ; 2024 ; >
+    au < manifest ; exists ; 2024 ; 14 ; The Comics Grid Volume 2024 ; 2024 ; >
 
   }
 
@@ -115,7 +115,7 @@
          au < frozen ; exists ; 2021 ; 9 ; C21 Literature: journal of 21st-century writings Volume 2021 ; 2021 ; >
          au < deepCrawl ; exists ; 2022 ; 10 ; C21 Literature: journal of 21st-century writings Volume 2022 ; 2022 ; >
          au < crawling ; exists ; 2023 ; 11 ; C21 Literature: journal of 21st-century writings Volume 2023 ; 2023 ; >
-         au < expected ; exists ; 2024 ; 12 ; C21 Literature: journal of 21st-century writings Volume 2024 ; 2024 ; >
+         au < manifest ; exists ; 2024 ; 12 ; C21 Literature: journal of 21st-century writings Volume 2024 ; 2024 ; >
 
   }
 
@@ -192,7 +192,7 @@
         au < deepCrawl ; exists ; 2021 ; 7 ; Journal of British and Irish Innovative Poetry Volume 2021 ; 2021 ; >
         au < deepCrawl ; exists ; 2022 ; 8 ; Journal of British and Irish Innovative Poetry Volume 2022 ; 2022 ; >
         au < crawling ; exists ; 2023 ; 9 ; Journal of British and Irish Innovative Poetry Volume 2023 ; 2023 ; >
-        au < expected ; exists ; 2024 ; 10 ; Journal of British and Irish Innovative Poetry Volume 2024 ; 2024 ; >
+        au < manifest ; exists ; 2024 ; 10 ; Journal of British and Irish Innovative Poetry Volume 2024 ; 2024 ; >
 
   }
 
@@ -282,7 +282,7 @@
       au < deepCrawl ; exists ; 2021 ; 7 ; Open Library of Humanities Volume 2021 ; 2021 ; >
       au < deepCrawl ; exists ; 2022 ; 8 ; Open Library of Humanities Volume 2022 ; 2022 ; >
       au < crawling ; exists ; 2023 ; 9 ; Open Library of Humanities Volume 2023 ; 2023 ; >
-      au < expected ; exists ; 2024 ; 10 ; Open Library of Humanities Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2024 ; 10 ; Open Library of Humanities Volume 2024 ; 2024 ; >
 
   }
 
@@ -360,7 +360,7 @@
       au < deepCrawl ; exists ; 2021 ; 31 ; Theoretical Roman Archaeology Journal Volume 2021 ; 2021 ; >
       au < deepCrawl ; exists ; 2022 ; 32 ; Theoretical Roman Archaeology Journal Volume 2022 ; 2022 ; >
       au < manifest ; exists ; 2023 ; 33 ; Theoretical Roman Archaeology Journal Volume 2023 ; 2023 ; >
-      au < expected ; exists ; 2024 ; 34 ; Theoretical Roman Archaeology Journal Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2024 ; 34 ; Theoretical Roman Archaeology Journal Volume 2024 ; 2024 ; >
 
   }
 
@@ -379,7 +379,7 @@
       au < deepCrawl ; exists ; 2021 ; 9 ; ZFF: Zeitschrift für Fantastikforschung Volume 2021 ; 2021 ; >
       au < deepCrawl ; exists ; 2022 ; 10 ; ZFF: Zeitschrift für Fantastikforschung Volume 2022 ; 2022 ; >
       au < crawling ; exists ; 2023 ; 11 ; ZFF: Zeitschrift für Fantastikforschung Volume 2023 ; 2023 ; >
-      au < expected ; exists ; 2024 ; 12 ; ZFF: Zeitschrift für Fantastikforschung Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2024 ; 12 ; ZFF: Zeitschrift für Fantastikforschung Volume 2024 ; 2024 ; >
 
   }
 
@@ -403,7 +403,7 @@
       au < deepCrawl ; exists ; 2021 ; 5 ; The Parish Review Volume 2021 ; 2021 ; >
       au < deepCrawl ; exists ; 2022 ; 6 ; The Parish Review Volume 2022 ; 2022 ; >
       au < crawling ; exists ; 2023 ; 7 ; The Parish Review Volume 2023 ; 2023 ; >
-      au < expected ; exists ; 2024 ; 8 ; The Parish Review Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2024 ; 8 ; The Parish Review Volume 2024 ; 2024 ; >
 
   }
 
@@ -455,7 +455,7 @@
       au < frozen ; exists ; 2021 ; 6 ; Glossa: a journal of general linguistics Volume 2021 ; 2021 ; > 
       au < deepCrawl ; exists ; 2022 ; 7 ; Glossa: a journal of general linguistics Volume 2022 ; 2022 ; > 
       au < notReady ; exists ; 2023 ; 8 ; Glossa: a journal of general linguistics Volume 2023 ; 2023 ; > #XML Parsing Error: no root element found ~ org.xml.sax.SAXParseException; Premature end of file. https://www.glossa-journal.org/article/5823/galley/23046/download/
-      au < expected ; exists ; 2024 ; 9 ; Glossa: a journal of general linguistics Volume 2024 ; 2024 ; > #XML Parsing Error: no root element found ~ org.xml.sax.SAXParseException; Premature end of file. https://www.glossa-journal.org/article/5923/galley/23046/download/
+      au < manifest ; exists ; 2024 ; 9 ; Glossa: a journal of general linguistics Volume 2024 ; 2024 ; > #XML Parsing Error: no root element found ~ org.xml.sax.SAXParseException; Premature end of file. https://www.glossa-journal.org/article/5923/galley/23046/download/
 
   }
 
@@ -661,7 +661,7 @@
       au < frozen ; exists ; 2021 ; 9 ; Architectural Histories Volume 2021 ; 2021 ; >
       au < frozen ; exists ; 2022 ; 10 ; Architectural Histories Volume 2022 ; 2022 ; >
       au < crawling ; exists ; 2023 ; 11 ; Architectural Histories Volume 2023 ; 2023 ; >
-      au < expected ; exists ; 2024 ; 12 ; Architectural Histories Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2024 ; 12 ; Architectural Histories Volume 2024 ; 2024 ; >
 
   }
 
