@@ -402,10 +402,6 @@ public class V3Poller extends BasePoll {
   public static final String PARAM_V3_REPAIR_FROM_CACHE_PERCENT =
     PREFIX + "repairFromCachePercent";
 
-  /**
-   * In the absence of other advice, set the probability to match the repair
-   * crawler's default probability.
-   */
   public static final double DEFAULT_V3_REPAIR_FROM_CACHE_PERCENT = 0.25F;
   
   public static final String PARAM_V3_ENABLE_REPAIR_FROM_CACHE =
