@@ -232,10 +232,10 @@
     au < doNotProcess ; doNotProcess ; 1999 ; 9781565763197 ; 9781565763197 ; SEPM Concepts in Sedimentology and Paleontology Volume 7 ; sepm/books/book/1199/Siliciclastic-Sequence-Stratigraphy-Concepts-and ; >
     au < doNotProcess ; doNotProcess ; 2005 ; 9781565761322 ; 9781565761322 ; SEPM Concepts in Sedimentology and Paleontology Volume 8 ; sepm/books/book/1068/Carbonate-Sedimentology-and-Sequence-Stratigraphy ; >
     au < frozen ; exists ; 2011 ; 9781565762930 ; 9781565763067 ; SEPM Concepts in Sedimentology and Paleontology Volume 10 ; sepm/books/book/1191/Outcrops-RevitalizedTools-Techniques-and ; >
+    au < frozen ; exists ; 2021 ;  ; 9781565763777 ; SEPM Concepts in Sedimentology and Paleontology Volume 14 ; sepm/books/monograph/2330/Coccolithophores-Cenozoic-Discoasterales-Biology ; >
     au < frozen ; exists ; 2013 ; 9781565762817 ; 9781565762893 ; SEPM Concepts in Sedimentology and Paleontology Volume 11 ; sepm/books/book/1966/Phanerozoic-PaleoclimateAn-Atlas-of-Lithologic ; >
     au < frozen ; exists ; 2015 ; 9781565763395 ; 9781565763418 ; SEPM Concepts in Sedimentology and Paleontology Volume 12 ; sepm/books/book/1972/Mudstone-PrimerLithofacies-variations-diagnostic ; >
     au < frozen ; exists ; 2022 ; 9781565763753 ; 9781565763746 ; SEPM Concepts in Sedimentology and Paleontology Volume 13 ; sepm/books/monograph/2359/Sandstone-Petrography-Petrology-and-Modeling ; >
-    au < frozen ; exists ; 2021 ;  ; 9781565763777 ; SEPM Concepts in Sedimentology and Paleontology Volume 14 ; sepm/books/monograph/2330/Coccolithophores-Cenozoic-Discoasterales-Biology ; >
   }
 
   {
@@ -244,18 +244,16 @@
       name = SEPM Society for Sedimentary Geology Books ;
       type = bookSeries
     >
-    
-    au < frozen ; exists ; 2003 ;  ; 9781565760943 ; SEPM Miscellaneous Publications Volume 1 ; sepm/books/book/1051/Siltstones-Mudstones-and-ShalesDepositional ; >
-    au < frozen ; exists ; 2004 ;  ; 9781565761124 ; SEPM Miscellaneous Publications Volume 2 ; sepm/books/book/1064/Depositional-Processes-and-Reservoir ; >
-    au < frozen ; exists ; 2022 ;  ; 9781565763784 ; SEPM Miscellaneous Publications Volume 22 ; books/book/2362/SEPM-2020-DEI-SURVEY-SUMMARY-REPORT ; >
-
-    au < frozen ; exists ; 1998 ;  ; 9781565762305 ; SEPM Concepts in Hydrogeology and Environmental Geology Volume 1 ; sepm/books/book/1139/Hydrogeologic-Models-of-Sedimentary-Aquifers ; >
 
     au < frozen ; exists ; 1981 ;  ; 9781944966010 ; SEPM Gulf Coast Section Publications Volume 2 ; sepm/books/book/1971/Recognition-of-Shallow-Water-versus-Deep-Water ; >
     au < frozen ; exists ; 1984 ;  ; 9781944966027 ; SEPM Gulf Coast Section Publications Volume 3 ; sepm/books/book/1973/The-Jurassic-of-the-Gulf-Rim ; >
-    au < frozen ; exists ; 1985 ;  ; 9781944966034 ; SEPM Gulf Coast Section Publications Volume 4 ; sepm/books/book/1976/Habitat-of-Oil-and-Gas-in-the-Gulf-Coast ; >
     au < frozen ; exists ; 1984 ;  ; 9781944966041 ; SEPM Gulf Coast Section Publications Volume 5 ; sepm/books/book/1975/Characteristics-of-Gulf-Basin-Deep-Water-Sediments ; >
+    au < frozen ; exists ; 1984 ;  ; 9781565762770 ; SEPM Field Trip Guidebooks Volume 2 ; sepm/books/book/1873/Stratigraphic-Tectonic-Thermal-and-Diagenetic ; >
+    au < frozen ; exists ; 1984 ;  ; 9781565762787 ; SEPM Field Trip Guidebooks Volume 3 ; sepm/books/book/1180/1984-Midyear-Meeting-San-Jose-California ; >
+    au < frozen ; exists ; 1985 ;  ; 9781944966034 ; SEPM Gulf Coast Section Publications Volume 4 ; sepm/books/book/1976/Habitat-of-Oil-and-Gas-in-the-Gulf-Coast ; >
+    au < frozen ; exists ; 1985 ;  ; 9781565762794 ; SEPM Field Trip Guidebooks Volume 4 ; sepm/books/book/1181/Fine-Grained-Deposits-and-Biofacies-of-the ; >
     au < frozen ; exists ; 1985 ;  ; 9781944966058 ; SEPM Gulf Coast Section Publications Volume 6 ; sepm/books/book/1977/Timing-of-Siliciclastic-Diagenesis-Relationship-to ; >
+    au < frozen ; exists ; 1986 ;  ; 9781565762800 ; SEPM Field Trip Guidebooks Volume 5 ; sepm/books/book/1182/Southeastern-United-StatesThird-Annual-Midyear ; >
     au < frozen ; exists ; 1989 ;  ; 9781944966065 ; SEPM Gulf Coast Section Publications Volume 7 ; sepm/books/book/1978/Shelf-Sedimentation-Shelf-Sequences-and-Related ; >
     au < frozen ; exists ; 1987 ;  ; 9781944966072 ; SEPM Gulf Coast Section Publications Volume 8 ; sepm/books/book/1979/Innovative-Biostratigraphic-Approaches-to-Sequence ; >
     au < frozen ; exists ; 1990 ;  ; 9781944966089 ; SEPM Gulf Coast Section Publications Volume 9 ; sepm/books/book/1981/Gulf-Coast-Oils-and-Gases-Their-Characteristics ; >
@@ -268,34 +266,34 @@
     au < frozen ; exists ; 1995 ;  ; 9781944966300 ; SEPM Gulf Coast Section Publications Volume 16 ; sepm/books/book/1983/Salt-Sediment-and-Hydrocarbons ; >
     au < frozen ; exists ; 1996 ;  ; 9780983609766 ; SEPM Gulf Coast Section Publications Volume 17 ; sepm/books/book/2017/Stratigraphic-Analysis-Utilizing-Advanced ; >
     au < frozen ; exists ; 1997 ;  ; 9781944966317 ; SEPM Gulf Coast Section Publications Volume 18 ; sepm/books/book/1984/Shallow-Marine-and-Nonmarine-Reservoirs-Sequence ; >
+    au < frozen ; exists ; 1998 ;  ; 9781565762305 ; SEPM Concepts in Hydrogeology and Environmental Geology Volume 1 ; sepm/books/book/1139/Hydrogeologic-Models-of-Sedimentary-Aquifers ; >
     au < frozen ; exists ; 1999 ;  ; 9780983609711 ; SEPM Gulf Coast Section Publications Volume 19 ; sepm/books/book/1951/Advanced-Reservoir-Characterization-for-the-21st ; >
+
+    au < frozen ; exists ; 2000 ; 1565760786 ; 9781565763210 ; SEPM Field Trip Guidebooks Volume 9 ; sepm/books/book/1203/Permian-Platforms-and-Reefs-in-the-Guadalupe-and ; >
     au < frozen ; exists ; 2000 ;  ; 9780983609704 ; SEPM Gulf Coast Section Publications Volume 20 ; sepm/books/book/1968/Deep-Water-Reservoirs-of-the-World ; >
     au < frozen ; exists ; 2001 ;  ; 9780983609698 ; SEPM Gulf Coast Section Publications Volume 21 ; sepm/books/book/1959/Petroleum-Systems-of-Deep-Water-Basins-Global-and ; >
     au < frozen ; exists ; 2002 ;  ; 9780983609681 ; SEPM Gulf Coast Section Publications Volume 22 ; sepm/books/book/1962/Sequence-Stratigraphic-Models-for-Exploration-and ; >
     au < frozen ; exists ; 2003 ;  ; 9780983609674 ; SEPM Gulf Coast Section Publications Volume 23 ; sepm/books/book/1961/Shelf-Margin-Deltas-and-Linked-Down-Slope ; >
+    au < frozen ; exists ; 2003 ;  ; 9781565760943 ; SEPM Miscellaneous Publications Volume 1 ; sepm/books/book/1051/Siltstones-Mudstones-and-ShalesDepositional ; >
     au < frozen ; exists ; 2004 ;  ; 9780983609667 ; SEPM Gulf Coast Section Publications Volume 24 ; sepm/books/book/1965/Salt-Sediment-Interactions-and-Hydrocarbon ; >
+    au < frozen ; exists ; 2004 ;  ; 9781565761124 ; SEPM Miscellaneous Publications Volume 2 ; sepm/books/book/1064/Depositional-Processes-and-Reservoir ; >
     au < frozen ; exists ; 2005 ;  ; 9780983609650 ; SEPM Gulf Coast Section Publications Volume 25 ; sepm/books/book/1964/Petroleum-Systems-of-Divergent-Continental-Margin ; >
     au < frozen ; exists ; 2006 ;  ; 9780983609643 ; SEPM Gulf Coast Section Publications Volume 26 ; sepm/books/book/1967/Reservoir-Characterization-Integrating-Technology ; >
     au < frozen ; exists ; 2007 ;  ; 9780983609636 ; SEPM Gulf Coast Section Publications Volume 27 ; sepm/books/book/1955/The-Paleogene-of-the-Gulf-of-Mexico-and-Caribbean ; >
     au < frozen ; exists ; 2008 ;  ; 9780983609629 ; SEPM Gulf Coast Section Publications Volume 28 ; sepm/books/book/2018/Answering-the-Challenges-of-Production-from-Deep ; >
     au < frozen ; exists ; 2009 ;  ; 9780983609612 ; SEPM Gulf Coast Section Publications Volume 29 ; sepm/books/book/1950/Unconventional-Energy-Resources-Making-the ; >
+    au < frozen ; exists ; 2009 ;  ; 9781565762923 ; SEPM Field Trip Guidebooks Volume 10 ; sepm/books/book/1185/Stratigraphic-Evolution-of-Deep-Water ; >
+    au < frozen ; exists ; 2010 ; 9781565763111 ; 9781565763289 ; SEPM Field Trip Guidebooks Volume 11 ; sepm/books/book/1202/Field-GuidePermian-Platform-and-Basin-Outcrops-of ; >
     au < frozen ; exists ; 2010 ;  ; 9780983609605 ; SEPM Gulf Coast Section Publications Volume 30 ; sepm/books/book/1956/Seismic-Imaging-of-Depositional-and-Geomorphic ; >
     au < frozen ; exists ; 2011 ;  ; 9780983609773 ; SEPM Gulf Coast Section Publications Volume 31 ; sepm/books/book/1963/Attributes-New-Views-on-Seismic-Imaging-Their-Use ; >
+    au < frozen ; exists ; 2011 ; 9781565763104 ; 9781565763104 ; SEPM Field Trip Guidebooks Volume 12 ; sepm/books/book/1193/The-Carboniferous-Geology-of-the-Sacramento ; >
     au < frozen ; exists ; 2012 ;  ; 9780983609780 ; SEPM Gulf Coast Section Publications Volume 32 ; sepm/books/book/1960/New-Understanding-of-the-Petroleum-Systems-of ; >
     au < frozen ; exists ; 2014 ;  ; 9780983609797 ; SEPM Gulf Coast Section Publications Volume 33 ; sepm/books/book/1954/Sedimentary-Basins-Origin-Depositional-Histories ; >
     au < frozen ; exists ; 2015 ;  ; 9781944966003 ; SEPM Gulf Coast Section Publications Volume 34 ; sepm/books/book/1974/Petroleum-Systems-in-Rift-Basins ; >
     au < frozen ; exists ; 2016 ;  ; 9781944966102 ; SEPM Gulf Coast Section Publications Volume 35 ; sepm/books/book/1982/Mesozoic-of-the-Gulf-Rim-and-Beyond-New-Progress ; >
     au < frozen ; exists ; 2017 ;  ; 9781944966362 ; SEPM Gulf Coast Section Publications Volume 36 ; sepm/books/book/2159/Sequence-Stratigraphy-The-Future-Defined ; >
-
-    au < frozen ; exists ; 1984 ;  ; 9781565762770 ; SEPM Field Trip Guidebooks Volume 2 ; sepm/books/book/1873/Stratigraphic-Tectonic-Thermal-and-Diagenetic ; >
-    au < frozen ; exists ; 1984 ;  ; 9781565762787 ; SEPM Field Trip Guidebooks Volume 3 ; sepm/books/book/1180/1984-Midyear-Meeting-San-Jose-California ; >
-    au < frozen ; exists ; 1985 ;  ; 9781565762794 ; SEPM Field Trip Guidebooks Volume 4 ; sepm/books/book/1181/Fine-Grained-Deposits-and-Biofacies-of-the ; >
-    au < frozen ; exists ; 1986 ;  ; 9781565762800 ; SEPM Field Trip Guidebooks Volume 5 ; sepm/books/book/1182/Southeastern-United-StatesThird-Annual-Midyear ; >
-    au < frozen ; exists ; 2000 ; 1565760786 ; 9781565763210 ; SEPM Field Trip Guidebooks Volume 9 ; sepm/books/book/1203/Permian-Platforms-and-Reefs-in-the-Guadalupe-and ; >
-    au < frozen ; exists ; 2009 ;  ; 9781565762923 ; SEPM Field Trip Guidebooks Volume 10 ; sepm/books/book/1185/Stratigraphic-Evolution-of-Deep-Water ; >
-    au < frozen ; exists ; 2010 ; 9781565763111 ; 9781565763289 ; SEPM Field Trip Guidebooks Volume 11 ; sepm/books/book/1202/Field-GuidePermian-Platform-and-Basin-Outcrops-of ; >
-    au < frozen ; exists ; 2011 ; 9781565763104 ; 9781565763104 ; SEPM Field Trip Guidebooks Volume 12 ; sepm/books/book/1193/The-Carboniferous-Geology-of-the-Sacramento ; >
     au < frozen ; exists ; 2017 ; 9781565763562 ; 9781565763579 ; SEPM Field Trip Guidebooks Volume 13 ; sepm/books/book/2363/Propagation-of-Environmental-Signals-within-Source ; >
+    au < frozen ; exists ; 2022 ;  ; 9781565763784 ; SEPM Miscellaneous Publications Volume 22 ; books/book/2362/SEPM-2020-DEI-SURVEY-SUMMARY-REPORT ; >
 
   }
 
