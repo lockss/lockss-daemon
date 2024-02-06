@@ -24,7 +24,7 @@
       au < finished ; manifest ; 2020 ; Al-Azhar International Medical Journal (AIMJ) Volume 1 ; 1 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2021 ; Al-Azhar International Medical Journal (AIMJ) Volume 2 ; 2 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022 ; Al-Azhar International Medical Journal (AIMJ) Volume 3 ; 3 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2023 ; Al-Azhar International Medical Journal (AIMJ) Volume 4 ; 4 ; >
+      au < deepCrawl ; exists ; 2023 ; Al-Azhar International Medical Journal (AIMJ) Volume 4 ; 4 ; >
       au < expected ; exists ; 2024 ; Al-Azhar International Medical Journal (AIMJ) Volume 5 ; 5 ; >
 
   }
