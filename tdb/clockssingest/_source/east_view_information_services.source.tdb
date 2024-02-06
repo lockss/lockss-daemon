@@ -26,7 +26,8 @@
 
       #tested this directory using testing url, https://clockss-test.lockss.org/sourcefiles/eastviewbooks-released/2023_01, it is ready
       au < readySource ; crawling ; 2023 ; East View Information Services Book Source Content 2023_01 ; 2023_01 >
-      au < expected ; exists ; 2024 ; East View Information Services Book Source Content 2024_01 ; 2024_01 >
+      #tested this directory using testing url, https://clockss-test.lockss.org/sourcefiles/eastviewbooks-released/2024_01
+      #au < ready ; exists ; 2024 ; East View Information Services Book Source Content 2024_01 ; 2024_01 >
 
     }
   }
