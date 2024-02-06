@@ -1,0 +1,161 @@
+{
+
+  publisher <
+    name = American Roentgen Ray Society ;
+    info[contract] = 2024 ;
+    info[back] = 2000 ;
+    info[tester] = 5 ;
+    info[poller] = 2 ;
+    info[platform] = Atypon
+  >
+
+  {
+
+    title <
+      name = American Journal of Roentgenology ;
+      issn = 0361-803X ;
+      eissn = 1546-3141 ;
+      issnl = 0361-803X
+    >
+      #Possible plugin from deprecated GLN 
+      #plugin = org.lockss.plugin.atypon.arrs.ClockssARRSPlugin
+      
+      #Placeholder for manifest page checker
+      plugin = org.lockss.plugin.atypon.ClockssGenericAtyponPlugin
+
+      param[base_url] = https://www.ajronline.org/
+      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+      
+      param[journal_id] = ajr
+
+      au < manifest ; exists ; 1965 ; American Journal of Roentgenology Volume 95 ; 95 ; >
+      au < manifest ; exists ; 1966 ; American Journal of Roentgenology Volume 96 ; 96 ; >
+      au < manifest ; exists ; 1966 ; American Journal of Roentgenology Volume 97 ; 97 ; >
+      au < manifest ; exists ; 1966 ; American Journal of Roentgenology Volume 98 ; 98 ; >
+      au < manifest ; exists ; 1967 ; American Journal of Roentgenology Volume 99 ; 99 ; >
+      au < manifest ; exists ; 1967 ; American Journal of Roentgenology Volume 100 ; 100 ; >
+      au < manifest ; exists ; 1967 ; American Journal of Roentgenology Volume 101 ; 101 ; >
+      au < manifest ; exists ; 1968 ; American Journal of Roentgenology Volume 102 ; 102 ; >
+      au < manifest ; exists ; 1968 ; American Journal of Roentgenology Volume 103 ; 103 ; >
+      au < manifest ; exists ; 1968 ; American Journal of Roentgenology Volume 104 ; 104 ; >
+      au < manifest ; exists ; 1969 ; American Journal of Roentgenology Volume 105 ; 105 ; >
+      au < manifest ; exists ; 1969 ; American Journal of Roentgenology Volume 106 ; 106 ; >
+      au < manifest ; exists ; 1969 ; American Journal of Roentgenology Volume 107 ; 107 ; >
+      au < manifest ; exists ; 1970 ; American Journal of Roentgenology Volume 108 ; 108 ; >
+      au < manifest ; exists ; 1970 ; American Journal of Roentgenology Volume 109 ; 109 ; >
+      au < manifest ; exists ; 1970 ; American Journal of Roentgenology Volume 110 ; 110 ; >
+      au < manifest ; exists ; 1971 ; American Journal of Roentgenology Volume 111 ; 111 ; >
+      au < manifest ; exists ; 1971 ; American Journal of Roentgenology Volume 112 ; 112 ; >
+      au < manifest ; exists ; 1971 ; American Journal of Roentgenology Volume 113 ; 113 ; >
+      au < manifest ; exists ; 1972 ; American Journal of Roentgenology Volume 114 ; 114 ; >
+      au < manifest ; exists ; 1972 ; American Journal of Roentgenology Volume 115 ; 115 ; >
+      au < manifest ; exists ; 1972 ; American Journal of Roentgenology Volume 116 ; 116 ; >
+      au < manifest ; exists ; 1973 ; American Journal of Roentgenology Volume 117 ; 117 ; >
+      au < manifest ; exists ; 1973 ; American Journal of Roentgenology Volume 118 ; 118 ; >
+      au < manifest ; exists ; 1973 ; American Journal of Roentgenology Volume 119 ; 119 ; >
+      au < manifest ; exists ; 1974 ; American Journal of Roentgenology Volume 120 ; 120 ; >
+      au < manifest ; exists ; 1974 ; American Journal of Roentgenology Volume 121 ; 121 ; >
+      au < manifest ; exists ; 1974 ; American Journal of Roentgenology Volume 122 ; 122 ; >
+      au < manifest ; exists ; 1975 ; American Journal of Roentgenology Volume 123 ; 123 ; >
+      au < manifest ; exists ; 1975 ; American Journal of Roentgenology Volume 124 ; 124 ; >
+      au < manifest ; exists ; 1975 ; American Journal of Roentgenology Volume 125 ; 125 ; >
+      au < manifest ; exists ; 1976 ; American Journal of Roentgenology Volume 126 ; 126 ; >
+      au < manifest ; exists ; 1976 ; American Journal of Roentgenology Volume 127 ; 127 ; >
+      au < manifest ; exists ; 1977 ; American Journal of Roentgenology Volume 128 ; 128 ; >
+      au < manifest ; exists ; 1977 ; American Journal of Roentgenology Volume 129 ; 129 ; >
+      au < manifest ; exists ; 1978 ; American Journal of Roentgenology Volume 130 ; 130 ; >
+      au < manifest ; exists ; 1978 ; American Journal of Roentgenology Volume 131 ; 131 ; >
+      au < manifest ; exists ; 1979 ; American Journal of Roentgenology Volume 132 ; 132 ; >
+      au < manifest ; exists ; 1979 ; American Journal of Roentgenology Volume 133 ; 133 ; >
+      au < manifest ; exists ; 1980 ; American Journal of Roentgenology Volume 134 ; 134 ; >
+      au < manifest ; exists ; 1980 ; American Journal of Roentgenology Volume 135 ; 135 ; >
+      au < manifest ; exists ; 1981 ; American Journal of Roentgenology Volume 136 ; 136 ; >
+      au < manifest ; exists ; 1981 ; American Journal of Roentgenology Volume 137 ; 137 ; >
+      au < manifest ; exists ; 1982 ; American Journal of Roentgenology Volume 138 ; 138 ; >
+      au < manifest ; exists ; 1982 ; American Journal of Roentgenology Volume 139 ; 139 ; >
+      au < manifest ; exists ; 1983 ; American Journal of Roentgenology Volume 140 ; 140 ; >
+      au < manifest ; exists ; 1983 ; American Journal of Roentgenology Volume 141 ; 141 ; >
+      au < manifest ; exists ; 1984 ; American Journal of Roentgenology Volume 142 ; 142 ; >
+      au < manifest ; exists ; 1984 ; American Journal of Roentgenology Volume 143 ; 143 ; >
+      au < manifest ; exists ; 1985 ; American Journal of Roentgenology Volume 144 ; 144 ; >
+      au < manifest ; exists ; 1985 ; American Journal of Roentgenology Volume 145 ; 145 ; >
+      au < manifest ; exists ; 1986 ; American Journal of Roentgenology Volume 146 ; 146 ; >
+      au < manifest ; exists ; 1986 ; American Journal of Roentgenology Volume 147 ; 147 ; >
+      au < manifest ; exists ; 1987 ; American Journal of Roentgenology Volume 148 ; 148 ; >
+      au < manifest ; exists ; 1987 ; American Journal of Roentgenology Volume 149 ; 149 ; >
+      au < manifest ; exists ; 1988 ; American Journal of Roentgenology Volume 150 ; 150 ; >
+      au < manifest ; exists ; 1988 ; American Journal of Roentgenology Volume 151 ; 151 ; >
+      au < manifest ; exists ; 1989 ; American Journal of Roentgenology Volume 152 ; 152 ; >
+      au < manifest ; exists ; 1989 ; American Journal of Roentgenology Volume 153 ; 153 ; >
+      au < manifest ; exists ; 1990 ; American Journal of Roentgenology Volume 154 ; 154 ; >
+      au < manifest ; exists ; 1990 ; American Journal of Roentgenology Volume 155 ; 155 ; >
+      au < manifest ; exists ; 1991 ; American Journal of Roentgenology Volume 156 ; 156 ; >
+      au < manifest ; exists ; 1991 ; American Journal of Roentgenology Volume 157 ; 157 ; >
+      au < manifest ; exists ; 1992 ; American Journal of Roentgenology Volume 158 ; 158 ; >
+      au < manifest ; exists ; 1992 ; American Journal of Roentgenology Volume 159 ; 159 ; >
+      au < manifest ; exists ; 1993 ; American Journal of Roentgenology Volume 160 ; 160 ; >
+      au < manifest ; exists ; 1993 ; American Journal of Roentgenology Volume 161 ; 161 ; >
+      au < manifest ; exists ; 1994 ; American Journal of Roentgenology Volume 162 ; 162 ; >
+      au < manifest ; exists ; 1994 ; American Journal of Roentgenology Volume 163 ; 163 ; >
+      au < manifest ; exists ; 1995 ; American Journal of Roentgenology Volume 164 ; 164 ; >
+      au < manifest ; exists ; 1995 ; American Journal of Roentgenology Volume 165 ; 165 ; >
+      au < manifest ; exists ; 1996 ; American Journal of Roentgenology Volume 166 ; 166 ; >
+      au < manifest ; exists ; 1996 ; American Journal of Roentgenology Volume 167 ; 167 ; >
+      au < manifest ; exists ; 1997 ; American Journal of Roentgenology Volume 168 ; 168 ; >
+      au < manifest ; exists ; 1997 ; American Journal of Roentgenology Volume 169 ; 169 ; >
+      au < manifest ; exists ; 1998 ; American Journal of Roentgenology Volume 170 ; 170 ; >
+      au < manifest ; exists ; 1998 ; American Journal of Roentgenology Volume 171 ; 171 ; >
+      au < manifest ; exists ; 1999 ; American Journal of Roentgenology Volume 172 ; 172 ; >
+      au < manifest ; exists ; 1999 ; American Journal of Roentgenology Volume 173 ; 173 ; >
+      au < manifest ; exists ; 2000 ; American Journal of Roentgenology Volume 174 ; 174 ; >
+      au < manifest ; exists ; 2000 ; American Journal of Roentgenology Volume 175 ; 175 ; >
+      au < manifest ; exists ; 2001 ; American Journal of Roentgenology Volume 176 ; 176 ; >
+      au < manifest ; exists ; 2001 ; American Journal of Roentgenology Volume 177 ; 177 ; >
+      au < manifest ; exists ; 2002 ; American Journal of Roentgenology Volume 178 ; 178 ; >
+      au < manifest ; exists ; 2002 ; American Journal of Roentgenology Volume 179 ; 179 ; >
+      au < manifest ; exists ; 2003 ; American Journal of Roentgenology Volume 180 ; 180 ; >
+      au < manifest ; exists ; 2003 ; American Journal of Roentgenology Volume 181 ; 181 ; >
+      au < manifest ; exists ; 2004 ; American Journal of Roentgenology Volume 182 ; 182 ; >
+      au < manifest ; exists ; 2004 ; American Journal of Roentgenology Volume 183 ; 183 ; >
+      au < manifest ; exists ; 2005 ; American Journal of Roentgenology Volume 184 ; 184 ; >
+      au < manifest ; exists ; 2005 ; American Journal of Roentgenology Volume 185 ; 185 ; >
+      au < manifest ; exists ; 2006 ; American Journal of Roentgenology Volume 186 ; 186 ; >
+      au < manifest ; exists ; 2006 ; American Journal of Roentgenology Volume 187 ; 187 ; >
+      au < manifest ; exists ; 2007 ; American Journal of Roentgenology Volume 188 ; 188 ; >
+      au < manifest ; exists ; 2007 ; American Journal of Roentgenology Volume 189 ; 189 ; >
+      au < manifest ; exists ; 2008 ; American Journal of Roentgenology Volume 190 ; 190 ; >
+      au < manifest ; exists ; 2008 ; American Journal of Roentgenology Volume 191 ; 191 ; >
+      au < manifest ; exists ; 2009 ; American Journal of Roentgenology Volume 192 ; 192 ; >
+      au < manifest ; exists ; 2009 ; American Journal of Roentgenology Volume 193 ; 193 ; >
+      au < manifest ; exists ; 2010 ; American Journal of Roentgenology Volume 194 ; 194 ; >
+      au < manifest ; exists ; 2010 ; American Journal of Roentgenology Volume 195 ; 195 ; >
+      au < manifest ; exists ; 2011 ; American Journal of Roentgenology Volume 196 ; 196 ; >
+      au < manifest ; exists ; 2011 ; American Journal of Roentgenology Volume 197 ; 197 ; >
+      au < manifest ; exists ; 2012 ; American Journal of Roentgenology Volume 198 ; 198 ; >
+      au < manifest ; exists ; 2012 ; American Journal of Roentgenology Volume 199 ; 199 ; >
+      au < manifest ; exists ; 2013 ; American Journal of Roentgenology Volume 200 ; 200 ; >
+      au < manifest ; exists ; 2013 ; American Journal of Roentgenology Volume 201 ; 201 ; >
+      au < manifest ; exists ; 2014 ; American Journal of Roentgenology Volume 202 ; 202 ; >
+      au < manifest ; exists ; 2014 ; American Journal of Roentgenology Volume 203 ; 203 ; >
+      au < manifest ; exists ; 2015 ; American Journal of Roentgenology Volume 204 ; 204 ; >
+      au < manifest ; exists ; 2015 ; American Journal of Roentgenology Volume 205 ; 205 ; >
+      au < manifest ; exists ; 2016 ; American Journal of Roentgenology Volume 206 ; 206 ; >
+      au < manifest ; exists ; 2016 ; American Journal of Roentgenology Volume 207 ; 207 ; >
+      au < manifest ; exists ; 2017 ; American Journal of Roentgenology Volume 208 ; 208 ; >
+      au < manifest ; exists ; 2017 ; American Journal of Roentgenology Volume 209 ; 209 ; >
+      au < manifest ; exists ; 2018 ; American Journal of Roentgenology Volume 210 ; 210 ; >
+      au < manifest ; exists ; 2018 ; American Journal of Roentgenology Volume 211 ; 211 ; >
+      au < manifest ; exists ; 2019 ; American Journal of Roentgenology Volume 212 ; 212 ; >
+      au < manifest ; exists ; 2019 ; American Journal of Roentgenology Volume 213 ; 213 ; >
+      au < manifest ; exists ; 2020 ; American Journal of Roentgenology Volume 214 ; 214 ; >
+      au < manifest ; exists ; 2020 ; American Journal of Roentgenology Volume 215 ; 215 ; >
+      au < manifest ; exists ; 2021 ; American Journal of Roentgenology Volume 216 ; 216 ; >
+      au < manifest ; exists ; 2021 ; American Journal of Roentgenology Volume 217 ; 217 ; >
+      au < manifest ; exists ; 2022 ; American Journal of Roentgenology Volume 218 ; 218 ; >
+      au < manifest ; exists ; 2022 ; American Journal of Roentgenology Volume 219 ; 219 ; >
+      au < manifest ; exists ; 2023 ; American Journal of Roentgenology Volume 220 ; 220 ; >
+      au < manifest ; exists ; 2023 ; American Journal of Roentgenology Volume 221 ; 221 ; >
+
+  }
+
+}
