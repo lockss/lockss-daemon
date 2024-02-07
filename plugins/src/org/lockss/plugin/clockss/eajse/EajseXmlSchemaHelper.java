@@ -36,6 +36,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.commons.collections.map.MultiValueMap;
+import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.XmlDomMetadataExtractor;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
@@ -45,34 +46,51 @@ import org.w3c.dom.NodeList;
 
 public class EajseXmlSchemaHelper implements SourceXmlSchemaHelper{
 
-    static Logger log = Logger.getLogger(EajseXmlSchemaHelper.class);   
+    static Logger log = Logger.getLogger(EajseXmlSchemaHelper.class);  
+    private static final String AUTHOR_SEPARATOR = ","; 
 
     static private final XmlDomMetadataExtractor.NodeValue AUTHOR_VALUE = new XmlDomMetadataExtractor.NodeValue() {
         @Override
         public String getValue(Node node) {
             NodeList elementChildren = node.getChildNodes();
-            if (elementChildren == null) return null;
-
-            String name = null;
-            for (int j = 0; j < elementChildren.getLength(); j++) {
-                Node checkNode = elementChildren.item(j);
-                String nodeName = checkNode.getNodeName();
-                if ("name".equals(nodeName)) {
-                    name = checkNode.getTextContent();
-                }
-            }
-
-            if (name == null) {
+            if (elementChildren == null){
                 return null;
             }
-            log.debug3("name found: " + name.toString());
-            return name.toString();
+
+            StringBuilder valBuilder = new StringBuilder();
+
+            for (int i = 0; i < elementChildren.getLength(); i++) {
+                Node checkNode = elementChildren.item(i);
+                String nodeName = checkNode.getNodeName();
+                log.debug3("Current node is:" + checkNode);
+                if (nodeName.contains("author")) {
+                    NodeList authorNodes = checkNode.getChildNodes();
+                    for(int j = 0; j < authorNodes.getLength(); j++){
+                        Node checkChildNode = authorNodes.item(j);
+                        String authorName = checkChildNode.getNodeName();
+                        if("name".equals(authorName)){
+                            log.debug3("name is: " + checkChildNode.getTextContent());
+                            valBuilder.append(checkChildNode.getTextContent()+","); 
+                        }
+                    }
+                    
+                }
+            }
+            log.debug3("Authors found: " + valBuilder.toString());
+            return valBuilder.toString().substring(0,valBuilder.length()-1);
+        }
+    };
+
+    static private final XmlDomMetadataExtractor.NodeValue DOI_VALUE = new XmlDomMetadataExtractor.NodeValue(){
+        @Override
+        public String getValue(Node node) {
+            return node.getTextContent().replace("https://doi.org/","").trim();
         }
     };
 
     protected static final String article_title = "/ArticleSet/Article/ArticleTitle";
     protected static final String journal_title = "/ArticleSet/Article/Journal/JournalTitle";
-    protected static final String author = "/ArticleSet/Article/AuthorList/Author";
+    protected static final String author = "/ArticleSet/Article/Authorlist/Author";
     private static final String publisher = "/ArticleSet/Article/Journal/PublisherName";
     private static final String art_pubdate = "/ArticleSet/Article/Publication";
     private static final String volume = "/ArticleSet/Article/Journal/Volume";
@@ -86,13 +104,48 @@ public class EajseXmlSchemaHelper implements SourceXmlSchemaHelper{
     static private final Map<String,XPathValue>     
     articleMap = new HashMap<String,XPathValue>();
     static {
+        articleMap.put(article_title, XmlDomMetadataExtractor.TEXT_VALUE);
+        articleMap.put(journal_title, XmlDomMetadataExtractor.TEXT_VALUE);
         articleMap.put(author, AUTHOR_VALUE);
+        articleMap.put(publisher, XmlDomMetadataExtractor.TEXT_VALUE);
+        articleMap.put(art_pubdate, XmlDomMetadataExtractor.TEXT_VALUE);
+        articleMap.put(volume, XmlDomMetadataExtractor.TEXT_VALUE);
+        articleMap.put(issue, XmlDomMetadataExtractor.TEXT_VALUE);
+        articleMap.put(issn, XmlDomMetadataExtractor.TEXT_VALUE);
+        articleMap.put(eissn, XmlDomMetadataExtractor.TEXT_VALUE);
+        articleMap.put(doi, DOI_VALUE);
+        articleMap.put(start_page, XmlDomMetadataExtractor.TEXT_VALUE);
+        articleMap.put(end_page, XmlDomMetadataExtractor.TEXT_VALUE);
+    }
 
+
+    static private final Map<String,XPathValue>     
+    globalMap = null;
+
+    protected static final MultiValueMap cookMap = new MultiValueMap();
+    static {
+        cookMap.put(article_title, MetadataField.FIELD_ARTICLE_TITLE);
+        cookMap.put(journal_title, MetadataField.FIELD_PUBLICATION_TITLE);
+        cookMap.put(author, MetadataField.FIELD_AUTHOR);
+        cookMap.put(publisher, MetadataField.FIELD_PUBLISHER);
+        cookMap.put(art_pubdate, MetadataField.FIELD_DATE);
+        cookMap.put(volume, MetadataField.FIELD_VOLUME);
+        cookMap.put(issue, MetadataField.FIELD_ISSUE);
+        cookMap.put(issn, MetadataField.FIELD_ISSN);
+        cookMap.put(eissn, MetadataField.FIELD_EISSN);
+        cookMap.put(doi, MetadataField.FIELD_DOI);
+        cookMap.put(start_page, MetadataField.FIELD_START_PAGE);
+        cookMap.put(end_page, MetadataField.FIELD_END_PAGE);
+    }
+
+    @Override
+    public Map<String, XPathValue> getGlobalMetaMap() {
+      return null; //globalMap;
     }
 
     @Override
     public Map<String, XPathValue> getArticleMetaMap() {
-        return null;
+        return articleMap;
     }
     @Override
     public String getArticleNode() {
@@ -104,7 +157,7 @@ public class EajseXmlSchemaHelper implements SourceXmlSchemaHelper{
     }
     @Override
     public MultiValueMap getCookMap() {
-        return null;
+        return cookMap;
     }
     @Override
     public String getDeDuplicationXPathKey() {
@@ -112,10 +165,6 @@ public class EajseXmlSchemaHelper implements SourceXmlSchemaHelper{
     }
     @Override
     public String getFilenameXPathKey() {
-        return null;
-    }
-    @Override
-    public Map<String, XPathValue> getGlobalMetaMap() {
         return null;
     }
 }

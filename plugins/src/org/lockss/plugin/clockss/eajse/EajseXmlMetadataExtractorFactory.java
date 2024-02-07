@@ -35,7 +35,6 @@ package org.lockss.plugin.clockss.eajse;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.io.FilenameUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
@@ -64,10 +63,10 @@ public class EajseXmlMetadataExtractorFactory extends SourceXmlMetadataExtractor
         @Override
         protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
         // Once you have it, just keep returning the same one. It won't change.
-        if (EajseCrossRefPublishingHelper == null) {
-            EajseCrossRefPublishingHelper = new PubMedSchemaHelper();
-        }
-        return EajseCrossRefPublishingHelper;
+            if (EajseCrossRefPublishingHelper == null) {
+                EajseCrossRefPublishingHelper = new EajseXmlSchemaHelper();
+            }
+            return EajseCrossRefPublishingHelper;
         }
 
         /*
