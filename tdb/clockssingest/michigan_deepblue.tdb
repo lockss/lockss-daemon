@@ -19,7 +19,8 @@
 
       param[base_url] = https://deepblue.lib.umich.edu/
       param[au_oai_set] = col_2027.42_41251
-
+      #permission https://deepblue.lib.umich.edu/clockss.txt
+      #start https://deepblue.lib.umich.edu/dspace-oai/request?verb=ListRecords&set=col_2027.42_41251&metadataPrefix=xoai
 
       au < manifest ; exists ; 1922 ; 1922 ; University of Michigan Press Deep Blue Volume 1922 ; 1922 ; >
       au < manifest ; exists ; 1924 ; 1924 ; University of Michigan Press Deep Blue Volume 1924 ; 1924 ; >
@@ -95,6 +96,26 @@
       au < ready ; exists ; 2002 ; 2002 ; University of Michigan Press Deep Blue Volume 2002 ; 2002 ; >
       au < ready ; exists ; 2003 ; 2003 ; University of Michigan Press Deep Blue Volume 2003 ; 2003 ; >
       au < manifest ; exists ; 2004 ; 2004 ; University of Michigan Press Deep Blue Volume 2004 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; University of Michigan Press Deep Blue Volume 2005 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; University of Michigan Press Deep Blue Volume 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; University of Michigan Press Deep Blue Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; University of Michigan Press Deep Blue Volume 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; University of Michigan Press Deep Blue Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; University of Michigan Press Deep Blue Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; University of Michigan Press Deep Blue Volume 2011 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; University of Michigan Press Deep Blue Volume 2012 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; University of Michigan Press Deep Blue Volume 2013 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; University of Michigan Press Deep Blue Volume 2014 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; University of Michigan Press Deep Blue Volume 2015 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; University of Michigan Press Deep Blue Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; University of Michigan Press Deep Blue Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; University of Michigan Press Deep Blue Volume 2018 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; University of Michigan Press Deep Blue Volume 2019 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; University of Michigan Press Deep Blue Volume 2020 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; University of Michigan Press Deep Blue Volume 2021 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; University of Michigan Press Deep Blue Volume 2022 ; 2022 ; >
+      au < manifest ; exists ; 2023 ; 2023 ; University of Michigan Press Deep Blue Volume 2023 ; 2023 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; University of Michigan Press Deep Blue Volume 2024 ; 2024 ; >
 
   }
 
