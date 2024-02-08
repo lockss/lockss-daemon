@@ -12226,7 +12226,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Rapid Prototyping Journal Volume 24 ; 24 ; >
     au < finished ; manifest ; 2019 ; Rapid Prototyping Journal Volume 25 ; 25 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Rapid Prototyping Journal Volume 26 ; 26 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; Rapid Prototyping Journal Volume 27 ; 27 ; >
+    au < ingNotReady ; exists ; 2021 ; Rapid Prototyping Journal Volume 27 ; 27 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id//
     au < ingNotReady ; exists ; 2022 ; Rapid Prototyping Journal Volume 28 ; 28 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id//
     au < crawling ; exists ; 2023 ; Rapid Prototyping Journal Volume 29 ; 29 ; >
     au < manifest ; exists ; 2024 ; Rapid Prototyping Journal Volume 30 ; 30 ; >
