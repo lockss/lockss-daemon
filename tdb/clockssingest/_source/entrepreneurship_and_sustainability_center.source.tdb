@@ -11,6 +11,7 @@
     title <
        name = Entrepreneurship and Sustainability Center Source Content
     >
+    
     plugin = org.lockss.plugin.clockss.entrepreneurshipandsustainability.ClockssEntrepreneurshipandSustainabilityCenterSourcePlugin
     implicit < status ; status2 ; year ; name ; param[directory] >
 
