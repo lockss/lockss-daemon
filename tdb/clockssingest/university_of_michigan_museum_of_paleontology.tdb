@@ -97,6 +97,12 @@
       au < ready ; exists ; 2002 ; 2002 ; University of Michigan Press Deep Blue Volume 2002 ; 2002 ; >
       au < ready ; exists ; 2003 ; 2003 ; University of Michigan Press Deep Blue Volume 2003 ; 2003 ; >
       au < manifest ; exists ; 2004 ; 2004 ; University of Michigan Press Deep Blue Volume 2004 ; 2004 ; >
+
+      #For this particular collection API which generate record based on DateModified, not publication date.
+      #It replies on a filter in the code to find the right publication date. 
+      #The API and plugin code found record starting from 1922 to 2004, across 74 years by the time 
+      #The initial tdb file is originall generated
+
       au < manifest ; exists ; 2005 ; 2005 ; University of Michigan Press Deep Blue Volume 2005 ; 2005 ; >
       au < manifest ; exists ; 2006 ; 2006 ; University of Michigan Press Deep Blue Volume 2006 ; 2006 ; >
       au < manifest ; exists ; 2007 ; 2007 ; University of Michigan Press Deep Blue Volume 2007 ; 2007 ; >
