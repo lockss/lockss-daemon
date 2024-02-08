@@ -40,7 +40,6 @@ import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.clockss.PubMedSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
@@ -49,24 +48,25 @@ public class EajseXmlMetadataExtractorFactory extends SourceXmlMetadataExtractor
 
     private static final Logger log = Logger.getLogger(EajseXmlMetadataExtractorFactory.class);
 
-    private static SourceXmlSchemaHelper EajseCrossRefPublishingHelper = null;
+    private static SourceXmlSchemaHelper schemaHelper = null;
 
     @Override
     public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
         String contentType)
             throws PluginException {
-      return new EajseCrossRefPublishingMetadataExtractor();
+      return new EajseXmlMetadataExtractor();
     }
     
-    public class EajseCrossRefPublishingMetadataExtractor extends SourceXmlMetadataExtractor {
+    public class EajseXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
         @Override
         protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
         // Once you have it, just keep returning the same one. It won't change.
-            if (EajseCrossRefPublishingHelper == null) {
-                EajseCrossRefPublishingHelper = new EajseXmlSchemaHelper();
+            if (schemaHelper == null) {
+                schemaHelper = new EajseXmlSchemaHelper();
+                log.info("setting up schema helper");
             }
-            return EajseCrossRefPublishingHelper;
+            return schemaHelper;
         }
 
         /*
@@ -76,9 +76,9 @@ public class EajseXmlMetadataExtractorFactory extends SourceXmlMetadataExtractor
         protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
             String cuBase = cu.getUrl();
-            log.debug3("CU Base is: " + cuBase);
+            log.info("CU Base is: " + cuBase);
             String pdfName = cuBase.substring(0,cuBase.length() - 3) + "pdf";
-            log.debug3("The pdf is: " + pdfName);
+            log.info("The pdf is: " + pdfName);
             List<String> returnList = new ArrayList<String>();
             returnList.add(pdfName);
             return returnList;

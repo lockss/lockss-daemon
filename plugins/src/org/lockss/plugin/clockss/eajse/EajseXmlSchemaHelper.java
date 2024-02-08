@@ -32,6 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.clockss.eajse;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -46,8 +47,7 @@ import org.w3c.dom.NodeList;
 
 public class EajseXmlSchemaHelper implements SourceXmlSchemaHelper{
 
-    static Logger log = Logger.getLogger(EajseXmlSchemaHelper.class);  
-    private static final String AUTHOR_SEPARATOR = ","; 
+    static Logger log = Logger.getLogger(EajseXmlSchemaHelper.class);
 
     static private final XmlDomMetadataExtractor.NodeValue AUTHOR_VALUE = new XmlDomMetadataExtractor.NodeValue() {
         @Override
@@ -56,7 +56,7 @@ public class EajseXmlSchemaHelper implements SourceXmlSchemaHelper{
             if (elementChildren == null){
                 return null;
             }
-
+            ArrayList<String> authors = new ArrayList<>();
             StringBuilder valBuilder = new StringBuilder();
 
             for (int i = 0; i < elementChildren.getLength(); i++) {
@@ -70,14 +70,14 @@ public class EajseXmlSchemaHelper implements SourceXmlSchemaHelper{
                         String authorName = checkChildNode.getNodeName();
                         if("name".equals(authorName)){
                             log.debug3("name is: " + checkChildNode.getTextContent());
-                            valBuilder.append(checkChildNode.getTextContent()+","); 
+                            authors.add(checkChildNode.getTextContent());
                         }
                     }
                     
                 }
             }
-            log.debug3("Authors found: " + valBuilder.toString());
-            return valBuilder.toString().substring(0,valBuilder.length()-1);
+            log.debug3("Authors found: " + authors);
+            return authors.toString();
         }
     };
 
@@ -99,7 +99,7 @@ public class EajseXmlSchemaHelper implements SourceXmlSchemaHelper{
     private static final String eissn = "/ArticleSet/Article/Journal/EISSN";
     private static final String doi = "/ArticleSet/Article/DOI";
     protected static final String start_page = "/ArticleSet/Article/FirstPage";
-    protected static final String end_page = "/ArticleSet/Article/LastPage";
+    protected static final String end_page = "/ArticleSet/Article/Lastpage";
 
     static private final Map<String,XPathValue>     
     articleMap = new HashMap<String,XPathValue>();
@@ -119,8 +119,7 @@ public class EajseXmlSchemaHelper implements SourceXmlSchemaHelper{
     }
 
 
-    static private final Map<String,XPathValue>     
-    globalMap = null;
+    static private final Map<String,XPathValue> globalMap = null;
 
     protected static final MultiValueMap cookMap = new MultiValueMap();
     static {
