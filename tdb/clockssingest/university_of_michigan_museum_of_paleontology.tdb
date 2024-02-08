@@ -3,7 +3,7 @@
   publisher <
     name = University of Michiganm Museum of Paleontology ;
     info[contract] = 2018 ;
-    info[back] = 1960 ;
+    info[back] = 1990 ;
     info[tester] = 8 ;
     info[poller] = 2 ;
     info[platform] = Custom
@@ -21,6 +21,7 @@
       param[au_oai_set] = col_2027.42_41251
       #permission https://deepblue.lib.umich.edu/clockss.txt
       #start https://deepblue.lib.umich.edu/dspace-oai/request?verb=ListRecords&set=col_2027.42_41251&metadataPrefix=xoai
+      #See range of dates: https://deepblue.lib.umich.edu/browse?type=dateissued
 
       au < manifest ; exists ; 1922 ; 1922 ; University of Michigan Press Deep Blue Volume 1922 ; 1922 ; >
       au < manifest ; exists ; 1924 ; 1924 ; University of Michigan Press Deep Blue Volume 1924 ; 1924 ; >
