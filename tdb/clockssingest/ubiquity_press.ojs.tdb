@@ -1956,7 +1956,7 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.ijelt.dundee.ac.uk/ #login found
+      param[base_url] = https://account.ijelt.dundee.ac.uk/ #login found, https://account.ijelt.dundee.ac.uk/index.php/up-j-ijelt/login?source=%2Findex.php%2Fup-j-ijelt%2Fuser%2Fprofile
       param[journal_id] = up-j-ijelt
 
       au < expected ; exists ; 2022 ; 1 ; International Journal of Educational and Life Transitions Volume 2022 ; 2022 ; > #login found
