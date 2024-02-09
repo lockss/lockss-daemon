@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -134,11 +134,11 @@ POSSIBILITY OF SUCH DAMAGE.
       <!--exclude improperly relative URLs-->
       <string>2, "^https?://%s/([^/]+/)?article/.*/www\.", url_host(base_url)</string>
       <string>2, "^https?://%s/([^/]+/)?article/.*/[^/]+\.(uk|com|net|org|edu|gov)", url_host(base_url)</string>
-      <string>1,"https://cdnjs.cloudflare.com/.+\.(css|js)"</string>
-      <string>1,"https://use.typekit.net/.*\.js"</string>
-      <string>1,"https://maxcdn.bootstrapcdn.com/.+\.css"</string>
-      <string>1,"https://maxcdn.bootstrapcdn.com/font-awesome/.*\.svg"</string>
-      <string>1,"https://cdnjs.cloudflare.com/ajax/libs/materialize/[^/]+/fonts/.*"</string>
+      <string>1,"^https?://cdnjs\.cloudflare\.com/.+\.(css|js)"</string>
+      <string>1,"^https?://use.typekit.net/.*\.js"</string>
+      <string>1,"^https?://maxcdn\.bootstrapcdn\.com/.+\.css"</string>
+      <string>1,"^https?://maxcdn\.bootstrapcdn\.com/font-awesome/.*\.svg"</string>
+      <string>1,"^https?://cdnjs\.cloudflare\.com/ajax/libs/materialize/[^/]+/fonts/.*"</string>
       <!--exclude the following link, so it will not overcrawl-->
       <!--Some API is at https, but it is fullTextUrl still uses http-->
       <string>2, "^https?://%s/([^/]+/)?issue/[^/]+/info/", url_host(base_url)</string>
