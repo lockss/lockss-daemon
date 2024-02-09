@@ -1462,10 +1462,10 @@
       attr[journal_id] = sp
       param[base_url] = https://sp.copernicus.org/
       param[home_url] = https://www.state-of-the-planet.net/
-      #Looks like reports, not a journal
+      #It is reports, in a journal format
 
-      au < expected ; exists ; 2023 ; 2023 ; State of the Planet Volume 1 ; 1 ; >
-      au < expected ; exists ; 2024 ; 2024 ; State of the Planet Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2023 ; 2023 ; State of the Planet Volume 1 ; 1-osr7 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; State of the Planet Volume 2 ; 2-oae2023 ; >
 
   }
 
