@@ -1149,7 +1149,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Silva Balcanica Volume 2021 ; 2021 ; https://silvabalcanica.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Silva Balcanica Volume 2022 ; 2022 ; https://silvabalcanica.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Silva Balcanica Volume 2023 ; 2023 ; https://silvabalcanica.pensoft.net/ ; >
-      au < expected ; exists ; 2024 ; 2024 ; Silva Balcanica Volume 2024 ; 2024 ; https://silvabalcanica.pensoft.net/ ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Silva Balcanica Volume 2024 ; 2024 ; https://silvabalcanica.pensoft.net/ ; >
 
   }
 
@@ -1532,7 +1532,7 @@
 
       au < frozen ; exists ; 2022 ; 2022 ; Tuhinga Volume 2022 ; 2022 ; https://tuhinga.arphahub.com/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Tuhinga Volume 2023 ; 2023 ; https://tuhinga.arphahub.com/ ; >
-      au < expected ; exists ; 2024 ; 2024 ; Tuhinga Volume 2024 ; 2024 ; https://tuhinga.arphahub.com/ ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Tuhinga Volume 2024 ; 2024 ; https://tuhinga.arphahub.com/ ; >
 
   }
 
@@ -1547,7 +1547,7 @@
       param[au_oai_set] = aquaticinvasions
 
       au < crawling ; exists ; 2023 ; 2023 ; Aquatic Invasions Volume 2023 ; 2023 ; https://aquaticinvasions.arphahub.com/ ; >
-      au < expected ; exists ; 2024 ; 2024 ; Aquatic Invasions Volume 2024 ; 2024 ; https://aquaticinvasions.arphahub.com/ ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Aquatic Invasions Volume 2024 ; 2024 ; https://aquaticinvasions.arphahub.com/ ; >
 
   }
 
