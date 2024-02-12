@@ -412,25 +412,25 @@
       au < expected ; 2024 ; Perspectives of the ASHA Special Interest Groups Volume 9 ; 9 >
   }
 }
-{
-  plugin = needs.plugin
-  implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
-
-  {
-    title <
-      name = ASHA Leader ;
-      eissn = 1085-9586 
-    >
-
-      param[journal_id] = leader
-      param[base_url] = https://leader.pubs.asha.org/
-      #Changed from a journal to a magazine as of April 2020.
-
-      au < exists ; exists ; 2020 ; ASHA Leader Magazine Volume 25 ; 25 ; >
-      au < exists ; exists ; 2021 ; ASHA Leader Magazine Volume 26 ; 26 ; >
-      au < exists ; exists ; 2022 ; ASHA Leader Magazine Volume 27 ; 27 ; >
-      au < exists ; exists ; 2023 ; ASHA Leader Magazine Volume 28 ; 28 ; >
-  }
-}
+#{
+#  plugin = needs.plugin
+#  implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+#
+#  {
+#    title <
+#      name = ASHA Leader ;
+#      eissn = 1085-9586
+#    >
+#
+#      param[journal_id] = leader
+#      param[base_url] = https://leader.pubs.asha.org/
+#      #Changed from a journal to a magazine as of April 2020.
+#
+#      au < exists ; exists ; 2020 ; ASHA Leader Magazine Volume 25 ; 25 ; >
+#      au < exists ; exists ; 2021 ; ASHA Leader Magazine Volume 26 ; 26 ; >
+#      au < exists ; exists ; 2022 ; ASHA Leader Magazine Volume 27 ; 27 ; >
+#      au < exists ; exists ; 2023 ; ASHA Leader Magazine Volume 28 ; 28 ; >
+#  }
+#}
 
 }
