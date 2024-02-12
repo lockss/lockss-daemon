@@ -81,6 +81,9 @@ public class SilverchairCommonThemeBooksHtmlMetadataExtractorFactory implements 
         }
         // this will have the correct protocol for this AU
         am.replace(MetadataField.FIELD_ACCESS_URL, url);
+
+        am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_BOOK);
+
         return am;
       }
     };
