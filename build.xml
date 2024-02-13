@@ -253,7 +253,7 @@ Args:
 
   <property name="commons.beanutils.jar" value="${lib}/commons-beanutils-1.9.4.jar" />
   <property name="commons.cli.jar" value="${lib}/commons-cli-1.6.0.jar" />
-  <property name="commons.codec.jar" value="${lib}/commons-codec-1.16.0.jar" />
+  <property name="commons.codec.jar" value="${lib}/commons-codec-1.16.1.jar" />
   <property name="commons.collections.jar" value="${lib}/commons-collections-3.2.2.jar" />
   <property name="commons.collections4.jar" value="${lib}/commons-collections4-4.4.jar" />
   <property name="commons.compress.jar" value="${lib}/commons-compress-1.25.0.jar" />
