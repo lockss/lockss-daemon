@@ -16,8 +16,8 @@
     implicit < status ; status2 ; year ; name ; param[directory] >
 
     {
-      #param[base_url] = https://clockss-test.lockss.org/sourcefiles/eajse-released/
-      #tested this Au with testing bucket, it is ready
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/eajse-released/
+      #*4* tested this Au with testing bucket, it is ready
       au < exists ; exists ; 2024 ; Eurasian Journal of Science and Engineering Source Content 2024_01 ; 2024_01 >
     }
   }
