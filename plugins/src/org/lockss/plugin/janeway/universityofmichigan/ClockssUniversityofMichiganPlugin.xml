@@ -67,13 +67,4 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_name</string>
     <string>"University of Michigan Journals Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>
-  <entry>
-    <string>au_permitted_host_pattern</string>
-    <list>
-      <string>"activetravelstudies\.org"</string>
-      <string>"cdnjs\.cloudflare\.com"</string>
-      <string>"use\.typekit\.net"</string>
-      <string>"maxcdn\.bootstrapcdn\.com"</string>
-    </list>
-  </entry>
 </map>
