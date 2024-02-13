@@ -26,7 +26,7 @@
     au < manifest ; exists ; 2019 ; 2019 ; Blue-Green Systems Volume 1 ; 1 ; >
     au < manifest ; exists ; 2020 ; 2020 ; Blue-Green Systems Volume 2 ; 2 ; >
     au < manifest ; exists ; 2021 ; 2021 ; Blue-Green Systems Volume 3 ; 3 ; >
-    au < finished ; manifest ; 2022 ; 2022 ; Blue-Green Systems Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2022 ; 2022 ; Blue-Green Systems Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2023 ; 2023 ; Blue-Green Systems Volume 5 ; 5 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Blue-Green Systems Volume 6 ; 6 ; >
 
@@ -42,11 +42,11 @@
 
     param[journal_id] = h2open
 
-    au < finished ; manifest ; 2018 ; 2018 ; H2Open Journal Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; 2019 ; H2Open Journal Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2020 ; 2020 ; H2Open Journal Volume 3 ; 3 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2021 ; 2021 ; H2Open Journal Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2022 ; 2022 ; H2Open Journal Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; 2018 ; H2Open Journal Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; 2019 ; H2Open Journal Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2020 ; 2020 ; H2Open Journal Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2021 ; 2021 ; H2Open Journal Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2022 ; 2022 ; H2Open Journal Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2023 ; 2023 ; H2Open Journal Volume 6 ; 6 ; >
     au < manifest ; exists ; 2024 ; 2024 ; H2Open Journal Volume 7 ; 7 ; >
 
@@ -113,11 +113,11 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Hydrology Research Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Hydrology Research Volume 47 ; 47 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Hydrology Research Volume 48 ; 48 ; >
-    au < finished ; manifest ; 2018 ; 2018 ; Hydrology Research Volume 49 ; 49 ; reingest3.clockss.org:8083 > 
+    au < finished ; crawling ; 2018 ; 2018 ; Hydrology Research Volume 49 ; 49 ; reingest3.clockss.org:8083 > 
     au < finished ; crawling ; 2019 ; 2019 ; Hydrology Research Volume 50 ; 50 ; reingest4.clockss.org:8082 > 
-    au < finished ; manifest ; 2020 ; 2020 ; Hydrology Research Volume 51 ; 51 ; reingest3.clockss.org:8083 > 
-    au < finished ; manifest ; 2021 ; 2021 ; Hydrology Research Volume 52 ; 52 ; reingest3.clockss.org:8083 > 
-    au < finished ; manifest ; 2022 ; 2022 ; Hydrology Research Volume 53 ; 53 ; reingest4.clockss.org:8082 > 
+    au < finished ; crawling ; 2020 ; 2020 ; Hydrology Research Volume 51 ; 51 ; reingest3.clockss.org:8083 > 
+    au < finished ; crawling ; 2021 ; 2021 ; Hydrology Research Volume 52 ; 52 ; reingest3.clockss.org:8083 > 
+    au < finished ; crawling ; 2022 ; 2022 ; Hydrology Research Volume 53 ; 53 ; reingest4.clockss.org:8082 > 
     au < manifest ; exists ; 2023 ; 2023 ; Hydrology Research Volume 54 ; 54 ; > 
     au < manifest ; exists ; 2024 ; 2024 ; Hydrology Research Volume 55 ; 55 ; > 
 
@@ -142,11 +142,11 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Water and Climate Change Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Water and Climate Change Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Water and Climate Change Volume 8 ; 8 ; >
-    au < finished ; manifest ; 2018 ; 2018 ; Journal of Water and Climate Change Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; 2018 ; Journal of Water and Climate Change Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Water and Climate Change Volume 10 ; 10 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2020 ; 2020 ; Journal of Water and Climate Change Volume 11 ; 11 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2021 ; 2021 ; Journal of Water and Climate Change Volume 12 ; 12 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2022 ; 2022 ; Journal of Water and Climate Change Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2020 ; 2020 ; Journal of Water and Climate Change Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2021 ; 2021 ; Journal of Water and Climate Change Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2022 ; 2022 ; Journal of Water and Climate Change Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2023 ; 2023 ; Journal of Water and Climate Change Volume 14 ; 14 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Journal of Water and Climate Change Volume 15 ; 15 ; >
 
@@ -178,11 +178,11 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Water and Health Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Water and Health Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Water and Health Volume 15 ; 15 ; >
-    au < finished ; manifest ; 2018 ; 2018 ; Journal of Water and Health Volume 16 ; 16 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; 2019 ; Journal of Water and Health Volume 17 ; 17 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2020 ; 2020 ; Journal of Water and Health Volume 18 ; 18 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2021 ; 2021 ; Journal of Water and Health Volume 19 ; 19 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2022 ; 2022 ; Journal of Water and Health Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; 2018 ; Journal of Water and Health Volume 16 ; 16 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; 2019 ; Journal of Water and Health Volume 17 ; 17 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2020 ; 2020 ; Journal of Water and Health Volume 18 ; 18 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2021 ; 2021 ; Journal of Water and Health Volume 19 ; 19 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2022 ; 2022 ; Journal of Water and Health Volume 20 ; 20 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2023 ; 2023 ; Journal of Water and Health Volume 21 ; 21 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Journal of Water and Health Volume 22 ; 22 ; >
 
@@ -200,8 +200,8 @@
     param[journal_id] = jwrd
     #name changed from Journal of Water Reuse and Desalination
 
-    au < finished ; manifest ; 2021 ; 2021 ; Water Reuse Volume 11 ; 11 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2022 ; 2022 ; Water Reuse Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2021 ; 2021 ; Water Reuse Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2022 ; 2022 ; Water Reuse Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2023 ; 2023 ; Water Reuse Volume 13 ; 13 ; >
     au < expected ; exists ; 2024 ; 2024 ; Water Reuse Volume 14 ; 14 ; >
 
@@ -225,9 +225,9 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Water Reuse and Desalination Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Water Reuse and Desalination Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Water Reuse and Desalination Volume 7 ; 7 ; >
-    au < finished ; manifest ; 2018 ; 2018 ; Journal of Water Reuse and Desalination Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; 2019 ; Journal of Water Reuse and Desalination Volume 9 ; 9 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2020 ; 2020 ; Journal of Water Reuse and Desalination Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; 2018 ; Journal of Water Reuse and Desalination Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; 2019 ; Journal of Water Reuse and Desalination Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2020 ; 2020 ; Journal of Water Reuse and Desalination Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     #name and issn changed to Water Reuse
   }
 
@@ -250,11 +250,11 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Water, Sanitation and Hygiene for Development Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Water, Sanitation and Hygiene for Development Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Water, Sanitation and Hygiene for Development Volume 7 ; 7 ; >
-    au < finished ; manifest ; 2018 ; 2018 ; Journal of Water, Sanitation and Hygiene for Development Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; 2019 ; Journal of Water, Sanitation and Hygiene for Development Volume 9 ; 9 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2020 ; 2020 ; Journal of Water, Sanitation and Hygiene for Development Volume 10 ; 10 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2021 ; 2021 ; Journal of Water, Sanitation and Hygiene for Development Volume 11 ; 11 ; reingest3.clockss.org:8083 > #403 forbidden, https://iwa.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
-    au < finished ; manifest ; 2022 ; 2022 ; Journal of Water, Sanitation and Hygiene for Development Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; 2018 ; Journal of Water, Sanitation and Hygiene for Development Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; 2019 ; Journal of Water, Sanitation and Hygiene for Development Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2020 ; 2020 ; Journal of Water, Sanitation and Hygiene for Development Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2021 ; 2021 ; Journal of Water, Sanitation and Hygiene for Development Volume 11 ; 11 ; reingest3.clockss.org:8083 > #403 forbidden, https://iwa.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
+    au < finished ; crawling ; 2022 ; 2022 ; Journal of Water, Sanitation and Hygiene for Development Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2023 ; 2023 ; Journal of Water, Sanitation and Hygiene for Development Volume 13 ; 13 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Journal of Water, Sanitation and Hygiene for Development Volume 14 ; 14 ; >
 
@@ -271,8 +271,8 @@
     param[journal_id] = aqua
     #Previously Journal of Water Supply: Research and Technology - Aqua
 
-    au < finished ; manifest ; 2021 ; 2021 ; AQUA: Water Infrastructure, Ecosystems and Society Volume 70 ; 70 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2022 ; 2022 ; AQUA: Water Infrastructure, Ecosystems and Society Volume 71 ; 71 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2021 ; 2021 ; AQUA: Water Infrastructure, Ecosystems and Society Volume 70 ; 70 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2022 ; 2022 ; AQUA: Water Infrastructure, Ecosystems and Society Volume 71 ; 71 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2023 ; 2023 ; AQUA: Water Infrastructure, Ecosystems and Society Volume 72 ; 72 ; >
     au < manifest ; exists ; 2024 ; 2024 ; AQUA: Water Infrastructure, Ecosystems and Society Volume 73 ; 73 ; >
 
@@ -310,8 +310,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Water Supply: Research and Technology - Aqua Volume 65 ; 65 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Water Supply: Research and Technology - Aqua Volume 66 ; 66 ; >
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Water Supply: Research and Technology - Aqua Volume 67 ; 67 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 2019 ; Journal of Water Supply: Research and Technology - Aqua Volume 68 ; 68 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2020 ; 2020 ; Journal of Water Supply: Research and Technology - Aqua Volume 69 ; 69 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; 2019 ; Journal of Water Supply: Research and Technology - Aqua Volume 68 ; 68 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2020 ; 2020 ; Journal of Water Supply: Research and Technology - Aqua Volume 69 ; 69 ; reingest3.clockss.org:8083 >
     #publisher changed name, issn AQUA: Water Infrastructure, Ecosystems and Society
   }
   
@@ -345,11 +345,11 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Hydroinformatics Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Hydroinformatics Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Hydroinformatics Volume 19 ; 19 ; >
-    au < finished ; manifest ; 2018 ; 2018 ; Journal of Hydroinformatics Volume 20 ; 20 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; 2019 ; Journal of Hydroinformatics Volume 21 ; 21 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2020 ; 2020 ; Journal of Hydroinformatics Volume 22 ; 22 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2021 ; 2021 ; Journal of Hydroinformatics Volume 23 ; 23 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2022 ; 2022 ; Journal of Hydroinformatics Volume 24 ; 24 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; 2018 ; Journal of Hydroinformatics Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; 2019 ; Journal of Hydroinformatics Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2020 ; 2020 ; Journal of Hydroinformatics Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2021 ; 2021 ; Journal of Hydroinformatics Volume 23 ; 23 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2022 ; 2022 ; Journal of Hydroinformatics Volume 24 ; 24 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2023 ; 2023 ; Journal of Hydroinformatics Volume 25 ; 25 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Journal of Hydroinformatics Volume 26 ; 26 ; >
 
@@ -378,10 +378,10 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Water Practice and Technology Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Water Practice and Technology Volume 12 ; 12 ; >
     au < finished ; crawling ; 2018 ; 2018 ; Water Practice and Technology Volume 13 ; 13 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2019 ; 2019 ; Water Practice and Technology Volume 14 ; 14 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2020 ; 2020 ; Water Practice and Technology Volume 15 ; 15 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2021 ; 2021 ; Water Practice and Technology Volume 16 ; 16 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2022 ; 2022 ; Water Practice and Technology Volume 17 ; 17 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; 2019 ; Water Practice and Technology Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2020 ; 2020 ; Water Practice and Technology Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2021 ; 2021 ; Water Practice and Technology Volume 16 ; 16 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2022 ; 2022 ; Water Practice and Technology Volume 17 ; 17 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2023 ; 2023 ; Water Practice and Technology Volume 18 ; 18 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Water Practice and Technology Volume 19 ; 19 ; >
 
@@ -413,11 +413,11 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Water Policy Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Water Policy Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Water Policy Volume 19 ; 19 ; >
-    au < finished ; manifest ; 2018 ; 2018 ; Water Policy Volume 20 ; 20 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; 2019 ; Water Policy Volume 21 ; 21 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2020 ; 2020 ; Water Policy Volume 22 ; 22 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2021 ; 2021 ; Water Policy Volume 23 ; 23 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2022 ; 2022 ; Water Policy Volume 24 ; 24 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; 2018 ; Water Policy Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; 2019 ; Water Policy Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2020 ; 2020 ; Water Policy Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2021 ; 2021 ; Water Policy Volume 23 ; 23 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2022 ; 2022 ; Water Policy Volume 24 ; 24 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2023 ; 2023 ; Water Policy Volume 25 ; 25 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Water Policy Volume 26 ; 26 ; >
 
@@ -436,11 +436,11 @@
     #param[base_url] = http://wqrjc.iwaponline.com/
     #name = Water Quality Research Journal of Canada ; title removed the of Canada in 2018
 
-    au < finished ; manifest ; 2018 ; 2018 ; Water Quality Research Journal Volume 53 ; 53 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; 2018 ; Water Quality Research Journal Volume 53 ; 53 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; Water Quality Research Journal Volume 54 ; 54 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2020 ; 2020 ; Water Quality Research Journal Volume 55 ; 55 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2021 ; 2021 ; Water Quality Research Journal Volume 56 ; 56 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2022 ; 2022 ; Water Quality Research Journal Volume 57 ; 57 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2020 ; 2020 ; Water Quality Research Journal Volume 55 ; 55 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2021 ; 2021 ; Water Quality Research Journal Volume 56 ; 56 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2022 ; 2022 ; Water Quality Research Journal Volume 57 ; 57 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2023 ; 2023 ; Water Quality Research Journal Volume 58 ; 58 ; >
     au < expected ; exists ; 2024 ; 2024 ; Water Quality Research Journal Volume 59 ; 59 ; >
 
@@ -562,11 +562,11 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Water Science and Technology Volume 71-72 ; 71-72 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Water Science and Technology Volume 73-74 ; 73-74 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Water Science and Technology Volume 75-76 ; 75-76 ; >
-    au < finished ; manifest ; 2018 ; 2018 ; Water Science and Technology Volume 77-78 ; 77-78 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; 2019 ; Water Science and Technology Volume 79-80 ; 79-80 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2020 ; 2020 ; Water Science and Technology Volume 81-82 ; 81-82 ; reingest2.clockss.org:8085 >
-    au < finished ; manifest ; 2021 ; 2021 ; Water Science and Technology Volume 83-84 ; 83-84 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2022 ; 2022 ; Water Science and Technology Volume 85-86 ; 85-86 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; 2018 ; Water Science and Technology Volume 77-78 ; 77-78 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; 2019 ; Water Science and Technology Volume 79-80 ; 79-80 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2020 ; 2020 ; Water Science and Technology Volume 81-82 ; 81-82 ; reingest2.clockss.org:8085 >
+    au < finished ; crawling ; 2021 ; 2021 ; Water Science and Technology Volume 83-84 ; 83-84 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2022 ; 2022 ; Water Science and Technology Volume 85-86 ; 85-86 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2023 ; 2023 ; Water Science and Technology Volume 87-88 ; 87-88 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Water Science and Technology Volume 89-90 ; 89-90 ; >
 
@@ -595,17 +595,17 @@
     au < manifest ; exists ; 2009 ; 2009 ; Water Science and Technology: Water Supply Volume 9 ; 9 ; >
     au < manifest ; exists ; 2010 ; 2010 ; Water Science and Technology: Water Supply Volume 10 ; 10 ; >
     au < manifest ; exists ; 2011 ; 2011 ; Water Science and Technology: Water Supply Volume 11 ; 11 ; >
-    au < finished ; manifest ; 2012 ; 2012 ; Water Science and Technology: Water Supply Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2012 ; 2012 ; Water Science and Technology: Water Supply Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Water Science and Technology: Water Supply Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Water Science and Technology: Water Supply Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Water Science and Technology: Water Supply Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Water Science and Technology: Water Supply Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Water Science and Technology: Water Supply Volume 17 ; 17 ; >
-    au < finished ; manifest ; 2018 ; 2018 ; Water Science and Technology: Water Supply Volume 18 ; 18 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; 2019 ; Water Science and Technology: Water Supply Volume 19 ; 19 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2020 ; 2020 ; Water Science and Technology: Water Supply Volume 20 ; 20 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2021 ; 2021 ; Water Supply Volume 21 ; 21 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2022 ; 2022 ; Water Supply Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2018 ; 2018 ; Water Science and Technology: Water Supply Volume 18 ; 18 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2019 ; 2019 ; Water Science and Technology: Water Supply Volume 19 ; 19 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2020 ; 2020 ; Water Science and Technology: Water Supply Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2021 ; 2021 ; Water Supply Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+    au < finished ; crawling ; 2022 ; 2022 ; Water Supply Volume 22 ; 22 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2023 ; 2023 ; Water Supply Volume 23 ; 23 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Water Supply Volume 24 ; 24 ; >
 

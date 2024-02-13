@@ -193,7 +193,7 @@
       au < finished ; finished ; 2019 ; Engineering Structures and Technologies Volume 2019 ; 11 ; 2019 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083>
       au < deepCrawl ; exists ; 2020 ; Engineering Structures and Technologies Volume 2020 ; 12 ; 2020 ; https://journals.vgtu.lt/ ; >
       au < finished ; finished ; 2021 ; Engineering Structures and Technologies Volume 2021 ; 13 ; 2021 ; https://journals.vilniustech.lt/ ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2022 ; Engineering Structures and Technologies Volume 2022 ; 14 ; 2022 ; https://journals.vilniustech.lt/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2022 ; Engineering Structures and Technologies Volume 2022 ; 14 ; 2022 ; https://journals.vilniustech.lt/ ; reingest3.clockss.org:8083 >
       au < expected ; exists ; 2023 ; Engineering Structures and Technologies Volume 2023 ; 15 ; 2023 ; https://journals.vilniustech.lt/ ; >
       au < expected ; exists ; 2024 ; Engineering Structures and Technologies Volume 2024 ; 16 ; 2024 ; https://journals.vilniustech.lt/ ; >
 
@@ -475,7 +475,7 @@
 
       param[journal_id] = MLA
 
-      au < finished ; manifest ; 2009 ; Science - Future of Lithuania Volume 2009 ; 1 ; 2009 ; https://journals.vilniustech.lt/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2009 ; Science - Future of Lithuania Volume 2009 ; 1 ; 2009 ; https://journals.vilniustech.lt/ ; reingest2.clockss.org:8085 >
 
       au < doNotProcess ; exists ; 2010 ; Science - Future of Lithuania Volume 2010 ; 2 ; 2010 ; https://journals.vgtu.lt/ ; >
       au < doNotProcess ; exists ; 2011 ; Science - Future of Lithuania Volume 2011 ; 3 ; 2011 ; https://journals.vgtu.lt/ ; >
