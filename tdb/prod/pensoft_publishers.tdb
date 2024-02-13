@@ -1176,11 +1176,9 @@
 
       param[au_oai_set] = jel
 
-      au < released ; 2020 ; 2020 ; Journal of European Landscapes Volume 2020 ; 2020 ; https://journalofeuropeanlandscapes.eu/ >
-      au < released ; 2021 ; 2021 ; Journal of European Landscapes Volume 2021 ; 2021 ; https://journalofeuropeanlandscapes.eu/ >
-      au < manifest ; 2022 ; 2022 ; Journal of European Landscapes Volume 2022 ; 2022 ; https://journalofeuropeanlandscapes.eu/ >
-      au < expected ; 2023 ; 2023 ; Journal of European Landscapes Volume 2023 ; 2023 ; https://journalofeuropeanlandscapes.eu/ >
-      au < expected ; 2024 ; 2024 ; Journal of European Landscapes Volume 2024 ; 2024 ; https://journalofeuropeanlandscapes.eu/ >
+      au < down ; 2020 ; 2020 ; Journal of European Landscapes Volume 2020 ; 2020 ; https://journalofeuropeanlandscapes.eu/ >
+      au < down ; 2021 ; 2021 ; Journal of European Landscapes Volume 2021 ; 2021 ; https://journalofeuropeanlandscapes.eu/ >
+      au < doNotProcess ; 2022 ; 2022 ; Journal of European Landscapes Volume 2022 ; 2022 ; https://journalofeuropeanlandscapes.eu/ >
 
   }
 

@@ -2625,12 +2625,12 @@
       param[journal_code] = md
       #journal changing its name in 2020 from 'MedChemComm'
 
-      au < released ; 2020 ; MedChemComm Volume 11 ; 11 ; 2020 ; https://pubs.rsc.org/ >
-      au < released ; 2021 ; MedChemComm Volume 12 ; 12 ; 2021 ; https://pubs.rsc.org/ >
-      au < released ; 2022 ; MedChemComm Volume 13 ; 13 ; 2022 ; https://pubs.rsc.org/ >
-      au < manifest ; 2023 ; MedChemComm Volume 14 ; 14 ; 2023 ; https://pubs.rsc.org/ >
+      au < released ; 2020 ; RSC Medicinal Chemistry Volume 11 ; 11 ; 2020 ; https://pubs.rsc.org/ >
+      au < released ; 2021 ; RSC Medicinal Chemistry Volume 12 ; 12 ; 2021 ; https://pubs.rsc.org/ >
+      au < released ; 2022 ; RSC Medicinal Chemistry Volume 13 ; 13 ; 2022 ; https://pubs.rsc.org/ >
+      au < manifest ; 2023 ; RSC Medicinal Chemistry Volume 14 ; 14 ; 2023 ; https://pubs.rsc.org/ >
       au < manifest ; 2024 ; RSC Medicinal Chemistry Volume 15 ; 15 ; 2024 ; https://pubs.rsc.org/ >
-      au < expected ; 2024 ; MedChemComm Volume 15 ; 15 ; 2024 ; https://pubs.rsc.org/ >
+      au < expected ; 2024 ; RSC Medicinal Chemistry Volume 15 ; 15 ; 2024 ; https://pubs.rsc.org/ >
 
   }
 

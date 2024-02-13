@@ -1165,9 +1165,8 @@
       #Moved to https://www.aup-online.com/
 
       au < finished ; crawling ; 2020 ; 2020 ; Journal of European Landscapes Volume 2020 ; 2020 ; https://journalofeuropeanlandscapes.eu/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of European Landscapes Volume 2021 ; 2021 ; https://journalofeuropeanlandscapes.eu/ ; >
-      au < crawling ; exists ; 2022 ; 2022 ; Journal of European Landscapes Volume 2022 ; 2022 ; https://journalofeuropeanlandscapes.eu/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of European Landscapes Volume 2023 ; 2023 ; https://journalofeuropeanlandscapes.eu/ ; >
+      au < frozen ; exists ; 2021 ; 2021 ; Journal of European Landscapes Volume 2021 ; 2021 ; https://journalofeuropeanlandscapes.eu/ ; >
+      au < frozen ; exists ; 2022 ; 2022 ; Journal of European Landscapes Volume 2022 ; 2022 ; https://journalofeuropeanlandscapes.eu/ ; >
 
   }
 
