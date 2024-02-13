@@ -502,7 +502,7 @@
     au < manifest ; 1999 ; 1 ; Scandinavian Journal of Disability Research Volume 1 ; 1999 >
     au < doNotProcess ; 2000 ; 2 ; Scandinavian Journal of Disability Research Volume 2 ; 2000 >
     au < doNotProcess ; 2001 ; 3 ; Scandinavian Journal of Disability Research Volume 3 ; 2001 >
-    au < manifest ; 2002 ; 4 ; Scandinavian Journal of Disability Research Volume 4 ; 2002 >
+    au < ready ; 2002 ; 4 ; Scandinavian Journal of Disability Research Volume 4 ; 2002 >
     au < doNotProcess ; 2003 ; 5 ; Scandinavian Journal of Disability Research Volume 5 ; 2003 >
     au < doNotProcess ; 2004 ; 6 ; Scandinavian Journal of Disability Research Volume 6 ; 2004 >
     au < doNotProcess ; 2005 ; 7 ; Scandinavian Journal of Disability Research Volume 7 ; 2005 >
@@ -569,7 +569,7 @@
       au < doNotProcess ; 2005 ; 5 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2005 ; 2005 >
       au < doNotProcess ; 2006 ; 6 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2006 ; 2006 >
       au < doNotProcess ; 2007 ; 7 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2007 ; 2007 >
-      au < manifest ; 2008 ; 8 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2008 ; 2008 >
+      au < ready ; 2008 ; 8 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2008 ; 2008 >
       au < doNotProcess ; 2009 ; 9 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2009 ; 2009 >
       au < doNotProcess ; 2010 ; 10 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2010 ; 2010 >
       au < doNotProcess ; 2011 ; 11 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2011 ; 2011 >
@@ -874,9 +874,9 @@
       param[base_url] = https://account.datascience.codata.org/
       param[journal_id] = up-j-dsj
 
-      au < manifest ; 2002 ; 1 ; Data Science Journal Volume 2002 ; 2002 >
+      au < ready ; 2002 ; 1 ; Data Science Journal Volume 2002 ; 2002 >
       au < doNotProcess ; 2003 ; 2 ; Data Science Journal Volume 2003 ; 2003 >
-      au < manifest ; 2004 ; 3 ; Data Science Journal Volume 2004 ; 2004 >
+      au < ready ; 2004 ; 3 ; Data Science Journal Volume 2004 ; 2004 >
       au < doNotProcess ; 2005 ; 4 ; Data Science Journal Volume 2005 ; 2005 >
       au < doNotProcess ; 2006 ; 5 ; Data Science Journal Volume 2006 ; 2006 >
       au < doNotProcess ; 2007 ; 6 ; Data Science Journal Volume 2007 ; 2007 >
@@ -2959,10 +2959,10 @@
       param[base_url] = https://account.journal.houstonmethodist.org/
       param[journal_id] = up-j-mdbcj
 
-      au < manifest ; 2004 ; 1 ; Methodist DeBakey Cardiovascular Journal Volume 2004 ; 2004 >
-      au < manifest ; 2005 ; 2 ; Methodist DeBakey Cardiovascular Journal Volume 2005 ; 2005 >
-      au < manifest ; 2006 ; 3 ; Methodist DeBakey Cardiovascular Journal Volume 2006 ; 2006 >
-      au < manifest ; 2007 ; 4 ; Methodist DeBakey Cardiovascular Journal Volume 2007 ; 2007 >
+      au < ready ; 2004 ; 1 ; Methodist DeBakey Cardiovascular Journal Volume 2004 ; 2004 >
+      au < ready ; 2005 ; 2 ; Methodist DeBakey Cardiovascular Journal Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 3 ; Methodist DeBakey Cardiovascular Journal Volume 2006 ; 2006 >
+      au < ready ; 2007 ; 4 ; Methodist DeBakey Cardiovascular Journal Volume 2007 ; 2007 >
       au < released ; 2008 ; 5 ; Methodist DeBakey Cardiovascular Journal Volume 2008 ; 2008 >
       au < released ; 2009 ; 6 ; Methodist DeBakey Cardiovascular Journal Volume 2009 ; 2009 >
       au < released ; 2010 ; 7 ; Methodist DeBakey Cardiovascular Journal Volume 2010 ; 2010 >
