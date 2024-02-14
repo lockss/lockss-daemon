@@ -1367,8 +1367,8 @@
       param[base_url] = https://sp.copernicus.org/
       param[home_url] = https://www.state-of-the-planet.net/
 
-      au < expected ; 2023 ; 2023 ; State of the Planet Volume 1 ; 1 >
-      au < expected ; 2024 ; 2024 ; State of the Planet Volume 2 ; 2 >
+      au < expected ; 2023 ; 2023 ; State of the Planet Volume 1 ; 1-osr7 >
+      au < expected ; 2024 ; 2024 ; State of the Planet Volume 2 ; 2-oae2023 >
 
   }
 
