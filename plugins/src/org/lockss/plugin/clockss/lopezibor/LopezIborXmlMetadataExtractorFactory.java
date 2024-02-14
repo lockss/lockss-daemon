@@ -30,68 +30,70 @@ POSSIBILITY OF SUCH DAMAGE.
 
 */
 
-package org.lockss.plugin.clockss.entrepreneurshipandsustainability;
+package org.lockss.plugin.clockss.lopezibor;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.io.FilenameUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
+import org.lockss.plugin.clockss.scienceopen.ScienceOpenMetadataUtils;
+import org.lockss.plugin.clockss.scienceopen.ScienceOpenSchemaHelper;
 import org.lockss.util.Logger;
+import org.lockss.util.MetadataUtil;
 
-public class EntrepreneurshipandSustainabilityXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory{
+public class LopezIborXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
+        private static final Logger log = Logger.getLogger(LopezIborXmlMetadataExtractorFactory.class);
 
-    private static final Logger log = Logger.getLogger(EntrepreneurshipandSustainabilityXmlMetadataExtractorFactory.class);
-
-    private static SourceXmlSchemaHelper EandSCrossRefPublishingHelper = null;
+    private static SourceXmlSchemaHelper JatsPublishingHelper = null;
 
     @Override
     public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
         String contentType)
             throws PluginException {
-      return new EandSCrossRefArticleMetadataExtractor();
+      return new LopezIborXmlMetadataExtractor();
     }
     
-    public class EandSCrossRefArticleMetadataExtractor extends SourceXmlMetadataExtractor {
+    public class LopezIborXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
         @Override
         protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
         // Once you have it, just keep returning the same one. It won't change.
-        if (EandSCrossRefPublishingHelper == null) {
-            EandSCrossRefPublishingHelper = new JatsPublishingSchemaHelper();
-        }
-        return EandSCrossRefPublishingHelper;
+            if (JatsPublishingHelper == null) {
+                JatsPublishingHelper = new LopezIborSchemaHelper();
+                log.info("setting up schema helper");
+            }
+            return JatsPublishingHelper;
         }
 
         /*
-         * One issue will be mapped to one xml file. So, for example, 
-         * an xml file will look like this: 10.9770_IRD.2019.1.1.xml
-         * and map to the following pdfs: 
-         * 10.9770_IRD.2019.1.1(1).pdf, 10.9770_IRD.2019.1.1(2).pdf, 10.9770_IRD.2019.1.1(3).pdf, 
-         * 10.9770_IRD.2019.1.1(4).pdf, 10.9770_IRD.2019.1.1(5).pdf
-         * The doi matches the pdf filename- the only thing that needs to be updated is the '/'
-         * needs to be replaced with '_'.
+         * There is a one-to-one relationship between the pdf and xml.
          */
         @Override
-        protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
+        protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper schemaHelper, CachedUrl cu,
         ArticleMetadata oneAM) {
-            String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-            log.debug3("CU Base is: " + cuBase);
-            String doi = oneAM.getRaw(helper.getFilenameXPathKey());
-            doi = doi.replace("/","_");
-            log.debug3("DOI: " + doi);
-            String pdfName = cuBase + doi + ".pdf";
-            log.debug3("The pdf is: " + pdfName);
+            String cuBase = cu.getUrl();
+            log.info("CU Base is: " + cuBase);
+            String pdfName = cuBase.substring(0,cuBase.length() - 3) + "pdf";
+            log.info("The pdf is: " + pdfName);
             List<String> returnList = new ArrayList<String>();
             returnList.add(pdfName);
             return returnList;
         }
+
+
+        @Override
+        protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
+                                       CachedUrl cu, ArticleMetadata thisAM) {
+            thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(LopezIborSchemaHelper.JATS_date));
+        }
     }
+    
 }
