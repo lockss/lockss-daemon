@@ -34,23 +34,27 @@ package org.lockss.plugin.silverchair.geoscienceworld;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.BitSet;
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
+import java.util.Set;
 
-import org.lockss.config.Configuration;
 import org.lockss.crawler.BaseCrawlSeed;
-import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.Crawler;
 import org.lockss.daemon.PluginException;
-import org.lockss.plugin.ArchivalUnit.ConfigurationException;
+import org.lockss.extractor.LinkExtractor;
+import org.lockss.plugin.AuUtil;
+import org.lockss.plugin.FetchedUrlData;
 import org.lockss.plugin.UrlCacher;
-import org.lockss.plugin.UrlData;
+import org.lockss.plugin.UrlConsumer;
+import org.lockss.plugin.UrlConsumerFactory;
 import org.lockss.plugin.UrlFetcher;
+import org.lockss.plugin.UrlFetcher.FetchResult;
+import org.lockss.plugin.base.BaseUrlFetcher;
+import org.lockss.plugin.base.SimpleUrlConsumer;
 import org.lockss.plugin.gigascience.GigaScienceDoiLinkExtractor;
-import org.lockss.util.CIProperties;
-import org.lockss.util.Constants;
+import org.lockss.util.CharsetUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.urlconn.CacheException;
 
@@ -61,8 +65,10 @@ public class GeoscienceWorldSilverchairCrawlSeed extends BaseCrawlSeed{
 
     protected Crawler.CrawlerFacade facade;
 
+    protected List<String> urlList;
+
     protected String startUrl;
-    protected String redirectUrl;
+
 
     public GeoscienceWorldSilverchairCrawlSeed(Crawler.CrawlerFacade facade) {
         super(facade);
@@ -72,20 +78,55 @@ public class GeoscienceWorldSilverchairCrawlSeed extends BaseCrawlSeed{
         this.facade = facade;
     }
 
-    
-    //should only be one redirect url, store in fake html page
-    protected void storeStartUrls(String redirectUrl, String url) throws IOException {
-        StringBuilder sb = new StringBuilder();
-        sb.append("<html>\n");
-        log.debug3("SINGLE_node_API_URL is :"  + redirectUrl);
-        sb.append("<a href=\"" + redirectUrl + "\">" + redirectUrl + "</a><br/>\n");
-        sb.append("</html>");
-        CIProperties headers = new CIProperties();
-        //Should use a constant here
-        headers.setProperty("content-type", "text/html; charset=utf-8");
-        UrlData ud = new UrlData(new ByteArrayInputStream(sb.toString().getBytes(Constants.ENCODING_UTF_8)), headers, url);
-        UrlCacher cacher = facade.makeUrlCacher(ud);
-        cacher.storeContent();
+    @Override
+    public Collection<String> doGetStartUrls() throws PluginException, IOException {
+        Collection<String> startUrls = au.getStartUrls();
+        if (startUrls == null || startUrls.isEmpty()) {
+            throw new PluginException.InvalidDefinition("CrawlSeed expects the Plugin to define a non-null start URL list");
+        }
+        startUrl = startUrls.iterator().next();
+        UrlFetcher uf = makeUrlFetcher(startUrl);
+        // Make request
+        UrlFetcher.FetchResult fr = null;
+        try {
+            fr = uf.fetch();
+        }catch (CacheException ce){
+            if(ce.getCause() != null && ce.getCause().getMessage().contains("LOCKSS")) {
+                log.debug("OAI result errored due to LOCKSS audit proxy. Trying alternate start Url", ce);
+            } else {
+                log.debug2("Stopping due to fatal CacheException", ce);
+                Throwable cause = ce.getCause();
+                if (cause != null && IOException.class.equals(cause.getClass())) {
+                    throw (IOException)cause; // Unwrap IOException
+                }
+                else {
+                    throw ce;
+                }
+            }
+        }
+        if (fr == UrlFetcher.FetchResult.FETCHED) {
+            facade.getCrawlerStatus().removePendingUrl(startUrl);
+            facade.getCrawlerStatus().signalUrlFetched(startUrl);
+        }
+        log.debug3("the start url is:" + startUrl);
+        log.debug3("the fetch result is:" + startUrl);
+        return startUrls;
     }
 
+    protected UrlFetcher makeUrlFetcher( final String url) {
+        // Make a URL fetcher
+        BaseUrlFetcher uf = (BaseUrlFetcher)facade.makeUrlFetcher(url);
+
+        // Set custom URL consumer factory
+        uf.setUrlConsumerFactory(new UrlConsumerFactory() {
+            @Override
+            public UrlConsumer createUrlConsumer(Crawler.CrawlerFacade ucfFacade,
+                                                 FetchedUrlData ucfFud) {
+                // Make custom URL consumer
+                return new SimpleUrlConsumer(ucfFacade, ucfFud) {
+                };
+            }
+        });
+        return uf;
+    }
 }
