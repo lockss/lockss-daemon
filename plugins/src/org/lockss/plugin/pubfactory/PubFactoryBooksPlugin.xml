@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>5</string>
+        <string>6</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -100,6 +100,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <!-- https://www.manchesteropenhive.com/downloadpdf/9789198557718/9789198557718.00006.xml -->
             <!-- https://www.manchesteropenhive.com/downloadmarc/9789198557718/9789198557718.xml -->
             <string>1,"^%s(view|downloadpdf|downloadmarc|display)/%s", base_url, book_isbn</string>
+            <string>1,"^%sdownloadpdf/display/%s", base_url, book_isbn</string>
         </list>
     </entry>
     <entry>
@@ -128,7 +129,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
-            <string>"^%sdownloadpdf/%s", base_url, book_isbn</string>
+            <string>"^%sdownloadpdf(/display)?/%s", base_url, book_isbn</string>
         </list>
     </entry>
     <entry>
