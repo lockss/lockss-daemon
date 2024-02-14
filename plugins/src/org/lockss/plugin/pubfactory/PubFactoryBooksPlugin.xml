@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>4</string>
+        <string>5</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -88,6 +88,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?v=[^/]*)?$", base_url_host</string>
             <!-- trailing 'print is the same as the landing page. -->
             <string>2,"^%s.*print$", base_url</string>
+            <string>2,"^%slogin", base_url</string>
             <!--  any pseudo-absolute url masquerading as relative url should be ignored. PubFactory has a bug where they
                   will improperly format href attributes.
                     note: if you will update the rule here, do so in PubFactoryJournalsPlugin as well. -->
@@ -98,7 +99,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <!-- https://www.manchesteropenhive.com/view/9789198557718/9789198557718.00016.xml?chapterBody=PDF -->
             <!-- https://www.manchesteropenhive.com/downloadpdf/9789198557718/9789198557718.00006.xml -->
             <!-- https://www.manchesteropenhive.com/downloadmarc/9789198557718/9789198557718.xml -->
-            <string>1,"^%s(view|downloadpdf|downloadmarc)/%s", base_url, book_isbn</string>
+            <string>1,"^%s(view|downloadpdf|downloadmarc|display)/%s", base_url, book_isbn</string>
         </list>
     </entry>
     <entry>
