@@ -241,4 +241,10 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
         cacher.storeContent();
     }
 
+    //need to be able to continue crawl after finding 500 non-fatal errors 
+    //and 504 Gateway Timeout errors
+    public boolean isFailOnStartUrlError() {
+        return false;
+    }
+
 }

@@ -68,7 +68,7 @@ public class GigaScienceHttpResponseHandler implements CacheResultHandler {
       case 504:
         log.debug2("504 error (Gateway time-out):" + url);
         //some of the API calls hang because of how large the datasets are; retry if 504
-        return new CacheException.RetryableNetworkException_3();
+        return new CacheException.RetryableNetworkException_5();
       default:
         log.debug2("default");
         throw new UnsupportedOperationException();
