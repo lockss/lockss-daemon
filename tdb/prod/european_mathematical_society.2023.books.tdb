@@ -1,0 +1,24 @@
+{
+    publisher <
+        name = European Mathematical Society ; 
+        info[platform] = Mark - Custom. Publisher moved to new URL/platform https://ems.press/
+  >
+    plugin = needs.plugin
+    #plugin = org.lockss.plugin.europeanmathematicalsociety.EuropeanMathematicalSocietyBooksPlugin
+    #param[base_url] = https://www.ems-ph.org/
+    param[base_url] = https://ems.press/  #Publisher moved to new URL, new platform.
+
+    implicit < status ; status2 ; year ; isbn ; eisbn ; name ; param[book_number] ; hidden[proxy] >
+
+
+  {
+    title <
+      name = EMS Books ;
+      type = bookSeries
+    >
+      #Books that are not in a series
+
+      au < exists ; exists ; 2021 ; 978-3-98547-006-8 ; 978-3-98547-506-3 ; Handbook of Automata Theory ; 248 ; >
+
+  }
+}
