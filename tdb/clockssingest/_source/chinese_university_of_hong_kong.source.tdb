@@ -19,7 +19,7 @@
       #Not Zipped
       plugin = org.lockss.plugin.clockss.chineseuniversityhongkong.ClockssCUHKSourcePlugin
 
-      au < readySource ; crawling ; 2023 ; Chinese University of Hong Kong Source Content 2023_01 ; 2023_01 >
+      au < readySource ; frozen ; 2023 ; Chinese University of Hong Kong Source Content 2023_01 ; 2023_01 >
       au < expected ; exists ; 2024 ; Chinese University of Hong Kong Source Content 2024_01 ; 2024_01 >
 
     }
@@ -28,7 +28,7 @@
       #Zipped
       plugin = org.lockss.plugin.clockss.chineseuniversityhongkong.ClockssChineseUniversityHongKongSourcePlugin
 
-      au < readySource ; crawling ; 2023 ; Chinese University of Hong Kong Source Content 2023_02 ; 2023_02 >
+      au < readySource ; frozen ; 2023 ; Chinese University of Hong Kong Source Content 2023_02 ; 2023_02 >
       au < expected ; exists ; 2024 ; Chinese University of Hong Kong Source Content 2024_02 ; 2024_02 >
 
     }

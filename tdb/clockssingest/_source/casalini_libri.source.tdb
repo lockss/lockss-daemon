@@ -24,7 +24,7 @@
       {
         param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/casalini-released/
 
-        au < readySource ; crawling ; 2023 ; Casalini Libri Source Content 2023_01 ; 2023_01 >
+        au < readySource ; frozen ; 2023 ; Casalini Libri Source Content 2023_01 ; 2023_01 >
         au < expected ; exists ; 2024 ; Casalini Libri Source Content 2024_01 ; 2024_01 >
 
       }
@@ -59,7 +59,7 @@
       plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriBooksSourcePlugin
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/casalinibooks-released/
 
-      au < readySource ; crawling ; 2023 ; Casalini Books Source Content 2023 ; 2023 >
+      au < readySource ; frozen ; 2023 ; Casalini Books Source Content 2023 ; 2023 >
       au < expected ; exists ; 2024 ; Casalini Books Source Content 2024 ; 2024 >
 
     }

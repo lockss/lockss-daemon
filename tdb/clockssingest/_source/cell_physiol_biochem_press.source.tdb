@@ -23,7 +23,7 @@
     {
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/cpbp-released/
 
-      au < readySource ; crawling ; 2023 ; Cell Physiol Biochem Press Source Content 2023_01 ; 2023_01 >
+      au < readySource ; frozen ; 2023 ; Cell Physiol Biochem Press Source Content 2023_01 ; 2023_01 >
       au < expected ; exists ; 2024 ; Cell Physiol Biochem Press Source Content 2024_01 ; 2024_01 >
 
     }
