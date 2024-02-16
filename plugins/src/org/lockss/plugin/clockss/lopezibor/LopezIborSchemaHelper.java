@@ -32,6 +32,8 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.clockss.lopezibor;
 
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.extractor.MetadataField;
@@ -46,7 +48,6 @@ public class LopezIborSchemaHelper extends JatsPublishingSchemaHelper {
     private static final Logger log = Logger.getLogger(LopezIborSchemaHelper.class);
     
     static protected final String JATS_date = "front/article-meta/pub-date[@pub-type=\"epublish\"]";
-    static protected final String JATS_eissn = "/issn[@pub-type = \"epub\" or @publication-format=\"online-only\"]";
 
     static private final NodeValue JATS_DATE_VALUE = new NodeValue() {
     @Override
@@ -90,10 +91,8 @@ public class LopezIborSchemaHelper extends JatsPublishingSchemaHelper {
 
     @Override
     public Map<String, XmlDomMetadataExtractor.XPathValue> getArticleMetaMap() {
-
         Map<String, XmlDomMetadataExtractor.XPathValue> JATS_articleMap = super.getArticleMetaMap();
         JATS_articleMap.put(JATS_date, JATS_DATE_VALUE);
-        //JATS_articleMap.put(JATS_eissn, JATS_ISSN_VALUE);
         return JATS_articleMap;
     }
 

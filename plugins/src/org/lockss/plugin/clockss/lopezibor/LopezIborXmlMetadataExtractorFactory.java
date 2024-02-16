@@ -44,8 +44,6 @@ import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
-import org.lockss.plugin.clockss.scienceopen.ScienceOpenMetadataUtils;
-import org.lockss.plugin.clockss.scienceopen.ScienceOpenSchemaHelper;
 import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
 
