@@ -32,8 +32,6 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.clockss.lopezibor;
 
 import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.extractor.MetadataField;
