@@ -27,7 +27,7 @@
     {
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/imrpress-released/
 
-    au < readySource ; frozen ; 2023 ; IMR Press Source Content 2023 ; 2023 >
+    au < readySource ; finished ; 2023 ; IMR Press Source Content 2023 ; 2023 >
     au < readySource ; crawling ; 2024 ; IMR Press Source Content 2024 ; 2024 >
 
     }

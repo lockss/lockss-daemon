@@ -27,7 +27,7 @@
     {
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/cda-released/
 
-      au < readySource ; frozen ; 2023 ; Journal of the Canadian Dental Association Source Content 2023 ; 2023 >
+      au < readySource ; finished ; 2023 ; Journal of the Canadian Dental Association Source Content 2023 ; 2023 >
       au < expected ; exists ; 2024 ; Journal of the Canadian Dental Association Source Content 2024 ; 2024 >
 
     }

@@ -31,7 +31,7 @@
 
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/hpa-released/
 
-      au < readySource ; frozen ; 2023 ; Hellenic Psychiatric Association Source Content 2023 ; 2023 >
+      au < readySource ; finished ; 2023 ; Hellenic Psychiatric Association Source Content 2023 ; 2023 >
       au < expected ; exists ; 2024 ; Hellenic Psychiatric Association Source Content 2024 ; 2024 >
 
     }

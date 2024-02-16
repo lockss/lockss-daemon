@@ -32,7 +32,7 @@
       implicit < status ; status2 ; year ; name ; param[year] >
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/aofoundation-released/
 
-      au < readySource ; frozen ; 2023 ; European Cells and Materials Source Content 2023 ; 2023 >
+      au < readySource ; finished ; 2023 ; European Cells and Materials Source Content 2023 ; 2023 >
       #No more AUs.  Publisher changed.
     }
 
