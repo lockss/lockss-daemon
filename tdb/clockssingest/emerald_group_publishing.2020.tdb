@@ -2474,9 +2474,9 @@
     au < frozen ; exists ; 1992 ; Employee Relations: An International Journal Volume 14 ; 14 ; >
     au < frozen ; exists ; 1993 ; Employee Relations: An International Journal Volume 15 ; 15 ; >
     au < finished ; crawling ; 1994 ; Employee Relations: An International Journal Volume 16 ; 16 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1995 ; Employee Relations: An International Journal Volume 17 ; 17 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1996 ; Employee Relations: An International Journal Volume 18 ; 18 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1997 ; Employee Relations: An International Journal Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1995 ; Employee Relations: An International Journal Volume 17 ; 17 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1996 ; Employee Relations: An International Journal Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1997 ; Employee Relations: An International Journal Volume 19 ; 19 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1998 ; Employee Relations: An International Journal Volume 20 ; 20 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 1999 ; Employee Relations: An International Journal Volume 21 ; 21 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2000 ; Employee Relations: An International Journal Volume 22 ; 22 ; >
@@ -2521,10 +2521,10 @@
 
     au < doNotProcess ; exists ; 1993 ; Empowerment in Organizations Volume 1 ; 1 ; >
     au < frozen ; exists ; 1994 ; Empowerment in Organizations Volume 2 ; 2 ; >
-    au < finished ; crawling ; 1995 ; Empowerment in Organizations Volume 3 ; 3 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1996 ; Empowerment in Organizations Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1995 ; Empowerment in Organizations Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1996 ; Empowerment in Organizations Volume 4 ; 4 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 1997 ; Empowerment in Organizations Volume 5 ; 5 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1998 ; Empowerment in Organizations Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1998 ; Empowerment in Organizations Volume 6 ; 6 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -2550,16 +2550,16 @@
     au < frozen ; exists ; 1992 ; Engineering Computations Volume 9 ; 9 ; >
     au < frozen ; exists ; 1993 ; Engineering Computations Volume 10 ; 10 ; >
     au < finished ; crawling ; 1994 ; Engineering Computations Volume 11 ; 11 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1995 ; Engineering Computations Volume 12 ; 12 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1996 ; Engineering Computations Volume 13 ; 13 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1997 ; Engineering Computations Volume 14 ; 14 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1998 ; Engineering Computations Volume 15 ; 15 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1999 ; Engineering Computations Volume 16 ; 16 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1995 ; Engineering Computations Volume 12 ; 12 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1996 ; Engineering Computations Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1997 ; Engineering Computations Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1998 ; Engineering Computations Volume 15 ; 15 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1999 ; Engineering Computations Volume 16 ; 16 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2000 ; Engineering Computations Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2001 ; Engineering Computations Volume 18 ; 18 ; >
-    au < finished ; crawling ; 2002 ; Engineering Computations Volume 19 ; 19 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2002 ; Engineering Computations Volume 19 ; 19 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2003 ; Engineering Computations Volume 20 ; 20 ; >
-    au < finished ; crawling ; 2004 ; Engineering Computations Volume 21 ; 21 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2004 ; Engineering Computations Volume 21 ; 21 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2005 ; Engineering Computations Volume 22 ; 22 ; >
     au < deepCrawl ; exists ; 2006 ; Engineering Computations Volume 23 ; 23 ; >
     au < deepCrawl ; exists ; 2007 ; Engineering Computations Volume 24 ; 24 ; >
@@ -2595,16 +2595,16 @@
     comment[journal_id] = ecam
 
     au < frozen ; exists ; 1994 ; Engineering, Construction and Architectural Management Volume 1 ; 1 ; >
-    au < finished ; crawling ; 1995 ; Engineering, Construction and Architectural Management Volume 2 ; 2 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1996 ; Engineering, Construction and Architectural Management Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1997 ; Engineering, Construction and Architectural Management Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1998 ; Engineering, Construction and Architectural Management Volume 5 ; 5 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1999 ; Engineering, Construction and Architectural Management Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1995 ; Engineering, Construction and Architectural Management Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1996 ; Engineering, Construction and Architectural Management Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1997 ; Engineering, Construction and Architectural Management Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1998 ; Engineering, Construction and Architectural Management Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1999 ; Engineering, Construction and Architectural Management Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2000 ; Engineering, Construction and Architectural Management Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2001 ; Engineering, Construction and Architectural Management Volume 8 ; 8 ; >
     au < deepCrawl ; exists ; 2002 ; Engineering, Construction and Architectural Management Volume 9 ; 9 ; >
-    au < finished ; crawling ; 2003 ; Engineering, Construction and Architectural Management Volume 10 ; 10 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2004 ; Engineering, Construction and Architectural Management Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2003 ; Engineering, Construction and Architectural Management Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2004 ; Engineering, Construction and Architectural Management Volume 11 ; 11 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2005 ; Engineering, Construction and Architectural Management Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2006 ; Engineering, Construction and Architectural Management Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2007 ; Engineering, Construction and Architectural Management Volume 14 ; 14 ; >
@@ -2645,13 +2645,13 @@
     au < frozen ; exists ; 1992 ; Environmental Management and Health Volume 3 ; 3 ; >
     au < frozen ; exists ; 1993 ; Environmental Management and Health Volume 4 ; 4 ; >
     au < frozen ; exists ; 1994 ; Environmental Management and Health Volume 5 ; 5 ; >
-    au < finished ; crawling ; 1995 ; Environmental Management and Health Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1995 ; Environmental Management and Health Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 1996 ; Environmental Management and Health Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1997 ; Environmental Management and Health Volume 8 ; 8 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1998 ; Environmental Management and Health Volume 9 ; 9 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1999 ; Environmental Management and Health Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1997 ; Environmental Management and Health Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1998 ; Environmental Management and Health Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1999 ; Environmental Management and Health Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2000 ; Environmental Management and Health Volume 11 ; 11 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2001 ; Environmental Management and Health Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2001 ; Environmental Management and Health Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2002 ; Environmental Management and Health Volume 13 ; 13 ; >
 
   }
@@ -2681,21 +2681,21 @@
     au < frozen ; exists ; 1992 ; Equal Opportunities International Volume 11 ; 11 ; >
     au < frozen ; exists ; 1993 ; Equal Opportunities International Volume 12 ; 12 ; >
     au < finished ; crawling ; 1994 ; Equal Opportunities International Volume 13 ; 13 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1995 ; Equal Opportunities International Volume 14 ; 14 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1996 ; Equal Opportunities International Volume 15 ; 15 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1997 ; Equal Opportunities International Volume 16 ; 16 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1998 ; Equal Opportunities International Volume 17 ; 17 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1999 ; Equal Opportunities International Volume 18 ; 18 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2000 ; Equal Opportunities International Volume 19 ; 19 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2001 ; Equal Opportunities International Volume 20 ; 20 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2002 ; Equal Opportunities International Volume 21 ; 21 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2003 ; Equal Opportunities International Volume 22 ; 22 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2004 ; Equal Opportunities International Volume 23 ; 23 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1995 ; Equal Opportunities International Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1996 ; Equal Opportunities International Volume 15 ; 15 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1997 ; Equal Opportunities International Volume 16 ; 16 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1998 ; Equal Opportunities International Volume 17 ; 17 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1999 ; Equal Opportunities International Volume 18 ; 18 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2000 ; Equal Opportunities International Volume 19 ; 19 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2001 ; Equal Opportunities International Volume 20 ; 20 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2002 ; Equal Opportunities International Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2003 ; Equal Opportunities International Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2004 ; Equal Opportunities International Volume 23 ; 23 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2005 ; Equal Opportunities International Volume 24 ; 24 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2006 ; Equal Opportunities International Volume 25 ; 25 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2006 ; Equal Opportunities International Volume 25 ; 25 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2007 ; Equal Opportunities International Volume 26 ; 26 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2008 ; Equal Opportunities International Volume 27 ; 27 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2009 ; Equal Opportunities International Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2009 ; Equal Opportunities International Volume 28 ; 28 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2741,7 +2741,7 @@
     comment[journal_id] = eihsc
 
     au < finished ; finished ; 2008 ; Ethnicity and Inequalities in Health and Social Care Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2009 ; Ethnicity and Inequalities in Health and Social Care Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2009 ; Ethnicity and Inequalities in Health and Social Care Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2010 ; Ethnicity and Inequalities in Health and Social Care Volume 3 ; 3 ; >
     au < finished ; frozen ; 2011 ; Ethnicity and Inequalities in Health and Social Care Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Ethnicity and Inequalities in Health and Social Care Volume 5 ; 5 ; reingest4.clockss.org:8082 >
@@ -2801,16 +2801,16 @@
     au < frozen ; exists ; 1992 ; European Business Review Volume 92 ; 92 ; >
     au < frozen ; exists ; 1993 ; European Business Review Volume 93 ; 93 ; >
     au < frozen ; exists ; 1994 ; European Business Review Volume 94 ; 94 ; >
-    au < finished ; crawling ; 1995 ; European Business Review Volume 95 ; 95 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1996 ; European Business Review Volume 96 ; 96 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1997 ; European Business Review Volume 97 ; 97 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1998 ; European Business Review Volume 98 ; 98 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1999 ; European Business Review Volume 99 ; 99 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1995 ; European Business Review Volume 95 ; 95 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1996 ; European Business Review Volume 96 ; 96 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1997 ; European Business Review Volume 97 ; 97 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1998 ; European Business Review Volume 98 ; 98 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1999 ; European Business Review Volume 99 ; 99 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2000 ; European Business Review Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2001 ; European Business Review Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2002 ; European Business Review Volume 14 ; 14 ; >
-    au < finished ; crawling ; 2003 ; European Business Review Volume 15 ; 15 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2004 ; European Business Review Volume 16 ; 16 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2003 ; European Business Review Volume 15 ; 15 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2004 ; European Business Review Volume 16 ; 16 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2005 ; European Business Review Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2006 ; European Business Review Volume 18 ; 18 ; >
     au < deepCrawl ; exists ; 2007 ; European Business Review Volume 19 ; 19 ; >
@@ -2845,14 +2845,14 @@
     param[journal_issn] = 1460-1060
     comment[journal_id] = ejim
 
-    au < finished ; crawling ; 1998 ; European Journal of Innovation Management Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1999 ; European Journal of Innovation Management Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1998 ; European Journal of Innovation Management Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1999 ; European Journal of Innovation Management Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2000 ; European Journal of Innovation Management Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2001 ; European Journal of Innovation Management Volume 4 ; 4 ; >
     au < deepCrawl ; exists ; 2002 ; European Journal of Innovation Management Volume 5 ; 5 ; >
-    au < finished ; crawling ; 2003 ; European Journal of Innovation Management Volume 6 ; 6 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2004 ; European Journal of Innovation Management Volume 7 ; 7 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2005 ; European Journal of Innovation Management Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2003 ; European Journal of Innovation Management Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2004 ; European Journal of Innovation Management Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2005 ; European Journal of Innovation Management Volume 8 ; 8 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2006 ; European Journal of Innovation Management Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2007 ; European Journal of Innovation Management Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2008 ; European Journal of Innovation Management Volume 11 ; 11 ; >
@@ -2914,11 +2914,11 @@
     au < frozen ; exists ; 1992 ; European Journal of Marketing Volume 26 ; 26 ; >
     au < frozen ; exists ; 1993 ; European Journal of Marketing Volume 27 ; 27 ; >
     au < frozen ; exists ; 1994 ; European Journal of Marketing Volume 28 ; 28 ; >
-    au < finished ; crawling ; 1995 ; European Journal of Marketing Volume 29 ; 29 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1996 ; European Journal of Marketing Volume 30 ; 30 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1997 ; European Journal of Marketing Volume 31 ; 31 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1998 ; European Journal of Marketing Volume 32 ; 32 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1999 ; European Journal of Marketing Volume 33 ; 33 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1995 ; European Journal of Marketing Volume 29 ; 29 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1996 ; European Journal of Marketing Volume 30 ; 30 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1997 ; European Journal of Marketing Volume 31 ; 31 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1998 ; European Journal of Marketing Volume 32 ; 32 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1999 ; European Journal of Marketing Volume 33 ; 33 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2000 ; European Journal of Marketing Volume 34 ; 34 ; >
     au < deepCrawl ; exists ; 2001 ; European Journal of Marketing Volume 35 ; 35 ; >
     au < deepCrawl ; exists ; 2002 ; European Journal of Marketing Volume 36 ; 36 ; >
@@ -2966,7 +2966,7 @@
     au < doNotProcess ; exists ; 1992 ; Executive Development Volume 5 ; 5 ; >
     au < doNotProcess ; exists ; 1993 ; Executive Development Volume 6 ; 6 ; >
     au < frozen ; exists ; 1994 ; Executive Development Volume 7 ; 7 ; >
-    au < finished ; crawling ; 1995 ; Executive Development Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1995 ; Executive Development Volume 8 ; 8 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2993,15 +2993,15 @@
     au < frozen ; exists ; 1992 ; Facilities Volume 10 ; 10 ; >
     au < frozen ; exists ; 1993 ; Facilities Volume 11 ; 11 ; >
     au < finished ; crawling ; 1994 ; Facilities Volume 12 ; 12 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1995 ; Facilities Volume 13 ; 13 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1996 ; Facilities Volume 14 ; 14 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1997 ; Facilities Volume 15 ; 15 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1998 ; Facilities Volume 16 ; 16 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1999 ; Facilities Volume 17 ; 17 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1995 ; Facilities Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1996 ; Facilities Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1997 ; Facilities Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1998 ; Facilities Volume 16 ; 16 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1999 ; Facilities Volume 17 ; 17 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2000 ; Facilities Volume 18 ; 18 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2001 ; Facilities Volume 19 ; 19 ; >
-    au < finished ; crawling ; 2002 ; Facilities Volume 20 ; 20 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2003 ; Facilities Volume 21 ; 21 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2002 ; Facilities Volume 20 ; 20 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2003 ; Facilities Volume 21 ; 21 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2004 ; Facilities Volume 22 ; 22 ; >
     au < deepCrawl ; exists ; 2005 ; Facilities Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; Facilities Volume 24 ; 24 ; >
@@ -3037,12 +3037,12 @@
     param[journal_issn] = 1463-6689
     comment[journal_id] = fs
 
-    au < finished ; crawling ; 1999 ; foresight Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1999 ; foresight Volume 1 ; 1 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2000 ; foresight Volume 2 ; 2 ; >
     au < deepCrawl ; exists ; 2001 ; foresight Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2002 ; foresight Volume 4 ; 4 ; >
-    au < finished ; crawling ; 2003 ; foresight Volume 5 ; 5 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2004 ; foresight Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2003 ; foresight Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2004 ; foresight Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2005 ; foresight Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2006 ; foresight Volume 8 ; 8 ; >
     au < deepCrawl ; exists ; 2007 ; foresight Volume 9 ; 9 ; >
@@ -3136,13 +3136,13 @@
     comment[journal_id] = hbs
     comment[continued_by] = 1751-5637
 
-    au < finished ; crawling ; 2000 ; Handbook of Business Strategy Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2000 ; Handbook of Business Strategy Volume 1 ; 1 ; reingest3.clockss.org:8083 >
     au < doesNotExist ; doesNotExist ; 2001 ; Handbook of Business Strategy Volume 2 ; 2 ; >
     au < doesNotExist ; doesNotExist ; 2002 ; Handbook of Business Strategy Volume 3 ; 3 ; >
-    au < finished ; crawling ; 2003 ; Handbook of Business Strategy Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2003 ; Handbook of Business Strategy Volume 4 ; 4 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2004 ; Handbook of Business Strategy Volume 5 ; 5 ; >
     au < finished ; frozen ; 2005 ; Handbook of Business Strategy Volume 6 ; 6 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2006 ; Handbook of Business Strategy Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2006 ; Handbook of Business Strategy Volume 7 ; 7 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -3161,16 +3161,16 @@
     au < frozen ; exists ; 1992 ; Health Education Volume 92 ; 92 ; >
     au < frozen ; exists ; 1993 ; Health Education Volume 93 ; 93 ; >
     au < frozen ; exists ; 1994 ; Health Education Volume 94 ; 94 ; >
-    au < finished ; crawling ; 1995 ; Health Education Volume 95 ; 95 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1996 ; Health Education Volume 96 ; 96 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1997 ; Health Education Volume 97 ; 97 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1998 ; Health Education Volume 98 ; 98 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1999 ; Health Education Volume 99 ; 99 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1995 ; Health Education Volume 95 ; 95 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1996 ; Health Education Volume 96 ; 96 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1997 ; Health Education Volume 97 ; 97 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1998 ; Health Education Volume 98 ; 98 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1999 ; Health Education Volume 99 ; 99 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2000 ; Health Education Volume 100 ; 100 ; >
     au < deepCrawl ; exists ; 2001 ; Health Education Volume 101 ; 101 ; >
     au < deepCrawl ; exists ; 2002 ; Health Education Volume 102 ; 102 ; >
-    au < finished ; crawling ; 2003 ; Health Education Volume 103 ; 103 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2004 ; Health Education Volume 104 ; 104 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2003 ; Health Education Volume 103 ; 103 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2004 ; Health Education Volume 104 ; 104 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2005 ; Health Education Volume 105 ; 105 ; >
     au < deepCrawl ; exists ; 2006 ; Health Education Volume 106 ; 106 ; >
     au < deepCrawl ; exists ; 2007 ; Health Education Volume 107 ; 107 ; >
@@ -3210,10 +3210,10 @@
     au < doNotProcess ; exists ; 1992 ; Health Manpower Management Volume 18 ; 18 ; >
     au < doNotProcess ; exists ; 1993 ; Health Manpower Management Volume 19 ; 19 ; >
     au < frozen ; exists ; 1994 ; Health Manpower Management Volume 20 ; 20 ; >
-    au < finished ; crawling ; 1995 ; Health Manpower Management Volume 21 ; 21 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1996 ; Health Manpower Management Volume 22 ; 22 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1997 ; Health Manpower Management Volume 23 ; 23 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1998 ; Health Manpower Management Volume 24 ; 24 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1995 ; Health Manpower Management Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1996 ; Health Manpower Management Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1997 ; Health Manpower Management Volume 23 ; 23 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1998 ; Health Manpower Management Volume 24 ; 24 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -3255,7 +3255,7 @@
     param[journal_issn] = 0819-8691
     comment[journal_id] = her
 
-    au < finished ; crawling ; 2004 ; History of Education Review Volume 33 ; 33 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2004 ; History of Education Review Volume 33 ; 33 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2005 ; History of Education Review Volume 34 ; 34 ; >
     au < deepCrawl ; exists ; 2006 ; History of Education Review Volume 35 ; 35 ; >
     au < deepCrawl ; exists ; 2007 ; History of Education Review Volume 36 ; 36 ; >
@@ -3290,14 +3290,14 @@
     param[journal_issn] = 1460-8790
     comment[journal_id] = hcs
 
-    au < finished ; crawling ; 1998 ; Housing, Care and Support: A journal on policy, research and practice Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1999 ; Housing, Care and Support: A journal on policy, research and practice Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1998 ; Housing, Care and Support: A journal on policy, research and practice Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1999 ; Housing, Care and Support: A journal on policy, research and practice Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2000 ; Housing, Care and Support: A journal on policy, research and practice Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2001 ; Housing, Care and Support: A journal on policy, research and practice Volume 4 ; 4 ; >
     au < deepCrawl ; exists ; 2002 ; Housing, Care and Support: A journal on policy, research and practice Volume 5 ; 5 ; >
-    au < finished ; crawling ; 2003 ; Housing, Care and Support: A journal on policy, research and practice Volume 6 ; 6 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2004 ; Housing, Care and Support: A journal on policy, research and practice Volume 7 ; 7 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2005 ; Housing, Care and Support: A journal on policy, research and practice Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2003 ; Housing, Care and Support: A journal on policy, research and practice Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2004 ; Housing, Care and Support: A journal on policy, research and practice Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2005 ; Housing, Care and Support: A journal on policy, research and practice Volume 8 ; 8 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2006 ; Housing, Care and Support: A journal on policy, research and practice Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2007 ; Housing, Care and Support: A journal on policy, research and practice Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Housing, Care and Support: A journal on policy, research and practice Volume 11 ; 11 ; >
@@ -3334,7 +3334,7 @@
 
     au < deepCrawl ; exists ; 2002 ; Human Resource Management International Digest Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < notReady ; exists ; 2003 ; Human Resource Management International Digest Volume 11 ; 11 ; > #no pdfs
-    au < finished ; crawling ; 2004 ; Human Resource Management International Digest Volume 12 ; 12 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2004 ; Human Resource Management International Digest Volume 12 ; 12 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2005 ; Human Resource Management International Digest Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2006 ; Human Resource Management International Digest Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2007 ; Human Resource Management International Digest Volume 15 ; 15 ; >
@@ -3377,21 +3377,21 @@
     au < frozen ; exists ; 1992 ; Humanomics Volume 8 ; 8 ; >
     au < doesNotExist ; doesNotExist ; 1993 ; Humanomics Volume 9 ; 9 ; >
     au < frozen ; exists ; 1994 ; Humanomics Volume 10 ; 10 ; >
-    au < finished ; crawling ; 1995 ; Humanomics Volume 11 ; 11 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1996 ; Humanomics Volume 12 ; 12 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1997 ; Humanomics Volume 13 ; 13 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1998 ; Humanomics Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1995 ; Humanomics Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1996 ; Humanomics Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1997 ; Humanomics Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1998 ; Humanomics Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 1999 ; Humanomics Volume 15 ; 15 ; >
     au < finished ; crawling ; 2000 ; Humanomics Volume 16 ; 16 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2001 ; Humanomics Volume 17 ; 17 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2001 ; Humanomics Volume 17 ; 17 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2002 ; Humanomics Volume 18 ; 18 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2003 ; Humanomics Volume 19 ; 19 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2004 ; Humanomics Volume 20 ; 20 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2005 ; Humanomics Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2003 ; Humanomics Volume 19 ; 19 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2004 ; Humanomics Volume 20 ; 20 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2005 ; Humanomics Volume 21 ; 21 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2006 ; Humanomics Volume 22 ; 22 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2007 ; Humanomics Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2007 ; Humanomics Volume 23 ; 23 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2008 ; Humanomics Volume 24 ; 24 ; >
-    au < finished ; crawling ; 2009 ; Humanomics Volume 25 ; 25 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2009 ; Humanomics Volume 25 ; 25 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2010 ; Humanomics Volume 26 ; 26 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2011 ; Humanomics Volume 27 ; 27 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; Humanomics Volume 28 ; 28 ; reingest3.clockss.org:8083 >
@@ -3490,17 +3490,17 @@
     au < frozen ; exists ; 1991 ; Industrial and Commercial Training Volume 23 ; 23 ; >
     au < frozen ; exists ; 1992 ; Industrial and Commercial Training Volume 24 ; 24 ; >
     au < frozen ; exists ; 1993 ; Industrial and Commercial Training Volume 25 ; 25 ; >
-    au < finished ; crawling ; 1994 ; Industrial and Commercial Training Volume 26 ; 26 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1995 ; Industrial and Commercial Training Volume 27 ; 27 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1996 ; Industrial and Commercial Training Volume 28 ; 28 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1997 ; Industrial and Commercial Training Volume 29 ; 29 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1998 ; Industrial and Commercial Training Volume 30 ; 30 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1999 ; Industrial and Commercial Training Volume 31 ; 31 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1994 ; Industrial and Commercial Training Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1995 ; Industrial and Commercial Training Volume 27 ; 27 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1996 ; Industrial and Commercial Training Volume 28 ; 28 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1997 ; Industrial and Commercial Training Volume 29 ; 29 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1998 ; Industrial and Commercial Training Volume 30 ; 30 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1999 ; Industrial and Commercial Training Volume 31 ; 31 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2000 ; Industrial and Commercial Training Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; Industrial and Commercial Training Volume 33 ; 33 ; >
-    au < finished ; crawling ; 2002 ; Industrial and Commercial Training Volume 34 ; 34 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2003 ; Industrial and Commercial Training Volume 35 ; 35 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2004 ; Industrial and Commercial Training Volume 36 ; 36 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2002 ; Industrial and Commercial Training Volume 34 ; 34 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2003 ; Industrial and Commercial Training Volume 35 ; 35 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2004 ; Industrial and Commercial Training Volume 36 ; 36 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2005 ; Industrial and Commercial Training Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; Industrial and Commercial Training Volume 38 ; 38 ; >
     au < deepCrawl ; exists ; 2007 ; Industrial and Commercial Training Volume 39 ; 39 ; >
@@ -3581,17 +3581,17 @@
     au < frozen ; exists ; 1991 ; Industrial Lubrication and Tribology Volume 43 ; 43 ; >
     au < frozen ; exists ; 1992 ; Industrial Lubrication and Tribology Volume 44 ; 44 ; >
     au < frozen ; exists ; 1993 ; Industrial Lubrication and Tribology Volume 45 ; 45 ; >
-    au < finished ; crawling ; 1994 ; Industrial Lubrication and Tribology Volume 46 ; 46 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1994 ; Industrial Lubrication and Tribology Volume 46 ; 46 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1995 ; Industrial Lubrication and Tribology Volume 47 ; 47 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1996 ; Industrial Lubrication and Tribology Volume 48 ; 48 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1997 ; Industrial Lubrication and Tribology Volume 49 ; 49 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1998 ; Industrial Lubrication and Tribology Volume 50 ; 50 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1999 ; Industrial Lubrication and Tribology Volume 51 ; 51 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1996 ; Industrial Lubrication and Tribology Volume 48 ; 48 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1997 ; Industrial Lubrication and Tribology Volume 49 ; 49 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1998 ; Industrial Lubrication and Tribology Volume 50 ; 50 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1999 ; Industrial Lubrication and Tribology Volume 51 ; 51 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2000 ; Industrial Lubrication and Tribology Volume 52 ; 52 ; >
-    au < finished ; crawling ; 2001 ; Industrial Lubrication and Tribology Volume 53 ; 53 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2002 ; Industrial Lubrication and Tribology Volume 54 ; 54 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2003 ; Industrial Lubrication and Tribology Volume 55 ; 55 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2004 ; Industrial Lubrication and Tribology Volume 56 ; 56 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2001 ; Industrial Lubrication and Tribology Volume 53 ; 53 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2002 ; Industrial Lubrication and Tribology Volume 54 ; 54 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2003 ; Industrial Lubrication and Tribology Volume 55 ; 55 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2004 ; Industrial Lubrication and Tribology Volume 56 ; 56 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2005 ; Industrial Lubrication and Tribology Volume 57 ; 57 ; >
     au < deepCrawl ; exists ; 2006 ; Industrial Lubrication and Tribology Volume 58 ; 58 ; >
     au < deepCrawl ; exists ; 2007 ; Industrial Lubrication and Tribology Volume 59 ; 59 ; >
@@ -3652,16 +3652,16 @@
     au < frozen ; exists ; 1992 ; Industrial Management & Data Systems Volume 92 ; 92 ; >
     au < frozen ; exists ; 1993 ; Industrial Management & Data Systems Volume 93 ; 93 ; >
     au < finished ; crawling ; 1994 ; Industrial Management & Data Systems Volume 94 ; 94 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1995 ; Industrial Management & Data Systems Volume 95 ; 95 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 1996 ; Industrial Management & Data Systems Volume 96 ; 96 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1997 ; Industrial Management & Data Systems Volume 97 ; 97 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1998 ; Industrial Management & Data Systems Volume 98 ; 98 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1999 ; Industrial Management & Data Systems Volume 99 ; 99 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1995 ; Industrial Management & Data Systems Volume 95 ; 95 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1996 ; Industrial Management & Data Systems Volume 96 ; 96 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1997 ; Industrial Management & Data Systems Volume 97 ; 97 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1998 ; Industrial Management & Data Systems Volume 98 ; 98 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1999 ; Industrial Management & Data Systems Volume 99 ; 99 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2000 ; Industrial Management & Data Systems Volume 100 ; 100 ; >
     au < deepCrawl ; exists ; 2001 ; Industrial Management & Data Systems Volume 101 ; 101 ; >
-    au < finished ; crawling ; 2002 ; Industrial Management & Data Systems Volume 102 ; 102 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2003 ; Industrial Management & Data Systems Volume 103 ; 103 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2004 ; Industrial Management & Data Systems Volume 104 ; 104 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2002 ; Industrial Management & Data Systems Volume 102 ; 102 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2003 ; Industrial Management & Data Systems Volume 103 ; 103 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2004 ; Industrial Management & Data Systems Volume 104 ; 104 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2005 ; Industrial Management & Data Systems Volume 105 ; 105 ; >
     au < deepCrawl ; exists ; 2006 ; Industrial Management & Data Systems Volume 106 ; 106 ; >
     au < deepCrawl ; exists ; 2007 ; Industrial Management & Data Systems Volume 107 ; 107 ; >
@@ -3716,12 +3716,12 @@
     au < frozen ; exists ; 1991 ; Industrial Robot: The international journal of industrial and service robotics Volume 18 ; 18 ; >
     au < doesNotExist ; doesNotExist ; 1992 ; Industrial Robot: The international journal of industrial and service robotics Volume 19 ; 19 ; >
     au < frozen ; exists ; 1993 ; Industrial Robot: The international journal of industrial and service robotics Volume 20 ; 20 ; >
-    au < finished ; crawling ; 1994 ; Industrial Robot: The international journal of industrial and service robotics Volume 21 ; 21 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 1995 ; Industrial Robot: The international journal of industrial and service robotics Volume 22 ; 22 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 1996 ; Industrial Robot: The international journal of industrial and service robotics Volume 23 ; 23 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1997 ; Industrial Robot: The international journal of industrial and service robotics Volume 24 ; 24 ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 1998 ; Industrial Robot: The international journal of industrial and service robotics Volume 25 ; 25 ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 1999 ; Industrial Robot: The international journal of industrial and service robotics Volume 26 ; 26 ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 1994 ; Industrial Robot: The international journal of industrial and service robotics Volume 21 ; 21 ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 1995 ; Industrial Robot: The international journal of industrial and service robotics Volume 22 ; 22 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 1996 ; Industrial Robot: The international journal of industrial and service robotics Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1997 ; Industrial Robot: The international journal of industrial and service robotics Volume 24 ; 24 ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 1998 ; Industrial Robot: The international journal of industrial and service robotics Volume 25 ; 25 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 1999 ; Industrial Robot: The international journal of industrial and service robotics Volume 26 ; 26 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2000 ; Industrial Robot: The international journal of industrial and service robotics Volume 27 ; 27 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2001 ; Industrial Robot: The international journal of industrial and service robotics Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2002 ; Industrial Robot: The international journal of industrial and service robotics Volume 29 ; 29 ; reingest3.clockss.org:8083 >
