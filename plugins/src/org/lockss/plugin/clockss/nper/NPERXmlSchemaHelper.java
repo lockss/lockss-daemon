@@ -37,7 +37,6 @@ import org.apache.commons.lang.StringUtils;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.XmlDomMetadataExtractor;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
-import org.lockss.plugin.clockss.JatsSetSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
 import org.w3c.dom.Node;
@@ -212,14 +211,52 @@ implements SourceXmlSchemaHelper {
     }
   };
 
-  static private final String articleNode = "/journal/article";
+  static private final XmlDomMetadataExtractor.NodeValue TITLE_VALUE = new XmlDomMetadataExtractor.NodeValue() {
+    @Override
+    public String getValue(Node node) {
 
-  protected static final String journal_title = "/journal/title-group[@language=\"EN\"]/title";
+      log.debug3("getValue of title");
+      NodeList elementChildren = node.getChildNodes();
+      if (elementChildren == null) return null;
+
+      // perhaps pick up iso attr if it's available
+      String title = null;
+      String subtitle = null;
+      // look at each child of the TitleElement for information
+      for (int j = 0; j < elementChildren.getLength(); j++) {
+        Node checkNode = elementChildren.item(j);
+        String nodeName = checkNode.getNodeName();
+        if ("sub-title".equals(nodeName) ) {
+          subtitle= checkNode.getTextContent();
+        } else if ("title".equals(nodeName)) {
+          title = checkNode.getTextContent();
+        }
+      }
+
+      StringBuilder valbuilder = new StringBuilder();
+      if (title != null) {
+        valbuilder.append(title);
+        if (subtitle != null && subtitle.length()>0) {
+          valbuilder.append("-" + subtitle);
+        }
+      } else {
+        log.debug3("no date found");
+        return null;
+      }
+      log.debug3("title found: " + valbuilder.toString());
+      return valbuilder.toString();
+    }
+  };
+
+  static private final String articleNode = "/journal/article|/journal/book";
+
+  protected static final String journal_title = "/journal/title-group/title";
   protected static final String eissn = "/journal/issn[@type=\"electronic\"]";
 
   private static final String publisher = "/journal/publisher/publisher-name";
-  protected static final String article_title =  "title-group[@language=\"EN\"]/title[@language=\"EN\"]";
-  protected static final String author =  "author-group[@language=\"EN\"]/author";
+  protected static final String article_title =  "title-group";
+  protected static final String article_title_alt =  "title";
+  protected static final String author =  "author-group/author";
   private static final String art_pubdate =  "pub-date[@date-type=\"pub\"]";
   private static final String volume =  "volume";
   private static final String issue =   "issue";
@@ -233,7 +270,8 @@ implements SourceXmlSchemaHelper {
     // article specific stuff
     articleMap.put(art_pubdate, DATE_VALUE);
     articleMap.put(publisher, XmlDomMetadataExtractor.TEXT_VALUE);
-    articleMap.put(article_title, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(article_title, TITLE_VALUE);
+    articleMap.put(article_title_alt, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(journal_title, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(author, AUTHOR_VALUE);
     articleMap.put(issue, XmlDomMetadataExtractor.TEXT_VALUE);
@@ -249,6 +287,7 @@ implements SourceXmlSchemaHelper {
   protected static final MultiValueMap cookMap = new MultiValueMap();
   static {
     cookMap.put(article_title, MetadataField.FIELD_ARTICLE_TITLE);
+    cookMap.put(article_title_alt, MetadataField.FIELD_ARTICLE_TITLE);
     cookMap.put(journal_title, MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put(author, MetadataField.FIELD_AUTHOR);
     cookMap.put(art_pubdate, MetadataField.FIELD_DATE);

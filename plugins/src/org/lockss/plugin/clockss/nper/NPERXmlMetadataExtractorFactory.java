@@ -44,6 +44,8 @@ import org.lockss.util.Logger;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class NPERXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
@@ -68,7 +70,7 @@ public class NPERXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorF
       if ( schemaHelper != null) {
         return  schemaHelper;
       }
-       schemaHelper = new NPERXmlSchemaHelper();
+      schemaHelper = new NPERXmlSchemaHelper();
       return  schemaHelper;
     }
     
@@ -104,8 +106,10 @@ public class NPERXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorF
 
       thisAM.replace(MetadataField.FIELD_ACCESS_URL, customAccessUrl);
 
-      thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE,MetadataField.PUBLICATION_TYPE_JOURNAL);
-      thisAM.put(MetadataField.FIELD_ARTICLE_TYPE,MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
+
+      thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
+      thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
+
     }
     
   }

@@ -94,8 +94,6 @@ public class TestNPERXmlMetadataExtractor extends LockssTestCase {
     return conf;
   }
 
-
-  
   private static final String realXMLFile = "sample.xml";
 
   public void testFromJatsPublishingXMLFile() throws Exception {
@@ -124,12 +122,55 @@ public class TestNPERXmlMetadataExtractor extends LockssTestCase {
       ArticleMetadata md = mdlist.get(0);
       assertNotNull(md);
 
+
       assertEquals("2006-7", md.get(MetadataField.FIELD_DATE));
       assertEquals("2150-6477", md.get(MetadataField.FIELD_EISSN));
       assertEquals("StandardsFoundation", md.get(MetadataField.FIELD_VOLUME));
       assertEquals("1", md.get(MetadataField.FIELD_ISSUE));
       assertEquals("Bibliophobia", md.get(MetadataField.FIELD_ARTICLE_TITLE));
       assertEquals("Will, Fitzhugh", md.get(MetadataField.FIELD_AUTHOR));
+
+
+    } finally {
+      IOUtil.safeClose(file_input);
+    }
+
+  }
+
+  private static final String realXMLFile2 = "sample2.xml";
+  public void testFromJatsPublishingXMLFile2() throws Exception {
+    InputStream file_input = null;
+    try {
+      file_input = getResourceAsStream(realXMLFile2);
+      String string_input = StringUtil.fromInputStream(file_input);
+      IOUtil.safeClose(file_input);
+
+      CIProperties xmlHeader = new CIProperties();
+      xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+      MockCachedUrl mcu = mau.addUrl(xml_url, true, true, xmlHeader);
+      // Now add all the pdf files in our AU since we check for them before emitting
+
+      mcu.setContent(string_input);
+      mcu.setContentSize(string_input.length());
+      mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+
+      FileMetadataExtractor me = new NPERXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
+      FileMetadataListExtractor mle =
+              new FileMetadataListExtractor(me);
+      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
+      assertNotEmpty(mdlist);
+      assertEquals(1, mdlist.size());
+
+      ArticleMetadata md = mdlist.get(0);
+      assertNotNull(md);
+
+
+      assertEquals("2010", md.get(MetadataField.FIELD_DATE));
+      assertEquals("6", md.get(MetadataField.FIELD_VOLUME));
+      assertEquals("8", md.get(MetadataField.FIELD_ISSUE));
+      assertEquals("BigVocab-A Dictionary-Based Guide to Metrologically Authoritative Vocabulary Testing and Learning", md.get(MetadataField.FIELD_ARTICLE_TITLE));
+      assertEquals("Robert, Oliphant", md.get(MetadataField.FIELD_AUTHOR));
+
 
     } finally {
       IOUtil.safeClose(file_input);

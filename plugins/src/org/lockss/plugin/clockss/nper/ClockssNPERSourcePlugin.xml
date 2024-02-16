@@ -41,14 +41,14 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>2</string>
+        <string>3</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
         <map>
             <entry>
                 <string>Metadata</string>
-                <string>2</string>
+                <string>3</string>
             </entry>
             <entry>
                 <string>Poll</string>
@@ -89,15 +89,6 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>plugin_article_metadata_extractor_factory</string>
         <string>org.lockss.plugin.clockss.nper.NPERArticleIteratorFactory</string>
-    </entry>
-    <entry>
-        <string>text/plain_metadata_extractor_factory_map</string>
-        <map>
-            <entry>
-                <string>*;RIS</string>
-                <string>org.lockss.plugin.clockss.nper.NPERXmlMetadataExtractorFactory</string>
-            </entry>
-        </map>
     </entry>
     <entry>
         <string>text/xml_metadata_extractor_factory_map</string>
