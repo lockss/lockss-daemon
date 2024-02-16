@@ -121,14 +121,14 @@
       attr[EncodingMatchRange]=200
     
       au < frozen ; exists ; 2000 ; British Journal of Radiology Volume 73 ; 73 ; https://www.birpublications.org/ ; >
-      au < frozen ; exists ; 2001 ; British Journal of Radiology Volume 74 ; 74 ; https://www.birpublications.org/ ; >
-      au < frozen ; exists ; 2002 ; British Journal of Radiology Volume 75 ; 75 ; https://www.birpublications.org/ ; >
-      au < frozen ; exists ; 2003 ; British Journal of Radiology Volume 76 ; 76 ; https://www.birpublications.org/ ; >
-      au < frozen ; exists ; 2004 ; British Journal of Radiology Volume 77 ; 77 ; https://www.birpublications.org/ ; >
-      au < frozen ; exists ; 2005 ; British Journal of Radiology Volume 78 ; 78 ; https://www.birpublications.org/ ; >
-      au < frozen ; exists ; 2006 ; British Journal of Radiology Volume 79 ; 79 ; https://www.birpublications.org/ ; >
-      au < frozen ; exists ; 2007 ; British Journal of Radiology Volume 80 ; 80 ; https://www.birpublications.org/ ; >
-      au < frozen ; exists ; 2008 ; British Journal of Radiology Volume 81 ; 81 ; https://www.birpublications.org/ ; >
+      au < finished ; manifest ; 2001 ; British Journal of Radiology Volume 74 ; 74 ; https://www.birpublications.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; British Journal of Radiology Volume 75 ; 75 ; https://www.birpublications.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2003 ; British Journal of Radiology Volume 76 ; 76 ; https://www.birpublications.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; British Journal of Radiology Volume 77 ; 77 ; https://www.birpublications.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; British Journal of Radiology Volume 78 ; 78 ; https://www.birpublications.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; British Journal of Radiology Volume 79 ; 79 ; https://www.birpublications.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2007 ; British Journal of Radiology Volume 80 ; 80 ; https://www.birpublications.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; British Journal of Radiology Volume 81 ; 81 ; https://www.birpublications.org/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2009 ; British Journal of Radiology Volume 82 ; 82 ; https://www.birpublications.org/ ; >
       au < crawling ; exists ; 2010 ; British Journal of Radiology Volume 83 ; 83 ; https://www.birpublications.org/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; British Journal of Radiology Volume 84 ; 84 ; https://www.birpublications.org/ ; >
@@ -257,12 +257,12 @@
       au < frozen ; exists ; 2000 ; Dentomaxillofacial Radiology Volume 29 ; 29 ; https://www.birpublications.org/ ; >
       au < frozen ; exists ; 2001 ; Dentomaxillofacial Radiology Volume 30 ; 30 ; https://www.birpublications.org/ ; >
       au < crawling ; exists ; 2002 ; Dentomaxillofacial Radiology Volume 31 ; 31 ; https://www.birpublications.org/ ; >
-      au < frozen ; exists ; 2003 ; Dentomaxillofacial Radiology Volume 32 ; 32 ; https://www.birpublications.org/ ; >
-      au < frozen ; exists ; 2004 ; Dentomaxillofacial Radiology Volume 33 ; 33 ; https://www.birpublications.org/ ; >
-      au < frozen ; exists ; 2005 ; Dentomaxillofacial Radiology Volume 34 ; 34 ; https://www.birpublications.org/ ; >
-      au < frozen ; exists ; 2006 ; Dentomaxillofacial Radiology Volume 35 ; 35 ; https://www.birpublications.org/ ; >
-      au < frozen ; exists ; 2007 ; Dentomaxillofacial Radiology Volume 36 ; 36 ; https://www.birpublications.org/ ; >
-      au < frozen ; exists ; 2008 ; Dentomaxillofacial Radiology Volume 37 ; 37 ; https://www.birpublications.org/ ; >
+      au < finished ; manifest ; 2003 ; Dentomaxillofacial Radiology Volume 32 ; 32 ; https://www.birpublications.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; Dentomaxillofacial Radiology Volume 33 ; 33 ; https://www.birpublications.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2005 ; Dentomaxillofacial Radiology Volume 34 ; 34 ; https://www.birpublications.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; Dentomaxillofacial Radiology Volume 35 ; 35 ; https://www.birpublications.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; Dentomaxillofacial Radiology Volume 36 ; 36 ; https://www.birpublications.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; Dentomaxillofacial Radiology Volume 37 ; 37 ; https://www.birpublications.org/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2009 ; Dentomaxillofacial Radiology Volume 38 ; 38 ; https://www.birpublications.org/ ; >
       au < frozen ; exists ; 2010 ; Dentomaxillofacial Radiology Volume 39 ; 39 ; https://www.birpublications.org/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 ; https://www.birpublications.org/ ; > 
