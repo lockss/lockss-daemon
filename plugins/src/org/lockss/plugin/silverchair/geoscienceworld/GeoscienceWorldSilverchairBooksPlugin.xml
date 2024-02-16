@@ -69,8 +69,4 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>500=org.lockss.plugin.silverchair.geoscienceworld.GeoscienceWorldScHtmlHttpResponseHandler</string>
         </list>
     </entry>
-    <entry>
-        <string>plugin_crawl_seed_factory</string>
-        <string>org.lockss.plugin.silverchair.geoscienceworld.GeoscienceWorldSilverchairCrawlSeedFactory</string>
-    </entry>
 </map>
