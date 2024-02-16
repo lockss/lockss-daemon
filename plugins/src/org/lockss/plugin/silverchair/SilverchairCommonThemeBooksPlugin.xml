@@ -148,8 +148,10 @@ POSSIBILITY OF SUCH DAMAGE.
             https://pubs.geoscienceworld.org/sepm/books/book/1872/chapter-pdf/3800602/9781565762381_ch01.pdf
             https://books.rsc.org/books/edited-volume/chapter-pdf/1716368/bk9781839164224-00001.pdf
             https://iwaponline.com/ebooks/book-pdf/622664/wio9781789061246.pdf
+            https://pubs.geoscienceworld.org/gsa/books/edited-volume/2377/Recent-Advancement-in-Geoinformatics-and-Data
             -->
-            <string>1,"%s([^/]+/)?(books|ebooks)(/[^/]+)?(/[^/]+)?/(chapter|book)(-pdf)?/.*", base_url</string>
+            <string>1,"%s([^/]+/)?(books|edited-volume|monograph|ebooks)(/[^/]+)?(/[^/]+)?/(chapter|book)(-pdf)?/.*", base_url</string>
+            <string>1,"%s([a-z]+/)books/(books|edited-volume|monograph|ebooks)(/[1-9]+)(/[^/]+)$", base_url</string>
         </list>
     </entry>
     <entry>
