@@ -578,7 +578,7 @@
     au < finished ; manifest ; 2022 ; 9780813725543 ; 9780813795546 ; Geological Society of America Special Papers Volume 554 ; gsa/books/edited-volume/2335/New-Developments-in-the-Appalachian-Caledonian ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2022 ; 9780813725550 ; 9780813795553 ; Geological Society of America Special Papers Volume 555 ; gsa/books/edited-volume/2332/Tectonic-Evolution-of-the-Sevier-Laramide ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; 9780813725567 ; 9780813795560 ; Geological Society of America Special Papers Volume 556 ; gsa/books/edited-volume/2354/Understanding-the-Monterey-Formation-and-Similar ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2022 ; 9780813725574 ; 9780813795577 ; Geological Society of America Special Papers Volume 557 ; gsa/books/edited-volume/2351/From-the-Guajira-Desert-to-the-Apennines-and-from ; >
+    au < finished ; manifest ; 2022 ; 9780813725574 ; 9780813795577 ; Geological Society of America Special Papers Volume 557 ; gsa/books/edited-volume/2351/From-the-Guajira-Desert-to-the-Apennines-and-from ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2023 ; 9780813725581 ; 9780813795584 ; Geological Society of America Special Papers Volume 558 ; gsa/books/book/2377/Recent-Advancement-in-Geoinformatics-and-Data ; >
     au < manifest ; exists ; 2023 ; 9780813725598 ; 9780813795591 ; Geological Society of America Special Papers Volume 559 ; gsa/books/book/2442/Recent-Seismicity-in-the-Southern-Midcontinent-USA ; >
     au < deepCrawl ; exists ; 2023 ; 9780813725604 ; 9780813795607 ; Geological Society of America Special Papers Volume 560 ; gsa/books/monograph/2443/Geology-of-a-Large-Intact-Extensional-Oceanic-Arc ; >
@@ -807,15 +807,15 @@
     au < doNotProcess ; exists ; 2013 ; 9780813712109 ;  ; Geological Society of America Memoirs Volume 210 ; gsa/books/book/212/Tectonics-of-the-Southeastern-Tibetan-Plateau-and ; >
     au < doNotProcess ; exists ; 2014 ; 9780813712116 ;  ; Geological Society of America Memoirs Volume 211 ; gsa/books/book/218/Peninsular-Ranges-Batholith-Baja-California-and ; >
     au < doNotProcess ; exists ; 2015 ; 9780813712123 ;  ; Geological Society of America Memoirs Volume 212 ; gsa/books/book/216/Geodynamics-of-a-Cordilleran-Orogenic-System-The ; >
-    au < frozen ; exists ; 2017 ; 9780813712130 ;  ; Geological Society of America Memoirs Volume 213 ; gsa/books/book/1863/Linkages-and-Feedbacks-in-Orogenic-Systems ; >
-    au < frozen ; exists ; 2018 ; 9780813712147 ; 9780813782140 ; Geological Society of America Memoirs Volume 214 ; gsa/books/book/2088/Women-and-Geology-Who-Are-We-Where-Have-We-Come ; >
-    au < frozen ; exists ; 2019 ; 9780813712154 ; 9780813782157 ; Geological Society of America Memoirs Volume 215 ; gsa/books/book/2156/The-Edwards-Aquifer-The-Past-Present-and-Future-of ; >
-    au < frozen ; exists ; 2020 ; 9780813712161 ; 9780813782164 ; Geological Society of America Memoirs Volume 216 ; gsa/books/monograph/2297/Revising-the-Revisions-James-Hutton-s-Reputation ; >
-    au < frozen ; exists ; 2021 ; 9780813712178 ; 9780813782171 ; Geological Society of America Memoirs Volume 217 ; gsa/books/book/2321/Regional-Geology-of-Mount-Diablo-California-Its ; >
-    au < frozen ; exists ; 2022 ; 9780813712185 ; 9780813782188 ; Geological Society of America Memoirs Volume 218 ; gsa/books/edited-volume/2313/The-Evolution-of-Paleontological-Art ; >
-    au < frozen ; exists ; 2021 ;  ; 9780813782195 ; Geological Society of America Memoirs Volume 219 ; gsa/books/book/2322/Providencia-Island-A-Miocene-Stratovolcano-on-the ; >
+    au < finished ; manifest ; 2017 ; 9780813712130 ;  ; Geological Society of America Memoirs Volume 213 ; gsa/books/book/1863/Linkages-and-Feedbacks-in-Orogenic-Systems ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; 9780813712147 ; 9780813782140 ; Geological Society of America Memoirs Volume 214 ; gsa/books/book/2088/Women-and-Geology-Who-Are-We-Where-Have-We-Come ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2019 ; 9780813712154 ; 9780813782157 ; Geological Society of America Memoirs Volume 215 ; gsa/books/book/2156/The-Edwards-Aquifer-The-Past-Present-and-Future-of ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2020 ; 9780813712161 ; 9780813782164 ; Geological Society of America Memoirs Volume 216 ; gsa/books/monograph/2297/Revising-the-Revisions-James-Hutton-s-Reputation ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ; 9780813712178 ; 9780813782171 ; Geological Society of America Memoirs Volume 217 ; gsa/books/book/2321/Regional-Geology-of-Mount-Diablo-California-Its ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2022 ; 9780813712185 ; 9780813782188 ; Geological Society of America Memoirs Volume 218 ; gsa/books/edited-volume/2313/The-Evolution-of-Paleontological-Art ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ;  ; 9780813782195 ; Geological Society of America Memoirs Volume 219 ; gsa/books/book/2322/Providencia-Island-A-Miocene-Stratovolcano-on-the ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2023 ;  ; 9780813782201 ; Geological Society of America Memoirs Volume 220 ; gsa/books/edited-volume/2357/Laurentia-Turning-Points-in-the-Evolution-of-a ; >
-    au < frozen ; exists ; 2022 ;  ; 9780813782218 ; Geological Society of America Memoirs Volume 221 ; gsa/books/monograph/2361/Holocene-Evolution-of-the-Western-Louisiana-Texas ; >
+    au < finished ; manifest ; 2022 ;  ; 9780813782218 ; Geological Society of America Memoirs Volume 221 ; gsa/books/monograph/2361/Holocene-Evolution-of-the-Western-Louisiana-Texas ; reingest2.clockss.org:8085 >
 
   }
 
@@ -872,26 +872,26 @@
     au < doNotProcess ; exists ; 2016 ; 9780813700427 ; 9780813756424 ; Geological Society of America Field Guides Volume 42 ; gsa/books/book/886/Gold-Structures-and-Landforms-in-Central-South ; >
     au < doNotProcess ; exists ; 2016 ; 9780813700434 ; 9780813756431 ; Geological Society of America Field Guides Volume 43 ; gsa/books/book/887/Geology-of-the-Baraboo-Wisconsin-Area ; >
     au < doNotProcess ; exists ; 2016 ; 9780813700441 ; 9780813756448 ; Geological Society of America Field Guides Volume 44 ; gsa/books/book/1995/Unfolding-the-Geology-of-the-West ; >
-    au < frozen ; exists ; 2017 ; 9780813700458 ; 9780813756455 ; Geological Society of America Field Guides Volume 45 ; gsa/books/book/1986/Field-Excursions-in-Southern-California-Field ; >
-    au < frozen ; exists ; 2017 ; 9780813700465 ; 9780813756462 ; Geological Society of America Field Guides Volume 46 ; gsa/books/book/915/Forts-Floods-and-Periglacial-FeaturesExploring-the ; >
-    au < frozen ; exists ; 2017 ; 9780813700472 ; 9780813756479 ; Geological Society of America Field Guides Volume 47 ; gsa/books/book/916/From-the-Blue-Ridge-to-the-BeachGeological-Field ; >
-    au < frozen ; exists ; 2017 ; 9780813756486 ;  ; Geological Society of America Field Guides Volume 48 ; gsa/books/book/924/Geologic-Field-Trips-of-the-Canadian-Rockies-2017 ; >
-    au < frozen ; exists ; 2017 ; 9780813700496 ; 9780813756493 ; Geological Society of America Field Guides Volume 49 ; gsa/books/book/2047/From-the-Puget-Lowland-to-East-of-the-Cascade ; >
-    au < frozen ; exists ; 2018 ; 9780813700502 ; 9780813756509 ; Geological Society of America Field Guides Volume 50 ; gsa/books/book/2075/Geology-at-Every-ScaleField-Excursions-for-the ; >
-    au < frozen ; exists ; 2018 ; 9780813700519 ; 9780813756516 ; Geological Society of America Field Guides Volume 51 ; gsa/books/book/2139/Ancient-Oceans-Orogenic-Uplifts-and-Glacial-Ice ; >
-    au < frozen ; exists ; 2019 ; 9780813700526 ; 9780813756523 ; Geological Society of America Field Guides Volume 52 ; gsa/books/book/2158/Exploring-Extreme-and-Unusual-Geology-in-the ; >
-    au < frozen ; exists ; 2019 ; 9780813700533 ; 9780813756530 ; Geological Society of America Field Guides Volume 53 ; gsa/books/book/2152/Field-Excursions-in-the-Carolinas-Guides-for-the ; >
-    au < frozen ; exists ; 2019 ; 9780813700540 ; 9780813756547 ; Geological Society of America Field Guides Volume 54 ; gsa/books/book/2192/Iceland-The-Formation-and-Evolution-of-a-Young ; >
-    au < frozen ; exists ; 2019 ; 9780813700557 ; 9780813756554 ; Geological Society of America Field Guides Volume 55 ; gsa/books/book/2196/Geologic-Excursions-in-Southwestern-North-America ; >
-    au < frozen ; exists ; 2019 ; 9780813700564 ; 9780813756561 ; Geological Society of America Field Guides Volume 56 ; gsa/books/book/2220/The-Gigantic-Markagunt-and-Sevier-Gravity-Slides ; >
-    au < frozen ; exists ; 2020 ; 9780813700571 ; 9780813756578 ; Geological Society of America Field Guides Volume 57 ; gsa/books/book/2275/Geology-Field-Trips-in-and-around-the-U-S-Capital ; >
-    au < frozen ; exists ; 2020 ; 9780813700588 ; 9780813756585 ; Geological Society of America Field Guides Volume 58 ; gsa/books/book/2285/Architecture-and-Evolution-of-the-Crust-during ; >
-    au < frozen ; exists ; 2020 ; 9780813700595 ; 9780813756592 ; Geological Society of America Field Guides Volume 59 ; gsa/books/book/2279/From-the-Islands-to-the-Mountains-A-2020-View-of ; >
-    au < frozen ; exists ; 2021 ; 9780813700601 ; 9780813756608 ; Geological Society of America Field Guides Volume 60 ; gsa/books/book/2324/GSA-in-the-Field-in-2020 ; >
-    au < frozen ; exists ; 2021 ; 9780813700618 ; 9780813756615 ; Geological Society of America Field Guides Volume 61 ; gsa/books/book/2334/Field-Excursions-from-the-2021-GSA-Section ; >
-    au < frozen ; exists ; 2021 ; 9780813700625 ; 9780813756622 ; Geological Society of America Field Guides Volume 62 ; gsa/books/book/2333/From-Terranes-to-Terrains-Geologic-Field-Guides-on ; >
-    au < frozen ; exists ; 2022 ; 9780813700632 ; 9780813756639 ; Geological Society of America Field Guides Volume 63 ; gsa/books/book/2352/Field-Excursions-from-Las-Vegas-Nevada-Guides-to ; >
-    au < frozen ; exists ; 2022 ; 9780813700649 ; 9780813756646 ; Geological Society of America Field Guides Volume 64 ; gsa/books/edited-volume/2378/Field-Excursions-in-the-Front-Range-and-Wet ; >
+    au < finished ; manifest ; 2017 ; 9780813700458 ; 9780813756455 ; Geological Society of America Field Guides Volume 45 ; gsa/books/book/1986/Field-Excursions-in-Southern-California-Field ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2017 ; 9780813700465 ; 9780813756462 ; Geological Society of America Field Guides Volume 46 ; gsa/books/book/915/Forts-Floods-and-Periglacial-FeaturesExploring-the ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; 9780813700472 ; 9780813756479 ; Geological Society of America Field Guides Volume 47 ; gsa/books/book/916/From-the-Blue-Ridge-to-the-BeachGeological-Field ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; 9780813756486 ;  ; Geological Society of America Field Guides Volume 48 ; gsa/books/book/924/Geologic-Field-Trips-of-the-Canadian-Rockies-2017 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; 9780813700496 ; 9780813756493 ; Geological Society of America Field Guides Volume 49 ; gsa/books/book/2047/From-the-Puget-Lowland-to-East-of-the-Cascade ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2018 ; 9780813700502 ; 9780813756509 ; Geological Society of America Field Guides Volume 50 ; gsa/books/book/2075/Geology-at-Every-ScaleField-Excursions-for-the ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2018 ; 9780813700519 ; 9780813756516 ; Geological Society of America Field Guides Volume 51 ; gsa/books/book/2139/Ancient-Oceans-Orogenic-Uplifts-and-Glacial-Ice ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; 9780813700526 ; 9780813756523 ; Geological Society of America Field Guides Volume 52 ; gsa/books/book/2158/Exploring-Extreme-and-Unusual-Geology-in-the ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; 9780813700533 ; 9780813756530 ; Geological Society of America Field Guides Volume 53 ; gsa/books/book/2152/Field-Excursions-in-the-Carolinas-Guides-for-the ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; 9780813700540 ; 9780813756547 ; Geological Society of America Field Guides Volume 54 ; gsa/books/book/2192/Iceland-The-Formation-and-Evolution-of-a-Young ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2019 ; 9780813700557 ; 9780813756554 ; Geological Society of America Field Guides Volume 55 ; gsa/books/book/2196/Geologic-Excursions-in-Southwestern-North-America ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2019 ; 9780813700564 ; 9780813756561 ; Geological Society of America Field Guides Volume 56 ; gsa/books/book/2220/The-Gigantic-Markagunt-and-Sevier-Gravity-Slides ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; 9780813700571 ; 9780813756578 ; Geological Society of America Field Guides Volume 57 ; gsa/books/book/2275/Geology-Field-Trips-in-and-around-the-U-S-Capital ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; 9780813700588 ; 9780813756585 ; Geological Society of America Field Guides Volume 58 ; gsa/books/book/2285/Architecture-and-Evolution-of-the-Crust-during ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; 9780813700595 ; 9780813756592 ; Geological Society of America Field Guides Volume 59 ; gsa/books/book/2279/From-the-Islands-to-the-Mountains-A-2020-View-of ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2021 ; 9780813700601 ; 9780813756608 ; Geological Society of America Field Guides Volume 60 ; gsa/books/book/2324/GSA-in-the-Field-in-2020 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2021 ; 9780813700618 ; 9780813756615 ; Geological Society of America Field Guides Volume 61 ; gsa/books/book/2334/Field-Excursions-from-the-2021-GSA-Section ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ; 9780813700625 ; 9780813756622 ; Geological Society of America Field Guides Volume 62 ; gsa/books/book/2333/From-Terranes-to-Terrains-Geologic-Field-Guides-on ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2022 ; 9780813700632 ; 9780813756639 ; Geological Society of America Field Guides Volume 63 ; gsa/books/book/2352/Field-Excursions-from-Las-Vegas-Nevada-Guides-to ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2022 ; 9780813700649 ; 9780813756646 ; Geological Society of America Field Guides Volume 64 ; gsa/books/edited-volume/2378/Field-Excursions-in-the-Front-Range-and-Wet ; reingest2.clockss.org:8085 >
 
   }
   
@@ -974,7 +974,7 @@
     au < manifest ; exists ; 1988 ; 0813754062 ; 9780813754123 ; Centennial Field Guides Volume 6 ; gsa/books/book/869/Southeastern-Section-of-the-Geological-Society-of ; >
     au < manifest ; exists ; 1982 ; 0813752019 ; 9780813754710 ; Decade of North American Geology Special Publications Volume 1 ; gsa/books/book/845/Perspectives-in-Regional-Geological-Synthesis ; >
     au < manifest ; exists ; 1988 ;  ; 9780813754727 ; Decade of North American Geology Special Publications Volume 2 ; gsa/books/book/811/History-in-the-Making-The-Evolution-of-the-Decade ; >
-    au < frozen ; exists ; 2005 ;  ; 9780813754178 ; Continent Scale Map Series (scale 1:5,000,000) Volume 1 ; gsa/books/book/762/Decade-of-North-American-Geology-Geologic-Map-of ; >
+    au < finished ; manifest ; 2005 ;  ; 9780813754178 ; Continent Scale Map Series (scale 1:5,000,000) Volume 1 ; gsa/books/book/762/Decade-of-North-American-Geology-Geologic-Map-of ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 1987 ;  ; 9780813754185 ; Continent Scale Map Series (scale 1:5,000,000) Volume 2 ; gsa/books/book/787/Gravity-Anomaly-Map-of-North-America ; >
     au < manifest ; exists ; 1987 ;  ; 9780813754192 ; Continent Scale Map Series (scale 1:5,000,000) Volume 3 ; gsa/books/book/825/Magnetic-Anomaly-Map-of-North-America ; >
     au < manifest ; exists ; 1988 ;  ; 9780813754208 ; Continent Scale Map Series (scale 1:5,000,000) Volume 4 ; gsa/books/book/858/Seismicity-Map-of-North-America ; >
@@ -1054,13 +1054,13 @@
     au < manifest ; exists ; 1950 ; 081374301X ; 9780813759418 ; Application of Geology to Engineering Practice, Berkey Volume ; gsa/books/book/750/Application-of-Geology-to-Engineering-Practice ; >
     au < manifest ; exists ; 1952 ; 0813770025 ; 9780813759395 ; Life and Letters of R.A.F. Penrose, Jr. ; gsa/books/book/829/Life-and-Letters-of-R-A-F-Penrose-Jr ; >
     au < manifest ; exists ; 1962 ; 0813770165 ; 9780813759425 ; Petrologic Studies: A Volume in Honor of A.F. Buddington ; gsa/books/book/847/Petrologic-Studies ; >
-    au < frozen ; exists ; 2009 ; 9780813760322 ; 9780813759432 ; Geological Monitoring ; gsa/books/book/799/Geological-Monitoring ; >
-    au < frozen ; exists ; 2013 ; 9780813774022 ; 9780813759388 ; International Stratigraphic Guide, Second Edition: A Guide to Stratigraphic Classification, Terminology, and Procedure ; gsa/books/book/817/International-Stratigraphic-Guide ; >
-    au < frozen ; exists ; 2018 ; 9780813741239 ; 9780813741246 ; Managing the Gulf Coast Using Geology and Engineering ; gsa/books/book/2201/Managing-the-Gulf-Coast-Using-Geology-and ; >
-    au < frozen ; exists ; 2004 ;  ; 9780813759470 ; Volcanic hazards in the Mexico City metropolitan area from eruptions ; gsa/books/book/882/Volcanic-hazards-in-the-Mexico-City-metropolitan ; >
-    au < frozen ; exists ; 2005 ;  ; 9780813759463 ; The Geology of Central and Southeastern Utah: Itinerary for a one-day Field Trip ; gsa/books/book/873/The-Geology-of-Central-and-Southeastern-Utah ; >
-    au < frozen ; exists ; 2005 ; 9780813760315 ; 9780813759371 ; Incremental Assembly and Emplacement of Mesozoic Plutons in the Sierrra Nevada and White and Inyo Ranges, California ; gsa/books/book/821/Incremental-assembly-and-emplacement-of-Mesozoic ; >
-    au < frozen ; exists ; 2006 ;  ; 9780813759456 ; Fault Slip Transfer in the Eastern California Shear Zone-Walker Lane Belt ; gsa/books/book/784/Fault-Slip-Transfer-in-the-Eastern-California ; >
+    au < finished ; manifest ; 2009 ; 9780813760322 ; 9780813759432 ; Geological Monitoring ; gsa/books/book/799/Geological-Monitoring ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2013 ; 9780813774022 ; 9780813759388 ; International Stratigraphic Guide, Second Edition: A Guide to Stratigraphic Classification, Terminology, and Procedure ; gsa/books/book/817/International-Stratigraphic-Guide ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; 9780813741239 ; 9780813741246 ; Managing the Gulf Coast Using Geology and Engineering ; gsa/books/book/2201/Managing-the-Gulf-Coast-Using-Geology-and ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2004 ;  ; 9780813759470 ; Volcanic hazards in the Mexico City metropolitan area from eruptions ; gsa/books/book/882/Volcanic-hazards-in-the-Mexico-City-metropolitan ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2005 ;  ; 9780813759463 ; The Geology of Central and Southeastern Utah: Itinerary for a one-day Field Trip ; gsa/books/book/873/The-Geology-of-Central-and-Southeastern-Utah ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2005 ; 9780813760315 ; 9780813759371 ; Incremental Assembly and Emplacement of Mesozoic Plutons in the Sierrra Nevada and White and Inyo Ranges, California ; gsa/books/book/821/Incremental-assembly-and-emplacement-of-Mesozoic ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2006 ;  ; 9780813759456 ; Fault Slip Transfer in the Eastern California Shear Zone-Walker Lane Belt ; gsa/books/book/784/Fault-Slip-Transfer-in-the-Eastern-California ; reingest4.clockss.org:8082 >
 
   }
 
