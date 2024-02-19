@@ -227,7 +227,7 @@ public abstract class LockssServlet extends HttpServlet
 
       // check that current user has permission to run this servlet
       if (!isServletEnabled()) {
-        resp.sendError(HttpServletResponse._SERVICE_UNAVAILABLE, "Disabled");
+        resp.sendError(HttpServletResponse.SC_SERVICE_UNAVAILABLE, "Disabled");
 	return;
       }
       if (!isServletAllowed(myServletDescr())) {
