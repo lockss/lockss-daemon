@@ -374,7 +374,8 @@
       >
 
       param[base_url] = http://concept.lib.ed.ac.uk/
-      param[journal_id] = 
+      param[journal_id] = concept
+      #This title does not use a journal_id
 
       au < exists ; exists ; 2010 ; Concept Volume 2010 ; 1 ; 2010 ; >
       au < exists ; exists ; 2011 ; Concept Volume 2011 ; 2 ; 2011 ; >
@@ -402,7 +403,8 @@
       >
 
       param[base_url] = http://financeandsociety.ed.ac.uk/
-      param[journal_id] = 
+      param[journal_id] = financeandsociety
+      #This title does not use a journal_id
 
       au < exists ; exists ; 2015 ; Finance and Society Volume 2015 ; 1 ; 2015 ; >
       au < exists ; exists ; 2016 ; Finance and Society Volume 2016 ; 2 ; 2016 ; >
@@ -425,7 +427,8 @@
       >
 
       param[base_url] = http://www.language-and-psychoanalysis.com/
-      param[journal_id] = 
+      param[journal_id] = language-and-psychoanalysis
+      #This title does not use a journal_id
 
       au < exists ; exists ; 2012 ; Language and Psychoanalysis Volume 2012 ; 1 ; 2012 ; >
       au < exists ; exists ; 2013 ; Language and Psychoanalysis Volume 2013 ; 2 ; 2013 ; >
@@ -451,7 +454,8 @@
       >
 
       param[base_url] = http://www.medanthrotheory.org/
-      param[journal_id] = 
+      param[journal_id] = medanthrotheory
+      #This title does not use a journal_id
 
       au < exists ; exists ; 2014 ; Medicine Anthropology Theory Volume 2014 ; 1 ; 2014 ; >
       au < exists ; exists ; 2015 ; Medicine Anthropology Theory Volume 2015 ; 2 ; 2015 ; >
@@ -475,7 +479,8 @@
       >
 
       param[base_url] = http://www.southasianist.ed.ac.uk/
-      param[journal_id] = 
+      param[journal_id] = southasianist
+      #This title does not use a journal_id
 
       au < exists ; exists ; 2012 ; The South Asianist Journal Volume 2012 ; 1 ; 2012 ; >
       au < exists ; exists ; 2013 ; The South Asianist Journal Volume 2013 ; 2 ; 2013 ; >
