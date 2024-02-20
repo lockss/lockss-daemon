@@ -299,7 +299,7 @@
     au < deepCrawl ; exists ; 2021 ; 2021 ; Aktuelle Rheumatologie Volume 48 ; 48 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Aktuelle Rheumatologie Volume 49 ; 49 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Aktuelle Rheumatologie Volume 50 ; 50 ; >
-    au < expected ; exists ; 2024 ; 2024 ; Aktuelle Rheumatologie Volume 51 ; 51 ; >
+    au < manifest ; exists ; 2024 ; 2024 ; Aktuelle Rheumatologie Volume 51 ; 51 ; >
 
   }
 
@@ -1170,7 +1170,7 @@
    au < deepCrawl ; exists ; 2021 ; 2021 ; Diabetes aktuell Volume 19 ; 19 ; >
    au < deepCrawl ; exists ; 2022 ; 2022 ; Diabetes aktuell Volume 20 ; 20 ; >
    au < deepCrawl ; exists ; 2023 ; 2023 ; Diabetes aktuell Volume 21 ; 21 ; >
-   au < expected ; exists ; 2024 ; 2024 ; Diabetes aktuell Volume 22 ; 22 ; >
+   au < manifest ; exists ; 2024 ; 2024 ; Diabetes aktuell Volume 22 ; 22 ; >
 
   }
 
@@ -1634,7 +1634,7 @@
    au < deepCrawl ; exists ; 2021 ; 2021 ; Erfahrungsheilkunde Volume 70 ; 70 ; >
    au < deepCrawl ; exists ; 2022 ; 2022 ; Erfahrungsheilkunde Volume 71 ; 71 ; >
    au < deepCrawl ; exists ; 2023 ; 2023 ; Erfahrungsheilkunde Volume 72 ; 72 ; >
-   au < expected ; exists ; 2024 ; 2024 ; Erfahrungsheilkunde Volume 73 ; 73 ; >
+   au < manifest ; exists ; 2024 ; 2024 ; Erfahrungsheilkunde Volume 73 ; 73 ; >
 
   }
 
@@ -2090,7 +2090,7 @@
    au < deepCrawl ; exists ; 2021 ; 2021 ; Frauenheilkunde up2date Volume 15 ; 15 ; >
    au < deepCrawl ; exists ; 2022 ; 2022 ; Frauenheilkunde up2date Volume 16 ; 16 ; >
    au < deepCrawl ; exists ; 2023 ; 2023 ; Frauenheilkunde up2date Volume 17 ; 17 ; >
-   au < expected ; exists ; 2024 ; 2024 ; Frauenheilkunde up2date Volume 18 ; 18 ; >
+   au < manifest ; exists ; 2024 ; 2024 ; Frauenheilkunde up2date Volume 18 ; 18 ; >
 
    }
 
@@ -2555,7 +2555,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 13 ; 13 ; >
       au < finished ; manifest ; 2022 ; 2022 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 14 ; 14 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 15 ; 15 ; >
-      au < expected ; exists ; 2024 ; 2024 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Ibnosina Journal of Medicine and Biomedical Sciences Volume 16 ; 16 ; >
 
   }
 
@@ -2885,7 +2885,7 @@
     au < deepCrawl ; exists ; 2021 ; 2021 ; International Journal of Angiology Volume 30 ; 30 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; International Journal of Angiology Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; International Journal of Angiology Volume 32 ; 32 ; >
-    au < expected ; exists ; 2024 ; 2024 ; International Journal of Angiology Volume 33 ; 33 ; >
+    au < manifest ; exists ; 2024 ; 2024 ; International Journal of Angiology Volume 33 ; 33 ; >
 
   }
 
@@ -4009,7 +4009,7 @@
     au < deepCrawl ; exists ; 2021 ; 2021 ; kma - Das Gesundheitswirtschaftsmagazin Volume 26 ; 26 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; kma - Das Gesundheitswirtschaftsmagazin Volume 27 ; 27 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; kma - Das Gesundheitswirtschaftsmagazin Volume 28 ; 28 ; >
-    au < expected ; exists ; 2024 ; 2024 ; kma - Das Gesundheitswirtschaftsmagazin Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2024 ; 2024 ; kma - Das Gesundheitswirtschaftsmagazin Volume 29 ; 29 ; >
 
   }
 
@@ -4962,7 +4962,7 @@
     au < deepCrawl ; exists ; 2021 ; 2021 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 32 ; 32 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 33 ; 33 ; >
-    au < expected ; exists ; 2024 ; 2024 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 34 ; 34 ; >
+    au < manifest ; exists ; 2024 ; 2024 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 34 ; 34 ; >
 
   }
 
@@ -5594,7 +5594,7 @@
    au < deepCrawl ; exists ; 2021 ; 2021 ; retten! Volume 10 ; 10 ; >
    au < deepCrawl ; exists ; 2022 ; 2022 ; retten! Volume 11 ; 11 ; >
    au < crawling ; exists ; 2023 ; 2023 ; retten! Volume 12 ; 12 ; >
-   au < expected ; exists ; 2024 ; 2024 ; retten! Volume 13 ; 13 ; >
+   au < manifest ; exists ; 2024 ; 2024 ; retten! Volume 13 ; 13 ; >
 
   }
 
@@ -5788,7 +5788,7 @@
    au < deepCrawl ; exists ; 2021 ; 2021 ; Seminars in Hearing Volume 42 ; 42 ; >
    au < deepCrawl ; exists ; 2022 ; 2022 ; Seminars in Hearing Volume 43 ; 43 ; >
    au < crawling ; exists ; 2023 ; 2023 ; Seminars in Hearing Volume 44 ; 44 ; >
-   au < expected ; exists ; 2024 ; 2024 ; Seminars in Hearing Volume 45 ; 45 ; >
+   au < manifest ; exists ; 2024 ; 2024 ; Seminars in Hearing Volume 45 ; 45 ; >
 
   }
 
@@ -6604,7 +6604,7 @@
    au < deepCrawl ; exists ; 2021 ; 2021 ; Suchttherapie Volume 22 ; 22 ; >
    au < deepCrawl ; exists ; 2022 ; 2022 ; Suchttherapie Volume 23 ; 23 ; >
    au < deepCrawl ; exists ; 2023 ; 2023 ; Suchttherapie Volume 24 ; 24 ; >
-   au < expected ; exists ; 2024 ; 2024 ; Suchttherapie Volume 25 ; 25 ; >
+   au < manifest ; exists ; 2024 ; 2024 ; Suchttherapie Volume 25 ; 25 ; >
 
   }
 
@@ -6840,7 +6840,7 @@
    au < deepCrawl ; exists ; 2021 ; 2021 ; team-konkret Volume 17 ; 17 ; >
    au < deepCrawl ; exists ; 2022 ; 2022 ; team-konkret Volume 18 ; 18 ; >
    au < deepCrawl ; exists ; 2023 ; 2023 ; team-konkret Volume 19 ; 19 ; >
-   au < expected ; exists ; 2024 ; 2024 ; team-konkret Volume 20 ; 20 ; >
+   au < manifest ; exists ; 2024 ; 2024 ; team-konkret Volume 20 ; 20 ; >
 
   }
 
@@ -7567,7 +7567,7 @@
     au < deepCrawl ; exists ; 2021 ; 2021 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 159 ; 159 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 160 ; 160 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 161 ; 161 ; >
-    au < expected ; exists ; 2024 ; 2024 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 162 ; 162 ; >
+    au < manifest ; exists ; 2024 ; 2024 ; Zeitschrift für Orthopädie und Unfallchirurgie Volume 162 ; 162 ; >
 
   }
 
@@ -8392,7 +8392,7 @@
     au < deepCrawl ; exists ; 2021 ; 2021 ; Phlebologie Volume 50 ; 50 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Phlebologie Volume 51 ; 51 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Phlebologie Volume 52 ; 52 ; >
-    au < expected ; exists ; 2024 ; 2024 ; Phlebologie Volume 53 ; 53 ; >
+    au < manifest ; exists ; 2024 ; 2024 ; Phlebologie Volume 53 ; 53 ; >
 
   }
 
