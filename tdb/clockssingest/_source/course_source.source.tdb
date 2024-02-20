@@ -32,7 +32,7 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/coursesource-released/
 
       au < readySource ; finished ; 2023 ; CourseSource Source Content 2023 ; 2023 >
-      au < expected ; exists ; 2024 ; CourseSource Source Content 2024 ; 2024 >
+      au < manifest ; exists ; 2024 ; CourseSource Source Content 2024 ; 2024 >
 
     }
 
