@@ -151,28 +151,28 @@
     au < released ; 1925 ; GOVPUB 1925 ; 1925 ; https://www.govinfo.gov/ >
     au < released ; 1926 ; GOVPUB 1926 ; 1926 ; https://www.govinfo.gov/ >
     au < released ; 1927 ; GOVPUB 1927 ; 1927 ; https://www.govinfo.gov/ >
-    au < manifest ; 1928 ; GOVPUB 1928 ; 1928 ; https://www.govinfo.gov/ >
-    au < manifest ; 1929 ; GOVPUB 1929 ; 1929 ; https://www.govinfo.gov/ >
-    au < manifest ; 1930 ; GOVPUB 1930 ; 1930 ; https://www.govinfo.gov/ >
-    au < manifest ; 1931 ; GOVPUB 1931 ; 1931 ; https://www.govinfo.gov/ >
-    au < manifest ; 1932 ; GOVPUB 1932 ; 1932 ; https://www.govinfo.gov/ >
-    au < manifest ; 1933 ; GOVPUB 1933 ; 1933 ; https://www.govinfo.gov/ >
-    au < manifest ; 1934 ; GOVPUB 1934 ; 1934 ; https://www.govinfo.gov/ >
-    au < manifest ; 1935 ; GOVPUB 1935 ; 1935 ; https://www.govinfo.gov/ >
-    au < manifest ; 1936 ; GOVPUB 1936 ; 1936 ; https://www.govinfo.gov/ >
-    au < manifest ; 1937 ; GOVPUB 1937 ; 1937 ; https://www.govinfo.gov/ >
-    au < manifest ; 1938 ; GOVPUB 1938 ; 1938 ; https://www.govinfo.gov/ >
-    au < manifest ; 1939 ; GOVPUB 1939 ; 1939 ; https://www.govinfo.gov/ >
-    au < manifest ; 1940 ; GOVPUB 1940 ; 1940 ; https://www.govinfo.gov/ >
-    au < manifest ; 1941 ; GOVPUB 1941 ; 1941 ; https://www.govinfo.gov/ >
-    au < manifest ; 1942 ; GOVPUB 1942 ; 1942 ; https://www.govinfo.gov/ >
-    au < manifest ; 1943 ; GOVPUB 1943 ; 1943 ; https://www.govinfo.gov/ >
-    au < manifest ; 1944 ; GOVPUB 1944 ; 1944 ; https://www.govinfo.gov/ >
-    au < manifest ; 1945 ; GOVPUB 1945 ; 1945 ; https://www.govinfo.gov/ >
-    au < manifest ; 1946 ; GOVPUB 1946 ; 1946 ; https://www.govinfo.gov/ >
-    au < manifest ; 1947 ; GOVPUB 1947 ; 1947 ; https://www.govinfo.gov/ >
-    au < manifest ; 1948 ; GOVPUB 1948 ; 1948 ; https://www.govinfo.gov/ >
-    au < manifest ; 1949 ; GOVPUB 1949 ; 1949 ; https://www.govinfo.gov/ >
+    au < ready ; 1928 ; GOVPUB 1928 ; 1928 ; https://www.govinfo.gov/ >
+    au < ready ; 1929 ; GOVPUB 1929 ; 1929 ; https://www.govinfo.gov/ >
+    au < ready ; 1930 ; GOVPUB 1930 ; 1930 ; https://www.govinfo.gov/ >
+    au < ready ; 1931 ; GOVPUB 1931 ; 1931 ; https://www.govinfo.gov/ >
+    au < ready ; 1932 ; GOVPUB 1932 ; 1932 ; https://www.govinfo.gov/ >
+    au < ready ; 1933 ; GOVPUB 1933 ; 1933 ; https://www.govinfo.gov/ >
+    au < ready ; 1934 ; GOVPUB 1934 ; 1934 ; https://www.govinfo.gov/ >
+    au < ready ; 1935 ; GOVPUB 1935 ; 1935 ; https://www.govinfo.gov/ >
+    au < ready ; 1936 ; GOVPUB 1936 ; 1936 ; https://www.govinfo.gov/ >
+    au < ready ; 1937 ; GOVPUB 1937 ; 1937 ; https://www.govinfo.gov/ >
+    au < ready ; 1938 ; GOVPUB 1938 ; 1938 ; https://www.govinfo.gov/ >
+    au < ready ; 1939 ; GOVPUB 1939 ; 1939 ; https://www.govinfo.gov/ >
+    au < ready ; 1940 ; GOVPUB 1940 ; 1940 ; https://www.govinfo.gov/ >
+    au < ready ; 1941 ; GOVPUB 1941 ; 1941 ; https://www.govinfo.gov/ >
+    au < ready ; 1942 ; GOVPUB 1942 ; 1942 ; https://www.govinfo.gov/ >
+    au < ready ; 1943 ; GOVPUB 1943 ; 1943 ; https://www.govinfo.gov/ >
+    au < ready ; 1944 ; GOVPUB 1944 ; 1944 ; https://www.govinfo.gov/ >
+    au < ready ; 1945 ; GOVPUB 1945 ; 1945 ; https://www.govinfo.gov/ >
+    au < ready ; 1946 ; GOVPUB 1946 ; 1946 ; https://www.govinfo.gov/ >
+    au < ready ; 1947 ; GOVPUB 1947 ; 1947 ; https://www.govinfo.gov/ >
+    au < ready ; 1948 ; GOVPUB 1948 ; 1948 ; https://www.govinfo.gov/ >
+    au < ready ; 1949 ; GOVPUB 1949 ; 1949 ; https://www.govinfo.gov/ >
 
     au < released ; 2019 ; Account of the Receipts and Expenditures of the United States 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Account of the Receipts and Expenditures of the United States 2020 ; 2020 ; https://www.govinfo.gov/ >
@@ -199,12 +199,12 @@
 
     param[collection_id] = GPO
 
-    au < manifest ; 1941 ; GPO 1941 ; 1941 ; https://www.govinfo.gov/ >
-    au < manifest ; 1942 ; GPO 1942 ; 1942 ; https://www.govinfo.gov/ >
-    au < manifest ; 1943 ; GPO 1943 ; 1943 ; https://www.govinfo.gov/ >
-    au < manifest ; 1944 ; GPO 1944 ; 1944 ; https://www.govinfo.gov/ >
-    au < manifest ; 1945 ; GPO 1945 ; 1945 ; https://www.govinfo.gov/ >
-    au < manifest ; 1946 ; GPO 1946 ; 1946 ; https://www.govinfo.gov/ >
+    au < ready ; 1941 ; GPO 1941 ; 1941 ; https://www.govinfo.gov/ >
+    au < ready ; 1942 ; GPO 1942 ; 1942 ; https://www.govinfo.gov/ >
+    au < ready ; 1943 ; GPO 1943 ; 1943 ; https://www.govinfo.gov/ >
+    au < ready ; 1944 ; GPO 1944 ; 1944 ; https://www.govinfo.gov/ >
+    au < ready ; 1945 ; GPO 1945 ; 1945 ; https://www.govinfo.gov/ >
+    au < ready ; 1946 ; GPO 1946 ; 1946 ; https://www.govinfo.gov/ >
     au < manifest ; 1947 ; GPO 1947 ; 1947 ; https://www.govinfo.gov/ >
     au < manifest ; 1948 ; GPO 1948 ; 1948 ; https://www.govinfo.gov/ >
     au < manifest ; 1950 ; GPO 1950 ; 1950 ; https://www.govinfo.gov/ >
@@ -306,7 +306,7 @@
     au < released ; 1938 ; Additional Government Publications 1938 ; 1938 ; https://www.govinfo.gov/ >
     au < released ; 1939 ; Additional Government Publications 1939 ; 1939 ; https://www.govinfo.gov/ >
     au < released ; 1940 ; Additional Government Publications 1940 ; 1940 ; https://www.govinfo.gov/ >
-    au < doNotProcess ; 1941 ; Additional Government Publications 1941 ; 1941 ; https://www.govinfo.gov/ >
+
     au < released ; 2019 ; Additional Government Publications 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Additional Government Publications 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; Additional Government Publications 2021 ; 2021 ; https://www.govinfo.gov/ >
