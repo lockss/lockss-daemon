@@ -108,7 +108,7 @@
 
     param[journal_id] = cjmp
 
-    au < crawling ; exists ; 2023 ; 2023 ; The Canadian Journal of Mineralogy and Petrology Volume 61 ; 61 ; >
+    au < deepCrawl ; exists ; 2023 ; 2023 ; The Canadian Journal of Mineralogy and Petrology Volume 61 ; 61 ; >
     au < manifest ; exists ; 2024 ; 2024 ; The Canadian Journal of Mineralogy and Petrology Volume 62 ; 62 ; >
 
   }
