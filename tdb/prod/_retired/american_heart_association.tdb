@@ -98,6 +98,14 @@
     {
 
       param[base_url] = http://circ.ahajournals.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2006 ; Circulation Volume 113 [superseded] ; 113 >
+
+    }
+    {
+
+      param[base_url] = http://circ.ahajournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < aha.AHADrupalPlugin ; down ; 1950 ; Circulation Volume 1 ; 1 >
@@ -251,6 +259,14 @@
         eissn = 1524-4571 
     >
 
+    {
+
+      param[base_url] = http://circres.ahajournals.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2006 ; Circulation Research Volume 98 [superseded] ; 98 >
+
+    }
     {
 
       param[base_url] = http://circres.ahajournals.org/
@@ -569,6 +585,14 @@
     {
 
       param[base_url] = http://hyper.ahajournals.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2006 ; Hypertension Volume 47 [superseded] ; 47 >
+
+    }
+    {
+
+      param[base_url] = http://hyper.ahajournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < aha.AHADrupalPlugin ; down ; 1979 ; Hypertension Volume 1 ; 1 >
@@ -656,6 +680,14 @@
         eissn = 1524-4628 
     >
 
+    {
+
+      param[base_url] = http://stroke.ahajournals.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2006 ; Stroke Volume 37 [superseded] ; 37 >
+
+    }
     {
 
       param[base_url] = http://stroke.ahajournals.org/
