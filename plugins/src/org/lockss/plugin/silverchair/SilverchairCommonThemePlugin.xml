@@ -135,7 +135,7 @@
                 For example: http://movie-usa.glencoesoftware.com/metadata/10.1083/jcb.202111095
             -->
             <string>1,"https?://movie-usa.glencoesoftware.com/metadata/.*"</string>
-            <string>2,"^https?://(%s|[^.]+\.(silverchair-?cdn\.com/|cloudfront\.net/|brightcove\.net/)).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
+            <string>1,"^https?://(%s|[^.]+\.(silverchair-?cdn\.com/|cloudfront\.net/|brightcove\.net/)).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
             <!--
             https://pubs.geoscienceworld.org/gsabulletin/article/132/1-2/48/570322/Multiproxy-lacustrine-records-of-post-glacial
             Redirected to excluded URL:
@@ -157,7 +157,7 @@
 
             Rockefeller: https://rupress.org/jem/article-pdf/215/1/1/1018472/jem_20172022.pdf
             -->
-            <string>2,"%s([^/]+/)?%s/article-pdf/(doi/[^/]+/)?%s/.*\.pdf$", base_url, journal_id, volume_name</string>
+            <string>1,"%s([^/]+/)?%s/article-pdf/(doi/[^/]+/)?%s/.*\.pdf$", base_url, journal_id, volume_name</string>
             <!--
                 citationFormat=0 // ris
                 citationFormat=1 // Endnote
