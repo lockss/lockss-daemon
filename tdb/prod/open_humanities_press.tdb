@@ -249,20 +249,21 @@
       
       param[base_url] = http://www.postcolonial.org/
       param[journal_id] = pct
+      #OJS Open Journal Systems 2.4.8.5 20230627. Malformed permission statement: LOCKSS system has permission to ingest, preserve, and serve this Archival Unit.
       
       au < ojs2.OJS2Plugin ; manifest ; 2004 ; Postcolonial Text Volume 1 (2004) ; 1 ; 2004 >
       au < ojs2.OJS2Plugin ; doNotProcess ; 2005 ; Postcolonial Text Volume 1 (2005) ; 1 ; 2005 >
       au < ojs2.OJS2Plugin ; doNotProcess ; 2006 ; Postcolonial Text Volume 2 ; 2 ; 2006 >
       au < ojs2.OJS2Plugin ; doNotProcess ; 2007 ; Postcolonial Text Volume 3 ; 3 ; 2007 >
-      au < ojs2.OJS2Plugin ; released ; 2008 ; Postcolonial Text Volume 4 ; 4 ; 2008 >
+      au < ojs2.OJS2Plugin ; down ; 2008 ; Postcolonial Text Volume 4 ; 4 ; 2008 >
       au < ojs2.OJS2Plugin ; doNotProcess ; 2009 ; Postcolonial Text Volume 5 ; 5 ; 2009 >
       au < ojs2.OJS2Plugin ; doNotProcess ; 2011 ; Postcolonial Text Volume 6 ; 6 ; 2011 >
-      au < ojs2.OJS2Plugin ; released ; 2012 ; Postcolonial Text Volume 7 ; 7 ; 2012 >
-      au < ojs2.OJS2Plugin ; released ; 2013 ; Postcolonial Text Volume 8 ; 8 ; 2013 >
-      au < ojs2.OJS2Plugin ; released ; 2014 ; Postcolonial Text Volume 9 ; 9 ; 2014 >
-      au < ojs2.OJS2Plugin ; released ; 2015 ; Postcolonial Text Volume 10 ; 10 ; 2015 >
-      au < ojs2.OJS2Plugin ; released ; 2016 ; Postcolonial Text Volume 11 ; 11 ; 2016 >
-      au < ojs2.OJS2Plugin ; released ; 2017 ; Postcolonial Text Volume 12 ; 12 ; 2017 >
+      au < ojs2.OJS2Plugin ; down ; 2012 ; Postcolonial Text Volume 7 ; 7 ; 2012 >
+      au < ojs2.OJS2Plugin ; down ; 2013 ; Postcolonial Text Volume 8 ; 8 ; 2013 >
+      au < ojs2.OJS2Plugin ; down ; 2014 ; Postcolonial Text Volume 9 ; 9 ; 2014 >
+      au < ojs2.OJS2Plugin ; down ; 2015 ; Postcolonial Text Volume 10 ; 10 ; 2015 >
+      au < ojs2.OJS2Plugin ; down ; 2016 ; Postcolonial Text Volume 11 ; 11 ; 2016 >
+      au < ojs2.OJS2Plugin ; down ; 2017 ; Postcolonial Text Volume 12 ; 12 ; 2017 >
 
       }
 
