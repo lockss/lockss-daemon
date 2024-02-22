@@ -62,32 +62,65 @@
       param[base_url] = https://www.tesl-ej.org/
       implicit < status ; year ; volume ; name ; param[volume] >
   
-      au < released ; 1994-1995 ; 1 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 1 ; 1 >
-      au < released ; 1996-1997 ; 2 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 2 ; 2 >
-      au < released ; 1997-1999 ; 3 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 3 ; 3 >
-      au < released ; 1999-2000 ; 4 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 4 ; 4 >
-      au < released ; 2001-2002 ; 5 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 5 ; 5 >
-      au < released ; 2002-2003 ; 6 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 6 ; 6 >
-      au < released ; 2003-2004 ; 7 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 7 ; 7 >
-      au < released ; 2004-2005 ; 8 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 8 ; 8 >
-      au < released ; 2005-2006 ; 9 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 9 ; 9 >
-      au < released ; 2006-2007 ; 10 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 10 ; 10 >
-      au < released ; 2007-2008 ; 11 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 11 ; 11 >
-      au < released ; 2008-2009 ; 12 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 12 ; 12 >
-      au < released ; 2009-2010 ; 13 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 13 ; 13 >
-      au < released ; 2010-2011 ; 14 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 14 ; 14 >
-      au < released ; 2011-2012 ; 15 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 15 ; 15 >
-      au < released ; 2012-2013 ; 16 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 16 ; 16 >
-      au < released ; 2013-2014 ; 17 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 17 ; 17 >
-      au < released ; 2014-2015 ; 18 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 18 ; 18 >
-      au < released ; 2015-2016 ; 19 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 19 ; 19 >
-      au < released ; 2016-2017 ; 20 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 20 ; 20 >
-      au < released ; 2017-2018 ; 21 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 21 ; 21 >
-      au < released ; 2018-2019 ; 22 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 22 ; 22 >
-      au < released ; 2019-2020 ; 23 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 23 ; 23 >
-      au < released ; 2020-2021 ; 24 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 24 ; 24 >
-      au < released ; 2021-2022 ; 25 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 25 ; 25 >
-      au < expected ; 2022-2023 ; 26 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 26 ; 26 >
+      au < down ; 1994-1995 ; 1 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 1 ; 1 >
+      au < down ; 1996-1997 ; 2 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 2 ; 2 >
+      au < down ; 1997-1999 ; 3 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 3 ; 3 >
+      au < down ; 1999-2000 ; 4 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 4 ; 4 >
+      au < down ; 2001-2002 ; 5 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 5 ; 5 >
+      au < down ; 2002-2003 ; 6 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 6 ; 6 >
+      au < down ; 2003-2004 ; 7 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 7 ; 7 >
+      au < down ; 2004-2005 ; 8 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 8 ; 8 >
+      au < down ; 2005-2006 ; 9 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 9 ; 9 >
+      au < down ; 2006-2007 ; 10 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 10 ; 10 >
+      au < down ; 2007-2008 ; 11 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 11 ; 11 >
+      au < down ; 2008-2009 ; 12 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 12 ; 12 >
+      au < down ; 2009-2010 ; 13 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 13 ; 13 >
+      au < down ; 2010-2011 ; 14 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 14 ; 14 >
+      au < down ; 2011-2012 ; 15 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 15 ; 15 >
+      au < down ; 2012-2013 ; 16 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 16 ; 16 >
+      au < down ; 2013-2014 ; 17 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 17 ; 17 >
+      au < down ; 2014-2015 ; 18 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 18 ; 18 >
+      au < down ; 2015-2016 ; 19 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 19 ; 19 >
+      au < down ; 2016-2017 ; 20 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 20 ; 20 >
+      au < down ; 2017-2018 ; 21 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 21 ; 21 >
+      au < down ; 2018-2019 ; 22 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 22 ; 22 >
+      au < down ; 2019-2020 ; 23 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 23 ; 23 >
+      au < down ; 2020-2021 ; 24 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 24 ; 24 >
+      au < down ; 2021-2022 ; 25 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 25 ; 25 >
+
+    }
+    {
+    
+      plugin = gov.loc.plugin.TESLEJ2022Plugin
+      param[base_url] = https://tesl-ej.org/
+      implicit < status ; year ; volume ; name ; param[volume] >
+  
+      au < doNotProcess ; 1994-1995 ; 1 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 1 ; 1 >
+      au < doNotProcess ; 1996-1997 ; 2 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 2 ; 2 >
+      au < doNotProcess ; 1997-1999 ; 3 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 3 ; 3 >
+      au < doNotProcess ; 1999-2000 ; 4 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 4 ; 4 >
+      au < doNotProcess ; 2001-2002 ; 5 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 5 ; 5 >
+      au < doNotProcess ; 2002-2003 ; 6 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 6 ; 6 >
+      au < doNotProcess ; 2003-2004 ; 7 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 7 ; 7 >
+      au < doNotProcess ; 2004-2005 ; 8 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 8 ; 8 >
+      au < doNotProcess ; 2005-2006 ; 9 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 9 ; 9 >
+      au < doNotProcess ; 2006-2007 ; 10 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 10 ; 10 >
+      au < doNotProcess ; 2007-2008 ; 11 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 11 ; 11 >
+      au < doNotProcess ; 2008-2009 ; 12 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 12 ; 12 >
+      au < doNotProcess ; 2009-2010 ; 13 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 13 ; 13 >
+      au < doNotProcess ; 2010-2011 ; 14 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 14 ; 14 >
+      au < doNotProcess ; 2011-2012 ; 15 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 15 ; 15 >
+      au < doNotProcess ; 2012-2013 ; 16 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 16 ; 16 >
+      au < doNotProcess ; 2013-2014 ; 17 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 17 ; 17 >
+      au < doNotProcess ; 2014-2015 ; 18 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 18 ; 18 >
+      au < doNotProcess ; 2015-2016 ; 19 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 19 ; 19 >
+      au < doNotProcess ; 2016-2017 ; 20 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 20 ; 20 >
+      au < doNotProcess ; 2017-2018 ; 21 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 21 ; 21 >
+      au < doNotProcess ; 2018-2019 ; 22 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 22 ; 22 >
+      au < doNotProcess ; 2019-2020 ; 23 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 23 ; 23 >
+      au < doNotProcess ; 2020-2021 ; 24 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 24 ; 24 >
+      au < doNotProcess ; 2021-2022 ; 25 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 25 ; 25 >
+      au < manifest ; 2022-2023 ; 26 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 26 ; 26 >
       au < expected ; 2023-2024 ; 27 ; TESL-EJ: The Electronic Journal for English as a Second Language Volume 27 ; 27 >
 
     }
