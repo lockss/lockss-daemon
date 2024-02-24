@@ -767,6 +767,7 @@ public class V2AuMover {
           movePluginAus(args);
         } else {
           // else copy all AUs (that match sel pattern)
+          migrationMgr.setIsMigrating(true);
           moveAllAus(args);
         }
         waitUntilDone();
