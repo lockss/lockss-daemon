@@ -5,6 +5,9 @@ import org.lockss.proxy.ProxyManager;
 import org.lockss.servlet.ContentServletManager;
 
 public class MigrationConstants {
+  public static final String V2_PREFIX = "v2";
+  public static final String V2_DOT = V2_PREFIX + ".";
+
   public static final String V2_PARAM_PROXYMANAGER_PORT =
       ProxyManager.PARAM_PORT;
   public static final String V2_PARAM_CONTENTSERVLETMANAGER_PORT =
@@ -26,6 +29,9 @@ public class MigrationConstants {
       V2_PARAM_METADATADBMANAGER_DATASOURCE_ROOT + ".user";
   public static final String V2_PARAM_METADATADBMANAGER_DATASOURCE_PASSWORD =
       V2_PARAM_METADATADBMANAGER_DATASOURCE_ROOT + ".password";
+
+  public static final boolean V2_DEFAULT_PROXYMANAGER_START = false;
+  public static final boolean V2_DEFAULT_CONTENTSERVLETMANAGER_START = false;
 
 
   public static final int V2_DEFAULT_CFGSVC_UI_PORT = 24621;

@@ -16,6 +16,7 @@ import java.sql.*;
 
 import static org.lockss.db.DbManagerSql.FIND_DATABASE_QUERY_MYSQL;
 import static org.lockss.db.DbManagerSql.FIND_DATABASE_QUERY_PG;
+import static org.lockss.laaws.MigrationConstants.V2_DOT;
 
 public class DataSourceUtil {
   private static final Logger log = Logger.getLogger(DataSourceUtil.class);
@@ -56,7 +57,7 @@ public class DataSourceUtil {
     Configuration dsCfg = ConfigManager.newConfiguration();
 
     // Populate it from the current configuration datasource tree.
-    dsCfg.copyFrom(mCfg.getConfigTree(DbManager.DATASOURCE_ROOT));
+    dsCfg.copyFrom(mCfg.getConfigTree(V2_DOT + DbManager.DATASOURCE_ROOT));
     String dsClassName = dsCfg.get("className");
 
     if (DbManagerSql.isTypeDerby(dsClassName)) {
@@ -81,6 +82,9 @@ public class DataSourceUtil {
     return dsCfg;
   }
 
+  /**
+   * Checks the datasource connection, including username and password.
+   */
   public static boolean validateDataSourceConfig(Configuration dsCfg) throws DbException {
     try {
       DataSource ds = getDataSource(dsCfg);

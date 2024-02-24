@@ -1399,7 +1399,7 @@ public class ConfigManager implements LockssManager {
     inferMiscParams(newConfig);
     setConfigMacros(newConfig);
     setCompatibilityParams(newConfig);
-//     setMigrationParams(newConfig);
+    setMigrationParams(newConfig);
     newConfig.seal();
     Configuration oldConfig = currentConfig;
     if (!oldConfig.isEmpty() && newConfig.equals(oldConfig)) {
@@ -1585,15 +1585,13 @@ public class ConfigManager implements LockssManager {
   }
 
   private void setMigrationParams(Configuration config) {
-    if (config.getBoolean(MigrationManager.PARAM_MIGRATION_READY, false)) {
-      Configuration v2Datasource = config.getConfigTree("v2");
-      if (!v2Datasource.isEmpty()) {
+    if (config.getBoolean(MigrationManager.PARAM_IS_MIGRATING, false)) {
+      Configuration v2MigrationParams = config.getConfigTree("v2");
+      if (!v2MigrationParams.isEmpty()) {
         // Replace V1 DB params with V2 DB params
         config.removeConfigTree(DbManager.DATASOURCE_ROOT);
-        config.copyFrom(v2Datasource);
+        config.copyFrom(v2MigrationParams);
       }
-      // Set forwarding mode: LCAP, Proxy, ServeContent, OpenURL
-      // XXX
     }
   }
 

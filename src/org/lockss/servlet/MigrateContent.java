@@ -118,6 +118,7 @@ public class MigrateContent extends LockssServlet {
   boolean defaultCompare = DEFAULT_DEFAULT_COMPARE;
   OpType opType;
   boolean isCompareContent;
+  boolean isMigrationReady;
   List<String> auSelectFilter;
   List<Pattern> auSelectPatterns;
 
@@ -133,6 +134,8 @@ public class MigrateContent extends LockssServlet {
 
   void initParams() {
     Configuration config = ConfigManager.getCurrentConfig();
+    isMigrationReady = config.getBoolean(MigrationManager.PARAM_MIGRATION_READY,
+        MigrationManager.DEFAULT_MIGRATION_READY);
     hostName = config.get(PARAM_HOSTNAME, DEFAULT_HOSTNAME);
     auSelectFilter =
       config.getList(PARAM_AU_SELECT_FILTER, DEFAULT_AU_SELECT_FILTER);
@@ -149,6 +152,12 @@ public class MigrateContent extends LockssServlet {
 
   public void lockssHandleRequest() throws IOException {
     initParams();
+
+    // Redirect to Migrate Settings servlet if we have no migration configuration
+    if (!isMigrationReady) {
+      String redir = srvURL(AdminServletManager.SERVLET_MIGRATE_CONTENT_SETTINGS);
+      resp.sendRedirect(redir);
+    }
 
     // Is this a status request?
     String outputFormat = getParameter(KEY_OUTPUT);

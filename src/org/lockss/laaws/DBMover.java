@@ -11,6 +11,7 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.LockssThread;
 import org.lockss.db.DbManager;
 import org.lockss.remote.*;
+import org.lockss.servlet.MigrateContent;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 
@@ -31,9 +32,14 @@ public class DBMover extends Worker {
   String v1dbname = v1user;
 
   // v2 connection parameters
+  String v2host;
+  String v2user;
+  String v2pass;
+
+  // v2 database connection parameters
   String v2dbuser;
   String v2dbpassword;
-  String v2host;
+  String v2dbhost;
   String v2dbport;
   String v2dbname;
 
@@ -67,7 +73,7 @@ public class DBMover extends Worker {
         log.info("Migrating Postgresql Content..");
         if (initParams()) {
           srcSize = getDatabaseSize(v1host,v1port,v1user,v1password,v1dbname);
-          dstSize = getDatabaseSize(v2host, v2dbport, v2dbuser, v2dbpassword,v2dbname);
+          dstSize = getDatabaseSize(v2dbhost, v2dbport, v2dbuser, v2dbpassword,v2dbname);
           log.info("v1 db size = " + srcSize + ", v2 db size = " + dstSize);
           auMover.dbBytesCopied = 0;
           auMover.dbBytesTotal = srcSize;
@@ -94,14 +100,14 @@ public class DBMover extends Worker {
       rapi.createSubscriptionsAndCounterBackupFile(bakFile);
 
       // Restore into V2
-      String restoreUrl = new URL("http", v2host, V2_DEFAULT_CFGSVC_UI_PORT,
+      String restoreUrl = new URL("http", v2dbhost, V2_DEFAULT_CFGSVC_UI_PORT,
         "/BatchAuConfig")
         .toString();
       log.info("V2 restore url = " + restoreUrl);
 
       LockssUrlConnection conn =
         UrlUtil.openConnection(LockssUrlConnection.METHOD_POST, restoreUrl, null);
-      conn.setCredentials(v2dbuser, v2dbpassword);
+      conn.setCredentials(v2user, v2pass);
       conn.setUserAgent("lockss");
       Part[] parts = {
         new StringPart("lockssAction", "SelectRestoreTitles"),
@@ -133,13 +139,19 @@ public class DBMover extends Worker {
     v1port = config.get(DbManager.PARAM_DATASOURCE_PORTNUMBER, DbManager.DEFAULT_DATASOURCE_PORTNUMBER_PG);
     v1dbname = config.get(DbManager.PARAM_DATASOURCE_DATABASENAME, v1user);
 
+    // Migration target (e.g., for services REST APIs)
+    v2host = config.get(MigrateContent.PARAM_HOSTNAME);
+    v2user = config.get(MigrateContent.PARAM_USERNAME);
+    v2pass = config.get(MigrateContent.PARAM_PASSWORD);
+
+    // Database connection parameters
     Configuration v2config = config.getConfigTree("v2");
     v2dbuser = v2config.get(DbManager.PARAM_DATASOURCE_USER);
     v2dbpassword = v2config.get(DbManager.PARAM_DATASOURCE_PASSWORD);
-    v2host = v2config.get(DbManager.PARAM_DATASOURCE_SERVERNAME);
+    v2dbhost = v2config.get(DbManager.PARAM_DATASOURCE_SERVERNAME);
     v2dbport = v2config.get(DbManager.PARAM_DATASOURCE_PORTNUMBER);
     v2dbname = v2config.get(DbManager.PARAM_DATASOURCE_DATABASENAME);
-    if (StringUtil.isNullString(v2host)) {
+    if (StringUtil.isNullString(v2dbhost)) {
       String msg = "DbMover failed: destination hostname was not supplied.";
       auMover.addError(msg);
       return false;
@@ -155,9 +167,8 @@ public class DBMover extends Worker {
   private boolean dbHasMoved() {
     //if v1 datasource = v2 datasource then db has moved.
     Configuration config = ConfigManager.getCurrentConfig();
-    Configuration v1 = config.getConfigTree(DbManager.DATASOURCE_ROOT);
-    Configuration v2 = config.getConfigTree("v2."+DbManager.DATASOURCE_ROOT);
-    return v1.equals(v2);
+    return config.getBoolean(MigrationManager.PARAM_IS_DB_MOVED,
+        MigrationManager.DEFAULT_IS_DB_MOVED);
   }
 
   private String createPgConnectionString(String user, String password, String host, String port, String dbname) {
@@ -173,7 +184,7 @@ public class DBMover extends Worker {
   private void copyPostgresDb() {
     String err;
     String v1ConnectionString = createPgConnectionString(v1user, v1password, v1host, v1port, v1dbname);
-    String v2ConnectionString = createPgConnectionString(v2dbuser, v2dbpassword, v2host, v2dbport, v2dbname);
+    String v2ConnectionString = createPgConnectionString(v2dbuser, v2dbpassword, v2dbhost, v2dbport, v2dbname);
 
     String copyCommand = "pg_dump -a " + v1ConnectionString + " | psql -q " + v2ConnectionString + " && echo $?";
     log.debug("Running copy command: "+copyCommand);
@@ -261,7 +272,7 @@ public class DBMover extends Worker {
     } else {
       log.info("Starting handler");
     }
-    sizeUpdater= new DbSizeUpdater(v2host, v2dbport, v2dbuser, v2dbpassword,v2dbname);
+    sizeUpdater= new DbSizeUpdater(v2dbhost, v2dbport, v2dbuser, v2dbpassword,v2dbname);
     sizeUpdater.start();
   }
 

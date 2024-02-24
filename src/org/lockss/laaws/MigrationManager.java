@@ -38,7 +38,7 @@ import org.lockss.config.*;
 
 /** Manages V2AuMover instances and reports status to MigrateContent
  * servlet */
-public class MigrationManager extends BaseLockssManager
+public class MigrationManager extends BaseLockssDaemonManager
   implements ConfigurableManager  {
 
   protected static Logger log = Logger.getLogger("MigrationManager");
@@ -61,6 +61,14 @@ public class MigrationManager extends BaseLockssManager
   public static final String PARAM_DEBUG_MODE = PREFIX + "debug";
   public static final boolean DEFAULT_DEBUG_MODE = false;
 
+  public static final String PARAM_IS_MIGRATING = PREFIX + "isMigrating";
+  public static final boolean DEFAULT_IS_MIGRATING = false;
+
+  public static final String PARAM_IS_DB_MOVED = PREFIX + "isDbMoved";
+  public static final boolean DEFAULT_IS_DB_MOVED = false;
+
+  public static final String CONFIG_FILE_MIGRATION_HEADER = "Migration configuration";
+
   private V2AuMover mover;
   private Runner runner;
   private String idleError;
@@ -69,8 +77,11 @@ public class MigrationManager extends BaseLockssManager
   boolean isDaemonInMigrationMode;
   boolean isMigrationInDebugMode;
 
+  ConfigManager cfgMgr;
+
   public void startService() {
     super.startService();
+    cfgMgr = getDaemon().getConfigManager();
   }
 
   public void stopService() {
@@ -94,13 +105,27 @@ public class MigrationManager extends BaseLockssManager
       }
 
       isDaemonInMigrationMode =
-          config.getBoolean(PARAM_MIGRATION_READY, DEFAULT_MIGRATION_READY);
+          config.getBoolean(PARAM_IS_MIGRATING, DEFAULT_IS_MIGRATING);
       isMigrationInDebugMode =
           config.getBoolean(PARAM_DEBUG_MODE, DEFAULT_DEBUG_MODE);
     }
   }
 
-  public Map getStatus() {
+  public void setIsMigrating(boolean isMigrating) throws IOException {
+    Configuration mCfg = cfgMgr.newConfiguration();
+    mCfg.put(MigrationManager.PARAM_IS_MIGRATING, String.valueOf(isMigrating));
+    cfgMgr.modifyCacheConfigFile(mCfg,
+        ConfigManager.CONFIG_FILE_MIGRATION, CONFIG_FILE_MIGRATION_HEADER);
+  }
+
+  public void setIsDbMoved(boolean isDbMoved) throws IOException {
+    Configuration mCfg = cfgMgr.newConfiguration();
+    mCfg.put(MigrationManager.PARAM_IS_DB_MOVED, String.valueOf(isDbMoved));
+    cfgMgr.modifyCacheConfigFile(mCfg,
+        ConfigManager.CONFIG_FILE_MIGRATION, CONFIG_FILE_MIGRATION_HEADER);
+  }
+
+    public Map getStatus() {
     Map stat = new HashMap();
     stat.put(STATUS_START_TIME, startTime);
     if (runner == null) {
@@ -234,4 +259,17 @@ public class MigrationManager extends BaseLockssManager
     }
   }
 
+  public static class UnsupportedConfigurationException extends Exception {
+    public UnsupportedConfigurationException(String message) {
+      super(message);
+    }
+
+    public UnsupportedConfigurationException(Throwable cause) {
+      super(cause);
+    }
+
+    public UnsupportedConfigurationException(String message, Throwable cause) {
+      super(message, cause);
+    }
+  }
 }

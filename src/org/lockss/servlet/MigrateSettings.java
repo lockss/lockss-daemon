@@ -2,7 +2,6 @@ package org.lockss.servlet;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
-import org.apache.derby.jdbc.EmbeddedDataSource;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
@@ -231,12 +230,15 @@ public class MigrateSettings extends LockssServlet {
           } catch (IOException e) {
             fetchError = "Could not fetch migration target configuration";
             log.error(fetchError, e);
-            mCfg.removeConfigTree(DbManager.DATASOURCE_ROOT);
+            session.removeAttribute(KEY_FETCHED_CONFIG);
+            isTargetConfigFetched = false;
+          } catch (MigrationManager.UnsupportedConfigurationException e) {
+            fetchError = "Unsupported configuration: " + e.getMessage();
+            log.error(fetchError, e);
             session.removeAttribute(KEY_FETCHED_CONFIG);
             isTargetConfigFetched = false;
           } finally {
-            // Remember result of this action
-            session.setAttribute(KEY_MIGRATION_CONFIG, mCfg);
+            // Remember state
             session.setAttribute(KEY_FETCHED_CONFIG, isTargetConfigFetched);
 
             // Remember form settings for display
@@ -249,6 +251,9 @@ public class MigrateSettings extends LockssServlet {
             // Reset dbPass input
             dbPass = null;
           }
+
+          // Remember result of this action
+          session.setAttribute(KEY_MIGRATION_CONFIG, mCfg);
           break;
 
         case ACTION_NEXT:
@@ -274,9 +279,9 @@ public class MigrateSettings extends LockssServlet {
             }
 
             // Write migration configuration to file
-            writeMigrationConfigFile(
-                addPrefixToSubtree(mCfg, DbManager.DATASOURCE_ROOT, "v2"));
-            ConfigManager.getConfigManager().requestReload();
+            writeMigrationConfigFile(mCfg);
+            ConfigManager.getConfigManager().reloadAndWait();
+
             // Redirect to Migrate Content page
             String redir = srvURL(AdminServletManager.SERVLET_MIGRATE_CONTENT);
             resp.sendRedirect(redir);
@@ -597,64 +602,53 @@ public class MigrateSettings extends LockssServlet {
    * @param targetCfg
    * @return
    */
-  private Configuration getMigrationConfig(String targetHost, Configuration targetCfg) {
-    Properties mProps = new Properties();
+  private Configuration getMigrationConfig(String targetHost, Configuration targetCfg) throws MigrationManager.UnsupportedConfigurationException {
+    Configuration mCfg = ConfigManager.newConfiguration();
+
+    // Internal migration control
+    mCfg.put(MigrationManager.PARAM_MIGRATION_READY, "true");
+    mCfg.put(MigrationManager.PARAM_IS_MIGRATING, "false");
+    mCfg.put(MigrationManager.PARAM_IS_DB_MOVED, "false");
 
     // Migration target configuration
-    mProps.put(MigrateContent.PARAM_HOSTNAME, hostname);
-    mProps.put(MigrateContent.PARAM_USERNAME, userName);
-    mProps.put(MigrateContent.PARAM_PASSWORD, userPass);
+    mCfg.put(MigrateContent.PARAM_HOSTNAME, hostname);
+    mCfg.put(MigrateContent.PARAM_USERNAME, userName);
+    mCfg.put(MigrateContent.PARAM_PASSWORD, userPass);
+
+    // Migration options (provided by user input)
+    mCfg.put(MigrateContent.PARAM_DELETE_AFTER_MIGRATION, String.valueOf(isDeleteAusEnabled));
+    mCfg.put(RepositoryManager.PARAM_MOVE_DELETED_AUS_TO, "MIGRATED");
+    mCfg.put(RepositoryManager.PARAM_DELETEAUS_INTERVAL,
+        String.valueOf(RepositoryManager.DEFAULT_DELETEAUS_INTERVAL));
+
+    Configuration v2Cfg = ConfigManager.newConfiguration();
 
     // Proxy forwarding settings
-    if (targetCfg.getBoolean(ProxyManager.PARAM_START, false)) {
-      mProps.put(ProxyManager.PARAM_FORWARD_PROXY,
+    if (targetCfg.getBoolean(ProxyManager.PARAM_START, V2_DEFAULT_PROXYMANAGER_START)) {
+      v2Cfg.put(ProxyManager.PARAM_FORWARD_PROXY,
           targetHost + ":" + targetCfg.getInt(
               V2_PARAM_PROXYMANAGER_PORT, V2_DEFAULT_PROXYMANAGER_PORT));
     }
 
     // ServeContent forwarding settings
-    if (targetCfg.getBoolean(ContentServletManager.PARAM_START, false)) {
-      mProps.put(ServeContent.PARAM_FORWARD_SERVE_CONTENT,
+    if (targetCfg.getBoolean(ContentServletManager.PARAM_START, V2_DEFAULT_CONTENTSERVLETMANAGER_START)) {
+      v2Cfg.put(ServeContent.PARAM_FORWARD_SERVE_CONTENT,
           targetHost + ":" + targetCfg.getInt(
               V2_PARAM_CONTENTSERVLETMANAGER_PORT, V2_DEFAULT_CONTENTSERVLETMANAGER_PORT));
     }
 
     // LCAP forwarding settings
-    mProps.put(LcapRouter.PARAM_MIGRATE_TO,
+    v2Cfg.put(LcapRouter.PARAM_MIGRATE_TO,
         targetCfg.get(IdentityManager.PARAM_LOCAL_V3_IDENTITY));
 
-    // AU migration settings (provided by user input)
-    mProps.put(MigrateContent.PARAM_DELETE_AFTER_MIGRATION, String.valueOf(isDeleteAusEnabled));
-    mProps.put(RepositoryManager.PARAM_MOVE_DELETED_AUS_TO, "MIGRATED");
-    mProps.put(RepositoryManager.PARAM_DELETEAUS_INTERVAL,
-        String.valueOf(RepositoryManager.DEFAULT_DELETEAUS_INTERVAL));
-
-    // Database settings
+    // Datasource configuration
     Configuration dsCfg = ConfigManager.newConfiguration();
     dsCfg.copyFrom(targetCfg.getConfigTree(V2_PARAM_METADATADBMANAGER_DATASOURCE_ROOT));
     String dsClassName = dsCfg.get("className");
 
-    // If using Derby, we need to reconstruct the full database path
-    if (DbManagerSql.isTypeDerby(dsClassName)) {
-      String databaseName = dsCfg.get("databaseName",
-          V2_DEFAULT_METADATADBMANAGER_DATASOURCE_DATABASENAME);
-      String derbyBaseDir = targetCfg.get(V2_PARAM_DERBY_DB_DIR);
-
-      File derbyDbDir = new File(derbyBaseDir, databaseName);
-
-      dsCfg.remove("databaseName");
-      dsCfg.put("databaseName", derbyDbDir.toString());
-
-      if (!derbyDbDir.isAbsolute()) {
-        try {
-          dsCfg.remove("databaseName");
-          derbyDbDir = new File(getCwdOfMigrationTarget(), derbyDbDir.toString()) ;
-          dsCfg.put("databaseName", derbyDbDir.toString());
-        } catch (IOException e) {
-          // Leave databaseName unset (and allow getRuntimeDataSourceConfig to
-          // throw a DbException)
-        }
-      }
+    // Throw if target is using anything other than PostgreSQL
+    if (!DbManagerSql.isTypePostgresql(dsClassName)) {
+      throw new MigrationManager.UnsupportedConfigurationException("Only PostgreSQL database supported");
     }
 
     String dsServerName = dsCfg.get("serverName");
@@ -681,13 +675,9 @@ public class MigrateSettings extends LockssServlet {
       }
     }
 
-    // Convert migration properties into a Configuration and merge the datasource
-    // configuration as a subtree:
-    Configuration res = ConfigManager.newConfiguration();
-    res.copyFrom(ConfigManager.fromProperties(mProps));
-    res.addAsSubTree(dsCfg, DbManager.DATASOURCE_ROOT);
-
-    return res;
+    v2Cfg.addAsSubTree(dsCfg, DbManager.DATASOURCE_ROOT);
+    mCfg.addAsSubTree(v2Cfg, V2_PREFIX);
+    return mCfg;
   }
 
   /**
@@ -726,16 +716,13 @@ public class MigrateSettings extends LockssServlet {
    * Writes a {@link Configuration} containing the Migration Configuration to the Migration Configuration
    * File (see {@link ConfigManager#CONFIG_FILE_MIGRATION}).
    *
-   * @param mCfg
+   * @param mCfg A {@link Configuration} containing the migration configuration.
    * @throws IOException
    */
   private void writeMigrationConfigFile(Configuration mCfg) throws IOException {
     ConfigManager cfgMgr = ConfigManager.getConfigManager();
-    File cfgFile = cfgMgr.getCacheConfigFile(ConfigManager.CONFIG_FILE_MIGRATION);
-    try (FileOutputStream cfgOut = new FileOutputStream(cfgFile)) {
-      // Timestamp header is included in the only implementation of this method
-      // i.e., ConfigurationPropTreeImpl#store(OutputStream, String):
-      mCfg.store(cfgOut, null);
-    }
+    cfgMgr.writeCacheConfigFile(mCfg, ConfigManager.CONFIG_FILE_MIGRATION,
+        MigrationManager.CONFIG_FILE_MIGRATION_HEADER, true);
+    cfgMgr.reloadAndWait();
   }
 }
