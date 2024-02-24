@@ -89,6 +89,7 @@ public class DBMover extends Worker {
     }catch(Exception ex) {
       log.error("DbMover failed: " + ex.getMessage(), ex);
       auMover.addError(ex.getMessage());
+      terminated = true;
     }
   }
 
@@ -120,10 +121,12 @@ public class DBMover extends Worker {
       int statusCode = conn.getResponseCode();
       if (statusCode == 200) {
         log.info("Success!");
+        auMover.getMigrationMgr().setIsDbMoved(true);
       } else {
         log.error("Restore failed : " + statusCode);
         log.error("Response: " +
           StringUtil.fromInputStream(conn.getResponseInputStream()));
+        terminated = true;
       }
     } finally {
       FileUtil.delTree(bakDir);
@@ -181,8 +184,8 @@ public class DBMover extends Worker {
   }
 
 
-  private void copyPostgresDb() {
-    String err;
+  private void copyPostgresDb() throws IOException {
+    String err =null;
     String v1ConnectionString = createPgConnectionString(v1user, v1password, v1host, v1port, v1dbname);
     String v2ConnectionString = createPgConnectionString(v2dbuser, v2dbpassword, v2dbhost, v2dbport, v2dbname);
 
@@ -203,22 +206,23 @@ public class DBMover extends Worker {
       log.debug("External process exited with code: " + exitCode);
       if(exitCode != 0) {
         err = "Call to move database failed with exitCode:" + exitCode;
-        log.error(err);
-        auMover.addError(err);
       }
 
-      stopUpdater();
     } catch (IOException ioe) {
       err = "Request to move database failed: " + ioe.getMessage();
-      log.error(err, ioe);
-      auMover.addError(err);
     } catch (InterruptedException e) {
-      err = "Request to Move Database was interuppted, " + e.getMessage();
-      log.error(err);
-      auMover.addError(err);
+      err = "Request to move database was interrupted, " + e.getMessage();
     }
     finally {
       stopUpdater();
+      if(err != null) {
+        log.error(err);
+        auMover.addError(err);
+        terminated = true;
+      }
+      else {
+        auMover.getMigrationMgr().setIsDbMoved(true);
+      }
     }
   }
 

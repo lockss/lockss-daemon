@@ -936,6 +936,7 @@ public class V2AuMover {
     // Migrate the database
     MigrationTask task  = MigrationTask.migrateDb(this);
     DBMover dbMover = new DBMover(this, task);
+
     dbMover.run();
 
     currentStatus = STATUS_DONE_MIGRATING_DATABASE;
@@ -2511,4 +2512,7 @@ public class V2AuMover {
     return repoAccessUrl;
   }
 
+  MigrationManager getMigrationMgr() {
+    return migrationMgr;
+  }
 }
