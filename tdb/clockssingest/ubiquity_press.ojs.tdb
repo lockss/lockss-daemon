@@ -288,14 +288,14 @@
 
 {
   publisher <
-    name = London School of Economics and Politics ;
+    name = London School of Economics and Political Science ;
     info[contract] = 2011 ;
     info[back] = 2000 ;
     info[tester] = 8 ;
     info[poller] = 8
   >
 
-    provider = London School of Economics and Politics
+    provider = London School of Economics and Political Science
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
     attr[start_stem] = index.php/
@@ -307,16 +307,16 @@
         eissn = 2516-7227
       >
 
-      comment[publisher] = London School of Economics and Politics
+      comment[publisher] = London School of Economics and Political Science
       param[base_url] = https://account.jied.lse.ac.uk/
       param[journal_id] = lse-j-jied
 
-      au < doNotProcess ; doNotProcess ; 2019 ; 1 ; London School of Economics and Politics Volume 2019 ; 2019 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 2 ; London School of Economics and Politics Volume 2020 ; 2020 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 3 ; London School of Economics and Politics Volume 2021 ; 2021 ; >
-      au < exists ; exists ; 2022 ; 4 ; London School of Economics and Politics Volume 2022 ; 2022 ; >
-      au < expected ; exists ; 2023 ; 5 ; London School of Economics and Politics Volume 2023 ; 2023 ; >
-      au < expected ; exists ; 2024 ; 6 ; London School of Economics and Politics Volume 2024 ; 2024 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; 1 ; Journal of Illicit Economies and Development Volume 2019 ; 2019 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; 2 ; Journal of Illicit Economies and Development Volume 2020 ; 2020 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 3 ; Journal of Illicit Economies and Development Volume 2021 ; 2021 ; >
+      au < exists ; exists ; 2022 ; 4 ; Journal of Illicit Economies and Development Volume 2022 ; 2022 ; >
+      au < expected ; exists ; 2023 ; 5 ; Journal of Illicit Economies and Development Volume 2023 ; 2023 ; >
+      au < expected ; exists ; 2024 ; 6 ; Journal of Illicit Economies and Development Volume 2024 ; 2024 ; >
 
   }
 
@@ -327,7 +327,7 @@
         eissn = 2516-9122
       >
 
-      comment[publisher] = London School of Economics and Politics
+      comment[publisher] = London School of Economics and Political Science
       param[base_url] = https://account.journal.ilpnetwork.org/
       param[journal_id] = lse-j-jltc
 
@@ -348,7 +348,7 @@
         eissn = 2633-4046
       >
 
-      comment[publisher] = London School of Economics and Politics
+      comment[publisher] = London School of Economics and Political Science
       param[base_url] = https://account.ppr.lse.ac.uk/
       param[journal_id] = lse-j-lseppr
 
@@ -367,7 +367,7 @@
         eissn = 2753-5908
       >
 
-      comment[publisher] = London School of Economics and Politics
+      comment[publisher] = London School of Economics and Political Science
       param[base_url] = https://account.philosophyofphysics.lse.ac.uk/
       param[journal_id] = lse-j-pp
 
@@ -384,7 +384,7 @@
         eissn = 1529-7470
       >
 
-      comment[publisher] = London School of Economics and Politics
+      comment[publisher] = London School of Economics and Political Science
       param[base_url] = https://account.economia.lse.ac.uk/
       param[journal_id] = lse-j-elaceaj
 
