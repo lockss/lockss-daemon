@@ -342,21 +342,23 @@ public class MigrateSettings extends LockssServlet {
 
     addSubsection(tbl, "Metadata Database");
 
-    addFieldToTable(tbl, "Hostname", mCfg.get(DbManager.PARAM_DATASOURCE_SERVERNAME));
-    addFieldToTable(tbl, "Port", mCfg.get(DbManager.PARAM_DATASOURCE_PORTNUMBER));
+    Configuration v2cfg = mCfg.getConfigTree(V2_PREFIX);
+
+    addFieldToTable(tbl, "Hostname", v2cfg.get(DbManager.PARAM_DATASOURCE_SERVERNAME));
+    addFieldToTable(tbl, "Port", v2cfg.get(DbManager.PARAM_DATASOURCE_PORTNUMBER));
     addFieldToTable(tbl, "Database Type",
-        getHumanReadableDatabaseType(mCfg.get(DbManager.PARAM_DATASOURCE_CLASSNAME)));
+        getHumanReadableDatabaseType(v2cfg.get(DbManager.PARAM_DATASOURCE_CLASSNAME)));
     addFieldToTable(tbl, "Database Name",
-        getShortenedDatabaseName(mCfg.get(DbManager.PARAM_DATASOURCE_DATABASENAME)));
-    addFieldToTable(tbl, "Database User", mCfg.get(DbManager.PARAM_DATASOURCE_USER));
+        getShortenedDatabaseName(v2cfg.get(DbManager.PARAM_DATASOURCE_DATABASENAME)));
+    addFieldToTable(tbl, "Database User", v2cfg.get(DbManager.PARAM_DATASOURCE_USER));
 
     // Only prompt for a database password if we've fetched its other details
     if (isTargetConfigFetched) {
       addHiddenInputToTable(tbl,
           "Database Password",
-          KEY_DATABASE_PASS, mCfg.get(DbManager.PARAM_DATASOURCE_PASSWORD, dbPass), 20);
+          KEY_DATABASE_PASS, v2cfg.get(DbManager.PARAM_DATASOURCE_PASSWORD, dbPass), 20);
     } else {
-      addFieldToTable(tbl, "Database Password", mCfg.get(DbManager.PARAM_DATASOURCE_PASSWORD));
+      addFieldToTable(tbl, "Database Password", v2cfg.get(DbManager.PARAM_DATASOURCE_PASSWORD));
     }
 
     if (!StringUtil.isNullString(dbError)) {
