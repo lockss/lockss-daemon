@@ -266,7 +266,14 @@ public class MigrateSettings extends LockssServlet {
           } else if (!migrationMgr.isDaemonInMigrationMode()) {
             // Populate remaining migration configuration parameters
             mCfg.put(V2_DOT + DbManager.PARAM_DATASOURCE_PASSWORD, dbPass);
-            mCfg.put(V2_DOT + MigrateContent.PARAM_DELETE_AFTER_MIGRATION, String.valueOf(isDeleteAusEnabled));
+
+            if (isDeleteAusEnabled) {
+              // Migration options (provided by user input)
+              mCfg.put(V2_DOT + MigrateContent.PARAM_DELETE_AFTER_MIGRATION, String.valueOf(isDeleteAusEnabled));
+              mCfg.put(V2_DOT + RepositoryManager.PARAM_MOVE_DELETED_AUS_TO, "MIGRATED");
+              mCfg.put(V2_DOT + RepositoryManager.PARAM_DELETEAUS_INTERVAL,
+                  String.valueOf(RepositoryManager.DEFAULT_DELETEAUS_INTERVAL));
+            }
 
             // Test database connection
             try {
@@ -617,11 +624,6 @@ public class MigrateSettings extends LockssServlet {
     mCfg.put(MigrateContent.PARAM_USERNAME, userName);
     mCfg.put(MigrateContent.PARAM_PASSWORD, userPass);
 
-    // Migration options (provided by user input)
-    mCfg.put(MigrateContent.PARAM_DELETE_AFTER_MIGRATION, String.valueOf(isDeleteAusEnabled));
-    mCfg.put(RepositoryManager.PARAM_MOVE_DELETED_AUS_TO, "MIGRATED");
-    mCfg.put(RepositoryManager.PARAM_DELETEAUS_INTERVAL,
-        String.valueOf(RepositoryManager.DEFAULT_DELETEAUS_INTERVAL));
 
     Configuration v2Cfg = ConfigManager.newConfiguration();
 
