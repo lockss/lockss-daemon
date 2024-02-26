@@ -267,9 +267,10 @@ public class MigrateSettings extends LockssServlet {
             // Populate remaining migration configuration parameters
             mCfg.put(V2_DOT + DbManager.PARAM_DATASOURCE_PASSWORD, dbPass);
 
+            mCfg.put(V2_DOT + MigrateContent.PARAM_DELETE_AFTER_MIGRATION, String.valueOf(isDeleteAusEnabled));
+
             if (isDeleteAusEnabled) {
               // Migration options (provided by user input)
-              mCfg.put(V2_DOT + MigrateContent.PARAM_DELETE_AFTER_MIGRATION, String.valueOf(isDeleteAusEnabled));
               mCfg.put(V2_DOT + RepositoryManager.PARAM_MOVE_DELETED_AUS_TO, "MIGRATED");
               mCfg.put(V2_DOT + RepositoryManager.PARAM_DELETEAUS_INTERVAL,
                   String.valueOf(RepositoryManager.DEFAULT_DELETEAUS_INTERVAL));
