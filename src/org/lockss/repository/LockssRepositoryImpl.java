@@ -101,16 +101,7 @@ public class LockssRepositoryImpl
     RepositoryManager.DEFAULT_GLOBAL_CACHE_ENABLED;
 
   LockssRepositoryImpl(String rootPath) {
-    if (rootPath.endsWith(File.separator)) {
-      rootLocation = rootPath;
-    } else {
-      // shouldn't happen
-      StringBuilder sb = new StringBuilder(rootPath.length() +
-					 File.separator.length());
-      sb.append(rootPath);
-      sb.append(File.separator);
-      rootLocation = sb.toString();
-    }
+    rootLocation = FileUtil.addSeparator(rootPath);
     // Test code still needs this.
     nodeCache =
       new UniqueRefLruCache(RepositoryManager.DEFAULT_MAX_PER_AU_CACHE_SIZE);
@@ -638,7 +629,7 @@ public class LockssRepositoryImpl
 	  }
 	  String auPath = testDir.toString();
 	  logger.debug3("New au directory: "+auPath);
-	  auPathSlash = auPath + File.separator;
+	  auPathSlash = FileUtil.addSeparator(auPath);
 	  // write the new au property file to the new dir
 	  // XXX this data should be backed up elsewhere to avoid single-point
 	  // corruption

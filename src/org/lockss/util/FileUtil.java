@@ -378,6 +378,11 @@ public class FileUtil {
     return new File(relativeName(file.getPath(), relativeTo));
   }
 
+  /** Add a terminating File.separator iff not already there */
+  public static String addSeparator(String s) {
+    return (s.endsWith(File.separator)) ? s : s + File.separator;
+  }
+
   /** Return just the file extension (after final dot) */
   public static String getExtension(String filename) {
     return filename.substring(filename.lastIndexOf('.')+1,
