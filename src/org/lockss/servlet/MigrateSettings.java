@@ -265,12 +265,12 @@ public class MigrateSettings extends LockssServlet {
             dbError = "Missing database password";
           } else if (!migrationMgr.isDaemonInMigrationMode()) {
             // Populate remaining migration configuration parameters
-            mCfg.put(DbManager.PARAM_DATASOURCE_PASSWORD, dbPass);
-            mCfg.put(MigrateContent.PARAM_DELETE_AFTER_MIGRATION, String.valueOf(isDeleteAusEnabled));
+            mCfg.put(V2_DOT + DbManager.PARAM_DATASOURCE_PASSWORD, dbPass);
+            mCfg.put(V2_DOT + MigrateContent.PARAM_DELETE_AFTER_MIGRATION, String.valueOf(isDeleteAusEnabled));
 
             // Test database connection
             try {
-              Configuration dsCfg = DataSourceUtil.getRuntimeDataSourceConfig(mCfg);
+              Configuration dsCfg = DataSourceUtil.getRuntimeDataSourceConfig(mCfg.getConfigTree(V2_PREFIX));
               DataSourceUtil.validateDataSourceConfig(dsCfg);
             } catch (Throwable e) {
               dbError = "Could not connect to database";

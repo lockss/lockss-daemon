@@ -57,7 +57,7 @@ public class DataSourceUtil {
     Configuration dsCfg = ConfigManager.newConfiguration();
 
     // Populate it from the current configuration datasource tree.
-    dsCfg.copyFrom(mCfg.getConfigTree(V2_DOT + DbManager.DATASOURCE_ROOT));
+    dsCfg.copyFrom(mCfg.getConfigTree(DbManager.DATASOURCE_ROOT));
     String dsClassName = dsCfg.get("className");
 
     if (DbManagerSql.isTypeDerby(dsClassName)) {
