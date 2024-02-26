@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>39</string>
+    <string>40</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -128,6 +128,8 @@ POSSIBILITY OF SUCH DAMAGE.
            https://ash.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
            -->
       <string>2,"^https?://([^/]+\.silverchair-cdn\.com)/cassette\.axd/.*"</string>
+      <!--Exclude OUP PAP files-->
+      <string>2,"^https?://(%s|oup\.silverchair-cdn\.com)/oup/backfile/Content_public/Journal/[^?/]+/PAP/", url_host(base_url)</string>
       <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdn\.mathjax\.org|cdnjs\.cloudflare\.com)/"</string>
       <!-- 	https://academic.oup.com/my-account/register?siteId=191&returnUrl= redirect to this means access failed -->
       <string>2,"^https?://%s/my-account/register", url_host(base_url)</string>
