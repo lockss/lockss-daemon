@@ -1,9 +1,5 @@
 /*
- * $Id$
- */
-
-/*
- Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2024 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -339,7 +335,8 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
        new ColumnDescriptor("size", "Size", ColumnDescriptor.TYPE_STRING),
        new ColumnDescriptor("used", "Used", ColumnDescriptor.TYPE_STRING),
        new ColumnDescriptor("free", "Free", ColumnDescriptor.TYPE_STRING),
-       new ColumnDescriptor("percent", "%Full", ColumnDescriptor.TYPE_PERCENT)
+       new ColumnDescriptor("percent", "%Full", ColumnDescriptor.TYPE_PERCENT),
+       new ColumnDescriptor("ndirs", "# Repos", ColumnDescriptor.TYPE_INT)
        );
 
     private static final List sortRules =
@@ -368,11 +365,13 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 
     private List getRows() {
       RemoteApi remoteApi = daemon.getRemoteApi();
-      List repos = remoteApi.getRepositoryList();
+      List<String> repos = remoteApi.getRepositoryList();
       List rows = new ArrayList();
-      for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
+      for (String repo : repos) {
+	String path = LockssRepositoryImpl.getLocalRepositoryPath(repo);
+        LockssRepositoryImpl.LocalRepository lrepo =
+          repoMgr.getLocalRepository(path);
 	Map row = new HashMap();
-	String repo = (String)iter.next();
 	PlatformUtil.DF df = remoteApi.getRepositoryDF(repo);
 	row.put("repo", new StatusTable.Reference(repo,
 						  SERVICE_STATUS_TABLE_NAME,
@@ -380,6 +379,10 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 	if (df != null) {
 	  row.put("size", orderedKBObj(df.getSize()));
 	  row.put("used", orderedKBObj(df.getUsed()));
+          int ndirs = lrepo.getNumAuDirs();
+          if (ndirs >= 0) {
+            row.put("ndirs", ndirs);
+          }
 	  Object avail = orderedKBObj(df.getAvail());
 	  double percent = df.getPercent();
 	  if (df.isFullerThan(repoMgr.getDiskFullThreshold())) {

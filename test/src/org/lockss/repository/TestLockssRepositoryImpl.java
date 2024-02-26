@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2024 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,6 +40,7 @@ import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.hasher.*;
 import org.lockss.repository.AuSuspectUrlVersions.SuspectUrlVersion;
+import static org.lockss.repository.LockssRepositoryImpl.AU_ID_PROP;
 
 /**
  * This is the test class for org.lockss.daemon.LockssRepositoryImpl
@@ -130,17 +127,31 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   public void testLocalRepository_GetAuMap() {
-    Properties newProps = new Properties();
     mau.setAuId("barfoo");
-    newProps.setProperty(LockssRepositoryImpl.AU_ID_PROP, mau.getAuId());
-    String location = getCacheLocation() + "ab";
-    LockssRepositoryImpl.saveAuIdProperties(location, newProps);
+    String location1 = getCacheLocation() + "ab";
+    LockssRepositoryImpl.saveAuIdProperties(location1,
+                                            PropUtil.fromArgs(AU_ID_PROP, "bar1"));
+    String location2 = getCacheLocation() + "acc";
+    LockssRepositoryImpl.saveAuIdProperties(location2,
+                                            PropUtil.fromArgs(AU_ID_PROP, "bar2"));
 
     LockssRepositoryImpl.LocalRepository localRepo =
       LockssRepositoryImpl.getLocalRepository(mau);
+    // Cause map to be built afresh
     localRepo.auMap = null;
     Map aumap = localRepo.getAuMap();
-    assertEquals(addSlash(location), aumap.get(mau.getAuId()));
+    assertEquals(addSlash(location1), aumap.get("bar1"));
+    assertEquals(addSlash(location2), aumap.get("bar2"));
+    assertNull(aumap.get("bar3"));
+    String location3 = getCacheLocation() + "add";
+    LockssRepositoryImpl.saveAuIdProperties(location3,
+                                            PropUtil.fromArgs(AU_ID_PROP, "bar3"));
+    assertNull(aumap.get("bar3"));
+    // update map with new entries
+    localRepo.updateAuMap();
+    assertEquals(addSlash(location1), aumap.get("bar1"));
+    assertEquals(addSlash(location2), aumap.get("bar2"));
+    assertEquals(addSlash(location3), aumap.get("bar3"));
   }
 
   String addSlash(String s) {

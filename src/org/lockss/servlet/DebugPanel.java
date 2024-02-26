@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -48,6 +48,7 @@ import org.lockss.config.*;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.remote.*;
+import org.lockss.repository.*;
 import org.lockss.plugin.*;
 import org.lockss.account.*;
 
@@ -80,6 +81,7 @@ public class DebugPanel extends LockssServlet {
   static final String KEY_URL = "url";
   static final String KEY_REFETCH_DEPTH = "depth";
   static final String KEY_TIME = "time";
+  static final String KEY_REPO = "repo";
 
   static final String ACTION_MAIL_BACKUP = "Mail Backup File";
   static final String ACTION_THROW_IOEXCEPTION = "Throw IOException";
@@ -104,6 +106,10 @@ public class DebugPanel extends LockssServlet {
   public static final String ACTION_ENABLE_METADATA_INDEXING =
       "Enable Indexing";
 
+  public static final String ACTION_RESCAN_REPO = "Rescan";
+  public static final String ACTION_UPDATE_REPO = "Update";
+
+
   /** Set of actions for which audit alerts shouldn't be generated */
   public static final Set noAuditActions = SetUtil.set(ACTION_FIND_URL);
 
@@ -120,6 +126,7 @@ public class DebugPanel extends LockssServlet {
   private ConfigManager cfgMgr;
   private DbManager dbMgr;
   private MetadataManager metadataMgr;
+  private RepositoryManager repoMgr;
   private RemoteApi rmtApi;
 
   boolean showResult;
@@ -129,6 +136,7 @@ public class DebugPanel extends LockssServlet {
 
   String formAuid;
   String formDepth = "100";
+  String formRepo;
 
   protected void resetLocals() {
     resetVars();
@@ -155,6 +163,7 @@ public class DebugPanel extends LockssServlet {
     try {
       dbMgr = daemon.getDbManager();
       metadataMgr = daemon.getMetadataManager();
+      repoMgr = daemon.getRepositoryManager();
     } catch (IllegalArgumentException ex) {}
   }
 
@@ -162,11 +171,14 @@ public class DebugPanel extends LockssServlet {
     resetVars();
     boolean showForm = true;
     String action = getParameter(KEY_ACTION);
-
+    if (StringUtil.isNullString(action)) {
+      action = getParameter(ACTION_TAG);
+    }
     if (!StringUtil.isNullString(action)) {
 
       formAuid = getParameter(KEY_AUID);
       formDepth = getParameter(KEY_REFETCH_DEPTH);
+      formRepo = getParameter(KEY_REPO);
 
       UserAccount acct = getUserAccount();
       if (acct != null && !noAuditActions.contains(action)) {
@@ -228,6 +240,12 @@ public class DebugPanel extends LockssServlet {
     }
     if (ACTION_ENABLE_METADATA_INDEXING.equals(action)) {
       doEnableMetadataIndexing();
+    }
+    if (ACTION_RESCAN_REPO.equals(action)) {
+      doRescanRepo();
+    }
+    if (ACTION_UPDATE_REPO.equals(action)) {
+      doUpdateRepo();
     }
     if (showForm) {
       displayPage();
@@ -586,6 +604,16 @@ public class DebugPanel extends LockssServlet {
     return false;
   }
 
+  private void doRescanRepo() {
+    if (StringUtil.isNullString(formRepo)) return;
+    repoMgr.rescanAuIdMap(formRepo);
+  }
+
+  private void doUpdateRepo() {
+    if (StringUtil.isNullString(formRepo)) return;
+    repoMgr.updateAuIdMap(formRepo);
+  }
+
   ArchivalUnit getAu() {
     if (StringUtil.isNullString(formAuid)) {
       errMsg = "Select an AU";
@@ -601,6 +629,7 @@ public class DebugPanel extends LockssServlet {
 
   private void displayPage() throws IOException {
     Page page = newPage();
+    addJavaScript(page);
     layoutErrorBlock(page);
     ServletUtil.layoutExplanationBlock(page, "Debug Actions");
     page.add(makeForm());
@@ -612,6 +641,8 @@ public class DebugPanel extends LockssServlet {
     Composite comp = new Composite();
     Form frm = new Form(srvURL(myServletDescr()));
     frm.method("POST");
+    frm.add(new Input(Input.Hidden, ACTION_TAG));
+    frm.add(new Input(Input.Hidden, KEY_REPO));
 
 
     frm.add("<br><center>");
@@ -646,7 +677,7 @@ public class DebugPanel extends LockssServlet {
 
     frm.add("<br><center>AU Actions: select AU</center>");
     Composite ausel = ServletUtil.layoutSelectAu(this, KEY_AUID, formAuid);
-    frm.add("<br><center>"+ausel+"</center>");
+    frm.add("<center>"+ausel+"</center>");
     setTabOrder(ausel);
 
     Input v3Poll = new Input(Input.Submit, KEY_ACTION,
@@ -701,6 +732,39 @@ public class DebugPanel extends LockssServlet {
       frm.add("<br>");
     }
     frm.add("</center>");
+
+    if (true) {
+      frm.add("<br><center>");
+      frm.add("Local Repositories" +
+              addFootnote("\"Update\" scans for new AU directories that have appeared since startup or the last Update.  \"Rescan\" rebuilds the map from scratch and will also find deletions, but may take a long time (hours) on a box with 100s or 1000s of AUs."));
+      frm.add("</center>");
+      Table table = new Table(0, "ALIGN=CENTER CELLSPACING=2 CELLPADDING=0");
+      table.newRow();
+      table.addHeading("Repo", "align=left");
+      table.newCell("width=8");
+      table.addHeading("# AU Dirs", "align=right");
+      for (String repo : repoMgr.getRepositoryList()) {
+	String path = LockssRepositoryImpl.getLocalRepositoryPath(repo);
+        table.newRow();
+        table.newCell();
+        table.add(repo);
+        table.newCell("width=8");
+        table.newCell("align=right");
+        int ndirs = repoMgr.getNumAuDirs(repo);
+        if (ndirs >= 0) {
+          table.add(ndirs);
+        }
+        table.newCell("width=8");
+        table.newCell();
+        table.add(submitButton(ACTION_UPDATE_REPO, ACTION_UPDATE_REPO,
+                               KEY_REPO, repo));
+        table.newCell("width=8");
+        table.newCell();
+        table.add(submitButton(ACTION_RESCAN_REPO, ACTION_RESCAN_REPO,
+                               KEY_REPO, repo));
+      }
+      frm.add(table);
+    }
 
     comp.add(frm);
     return comp;
