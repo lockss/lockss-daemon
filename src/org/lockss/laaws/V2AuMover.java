@@ -505,7 +505,7 @@ public class V2AuMover {
   private void setInitialConfig(Configuration config) {
     userAgent = config.get(V2_PARAM_USER_AGENT, V2_DEFAULT_USER_AGENT);
     namespace = config.get(V2_PARAM_NAMESPACE, V2_DEFAULT_NAMESPACE);
-    cfgPort = config.getInt(PARAM_CFG_UI_PORT, DEFAULT_CFG_UI_PORT);
+    cfgPort = config.getInt(PARAM_CFG_PORT, DEFAULT_CFG_PORT);
     cfgUiPort = config.getInt(PARAM_CFG_UI_PORT, DEFAULT_CFG_UI_PORT);
     repoPort = config.getInt(PARAM_RS_PORT, DEFAULT_RS_PORT);
     debugRepoReq = config.getBoolean(DEBUG_REPO_REQUEST,
