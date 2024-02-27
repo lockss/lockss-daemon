@@ -58,20 +58,20 @@ public class DBMover extends Worker {
     rapi = daemon.getRemoteApi();
   }
 
-  public void run() {
+  public void run() throws MigrationTaskFailedException {
     String err;
     try {
       if (dbHasMoved()) {
         log.info("Db has already been moved.");
         return;
       }
-      if( dbManager.isTypeDerby()) {
-        log.info("Migrating Derby DB Content");
-        copyDerbyDb();
-      }
-      else if(dbManager.isTypePostgresql()) {
-        log.info("Migrating Postgresql Content..");
-        if (initParams()) {
+      if (initParams()) {
+        if (dbManager.isTypeDerby()) {
+          log.info("Migrating Derby DB Content");
+          copyDerbyDb();
+        }
+        else if(dbManager.isTypePostgresql()) {
+          log.info("Migrating Postgresql Content..");
           srcSize = getDatabaseSize(v1host,v1port,v1user,v1password,v1dbname);
           dstSize = getDatabaseSize(v2dbhost, v2dbport, v2dbuser, v2dbpassword,v2dbname);
           log.info("v1 db size = " + srcSize + ", v2 db size = " + dstSize);
@@ -79,17 +79,17 @@ public class DBMover extends Worker {
           auMover.dbBytesTotal = srcSize;
           copyPostgresDb();
         }
+        else {
+          err = "Unable to move database of unsupported type";
+          log.error(err);
+          auMover.addError(err);
+        }
       }
-      else {
-        err = "Unable to move database of unsupported type";
-        log.error(err);
-        auMover.addError(err);
-      }
-
-    }catch(Exception ex) {
-      log.error("DbMover failed: " + ex.getMessage(), ex);
-      auMover.addError(ex.getMessage());
-      terminated = true;
+    } catch(Exception ex) {
+      String msg = "DbMover failed: " + ex.toString();
+      log.error(msg, ex);
+      auMover.addError(msg);
+      throw new MigrationTaskFailedException(msg);
     }
   }
 
@@ -101,7 +101,7 @@ public class DBMover extends Worker {
       rapi.createSubscriptionsAndCounterBackupFile(bakFile);
 
       // Restore into V2
-      String restoreUrl = new URL("http", v2dbhost, V2_DEFAULT_CFGSVC_UI_PORT,
+      String restoreUrl = new URL("http", v2host, V2_DEFAULT_CFGSVC_UI_PORT,
         "/BatchAuConfig")
         .toString();
       log.info("V2 restore url = " + restoreUrl);
@@ -156,6 +156,7 @@ public class DBMover extends Worker {
     v2dbname = v2config.get(DbManager.PARAM_DATASOURCE_DATABASENAME);
     if (StringUtil.isNullString(v2dbhost)) {
       String msg = "DbMover failed: destination hostname was not supplied.";
+      log.error(msg);
       auMover.addError(msg);
       return false;
     }

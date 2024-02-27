@@ -52,6 +52,7 @@ import java.util.List;
 import java.util.Map;
 
 public class StatusApi {
+  org.lockss.util.Logger log = org.lockss.util.Logger.getLogger("StatusApi");
   private V2RestClient apiClient;
   private int localHostIndex;
   private String localCustomBaseUrl;
@@ -114,6 +115,7 @@ public class StatusApi {
     } else {
       basePath = null;
     }
+    log.critical("basePath: " + basePath);
 
     Object localVarPostBody = null;
 
@@ -140,6 +142,7 @@ public class StatusApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
+    log.critical("basePath2: " + basePath);
     return apiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams,
         localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
         localVarFormParams, localVarAuthNames, _callback);

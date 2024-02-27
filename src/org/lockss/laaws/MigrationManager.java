@@ -206,7 +206,12 @@ public class MigrationManager extends BaseLockssDaemonManager
           }
           mover.initClients(args.get(0));
           for (V2AuMover.Args myArgs : args) {
-            mover.executeRequest(myArgs);
+            try {
+              mover.executeRequest(myArgs);
+            } catch (Exception e) {
+              log.error("executeRequest("+myArgs+") threw", e);
+              break;
+            }
           }
           log.debug("Mover returned");
         }

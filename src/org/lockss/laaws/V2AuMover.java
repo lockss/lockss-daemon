@@ -745,7 +745,7 @@ public class V2AuMover {
 
   /** Entry point from MigrateContent servlet.  Synchronous - doesn't
    * return until all AUs in request have been copied. */
-  public void executeRequest(Args args) {
+  public void executeRequest(Args args) throws MigrationTaskFailedException {
     // Remember original Args from request
     this.args = args;
     writeOpHeader(reportWriter, args);
@@ -928,7 +928,7 @@ public class V2AuMover {
         // TODO: Optionally delete the content; if deleting content -> delete AU (or deactivate?)
     }
   }
-  private void moveDatabase(Args args) {
+  private void moveDatabase(Args args) throws MigrationTaskFailedException {
     currentStatus = STATUS_MIGRATING_DATABASE;
     logReport(currentStatus);
 
@@ -2129,6 +2129,10 @@ public class V2AuMover {
 
   public boolean isTerminated() {
     return terminated;
+  }
+
+  public void setTerminated(boolean isTerminated) {
+    this.terminated = isTerminated;
   }
 
   public boolean isAbort() {
