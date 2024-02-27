@@ -16,6 +16,16 @@
 
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://content.nejm.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2005 ; New England Journal of Medicine Volume 352 [superseded] ; 352 >
+
+    }
+
+    {
+
+      pluginPrefix = org.lockss.plugin.highwire.
+      param[base_url] = http://content.nejm.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < HighWireStrVolPlugin ; down ; 2005 ; New England Journal of Medicine Volume 352 ; 352 >
