@@ -29,6 +29,13 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
     public static final String KEY_FROM_DATE = "start_date=";
     public static final String KEY_UNTIL_DATE = "end_date=";
 
+    //GigaDB returns only a maximum of 50 random files and 50 samples so we are
+    //appending the following to return ALL the samples, files and datasets for 
+    //comparison purposes. 
+    public static final String DATASET = "&result=dataset";
+    public static final String SAMPLE = "&result=sample";
+    public static final String FILE = "&result=file";
+
     protected Crawler.CrawlerFacade facade;
 
     protected List<String> urlList;
@@ -189,7 +196,12 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
                                         @Override
                                         public void foundLink(String doiUrl) {
                                             log.debug3("doiUrl is added = " + doiUrl);
-                                            partial.add(apiSingleDoiAPIUrl + doiUrl);
+                                            log.debug3("URL is" + apiSingleDoiAPIUrl + doiUrl + DATASET);
+                                            log.debug3("URL is" + apiSingleDoiAPIUrl + doiUrl + SAMPLE);
+                                            log.debug3("URL is" + apiSingleDoiAPIUrl + doiUrl + FILE);
+                                            partial.add(apiSingleDoiAPIUrl + doiUrl + DATASET);
+                                            partial.add(apiSingleDoiAPIUrl + doiUrl + SAMPLE);
+                                            partial.add(apiSingleDoiAPIUrl + doiUrl + FILE);
                                         }
                                     });
                         }
@@ -227,6 +239,12 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
         UrlData ud = new UrlData(new ByteArrayInputStream(sb.toString().getBytes(Constants.ENCODING_UTF_8)), headers, url);
         UrlCacher cacher = facade.makeUrlCacher(ud);
         cacher.storeContent();
+    }
+
+    //need to be able to continue crawl after finding 500 non-fatal errors 
+    //and 504 Gateway Timeout errors
+    public boolean isFailOnStartUrlError() {
+        return false;
     }
 
 }

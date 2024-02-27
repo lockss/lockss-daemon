@@ -53,6 +53,7 @@
     au < doNotProcess ; exists ; 2021 ; Archives Volume 56 ; 56 ; >
     au < deepCrawl ; exists ; 2022 ; Archives Volume 57 ; 57 ; >
     au < expected ; exists ; 2023 ; Archives Volume 58 ; 58 ; >
+    au < expected ; exists ; 2024 ; Archives Volume 59 ; 59 ; >
 
   }
 
@@ -115,7 +116,8 @@
     au < doNotProcess ; exists ; 2020 ; Australian Journal of French Studies Volume 57 ; 57 ; >
     au < doNotProcess ; exists ; 2021 ; Australian Journal of French Studies Volume 58 ; 58 ; >
     au < deepCrawl ; exists ; 2022 ; Australian Journal of French Studies Volume 59 ; 59 ; >
-    au < crawling ; exists ; 2023 ; Australian Journal of French Studies Volume 60 ; 60 ; >
+    au < deepCrawl ; exists ; 2023 ; Australian Journal of French Studies Volume 60 ; 60 ; >
+    au < expected ; exists ; 2024 ; Australian Journal of French Studies Volume 61 ; 61 ; >
 
   }
 
@@ -135,7 +137,8 @@
     au < doNotProcess ; exists ; 2020 ; Bulletin of Contemporary Hispanic Studies Volume 2 ; 2 ; >
     au < doNotProcess ; exists ; 2021 ; Bulletin of Contemporary Hispanic Studies Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2022 ; Bulletin of Contemporary Hispanic Studies Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2023 ; Bulletin of Contemporary Hispanic Studies Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2023 ; Bulletin of Contemporary Hispanic Studies Volume 5 ; 5 ; >
+    au < expected ; exists ; 2024 ; Bulletin of Contemporary Hispanic Studies Volume 6 ; 6 ; >
 
   }
 
@@ -171,7 +174,8 @@
     au < doNotProcess ; exists ; 2020 ; British Journal of Canadian Studies Volume 32 ; 32 ; >
     au < doNotProcess ; exists ; 2021 ; British Journal of Canadian Studies Volume 33 ; 33 ; >
     au < deepCrawl ; exists ; 2022 ; British Journal of Canadian Studies Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2023 ; British Journal of Canadian Studies Volume 35 ; 35 ; >
+    au < deepCrawl ; exists ; 2023 ; British Journal of Canadian Studies Volume 35 ; 35 ; >
+    au < expected ; exists ; 2024 ; British Journal of Canadian Studies Volume 36 ; 36 ; >
 
   }
 
@@ -236,7 +240,8 @@
     au < doNotProcess ; exists ; 2020 ; Bulletin of Hispanic Studies Volume 97 ; 97 ; >
     au < doNotProcess ; exists ; 2021 ; Bulletin of Hispanic Studies Volume 98 ; 98 ; >
     au < deepCrawl ; exists ; 2022 ; Bulletin of Hispanic Studies Volume 99 ; 99 ; >
-    au < crawling ; exists ; 2023 ; Bulletin of Hispanic Studies Volume 100 ; 100 ; >
+    au < deepCrawl ; exists ; 2023 ; Bulletin of Hispanic Studies Volume 100 ; 100 ; >
+    au < expected ; exists ; 2024 ; Bulletin of Hispanic Studies Volume 101 ; 101 ; >
 
   }
 
@@ -276,7 +281,8 @@
     au < doNotProcess ; exists ; 2020 ; The Byron Journal Volume 48 ; 48 ; >
     au < doNotProcess ; exists ; 2021 ; The Byron Journal Volume 49 ; 49 ; >
     au < deepCrawl ; exists ; 2022 ; The Byron Journal Volume 50 ; 50 ; >
-    au < crawling ; exists ; 2023 ; The Byron Journal Volume 51 ; 51 ; >
+    au < deepCrawl ; exists ; 2023 ; The Byron Journal Volume 51 ; 51 ; >
+    au < expected ; exists ; 2024 ; The Byron Journal Volume 52 ; 52 ; >
 
   }
 
@@ -313,6 +319,7 @@
     au < frozen ; exists ; 2021 ; Comma Volume 2021 (2022) ; 2021 ; >
     au < expected ; exists ; 2022 ; Comma Volume 2022 (2023) ; 2022 ; >
     au < expected ; exists ; 2023 ; Comma Volume 2023 (2023) ; 2023 ; >
+    au < expected ; exists ; 2024 ; Comma Volume 2024 (2024) ; 2024 ; >
 
   }
 
@@ -337,7 +344,7 @@
     au < doNotProcess ; exists ; 2005 ; Catalan Review Volume 19 ; 19 ; >
     au < doNotProcess ; exists ; 2006 ; Catalan Review Volume 20 ; 20 ; >
     au < doNotProcess ; exists ; 2007 ; Catalan Review Volume 21 ; 21 ; >
-    au < manifest ; doesNotExist ; 2008 ; Catalan Review Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2008 ; Catalan Review Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Catalan Review Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Catalan Review Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Catalan Review Volume 25 ; 25 ; >
@@ -352,7 +359,8 @@
     au < doNotProcess ; exists ; 2020 ; Catalan Review Volume 34 ; 34 ; >
     au < doNotProcess ; exists ; 2021 ; Catalan Review Volume 35 ; 35 ; >
     au < deepCrawl ; exists ; 2022 ; Catalan Review Volume 36 ; 36 ; >
-    au < crawling ; exists ; 2023 ; Catalan Review Volume 37 ; 37 ; >
+    au < deepCrawl ; exists ; 2023 ; Catalan Review Volume 37 ; 37 ; >
+    au < expected ; exists ; 2024 ; Catalan Review Volume 38 ; 38 ; >
 
   }
 
@@ -393,7 +401,8 @@
     au < doNotProcess ; exists ; 2020 ; Contemporary French Civilization Volume 45 ; 45 ; >
     au < doNotProcess ; exists ; 2021 ; Contemporary French Civilization Volume 46 ; 46 ; >
     au < deepCrawl ; exists ; 2022 ; Contemporary French Civilization Volume 47 ; 47 ; >
-    au < crawling ; exists ; 2023 ; Contemporary French Civilization Volume 48 ; 48 ; >
+    au < deepCrawl ; exists ; 2023 ; Contemporary French Civilization Volume 48 ; 48 ; >
+    au < expected ; exists ; 2024 ; Contemporary French Civilization Volume 49 ; 49 ; >
 
   }
 
@@ -411,7 +420,8 @@
 
     au < doNotProcess ; exists ; 2021 ; Developing Academic Practice Volume 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Developing Academic Practice Volume 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Developing Academic Practice Volume 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Developing Academic Practice Volume 2023 ; 2023 ; >
+    au < expected ; exists ; 2024 ; Developing Academic Practice Volume 2024 ; 2024 ; >
 
   }
 
@@ -465,7 +475,8 @@
     au < doNotProcess ; exists ; 2020 ; Eighteenth-Century Ireland Volume 35 ; 35 ; >
     au < doNotProcess ; exists ; 2021 ; Eighteenth-Century Ireland Volume 36 ; 36 ; >
     au < deepCrawl ; exists ; 2022 ; Eighteenth-Century Ireland Volume 37 ; 37 ; >
-    au < crawling ; exists ; 2023 ; Eighteenth-Century Ireland Volume 38 ; 38 ; >
+    au < deepCrawl ; exists ; 2023 ; Eighteenth-Century Ireland Volume 38 ; 38 ; >
+    au < expected ; exists ; 2024 ; Eighteenth-Century Ireland Volume 39 ; 39 ; >
 
   }
 
@@ -511,7 +522,8 @@
     au < doNotProcess ; exists ; 2020 ; Essays in Romanticism Volume 27 ; 27 ; >
     au < doNotProcess ; exists ; 2021 ; Essays in Romanticism Volume 28 ; 28 ; >
     au < deepCrawl ; exists ; 2022 ; Essays in Romanticism Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2023 ; Essays in Romanticism Volume 30 ; 30 ; >
+    au < deepCrawl ; exists ; 2023 ; Essays in Romanticism Volume 30 ; 30 ; >
+    au < expected ; exists ; 2024 ; Essays in Romanticism Volume 31 ; 31 ; >
 
   }
 
@@ -542,7 +554,8 @@
     au < doNotProcess ; exists ; 2020 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 12 ; 12 ; >
     au < doNotProcess ; exists ; 2021 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2022 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2023 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2023 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 15 ; 15 ; >
+    au < expected ; exists ; 2024 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 16 ; 16 ; >
 
   }
 
@@ -582,7 +595,8 @@
     au < doNotProcess ; exists ; 2020 ; Extrapolation Volume 61 ; 61 ; >
     au < doNotProcess ; exists ; 2021 ; Extrapolation Volume 62 ; 62 ; >
     au < deepCrawl ; exists ; 2022 ; Extrapolation Volume 63 ; 63 ; >
-    au < crawling ; exists ; 2023 ; Extrapolation Volume 64 ; 64 ; >
+    au < deepCrawl ; exists ; 2023 ; Extrapolation Volume 64 ; 64 ; >
+    au < expected ; exists ; 2024 ; Extrapolation Volume 65 ; 65 ; >
 
   }
 
@@ -610,7 +624,8 @@
     au < doNotProcess ; exists ; 2020 ; Francosphères Volume 9 ; 9 ; >
     au < doNotProcess ; exists ; 2021 ; Francosphères Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2022 ; Francosphères Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2023 ; Francosphères Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2023 ; Francosphères Volume 12 ; 12 ; >
+    au < expected ; exists ; 2024 ; Francosphères Volume 13 ; 13 ; >
 
   }
 
@@ -665,7 +680,8 @@
     au < doNotProcess ; exists ; 2020 ; Historical Studies in Industrial Relations Volume 41 ; 41 ; >
     au < doNotProcess ; exists ; 2021 ; Historical Studies in Industrial Relations Volume 42 ; 42 ; >
     au < deepCrawl ; exists ; 2022 ; Historical Studies in Industrial Relations Volume 43 ; 43 ; >
-    au < crawling ; exists ; 2023 ; Historical Studies in Industrial Relations Volume 44 ; 44 ; >
+    au < deepCrawl ; exists ; 2023 ; Historical Studies in Industrial Relations Volume 44 ; 44 ; >
+    au < expected ; exists ; 2024 ; Historical Studies in Industrial Relations Volume 45 ; 45 ; >
 
   }
 
@@ -706,7 +722,8 @@
     au < doNotProcess ; exists ; 2020 ; The Indexer: The International Journal of Indexing Volume 38 ; 38 ; >
     au < doNotProcess ; exists ; 2021 ; The Indexer: The International Journal of Indexing Volume 39 ; 39 ; >
     au < deepCrawl ; exists ; 2022 ; The Indexer: The International Journal of Indexing Volume 40 ; 40 ; >
-    au < crawling ; exists ; 2023 ; The Indexer: The International Journal of Indexing Volume 41 ; 41 ; >
+    au < deepCrawl ; exists ; 2023 ; The Indexer: The International Journal of Indexing Volume 41 ; 41 ; >
+    au < expected ; exists ; 2024 ; The Indexer: The International Journal of Indexing Volume 42 ; 42 ; >
 
   }
   {
@@ -744,7 +761,8 @@
     au < doNotProcess ; exists ; 2020 ; International Development Planning Review Volume 42 ; 42 ; >
     au < doNotProcess ; exists ; 2021 ; International Development Planning Review Volume 43 ; 43 ; >
     au < deepCrawl ; exists ; 2022 ; International Development Planning Review Volume 44 ; 44 ; >
-    au < crawling ; exists ; 2023 ; International Development Planning Review Volume 45 ; 45 ; >
+    au < deepCrawl ; exists ; 2023 ; International Development Planning Review Volume 45 ; 45 ; >
+    au < manifest ; exists ; 2024 ; International Development Planning Review Volume 46 ; 46 ; >
 
   }
 
@@ -763,6 +781,7 @@
     au < doNotProcess ; exists ; 2021 ; International Journal of English for Academic Purposes: Research and Practice Volume 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of English for Academic Purposes: Research and Practice Volume 2022 ; 2022 ; >
     au < expected ; exists ; 2023 ; International Journal of English for Academic Purposes: Research and Practice Volume 2023 ; 2023 ; >
+    au < expected ; exists ; 2024 ; International Journal of English for Academic Purposes: Research and Practice Volume 2024 ; 2024 ; >
   }
 
   {
@@ -821,6 +840,96 @@
   {
 
     title <
+      name = Journal of Jewish Studies ;
+      issn = 0022-2097 ;
+      eissn = 2056-6689 ;
+      issnl = 0022-2097
+    >
+
+    param[journal_id] = jjs
+    #Published 1948-present
+
+    au < manifest ; exists ; 1949 ; Journal of Jewish Studies Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1951 ; Journal of Jewish Studies Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1952 ; Journal of Jewish Studies Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1953 ; Journal of Jewish Studies Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1954 ; Journal of Jewish Studies Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1955 ; Journal of Jewish Studies Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1956 ; Journal of Jewish Studies Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1957 ; Journal of Jewish Studies Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1958 ; Journal of Jewish Studies Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1959 ; Journal of Jewish Studies Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1960 ; Journal of Jewish Studies Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1961 ; Journal of Jewish Studies Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1962 ; Journal of Jewish Studies Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1963 ; Journal of Jewish Studies Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1964 ; Journal of Jewish Studies Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1965 ; Journal of Jewish Studies Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1966 ; Journal of Jewish Studies Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1967 ; Journal of Jewish Studies Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1968 ; Journal of Jewish Studies Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1969 ; Journal of Jewish Studies Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1970 ; Journal of Jewish Studies Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1971 ; Journal of Jewish Studies Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1972 ; Journal of Jewish Studies Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1973 ; Journal of Jewish Studies Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1974 ; Journal of Jewish Studies Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1975 ; Journal of Jewish Studies Volume 26 ; 26 ; >
+    au < manifest ; exists ; 1976 ; Journal of Jewish Studies Volume 27 ; 27 ; >
+    au < manifest ; exists ; 1977 ; Journal of Jewish Studies Volume 28 ; 28 ; >
+    au < manifest ; exists ; 1978 ; Journal of Jewish Studies Volume 29 ; 29 ; >
+    au < manifest ; exists ; 1979 ; Journal of Jewish Studies Volume 30 ; 30 ; >
+    au < manifest ; exists ; 1980 ; Journal of Jewish Studies Volume 31 ; 31 ; >
+    au < manifest ; exists ; 1981 ; Journal of Jewish Studies Volume 32 ; 32 ; >
+    au < manifest ; exists ; 1982 ; Journal of Jewish Studies Volume 33 ; 33 ; >
+    au < manifest ; exists ; 1983 ; Journal of Jewish Studies Volume 34 ; 34 ; >
+    au < manifest ; exists ; 1984 ; Journal of Jewish Studies Volume 35 ; 35 ; >
+    au < manifest ; exists ; 1985 ; Journal of Jewish Studies Volume 36 ; 36 ; >
+    au < manifest ; exists ; 1986 ; Journal of Jewish Studies Volume 37 ; 37 ; >
+    au < manifest ; exists ; 1987 ; Journal of Jewish Studies Volume 38 ; 38 ; >
+    au < manifest ; exists ; 1988 ; Journal of Jewish Studies Volume 39 ; 39 ; >
+    au < manifest ; exists ; 1989 ; Journal of Jewish Studies Volume 40 ; 40 ; >
+    au < manifest ; exists ; 1990 ; Journal of Jewish Studies Volume 41 ; 41 ; >
+    au < manifest ; exists ; 1991 ; Journal of Jewish Studies Volume 42 ; 42 ; >
+    au < manifest ; exists ; 1992 ; Journal of Jewish Studies Volume 43 ; 43 ; >
+    au < manifest ; exists ; 1993 ; Journal of Jewish Studies Volume 44 ; 44 ; >
+    au < manifest ; exists ; 1994 ; Journal of Jewish Studies Volume 45 ; 45 ; >
+    au < manifest ; exists ; 1995 ; Journal of Jewish Studies Volume 46 ; 46 ; >
+    au < manifest ; exists ; 1996 ; Journal of Jewish Studies Volume 47 ; 47 ; >
+    au < manifest ; exists ; 1997 ; Journal of Jewish Studies Volume 48 ; 48 ; >
+    au < manifest ; exists ; 1998 ; Journal of Jewish Studies Volume 49 ; 49 ; >
+    au < manifest ; exists ; 1999 ; Journal of Jewish Studies Volume 50 ; 50 ; >
+    au < manifest ; exists ; 2000 ; Journal of Jewish Studies Volume 51 ; 51 ; >
+    au < manifest ; exists ; 2001 ; Journal of Jewish Studies Volume 52 ; 52 ; >
+    au < manifest ; exists ; 2002 ; Journal of Jewish Studies Volume 53 ; 53 ; >
+    au < manifest ; exists ; 2003 ; Journal of Jewish Studies Volume 54 ; 54 ; >
+    au < manifest ; exists ; 2004 ; Journal of Jewish Studies Volume 55 ; 55 ; >
+    au < manifest ; exists ; 2005 ; Journal of Jewish Studies Volume 56 ; 56 ; >
+    au < manifest ; exists ; 2006 ; Journal of Jewish Studies Volume 57 ; 57 ; >
+    au < manifest ; exists ; 2007 ; Journal of Jewish Studies Volume 58 ; 58 ; >
+    au < manifest ; exists ; 2008 ; Journal of Jewish Studies Volume 59 ; 59 ; >
+    au < manifest ; exists ; 2009 ; Journal of Jewish Studies Volume 60 ; 60 ; >
+    au < manifest ; exists ; 2010 ; Journal of Jewish Studies Volume 61 ; 61 ; >
+    au < manifest ; exists ; 2011 ; Journal of Jewish Studies Volume 62 ; 62 ; >
+    au < manifest ; exists ; 2012 ; Journal of Jewish Studies Volume 63 ; 63 ; >
+    au < manifest ; exists ; 2013 ; Journal of Jewish Studies Volume 64 ; 64 ; >
+    au < manifest ; exists ; 2014 ; Journal of Jewish Studies Volume 65 ; 65 ; >
+    au < manifest ; exists ; 2015 ; Journal of Jewish Studies Volume 66 ; 66 ; >
+    au < manifest ; exists ; 2016 ; Journal of Jewish Studies Volume 67 ; 67 ; >
+    au < manifest ; exists ; 2017 ; Journal of Jewish Studies Volume 68 ; 68 ; >
+    au < manifest ; exists ; 2018 ; Journal of Jewish Studies Volume 69 ; 69 ; >
+    au < manifest ; exists ; 2019 ; Journal of Jewish Studies Volume 70 ; 70 ; >
+    au < manifest ; exists ; 2020 ; Journal of Jewish Studies Volume 71 ; 71 ; >
+    au < manifest ; exists ; 2021 ; Journal of Jewish Studies Volume 72 ; 72 ; >
+    au < manifest ; exists ; 2022 ; Journal of Jewish Studies Volume 73 ; 73 ; >
+    au < manifest ; exists ; 2023 ; Journal of Jewish Studies Volume 74 ; 74 ; >
+    au < expected ; exists ; 2024 ; Journal of Jewish Studies Volume 75 ; 75 ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Literary & Cultural Disability Studies ;
       issn = 1757-6458 ;
       eissn = 1757-6466 ;
@@ -847,7 +956,8 @@
     au < doNotProcess ; exists ; 2020 ; Journal of Literary & Cultural Disability Studies Volume 14 ; 14 ; >
     au < doNotProcess ; exists ; 2021 ; Journal of Literary & Cultural Disability Studies Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Literary & Cultural Disability Studies Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2023 ; Journal of Literary & Cultural Disability Studies Volume 17 ; 17 ; >
+    au < deepCrawl ; exists ; 2023 ; Journal of Literary & Cultural Disability Studies Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2024 ; Journal of Literary & Cultural Disability Studies Volume 18 ; 18 ; >
 
   }
 
@@ -887,7 +997,8 @@
     au < doNotProcess ; exists ; 2020 ; Journal of Romance Studies Volume 20 ; 20 ; >
     au < doNotProcess ; exists ; 2021 ; Journal of Romance Studies Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Romance Studies Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2023 ; Journal of Romance Studies Volume 23 ; 23 ; >
+    au < deepCrawl ; exists ; 2023 ; Journal of Romance Studies Volume 23 ; 23 ; >
+    au < expected ; exists ; 2024 ; Journal of Romance Studies Volume 24 ; 24 ; >
 
   }
 
@@ -1023,7 +1134,8 @@
     au < doNotProcess ; exists ; 2021 ; Labour History: A Journal of Labour and Social History Volume 120 ; 120 ; >
     au < doNotProcess ; exists ; 2021 ; Labour History: A Journal of Labour and Social History Volume 121 ; 121 ; >
     au < deepCrawl ; exists ; 2022 ; Labour History: A Journal of Labour and Social History Volume 122 ; 122 ; >
-    au < crawling ; exists ; 2023 ; Labour History: A Journal of Labour and Social History Volume 123 ; 123 ; >
+    au < deepCrawl ; exists ; 2023 ; Labour History: A Journal of Labour and Social History Volume 123 ; 123 ; >
+    au < manifest ; exists ; 2024 ; Labour History: A Journal of Labour and Social History Volume 124 ; 124 ; >
 
   }
 
@@ -1063,7 +1175,8 @@
     au < doNotProcess ; exists ; 2020 ; Labour History Review Volume 85 ; 85 ; >
     au < doNotProcess ; exists ; 2021 ; Labour History Review Volume 86 ; 86 ; >
     au < deepCrawl ; exists ; 2022 ; Labour History Review Volume 87 ; 87 ; >
-    au < crawling ; exists ; 2023 ; Labour History Review Volume 88 ; 88 ; >
+    au < deepCrawl ; exists ; 2023 ; Labour History Review Volume 88 ; 88 ; >
+    au < expected ; exists ; 2024 ; Labour History Review Volume 89 ; 89 ; >
 
   }
 
@@ -1246,7 +1359,8 @@
     au < doNotProcess ; exists ; 2020 ; Modern Believing Volume 61 ; 61 ; >
     au < doNotProcess ; exists ; 2021 ; Modern Believing Volume 62 ; 62 ; >
     au < deepCrawl ; exists ; 2022 ; Modern Believing Volume 63 ; 63 ; >
-    au < crawling ; exists ; 2023 ; Modern Believing Volume 64 ; 64 ; >
+    au < deepCrawl ; exists ; 2023 ; Modern Believing Volume 64 ; 64 ; >
+    au < manifest ; exists ; 2024 ; Modern Believing Volume 65 ; 65 ; >
 
   }
 
@@ -1329,7 +1443,8 @@
     au < doNotProcess ; exists ; 2020 ; Music, Sound, and the Moving Image Volume 14 ; 14 ; >
     au < doNotProcess ; exists ; 2021 ; Music, Sound, and the Moving Image Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2022 ; Music, Sound, and the Moving Image Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2023 ; Music, Sound, and the Moving Image Volume 17 ; 17 ; >
+    au < deepCrawl ; exists ; 2023 ; Music, Sound, and the Moving Image Volume 17 ; 17 ; >
+    au < expected ; exists ; 2024 ; Music, Sound, and the Moving Image Volume 18 ; 18 ; >
 
   }
 
@@ -1357,6 +1472,7 @@
     au < manifest ; exists ; 2021 ; Newsletter of the Gypsy Lore Society Volume 44 ; 44 ; >
     au < exists ; exists ; 2022 ; Newsletter of the Gypsy Lore Society Volume 45 ; 45 ; >
     au < expected ; exists ; 2023 ; Newsletter of the Gypsy Lore Society Volume 46 ; 46 ; >
+    au < expected ; exists ; 2024 ; Newsletter of the Gypsy Lore Society Volume 47 ; 47 ; >
 
   }
 
@@ -1387,8 +1503,9 @@
     au < doNotProcess ; exists ; 2019-2020 ; Quaker Studies Volume 24 ; 24 ; >
     au < doNotProcess ; exists ; 2020-2021 ; Quaker Studies Volume 25 ; 25 ; >
     au < deepCrawl ; exists ; 2021-2022 ; Quaker Studies Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2022-2023 ; Quaker Studies Volume 27 ; 27 ; >
+    au < deepCrawl ; exists ; 2022-2023 ; Quaker Studies Volume 27 ; 27 ; >
     au < manifest ; exists ; 2023-2024 ; Quaker Studies Volume 28 ; 28 ; >
+    au < expected ; exists ; 2024-2025 ; Quaker Studies Volume 29 ; 29 ; >
 
   }
 
@@ -1516,7 +1633,8 @@
     au < doNotProcess ; exists ; 2020 ; Romani Studies Volume 30 ; 30 ; >
     au < doNotProcess ; exists ; 2021 ; Romani Studies Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2022 ; Romani Studies Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2023 ; Romani Studies Volume 33 ; 33 ; >
+    au < deepCrawl ; exists ; 2023 ; Romani Studies Volume 33 ; 33 ; >
+    au < expected ; exists ; 2024 ; Romani Studies Volume 34 ; 34 ; >
 
   }
 
@@ -1579,7 +1697,8 @@
     au < doNotProcess ; exists ; 2021 ; Quebec Studies Volume 71 ; 71 ; >
     au < doNotProcess ; exists ; 2021 ; Quebec Studies Volume 72 ; 72 ; >
     au < deepCrawl ; exists ; 2022 ; Quebec Studies Volume 73 ; 73 ; >
-    au < crawling ; exists ; 2023 ; Quebec Studies Volume 74 ; 74 ; >
+    au < deepCrawl ; exists ; 2023 ; Quebec Studies Volume 74 ; 74 ; >
+    au < manifest ; exists ; 2024 ; Quebec Studies Volume 75 ; 75 ; >
 
   }
 
@@ -1611,7 +1730,8 @@
     au < doNotProcess ; exists ; 2020 ; Science Fiction Film and Television Volume 13 ; 13 ; >
     au < doNotProcess ; exists ; 2021 ; Science Fiction Film and Television Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2022 ; Science Fiction Film and Television Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2023 ; Science Fiction Film and Television Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2023 ; Science Fiction Film and Television Volume 16 ; 16 ; >
+    au < expected ; exists ; 2024 ; Science Fiction Film and Television Volume 17 ; 17 ; >
 
   }
 
@@ -1649,7 +1769,8 @@
     au < doNotProcess ; exists ; 2020 ; Sculpture Journal Volume 29 ; 29 ; >
     au < doNotProcess ; exists ; 2021 ; Sculpture Journal Volume 30 ; 30 ; >
     au < deepCrawl ; exists ; 2022 ; Sculpture Journal Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2023 ; Sculpture Journal Volume 32 ; 32 ; >
+    au < deepCrawl ; exists ; 2023 ; Sculpture Journal Volume 32 ; 32 ; >
+    au < expected ; exists ; 2024 ; Sculpture Journal Volume 33 ; 33 ; >
 
   }
 
@@ -1678,7 +1799,8 @@
     au < doNotProcess ; exists ; 2020 ; Studia Hibernica Volume 46 ; 46 ; >
     au < doNotProcess ; exists ; 2021 ; Studia Hibernica Volume 47 ; 47 ; >
     au < deepCrawl ; exists ; 2022 ; Studia Hibernica Volume 48 ; 48 ; >
-    au < crawling ; exists ; 2023 ; Studia Hibernica Volume 49 ; 49 ; >
+    au < deepCrawl ; exists ; 2023 ; Studia Hibernica Volume 49 ; 49 ; >
+    au < expected ; exists ; 2024 ; Studia Hibernica Volume 50 ; 50 ; >
 
   }
   
@@ -1722,7 +1844,8 @@
     au < doNotProcess ; exists ; 2020 ; Theory & Struggle Volume 121 ; 121 ; >
     au < doNotProcess ; exists ; 2021 ; Theory & Struggle Volume 122 ; 122 ; >
     au < deepCrawl ; exists ; 2022 ; Theory & Struggle Volume 123 ; 123 ; >
-    au < crawling ; exists ; 2023 ; Theory & Struggle Volume 124 ; 124 ; >
+    au < deepCrawl ; exists ; 2023 ; Theory & Struggle Volume 124 ; 124 ; >
+    au < expected ; exists ; 2024 ; Theory & Struggle Volume 125 ; 125 ; >
 
 
   }
@@ -1857,7 +1980,8 @@
     au < doNotProcess ; exists ; 2020 ; Town Planning Review Volume 91 ; 91 ; >
     au < doNotProcess ; exists ; 2021 ; Town Planning Review Volume 92 ; 92 ; >
     au < deepCrawl ; exists ; 2022 ; Town Planning Review Volume 93 ; 93 ; >
-    au < crawling ; exists ; 2023 ; Town Planning Review Volume 94 ; 94 ; >
+    au < deepCrawl ; exists ; 2023 ; Town Planning Review Volume 94 ; 94 ; >
+    au < manifest ; exists ; 2024 ; Town Planning Review Volume 95 ; 95 ; >
 
 
   }
@@ -1890,7 +2014,8 @@
     au < doNotProcess ; exists ; 2020 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 169 ; 169 ; >
     au < doNotProcess ; exists ; 2021 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 170 ; 170 ; >
     au < deepCrawl ; exists ; 2022 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 171 ; 171 ; >
-    au < crawling ; exists ; 2023 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 172 ; 172 ; >
+    au < deepCrawl ; exists ; 2023 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 172 ; 172 ; >
+    au < expected ; exists ; 2024 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 173 ; 173 ; >
 
   }
 
@@ -1906,7 +2031,8 @@
     #jounral_num = 111
 
     au < deepCrawl ; exists ; 2022 ; Global Nineteenth-Century Studies Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2023 ; Global Nineteenth-Century Studies Volume 2 ; 2 ; >
+    au < deepCrawl ; exists ; 2023 ; Global Nineteenth-Century Studies Volume 2 ; 2 ; >
+    au < expected ; exists ; 2024 ; Global Nineteenth-Century Studies Volume 3 ; 3 ; >
 
   }
   
@@ -1922,7 +2048,8 @@
     #jounral_num = 115
 
     au < deepCrawl ; exists ; 2022 ; Journal of Romanian Studies Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2023 ; Journal of Romanian Studies Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2023 ; Journal of Romanian Studies Volume 5 ; 5 ; >
+    au < expected ; exists ; 2024 ; Journal of Romanian Studies Volume 6 ; 6 ; >
 
   }
   
@@ -1941,7 +2068,8 @@
     au < doNotProcess ; exists ; 2018 ; T. S. Eliot Studies Annual Volume 2 ; 2 ; >
     au < doNotProcess ; exists ; 2021 ; T. S. Eliot Studies Annual Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2022 ; T. S. Eliot Studies Annual Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2023 ; T. S. Eliot Studies Annual Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2023 ; T. S. Eliot Studies Annual Volume 5 ; 5 ; >
+    au < expected ; exists ; 2024 ; T. S. Eliot Studies Annual Volume 6 ; 6 ; >
 
   }
   
@@ -1956,7 +2084,8 @@
     param[journal_id] = cfci
 
     au < frozen ; exists ; 2022 ; CFC Intersections Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2023 ; CFC Intersections Volume 2 ; 2 ; >
+    au < deepCrawl ; exists ; 2023 ; CFC Intersections Volume 2 ; 2 ; >
+    au < expected ; exists ; 2024 ; CFC Intersections Volume 3 ; 3 ; >
 
   }
   
@@ -1970,7 +2099,8 @@
     param[journal_id] = jbs
 
     au < frozen ; exists ; 2022 ; Journal of Beatles Studies Volume 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Journal of Beatles Studies Volume 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Journal of Beatles Studies Volume 2023 ; 2023 ; >
+    au < expected ; exists ; 2024 ; Journal of Beatles Studies Volume 2024 ; 2024 ; >
 
   }
   
@@ -1984,7 +2114,8 @@
 
     param[journal_id] = revista
 
-    au < crawling ; exists ; 2023 ; Revista Iberoamericana Volume 89 ; 89 ; >
+    au < deepCrawl ; exists ; 2023 ; Revista Iberoamericana Volume 89 ; 89 ; >
+    au < manifest ; exists ; 2024 ; Revista Iberoamericana Volume 90 ; 90 ; >
 
   }
   

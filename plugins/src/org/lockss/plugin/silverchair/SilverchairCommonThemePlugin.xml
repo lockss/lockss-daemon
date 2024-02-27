@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>23</string>
+        <string>24</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -131,6 +131,10 @@
             -->
             <string>2,"^https?://([^/]+\.silverchair-cdn\.com)/.*\.xlsx"</string>
             <string>2,"%smy-account/register", base_url</string>
+            <!--This is Video API call entry point: https?://movie-usa.glencoesoftware.com/metadata/
+                For example: http://movie-usa.glencoesoftware.com/metadata/10.1083/jcb.202111095
+            -->
+            <string>1,"https?://movie-usa.glencoesoftware.com/metadata/.*"</string>
             <string>1,"^https?://(%s|[^.]+\.(silverchair-?cdn\.com/|cloudfront\.net/|brightcove\.net/)).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
             <!--
             https://pubs.geoscienceworld.org/gsabulletin/article/132/1-2/48/570322/Multiproxy-lacustrine-records-of-post-glacial
@@ -177,7 +181,30 @@
             <!--Allow movies from CDN/Subdomain goes through, company of biologies need to collect movies-->
             <!--https://journals.biologists.com/jcs/article/135/18/jcs259657/276793/Mitotic-spindle-disassembly-in-human-cells-relies-->
             <string>1,"^https?://movie\.biologists\.com/video/"</string>
-            <!--https://rupress.org/jcb/article/221/3/e202111095/212952/Vps13-like-proteins-provide-->
+            <!--http://movie-usa.glencoesoftware.com/metadata/10.1083/jcb.202111095-->
+            <!--
+              "Video 5": {
+                "source_href": "http://static-movie-usa.glencoesoftware.com/source/10.1083/157/6573459fd8d5825e210c60409e3c3decaf0e8378/JCB_202111095_V5.mp4",
+                "doi": "10.1083/jcb.202111095.v5",
+                "flv_href": "http://static-movie-usa.glencoesoftware.com/flv/10.1083/157/6573459fd8d5825e210c60409e3c3decaf0e8378/JCB_202111095_V5.flv",
+                "uuid": "47839814-f1ab-4f4b-9393-243ea5d92912",
+                "title": "Video 5.",
+                "video_id": "video-5",
+                "solo_href": "http://movie.rupress.org/video/10.1083/jcb.202111095/video-5",
+                "height": 718,
+                "ogv_href": "http://static-movie-usa.glencoesoftware.com/ogv/10.1083/157/6573459fd8d5825e210c60409e3c3decaf0e8378/JCB_202111095_V5.ogv",
+                "width": 1138,
+                "legend": "<div class=\"caption\"><p><b>Structure of </b><i><b>S. cerevisiae</b></i><b> Hob2 generated with RoseTTAFold and ChimeraX: β-sheets (blue), α-helices (red), and coil (green).</b> The movie shows rotation around the longitudinal axis. Frame rate = 5 frames per second.</p></div>",
+                "href": "JCB_202111095_V5.mp4",
+                "webm_href": "http://static-movie-usa.glencoesoftware.com/webm/10.1083/157/6573459fd8d5825e210c60409e3c3decaf0e8378/JCB_202111095_V5.webm",
+                "jpg_href": "http://static-movie-usa.glencoesoftware.com/jpg/10.1083/157/6573459fd8d5825e210c60409e3c3decaf0e8378/JCB_202111095_V5.jpg",
+                "duration": 7.2,
+                "mp4_href": "http://static-movie-usa.glencoesoftware.com/mp4/10.1083/157/6573459fd8d5825e210c60409e3c3decaf0e8378/JCB_202111095_V5.mp4",
+                "id": "video5",
+                "size": 4221638
+              }
+            -->
+            <string>1,"https?://static-movie-usa.glencoesoftware.com/(mp4|source|webm|flv|jpg|ogv)"</string>
         </list>
     </entry>
     <entry>
@@ -214,6 +241,20 @@
         <string>text/plain_filter_factory</string>
         <string>org.lockss.plugin.silverchair.SilverchairRisFilterFactory</string>
     </entry>
+    <!--
+    <entry>
+        <string>text/html_link_extractor_factory</string>
+        <string>org.lockss.plugin.silverchair.SilverchairVideoHtmlLinkExtractorFactory</string>
+    </entry>
+    <entry>
+        <string>application/json_link_extractor_factory</string>
+        <string>org.lockss.plugin.silverchair.SilverchairVideoJsonLinkExtractorFactory</string>
+    </entry>
+    <entry>
+        <string>text/json_link_extractor_factory</string>
+        <string>org.lockss.plugin.silverchair.SilverchairVideoJsonLinkExtractorFactory</string>
+    </entry>
+    -->
     <entry>
         <string>plugin_article_iterator_factory</string>
         <string>org.lockss.plugin.silverchair.SilverchairCommonThemeArticleIteratorFactory</string>
@@ -261,6 +302,8 @@
             <string>watermark\.silverchair\.com</string>
             <string>ajot2\.silverchair-cdn\.com</string>
             <string>movie\.biologists\.com</string>
+            <string>movie-usa\.glencoesoftware\.com</string>
+            <string>static-movie-usa\.glencoesoftware\.com</string>
         </list>
     </entry>
     <entry>

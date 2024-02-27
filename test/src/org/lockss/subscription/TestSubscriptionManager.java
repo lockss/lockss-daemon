@@ -91,8 +91,8 @@ public class TestSubscriptionManager extends LockssTestCase {
     super.setUp();
     tempDirPath = setUpDiskSpace();
 
-    ConfigurationUtil.addFromArgs(MetadataManager.PARAM_INDEXING_ENABLED,
-	"true");
+//     ConfigurationUtil.addFromArgs(MetadataManager.PARAM_INDEXING_ENABLED,
+// 	"true");
     ConfigurationUtil.addFromArgs(SubscriptionManager
 	.PARAM_SUBSCRIPTION_ENABLED, "true");
 

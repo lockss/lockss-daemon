@@ -14,33 +14,29 @@
   {
   
     title <
-      name = Water Intelligence Online ;
-      eissn = 1476-1777 ;
-      issnl = 1476-1777
+      name = International Water Association Publishing Books
     >
 
-    type = bookSeries
     {
+    type = bookSeries
     param[base_url] = https://iwaponline.com/
     plugin = org.lockss.plugin.silverchair.iwap.ClockssIwapSilverchairBooksPlugin
     implicit < status ; status2 ; year ; isbn ; eisbn ; name ; param[resource_id]; hidden[proxy] >
 
-    #Slightly different format
-    au < testing ; exists ; 2019 ;  ; 9781789061246 ; Frontier Technology for Water Treatment and Pollutant Removal ; ebooks/book/773/Frontier-Technology-for-Water-Treatment-and ; > 
 
     au < manifest ; exists ; 1999 ; 9781900222150 ; 9781780402864 ; Wastewater Treatment Systems ; ebooks/book/146/Wastewater-Treatment-Systems-Modelling-Diagnosis ; >
     au < manifest ; exists ; 2000 ; 9781900222242 ; 9781780402369 ; Activated Sludge Models ; ebooks/book/96/Activated-Sludge-Models-ASM1-ASM2-ASM2d-and-ASM3 ; >
     au < manifest ; exists ; 2000 ; 9781900222099 ; 9781780403038 ; Environmental Technologies to Treat Sulfur Pollution ; ebooks/book/160/Environmental-Technologies-to-Treat-Sulfur ; >
     au < manifest ; exists ; 2000 ; 9781900222105 ; 9781780402222 ; Land Ocean Interaction ; ebooks/book/78/Land-Ocean-Interaction-Measuring-and-Modelling ; >
-    au < manifest ; exists ; 2000 ; 9781900222075 ; 9781780402147 ; Membrane Bioreactors for Wastewater Treatment ; ebooks/book/80/Membrane-Bioreactors-for-Wastewater-Treatment ; >
-    au < manifest ; exists ; 2001 ; 9781900222471 ; 9781780402949 ; Decentralised Sanitation and Reuse ; ebooks/book/374/Decentralised-Sanitation-and-Reuse-Concepts ; >
-    au < manifest ; exists ; 2001 ; 9781900222501 ; 9781780403045 ; Dynamical Modelling & Estimation in Wastewater Treatment Processes ; ebooks/book/151/Dynamical-Modelling-amp-Estimation-in-Wastewater ; >
+    au < down ; exists ; 2000 ; 9781900222075 ; 9781780402147 ; Membrane Bioreactors for Wastewater Treatment ; ebooks/book/80/Membrane-Bioreactors-for-Wastewater-Treatment ; >
+    au < down ; exists ; 2001 ; 9781900222471 ; 9781780402949 ; Decentralised Sanitation and Reuse ; ebooks/book/374/Decentralised-Sanitation-and-Reuse-Concepts ; >
+    au < down ; exists ; 2001 ; 9781900222501 ; 9781780403045 ; Dynamical Modelling & Estimation in Wastewater Treatment Processes ; ebooks/book/151/Dynamical-Modelling-amp-Estimation-in-Wastewater ; >
     au < manifest ; exists ; 2001 ; 9781900222761 ; 9781780402659 ; Frontiers in Urban Water Management ; ebooks/book/125/Frontiers-in-Urban-Water-Management-Deadlock-or ; >
-    au < manifest ; exists ; 2001 ; 9781900222464 ; 9781780402932 ; Odours in Wastewater Treatment ; ebooks/book/29/Odours-in-Wastewater-Treatment-Measurement ; >
-    au < manifest ; exists ; 2001 ; 9781900222822 ; 9781780402789 ; River Water Quality Model No.1 ; ebooks/book/363/River-Water-Quality-Model-No-1 ; >
+    au < down ; exists ; 2001 ; 9781900222464 ; 9781780402932 ; Odours in Wastewater Treatment ; ebooks/book/29/Odours-in-Wastewater-Treatment-Measurement ; >
+    au < down ; exists ; 2001 ; 9781900222822 ; 9781780402789 ; River Water Quality Model No.1 ; ebooks/book/363/River-Water-Quality-Model-No-1 ; >
     au < manifest ; exists ; 2001 ; 9781900222211 ; 9781780402246 ; Sequencing Batch Reactor Technology ; ebooks/book/89/Sequencing-Batch-Reactor-Technology ; >
     au < manifest ; exists ; 2001 ; 9781900222082 ; 9781780402215 ; Sludge into Biosolids ; ebooks/book/87/Sludge-into-Biosolids-Processing-Disposal ; >
-    au < manifest ; exists ; 2001 ; 9781843390008 ; 9781780402178 ; The Combined Sharon/Anammox Process ; ebooks/book/85/The-Combined-Sharon-Anammox-Process-A-Sustainable ; >
+    au < down ; exists ; 2001 ; 9781843390008 ; 9781780402178 ; The Combined Sharon/Anammox Process ; ebooks/book/85/The-Combined-Sharon-Anammox-Process-A-Sustainable ; >
     au < manifest ; exists ; 2001 ; 9781900222129 ; 9781780402239 ; The EU Water Framework Directive ; ebooks/book/88/The-EU-Water-Framework-Directive-An-Introduction ; >
     au < manifest ; exists ; 2001 ; 9781900222280 ; 9781780405889 ; Water Quality: Guidelines, Standards & Health ; ebooks/book/389/Water-Quality-Guidelines-Standards-and-Health ; >
     au < manifest ; exists ; 2002 ; 9781900222785 ; 9781780403052 ; Anaerobic Digestion Model No.1 (ADM1) ; ebooks/book/152/Anaerobic-Digestion-Model-No-1-ADM1 ; >
@@ -725,7 +721,8 @@
     au < manifest ; exists ; 2019 ; 9781789060515 ; 9781789060522 ; Manual Sobre los Derechos Humanos al Agua Potable y Saneamiento para Profesionales ; ebooks/book/747/Manual-Sobre-los-Derechos-Humanos-al-Agua-Potable ; >
     au < manifest ; exists ; 2019 ; 9781780409160 ; 9781780409177 ; Membrane Biological Reactors: Theory, Modeling, Design, Management and Applications to Wastewater Reuse - Second Edition ; ebooks/book/759/Membrane-Biological-ReactorsTheory-Modeling-Design ; >
     au < manifest ; exists ; 2019 ; 9781780409269 ; 9781780409252 ; Métodos Experimentales Para el Tratamiento de Aguas Residuales ; ebooks/book/774/Metodos-Experimentales-para-el-Tratamiento-de ; >
-    au < testing ; exists ; 2019 ; 9781789060027 ; 9781789060034 ; Microplastics in Water and Wastewater ; ebooks/book/769/Microplastics-in-Water-and-Wastewater ; >
+    au < down ; exists ; 2019 ;  ; 9781789061246 ; Frontier Technology for Water Treatment and Pollutant Removal ; ebooks/book/773/Frontier-Technology-for-Water-Treatment-and ; > 
+    au < manifest ; exists ; 2019 ; 9781789060027 ; 9781789060034 ; Microplastics in Water and Wastewater ; ebooks/book/769/Microplastics-in-Water-and-Wastewater ; >
     au < manifest ; exists ; 2019 ; 9781789060812 ; 9781789060829 ; Nature for Water: A Series of Utility Spotlights ; ebooks/book/775/Nature-for-WaterA-Series-of-Utility-Spotlights ; >
     au < manifest ; exists ; 2019 ; 9781780409733 ; 9781780409740 ; Post Treatments of Anaerobically Treated Effluents ; ebooks/book/750/Post-Treatments-of-Anaerobically-Treated-Effluents ; >
     au < manifest ; exists ; 2019 ; 9781789060492 ; 9781789060492 ; Public Involvement in Knowledge Generation: Citizen Science Opportunities in the Dutch Water Sector ; ebooks/book/743/Public-Involvement-in-Knowledge-Generation-Citizen ; >
@@ -742,7 +739,7 @@
     au < manifest ; exists ; 2019 ; 9781780409641 ; 9781780409658 ; Water, Energy, and Environment – A Primer ; ebooks/book/744/Water-Energy-and-Environment-A-Primer ; >
     au < manifest ; exists ; 2019 ; 9781789060386 ; 9781789060393 ; Watermaths ; ebooks/book/771/Watermaths-Process-Fundamentals-for-the-Design-and ; >
     au < manifest ; exists ; 2019 ; 9781789060164 ; 9781789060171 ; Wetland Technology: Practical Information on the Design and Application of Treatment Wetlands ; ebooks/book/780/Wetland-Technology-Practical-Information-on-the ; >
-    au < testing ; exists ; 2020 ; 9781780409313 ; 9781780409320 ; Assessment of Treatment Plant Performance and Water Quality Data: A Guide for Students, Researchers and Practitioners ; ebooks/book/777/Assessment-of-Treatment-Plant-Performance-and ; >
+    au < down ; exists ; 2020 ; 9781780409313 ; 9781780409320 ; Assessment of Treatment Plant Performance and Water Quality Data: A Guide for Students, Researchers and Practitioners ; ebooks/book/777/Assessment-of-Treatment-Plant-Performance-and ; >
     au < manifest ; exists ; 2020 ; 9781789060546 ; 9781789060553 ; Assessment Standard for Sponge City Effects ; ebooks/book/793/Assessment-Standard-for-Sponge-City-Effects ; >
     au < manifest ; exists ; 2020 ; 9781789060355 ; 9781789060362 ; Biological Wastewater Treatment ; ebooks/book/791/Biological-Wastewater-TreatmentPrinciples ; >
     au < manifest ; exists ; 2020 ; 9781789061758 ; 9781789061765 ; Business Skills Training for Rural Sanitation Entrepreneurs: Entrepreneur Workbook ; ebooks/book/796/Business-Skills-Training-for-Rural-Sanitation ; >
@@ -758,9 +755,9 @@
     au < manifest ; exists ; 2020 ; 9781780407036 ; 9781789062021 ; Industrial MBRs: Membrane Bioreactors for Industrial Wastewater Treatment ; ebooks/book/800/Industrial-MBRs-Membrane-Bioreactors-for ; >
     au < manifest ; exists ; 2020 ; 9781789060577 ; 9781789060584 ; International Rainwater Catchment Systems Experiences: Towards Water Security ; ebooks/book/790/International-Rainwater-Catchment-Systems ; >
     au < manifest ; exists ; 2020 ; 9781789061352 ; 9781789061352 ; IWA. compendium of terms and acronyms. Chinese translation ; ebooks/book/795/IWA ; >
-    au < testing ; exists ; 2020 ; 9781789060843 ; 9781789060850 ; Leak Detection: Technology and Implementation ; ebooks/book/778/Leak-DetectionTechnology-and-Implementation ; >
+    au < down ; exists ; 2020 ; 9781789060843 ; 9781789060850 ; Leak Detection: Technology and Implementation ; ebooks/book/778/Leak-DetectionTechnology-and-Implementation ; >
     au < manifest ; exists ; 2020 ; 9781780409511 ; 9781780409528 ; Mathematical Modelling and Computer Simulation of Activated Sludge Systems (2020) ; ebooks/book/781/Mathematical-Modelling-and-Computer-Simulation-of ; >
-    au < manifest ; exists ; 2020 ; 9781789061680 ; 9781789061697 ; Microplastics in Water and Wastewater - 2nd Edition ; ebooks/book/802/Microplastics-in-Water-and-Wastewater ; >
+    au < down ; exists ; 2020 ; 9781789061680 ; 9781789061697 ; Microplastics in Water and Wastewater - 2nd Edition ; ebooks/book/802/Microplastics-in-Water-and-Wastewater ; >
     au < manifest ; exists ; 2020 ; 9781789061819 ; 9781789061826 ; Pharmaceutical Residues in Freshwater: Hazards and Policy Responses ; ebooks/book/792/Pharmaceutical-Residues-in-Freshwater-Hazards-and ; >
     au < manifest ; exists ; 2020 ; 9781789061291 ; 9781789061307 ; Physical and Chemical Separation in Water and Wastewater Treatment ; ebooks/book/807/Physical-and-Chemical-Separation-in-Water-and ; >
     au < manifest ; exists ; 2020 ; 9781789060270 ; 9781789060287 ; Sludge Thermal Hydrolysis: Application and Potential ; ebooks/book/789/Sludge-Thermal-Hydrolysis-Application-and ; >
@@ -822,32 +819,48 @@
     au < manifest ; exists ; 2022 ; 9781789063233 ; 9781789063233 ; Tratamento Biológico de Esgoto: Princípios, Modelagem e Projeto ; ebooks/book/858/Tratamento-Biologico-de-EsgotoPrincipios-Modelagem ; >
     au < manifest ; exists ; 2022 ; 9781789062892 ; 9781789062908 ; Water interactions: A systemic view: Why we need to comprehend the water-climate-energy-food-economics-lifestyle connections ; ebooks/book/856/Water-Interactions-A-Systemic-ViewWhy-we-Need-to ; >
     au < manifest ; exists ; 2022 ; 9781789062779 ; 9781789062786 ; Water Resources Allocation and Agriculture ; ebooks/book/857/Water-Resources-Allocation-and ; >
-    au < manifest ; exists ; 2023 ; 9781789063530 ; 9781789063547 ; Algal Systems for Resource Recovery from Waste and Wastewater ; ebooks/book/885/Algal-Systems-for-Resource-Recovery-from-Waste-and ; >
-    au < manifest ; exists ; 2023 ; 9781789063974 ; 9781789063981 ; Articulating Publicness in Infrastructure: The history of municipal streets, water and sanitation in Sweden ; ebooks/book/877/Articulating-Publicness-in-InfrastructureThe ; >
-    au < manifest ; exists ; 2023 ; 9781789062298 ; 9781789062304 ; Biological Wastewater Treatment: Principles, Modelling and Design: Examples & Exercises ; ebooks/book/871/Biological-Wastewater-TreatmentExamples-and ; >
-    au < manifest ; exists ; 2023 ; 9781789064131 ; 9781789064131 ; Chinese Translation - Environmental Technologies to Treat Sulfur Pollution: principles and engineering ; ebooks/book/874/Environmental-Technologies-to-Treat-Sulfur ; >
+    au < crawling ; exists ; 2023 ; 9781789063530 ; 9781789063547 ; Algal Systems for Resource Recovery from Waste and Wastewater ; ebooks/book/885/Algal-Systems-for-Resource-Recovery-from-Waste-and ; >
+    au < crawling ; exists ; 2023 ; 9781789063974 ; 9781789063981 ; Articulating Publicness in Infrastructure: The history of municipal streets, water and sanitation in Sweden ; ebooks/book/877/Articulating-Publicness-in-InfrastructureThe ; >
+    au < crawling ; exists ; 2023 ; 9781789062298 ; 9781789062304 ; Biological Wastewater Treatment: Principles, Modelling and Design: Examples & Exercises ; ebooks/book/871/Biological-Wastewater-TreatmentExamples-and ; >
+    au < crawling ; exists ; 2023 ; 9781789064131 ; 9781789064131 ; Chinese Translation - Environmental Technologies to Treat Sulfur Pollution: principles and engineering ; ebooks/book/874/Environmental-Technologies-to-Treat-Sulfur ; >
     au < manifest ; exists ; 2023 ; 9781789063776 ; 9781789063783 ; Clean Technologies Toward a Sustainable Future: Physicochemical, Biochemical and Biotechnological Approaches ; ebooks/book/884/Clean-Technologies-Toward-the-Development-of-a ; >
-    au < manifest ; exists ; 2023 ; 9781789063301 ; 9781789063318 ; Landfill Leachate Management ; ebooks/book/876/Landfill-Leachate-Management ; >
-    au < manifest ; exists ; 2023 ; 9781789063196 ; 9781789063202 ; Marine Plastics Abatement: Volume 1. Challenges, Implications, Assessments and Circularity ; ebooks/book/868/Marine-Plastics-AbatementChallenges-Implications ; >
-    au < manifest ; exists ; 2023 ; 9781789063431 ; 9781789063448 ; Marine Plastics Abatement: Volume 2. Technology, Management, Business and Future Trends ; ebooks/book/869/Marine-Plastics-AbatementTechnology-Management ; >
-    au < manifest ; exists ; 2023 ; 9781789062717 ; 9781789062724 ; Membrane based Point-of-Use Drinking Water Treatment System ; ebooks/book/867/Membrane-Based-Point-of-Use-Drinking-Water ; >
-    au < manifest ; exists ; 2023 ; 9781789063585 ; 9781789063592 ; Nanobiohybrids for Advanced Wastewater Treatment and Energy Recovery ; ebooks/book/886/Nanobiohybrids-for-Advanced-Wastewater-Treatment ; >
-    au < manifest ; exists ; 2023 ; 9781789063738 ; 9781789063738 ; Pathways to Water Sector Decarbonization, Carbon Capture and Utilization, Chinese Translation ; ebooks/book/872/Pathways-to-Water-Sector-Decarbonization-Carbon ; >
-    au < manifest ; exists ; 2023 ; 9781789061208 ; 9781789061215 ; Seawater Reverse Osmosis (SWRO) Desalination: Energy consumption in plants, advanced low-energy technologies, and future developments for improving energy efficiency ; ebooks/book/870/Seawater-Reverse-Osmosis-SWRO-DesalinationEnergy ; >
-    au < manifest ; exists ; 2023 ; 9781789063028 ; 9781789063035 ; Soluciones basadas en la naturaleza para el tratamiento de aguas residuales ; ebooks/book/873/Soluciones-basadas-en-la-naturaleza-para-el ; >
-    au < manifest ; exists ; 2023 ; 9781789063707 ; 9781789063714 ; Technological Solutions for Water Sustainability: Challenges & Prospects - towards a water-secure India ; ebooks/book/880/Technological-Solutions-for-Water-Sustainability ; >
-    au < manifest ; exists ; 2023 ; 9781789064124 ; 9781789064124 ; Tecnologias ambientais para tratar a poluição por enxofre: Princípios e Engenharia – 2ª Edição ; ebooks/book/875/Tecnologias-ambientais-para-tratar-a-poluicao-por ; >
+    au < crawling ; exists ; 2023 ; 9781789063301 ; 9781789063318 ; Landfill Leachate Management ; ebooks/book/876/Landfill-Leachate-Management ; >
+    au < crawling ; exists ; 2023 ; 9781789063196 ; 9781789063202 ; Marine Plastics Abatement: Volume 1. Challenges, Implications, Assessments and Circularity ; ebooks/book/868/Marine-Plastics-AbatementChallenges-Implications ; >
+    au < crawling ; exists ; 2023 ; 9781789063431 ; 9781789063448 ; Marine Plastics Abatement: Volume 2. Technology, Management, Business and Future Trends ; ebooks/book/869/Marine-Plastics-AbatementTechnology-Management ; >
+    au < crawling ; exists ; 2023 ; 9781789062717 ; 9781789062724 ; Membrane based Point-of-Use Drinking Water Treatment System ; ebooks/book/867/Membrane-Based-Point-of-Use-Drinking-Water ; >
+    au < crawling ; exists ; 2023 ; 9781789063585 ; 9781789063592 ; Nanobiohybrids for Advanced Wastewater Treatment and Energy Recovery ; ebooks/book/886/Nanobiohybrids-for-Advanced-Wastewater-Treatment ; >
+    au < crawling ; exists ; 2023 ; 9781789063738 ; 9781789063738 ; Pathways to Water Sector Decarbonization, Carbon Capture and Utilization, Chinese Translation ; ebooks/book/872/Pathways-to-Water-Sector-Decarbonization-Carbon ; >
+    au < crawling ; exists ; 2023 ; 9781789061208 ; 9781789061215 ; Seawater Reverse Osmosis (SWRO) Desalination: Energy consumption in plants, advanced low-energy technologies, and future developments for improving energy efficiency ; ebooks/book/870/Seawater-Reverse-Osmosis-SWRO-DesalinationEnergy ; >
+    au < crawling ; exists ; 2023 ; 9781789063028 ; 9781789063035 ; Soluciones basadas en la naturaleza para el tratamiento de aguas residuales ; ebooks/book/873/Soluciones-basadas-en-la-naturaleza-para-el ; >
+    au < crawling ; exists ; 2023 ; 9781789063707 ; 9781789063714 ; Technological Solutions for Water Sustainability: Challenges & Prospects - towards a water-secure India ; ebooks/book/880/Technological-Solutions-for-Water-Sustainability ; >
+    au < crawling ; exists ; 2023 ; 9781789064124 ; 9781789064124 ; Tecnologias ambientais para tratar a poluição por enxofre: Princípios e Engenharia – 2ª Edição ; ebooks/book/875/Tecnologias-ambientais-para-tratar-a-poluicao-por ; >
 
     #Not included in the list from the publisher
-    au < manifest ; exists ; 2023 ; 9781789064797 ; 9781789064797 ; Advanced Oxidation Processes for Contaminants of Emerging Concern ; ebooks/book/887/Advanced-Oxidation-Processes-for-Contaminants-of ; >
-    au < manifest ; exists ; 2023 ; 9781789064780 ; 9781789064780 ; Wastewater-based Epidemiology at the Frontier of Global Public Health ; ebooks/book/888/Wastewater-based-Epidemiology-at-the-Frontier-of ; >
-    au < manifest ; exists ; 2023 ; 9781789064810 ; 9781789064810 ; Cutting-edge Research on the Action Plan for Prevention and Control of Emerging Contaminants in China ; ebooks/book/889/Cutting-edge-Research-on-the-Action-Plan-for ; >
-    au < manifest ; exists ; 2019 ; 9781789061185 ; 9781789061185 ; Drought Policies: Case Studies on Mega-droughts for the High Level Experts and Leaders Panel on Water and Disasters (HELP) ; ebooks/book/772/Drought-Policies-Case-Studies-on-Mega-droughts-for ; >
-    au < manifest ; exists ; 2019 ; 9781789061024 ; 9781789061024 ; Environmentally Friendly (Bio)Technologies for the Removal of Emerging Organic and Inorganic Pollutants from Water ; ebooks/book/763/Environmentally-Friendly-Bio-Technologies-for-the ; >
-    au < manifest ; exists ; 2019 ; 9781789060935 ; 9781789060935 ; Algal Technologies for Wastewater Treatment and Resource Recovery ; ebooks/book/760/Algal-Technologies-for-Wastewater-Treatment-and ; >
+    au < manifest ; exists ; 2019 ; ; 9781789061185 ; Drought Policies: Case Studies on Mega-droughts for the High Level Experts and Leaders Panel on Water and Disasters (HELP) ; ebooks/book/772/Drought-Policies-Case-Studies-on-Mega-droughts-for ; >
+    au < manifest ; exists ; 2019 ; ; 9781789061024 ; Environmentally Friendly (Bio)Technologies for the Removal of Emerging Organic and Inorganic Pollutants from Water ; ebooks/book/763/Environmentally-Friendly-Bio-Technologies-for-the ; >
+    au < manifest ; exists ; 2019 ; ; 9781789060935 ; Algal Technologies for Wastewater Treatment and Resource Recovery ; ebooks/book/760/Algal-Technologies-for-Wastewater-Treatment-and ; >
+    au < manifest ; exists ; 2020 ; ; 9781789061376 ; Sustainable Eco-technologies for Water and Wastewater Treatment ; ebooks/book/783/Sustainable-Eco-technologies-for-Water-and ; >
+    au < manifest ; exists ; 2020 ; ; 9781789061468 ; Improving Water Governance in Kathmandu: Insights from Systems Thinking and Behavioral Science ; ebooks/book/784/Improving-Water-Governance-in-Kathmandu-Insights ; >
+    au < manifest ; exists ; 2020 ; ; 9781789062076 ; Water and Environmental Challenges in a Changing World ; ebooks/book/804/Water-and-Environmental-Challenges-in-a-Changing ; >
+    au < manifest ; exists ; 2021 ; ; 9781789062410 ; Water Resource Recovery Modelling ; ebooks/book/810/Water-Resource-Recovery-Modelling ; >
+    au < manifest ; exists ; 2022 ; ; 9781789063370 ; Celebrating passion for Water, Science and Technology: Festschrift in Honour of Gustaf Olsson ; ebooks/book/859/Celebrating-passion-for-Water-Science-and ; >
+    au < manifest ; exists ; 2022 ; ; 9781789064445 ; SARS-CoV-2 in Water ; ebooks/book/883/SARS-CoV-2-in-Water ; >
+    au < manifest ; exists ; 2023 ; ; 9781789064797 ; Advanced Oxidation Processes for Contaminants of Emerging Concern ; ebooks/book/887/Advanced-Oxidation-Processes-for-Contaminants-of ; >
+    au < manifest ; exists ; 2023 ; ; 9781789064780 ; Wastewater-based Epidemiology at the Frontier of Global Public Health ; ebooks/book/888/Wastewater-based-Epidemiology-at-the-Frontier-of ; >
+    au < manifest ; exists ; 2023 ; ; 9781789064810 ; Cutting-edge Research on the Action Plan for Prevention and Control of Emerging Contaminants in China ; ebooks/book/889/Cutting-edge-Research-on-the-Action-Plan-for ; >
 
     }
+  }
+  {
+  
+    title <
+      name = Water Intelligence Online ;
+      eissn = 1476-1777 ;
+      issnl = 1476-1777
+    >
+
     {
+    type = bookSeries
     param[base_url] = http://wio.iwaponline.com/
     plugin = org.lockss.plugin.highwire.iwa.ClockssIWADrupalPlugin
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >

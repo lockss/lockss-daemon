@@ -23,8 +23,8 @@
     {
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/aes-released/
 
-      au < readySource ; crawling ; 2023 ; American Entomological Society Source Content 2023_01 ; 2023_01 >
-      au < expected ; exists ; 2024 ; American Entomological Society Source Content 2024_01 ; 2024_01 >
+      au < readySource ; finished ; 2023 ; American Entomological Society Source Content 2023_01 ; 2023_01 >
+      au < readySource ; crawling ; 2024 ; American Entomological Society Source Content 2024_01 ; 2024_01 >
 
     }
 
@@ -58,8 +58,8 @@
     {
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/bioone-released/
 
-      au < readySource ; crawling ; 2023 ; UniBio Press Source Content 2023 ; 2023 >
-      au < expected ; exists ; 2024 ; UniBio Press Source Content 2024 ; 2024 >
+      au < readySource ; finished ; 2023 ; UniBio Press Source Content 2023 ; 2023 >
+      au < readySource ; crawling ; 2024 ; UniBio Press Source Content 2024 ; 2024 >
 
     }
   }

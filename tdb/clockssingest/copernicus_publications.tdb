@@ -68,13 +68,14 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Advances in Geosciences Volume 40 ; 40 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Advances in Geosciences Volume 41 ; 41 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Advances in Geosciences Volume 42 ; 42 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Advances in Geosciences Volume 43 ; 43 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Advances in Geosciences Volume 44 ; 44 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Advances in Geosciences Volume 43 ; 43 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Advances in Geosciences Volume 44 ; 44 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Advances in Geosciences Volume 45 ; 45 ; >
       au < finished ; frozen ; 2020 ; 2020 ; Advances in Geosciences Volume 46 ; 46 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2021 ; 2021 ; Advances in Geosciences Volume 47 ; 47 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Advances in Geosciences Volume 48 ; 48 ; >
-      au < crawling ; exists ; 2023 ; 2023 ; Advances in Geosciences Volume 49 ; 49 ; >
+      au < deepCrawl ; exists ; 2023 ; 2023 ; Advances in Geosciences Volume 49 ; 49 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Advances in Geosciences Volume 50 ; 50 ; >
 
   }
 
@@ -98,17 +99,18 @@
       au < finished ; finished ; 2010 ; 2010 ; Advances in Radio Science 2009 Volume 8 ; 8 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2011 ; 2011 ; Advances in Radio Science 2010 Volume 9 ; 9 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Advances in Radio Science 2011 Volume 10 ; 10 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; Advances in Radio Science 2012 Volume 11 ; 11 ; >
+      au < finished ; manifest ; 2013 ; 2013 ; Advances in Radio Science 2012 Volume 11 ; 11 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Advances in Radio Science 2013 Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Advances in Radio Science 2014 Volume 13 ; 13 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; Advances in Radio Science 2015 Volume 14 ; 14 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Advances in Radio Science 2016 Volume 15 ; 15 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Advances in Radio Science 2017 Volume 16 ; 16 ; >
+      au < finished ; manifest ; 2016 ; 2016 ; Advances in Radio Science 2015 Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; 2017 ; Advances in Radio Science 2016 Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Advances in Radio Science 2017 Volume 16 ; 16 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Advances in Radio Science 2018 Volume 17 ; 17 ; >
       au < finished ; finished ; 2020 ; 2020 ; Advances in Radio Science 2019 Volume 18 ; 18 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2021 ; 2021 ; Advances in Radio Science 2020 Volume 19 ; 19 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2022 ; 2022 ; Advances in Radio Science 2020 Volume 20 ; 20 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; Advances in Radio Science 2020 Volume 20 ; 20 ; reingest2.clockss.org:8085 >
       au < manifest ; exists ; 2023 ; 2023 ; Advances in Radio Science 2121 Volume 21 ; 21 ; >
+      au < expected ; exists ; 2024 ; 2024 ; Advances in Radio Science 2222 Volume 22 ; 22 ; >
 
   }
 
@@ -135,13 +137,14 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Advances in Science and Research Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Advances in Science and Research Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Advances in Science and Research Volume 13 ; 13 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Advances in Science and Research Volume 14 ; 14 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Advances in Science and Research Volume 15 ; 15 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Advances in Science and Research Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; 2018 ; Advances in Science and Research Volume 15 ; 15 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Advances in Science and Research Volume 16 ; 16 ; >
       au < finished ; finished ; 2020 ; 2020 ; Advances in Science and Research Volume 17 ; 17 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Advances in Science and Research Volume 18 ; 18 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Advances in Science and Research Volume 19 ; 19 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Advances in Science and Research Volume 20 ; 20 ; >
+      au < expected ; exists ; 2024 ; 2024 ; Advances in Science and Research Volume 21 ; 21 ; >
 
   }
 
@@ -159,13 +162,14 @@
 
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 2 ; 2 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 3 ; 3 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 4 ; 4 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 4 ; 4 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 5 ; 5 ; >
       au < finished ; finished ; 2020 ; 2020 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 6 ; 6 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 7 ; 7 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 8 ; 8 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Advances in Statistical Climatology, Meteorology and Oceanography Volume 10 ; 10 ; >
 
   }
 
@@ -191,7 +195,8 @@
       param[base_url] = https://ar.copernicus.org/
       param[home_url] = https://www.aerosol-research.net/
 
-      au < crawling ; exists ; 2023 ; 2023 ; Aerosol Research Volume 1 ; 1 ; >
+      au < deepCrawl ; exists ; 2023 ; 2023 ; Aerosol Research Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Aerosol Research Volume 2 ; 2 ; >
 
   }
 
@@ -209,6 +214,7 @@
       au < finished ; frozen ; 2021 ; 2021 ; AGILE: GIScience Series Volume 2 ; 2 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; AGILE: GIScience Series Volume 3 ; 3 ; >
       au < crawling ; exists ; 2023 ; 2023 ; AGILE: GIScience Series Volume 4 ; 4 ; >
+      au < expected ; exists ; 2024 ; 2024 ; AGILE: GIScience Series Volume 5 ; 5 ; >
 
   }
 
@@ -250,13 +256,14 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Annales Geophysicae Volume 32 ; 32 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Annales Geophysicae Volume 33 ; 33 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Annales Geophysicae Volume 34 ; 34 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Annales Geophysicae Volume 35 ; 35 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Annales Geophysicae Volume 36 ; 36 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Annales Geophysicae Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; 2018 ; Annales Geophysicae Volume 36 ; 36 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Annales Geophysicae Volume 37 ; 37 ; >
       au < finished ; finished ; 2020 ; 2020 ; Annales Geophysicae Volume 38 ; 38 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2021 ; 2021 ; Annales Geophysicae Volume 39 ; 39 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Annales Geophysicae Volume 40 ; 40 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Annales Geophysicae Volume 41 ; 41 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Annales Geophysicae Volume 42 ; 42 ; >
 
   }
 
@@ -284,18 +291,19 @@
       au < finished ; finished ; 2009 ; 2009 ; Archives Animal Breeding Volume 52 ; 52 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2010 ; 2010 ; Archives Animal Breeding Volume 53 ; 53 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2011 ; 2011 ; Archives Animal Breeding Volume 54 ; 54 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2012 ; 2012 ; Archives Animal Breeding Volume 55 ; 55 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; Archives Animal Breeding Volume 56 ; 56 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; Archives Animal Breeding Volume 57 ; 57 ; >
+      au < finished ; manifest ; 2012 ; 2012 ; Archives Animal Breeding Volume 55 ; 55 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; Archives Animal Breeding Volume 56 ; 56 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; 2014 ; Archives Animal Breeding Volume 57 ; 57 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Archives Animal Breeding Volume 58 ; 58 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; Archives Animal Breeding Volume 59 ; 59 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Archives Animal Breeding Volume 60 ; 60 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Archives Animal Breeding Volume 61 ; 61 ; >
+      au < finished ; manifest ; 2016 ; 2016 ; Archives Animal Breeding Volume 59 ; 59 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2017 ; 2017 ; Archives Animal Breeding Volume 60 ; 60 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; 2018 ; Archives Animal Breeding Volume 61 ; 61 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Archives Animal Breeding Volume 62 ; 62 ; >
       au < finished ; finished ; 2020 ; 2020 ; Archives Animal Breeding Volume 63 ; 63 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Archives Animal Breeding Volume 64 ; 64 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Archives Animal Breeding Volume 65 ; 65 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Archives Animal Breeding Volume 66 ; 66 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Archives Animal Breeding Volume 67 ; 67 ; >
 
   }
 
@@ -325,13 +333,14 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Atmospheric Chemistry and Physics Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Atmospheric Chemistry and Physics Volume 15 ; 15 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Atmospheric Chemistry and Physics Volume 16 ; 16 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Atmospheric Chemistry and Physics Volume 17 ; 17 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Atmospheric Chemistry and Physics Volume 18 ; 18 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Atmospheric Chemistry and Physics Volume 17 ; 17 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Atmospheric Chemistry and Physics Volume 18 ; 18 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Atmospheric Chemistry and Physics Volume 19 ; 19 ; >
       au < finished ; frozen ; 2020 ; 2020 ; Atmospheric Chemistry and Physics Volume 20 ; 20 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Atmospheric Chemistry and Physics Volume 21 ; 21 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Atmospheric Chemistry and Physics Volume 22 ; 22 ; >
-      au < crawling ; exists ; 2023 ; 2023 ; Atmospheric Chemistry and Physics Volume 23 ; 23 ; >
+      au < deepCrawl ; exists ; 2023 ; 2023 ; Atmospheric Chemistry and Physics Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Atmospheric Chemistry and Physics Volume 24 ; 24 ; >
 
   }
 
@@ -354,15 +363,16 @@
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Atmospheric Measurement Techniques Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Atmospheric Measurement Techniques Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Atmospheric Measurement Techniques Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; Atmospheric Measurement Techniques Volume 8 ; 8 ; >
+      au < finished ; manifest ; 2015 ; 2015 ; Atmospheric Measurement Techniques Volume 8 ; 8 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Atmospheric Measurement Techniques Volume 9 ; 9 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Atmospheric Measurement Techniques Volume 10 ; 10 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Atmospheric Measurement Techniques Volume 11 ; 11 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Atmospheric Measurement Techniques Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; 2018 ; Atmospheric Measurement Techniques Volume 11 ; 11 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Atmospheric Measurement Techniques Volume 12 ; 12 ; >
       au < finished ; frozen ; 2020 ; 2020 ; Atmospheric Measurement Techniques Volume 13 ; 13 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Atmospheric Measurement Techniques Volume 14 ; 14 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Atmospheric Measurement Techniques Volume 15 ; 15 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Atmospheric Measurement Techniques Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Atmospheric Measurement Techniques Volume 17 ; 17 ; >
 
   }
 
@@ -391,13 +401,14 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Biogeosciences Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Biogeosciences Volume 12 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Biogeosciences Volume 13 ; 13 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Biogeosciences Volume 14 ; 14 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Biogeosciences Volume 15 ; 15 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Biogeosciences Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Biogeosciences Volume 15 ; 15 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Biogeosciences Volume 16 ; 16 ; >
       au < finished ; finished ; 2020 ; 2020 ; Biogeosciences Volume 17 ; 17 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Biogeosciences Volume 18 ; 18 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Biogeosciences Volume 19 ; 19 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Biogeosciences Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Biogeosciences Volume 21 ; 21 ; >
 
   }
 
@@ -425,13 +436,14 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Climate of the Past Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Climate of the Past Volume 11 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Climate of the Past Volume 12 ; 12 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Climate of the Past Volume 13 ; 13 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Climate of the Past Volume 14 ; 14 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Climate of the Past Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; 2018 ; Climate of the Past Volume 14 ; 14 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Climate of the Past Volume 15 ; 15 ; >
       au < finished ; frozen ; 2020 ; 2020 ; Climate of the Past Volume 16 ; 16 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2021 ; 2021 ; Climate of the Past Volume 17 ; 17 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Climate of the Past Volume 18 ; 18 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Climate of the Past Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Climate of the Past Volume 20 ; 20 ; >
 
   }
 
@@ -471,13 +483,14 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Drinking Water Engineering and Science Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Drinking Water Engineering and Science Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Drinking Water Engineering and Science Volume 9 ; 9 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Drinking Water Engineering and Science Volume 10 ; 10 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Drinking Water Engineering and Science Volume 11 ; 11 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Drinking Water Engineering and Science Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; 2018 ; Drinking Water Engineering and Science Volume 11 ; 11 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Drinking Water Engineering and Science Volume 12 ; 12 ; >
       au < finished ; finished ; 2020 ; 2020 ; Drinking Water Engineering and Science Volume 13 ; 13 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Drinking Water Engineering and Science Volume 14 ; 14 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Drinking Water Engineering and Science Volume 15 ; 15 ; >
       au < expected ; exists ; 2023 ; 2023 ; Drinking Water Engineering and Science Volume 16 ; 16 ; >
+      au < expected ; exists ; 2024 ; 2024 ; Drinking Water Engineering and Science Volume 17 ; 17 ; >
 
   }
 
@@ -497,13 +510,14 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Earth Surface Dynamics Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Earth Surface Dynamics Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Earth Surface Dynamics Volume 4 ; 4 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Earth Surface Dynamics Volume 5 ; 5 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Earth Surface Dynamics Volume 6 ; 6 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Earth Surface Dynamics Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Earth Surface Dynamics Volume 6 ; 6 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Earth Surface Dynamics Volume 7 ; 7 ; >
       au < finished ; frozen ; 2020 ; 2020 ; Earth Surface Dynamics Volume 8 ; 8 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2021 ; 2021 ; Earth Surface Dynamics Volume 9 ; 9 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Earth Surface Dynamics Volume 10 ; 10 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Earth Surface Dynamics Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Earth Surface Dynamics Volume 12 ; 12 ; >
 
   }
 
@@ -524,13 +538,14 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Earth System Dynamics Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Earth System Dynamics Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Earth System Dynamics Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Earth System Dynamics Volume 8 ; 8 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Earth System Dynamics Volume 9 ; 9 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Earth System Dynamics Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; 2018 ; Earth System Dynamics Volume 9 ; 9 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Earth System Dynamics Volume 10 ; 10 ; >
       au < finished ; finished ; 2020 ; 2020 ; Earth System Dynamics Volume 11 ; 11 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Earth System Dynamics Volume 12 ; 12 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Earth System Dynamics Volume 13 ; 13 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Earth System Dynamics Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Earth System Dynamics Volume 15 ; 15 ; >
 
   }
 
@@ -554,13 +569,14 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Earth System Science Data Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Earth System Science Data Volume 7 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Earth System Science Data Volume 8 ; 8 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Earth System Science Data Volume 9 ; 9 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Earth System Science Data Volume 10 ; 10 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Earth System Science Data Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Earth System Science Data Volume 10 ; 10 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Earth System Science Data Volume 11 ; 11 ; >
       au < finished ; finished ; 2020 ; 2020 ; Earth System Science Data Volume 12 ; 12 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Earth System Science Data Volume 13 ; 13 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Earth System Science Data Volume 14 ; 14 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Earth System Science Data Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Earth System Science Data Volume 16 ; 16 ; >
 
   }
 
@@ -634,17 +650,18 @@
       au < finished ; finished ; 2011 ; 2011 ; E&G Quaternary Science Journal Volume 59 ; 59 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2011 ; 2011 ; E&G Quaternary Science Journal Volume 60 ; 60 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2011 ; 2011 ; E&G Quaternary Science Journal Volume 61 ; 61 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2013 ; 2013 ; E&G Quaternary Science Journal Volume 62 ; 62 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; E&G Quaternary Science Journal Volume 63 ; 63 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; E&G Quaternary Science Journal Volume 64 ; 64 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; E&G Quaternary Science Journal Volume 65 ; 65 ; >
+      au < finished ; manifest ; 2013 ; 2013 ; E&G Quaternary Science Journal Volume 62 ; 62 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; 2014 ; E&G Quaternary Science Journal Volume 63 ; 63 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2015 ; 2015 ; E&G Quaternary Science Journal Volume 64 ; 64 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; 2016 ; E&G Quaternary Science Journal Volume 65 ; 65 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; E&G Quaternary Science Journal Volume 66 ; 66 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; E&G Quaternary Science Journal Volume 67 ; 67 ; >
+      au < finished ; manifest ; 2018 ; 2018 ; E&G Quaternary Science Journal Volume 67 ; 67 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; E&G Quaternary Science Journal Volume 68 ; 68 ; >
       au < finished ; finished ; 2020 ; 2020 ; E&G Quaternary Science Journal Volume 69 ; 69 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; E&G Quaternary Science Journal Volume 70 ; 70 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; E&G Quaternary Science Journal Volume 71 ; 71 ; >
       au < crawling ; exists ; 2023 ; 2023 ; E&G Quaternary Science Journal Volume 72 ; 72 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; E&G Quaternary Science Journal Volume 73 ; 73 ; >
 
   }
 
@@ -663,6 +680,7 @@
       au < finished ; frozen ; 2021 ; 2021 ; European Journal of Mineralogy Volume 33 ; 33 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; European Journal of Mineralogy Volume 34 ; 34 ; >
       au < crawling ; exists ; 2023 ; 2023 ; European Journal of Mineralogy Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; European Journal of Mineralogy Volume 36 ; 36 ; >
 
   }
 
@@ -692,20 +710,21 @@
       au < finished ; finished ; 2008 ; 2008 ; Fossil Record Reports Volume 11 ; 11 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2009 ; 2009 ; Fossil Record Reports Volume 12 ; 12 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2010 ; 2010 ; Fossil Record Reports Volume 13 ; 13 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2011 ; 2011 ; Fossil Record Reports Volume 14 [abstract Only] ; 14 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; Fossil Record Reports Volume 15 [abstract Only] ; 15 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; Fossil Record Reports Volume 16 [abstract Only] ; 16 ; >
+      au < finished ; manifest ; 2011 ; 2011 ; Fossil Record Reports Volume 14 [abstract Only] ; 14 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; 2012 ; Fossil Record Reports Volume 15 [abstract Only] ; 15 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2013 ; 2013 ; Fossil Record Reports Volume 16 [abstract Only] ; 16 ; reingest3.clockss.org:8083 >
 
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Fossil Record Reports Volume 17 ; 17 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Fossil Record Reports Volume 18 ; 18 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Fossil Record Reports Volume 19 ; 19 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Fossil Record Reports Volume 20 ; 20 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Fossil Record Reports Volume 21 ; 21 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Fossil Record Reports Volume 22 ; 22 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Fossil Record Reports Volume 20 ; 20 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Fossil Record Reports Volume 21 ; 21 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; Fossil Record Reports Volume 22 ; 22 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; 2020 ; Fossil Record Reports Volume 23 ; 23 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2021 ; 2021 ; Fossil Record Reports Volume 24 ; 24 ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2022 ; 2022 ; Fossil Record Reports Volume 25 ; 25 ; >
       au < expected ; exists ; 2023 ; 2023 ; Fossil Record Reports Volume 26 ; 26 ; >
+      au < expected ; exists ; 2024 ; 2024 ; Fossil Record Reports Volume 27 ; 27 ; >
 
   }
 
@@ -794,13 +813,14 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Geographica Helvetica Volume 69 ; 69 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Geographica Helvetica Volume 70 ; 70 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Geographica Helvetica Volume 71 ; 71 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Geographica Helvetica Volume 72 ; 72 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Geographica Helvetica Volume 73 ; 73 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Geographica Helvetica Volume 72 ; 72 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; 2018 ; Geographica Helvetica Volume 73 ; 73 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Geographica Helvetica Volume 74 ; 74 ; >
       au < finished ; finished ; 2020 ; 2020 ; Geographica Helvetica Volume 75 ; 75 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Geographica Helvetica Volume 76 ; 76 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Geographica Helvetica Volume 77 ; 77 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Geographica Helvetica Volume 78 ; 78 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Geographica Helvetica Volume 79 ; 79 ; >
 
   }
 
@@ -820,6 +840,7 @@
       au < finished ; frozen ; 2021 ; 2021 ; Geoscience Communication Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Geoscience Communication Volume 5 ; 5 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Geoscience Communication Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Geoscience Communication Volume 7 ; 7 ; >
 
   }
 
@@ -840,13 +861,14 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Geoscientific Instrumentation, Methods and Data Systems Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Geoscientific Instrumentation, Methods and Data Systems Volume 4 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Geoscientific Instrumentation, Methods and Data Systems Volume 5 ; 5 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Geoscientific Instrumentation, Methods and Data Systems Volume 6 ; 6 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Geoscientific Instrumentation, Methods and Data Systems Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Geoscientific Instrumentation, Methods and Data Systems Volume 8 ; 8 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Geoscientific Instrumentation, Methods and Data Systems Volume 6 ; 6 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Geoscientific Instrumentation, Methods and Data Systems Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; Geoscientific Instrumentation, Methods and Data Systems Volume 8 ; 8 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2020 ; 2020 ; Geoscientific Instrumentation, Methods and Data Systems Volume 9 ; 9 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2021 ; 2021 ; Geoscientific Instrumentation, Methods and Data Systems Volume 10 ; 10 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Geoscientific Instrumentation, Methods and Data Systems Volume 11 ; 11 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Geoscientific Instrumentation, Methods and Data Systems Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Geoscientific Instrumentation, Methods and Data Systems Volume 13 ; 13 ; >
 
   }
 
@@ -868,16 +890,17 @@
       au < finished ; finished ; 2011 ; 2011 ; Geoscientific Model Development Volume 4 ; 4 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Geoscientific Model Development Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Geoscientific Model Development Volume 6 ; 6 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; Geoscientific Model Development Volume 7 ; 7 ; >
+      au < finished ; manifest ; 2014 ; 2014 ; Geoscientific Model Development Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Geoscientific Model Development Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Geoscientific Model Development Volume 9 ; 9 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Geoscientific Model Development Volume 10 ; 10 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Geoscientific Model Development Volume 11 ; 11 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Geoscientific Model Development Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Geoscientific Model Development Volume 11 ; 11 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Geoscientific Model Development Volume 12 ; 12 ; >
       au < finished ; frozen ; 2020 ; 2020 ; Geoscientific Model Development Volume 13 ; 13 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Geoscientific Model Development Volume 14 ; 14 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Geoscientific Model Development Volume 15 ; 15 ; >
-      au < crawling ; exists ; 2023 ; 2023 ; Geoscientific Model Development Volume 16 ; 16 ; >
+      au < deepCrawl ; exists ; 2023 ; 2023 ; Geoscientific Model Development Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Geoscientific Model Development Volume 17 ; 17 ; >
 
   }
 
@@ -900,13 +923,14 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; History of Geo- and Space Sciences Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; History of Geo- and Space Sciences Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; History of Geo- and Space Sciences Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; History of Geo- and Space Sciences Volume 8 ; 8 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; History of Geo- and Space Sciences Volume 9 ; 9 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; History of Geo- and Space Sciences Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; 2018 ; History of Geo- and Space Sciences Volume 9 ; 9 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; History of Geo- and Space Sciences Volume 10 ; 10 ; >
       au < finished ; finished ; 2020 ; 2020 ; History of Geo- and Space Sciences Volume 11 ; 11 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; 2021 ; History of Geo- and Space Sciences Volume 12 ; 12 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; History of Geo- and Space Sciences Volume 13 ; 13 ; >
       au < crawling ; exists ; 2023 ; 2023 ; History of Geo- and Space Sciences Volume 14 ; 14 ; >
+      au < expected ; exists ; 2024 ; 2024 ; History of Geo- and Space Sciences Volume 15 ; 15 ; >
 
   }
 
@@ -942,13 +966,14 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Hydrology and Earth System Sciences Volume 18 ; 18 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Hydrology and Earth System Sciences Volume 19 ; 19 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Hydrology and Earth System Sciences Volume 20 ; 20 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Hydrology and Earth System Sciences Volume 21 ; 21 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Hydrology and Earth System Sciences Volume 22 ; 22 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Hydrology and Earth System Sciences Volume 21 ; 21 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Hydrology and Earth System Sciences Volume 22 ; 22 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Hydrology and Earth System Sciences Volume 23 ; 23 ; >
       au < finished ; frozen ; 2020 ; 2020 ; Hydrology and Earth System Sciences Volume 24 ; 24 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Hydrology and Earth System Sciences Volume 25 ; 25 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Hydrology and Earth System Sciences Volume 26 ; 26 ; >
-      au < crawling ; exists ; 2023 ; 2023 ; Hydrology and Earth System Sciences Volume 27 ; 27 ; >
+      au < deepCrawl ; exists ; 2023 ; 2023 ; Hydrology and Earth System Sciences Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Hydrology and Earth System Sciences Volume 28 ; 28 ; >
 
   }
 
@@ -967,11 +992,10 @@
       au < finished ; finished ; 2018 ; 2018 ; Journal of Bone and Joint Infection Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; 2019 ; Journal of Bone and Joint Infection Volume 4 ; 4 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; 2020 ; Journal of Bone and Joint Infection Volume 5 ; 5 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2020 ; 2020 ; Journal of Bone and Joint Infection Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2021 ; 2020 ; Journal of Bone and Joint Infection Volume 6 ; 6 ; reingest3.clockss.org:8083 > #wrong param year
       au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Bone and Joint Infection Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2022 ; 2022 ; Journal of Bone and Joint Infection Volume 8 ; 8 ; >
-      au < expected ; exists ; 2023 ; 2023 ; Journal of Bone and Joint Infection Volume 9 ; 9 ; >
-      au < expected ; exists ; 2023 ; 2023 ; Journal of Bone and Joint Infection Volume 10 ; 10 ; >
+      au < deepCrawl ; exists ; 2023 ; 2022 ; Journal of Bone and Joint Infection Volume 8 ; 8 ; > #wrong param year
+      au < manifest ; exists ; 2024 ; 2024 ; Journal of Bone and Joint Infection Volume 9 ; 9 ; >
 
   }
 
@@ -1016,18 +1040,19 @@
       au < finished ; finished ; 2009 ; 2009 ; Journal of Micropalaeontology Volume 28 ; 28 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2010 ; 2010 ; Journal of Micropalaeontology Volume 29 ; 29 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2011 ; 2011 ; Journal of Micropalaeontology Volume 30 ; 30 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2012 ; 2012 ; Journal of Micropalaeontology Volume 31 ; 31 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; Journal of Micropalaeontology Volume 32 ; 32 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; Journal of Micropalaeontology Volume 33 ; 33 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; Journal of Micropalaeontology Volume 34 ; 34 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; Journal of Micropalaeontology Volume 35 ; 35 ; >
+      au < finished ; manifest ; 2012 ; 2012 ; Journal of Micropalaeontology Volume 31 ; 31 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; Journal of Micropalaeontology Volume 32 ; 32 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; 2014 ; Journal of Micropalaeontology Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2015 ; 2015 ; Journal of Micropalaeontology Volume 34 ; 34 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; 2016 ; Journal of Micropalaeontology Volume 35 ; 35 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Micropalaeontology Volume 36 ; 36 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Journal of Micropalaeontology Volume 37 ; 37 ; >
+      au < finished ; manifest ; 2018 ; 2018 ; Journal of Micropalaeontology Volume 37 ; 37 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Journal of Micropalaeontology Volume 38 ; 38 ; >
       au < finished ; frozen ; 2020 ; 2020 ; Journal of Micropalaeontology Volume 39 ; 39 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Journal of Micropalaeontology Volume 40 ; 40 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Micropalaeontology Volume 41 ; 41 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Journal of Micropalaeontology Volume 42 ; 42 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Journal of Micropalaeontology Volume 43 ; 43 ; >
 
   }
 
@@ -1047,14 +1072,15 @@
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Sensors and Sensor Systems Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Sensors and Sensor Systems Volume 3 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Sensors and Sensor Systems Volume 4 ; 4 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; Journal of Sensors and Sensor Systems Volume 5 ; 5 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Journal of Sensors and Sensor Systems Volume 6 ; 6 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Journal of Sensors and Sensor Systems Volume 7 ; 7 ; >
+      au < finished ; manifest ; 2016 ; 2016 ; Journal of Sensors and Sensor Systems Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; 2017 ; Journal of Sensors and Sensor Systems Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; 2018 ; Journal of Sensors and Sensor Systems Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Journal of Sensors and Sensor Systems Volume 8 ; 8 ; >
       au < finished ; finished ; 2020 ; 2020 ; Journal of Sensors and Sensor Systems Volume 9 ; 9 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Journal of Sensors and Sensor Systems Volume 10 ; 10 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Sensors and Sensor Systems Volume 11 ; 11 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Journal of Sensors and Sensor Systems Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Journal of Sensors and Sensor Systems Volume 13 ; 13 ; >
 
   }
 
@@ -1072,6 +1098,7 @@
       au < finished ; frozen ; 2021 ; 2021 ; Magnetic Resonance Volume 2 ; 2 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Magnetic Resonance Volume 3 ; 3 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Magnetic Resonance Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Magnetic Resonance Volume 5 ; 5 ; >
 
   }
 
@@ -1094,13 +1121,14 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Mechanical Sciences Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Mechanical Sciences Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Mechanical Sciences Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Mechanical Sciences Volume 8 ; 8 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Mechanical Sciences Volume 9 ; 9 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Mechanical Sciences Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Mechanical Sciences Volume 9 ; 9 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Mechanical Sciences Volume 10 ; 10 ; >
       au < finished ; frozen ; 2020 ; 2020 ; Mechanical Sciences Volume 11 ; 11 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2021 ; 2021 ; Mechanical Sciences Volume 12 ; 12 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Mechanical Sciences Volume 13 ; 13 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Mechanical Sciences Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Mechanical Sciences Volume 15 ; 15 ; >
 
   }
 
@@ -1131,14 +1159,15 @@
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Natural Hazards and Earth System Sciences Volume 13 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Natural Hazards and Earth System Sciences Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Natural Hazards and Earth System Sciences Volume 15 ; 15 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; Natural Hazards and Earth System Sciences Volume 16 ; 16 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Natural Hazards and Earth System Sciences Volume 17 ; 17 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Natural Hazards and Earth System Sciences Volume 18 ; 18 ; >
+      au < finished ; manifest ; 2016 ; 2016 ; Natural Hazards and Earth System Sciences Volume 16 ; 16 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; 2017 ; Natural Hazards and Earth System Sciences Volume 17 ; 17 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; 2018 ; Natural Hazards and Earth System Sciences Volume 18 ; 18 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Natural Hazards and Earth System Sciences Volume 19 ; 19 ; >
       au < finished ; finished ; 2020 ; 2020 ; Natural Hazards and Earth System Sciences Volume 20 ; 20 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Natural Hazards and Earth System Sciences Volume 21 ; 21 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Natural Hazards and Earth System Sciences Volume 22 ; 22 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Natural Hazards and Earth System Sciences Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Natural Hazards and Earth System Sciences Volume 24 ; 24 ; >
 
   }
 
@@ -1176,14 +1205,15 @@
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Nonlinear Processes in Geophysics Volume 20 ; 20 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Nonlinear Processes in Geophysics Volume 21 ; 21 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Nonlinear Processes in Geophysics Volume 22 ; 22 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; Nonlinear Processes in Geophysics Volume 23 ; 23 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Nonlinear Processes in Geophysics Volume 24 ; 24 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Nonlinear Processes in Geophysics Volume 25 ; 25 ; >
+      au < finished ; manifest ; 2016 ; 2016 ; Nonlinear Processes in Geophysics Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; 2017 ; Nonlinear Processes in Geophysics Volume 24 ; 24 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Nonlinear Processes in Geophysics Volume 25 ; 25 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Nonlinear Processes in Geophysics Volume 26 ; 26 ; >
       au < finished ; frozen ; 2020 ; 2020 ; Nonlinear Processes in Geophysics Volume 27 ; 27 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Nonlinear Processes in Geophysics Volume 28 ; 28 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Nonlinear Processes in Geophysics Volume 29 ; 29 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Nonlinear Processes in Geophysics Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Nonlinear Processes in Geophysics Volume 31 ; 31 ; >
 
   }
 
@@ -1210,14 +1240,15 @@
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Ocean Science Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Ocean Science Volume 10 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Ocean Science Volume 11 ; 11 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; Ocean Science Volume 12 ; 12 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Ocean Science Volume 13 ; 13 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Ocean Science Volume 14 ; 14 ; >
+      au < finished ; manifest ; 2016 ; 2016 ; Ocean Science Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2017 ; 2017 ; Ocean Science Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; 2018 ; Ocean Science Volume 14 ; 14 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Ocean Science Volume 15 ; 15 ; >
       au < finished ; frozen ; 2020 ; 2020 ; Ocean Science Volume 16 ; 16 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Ocean Science Volume 17 ; 17 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Ocean Science Volume 18 ; 18 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Ocean Science Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Ocean Science Volume 20 ; 20 ; >
 
   }
 
@@ -1234,6 +1265,7 @@
       au < finished ; frozen ; 2021 ; 2021 ; Polarforschung Volume 89 ; 89 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Polarforschung Volume 90 ; 90 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Polarforschung Volume 91 ; 91 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Polarforschung Volume 92 ; 92 ; >
 
   }
 
@@ -1252,13 +1284,14 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Primate Biology Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Primate Biology Volume 2 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Primate Biology Volume 3 ; 3 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Primate Biology Volume 4 ; 4 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Primate Biology Volume 5 ; 5 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Primate Biology Volume 6 ; 6 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Primate Biology Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Primate Biology Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; Primate Biology Volume 6 ; 6 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2020 ; 2020 ; Primate Biology Volume 7 ; 7 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Primate Biology Volume 8 ; 8 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Primate Biology Volume 9 ; 9 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Primate Biology Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Primate Biology Volume 11 ; 11 ; >
 
   }
 
@@ -1282,12 +1315,12 @@
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 368 ; 368 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 369 ; 369 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 370 ; 370 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 371 ; 371 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 372 ; 372 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; Proceedings of the International Association of Hydrological Sciences Volume 373 ; 373 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; Proceedings of the International Association of Hydrological Sciences Volume 374 ; 374 ; >
+      au < finished ; manifest ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 371 ; 371 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2015 ; 2015 ; Proceedings of the International Association of Hydrological Sciences Volume 372 ; 372 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; Proceedings of the International Association of Hydrological Sciences Volume 373 ; 373 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; Proceedings of the International Association of Hydrological Sciences Volume 374 ; 374 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Proceedings of the International Association of Hydrological Sciences Volume 375 ; 375 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Proceedings of the International Association of Hydrological Sciences Volume 376 ; 376 ; >
+      au < finished ; manifest ; 2018 ; 2018 ; Proceedings of the International Association of Hydrological Sciences Volume 376 ; 376 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Proceedings of the International Association of Hydrological Sciences Volume 377 ; 377 ; >
       au < finished ; finished ; 2018 ; 2018 ; Proceedings of the International Association of Hydrological Sciences Volume 378 ; 378 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2018 ; 2018 ; Proceedings of the International Association of Hydrological Sciences Volume 379 ; 379 ; reingest5.clockss.org:8082 >
@@ -1299,6 +1332,7 @@
       au < expected ; exists ; 2021 ; 2021 ; Proceedings of the International Association of Hydrological Sciences Volume 385 ; 385 ; >
       au < expected ; exists ; 2022 ; 2022 ; Proceedings of the International Association of Hydrological Sciences Volume 386 ; 386 ; >
       au < expected ; exists ; 2023 ; 2023 ; Proceedings of the International Association of Hydrological Sciences Volume 387 ; 387 ; >
+      au < expected ; exists ; 2024 ; 2024 ; Proceedings of the International Association of Hydrological Sciences Volume 388 ; 388 ; >
 
   }
 
@@ -1314,6 +1348,7 @@
       au < finished ; frozen ; 2021 ; 2021 ; Safety of Nuclear Waste Disposal Volume 1 ; 1 ; reingest2.clockss.org:8085 >
       au < expected ; exists ; 2022 ; 2022 ; Safety of Nuclear Waste Disposal Volume 2 ; 2 ; >
       au < expected ; exists ; 2023 ; 2023 ; Safety of Nuclear Waste Disposal Volume 3 ; 3 ; >
+      au < expected ; exists ; 2024 ; 2024 ; Safety of Nuclear Waste Disposal Volume 4 ; 4 ; >
 
   }
 
@@ -1342,21 +1377,22 @@
       au < finished ; finished ; 2010 ; 2010 ; Scientific Drilling Volume 10 ; 10 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2011 ; 2011 ; Scientific Drilling Volume 11 ; 11 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2011 ; 2011 ; Scientific Drilling Volume 12 ; 12 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2012 ; 2012 ; Scientific Drilling Volume 13 ; 13 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; Scientific Drilling Volume 14 ; 14 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; Scientific Drilling Volume 15 ; 15 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; Scientific Drilling Volume 16 ; 16 ; >
+      au < finished ; manifest ; 2012 ; 2012 ; Scientific Drilling Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2012 ; 2012 ; Scientific Drilling Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; Scientific Drilling Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; Scientific Drilling Volume 16 ; 16 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Scientific Drilling Volume 17 ; 17 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Scientific Drilling Volume 18 ; 18 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Scientific Drilling Volume 19 ; 19 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Scientific Drilling Volume 20 ; 20 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Scientific Drilling Volume 21 ; 21 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Scientific Drilling Volume 22 ; 22 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Scientific Drilling Volume 21 ; 21 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Scientific Drilling Volume 22 ; 22 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Scientific Drilling Volume 23 ; 23 ; >
       au < finished ; frozen ; 2020 ; 2020 ; Scientific Drilling Volume 24 ; 24 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Scientific Drilling Volume 25 ; 25 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Scientific Drilling Volume 26 ; 26 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Scientific Drilling Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Scientific Drilling Volume 28 ; 28 ; >
 
   }
 
@@ -1374,13 +1410,14 @@
 
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; SOIL Volume 1 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; SOIL Volume 2 ; 2 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; SOIL Volume 3 ; 3 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; SOIL Volume 4 ; 4 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; SOIL Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; 2018 ; SOIL Volume 4 ; 4 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; SOIL Volume 5 ; 5 ; >
       au < finished ; frozen ; 2020 ; 2020 ; SOIL Volume 6 ; 6 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2021 ; 2021 ; SOIL Volume 7 ; 7 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; SOIL Volume 8 ; 8 ; >
       au < crawling ; exists ; 2023 ; 2023 ; SOIL Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; SOIL Volume 10 ; 10 ; >
 
   }
 
@@ -1403,13 +1440,14 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Solid Earth Volume 5 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Solid Earth Volume 6 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Solid Earth Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Solid Earth Volume 8 ; 8 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Solid Earth Volume 9 ; 9 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Solid Earth Volume 10 ; 10 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Solid Earth Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Solid Earth Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; Solid Earth Volume 10 ; 10 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; 2020 ; Solid Earth Volume 11 ; 11 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2021 ; 2021 ; Solid Earth Volume 12 ; 12 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Solid Earth Volume 13 ; 13 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Solid Earth Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Solid Earth Volume 15 ; 15 ; >
 
   }
 
@@ -1421,8 +1459,10 @@
       attr[journal_id] = sp
       param[base_url] = https://sp.copernicus.org/
       param[home_url] = https://www.state-of-the-planet.net/
+      #It is reports, in a journal format
 
-      au < expected ; exists ; 2023 ; 2023 ; State of the Planet Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2023 ; 2023 ; State of the Planet Volume 1 ; 1-osr7 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; State of the Planet Volume 2 ; 2-oae2023 ; >
 
   }
 
@@ -1466,13 +1506,14 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Cryosphere Volume 8 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Cryosphere Volume 9 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Cryosphere Volume 10 ; 10 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; The Cryosphere Volume 11 ; 11 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; The Cryosphere Volume 12 ; 12 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; The Cryosphere Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; 2018 ; The Cryosphere Volume 12 ; 12 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; The Cryosphere Volume 13 ; 13 ; >
       au < finished ; finished ; 2020 ; 2020 ; The Cryosphere Volume 14 ; 14 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; The Cryosphere Volume 15 ; 15 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; The Cryosphere Volume 16 ; 16 ; >
-      au < crawling ; exists ; 2023 ; 2023 ; The Cryosphere Volume 17 ; 17 ; >
+      au < deepCrawl ; exists ; 2023 ; 2023 ; The Cryosphere Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; The Cryosphere Volume 18 ; 18 ; >
 
   }
 
@@ -1489,6 +1530,7 @@
       au < finished ; frozen ; 2021 ; 2021 ; Weather and Climate Dynamics Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Weather and Climate Dynamics Volume 3 ; 3 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Weather and Climate Dynamics Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Weather and Climate Dynamics Volume 5 ; 5 ; >
 
   }
 
@@ -1518,13 +1560,14 @@
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Web Ecology Volume 14 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Web Ecology Volume 15 ; 15 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Web Ecology Volume 16 ; 16 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Web Ecology Volume 17 ; 17 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Web Ecology Volume 18 ; 18 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Web Ecology Volume 17 ; 17 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Web Ecology Volume 18 ; 18 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Web Ecology Volume 19 ; 19 ; >
       au < finished ; frozen ; 2020 ; 2020 ; Web Ecology Volume 20 ; 20 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Web Ecology Volume 21 ; 21 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Web Ecology Volume 22 ; 22 ; >
-      au < crawling ; exists ; 2023 ; 2023 ; Web Ecology Volume 23 ; 23 ; >
+      au < deepCrawl ; exists ; 2023 ; 2023 ; Web Ecology Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Web Ecology Volume 24 ; 24 ; >
 
   }
 
@@ -1539,13 +1582,14 @@
       param[home_url] = https://www.wind-energy-science.net/
 
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Wind Energy Science Volume 1 ; 1 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Wind Energy Science Volume 2 ; 2 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Wind Energy Science Volume 3 ; 3 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Wind Energy Science Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Wind Energy Science Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Wind Energy Science Volume 4 ; 4 ; >
       au < finished ; frozen ; 2020 ; 2020 ; Wind Energy Science Volume 5 ; 5 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2021 ; 2021 ; Wind Energy Science Volume 6 ; 6 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Wind Energy Science Volume 7 ; 7 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Wind Energy Science Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Wind Energy Science Volume 9 ; 9 ; >
 
   }
 
@@ -1564,6 +1608,7 @@
       au < finished ; frozen ; 2021 ; 2021 ; Geochronology: Advances in Gechronological Science Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Geochronology: Advances in Gechronological Science Volume 4 ; 4 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Geochronology: Advances in Gechronological Science Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Geochronology: Advances in Gechronological Science Volume 6 ; 6 ; >
 
   }#title
   

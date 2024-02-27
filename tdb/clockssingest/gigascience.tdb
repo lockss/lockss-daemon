@@ -25,7 +25,8 @@
     au < finished ; crawling ; 2020 ; GigaDB 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2021 ; GigaDB 2021 ; 2021 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; GigaDB 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; GigaDB 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; GigaDB 2023 ; 2023 ; >
+    au < manifest ; exists ; 2024 ; GigaDB 2024 ; 2024 ; >
 
   }
 

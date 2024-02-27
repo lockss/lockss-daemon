@@ -31,7 +31,7 @@
     {
     param[base_url] = https://clockss-ingest.lockss.org/warcfiles/ama-journal-of-ethics-released/
 
-    au < readySource ; crawling ; 2023 ; AMA Journal of Ethics WARC Content 2023 ; 2023 >
+    au < readySource ; finished ; 2023 ; AMA Journal of Ethics WARC Content 2023 ; 2023 >
     au < expected ; exists ; 2025 ; AMA Journal of Ethics WARC Content 2025 ; 2025 >
 
     }

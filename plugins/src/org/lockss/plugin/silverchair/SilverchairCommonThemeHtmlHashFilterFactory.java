@@ -68,6 +68,7 @@ public class SilverchairCommonThemeHtmlHashFilterFactory implements FilterFactor
             //We saw Silverchair add those to non-common-theme plugins, for cautious, we added it here
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-IssueInfo"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-ArticleNavLinks"),
+            HtmlNodeFilters.tagWithAttributeRegex("a", "class", "download-slide"),
             
     };
 

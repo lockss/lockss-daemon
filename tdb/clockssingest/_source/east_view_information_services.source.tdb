@@ -26,7 +26,9 @@
 
       #tested this directory using testing url, https://clockss-test.lockss.org/sourcefiles/eastviewbooks-released/2023_01, it is ready
       au < readySource ; crawling ; 2023 ; East View Information Services Book Source Content 2023_01 ; 2023_01 >
-      au < expected ; exists ; 2024 ; East View Information Services Book Source Content 2024_01 ; 2024_01 >
+      #tested this directory using testing url, https://clockss-test.lockss.org/sourcefiles/eastviewbooks-released/2024_01
+      #there are 3 invalid isbn need publisher to fix
+      #au < manifest ; exists ; 2024 ; East View Information Services Book Source Content 2024_01 ; 2024_01 >
 
     }
   }

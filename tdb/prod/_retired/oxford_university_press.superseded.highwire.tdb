@@ -1,0 +1,127 @@
+{
+
+  publisher <
+    name = Oxford University Press ;
+    info[tester] = 5
+  >
+
+    pluginPrefix = org.lockss.plugin.highwire.
+
+    {
+
+      title <
+        name = Oxford University Press Journals
+      >
+
+
+        pluginSuffix = HighWirePlugin
+        implicit < status ; year ; name ; param[volume] ; param[base_url] >
+
+        au < superseded ; 2006 ; Alcohol and Alcoholism Volume 41 [superseded] ; 41 ; http://alcalc.oxfordjournals.org/ >
+        au < superseded ; 2006 ; American Literary History Volume 18 [superseded] ; 18 ; http://alh.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Annals of Oncology Volume 17 [superseded] ; 17 ; http://annonc.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Bioinformatics Volume 22 [superseded] ; 22 ; http://bioinformatics.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Biostatistics Volume 7 [superseded] ; 7 ; http://biostatistics.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Brain Volume 129 [superseded] ; 129 ; http://brain.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Brief Treatment and Crisis Intervention Volume 6 [superseded] ; 6 ; http://brief-treatment.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Carcinogenesis Volume 27 [superseded] ; 27 ; http://carcin.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Cerebral Cortex Volume 16 [superseded] ; 16 ; http://cercor.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Chinese Journal of International Law Volume 5 [superseded] ; 5 ; http://chinesejil.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Journal of Deaf Studies and Deaf Education Volume 11 [superseded] ; 11 ; http://deafed.oxfordjournals.org/ >
+        au < superseded ; 2006 ; European Review of Agricultural Economics Volume 33 [superseded] ; 33 ; http://erae.oxfordjournals.org/ >
+        au < superseded ; 2006 ; European Heart Journal Volume 27 [superseded] ; 27 ; http://eurheartj.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Glycobiology Volume 16 [superseded] ; 16 ; http://glycob.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Human Molecular Genetics Volume 15 [superseded] ; 15 ; http://hmg.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Human Rights Law Review Volume 6 [superseded] ; 6 ; http://hrlr.oxfordjournals.org/ >
+        au < superseded ; 2006 ; International Journal of Law and Information Technology Volume 14 [superseded] ; 14 ; http://ijlit.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Journal of Deaf Studies and Deaf Education Volume 10 [superseded] ; 10 ; http://jdsde.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Journal of the History of Collections Volume 18 [superseded] ; 18 ; http://jhc.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Journal of International Economic Law Volume 8 [superseded] ; 8 ; http://jiel.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Journal of Intellectual Property Law & Practice Volume 1 [superseded] ; 1 ; http://jiplp.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Journal of the National Cancer Institute Volume 97 [superseded] ; 97 ; http://jncicancerspectrum.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Journal of Semantics Volume 23 [superseded] ; 23 ; http://jos.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Journal of Refugee Studies Volume 19 [superseded] ; 19 ; http://jrs.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Journal of Logic and Computation Volume 16 [superseded] ; 16 ; http://logcom.oxfordjournals.org/ >
+        au < superseded ; 2006 ; The Musical Quarterly Volume 88 [superseded] ; 88 ; http://mq.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Nucleic Acids Research Volume 34 [superseded] ; 34 ; http://nar.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Opera Quarterly Volume 22 [superseded] ; 22 ; http://oq.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Protein Engineering Design and Selection Volume 19 [superseded] ; 19 ; http://peds.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Journal of Petrology Volume 47 [superseded] ; 47 ; http://petrology.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Journal of Plankton Research Volume 29 [superseded] ; 28 ; http://plankt.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Quarterly Journal of Mechanics and Applied Mathematics Volume 58 [superseded] ; 58 ; http://qjmam.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Quarterly Journal of Mathematics Volume 57 [superseded] ; 57 ; http://qjmath.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Review of English Studies Volume 56 [superseded] ; 56 ; http://res.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Rheumatology Volume 45 [superseded] ; 45 ; http://rheumatology.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Radiation Protection Dosimetry Volume 115 [superseded] ; 115 ; http://rpd.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Refugee Survey Quarterly Volume 24 [superseded] ; 24 ; http://rsq.oxfordjournals.org/ >
+
+    }
+
+    {
+
+      title <
+        name = Oxford University Press Journals
+      >
+
+        pluginSuffix = HighWireStrVolPlugin
+        implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
+
+        au < superseded ; 2006 ; The Cambridge Quarterly Volume 34 (Pre-release) [superseded] ; 34 ; http://camqtly.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Capital Markets Law Journal Volume 1 (Pre-release) [superseded] ; 1 ; http://cmlj.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Computer Journal Volume 48 (Pre-release) [superseded] ; 48 ; http://comjnl.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Journal of Deaf Studies and Deaf Education Volume 11 [superseded] ; 11 ; http://deafed.oxfordjournals.org/ >
+        au < superseded ; 2006 ; DNA Research Volume 12 (Pre-release) [superseded] ; 12 ; http://dnaresearch.oxfordjournals.org/ >
+        au < superseded ; 2006 ; European Journal of Orthodontics Volume 27 (Pre-release) [superseded] ; 27 ; http://ejo.oxfordjournals.org/ >
+        au < superseded ; 2006 ; European Review of Agricultural Economics Volume 32 (Pre-release) [superseded] ; 32 ; http://erae.oxfordjournals.org/ >
+        au < superseded ; 2006 ; European Review of Agricultural Economics Volume 33 [superseded] ; 33 ; http://erae.oxfordjournals.org/ >
+        au < superseded ; 2006 ; European Heart Journal Volume 26 [superseded] [superseded] ; 26 ; http://eurheartj.oxfordjournals.org/ >
+        au < superseded ; 2006 ; European Heart Journal Volume 28 [superseded] [superseded] ; 28 ; http://eurheartj.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Europace Volume 7 (Pre-release) [superseded] ; 7 ; http://europace.oxfordjournals.org/ >
+        au < superseded ; 2006 ; International Immunology Volume 17 (Pre-release) [superseded] ; 17 ; http://intimm.oxfordjournals.org/ >
+        au < superseded ; 2006 ; The Journal of Biochemistry Volume 137 (Pre-release) [superseded] ; 137 ; http://jb.oxfordjournals.org/ >
+        au < superseded ; 2006 ; The Journal of Biochemistry Volume 138 (Pre-release) [superseded] ; 138 ; http://jb.oxfordjournals.org/ >
+        au < superseded ; 2006 ; The Journal of Biochemistry Volume 139 [superseded] ; 139 ; http://jb.oxfordjournals.org/ >
+        au < superseded ; 2006 ; The Journal of Biochemistry Volume 140 (Pre-release) [superseded] ; 140 ; http://jb.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Journal of Deaf Studies and Deaf Education Volume 10 [superseded] ; 10 ; http://jdsde.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Journal of International Criminal Justice Volume 3 (Pre-release) [superseded] ; 3 ; http://jicj.oxfordjournals.org/ >
+        au < superseded ; 2006 ; JNCI Journal of the National Cancer Institute Volume 97 (Pre-release) [superseded] ; 97 ; http://jnci.oxfordjournals.org/ >
+        au < superseded ; 2006 ; JNCI Journal of the National Cancer Institute Volume 98 (Pre-release) [superseded] ; 98 ; http://jnci.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Journal of the National Cancer Institute Volume 97 [superseded] ; 97 ; http://jncicancerspectrum.oxfordjournals.org/ >
+        au < superseded ; 2006 ; JNCI Monographs Volume 2005 (Pre-release) [superseded] ; 2005 ; http://jncimono.oxfordjournals.org/ >
+        au < superseded ; 2006 ; JNCI Monographs Volume 2006 (Pre-release) [superseded] ; 2006 ; http://jncimono.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Mind Volume 114 (Pre-release) [superseded] ; 114 ; http://mind.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Mind Volume 116 (Pre-release) [superseded] ; 116 ; http://mind.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Modern Judaism Volume 25 (Pre-release) [superseded] ; 25 ; http://mj.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Modern Judaism Volume 27 (Pre-release) [superseded] ; 27 ; http://mj.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Journal of Molluscan Studies Volume 71 (Pre-release) [superseded] ; 71 ; http://mollus.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Nucleic Acids Research Volume 34 [superseded] ; 34 ; http://nar.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Nucleic Acids Research Volume 35 (Pre-release) [superseded] ; 35 ; http://nar.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Oxford Art Journal Volume 29 [superseded] ; 29 ; http://oaj.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Opera Quarterly Volume 22 [superseded] ; 22 ; http://oq.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Past & Present Volume 188 (Pre-release) [superseded] ; 188 ; http://past.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Past & Present Volume 189 (Pre-release) [superseded] ; 189 ; http://past.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Plant and Cell Physiology Volume 46 (Pre-release) [superseded] ; 46 ; http://pcp.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Publius: The Journal of Federalism Volume 35 (Pre-release) [superseded] ; 35 ; http://publius.oxfordjournals.org/ >
+        au < superseded ; 2006 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 60 (Pre-release) [superseded] ; 60 ; http://qjmam.oxfordjournals.org/ >
+        au < superseded ; 2006 ; QJM Volume 100 (Pre-release) [superseded] ; 100 ; http://qjmed.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Rheumatology Volume 45 [superseded] ; 45 ; http://rheumatology.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Rheumatology Volume 46 (Pre-release) [superseded] ; 46 ; http://rheumatology.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Review of Finance Volume 10 (Pre-release) [superseded] ; 10 ; http://rof.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Radiation Protection Dosimetry Volume 115 [superseded] ; 115 ; http://rpd.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Radiation Protection Dosimetry Volume 116 (Pre-release) [superseded] ; 116 ; http://rpd.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Radiation Protection Dosimetry Volume 121 (Pre-release) [superseded] ; 121 ; http://rpd.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Social Cognitive and Affective Neuroscience Volume 1 (Pre-release) [superseded] ; 1 ; http://scan.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Schizophrenia Bulletin Volume 31 (Pre-release) [superseded] ; 31 ; http://schizophreniabulletin.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Schizophrenia Bulletin Volume 33 (Pre-release) [superseded] ; 33 ; http://schizophreniabulletin.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Socio-Economic Review Volume 3 (Pre-release) [superseded] ; 3 ; http://ser.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Socio-Economic Review Volume 5 (Pre-release) [superseded] ; 5 ; http://ser.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Social Science Japan Journal Volume 9 (Pre-release) [superseded] ; 9 ; http://ssjj.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Trusts & Trustees Volume 11 (Pre-release) [superseded] ; 11 ; http://tandt.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Trusts & Trustees Volume 12 (Pre-release) [superseded] ; 12 ; http://tandt.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Toxicological Sciences Volume 89 (Pre-release) [superseded] ; 89 ; http://toxsci.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Toxicological Sciences Volume 90 (Pre-release) [superseded] ; 90 ; http://toxsci.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Journal of Tropical Pediatrics Volume 51 (Pre-release) [superseded] ; 51 ; http://tropej.oxfordjournals.org/ >
+        au < superseded ; 2006 ; Journal of Tropical Pediatrics Volume 53 (Pre-release) [superseded] ; 53 ; http://tropej.oxfordjournals.org/ >
+
+    }
+}

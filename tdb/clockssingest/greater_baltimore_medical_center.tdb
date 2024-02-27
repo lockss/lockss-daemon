@@ -24,7 +24,8 @@
     #content Volume 1 to 11 remain on T&F
 
     au < manifest ; exists ; 2022 ; Journal of Community Hospital Internal Medicine Perspectives Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2023 ; Journal of Community Hospital Internal Medicine Perspectives Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2023 ; Journal of Community Hospital Internal Medicine Perspectives Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2024 ; Journal of Community Hospital Internal Medicine Perspectives Volume 14 ; 14 ; >
 
   }
 

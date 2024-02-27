@@ -1,0 +1,45 @@
+{
+  publisher <
+    name = OAPEN ;
+    info[contract] = 2023 ;
+    info[back] = 2020 ;
+    info[tester] = 5 ;
+    info[platform] = Custom. See LXPUB-718
+  >
+    
+    plugin = org.lockss.plugin.oapen.ClockssOAPENBooksPlugin
+    implicit < status ; status2 ; year ; name ; param[resource_id] ; hidden[proxy] >
+    param[base_url] = https://library.oapen.org/
+
+  {
+     title <
+        name = OAPEN Books
+      >
+
+    au < exists ; exists ; 2018 ; Kant und die Imagination der Tiere ; handle/20.500.12657/41485 ; >
+    au < exists ; exists ; 2008 ; Distance og Involverethed ; handle/20.500.12657/34791 ; >
+    au < exists ; exists ; 2020 ; Beltraneja ; handle/20.500.12657/49951 ; >
+
+#These titles and handles don't match.
+#    au < exists ; exists ;  ; Schrijverschap in de Belgische belle époque. Een sociaal-culturele geschiedenis ; handle/20.500.12657/55803 ; >
+#    au < exists ; exists ;  ; Vergängliche Kunst und fortwährende Macht ; handle/20.500.12657/51448 ; >
+#    au < exists ; exists ;  ; Magnifying perspectives ; handle/20.500.12657/33878 ; >
+#    au < exists ; exists ;  ; Farming as Financial Asset ; handle/20.500.12657/41509 ; >
+#    au < exists ; exists ;  ; The Rise of State Capital ; handle/20.500.12657/34840 ; >
+#    au < exists ; exists ;  ; Populationen – Zeit-Räume – Protokollieren ; handle/20.500.12657/53092 ; >
+#    au < exists ; exists ;  ; Traumata ; handle/20.500.12657/49860 ; >
+#    au < exists ; exists ;  ; Populationen - Zeit-Räume - Protokollieren ; handle/20.500.12657/34594 ; >
+#    au < exists ; exists ;  ; Approaches to World Literature ; handle/20.500.12657/41479 ; >
+#    au < exists ; exists ;  ; Data Mining in MRO ; handle/20.500.12657/54077 ; >
+#    au < exists ; exists ;  ; The Many Faces of Appalachia ; handle/20.500.12657/49963 ; >
+#    au < exists ; exists ;  ; Bilderbuch-Heimkehr? Remigration im Kontext ; handle/20.500.12657/33115 ; >
+#    au < exists ; exists ;  ; Rund um Beethoven ; handle/20.500.12657/49951 ; >
+#    au < exists ; exists ;  ; Gli altri noi ; handle/20.500.12657/31283 ; >
+#    au < exists ; exists ;  ; Unwiederholbares Gottessiegel ; handle/20.500.12657/30752 ; >
+#    au < exists ; exists ;  ; Homo Novus ; handle/20.500.12657/32367 ; >
+#    au < exists ; exists ;  ; Alles kann, nichts muss?! ; handle/20.500.12657/61716 ; >
+
+  }
+
+}
+

@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>1</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -60,6 +60,10 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_name</string>
     <string>"University of Michigan Press Deep Blue Plugin (CLOCKSS), Base URL %s, OAI Set %s, Year %d", base_url, au_oai_set, year</string>
   </entry>
+<entry>
+  <string>au_permission_url</string>
+  <string>"%sclockss.txt", to_https(base_url)</string>
+</entry>
   <entry>
     <string>clockss_override</string>
     <map>

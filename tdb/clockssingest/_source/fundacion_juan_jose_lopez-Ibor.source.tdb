@@ -10,14 +10,16 @@
 
   {
 
-     title <
+    title <
       name = Fundación Juan José López-Ibor Source Content
     >
-    plugin = needs.SourcePlugin
-    implicit < status ; status2 ; year ; name ; param[directory] >
-    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/FJJLI-released/
 
-    au < expected ; exists ; 2024 ; Fundación Juan José López-Ibor Content 2024_01 ; 2024_01 >
+    plugin = org.lockss.plugin.clockss.lopezibor.ClockssLopezIborSourcePlugin
+    implicit < status ; status2 ; year ; name ; param[directory] >
+    #param[base_url] = https://clockss-test.lockss.org/sourcefiles/lopezibor-released/
+    #testing bucket complete
+
+    au < ready ; exists ; 2024 ; Fundación Juan José López-Ibor Content 2024_01 ; 2024_01 >
 
   }
 

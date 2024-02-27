@@ -31,10 +31,11 @@
     }
     {
     
-    #param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/sup-released/
+    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/sup-released/
     #param[base_url] = https://clockss-test.lockss.org/sourcefiles/sup-released/
 
-    #au < ready ; exists ; 2024 ; Stanford University Press Source Content 2024 ; 2024 > #testing bucket is good.
+    au < readySource ; crawling ; 2024 ; Stanford University Press Source Content 2024 ; 2024 >
+    #No more AUs. Closing contract.
 
     }
   }

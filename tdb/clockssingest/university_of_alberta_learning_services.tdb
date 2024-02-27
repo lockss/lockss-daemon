@@ -34,6 +34,7 @@
         au < deepCrawl ; exists ; 2021 ; Journal of Pharmacy and Pharmaceutical Science Volume 24 ; 2021 ; 24 ; >
         au < deepCrawl ; exists ; 2022 ; Journal of Pharmacy and Pharmaceutical Science Volume 25 ; 2022 ; 25 ; >
         au < expected ; exists ; 2023 ; Journal of Pharmacy and Pharmaceutical Science Volume 26 ; 2023 ; 26 ; >
+        au < expected ; exists ; 2024 ; Journal of Pharmacy and Pharmaceutical Science Volume 27 ; 2024 ; 27 ; >
         }
         {
         plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin 
@@ -85,6 +86,7 @@
         au < deepCrawl ; exists ; 2021 ; Evidence Based Library and Information Practice Volume 16 ; 2021 ; 16 ; >
         au < deepCrawl ; exists ; 2022 ; Evidence Based Library and Information Practice Volume 17 ; 2022 ; 17 ; >
         au < crawling ; exists ; 2023 ; Evidence Based Library and Information Practice Volume 18 ; 2023 ; 18 ; >
+        au < expected ; exists ; 2024 ; Evidence Based Library and Information Practice Volume 19 ; 2024 ; 19 ; >
 
       }
       

@@ -233,6 +233,7 @@ public abstract class LockssServlet extends HttpServlet
       if (!isServletAllowed(myServletDescr())) {
 	displayWarningInLieuOfPage("You are not authorized to use " +
 				   myServletDescr().heading);
+        resp.setStatus(HttpResponse.__403_Forbidden);
 	return;
       }
 
@@ -241,6 +242,7 @@ public abstract class LockssServlet extends HttpServlet
 	ServletUtil.servletDisabledReason(myServletDescr().getServletName());
       if (reason != null) {
 	displayWarningInLieuOfPage("This function is disabled. " + reason);
+        resp.setStatus(HttpResponse.__503_Service_Unavailable, "Disabled");
 	return;
       }
       if (session != null) {
@@ -1162,6 +1164,7 @@ public abstract class LockssServlet extends HttpServlet
 			       + srvLink(myServletDescr(), "try again",
 					 getParamsAsProps())
 			       + " in a moment.");
+    resp.setStatus(HttpResponse.__503_Service_Unavailable, "Still starting");
   }
 
   protected void endPage(Page page) throws IOException {

@@ -1,0 +1,32 @@
+{
+
+  publisher <
+    name = ASEAN Committee on Science and Technology (COST) ;
+    info[contract] = 2015 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+  {
+  
+    title <
+      name = ASEAN Journal on Science and Technology for Development Journal ;
+      issn = 0217-5460 ;
+      eissn = 2224-9028 ;
+      issnl = 0217-5460
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = https://ajstd.ubd.edu.bn/
+    param[journal_abbr] = journal
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+    au < manifest ; exists ; 2023 ; ASEAN Journal on Science and Technology for Development Journal Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2024 ; ASEAN Journal on Science and Technology for Development Journal Volume 2 ; 2 ; >
+
+  }
+
+}

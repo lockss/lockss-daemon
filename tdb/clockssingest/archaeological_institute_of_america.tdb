@@ -24,9 +24,10 @@
 
       au < doNotProcess ; doNotProcess ; 2020 ; American Journal of Archaeology Volume 124 ; 124 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; American Journal of Archaeology Volume 125 ; 125 ; >
-      au < frozen ; exists ; 2022 ; American Journal of Archaeology Volume 126 ; 126 ; >
-      au < ready ; exists ; 2023 ; American Journal of Archaeology Volume 127 ; 127 ; >
-    
+      au < finished ; manifest ; 2022 ; American Journal of Archaeology Volume 126 ; 126 ; reingest5.clockss.org:8082 >
+      au < crawling ; exists ; 2023 ; American Journal of Archaeology Volume 127 ; 127 ; >
+      au < manifest ; exists ; 2024 ; American Journal of Archaeology Volume 128 ; 128 ; >
+
   }
 
 }

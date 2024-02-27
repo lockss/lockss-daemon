@@ -35,8 +35,8 @@
 
         param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/frontiers-released/
 
-        au < readySource ; crawling ; 2023 ; Frontiers Journals Source Content 2023_01 ; 2023_01 >
-        au < readySource ; crawling ; 2023 ; Frontiers Journals Source Content 2023_02 ; 2023_02 >
+        au < readySource ; finished ; 2023 ; Frontiers Journals Source Content 2023_01 ; 2023_01 >
+        au < readySource ; finished ; 2023 ; Frontiers Journals Source Content 2023_02 ; 2023_02 >
         au < readySource ; crawling ; 2023 ; Frontiers Journals Source Content 2023_03 ; 2023_03 >
         au < readySource ; crawling ; 2024 ; Frontiers Journals Source Content 2024_01 ; 2024_01 >
 
@@ -54,7 +54,7 @@
       au < zapped ; finished ; 2017 ; Frontiers Journals Source Content 2017 ; 2017 >
       au < zapped ; finished ; 2018 ; Frontiers Journals Source Content 2018 ; 2018 >
       au < zapped ; finished ; 2019 ; Frontiers Journals Source Content 2019 ; 2019 >
-      au < readySource ; finished ; 2020 ; Frontiers Journals Source Content 2020 ; 2020 >
+      au < zapped ; finished ; 2020 ; Frontiers Journals Source Content 2020 ; 2020 >
       au < readySource ; finished ; 2021 ; Frontiers Journals Source Content 2021 ; 2021 >
       #no more AUs for this plugin
     }
@@ -80,7 +80,7 @@
       {
         param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/frontiersbooks-released/
 
-        au < readySource ; crawling ; 2023 ; Frontiers Books Source Content 2023_01 ; 2023_01 >
+        au < readySource ; finished ; 2023 ; Frontiers Books Source Content 2023_01 ; 2023_01 >
         au < expected ; exists ; 2024 ; Frontiers Books Source Content 2024_01 ; 2024_01 >
 
       }

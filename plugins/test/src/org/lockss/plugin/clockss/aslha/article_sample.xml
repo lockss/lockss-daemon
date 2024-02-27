@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets xmlns="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" TYPE="leader-live-do">
+  <mets:dmdSec xmlns:mets="http://www.loc.gov/METS/" ID="DMD">
+    <mets:mdWrap MDTYPE="MODS">
+      <mets:xmlData>
+        <mods xmlns="http://www.loc.gov/mods/v3" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods.xsd">
+          <mods:identifier xmlns:mods="http://www.loc.gov/mods/v3" type="doi" invalid="yes">10.1044/2022-0107-hospital-asl-settlement</mods:identifier>
+          <mods:titleInfo xmlns:mods="http://www.loc.gov/mods/v3" ID="title" supplied="yes" usage="primary" xlink:type="simple">
+            <mods:title>Deaf Patient Wins Settlement Against Hospital for Lack of Interpreter Services</mods:title>
+          </mods:titleInfo>
+          <mods:subject xmlns:mods="http://www.loc.gov/mods/v3" authority="leader_do_tag" ID="leaderContentType" xlink:type="simple" usage="primary">
+            <mods:topic authority="leader_blog">Leader Blog</mods:topic>
+          </mods:subject>
+          <mods:subject xmlns:mods="http://www.loc.gov/mods/v3" authority="leader-topics" ID="primarytopic" xlink:type="simple" usage="primary">
+            <mods:topic authority="audiology">Audiology</mods:topic>
+          </mods:subject>
+          <mods:subject xmlns:mods="http://www.loc.gov/mods/v3" authority="asha-topics" ID="ashatopic" xlink:type="simple" usage="primary">
+            <mods:topic authority="asha">ASHA News &amp; Member Stories</mods:topic>
+            <mods:topic authority="hearaidci">Hearing Aids, Cochlear Implants &amp; Assistive Technology</mods:topic>
+            <mods:topic authority="heardis">Hearing Disorders</mods:topic>
+          </mods:subject>
+          <mods:subject xmlns:mods="http://www.loc.gov/mods/v3" authority="leader-topics" ID="leaderCategory" xlink:type="simple" usage="primary">
+            <mods:topic authority="news">News</mods:topic>
+          </mods:subject>
+          <mods:relatedItem xmlns:mods="http://www.loc.gov/mods/v3" otherType="associated" xlink:href="10.5555/asha-staff" ID="relatedAuthors" xlink:type="simple" />
+          <mods:extension xmlns:mods="http://www.loc.gov/mods/v3">
+            <atpn:do-extensions xmlns:atpn="http://www.atypon.com/digital-objects" xsi:schemaLocation="http://www.atypon.com/digital-objects https://www.atypon.com/digital-objects/digital-objects.xsd">
+              <atpn:date index-full-timestamp="true" encoding="iso8601">2022-01-10T12:00:00-08:00</atpn:date>
+              <atpn:excerpt><![CDATA[<p>A hospital in Calhoun, Georgia, must pay $50,000 to a deaf patient and $10,000 to her companion for failing to provide an American Sign Language interpreter during the patient&rsquo;s labor and delivery.</p>]]></atpn:excerpt>
+              <atpn:content><![CDATA[<p><a href="https://www.ada.gov/advent_sa.pdf">A hospital in Calhoun, Georgia, must pay $50,000 to a deaf patient and $10,000 to her companion</a> for failing to provide an American Sign Language (ASL) interpreter during the patient&rsquo;s labor and delivery.</p>
+<blockquote>
+<h5><em>Related</em></h5>
+<p><em><a href="/doi/10.1044/leader.FTR2.22112017.54">Federal laws require health care providers to have&mdash;and post&mdash;nondiscrimination policies that include language-assistance services.</a></em></p>
+<p><em><a href="/do/10.1044/video-interpretation-for-patients-with-hearing-loss/full/">Video Interpretation for Patients With Hearing Loss</a></em></p>
+<p><em><a href="/do/10.1044/an-18-year-old-designs-a-sign-language-messaging-app/full/">An 18-Year-Old Designs a Sign Language Messaging App</a></em></p>
+</blockquote>
+<p>The payment, part of an agreement between the U.S. Department of Justice and AdventHealth-Gordon (Advent), resolves an Americans With Disabilities Act (ADA) complaint.</p>
+<p>The patient alleged that despite her requests, Advent failed to provide an ASL interpreter or any other communication aid or service. Instead, she had to rely on lip reading and on her deaf companion, who tried to advocate for the patient despite her own difficulty understanding and communicating with hospital staff. Without the accommodation, the patient and companion did not receive important information about a complication during the delivery, creating fear and confusion for both.</p>
+<p>Advent cooperated fully with the investigation, which substantiated the allegations. Under the agreement, Advent will also:</p>
+<ul>
+<li>Advise patients and companions of their right to auxiliary aids and services to ensure effective communication, including a live qualified sign language interpreter, whether through video or onsite.</li>
+<li>Provide prompt communication via text, pen and paper, and the use of a handheld device to connect with a qualified interpreter at all reception areas.</li>
+<li>Continue to assess communication needs and provide effective communication throughout the hospital visit.</li>
+<li>Modify its policies and practices, train its staff on the ADA and the terms of the agreement, and periodically submit reports about its compliance with the agreement.</li>
+</ul>]]></atpn:content>
+              <atpn:largeImage alt-text="A person signs &quot;help&quot; in American Sign Language.">a0122-hospital-asl-settlement-large.jpg</atpn:largeImage>
+              <atpn:smallImage alt-text="A person signs &quot;help&quot; in American Sign Language.">a0122-hospital-asl-settlement-small.jpg</atpn:smallImage>
+              <atpn:baseDoi>10.1044/leader-live-do-class</atpn:baseDoi>
+            </atpn:do-extensions>
+          </mods:extension>
+        </mods>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:dmdSec>
+  <mets:fileSec xmlns:mets="http://www.loc.gov/METS/">
+    <mets:fileGrp ID="largeImage-group">
+      <mets:file ID="largeImage603377925">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://a0122-hospital-asl-settlement-large.jpg" xlink:type="simple" />
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp ID="smallImage-group">
+      <mets:file ID="smallImage189858188">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://a0122-hospital-asl-settlement-small.jpg" xlink:type="simple" />
+      </mets:file>
+    </mets:fileGrp>
+  </mets:fileSec>
+  <mets:structMap xmlns:mets="http://www.loc.gov/METS/">
+    <mets:div />
+  </mets:structMap>
+</mets>

@@ -54,7 +54,9 @@ public class GigaScienceHttpResponseHandler implements CacheResultHandler {
       case 500:
         log.debug2("500 error: "+url);
         // don't completely fail if unable to retrieve a dataset
-        if (url.matches(".*/api/dataset?doi=\\d+$") ) {
+        if (url.matches(".*/api/dataset\\?doi=\\d+$") || url.matches(".*/api/dataset\\?doi=\\d+&result=file$")
+        || url.matches(".*/api/dataset\\?doi=\\d+&result=sample$") || url.matches(".*/api/dataset\\?doi=\\d+&result=dataset$")) {
+          log.debug2("This link is a dead link exception (non-fatal)");
           return new CacheException.NoRetryDeadLinkException("500 Internal Server Error (non-fatal)");
         }
         return new CacheException.RetrySameUrlException("500 Internal Server Error");
@@ -63,6 +65,10 @@ public class GigaScienceHttpResponseHandler implements CacheResultHandler {
         // retry "503 backend read error" and 503 Service Unavailable
         // as most will resolve eventually
         return new CacheException.RetryableNetworkException_3_30S();
+      case 504:
+        log.debug2("504 error (Gateway time-out):" + url);
+        //some of the API calls hang because of how large the datasets are; retry if 504
+        return new CacheException.RetryableNetworkException_5();
       default:
         log.debug2("default");
         throw new UnsupportedOperationException();

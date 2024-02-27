@@ -370,6 +370,19 @@ public class TestFileUtil extends LockssTestCase {
 		 Files.getPosixFilePermissions(dir.toPath()));
   }
 
+  public void testAddSeparator() {
+    assertEquals("foo/", FileUtil.addSeparator("foo/"));
+    assertEquals("foo/", FileUtil.addSeparator("foo"));
+  }
+
+  public void testRelativeName() {
+    assertEquals("foo/bar.x", FileUtil.relativeName("/a/b/foo/bar.x", "/a/b"));
+  }
+
+  public void testRelativeFile() {
+    assertEquals(new File("foo/bar.x"),
+                 FileUtil.relativeFile(new File("/a/b/foo/bar.x"), "/a/b"));
+  }
 
 
 }

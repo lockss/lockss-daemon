@@ -71,6 +71,10 @@ public class Ojs3HtmlCrawlFilterFactory implements FilterFactory {
 		// on https://revistas.udea.edu.co/index.php/lecturasdeeconomia/issue/view/3884,
 		// <ul class="most_read"> on right will cause over crawl
 		HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "most_read"),
+		// publisher added this one in early 2024, found at https://mjs.uomustansiriyah.edu.iq/index.php/MJS/issue/view/29
+		HtmlNodeFilters.tagWithAttributeRegex("div", "id", "customblock"),
+		HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pkp_block"),
+		HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "most_read"),
 	};
  
   @Override

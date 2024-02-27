@@ -35,6 +35,7 @@
     au < finished ; frozen ; 2021 ; JAMA Cardiology Volume 6 ; 2021 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2022 ; JAMA Cardiology Volume 7 ; 2022 ; https://jamanetwork.com/ ; >
     au < crawling ; exists ; 2023 ; JAMA Cardiology Volume 8 ; 2023 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2024 ; JAMA Cardiology Volume 9 ; 2024 ; https://jamanetwork.com/ ; >
 
   }
 
@@ -61,6 +62,7 @@
     au < finished ; frozen ; 2021 ; JAMA Dermatology Volume 157 ; 2021 ; https://jamanetwork.com/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2022 ; JAMA Dermatology Volume 158 ; 2022 ; https://jamanetwork.com/ ; >
     au < crawling ; exists ; 2023 ; JAMA Dermatology Volume 159 ; 2023 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2024 ; JAMA Dermatology Volume 160 ; 2024 ; https://jamanetwork.com/ ; >
 
   }
 
@@ -110,6 +112,7 @@
     au < finished ; finished ; 2021 ; JAMA Internal Medicine Volume 181 ; 2021 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2022 ; JAMA Internal Medicine Volume 182 ; 2022 ; https://jamanetwork.com/ ; >
     au < crawling ; exists ; 2023 ; JAMA Internal Medicine Volume 183 ; 2023 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2024 ; JAMA Internal Medicine Volume 184 ; 2024 ; https://jamanetwork.com/ ; >
 
   }
 
@@ -128,6 +131,7 @@
     au < finished ; frozen ; 2021 ; JAMA Health Forum Volume 2021 ; 2021 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; JAMA Health Forum Volume 2022 ; 2022 ; https://jamanetwork.com/ ; >
     au < crawling ; exists ; 2023 ; JAMA Health Forum Volume 2023 ; 2023 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2024 ; JAMA Health Forum Volume 2024 ; 2024 ; https://jamanetwork.com/ ; >
 
   }
 
@@ -148,6 +152,7 @@
     au < finished ; frozen ; 2021 ; JAMA Network Open Volume 4 ; 2021 ; https://jamanetwork.com/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2022 ; JAMA Network Open Volume 5 ; 2022 ; https://jamanetwork.com/ ; >
     au < crawling ; exists ; 2023 ; JAMA Network Open Volume 6 ; 2023 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2024 ; JAMA Network Open Volume 7 ; 2024 ; https://jamanetwork.com/ ; >
 
   }
 
@@ -190,6 +195,7 @@
     au < finished ; frozen ; 2021 ; JAMA Neurology Volume 78 ; 2021 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2022 ; JAMA Neurology Volume 79 ; 2022 ; https://jamanetwork.com/ ; >
     au < crawling ; exists ; 2023 ; JAMA Neurology Volume 80 ; 2023 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2024 ; JAMA Neurology Volume 81 ; 2024 ; https://jamanetwork.com/ ; >
 
   }
 
@@ -214,6 +220,7 @@
     au < finished ; frozen ; 2021 ; JAMA Oncology Volume 7 ; 2021 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2022 ; JAMA Oncology Volume 8 ; 2022 ; https://jamanetwork.com/ ; >
     au < crawling ; exists ; 2023 ; JAMA Oncology Volume 9 ; 2023 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2024 ; JAMA Oncology Volume 10 ; 2024 ; https://jamanetwork.com/ ; >
 
   }
 
@@ -240,6 +247,7 @@
     au < finished ; finished ; 2021 ; JAMA Ophthalmology Volume 139 ; 2021 ; https://jamanetwork.com/ ; reingest3.clockss.org:8083 >
     au < notReady ; exists ; 2022 ; JAMA Ophthalmology Volume 140 ; 2022 ; https://jamanetwork.com/ ; > #403 forbidden, https://cdn.jamanetwork.com/ama/content_public/journal/ophth/938883/eoi210084f2_1646935168.68667.png?Expires=2147483647&Signature=e2NuQLOr0jumvoHClWfHv2YprbuatOYmFmVDTPXy9YgQavc0T55j59Yf3NtUnAVjyjYWFEupWIyzpYPlLKwZsetSk88oVCkom~JvoDHV4zCgMdognrXuuxjlQ4GunTDIz0FDSN5x3N5nD~-Q2AlY2vh8xUsqDcLFprQzyfxgr4JY2zYh~MDzaGG~fQfeegO2tbsq91prof3krbsZKnvyk2KrZA1fVON9KBAtNfURBqrNWETu0jGk3L9acgfCMkVTWnWDUHijlXomr5zpax5c5TOtUn0JP81k5cIm1eREpOqClNOk9BKi34SJ8Bny63gPRqtJy7Bz5EZ495fiofRL3w__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
     au < crawling ; exists ; 2023 ; JAMA Ophthalmology Volume 141 ; 2023 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2024 ; JAMA Ophthalmology Volume 142 ; 2024 ; https://jamanetwork.com/ ; >
 
   }
 
@@ -266,6 +274,7 @@
     au < finished ; frozen ; 2021 ; JAMA Otolaryngology - Head & Neck Surgery Volume 147 ; 2021 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2022 ; JAMA Otolaryngology - Head & Neck Surgery Volume 148 ; 2022 ; https://jamanetwork.com/ ; >
     au < crawling ; exists ; 2023 ; JAMA Otolaryngology - Head & Neck Surgery Volume 149 ; 2023 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2024 ; JAMA Otolaryngology - Head & Neck Surgery Volume 150 ; 2024 ; https://jamanetwork.com/ ; >
 
   }
 
@@ -292,6 +301,7 @@
     au < finished ; frozen ; 2021 ; JAMA Pediatrics Volume 175 ; 2021 ; https://jamanetwork.com/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2022 ; JAMA Pediatrics Volume 176 ; 2022 ; https://jamanetwork.com/ ; >
     au < crawling ; exists ; 2023 ; JAMA Pediatrics Volume 177 ; 2023 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2024 ; JAMA Pediatrics Volume 178 ; 2024 ; https://jamanetwork.com/ ; >
 
   }
 
@@ -318,6 +328,7 @@
     au < finished ; frozen ; 2021 ; JAMA Psychiatry Volume 78 ; 2021 ; https://jamanetwork.com/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2022 ; JAMA Psychiatry Volume 79 ; 2022 ; https://jamanetwork.com/ ; >
     au < crawling ; exists ; 2023 ; JAMA Psychiatry Volume 80 ; 2023 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2024 ; JAMA Psychiatry Volume 81 ; 2024 ; https://jamanetwork.com/ ; >
 
   }
 
@@ -344,6 +355,7 @@
     au < finished ; frozen ; 2021 ; JAMA Surgery Volume 156 ; 2021 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2022 ; JAMA Surgery Volume 157 ; 2022 ; https://jamanetwork.com/ ; >
     au < crawling ; exists ; 2023 ; JAMA Surgery Volume 158 ; 2023 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2024 ; JAMA Surgery Volume 159 ; 2024 ; https://jamanetwork.com/ ; >
 
   }
 
@@ -370,6 +382,7 @@
     au < finished ; frozen ; 2021 ; JAMA: The Journal of the American Medical Association Volume 325-326 ; 2021 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2022 ; JAMA: The Journal of the American Medical Association Volume 327-328 ; 2022 ; https://jamanetwork.com/ ; >
     au < crawling ; exists ; 2023 ; JAMA: The Journal of the American Medical Association Volume 329-330 ; 2023 ; https://jamanetwork.com/ ; >
+    au < manifest ; exists ; 2024 ; JAMA: The Journal of the American Medical Association Volume 331-332 ; 2024 ; https://jamanetwork.com/ ; >
 
   }
 

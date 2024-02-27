@@ -28,7 +28,7 @@
     {
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/futureacademy-released/
 
-      au < readySource ; crawling ; 2023 ; European Publisher Source Content 2023 ; 2023 >
+      au < readySource ; finished ; 2023 ; European Publisher Source Content 2023 ; 2023 >
       au < expected ; exists ; 2024 ; European Publisher Source Content 2024 ; 2024 >
 
     }

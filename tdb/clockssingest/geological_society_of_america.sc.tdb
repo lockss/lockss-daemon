@@ -23,6 +23,7 @@
       param[journal_id] = geoenergy
 
       au < expected ; exists ; 2023 ; 2023 ; Geological Society of America Bulletin Volume 1 ; 1 ; >
+      au < expected ; exists ; 2024 ; 2024 ; Geological Society of America Bulletin Volume 2 ; 2 ; >
   }
 
   {
@@ -141,9 +142,10 @@
       au < finished ; frozen ; 2018 ; 2018 ; Geological Society of America Bulletin Volume 130 ; 130 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; 2019 ; Geological Society of America Bulletin Volume 131 ; 131 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2020 ; 2020 ; Geological Society of America Bulletin Volume 132 ; 132 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2021 ; 2021 ; Geological Society of America Bulletin Volume 133 ; 133 ; >
+      au < deepCrawl ; exists ; 2021 ; 2021 ; Geological Society of America Bulletin Volume 133 ; 133 ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Geological Society of America Bulletin Volume 134 ; 134 ; >
-      au < crawling ; exists ; 2023 ; 2023 ; Geological Society of America Bulletin Volume 135 ; 135 ; >
+      au < deepCrawl ; exists ; 2023 ; 2023 ; Geological Society of America Bulletin Volume 135 ; 135 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Geological Society of America Bulletin Volume 136 ; 136 ; >
 
   }
 
@@ -209,7 +211,8 @@
     au < finished ; frozen ; 2020 ; 2020 ; Geology Volume 48 ; 48 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2021 ; 2021 ; Geology Volume 49 ; 49 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Geology Volume 50 ; 50 ; >
-    au < crawling ; exists ; 2023 ; 2023 ; Geology Volume 51 ; 51 ; >
+    au < deepCrawl ; exists ; 2023 ; 2023 ; Geology Volume 51 ; 51 ; >
+    au < manifest ; exists ; 2024 ; 2024 ; Geology Volume 52 ; 52 ; >
 
   }
 
@@ -239,9 +242,10 @@
     au < finished ; frozen ; 2018 ; 2018 ; Geosphere Volume 14 ; 14 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2019 ; 2019 ; Geosphere Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2020 ; 2020 ; Geosphere Volume 16 ; 16 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2021 ; 2021 ; Geosphere Volume 17 ; 17 ; >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Geosphere Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Geosphere Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2023 ; 2023 ; Geosphere Volume 19 ; 19 ; >
+    au < deepCrawl ; exists ; 2023 ; 2023 ; Geosphere Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2024 ; 2024 ; Geosphere Volume 20 ; 20 ; >
 
   }
 
@@ -271,7 +275,8 @@
     au < finished ; finished ; 2020 ; 2020 ; Lithosphere Volume 12 ; 12 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; 2021 ; Lithosphere Volume 2021 ; 2021 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Lithosphere Volume 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; 2023 ; Lithosphere Volume 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; 2023 ; Lithosphere Volume 2023 ; 2023 ; >
+    au < manifest ; exists ; 2024 ; 2024 ; Lithosphere Volume 2024 ; 2024 ; >
 
   }
 

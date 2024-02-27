@@ -1,0 +1,64 @@
+{
+
+  publisher <
+    name = Aperio ;
+    info[contract] = 2023 
+    #info[back] = 2010 ;
+    #info[tester] = 8 ;
+    #info[poller] = 2 ;
+    #info[platform] = Janeway/OAI x2. See LXPLUG-2091
+  >
+  
+
+  {
+
+    plugin = org.lockss.plugin.janeway.aperio.ClockssAperioJournalsPlugin
+    implicit < status ; status2 ; year ; param[year] ; volume ; name ; hidden[proxy] >
+
+    {
+
+        title <
+            name = Journal of Modern Philosophy 
+            #eissn = 2034-4643
+        >
+
+        param[base_url] = https://jmphil.org/
+
+        au < manifest ; exists ; 2019 ; 2019 ; 2019 ; Journal of Modern Philosophy 2019 ; >
+        au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Journal of Modern Philosophy 2020 ; >
+        au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Journal of Modern Philosophy 2021 ; >
+
+
+    }
+
+    {
+
+        title <
+            name = Summer Academe 
+        >
+
+        param[base_url] = https://summeracademe.org/
+
+        au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Summer Academe 2020 ; >
+        au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Summer Academe 2021 ; >
+        au < manifest ; exists ; 2022 ; 2022 ; 2022 ; Summer Academe 2022 ; >
+
+
+    }
+
+    {
+
+        title <
+            name = Essays in History 
+        >
+
+        param[base_url] = https://essaysinhistoryjournal.com/
+
+        au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Essays in History 2020 ; >
+        au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Summer Academe 2021 ; >
+
+
+    }
+
+  }
+}

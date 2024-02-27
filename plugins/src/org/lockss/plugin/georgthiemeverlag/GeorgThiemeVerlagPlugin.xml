@@ -211,4 +211,8 @@
     <string>au_url_poll_result_weight</string>
     <string>"(/js/.+|messages)[.]js$", 0</string>
   </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagHtmlLinkExtractorFactory</string>
+  </entry>
 </map>

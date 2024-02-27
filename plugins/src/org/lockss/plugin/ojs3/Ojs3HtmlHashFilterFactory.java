@@ -121,6 +121,11 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
     // https://threatenedtaxa.org/JoTT/article/download/3670/7431?inline=1
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "WordSection"),
 
+    // publisher added this one in early 2024, found at https://mjs.uomustansiriyah.edu.iq/index.php/MJS/issue/view/29
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "customblock"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pkp_block"),
+    HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "most_read"),
+
     // the citation files https://ojs.aut.ac.nz/hospitality-insights/citationstylelanguage/get/acm-sig-proceedings?submissionId=58
     //HtmlNodeFilters.tagWithAttribute("div", "class", "csl-entry"), // alternatively div.csl-bib-body
     /*

@@ -39,7 +39,8 @@
     au < finished ; manifest ; 2020 ; Anthropological Journal of European Cultures Volume 29 ; 29 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Anthropological Journal of European Cultures Volume 30 ; 30 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Anthropological Journal of European Cultures Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2023 ; Anthropological Journal of European Cultures Volume 32 ; 32 ; >
+    au < deepCrawl ; exists ; 2023 ; Anthropological Journal of European Cultures Volume 32 ; 32 ; >
+    au < expected ; exists ; 2024 ; Anthropological Journal of European Cultures Volume 33 ; 33 ; >
 
   }
 
@@ -73,7 +74,8 @@
     au < finished ; manifest ; 2020 ; Anthropology in Action Volume 27 ; 27 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Anthropology in Action Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; Anthropology in Action Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2023 ; Anthropology in Action Volume 30 ; 30 ; >
+    au < deepCrawl ; exists ; 2023 ; Anthropology in Action Volume 30 ; 30 ; >
+    au < expected ; exists ; 2024 ; Anthropology in Action Volume 31 ; 31 ; >
 
   }
 
@@ -106,7 +108,8 @@
     au < finished ; manifest ; 2020 ; Anthropology of the Middle East Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2021 ; Anthropology of the Middle East Volume 16 ; 16 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; Anthropology of the Middle East Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2023 ; Anthropology of the Middle East Volume 18 ; 18 ; >
+    au < deepCrawl ; exists ; 2023 ; Anthropology of the Middle East Volume 18 ; 18 ; >
+    au < expected ; exists ; 2024 ; Anthropology of the Middle East Volume 19 ; 19 ; >
 
   }
 
@@ -159,6 +162,7 @@
     au < finished ; manifest ; 2021 ; Aspasia Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Aspasia Volume 16 ; 16 ; >
     au < crawling ; exists ; 2023 ; Aspasia Volume 17 ; 17 ; >
+    au < expected ; exists ; 2024 ; Aspasia Volume 18 ; 18 ; >
 
   }
 
@@ -188,7 +192,8 @@
     au < finished ; manifest ; 2020 ; Boyhood Studies Volume 13 ; 13 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Boyhood Studies Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Boyhood Studies Volume 15 ; 15 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2023 ; Boyhood Studies Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2023 ; Boyhood Studies Volume 16 ; 16 ; >
+    au < expected ; exists ; 2024 ; Boyhood Studies Volume 17 ; 17 ; >
 
   }
 
@@ -216,7 +221,8 @@
     au < finished ; manifest ; 2020 ; The Cambridge Journal of Anthropology Volume 38 ; 38 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2021 ; The Cambridge Journal of Anthropology Volume 39 ; 39 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; The Cambridge Journal of Anthropology Volume 40 ; 40 ; >
-    au < crawling ; exists ; 2023 ; The Cambridge Journal of Anthropology Volume 41 ; 41 ; >
+    au < deepCrawl ; exists ; 2023 ; The Cambridge Journal of Anthropology Volume 41 ; 41 ; >
+    au < expected ; exists ; 2024 ; The Cambridge Journal of Anthropology Volume 42 ; 42 ; >
 
   }
 
@@ -241,6 +247,7 @@
     au < finished ; manifest ; 2021 ; Conflict and Society Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2022 ; Conflict and Society Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2023 ; Conflict and Society Volume 9 ; 9 ; >
+    au < expected ; exists ; 2024 ; Conflict and Society Volume 10 ; 10 ; >
 
   }
 
@@ -265,7 +272,8 @@
     au < finished ; manifest ; 2020 ; Contention Volume 8 ; 8 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Contention Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Contention Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2023 ; Contention Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2023 ; Contention Volume 11 ; 11 ; >
+    au < expected ; exists ; 2024 ; Contention Volume 12 ; 12 ; >
 
   }
 
@@ -298,7 +306,8 @@
     au < finished ; manifest ; 2020 ; Contributions to the History of Concepts Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2021 ; Contributions to the History of Concepts Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; Contributions to the History of Concepts Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2023 ; Contributions to the History of Concepts Volume 18 ; 18 ; >
+    au < deepCrawl ; exists ; 2023 ; Contributions to the History of Concepts Volume 18 ; 18 ; >
+    au < expected ; exists ; 2024 ; Contributions to the History of Concepts Volume 19 ; 19 ; >
 
   }
 
@@ -363,7 +372,8 @@
     au < finished ; manifest ; 2020 ; Democratic Theory Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2021 ; Democratic Theory Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; Democratic Theory Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2023 ; Democratic Theory Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2023 ; Democratic Theory Volume 10 ; 10 ; >
+    au < expected ; exists ; 2024 ; Democratic Theory Volume 11 ; 11 ; >
 
   }
 
@@ -421,6 +431,7 @@
     au < finished ; manifest ; 2021 ; Environment and Society Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; Environment and Society Volume 13 ; 13 ; >
     au < crawling ; exists ; 2023 ; Environment and Society Volume 14 ; 14 ; >
+    au < expected ; exists ; 2024 ; Environment and Society Volume 15 ; 15 ; >
 
   }
 
@@ -452,7 +463,8 @@
     au < finished ; manifest ; 2020 ; European Comic Art Volume 13 ; 13 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2021 ; European Comic Art Volume 14 ; 14 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; European Comic Art Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2023 ; European Comic Art Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2023 ; European Comic Art Volume 16 ; 16 ; >
+    au < expected ; exists ; 2024 ; European Comic Art Volume 17 ; 17 ; >
 
   }
 
@@ -492,7 +504,8 @@
     au < finished ; manifest ; 2020 ; European Judaism Volume 53 ; 53 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2021 ; European Judaism Volume 54 ; 54 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; European Judaism Volume 55 ; 55 ; >
-    au < crawling ; exists ; 2023 ; European Judaism Volume 56 ; 56 ; >
+    au < deepCrawl ; exists ; 2023 ; European Judaism Volume 56 ; 56 ; >
+    au < expected ; exists ; 2024 ; European Judaism Volume 57 ; 57 ; >
 
   }
 
@@ -527,7 +540,8 @@
     au < finished ; manifest ; 2020 ; Focaal Volume 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Focaal Volume 2021 ; 2021 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; Focaal Volume 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Focaal Volume 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Focaal Volume 2023 ; 2023 ; >
+    au < manifest ; exists ; 2024 ; Focaal Volume 2024 ; 2024 ; >
 
   }
 
@@ -567,7 +581,8 @@
     au < finished ; manifest ; 2020 ; French Politics, Culture & Society Volume 38 ; 38 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2021 ; French Politics, Culture & Society Volume 39 ; 39 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; French Politics, Culture & Society Volume 40 ; 40 ; >
-    au < crawling ; exists ; 2023 ; French Politics, Culture & Society Volume 41 ; 41 ; >
+    au < deepCrawl ; exists ; 2023 ; French Politics, Culture & Society Volume 41 ; 41 ; >
+    au < expected ; exists ; 2024 ; French Politics, Culture & Society Volume 42 ; 42 ; >
 
   }
 
@@ -608,7 +623,8 @@
     au < finished ; manifest ; 2020 ; German Politics and Society Volume 38 ; 38 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; German Politics and Society Volume 39 ; 39 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; German Politics and Society Volume 40 ; 40 ; >
-    au < crawling ; exists ; 2023 ; German Politics and Society Volume 41 ; 41 ; >
+    au < deepCrawl ; exists ; 2023 ; German Politics and Society Volume 41 ; 41 ; >
+    au < expected ; exists ; 2024 ; German Politics and Society Volume 42 ; 42 ; >
 
   }
 
@@ -639,7 +655,8 @@
     au < finished ; manifest ; 2020 ; Girlhood Studies Volume 13 ; 13 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Girlhood Studies Volume 14 ; 14 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Girlhood Studies Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2023 ; Girlhood Studies Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2023 ; Girlhood Studies Volume 16 ; 16 ; >
+    au < expected ; exists ; 2024 ; Girlhood Studies Volume 17 ; 17 ; >
 
   }
 
@@ -670,7 +687,8 @@
     au < finished ; manifest ; 2020 ; Historical Reflections/Reflexions Historiques Volume 46 ; 46 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2021 ; Historical Reflections/Reflexions Historiques Volume 47 ; 47 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Historical Reflections/Reflexions Historiques Volume 48 ; 48 ; >
-    au < crawling ; exists ; 2023 ; Historical Reflections/Reflexions Historiques Volume 49 ; 49 ; >
+    au < deepCrawl ; exists ; 2023 ; Historical Reflections/Reflexions Historiques Volume 49 ; 49 ; >
+    au < manifest ; exists ; 2024 ; Historical Reflections/Reflexions Historiques Volume 50 ; 50 ; >
 
   }
 
@@ -699,6 +717,7 @@
     au < finished ; finished ; 2021 ; International Journal of Social Quality Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; International Journal of Social Quality Volume 12 ; 12 ; reingest4.clockss.org:8082 >
     au < expected ; exists ; 2023 ; International Journal of Social Quality Volume 13 ; 13 ; >
+    au < expected ; exists ; 2024 ; International Journal of Social Quality Volume 14 ; 14 ; >
 
   }
 
@@ -726,7 +745,8 @@
     au < finished ; manifest ; 2020 ; Israel Studies Review Volume 35 ; 35 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Israel Studies Review Volume 36 ; 36 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; Israel Studies Review Volume 37 ; 37 ; >
-    au < crawling ; exists ; 2023 ; Israel Studies Review Volume 38 ; 38 ; >
+    au < deepCrawl ; exists ; 2023 ; Israel Studies Review Volume 38 ; 38 ; >
+    au < expected ; exists ; 2024 ; Israel Studies Review Volume 39 ; 39 ; >
 
   }
 
@@ -788,7 +808,8 @@
     au < finished ; manifest ; 2020 ; Journal of Educational Media, Memory, and Society Volume 12 ; 12 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Journal of Educational Media, Memory, and Society Volume 13 ; 13 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; Journal of Educational Media, Memory, and Society Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2023 ; Journal of Educational Media, Memory, and Society Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2023 ; Journal of Educational Media, Memory, and Society Volume 15 ; 15 ; >
+    au < expected ; exists ; 2024 ; Journal of Educational Media, Memory, and Society Volume 16 ; 16 ; >
 
   }
 
@@ -856,7 +877,8 @@
     au < finished ; manifest ; 2020 ; Learning and Teaching (LATISS) Volume 13 ; 13 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Learning and Teaching (LATISS) Volume 14 ; 14 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; Learning and Teaching (LATISS) Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2023 ; Learning and Teaching (LATISS) Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2023 ; Learning and Teaching (LATISS) Volume 16 ; 16 ; >
+    au < expected ; exists ; 2024 ; Learning and Teaching (LATISS) Volume 17 ; 17 ; >
 
   }
 
@@ -876,7 +898,8 @@
     au < finished ; manifest ; 2020 ; Migration and Society Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2021 ; Migration and Society Volume 4 ; 4 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Migration and Society Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2023 ; Migration and Society Volume 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2023 ; Migration and Society Volume 6 ; 6 ; >
+    au < expected ; exists ; 2024 ; Migration and Society Volume 7 ; 7 ; >
 
   }
 
@@ -921,6 +944,7 @@
     au < finished ; manifest ; 2021 ; Museum Worlds: Advances in Research Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Museum Worlds: Advances in Research Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2023 ; Museum Worlds: Advances in Research Volume 11 ; 11 ; >
+    au < expected ; exists ; 2024 ; Museum Worlds: Advances in Research Volume 12 ; 12 ; >
 
   }
 
@@ -952,7 +976,8 @@
     au < finished ; manifest ; 2020 ; Nature and Culture Volume 15 ; 15 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Nature and Culture Volume 16 ; 16 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Nature and Culture Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2023 ; Nature and Culture Volume 18 ; 18 ; >
+    au < deepCrawl ; exists ; 2023 ; Nature and Culture Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2024 ; Nature and Culture Volume 19 ; 19 ; >
 
   }
 
@@ -1018,7 +1043,8 @@
     au < finished ; manifest ; 2020 ; Projections Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Projections Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Projections Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2023 ; Projections Volume 17 ; 17 ; >
+    au < deepCrawl ; exists ; 2023 ; Projections Volume 17 ; 17 ; >
+    au < expected ; exists ; 2024 ; Projections Volume 18 ; 18 ; >
 
   }
 
@@ -1046,7 +1072,8 @@
     au < finished ; manifest ; 2020 ; Regions & Cohesion Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Regions & Cohesion Volume 11 ; 11 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; Regions & Cohesion Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2023 ; Regions & Cohesion Volume 13 ; 13 ; >
+    au < deepCrawl ; exists ; 2023 ; Regions & Cohesion Volume 13 ; 13 ; >
+    au < expected ; exists ; 2024 ; Regions & Cohesion Volume 14 ; 14 ; >
 
   }
 
@@ -1076,6 +1103,7 @@
     au < finished ; frozen ; 2021 ; Religion and Society: Advances in Research Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Religion and Society: Advances in Research Volume 13 ; 13 ; reingest1.clockss.org:8082 >
     au < expected ; exists ; 2023 ; Religion and Society: Advances in Research Volume 14 ; 14 ; >
+    au < expected ; exists ; 2024 ; Religion and Society: Advances in Research Volume 15 ; 15 ; >
 
   }
 
@@ -1116,7 +1144,8 @@
     au < finished ; manifest ; 2020 ; Sartre Studies International Volume 26 ; 26 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Sartre Studies International Volume 27 ; 27 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; Sartre Studies International Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2023 ; Sartre Studies International Volume 29 ; 29 ; >
+    au < deepCrawl ; exists ; 2023 ; Sartre Studies International Volume 29 ; 29 ; >
+    au < expected ; exists ; 2024 ; Sartre Studies International Volume 30 ; 30 ; >
 
   }
 
@@ -1136,7 +1165,8 @@
     au < finished ; manifest ; 2020 ; Screen Bodies Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2021 ; Screen Bodies Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Screen Bodies Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2023 ; Screen Bodies Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2023 ; Screen Bodies Volume 8 ; 8 ; >
+    au < expected ; exists ; 2024 ; Screen Bodies Volume 9 ; 9 ; >
 
   }
 
@@ -1171,7 +1201,8 @@
     au < finished ; manifest ; 2020 ; Sibirica Volume 19 ; 19 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Sibirica Volume 20 ; 20 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Sibirica Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2023 ; Sibirica Volume 22 ; 22 ; >
+    au < deepCrawl ; exists ; 2023 ; Sibirica Volume 22 ; 22 ; >
+    au < expected ; exists ; 2024 ; Sibirica Volume 23 ; 23 ; >
 
   }
 
@@ -1208,6 +1239,7 @@
     au < finished ; finished ; 2021 ; Social Analysis Volume 65 ; 65 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Social Analysis Volume 66 ; 66 ; >
     au < crawling ; exists ; 2023 ; Social Analysis Volume 67 ; 67 ; >
+    au < expected ; exists ; 2024 ; Social Analysis Volume 68 ; 68 ; >
 
   }
 
@@ -1249,7 +1281,8 @@
     au < finished ; manifest ; 2020 ; Theoria Volume 67 ; 67 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2021 ; Theoria Volume 68 ; 68 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Theoria Volume 69 ; 69 ; >
-    au < crawling ; exists ; 2023 ; Theoria Volume 70 ; 70 ; >
+    au < deepCrawl ; exists ; 2023 ; Theoria Volume 70 ; 70 ; >
+    au < expected ; exists ; 2024 ; Theoria Volume 71 ; 71 ; >
 
   }
 
@@ -1277,6 +1310,7 @@
     au < finished ; manifest ; 2021 ; Transfers Volume 11 ; 11 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2022 ; Transfers Volume 12 ; 12 ; reingest4.clockss.org:8082 >
     au < expected ; exists ; 2023 ; Transfers Volume 13 ; 13 ; >
+    au < expected ; exists ; 2024 ; Transfers Volume 14 ; 14 ; >
 
   }
 

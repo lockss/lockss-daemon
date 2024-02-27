@@ -12,8 +12,18 @@
       eissn = 1476-1645 ;
       issnl = 0002-9637
     >
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://www.ajtmh.org/
+
+      {
+      plugin = org.lockss.plugin.highwire.HighWirePlugin
+      implicit < status ; year ; name ; param[volume] >
+
+      au < superseded ; 2006 ; The American Journal of Tropical Medicine and Hygiene Volume 74 [superseded] ; 74 >
+
+      }
+
+      {
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       implicit < status ; year ; name ; param[volume_name] >
     
       comment[doNotProcess] = Login pages for content available only to association members stops crawling. See RT 4356, RT 3375.
@@ -142,6 +152,6 @@
       au < superseded ; 2014 ; The American Journal of Tropical Medicine and Hygiene Volume 91 [superseded] ; 91 >
       au < superseded ; 2015 ; The American Journal of Tropical Medicine and Hygiene Volume 92 [superseded] ; 92 >
       au < superseded ; 2015 ; The American Journal of Tropical Medicine and Hygiene Volume 93 [superseded] ; 93 >
-
+      }
   }
 }

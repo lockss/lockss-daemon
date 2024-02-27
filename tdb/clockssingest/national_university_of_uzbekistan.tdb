@@ -23,12 +23,13 @@
     param[journal_abbr] = journal
     implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
 
-    au < frozen ; exists ; 2018 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 1 ; 1 ; https://bulletin.nuu.uz/ ; >
-    au < frozen ; exists ; 2019 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 2 ; 2 ; https://bulletin.nuu.uz/ ; >
-    au < frozen ; exists ; 2020 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 3 ; 3 ; https://bulletin.nuu.uz/ ; >
-    au < frozen ; exists ; 2021 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 4 ; 4 ; https://bulletin.nuu.uz/ ; >
-    au < frozen ; exists ; 2022 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 5 ; 5 ; https://bulletin.nuu.uz/ ; >
+    au < finished ; manifest ; 2018 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 1 ; 1 ; https://bulletin.nuu.uz/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 2 ; 2 ; https://bulletin.nuu.uz/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2020 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 3 ; 3 ; https://bulletin.nuu.uz/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2021 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 4 ; 4 ; https://bulletin.nuu.uz/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2022 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 5 ; 5 ; https://bulletin.nuu.uz/ ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2023 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 6 ; 6 ; https://bulletin.nuu.uz/ ; >
+    au < expected ; exists ; 2024 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 7 ; 7 ; https://bulletin.nuu.uz/ ; >
 
   }
 

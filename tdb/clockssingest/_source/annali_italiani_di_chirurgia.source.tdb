@@ -1,0 +1,24 @@
+{
+  publisher <
+    name = Annali Italiani di Chirurgia ;
+    info[contract] = 2024 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+  hidden[proxy] = DIRECT
+
+  {
+    title <
+      name = Annali Italiani di Chirurgia Source Content
+    >
+
+    plugin = org.lockss.plugin.clockss.aic.ClockssAicSourcePlugin
+    implicit < status ; status2 ; year ; name ; param[directory] >
+    #param[base_url] = https://clockss-test.lockss.org/sourcefiles/annitalchir-released/
+    #bucket has been tested
+
+    au < ready ; exists ; 2024 ; Annali Italiani di Chirurgia Source Content 2024 ; 2024 >
+
+  }
+
+}

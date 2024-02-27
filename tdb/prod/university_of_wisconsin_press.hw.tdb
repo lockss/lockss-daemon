@@ -82,6 +82,7 @@
       au < released ; 2021 ; Arctic Anthropology Volume 57 ; 57 >
       au < released ; 2022 ; Arctic Anthropology Volume 58 ; 58 >
       au < manifest ; 2023 ; Arctic Anthropology Volume 59 ; 59 >
+      au < expected ; 2024 ; Arctic Anthropology Volume 60 ; 60 >
 
       }
   }
@@ -128,6 +129,7 @@
       au < released ; 2021 ; Contemporary Literature Volume 61 ; 61 >
       au < released ; 2022 ; Contemporary Literature Volume 62 ; 62 >
       au < manifest ; 2023 ; Contemporary Literature Volume 63 ; 63 >
+      au < expected ; 2024 ; Contemporary Literature Volume 64 ; 64 >
       }
 
   }
@@ -146,45 +148,45 @@
       {
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
 
-      au < released ; 1981-1983 ; Ecological Restoration Volume 1 ; 1 ; http://er.uwpress.org/ >
-      au < released ; 1984 ; Ecological Restoration Volume 2 ; 2 ; http://er.uwpress.org/ >
-      au < released ; 1985 ; Ecological Restoration Volume 3 ; 3 ; http://er.uwpress.org/ >
-      au < released ; 1986 ; Ecological Restoration Volume 4 ; 4 ; http://er.uwpress.org/ >
-      au < released ; 1987 ; Ecological Restoration Volume 5 ; 5 ; http://er.uwpress.org/ >
-      au < released ; 1988 ; Ecological Restoration Volume 6 ; 6 ; http://er.uwpress.org/ >
-      au < released ; 1989 ; Ecological Restoration Volume 7 ; 7 ; http://er.uwpress.org/ >
-      au < released ; 1990 ; Ecological Restoration Volume 8 ; 8 ; http://er.uwpress.org/ >
-      au < released ; 1991 ; Ecological Restoration Volume 9 ; 9 ; http://er.uwpress.org/ >
-      au < released ; 1992 ; Ecological Restoration Volume 10 ; 10 ; http://er.uwpress.org/ >
-      au < released ; 1993 ; Ecological Restoration Volume 11 ; 11 ; http://er.uwpress.org/ >
-      au < released ; 1994 ; Ecological Restoration Volume 12 ; 12 ; http://er.uwpress.org/ >
-      au < released ; 1995 ; Ecological Restoration Volume 13 ; 13 ; http://er.uwpress.org/ >
-      au < released ; 1996 ; Ecological Restoration Volume 14 ; 14 ; http://er.uwpress.org/ >
-      au < released ; 1997 ; Ecological Restoration Volume 15 ; 15 ; http://er.uwpress.org/ >
-      au < released ; 1998 ; Ecological Restoration Volume 16 ; 16 ; http://er.uwpress.org/ >
-      au < released ; 1999 ; Ecological Restoration Volume 17 ; 17 ; http://er.uwpress.org/ >
-      au < released ; 2000 ; Ecological Restoration Volume 18 ; 18 ; http://er.uwpress.org/ >
-      au < released ; 2001 ; Ecological Restoration Volume 19 ; 19 ; http://er.uwpress.org/ >
-      au < released ; 2002 ; Ecological Restoration Volume 20 ; 20 ; http://er.uwpress.org/ >
-      au < released ; 2003 ; Ecological Restoration Volume 21 ; 21 ; http://er.uwpress.org/ >
-      au < released ; 2004 ; Ecological Restoration Volume 22 ; 22 ; http://er.uwpress.org/ >
-      au < released ; 2005 ; Ecological Restoration Volume 23 ; 23 ; http://er.uwpress.org/ >
-      au < released ; 2006 ; Ecological Restoration Volume 24 ; 24 ; http://er.uwpress.org/ >
-      au < released ; 2007 ; Ecological Restoration Volume 25 ; 25 ; http://er.uwpress.org/ >
-      au < released ; 2008 ; Ecological Restoration Volume 26 ; 26 ; http://er.uwpress.org/ >
-      au < released ; 2009 ; Ecological Restoration Volume 27 ; 27 ; http://er.uwpress.org/ >
-      au < released ; 2010 ; Ecological Restoration Volume 28 ; 28 ; http://er.uwpress.org/ >
-      au < released ; 2011 ; Ecological Restoration Volume 29 ; 29 ; http://er.uwpress.org/ >
-      au < released ; 2012 ; Ecological Restoration Volume 30 ; 30 ; http://er.uwpress.org/ >
-      au < released ; 2013 ; Ecological Restoration Volume 31 ; 31 ; http://er.uwpress.org/ >
-      au < released ; 2014 ; Ecological Restoration Volume 32 ; 32 ; http://er.uwpress.org/ >
-      au < released ; 2015 ; Ecological Restoration Volume 33 ; 33 ; http://er.uwpress.org/ >
-      au < released ; 2016 ; Ecological Restoration Volume 34 ; 34 ; http://er.uwpress.org/ >
-      au < released ; 2017 ; Ecological Restoration Volume 35 ; 35 ; http://er.uwpress.org/ >
-      au < released ; 2018 ; Ecological Restoration Volume 36 ; 36 ; http://er.uwpress.org/ >
-      au < released ; 2019 ; Ecological Restoration Volume 37 ; 37 ; http://er.uwpress.org/ >
-      au < released ; 2020 ; Ecological Restoration Volume 38 ; 38 ; http://er.uwpress.org/ >
-      au < released ; 2021 ; Ecological Restoration Volume 39 ; 39 ; http://er.uwpress.org/ >
+      au < down ; 1981-1983 ; Ecological Restoration Volume 1 ; 1 ; http://er.uwpress.org/ >
+      au < down ; 1984 ; Ecological Restoration Volume 2 ; 2 ; http://er.uwpress.org/ >
+      au < down ; 1985 ; Ecological Restoration Volume 3 ; 3 ; http://er.uwpress.org/ >
+      au < down ; 1986 ; Ecological Restoration Volume 4 ; 4 ; http://er.uwpress.org/ >
+      au < down ; 1987 ; Ecological Restoration Volume 5 ; 5 ; http://er.uwpress.org/ >
+      au < down ; 1988 ; Ecological Restoration Volume 6 ; 6 ; http://er.uwpress.org/ >
+      au < down ; 1989 ; Ecological Restoration Volume 7 ; 7 ; http://er.uwpress.org/ >
+      au < down ; 1990 ; Ecological Restoration Volume 8 ; 8 ; http://er.uwpress.org/ >
+      au < down ; 1991 ; Ecological Restoration Volume 9 ; 9 ; http://er.uwpress.org/ >
+      au < down ; 1992 ; Ecological Restoration Volume 10 ; 10 ; http://er.uwpress.org/ >
+      au < down ; 1993 ; Ecological Restoration Volume 11 ; 11 ; http://er.uwpress.org/ >
+      au < down ; 1994 ; Ecological Restoration Volume 12 ; 12 ; http://er.uwpress.org/ >
+      au < down ; 1995 ; Ecological Restoration Volume 13 ; 13 ; http://er.uwpress.org/ >
+      au < down ; 1996 ; Ecological Restoration Volume 14 ; 14 ; http://er.uwpress.org/ >
+      au < down ; 1997 ; Ecological Restoration Volume 15 ; 15 ; http://er.uwpress.org/ >
+      au < down ; 1998 ; Ecological Restoration Volume 16 ; 16 ; http://er.uwpress.org/ >
+      au < down ; 1999 ; Ecological Restoration Volume 17 ; 17 ; http://er.uwpress.org/ >
+      au < down ; 2000 ; Ecological Restoration Volume 18 ; 18 ; http://er.uwpress.org/ >
+      au < down ; 2001 ; Ecological Restoration Volume 19 ; 19 ; http://er.uwpress.org/ >
+      au < down ; 2002 ; Ecological Restoration Volume 20 ; 20 ; http://er.uwpress.org/ >
+      au < down ; 2003 ; Ecological Restoration Volume 21 ; 21 ; http://er.uwpress.org/ >
+      au < down ; 2004 ; Ecological Restoration Volume 22 ; 22 ; http://er.uwpress.org/ >
+      au < down ; 2005 ; Ecological Restoration Volume 23 ; 23 ; http://er.uwpress.org/ >
+      au < down ; 2006 ; Ecological Restoration Volume 24 ; 24 ; http://er.uwpress.org/ >
+      au < down ; 2007 ; Ecological Restoration Volume 25 ; 25 ; http://er.uwpress.org/ >
+      au < down ; 2008 ; Ecological Restoration Volume 26 ; 26 ; http://er.uwpress.org/ >
+      au < down ; 2009 ; Ecological Restoration Volume 27 ; 27 ; http://er.uwpress.org/ >
+      au < down ; 2010 ; Ecological Restoration Volume 28 ; 28 ; http://er.uwpress.org/ >
+      au < down ; 2011 ; Ecological Restoration Volume 29 ; 29 ; http://er.uwpress.org/ >
+      au < down ; 2012 ; Ecological Restoration Volume 30 ; 30 ; http://er.uwpress.org/ >
+      au < down ; 2013 ; Ecological Restoration Volume 31 ; 31 ; http://er.uwpress.org/ >
+      au < down ; 2014 ; Ecological Restoration Volume 32 ; 32 ; http://er.uwpress.org/ >
+      au < down ; 2015 ; Ecological Restoration Volume 33 ; 33 ; http://er.uwpress.org/ >
+      au < down ; 2016 ; Ecological Restoration Volume 34 ; 34 ; http://er.uwpress.org/ >
+      au < down ; 2017 ; Ecological Restoration Volume 35 ; 35 ; http://er.uwpress.org/ >
+      au < down ; 2018 ; Ecological Restoration Volume 36 ; 36 ; http://er.uwpress.org/ >
+      au < down ; 2019 ; Ecological Restoration Volume 37 ; 37 ; http://er.uwpress.org/ >
+      au < down ; 2020 ; Ecological Restoration Volume 38 ; 38 ; http://er.uwpress.org/ >
+      au < down ; 2021 ; Ecological Restoration Volume 39 ; 39 ; http://er.uwpress.org/ >
       }
       {
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
@@ -192,6 +194,7 @@
       au < released ; 2022 ; Ecological Restoration Volume 40 ; 40 ; https://er.uwpress.org/ >
       #No 2023 content as of 4/19/2023
       au < manifest ; 2023 ; Ecological Restoration Volume 41 ; 41 ; https://er.uwpress.org/ >
+      au < expected ; 2024 ; Ecological Restoration Volume 42 ; 42 ; https://er.uwpress.org/ >
       }
   }
 
@@ -217,6 +220,7 @@
       au < manifest ; 2021-2022 ; History of Pharmacy and Pharmaceuticals Volume 63 ; 63 ; https://hopp.uwpress.org/ >
       au < manifest ; 2022 ; History of Pharmacy and Pharmaceuticals Volume 64 ; 64 ; https://hopp.uwpress.org/ >
       au < manifest ; 2023 ; History of Pharmacy and Pharmaceuticals Volume 65 ; 65 ; https://hopp.uwpress.org/ >
+      au < expected ; 2024 ; History of Pharmacy and Pharmaceuticals Volume 66 ; 66 ; https://hopp.uwpress.org/ >
 
   }
 
@@ -228,31 +232,40 @@
       eissn = 1548-8004 ;
       issnl = 0022-166X
     >
-
       implicit < status ; year ; name ; param[volume_name] >
+      {
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://jhr.uwpress.org/
 
-      au < released ; 2003 ; The Journal of Human Resources Volume XXXVIII ; XXXVIII >
-      au < released ; 2004 ; The Journal of Human Resources Volume XXXIX ; XXXIX >
-      au < released ; 2005 ; The Journal of Human Resources Volume XL ; XL >
-      au < released ; 2006 ; The Journal of Human Resources Volume XLI ; XLI >
-      au < released ; 2007 ; The Journal of Human Resources Volume XLII ; XLII >
-      au < released ; 2008 ; The Journal of Human Resources Volume 43 ; 43 >
-      au < released ; 2009 ; The Journal of Human Resources Volume 44 ; 44 >
-      au < released ; 2010 ; The Journal of Human Resources Volume 45 ; 45 >
-      au < released ; 2011 ; The Journal of Human Resources Volume 46 ; 46 >
-      au < released ; 2012 ; The Journal of Human Resources Volume 47 ; 47 >
-      au < released ; 2013 ; The Journal of Human Resources Volume 48 ; 48 >
-      au < released ; 2014 ; The Journal of Human Resources Volume 49 ; 49 >
-      au < released ; 2015 ; The Journal of Human Resources Volume 50 ; 50 >
-      au < released ; 2016 ; The Journal of Human Resources Volume 51 ; 51 >
-      au < released ; 2017 ; The Journal of Human Resources Volume 52 ; 52 >
-      au < released ; 2018 ; The Journal of Human Resources Volume 53 ; 53 >
-      au < released ; 2019 ; The Journal of Human Resources Volume 54 ; 54 >
-      au < released ; 2020 ; The Journal of Human Resources Volume 55 ; 55 >
-      au < released ; 2021 ; The Journal of Human Resources Volume 56 ; 56 >
+      au < down ; 2003 ; The Journal of Human Resources Volume XXXVIII ; XXXVIII >
+      au < down ; 2004 ; The Journal of Human Resources Volume XXXIX ; XXXIX >
+      au < down ; 2005 ; The Journal of Human Resources Volume XL ; XL >
+      au < down ; 2006 ; The Journal of Human Resources Volume XLI ; XLI >
+      au < down ; 2007 ; The Journal of Human Resources Volume XLII ; XLII >
+      au < down ; 2008 ; The Journal of Human Resources Volume 43 ; 43 >
+      au < down ; 2009 ; The Journal of Human Resources Volume 44 ; 44 >
+      au < down ; 2010 ; The Journal of Human Resources Volume 45 ; 45 >
+      au < down ; 2011 ; The Journal of Human Resources Volume 46 ; 46 >
+      au < down ; 2012 ; The Journal of Human Resources Volume 47 ; 47 >
+      au < down ; 2013 ; The Journal of Human Resources Volume 48 ; 48 >
+      au < down ; 2014 ; The Journal of Human Resources Volume 49 ; 49 >
+      au < down ; 2015 ; The Journal of Human Resources Volume 50 ; 50 >
+      au < down ; 2016 ; The Journal of Human Resources Volume 51 ; 51 >
+      au < down ; 2017 ; The Journal of Human Resources Volume 52 ; 52 >
+      au < down ; 2018 ; The Journal of Human Resources Volume 53 ; 53 >
+      au < down ; 2019 ; The Journal of Human Resources Volume 54 ; 54 >
+      au < down ; 2020 ; The Journal of Human Resources Volume 55 ; 55 >
+      au < down ; 2021 ; The Journal of Human Resources Volume 56 ; 56 >
+      }
+      {
+      plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
+      param[base_url] = https://jhr.uwpress.org/
 
+      au < manifest ; 2022 ; The Journal of Human Resources Volume 57 ; 57 >
+      au < manifest ; 2023 ; The Journal of Human Resources Volume 58 ; 58 >
+      au < manifest ; 2024 ; The Journal of Human Resources Volume 59 ; 59 >
+
+      }
   }
 
   {
@@ -269,26 +282,26 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://le.uwpress.org/
 
-      au < released ; 2001 ; Land Economics Volume 77 ; 77 >
-      au < released ; 2002 ; Land Economics Volume 78 ; 78 >
-      au < released ; 2003 ; Land Economics Volume 79 ; 79 >
-      au < released ; 2004 ; Land Economics Volume 80 ; 80 >
-      au < released ; 2005 ; Land Economics Volume 81 ; 81 >
-      au < released ; 2006 ; Land Economics Volume 82 ; 82 >
-      au < released ; 2007 ; Land Economics Volume 83 ; 83 >
-      au < released ; 2008 ; Land Economics Volume 84 ; 84 >
-      au < released ; 2009 ; Land Economics Volume 85 ; 85 >
-      au < released ; 2010 ; Land Economics Volume 86 ; 86 >
-      au < released ; 2011 ; Land Economics Volume 87 ; 87 >
-      au < released ; 2012 ; Land Economics Volume 88 ; 88 >
-      au < released ; 2013 ; Land Economics Volume 89 ; 89 >
-      au < released ; 2014 ; Land Economics Volume 90 ; 90 >
-      au < released ; 2015 ; Land Economics Volume 91 ; 91 >
-      au < released ; 2016 ; Land Economics Volume 92 ; 92 >
-      au < released ; 2017 ; Land Economics Volume 93 ; 93 >
-      au < released ; 2018 ; Land Economics Volume 94 ; 94 >
-      au < released ; 2019 ; Land Economics Volume 95 ; 95 >
-      au < released ; 2020 ; Land Economics Volume 96 ; 96 >
+      au < down ; 2001 ; Land Economics Volume 77 ; 77 >
+      au < down ; 2002 ; Land Economics Volume 78 ; 78 >
+      au < down ; 2003 ; Land Economics Volume 79 ; 79 >
+      au < down ; 2004 ; Land Economics Volume 80 ; 80 >
+      au < down ; 2005 ; Land Economics Volume 81 ; 81 >
+      au < down ; 2006 ; Land Economics Volume 82 ; 82 >
+      au < down ; 2007 ; Land Economics Volume 83 ; 83 >
+      au < down ; 2008 ; Land Economics Volume 84 ; 84 >
+      au < down ; 2009 ; Land Economics Volume 85 ; 85 >
+      au < down ; 2010 ; Land Economics Volume 86 ; 86 >
+      au < down ; 2011 ; Land Economics Volume 87 ; 87 >
+      au < down ; 2012 ; Land Economics Volume 88 ; 88 >
+      au < down ; 2013 ; Land Economics Volume 89 ; 89 >
+      au < down ; 2014 ; Land Economics Volume 90 ; 90 >
+      au < down ; 2015 ; Land Economics Volume 91 ; 91 >
+      au < down ; 2016 ; Land Economics Volume 92 ; 92 >
+      au < down ; 2017 ; Land Economics Volume 93 ; 93 >
+      au < down ; 2018 ; Land Economics Volume 94 ; 94 >
+      au < down ; 2019 ; Land Economics Volume 95 ; 95 >
+      au < down ; 2020 ; Land Economics Volume 96 ; 96 >
       }
       {
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
@@ -297,6 +310,7 @@
       au < released ; 2021 ; Land Economics Volume 97 ; 97 >
       au < released ; 2022 ; Land Economics Volume 98 ; 98 >
       au < manifest ; 2023 ; Land Economics Volume 99 ; 99 >
+      au < manifest ; 2024 ; Land Economics Volume 100 ; 100 >
 
       }
 
@@ -316,45 +330,45 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://lj.uwpress.org/
 
-      au < released ; 1982 ; Landscape Journal: design, planning, and management of the land Volume 1 ; 1 >
-      au < released ; 1983 ; Landscape Journal: design, planning, and management of the land Volume 2 ; 2 >
-      au < released ; 1984 ; Landscape Journal: design, planning, and management of the land Volume 3 ; 3 >
-      au < released ; 1985 ; Landscape Journal: design, planning, and management of the land Volume 4 ; 4 >
-      au < released ; 1986 ; Landscape Journal: design, planning, and management of the land Volume 5 ; 5 >
-      au < released ; 1987 ; Landscape Journal: design, planning, and management of the land Volume 6 ; 6 >
-      au < released ; 1988 ; Landscape Journal: design, planning, and management of the land Volume 7 ; 7 >
-      au < released ; 1989 ; Landscape Journal: design, planning, and management of the land Volume 8 ; 8 >
-      au < released ; 1990 ; Landscape Journal: design, planning, and management of the land Volume 9 ; 9 >
-      au < released ; 1991 ; Landscape Journal: design, planning, and management of the land Volume 10 ; 10 >
-      au < released ; 1992 ; Landscape Journal: design, planning, and management of the land Volume 11 ; 11 >
-      au < released ; 1993 ; Landscape Journal: design, planning, and management of the land Volume 12 ; 12 >
-      au < released ; 1994 ; Landscape Journal: design, planning, and management of the land Volume 13 ; 13 >
-      au < released ; 1995 ; Landscape Journal: design, planning, and management of the land Volume 14 ; 14 >
-      au < released ; 1996 ; Landscape Journal: design, planning, and management of the land Volume 15 ; 15 >
-      au < released ; 1997 ; Landscape Journal: design, planning, and management of the land Volume 16 ; 16 >
-      au < released ; 1998 ; Landscape Journal: design, planning, and management of the land Volume 17 ; 17 >
-      au < released ; 1999 ; Landscape Journal: design, planning, and management of the land Volume 18 ; 18 >
-      au < released ; 2000 ; Landscape Journal: design, planning, and management of the land Volume 19 ; 19 >
-      au < released ; 2001 ; Landscape Journal: design, planning, and management of the land Volume 20 ; 20 >
-      au < released ; 2002 ; Landscape Journal: design, planning, and management of the land Volume 21 ; 21 >
-      au < released ; 2003 ; Landscape Journal: design, planning, and management of the land Volume 22 ; 22 >
-      au < released ; 2004 ; Landscape Journal: design, planning, and management of the land Volume 23 ; 23 >
-      au < released ; 2005 ; Landscape Journal: design, planning, and management of the land Volume 24 ; 24 >
-      au < released ; 2006 ; Landscape Journal: design, planning, and management of the land Volume 25 ; 25 >
-      au < released ; 2007 ; Landscape Journal: design, planning, and management of the land Volume 26 ; 26 >
-      au < released ; 2008 ; Landscape Journal: design, planning, and management of the land Volume 27 ; 27 >
-      au < released ; 2009 ; Landscape Journal: design, planning, and management of the land Volume 28 ; 28 >
-      au < released ; 2010 ; Landscape Journal: design, planning, and management of the land Volume 29 ; 29 >
-      au < released ; 2011 ; Landscape Journal: design, planning, and management of the land Volume 30 ; 30 >
-      au < released ; 2012 ; Landscape Journal: design, planning, and management of the land Volume 31 ; 31 >
-      au < released ; 2013 ; Landscape Journal: design, planning, and management of the land Volume 32 ; 32 >
-      au < released ; 2014 ; Landscape Journal: design, planning, and management of the land Volume 33 ; 33 >
-      au < released ; 2015 ; Landscape Journal: design, planning, and management of the land Volume 34 ; 34 >
-      au < released ; 2016 ; Landscape Journal: design, planning, and management of the land Volume 35 ; 35 >
-      au < released ; 2017 ; Landscape Journal: design, planning, and management of the land Volume 36 ; 36 >
-      au < released ; 2018 ; Landscape Journal: design, planning, and management of the land Volume 37 ; 37 >
-      au < released ; 2019 ; Landscape Journal: design, planning, and management of the land Volume 38 ; 38 >
-      au < released ; 2020 ; Landscape Journal: design, planning, and management of the land Volume 39 ; 39 >
+      au < down ; 1982 ; Landscape Journal: design, planning, and management of the land Volume 1 ; 1 >
+      au < down ; 1983 ; Landscape Journal: design, planning, and management of the land Volume 2 ; 2 >
+      au < down ; 1984 ; Landscape Journal: design, planning, and management of the land Volume 3 ; 3 >
+      au < down ; 1985 ; Landscape Journal: design, planning, and management of the land Volume 4 ; 4 >
+      au < down ; 1986 ; Landscape Journal: design, planning, and management of the land Volume 5 ; 5 >
+      au < down ; 1987 ; Landscape Journal: design, planning, and management of the land Volume 6 ; 6 >
+      au < down ; 1988 ; Landscape Journal: design, planning, and management of the land Volume 7 ; 7 >
+      au < down ; 1989 ; Landscape Journal: design, planning, and management of the land Volume 8 ; 8 >
+      au < down ; 1990 ; Landscape Journal: design, planning, and management of the land Volume 9 ; 9 >
+      au < down ; 1991 ; Landscape Journal: design, planning, and management of the land Volume 10 ; 10 >
+      au < down ; 1992 ; Landscape Journal: design, planning, and management of the land Volume 11 ; 11 >
+      au < down ; 1993 ; Landscape Journal: design, planning, and management of the land Volume 12 ; 12 >
+      au < down ; 1994 ; Landscape Journal: design, planning, and management of the land Volume 13 ; 13 >
+      au < down ; 1995 ; Landscape Journal: design, planning, and management of the land Volume 14 ; 14 >
+      au < down ; 1996 ; Landscape Journal: design, planning, and management of the land Volume 15 ; 15 >
+      au < down ; 1997 ; Landscape Journal: design, planning, and management of the land Volume 16 ; 16 >
+      au < down ; 1998 ; Landscape Journal: design, planning, and management of the land Volume 17 ; 17 >
+      au < down ; 1999 ; Landscape Journal: design, planning, and management of the land Volume 18 ; 18 >
+      au < down ; 2000 ; Landscape Journal: design, planning, and management of the land Volume 19 ; 19 >
+      au < down ; 2001 ; Landscape Journal: design, planning, and management of the land Volume 20 ; 20 >
+      au < down ; 2002 ; Landscape Journal: design, planning, and management of the land Volume 21 ; 21 >
+      au < down ; 2003 ; Landscape Journal: design, planning, and management of the land Volume 22 ; 22 >
+      au < down ; 2004 ; Landscape Journal: design, planning, and management of the land Volume 23 ; 23 >
+      au < down ; 2005 ; Landscape Journal: design, planning, and management of the land Volume 24 ; 24 >
+      au < down ; 2006 ; Landscape Journal: design, planning, and management of the land Volume 25 ; 25 >
+      au < down ; 2007 ; Landscape Journal: design, planning, and management of the land Volume 26 ; 26 >
+      au < down ; 2008 ; Landscape Journal: design, planning, and management of the land Volume 27 ; 27 >
+      au < down ; 2009 ; Landscape Journal: design, planning, and management of the land Volume 28 ; 28 >
+      au < down ; 2010 ; Landscape Journal: design, planning, and management of the land Volume 29 ; 29 >
+      au < down ; 2011 ; Landscape Journal: design, planning, and management of the land Volume 30 ; 30 >
+      au < down ; 2012 ; Landscape Journal: design, planning, and management of the land Volume 31 ; 31 >
+      au < down ; 2013 ; Landscape Journal: design, planning, and management of the land Volume 32 ; 32 >
+      au < down ; 2014 ; Landscape Journal: design, planning, and management of the land Volume 33 ; 33 >
+      au < down ; 2015 ; Landscape Journal: design, planning, and management of the land Volume 34 ; 34 >
+      au < down ; 2016 ; Landscape Journal: design, planning, and management of the land Volume 35 ; 35 >
+      au < down ; 2017 ; Landscape Journal: design, planning, and management of the land Volume 36 ; 36 >
+      au < down ; 2018 ; Landscape Journal: design, planning, and management of the land Volume 37 ; 37 >
+      au < down ; 2019 ; Landscape Journal: design, planning, and management of the land Volume 38 ; 38 >
+      au < down ; 2020 ; Landscape Journal: design, planning, and management of the land Volume 39 ; 39 >
 
       }
       {
@@ -365,6 +379,7 @@
       au < released ; 2022 ; Landscape Journal: design, planning, and management of the land Volume 41 ; 41 >
       #No 2023 content as of 4/19/2023
       au < manifest ; 2023 ; Landscape Journal: design, planning, and management of the land Volume 42 ; 42 >
+      au < expected ; 2024 ; Landscape Journal: design, planning, and management of the land Volume 43 ; 43 >
       }
 
   }
@@ -378,31 +393,43 @@
       issnl = 0024-7413
     >
 
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      param[base_url] = http://lbr.uwpress.org/
       implicit < status ; year ; name ; param[volume_name] >
       comment[notReady] = RT4567
 
-      au < released ; 2002 ; Luso-Brazilian Review Volume 39 ; 39 >
-      au < released ; 2003 ; Luso-Brazilian Review Volume 40 ; 40 >
-      au < released ; 2004 ; Luso-Brazilian Review Volume 41 ; 41 >
-      au < released ; 2005 ; Luso-Brazilian Review Volume 42 ; 42 >
-      au < released ; 2006 ; Luso-Brazilian Review Volume 43 ; 43 >
-      au < released ; 2007 ; Luso-Brazilian Review Volume 44 ; 44 >
-      au < released ; 2008 ; Luso-Brazilian Review Volume 45 ; 45 >
-      au < released ; 2009 ; Luso-Brazilian Review Volume 46 ; 46 >
-      au < released ; 2010 ; Luso-Brazilian Review Volume 47 ; 47 >
-      au < released ; 2011 ; Luso-Brazilian Review Volume 48 ; 48 >
-      au < released ; 2012 ; Luso-Brazilian Review Volume 49 ; 49 >
-      au < released ; 2013 ; Luso-Brazilian Review Volume 50 ; 50 >
-      au < released ; 2014 ; Luso-Brazilian Review Volume 51 ; 51 >
-      au < released ; 2015 ; Luso-Brazilian Review Volume 52 ; 52 >
-      au < released ; 2016 ; Luso-Brazilian Review Volume 53 ; 53 >
+      {
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://lbr.uwpress.org/
+
+      au < down ; 2002 ; Luso-Brazilian Review Volume 39 ; 39 >
+      au < down ; 2003 ; Luso-Brazilian Review Volume 40 ; 40 >
+      au < down ; 2004 ; Luso-Brazilian Review Volume 41 ; 41 >
+      au < down ; 2005 ; Luso-Brazilian Review Volume 42 ; 42 >
+      au < down ; 2006 ; Luso-Brazilian Review Volume 43 ; 43 >
+      au < down ; 2007 ; Luso-Brazilian Review Volume 44 ; 44 >
+      au < down ; 2008 ; Luso-Brazilian Review Volume 45 ; 45 >
+      au < down ; 2009 ; Luso-Brazilian Review Volume 46 ; 46 >
+      au < down ; 2010 ; Luso-Brazilian Review Volume 47 ; 47 >
+      au < down ; 2011 ; Luso-Brazilian Review Volume 48 ; 48 >
+      au < down ; 2012 ; Luso-Brazilian Review Volume 49 ; 49 >
+      au < down ; 2013 ; Luso-Brazilian Review Volume 50 ; 50 >
+      au < down ; 2014 ; Luso-Brazilian Review Volume 51 ; 51 >
+      au < down ; 2015 ; Luso-Brazilian Review Volume 52 ; 52 >
+      au < down ; 2016 ; Luso-Brazilian Review Volume 53 ; 53 >
       au < down ; 2017 ; Luso-Brazilian Review Volume 54 ; 54 >
       au < down ; 2018 ; Luso-Brazilian Review Volume 55 ; 55 >
       au < down ; 2019 ; Luso-Brazilian Review Volume 56 ; 56 >
       au < down ; 2020 ; Luso-Brazilian Review Volume 57 ; 57 >
-      #Moved to Project Muse. 2002-2016 still on highwire.
+      }
+      {
+      plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
+      param[base_url] = https://lbr.uwpress.org/
+
+      au < manifest ; 2021 ; Luso-Brazilian Review Volume 58 ; 58 >
+      au < manifest ; 2022 ; Luso-Brazilian Review Volume 59 ; 59 >
+      au < manifest ; 2023 ; Luso-Brazilian Review Volume 60 ; 60 >
+      au < expected ; 2024 ; Luso-Brazilian Review Volume 61 ; 61 >
+
+      }
 
   }
 
@@ -420,24 +447,24 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://mon.uwpress.org/
 
-      au < released ; 2003 ; Monatshefte Volume XCV ; XCV >
-      au < released ; 2004 ; Monatshefte Volume XCVI ; XCVI >
-      au < released ; 2005 ; Monatshefte Volume XCVII ; XCVII >
-      au < released ; 2006 ; Monatshefte Volume XCVIII ; XCVIII >
-      au < released ; 2007 ; Monatshefte Volume XCIX ; XCIX >
-      au < released ; 2008 ; Monatshefte Volume 100 ; 100 >
-      au < released ; 2009 ; Monatshefte Volume 101 ; 101 >
-      au < released ; 2010 ; Monatshefte Volume 102 ; 102 >
-      au < released ; 2011 ; Monatshefte Volume 103 ; 103 >
-      au < released ; 2012 ; Monatshefte Volume 104 ; 104 >
-      au < released ; 2013 ; Monatshefte Volume 105 ; 105 >
-      au < released ; 2014 ; Monatshefte Volume 106 ; 106 >
-      au < released ; 2015 ; Monatshefte Volume 107 ; 107 >
-      au < released ; 2016 ; Monatshefte Volume 108 ; 108 >
-      au < released ; 2017 ; Monatshefte Volume 109 ; 109 >
-      au < released ; 2018 ; Monatshefte Volume 110 ; 110 >
-      au < released ; 2019 ; Monatshefte Volume 111 ; 111 >
-      au < released ; 2020 ; Monatshefte Volume 112 ; 112 >
+      au < down ; 2003 ; Monatshefte Volume XCV ; XCV >
+      au < down ; 2004 ; Monatshefte Volume XCVI ; XCVI >
+      au < down ; 2005 ; Monatshefte Volume XCVII ; XCVII >
+      au < down ; 2006 ; Monatshefte Volume XCVIII ; XCVIII >
+      au < down ; 2007 ; Monatshefte Volume XCIX ; XCIX >
+      au < down ; 2008 ; Monatshefte Volume 100 ; 100 >
+      au < down ; 2009 ; Monatshefte Volume 101 ; 101 >
+      au < down ; 2010 ; Monatshefte Volume 102 ; 102 >
+      au < down ; 2011 ; Monatshefte Volume 103 ; 103 >
+      au < down ; 2012 ; Monatshefte Volume 104 ; 104 >
+      au < down ; 2013 ; Monatshefte Volume 105 ; 105 >
+      au < down ; 2014 ; Monatshefte Volume 106 ; 106 >
+      au < down ; 2015 ; Monatshefte Volume 107 ; 107 >
+      au < down ; 2016 ; Monatshefte Volume 108 ; 108 >
+      au < down ; 2017 ; Monatshefte Volume 109 ; 109 >
+      au < down ; 2018 ; Monatshefte Volume 110 ; 110 >
+      au < down ; 2019 ; Monatshefte Volume 111 ; 111 >
+      au < down ; 2020 ; Monatshefte Volume 112 ; 112 >
       }
 
       {
@@ -447,6 +474,7 @@
       au < released ; 2021 ; Monatshefte Volume 113 ; 113 >
       au < released ; 2022 ; Monatshefte Volume 114 ; 114 >
       au < manifest ; 2023 ; Monatshefte Volume 115 ; 115 >
+      au < expected ; 2024 ; Monatshefte Volume 116 ; 116 >
 
       }
   }
@@ -465,27 +493,27 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://npj.uwpress.org/
 
-      au < released ; 2000 ; Native Plants Journal Volume 1 ; 1 >
-      au < released ; 2001 ; Native Plants Journal Volume 2 ; 2 >
-      au < released ; 2002 ; Native Plants Journal Volume 3 ; 3 >
-      au < released ; 2003 ; Native Plants Journal Volume 4 ; 4 >
-      au < released ; 2004 ; Native Plants Journal Volume 5 ; 5 >
-      au < released ; 2005 ; Native Plants Journal Volume 6 ; 6 >
-      au < released ; 2006 ; Native Plants Journal Volume 7 ; 7 >
-      au < released ; 2007 ; Native Plants Journal Volume 8 ; 8 >
-      au < released ; 2008 ; Native Plants Journal Volume 9 ; 9 >
-      au < released ; 2009 ; Native Plants Journal Volume 10 ; 10 >
-      au < released ; 2010 ; Native Plants Journal Volume 11 ; 11 >
-      au < released ; 2011 ; Native Plants Journal Volume 12 ; 12 >
-      au < released ; 2012 ; Native Plants Journal Volume 13 ; 13 >
-      au < released ; 2013 ; Native Plants Journal Volume 14 ; 14 >
-      au < released ; 2014 ; Native Plants Journal Volume 15 ; 15 >
-      au < released ; 2015 ; Native Plants Journal Volume 16 ; 16 >
-      au < released ; 2016 ; Native Plants Journal Volume 17 ; 17 >
-      au < released ; 2017 ; Native Plants Journal Volume 18 ; 18 >
-      au < released ; 2018 ; Native Plants Journal Volume 19 ; 19 >
-      au < released ; 2019 ; Native Plants Journal Volume 20 ; 20 >
-      au < released ; 2020 ; Native Plants Journal Volume 21 ; 21 >
+      au < down ; 2000 ; Native Plants Journal Volume 1 ; 1 >
+      au < down ; 2001 ; Native Plants Journal Volume 2 ; 2 >
+      au < down ; 2002 ; Native Plants Journal Volume 3 ; 3 >
+      au < down ; 2003 ; Native Plants Journal Volume 4 ; 4 >
+      au < down ; 2004 ; Native Plants Journal Volume 5 ; 5 >
+      au < down ; 2005 ; Native Plants Journal Volume 6 ; 6 >
+      au < down ; 2006 ; Native Plants Journal Volume 7 ; 7 >
+      au < down ; 2007 ; Native Plants Journal Volume 8 ; 8 >
+      au < down ; 2008 ; Native Plants Journal Volume 9 ; 9 >
+      au < down ; 2009 ; Native Plants Journal Volume 10 ; 10 >
+      au < down ; 2010 ; Native Plants Journal Volume 11 ; 11 >
+      au < down ; 2011 ; Native Plants Journal Volume 12 ; 12 >
+      au < down ; 2012 ; Native Plants Journal Volume 13 ; 13 >
+      au < down ; 2013 ; Native Plants Journal Volume 14 ; 14 >
+      au < down ; 2014 ; Native Plants Journal Volume 15 ; 15 >
+      au < down ; 2015 ; Native Plants Journal Volume 16 ; 16 >
+      au < down ; 2016 ; Native Plants Journal Volume 17 ; 17 >
+      au < down ; 2017 ; Native Plants Journal Volume 18 ; 18 >
+      au < down ; 2018 ; Native Plants Journal Volume 19 ; 19 >
+      au < down ; 2019 ; Native Plants Journal Volume 20 ; 20 >
+      au < down ; 2020 ; Native Plants Journal Volume 21 ; 21 >
       }
       {
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
@@ -494,6 +522,7 @@
       au < released ; 2021 ; Native Plants Journal Volume 22 ; 22 >
       au < released ; 2022 ; Native Plants Journal Volume 23 ; 23 >
       au < manifest ; 2023 ; Native Plants Journal Volume 24 ; 24 >
+      au < expected ; 2024 ; Native Plants Journal Volume 25 ; 25 >
       }
   }
 

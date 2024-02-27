@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -53,7 +53,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>6</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -66,15 +66,5 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_name</string>
     <string>"University of Michigan Journals Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
-  </entry>
-  <entry>
-    <string>au_permission_url</string>
-    <string>"http://clockss-ingest.lockss.org/clockss.txt"</string>
-  </entry>
-  <entry>
-    <string>au_permitted_host_pattern</string>
-    <list>
-      <string>"activetravelstudies\.org"</string>
-    </list>
   </entry>
 </map>

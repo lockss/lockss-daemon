@@ -6,7 +6,6 @@
   >
 
   pluginPrefix = org.lockss.plugin.highwire.
-  implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
 
   {
 
@@ -17,7 +16,7 @@
       issnl = 0090-9556
     >
 #    param[base_url] = http://dmd.aspetjournals.org/
-
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
 
     au < HighWirePressH20Plugin ; down ; 1973 ; Drug Metabolism and Disposition Volume 1 ; 1 ; http://dmd.aspetjournals.org/ >
     au < HighWirePressH20Plugin ; down ; 1974 ; Drug Metabolism and Disposition Volume 2 ; 2 ; http://dmd.aspetjournals.org/ >
@@ -70,6 +69,7 @@
     au < aspet.ASPETDrupalPlugin ; released ; 2021 ; Drug Metabolism and Disposition Volume 49 ; 49 ; https://dmd.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; released ; 2022 ; Drug Metabolism and Disposition Volume 50 ; 50 ; https://dmd.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; manifest ; 2023 ; Drug Metabolism and Disposition Volume 51 ; 51 ; https://dmd.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; manifest ; 2024 ; Drug Metabolism and Disposition Volume 52 ; 52 ; https://dmd.aspetjournals.org/ >
 
   }
 
@@ -84,6 +84,13 @@
 
     {
 #    param[base_url] = http://jpet.aspetjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume] ; param[base_url] >
+
+    au < HighWirePlugin ; superseded ; 2006 ; Journal of Pharmacology and Experimental Therapeutics Volume 317 [superseded] ; 317 ; http://jpet.aspetjournals.org/ >
+    }
+    {
+#    param[base_url] = http://jpet.aspetjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
 
     au < HighWirePressH20Plugin ; down ; 1909-1910 ; Journal of Pharmacology and Experimental Therapeutics Volume 1 ; 1 ; http://jpet.aspetjournals.org/ >
     au < HighWirePressH20Plugin ; down ; 1910-1911 ; Journal of Pharmacology and Experimental Therapeutics Volume 2 ; 2 ; http://jpet.aspetjournals.org/ >
@@ -472,6 +479,10 @@
     au < aspet.ASPETDrupalPlugin ; manifest ; 2023 ; Journal of Pharmacology and Experimental Therapeutics Volume 385 ; 385 ; https://jpet.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; manifest ; 2023 ; Journal of Pharmacology and Experimental Therapeutics Volume 386 ; 386 ; https://jpet.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; manifest ; 2023 ; Journal of Pharmacology and Experimental Therapeutics Volume 387 ; 387 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; manifest ; 2024 ; Journal of Pharmacology and Experimental Therapeutics Volume 388 ; 388 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2024 ; Journal of Pharmacology and Experimental Therapeutics Volume 389 ; 389 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2024 ; Journal of Pharmacology and Experimental Therapeutics Volume 390 ; 390 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2024 ; Journal of Pharmacology and Experimental Therapeutics Volume 391 ; 391 ; https://jpet.aspetjournals.org/ >
 
     }
   }
@@ -488,6 +499,7 @@
       #ceased publication, offline as of 2011-08-15
       #for triggered content see *other* tdb file.
 #      param[base_url] = http://molinterv.aspetjournals.org/
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
 
       au < HighWirePressH20Plugin ; superseded ; 2001 ; Molecular Interventions Volume 1 [superseded] ; 1 ; http://molinterv.aspetjournals.org/ >
       au < HighWirePressH20Plugin ; superseded ; 2002 ; Molecular Interventions Volume 2 [superseded] ; 2 ; http://molinterv.aspetjournals.org/ >
@@ -511,8 +523,15 @@
       eissn = 1521-0111 ;
       issnl = 0026-895X
     >
+    {
 #    param[base_url] = http://molpharm.aspetjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume] ; param[base_url] >
 
+    au < HighWirePlugin ; superseded ; 2006 ; Molecular Pharmacology Volume 69 [superseded] ; 69 ; http://molpharm.aspetjournals.org/ >
+    }
+    {
+#    param[base_url] = http://molpharm.aspetjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
 
     au < HighWirePressH20Plugin ; down ; 1965 ; Molecular Pharmacology Volume 1 ; 1 ; http://molpharm.aspetjournals.org/ >
     au < HighWirePressH20Plugin ; down ; 1966 ; Molecular Pharmacology Volume 2 ; 2 ; http://molpharm.aspetjournals.org/ >
@@ -618,7 +637,10 @@
     au < aspet.ASPETDrupalPlugin ; released ; 2022 ; Molecular Pharmacology Volume 102 ; 102 ; https://molpharm.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; manifest ; 2023 ; Molecular Pharmacology Volume 103 ; 103 ; https://molpharm.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; manifest ; 2023 ; Molecular Pharmacology Volume 104 ; 104 ; https://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; manifest ; 2024 ; Molecular Pharmacology Volume 105 ; 105 ; https://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; expected ; 2024 ; Molecular Pharmacology Volume 106 ; 106 ; https://molpharm.aspetjournals.org/ >
 
+    }
   }
 
   {
@@ -630,7 +652,7 @@
       issnl = 0031-6997
     >
 #    param[base_url] = http://pharmrev.aspetjournals.org/
-
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; param[base_url] >
 
     au < HighWirePressH20Plugin ; down ; 1949 ; Pharmacological Reviews Volume 1 ; 1 ; http://pharmrev.aspetjournals.org/ >
     au < HighWirePressH20Plugin ; down ; 1950 ; Pharmacological Reviews Volume 2 ; 2 ; http://pharmrev.aspetjournals.org/ >
@@ -707,6 +729,7 @@
     au < aspet.ASPETDrupalPlugin ; released ; 2021 ; Pharmacological Reviews Volume 73 ; 73 ; https://pharmrev.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; released ; 2022 ; Pharmacological Reviews Volume 74 ; 74 ; https://pharmrev.aspetjournals.org/ >
     au < aspet.ASPETDrupalPlugin ; manifest ; 2023 ; Pharmacological Reviews Volume 75 ; 75 ; https://pharmrev.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; manifest ; 2024 ; Pharmacological Reviews Volume 76 ; 76 ; https://pharmrev.aspetjournals.org/ >
 
   }
 

@@ -31,7 +31,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/nzma-released/
 
     au < readySource ; crawling ; 2023 ; New Zealand Medical Journal Source Content 2023 ; 2023 >
-    au < expected ; exists ; 2024 ; New Zealand Medical Journal Source Content 2024 ; 2024 >
+    au < readySource ; crawling ; 2024 ; New Zealand Medical Journal Source Content 2024 ; 2024 >
 
     }
   }

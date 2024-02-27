@@ -1316,7 +1316,8 @@
       eissn = 1471-2954 ;
       issnl = 0962-8452
     >
-
+    
+    {
     param[base_url] = http://rspb.royalsocietypublishing.org/
 
     au < HighWirePressH20Plugin ; down ; 1905 ; Proceedings of the Royal Society B: Biological Sciences Volume 76 ; 76 >
@@ -1529,7 +1530,214 @@
     au < rsp.RSPDrupalPlugin ; down ; 2016 ; Proceedings of the Royal Society B: Biological Sciences Volume 283 ; 283 >
     au < rsp.RSPDrupalPlugin ; down ; 2017 ; Proceedings of the Royal Society B: Biological Sciences Volume 284 ; 284 >
     au < rsp.RSPDrupalPlugin ; down ; 2018 ; Proceedings of the Royal Society B: Biological Sciences Volume 285 ; 285 >
+    }
+    {
+    #Malformed AUs on Auburn machine
+    param[base_url] = http://.royalsocietypublishing.org/
 
+    au < HighWirePressH20Plugin ; superseded ; 1905 ; Proceedings of the Royal Society B: Biological Sciences Volume 76 [superseded] ; 76 >
+    au < HighWirePressH20Plugin ; superseded ; 1905-1906 ; Proceedings of the Royal Society B: Biological Sciences Volume 77 [superseded] ; 77 >
+    au < HighWirePressH20Plugin ; superseded ; 1906 ; Proceedings of the Royal Society B: Biological Sciences Volume 78 [superseded] ; 78 >
+    au < HighWirePressH20Plugin ; superseded ; 1907 ; Proceedings of the Royal Society B: Biological Sciences Volume 79 [superseded] ; 79 >
+    au < HighWirePressH20Plugin ; superseded ; 1908 ; Proceedings of the Royal Society B: Biological Sciences Volume 80 [superseded] ; 80 >
+    au < HighWirePressH20Plugin ; superseded ; 1909 ; Proceedings of the Royal Society B: Biological Sciences Volume 81 [superseded] ; 81 >
+    au < HighWirePressH20Plugin ; superseded ; 1909-1910 ; Proceedings of the Royal Society B: Biological Sciences Volume 82 [superseded] ; 82 >
+    au < HighWirePressH20Plugin ; superseded ; 1910-1911 ; Proceedings of the Royal Society B: Biological Sciences Volume 83 [superseded] ; 83 >
+    au < HighWirePressH20Plugin ; superseded ; 1911-1912 ; Proceedings of the Royal Society B: Biological Sciences Volume 84 [superseded] ; 84 >
+    au < HighWirePressH20Plugin ; superseded ; 1912 ; Proceedings of the Royal Society B: Biological Sciences Volume 85 [superseded] ; 85 >
+    au < HighWirePressH20Plugin ; superseded ; 1912-1913 ; Proceedings of the Royal Society B: Biological Sciences Volume 86 [superseded] ; 86 >
+    au < HighWirePressH20Plugin ; superseded ; 1913-1914 ; Proceedings of the Royal Society B: Biological Sciences Volume 87 [superseded] ; 87 >
+    au < HighWirePressH20Plugin ; superseded ; 1914-1915 ; Proceedings of the Royal Society B: Biological Sciences Volume 88 [superseded] ; 88 >
+    au < HighWirePressH20Plugin ; superseded ; 1915-1917 ; Proceedings of the Royal Society B: Biological Sciences Volume 89 [superseded] ; 89 >
+    au < HighWirePressH20Plugin ; superseded ; 1917-1919 ; Proceedings of the Royal Society B: Biological Sciences Volume 90 [superseded] ; 90 >
+    au < HighWirePressH20Plugin ; superseded ; 1919-1920 ; Proceedings of the Royal Society B: Biological Sciences Volume 91 [superseded] ; 91 >
+    au < HighWirePressH20Plugin ; superseded ; 1921 ; Proceedings of the Royal Society B: Biological Sciences Volume 92 [superseded] ; 92 >
+    au < HighWirePressH20Plugin ; superseded ; 1922 ; Proceedings of the Royal Society B: Biological Sciences Volume 93 [superseded] ; 93 >
+    au < HighWirePressH20Plugin ; superseded ; 1922-1923 ; Proceedings of the Royal Society B: Biological Sciences Volume 94 [superseded] ; 94 >
+    au < HighWirePressH20Plugin ; superseded ; 1923-1924 ; Proceedings of the Royal Society B: Biological Sciences Volume 95 [superseded] ; 95 >
+    au < HighWirePressH20Plugin ; superseded ; 1924 ; Proceedings of the Royal Society B: Biological Sciences Volume 96 [superseded] ; 96 >
+    au < HighWirePressH20Plugin ; superseded ; 1924-1925 ; Proceedings of the Royal Society B: Biological Sciences Volume 97 [superseded] ; 97 >
+    au < HighWirePressH20Plugin ; superseded ; 1925 ; Proceedings of the Royal Society B: Biological Sciences Volume 98 [superseded] ; 98 >
+    au < HighWirePressH20Plugin ; superseded ; 1925-1926 ; Proceedings of the Royal Society B: Biological Sciences Volume 99 [superseded] ; 99 >
+    au < HighWirePressH20Plugin ; superseded ; 1926 ; Proceedings of the Royal Society B: Biological Sciences Volume 100 [superseded] ; 100 >
+    au < HighWirePressH20Plugin ; superseded ; 1927 ; Proceedings of the Royal Society B: Biological Sciences Volume 101 [superseded] ; 101 >
+    au < HighWirePressH20Plugin ; superseded ; 1927-1928 ; Proceedings of the Royal Society B: Biological Sciences Volume 102 [superseded] ; 102 >
+    au < HighWirePressH20Plugin ; superseded ; 1928 ; Proceedings of the Royal Society B: Biological Sciences Volume 103 [superseded] ; 103 >
+    au < HighWirePressH20Plugin ; superseded ; 1928-1929 ; Proceedings of the Royal Society B: Biological Sciences Volume 104 [superseded] ; 104 >
+    au < HighWirePressH20Plugin ; superseded ; 1929-1930 ; Proceedings of the Royal Society B: Biological Sciences Volume 105 [superseded] ; 105 >
+    au < HighWirePressH20Plugin ; superseded ; 1930 ; Proceedings of the Royal Society B: Biological Sciences Volume 106 [superseded] ; 106 >
+    au < HighWirePressH20Plugin ; superseded ; 1930-1931 ; Proceedings of the Royal Society B: Biological Sciences Volume 107 [superseded] ; 107 >
+    au < HighWirePressH20Plugin ; superseded ; 1931 ; Proceedings of the Royal Society B: Biological Sciences Volume 108 [superseded] ; 108 >
+    au < HighWirePressH20Plugin ; superseded ; 1931-1932 ; Proceedings of the Royal Society B: Biological Sciences Volume 109 [superseded] ; 109 >
+    au < HighWirePressH20Plugin ; superseded ; 1932 ; Proceedings of the Royal Society B: Biological Sciences Volume 110 [superseded] ; 110 >
+    au < HighWirePressH20Plugin ; superseded ; 1932 ; Proceedings of the Royal Society B: Biological Sciences Volume 111 [superseded] ; 111 >
+    au < HighWirePressH20Plugin ; superseded ; 1932-1933 ; Proceedings of the Royal Society B: Biological Sciences Volume 112 [superseded] ; 112 >
+    au < HighWirePressH20Plugin ; superseded ; 1933 ; Proceedings of the Royal Society B: Biological Sciences Volume 113 [superseded] ; 113 >
+    au < HighWirePressH20Plugin ; superseded ; 1933-1934 ; Proceedings of the Royal Society B: Biological Sciences Volume 114 [superseded] ; 114 >
+    au < HighWirePressH20Plugin ; superseded ; 1934 ; Proceedings of the Royal Society B: Biological Sciences Volume 115 [superseded] ; 115 >
+    au < HighWirePressH20Plugin ; superseded ; 1934-1935 ; Proceedings of the Royal Society B: Biological Sciences Volume 116 [superseded] ; 116 >
+    au < HighWirePressH20Plugin ; superseded ; 1935 ; Proceedings of the Royal Society B: Biological Sciences Volume 117 [superseded] ; 117 >
+    au < HighWirePressH20Plugin ; superseded ; 1935 ; Proceedings of the Royal Society B: Biological Sciences Volume 118 [superseded] ; 118 >
+    au < HighWirePressH20Plugin ; superseded ; 1935-1936 ; Proceedings of the Royal Society B: Biological Sciences Volume 119 [superseded] ; 119 >
+    au < HighWirePressH20Plugin ; superseded ; 1936 ; Proceedings of the Royal Society B: Biological Sciences Volume 120 [superseded] ; 120 >
+    au < HighWirePressH20Plugin ; superseded ; 1936-1937 ; Proceedings of the Royal Society B: Biological Sciences Volume 121 [superseded] ; 121 >
+    au < HighWirePressH20Plugin ; superseded ; 1937 ; Proceedings of the Royal Society B: Biological Sciences Volume 122 [superseded] ; 122 >
+    au < HighWirePressH20Plugin ; superseded ; 1937 ; Proceedings of the Royal Society B: Biological Sciences Volume 123 [superseded] ; 123 >
+    au < HighWirePressH20Plugin ; superseded ; 1937-1938 ; Proceedings of the Royal Society B: Biological Sciences Volume 124 [superseded] ; 124 >
+    au < HighWirePressH20Plugin ; superseded ; 1938 ; Proceedings of the Royal Society B: Biological Sciences Volume 125 [superseded] ; 125 >
+    au < HighWirePressH20Plugin ; superseded ; 1938-1939 ; Proceedings of the Royal Society B: Biological Sciences Volume 126 [superseded] ; 126 >
+    au < HighWirePressH20Plugin ; superseded ; 1939 ; Proceedings of the Royal Society B: Biological Sciences Volume 127 [superseded] ; 127 >
+    au < HighWirePressH20Plugin ; superseded ; 1939-1940 ; Proceedings of the Royal Society B: Biological Sciences Volume 128 [superseded] ; 128 >
+    au < HighWirePressH20Plugin ; superseded ; 1940 ; Proceedings of the Royal Society B: Biological Sciences Volume 129 [superseded] ; 129 >
+    au < HighWirePressH20Plugin ; superseded ; 1941-1942 ; Proceedings of the Royal Society B: Biological Sciences Volume 130 [superseded] ; 130 >
+    au < HighWirePressH20Plugin ; superseded ; 1942-1943 ; Proceedings of the Royal Society B: Biological Sciences Volume 131 [superseded] ; 131 >
+    au < HighWirePressH20Plugin ; superseded ; 1944-1945 ; Proceedings of the Royal Society B: Biological Sciences Volume 132 [superseded] ; 132 >
+    au < HighWirePressH20Plugin ; superseded ; 1946 ; Proceedings of the Royal Society B: Biological Sciences Volume 133 [superseded] ; 133 >
+    au < HighWirePressH20Plugin ; superseded ; 1947 ; Proceedings of the Royal Society B: Biological Sciences Volume 134 [superseded] ; 134 >
+    au < HighWirePressH20Plugin ; superseded ; 1947-1948 ; Proceedings of the Royal Society B: Biological Sciences Volume 135 [superseded] ; 135 >
+    au < HighWirePressH20Plugin ; superseded ; 1949-1950 ; Proceedings of the Royal Society B: Biological Sciences Volume 136 [superseded] ; 136 >
+    au < HighWirePressH20Plugin ; superseded ; 1950 ; Proceedings of the Royal Society B: Biological Sciences Volume 137 [superseded] ; 137 >
+    au < HighWirePressH20Plugin ; superseded ; 1951 ; Proceedings of the Royal Society B: Biological Sciences Volume 138 [superseded] ; 138 >
+    au < HighWirePressH20Plugin ; superseded ; 1951-1952 ; Proceedings of the Royal Society B: Biological Sciences Volume 139 [superseded] ; 139 >
+    au < HighWirePressH20Plugin ; superseded ; 1952-1953 ; Proceedings of the Royal Society B: Biological Sciences Volume 140 [superseded] ; 140 >
+    au < HighWirePressH20Plugin ; superseded ; 1953 ; Proceedings of the Royal Society B: Biological Sciences Volume 141 [superseded] ; 141 >
+    au < HighWirePressH20Plugin ; superseded ; 1954 ; Proceedings of the Royal Society B: Biological Sciences Volume 142 [superseded] ; 142 >
+    au < HighWirePressH20Plugin ; superseded ; 1954-1955 ; Proceedings of the Royal Society B: Biological Sciences Volume 143 [superseded] ; 143 >
+    au < HighWirePressH20Plugin ; superseded ; 1955-1956 ; Proceedings of the Royal Society B: Biological Sciences Volume 144 [superseded] ; 144 >
+    au < HighWirePressH20Plugin ; superseded ; 1956 ; Proceedings of the Royal Society B: Biological Sciences Volume 145 [superseded] ; 145 >
+    au < HighWirePressH20Plugin ; superseded ; 1956-1957 ; Proceedings of the Royal Society B: Biological Sciences Volume 146 [superseded] ; 146 >
+    au < HighWirePressH20Plugin ; superseded ; 1957 ; Proceedings of the Royal Society B: Biological Sciences Volume 147 [superseded] ; 147 >
+    au < HighWirePressH20Plugin ; superseded ; 1958 ; Proceedings of the Royal Society B: Biological Sciences Volume 148 [superseded] ; 148 >
+    au < HighWirePressH20Plugin ; superseded ; 1958 ; Proceedings of the Royal Society B: Biological Sciences Volume 149 [superseded] ; 149 >
+    au < HighWirePressH20Plugin ; superseded ; 1959 ; Proceedings of the Royal Society B: Biological Sciences Volume 150 [superseded] ; 150 >
+    au < HighWirePressH20Plugin ; superseded ; 1959-1960 ; Proceedings of the Royal Society B: Biological Sciences Volume 151 [superseded] ; 151 >
+    au < HighWirePressH20Plugin ; superseded ; 1960 ; Proceedings of the Royal Society B: Biological Sciences Volume 152 [superseded] ; 152 >
+    au < HighWirePressH20Plugin ; superseded ; 1960-1961 ; Proceedings of the Royal Society B: Biological Sciences Volume 153 [superseded] ; 153 >
+    au < HighWirePressH20Plugin ; superseded ; 1961 ; Proceedings of the Royal Society B: Biological Sciences Volume 154 [superseded] ; 154 >
+    au < HighWirePressH20Plugin ; superseded ; 1961-1962 ; Proceedings of the Royal Society B: Biological Sciences Volume 155 [superseded] ; 155 >
+    au < HighWirePressH20Plugin ; superseded ; 1962 ; Proceedings of the Royal Society B: Biological Sciences Volume 156 [superseded] ; 156 >
+    au < HighWirePressH20Plugin ; superseded ; 1962-1963 ; Proceedings of the Royal Society B: Biological Sciences Volume 157 [superseded] ; 157 >
+    au < HighWirePressH20Plugin ; superseded ; 1963 ; Proceedings of the Royal Society B: Biological Sciences Volume 158 [superseded] ; 158 >
+    au < HighWirePressH20Plugin ; superseded ; 1963-1964 ; Proceedings of the Royal Society B: Biological Sciences Volume 159 [superseded] ; 159 >
+    au < HighWirePressH20Plugin ; superseded ; 1964 ; Proceedings of the Royal Society B: Biological Sciences Volume 160 [superseded] ; 160 >
+    au < HighWirePressH20Plugin ; superseded ; 1964-1965 ; Proceedings of the Royal Society B: Biological Sciences Volume 161 [superseded] ; 161 >
+    au < HighWirePressH20Plugin ; superseded ; 1965 ; Proceedings of the Royal Society B: Biological Sciences Volume 162 [superseded] ; 162 >
+    au < HighWirePressH20Plugin ; superseded ; 1965-1966 ; Proceedings of the Royal Society B: Biological Sciences Volume 163 [superseded] ; 163 >
+    au < HighWirePressH20Plugin ; superseded ; 1966 ; Proceedings of the Royal Society B: Biological Sciences Volume 164 [superseded] ; 164 >
+    au < HighWirePressH20Plugin ; superseded ; 1966 ; Proceedings of the Royal Society B: Biological Sciences Volume 165 [superseded] ; 165 >
+    au < HighWirePressH20Plugin ; superseded ; 1966-1967 ; Proceedings of the Royal Society B: Biological Sciences Volume 166 [superseded] ; 166 >
+    au < HighWirePressH20Plugin ; superseded ; 1967 ; Proceedings of the Royal Society B: Biological Sciences Volume 167 [superseded] ; 167 >
+    au < HighWirePressH20Plugin ; superseded ; 1967 ; Proceedings of the Royal Society B: Biological Sciences Volume 168 [superseded] ; 168 >
+    au < HighWirePressH20Plugin ; superseded ; 1967-1968 ; Proceedings of the Royal Society B: Biological Sciences Volume 169 [superseded] ; 169 >
+    au < HighWirePressH20Plugin ; superseded ; 1968 ; Proceedings of the Royal Society B: Biological Sciences Volume 170 [superseded] ; 170 >
+    au < HighWirePressH20Plugin ; superseded ; 1968-1969 ; Proceedings of the Royal Society B: Biological Sciences Volume 171 [superseded] ; 171 >
+    au < HighWirePressH20Plugin ; superseded ; 1969 ; Proceedings of the Royal Society B: Biological Sciences Volume 172 [superseded] ; 172 >
+    au < HighWirePressH20Plugin ; superseded ; 1969 ; Proceedings of the Royal Society B: Biological Sciences Volume 173 [superseded] ; 173 >
+    au < HighWirePressH20Plugin ; superseded ; 1969-1970 ; Proceedings of the Royal Society B: Biological Sciences Volume 174 [superseded] ; 174 >
+    au < HighWirePressH20Plugin ; superseded ; 1970 ; Proceedings of the Royal Society B: Biological Sciences Volume 175 [superseded] ; 175 >
+    au < HighWirePressH20Plugin ; superseded ; 1970-1971 ; Proceedings of the Royal Society B: Biological Sciences Volume 176 [superseded] ; 176 >
+    au < HighWirePressH20Plugin ; superseded ; 1971 ; Proceedings of the Royal Society B: Biological Sciences Volume 177 [superseded] ; 177 >
+    au < HighWirePressH20Plugin ; superseded ; 1971 ; Proceedings of the Royal Society B: Biological Sciences Volume 178 [superseded] ; 178 >
+    au < HighWirePressH20Plugin ; superseded ; 1971 ; Proceedings of the Royal Society B: Biological Sciences Volume 179 [superseded] ; 179 >
+    au < HighWirePressH20Plugin ; superseded ; 1972 ; Proceedings of the Royal Society B: Biological Sciences Volume 180 [superseded] ; 180 >
+    au < HighWirePressH20Plugin ; superseded ; 1972 ; Proceedings of the Royal Society B: Biological Sciences Volume 181 [superseded] ; 181 >
+    au < HighWirePressH20Plugin ; superseded ; 1972 ; Proceedings of the Royal Society B: Biological Sciences Volume 182 [superseded] ; 182 >
+    au < HighWirePressH20Plugin ; superseded ; 1973 ; Proceedings of the Royal Society B: Biological Sciences Volume 183 [superseded] ; 183 >
+    au < HighWirePressH20Plugin ; superseded ; 1973 ; Proceedings of the Royal Society B: Biological Sciences Volume 184 [superseded] ; 184 >
+    au < HighWirePressH20Plugin ; superseded ; 1974 ; Proceedings of the Royal Society B: Biological Sciences Volume 185 [superseded] ; 185 >
+    au < HighWirePressH20Plugin ; superseded ; 1974 ; Proceedings of the Royal Society B: Biological Sciences Volume 186 [superseded] ; 186 >
+    au < HighWirePressH20Plugin ; superseded ; 1974 ; Proceedings of the Royal Society B: Biological Sciences Volume 187 [superseded] ; 187 >
+    au < HighWirePressH20Plugin ; superseded ; 1975 ; Proceedings of the Royal Society B: Biological Sciences Volume 188 [superseded] ; 188 >
+    au < HighWirePressH20Plugin ; superseded ; 1975 ; Proceedings of the Royal Society B: Biological Sciences Volume 189 [superseded] ; 189 >
+    au < HighWirePressH20Plugin ; superseded ; 1975 ; Proceedings of the Royal Society B: Biological Sciences Volume 190 [superseded] ; 190 >
+    au < HighWirePressH20Plugin ; superseded ; 1975 ; Proceedings of the Royal Society B: Biological Sciences Volume 191 [superseded] ; 191 >
+    au < HighWirePressH20Plugin ; superseded ; 1975-1976 ; Proceedings of the Royal Society B: Biological Sciences Volume 192 [superseded] ; 192 >
+    au < HighWirePressH20Plugin ; superseded ; 1976 ; Proceedings of the Royal Society B: Biological Sciences Volume 193 [superseded] ; 193 >
+    au < HighWirePressH20Plugin ; superseded ; 1976 ; Proceedings of the Royal Society B: Biological Sciences Volume 194 [superseded] ; 194 >
+    au < HighWirePressH20Plugin ; superseded ; 1976-1977 ; Proceedings of the Royal Society B: Biological Sciences Volume 195 [superseded] ; 195 >
+    au < HighWirePressH20Plugin ; superseded ; 1977 ; Proceedings of the Royal Society B: Biological Sciences Volume 196 [superseded] ; 196 >
+    au < HighWirePressH20Plugin ; superseded ; 1977 ; Proceedings of the Royal Society B: Biological Sciences Volume 197 [superseded] ; 197 >
+    au < HighWirePressH20Plugin ; superseded ; 1977 ; Proceedings of the Royal Society B: Biological Sciences Volume 198 [superseded] ; 198 >
+    au < HighWirePressH20Plugin ; superseded ; 1977 ; Proceedings of the Royal Society B: Biological Sciences Volume 199 [superseded] ; 199 >
+    au < HighWirePressH20Plugin ; superseded ; 1978 ; Proceedings of the Royal Society B: Biological Sciences Volume 200 [superseded] ; 200 >
+    au < HighWirePressH20Plugin ; superseded ; 1978 ; Proceedings of the Royal Society B: Biological Sciences Volume 201 [superseded] ; 201 >
+    au < HighWirePressH20Plugin ; superseded ; 1978 ; Proceedings of the Royal Society B: Biological Sciences Volume 202 [superseded] ; 202 >
+    au < HighWirePressH20Plugin ; superseded ; 1978-1979 ; Proceedings of the Royal Society B: Biological Sciences Volume 203 [superseded] ; 203 >
+    au < HighWirePressH20Plugin ; superseded ; 1979 ; Proceedings of the Royal Society B: Biological Sciences Volume 204 [superseded] ; 204 >
+    au < HighWirePressH20Plugin ; superseded ; 1979 ; Proceedings of the Royal Society B: Biological Sciences Volume 205 [superseded] ; 205 >
+    au < HighWirePressH20Plugin ; superseded ; 1979-1980 ; Proceedings of the Royal Society B: Biological Sciences Volume 206 [superseded] ; 206 >
+    au < HighWirePressH20Plugin ; superseded ; 1980 ; Proceedings of the Royal Society B: Biological Sciences Volume 207 [superseded] ; 207 >
+    au < HighWirePressH20Plugin ; superseded ; 1980 ; Proceedings of the Royal Society B: Biological Sciences Volume 208 [superseded] ; 208 >
+    au < HighWirePressH20Plugin ; superseded ; 1980 ; Proceedings of the Royal Society B: Biological Sciences Volume 209 [superseded] ; 209 >
+    au < HighWirePressH20Plugin ; superseded ; 1980 ; Proceedings of the Royal Society B: Biological Sciences Volume 210 [superseded] ; 210 >
+    au < HighWirePressH20Plugin ; superseded ; 1980-1981 ; Proceedings of the Royal Society B: Biological Sciences Volume 211 [superseded] ; 211 >
+    au < HighWirePressH20Plugin ; superseded ; 1981 ; Proceedings of the Royal Society B: Biological Sciences Volume 212 [superseded] ; 212 >
+    au < HighWirePressH20Plugin ; superseded ; 1981 ; Proceedings of the Royal Society B: Biological Sciences Volume 213 [superseded] ; 213 >
+    au < HighWirePressH20Plugin ; superseded ; 1981-1982 ; Proceedings of the Royal Society B: Biological Sciences Volume 214 [superseded] ; 214 >
+    au < HighWirePressH20Plugin ; superseded ; 1982 ; Proceedings of the Royal Society B: Biological Sciences Volume 215 [superseded] ; 215 >
+    au < HighWirePressH20Plugin ; superseded ; 1982 ; Proceedings of the Royal Society B: Biological Sciences Volume 216 [superseded] ; 216 >
+    au < HighWirePressH20Plugin ; superseded ; 1982-1983 ; Proceedings of the Royal Society B: Biological Sciences Volume 217 [superseded] ; 217 >
+    au < HighWirePressH20Plugin ; superseded ; 1983 ; Proceedings of the Royal Society B: Biological Sciences Volume 218 [superseded] ; 218 >
+    au < HighWirePressH20Plugin ; superseded ; 1983 ; Proceedings of the Royal Society B: Biological Sciences Volume 219 [superseded] ; 219 >
+    au < HighWirePressH20Plugin ; superseded ; 1983-1984 ; Proceedings of the Royal Society B: Biological Sciences Volume 220 [superseded] ; 220 >
+    au < HighWirePressH20Plugin ; superseded ; 1984 ; Proceedings of the Royal Society B: Biological Sciences Volume 221 [superseded] ; 221 >
+    au < HighWirePressH20Plugin ; superseded ; 1984 ; Proceedings of the Royal Society B: Biological Sciences Volume 222 [superseded] ; 222 >
+    au < HighWirePressH20Plugin ; superseded ; 1984-1985 ; Proceedings of the Royal Society B: Biological Sciences Volume 223 [superseded] ; 223 >
+    au < HighWirePressH20Plugin ; superseded ; 1985 ; Proceedings of the Royal Society B: Biological Sciences Volume 224 [superseded] ; 224 >
+    au < HighWirePressH20Plugin ; superseded ; 1985 ; Proceedings of the Royal Society B: Biological Sciences Volume 225 [superseded] ; 225 >
+    au < HighWirePressH20Plugin ; superseded ; 1985-1986 ; Proceedings of the Royal Society B: Biological Sciences Volume 226 [superseded] ; 226 >
+    au < HighWirePressH20Plugin ; superseded ; 1986 ; Proceedings of the Royal Society B: Biological Sciences Volume 227 [superseded] ; 227 >
+    au < HighWirePressH20Plugin ; superseded ; 1986 ; Proceedings of the Royal Society B: Biological Sciences Volume 228 [superseded] ; 228 >
+    au < HighWirePressH20Plugin ; superseded ; 1986-1987 ; Proceedings of the Royal Society B: Biological Sciences Volume 229 [superseded] ; 229 >
+    au < HighWirePressH20Plugin ; superseded ; 1987 ; Proceedings of the Royal Society B: Biological Sciences Volume 230 [superseded] ; 230 >
+    au < HighWirePressH20Plugin ; superseded ; 1987 ; Proceedings of the Royal Society B: Biological Sciences Volume 231 [superseded] ; 231 >
+    au < HighWirePressH20Plugin ; superseded ; 1987-1988 ; Proceedings of the Royal Society B: Biological Sciences Volume 232 [superseded] ; 232 >
+    au < HighWirePressH20Plugin ; superseded ; 1988 ; Proceedings of the Royal Society B: Biological Sciences Volume 233 [superseded] ; 233 >
+    au < HighWirePressH20Plugin ; superseded ; 1988 ; Proceedings of the Royal Society B: Biological Sciences Volume 234 [superseded] ; 234 >
+    au < HighWirePressH20Plugin ; superseded ; 1988-1989 ; Proceedings of the Royal Society B: Biological Sciences Volume 235 [superseded] ; 235 >
+    au < HighWirePressH20Plugin ; superseded ; 1989 ; Proceedings of the Royal Society B: Biological Sciences Volume 236 [superseded] ; 236 >
+    au < HighWirePressH20Plugin ; superseded ; 1989 ; Proceedings of the Royal Society B: Biological Sciences Volume 237 [superseded] ; 237 >
+    au < HighWirePressH20Plugin ; superseded ; 1989-1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 238 [superseded] ; 238 >
+    au < HighWirePressH20Plugin ; superseded ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 239 [superseded] ; 239 >
+    au < HighWirePressH20Plugin ; superseded ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 240 [superseded] ; 240 >
+    au < HighWirePressH20Plugin ; superseded ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 241 [superseded] ; 241 >
+    au < HighWirePressH20Plugin ; superseded ; 1990 ; Proceedings of the Royal Society B: Biological Sciences Volume 242 [superseded] ; 242 >
+    au < HighWirePressH20Plugin ; superseded ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 243 [superseded] ; 243 >
+    au < HighWirePressH20Plugin ; superseded ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 244 [superseded] ; 244 >
+    au < HighWirePressH20Plugin ; superseded ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 245 [superseded] ; 245 >
+    au < HighWirePressH20Plugin ; superseded ; 1991 ; Proceedings of the Royal Society B: Biological Sciences Volume 246 [superseded] ; 246 >
+    au < HighWirePressH20Plugin ; superseded ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 247 [superseded] ; 247 >
+    au < HighWirePressH20Plugin ; superseded ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 248 [superseded] ; 248 >
+    au < HighWirePressH20Plugin ; superseded ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 249 [superseded] ; 249 >
+    au < HighWirePressH20Plugin ; superseded ; 1992 ; Proceedings of the Royal Society B: Biological Sciences Volume 250 [superseded] ; 250 >
+    au < HighWirePressH20Plugin ; superseded ; 1993 ; Proceedings of the Royal Society B: Biological Sciences Volume 251 [superseded] ; 251 >
+    au < HighWirePressH20Plugin ; superseded ; 1993 ; Proceedings of the Royal Society B: Biological Sciences Volume 252 [superseded] ; 252 >
+    au < HighWirePressH20Plugin ; superseded ; 1993 ; Proceedings of the Royal Society B: Biological Sciences Volume 253 [superseded] ; 253 >
+    au < HighWirePressH20Plugin ; superseded ; 1993 ; Proceedings of the Royal Society B: Biological Sciences Volume 254 [superseded] ; 254 >
+    au < HighWirePressH20Plugin ; superseded ; 1994 ; Proceedings of the Royal Society B: Biological Sciences Volume 255 [superseded] ; 255 >
+    au < HighWirePressH20Plugin ; superseded ; 1994 ; Proceedings of the Royal Society B: Biological Sciences Volume 256 [superseded] ; 256 >
+    au < HighWirePressH20Plugin ; superseded ; 1994 ; Proceedings of the Royal Society B: Biological Sciences Volume 257 [superseded] ; 257 >
+    au < HighWirePressH20Plugin ; superseded ; 1994 ; Proceedings of the Royal Society B: Biological Sciences Volume 258 [superseded] ; 258 >
+    au < HighWirePressH20Plugin ; superseded ; 1995 ; Proceedings of the Royal Society B: Biological Sciences Volume 259 [superseded] ; 259 >
+    au < HighWirePressH20Plugin ; superseded ; 1995 ; Proceedings of the Royal Society B: Biological Sciences Volume 260 [superseded] ; 260 >
+    au < HighWirePressH20Plugin ; superseded ; 1995 ; Proceedings of the Royal Society B: Biological Sciences Volume 261 [superseded] ; 261 >
+    au < HighWirePressH20Plugin ; superseded ; 1995 ; Proceedings of the Royal Society B: Biological Sciences Volume 262 [superseded] ; 262 >
+    au < HighWirePressH20Plugin ; superseded ; 1996 ; Proceedings of the Royal Society B: Biological Sciences Volume 263 [superseded] ; 263 >
+    au < HighWirePressH20Plugin ; superseded ; 1997 ; Proceedings of the Royal Society B: Biological Sciences Volume 264 [superseded] ; 264 >
+    au < HighWirePressH20Plugin ; superseded ; 1998 ; Proceedings of the Royal Society B: Biological Sciences Volume 265 [superseded] ; 265 >
+    au < HighWirePressH20Plugin ; superseded ; 1999 ; Proceedings of the Royal Society B: Biological Sciences Volume 266 [superseded] ; 266 >
+    au < HighWirePressH20Plugin ; superseded ; 2000 ; Proceedings of the Royal Society B: Biological Sciences Volume 267 [superseded] ; 267 >
+    au < HighWirePressH20Plugin ; superseded ; 2001 ; Proceedings of the Royal Society B: Biological Sciences Volume 268 [superseded] ; 268 >
+    au < HighWirePressH20Plugin ; superseded ; 2002 ; Proceedings of the Royal Society B: Biological Sciences Volume 269 [superseded] ; 269 >
+    au < HighWirePressH20Plugin ; superseded ; 2003 ; Proceedings of the Royal Society B: Biological Sciences Volume 270 [superseded] ; 270 >
+    au < HighWirePressH20Plugin ; superseded ; 2004 ; Proceedings of the Royal Society B: Biological Sciences Volume 271 [superseded] ; 271 >
+    au < HighWirePressH20Plugin ; superseded ; 2005 ; Proceedings of the Royal Society B: Biological Sciences Volume 272 [superseded] ; 272 >
+    au < HighWirePressH20Plugin ; superseded ; 2006 ; Proceedings of the Royal Society B: Biological Sciences Volume 273 [superseded] ; 273 >
+    au < HighWirePressH20Plugin ; superseded ; 2007 ; Proceedings of the Royal Society B: Biological Sciences Volume 274 [superseded] ; 274 >
+    au < HighWirePressH20Plugin ; superseded ; 2008 ; Proceedings of the Royal Society B: Biological Sciences Volume 275 [superseded] ; 275 >
+    au < HighWirePressH20Plugin ; superseded ; 2009 ; Proceedings of the Royal Society B: Biological Sciences Volume 276 [superseded] ; 276 >
+    au < HighWirePressH20Plugin ; superseded ; 2010 ; Proceedings of the Royal Society B: Biological Sciences Volume 277 [superseded] ; 277 >
+    }
   }
 
   {

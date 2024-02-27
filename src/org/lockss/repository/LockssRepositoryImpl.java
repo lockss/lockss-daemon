@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2024 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,6 +31,7 @@ package org.lockss.repository;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+import java.util.stream.*;
 
 import org.apache.commons.lang3.SystemUtils;
 import org.lockss.app.*;
@@ -101,16 +102,7 @@ public class LockssRepositoryImpl
     RepositoryManager.DEFAULT_GLOBAL_CACHE_ENABLED;
 
   LockssRepositoryImpl(String rootPath) {
-    if (rootPath.endsWith(File.separator)) {
-      rootLocation = rootPath;
-    } else {
-      // shouldn't happen
-      StringBuilder sb = new StringBuilder(rootPath.length() +
-					 File.separator.length());
-      sb.append(rootPath);
-      sb.append(File.separator);
-      rootLocation = sb.toString();
-    }
+    rootLocation = FileUtil.addSeparator(rootPath);
     // Test code still needs this.
     nodeCache =
       new UniqueRefLruCache(RepositoryManager.DEFAULT_MAX_PER_AU_CACHE_SIZE);
@@ -596,6 +588,30 @@ public class LockssRepositoryImpl
     return getAuDir(au.getAuId(), repoRoot, create);
   }
 
+  /** Update the AUID -> repo dir map with newly-arrived repo dirs.
+   * Reads only the AUID files of dirs not already present in the map,
+   * so should be relatively quick. */
+  static void updateAuIdMap(String repoRoot) {
+    LocalRepository localRepo = getLocalRepository(repoRoot);
+    if (localRepo != null) {
+      synchronized (localRepo) {
+        localRepo.updateAuMap();
+      }
+    }
+  }
+
+  /** Completely rebuild the AUID -> repo dir map from scratch.
+   * Unlike #updateAuMap(), this will notice deleted dirs, but it may
+   * be very slow in repos with 100s of 1000s of AUs */
+  static void rescanAuIdMap(String repoRoot) {
+    LocalRepository localRepo = getLocalRepository(repoRoot);
+    if (localRepo != null) {
+      synchronized (localRepo) {
+        localRepo.rescanAuMap();
+      }
+    }
+  }
+
   static void removeAuDirEntry(PluginManager pluginMgr,
                                String auid, String repoRoot) {
     LocalRepository localRepo = getLocalRepository(repoRoot);
@@ -638,7 +654,7 @@ public class LockssRepositoryImpl
 	  }
 	  String auPath = testDir.toString();
 	  logger.debug3("New au directory: "+auPath);
-	  auPathSlash = auPath + File.separator;
+	  auPathSlash = FileUtil.addSeparator(auPath);
 	  // write the new au property file to the new dir
 	  // XXX this data should be backed up elsewhere to avoid single-point
 	  // corruption
@@ -842,6 +858,12 @@ public class LockssRepositoryImpl
       prevAuDir = dir;
     }
 
+    /** Return the number of AU dirs in this local repo, or -1 if the
+     * map hasn't been built yet. */
+    int getNumAuDirs() {
+      return auMap != null ? auMap.size() : -1;
+    }
+
     /** Return the auid -> au-subdir-path mapping.  Enumerating the
      * directories if necessary to initialize the map */
     Map<String,String> getAuMap() {
@@ -851,11 +873,30 @@ public class LockssRepositoryImpl
       return auMap;
     }
 
-    /** Return the auid -> au-subdir-path mapping.  Enumerating the
-     * directories if necessary to initialize the map */
+    /** Build the auid -> au-subdir-path mapping bu enumerating the
+     * directories and reading the auid files */
     Map<String,String> buildAuMap() {
-      logger.debug3("Loading name map for '" + repoCacheFile + "'.");
-      Map<String,String> map = new HashMap<String,String>();
+      return updateAuMap(null);
+    }
+
+    public void updateAuMap() {
+      auMap = updateAuMap(auMap);
+    }
+
+    public void rescanAuMap() {
+      auMap = null;
+      getAuMap();
+    }
+
+    /** Update the auid -> au-subdir-path mapping by enumerating the
+     * directories and reading the auid file from each one that isn't
+     * already in the map */
+    Map<String,String> updateAuMap(Map<String,String> map) {
+      if (map == null) {
+        map = new HashMap<>();
+      }
+      logger.debug((map.isEmpty() ? "Loading" : "Updating")
+                   + " name map for '" + repoCacheFile + "'.");
       if (!repoCacheFile.exists()) {
 	logger.debug3("Creating cache dir:" + repoCacheFile + "'.");
 	if (!repoCacheFile.mkdirs()) {
@@ -865,29 +906,39 @@ public class LockssRepositoryImpl
 	  return map;
 	}
       } else {
-	// read each dir's property file and store mapping auid -> dir
+        // Build reverse map (repodir => auid) to facilitate faster
+        // update to existing map
+        Map<String,String> oldRevMap =
+          map.entrySet().stream()
+          .collect(Collectors.toMap(Map.Entry::getValue, Map.Entry::getKey));
+
+	// read auid file from each dir not already in the map and
+	// create an auid -> dir mapping
 	File[] auDirs = repoCacheFile.listFiles();
 	for (int ii = 0; ii < auDirs.length; ii++) {
-	  String dirName = auDirs[ii].getName();
+          //       String dirName = auDirs[ii].getName();
 	  //       if (dirName.compareTo(lastPluginDir) == 1) {
 	  //         // adjust the 'lastPluginDir' upwards if necessary
 	  //         lastPluginDir = dirName;
 	  //       }
 
 	  String path = auDirs[ii].getAbsolutePath();
-	  Properties idProps = getAuIdProperties(path);
-	  if (idProps != null) {
-	    // XXX intern auid?
-	    String auid = idProps.getProperty(AU_ID_PROP);
-	    StringBuilder sb = new StringBuilder(path.length() +
-						 File.separator.length());
-	    sb.append(path);
-	    sb.append(File.separator);
-	    map.put(auid, sb.toString());
-	    logger.debug3("Mapping to: " + map.get(auid) + ": " + auid);
-	  } else {
-	    logger.debug3("Not mapping " + path + ", no auid file.");
-	  }
+          String pathSlash = FileUtil.addSeparator(path);
+          String oldAuid = oldRevMap.get(pathSlash);
+          if (oldAuid == null) {
+            Properties idProps = getAuIdProperties(path);
+            if (idProps != null) {
+              // XXX intern auid?
+              String auid =
+                StringPool.AUIDS.intern(idProps.getProperty(AU_ID_PROP));;
+              map.put(auid, pathSlash);
+              if (logger.isDebug3()) {
+                logger.debug3("Mapping to: " + map.get(auid) + ": " + auid);
+              }
+            } else {
+              logger.debug("Not mapping " + path + ", no auid file.");
+            }
+          }
 	}
 
       }

@@ -33,6 +33,7 @@
       au < frozen ; exists ; 2020-2021 ; EcoSal Plus Volume 9 ; 9 ; >
       au < crawling ; exists ; 2022-2023 ; EcoSal Plus Volume 10 ; 10 ; >
       au < manifest ; exists ; 2023-2024 ; EcoSal Plus Volume 11 ; 11 ; >
+      au < expected ; exists ; 2024-2025 ; EcoSal Plus Volume 12 ; 12 ; >
 
     }
   
@@ -54,7 +55,8 @@
       au < frozen ; exists ; 2020 ; Microbiology Spectrum 2020 ; 8 ; >
       au < deepCrawl ; exists ; 2021 ; Microbiology Spectrum 2021 ; 9 ; >
       au < deepCrawl ; exists ; 2022 ; Microbiology Spectrum 2022 ; 10 ; >
-      au < crawling ; exists ; 2023 ; Microbiology Spectrum 2023 ; 11 ; >
+      au < deepCrawl ; exists ; 2023 ; Microbiology Spectrum 2023 ; 11 ; >
+      au < manifest ; exists ; 2024 ; Microbiology Spectrum 2024 ; 12 ; >
 
     }
 

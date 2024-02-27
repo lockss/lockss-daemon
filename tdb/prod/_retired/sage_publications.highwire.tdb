@@ -71,6 +71,7 @@
         implicit < status ; year ; name ; param[volume] ; proxy >
 
         au < down ; 2000 ; Accounting History Volume 5 ; 5 ; delta6.lockss.org:8080 >
+        au < superseded ; 2001 ; Accounting History Volume 6 [superseded] ; 6 ; >
 
       }
 
@@ -139,6 +140,7 @@
         implicit < status ; year ; name ; param[volume] >
 
         au < down ; 2005 ; Acta Sociologica Volume 48 ; 48 >
+        au < superseded ; 2006 ; Acta Sociologica Volume 49 [superseded] ; 49 >
 
       }
 
@@ -263,6 +265,7 @@
         implicit < status ; year ; name ; param[volume] >
 
         au < down ; 2005 ; Action Research Volume 3 ; 3 >
+        au < superseded ; 2006 ; Action Research Volume 4 [superseded] ; 4 >
 
       }
 
@@ -324,6 +327,7 @@
       implicit < status ; year ; name ; param[volume] >
 
       au < down ; 2005 ; Active Learning in Higher Education Volume 6 ; 6 >
+      au < superseded ; 2006 ; Active Learning in Higher Education Volume 7 [superseded] ; 7 >
 
     }
 
@@ -384,6 +388,7 @@
         implicit < status ; year ; name ; param[volume] >
 
         au < down ; 2005 ; Adaptive Behavior Volume 13 ; 13 >
+        au < superseded ; 2006 ; Adaptive Behavior Volume 14 [superseded] ; 14 >
 
       }
 
@@ -454,6 +459,7 @@
         implicit < status ; year ; name ; param[volume] >
 
         au < down ; 2005 ; Administration & Society Volume 37 ; 37 >
+        au < superseded ; 2006 ; Administration & Society Volume 38 [superseded] ; 38 >
 
       }
 
@@ -635,6 +641,7 @@
         implicit < status ; year ; name ; param[volume] >
 
         au < down ; 2005 ; Adult Education Quarterly Volume 56 ; 56 >
+        au < superseded ; 2006 ; Adult Education Quarterly Volume 57 [superseded] ; 57 >
 
       }
 
@@ -843,6 +850,7 @@
         implicit < status ; year ; name ; param[volume] >
 
         au < down ; 2005 ; Advances in Developing Human Resources Volume 7 ; 7 >
+        au < superseded ; 2006 ; Advances in Developing Human Resources Volume 8 [superseded] ; 8 >
 
       }
 
@@ -996,6 +1004,7 @@
         implicit < status ; year ; name ; param[volume] >
 
         au < down ; 2005 ; Affilia Volume 20 ; 20 >
+        au < superseded ; 2006 ; Affilia Volume 21 [superseded] ; 21 >
 
       }
 
@@ -1152,10 +1161,20 @@
 
       {
 
+        pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+        param[base_url] = http://abs.sagepub.com/
+        implicit < status ; year ; name ; param[volume] >
+
+        au < superseded ; 2005 ; American Behavioral Scientist Volume 49 [superseded] ; 49 >
+
+      }
+
+      {
+
         param[base_url] = http://abs.sagepub.com/
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
 
         au < HighWireStrVolPlugin ; down ; 2004 ; American Behavioral Scientist Volume 48 ; 48 >
         au < HighWireStrVolPlugin ; down ; 2005 ; American Behavioral Scientist Volume 49 ; 49 >
@@ -1843,6 +1862,7 @@
         param[base_url] = http://ajs.sagepub.com/
         implicit < status ; year ; name ; param[volume] >
 
+        au < superseded ; 2005 ; The American Journal of Sports Medicine Volume 33 [superseded] ; 33 >
         au < down ; 2006 ; The American Journal of Sports Medicine Volume 34 ; 34 >
 
       }
@@ -2011,6 +2031,17 @@
         eissn = 1552-3357 ;
         issnl = 0275-0740
       >
+
+      {
+
+        pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+        param[base_url] = http://arp.sagepub.com/
+        implicit < status ; year ; name ; param[volume] >
+
+        au < superseded ; 2006 ; The American Review of Public Administration Volume 36 [superseded] ; 36 >
+
+      }
 
       {
 
@@ -3103,9 +3134,19 @@
 
       {
 
+        pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+        param[base_url] = http://ant.sagepub.com/
+        implicit < status ; year ; name ; param[volume] >
+
+        au < superseded ; 2006 ; Anthropological Theory Volume 6 [superseded] ; 6 >
+
+      }
+
+      {
+
         param[base_url] = http://ant.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
 
         au < HighWireStrVolPlugin ; down ; 2005 ; Anthropological Theory Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; down ; 2006 ; Anthropological Theory Volume 6 ; 6 >
@@ -3387,6 +3428,17 @@
 
       {
 
+        pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+        param[base_url] = http://afs.sagepub.com/
+        implicit < status ; year ; name ; param[volume] >
+
+        au < superseded ; 2005-2006 ; Armed Forces & Society Volume 32 [superseded] ; 32 >
+
+      }
+
+      {
+
         param[base_url] = http://afs.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -3464,6 +3516,17 @@
 
       {
 
+        pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+        param[base_url] = http://ahh.sagepub.com/
+        implicit < status ; year ; name ; param[volume] >
+
+        au < superseded ; 2006 ; Arts and Humanities in Higher Education Volume 5 [superseded] ; 5 >
+
+      }
+
+      {
+
         param[base_url] = http://ahh.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -3510,6 +3573,17 @@
         eissn = 1744-7941 ;
         issnl = 1038-4111
       >
+
+      {
+
+        pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+        param[base_url] = http://apj.sagepub.com/
+        implicit < status ; year ; name ; param[volume] >
+
+        au < superseded ; 2005 ; Asia Pacific Journal of Human Resources Volume 43 [superseded] ; 43 >
+
+      }
 
       {
 
@@ -3773,9 +3847,19 @@
 
       {
 
+        pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+        param[base_url] = http://ajc.sagepub.com/
+        implicit < status ; year ; name ; param[volume] >
+
+        au < superseded ; 2005 ; Asian Journal of Management Cases Volume 2 [superseded] ; 2 >
+
+      }
+
+      {
+
         param[base_url] = http://ajc.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
 
         au < HighWireStrVolPlugin ; down ; 2005 ; Asian Journal of Management Cases Volume 2 ; 2 >
         au < HighWireStrVolPlugin ; down ; 2006 ; Asian Journal of Management Cases Volume 3 ; 3 >
@@ -3862,9 +3946,19 @@
 
       {
 
+        pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+        param[base_url] = http://asm.sagepub.com/
+        implicit < status ; year ; name ; param[volume] >
+
+        au < superseded ; 2006 ; Assessment Volume 13 [superseded] ; 13 >
+
+      }
+
+      {
+
         param[base_url] = http://asm.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
 
         au < HighWireStrVolPlugin ; down ; 2005 ; Assessment Volume 12 ; 12 >
         au < HighWireStrVolPlugin ; down ; 2006 ; Assessment Volume 13 ; 13 >
@@ -3988,6 +4082,17 @@
         eissn = 1461-7005 ;
         issnl = 1362-3613
       >
+
+      {
+
+        pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+        param[base_url] = http://aut.sagepub.com/
+        implicit < status ; year ; name ; param[volume] >
+
+        au < superseded ; 2006 ; Autism Volume 10 [superseded] ; 10 >
+
+      }
 
       {
 
@@ -4389,9 +4494,19 @@
 
       {
 
+        pluginSuffix = HighWirePlugin
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+        param[base_url] = http://bcn.sagepub.com/
+        implicit < status ; year ; name ; param[volume] >
+
+        au < superseded ; 2005 ; Behavioral and Cognitive Neuroscience Reviews Volume 4 [superseded] ; 4 >
+
+      }
+
+      {
+
         param[base_url] = http://bcn.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
 
         au < HighWireStrVolPlugin ; down ; 2005 ; Behavioral and Cognitive Neuroscience Reviews Volume 4 ; 4 >
         au < HighWireStrVolPlugin ; down ; 2006 ; Behavioral and Cognitive Neuroscience Reviews Volume 5 ; 5 >
@@ -29488,6 +29603,17 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       {
 
+        pluginSuffix = HighWirePlugin
+        param[base_url] = http://mpj.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+        implicit < status ; year ; name ; param[volume] >
+
+        au < superseded ; 2005 ; Journal of Moral Philosophy Volume 3 [superseded] ; 3 >
+
+      }
+
+      {
+
 comment[mpj] = now published by Brill
 
         param[base_url] = http://mpj.sagepub.com/
@@ -34268,6 +34394,17 @@ comment[mpj] = now published by Brill
 
       {
 
+        pluginSuffix = HighWirePlugin
+        param[base_url] = http://mcq.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+        implicit < status ; year ; name ; param[volume] >
+
+        au < superseded ; 2005 ; Management Communication Quarterly Volume 19 [superseded] ; 19 >
+
+      }
+
+      {
+
         param[base_url] = http://mcq.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
@@ -36585,9 +36722,19 @@ comment[mpj] = now published by Brill
 
       {
 
+        pluginSuffix = HighWirePlugin
+        param[base_url] = http://nms.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+        implicit < status ; year ; name ; param[volume] >
+
+        au < superseded ; 2006 ; New Media & Society Volume 8 [superseded] ; 8 >
+
+      }
+
+      {
+
         param[base_url] = http://nms.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
 
         au < HighWireStrVolPlugin ; down ; 2005 ; New Media & Society Volume 7 ; 7 >
         au < HighWireStrVolPlugin ; down ; 2006 ; New Media & Society Volume 8 ; 8 >
@@ -41129,6 +41276,17 @@ comment[mpj] = now published by Brill
         eissn = 1741-3125 ;
         issnl = 0306-3968
       >
+
+      {
+
+        pluginSuffix = HighWirePlugin
+        param[base_url] = http://rac.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+        implicit < status ; year ; name ; param[volume] >
+
+        au < superseded ; 2005 ; Race & Class Volume 47 [superseded] ; 47 >
+
+      }
 
       {
 
@@ -48630,9 +48788,19 @@ comment[mpj] = now published by Brill
 
       {
 
+        pluginSuffix = HighWirePlugin
+        param[base_url] = http://wes.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+        implicit < status ; year ; name ; param[volume] >
+
+        au < superseded ; 2006 ; Work, Employment & Society Volume 20 [superseded] ; 20 >
+
+      }
+
+      {
+
         param[base_url] = http://wes.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
 
         au < HighWireStrVolPlugin ; down ; 2005 ; Work, Employment & Society Volume 19 ; 19 >
         au < HighWireStrVolPlugin ; down ; 2007 ; Work, Employment & Society Volume 21 ; 21 >
@@ -48858,9 +49026,19 @@ comment[mpj] = now published by Brill
 
       {
 
+        pluginSuffix = HighWirePlugin
+        param[base_url] = http://you.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+        implicit < status ; year ; name ; param[volume] >
+
+        au < superseded ; 2006 ; Young Volume 14 [superseded] ; 14 >
+
+      }
+
+      {
+
         param[base_url] = http://you.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
 
         au < HighWireStrVolPlugin ; down ; 2005 ; Young Volume 13 ; 13 >
         au < HighWireStrVolPlugin ; down ; 2006 ; Young Volume 14 ; 14 >
@@ -48950,6 +49128,17 @@ comment[mpj] = now published by Brill
         eissn = 1552-8499 ;
         issnl = 0044-118X
       >
+
+      {
+
+        pluginSuffix = HighWirePlugin
+        param[base_url] = http://yas.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+        implicit < status ; year ; name ; param[volume] >
+
+        au < superseded ; 2005-2006 ; Youth & Society Volume 37 [superseded] ; 37 >
+
+      }
 
       {
 
@@ -49083,6 +49272,17 @@ comment[mpj] = now published by Brill
         eissn = 1556-9330 ;
         issnl = 1541-2040
       >
+
+      {
+
+        pluginSuffix = HighWirePlugin
+        param[base_url] = http://yvj.sagepub.com/
+        attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+        implicit < status ; year ; name ; param[volume] >
+
+        au < superseded ; 2006 ; Youth Violence and Juvenile Justice Volume 4 [superseded] ; 4 >
+
+      }
 
       {
 

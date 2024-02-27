@@ -110,15 +110,23 @@ public class AimsCrossrefXmlMetadataExtractorFactory extends SourceXmlMetadataEx
       String altName = cuBase + doiSecond + ".pdf";
       //2018 options
       String pubJID = oneAM.getRaw(CrossRefSchemaHelper.pub_abbrev);
+      String pubJIDAlt = oneAM.getRaw(CrossRefSchemaHelper.pub_abbrev).toUpperCase();
       String pubYear = oneAM.getRaw(CrossRefSchemaHelper.pub_year);
       String pubIssue = oneAM.getRaw(CrossRefSchemaHelper.pub_issue);
       String artPage = oneAM.getRaw(CrossRefSchemaHelper.art_sp);
       String name2018 = cuBase + doiFirst + "/" + pubJID + "." + pubYear + "." + pubIssue + "." + artPage + "/Paper.pdf";
-      log.debug3("looking for: " + pdfName + " or " + altName + " or " + name2018);
+      String name2018Alt = cuBase + doiFirst + "/" + pubJIDAlt + "." + pubYear + "." + pubIssue + "." + artPage + "/Paper.pdf";
+      String name2018Alt2 = cuBase + doiFirst + "/" + pubJID + "." + pubYear + "." + pubIssue + "." + artPage + "/paper.pdf";
+      String name2018Alt3 = cuBase + doiFirst + "/" + pubJIDAlt + "." + pubYear + "." + pubIssue + "." + artPage + "/paper.pdf";
+      log.debug3("looking for: " + pdfName + " or " + altName + " or " + name2018 +  " or "
+              + name2018Alt + " or " + name2018Alt2 +  " or " + name2018Alt3);
       List<String> returnList = new ArrayList<String>();
       returnList.add(pdfName);
       returnList.add(altName);
       returnList.add(name2018);
+      returnList.add(name2018Alt);
+      returnList.add(name2018Alt2);
+      returnList.add(name2018Alt3);
       return returnList;
     }
     

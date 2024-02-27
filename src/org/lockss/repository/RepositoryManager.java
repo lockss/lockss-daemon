@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2021 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2024 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -482,6 +482,26 @@ public class RepositoryManager
     return repoMap;
   }
 
+  public int getNumAuDirs(String repoSpec) {
+     LockssRepositoryImpl.LocalRepository lrepo =
+       LockssRepositoryImpl.getLocalRepository(LockssRepositoryImpl.getLocalRepositoryPath(repoSpec));
+     return lrepo.getNumAuDirs();
+  }
+
+  public void updateAuIdMaps() {
+    for (String repo : getRepositoryList()) {
+      LockssRepositoryImpl.updateAuIdMap(repo);
+    }
+  }
+
+  public void updateAuIdMap(String repoSpec) {
+    LockssRepositoryImpl.updateAuIdMap(LockssRepositoryImpl.getLocalRepositoryPath(repoSpec));
+  }
+
+  public void rescanAuIdMap(String repoSpec) {
+    LockssRepositoryImpl.rescanAuIdMap(LockssRepositoryImpl.getLocalRepositoryPath(repoSpec));
+  }
+
   public String findLeastFullRepository() {
     return findLeastFullRepository(getRepositoryMap());
   }
@@ -514,6 +534,10 @@ public class RepositoryManager
 
   public static boolean isStatefulUnusedDirSearch() {
     return isStatefulUnusedDirSearch;
+  }
+
+  LockssRepositoryImpl.LocalRepository getLocalRepository(String repoPath) {
+    return LockssRepositoryImpl.getLocalRepository(repoPath);
   }
 
   public List<String> findExistingRepositoriesFor(String auid) {

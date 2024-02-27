@@ -43,7 +43,8 @@
     au < finished ; finished ; 2010 ; 81 ; Aviation, Space, and Environmental Medicine Volume 81 ; 81 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2011 ; 82 ; Aviation, Space, and Environmental Medicine Volume 82 ; 82 ; reingest4.clockss.org:8082 >
 
-    au < frozen ; exists ; 2015 ; 86 ; Aviation, Space, and Environmental Medicine Volume 86 ; 86 ; >
+    au < finished ; manifest ; 2015 ; 86 ; Aviation, Space, and Environmental Medicine Volume 86 ; 86 ; reingest1.clockss.org:8082 >
+
     }
 
     {
@@ -51,7 +52,7 @@
       param[api_url] = http://api.ingentaconnect.com/
     
     au < finished ; finished ; 2012 ; 83 ; Aviation, Space, and Environmental Medicine Volume 83 ; 83 ; >
-    au < frozen ; exists ; 2013 ; 84 ; Aviation, Space, and Environmental Medicine Volume 84 ; 84 ; >
+    au < finished ; manifest ; 2013 ; 84 ; Aviation, Space, and Environmental Medicine Volume 84 ; 84 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; 85 ; Aviation, Space, and Environmental Medicine Volume 85 ; 85 ; reingest4.clockss.org:8082 >
     #changed title after the first issue of 2015
     }
@@ -75,20 +76,21 @@
       param[api_url] = http://api.ingentaconnect.com/
     
     au < finished ; finished ; 2015 ; 86 ; Aerospace Medicine and Human Performance Volume 86 ; 86 ; >
-    au < frozen ; exists ; 2016 ; 87 ; Aerospace Medicine and Human Performance Volume 87 ; 87 ; >
-    au < frozen ; exists ; 2017 ; 88 ; Aerospace Medicine and Human Performance Volume 88 ; 88 ; >
+    au < finished ; manifest ; 2016 ; 87 ; Aerospace Medicine and Human Performance Volume 87 ; 87 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2017 ; 88 ; Aerospace Medicine and Human Performance Volume 88 ; 88 ; reingest4.clockss.org:8082 >
     }
 
     {
       param[base_url] = https://www.ingentaconnect.com/
       param[api_url] = https://api.ingentaconnect.com/
 
-    au < frozen ; exists ; 2018 ; 89 ; Aerospace Medicine and Human Performance Volume 89 ; 89 ; >
+    au < finished ; manifest ; 2018 ; 89 ; Aerospace Medicine and Human Performance Volume 89 ; 89 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2019 ; 90 ; Aerospace Medicine and Human Performance Volume 90 ; 90 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2020 ; 91 ; Aerospace Medicine and Human Performance Volume 91 ; 91 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2021 ; 92 ; Aerospace Medicine and Human Performance Volume 92 ; 92 ; >
+    au < finished ; manifest ; 2021 ; 92 ; Aerospace Medicine and Human Performance Volume 92 ; 92 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 93 ; Aerospace Medicine and Human Performance Volume 93 ; 93 ; >
     au < crawling ; exists ; 2023 ; 94 ; Aerospace Medicine and Human Performance Volume 94 ; 94 ; >
+    au < manifest ; exists ; 2024 ; 95 ; Aerospace Medicine and Human Performance Volume 95 ; 95 ; >
 
     }
 

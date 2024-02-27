@@ -28,8 +28,8 @@
     {
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/emh-released/
 
-      au < readySource ; crawling ; 2023 ; EMH Swiss Medical Publishers Source Content 2023 ; 2023 >
-      au < expected ; exists ; 2024 ; EMH Swiss Medical Publishers Source Content 2024 ; 2024 >
+      au < readySource ; finished ; 2023 ; EMH Swiss Medical Publishers Source Content 2023 ; 2023 >
+      au < readySource ; crawling ; 2024 ; EMH Swiss Medical Publishers Source Content 2024 ; 2024 >
 
     }
 

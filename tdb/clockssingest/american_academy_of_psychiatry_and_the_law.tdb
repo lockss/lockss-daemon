@@ -24,6 +24,7 @@
     param[base_url] = https://jaapl.org/
 
     au < aapl.ClockssAAPLDrupalPlugin ; crawling ; exists ; 2023 ; Journal of the American Academy of Psychiatry and the Law Online Volume 51 ; 51 ; >
+    au < aapl.ClockssAAPLDrupalPlugin ; expected ; exists ; 2024 ; Journal of the American Academy of Psychiatry and the Law Online Volume 52 ; 52 ; >
 
     }
 
