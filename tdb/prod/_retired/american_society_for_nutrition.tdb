@@ -5,7 +5,6 @@
   >
 
   pluginPrefix = org.lockss.plugin.highwire.
-  implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanSocietyForNutritionPdfTransform$Simplified
 
   {
@@ -15,6 +14,7 @@
       eissn = 2156-5376
     >
 
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     param[base_url] = http://advances.nutrition.org/
     #move to OUP
 
@@ -37,11 +37,21 @@
       issnl = 0002-9165
     >
     
+      #move to OUP
+    {
+      
+      implicit < pluginSuffix ; status ; year ; name ; param[volume] >
+      param[base_url] = http://www.ajcn.org/
+    
+      au < HighWirePlugin ; superseded ; 2006 ; American Journal of Clinical Nutrition Volume 83 [superseded] ; 83 >
+
+    }
+
     {
       comment[moved] = journal moved to new url from http://www.ajcn.org/ to http://ajcn.nutrition.org/.
       
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
       param[base_url] = http://ajcn.nutrition.org/
-      #move to OUP
     
       au < HighWirePressH20Plugin ; down ; 2011 ; American Journal of Clinical Nutrition Volume 94 ; 94 >
       au < HighWirePressH20Plugin ; down ; 2012 ; American Journal of Clinical Nutrition Volume 95 ; 95 >
@@ -60,6 +70,7 @@
     {
       comment[moved] = journal moved to new url from http://www.ajcn.org/ to http://ajcn.nutrition.org/.
       
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.ajcn.org/
     
       au < HighWirePressH20Plugin ; down ; 1960 ; American Journal of Clinical Nutrition Volume 8 ; 8 >
@@ -159,6 +170,7 @@
       issnl = 0022-3166
     >
 
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     param[base_url] = http://jn.nutrition.org/
 
     au < HighWirePressH20Plugin ; doNotProcess ; 1928 ; Journal of Nutrition Volume 1 ; 1 >

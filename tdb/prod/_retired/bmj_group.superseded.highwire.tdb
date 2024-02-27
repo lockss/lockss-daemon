@@ -1,0 +1,96 @@
+{
+
+  publisher <
+    name = BMJ Group ;
+    info[tester] = 5
+  >
+
+    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified
+    pluginPrefix = org.lockss.plugin.highwire.
+
+    {
+
+      title <
+        name = BMJ Group Journals
+      >
+
+        pluginSuffix = HighWirePlugin
+        implicit < status ; year ; name ; param[volume] ; param[base_url] >
+
+        au < superseded ; 2006 ; Archives of Disease in Childhood Volume 91 [superseded] ; 91 ; http://adc.bmjjournals.com/ >
+        au < superseded ; 2006 ; Annals of the Rheumatic Diseases Volume 65 [superseded] ; 65 ; http://ard.bmjjournals.com/ >
+        au < superseded ; 2006 ; British Journal of Ophthalmology Volume 90 [superseded] ; 90 ; http://bjo.bmjjournals.com/ >
+        au < superseded ; 2006 ; British Journal of Sports Medicine Volume 40 [superseded] ; 40 ; http://bjsm.bmjjournals.com/ >
+        au < superseded ; 2006 ; BMJ Volume 332 [superseded] ; 332 ; http://bmj.bmjjournals.com/ >
+        au < superseded ; 2006 ; BMJ Career Focus Volume 332 [superseded] ; 332 ; http://careerfocus.bmjjournals.com/ >
+        au < superseded ; 2006 ; Evidence-Based Medicine Volume 11 [superseded] ; 11 ; http://ebm.bmjjournals.com/ >
+        au < superseded ; 2006 ; Evidence-Based Mental Health Volume 9 [superseded] ; 9 ; http://ebmh.bmjjournals.com/ >
+        au < superseded ; 2006 ; Evidence-Based Nursing Volume 9 [superseded] ; 9 ; http://ebn.bmjjournals.com/ >
+        au < superseded ; 2006 ; Emergency Medicine Journal Volume 23 [superseded] ; 23 ; http://emj.bmjjournals.com/ >
+        au < superseded ; 2006 ; Archives of Disease in Childhood - Education and Practice Volume 91 [superseded] ; 91 ; http://ep.bmjjournals.com/ >
+        au < superseded ; 2006 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 91 [superseded] ; 91 ; http://fn.bmjjournals.com/ >
+        au < superseded ; 2006 ; Gut Volume 55 [superseded] ; 55 ; http://gut.bmjjournals.com/ >
+        au < superseded ; 2006 ; Heart Volume 92 [superseded] ; 92 ; http://heart.bmjjournals.com/ >
+        au < superseded ; 2006 ; Injury Prevention Volume 12 [superseded] ; 12 ; http://ip.bmjjournals.com/ >
+        au < superseded ; 2006 ; Journal of Clinical Pathology Volume 59 [superseded] ; 59 ; http://jcp.bmjjournals.com/ >
+        au < superseded ; 2006 ; Journal of Epidemiology & Community Health Volume 60 [superseded] ; 60 ; http://jech.bmjjournals.com/ >
+        au < superseded ; 2006 ; Journal of Medical Ethics Volume 32 [superseded] ; 32 ; http://jme.bmjjournals.com/ >
+        au < superseded ; 2006 ; Journal of Medical Genetics Volume 43 [superseded] ; 43 ; http://jmg.bmjjournals.com/ >
+        au < superseded ; 2006 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 77 [superseded] ; 77 ; http://jnnp.bmjjournals.com/ >
+        au < superseded ; 2006 ; Medical Humanities Volume 31 [superseded] ; 31 ; http://mh.bmjjournals.com/ >
+        au < superseded ; 2006 ; Occupational and Environmental Medicine Volume 63 [superseded] ; 63 ; http://oem.bmjjournals.com/ >
+        au < superseded ; 2006 ; Postgraduate Medical Journal Volume 82 [superseded] ; 82 ; http://pmj.bmjjournals.com/ >
+        au < superseded ; 2006 ; Quality and Safety in Health Care Volume 15 [superseded] ; 15 ; http://qhc.bmjjournals.com/ >
+        au < superseded ; 2006 ; Sexually Transmitted Infections Volume 82 [superseded] ; 82 ; http://sti.bmjjournals.com/ >
+        au < superseded ; 2006 ; Tobacco Control Volume 15 [superseded] ; 15 ; http://tc.bmjjournals.com/ >
+        au < superseded ; 2006 ; Thorax Volume 61 [superseded] ; 61 ; http://thorax.bmjjournals.com/ >
+
+    }
+
+    {
+
+      title <
+        name = BMJ Group Journals
+      >
+
+        pluginSuffix = HighWireStrVolPlugin
+        implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
+
+        au < superseded ; 2006 ; British Journal of Ophthalmology Volume 90 [superseded] ; 90 ; http://bjo.bmj.com/ >
+        au < superseded ; 2006 ; BMJ Career Focus Volume 332 [superseded] ; 332 ; http://careerfocus.bmj.com/ >
+        au < superseded ; 2006 ; Evidence-Based Mental Health Volume 9 [superseded] ; 9 ; http://ebmh.bmj.com/ >
+        au < superseded ; 2006 ; Evidence-Based Nursing Volume 9 [superseded] ; 9 ; http://ebn.bmj.com/ >
+        au < superseded ; 2006 ; Emergency Medicine Journal Volume 23 [superseded] ; 23 ; http://emj.bmj.com/ >
+        au < superseded ; 2006 ; Injury Prevention Volume 12 [superseded] ; 12 ; http://ip.bmj.com/ >
+        au < superseded ; 2006 ; Tobacco Control Volume 14 [superseded] ; 15 ; http://tc.bmj.com/ >
+        au < superseded ; 2006 ; BMJ Volume 332 [superseded] ; 332 ; http://www.bmj.com/ >
+        au < superseded ; 2006 ; Archives of Disease in Childhood Volume 91 [superseded] ; 91 ; http://adc.bmjjournals.com/ >
+        au < superseded ; 2006 ; Annals of the Rheumatic Diseases Volume 65 [superseded] ; 65 ; http://ard.bmjjournals.com/ >
+        au < superseded ; 2006 ; British Journal of Ophthalmology Volume 90 [superseded] ; 90 ; http://bjo.bmjjournals.com/ >
+        au < superseded ; 2006 ; British Journal of Sports Medicine Volume 40 [superseded] ; 40 ; http://bjsm.bmjjournals.com/ >
+        au < superseded ; 2006 ; BMJ Volume 332 [superseded] ; 332 ; http://bmj.bmjjournals.com/ >
+        au < superseded ; 2006 ; BMJ Career Focus Volume 332 [superseded] ; 332 ; http://careerfocus.bmjjournals.com/ >
+        au < superseded ; 2006 ; Evidence-Based Medicine Volume 11 [superseded] ; 11 ; http://ebm.bmjjournals.com/ >
+        au < superseded ; 2006 ; Evidence-Based Mental Health Volume 9 [superseded] ; 9 ; http://ebmh.bmjjournals.com/ >
+        au < superseded ; 2006 ; Evidence-Based Nursing Volume 9 [superseded] ; 9 ; http://ebn.bmjjournals.com/ >
+        au < superseded ; 2006 ; Emergency Medicine Journal Volume 23 [superseded] ; 23 ; http://emj.bmjjournals.com/ >
+        au < superseded ; 2006 ; Archives of Disease in Childhood - Education and Practice Volume 91 [superseded] ; 91 ; http://ep.bmjjournals.com/ >
+        au < superseded ; 2006 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 91 [superseded] ; 91 ; http://fn.bmjjournals.com/ >
+        au < superseded ; 2006 ; Gut Volume 55 [superseded] ; 55 ; http://gut.bmjjournals.com/ >
+        au < superseded ; 2006 ; Heart Volume 92 [superseded] ; 92 ; http://heart.bmjjournals.com/ >
+        au < superseded ; 2006 ; Injury Prevention Volume 12 [superseded] ; 12 ; http://ip.bmjjournals.com/ >
+        au < superseded ; 2006 ; Journal of Clinical Pathology Volume 59 [superseded] ; 59 ; http://jcp.bmjjournals.com/ >
+        au < superseded ; 2006 ; Journal of Epidemiology & Community Health Volume 60 [superseded] ; 60 ; http://jech.bmjjournals.com/ >
+        au < superseded ; 2006 ; Journal of Medical Ethics Volume 32 [superseded] ; 32 ; http://jme.bmjjournals.com/ >
+        au < superseded ; 2006 ; Journal of Medical Genetics Volume 43 [superseded] ; 43 ; http://jmg.bmjjournals.com/ >
+        au < superseded ; 2006 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 77 [superseded] ; 77 ; http://jnnp.bmjjournals.com/ >
+        au < superseded ; 2006 ; Medical Humanities Volume 31 [superseded] ; 31 ; http://mh.bmjjournals.com/ >
+        au < superseded ; 2006 ; Occupational and Environmental Medicine Volume 63 [superseded] ; 63 ; http://oem.bmjjournals.com/ >
+        au < superseded ; 2006 ; Postgraduate Medical Journal Volume 82 [superseded] ; 82 ; http://pmj.bmjjournals.com/ >
+        au < superseded ; 2006 ; Quality and Safety in Health Care Volume 15 [superseded] ; 15 ; http://qhc.bmjjournals.com/ >
+        au < superseded ; 2006 ; Sexually Transmitted Infections Volume 82 [superseded] ; 82 ; http://sti.bmjjournals.com/ >
+        au < superseded ; 2006 ; Tobacco Control Volume 15 [superseded] ; 15 ; http://tc.bmjjournals.com/ >
+        au < superseded ; 2006 ; Thorax Volume 61 [superseded] ; 61 ; http://thorax.bmjjournals.com/ >
+
+    }
+}
