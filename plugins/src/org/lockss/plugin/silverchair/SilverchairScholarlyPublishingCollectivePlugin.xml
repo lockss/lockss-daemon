@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>3</string>
+        <string>4</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -109,6 +109,7 @@
                     </ul>
             -->
             <string>2, "^https://api\.addthis\.com/oexchange/.*"</string>
+            <string>2,"^https?://(platform-api\.sharethis\.com)/.*"</string>
             <!--
             Rockefeller: https://rupress.org/jem/article-pdf/215/1/1/1018472/jem_20172022.pdf
             -->
@@ -188,7 +189,6 @@
             <string>1,"^https?://(watermark\.silverchair\.com)/"</string>
             <string>1,"^https?://(ajot2\.silverchair-cdn\.com)/"</string>
             <string>1,"^https?://(dupspc\.silverchair-cdn\.com)/"</string>
-            <string>1,"^https?://(platform-api\.sharethis\.com)/"</string>
             <string>1,"^https?://(www\.googletagservices\.com)/"</string>
             <string>2,"%s.*javascript;:", base_url</string>
             <string>2,"%s.*javascript:;", base_url</string>
@@ -279,7 +279,6 @@
             <string>watermark\.silverchair\.com</string>
             <string>ajot2\.silverchair-cdn\.com</string>
             <string>dupspc\.silverchair-cdn\.com</string>
-            <string>platform-api\.sharethis\.com</string>
             <string>www\.googletagservices\.com</string>
         </list>
     </entry>
