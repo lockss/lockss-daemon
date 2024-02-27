@@ -9,6 +9,7 @@ import org.lockss.db.DataSourceUtil;
 import org.lockss.db.DbManager;
 import org.lockss.db.DbManagerSql;
 import org.lockss.laaws.MigrationManager;
+import org.lockss.laaws.V2AuMover;
 import org.lockss.protocol.IdentityManager;
 import org.lockss.protocol.LcapRouter;
 import org.lockss.proxy.ProxyManager;
@@ -127,7 +128,7 @@ public class MigrateSettings extends LockssServlet {
   private void initParamsFromConfig(Configuration cfg) {
     // Migration target
     hostname = cfg.get(MigrateContent.PARAM_HOSTNAME);
-//    cfgUiPort = cfg.get();
+    cfgUiPort = cfg.getInt(V2AuMover.PARAM_CFG_UI_PORT, V2AuMover.DEFAULT_CFG_UI_PORT);
     userName = cfg.get(MigrateContent.PARAM_USERNAME);
     userPass = cfg.get(MigrateContent.PARAM_PASSWORD);
 
@@ -622,6 +623,7 @@ public class MigrateSettings extends LockssServlet {
 
     // Migration target configuration
     mCfg.put(MigrateContent.PARAM_HOSTNAME, hostname);
+    mCfg.put(V2AuMover.PARAM_CFG_UI_PORT, String.valueOf(cfgUiPort));
     mCfg.put(MigrateContent.PARAM_USERNAME, userName);
     mCfg.put(MigrateContent.PARAM_PASSWORD, userPass);
 
