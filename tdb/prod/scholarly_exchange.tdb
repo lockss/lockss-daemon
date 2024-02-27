@@ -215,14 +215,14 @@
     attr[start_stem] = index.php/
     param[base_url] = https://www.intersticios.es/
 
-    au < exists ; 2017 ; Intersticios Volume 11 ; 11 ; 2017 >
-    au < exists ; 2018 ; Intersticios Volume 12 ; 12 ; 2018 >
-    au < exists ; 2019 ; Intersticios Volume 13 ; 13 ; 2019 >
-    au < exists ; 2020 ; Intersticios Volume 14 ; 14 ; 2020 >
-    au < exists ; 2021 ; Intersticios Volume 15 ; 15 ; 2021 >
-    au < expected ; 2022 ; Intersticios Volume 16 ; 16 ; 2022 >
-    au < expected ; 2023 ; Intersticios Volume 17 ; 17 ; 2023 >
-    au < expected ; 2024 ; Intersticios Volume 18 ; 18 ; 2024 >
+    au < manifest ; 2017 ; Intersticios Volume 11 ; 11 ; 2017 >
+    au < manifest ; 2018 ; Intersticios Volume 12 ; 12 ; 2018 >
+    au < manifest ; 2019 ; Intersticios Volume 13 ; 13 ; 2019 >
+    au < manifest ; 2020 ; Intersticios Volume 14 ; 14 ; 2020 >
+    au < manifest ; 2021 ; Intersticios Volume 15 ; 15 ; 2021 >
+    au < manifest ; 2022 ; Intersticios Volume 16 ; 16 ; 2022 >
+    au < manifest ; 2023 ; Intersticios Volume 17 ; 17 ; 2023 >
+    au < manifest ; 2024 ; Intersticios Volume 18 ; 18 ; 2024 >
 
     }
 
