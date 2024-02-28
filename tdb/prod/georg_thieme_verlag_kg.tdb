@@ -2,6 +2,7 @@
 
   publisher <
     name = Georg Thieme Verlag KG
+    info[tester] = 4 ;
   >
 
   provider = Thieme Publishing Group
@@ -54,8 +55,8 @@
     au < released ; 2020 ; 2020 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 55 ; 55 >
     au < released ; 2021 ; 2021 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 56 ; 56 >
     au < released ; 2022 ; 2022 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 57 ; 57 >
-    au < manifest ; 2023 ; 2023 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 58 ; 58 >
-    au < manifest ; 2024 ; 2024 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 59 ; 59 >
+    au < testing ; 2023 ; 2023 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 58 ; 58 >
+    au < testing ; 2024 ; 2024 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 59 ; 59 >
 
   }
 

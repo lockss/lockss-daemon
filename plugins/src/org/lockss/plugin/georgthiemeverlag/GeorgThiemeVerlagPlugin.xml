@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>42</string>
+    <string>43</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -73,7 +73,7 @@
       <string>2,"^%s.*/10[.][0-9a-z]{4,6}/www[.]", base_url</string>
       <string>2,"^%s(?:[^/]+/)?(?:rss/thieme|ejournals/(?:journal|issues|sample|recommend|topten|linkout))", base_url</string>
       <!--  we cannot make assumptions about the characters used in the article identifier part of the url -->
-      <string>1,"^%s(?:[^/]+/)?ejournals/(?:issue|abstract|html|pdf|ris)/10[.][0-9a-z]{4,6}/[^/?&amp;]+(?:[.]pdf|/BIB|[?]issue=.+)?(\?articleLanguage=.*)?", base_url</string>
+      <string>1,"^%s(?:[^/]+/)?ejournals/(?:issue|abstract|html|pdf|ris|xml)/10[.][0-9a-z]{4,6}/[^/?&amp;]+(?:[.]pdf|/BIB|[?]issue=.+|[.]xml)?(\?articleLanguage=.*)?", base_url</string>
       <string>1,"^%s(?:[^/]+/)?ejournals(/confauthlist)?/issue/10[.][0-9a-z]{4,6}/[^/?&amp;]+/grouping/[0-9]+/10[.][0-9a-z]{4,6}/[^/?&amp;]+$", base_url</string>
     </list>
   </entry>
