@@ -276,7 +276,7 @@
 
 {
   publisher <
-    name = London School of Economics and Politics
+    name = London School of Economics and Political Science
   >
 
     provider = Ubiquity Press
@@ -290,16 +290,16 @@
         eissn = 2516-7227
       >
 
-      comment[publisher] = London School of Economics and Politics
+      comment[publisher] = London School of Economics and Political Science
       param[base_url] = https://account.jied.lse.ac.uk/
       param[journal_id] = lse-j-jied
 
-      au < doNotProcess ; 2019 ; 1 ; London School of Economics and Politics Volume 2019 ; 2019 >
-      au < doNotProcess ; 2020 ; 2 ; London School of Economics and Politics Volume 2020 ; 2020 >
-      au < doNotProcess ; 2021 ; 3 ; London School of Economics and Politics Volume 2021 ; 2021 >
-      au < released ; 2022 ; 4 ; London School of Economics and Politics Volume 2022 ; 2022 >
-      au < manifest ; 2023 ; 5 ; London School of Economics and Politics Volume 2023 ; 2023 >
-      au < manifest ; 2024 ; 6 ; London School of Economics and Politics Volume 2024 ; 2024 >
+      au < doNotProcess ; 2019 ; 1 ; London School of Economics and Political Science Volume 2019 ; 2019 >
+      au < doNotProcess ; 2020 ; 2 ; London School of Economics and Political Science Volume 2020 ; 2020 >
+      au < doNotProcess ; 2021 ; 3 ; London School of Economics and Political Science Volume 2021 ; 2021 >
+      au < released ; 2022 ; 4 ; London School of Economics and Political Science Volume 2022 ; 2022 >
+      au < manifest ; 2023 ; 5 ; London School of Economics and Political Science Volume 2023 ; 2023 >
+      au < manifest ; 2024 ; 6 ; London School of Economics and Political Science Volume 2024 ; 2024 >
 
   }
   
@@ -310,7 +310,7 @@
         eissn = 2516-9122
       >
 
-      comment[publisher] = London School of Economics and Politics
+      comment[publisher] = London School of Economics and Political Science
       param[base_url] = https://account.journal.ilpnetwork.org/
       param[journal_id] = lse-j-jltc
 
@@ -331,7 +331,7 @@
         eissn = 2633-4046
       >
 
-      comment[publisher] = London School of Economics and Politics
+      comment[publisher] = London School of Economics and Political Science
       param[base_url] = https://account.ppr.lse.ac.uk/
       param[journal_id] = lse-j-lseppr
 
@@ -350,7 +350,7 @@
         eissn = 2753-5908
       >
 
-      comment[publisher] = London School of Economics and Politics
+      comment[publisher] = London School of Economics and Political Science
       param[base_url] = https://account.philosophyofphysics.lse.ac.uk/
       param[journal_id] = lse-j-pp
 
@@ -367,7 +367,7 @@
         eissn = 1529-7470
       >
 
-      comment[publisher] = London School of Economics and Politics
+      comment[publisher] = London School of Economics and Political Science
       param[base_url] = https://account.economia.lse.ac.uk/
       param[journal_id] = lse-j-elaceaj
 
