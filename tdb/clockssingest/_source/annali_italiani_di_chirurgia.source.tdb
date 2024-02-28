@@ -15,9 +15,10 @@
     plugin = org.lockss.plugin.clockss.aic.ClockssAicSourcePlugin
     implicit < status ; status2 ; year ; name ; param[directory] >
     #param[base_url] = https://clockss-test.lockss.org/sourcefiles/annitalchir-released/
-    #bucket has been tested
+    param[base_url] = https://clockss.lockss.org/sourcefiles/annitalchir-released/
 
-    au < ready ; exists ; 2024 ; Annali Italiani di Chirurgia Source Content 2024 ; 2024 >
+    #2024 test bucket has been tested, mark ready when production is ready
+    au < exists ; exists ; 2024 ; Annali Italiani di Chirurgia Source Content 2024 ; 2024 >
 
   }
 
