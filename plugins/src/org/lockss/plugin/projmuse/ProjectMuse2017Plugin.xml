@@ -46,7 +46,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -187,7 +187,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>30000</long>
+    <long>3000</long>
   </entry>
   <entry>
     <!-- manifest to issue -->
