@@ -20,7 +20,7 @@ import static org.lockss.laaws.MigrationConstants.*;
 public class DBMover extends Worker {
   public static final String DEFAULT_DB_USER = "LOCKSS";
   public static final String DEFAULT_HOST = "localhost";
-  public static final String DEFAULT_V1_PASSWORD = "goodPassword";
+  public static final String DEFAULT_V1_PASSWORD = "insecure";
   private static final long DBSIZE_CHECK_INTERVAL = 2*Constants.SECOND;
   private final Logger log = Logger.getLogger(DBMover.class);
 
