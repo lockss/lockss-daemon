@@ -185,7 +185,7 @@ public class DBMover extends Worker {
   }
 
 
-  private void copyPostgresDb() throws IOException {
+  private void copyPostgresDb() throws IOException, InterruptedException {
     String err =null;
     String v1ConnectionString = createPgConnectionString(v1user, v1password, v1host, v1port, v1dbname);
     String v2ConnectionString = createPgConnectionString(v2dbuser, v2dbpassword, v2dbhost, v2dbport, v2dbname);
@@ -207,12 +207,15 @@ public class DBMover extends Worker {
       log.debug("External process exited with code: " + exitCode);
       if(exitCode != 0) {
         err = "Call to move database failed with exitCode:" + exitCode;
+        throw new IOException(err);
       }
 
     } catch (IOException ioe) {
       err = "Request to move database failed: " + ioe.getMessage();
+      throw ioe;
     } catch (InterruptedException e) {
       err = "Request to move database was interrupted, " + e.getMessage();
+      throw e;
     }
     finally {
       stopUpdater();
