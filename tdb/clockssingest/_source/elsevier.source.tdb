@@ -217,8 +217,8 @@
         au < readySource ; crawling ; 2024 ; Elsevier Source Content 2024_08 ; 2024_08 >
         au < readySource ; crawling ; 2024 ; Elsevier Source Content 2024_09 ; 2024_09 >
         au < readySource ; crawling ; 2024 ; Elsevier Source Content 2024_10 ; 2024_10 >
-        au < manifest ; exists ; 2024 ; Elsevier Source Content 2024_11 ; 2024_11 >
-        au < manifest ; exists ; 2024 ; Elsevier Source Content 2024_12 ; 2024_12 >
+        au < readySource ; crawling ; 2024 ; Elsevier Source Content 2024_11 ; 2024_11 >
+        au < readySource ; crawling ; 2024 ; Elsevier Source Content 2024_12 ; 2024_12 >
         au < expected ; exists ; 2024 ; Elsevier Source Content 2024_13 ; 2024_13 >
         au < expected ; exists ; 2024 ; Elsevier Source Content 2024_14 ; 2024_14 >
 
