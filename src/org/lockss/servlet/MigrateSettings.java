@@ -617,7 +617,7 @@ public class MigrateSettings extends LockssServlet {
     Configuration mCfg = ConfigManager.newConfiguration();
 
     // Internal migration control
-    mCfg.put(MigrationManager.PARAM_MIGRATION_READY, "true");
+    mCfg.put(MigrationManager.PARAM_IS_MIGRATOR_CONFIGURED, "true");
     mCfg.put(MigrationManager.PARAM_IS_MIGRATING, "false");
     mCfg.put(MigrationManager.PARAM_IS_DB_MOVED, "false");
 

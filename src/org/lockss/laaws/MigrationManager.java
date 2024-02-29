@@ -56,8 +56,8 @@ public class MigrationManager extends BaseLockssDaemonManager
   static final String STATUS_ERRORS = "errors";
   static final String STATUS_PROGRESS = "progress";
 
-  public static final String PARAM_MIGRATION_READY = PREFIX + "ready";
-  public static final boolean DEFAULT_MIGRATION_READY = false;
+  public static final String PARAM_IS_MIGRATOR_CONFIGURED = PREFIX + "isConfigured";
+  public static final boolean DEFAULT_IS_MIGRATOR_CONFIGURED = false;
   public static final String PARAM_DEBUG_MODE = PREFIX + "debug";
   public static final boolean DEFAULT_DEBUG_MODE = false;
 
