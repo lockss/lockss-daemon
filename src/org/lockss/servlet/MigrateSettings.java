@@ -419,7 +419,6 @@ public class MigrateSettings extends LockssServlet {
    * database name unmodified for PostgreSQL and MySQL databases.
    */
   private String getShortenedDatabaseName(String databaseName) {
-    log.info("databaseName = " + databaseName);
     if (!StringUtil.isNullString(databaseName))  {
       return new File(databaseName).getName();
     } else {
