@@ -36,6 +36,8 @@ import org.apache.commons.collections.map.LinkedMap;
 import org.apache.commons.io.FileUtils;
 
 import org.lockss.app.*;
+import org.lockss.laaws.MigrationManager;
+import org.lockss.servlet.MigrateContent;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.config.*;
@@ -219,6 +221,11 @@ public class RepositoryManager
     }
   }
 
+  /**
+   * Deletes an AU from the filesystem immediately by moving it into
+   * the "deleted AUs" directory and expiring the "delete thread".
+   * @param au The {@link ArchivalUnit} to delete.
+   */
   public void deleteAu(ArchivalUnit au) {
     if (StringUtil.isNullString(paramMoveDeletedAusTo)) {
       log.warning("MoveDeletedAusTo is not set!");
@@ -434,10 +441,20 @@ public class RepositoryManager
         deleteThreadDeadline.expire();
       }
 
-      // TODO: We need some additional condition or else this will
-      //  start the thread on all machines
-      if (changedKeys.contains(PARAM_MOVE_DELETED_AUS_TO)) {
-        if (paramMoveDeletedAusTo != null) {
+      if (changedKeys.contains(MigrationManager.PARAM_IS_MIGRATING) ||
+          changedKeys.contains(MigrateContent.PARAM_DELETE_AFTER_MIGRATION) ||
+          changedKeys.contains(PARAM_MOVE_DELETED_AUS_TO)) {
+
+        boolean isMigrating = config.getBoolean(
+            MigrationManager.PARAM_IS_MIGRATING,
+            MigrationManager.DEFAULT_IS_MIGRATING);
+
+        boolean deleteAusAfterMigration = config.getBoolean(
+            MigrateContent.PARAM_DELETE_AFTER_MIGRATION,
+            MigrateContent.DEFAULT_DELETE_AFTER_MIGRATION);
+
+        if (isMigrating && deleteAusAfterMigration
+            && !StringUtil.isNullString(paramMoveDeletedAusTo)) {
           startOrKickDeleteAusThread();
         } else {
           stopDeleteAusThread();
