@@ -76,6 +76,8 @@ public class ProjectMuse2017HtmlHashFilterFactory implements FilterFactory {
          * From the crawl filter 
          */
         HtmlNodeFilters.tagWithAttribute("div", "class", "header"),
+        /*Project Muse now has divs with id of header instead of class of header. Keeping both just in case. */
+        HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "breadcrumb"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "right_nav"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "footer"),
