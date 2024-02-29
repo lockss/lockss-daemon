@@ -429,7 +429,7 @@ public class RepositoryManager
 
       if (changedKeys.contains(PARAM_DELETEAUS_INTERVAL)) {
         if (deleteThreadDeadline == null) {
-          deleteThreadDeadline = Deadline.EXPIRED;
+          deleteThreadDeadline = Deadline.in(0);
         }
         deleteThreadDeadline.expire();
       }
