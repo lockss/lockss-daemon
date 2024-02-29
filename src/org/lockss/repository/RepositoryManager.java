@@ -244,6 +244,7 @@ public class RepositoryManager
 
     public void stopDeleteThread() {
       keepGoing = false;
+      deleteThreadDeadline.expire();
     }
 
     @Override
