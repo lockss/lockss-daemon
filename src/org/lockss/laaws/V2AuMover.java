@@ -931,9 +931,6 @@ public class V2AuMover {
             // Remove AU from LOCKSS
             pluginManager.deactivateAu(au);
             pluginManager.deleteAu(au);
-
-            // Remove AU from filesystem
-            repoMgr.deleteAu(au);
           } catch (IOException e) {
             throw new RuntimeException(e);
           }
