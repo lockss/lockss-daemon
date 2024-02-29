@@ -70,7 +70,7 @@ public class MigrateContent extends LockssServlet {
   public static final String PARAM_USERNAME = PREFIX + "username";
   public static final String PARAM_PASSWORD = PREFIX + "password";
   public static final String PARAM_DELETE_AFTER_MIGRATION = PREFIX + "deleteAusAfterMigration";
-  public static final String DEFAULT_DELETE_AFTER_MIGRATION = "false";
+  public static final boolean DEFAULT_DELETE_AFTER_MIGRATION = false;
   public static final String PARAM_AU_SELECT_FILTER=PREFIX +"au_select_filter";
   public static final List<String> DEFAULT_AU_SELECT_FILTER =
     Collections.emptyList();

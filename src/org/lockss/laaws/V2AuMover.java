@@ -31,15 +31,11 @@ import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
-import org.apache.commons.csv.CSVFormat;
-import org.apache.commons.csv.CSVParser;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.crawler.CrawlManager;
 import org.lockss.daemon.LockssRunnable;
-import org.lockss.db.DbManager;
-import org.lockss.db.DbManagerSql;
 import org.lockss.laaws.MigrationManager.OpType;
 import org.lockss.laaws.api.rs.StreamingArtifactsApi;
 import org.lockss.laaws.client.ApiException;
@@ -47,19 +43,15 @@ import org.lockss.laaws.client.V2RestClient;
 import org.lockss.laaws.model.rs.AuidPageInfo;
 import org.lockss.plugin.*;
 import org.lockss.poller.PollManager;
-import org.lockss.protocol.IdentityManager;
-import org.lockss.protocol.LcapRouter;
-import org.lockss.proxy.ProxyManager;
 import org.lockss.repository.RepositoryManager;
-import org.lockss.servlet.ContentServletManager;
 import org.lockss.servlet.MigrateContent;
-import org.lockss.servlet.ServeContent;
 import org.lockss.state.AuState;
 import org.lockss.uiapi.util.DateFormatter;
 import org.lockss.util.*;
-import org.lockss.util.urlconn.LockssUrlConnection;
 
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
@@ -420,6 +412,7 @@ public class V2AuMover {
 
   private OpType opType;
 
+  private boolean isDeleteMigratedAus;
   private boolean isPartialContent = false;
   private boolean checkMissingContent;
 
@@ -479,6 +472,7 @@ public class V2AuMover {
   private boolean globalAbort = false;
 
   PluginManager pluginManager;
+  RepositoryManager repoMgr;
   private final CrawlManager crawlMgr;
   private final PollManager pollMgr;
   MigrationManager migrationMgr;
@@ -490,6 +484,7 @@ public class V2AuMover {
   public V2AuMover() {
     LockssDaemon theDaemon = LockssDaemon.getLockssDaemon();
     pluginManager = theDaemon.getPluginManager();
+    repoMgr = theDaemon.getRepositoryManager();
     crawlMgr = theDaemon.getCrawlManager();
     pollMgr = theDaemon.getPollManager();
     migrationMgr = theDaemon.getMigrationManager();
@@ -546,6 +541,9 @@ public class V2AuMover {
                                     DEFAULT_MAX_RETRY_COUNT);
       retryBackoffDelay = config.getLong(PARAM_RETRY_BACKOFF_DELAY,
                                          DEFAULT_RETRY_BACKOFF_DELAY);
+      isDeleteMigratedAus = config.getBoolean(
+          MigrateContent.PARAM_DELETE_AFTER_MIGRATION,
+          MigrateContent.DEFAULT_DELETE_AFTER_MIGRATION);
       checkMissingContent = config.getBoolean(PARAM_CHECK_MISSING_CONTENT,
                                               DEFAULT_CHECK_MISSING_CONTENT);
 
@@ -901,7 +899,9 @@ public class V2AuMover {
 
   private void setAuMigrationState(ArchivalUnit au,
                                    AuState.MigrationState state) {
-    if (!(migrationMgr.isDaemonInMigrationMode() || migrationMgr.isMigrationInDebugMode())) {
+    // Return if we're not migrating or if we're in debug mode
+    if (!(migrationMgr.isDaemonInMigrationMode() ||
+          migrationMgr.isMigrationInDebugMode())) {
       return;
     }
 
@@ -925,7 +925,19 @@ public class V2AuMover {
         pollMgr.cancelAuPolls(au);
         break;
       case Finished:
-        // TODO: Optionally delete the content; if deleting content -> delete AU (or deactivate?)
+        // Optionally delete the AU from the system
+        if (isDeleteMigratedAus) {
+          try {
+            // Remove AU from LOCKSS
+            pluginManager.deactivateAu(au);
+            pluginManager.deleteAu(au);
+
+            // Remove AU from filesystem
+            repoMgr.deleteAu(au);
+          } catch (IOException e) {
+            throw new RuntimeException(e);
+          }
+        }
     }
   }
   private void moveDatabase(Args args) throws MigrationTaskFailedException {
