@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -106,12 +106,14 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!--bad link-->
+      <string>2,"^https?://%s/IRstyle4\.css", base_url_host</string>
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
-      <string>4,"^%s", base_url</string>
-      <string>1,"^%s(LOCKSSmanifest|index)\.html$", base_url</string>
-      <string>2,"^%sreviews/reviews\.html$", base_url, volume_name</string>
-      <string>1,"^%s%s-[0-9]+/", base_url, volume_name</string>
-      <string>1,"^%sreviews/(revs|sofrev)", base_url, volume_name</string>
+      <string>4,"^https?://%s", base_url_host</string>
+      <string>1,"^https?://%s/ir/(LOCKSSmanifest|index)\.html$", base_url_host</string>
+      <string>2,"^https?://%s/reviews/reviews\.html$", base_url_host, volume_name</string>
+      <string>1,"^https?://%s/ir/%s-[0-9]+/", base_url_host, volume_name</string>
+      <string>1,"^https?://%s/ir/reviews/(revs|sofrev)", base_url_host, volume_name</string>
     </list>
   </entry>
   <entry>
