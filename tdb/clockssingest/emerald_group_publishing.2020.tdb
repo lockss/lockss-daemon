@@ -1884,25 +1884,25 @@
     comment[journal_id] = cr
     #For AUs marked notReady see LXPLUG-2108
 
-    au < notReady ; exists ; 1991 ; Competitiveness Review: An International Business Journal Volume 1 ; 1 ; > #500 error 
-    au < notReady ; exists ; 1992 ; Competitiveness Review: An International Business Journal Volume 2 ; 2 ; > #500 error 
+    au < ready ; exists ; 1991 ; Competitiveness Review: An International Business Journal Volume 1 ; 1 ; > #500 error 
+    au < ready ; exists ; 1992 ; Competitiveness Review: An International Business Journal Volume 2 ; 2 ; > #500 error 
     au < finished ; finished ; 1993 ; Competitiveness Review: An International Business Journal Volume 3 ; 3 ; reingest5.clockss.org:8082 > #500 error 
     au < finished ; frozen ; 1994 ; Competitiveness Review: An International Business Journal Volume 4 ; 4 ; reingest1.clockss.org:8082 > #500 error 
     au < finished ; frozen ; 1995 ; Competitiveness Review: An International Business Journal Volume 5 ; 5 ; reingest2.clockss.org:8085 >
-    au < notReady ; exists ; 1996 ; Competitiveness Review: An International Business Journal Volume 6 ; 6 ; >
+    au < ready ; exists ; 1996 ; Competitiveness Review: An International Business Journal Volume 6 ; 6 ; >
     au < finished ; finished ; 1997 ; Competitiveness Review: An International Business Journal Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 1998 ; Competitiveness Review: An International Business Journal Volume 8 ; 8 ; reingest4.clockss.org:8082 >
-    au < notReady ; exists ; 1999 ; Competitiveness Review: An International Business Journal Volume 9 ; 9 ; >
+    au < ready ; exists ; 1999 ; Competitiveness Review: An International Business Journal Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Competitiveness Review: An International Business Journal Volume 10 ; 10 ; >
-    au < notReady ; exists ; 2001 ; Competitiveness Review: An International Business Journal Volume 11 ; 11 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
-    au < notReady ; exists ; 2002 ; Competitiveness Review: An International Business Journal Volume 12 ; 12 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
-    au < notReady ; exists ; 2003 ; Competitiveness Review: An International Business Journal Volume 13 ; 13 ; > #500 error 
-    au < notReady ; exists ; 2004 ; Competitiveness Review: An International Business Journal Volume 14 ; 14 ; > #500 error 
-    au < notReady ; exists ; 2005 ; Competitiveness Review: An International Business Journal Volume 15 ; 15 ; > #500 error 
-    au < notReady ; exists ; 2006 ; Competitiveness Review: An International Business Journal Volume 16 ; 16 ; > #500 error 
-    au < notReady ; exists ; 2007 ; Competitiveness Review: An International Business Journal Volume 17 ; 17 ; > #500 error 
-    au < notReady ; exists ; 2008 ; Competitiveness Review: An International Business Journal Volume 18 ; 18 ; > #500 error 
-    au < notReady ; exists ; 2009 ; Competitiveness Review: An International Business Journal Volume 19 ; 19 ; > #500 error 
+    au < ready ; exists ; 2001 ; Competitiveness Review: An International Business Journal Volume 11 ; 11 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
+    au < ready ; exists ; 2002 ; Competitiveness Review: An International Business Journal Volume 12 ; 12 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
+    au < ready ; exists ; 2003 ; Competitiveness Review: An International Business Journal Volume 13 ; 13 ; > #500 error 
+    au < ready ; exists ; 2004 ; Competitiveness Review: An International Business Journal Volume 14 ; 14 ; > #500 error 
+    au < ready ; exists ; 2005 ; Competitiveness Review: An International Business Journal Volume 15 ; 15 ; > #500 error 
+    au < ready ; exists ; 2006 ; Competitiveness Review: An International Business Journal Volume 16 ; 16 ; > #500 error 
+    au < ready ; exists ; 2007 ; Competitiveness Review: An International Business Journal Volume 17 ; 17 ; > #500 error 
+    au < ready ; exists ; 2008 ; Competitiveness Review: An International Business Journal Volume 18 ; 18 ; > #500 error 
+    au < ready ; exists ; 2009 ; Competitiveness Review: An International Business Journal Volume 19 ; 19 ; > #500 error 
     au < ingNotReady ; exists ; 2010 ; Competitiveness Review: An International Business Journal Volume 20 ; 20 ; > #500 error 
     au < ingNotReady ; exists ; 2011 ; Competitiveness Review: An International Business Journal Volume 21 ; 21 ; > #500 error 
     au < ingNotReady ; exists ; 2012 ; Competitiveness Review: An International Business Journal Volume 22 ; 22 ; > #500 error 
@@ -1914,7 +1914,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Competitiveness Review: An International Business Journal Volume 28 ; 28 ; >
     au < ingNotReady ; exists ; 2019 ; Competitiveness Review: An International Business Journal Volume 29 ; 29 ; > #500 error 
     au < deepCrawl ; exists ; 2020 ; Competitiveness Review: An International Business Journal Volume 30 ; 30 ; >
-    au < notReady ; exists ; 2021 ; Competitiveness Review: An International Business Journal Volume 31 ; 31 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
+    au < ready ; exists ; 2021 ; Competitiveness Review: An International Business Journal Volume 31 ; 31 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
     au < deepCrawl ; exists ; 2022 ; Competitiveness Review: An International Business Journal Volume 32 ; 32 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
     au < deepCrawl ; exists ; 2023 ; Competitiveness Review: An International Business Journal Volume 33 ; 33 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
     au < manifest ; exists ; 2024 ; Competitiveness Review: An International Business Journal Volume 34 ; 34 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
@@ -5992,7 +5992,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Social Economics Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Social Economics Volume 45 ; 45 ; >
     au < finished ; crawling ; 2019 ; International Journal of Social Economics Volume 46 ; 46 ; reingest4.clockss.org:8082 >
-    au < notReady ; exists ; 2020 ; International Journal of Social Economics Volume 47 ; 47 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_IJSE-05-2019-0310/urn:emeraldgroup.com:asset:id:binary:IJSE-05-2019-0310_mmc1.doc
+    au < ready ; exists ; 2020 ; International Journal of Social Economics Volume 47 ; 47 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_IJSE-05-2019-0310/urn:emeraldgroup.com:asset:id:binary:IJSE-05-2019-0310_mmc1.doc
     au < deepCrawl ; exists ; 2021 ; International Journal of Social Economics Volume 48 ; 48 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Social Economics Volume 49 ; 49 ; >
     au < deepCrawl ; exists ; 2023 ; International Journal of Social Economics Volume 50 ; 50 ; >
@@ -7693,7 +7693,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Fashion Marketing and Management Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Fashion Marketing and Management Volume 22 ; 22 ; >
     au < finished ; crawling ; 2019 ; Journal of Fashion Marketing and Management Volume 23 ; 23 ; reingest2.clockss.org:8085 >
-    au < notReady ; exists ; 2020 ; Journal of Fashion Marketing and Management Volume 24 ; 24 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/JFMM-10-2018-0138/full/html
+    au < ready ; exists ; 2020 ; Journal of Fashion Marketing and Management Volume 24 ; 24 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/JFMM-10-2018-0138/full/html
     au < deepCrawl ; exists ; 2021 ; Journal of Fashion Marketing and Management Volume 25 ; 25 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Fashion Marketing and Management Volume 26 ; 26 ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Fashion Marketing and Management Volume 27 ; 27 ; >
@@ -7768,7 +7768,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Financial Economic Policy Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Financial Economic Policy Volume 10 ; 10 ; >
     au < finished ; crawling ; 2019 ; Journal of Financial Economic Policy Volume 11 ; 11 ; reingest1.clockss.org:8082 >
-    au < notReady ; exists ; 2020 ; Journal of Financial Economic Policy Volume 12 ; 12 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/JFEP-02-2019-0036/full/html
+    au < ready ; exists ; 2020 ; Journal of Financial Economic Policy Volume 12 ; 12 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/JFEP-02-2019-0036/full/html
     au < deepCrawl ; exists ; 2021 ; Journal of Financial Economic Policy Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Financial Economic Policy Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Financial Economic Policy Volume 15 ; 15 ; >
@@ -9944,7 +9944,7 @@
     au < finished ; manifest ; 2006 ; Library Hi Tech News Volume 23 ; 23 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2007 ; Library Hi Tech News Volume 24 ; 24 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2008 ; Library Hi Tech News Volume 25 ; 25 ; reingest5.clockss.org:8082 >
-    au < notReady ; exists ; 2009 ; Library Hi Tech News Volume 26 ; 26 ; > #403 Forbidden
+    au < ready ; exists ; 2009 ; Library Hi Tech News Volume 26 ; 26 ; > #403 Forbidden
     au < finished ; manifest ; 2010 ; Library Hi Tech News Volume 27 ; 27 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; Library Hi Tech News Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2012 ; Library Hi Tech News Volume 29 ; 29 ; reingest1.clockss.org:8082 >
@@ -10014,7 +10014,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Library Management Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Library Management Volume 39 ; 39 ; >
     au < finished ; manifest ; 2019 ; Library Management Volume 40 ; 40 ; reingest5.clockss.org:8082 >
-    au < notReady ; exists ; 2020 ; Library Management Volume 41 ; 41 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/LM-02-2017%200022/full/pdf?title=libraries-and-technology-canadian-and-malaysian-copyright-exceptions
+    au < ready ; exists ; 2020 ; Library Management Volume 41 ; 41 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/LM-02-2017%200022/full/pdf?title=libraries-and-technology-canadian-and-malaysian-copyright-exceptions
     au < deepCrawl ; exists ; 2021 ; Library Management Volume 42 ; 42 ; >
     au < deepCrawl ; exists ; 2022 ; Library Management Volume 43 ; 43 ; >
     au < deepCrawl ; exists ; 2023 ; Library Management Volume 44 ; 44 ; >
@@ -11928,7 +11928,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Property Management Volume 36 ; 36 ; >
     au < finished ; manifest ; 2019 ; Property Management Volume 37 ; 37 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Property Management Volume 38 ; 38 ; >
-    au < notReady ; exists ; 2021 ; Property Management Volume 39 ; 39 ; > #500 https://www.emerald.com/insight/content/doi/10.1108/PM-03-2020-0018/full/html
+    au < ready ; exists ; 2021 ; Property Management Volume 39 ; 39 ; > #500 https://www.emerald.com/insight/content/doi/10.1108/PM-03-2020-0018/full/html
     au < deepCrawl ; exists ; 2022 ; Property Management Volume 40 ; 40 ; > #500 https://www.emerald.com/insight/content/doi/10.1108/PM-03-2020-0018/full/html
     au < deepCrawl ; exists ; 2023 ; Property Management Volume 41 ; 41 ; > #500 https://www.emerald.com/insight/content/doi/10.1108/PM-03-2020-0018/full/html
     au < manifest ; exists ; 2024 ; Property Management Volume 42 ; 42 ; > #500 https://www.emerald.com/insight/content/doi/10.1108/PM-03-2020-0018/full/html
