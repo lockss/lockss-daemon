@@ -1,0 +1,166 @@
+<!--
+
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>development</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.lsuia.ClockssLSUIAJournalPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>3</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Lviv State University of Internal Affairs Journal Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Lviv State University of Internal Affairs Journal Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <list>
+      <!--
+      https://sls-journal.com.ua/en/archive
+      https://sls-journal.com.ua/en/journals/tom-6-3-2023-->
+      <!--<string>"%sen/journals/tom-6-3-%d", base_url, year</string>-->
+      <string>"%s/en/archive", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"%s/en/archive", base_url</string>
+      <string>1,"%sen/journals/tom", base_url</string>
+      <string>1,"%sen/article/download/",base_url</string>
+    </list>
+  </entry>
+  <!--Publisher did not setup the permission statement-->
+  <entry>
+    <string>au_permission_url</string>
+    <string>"http://clockss-ingest.lockss.org/clockss.txt"</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>1,"%sen/article/download/",base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_crawl_seed_factory</string>
+    <string>org.lockss.plugin.lsuia.LSUIACrawlSeedFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.lsuia.LSUIAArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.lsuia.LSUIAArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.lsuia.LSUIAHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config -->
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>sls-journal\.com\.ua</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <list>
+      <string>[.](css|js|svg)([?].+)?$</string>
+      <string>/i/[^.?]+[.](gif|jpe?g|png)$</string>
+      <string>/auid=.*$</string>
+    </list>
+  </entry>
+  <entry>
+    <!-- these will not count towards poll results but will replicate from peer if above -->
+    <string>au_url_poll_result_weight</string>
+    <list>
+      <string>"[.](css|js|svg)([?].+)?$", 0</string>
+      <string>"/i/[^.?]+[.](gif|jpe?g|png)$", 0</string>
+      <string>"/auid=.*$", 0</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+</map>
