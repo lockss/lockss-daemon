@@ -31,15 +31,15 @@
       au < manifest ; exists ; 2009 ; Dental Journal (Majalah Kedokteran Gigi) Volume 42 ; 42 ; 2009 ; >
       au < manifest ; exists ; 2010 ; Dental Journal (Majalah Kedokteran Gigi) Volume 43 ; 43 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Dental Journal (Majalah Kedokteran Gigi) Volume 44 ; 44 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; Dental Journal (Majalah Kedokteran Gigi) Volume 45 ; 45 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; Dental Journal (Majalah Kedokteran Gigi) Volume 46 ; 46 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; Dental Journal (Majalah Kedokteran Gigi) Volume 47 ; 47 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; Dental Journal (Majalah Kedokteran Gigi) Volume 48 ; 48 ; 2015 ; >
-      au < frozen ; exists ; 2016 ; Dental Journal (Majalah Kedokteran Gigi) Volume 49 ; 49 ; 2016 ; >
+      au < finished ; manifest ; 2012 ; Dental Journal (Majalah Kedokteran Gigi) Volume 45 ; 45 ; 2012 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2013 ; Dental Journal (Majalah Kedokteran Gigi) Volume 46 ; 46 ; 2013 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2014 ; Dental Journal (Majalah Kedokteran Gigi) Volume 47 ; 47 ; 2014 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; Dental Journal (Majalah Kedokteran Gigi) Volume 48 ; 48 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; Dental Journal (Majalah Kedokteran Gigi) Volume 49 ; 49 ; 2016 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Dental Journal (Majalah Kedokteran Gigi) Volume 50 ; 50 ; 2017 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2018 ; Dental Journal (Majalah Kedokteran Gigi) Volume 51 ; 51 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; Dental Journal (Majalah Kedokteran Gigi) Volume 52 ; 52 ; 2019 ; >
-      au < frozen ; exists ; 2020 ; Dental Journal (Majalah Kedokteran Gigi) Volume 53 ; 53 ; 2020 ; >
+      au < finished ; manifest ; 2018 ; Dental Journal (Majalah Kedokteran Gigi) Volume 51 ; 51 ; 2018 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; Dental Journal (Majalah Kedokteran Gigi) Volume 52 ; 52 ; 2019 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2020 ; Dental Journal (Majalah Kedokteran Gigi) Volume 53 ; 53 ; 2020 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2021 ; Dental Journal (Majalah Kedokteran Gigi) Volume 54 ; 54 ; 2021 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Dental Journal (Majalah Kedokteran Gigi) Volume 55 ; 55 ; 2022 ; >
       au < crawling ; exists ; 2023 ; Dental Journal (Majalah Kedokteran Gigi) Volume 56 ; 56 ; 2023 ; >
@@ -78,14 +78,14 @@
       au < manifest ; exists ; 2010 ; Yuridika Volume 25 ; 25 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Yuridika Volume 26 ; 26 ; 2011 ; >
       au < finished ; finished ; 2012 ; Yuridika Volume 27 ; 27 ; 2012 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2013 ; Yuridika Volume 28 ; 28 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; Yuridika Volume 29 ; 29 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; Yuridika Volume 30 ; 30 ; 2015 ; >
-      au < frozen ; exists ; 2016 ; Yuridika Volume 31 ; 31 ; 2016 ; >
-      au < frozen ; exists ; 2017 ; Yuridika Volume 32 ; 32 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; Yuridika Volume 33 ; 33 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; Yuridika Volume 34 ; 34 ; 2019 ; >
-      au < frozen ; exists ; 2020 ; Yuridika Volume 35 ; 35 ; 2020 ; >
+      au < finished ; manifest ; 2013 ; Yuridika Volume 28 ; 28 ; 2013 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; Yuridika Volume 29 ; 29 ; 2014 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; Yuridika Volume 30 ; 30 ; 2015 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; Yuridika Volume 31 ; 31 ; 2016 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2017 ; Yuridika Volume 32 ; 32 ; 2017 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Yuridika Volume 33 ; 33 ; 2018 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Yuridika Volume 34 ; 34 ; 2019 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Yuridika Volume 35 ; 35 ; 2020 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2021 ; Yuridika Volume 36 ; 36 ; 2021 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Yuridika Volume 37 ; 37 ; 2022 ; >
       au < crawling ; exists ; 2023 ; Yuridika Volume 38 ; 38 ; 2023 ; >
@@ -103,12 +103,12 @@
       param[journal_id] = MKP
 
       au < finished ; finished ; 2014 ; Masyarakat, Kebudayaan dan Politik Volume 27 ; 27 ; 2014 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2015 ; Masyarakat, Kebudayaan dan Politik Volume 28 ; 28 ; 2015 ; >
-      au < frozen ; exists ; 2016 ; Masyarakat, Kebudayaan dan Politik Volume 29 ; 29 ; 2016 ; >
+      au < finished ; manifest ; 2015 ; Masyarakat, Kebudayaan dan Politik Volume 28 ; 28 ; 2015 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; Masyarakat, Kebudayaan dan Politik Volume 29 ; 29 ; 2016 ; reingest3.clockss.org:8083 >
       au < manifest ; exists ; 2017 ; Masyarakat, Kebudayaan dan Politik Volume 30 ; 30 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; Masyarakat, Kebudayaan dan Politik Volume 31 ; 31 ; 2018 ; >
+      au < finished ; manifest ; 2018 ; Masyarakat, Kebudayaan dan Politik Volume 31 ; 31 ; 2018 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Masyarakat, Kebudayaan dan Politik Volume 32 ; 32 ; 2019 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2020 ; Masyarakat, Kebudayaan dan Politik Volume 33 ; 33 ; 2020 ; >
+      au < deepCrawl ; exists ; 2020 ; Masyarakat, Kebudayaan dan Politik Volume 33 ; 33 ; 2020 ; >
       au < finished ; crawling ; 2021 ; Masyarakat, Kebudayaan dan Politik Volume 34 ; 34 ; 2021 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; Masyarakat, Kebudayaan dan Politik Volume 35 ; 35 ; 2022 ; >
       au < manifest ; exists ; 2023 ; Masyarakat, Kebudayaan dan Politik Volume 36 ; 36 ; 2023 ; >
@@ -130,14 +130,14 @@
       au < manifest ; exists ; 2009 ; Jurnal Ners Volume 4 ; 4 ; 2009 ; >
       au < manifest ; exists ; 2010 ; Jurnal Ners Volume 5 ; 5 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Jurnal Ners Volume 6 ; 6 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; Jurnal Ners Volume 7 ; 7 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; Jurnal Ners Volume 8 ; 8 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; Jurnal Ners Volume 9 ; 9 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; Jurnal Ners Volume 10 ; 10 ; 2015 ; >
-      au < frozen ; exists ; 2016 ; Jurnal Ners Volume 11 ; 11 ; 2016 ; >
+      au < finished ; manifest ; 2012 ; Jurnal Ners Volume 7 ; 7 ; 2012 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; Jurnal Ners Volume 8 ; 8 ; 2013 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; Jurnal Ners Volume 9 ; 9 ; 2014 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2015 ; Jurnal Ners Volume 10 ; 10 ; 2015 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; Jurnal Ners Volume 11 ; 11 ; 2016 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Jurnal Ners Volume 12 ; 12 ; 2017 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2018 ; Jurnal Ners Volume 13 ; 13 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; Jurnal Ners Volume 14 ; 14 ; 2019 ; >
+      au < finished ; manifest ; 2018 ; Jurnal Ners Volume 13 ; 13 ; 2018 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; Jurnal Ners Volume 14 ; 14 ; 2019 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; Jurnal Ners Volume 15 ; 15 ; 2020 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; Jurnal Ners Volume 16 ; 16 ; 2021 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Jurnal Ners Volume 17 ; 17 ; 2022 ; >
@@ -156,10 +156,10 @@
       param[journal_id] = FMI
 
       au < finished ; finished ; 2015 ; Folia Medica Indonesiana Volume 51 ; 51 ; 2015 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2016 ; Folia Medica Indonesiana Volume 52 ; 52 ; 2016 ; >
-      au < frozen ; exists ; 2017 ; Folia Medica Indonesiana Volume 53 ; 53 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; Folia Medica Indonesiana Volume 54 ; 54 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; Folia Medica Indonesiana Volume 55 ; 55 ; 2019 ; >
+      au < finished ; manifest ; 2016 ; Folia Medica Indonesiana Volume 52 ; 52 ; 2016 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Folia Medica Indonesiana Volume 53 ; 53 ; 2017 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Folia Medica Indonesiana Volume 54 ; 54 ; 2018 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2019 ; Folia Medica Indonesiana Volume 55 ; 55 ; 2019 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2020 ; Folia Medica Indonesiana Volume 56 ; 56 ; 2020 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; Folia Medica Indonesiana Volume 57 ; 57 ; 2021 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2022 ; Folia Medica Indonesiana Volume 58 ; 58 ; 2022 ; >
@@ -179,14 +179,14 @@
 
       au < finished ; frozen ; 2010 ; Indonesian Journal of Tropical and Infectious Disease Volume 1 ; 1 ; 2010 ; reingest3.clockss.org:8083 >
       au < manifest ; exists ; 2011 ; Indonesian Journal of Tropical and Infectious Disease Volume 2 ; 2 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; Indonesian Journal of Tropical and Infectious Disease Volume 3 ; 3 ; 2012 ; >
+      au < finished ; manifest ; 2012 ; Indonesian Journal of Tropical and Infectious Disease Volume 3 ; 3 ; 2012 ; reingest5.clockss.org:8082 >
       au < manifest ; exists ; 2013 ; Indonesian Journal of Tropical and Infectious Disease Volume 4 ; 4 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; Indonesian Journal of Tropical and Infectious Disease Volume 5 ; 5 ; 2014 ; >
+      au < finished ; manifest ; 2014 ; Indonesian Journal of Tropical and Infectious Disease Volume 5 ; 5 ; 2014 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Indonesian Journal of Tropical and Infectious Disease Volume 6 ; 6 ; 2015 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2016 ; Indonesian Journal of Tropical and Infectious Disease Volume 7 ; 7 ; 2016 ; >
-      au < frozen ; exists ; 2017 ; Indonesian Journal of Tropical and Infectious Disease Volume 8 ; 8 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; Indonesian Journal of Tropical and Infectious Disease Volume 9 ; 9 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; Indonesian Journal of Tropical and Infectious Disease Volume 10 ; 10 ; 2019 ; >
+      au < finished ; manifest ; 2016 ; Indonesian Journal of Tropical and Infectious Disease Volume 7 ; 7 ; 2016 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2017 ; Indonesian Journal of Tropical and Infectious Disease Volume 8 ; 8 ; 2017 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; Indonesian Journal of Tropical and Infectious Disease Volume 9 ; 9 ; 2018 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Indonesian Journal of Tropical and Infectious Disease Volume 10 ; 10 ; 2019 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Indonesian Journal of Tropical and Infectious Disease Volume 11 ; 11 ; 2020 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2021 ; Indonesian Journal of Tropical and Infectious Disease Volume 12 ; 12 ; 2021 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Indonesian Journal of Tropical and Infectious Disease Volume 13 ; 13 ; 2022 ; >
@@ -205,10 +205,10 @@
       param[journal_id] = JISEBI
 
       au < finished ; finished ; 2015 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 1 ; 1 ; 2015 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2016 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 2 ; 2 ; 2016 ; >
-      au < frozen ; exists ; 2017 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 3 ; 3 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 4 ; 4 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 5 ; 5 ; 2019 ; >
+      au < finished ; manifest ; 2016 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 2 ; 2 ; 2016 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 3 ; 3 ; 2017 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 4 ; 4 ; 2018 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2019 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 5 ; 5 ; 2019 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2020 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 6 ; 6 ; 2020 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2021 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 7 ; 7 ; 2021 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Journal of Information Systems Engineering and Business Intelligence (JISEBI) Volume 8 ; 8 ; 2022 ; >
@@ -227,10 +227,10 @@
       param[journal_id] = mog
 
       au < finished ; finished ; 2015 ; Majalah Obstetri dan Ginekologi Volume 23 ; 23 ; 2015 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2016 ; Majalah Obstetri dan Ginekologi Volume 24 ; 24 ; 2016 ; >
-      au < frozen ; exists ; 2017 ; Majalah Obstetri dan Ginekologi Volume 25 ; 25 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; Majalah Obstetri dan Ginekologi Volume 26 ; 26 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; Majalah Obstetri dan Ginekologi Volume 27 ; 27 ; 2019 ; >
+      au < finished ; manifest ; 2016 ; Majalah Obstetri dan Ginekologi Volume 24 ; 24 ; 2016 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Majalah Obstetri dan Ginekologi Volume 25 ; 25 ; 2017 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; Majalah Obstetri dan Ginekologi Volume 26 ; 26 ; 2018 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Majalah Obstetri dan Ginekologi Volume 27 ; 27 ; 2019 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2020 ; Majalah Obstetri dan Ginekologi Volume 28 ; 28 ; 2020 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; Majalah Obstetri dan Ginekologi Volume 29 ; 29 ; 2021 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2022 ; Majalah Obstetri dan Ginekologi Volume 30 ; 30 ; 2022 ; >
@@ -249,11 +249,11 @@
       param[journal_id] = BIKK
 
       au < finished ; finished ; 2014 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 26 ; 26 ; 2014 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2015 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 27 ; 27 ; 2015 ; >
-      au < frozen ; exists ; 2016 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 28 ; 28 ; 2016 ; >
-      au < frozen ; exists ; 2017 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 29 ; 29 ; 2017 ; >
+      au < finished ; manifest ; 2015 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 27 ; 27 ; 2015 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 28 ; 28 ; 2016 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2017 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 29 ; 29 ; 2017 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2018 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 30 ; 30 ; 2018 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2019 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 31 ; 31 ; 2019 ; >
+      au < finished ; manifest ; 2019 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 31 ; 31 ; 2019 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 32 ; 32 ; 2020 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2021 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 33 ; 33 ; 2021 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Berkala Ilmu Kesehatan Kulit dan Kelamin Volume 34 ; 34 ; 2022 ; >
@@ -272,13 +272,13 @@
       param[journal_id] = MOZAIK
 
       au < finished ; finished ; 2013 ; Mozaik Humaniora Volume 13 ; 13 ; 2013 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2014 ; Mozaik Humaniora Volume 14 ; 14 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; Mozaik Humaniora Volume 15 ; 15 ; 2015 ; >
-      au < frozen ; exists ; 2016 ; Mozaik Humaniora Volume 16 ; 16 ; 2016 ; >
+      au < finished ; manifest ; 2014 ; Mozaik Humaniora Volume 14 ; 14 ; 2014 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; Mozaik Humaniora Volume 15 ; 15 ; 2015 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; Mozaik Humaniora Volume 16 ; 16 ; 2016 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Mozaik Humaniora Volume 17 ; 17 ; 2017 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2018 ; Mozaik Humaniora Volume 18 ; 18 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; Mozaik Humaniora Volume 19 ; 19 ; 2019 ; >
-      au < frozen ; exists ; 2020 ; Mozaik Humaniora Volume 20 ; 20 ; 2020 ; >
+      au < finished ; manifest ; 2018 ; Mozaik Humaniora Volume 18 ; 18 ; 2018 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Mozaik Humaniora Volume 19 ; 19 ; 2019 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2020 ; Mozaik Humaniora Volume 20 ; 20 ; 2020 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2021 ; Mozaik Humaniora Volume 21 ; 21 ; 2021 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Mozaik Humaniora Volume 22 ; 22 ; 2022 ; >
       au < crawling ; exists ; 2023 ; Mozaik Humaniora Volume 23 ; 23 ; 2023 ; >
@@ -295,11 +295,11 @@
 
       param[journal_id] = JGS
 
-      au < frozen ; exists ; 2015 ; Global Strategis Volume 9 ; 9 ; 2015 ; >
+      au < finished ; manifest ; 2015 ; Global Strategis Volume 9 ; 9 ; 2015 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2016 ; Global Strategis Volume 10 ; 10 ; 2016 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2017 ; Global Strategis Volume 11 ; 11 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; Global Strategis Volume 12 ; 12 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; Global Strategis Volume 13 ; 13 ; 2019 ; >
+      au < finished ; manifest ; 2017 ; Global Strategis Volume 11 ; 11 ; 2017 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Global Strategis Volume 12 ; 12 ; 2018 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Global Strategis Volume 13 ; 13 ; 2019 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; Global Strategis Volume 14 ; 14 ; 2020 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2021 ; Global Strategis Volume 15 ; 15 ; 2021 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Global Strategis Volume 16 ; 16 ; 2022 ; >
@@ -318,11 +318,11 @@
       param[journal_id] = JBE
 
       au < finished ; finished ; 2014 ; Jurnal Berkala Epidemiologi Volume 2 ; 2 ; 2014 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2015 ; Jurnal Berkala Epidemiologi Volume 3 ; 3 ; 2015 ; >
-      au < frozen ; exists ; 2016 ; Jurnal Berkala Epidemiologi Volume 4 ; 4 ; 2016 ; >
-      au < frozen ; exists ; 2017 ; Jurnal Berkala Epidemiologi Volume 5 ; 5 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; Jurnal Berkala Epidemiologi Volume 6 ; 6 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; Jurnal Berkala Epidemiologi Volume 7 ; 7 ; 2019 ; >
+      au < finished ; manifest ; 2015 ; Jurnal Berkala Epidemiologi Volume 3 ; 3 ; 2015 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; Jurnal Berkala Epidemiologi Volume 4 ; 4 ; 2016 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Jurnal Berkala Epidemiologi Volume 5 ; 5 ; 2017 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Jurnal Berkala Epidemiologi Volume 6 ; 6 ; 2018 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Jurnal Berkala Epidemiologi Volume 7 ; 7 ; 2019 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2020 ; Jurnal Berkala Epidemiologi Volume 8 ; 8 ; 2020 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; Jurnal Berkala Epidemiologi Volume 9 ; 9 ; 2021 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2022 ; Jurnal Berkala Epidemiologi Volume 10 ; 10 ; 2022 ; >
@@ -340,12 +340,12 @@
 
       param[journal_id] = MGI
 
-      au < frozen ; exists ; 2015 ; Media Gizi Indonesia Volume 10 ; 10 ; 2015 ; >
+      au < finished ; manifest ; 2015 ; Media Gizi Indonesia Volume 10 ; 10 ; 2015 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2016 ; Media Gizi Indonesia Volume 11 ; 11 ; 2016 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2017 ; Media Gizi Indonesia Volume 12 ; 12 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; Media Gizi Indonesia Volume 13 ; 13 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; Media Gizi Indonesia Volume 14 ; 14 ; 2019 ; >
-      au < frozen ; exists ; 2020 ; Media Gizi Indonesia Volume 15 ; 15 ; 2020 ; >
+      au < finished ; manifest ; 2017 ; Media Gizi Indonesia Volume 12 ; 12 ; 2017 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Media Gizi Indonesia Volume 13 ; 13 ; 2018 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Media Gizi Indonesia Volume 14 ; 14 ; 2019 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Media Gizi Indonesia Volume 15 ; 15 ; 2020 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2021 ; Media Gizi Indonesia Volume 16 ; 16 ; 2021 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; Media Gizi Indonesia Volume 17 ; 17 ; 2022 ; >
       au < crawling ; exists ; 2023 ; Media Gizi Indonesia Volume 18 ; 18 ; 2023 ; >
@@ -362,11 +362,11 @@
 
       param[journal_id] = JAKI
 
-      au < frozen ; exists ; 2015 ; Jurnal Administrasi Kesehatan Indonesia Volume 3 ; 3 ; 2015 ; >
-      au < frozen ; exists ; 2016 ; Jurnal Administrasi Kesehatan Indonesia Volume 4 ; 4 ; 2016 ; >
-      au < frozen ; exists ; 2017 ; Jurnal Administrasi Kesehatan Indonesia Volume 5 ; 5 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; Jurnal Administrasi Kesehatan Indonesia Volume 6 ; 6 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; Jurnal Administrasi Kesehatan Indonesia Volume 7 ; 7 ; 2019 ; >
+      au < finished ; manifest ; 2015 ; Jurnal Administrasi Kesehatan Indonesia Volume 3 ; 3 ; 2015 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; Jurnal Administrasi Kesehatan Indonesia Volume 4 ; 4 ; 2016 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2017 ; Jurnal Administrasi Kesehatan Indonesia Volume 5 ; 5 ; 2017 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Jurnal Administrasi Kesehatan Indonesia Volume 6 ; 6 ; 2018 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Jurnal Administrasi Kesehatan Indonesia Volume 7 ; 7 ; 2019 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2020 ; Jurnal Administrasi Kesehatan Indonesia Volume 8 ; 8 ; 2020 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; Jurnal Administrasi Kesehatan Indonesia Volume 9 ; 9 ; 2021 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Jurnal Administrasi Kesehatan Indonesia Volume 10 ; 10 ; 2022 ; >
@@ -385,14 +385,14 @@
       param[journal_id] = JIPK
 
       au < finished ; finished ; 2011 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 3 ; 3 ; 2011 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2012 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 4 ; 4 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 5 ; 5 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 6 ; 6 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 7 ; 7 ; 2015 ; >
-      au < frozen ; exists ; 2016 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 8 ; 8 ; 2016 ; >
-      au < frozen ; exists ; 2017 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 9 ; 9 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 10 ; 10 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 11 ; 11 ; 2019 ; >
+      au < finished ; manifest ; 2012 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 4 ; 4 ; 2012 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2013 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 5 ; 5 ; 2013 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 6 ; 6 ; 2014 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 7 ; 7 ; 2015 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 8 ; 8 ; 2016 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2017 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 9 ; 9 ; 2017 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 10 ; 10 ; 2018 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 11 ; 11 ; 2019 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 12 ; 12 ; 2020 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2021 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 13 ; 13 ; 2021 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 14 ; 14 ; 2022 ; >
@@ -410,9 +410,9 @@
 
       param[journal_id] = AMNT
 
-      au < frozen ; exists ; 2017 ; Amerta Nutrition Volume 1 ; 1 ; 2017 ; >
+      au < finished ; manifest ; 2017 ; Amerta Nutrition Volume 1 ; 1 ; 2017 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; Amerta Nutrition Volume 2 ; 2 ; 2018 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2019 ; Amerta Nutrition Volume 3 ; 3 ; 2019 ; >
+      au < finished ; manifest ; 2019 ; Amerta Nutrition Volume 3 ; 3 ; 2019 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Amerta Nutrition Volume 4 ; 4 ; 2020 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; Amerta Nutrition Volume 5 ; 5 ; 2021 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2022 ; Amerta Nutrition Volume 6 ; 6 ; 2022 ; >
@@ -429,12 +429,12 @@
 
       param[journal_id] = RLJ
 
-      au < frozen ; exists ; 2015 ; Record and Library Journal Volume 1 ; 1 ; 2015 ; >
-      au < frozen ; exists ; 2016 ; Record and Library Journal Volume 2 ; 2 ; 2016 ; >
-      au < frozen ; exists ; 2017 ; Record and Library Journal Volume 3 ; 3 ; 2017 ; >
+      au < finished ; manifest ; 2015 ; Record and Library Journal Volume 1 ; 1 ; 2015 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; Record and Library Journal Volume 2 ; 2 ; 2016 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2017 ; Record and Library Journal Volume 3 ; 3 ; 2017 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Record and Library Journal Volume 4 ; 4 ; 2018 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2019 ; Record and Library Journal Volume 5 ; 5 ; 2019 ; >
-      au < frozen ; exists ; 2020 ; Record and Library Journal Volume 6 ; 6 ; 2020 ; >
+      au < finished ; manifest ; 2019 ; Record and Library Journal Volume 5 ; 5 ; 2019 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Record and Library Journal Volume 6 ; 6 ; 2020 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; Record and Library Journal Volume 7 ; 7 ; 2021 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; Record and Library Journal Volume 8 ; 8 ; 2022 ; >
       au < crawling ; exists ; 2023 ; Record and Library Journal Volume 9 ; 9 ; 2023 ; >
@@ -451,10 +451,10 @@
 
       param[journal_id] = JEBIS
 
-      au < frozen ; exists ; 2015 ; Jurnal Ekonomi dan Bisnis Islam Volume 1 ; 1 ; 2015 ; >
-      au < frozen ; exists ; 2016 ; Jurnal Ekonomi dan Bisnis Islam Volume 2 ; 2 ; 2016 ; >
-      au < frozen ; exists ; 2017 ; Jurnal Ekonomi dan Bisnis Islam Volume 3 ; 3 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; Jurnal Ekonomi dan Bisnis Islam Volume 4 ; 4 ; 2018 ; >
+      au < finished ; manifest ; 2015 ; Jurnal Ekonomi dan Bisnis Islam Volume 1 ; 1 ; 2015 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; Jurnal Ekonomi dan Bisnis Islam Volume 2 ; 2 ; 2016 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2017 ; Jurnal Ekonomi dan Bisnis Islam Volume 3 ; 3 ; 2017 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Jurnal Ekonomi dan Bisnis Islam Volume 4 ; 4 ; 2018 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Jurnal Ekonomi dan Bisnis Islam Volume 5 ; 5 ; 2019 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; Jurnal Ekonomi dan Bisnis Islam Volume 6 ; 6 ; 2020 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; Jurnal Ekonomi dan Bisnis Islam Volume 7 ; 7 ; 2021 ; reingest5.clockss.org:8082 >
@@ -478,12 +478,12 @@
       au < manifest ; exists ; 2010 ; Jurnal Manajemen Teori dan Terapan Volume 3 ; 3 ; 2010 ; >
       au < manifest ; exists ; 2011 ; Jurnal Manajemen Teori dan Terapan Volume 4 ; 4 ; 2011 ; >
       au < finished ; frozen ; 2012 ; Jurnal Manajemen Teori dan Terapan Volume 5 ; 5 ; 2012 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2013 ; Jurnal Manajemen Teori dan Terapan Volume 6 ; 6 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; Jurnal Manajemen Teori dan Terapan Volume 7 ; 7 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; Jurnal Manajemen Teori dan Terapan Volume 8 ; 8 ; 2015 ; >
-      au < frozen ; exists ; 2016 ; Jurnal Manajemen Teori dan Terapan Volume 9 ; 9 ; 2016 ; >
-      au < frozen ; exists ; 2017 ; Jurnal Manajemen Teori dan Terapan Volume 10 ; 10 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; Jurnal Manajemen Teori dan Terapan Volume 11 ; 11 ; 2018 ; >
+      au < finished ; manifest ; 2013 ; Jurnal Manajemen Teori dan Terapan Volume 6 ; 6 ; 2013 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; Jurnal Manajemen Teori dan Terapan Volume 7 ; 7 ; 2014 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2015 ; Jurnal Manajemen Teori dan Terapan Volume 8 ; 8 ; 2015 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; Jurnal Manajemen Teori dan Terapan Volume 9 ; 9 ; 2016 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Jurnal Manajemen Teori dan Terapan Volume 10 ; 10 ; 2017 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Jurnal Manajemen Teori dan Terapan Volume 11 ; 11 ; 2018 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; Jurnal Manajemen Teori dan Terapan Volume 12 ; 12 ; 2019 ; >
       au < finished ; crawling ; 2020 ; Jurnal Manajemen Teori dan Terapan Volume 13 ; 13 ; 2020 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; Jurnal Manajemen Teori dan Terapan Volume 14 ; 14 ; 2021 ; reingest2.clockss.org:8085 >
