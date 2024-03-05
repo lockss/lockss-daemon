@@ -35259,7 +35259,20 @@ comment[mpj] = now published by Brill
         param[base_url] = http://mlj.rsmjournals.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-        au < HighWirePressH20Plugin ; down ; 2011 ; Medico-Legal Journal Volume 79 [superseded] ; 79 >
+        au < HighWirePressPlugin ; superseded ; 1999 ; Medico-Legal Journal Volume 67 [superseded] ; 67 >
+        au < HighWirePressPlugin ; superseded ; 2000 ; Medico-Legal Journal Volume 68 [superseded] ; 68 >
+        au < HighWirePressPlugin ; superseded ; 2001 ; Medico-Legal Journal Volume 69 [superseded] ; 69 >
+        au < HighWirePressPlugin ; superseded ; 2002 ; Medico-Legal Journal Volume 70 [superseded] ; 70 >
+        au < HighWirePressPlugin ; superseded ; 2003 ; Medico-Legal Journal Volume 71 [superseded] ; 71 >
+        au < HighWirePressPlugin ; superseded ; 2004 ; Medico-Legal Journal Volume 72 [superseded] ; 72 >
+        au < HighWirePressPlugin ; superseded ; 2005 ; Medico-Legal Journal Volume 73 [superseded] ; 73 >
+        au < HighWirePressPlugin ; superseded ; 2006 ; Medico-Legal Journal Volume 74 [superseded] ; 74 >
+        au < HighWirePressPlugin ; superseded ; 2007 ; Medico-Legal Journal Volume 75 [superseded] ; 75 >
+
+        au < HighWirePressPlugin ; superseded ; 2008 ; Medico-Legal Journal Volume 76 [superseded] ; 76 >
+        au < HighWirePressPlugin ; superseded ; 2009 ; Medico-Legal Journal Volume 77 [superseded] ; 77 >
+        au < HighWirePressPlugin ; superseded ; 2010 ; Medico-Legal Journal Volume 78 [superseded] ; 78 >
+        au < HighWirePressH20Plugin ; superseded ; 2011 ; Medico-Legal Journal Volume 79 [superseded] ; 79 >
 
       }
 
@@ -51753,7 +51766,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2008 ; Clinical Ethics Volume 3 [superseded] ; 3 >
         au < HighWirePressPlugin ; down ; 2009 ; Clinical Ethics Volume 4 [superseded] ; 4 >
         au < HighWirePressPlugin ; down ; 2010 ; Clinical Ethics Volume 5 [superseded] ; 5 >
-        au < HighWirePressPlugin ; doesNotExist ; 2011 ; Clinical Ethics Volume 6 ; 6 >
+        au < HighWirePressPlugin ; down ; 2011 ; Clinical Ethics Volume 6 ; 6 >
         au < HighWirePressH20Plugin ; down ; 2012 ; Clinical Ethics Volume 7 [superseded] ; 7 >
 
       }
@@ -51796,17 +51809,17 @@ comment[mpj] = now published by Brill
 
         param[base_url] = http://cr.rsmjournals.com/
 
-        au < HighWirePressPlugin ; doesNotExist ; 2001 ; Clinical Risk Volume 7 ; 7 >
-        au < HighWirePressPlugin ; doesNotExist ; 2002 ; Clinical Risk Volume 8 ; 8 >
-        au < HighWirePressPlugin ; doesNotExist ; 2003 ; Clinical Risk Volume 9 ; 9 >
-        au < HighWirePressPlugin ; doesNotExist ; 2004 ; Clinical Risk Volume 10 ; 10 >
-        au < HighWirePressPlugin ; doesNotExist ; 2005 ; Clinical Risk Volume 11 ; 11 >
-        au < HighWirePressPlugin ; doesNotExist ; 2006 ; Clinical Risk Volume 12 ; 12 >
-        au < HighWirePressPlugin ; doesNotExist ; 2007 ; Clinical Risk Volume 13 ; 13 >
-        au < HighWirePressPlugin ; doesNotExist ; 2008 ; Clinical Risk Volume 14 ; 14 >
-        au < HighWirePressPlugin ; doesNotExist ; 2009 ; Clinical Risk Volume 15 ; 15 >
-        au < HighWirePressPlugin ; doesNotExist ; 2010 ; Clinical Risk Volume 16 ; 16 >
-        au < HighWirePressPlugin ; doesNotExist ; 2011 ; Clinical Risk Volume 17 ; 17 >
+        au < HighWirePressPlugin ; down ; 2001 ; Clinical Risk Volume 7 ; 7 >
+        au < HighWirePressPlugin ; down ; 2002 ; Clinical Risk Volume 8 ; 8 >
+        au < HighWirePressPlugin ; down ; 2003 ; Clinical Risk Volume 9 ; 9 >
+        au < HighWirePressPlugin ; down ; 2004 ; Clinical Risk Volume 10 ; 10 >
+        au < HighWirePressPlugin ; down ; 2005 ; Clinical Risk Volume 11 ; 11 >
+        au < HighWirePressPlugin ; down ; 2006 ; Clinical Risk Volume 12 ; 12 >
+        au < HighWirePressPlugin ; down ; 2007 ; Clinical Risk Volume 13 ; 13 >
+        au < HighWirePressPlugin ; down ; 2008 ; Clinical Risk Volume 14 ; 14 >
+        au < HighWirePressPlugin ; down ; 2009 ; Clinical Risk Volume 15 ; 15 >
+        au < HighWirePressPlugin ; down ; 2010 ; Clinical Risk Volume 16 ; 16 >
+        au < HighWirePressPlugin ; down ; 2011 ; Clinical Risk Volume 17 ; 17 >
         au < HighWirePressH20Plugin ; down ; 2012 ; Clinical Risk Volume 18 [superseded] ; 18 >
 
       }
@@ -52367,9 +52380,9 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; down ; 2006 ; Hand Therapy Volume 11 ; 11 >
         au < HighWirePressH20Plugin ; down ; 2007 ; Hand Therapy Volume 12 ; 12 >
         au < HighWirePressH20Plugin ; down ; 2008 ; Hand Therapy Volume 13 ; 13 >
-        au < HighWirePressPlugin ; doesNotExist ; 2009 ; Hand Therapy Volume 14 ; 14 >
-        au < HighWirePressPlugin ; doesNotExist ; 2010 ; Hand Therapy Volume 15 ; 15 >
-        au < HighWirePressPlugin ; doesNotExist ; 2011 ; Hand Therapy Volume 16 ; 16 >
+        au < HighWirePressPlugin ; down ; 2009 ; Hand Therapy Volume 14 ; 14 >
+        au < HighWirePressPlugin ; down ; 2010 ; Hand Therapy Volume 15 ; 15 >
+        au < HighWirePressPlugin ; down ; 2011 ; Hand Therapy Volume 16 ; 16 >
 
       }
 

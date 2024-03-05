@@ -18,18 +18,29 @@
 
     param[base_url] = http://www.lifescied.org/
 
-    au < HighWireStrVolPlugin ; down ; 2002 ; CBE - Life Sciences Education Volume 1 ; 1 >
     au < HighWirePressPlugin ; superseded ; 2002 ; CBE - Life Sciences Education Volume 1 [superseded] ; 1 >
-    au < HighWireStrVolPlugin ; down ; 2003 ; CBE - Life Sciences Education Volume 2 ; 2 >
+    au < HighWireStrVolPlugin ; down ; 2002 ; CBE - Life Sciences Education Volume 1 ; 1 >
+
     au < HighWirePressPlugin ; superseded ; 2003 ; CBE - Life Sciences Education Volume 2 [superseded] ; 2 >
-    au < HighWireStrVolPlugin ; down ; 2004 ; CBE - Life Sciences Education Volume 3 ; 3 >
+    au < HighWireStrVolPlugin ; down ; 2003 ; CBE - Life Sciences Education Volume 2 ; 2 >
+
     au < HighWirePressPlugin ; superseded ; 2004 ; CBE - Life Sciences Education Volume 3 [superseded] ; 3 >
-    au < HighWireStrVolPlugin ; down ; 2005 ; CBE - Life Sciences Education Volume 4 ; 4 >
+    au < HighWireStrVolPlugin ; down ; 2004 ; CBE - Life Sciences Education Volume 3 ; 3 >
+
     au < HighWirePressPlugin ; superseded ; 2005 ; CBE - Life Sciences Education Volume 4 [superseded] ; 4 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; CBE - Life Sciences Education Volume 4 ; 4 >
+
+    au < HighWirePressPlugin ; superseded ; 2006 ; CBE - Life Sciences Education Volume 5 [superseded] ; 5 >
     au < HighWirePressH20Plugin ; down ; 2006 ; CBE - Life Sciences Education Volume 5 ; 5 >
+
     au < HighWirePressH20Plugin ; down ; 2007 ; CBE - Life Sciences Education Volume 6 ; 6 >
+
+    au < HighWirePressPlugin ; superseded ; 2008 ; CBE - Life Sciences Education Volume 7 [superseded] ; 7 >
     au < HighWirePressH20Plugin ; down ; 2008 ; CBE - Life Sciences Education Volume 7 ; 7 >
+
+    au < HighWirePressPlugin ; superseded ; 2009 ; CBE - Life Sciences Education Volume 8 [superseded] ; 8 >
     au < HighWirePressH20Plugin ; down ; 2009 ; CBE - Life Sciences Education Volume 8 ; 8 >
+
     au < HighWirePressH20Plugin ; down ; 2010 ; CBE - Life Sciences Education Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; down ; 2011 ; CBE - Life Sciences Education Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; down ; 2012 ; CBE - Life Sciences Education Volume 11 ; 11 >
