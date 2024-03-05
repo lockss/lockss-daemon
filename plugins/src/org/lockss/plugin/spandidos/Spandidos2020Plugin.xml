@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -132,6 +132,12 @@
       <string>2,"^%s%s/(forthcoming|mostcitedby|mostcitedbylastyear|mostciteddimension|mostciteddimensionrecent|mostread)", base_url, journal_id</string>
       <string>2,"^%sISSUE_IMAGES", base_url</string>
       <string>2,"^%s\d+/downloadSupplementary",base_url</string>
+
+      <!--Exclude bad urls like:
+      https://www.spandidos-publications.com/10.3892/http;/www.ebi.ac.uk/Tools/msa/clustalw2/ from
+      https://www.spandidos-publications.com/10.3892/mmr.2020.11100
+      -->
+      <string>2,"^%s10[.][0-9a-z]{4,6}/.*/(https?//?|www\.)", base_url</string>
       <string>1,"^%slockss.txt", base_url</string>
       <string>1,"^%simages/", base_url</string>
       <string>1,"^%sresources/(css|js|images|fontface)/", base_url</string>
