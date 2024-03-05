@@ -1834,6 +1834,7 @@ while (my $line = <>) {
 
   } elsif (($plugin eq "ClockssTaylorAndFrancisPlugin") ||
            ($plugin eq "ClockssGenericAtyponPlugin") ||
+           ($plugin eq "ClockssARRSPlugin") ||
            ($plugin eq "ClockssAaasPlugin") ||
            ($plugin eq "ClockssAIAAPlugin") ||
            ($plugin eq "ClockssAllenPressJournalsPlugin") ||
