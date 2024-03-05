@@ -18,7 +18,7 @@
       issnl = 0361-803X
     >
       #Possible plugin from deprecated GLN 
-      #plugin = org.lockss.plugin.atypon.arrs.ClockssARRSPlugin
+      plugin = org.lockss.plugin.atypon.arrs.ClockssARRSPlugin
       
       #Placeholder for manifest page checker
       plugin = org.lockss.plugin.atypon.ClockssGenericAtyponPlugin

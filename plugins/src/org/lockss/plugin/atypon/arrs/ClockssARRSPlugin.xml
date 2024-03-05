@@ -1,6 +1,6 @@
 <!--
 
-Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -32,11 +32,11 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>Parent Only</string>
+    <string>development</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.atypon.arrs.ARRSPlugin</string>
+    <string>org.lockss.plugin.atypon.arrs.ClockssARRSPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -44,36 +44,36 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Roentgen Ray Society Journals Plugin</string>
+    <string>American Roentgen Ray Society Journals Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
+    <string>org.lockss.plugin.atypon.arrs.ARRSPlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>159</string>
+    <string>16</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Roentgen Ray Society Journals Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"American Roentgen Ray Society Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.atypon.arrs.ARRSHtmlHashFilterFactory</string>
+    <string>au_start_url</string>
+    <string>"%sclockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
-    <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.atypon.arrs.ARRSHtmlCrawlFilterFactory</string>
-  </entry>
-  <!--some pdfplus files need scraping.  -->  
-  <entry>
-    <string>application/pdf_filter_factory</string>
-    <string>org.lockss.plugin.atypon.arrs.ARRSPdfFilterFactory</string>
-  </entry>  
-  <entry>
+    <!--  CLOCKSS does not need this warning message about registering IP addresses -->
     <string>plugin_au_config_user_msg</string>
-    <string>Atypon Systems hosts this archival unit (AU) and requires that you &lt;a href=&apos;http://www.ajronline.org/action/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box in your institutional account as a crawler&lt;/a&gt; before allowing your LOCKSS box to harvest this AU. Failure to comply with this publisher requirement may trigger crawler traps on the Atypon Systems platform, and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. You only need to register the IP address of your LOCKSS box once for all AUs published by American Roentgen Ray Society.</string>
+    <org.lockss.util.Default />
   </entry>
-</map>    
-
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
+  </entry>
+</map>
