@@ -1461,7 +1461,7 @@
       param[home_url] = https://www.state-of-the-planet.net/
       #It is reports, in a journal format
 
-      au < crawling ; exists ; 2023 ; 2023 ; State of the Planet Volume 1 ; 1-osr7 ; >
+      au < frozen ; exists ; 2023 ; 2023 ; State of the Planet Volume 1 ; 1-osr7 ; >
       au < manifest ; exists ; 2024 ; 2024 ; State of the Planet Volume 2 ; 2-oae2023 ; >
 
   }
