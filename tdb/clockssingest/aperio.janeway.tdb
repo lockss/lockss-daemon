@@ -2,10 +2,10 @@
 
   publisher <
     name = Aperio ;
-    info[contract] = 2023 
+    info[contract] = 2024 ;
     info[back] = 2020 ;
     info[tester] = 8 ;
-    #info[platform] = Janeway/OAI x2. See LXPLUG-2426
+    info[platform] = Janeway/OAI x2. See LXPLUG-2426
   >
   
 
