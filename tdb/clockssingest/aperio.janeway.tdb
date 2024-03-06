@@ -3,10 +3,9 @@
   publisher <
     name = Aperio ;
     info[contract] = 2023 
-    #info[back] = 2010 ;
-    #info[tester] = 8 ;
-    #info[poller] = 2 ;
-    #info[platform] = Janeway/OAI x2. See LXPLUG-2091
+    info[back] = 2020 ;
+    info[tester] = 8 ;
+    #info[platform] = Janeway/OAI x2. See LXPLUG-2426
   >
   
 
@@ -24,9 +23,9 @@
 
         param[base_url] = https://jmphil.org/
 
-        au < manifest ; exists ; 2019 ; 2019 ; 2019 ; Journal of Modern Philosophy 2019 ; >
-        au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Journal of Modern Philosophy 2020 ; >
-        au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Journal of Modern Philosophy 2021 ; >
+        au < manifest ; exists ; 2019 ; 2019 ; 2019 ; Journal of Modern Philosophy Volume 2019 ; >
+        au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Journal of Modern Philosophy Volume 2020 ; >
+        au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Journal of Modern Philosophy Volume 2021 ; >
 
 
     }
@@ -39,9 +38,9 @@
 
         param[base_url] = https://summeracademe.org/
 
-        au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Summer Academe 2020 ; >
-        au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Summer Academe 2021 ; >
-        au < manifest ; exists ; 2022 ; 2022 ; 2022 ; Summer Academe 2022 ; >
+        au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Summer Academe Volume 2020 ; >
+        au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Summer Academe Volume 2021 ; >
+        au < manifest ; exists ; 2022 ; 2022 ; 2022 ; Summer Academe Volume 2022 ; >
 
 
     }
@@ -54,8 +53,8 @@
 
         param[base_url] = https://essaysinhistoryjournal.com/
 
-        au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Essays in History 2020 ; >
-        au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Summer Academe 2021 ; >
+        au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Essays in History Volume 2020 ; >
+        au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Essays in History Volume 2021 ; >
 
 
     }
