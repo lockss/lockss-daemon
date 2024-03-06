@@ -89,7 +89,19 @@ public class RSC2014HttpToHttpsUrlConsumerFactory implements UrlConsumerFactory 
      * 
      */
     private void checkXlinkStoreAtHttpUrl() {
-
+      /** 
+      if(AuUtil.isBaseUrlHttp(au) && fud.redirectUrls != null){
+        log.info("the number of redirectUrls is "+fud.redirectUrls.size());
+        if(fud.redirectUrls.size() == 5){
+          log.info("First redirect is" + fud.redirectUrls.get(0));
+          log.info("Second redirect is" + fud.redirectUrls.get(1));
+          log.info("Third redirect is" + fud.redirectUrls.get(2));
+          log.info("Fourth redirect is" + fud.redirectUrls.get(3));
+          log.info("Fifth redirect is" + fud.redirectUrls.get(4));
+        }
+        log.info("Fetch URL is "+fud.fetchUrl);
+        log.info("Original URL is" + fud.origUrl);
+      }*/
       if (AuUtil.isBaseUrlHttp(au)
           && fud.redirectUrls != null
           && fud.redirectUrls.size() == 2

@@ -86,7 +86,8 @@ POSSIBILITY OF SUCH DAMAGE.
       <!-- enable both http and https -->
         <string>"%sen/journals/lockss?journalcode=%s&amp;volume=%s&amp;year=%d", to_http(base_url), journal_code, volume_name, year</string>
         <string>"%sen/journals/lockss?journalcode=%s&amp;volume=%s&amp;year=%d", to_https(base_url), journal_code, volume_name, year</string>
-        <string>"%slockss.htm", resolver_url</string>
+        <string>"%slockss.htm", to_http(resolver_url)</string>
+        <string>"%slockss.htm", to_https(resolver_url)</string>
         <!--  these are no longer used as parameters but must be defined in plugin, now CDN
         <string>"%slockss.htm", graphics_url</string>
         <string>"%slockss.htm", base_url2</string>
