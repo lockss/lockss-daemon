@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -124,13 +124,21 @@ POSSIBILITY OF SUCH DAMAGE.
       <!--Exclude: https://deepblue.lib.umich.edu/handle/2027.42/13913/discover?filtertype_0=hlbtoplevel&filter_relational_operator_0=equals&filter_0=Engineering&filtertype=hlbtoplevel&filter_relational_operator=equals&filter=Arts-->
       <string>1,"^https?://%s/handle/[\d\.]+/\d+(\?show=full)?$", url_host(base_url)</string>
       <string>1,"^https?://%s/(themes|static)/.*", url_host(base_url)</string>
-      <string>1,"^https?://%s/bitstream/handle/.*ID.*\.pdf", url_host(base_url)</string>
+      <!--
+      http://deepblue.lib.umich.edu/bitstream/2027.42/40245/1/MicrosoftOffice-Best_Practice.pdf
+      http://deepblue.lib.umich.edu/bitstream/2027.42/40246/1/Datasets-Best_Practice.pdf
+      http://deepblue.lib.umich.edu/bitstream/2027.42/40247/1/Images-Best_Practice.pdf
+      http://deepblue.lib.umich.edu/bitstream/2027.42/40248/1/Audio-Best_Practice.pdf
+      http://deepblue.lib.umich.edu/bitstream/2027.42/50495/1/ZIP_and_tar-Best_Practice.pdf
+
+      https://deepblue.lib.umich.edu/bitstream/handle/2027.42/41253/Vol%2031%20No%206%20Final.pdf?sequence=1&isAllowed=y -->
+      <string>1,"^https?://%s/bitstream/handle/.*\.pdf", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^https?://%s/bitstream/handle/.*ID.*\.pdf\?sequence=[^&amp;]+&amp;isAllowed=y", url_host(base_url)</string>
+      <string>"^https?://%s/bitstream/handle/.*\.pdf\?sequence=[^&amp;]+&amp;isAllowed=y", url_host(base_url)</string>
     </list>
   </entry>
   <entry>

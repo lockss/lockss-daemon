@@ -94,35 +94,33 @@
       au < manifest ; exists ; 1999 ; 1999 ; University of Michigan Press Deep Blue Volume 1999 ; 1999 ; >
       au < manifest ; exists ; 2000 ; 2000 ; University of Michigan Press Deep Blue Volume 2000 ; 2000 ; >
       au < manifest ; exists ; 2001 ; 2001 ; University of Michigan Press Deep Blue Volume 2001 ; 2001 ; >
-      au < notReady ; exists ; 2002 ; 2002 ; University of Michigan Press Deep Blue Volume 2002 ; 2002 ; >
-      au < notReady ; exists ; 2003 ; 2003 ; University of Michigan Press Deep Blue Volume 2003 ; 2003 ; >
+      au < testing ; exists ; 2002 ; 2002 ; University of Michigan Press Deep Blue Volume 2002 ; 2002 ; > #Original  status1 is "notReady"
+      au < testing ; exists ; 2003 ; 2003 ; University of Michigan Press Deep Blue Volume 2003 ; 2003 ; > #Original  status1 is "notReady"
       au < manifest ; exists ; 2004 ; 2004 ; University of Michigan Press Deep Blue Volume 2004 ; 2004 ; >
+      au <  manifest ;  manifest ; 2005 ; 2005 ; University of Michigan Press Deep Blue Volume 2005 ; 2005 ; >
+      au <  manifest ;  manifest ; 2006 ; 2006 ; University of Michigan Press Deep Blue Volume 2006 ; 2006 ; >
+      au <  manifest ;  manifest ; 2007 ; 2007 ; University of Michigan Press Deep Blue Volume 2007 ; 2007 ; >
+      au <  manifest ;  manifest ; 2008 ; 2008 ; University of Michigan Press Deep Blue Volume 2008 ; 2008 ; >
+      au <  manifest ;  manifest ; 2009 ; 2009 ; University of Michigan Press Deep Blue Volume 2009 ; 2009 ; >
+      au <  manifest ;  manifest ; 2010 ; 2010 ; University of Michigan Press Deep Blue Volume 2010 ; 2010 ; >
+      au <  manifest ;  manifest ; 2011 ; 2011 ; University of Michigan Press Deep Blue Volume 2011 ; 2011 ; >
+      au <  manifest ;  manifest ; 2012 ; 2012 ; University of Michigan Press Deep Blue Volume 2012 ; 2012 ; >
+      au <  manifest ;  manifest ; 2013 ; 2013 ; University of Michigan Press Deep Blue Volume 2013 ; 2013 ; >
+      au <  manifest ;  manifest ; 2014 ; 2014 ; University of Michigan Press Deep Blue Volume 2014 ; 2014 ; >
+      au <  manifest ;  manifest ; 2015 ; 2015 ; University of Michigan Press Deep Blue Volume 2015 ; 2015 ; >
+      au <  manifest ;  manifest ; 2016 ; 2016 ; University of Michigan Press Deep Blue Volume 2016 ; 2016 ; >
+      au <  manifest ;  manifest ; 2017 ; 2017 ; University of Michigan Press Deep Blue Volume 2017 ; 2017 ; >
+      au <  doesNotExist ;  doesNotExist ; 2018 ; 2018 ; University of Michigan Press Deep Blue Volume 2018 ; 2018 ; >
+      au <  manifest ;  manifest ; 2019 ; 2019 ; University of Michigan Press Deep Blue Volume 2019 ; 2019 ; >
+      au <  manifest ;  manifest ; 2020 ; 2020 ; University of Michigan Press Deep Blue Volume 2020 ; 2020 ; >
+      au <  doesNotExist ;  doesNotExist ; 2021 ; 2021 ; University of Michigan Press Deep Blue Volume 2021 ; 2021 ; >
+      au <  manifest ;  manifest ; 2022 ; 2022 ; University of Michigan Press Deep Blue Volume 2022 ; 2022 ; >
+      au <  manifest ;  manifest ; 2023 ; 2023 ; University of Michigan Press Deep Blue Volume 2023 ; 2023 ; >
+      au <  doesNotExist ;  doesNotExist ; 2024 ; 2024 ; University of Michigan Press Deep Blue Volume 2024 ; 2024 ; >
 
       #For this particular collection API which generate record based on DateModified, not publication date.
-      #It replies on a filter in the code to find the right publication date. 
-      #The API and plugin code found record starting from 1922 to 2004, across 74 years by the time 
-      #The initial tdb file is originall generated
-
-      au < doesNotExist ; doesNotExist ; 2005 ; 2005 ; University of Michigan Press Deep Blue Volume 2005 ; 2005 ; >
-      au < doesNotExist ; doesNotExist ; 2006 ; 2006 ; University of Michigan Press Deep Blue Volume 2006 ; 2006 ; >
-      au < doesNotExist ; doesNotExist ; 2007 ; 2007 ; University of Michigan Press Deep Blue Volume 2007 ; 2007 ; >
-      au < doesNotExist ; doesNotExist ; 2008 ; 2008 ; University of Michigan Press Deep Blue Volume 2008 ; 2008 ; >
-      au < doesNotExist ; doesNotExist ; 2009 ; 2009 ; University of Michigan Press Deep Blue Volume 2009 ; 2009 ; >
-      au < doesNotExist ; doesNotExist ; 2010 ; 2010 ; University of Michigan Press Deep Blue Volume 2010 ; 2010 ; >
-      au < doesNotExist ; doesNotExist ; 2011 ; 2011 ; University of Michigan Press Deep Blue Volume 2011 ; 2011 ; >
-      au < doesNotExist ; doesNotExist ; 2012 ; 2012 ; University of Michigan Press Deep Blue Volume 2012 ; 2012 ; >
-      au < doesNotExist ; doesNotExist ; 2013 ; 2013 ; University of Michigan Press Deep Blue Volume 2013 ; 2013 ; >
-      au < doesNotExist ; doesNotExist ; 2014 ; 2014 ; University of Michigan Press Deep Blue Volume 2014 ; 2014 ; >
-      au < doesNotExist ; doesNotExist ; 2015 ; 2015 ; University of Michigan Press Deep Blue Volume 2015 ; 2015 ; >
-      au < doesNotExist ; doesNotExist ; 2016 ; 2016 ; University of Michigan Press Deep Blue Volume 2016 ; 2016 ; >
-      au < doesNotExist ; doesNotExist ; 2017 ; 2017 ; University of Michigan Press Deep Blue Volume 2017 ; 2017 ; >
-      au < doesNotExist ; doesNotExist ; 2018 ; 2018 ; University of Michigan Press Deep Blue Volume 2018 ; 2018 ; >
-      au < doesNotExist ; doesNotExist ; 2019 ; 2019 ; University of Michigan Press Deep Blue Volume 2019 ; 2019 ; >
-      au < doesNotExist ; doesNotExist ; 2020 ; 2020 ; University of Michigan Press Deep Blue Volume 2020 ; 2020 ; >
-      au < doesNotExist ; doesNotExist ; 2021 ; 2021 ; University of Michigan Press Deep Blue Volume 2021 ; 2021 ; >
-      au < doesNotExist ; doesNotExist ; 2022 ; 2022 ; University of Michigan Press Deep Blue Volume 2022 ; 2022 ; >
-      au < doesNotExist ; doesNotExist ; 2023 ; 2023 ; University of Michigan Press Deep Blue Volume 2023 ; 2023 ; >
-      au < doesNotExist ; doesNotExist ; 2024 ; 2024 ; University of Michigan Press Deep Blue Volume 2024 ; 2024 ; >
+      #It relies on a filter in the code to find the right publication date
+      #The tdb file is up to date at March/2024
 
   }
 
