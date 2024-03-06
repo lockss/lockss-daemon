@@ -12227,7 +12227,7 @@
     au < finished ; manifest ; 2019 ; Rapid Prototyping Journal Volume 25 ; 25 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Rapid Prototyping Journal Volume 26 ; 26 ; reingest5.clockss.org:8082 >
     au < ingNotReady ; exists ; 2021 ; Rapid Prototyping Journal Volume 27 ; 27 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id//
-    au < crawling ; exists ; 2022 ; Rapid Prototyping Journal Volume 28 ; 28 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id//
+    au < deepCrawl ; exists ; 2022 ; Rapid Prototyping Journal Volume 28 ; 28 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id//
     au < deepCrawl ; exists ; 2023 ; Rapid Prototyping Journal Volume 29 ; 29 ; >
     au < manifest ; exists ; 2024 ; Rapid Prototyping Journal Volume 30 ; 30 ; >
 
@@ -13744,7 +13744,7 @@
     au < deepCrawl ; exists ; 2020 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 24 ; 24 ; >
     au < deepCrawl ; exists ; 2021 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 25 ; 25 ; >
     au < deepCrawl ; exists ; 2022 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2023 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 27 ; 27 ; >
+    au < deepCrawl ; exists ; 2023 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 27 ; 27 ; >
     au < manifest ; exists ; 2024 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 28 ; 28 ; >
 
   }
@@ -13840,7 +13840,7 @@
     au < finished ; manifest ; 2020 ; Worldwide Hospitality and Tourism Themes Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Worldwide Hospitality and Tourism Themes Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2022 ; Worldwide Hospitality and Tourism Themes Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2023 ; Worldwide Hospitality and Tourism Themes Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2023 ; Worldwide Hospitality and Tourism Themes Volume 15 ; 15 ; >
     au < expected ; exists ; 2024 ; Worldwide Hospitality and Tourism Themes Volume 16 ; 16 ; >
 
   }
@@ -13895,7 +13895,7 @@
     au < deepCrawl ; exists ; 2020 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2021 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 22 ; 22 ; >
     au < deepCrawl ; exists ; 2022 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2023 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 24 ; 24 ; >
+    au < deepCrawl ; exists ; 2023 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 24 ; 24 ; >
     au < manifest ; exists ; 2024 ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 25 ; 25 ; >
 
   }
@@ -13918,7 +13918,7 @@
     au < finished ; manifest ; 2020 ; Advances in Autism Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Advances in Autism Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Advances in Autism Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2023 ; Advances in Autism Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2023 ; Advances in Autism Volume 9 ; 9 ; >
     au < manifest ; exists ; 2024 ; Advances in Autism Volume 10 ; 10 ; >
 
   }
@@ -13942,7 +13942,7 @@
     au < frozen ; exists ; 2020 ; Annals in Social Responsibility Volume 6 ; 6 ; >
     au < frozen ; exists ; 2021 ; Annals in Social Responsibility Volume 7 ; 7 ; >
     au < frozen ; exists ; 2022 ; Annals in Social Responsibility Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2023 ; Annals in Social Responsibility Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2023 ; Annals in Social Responsibility Volume 9 ; 9 ; >
     au < expected ; exists ; 2024 ; Annals in Social Responsibility Volume 10 ; 10 ; >
 
   }
@@ -13966,7 +13966,7 @@
     au < finished ; manifest ; 2020 ; Aslib Journal of Information Management Volume 72 ; 72 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Aslib Journal of Information Management Volume 73 ; 73 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Aslib Journal of Information Management Volume 74 ; 74 ; >
-    au < crawling ; exists ; 2023 ; Aslib Journal of Information Management Volume 75 ; 75 ; >
+    au < deepCrawl ; exists ; 2023 ; Aslib Journal of Information Management Volume 75 ; 75 ; >
     au < manifest ; exists ; 2024 ; Aslib Journal of Information Management Volume 76 ; 76 ; >
 
   }
@@ -13985,7 +13985,7 @@
     au < finished ; manifest ; 2020 ; Continuity and Resilience Review Volume 2 ; 2 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Continuity and Resilience Review Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Continuity and Resilience Review Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2023 ; Continuity and Resilience Review Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2023 ; Continuity and Resilience Review Volume 5 ; 5 ; >
     au < expected ; exists ; 2024 ; Continuity and Resilience Review Volume 6 ; 6 ; >
 
   }
@@ -14008,7 +14008,7 @@
     au < finished ; manifest ; 2020 ; English Teaching: Practice & Critique Volume 19 ; 19 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; English Teaching: Practice & Critique Volume 20 ; 20 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; English Teaching: Practice & Critique Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2023 ; English Teaching: Practice & Critique Volume 22 ; 22 ; >
+    au < deepCrawl ; exists ; 2023 ; English Teaching: Practice & Critique Volume 22 ; 22 ; >
     au < expected ; exists ; 2024 ; English Teaching: Practice & Critique Volume 23 ; 23 ; >
 
   }
@@ -14034,7 +14034,7 @@
     au < finished ; manifest ; 2020 ; European Journal of Training and Development Volume 44 ; 44 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; European Journal of Training and Development Volume 45 ; 45 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; European Journal of Training and Development Volume 46 ; 46 ; >
-    au < crawling ; exists ; 2023 ; European Journal of Training and Development Volume 47 ; 47 ; >
+    au < deepCrawl ; exists ; 2023 ; European Journal of Training and Development Volume 47 ; 47 ; >
     au < manifest ; exists ; 2024 ; European Journal of Training and Development Volume 48 ; 48 ; >
 
   }
@@ -14059,7 +14059,7 @@
     au < finished ; manifest ; 2020 ; Evidence-based HRM Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; Evidence-based HRM Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; Evidence-based HRM Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2023 ; Evidence-based HRM Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2023 ; Evidence-based HRM Volume 11 ; 11 ; >
     au < manifest ; exists ; 2024 ; Evidence-based HRM Volume 12 ; 12 ; >
 
   }
@@ -14082,7 +14082,7 @@
     au < finished ; manifest ; 2020 ; Information and Computer Security Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; Information and Computer Security Volume 29 ; 29 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; Information and Computer Security Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2023 ; Information and Computer Security Volume 31 ; 31 ; >
+    au < deepCrawl ; exists ; 2023 ; Information and Computer Security Volume 31 ; 31 ; >
     au < manifest ; exists ; 2024 ; Information and Computer Security Volume 32 ; 32 ; >
 
   }
@@ -14103,7 +14103,7 @@
     au < finished ; manifest ; 2020 ; Information Discovery and Delivery Volume 48 ; 48 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Information Discovery and Delivery Volume 49 ; 49 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; Information Discovery and Delivery Volume 50 ; 50 ; >
-    au < crawling ; exists ; 2023 ; Information Discovery and Delivery Volume 51 ; 51 ; >
+    au < deepCrawl ; exists ; 2023 ; Information Discovery and Delivery Volume 51 ; 51 ; >
     au < manifest ; exists ; 2024 ; Information Discovery and Delivery Volume 52 ; 52 ; >
 
   }
@@ -14125,7 +14125,7 @@
     au < finished ; manifest ; 2020 ; International Journal of Comparative Education and Development Volume 22 ; 22 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; International Journal of Comparative Education and Development Volume 23 ; 23 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; International Journal of Comparative Education and Development Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Comparative Education and Development Volume 25 ; 25 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Comparative Education and Development Volume 25 ; 25 ; >
     au < manifest ; exists ; 2024 ; International Journal of Comparative Education and Development Volume 26 ; 26 ; >
 
   }
@@ -14147,7 +14147,7 @@
     au < finished ; manifest ; 2020 ; International Journal of Human Rights in Healthcare Volume 12 ; 12 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; International Journal of Human Rights in Healthcare Volume 13 ; 13 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; International Journal of Human Rights in Healthcare Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Human Rights in Healthcare Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Human Rights in Healthcare Volume 15 ; 15 ; >
     au < manifest ; exists ; 2024 ; International Journal of Human Rights in Healthcare Volume 16 ; 16 ; >
 
   }
@@ -14170,7 +14170,7 @@
     au < finished ; manifest ; 2020 ; International Journal of Information and Learning Technology Volume 37 ; 37 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2021 ; International Journal of Information and Learning Technology Volume 38 ; 38 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; International Journal of Information and Learning Technology Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Information and Learning Technology Volume 40 ; 40 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Information and Learning Technology Volume 40 ; 40 ; >
     au < manifest ; exists ; 2024 ; International Journal of Information and Learning Technology Volume 41 ; 41 ; >
 
   }
@@ -14200,7 +14200,7 @@
     au < finished ; manifest ; 2020 ; International Journal of Innovation Science Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; International Journal of Innovation Science Volume 13 ; 13 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; International Journal of Innovation Science Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Innovation Science Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Innovation Science Volume 15 ; 15 ; >
     au < manifest ; exists ; 2024 ; International Journal of Innovation Science Volume 16 ; 16 ; >
 
   }
@@ -14225,7 +14225,7 @@
     au < finished ; manifest ; 2020 ; International Journal of Intelligent Unmanned Systems Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; International Journal of Intelligent Unmanned Systems Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; International Journal of Intelligent Unmanned Systems Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Intelligent Unmanned Systems Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Intelligent Unmanned Systems Volume 11 ; 11 ; >
     au < manifest ; exists ; 2024 ; International Journal of Intelligent Unmanned Systems Volume 12 ; 12 ; >
 
   }
@@ -14267,7 +14267,7 @@
     au < finished ; manifest ; 2020 ; International Journal of Organization Theory & Behavior Volume 23 ; 23 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; International Journal of Organization Theory & Behavior Volume 24 ; 24 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; International Journal of Organization Theory & Behavior Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Organization Theory & Behavior Volume 26 ; 26 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Organization Theory & Behavior Volume 26 ; 26 ; >
     au < expected ; exists ; 2024 ; International Journal of Organization Theory & Behavior Volume 27 ; 27 ; >
 
   }
@@ -14329,7 +14329,7 @@
     au < finished ; manifest ; 2020 ; International Journal of Tourism Cities Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; International Journal of Tourism Cities Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; International Journal of Tourism Cities Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Tourism Cities Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Tourism Cities Volume 9 ; 9 ; >
     au < expected ; exists ; 2024 ; International Journal of Tourism Cities Volume 10 ; 10 ; >
 
   }
@@ -14353,7 +14353,7 @@
     au < finished ; manifest ; 2020 ; Journal for Multicultural Education Volume 14 ; 14 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2021 ; Journal for Multicultural Education Volume 15 ; 15 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Journal for Multicultural Education Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2023 ; Journal for Multicultural Education Volume 17 ; 17 ; >
+    au < deepCrawl ; exists ; 2023 ; Journal for Multicultural Education Volume 17 ; 17 ; >
     au < expected ; exists ; 2024 ; Journal for Multicultural Education Volume 18 ; 18 ; >
 
   }
@@ -14373,7 +14373,7 @@
     au < finished ; manifest ; 2020 ; Journal of Contemporary Marketing Science Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; Journal of Contemporary Marketing Science Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; Journal of Contemporary Marketing Science Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2023 ; Journal of Contemporary Marketing Science Volume 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2023 ; Journal of Contemporary Marketing Science Volume 6 ; 6 ; >
     au < expected ; exists ; 2024 ; Journal of Contemporary Marketing Science Volume 7 ; 7 ; >
 
   }
@@ -14396,7 +14396,7 @@
     au < finished ; manifest ; 2020 ; Journal of Criminological Research, Policy and Practice Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; Journal of Criminological Research, Policy and Practice Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; Journal of Criminological Research, Policy and Practice Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2023 ; Journal of Criminological Research, Policy and Practice Volume 9 ; 9 ; >
+    au < deepCrawl ; exists ; 2023 ; Journal of Criminological Research, Policy and Practice Volume 9 ; 9 ; >
     au < expected ; exists ; 2024 ; Journal of Criminological Research, Policy and Practice Volume 10 ; 10 ; >
 
   }
@@ -14420,7 +14420,7 @@
     au < finished ; manifest ; 2020 ; Journal of Entrepreneurship in Emerging Economies Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Journal of Entrepreneurship in Emerging Economies Volume 13 ; 13 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; Journal of Entrepreneurship in Emerging Economies Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2023 ; Journal of Entrepreneurship in Emerging Economies Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2023 ; Journal of Entrepreneurship in Emerging Economies Volume 15 ; 15 ; >
     au < manifest ; exists ; 2024 ; Journal of Entrepreneurship in Emerging Economies Volume 16 ; 16 ; >
 
   }
@@ -14445,7 +14445,7 @@
     au < finished ; manifest ; 2020 ; Journal of Global Mobility Volume 8 ; 8 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Journal of Global Mobility Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Journal of Global Mobility Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2023 ; Journal of Global Mobility Volume 11 ; 11 ; >
+    au < deepCrawl ; exists ; 2023 ; Journal of Global Mobility Volume 11 ; 11 ; >
     au < expected ; exists ; 2024 ; Journal of Global Mobility Volume 12 ; 12 ; >
 
   }
@@ -14465,7 +14465,7 @@
     au < finished ; manifest ; 2020 ; Journal of Hospitality and Tourism Insights Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; Journal of Hospitality and Tourism Insights Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; Journal of Hospitality and Tourism Insights Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2023 ; Journal of Hospitality and Tourism Insights Volume 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2023 ; Journal of Hospitality and Tourism Insights Volume 6 ; 6 ; >
     au < manifest ; exists ; 2024 ; Journal of Hospitality and Tourism Insights Volume 7 ; 7 ; >
 
   }
@@ -14490,7 +14490,7 @@
     au < finished ; manifest ; 2020 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2023 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 14 ; 14 ; >
+    au < deepCrawl ; exists ; 2023 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 14 ; 14 ; >
     au < expected ; exists ; 2024 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 15 ; 15 ; >
 
   }
@@ -14514,7 +14514,7 @@
     au < finished ; manifest ; 2020 ; Journal of Organizational Effectiveness: People and Performance Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2021 ; Journal of Organizational Effectiveness: People and Performance Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Journal of Organizational Effectiveness: People and Performance Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2023 ; Journal of Organizational Effectiveness: People and Performance Volume 10 ; 10 ; >
+    au < deepCrawl ; exists ; 2023 ; Journal of Organizational Effectiveness: People and Performance Volume 10 ; 10 ; >
     au < expected ; exists ; 2024 ; Journal of Organizational Effectiveness: People and Performance Volume 11 ; 11 ; >
 
   }
@@ -14534,7 +14534,7 @@
     au < finished ; manifest ; 2020 ; Journal of Participation and Employee Ownership Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Journal of Participation and Employee Ownership Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Journal of Participation and Employee Ownership Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2023 ; Journal of Participation and Employee Ownership Volume 6 ; 6 ; >
+    au < deepCrawl ; exists ; 2023 ; Journal of Participation and Employee Ownership Volume 6 ; 6 ; >
     au < expected ; exists ; 2024 ; Journal of Participation and Employee Ownership Volume 7 ; 7 ; >
 
   }
@@ -14556,7 +14556,7 @@
     au < finished ; manifest ; 2020 ; Journal of Professional Capital and Community Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; Journal of Professional Capital and Community Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; Journal of Professional Capital and Community Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2023 ; Journal of Professional Capital and Community Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2023 ; Journal of Professional Capital and Community Volume 8 ; 8 ; >
     au < manifest ; exists ; 2024 ; Journal of Professional Capital and Community Volume 9 ; 9 ; >
 
   }
@@ -14600,7 +14600,7 @@
     au < finished ; manifest ; 2020 ; Journal of Public Budgeting, Accounting & Financial Management Volume 32 ; 32 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Journal of Public Budgeting, Accounting & Financial Management Volume 33 ; 33 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Journal of Public Budgeting, Accounting & Financial Management Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2023 ; Journal of Public Budgeting, Accounting & Financial Management Volume 35 ; 35 ; >
+    au < deepCrawl ; exists ; 2023 ; Journal of Public Budgeting, Accounting & Financial Management Volume 35 ; 35 ; >
     au < manifest ; exists ; 2024 ; Journal of Public Budgeting, Accounting & Financial Management Volume 36 ; 36 ; >
 
   }
@@ -14637,7 +14637,7 @@
     au < finished ; manifest ; 2020 ; Journal of Public Procurement Volume 20 ; 20 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2021 ; Journal of Public Procurement Volume 21 ; 21 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Journal of Public Procurement Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2023 ; Journal of Public Procurement Volume 23 ; 23 ; >
+    au < deepCrawl ; exists ; 2023 ; Journal of Public Procurement Volume 23 ; 23 ; >
     au < manifest ; exists ; 2024 ; Journal of Public Procurement Volume 24 ; 24 ; >
 
   }
@@ -14661,7 +14661,7 @@
     au < finished ; manifest ; 2020 ; Journal of Science and Technology Policy Management Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Journal of Science and Technology Policy Management Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; Journal of Science and Technology Policy Management Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2023 ; Journal of Science and Technology Policy Management Volume 14 ; 14 ; >
+    au < deepCrawl ; exists ; 2023 ; Journal of Science and Technology Policy Management Volume 14 ; 14 ; >
     au < manifest ; exists ; 2024 ; Journal of Science and Technology Policy Management Volume 15 ; 15 ; >
 
   }
@@ -14684,7 +14684,7 @@
     au < finished ; manifest ; 2020 ; Journal of Service Theory and Practice Volume 30 ; 30 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; Journal of Service Theory and Practice Volume 31 ; 31 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; Journal of Service Theory and Practice Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2023 ; Journal of Service Theory and Practice Volume 33 ; 33 ; >
+    au < deepCrawl ; exists ; 2023 ; Journal of Service Theory and Practice Volume 33 ; 33 ; >
     au < manifest ; exists ; 2024 ; Journal of Service Theory and Practice Volume 34 ; 34 ; >
 
   }
@@ -14713,7 +14713,7 @@
     au < finished ; manifest ; 2020 ; Journal of Structural Fire Engineering Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Journal of Structural Fire Engineering Volume 12 ; 12 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Journal of Structural Fire Engineering Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2023 ; Journal of Structural Fire Engineering Volume 14 ; 14 ; >
+    au < deepCrawl ; exists ; 2023 ; Journal of Structural Fire Engineering Volume 14 ; 14 ; >
     au < manifest ; exists ; 2024 ; Journal of Structural Fire Engineering Volume 15 ; 15 ; >
 
   }
@@ -14746,7 +14746,7 @@
     au < finished ; manifest ; 2020 ; Open House International Volume 45 ; 45 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2021 ; Open House International Volume 46 ; 46 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Open House International Volume 47 ; 47 ; >
-    au < crawling ; exists ; 2023 ; Open House International Volume 48 ; 48 ; >
+    au < deepCrawl ; exists ; 2023 ; Open House International Volume 48 ; 48 ; >
     au < manifest ; exists ; 2024 ; Open House International Volume 49 ; 49 ; >
 
   }
@@ -14787,7 +14787,7 @@
     au < finished ; manifest ; 2020 ; Research Journal of Textile and Apparel Volume 24 ; 24 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2021 ; Research Journal of Textile and Apparel Volume 25 ; 25 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Research Journal of Textile and Apparel Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2023 ; Research Journal of Textile and Apparel Volume 27 ; 27 ; >
+    au < deepCrawl ; exists ; 2023 ; Research Journal of Textile and Apparel Volume 27 ; 27 ; >
     au < manifest ; exists ; 2024 ; Research Journal of Textile and Apparel Volume 28 ; 28 ; >
 
   }
@@ -14819,7 +14819,7 @@
     au < finished ; manifest ; 2020 ; Social Studies Research and Practice Volume 15 ; 15 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Social Studies Research and Practice Volume 16 ; 16 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Social Studies Research and Practice Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2023 ; Social Studies Research and Practice Volume 18 ; 18 ; >
+    au < deepCrawl ; exists ; 2023 ; Social Studies Research and Practice Volume 18 ; 18 ; >
     au < expected ; exists ; 2024 ; Social Studies Research and Practice Volume 19 ; 19 ; >
 
   }
@@ -14841,7 +14841,7 @@
     au < finished ; manifest ; 2020 ; Social Transformations in Chinese Societies Volume 16 ; 16 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Social Transformations in Chinese Societies Volume 17 ; 17 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Social Transformations in Chinese Societies Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2023 ; Social Transformations in Chinese Societies Volume 19 ; 19 ; >
+    au < deepCrawl ; exists ; 2023 ; Social Transformations in Chinese Societies Volume 19 ; 19 ; >
     au < expected ; exists ; 2024 ; Social Transformations in Chinese Societies Volume 20 ; 20 ; >
 
   }
@@ -14866,7 +14866,7 @@
     au < finished ; manifest ; 2020 ; The Journal of Forensic Practice Volume 22 ; 22 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2021 ; The Journal of Forensic Practice Volume 23 ; 23 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; The Journal of Forensic Practice Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2023 ; The Journal of Forensic Practice Volume 25 ; 25 ; >
+    au < deepCrawl ; exists ; 2023 ; The Journal of Forensic Practice Volume 25 ; 25 ; >
     au < expected ; exists ; 2024 ; The Journal of Forensic Practice Volume 26 ; 26 ; >
 
   }
@@ -14888,7 +14888,7 @@
     au < finished ; manifest ; 2020 ; VINE Journal of Information and Knowledge Management Systems Volume 50 ; 50 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; VINE Journal of Information and Knowledge Management Systems Volume 51 ; 51 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; VINE Journal of Information and Knowledge Management Systems Volume 52 ; 52 ; >
-    au < crawling ; exists ; 2023 ; VINE Journal of Information and Knowledge Management Systems Volume 53 ; 53 ; >
+    au < deepCrawl ; exists ; 2023 ; VINE Journal of Information and Knowledge Management Systems Volume 53 ; 53 ; >
     au < manifest ; exists ; 2024 ; VINE Journal of Information and Knowledge Management Systems Volume 54 ; 54 ; >
 
   }
@@ -14915,7 +14915,7 @@
     au < finished ; manifest ; 2020 ; World Journal of Engineering Volume 17 ; 17 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; World Journal of Engineering Volume 18 ; 18 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; World Journal of Engineering Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2023 ; World Journal of Engineering Volume 20 ; 20 ; >
+    au < deepCrawl ; exists ; 2023 ; World Journal of Engineering Volume 20 ; 20 ; >
     au < manifest ; exists ; 2024 ; World Journal of Engineering Volume 21 ; 21 ; >
 
   }
@@ -14933,7 +14933,7 @@
     au < finished ; manifest ; 2020 ; Applied Economic Analysis Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; Applied Economic Analysis Volume 29 ; 29 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Applied Economic Analysis Volume 30 ; 30 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2023 ; Applied Economic Analysis Volume 31 ; 31 ; >
+    au < deepCrawl ; exists ; 2023 ; Applied Economic Analysis Volume 31 ; 31 ; >
     au < expected ; exists ; 2024 ; Applied Economic Analysis Volume 32 ; 32 ; >
 
   }
@@ -14956,7 +14956,7 @@
     au < finished ; manifest ; 2020 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 15 ; 15 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 16 ; 16 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2023 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 17 ; 17 ; >
+    au < deepCrawl ; exists ; 2023 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 17 ; 17 ; >
     au < manifest ; exists ; 2024 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 18 ; 18 ; >
 
   }
@@ -14989,7 +14989,7 @@
     au < finished ; manifest ; 2020 ; Asian Association of Open Universities Journal Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; Asian Association of Open Universities Journal Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2022 ; Asian Association of Open Universities Journal Volume 17 ; 17 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2023 ; Asian Association of Open Universities Journal Volume 18 ; 18 ; >
+    au < deepCrawl ; exists ; 2023 ; Asian Association of Open Universities Journal Volume 18 ; 18 ; >
     au < expected ; exists ; 2024 ; Asian Association of Open Universities Journal Volume 19 ; 19 ; >
 
   }
@@ -15012,7 +15012,7 @@
     au < finished ; manifest ; 2020 ; Asian Journal of Accounting Research Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Asian Journal of Accounting Research Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2022 ; Asian Journal of Accounting Research Volume 7 ; 7 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2023 ; Asian Journal of Accounting Research Volume 8 ; 8 ; >
+    au < deepCrawl ; exists ; 2023 ; Asian Journal of Accounting Research Volume 8 ; 8 ; >
     au < manifest ; exists ; 2024 ; Asian Journal of Accounting Research Volume 9 ; 9 ; >
 
   }
@@ -15031,7 +15031,7 @@
     au < finished ; manifest ; 2020 ; Asian Journal of Economics and Banking Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2021 ; Asian Journal of Economics and Banking Volume 5 ; 5 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Asian Journal of Economics and Banking Volume 6 ; 6 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2023 ; Asian Journal of Economics and Banking Volume 7 ; 7 ; >
+    au < deepCrawl ; exists ; 2023 ; Asian Journal of Economics and Banking Volume 7 ; 7 ; >
     au < expected ; exists ; 2024 ; Asian Journal of Economics and Banking Volume 8 ; 8 ; >
 
   }
@@ -15090,7 +15090,7 @@
     au < finished ; manifest ; 2020 ; European Journal of Management & Business Economics Volume 29 ; 29 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; European Journal of Management & Business Economics Volume 30 ; 30 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; European Journal of Management & Business Economics Volume 31 ; 31 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2023 ; European Journal of Management & Business Economics Volume 32 ; 32 ; >
+    au < deepCrawl ; exists ; 2023 ; European Journal of Management & Business Economics Volume 32 ; 32 ; >
     au < expected ; exists ; 2024 ; European Journal of Management & Business Economics Volume 33 ; 33 ; >
 
   }
@@ -15109,7 +15109,7 @@
     au < finished ; manifest ; 2020 ; Forest Economic Review Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; Forest Economic Review Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2022 ; Forest Economic Review Volume 4 ; 4 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2023 ; Forest Economic Review Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2023 ; Forest Economic Review Volume 5 ; 5 ; >
     au < expected ; exists ; 2024 ; Forest Economic Review Volume 6 ; 6 ; >
 
   }
@@ -15130,7 +15130,7 @@
     au < finished ; manifest ; 2020 ; Higher Education Evaluation and Development Volume 14 ; 14 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Higher Education Evaluation and Development Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Higher Education Evaluation and Development Volume 16 ; 16 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2023 ; Higher Education Evaluation and Development Volume 17 ; 17 ; >
+    au < deepCrawl ; exists ; 2023 ; Higher Education Evaluation and Development Volume 17 ; 17 ; >
     au < expected ; exists ; 2024 ; Higher Education Evaluation and Development Volume 18 ; 18 ; >
 
   }
@@ -15151,7 +15151,7 @@
     au < finished ; manifest ; 2020 ; Innovation & Management Review Volume 17 ; 17 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; Innovation & Management Review Volume 18 ; 18 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2022 ; Innovation & Management Review Volume 19 ; 19 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2023 ; Innovation & Management Review Volume 20 ; 20 ; >
+    au < deepCrawl ; exists ; 2023 ; Innovation & Management Review Volume 20 ; 20 ; >
     au < manifest ; exists ; 2024 ; Innovation & Management Review Volume 21 ; 21 ; >
 
   }
@@ -15171,7 +15171,7 @@
     au < finished ; manifest ; 2020 ; International Hospitality Review Volume 34 ; 34 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; International Hospitality Review Volume 35 ; 35 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2022 ; International Hospitality Review Volume 36 ; 36 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2023 ; International Hospitality Review Volume 37 ; 37 ; >
+    au < deepCrawl ; exists ; 2023 ; International Hospitality Review Volume 37 ; 37 ; >
     au < expected ; exists ; 2024 ; International Hospitality Review Volume 38 ; 38 ; >
 
   }
@@ -15243,7 +15243,7 @@
     au < finished ; manifest ; 2020 ; International Trade, Politics and Development Volume 4 ; 4 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; International Trade, Politics and Development Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; International Trade, Politics and Development Volume 6 ; 6 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2023 ; International Trade, Politics and Development Volume 7 ; 7 ; >
+    au < deepCrawl ; exists ; 2023 ; International Trade, Politics and Development Volume 7 ; 7 ; >
     au < expected ; exists ; 2024 ; International Trade, Politics and Development Volume 8 ; 8 ; >
 
   }
@@ -15265,7 +15265,7 @@
     au < finished ; manifest ; 2020 ; Irish Journal of Occupational Therapy Volume 48 ; 48 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2021 ; Irish Journal of Occupational Therapy Volume 49 ; 49 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Irish Journal of Occupational Therapy Volume 50 ; 50 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2023 ; Irish Journal of Occupational Therapy Volume 51 ; 51 ; >
+    au < deepCrawl ; exists ; 2023 ; Irish Journal of Occupational Therapy Volume 51 ; 51 ; >
     au < expected ; exists ; 2024 ; Irish Journal of Occupational Therapy Volume 52 ; 52 ; >
 
   }

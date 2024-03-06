@@ -38,7 +38,7 @@
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Biology Open Volume 9 ; 9 ; >
     au < finished ; crawling ; 2021 ; 2021 ; Biology Open Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2022 ; 2022 ; Biology Open Volume 11 ; 11 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2023 ; 2023 ; Biology Open Volume 12 ; 12 ; >
+    au < deepCrawl ; exists ; 2023 ; 2023 ; Biology Open Volume 12 ; 12 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Biology Open Volume 13 ; 13 ; >
 
   }
@@ -219,7 +219,7 @@
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Development Volume 147 ; 147 ; >
     au < ingNotReady ; exists ; 2021 ; 2021 ; Development Volume 148 ; 148 ; > #403 Forbidden, https://cob.silverchair-cdn.com/cob/content_public/journal/dev/148/7/e148_e0701/5/m_e148_e0701a.jpeg?Expires=2147483647&Signature=09TfRnteVGE7ZKIzSFC5Nql5mzaMcGz2043nA~dCvuzgVoIiY1BhzVB7CKtNbyEztL8zlhCamo~u1y08TDrESlzp9hHaz~Kr34lLjpXdFDTJq8-r7LPOmyWIuJuwBmZs4MgLFcSp0q6dAYmd~2ej0E9xw~ac8LSkDv2oZcY5qWP4EfBe11ilS991cuDwBHTgbmRp4voJgc3vMv3DaGyM0D9iEjOnaFPuBi9ix0r-1iq~waQxosIgzgOEDeCvp7SiXqwXoKa0S11HXh2mq2DeUG2MqDQOtaPq~HBRdzJJ5C4R078rA5wycJgHeK5-yOpzPfpG7hxRElO2vIqkYm7HvQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
     au < finished ; crawling ; 2022 ; 2022 ; Development Volume 149 ; 149 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2023 ; 2023 ; Development Volume 150 ; 150 ; >
+    au < deepCrawl ; exists ; 2023 ; 2023 ; Development Volume 150 ; 150 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Development Volume 151 ; 151 ; >
 
   }
@@ -252,7 +252,7 @@
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Disease Models & Mechanisms Volume 13 ; 13 ; >
     au < ingNotReady ; exists ; 2021 ; 2021 ; Disease Models & Mechanisms Volume 14 ; 14 ; > #403 Forbidden, https://cob.silverchair-cdn.com/cob/content_public/journal/dmm/14/4/10.1242_dmm.049024/3/m_dmm04902401.png?Expires=2147483647&Signature=iBLaeH0qQJAYbefnp1m2spPZk5q6DrxWuEEmH6avzKLuX97ZJh--2vav8zhztWWnQtQj61FbiLsrCR9K~8UIptScZXc7m5OnAz3xEb~p-Am9k9d5M90ofT4ZYe0RsmMMDWW5EgLGO1NxqjfGnyzCVxVLNk~DERFKzfaxK4u2FF3wmKC~IQakYinqpwZbr0j9osO02swxdUPkAJzf49loqi3TqtRDlc-k5SPIuASmaniM1Q6bAohodV0lprydkU24~U3UUUDIAswp2GXdiNeCWMeG7u1kVCidYNazfCLN~q2dHqc36Nnchkfe7~xJWsR36ibBtMcVBl12653wEj-c1Q__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
     au < finished ; crawling ; 2022 ; 2022 ; Disease Models & Mechanisms Volume 15 ; 15 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2023 ; 2023 ; Disease Models & Mechanisms Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2023 ; 2023 ; Disease Models & Mechanisms Volume 16 ; 16 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Disease Models & Mechanisms Volume 17 ; 17 ; >
 
   }
@@ -525,7 +525,7 @@
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Journal of Cell Science Volume 133 ; 133 ; >
     au < ingNotReady ; exists ; 2021 ; 2021 ; Journal of Cell Science Volume 134 ; 134 ; > #403 Forbidden, https://cob.silverchair-cdn.com/cob/content_public/journal/jcs/134/2/10.1242_jcs.247874/6/m_jcs24787401.jpeg?Expires=2147483647&Signature=AMJklFy1wsaFGOawDNHU3ZgP6e~vdhms7-~ChrPzZJGYKr1k0Buq326V0B6SDTehNBfeCsPYoMxsdoQyMr4r1toi1~SWKPlCsxRjacafkyMfFBEyyQ9rSL0l2ytQjDoqeHE~qLECoP5Op7zlfhyXowBIpGbNizsq0KU3MkmHN1b4DGkyKl-dQD-r~WdtKuv~1jabRWj~wUhzSGgCCJ6~12jkfQXz3UiGOVkwmXsoFqg7lxmfSNugzVyS4-~oADJlnvgvFCtJv7h5JGIeIX2daUgeuaIhaW5cv8DtUDF5VpN6-9E6zQZSlwoAHiug-XIfTrLABe9T3xQhhyxnaJBMtg__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
     au < finished ; crawling ; 2022 ; 2022 ; Journal of Cell Science Volume 135 ; 135 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2023 ; 2023 ; Journal of Cell Science Volume 136 ; 136 ; >
+    au < deepCrawl ; exists ; 2023 ; 2023 ; Journal of Cell Science Volume 136 ; 136 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Journal of Cell Science Volume 137 ; 137 ; >
 
   }

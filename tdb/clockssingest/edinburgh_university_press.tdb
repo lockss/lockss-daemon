@@ -2112,7 +2112,7 @@
       au < deepCrawl ; exists ; 2020 ; Scottish Affairs Volume 29 ; 29 ; https://www.euppublishing.com/ ; >
       au < frozen ; exists ; 2021 ; Scottish Affairs Volume 30 ; 30 ; https://www.euppublishing.com/ ; >
       au < deepCrawl ; exists ; 2022 ; Scottish Affairs Volume 31 ; 31 ; https://www.euppublishing.com/ ; >
-      au < crawling ; exists ; 2023 ; Scottish Affairs Volume 32 ; 32 ; https://www.euppublishing.com/ ; >
+      au < deepCrawl ; exists ; 2023 ; Scottish Affairs Volume 32 ; 32 ; https://www.euppublishing.com/ ; >
       au < manifest ; exists ; 2024 ; Scottish Affairs Volume 33 ; 33 ; https://www.euppublishing.com/ ; >
 
   }
@@ -2204,7 +2204,7 @@
     au < deepCrawl ; exists ; 2020 ; Scottish Archaeological Journal Volume 42 ; 42 ; https://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2021 ; Scottish Archaeological Journal Volume 43 ; 43 ; https://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2022 ; Scottish Archaeological Journal Volume 44 ; 44 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2023 ; Scottish Archaeological Journal Volume 45 ; 45 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2023 ; Scottish Archaeological Journal Volume 45 ; 45 ; https://www.euppublishing.com/ ; >
     au < expected ; exists ; 2024 ; Scottish Archaeological Journal Volume 46 ; 46 ; https://www.euppublishing.com/ ; >
   }
   }
@@ -2250,7 +2250,7 @@
     au < deepCrawl ; exists ; 2020 ; Scottish Historical Review Volume 99 ; 99 ; https://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2021 ; Scottish Historical Review Volume 100 ; 100 ; https://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2022 ; Scottish Historical Review Volume 101 ; 101 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2023 ; Scottish Historical Review Volume 102 ; 102 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2023 ; Scottish Historical Review Volume 102 ; 102 ; https://www.euppublishing.com/ ; >
     au < expected ; exists ; 2024 ; Scottish Historical Review Volume 103 ; 103 ; https://www.euppublishing.com/ ; >
 
   }
@@ -2294,7 +2294,7 @@
     au < deepCrawl ; exists ; 2020 ; Studies in World Christianity Volume 26 ; 26 ; https://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2021 ; Studies in World Christianity Volume 27 ; 27 ; https://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2022 ; Studies in World Christianity Volume 28 ; 28 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2023 ; Studies in World Christianity Volume 29 ; 29 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2023 ; Studies in World Christianity Volume 29 ; 29 ; https://www.euppublishing.com/ ; >
     au < expected ; exists ; 2024 ; Studies in World Christianity Volume 30 ; 30 ; https://www.euppublishing.com/ ; >
 
   }
@@ -2341,7 +2341,7 @@
     au < deepCrawl ; exists ; 2020 ; Translation and Literature Volume 29 ; 29 ; https://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2021 ; Translation and Literature Volume 30 ; 30 ; https://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2022 ; Translation and Literature Volume 31 ; 31 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2023 ; Translation and Literature Volume 32 ; 32 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2023 ; Translation and Literature Volume 32 ; 32 ; https://www.euppublishing.com/ ; >
     au < expected ; exists ; 2024 ; Translation and Literature Volume 33 ; 33 ; https://www.euppublishing.com/ ; >
 
   }
@@ -2372,7 +2372,7 @@
     au < deepCrawl ; exists ; 2020 ; Word Structure Volume 13 ; 13 ; https://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2021 ; Word Structure Volume 14 ; 14 ; https://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2022 ; Word Structure Volume 15 ; 15 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2023 ; Word Structure Volume 16 ; 16 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2023 ; Word Structure Volume 16 ; 16 ; https://www.euppublishing.com/ ; >
     au < expected ; exists ; 2024 ; Word Structure Volume 17 ; 17 ; https://www.euppublishing.com/ ; >
 
   }
@@ -2445,7 +2445,7 @@
        au < deepCrawl ; exists ; 2020 ; Costume Volume 54 ; 54 ; https://www.euppublishing.com/ ; >
        au < deepCrawl ; exists ; 2021 ; Costume Volume 55 ; 55 ; https://www.euppublishing.com/ ; >
        au < deepCrawl ; exists ; 2022 ; Costume Volume 56 ; 56 ; https://www.euppublishing.com/ ; >
-       au < crawling ; exists ; 2023 ; Costume Volume 57 ; 57 ; https://www.euppublishing.com/ ; >
+       au < deepCrawl ; exists ; 2023 ; Costume Volume 57 ; 57 ; https://www.euppublishing.com/ ; >
        au < manifest ; exists ; 2024 ; Costume Volume 58 ; 58 ; https://www.euppublishing.com/ ; >
 
      }  
@@ -2462,7 +2462,7 @@
     param[journal_id] = jlaibs
 
     au < deepCrawl ; exists ; 2022 ; Journal of Late Antique, Islamic and Byzantine Studies Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2023 ; Journal of Late Antique, Islamic and Byzantine Studies Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2023 ; Journal of Late Antique, Islamic and Byzantine Studies Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
     au < expected ; exists ; 2024 ; Journal of Late Antique, Islamic and Byzantine Studies Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
 
   }
@@ -2479,7 +2479,7 @@
     param[journal_id] = jspp
 
     au < deepCrawl ; exists ; 2022 ; Journal of Social and Political Philosophy Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2023 ; Journal of Social and Political Philosophy Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2023 ; Journal of Social and Political Philosophy Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
     au < manifest ; exists ; 2024 ; Journal of Social and Political Philosophy Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
 
   }
@@ -2496,7 +2496,7 @@
     param[journal_id] = mclc
 
     au < deepCrawl ; exists ; 2022 ; Modern Chinese Literature and Culture Volume 34 ; 34 ; https://www.euppublishing.com/ ; >
-    au < crawling ; exists ; 2023 ; Modern Chinese Literature and Culture Volume 35 ; 35 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2023 ; Modern Chinese Literature and Culture Volume 35 ; 35 ; https://www.euppublishing.com/ ; >
     au < expected ; exists ; 2024 ; Modern Chinese Literature and Culture Volume 36 ; 36 ; https://www.euppublishing.com/ ; >
 
   }
@@ -2512,7 +2512,7 @@
 
     param[journal_id] = irss
 
-    au < crawling ; exists ; 2023 ; International Review of Scottish Studies Volume 48 ; 48 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2023 ; International Review of Scottish Studies Volume 48 ; 48 ; https://www.euppublishing.com/ ; >
     au < expected ; exists ; 2024 ; International Review of Scottish Studies Volume 49 ; 49 ; https://www.euppublishing.com/ ; >
 
   }
@@ -2528,7 +2528,7 @@
 
     param[journal_id] = arabic
 
-    au < crawling ; exists ; 2023 ; Journal of Arabic Sociolinguistics Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2023 ; Journal of Arabic Sociolinguistics Volume 1 ; 1 ; https://www.euppublishing.com/ ; >
     au < expected ; exists ; 2024 ; Journal of Arabic Sociolinguistics Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
 
   }
@@ -2544,7 +2544,7 @@
 
     param[journal_id] = tna
 
-    au < crawling ; exists ; 2023 ; The New Americanist Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
+    au < deepCrawl ; exists ; 2023 ; The New Americanist Volume 2 ; 2 ; https://www.euppublishing.com/ ; >
     au < expected ; exists ; 2024 ; The New Americanist Volume 3 ; 3 ; https://www.euppublishing.com/ ; >
 
   }
