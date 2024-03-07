@@ -12,8 +12,10 @@
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
     param[base_url] = https://www.annalidistomatologia.eu/
     implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+
     #OJS3
     #attr[primary_locale] = es_ES
+    #attr[start_stem] = index.php/ #no start stem for this publisher
 
   {
   
