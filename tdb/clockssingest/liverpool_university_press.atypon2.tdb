@@ -2119,4 +2119,28 @@
 
   }
   
+  {
+
+    title <
+      name = The Bodleian Library Record ;
+      issn = 0067-9488 ;
+      eissn = 3029-0465
+    >
+
+    param[journal_id] = blr
+
+    au < manifest ; exists ; 2011 ; The Bodleian Library Record Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2012 ; The Bodleian Library Record Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2013 ; The Bodleian Library Record Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2014 ; The Bodleian Library Record Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2015 ; The Bodleian Library Record Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2016 ; The Bodleian Library Record Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2017 ; The Bodleian Library Record Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2018 ; The Bodleian Library Record Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2019 ; The Bodleian Library Record Volume 32 ; 32 ; >
+    au < manifest ; exists ; 2020 ; The Bodleian Library Record Volume 33 ; 33 ; >
+    au < manifest ; exists ; 2021 ; The Bodleian Library Record Volume 34 ; 34 ; >
+
+  }
+  
 }
