@@ -46,6 +46,7 @@ import org.marc4j.MarcReader;
 import org.marc4j.MarcStreamReader;
 import org.marc4j.MarcXmlReader;
 import org.marc4j.marc.*;
+import org.marc4j.marc.Record;
 
 import java.io.IOException;
 import java.io.InputStream;
