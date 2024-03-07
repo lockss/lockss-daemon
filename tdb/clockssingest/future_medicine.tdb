@@ -204,7 +204,7 @@
     au < deepCrawl ; exists ; 2020 ; Colorectal Cancer Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
     au < frozen ; exists ; 2021 ; Colorectal Cancer Volume 10 ; 10 ; https://www.futuremedicine.com/ ; >
     au < frozen ; exists ; 2022 ; Colorectal Cancer Volume 11 ; 11 ; https://www.futuremedicine.com/ ; >
-    au < crawling ; exists ; 2023 ; Colorectal Cancer Volume 12 ; 12 ; https://www.futuremedicine.com/ ; >
+    au < deepCrawl ; exists ; 2023 ; Colorectal Cancer Volume 12 ; 12 ; https://www.futuremedicine.com/ ; >
     au < expected ; exists ; 2024 ; Colorectal Cancer Volume 13 ; 13 ; https://www.futuremedicine.com/ ; >
 
   }
@@ -304,7 +304,7 @@
     au < deepCrawl ; exists ; 2020 ; Future Cardiology Volume 16 ; 16 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2021 ; Future Cardiology Volume 17 ; 17 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2022 ; Future Cardiology Volume 18 ; 18 ; https://www.futuremedicine.com/ ; >
-    au < crawling ; exists ; 2023 ; Future Cardiology Volume 19 ; 19 ; https://www.futuremedicine.com/ ; >
+    au < deepCrawl ; exists ; 2023 ; Future Cardiology Volume 19 ; 19 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2024 ; Future Cardiology Volume 20 ; 20 ; https://www.futuremedicine.com/ ; >
 
   }
@@ -831,7 +831,7 @@
     au < deepCrawl ; exists ; 2020 ; Pain Management Volume 10 ; 10 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2021 ; Pain Management Volume 11 ; 11 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2022 ; Pain Management Volume 12 ; 12 ; https://www.futuremedicine.com/ ; >
-    au < crawling ; exists ; 2023 ; Pain Management Volume 13 ; 13 ; https://www.futuremedicine.com/ ; >
+    au < deepCrawl ; exists ; 2023 ; Pain Management Volume 13 ; 13 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2024 ; Pain Management Volume 14 ; 14 ; https://www.futuremedicine.com/ ; >
 
   }
@@ -883,7 +883,7 @@
     au < deepCrawl ; exists ; 2020 ; Personalized Medicine Volume 17 ; 17 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2021 ; Personalized Medicine Volume 18 ; 18 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2022 ; Personalized Medicine Volume 19 ; 19 ; https://www.futuremedicine.com/ ; >
-    au < crawling ; exists ; 2023 ; Personalized Medicine Volume 20 ; 20 ; https://www.futuremedicine.com/ ; >
+    au < deepCrawl ; exists ; 2023 ; Personalized Medicine Volume 20 ; 20 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2024 ; Personalized Medicine Volume 21 ; 21 ; https://www.futuremedicine.com/ ; >
 
   }
@@ -953,7 +953,7 @@
     au < deepCrawl ; exists ; 2020 ; Regenerative Medicine Volume 15 ; 15 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2021 ; Regenerative Medicine Volume 16 ; 16 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2022 ; Regenerative Medicine Volume 17 ; 17 ; https://www.futuremedicine.com/ ; >
-    au < crawling ; exists ; 2023 ; Regenerative Medicine Volume 18 ; 18 ; https://www.futuremedicine.com/ ; >
+    au < deepCrawl ; exists ; 2023 ; Regenerative Medicine Volume 18 ; 18 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2024 ; Regenerative Medicine Volume 19 ; 19 ; https://www.futuremedicine.com/ ; >
 
   }

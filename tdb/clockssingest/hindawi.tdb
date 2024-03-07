@@ -2583,7 +2583,7 @@
     au < finished ; frozen ; 2020 ; Case Reports in Pathology Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Case Reports in Pathology Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Case Reports in Pathology Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Case Reports in Pathology Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Case Reports in Pathology Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; Case Reports in Pathology Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -2610,7 +2610,7 @@
     au < finished ; frozen ; 2020 ; Case Reports in Pediatrics Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Case Reports in Pediatrics Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Case Reports in Pediatrics Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Case Reports in Pediatrics Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Case Reports in Pediatrics Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; Case Reports in Pediatrics Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -2637,7 +2637,7 @@
     au < finished ; frozen ; 2020 ; Case Reports in Psychiatry Volume 2020 ; 2020 ; 2020 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2021 ; Case Reports in Psychiatry Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Case Reports in Psychiatry Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Case Reports in Psychiatry Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Case Reports in Psychiatry Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; Case Reports in Psychiatry Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -2664,7 +2664,7 @@
     au < finished ; frozen ; 2020 ; Case Reports in Pulmonology Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Case Reports in Pulmonology Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Case Reports in Pulmonology Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Case Reports in Pulmonology Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Case Reports in Pulmonology Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; Case Reports in Pulmonology Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -2691,7 +2691,7 @@
     au < finished ; frozen ; 2020 ; Case Reports in Radiology Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2021 ; Case Reports in Radiology Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Case Reports in Radiology Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Case Reports in Radiology Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Case Reports in Radiology Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; Case Reports in Radiology Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -2718,7 +2718,7 @@
     au < finished ; frozen ; 2020 ; Case Reports in Rheumatology Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Case Reports in Rheumatology Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Case Reports in Rheumatology Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Case Reports in Rheumatology Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Case Reports in Rheumatology Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; Case Reports in Rheumatology Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -2745,7 +2745,7 @@
     au < finished ; frozen ; 2020 ; Case Reports in Surgery Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Case Reports in Surgery Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Case Reports in Surgery Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Case Reports in Surgery Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Case Reports in Surgery Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; Case Reports in Surgery Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -2772,7 +2772,7 @@
     au < finished ; frozen ; 2020 ; Case Reports in Transplantation Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2021 ; Case Reports in Transplantation Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Case Reports in Transplantation Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Case Reports in Transplantation Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Case Reports in Transplantation Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; Case Reports in Transplantation Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -2799,7 +2799,7 @@
     au < finished ; frozen ; 2020 ; Case Reports in Urology Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Case Reports in Urology Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Case Reports in Urology Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Case Reports in Urology Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Case Reports in Urology Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; Case Reports in Urology Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -2826,7 +2826,7 @@
     au < finished ; frozen ; 2020 ; Case Reports in Vascular Medicine Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Case Reports in Vascular Medicine Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Case Reports in Vascular Medicine Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Case Reports in Vascular Medicine Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Case Reports in Vascular Medicine Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; Case Reports in Vascular Medicine Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -2853,7 +2853,7 @@
     au < finished ; frozen ; 2020 ; Case Reports in Veterinary Medicine Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Case Reports in Veterinary Medicine Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Case Reports in Veterinary Medicine Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Case Reports in Veterinary Medicine Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Case Reports in Veterinary Medicine Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; Case Reports in Veterinary Medicine Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -3019,7 +3019,7 @@
     au < finished ; frozen ; 2020 ; Complexity Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Complexity Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Complexity Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Complexity Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Complexity Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; Complexity Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -3061,7 +3061,7 @@
     au < finished ; frozen ; 2020 ; Computational and Mathematical Methods in Medicine Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Computational and Mathematical Methods in Medicine Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Computational and Mathematical Methods in Medicine Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Computational and Mathematical Methods in Medicine Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Computational and Mathematical Methods in Medicine Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; Computational and Mathematical Methods in Medicine Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -3110,7 +3110,7 @@
     au < finished ; frozen ; 2020 ; Computational Intelligence and Neuroscience Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Computational Intelligence and Neuroscience Volume 2021 ; 2021 ; 2021 ; >
     au < notReady ; exists ; 2022 ; Computational Intelligence and Neuroscience Volume 2022 ; 2022 ; 2022 ; > #500 error
-    au < crawling ; exists ; 2023 ; Computational Intelligence and Neuroscience Volume 2023 ; 2023 ; 2023 ; > #500 error
+    au < deepCrawl ; exists ; 2023 ; Computational Intelligence and Neuroscience Volume 2023 ; 2023 ; 2023 ; > #500 error
     au < expected ; exists ; 2024 ; Computational Intelligence and Neuroscience Volume 2024 ; 2024 ; 2024 ; > #500 error
 
   }
@@ -3149,7 +3149,7 @@
     au < finished ; frozen ; 2020 ; Contrast Media & Molecular Imaging Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Contrast Media & Molecular Imaging Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Contrast Media & Molecular Imaging Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Contrast Media & Molecular Imaging Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Contrast Media & Molecular Imaging Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; Contrast Media & Molecular Imaging Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -3177,7 +3177,7 @@
     au < finished ; frozen ; 2020 ; Critical Care Research and Practice Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Critical Care Research and Practice Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Critical Care Research and Practice Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Critical Care Research and Practice Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Critical Care Research and Practice Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; Critical Care Research and Practice Volume 2024 ; 2024 ; 2024 ; >
 
 
@@ -3208,7 +3208,7 @@
     au < finished ; frozen ; 2020 ; Current Gerontology and Geriatrics Research Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Current Gerontology and Geriatrics Research Volume 2021 ; 2021 ; 2021 ; >
     au < frozen ; exists ; 2022 ; Current Gerontology and Geriatrics Research Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Current Gerontology and Geriatrics Research Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Current Gerontology and Geriatrics Research Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; Current Gerontology and Geriatrics Research Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -3254,7 +3254,7 @@
     au < finished ; frozen ; 2020 ; Depression Research and Treatment Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Depression Research and Treatment Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Depression Research and Treatment Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Depression Research and Treatment Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Depression Research and Treatment Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; Depression Research and Treatment Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -3283,7 +3283,7 @@
     au < finished ; frozen ; 2020 ; Dermatology Research and Practice Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Dermatology Research and Practice Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Dermatology Research and Practice Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Dermatology Research and Practice Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Dermatology Research and Practice Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; Dermatology Research and Practice Volume 2024 ; 2024 ; 2024 ; >
 
 
@@ -3377,7 +3377,7 @@
     au < finished ; crawling ; 2020 ; Discrete Dynamics in Nature and Society Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2021 ; Discrete Dynamics in Nature and Society Volume 2021 ; 2021 ; 2021 ; >
     au < notReady ; exists ; 2022 ; Discrete Dynamics in Nature and Society Volume 2022 ; 2022 ; 2022 ; > #500 error email
-    au < crawling ; exists ; 2023 ; Discrete Dynamics in Nature and Society Volume 2023 ; 2023 ; 2023 ; > #500 error email
+    au < deepCrawl ; exists ; 2023 ; Discrete Dynamics in Nature and Society Volume 2023 ; 2023 ; 2023 ; > #500 error email
     au < expected ; exists ; 2024 ; Discrete Dynamics in Nature and Society Volume 2024 ; 2024 ; 2024 ; > #500 error email
 
   }
@@ -3421,7 +3421,7 @@
     au < finished ; frozen ; 2020 ; Disease Markers Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Disease Markers Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Disease Markers Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Disease Markers Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Disease Markers Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; Disease Markers Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -3474,7 +3474,7 @@
     au < finished ; frozen ; 2020 ; Education Research International Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Education Research International Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Education Research International Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Education Research International Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Education Research International Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; Education Research International Volume 2024 ; 2024 ; 2024 ; >
 
     }
@@ -3504,7 +3504,7 @@
     au < finished ; crawling ; 2020 ; Emergency Medicine International Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Emergency Medicine International Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Emergency Medicine International Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Emergency Medicine International Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Emergency Medicine International Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; Emergency Medicine International Volume 2024 ; 2024 ; 2024 ; >
 
 
@@ -3610,7 +3610,7 @@
     au < finished ; frozen ; 2020 ; Evidence-based Complementary and Alternative Medicine Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Evidence-based Complementary and Alternative Medicine Volume 2021 ; 2021 ; 2021 ; >
     au < notReady ; exists ; 2022 ; Evidence-based Complementary and Alternative Medicine Volume 2022 ; 2022 ; 2022 ; > #500 error
-    au < crawling ; exists ; 2023 ; Evidence-based Complementary and Alternative Medicine Volume 2023 ; 2023 ; 2023 ; > #500 error
+    au < deepCrawl ; exists ; 2023 ; Evidence-based Complementary and Alternative Medicine Volume 2023 ; 2023 ; 2023 ; > #500 error
     au < expected ; exists ; 2024 ; Evidence-based Complementary and Alternative Medicine Volume 2024 ; 2024 ; 2024 ; > #500 error
 
   }
@@ -3657,7 +3657,7 @@
     au < finished ; frozen ; 2020 ; Gastroenterology Research and Practice Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Gastroenterology Research and Practice Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Gastroenterology Research and Practice Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Gastroenterology Research and Practice Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Gastroenterology Research and Practice Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; Gastroenterology Research and Practice Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -3706,7 +3706,7 @@
     au < finished ; frozen ; 2020 ; Geofluids Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Geofluids Volume 2021 ; 2021 ; 2021 ; >
     au < notReady ; exists ; 2022 ; Geofluids Volume 2022 ; 2022 ; 2022 ; > #500 error. malformed email
-    au < crawling ; exists ; 2023 ; Geofluids Volume 2023 ; 2023 ; 2023 ; > #500 error. malformed email
+    au < deepCrawl ; exists ; 2023 ; Geofluids Volume 2023 ; 2023 ; 2023 ; > #500 error. malformed email
     au < expected ; exists ; 2024 ; Geofluids Volume 2024 ; 2024 ; 2024 ; > #500 error. malformed email
 
   }
@@ -3866,7 +3866,7 @@
     au < finished ; frozen ; 2020 ; Infectious Diseases in Obstetrics and Gynecology Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Infectious Diseases in Obstetrics and Gynecology Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Infectious Diseases in Obstetrics and Gynecology Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Infectious Diseases in Obstetrics and Gynecology Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Infectious Diseases in Obstetrics and Gynecology Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; Infectious Diseases in Obstetrics and Gynecology Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -3916,7 +3916,7 @@
     au < finished ; frozen ; 2020 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -3946,7 +3946,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Aerospace Engineering Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Aerospace Engineering Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Aerospace Engineering Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Aerospace Engineering Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Aerospace Engineering Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Aerospace Engineering Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -3975,7 +3975,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Agronomy Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Agronomy Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Agronomy Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Agronomy Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Agronomy Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Agronomy Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -4003,7 +4003,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Alzheimer's Disease Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Alzheimer's Disease Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Alzheimer's Disease Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Alzheimer's Disease Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Alzheimer's Disease Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Alzheimer's Disease Volume 2024 ; 2024 ; 2024 ; >
 
 
@@ -4053,7 +4053,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Analytical Chemistry Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Analytical Chemistry Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Analytical Chemistry Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Analytical Chemistry Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Analytical Chemistry Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Analytical Chemistry Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -4084,7 +4084,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Antennas and Propagation Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Antennas and Propagation Volume 2021 ; 2021 ; 2021 ; >
     au < notReady ; exists ; 2022 ; International Journal of Antennas and Propagation Volume 2022 ; 2022 ; 2022 ; > #500 error. malformed ftp url
-    au < crawling ; exists ; 2023 ; International Journal of Antennas and Propagation Volume 2023 ; 2023 ; 2023 ; > #500 error. malformed ftp url
+    au < deepCrawl ; exists ; 2023 ; International Journal of Antennas and Propagation Volume 2023 ; 2023 ; 2023 ; > #500 error. malformed ftp url
     au < expected ; exists ; 2024 ; International Journal of Antennas and Propagation Volume 2024 ; 2024 ; 2024 ; > #500 error. malformed ftp url
 
   }
@@ -4190,7 +4190,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Biomaterials Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Biomaterials Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Biomaterials Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Biomaterials Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Biomaterials Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Biomaterials Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -4222,7 +4222,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Biomedical Imaging Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Biomedical Imaging Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Biomedical Imaging Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Biomedical Imaging Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Biomedical Imaging Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Biomedical Imaging Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -4265,7 +4265,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Breast Cancer Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Breast Cancer Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Breast Cancer Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Breast Cancer Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Breast Cancer Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Breast Cancer Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -4316,7 +4316,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Cell Biology Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Cell Biology Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Cell Biology Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Cell Biology Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Cell Biology Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Cell Biology Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -4346,7 +4346,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Chemical Engineering Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Chemical Engineering Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Chemical Engineering Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Chemical Engineering Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Chemical Engineering Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Chemical Engineering Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -4387,7 +4387,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Chronic Diseases Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Chronic Diseases Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Chronic Diseases Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Chronic Diseases Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Chronic Diseases Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Chronic Diseases Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -4456,7 +4456,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Computer Games Technology Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Computer Games Technology Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Computer Games Technology Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Computer Games Technology Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Computer Games Technology Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Computer Games Technology Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -4484,7 +4484,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Corrosion Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Corrosion Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Corrosion Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Corrosion Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Corrosion Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Corrosion Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -4513,7 +4513,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Dentistry Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Dentistry Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Dentistry Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Dentistry Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Dentistry Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Dentistry Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -4545,7 +4545,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Differential Equations Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Differential Equations Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Differential Equations Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Differential Equations Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Differential Equations Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Differential Equations Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -4575,7 +4575,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Digital Multimedia Broadcasting Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Digital Multimedia Broadcasting Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Digital Multimedia Broadcasting Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Digital Multimedia Broadcasting Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Digital Multimedia Broadcasting Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Digital Multimedia Broadcasting Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -4606,7 +4606,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Ecology Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Ecology Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Ecology Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Ecology Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Ecology Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Ecology Volume 2024 ; 2024 ; 2024 ; >
 
 
@@ -4634,7 +4634,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Electrochemistry Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Electrochemistry Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Electrochemistry Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Electrochemistry Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Electrochemistry Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Electrochemistry Volume 2024 ; 2024 ; 2024 ; >
 
 
@@ -4679,7 +4679,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Endocrinology Volume 2020 ; 2020 ; 2020 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Endocrinology Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Endocrinology Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Endocrinology Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Endocrinology Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Endocrinology Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -4768,7 +4768,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Food Science Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Food Science Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Food Science Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Food Science Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Food Science Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Food Science Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -4797,7 +4797,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Forestry Research Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Forestry Research Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Forestry Research Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Forestry Research Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Forestry Research Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Forestry Research Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -4835,7 +4835,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Genomics Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Genomics Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Genomics Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Genomics Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Genomics Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Genomics Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -4864,7 +4864,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Geophysics Volume 2020 ; 2020 ; 2020 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Geophysics Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Geophysics Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Geophysics Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Geophysics Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Geophysics Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -4891,7 +4891,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Hepatology Volume 2020 ; 2020 ; 2020 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Hepatology Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Hepatology Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Hepatology Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Hepatology Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Hepatology Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -4919,7 +4919,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Hypertension Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Hypertension Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Hypertension Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Hypertension Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Hypertension Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Hypertension Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -4947,7 +4947,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Inflammation Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Inflammation Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Inflammation Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Inflammation Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Inflammation Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Inflammation Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -5050,7 +5050,7 @@
     au < finished ; crawling ; 2020 ; International Journal of Mathematics and Mathematical Sciences Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Mathematics and Mathematical Sciences Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Mathematics and Mathematical Sciences Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Mathematics and Mathematical Sciences Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Mathematics and Mathematical Sciences Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Mathematics and Mathematical Sciences Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -5140,7 +5140,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Microbiology Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Microbiology Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Microbiology Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Microbiology Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Microbiology Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Microbiology Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -5255,7 +5255,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Nephrology Volume 2020 ; 2020 ; 2020 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Nephrology Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Nephrology Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Nephrology Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Nephrology Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Nephrology Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -5325,7 +5325,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Optics Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Optics Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Optics Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Optics Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Optics Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Optics Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -5354,7 +5354,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Otolaryngology Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Otolaryngology Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Otolaryngology Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Otolaryngology Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Otolaryngology Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Otolaryngology Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -5398,7 +5398,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Pediatrics Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Pediatrics Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Pediatrics Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Pediatrics Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Pediatrics Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Pediatrics Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -5460,7 +5460,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Photoenergy Volume 2020 ; 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Photoenergy Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Photoenergy Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Photoenergy Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Photoenergy Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Photoenergy Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -5514,7 +5514,7 @@
     au < finished ; frozen ; 2020 ; International Journal of Polymer Science Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Polymer Science Volume 2021 ; 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Polymer Science Volume 2022 ; 2022 ; 2022 ; >
-    au < crawling ; exists ; 2023 ; International Journal of Polymer Science Volume 2023 ; 2023 ; 2023 ; >
+    au < deepCrawl ; exists ; 2023 ; International Journal of Polymer Science Volume 2023 ; 2023 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Polymer Science Volume 2024 ; 2024 ; 2024 ; >
 
   }
