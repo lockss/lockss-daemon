@@ -24,11 +24,11 @@
       attr[start_stem] = 
       #First publication Volume 58, 1923. Older content not online 20221201
 
-      au < manifest ; exists ; 2020 ; Scandinavian Journal of Urology Volume 2020 ; 55 ; 2020 ; >
-      au < manifest ; exists ; 2021 ; Scandinavian Journal of Urology Volume 2021 ; 56 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; Scandinavian Journal of Urology Volume 2022 ; 57 ; 2022 ; >
+      au < ready ; exists ; 2020 ; Scandinavian Journal of Urology Volume 2020 ; 55 ; 2020 ; >
+      au < ready ; exists ; 2021 ; Scandinavian Journal of Urology Volume 2021 ; 56 ; 2021 ; >
+      au < ready ; exists ; 2022 ; Scandinavian Journal of Urology Volume 2022 ; 57 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; Scandinavian Journal of Urology Volume 2023 ; 58 ; 2023 ; >
-      au < manifest ; exists ; 2024 ; Scandinavian Journal of Urology Volume 2024 ; 59 ; 2024 ; >
+      au < ready ; exists ; 2024 ; Scandinavian Journal of Urology Volume 2024 ; 59 ; 2024 ; >
 
   }
 
@@ -44,9 +44,9 @@
       attr[start_stem] = 
       #First publication Volume 58, 1923. Older content not online 20221201
 
-      au < manifest ; exists ; 2020 ; Journal of Plastic Surgery and Hand Surgery Volume 2020 ; 55 ; 2020 ; >
-      au < manifest ; exists ; 2021 ; Journal of Plastic Surgery and Hand Surgery Volume 2021 ; 56 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; Journal of Plastic Surgery and Hand Surgery Volume 2022 ; 57 ; 2022 ; >
+      au < ready ; exists ; 2020 ; Journal of Plastic Surgery and Hand Surgery Volume 2020 ; 55 ; 2020 ; >
+      au < ready ; exists ; 2021 ; Journal of Plastic Surgery and Hand Surgery Volume 2021 ; 56 ; 2021 ; >
+      au < ready ; exists ; 2022 ; Journal of Plastic Surgery and Hand Surgery Volume 2022 ; 57 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; Journal of Plastic Surgery and Hand Surgery Volume 2023 ; 58 ; 2023 ; >
       au < manifest ; exists ; 2024 ; Journal of Plastic Surgery and Hand Surgery Volume 2024 ; 59 ; 2024 ; >
 
@@ -143,26 +143,26 @@
       au < manifest ; exists ; 1997 ; Acta Dermato-Venereologica Volume 1997 ; 77 ; 1997 ; >
       au < manifest ; exists ; 1998 ; Acta Dermato-Venereologica Volume 1998 ; 78 ; 1998 ; >
       au < manifest ; exists ; 1999 ; Acta Dermato-Venereologica Volume 1999 ; 79 ; 1999 ; >
-      au < manifest ; exists ; 2000 ; Acta Dermato-Venereologica Volume 2000 ; 80 ; 2000 ; >
-      au < manifest ; exists ; 2001 ; Acta Dermato-Venereologica Volume 2001 ; 81 ; 2001 ; >
-      au < manifest ; exists ; 2002 ; Acta Dermato-Venereologica Volume 2002 ; 82 ; 2002 ; >
-      au < manifest ; exists ; 2003 ; Acta Dermato-Venereologica Volume 2003 ; 83 ; 2003 ; >
-      au < manifest ; exists ; 2004 ; Acta Dermato-Venereologica Volume 2004 ; 84 ; 2004 ; >
-      au < manifest ; exists ; 2005 ; Acta Dermato-Venereologica Volume 2005 ; 85 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; Acta Dermato-Venereologica Volume 2006 ; 86 ; 2006 ; >
+      au < ready ; exists ; 2000 ; Acta Dermato-Venereologica Volume 2000 ; 80 ; 2000 ; >
+      au < ready ; exists ; 2001 ; Acta Dermato-Venereologica Volume 2001 ; 81 ; 2001 ; >
+      au < ready ; exists ; 2002 ; Acta Dermato-Venereologica Volume 2002 ; 82 ; 2002 ; >
+      au < ready ; exists ; 2003 ; Acta Dermato-Venereologica Volume 2003 ; 83 ; 2003 ; >
+      au < ready ; exists ; 2004 ; Acta Dermato-Venereologica Volume 2004 ; 84 ; 2004 ; >
+      au < ready ; exists ; 2005 ; Acta Dermato-Venereologica Volume 2005 ; 85 ; 2005 ; >
+      au < ready ; exists ; 2006 ; Acta Dermato-Venereologica Volume 2006 ; 86 ; 2006 ; >
       au < manifest ; exists ; 2007 ; Acta Dermato-Venereologica Volume 2007 ; 87 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; Acta Dermato-Venereologica Volume 2008 ; 88 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; Acta Dermato-Venereologica Volume 2009 ; 89 ; 2009 ; >
-      au < manifest ; exists ; 2010 ; Acta Dermato-Venereologica Volume 2010 ; 90 ; 2010 ; >
-      au < manifest ; exists ; 2011 ; Acta Dermato-Venereologica Volume 2011 ; 91 ; 2011 ; >
-      au < manifest ; exists ; 2012 ; Acta Dermato-Venereologica Volume 2012 ; 92 ; 2012 ; >
-      au < manifest ; exists ; 2013 ; Acta Dermato-Venereologica Volume 2013 ; 93 ; 2013 ; >
-      au < manifest ; exists ; 2014 ; Acta Dermato-Venereologica Volume 2014 ; 94 ; 2014 ; >
-      au < manifest ; exists ; 2015 ; Acta Dermato-Venereologica Volume 2015 ; 95 ; 2015 ; >
-      au < manifest ; exists ; 2016 ; Acta Dermato-Venereologica Volume 2016 ; 96 ; 2016 ; >
+      au < ready ; exists ; 2008 ; Acta Dermato-Venereologica Volume 2008 ; 88 ; 2008 ; >
+      au < ready ; exists ; 2009 ; Acta Dermato-Venereologica Volume 2009 ; 89 ; 2009 ; >
+      au < ready ; exists ; 2010 ; Acta Dermato-Venereologica Volume 2010 ; 90 ; 2010 ; >
+      au < ready ; exists ; 2011 ; Acta Dermato-Venereologica Volume 2011 ; 91 ; 2011 ; >
+      au < ready ; exists ; 2012 ; Acta Dermato-Venereologica Volume 2012 ; 92 ; 2012 ; >
+      au < ready ; exists ; 2013 ; Acta Dermato-Venereologica Volume 2013 ; 93 ; 2013 ; >
+      au < ready ; exists ; 2014 ; Acta Dermato-Venereologica Volume 2014 ; 94 ; 2014 ; >
+      au < ready ; exists ; 2015 ; Acta Dermato-Venereologica Volume 2015 ; 95 ; 2015 ; >
+      au < ready ; exists ; 2016 ; Acta Dermato-Venereologica Volume 2016 ; 96 ; 2016 ; >
       au < frozen ; exists ; 2017 ; Acta Dermato-Venereologica Volume 2017 ; 97 ; 2017 ; >
       au < frozen ; exists ; 2018 ; Acta Dermato-Venereologica Volume 2018 ; 98 ; 2018 ; >
-      au < manifest ; exists ; 2019 ; Acta Dermato-Venereologica Volume 2019 ; 99 ; 2019 ; > #500 Error
+      au < ready ; exists ; 2019 ; Acta Dermato-Venereologica Volume 2019 ; 99 ; 2019 ; > #500 Error
       au < finished ; crawling ; 2020 ; Acta Dermato-Venereologica Volume 2020 ; 100 ; 2020 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; Acta Dermato-Venereologica Volume 2021 ; 101 ; 2021 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Acta Dermato-Venereologica Volume 2022 ; 102 ; 2022 ; >
@@ -253,25 +253,25 @@
       au < manifest ; exists ; 1997 ; Acta Orthopaedica Volume 1997 ; 68 ; 1997 ; >
       au < manifest ; exists ; 1998 ; Acta Orthopaedica Volume 1998 ; 69 ; 1998 ; >
       au < manifest ; exists ; 1999 ; Acta Orthopaedica Volume 1999 ; 70 ; 1999 ; >
-      au < manifest ; exists ; 2000 ; Acta Orthopaedica Volume 2000 ; 71 ; 2000 ; >
-      au < manifest ; exists ; 2001 ; Acta Orthopaedica Volume 2001 ; 72 ; 2001 ; >
-      au < manifest ; exists ; 2002 ; Acta Orthopaedica Volume 2002 ; 73 ; 2002 ; >
-      au < manifest ; exists ; 2003 ; Acta Orthopaedica Volume 2003 ; 74 ; 2003 ; >
-      au < manifest ; exists ; 2004 ; Acta Orthopaedica Volume 2004 ; 75 ; 2004 ; >
-      au < manifest ; exists ; 2005 ; Acta Orthopaedica Volume 2005 ; 76 ; 2005 ; >
+      au < ready ; exists ; 2000 ; Acta Orthopaedica Volume 2000 ; 71 ; 2000 ; >
+      au < ready ; exists ; 2001 ; Acta Orthopaedica Volume 2001 ; 72 ; 2001 ; >
+      au < ready ; exists ; 2002 ; Acta Orthopaedica Volume 2002 ; 73 ; 2002 ; >
+      au < ready ; exists ; 2003 ; Acta Orthopaedica Volume 2003 ; 74 ; 2003 ; >
+      au < ready ; exists ; 2004 ; Acta Orthopaedica Volume 2004 ; 75 ; 2004 ; >
+      au < ready ; exists ; 2005 ; Acta Orthopaedica Volume 2005 ; 76 ; 2005 ; >
       au < manifest ; exists ; 2006 ; Acta Orthopaedica Volume 2006 ; 77 ; 2006 ; >
       au < manifest ; exists ; 2007 ; Acta Orthopaedica Volume 2007 ; 78 ; 2007 ; >
       au < manifest ; exists ; 2008 ; Acta Orthopaedica Volume 2008 ; 79 ; 2008 ; >
       au < manifest ; exists ; 2009 ; Acta Orthopaedica Volume 2009 ; 80 ; 2009 ; >
-      au < manifest ; exists ; 2010 ; Acta Orthopaedica Volume 2010 ; 81 ; 2010 ; >
-      au < manifest ; exists ; 2011 ; Acta Orthopaedica Volume 2011 ; 82 ; 2011 ; >
-      au < manifest ; exists ; 2012 ; Acta Orthopaedica Volume 2012 ; 83 ; 2012 ; >
-      au < manifest ; exists ; 2013 ; Acta Orthopaedica Volume 2013 ; 84 ; 2013 ; >
-      au < manifest ; exists ; 2014 ; Acta Orthopaedica Volume 2014 ; 85 ; 2014 ; >
-      au < manifest ; exists ; 2015 ; Acta Orthopaedica Volume 2015 ; 86 ; 2015 ; >
-      au < manifest ; exists ; 2016 ; Acta Orthopaedica Volume 2016 ; 87 ; 2016 ; >
-      au < manifest ; exists ; 2017 ; Acta Orthopaedica Volume 2017 ; 88 ; 2017 ; >
-      au < manifest ; exists ; 2018 ; Acta Orthopaedica Volume 2018 ; 89 ; 2018 ; >
+      au < ready ; exists ; 2010 ; Acta Orthopaedica Volume 2010 ; 81 ; 2010 ; >
+      au < ready ; exists ; 2011 ; Acta Orthopaedica Volume 2011 ; 82 ; 2011 ; >
+      au < ready ; exists ; 2012 ; Acta Orthopaedica Volume 2012 ; 83 ; 2012 ; >
+      au < ready ; exists ; 2013 ; Acta Orthopaedica Volume 2013 ; 84 ; 2013 ; >
+      au < ready ; exists ; 2014 ; Acta Orthopaedica Volume 2014 ; 85 ; 2014 ; >
+      au < ready ; exists ; 2015 ; Acta Orthopaedica Volume 2015 ; 86 ; 2015 ; >
+      au < ready ; exists ; 2016 ; Acta Orthopaedica Volume 2016 ; 87 ; 2016 ; >
+      au < ready ; exists ; 2017 ; Acta Orthopaedica Volume 2017 ; 88 ; 2017 ; >
+      au < ready ; exists ; 2018 ; Acta Orthopaedica Volume 2018 ; 89 ; 2018 ; >
       au < finished ; crawling ; 2019 ; Acta Orthopaedica Volume 2019 ; 90 ; 2019 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; Acta Orthopaedica Volume 2020 ; 91 ; 2020 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; Acta Orthopaedica Volume 2021 ; 92 ; 2021 ; reingest1.clockss.org:8082 >
