@@ -209,6 +209,10 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("div", "class", "core-xlink-openurl"),
     HtmlNodeFilters.tagWithAttribute("img", "alt", "Open URL "),
 
+    // https://www.ajronline.org/doi/full/10.2214/AJR.22.27901
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "js--citations-truncated"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "relatedTab"),
+
     // A number of children add a link item "Cited By" only after the article
     // has been cited...remove the entire list item - look for text pattern
     new NodeFilter() {
