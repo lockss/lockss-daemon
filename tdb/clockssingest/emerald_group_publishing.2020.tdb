@@ -36,7 +36,7 @@
     au < deepCrawl ; exists ; 2021 ; Academia Revista Latinoamericana de Administración Volume 34 ; 34 ; >
     au < deepCrawl ; exists ; 2022 ; Academia Revista Latinoamericana de Administración Volume 35 ; 35 ; >
     au < deepCrawl ; exists ; 2023 ; Academia Revista Latinoamericana de Administración Volume 36 ; 36 ; >
-    au < expected ; exists ; 2024 ; Academia Revista Latinoamericana de Administración Volume 37 ; 37 ; >
+    au < manifest ; exists ; 2024 ; Academia Revista Latinoamericana de Administración Volume 37 ; 37 ; >
 
   }
 
@@ -444,7 +444,7 @@
     au < deepCrawl ; exists ; 2021 ; American Journal of Business Volume 36 ; 36 ; >
     au < deepCrawl ; exists ; 2022 ; American Journal of Business Volume 37 ; 37 ; >
     au < deepCrawl ; exists ; 2023 ; American Journal of Business Volume 38 ; 38 ; >
-    au < expected ; exists ; 2024 ; American Journal of Business Volume 39 ; 39 ; >
+    au < manifest ; exists ; 2024 ; American Journal of Business Volume 39 ; 39 ; >
 
   }
 
@@ -1119,7 +1119,7 @@
     au < deepCrawl ; exists ; 2021 ; The Bottom Line: Managing Library Finances Volume 34 ; 34 ; >
     au < deepCrawl ; exists ; 2022 ; The Bottom Line: Managing Library Finances Volume 35 ; 35 ; >
     au < deepCrawl ; exists ; 2023 ; The Bottom Line: Managing Library Finances Volume 36 ; 36 ; >
-    au < expected ; exists ; 2024 ; The Bottom Line: Managing Library Finances Volume 37 ; 37 ; >
+    au < manifest ; exists ; 2024 ; The Bottom Line: Managing Library Finances Volume 37 ; 37 ; >
 
   }
 
@@ -1577,7 +1577,7 @@
     au < deepCrawl ; exists ; 2021 ; China Finance Review International Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2022 ; China Finance Review International Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2023 ; China Finance Review International Volume 13 ; 13 ; >
-    au < expected ; exists ; 2024 ; China Finance Review International Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2024 ; China Finance Review International Volume 14 ; 14 ; >
 
   }
 
@@ -1884,8 +1884,8 @@
     comment[journal_id] = cr
     #For AUs marked notReady see LXPLUG-2108
 
-    au < crawling ; exists ; 1991 ; Competitiveness Review: An International Business Journal Volume 1 ; 1 ; > #500 error 
-    au < crawling ; exists ; 1992 ; Competitiveness Review: An International Business Journal Volume 2 ; 2 ; > #500 error 
+    au < frozen ; exists ; 1991 ; Competitiveness Review: An International Business Journal Volume 1 ; 1 ; > #500 error 
+    au < frozen ; exists ; 1992 ; Competitiveness Review: An International Business Journal Volume 2 ; 2 ; > #500 error 
     au < finished ; finished ; 1993 ; Competitiveness Review: An International Business Journal Volume 3 ; 3 ; reingest5.clockss.org:8082 > #500 error 
     au < finished ; frozen ; 1994 ; Competitiveness Review: An International Business Journal Volume 4 ; 4 ; reingest1.clockss.org:8082 > #500 error 
     au < finished ; frozen ; 1995 ; Competitiveness Review: An International Business Journal Volume 5 ; 5 ; reingest2.clockss.org:8085 >
@@ -1894,7 +1894,7 @@
     au < finished ; frozen ; 1998 ; Competitiveness Review: An International Business Journal Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1999 ; Competitiveness Review: An International Business Journal Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Competitiveness Review: An International Business Journal Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2001 ; Competitiveness Review: An International Business Journal Volume 11 ; 11 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
+    au < frozen ; exists ; 2001 ; Competitiveness Review: An International Business Journal Volume 11 ; 11 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
     au < frozen ; exists ; 2002 ; Competitiveness Review: An International Business Journal Volume 12 ; 12 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
     au < frozen ; exists ; 2003 ; Competitiveness Review: An International Business Journal Volume 13 ; 13 ; > #500 error 
     au < frozen ; exists ; 2004 ; Competitiveness Review: An International Business Journal Volume 14 ; 14 ; > #500 error 
@@ -1914,7 +1914,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Competitiveness Review: An International Business Journal Volume 28 ; 28 ; >
     au < ingNotReady ; exists ; 2019 ; Competitiveness Review: An International Business Journal Volume 29 ; 29 ; > #500 error 
     au < deepCrawl ; exists ; 2020 ; Competitiveness Review: An International Business Journal Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2021 ; Competitiveness Review: An International Business Journal Volume 31 ; 31 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
+    au < frozen ; exists ; 2021 ; Competitiveness Review: An International Business Journal Volume 31 ; 31 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
     au < deepCrawl ; exists ; 2022 ; Competitiveness Review: An International Business Journal Volume 32 ; 32 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
     au < deepCrawl ; exists ; 2023 ; Competitiveness Review: An International Business Journal Volume 33 ; 33 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
     au < manifest ; exists ; 2024 ; Competitiveness Review: An International Business Journal Volume 34 ; 34 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
@@ -6253,7 +6253,7 @@
     au < deepCrawl ; exists ; 2021 ; International Journal of Workplace Health Management Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Workplace Health Management Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2023 ; International Journal of Workplace Health Management Volume 16 ; 16 ; >
-    au < expected ; exists ; 2024 ; International Journal of Workplace Health Management Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2024 ; International Journal of Workplace Health Management Volume 17 ; 17 ; >
 
   }
 
@@ -8285,7 +8285,7 @@
     au < deepCrawl ; exists ; 2021 ; Journal of International Trade Law and Policy Volume 20 ; 20 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of International Trade Law and Policy Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2023 ; Journal of International Trade Law and Policy Volume 22 ; 22 ; >
-    au < expected ; exists ; 2024 ; Journal of International Trade Law and Policy Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2024 ; Journal of International Trade Law and Policy Volume 23 ; 23 ; >
 
   }
 
@@ -10014,7 +10014,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Library Management Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Library Management Volume 39 ; 39 ; >
     au < finished ; manifest ; 2019 ; Library Management Volume 40 ; 40 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2020 ; Library Management Volume 41 ; 41 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/LM-02-2017%200022/full/pdf?title=libraries-and-technology-canadian-and-malaysian-copyright-exceptions
+    au < frozen ; exists ; 2020 ; Library Management Volume 41 ; 41 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/LM-02-2017%200022/full/pdf?title=libraries-and-technology-canadian-and-malaysian-copyright-exceptions
     au < deepCrawl ; exists ; 2021 ; Library Management Volume 42 ; 42 ; >
     au < deepCrawl ; exists ; 2022 ; Library Management Volume 43 ; 43 ; >
     au < deepCrawl ; exists ; 2023 ; Library Management Volume 44 ; 44 ; >
@@ -11928,7 +11928,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Property Management Volume 36 ; 36 ; >
     au < finished ; manifest ; 2019 ; Property Management Volume 37 ; 37 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Property Management Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2021 ; Property Management Volume 39 ; 39 ; > #500 https://www.emerald.com/insight/content/doi/10.1108/PM-03-2020-0018/full/html
+    au < frozen ; exists ; 2021 ; Property Management Volume 39 ; 39 ; > #500 https://www.emerald.com/insight/content/doi/10.1108/PM-03-2020-0018/full/html
     au < deepCrawl ; exists ; 2022 ; Property Management Volume 40 ; 40 ; > #500 https://www.emerald.com/insight/content/doi/10.1108/PM-03-2020-0018/full/html
     au < deepCrawl ; exists ; 2023 ; Property Management Volume 41 ; 41 ; > #500 https://www.emerald.com/insight/content/doi/10.1108/PM-03-2020-0018/full/html
     au < manifest ; exists ; 2024 ; Property Management Volume 42 ; 42 ; > #500 https://www.emerald.com/insight/content/doi/10.1108/PM-03-2020-0018/full/html
@@ -12301,15 +12301,15 @@
     au < notReady ; exists ; 2002 ; Reference Reviews Volume 16 ; 16 ; >
     au < notReady ; exists ; 2003 ; Reference Reviews Volume 17 ; 17 ; >
     au < notReady ; exists ; 2004 ; Reference Reviews Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2005 ; Reference Reviews Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2006 ; Reference Reviews Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2005 ; Reference Reviews Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2006 ; Reference Reviews Volume 20 ; 20 ; >
     au < frozen ; exists ; 2007 ; Reference Reviews Volume 21 ; 21 ; >
     au < notReady ; exists ; 2008 ; Reference Reviews Volume 22 ; 22 ; >
     au < notReady ; exists ; 2009 ; Reference Reviews Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2010 ; Reference Reviews Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2010 ; Reference Reviews Volume 24 ; 24 ; >
     au < frozen ; exists ; 2011 ; Reference Reviews Volume 25 ; 25 ; >
     au < frozen ; exists ; 2012 ; Reference Reviews Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2013 ; Reference Reviews Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2013 ; Reference Reviews Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Reference Reviews Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Reference Reviews Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Reference Reviews Volume 30 ; 30 ; >
@@ -12379,7 +12379,7 @@
     au < deepCrawl ; exists ; 2021 ; Reference Services Review Volume 49 ; 49 ; >
     au < deepCrawl ; exists ; 2022 ; Reference Services Review Volume 50 ; 50 ; >
     au < deepCrawl ; exists ; 2023 ; Reference Services Review Volume 51 ; 51 ; >
-    au < expected ; exists ; 2024 ; Reference Services Review Volume 52 ; 52 ; >
+    au < manifest ; exists ; 2024 ; Reference Services Review Volume 52 ; 52 ; >
 
   }
 
@@ -12441,7 +12441,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Review of Behavioral Finance Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Review of Behavioral Finance Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Review of Behavioral Finance Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2019 ; Review of Behavioral Finance Volume 11 ; 11 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_RBF-01-2020-0013/urn:emeraldgroup.com:asset:id:binary:RBF-01-2020-0013_mmc001.docx
+    au < frozen ; exists ; 2019 ; Review of Behavioral Finance Volume 11 ; 11 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_RBF-01-2020-0013/urn:emeraldgroup.com:asset:id:binary:RBF-01-2020-0013_mmc001.docx
     au < frozen ; exists ; 2020 ; Review of Behavioral Finance Volume 12 ; 12 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_RBF-01-2020-0013/urn:emeraldgroup.com:asset:id:binary:RBF-01-2020-0013_mmc001.docx
     au < deepCrawl ; exists ; 2021 ; Review of Behavioral Finance Volume 13 ; 13 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_RBF-01-2021-0013/urn:emeraldgroup.com:asset:id:binary:RBF-01-2021-0013_mmc001.docx
     au < deepCrawl ; exists ; 2022 ; Review of Behavioral Finance Volume 14 ; 14 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_RBF-01-2022-0014/urn:emeraldgroup.com:asset:id:binary:RBF-01-2022-0014_mmc001.docx
@@ -13073,7 +13073,7 @@
     au < deepCrawl ; exists ; 2021 ; International Journal of Building Pathology and Adaptation Volume 39 ; 39 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Building Pathology and Adaptation Volume 40 ; 40 ; >
     au < deepCrawl ; exists ; 2023 ; International Journal of Building Pathology and Adaptation Volume 41 ; 41 ; >
-    au < expected ; exists ; 2024 ; International Journal of Building Pathology and Adaptation Volume 42 ; 42 ; >
+    au < manifest ; exists ; 2024 ; International Journal of Building Pathology and Adaptation Volume 42 ; 42 ; >
 
   }
 
@@ -14446,7 +14446,7 @@
     au < finished ; manifest ; 2021 ; Journal of Global Mobility Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Journal of Global Mobility Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Global Mobility Volume 11 ; 11 ; >
-    au < expected ; exists ; 2024 ; Journal of Global Mobility Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2024 ; Journal of Global Mobility Volume 12 ; 12 ; >
 
   }
 
@@ -14934,7 +14934,7 @@
     au < finished ; manifest ; 2021 ; Applied Economic Analysis Volume 29 ; 29 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Applied Economic Analysis Volume 30 ; 30 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2023 ; Applied Economic Analysis Volume 31 ; 31 ; >
-    au < expected ; exists ; 2024 ; Applied Economic Analysis Volume 32 ; 32 ; >
+    au < manifest ; exists ; 2024 ; Applied Economic Analysis Volume 32 ; 32 ; >
 
   }
 
@@ -15811,7 +15811,7 @@
     au < finished ; manifest ; 2021 ; Organization Management Journal Volume 18 ; 18 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2022 ; Organization Management Journal Volume 19 ; 19 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2023 ; Organization Management Journal Volume 20 ; 20 ; >
-    au < expected ; exists ; 2024 ; Organization Management Journal Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2024 ; Organization Management Journal Volume 21 ; 21 ; >
 
   }
 
@@ -15955,7 +15955,7 @@
     au < finished ; manifest ; 2021 ; Smart and Resilient Transportation Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Smart and Resilient Transportation Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2023 ; Smart and Resilient Transportation Volume 5 ; 5 ; >
-    au < expected ; exists ; 2024 ; Smart and Resilient Transportation Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2024 ; Smart and Resilient Transportation Volume 6 ; 6 ; >
 
   }
 
@@ -16115,7 +16115,7 @@
     au < finished ; manifest ; 2021 ; Archnet-IJAR Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Archnet-IJAR Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2023 ; Archnet-IJAR Volume 17 ; 17 ; >
-    au < expected ; exists ; 2024 ; Archnet-IJAR Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2024 ; Archnet-IJAR Volume 18 ; 18 ; >
 
   }
 
