@@ -527,7 +527,7 @@
       au < finished ; crawling ; 2021 ; 2021 ; Biodiversity Information Science and Standards Volume 2021 ; 2021 ; https://biss.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Biodiversity Information Science and Standards Volume 2022 ; 2022 ; https://biss.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Biodiversity Information Science and Standards Volume 2023 ; 2023 ; https://biss.pensoft.net/ ; >
-      au < expected ; exists ; 2024 ; 2024 ; Biodiversity Information Science and Standards Volume 2024 ; 2024 ; https://biss.pensoft.net/ ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Biodiversity Information Science and Standards Volume 2024 ; 2024 ; https://biss.pensoft.net/ ; >
 
   }
 
@@ -622,7 +622,7 @@
       #Changed from 2603-4301 Food Modelling Journal (FMJ)
       au < frozen ; exists ; 2022 ; 2022 ; Food and Ecological Systems Modelling Journal Volume 2022 ; 2022 ; https://fesmj.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Food and Ecological Systems Modelling Journal Volume 2023 ; 2023 ; https://fesmj.pensoft.net/ ; >
-      au < expected ; exists ; 2024 ; 2024 ; Food and Ecological Systems Modelling Journal Volume 2024 ; 2024 ; https://fesmj.pensoft.net/ ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Food and Ecological Systems Modelling Journal Volume 2024 ; 2024 ; https://fesmj.pensoft.net/ ; >
 
   }
 
@@ -1318,7 +1318,7 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Population and Economics Volume 2021 ; 2021 ; https://populationandeconomics.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Population and Economics Volume 2022 ; 2022 ; https://populationandeconomics.pensoft.net/ ; >
       au < crawling ; exists ; 2023 ; 2023 ; Population and Economics Volume 2023 ; 2023 ; https://populationandeconomics.pensoft.net/ ; >
-      au < expected ; exists ; 2024 ; 2024 ; Population and Economics Volume 2024 ; 2024 ; https://populationandeconomics.pensoft.net/ ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Population and Economics Volume 2024 ; 2024 ; https://populationandeconomics.pensoft.net/ ; >
 
   }
 
