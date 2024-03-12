@@ -82,6 +82,20 @@ public class ARRSHtmlHashFilterFactory
         // http://www.ajronline.org/doi/full/10.2214/AJR.12.9121
         HtmlNodeFilters.tagWithAttribute("table", "class", "sectionHeading"),
 
+        // https://www.ajronline.org/doi/full/10.2214/AJR.22.27901
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "js--citations-truncated"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "relatedTab"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-metric-container"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "citation"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "st-header"),
+        HtmlNodeFilters.tagWithAttributeRegex("section", "role", "doc-bibliography"),
+        HtmlNodeFilters.tagWithAttributeRegex("section", "class", "core-self-citation"),
+        HtmlNodeFilters.tagWithAttributeRegex("section", "class", "core-copyright"),
+        HtmlNodeFilters.tagWithAttributeRegex("section", "class", "core-history"),
+        HtmlNodeFilters.tagWithAttributeRegex("section", "class", "keywords"),
+        HtmlNodeFilters.tagWithAttributeRegex("section", "class", "core-authors"),
+        HtmlNodeFilters.tagWithAttributeRegex("section", "property", "keywords"),
+
     };
 
     // super.createFilteredInputStream adds filters to the baseAtyponFilters
