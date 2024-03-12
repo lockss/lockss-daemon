@@ -130,7 +130,7 @@
       au < finished ; manifest ; 2007 ; British Journal of Radiology Volume 80 ; 80 ; https://www.birpublications.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; British Journal of Radiology Volume 81 ; 81 ; https://www.birpublications.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; British Journal of Radiology Volume 82 ; 82 ; https://www.birpublications.org/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2010 ; British Journal of Radiology Volume 83 ; 83 ; https://www.birpublications.org/ ; >
+      au < finished ; manifest ; 2010 ; British Journal of Radiology Volume 83 ; 83 ; https://www.birpublications.org/ ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2011 ; British Journal of Radiology Volume 84 ; 84 ; https://www.birpublications.org/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; British Journal of Radiology Volume 85 ; 85 ; https://www.birpublications.org/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; British Journal of Radiology Volume 86 ; 86 ; https://www.birpublications.org/ ; >
@@ -142,8 +142,8 @@
       au < finished ; finished ; 2019 ; British Journal of Radiology Volume 92 ; 92 ; https://www.birpublications.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; British Journal of Radiology Volume 93 ; 93 ; https://www.birpublications.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2021 ; British Journal of Radiology Volume 94 ; 94 ; https://www.birpublications.org/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2022 ; British Journal of Radiology Volume 95 ; 95 ; https://www.birpublications.org/ ; >
-      au < deepCrawl ; exists ; 2023 ; British Journal of Radiology Volume 96 ; 96 ; https://www.birpublications.org/ ; >
+      au < finished ; manifest ; 2022 ; British Journal of Radiology Volume 95 ; 95 ; https://www.birpublications.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2023 ; British Journal of Radiology Volume 96 ; 96 ; https://www.birpublications.org/ ; reingest2.clockss.org:8085 >
       #Moving to OUP in 2024
 
     }
@@ -170,8 +170,8 @@
       au < finished ; finished ; 2019 ; BJR|case reports Volume 5 ; 5 ; https://www.birpublications.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; BJR|case reports Volume 6 ; 6 ; https://www.birpublications.org/ ; reingest2.clockss.org:8085 >
       au < notReady ; exists ; 2021 ; BJR|case reports Volume 7 ; 7 ; https://www.birpublications.org/ ; > #524 https://www.birpublications.org/specs/ux3/releasedAssets/images/widgets/ad-placeholder/placeholder.png
-      au < deepCrawl ; exists ; 2022 ; BJR|case reports Volume 8 ; 8 ; https://www.birpublications.org/ ; >
-      au < deepCrawl ; exists ; 2023 ; BJR|case reports Volume 9 ; 9 ; https://www.birpublications.org/ ; >
+      au < finished ; manifest ; 2022 ; BJR|case reports Volume 8 ; 8 ; https://www.birpublications.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2023 ; BJR|case reports Volume 9 ; 9 ; https://www.birpublications.org/ ; reingest1.clockss.org:8082 >
        #Moving to OUP in 2024
 
   }
@@ -192,8 +192,8 @@
       au < finished ; finished ; 2019 ; BJR|Open Volume 1 ; 1 ; https://www.birpublications.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; BJR|Open Volume 2 ; 2 ; https://www.birpublications.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; BJR|Open Volume 3 ; 3 ; https://www.birpublications.org/ ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2022 ; BJR|Open Volume 4 ; 4 ; https://www.birpublications.org/ ; >
-      au < deepCrawl ; exists ; 2023 ; BJR|Open Volume 5 ; 5 ; https://www.birpublications.org/ ; >
+      au < finished ; manifest ; 2022 ; BJR|Open Volume 4 ; 4 ; https://www.birpublications.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2023 ; BJR|Open Volume 5 ; 5 ; https://www.birpublications.org/ ; reingest2.clockss.org:8085 >
       #Moving to OUP in 2024
 
   }
@@ -256,7 +256,7 @@
 
       au < finished ; manifest ; 2000 ; Dentomaxillofacial Radiology Volume 29 ; 29 ; https://www.birpublications.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2001 ; Dentomaxillofacial Radiology Volume 30 ; 30 ; https://www.birpublications.org/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2002 ; Dentomaxillofacial Radiology Volume 31 ; 31 ; https://www.birpublications.org/ ; >
+      au < finished ; manifest ; 2002 ; Dentomaxillofacial Radiology Volume 31 ; 31 ; https://www.birpublications.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2003 ; Dentomaxillofacial Radiology Volume 32 ; 32 ; https://www.birpublications.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2004 ; Dentomaxillofacial Radiology Volume 33 ; 33 ; https://www.birpublications.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2005 ; Dentomaxillofacial Radiology Volume 34 ; 34 ; https://www.birpublications.org/ ; reingest4.clockss.org:8082 >
@@ -276,8 +276,8 @@
       au < finished ; finished ; 2019 ; Dentomaxillofacial Radiology Volume 48 ; 48 ; https://www.birpublications.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2020 ; Dentomaxillofacial Radiology Volume 49 ; 49 ; https://www.birpublications.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; Dentomaxillofacial Radiology Volume 50 ; 50 ; https://www.birpublications.org/ ; >
-      au < deepCrawl ; exists ; 2022 ; Dentomaxillofacial Radiology Volume 51 ; 51 ; https://www.birpublications.org/ ; >
-      au < deepCrawl ; exists ; 2023 ; Dentomaxillofacial Radiology Volume 52 ; 52 ; https://www.birpublications.org/ ; >
+      au < finished ; manifest ; 2022 ; Dentomaxillofacial Radiology Volume 51 ; 51 ; https://www.birpublications.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2023 ; Dentomaxillofacial Radiology Volume 52 ; 52 ; https://www.birpublications.org/ ; reingest4.clockss.org:8082 >
       #Moving to OUP in 2024
 
     }
