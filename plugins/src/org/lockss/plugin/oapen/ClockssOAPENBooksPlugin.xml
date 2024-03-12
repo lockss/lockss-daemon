@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -94,15 +94,21 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://(fonts|ajax)\.(googleapis|gstatic)\.com/"</string>
+      <string>1,"^https://fonts\.gstatic\.com/"</string>
       <string>1,"^https://library\.oapen\.org/(themes|static|aspects)/.*"</string>
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url</string>
       <string>1,"https://unpkg.com/.*\.(js|css)"</string>
       <string>2,"%sbrowse\?rpp=", base_url</string>
-      <string>2, "%s.*discover\?filtertype=", base_url</string>
+      <string>2,"%s.*discover\?filtertype=", base_url</string>
       <string>2,"%s(search-filter|register|recent-submissions|password-login|open-search)", base_url</string>
       <string>1,"%s%s", base_url,resource_id</string>
-      <string>1,"%s(bitstream)?/%s/.*"base_url,resource_id</string>
+      <string>1,"%s(bitstream)?/%s/.*", base_url,resource_id</string>
     </list>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <!--https://library.oapen.org/robots.txt-->
+    <string>"%srobots.txt", base_url</string>
   </entry>
   <entry>
     <string>au_start_url</string>
@@ -114,7 +120,6 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>"%sbitstream/%s/.*\.pdf", base_url,resource_id</string>
     </list>
   </entry>
-
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.oapen.OAPENBooksArticleIteratorFactory</string>
@@ -150,6 +155,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <string>fonts\.googleapis\.com</string>
       <string>unpkg\.com</string>
+      <string>fonts\.gstatic\.com/</string>
     </list>
   </entry>
   <entry>
