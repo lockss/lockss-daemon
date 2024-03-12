@@ -166,14 +166,32 @@ public class SilverchairVideoJsonLinkExtractor implements LinkExtractor {
            */
 
           String sourceHref = videoNode.get("source_href").asText();
+          String mp4Href = videoNode.get("mp4_href").asText();
+          String ogvHref = videoNode.get("ogv_href").asText();
+          String webmHref = videoNode.get("webm_href").asText();
 
-          log.debug3("Video Name: " + videoName + ", sourceHref: " + sourceHref);
+          log.debug3("Video Name: " + videoName + ", sourceHref: " + sourceHref
+                  + ", mp4Href: " + mp4Href
+                  + ", ogvHref: " + ogvHref
+                  + ", webmHref: " + webmHref
+          );
 
           if (sourceHref != null && !sourceHref.isEmpty()) {
             cb.foundLink(sourceHref);
           }
-        }
 
+          if (mp4Href != null && !mp4Href.isEmpty()) {
+            cb.foundLink(mp4Href);
+          }
+
+          if (ogvHref != null && !ogvHref.isEmpty()) {
+            cb.foundLink(ogvHref);
+          }
+
+          if (webmHref != null && !webmHref.isEmpty()) {
+            cb.foundLink(webmHref);
+          }
+        }
       }
     }
   }
