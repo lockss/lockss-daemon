@@ -108,6 +108,10 @@ public class SilverchairVideoJsonLinkExtractor implements LinkExtractor {
 
     log.debug3("Parsing " + srcUrl);
 
+    // Need to handle JSON responses like these, video provider confirm these are valid from their perspective
+    String jsonResponseEmpty = "{}";
+    String jsonResponseError = "{\"error\": \"Not found\"}";
+
     if (in == null) {
       throw new IllegalArgumentException("Called with null InputStream");
     }
@@ -118,39 +122,57 @@ public class SilverchairVideoJsonLinkExtractor implements LinkExtractor {
     // Parse input
     ObjectMapper objectMapper = new ObjectMapper();
     JsonNode rootNode = null;
+
+    Scanner scanner = new Scanner(in).useDelimiter("\\A");
+    String inputString = scanner.hasNext() ? scanner.next() : "";
+
+    log.debug3("srcUrl = " + srcUrl + ", encoding = " + encoding + ", input = " + inputString);
+
+
+    // Read it as string, not as input stream
     try (Reader reader = new InputStreamReader(in, encoding)) {
+
       rootNode = objectMapper.readTree(reader);
-      if (log.isDebug3()) {
-        log.debug3(String.format("Input: %s", rootNode));
-      }
-    }
 
-    Iterator<Map.Entry<String, JsonNode>> fields = rootNode.fields();
+      // Check if the JSON response matches the criteria
+      if (rootNode.isObject() && !rootNode.fields().hasNext()) {
+        log.debug3("JSON response is an empty JSON object, srcUrl = " + srcUrl);
+      } else if (rootNode.has("error") && rootNode.get("error").isTextual() && rootNode.get("error").asText().equals("Not found")) {
+        log.debug3("JSON response Contains error: Not found , srcUrl = " + srcUrl);
+      } else {
 
-    while (fields.hasNext()) {
-      Map.Entry<String, JsonNode> entry = fields.next();
+        Iterator<Map.Entry<String, JsonNode>> fields = rootNode.fields();
 
-      String videoName = entry.getKey();
-      JsonNode videoNode = entry.getValue();
+        while (fields.hasNext()) {
+          Map.Entry<String, JsonNode> entry = fields.next();
 
-      /*
-      Only use source_href, and ignore others as suggested by the video provider.
+          String videoName = entry.getKey();
+          JsonNode videoNode = entry.getValue();
 
-      """
-      With respect to the FLVs, it's not an access issue; several years ago we stopped transcoding to FLV.
-      For all the transcoded content there is no guarantee that all the transcoded assets are available.
-      I would suggest sticking with just the assets referred to by the source_href as those are the original videos.
-      Otherwise you are preserving several copies of the same thing in slightly different formats with different
-      playback targets.
-      """
-       */
+          /*
+          Only use source_href, and ignore others as suggested by the video provider.
 
-      String sourceHref = videoNode.get("source_href").asText();
+          """
+          With respect to the FLVs, it's not an access issue; several years ago we stopped transcoding to FLV.
+          For all the transcoded content there is no guarantee that all the transcoded assets are available.
+          I would suggest sticking with just the assets referred to by the source_href as those are the original videos.
+          Otherwise you are preserving several copies of the same thing in slightly different formats with different
+          playback targets.
 
-      log.debug3("Video Name: " + videoName + ", sourceHref: " + sourceHref);
+          A 404 not found from the metadata API means we know nothing about the DOI, we have no metadata for the article
+          at all. Empty JSON means we know about the article and have metadata about it but it contains no videos
+          that we're aware of. RUP is a special case for us as we have nearly all their article XML.
+          """
+           */
 
-      if (sourceHref != null && !sourceHref.isEmpty()) {
-        cb.foundLink(sourceHref);
+          String sourceHref = videoNode.get("source_href").asText();
+
+          log.debug3("Video Name: " + videoName + ", sourceHref: " + sourceHref);
+
+          if (sourceHref != null && !sourceHref.isEmpty()) {
+            cb.foundLink(sourceHref);
+          }
+        }
 
       }
     }
