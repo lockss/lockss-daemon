@@ -77,4 +77,8 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_name</string>
     <string>"American Society for Pharmacology and Experimental Therapeutics Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.highwire.aspet.ASPETDrupalUrlNormalizer</string>
+  </entry>
 </map>
