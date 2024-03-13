@@ -112,6 +112,10 @@ public class MigrationManager extends BaseLockssDaemonManager
   }
 
   public void setIsMigrating(boolean isMigrating) throws IOException {
+    if (isMigrationInDebugMode()) {
+      log.debug("Not setting isMigrating becuae in debug mode");
+      return;
+    }
     Configuration mCfg = cfgMgr.newConfiguration();
     mCfg.put(MigrationManager.PARAM_IS_MIGRATING, String.valueOf(isMigrating));
     cfgMgr.modifyCacheConfigFile(mCfg,
@@ -119,6 +123,10 @@ public class MigrationManager extends BaseLockssDaemonManager
   }
 
   public void setIsDbMoved(boolean isDbMoved) throws IOException {
+    if (isMigrationInDebugMode()) {
+      log.debug("Not setting isDbMoved becuae in debug mode");
+      return;
+    }
     Configuration mCfg = cfgMgr.newConfiguration();
     mCfg.put(MigrationManager.PARAM_IS_DB_MOVED, String.valueOf(isDbMoved));
     cfgMgr.modifyCacheConfigFile(mCfg,

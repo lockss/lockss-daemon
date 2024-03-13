@@ -82,54 +82,16 @@ public class DBMover extends Worker {
         else {
           err = "Unable to move database of unsupported type";
           log.error(err);
+          auMover.logReportAndError(err);
           auMover.addError(err);
         }
       }
     } catch(Exception ex) {
       String msg = "DbMover failed: " + ex.toString();
       log.error(msg, ex);
+      auMover.logReportAndError(msg);
       auMover.addError(msg);
       throw new MigrationTaskFailedException(msg);
-    }
-  }
-
-  private void copyDerbyDb() throws IOException {
-    // Dump V1 subscriptions & COUNTER data
-    File bakDir = FileUtil.createTempDir("dbtemp", "");
-    File bakFile = new File(bakDir, "subscriptions.zip");
-    try {
-      rapi.createSubscriptionsAndCounterBackupFile(bakFile);
-
-      // Restore into V2
-      String restoreUrl = new URL("http", v2host, V2_DEFAULT_CFGSVC_UI_PORT,
-        "/BatchAuConfig")
-        .toString();
-      log.info("V2 restore url = " + restoreUrl);
-
-      LockssUrlConnection conn =
-        UrlUtil.openConnection(LockssUrlConnection.METHOD_POST, restoreUrl, null);
-      conn.setCredentials(v2user, v2pass);
-      conn.setUserAgent("lockss");
-      Part[] parts = {
-        new StringPart("lockssAction", "SelectRestoreTitles"),
-        new StringPart("Verb", "5"),
-        new FilePart("AuConfigBackupContents", bakFile)
-      };
-      conn.setRequestEntity(new MultipartRequestEntity(parts, new HttpMethodParams()));
-
-      conn.execute();
-      int statusCode = conn.getResponseCode();
-      if (statusCode == 200) {
-        log.info("Success!");
-        auMover.getMigrationMgr().setIsDbMoved(true);
-      } else {
-        log.error("Restore failed : " + statusCode);
-        log.error("Response: " +
-          StringUtil.fromInputStream(conn.getResponseInputStream()));
-        terminated = true;
-      }
-    } finally {
-      FileUtil.delTree(bakDir);
     }
   }
 
@@ -157,12 +119,14 @@ public class DBMover extends Worker {
     if (StringUtil.isNullString(v2dbhost)) {
       String msg = "DbMover failed: destination hostname was not supplied.";
       log.error(msg);
+      auMover.logReportAndError(msg);
       auMover.addError(msg);
       return false;
     }
     if (v2dbuser == null || v2dbpassword == null) {
       String msg = "DbMover failed: Missing database user name or password.";
       log.error(msg);
+      auMover.logReportAndError(msg);
       auMover.addError(msg);
       return false;
     }
@@ -173,6 +137,51 @@ public class DBMover extends Worker {
     Configuration config = ConfigManager.getCurrentConfig();
     return config.getBoolean(MigrationManager.PARAM_IS_DB_MOVED,
         MigrationManager.DEFAULT_IS_DB_MOVED);
+  }
+
+  private void copyDerbyDb() throws IOException {
+    long startTime = TimeBase.nowMs();
+    // Dump V1 subscriptions & COUNTER data
+    File bakDir = FileUtil.createTempDir("dbtemp", "");
+    File bakFile = new File(bakDir, "subscriptions.zip");
+    try {
+      rapi.createSubscriptionsAndCounterBackupFile(bakFile);
+
+      // Restore into V2
+      String restoreUrl = new URL("http", v2host, V2_DEFAULT_CFGSVC_UI_PORT,
+        "/BatchAuConfig")
+        .toString();
+      log.info("V2 restore url = " + restoreUrl);
+
+      LockssUrlConnection conn =
+        UrlUtil.openConnection(LockssUrlConnection.METHOD_POST, restoreUrl, null);
+      conn.setCredentials(v2user, v2pass);
+      conn.setUserAgent("lockss");
+      Part[] parts = {
+        new StringPart("lockssAction", "SelectRestoreTitles"),
+        new StringPart("Verb", "5"),
+        new FilePart("AuConfigBackupContents", bakFile)
+      };
+      conn.setRequestEntity(new MultipartRequestEntity(parts, new HttpMethodParams()));
+
+      conn.execute();
+      int statusCode = conn.getResponseCode();
+      if (statusCode == 200) {
+        log.info("Success!");
+        String msg = "Subscriptions copy completed in " +
+          StringUtil.timeIntervalToString(TimeBase.msSince(startTime));
+        auMover.addFinishedOther(msg);
+        auMover.logReport(msg);
+        auMover.getMigrationMgr().setIsDbMoved(true);
+      } else {
+        log.error("Subscriptions import to V2 failed: " + statusCode);
+        log.error("Response: " +
+          StringUtil.fromInputStream(conn.getResponseInputStream()));
+        terminated = true;
+      }
+    } finally {
+      FileUtil.delTree(bakDir);
+    }
   }
 
   private String createPgConnectionString(String user, String password, String host, String port, String dbname) {
@@ -193,6 +202,7 @@ public class DBMover extends Worker {
     String copyCommand = "pg_dump -a " + v1ConnectionString + " | psql -q " + v2ConnectionString;
     log.debug("Running copy command: "+copyCommand);
     startUpdater();
+    long startTime = TimeBase.nowMs();
     try {
       ProcessBuilder pb = new ProcessBuilder();
       pb.command("/bin/sh", "-c", copyCommand);
@@ -206,7 +216,7 @@ public class DBMover extends Worker {
       int exitCode = proc.waitFor();
       log.debug("External process exited with code: " + exitCode);
       if(exitCode != 0) {
-        err = "Call to move database failed with exitCode:" + exitCode;
+        err = "PostgreSQL copy script failed with exitCode:" + exitCode;
         throw new IOException(err);
       }
 
@@ -221,10 +231,15 @@ public class DBMover extends Worker {
       stopUpdater();
       if(err != null) {
         log.error(err);
+        auMover.logReportAndError(err);
         auMover.addError(err);
         terminated = true;
       }
       else {
+        String msg = "PostgreSQL DB copy completed in " +
+          StringUtil.timeIntervalToString(TimeBase.msSince(startTime));
+        auMover.addFinishedOther(msg);
+        auMover.logReport(msg);
         auMover.getMigrationMgr().setIsDbMoved(true);
       }
     }
@@ -252,7 +267,9 @@ public class DBMover extends Worker {
     } catch (SQLException ex) {
       String err = "DBMover Connection to PostgreSQL failed or error executing query to get size.";
       log.error(err,ex);
-      auMover.addError(err+": " +ex.getMessage());
+      String msg = err+": " +ex.getMessage();
+      auMover.logReportAndError(msg);
+      auMover.addError(msg);
     } finally {
       try {
         if (rs != null) {
@@ -265,8 +282,10 @@ public class DBMover extends Worker {
           connection.close();
         }
       } catch (SQLException ex) {
-        final String msg = "Exception thrown while getting size";
-        log.error(msg, ex);
+        final String err = "Exception thrown while getting size";
+        log.error(err, ex);
+        String msg = err+": " +ex.getMessage();
+        auMover.logReportAndError(msg);
         auMover.addError(msg +": " +ex.getMessage());
       }
     }

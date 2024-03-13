@@ -322,9 +322,9 @@ public class V2AuMover {
   /** Flag to getCurrentStatus() to build status string on the fly. */
   private static final String STATUS_RUNNING = "**Running**";
   private static final String STATUS_MIGRATING_DATABASE = "Migrating database conent";
-  private static final String STATUS_DONE_MIGRATING_DATABASE = "Done migrating database";
+  private static final String STATUS_DONE_MIGRATING_DATABASE = "Finished migrating database";
   private static final String STATUS_COPYING_USER_ACCOUNTS = "Copying user accounts";
-  private static final String STATUS_DONE_COPYING_SYSTEM_SETTINGS = "Done copying system settings";
+  private static final String STATUS_DONE_COPYING_SYSTEM_SETTINGS = "Finished copying system settings";
 
   public static final ThreadLocal<NumberFormat> TH_BIGINT_FMT =
     new ThreadLocal<NumberFormat>() {
@@ -746,8 +746,7 @@ public class V2AuMover {
   public void executeRequest(Args args) throws MigrationTaskFailedException {
     // Remember original Args from request
     this.args = args;
-    writeOpHeader(reportWriter, args);
-    writeOpHeader(errorWriter, args);
+    logReportPhase(opHeader(args));
 
     try {
       if (args.opType == OpType.CopySystemSettings) {
@@ -926,11 +925,14 @@ public class V2AuMover {
         break;
       case Finished:
         // Optionally delete the AU from the system
-        if (isDeleteMigratedAus) {
+        if (migrationMgr.isDaemonInMigrationMode()) {
           try {
-            // Remove AU from LOCKSS
-            pluginManager.deactivateAu(au);
-            pluginManager.deleteAu(au);
+            if (isDeleteMigratedAus) {
+              // Remove AU from LOCKSS
+              pluginManager.deleteAu(au);
+            } else {
+              pluginManager.deactivateAu(au);
+            }
           } catch (IOException e) {
             throw new RuntimeException(e);
           }
@@ -939,7 +941,6 @@ public class V2AuMover {
   }
   private void moveDatabase(Args args) throws MigrationTaskFailedException {
     currentStatus = STATUS_MIGRATING_DATABASE;
-    logReport(currentStatus);
 
     initRequest(args, null);
 
@@ -954,18 +955,18 @@ public class V2AuMover {
   }
 
   private void moveSystemSettings(Args args) {
-    currentStatus = STATUS_COPYING_USER_ACCOUNTS;
-    logReport(currentStatus);
-
     initRequest(args, null);
 
     // Move user accounts
+    currentStatus = STATUS_COPYING_USER_ACCOUNTS;
     MigrationTask task = MigrationTask.copyUserAccounts(this);
     UserAccountMover userAcctMover = new UserAccountMover(this, task);
-    userAcctMover.run();
-
-    currentStatus = STATUS_DONE_COPYING_SYSTEM_SETTINGS;
-    logReport(currentStatus);
+    if (!userAcctMover.getAccountsToMove().isEmpty()) {
+      userAcctMover.run();
+      currentStatus = STATUS_DONE_COPYING_SYSTEM_SETTINGS;
+      logReport("Copied user accounts");
+    } else {
+    }
   }
 
   /**
@@ -1943,6 +1944,7 @@ public class V2AuMover {
 
   private Map<String,AuStatus> activeAus = new LinkedHashMap<>();
   private Map<String,AuStatus> finishedAus = new LinkedHashMap<>();
+  private List<String> finishedOthers = new ArrayList<>();
 
   /**
    * Return a string describing the current progress, or completion state.
@@ -2045,20 +2047,20 @@ public class V2AuMover {
     return res;
   }
 
-  public List<String> getFinishedStatusList() {
-    Map<String,AuStatus> auStats;
-    synchronized (finishedAus) {
-      auStats = new LinkedHashMap<>(finishedAus);
-    }
-    List<String> res = new ArrayList<>();
-    for (AuStatus auStat : auStats.values()) {
-      String one = getOneAuStatus(auStat);
-      if (one != null) {
-        res.add(one);
-      }
-    }
-    return res;
-  }
+//   public List<String> getFinishedStatusList() {
+//     Map<String,AuStatus> auStats;
+//     synchronized (finishedAus) {
+//       auStats = new LinkedHashMap<>(finishedAus);
+//     }
+//     List<String> res = new ArrayList<>();
+//     for (AuStatus auStat : auStats.values()) {
+//       String one = getOneAuStatus(auStat);
+//       if (one != null) {
+//         res.add(one);
+//       }
+//     }
+//     return res;
+//   }
 
   public int getFinishedStatusCount() {
     synchronized (finishedAus) {
@@ -2067,21 +2069,31 @@ public class V2AuMover {
   }
 
   public List<String> getFinishedStatusPage(int index, int size) {
-    Map<String,AuStatus> auStats;
+    List<String> res = new ArrayList<>();
+    int ix = 0;
+    int ctr = 0;
+    synchronized (finishedOthers) {
+      for (String str : finishedOthers) {
+        if (ctr >= size) {
+          break;
+        }
+        if (ix++ >= index) {
+          res.add(str);
+          ctr++;
+        }
+      }
+    }
     synchronized (finishedAus) {
-      List<String> res = new ArrayList<>();
-      int ix = 0;
-      int ctr = 0;
       for (AuStatus auStat : finishedAus.values()) {
+        if (ctr >= size) {
+          break;
+        }
         if (ix++ >= index) {
           String one = getOneAuStatus(auStat);
           if (one != null) {
             res.add(one);
             ctr++;
           }
-        }
-        if (ctr >= size) {
-          break;
         }
       }
       return res;
@@ -2175,6 +2187,12 @@ public class V2AuMover {
     }
   }
 
+  public void addFinishedOther(String str) {
+    synchronized (finishedOthers) {
+      finishedOthers.add(str);
+    }
+  }
+
   public AuStatus getAuStatus(ArchivalUnit au) {
     synchronized (activeAus) {
       if (activeAus.containsKey(au.getAuId())) {
@@ -2227,8 +2245,8 @@ public class V2AuMover {
     return res;
   }
 
-  void writeOpHeader(PrintWriter wrtr, Args args) {
-    wrtr.println(args.opType + (args.isCompareContent ? " with compare" : ""));
+  String opHeader(Args args) {
+    return args.opType + (args.isCompareContent ? " with compare" : "");
   }
 
   public void logReport(String msg) {
@@ -2238,6 +2256,24 @@ public class V2AuMover {
       return;
     }
     reportWriter.println(msg);
+  }
+
+  public void logReportError(String msg) {
+    if (errorWriter == null) {
+      log.error("updateReport called when no errorWriter",
+          new Throwable());
+      return;
+    }
+    errorWriter.println(msg);
+  }
+
+  public void logReportAndError(String msg) {
+    logReport(msg);
+    logReportError(msg);
+  }
+
+  public void logReportPhase(String msg) {
+    logReport("Phase: " + msg);
   }
 
   /**
