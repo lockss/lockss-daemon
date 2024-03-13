@@ -103,6 +103,9 @@ public class ArtifactProperties implements Serializable {
   public static final String SERIALIZED_NAME_COLLECTION_DATE = "collectionDate";
   @SerializedName(SERIALIZED_NAME_COLLECTION_DATE) private Long collectionDate;
 
+  public static final String SERIALIZED_NAME_STORE_DATE = "storeDate";
+  @SerializedName(SERIALIZED_NAME_STORE_DATE) private Long storeDate;
+
   public static final String SERIALIZED_NAME_STATE = "state";
   @SerializedName(SERIALIZED_NAME_STATE) private String state;
 
@@ -119,7 +122,6 @@ public class ArtifactProperties implements Serializable {
    **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-
   public String getNamespace() {
     return namespace;
   }
@@ -139,7 +141,6 @@ public class ArtifactProperties implements Serializable {
    **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-
   public String getUuid() {
     return uuid;
   }
@@ -159,7 +160,6 @@ public class ArtifactProperties implements Serializable {
    **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-
   public String getAuid() {
     return auid;
   }
@@ -179,7 +179,6 @@ public class ArtifactProperties implements Serializable {
    **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-
   public String getUri() {
     return uri;
   }
@@ -199,7 +198,6 @@ public class ArtifactProperties implements Serializable {
    **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-
   public Integer getVersion() {
     return version;
   }
@@ -219,7 +217,6 @@ public class ArtifactProperties implements Serializable {
    **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-
   public Long getContentLength() {
     return contentLength;
   }
@@ -239,7 +236,6 @@ public class ArtifactProperties implements Serializable {
    **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-
   public String getContentDigest() {
     return contentDigest;
   }
@@ -259,13 +255,30 @@ public class ArtifactProperties implements Serializable {
    **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-
   public Long getCollectionDate() {
     return collectionDate;
   }
 
   public void setCollectionDate(Long collectionDate) {
     this.collectionDate = collectionDate;
+  }
+
+  public ArtifactProperties storeDate(Long storeDate) {
+    this.storeDate = storeDate;
+    return this;
+  }
+
+  /**
+   * Get storeDate
+   * @return storeDate
+   **/
+  @javax.annotation.Nullable
+  public Long getStoreDate() {
+    return storeDate;
+  }
+
+  public void setStoreDate(Long storeDate) {
+    this.storeDate = storeDate;
   }
 
   public ArtifactProperties state(String state) {
@@ -278,8 +291,6 @@ public class ArtifactProperties implements Serializable {
    * @return state
    **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public String getState() {
     return state;
   }
@@ -305,13 +316,14 @@ public class ArtifactProperties implements Serializable {
         && Objects.equals(this.contentLength, artifactProperties.contentLength)
         && Objects.equals(this.contentDigest, artifactProperties.contentDigest)
         && Objects.equals(this.collectionDate, artifactProperties.collectionDate)
+        && Objects.equals(this.storeDate, artifactProperties.storeDate)
         && Objects.equals(this.state, artifactProperties.state);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(
-        namespace, uuid, auid, uri, version, contentLength, contentDigest, collectionDate, state);
+    return Objects.hash(namespace, uuid, auid, uri, version, contentLength, contentDigest,
+        collectionDate, storeDate, state);
   }
 
   @Override
@@ -326,6 +338,7 @@ public class ArtifactProperties implements Serializable {
     sb.append("    contentLength: ").append(toIndentedString(contentLength)).append("\n");
     sb.append("    contentDigest: ").append(toIndentedString(contentDigest)).append("\n");
     sb.append("    collectionDate: ").append(toIndentedString(collectionDate)).append("\n");
+    sb.append("    storeDate: ").append(toIndentedString(storeDate)).append("\n");
     sb.append("    state: ").append(toIndentedString(state)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -356,6 +369,7 @@ public class ArtifactProperties implements Serializable {
     openapiFields.add("contentLength");
     openapiFields.add("contentDigest");
     openapiFields.add("collectionDate");
+    openapiFields.add("storeDate");
     openapiFields.add("state");
 
     // a set of required properties/fields (JSON key names)
@@ -363,30 +377,32 @@ public class ArtifactProperties implements Serializable {
   }
 
   /**
-   * Validates the JSON Object and throws an exception if issues found
+   * Validates the JSON Element and throws an exception if issues found
    *
-   * @param jsonObj JSON Object
-   * @throws IOException if the JSON Object is invalid with respect to ArtifactProperties
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ArtifactProperties
    */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-    if (jsonObj == null) {
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+    if (jsonElement == null) {
       if (!ArtifactProperties.openapiRequiredFields
-               .isEmpty()) { // has required fields but JSON object is null
+               .isEmpty()) { // has required fields but JSON element is null
         throw new IllegalArgumentException(String.format(
             "The required field(s) %s in ArtifactProperties is not found in the empty JSON string",
             ArtifactProperties.openapiRequiredFields.toString()));
       }
     }
 
-    Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+    Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
     // check to see if the JSON string contains additional fields
-    for (Entry<String, JsonElement> entry : entries) {
+    for (Map.Entry<String, JsonElement> entry : entries) {
       if (!ArtifactProperties.openapiFields.contains(entry.getKey())) {
-        throw new IllegalArgumentException(String.format(
-            "The field `%s` in the JSON string is not defined in the `ArtifactProperties` properties. JSON: %s",
-            entry.getKey(), jsonObj.toString()));
+        throw new IllegalArgumentException(
+            String.format("The field `%s` in the JSON string is not defined in the "
+                          + "`ArtifactProperties` properties. JSON: %s",
+                entry.getKey(), jsonElement.toString()));
       }
     }
+    JsonObject jsonObj = jsonElement.getAsJsonObject();
     if ((jsonObj.get("namespace") != null && !jsonObj.get("namespace").isJsonNull())
         && !jsonObj.get("namespace").isJsonPrimitive()) {
       throw new IllegalArgumentException(String.format(
@@ -413,8 +429,9 @@ public class ArtifactProperties implements Serializable {
     }
     if ((jsonObj.get("contentDigest") != null && !jsonObj.get("contentDigest").isJsonNull())
         && !jsonObj.get("contentDigest").isJsonPrimitive()) {
-      throw new IllegalArgumentException(String.format(
-          "Expected the field `contentDigest` to be a primitive type in the JSON string but got `%s`",
+      throw new IllegalArgumentException(
+          String.format("Expected the field `contentDigest` to be a primitive type in the JSON "
+                        + "string but got `%s`",
           jsonObj.get("contentDigest").toString()));
     }
     if ((jsonObj.get("state") != null && !jsonObj.get("state").isJsonNull())
@@ -445,9 +462,9 @@ public class ArtifactProperties implements Serializable {
 
         @Override
         public ArtifactProperties read(JsonReader in) throws IOException {
-          JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-          validateJsonObject(jsonObj);
-          return thisAdapter.fromJsonTree(jsonObj);
+          JsonElement jsonElement = elementAdapter.read(in);
+          validateJsonElement(jsonElement);
+          return thisAdapter.fromJsonTree(jsonElement);
         }
       }.nullSafe();
     }

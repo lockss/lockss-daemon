@@ -199,7 +199,7 @@ public class DBMover extends Worker {
     String v1ConnectionString = createPgConnectionString(v1user, v1password, v1host, v1port, v1dbname);
     String v2ConnectionString = createPgConnectionString(v2dbuser, v2dbpassword, v2dbhost, v2dbport, v2dbname);
 
-    String copyCommand = "pg_dump -a " + v1ConnectionString + " | psql -q " + v2ConnectionString;
+    String copyCommand = "pg_dump -a --disable-triggers -S " + v2dbuser + " " + v1ConnectionString + " | psql -b " + v2ConnectionString;
     log.debug("Running copy command: "+copyCommand);
     startUpdater();
     long startTime = TimeBase.nowMs();
