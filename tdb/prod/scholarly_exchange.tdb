@@ -586,7 +586,7 @@
     {
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
     attr[start_stem] = index.php/
-    param[base_url] = https://wpcjournal.com/
+    param[base_url] = https://www.wpcjournal.com/
 
     au < testing ; 2017 ; Understanding and Dismantling Privilege Volume 7 ; 7 ; 2017 >
     au < testing ; 2018 ; Understanding and Dismantling Privilege Volume 8 ; 8 ; 2018 >
