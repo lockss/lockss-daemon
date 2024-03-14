@@ -32,41 +32,19 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.archiveit;
 
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.util.Logger;
-import org.lockss.util.urlconn.CacheException;
-import org.lockss.util.urlconn.CacheResultHandler;
-import org.lockss.util.urlconn.CacheResultMap;
+import org.lockss.util.urlconn.CacheException.PermissionException;
 
-public class ArchiveItHttpResponseHandler implements CacheResultHandler{
-
-    private static final Logger logger = Logger.getLogger(ArchiveItHttpResponseHandler.class);
-  
-    @Override
-    public void init(CacheResultMap crmap) {
-        logger.warning("Unexpected call to init()");
-        throw new UnsupportedOperationException("Unexpected call to ArchiveItHttpResponseHandler.init()");
-    }
-    
-    @Override
-    public CacheException handleResult(ArchivalUnit au,
-                                        String url,
-                                        int responseCode) {
-        switch (responseCode) {
-        case 403:
-            logger.debug2("403: " + url);
-            return new RetryablePermissionException("403 Retryable Permission Exception");
-        default: 
-            logger.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);
-            throw new UnsupportedOperationException("Unexpected responseCode (" + responseCode + ")");
-        }
+public class RetryablePermissionException extends PermissionException {
+    public RetryablePermissionException() {
+        super();
     }
 
-    public CacheException handleResult(ArchivalUnit au,
-                                        String url,
-                                        Exception ex) {
-        logger.warning("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
-        throw new UnsupportedOperationException();
+    public RetryablePermissionException(String message) {
+        super(message);
     }
 
+    protected void setAttributes() {
+        super.setAttributes();
+        attributeBits.set(ATTRIBUTE_RETRY);
+    }
 }
