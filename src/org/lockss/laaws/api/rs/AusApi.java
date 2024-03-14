@@ -465,9 +465,6 @@ public class AusApi {
     if (namespace != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("namespace", namespace));
     }
-    if (namespace != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("namespace", namespace));
-    }
 
     if (op != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("op", op));
