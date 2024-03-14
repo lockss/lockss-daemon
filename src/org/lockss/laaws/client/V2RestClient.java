@@ -1471,6 +1471,13 @@ public class V2RestClient {
         mpBuilder.addPart(partHeaders, RequestBody.create(mediaType, (String)param.getValue()));
 
       }
+      else if (param.getKey().equals("httpResponseHeader")) {
+        Headers partHeaders = Headers.of("Content-Disposition",
+                "form-data; name=\"" + param.getKey() + "\"");
+        MediaType mediaType = MediaType.parse("application/octet-stream");
+        mpBuilder.addPart(partHeaders, RequestBody.create(mediaType, (String)param.getValue()));
+
+      }
       else {
         Headers partHeaders = Headers.of("Content-Disposition",
             "form-data; name=\"" + param.getKey() + "\"");
