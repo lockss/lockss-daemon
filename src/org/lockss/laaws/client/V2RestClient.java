@@ -1464,6 +1464,13 @@ public class V2RestClient {
         MediaType mediaType = MediaType.parse("application/http;msgtype=response");
         mpBuilder.addPart(partHeaders, new CachedUrlRequestBody(dcu, mediaType));
       }
+      else if (param.getKey().equals("artifactProps")) {
+        Headers partHeaders = Headers.of("Content-Disposition",
+                "form-data; name=\"" + param.getKey() + "\"");
+        MediaType mediaType = MediaType.parse("application/json");
+        mpBuilder.addPart(partHeaders, RequestBody.create(mediaType, (String)param.getValue()));
+
+      }
       else {
         Headers partHeaders = Headers.of("Content-Disposition",
             "form-data; name=\"" + param.getKey() + "\"");
