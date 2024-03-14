@@ -670,21 +670,6 @@ public class CacheException
 
   }
 
-  public static class RetryablePermissionException extends PermissionException {
-    public RetryablePermissionException() {
-      super();
-    }
-
-    public RetryablePermissionException(String message) {
-      super(message);
-    }
-
-    protected void setAttributes() {
-      super.setAttributes();
-      attributeBits.set(ATTRIBUTE_RETRY);
-    }
-  }
-
   /** An error esploding a archive file during a crawl */
   public static class ExploderException
       extends UnretryableException {
