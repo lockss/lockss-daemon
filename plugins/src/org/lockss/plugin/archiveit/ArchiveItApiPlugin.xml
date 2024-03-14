@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>8</string>
+        <string>9</string>
     </entry>
     <entry>
         <string>au_name</string>
@@ -193,4 +193,10 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_redirect_to_login_url_pattern</string>
         <string>"archive-it\.org/login\?.*", </string>
     </entry>
+    <entry>
+        <string>plugin_cache_result_list</string>
+        <list>
+            <string>403=org.lockss.plugin.archiveit.ArchiveItHttpResponseHandler</string>
+        </list>
+  </entry>
 </map>
