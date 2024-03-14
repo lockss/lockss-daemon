@@ -18,7 +18,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/intechopenjnls-released/
 
     au < readySource ; finished ; 2023 ; Intech Open Journals Content 2023_01 ; 2023_01 >
-    au < ready ; exists ; 2024 ; Intech Open Journals Content 2024_01 ; 2024_01 >
+    au < readySource ; crawling ; 2024 ; Intech Open Journals Content 2024_01 ; 2024_01 >
 
     }
     {
@@ -28,7 +28,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/intechopen-released/
 
     au < readySource ; finished ; 2023 ; Intech Open Books Content 2023_01 ; 2023_01 >
-    au < ready ; exists ; 2024 ; Intech Open Books Content 2024_01 ; 2024_01 >
+    au < readySource ; crawling ; 2024 ; Intech Open Books Content 2024_01 ; 2024_01 >
 
     }
     {
