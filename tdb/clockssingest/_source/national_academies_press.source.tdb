@@ -33,7 +33,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/nap-released/
 
     au < readySource ; crawling ; 2023 ; National Academies Press Books Source Content 2023 ; 2023 >
-    au < manifest ; exists ; 2024 ; National Academies Press Books Source Content 2024 ; 2024 >
+    au < testing ; exists ; 2024 ; National Academies Press Books Source Content 2024 ; 2024 >
 
     }
   }
