@@ -4,7 +4,7 @@
     name = Oxford University Press ;
     info[contract] = 2009 ;
     info[tester] = S ;
-    info[platform] = Source
+    info[platform] = Source. BLOCKED waiting for publisher
   >
   hidden[proxy] = DIRECT
   implicit < status ; status2 ; year ; name ; param[directory] >
