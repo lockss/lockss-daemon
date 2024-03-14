@@ -90,6 +90,11 @@ public class PapJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
           thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_pubname));
         }
       }
+      if (thisAM.get(MetadataField.FIELD_AUTHOR) == null) {
+        if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_string_contrib) != null) {
+          thisAM.put(MetadataField.FIELD_AUTHOR, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_string_contrib));
+        }
+      }
     }
 
   }

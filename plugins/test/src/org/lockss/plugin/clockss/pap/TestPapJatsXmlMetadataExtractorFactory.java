@@ -83,6 +83,7 @@ public class TestPapJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExt
         assertNotNull(md);
 
         assertEquals("Enterprise Development and Microfinance", md.get(MetadataField.FIELD_PUBLICATION_TITLE));
+        assertEquals("Galloway, Tommy", md.get(MetadataField.FIELD_AUTHOR));
         assertEquals("33", md.get(MetadataField.FIELD_VOLUME));
         assertEquals("1", md.get(MetadataField.FIELD_ISSUE));
         assertEquals("2022", md.get(MetadataField.FIELD_DATE));
