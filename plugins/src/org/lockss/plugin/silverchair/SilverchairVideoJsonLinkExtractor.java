@@ -33,6 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.silverchair;
 
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.lockss.daemon.PluginException;
@@ -119,20 +120,17 @@ public class SilverchairVideoJsonLinkExtractor implements LinkExtractor {
       throw new IllegalArgumentException("Called with null callback");
     }
 
-    // Parse input
     ObjectMapper objectMapper = new ObjectMapper();
     JsonNode rootNode = null;
+    Scanner scanner = new Scanner(in);
 
-    Scanner scanner = new Scanner(in).useDelimiter("\\A");
-    String inputString = scanner.hasNext() ? scanner.next() : "";
+    try {
+      scanner.useDelimiter("\\A");
+      String inputString = scanner.hasNext() ? scanner.next() : "";
 
-    log.debug3("srcUrl = " + srcUrl + ", encoding = " + encoding + ", input = " + inputString);
+      log.debug3("srcUrl = " + srcUrl + ", encoding = " + encoding + ", input = " + inputString);
 
-
-    // Read it as string, not as input stream
-    try (Reader reader = new InputStreamReader(in, encoding)) {
-
-      rootNode = objectMapper.readTree(reader);
+      rootNode = objectMapper.readTree(inputString);
 
       // Check if the JSON response matches the criteria
       if (rootNode.isObject() && !rootNode.fields().hasNext()) {
@@ -140,30 +138,29 @@ public class SilverchairVideoJsonLinkExtractor implements LinkExtractor {
       } else if (rootNode.has("error") && rootNode.get("error").isTextual() && rootNode.get("error").asText().equals("Not found")) {
         log.debug3("JSON response Contains error: Not found , srcUrl = " + srcUrl);
       } else {
-
         Iterator<Map.Entry<String, JsonNode>> fields = rootNode.fields();
 
         while (fields.hasNext()) {
           Map.Entry<String, JsonNode> entry = fields.next();
-
           String videoName = entry.getKey();
           JsonNode videoNode = entry.getValue();
 
-          /*
-          Only use source_href, and ignore others as suggested by the video provider.
 
-          """
-          With respect to the FLVs, it's not an access issue; several years ago we stopped transcoding to FLV.
-          For all the transcoded content there is no guarantee that all the transcoded assets are available.
-          I would suggest sticking with just the assets referred to by the source_href as those are the original videos.
-          Otherwise you are preserving several copies of the same thing in slightly different formats with different
-          playback targets.
+              /*
+              Only use source_href, and ignore others as suggested by the video provider.
 
-          A 404 not found from the metadata API means we know nothing about the DOI, we have no metadata for the article
-          at all. Empty JSON means we know about the article and have metadata about it but it contains no videos
-          that we're aware of. RUP is a special case for us as we have nearly all their article XML.
-          """
-           */
+              """
+              With respect to the FLVs, it's not an access issue; several years ago we stopped transcoding to FLV.
+              For all the transcoded content there is no guarantee that all the transcoded assets are available.
+              I would suggest sticking with just the assets referred to by the source_href as those are the original videos.
+              Otherwise you are preserving several copies of the same thing in slightly different formats with different
+              playback targets.
+
+              A 404 not found from the metadata API means we know nothing about the DOI, we have no metadata for the article
+              at all. Empty JSON means we know about the article and have metadata about it but it contains no videos
+              that we're aware of. RUP is a special case for us as we have nearly all their article XML.
+              """
+               */
 
           String sourceHref = videoNode.get("source_href").asText();
           String mp4Href = videoNode.get("mp4_href").asText();
@@ -177,22 +174,39 @@ public class SilverchairVideoJsonLinkExtractor implements LinkExtractor {
           );
 
           if (sourceHref != null && !sourceHref.isEmpty()) {
+
+            log.debug3("srcUrl = " + srcUrl + ", adding new video sourceHref = " + sourceHref);
+
             cb.foundLink(sourceHref);
           }
 
           if (mp4Href != null && !mp4Href.isEmpty()) {
+
+            log.debug3("srcUrl = " + srcUrl + ", adding new video mp4Href = " + mp4Href);
+
             cb.foundLink(mp4Href);
           }
 
           if (ogvHref != null && !ogvHref.isEmpty()) {
+
+            log.debug3("srcUrl = " + srcUrl + ", adding new video ogvHref = " + ogvHref);
+
             cb.foundLink(ogvHref);
           }
 
           if (webmHref != null && !webmHref.isEmpty()) {
+
+            log.debug3("srcUrl = " + srcUrl + ", adding new video webmHref = " + webmHref);
+
             cb.foundLink(webmHref);
           }
         }
       }
+    } catch (IOException e) {
+      log.error("IOException occurred while reading input stream: " + e.getMessage());
+    } finally {
+      // Close the scanner
+      scanner.close();
     }
   }
 }
