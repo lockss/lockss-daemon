@@ -106,8 +106,12 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <!--bad link-->
+      <!--bad links-->
       <string>2,"^https?://%s/IRstyle4\.css", base_url_host</string>
+      <string>2,"^https?://%s/IRstyle\.css", base_url_host</string>
+      <string>2,"^https?://%s/smiley\.gif", base_url_host</string>
+      <string>2,"^https?://%s/IRstylesans\.css", base_url_host</string>
+      <string>2,"^https?://%s/mini_logo2\.gif", base_url_host</string>
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
       <string>4,"^https?://%s", base_url_host</string>
       <string>1,"^https?://%s/ir/(LOCKSSmanifest|index)\.html$", base_url_host</string>
