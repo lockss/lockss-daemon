@@ -32,12 +32,14 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package uk.org.lockss.plugin.informationresearch;
 
+import java.io.IOException;
+
 import org.lockss.daemon.Crawler;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.FetchedUrlData;
 import org.lockss.plugin.UrlConsumer;
 import org.lockss.plugin.UrlConsumerFactory;
-import org.lockss.plugin.base.HttpToHttpsUrlConsumer;
+import org.lockss.plugin.base.SimpleUrlConsumer;
 import org.lockss.util.Logger;
 import org.lockss.util.UrlUtil;
 
@@ -49,14 +51,22 @@ public class InformationResearchHttpHttpsUrlConsumerFactory implements UrlConsum
     return new InformationResearchHttpHttpsUrlConsumerFactory.InformationResearchHttpHttpsUrlConsumer(facade, fud);
   }
 
-  public class InformationResearchHttpHttpsUrlConsumer extends HttpToHttpsUrlConsumer {
+  public class InformationResearchHttpHttpsUrlConsumer extends SimpleUrlConsumer {
 
     public InformationResearchHttpHttpsUrlConsumer(Crawler.CrawlerFacade facade,
                                        FetchedUrlData fud) {
       super(facade, fud);
     }
 
-    protected boolean shouldStoreRedirectsAtOrigUrl() {
+    @Override
+    public void consume() throws IOException {
+      if (shouldStoreAtOrigUrl()) {
+        storeAtOrigUrl();
+      }
+      super.consume();
+    }
+
+    protected boolean shouldStoreAtOrigUrl() {
       boolean should = false;
       should = (AuUtil.isBaseUrlHttp(au)
         && fud.redirectUrls != null
@@ -66,7 +76,7 @@ public class InformationResearchHttpHttpsUrlConsumerFactory implements UrlConsum
         && UrlUtil.isHttpsUrl(fud.fetchUrl)
         && UrlUtil.stripProtocol(fud.origUrl).equals(UrlUtil.stripProtocol(fud.fetchUrl))
         );
-      log.debug2("in http https InformationResearch");
+      log.debug3("in http https InformationResearch, should store at Orginal URL: " + should);
       return should;
     }
   }
