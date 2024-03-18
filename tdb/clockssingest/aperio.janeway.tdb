@@ -59,5 +59,29 @@
 
     }
 
+    {
+
+        title <
+            name = International Journal of First Aid Education
+        >
+
+        param[base_url] = https://firstaidjournal.org/
+
+        au < manifest ; exists ; 2020 ; 2020 ; 2020 ; International Journal of First Aid Education Volume 2020 ; >
+        au < manifest ; exists ; 2021 ; 2021 ; 2021 ; International Journal of First Aid Education Volume 2021 ; >
+
+  }
+
+  {
+
+        title <
+            name = Language Documentation and Description
+        >
+
+        param[base_url] = https://www.lddjournal.org/
+
+        au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Language Documentation and Description Volume 2020 ; >
+        au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Language Documentation and Description Volume 2021 ; >
+    }
   }
 }
