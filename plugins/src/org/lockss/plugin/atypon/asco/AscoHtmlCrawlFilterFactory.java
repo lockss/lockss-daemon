@@ -55,6 +55,8 @@ public class AscoHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
                  "a", "href", "/action/showCitFormats\\?")),
     //toc center column
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "toc-tools"),
+    //Filter out disabled link which will link to "-1", "-2", "-3"...https://ascopubs.org/toc/jco/35/31_suppl?startPage=-1&pageSize=50
+    HtmlNodeFilters.tagWithAttributeRegex("li", "class", "disabled"),
     HtmlNodeFilters.tagWithAttribute("table", "class", "references"),
     
     // ASCO has a number of articles with in-line unlabelled links to other
