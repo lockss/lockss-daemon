@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -175,6 +175,11 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_refetch_depth</string>
     <int>2</int>
+  </entry>
+  <!--This is change need to roll back later-->
+  <entry>
+    <string>au_crawl_depth</string>
+    <int>99</int>
   </entry>
   <!--  versioning or variants for style support -->
   <entry>
