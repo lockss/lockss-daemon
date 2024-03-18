@@ -1,0 +1,28 @@
+{
+  publisher <
+    name = General Organization of Teaching Hospitals and Institutes ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[platform] = Bepress
+  >
+    provider = bepress
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+
+      title <
+        name =  Journal of Medicine in Scientific Research ;
+        eissn = 2537-091X
+      >
+
+      comment[publisher] = General Organization of Teaching Hospitals and Institutes
+      param[base_url] = https://jmisr.researchcommons.org/
+      param[journal_abbr] = home
+
+      au < manifest ; exists ; 2023 ; Journal of Medicine in Scientific Research Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2024 ; Journal of Medicine in Scientific Research Volume 7 ; 7 ; >
+
+  }
+
+}
