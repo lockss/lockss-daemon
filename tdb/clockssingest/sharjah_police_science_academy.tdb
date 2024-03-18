@@ -1,0 +1,28 @@
+{
+  publisher <
+    name = Sharjah Police Science Academy ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[platform] = Bepress
+  >
+    provider = bepress
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+
+      title <
+        name =  Journal of Police and Legal Sciences ;
+        eissn = 2617-1589
+      >
+
+      comment[publisher] = General Organization of Teaching Hospitals and Institutes
+      param[base_url] = https://www.jpsa.ac.ae/
+      param[journal_abbr] = journal
+
+      au < manifest ; exists ; 2023 ; Journal of Police and Legal Sciences Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2024 ; Journal of Police and Legal Sciences Volume 14 ; 14 ; >
+
+  }
+
+}
