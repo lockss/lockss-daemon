@@ -22,6 +22,7 @@ use HTTP::Cookies;
 use HTML::Entities;
 use utf8;
 use Encode qw(decode encode);
+push(@LWP::Protocol::http::EXTRA_SOCK_OPTS, MaxLineLength => 16*1024); #For Hindawi header is too long
 
 my $lockss_tag  = "LOCKSS system has permission to collect, preserve, and serve this Archival Unit";
 my $oa_tag      = "LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit";
