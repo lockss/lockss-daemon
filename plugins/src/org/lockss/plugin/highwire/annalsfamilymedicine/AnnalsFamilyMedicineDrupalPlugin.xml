@@ -84,4 +84,8 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.highwire.annalsfamilymedicine.AnnalsFamilyMedicineJCoreHtmlCrawlFilterFactory</string>
   </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.highwire.annalsfamilymedicine.AnnalsFamilyMedicineDrupalUrlNormalizer</string>
+  </entry>
 </map>
