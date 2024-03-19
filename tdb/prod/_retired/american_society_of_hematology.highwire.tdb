@@ -20,7 +20,8 @@
       param[base_url] = http://www.bloodjournal.org/
       implicit < status ; year ; name ; param[volume] >
 
-      au < down ; 2005 ; Blood Volume 106 ; 106 >
+      au < superseded ; 2005 ; Blood Volume 106 [superseded] ; 106 >
+      au < superseded ; 2006 ; Blood Volume 107 [superseded] ; 107 >
 
     }
 

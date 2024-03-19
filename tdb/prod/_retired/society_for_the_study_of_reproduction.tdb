@@ -17,6 +17,16 @@
 
     {
 
+      plugin = org.lockss.plugin.highwire.HighWirePlugin
+      param[base_url] = http://www.biolreprod.org/
+      implicit < status ; year ; name ; param[volume] >
+
+      au < superseded ; 2006 ; Biology of Reproduction Volume 74 [superseded] ; 74 >
+
+    }
+
+    {
+
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://www.biolreprod.org/
       implicit < status ; year ; name ; param[volume_name] >

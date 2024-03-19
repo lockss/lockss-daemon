@@ -340,6 +340,12 @@
     param[base_url] = http://ajpcell.physiology.org/
 
     {
+
+      au < HighWirePlugin ; superseded ; 2006 ; American Journal of Physiology - Cell Physiology Volume 290 [superseded] ; 290 >
+
+    }
+
+    {
     
       au < HighWirePressH20Plugin ; down ; 1977 ; American Journal of Physiology - Cell Physiology Volume 232 ; 232 >
       au < HighWirePressH20Plugin ; down ; 1977 ; American Journal of Physiology - Cell Physiology Volume 233 ; 233 >
@@ -440,6 +446,15 @@
 
     comment[current_plugin] = aps.APSDrupalPlugin
     param[base_url] = http://ajpendo.physiology.org/
+
+    {
+
+      #plugin = org.lockss.plugin.highwire.HighWirePlugin
+      #implicit < status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2006 ; American Journal of Physiology - Endocrinology And Metabolism Volume 290 [superseded] ; 290 >
+
+    }
 
     {
     
@@ -556,6 +571,15 @@
 
     {
 
+      #plugin = org.lockss.plugin.highwire.HighWirePlugin
+      #implicit < status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2006 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 290 [superseded] ; 290 >
+
+    }
+
+    {
+
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < HighWireStrVolPlugin ; down ; 2005 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 288 ; 288 >
@@ -669,6 +693,15 @@
 
     {
 
+      #plugin = org.lockss.plugin.highwire.HighWirePlugin
+      #implicit < status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2006 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 290 [superseded] ; 290 >
+
+    }
+
+    {
+
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < HighWireStrVolPlugin ; down ; 2005 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 288 ; 288 >
@@ -779,6 +812,15 @@
 
     comment[current_plugin] = aps.APSDrupalPlugin
     param[base_url] = http://ajplung.physiology.org/
+
+    {
+
+      #plugin = org.lockss.plugin.highwire.HighWirePlugin
+      #implicit < status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2006 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 290 [superseded] ; 290 >
+
+    }
 
     {
 
