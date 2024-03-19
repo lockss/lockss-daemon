@@ -22,7 +22,7 @@
       param[journal_abbr] = journal
 
       au < frozen ; exists ; 2022 ; International Journal of Emerging Multidisciplinaries: Mathematics (IJEMD-M) Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2023 ; International Journal of Emerging Multidisciplinaries: Mathematics (IJEMD-M) Volume 2 ; 2 ; >
+      au < deepCrawl ; exists ; 2023 ; International Journal of Emerging Multidisciplinaries: Mathematics (IJEMD-M) Volume 2 ; 2 ; >
       au < manifest ; exists ; 2024 ; International Journal of Emerging Multidisciplinaries: Mathematics (IJEMD-M) Volume 3 ; 3 ; >
 
   }
