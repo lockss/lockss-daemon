@@ -1892,62 +1892,62 @@
     implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
     param[journal_id] = more
 
-    au < exists ; 1980 ; Moreana Volume 16 ; 16 ; https://www.euppublishing.com/ >
-    au < exists ; 1980 ; Moreana Volume 17 ; 17 ; https://www.euppublishing.com/ >
-    au < exists ; 1981 ; Moreana Volume 18 ; 18 ; https://www.euppublishing.com/ >
-    au < exists ; 1982 ; Moreana Volume 19 ; 19 ; https://www.euppublishing.com/ >
-    au < exists ; 1983 ; Moreana Volume 20 ; 20 ; https://www.euppublishing.com/ >
-    au < exists ; 1984 ; Moreana Volume 21 ; 21 ; https://www.euppublishing.com/ >
+    au < doNotProcess ; 1980 ; Moreana Volume 16 ; 16 ; https://www.euppublishing.com/ >
+    au < doNotProcess ; 1980 ; Moreana Volume 17 ; 17 ; https://www.euppublishing.com/ >
+    au < doNotProcess ; 1981 ; Moreana Volume 18 ; 18 ; https://www.euppublishing.com/ >
+    au < doNotProcess ; 1982 ; Moreana Volume 19 ; 19 ; https://www.euppublishing.com/ >
+    au < doNotProcess ; 1983 ; Moreana Volume 20 ; 20 ; https://www.euppublishing.com/ >
+    au < doNotProcess ; 1984 ; Moreana Volume 21 ; 21 ; https://www.euppublishing.com/ >
     au < doesNotExist ; 1985 ; Moreana Volume 22 ; 22 ; https://www.euppublishing.com/ >
     au < doesNotExist ; 1986 ; Moreana Volume 23 ; 23 ; https://www.euppublishing.com/ >
     au < doesNotExist ; 1987 ; Moreana Volume 24 ; 24 ; https://www.euppublishing.com/ >
     au < doesNotExist ; 1988 ; Moreana Volume 25 ; 25 ; https://www.euppublishing.com/ >
     au < doesNotExist ; 1989 ; Moreana Volume 26 ; 26 ; https://www.euppublishing.com/ >
-    au < exists ; 1990 ; Moreana Volume 27 ; 27 ; https://www.euppublishing.com/ >
-    au < exists ; 1991 ; Moreana Volume 28 ; 28 ; https://www.euppublishing.com/ >
-    au < exists ; 1992 ; Moreana Volume 29 ; 29 ; https://www.euppublishing.com/ >
-    au < exists ; 1993 ; Moreana Volume 30 ; 30 ; https://www.euppublishing.com/ >
-    au < exists ; 1994 ; Moreana Volume 31 ; 31 ; https://www.euppublishing.com/ >
-    au < exists ; 1995 ; Moreana Volume 32 ; 32 ; https://www.euppublishing.com/ >
-    au < exists ; 1996 ; Moreana Volume 33 ; 33 ; https://www.euppublishing.com/ >
-    au < exists ; 1997 ; Moreana Volume 34 ; 34 ; https://www.euppublishing.com/ >
-    au < exists ; 1998 ; Moreana Volume 35 ; 35 ; https://www.euppublishing.com/ >
-    au < exists ; 1999 ; Moreana Volume 36 ; 36 ; https://www.euppublishing.com/ >
-    au < exists ; 2000 ; Moreana Volume 37 ; 37 ; https://www.euppublishing.com/ >
-    au < exists ; 2001 ; Moreana Volume 38 ; 38 ; https://www.euppublishing.com/ >
-    au < exists ; 2002 ; Moreana Volume 39 ; 39 ; https://www.euppublishing.com/ >
-    au < exists ; 2003 ; Moreana Volume 40 ; 40 ; https://www.euppublishing.com/ >
-    au < exists ; 2004 ; Moreana Volume 41 ; 41 ; https://www.euppublishing.com/ >
-    au < exists ; 2005 ; Moreana Volume 42 ; 42 ; https://www.euppublishing.com/ >
-    au < exists ; 2006-2007 ; Moreana Volume 43 ; 43 ; https://www.euppublishing.com/ >
-    au < exists ; 2007 ; Moreana Volume 44 ; 44 ; https://www.euppublishing.com/ >
-    au < exists ; 2008 ; Moreana Volume 45 ; 45 ; https://www.euppublishing.com/ >
-    #volumes below are under contract. Volumes above need editing to process.
+    au < doNotProcess ; 1990 ; Moreana Volume 27 ; 27 ; https://www.euppublishing.com/ >
+    au < doNotProcess ; 1991 ; Moreana Volume 28 ; 28 ; https://www.euppublishing.com/ >
+    au < doNotProcess ; 1992 ; Moreana Volume 29 ; 29 ; https://www.euppublishing.com/ >
+    au < doNotProcess ; 1993 ; Moreana Volume 30 ; 30 ; https://www.euppublishing.com/ >
+    au < doNotProcess ; 1994 ; Moreana Volume 31 ; 31 ; https://www.euppublishing.com/ >
+    au < doNotProcess ; 1995 ; Moreana Volume 32 ; 32 ; https://www.euppublishing.com/ >
+    au < doNotProcess ; 1996 ; Moreana Volume 33 ; 33 ; https://www.euppublishing.com/ >
+    au < doNotProcess ; 1997 ; Moreana Volume 34 ; 34 ; https://www.euppublishing.com/ >
+    au < doNotProcess ; 1998 ; Moreana Volume 35 ; 35 ; https://www.euppublishing.com/ >
+    au < doNotProcess ; 1999 ; Moreana Volume 36 ; 36 ; https://www.euppublishing.com/ >
+    au < doNotProcess ; 2000 ; Moreana Volume 37 ; 37 ; https://www.euppublishing.com/ >
+    au < doNotProcess ; 2001 ; Moreana Volume 38 ; 38 ; https://www.euppublishing.com/ >
+    au < doNotProcess ; 2002 ; Moreana Volume 39 ; 39 ; https://www.euppublishing.com/ >
+    au < doNotProcess ; 2003 ; Moreana Volume 40 ; 40 ; https://www.euppublishing.com/ >
+    au < doNotProcess ; 2004 ; Moreana Volume 41 ; 41 ; https://www.euppublishing.com/ >
+    au < doNotProcess ; 2005 ; Moreana Volume 42 ; 42 ; https://www.euppublishing.com/ >
+    au < doNotProcess ; 2006-2007 ; Moreana Volume 43 ; 43 ; https://www.euppublishing.com/ >
+    au < doNotProcess ; 2007 ; Moreana Volume 44 ; 44 ; https://www.euppublishing.com/ >
+    au < doNotProcess ; 2008 ; Moreana Volume 45 ; 45 ; https://www.euppublishing.com/ >
 
-    au < exists ; 2009 ; Moreana Volume 46 (Number 176) ; 46+%28Number+176%29 ; https://www.euppublishing.com/ >
-    au < exists ; 2009 ; Moreana Volume 46 (Number 177-178) ; 46+%28Number+177-178%29 ; https://www.euppublishing.com/ >
-    au < exists ; 2010 ; Moreana Volume 47 (Number 179-180) ; 47+%28Number+179-180%29 ; https://www.euppublishing.com/ >
-    au < exists ; 2010 ; Moreana Volume 47 (Number 181-182) ; 47+%28Number+181-182%29 ; https://www.euppublishing.com/ >
-    au < exists ; 2011 ; Moreana Volume 48 (Number 183-184) ; 48+%28Number+183-184%29 ; https://www.euppublishing.com/ >
-    au < exists ; 2011 ; Moreana Volume 48 (Number 185-186) ; 48+%28Number+185-186%29 ; https://www.euppublishing.com/ >
-    au < exists ; 2012 ; Moreana Volume 49 (Number 187-188) ; 49+%28Number+187-188%29 ; https://www.euppublishing.com/ >
-    au < exists ; 2012 ; Moreana Volume 49 (Number 189-190) ; 49+%28Number+189-190%29 ; https://www.euppublishing.com/ >
-    au < exists ; 2013 ; Moreana Volume 50 (Number 191-192) ; 50+%28Number+191-192%29 ; https://www.euppublishing.com/ >
-    au < exists ; 2013 ; Moreana Volume 50 (Number 193-194) ; 50+%28Number+193-194%29 ; https://www.euppublishing.com/ >
-    au < exists ; 2014 ; Moreana Volume 51 (Number 195-196) ; 51+%28Number+195-196%29 ; https://www.euppublishing.com/ >
-    au < exists ; 2014 ; Moreana Volume 51 (Number 197-198) ; 51+%28Number+197-198%29 ; https://www.euppublishing.com/ >
-    au < exists ; 2015 ; Moreana Volume 52 (Number 199-200) ; 52+%28Number+199-200%29 ; https://www.euppublishing.com/ >
-    au < exists ; 2015 ; Moreana Volume 52 (Number 201-202) ; 52+%28Number+201-202%29 ; https://www.euppublishing.com/ >
-    au < exists ; 2016 ; Moreana Volume 53 (Number 203-204) ; 53+%28Number+203-204%29 ; https://www.euppublishing.com/ >
-    au < exists ; 2016 ; Moreana Volume 53 (Number 205-206) ; 53+%28Number+205-206%29 ; https://www.euppublishing.com/ >
-    au < exists ; 2017 ; Moreana Volume 54 (Number 207) ; 54+%28Number+207%29 ; https://www.euppublishing.com/ >
-    au < exists ; 2017 ; Moreana Volume 54 (Number 208) ; 54+%28Number+208%29 ; https://www.euppublishing.com/ >
-    au < exists ; 2018 ; Moreana Volume 55 (Number 209) ; 55+%28Number+209%29 ; https://www.euppublishing.com/ >
-    au < exists ; 2018 ; Moreana Volume 55 (Number 210) ; 55+%28Number+210%29 ; https://www.euppublishing.com/ >
-    au < exists ; 2019 ; Moreana Volume 56 (Number 211) ; 56+%28Number+211%29 ; https://www.euppublishing.com/ >
-    au < exists ; 2019 ; Moreana Volume 56 (Number 212) ; 56+%28Number+212%29 ; https://www.euppublishing.com/ >
-    au < exists ; 2020 ; Moreana Volume 57 (Number 213) ; 57+%28Number+213%29 ; https://www.euppublishing.com/ >
-    au < exists ; 2020 ; Moreana Volume 57 (Number 214) ; 57+%28Number+214%29 ; https://www.euppublishing.com/ >
+    #volumes below are under contract. Volumes above need editing to process.
+    au < manifest ; 2009 ; Moreana Volume 46 (Number 176) ; 46+%28Number+176%29 ; https://www.euppublishing.com/ >
+    au < manifest ; 2009 ; Moreana Volume 46 (Number 177-178) ; 46+%28Number+177-178%29 ; https://www.euppublishing.com/ >
+    au < manifest ; 2010 ; Moreana Volume 47 (Number 179-180) ; 47+%28Number+179-180%29 ; https://www.euppublishing.com/ >
+    au < manifest ; 2010 ; Moreana Volume 47 (Number 181-182) ; 47+%28Number+181-182%29 ; https://www.euppublishing.com/ >
+    au < manifest ; 2011 ; Moreana Volume 48 (Number 183-184) ; 48+%28Number+183-184%29 ; https://www.euppublishing.com/ >
+    au < manifest ; 2011 ; Moreana Volume 48 (Number 185-186) ; 48+%28Number+185-186%29 ; https://www.euppublishing.com/ >
+    au < manifest ; 2012 ; Moreana Volume 49 (Number 187-188) ; 49+%28Number+187-188%29 ; https://www.euppublishing.com/ >
+    au < manifest ; 2012 ; Moreana Volume 49 (Number 189-190) ; 49+%28Number+189-190%29 ; https://www.euppublishing.com/ >
+    au < manifest ; 2013 ; Moreana Volume 50 (Number 191-192) ; 50+%28Number+191-192%29 ; https://www.euppublishing.com/ >
+    au < manifest ; 2013 ; Moreana Volume 50 (Number 193-194) ; 50+%28Number+193-194%29 ; https://www.euppublishing.com/ >
+    au < manifest ; 2014 ; Moreana Volume 51 (Number 195-196) ; 51+%28Number+195-196%29 ; https://www.euppublishing.com/ >
+    au < manifest ; 2014 ; Moreana Volume 51 (Number 197-198) ; 51+%28Number+197-198%29 ; https://www.euppublishing.com/ >
+    au < manifest ; 2015 ; Moreana Volume 52 (Number 199-200) ; 52+%28Number+199-200%29 ; https://www.euppublishing.com/ >
+    au < manifest ; 2015 ; Moreana Volume 52 (Number 201-202) ; 52+%28Number+201-202%29 ; https://www.euppublishing.com/ >
+    au < manifest ; 2016 ; Moreana Volume 53 (Number 203-204) ; 53+%28Number+203-204%29 ; https://www.euppublishing.com/ >
+    au < manifest ; 2016 ; Moreana Volume 53 (Number 205-206) ; 53+%28Number+205-206%29 ; https://www.euppublishing.com/ >
+    au < manifest ; 2017 ; Moreana Volume 54 (Number 207) ; 54+%28Number+207%29 ; https://www.euppublishing.com/ >
+    au < manifest ; 2017 ; Moreana Volume 54 (Number 208) ; 54+%28Number+208%29 ; https://www.euppublishing.com/ >
+    au < manifest ; 2018 ; Moreana Volume 55 (Number 209) ; 55+%28Number+209%29 ; https://www.euppublishing.com/ >
+    au < manifest ; 2018 ; Moreana Volume 55 (Number 210) ; 55+%28Number+210%29 ; https://www.euppublishing.com/ >
+    au < manifest ; 2019 ; Moreana Volume 56 (Number 211) ; 56+%28Number+211%29 ; https://www.euppublishing.com/ >
+    au < manifest ; 2019 ; Moreana Volume 56 (Number 212) ; 56+%28Number+212%29 ; https://www.euppublishing.com/ >
+    au < manifest ; 2020 ; Moreana Volume 57 (Number 213) ; 57+%28Number+213%29 ; https://www.euppublishing.com/ >
+    au < manifest ; 2020 ; Moreana Volume 57 (Number 214) ; 57+%28Number+214%29 ; https://www.euppublishing.com/ >
     au < manifest ; 2021 ; Moreana Volume 58 ; 58 ; https://www.euppublishing.com/ >
     au < manifest ; 2022 ; Moreana Volume 59 ; 59 ; https://www.euppublishing.com/ >
     au < manifest ; 2023 ; Moreana Volume 60 ; 60 ; https://www.euppublishing.com/ >
@@ -2414,88 +2414,90 @@
 #      param[base_url] = http://www.euppublishing.com/
       param[journal_id] = scot
       implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
+      #doNotProcess. Volume numbers have special characters.
 
       au < doNotProcess ; 1992 ; Scottish Affairs (First Series) Volume 1 ; 1+(First+Series) ; https://www.euppublishing.com/ >
       au < doNotProcess ; 1993 ; Scottish Affairs (First Series) Volume 2 ; 2+(First+Series) ; https://www.euppublishing.com/ >
       au < doNotProcess ; 1993 ; Scottish Affairs (First Series) Volume 3 ; 3+(First+Series) ; https://www.euppublishing.com/ >
       au < doNotProcess ; 1993 ; Scottish Affairs (First Series) Volume 4 ; 4+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1993 ; Scottish Affairs (First Series) Volume 5 ; 5+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1994 ; Scottish Affairs (First Series) Volume 6 ; 6+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1994 ; Scottish Affairs (First Series) Volume 7 ; 7+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1994 ; Scottish Affairs (First Series) Volume 8 ; 8+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1994 ; Scottish Affairs (First Series) Volume 9 ; 9+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1995 ; Scottish Affairs (First Series) Volume 10 ; 10+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1995 ; Scottish Affairs (First Series) Volume 11 ; 11+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1995 ; Scottish Affairs (First Series) Volume 12 ; 12+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1995 ; Scottish Affairs (First Series) Volume 13 ; 13+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1996 ; Scottish Affairs (First Series) Volume 14 ; 14+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1996 ; Scottish Affairs (First Series) Volume 15 ; 15+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1996 ; Scottish Affairs (First Series) Volume 16 ; 16+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1996 ; Scottish Affairs (First Series) Volume 17 ; 17+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1997 ; Scottish Affairs (First Series) Volume 18 ; 18+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1997 ; Scottish Affairs (First Series) Volume 19 ; 19+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1997 ; Scottish Affairs (First Series) Volume 20 ; 20+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1997 ; Scottish Affairs (First Series) Volume 21 ; 21+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1998 ; Scottish Affairs (First Series) Volume 22 ; 22+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1998 ; Scottish Affairs (First Series) Volume 23 ; 23+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1998 ; Scottish Affairs (First Series) Volume 24 ; 24+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1998 ; Scottish Affairs (First Series) Volume 25 ; 25+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1999 ; Scottish Affairs (First Series) Volume 26 ; 26+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1999 ; Scottish Affairs (First Series) Volume 27 ; 27+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1999 ; Scottish Affairs (First Series) Volume 28 ; 28+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 1999 ; Scottish Affairs (First Series) Volume 29 ; 29+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2000 ; Scottish Affairs (First Series) Volume 30 ; 30+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2000 ; Scottish Affairs (First Series) Volume 31 ; 31+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2000 ; Scottish Affairs (First Series) Volume 32 ; 32+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2000 ; Scottish Affairs (First Series) Volume 33 ; 33+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2001 ; Scottish Affairs (First Series) Volume 34 ; 34+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2001 ; Scottish Affairs (First Series) Volume 35 ; 35+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2001 ; Scottish Affairs (First Series) Volume 36 ; 36+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2001 ; Scottish Affairs (First Series) Volume 37 ; 37+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2002 ; Scottish Affairs (First Series) Volume 38 ; 38+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2002 ; Scottish Affairs (First Series) Volume 39 ; 39+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2002 ; Scottish Affairs (First Series) Volume 40 ; 40+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2002 ; Scottish Affairs (First Series) Volume 41 ; 41+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2003 ; Scottish Affairs (First Series) Volume 42 ; 42+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2003 ; Scottish Affairs (First Series) Volume 43 ; 43+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2003 ; Scottish Affairs (First Series) Volume 44 ; 44+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2003 ; Scottish Affairs (First Series) Volume 45 ; 45+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2004 ; Scottish Affairs (First Series) Volume 46 ; 46+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2004 ; Scottish Affairs (First Series) Volume 47 ; 47+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2004 ; Scottish Affairs (First Series) Volume 48 ; 48+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2004 ; Scottish Affairs (First Series) Volume 49 ; 49+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2005 ; Scottish Affairs (First Series) Volume 50 ; 50+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2005 ; Scottish Affairs (First Series) Volume 51 ; 51+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2005 ; Scottish Affairs (First Series) Volume 52 ; 52+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2005 ; Scottish Affairs (First Series) Volume 53 ; 53+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2006 ; Scottish Affairs (First Series) Volume 54 ; 54+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2006 ; Scottish Affairs (First Series) Volume 55 ; 55+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2006 ; Scottish Affairs (First Series) Volume 56 ; 56+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2006 ; Scottish Affairs (First Series) Volume 57 ; 57+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2007 ; Scottish Affairs (First Series) Volume 58 ; 58+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2007 ; Scottish Affairs (First Series) Volume 59 ; 59+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2007 ; Scottish Affairs (First Series) Volume 60 ; 60+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2007 ; Scottish Affairs (First Series) Volume 61 ; 61+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2008 ; Scottish Affairs (First Series) Volume 62 ; 62+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2008 ; Scottish Affairs (First Series) Volume 63 ; 63+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2008 ; Scottish Affairs (First Series) Volume 64 ; 64+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2008 ; Scottish Affairs (First Series) Volume 65 ; 65+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2009 ; Scottish Affairs (First Series) Volume 66 ; 66+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2009 ; Scottish Affairs (First Series) Volume 67 ; 67+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2009 ; Scottish Affairs (First Series) Volume 68 ; 68+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2009 ; Scottish Affairs (First Series) Volume 69 ; 69+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2000 ; Scottish Affairs (First Series) Volume 70 ; 70+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2000 ; Scottish Affairs (First Series) Volume 71 ; 71+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2010 ; Scottish Affairs (First Series) Volume 72 ; 72+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2010 ; Scottish Affairs (First Series) Volume 73 ; 73+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2011 ; Scottish Affairs (First Series) Volume 74 ; 74+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2011 ; Scottish Affairs (First Series) Volume 75 ; 75+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2011 ; Scottish Affairs (First Series) Volume 76 ; 76+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2011 ; Scottish Affairs (First Series) Volume 77 ; 77+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2012 ; Scottish Affairs (First Series) Volume 78 ; 78+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2012 ; Scottish Affairs (First Series) Volume 79 ; 79+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2012 ; Scottish Affairs (First Series) Volume 80 ; 80+(First+Series) ; https://www.euppublishing.com/ >
-      au < exists ; 2012 ; Scottish Affairs (First Series) Volume 81 ; 81+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1993 ; Scottish Affairs (First Series) Volume 5 ; 5+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1994 ; Scottish Affairs (First Series) Volume 6 ; 6+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1994 ; Scottish Affairs (First Series) Volume 7 ; 7+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1994 ; Scottish Affairs (First Series) Volume 8 ; 8+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1994 ; Scottish Affairs (First Series) Volume 9 ; 9+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1995 ; Scottish Affairs (First Series) Volume 10 ; 10+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1995 ; Scottish Affairs (First Series) Volume 11 ; 11+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1995 ; Scottish Affairs (First Series) Volume 12 ; 12+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1995 ; Scottish Affairs (First Series) Volume 13 ; 13+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1996 ; Scottish Affairs (First Series) Volume 14 ; 14+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1996 ; Scottish Affairs (First Series) Volume 15 ; 15+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1996 ; Scottish Affairs (First Series) Volume 16 ; 16+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1996 ; Scottish Affairs (First Series) Volume 17 ; 17+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1997 ; Scottish Affairs (First Series) Volume 18 ; 18+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1997 ; Scottish Affairs (First Series) Volume 19 ; 19+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1997 ; Scottish Affairs (First Series) Volume 20 ; 20+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1997 ; Scottish Affairs (First Series) Volume 21 ; 21+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1998 ; Scottish Affairs (First Series) Volume 22 ; 22+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1998 ; Scottish Affairs (First Series) Volume 23 ; 23+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1998 ; Scottish Affairs (First Series) Volume 24 ; 24+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1998 ; Scottish Affairs (First Series) Volume 25 ; 25+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1999 ; Scottish Affairs (First Series) Volume 26 ; 26+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1999 ; Scottish Affairs (First Series) Volume 27 ; 27+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1999 ; Scottish Affairs (First Series) Volume 28 ; 28+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1999 ; Scottish Affairs (First Series) Volume 29 ; 29+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2000 ; Scottish Affairs (First Series) Volume 30 ; 30+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2000 ; Scottish Affairs (First Series) Volume 31 ; 31+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2000 ; Scottish Affairs (First Series) Volume 32 ; 32+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2000 ; Scottish Affairs (First Series) Volume 33 ; 33+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2001 ; Scottish Affairs (First Series) Volume 34 ; 34+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2001 ; Scottish Affairs (First Series) Volume 35 ; 35+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2001 ; Scottish Affairs (First Series) Volume 36 ; 36+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2001 ; Scottish Affairs (First Series) Volume 37 ; 37+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2002 ; Scottish Affairs (First Series) Volume 38 ; 38+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2002 ; Scottish Affairs (First Series) Volume 39 ; 39+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2002 ; Scottish Affairs (First Series) Volume 40 ; 40+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2002 ; Scottish Affairs (First Series) Volume 41 ; 41+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2003 ; Scottish Affairs (First Series) Volume 42 ; 42+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2003 ; Scottish Affairs (First Series) Volume 43 ; 43+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2003 ; Scottish Affairs (First Series) Volume 44 ; 44+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2003 ; Scottish Affairs (First Series) Volume 45 ; 45+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2004 ; Scottish Affairs (First Series) Volume 46 ; 46+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2004 ; Scottish Affairs (First Series) Volume 47 ; 47+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2004 ; Scottish Affairs (First Series) Volume 48 ; 48+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2004 ; Scottish Affairs (First Series) Volume 49 ; 49+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2005 ; Scottish Affairs (First Series) Volume 50 ; 50+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2005 ; Scottish Affairs (First Series) Volume 51 ; 51+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2005 ; Scottish Affairs (First Series) Volume 52 ; 52+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2005 ; Scottish Affairs (First Series) Volume 53 ; 53+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2006 ; Scottish Affairs (First Series) Volume 54 ; 54+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2006 ; Scottish Affairs (First Series) Volume 55 ; 55+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2006 ; Scottish Affairs (First Series) Volume 56 ; 56+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2006 ; Scottish Affairs (First Series) Volume 57 ; 57+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2007 ; Scottish Affairs (First Series) Volume 58 ; 58+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2007 ; Scottish Affairs (First Series) Volume 59 ; 59+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2007 ; Scottish Affairs (First Series) Volume 60 ; 60+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2007 ; Scottish Affairs (First Series) Volume 61 ; 61+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2008 ; Scottish Affairs (First Series) Volume 62 ; 62+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2008 ; Scottish Affairs (First Series) Volume 63 ; 63+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2008 ; Scottish Affairs (First Series) Volume 64 ; 64+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2008 ; Scottish Affairs (First Series) Volume 65 ; 65+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2009 ; Scottish Affairs (First Series) Volume 66 ; 66+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2009 ; Scottish Affairs (First Series) Volume 67 ; 67+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2009 ; Scottish Affairs (First Series) Volume 68 ; 68+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2009 ; Scottish Affairs (First Series) Volume 69 ; 69+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2000 ; Scottish Affairs (First Series) Volume 70 ; 70+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2000 ; Scottish Affairs (First Series) Volume 71 ; 71+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2010 ; Scottish Affairs (First Series) Volume 72 ; 72+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2010 ; Scottish Affairs (First Series) Volume 73 ; 73+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2011 ; Scottish Affairs (First Series) Volume 74 ; 74+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2011 ; Scottish Affairs (First Series) Volume 75 ; 75+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2011 ; Scottish Affairs (First Series) Volume 76 ; 76+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2011 ; Scottish Affairs (First Series) Volume 77 ; 77+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2012 ; Scottish Affairs (First Series) Volume 78 ; 78+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2012 ; Scottish Affairs (First Series) Volume 79 ; 79+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2012 ; Scottish Affairs (First Series) Volume 80 ; 80+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2012 ; Scottish Affairs (First Series) Volume 81 ; 81+(First+Series) ; https://www.euppublishing.com/ >
+
       au < released ; 2014 ; Scottish Affairs Volume 23 ; 23 ; http://www.euppublishing.com/ >
       au < released ; 2015 ; Scottish Affairs Volume 24 ; 24 ; http://www.euppublishing.com/ >
       au < released ; 2016 ; Scottish Affairs Volume 25 ; 25 ; http://www.euppublishing.com/ >
