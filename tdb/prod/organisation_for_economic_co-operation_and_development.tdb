@@ -1,120 +1,744 @@
 {
 
   publisher <
-    name = Organisation for Economic Co-operation and Development ;
-    info[tester] = 1 ;
-    info[platform] = See LXPLUG-1730
+    name = Organisation for Economic Co-operation and Development
   >
 
-  #
-  #
-  #
-  # Under heavy development, subject to significant change
-  #
-  #
-  #
+  # Generated 2024-03-19 02:05:16.957498
 
-  param[base_url] = https://www.oecd-ilibrary.org/
   plugin = org.lockss.plugin.oecd.OecdJournalsPlugin
+  param[base_url] = https://www.oecd-ilibrary.org/
   implicit < status ; year ; name ; param[volume_name] >
 
-    {
+  {
 
     title <
-      name = OECD Journal: Journal of Business Cycle Measurement and Analysis ;
-      issn = 1995-2899
-     >
+      name = Bulletin de droit nucléaire ;
+      issn = 03043428 ;
+      eissn = 16843568 ;
+      doi = 10.1787/16843568
+    >
 
-      param[topic] = economics
-      param[journal_issn] = 19952899
-      param[journal_dir] = oecd-journal-journal-of-business-cycle-measurement-and-analysis
+    param[topic] = nuclear-energy
+    param[journal_dir] = bulletin-de-droit-nucleaire
+    param[journal_issn] = 16843568
 
-      au < testing ; 2013 ; Journal of Business Cycle Measurement and Analysis Volume 2013 ; 2013 >
-      au < testing ; 2014 ; Journal of Business Cycle Measurement and Analysis Volume 2014 ; 2014 >
-      au < testing ; 2015 ; Journal of Business Cycle Measurement and Analysis Volume 2015 ; 2015 >
+    au < manifest ; 0 ; Bulletin de droit nucléaire Volume 1998 ; 1998 >
+    au < manifest ; 0 ; Bulletin de droit nucléaire Volume 1999 ; 1999 >
+    au < manifest ; 0 ; Bulletin de droit nucléaire Volume 2000 ; 2000 >
+    au < manifest ; 0 ; Bulletin de droit nucléaire Volume 2001 ; 2001 >
+    au < manifest ; 0 ; Bulletin de droit nucléaire Volume 2002 ; 2002 >
+    au < manifest ; 0 ; Bulletin de droit nucléaire Volume 2003 ; 2003 >
+    au < manifest ; 0 ; Bulletin de droit nucléaire Volume 2004 ; 2004 >
+    au < manifest ; 0 ; Bulletin de droit nucléaire Volume 2005 ; 2005 >
+    au < manifest ; 0 ; Bulletin de droit nucléaire Volume 2006 ; 2006 >
+    au < manifest ; 0 ; Bulletin de droit nucléaire Volume 2007 ; 2007 >
+    au < manifest ; 0 ; Bulletin de droit nucléaire Volume 2008 ; 2008 >
+    au < manifest ; 0 ; Bulletin de droit nucléaire Volume 2009 ; 2009 >
+    au < manifest ; 0 ; Bulletin de droit nucléaire Volume 2010 ; 2010 >
+    au < manifest ; 0 ; Bulletin de droit nucléaire Volume 2011 ; 2011 >
+    au < manifest ; 0 ; Bulletin de droit nucléaire Volume 2012 ; 2012 >
+    au < manifest ; 0 ; Bulletin de droit nucléaire Volume 2013 ; 2013 >
+    au < manifest ; 0 ; Bulletin de droit nucléaire Volume 2014 ; 2014 >
+    au < manifest ; 0 ; Bulletin de droit nucléaire Volume 2015 ; 2015 >
+    au < manifest ; 0 ; Bulletin de droit nucléaire Volume 2016 ; 2016 >
+    au < manifest ; 0 ; Bulletin de droit nucléaire Volume 2017 ; 2017 >
+    au < manifest ; 0 ; Bulletin de droit nucléaire Volume 2018 ; 2018 >
+    au < manifest ; 0 ; Bulletin de droit nucléaire Volume 2019 ; 2019 >
 
-    }
+  }
 
-    {
+  {
+
+    title <
+      name = Documents de l'OCDE ;
+      issn = 16095316 ;
+      eissn = 1684341X ;
+      doi = 10.1787/1684341x
+    >
+
+    param[topic] = economics
+    param[journal_dir] = documents-de-l-ocde
+    param[journal_issn] = 1684341X
+
+    au < manifest ; 0 ; Documents de l'OCDE Volume 1 ; 1 >
+    au < manifest ; 0 ; Documents de l'OCDE Volume 2 ; 2 >
+    au < manifest ; 0 ; Documents de l'OCDE Volume 3 ; 3 >
+    au < manifest ; 0 ; Documents de l'OCDE Volume 4 ; 4 >
+
+  }
+
+  {
+
+    title <
+      name = Financial Market Trends ;
+      issn = 0378651X ;
+      eissn = 16096886 ;
+      doi = 10.1787/16096886
+    >
+
+    param[topic] = finance-and-investment
+    param[journal_dir] = financial-market-trends
+    param[journal_issn] = 16096886
+
+    au < manifest ; 1997 ; Financial Market Trends Volume 1997 ; 1997 >
+    au < manifest ; 1998 ; Financial Market Trends Volume 1998 ; 1998 >
+    au < manifest ; 1999 ; Financial Market Trends Volume 1999 ; 1999 >
+    au < manifest ; 2000 ; Financial Market Trends Volume 2000 ; 2000 >
+    au < manifest ; 2001 ; Financial Market Trends Volume 2001 ; 2001 >
+    au < manifest ; 2002 ; Financial Market Trends Volume 2002 ; 2002 >
+    au < manifest ; 2003 ; Financial Market Trends Volume 2003 ; 2003 >
+    au < manifest ; 2004 ; Financial Market Trends Volume 2004 ; 2004 >
+    au < manifest ; 2005 ; Financial Market Trends Volume 2005 ; 2005 >
+    au < manifest ; 2006 ; Financial Market Trends Volume 2006 ; 2006 >
+    au < manifest ; 2007 ; Financial Market Trends Volume 2007 ; 2007 >
+
+  }
+
+  {
+
+    title <
+      name = Gestion de l'enseignement supérieur ;
+      issn = 10138501 ;
+      eissn = 23071974 ;
+      doi = 10.1787/23071974
+    >
+
+    param[topic] = education
+    param[journal_dir] = gestion-de-l-enseignement-superieur
+    param[journal_issn] = 23071974
+
+    au < manifest ; 0 ; Gestion de l'enseignement supérieur Volume 9 ; 9 >
+    au < manifest ; 0 ; Gestion de l'enseignement supérieur Volume 10 ; 10 >
+    au < manifest ; 0 ; Gestion de l'enseignement supérieur Volume 11 ; 11 >
+    au < manifest ; 0 ; Gestion de l'enseignement supérieur Volume 12 ; 12 >
+    au < manifest ; 0 ; Gestion de l'enseignement supérieur Volume 13 ; 13 >
+
+  }
+
+  {
+
+    title <
+      name = Higher Education Management ;
+      issn = 1013851X ;
+      eissn = 16096924 ;
+      doi = 10.1787/16096924
+    >
+
+    param[topic] = education
+    param[journal_dir] = higher-education-management
+    param[journal_issn] = 16096924
+
+    au < manifest ; 0 ; Higher Education Management Volume 9 ; 9 >
+    au < manifest ; 0 ; Higher Education Management Volume 10 ; 10 >
+    au < manifest ; 0 ; Higher Education Management Volume 11 ; 11 >
+    au < manifest ; 0 ; Higher Education Management Volume 12 ; 12 >
+    au < manifest ; 0 ; Higher Education Management Volume 13 ; 13 >
+
+  }
+
+  {
+
+    title <
+      name = Higher Education Management and Policy ;
+      issn = 16823451 ;
+      eissn = 17269822 ;
+      doi = 10.1787/17269822
+    >
+
+    param[topic] = education
+    param[journal_dir] = higher-education-management-and-policy
+    param[journal_issn] = 17269822
+
+    au < manifest ; 0 ; Higher Education Management and Policy Volume 14 ; 14 >
+    au < manifest ; 0 ; Higher Education Management and Policy Volume 15 ; 15 >
+    au < manifest ; 0 ; Higher Education Management and Policy Volume 16 ; 16 >
+    au < manifest ; 0 ; Higher Education Management and Policy Volume 17 ; 17 >
+    au < manifest ; 0 ; Higher Education Management and Policy Volume 18 ; 18 >
+    au < manifest ; 0 ; Higher Education Management and Policy Volume 19 ; 19 >
+    au < manifest ; 0 ; Higher Education Management and Policy Volume 20 ; 20 >
+    au < manifest ; 0 ; Higher Education Management and Policy Volume 21 ; 21 >
+    au < manifest ; 0 ; Higher Education Management and Policy Volume 22 ; 22 >
+    au < manifest ; 0 ; Higher Education Management and Policy Volume 23 ; 23 >
+    au < manifest ; 0 ; Higher Education Management and Policy Volume 24 ; 24 >
+
+  }
+
+  {
 
     title <
       name = Journal of Business Cycle Measurement and Analysis ;
-      issn = 1729-3626
-     >
+      issn = 17293618 ;
+      eissn = 17293626 ;
+      doi = 10.1787/17293626
+    >
 
-      param[topic] = economics
-      param[journal_issn] = 17293626
-      param[journal_dir] = journal-of-business-cycle-measurement-and-analysis
+    param[topic] = economics
+    param[journal_dir] = journal-of-business-cycle-measurement-and-analysis
+    param[journal_issn] = 17293626
 
-      au < testing ; 2004 ; Journal of Business Cycle Measurement and Analysis Volume 2004 ; 2004 > # test
-      au < testing ; 2005 ; Journal of Business Cycle Measurement and Analysis Volume 2005 ; 2005 >
-      au < testing ; 2007 ; Journal of Business Cycle Measurement and Analysis Volume 2007 ; 2007 > # another test
+    au < manifest ; 0 ; Journal of Business Cycle Measurement and Analysis Volume 2004 ; 2004 >
+    au < manifest ; 0 ; Journal of Business Cycle Measurement and Analysis Volume 2005 ; 2005 >
+    au < manifest ; 0 ; Journal of Business Cycle Measurement and Analysis Volume 2006 ; 2006 >
+    au < manifest ; 0 ; Journal of Business Cycle Measurement and Analysis Volume 2007 ; 2007 >
 
-    }
+  }
 
-    {
+  {
 
     title <
-      name =  Nuclear Law Bulletin ;
-      issn = 1609-7378
-     >
+      name = L'Observateur de l'OCDE ;
+      issn = 03043398 ;
+      eissn = 15615510 ;
+      doi = 10.1787/15615510
+    >
 
-      param[topic] = nuclear-energy
-      param[journal_issn] = 16097378
-      param[journal_dir] = nuclear-law-bulletin
+    param[topic] = economics
+    param[journal_dir] = l-observateur-de-l-ocde
+    param[journal_issn] = 15615510
 
-      au < testing ; 1997 ; Nuclear Law Bulletin 1997 ; 1997 >
-      au < testing ; 1998 ; Nuclear Law Bulletin 1998 ; 1998 >
-      au < testing ; 1999 ; Nuclear Law Bulletin 1999 ; 1999 >
-      au < testing ; 2000 ; Nuclear Law Bulletin 2000 ; 2000 >
-      au < manifest ; 2001 ; Nuclear Law Bulletin 2001 ; 2001 >
-      au < manifest ; 2002 ; Nuclear Law Bulletin 2002 ; 2002 >
-      au < manifest ; 2003 ; Nuclear Law Bulletin 2003 ; 2003 >
-      au < manifest ; 2004 ; Nuclear Law Bulletin 2004 ; 2004 >
-      au < manifest ; 2005 ; Nuclear Law Bulletin 2005 ; 2005 >
-      au < manifest ; 2006 ; Nuclear Law Bulletin 2006 ; 2006 >
-      au < testing ; 2007 ; Nuclear Law Bulletin 2007 ; 2007 >
-      au < manifest ; 2008 ; Nuclear Law Bulletin 2008 ; 2008 >
-      au < manifest ; 2009 ; Nuclear Law Bulletin 2009 ; 2009 >
-      au < testing ; 2010 ; Nuclear Law Bulletin 2010 ; 2010 >
-      au < manifest ; 2011 ; Nuclear Law Bulletin 2011 ; 2011 >
-      au < manifest ; 2012 ; Nuclear Law Bulletin 2012 ; 2012 >
-      au < manifest ; 2013 ; Nuclear Law Bulletin 2013 ; 2013 >
-      au < testing ; 2014 ; Nuclear Law Bulletin 2014 ; 2014 >
-      au < manifest ; 2015 ; Nuclear Law Bulletin 2015 ; 2015 >
-      au < manifest ; 2016 ; Nuclear Law Bulletin 2016 ; 2016 >
-      au < manifest ; 2017 ; Nuclear Law Bulletin 2017 ; 2017 >
-      au < manifest ; 2018 ; Nuclear Law Bulletin 2018 ; 2018 >
-      au < manifest ; 2019 ; Nuclear Law Bulletin 2019 ; 2019 >
-      au < testing ; 2020 ; Nuclear Law Bulletin 2020 ; 2020 >
-      au < testing ; 2021 ; Nuclear Law Bulletin 2021 ; 2021 >
-    }
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1962 ; 1962 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1963 ; 1963 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1964 ; 1964 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1965 ; 1965 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1966 ; 1966 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1967 ; 1967 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1968 ; 1968 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1969 ; 1969 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1970 ; 1970 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1971 ; 1971 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1972 ; 1972 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1973 ; 1973 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1974 ; 1974 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1975 ; 1975 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1976 ; 1976 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1977 ; 1977 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1978 ; 1978 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1979 ; 1979 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1980 ; 1980 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1981 ; 1981 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1982 ; 1982 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1983 ; 1983 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1984 ; 1984 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1985 ; 1985 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1986 ; 1986 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1987 ; 1987 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1988 ; 1988 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1989 ; 1989 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1990 ; 1990 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1991 ; 1991 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1992 ; 1992 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1993 ; 1993 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1994 ; 1994 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1995 ; 1995 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1996 ; 1996 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1997 ; 1997 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1998 ; 1998 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 1999 ; 1999 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 2000 ; 2000 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 2001 ; 2001 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 2002 ; 2002 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 2003 ; 2003 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 2004 ; 2004 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 2005 ; 2005 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 2006 ; 2006 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 2007 ; 2007 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 2008 ; 2008 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 2009 ; 2009 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 2010 ; 2010 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 2011 ; 2011 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 2012 ; 2012 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 2013 ; 2013 >
+    au < manifest ; 0 ; L'Observateur de l'OCDE Volume 2014 ; 2014 >
 
-    {
+  }
+
+  {
+
     title <
-      name = OECD Journal on Budgeting  ;
-      issn = 1681-2336
-     >
+      name = Nuclear Law Bulletin ;
+      issn = 0304341X ;
+      eissn = 16097378 ;
+      doi = 10.1787/16097378
+    >
 
-      param[topic] = governance
-      param[journal_issn] = 16812336
-      param[journal_dir] = oecd-journal-on-budgeting
+    param[topic] = nuclear-energy
+    param[journal_dir] = nuclear-law-bulletin
+    param[journal_issn] = 16097378
 
-      au < testing ; 2019 ; OECD Journal on Budgeting Volume 19 ; 19 >
-    }
+    au < manifest ; 1998 ; Nuclear Law Bulletin Volume 1997 ; 1997 >
+    au < manifest ; 1999 ; Nuclear Law Bulletin Volume 1998 ; 1998 >
+    au < manifest ; 2000 ; Nuclear Law Bulletin Volume 1999 ; 1999 >
+    au < manifest ; 2001 ; Nuclear Law Bulletin Volume 2000 ; 2000 >
+    au < manifest ; 2002 ; Nuclear Law Bulletin Volume 2001 ; 2001 >
+    au < manifest ; 2003 ; Nuclear Law Bulletin Volume 2002 ; 2002 >
+    au < manifest ; 2004 ; Nuclear Law Bulletin Volume 2003 ; 2003 >
+    au < manifest ; 2005 ; Nuclear Law Bulletin Volume 2004 ; 2004 >
+    au < manifest ; 2006 ; Nuclear Law Bulletin Volume 2005 ; 2005 >
+    au < manifest ; 2007 ; Nuclear Law Bulletin Volume 2006 ; 2006 >
+    au < manifest ; 2008 ; Nuclear Law Bulletin Volume 2007 ; 2007 >
+    au < manifest ; 2009 ; Nuclear Law Bulletin Volume 2008 ; 2008 >
+    au < manifest ; 2010 ; Nuclear Law Bulletin Volume 2009 ; 2009 >
+    au < manifest ; 2011 ; Nuclear Law Bulletin Volume 2010 ; 2010 >
+    au < manifest ; 2012 ; Nuclear Law Bulletin Volume 2011 ; 2011 >
+    au < manifest ; 2013 ; Nuclear Law Bulletin Volume 2012 ; 2012 >
+    au < manifest ; 2014 ; Nuclear Law Bulletin Volume 2013 ; 2013 >
+    au < manifest ; 2015 ; Nuclear Law Bulletin Volume 2014 ; 2014 >
+    au < manifest ; 2016 ; Nuclear Law Bulletin Volume 2015 ; 2015 >
+    au < manifest ; 2017 ; Nuclear Law Bulletin Volume 2016 ; 2016 >
+    au < manifest ; 2018 ; Nuclear Law Bulletin Volume 2017 ; 2017 >
+    au < manifest ; 2019 ; Nuclear Law Bulletin Volume 2018 ; 2018 >
+    au < manifest ; 2020 ; Nuclear Law Bulletin Volume 2019 ; 2019 >
+    au < manifest ; 2021 ; Nuclear Law Bulletin Volume 2020 ; 2020 >
+    au < manifest ; 2022 ; Nuclear Law Bulletin Volume 2021 ; 2021 >
+    au < manifest ; 2023 ; Nuclear Law Bulletin Volume 2022 ; 2022 >
 
-    #{ # this looks like a journal, but is in working papers
-    #
-    #  title <
-    #    name = Gas Market Reports ;
-    #    issn = 2788-6824
-    #  >
-    #    param[topic] = energy
-    #    param[journal_issn] = 27886824
-    #    param[journal_dir] = gas-market-report
-    #
-    #    au < testing ; 2021 ; Gas Market Reports Volume 2021 ; 2021 >
-    #    au < testing ; 2022 ; Gas Market Reports Volume 2022 ; 2022 >
-    #}
+  }
+
+  {
+
+    title <
+      name = OECD Economic Studies ;
+      issn = 02550822 ;
+      eissn = 16097491 ;
+      doi = 10.1787/16097491
+    >
+
+    param[topic] = economics
+    param[journal_dir] = oecd-economic-studies
+    param[journal_issn] = 16097491
+
+    au < manifest ; 1998 ; OECD Economic Studies Volume 1997 ; 1997 >
+    au < manifest ; 1999 ; OECD Economic Studies Volume 1998 ; 1998 >
+    au < manifest ; 2000 ; OECD Economic Studies Volume 1999 ; 1999 >
+    au < manifest ; 2001 ; OECD Economic Studies Volume 2000 ; 2000 >
+    au < manifest ; 2002 ; OECD Economic Studies Volume 2001 ; 2001 >
+    au < manifest ; 2003 ; OECD Economic Studies Volume 2002 ; 2002 >
+    au < manifest ; 2004 ; OECD Economic Studies Volume 2003 ; 2003 >
+    au < manifest ; 2005 ; OECD Economic Studies Volume 2004 ; 2004 >
+    au < manifest ; 2006 ; OECD Economic Studies Volume 2005 ; 2005 >
+    au < manifest ; 2007 ; OECD Economic Studies Volume 2006 ; 2006 >
+
+  }
+
+  {
+
+    title <
+      name = OECD Journal on Budgeting ;
+      issn = 16087143 ;
+      eissn = 16812336 ;
+      doi = 10.1787/16812336
+    >
+
+    param[topic] = governance
+    param[journal_dir] = oecd-journal-on-budgeting
+    param[journal_issn] = 16812336
+
+    au < manifest ; 2001 ; OECD Journal on Budgeting Volume 1 ; 1 >
+    au < manifest ; 2002 ; OECD Journal on Budgeting Volume 2 ; 2 >
+    au < manifest ; 2003 ; OECD Journal on Budgeting Volume 3 ; 3 >
+    au < manifest ; 2004 ; OECD Journal on Budgeting Volume 4 ; 4 >
+    au < manifest ; 2005 ; OECD Journal on Budgeting Volume 5 ; 5 >
+    au < manifest ; 2006 ; OECD Journal on Budgeting Volume 6 ; 6 >
+    au < manifest ; 2007 ; OECD Journal on Budgeting Volume 7 ; 7 >
+    au < manifest ; 2008 ; OECD Journal on Budgeting Volume 8 ; 8 >
+    au < manifest ; 2009 ; OECD Journal on Budgeting Volume 9 ; 9 >
+    au < manifest ; 2010 ; OECD Journal on Budgeting Volume 10 ; 10 >
+    au < manifest ; 2011 ; OECD Journal on Budgeting Volume 11 ; 11 >
+    au < manifest ; 2012 ; OECD Journal on Budgeting Volume 12 ; 12 >
+    au < manifest ; 2013 ; OECD Journal on Budgeting Volume 13 ; 13 >
+    au < manifest ; 2014 ; OECD Journal on Budgeting Volume 14 ; 14 >
+    au < manifest ; 2015 ; OECD Journal on Budgeting Volume 15 ; 15 >
+    au < manifest ; 2016 ; OECD Journal on Budgeting Volume 16 ; 16 >
+    au < manifest ; 2017 ; OECD Journal on Budgeting Volume 17 ; 17 >
+    au < manifest ; 2018 ; OECD Journal on Budgeting Volume 18 ; 18 >
+    au < manifest ; 2019 ; OECD Journal on Budgeting Volume 19 ; 19 >
+    au < manifest ; 2020 ; OECD Journal on Budgeting Volume 20 ; 20 >
+    au < manifest ; 2021 ; OECD Journal on Budgeting Volume 21 ; 21 >
+    au < manifest ; 2022 ; OECD Journal on Budgeting Volume 22 ; 22 >
+    au < manifest ; 2023 ; OECD Journal on Budgeting Volume 23 ; 23 >
+
+  }
+
+  {
+
+    title <
+      name = OECD Journal on Development ;
+      issn = 18168124 ;
+      eissn = 1996580X ;
+      doi = 10.1787/1996580x
+    >
+
+    param[topic] = development
+    param[journal_dir] = oecd-journal-on-development
+    param[journal_issn] = 1996580X
+
+    au < manifest ; 0 ; OECD Journal on Development Volume 1 ; 1 >
+    au < manifest ; 0 ; OECD Journal on Development Volume 2 ; 2 >
+    au < manifest ; 0 ; OECD Journal on Development Volume 3 ; 3 >
+    au < manifest ; 0 ; OECD Journal on Development Volume 4 ; 4 >
+    au < manifest ; 0 ; OECD Journal on Development Volume 5 ; 5 >
+    au < manifest ; 0 ; OECD Journal on Development Volume 6 ; 6 >
+    au < manifest ; 0 ; OECD Journal on Development Volume 7 ; 7 >
+    au < manifest ; 0 ; OECD Journal on Development Volume 8 ; 8 >
+    au < manifest ; 0 ; OECD Journal on Development Volume 9 ; 9 >
+    au < manifest ; 0 ; OECD Journal on Development Volume 10 ; 10 >
+
+  }
+
+  {
+
+    title <
+      name = OECD Journal: Competition Law and Policy ;
+      issn = 15607771 ;
+      eissn = 16097521 ;
+      doi = 10.1787/16097521
+    >
+
+    param[topic] = governance
+    param[journal_dir] = oecd-journal-competition-law-and-policy
+    param[journal_issn] = 16097521
+
+    au < manifest ; 0 ; OECD Journal: Competition Law and Policy Volume 1 ; 1 >
+    au < manifest ; 0 ; OECD Journal: Competition Law and Policy Volume 2 ; 2 >
+    au < manifest ; 0 ; OECD Journal: Competition Law and Policy Volume 3 ; 3 >
+    au < manifest ; 0 ; OECD Journal: Competition Law and Policy Volume 4 ; 4 >
+    au < manifest ; 0 ; OECD Journal: Competition Law and Policy Volume 5 ; 5 >
+    au < manifest ; 0 ; OECD Journal: Competition Law and Policy Volume 6 ; 6 >
+    au < manifest ; 0 ; OECD Journal: Competition Law and Policy Volume 7 ; 7 >
+    au < manifest ; 0 ; OECD Journal: Competition Law and Policy Volume 8 ; 8 >
+    au < manifest ; 0 ; OECD Journal: Competition Law and Policy Volume 9 ; 9 >
+    au < manifest ; 0 ; OECD Journal: Competition Law and Policy Volume 10 ; 10 >
+    au < manifest ; 0 ; OECD Journal: Competition Law and Policy Volume 11 ; 11 >
+
+  }
+
+  {
+
+    title <
+      name = OECD Journal: Economic Studies ;
+      issn = 19952848 ;
+      eissn = 19952856 ;
+      doi = 10.1787/19952856
+    >
+
+    param[topic] = economics
+    param[journal_dir] = oecd-journal-economic-studies
+    param[journal_issn] = 19952856
+
+    au < manifest ; 0 ; OECD Journal: Economic Studies Volume 2008 ; 2008 >
+    au < manifest ; 0 ; OECD Journal: Economic Studies Volume 2009 ; 2009 >
+    au < manifest ; 0 ; OECD Journal: Economic Studies Volume 2010 ; 2010 >
+    au < manifest ; 0 ; OECD Journal: Economic Studies Volume 2011 ; 2011 >
+    au < manifest ; 0 ; OECD Journal: Economic Studies Volume 2012 ; 2012 >
+    au < manifest ; 0 ; OECD Journal: Economic Studies Volume 2013 ; 2013 >
+    au < manifest ; 0 ; OECD Journal: Economic Studies Volume 2014 ; 2014 >
+    au < manifest ; 0 ; OECD Journal: Economic Studies Volume 2015 ; 2015 >
+    au < manifest ; 0 ; OECD Journal: Economic Studies Volume 2016 ; 2016 >
+
+  }
+
+  {
+
+    title <
+      name = OECD Journal: Financial Market Trends ;
+      issn = 19952864 ;
+      eissn = 19952872 ;
+      doi = 10.1787/19952872
+    >
+
+    param[topic] = finance-and-investment
+    param[journal_dir] = oecd-journal-financial-market-trends
+    param[journal_issn] = 19952872
+
+    au < manifest ; 0 ; OECD Journal: Financial Market Trends Volume 2008 ; 2008 >
+    au < manifest ; 0 ; OECD Journal: Financial Market Trends Volume 2009 ; 2009 >
+    au < manifest ; 0 ; OECD Journal: Financial Market Trends Volume 2010 ; 2010 >
+    au < manifest ; 0 ; OECD Journal: Financial Market Trends Volume 2011 ; 2011 >
+    au < manifest ; 0 ; OECD Journal: Financial Market Trends Volume 2012 ; 2012 >
+    au < manifest ; 0 ; OECD Journal: Financial Market Trends Volume 2013 ; 2013 >
+    au < manifest ; 0 ; OECD Journal: Financial Market Trends Volume 2014 ; 2014 >
+    au < manifest ; 0 ; OECD Journal: Financial Market Trends Volume 2015 ; 2015 >
+    au < manifest ; 0 ; OECD Journal: Financial Market Trends Volume 2016 ; 2016 >
+
+  }
+
+  {
+
+    title <
+      name = OECD Journal: General Papers ;
+      issn = 19952821 ;
+      eissn = 1995283X ;
+      doi = 10.1787/1995283x
+    >
+
+    param[topic] = economics
+    param[journal_dir] = oecd-journal-general-papers
+    param[journal_issn] = 1995283X
+
+    au < manifest ; 0 ; OECD Journal: General Papers Volume 2008 ; 2008 >
+    au < manifest ; 0 ; OECD Journal: General Papers Volume 2009 ; 2009 >
+    au < manifest ; 0 ; OECD Journal: General Papers Volume 2010 ; 2010 >
+
+  }
+
+  {
+
+    title <
+      name = OECD Journal: Journal of Business Cycle Measurement and Analysis ;
+      issn = 19952880 ;
+      eissn = 19952899 ;
+      doi = 10.1787/19952899
+    >
+
+    param[topic] = economics
+    param[journal_dir] = oecd-journal-journal-of-business-cycle-measurement-and-analysis
+    param[journal_issn] = 19952899
+
+    au < manifest ; 2009 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2008 ; 2008 >
+    au < manifest ; 2010 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2009 ; 2009 >
+    au < manifest ; 2011 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2010 ; 2010 >
+    au < manifest ; 2012 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2011 ; 2011 >
+    au < manifest ; 2013 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2012 ; 2012 >
+    au < manifest ; 2014 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2013 ; 2013 >
+    au < manifest ; 2015 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2014 ; 2014 >
+    au < manifest ; 2016 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2015 ; 2015 >
+
+  }
+
+  {
+
+    title <
+      name = OECD Observer ;
+      issn = 00297054 ;
+      eissn = 15615529 ;
+      doi = 10.1787/15615529
+    >
+
+    param[topic] = economics
+    param[journal_dir] = oecd-observer
+    param[journal_issn] = 15615529
+
+    au < manifest ; 0 ; OECD Observer Volume 1962 ; 1962 >
+    au < manifest ; 0 ; OECD Observer Volume 1963 ; 1963 >
+    au < manifest ; 0 ; OECD Observer Volume 1964 ; 1964 >
+    au < manifest ; 0 ; OECD Observer Volume 1965 ; 1965 >
+    au < manifest ; 0 ; OECD Observer Volume 1966 ; 1966 >
+    au < manifest ; 0 ; OECD Observer Volume 1967 ; 1967 >
+    au < manifest ; 0 ; OECD Observer Volume 1968 ; 1968 >
+    au < manifest ; 0 ; OECD Observer Volume 1969 ; 1969 >
+    au < manifest ; 0 ; OECD Observer Volume 1970 ; 1970 >
+    au < manifest ; 0 ; OECD Observer Volume 1971 ; 1971 >
+    au < manifest ; 0 ; OECD Observer Volume 1972 ; 1972 >
+    au < manifest ; 0 ; OECD Observer Volume 1973 ; 1973 >
+    au < manifest ; 0 ; OECD Observer Volume 1974 ; 1974 >
+    au < manifest ; 0 ; OECD Observer Volume 1975 ; 1975 >
+    au < manifest ; 0 ; OECD Observer Volume 1976 ; 1976 >
+    au < manifest ; 0 ; OECD Observer Volume 1977 ; 1977 >
+    au < manifest ; 0 ; OECD Observer Volume 1978 ; 1978 >
+    au < manifest ; 0 ; OECD Observer Volume 1979 ; 1979 >
+    au < manifest ; 0 ; OECD Observer Volume 1980 ; 1980 >
+    au < manifest ; 0 ; OECD Observer Volume 1981 ; 1981 >
+    au < manifest ; 0 ; OECD Observer Volume 1982 ; 1982 >
+    au < manifest ; 0 ; OECD Observer Volume 1983 ; 1983 >
+    au < manifest ; 0 ; OECD Observer Volume 1984 ; 1984 >
+    au < manifest ; 0 ; OECD Observer Volume 1985 ; 1985 >
+    au < manifest ; 0 ; OECD Observer Volume 1986 ; 1986 >
+    au < manifest ; 0 ; OECD Observer Volume 1987 ; 1987 >
+    au < manifest ; 0 ; OECD Observer Volume 1988 ; 1988 >
+    au < manifest ; 0 ; OECD Observer Volume 1989 ; 1989 >
+    au < manifest ; 0 ; OECD Observer Volume 1990 ; 1990 >
+    au < manifest ; 0 ; OECD Observer Volume 1991 ; 1991 >
+    au < manifest ; 0 ; OECD Observer Volume 1992 ; 1992 >
+    au < manifest ; 0 ; OECD Observer Volume 1993 ; 1993 >
+    au < manifest ; 0 ; OECD Observer Volume 1994 ; 1994 >
+    au < manifest ; 0 ; OECD Observer Volume 1995 ; 1995 >
+    au < manifest ; 0 ; OECD Observer Volume 1996 ; 1996 >
+    au < manifest ; 0 ; OECD Observer Volume 1997 ; 1997 >
+    au < manifest ; 0 ; OECD Observer Volume 1998 ; 1998 >
+    au < manifest ; 0 ; OECD Observer Volume 1999 ; 1999 >
+    au < manifest ; 0 ; OECD Observer Volume 2000 ; 2000 >
+    au < manifest ; 0 ; OECD Observer Volume 2001 ; 2001 >
+    au < manifest ; 0 ; OECD Observer Volume 2002 ; 2002 >
+    au < manifest ; 0 ; OECD Observer Volume 2003 ; 2003 >
+    au < manifest ; 0 ; OECD Observer Volume 2004 ; 2004 >
+    au < manifest ; 0 ; OECD Observer Volume 2005 ; 2005 >
+    au < manifest ; 0 ; OECD Observer Volume 2006 ; 2006 >
+    au < manifest ; 0 ; OECD Observer Volume 2007 ; 2007 >
+    au < manifest ; 0 ; OECD Observer Volume 2008 ; 2008 >
+    au < manifest ; 0 ; OECD Observer Volume 2009 ; 2009 >
+    au < manifest ; 0 ; OECD Observer Volume 2010 ; 2010 >
+    au < manifest ; 0 ; OECD Observer Volume 2011 ; 2011 >
+    au < manifest ; 0 ; OECD Observer Volume 2012 ; 2012 >
+    au < manifest ; 0 ; OECD Observer Volume 2013 ; 2013 >
+    au < manifest ; 0 ; OECD Observer Volume 2014 ; 2014 >
+    au < manifest ; 0 ; OECD Observer Volume 2015 ; 2015 >
+    au < manifest ; 0 ; OECD Observer Volume 2016 ; 2016 >
+    au < manifest ; 0 ; OECD Observer Volume 2017 ; 2017 >
+
+  }
+
+  {
+
+    title <
+      name = OECD Papers ;
+      issn = 16091914 ;
+      eissn = 16812328 ;
+      doi = 10.1787/16812328
+    >
+
+    param[topic] = economics
+    param[journal_dir] = oecd-papers
+    param[journal_issn] = 16812328
+
+    au < manifest ; 0 ; OECD Papers Volume 1 ; 1 >
+    au < manifest ; 0 ; OECD Papers Volume 2 ; 2 >
+    au < manifest ; 0 ; OECD Papers Volume 3 ; 3 >
+    au < manifest ; 0 ; OECD Papers Volume 4 ; 4 >
+    au < manifest ; 0 ; OECD Papers Volume 5 ; 5 >
+    au < manifest ; 0 ; OECD Papers Volume 6 ; 6 >
+    au < manifest ; 0 ; OECD Papers Volume 7 ; 7 >
+
+  }
+
+  {
+
+    title <
+      name = Politiques et gestion de l'enseignement supérieur ;
+      issn = 1682346X ;
+      eissn = 16843592 ;
+      doi = 10.1787/16843592
+    >
+
+    param[topic] = education
+    param[journal_dir] = politiques-et-gestion-de-l-enseignement-superieur
+    param[journal_issn] = 16843592
+
+    au < manifest ; 2002 ; Politiques et gestion de l'enseignement supérieur Volume 14 ; 14 >
+    au < manifest ; 2003 ; Politiques et gestion de l'enseignement supérieur Volume 15 ; 15 >
+    au < manifest ; 2004 ; Politiques et gestion de l'enseignement supérieur Volume 16 ; 16 >
+    au < manifest ; 2005 ; Politiques et gestion de l'enseignement supérieur Volume 17 ; 17 >
+    au < manifest ; 2006 ; Politiques et gestion de l'enseignement supérieur Volume 18 ; 18 >
+    au < manifest ; 2007 ; Politiques et gestion de l'enseignement supérieur Volume 19 ; 19 >
+    au < manifest ; 2008 ; Politiques et gestion de l'enseignement supérieur Volume 20 ; 20 >
+
+  }
+
+  {
+
+    title <
+      name = Revue de l'OCDE sur la gestion budgétaire ;
+      issn = 16087151 ;
+      eissn = 16843525 ;
+      doi = 10.1787/16843525
+    >
+
+    param[topic] = governance
+    param[journal_dir] = revue-de-l-ocde-sur-la-gestion-budgetaire
+    param[journal_issn] = 16843525
+
+    au < manifest ; 0 ; Revue de l'OCDE sur la gestion budgétaire Volume 1 ; 1 >
+    au < manifest ; 0 ; Revue de l'OCDE sur la gestion budgétaire Volume 2 ; 2 >
+    au < manifest ; 0 ; Revue de l'OCDE sur la gestion budgétaire Volume 3 ; 3 >
+    au < manifest ; 0 ; Revue de l'OCDE sur la gestion budgétaire Volume 4 ; 4 >
+
+  }
+
+  {
+
+    title <
+      name = Revue de l'OCDE sur le droit et la politique de la concurrence ;
+      issn = 15607798 ;
+      eissn = 16843452 ;
+      doi = 10.1787/16843452
+    >
+
+    param[topic] = governance
+    param[journal_dir] = revue-de-l-ocde-sur-le-droit-et-la-politique-de-la-concurrence
+    param[journal_issn] = 16843452
+
+    au < manifest ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 1 ; 1 >
+    au < manifest ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 2 ; 2 >
+    au < manifest ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 3 ; 3 >
+    au < manifest ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 4 ; 4 >
+    au < manifest ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 5 ; 5 >
+    au < manifest ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 6 ; 6 >
+    au < manifest ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 7 ; 7 >
+    au < manifest ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 8 ; 8 >
+    au < manifest ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 9 ; 9 >
+
+  }
+
+  {
+
+    title <
+      name = Revue de l'OCDE sur le développement ;
+      issn = 19920490 ;
+      eissn = 19965753 ;
+      doi = 10.1787/19965753
+    >
+
+    param[topic] = development
+    param[journal_dir] = revue-de-l-ocde-sur-le-developpement
+    param[journal_issn] = 19965753
+
+    au < manifest ; 0 ; Revue de l'OCDE sur le développement Volume 1 ; 1 >
+    au < manifest ; 0 ; Revue de l'OCDE sur le développement Volume 2 ; 2 >
+    au < manifest ; 0 ; Revue de l'OCDE sur le développement Volume 3 ; 3 >
+    au < manifest ; 0 ; Revue de l'OCDE sur le développement Volume 4 ; 4 >
+    au < manifest ; 0 ; Revue de l'OCDE sur le développement Volume 5 ; 5 >
+    au < manifest ; 0 ; Revue de l'OCDE sur le développement Volume 6 ; 6 >
+    au < manifest ; 0 ; Revue de l'OCDE sur le développement Volume 7 ; 7 >
+    au < manifest ; 0 ; Revue de l'OCDE sur le développement Volume 8 ; 8 >
+    au < manifest ; 0 ; Revue de l'OCDE sur le développement Volume 9 ; 9 >
+    au < manifest ; 0 ; Revue de l'OCDE sur le développement Volume 10 ; 10 >
+
+  }
+
+  {
+
+    title <
+      name = Revue économique de l'OCDE ;
+      issn = 02550830 ;
+      eissn = 16843444 ;
+      doi = 10.1787/16843444
+    >
+
+    param[topic] = economics
+    param[journal_dir] = revue-economique-de-l-ocde
+    param[journal_issn] = 16843444
+
+    au < manifest ; 0 ; Revue économique de l'OCDE Volume 1997 ; 1997 >
+    au < manifest ; 0 ; Revue économique de l'OCDE Volume 1998 ; 1998 >
+    au < manifest ; 0 ; Revue économique de l'OCDE Volume 1999 ; 1999 >
+    au < manifest ; 0 ; Revue économique de l'OCDE Volume 2000 ; 2000 >
+    au < manifest ; 0 ; Revue économique de l'OCDE Volume 2001 ; 2001 >
+    au < manifest ; 0 ; Revue économique de l'OCDE Volume 2002 ; 2002 >
+    au < manifest ; 0 ; Revue économique de l'OCDE Volume 2003 ; 2003 >
+    au < manifest ; 0 ; Revue économique de l'OCDE Volume 2004 ; 2004 >
+    au < manifest ; 0 ; Revue économique de l'OCDE Volume 2005 ; 2005 >
+    au < manifest ; 0 ; Revue économique de l'OCDE Volume 2006 ; 2006 >
+
+  }
+
+  {
+
+    title <
+      name = STI Review ;
+      issn = 10105247 ;
+      eissn = 16097637 ;
+      doi = 10.1787/16097637
+    >
+
+    param[topic] = science-and-technology
+    param[journal_dir] = sti-science-technology-and-industry-review
+    param[journal_issn] = 16097637
+
+    au < manifest ; 0 ; STI Review Volume 1994 ; 1994 >
+    au < manifest ; 0 ; STI Review Volume 1995 ; 1995 >
+    au < manifest ; 0 ; STI Review Volume 1996 ; 1996 >
+
+  }
 
 }
+
