@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>11</string>
+    <string>12</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -155,7 +155,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_url_consumer_factory</string>
-    <string>uk.org.lockss.plugin.informationresearch.InformationResearchHttpHttpsUrlConsumerFactory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
   </entry>
   <entry>
     <string>plugin_url_fetcher_factory</string>
@@ -186,4 +186,8 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
     </map>
   </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer</string>
+  </entry> 
 </map>
