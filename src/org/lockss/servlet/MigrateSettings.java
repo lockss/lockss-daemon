@@ -139,7 +139,7 @@ public class MigrateSettings extends LockssServlet {
 
     // Migration configuration
     ConfigManager cfgMgr = ConfigManager.getConfigManager();
-    mCfg = cfgMgr.readCacheConfigFile(ConfigManager.CONFIG_FILE_MIGRATION);
+    mCfg = cfgMgr.readCacheConfigFile(ConfigManager.CONFIG_FILE_MIGRATION).copy();
     isTargetConfigFetched = mCfg.containsKey(MigrationManager.PARAM_IS_MIGRATOR_CONFIGURED);
     dbPass = mCfg.get(V2_DOT + DbManager.PARAM_DATASOURCE_PASSWORD);
   }
