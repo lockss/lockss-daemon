@@ -103,7 +103,7 @@ public class MigrateSettings extends LockssServlet {
   /**
    * Initializes fields for this servlet invocation.
    */
-  private void initParams() {
+  private void initParams() throws IOException {
     requestMethod = req.getMethod();
     session = getSession();
     Configuration cfg = ConfigManager.getCurrentConfig();
@@ -117,6 +117,7 @@ public class MigrateSettings extends LockssServlet {
     if (!isInitializedFromConfig && hasMigrationConfig) {
       initParamsFromConfig(cfg);
       session.setAttribute(KEY_INITIALIZED_FROM_CONFIG, true);
+      session.setAttribute(KEY_FETCHED_CONFIG, true);
     } else {
       initParamsFromSession();
     }
@@ -125,7 +126,7 @@ public class MigrateSettings extends LockssServlet {
     isTargetConfigFetched = getSessionAttribute(KEY_FETCHED_CONFIG, false);
   }
 
-  private void initParamsFromConfig(Configuration cfg) {
+  private void initParamsFromConfig(Configuration cfg) throws IOException {
     // Migration target
     hostname = cfg.get(MigrateContent.PARAM_HOSTNAME);
     cfgUiPort = cfg.getInt(V2AuMover.PARAM_CFG_UI_PORT, V2AuMover.DEFAULT_CFG_UI_PORT);
@@ -137,7 +138,10 @@ public class MigrateSettings extends LockssServlet {
         DEFAULT_DELETE_AUS_ENABLED);
 
     // Migration configuration
-    mCfg = cfg.getConfigTree("v2");
+    ConfigManager cfgMgr = ConfigManager.getConfigManager();
+    mCfg = cfgMgr.readCacheConfigFile(ConfigManager.CONFIG_FILE_MIGRATION);
+    isTargetConfigFetched = mCfg.containsKey(MigrationManager.PARAM_IS_MIGRATOR_CONFIGURED);
+    dbPass = mCfg.get(V2_DOT + DbManager.PARAM_DATASOURCE_PASSWORD);
   }
 
   private void initParamsFromSession() {
@@ -200,7 +204,7 @@ public class MigrateSettings extends LockssServlet {
     isDeleteAusEnabled = DEFAULT_DELETE_AUS_ENABLED;
     isTargetConfigFetched = false;
 
-    fetchError = null;
+//    fetchError = null;
     dbError = null;
     requestMethod = null;
   }
@@ -228,6 +232,7 @@ public class MigrateSettings extends LockssServlet {
             Configuration v2cfg = getConfigFromMigrationTarget();
             mCfg = getMigrationConfig(hostname, v2cfg);
             isTargetConfigFetched = true;
+            fetchError = null;
           } catch (IOException e) {
             fetchError = "Could not fetch migration target configuration";
             log.error(fetchError, e);
@@ -239,22 +244,14 @@ public class MigrateSettings extends LockssServlet {
             session.removeAttribute(KEY_FETCHED_CONFIG);
             isTargetConfigFetched = false;
           } finally {
-            // Remember state
-            session.setAttribute(KEY_FETCHED_CONFIG, isTargetConfigFetched);
-
-            // Remember form settings for display
-            session.setAttribute(KEY_HOSTNAME, hostname);
-            session.setAttribute(KEY_CFGSVC_UI_PORT, cfgUiPort);
-            session.setAttribute(KEY_USERNAME, userName);
-            session.setAttribute(KEY_PASSWORD, userPass);
-            session.setAttribute(KEY_DELETE_AUS, isDeleteAusEnabled);
-
-            // Reset dbPass input
+            if (fetchError != null) {
+              mCfg = mCfg.copy();
+              mCfg.removeConfigTree(V2_PREFIX);
+            }
+            migrationMgr.setIsMigrating(false);
             dbPass = null;
           }
 
-          // Remember result of this action
-          session.setAttribute(KEY_MIGRATION_CONFIG, mCfg);
           break;
 
         case ACTION_NEXT:
@@ -302,6 +299,15 @@ public class MigrateSettings extends LockssServlet {
     }
 
     displayPage();
+
+    // Remember state
+    session.setAttribute(KEY_FETCHED_CONFIG, isTargetConfigFetched);
+    session.setAttribute(KEY_HOSTNAME, hostname);
+    session.setAttribute(KEY_CFGSVC_UI_PORT, cfgUiPort);
+    session.setAttribute(KEY_USERNAME, userName);
+    session.setAttribute(KEY_PASSWORD, userPass);
+    session.setAttribute(KEY_DELETE_AUS, isDeleteAusEnabled);
+    session.setAttribute(KEY_MIGRATION_CONFIG, mCfg);
   }
 
   private void displayPage() throws IOException {
