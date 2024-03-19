@@ -137,7 +137,7 @@
     au < doesNotExist ; doesNotExist ; 2015 ; 9781624102745 ; ; 9781624102745 ; Performance, Stability, Dynamics and Control of Airplanes, Third Edition ; https://arc.aiaa.org/ ; >
     au < doesNotExist ; doesNotExist ; 2015 ; 9781624102752 ; ; 9781624102752 ; Space Vehicle Guidance, Control and Astrodynamics ; https://arc.aiaa.org/ ; >
     au < doesNotExist ; doesNotExist ; 2015 ; 9781624103278 ; ; 9781624103278 ; Introduction to Aeronautics: A Design Perspective, Third Edition ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2016 ; 9781624103261 ; ; 9781624103261 ; Composite Materials for Aircraft Structures, Third Edition ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2016 ; 9781624103261 ; ; 9781624103261 ; Composite Materials for Aircraft Structures, Third Edition ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < doesNotExist ; doesNotExist ; 2016 ; 9781624103544 ; ; 9781624103544 ; Civil and Commercial Unmanned Aircraft Systems ; https://arc.aiaa.org/ ; >
     au < doesNotExist ; doesNotExist ; 2016 ; 9781624103711 ; ; 9781624103711 ; Elements of Propulsion: Gas Turbines and Rockets, Second Edition ; https://arc.aiaa.org/ ; >
     au < finished ; finished ; 2016 ; ; 9781624103803 ; 9781624103803 ; Space Vehicle Dynamics and Control, Revised First Edition ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
@@ -974,7 +974,7 @@
     au < finished ; finished ; 1996 ; 9781563471766 ; 9781600866401 ; 9781600866401 ; Developments in High-Speed Vehicle Propulsion Systems (9781600866401) ; http://arc.aiaa.org/ ; >
     au < finished ; finished ; 1996 ; 9781563471759 ; 9781600866418 ; 9781600866418 ; Recent Advances in Spray Combustion: Spray Atomization and Drop Burning Phenomena (9781600866418) ; http://arc.aiaa.org/ ; >
     au < finished ; finished ; 1996 ; 9781563471810 ; 9781600866432 ; 9781600866432 ; Recent Advances in Spray Combustion: Spray Combustion Measurements and Model Simulation (9781600866432) ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 1996 ; 9781563472497 ; ; 9781563472497 ; Global Positioning System: Theory and Applications, 2-Volume Set ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1996 ; 9781563472497 ; ; 9781563472497 ; Global Positioning System: Theory and Applications, 2-Volume Set ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < doesNotExist ; doesNotExist ; 1996 ; 9781563471186 ; ; 9781563471186 ; Tactical Missile Propulsion ; https://arc.aiaa.org/ ; >
     au < finished ; finished ; 1997 ; 9781563471889 ; 9781600866449 ; 9781600866449 ; Future Aeronautical and Space Systems (9781600866449) ; http://arc.aiaa.org/ ; >
     au < finished ; finished ; 1997 ; 9781563471780 ; 9781600866456 ; 9781600866456 ; Advances in Combustion Science: In Honor of Ya. B. Zel'dovich (9781600866456) ; http://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
@@ -1061,7 +1061,7 @@
     au < doesNotExist ; doesNotExist ; 2019 ; 9781624105388 ; ; 9781624105388 ; Advanced Tactical and Strategic Missile Guidance, Seventh Edition, Volume 2 ; https://arc.aiaa.org/ ; >
     au < finished ; finished ; 2020 ; 9781624105807 ; 9781624105814 ; 9781624105814 ; High-Pressure Flows for Propulsion Applications ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2021 ; ; 9781624106040 ; 9781624106040 ; Fuel Effects in Operability of Aircraft Gas Turbine Combustors ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2022 ; 9781624106279 ; 9781624106262 ; 9781624106279 ; Metal Additive Manufacturing for Propulsion Applications (9781624106279) ; https://arc.aiaa.org/ ; >
+    au < frozen ; exists ; 2022 ; 9781624106279 ; 9781624106262 ; 9781624106279 ; Metal Additive Manufacturing for Propulsion Applications (9781624106279) ; https://arc.aiaa.org/ ; > #failed on metadata count
     au < deepCrawl ; exists ; 2023 ; 9781624106330 ; 9781624106323 ; 9781624106330 ; Optical Diagnostics for Reacting and Non-Reacting Flows: Theory and Practice (9781624106330) ; https://arc.aiaa.org/ ; >
 
  }
