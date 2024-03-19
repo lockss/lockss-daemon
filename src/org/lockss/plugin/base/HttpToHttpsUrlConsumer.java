@@ -36,6 +36,7 @@ import java.io.IOException;
 
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 import org.lockss.util.UrlUtil;
 
 /**
@@ -53,7 +54,7 @@ import org.lockss.util.UrlUtil;
  * @see HttpToHttpsUrlConsumerFactory
  */
 public class HttpToHttpsUrlConsumer extends SimpleUrlConsumer {
-
+  private static final Logger log = Logger.getLogger(HttpToHttpsUrlConsumer.class);
   /**
    * @param facade
    * @param fud
@@ -84,13 +85,16 @@ public class HttpToHttpsUrlConsumer extends SimpleUrlConsumer {
    * @see AuUtil#isBaseUrlHttp(ArchivalUnit)
    */
   public boolean shouldStoreAtOrigUrl() {
-    return AuUtil.isBaseUrlHttp(au)
+    log.info("inside shouldStore at Orig Url");
+    boolean should = AuUtil.isBaseUrlHttp(au)
            && fud.redirectUrls != null
            && fud.redirectUrls.size() == 1
            && fud.fetchUrl.equals(fud.redirectUrls.get(0))
            && UrlUtil.isHttpUrl(fud.origUrl)
            && UrlUtil.isHttpsUrl(fud.fetchUrl)
            && UrlUtil.stripProtocol(fud.origUrl).equals(UrlUtil.stripProtocol(fud.fetchUrl));
+    log.info("should store at Orig? : " + should);
+    return should;
   }
   
 }
