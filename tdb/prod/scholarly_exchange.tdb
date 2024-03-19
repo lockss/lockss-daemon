@@ -365,44 +365,7 @@
   }
 }
   
-{
 
-  publisher <
-    name = KCA University
-  >
-
-  {
-  
-    title < 
-      name = KCA Journal of Business Management ;
-      issn = 2072-7992 ;
-      eissn = 2071-2162
-    >
-    
-    provider = Scholarly Exchange
-    plugin = org.lockss.plugin.ojs3.Ojs3Plugin
-    attr[start_stem] = index.php/
-    implicit < status ; year ; name ; volume ; param[year] >
-    param[base_url] = https://www.kcajournals.com/
-    param[journal_id] = KCAJBM
-    #moved to ojs3
-    #NOT READY - requires registration to access full-text content; we have sent an email 
-    # to see if this can be turned off, otherwise not preservable in the GLN
-
-
-
-    au < exists ; 2008 ; KCA Journal of Business Management Volume 1 ; 1 ; 2008 >
-    au < exists ; 2009 ; KCA Journal of Business Management Volume 2 ; 2 ; 2009 >
-    au < exists ; 2011 ; KCA Journal of Business Management Volume 3 ; 3 ; 2011 >
-    au < exists ; 2012 ; KCA Journal of Business Management Volume 4 ; 4 ; 2012 >
-    au < exists ; 2014 ; KCA Journal of Business Management Volume 5 ; 5 ; 2014 >
-    au < exists ; 2015 ; KCA Journal of Business Management Volume 6-7 ; 6-7 ; 2015 >
-    au < exists ; 2017 ; KCA Journal of Business Management Volume 8 ; 8 ; 2017 >
-    au < exists ; 2019 ; KCA Journal of Business Management Volume 9 ; 9 ; 2019 >
-
-  }
-}
-  
 {
 
   publisher <
