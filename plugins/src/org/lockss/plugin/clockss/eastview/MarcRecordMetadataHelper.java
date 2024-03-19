@@ -148,30 +148,23 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
           }
 
           // Set ISBN
-          if (MARC_isbn != null) {
-            if (MARC_isbn.contains(",")) {
-              log.debug3("MARC_isbn:" + MARC_isbn.substring(0,MARC_isbn.indexOf(",")-1).replaceAll("[^a-zA-Z0-9]", ""));
-              am.put(MetadataField.FIELD_ISBN, MARC_isbn.substring(0,MARC_isbn.indexOf(",")-1).replaceAll("[^a-zA-Z0-9]", ""));
-            } else {
-              log.debug3("MARC_isbn:" + MARC_isbn.replaceAll("[^a-zA-Z0-9]", ""));
-              am.put(MetadataField.FIELD_ISBN, MARC_isbn.replaceAll("[^a-zA-Z0-9]", ""));
-            }
-          } else if (MARC_isbn_alt != null) {
-            if (MARC_isbn_alt.contains(",")) {
-              log.debug3("MARC_isbn_alt:" + MARC_isbn_alt.substring(0,MARC_isbn_alt.indexOf(",")-1).replaceAll("[^a-zA-Z0-9]", ""));
-              am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt.substring(0,MARC_isbn_alt.indexOf(",")-1).replaceAll("[^a-zA-Z0-9]", ""));
-            } else {
-              log.debug3("MARC_isbn_alt:" + MARC_isbn_alt.replaceAll("[^a-zA-Z0-9]", ""));
-              am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt.replaceAll("[^a-zA-Z0-9]", ""));
-            }
-          }  else if (MARC_isbn_alt2 != null) {
-            if (MARC_isbn_alt2.contains(",")) {
-              log.debug3("MARC_isbn_alt2:" + MARC_isbn_alt2.substring(0,MARC_isbn_alt2.indexOf(",")-1).replaceAll("[^a-zA-Z0-9]", ""));
-              am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt2.substring(0,MARC_isbn_alt2.indexOf(",")-1).replaceAll("[^a-zA-Z0-9]", ""));
-            } else {
-              log.debug3("MARC_isbn_alt2:" + MARC_isbn_alt2.trim().replaceAll("[^a-zA-Z0-9]", ""));
-              am.put(MetadataField.FIELD_ISBN, MARC_isbn_alt2.trim().replaceAll("[^a-zA-Z0-9]", ""));
-            }
+          //Hard coded to exclude an ISBN as requested by Jira: LXPLUG-2009, since publisher put bad isbn, and can not fix it
+
+          String normalizedISBN = null;
+
+          if (MARC_isbn != null && !MARC_isbn.contains("97861760501002")) {
+            log.debug3("MARC_isbn:" + MARC_isbn);
+            normalizedISBN = processISBN(MARC_isbn);
+            am.put(MetadataField.FIELD_ISBN, normalizedISBN);
+
+          } else if (MARC_isbn_alt != null && !MARC_isbn_alt.contains("97861760501002") ) {
+            log.debug3("MARC_isbn_alt:" + MARC_isbn_alt);
+            normalizedISBN = processISBN(MARC_isbn_alt);
+            am.put(MetadataField.FIELD_ISBN, normalizedISBN);
+          }  else if (MARC_isbn_alt2 != null && !MARC_isbn_alt2.contains("97861760501002")) {
+            log.debug3("MARC_isbn_alt2 :" + MARC_isbn_alt2);
+            normalizedISBN = processISBN(MARC_isbn_alt2);
+            am.put(MetadataField.FIELD_ISBN, normalizedISBN);
           }
 
           // Set publiation date
@@ -335,6 +328,30 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
     }
   }
 
+  private String processISBN(String isbn) {
+
+    String normalizedISBN = null;
+
+    if (isbn.contains(",") || isbn.contains(", ")) {
+
+      isbn = isbn.replace(", ", ",");
+
+      int commaIndex = isbn.indexOf(",");
+      String firstISBN = isbn.substring(0, commaIndex);
+
+      normalizedISBN = normalizeISBN(firstISBN);
+
+    } else {
+      normalizedISBN = normalizeISBN(isbn);
+    }
+
+    return normalizedISBN;
+  }
+
+  private String normalizeISBN(String isbn) {
+    return isbn.replaceAll("[^a-zA-Z0-9]", "");
+  }
+
   private boolean isDoi(String doi) {
 
     if (doi == null) {
@@ -355,5 +372,4 @@ public class MarcRecordMetadataHelper implements FileMetadataExtractor {
   public static void setZippedFolderName(String fname) {
     zippedFolderName = fname;
   }
-
 }
