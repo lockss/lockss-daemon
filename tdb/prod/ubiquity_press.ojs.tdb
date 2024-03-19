@@ -3211,17 +3211,17 @@
       #"Open Journal Systems 3.1.1.4" This version of OJS has a malformed permission statement for the GLN only.
       #"LOCKSS system has permission to ingest, preserve, and serve this Archival Unit." See RT 11633
 
-      au < exists ; 1999 ; 1 ; Digithum Volume 1999 ; 1999 >
-      au < exists ; 2000 ; 2 ; Digithum Volume 2000 ; 2000 >
-      au < exists ; 2001 ; 3 ; Digithum Volume 2001 ; 2001 >
-      au < exists ; 2002 ; 4 ; Digithum Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 5 ; Digithum Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 6 ; Digithum Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 7 ; Digithum Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 8 ; Digithum Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 9 ; Digithum Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 10 ; Digithum Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 11 ; Digithum Volume 2009 ; 2009 >
+      au < doNotProcess ; 1999 ; 1 ; Digithum Volume 1999 ; 1999 >
+      au < doNotProcess ; 2000 ; 2 ; Digithum Volume 2000 ; 2000 >
+      au < doNotProcess ; 2001 ; 3 ; Digithum Volume 2001 ; 2001 >
+      au < doNotProcess ; 2002 ; 4 ; Digithum Volume 2002 ; 2002 >
+      au < doNotProcess ; 2003 ; 5 ; Digithum Volume 2003 ; 2003 >
+      au < doNotProcess ; 2004 ; 6 ; Digithum Volume 2004 ; 2004 >
+      au < doNotProcess ; 2005 ; 7 ; Digithum Volume 2005 ; 2005 >
+      au < doNotProcess ; 2006 ; 8 ; Digithum Volume 2006 ; 2006 >
+      au < doNotProcess ; 2007 ; 9 ; Digithum Volume 2007 ; 2007 >
+      au < doNotProcess ; 2008 ; 10 ; Digithum Volume 2008 ; 2008 >
+      au < doNotProcess ; 2009 ; 11 ; Digithum Volume 2009 ; 2009 >
       au < exists ; 2010 ; 12 ; Digithum Volume 2010 ; 2010 >
       au < exists ; 2011 ; 13 ; Digithum Volume 2011 ; 2011 >
       au < exists ; 2012 ; 14 ; Digithum Volume 2012 ; 2012 >
