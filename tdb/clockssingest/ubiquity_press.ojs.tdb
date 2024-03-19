@@ -2876,6 +2876,22 @@
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
     attr[start_stem] = index.php/
 
+#  {
+#
+#      title <
+#        name = The International Journal of Servant-Leadership ;
+#        eissn = 2160-8172
+#      >
+#
+#      comment[publisher] = Gonzaga Library Publishing
+#      param[base_url] = https://ijsl.press.gonzaga.edu/
+#      param[journal_id] = gl-j-ibpa
+#
+#      au < exists ; exists ; 2005 ; 1 ; The International Journal of Servant-Leadership Volume 2005 ; 2005 ; >
+#      au < expected ; exists ; 2023 ; 17 ; The International Journal of Servant-Leadership Volume 2023 ; 2023 ; >
+#
+#  }
+
   {
 
       title <
