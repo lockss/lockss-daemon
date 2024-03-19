@@ -16,9 +16,9 @@
         name = OAPEN Books
       >
 
-    au < crawling ; exists ; 2018 ; Kant und die Imagination der Tiere ; handle/20.500.12657/41485 ; >
-    au < crawling ; exists ; 2008 ; Distance og Involverethed ; handle/20.500.12657/34791 ; >
-    au < crawling ; exists ; 2020 ; Beltraneja ; handle/20.500.12657/49951 ; >
+    au < frozen ; exists ; 2018 ; Kant und die Imagination der Tiere ; handle/20.500.12657/41485 ; >
+    au < frozen ; exists ; 2008 ; Distance og Involverethed ; handle/20.500.12657/34791 ; >
+    au < frozen ; exists ; 2020 ; Beltraneja ; handle/20.500.12657/49951 ; >
 
 #These titles and handles don't match.
 #    au < exists ; exists ;  ; Schrijverschap in de Belgische belle époque. Een sociaal-culturele geschiedenis ; handle/20.500.12657/55803 ; >
