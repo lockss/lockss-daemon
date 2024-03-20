@@ -1,7 +1,11 @@
 {
 
   publisher <
-    name = Organisation for Economic Co-operation and Development
+    name = Organisation for Economic Co-operation and Development ;
+    info[contract] = 2023 ;
+    info[back] = 1950 ;
+    info[tester] = 1 ;
+    info[platform] = Custom
   >
 
   # Generated 2024-03-20 00:05:51.175144
