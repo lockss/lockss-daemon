@@ -44,18 +44,87 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>7</string>
+        <string>8</string>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Poll</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+        </map>
     </entry>
     <entry>
         <string>plugin_parent</string>
-        <string>org.lockss.plugin.oecd.OecdBooksPlugin</string>
+        <string>org.lockss.plugin.oecd.OecdParentPlugin</string>
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>7</string>
+        <string>10</string>
+    </entry>
+    <entry>
+        <string>plugin_config_props</string>
+        <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url</key>
+                <displayName>Base URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>year</key>
+                <displayName>Year</displayName>
+                <type>4</type>
+                <size>4</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+        </list>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"OECD iLibrary Working Papers Plugin, Base URL %s, Publication Path %s, Publication ID %s", base_url, pub_path, pub_id</string>
+        <string>"OECD iLibrary Working Papers Plugin, Base URL %s, Year %d", base_url, year</string>
+    </entry>
+    <entry>
+        <string>au_start_url</string>
+        <!-- https://www.oecd-ilibrary.org/lockss/datasets?year=2019 -->
+        <string>"%slockss/workingpapers?year=%d", base_url, year</string>
+    </entry>
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <string>1,"^%s[^?]*\.(bmp|css|gif|ico|svg|eot|ttf|woff2?|jpe?g|js|png|tif?f)(\?.+)?$", base_url</string>
+            <string>1,"^https://(fonts|ajax)\.(googleapis|gstatic)\.com"</string>
+            <string>1,"^https://oecd-.+\.kxcdn\.com"</string>
+            <string>1,"^https://cdnjs\.cloudflare\.com"</string>
+            <string>1,"^https://cdn\.datatables\.net"</string>
+            <string>1,"^https://assets\.oecdcode\.org"</string>
+            <string>2,"^%s(carnet|cart)", base_url</string>
+            <string>1,"^%s[^/]+/[^/]+($|/cite/)", base_url</string>
+            <string>1,"^%scontent/.*/citation", base_url</string>
+            <string>1, "^%s[^/]+\?itemId=(%%2F|/)content(%%2F|/)paper(%%2F|/)", base_url</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <list>
+            <string>"^%s[^/]+\?itemId=(%%2F|/)content(%%2F|/)paper(%%2F|/)", base_url</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_login_page_checker</string>
+        <string>org.lockss.plugin.oecd.OecdLoginPageChecker</string>
     </entry>
 </map>

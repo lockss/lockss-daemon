@@ -1,0 +1,62 @@
+{
+
+  publisher <
+    name = Organisation for Economic Co-operation and Development
+  >
+  
+  plugin = org.lockss.plugin.oecd.OecdWorkingPapersPlugin
+  param[base_url] = https://www.oecd-ilibrary.org/
+  implicit < status ; year ; name ; param[year] >
+
+  {
+  
+    title <
+      name = Organisation for Economic Co-operation and Development Working Papers
+    >
+    
+    au < manifest ; 1983 ; Organisation for Economic Co-operation and Development Working Papers 1983 ; 1983 >
+    au < manifest ; 1984 ; Organisation for Economic Co-operation and Development Working Papers 1984 ; 1984 >
+    au < manifest ; 1985 ; Organisation for Economic Co-operation and Development Working Papers 1985 ; 1985 >
+    au < manifest ; 1986 ; Organisation for Economic Co-operation and Development Working Papers 1986 ; 1986 >
+    au < manifest ; 1987 ; Organisation for Economic Co-operation and Development Working Papers 1987 ; 1987 >
+    au < manifest ; 1988 ; Organisation for Economic Co-operation and Development Working Papers 1988 ; 1988 >
+    au < manifest ; 1989 ; Organisation for Economic Co-operation and Development Working Papers 1989 ; 1989 >
+    au < manifest ; 1990 ; Organisation for Economic Co-operation and Development Working Papers 1990 ; 1990 >
+    au < manifest ; 1991 ; Organisation for Economic Co-operation and Development Working Papers 1991 ; 1991 >
+    au < manifest ; 1992 ; Organisation for Economic Co-operation and Development Working Papers 1992 ; 1992 >
+    au < manifest ; 1993 ; Organisation for Economic Co-operation and Development Working Papers 1993 ; 1993 >
+    au < manifest ; 1994 ; Organisation for Economic Co-operation and Development Working Papers 1994 ; 1994 >
+    au < manifest ; 1995 ; Organisation for Economic Co-operation and Development Working Papers 1995 ; 1995 >
+    au < manifest ; 1996 ; Organisation for Economic Co-operation and Development Working Papers 1996 ; 1996 >
+    au < manifest ; 1997 ; Organisation for Economic Co-operation and Development Working Papers 1997 ; 1997 >
+    au < manifest ; 1998 ; Organisation for Economic Co-operation and Development Working Papers 1998 ; 1998 >
+    au < manifest ; 1999 ; Organisation for Economic Co-operation and Development Working Papers 1999 ; 1999 >
+    au < manifest ; 2000 ; Organisation for Economic Co-operation and Development Working Papers 2000 ; 2000 >
+    au < manifest ; 2001 ; Organisation for Economic Co-operation and Development Working Papers 2001 ; 2001 >
+    au < manifest ; 2002 ; Organisation for Economic Co-operation and Development Working Papers 2002 ; 2002 >
+    au < manifest ; 2003 ; Organisation for Economic Co-operation and Development Working Papers 2003 ; 2003 >
+    au < manifest ; 2004 ; Organisation for Economic Co-operation and Development Working Papers 2004 ; 2004 >
+    au < manifest ; 2005 ; Organisation for Economic Co-operation and Development Working Papers 2005 ; 2005 >
+    au < manifest ; 2006 ; Organisation for Economic Co-operation and Development Working Papers 2006 ; 2006 >
+    au < manifest ; 2007 ; Organisation for Economic Co-operation and Development Working Papers 2007 ; 2007 >
+    au < manifest ; 2008 ; Organisation for Economic Co-operation and Development Working Papers 2008 ; 2008 >
+    au < manifest ; 2009 ; Organisation for Economic Co-operation and Development Working Papers 2009 ; 2009 >
+    au < manifest ; 2010 ; Organisation for Economic Co-operation and Development Working Papers 2010 ; 2010 >
+    au < manifest ; 2011 ; Organisation for Economic Co-operation and Development Working Papers 2011 ; 2011 >
+    au < manifest ; 2012 ; Organisation for Economic Co-operation and Development Working Papers 2012 ; 2012 >
+    au < manifest ; 2013 ; Organisation for Economic Co-operation and Development Working Papers 2013 ; 2013 >
+    au < manifest ; 2014 ; Organisation for Economic Co-operation and Development Working Papers 2014 ; 2014 >
+    au < manifest ; 2015 ; Organisation for Economic Co-operation and Development Working Papers 2015 ; 2015 >
+    au < manifest ; 2016 ; Organisation for Economic Co-operation and Development Working Papers 2016 ; 2016 >
+    au < manifest ; 2017 ; Organisation for Economic Co-operation and Development Working Papers 2017 ; 2017 >
+    au < manifest ; 2018 ; Organisation for Economic Co-operation and Development Working Papers 2018 ; 2018 >
+    au < manifest ; 2019 ; Organisation for Economic Co-operation and Development Working Papers 2019 ; 2019 >
+    au < manifest ; 2020 ; Organisation for Economic Co-operation and Development Working Papers 2020 ; 2020 >
+    au < manifest ; 2021 ; Organisation for Economic Co-operation and Development Working Papers 2021 ; 2021 >
+    au < manifest ; 2022 ; Organisation for Economic Co-operation and Development Working Papers 2022 ; 2022 >
+    au < manifest ; 2023 ; Organisation for Economic Co-operation and Development Working Papers 2023 ; 2023 >
+    au < manifest ; 2024 ; Organisation for Economic Co-operation and Development Working Papers 2024 ; 2024 >
+
+  }
+  
+}
