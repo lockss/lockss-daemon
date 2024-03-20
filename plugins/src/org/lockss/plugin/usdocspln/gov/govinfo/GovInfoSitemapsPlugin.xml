@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>25</string>
+    <string>26</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -51,7 +51,7 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
       <entry>
         <string>Substance</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -155,10 +155,11 @@ POSSIBILITY OF SUCH DAMAGE.
     </list>
   </entry>
 -->
+  <!-- Example for the [^/]*: https://www.govinfo.gov/app/details/GOVPUB-CS1-7c2b5977716715b58ab9265ff082b03a/context has https://www.govinfo.gov/content/pkg/GOVPUB-CS1-7c2b5977716715b58ab9265ff082b03a/pdf/GOVPUB-CS1-7c2b5977716715b58ab9265ff082b03a-1.pdf -->
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"content/pkg/(%s-[^/]+)/(html?|pdf|xml)/\1\.(html?|pdf|xml)$", collection_id</string>
+      <string>"content/pkg/(%s-[^/]+)/(html?|pdf|xml)/\1[^/]*\.(html?|pdf|xml)$", collection_id</string>
     </list>
   </entry>
   <entry>
