@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>deprecated</string>
   </entry>
   <!-- https transition enabled -->  
   <entry>
@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>29</string>
+    <string>30</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -63,7 +63,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Wageningen Academic Publishers Books Plugin</string>
+    <string>Wageningen Academic Publishers Books Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -75,7 +75,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Wageningen Academic Publishers Books Plugin, Base URL %s, eISBN %s", base_url, book_eisbn</string>
+    <string>"Wageningen Academic Publishers Books Plugin (Legacy), Base URL %s, eISBN %s", base_url, book_eisbn</string>
   </entry>
   <!-- override start_url to handle http to https conversion -->
   <entry>
