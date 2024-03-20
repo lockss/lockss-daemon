@@ -4,7 +4,7 @@
     name = Organisation for Economic Co-operation and Development
   >
 
-  # Generated 2024-03-19 02:05:16.957498
+  # Generated 2024-03-20 00:06:32.799395
 
   plugin = org.lockss.plugin.oecd.OecdJournalsPlugin
   param[base_url] = https://www.oecd-ilibrary.org/
@@ -14,8 +14,8 @@
 
     title <
       name = Bulletin de droit nucléaire ;
-      issn = 03043428 ;
-      eissn = 16843568 ;
+      issn = 0304-3428 ;
+      eissn = 1684-3568 ;
       doi = 10.1787/16843568
     >
 
@@ -52,14 +52,14 @@
 
     title <
       name = Documents de l'OCDE ;
-      issn = 16095316 ;
-      eissn = 1684341X ;
+      issn = 1609-5316 ;
+      eissn = 1684-341X ;
       doi = 10.1787/1684341x
     >
 
     param[topic] = economics
     param[journal_dir] = documents-de-l-ocde
-    param[journal_issn] = 1684341X
+    param[journal_issn] = 1684341x
 
     au < manifest ; 0 ; Documents de l'OCDE Volume 1 ; 1 >
     au < manifest ; 0 ; Documents de l'OCDE Volume 2 ; 2 >
@@ -72,8 +72,8 @@
 
     title <
       name = Financial Market Trends ;
-      issn = 0378651X ;
-      eissn = 16096886 ;
+      issn = 0378-651X ;
+      eissn = 1609-6886 ;
       doi = 10.1787/16096886
     >
 
@@ -99,8 +99,8 @@
 
     title <
       name = Gestion de l'enseignement supérieur ;
-      issn = 10138501 ;
-      eissn = 23071974 ;
+      issn = 1013-8501 ;
+      eissn = 2307-1974 ;
       doi = 10.1787/23071974
     >
 
@@ -120,8 +120,8 @@
 
     title <
       name = Higher Education Management ;
-      issn = 1013851X ;
-      eissn = 16096924 ;
+      issn = 1013-851X ;
+      eissn = 1609-6924 ;
       doi = 10.1787/16096924
     >
 
@@ -141,8 +141,8 @@
 
     title <
       name = Higher Education Management and Policy ;
-      issn = 16823451 ;
-      eissn = 17269822 ;
+      issn = 1682-3451 ;
+      eissn = 1726-9822 ;
       doi = 10.1787/17269822
     >
 
@@ -168,8 +168,8 @@
 
     title <
       name = Journal of Business Cycle Measurement and Analysis ;
-      issn = 17293618 ;
-      eissn = 17293626 ;
+      issn = 1729-3618 ;
+      eissn = 1729-3626 ;
       doi = 10.1787/17293626
     >
 
@@ -188,8 +188,8 @@
 
     title <
       name = L'Observateur de l'OCDE ;
-      issn = 03043398 ;
-      eissn = 15615510 ;
+      issn = 0304-3398 ;
+      eissn = 1561-5510 ;
       doi = 10.1787/15615510
     >
 
@@ -257,8 +257,8 @@
 
     title <
       name = Nuclear Law Bulletin ;
-      issn = 0304341X ;
-      eissn = 16097378 ;
+      issn = 0304-341X ;
+      eissn = 1609-7378 ;
       doi = 10.1787/16097378
     >
 
@@ -299,8 +299,8 @@
 
     title <
       name = OECD Economic Studies ;
-      issn = 02550822 ;
-      eissn = 16097491 ;
+      issn = 0255-0822 ;
+      eissn = 1609-7491 ;
       doi = 10.1787/16097491
     >
 
@@ -325,8 +325,8 @@
 
     title <
       name = OECD Journal on Budgeting ;
-      issn = 16087143 ;
-      eissn = 16812336 ;
+      issn = 1608-7143 ;
+      eissn = 1681-2336 ;
       doi = 10.1787/16812336
     >
 
@@ -364,14 +364,14 @@
 
     title <
       name = OECD Journal on Development ;
-      issn = 18168124 ;
-      eissn = 1996580X ;
+      issn = 1816-8124 ;
+      eissn = 1996-580X ;
       doi = 10.1787/1996580x
     >
 
     param[topic] = development
     param[journal_dir] = oecd-journal-on-development
-    param[journal_issn] = 1996580X
+    param[journal_issn] = 1996580x
 
     au < manifest ; 0 ; OECD Journal on Development Volume 1 ; 1 >
     au < manifest ; 0 ; OECD Journal on Development Volume 2 ; 2 >
@@ -390,8 +390,8 @@
 
     title <
       name = OECD Journal: Competition Law and Policy ;
-      issn = 15607771 ;
-      eissn = 16097521 ;
+      issn = 1560-7771 ;
+      eissn = 1609-7521 ;
       doi = 10.1787/16097521
     >
 
@@ -417,8 +417,8 @@
 
     title <
       name = OECD Journal: Economic Studies ;
-      issn = 19952848 ;
-      eissn = 19952856 ;
+      issn = 1995-2848 ;
+      eissn = 1995-2856 ;
       doi = 10.1787/19952856
     >
 
@@ -442,8 +442,8 @@
 
     title <
       name = OECD Journal: Financial Market Trends ;
-      issn = 19952864 ;
-      eissn = 19952872 ;
+      issn = 1995-2864 ;
+      eissn = 1995-2872 ;
       doi = 10.1787/19952872
     >
 
@@ -467,14 +467,14 @@
 
     title <
       name = OECD Journal: General Papers ;
-      issn = 19952821 ;
-      eissn = 1995283X ;
+      issn = 1995-2821 ;
+      eissn = 1995-283X ;
       doi = 10.1787/1995283x
     >
 
     param[topic] = economics
     param[journal_dir] = oecd-journal-general-papers
-    param[journal_issn] = 1995283X
+    param[journal_issn] = 1995283x
 
     au < manifest ; 0 ; OECD Journal: General Papers Volume 2008 ; 2008 >
     au < manifest ; 0 ; OECD Journal: General Papers Volume 2009 ; 2009 >
@@ -486,8 +486,8 @@
 
     title <
       name = OECD Journal: Journal of Business Cycle Measurement and Analysis ;
-      issn = 19952880 ;
-      eissn = 19952899 ;
+      issn = 1995-2880 ;
+      eissn = 1995-2899 ;
       doi = 10.1787/19952899
     >
 
@@ -510,8 +510,8 @@
 
     title <
       name = OECD Observer ;
-      issn = 00297054 ;
-      eissn = 15615529 ;
+      issn = 0029-7054 ;
+      eissn = 1561-5529 ;
       doi = 10.1787/15615529
     >
 
@@ -582,8 +582,8 @@
 
     title <
       name = OECD Papers ;
-      issn = 16091914 ;
-      eissn = 16812328 ;
+      issn = 1609-1914 ;
+      eissn = 1681-2328 ;
       doi = 10.1787/16812328
     >
 
@@ -605,8 +605,8 @@
 
     title <
       name = Politiques et gestion de l'enseignement supérieur ;
-      issn = 1682346X ;
-      eissn = 16843592 ;
+      issn = 1682-346X ;
+      eissn = 1684-3592 ;
       doi = 10.1787/16843592
     >
 
@@ -628,8 +628,8 @@
 
     title <
       name = Revue de l'OCDE sur la gestion budgétaire ;
-      issn = 16087151 ;
-      eissn = 16843525 ;
+      issn = 1608-7151 ;
+      eissn = 1684-3525 ;
       doi = 10.1787/16843525
     >
 
@@ -648,8 +648,8 @@
 
     title <
       name = Revue de l'OCDE sur le droit et la politique de la concurrence ;
-      issn = 15607798 ;
-      eissn = 16843452 ;
+      issn = 1560-7798 ;
+      eissn = 1684-3452 ;
       doi = 10.1787/16843452
     >
 
@@ -673,8 +673,8 @@
 
     title <
       name = Revue de l'OCDE sur le développement ;
-      issn = 19920490 ;
-      eissn = 19965753 ;
+      issn = 1992-0490 ;
+      eissn = 1996-5753 ;
       doi = 10.1787/19965753
     >
 
@@ -699,8 +699,8 @@
 
     title <
       name = Revue économique de l'OCDE ;
-      issn = 02550830 ;
-      eissn = 16843444 ;
+      issn = 0255-0830 ;
+      eissn = 1684-3444 ;
       doi = 10.1787/16843444
     >
 
@@ -725,8 +725,8 @@
 
     title <
       name = STI Review ;
-      issn = 10105247 ;
-      eissn = 16097637 ;
+      issn = 1010-5247 ;
+      eissn = 1609-7637 ;
       doi = 10.1787/16097637
     >
 
