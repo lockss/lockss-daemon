@@ -56,7 +56,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"OECD iLibrary Datasets Plugin (CLOCKSS), Base URL %s, Publication URL Path %s, Publication ID %s", base_url, pub_path, pub_id</string>
+        <string>"OECD iLibrary Datasets Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
     </entry>
     <entry>
         <string>clockss_override</string>
