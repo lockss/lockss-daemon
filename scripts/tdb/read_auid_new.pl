@@ -3377,13 +3377,17 @@ while (my $line = <>) {
     if ($resp->is_success) {
       my $man_contents = $resp->content;
       if ($req->url ne $resp->request->uri) {
-              $vol_title = $resp->request->uri;
-              $result = "Redirected";
+        $vol_title = $resp->request->uri;
+        $result = "Redirected";
       } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
-      if ($man_contents =~ m/<title>(.*)<\/title>/si) {
+        if ($man_contents =~ m/<title>(.*)<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
+          #<meta name="citation_doi" content="10.1039/9781837671595" />
+          if ($man_contents =~ m/ content=.10.1039\/(\d*). \/>/si) {
+            $vol_title = $1 . " * " . substr($vol_title, 0, 30);
           }
+        }
         $result = "Manifest"
       } else {
         $result = "--NO_TAG--"
@@ -3407,10 +3411,14 @@ while (my $line = <>) {
               $vol_title = $resp->request->uri;
               $result = "Redirected";
       } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
-      if ($man_contents =~ m/<title>(.*)<\/title>/si) {
+        if ($man_contents =~ m/<title>(.*)<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
+          #<meta name="citation_doi" content="10.1039/9781837671595" />
+          if ($man_contents =~ m/ content=.10.1039\/(\d*). \/>/si) {
+            $vol_title = $1 . " * " . substr($vol_title, 0, 30);
           }
+        }
         $result = "Manifest"
       } else {
         $result = "--NO_TAG--"
