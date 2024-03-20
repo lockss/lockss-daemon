@@ -130,6 +130,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>2,"^https?://(?:%s/en/(?:account/|error/|content/openurl/|.*iscitedby=)|%s/[?]doi=[^&amp;]+&amp;newsite=1)", base_url_host, resolver_url_host</string>
       <string>1,"^https?://%s/(?:services/images/|en/content/openurlimage/|en/journals/lockss[?]journalcode=%s&amp;volume=%s&amp;year=%d&amp;issue=)", base_url_host, journal_code, volume_name, year</string>
       <string>1,"^https?://%s/[?]doi=", resolver_url_host</string>
+      <string>1,"^https?://%s/doi/", base_url_host</string>
       <string>1,"^https?://%s/en/content/article(?:landing|pdf)/%d/%s/[^/?.]+$", base_url_host, year, journal_code</string>
     </list>
   </entry>
