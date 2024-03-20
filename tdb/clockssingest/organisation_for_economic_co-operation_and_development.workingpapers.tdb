@@ -1,7 +1,11 @@
 {
 
   publisher <
-    name = Organisation for Economic Co-operation and Development
+    name = Organisation for Economic Co-operation and Development ;
+    info[contract] = 2023 ;
+    info[back] = 1950 ;
+    info[tester] = 1 ;
+    info[platform] = Custom
   >
   
   plugin = org.lockss.plugin.oecd.ClockssOecdWorkingPapersPlugin
