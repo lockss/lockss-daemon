@@ -23,28 +23,28 @@
     param[journal_dir] = bulletin-de-droit-nucleaire
     param[journal_issn] = 16843568
 
-    au < manifest ; exists ; 0 ; Bulletin de droit nucléaire Volume 1998 ; 1998 ;  >
-    au < manifest ; exists ; 0 ; Bulletin de droit nucléaire Volume 1999 ; 1999 ;  >
-    au < manifest ; exists ; 0 ; Bulletin de droit nucléaire Volume 2000 ; 2000 ;  >
-    au < manifest ; exists ; 0 ; Bulletin de droit nucléaire Volume 2001 ; 2001 ;  >
-    au < manifest ; exists ; 0 ; Bulletin de droit nucléaire Volume 2002 ; 2002 ;  >
-    au < manifest ; exists ; 0 ; Bulletin de droit nucléaire Volume 2003 ; 2003 ;  >
-    au < manifest ; exists ; 0 ; Bulletin de droit nucléaire Volume 2004 ; 2004 ;  >
-    au < manifest ; exists ; 0 ; Bulletin de droit nucléaire Volume 2005 ; 2005 ;  >
-    au < manifest ; exists ; 0 ; Bulletin de droit nucléaire Volume 2006 ; 2006 ;  >
-    au < manifest ; exists ; 0 ; Bulletin de droit nucléaire Volume 2007 ; 2007 ;  >
-    au < manifest ; exists ; 0 ; Bulletin de droit nucléaire Volume 2008 ; 2008 ;  >
-    au < manifest ; exists ; 0 ; Bulletin de droit nucléaire Volume 2009 ; 2009 ;  >
-    au < manifest ; exists ; 0 ; Bulletin de droit nucléaire Volume 2010 ; 2010 ;  >
-    au < manifest ; exists ; 0 ; Bulletin de droit nucléaire Volume 2011 ; 2011 ;  >
-    au < manifest ; exists ; 0 ; Bulletin de droit nucléaire Volume 2012 ; 2012 ;  >
-    au < manifest ; exists ; 0 ; Bulletin de droit nucléaire Volume 2013 ; 2013 ;  >
-    au < manifest ; exists ; 0 ; Bulletin de droit nucléaire Volume 2014 ; 2014 ;  >
-    au < manifest ; exists ; 0 ; Bulletin de droit nucléaire Volume 2015 ; 2015 ;  >
-    au < manifest ; exists ; 0 ; Bulletin de droit nucléaire Volume 2016 ; 2016 ;  >
-    au < manifest ; exists ; 0 ; Bulletin de droit nucléaire Volume 2017 ; 2017 ;  >
-    au < manifest ; exists ; 0 ; Bulletin de droit nucléaire Volume 2018 ; 2018 ;  >
-    au < manifest ; exists ; 0 ; Bulletin de droit nucléaire Volume 2019 ; 2019 ;  >
+    au < crawling ; exists ; 0 ; Bulletin de droit nucléaire Volume 1998 ; 1998 ;  >
+    au < crawling ; exists ; 0 ; Bulletin de droit nucléaire Volume 1999 ; 1999 ;  >
+    au < crawling ; exists ; 0 ; Bulletin de droit nucléaire Volume 2000 ; 2000 ;  >
+    au < crawling ; exists ; 0 ; Bulletin de droit nucléaire Volume 2001 ; 2001 ;  >
+    au < crawling ; exists ; 0 ; Bulletin de droit nucléaire Volume 2002 ; 2002 ;  >
+    au < crawling ; exists ; 0 ; Bulletin de droit nucléaire Volume 2003 ; 2003 ;  >
+    au < crawling ; exists ; 0 ; Bulletin de droit nucléaire Volume 2004 ; 2004 ;  >
+    au < crawling ; exists ; 0 ; Bulletin de droit nucléaire Volume 2005 ; 2005 ;  >
+    au < crawling ; exists ; 0 ; Bulletin de droit nucléaire Volume 2006 ; 2006 ;  >
+    au < crawling ; exists ; 0 ; Bulletin de droit nucléaire Volume 2007 ; 2007 ;  >
+    au < crawling ; exists ; 0 ; Bulletin de droit nucléaire Volume 2008 ; 2008 ;  >
+    au < crawling ; exists ; 0 ; Bulletin de droit nucléaire Volume 2009 ; 2009 ;  >
+    au < crawling ; exists ; 0 ; Bulletin de droit nucléaire Volume 2010 ; 2010 ;  >
+    au < crawling ; exists ; 0 ; Bulletin de droit nucléaire Volume 2011 ; 2011 ;  >
+    au < crawling ; exists ; 0 ; Bulletin de droit nucléaire Volume 2012 ; 2012 ;  >
+    au < crawling ; exists ; 0 ; Bulletin de droit nucléaire Volume 2013 ; 2013 ;  >
+    au < crawling ; exists ; 0 ; Bulletin de droit nucléaire Volume 2014 ; 2014 ;  >
+    au < crawling ; exists ; 0 ; Bulletin de droit nucléaire Volume 2015 ; 2015 ;  >
+    au < crawling ; exists ; 0 ; Bulletin de droit nucléaire Volume 2016 ; 2016 ;  >
+    au < crawling ; exists ; 0 ; Bulletin de droit nucléaire Volume 2017 ; 2017 ;  >
+    au < crawling ; exists ; 0 ; Bulletin de droit nucléaire Volume 2018 ; 2018 ;  >
+    au < crawling ; exists ; 0 ; Bulletin de droit nucléaire Volume 2019 ; 2019 ;  >
 
   }
 
@@ -61,10 +61,10 @@
     param[journal_dir] = documents-de-l-ocde
     param[journal_issn] = 1684341X
 
-    au < manifest ; exists ; 0 ; Documents de l'OCDE Volume 1 ; 1 ;  >
-    au < manifest ; exists ; 0 ; Documents de l'OCDE Volume 2 ; 2 ;  >
-    au < manifest ; exists ; 0 ; Documents de l'OCDE Volume 3 ; 3 ;  >
-    au < manifest ; exists ; 0 ; Documents de l'OCDE Volume 4 ; 4 ;  >
+    au < crawling ; exists ; 0 ; Documents de l'OCDE Volume 1 ; 1 ;  >
+    au < crawling ; exists ; 0 ; Documents de l'OCDE Volume 2 ; 2 ;  >
+    au < crawling ; exists ; 0 ; Documents de l'OCDE Volume 3 ; 3 ;  >
+    au < crawling ; exists ; 0 ; Documents de l'OCDE Volume 4 ; 4 ;  >
 
   }
 
@@ -81,17 +81,17 @@
     param[journal_dir] = financial-market-trends
     param[journal_issn] = 16096886
 
-    au < manifest ; exists ; 1997 ; Financial Market Trends Volume 1997 ; 1997 ;  >
-    au < manifest ; exists ; 1998 ; Financial Market Trends Volume 1998 ; 1998 ;  >
-    au < manifest ; exists ; 1999 ; Financial Market Trends Volume 1999 ; 1999 ;  >
-    au < manifest ; exists ; 2000 ; Financial Market Trends Volume 2000 ; 2000 ;  >
-    au < manifest ; exists ; 2001 ; Financial Market Trends Volume 2001 ; 2001 ;  >
-    au < manifest ; exists ; 2002 ; Financial Market Trends Volume 2002 ; 2002 ;  >
-    au < manifest ; exists ; 2003 ; Financial Market Trends Volume 2003 ; 2003 ;  >
-    au < manifest ; exists ; 2004 ; Financial Market Trends Volume 2004 ; 2004 ;  >
-    au < manifest ; exists ; 2005 ; Financial Market Trends Volume 2005 ; 2005 ;  >
-    au < manifest ; exists ; 2006 ; Financial Market Trends Volume 2006 ; 2006 ;  >
-    au < manifest ; exists ; 2007 ; Financial Market Trends Volume 2007 ; 2007 ;  >
+    au < crawling ; exists ; 1997 ; Financial Market Trends Volume 1997 ; 1997 ;  >
+    au < crawling ; exists ; 1998 ; Financial Market Trends Volume 1998 ; 1998 ;  >
+    au < crawling ; exists ; 1999 ; Financial Market Trends Volume 1999 ; 1999 ;  >
+    au < crawling ; exists ; 2000 ; Financial Market Trends Volume 2000 ; 2000 ;  >
+    au < crawling ; exists ; 2001 ; Financial Market Trends Volume 2001 ; 2001 ;  >
+    au < crawling ; exists ; 2002 ; Financial Market Trends Volume 2002 ; 2002 ;  >
+    au < crawling ; exists ; 2003 ; Financial Market Trends Volume 2003 ; 2003 ;  >
+    au < crawling ; exists ; 2004 ; Financial Market Trends Volume 2004 ; 2004 ;  >
+    au < crawling ; exists ; 2005 ; Financial Market Trends Volume 2005 ; 2005 ;  >
+    au < crawling ; exists ; 2006 ; Financial Market Trends Volume 2006 ; 2006 ;  >
+    au < crawling ; exists ; 2007 ; Financial Market Trends Volume 2007 ; 2007 ;  >
 
   }
 
@@ -108,11 +108,11 @@
     param[journal_dir] = gestion-de-l-enseignement-superieur
     param[journal_issn] = 23071974
 
-    au < manifest ; exists ; 0 ; Gestion de l'enseignement supérieur Volume 9 ; 9 ;  >
-    au < manifest ; exists ; 0 ; Gestion de l'enseignement supérieur Volume 10 ; 10 ;  >
-    au < manifest ; exists ; 0 ; Gestion de l'enseignement supérieur Volume 11 ; 11 ;  >
-    au < manifest ; exists ; 0 ; Gestion de l'enseignement supérieur Volume 12 ; 12 ;  >
-    au < manifest ; exists ; 0 ; Gestion de l'enseignement supérieur Volume 13 ; 13 ;  >
+    au < crawling ; exists ; 0 ; Gestion de l'enseignement supérieur Volume 9 ; 9 ;  >
+    au < crawling ; exists ; 0 ; Gestion de l'enseignement supérieur Volume 10 ; 10 ;  >
+    au < crawling ; exists ; 0 ; Gestion de l'enseignement supérieur Volume 11 ; 11 ;  >
+    au < crawling ; exists ; 0 ; Gestion de l'enseignement supérieur Volume 12 ; 12 ;  >
+    au < crawling ; exists ; 0 ; Gestion de l'enseignement supérieur Volume 13 ; 13 ;  >
 
   }
 
@@ -129,11 +129,11 @@
     param[journal_dir] = higher-education-management
     param[journal_issn] = 16096924
 
-    au < manifest ; exists ; 0 ; Higher Education Management Volume 9 ; 9 ;  >
-    au < manifest ; exists ; 0 ; Higher Education Management Volume 10 ; 10 ;  >
-    au < manifest ; exists ; 0 ; Higher Education Management Volume 11 ; 11 ;  >
-    au < manifest ; exists ; 0 ; Higher Education Management Volume 12 ; 12 ;  >
-    au < manifest ; exists ; 0 ; Higher Education Management Volume 13 ; 13 ;  >
+    au < crawling ; exists ; 0 ; Higher Education Management Volume 9 ; 9 ;  >
+    au < crawling ; exists ; 0 ; Higher Education Management Volume 10 ; 10 ;  >
+    au < crawling ; exists ; 0 ; Higher Education Management Volume 11 ; 11 ;  >
+    au < crawling ; exists ; 0 ; Higher Education Management Volume 12 ; 12 ;  >
+    au < crawling ; exists ; 0 ; Higher Education Management Volume 13 ; 13 ;  >
 
   }
 
@@ -150,17 +150,17 @@
     param[journal_dir] = higher-education-management-and-policy
     param[journal_issn] = 17269822
 
-    au < manifest ; exists ; 0 ; Higher Education Management and Policy Volume 14 ; 14 ;  >
-    au < manifest ; exists ; 0 ; Higher Education Management and Policy Volume 15 ; 15 ;  >
-    au < manifest ; exists ; 0 ; Higher Education Management and Policy Volume 16 ; 16 ;  >
-    au < manifest ; exists ; 0 ; Higher Education Management and Policy Volume 17 ; 17 ;  >
-    au < manifest ; exists ; 0 ; Higher Education Management and Policy Volume 18 ; 18 ;  >
-    au < manifest ; exists ; 0 ; Higher Education Management and Policy Volume 19 ; 19 ;  >
-    au < manifest ; exists ; 0 ; Higher Education Management and Policy Volume 20 ; 20 ;  >
-    au < manifest ; exists ; 0 ; Higher Education Management and Policy Volume 21 ; 21 ;  >
-    au < manifest ; exists ; 0 ; Higher Education Management and Policy Volume 22 ; 22 ;  >
-    au < manifest ; exists ; 0 ; Higher Education Management and Policy Volume 23 ; 23 ;  >
-    au < manifest ; exists ; 0 ; Higher Education Management and Policy Volume 24 ; 24 ;  >
+    au < crawling ; exists ; 0 ; Higher Education Management and Policy Volume 14 ; 14 ;  >
+    au < crawling ; exists ; 0 ; Higher Education Management and Policy Volume 15 ; 15 ;  >
+    au < crawling ; exists ; 0 ; Higher Education Management and Policy Volume 16 ; 16 ;  >
+    au < crawling ; exists ; 0 ; Higher Education Management and Policy Volume 17 ; 17 ;  >
+    au < crawling ; exists ; 0 ; Higher Education Management and Policy Volume 18 ; 18 ;  >
+    au < crawling ; exists ; 0 ; Higher Education Management and Policy Volume 19 ; 19 ;  >
+    au < crawling ; exists ; 0 ; Higher Education Management and Policy Volume 20 ; 20 ;  >
+    au < crawling ; exists ; 0 ; Higher Education Management and Policy Volume 21 ; 21 ;  >
+    au < crawling ; exists ; 0 ; Higher Education Management and Policy Volume 22 ; 22 ;  >
+    au < crawling ; exists ; 0 ; Higher Education Management and Policy Volume 23 ; 23 ;  >
+    au < crawling ; exists ; 0 ; Higher Education Management and Policy Volume 24 ; 24 ;  >
 
   }
 
@@ -177,10 +177,10 @@
     param[journal_dir] = journal-of-business-cycle-measurement-and-analysis
     param[journal_issn] = 17293626
 
-    au < manifest ; exists ; 0 ; Journal of Business Cycle Measurement and Analysis Volume 2004 ; 2004 ;  >
-    au < manifest ; exists ; 0 ; Journal of Business Cycle Measurement and Analysis Volume 2005 ; 2005 ;  >
-    au < manifest ; exists ; 0 ; Journal of Business Cycle Measurement and Analysis Volume 2006 ; 2006 ;  >
-    au < manifest ; exists ; 0 ; Journal of Business Cycle Measurement and Analysis Volume 2007 ; 2007 ;  >
+    au < crawling ; exists ; 0 ; Journal of Business Cycle Measurement and Analysis Volume 2004 ; 2004 ;  >
+    au < crawling ; exists ; 0 ; Journal of Business Cycle Measurement and Analysis Volume 2005 ; 2005 ;  >
+    au < crawling ; exists ; 0 ; Journal of Business Cycle Measurement and Analysis Volume 2006 ; 2006 ;  >
+    au < crawling ; exists ; 0 ; Journal of Business Cycle Measurement and Analysis Volume 2007 ; 2007 ;  >
 
   }
 
@@ -197,59 +197,59 @@
     param[journal_dir] = l-observateur-de-l-ocde
     param[journal_issn] = 15615510
 
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1962 ; 1962 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1963 ; 1963 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1964 ; 1964 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1965 ; 1965 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1966 ; 1966 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1967 ; 1967 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1968 ; 1968 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1969 ; 1969 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1970 ; 1970 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1971 ; 1971 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1972 ; 1972 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1973 ; 1973 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1974 ; 1974 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1975 ; 1975 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1976 ; 1976 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1977 ; 1977 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1978 ; 1978 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1979 ; 1979 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1980 ; 1980 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1981 ; 1981 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1982 ; 1982 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1983 ; 1983 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1984 ; 1984 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1985 ; 1985 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1986 ; 1986 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1987 ; 1987 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1988 ; 1988 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1989 ; 1989 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1990 ; 1990 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1991 ; 1991 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1992 ; 1992 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1993 ; 1993 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1994 ; 1994 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1995 ; 1995 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1996 ; 1996 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1997 ; 1997 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1998 ; 1998 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 1999 ; 1999 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 2000 ; 2000 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 2001 ; 2001 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 2002 ; 2002 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 2003 ; 2003 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 2004 ; 2004 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 2005 ; 2005 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 2006 ; 2006 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 2007 ; 2007 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 2008 ; 2008 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 2009 ; 2009 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 2010 ; 2010 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 2011 ; 2011 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 2012 ; 2012 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 2013 ; 2013 ;  >
-    au < manifest ; exists ; 0 ; L'Observateur de l'OCDE Volume 2014 ; 2014 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1962 ; 1962 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1963 ; 1963 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1964 ; 1964 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1965 ; 1965 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1966 ; 1966 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1967 ; 1967 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1968 ; 1968 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1969 ; 1969 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1970 ; 1970 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1971 ; 1971 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1972 ; 1972 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1973 ; 1973 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1974 ; 1974 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1975 ; 1975 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1976 ; 1976 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1977 ; 1977 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1978 ; 1978 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1979 ; 1979 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1980 ; 1980 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1981 ; 1981 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1982 ; 1982 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1983 ; 1983 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1984 ; 1984 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1985 ; 1985 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1986 ; 1986 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1987 ; 1987 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1988 ; 1988 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1989 ; 1989 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1990 ; 1990 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1991 ; 1991 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1992 ; 1992 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1993 ; 1993 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1994 ; 1994 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1995 ; 1995 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1996 ; 1996 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1997 ; 1997 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1998 ; 1998 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 1999 ; 1999 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 2000 ; 2000 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 2001 ; 2001 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 2002 ; 2002 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 2003 ; 2003 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 2004 ; 2004 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 2005 ; 2005 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 2006 ; 2006 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 2007 ; 2007 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 2008 ; 2008 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 2009 ; 2009 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 2010 ; 2010 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 2011 ; 2011 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 2012 ; 2012 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 2013 ; 2013 ;  >
+    au < crawling ; exists ; 0 ; L'Observateur de l'OCDE Volume 2014 ; 2014 ;  >
 
   }
 
@@ -266,32 +266,32 @@
     param[journal_dir] = nuclear-law-bulletin
     param[journal_issn] = 16097378
 
-    au < manifest ; exists ; 1998 ; Nuclear Law Bulletin Volume 1997 ; 1997 ;  >
-    au < manifest ; exists ; 1999 ; Nuclear Law Bulletin Volume 1998 ; 1998 ;  >
-    au < manifest ; exists ; 2000 ; Nuclear Law Bulletin Volume 1999 ; 1999 ;  >
-    au < manifest ; exists ; 2001 ; Nuclear Law Bulletin Volume 2000 ; 2000 ;  >
-    au < manifest ; exists ; 2002 ; Nuclear Law Bulletin Volume 2001 ; 2001 ;  >
-    au < manifest ; exists ; 2003 ; Nuclear Law Bulletin Volume 2002 ; 2002 ;  >
-    au < manifest ; exists ; 2004 ; Nuclear Law Bulletin Volume 2003 ; 2003 ;  >
-    au < manifest ; exists ; 2005 ; Nuclear Law Bulletin Volume 2004 ; 2004 ;  >
-    au < manifest ; exists ; 2006 ; Nuclear Law Bulletin Volume 2005 ; 2005 ;  >
-    au < manifest ; exists ; 2007 ; Nuclear Law Bulletin Volume 2006 ; 2006 ;  >
-    au < manifest ; exists ; 2008 ; Nuclear Law Bulletin Volume 2007 ; 2007 ;  >
-    au < manifest ; exists ; 2009 ; Nuclear Law Bulletin Volume 2008 ; 2008 ;  >
-    au < manifest ; exists ; 2010 ; Nuclear Law Bulletin Volume 2009 ; 2009 ;  >
-    au < manifest ; exists ; 2011 ; Nuclear Law Bulletin Volume 2010 ; 2010 ;  >
-    au < manifest ; exists ; 2012 ; Nuclear Law Bulletin Volume 2011 ; 2011 ;  >
-    au < manifest ; exists ; 2013 ; Nuclear Law Bulletin Volume 2012 ; 2012 ;  >
-    au < manifest ; exists ; 2014 ; Nuclear Law Bulletin Volume 2013 ; 2013 ;  >
-    au < manifest ; exists ; 2015 ; Nuclear Law Bulletin Volume 2014 ; 2014 ;  >
-    au < manifest ; exists ; 2016 ; Nuclear Law Bulletin Volume 2015 ; 2015 ;  >
-    au < manifest ; exists ; 2017 ; Nuclear Law Bulletin Volume 2016 ; 2016 ;  >
-    au < manifest ; exists ; 2018 ; Nuclear Law Bulletin Volume 2017 ; 2017 ;  >
-    au < manifest ; exists ; 2019 ; Nuclear Law Bulletin Volume 2018 ; 2018 ;  >
-    au < manifest ; exists ; 2020 ; Nuclear Law Bulletin Volume 2019 ; 2019 ;  >
-    au < manifest ; exists ; 2021 ; Nuclear Law Bulletin Volume 2020 ; 2020 ;  >
-    au < manifest ; exists ; 2022 ; Nuclear Law Bulletin Volume 2021 ; 2021 ;  >
-    au < manifest ; exists ; 2023 ; Nuclear Law Bulletin Volume 2022 ; 2022 ;  >
+    au < crawling ; exists ; 1998 ; Nuclear Law Bulletin Volume 1997 ; 1997 ;  >
+    au < crawling ; exists ; 1999 ; Nuclear Law Bulletin Volume 1998 ; 1998 ;  >
+    au < crawling ; exists ; 2000 ; Nuclear Law Bulletin Volume 1999 ; 1999 ;  >
+    au < crawling ; exists ; 2001 ; Nuclear Law Bulletin Volume 2000 ; 2000 ;  >
+    au < crawling ; exists ; 2002 ; Nuclear Law Bulletin Volume 2001 ; 2001 ;  >
+    au < crawling ; exists ; 2003 ; Nuclear Law Bulletin Volume 2002 ; 2002 ;  >
+    au < crawling ; exists ; 2004 ; Nuclear Law Bulletin Volume 2003 ; 2003 ;  >
+    au < crawling ; exists ; 2005 ; Nuclear Law Bulletin Volume 2004 ; 2004 ;  >
+    au < crawling ; exists ; 2006 ; Nuclear Law Bulletin Volume 2005 ; 2005 ;  >
+    au < crawling ; exists ; 2007 ; Nuclear Law Bulletin Volume 2006 ; 2006 ;  >
+    au < crawling ; exists ; 2008 ; Nuclear Law Bulletin Volume 2007 ; 2007 ;  >
+    au < crawling ; exists ; 2009 ; Nuclear Law Bulletin Volume 2008 ; 2008 ;  >
+    au < crawling ; exists ; 2010 ; Nuclear Law Bulletin Volume 2009 ; 2009 ;  >
+    au < crawling ; exists ; 2011 ; Nuclear Law Bulletin Volume 2010 ; 2010 ;  >
+    au < crawling ; exists ; 2012 ; Nuclear Law Bulletin Volume 2011 ; 2011 ;  >
+    au < crawling ; exists ; 2013 ; Nuclear Law Bulletin Volume 2012 ; 2012 ;  >
+    au < crawling ; exists ; 2014 ; Nuclear Law Bulletin Volume 2013 ; 2013 ;  >
+    au < crawling ; exists ; 2015 ; Nuclear Law Bulletin Volume 2014 ; 2014 ;  >
+    au < crawling ; exists ; 2016 ; Nuclear Law Bulletin Volume 2015 ; 2015 ;  >
+    au < crawling ; exists ; 2017 ; Nuclear Law Bulletin Volume 2016 ; 2016 ;  >
+    au < crawling ; exists ; 2018 ; Nuclear Law Bulletin Volume 2017 ; 2017 ;  >
+    au < crawling ; exists ; 2019 ; Nuclear Law Bulletin Volume 2018 ; 2018 ;  >
+    au < crawling ; exists ; 2020 ; Nuclear Law Bulletin Volume 2019 ; 2019 ;  >
+    au < crawling ; exists ; 2021 ; Nuclear Law Bulletin Volume 2020 ; 2020 ;  >
+    au < crawling ; exists ; 2022 ; Nuclear Law Bulletin Volume 2021 ; 2021 ;  >
+    au < crawling ; exists ; 2023 ; Nuclear Law Bulletin Volume 2022 ; 2022 ;  >
 
   }
 
@@ -308,16 +308,16 @@
     param[journal_dir] = oecd-economic-studies
     param[journal_issn] = 16097491
 
-    au < manifest ; exists ; 1998 ; OECD Economic Studies Volume 1997 ; 1997 ;  >
-    au < manifest ; exists ; 1999 ; OECD Economic Studies Volume 1998 ; 1998 ;  >
-    au < manifest ; exists ; 2000 ; OECD Economic Studies Volume 1999 ; 1999 ;  >
-    au < manifest ; exists ; 2001 ; OECD Economic Studies Volume 2000 ; 2000 ;  >
-    au < manifest ; exists ; 2002 ; OECD Economic Studies Volume 2001 ; 2001 ;  >
-    au < manifest ; exists ; 2003 ; OECD Economic Studies Volume 2002 ; 2002 ;  >
-    au < manifest ; exists ; 2004 ; OECD Economic Studies Volume 2003 ; 2003 ;  >
-    au < manifest ; exists ; 2005 ; OECD Economic Studies Volume 2004 ; 2004 ;  >
-    au < manifest ; exists ; 2006 ; OECD Economic Studies Volume 2005 ; 2005 ;  >
-    au < manifest ; exists ; 2007 ; OECD Economic Studies Volume 2006 ; 2006 ;  >
+    au < crawling ; exists ; 1998 ; OECD Economic Studies Volume 1997 ; 1997 ;  >
+    au < crawling ; exists ; 1999 ; OECD Economic Studies Volume 1998 ; 1998 ;  >
+    au < crawling ; exists ; 2000 ; OECD Economic Studies Volume 1999 ; 1999 ;  >
+    au < crawling ; exists ; 2001 ; OECD Economic Studies Volume 2000 ; 2000 ;  >
+    au < crawling ; exists ; 2002 ; OECD Economic Studies Volume 2001 ; 2001 ;  >
+    au < crawling ; exists ; 2003 ; OECD Economic Studies Volume 2002 ; 2002 ;  >
+    au < crawling ; exists ; 2004 ; OECD Economic Studies Volume 2003 ; 2003 ;  >
+    au < crawling ; exists ; 2005 ; OECD Economic Studies Volume 2004 ; 2004 ;  >
+    au < crawling ; exists ; 2006 ; OECD Economic Studies Volume 2005 ; 2005 ;  >
+    au < crawling ; exists ; 2007 ; OECD Economic Studies Volume 2006 ; 2006 ;  >
 
   }
 
@@ -334,29 +334,29 @@
     param[journal_dir] = oecd-journal-on-budgeting
     param[journal_issn] = 16812336
 
-    au < manifest ; exists ; 2001 ; OECD Journal on Budgeting Volume 1 ; 1 ;  >
-    au < manifest ; exists ; 2002 ; OECD Journal on Budgeting Volume 2 ; 2 ;  >
-    au < manifest ; exists ; 2003 ; OECD Journal on Budgeting Volume 3 ; 3 ;  >
-    au < manifest ; exists ; 2004 ; OECD Journal on Budgeting Volume 4 ; 4 ;  >
-    au < manifest ; exists ; 2005 ; OECD Journal on Budgeting Volume 5 ; 5 ;  >
-    au < manifest ; exists ; 2006 ; OECD Journal on Budgeting Volume 6 ; 6 ;  >
-    au < manifest ; exists ; 2007 ; OECD Journal on Budgeting Volume 7 ; 7 ;  >
-    au < manifest ; exists ; 2008 ; OECD Journal on Budgeting Volume 8 ; 8 ;  >
-    au < manifest ; exists ; 2009 ; OECD Journal on Budgeting Volume 9 ; 9 ;  >
-    au < manifest ; exists ; 2010 ; OECD Journal on Budgeting Volume 10 ; 10 ;  >
-    au < manifest ; exists ; 2011 ; OECD Journal on Budgeting Volume 11 ; 11 ;  >
-    au < manifest ; exists ; 2012 ; OECD Journal on Budgeting Volume 12 ; 12 ;  >
-    au < manifest ; exists ; 2013 ; OECD Journal on Budgeting Volume 13 ; 13 ;  >
-    au < manifest ; exists ; 2014 ; OECD Journal on Budgeting Volume 14 ; 14 ;  >
-    au < manifest ; exists ; 2015 ; OECD Journal on Budgeting Volume 15 ; 15 ;  >
-    au < manifest ; exists ; 2016 ; OECD Journal on Budgeting Volume 16 ; 16 ;  >
-    au < manifest ; exists ; 2017 ; OECD Journal on Budgeting Volume 17 ; 17 ;  >
-    au < manifest ; exists ; 2018 ; OECD Journal on Budgeting Volume 18 ; 18 ;  >
-    au < manifest ; exists ; 2019 ; OECD Journal on Budgeting Volume 19 ; 19 ;  >
-    au < manifest ; exists ; 2020 ; OECD Journal on Budgeting Volume 20 ; 20 ;  >
-    au < manifest ; exists ; 2021 ; OECD Journal on Budgeting Volume 21 ; 21 ;  >
-    au < manifest ; exists ; 2022 ; OECD Journal on Budgeting Volume 22 ; 22 ;  >
-    au < manifest ; exists ; 2023 ; OECD Journal on Budgeting Volume 23 ; 23 ;  >
+    au < crawling ; exists ; 2001 ; OECD Journal on Budgeting Volume 1 ; 1 ;  >
+    au < crawling ; exists ; 2002 ; OECD Journal on Budgeting Volume 2 ; 2 ;  >
+    au < crawling ; exists ; 2003 ; OECD Journal on Budgeting Volume 3 ; 3 ;  >
+    au < crawling ; exists ; 2004 ; OECD Journal on Budgeting Volume 4 ; 4 ;  >
+    au < crawling ; exists ; 2005 ; OECD Journal on Budgeting Volume 5 ; 5 ;  >
+    au < crawling ; exists ; 2006 ; OECD Journal on Budgeting Volume 6 ; 6 ;  >
+    au < crawling ; exists ; 2007 ; OECD Journal on Budgeting Volume 7 ; 7 ;  >
+    au < crawling ; exists ; 2008 ; OECD Journal on Budgeting Volume 8 ; 8 ;  >
+    au < crawling ; exists ; 2009 ; OECD Journal on Budgeting Volume 9 ; 9 ;  >
+    au < crawling ; exists ; 2010 ; OECD Journal on Budgeting Volume 10 ; 10 ;  >
+    au < crawling ; exists ; 2011 ; OECD Journal on Budgeting Volume 11 ; 11 ;  >
+    au < crawling ; exists ; 2012 ; OECD Journal on Budgeting Volume 12 ; 12 ;  >
+    au < crawling ; exists ; 2013 ; OECD Journal on Budgeting Volume 13 ; 13 ;  >
+    au < crawling ; exists ; 2014 ; OECD Journal on Budgeting Volume 14 ; 14 ;  >
+    au < crawling ; exists ; 2015 ; OECD Journal on Budgeting Volume 15 ; 15 ;  >
+    au < crawling ; exists ; 2016 ; OECD Journal on Budgeting Volume 16 ; 16 ;  >
+    au < crawling ; exists ; 2017 ; OECD Journal on Budgeting Volume 17 ; 17 ;  >
+    au < crawling ; exists ; 2018 ; OECD Journal on Budgeting Volume 18 ; 18 ;  >
+    au < crawling ; exists ; 2019 ; OECD Journal on Budgeting Volume 19 ; 19 ;  >
+    au < crawling ; exists ; 2020 ; OECD Journal on Budgeting Volume 20 ; 20 ;  >
+    au < crawling ; exists ; 2021 ; OECD Journal on Budgeting Volume 21 ; 21 ;  >
+    au < crawling ; exists ; 2022 ; OECD Journal on Budgeting Volume 22 ; 22 ;  >
+    au < crawling ; exists ; 2023 ; OECD Journal on Budgeting Volume 23 ; 23 ;  >
 
   }
 
@@ -373,16 +373,16 @@
     param[journal_dir] = oecd-journal-on-development
     param[journal_issn] = 1996580X
 
-    au < manifest ; exists ; 0 ; OECD Journal on Development Volume 1 ; 1 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal on Development Volume 2 ; 2 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal on Development Volume 3 ; 3 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal on Development Volume 4 ; 4 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal on Development Volume 5 ; 5 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal on Development Volume 6 ; 6 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal on Development Volume 7 ; 7 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal on Development Volume 8 ; 8 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal on Development Volume 9 ; 9 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal on Development Volume 10 ; 10 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal on Development Volume 1 ; 1 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal on Development Volume 2 ; 2 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal on Development Volume 3 ; 3 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal on Development Volume 4 ; 4 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal on Development Volume 5 ; 5 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal on Development Volume 6 ; 6 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal on Development Volume 7 ; 7 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal on Development Volume 8 ; 8 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal on Development Volume 9 ; 9 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal on Development Volume 10 ; 10 ;  >
 
   }
 
@@ -399,17 +399,17 @@
     param[journal_dir] = oecd-journal-competition-law-and-policy
     param[journal_issn] = 16097521
 
-    au < manifest ; exists ; 0 ; OECD Journal: Competition Law and Policy Volume 1 ; 1 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Competition Law and Policy Volume 2 ; 2 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Competition Law and Policy Volume 3 ; 3 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Competition Law and Policy Volume 4 ; 4 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Competition Law and Policy Volume 5 ; 5 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Competition Law and Policy Volume 6 ; 6 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Competition Law and Policy Volume 7 ; 7 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Competition Law and Policy Volume 8 ; 8 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Competition Law and Policy Volume 9 ; 9 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Competition Law and Policy Volume 10 ; 10 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Competition Law and Policy Volume 11 ; 11 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Competition Law and Policy Volume 1 ; 1 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Competition Law and Policy Volume 2 ; 2 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Competition Law and Policy Volume 3 ; 3 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Competition Law and Policy Volume 4 ; 4 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Competition Law and Policy Volume 5 ; 5 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Competition Law and Policy Volume 6 ; 6 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Competition Law and Policy Volume 7 ; 7 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Competition Law and Policy Volume 8 ; 8 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Competition Law and Policy Volume 9 ; 9 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Competition Law and Policy Volume 10 ; 10 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Competition Law and Policy Volume 11 ; 11 ;  >
 
   }
 
@@ -426,15 +426,15 @@
     param[journal_dir] = oecd-journal-economic-studies
     param[journal_issn] = 19952856
 
-    au < manifest ; exists ; 0 ; OECD Journal: Economic Studies Volume 2008 ; 2008 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Economic Studies Volume 2009 ; 2009 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Economic Studies Volume 2010 ; 2010 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Economic Studies Volume 2011 ; 2011 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Economic Studies Volume 2012 ; 2012 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Economic Studies Volume 2013 ; 2013 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Economic Studies Volume 2014 ; 2014 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Economic Studies Volume 2015 ; 2015 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Economic Studies Volume 2016 ; 2016 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Economic Studies Volume 2008 ; 2008 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Economic Studies Volume 2009 ; 2009 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Economic Studies Volume 2010 ; 2010 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Economic Studies Volume 2011 ; 2011 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Economic Studies Volume 2012 ; 2012 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Economic Studies Volume 2013 ; 2013 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Economic Studies Volume 2014 ; 2014 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Economic Studies Volume 2015 ; 2015 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Economic Studies Volume 2016 ; 2016 ;  >
 
   }
 
@@ -451,15 +451,15 @@
     param[journal_dir] = oecd-journal-financial-market-trends
     param[journal_issn] = 19952872
 
-    au < manifest ; exists ; 0 ; OECD Journal: Financial Market Trends Volume 2008 ; 2008 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Financial Market Trends Volume 2009 ; 2009 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Financial Market Trends Volume 2010 ; 2010 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Financial Market Trends Volume 2011 ; 2011 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Financial Market Trends Volume 2012 ; 2012 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Financial Market Trends Volume 2013 ; 2013 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Financial Market Trends Volume 2014 ; 2014 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Financial Market Trends Volume 2015 ; 2015 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: Financial Market Trends Volume 2016 ; 2016 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Financial Market Trends Volume 2008 ; 2008 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Financial Market Trends Volume 2009 ; 2009 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Financial Market Trends Volume 2010 ; 2010 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Financial Market Trends Volume 2011 ; 2011 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Financial Market Trends Volume 2012 ; 2012 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Financial Market Trends Volume 2013 ; 2013 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Financial Market Trends Volume 2014 ; 2014 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Financial Market Trends Volume 2015 ; 2015 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: Financial Market Trends Volume 2016 ; 2016 ;  >
 
   }
 
@@ -476,9 +476,9 @@
     param[journal_dir] = oecd-journal-general-papers
     param[journal_issn] = 1995283X
 
-    au < manifest ; exists ; 0 ; OECD Journal: General Papers Volume 2008 ; 2008 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: General Papers Volume 2009 ; 2009 ;  >
-    au < manifest ; exists ; 0 ; OECD Journal: General Papers Volume 2010 ; 2010 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: General Papers Volume 2008 ; 2008 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: General Papers Volume 2009 ; 2009 ;  >
+    au < crawling ; exists ; 0 ; OECD Journal: General Papers Volume 2010 ; 2010 ;  >
 
   }
 
@@ -495,14 +495,14 @@
     param[journal_dir] = oecd-journal-journal-of-business-cycle-measurement-and-analysis
     param[journal_issn] = 19952899
 
-    au < manifest ; exists ; 2009 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2008 ; 2008 ;  >
-    au < manifest ; exists ; 2010 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2009 ; 2009 ;  >
-    au < manifest ; exists ; 2011 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2010 ; 2010 ;  >
-    au < manifest ; exists ; 2012 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2011 ; 2011 ;  >
-    au < manifest ; exists ; 2013 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2012 ; 2012 ;  >
-    au < manifest ; exists ; 2014 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2013 ; 2013 ;  >
-    au < manifest ; exists ; 2015 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2014 ; 2014 ;  >
-    au < manifest ; exists ; 2016 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2015 ; 2015 ;  >
+    au < crawling ; exists ; 2009 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2008 ; 2008 ;  >
+    au < crawling ; exists ; 2010 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2009 ; 2009 ;  >
+    au < crawling ; exists ; 2011 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2010 ; 2010 ;  >
+    au < crawling ; exists ; 2012 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2011 ; 2011 ;  >
+    au < crawling ; exists ; 2013 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2012 ; 2012 ;  >
+    au < crawling ; exists ; 2014 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2013 ; 2013 ;  >
+    au < crawling ; exists ; 2015 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2014 ; 2014 ;  >
+    au < crawling ; exists ; 2016 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2015 ; 2015 ;  >
 
   }
 
@@ -519,62 +519,62 @@
     param[journal_dir] = oecd-observer
     param[journal_issn] = 15615529
 
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1962 ; 1962 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1963 ; 1963 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1964 ; 1964 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1965 ; 1965 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1966 ; 1966 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1967 ; 1967 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1968 ; 1968 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1969 ; 1969 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1970 ; 1970 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1971 ; 1971 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1972 ; 1972 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1973 ; 1973 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1974 ; 1974 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1975 ; 1975 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1976 ; 1976 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1977 ; 1977 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1978 ; 1978 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1979 ; 1979 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1980 ; 1980 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1981 ; 1981 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1982 ; 1982 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1983 ; 1983 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1984 ; 1984 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1985 ; 1985 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1986 ; 1986 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1987 ; 1987 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1988 ; 1988 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1989 ; 1989 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1990 ; 1990 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1991 ; 1991 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1992 ; 1992 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1993 ; 1993 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1994 ; 1994 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1995 ; 1995 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1996 ; 1996 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1997 ; 1997 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1998 ; 1998 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 1999 ; 1999 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 2000 ; 2000 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 2001 ; 2001 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 2002 ; 2002 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 2003 ; 2003 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 2004 ; 2004 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 2005 ; 2005 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 2006 ; 2006 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 2007 ; 2007 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 2008 ; 2008 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 2009 ; 2009 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 2010 ; 2010 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 2011 ; 2011 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 2012 ; 2012 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 2013 ; 2013 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 2014 ; 2014 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 2015 ; 2015 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 2016 ; 2016 ;  >
-    au < manifest ; exists ; 0 ; OECD Observer Volume 2017 ; 2017 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1962 ; 1962 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1963 ; 1963 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1964 ; 1964 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1965 ; 1965 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1966 ; 1966 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1967 ; 1967 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1968 ; 1968 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1969 ; 1969 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1970 ; 1970 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1971 ; 1971 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1972 ; 1972 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1973 ; 1973 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1974 ; 1974 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1975 ; 1975 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1976 ; 1976 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1977 ; 1977 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1978 ; 1978 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1979 ; 1979 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1980 ; 1980 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1981 ; 1981 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1982 ; 1982 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1983 ; 1983 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1984 ; 1984 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1985 ; 1985 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1986 ; 1986 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1987 ; 1987 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1988 ; 1988 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1989 ; 1989 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1990 ; 1990 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1991 ; 1991 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1992 ; 1992 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1993 ; 1993 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1994 ; 1994 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1995 ; 1995 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1996 ; 1996 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1997 ; 1997 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1998 ; 1998 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 1999 ; 1999 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 2000 ; 2000 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 2001 ; 2001 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 2002 ; 2002 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 2003 ; 2003 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 2004 ; 2004 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 2005 ; 2005 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 2006 ; 2006 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 2007 ; 2007 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 2008 ; 2008 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 2009 ; 2009 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 2010 ; 2010 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 2011 ; 2011 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 2012 ; 2012 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 2013 ; 2013 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 2014 ; 2014 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 2015 ; 2015 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 2016 ; 2016 ;  >
+    au < crawling ; exists ; 0 ; OECD Observer Volume 2017 ; 2017 ;  >
 
   }
 
@@ -591,13 +591,13 @@
     param[journal_dir] = oecd-papers
     param[journal_issn] = 16812328
 
-    au < manifest ; exists ; 0 ; OECD Papers Volume 1 ; 1 ;  >
-    au < manifest ; exists ; 0 ; OECD Papers Volume 2 ; 2 ;  >
-    au < manifest ; exists ; 0 ; OECD Papers Volume 3 ; 3 ;  >
-    au < manifest ; exists ; 0 ; OECD Papers Volume 4 ; 4 ;  >
-    au < manifest ; exists ; 0 ; OECD Papers Volume 5 ; 5 ;  >
-    au < manifest ; exists ; 0 ; OECD Papers Volume 6 ; 6 ;  >
-    au < manifest ; exists ; 0 ; OECD Papers Volume 7 ; 7 ;  >
+    au < crawling ; exists ; 0 ; OECD Papers Volume 1 ; 1 ;  >
+    au < crawling ; exists ; 0 ; OECD Papers Volume 2 ; 2 ;  >
+    au < crawling ; exists ; 0 ; OECD Papers Volume 3 ; 3 ;  >
+    au < crawling ; exists ; 0 ; OECD Papers Volume 4 ; 4 ;  >
+    au < crawling ; exists ; 0 ; OECD Papers Volume 5 ; 5 ;  >
+    au < crawling ; exists ; 0 ; OECD Papers Volume 6 ; 6 ;  >
+    au < crawling ; exists ; 0 ; OECD Papers Volume 7 ; 7 ;  >
 
   }
 
@@ -614,13 +614,13 @@
     param[journal_dir] = politiques-et-gestion-de-l-enseignement-superieur
     param[journal_issn] = 16843592
 
-    au < manifest ; exists ; 2002 ; Politiques et gestion de l'enseignement supérieur Volume 14 ; 14 ;  >
-    au < manifest ; exists ; 2003 ; Politiques et gestion de l'enseignement supérieur Volume 15 ; 15 ;  >
-    au < manifest ; exists ; 2004 ; Politiques et gestion de l'enseignement supérieur Volume 16 ; 16 ;  >
-    au < manifest ; exists ; 2005 ; Politiques et gestion de l'enseignement supérieur Volume 17 ; 17 ;  >
-    au < manifest ; exists ; 2006 ; Politiques et gestion de l'enseignement supérieur Volume 18 ; 18 ;  >
-    au < manifest ; exists ; 2007 ; Politiques et gestion de l'enseignement supérieur Volume 19 ; 19 ;  >
-    au < manifest ; exists ; 2008 ; Politiques et gestion de l'enseignement supérieur Volume 20 ; 20 ;  >
+    au < crawling ; exists ; 2002 ; Politiques et gestion de l'enseignement supérieur Volume 14 ; 14 ;  >
+    au < crawling ; exists ; 2003 ; Politiques et gestion de l'enseignement supérieur Volume 15 ; 15 ;  >
+    au < crawling ; exists ; 2004 ; Politiques et gestion de l'enseignement supérieur Volume 16 ; 16 ;  >
+    au < crawling ; exists ; 2005 ; Politiques et gestion de l'enseignement supérieur Volume 17 ; 17 ;  >
+    au < crawling ; exists ; 2006 ; Politiques et gestion de l'enseignement supérieur Volume 18 ; 18 ;  >
+    au < crawling ; exists ; 2007 ; Politiques et gestion de l'enseignement supérieur Volume 19 ; 19 ;  >
+    au < crawling ; exists ; 2008 ; Politiques et gestion de l'enseignement supérieur Volume 20 ; 20 ;  >
 
   }
 
@@ -637,10 +637,10 @@
     param[journal_dir] = revue-de-l-ocde-sur-la-gestion-budgetaire
     param[journal_issn] = 16843525
 
-    au < manifest ; exists ; 0 ; Revue de l'OCDE sur la gestion budgétaire Volume 1 ; 1 ;  >
-    au < manifest ; exists ; 0 ; Revue de l'OCDE sur la gestion budgétaire Volume 2 ; 2 ;  >
-    au < manifest ; exists ; 0 ; Revue de l'OCDE sur la gestion budgétaire Volume 3 ; 3 ;  >
-    au < manifest ; exists ; 0 ; Revue de l'OCDE sur la gestion budgétaire Volume 4 ; 4 ;  >
+    au < crawling ; exists ; 0 ; Revue de l'OCDE sur la gestion budgétaire Volume 1 ; 1 ;  >
+    au < crawling ; exists ; 0 ; Revue de l'OCDE sur la gestion budgétaire Volume 2 ; 2 ;  >
+    au < crawling ; exists ; 0 ; Revue de l'OCDE sur la gestion budgétaire Volume 3 ; 3 ;  >
+    au < crawling ; exists ; 0 ; Revue de l'OCDE sur la gestion budgétaire Volume 4 ; 4 ;  >
 
   }
 
@@ -657,15 +657,15 @@
     param[journal_dir] = revue-de-l-ocde-sur-le-droit-et-la-politique-de-la-concurrence
     param[journal_issn] = 16843452
 
-    au < manifest ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 1 ; 1 ;  >
-    au < manifest ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 2 ; 2 ;  >
-    au < manifest ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 3 ; 3 ;  >
-    au < manifest ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 4 ; 4 ;  >
-    au < manifest ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 5 ; 5 ;  >
-    au < manifest ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 6 ; 6 ;  >
-    au < manifest ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 7 ; 7 ;  >
-    au < manifest ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 8 ; 8 ;  >
-    au < manifest ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 9 ; 9 ;  >
+    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 1 ; 1 ;  >
+    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 2 ; 2 ;  >
+    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 3 ; 3 ;  >
+    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 4 ; 4 ;  >
+    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 5 ; 5 ;  >
+    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 6 ; 6 ;  >
+    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 7 ; 7 ;  >
+    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 8 ; 8 ;  >
+    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 9 ; 9 ;  >
 
   }
 
@@ -682,16 +682,16 @@
     param[journal_dir] = revue-de-l-ocde-sur-le-developpement
     param[journal_issn] = 19965753
 
-    au < manifest ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 1 ; 1 ;  >
-    au < manifest ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 2 ; 2 ;  >
-    au < manifest ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 3 ; 3 ;  >
-    au < manifest ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 4 ; 4 ;  >
-    au < manifest ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 5 ; 5 ;  >
-    au < manifest ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 6 ; 6 ;  >
-    au < manifest ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 7 ; 7 ;  >
-    au < manifest ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 8 ; 8 ;  >
-    au < manifest ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 9 ; 9 ;  >
-    au < manifest ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 10 ; 10 ;  >
+    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 1 ; 1 ;  >
+    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 2 ; 2 ;  >
+    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 3 ; 3 ;  >
+    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 4 ; 4 ;  >
+    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 5 ; 5 ;  >
+    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 6 ; 6 ;  >
+    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 7 ; 7 ;  >
+    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 8 ; 8 ;  >
+    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 9 ; 9 ;  >
+    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 10 ; 10 ;  >
 
   }
 
@@ -708,16 +708,16 @@
     param[journal_dir] = revue-economique-de-l-ocde
     param[journal_issn] = 16843444
 
-    au < manifest ; exists ; 0 ; Revue économique de l'OCDE Volume 1997 ; 1997 ;  >
-    au < manifest ; exists ; 0 ; Revue économique de l'OCDE Volume 1998 ; 1998 ;  >
-    au < manifest ; exists ; 0 ; Revue économique de l'OCDE Volume 1999 ; 1999 ;  >
-    au < manifest ; exists ; 0 ; Revue économique de l'OCDE Volume 2000 ; 2000 ;  >
-    au < manifest ; exists ; 0 ; Revue économique de l'OCDE Volume 2001 ; 2001 ;  >
-    au < manifest ; exists ; 0 ; Revue économique de l'OCDE Volume 2002 ; 2002 ;  >
-    au < manifest ; exists ; 0 ; Revue économique de l'OCDE Volume 2003 ; 2003 ;  >
-    au < manifest ; exists ; 0 ; Revue économique de l'OCDE Volume 2004 ; 2004 ;  >
-    au < manifest ; exists ; 0 ; Revue économique de l'OCDE Volume 2005 ; 2005 ;  >
-    au < manifest ; exists ; 0 ; Revue économique de l'OCDE Volume 2006 ; 2006 ;  >
+    au < crawling ; exists ; 0 ; Revue économique de l'OCDE Volume 1997 ; 1997 ;  >
+    au < crawling ; exists ; 0 ; Revue économique de l'OCDE Volume 1998 ; 1998 ;  >
+    au < crawling ; exists ; 0 ; Revue économique de l'OCDE Volume 1999 ; 1999 ;  >
+    au < crawling ; exists ; 0 ; Revue économique de l'OCDE Volume 2000 ; 2000 ;  >
+    au < crawling ; exists ; 0 ; Revue économique de l'OCDE Volume 2001 ; 2001 ;  >
+    au < crawling ; exists ; 0 ; Revue économique de l'OCDE Volume 2002 ; 2002 ;  >
+    au < crawling ; exists ; 0 ; Revue économique de l'OCDE Volume 2003 ; 2003 ;  >
+    au < crawling ; exists ; 0 ; Revue économique de l'OCDE Volume 2004 ; 2004 ;  >
+    au < crawling ; exists ; 0 ; Revue économique de l'OCDE Volume 2005 ; 2005 ;  >
+    au < crawling ; exists ; 0 ; Revue économique de l'OCDE Volume 2006 ; 2006 ;  >
 
   }
 
@@ -734,9 +734,9 @@
     param[journal_dir] = sti-science-technology-and-industry-review
     param[journal_issn] = 16097637
 
-    au < manifest ; exists ; 0 ; STI Review Volume 1994 ; 1994 ;  >
-    au < manifest ; exists ; 0 ; STI Review Volume 1995 ; 1995 ;  >
-    au < manifest ; exists ; 0 ; STI Review Volume 1996 ; 1996 ;  >
+    au < crawling ; exists ; 0 ; STI Review Volume 1994 ; 1994 ;  >
+    au < crawling ; exists ; 0 ; STI Review Volume 1995 ; 1995 ;  >
+    au < crawling ; exists ; 0 ; STI Review Volume 1996 ; 1996 ;  >
 
   }
 
