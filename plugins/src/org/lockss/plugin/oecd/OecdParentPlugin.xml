@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>8</string>
+        <string>9</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -136,5 +136,9 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <string>"/(css|js)/v/", 0</string>
     </list>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
   </entry>
 </map>

@@ -1,4 +1,4 @@
-/*
+<!--
 
 Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
@@ -28,52 +28,43 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
-*/
-
-package org.lockss.plugin.oecd;
-
-import java.io.*;
-import java.util.Properties;
-
-import org.apache.commons.io.LineIterator;
-import org.lockss.daemon.*;
-import org.lockss.util.*;
-
-/**
- * <p>
- * Some journal start URLs have the permission statement, yet say {@code Sorry,
- * you don't have access to the content}.
- * </p>
- * <p>This is also true of working papers and datasets start URLs that do not
- * correspond to a valid year, but those do not have the permission statement;
- * still, to prevent any future issue, this login page checker is also attached
- * to the working papers and datasets plugins.
- * </p>
- * 
- * @author Thib Guicherd-Callin
- * @see #NO_ACCESS
- */
-public class OecdLoginPageChecker implements LoginPageChecker {
-  
-  Logger log = Logger.getLogger(OecdLoginPageChecker.class);
-  
-  public static final String NO_ACCESS = "Sorry, you don't have access to the content";
-  
-  @Override
-  public boolean isLoginPage(Properties props,
-                             Reader reader)
-      throws IOException, PluginException {
-    if (Constants.MIME_TYPE_HTML.equals(HeaderUtil.getMimeTypeFromContentType(props.getProperty("Content-Type")))) {
-      LineIterator liter = new LineIterator(reader);
-      while (liter.hasNext()) {
-        String line = liter.nextLine();
-        if (line.contains(NO_ACCESS)) {
-          return true;
-        }
-      }
-    }
-    return false;
-
-  }  
-  
-}
+-->
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>development</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.oecd.ClockssOecdDatasetsPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>8</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>OECD iLibrary Datasets Plugin (CLOCKSS)</string>
+    </entry>
+    <entry>
+        <string>plugin_parent</string>
+        <string>org.lockss.plugin.oecd.OecdDatasetsPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_parent_version</string>
+        <string>8</string>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"OECD iLibrary Datasets Plugin (CLOCKSS), Base URL %s, Publication URL Path %s, Publication ID %s", base_url, pub_path, pub_id</string>
+    </entry>
+    <entry>
+        <string>clockss_override</string>
+        <map>
+            <entry>
+                <string>au_def_pause_time</string>
+                <long>100</long>
+            </entry>
+        </map>
+    </entry>
+</map>

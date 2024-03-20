@@ -52,7 +52,7 @@ public class BaseOecdHtmlCrawlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tag("header"),
       HtmlNodeFilters.tag("footer"),
       HtmlNodeFilters.tagWithAttribute("ol", "class", "breadcrumb"),
-      // link to the entire journal in other languges
+      // link to the entire journal in other languages
       HtmlNodeFilters.tagWithAttribute("p", "class", "language"),
       HtmlNodeFilters.tagWithAttributeRegex("li", "class", "furtherReading"),
       HtmlNodeFilters.tagWithAttributeRegex("li", "class", "relatedtitle"),
