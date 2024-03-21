@@ -1296,6 +1296,7 @@ while (my $line = <>) {
   #Janeway. No journal_id
   } elsif (($plugin eq "OLHPlugin") || 
            ($plugin eq "ClockssOLHPlugin") ||
+           ($plugin eq "ClockssAperioJournalsPlugin") ||
            ($plugin eq "UniversityofMichiganPlugin") ||
            ($plugin eq "ClockssUniversityofMichiganPlugin") ||
            ($plugin eq "GhentUniversityLibraryDomainModeJournalsPlugin") ||
