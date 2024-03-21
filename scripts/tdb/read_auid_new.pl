@@ -3408,8 +3408,8 @@ while (my $line = <>) {
     if ($resp->is_success) {
       my $man_contents = $resp->content;
       if ($req->url ne $resp->request->uri) {
-              $vol_title = $resp->request->uri;
-              $result = "Redirected";
+          $vol_title = $resp->request->uri;
+          $result = "Redirected";
       } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
         if ($man_contents =~ m/<title>(.*)<\/title>/si) {
           $vol_title = $1;
