@@ -3,11 +3,13 @@ package org.lockss.plugin.clockss.hmp;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.PubMedSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
+import org.lockss.plugin.clockss.lopezibor.LopezIborSchemaHelper;
 import org.lockss.util.Logger;
 
 import java.util.ArrayList;
@@ -31,7 +33,7 @@ public class HmpGlobalXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it, just keep returning the same one. It won't change.
       if (PubMedHelper == null) {
-        PubMedHelper = new PubMedSchemaHelper();
+        PubMedHelper = new HmpGlobalSchemaHelper();
       }
       return PubMedHelper;
     }
@@ -53,6 +55,10 @@ public class HmpGlobalXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
       return returnList;
     }
 
-
+    @Override
+    protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
+                                   CachedUrl cu, ArticleMetadata thisAM) {
+        thisAM.put(MetadataField.FIELD_DOI, thisAM.getRaw(HmpGlobalSchemaHelper.art_doi));
+    }
   }
 }
