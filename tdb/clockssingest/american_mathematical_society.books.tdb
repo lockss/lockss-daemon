@@ -676,11 +676,11 @@
     
     au < manifest ; exists ; 1989 ; University Lecture Series 1989 ; 1989 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 1990 ; University Lecture Series 1990 ; 1990 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 1991 ; University Lecture Series 1991 ; 1991 ; https://www.ams.org/ ; >
+    au < doesNotExist ; doesNotExist ; 1991 ; University Lecture Series 1991 ; 1991 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 1992 ; University Lecture Series 1992 ; 1992 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 1993 ; University Lecture Series 1993 ; 1993 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 1994 ; University Lecture Series 1994 ; 1994 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 1995 ; University Lecture Series 1995 ; 1995 ; https://www.ams.org/ ; >
+    au < doesNotExist ; doesNotExist ; 1995 ; University Lecture Series 1995 ; 1995 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 1996 ; University Lecture Series 1996 ; 1996 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 1997 ; University Lecture Series 1997 ; 1997 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 1998 ; University Lecture Series 1998 ; 1998 ; https://www.ams.org/ ; >
@@ -692,7 +692,7 @@
     au < manifest ; exists ; 2004 ; University Lecture Series 2004 ; 2004 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2005 ; University Lecture Series 2005 ; 2005 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2006 ; University Lecture Series 2006 ; 2006 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 2007 ; University Lecture Series 2007 ; 2007 ; https://www.ams.org/ ; >
+    au < doesNotExist ; doesNotExist ; 2007 ; University Lecture Series 2007 ; 2007 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2008 ; University Lecture Series 2008 ; 2008 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2009 ; University Lecture Series 2009 ; 2009 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2010 ; University Lecture Series 2010 ; 2010 ; https://www.ams.org/ ; >
@@ -764,7 +764,7 @@
     au < manifest ; exists ; 1972 ; AMS Translations: Series 2 1972 ; 1972 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 1973 ; AMS Translations: Series 2 1973 ; 1973 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 1974 ; AMS Translations: Series 2 1974 ; 1974 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 1975 ; AMS Translations: Series 2 1975 ; 1975 ; https://www.ams.org/ ; >
+    au < doesNotExist ; doesNotExist ; 1975 ; AMS Translations: Series 2 1975 ; 1975 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 1976 ; AMS Translations: Series 2 1976 ; 1976 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 1977 ; AMS Translations: Series 2 1977 ; 1977 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 1978 ; AMS Translations: Series 2 1978 ; 1978 ; https://www.ams.org/ ; >
