@@ -278,7 +278,7 @@ public class AdminServletManager extends BaseServletManager {
           new ServletDescr("UserEditAccount",
           UserEditAccount.class,
           "My Account",
-          (ServletDescr.IN_NAV),
+          (ServletDescr.IN_NAV | ServletDescr.MIGRATION_DUPLICATE),
           "Update account info") {
             public boolean isEnabled(LockssDaemon daemon) {
               AccountManager acctMgr = daemon.getAccountManager();
@@ -305,7 +305,8 @@ public class AdminServletManager extends BaseServletManager {
           AdminEditAccounts.class,
           "User Accounts",
           (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
-          | ServletDescr.NEED_ROLE_USER_ADMIN),
+           | ServletDescr.NEED_ROLE_USER_ADMIN
+           | ServletDescr.MIGRATION_DUPLICATE),
           "Administer user accounts") {
             public boolean isEnabled(LockssDaemon daemon) {
               AccountManager acctMgr = daemon.getAccountManager();
@@ -317,7 +318,8 @@ public class AdminServletManager extends BaseServletManager {
           BatchAuConfig.class,
           "AU Configuration",
           (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
-          | ServletDescr.NEED_ROLE_AU_ADMIN),
+           | ServletDescr.NEED_ROLE_AU_ADMIN
+           | ServletDescr.MIGRATION_DISALLOW),
           "Manage archival units in this LOCKSS box");
   // XXXUI Development version
 //  protected static final ServletDescr SERVLET_BATCH_AU_CONFIG_NEW =
@@ -331,28 +333,32 @@ public class AdminServletManager extends BaseServletManager {
           new ServletDescr("AuConfig",
           AuConfig.class,
           "Manual AU Configuration",
-          (ServletDescr.IN_UIHOME | ServletDescr.NEED_ROLE_AU_ADMIN),
+          (ServletDescr.IN_UIHOME | ServletDescr.NEED_ROLE_AU_ADMIN
+           | ServletDescr.MIGRATION_DISALLOW),
           "Manually edit single AU configuration");
   protected static final ServletDescr SERVLET_ADMIN_ACCESS_CONTROL =
           new ServletDescr("AdminIpAccess",
           AdminIpAccess.class,
           "Admin Access Control",
           (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
-          | ServletDescr.NEED_ROLE_USER_ADMIN),
+           | ServletDescr.NEED_ROLE_USER_ADMIN
+           | ServletDescr.MIGRATION_DUPLICATE),
           "Control access to the administrative UI");
   protected static final ServletDescr SERVLET_PROXY_ACCESS_CONTROL =
           new ServletDescr("ProxyIpAccess",
           ProxyIpAccess.class,
           "Content Access Control",
           (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
-          | ServletDescr.NEED_ROLE_CONTENT_ADMIN),
+           | ServletDescr.NEED_ROLE_CONTENT_ADMIN
+           | ServletDescr.MIGRATION_DUPLICATE),
           "Control access to the preserved content");
   protected static final ServletDescr SERVLET_PROXY_AND_CONTENT =
           new ServletDescr("ProxyAndContent",
           ProxyAndContent.class,
           "Content Access Options",
           (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
-          | ServletDescr.NEED_ROLE_CONTENT_ADMIN),
+           | ServletDescr.NEED_ROLE_CONTENT_ADMIN
+           | ServletDescr.MIGRATION_DUPLICATE),
           "Configure content servers and proxies");
   protected static final ServletDescr SERVLET_PROXY_INFO =
           new ServletDescr("ProxyConfig",
@@ -375,7 +381,8 @@ public class AdminServletManager extends BaseServletManager {
           PluginConfig.class,
           "Plugin Configuration",
           (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
-          | ServletDescr.NEED_ROLE_AU_ADMIN),
+           | ServletDescr.NEED_ROLE_AU_ADMIN
+           | ServletDescr.MIGRATION_DUPLICATE),
           "Manage plugin repositories, title databases") {
             public boolean isInNav(LockssServlet servlet) {
               return CurrentConfig.getBooleanParam(PARAM_ALLOW_PLUGIN_CONFIG,
@@ -416,12 +423,14 @@ public class AdminServletManager extends BaseServletManager {
           new ServletDescr("AddContent",
           AddContent.class,
           "Add Content",
-          ServletDescr.NEED_ROLE_CONTENT_ACCESS);
+          (ServletDescr.NEED_ROLE_CONTENT_ACCESS
+           | ServletDescr.MIGRATION_DISALLOW));
   public static final ServletDescr SERVLET_ADD_CONTENT_TAB =
           new ServletDescr("AddContentTab",
           AddContentTab.class,
           "Add Content Tab",
-          ServletDescr.NEED_ROLE_CONTENT_ACCESS);
+          (ServletDescr.NEED_ROLE_CONTENT_ACCESS
+           | ServletDescr.MIGRATION_DISALLOW));
   // XXXUI New servlet
   public static final ServletDescr SERVLET_SERVE_CONTENT =
           new ServletDescr("ServeContent",
@@ -585,7 +594,8 @@ public class AdminServletManager extends BaseServletManager {
                        CounterReportsServlet.class,
                        "COUNTER Reports",
 		       "CounterReports",
-		       (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME),
+		       (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
+                        | ServletDescr.MIGRATION_DISALLOW),
 		       "COUNTER Report generator") {
 	public boolean isEnabled(LockssDaemon daemon) {
 	  CounterReportsManager mgr = daemon.getCounterReportsManager();
@@ -608,7 +618,8 @@ public class AdminServletManager extends BaseServletManager {
       new ServletDescr("SubscriptionManagement",
 		       SubscriptionManagement.class,
 		       "Title Subscription Management",
-		       (ServletDescr.NEED_ROLE_AU_ADMIN),
+		       (ServletDescr.NEED_ROLE_AU_ADMIN
+                        | ServletDescr.MIGRATION_DISALLOW),
 		       "Subscribe or unsubscribe to individual titles") {
 	public boolean isEnabled(LockssDaemon daemon) {
 	  try {

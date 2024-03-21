@@ -48,6 +48,7 @@ import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.jetty.Button;
 import org.lockss.jetty.MyTextArea;
+import org.lockss.laaws.*;
 import org.lockss.plugin.*;
 import org.lockss.remote.*;
 import org.lockss.remote.RemoteApi.BatchAuStatus;
@@ -365,6 +366,8 @@ public class ServletUtil {
   private static volatile String thirdPartyLogoLink;
   private static volatile boolean displayIpAddr = DEFAULT_DISPLAY_IP_ADDR;
   static volatile boolean hostNameInTitle = DEFAULT_HOSTNAME_IN_TITLE;
+  private static volatile String migrateHost = null;
+  private static volatile int migratePort = -1;
 
   private static Map<String,String> disabledServlets = new HashMap();
 
@@ -379,6 +382,12 @@ public class ServletUtil {
     if (diffs.contains(HashCUS.PREFIX)) {
       HashCUS.setConfig(config, oldConfig, diffs);
     }
+    if (diffs.contains(MigrationManager.PREFIX)) {
+      migrateHost = config.get(MigrateContent.PARAM_HOSTNAME);
+      migratePort = V2AuMover.DEFAULT_CFG_UI_PORT;
+      log.critical("migrateHost: " + migrateHost + ", migratePort: " + migratePort);
+    }
+
     if (diffs.contains(PREFIX)) {
       thirdPartyLogo = config.get(PARAM_THIRD_PARTY_LOGO_IMAGE);
       if (thirdPartyLogo != null) {
@@ -403,6 +412,14 @@ public class ServletUtil {
 	}
       }
     }
+  }
+
+  public static String getMigrateHost() {
+    return migrateHost;
+  }
+
+  public static int getMigratePort() {
+    return migratePort;
   }
 
   public static String servletDisabledReason(String servlet) {
@@ -857,6 +874,12 @@ public class ServletUtil {
     comp.add("<b>");
     comp.add(str);
     comp.add("</b>");
+  }
+
+  static void addRed(Composite comp, String str) {
+    comp.add(ERRORBLOCK_ERROR_BEFORE);
+    comp.add(str);
+    comp.add(ERRORBLOCK_ERROR_AFTER);
   }
 
   static boolean shouldDisplayGroups(List groups) {

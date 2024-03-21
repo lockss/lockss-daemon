@@ -50,6 +50,7 @@ import org.lockss.config.*;
 import org.lockss.account.*;
 import org.lockss.protocol.*;
 import org.lockss.jetty.*;
+import org.lockss.laaws.MigrationManager;
 import org.lockss.alert.*;
 import org.lockss.servlet.ServletUtil.LinkWithExplanation;
 import org.lockss.util.*;
@@ -152,6 +153,7 @@ public abstract class LockssServlet extends HttpServlet
   private LockssApp theApp = null;
   private ServletManager servletMgr;
   private AccountManager acctMgr;
+  private MigrationManager migrationMgr;
   protected AlertManager alertMgr;
 
   // Request-local storage.  Convenient, but requires servlet instances
@@ -188,6 +190,7 @@ public abstract class LockssServlet extends HttpServlet
       acctMgr = getLockssDaemon().getAccountManager();
       alertMgr = getLockssDaemon().getAlertManager();
     }
+    migrationMgr = getLockssDaemon().getMigrationManager();
   }
 
   public ServletManager getServletManager() {
@@ -225,11 +228,11 @@ public abstract class LockssServlet extends HttpServlet
       reqURL = new URL(UrlUtil.getRequestURL(req));
       clientAddr = getLocalIPAddr();
 
-      // check that current user has permission to run this servlet
       if (!isServletEnabled()) {
         resp.sendError(HttpServletResponse.SC_SERVICE_UNAVAILABLE, "Disabled");
 	return;
       }
+      // check that current user has permission to run this servlet
       if (!isServletAllowed(myServletDescr())) {
 	displayWarningInLieuOfPage("You are not authorized to use " +
 				   myServletDescr().heading);
@@ -237,7 +240,8 @@ public abstract class LockssServlet extends HttpServlet
 	return;
       }
 
-      // check whether servlet is disabled
+      // check whether servlet is disabled by o.l.ui.disabledServlets
+      // config parsm
       String reason =
 	ServletUtil.servletDisabledReason(myServletDescr().getServletName());
       if (reason != null) {
@@ -245,6 +249,14 @@ public abstract class LockssServlet extends HttpServlet
         resp.setStatus(HttpResponse.__503_Service_Unavailable, "Disabled");
 	return;
       }
+
+      if (isDisallowInMigration()) {
+        String dis = "This function is disabled in migration mode.  Please use %s in your LOCKSS 2.x instance instead.";
+        displayWarningInLieuOfPage(v2ServletLink(dis));
+        resp.setStatus(HttpResponse.__503_Service_Unavailable, "Disabled");
+        return;
+      }
+
       if (session != null) {
 	session.setAttribute(SESSION_KEY_RUNNING_SERVLET,
 			     getHeading());
@@ -265,6 +277,9 @@ public abstract class LockssServlet extends HttpServlet
       throw e;
     } catch (RuntimeException e) {
       log.error("Servlet threw", e);
+      throw e;
+    } catch (StackOverflowError e) {
+      log.error("Stack overflow", e);
       throw e;
     } finally {
       if (session != null) {
@@ -598,6 +613,26 @@ public abstract class LockssServlet extends HttpServlet
     return d.isInNav(this) && isServletDisplayed(d);
   }
 
+  protected boolean isInMigrationMode() {
+    return migrationMgr.isDaemonInMigrationMode();
+  }
+
+  protected boolean isDisallowInMigration() {
+    return isDisallowInMigration(myServletDescr());
+  }
+
+  protected boolean isDisallowInMigration(ServletDescr d) {
+    return isInMigrationMode() && d.isDisallowInMigration();
+  }
+
+  protected boolean isDuplicateInMigration() {
+    return isDuplicateInMigration(myServletDescr());
+  }
+
+  protected boolean isDuplicateInMigration(ServletDescr d) {
+    return isInMigrationMode() && d.isDuplicateInMigration();
+  }
+
   // Called when a servlet doesn't get the parameters it expects/needs
   protected void paramError() throws IOException {
     // FIXME: As of 2006-03-15 this method and its only caller checkParam() are not called from anywhere
@@ -686,6 +721,10 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   String srvUrlStem(String host) {
+    return srvUrlStem(host, reqURL.getPort());
+  }
+
+  String srvUrlStem(String host, int port) {
     if (host == null) {
       return null;
     }
@@ -694,7 +733,7 @@ public abstract class LockssServlet extends HttpServlet
     sb.append("://");
     sb.append(host);
     sb.append(':');
-    sb.append(reqURL.getPort());
+    sb.append(port);
     return sb.toString();
   }
 
@@ -1303,8 +1342,17 @@ public abstract class LockssServlet extends HttpServlet
   /** Create message and error message block
    * @param composite TODO*/
   protected void layoutErrorBlock(Composite composite) {
-    if (errMsg != null || statusMsg != null) {
-      ServletUtil.layoutErrorBlock(composite, errMsg, statusMsg);
+    String txt = errMsg;
+    if (isDuplicateInMigration()) {
+      String dupstr = "This information has already been migrated.  Any changes made here should also be made to %s in your LOCKSS 2.x instance.";
+      ServletUtil.addRed(composite, v2ServletLink(dupstr));
+    } else if (isInMigrationMode()) {
+      String migstr = "This LOCKSS 1.x instance is in migration mode.";
+      txt = errMsg == null ? migstr : migstr + "\n" + errMsg;
+    }
+
+    if (txt != null || statusMsg != null) {
+      ServletUtil.layoutErrorBlock(composite, txt, statusMsg);
     }
   }
 
@@ -1345,6 +1393,19 @@ public abstract class LockssServlet extends HttpServlet
     comp.add(message);
     page.add(comp);
     endPage(page);
+  }
+
+  public String v2ServletLink(String msg) {
+    String mHost = ServletUtil.getMigrateHost();
+    if (!StringUtil.isNullString(mHost)) {
+      String stem = srvUrlStem(mHost, ServletUtil.getMigratePort());
+      String url = srvURLFromStem(stem, myServletDescr(), null);
+      String link =
+        new Link(url, myServletDescr().getNavHeading(this)).toString();
+      return String.format(msg, link);
+    } else {
+      return String.format(msg, "the equivalent function");
+    }
   }
 
   /** Exception thrown if multipart form data is longer than the
