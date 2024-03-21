@@ -23,9 +23,9 @@
 
         param[base_url] = https://jmphil.org/
 
-        au < manifest ; exists ; 2019 ; 2019 ; 2019 ; Journal of Modern Philosophy Volume 2019 ; >
-        au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Journal of Modern Philosophy Volume 2020 ; >
-        au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Journal of Modern Philosophy Volume 2021 ; >
+        au < ready ; exists ; 2019 ; 2019 ; 2019 ; Journal of Modern Philosophy Volume 2019 ; >
+        au < ready ; exists ; 2020 ; 2020 ; 2020 ; Journal of Modern Philosophy Volume 2020 ; >
+        au < ready ; exists ; 2021 ; 2021 ; 2021 ; Journal of Modern Philosophy Volume 2021 ; >
 
 
     }
@@ -38,9 +38,9 @@
 
         param[base_url] = https://summeracademe.org/
 
-        au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Summer Academe Volume 2020 ; >
-        au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Summer Academe Volume 2021 ; >
-        au < manifest ; exists ; 2022 ; 2022 ; 2022 ; Summer Academe Volume 2022 ; >
+        au < ready ; exists ; 2020 ; 2020 ; 2020 ; Summer Academe Volume 2020 ; >
+        au < ready ; exists ; 2021 ; 2021 ; 2021 ; Summer Academe Volume 2021 ; >
+        au < ready ; exists ; 2022 ; 2022 ; 2022 ; Summer Academe Volume 2022 ; >
 
 
     }
@@ -53,9 +53,9 @@
 
         param[base_url] = https://essaysinhistoryjournal.com/
 
-        au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Essays in History Volume 2020 ; >
-        au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Essays in History Volume 2021 ; >
-
+        au < ready ; exists ; 2019 ; 2019 ; 2019 ; Essays in History Volume 2019 ; >
+        au < ready ; exists ; 2020 ; 2020 ; 2020 ; Essays in History Volume 2020 ; >
+        # 2021 API return empty record list
 
     }
 
@@ -67,8 +67,8 @@
 
         param[base_url] = https://firstaidjournal.org/
 
-        au < manifest ; exists ; 2020 ; 2020 ; 2020 ; International Journal of First Aid Education Volume 2020 ; >
-        au < manifest ; exists ; 2021 ; 2021 ; 2021 ; International Journal of First Aid Education Volume 2021 ; >
+        au < ready ; exists ; 2020 ; 2020 ; 2020 ; International Journal of First Aid Education Volume 2020 ; >
+        au < ready ; exists ; 2021 ; 2021 ; 2021 ; International Journal of First Aid Education Volume 2021 ; >
 
   }
 
@@ -80,8 +80,8 @@
 
         param[base_url] = https://www.lddjournal.org/
 
-        au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Language Documentation and Description Volume 2020 ; >
-        au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Language Documentation and Description Volume 2021 ; >
+        au < ready ; exists ; 2020 ; 2020 ; 2020 ; Language Documentation and Description Volume 2020 ; >
+        au < ready ; exists ; 2021 ; 2021 ; 2021 ; Language Documentation and Description Volume 2021 ; >
     }
   }
 }
