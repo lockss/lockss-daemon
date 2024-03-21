@@ -3,7 +3,7 @@
   publisher <
     name = Aperio ;
     info[contract] = 2024 ;
-    info[back] = 2020 ;
+    info[back] = 2019 ;
     info[tester] = 8 ;
     info[platform] = Janeway/OAI x2. See LXPLUG-2426
   >
@@ -22,10 +22,14 @@
         >
 
         param[base_url] = https://jmphil.org/
+        #2019-2023 processed on previous platforms
 
-        au < ready ; exists ; 2019 ; 2019 ; 2019 ; Journal of Modern Philosophy Volume 2019 ; >
-        au < ready ; exists ; 2020 ; 2020 ; 2020 ; Journal of Modern Philosophy Volume 2020 ; >
-        au < ready ; exists ; 2021 ; 2021 ; 2021 ; Journal of Modern Philosophy Volume 2021 ; >
+        au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; 1 ; Journal of Modern Philosophy Volume 2019 ; >
+        au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; 2 ; Journal of Modern Philosophy Volume 2020 ; >
+        au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; 3 ; Journal of Modern Philosophy Volume 2021 ; >
+        au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; 4 ; Journal of Modern Philosophy Volume 2022 ; >
+        au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; 5 ; Journal of Modern Philosophy Volume 2023 ; >
+        au < exists ; exists ; 2024 ; 2024 ; 6 ; Journal of Modern Philosophy Volume 2024 ; >
 
 
     }
@@ -38,10 +42,13 @@
 
         param[base_url] = https://summeracademe.org/
 
+        au < exists ; exists ; 2017 ; 2017 ; 2017 ; Summer Academe Volume 2017 ; >
+        au < exists ; exists ; 2018 ; 2018 ; 2018 ; Summer Academe Volume 2018 ; >
+        au < exists ; exists ; 2019 ; 2019 ; 2019 ; Summer Academe Volume 2019 ; >
         au < ready ; exists ; 2020 ; 2020 ; 2020 ; Summer Academe Volume 2020 ; >
         au < ready ; exists ; 2021 ; 2021 ; 2021 ; Summer Academe Volume 2021 ; >
         au < ready ; exists ; 2022 ; 2022 ; 2022 ; Summer Academe Volume 2022 ; >
-
+        #Nothing after 2022 as of 2024/03/21
 
     }
 
