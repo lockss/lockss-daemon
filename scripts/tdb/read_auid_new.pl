@@ -1251,6 +1251,9 @@ while (my $line = <>) {
       #printf("URL: %s\n", $perm_url); #debug
       $vol_title = $perm_url ;
     #start_url for all OAI queries https://www.comicsgrid.com/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31
+    #From RP start_url: "%slockss?oai_granularity=%s&amp;au_oai_date=%d", base_url, oai_granularity, year
+    #$url = sprintf("%slockss?oai_granularity=%s&amp;au_oai_date=%d",
+      #$param{base_url}, $param{oai_granularity}, $param{year});
     $url = sprintf("%soai?verb=ListRecords&metadataPrefix=oai_dc&from=%d-01-01&until=%d-12-31",
       $param{base_url}, $param{year}, $param{year});
     $man_url = uri_unescape($url);
