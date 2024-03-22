@@ -2,7 +2,7 @@
   <!-- Inherited from IlliesiaPlugin.xml. -->  
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>deprecated</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -10,11 +10,11 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Illiesia Plugin (CLOCKSS)</string>
+    <string>Illiesia Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -22,11 +22,11 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Illiesia Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+    <string>"Illiesia Plugin (Legacy, CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>clockss_override</string>
