@@ -279,12 +279,12 @@
     
     param[journal_id] = fca
 
-    au < manifest ; 2005 ; Future Cardiology Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < doNotProcess ; 2005 ; Future Cardiology Volume 1 ; 1 ; https://www.futuremedicine.com/ >
     au < manifest ; 2006 ; Future Cardiology Volume 2 ; 2 ; https://www.futuremedicine.com/ >
     au < manifest ; 2007 ; Future Cardiology Volume 3 ; 3 ; https://www.futuremedicine.com/ >
     au < manifest ; 2008 ; Future Cardiology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
     au < manifest ; 2009 ; Future Cardiology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < manifest ; 2010 ; Future Cardiology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < doNotProcess ; 2010 ; Future Cardiology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
     au < released ; 2011 ; Future Cardiology Volume 7 ; 7 ; https://www.futuremedicine.com/ >
     au < released ; 2012 ; Future Cardiology Volume 8 ; 8 ; http://www.futuremedicine.com/ >
     au < released ; 2013 ; Future Cardiology Volume 9 ; 9 ; http://www.futuremedicine.com/ >
@@ -375,10 +375,10 @@
     
     param[journal_id] = fon
 
-    au < manifest ; 2005 ; Future Oncology Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < doNotProcess ; 2005 ; Future Oncology Volume 1 ; 1 ; https://www.futuremedicine.com/ >
     au < manifest ; 2006 ; Future Oncology Volume 2 ; 2 ; https://www.futuremedicine.com/ >
     au < manifest ; 2007 ; Future Oncology Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < manifest ; 2008 ; Future Oncology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < doNotProcess ; 2008 ; Future Oncology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
     au < manifest ; 2009 ; Future Oncology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
     au < notReady ; 2010 ; Future Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ > #500 error
     au < released ; 2011 ; Future Oncology Volume 7 ; 7 ; https://www.futuremedicine.com/ >
@@ -740,7 +740,7 @@
     au < manifest ; 2006 ; Nanomedicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
     au < manifest ; 2007 ; Nanomedicine Volume 2 ; 2 ; https://www.futuremedicine.com/ >
     au < manifest ; 2008 ; Nanomedicine Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < manifest ; 2009 ; Nanomedicine Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < doNotProcess ; 2009 ; Nanomedicine Volume 4 ; 4 ; https://www.futuremedicine.com/ >
     au < released ; 2010 ; Nanomedicine Volume 5 ; 5 ; https://www.futuremedicine.com/ >
     au < released ; 2011 ; Nanomedicine Volume 6 ; 6 ; https://www.futuremedicine.com/ >
     au < released ; 2012 ; Nanomedicine Volume 7 ; 7 ; http://www.futuremedicine.com/ >
@@ -856,7 +856,7 @@
     param[journal_id] = pme
 
     au < manifest ; 2004 ; Personalized Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < manifest ; 2005 ; Personalized Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < doNotProcess ; 2005 ; Personalized Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ >
     au < manifest ; 2006 ; Personalized Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ >
     au < manifest ; 2007 ; Personalized Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ >
     au < manifest ; 2008 ; Personalized Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ >
@@ -894,7 +894,7 @@
     au < manifest ; 2002 ; Pharmacogenomics Volume 3 ; 3 ; https://www.futuremedicine.com/ >
     au < manifest ; 2003 ; Pharmacogenomics Volume 4 ; 4 ; https://www.futuremedicine.com/ >
     au < manifest ; 2004 ; Pharmacogenomics Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < manifest ; 2005 ; Pharmacogenomics Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < doNotProcess ; 2005 ; Pharmacogenomics Volume 6 ; 6 ; https://www.futuremedicine.com/ >
     au < manifest ; 2006 ; Pharmacogenomics Volume 7 ; 7 ; https://www.futuremedicine.com/ >
     au < manifest ; 2007 ; Pharmacogenomics Volume 8 ; 8 ; https://www.futuremedicine.com/ >
     au < manifest ; 2008 ; Pharmacogenomics Volume 9 ; 9 ; https://www.futuremedicine.com/ >
@@ -927,7 +927,7 @@
     
     param[journal_id] = rme
 
-    au < manifest ; 2006 ; Regenerative Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < doNotProcess ; 2006 ; Regenerative Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
     au < manifest ; 2007 ; Regenerative Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ >
     au < manifest ; 2008 ; Regenerative Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ >
     au < manifest ; 2009 ; Regenerative Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ >
