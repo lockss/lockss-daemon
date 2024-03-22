@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>deprecated</string>
     <!-- https transition enabled -->
   </entry>
   <entry>
@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>18</string>
+    <string>19</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -22,11 +22,11 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Institution of Engineering and Technology Journals Plugin (CLOCKSS)</string>
+    <string>Institution of Engineering and Technology Journals Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Institution of Engineering and Technology Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Institution of Engineering and Technology Journals Plugin (Legacy, CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <!--  override start url from parent to support http to https conversion -->
   <entry>
