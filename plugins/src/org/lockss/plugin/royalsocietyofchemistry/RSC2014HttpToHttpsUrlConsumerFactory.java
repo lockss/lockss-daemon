@@ -34,6 +34,7 @@ package org.lockss.plugin.royalsocietyofchemistry;
 
 import java.io.IOException;
 
+import org.apache.commons.lang3.StringUtils;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.HttpToHttpsUrlConsumer;
@@ -68,11 +69,6 @@ public class RSC2014HttpToHttpsUrlConsumerFactory implements UrlConsumerFactory 
       super(facade, fud);
     }
     
-    
-    /* We need to add in another test in addition to shouldStoreAtOrigUrl
-     * we have some cases where the xlink --> http --> https and 
-     * we want to store at the http which is the first of the redirects.
-     */
     @Override
     public void consume() throws IOException {
       checkXlinkStoreAtHttpUrl();
@@ -89,44 +85,34 @@ public class RSC2014HttpToHttpsUrlConsumerFactory implements UrlConsumerFactory 
      * 
      */
     private void checkXlinkStoreAtHttpUrl() {
-      /** 
-      if(AuUtil.isBaseUrlHttp(au) && fud.redirectUrls != null){
-        log.info("the number of redirectUrls is "+fud.redirectUrls.size());
-        if(fud.redirectUrls.size() == 5){
-          log.info("First redirect is" + fud.redirectUrls.get(0));
-          log.info("Second redirect is" + fud.redirectUrls.get(1));
-          log.info("Third redirect is" + fud.redirectUrls.get(2));
-          log.info("Fourth redirect is" + fud.redirectUrls.get(3));
-          log.info("Fifth redirect is" + fud.redirectUrls.get(4));
-        }
-        log.info("Fetch URL is "+fud.fetchUrl);
-        log.info("Original URL is" + fud.origUrl);
-      }*/
+
       if (AuUtil.isBaseUrlHttp(au)
           && fud.redirectUrls != null
-          && fud.redirectUrls.size() == 2
+          && fud.redirectUrls.size() > 1
           && fud.origUrl.contains(XLINK_HOST)
-          && UrlUtil.isHttpsUrl(fud.fetchUrl)) {
-
-        if (UrlUtil.stripProtocol(fud.redirectUrls.get(0)).equalsIgnoreCase(UrlUtil.stripProtocol(fud.redirectUrls.get(1)))) {
+          && UrlUtil.isHttpsUrl(fud.fetchUrl)
+          && fud.origUrl.contains("?doi=")) {
+        String code = StringUtils.substringAfter(fud.origUrl, "?doi=");
+        if (fud.fetchUrl.endsWith("/" + code)) {
           if (log.isDebug2()) {
             log.debug2(String.format("Storing redirect chain %s (fetch URL %s) at first redirect URL and ignoring orig url %s",
                 fud.redirectUrls.toString(),
                 fud.fetchUrl,
                 fud.origUrl));
           }
-          // we know this works based on the opening if statement
-          fud.redirectUrls.remove(1);
-          fud.fetchUrl = fud.redirectUrls.get(0);
+
+          fud.redirectUrls.set(0, fud.fetchUrl);
+          for(int i=fud.redirectUrls.size()-1; i >= 1; i-- ){
+            fud.redirectUrls.remove(i);
+          }
           /*
            * We do still need to log this as a redirect, so leave that flag on
            * Set the content URL property to the URL under which the content is stored
            */
-          fud.headers.put(CachedUrl.PROPERTY_CONTENT_URL, fud.redirectUrls.get(0));
+          fud.headers.put(CachedUrl.PROPERTY_CONTENT_URL, fud.fetchUrl);
         }
       }
     }
-    
     
  }
  
