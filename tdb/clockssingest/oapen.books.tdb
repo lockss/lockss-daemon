@@ -7,13 +7,15 @@
     info[platform] = Custom. See LXPUB-718
   >
     
+    provider = OAPEN
     plugin = org.lockss.plugin.oapen.ClockssOAPENBooksPlugin
     implicit < status ; status2 ; year ; name ; param[resource_id] ; hidden[proxy] >
     param[base_url] = https://library.oapen.org/
 
   {
      title <
-        name = OAPEN Books
+        name = OAPEN Books ;
+        type = bookSeries
       >
 
     au < frozen ; exists ; 2018 ; Kant und die Imagination der Tiere ; handle/20.500.12657/41485 ; >
