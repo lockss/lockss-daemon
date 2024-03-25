@@ -67,8 +67,8 @@
         au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Summer Academe Volume 2018 ; >
         au < manifest ; exists ; 2019 ; 2019 ; 2019 ; Summer Academe Volume 2019 ; >
         au < ready ; exists ; 2020 ; 2020 ; 2020 ; Summer Academe Volume 2020 ; >
-        au < ready ; exists ; 2021 ; 2021 ; 2021 ; Summer Academe Volume 2021 ; >
-        au < ready ; exists ; 2022 ; 2022 ; 2022 ; Summer Academe Volume 2022 ; >
+        au < crawling ; exists ; 2021 ; 2021 ; 2021 ; Summer Academe Volume 2021 ; >
+        au < crawling ; exists ; 2022 ; 2022 ; 2022 ; Summer Academe Volume 2022 ; >
         #Nothing after 2022 as of 20240321
 
     }
@@ -93,7 +93,7 @@
         au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Essays in History Volume 2017 ; >
         au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Essays in History Volume 2018 ; >
         au < ready ; exists ; 2019 ; 2019 ; 2019 ; Essays in History Volume 2019 ; >
-        au < ready ; exists ; 2020 ; 2020 ; 2020 ; Essays in History Volume 2020 ; >
+        au < crawling ; exists ; 2020 ; 2020 ; 2020 ; Essays in History Volume 2020 ; >
         # 2021 API return empty record list
         au < doesNotExist ; doesNotExist ; 2021 ; 2021 ; 2021 ; Essays in History Volume 2021 ; >
         au < manifest ; exists ; 2022 ; 2022 ; 2022 ; Essays in History Volume 2022 ; >
