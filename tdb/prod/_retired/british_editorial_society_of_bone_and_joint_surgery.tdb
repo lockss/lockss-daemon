@@ -2,10 +2,10 @@
 
   publisher <
     name = British Editorial Society of Bone and Joint Surgery ;
-    info[platform] = Atypon. Manifest pages present.
+    info[platform] = Atypon.
   >
   
-  comment[moved] = moved to HW Drupal during 2015. Moved to Atypon ~Jan 2018.
+  comment[moved] = moved to HW Drupal during 2015. Moved to Atypon ~Jan 2018. Moved again 2022
   #pluginPrefix = org.lockss.plugin.highwire.
   #implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   implicit < status ; year ; name ; param[volume_name] >
