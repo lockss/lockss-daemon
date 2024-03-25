@@ -726,7 +726,7 @@
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2021 ; Pharmacological Reviews Volume 73 ; 73 ; https://pharmrev.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; deepCrawl ; exists ; 2022 ; Pharmacological Reviews Volume 74 ; 74 ; https://pharmrev.aspetjournals.org/ ; >
     au < aspet.ClockssASPETDrupalPlugin ; notReady ; exists ; 2023 ; Pharmacological Reviews Volume 75 ; 75 ; https://pharmrev.aspetjournals.org/ ; > #Unable to fetch probe permission page, https://pharmrev.aspetjournals.org/content/75/1/62.long
-    au < aspet.ClockssASPETDrupalPlugin ; manifest ; exists ; 2024 ; Pharmacological Reviews Volume 76 ; 76 ; https://pharmrev.aspetjournals.org/ ; > #Unable to fetch probe permission page, https://pharmrev.aspetjournals.org/content/76/1/62.long
+    au < aspet.ClockssASPETDrupalPlugin ; manifest ; exists ; 2024 ; Pharmacological Reviews Volume 76 ; 76 ; https://pharmrev.aspetjournals.org/ ; >
 
     }
   }
