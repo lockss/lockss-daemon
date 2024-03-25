@@ -83,6 +83,7 @@
     >
 
     param[base_url] = http://www.plantphysiol.org/
+    pluginPrefix = org.lockss.plugin.highwire.
 
     {
 
@@ -94,7 +95,7 @@
     }
 
     {
-      pluginPrefix = org.lockss.plugin.highwire.
+
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < aspb.ASPBDrupalPlugin ; doNotProcess ; 1926 ; Plant Physiology Volume 1 ; 1 >
