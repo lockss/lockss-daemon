@@ -323,13 +323,13 @@
     au < doNotProcess ; 2008 ; Annals of Tropical Medicine and Public Health Volume 1 ; 2008 ; 1 ; https://www.atmph.org/ >
     au < doNotProcess ; 2009 ; Annals of Tropical Medicine and Public Health Volume 2 ; 2009 ; 2 ; https://www.atmph.org/ >
     au < doNotProcess ; 2010 ; Annals of Tropical Medicine and Public Health Volume 3 ; 2010 ; 3 ; https://www.atmph.org/ >
-    au < released ; 2011 ; Annals of Tropical Medicine and Public Health Volume 4 ; 2011 ; 4 ; http://www.atmph.org/ >
-    au < released ; 2012 ; Annals of Tropical Medicine and Public Health Volume 5 ; 2012 ; 5 ; http://www.atmph.org/ >
-    au < released ; 2013 ; Annals of Tropical Medicine and Public Health Volume 6 ; 2013 ; 6 ; http://www.atmph.org/ >
-    au < released ; 2014 ; Annals of Tropical Medicine and Public Health Volume 7 ; 2014 ; 7 ; http://www.atmph.org/ >
-    au < released ; 2015 ; Annals of Tropical Medicine and Public Health Volume 8 ; 2015 ; 8 ; http://www.atmph.org/ >
-    au < released ; 2016 ; Annals of Tropical Medicine and Public Health Volume 9 ; 2016 ; 9 ; http://www.atmph.org/ >
-    au < released ; 2017 ; Annals of Tropical Medicine and Public Health Volume 10 ; 2017 ; 10 ; http://www.atmph.org/ >
+    au < down ; 2011 ; Annals of Tropical Medicine and Public Health Volume 4 ; 2011 ; 4 ; http://www.atmph.org/ >
+    au < down ; 2012 ; Annals of Tropical Medicine and Public Health Volume 5 ; 2012 ; 5 ; http://www.atmph.org/ >
+    au < down ; 2013 ; Annals of Tropical Medicine and Public Health Volume 6 ; 2013 ; 6 ; http://www.atmph.org/ >
+    au < down ; 2014 ; Annals of Tropical Medicine and Public Health Volume 7 ; 2014 ; 7 ; http://www.atmph.org/ >
+    au < down ; 2015 ; Annals of Tropical Medicine and Public Health Volume 8 ; 2015 ; 8 ; http://www.atmph.org/ >
+    au < down ; 2016 ; Annals of Tropical Medicine and Public Health Volume 9 ; 2016 ; 9 ; http://www.atmph.org/ >
+    au < down ; 2017 ; Annals of Tropical Medicine and Public Health Volume 10 ; 2017 ; 10 ; http://www.atmph.org/ >
 
   }
 
@@ -2276,12 +2276,13 @@
 #    param[base_url] = https://www.ijghtn.com/
 
     param[journal_issn] = 2455-9393
+    #move to LWW in 2024, moved https://journals.lww.com/ijgh/
 
-    au < released ; 2016 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 1 ; 2016 ; 1 ; https://www.ijghtn.com/ >
-    au < released ; 2017 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 2 ; 2017 ; 2 ; https://www.ijghtn.com/ >
-    au < released ; 2018 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 3 ; 2018 ; 3 ; https://www.ijghtn.com/ >
-    au < released ; 2019 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 4 ; 2019 ; 4 ; https://www.ijghtn.com/ >
-    au < released ; 2020 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 5 ; 2020 ; 5 ; https://www.ijghtn.com/ >
+    au < down ; 2016 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 1 ; 2016 ; 1 ; https://www.ijghtn.com/ >
+    au < down ; 2017 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 2 ; 2017 ; 2 ; https://www.ijghtn.com/ >
+    au < down ; 2018 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 3 ; 2018 ; 3 ; https://www.ijghtn.com/ >
+    au < down ; 2019 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 4 ; 2019 ; 4 ; https://www.ijghtn.com/ >
+    au < down ; 2020 ; International Journal of Gastroenterology, Hepatology, Transplant and Nutrition Volume 5 ; 2020 ; 5 ; https://www.ijghtn.com/ >
 
   }
 
@@ -2677,19 +2678,19 @@
     au < doNotProcess ; 2007 ; Journal of Conservative Dentistry Volume 10 ; 2007 ; 10 ; https://www.jcd.org.in/ >
     au < doNotProcess ; 2008 ; Journal of Conservative Dentistry Volume 11 ; 2008 ; 11 ; https://www.jcd.org.in/ >
     au < doNotProcess ; 2009 ; Journal of Conservative Dentistry Volume 12 ; 2009 ; 12 ; https://www.jcd.org.in/ >
-    au < released ; 2010 ; Journal of Conservative Dentistry Volume 13 ; 2010 ; 13 ; https://www.jcd.org.in/ >
-    au < released ; 2011 ; Journal of Conservative Dentistry Volume 14 ; 2011 ; 14 ; http://www.jcd.org.in/ >
-    au < released ; 2012 ; Journal of Conservative Dentistry Volume 15 ; 2012 ; 15 ; http://www.jcd.org.in/ >
-    au < released ; 2013 ; Journal of Conservative Dentistry Volume 16 ; 2013 ; 16 ; http://www.jcd.org.in/ >
-    au < released ; 2014 ; Journal of Conservative Dentistry Volume 17 ; 2014 ; 17 ; http://www.jcd.org.in/ >
-    au < released ; 2015 ; Journal of Conservative Dentistry Volume 18 ; 2015 ; 18 ; http://www.jcd.org.in/ >
-    au < released ; 2016 ; Journal of Conservative Dentistry Volume 19 ; 2016 ; 19 ; http://www.jcd.org.in/ >
-    au < released ; 2017 ; Journal of Conservative Dentistry Volume 20 ; 2017 ; 20 ; http://www.jcd.org.in/ >
-    au < released ; 2018 ; Journal of Conservative Dentistry Volume 21 ; 2018 ; 21 ; http://www.jcd.org.in/ >
-    au < released ; 2019 ; Journal of Conservative Dentistry Volume 22 ; 2019 ; 22 ; https://www.jcd.org.in/ >
+    au < down ; 2010 ; Journal of Conservative Dentistry Volume 13 ; 2010 ; 13 ; https://www.jcd.org.in/ >
+    au < down ; 2011 ; Journal of Conservative Dentistry Volume 14 ; 2011 ; 14 ; http://www.jcd.org.in/ >
+    au < down ; 2012 ; Journal of Conservative Dentistry Volume 15 ; 2012 ; 15 ; http://www.jcd.org.in/ >
+    au < down ; 2013 ; Journal of Conservative Dentistry Volume 16 ; 2013 ; 16 ; http://www.jcd.org.in/ >
+    au < down ; 2014 ; Journal of Conservative Dentistry Volume 17 ; 2014 ; 17 ; http://www.jcd.org.in/ >
+    au < down ; 2015 ; Journal of Conservative Dentistry Volume 18 ; 2015 ; 18 ; http://www.jcd.org.in/ >
+    au < down ; 2016 ; Journal of Conservative Dentistry Volume 19 ; 2016 ; 19 ; http://www.jcd.org.in/ >
+    au < down ; 2017 ; Journal of Conservative Dentistry Volume 20 ; 2017 ; 20 ; http://www.jcd.org.in/ >
+    au < down ; 2018 ; Journal of Conservative Dentistry Volume 21 ; 2018 ; 21 ; http://www.jcd.org.in/ >
+    au < down ; 2019 ; Journal of Conservative Dentistry Volume 22 ; 2019 ; 22 ; https://www.jcd.org.in/ >
     au < doNotProcess ; 2020 ; Journal of Conservative Dentistry Volume 23 ; 2020 ; 23 ; https://www.jcd.org.in/ > #500 error
-    au < released ; 2021 ; Journal of Conservative Dentistry Volume 24 ; 2021 ; 24 ; https://www.jcd.org.in/ >
-    au < released ; 2022 ; Journal of Conservative Dentistry Volume 25 ; 2022 ; 25 ; https://www.jcd.org.in/ >
+    au < down ; 2021 ; Journal of Conservative Dentistry Volume 24 ; 2021 ; 24 ; https://www.jcd.org.in/ >
+    au < down ; 2022 ; Journal of Conservative Dentistry Volume 25 ; 2022 ; 25 ; https://www.jcd.org.in/ >
     au < doNotProcess ; 2023 ; Journal of Conservative Dentistry Volume 26 ; 2023 ; 26 ; https://www.jcd.org.in/ >
 
   }
@@ -5908,10 +5909,11 @@
 
       param[journal_issn] = 0975-962X
 #      param[base_url] = http://www.ijdentistry.com/
+      #Moved to WordPress
 
-      au < released ; 2014 ; Indian Journal of Dentistry Volume 5 ; 2014 ; 5 ; http://www.ijdentistry.com/ >
-      au < released ; 2015 ; Indian Journal of Dentistry Volume 6 ; 2015 ; 6 ; http://www.ijdentistry.com/ >
-      au < released ; 2016 ; Indian Journal of Dentistry Volume 7 ; 2016 ; 7 ; http://www.ijdentistry.com/ >
+      au < down ; 2014 ; Indian Journal of Dentistry Volume 5 ; 2014 ; 5 ; http://www.ijdentistry.com/ >
+      au < down ; 2015 ; Indian Journal of Dentistry Volume 6 ; 2015 ; 6 ; http://www.ijdentistry.com/ >
+      au < down ; 2016 ; Indian Journal of Dentistry Volume 7 ; 2016 ; 7 ; http://www.ijdentistry.com/ >
 
   }
 
@@ -7110,11 +7112,11 @@
       #home page 500 error. See https://www.journal-ina.com/backissues.asp, http://www.journal-ina.com/lockss.txt
       #Content at https://www.journal-ina.com/browse.asp
 
-      au < released ; 2014 ; Journal of Integrative Nephrology and Andrology Volume 1 ; 2014 ; 1 ; http://www.journal-ina.com/ >
-      au < released ; 2015 ; Journal of Integrative Nephrology and Andrology Volume 2 ; 2015 ; 2 ; http://www.journal-ina.com/ >
-      au < released ; 2016 ; Journal of Integrative Nephrology and Andrology Volume 3 ; 2016 ; 3 ; http://www.journal-ina.com/ >
-      au < released ; 2017 ; Journal of Integrative Nephrology and Andrology Volume 4 ; 2017 ; 4 ; http://www.journal-ina.com/ >
-      au < released ; 2018 ; Journal of Integrative Nephrology and Andrology Volume 5 ; 2018 ; 5 ; http://www.journal-ina.com/ >
+      au < down ; 2014 ; Journal of Integrative Nephrology and Andrology Volume 1 ; 2014 ; 1 ; http://www.journal-ina.com/ >
+      au < down ; 2015 ; Journal of Integrative Nephrology and Andrology Volume 2 ; 2015 ; 2 ; http://www.journal-ina.com/ >
+      au < down ; 2016 ; Journal of Integrative Nephrology and Andrology Volume 3 ; 2016 ; 3 ; http://www.journal-ina.com/ >
+      au < down ; 2017 ; Journal of Integrative Nephrology and Andrology Volume 4 ; 2017 ; 4 ; http://www.journal-ina.com/ >
+      au < down ; 2018 ; Journal of Integrative Nephrology and Andrology Volume 5 ; 2018 ; 5 ; http://www.journal-ina.com/ >
       au < notReady ; 2019 ; Journal of Integrative Nephrology and Andrology Volume 6 ; 2019 ; 6 ; https://www.journal-ina.com/ >
       au < notReady ; 2020 ; Journal of Integrative Nephrology and Andrology Volume 7 ; 2020 ; 7 ; https://www.journal-ina.com/ >
 
@@ -7605,18 +7607,19 @@
 
       param[journal_issn] = 0972-1282
 #      param[base_url] = http://www.jacmjournal.org/
+      #move to LWW in 2023, moved https://journals.lww.com/jacm/
 
-      au < released ; 2013 ; Journal of The Academy of Clinical Microbiologists Volume 15 ; 2013 ; 15 ; http://www.jacmjournal.org/ >
-      au < released ; 2014 ; Journal of The Academy of Clinical Microbiologists Volume 16 ; 2014 ; 16 ; http://www.jacmjournal.org/ >
-      au < released ; 2015 ; Journal of The Academy of Clinical Microbiologists Volume 17 ; 2015 ; 17 ; http://www.jacmjournal.org/ >
-      au < released ; 2016 ; Journal of The Academy of Clinical Microbiologists Volume 18 ; 2016 ; 18 ; http://www.jacmjournal.org/ >
-      au < released ; 2017 ; Journal of The Academy of Clinical Microbiologists Volume 19 ; 2017 ; 19 ; http://www.jacmjournal.org/ >
-      au < released ; 2018 ; Journal of The Academy of Clinical Microbiologists Volume 20 ; 2018 ; 20 ; http://www.jacmjournal.org/ >
-      au < released ; 2019 ; Journal of The Academy of Clinical Microbiologists Volume 21 ; 2019 ; 21 ; https://www.jacmjournal.org/ >
-      au < released ; 2020 ; Journal of The Academy of Clinical Microbiologists Volume 22 ; 2020 ; 22 ; https://www.jacmjournal.org/ >
-      au < released ; 2021 ; Journal of The Academy of Clinical Microbiologists Volume 23 ; 2021 ; 23 ; https://www.jacmjournal.org/ >
-      au < released ; 2022 ; Journal of The Academy of Clinical Microbiologists Volume 24 ; 2022 ; 24 ; https://www.jacmjournal.org/ >
-      au < manifest ; 2023 ; Journal of The Academy of Clinical Microbiologists Volume 25 ; 2023 ; 25 ; https://www.jacmjournal.org/ >
+      au < down ; 2013 ; Journal of The Academy of Clinical Microbiologists Volume 15 ; 2013 ; 15 ; http://www.jacmjournal.org/ >
+      au < down ; 2014 ; Journal of The Academy of Clinical Microbiologists Volume 16 ; 2014 ; 16 ; http://www.jacmjournal.org/ >
+      au < down ; 2015 ; Journal of The Academy of Clinical Microbiologists Volume 17 ; 2015 ; 17 ; http://www.jacmjournal.org/ >
+      au < down ; 2016 ; Journal of The Academy of Clinical Microbiologists Volume 18 ; 2016 ; 18 ; http://www.jacmjournal.org/ >
+      au < down ; 2017 ; Journal of The Academy of Clinical Microbiologists Volume 19 ; 2017 ; 19 ; http://www.jacmjournal.org/ >
+      au < down ; 2018 ; Journal of The Academy of Clinical Microbiologists Volume 20 ; 2018 ; 20 ; http://www.jacmjournal.org/ >
+      au < down ; 2019 ; Journal of The Academy of Clinical Microbiologists Volume 21 ; 2019 ; 21 ; https://www.jacmjournal.org/ >
+      au < down ; 2020 ; Journal of The Academy of Clinical Microbiologists Volume 22 ; 2020 ; 22 ; https://www.jacmjournal.org/ >
+      au < down ; 2021 ; Journal of The Academy of Clinical Microbiologists Volume 23 ; 2021 ; 23 ; https://www.jacmjournal.org/ >
+      au < down ; 2022 ; Journal of The Academy of Clinical Microbiologists Volume 24 ; 2022 ; 24 ; https://www.jacmjournal.org/ >
+      au < doNotProcess ; 2023 ; Journal of The Academy of Clinical Microbiologists Volume 25 ; 2023 ; 25 ; https://www.jacmjournal.org/ >
 
   }
 
