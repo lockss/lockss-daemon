@@ -912,6 +912,15 @@
 
     {
 
+      #plugin = org.lockss.plugin.highwire.HighWirePlugin
+      #implicit < status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2006 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 290 [superseded] ; 290 >
+
+    }
+
+    {
+
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < HighWireStrVolPlugin ; down ; 2005 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 288 ; 288 >
@@ -1024,6 +1033,15 @@
     # other possible issn 0363-6127
     {
 
+      #plugin = org.lockss.plugin.highwire.HighWirePlugin
+      #implicit < status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2006 ; American Journal of Physiology - Renal Physiology Volume 290 [superseded] ; 290 >
+
+    }
+
+    {
+
       au < HighWireStrVolPlugin ; down ; 2005 ; American Journal of Physiology - Renal Physiology Volume 288 ; 288 >
       au < HighWireStrVolPlugin ; down ; 2005 ; American Journal of Physiology - Renal Physiology Volume 289 ; 289 >
       au < HighWireStrVolPlugin ; down ; 2006 ; American Journal of Physiology - Renal Physiology Volume 290 ; 290 >
@@ -1132,6 +1150,15 @@
 
     comment[current_plugin] = HighWirePressH20Plugin
     param[base_url] = http://jap.physiology.org/
+
+    {
+
+      #plugin = org.lockss.plugin.highwire.HighWirePlugin
+      #implicit < status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2006 ; Journal of Applied Physiology Volume 100 [superseded] ; 100 >
+
+    }
 
     {
     
@@ -1289,6 +1316,15 @@
 
     {
 
+      #plugin = org.lockss.plugin.highwire.HighWirePlugin
+      #implicit < status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2006 ; Journal of Neurophysiology Volume 95 [superseded] ; 95 >
+
+    }
+
+    {
+
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Neurophysiology Volume 93 ; 93 >
@@ -1435,6 +1471,15 @@
 
     comment[current_plugin] = HighWirePressH20Plugin
     param[base_url] = http://physiolgenomics.physiology.org/
+
+    {
+
+      #plugin = org.lockss.plugin.highwire.HighWirePlugin
+      #implicit < status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2006 ; Physiological Genomics Volume 25 [superseded] ; 25 >
+
+    }
 
     {
 
@@ -1647,6 +1692,15 @@
 
     comment[current_plugin] = aps.APSDrupalPlugin
     param[base_url] = http://physiologyonline.physiology.org/
+
+    {
+
+      #plugin = org.lockss.plugin.highwire.HighWirePlugin
+      #implicit < status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2006 ; Physiology Volume 21 [superseded] ; 21 >
+
+    }
 
     {
 
