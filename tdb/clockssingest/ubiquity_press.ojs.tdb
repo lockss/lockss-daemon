@@ -1959,9 +1959,9 @@
       param[base_url] = https://account.ijelt.dundee.ac.uk/ #login found, https://account.ijelt.dundee.ac.uk/index.php/up-j-ijelt/login?source=%2Findex.php%2Fup-j-ijelt%2Fuser%2Fprofile
       param[journal_id] = up-j-ijelt
 
-      au < expected ; exists ; 2022 ; 1 ; International Journal of Educational and Life Transitions Volume 2022 ; 2022 ; > #login found
-      au < expected ; exists ; 2023 ; 2 ; International Journal of Educational and Life Transitions Volume 2023 ; 2023 ; > #login found
-      au < expected ; exists ; 2024 ; 3 ; International Journal of Educational and Life Transitions Volume 2024 ; 2024 ; > #login found
+      au < exists ; exists ; 2022 ; 1 ; International Journal of Educational and Life Transitions Volume 2022 ; 2022 ; > #login found
+      au < exists ; exists ; 2023 ; 2 ; International Journal of Educational and Life Transitions Volume 2023 ; 2023 ; > #login found
+      au < exists ; exists ; 2024 ; 3 ; International Journal of Educational and Life Transitions Volume 2024 ; 2024 ; > #login found
 
   }
 
@@ -3335,7 +3335,8 @@
       au < finished ; crawling ; 2019 ; 23-24 ; Digithum Volume 2019 ; 2019 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; 25-26 ; Digithum Volume 2020 ; 2020 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; 27-28 ; Digithum Volume 2021 ; 2021 ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2022 ; 29 ; Digithum Volume 2022 ; 2022 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2022 ; 29-30 ; Digithum Volume 2022 ; 2022 ; reingest1.clockss.org:8082 >
+      au < exists ; exists ; 2023 ; 31 ; Digithum Volume 2023 ; 2023 ; >
 
   }
 
@@ -3419,8 +3420,6 @@
       au < finished ; crawling ; 2020 ; 1 ; New Area Studies Volume 2020 ; 2020 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; 2 ; New Area Studies Volume 2021 ; 2021 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2022 ; 3 ; New Area Studies Volume 2022 ; 2022 ; reingest3.clockss.org:8083 >
-      au < expected ; exists ; 2023 ; 4 ; New Area Studies Volume 2023 ; 2023 ; >
-      au < expected ; exists ; 2024 ; 5 ; New Area Studies Volume 2024 ; 2024 ; >
 
   }
 }
