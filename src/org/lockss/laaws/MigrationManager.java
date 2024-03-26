@@ -56,6 +56,8 @@ public class MigrationManager extends BaseLockssDaemonManager
   static final String STATUS_ERRORS = "errors";
   static final String STATUS_PROGRESS = "progress";
 
+  public static final String PARAM_IS_MIGRATOR_ENABLED = PREFIX + "migrationEnabled";
+  public static final boolean DEFAULT_IS_MIGRATOR_ENABLED = false;
   public static final String PARAM_IS_MIGRATOR_CONFIGURED = PREFIX + "isConfigured";
   public static final boolean DEFAULT_IS_MIGRATOR_CONFIGURED = false;
   public static final String PARAM_DEBUG_MODE = PREFIX + "debug";
@@ -75,6 +77,7 @@ public class MigrationManager extends BaseLockssDaemonManager
   private long startTime = 0;
 
   boolean isDaemonInMigrationMode;
+  boolean isDaemonMigrating;
   boolean isMigrationInDebugMode;
 
   ConfigManager cfgMgr;
@@ -92,6 +95,10 @@ public class MigrationManager extends BaseLockssDaemonManager
     return isDaemonInMigrationMode;
   }
 
+  public boolean isDaemonMigrating() {
+    return isDaemonMigrating;
+  }
+
   public boolean isMigrationInDebugMode() {
     return isMigrationInDebugMode;
   }
@@ -105,15 +112,26 @@ public class MigrationManager extends BaseLockssDaemonManager
       }
 
       isDaemonInMigrationMode =
+          config.getBoolean(PARAM_IS_MIGRATOR_ENABLED, DEFAULT_IS_MIGRATOR_ENABLED);
+      isDaemonMigrating =
           config.getBoolean(PARAM_IS_MIGRATING, DEFAULT_IS_MIGRATING);
       isMigrationInDebugMode =
           config.getBoolean(PARAM_DEBUG_MODE, DEFAULT_DEBUG_MODE);
     }
   }
 
+  public void setMigrationMode(boolean isEnabled) throws IOException {
+    Configuration mCfg = cfgMgr.newConfiguration();
+    mCfg.put(MigrationManager.PARAM_IS_MIGRATOR_ENABLED, String.valueOf(isEnabled));
+    cfgMgr.modifyCacheConfigFile(mCfg,
+        ConfigManager.CONFIG_FILE_MIGRATION, CONFIG_FILE_MIGRATION_HEADER);
+    cfgMgr.reloadAndWait();
+    isDaemonInMigrationMode = isEnabled;
+  }
+
   public void setIsMigrating(boolean isMigrating) throws IOException {
     if (isMigrationInDebugMode()) {
-      log.debug("Not setting isMigrating becuae in debug mode");
+      log.debug("Not setting isMigrating because in debug mode");
       return;
     }
     Configuration mCfg = cfgMgr.newConfiguration();

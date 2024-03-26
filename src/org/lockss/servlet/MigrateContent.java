@@ -351,21 +351,6 @@ public class MigrateContent extends LockssServlet {
     return au;
   }
 
-  private void displayStartMigration() throws IOException {
-    Page page = newPage();
-    addCssLocations(page);
-    layoutErrorBlock(page);
-    ServletUtil.layoutExplanationBlock(page, "");
-
-    if (migrationMgr.isDaemonInMigrationMode() || migrationMgr.isMigrationInDebugMode()) {
-      // TODO: Display existing AU migration form
-    } else {
-      // TODO: Display migrator configuration form
-    }
-
-    endPage(page);
-  }
-
   private void displayPage() throws IOException {
     Page page = newPage();
     addCssLocations(page);

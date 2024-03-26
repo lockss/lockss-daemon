@@ -899,7 +899,7 @@ public class V2AuMover {
   private void setAuMigrationState(ArchivalUnit au,
                                    AuState.MigrationState state) {
     // Return if we're not migrating or if we're in debug mode
-    if (!(migrationMgr.isDaemonInMigrationMode() ||
+    if (!(migrationMgr.isDaemonMigrating() ||
           migrationMgr.isMigrationInDebugMode())) {
       return;
     }
@@ -925,7 +925,7 @@ public class V2AuMover {
         break;
       case Finished:
         // Optionally delete the AU from the system
-        if (migrationMgr.isDaemonInMigrationMode()) {
+        if (migrationMgr.isDaemonMigrating()) {
           try {
             if (isDeleteMigratedAus) {
               // Remove AU from LOCKSS

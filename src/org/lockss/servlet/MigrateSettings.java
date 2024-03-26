@@ -59,7 +59,7 @@ public class MigrateSettings extends LockssServlet {
   static final String KEY_USERNAME = "username";
   static final String KEY_PASSWORD = "password";
   static final String KEY_DATABASE_PASS = "dbPassword";
-  static final String KEY_FETCHED_CONFIG = "isTargetConfigFetched";
+  static final String KEY_FETCHED_V2_CONFIG = "isTargetConfigFetched";
   static final String KEY_MIGRATION_CONFIG = "mCfg";
 
   static final String KEY_DELETED_AUS_DIR = "deletedAusDir";
@@ -84,6 +84,7 @@ public class MigrateSettings extends LockssServlet {
 
   boolean isDeleteAusEnabled;
   boolean isTargetConfigFetched;
+  boolean isMigrationConfigured;
 
   String deletedAusDir = "MIGRATED";
   String deleteAusInterval = "1h";
@@ -108,22 +109,23 @@ public class MigrateSettings extends LockssServlet {
     session = getSession();
     Configuration cfg = ConfigManager.getCurrentConfig();
 
-    boolean hasMigrationConfig =
-        !cfg.getConfigTree("v2." + DbManager.DATASOURCE_ROOT).isEmpty();
+    isMigrationConfigured = cfg.getBoolean(
+        MigrationManager.PARAM_IS_MIGRATOR_CONFIGURED,
+        MigrationManager.DEFAULT_IS_MIGRATOR_CONFIGURED);
 
     boolean isInitializedFromConfig =
         getSessionAttribute(KEY_INITIALIZED_FROM_CONFIG, false);
 
-    if (!isInitializedFromConfig && hasMigrationConfig) {
+    if (!isInitializedFromConfig && isMigrationConfigured) {
       initParamsFromConfig(cfg);
       session.setAttribute(KEY_INITIALIZED_FROM_CONFIG, true);
-      session.setAttribute(KEY_FETCHED_CONFIG, true);
+      session.setAttribute(KEY_FETCHED_V2_CONFIG, true);
     } else {
       initParamsFromSession();
     }
 
     // Internal state
-    isTargetConfigFetched = getSessionAttribute(KEY_FETCHED_CONFIG, false);
+    isTargetConfigFetched = getSessionAttribute(KEY_FETCHED_V2_CONFIG, false);
   }
 
   private void initParamsFromConfig(Configuration cfg) throws IOException {
@@ -159,6 +161,20 @@ public class MigrateSettings extends LockssServlet {
 
     // Migration configuration
     mCfg = getSessionAttribute(KEY_MIGRATION_CONFIG, ConfigManager.newConfiguration());
+  }
+
+  private void initParamsFromFormData() {
+    // Migration target
+    hostname = getParameter(KEY_HOSTNAME);
+    cfgUiPort = Integer.parseInt(getParameter(KEY_CFGSVC_UI_PORT));
+    userName = getParameter(KEY_USERNAME);
+    userPass = getParameter(KEY_PASSWORD);
+
+    // Database
+    dbPass = getParameter(KEY_DATABASE_PASS);
+
+    // Migration configuration
+    isDeleteAusEnabled = hasParameter(KEY_DELETE_AUS);
   }
 
   /**
@@ -219,16 +235,10 @@ public class MigrateSettings extends LockssServlet {
     if (requestMethod.equals(HttpRequest.__POST)) {
       String action = getParameter(KEY_ACTION);
 
-      hostname = getParameter(KEY_HOSTNAME);
-      cfgUiPort = Integer.parseInt(getParameter(KEY_CFGSVC_UI_PORT));
-      userName = getParameter(KEY_USERNAME);
-      userPass = getParameter(KEY_PASSWORD);
-      dbPass = getParameter(KEY_DATABASE_PASS);
-      isDeleteAusEnabled = hasParameter(KEY_DELETE_AUS);
-
       switch (action) {
         case ACTION_LOAD_V2_CFG:
           try {
+            initParamsFromFormData();
             Configuration v2cfg = getConfigFromMigrationTarget();
             mCfg = getMigrationConfig(hostname, v2cfg);
             isTargetConfigFetched = true;
@@ -236,12 +246,12 @@ public class MigrateSettings extends LockssServlet {
           } catch (IOException e) {
             fetchError = "Could not fetch migration target configuration";
             log.error(fetchError, e);
-            session.removeAttribute(KEY_FETCHED_CONFIG);
+            session.removeAttribute(KEY_FETCHED_V2_CONFIG);
             isTargetConfigFetched = false;
           } catch (MigrationManager.UnsupportedConfigurationException e) {
             fetchError = "Unsupported configuration: " + e.getMessage();
             log.error(fetchError, e);
-            session.removeAttribute(KEY_FETCHED_CONFIG);
+            session.removeAttribute(KEY_FETCHED_V2_CONFIG);
             isTargetConfigFetched = false;
           } finally {
             if (fetchError != null) {
@@ -249,12 +259,14 @@ public class MigrateSettings extends LockssServlet {
               mCfg.removeConfigTree(V2_PREFIX);
             }
             migrationMgr.setIsMigrating(false);
+            isMigrationConfigured = false;
             dbPass = null;
           }
 
           break;
 
-        case ACTION_NEXT:
+        case ACTION_ENTER_MIGRATION_MODE:
+          initParamsFromFormData();
           if (!isTargetConfigFetched) {
             errMsg = "Missing database configuration";
           } else if (DbManagerSql.isTypeDerby(mCfg.get(DbManager.PARAM_DATASOURCE_CLASSNAME))) {
@@ -284,6 +296,7 @@ public class MigrateSettings extends LockssServlet {
             }
 
             // Write migration configuration to file
+            mCfg.put(MigrationManager.PARAM_IS_MIGRATOR_ENABLED, "true");
             writeMigrationConfigFile(mCfg);
             ConfigManager.getConfigManager().reloadAndWait();
 
@@ -291,6 +304,10 @@ public class MigrateSettings extends LockssServlet {
             String redir = srvURL(AdminServletManager.SERVLET_MIGRATE_CONTENT);
             resp.sendRedirect(redir);
           }
+          break;
+
+        case ACTION_EXIT_MIGRATION_MODE:
+          migrationMgr.setMigrationMode(false);
           break;
 
         default:
@@ -301,7 +318,7 @@ public class MigrateSettings extends LockssServlet {
     displayPage();
 
     // Remember state
-    session.setAttribute(KEY_FETCHED_CONFIG, isTargetConfigFetched);
+    session.setAttribute(KEY_FETCHED_V2_CONFIG, isTargetConfigFetched);
     session.setAttribute(KEY_HOSTNAME, hostname);
     session.setAttribute(KEY_CFGSVC_UI_PORT, cfgUiPort);
     session.setAttribute(KEY_USERNAME, userName);
@@ -315,7 +332,8 @@ public class MigrateSettings extends LockssServlet {
     addCssLocations(page);
     layoutErrorBlock(page);
     ServletUtil.layoutExplanationBlock(page, "");
-    page.add(makeForm());
+    page.add(migrationMgr.isDaemonInMigrationMode() ?
+        makeDisplayCfg() :makeForm());
     endPage(page);
   }
 
@@ -400,6 +418,60 @@ public class MigrateSettings extends LockssServlet {
     tbl.add(new Break(Break.Rule));
     tbl.add(new Break());
 
+    Input enterButton = new Input(Input.Submit, KEY_ACTION, ACTION_ENTER_MIGRATION_MODE);
+    if (!isTargetConfigFetched) {
+      enterButton.attribute("disabled");
+    }
+    tbl.add(enterButton);
+
+    frm.add(tbl);
+    comp.add(frm);
+    return comp;
+  }
+
+  private Element makeDisplayCfg() {
+    Composite comp = new Composite();
+    Form frm = new Form(srvURL(myServletDescr()));
+    frm.method("POST");
+    Table tbl = new Table(0, "align=center cellspacing=2 cellpadding=0");
+
+    addSection(tbl, "Migration Target");
+
+    addFieldToTable(tbl, "V2 Hostname", hostname);
+    addFieldToTable(tbl, "V2 Configuration Service Port", String.valueOf(cfgUiPort));
+    addFieldToTable(tbl, "Username", userName);
+    addHiddenFieldToTable(tbl, "Password", userPass);
+
+    addSubsection(tbl, "Metadata Database");
+
+    Configuration v2cfg = mCfg.getConfigTree(V2_PREFIX);
+
+    addFieldToTable(tbl, "Hostname", v2cfg.get(DbManager.PARAM_DATASOURCE_SERVERNAME));
+    addFieldToTable(tbl, "Port", v2cfg.get(DbManager.PARAM_DATASOURCE_PORTNUMBER));
+    addFieldToTable(tbl, "Database Type",
+        getHumanReadableDatabaseType(v2cfg.get(DbManager.PARAM_DATASOURCE_CLASSNAME)));
+    addFieldToTable(tbl, "Database Name",
+        getShortenedDatabaseName(v2cfg.get(DbManager.PARAM_DATASOURCE_DATABASENAME)));
+    addFieldToTable(tbl, "Database User", v2cfg.get(DbManager.PARAM_DATASOURCE_USER));
+    addHiddenFieldToTable(tbl, "Database Password", v2cfg.get(DbManager.PARAM_DATASOURCE_PASSWORD));
+
+    addSection(tbl, "Migration Options");
+
+    addDisabledCheckboxToTable(tbl, "Delete AUs after migration",
+        KEY_DELETE_AUS, isDeleteAusEnabled);
+
+    // Advanced migration options - only in debug mode
+    if (migrationMgr.isMigrationInDebugMode()) {
+      addFieldToTable(tbl, "Move Deleted AUs To", deletedAusDir);
+      addFieldToTable(tbl, "Delete AUs interval", deleteAusInterval);
+    }
+
+    tbl.newRow();
+    tbl.newCell(CENTERED_CELL);
+    tbl.add(new Break());
+    tbl.add(new Break(Break.Rule));
+    tbl.add(new Break());
+
 //    Input toggleMigrationMode = new Input(Input.Submit, KEY_ACTION,
 //        !migrationMgr.isDaemonInMigrationMode() ? ACTION_ENTER_MIGRATION_MODE : ACTION_EXIT_MIGRATION_MODE);
 //    if (!isTargetConfigFetched && !migrationMgr.isDaemonInMigrationMode()) {
@@ -407,12 +479,8 @@ public class MigrateSettings extends LockssServlet {
 //    }
 //    tbl.add(toggleMigrationMode);
 
-    Input nextButton = new Input(Input.Submit, KEY_ACTION, ACTION_NEXT);
-    if (!isTargetConfigFetched) {
-      nextButton.attribute("disabled");
-    }
-
-    tbl.add(nextButton);
+    Input exitButton = new Input(Input.Submit, KEY_ACTION, ACTION_EXIT_MIGRATION_MODE);
+    tbl.add(exitButton);
 
     frm.add(tbl);
     comp.add(frm);
@@ -504,9 +572,20 @@ public class MigrateSettings extends LockssServlet {
   }
 
   private void addCheckboxToTable(Table tbl, String label, String key, boolean checked) {
+    addCheckboxToTable(tbl, label, key, checked, false);
+  }
+
+  private void addDisabledCheckboxToTable(Table tbl, String label, String key, boolean checked) {
+    addCheckboxToTable(tbl, label, key, checked, true);
+  }
+
+  private void addCheckboxToTable(Table tbl, String label, String key, boolean checked, boolean disabled) {
     Input in = new Input(Input.Checkbox, key);
     if (checked) {
       in.attribute("checked");
+    }
+    if (disabled) {
+      in.attribute("disabled");
     }
     addElementToTable(tbl, label, in);
   }
@@ -514,6 +593,12 @@ public class MigrateSettings extends LockssServlet {
   private void addFieldToTable(Table tbl, String lbl, String val) {
     Composite c = new Composite();
     c.add(val);
+    addElementToTable(tbl, lbl, c);
+  }
+
+  private void addHiddenFieldToTable(Table tbl, String lbl, String val) {
+    Composite c = new Composite();
+    c.add(val.replaceAll(".", "&bull;"));
     addElementToTable(tbl, lbl, c);
   }
 
