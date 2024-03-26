@@ -1557,7 +1557,7 @@
     au < released ; 2019 ; Archaea Volume 2019 ; 2019 ; 2019 >
     au < released ; 2020 ; Archaea Volume 2020 ; 2020 ; 2020 >
     au < released ; 2021 ; Archaea Volume 2021 ; 2021 ; 2021 >
-    au < exists ; 2022 ; Archaea Volume 2022 ; 2022 ; 2022 >
+    au < doesNotExist ; 2022 ; Archaea Volume 2022 ; 2022 ; 2022 >
     au < manifest ; 2023 ; Archaea Volume 2023 ; 2023 ; 2023 >
     au < expected ; 2024 ; Archaea Volume 2024 ; 2024 ; 2024 >
 
@@ -1582,7 +1582,7 @@
     au < doNotProcess ; 2016 ; Arthritis Volume 2016 ; 2016 ; 2016 >
     au < doNotProcess ; 2017 ; Arthritis Volume 2017 ; 2017 ; 2017 >
     au < doNotProcess ; 2018 ; Arthritis Volume 2018 ; 2018 ; 2018 >
-    au < exists ; 2019 ; Arthritis Volume 2019 ; 2019 ; 2019 >
+    au < doesNotExist ; 2019 ; Arthritis Volume 2019 ; 2019 ; 2019 >
 
   }
 
@@ -1823,7 +1823,8 @@
     au < doNotProcess ; 2016 ; Biotechnology Research International Volume 2016 ; 2016 ; 2016 >
     au < doNotProcess ; 2017 ; Biotechnology Research International Volume 2017 ; 2017 ; 2017 >
     au < released ; 2018 ; Biotechnology Research International Volume 2018 ; 2018 ; 2018 >
-    au < exists ; 2019 ; Biotechnology Research International Volume 2019 ; 2019 ; 2019 >
+    au < doesNotExist ; 2019 ; Biotechnology Research International Volume 2019 ; 2019 ; 2019 >
+    au < exists ; 2020 ; Biotechnology Research International Volume 2020 ; 2020 ; 2020 >
 
   }
 
@@ -1845,7 +1846,7 @@
     au < doNotProcess ; 2016 ; Bone Marrow Research Volume 2016 ; 2016 ; 2016 >
     au < doNotProcess ; 2017 ; Bone Marrow Research Volume 2017 ; 2017 ; 2017 >
     au < doNotProcess ; 2018 ; Bone Marrow Research Volume 2018 ; 2018 ; 2018 >
-    au < exists ; 2019 ; Bone Marrow Research Volume 2019 ; 2019 ; 2019 >
+    au < doesNotExist ; 2019 ; Bone Marrow Research Volume 2019 ; 2019 ; 2019 >
 
   }
     
@@ -2844,11 +2845,6 @@
     au < doNotProcess ; 2017 ; Child Development Research Volume 2017 ; 2017 ; 2017 >
     au < doNotProcess ; 2018 ; Child Development Research Volume 2018 ; 2018 ; 2018 >
     au < released ; 2019 ; Child Development Research Volume 2019 ; 2019 ; 2019 >
-    au < exists ; 2020 ; Child Development Research Volume 2020 ; 2020 ; 2020 >
-    au < exists ; 2021 ; Child Development Research Volume 2021 ; 2021 ; 2021 >
-    au < exists ; 2022 ; Child Development Research Volume 2022 ; 2022 ; 2022 >
-    au < expected ; 2023 ; Child Development Research Volume 2023 ; 2023 ; 2023 >
-    au < expected ; 2024 ; Child Development Research Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -2920,7 +2916,7 @@
     au < doNotProcess ; 2016 ; Cholesterol Volume 2016 ; 2016 ; 2016 >
     au < doNotProcess ; 2017 ; Cholesterol Volume 2017 ; 2017 ; 2017 >
     au < doNotProcess ; 2018 ; Cholesterol Volume 2018 ; 2018 ; 2018 >
-    au < exists ; 2019 ; Cholesterol Volume 2019 ; 2019 ; 2019 >
+    au < doesNotExist ; 2019 ; Cholesterol Volume 2019 ; 2019 ; 2019 >
 
   }
 
@@ -2941,7 +2937,6 @@
     au < doNotProcess ; 2014 ; Chromatography Research International Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Chromatography Research International Volume 2015 ; 2015 ; 2015 >
     au < doNotProcess ; 2016 ; Chromatography Research International Volume 2016 ; 2016 ; 2016 >
-    au < exists ; 2017 ; Chromatography Research International Volume 2017 ; 2017 ; 2017 >
 
   }
 
@@ -3270,7 +3265,8 @@
     au < doNotProcess ; 2016 ; Diagnostic and Therapeutic Endoscopy Volume 2016 ; 2016 ; 2016 >
     au < doNotProcess ; 2017 ; Diagnostic and Therapeutic Endoscopy Volume 2017 ; 2017 ; 2017 >
     au < doNotProcess ; 2018 ; Diagnostic and Therapeutic Endoscopy Volume 2018 ; 2018 ; 2018 >
-    au < exists ; 2019 ; Diagnostic and Therapeutic Endoscopy Volume 2019 ; 2019 ; 2019 >
+    au < doesNotExist ; 2019 ; Diagnostic and Therapeutic Endoscopy Volume 2019 ; 2019 ; 2019 >
+    au < exists ; 2020 ; Diagnostic and Therapeutic Endoscopy Volume 2020 ; 2020 ; 2020 >
 
   }
 
@@ -3454,11 +3450,6 @@
     au < doNotProcess ; 2017 ; Enzyme Research Volume 2017 ; 2017 ; 2017 >
     au < doNotProcess ; 2018 ; Enzyme Research Volume 2018 ; 2018 ; 2018 >
     au < released ; 2019 ; Enzyme Research Volume 2019 ; 2019 ; 2019 >
-    au < exists ; 2020 ; Enzyme Research Volume 2020 ; 2020 ; 2020 >
-    au < exists ; 2021 ; Enzyme Research Volume 2021 ; 2021 ; 2021 >
-    au < exists ; 2022 ; Enzyme Research Volume 2022 ; 2022 ; 2022 >
-    au < expected ; 2023 ; Enzyme Research Volume 2023 ; 2023 ; 2023 >
-    au < expected ; 2024 ; Enzyme Research Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -3603,11 +3594,6 @@
     au < doNotProcess ; 2017 ; Genetics Research International Volume 2017 ; 2017 ; 2017 >
     au < doNotProcess ; 2018 ; Genetics Research International Volume 2018 ; 2018 ; 2018 >
     au < released ; 2019 ; Genetics Research International Volume 2019 ; 2019 ; 2019 >
-    au < exists ; 2020 ; Genetics Research International Volume 2020 ; 2020 ; 2020 >
-    au < exists ; 2021 ; Genetics Research International Volume 2021 ; 2021 ; 2021 >
-    au < exists ; 2022 ; Genetics Research International Volume 2022 ; 2022 ; 2022 >
-    au < expected ; 2023 ; Genetics Research International Volume 2023 ; 2023 ; 2023 >
-    au < expected ; 2024 ; Genetics Research International Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -3724,7 +3710,7 @@
     au < doNotProcess ; 2016 ; HPB Surgery Volume 2016 ; 2016 ; 2016 >
     au < doNotProcess ; 2017 ; HPB Surgery Volume 2017 ; 2017 ; 2017 >
     au < doNotProcess ; 2018 ; HPB Surgery Volume 2018 ; 2018 ; 2018 >
-    au < exists ; 2019 ; HPB Surgery Volume 2019 ; 2019 ; 2019 >
+    au < doesNotExist ; 2019 ; HPB Surgery Volume 2019 ; 2019 ; 2019 >
 
   }
 
@@ -3941,7 +3927,7 @@
     au < doNotProcess ; 2016 ; International Journal of Analysis Volume 2016 ; 2016 ; 2016 >
     au < doNotProcess ; 2017 ; International Journal of Analysis Volume 2017 ; 2017 ; 2017 >
     au < doNotProcess ; 2018 ; International Journal of Analysis Volume 2018 ; 2018 ; 2018 >
-    au < exists ; 2019 ; International Journal of Analysis Volume 2019 ; 2019 ; 2019 >
+    au < doesNotExist ; 2019 ; International Journal of Analysis Volume 2019 ; 2019 ; 2019 >
 
   }
 
@@ -4055,7 +4041,7 @@
     au < doNotProcess ; 2016 ; International Journal of Bacteriology Volume 2016 ; 2016 ; 2016 >
     au < doNotProcess ; 2017 ; International Journal of Bacteriology Volume 2017 ; 2017 ; 2017 >
     au < released ; 2018 ; International Journal of Bacteriology Volume 2018 ; 2018 ; 2018 >
-    au < exists ; 2019 ; International Journal of Bacteriology Volume 2019 ; 2019 ; 2019 >
+    au < doesNotExist ; 2019 ; International Journal of Bacteriology Volume 2019 ; 2019 ; 2019 >
 
   }
 
@@ -4075,7 +4061,7 @@
     au < doNotProcess ; 2016 ; International Journal of Biodiversity Volume 2016 ; 2016 ; 2016 >
     au < doNotProcess ; 2017 ; International Journal of Biodiversity Volume 2017 ; 2017 ; 2017 >
     au < doNotProcess ; 2018 ; International Journal of Biodiversity Volume 2018 ; 2018 ; 2018 >
-    au < exists ; 2019 ; International Journal of Biodiversity Volume 2019 ; 2019 ; 2019 >
+    au < doesNotExist ; 2019 ; International Journal of Biodiversity Volume 2019 ; 2019 ; 2019 >
 
   }
 
@@ -4994,11 +4980,6 @@
     au < doNotProcess ; 2017 ; International Journal of Medicinal Chemistry Volume 2017 ; 2017 ; 2017 >
     au < doNotProcess ; 2018 ; International Journal of Medicinal Chemistry Volume 2018 ; 2018 ; 2018 >
     au < released ; 2019 ; International Journal of Medicinal Chemistry Volume 2019 ; 2019 ; 2019 >
-    au < exists ; 2020 ; International Journal of Medicinal Chemistry Volume 2020 ; 2020 ; 2020 >
-    au < exists ; 2021 ; International Journal of Medicinal Chemistry Volume 2021 ; 2021 ; 2021 >
-    au < exists ; 2022 ; International Journal of Medicinal Chemistry Volume 2022 ; 2022 ; 2022 >
-    au < expected ; 2023 ; International Journal of Medicinal Chemistry Volume 2023 ; 2023 ; 2023 >
-    au < expected ; 2024 ; International Journal of Medicinal Chemistry Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -5878,9 +5859,6 @@
     au < released ; 2019 ; International Scholarly Research Notices Volume 2019 ; 2019 ; 2019 >
     au < released ; 2020 ; International Scholarly Research Notices Volume 2020 ; 2020 ; 2020 >
     au < released ; 2021 ; International Scholarly Research Notices Volume 2021 ; 2021 ; 2021 >
-    au < exists ; 2022 ; International Scholarly Research Notices Volume 2022 ; 2022 ; 2022 >
-    au < expected ; 2023 ; International Scholarly Research Notices Volume 2023 ; 2023 ; 2023 >
-    au < expected ; 2024 ; International Scholarly Research Notices Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -6163,7 +6141,7 @@
     au < doNotProcess ; 2016 ; Journal of Applied Chemistry Volume 2016 ; 2016 ; 2016 >
     au < doNotProcess ; 2017 ; Journal of Applied Chemistry Volume 2017 ; 2017 ; 2017 >
     au < released ; 2018 ; Journal of Applied Chemistry Volume 2018 ; 2018 ; 2018 >
-    au < exists ; 2019 ; Journal of Applied Chemistry Volume 2019 ; 2019 ; 2019 >
+    au < exists ; 2021 ; Journal of Applied Chemistry Volume 2021 ; 2021 ; 2021 >
 
   }
 
@@ -6309,7 +6287,7 @@
     au < doNotProcess ; 2016 ; Journal of Biomedical Education Volume 2016 ; 2016 ; 2016 >
     au < doNotProcess ; 2017 ; Journal of Biomedical Education Volume 2017 ; 2017 ; 2017 >
     au < doNotProcess ; 2018 ; Journal of Biomedical Education Volume 2018 ; 2018 ; 2018 >
-    au < exists ; 2019 ; Journal of Biomedical Education Volume 2019 ; 2019 ; 2019 >
+    au < doesNotExist ; 2019 ; Journal of Biomedical Education Volume 2019 ; 2019 ; 2019 >
 
   }
 
@@ -6355,7 +6333,7 @@
     au < doNotProcess ; 2016 ; Journal of Blood Transfusion Volume 2016 ; 2016 ; 2016 >
     au < doNotProcess ; 2017 ; Journal of Blood Transfusion Volume 2017 ; 2017 ; 2017 >
     au < released ; 2018 ; Journal of Blood Transfusion Volume 2018 ; 2018 ; 2018 >
-    au < exists ; 2019 ; Journal of Blood Transfusion Volume 2019 ; 2019 ; 2019 >
+    au < doesNotExist ; 2019 ; Journal of Blood Transfusion Volume 2019 ; 2019 ; 2019 >
 
   }
 
@@ -6380,11 +6358,6 @@
     au < doNotProcess ; 2017 ; Journal of Botany Volume 2017 ; 2017 ; 2017 >
     au < doNotProcess ; 2018 ; Journal of Botany Volume 2018 ; 2018 ; 2018 >
     au < released ; 2019 ; Journal of Botany Volume 2019 ; 2019 ; 2019 >
-    au < exists ; 2020 ; Journal of Botany Volume 2020 ; 2020 ; 2020 >
-    au < exists ; 2021 ; Journal of Botany Volume 2021 ; 2021 ; 2021 >
-    au < exists ; 2022 ; Journal of Botany Volume 2022 ; 2022 ; 2022 >
-    au < expected ; 2023 ; Journal of Botany Volume 2023 ; 2023 ; 2023 >
-    au < expected ; 2024 ; Journal of Botany Volume 2024 ; 2024 ; 2024 >
 
   }
   
@@ -6632,11 +6605,6 @@
     au < doNotProcess ; 2017 ; Journal of Complex Analysis Volume 2017 ; 2017 ; 2017 >
     au < doNotProcess ; 2018 ; Journal of Complex Analysis Volume 2018 ; 2018 ; 2018 >
     au < released ; 2019 ; Journal of Complex Analysis Volume 2019 ; 2019 ; 2019 >
-    au < exists ; 2020 ; Journal of Complex Analysis Volume 2020 ; 2020 ; 2020 >
-    au < exists ; 2021 ; Journal of Complex Analysis Volume 2021 ; 2021 ; 2021 >
-    au < exists ; 2022 ; Journal of Complex Analysis Volume 2022 ; 2022 ; 2022 >
-    au < expected ; 2023 ; Journal of Complex Analysis Volume 2023 ; 2023 ; 2023 >
-    au < expected ; 2024 ; Journal of Complex Analysis Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -6985,10 +6953,6 @@
     au < doNotProcess ; 2018 ; Journal of Drug Delivery Volume 2018 ; 2018 ; 2018 >
     au < released ; 2019 ; Journal of Drug Delivery Volume 2019 ; 2019 ; 2019 >
     au < released ; 2020 ; Journal of Drug Delivery Volume 2020 ; 2020 ; 2020 >
-    au < exists ; 2021 ; Journal of Drug Delivery Volume 2021 ; 2021 ; 2021 >
-    au < exists ; 2022 ; Journal of Drug Delivery Volume 2022 ; 2022 ; 2022 >
-    au < expected ; 2023 ; Journal of Drug Delivery Volume 2023 ; 2023 ; 2023 >
-    au < expected ; 2024 ; Journal of Drug Delivery Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -7296,7 +7260,7 @@
     au < doNotProcess ; 2016 ; Journal of Geological Research Volume 2016 ; 2016 ; 2016 >
     au < doNotProcess ; 2017 ; Journal of Geological Research Volume 2017 ; 2017 ; 2017 >
     au < released ; 2018 ; Journal of Geological Research Volume 2018 ; 2018 ; 2018 >
-    au < exists ; 2019 ; Journal of Geological Research Volume 2019 ; 2019 ; 2019 >
+    au < doesNotExist ; 2019 ; Journal of Geological Research Volume 2019 ; 2019 ; 2019 >
 
   }
 
@@ -7571,7 +7535,7 @@
     au < doNotProcess ; 2018 ; Journal of Marine Biology Volume 2018 ; 2018 ; 2018 >
     au < released ; 2019 ; Journal of Marine Biology Volume 2019 ; 2019 ; 2019 >
     au < released ; 2020 ; Journal of Marine Biology Volume 2020 ; 2020 ; 2020 >
-    au < exists ; 2021 ; Journal of Marine Biology Volume 2021 ; 2021 ; 2021 >
+    au < doesNotExist ; 2021 ; Journal of Marine Biology Volume 2021 ; 2021 ; 2021 >
     au < released ; 2022 ; Journal of Marine Biology Volume 2022 ; 2022 ; 2022 >
     au < manifest ; 2023 ; Journal of Marine Biology Volume 2023 ; 2023 ; 2023 >
     au < expected ; 2024 ; Journal of Marine Biology Volume 2024 ; 2024 ; 2024 >
@@ -7594,7 +7558,7 @@
     au < doNotProcess ; 2016 ; Journal of Materials Volume 2016 ; 2016 ; 2016 >
     au < doNotProcess ; 2017 ; Journal of Materials Volume 2017 ; 2017 ; 2017 >
     au < doNotProcess ; 2018 ; Journal of Materials Volume 2018 ; 2018 ; 2018 >
-    au < exists ; 2019 ; Journal of Materials Volume 2019 ; 2019 ; 2019 >
+    au < doesNotExist ; 2019 ; Journal of Materials Volume 2019 ; 2019 ; 2019 >
 
   }
 
@@ -8050,7 +8014,7 @@
     au < doNotProcess ; 2017 ; Journal of Optimization Volume 2017 ; 2017 ; 2017 >
     au < doNotProcess ; 2018 ; Journal of Optimization Volume 2018 ; 2018 ; 2018 >
     au < released ; 2019 ; Journal of Optimization Volume 2019 ; 2019 ; 2019 >
-    au < exists ; 2020 ; Journal of Optimization Volume 2020 ; 2020 ; 2020 >
+    au < doesNotExist ; 2020 ; Journal of Optimization Volume 2020 ; 2020 ; 2020 >
     au < released ; 2021 ; Journal of Optimization Volume 2021 ; 2021 ; 2021 >
     au < released ; 2022 ; Journal of Optimization Volume 2022 ; 2022 ; 2022 >
     au < manifest ; 2023 ; Journal of Optimization Volume 2023 ; 2023 ; 2023 >
@@ -8230,10 +8194,6 @@
     au < doNotProcess ; 2018 ; Journal of Pharmaceutics Volume 2018 ; 2018 ; 2018 >
     au < released ; 2019 ; Journal of Pharmaceutics Volume 2019 ; 2019 ; 2019 >
     au < released ; 2020 ; Journal of Pharmaceutics Volume 2020 ; 2020 ; 2020 >
-    au < exists ; 2021 ; Journal of Pharmaceutics Volume 2021 ; 2021 ; 2021 >
-    au < exists ; 2022 ; Journal of Pharmaceutics Volume 2022 ; 2022 ; 2022 >
-    au < expected ; 2023 ; Journal of Pharmaceutics Volume 2023 ; 2023 ; 2023 >
-    au < expected ; 2024 ; Journal of Pharmaceutics Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -8617,7 +8577,7 @@
     au < doNotProcess ; 2016 ; Journal of Solar Energy Volume 2016 ; 2016 ; 2016 >
     au < doNotProcess ; 2017 ; Journal of Solar Energy Volume 2017 ; 2017 ; 2017 >
     au < doNotProcess ; 2018 ; Journal of Solar Energy Volume 2018 ; 2018 ; 2018 >
-    au < exists ; 2019 ; Journal of Solar Energy Volume 2019 ; 2019 ; 2019 >
+    au < doesNotExist ; 2019 ; Journal of Solar Energy Volume 2019 ; 2019 ; 2019 >
 
   }
 
@@ -8977,11 +8937,6 @@
     au < doNotProcess ; 2017 ; Journal of Veterinary Medicine Volume 2017 ; 2017 ; 2017 >
     au < doNotProcess ; 2018 ; Journal of Veterinary Medicine Volume 2018 ; 2018 ; 2018 >
     au < released ; 2019 ; Journal of Veterinary Medicine Volume 2019 ; 2019 ; 2019 >
-    au < exists ; 2020 ; Journal of Veterinary Medicine Volume 2020 ; 2020 ; 2020 >
-    au < exists ; 2021 ; Journal of Veterinary Medicine Volume 2021 ; 2021 ; 2021 >
-    au < exists ; 2022 ; Journal of Veterinary Medicine Volume 2022 ; 2022 ; 2022 >
-    au < expected ; 2023 ; Journal of Veterinary Medicine Volume 2023 ; 2023 ; 2023 >
-    au < expected ; 2024 ; Journal of Veterinary Medicine Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -9119,10 +9074,6 @@
     au < doNotProcess ; 2018 ; Malaria Research and Treatment Volume 2018 ; 2018 ; 2018 >
     au < released ; 2019 ; Malaria Research and Treatment Volume 2019 ; 2019 ; 2019 >
     au < released ; 2020 ; Malaria Research and Treatment Volume 2020 ; 2020 ; 2020 >
-    au < exists ; 2021 ; Malaria Research and Treatment Volume 2021 ; 2021 ; 2021 >
-    au < exists ; 2022 ; Malaria Research and Treatment Volume 2022 ; 2022 ; 2022 >
-    au < expected ; 2023 ; Malaria Research and Treatment Volume 2023 ; 2023 ; 2023 >
-    au < expected ; 2024 ; Malaria Research and Treatment Volume 2024 ; 2024 ; 2024 >
 
   }
 
