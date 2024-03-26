@@ -7,7 +7,7 @@
     info[tester] = 8 ;
     info[platform] = Janeway/OAI x2. See LXPLUG-2426
   >
-  #DoesNotExist, usually content does exist for this volume but was published in a later volume.
+  #doesNotExist, usually content does exist for this volume but was published in a later volume.
 
   {
 
@@ -41,25 +41,25 @@
         >
 
         param[base_url] = https://summeracademe.org/
-        #The material in 1996-2011 was all published with the 2012 volume.
+        #The material in 1996-2011 was all published with the 2012 volume. Content collected by posting year.
 
-        au < doesNotExist ; doesNotExist ; 1996 ; 1996 ; 1996 ; Summer Academe Volume 1996 ; > #mpc can't find this
-        au < doesNotExist ; doesNotExist ; 1997 ; 1997 ; 1997 ; Summer Academe Volume 1997 ; > #mpc can't find this
-        au < doesNotExist ; doesNotExist ; 1998 ; 1998 ; 1998 ; Summer Academe Volume 1998 ; > #mpc can't find this
-        au < doesNotExist ; doesNotExist ; 1999 ; 1999 ; 1999 ; Summer Academe Volume 1999 ; > #mpc can't find this
-        au < doesNotExist ; doesNotExist ; 2000 ; 2000 ; 2000 ; Summer Academe Volume 2000 ; > #mpc can't find this
-        au < doesNotExist ; doesNotExist ; 2001 ; 2001 ; 2001 ; Summer Academe Volume 2001 ; > #mpc can't find this
-        au < doesNotExist ; doesNotExist ; 2002 ; 2002 ; 2002 ; Summer Academe Volume 2002 ; > #mpc can't find this
-        au < doesNotExist ; doesNotExist ; 2003 ; 2003 ; 2003 ; Summer Academe Volume 2003 ; > #mpc can't find this
-        au < doesNotExist ; doesNotExist ; 2004 ; 2004 ; 2004 ; Summer Academe Volume 2004 ; > #mpc can't find this
-        au < doesNotExist ; doesNotExist ; 2005 ; 2005 ; 2005 ; Summer Academe Volume 2005 ; > #mpc can't find this
-        au < doesNotExist ; doesNotExist ; 2006 ; 2006 ; 2006 ; Summer Academe Volume 2006 ; > #mpc can't find this
-        au < doesNotExist ; doesNotExist ; 2007 ; 2007 ; 2007 ; Summer Academe Volume 2007 ; > #mpc can't find this
-        au < doesNotExist ; doesNotExist ; 2008 ; 2008 ; 2008 ; Summer Academe Volume 2008 ; > #mpc can't find this
-        au < doesNotExist ; doesNotExist ; 2009 ; 2009 ; 2009 ; Summer Academe Volume 2009 ; > #mpc can't find this
-        au < doesNotExist ; doesNotExist ; 2010 ; 2010 ; 2010 ; Summer Academe Volume 2010 ; > #mpc can't find this
-        au < doesNotExist ; doesNotExist ; 2011 ; 2011 ; 2011 ; Summer Academe Volume 2011 ; > #mpc can't find this
-        au < ready ; exists ; 2012 ; 2012 ; 2012 ; Summer Academe Volume 2012 ; > #mpc can't find this
+        #au < doesNotExist ; doesNotExist ; 1996 ; 1996 ; 1996 ; Summer Academe Volume 1996 ; > #mpc can't find this
+        #au < doesNotExist ; doesNotExist ; 1997 ; 1997 ; 1997 ; Summer Academe Volume 1997 ; > #mpc can't find this
+        #au < doesNotExist ; doesNotExist ; 1998 ; 1998 ; 1998 ; Summer Academe Volume 1998 ; > #mpc can't find this
+        #au < doesNotExist ; doesNotExist ; 1999 ; 1999 ; 1999 ; Summer Academe Volume 1999 ; > #mpc can't find this
+        #au < doesNotExist ; doesNotExist ; 2000 ; 2000 ; 2000 ; Summer Academe Volume 2000 ; > #mpc can't find this
+        #au < doesNotExist ; doesNotExist ; 2001 ; 2001 ; 2001 ; Summer Academe Volume 2001 ; > #mpc can't find this
+        #au < doesNotExist ; doesNotExist ; 2002 ; 2002 ; 2002 ; Summer Academe Volume 2002 ; > #mpc can't find this
+        #au < doesNotExist ; doesNotExist ; 2003 ; 2003 ; 2003 ; Summer Academe Volume 2003 ; > #mpc can't find this
+        #au < doesNotExist ; doesNotExist ; 2004 ; 2004 ; 2004 ; Summer Academe Volume 2004 ; > #mpc can't find this
+        #au < doesNotExist ; doesNotExist ; 2005 ; 2005 ; 2005 ; Summer Academe Volume 2005 ; > #mpc can't find this
+        #au < doesNotExist ; doesNotExist ; 2006 ; 2006 ; 2006 ; Summer Academe Volume 2006 ; > #mpc can't find this
+        #au < doesNotExist ; doesNotExist ; 2007 ; 2007 ; 2007 ; Summer Academe Volume 2007 ; > #mpc can't find this
+        #au < doesNotExist ; doesNotExist ; 2008 ; 2008 ; 2008 ; Summer Academe Volume 2008 ; > #mpc can't find this
+        #au < doesNotExist ; doesNotExist ; 2009 ; 2009 ; 2009 ; Summer Academe Volume 2009 ; > #mpc can't find this
+        #au < doesNotExist ; doesNotExist ; 2010 ; 2010 ; 2010 ; Summer Academe Volume 2010 ; > #mpc can't find this
+        #au < doesNotExist ; doesNotExist ; 2011 ; 2011 ; 2011 ; Summer Academe Volume 2011 ; > #mpc can't find this
+        au < ready ; exists ; 2012 ; 2012 ; 2012 ; Summer Academe Volume 2012 ; >
         au < ready ; exists ; 2013 ; 2013 ; 2013 ; Summer Academe Volume 2013 ; >
         au < doesNotExist ; doesNotExist ; 2014 ; 2014 ; 2014 ; Summer Academe Volume 2014 ; > #No articles
         au < ready ; exists ; 2015 ; 2015 ; 2015 ; Summer Academe Volume 2015 ; >
