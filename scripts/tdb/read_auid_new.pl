@@ -2144,7 +2144,8 @@ while (my $line = <>) {
 #file transfer: old style (Warc|Source)Plugin (base+year), new style SourcePlugin (base+dir), DeliveredSourcePlugin (base + year + dir)
 #the url can be built up from the available parameters
   } elsif (($plugin =~ m/\w+SourcePlugin/) || 
-           ($plugin =~ m/\w+WarcPlugin/)) {
+           ($plugin =~ m/\w+WarcPlugin/) || 
+           ($plugin eq "ClockssCasaliniLibriBooksPlugin")) {
       $url = sprintf("%s", $param{base_url});
       # if there is a year parameter (delivered source and original source plugins) that comes next
       if (defined $param{year}) {
