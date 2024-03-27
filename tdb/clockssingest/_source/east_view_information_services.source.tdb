@@ -24,10 +24,9 @@
     {
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/eastviewbooks-released/
 
-      #tested this directory using testing url, https://clockss-test.lockss.org/sourcefiles/eastviewbooks-released/2023_01, it is ready
       au < readySource ; crawling ; 2023 ; East View Information Services Book Source Content 2023_01 ; 2023_01 >
       #tested this directory using testing url, https://clockss-test.lockss.org/sourcefiles/eastviewbooks-released/2024_01, it is ready
-      #au < manifest ; exists ; 2024 ; East View Information Services Book Source Content 2024_01 ; 2024_01 >
+      au < expected ; exists ; 2024 ; East View Information Services Book Source Content 2024_01 ; 2024_01 >
 
     }
   }
@@ -64,14 +63,16 @@
       implicit < status ; status2 ; year ; name ; param[directory] >
 
       {
-        param[base_url] = https://clockss-test.lockss.org/sourcefiles/eastviewudbcom-released/
+        #AUs tested in test directory
+        #param[base_url] = https://clockss-test.lockss.org/sourcefiles/eastviewudbcom-released/
+        param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/eastviewudbcom-released/
 
-        au < testing ; exists ; 2024 ; East View Information Services Journal Database Source Content 2024_01 ; 2024_01 >
-        au < testing ; exists ; 2024 ; East View Information Services Journal Database Source Content 2024_02 ; 2024_02 >
-        au < testing ; exists ; 2024 ; East View Information Services Journal Database Source Content 2024_03 ; 2024_03 >
-        au < testing ; exists ; 2024 ; East View Information Services Journal Database Source Content 2024_04 ; 2024_04 >
-        au < testing ; exists ; 2024 ; East View Information Services Journal Database Source Content 2024_05 ; 2024_05 >
-        au < testing ; exists ; 2024 ; East View Information Services Journal Database Source Content 2024_06 ; 2024_06 >
+        au < expected ; exists ; 2024 ; East View Information Services Journal Database Source Content 2024_01 ; 2024_01 >
+        au < expected ; exists ; 2024 ; East View Information Services Journal Database Source Content 2024_02 ; 2024_02 >
+        au < expected ; exists ; 2024 ; East View Information Services Journal Database Source Content 2024_03 ; 2024_03 >
+        au < expected ; exists ; 2024 ; East View Information Services Journal Database Source Content 2024_04 ; 2024_04 >
+        au < expected ; exists ; 2024 ; East View Information Services Journal Database Source Content 2024_05 ; 2024_05 >
+        au < expected ; exists ; 2024 ; East View Information Services Journal Database Source Content 2024_06 ; 2024_06 >
       }
     }
 
