@@ -220,9 +220,9 @@
         au < readySource ; crawling ; 2024 ; Elsevier Source Content 2024_11 ; 2024_11 >
         au < readySource ; crawling ; 2024 ; Elsevier Source Content 2024_12 ; 2024_12 >
         au < testing ; exists ; 2024 ; Elsevier Source Content 2024_13 ; 2024_13 >
-        au < manifest ; exists ; 2024 ; Elsevier Source Content 2024_14 ; 2024_14 >
-        au < manifest ; exists ; 2024 ; Elsevier Source Content 2024_15 ; 2024_15 >
-        au < manifest ; exists ; 2024 ; Elsevier Source Content 2024_16 ; 2024_16 >
+        au < ready ; exists ; 2024 ; Elsevier Source Content 2024_14 ; 2024_14 >
+        au < ready ; exists ; 2024 ; Elsevier Source Content 2024_15 ; 2024_15 >
+        au < ready ; exists ; 2024 ; Elsevier Source Content 2024_16 ; 2024_16 >
         au < expected ; exists ; 2024 ; Elsevier Source Content 2024_17 ; 2024_17 >
         au < expected ; exists ; 2024 ; Elsevier Source Content 2024_18 ; 2024_18 >
         au < expected ; exists ; 2024 ; Elsevier Source Content 2024_19 ; 2024_19 >

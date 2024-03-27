@@ -18,7 +18,7 @@
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/asha-released/
     #testing bucket complete
 
-    au < manifest ; exists ; 2024 ; American Speech-Language-Hearing Association Source Content 2024_01 ; 2024_01 >
+    au < ready ; exists ; 2024 ; American Speech-Language-Hearing Association Source Content 2024_01 ; 2024_01 >
 
   }
 
