@@ -1916,14 +1916,14 @@
       comment[publisher] = Ubiquity Press
       param[base_url] = https://account.worldwidewastejournal.com/
       param[journal_id] = up-j-wwjis
+      #website gone, 2024
 
       au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2018 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 2 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2019 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 3 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2020 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; 4 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2021 ; 2021 ; >
       au < finished ; crawling ; 2022 ; 5 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2022 ; 2022 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2023 ; 6 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2023 ; 2023 ; >
-      au < expected ; exists ; 2024 ; 7 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2024 ; 2024 ; >
+      au < superseded ; exists ; 2023 ; 6 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2023 [superseded] ; 2023 ; >
 
   }
 
