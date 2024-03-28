@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -32,19 +32,25 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.tdb;
 
+import static org.junit.jupiter.api.Assertions.*;
+import static org.hamcrest.MatcherAssert.*;
+import static org.hamcrest.Matchers.*;
+
 import java.util.*;
 
-import org.lockss.test.LockssTestCase;
+import org.junit.jupiter.api.Test;
 
-public class TestTdb extends LockssTestCase {
+public class TestTdb {
 
+  @Test
   public void testEmpty() throws Exception {
     Tdb tdb = new Tdb();
-    assertEmpty(tdb.getPublishers());
-    assertEmpty(tdb.getTitles());
-    assertEmpty(tdb.getAus());
+    assertThat(tdb.getPublishers(), empty());
+    assertThat(tdb.getTitles(), empty());
+    assertThat(tdb.getAus(), empty());
   }
   
+  @Test
   public void testTdb() throws Exception {
     Tdb tdb = new Tdb();
     

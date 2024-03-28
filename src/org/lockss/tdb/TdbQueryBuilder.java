@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -33,6 +33,8 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.tdb;
 
 import java.util.*;
+import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.regex.Pattern;
 
 import org.antlr.v4.runtime.*;
@@ -76,7 +78,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbQueryBuilder:0.3.2]";
+  public static final String VERSION = "[TdbQueryBuilder:0.3.1]";
   
   /**
    * <p>
@@ -1462,20 +1464,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
     }
     if (secondarySet.size() > 0) {
       if (cmd.hasOption(KEY_STATUS2)) {
-        statusPredicate = new Predicate<Au>() {
-          @Override
-          public boolean test(Au a) {
-            return secondarySet.contains(a.getStatus2());
-          }
-        };
+        statusPredicate = (a) -> secondarySet.contains(a.getStatus2());
       }
       else {
-        statusPredicate = new Predicate<Au>() {
-          @Override
-          public boolean test(Au a) {
-            return secondarySet.contains(a.getStatus());
-          }
-        };
+        statusPredicate = (a) -> secondarySet.contains(a.getStatus());
       }
     }
     
@@ -1483,32 +1475,22 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
     Predicate<Au> nonAlliancePredicate = null;
     final Set<String> nonAllianceSet = new HashSet<String>(NON_ALLIANCE_PLUGINS);
     if (cmd.hasOption(KEY_NON_ALLIANCE)) {
-      nonAlliancePredicate = new Predicate<Au>() {
-        @Override
-        public boolean test(Au a) {
-          return nonAllianceSet.contains(a.getComputedPlugin());
-        }
-      };
+      nonAlliancePredicate = (a) -> nonAllianceSet.contains(a.getComputedPlugin());
     }
     else if (cmd.hasOption(KEY_ALLIANCE)) {
-      nonAlliancePredicate = new Predicate<Au>() {
-        @Override
-        public boolean test(Au a) {
-          return !nonAllianceSet.contains(a.getComputedPlugin());
-        }
-      };
+      nonAlliancePredicate = (a) -> !nonAllianceSet.contains(a.getComputedPlugin());
     }
     
     // Join predicates
     Predicate<Au> predicate = queryPredicate;
     if (statusPredicate != null) {
-      predicate = (predicate == null ? statusPredicate : new AndPredicate<Au>(statusPredicate, predicate));
+      predicate = predicate == null ? statusPredicate : statusPredicate.and(predicate);
     }
     if (nonAlliancePredicate != null) {
-      predicate = (predicate == null ? nonAlliancePredicate : new AndPredicate<Au>(nonAlliancePredicate, predicate));
+      predicate = predicate == null ? nonAlliancePredicate : nonAlliancePredicate.and(predicate);
     }
     if (predicate == null) {
-      predicate = new TruePredicate<Au>();
+      predicate = (a) -> true;
     }
     options.put(KEY_QUERY, predicate);
   }
@@ -1546,7 +1528,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
   public void exitOr2(@NotNull Or2Context o2ctx) {
     Predicate<Au> op2 = predicateStack.pop();
     Predicate<Au> op1 = predicateStack.pop();
-    predicateStack.push(new OrPredicate<Au>(op1, op2));
+    predicateStack.push(op1.or(op2));
   }
   
   /**
@@ -1565,7 +1547,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
   public void exitAnd2(@NotNull And2Context a2ctx) {
     Predicate<Au> op2 = predicateStack.pop();
     Predicate<Au> op1 = predicateStack.pop();
-    predicateStack.push(new AndPredicate<Au>(op1, op2));
+    predicateStack.push(op1.and(op2));
   }
   
   /**
@@ -1580,17 +1562,14 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    */
   @Override
   public void exitExprRegex(@NotNull ExprRegexContext erctx) {
-    final Functor<Au, String> traitFunctor = Au.traitFunctor(erctx.IDENTIFIER().getText());
+    final Function<Au, String> traitFunctor = Au.traitFunctor(erctx.IDENTIFIER().getText());
     final Pattern pat = Pattern.compile(erctx.STRING().getText());
-    Predicate<Au> ret = new Predicate<Au>() {
-      @Override
-      public boolean test(Au a) {
-        String trait = traitFunctor.apply(a);
-        return pat.matcher(trait == null ? "" : trait).find();
-      }
+    Predicate<Au> ret = (a) -> {
+      String trait = traitFunctor.apply(a);
+      return pat.matcher(trait == null ? "" : trait).find();
     };
     if (erctx.DOES_NOT_MATCH() != null) {
-      ret = new NotPredicate<Au>(ret);
+      ret = ret.negate();
     }
     predicateStack.push(ret);
   }
@@ -1607,16 +1586,11 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    */
   @Override
   public void exitExprString(@NotNull ExprStringContext esctx) {
-    final Functor<Au, String> traitFunctor = Au.traitFunctor(esctx.IDENTIFIER().getText());
+    final Function<Au, String> traitFunctor = Au.traitFunctor(esctx.IDENTIFIER().getText());
     final String str = esctx.STRING().getText();
-    Predicate<Au> ret = new Predicate<Au>() {
-      @Override
-      public boolean test(Au a) {
-        return str.equals(traitFunctor.apply(a));
-      }
-    };
+    Predicate<Au> ret = (a) -> str.equals(traitFunctor.apply(a));
     if (esctx.NOT() != null || esctx.NOT_EQUALS() != null) {
-      ret = new NotPredicate<Au>(ret);
+      ret = ret.negate();
     }
     predicateStack.push(ret);
   }
@@ -1633,15 +1607,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    */
   @Override
   public void exitExprSet(@NotNull ExprSetContext esctx) {
-    final Functor<Au, String> traitFunctor = Au.traitFunctor(esctx.IDENTIFIER().getText());
-    Predicate<Au> ret = new Predicate<Au>() {
-        @Override
-        public boolean test(Au a) {
-          return traitFunctor.apply(a) != null;
-        }
-    };
+    final Function<Au, String> traitFunctor = Au.traitFunctor(esctx.IDENTIFIER().getText());
+    Predicate<Au> ret = (a) -> traitFunctor.apply(a) != null;
     if (esctx.NOT() != null) {
-      ret = new NotPredicate<Au>(ret);
+      ret = ret.negate();
     }
     predicateStack.push(ret);
   }

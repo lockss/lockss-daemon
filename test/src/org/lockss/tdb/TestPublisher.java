@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -32,27 +32,32 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.tdb;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.*;
 
-import org.lockss.test.LockssTestCase;
+import org.junit.jupiter.api.Test;
 
-public class TestPublisher extends LockssTestCase {
+public class TestPublisher {
 
   public static final String NAME_VALUE = "Publisher Name";
 
   public static final String FOO_KEY = "publisherfookey";
-  public static final String FOO_VALUE = "publisherfooval";
+    public static final String FOO_VALUE = "publisherfooval";
 
+  @Test
   public void testKeys() throws Exception {
     assertEquals("name", Publisher.NAME);
   }
   
+  @Test
   public void testEmpty() throws Exception {
     Publisher publisher = new Publisher();
     assertNull(publisher.getName());
     assertNull(publisher.getArbitraryValue(FOO_KEY));
   }
   
+  @Test
   public void testPublisher() throws Exception {
     Map<String, String> map = new LinkedHashMap<String, String>();
     Publisher publisher = new Publisher(map);

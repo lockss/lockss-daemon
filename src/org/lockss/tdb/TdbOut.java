@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -35,6 +35,8 @@ package org.lockss.tdb;
 import java.io.*;
 import java.nio.charset.*;
 import java.util.*;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 import org.apache.commons.cli.*;
 import org.lockss.tdb.AntlrUtil.SyntaxError;
@@ -49,7 +51,7 @@ public class TdbOut {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbOut:0.3.2]";
+  public static final String VERSION = "[TdbOut:0.3.1]";
   
   /**
    * <p>
@@ -631,10 +633,10 @@ public class TdbOut {
     boolean csv = STYLE_CSV.equals(getStyle(options));
     boolean count = getCount(options);
     
-    List<Functor<Au, String>> traitFunctors = new ArrayList<Functor<Au, String>>();
+    List<Function<Au, String>> traitFunctors = new ArrayList<Function<Au, String>>();
     if (!count) {
       for (String field : getFields(options)) {
-        Functor<Au, String> traitFunctor = Au.traitFunctor(field);
+        Function<Au, String> traitFunctor = Au.traitFunctor(field);
         if (traitFunctor == null) {
           AppUtil.error("Unknown field '%s'", field);
         }
@@ -655,7 +657,7 @@ public class TdbOut {
       }
       boolean first = true;
       StringBuilder sb = new StringBuilder(1024);
-      for (Functor<Au, String> traitFunctor : traitFunctors) {
+      for (Function<Au, String> traitFunctor : traitFunctors) {
         if (!first) {
           sb.append(csv ? ',' : '\t');
         }

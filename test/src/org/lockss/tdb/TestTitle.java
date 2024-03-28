@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -32,11 +32,13 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.tdb;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.*;
 
-import org.lockss.test.LockssTestCase;
+import org.junit.jupiter.api.Test;
 
-public class TestTitle extends LockssTestCase {
+public class TestTitle {
 
   public static final String NAME_VALUE = "Title Name";
   public static final String DOI_VALUE = "DOI Value";
@@ -48,6 +50,7 @@ public class TestTitle extends LockssTestCase {
   public static final String FOO_KEY = "titlefookey";
   public static final String FOO_VALUE = "titlefooval";
 
+  @Test
   public void testKeys() throws Exception {
     assertEquals("doi", Title.DOI);
     assertEquals("eissn", Title.EISSN);
@@ -57,6 +60,7 @@ public class TestTitle extends LockssTestCase {
     assertEquals("type", Title.TYPE);
   }
   
+  @Test
   public void testType() throws Exception {
     assertEquals(Title.TYPE_JOURNAL, Title.TYPE_DEFAULT);
     assertEquals("book", Title.TYPE_BOOK);
@@ -65,6 +69,7 @@ public class TestTitle extends LockssTestCase {
     assertEquals("proceedings", Title.TYPE_PROCEEDINGS);
   }
   
+  @Test
   public void testEmpty() throws Exception {
     Publisher publisher = new Publisher();
     Title title = new Title(publisher);
@@ -77,7 +82,8 @@ public class TestTitle extends LockssTestCase {
     assertEquals(Title.TYPE_DEFAULT, title.getType());
     assertNull(title.getArbitraryValue(FOO_KEY));
   }
-  
+
+  @Test
   public void testTitle() throws Exception {
     Publisher publisher = new Publisher();
     Map<String, String> map = new HashMap<String, String>();

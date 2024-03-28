@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -32,10 +32,13 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.tdb;
 
-import org.lockss.test.LockssTestCase;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class TestTdbXml extends LockssTestCase {
+import org.junit.jupiter.api.Test;
 
+public class TestTdbXml {
+
+  @Test
   public void testXmlEscaper() throws Exception {
     assertEquals("foo&lt;bar", TdbXml.xmlEscaper.translate("foo<bar"));
     assertEquals("foo&gt;bar", TdbXml.xmlEscaper.translate("foo>bar"));
@@ -45,6 +48,20 @@ public class TestTdbXml extends LockssTestCase {
     // Test 0x7e/0x7f boundary
     assertEquals("foo~bar", TdbXml.xmlEscaper.translate("foo\u007ebar")); // U+007E is ~
     assertEquals("foo&#127;bar", TdbXml.xmlEscaper.translate("foo\u007fbar")); // hex 7F = dec 127
+  }
+  
+  @Test
+  public void testUnicodeNormalizer() throws Exception {
+    assertEquals("aeiou", TdbXml.unicodeNormalizer.apply("aeiou"));
+    assertEquals("aeiou", TdbXml.unicodeNormalizer.apply("\u00e1\u00e8\u00ee\u00f5\u00fc")); // a acute, e grave, i circumflex, o tilde, u umlaut
+    
+    // 'a' modified with every combining diacritical mark
+    StringBuilder sb = new StringBuilder();
+    sb.append('a');
+    for (char c = '\u0300' ; c <= '\u036f' ; ++c) {
+      sb.append(c);
+    }
+    assertEquals("a", TdbXml.unicodeNormalizer.apply(sb.toString()));
   }
   
 }

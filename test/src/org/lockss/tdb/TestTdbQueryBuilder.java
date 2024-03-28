@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -32,14 +32,18 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.tdb;
 
-import java.util.*;
+import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.*;
+import java.util.function.Predicate;
+
+import org.junit.jupiter.api.Test;
 import org.lockss.tdb.AntlrUtil.SyntaxError;
 import org.lockss.tdb.Predicates.TruePredicate;
-import org.lockss.test.LockssTestCase;
 
-public class TestTdbQueryBuilder extends LockssTestCase {
+public class TestTdbQueryBuilder {
 
+  @Test
   public void testNoOptions() throws Exception {
     TdbQueryBuilder tdbq = new TdbQueryBuilder();
     Map<String, Object> options = new HashMap<String, Object>();
@@ -52,9 +56,10 @@ public class TestTdbQueryBuilder extends LockssTestCase {
     tdbq.processCommandLine(options, cmd);
     Predicate<Au> predicate = tdbq.getAuPredicate(options);
     assertNotNull(predicate);
-    assertTrue(predicate instanceof TruePredicate);
+    assertTrue(predicate.test(null));
   }
   
+  @Test
   public void testAlliance() throws Exception {
     TdbQueryBuilder tdbq = new TdbQueryBuilder();
     Map<String, Object> options = new HashMap<String, Object>();
@@ -79,6 +84,7 @@ public class TestTdbQueryBuilder extends LockssTestCase {
     }
   }
   
+  @Test
   public void testNonAlliance() throws Exception {
     TdbQueryBuilder tdbq = new TdbQueryBuilder();
     Map<String, Object> options = new HashMap<String, Object>();
@@ -103,6 +109,7 @@ public class TestTdbQueryBuilder extends LockssTestCase {
     }
   }
   
+  @Test
   public void testSyntaxErrors() throws Exception {
     for (final String query : Arrays.asList("incomplete",
                                             "incomplete is",
@@ -140,6 +147,7 @@ public class TestTdbQueryBuilder extends LockssTestCase {
     }
   }
 
+  @Test
   public void testSingleStatusOptions() throws Exception {
     doStatusTest(TdbQueryBuilder.KEY_CRAWLING, Au.STATUS_CRAWLING);
     doStatusTest(TdbQueryBuilder.KEY_DEEP_CRAWL, Au.STATUS_DEEP_CRAWL);
@@ -161,6 +169,7 @@ public class TestTdbQueryBuilder extends LockssTestCase {
     doStatusTest(TdbQueryBuilder.KEY_ZAPPED, Au.STATUS_ZAPPED);
   }
 
+  @Test
   public void testMultiStatusOptions() throws Exception {
     doStatusTest(TdbQueryBuilder.KEY_ALL, TdbQueryBuilder.ALL_STATUSES);
     doStatusTest(TdbQueryBuilder.KEY_ANY_AND_ALL, Au.STATUSES);
@@ -196,9 +205,9 @@ public class TestTdbQueryBuilder extends LockssTestCase {
     for (String status : Au.STATUSES) {
       Au au = new Au(null);
       au.put(Au.STATUS, status);
-      assertEquals(String.format("%s is not in the set %s", status, statuses),
-                   statuses.contains(status),
-                   predicate.test(au));
+      assertEquals(statuses.contains(status),
+                   predicate.test(au),
+                   String.format("%s is not in the set %s", status, statuses));
     }
   }
 

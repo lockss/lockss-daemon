@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -32,17 +32,20 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.tdb;
 
+import static org.junit.jupiter.api.Assertions.*;
+import static org.hamcrest.MatcherAssert.*;
+import static org.hamcrest.Matchers.*;
+
 import java.util.*;
 
-import org.lockss.test.LockssTestCase;
+import org.junit.jupiter.api.Test;
 
-public class TestAu extends LockssTestCase {
+public class TestAu {
 
-  public static final String DOI_VALUE = "10.0000/DOIValue";
+  public static final String NAME_VALUE = "AU Name";
   public static final String EDITION_VALUE = "Edition Value";
   public static final String EISBN_VALUE = "eISBN Value";
   public static final String ISBN_VALUE = "ISBN Value";
-  public static final String NAME_VALUE = "AU Name";
   public static final String PLUGIN_VALUE = "Plugin Value";
   public static final String PLUGIN_PREFIX_VALUE = "Plugin Prefix Value";
   public static final String PLUGIN_SUFFIX_VALUE = "Plugin Suffix Value";
@@ -57,18 +60,16 @@ public class TestAu extends LockssTestCase {
   public static final List<String> IMPLICIT_VALUE =
       AppUtil.ul("implicit1", "implicit2", "implicit3");
   
-  public static final String PARAM1_KEY = "pk1";
-  public static final String PARAM1_VALUE = "pv1";
-  public static final String PARAM2_KEY = "pk2";
-  public static final String PARAM2_VALUE = "pv2";
-  public static final String NONDEFPARAM1_KEY = "ndpk1";
-  public static final String NONDEFPARAM1_VALUE = "ndpv1";
-  public static final String NONDEFPARAM2_KEY = "ndpk2";
-  public static final String NONDEFPARAM2_VALUE = "ndpv2";
-  public static final String ATTR1_KEY = "ak1";
-  public static final String ATTR1_VALUE = "av1";
-  public static final String ATTR2_KEY = "ak2";
-  public static final String ATTR2_VALUE = "av2";
+  public static final String PARAM1_KEY = "p1";
+  public static final String PARAM1_VALUE = "v1";
+  public static final String PARAM2_KEY = "p2";
+  public static final String PARAM2_VALUE = "v2";
+  public static final String NONDEFPARAM1_KEY = "ndp1";
+  public static final String NONDEFPARAM1_VALUE = "ndv1";
+  public static final String NONDEFPARAM2_KEY = "ndp2";
+  public static final String NONDEFPARAM2_VALUE = "ndv2";
+  public static final String ATTR1_KEY = "attr1";
+  public static final String ATTR1_VALUE = "attr1v";
   
   public static final String FOO_KEY = "aufookey";
   public static final String FOO_VALUE = "aufooval";
@@ -86,9 +87,9 @@ public class TestAu extends LockssTestCase {
                                                        NONDEFPARAM1_VALUE,
                                                        NONDEFPARAM2_KEY,
                                                        NONDEFPARAM2_VALUE);
-  
+
+  @Test
   public void testKeys() throws Exception {
-    assertEquals("doi", Au.DOI);
     assertEquals("edition", Au.EDITION);
     assertEquals("eisbn", Au.EISBN);
     assertEquals("isbn", Au.ISBN);
@@ -105,7 +106,8 @@ public class TestAu extends LockssTestCase {
     assertEquals("volume", Au.VOLUME);
     assertEquals("year", Au.YEAR);
   }
-  
+
+  @Test
   public void testStatus() throws Exception {
     assertEquals("crawling", Au.STATUS_CRAWLING);
     assertEquals("deepCrawl", Au.STATUS_DEEP_CRAWL);
@@ -128,7 +130,8 @@ public class TestAu extends LockssTestCase {
     assertEquals("wanted", Au.STATUS_WANTED);
     assertEquals("zapped", Au.STATUS_ZAPPED);
   }
-  
+
+  @Test
   public void testEmpty() throws Exception {
     Au au = new Au(null);
     assertNull(au.getTitle());
@@ -136,7 +139,6 @@ public class TestAu extends LockssTestCase {
     assertNull(au.getAuid());
     assertNull(au.getAuidPlus());
     assertNull(au.getComputedPlugin());
-    assertNull(au.getDoi());
     assertNull(au.getEdition());
     assertNull(au.getEisbn());
     assertNull(au.getIsbn());
@@ -151,13 +153,14 @@ public class TestAu extends LockssTestCase {
     assertNull(au.getStatus2());
     assertNull(au.getVolume());
     assertNull(au.getYear());
-    assertEmpty(au.getParams());
-    assertEmpty(au.getNondefParams());
-    assertEmpty(au.getAttrs());
+    assertEquals(0, au.getParams().size());
+    assertEquals(0, au.getNondefParams().size());
+    assertEquals(0, au.getAttrs().size());
     assertNull(au.getImplicit());
     assertNull(au.getArbitraryValue(FOO_KEY));
   }
-  
+
+  @Test
   public void testAu() throws Exception {
     Publisher publisher = new Publisher();
     Title title = new Title(publisher);
@@ -166,8 +169,6 @@ public class TestAu extends LockssTestCase {
     assertSame(publisher, au.getTitle().getPublisher());
     au.put(Au.NAME, NAME_VALUE);
     assertEquals(NAME_VALUE, au.getName());
-    au.put(Au.DOI, DOI_VALUE);
-    assertEquals(DOI_VALUE, au.getDoi());
     au.put(Au.EDITION, EDITION_VALUE);
     assertEquals(EDITION_VALUE, au.getEdition());
     au.put(Au.EISBN, EISBN_VALUE);
@@ -200,12 +201,14 @@ public class TestAu extends LockssTestCase {
     assertEquals(ATTR1_VALUE, au.getAttrs().get(ATTR1_KEY));
     assertNull(au.getAttrs().get("X" + ATTR1_KEY));
     au.setImplicit(IMPLICIT_VALUE);
-    assertIsomorphic(Arrays.asList("implicit1", "implicit2", "implicit3"), au.getImplicit());
+    assertThat(au.getImplicit(), hasSize(3));
+    assertThat(au.getImplicit(), hasItems("implicit1", "implicit2", "implicit3"));
     au.put(FOO_KEY, FOO_VALUE);
     assertEquals(FOO_VALUE, au.getArbitraryValue(FOO_KEY));
     assertNull(au.getArbitraryValue("X" + FOO_KEY));
   }
 
+  @Test
   public void testPlugin() throws Exception {
     Au au1 = new Au(null);
     au1.put(Au.PLUGIN, PLUGIN_VALUE);
@@ -255,6 +258,7 @@ public class TestAu extends LockssTestCase {
     assertNull(au6.getComputedPlugin());
   }
 
+  @Test
   public void testAuid() throws Exception {
     Au au1 = new Au(null);
     au1.put(Au.PLUGIN, PLUGIN1);
@@ -273,6 +277,7 @@ public class TestAu extends LockssTestCase {
     assertEquals(AUIDPLUS1, au2.getAuidPlus());
   }
 
+  @Test
   public void testNesting() throws Exception {
     Au au1 = new Au(null);
     au1.put(Au.EISBN, EISBN_VALUE);
@@ -292,11 +297,13 @@ public class TestAu extends LockssTestCase {
     assertEquals(PARAM1_VALUE, au3.getParams().get(PARAM1_KEY));
     assertEquals(NONDEFPARAM1_VALUE, au3.getNondefParams().get(NONDEFPARAM1_KEY));
     assertEquals(ATTR1_VALUE, au3.getAttrs().get(ATTR1_KEY));
-    assertIsomorphic(Arrays.asList("implicit1", "implicit2", "implicit3"), au3.getImplicit());
+    assertThat(au3.getImplicit(), hasSize(3));
+    assertThat(au3.getImplicit(), hasItems("implicit1", "implicit2", "implicit3"));
     assertEquals(FOO_VALUE, au3.getArbitraryValue(FOO_KEY));
     assertNull(au3.getArbitraryValue("X" + FOO_KEY));
   }
-  
+
+  @Test
   public void testTraitFunctors() throws Exception {
     // Make a publisher
     Map<String, String> publisherMap = new LinkedHashMap<String, String>();
@@ -310,8 +317,6 @@ public class TestAu extends LockssTestCase {
     Au au = new Au(null, title);
     
     // Test AU traits
-    au.put(Au.DOI, DOI_VALUE);
-    assertEquals(DOI_VALUE, Au.traitFunctor("au:doi").apply(au));
     au.put(Au.EDITION, EDITION_VALUE);
     assertEquals(EDITION_VALUE, Au.traitFunctor("au:edition").apply(au));
     assertSame(Au.traitFunctor("au:edition"), Au.traitFunctor("edition"));
@@ -384,7 +389,7 @@ public class TestAu extends LockssTestCase {
     assertSame(Au.traitFunctor("title:name"), Au.traitFunctor("title"));
     titleMap.put(Title.DOI, TestTitle.DOI_VALUE);
     assertEquals(TestTitle.DOI_VALUE, Au.traitFunctor("title:doi").apply(au));
-    assertSame(Au.traitFunctor("title:doi"), Au.traitFunctor("title:doi"));
+    assertSame(Au.traitFunctor("title:doi"), Au.traitFunctor("doi"));
     titleMap.put(Title.EISSN, TestTitle.EISSN_VALUE);
     assertEquals(TestTitle.EISSN_VALUE, Au.traitFunctor("title:eissn").apply(au));
     assertSame(Au.traitFunctor("title:eissn"), Au.traitFunctor("eissn"));
