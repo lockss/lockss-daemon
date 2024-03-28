@@ -43,7 +43,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>19</string>
+    <string>20</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -76,7 +76,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Royal Society of Chemistry Plugin (CLOCKSS), Base URL %s, Resolver URL %s, Journal Code %s, Volume %s, Year %d&quot;, base_url, resolver_url, journal_code, volume_name, year</string>
+    <string>&quot;Royal Society of Chemistry Journals Plugin (Legacy, CLOCKSS), Base URL %s, Resolver URL %s, Journal Code %s, Volume %s, Year %d&quot;, base_url, resolver_url, journal_code, volume_name, year</string>
   </entry>
   <entry>
     <string>au_redirect_to_login_url_pattern</string>
@@ -84,7 +84,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Royal Society of Chemistry Plugin (CLOCKSS)</string>
+    <string>Royal Society of Chemistry Journals Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>

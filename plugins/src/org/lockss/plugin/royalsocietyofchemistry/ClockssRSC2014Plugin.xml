@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>31</string>
+    <string>32</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -49,15 +49,15 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>31</string>
+    <string>32</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Royal Society of Chemistry 2014 Plugin (CLOCKSS), Base URL %s, Base URL2 %s, Resolver URL %s, Journal Code %s, Volume %s, Year %d", base_url, base_url2, resolver_url, journal_code, volume_name, year</string>
+    <string>"Royal Society of Chemistry Journals Plugin (CLOCKSS), Base URL %s, Base URL2 %s, Resolver URL %s, Journal Code %s, Volume %s, Year %d", base_url, base_url2, resolver_url, journal_code, volume_name, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Royal Society of Chemistry 2014 Plugin (CLOCKSS)</string>
+    <string>Royal Society of Chemistry Journals Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>clockss_override</string>
