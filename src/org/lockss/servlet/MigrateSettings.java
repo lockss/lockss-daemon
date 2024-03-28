@@ -269,7 +269,6 @@ public class MigrateSettings extends LockssServlet {
               mCfg.removeConfigTree(V2_PREFIX);
             }
             migrationMgr.setIsMigrating(false);
-            migrationMgr.setMigrationConfigured(false);
             isMigrationConfigured = false;
             dbPass = null;
           }

@@ -118,7 +118,7 @@ public class MigrateContent extends LockssServlet {
   boolean defaultCompare = DEFAULT_DEFAULT_COMPARE;
   OpType opType;
   boolean isCompareContent;
-  boolean isMigrationEnabled;
+  boolean isMigratorConfigured;
   List<String> auSelectFilter;
   List<Pattern> auSelectPatterns;
 
@@ -134,8 +134,8 @@ public class MigrateContent extends LockssServlet {
 
   void initParams() {
     Configuration config = ConfigManager.getCurrentConfig();
-    isMigrationEnabled = config.getBoolean(MigrationManager.PARAM_IS_MIGRATOR_ENABLED,
-        MigrationManager.DEFAULT_IS_MIGRATOR_ENABLED);
+    isMigratorConfigured = config.getBoolean(MigrationManager.PARAM_IS_MIGRATOR_CONFIGURED,
+        MigrationManager.DEFAULT_IS_MIGRATOR_CONFIGURED);
     hostName = config.get(PARAM_HOSTNAME, DEFAULT_HOSTNAME);
     auSelectFilter =
       config.getList(PARAM_AU_SELECT_FILTER, DEFAULT_AU_SELECT_FILTER);
@@ -154,7 +154,7 @@ public class MigrateContent extends LockssServlet {
     initParams();
 
     // Redirect to Migrate Settings servlet if we have no migration configuration
-    if (!isMigrationEnabled) {
+    if (!isMigratorConfigured) {
       String redir = srvURL(AdminServletManager.SERVLET_MIGRATE_CONTENT_SETTINGS);
       resp.sendRedirect(redir);
     }

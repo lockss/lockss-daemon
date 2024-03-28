@@ -131,14 +131,6 @@ public class MigrationManager extends BaseLockssDaemonManager
     isDaemonInMigrationMode = isEnabled;
   }
 
-  public void setMigrationConfigured(boolean isConfigured) throws IOException {
-    Configuration mCfg = cfgMgr.newConfiguration();
-    mCfg.put(MigrationManager.PARAM_IS_MIGRATOR_CONFIGURED, String.valueOf(isConfigured));
-    cfgMgr.modifyCacheConfigFile(mCfg,
-        ConfigManager.CONFIG_FILE_MIGRATION, CONFIG_FILE_MIGRATION_HEADER);
-    cfgMgr.reloadAndWait();
-  }
-
   public void setIsMigrating(boolean isMigrating) throws IOException {
     if (isMigrationInDebugMode()) {
       log.debug("Not setting isMigrating because in debug mode");
