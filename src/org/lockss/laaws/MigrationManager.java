@@ -56,8 +56,6 @@ public class MigrationManager extends BaseLockssDaemonManager
   static final String STATUS_ERRORS = "errors";
   static final String STATUS_PROGRESS = "progress";
 
-  public static final String PARAM_IS_MIGRATOR_ENABLED = PREFIX + "migrationEnabled";
-  public static final boolean DEFAULT_IS_MIGRATOR_ENABLED = false;
   public static final String PARAM_IRREVOCABLE_MIGRATION_ENABLED = PREFIX + "irrevocableMigrationEnabled";
   public static final boolean DEFAULT_IRREVOCABLE_MIGRATION_ENABLED = false;
   public static final String PARAM_IS_MIGRATOR_CONFIGURED = PREFIX + "isConfigured";
@@ -78,7 +76,6 @@ public class MigrationManager extends BaseLockssDaemonManager
   private String idleError;
   private long startTime = 0;
 
-  boolean isDaemonInMigrationMode;
   boolean isDaemonMigrating;
   boolean isMigrationInDebugMode;
 
@@ -91,10 +88,6 @@ public class MigrationManager extends BaseLockssDaemonManager
 
   public void stopService() {
     super.stopService();
-  }
-
-  public boolean isDaemonInMigrationMode() {
-    return isDaemonInMigrationMode;
   }
 
   public boolean isDaemonMigrating() {
@@ -113,8 +106,6 @@ public class MigrationManager extends BaseLockssDaemonManager
         m.setConfig(config, oldConfig, changedKeys);
       }
 
-      isDaemonInMigrationMode =
-          config.getBoolean(PARAM_IS_MIGRATOR_ENABLED, DEFAULT_IS_MIGRATOR_ENABLED);
       isDaemonMigrating =
           config.getBoolean(PARAM_IS_MIGRATING, DEFAULT_IS_MIGRATING);
       isMigrationInDebugMode =
@@ -122,13 +113,12 @@ public class MigrationManager extends BaseLockssDaemonManager
     }
   }
 
-  public void setMigrationMode(boolean isEnabled) throws IOException {
+  public void setMigrationConfigured(boolean isConfigured) throws IOException {
     Configuration mCfg = cfgMgr.newConfiguration();
-    mCfg.put(MigrationManager.PARAM_IS_MIGRATOR_ENABLED, String.valueOf(isEnabled));
+    mCfg.put(MigrationManager.PARAM_IS_MIGRATOR_CONFIGURED, String.valueOf(isConfigured));
     cfgMgr.modifyCacheConfigFile(mCfg,
         ConfigManager.CONFIG_FILE_MIGRATION, CONFIG_FILE_MIGRATION_HEADER);
     cfgMgr.reloadAndWait();
-    isDaemonInMigrationMode = isEnabled;
   }
 
   public void setIsMigrating(boolean isMigrating) throws IOException {

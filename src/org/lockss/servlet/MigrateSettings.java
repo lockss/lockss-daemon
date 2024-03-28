@@ -65,8 +65,6 @@ public class MigrateSettings extends LockssServlet {
 
   static final String KEY_ACTION = "action";
   static final String ACTION_LOAD_V2_CFG = "Load Configuration";
-  static final String ACTION_ENTER_MIGRATION_MODE = "Enter Migration Mode";
-  static final String ACTION_EXIT_MIGRATION_MODE = "Exit Migration Mode";
   static final String ACTION_NEXT = "Next";
 
   LockssDaemon theDaemon;
@@ -269,13 +267,13 @@ public class MigrateSettings extends LockssServlet {
               mCfg.removeConfigTree(V2_PREFIX);
             }
             migrationMgr.setIsMigrating(false);
+            migrationMgr.setMigrationConfigured(false);
             isMigrationConfigured = false;
             dbPass = null;
           }
 
           break;
 
-        case ACTION_ENTER_MIGRATION_MODE:
         case ACTION_NEXT:
           initParamsFromFormData();
           if (!isTargetConfigFetched) {
@@ -309,15 +307,10 @@ public class MigrateSettings extends LockssServlet {
             }
 
             // Write migration configuration to file
-            mCfg.put(MigrationManager.PARAM_IS_MIGRATOR_ENABLED, "true");
             writeMigrationConfigFile(mCfg);
             ConfigManager.getConfigManager().reloadAndWait();
             redirectToMigrateContent();
           }
-          break;
-
-        case ACTION_EXIT_MIGRATION_MODE:
-          migrationMgr.setMigrationMode(false);
           break;
 
         default:
@@ -519,13 +512,6 @@ public class MigrateSettings extends LockssServlet {
     tbl.add(new Break());
     tbl.add(new Break(Break.Rule));
     tbl.add(new Break());
-
-//    Input toggleMigrationMode = new Input(Input.Submit, KEY_ACTION,
-//        !migrationMgr.isDaemonInMigrationMode() ? ACTION_ENTER_MIGRATION_MODE : ACTION_EXIT_MIGRATION_MODE);
-//    if (!isTargetConfigFetched && !migrationMgr.isDaemonInMigrationMode()) {
-//      toggleMigrationMode.attribute("disabled");
-//    }
-//    tbl.add(toggleMigrationMode);
 
     Input nextButton = new Input(Input.Submit, KEY_ACTION, ACTION_NEXT);
     tbl.add(nextButton);
