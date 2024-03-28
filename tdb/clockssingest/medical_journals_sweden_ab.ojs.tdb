@@ -24,9 +24,9 @@
       attr[start_stem] = 
       #First publication Volume 58, 1923. Older content not online 20221201
 
-      au < frozen ; exists ; 2020 ; Scandinavian Journal of Urology Volume 2020 ; 55 ; 2020 ; >
-      au < frozen ; exists ; 2021 ; Scandinavian Journal of Urology Volume 2021 ; 56 ; 2021 ; >
-      au < frozen ; exists ; 2022 ; Scandinavian Journal of Urology Volume 2022 ; 57 ; 2022 ; >
+      au < finished ; manifest ; 2020 ; Scandinavian Journal of Urology Volume 2020 ; 55 ; 2020 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Scandinavian Journal of Urology Volume 2021 ; 56 ; 2021 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; Scandinavian Journal of Urology Volume 2022 ; 57 ; 2022 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Scandinavian Journal of Urology Volume 2023 ; 58 ; 2023 ; >
       au < crawling ; exists ; 2024 ; Scandinavian Journal of Urology Volume 2024 ; 59 ; 2024 ; >
 
@@ -44,9 +44,9 @@
       attr[start_stem] = 
       #First publication Volume 58, 1923. Older content not online 20221201
 
-      au < frozen ; exists ; 2020 ; Journal of Plastic Surgery and Hand Surgery Volume 2020 ; 55 ; 2020 ; >
-      au < frozen ; exists ; 2021 ; Journal of Plastic Surgery and Hand Surgery Volume 2021 ; 56 ; 2021 ; >
-      au < frozen ; exists ; 2022 ; Journal of Plastic Surgery and Hand Surgery Volume 2022 ; 57 ; 2022 ; >
+      au < finished ; manifest ; 2020 ; Journal of Plastic Surgery and Hand Surgery Volume 2020 ; 55 ; 2020 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Journal of Plastic Surgery and Hand Surgery Volume 2021 ; 56 ; 2021 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; Journal of Plastic Surgery and Hand Surgery Volume 2022 ; 57 ; 2022 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Journal of Plastic Surgery and Hand Surgery Volume 2023 ; 58 ; 2023 ; >
       au < manifest ; exists ; 2024 ; Journal of Plastic Surgery and Hand Surgery Volume 2024 ; 59 ; 2024 ; >
 
@@ -117,14 +117,14 @@
       au < crawling ; exists ; 1971 ; Acta Dermato-Venereologica Volume 1971 ; 51 ; 1971 ; >
       au < crawling ; exists ; 1972 ; Acta Dermato-Venereologica Volume 1972 ; 52 ; 1972 ; >
       au < crawling ; exists ; 1973 ; Acta Dermato-Venereologica Volume 1973 ; 53 ; 1973 ; >
-      au < frozen ; exists ; 1974 ; Acta Dermato-Venereologica Volume 1974 ; 54 ; 1974 ; >
-      au < frozen ; exists ; 1975 ; Acta Dermato-Venereologica Volume 1975 ; 55 ; 1975 ; >
-      au < frozen ; exists ; 1976 ; Acta Dermato-Venereologica Volume 1976 ; 56 ; 1976 ; >
-      au < frozen ; exists ; 1977 ; Acta Dermato-Venereologica Volume 1977 ; 57 ; 1977 ; >
-      au < frozen ; exists ; 1978 ; Acta Dermato-Venereologica Volume 1978 ; 58 ; 1978 ; >
-      au < frozen ; exists ; 1979 ; Acta Dermato-Venereologica Volume 1979 ; 59 ; 1979 ; >
-      au < frozen ; exists ; 1980 ; Acta Dermato-Venereologica Volume 1980 ; 60 ; 1980 ; >
-      au < frozen ; exists ; 1981 ; Acta Dermato-Venereologica Volume 1981 ; 61 ; 1981 ; >
+      au < finished ; manifest ; 1974 ; Acta Dermato-Venereologica Volume 1974 ; 54 ; 1974 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1975 ; Acta Dermato-Venereologica Volume 1975 ; 55 ; 1975 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1976 ; Acta Dermato-Venereologica Volume 1976 ; 56 ; 1976 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1977 ; Acta Dermato-Venereologica Volume 1977 ; 57 ; 1977 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1978 ; Acta Dermato-Venereologica Volume 1978 ; 58 ; 1978 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1979 ; Acta Dermato-Venereologica Volume 1979 ; 59 ; 1979 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1980 ; Acta Dermato-Venereologica Volume 1980 ; 60 ; 1980 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1981 ; Acta Dermato-Venereologica Volume 1981 ; 61 ; 1981 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 1982 ; Acta Dermato-Venereologica Volume 1982 ; 62 ; 1982 ; >
       au < frozen ; exists ; 1983 ; Acta Dermato-Venereologica Volume 1983 ; 63 ; 1983 ; >
       au < frozen ; exists ; 1984 ; Acta Dermato-Venereologica Volume 1984 ; 64 ; 1984 ; >
