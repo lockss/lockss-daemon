@@ -119,6 +119,17 @@ function selectEnable(elem, id1, id2) {
  }
 }
 
+function toggleGroupElements(toggleElement, className) {
+  var enable = toggleElement.checked;
+  const groupElems = document.getElementsByClassName(className);
+  for (let i = 0; i < groupElems.length; i++) {
+    let elem = groupElems[i];
+    elem.disabled = !enable;
+    elem.value = null;
+    elem.checked = false;
+  }
+}
+
 lastAuClicked = null;
 
 function selectAll(form, op) {

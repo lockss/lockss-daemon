@@ -58,6 +58,8 @@ public class MigrationManager extends BaseLockssDaemonManager
 
   public static final String PARAM_IS_MIGRATOR_ENABLED = PREFIX + "migrationEnabled";
   public static final boolean DEFAULT_IS_MIGRATOR_ENABLED = false;
+  public static final String PARAM_IRREVOCABLE_MIGRATION_ENABLED = PREFIX + "irrevocableMigrationEnabled";
+  public static final boolean DEFAULT_IRREVOCABLE_MIGRATION_ENABLED = false;
   public static final String PARAM_IS_MIGRATOR_CONFIGURED = PREFIX + "isConfigured";
   public static final boolean DEFAULT_IS_MIGRATOR_CONFIGURED = false;
   public static final String PARAM_DEBUG_MODE = PREFIX + "debug";

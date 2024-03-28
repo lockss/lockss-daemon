@@ -2,6 +2,7 @@ package org.lockss.servlet;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
+import org.apache.commons.lang.RandomStringUtils;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
@@ -14,10 +15,7 @@ import org.lockss.protocol.IdentityManager;
 import org.lockss.protocol.LcapRouter;
 import org.lockss.proxy.ProxyManager;
 import org.lockss.repository.RepositoryManager;
-import org.lockss.util.Logger;
-import org.lockss.util.StringUtil;
-import org.lockss.util.UrlUtil;
-import org.lockss.util.XPathUtil;
+import org.lockss.util.*;
 import org.lockss.util.urlconn.LockssUrlConnection;
 import org.mortbay.html.*;
 import org.mortbay.http.HttpRequest;
@@ -51,8 +49,6 @@ public class MigrateSettings extends LockssServlet {
       "The password used to connect to the rest interface of the V2 services.";
 
   static final String DEFAULT_HOSTNAME = "localhost";
-  static final boolean DEFAULT_DELETE_AUS_ENABLED = true;
-
   static final String KEY_INITIALIZED_FROM_CONFIG = "initializedFromConfig";
   static final String KEY_HOSTNAME = "hostname";
   static final String KEY_CFGSVC_UI_PORT = "cfgUiPort";
@@ -64,6 +60,7 @@ public class MigrateSettings extends LockssServlet {
 
   static final String KEY_DELETED_AUS_DIR = "deletedAusDir";
   static final String KEY_DELETE_AUS_INTERVAL = "deleteAusInterval";
+  static final String KEY_IRREVOCABLE_MIGRATION_ENABLED = "irrevocableMigrationEnabled";
   static final String KEY_DELETE_AUS = "enableDeleteAus";
 
   static final String KEY_ACTION = "action";
@@ -82,6 +79,7 @@ public class MigrateSettings extends LockssServlet {
   Configuration mCfg;
   String dbPass;
 
+  boolean irrevocableMigrationEnabled;
   boolean isDeleteAusEnabled;
   boolean isTargetConfigFetched;
   boolean isMigrationConfigured;
@@ -136,8 +134,12 @@ public class MigrateSettings extends LockssServlet {
     userPass = cfg.get(MigrateContent.PARAM_PASSWORD);
 
     // Migration options
-    isDeleteAusEnabled = cfg.getBoolean(MigrateContent.PARAM_DELETE_AFTER_MIGRATION,
-        DEFAULT_DELETE_AUS_ENABLED);
+    irrevocableMigrationEnabled = cfg.getBoolean(
+        MigrationManager.PARAM_IRREVOCABLE_MIGRATION_ENABLED,
+        MigrationManager.DEFAULT_IRREVOCABLE_MIGRATION_ENABLED);
+    isDeleteAusEnabled = cfg.getBoolean(
+        MigrateContent.PARAM_DELETE_AFTER_MIGRATION,
+        MigrateContent.DEFAULT_DELETE_AFTER_MIGRATION);
 
     // Migration configuration
     ConfigManager cfgMgr = ConfigManager.getConfigManager();
@@ -157,7 +159,10 @@ public class MigrateSettings extends LockssServlet {
     dbPass = getSessionAttribute(KEY_DATABASE_PASS, null);
 
     // Migration options
-    isDeleteAusEnabled = getSessionAttribute(KEY_DELETE_AUS, DEFAULT_DELETE_AUS_ENABLED);
+    irrevocableMigrationEnabled = getSessionAttribute(
+        KEY_IRREVOCABLE_MIGRATION_ENABLED, MigrationManager.DEFAULT_IRREVOCABLE_MIGRATION_ENABLED);
+    isDeleteAusEnabled = getSessionAttribute(
+        KEY_DELETE_AUS, MigrateContent.DEFAULT_DELETE_AFTER_MIGRATION);
 
     // Migration configuration
     mCfg = getSessionAttribute(KEY_MIGRATION_CONFIG, ConfigManager.newConfiguration());
@@ -174,6 +179,7 @@ public class MigrateSettings extends LockssServlet {
     dbPass = getParameter(KEY_DATABASE_PASS);
 
     // Migration configuration
+    irrevocableMigrationEnabled = hasParameter(KEY_IRREVOCABLE_MIGRATION_ENABLED);
     isDeleteAusEnabled = hasParameter(KEY_DELETE_AUS);
   }
 
@@ -217,7 +223,7 @@ public class MigrateSettings extends LockssServlet {
     userPass = null;
 
     dbPass = null;
-    isDeleteAusEnabled = DEFAULT_DELETE_AUS_ENABLED;
+    isDeleteAusEnabled = MigrateContent.DEFAULT_DELETE_AFTER_MIGRATION;
     isTargetConfigFetched = false;
 
 //    fetchError = null;
@@ -233,8 +239,12 @@ public class MigrateSettings extends LockssServlet {
     initParams();
 
     if (requestMethod.equals(HttpRequest.__POST)) {
-      String action = getParameter(KEY_ACTION);
+      if (irrevocableMigrationEnabled) {
+        redirectToMigrateContent();
+        return;
+      }
 
+      String action = getParameter(KEY_ACTION);
       switch (action) {
         case ACTION_LOAD_V2_CFG:
           try {
@@ -267,6 +277,7 @@ public class MigrateSettings extends LockssServlet {
           break;
 
         case ACTION_ENTER_MIGRATION_MODE:
+        case ACTION_NEXT:
           initParamsFromFormData();
           if (!isTargetConfigFetched) {
             errMsg = "Missing database configuration";
@@ -274,9 +285,11 @@ public class MigrateSettings extends LockssServlet {
             dbError = "Derby not supported";
           } else if (StringUtil.isNullString(dbPass)) {
             dbError = "Missing database password";
-          } else if (!migrationMgr.isDaemonInMigrationMode()) {
+          } else if (!migrationMgr.isDaemonMigrating() || migrationMgr.isMigrationInDebugMode()) {
             // Populate remaining migration configuration parameters
             mCfg.put(V2_DOT + DbManager.PARAM_DATASOURCE_PASSWORD, dbPass);
+            mCfg.put(MigrationManager.PARAM_IRREVOCABLE_MIGRATION_ENABLED,
+                String.valueOf(irrevocableMigrationEnabled));
             mCfg.put(MigrateContent.PARAM_DELETE_AFTER_MIGRATION, String.valueOf(isDeleteAusEnabled));
 
             if (isDeleteAusEnabled) {
@@ -300,10 +313,7 @@ public class MigrateSettings extends LockssServlet {
             mCfg.put(MigrationManager.PARAM_IS_MIGRATOR_ENABLED, "true");
             writeMigrationConfigFile(mCfg);
             ConfigManager.getConfigManager().reloadAndWait();
-
-            // Redirect to Migrate Content page
-            String redir = srvURL(AdminServletManager.SERVLET_MIGRATE_CONTENT);
-            resp.sendRedirect(redir);
+            redirectToMigrateContent();
           }
           break;
 
@@ -324,17 +334,25 @@ public class MigrateSettings extends LockssServlet {
     session.setAttribute(KEY_CFGSVC_UI_PORT, cfgUiPort);
     session.setAttribute(KEY_USERNAME, userName);
     session.setAttribute(KEY_PASSWORD, userPass);
+    session.setAttribute(KEY_IRREVOCABLE_MIGRATION_ENABLED, irrevocableMigrationEnabled);
     session.setAttribute(KEY_DELETE_AUS, isDeleteAusEnabled);
     session.setAttribute(KEY_MIGRATION_CONFIG, mCfg);
   }
 
+  private void redirectToMigrateContent() throws IOException {
+    // Redirect to Migrate Content page
+    String redir = srvURL(AdminServletManager.SERVLET_MIGRATE_CONTENT);
+    resp.sendRedirect(redir);
+  }
+
   private void displayPage() throws IOException {
     Page page = newPage();
+    addJavaScript(page);
     addCssLocations(page);
     layoutErrorBlock(page);
     ServletUtil.layoutExplanationBlock(page, "");
-    page.add(migrationMgr.isDaemonInMigrationMode() ?
-        makeDisplayCfg() :makeForm());
+    page.add(!migrationMgr.isMigrationInDebugMode() && irrevocableMigrationEnabled ?
+        makeDisplayCfg() : makeForm());
     endPage(page);
   }
 
@@ -400,8 +418,23 @@ public class MigrateSettings extends LockssServlet {
 
     addSection(tbl, "Migration Options");
 
-    addCheckboxToTable(tbl, "Delete AUs after migration",
+    Input toggleElement = addCheckboxToTable(tbl, "Perform irrevocable migration",
+        KEY_IRREVOCABLE_MIGRATION_ENABLED, irrevocableMigrationEnabled);
+
+    Input toggleGroupElement = addCheckboxToTable(tbl, "Delete AUs after migration",
         KEY_DELETE_AUS, isDeleteAusEnabled);
+
+    if (!migrationMgr.isMigrationInDebugMode()) {
+      // Do not allow user to disable irrevocable migration settings once enabled
+      if (irrevocableMigrationEnabled) {
+        toggleElement.attribute("disabled");
+      }
+
+      // Only enabled through Javascript
+      toggleGroupElement.attribute("disabled");
+    }
+
+    setupToggleGroup(toggleElement, toggleGroupElement);
 
     // Advanced migration options - only in debug mode
     if (migrationMgr.isMigrationInDebugMode()) {
@@ -419,15 +452,28 @@ public class MigrateSettings extends LockssServlet {
     tbl.add(new Break(Break.Rule));
     tbl.add(new Break());
 
-    Input enterButton = new Input(Input.Submit, KEY_ACTION, ACTION_ENTER_MIGRATION_MODE);
+    Input nextButton = new Input(Input.Submit, KEY_ACTION, ACTION_NEXT);
     if (!isTargetConfigFetched) {
-      enterButton.attribute("disabled");
+      nextButton.attribute("disabled");
     }
-    tbl.add(enterButton);
+    tbl.add(nextButton);
 
     frm.add(tbl);
     comp.add(frm);
     return comp;
+  }
+
+  private void setupToggleGroup(Input toggleElem, Input... groupElems) {
+    // Generate class name
+    String cssClass = "toggleGroup" + RandomStringUtils.randomAlphabetic(5);
+
+    // Setup onChange on toggle element
+    toggleElem.attribute("onchange",
+        "toggleGroupElements(this,'" + cssClass + "')");
+
+    for (Input elem : groupElems) {
+      elem.cssClass(cssClass);
+    }
   }
 
   private Element makeDisplayCfg() {
@@ -441,7 +487,7 @@ public class MigrateSettings extends LockssServlet {
     addFieldToTable(tbl, "V2 Hostname", hostname);
     addFieldToTable(tbl, "V2 Configuration Service Port", String.valueOf(cfgUiPort));
     addFieldToTable(tbl, "Username", userName);
-    addHiddenFieldToTable(tbl, "Password", userPass);
+    addHiddenFieldToTable(tbl, "Password", "********");
 
     addSubsection(tbl, "Metadata Database");
 
@@ -454,10 +500,12 @@ public class MigrateSettings extends LockssServlet {
     addFieldToTable(tbl, "Database Name",
         getShortenedDatabaseName(v2cfg.get(DbManager.PARAM_DATASOURCE_DATABASENAME)));
     addFieldToTable(tbl, "Database User", v2cfg.get(DbManager.PARAM_DATASOURCE_USER));
-    addHiddenFieldToTable(tbl, "Database Password", v2cfg.get(DbManager.PARAM_DATASOURCE_PASSWORD));
+    addHiddenFieldToTable(tbl, "Database Password", "********");
 
     addSection(tbl, "Migration Options");
 
+    addDisabledCheckboxToTable(tbl, "Perform irrevocable migration",
+        KEY_IRREVOCABLE_MIGRATION_ENABLED, irrevocableMigrationEnabled);
     addDisabledCheckboxToTable(tbl, "Delete AUs after migration",
         KEY_DELETE_AUS, isDeleteAusEnabled);
 
@@ -480,8 +528,8 @@ public class MigrateSettings extends LockssServlet {
 //    }
 //    tbl.add(toggleMigrationMode);
 
-    Input exitButton = new Input(Input.Submit, KEY_ACTION, ACTION_EXIT_MIGRATION_MODE);
-    tbl.add(exitButton);
+    Input nextButton = new Input(Input.Submit, KEY_ACTION, ACTION_NEXT);
+    tbl.add(nextButton);
 
     frm.add(tbl);
     comp.add(frm);
@@ -572,15 +620,15 @@ public class MigrateSettings extends LockssServlet {
     addElementToTable(tbl, label, in);
   }
 
-  private void addCheckboxToTable(Table tbl, String label, String key, boolean checked) {
-    addCheckboxToTable(tbl, label, key, checked, false);
+  private Input addCheckboxToTable(Table tbl, String label, String key, boolean checked) {
+    return addCheckboxToTable(tbl, label, key, checked, false);
   }
 
-  private void addDisabledCheckboxToTable(Table tbl, String label, String key, boolean checked) {
-    addCheckboxToTable(tbl, label, key, checked, true);
+  private Input addDisabledCheckboxToTable(Table tbl, String label, String key, boolean checked) {
+    return addCheckboxToTable(tbl, label, key, checked, true);
   }
 
-  private void addCheckboxToTable(Table tbl, String label, String key, boolean checked, boolean disabled) {
+  private Input addCheckboxToTable(Table tbl, String label, String key, boolean checked, boolean disabled) {
     Input in = new Input(Input.Checkbox, key);
     if (checked) {
       in.attribute("checked");
@@ -589,6 +637,7 @@ public class MigrateSettings extends LockssServlet {
       in.attribute("disabled");
     }
     addElementToTable(tbl, label, in);
+    return in;
   }
 
   private void addFieldToTable(Table tbl, String lbl, String val) {
