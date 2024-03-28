@@ -127,6 +127,10 @@ public class RSC2014HtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "class", "page_anchor"),
         HtmlNodeFilters.comment(),
         HtmlNodeFilters.tag("noscript"),
+        // filter out potential login credential request
+        HtmlNodeFilters.tagWithAttribute("a", "title", "Log in via your home Institution"),
+        HtmlNodeFilters.tagWithAttribute("a", "title", "Log in with your member or subscriber username and password"),
+        HtmlNodeFilters.tagWithText("div", "To gain access to this content please"),
     };
     
     InputStream filtered =  new HtmlFilterInputStream(in, encoding,
