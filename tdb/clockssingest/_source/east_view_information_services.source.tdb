@@ -67,6 +67,8 @@
         #param[base_url] = https://clockss-test.lockss.org/sourcefiles/eastviewudbcom-released/
         param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/eastviewudbcom-released/
 
+        # all 6 buckets can be marked "ready" once the bucket is setup, they have been tested on testing machine*
+
         au < expected ; exists ; 2024 ; East View Information Services Journal Database Source Content 2024_01 ; 2024_01 >
         au < expected ; exists ; 2024 ; East View Information Services Journal Database Source Content 2024_02 ; 2024_02 >
         au < expected ; exists ; 2024 ; East View Information Services Journal Database Source Content 2024_03 ; 2024_03 >
