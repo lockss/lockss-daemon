@@ -32,15 +32,14 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.tdb;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
 
 import java.util.*;
 
-import org.junit.jupiter.api.Test;
+import org.lockss.test.LockssTestCase;
 
-public class TestAu {
+public class TestAu extends LockssTestCase {
 
   public static final String NAME_VALUE = "AU Name";
   public static final String EDITION_VALUE = "Edition Value";
@@ -88,7 +87,6 @@ public class TestAu {
                                                        NONDEFPARAM2_KEY,
                                                        NONDEFPARAM2_VALUE);
 
-  @Test
   public void testKeys() throws Exception {
     assertEquals("edition", Au.EDITION);
     assertEquals("eisbn", Au.EISBN);
@@ -107,7 +105,6 @@ public class TestAu {
     assertEquals("year", Au.YEAR);
   }
 
-  @Test
   public void testStatus() throws Exception {
     assertEquals("crawling", Au.STATUS_CRAWLING);
     assertEquals("deepCrawl", Au.STATUS_DEEP_CRAWL);
@@ -131,7 +128,6 @@ public class TestAu {
     assertEquals("zapped", Au.STATUS_ZAPPED);
   }
 
-  @Test
   public void testEmpty() throws Exception {
     Au au = new Au(null);
     assertNull(au.getTitle());
@@ -160,7 +156,6 @@ public class TestAu {
     assertNull(au.getArbitraryValue(FOO_KEY));
   }
 
-  @Test
   public void testAu() throws Exception {
     Publisher publisher = new Publisher();
     Title title = new Title(publisher);
@@ -208,7 +203,6 @@ public class TestAu {
     assertNull(au.getArbitraryValue("X" + FOO_KEY));
   }
 
-  @Test
   public void testPlugin() throws Exception {
     Au au1 = new Au(null);
     au1.put(Au.PLUGIN, PLUGIN_VALUE);
@@ -258,7 +252,6 @@ public class TestAu {
     assertNull(au6.getComputedPlugin());
   }
 
-  @Test
   public void testAuid() throws Exception {
     Au au1 = new Au(null);
     au1.put(Au.PLUGIN, PLUGIN1);
@@ -277,7 +270,6 @@ public class TestAu {
     assertEquals(AUIDPLUS1, au2.getAuidPlus());
   }
 
-  @Test
   public void testNesting() throws Exception {
     Au au1 = new Au(null);
     au1.put(Au.EISBN, EISBN_VALUE);
@@ -303,7 +295,6 @@ public class TestAu {
     assertNull(au3.getArbitraryValue("X" + FOO_KEY));
   }
 
-  @Test
   public void testTraitFunctors() throws Exception {
     // Make a publisher
     Map<String, String> publisherMap = new LinkedHashMap<String, String>();

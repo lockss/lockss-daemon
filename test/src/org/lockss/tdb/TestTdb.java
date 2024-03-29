@@ -32,17 +32,15 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.tdb;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
 
 import java.util.*;
 
-import org.junit.jupiter.api.Test;
+import org.lockss.test.LockssTestCase;
 
-public class TestTdb {
+public class TestTdb extends LockssTestCase {
 
-  @Test
   public void testEmpty() throws Exception {
     Tdb tdb = new Tdb();
     assertThat(tdb.getPublishers(), empty());
@@ -50,7 +48,6 @@ public class TestTdb {
     assertThat(tdb.getAus(), empty());
   }
   
-  @Test
   public void testTdb() throws Exception {
     Tdb tdb = new Tdb();
     

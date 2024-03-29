@@ -32,13 +32,10 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.tdb;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.lockss.test.LockssTestCase;
 
-import org.junit.jupiter.api.Test;
+public class TestTdbXml extends LockssTestCase {
 
-public class TestTdbXml {
-
-  @Test
   public void testXmlEscaper() throws Exception {
     assertEquals("foo&lt;bar", TdbXml.xmlEscaper.translate("foo<bar"));
     assertEquals("foo&gt;bar", TdbXml.xmlEscaper.translate("foo>bar"));
@@ -50,7 +47,6 @@ public class TestTdbXml {
     assertEquals("foo&#127;bar", TdbXml.xmlEscaper.translate("foo\u007fbar")); // hex 7F = dec 127
   }
   
-  @Test
   public void testUnicodeNormalizer() throws Exception {
     assertEquals("aeiou", TdbXml.unicodeNormalizer.apply("aeiou"));
     assertEquals("aeiou", TdbXml.unicodeNormalizer.apply("\u00e1\u00e8\u00ee\u00f5\u00fc")); // a acute, e grave, i circumflex, o tilde, u umlaut

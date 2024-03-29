@@ -32,32 +32,27 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.tdb;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.util.*;
 
-import org.junit.jupiter.api.Test;
+import org.lockss.test.LockssTestCase;
 
-public class TestPublisher {
+public class TestPublisher extends LockssTestCase {
 
   public static final String NAME_VALUE = "Publisher Name";
 
   public static final String FOO_KEY = "publisherfookey";
     public static final String FOO_VALUE = "publisherfooval";
 
-  @Test
   public void testKeys() throws Exception {
     assertEquals("name", Publisher.NAME);
   }
   
-  @Test
   public void testEmpty() throws Exception {
     Publisher publisher = new Publisher();
     assertNull(publisher.getName());
     assertNull(publisher.getArbitraryValue(FOO_KEY));
   }
   
-  @Test
   public void testPublisher() throws Exception {
     Map<String, String> map = new LinkedHashMap<String, String>();
     Publisher publisher = new Publisher(map);
