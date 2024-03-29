@@ -614,7 +614,8 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   protected boolean isDaemonMigrating() {
-    return migrationMgr.isDaemonMigrating();
+    return migrationMgr.isIrrevocableMigrationEnabled() &&
+           migrationMgr.isDaemonMigrating();
   }
 
   protected boolean isDisallowInMigration() {

@@ -403,7 +403,10 @@ public class MigrateContent extends LockssServlet {
 
     tbl.newRow();
     tbl.newCell(CENTERED_CELL);
-    Input start = new Input(Input.Submit, KEY_ACTION, ACTION_START);
+    // Input start = new Input(Input.Submit, KEY_ACTION, ACTION_START);
+    String lbl = migrationMgr.isIrrevocableMigrationEnabled() ?
+        "Start Irrevocable Migration" : "Start Migration";
+    Element start = submitButton(lbl, ACTION_START);
     Input abort = new Input(Input.Submit, KEY_ACTION, ACTION_ABORT);
     tbl.add(start);
     tbl.add(abort);

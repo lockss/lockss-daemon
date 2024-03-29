@@ -1585,7 +1585,15 @@ public class ConfigManager implements LockssManager {
   }
 
   private void setMigrationParams(Configuration config) {
-    if (config.getBoolean(MigrationManager.PARAM_IS_MIGRATING, false)) {
+    boolean isIrrevocableMigrationEnabled = config.getBoolean(
+        MigrationManager.PARAM_IRREVOCABLE_MIGRATION_ENABLED,
+        MigrationManager.DEFAULT_IRREVOCABLE_MIGRATION_ENABLED);
+
+    boolean isDaemonMigrating = config.getBoolean(
+        MigrationManager.PARAM_IS_MIGRATING,
+        MigrationManager.DEFAULT_IS_MIGRATING);
+
+    if (isIrrevocableMigrationEnabled && isDaemonMigrating) {
       Configuration v2MigrationParams = config.getConfigTree("v2");
       if (!v2MigrationParams.isEmpty()) {
         // Replace V1 DB params with V2 DB params

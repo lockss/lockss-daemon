@@ -43,6 +43,9 @@ import org.lockss.plugin.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 
+import static org.lockss.laaws.MigrationManager.DEFAULT_IRREVOCABLE_MIGRATION_ENABLED;
+import static org.lockss.laaws.MigrationManager.PARAM_IRREVOCABLE_MIGRATION_ENABLED;
+
 /**
  * RepositoryManager is the center of the per AU repositories.  It manages
  * the repository config parameters.
@@ -446,6 +449,10 @@ public class RepositoryManager
           changedKeys.contains(MigrateContent.PARAM_DELETE_AFTER_MIGRATION) ||
           changedKeys.contains(PARAM_MOVE_DELETED_AUS_TO)) {
 
+        boolean isIrrevocableMigrationEnabled = config.getBoolean(
+            PARAM_IRREVOCABLE_MIGRATION_ENABLED,
+            DEFAULT_IRREVOCABLE_MIGRATION_ENABLED);
+
         boolean isMigrating = config.getBoolean(
             MigrationManager.PARAM_IS_MIGRATING,
             MigrationManager.DEFAULT_IS_MIGRATING);
@@ -454,7 +461,7 @@ public class RepositoryManager
             MigrateContent.PARAM_DELETE_AFTER_MIGRATION,
             MigrateContent.DEFAULT_DELETE_AFTER_MIGRATION);
 
-        if (isMigrating && deleteAusAfterMigration
+        if (isIrrevocableMigrationEnabled && isMigrating && deleteAusAfterMigration
             && !StringUtil.isNullString(paramMoveDeletedAusTo)) {
           startOrKickDeleteAusThread();
         } else {

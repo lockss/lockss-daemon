@@ -412,7 +412,6 @@ public class V2AuMover {
 
   private OpType opType;
 
-  private boolean isDeleteMigratedAus;
   private boolean isPartialContent = false;
   private boolean checkMissingContent;
 
@@ -541,9 +540,6 @@ public class V2AuMover {
                                     DEFAULT_MAX_RETRY_COUNT);
       retryBackoffDelay = config.getLong(PARAM_RETRY_BACKOFF_DELAY,
                                          DEFAULT_RETRY_BACKOFF_DELAY);
-      isDeleteMigratedAus = config.getBoolean(
-          MigrateContent.PARAM_DELETE_AFTER_MIGRATION,
-          MigrateContent.DEFAULT_DELETE_AFTER_MIGRATION);
       checkMissingContent = config.getBoolean(PARAM_CHECK_MISSING_CONTENT,
                                               DEFAULT_CHECK_MISSING_CONTENT);
 
@@ -899,7 +895,7 @@ public class V2AuMover {
   private void setAuMigrationState(ArchivalUnit au,
                                    AuState.MigrationState state) {
     // Return if we're not migrating or if we're in debug mode
-    if (!(migrationMgr.isDaemonMigrating() ||
+    if (!(migrationMgr.isIrrevocableMigrationEnabled() ||
           migrationMgr.isMigrationInDebugMode())) {
       return;
     }
@@ -925,9 +921,9 @@ public class V2AuMover {
         break;
       case Finished:
         // Optionally delete the AU from the system
-        if (migrationMgr.isDaemonMigrating()) {
+        if (migrationMgr.isIrrevocableMigrationEnabled()) {
           try {
-            if (isDeleteMigratedAus) {
+            if (migrationMgr.isDeleteMigratedAus()) {
               // Remove AU from LOCKSS
               pluginManager.deleteAu(au);
             } else {

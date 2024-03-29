@@ -33,6 +33,7 @@ import java.util.*;
 
 import org.lockss.app.*;
 import org.lockss.daemon.*;
+import org.lockss.servlet.MigrateContent;
 import org.lockss.util.*;
 import org.lockss.config.*;
 
@@ -76,8 +77,10 @@ public class MigrationManager extends BaseLockssDaemonManager
   private String idleError;
   private long startTime = 0;
 
+  boolean isIrrevocableMigrationEnabled;
   boolean isDaemonMigrating;
   boolean isMigrationInDebugMode;
+  boolean isDeleteMigratedAus;
 
   ConfigManager cfgMgr;
 
@@ -90,12 +93,20 @@ public class MigrationManager extends BaseLockssDaemonManager
     super.stopService();
   }
 
+  public boolean isIrrevocableMigrationEnabled() {
+    return isIrrevocableMigrationEnabled;
+  }
+
   public boolean isDaemonMigrating() {
     return isDaemonMigrating;
   }
 
   public boolean isMigrationInDebugMode() {
     return isMigrationInDebugMode;
+  }
+
+  public boolean isDeleteMigratedAus() {
+    return isDeleteMigratedAus;
   }
 
   public void setConfig(Configuration config, Configuration oldConfig,
@@ -106,19 +117,21 @@ public class MigrationManager extends BaseLockssDaemonManager
         m.setConfig(config, oldConfig, changedKeys);
       }
 
+      isIrrevocableMigrationEnabled = config.getBoolean(
+          PARAM_IRREVOCABLE_MIGRATION_ENABLED, DEFAULT_IRREVOCABLE_MIGRATION_ENABLED);
       isDaemonMigrating =
           config.getBoolean(PARAM_IS_MIGRATING, DEFAULT_IS_MIGRATING);
       isMigrationInDebugMode =
           config.getBoolean(PARAM_DEBUG_MODE, DEFAULT_DEBUG_MODE);
-    }
-  }
+      isDeleteMigratedAus = config.getBoolean(
+          MigrateContent.PARAM_DELETE_AFTER_MIGRATION,
+          MigrateContent.DEFAULT_DELETE_AFTER_MIGRATION);
 
-  public void setMigrationConfigured(boolean isConfigured) throws IOException {
-    Configuration mCfg = cfgMgr.newConfiguration();
-    mCfg.put(MigrationManager.PARAM_IS_MIGRATOR_CONFIGURED, String.valueOf(isConfigured));
-    cfgMgr.modifyCacheConfigFile(mCfg,
-        ConfigManager.CONFIG_FILE_MIGRATION, CONFIG_FILE_MIGRATION_HEADER);
-    cfgMgr.reloadAndWait();
+      if (!isIrrevocableMigrationEnabled && isDeleteMigratedAus) {
+        log.warning("isIrrevocableMigrationEnabled is false but isDeleteMigrateAus is true; setting it to false");
+        isDeleteMigratedAus = false;
+      }
+    }
   }
 
   public void setIsMigrating(boolean isMigrating) throws IOException {

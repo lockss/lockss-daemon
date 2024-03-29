@@ -135,6 +135,7 @@ public class MigrateSettings extends LockssServlet {
     irrevocableMigrationEnabled = cfg.getBoolean(
         MigrationManager.PARAM_IRREVOCABLE_MIGRATION_ENABLED,
         MigrationManager.DEFAULT_IRREVOCABLE_MIGRATION_ENABLED);
+
     isDeleteAusEnabled = cfg.getBoolean(
         MigrateContent.PARAM_DELETE_AFTER_MIGRATION,
         MigrateContent.DEFAULT_DELETE_AFTER_MIGRATION);
@@ -159,6 +160,7 @@ public class MigrateSettings extends LockssServlet {
     // Migration options
     irrevocableMigrationEnabled = getSessionAttribute(
         KEY_IRREVOCABLE_MIGRATION_ENABLED, MigrationManager.DEFAULT_IRREVOCABLE_MIGRATION_ENABLED);
+
     isDeleteAusEnabled = getSessionAttribute(
         KEY_DELETE_AUS, MigrateContent.DEFAULT_DELETE_AFTER_MIGRATION);
 
@@ -237,11 +239,6 @@ public class MigrateSettings extends LockssServlet {
     initParams();
 
     if (requestMethod.equals(HttpRequest.__POST)) {
-      if (irrevocableMigrationEnabled) {
-        redirectToMigrateContent();
-        return;
-      }
-
       String action = getParameter(KEY_ACTION);
       switch (action) {
         case ACTION_LOAD_V2_CFG:
@@ -267,8 +264,6 @@ public class MigrateSettings extends LockssServlet {
               mCfg.removeConfigTree(V2_PREFIX);
             }
             migrationMgr.setIsMigrating(false);
-            migrationMgr.setMigrationConfigured(false);
-            isMigrationConfigured = false;
             dbPass = null;
           }
 
@@ -343,7 +338,8 @@ public class MigrateSettings extends LockssServlet {
     addCssLocations(page);
     layoutErrorBlock(page);
     ServletUtil.layoutExplanationBlock(page, "");
-    page.add(!migrationMgr.isMigrationInDebugMode() && irrevocableMigrationEnabled ?
+    page.add(!migrationMgr.isMigrationInDebugMode() &&
+             (irrevocableMigrationEnabled && migrationMgr.isDaemonMigrating()) ?
         makeDisplayCfg() : makeForm());
     endPage(page);
   }
@@ -418,12 +414,11 @@ public class MigrateSettings extends LockssServlet {
 
     if (!migrationMgr.isMigrationInDebugMode()) {
       // Do not allow user to disable irrevocable migration settings once enabled
-      if (irrevocableMigrationEnabled) {
+      if (irrevocableMigrationEnabled && migrationMgr.isDaemonMigrating()) {
         toggleElement.attribute("disabled");
+      } else if (!irrevocableMigrationEnabled) {
+        toggleGroupElement.attribute("disabled");
       }
-
-      // Only enabled through Javascript
-      toggleGroupElement.attribute("disabled");
     }
 
     setupToggleGroup(toggleElement, toggleGroupElement);
