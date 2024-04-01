@@ -203,7 +203,7 @@
     au < finished ; crawling ; 2021 ; 2021 ; Water Reuse Volume 11 ; 11 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2022 ; 2022 ; Water Reuse Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2023 ; 2023 ; Water Reuse Volume 13 ; 13 ; >
-    au < expected ; exists ; 2024 ; 2024 ; Water Reuse Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2024 ; 2024 ; Water Reuse Volume 14 ; 14 ; >
 
   }
 
