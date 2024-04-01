@@ -53,7 +53,10 @@ public class ProjectMuse2017PdfFilterFactory extends ExtractingPdfFilterFactory 
 
   protected static final Pattern WATERMARK_LINE_1 =
       //[ Access provided at 2 Dec 2022 15:10 GMT from Stanford LOCKSS (+1 other institution account) ]
-      Pattern.compile("Access provided at .+ from Stanford LOCKSS");
+      Pattern.compile("Access provided at .+ from ");
+
+  protected static final Pattern WATERMARK_LINE_2 = 
+      Pattern.compile("\\[[0-9.]+\\] +Project +MUSE +\\([0-9-]+");
 
   @Override
   public void transform(ArchivalUnit au,
@@ -90,7 +93,7 @@ public class ProjectMuse2017PdfFilterFactory extends ExtractingPdfFilterFactory 
           for (PdfToken tok : accumulator) {
             if (tok.isString()) {
               String str = tok.getString();
-              if (WATERMARK_LINE_1.matcher(str).find()) {
+              if (WATERMARK_LINE_1.matcher(str).find() || WATERMARK_LINE_2.matcher(str).find()) {
                 accumulator.clear();
                 return;
               }
@@ -205,8 +208,8 @@ public class ProjectMuse2017PdfFilterFactory extends ExtractingPdfFilterFactory 
     Reads in a pdf and applies the filters writing the contents to a new file <fileStr>.bin
      */
     String[] fileStrs = {
-        "/home/mark/Downloads/projmuse.pdf",
-        "/home/mark/Downloads/projmuse6.pdf"
+        "/Users/crc10/Desktop/RicePDF.pdf",
+        "/Users/crc10/Desktop/StanfordPDF.pdf"
     };
     for (String fileStr : fileStrs) {
       FilterFactory fact = new ProjectMuse2017PdfFilterFactory();
