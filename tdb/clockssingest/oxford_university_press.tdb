@@ -580,7 +580,7 @@
     au < finished ; crawling ; 2017 ; 2017 ; The American Journal of Clinical Nutrition Volume 105-106 ; 105-106 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; The American Journal of Clinical Nutrition Volume 107-108 ; 107-108 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2019 ; 2019 ; The American Journal of Clinical Nutrition Volume 109-110 ; 109-110 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; 2020 ; The American Journal of Clinical Nutrition Volume 111-112 ; 111-112 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; The American Journal of Clinical Nutrition Volume 111-112 ; 111-112 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; The American Journal of Clinical Nutrition Volume 113-114 ; 113-114 ; >
     au < frozen ; exists ; 2022 ; 2022 ; The American Journal of Clinical Nutrition Volume 115-116 ; 115-116 ; >
 
@@ -1448,7 +1448,7 @@
     au < finished ; manifest ; 2017 ; 2017 ; Journal of AOAC INTERNATIONAL Volume 100 ; 100 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; 2018 ; Journal of AOAC INTERNATIONAL Volume 101 ; 101 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; 2019 ; Journal of AOAC INTERNATIONAL Volume 102 ; 102 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; 2020 ; Journal of AOAC INTERNATIONAL Volume 103 ; 103 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Journal of AOAC INTERNATIONAL Volume 103 ; 103 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2021 ; 2021 ; Journal of AOAC INTERNATIONAL Volume 104 ; 104 ; >
     au < frozen ; exists ; 2022 ; 2022 ; Journal of AOAC INTERNATIONAL Volume 105 ; 105 ; >
     au < frozen ; exists ; 2023 ; 2023 ; Journal of AOAC INTERNATIONAL Volume 106 ; 106 ; >
@@ -2276,7 +2276,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Bioinformatics Volume 33 ; 33 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; Bioinformatics Volume 34 ; 34 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Bioinformatics Volume 35 ; 35 ; >
-    au < frozen ; exists ; 2020 ; 2020 ; Bioinformatics Volume 36 ; 36 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Bioinformatics Volume 36 ; 36 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; Bioinformatics Volume 37 ; 37 ; >
     au < frozen ; exists ; 2022 ; 2022 ; Bioinformatics Volume 38 ; 38 ; >
     au < frozen ; exists ; 2023 ; 2023 ; Bioinformatics Volume 39 ; 39 ; >
@@ -2818,7 +2818,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Brain Volume 140 ; 140 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; 2018 ; Brain Volume 141 ; 141 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Brain Volume 142 ; 142 ; >
-    au < frozen ; exists ; 2020 ; 2020 ; Brain Volume 143 ; 143 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Brain Volume 143 ; 143 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2021 ; 2021 ; Brain Volume 144 ; 144 ; >
     au < frozen ; exists ; 2022 ; 2022 ; Brain Volume 145 ; 145 ; >
     au < frozen ; exists ; 2023 ; 2023 ; Brain Volume 146 ; 146 ; >
@@ -2939,7 +2939,7 @@
     au < finished ; crawling ; 2017 ; 2017 ; British Journal of Surgery Volume 104 ; 104 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; British Journal of Surgery Volume 105 ; 105 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; British Journal of Surgery Volume 106 ; 106 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2020 ; 2020 ; British Journal of Surgery Volume 107 ; 107 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; British Journal of Surgery Volume 107 ; 107 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2021 ; 2021 ; British Journal of Surgery Volume 108 ; 108 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; British Journal of Surgery Volume 109 ; 109 ; >
     au < crawling ; exists ; 2023 ; 2023 ; British Journal of Surgery Volume 110 ; 110 ; >
@@ -3185,7 +3185,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Cambridge Journal of Economics Volume 41 ; 41 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; Cambridge Journal of Economics Volume 42 ; 42 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Cambridge Journal of Economics Volume 43 ; 43 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; 2020 ; Cambridge Journal of Economics Volume 44 ; 44 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Cambridge Journal of Economics Volume 44 ; 44 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2021 ; 2021 ; Cambridge Journal of Economics Volume 45 ; 45 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Cambridge Journal of Economics Volume 46 ; 46 ; >
     au < frozen ; exists ; 2023 ; 2023 ; Cambridge Journal of Economics Volume 47 ; 47 ; >
@@ -3695,7 +3695,7 @@
     au < finished ; manifest ; 2017 ; 2017 ; Clinical and Experimental Dermatology Volume 42 ; 42 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; 2018 ; Clinical and Experimental Dermatology Volume 43 ; 43 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; 2019 ; Clinical and Experimental Dermatology Volume 44 ; 44 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; 2020 ; Clinical and Experimental Dermatology Volume 45 ; 45 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Clinical and Experimental Dermatology Volume 45 ; 45 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; Clinical and Experimental Dermatology Volume 46 ; 46 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Clinical and Experimental Dermatology Volume 47 ; 47 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Clinical and Experimental Dermatology Volume 48 ; 48 ; >
@@ -3744,7 +3744,7 @@
     au < finished ; manifest ; 2017 ; 2017 ; Clinical & Experimental Immunology Volume 187-190 ; 187-190 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; 2018 ; Clinical & Experimental Immunology Volume 191-194 ; 191-194 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2019 ; 2019 ; Clinical & Experimental Immunology Volume 195-198 ; 195-198 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2020 ; 2020 ; Clinical & Experimental Immunology Volume 199-202 ; 199-202 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Clinical & Experimental Immunology Volume 199-202 ; 199-202 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; Clinical & Experimental Immunology Volume 203-206 ; 203-206 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Clinical & Experimental Immunology Volume 207-210 ; 207-210 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Clinical & Experimental Immunology Volume 211-214 ; 211-214 ; >
@@ -4095,7 +4095,7 @@
     au < finished ; crawling ; 2017 ; 2017 ; The Condor: Ornithological Applications Volume 119 ; 119 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; The Condor: Ornithological Applications Volume 120 ; 120 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; The Condor: Ornithological Applications Volume 121 ; 121 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2020 ; 2020 ; The Condor: Ornithological Applications Volume 122 ; 122 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; The Condor: Ornithological Applications Volume 122 ; 122 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; 2021 ; The Condor: Ornithological Applications Volume 123 ; 123 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; The Condor: Ornithological Applications Volume 124 ; 124 ; >
     au < crawling ; exists ; 2023 ; 2023 ; The Condor: Ornithological Applications Volume 125 ; 125 ; >
@@ -4153,7 +4153,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Contemporary Women's Writing Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; Contemporary Women's Writing Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Contemporary Women's Writing Volume 13 ; 13 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; 2020 ; Contemporary Women's Writing Volume 14 ; 14 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Contemporary Women's Writing Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; 2021 ; Contemporary Women's Writing Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Contemporary Women's Writing Volume 16 ; 16 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Contemporary Women's Writing Volume 17 ; 17 ; >
@@ -5032,7 +5032,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Economic Policy Volume 32 ; 32 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; 2018 ; Economic Policy Volume 33 ; 33 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Economic Policy Volume 34 ; 34 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2020 ; 2020 ; Economic Policy Volume 35 ; 35 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Economic Policy Volume 35 ; 35 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; 2021 ; Economic Policy Volume 36 ; 36 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Economic Policy Volume 37 ; 37 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Economic Policy Volume 38 ; 38 ; >
@@ -5167,7 +5167,7 @@
     au < finished ; finished ; 2017 ; 2017 ; English: Journal of the English Association Volume 66 ; 66 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; English: Journal of the English Association Volume 67 ; 67 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; English: Journal of the English Association Volume 68 ; 68 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2020 ; 2020 ; English: Journal of the English Association Volume 69 ; 69 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; English: Journal of the English Association Volume 69 ; 69 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; 2021 ; English: Journal of the English Association Volume 70 ; 70 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; English: Journal of the English Association Volume 71 ; 71 ; >
     au < crawling ; exists ; 2023 ; 2023 ; English: Journal of the English Association Volume 72 ; 72 ; >
@@ -5234,7 +5234,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Environmental Entomology Volume 46 ; 46 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; Environmental Entomology Volume 47 ; 47 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Environmental Entomology Volume 48 ; 48 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2020 ; 2020 ; Environmental Entomology Volume 49 ; 49 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Environmental Entomology Volume 49 ; 49 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2021 ; 2021 ; Environmental Entomology Volume 50 ; 50 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Environmental Entomology Volume 51 ; 51 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Environmental Entomology Volume 52 ; 52 ; >
@@ -5256,7 +5256,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Environmental Epigenetics Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; Environmental Epigenetics Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Environmental Epigenetics Volume 5 ; 5 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; 2020 ; Environmental Epigenetics Volume 6 ; 6 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Environmental Epigenetics Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2021 ; 2021 ; Environmental Epigenetics Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Environmental Epigenetics Volume 8 ; 8 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Environmental Epigenetics Volume 9 ; 9 ; >
@@ -5300,7 +5300,7 @@
     au < finished ; crawling ; 2017 ; 2017 ; Environmental History Volume 22 ; 22 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2018 ; 2018 ; Environmental History Volume 23 ; 23 ; >
     au < doNotProcess ; exists ; 2019 ; 2019 ; Environmental History Volume 24 ; 24 ; >
-    au < frozen ; exists ; 2020 ; 2020 ; Environmental History Volume 25 ; 25 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Environmental History Volume 25 ; 25 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -5389,7 +5389,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Epidemiologic Reviews Volume 39 ; 39 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; 2018 ; Epidemiologic Reviews Volume 40 ; 40 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Epidemiologic Reviews Volume 41 ; 41 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; 2020 ; Epidemiologic Reviews Volume 42 ; 42 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Epidemiologic Reviews Volume 42 ; 42 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; Epidemiologic Reviews Volume 43 ; 43 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Epidemiologic Reviews Volume 44 ; 44 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Epidemiologic Reviews Volume 45 ; 45 ; >
@@ -5529,7 +5529,7 @@
     au < finished ; crawling ; 2017 ; 2017 ; European Heart Journal Volume 38 ; 38 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; 2018 ; European Heart Journal Volume 39 ; 39 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; 2019 ; European Heart Journal Volume 40 ; 40 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2020 ; 2020 ; European Heart Journal Volume 41 ; 41 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; European Heart Journal Volume 41 ; 41 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; European Heart Journal Volume 42 ; 42 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; European Heart Journal Volume 43 ; 43 ; >
     au < crawling ; exists ; 2023 ; 2023 ; European Heart Journal Volume 44 ; 44 ; >
@@ -5568,7 +5568,7 @@
     au < finished ; crawling ; 2017 ; 2017 ; European Heart Journal - Cardiovascular Imaging Volume 18 ; 18 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; European Heart Journal - Cardiovascular Imaging Volume 19 ; 19 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; 2019 ; European Heart Journal - Cardiovascular Imaging Volume 20 ; 20 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; 2020 ; European Heart Journal - Cardiovascular Imaging Volume 21 ; 21 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; European Heart Journal - Cardiovascular Imaging Volume 21 ; 21 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2021 ; 2021 ; European Heart Journal - Cardiovascular Imaging Volume 22 ; 22 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; European Heart Journal - Cardiovascular Imaging Volume 23 ; 23 ; >
     au < crawling ; exists ; 2023 ; 2023 ; European Heart Journal - Cardiovascular Imaging Volume 24 ; 24 ; >
@@ -5591,7 +5591,7 @@
     au < finished ; finished ; 2017 ; 2017 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; 2019 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 5 ; 5 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; 2020 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 6 ; 6 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 7 ; 7 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 8 ; 8 ; >
     au < crawling ; exists ; 2023 ; 2023 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 9 ; 9 ; >
@@ -7802,7 +7802,7 @@
     au < finished ; crawling ; 2017 ; 2017 ; Human Molecular Genetics Volume 26 ; 26 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; Human Molecular Genetics Volume 27 ; 27 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Human Molecular Genetics Volume 28 ; 28 ; >
-    au < frozen ; exists ; 2020 ; 2020 ; Human Molecular Genetics Volume 29 ; 29 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Human Molecular Genetics Volume 29 ; 29 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2021 ; 2021 ; Human Molecular Genetics Volume 30 ; 30 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Human Molecular Genetics Volume 31 ; 31 ; >
     au < ready ; exists ; 2023 ; 2023 ; Human Molecular Genetics Volume 32 ; 32 ; >
@@ -8076,7 +8076,7 @@
     au < finished ; crawling ; 2017 ; 2017 ; ICES Journal of Marine Science Volume 74 ; 74 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; ICES Journal of Marine Science Volume 75 ; 75 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; ICES Journal of Marine Science Volume 76 ; 76 ; >
-    au < frozen ; exists ; 2020 ; 2020 ; ICES Journal of Marine Science Volume 77 ; 77 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; ICES Journal of Marine Science Volume 77 ; 77 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2021 ; 2021 ; ICES Journal of Marine Science Volume 78 ; 78 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; ICES Journal of Marine Science Volume 79 ; 79 ; >
     au < ready ; exists ; 2023 ; 2023 ; ICES Journal of Marine Science Volume 80 ; 80 ; >
@@ -9827,7 +9827,7 @@
     au < finished ; crawling ; 2017 ; 2017 ; JNCI: Journal of the National Cancer Institute Volume 109 ; 109 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; 2018 ; JNCI: Journal of the National Cancer Institute Volume 110 ; 110 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; JNCI: Journal of the National Cancer Institute Volume 111 ; 111 ; >
-    au < frozen ; exists ; 2020 ; 2020 ; JNCI: Journal of the National Cancer Institute Volume 112 ; 112 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; JNCI: Journal of the National Cancer Institute Volume 112 ; 112 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; JNCI: Journal of the National Cancer Institute Volume 113 ; 113 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; JNCI: Journal of the National Cancer Institute Volume 114 ; 114 ; >
     au < ready ; exists ; 2023 ; 2023 ; JNCI: Journal of the National Cancer Institute Volume 115 ; 115 ; >
@@ -11489,7 +11489,7 @@
     au < finished ; crawling ; 2017 ; 2017 ; Journal of Human Rights Practice Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Human Rights Practice Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Human Rights Practice Volume 11 ; 11 ; >
-    au < frozen ; exists ; 2020 ; 2020 ; Journal of Human Rights Practice Volume 12 ; 12 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Journal of Human Rights Practice Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; Journal of Human Rights Practice Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Human Rights Practice Volume 14 ; 14 ; >
     au < ready ; exists ; 2023 ; 2023 ; Journal of Human Rights Practice Volume 15 ; 15 ; >
@@ -11902,7 +11902,7 @@
     au < finished ; crawling ; 2017 ; 2017 ; Journal of Logic and Computation Volume 27 ; 27 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Logic and Computation Volume 28 ; 28 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Logic and Computation Volume 29 ; 29 ; >
-    au < frozen ; exists ; 2020 ; 2020 ; Journal of Logic and Computation Volume 30 ; 30 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Journal of Logic and Computation Volume 30 ; 30 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; Journal of Logic and Computation Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Logic and Computation Volume 32 ; 32 ; >
     au < ready ; exists ; 2023 ; 2023 ; Journal of Logic and Computation Volume 33 ; 33 ; >
@@ -12724,7 +12724,7 @@
     au < finished ; crawling ; 2017 ; 2017 ; Journal of Public Administration Research and Theory Volume 27 ; 27 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Public Administration Research and Theory Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Public Administration Research and Theory Volume 29 ; 29 ; >
-    au < frozen ; exists ; 2020 ; 2020 ; Journal of Public Administration Research and Theory Volume 30 ; 30 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Journal of Public Administration Research and Theory Volume 30 ; 30 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2021 ; 2021 ; Journal of Public Administration Research and Theory Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Public Administration Research and Theory Volume 32 ; 32 ; >
     au < ready ; exists ; 2023 ; 2023 ; Journal of Public Administration Research and Theory Volume 33 ; 33 ; >
@@ -13511,7 +13511,7 @@
     au < finished ; crawling ; 2017 ; 2017 ; Journal of the American Medical Informatics Association Volume 24 ; 24 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; Journal of the American Medical Informatics Association Volume 25 ; 25 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of the American Medical Informatics Association Volume 26 ; 26 ; >
-    au < frozen ; exists ; 2020 ; 2020 ; Journal of the American Medical Informatics Association Volume 27 ; 27 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Journal of the American Medical Informatics Association Volume 27 ; 27 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; Journal of the American Medical Informatics Association Volume 28 ; 28 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of the American Medical Informatics Association Volume 29 ; 29 ; >
     au < testing ; exists ; 2023 ; 2023 ; Journal of the American Medical Informatics Association Volume 30 ; 30 ; >
@@ -14517,7 +14517,7 @@
     au < finished ; manifest ; 2017 ; 2017 ; Microscopy and Microanalysis Volume 23 ; 23 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; 2018 ; Microscopy and Microanalysis Volume 24 ; 24 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2019 ; 2019 ; Microscopy and Microanalysis Volume 25 ; 25 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2020 ; 2020 ; Microscopy and Microanalysis Volume 26 ; 26 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Microscopy and Microanalysis Volume 26 ; 26 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2021 ; 2021 ; Microscopy and Microanalysis Volume 27 ; 27 ; >
     au < frozen ; exists ; 2022 ; 2022 ; Microscopy and Microanalysis Volume 28 ; 28 ; >
     au < testing ; exists ; 2023 ; 2023 ; Microscopy and Microanalysis Volume 29 ; 29 ; >
