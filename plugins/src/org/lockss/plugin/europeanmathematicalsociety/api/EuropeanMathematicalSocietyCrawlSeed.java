@@ -211,7 +211,7 @@ public class EuropeanMathematicalSocietyCrawlSeed extends BaseCrawlSeed {
   }
 
   protected String makeApiUrl(int page) {
-      return String.format("%s%ss",
+      return String.format("%s%s",
               API_URL,
               item
       );
