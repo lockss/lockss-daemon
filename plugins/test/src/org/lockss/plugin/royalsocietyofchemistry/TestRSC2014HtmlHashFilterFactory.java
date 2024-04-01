@@ -112,6 +112,8 @@ public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
       "  <div class=\"text\">\n" + 
       "  To gain access to this content please\n" +
       "  </div>\n" +
+      " <label id=\"Label8\" class=\"disabled_link\" title=\"Rich HTML\" style=\"padding-left: .1em;\">\n" + 
+      "                                    Rich HTML</label>" + 
       " <div id=\"top\" class=\"navigation\" style=\"color: rgb(0, 0, 0);\">\n" + 
       "  <a href=\"/en/content/federatedaccess?msid=c4cy00228h&amp;doi=10.1039%2Fc4cy00228h&amp;journalcode=cy&amp;printyear=2015&amp;contenttype=article\" title=\"Log in via your home Institution\">Log in via your home Institution.</a>\n" + 
       "  <a href=\"/en/content/subscriberlogin?type=article&amp;msid=c4cy00228h&amp;pubyear=2015&amp;sercode=cy&amp;doi=10.1039%2Fc4cy00228h&amp;publicationdate=2014-04-14&amp;pubstatus=prt&amp;ispdfexist=True\" title=\"Log in with your member or subscriber username and password\">Log in with your member or subscriber username and password.</a>" +
