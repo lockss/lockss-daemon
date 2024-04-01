@@ -729,7 +729,7 @@
       au < bmj.BMJDrupalPlugin ; released ; 2021 ; BMJ Quality Improvement Reports Volume 10 ; 10 ; https://bmjopenquality.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2022 ; BMJ Quality Improvement Reports Volume 11 ; 11 ; https://bmjopenquality.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2023 ; BMJ Quality Improvement Reports Volume 12 ; 12 ; https://bmjopenquality.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; expected ; 2024 ; BMJ Quality Improvement Reports Volume 13 ; 13 ; https://bmjopenquality.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; BMJ Quality Improvement Reports Volume 13 ; 13 ; https://bmjopenquality.bmj.com/ >
 
     }
 
@@ -2778,7 +2778,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2021 ; RMD Open Volume 7 ; 7 ; https://rmdopen.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; RMD Open Volume 8 ; 8 ; https://rmdopen.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2023 ; RMD Open Volume 9 ; 9 ; https://rmdopen.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; expected ; 2024 ; RMD Open Volume 10 ; 10 ; https://rmdopen.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; RMD Open Volume 10 ; 10 ; https://rmdopen.bmj.com/ >
 
   }
 
