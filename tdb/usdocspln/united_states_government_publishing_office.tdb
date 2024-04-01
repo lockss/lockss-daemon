@@ -151,28 +151,28 @@
     au < released ; 1925 ; GOVPUB 1925 ; 1925 ; https://www.govinfo.gov/ >
     au < released ; 1926 ; GOVPUB 1926 ; 1926 ; https://www.govinfo.gov/ >
     au < released ; 1927 ; GOVPUB 1927 ; 1927 ; https://www.govinfo.gov/ >
-    au < ready ; 1928 ; GOVPUB 1928 ; 1928 ; https://www.govinfo.gov/ >
-    au < ready ; 1929 ; GOVPUB 1929 ; 1929 ; https://www.govinfo.gov/ >
-    au < ready ; 1930 ; GOVPUB 1930 ; 1930 ; https://www.govinfo.gov/ >
-    au < ready ; 1931 ; GOVPUB 1931 ; 1931 ; https://www.govinfo.gov/ >
-    au < ready ; 1932 ; GOVPUB 1932 ; 1932 ; https://www.govinfo.gov/ >
-    au < ready ; 1933 ; GOVPUB 1933 ; 1933 ; https://www.govinfo.gov/ >
-    au < ready ; 1934 ; GOVPUB 1934 ; 1934 ; https://www.govinfo.gov/ >
-    au < ready ; 1935 ; GOVPUB 1935 ; 1935 ; https://www.govinfo.gov/ >
-    au < ready ; 1936 ; GOVPUB 1936 ; 1936 ; https://www.govinfo.gov/ >
-    au < ready ; 1937 ; GOVPUB 1937 ; 1937 ; https://www.govinfo.gov/ >
-    au < ready ; 1938 ; GOVPUB 1938 ; 1938 ; https://www.govinfo.gov/ >
-    au < ready ; 1939 ; GOVPUB 1939 ; 1939 ; https://www.govinfo.gov/ >
-    au < ready ; 1940 ; GOVPUB 1940 ; 1940 ; https://www.govinfo.gov/ >
-    au < ready ; 1941 ; GOVPUB 1941 ; 1941 ; https://www.govinfo.gov/ >
-    au < ready ; 1942 ; GOVPUB 1942 ; 1942 ; https://www.govinfo.gov/ >
-    au < ready ; 1943 ; GOVPUB 1943 ; 1943 ; https://www.govinfo.gov/ >
-    au < ready ; 1944 ; GOVPUB 1944 ; 1944 ; https://www.govinfo.gov/ >
-    au < ready ; 1945 ; GOVPUB 1945 ; 1945 ; https://www.govinfo.gov/ >
-    au < ready ; 1946 ; GOVPUB 1946 ; 1946 ; https://www.govinfo.gov/ >
-    au < ready ; 1947 ; GOVPUB 1947 ; 1947 ; https://www.govinfo.gov/ >
-    au < ready ; 1948 ; GOVPUB 1948 ; 1948 ; https://www.govinfo.gov/ >
-    au < ready ; 1949 ; GOVPUB 1949 ; 1949 ; https://www.govinfo.gov/ >
+    au < releasing ; 1928 ; GOVPUB 1928 ; 1928 ; https://www.govinfo.gov/ >
+    au < releasing ; 1929 ; GOVPUB 1929 ; 1929 ; https://www.govinfo.gov/ >
+    au < releasing ; 1930 ; GOVPUB 1930 ; 1930 ; https://www.govinfo.gov/ >
+    au < releasing ; 1931 ; GOVPUB 1931 ; 1931 ; https://www.govinfo.gov/ >
+    au < releasing ; 1932 ; GOVPUB 1932 ; 1932 ; https://www.govinfo.gov/ >
+    au < releasing ; 1933 ; GOVPUB 1933 ; 1933 ; https://www.govinfo.gov/ >
+    au < releasing ; 1934 ; GOVPUB 1934 ; 1934 ; https://www.govinfo.gov/ >
+    au < releasing ; 1935 ; GOVPUB 1935 ; 1935 ; https://www.govinfo.gov/ >
+    au < releasing ; 1936 ; GOVPUB 1936 ; 1936 ; https://www.govinfo.gov/ >
+    au < releasing ; 1937 ; GOVPUB 1937 ; 1937 ; https://www.govinfo.gov/ >
+    au < releasing ; 1938 ; GOVPUB 1938 ; 1938 ; https://www.govinfo.gov/ >
+    au < releasing ; 1939 ; GOVPUB 1939 ; 1939 ; https://www.govinfo.gov/ >
+    au < releasing ; 1940 ; GOVPUB 1940 ; 1940 ; https://www.govinfo.gov/ >
+    au < releasing ; 1941 ; GOVPUB 1941 ; 1941 ; https://www.govinfo.gov/ >
+    au < releasing ; 1942 ; GOVPUB 1942 ; 1942 ; https://www.govinfo.gov/ >
+    au < releasing ; 1943 ; GOVPUB 1943 ; 1943 ; https://www.govinfo.gov/ >
+    au < releasing ; 1944 ; GOVPUB 1944 ; 1944 ; https://www.govinfo.gov/ >
+    au < releasing ; 1945 ; GOVPUB 1945 ; 1945 ; https://www.govinfo.gov/ >
+    au < releasing ; 1946 ; GOVPUB 1946 ; 1946 ; https://www.govinfo.gov/ >
+    au < releasing ; 1947 ; GOVPUB 1947 ; 1947 ; https://www.govinfo.gov/ >
+    au < releasing ; 1948 ; GOVPUB 1948 ; 1948 ; https://www.govinfo.gov/ >
+    au < releasing ; 1949 ; GOVPUB 1949 ; 1949 ; https://www.govinfo.gov/ >
 
     au < released ; 2019 ; Account of the Receipts and Expenditures of the United States 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Account of the Receipts and Expenditures of the United States 2020 ; 2020 ; https://www.govinfo.gov/ >
@@ -199,40 +199,40 @@
 
     param[collection_id] = GPO
 
-    au < ready ; 1941 ; GPO 1941 ; 1941 ; https://www.govinfo.gov/ >
-    au < ready ; 1942 ; GPO 1942 ; 1942 ; https://www.govinfo.gov/ >
-    au < ready ; 1943 ; GPO 1943 ; 1943 ; https://www.govinfo.gov/ >
-    au < ready ; 1944 ; GPO 1944 ; 1944 ; https://www.govinfo.gov/ >
-    au < ready ; 1945 ; GPO 1945 ; 1945 ; https://www.govinfo.gov/ >
-    au < ready ; 1946 ; GPO 1946 ; 1946 ; https://www.govinfo.gov/ >
-    au < ready ; 1947 ; GPO 1947 ; 1947 ; https://www.govinfo.gov/ >
-    au < ready ; 1948 ; GPO 1948 ; 1948 ; https://www.govinfo.gov/ >
-    au < ready ; 1950 ; GPO 1950 ; 1950 ; https://www.govinfo.gov/ >
-    au < ready ; 1951 ; GPO 1951 ; 1951 ; https://www.govinfo.gov/ >
-    au < ready ; 1953 ; GPO 1953 ; 1953 ; https://www.govinfo.gov/ >
-    au < ready ; 1954 ; GPO 1954 ; 1954 ; https://www.govinfo.gov/ >
-    au < ready ; 1955 ; GPO 1955 ; 1955 ; https://www.govinfo.gov/ >
-    au < ready ; 1956 ; GPO 1956 ; 1956 ; https://www.govinfo.gov/ >
-    au < ready ; 1957 ; GPO 1957 ; 1957 ; https://www.govinfo.gov/ >
-    au < ready ; 1958 ; GPO 1958 ; 1958 ; https://www.govinfo.gov/ >
-    au < ready ; 1959 ; GPO 1959 ; 1959 ; https://www.govinfo.gov/ >
-    au < ready ; 1961 ; GPO 1961 ; 1961 ; https://www.govinfo.gov/ >
-    au < ready ; 1962 ; GPO 1962 ; 1962 ; https://www.govinfo.gov/ >
-    au < ready ; 1965 ; GPO 1965 ; 1965 ; https://www.govinfo.gov/ >
-    au < ready ; 1966 ; GPO 1966 ; 1966 ; https://www.govinfo.gov/ >
-    au < ready ; 1967 ; GPO 1967 ; 1967 ; https://www.govinfo.gov/ >
-    au < ready ; 1968 ; GPO 1968 ; 1968 ; https://www.govinfo.gov/ >
-    au < ready ; 1969 ; GPO 1969 ; 1969 ; https://www.govinfo.gov/ >
-    au < ready ; 1972 ; GPO 1972 ; 1972 ; https://www.govinfo.gov/ >
-    au < ready ; 1974 ; GPO 1974 ; 1974 ; https://www.govinfo.gov/ >
-    au < ready ; 1976 ; GPO 1976 ; 1976 ; https://www.govinfo.gov/ >
-    au < ready ; 1979 ; GPO 1979 ; 1979 ; https://www.govinfo.gov/ >
-    au < ready ; 1980 ; GPO 1980 ; 1980 ; https://www.govinfo.gov/ >
-    au < ready ; 1982 ; GPO 1982 ; 1982 ; https://www.govinfo.gov/ >
-    au < ready ; 1983 ; GPO 1983 ; 1983 ; https://www.govinfo.gov/ >
-    au < ready ; 1984 ; GPO 1984 ; 1984 ; https://www.govinfo.gov/ >
-    au < ready ; 1988 ; GPO 1988 ; 1988 ; https://www.govinfo.gov/ >
-    au < ready ; 1995 ; GPO 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < releasing ; 1941 ; GPO 1941 ; 1941 ; https://www.govinfo.gov/ >
+    au < releasing ; 1942 ; GPO 1942 ; 1942 ; https://www.govinfo.gov/ >
+    au < releasing ; 1943 ; GPO 1943 ; 1943 ; https://www.govinfo.gov/ >
+    au < releasing ; 1944 ; GPO 1944 ; 1944 ; https://www.govinfo.gov/ >
+    au < releasing ; 1945 ; GPO 1945 ; 1945 ; https://www.govinfo.gov/ >
+    au < releasing ; 1946 ; GPO 1946 ; 1946 ; https://www.govinfo.gov/ >
+    au < releasing ; 1947 ; GPO 1947 ; 1947 ; https://www.govinfo.gov/ >
+    au < releasing ; 1948 ; GPO 1948 ; 1948 ; https://www.govinfo.gov/ >
+    au < releasing ; 1950 ; GPO 1950 ; 1950 ; https://www.govinfo.gov/ >
+    au < releasing ; 1951 ; GPO 1951 ; 1951 ; https://www.govinfo.gov/ >
+    au < releasing ; 1953 ; GPO 1953 ; 1953 ; https://www.govinfo.gov/ >
+    au < releasing ; 1954 ; GPO 1954 ; 1954 ; https://www.govinfo.gov/ >
+    au < releasing ; 1955 ; GPO 1955 ; 1955 ; https://www.govinfo.gov/ >
+    au < releasing ; 1956 ; GPO 1956 ; 1956 ; https://www.govinfo.gov/ >
+    au < releasing ; 1957 ; GPO 1957 ; 1957 ; https://www.govinfo.gov/ >
+    au < releasing ; 1958 ; GPO 1958 ; 1958 ; https://www.govinfo.gov/ >
+    au < releasing ; 1959 ; GPO 1959 ; 1959 ; https://www.govinfo.gov/ >
+    au < releasing ; 1961 ; GPO 1961 ; 1961 ; https://www.govinfo.gov/ >
+    au < releasing ; 1962 ; GPO 1962 ; 1962 ; https://www.govinfo.gov/ >
+    au < releasing ; 1965 ; GPO 1965 ; 1965 ; https://www.govinfo.gov/ >
+    au < releasing ; 1966 ; GPO 1966 ; 1966 ; https://www.govinfo.gov/ >
+    au < releasing ; 1967 ; GPO 1967 ; 1967 ; https://www.govinfo.gov/ >
+    au < releasing ; 1968 ; GPO 1968 ; 1968 ; https://www.govinfo.gov/ >
+    au < releasing ; 1969 ; GPO 1969 ; 1969 ; https://www.govinfo.gov/ >
+    au < releasing ; 1972 ; GPO 1972 ; 1972 ; https://www.govinfo.gov/ >
+    au < releasing ; 1974 ; GPO 1974 ; 1974 ; https://www.govinfo.gov/ >
+    au < releasing ; 1976 ; GPO 1976 ; 1976 ; https://www.govinfo.gov/ >
+    au < releasing ; 1979 ; GPO 1979 ; 1979 ; https://www.govinfo.gov/ >
+    au < releasing ; 1980 ; GPO 1980 ; 1980 ; https://www.govinfo.gov/ >
+    au < releasing ; 1982 ; GPO 1982 ; 1982 ; https://www.govinfo.gov/ >
+    au < releasing ; 1983 ; GPO 1983 ; 1983 ; https://www.govinfo.gov/ >
+    au < releasing ; 1984 ; GPO 1984 ; 1984 ; https://www.govinfo.gov/ >
+    au < releasing ; 1988 ; GPO 1988 ; 1988 ; https://www.govinfo.gov/ >
+    au < releasing ; 1995 ; GPO 1995 ; 1995 ; https://www.govinfo.gov/ >
     au < released ; 2012 ; GPO 2012 ; 2012 ; https://www.govinfo.gov/ >
     au < released ; 2013 ; GPO 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; GPO 2017 ; 2017 ; https://www.govinfo.gov/ >
@@ -445,23 +445,23 @@
     param[collection_id] = CPRT
 
 
-    au < ready ; 1955 ; Congressional Committee Prints 1955 ; 1955 ; https://www.govinfo.gov/ >
-    au < ready ; 1956 ; Congressional Committee Prints 1956 ; 1956 ; https://www.govinfo.gov/ >
-    au < ready ; 1957 ; Congressional Committee Prints 1957 ; 1957 ; https://www.govinfo.gov/ >
-    au < ready ; 1958 ; Congressional Committee Prints 1958 ; 1958 ; https://www.govinfo.gov/ >
-    au < ready ; 1960 ; Congressional Committee Prints 1960 ; 1960 ; https://www.govinfo.gov/ >
-    au < ready ; 1964 ; Congressional Committee Prints 1964 ; 1964 ; https://www.govinfo.gov/ >
-    au < ready ; 1967 ; Congressional Committee Prints 1967 ; 1967 ; https://www.govinfo.gov/ >
-    au < ready ; 1969 ; Congressional Committee Prints 1969 ; 1969 ; https://www.govinfo.gov/ >
-    au < ready ; 1971 ; Congressional Committee Prints 1971 ; 1971 ; https://www.govinfo.gov/ >
-    au < ready ; 1972 ; Congressional Committee Prints 1972 ; 1972 ; https://www.govinfo.gov/ >
-    au < ready ; 1973 ; Congressional Committee Prints 1973 ; 1973 ; https://www.govinfo.gov/ >
-    au < ready ; 1974 ; Congressional Committee Prints 1974 ; 1974 ; https://www.govinfo.gov/ >
-    au < ready ; 1975 ; Congressional Committee Prints 1975 ; 1975 ; https://www.govinfo.gov/ >
-    au < ready ; 1977 ; Congressional Committee Prints 1977 ; 1977 ; https://www.govinfo.gov/ >
-    au < ready ; 1978 ; Congressional Committee Prints 1978 ; 1978 ; https://www.govinfo.gov/ >
-    au < ready ; 1979 ; Congressional Committee Prints 1979 ; 1979 ; https://www.govinfo.gov/ >
-    au < ready ; 1980 ; Congressional Committee Prints 1980 ; 1980 ; https://www.govinfo.gov/ >
+    au < releasing ; 1955 ; Congressional Committee Prints 1955 ; 1955 ; https://www.govinfo.gov/ >
+    au < releasing ; 1956 ; Congressional Committee Prints 1956 ; 1956 ; https://www.govinfo.gov/ >
+    au < releasing ; 1957 ; Congressional Committee Prints 1957 ; 1957 ; https://www.govinfo.gov/ >
+    au < releasing ; 1958 ; Congressional Committee Prints 1958 ; 1958 ; https://www.govinfo.gov/ >
+    au < releasing ; 1960 ; Congressional Committee Prints 1960 ; 1960 ; https://www.govinfo.gov/ >
+    au < releasing ; 1964 ; Congressional Committee Prints 1964 ; 1964 ; https://www.govinfo.gov/ >
+    au < releasing ; 1967 ; Congressional Committee Prints 1967 ; 1967 ; https://www.govinfo.gov/ >
+    au < releasing ; 1969 ; Congressional Committee Prints 1969 ; 1969 ; https://www.govinfo.gov/ >
+    au < releasing ; 1971 ; Congressional Committee Prints 1971 ; 1971 ; https://www.govinfo.gov/ >
+    au < releasing ; 1972 ; Congressional Committee Prints 1972 ; 1972 ; https://www.govinfo.gov/ >
+    au < releasing ; 1973 ; Congressional Committee Prints 1973 ; 1973 ; https://www.govinfo.gov/ >
+    au < releasing ; 1974 ; Congressional Committee Prints 1974 ; 1974 ; https://www.govinfo.gov/ >
+    au < releasing ; 1975 ; Congressional Committee Prints 1975 ; 1975 ; https://www.govinfo.gov/ >
+    au < releasing ; 1977 ; Congressional Committee Prints 1977 ; 1977 ; https://www.govinfo.gov/ >
+    au < releasing ; 1978 ; Congressional Committee Prints 1978 ; 1978 ; https://www.govinfo.gov/ >
+    au < releasing ; 1979 ; Congressional Committee Prints 1979 ; 1979 ; https://www.govinfo.gov/ >
+    au < releasing ; 1980 ; Congressional Committee Prints 1980 ; 1980 ; https://www.govinfo.gov/ >
     au < released ; 1990 ; Congressional Committee Prints 1990 ; 1990 ; https://www.govinfo.gov/ >
     au < released ; 1992 ; Congressional Committee Prints 1992 ; 1992 ; https://www.govinfo.gov/ >
     au < released ; 1993 ; Congressional Committee Prints 1993 ; 1993 ; https://www.govinfo.gov/ >
@@ -488,89 +488,89 @@
     #previous platform: 1997, 1999, 2000-2009, 2011, 2014, 2016.
 
 
-    au < ready ; 1869 ; Congressional Directory 1869 ; 1869 ; https://www.govinfo.gov/ >
-    au < ready ; 1870 ; CDIR 1870 ; 1870 ; https://www.govinfo.gov/ >
-    au < ready ; 1872 ; CDIR 1872 ; 1872 ; https://www.govinfo.gov/ >
-    au < ready ; 1873 ; CDIR 1873 ; 1873 ; https://www.govinfo.gov/ >
-    au < ready ; 1877 ; CDIR 1877 ; 1877 ; https://www.govinfo.gov/ >
-    au < ready ; 1878 ; CDIR 1878 ; 1878 ; https://www.govinfo.gov/ >
-    au < ready ; 1879 ; CDIR 1879 ; 1879 ; https://www.govinfo.gov/ >
-    au < ready ; 1880 ; CDIR 1880 ; 1880 ; https://www.govinfo.gov/ >
-    au < ready ; 1881 ; CDIR 1881 ; 1881 ; https://www.govinfo.gov/ >
-    au < ready ; 1882 ; CDIR 1882 ; 1882 ; https://www.govinfo.gov/ >
-    au < ready ; 1884 ; CDIR 1884 ; 1884 ; https://www.govinfo.gov/ >
-    au < ready ; 1885 ; CDIR 1885 ; 1885 ; https://www.govinfo.gov/ >
-    au < ready ; 1886 ; CDIR 1886 ; 1886 ; https://www.govinfo.gov/ >
-    au < ready ; 1887 ; CDIR 1887 ; 1887 ; https://www.govinfo.gov/ >
-    au < ready ; 1888 ; CDIR 1888 ; 1888 ; https://www.govinfo.gov/ >
-    au < ready ; 1889 ; CDIR 1889 ; 1889 ; https://www.govinfo.gov/ >
-    au < ready ; 1890 ; CDIR 1890 ; 1890 ; https://www.govinfo.gov/ >
-    au < ready ; 1891 ; CDIR 1891 ; 1891 ; https://www.govinfo.gov/ >
-    au < ready ; 1892 ; CDIR 1892 ; 1892 ; https://www.govinfo.gov/ >
-    au < ready ; 1893 ; CDIR 1893 ; 1893 ; https://www.govinfo.gov/ >
-    au < ready ; 1894 ; CDIR 1894 ; 1894 ; https://www.govinfo.gov/ >
-    au < ready ; 1895 ; CDIR 1895 ; 1895 ; https://www.govinfo.gov/ >
-    au < ready ; 1896 ; CDIR 1896 ; 1896 ; https://www.govinfo.gov/ >
-    au < ready ; 1897 ; CDIR 1897 ; 1897 ; https://www.govinfo.gov/ >
-    au < ready ; 1898 ; CDIR 1898 ; 1898 ; https://www.govinfo.gov/ >
-    au < ready ; 1899 ; CDIR 1899 ; 1899 ; https://www.govinfo.gov/ >
-    au < ready ; 1900 ; CDIR 1900 ; 1900 ; https://www.govinfo.gov/ >
-    au < ready ; 1901 ; CDIR 1901 ; 1901 ; https://www.govinfo.gov/ >
-    au < ready ; 1902 ; CDIR 1902 ; 1902 ; https://www.govinfo.gov/ >
-    au < ready ; 1903 ; CDIR 1903 ; 1903 ; https://www.govinfo.gov/ >
-    au < ready ; 1904 ; CDIR 1904 ; 1904 ; https://www.govinfo.gov/ >
-    au < ready ; 1905 ; CDIR 1905 ; 1905 ; https://www.govinfo.gov/ >
-    au < ready ; 1906 ; CDIR 1906 ; 1906 ; https://www.govinfo.gov/ >
-    au < ready ; 1907 ; CDIR 1907 ; 1907 ; https://www.govinfo.gov/ >
-    au < ready ; 1908 ; CDIR 1908 ; 1908 ; https://www.govinfo.gov/ >
-    au < ready ; 1909 ; CDIR 1909 ; 1909 ; https://www.govinfo.gov/ >
-    au < ready ; 1910 ; CDIR 1910 ; 1910 ; https://www.govinfo.gov/ >
-    au < ready ; 1911 ; CDIR 1911 ; 1911 ; https://www.govinfo.gov/ >
-    au < ready ; 1912 ; CDIR 1912 ; 1912 ; https://www.govinfo.gov/ >
-    au < ready ; 1913 ; CDIR 1913 ; 1913 ; https://www.govinfo.gov/ >
-    au < ready ; 1914 ; CDIR 1914 ; 1914 ; https://www.govinfo.gov/ >
-    au < ready ; 1915 ; CDIR 1915 ; 1915 ; https://www.govinfo.gov/ >
-    au < ready ; 1916 ; CDIR 1916 ; 1916 ; https://www.govinfo.gov/ >
-    au < ready ; 1917 ; CDIR 1917 ; 1917 ; https://www.govinfo.gov/ >
-    au < ready ; 1918 ; CDIR 1918 ; 1918 ; https://www.govinfo.gov/ >
-    au < ready ; 1919 ; CDIR 1919 ; 1919 ; https://www.govinfo.gov/ >
-    au < ready ; 1920 ; CDIR 1920 ; 1920 ; https://www.govinfo.gov/ >
-    au < ready ; 1921 ; CDIR 1921 ; 1921 ; https://www.govinfo.gov/ >
-    au < ready ; 1922 ; CDIR 1922 ; 1922 ; https://www.govinfo.gov/ >
-    au < ready ; 1923 ; CDIR 1923 ; 1923 ; https://www.govinfo.gov/ >
-    au < ready ; 1924 ; CDIR 1924 ; 1924 ; https://www.govinfo.gov/ >
-    au < ready ; 1925 ; CDIR 1925 ; 1925 ; https://www.govinfo.gov/ >
-    au < ready ; 1926 ; CDIR 1926 ; 1926 ; https://www.govinfo.gov/ >
-    au < ready ; 1927 ; CDIR 1927 ; 1927 ; https://www.govinfo.gov/ >
-    au < ready ; 1928 ; CDIR 1928 ; 1928 ; https://www.govinfo.gov/ >
-    au < ready ; 1929 ; CDIR 1929 ; 1929 ; https://www.govinfo.gov/ >
-    au < ready ; 1930 ; CDIR 1930 ; 1930 ; https://www.govinfo.gov/ >
-    au < ready ; 1931 ; CDIR 1931 ; 1931 ; https://www.govinfo.gov/ >
-    au < ready ; 1932 ; CDIR 1932 ; 1932 ; https://www.govinfo.gov/ >
-    au < ready ; 1933 ; CDIR 1933 ; 1933 ; https://www.govinfo.gov/ >
-    au < ready ; 1934 ; CDIR 1934 ; 1934 ; https://www.govinfo.gov/ >
-    au < ready ; 1935 ; CDIR 1935 ; 1935 ; https://www.govinfo.gov/ >
-    au < ready ; 1936 ; CDIR 1936 ; 1936 ; https://www.govinfo.gov/ >
-    au < ready ; 1937 ; CDIR 1937 ; 1937 ; https://www.govinfo.gov/ >
-    au < ready ; 1938 ; CDIR 1938 ; 1938 ; https://www.govinfo.gov/ >
-    au < ready ; 1939 ; CDIR 1939 ; 1939 ; https://www.govinfo.gov/ >
-    au < ready ; 1940 ; CDIR 1940 ; 1940 ; https://www.govinfo.gov/ >
-    au < ready ; 1941 ; CDIR 1941 ; 1941 ; https://www.govinfo.gov/ >
-    au < ready ; 1942 ; CDIR 1942 ; 1942 ; https://www.govinfo.gov/ >
-    au < ready ; 1943 ; CDIR 1943 ; 1943 ; https://www.govinfo.gov/ >
-    au < ready ; 1944 ; CDIR 1944 ; 1944 ; https://www.govinfo.gov/ >
-    au < ready ; 1945 ; CDIR 1945 ; 1945 ; https://www.govinfo.gov/ >
-    au < ready ; 1946 ; CDIR 1946 ; 1946 ; https://www.govinfo.gov/ >
-    au < ready ; 1947 ; CDIR 1947 ; 1947 ; https://www.govinfo.gov/ >
-    au < ready ; 1948 ; CDIR 1948 ; 1948 ; https://www.govinfo.gov/ >
-    au < ready ; 1949 ; CDIR 1949 ; 1949 ; https://www.govinfo.gov/ >
-    au < ready ; 1950 ; CDIR 1950 ; 1950 ; https://www.govinfo.gov/ >
-    au < ready ; 1951 ; CDIR 1951 ; 1951 ; https://www.govinfo.gov/ >
-    au < ready ; 1952 ; CDIR 1952 ; 1952 ; https://www.govinfo.gov/ >
-    au < ready ; 1953 ; CDIR 1953 ; 1953 ; https://www.govinfo.gov/ >
-    au < ready ; 1954 ; CDIR 1954 ; 1954 ; https://www.govinfo.gov/ >
-    au < ready ; 1955 ; CDIR 1955 ; 1955 ; https://www.govinfo.gov/ >
-    au < ready ; 1956 ; CDIR 1956 ; 1956 ; https://www.govinfo.gov/ >
+    au < releasing ; 1869 ; Congressional Directory 1869 ; 1869 ; https://www.govinfo.gov/ >
+    au < releasing ; 1870 ; CDIR 1870 ; 1870 ; https://www.govinfo.gov/ >
+    au < releasing ; 1872 ; CDIR 1872 ; 1872 ; https://www.govinfo.gov/ >
+    au < releasing ; 1873 ; CDIR 1873 ; 1873 ; https://www.govinfo.gov/ >
+    au < releasing ; 1877 ; CDIR 1877 ; 1877 ; https://www.govinfo.gov/ >
+    au < releasing ; 1878 ; CDIR 1878 ; 1878 ; https://www.govinfo.gov/ >
+    au < releasing ; 1879 ; CDIR 1879 ; 1879 ; https://www.govinfo.gov/ >
+    au < releasing ; 1880 ; CDIR 1880 ; 1880 ; https://www.govinfo.gov/ >
+    au < releasing ; 1881 ; CDIR 1881 ; 1881 ; https://www.govinfo.gov/ >
+    au < releasing ; 1882 ; CDIR 1882 ; 1882 ; https://www.govinfo.gov/ >
+    au < releasing ; 1884 ; CDIR 1884 ; 1884 ; https://www.govinfo.gov/ >
+    au < releasing ; 1885 ; CDIR 1885 ; 1885 ; https://www.govinfo.gov/ >
+    au < releasing ; 1886 ; CDIR 1886 ; 1886 ; https://www.govinfo.gov/ >
+    au < releasing ; 1887 ; CDIR 1887 ; 1887 ; https://www.govinfo.gov/ >
+    au < releasing ; 1888 ; CDIR 1888 ; 1888 ; https://www.govinfo.gov/ >
+    au < releasing ; 1889 ; CDIR 1889 ; 1889 ; https://www.govinfo.gov/ >
+    au < releasing ; 1890 ; CDIR 1890 ; 1890 ; https://www.govinfo.gov/ >
+    au < releasing ; 1891 ; CDIR 1891 ; 1891 ; https://www.govinfo.gov/ >
+    au < releasing ; 1892 ; CDIR 1892 ; 1892 ; https://www.govinfo.gov/ >
+    au < releasing ; 1893 ; CDIR 1893 ; 1893 ; https://www.govinfo.gov/ >
+    au < releasing ; 1894 ; CDIR 1894 ; 1894 ; https://www.govinfo.gov/ >
+    au < releasing ; 1895 ; CDIR 1895 ; 1895 ; https://www.govinfo.gov/ >
+    au < releasing ; 1896 ; CDIR 1896 ; 1896 ; https://www.govinfo.gov/ >
+    au < releasing ; 1897 ; CDIR 1897 ; 1897 ; https://www.govinfo.gov/ >
+    au < releasing ; 1898 ; CDIR 1898 ; 1898 ; https://www.govinfo.gov/ >
+    au < releasing ; 1899 ; CDIR 1899 ; 1899 ; https://www.govinfo.gov/ >
+    au < releasing ; 1900 ; CDIR 1900 ; 1900 ; https://www.govinfo.gov/ >
+    au < releasing ; 1901 ; CDIR 1901 ; 1901 ; https://www.govinfo.gov/ >
+    au < releasing ; 1902 ; CDIR 1902 ; 1902 ; https://www.govinfo.gov/ >
+    au < releasing ; 1903 ; CDIR 1903 ; 1903 ; https://www.govinfo.gov/ >
+    au < releasing ; 1904 ; CDIR 1904 ; 1904 ; https://www.govinfo.gov/ >
+    au < releasing ; 1905 ; CDIR 1905 ; 1905 ; https://www.govinfo.gov/ >
+    au < releasing ; 1906 ; CDIR 1906 ; 1906 ; https://www.govinfo.gov/ >
+    au < releasing ; 1907 ; CDIR 1907 ; 1907 ; https://www.govinfo.gov/ >
+    au < releasing ; 1908 ; CDIR 1908 ; 1908 ; https://www.govinfo.gov/ >
+    au < releasing ; 1909 ; CDIR 1909 ; 1909 ; https://www.govinfo.gov/ >
+    au < releasing ; 1910 ; CDIR 1910 ; 1910 ; https://www.govinfo.gov/ >
+    au < releasing ; 1911 ; CDIR 1911 ; 1911 ; https://www.govinfo.gov/ >
+    au < releasing ; 1912 ; CDIR 1912 ; 1912 ; https://www.govinfo.gov/ >
+    au < releasing ; 1913 ; CDIR 1913 ; 1913 ; https://www.govinfo.gov/ >
+    au < releasing ; 1914 ; CDIR 1914 ; 1914 ; https://www.govinfo.gov/ >
+    au < releasing ; 1915 ; CDIR 1915 ; 1915 ; https://www.govinfo.gov/ >
+    au < releasing ; 1916 ; CDIR 1916 ; 1916 ; https://www.govinfo.gov/ >
+    au < releasing ; 1917 ; CDIR 1917 ; 1917 ; https://www.govinfo.gov/ >
+    au < releasing ; 1918 ; CDIR 1918 ; 1918 ; https://www.govinfo.gov/ >
+    au < releasing ; 1919 ; CDIR 1919 ; 1919 ; https://www.govinfo.gov/ >
+    au < releasing ; 1920 ; CDIR 1920 ; 1920 ; https://www.govinfo.gov/ >
+    au < releasing ; 1921 ; CDIR 1921 ; 1921 ; https://www.govinfo.gov/ >
+    au < releasing ; 1922 ; CDIR 1922 ; 1922 ; https://www.govinfo.gov/ >
+    au < releasing ; 1923 ; CDIR 1923 ; 1923 ; https://www.govinfo.gov/ >
+    au < releasing ; 1924 ; CDIR 1924 ; 1924 ; https://www.govinfo.gov/ >
+    au < releasing ; 1925 ; CDIR 1925 ; 1925 ; https://www.govinfo.gov/ >
+    au < releasing ; 1926 ; CDIR 1926 ; 1926 ; https://www.govinfo.gov/ >
+    au < releasing ; 1927 ; CDIR 1927 ; 1927 ; https://www.govinfo.gov/ >
+    au < releasing ; 1928 ; CDIR 1928 ; 1928 ; https://www.govinfo.gov/ >
+    au < releasing ; 1929 ; CDIR 1929 ; 1929 ; https://www.govinfo.gov/ >
+    au < releasing ; 1930 ; CDIR 1930 ; 1930 ; https://www.govinfo.gov/ >
+    au < releasing ; 1931 ; CDIR 1931 ; 1931 ; https://www.govinfo.gov/ >
+    au < releasing ; 1932 ; CDIR 1932 ; 1932 ; https://www.govinfo.gov/ >
+    au < releasing ; 1933 ; CDIR 1933 ; 1933 ; https://www.govinfo.gov/ >
+    au < releasing ; 1934 ; CDIR 1934 ; 1934 ; https://www.govinfo.gov/ >
+    au < releasing ; 1935 ; CDIR 1935 ; 1935 ; https://www.govinfo.gov/ >
+    au < releasing ; 1936 ; CDIR 1936 ; 1936 ; https://www.govinfo.gov/ >
+    au < releasing ; 1937 ; CDIR 1937 ; 1937 ; https://www.govinfo.gov/ >
+    au < releasing ; 1938 ; CDIR 1938 ; 1938 ; https://www.govinfo.gov/ >
+    au < releasing ; 1939 ; CDIR 1939 ; 1939 ; https://www.govinfo.gov/ >
+    au < releasing ; 1940 ; CDIR 1940 ; 1940 ; https://www.govinfo.gov/ >
+    au < releasing ; 1941 ; CDIR 1941 ; 1941 ; https://www.govinfo.gov/ >
+    au < releasing ; 1942 ; CDIR 1942 ; 1942 ; https://www.govinfo.gov/ >
+    au < releasing ; 1943 ; CDIR 1943 ; 1943 ; https://www.govinfo.gov/ >
+    au < releasing ; 1944 ; CDIR 1944 ; 1944 ; https://www.govinfo.gov/ >
+    au < releasing ; 1945 ; CDIR 1945 ; 1945 ; https://www.govinfo.gov/ >
+    au < releasing ; 1946 ; CDIR 1946 ; 1946 ; https://www.govinfo.gov/ >
+    au < releasing ; 1947 ; CDIR 1947 ; 1947 ; https://www.govinfo.gov/ >
+    au < releasing ; 1948 ; CDIR 1948 ; 1948 ; https://www.govinfo.gov/ >
+    au < releasing ; 1949 ; CDIR 1949 ; 1949 ; https://www.govinfo.gov/ >
+    au < releasing ; 1950 ; CDIR 1950 ; 1950 ; https://www.govinfo.gov/ >
+    au < releasing ; 1951 ; CDIR 1951 ; 1951 ; https://www.govinfo.gov/ >
+    au < releasing ; 1952 ; CDIR 1952 ; 1952 ; https://www.govinfo.gov/ >
+    au < releasing ; 1953 ; CDIR 1953 ; 1953 ; https://www.govinfo.gov/ >
+    au < releasing ; 1954 ; CDIR 1954 ; 1954 ; https://www.govinfo.gov/ >
+    au < releasing ; 1955 ; CDIR 1955 ; 1955 ; https://www.govinfo.gov/ >
+    au < releasing ; 1956 ; CDIR 1956 ; 1956 ; https://www.govinfo.gov/ >
     au < manifest ; 1957 ; CDIR 1957 ; 1957 ; https://www.govinfo.gov/ >
     au < manifest ; 1958 ; CDIR 1958 ; 1958 ; https://www.govinfo.gov/ >
     au < manifest ; 1959 ; CDIR 1959 ; 1959 ; https://www.govinfo.gov/ >
