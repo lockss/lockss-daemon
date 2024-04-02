@@ -54,8 +54,8 @@ if ($resp->is_success) {
         #print "$1\n";
         push(@collection_list,$1);
       }
-    } 
-  }   
+    }
+  }
 } else {
   printf("--REQ_FAIL--" . $url . " " . $resp->code() . " " . $resp->message() . "\n");
 }
