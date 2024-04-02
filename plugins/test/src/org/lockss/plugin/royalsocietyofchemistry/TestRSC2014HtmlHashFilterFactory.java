@@ -112,8 +112,34 @@ public class TestRSC2014HtmlHashFilterFactory extends LockssTestCase {
       "  <div class=\"text\">\n" + 
       "  To gain access to this content please\n" +
       "  </div>\n" +
-      " <label id=\"Label8\" class=\"disabled_link\" title=\"Rich HTML\" style=\"padding-left: .1em;\">\n" + 
-      "                                    Rich HTML</label>" + 
+      "    <div class=\"header_text\"  style=\"width: 16.5em; margin-left: .5em; border-bottom: 1px solid #e4e4e4;\">\n" + 
+                "        Download\n" + 
+                "    </div>" +
+      "<div class=\"links_list\"  style=\"margin-top: .5em; margin-left: .5em; margin-bottom: .5em; \">\n" + 
+                "        \n" + 
+                "            <!-- This section for the PDF Link-->\n" + 
+                "            \n" + 
+                "            <span class=\"list_icon\">\n" + 
+                "                <img src=\"https://www.rsc-cdn.org/pubs-core/2022.0.121/content/NewImages/pdf_icon_small.gif\" alt=\"\" title=\"PDF\" width=\"17\"\n" + 
+                "                    height=\"16\" /></span>\n" + 
+                "                <a class=\"gray_bg_normal_txt\" href=\"/en/content/articlepdf/2015/cy/c4cy00228h\" onclick=\"javascript: _gaq.push([&#39;_trackEvent&#39;,&#39;download&#39;,&#39;pdf&#39;,&#39;asymmetric hydrogenation by rucl2(r-binap)(dmf)n encapsulated in silica-based nanoreactors – c4cy00228h - sercode=cy&#39;]);\" title=\"PDF\" type=\"text/html\">PDF</a><br />\n" + //
+                "            \n" + 
+                "            \n" + 
+                "            <!-- This section for the Rich html Link-->\n" + 
+                "            \n" + 
+                "                <span class=\"list_icon\" style=\"margin-left: .25em;\">\n" + 
+                "                    <img src=\"https://www.rsc-cdn.org/pubs-core/2022.0.121/content/NewImages/interactive_html_icon.gif\" alt=\"\" title=\"Rich HTML\"\n" + //
+                "                        width=\"12\" height=\"13\" /></span>\n" + 
+                "                        <span style=\"padding-left: .1em;\">\n" + 
+                "                      \n" + //
+                "                <a class=\"gray_bg_normal_txt\" href=\"/en/content/articlehtml/2015/cy/c4cy00228h\" onclick=\"javascript: _gaq.push([&#39;_trackEvent&#39;, &#39;download&#39;,&#39;html&#39;,&#39;asymmetric hydrogenation by rucl2(r-binap)(dmf)n encapsulated in silica-based nanoreactors – c4cy00228h - sercode=cy&#39;]);\" title=\"Rich HTML\" type=\"text/html\">Rich HTML</a>  </span> <br />\n" + //
+                "                \n" + 
+                "                \n" + 
+                "            <!-- EPUB3 Section -->\n" + 
+                "            <!-- This section for the Buy PDF Link-->\n" + //
+                "            \n" + //
+                "      \n" + //
+                "    </div>" +
       " <div id=\"top\" class=\"navigation\" style=\"color: rgb(0, 0, 0);\">\n" + 
       "  <a href=\"/en/content/federatedaccess?msid=c4cy00228h&amp;doi=10.1039%2Fc4cy00228h&amp;journalcode=cy&amp;printyear=2015&amp;contenttype=article\" title=\"Log in via your home Institution\">Log in via your home Institution.</a>\n" + 
       "  <a href=\"/en/content/subscriberlogin?type=article&amp;msid=c4cy00228h&amp;pubyear=2015&amp;sercode=cy&amp;doi=10.1039%2Fc4cy00228h&amp;publicationdate=2014-04-14&amp;pubstatus=prt&amp;ispdfexist=True\" title=\"Log in with your member or subscriber username and password\">Log in with your member or subscriber username and password.</a>" +
