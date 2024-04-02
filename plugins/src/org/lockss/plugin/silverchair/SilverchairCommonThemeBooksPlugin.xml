@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>13</string>
+        <string>14</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -184,6 +184,10 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>text/html_filter_factory</string>
         <string>org.lockss.plugin.silverchair.SilverchairCommonThemeHtmlHashFilterFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_crawl_filter_factory</string>
+        <string>org.lockss.plugin.silverchair.SilverchairCommonThemeHtmlCrawlFilterFactory</string>
     </entry>
     <entry>
         <string>plugin_article_iterator_factory</string>
