@@ -28,6 +28,7 @@
       #example permission page: https://www.antitraffickingreview.org/index.php/atrjournal/gateway/lockss?year=2017
 
       
+      au < doNotProcess ; exists ; 2011 ; Anti-Trafficking Review Number 0 ; 0 ; 2011 ; >
       au < doNotProcess ; exists ; 2012 ; Anti-Trafficking Review Number 1 ; 1 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; Anti-Trafficking Review Number 2 ; 2 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; Anti-Trafficking Review Number 3 ; 3 ; 2014 ; >
