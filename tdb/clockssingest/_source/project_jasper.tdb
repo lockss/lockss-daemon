@@ -65,6 +65,17 @@
   {
 
     title <
+      name = Language Development Research ;
+      eissn = 2771-7976
+    >
+    provider = Carnegie Mellon University Library Publishing Service
+
+    au < expected ; exists ; 2024 ; Language Development Research ; UNKNOWN >
+  }
+
+  {
+
+    title <
       name = Educational Journal of Living Theories ;
       eissn = 2009-1788
     >
@@ -168,6 +179,18 @@
     provider = Sociedad Argentina de Análisis Filosófico
 
     au < readySource ; crawling ; 2023-2024 ; Análisis Filosófico ; analisis_filosofico_1851-9636 >
+
+  }
+
+  {
+
+    title <
+      name = Revista Stultifera ;
+      eissn = 0719-983X
+    >
+    provider = Universidad Austral de Chile
+
+    au < expected ; exists ; 2024 ; Revista Stultifera ; UNKNOWN >
 
   }
 
