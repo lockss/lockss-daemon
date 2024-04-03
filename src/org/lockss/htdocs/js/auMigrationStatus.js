@@ -100,7 +100,7 @@ class AuMigrationStatus extends React.Component {
 
     // FIXME: Replace with a jQuery solution?
     if (prevState.running != this.state.running) {
-      for (const e of document.querySelectorAll("input[type='submit']")) {
+      for (const e of document.querySelectorAll("input[type='submit'],input[type='button']")) {
         if (e.value == "Abort") {
           this.disableIfRunning = false;
         } else {
