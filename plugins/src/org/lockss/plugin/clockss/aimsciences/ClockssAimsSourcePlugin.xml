@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -69,11 +69,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Institute of Mathematical Sciences Dir Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+    <string>"American Institute of Mathematical Sciences Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Institute of Mathematical Sciences Dir Source Plugin (CLOCKSS)</string>
+    <string>American Institute of Mathematical Sciences Source Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
