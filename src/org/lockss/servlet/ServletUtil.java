@@ -385,7 +385,6 @@ public class ServletUtil {
     if (diffs.contains(MigrationManager.PREFIX)) {
       migrateHost = config.get(MigrateContent.PARAM_HOSTNAME);
       migratePort = V2AuMover.DEFAULT_CFG_UI_PORT;
-      log.critical("migrateHost: " + migrateHost + ", migratePort: " + migratePort);
     }
 
     if (diffs.contains(PREFIX)) {
