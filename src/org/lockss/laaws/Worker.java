@@ -1,13 +1,13 @@
 package org.lockss.laaws;
 
-import org.lockss.laaws.api.cfg.AusApi;
-import org.lockss.laaws.api.cfg.UsersApi;
+import org.lockss.laaws.api.cfg.*;
 import org.lockss.laaws.api.rs.StreamingArtifactsApi;
 import org.lockss.plugin.ArchivalUnit;
 
 public abstract class Worker {
 
   protected V2AuMover auMover;
+  protected MigrationManager migreationMgr;
   protected MigrationTask task;
   protected ArchivalUnit au;
   protected String auid;
@@ -15,11 +15,13 @@ public abstract class Worker {
   protected Counters ctrs;
 
   protected final StreamingArtifactsApi artifactsApi;
-  protected final AusApi cfgApiClient;
+  protected final AusApi cfgAusApiClient;
   protected final UsersApi cfgUsersApiClient;
+  protected final ConfigApi cfgConfigApiClient;
 
   public Worker(V2AuMover auMover, MigrationTask task) {
     this.auMover = auMover;
+    this.migreationMgr = auMover.getMigrationMgr();
     this.task = task;
     this.au = task.getAu();
     if (this.au != null) {
@@ -27,8 +29,9 @@ public abstract class Worker {
     }
     this.ctrs = task.getCounters();
     artifactsApi = auMover.getRepoArtifactsApiClient();
-    cfgApiClient = auMover.getCfgAusApiClient();
+    cfgAusApiClient = auMover.getCfgAusApiClient();
     cfgUsersApiClient = auMover.getCfgUsersApiClient();
+    cfgConfigApiClient = auMover.getCfgConfigApiClient();
   }
 
   protected void addError(String msg) {

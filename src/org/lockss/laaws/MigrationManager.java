@@ -260,6 +260,7 @@ public class MigrationManager extends BaseLockssDaemonManager
 
   public enum OpType {
     CopyDatabase("Copy Database", COPY_BIT),
+    CopyConfig("Copy Config", COPY_BIT),
     CopySystemSettings("Copy System Settings", COPY_BIT),
     CopyOnly("Copy Only", COPY_BIT),
     CopyAndVerify("Copy and Verify", COPY_BIT | VERIFY_BIT),

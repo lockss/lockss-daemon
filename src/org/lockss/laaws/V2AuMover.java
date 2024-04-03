@@ -323,6 +323,8 @@ public class V2AuMover {
   private static final String STATUS_RUNNING = "**Running**";
   private static final String STATUS_MIGRATING_DATABASE = "Migrating database conent";
   private static final String STATUS_DONE_MIGRATING_DATABASE = "Finished migrating database";
+  private static final String STATUS_COPYING_CONFIG = "Copying config files";
+  private static final String STATUS_DONE_COPYING_CONFIG = "Finished copying config files";
   private static final String STATUS_COPYING_USER_ACCOUNTS = "Copying user accounts";
   private static final String STATUS_DONE_COPYING_SYSTEM_SETTINGS = "Finished copying system settings";
 
@@ -382,6 +384,9 @@ public class V2AuMover {
 
   /** V2 Users API client */
   private org.lockss.laaws.api.cfg.UsersApi cfgUsersApiClient;
+
+  /** V2 Config files api client */
+  private org.lockss.laaws.api.cfg.ConfigApi cfgConfigApiClient;
 
   /** Configuration service port */
   private int cfgPort;
@@ -622,6 +627,7 @@ public class V2AuMover {
       cfgStatusApiClient = new org.lockss.laaws.api.cfg.StatusApi(cfgApiStatusClient);
       cfgAusApiClient = new org.lockss.laaws.api.cfg.AusApi(configClient);
       cfgUsersApiClient = new org.lockss.laaws.api.cfg.UsersApi(configClient);
+      cfgConfigApiClient = new org.lockss.laaws.api.cfg.ConfigApi(configClient);
     }
     catch (MalformedURLException mue) {
       totalCounters.addError("Error parsing REST Configuration Service URL: "
@@ -985,6 +991,21 @@ public class V2AuMover {
       logReport("Copied user accounts");
     } else {
     }
+  }
+
+  private void moveConfigFiles(Args args) throws MigrationTaskFailedException {
+    currentStatus = STATUS_COPYING_CONFIG;
+
+    initRequest(args);
+
+    // Migrate the database
+    MigrationTask task  = MigrationTask.migrateConfigFiles(this);
+    ConfigFileMover cfMover = new ConfigFileMover(this, task);
+
+    cfMover.run();
+
+    currentStatus = STATUS_DONE_COPYING_CONFIG;
+    logReport(currentStatus);
   }
 
   /**
@@ -1731,6 +1752,10 @@ public class V2AuMover {
     return cfgUsersApiClient;
   }
 
+  public org.lockss.laaws.api.cfg.ConfigApi getCfgConfigApiClient() {
+    return cfgConfigApiClient;
+  }
+
   // Cookie not needed in this context
   public synchronized String makeCookie() {
     return null;
@@ -2229,11 +2254,15 @@ public class V2AuMover {
   // Report files
   //////////////////////////////////////////////////////////////////////
 
+  public String nowTimestamp() {
+    return DateFormatter.now();
+  }
+
   /**
    * Open (append) the Report file and error file
    */
   void openReportFiles(Args args) {
-    String now = DateFormatter.now();
+    String now = nowTimestamp();
     reportWriter = openReportFile(reportFile, args, "Report", now);
     errorWriter = openReportFile(errorFile, args, "Error Report", now);
   }
