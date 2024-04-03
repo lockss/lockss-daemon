@@ -892,6 +892,9 @@ public class V2RestClient {
       // Handle file downloading.
       return (T) downloadFileFromResponse(response);
     }
+    else if (returnType.equals(Response.class)) {
+      return (T)response;
+    }
     else if (returnType.equals(ArtifactData.class)) {
       MultipartReader reader = null;
       try {

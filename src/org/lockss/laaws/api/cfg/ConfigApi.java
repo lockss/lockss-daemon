@@ -50,6 +50,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import okhttp3.Response;
 import org.lockss.laaws.client.*;
 import org.lockss.laaws.model.cfg.PlatformConfigurationWsResult;
 
@@ -616,6 +617,16 @@ public class ConfigApi {
     return localVarResp.getData();
   }
 
+  /** Same as {@link #getSectionConfig(String, String, String, String,
+   *  String)} but returns a Response
+   */
+  public Response getSectionConfigResponse(String sectionName, String ifMatch, String ifModifiedSince,
+      String ifNoneMatch, String ifUnmodifiedSince) throws ApiException {
+    ApiResponse<Response> localVarResp = getSectionConfigResponseWithHttpInfo(
+        sectionName, ifMatch, ifModifiedSince, ifNoneMatch, ifUnmodifiedSince);
+    return localVarResp.getData();
+  }
+
   /**
    * Get the named configuration file
    * Get the configuration file stored for a given name
@@ -646,6 +657,18 @@ public class ConfigApi {
     okhttp3.Call localVarCall = getSectionConfigValidateBeforeCall(
         sectionName, ifMatch, ifModifiedSince, ifNoneMatch, ifUnmodifiedSince, null);
     Type localVarReturnType = new TypeToken<File>() {}.getType();
+    return apiClient.execute(localVarCall, localVarReturnType);
+  }
+
+  /** Same as {@link #getSectionConfigResponseWithHttpInfo(String,
+   *  String, String, String, String)} but returns
+   *  ApiResponse&lt;Response&gt;
+   */
+  public ApiResponse<Response> getSectionConfigResponseWithHttpInfo(String sectionName, String ifMatch,
+      String ifModifiedSince, String ifNoneMatch, String ifUnmodifiedSince) throws ApiException {
+    okhttp3.Call localVarCall = getSectionConfigValidateBeforeCall(
+        sectionName, ifMatch, ifModifiedSince, ifNoneMatch, ifUnmodifiedSince, null);
+    Type localVarReturnType = new TypeToken<Response>() {}.getType();
     return apiClient.execute(localVarCall, localVarReturnType);
   }
 
