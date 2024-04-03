@@ -102,6 +102,8 @@ public class MigrateContent extends LockssServlet {
 
   public static final String ACTION_START= "Start";
   public static final String ACTION_ABORT= "Abort";
+  public static final String ACTION_COPY_DB= "CopyDb";
+  public static final String ACTION_COPY_CONFIG= "CopyConfig";
 
   private static String ALL_PLUGINS_ID = "_allplugs_";
 
@@ -211,6 +213,10 @@ public class MigrateContent extends LockssServlet {
         }
       } else if (ACTION_ABORT.equals(action)) {
         doAbort();
+      } else if (ACTION_COPY_DB.equals(action)) {
+        doCopyDb();
+      } else if (ACTION_COPY_CONFIG.equals(action)) {
+        doCopyConfig();
       }
     }
     displayPage();
@@ -293,7 +299,24 @@ public class MigrateContent extends LockssServlet {
       startRunner(ListUtil.list(
           getArgsToMigrateSystemSettings(),
           getArgsToMigrateDatabase(),
+          getArgsToMigrateConfig(),
           getArgsToMigratePluginAus()));
+    } catch (Exception e) {
+      log.error("Could not start runner", e);
+    }
+  }
+
+  private void doCopyDb() {
+    try {
+      startRunner(ListUtil.list(getArgsToMigrateDatabase()));
+    } catch (Exception e) {
+      log.error("Could not start runner", e);
+    }
+  }
+
+  private void doCopyConfig() {
+    try {
+      startRunner(ListUtil.list(getArgsToMigrateConfig()));
     } catch (Exception e) {
       log.error("Could not start runner", e);
     }
@@ -309,6 +332,12 @@ public class MigrateContent extends LockssServlet {
     return getCommonFormArgs()
       .setCompareContent(false)
       .setOpType(OpType.CopyDatabase);
+  }
+
+  private V2AuMover.Args getArgsToMigrateConfig() {
+    return getCommonFormArgs()
+      .setCompareContent(false)
+      .setOpType(OpType.CopyConfig);
   }
 
   private V2AuMover.Args getArgsToMigratePluginAus() {
@@ -410,6 +439,15 @@ public class MigrateContent extends LockssServlet {
     Input abort = new Input(Input.Submit, KEY_ACTION, ACTION_ABORT);
     tbl.add(start);
     tbl.add(abort);
+    // Advanced migration options - only in debug mode
+    if (migrationMgr.isMigrationInDebugMode()) {
+      Input copyDb = new Input(Input.Submit, KEY_ACTION, ACTION_COPY_DB);
+      Input copyConfig = new Input(Input.Submit, KEY_ACTION, ACTION_COPY_CONFIG);
+      tbl.add("<br>");
+      tbl.add(copyDb);
+      tbl.add(copyConfig);
+    }
+
 
     frm.add(tbl);
     comp.add(frm);
