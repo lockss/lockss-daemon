@@ -392,9 +392,6 @@ public class V2AuMover {
   /** V2 cfgsvc REST access URL */
   private String cfgAccessUrl = null;
 
-  /** Original args to V2AuMover **/
-  private Args args;
-
   /** V2 host name */
   private String hostName;
 
@@ -585,8 +582,9 @@ public class V2AuMover {
     }
   }
 
-  void initClients(Args args) {
-    currentStatus = "Initializing clients";
+  /** Set up to execute a sequence of migration operations.  Create
+   * REST clients, open reports files */
+  void initBatch(Args args) {
     hostName = args.host;
     userName = args.uname;
     userPass = args.upass;
@@ -672,27 +670,25 @@ public class V2AuMover {
   }
 
   /**
-   * Create the REST clients to access the remote repo & cfgsvc
-   * specified in the args, and initialize the status.
-   *
    * @param args the arguments for this request.
    * @throws IllegalArgumentException
    */
-  void initRequest(Args args, String whichAus) throws IllegalArgumentException {
-    currentStatus = "Initializing";
+  void initAuRequest(Args args, String whichAus)
+      throws IllegalArgumentException {
+    initRequest(args);
     this.whichAus = whichAus;
-    running = true;
-    hasBeenStarted = true;
-    opType = args.opType;
     isCompareBytes = args.isCompareContent;
-
     // Must be called after config & args are processed
     initPhaseMap();
-
     if (whichAus != null) {
       logReport("Moving: " + whichAus);
     }
+  }
 
+  void initRequest(Args args) throws IllegalArgumentException {
+    running = true;
+    hasBeenStarted = true;
+    opType = args.opType;
     startTime = now();
   }
 
@@ -737,21 +733,46 @@ public class V2AuMover {
   // Public entry point and top level control
   //////////////////////////////////////////////////////////////////////
 
+  public void executeRequests(List<Args> argsLst)
+      throws MigrationTaskFailedException {
+    if (argsLst.size() > 1) {
+      log.debug(argsLst.size() +
+                " operations requested, using client configuration from the first");
+    }
+    initBatch(argsLst.get(0));
+    try {
+      for (Args args : argsLst) {
+        try {
+          executeRequest(args);
+        } catch (Exception e) {
+          log.error("executeRequest(" + args + ") threw", e);
+          break;
+        }
+      }
+    } finally {
+      running = false;
+    }
+  }
+
   /** Entry point from MigrateContent servlet.  Synchronous - doesn't
    * return until all AUs in request have been copied. */
   public void executeRequest(Args args) throws MigrationTaskFailedException {
-    // Remember original Args from request
-    this.args = args;
     logReportPhase(opHeader(args));
 
     try {
-      if (args.opType == OpType.CopySystemSettings) {
+      switch (args.opType) {
+      case CopySystemSettings:
         moveSystemSettings(args);
-      }
-      else if (args.opType == OpType.CopyDatabase) {
+        break;
+      case CopyDatabase:
         moveDatabase(args);
-      }
-      else {
+        break;
+      case CopyConfig:
+        moveConfigFiles(args);
+        break;
+      case CopyOnly:
+      case CopyAndVerify:
+      case VerifyOnly:
         if (args.au != null) {
           // If an AU was supplied, copy it
           moveOneAu(args);
@@ -764,12 +785,13 @@ public class V2AuMover {
           moveAllAus(args);
         }
         waitUntilDone();
+        break;
+      default:
+        log.error("Unknown OpType: " + args.opType + ", ignored");
       }
     } catch (IOException e) {
       log.error("Unexpected exception", e);
       currentStatus = e.getMessage();
-      running = false;
-    } finally {
     }
   }
 
@@ -803,7 +825,7 @@ public class V2AuMover {
       throw new IllegalArgumentException("Can't move internal AUs");
     }
     startTotalTimers();
-    initRequest(args, ("AU: " + args.au.getName()));
+    initAuRequest(args, ("AU: " + args.au.getName()));
     currentStatus = "Checking V2 services";
     checkV2ServicesAvailable();
     // get the aus known to the v2 repository
@@ -820,7 +842,7 @@ public class V2AuMover {
    */
   public void moveAllAus(Args args) throws IOException {
     startTotalTimers();
-    initRequest(args, "All AUs");
+    initAuRequest(args, "All AUs");
     currentStatus = "Checking V2 services";
     checkV2ServicesAvailable();
     // get the aus known to the v2 repo
@@ -848,7 +870,7 @@ public class V2AuMover {
    */
   public void movePluginAus(Args args) throws IOException {
     startTotalTimers();
-    initRequest(args,
+    initAuRequest(args,
                 "AUs in plugin(s): " +
                 StringUtil.separatedString(args.plugins.stream()
                                            .map(x -> x.getPluginName())
@@ -938,7 +960,7 @@ public class V2AuMover {
   private void moveDatabase(Args args) throws MigrationTaskFailedException {
     currentStatus = STATUS_MIGRATING_DATABASE;
 
-    initRequest(args, null);
+    initRequest(args);
 
     // Migrate the database
     MigrationTask task  = MigrationTask.migrateDb(this);
@@ -951,7 +973,7 @@ public class V2AuMover {
   }
 
   private void moveSystemSettings(Args args) {
-    initRequest(args, null);
+    initRequest(args);
 
     // Move user accounts
     currentStatus = STATUS_COPYING_USER_ACCOUNTS;
