@@ -64,6 +64,7 @@ import org.lockss.subscription.SubscriptionManager;
 import org.lockss.util.*;
 import org.lockss.clockss.*;
 import org.lockss.safenet.*;
+import org.lockss.laaws.MigrationManager;
 
 public class MockLockssDaemon extends LockssDaemon {
   private static Logger log = Logger.getLogger("MockLockssDaemon");
@@ -95,6 +96,7 @@ public class MockLockssDaemon extends LockssDaemon {
   TrueZipManager tzipManager = null;
   StatusService statusService = null;
   RemoteApi remoteApi = null;
+  MigrationManager migrationManager = null;
   IcpManager icpManager = null;
   ClockssParams clockssParams = null;
   DbManager dbManager = null;
@@ -580,6 +582,18 @@ public class MockLockssDaemon extends LockssDaemon {
       managerMap.put(LockssDaemon.REMOTE_API, remoteApi);
     }
     return remoteApi;
+  }
+
+  /**
+   * return the MigrationManager instance
+   * @return the MigrationManager
+   */
+  public MigrationManager getMigrationManager() {
+    if (migrationManager == null) {
+      migrationManager = (MigrationManager)newManager(LockssDaemon.MIGRATION_MANAGER);
+      managerMap.put(LockssDaemon.MIGRATION_MANAGER, migrationManager);
+    }
+    return migrationManager;
   }
 
   /**
