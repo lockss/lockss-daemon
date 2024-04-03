@@ -111,6 +111,7 @@ public class AimsCrossrefXmlMetadataExtractorFactory extends SourceXmlMetadataEx
       //2018 options
       String pubJID = oneAM.getRaw(CrossRefSchemaHelper.pub_abbrev);
       String pubJIDAlt = oneAM.getRaw(CrossRefSchemaHelper.pub_abbrev).toLowerCase();
+      String pubJIDAlt2 = oneAM.getRaw(CrossRefSchemaHelper.pub_abbrev).toUpperCase();
       String pubYear = oneAM.getRaw(CrossRefSchemaHelper.pub_year);
       String pubIssue = oneAM.getRaw(CrossRefSchemaHelper.pub_issue);
       String artPage = oneAM.getRaw(CrossRefSchemaHelper.art_sp);
@@ -120,13 +121,20 @@ public class AimsCrossrefXmlMetadataExtractorFactory extends SourceXmlMetadataEx
 
       String name2018WithDoi = cuBase + doiFirst + "/" + pubJID + "." + pubYear + "." + pubIssue + "." + artPage + "/Paper.pdf";
       String name2018AltWithDoi = cuBase + doiFirst + "/" + pubJIDAlt + "." + pubYear + "." + pubIssue + "." + artPage + "/Paper.pdf";
+      String name2018AltWithDoi2 = cuBase + doiFirst + "/" + pubJIDAlt2 + "." + pubYear + "." + pubIssue + "." + artPage + "/Paper.pdf";
+
       String name2018Alt2WithDoi = cuBase + doiFirst + "/" + pubJID + "." + pubYear + "." + pubIssue + "." + artPage + "/paper.pdf";
       String name2018Alt3WithDoi = cuBase + doiFirst + "/" + pubJIDAlt + "." + pubYear + "." + pubIssue + "." + artPage + "/paper.pdf";
+      String name2018Alt3WithDoi2 = cuBase + doiFirst + "/" + pubJIDAlt2 + "." + pubYear + "." + pubIssue + "." + artPage + "/paper.pdf";
 
       String name2018 = cuBase + "/" + pubJID + "." + pubYear + "." + pubIssue + "." + artPage + ".pdf";
       String name2018Alt = cuBase + "/" + pubJIDAlt + "." + pubYear + "." + pubIssue + "." + artPage + ".pdf";
+      String name2018AltUpper = cuBase + "/" + pubJIDAlt2 + "." + pubYear + "." + pubIssue + "." + artPage + ".pdf";
+
       String name2018Alt2 = cuBase + "/" + pubJID + "." + pubYear + "." + pubIssue + "." + artPage + ".pdf";
       String name2018Alt3 = cuBase  + "/" + pubJIDAlt + "." + pubYear + "." + pubIssue + "." + artPage + ".pdf";
+      String name2018Alt3Upper = cuBase  + "/" + pubJIDAlt2 + "." + pubYear + "." + pubIssue + "." + artPage + ".pdf";
+
       log.debug3("looking for: " + pdfName + " or " + altName + " or " + name2018 +  " or "
               + name2018Alt + " or " + name2018Alt2 +  " or " + name2018Alt3);
 
@@ -136,13 +144,17 @@ public class AimsCrossrefXmlMetadataExtractorFactory extends SourceXmlMetadataEx
 
       returnList.add(name2018WithDoi);
       returnList.add(name2018AltWithDoi);
+      returnList.add(name2018AltWithDoi2);
       returnList.add(name2018Alt2WithDoi);
       returnList.add(name2018Alt3WithDoi);
+      returnList.add(name2018Alt3WithDoi2);
 
       returnList.add(name2018);
       returnList.add(name2018Alt);
+      returnList.add(name2018AltUpper);
       returnList.add(name2018Alt2);
       returnList.add(name2018Alt3);
+      returnList.add(name2018Alt3Upper);
       return returnList;
     }
     
