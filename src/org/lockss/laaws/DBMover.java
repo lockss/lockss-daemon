@@ -66,6 +66,10 @@ public class DBMover extends Worker {
         return;
       }
       if (initParams()) {
+        if (auMover.getMigrationMgr().isSkipDbCopy()) {
+          log.info("Skipping DB copy to non-postgres target in debug mode");
+          return;
+        }
         if (dbManager.isTypeDerby()) {
           log.info("Migrating Derby DB Content");
           copyDerbyDb();

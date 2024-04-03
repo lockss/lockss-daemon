@@ -33,6 +33,7 @@ import java.util.*;
 
 import org.lockss.app.*;
 import org.lockss.daemon.*;
+import org.lockss.db.*;
 import org.lockss.servlet.MigrateContent;
 import org.lockss.util.*;
 import org.lockss.config.*;
@@ -81,6 +82,7 @@ public class MigrationManager extends BaseLockssDaemonManager
   boolean isDaemonMigrating;
   boolean isMigrationInDebugMode;
   boolean isDeleteMigratedAus;
+  String dsClassName;;
 
   ConfigManager cfgMgr;
 
@@ -109,6 +111,14 @@ public class MigrationManager extends BaseLockssDaemonManager
     return isDeleteMigratedAus;
   }
 
+  public boolean isTargetPostgres() {
+    return DbManagerSql.isTypePostgresql(dsClassName);
+  }
+
+  public boolean isSkipDbCopy() {
+    return !isTargetPostgres();
+  }
+
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
     if (changedKeys.contains(PREFIX)) {
@@ -126,6 +136,7 @@ public class MigrationManager extends BaseLockssDaemonManager
       isDeleteMigratedAus = config.getBoolean(
           MigrateContent.PARAM_DELETE_AFTER_MIGRATION,
           MigrateContent.DEFAULT_DELETE_AFTER_MIGRATION);
+      dsClassName = config.get(DbManager.PARAM_DATASOURCE_CLASSNAME);
 
       if (!isIrrevocableMigrationEnabled && isDeleteMigratedAus) {
         log.warning("isIrrevocableMigrationEnabled is false but isDeleteMigrateAus is true; setting it to false");

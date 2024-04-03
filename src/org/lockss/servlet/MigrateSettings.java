@@ -292,15 +292,16 @@ public class MigrateSettings extends LockssServlet {
             }
 
             // Test database connection
-            try {
-              Configuration dsCfg = DataSourceUtil.getRuntimeDataSourceConfig(mCfg.getConfigTree(V2_PREFIX));
-              DataSourceUtil.validateDataSourceConfig(dsCfg);
-            } catch (Throwable e) {
-              dbError = "Could not connect to database";
-              log.error(dbError, e);
-              break;
+            if (!migrationMgr.isSkipDbCopy()) {
+              try {
+                Configuration dsCfg = DataSourceUtil.getRuntimeDataSourceConfig(mCfg.getConfigTree(V2_PREFIX));
+                DataSourceUtil.validateDataSourceConfig(dsCfg);
+              } catch (Throwable e) {
+                dbError = "Could not connect to database";
+                log.error(dbError, e);
+                break;
+              }
             }
-
             // Write migration configuration to file
             writeMigrationConfigFile(mCfg);
             ConfigManager.getConfigManager().reloadAndWait();
@@ -773,7 +774,8 @@ public class MigrateSettings extends LockssServlet {
     String dsClassName = dsCfg.get("className");
 
     // Throw if target is using anything other than PostgreSQL
-    if (!DbManagerSql.isTypePostgresql(dsClassName)) {
+    if (!migrationMgr.isMigrationInDebugMode() &&
+        !DbManagerSql.isTypePostgresql(dsClassName)) {
       throw new MigrationManager.UnsupportedConfigurationException("Only PostgreSQL database supported");
     }
 
