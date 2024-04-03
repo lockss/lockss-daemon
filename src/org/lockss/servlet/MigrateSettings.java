@@ -598,6 +598,7 @@ public class MigrateSettings extends LockssServlet {
   private void addHiddenInputToTable(Table tbl, String label, String key, String init, int size) {
     Input in = new Input(Input.Password, key, init);
     in.setSize(size);
+    in.attribute("autocomplete", "new-password");
     addElementToTable(tbl, label, in);
   }
 
