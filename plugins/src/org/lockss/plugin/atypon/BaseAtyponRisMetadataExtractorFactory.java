@@ -179,6 +179,7 @@ implements FileMetadataExtractorFactory {
       // protect against counting overcrawled articles by checking against
       // values from the TDB file - differentiate between book items and journal itesm
       ArchivalUnit au = cu.getArchivalUnit();
+      log.debug3("AU is " + au + "AM is " +  am);
       if ( ris_type.toUpperCase().contains("BOOK") || ris_type.toUpperCase().contains("CHAP") ) {
         if (!BaseAtyponMetadataUtil.metadataMatchesBookTdb(au, am)) {
           return;
