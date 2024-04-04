@@ -151,15 +151,23 @@ echo "----------------------"
 echo " "
 
 #
-# Find tdb files possibly ready to be moved to retirement.
+# Find tdb files possibly ready to be moved to retirement or needing first processing.
 echo "---------------------"
 echo "---------------------"
 echo "GLN. tdb files ready to retire?"
 grep -L -e exists -e released -e manifest -e testing -e expected tdb/prod/*.tdb
 echo "---------------------"
 echo "---------------------"
+echo "GLN. tdb files need first processing."
+grep -L -e ready -e released tdb/prod/*.tdb | xargs grep -l "manifest"
+echo "---------------------"
+echo "---------------------"
 echo "CLOCKSS. tdb files ready to retire?"
 grep -L -e exists -e crawling -e manifest -e testing -e expected tdb/clockssingest/*.tdb
+echo "---------------------"
+echo "---------------------"
+echo "CLOCKSS. tdb files need first processing."
+grep -L -e crawling -e frozen -e deepCrawl -e finished tdb/clockssingest/*.tdb | xargs grep -l "manifest"
 echo "---------------------"
 echo "---------------------"
 echo "CLOCKSS. tdb files not assigned to content testing"
