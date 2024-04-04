@@ -20,7 +20,7 @@
       param[base_url] = https://www.jpsa.ac.ae/
       param[journal_abbr] = journal
 
-      au < manifest ; exists ; 2023 ; Journal of Police and Legal Sciences Volume 13 ; 13 ; >
+      au < testing ; exists ; 2023 ; Journal of Police and Legal Sciences Volume 13 ; 13 ; >
       au < manifest ; exists ; 2024 ; Journal of Police and Legal Sciences Volume 14 ; 14 ; >
 
   }

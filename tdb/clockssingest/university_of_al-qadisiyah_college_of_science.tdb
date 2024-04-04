@@ -22,10 +22,10 @@
     param[journal_abbr] = home
     implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
 
-    au < manifest ; exists ; 2020 ; Al-Qadisiyah Journal of Pure Science Volume 25 ; 25 ; https://qjps.researchcommons.org/ ; >
-    au < manifest ; exists ; 2021 ; Al-Qadisiyah Journal of Pure Science Volume 26 ; 26 ; https://qjps.researchcommons.org/ ; >
-    au < manifest ; exists ; 2022 ; Al-Qadisiyah Journal of Pure Science Volume 27 ; 27 ; https://qjps.researchcommons.org/ ; >
-    au < manifest ; exists ; 2023 ; Al-Qadisiyah Journal of Pure Science Volume 28 ; 28 ; https://qjps.researchcommons.org/ ; >
+    au < testing ; exists ; 2020 ; Al-Qadisiyah Journal of Pure Science Volume 25 ; 25 ; https://qjps.researchcommons.org/ ; >
+    au < testing ; exists ; 2021 ; Al-Qadisiyah Journal of Pure Science Volume 26 ; 26 ; https://qjps.researchcommons.org/ ; >
+    au < testing ; exists ; 2022 ; Al-Qadisiyah Journal of Pure Science Volume 27 ; 27 ; https://qjps.researchcommons.org/ ; >
+    au < testing ; exists ; 2023 ; Al-Qadisiyah Journal of Pure Science Volume 28 ; 28 ; https://qjps.researchcommons.org/ ; >
     au < expected ; exists ; 2024 ; Al-Qadisiyah Journal of Pure Science Volume 29 ; 29 ; https://qjps.researchcommons.org/ ; >
 
   }
