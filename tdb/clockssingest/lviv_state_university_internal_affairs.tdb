@@ -1,0 +1,28 @@
+{
+
+  publisher <
+    name = Lviv State University of Internal Affairs
+    #info[contract] = 2018 ;
+    #info[tester] = 8 ;
+    #info[poller] = 2
+  >
+
+  plugin = org.lockss.plugin.lsuia.ClockssLSUIAJournalPlugin
+  implicit < status ; status2 ; param[year] ; name ; param[volume_name] ; hidden[proxy] >
+
+  {
+
+    title <
+      name = Lviv State University of Internal Affairs Journals;
+      issn = 2617-4162;
+      eissn = 2617-4170
+    >
+    param[base_url] = https://sls-journal.com.ua/
+
+    au < testing ; exists ; 2021 ; Lviv State University of Internal Affairs Journals Volume 4 ; 4 ; >
+    au < testing ; exists ; 2022 ; Lviv State University of Internal Affairs Journals Volume 5 ; 5 ; >
+    au < testing ; exists ; 2023 ; Lviv State University of Internal Affairs Journals Volume 6 ; 6 ; >
+
+  }
+
+}
