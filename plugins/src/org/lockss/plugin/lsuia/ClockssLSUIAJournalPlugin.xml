@@ -79,40 +79,34 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Lviv State University of Internal Affairs Journal Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+    <string>"Lviv State University of Internal Affairs Journal Plugin (CLOCKSS), Base URL %s, Year %d Volume %s", base_url, year, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
     <list>
       <!--
-      https://sls-journal.com.ua/en/archive
-      https://sls-journal.com.ua/en/journals/tom-6-3-2023-->
-      <!--<string>"%sen/journals/tom-6-3-%d", base_url, year</string>-->
-      <string>"%s/en/archive", base_url</string>
+      https://sls-journal.com.ua/en/archive/2023
+      -->
+      <string>"%sen/archive/%d", base_url, year</string>
     </list>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"%s/en/archive", base_url</string>
-      <string>1,"%sen/journals/tom", base_url</string>
-      <string>1,"%sen/article/download/",base_url</string>
+      <string>1, "^https://code\.jquery\.com/.*/jquery.*\.js"</string>
+      <string>1,"https://fonts\.googleapis\.com/"</string>
+      <string>1,"%s(en/)?(js|web|assets|css|images|fonts)/", base_url, year</string>
+      <string>1,"%sen/archive/%d", base_url, year</string>
+      <string>1,"%sen/journals/tom-%s-(\d+)-%d", base_url, volume_name, year</string>
+      <string>1,"%sen/journals/download", base_url</string>
+      <string>1,"%sen/(article|read)",base_url</string>
     </list>
-  </entry>
-  <!--Publisher did not setup the permission statement-->
-  <entry>
-    <string>au_permission_url</string>
-    <string>"http://clockss-ingest.lockss.org/clockss.txt"</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
       <string>1,"%sen/article/download/",base_url</string>
     </list>
-  </entry>
-  <entry>
-    <string>plugin_crawl_seed_factory</string>
-    <string>org.lockss.plugin.lsuia.LSUIACrawlSeedFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
@@ -132,11 +126,8 @@ POSSIBILITY OF SUCH DAMAGE.
     </map>
   </entry>
   <entry>
-    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config -->
-    <string>au_permitted_host_pattern</string>
-    <list>
-      <string>sls-journal\.com\.ua</string>
-    </list>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.lsuia.LSUIAHtmlFilterFactory</string>
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
@@ -153,6 +144,13 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>"[.](css|js|svg)([?].+)?$", 0</string>
       <string>"/i/[^.?]+[.](gif|jpe?g|png)$", 0</string>
       <string>"/auid=.*$", 0</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>code\.jquery\.com/</string>
+      <string>fonts\.googleapis\.com</string>
     </list>
   </entry>
   <entry>
