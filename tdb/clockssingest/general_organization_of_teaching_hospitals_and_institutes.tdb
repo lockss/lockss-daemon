@@ -20,7 +20,7 @@
       param[base_url] = https://jmisr.researchcommons.org/
       param[journal_abbr] = home
 
-      au < testing ; exists ; 2023 ; Journal of Medicine in Scientific Research Volume 6 ; 6 ; >
+      au < notReady ; exists ; 2023 ; Journal of Medicine in Scientific Research Volume 6 ; 6 ; > #LXQUEUE-1881
       au < manifest ; exists ; 2024 ; Journal of Medicine in Scientific Research Volume 7 ; 7 ; >
 
   }
