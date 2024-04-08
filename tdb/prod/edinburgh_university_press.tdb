@@ -64,7 +64,7 @@
     au < released ; 2021 ; Afghanistan Volume 4 ; 4 ; https://www.euppublishing.com/ >
     au < released ; 2022 ; Afghanistan Volume 5 ; 5 ; https://www.euppublishing.com/ >
     au < manifest ; 2023 ; Afghanistan Volume 6 ; 6 ; https://www.euppublishing.com/ >
-    au < expected ; 2024 ; Afghanistan Volume 7 ; 7 ; https://www.euppublishing.com/ >
+    au < manifest ; 2024 ; Afghanistan Volume 7 ; 7 ; https://www.euppublishing.com/ >
 
   }
 
@@ -86,7 +86,7 @@
     au < released ; 2021 ; Ancient Philosophy Today Volume 3 ; 3 ; https://www.euppublishing.com/ >
     au < released ; 2022 ; Ancient Philosophy Today Volume 4 ; 4 ; https://www.euppublishing.com/ >
     au < manifest ; 2023 ; Ancient Philosophy Today Volume 5 ; 5 ; https://www.euppublishing.com/ >
-    au < expected ; 2024 ; Ancient Philosophy Today Volume 6 ; 6 ; https://www.euppublishing.com/ >
+    au < manifest ; 2024 ; Ancient Philosophy Today Volume 6 ; 6 ; https://www.euppublishing.com/ >
 
   }
 
@@ -1357,7 +1357,7 @@
       au < released ; 2021 ; International Journal of Humanities and Arts Computing Volume 15 (2021) ; 15 ; https://www.euppublishing.com/ >
       au < released ; 2022 ; International Journal of Humanities and Arts Computing Volume 16 (2022) ; 16 ; https://www.euppublishing.com/ >
       au < manifest ; 2023 ; International Journal of Humanities and Arts Computing Volume 17 (2023) ; 17 ; https://www.euppublishing.com/ >
-      au < expected ; 2024 ; International Journal of Humanities and Arts Computing Volume 18 (2024) ; 18 ; https://www.euppublishing.com/ >
+      au < manifest ; 2024 ; International Journal of Humanities and Arts Computing Volume 18 (2024) ; 18 ; https://www.euppublishing.com/ >
 
     }
 
@@ -3031,7 +3031,7 @@
     param[journal_id] = arabic
 
     au < manifest ; 2023 ; Journal of Arabic Sociolinguistics Volume 1 ; 1 ; https://www.euppublishing.com/ >
-    au < expected ; 2024 ; Journal of Arabic Sociolinguistics Volume 2 ; 2 ; https://www.euppublishing.com/ >
+    au < manifest ; 2024 ; Journal of Arabic Sociolinguistics Volume 2 ; 2 ; https://www.euppublishing.com/ >
 
   }
 
