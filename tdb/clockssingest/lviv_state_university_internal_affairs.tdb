@@ -1,10 +1,10 @@
 {
 
   publisher <
-    name = Lviv State University of Internal Affairs
-    #info[contract] = 2018 ;
-    #info[tester] = 8 ;
-    #info[poller] = 2
+    name = Lviv State University of Internal Affairs ;
+    info[contract] = 2024 ;
+    info[tester] = 5 ;
+    info[platform] = Custom
   >
 
   plugin = org.lockss.plugin.lsuia.ClockssLSUIAJournalPlugin
