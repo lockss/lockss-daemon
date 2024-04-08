@@ -180,7 +180,7 @@
     au < ers.ClockssERSDrupalPlugin ; deepCrawl ; exists ; 2021 ; European Respiratory Review Volume 30 ; 30 ; https://err.ersjournals.com/ ; >
     au < ers.ClockssERSDrupalPlugin ; deepCrawl ; exists ; 2022 ; European Respiratory Review Volume 31 ; 31 ; https://err.ersjournals.com/ ; >
     au < ers.ClockssERSDrupalPlugin ; deepCrawl ; exists ; 2023 ; European Respiratory Review Volume 32 ; 32 ; https://err.ersjournals.com/ ; >
-    au < ers.ClockssERSDrupalPlugin ; expected ; exists ; 2024 ; European Respiratory Review Volume 33 ; 33 ; https://err.ersjournals.com/ ; >
+    au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2024 ; European Respiratory Review Volume 33 ; 33 ; https://err.ersjournals.com/ ; >
 
   }
 
