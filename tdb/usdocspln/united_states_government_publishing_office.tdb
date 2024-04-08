@@ -52,7 +52,7 @@
     au < released ; 1826 ; GOVPUB 1826 ; 1826 ; https://www.govinfo.gov/ >
     au < released ; 1827 ; GOVPUB 1827 ; 1827 ; https://www.govinfo.gov/ >
     au < released ; 1828 ; GOVPUB 1828 ; 1828 ; https://www.govinfo.gov/ >
-    au < manifest ; 1829 ; GOVPUB 1829 ; 1829 ; https://www.govinfo.gov/ >
+    au < ready ; 1829 ; GOVPUB 1829 ; 1829 ; https://www.govinfo.gov/ >
     au < released ; 1830 ; GOVPUB 1830 ; 1830 ; https://www.govinfo.gov/ >
     au < released ; 1831 ; GOVPUB 1831 ; 1831 ; https://www.govinfo.gov/ >
     au < released ; 1832 ; GOVPUB 1832 ; 1832 ; https://www.govinfo.gov/ >
@@ -571,32 +571,32 @@
     au < released ; 1954 ; CDIR 1954 ; 1954 ; https://www.govinfo.gov/ >
     au < released ; 1955 ; CDIR 1955 ; 1955 ; https://www.govinfo.gov/ >
     au < released ; 1956 ; CDIR 1956 ; 1956 ; https://www.govinfo.gov/ >
-    au < manifest ; 1957 ; CDIR 1957 ; 1957 ; https://www.govinfo.gov/ >
-    au < manifest ; 1958 ; CDIR 1958 ; 1958 ; https://www.govinfo.gov/ >
-    au < manifest ; 1959 ; CDIR 1959 ; 1959 ; https://www.govinfo.gov/ >
-    au < manifest ; 1960 ; CDIR 1960 ; 1960 ; https://www.govinfo.gov/ >
-    au < manifest ; 1961 ; CDIR 1961 ; 1961 ; https://www.govinfo.gov/ >
-    au < manifest ; 1962 ; CDIR 1962 ; 1962 ; https://www.govinfo.gov/ >
-    au < manifest ; 1963 ; CDIR 1963 ; 1963 ; https://www.govinfo.gov/ >
-    au < manifest ; 1964 ; CDIR 1964 ; 1964 ; https://www.govinfo.gov/ >
-    au < manifest ; 1965 ; CDIR 1965 ; 1965 ; https://www.govinfo.gov/ >
-    au < manifest ; 1966 ; CDIR 1966 ; 1966 ; https://www.govinfo.gov/ >
-    au < manifest ; 1967 ; CDIR 1967 ; 1967 ; https://www.govinfo.gov/ >
-    au < manifest ; 1969 ; CDIR 1969 ; 1969 ; https://www.govinfo.gov/ >
-    au < manifest ; 1971 ; CDIR 1971 ; 1971 ; https://www.govinfo.gov/ >
-    au < manifest ; 1973 ; CDIR 1973 ; 1973 ; https://www.govinfo.gov/ >
-    au < manifest ; 1975 ; CDIR 1975 ; 1975 ; https://www.govinfo.gov/ >
-    au < manifest ; 1977 ; CDIR 1977 ; 1977 ; https://www.govinfo.gov/ >
-    au < manifest ; 1978 ; CDIR 1978 ; 1978 ; https://www.govinfo.gov/ >
-    au < manifest ; 1979 ; CDIR 1979 ; 1979 ; https://www.govinfo.gov/ >
-    au < manifest ; 1981 ; CDIR 1981 ; 1981 ; https://www.govinfo.gov/ >
-    au < manifest ; 1983 ; CDIR 1983 ; 1983 ; https://www.govinfo.gov/ >
-    au < manifest ; 1985 ; CDIR 1985 ; 1985 ; https://www.govinfo.gov/ >
-    au < manifest ; 1987 ; CDIR 1987 ; 1987 ; https://www.govinfo.gov/ >
-    au < manifest ; 1989 ; CDIR 1989 ; 1989 ; https://www.govinfo.gov/ >
-    au < manifest ; 1991 ; CDIR 1991 ; 1991 ; https://www.govinfo.gov/ >
-    au < manifest ; 1993 ; CDIR 1993 ; 1993 ; https://www.govinfo.gov/ >
-    au < manifest ; 1995 ; CDIR 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < ready ; 1957 ; CDIR 1957 ; 1957 ; https://www.govinfo.gov/ >
+    au < ready ; 1958 ; CDIR 1958 ; 1958 ; https://www.govinfo.gov/ >
+    au < ready ; 1959 ; CDIR 1959 ; 1959 ; https://www.govinfo.gov/ >
+    au < ready ; 1960 ; CDIR 1960 ; 1960 ; https://www.govinfo.gov/ >
+    au < ready ; 1961 ; CDIR 1961 ; 1961 ; https://www.govinfo.gov/ >
+    au < ready ; 1962 ; CDIR 1962 ; 1962 ; https://www.govinfo.gov/ >
+    au < ready ; 1963 ; CDIR 1963 ; 1963 ; https://www.govinfo.gov/ >
+    au < ready ; 1964 ; CDIR 1964 ; 1964 ; https://www.govinfo.gov/ >
+    au < ready ; 1965 ; CDIR 1965 ; 1965 ; https://www.govinfo.gov/ >
+    au < ready ; 1966 ; CDIR 1966 ; 1966 ; https://www.govinfo.gov/ >
+    au < ready ; 1967 ; CDIR 1967 ; 1967 ; https://www.govinfo.gov/ >
+    au < ready ; 1969 ; CDIR 1969 ; 1969 ; https://www.govinfo.gov/ >
+    au < ready ; 1971 ; CDIR 1971 ; 1971 ; https://www.govinfo.gov/ >
+    au < ready ; 1973 ; CDIR 1973 ; 1973 ; https://www.govinfo.gov/ >
+    au < ready ; 1975 ; CDIR 1975 ; 1975 ; https://www.govinfo.gov/ >
+    au < ready ; 1977 ; CDIR 1977 ; 1977 ; https://www.govinfo.gov/ >
+    au < ready ; 1978 ; CDIR 1978 ; 1978 ; https://www.govinfo.gov/ >
+    au < ready ; 1979 ; CDIR 1979 ; 1979 ; https://www.govinfo.gov/ >
+    au < ready ; 1981 ; CDIR 1981 ; 1981 ; https://www.govinfo.gov/ >
+    au < ready ; 1983 ; CDIR 1983 ; 1983 ; https://www.govinfo.gov/ >
+    au < ready ; 1985 ; CDIR 1985 ; 1985 ; https://www.govinfo.gov/ >
+    au < ready ; 1987 ; CDIR 1987 ; 1987 ; https://www.govinfo.gov/ >
+    au < ready ; 1989 ; CDIR 1989 ; 1989 ; https://www.govinfo.gov/ >
+    au < ready ; 1991 ; CDIR 1991 ; 1991 ; https://www.govinfo.gov/ >
+    au < ready ; 1993 ; CDIR 1993 ; 1993 ; https://www.govinfo.gov/ >
+    au < ready ; 1995 ; CDIR 1995 ; 1995 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; CDIR 2022 ; 2022 ; https://www.govinfo.gov/ >
 
     au < released ; 2016 ; Congressional Directory 2016 ; 2016 ; https://www.govinfo.gov/ >
@@ -614,7 +614,7 @@
     param[collection_id] = CDOC
 
     au < manifest ; 1913 ; CDOC 1913 ; 1913 ; https://www.govinfo.gov/ >
-    au < manifest ; 1986 ; CDOC 1986 ; 1986 ; https://www.govinfo.gov/ >
+    au < ready ; 1986 ; CDOC 1986 ; 1986 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; CDOC 2018 ; 2018 ; https://www.govinfo.gov/ >
 
     au < released ; 2019 ; Congressional Documents 2019 ; 2019 ; https://www.govinfo.gov/ >
