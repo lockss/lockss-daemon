@@ -9,6 +9,7 @@
   provider = bepress
   
   # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+  # This journal moved to OJS https://steps.esciencepress.net/index.php/jshss
 
   {
   
@@ -23,9 +24,9 @@
     param[journal_abbr] = jshss
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-    au < deepCrawl ; exists ; 2022 ; Journal of STEPS for Humanities and Social Sciences Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2023 ; Journal of STEPS for Humanities and Social Sciences Volume 2 ; 2 ; >
-    au < expected ; exists ; 2024 ; Journal of STEPS for Humanities and Social Sciences Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2022 ; Journal of STEPS for Humanities and Social Sciences Volume 1 ; 1 ; >
+    au < superseded ; exists ; 2023 ; Journal of STEPS for Humanities and Social Sciences Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 2024 ; Journal of STEPS for Humanities and Social Sciences Volume 3 ; 3 ; >
 
   }
 
