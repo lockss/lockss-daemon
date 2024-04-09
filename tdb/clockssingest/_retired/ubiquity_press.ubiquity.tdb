@@ -448,14 +448,14 @@
 
 {
   publisher <
-    name = London School of Economics and Politics ;
+    name = London School of Economics and Political Science ;
     info[contract] = 2011 ;
     info[back] = 2000 ;
     info[tester] = 8 ;
     info[poller] = 8
   >
 
-    provider = London School of Economics and Politics
+    provider = London School of Economics and Political Science
     plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
 
@@ -466,14 +466,14 @@
         eissn = 2516-7227
       >
 
-      comment[publisher] = London School of Economics and Politics
+      comment[publisher] = London School of Economics and Political Science
 #      param[base_url] = https://jied.lse.ac.uk/
 
-      au < finished ; finished ; 2019 ; 1 ; London School of Economics and Politics Volume 2019 ; 2019 ; https://jied.lse.ac.uk/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; 2 ; London School of Economics and Politics Volume 2020 ; 2020 ; https://jied.lse.ac.uk/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2021 ; 3 ; London School of Economics and Politics Volume 2021 ; 2021 ; https://jied.lse.ac.uk/ ; reingest3.clockss.org:8083 >
-      au < superseded ; exists ; 2022 ; 4 ; London School of Economics and Politics Volume 2022 [superseded] ; 2022 ; https://jied.lse.ac.uk/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 5 ; London School of Economics and Politics Volume 2023 ; 2023 ; https://jied.lse.ac.uk/ ; >
+      au < finished ; finished ; 2019 ; 1 ; Journal of Illicit Economies and Development Volume 2019 ; 2019 ; https://jied.lse.ac.uk/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 2 ; Journal of Illicit Economies and Development Volume 2020 ; 2020 ; https://jied.lse.ac.uk/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2021 ; 3 ; Journal of Illicit Economies and Development Volume 2021 ; 2021 ; https://jied.lse.ac.uk/ ; reingest3.clockss.org:8083 >
+      au < superseded ; exists ; 2022 ; 4 ; Journal of Illicit Economies and Development Volume 2022 [superseded] ; 2022 ; https://jied.lse.ac.uk/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 5 ; Journal of Illicit Economies and Development Volume 2023 ; 2023 ; https://jied.lse.ac.uk/ ; >
 
   }
   
@@ -484,7 +484,7 @@
         eissn = 2516-9122
       >
 
-      comment[publisher] = London School of Economics and Politics
+      comment[publisher] = London School of Economics and Political Science
 #      param[base_url] = https://journal.ilpnetwork.org/
 
       au < finished ; finished ; 2018 ; 2 ; Journal of Long-Term Care Volume 2018 ; 2018 ; https://journal.ilpnetwork.org/ ; reingest4.clockss.org:8082 > #problem with volume url?
@@ -503,7 +503,7 @@
         eissn = 2633-4046
       >
 
-      comment[publisher] = London School of Economics and Politics
+      comment[publisher] = London School of Economics and Political Science
 #      param[base_url] = https://ppr.lse.ac.uk/ 
 
       au < finished ; finished ; 2020 ; 1 ; LSE Public Policy Review Volume 2020 ; 2020 ; https://ppr.lse.ac.uk/ ; reingest1.clockss.org:8082 >
@@ -520,7 +520,7 @@
         eissn = 2753-5908
       >
 
-      comment[publisher] = London School of Economics and Politics
+      comment[publisher] = London School of Economics and Political Science
 #      param[base_url] = https://philosophyofphysics.lse.ac.uk/ 
 
       au < doNotProcess ; exists ; 2023 ; 1 ; Philosophy of Physics Volume 2023 ; 2023 ; https://philosophyofphysics.lse.ac.uk/ ; >
@@ -535,7 +535,7 @@
         eissn = 1529-7470
       >
 
-      comment[publisher] = London School of Economics and Politics
+      comment[publisher] = London School of Economics and Political Science
 #      param[base_url] = https://economia.lse.ac.uk/ 
 
       au < doNotProcess ; exists ; 2000 ; 1 ; Economía Volume 2000 ; 2000 ; https://economia.lse.ac.uk/ ; >
