@@ -38,8 +38,8 @@
     au < finished ; finished ; 2017 ; PeerJ Volume 2017 ; 2017 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; PeerJ Volume 2018 ; 2018 ; >
     au < finished ; finished ; 2019 ; PeerJ Volume 2019 ; 2019 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2020 ; PeerJ Volume 2020 ; 2020 ; >
-    au < deepCrawl ; exists ; 2021 ; PeerJ Volume 2021 ; 2021 ; >
+    au < finished ; manifest ; 2020 ; PeerJ Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2021 ; PeerJ Volume 2021 ; 2021 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; PeerJ Volume 2022 ; 2022 ; >
     au < doNotProcess ; exists ; 2023 ; PeerJ Volume 2023 ; 2023 ; >
     au < doNotProcess ; exists ; 2024 ; PeerJ Volume 2024 ; 2024 ; >
@@ -64,9 +64,9 @@
     au < finished ; finished ; 2017 ; PeerJ Computer Science Volume 2017 ; 2017 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; PeerJ Computer Science Volume 2018 ; 2018 ; >
     au < finished ; finished ; 2019 ; PeerJ Computer Science Volume 2019 ; 2019 ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2020 ; PeerJ Computer Science Volume 2020 ; 2020 ; >
-    au < deepCrawl ; exists ; 2021 ; PeerJ Computer Science Volume 2021 ; 2021 ; >
-    au < deepCrawl ; exists ; 2022 ; PeerJ Computer Science Volume 2022 ; 2022 ; >
+    au < finished ; manifest ; 2020 ; PeerJ Computer Science Volume 2020 ; 2020 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ; PeerJ Computer Science Volume 2021 ; 2021 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2022 ; PeerJ Computer Science Volume 2022 ; 2022 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2023 ; PeerJ Computer Science Volume 2023 ; 2023 ; >
     au < doNotProcess ; exists ; 2024 ; PeerJ Computer Science Volume 2024 ; 2024 ; >
 
