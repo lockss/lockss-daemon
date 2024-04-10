@@ -416,22 +416,24 @@ public class MigrateSettings extends LockssServlet {
 
     addSection(tbl, "Migration Options");
 
-    Input toggleElement = addCheckboxToTable(tbl, "Perform irrevocable migration",
+    Input irrevocableCheckbox = addCheckboxToTable(tbl, "Perform irrevocable migration",
         KEY_IRREVOCABLE_MIGRATION_ENABLED, irrevocableMigrationEnabled);
 
-    Input toggleGroupElement = addCheckboxToTable(tbl, "Delete AUs after migration",
+    Input deleteAfterCheckbox = addCheckboxToTable(tbl, "Delete AUs after migration",
         KEY_DELETE_AUS, isDeleteAusEnabled);
 
     if (!migrationMgr.isMigrationInDebugMode()) {
-      // Do not allow user to disable irrevocable migration settings once enabled
+      // Do not allow user to disable irrevocable migration settings
+      // once migration has started
       if (irrevocableMigrationEnabled && migrationMgr.isDaemonMigrating()) {
-        toggleElement.attribute("disabled");
-      } else if (!irrevocableMigrationEnabled) {
-        toggleGroupElement.attribute("disabled");
+        irrevocableCheckbox.attribute("disabled");
       }
     }
+    if (!irrevocableMigrationEnabled) {
+      deleteAfterCheckbox.attribute("disabled");
+    }
 
-    setupToggleGroup(toggleElement, toggleGroupElement);
+    setupToggleGroup(irrevocableCheckbox, deleteAfterCheckbox);
 
     // Advanced migration options - only in debug mode
     if (migrationMgr.isMigrationInDebugMode()) {
