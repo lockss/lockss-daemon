@@ -389,6 +389,7 @@ public class MigrateContent extends LockssServlet {
   private void displayPage() throws IOException {
     Page page = newPage();
     addCssLocations(page);
+    addJavaScript(page);
     page.add(new StyleLink("/css/migrate.css"));
     addReactJSLocations(page);
     addJSXLocation(page, "js/auMigrationStatus.js");
@@ -444,9 +445,8 @@ public class MigrateContent extends LockssServlet {
     // Input start = new Input(Input.Submit, KEY_ACTION, ACTION_START);
     String lbl = migrationMgr.isIrrevocableMigrationEnabled() ?
         "Start Irrevocable Migration" : "Start Migration";
-    Element start = submitButton(lbl, ACTION_START);
+    ServletUtil.layoutSubmitButton(this, tbl, KEY_ACTION, ACTION_START, lbl, false, false);
     Input abort = new Input(Input.Submit, KEY_ACTION, ACTION_ABORT);
-    tbl.add(start);
     tbl.add(abort);
     // Advanced migration options - only in debug mode
     if (migrationMgr.isMigrationInDebugMode()) {
