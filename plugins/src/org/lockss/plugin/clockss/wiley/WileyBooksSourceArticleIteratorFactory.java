@@ -88,8 +88,8 @@ public class WileyBooksSourceArticleIteratorFactory implements ArticleIteratorFa
     return ALL_ZIP_XML_PATTERN_TEMPLATE;
   }
 
-  public static final Pattern XML_PATTERN = Pattern.compile("/(fmatter/fmatter|fmatter1/fmatter1|fmatter_indsub/fmatter_indsub)\\.xml$", Pattern.CASE_INSENSITIVE);
-  public static final Pattern PDF_PATTERN = Pattern.compile("/(fmatter/fmatter|fmatter1/fmatter1|fmatter_indsub/fmatter_indsub)\\.pdf$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern XML_PATTERN = Pattern.compile("/(fmatter/fmatter|fmatter1/fmatter1|fmatter_indsub/fmatter_indsub|index/index)\\.xml$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern PDF_PATTERN = Pattern.compile("/(fmatter/fmatter|fmatter1/fmatter1|fmatter_indsub/fmatter_indsub|index/index)\\.pdf$", Pattern.CASE_INSENSITIVE);
   public static final String XML_REPLACEMENT = "/$1.xml";
   private static final String PDF_REPLACEMENT = "/$1.pdf";
 
