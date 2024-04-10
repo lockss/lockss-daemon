@@ -17,7 +17,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/practicalaction-released/
 
     #Test bucket tested. Waiting for production bucket.
-    au < expected ; exists ; 2024 ; Practical Action Publishing Source Content 2024 ; 2024_01 >
+    au < expected ; exists ; 2024 ; Practical Action Publishing Source Content 2024_01 ; 2024_01 >
 
   }
 
