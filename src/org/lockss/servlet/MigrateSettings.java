@@ -769,14 +769,14 @@ public class MigrateSettings extends LockssServlet {
     if (targetCfg.getBoolean(ProxyManager.PARAM_START, V2_DEFAULT_PROXYMANAGER_START)) {
       v2Cfg.put(ProxyManager.PARAM_FORWARD_PROXY,
           targetHost + ":" + targetCfg.getInt(
-              V2_PARAM_PROXYMANAGER_PORT, V2_DEFAULT_PROXYMANAGER_PORT));
+              V2_PARAM_PROXY_PORT, V2_DEFAULT_PROXY_PORT));
     }
 
     // ServeContent forwarding settings
     if (targetCfg.getBoolean(ContentServletManager.PARAM_START, V2_DEFAULT_CONTENTSERVLETMANAGER_START)) {
       v2Cfg.put(ServeContent.PARAM_FORWARD_SERVE_CONTENT,
           targetHost + ":" + targetCfg.getInt(
-              V2_PARAM_CONTENTSERVLETMANAGER_PORT, V2_DEFAULT_CONTENTSERVLETMANAGER_PORT));
+              V2_PARAM_CONTENTSERVLET_PORT, V2_DEFAULT_CONTENTSERVLET_PORT));
     }
 
     // LCAP forwarding settings
