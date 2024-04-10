@@ -98,13 +98,14 @@ public class ConfigFileMover extends Worker {
       try {
         v1Content = readV1Config(file);
         if (v1Content == null) {
-          log.debug2("Skipping, not present; " + file);
+          log.debug("V1 config file not present, skipping: " + file);
           continue;
         }
       } catch (IOException e) {
         String msg = "Couldn't read V1 config file: " + file;
         log.error(msg, e);
         auMover.logReportAndError(msg);
+        continue;
       }
       String v2Content = readV2Config(section);
       if (v2Content == null) {

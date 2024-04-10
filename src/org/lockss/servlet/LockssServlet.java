@@ -1348,7 +1348,7 @@ public abstract class LockssServlet extends HttpServlet
       String dupstr = "This information has already been migrated.  Any changes made here should also be made to %s in your LOCKSS 2.x instance.";
       ServletUtil.addRed(composite, v2ServletLink(dupstr));
     } else if (isDaemonMigrating()) {
-      String migstr = "This LOCKSS 1.x instance is migrating.";
+      String migstr = "This LOCKSS 1.x instance is migrating content to LOCKSS 2.x.";
       txt = errMsg == null ? migstr : migstr + "\n" + errMsg;
     }
 

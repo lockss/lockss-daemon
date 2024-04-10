@@ -259,12 +259,12 @@ public class MigrationManager extends BaseLockssDaemonManager
   private static final int VERIFY_BIT = 2;
 
   public enum OpType {
-    CopyDatabase("Copy Database", COPY_BIT),
-    CopyConfig("Copy Config", COPY_BIT),
+    CopyDatabase("Copy Metadata & Subscription Databases", COPY_BIT),
+    CopyConfig("Copy Misc. Config", COPY_BIT),
     CopySystemSettings("Copy System Settings", COPY_BIT),
-    CopyOnly("Copy Only", COPY_BIT),
-    CopyAndVerify("Copy and Verify", COPY_BIT | VERIFY_BIT),
-    VerifyOnly("Verify Only", VERIFY_BIT);
+    CopyOnly("Copy Content", COPY_BIT),
+    CopyAndVerify("Copy and Verify Content", COPY_BIT | VERIFY_BIT),
+    VerifyOnly("Verify Content", VERIFY_BIT);
 
     private String label;
     private int bits;

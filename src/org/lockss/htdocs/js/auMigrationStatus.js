@@ -76,7 +76,7 @@ class AuMigrationStatus extends React.Component {
     }
     return (
         <div className="stats-div">
-        {this.state.errors.length} Errors:
+        {this.state.errors.length} Errors and Warnings:
         <div className={"errors"}>
         <ul>{this.state.errors.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul>
         </div>

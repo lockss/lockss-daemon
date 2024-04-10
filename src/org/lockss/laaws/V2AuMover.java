@@ -46,7 +46,6 @@ import org.lockss.poller.PollManager;
 import org.lockss.repository.RepositoryManager;
 import org.lockss.servlet.MigrateContent;
 import org.lockss.state.AuState;
-import org.lockss.uiapi.util.DateFormatter;
 import org.lockss.util.*;
 
 import java.io.File;
@@ -55,8 +54,7 @@ import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
+import java.text.*;
 import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.Matcher;
@@ -459,6 +457,9 @@ public class V2AuMover {
   //////////////////////////////////////////////////////////////////////
   // State vars
   //////////////////////////////////////////////////////////////////////
+
+  private org.lockss.laaws.model.cfg.ApiStatus cfgStatus;
+  private org.lockss.laaws.model.rs.ApiStatus repoStatus;
 
   /** All AUIDs known to V2 repo at start of execution */
   private final ArrayList<String> v2Aus = new ArrayList<>();
@@ -1559,16 +1560,30 @@ public class V2AuMover {
   void checkV2ServicesAvailable() throws IOException {
     try {
       log.info("Checking V2 Repository Status");
-      if (!repoStatusApiClient.getStatus().getReady()) {
+      repoStatus = repoStatusApiClient.getStatus();
+      if (!repoStatus.getReady()) {
         throw new IOException("V2 Repository Service is not ready");
       }
       log.info("Checking V2 Configuration Status");
-      if (!cfgStatusApiClient.getStatus().getReady()) {
+      cfgStatus = cfgStatusApiClient.getStatus();
+      if (!cfgStatus.getReady()) {
         throw new IOException("V2 Configuration Service is not ready");
       }
     } catch (Exception e) {
       throw new ServiceUnavailableException("Couldn't fetch service status", e);
     }
+  }
+
+  public String getCfgSvcVersion() {
+    return cfgStatus.getLockssVersion();
+  }
+
+  public String getRepoSvcVersion() {
+    return repoStatus.getLockssVersion();
+  }
+
+  public String getLocalVersion() {
+    return ConfigManager.getDaemonVersion().displayString();
   }
 
   /**
@@ -2029,15 +2044,9 @@ public class V2AuMover {
           sb.append("Aborting");
         }
 
-        sb.append(", ");
-        sb.append(whichAus);
-        sb.append(" to ");
-        sb.append(hostName);
-        sb.append(", processed ");
-        sb.append(totalAusMoved);
-        sb.append(" of ");
-        sb.append(totalAusToMove);
-        sb.append(" AUs");
+        sb.append(String.format(", %s to %s, processed %d of %d AUs",
+                                whichAus, hostName,
+                                totalAusMoved, totalAusToMove));
       }
 
       if (errstat.length() != 0) {
@@ -2254,8 +2263,11 @@ public class V2AuMover {
   // Report files
   //////////////////////////////////////////////////////////////////////
 
+  public static final DateFormat TIMESTAMP_FMT =
+                      new SimpleDateFormat("MM/dd/yy HH:mm:ss zzz");
+
   public String nowTimestamp() {
-    return DateFormatter.now();
+    return TIMESTAMP_FMT.format(new Date());
   }
 
   /**
@@ -2394,7 +2406,7 @@ public class V2AuMover {
    * Close the report before exiting
    */
   void closeReports() {
-    String now = DateFormatter.now();
+    String now = nowTimestamp();
     closeReport(reportWriter, now);
     closeReport(errorWriter, now);
 
