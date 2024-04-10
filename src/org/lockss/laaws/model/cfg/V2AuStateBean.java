@@ -36,14 +36,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.Plugin.Feature;
 import org.lockss.state.AuState;
 import org.lockss.state.AuState.AccessType;
 import org.lockss.state.SubstanceChecker;
 
-public class V2AuStateBean {
+public class V2AuStateBean implements Diffable<V2AuStateBean> {
 
   // Persistent state vars
   protected long auCreationTime = -1;
@@ -725,4 +725,44 @@ public class V2AuStateBean {
       .append("v3Agreement", v3Agreement)
       .toString();
   }
+
+  public DiffResult diff(V2AuStateBean obj) {
+    // No need for null check, as NullPointerException correct if obj is null
+    return new DiffBuilder(this, obj, ToStringStyle.SHORT_PREFIX_STYLE)
+      .append("accessType", this.accessType, obj.accessType)
+      .append("auCreationTime", this.auCreationTime, obj.auCreationTime)
+      .append("auId", this.auId, obj.auId)
+      .append("averageHashDuration", this.averageHashDuration, obj.averageHashDuration)
+      .append("cdnStems", this.cdnStems, obj.cdnStems)
+      .append("clockssSubscriptionStatus", this.clockssSubscriptionStatus, obj.clockssSubscriptionStatus)
+      .append("hasSubstance", this.hasSubstance, obj.hasSubstance)
+      .append("highestV3Agreement", this.highestV3Agreement, obj.highestV3Agreement)
+      .append("isMetadataExtractionEnabled", this.isMetadataExtractionEnabled, obj.isMetadataExtractionEnabled)
+      .append("lastContentChange", this.lastContentChange, obj.lastContentChange)
+      .append("lastCrawlAttempt", this.lastCrawlAttempt, obj.lastCrawlAttempt)
+      .append("lastCrawlResult", this.lastCrawlResult, obj.lastCrawlResult)
+      .append("lastCrawlResultMsg", this.lastCrawlResultMsg, obj.lastCrawlResultMsg)
+      .append("lastCrawlTime", this.lastCrawlTime, obj.lastCrawlTime)
+      .append("lastDeepCrawlAttempt", this.lastDeepCrawlAttempt, obj.lastDeepCrawlAttempt)
+      .append("lastDeepCrawlDepth", this.lastDeepCrawlDepth, obj.lastDeepCrawlDepth)
+      .append("lastDeepCrawlResult", this.lastDeepCrawlResult, obj.lastDeepCrawlResult)
+      .append("lastDeepCrawlResultMsg", this.lastDeepCrawlResultMsg, obj.lastDeepCrawlResultMsg)
+      .append("lastDeepCrawlTime", this.lastDeepCrawlTime, obj.lastDeepCrawlTime)
+      .append("lastLocalHashScan", this.lastLocalHashScan, obj.lastLocalHashScan)
+      .append("lastMetadataIndex", this.lastMetadataIndex, obj.lastMetadataIndex)
+      .append("lastPollResult", this.lastPollResult, obj.lastPollResult)
+      .append("lastPollStart", this.lastPollStart, obj.lastPollStart)
+      .append("lastPoPPoll", this.lastPoPPoll, obj.lastPoPPoll)
+      .append("lastPoPPollResult", this.lastPoPPollResult, obj.lastPoPPollResult)
+      .append("lastTopLevelPollTime", this.lastTopLevelPollTime, obj.lastTopLevelPollTime)
+      .append("metadataVersion", this.metadataVersion, obj.metadataVersion)
+      .append("numAgreePeersLastPoR", this.numAgreePeersLastPoR, obj.numAgreePeersLastPoR)
+      .append("numCurrentSuspectVersions", this.numCurrentSuspectVersions, obj.numCurrentSuspectVersions)
+      .append("numWillingRepairers", this.numWillingRepairers, obj.numWillingRepairers)
+      .append("pollDuration", this.pollDuration, obj.pollDuration)
+      .append("substanceVersion", this.substanceVersion, obj.substanceVersion)
+      .append("v3Agreement", this.v3Agreement, obj.v3Agreement)
+      .build();
+  }
+
 }

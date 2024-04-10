@@ -2455,6 +2455,14 @@ public class V2AuMover {
   // Utilities
   //////////////////////////////////////////////////////////////////////
 
+  public String diffString(DiffResult<?> dr) {
+    List<String> l = new ArrayList<>();
+    for (Diff d : dr.getDiffs()) {
+      l.add(d.getFieldName() + ": V1: " + d.getLeft() + ", V2: " + d.getRight());
+    }
+    return StringUtil.separatedString(l, "; ");
+  }
+
   public static String bigIntFormat(long x) {
     return TH_BIGINT_FMT.get().format(x);
   }

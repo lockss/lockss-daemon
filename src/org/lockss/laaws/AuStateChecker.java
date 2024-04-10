@@ -34,6 +34,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.InstanceCreator;
 import com.google.gson.reflect.TypeToken;
+import org.apache.commons.lang3.builder.*;
 import java.lang.reflect.Type;
 import java.util.Collection;
 import java.util.EnumMap;
@@ -282,8 +283,8 @@ public class AuStateChecker extends Worker {
             log.debug("AuState v1Bean: "+ v1Bean.toString());
             log.debug("AuState v2Bean: "+ v2Bean.toString());
           }
-          err = "V2 AuState mismatch: " + auName +
-            ": V1: " + v1Bean + ", V2: " + v2Bean;
+          err = "AuState mismatch: " + auName + ": " +
+            auMover.diffString(v1Bean.diff(v2Bean));
           log.error(err);
         }
       }
