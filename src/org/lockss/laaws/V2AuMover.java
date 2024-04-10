@@ -1601,7 +1601,7 @@ public class V2AuMover {
         token = pageInfo.getPageInfo().getContinuationToken();
       } while (!isAbort() && !StringUtil.isNullString(token));
     } catch (ApiException apie) {
-      if (apie.getMessage().indexOf("404: Not Found") > 0) {
+      if (apie.getCode() == 404) {
         return;
       } else {
         //LockssRestServiceException: The namespace does not exist
@@ -1638,6 +1638,7 @@ public class V2AuMover {
       // first call is actual call, following are first retries
       int errCode = 0;
       String errMsg = "";
+      LockssRestHttpException lrhe = null;
       String msgPrefix = "Exceeded retries: ";
       while ((response == null || (!response.isSuccessful()) && tryCount < maxRetryCount)) {
         if (isAbort()) {
@@ -1648,11 +1649,13 @@ public class V2AuMover {
           response = chain.proceed(request);
           if (response.isSuccessful()) {
             return response;
-          }
-          else {
+          } else {
             errCode = response.code();
             errMsg=response.message();
-            logErrorBody(response);
+            Gson gson = new Gson();
+            lrhe = gson.fromJson(response.body().string(),
+                                 LockssRestHttpException.class);
+            logErrorBody(response, lrhe);
             if (isNonRetryableResponse(errCode)) {
               // no retries
               msgPrefix = "Unretryable error: ";
@@ -1661,8 +1664,7 @@ public class V2AuMover {
             // close response before retry
             response.close();
           }
-        }
-        catch (final IOException ioe) {
+        } catch (final IOException ioe) {
           if (tryCount < maxRetryCount) {
             if (log.isDebug2()) {
               log.debug2("Retrying", ioe);
@@ -1673,8 +1675,7 @@ public class V2AuMover {
               // close response before retry
               response.close();
             }
-          }
-          else {
+          } else {
             if (log.isDebug2()) {
               // already logged the stack trace
               log.debug2("Exceeded retries - exiting: " + ioe);
@@ -1682,7 +1683,7 @@ public class V2AuMover {
               // log stack trace when give up.
               log.debug("Exceeded retries - exiting", ioe);
             }
-            terminated = true;
+//             terminated = true;
             if (response != null) {
               response.close();
             }
@@ -1692,8 +1693,7 @@ public class V2AuMover {
         // sleep before retrying
         try {
           Thread.sleep(retryBackoffDelay * tryCount);
-        }
-        catch (InterruptedException e1) {
+        } catch (InterruptedException e1) {
           throw new RuntimeException(e1);
         }
       }
@@ -1703,6 +1703,9 @@ public class V2AuMover {
       response.close();
       if (errCode == 501) {
         throw new UnsupportedOperationException(msg);
+      }
+      if (lrhe != null) {
+        throw lrhe;
       }
       throw new IOException(msg);
     }
@@ -1720,19 +1723,26 @@ public class V2AuMover {
     }
   }
 
-  void logErrorBody(Response response) {
+  void logErrorBody(Response response, LockssRestHttpException lrhe) {
     try {
       StringBuilder sb = new StringBuilder();
-      sb.append("Error response returned: ").append(response.code())
-        .append(": ").append(response.message());
-      sb.append(", Headers: ");
-      response.headers().forEach(header -> sb.append(header.getFirst()).append(":").append(header.getSecond()));
-      ResponseBody body = response.body();
-      if (body != null) {
-        // XXX Should parse as json, extract various fields
-        sb.append(", body: ").append(body.string());
+      sb.append("Error response returned: ").append(response.code());
+      if (!StringUtil.isNullString(response.message())) {
+        sb.append(", ").append(response.message());
       }
-      log.warning(sb.toString());
+      if (log.isDebug2()) {
+        sb.append(", Headers: ");
+        response.headers().forEach(header -> sb.append(header.getFirst()).append(": ").append(header.getSecond()));
+      }
+      if (lrhe != null) {
+        sb.append(", body: ").append(lrhe.toString());
+      } else {
+        ResponseBody body = response.body();
+        if (body != null) {
+          sb.append(", body: ").append(body.string());
+        }
+      }
+      log.debug(sb.toString());
     }
     catch (Exception e) {
       log.error("Exception trying to retrieve error response body", e);

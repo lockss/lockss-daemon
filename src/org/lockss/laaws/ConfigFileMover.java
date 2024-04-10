@@ -218,8 +218,14 @@ public class ConfigFileMover extends Worker {
       }
       if (log.isDebug3()) log.debug3("V2 content: " + section + ": " + res);
       return res;
-    } catch (ApiException | IOException e) {
-      String msg = "Couldn't read V2 config file: " + section;
+    } catch (ApiException e) {
+      if (e.getCode() == 404) {
+        log.debug("LOCKSS 2.0 config file not found: " + section);
+        return null;
+      }
+      return null;
+    } catch (IOException e) {
+      String msg = "Couldn't read LOCKSS 2.0 config file: " + section;
       log.error(msg, e);
       auMover.logReportAndError(msg);
       return null;

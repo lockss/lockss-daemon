@@ -102,6 +102,7 @@ import okio.Okio;
 import org.apache.commons.io.IOUtils;
 import org.lockss.account.UserAccount;
 import org.lockss.laaws.DigestCachedUrl;
+import org.lockss.laaws.LockssRestHttpException;
 import org.lockss.laaws.client.auth.ApiKeyAuth;
 import org.lockss.laaws.client.auth.Authentication;
 import org.lockss.laaws.client.auth.HttpBasicAuth;
@@ -1107,8 +1108,9 @@ public class V2RestClient {
       Response response = call.execute();
       T data = handleResponse(response, returnType);
       return new ApiResponse<T>(response.code(), response.headers().toMultimap(), data);
-    }
-    catch (IOException e) {
+    } catch (LockssRestHttpException e) {
+      throw new ApiException(e.getMessage(), e, e.getStatus(), null);
+    } catch (IOException e) {
       throw new ApiException(e);
     }
   }
