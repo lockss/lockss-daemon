@@ -28,15 +28,15 @@
     au < manifest ; exists ; 2000 ; 9781900222242 ; 9781780402369 ; Activated Sludge Models ; ebooks/book/96/Activated-Sludge-Models-ASM1-ASM2-ASM2d-and-ASM3 ; >
     au < manifest ; exists ; 2000 ; 9781900222099 ; 9781780403038 ; Environmental Technologies to Treat Sulfur Pollution ; ebooks/book/160/Environmental-Technologies-to-Treat-Sulfur ; >
     au < manifest ; exists ; 2000 ; 9781900222105 ; 9781780402222 ; Land Ocean Interaction ; ebooks/book/78/Land-Ocean-Interaction-Measuring-and-Modelling ; >
-    au < crawling ; exists ; 2000 ; 9781900222075 ; 9781780402147 ; Membrane Bioreactors for Wastewater Treatment ; ebooks/book/80/Membrane-Bioreactors-for-Wastewater-Treatment ; >
-    au < crawling ; exists ; 2001 ; 9781900222471 ; 9781780402949 ; Decentralised Sanitation and Reuse ; ebooks/book/374/Decentralised-Sanitation-and-Reuse-Concepts ; >
-    au < crawling ; exists ; 2001 ; 9781900222501 ; 9781780403045 ; Dynamical Modelling & Estimation in Wastewater Treatment Processes ; ebooks/book/151/Dynamical-Modelling-amp-Estimation-in-Wastewater ; >
+    au < frozen ; exists ; 2000 ; 9781900222075 ; 9781780402147 ; Membrane Bioreactors for Wastewater Treatment ; ebooks/book/80/Membrane-Bioreactors-for-Wastewater-Treatment ; >
+    au < frozen ; exists ; 2001 ; 9781900222471 ; 9781780402949 ; Decentralised Sanitation and Reuse ; ebooks/book/374/Decentralised-Sanitation-and-Reuse-Concepts ; >
+    au < frozen ; exists ; 2001 ; 9781900222501 ; 9781780403045 ; Dynamical Modelling & Estimation in Wastewater Treatment Processes ; ebooks/book/151/Dynamical-Modelling-amp-Estimation-in-Wastewater ; >
     au < manifest ; exists ; 2001 ; 9781900222761 ; 9781780402659 ; Frontiers in Urban Water Management ; ebooks/book/125/Frontiers-in-Urban-Water-Management-Deadlock-or ; >
-    au < crawling ; exists ; 2001 ; 9781900222464 ; 9781780402932 ; Odours in Wastewater Treatment ; ebooks/book/29/Odours-in-Wastewater-Treatment-Measurement ; >
-    au < crawling ; exists ; 2001 ; 9781900222822 ; 9781780402789 ; River Water Quality Model No.1 ; ebooks/book/363/River-Water-Quality-Model-No-1 ; >
+    au < frozen ; exists ; 2001 ; 9781900222464 ; 9781780402932 ; Odours in Wastewater Treatment ; ebooks/book/29/Odours-in-Wastewater-Treatment-Measurement ; >
+    au < frozen ; exists ; 2001 ; 9781900222822 ; 9781780402789 ; River Water Quality Model No.1 ; ebooks/book/363/River-Water-Quality-Model-No-1 ; >
     au < manifest ; exists ; 2001 ; 9781900222211 ; 9781780402246 ; Sequencing Batch Reactor Technology ; ebooks/book/89/Sequencing-Batch-Reactor-Technology ; >
     au < manifest ; exists ; 2001 ; 9781900222082 ; 9781780402215 ; Sludge into Biosolids ; ebooks/book/87/Sludge-into-Biosolids-Processing-Disposal ; >
-    au < crawling ; exists ; 2001 ; 9781843390008 ; 9781780402178 ; The Combined Sharon/Anammox Process ; ebooks/book/85/The-Combined-Sharon-Anammox-Process-A-Sustainable ; >
+    au < frozen ; exists ; 2001 ; 9781843390008 ; 9781780402178 ; The Combined Sharon/Anammox Process ; ebooks/book/85/The-Combined-Sharon-Anammox-Process-A-Sustainable ; >
     au < manifest ; exists ; 2001 ; 9781900222129 ; 9781780402239 ; The EU Water Framework Directive ; ebooks/book/88/The-EU-Water-Framework-Directive-An-Introduction ; >
     au < manifest ; exists ; 2001 ; 9781900222280 ; 9781780405889 ; Water Quality: Guidelines, Standards & Health ; ebooks/book/389/Water-Quality-Guidelines-Standards-and-Health ; >
     au < manifest ; exists ; 2002 ; 9781900222785 ; 9781780403052 ; Anaerobic Digestion Model No.1 (ADM1) ; ebooks/book/152/Anaerobic-Digestion-Model-No-1-ADM1 ; >
@@ -445,84 +445,84 @@
     au < ready ; exists ; 2011 ; 9781780400273 ; 9781780406046 ; Water Governance in OECD Countries ; ebooks/book/653/Water-Governance-in-OECD-CountriesA-MULTI-LEVEL ; >
     au < ready ; exists ; 2011 ; 9781843393641 ; 9781780400921 ; Water Sensitive Cities ; ebooks/book/628/Water-Sensitive-Cities ; >
     au < ready ; exists ; 2011 ; 9781843393986 ; 9781780403328 ; WEF/WERF Study Quantifying Nutrient Removal Technology Performance ; ebooks/book/440/WEF-WERF-Study-Quantifying-Nutrient-Removal ; >
-    au < crawling ; exists ; 2012 ; 9781780400150 ; 9781780400150 ; 21st Century Water Municipal Issues and Concerns: Literature Review ; ebooks/book/476/21st-Century-Water-Municipal-Issues-and-Concerns ; >
-    au < crawling ; exists ; 2012 ; 9781780404622 ; 9781780404622 ; A Compendium of Best Practices in Asset Management ; ebooks/book/492/A-Compendium-of-Best-Practices-in-Asset-Management ; >
+    au < frozen ; exists ; 2012 ; 9781780400150 ; 9781780400150 ; 21st Century Water Municipal Issues and Concerns: Literature Review ; ebooks/book/476/21st-Century-Water-Municipal-Issues-and-Concerns ; >
+    au < frozen ; exists ; 2012 ; 9781780404622 ; 9781780404622 ; A Compendium of Best Practices in Asset Management ; ebooks/book/492/A-Compendium-of-Best-Practices-in-Asset-Management ; >
     au < ready ; exists ; 2012 ; 9781780400259 ; 9781780400259 ; A Review of Advanced Sewer System Designs and Technologies ; ebooks/book/467/A-Review-of-Advanced-Sewer-System-Designs-and ; >
     au < ready ; exists ; 2012 ; 9781780400532 ; 9781780400532 ; Anaerobic Membrane Bioreactors for Sustainable Wastewater Treatment ; ebooks/book/668/Anaerobic-Membrane-Bioreactors-for-Sustainable ; >
     au < ready ; exists ; 2012 ; 9781780401232 ; 9781780401249 ; Animal Waste, Water Quality and Human Health ; ebooks/book/584/Animal-Waste-Water-Quality-and-Human-Health ; >
-    au < crawling ; exists ; 2012 ; 9781780400389 ; 9781780400396 ; Arsenic Contamination in the World ; ebooks/book/478/Arsenic-Contamination-in-the-World-An ; >
-    au < crawling ; exists ; 2012 ; 9781780403977 ; 9781780400235 ; Attenuation of PPCP/EDCs Through Golf Courses Using Recycled Water ; ebooks/book/466/Attenuation-of-PPCPs-through-Golf-Courses-Using ; >
-    au < crawling ; exists ; 2012 ; 9781780401010 ; 9781780401010 ; Barriers to Biogas Use for Renewable Energy ; ebooks/book/483/Barriers-to-Biogas-Use-for-Renewable-Energy ; >
-    au < crawling ; exists ; 2012 ; 9781843393849 ; 9781780400686 ; Best Practice Guide on Metals Removal From Drinking Water By Treatment ; ebooks/book/470/Best-Practice-Guide-on-Metals-Removal-from ; >
-    au < crawling ; exists ; 2012 ; 9781843393832 ; 9781780400792 ; Best Practice Guide on Sampling and Monitoring of Metals in Drinking Water ; ebooks/book/464/Best-Practice-Guide-on-the-Sampling-and-Monitoring ; >
+    au < frozen ; exists ; 2012 ; 9781780400389 ; 9781780400396 ; Arsenic Contamination in the World ; ebooks/book/478/Arsenic-Contamination-in-the-World-An ; >
+    au < frozen ; exists ; 2012 ; 9781780403977 ; 9781780400235 ; Attenuation of PPCP/EDCs Through Golf Courses Using Recycled Water ; ebooks/book/466/Attenuation-of-PPCPs-through-Golf-Courses-Using ; >
+    au < frozen ; exists ; 2012 ; 9781780401010 ; 9781780401010 ; Barriers to Biogas Use for Renewable Energy ; ebooks/book/483/Barriers-to-Biogas-Use-for-Renewable-Energy ; >
+    au < frozen ; exists ; 2012 ; 9781843393849 ; 9781780400686 ; Best Practice Guide on Metals Removal From Drinking Water By Treatment ; ebooks/book/470/Best-Practice-Guide-on-Metals-Removal-from ; >
+    au < frozen ; exists ; 2012 ; 9781843393832 ; 9781780400792 ; Best Practice Guide on Sampling and Monitoring of Metals in Drinking Water ; ebooks/book/464/Best-Practice-Guide-on-the-Sampling-and-Monitoring ; >
     au < ready ; exists ; 2012 ; 9781780404530 ; 9781780404530 ; Calibrating the SMART Biosolids Model and Applying it to Fault Scenarios ; ebooks/book/491/Calibrating-the-SMART-Biosolids-Model-and-Applying ; >
-    au < crawling ; exists ; 2012 ; 9781843393139 ; 9781780400839 ; Chemistry of Ozone in Water and Wastewater Treatment ; ebooks/book/465/Chemistry-of-Ozone-in-Water-and-Wastewater ; >
+    au < frozen ; exists ; 2012 ; 9781843393139 ; 9781780400839 ; Chemistry of Ozone in Water and Wastewater Treatment ; ebooks/book/465/Chemistry-of-Ozone-in-Water-and-Wastewater ; >
     au < ready ; exists ; 2012 ; 9781780400426 ; 9781780400426 ; Demonstrating Advanced Oxidation Coupled with Biodegradation for Removal of Carbamazepine ; ebooks/book/663/Demonstrating-Advanced-Oxidation-Coupled-with ; >
-    au < crawling ; exists ; 2012 ; 9781780401089 ; 9781780401096 ; Detection of Pathogens in Water Using Micro and Nano-Technology ; ebooks/book/484/Detection-of-Pathogens-in-Water-Using-Micro-and ; >
-    au < crawling ; exists ; 2012 ; 9781780400136 ; 9781780400136 ; Development of the Integrated Urban Water Model ; ebooks/book/457/Development-of-the-Integrated-Urban-Water ; >
-    au < crawling ; exists ; 2012 ; 9781780400068 ; 9781780400815 ; Disasters and Minewater ; ebooks/book/481/Disasters-and-Minewater-Good-Practice-and ; >
+    au < frozen ; exists ; 2012 ; 9781780401089 ; 9781780401096 ; Detection of Pathogens in Water Using Micro and Nano-Technology ; ebooks/book/484/Detection-of-Pathogens-in-Water-Using-Micro-and ; >
+    au < frozen ; exists ; 2012 ; 9781780400136 ; 9781780400136 ; Development of the Integrated Urban Water Model ; ebooks/book/457/Development-of-the-Integrated-Urban-Water ; >
+    au < frozen ; exists ; 2012 ; 9781780400068 ; 9781780400815 ; Disasters and Minewater ; ebooks/book/481/Disasters-and-Minewater-Good-Practice-and ; >
     au < ready ; exists ; 2012 ; 9781843395195 ; 9781780400624 ; Disinfection By-Products and Human Health ; ebooks/book/494/Disinfection-By-Products-and-Human-Health ; >
     au < ready ; exists ; 2012 ; 9781780404653 ; 9781780404653 ; Energy and Resource Recovery from Sludge ; ebooks/book/634/Energy-and-Resource-Recovery-from-Sludge ; >
-    au < crawling ; exists ; 2012 ; 9781780401348 ; 9781780401348 ; Energy Efficiency in the Water Industry ; ebooks/book/474/Energy-Efficiency-in-the-Water-Industry-A ; >
+    au < frozen ; exists ; 2012 ; 9781780401348 ; 9781780401348 ; Energy Efficiency in the Water Industry ; ebooks/book/474/Energy-Efficiency-in-the-Water-Industry-A ; >
     au < ready ; exists ; 2012 ; 9781843390855 ; 9781780400761 ; Environmental Aspects of Zoonotic Diseases ; ebooks/book/721/Environmental-Aspects-of-Zoonotic-Diseases ; >
-    au < crawling ; exists ; 2012 ; 9781843395409 ; 9781780401041 ; Evolution of Water Supply Through the Millennia ; ebooks/book/472/Evolution-of-Water-Supply-Through-the-Millennia ; >
-    au < crawling ; exists ; 2012 ; 9781843393870 ; 9781780400822 ; Flood Risk and Social Justice: From Quantitative to Qualitative Flood Risk Assessment and Mitigation ; ebooks/book/482/Flood-Risk-and-Social-Justice-From-Quantitative-to ; >
+    au < frozen ; exists ; 2012 ; 9781843395409 ; 9781780401041 ; Evolution of Water Supply Through the Millennia ; ebooks/book/472/Evolution-of-Water-Supply-Through-the-Millennia ; >
+    au < frozen ; exists ; 2012 ; 9781843393870 ; 9781780400822 ; Flood Risk and Social Justice: From Quantitative to Qualitative Flood Risk Assessment and Mitigation ; ebooks/book/482/Flood-Risk-and-Social-Justice-From-Quantitative-to ; >
     au < ready ; exists ; 2012 ; 9781780401102 ; 9781780401102 ; Gathering Unpublished Data for Compounds Detected in Biosolids ; ebooks/book/485/Gathering-Unpublished-Data-for-Compounds-Detected ; >
     au < ready ; exists ; 2012 ; 9781843391746 ; 9781780401164 ; Guidelines for Using Activated Sludge Models ; ebooks/book/630/Guidelines-for-Using-Activated-Sludge-Models ; >
     au < ready ; exists ; 2012 ; 9781780407753 ; 9781780400808 ; Handbook of Biological Wastewater Treatment ; ebooks/book/622/Handbook-of-Biological-Wastewater-Treatment-Design ; >
     au < ready ; exists ; 2012 ; 9781780401256 ; 9781780401263 ; Impacts of Climate Change on Rainfall Extremes and Urban Drainage Systems ; ebooks/book/631/Impacts-of-Climate-Change-on-Rainfall-Extremes-and ; >
     au < ready ; exists ; 2012 ; 9781780404547 ; 9781780404554 ; Internal Corrosion Control of Water Supply Systems ; ebooks/book/561/Internal-Corrosion-Control-of-Water-Supply-Systems ; >
-    au < crawling ; exists ; 2012 ; 9781780401355 ; 9781780401355 ; International Guidance Manual for the Management of Toxic Cyanobacteria ; ebooks/book/487/International-Guidance-Manual-for-the-Management ; >
-    au < crawling ; exists ; 2012 ; 9781780400198 ; 9781780400198 ; Leading Practices for Strategic Asset Management ; ebooks/book/477/Leading-Practices-for-Strategic-Asset-Management ; >
-    au < crawling ; exists ; 2012 ; 9781780401126 ; 9781780401133 ; Making Space for the River ; ebooks/book/486/Making-Space-for-the-River-Governance-Experiences ; >
+    au < frozen ; exists ; 2012 ; 9781780401355 ; 9781780401355 ; International Guidance Manual for the Management of Toxic Cyanobacteria ; ebooks/book/487/International-Guidance-Manual-for-the-Management ; >
+    au < frozen ; exists ; 2012 ; 9781780400198 ; 9781780400198 ; Leading Practices for Strategic Asset Management ; ebooks/book/477/Leading-Practices-for-Strategic-Asset-Management ; >
+    au < frozen ; exists ; 2012 ; 9781780401126 ; 9781780401133 ; Making Space for the River ; ebooks/book/486/Making-Space-for-the-River-Governance-Experiences ; >
     au < ready ; exists ; 2012 ; 9781780401300 ; 9781780406015 ; Meeting the Water Reform Challenge ; ebooks/book/615/Meeting-the-Water-Reform-Challenge ; >
     au < ready ; exists ; 2012 ; 9781780400464 ; 9781780400464 ; Predicting the Remaining Economic Life of Wastewater Pipes: Phase 2 Development of a Robust Wastewater Pipe Performance Index ; ebooks/book/493/Predicting-the-Remaining-Economic-Life-of ; >
     au < ready ; exists ; 2012 ; 9781780400501 ; 9781780400501 ; Research Roadmap: Towards an Economic Decision Methodology for Remaining Asset Life ; ebooks/book/664/Towards-an-Economic-Decision-Methodology-for ; >
     au < ready ; exists ; 2012 ; 9781843392590 ; 9781843392590 ; Site Specific Risk Assessment Tools for Land Applied Biosolids ; ebooks/book/635/Site-Specific-Risk-Assessment-Tools-for-Land ; >
-    au < crawling ; exists ; 2012 ; 9781780400365 ; 9781780400365 ; Stormwater Non-Potable Beneficial Uses and Effects on Urban Infrastructure ; ebooks/book/462/Stormwater-Non-Potable-Beneficial-Uses-and-Effects ; >
+    au < frozen ; exists ; 2012 ; 9781780400365 ; 9781780400365 ; Stormwater Non-Potable Beneficial Uses and Effects on Urban Infrastructure ; ebooks/book/462/Stormwater-Non-Potable-Beneficial-Uses-and-Effects ; >
     au < ready ; exists ; 2012 ; 9781843396147 ; 9781843396147 ; Surveillance and Investigation of the Illness Reported by Neighbors of Biosolids Land Application and Other Soil Amendments ; ebooks/book/639/Surveillance-and-Investigation-of-the-Illness ; >
-    au < crawling ; exists ; 2012 ; 9781780403854 ; 9781780401287 ; Sustainable Food Waste Evaluation ; ebooks/book/458/Sustainable-Food-Waste-Evaluation ; >
-    au < crawling ; exists ; 2012 ; 9781780400167 ; 9781780400631 ; Sustainable Treatment and Reuse of Municipal Wastewater ; ebooks/book/468/Sustainable-Treatment-and-Reuse-of-Municipal ; >
-    au < crawling ; exists ; 2012 ; 9781780401140 ; 9781780401157 ; Sustainable Water Ecosystems Management in Europe ; ebooks/book/452/Sustainable-Water-Ecosystems-Management-in-Europe ; >
-    au < crawling ; exists ; 2012 ; 9781780401270 ; 9781780401270 ; The Effect of Wet Weather Driven Dissolved Oxygen Sags on Fishes in Urban Systems ; ebooks/book/473/The-Effect-of-Wet-Weather-Driven-Dissolved-Oxygen ; >
+    au < frozen ; exists ; 2012 ; 9781780403854 ; 9781780401287 ; Sustainable Food Waste Evaluation ; ebooks/book/458/Sustainable-Food-Waste-Evaluation ; >
+    au < frozen ; exists ; 2012 ; 9781780400167 ; 9781780400631 ; Sustainable Treatment and Reuse of Municipal Wastewater ; ebooks/book/468/Sustainable-Treatment-and-Reuse-of-Municipal ; >
+    au < frozen ; exists ; 2012 ; 9781780401140 ; 9781780401157 ; Sustainable Water Ecosystems Management in Europe ; ebooks/book/452/Sustainable-Water-Ecosystems-Management-in-Europe ; >
+    au < frozen ; exists ; 2012 ; 9781780401270 ; 9781780401270 ; The Effect of Wet Weather Driven Dissolved Oxygen Sags on Fishes in Urban Systems ; ebooks/book/473/The-Effect-of-Wet-Weather-Driven-Dissolved-Oxygen ; >
     au < ready ; exists ; 2012 ; 9781780400525 ; 9781780400525 ; Tools for Evaluating the Benefits of Green Infrastructure for Urban Water Management ; ebooks/book/665/Tools-for-Evaluating-the-Benefits-of-Green ; >
-    au < crawling ; exists ; 2012 ; 9781780404004 ; 9781780404004 ; Treatment Processes for Removal of Emerging Contaminants ; ebooks/book/490/Treatment-Processes-for-Removal-of-Emerging ; >
-    au < crawling ; exists ; 2012 ; 9781843395416 ; 9781780400662 ; Water - Energy Interactions in Water Reuse ; ebooks/book/469/Water-Energy-Interactions-in-Water-Reuse ; >
-    au < crawling ; exists ; 2012 ; 9781780400266 ; 9781780400693 ; Water and Energy: Threats and Opportunities (2012) ; ebooks/book/479/Water-and-Energy-Threats-and-Opportunities ; >
+    au < frozen ; exists ; 2012 ; 9781780404004 ; 9781780404004 ; Treatment Processes for Removal of Emerging Contaminants ; ebooks/book/490/Treatment-Processes-for-Removal-of-Emerging ; >
+    au < frozen ; exists ; 2012 ; 9781843395416 ; 9781780400662 ; Water - Energy Interactions in Water Reuse ; ebooks/book/469/Water-Energy-Interactions-in-Water-Reuse ; >
+    au < frozen ; exists ; 2012 ; 9781780400266 ; 9781780400693 ; Water and Energy: Threats and Opportunities (2012) ; ebooks/book/479/Water-and-Energy-Threats-and-Opportunities ; >
     au < ready ; exists ; 2012 ; 9781780401324 ; 9781780406022 ; Water Quality and Agriculture ; ebooks/book/651/Water-Quality-and-AgricultureMEETING-THE-POLICY ; >
-    au < crawling ; exists ; 2012 ; 9781843393443 ; 9781780400648 ; Water Reclamation Technologies for Safe Managed Aquifer Recharge ; ebooks/book/463/Water-Reclamation-Technologies-for-Safe-Managed ; >
-    au < crawling ; exists ; 2012 ; 9781780400228 ; 9781780400730 ; Water Services Management and Governance ; ebooks/book/480/Water-Services-Management-and-Governance ; >
-    au < crawling ; exists ; 2013 ; 9781780400044 ; 9781780400747 ; Best Practice Guide on the Control of Iron and Manganese in Water Supply ; ebooks/book/582/Best-Practice-Guide-on-the-Control-of-Iron-and ; >
-    au < crawling ; exists ; 2013 ; 9781780405605 ; 9781780405605 ; Condition Assessment for Drinking Water Pipelines: Synthesis Report ; ebooks/book/409/Condition-Assessment-for-Drinking-Water-Pipelines ; >
+    au < frozen ; exists ; 2012 ; 9781843393443 ; 9781780400648 ; Water Reclamation Technologies for Safe Managed Aquifer Recharge ; ebooks/book/463/Water-Reclamation-Technologies-for-Safe-Managed ; >
+    au < frozen ; exists ; 2012 ; 9781780400228 ; 9781780400730 ; Water Services Management and Governance ; ebooks/book/480/Water-Services-Management-and-Governance ; >
+    au < frozen ; exists ; 2013 ; 9781780400044 ; 9781780400747 ; Best Practice Guide on the Control of Iron and Manganese in Water Supply ; ebooks/book/582/Best-Practice-Guide-on-the-Control-of-Iron-and ; >
+    au < frozen ; exists ; 2013 ; 9781780405605 ; 9781780405605 ; Condition Assessment for Drinking Water Pipelines: Synthesis Report ; ebooks/book/409/Condition-Assessment-for-Drinking-Water-Pipelines ; >
     au < ready ; exists ; 2013 ; 9781780405629 ; 9781780405629 ; Cost Information for Drinking Water Pipelines: Synthesis Report ; ebooks/book/648/Cost-Information-for-Drinking-Water ; >
-    au < crawling ; exists ; 2013 ; 9781780405636 ; 9781780405636 ; Cost Information for Wastewater Pipelines: Synthesis Report ; ebooks/book/649/Cost-Information-for-Wastewater-PipelinesSYNTHESIS ; >
+    au < frozen ; exists ; 2013 ; 9781780405636 ; 9781780405636 ; Cost Information for Wastewater Pipelines: Synthesis Report ; ebooks/book/649/Cost-Information-for-Wastewater-PipelinesSYNTHESIS ; >
     au < ready ; exists ; 2013 ; 9781780404882 ; 9781780404882 ; Flare Efficiency Estimator and Case Studies ; ebooks/book/593/Flare-Efficiency-Estimator-and-Case-Studies ; >
-    au < crawling ; exists ; 2013 ; 9781780404868 ; 9781780404868 ; Flood Grouting for Infiltration Reduction on Private Side Sewers ; ebooks/book/377/Flood-Grouting-for-Infiltration-Reduction-on ; >
-    au < crawling ; exists ; 2013 ; 9781780404813 ; 9781780404813 ; Greenhouse Nitrogen Emissions from Wastewater Treatment Operation: Phase I ; ebooks/book/646/Greenhouse-Nitrogen-Emissions-from-Wastewater ; >
-    au < crawling ; exists ; 2013 ; 9781780405971 ; 9781780405988 ; Health Effects of Metals and Related Substances in Drinking Water ; ebooks/book/612/Health-Effects-of-Metals-and-Related-Substances-in ; >
-    au < crawling ; exists ; 2013 ; 9781780404509 ; 9781780404516 ; Institutional Governance and Regulation of Water Services (2017) ; ebooks/book/587/Institutional-Governance-and-Regulation-of-Water ; >
+    au < frozen ; exists ; 2013 ; 9781780404868 ; 9781780404868 ; Flood Grouting for Infiltration Reduction on Private Side Sewers ; ebooks/book/377/Flood-Grouting-for-Infiltration-Reduction-on ; >
+    au < frozen ; exists ; 2013 ; 9781780404813 ; 9781780404813 ; Greenhouse Nitrogen Emissions from Wastewater Treatment Operation: Phase I ; ebooks/book/646/Greenhouse-Nitrogen-Emissions-from-Wastewater ; >
+    au < frozen ; exists ; 2013 ; 9781780405971 ; 9781780405988 ; Health Effects of Metals and Related Substances in Drinking Water ; ebooks/book/612/Health-Effects-of-Metals-and-Related-Substances-in ; >
+    au < frozen ; exists ; 2013 ; 9781780404509 ; 9781780404516 ; Institutional Governance and Regulation of Water Services (2017) ; ebooks/book/587/Institutional-Governance-and-Regulation-of-Water ; >
     au < ready ; exists ; 2013 ; 9781780405261 ; 9781780405278 ; Integrated Water Resources Management in a Changing World ; ebooks/book/596/Integrated-Water-Resources-Management-in-a ; >
     au < ready ; exists ; 2013 ; 9781780405520 ; 9781780405537 ; International Regulatory Co-operation: Case Studies, Vol. 3 ; ebooks/book/600/International-Regulatory-Co-operation-Case-Studies ; >
-    au < crawling ; exists ; 2013 ; 9781780404707 ; 9781780404714 ; Leak Detection ; ebooks/book/589/Leak-Detection-Technology-and-Implementation ; >
-    au < crawling ; exists ; 2013 ; 9781780405438 ; 9781780405438 ; Linking BMP Systems Performance to Receiving Water Protection: BMP Performance Algorithms ; ebooks/book/647/Linking-BMP-Systems-Performance-to-Receiving-Water ; >
-    au < crawling ; exists ; 2013 ; 9781780405643 ; 9781780405643 ; Management Practice for Drinking Water Pipelines: Synthesis Report ; ebooks/book/410/Management-Practice-for-Drinking-Water-Pipelines ; >
-    au < crawling ; exists ; 2013 ; 9781780405650 ; 9781780405650 ; Management Practice for Wastewater Pipelines: Synthesis Report ; ebooks/book/411/Management-Practice-for-Wastewater-Pipelines ; >
-    au < crawling ; exists ; 2013 ; 9781780400587 ; 9781780400594 ; Managing Climate Risk in Water Supply Systems ; ebooks/book/375/Managing-Climate-Risk-in-Water-Supply-Systems ; >
-    au < crawling ; exists ; 2013 ; 9781780400655 ; 9781780401331 ; Membrane Biological Reactors ; ebooks/book/585/Membrane-Biological-Reactors-Theory-Modeling ; >
-    au < crawling ; exists ; 2013 ; 9781780404875 ; 9781780404875 ; Methane Evolution from Lagoons and Ponds ; ebooks/book/592/Methane-Evolution-from-Lagoons-and-Ponds ; >
-    au < crawling ; exists ; 2013 ; 9781780404691 ; 9781780404691 ; Methane Evolution from Wastewater Conveyance ; ebooks/book/383/Methane-Evolution-from-Wastewater-Conveyance ; >
-    au < crawling ; exists ; 2013 ; 9781780400402 ; 9781780400419 ; Microbial Growth in Drinking Water Supplies ; ebooks/book/579/Microbial-Growth-in-Drinking-Water-Supplies ; >
-    au < crawling ; exists ; 2013 ; 9781780400075 ; 9781780400716 ; Milestones in Water Reuse ; ebooks/book/581/Milestones-in-Water-Reuse-The-Best-Success-Stories ; >
+    au < frozen ; exists ; 2013 ; 9781780404707 ; 9781780404714 ; Leak Detection ; ebooks/book/589/Leak-Detection-Technology-and-Implementation ; >
+    au < frozen ; exists ; 2013 ; 9781780405438 ; 9781780405438 ; Linking BMP Systems Performance to Receiving Water Protection: BMP Performance Algorithms ; ebooks/book/647/Linking-BMP-Systems-Performance-to-Receiving-Water ; >
+    au < frozen ; exists ; 2013 ; 9781780405643 ; 9781780405643 ; Management Practice for Drinking Water Pipelines: Synthesis Report ; ebooks/book/410/Management-Practice-for-Drinking-Water-Pipelines ; >
+    au < frozen ; exists ; 2013 ; 9781780405650 ; 9781780405650 ; Management Practice for Wastewater Pipelines: Synthesis Report ; ebooks/book/411/Management-Practice-for-Wastewater-Pipelines ; >
+    au < frozen ; exists ; 2013 ; 9781780400587 ; 9781780400594 ; Managing Climate Risk in Water Supply Systems ; ebooks/book/375/Managing-Climate-Risk-in-Water-Supply-Systems ; >
+    au < frozen ; exists ; 2013 ; 9781780400655 ; 9781780401331 ; Membrane Biological Reactors ; ebooks/book/585/Membrane-Biological-Reactors-Theory-Modeling ; >
+    au < frozen ; exists ; 2013 ; 9781780404875 ; 9781780404875 ; Methane Evolution from Lagoons and Ponds ; ebooks/book/592/Methane-Evolution-from-Lagoons-and-Ponds ; >
+    au < frozen ; exists ; 2013 ; 9781780404691 ; 9781780404691 ; Methane Evolution from Wastewater Conveyance ; ebooks/book/383/Methane-Evolution-from-Wastewater-Conveyance ; >
+    au < frozen ; exists ; 2013 ; 9781780400402 ; 9781780400419 ; Microbial Growth in Drinking Water Supplies ; ebooks/book/579/Microbial-Growth-in-Drinking-Water-Supplies ; >
+    au < frozen ; exists ; 2013 ; 9781780400075 ; 9781780400716 ; Milestones in Water Reuse ; ebooks/book/581/Milestones-in-Water-Reuse-The-Best-Success-Stories ; >
     au < ready ; exists ; 2013 ; 9781780404585 ; 9781780404592 ; Nanotechnology for Water and Wastewater Treatment ; ebooks/book/588/Nanotechnology-for-Water-and-Wastewater-Treatment ; >
-    au < crawling ; exists ; 2013 ; 9781780404783 ; 9781780404790 ; Optimisation of Corrosion Control for Lead in Drinking Water Using Computational Modelling Techniques ; ebooks/book/376/Optimisation-of-Corrosion-Control-for-Lead-in ; >
-    au < crawling ; exists ; 2013 ; 9781780405070 ; 9781780405070 ; Optimization of Wastewater Lift Stations for Reduction of Energy Usage and Greenhouse Gas Emissions ; ebooks/book/595/Optimization-of-Wastewater-Lift-Stations-for ; >
-    au < crawling ; exists ; 2013 ; 9781780405230 ; 9781780405247 ; Preparing Urban Water Use Efficiency Plans ; ebooks/book/378/Preparing-Urban-Water-Use-Efficiency-Plans ; >
-    au < crawling ; exists ; 2013 ; 9781843393207 ; 9781780401058 ; Public Private Partnerships in the Water Sector ; ebooks/book/583/Public-Private-Partnerships-in-the-Water-Sector ; >
-    au < crawling ; exists ; 2013 ; 9781780405414 ; 9781780405421 ; Sanitation and Hygiene in Africa: Where do We Stand? ; ebooks/book/599/Sanitation-and-Hygiene-in-Africa-Where-do-We-Stand ; >
-    au < crawling ; exists ; 2013 ; 9781780405063 ; 9781780405063 ; Sewer Lateral Electro Scan Field Verification Pilot ; ebooks/book/661/Sewer-Lateral-Electro-Scan-Field-Verification ; >
-    au < crawling ; exists ; 2013 ; 9781843393481 ; 9781780401072 ; Source Separation and Decentralization for Wastewater Management ; ebooks/book/616/Source-Separation-and-Decentralization-for ; >
+    au < frozen ; exists ; 2013 ; 9781780404783 ; 9781780404790 ; Optimisation of Corrosion Control for Lead in Drinking Water Using Computational Modelling Techniques ; ebooks/book/376/Optimisation-of-Corrosion-Control-for-Lead-in ; >
+    au < frozen ; exists ; 2013 ; 9781780405070 ; 9781780405070 ; Optimization of Wastewater Lift Stations for Reduction of Energy Usage and Greenhouse Gas Emissions ; ebooks/book/595/Optimization-of-Wastewater-Lift-Stations-for ; >
+    au < frozen ; exists ; 2013 ; 9781780405230 ; 9781780405247 ; Preparing Urban Water Use Efficiency Plans ; ebooks/book/378/Preparing-Urban-Water-Use-Efficiency-Plans ; >
+    au < frozen ; exists ; 2013 ; 9781843393207 ; 9781780401058 ; Public Private Partnerships in the Water Sector ; ebooks/book/583/Public-Private-Partnerships-in-the-Water-Sector ; >
+    au < frozen ; exists ; 2013 ; 9781780405414 ; 9781780405421 ; Sanitation and Hygiene in Africa: Where do We Stand? ; ebooks/book/599/Sanitation-and-Hygiene-in-Africa-Where-do-We-Stand ; >
+    au < frozen ; exists ; 2013 ; 9781780405063 ; 9781780405063 ; Sewer Lateral Electro Scan Field Verification Pilot ; ebooks/book/661/Sewer-Lateral-Electro-Scan-Field-Verification ; >
+    au < frozen ; exists ; 2013 ; 9781843393481 ; 9781780401072 ; Source Separation and Decentralization for Wastewater Management ; ebooks/book/616/Source-Separation-and-Decentralization-for ; >
     au < ready ; exists ; 2013 ; 9781780404950 ; 9781780404967 ; Southeast Asian Water Environment 5 ; ebooks/book/594/Southeast-Asian-Water-Environment-5 ; >
-    au < crawling ; exists ; 2013 ; 9781780400518 ; 9781780400518 ; Trace Organic Compound Indicator Removal During Conventional Wastewater Treatment ; ebooks/book/580/Trace-Organic-Compound-Indicator-Removal-During ; >
+    au < frozen ; exists ; 2013 ; 9781780400518 ; 9781780400518 ; Trace Organic Compound Indicator Removal During Conventional Wastewater Treatment ; ebooks/book/580/Trace-Organic-Compound-Indicator-Removal-During ; >
     au < ready ; exists ; 2013 ; 9781780404820 ; 9781780404837 ; Tuning Biological Nutrient Removal Plants ; ebooks/book/591/Tuning-Biological-Nutrient-Removal-Plants ; >
     au < crawling ; exists ; 2013 ; 9781780405711 ; 9781780405711 ; Underground Utility Locating Technology: Synthesis Report ; ebooks/book/412/Underground-Utility-Locating-Technology-Synthesis ; >
     au < crawling ; exists ; 2013 ; 9781780401386 ; 9781780401386 ; Uptake by Algae of Dissolved Organic Nitrogen from BNR Treatment Plant Effluents ; ebooks/book/586/Uptake-by-Algae-of-Dissolved-Organic-Nitrogen-from ; >
