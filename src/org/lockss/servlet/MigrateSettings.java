@@ -54,8 +54,8 @@ public class MigrateSettings extends LockssServlet {
   static final String KEY_INITIALIZED_FROM_CONFIG = "initializedFromConfig";
   static final String KEY_HOSTNAME = "hostname";
   static final String KEY_CFGSVC_UI_PORT = "cfgUiPort";
-  static final String KEY_USERNAME = "username";
-  static final String KEY_PASSWORD = "password";
+  static final String KEY_V2_USERNAME = "v2Username";
+  static final String KEY_V2_PASSWORD = "v2Password";
   static final String KEY_DATABASE_PASS = "dbPassword";
   static final String KEY_FETCHED_V2_CONFIG = "isTargetConfigFetched";
   static final String KEY_MIGRATION_CONFIG = "mCfg";
@@ -154,8 +154,8 @@ public class MigrateSettings extends LockssServlet {
     // Migration target
     hostname = getSessionAttribute(KEY_HOSTNAME, DEFAULT_HOSTNAME);
     cfgUiPort = getSessionAttribute(KEY_CFGSVC_UI_PORT, V2_DEFAULT_CFGSVC_UI_PORT);
-    userName = getSessionAttribute(KEY_USERNAME, null);
-    userPass = getSessionAttribute(KEY_PASSWORD, null);
+    userName = getSessionAttribute(KEY_V2_USERNAME, null);
+    userPass = getSessionAttribute(KEY_V2_PASSWORD, null);
 
     // Database
     dbPass = getSessionAttribute(KEY_DATABASE_PASS, null);
@@ -175,8 +175,8 @@ public class MigrateSettings extends LockssServlet {
     // Migration target
     hostname = getParameter(KEY_HOSTNAME);
     cfgUiPort = Integer.parseInt(getParameter(KEY_CFGSVC_UI_PORT));
-    userName = getParameter(KEY_USERNAME);
-    userPass = getParameter(KEY_PASSWORD);
+    userName = getParameter(KEY_V2_USERNAME);
+    userPass = getParameter(KEY_V2_PASSWORD);
 
     // Database
     dbPass = getParameter(KEY_DATABASE_PASS);
@@ -329,8 +329,8 @@ public class MigrateSettings extends LockssServlet {
     session.setAttribute(KEY_FETCHED_V2_CONFIG, isTargetConfigFetched);
     session.setAttribute(KEY_HOSTNAME, hostname);
     session.setAttribute(KEY_CFGSVC_UI_PORT, cfgUiPort);
-    session.setAttribute(KEY_USERNAME, userName);
-    session.setAttribute(KEY_PASSWORD, userPass);
+    session.setAttribute(KEY_V2_USERNAME, userName);
+    session.setAttribute(KEY_V2_PASSWORD, userPass);
     session.setAttribute(KEY_IRREVOCABLE_MIGRATION_ENABLED, irrevocableMigrationEnabled);
     session.setAttribute(KEY_DELETE_AUS, isDeleteAusEnabled);
     session.setAttribute(KEY_MIGRATION_CONFIG, mCfg);
@@ -376,10 +376,10 @@ public class MigrateSettings extends LockssServlet {
         KEY_CFGSVC_UI_PORT, String.valueOf(cfgUiPort), 20);
     addInputToTable(tbl,
         "Username" + addFootnote(FOOTNOTE_USERNAME),
-        KEY_USERNAME, userName, 20);
+        KEY_V2_USERNAME, userName, 20);
     addHiddenInputToTable(tbl,
         "Password" + addFootnote(FOOTNOTE_PASSWORD),
-        KEY_PASSWORD, userPass, 20);
+        KEY_V2_PASSWORD, userPass, 20);
 
     tbl.newRow();
     tbl.newCell(CENTERED_CELL);
@@ -612,7 +612,7 @@ public class MigrateSettings extends LockssServlet {
   private void addHiddenInputToTable(Table tbl, String label, String key, String init, int size) {
     Input in = new Input(Input.Password, key, init);
     in.setSize(size);
-    in.attribute("autocomplete", "new-password");
+    in.attribute("autocomplete", "one-time-code");
     addElementToTable(tbl, label, in);
   }
 
