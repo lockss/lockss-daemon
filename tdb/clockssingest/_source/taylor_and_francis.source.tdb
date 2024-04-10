@@ -41,13 +41,13 @@
     au < zapped ; finished ; 2020 ; Taylor & Francis Source Content 2020_11 ; 2020_11 >
     au < zapped ; finished ; 2020 ; Taylor & Francis Source Content 2020_12 ; 2020_12 >
 
-    au < readySource ; finished ; 2021 ; Taylor & Francis Source Content 2021_01 ; 2021_01 >
-    au < readySource ; finished ; 2021 ; Taylor & Francis Source Content 2021_02 ; 2021_02 >
-    au < readySource ; finished ; 2021 ; Taylor & Francis Source Content 2021_03 ; 2021_03 >
-    au < readySource ; finished ; 2021 ; Taylor & Francis Source Content 2021_04 ; 2021_04 >
-    au < readySource ; finished ; 2021 ; Taylor & Francis Source Content 2021_05 ; 2021_05 >
-    au < readySource ; finished ; 2021 ; Taylor & Francis Source Content 2021_06 ; 2021_06 >
-    au < readySource ; finished ; 2021 ; Taylor & Francis Source Content 2021_07 ; 2021_07 >
+    au < zapped ; finished ; 2021 ; Taylor & Francis Source Content 2021_01 ; 2021_01 >
+    au < zapped ; finished ; 2021 ; Taylor & Francis Source Content 2021_02 ; 2021_02 >
+    au < zapped ; finished ; 2021 ; Taylor & Francis Source Content 2021_03 ; 2021_03 >
+    au < zapped ; finished ; 2021 ; Taylor & Francis Source Content 2021_04 ; 2021_04 >
+    au < zapped ; finished ; 2021 ; Taylor & Francis Source Content 2021_05 ; 2021_05 >
+    au < zapped ; finished ; 2021 ; Taylor & Francis Source Content 2021_06 ; 2021_06 >
+    au < zapped ; finished ; 2021 ; Taylor & Francis Source Content 2021_07 ; 2021_07 >
 
     au < readySource ; finished ; 2022 ; Taylor & Francis Source Content 2022_01 ; 2022_01 >
     au < readySource ; finished ; 2022 ; Taylor & Francis Source Content 2022_02 ; 2022_02 >
@@ -62,6 +62,7 @@
 
     au < readySource ; crawling ; 2024 ; Taylor & Francis Source Content 2024_01 ; 2024_01 >
     au < testing ; exists ; 2024 ; Taylor & Francis Source Content 2024_02 ; 2024_02 >
+    au < testing ; exists ; 2024 ; Taylor & Francis Source Content 2024_03 ; 2024_03 >
     }
   }
 

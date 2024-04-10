@@ -40,10 +40,10 @@
     {
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/eastview-released/
 
-      au < readySource ; finished ; 2021 ; East View Information Services Journal Source Content 2021_01 ; 2021_01 >
-      au < readySource ; finished ; 2021 ; East View Information Services Journal Source Content 2021_02 ; 2021_02 >
-      au < readySource ; finished ; 2021 ; East View Information Services Journal Source Content 2021_03 ; 2021_03 >
-      au < readySource ; finished ; 2021 ; East View Information Services Journal Source Content 2021_04 ; 2021_04 >
+      au < zapped ; finished ; 2021 ; East View Information Services Journal Source Content 2021_01 ; 2021_01 >
+      au < zapped ; finished ; 2021 ; East View Information Services Journal Source Content 2021_02 ; 2021_02 >
+      au < zapped ; finished ; 2021 ; East View Information Services Journal Source Content 2021_03 ; 2021_03 >
+      au < zapped ; finished ; 2021 ; East View Information Services Journal Source Content 2021_04 ; 2021_04 >
       #No more AUs. Moved to https.
     }
     {
