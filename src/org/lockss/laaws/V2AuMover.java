@@ -672,8 +672,6 @@ public class V2AuMover {
       throw new IllegalArgumentException(
           "Missing or invalid configuration service hostName: " + hostName + " port: " + repoPort);
     }
-
-    openReportFiles(args);
   }
 
   /**
@@ -746,8 +744,12 @@ public class V2AuMover {
       log.debug(argsLst.size() +
                 " operations requested, using client configuration from the first");
     }
-    initBatch(argsLst.get(0));
+    Args firstArgs = argsLst.get(0);
+    initBatch(firstArgs);
+    currentStatus = "Checking V2 services";
     try {
+      checkV2ServicesAvailable();
+      openReportFiles(firstArgs); // must follow checkV2ServicesAvailable
       for (Args args : argsLst) {
         try {
           executeRequest(args);
@@ -756,8 +758,14 @@ public class V2AuMover {
           break;
         }
       }
+    } catch (IOException e) {
+      openReportFiles(firstArgs);
+      String msg = "Couldn't read V2 API status, aborting";
+      log.error(msg, e);
+      logReportAndError(msg);
     } finally {
       running = false;
+      closeReports();
     }
   }
 
@@ -833,8 +841,6 @@ public class V2AuMover {
     }
     startTotalTimers();
     initAuRequest(args, ("AU: " + args.au.getName()));
-    currentStatus = "Checking V2 services";
-    checkV2ServicesAvailable();
     // get the aus known to the v2 repository
     getV2Aus();
     auMoveQueue.add(args.au);
@@ -850,8 +856,6 @@ public class V2AuMover {
   public void moveAllAus(Args args) throws IOException {
     startTotalTimers();
     initAuRequest(args, "All AUs");
-    currentStatus = "Checking V2 services";
-    checkV2ServicesAvailable();
     // get the aus known to the v2 repo
     getV2Aus();
     // get the local AUs to move
@@ -882,8 +886,6 @@ public class V2AuMover {
                 StringUtil.separatedString(args.plugins.stream()
                                            .map(x -> x.getPluginName())
                                            .collect(Collectors.toList())));
-    currentStatus = "Checking V2 services";
-    checkV2ServicesAvailable();
     // get the aus known to the v2 repo
     getV2Aus();
     // get the local AUs to move
@@ -1425,7 +1427,6 @@ public class V2AuMover {
           log.debug2("FINISH_ALL: wait");
           ausLatch.await();
           totalTimers.stop(Phase.TOTAL);
-          closeReports();
           doneSem.fill();
           break;
         default:
@@ -2285,8 +2286,24 @@ public class V2AuMover {
    */
   void openReportFiles(Args args) {
     String now = nowTimestamp();
-    reportWriter = openReportFile(reportFile, args, "Report", now);
-    errorWriter = openReportFile(errorFile, args, "Error Report", now);
+    if (reportWriter == null) {
+      reportWriter = openReportFile(reportFile, args, "Report", now);
+      writeDeferredMessages(reportWriter, deferredReports);
+    }
+    if (errorWriter == null) {
+      errorWriter = openReportFile(errorFile, args, "Error Report", now);
+      writeDeferredMessages(errorWriter, deferredErrorReports);
+    }
+  }
+
+  private List<String> deferredReports = new ArrayList<>();
+  private List<String> deferredErrorReports = new ArrayList<>();
+
+  private void writeDeferredMessages(PrintWriter wrtr, List<String> msgs) {
+    for (String x : msgs) {
+      wrtr.println(x);
+    }
+    msgs.clear();
   }
 
   PrintWriter openReportFile(File file, Args args,
@@ -2298,9 +2315,11 @@ public class V2AuMover {
                                                   CREATE, APPEND),
                             true);
       res.println("===================================================");
-      res.println("  V2 AU Migration " + title + " - " + now);
-      res.println("  Migrating from " + PlatformUtil.getLocalHostname() +
-                  " to " + args.host);
+      res.println("  V2 Migration " + title + " - " + now);
+      res.println(String.format("  Copying from %s (%s) to %s (%s)",
+                                PlatformUtil.getLocalHostname(),
+                                getLocalVersion(),
+                                args.host, getRepoSvcVersion()));
       res.println("--------------------------------------------------");
       res.println();
       if (res.checkError()) {
@@ -2320,20 +2339,18 @@ public class V2AuMover {
 
   public void logReport(String msg) {
     if (reportWriter == null) {
-      log.error("updateReport called when no reportWriter",
-          new Throwable());
-      return;
+      deferredReports.add(msg);
+    } else {
+      reportWriter.println(msg);
     }
-    reportWriter.println(msg);
   }
 
   public void logReportError(String msg) {
     if (errorWriter == null) {
-      log.error("updateReport called when no errorWriter",
-          new Throwable());
-      return;
+      deferredErrorReports.add(msg);
+    } else {
+      errorWriter.println(msg);
     }
-    errorWriter.println(msg);
   }
 
   public void logReportAndError(String msg) {
