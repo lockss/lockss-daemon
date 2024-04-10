@@ -62,6 +62,8 @@ public class MigrateContent extends LockssServlet {
 
   static Logger log = Logger.getLogger("MigrateContent");
 
+  static final String SKIP_FINISHED_FOOT = "Unchedking this may result in many spurious verify errors as the content or state of previously copied AUs may have changed.";
+
   static final String PREFIX = Configuration.PREFIX + "v2.migrate.";
   public static final String PARAM_ENABLE_MIGRATION = PREFIX + "enabled";
   public static final boolean DEFAULT_ENABLE_MIGRATION = true;
@@ -98,6 +100,7 @@ public class MigrateContent extends LockssServlet {
   static final String KEY_PASSWD="password";
   static final String KEY_OP_TYPE = "op_type";
   static final String KEY_COMPARE_CONTENT = "compare_content";
+  static final String KEY_SKIP_FINISHED = "skip_finished";
 
 
   public static final String ACTION_START= "Start";
@@ -120,6 +123,7 @@ public class MigrateContent extends LockssServlet {
   boolean defaultCompare = DEFAULT_DEFAULT_COMPARE;
   OpType opType;
   boolean isCompareContent;
+  boolean isSkipFinished;
   boolean isMigratorConfigured;
   List<String> auSelectFilter;
   List<Pattern> auSelectPatterns;
@@ -192,6 +196,7 @@ public class MigrateContent extends LockssServlet {
       hostName = config.get(PARAM_HOSTNAME);
       if(hostName==null) hostName="localhost";
       isCompareContent = getParameter(KEY_COMPARE_CONTENT) != null;
+      isSkipFinished = getParameter(KEY_SKIP_FINISHED) != null;
 
       auid = getParameter(KEY_AUID);
       pluginId = getParameter(KEY_PLUGINID);
@@ -282,6 +287,7 @@ public class MigrateContent extends LockssServlet {
       .setUname(userName)
       .setUpass(userPass)
       .setCompareContent(isCompareContent)
+      .setSkipFinished(isSkipFinished)
       .setOpType(opType);
   }
 
@@ -428,6 +434,9 @@ public class MigrateContent extends LockssServlet {
     tbl.newCell(CENTERED_CELL);
     tbl.add(checkBox("Full content compare", "true", KEY_COMPARE_CONTENT,
                      isCompareContent));
+    tbl.add("&nbsp;&nbsp;");
+    tbl.add(checkBox("Skip already-copied AUs" + addFootnote(SKIP_FINISHED_FOOT),
+                     "true", KEY_SKIP_FINISHED, true));
 
 
     tbl.newRow();

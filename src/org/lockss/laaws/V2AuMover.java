@@ -865,10 +865,14 @@ public class V2AuMover {
         continue;
       }
       // Filter by selection pattern if set
-      if (args.selPatterns == null || args.selPatterns.isEmpty() ||
-          isMatch(au.getAuId(), args.selPatterns)) {
-        auMoveQueue.add(au);
+      if (!(args.selPatterns == null || args.selPatterns.isEmpty() ||
+            isMatch(au.getAuId(), args.selPatterns))) {
+        continue;
       }
+      if (isSkipFinished(args, au)) {
+        continue;
+      }
+      auMoveQueue.add(au);
     }
     moveQueuedAus();
   }
@@ -894,9 +898,19 @@ public class V2AuMover {
                                             false))
       // Don't copy internal AUs (test probably unnecessary here)
       .filter(au -> !pluginManager.isInternalAu(au))
+      .filter(au -> !isSkipFinished(args, au))
       .forEach(au -> auMoveQueue.add(au));
 
     moveQueuedAus();
+  }
+
+  private boolean isSkipFinished(Args args, ArchivalUnit au) {
+    if (!args.isSkipFinished) return false;
+    AuState auState = AuUtil.getAuState(au);
+    switch (auState.getMigrationState()) {
+    case Finished: return true;
+    default: return false;
+    }
   }
 
   void startTotalTimers() {
@@ -1802,6 +1816,7 @@ public class V2AuMover {
     String upass;
     OpType opType;
     boolean isCompareContent;
+    boolean isSkipFinished;
     List<Pattern> selPatterns;
     Collection<Plugin> plugins;
     ArchivalUnit au;
@@ -1824,6 +1839,10 @@ public class V2AuMover {
     }
     public Args setCompareContent(boolean val) {
       this.isCompareContent = val;
+      return this;
+    }
+    public Args setSkipFinished(boolean val) {
+      this.isSkipFinished = val;
       return this;
     }
     public Args setPlugins(Collection<Plugin> plugs) {
