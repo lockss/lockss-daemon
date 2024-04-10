@@ -34,7 +34,10 @@ import java.util.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.db.*;
+import org.lockss.plugin.*;
 import org.lockss.servlet.MigrateContent;
+import org.lockss.state.AuState;
+import org.lockss.state.AuState.MigrationState;
 import org.lockss.util.*;
 import org.lockss.config.*;
 
@@ -85,10 +88,12 @@ public class MigrationManager extends BaseLockssDaemonManager
   String dsClassName;;
 
   ConfigManager cfgMgr;
+  PluginManager pluginMgr;
 
   public void startService() {
     super.startService();
     cfgMgr = getDaemon().getConfigManager();
+    pluginMgr = getDaemon().getPluginManager();
   }
 
   public void stopService() {
@@ -228,6 +233,16 @@ public class MigrationManager extends BaseLockssDaemonManager
       throw new IllegalStateException("Not running");
     }
     mover.abortCopy();
+  }
+
+  public void resetAllMigrationState() {
+    for (ArchivalUnit au : pluginMgr.getAllAus()) {
+      AuState aus = AuUtil.getAuState(au);
+      if (aus != null) {
+        aus.setMigrationState(MigrationState.NotStarted);
+      }
+    }
+
   }
 
   public class Runner extends LockssRunnable {

@@ -47,6 +47,8 @@ public class MigrateSettings extends LockssServlet {
       "The username used to connect to the rest interface of the V2 services.";
   private static final String FOOTNOTE_PASSWORD =
       "The password used to connect to the rest interface of the V2 services.";
+  static final String RESET_CONFIRMATION_MSG = "If migration is resumeed it will start over from the beginning.  %sDo you want to proceed?";
+  static final String RESET_ALREADY_DELETED = "Any AUs already deleted after migration will not be included.  ";
 
   static final String DEFAULT_HOSTNAME = "localhost";
   static final String KEY_INITIALIZED_FROM_CONFIG = "initializedFromConfig";
@@ -66,6 +68,7 @@ public class MigrateSettings extends LockssServlet {
   static final String KEY_ACTION = "action";
   static final String ACTION_LOAD_V2_CFG = "Load Configuration";
   static final String ACTION_NEXT = "Next";
+  static final String ACTION_RESET_MIGRATION_STATE = "Reset Migration State";
 
   LockssDaemon theDaemon;
   MigrationManager migrationMgr;
@@ -308,7 +311,13 @@ public class MigrateSettings extends LockssServlet {
             redirectToMigrateContent();
           }
           break;
-
+        case ACTION_RESET_MIGRATION_STATE:
+          migrationMgr.resetAllMigrationState();
+//           statusMsg = "All AUs and databases reset to &quot;not migrated&quot; state";
+          migrationMgr.setIsDbMoved(false);
+          migrationMgr.setIsMigrating(false);
+          statusMsg = "All AUs and databases reset to \"not migrated\" state";
+          break;
         default:
           errMsg = "Unknown action:" + action;
       }
@@ -434,6 +443,13 @@ public class MigrateSettings extends LockssServlet {
           KEY_DELETE_AUS_INTERVAL, deleteAusInterval, 20);
     }
 
+    addCommonFormElements(tbl);
+    frm.add(tbl);
+    comp.add(frm);
+    return comp;
+  }
+
+  private void addCommonFormElements(Table tbl) {
     tbl.newRow();
     tbl.newCell(CENTERED_CELL);
     tbl.add(new Break());
@@ -445,10 +461,14 @@ public class MigrateSettings extends LockssServlet {
       nextButton.attribute("disabled");
     }
     tbl.add(nextButton);
-
-    frm.add(tbl);
-    comp.add(frm);
-    return comp;
+    tbl.add("&nbsp;");
+    Input resetMigrationStateButton = new Input(Input.Submit, KEY_ACTION,
+                                                ACTION_RESET_MIGRATION_STATE);
+    String confMsg = String.format(RESET_CONFIRMATION_MSG,
+                                   (isDeleteAusEnabled ? RESET_ALREADY_DELETED : ""));
+    resetMigrationStateButton.attribute("onclick", "return confirm(\"" +
+                                        confMsg + "\");");
+    tbl.add(resetMigrationStateButton);
   }
 
   private void setupToggleGroup(Input toggleElem, Input... groupElems) {
@@ -503,15 +523,7 @@ public class MigrateSettings extends LockssServlet {
       addFieldToTable(tbl, "Delete AUs interval", deleteAusInterval);
     }
 
-    tbl.newRow();
-    tbl.newCell(CENTERED_CELL);
-    tbl.add(new Break());
-    tbl.add(new Break(Break.Rule));
-    tbl.add(new Break());
-
-    Input nextButton = new Input(Input.Submit, KEY_ACTION, ACTION_NEXT);
-    tbl.add(nextButton);
-
+    addCommonFormElements(tbl);
     frm.add(tbl);
     comp.add(frm);
     return comp;
