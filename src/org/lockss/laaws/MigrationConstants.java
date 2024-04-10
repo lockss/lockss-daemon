@@ -1,16 +1,22 @@
 package org.lockss.laaws;
 
 import org.apache.derby.jdbc.EmbeddedDataSource;
-import org.lockss.proxy.ProxyManager;
+import org.lockss.proxy.*;
 import org.lockss.servlet.ContentServletManager;
 
 public class MigrationConstants {
   public static final String V2_PREFIX = "v2";
   public static final String V2_DOT = V2_PREFIX + ".";
 
-  public static final String V2_PARAM_PROXYMANAGER_PORT =
+  public static final String V2_PARAM_PROXY_PORT =
       ProxyManager.PARAM_PORT;
-  public static final String V2_PARAM_CONTENTSERVLETMANAGER_PORT =
+  public static final String V2_PARAM_PROXY_SSL_PORT =
+      ProxyManager.PARAM_SSL_PORT;
+  public static final String V2_PARAM_AUDIT_PROXY_PORT =
+      AuditProxyManager.PARAM_PORT;
+  public static final String V2_PARAM_AUDIT_PROXY_SSL_PORT =
+      AuditProxyManager.PARAM_SSL_PORT;
+  public static final String V2_PARAM_CONTENTSERVLET_PORT =
       ContentServletManager.PARAM_PORT;
   public static final String V2_PARAM_METADATADBMANAGER_PREFIX =
       "org.lockss.metadataDbManager.";
@@ -35,8 +41,11 @@ public class MigrationConstants {
 
 
   public static final int V2_DEFAULT_CFGSVC_UI_PORT = 24621;
-  public static final int V2_DEFAULT_PROXYMANAGER_PORT = 24670;
-  public static final int V2_DEFAULT_CONTENTSERVLETMANAGER_PORT = 24680;
+  public static final int V2_DEFAULT_PROXY_PORT = 24670;
+  public static final int V2_DEFAULT_PROXY_SSL_PORT = 24671;
+  public static final int V2_DEFAULT_AUDIT_PROXY_PORT = 24672;
+  public static final int V2_DEFAULT_AUDIT_PROXY_SSL_PORT = 24673;
+  public static final int V2_DEFAULT_CONTENTSERVLET_PORT = 24680;
   public static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_CLASSNAME =
       EmbeddedDataSource.class.getCanonicalName();
   public static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_SERVERNAME = "localhost";

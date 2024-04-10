@@ -36,6 +36,8 @@ import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
+import java.util.regex.*;
+import java.text.*;
 import okhttp3.Headers;
 import okhttp3.MultipartReader;
 import okhttp3.MultipartReader.Part;
@@ -45,13 +47,23 @@ import org.apache.commons.io.*;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
 import org.lockss.laaws.client.ApiException;
+import org.lockss.proxy.*;
+import org.lockss.servlet.*;
 import org.lockss.util.*;
 import static org.lockss.config.ConfigManager.*;
+import static org.lockss.laaws.MigrationConstants.*;
 
 public class ConfigFileMover extends Worker {
 
   private static final Logger log = Logger.getLogger(ConfigFileMover.class);
-  static final String COPIED_CONTENT_MARKER = "### Copied from LOCKSS 1.0 by migrator ";
+
+  static final String COPIED_CONTENT_MARKER_TEMPLATE =
+    "### Copied from LOCKSS %s to LOCKSS %s by migrator, %s";
+  static final Pattern COPIED_CONTENT_MARKER_PATTERN =
+    Pattern.compile("### Copied from LOCKSS .* to LOCKSS .* by migrator");
+  static final String TRANSFORMED_CONTENT_SERVERS_TEMPLATE =
+    "### Adapted from LOCKSS %s to LOCKSS %s by migrator, %s";
+
 
   static final String SECTION_NAME_CONTENT_SERVERS = "content_servers";
   static final String SECTION_NAME_CRAWL_PROXY = "crawl_proxy";
@@ -116,15 +128,20 @@ public class ConfigFileMover extends Worker {
     }
   }
 
-  private void moveConfigFile(String section, String v2Content) {
+  private void moveConfigFile(String section, String v1Content) {
     log.debug3("Copying config file; " + section);
     try {
       switch (section) {
       case SECTION_NAME_EXPERT:
-        writeV2ConfigFile(section, StringUtil.commentize(v2Content));
+        writeV2ConfigFile(section, StringUtil.commentize(v1Content));
+        break;
+      case SECTION_NAME_CONTENT_SERVERS:
+        Configuration c = cfgManager.readCacheConfigFile(configSectionMap.get(section));
+        writeV2ConfigFile(section, transformContentServers(section, c),
+                          copiedConfigComment(TRANSFORMED_CONTENT_SERVERS_TEMPLATE));
         break;
       default:
-        writeV2ConfigFile(section, v2Content);
+        writeV2ConfigFile(section, v1Content);
         break;
       }
       String msg = "Copied config section: " + section;
@@ -137,13 +154,57 @@ public class ConfigFileMover extends Worker {
     }
   }
 
+  static Configuration transformContentServers(String section, Configuration c) {
+    Configuration newContent = c.copy();
+    for (Iterator<String> iter = c.keyIterator(); iter.hasNext();) {
+      String key = iter.next();
+      String val = c.get(key);
+      switch (key) {
+      case ContentServletManager.PARAM_PORT:
+        newContent.put(key, ""+V2_DEFAULT_CONTENTSERVLET_PORT);
+        break;
+      case ProxyManager.PARAM_PORT:
+        newContent.put(key, ""+V2_DEFAULT_PROXY_PORT);
+        break;
+      case ProxyManager.PARAM_SSL_PORT:
+        {
+          int v = c.getInt(key, -1);
+          if (v > 0) {
+            newContent.put(key, ""+V2_DEFAULT_PROXY_SSL_PORT);
+          }
+        }
+        break;
+      case AuditProxyManager.PARAM_PORT:
+        newContent.put(key, ""+V2_DEFAULT_AUDIT_PROXY_PORT);
+        break;
+      case AuditProxyManager.PARAM_SSL_PORT:
+        {
+          int v = c.getInt(key, -1);
+          if (v > 0) {
+            newContent.put(key, ""+V2_DEFAULT_AUDIT_PROXY_SSL_PORT);
+          }
+          break;
+        }
+      default:
+        newContent.put(key, val);
+      }
+    }
+    return newContent;
+  }
+
+
+  private boolean isMigrated(String v2Content) {
+    Matcher m = COPIED_CONTENT_MARKER_PATTERN.matcher(v2Content);
+    return m.find();
+  }
+
   private void mergeConfigFile(String section, String v1Content,
                                String v2Content) {
     log.debug3("Merging config section; " + section);
     try {
       switch (section) {
       case SECTION_NAME_EXPERT:
-        if (v2Content.indexOf(COPIED_CONTENT_MARKER) < 0) {
+        if (!isMigrated(v2Content)) {
           writeV2ConfigFile(section,
                             appendComment(section, v1Content, v2Content));
           String msg = "Merged config section: " + section;
@@ -162,15 +223,25 @@ public class ConfigFileMover extends Worker {
         break;
       }
     } catch (ApiException | IOException e) {
-      String msg = "Couldn't store V2 config section: " + section;
+      String msg = "Couldn't store LOCKSS 2.0 config section: " + section;
       log.error(msg, e);
       auMover.logReportAndError(msg);
     }
   }
 
   String appendComment(String section, String v1Content, String v2Content) {
-    return v2Content + "\n\n" + COPIED_CONTENT_MARKER + " " +
-      auMover.nowTimestamp() + "\n\n" + StringUtil.commentize(v1Content);
+    return String.format("%s\n\n%s\n\n%s",
+                         v2Content,
+                         copiedConfigComment(COPIED_CONTENT_MARKER_TEMPLATE),
+                         StringUtil.commentize(v1Content));
+
+  }
+
+  String copiedConfigComment(String template) {
+    return String.format(template,
+                         auMover.getLocalVersion(),
+                         auMover.getCfgSvcVersion(),
+                         auMover.nowTimestamp());
   }
 
   private void writeV2ConfigFile(String section, String v2Content)
@@ -185,10 +256,24 @@ public class ConfigFileMover extends Worker {
     }
   }
 
+  private void writeV2ConfigFile(String section, Configuration c, String header)
+      throws ApiException, IOException {
+    File file = null;
+    try {
+      file = FileUtil.createTempFile("v1configfile", null);
+      try (OutputStream os = new FileOutputStream(file)) {
+        c.store(os, header);
+      }
+      cfgConfigApiClient.putConfig(section, file, null, null, null, null);
+    } finally {
+      FileUtil.safeDeleteFile(file);
+    }
+  }
+
   private String readV1Config(String name) throws IOException {
     File file = cfgManager.getCacheConfigFile(name);
     if (!file.exists()) {
-      log.debug2("doesn't exist");
+      log.debug3("V1 config file doesn't exist: " + name);
       return null;
     }
     String cont = StringUtil.fromFile(file);
