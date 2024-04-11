@@ -94,10 +94,19 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.clockss.eastview.EastviewDirSourceXmlArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.eastview.EastviewDatabaseDirSourceXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.clockss.eastview.EastviewDirSourceXmlArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.eastview.EastviewDatabaseDirSourceXmlArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>application/zip_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.clockss.eastview.EastviewDatabaseDirSourceMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
 </map>    
