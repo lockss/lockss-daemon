@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>28</string>
+    <string>29</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -89,5 +89,12 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.inderscience.InderscienceHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <!-- this is to catch the 500 errors but continue -->
+      <string>500=org.lockss.plugin.atypon.inderscience.InderscienceHttpResponseHandler</string>
+    </list>
   </entry>
 </map>
