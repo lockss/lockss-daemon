@@ -9,7 +9,7 @@
     
     provider = OAPEN
     plugin = org.lockss.plugin.oapen.ClockssOAPENBooksPlugin
-    implicit < status ; status2 ; year ; name ; param[resource_id] ; hidden[proxy] >
+    implicit < status ; status2 ; year ; isbn_string ; name ; publisher_string ; param[resource_id] ; hidden[proxy] >
     param[base_url] = https://library.oapen.org/
 
   {
@@ -18,9 +18,9 @@
         type = bookSeries
       >
 
-    au < frozen ; exists ; 2018 ; Kant und die Imagination der Tiere ; handle/20.500.12657/41485 ; >
-    au < frozen ; exists ; 2008 ; Distance og Involverethed ; handle/20.500.12657/34791 ; >
-    au < frozen ; exists ; 2020 ; Beltraneja ; handle/20.500.12657/49951 ; >
+    au < frozen ; exists ; 2018 ; ; Kant und die Imagination der Tiere ; Konstanz University Press ; handle/20.500.12657/41485 ; >
+    au < frozen ; exists ; 2008 ; ; Distance og Involverethed ; Aalborg University Press ; handle/20.500.12657/34791 ; >
+    au < frozen ; exists ; 2020 ; ; Beltraneja ; Academia Peruana de la Lengua ; handle/20.500.12657/49951 ; >
 
 #These titles and handles don't match.
 #    au < exists ; exists ;  ; Schrijverschap in de Belgische belle époque. Een sociaal-culturele geschiedenis ; handle/20.500.12657/55803 ; >
