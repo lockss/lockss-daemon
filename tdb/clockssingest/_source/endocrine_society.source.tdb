@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = Endocrine Society ;
+    info[contract] = 2012 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+  hidden[proxy] = DIRECT
+
+  {
+    title <
+       name = Endocrine Society Source Content
+    >
+
+    plugin = needs.SourcePlugin
+    implicit < status ; status2 ; year ; name ; param[directory] >
+
+    param[base_url] = https://clockss-test.lockss.org/sourcefiles/endocrine-released/
+
+    au < expected ; exists ; 2024 ; Endocrine Society Source Content 2024_01 ; 2024_01 >
+
+
+  }
+
+}
