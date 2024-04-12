@@ -65,6 +65,7 @@ public class LSUIAHtmlFilterFactory implements FilterFactory {
      //https://sls-journal.com.ua/en/journals/tom-4-4-2021/administrativna-vidpovidalnist-za-pravoporushennya-skoyeni-u-sferi-simeyno-pobutovikh-vidnosin
      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "product-info-tabs"),
      HtmlNodeFilters.tagWithAttributeRegex("section", "id", "product-tabs"),
+     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "share-wrapper"),
 
     };
     InputStream filteredStream = new HtmlFilterInputStream(in, encoding,

@@ -56,13 +56,13 @@ public class LSUIAArticleIteratorFactory implements ArticleIteratorFactory, Arti
 
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
 
-  protected static final String PATTERN_TEMPLATE = "\"%sen/(journals)/([^/]+)/(.*)\", base_url";
+  protected static final String PATTERN_TEMPLATE = "\"%sen/(journals/tom-%s-\\d+-2023|article/download)/(.*)\", base_url,volume_name,year";
 
-  public static final Pattern HTML_PATTERN = Pattern.compile("(journals)/([^/]+)/(.*)", Pattern.CASE_INSENSITIVE);
-  public static final String HTML_REPLACEMENT = "journals/$2/$3";
+  public static final Pattern HTML_PATTERN = Pattern.compile("(journals/[^/]+)/(.*)", Pattern.CASE_INSENSITIVE);
+  public static final String HTML_REPLACEMENT = "$1/$2";
 
-  public static final Pattern PDF_PATTERN = Pattern.compile("(article)/(download)/(.*)", Pattern.CASE_INSENSITIVE);
-  public static final String PDF_REPLACEMENT = "article/download/$3";
+  public static final Pattern PDF_PATTERN = Pattern.compile("(article/download)/(.*)", Pattern.CASE_INSENSITIVE);
+  public static final String PDF_REPLACEMENT = "$1/$2";
 
 
   @Override

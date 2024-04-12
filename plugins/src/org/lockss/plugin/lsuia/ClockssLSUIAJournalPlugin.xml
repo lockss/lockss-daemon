@@ -79,7 +79,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Lviv State University of Internal Affairs Journal Plugin (CLOCKSS), Base URL %s, Year %d Volume %s", base_url, year, volume_name</string>
+    <string>"Lviv State University of Internal Affairs Journal Plugin (CLOCKSS), Base URL %s, Year %d, Volume %s", base_url, year, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <string>"%sen", base_url</string>
   </entry>
   <entry>
     <string>au_start_url</string>
@@ -100,6 +104,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"%sen/journals/tom-%s-(\d+)-%d", base_url, volume_name, year</string>
       <string>1,"%sen/journals/download", base_url</string>
       <string>1,"%sen/(article|read)",base_url</string>
+      <string>1,"%s/(images)",base_url</string>
     </list>
   </entry>
   <entry>
@@ -107,6 +112,14 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <string>1,"%sen/article/download/",base_url</string>
     </list>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.lsuia.LSUIAHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.lsuia.LSUIAHtmlFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
@@ -124,10 +137,6 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>org.lockss.plugin.lsuia.LSUIAHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
-  </entry>
-  <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.lsuia.LSUIAHtmlFilterFactory</string>
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
