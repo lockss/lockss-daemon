@@ -87,12 +87,14 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_start_url</string>
-    <list>
       <!--
       https://sls-journal.com.ua/en/archive/2023
+      https://sls-journal.com.ua/uk/archive/2023
       -->
-      <string>"%sen/archive/%d", base_url, year</string>
-    </list>
+      <list>
+        <string>"%sen/archive/%d", base_url, year</string>
+        <string>"%suk/archive/%d", base_url, year</string>
+      </list>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -100,17 +102,17 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1, "^https://code\.jquery\.com/.*/jquery.*\.js"</string>
       <string>1,"https://fonts\.googleapis\.com/"</string>
       <string>1,"%s(en/)?(js|web|assets|css|images|fonts)/", base_url, year</string>
-      <string>1,"%sen/archive/%d", base_url, year</string>
-      <string>1,"%sen/journals/tom-%s-(\d+)-%d", base_url, volume_name, year</string>
-      <string>1,"%sen/journals/download", base_url</string>
-      <string>1,"%sen/(article|read)",base_url</string>
+      <string>1,"%s(en|uk)/archive/%d", base_url, year</string>
+      <string>1,"%s(en|uk)/journals/tom-%s-(\d+)-%d", base_url, volume_name, year</string>
+      <string>1,"%s(en|uk)/journals/download", base_url</string>
+      <string>1,"%s(en|uk)/(article|read)",base_url</string>
       <string>1,"%s/(images)",base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>1,"%sen/article/download/",base_url</string>
+      <string>1,"%s(en|uk)/article/download/",base_url</string>
     </list>
   </entry>
   <entry>
