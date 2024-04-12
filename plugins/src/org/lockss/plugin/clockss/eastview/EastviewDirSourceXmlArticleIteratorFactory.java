@@ -35,7 +35,6 @@ package org.lockss.plugin.clockss.eastview;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractorFactory;
-import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
@@ -47,9 +46,9 @@ import java.util.Iterator;
 import java.util.regex.Pattern;
 
 
-public class EastviewDatabaseDirSourceXmlArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory  {
+public class EastviewDirSourceXmlArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory  {
 
-  private static final Logger log = Logger.getLogger(EastviewDatabaseDirSourceXmlArticleIteratorFactory.class);
+  private static final Logger log = Logger.getLogger(EastviewDirSourceXmlArticleIteratorFactory.class);
 
   /*
   /sourcefiles/eastviewudbcom-released/2024_01/eastview/UDB-COM/LGA/1997.zip
