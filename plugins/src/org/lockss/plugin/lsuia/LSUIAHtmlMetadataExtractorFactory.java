@@ -77,7 +77,7 @@ public class LSUIAHtmlMetadataExtractorFactory implements FileMetadataExtractorF
     cookMap.put("citation_date", MetadataField.FIELD_DATE);
     cookMap.put("citation_author", MetadataField.FIELD_AUTHOR);
     cookMap.put("citation_keywords", MetadataField.FIELD_KEYWORDS);
-    cookMap.put("citation_pdf_url", MetadataField.FIELD_ACCESS_URL);
+    //cookMap.put("citation_pdf_url", MetadataField.FIELD_ACCESS_URL);
     cookMap.put("DC.Identifier.DOI",MetadataField.FIELD_DOI);
   }
 
