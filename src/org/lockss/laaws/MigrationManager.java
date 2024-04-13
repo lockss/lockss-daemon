@@ -68,8 +68,9 @@ public class MigrationManager extends BaseLockssDaemonManager
   public static final String PARAM_DEBUG_MODE = PREFIX + "debug";
   public static final boolean DEFAULT_DEBUG_MODE = false;
 
-  public static final String PARAM_IS_MIGRATING = PREFIX + "isMigrating";
-  public static final boolean DEFAULT_IS_MIGRATING = false;
+  public static final String PARAM_IS_IN_MIGRATION_MODE =
+    PREFIX + "inMigrationMode";
+  public static final boolean DEFAULT_IS_IN_MIGRATION_MODE = false;
 
   public static final String PARAM_IS_DB_MOVED = PREFIX + "isDbMoved";
   public static final boolean DEFAULT_IS_DB_MOVED = false;
@@ -82,7 +83,7 @@ public class MigrationManager extends BaseLockssDaemonManager
   private long startTime = 0;
 
   boolean isIrrevocableMigrationEnabled;
-  boolean isDaemonMigrating;
+  boolean isInMigrationMode;
   boolean isMigrationInDebugMode;
   boolean isDeleteMigratedAus;
   String dsClassName;;
@@ -104,8 +105,8 @@ public class MigrationManager extends BaseLockssDaemonManager
     return isIrrevocableMigrationEnabled;
   }
 
-  public boolean isDaemonMigrating() {
-    return isDaemonMigrating;
+  public boolean isInMigrationMode() {
+    return isInMigrationMode;
   }
 
   public boolean isMigrationInDebugMode() {
@@ -134,8 +135,9 @@ public class MigrationManager extends BaseLockssDaemonManager
 
       isIrrevocableMigrationEnabled = config.getBoolean(
           PARAM_IRREVOCABLE_MIGRATION_ENABLED, DEFAULT_IRREVOCABLE_MIGRATION_ENABLED);
-      isDaemonMigrating =
-          config.getBoolean(PARAM_IS_MIGRATING, DEFAULT_IS_MIGRATING);
+      isInMigrationMode =
+          config.getBoolean(PARAM_IS_IN_MIGRATION_MODE,
+                            DEFAULT_IS_IN_MIGRATION_MODE);
       isMigrationInDebugMode =
           config.getBoolean(PARAM_DEBUG_MODE, DEFAULT_DEBUG_MODE);
       isDeleteMigratedAus = config.getBoolean(
@@ -150,13 +152,20 @@ public class MigrationManager extends BaseLockssDaemonManager
     }
   }
 
-  public void setIsMigrating(boolean isMigrating) throws IOException {
-    if (isMigrationInDebugMode()) {
-      log.debug("Not setting isMigrating because in debug mode");
-      return;
+  public void setInMigrationMode(boolean inMigrationMode) throws IOException {
+    if (inMigrationMode) {
+      if (!isIrrevocableMigrationEnabled) {
+        log.debug("Not setting inMigrationMode because doing a dry run");
+        return;
+      }
+      if (isMigrationInDebugMode()) {
+        log.debug("Not setting inMigrationMode because in debug mode");
+        return;
+      }
     }
     Configuration mCfg = cfgMgr.newConfiguration();
-    mCfg.put(MigrationManager.PARAM_IS_MIGRATING, String.valueOf(isMigrating));
+    mCfg.put(MigrationManager.PARAM_IS_IN_MIGRATION_MODE,
+             String.valueOf(inMigrationMode));
     cfgMgr.modifyCacheConfigFile(mCfg,
         ConfigManager.CONFIG_FILE_MIGRATION, CONFIG_FILE_MIGRATION_HEADER);
   }

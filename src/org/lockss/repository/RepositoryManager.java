@@ -445,7 +445,7 @@ public class RepositoryManager
         deleteThreadDeadline.expire();
       }
 
-      if (changedKeys.contains(MigrationManager.PARAM_IS_MIGRATING) ||
+      if (changedKeys.contains(MigrationManager.PARAM_IS_IN_MIGRATION_MODE) ||
           changedKeys.contains(MigrateContent.PARAM_DELETE_AFTER_MIGRATION) ||
           changedKeys.contains(PARAM_MOVE_DELETED_AUS_TO)) {
 
@@ -453,15 +453,17 @@ public class RepositoryManager
             PARAM_IRREVOCABLE_MIGRATION_ENABLED,
             DEFAULT_IRREVOCABLE_MIGRATION_ENABLED);
 
-        boolean isMigrating = config.getBoolean(
-            MigrationManager.PARAM_IS_MIGRATING,
-            MigrationManager.DEFAULT_IS_MIGRATING);
+        boolean inMigrationMode = config.getBoolean(
+            MigrationManager.PARAM_IS_IN_MIGRATION_MODE,
+            MigrationManager.DEFAULT_IS_IN_MIGRATION_MODE);
 
         boolean deleteAusAfterMigration = config.getBoolean(
             MigrateContent.PARAM_DELETE_AFTER_MIGRATION,
             MigrateContent.DEFAULT_DELETE_AFTER_MIGRATION);
 
-        if (isIrrevocableMigrationEnabled && isMigrating && deleteAusAfterMigration
+        if (isIrrevocableMigrationEnabled
+            && inMigrationMode
+            && deleteAusAfterMigration
             && !StringUtil.isNullString(paramMoveDeletedAusTo)) {
           startOrKickDeleteAusThread();
         } else {

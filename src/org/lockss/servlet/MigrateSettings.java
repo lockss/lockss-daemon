@@ -266,7 +266,7 @@ public class MigrateSettings extends LockssServlet {
               mCfg = mCfg.copy();
               mCfg.removeConfigTree(V2_PREFIX);
             }
-            migrationMgr.setIsMigrating(false);
+            migrationMgr.setInMigrationMode(false);
             dbPass = null;
           }
 
@@ -280,7 +280,7 @@ public class MigrateSettings extends LockssServlet {
             dbError = "Derby not supported";
           } else if (StringUtil.isNullString(dbPass)) {
             dbError = "Missing database password";
-          } else if (!migrationMgr.isDaemonMigrating() || migrationMgr.isMigrationInDebugMode()) {
+          } else if (!migrationMgr.isInMigrationMode() || migrationMgr.isMigrationInDebugMode()) {
             // Populate remaining migration configuration parameters
             mCfg.put(V2_DOT + DbManager.PARAM_DATASOURCE_PASSWORD, dbPass);
             mCfg.put(MigrationManager.PARAM_IRREVOCABLE_MIGRATION_ENABLED,
@@ -349,7 +349,7 @@ public class MigrateSettings extends LockssServlet {
     layoutErrorBlock(page);
     ServletUtil.layoutExplanationBlock(page, "");
     page.add(!migrationMgr.isMigrationInDebugMode() &&
-             (irrevocableMigrationEnabled && migrationMgr.isDaemonMigrating()) ?
+             (irrevocableMigrationEnabled && migrationMgr.isInMigrationMode()) ?
         makeDisplayCfg() : makeForm());
     endPage(page);
   }
@@ -425,7 +425,7 @@ public class MigrateSettings extends LockssServlet {
     if (!migrationMgr.isMigrationInDebugMode()) {
       // Do not allow user to disable irrevocable migration settings
       // once migration has started
-      if (irrevocableMigrationEnabled && migrationMgr.isDaemonMigrating()) {
+      if (irrevocableMigrationEnabled && migrationMgr.isInMigrationMode()) {
         irrevocableCheckbox.attribute("disabled");
       }
     }
@@ -753,7 +753,7 @@ public class MigrateSettings extends LockssServlet {
 
     // Internal migration control
     mCfg.put(MigrationManager.PARAM_IS_MIGRATOR_CONFIGURED, "true");
-    mCfg.put(MigrationManager.PARAM_IS_MIGRATING, "false");
+    mCfg.put(MigrationManager.PARAM_IS_IN_MIGRATION_MODE, "false");
     mCfg.put(MigrationManager.PARAM_IS_DB_MOVED, "false");
 
     // Migration target configuration

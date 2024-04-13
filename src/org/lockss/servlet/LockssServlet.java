@@ -613,9 +613,9 @@ public abstract class LockssServlet extends HttpServlet
     return d.isInNav(this) && isServletDisplayed(d);
   }
 
-  protected boolean isDaemonMigrating() {
+  protected boolean isInMigrationMode() {
     return migrationMgr.isIrrevocableMigrationEnabled() &&
-           migrationMgr.isDaemonMigrating();
+           migrationMgr.isInMigrationMode();
   }
 
   protected boolean isDisallowInMigration() {
@@ -623,7 +623,7 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   protected boolean isDisallowInMigration(ServletDescr d) {
-    return isDaemonMigrating() && d.isDisallowInMigration();
+    return isInMigrationMode() && d.isDisallowInMigration();
   }
 
   protected boolean isDuplicateInMigration() {
@@ -631,7 +631,7 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   protected boolean isDuplicateInMigration(ServletDescr d) {
-    return isDaemonMigrating() && d.isDuplicateInMigration();
+    return isInMigrationMode() && d.isDuplicateInMigration();
   }
 
   // Called when a servlet doesn't get the parameters it expects/needs
@@ -1347,8 +1347,12 @@ public abstract class LockssServlet extends HttpServlet
     if (isDuplicateInMigration()) {
       String dupstr = "This information has already been migrated.  Any changes made here should also be made to %s in your LOCKSS 2.x instance.";
       ServletUtil.addRed(composite, v2ServletLink(dupstr));
-    } else if (isDaemonMigrating()) {
-      String migstr = "This LOCKSS 1.x instance is migrating content to LOCKSS 2.x.";
+    } else if (isInMigrationMode()) {
+      String prefix = "This LOCKSS 1.x instance is in migration mode";
+      String migstr = prefix +
+        (migrationMgr.isRunning()
+         ? " and is actively mograting content to LOCKSS 2.x."
+         : " but the migrator is not currently running");
       txt = errMsg == null ? migstr : migstr + "\n" + errMsg;
     }
 
