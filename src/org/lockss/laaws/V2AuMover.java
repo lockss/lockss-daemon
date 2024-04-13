@@ -1861,6 +1861,10 @@ public class V2AuMover {
       this.au = au;
       return this;
     }
+
+    public String toString() {
+      return "[Args: " + opType + "]";
+    }
   }
 
   static class ServiceUnavailableException extends IOException {

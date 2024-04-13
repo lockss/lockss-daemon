@@ -47,7 +47,7 @@ public class MigrateSettings extends LockssServlet {
       "The username used to connect to the rest interface of the V2 services.";
   private static final String FOOTNOTE_PASSWORD =
       "The password used to connect to the rest interface of the V2 services.";
-  static final String RESET_CONFIRMATION_MSG = "If migration is resumeed it will start over from the beginning.  %sDo you want to proceed?";
+  static final String RESET_CONFIRMATION_MSG = "If migration is resumed it will start over from the beginning.  %sDo you want to proceed?";
   static final String RESET_ALREADY_DELETED = "Any AUs already deleted after migration will not be included.  ";
 
   static final String DEFAULT_HOSTNAME = "localhost";

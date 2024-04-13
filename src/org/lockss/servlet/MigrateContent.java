@@ -62,7 +62,7 @@ public class MigrateContent extends LockssServlet {
 
   static Logger log = Logger.getLogger("MigrateContent");
 
-  static final String SKIP_FINISHED_FOOT = "Unchedking this may result in many spurious verify errors as the content or state of previously copied AUs may have changed.";
+  static final String SKIP_FINISHED_FOOT = "Uncheding this may result in many spurious verify errors as the content or state of previously copied AUs may have changed.";
 
   static final String PREFIX = Configuration.PREFIX + "v2.migrate.";
   public static final String PARAM_ENABLE_MIGRATION = PREFIX + "enabled";

@@ -271,7 +271,7 @@ public class DBMover extends Worker {
         curSize = rs.getLong(1);
       }
     } catch (SQLException ex) {
-      String err = "DBMover Connection to PostgreSQL failed or error executing query to get size.";
+      String err = "DBMover Connection to PostgreSQL failed or error executing query to get size";
       log.error(err,ex);
       String msg = err+": " +ex.getMessage();
       auMover.logReportAndError(msg);
