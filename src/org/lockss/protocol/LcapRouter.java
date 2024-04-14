@@ -75,6 +75,14 @@ public class LcapRouter
   private File dataDir = null;
   private PeerIdentity migrateTo = null;
 
+  @Override
+  public void initService(LockssDaemon daemon) {
+    super.initService(daemon);
+    idMgr = daemon.getIdentityManager();
+    pluginMgr = daemon.getPluginManager();
+  }
+
+  @Override
   public void startService() {
     super.startService();
     LockssDaemon daemon = getDaemon();
@@ -101,8 +109,6 @@ public class LcapRouter
       log.warning("No stream comm");
       scomm = null;
     }
-    idMgr = daemon.getIdentityManager();
-    pluginMgr = daemon.getPluginManager();
   }
 
   public void stopService() {
