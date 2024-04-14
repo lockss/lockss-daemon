@@ -61,8 +61,8 @@ public class MigrationManager extends BaseLockssDaemonManager
   static final String STATUS_ERRORS = "errors";
   static final String STATUS_PROGRESS = "progress";
 
-  public static final String PARAM_IRREVOCABLE_MIGRATION_ENABLED = PREFIX + "irrevocableMigrationEnabled";
-  public static final boolean DEFAULT_IRREVOCABLE_MIGRATION_ENABLED = false;
+  public static final String PARAM_DRY_RUN_ENABLED = PREFIX + "dryRunEnabled";
+  public static final boolean DEFAULT_DRY_RUN_ENABLED = false;
   public static final String PARAM_IS_MIGRATOR_CONFIGURED = PREFIX + "isConfigured";
   public static final boolean DEFAULT_IS_MIGRATOR_CONFIGURED = false;
   public static final String PARAM_DEBUG_MODE = PREFIX + "debug";
@@ -82,7 +82,7 @@ public class MigrationManager extends BaseLockssDaemonManager
   private String idleError;
   private long startTime = 0;
 
-  boolean isIrrevocableMigrationEnabled;
+  boolean isDryRun;
   boolean isInMigrationMode;
   boolean isMigrationInDebugMode;
   boolean isDeleteMigratedAus;
@@ -101,8 +101,8 @@ public class MigrationManager extends BaseLockssDaemonManager
     super.stopService();
   }
 
-  public boolean isIrrevocableMigrationEnabled() {
-    return isIrrevocableMigrationEnabled;
+  public boolean isDryRun() {
+    return isDryRun;
   }
 
   public boolean isInMigrationMode() {
@@ -137,8 +137,8 @@ public class MigrationManager extends BaseLockssDaemonManager
         m.setConfig(config, oldConfig, changedKeys);
       }
 
-      isIrrevocableMigrationEnabled = config.getBoolean(
-          PARAM_IRREVOCABLE_MIGRATION_ENABLED, DEFAULT_IRREVOCABLE_MIGRATION_ENABLED);
+      isDryRun = config.getBoolean(
+          PARAM_DRY_RUN_ENABLED, DEFAULT_DRY_RUN_ENABLED);
       isInMigrationMode =
           config.getBoolean(PARAM_IS_IN_MIGRATION_MODE,
                             DEFAULT_IS_IN_MIGRATION_MODE);
@@ -149,8 +149,8 @@ public class MigrationManager extends BaseLockssDaemonManager
           MigrateContent.DEFAULT_DELETE_AFTER_MIGRATION);
       dsClassName = config.get(DbManager.PARAM_DATASOURCE_CLASSNAME);
 
-      if (!isIrrevocableMigrationEnabled && isDeleteMigratedAus) {
-        log.warning("isIrrevocableMigrationEnabled is false but isDeleteMigrateAus is true; setting it to false");
+      if (isDryRun && isDeleteMigratedAus) {
+        log.warning("isDryRun is true but isDeleteMigrateAus is true; setting it to false");
         isDeleteMigratedAus = false;
       }
     }
@@ -158,7 +158,7 @@ public class MigrationManager extends BaseLockssDaemonManager
 
   public void setInMigrationMode(boolean inMigrationMode) throws IOException {
     if (inMigrationMode) {
-      if (!isIrrevocableMigrationEnabled) {
+      if (isDryRun) {
         log.debug("Not setting inMigrationMode because doing a dry run");
         return;
       }

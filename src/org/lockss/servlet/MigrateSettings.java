@@ -62,7 +62,7 @@ public class MigrateSettings extends LockssServlet {
 
   static final String KEY_DELETED_AUS_DIR = "deletedAusDir";
   static final String KEY_DELETE_AUS_INTERVAL = "deleteAusInterval";
-  static final String KEY_IRREVOCABLE_MIGRATION_ENABLED = "irrevocableMigrationEnabled";
+  static final String KEY_DRY_RUN_ENABLED = "dryRunEnabled";
   static final String KEY_DELETE_AUS = "enableDeleteAus";
 
   static final String KEY_ACTION = "action";
@@ -80,7 +80,7 @@ public class MigrateSettings extends LockssServlet {
   Configuration mCfg;
   String dbPass;
 
-  boolean irrevocableMigrationEnabled;
+  boolean dryRunEnabled;
   boolean isDeleteAusEnabled;
   boolean isTargetConfigFetched;
   boolean isMigrationConfigured;
@@ -135,9 +135,9 @@ public class MigrateSettings extends LockssServlet {
     userPass = cfg.get(MigrateContent.PARAM_PASSWORD);
 
     // Migration options
-    irrevocableMigrationEnabled = cfg.getBoolean(
-        MigrationManager.PARAM_IRREVOCABLE_MIGRATION_ENABLED,
-        MigrationManager.DEFAULT_IRREVOCABLE_MIGRATION_ENABLED);
+    dryRunEnabled = cfg.getBoolean(
+        MigrationManager.PARAM_DRY_RUN_ENABLED,
+        MigrationManager.DEFAULT_DRY_RUN_ENABLED);
 
     isDeleteAusEnabled = cfg.getBoolean(
         MigrateContent.PARAM_DELETE_AFTER_MIGRATION,
@@ -161,8 +161,8 @@ public class MigrateSettings extends LockssServlet {
     dbPass = getSessionAttribute(KEY_DATABASE_PASS, null);
 
     // Migration options
-    irrevocableMigrationEnabled = getSessionAttribute(
-        KEY_IRREVOCABLE_MIGRATION_ENABLED, MigrationManager.DEFAULT_IRREVOCABLE_MIGRATION_ENABLED);
+    dryRunEnabled = getSessionAttribute(
+        KEY_DRY_RUN_ENABLED, MigrationManager.DEFAULT_DRY_RUN_ENABLED);
 
     isDeleteAusEnabled = getSessionAttribute(
         KEY_DELETE_AUS, MigrateContent.DEFAULT_DELETE_AFTER_MIGRATION);
@@ -182,7 +182,7 @@ public class MigrateSettings extends LockssServlet {
     dbPass = getParameter(KEY_DATABASE_PASS);
 
     // Migration configuration
-    irrevocableMigrationEnabled = hasParameter(KEY_IRREVOCABLE_MIGRATION_ENABLED);
+    dryRunEnabled = hasParameter(KEY_DRY_RUN_ENABLED);
     isDeleteAusEnabled = hasParameter(KEY_DELETE_AUS);
   }
 
@@ -283,8 +283,8 @@ public class MigrateSettings extends LockssServlet {
           } else if (!migrationMgr.isInMigrationMode() || migrationMgr.isMigrationInDebugMode()) {
             // Populate remaining migration configuration parameters
             mCfg.put(V2_DOT + DbManager.PARAM_DATASOURCE_PASSWORD, dbPass);
-            mCfg.put(MigrationManager.PARAM_IRREVOCABLE_MIGRATION_ENABLED,
-                String.valueOf(irrevocableMigrationEnabled));
+            mCfg.put(MigrationManager.PARAM_DRY_RUN_ENABLED,
+                String.valueOf(dryRunEnabled));
             mCfg.put(MigrateContent.PARAM_DELETE_AFTER_MIGRATION, String.valueOf(isDeleteAusEnabled));
 
             if (isDeleteAusEnabled) {
@@ -334,7 +334,7 @@ public class MigrateSettings extends LockssServlet {
     session.setAttribute(KEY_CFGSVC_UI_PORT, cfgUiPort);
     session.setAttribute(KEY_V2_USERNAME, userName);
     session.setAttribute(KEY_V2_PASSWORD, userPass);
-    session.setAttribute(KEY_IRREVOCABLE_MIGRATION_ENABLED, irrevocableMigrationEnabled);
+    session.setAttribute(KEY_DRY_RUN_ENABLED, dryRunEnabled);
     session.setAttribute(KEY_DELETE_AUS, isDeleteAusEnabled);
     session.setAttribute(KEY_MIGRATION_CONFIG, mCfg);
   }
@@ -352,7 +352,7 @@ public class MigrateSettings extends LockssServlet {
     layoutErrorBlock(page);
     ServletUtil.layoutExplanationBlock(page, "");
     page.add(!migrationMgr.isMigrationInDebugMode() &&
-             (irrevocableMigrationEnabled && migrationMgr.isInMigrationMode()) ?
+             (!dryRunEnabled && migrationMgr.isInMigrationMode()) ?
         makeDisplayCfg() : makeForm());
     endPage(page);
   }
@@ -419,24 +419,23 @@ public class MigrateSettings extends LockssServlet {
 
     addSection(tbl, "Migration Options");
 
-    Input irrevocableCheckbox = addCheckboxToTable(tbl, "Perform irrevocable migration",
-        KEY_IRREVOCABLE_MIGRATION_ENABLED, irrevocableMigrationEnabled);
+    Input dryRunCheckbox = addCheckboxToTable(tbl, "Perform dry run migration",
+        KEY_DRY_RUN_ENABLED, dryRunEnabled);
 
     Input deleteAfterCheckbox = addCheckboxToTable(tbl, "Delete AUs after migration",
         KEY_DELETE_AUS, isDeleteAusEnabled);
 
     if (!migrationMgr.isMigrationInDebugMode()) {
-      // Do not allow user to disable irrevocable migration settings
-      // once migration has started
-      if (irrevocableMigrationEnabled && migrationMgr.isInMigrationMode()) {
-        irrevocableCheckbox.attribute("disabled");
+      // Do not allow user to select dry run once migration has started
+      if (!dryRunEnabled && migrationMgr.isInMigrationMode()) {
+        dryRunCheckbox.attribute("disabled");
       }
     }
-    if (!irrevocableMigrationEnabled) {
+    if (dryRunEnabled) {
       deleteAfterCheckbox.attribute("disabled");
     }
 
-    setupToggleGroup(irrevocableCheckbox, deleteAfterCheckbox);
+    setupToggleGroup(dryRunCheckbox, deleteAfterCheckbox);
 
     // Advanced migration options - only in debug mode
     if (migrationMgr.isMigrationInDebugMode()) {
@@ -482,7 +481,7 @@ public class MigrateSettings extends LockssServlet {
 
     // Setup onChange on toggle element
     toggleElem.attribute("onchange",
-        "toggleGroupElements(this,'" + cssClass + "')");
+        "toggleGroupElements(this,'" + cssClass + "',true)");
 
     for (Input elem : groupElems) {
       elem.cssClass(cssClass);
@@ -517,8 +516,8 @@ public class MigrateSettings extends LockssServlet {
 
     addSection(tbl, "Migration Options");
 
-    addDisabledCheckboxToTable(tbl, "Perform irrevocable migration",
-        KEY_IRREVOCABLE_MIGRATION_ENABLED, irrevocableMigrationEnabled);
+    addDisabledCheckboxToTable(tbl, "Perform dry run migration",
+        KEY_DRY_RUN_ENABLED, dryRunEnabled);
     addDisabledCheckboxToTable(tbl, "Delete AUs after migration",
         KEY_DELETE_AUS, isDeleteAusEnabled);
 

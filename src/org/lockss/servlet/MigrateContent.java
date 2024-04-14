@@ -79,6 +79,7 @@ public class MigrateContent extends LockssServlet {
 
   public static final String PARAM_DEFAULT_OPTYPE = PREFIX + "defaultOpType";
   static final OpType DEFAULT_DEFAULT_OPTYPE = OpType.CopyOnly;
+  static final String BUTTON_SPACE = "&nbsp;";
 
   /**
    * If true, the verify step will perform a byte-by-byte comparison
@@ -443,10 +444,11 @@ public class MigrateContent extends LockssServlet {
     tbl.newRow();
     tbl.newCell(CENTERED_CELL);
     // Input start = new Input(Input.Submit, KEY_ACTION, ACTION_START);
-    String lbl = migrationMgr.isIrrevocableMigrationEnabled() ?
-        "Start Irrevocable Migration" : "Start Migration";
+    String lbl = migrationMgr.isDryRun() ?
+        "Start Dry Run Migration" : "Start Migration";
     ServletUtil.layoutSubmitButton(this, tbl, KEY_ACTION, ACTION_START, lbl, false, false);
     Input abort = new Input(Input.Submit, KEY_ACTION, ACTION_ABORT);
+    tbl.add(BUTTON_SPACE);
     tbl.add(abort);
     // Advanced migration options - only in debug mode
     if (migrationMgr.isMigrationInDebugMode()) {
@@ -454,9 +456,9 @@ public class MigrateContent extends LockssServlet {
       Input copyConfig = new Input(Input.Submit, KEY_ACTION, ACTION_COPY_CONFIG);
       tbl.add("<br>");
       tbl.add(copyDb);
+      tbl.add(BUTTON_SPACE);
       tbl.add(copyConfig);
     }
-
 
     frm.add(tbl);
     comp.add(frm);
