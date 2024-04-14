@@ -798,7 +798,6 @@ public class V2AuMover {
           movePluginAus(args);
         } else {
           // else copy all AUs (that match sel pattern)
-          migrationMgr.setIsMigrating(true);
           moveAllAus(args);
         }
         waitUntilDone();
@@ -922,7 +921,8 @@ public class V2AuMover {
   }
 
   /** Start/enqueue all AUs in auMoveQueue */
-  private void moveQueuedAus() {
+  private void moveQueuedAus() throws IOException {
+    migrationMgr.setInMigrationMode(true);
     ausLatch = new CountUpDownLatch(1, "AU");
     currentStatus = STATUS_RUNNING;
     totalAusToMove = auMoveQueue.size();
@@ -941,9 +941,9 @@ public class V2AuMover {
 
   private void setAuMigrationState(ArchivalUnit au,
                                    AuState.MigrationState state) {
-    // Return if we're not migrating or if we're in debug mode
-    if (!(migrationMgr.isIrrevocableMigrationEnabled() ||
-          migrationMgr.isMigrationInDebugMode())) {
+    // Do nothing if dry run or debug mode
+    if (!migrationMgr.isIrrevocableMigrationEnabled() ||
+        migrationMgr.isMigrationInDebugMode()) {
       return;
     }
 

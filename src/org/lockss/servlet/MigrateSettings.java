@@ -312,14 +312,17 @@ public class MigrateSettings extends LockssServlet {
           }
           break;
         case ACTION_RESET_MIGRATION_STATE:
-          migrationMgr.resetAllMigrationState();
-//           statusMsg = "All AUs and databases reset to &quot;not migrated&quot; state";
-          migrationMgr.setIsDbMoved(false);
-          migrationMgr.setIsMigrating(false);
-          statusMsg = "All AUs and databases reset to \"not migrated\" state";
+          try {
+            migrationMgr.resetAllMigrationState();
+            statusMsg = "All AUs and databases reset to \"not migrated\" state";
+          } catch (IllegalStateException e) {
+            errMsg = e.getMessage();
+          } catch (IOException e) {
+            errMsg = "An error occurred while resetting migration state: " + e;
+          }
           break;
         default:
-          errMsg = "Unknown action:" + action;
+          errMsg = "Unknown action: " + action;
       }
     }
 

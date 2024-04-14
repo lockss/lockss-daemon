@@ -123,7 +123,7 @@ public class MigrateContent extends LockssServlet {
   boolean defaultCompare = DEFAULT_DEFAULT_COMPARE;
   OpType opType;
   boolean isCompareContent;
-  boolean isSkipFinished;
+  boolean isSkipFinished = true;
   boolean isMigratorConfigured;
   List<String> auSelectFilter;
   List<Pattern> auSelectPatterns;
@@ -437,7 +437,7 @@ public class MigrateContent extends LockssServlet {
                      isCompareContent));
     tbl.add("&nbsp;&nbsp;");
     tbl.add(checkBox("Skip already-copied AUs" + addFootnote(SKIP_FINISHED_FOOT),
-                     "true", KEY_SKIP_FINISHED, true));
+                     "true", KEY_SKIP_FINISHED, isSkipFinished));
 
 
     tbl.newRow();

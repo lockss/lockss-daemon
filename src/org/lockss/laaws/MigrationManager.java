@@ -114,7 +114,11 @@ public class MigrationManager extends BaseLockssDaemonManager
   }
 
   public boolean isDeleteMigratedAus() {
-    return isDeleteMigratedAus;
+    return !isMigrationInDebugMode && isInMigrationMode && isDeleteMigratedAus;
+  }
+
+  public boolean isDeactivateMigratedAus() {
+    return !isMigrationInDebugMode && isInMigrationMode && !isDeleteMigratedAus;
   }
 
   public boolean isTargetPostgres() {
@@ -222,7 +226,7 @@ public class MigrationManager extends BaseLockssDaemonManager
     return stat;
   }
 
-  private boolean isRunning() {
+  public boolean isRunning() {
     return mover != null && mover.isRunning();
   }
 
@@ -244,14 +248,19 @@ public class MigrationManager extends BaseLockssDaemonManager
     mover.abortCopy();
   }
 
-  public void resetAllMigrationState() {
+  public void resetAllMigrationState()
+      throws IllegalStateException, IOException{
+    if (isRunning()) {
+      throw new IllegalStateException("Migration state cannot be reset while migration is running.  Please abort the current operation first.");
+    }
     for (ArchivalUnit au : pluginMgr.getAllAus()) {
       AuState aus = AuUtil.getAuState(au);
       if (aus != null) {
         aus.setMigrationState(MigrationState.NotStarted);
       }
     }
-
+    setIsDbMoved(false);
+    setInMigrationMode(false);
   }
 
   public class Runner extends LockssRunnable {
