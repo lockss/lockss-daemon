@@ -2,8 +2,8 @@
   publisher <
     name = OAPEN ;
     info[contract] = 2023 ;
-    info[back] = 2020 ;
-    info[tester] = 5 ;
+    info[back] = 1975 ;
+    info[tester] = 8 ;
     info[platform] = Custom. See LXPUB-718
   >
     
@@ -19,27 +19,428 @@
       >
 
     au < frozen ; exists ; 2018 ; ; Kant und die Imagination der Tiere ; Konstanz University Press ; handle/20.500.12657/41485 ; >
-    au < frozen ; exists ; 2008 ; ; Distance og Involverethed ; Aalborg University Press ; handle/20.500.12657/34791 ; >
-    au < frozen ; exists ; 2020 ; ; Beltraneja ; Academia Peruana de la Lengua ; handle/20.500.12657/49951 ; >
+    au < frozen ; exists ; 2008 ; 9788773079348 ; Distance og Involverethed: Et tema i eksistenstænkning og eksistensdigtning ; Aalborg University Press ; handle/20.500.12657/34791 ; >
+    au < frozen ; exists ; 2020 ; 9786124159718 ; Beltraneja ; Academia Peruana de la Lengua ; handle/20.500.12657/49951 ; >
 
-#These titles and handles don't match.
-#    au < exists ; exists ;  ; Schrijverschap in de Belgische belle époque. Een sociaal-culturele geschiedenis ; handle/20.500.12657/55803 ; >
-#    au < exists ; exists ;  ; Vergängliche Kunst und fortwährende Macht ; handle/20.500.12657/51448 ; >
-#    au < exists ; exists ;  ; Magnifying perspectives ; handle/20.500.12657/33878 ; >
-#    au < exists ; exists ;  ; Farming as Financial Asset ; handle/20.500.12657/41509 ; >
-#    au < exists ; exists ;  ; The Rise of State Capital ; handle/20.500.12657/34840 ; >
-#    au < exists ; exists ;  ; Populationen – Zeit-Räume – Protokollieren ; handle/20.500.12657/53092 ; >
-#    au < exists ; exists ;  ; Traumata ; handle/20.500.12657/49860 ; >
-#    au < exists ; exists ;  ; Populationen - Zeit-Räume - Protokollieren ; handle/20.500.12657/34594 ; >
-#    au < exists ; exists ;  ; Approaches to World Literature ; handle/20.500.12657/41479 ; >
-#    au < exists ; exists ;  ; Data Mining in MRO ; handle/20.500.12657/54077 ; >
-#    au < exists ; exists ;  ; The Many Faces of Appalachia ; handle/20.500.12657/49963 ; >
-#    au < exists ; exists ;  ; Bilderbuch-Heimkehr? Remigration im Kontext ; handle/20.500.12657/33115 ; >
-#    au < exists ; exists ;  ; Rund um Beethoven ; handle/20.500.12657/49951 ; >
-#    au < exists ; exists ;  ; Gli altri noi ; handle/20.500.12657/31283 ; >
-#    au < exists ; exists ;  ; Unwiederholbares Gottessiegel ; handle/20.500.12657/30752 ; >
-#    au < exists ; exists ;  ; Homo Novus ; handle/20.500.12657/32367 ; >
-#    au < exists ; exists ;  ; Alles kann, nichts muss?! ; handle/20.500.12657/61716 ; >
+    au < manifest ; exists ; 2019 ;  ; The Political Carousel: Elite Powersharing, Political Instability and the Allocation of Senior Government Posts in Africa ; University of Sussex ; handle/20.500.12657/42789 ; >
+    au < manifest ; exists ; 2018 ; 9786054642762 ; Life is Short, Art Long: The Art of Healing in Byzantium : New Perspectives ; Istanbul Research Institute ; handle/20.500.12657/48632 ; >
+    au < manifest ; exists ; 2015 ; 9783868592191 ; Six Canonical Projects by Rem Koolhaas: Essays on the History of Ideas ; jovis Verlag ; handle/20.500.12657/33109 ; >
+    au < manifest ; exists ; 2021 ; 9788877139207||9788877139269 ; Animali maravigliosi: Orientalismo e animali esotici a Firenze in epoca tardogotica e rinascimentale: conoscenza, immaginario, simbologia ; Edizioni Casagrande ; handle/20.500.12657/51448 ; >
+    au < manifest ; exists ; 2011 ; 9781608010622 ; Global Austria ; innsbruck university press / University of New Orleans Press ; handle/20.500.12657/33878 ; >
+    au < manifest ; exists ; 2019 ;  ; Volkspoesie versus Kunstpoesie ; Universitätsverlag Winter ; handle/20.500.12657/41509 ; >
+    au < manifest ; exists ; 2006 ; 9069845016 ; Archiveren van Digitaal Academisch Erfgoed, een verslag als voorbeeld ; DANS ; handle/20.500.12657/34840 ; >
+    au < manifest ; exists ; 2021 ; 9783839456576||9783732856572||9783837656572 ; Music and Democracy: Participatory Approaches ; mdwPress ; handle/20.500.12657/53092 ; >
+    au < manifest ; exists ; 2020 ; 9783037976609 ; Die Kunstdenkmäler des Kantons St. Gallen VI: Die Region Werdenberg ; Gesellschaft für Schweizerische Kunstgeschichte GSK ; handle/20.500.12657/49860 ; >
+    au < manifest ; exists ; 2021 ; 9789612864972||9789612864989 ; Über Sprachen aus der Perspektive von Gymnasiast*innen aus Slowenien und aus der Slowakei ; University of Maribor, University Press ; handle/20.500.12657/50155 ; >
+    au < manifest ; exists ; 2018 ;  ; La Caméra imaginaire ; Georg Editeur ; handle/20.500.12657/41479 ; >
+    au < manifest ; exists ; 2020 ; 9788892900431 ; Il ciclo di «Guiron le Courtois», edizione critica diretta da L. Leonardi e R. Trachsler, vol. V: «Roman de Guiron», a cura di Elena Stefanelli ; Edizioni del Galluzzo per la Fondazione Ezio Franceschini ; handle/20.500.12657/49963 ; >
+    au < manifest ; exists ; 2013 ; 9783704665126 ; Protokolle des Ministerrates der Ersten Republik, Kabinett Dr. Kurt Schuschnigg, Band 8 (4. Juni 1937 – 21. Februar 1938) ; Verlag Österreich ; handle/20.500.12657/33115 ; >
+    au < manifest ; exists ; 2019 ; 9781509921430 ; Predictive Sentencing: Normative and Empirical Perspectives ; Hart Publishing ; handle/20.500.12657/48489 ; >
+    au < manifest ; exists ; 2009 ; 9780232527919 ; Bible and Ecology: Rediscovering the Community of Creation ; Darton, Longman + Todd ; handle/20.500.12657/58954 ; >
+    au < manifest ; exists ; 2016 ; 9789185245607||9789185245666 ; Beyond Waters: Archaeology and Environmental History of the Amazonian Inland ; University of Gothenburg - Department of Historical Studies ; handle/20.500.12657/31283 ; >
+    au < manifest ; exists ; 2016 ; 9781783487455 ; Critical Theories of Crises in Europe: From Weimar to the Euro ; Rowman & Littlefield International ; handle/20.500.12657/32367 ; >
+    au < manifest ; exists ; 2014 ; 9783858814517 ; Kosmos: Weltentwürfe im Vergleich ; Scheidegger & Spiess ; handle/20.500.12657/32142 ; >
+    au < manifest ; exists ; 2015 ; 9783851611168 ; Varietates topiorum: Perspektive und Raumerfassung in Landschafts- und Panoramabildern der römischen Wandmalerei vom 1. Jh. v. Chr. bis zum Ende der pompejanischen Stile ; Phoibos Verlag ; handle/20.500.12657/32908 ; >
+    au < manifest ; exists ; 2020 ;  ; Essays on Political Elites and Violence in Changing Political Orders of Middle East and Africa ; University of Sussex ; handle/20.500.12657/42790 ; >
+    au < manifest ; exists ; 2017 ; 9783990123386 ; August Wilhelm Ambros, Musikaufsätze und -rezensionen 1872–1876, Bd. 1: 1872 und 1873 ; Hollitzer ; handle/20.500.12657/30939 ; >
+    au < manifest ; exists ; 2016 ; 9788215026886||9788215026893 ; India's democracies: Diversity, Co-optation, Resistance ; Universiteitsforlaget ; handle/20.500.12657/29645 ; >
+    au < manifest ; exists ; 2016 ; 9781512600766 ; Hemispheric Imaginations: North American Fictions of Latin America ; Dartmouth College Press ; handle/20.500.12657/31757 ; >
+    au < manifest ; exists ; 2021 ; 9789082948134 ; Give peace a chance: on violence and warfare in prehistory and why it matters ; J.Bout&Zn. ; handle/20.500.12657/53280 ; >
+    au < manifest ; exists ; 2022 ; 9789082702552 ; De regio als bestuurlijk schaalniveau ; TIAS School for Business and Society, Tilburg University ; handle/20.500.12657/57679 ; >
+    au < manifest ; exists ; 2011 ; 9780874218114||9781607327110 ; Go East, Young Man: Imagining the American West as the Orient ; Utah State University Press ; handle/20.500.12657/31786 ; >
+    au < manifest ; exists ; 2006 ; 9069844133 ; Past, present and future of historical information science ; DANS ; handle/20.500.12657/34839 ; >
+    au < manifest ; exists ; 2021 ;  ; Rapportage Innovatiecentrum Leiden: Motivatie als motor voor professionalisering ; KBA Nijmegen ; handle/20.500.12657/53397 ; >
+    au < manifest ; exists ; 2018 ;  ; Studies in Multilingualism, Lingua Franca and Lingua Sacra ; Edition Open Access Max Planck Institute for the History of Science ; handle/20.500.12657/25344 ; >
+    au < manifest ; exists ; 2017 ; 9783447107075 ; Adaptive Reuse: Aspects of Creativity in South Asian Cultural History ; Harrassowitz Verlag ; handle/20.500.12657/31886 ; >
+    au < manifest ; exists ; 2018 ;  ; LexArt Words for Painting: (France, Germany, England, The Netherlands, 1600-1750) ; Presses Universitaires de la Méditerranée - PULM ; handle/20.500.12657/42384 ; >
+    au < manifest ; exists ; 2008 ; 9783899584127 ; Das dialektische Verhältnis von Theorie und Praxis in der Pädagogik ; Kassel University Press ; handle/20.500.12657/34788 ; >
+    au < manifest ; exists ; 2012 ; 9781608010929 ; Austrian Lives ; innsbruck university press / University of New Orleans Press ; handle/20.500.12657/33886 ; >
+    au < manifest ; exists ; 2021 ; 9783170381766||9783170381773 ; Defining the Value of Medical Interventions: Normative and Empirical Challenges ; Kohlhammer Verlag ; handle/20.500.12657/54697 ; >
+    au < manifest ; exists ; 2014 ; 9783863120733 ; Rasende Reporter: Eine Kulturgeschichte des Fotojournalismus. Fotografie, Presse und Gesellschaft in Österreich 1890 bis 1945 ; Primus Verlag ; handle/20.500.12657/33113 ; >
+    au < manifest ; exists ; 2010 ; 9782847882124 ; Images des corps / corps des images au cinéma ; ENS Éditions ; handle/20.500.12657/24921 ; >
+    au < manifest ; exists ; 2020 ;  ; The Legacies of Institutionalisation: Disability, Law and Policy in the ‘Deinstitutionalised’ Community ; Hart Publishing ; handle/20.500.12657/47026 ; >
+    au < manifest ; exists ; 2020 ; 9783772057311 ; One Great Family: Domestic Relationships in Samuel Richardson’s Novels ; Narr Francke Attempto Verlag ; handle/20.500.12657/49895 ; >
+    au < manifest ; exists ; 2023 ; 9783943253641||9783943253597 ; Sawt, Bodies, Species: Sonic Pluralism in Morocco ; adocs ; handle/20.500.12657/87354 ; >
+    au < manifest ; exists ; 2009 ;  ; Wie normal ist die Norm? Sprachliche Normen im Spannungsfeld von Sprachwissenschaft, Sprachöffentlichkeit und Sprachdidaktik. ; Kassel University Press ; handle/20.500.12657/34786 ; >
+    au < manifest ; exists ; 2020 ;  ; The Consistory and Social Discipline in Calvin's Geneva ; University of Rochester Press ; handle/20.500.12657/42650 ; >
+    au < manifest ; exists ; 2021 ;  ; Rapportage innovatiecentrum Heerlen: ‘Kijken in elkaars keuken’ ten behoeve van samenwerking tussen peuteropvang en basisschool ; KBA Nijmegen ; handle/20.500.12657/53396 ; >
+    au < manifest ; exists ; 2011 ;  ; Making Room for People: Choice, Voice and Liveability in Residential Areas ; Techne Press ; handle/20.500.12657/34592 ; >
+    au < manifest ; exists ; 2023 ; 9783732867028||9783837667028||9783839467022 ; Travelling Gestures – Elfriede Jelineks Theater der (Tragödien-)Durchquerung ; mdwPress ; handle/20.500.12657/85320 ; >
+    au < manifest ; exists ; 2020 ; 9783412512255 ; Geschichtete Identitäten: (Post-)Imperiales Erzählen und Identitätsbildung im östlichen Europa (Edition 1) ; Böhlau Verlag Köln ; handle/20.500.12657/51590 ; >
+    au < manifest ; exists ; 2014 ; 9782753559530 ; Histoire de la haine: Une passion funeste 1830-1930 ; Presses universitaires de Rennes ; handle/20.500.12657/24923 ; >
+    au < manifest ; exists ; 2019 ; 9783990124147 ; August Wilhelm Ambros Musikaufsätze und -rezensionen 1872–1876, Bd. 2: 1874–1876: Historisch Kritische Ausgabe ; Hollitzer ; handle/20.500.12657/36821 ; >
+    au < manifest ; exists ; 2018 ; 9783990125113 ; Dommusikarchiv Salzburg (A-Sd): Thematischer Katalog der musikalischen Quellen, Reihe A ; Hollitzer ; handle/20.500.12657/29758 ; >
+    au < manifest ; exists ; 2020 ; 9783035802337 ; Pynchon’s Sound of Music ; DIAPHANES ; handle/20.500.12657/49852 ; >
+    au < manifest ; exists ; 2020 ; 9782381490014||9782381490007||9782381490021 ; Comment s’écrit l’autre?: Sources épigraphiques et papyrologiques dans le monde méditerranéen antique ; Ausonius Editions ; handle/20.500.12657/53671 ; >
+    au < manifest ; exists ; 2019 ;  ; Ondernemen in de Open Samenleving ; Boom Uitgevers Den Haag ; handle/20.500.12657/41175 ; >
+    au < manifest ; exists ; 2021 ; 9781800374164||9781800374171 ; National Courts and Preliminary References to the Court of Justice ; Edward Elgar Publishing ; handle/20.500.12657/53405 ; >
+    au < manifest ; exists ; 2017 ; 9780231544269||9780231179942 ; Buddhism and Medicine: An Anthology of Premodern Sources ; Columbia University Press ; handle/20.500.12657/48877 ; >
+    au < manifest ; exists ; 2020 ; 9783849815752 ; Populationen – Zeit-Räume – Protokollieren ; Aisthesis Verlag ; handle/20.500.12657/45848 ; >
+    au < manifest ; exists ; 2010 ; 9781608010257 ; From Empire to Republic: Post-World War I Austria ; innsbruck university press / University of New Orleans Press ; handle/20.500.12657/33879 ; >
+    au < manifest ; exists ; 2017 ;  ; ‘In humanity’s machine’: Prison health and history ; Howard League for Penal Reform ; handle/20.500.12657/47722 ; >
+    au < manifest ; exists ; 2008 ;  ; Anfänge bei Hegel ; Kassel University Press ; handle/20.500.12657/34787 ; >
+    au < manifest ; exists ; 2018 ; 9780567672759 ; Theology and Ecology across the Disciplines: On Care for Our Common Home (Volume 5) ; Bloomsbury ; handle/20.500.12657/52793 ; >
+    au < manifest ; exists ; 2022 ; 9780700633340||9780700633357 ; American Political Parties: Why They Formed, How They Function, and Where They're Headed ; University Press of Kansas ; handle/20.500.12657/54350 ; >
+    au < manifest ; exists ; 2018 ; 9781786604835 ; Existential Medicine: Essays on Health and Illness ; Rowman & Littlefield International ; handle/20.500.12657/48391 ; >
+    au < manifest ; exists ; 2020 ; 9783035516838 ; Zwischen Schul- und Freizeitpädagogik ; hep Verlag ; handle/20.500.12657/49850 ; >
+    au < manifest ; exists ; 2024 ; 9783868543735 ; Eskalation: G20 in Hamburg, Protest und Gewalt ; Hamburger Edition ; handle/20.500.12657/88107 ; >
+    au < manifest ; exists ; 2001 ; 9783706910019 ; Die Sprache: Deutsche Erstausgabe ; Edition Praesens ; handle/20.500.12657/33414 ; >
+    au < manifest ; exists ; 2023 ; 9783739832418||9783739806334||9783739882413 ; Umfragen erstellen und auswerten: kompakt und leicht verständlich für Studierende und junge Forschende ; UVK Verlagsgesellschaft ; handle/20.500.12657/63716 ; >
+    au < manifest ; exists ; 2021 ; 9783826072598 ; Briefroman und Subjektivation: Transformationen der Gattung und des Subjekts und deren Bedeutung für einen subjektivationsorientierten Literaturunterricht (Volume 2) ; Königshausen & Neumann ; handle/20.500.12657/52003 ; >
+    au < manifest ; exists ; 2023 ; 9784866580951||9784866580661 ; International Politics and the Search for Peace ; Japan Publishing Industry for Culture (JPIC) ; handle/20.500.12657/61698 ; >
+    au < manifest ; exists ; 2020 ; 9789633863701||9789633863930||9789633863718 ; The Anatomy of Post-Communist Regimes: A Conceptual Framework ; CEU Press ; handle/20.500.12657/46598 ; >
+    au < manifest ; exists ; 2011 ; 9783110922165 ; Spanien und der Holocaust ; Max Niemeyer Verlag ; handle/20.500.12657/28253 ; >
+    au < manifest ; exists ; 2022 ; 9781906113315 ; The Effable and the Ineffable: The Linguistic Boundaries of Metaphysical Realism ; Winchester University Press ; handle/20.500.12657/58526 ; >
+    au < manifest ; exists ; 2016 ; 9781611689297 ; World Beats ; Dartmouth College Press ; handle/20.500.12657/30045 ; >
+    au < manifest ; exists ; 2020 ; 9783826069451 ; »Über diesem Abgrund«: Studien zur Literatur der Shoah ; Königshausen & Neumann ; handle/20.500.12657/50598 ; >
+    au < manifest ; exists ; 2018 ; 9782367812663 ; Artistic lexicography: forms, uses and issues in Early Modern Europe ; Presses Universitaires de la Méditerranée - PULM ; handle/20.500.12657/29682 ; >
+    au < manifest ; exists ; 2020 ; 9783447199995 ; Siedlungskammer Kilikien: Studien zur Kultur- und Landschaftsgeschichte des Ebenen Kilikien ; Harrassowitz ; handle/20.500.12657/49877 ; >
+    au < manifest ; exists ; 2016 ; 9788877137531 ; Educazione in gioco ; Edizioni Casagrande ; handle/20.500.12657/31738 ; >
+    au < manifest ; exists ; 2020 ; 9783035516265 ; Aneignen in einer historischen Ausstellung: Eine Bestandsaufnahme von Elementen historischen Denkens bei Besuchenden der Ausstellung "14/18 - Die Schweiz und der Grosse Krieg" ; hep Verlag ; handle/20.500.12657/49849 ; >
+    au < manifest ; exists ; 2014 ; 9783495485293 ; Adorno versus Lyotard: Moderne und postmoderne Ästhetik ; Verlag Karl Alber ; handle/20.500.12657/33371 ; >
+    au < manifest ; exists ; 2019 ;  ; Re-Reading Hanslick’s Aesthetics: Die Rezeption Eduard Hanslicks im englischen Sprachraum und ihre diskursiven Grundlagen ; Hollitzer ; handle/20.500.12657/25173 ; >
+    au < manifest ; exists ; 2018 ; 9780814342671||9780814342688 ; Shelter from the Holocaust: Rethinking Jewish Survival in the Soviet Union ; Wayne State University Press ; handle/20.500.12657/30014 ; >
+    au < manifest ; exists ; 2020 ;  ; Wonder, Education, and Human Flourishing: Theoretical, Empirical, and Practical Perspectives ; VU University Press ; handle/20.500.12657/41804 ; >
+    au < manifest ; exists ; 2019 ;  ; Der performative Umgang mit dem Text Ansätze sprechkünstlerischer Probenarbeit im zeitgenössischen Theater ; Theater der Zeit ; handle/20.500.12657/41503 ; >
+    au < manifest ; exists ; 2020 ;  ; La Castañeda Insane Asylum: Narratives of Pain in Modern Mexico ; University of Oklahoma Press ; handle/20.500.12657/42598 ; >
+    au < manifest ; exists ; 2015 ; 9784906267729 ; Tibetan Yoga and Mysticism: A Textual Study of the Yogas of Naropa and Mahamudra Meditation in the Medieval Tradition of Dags po ; The International Institute for Buddhist Studies ; handle/20.500.12657/30522 ; >
+    au < manifest ; exists ; 2017 ;  ; The Ethnographic Case ; Mattering Press ; handle/20.500.12657/25159 ; >
+    au < manifest ; exists ; 2006 ; 9783110944846 ; The Nuremberg Trials: International Criminal Law Since 1945: 60th Anniversary International Conference ; De Gruyter Saur ; handle/20.500.12657/31639 ; >
+    au < manifest ; exists ; 2021 ; 9789066905825 ; Studentenwelzijn in het hoger onderwijs: Een overzichtsstudie van veelbelovende aanpakken voor docenten(teams), opleidingen en instellingen. ; Rijksuniversiteit Groningen (RUG) ; handle/20.500.12657/57763 ; >
+    au < manifest ; exists ; 2015 ; 9781894865395 ; The Emergence of Ukraine: Self-Determination, Occupation, and War in Ukraine, 1917–1922 ; Canadian Institute of Ukrainian Studies Press ; handle/20.500.12657/32934 ; >
+    au < manifest ; exists ; 2017 ; 9783938375778 ; Bilderbuch-Heimkehr? Remigration im Kontext ; Arco ; handle/20.500.12657/31318 ; >
+    au < manifest ; exists ; 2009 ; 9783941003057 ; Geographie kennt keine Grenzen: zum 60. Geburtstag von Peter Jurczek ; Universitätsverlag Chemnitz ; handle/20.500.12657/34778 ; >
+    au < manifest ; exists ; 2017 ; 9780814343852||9780814343869 ; The Genocidal Gaze: From German Southwest Africa to the Third Reich ; Wayne State University Press ; handle/20.500.12657/30011 ; >
+    au < manifest ; exists ; 2021 ; 9789490120450 ; Leiderschap voor onderwijsontwikkeling: van idee naar duurzame plg ; Uitgeverij Phronese ; handle/20.500.12657/53392 ; >
+    au < manifest ; exists ; 2020 ; 9783966270069||9783966270038||9783966270007||9783966270014||9783966270038 ; Beitrag zur Vorbemessung der Biegeverstärkung von Stahlbetonbauteilen mit Rechteckquerschnitt mittels aufgeklebten CFK-Lamellen ; HTWK Leipzig - OA-Hochschulverlag ; handle/20.500.12657/22498 ; >
+    au < manifest ; exists ; 2015 ; 9785934394883 ; ПУТИ РАЗВИТИЯ ЗАПАДНОГО ПЕРЕВОДОВЕДЕНИЯ: От языковой асимметрии к политической ; R. Valent ; handle/20.500.12657/33039 ; >
+    au < manifest ; exists ; 2022 ; 9789464091571 ; Onderwijs, identiteitsontwikkeling bij jongeren en hun omgang met idealen: Een studie naar het ontstaan van radicalisering in de vroege adolescentie en de rol van het onderwijs hierin ; Verwey-Jonker Instituut ; handle/20.500.12657/57757 ; >
+    au < manifest ; exists ; 2010 ;  ; Generationen und Gender in mittelalterlicher und frühneuzeitlicher Literatur ; Bamberg University Press ; handle/20.500.12657/34689 ; >
+    au < manifest ; exists ; 2015 ; 9788855264167 ; World Food Trends and the Future of Food (Volume 6) ; Ledizioni ; handle/20.500.12657/46231 ; >
+    au < manifest ; exists ; 2013 ; 9781782253204||9781782253198||9781782253198 ; Studies in the History of Tax Law, Volume 6 ; Hart Publishing ; handle/20.500.12657/33204 ; >
+    au < manifest ; exists ; 2020 ; 9789012405850 ; Blockchain en smart contracts: Herijking van de rol van de vertrouwde tussenpersoon in de algoritmische samenleving ; SDU ; handle/20.500.12657/53282 ; >
+    au < manifest ; exists ; 2021 ; 9781643361857||9781643361840 ; In the Service of God and Humanity: Conscience, Reason, and the Mind of Martin R. Delany ; University of South Carolina Press ; handle/20.500.12657/47755 ; >
+    au < manifest ; exists ; 2022 ; 9781915808011 ; Ancient Olive Presses and Oil Production: In Cyrenaica (North-East Libya) ; BILNAS British Institute for Libyan & Northern African Studies ; handle/20.500.12657/63736 ; >
+    au < manifest ; exists ; 2018 ; 9781501732720||9781501732737||9781501732744 ; Financial Citizenship: Experts, Publics, and the Politics of Central Banking ; Mario Einaudi Center for International Studies, Cornell University ; handle/20.500.12657/62157 ; >
+    au < manifest ; exists ; 2021 ; 978051890198||9789462909755 ; Methoden van systematische rechtspraakanalyse: Tussen juridische dogmatiek en data science ; Boom Uitgevers Den Haag ; handle/20.500.12657/57756 ; >
+    au < manifest ; exists ; 2012 ;  ; De herkomst van vertrouwen in de rechtsstaat 1993 – 2012: onderzocht via tekstmining van de mediaberichtgeving en analyse van de publieke opinie ; Vrije Universiteit Amsterdam ; handle/20.500.12657/39591 ; >
+    au < manifest ; exists ; 2019 ; 9781626983212 ; An Ecological Theology of Liberation: Salvation and Political Ecology ; Orbis Books ; handle/20.500.12657/60228 ; >
+    au < manifest ; exists ; 2020 ; 9783038911746 ; Direktdemokratische Instrumente als "Anträge aus dem Volk an das Volk": Eine Systematik des direktdemokratischen Verfahrensrechts in der Schweiz ; Dike Verlag AG ; handle/20.500.12657/49864 ; >
+    au < manifest ; exists ; 2015 ; 9782882241412 ; Citoyenneté et réconciliation au Rwanda ; Editions IES ; handle/20.500.12657/33028 ; >
+    au < manifest ; exists ; 2022 ; 9780228011606||9780228013662||9780228011590||9780228011699||9780228010524 ; Religion in Global Health and Development: The Case of Twentieth-Century Ghana ; McGill-Queen’s University Press (mqup) ; handle/20.500.12657/60313 ; >
+    au < manifest ; exists ; 2019 ;  ; Vergängliche Kunst und fortwährende Macht: Die Blijde Inkomst für Erzherzog Ernst von Österreich in Brüssel und Antwerpen, 1594 ; ad picturam Fachverlag für kunstwissenschaftliche Literatur e.K. ; handle/20.500.12657/41428 ; >
+    au < manifest ; exists ; 2008 ;  ; Globalisierung und Integrales Bewusstsein: Der Beitrag Jean Gebsers zu einer neuen Weltsicht ; Novalis Verlag ; handle/20.500.12657/34409 ; >
+    au < manifest ; exists ; 2013 ; 9783050064956 ; Approaches to World Literature ; Akademie Verlag ; handle/20.500.12657/30690 ; >
+    au < manifest ; exists ; 2017 ;  ; Before Consciousness: In Search of the Fundamentals of Mind ; Imprint Academic ; handle/20.500.12657/28393 ; >
+    au < manifest ; exists ; 2016 ; 9780300216554 ; Engines of Truth: Producing Veracity in the Victorian Courtroom ; Yale University Press ; handle/20.500.12657/58522 ; >
+    au < manifest ; exists ; 2011 ; 9782847883251 ; Michel Foucault et le christianisme ; ENS Éditions ; handle/20.500.12657/24910 ; >
+    au < manifest ; exists ; 2018 ; 9781574417456||9781574417456 ; You Shook Me All Campaign Long: Music in the 2016 Presidential Election and Beyond ; University of North Texas Press ; handle/20.500.12657/25954 ; >
+    au < manifest ; exists ; 2006 ;  ; Landscapes Decoded: The origins and development of Cambridgeshire's medieval fields ; University of Hertfordshire Press ; handle/20.500.12657/23410 ; >
+    au < manifest ; exists ; 2022 ; 9783986341305||9783896910783 ; Von Ein- und Ausschlüssen in Europa: Eine ethnographische Studie zu EU-Migration und Wohnungslosigkeit in Deutschland ; Verlag Westfälisches Dampfboot ; handle/20.500.12657/75308 ; >
+    au < manifest ; exists ; 2020 ; 9782372760362 ; Les écrits des Poilus: Miroir du français au début du XXe siècle ; ELiPhi ; handle/20.500.12657/49793 ; >
+    au < manifest ; exists ; 2017 ; 9781512600117 ; Jewish Families in Europe, 1939-Present: History, Representation, and Memory ; Brandeis University Press ; handle/20.500.12657/31716 ; >
+    au < manifest ; exists ; 2008 ; 9781574413717 ; Tonality as Drama: Closure and Interruption in Four Twentieth-Century American Operas ; University of North Texas Press ; handle/20.500.12657/31770 ; >
+    au < manifest ; exists ; 2020 ; 9788884509857 ; Roman de Guiron parte prima ; SISMEL/Edizioni del Galluzzo ; handle/20.500.12657/49961 ; >
+    au < manifest ; exists ; 2016 ; 9781611688856 ; Girls of Liberty ; Brandeis University Press ; handle/20.500.12657/32794 ; >
+    au < manifest ; exists ; 2020 ; 9783826068799 ; West-östliche Wahlverwandtschaften: Hans Bethge und die historischen und ästhetischen Konstellationen um 1900 ; Königshausen & Neumann ; handle/20.500.12657/45830 ; >
+    au < manifest ; exists ; 2023 ; 9783787343591||9783787343584 ; Materialität und Sozialität des selbstbewussten Subjekts: Die Subjektivität des denkenden Lebewesens und sein Widerspruch ; Felix Meiner Verlag ; handle/20.500.12657/63873 ; >
+    au < manifest ; exists ; 2024 ; 9783748935865||9783756000081 ; Soft Law and its Importance in Ensuring Member Statesʼ Compliance with Union Law ; Nomos ; handle/20.500.12657/89515 ; >
+    au < manifest ; exists ; 1985 ; 9781469636863 ; The Many Faces of Appalachia ; Appalachian State University ; handle/20.500.12657/47750 ; >
+    au < manifest ; exists ; 2021 ; 9783849817558 ; Alexander von Humboldt Berlin 1830-1835: Eine Publikationsbiographie ; Aisthesis ; handle/20.500.12657/50589 ; >
+    au < manifest ; exists ; 2011 ; 9788490962466 ; Missions d'évangélisation et circulation des savoirs: XVIe-XVIIIe siècle ; Casa de Velázquez ; handle/20.500.12657/24908 ; >
+    au < manifest ; exists ; 2015 ; 9782753563278 ; Bourdieu et le travail ; Presses universitaires de Rennes ; handle/20.500.12657/24928 ; >
+    au < manifest ; exists ; 2019 ; 9788877138118 ; Le Alpi in movimento: icende del casato dei mercanti migranti Pedrazzini di Campo Vallemaggia (XVIII s.) ; Edizioni Casagrande ; handle/20.500.12657/49957 ; >
+    au < manifest ; exists ; 2022 ;  ; The Diagram as Paradigm: Cross-Cultural Approaches ; Dumbarton Oaks Research Library and Collection ; handle/20.500.12657/60588 ; >
+    au < manifest ; exists ; 2020 ; 9782825711323 ; L'égalité des dotations initiales ; Georg Editeur ; handle/20.500.12657/49802 ; >
+    au < manifest ; exists ; 2019 ; 9781608337941 ; Deep Incarnation: God's Redemptive Suffering with Creatures ; Orbis Books ; handle/20.500.12657/58185 ; >
+    au < manifest ; exists ; 2020 ; 9789463841658 ; Positive design: Delft students design for our well-being Volume 2 ; Delft University of Technology ; handle/20.500.12657/57761 ; >
+    au < manifest ; exists ; 2020 ; 9788882815141 ; La nascita del cantone Ticino: Il ceto dirigente sudalpino allo specchio del mutamento politico tra il 1798 e il 1814 ; Dadò editore ; handle/20.500.12657/49959 ; >
+    au < manifest ; exists ; 2019 ; 9783793099376 ; Familie erzählen: Vererbung in Literatur und Wissenschaft, 1850-1900 ; Rombach Verlag ; handle/20.500.12657/49900 ; >
+    au < manifest ; exists ; 2020 ;  ; Empire and Catastrophe: Decolonization and Environmental Disaster in North Africa and Mediterranean France since 1954 ; University of Nebraska Press ; handle/20.500.12657/37329 ; >
+    au < manifest ; exists ; 2021 ; 9783839456576||9783732856572||9783837656572 ; Music and Democracy: Participatory Approaches ; mdwPress ; handle/20.500.12657/51888 ; >
+    au < manifest ; exists ; 2021 ; 9791032002995 ; La consistance des choses: Peter Fischli, David Weiss et le temps retourné ; Presses universitaires de Provence PUP ; handle/20.500.12657/49967 ; >
+    au < manifest ; exists ; 2022 ;  ; Bekendheid, benutting en effectiviteit van professionaliseringsprikkels in het voortgezet onderwijs: Rapportage Deelstudie 2 ; University of Groningen ; handle/20.500.12657/57540 ; >
+    au < manifest ; exists ; 2018 ; 9782367812694 ; LexArt Les mots de la peinture: France, Allemagne, Angleterre, Pays-Bas, 1600-1750 ; Presses Universitaires de la Méditerranée - PULM ; handle/20.500.12657/29673 ; >
+    au < manifest ; exists ; 2015 ; 9788877137104 ; Dietro al microfono. Intellettuali italiani alla Radio svizzera (1930-1980) ; Edizioni Casagrande ; handle/20.500.12657/32742 ; >
+    au < manifest ; exists ; 2021 ; 9789052201344 ; Naar een betere startpositie op de arbeidsmarkt: Onderzoek naar de aansluiting onderwijs-arbeidsmarkt voor MBO'ers met een migratieachtergrond ; SEO Economisch Onderzoek ; handle/20.500.12657/53257 ; >
+    au < manifest ; exists ; 2022 ; 9789612866112||9789612866136 ; Voles and Lemmings (Arvicolinae) of the Palaearctic Region ; University of Maribor, University Press ; handle/20.500.12657/57647 ; >
+    au < manifest ; exists ; 2016 ; 9789492302137 ; Playful Mapping in the Digital Age ; Institute of Network Cultures ; handle/20.500.12657/29626 ; >
+    au < manifest ; exists ; 2015 ; 9788125059004 ; Health For All: The Journey of Universal Health Coverage ; Orient Blackswan ; handle/20.500.12657/33057 ; >
+    au < manifest ; exists ; 2015 ; 9789814517973||9789814517980 ; Gender and Ageing: Southeast Asian Perspectives ; ISEAS Publishing ; handle/20.500.12657/47842 ; >
+    au < manifest ; exists ; 2020 ; 9783958322042 ; Die Vermessung der Kunstwelt: Quantifizierende Beobachtungen und plurale Ordnungen der Kunst ; Velbrück ; handle/20.500.12657/49949 ; >
+    au < manifest ; exists ; 2014 ;  ; Young Children and Their Parents: Perspectives from Psychoanalytic Infant Observation ; Karnac ; handle/20.500.12657/33368 ; >
+    au < manifest ; exists ; 2018 ; 9789038645209 ; Introduction to microkinetic modeling ; Technische Universiteit Eindhoven ; handle/20.500.12657/53253 ; >
+    au < manifest ; exists ; 2017 ; 9783700182559 ; AcrossBorders I: The New Kingdom Town of Sai Island, Sector SAV1 North ; Austrian Academy of Sciences Press ; handle/20.500.12657/25163 ; >
+    au < manifest ; exists ; 2012 ; 9780874218657||9781607327073 ; Coal in Our Veins: A Personal Journey ; Utah State University Press ; handle/20.500.12657/45675 ; >
+    au < manifest ; exists ; 2020 ;  ; Politics of Value: New Approaches to Early Money and the State: Proceedings of the 19th International Congress of Classical Archaeology ; Propylaeum eBooks ; handle/20.500.12657/45954 ; >
+    au < manifest ; exists ; 2018 ; 9781512601824 ; Ghosts of the African Diaspora: Re-Visioning History, Memory, and Identity ; Dartmouth College Press ; handle/20.500.12657/30660 ; >
+    au < manifest ; exists ; 2009 ;  ; Inter-lektualitet: Læsningens semiotik og etik ; University Press of Southern Denmark ; handle/20.500.12657/34781 ; >
+    au < manifest ; exists ; 2007 ; 9783465035091 ; Von illusionärer Wirklichkeit und wahrer Illusion: Zu Carlo Gozzis "Fiabe teatrali" ; Vittorio Klostermann ; handle/20.500.12657/34442 ; >
+    au < manifest ; exists ; 2020 ;  ; Crossing the Shadow Lines: Essays on the Topicality of Amitav Ghosh’s Modern Classic ; University of Turin ; handle/20.500.12657/53110 ; >
+    au < manifest ; exists ; 2016 ; 9783495487280 ; Dilthey als Wissenschaftsphilosoph ; Verlag Karl Alber ; handle/20.500.12657/32150 ; >
+    au < manifest ; exists ; 2018 ;  ; Der Theatermonolog in den Schauspielen von Hans Sachs und die Literarisierung des Fastnachtspiels ; Narr Francke Attempto ; handle/20.500.12657/41487 ; >
+    au < manifest ; exists ; 2019 ; 9783037975893 ; Die Kunstdenkmäler des Kantons Aargau X: Der Bezirk Laufenburg ; Gesellschaft für Schweizerische Kunstgeschichte GSK ; handle/20.500.12657/49858 ; >
+    au < manifest ; exists ; 2005 ; 9783598440113 ; Corporate Memory: Records and Information Management in the Knowledge Age ; K. G. Saur ; handle/20.500.12657/31666 ; >
+    au < manifest ; exists ; 2023 ; 9783787342020||9783787342013 ; Faktum, Faktizität, Wirklichkeit: Phänomenologische Perspektiven ; Felix Meiner Verlag ; handle/20.500.12657/64097 ; >
+    au < manifest ; exists ; 2019 ; 9782940527083 ; Le mouvement peut-il guérir? Les usages médicaux de la gymnastique au 19ème siècle ; BHMS Editions ; handle/20.500.12657/49826 ; >
+    au < manifest ; exists ; 2019 ;  ; De vele kanten van leesbegrip: Literatuurstudie naar onderwijs in begrijpend lezen in opdracht van het Nationaal Regieorgaan Onderwijsonderzoek en de Inspectie van het Onderwijs ; Erasmus University Rotterdam ; handle/20.500.12657/39480 ; >
+    au < manifest ; exists ; 2017 ; 9780957683495 ; HIV/AIDS and the Prison Service of England & Wales, 1980s-1990s ; London School of Hygiene & Tropical Medicine ; handle/20.500.12657/47720 ; >
+    au < manifest ; exists ; 2008 ; 9788776742836 ; Between Positivism and T.S. Eliot: Imagism and T.E. Hulme ; University Press of Southern Denmark ; handle/20.500.12657/34782 ; >
+    au < manifest ; exists ; 2018 ; 9789463611268 ; Perspectives on treating hypertension in old age: The burden of polypharmacy, risks of treatment and GPs’ treatment probability ; OPTIMA ; handle/20.500.12657/49965 ; >
+    au < manifest ; exists ; 2022 ; 9783946320364 ; Kunstpädagogische Selbstvergewisserung professionell begleiten ; fabrico Verlag ; handle/20.500.12657/63988 ; >
+    au < manifest ; exists ; 2023 ; 9783739882192||9783739806167||9783739832197 ; Natur und Mountainbiken: Umweltwirkung, Angebotsplanung und Besuchermanagement ; UVK Verlagsgesellschaft ; handle/20.500.12657/87134 ; >
+    au < manifest ; exists ; 2001 ; 3897330172 ; Vergessen und verloren: Die Geschichte der österreichischen Chinastudien ; Projektverlag ; handle/20.500.12657/33453 ; >
+    au < manifest ; exists ; 2019 ;  ; Epidemics and the Health of African Nations ; Jacana Media ; handle/20.500.12657/38243 ; >
+    au < manifest ; exists ; 2016 ; 9781512600759 ; Enemies of All Humankind: Fictions of Legitimate Violence ; Dartmouth College Press ; handle/20.500.12657/31759 ; >
+    au < manifest ; exists ; 2023 ; 9784866582467||978486658118 ; Japanese Tea Culture: The Heart and Form of Chanoyu ; Japan Publishing Industry Foundation for Culture (JPIC) ; handle/20.500.12657/76335 ; >
+    au < manifest ; exists ; 2018 ; 9782753574458 ; Le cinéma ou le dernier des arts ; Presses universitaires de Rennes ; handle/20.500.12657/25752 ; >
+    au < manifest ; exists ; 1975 ;  ; Die dünnwandige Gebrauchskeramik vom Magdalensberg: Archäologische Forschungen zu den Grabungen auf dem Magdalensberg 3. Kärntner Museumsschriften 58 ; Verlag des Landesmuseums für Kärnten ; handle/20.500.12657/29405 ; >
+    au < manifest ; exists ; 2022 ; 9788877139245||9788877139302 ; La gratuità si paga: Le metamorfosi nascoste del lavoro ; Edizioni Casagrande ; handle/20.500.12657/52891 ; >
+    au < manifest ; exists ; 2021 ;  ; Ontwikkeling van onderwijsarrangementen voor een succesvolle doorstroom vmbo-mbo-hbo: Onderzoeksrapportage ; KBA Nijmegen ; handle/20.500.12657/57760 ; >
+    au < manifest ; exists ; 2022 ; 9780806190808||9780806190792||9780806192116 ; Japanese Americans at Heart Mountain: Networks, Power, and Everyday Life ; University of Oklahoma Press ; handle/20.500.12657/57770 ; >
+    au < manifest ; exists ; 2021 ; 9788797125144||9788797125151||9788797125175||9788797125168 ; Transformations of the Military Profession and Professionalism in Scandinavia ; Scandinavian Military Studies ; handle/20.500.12657/52518 ; >
+    au < manifest ; exists ; 2021 ; 9781496229687||9781496227782||9781496229670 ; A Civil Society: The Public Space of Freemason Women in France, 1744-1944 ; University of Nebraska Press ; handle/20.500.12657/48280 ; >
+    au < manifest ; exists ; 2019 ; 9783906897363 ; Im Übrigen ging man zu Fuss.: Alltagsmobilität in der Schweiz 1848-1939 ; LIBRUM Publishers & Editors LLC ; handle/20.500.12657/49939 ; >
+    au < manifest ; exists ; 2020 ; 9783719043582 ; Nachträgliche staatliche Einwirkung auf den verwaltungsrechtlichen Vertrag mit Privaten: Eine Untersuchung im Dreieck: Rechtsänderung – Eigentumsgarantie – Vertrauensschutz ; Helbing Lichtenhahn Verlag ; handle/20.500.12657/49885 ; >
+    au < manifest ; exists ; 2018 ; 9781626164734||9781626164741 ; Aquinas on Virtue: A Causal Reading ; Georgetown University Press ; handle/20.500.12657/30020 ; >
+    au < manifest ; exists ; 2022 ; 9781421443461||9781421443454||9781421443447 ; World of Patterns: A Global History of Knowledge ; Johns Hopkins University Press ; handle/20.500.12657/57294 ; >
+    au < manifest ; exists ; 2022 ; 9781912729128||9781912729302||9781912729135||9781912729319 ; Democratic Situations ; Mattering Press ; handle/20.500.12657/87172 ; >
+    au < manifest ; exists ; 2005 ; 9781933565262 ; Born of Clay: Ceramics from the National Museum of the American Indian ; National Museum of the American Indian ; handle/20.500.12657/50067 ; >
+    au < manifest ; exists ; 2016 ;  ; When Doctors and Parents Disagree: Ethics, Paediatrics and the Zone of Parental Discretion ; The Federation Press ; handle/20.500.12657/28396 ; >
+    au < manifest ; exists ; 2021 ; 9780300236101 ; The Doctor’s Garden: Medicine, Science, and Horticulture in Britain ; Yale University Press ; handle/20.500.12657/60314 ; >
+    au < manifest ; exists ; 2021 ; 9780806175935||9780806175911 ; The Search for the First Americans: Science, Power, Politics ; University of Oklahoma Press ; handle/20.500.12657/50117 ; >
+    au < manifest ; exists ; 2019 ; 9781501744358||9781501744372||9781501744365 ; Toward a Theory of Peace: The Role of Moral Beliefs ; Mario Einaudi Center for International Studies, Cornell University ; handle/20.500.12657/62164 ; >
+    au < manifest ; exists ; 2014 ; 9788494187292 ; Aplicaciones avanzadas de los materiales compuestos en la obra civil y la edificación ; OmniaScience ; handle/20.500.12657/30621 ; >
+    au < manifest ; exists ; 2023 ; 9780228017530||9780228017523||9780228017899||9780228018605||9780228017905 ; Disparate Remedies: Making Medicines in Modern India ; McGill-Queen’s University Press (mqup) ; handle/20.500.12657/63862 ; >
+    au < manifest ; exists ; 2020 ; 9780813066325 ; Panepiphanal World: James Joyce's Epiphanies ; University Press of Florida ; handle/20.500.12657/49788 ; >
+    au < manifest ; exists ; 2010 ; 9783598441493 ; Grey Literature in Library and Information Studies ; K. G. Saur ; handle/20.500.12657/45661 ; >
+    au < manifest ; exists ; 2016 ; 9788878146372||9788878146303 ; Un monastero sul mare: Ricerche archeologiche a San Quirico di Populonia (Piombino, LI)/ A Monastery by the Sea : Archaeological Research at San Quirico di Populonia (Piombino, LI) ; Insegna del Giglio ; handle/20.500.12657/30627 ; >
+    au < manifest ; exists ; 2021 ; 9783030748869 ; New Business Models for the Reuse of Secondary Resources from WEEEs: The FENIX Project ; Springer International Publishing ; handle/20.500.12657/50044 ; >
+    au < manifest ; exists ; 2006 ;  ; Écrire un seul livre, sans cesse renouvelé: Jorge Sempruns literarische Auseinandersetzung mit Buchenwald ; Vittorio Klostermann ; handle/20.500.12657/34368 ; >
+    au < manifest ; exists ; 2019 ; 9782728313617 ; Question d'honneur: Les notions d'honos, honestum et honestas dans la République romaine antique ; Publications de l’École française de Rome ; handle/20.500.12657/46524 ; >
+    au < manifest ; exists ; 2021 ; 9783719043971 ; Smart Criminal Justice ; Helbing Lichtenhahn Verlag ; handle/20.500.12657/49886 ; >
+    au < manifest ; exists ; 2022 ; 9783902781949 ; Wolfram Paulus ; Filmarchiv Austria ; handle/20.500.12657/76459 ; >
+    au < manifest ; exists ; 2021 ; 9780853583424 ; Writing Equipment ; LatinNow ePubs ; handle/20.500.12657/56668 ; >
+    au < manifest ; exists ; 2014 ; 9789590905902 ; El Caribe holandés: El colonialismo y sus legados transatlánticos ; Editorial José Marti ; handle/20.500.12657/33227 ; >
+    au < manifest ; exists ; 2021 ;  ; Internet- en Internet of Things-vaardigheden in Nederland anno 2021 ; Universiteit Twente ; handle/20.500.12657/57713 ; >
+    au < manifest ; exists ; 2005 ;  ; Permanent Pixels: Building blocks for the longevity of digital surrogates of historical photographs ; DANS ; handle/20.500.12657/34841 ; >
+    au < manifest ; exists ; 2014 ; 9781580464765 ; Stress, Shock, and Adaptation in the Twentieth Century ; University of Rochester Press ; handle/20.500.12657/33409 ; >
+    au < manifest ; exists ; 2004 ; 9781933565286 ; Small Spirits: Native American Dolls from the National Musuem of the American Indian ; National Museum of the American Indian ; handle/20.500.12657/53453 ; >
+    au < manifest ; exists ; 2017 ;  ; Archives in Liquid Times ; Stichting Archiefpublicaties ; handle/20.500.12657/30942 ; >
+    au < manifest ; exists ; 2017 ; 9781999938505 ; Monsoon: [+ other] Airs ; Monsoon Assemblages ; handle/20.500.12657/29636 ; >
+    au < manifest ; exists ; 2024 ; 9783795427054||9783795435899 ; Ein Mann der Bibel: Augustin Bea SJ (1881-1968) als Exeget und Rektor des Päpstlichen Bibelinstituts in den 1930er und 1940er Jahren ; Schnell & Steiner ; handle/20.500.12657/88599 ; >
+    au < manifest ; exists ; 2017 ;  ; Surveilling masses and unveiling human rights: Uneasy choices for the Strasbourg Court ; Open Press Tilburg University ; handle/20.500.12657/39468 ; >
+    au < manifest ; exists ; 2015 ; 9782709921695 ; Changement climatique: Quels défis pour le Sud ? ; IRD Éditions ; handle/20.500.12657/24926 ; >
+    au < manifest ; exists ; 2019 ; 9783035802535 ; Das ungute Gefühl, auf der richtigen Seite zu stehen ; DIAPHANES ; handle/20.500.12657/49853 ; >
+    au < manifest ; exists ; 2018 ; 9782367812663 ; Lexicographie artistique: formes, usages et enjeux dans l'Europe moderne/ Artistic lexicography : forms, uses and issues in Early Modern Europe ; Presses Universitaires de la Méditerranée - PULM ; handle/20.500.12657/30649 ; >
+    au < manifest ; exists ; 2020 ; 9782600060479 ; Michel de L'Hospital chancelier-poète ; Droz ; handle/20.500.12657/49797 ; >
+    au < manifest ; exists ; 2022 ; 9789198715859||9789198715835||9789198715842 ; Förändring och kontinuitet: Reformer inom högre utbildning och forskning 1940–2020 ; Universitetskanslersämbetets publikationer ; handle/20.500.12657/59842 ; >
+    au < manifest ; exists ; 2010 ;  ; Empirische Untersuchung der Anglizismen im Deutschen am Material der Zeitung Die WELT (Jahrgänge 1994 und 2004) ; Bamberg University Press ; handle/20.500.12657/34692 ; >
+    au < manifest ; exists ; 2017 ; 9781512600773 ; Inside the Antisemitic Mind: The Language of Jew-Hatred in Contemporary Germany ; Brandeis University Press ; handle/20.500.12657/31717 ; >
+    au < manifest ; exists ; 2020 ; 9782970117551 ; Penser le métier par la formation ; HEP-Bejune ; handle/20.500.12657/49837 ; >
+    au < manifest ; exists ; 2015 ; 9782271130181 ; Le journalisme scientifique dans les controverses ; CNRS Editions ; handle/20.500.12657/24918 ; >
+    au < manifest ; exists ; 2019 ; 9783966270120 ; Stadt als Schule: Nachbarschaftszentrum und Gemeinschaftsschule an der alten Feuerwache in Anger-Crottendorf, Leipzig. ; HTWK Leipzig - OA-Hochschulverlag ; handle/20.500.12657/24560 ; >
+    au < manifest ; exists ; 2014 ; 9781908857088 ; Recasting commodity and spectacle in the indigenous Americas ; Institute of Latin American Studies ; handle/20.500.12657/29628 ; >
+    au < manifest ; exists ; 2019 ; 9783931264949 ; Rund um Beethoven: Interpretationsforschung heute. ; Argus ; handle/20.500.12657/49941 ; >
+    au < manifest ; exists ; 2022 ; 9781496230775||9781496230768||9781496230584 ; Paternalism to Partnership: The Administration of Indian Affairs, 1786–2021 ; University of Nebraska Press ; handle/20.500.12657/53249 ; >
+    au < manifest ; exists ; 2008 ;  ; Der Verein Deutsche Sprache ; Bamberg University Press ; handle/20.500.12657/34693 ; >
+    au < manifest ; exists ; 2008 ; 9783795212438 ; Das Wiener Klavier bis 1850: Bericht des Symposiums "Das Wiener Klavier bis 1850" veranstaltet von der Sammlung alter Musikinstrumente des Kunsthistorischen Museums Wien ; Musikantiquariat und Verlag Hans Schneider ; handle/20.500.12657/34419 ; >
+    au < manifest ; exists ; 2019 ;  ; De netwerkkracht van de Rotterdammer in het sociale domein: Een onderzoek naar activering van netwerken via Wijkteams en Eigen Kracht conferenties ; Erasmus University Rotterdam ; handle/20.500.12657/39472 ; >
+    au < manifest ; exists ; 2016 ; 9781781791288||9781781791295||9781781794364||9781781794371 ; Soulless Matter, Seats of Energy: Metals, Gems and Minerals in South Asian Traditions ; Equinox ; handle/20.500.12657/29634 ; >
+    au < manifest ; exists ; 2020 ; 9783719043049 ; The Security Council's Contribution to a Global Concept of the Rule of Law ; Helbing Lichtenhahn Verlag ; handle/20.500.12657/49884 ; >
+    au < manifest ; exists ; 2024 ; 9783868543179 ; Beziehungsgeschichten: Politik und Medien im 20. Jahrhundert ; Hamburger Edition ; handle/20.500.12657/88109 ; >
+    au < manifest ; exists ; 2019 ; 9783905342598 ; Unglaubliche Bergwunder: Johann Jakob Scheuchzer und Graubünden.  Ausgewählte Briefe, 1699-1707 ; Bündner Monatsblatt, Cultura Alpina ; handle/20.500.12657/49936 ; >
+    au < manifest ; exists ; 2019 ;  ; Data Mining in MRO: Centre for Applied Research Technology ; Amsterdam University of Applied Sciences ; handle/20.500.12657/39481 ; >
+    au < manifest ; exists ; 2018 ; 9782600059121 ; Le Nebelspalter zurichois (1875-1921): Au coeur de l'Europe des revues et des arts ; Droz ; handle/20.500.12657/49795 ; >
+    au < manifest ; exists ; 2022 ; 9783826074271||9783826077760 ; Der Wert der Preise: Valorisierungsdynamik in der deutschen Literaturpreislandschaft 1990–2019 ; Königshausen & Neumann ; handle/20.500.12657/75320 ; >
+    au < manifest ; exists ; 2018 ;  ; Religion in Vindonissa – Kultorte und Kulte im und um das Legionslager ; Gesellschaft Pro Vindonissa ; handle/20.500.12657/41482 ; >
+    au < manifest ; exists ; 2020 ; 9782813003676 ; De la Clef d'amour à l'Ovide de arte amandi: Genèse et fortune d'un recueil au XVIe siècle ; EAC ; handle/20.500.12657/49801 ; >
+    au < manifest ; exists ; 2014 ; 9781463204112 ; Early Readers, Scholars and Editors of the New Testament: Papers from the Eighth Birmingham Colloquium on the Textual Criticism of the New Testament ; Gorgias Press. University of Birmingham ; handle/20.500.12657/29722 ; >
+    au < manifest ; exists ; 2022 ; 9780700633029||9780700633036 ; Creating the Modern Army: Citizen-Soldiers and the American Way of War, 1919–1939 ; University Press of Kansas ; handle/20.500.12657/53464 ; >
+    au < manifest ; exists ; 2017 ; 9791036501784||9782760637498 ; Les partis politiques de l'opposition en Afrique: La quête du pouvoir ; Presses universitaires de Montréal ; handle/20.500.12657/24913 ; >
+    au < manifest ; exists ; 2022 ; 9783946320340 ; Wie Kunst für Zukunft unterrichten?: Feministische Sorgeethik als Perspektive der Vermittlung in Zeiten planetarischer Katastrophe und digitaler Toxizität ; fabrico Verlag ; handle/20.500.12657/63987 ; >
+    au < manifest ; exists ; 2020 ; 9783037976579 ; Les Monuments d'art et d'histoire du canton de Fribourg VI: Le District de la Broye I, La ville d'Estavayer-le-Lac ; Gesellschaft für Schweizerische Kunstgeschichte GSK ; handle/20.500.12657/49859 ; >
+    au < manifest ; exists ; 2019 ;  ; Schwanksammlungen im frühneuzeitlichen Medienumbruch: Transformationen eines sequentiellen Erzählparadigmas ; Universitätsverlag Winter ; handle/20.500.12657/41514 ; >
+    au < manifest ; exists ; 2014 ; 9783868542820 ; Lebensmodelle in der Dienstleistungsgesellschaft ; Hamburger Edition ; handle/20.500.12657/63264 ; >
+    au < manifest ; exists ; 2019 ;  ; Vocalization in Group Writing: A New Proposal ; Widmaier Verlag ; handle/20.500.12657/41513 ; >
+    au < manifest ; exists ; 2020 ;  ; Le Voltaire de Beuchot ; Georg Editeur ; handle/20.500.12657/41480 ; >
+    au < manifest ; exists ; 2012 ; 9782753563018 ; Boys don’t cry!: Les coûts de la domination masculine ; Presses universitaires de Rennes ; handle/20.500.12657/24927 ; >
+    au < manifest ; exists ; 2010 ;  ; Der i-Umlaut im Althochdeutschen. Theorie, Phonetik und Typologie sowie eine optimalitätstheoretische Analyse ; Bamberg University Press ; handle/20.500.12657/34691 ; >
+    au < manifest ; exists ; 2019 ; 9782728313600 ; Conquérir et gouverner la Sicile islamique aux XIe et XIIe siècles ; Publications de l’École française de Rome ; handle/20.500.12657/46526 ; >
+    au < manifest ; exists ; 2014 ; 9783956500305 ; Martyrdom in the Modern Middle East ; Ergon ; handle/20.500.12657/26007 ; >
+    au < manifest ; exists ; 2011 ; 9781933565309 ; Past, Present, and Future: Challenges of the National Museum of the American Indian ; NMAI Smithsonian Institution ; handle/20.500.12657/57961 ; >
+    au < manifest ; exists ; 2019 ; 9781421429502||9781421429489||9781421429496 ; Migraine: A History ; Johns Hopkins University Press ; handle/20.500.12657/47718 ; >
+    au < manifest ; exists ; 2022 ; 9789403652658 ; Atlas of european values: change and continuity in turbulent times ; Open Press Tilburg University ; handle/20.500.12657/70262 ; >
+    au < manifest ; exists ; 2017 ; 9781911396512||9781911396536 ; Peer-to-Peer Accommodation Networks: Pushing the boundaries ; Goodfellow Publishers ; handle/20.500.12657/30986 ; >
+    au < manifest ; exists ; 2024 ; 9781803275772||9781803274789 ; The search for wellbeing and health between the Middle Ages and Early Modern Period ; Archaeopress ; handle/20.500.12657/86090 ; >
+    au < manifest ; exists ; 2016 ; 9783110465525 ; Knowledge Services: A Strategic Framework for the 21st Century Organization ; De Gruyter Saur ; handle/20.500.12657/31623 ; >
+    au < manifest ; exists ; 2019 ;  ; Das flüchtige Werk: Pianistische Improvisationen der Beethoven-Zeit ; Edition Argus ; handle/20.500.12657/41456 ; >
+    au < manifest ; exists ; 2008 ; 9780232526165 ; Eco-Theology ; Darton, Longman + Todd ; handle/20.500.12657/58951 ; >
+    au < manifest ; exists ; 2021 ; 9780853583462 ; Scripts and Texts ; LatinNow ePubs ; handle/20.500.12657/56666 ; >
+    au < manifest ; exists ; 2010 ; 9788490962459 ; Terres de taureaux: Les jeux taurins de l'Europe à l'Amérique ; Casa de Velázquez ; handle/20.500.12657/24907 ; >
+    au < manifest ; exists ; 2023 ; 9783990940501 ; Ludwig Senfl: Motets for Six and Eight Voices, Canons ; Hollitzer ; handle/20.500.12657/63857 ; >
+    au < manifest ; exists ; 2021 ; 9783038912545 ; Nachhaltigkeit in der Bodennutzung und Förderung der Siedlungsentwicklung nach innen: Rechtliche Umsetzung. Unter besonderer Berücksichtigung der aktuellen Entwicklungen im Schweizer Raumplanungsrecht ; Dike Verlag AG ; handle/20.500.12657/49865 ; >
+    au < manifest ; exists ; 2019 ;  ; Competition and Regulation for Inclusive Growth in Southern Africa ; Jacana Media ; handle/20.500.12657/22309 ; >
+    au < manifest ; exists ; 2020 ; 9783739880600 ; Schriftordnungen im Wandel: Produktions-, Gebrauchs- und Aufbewahrungspraktiken von klösterlichem Schriftgut in Königsfelden (1300–1600) ; UVK Verlagsgesellschaft ; handle/20.500.12657/49890 ; >
+    au < manifest ; exists ; 2021 ; 9783849816582 ; Traumata: Psychische Krisen in Texten von Annette von Droste-Hülshoff bis Jan Christoph Zymny. Ein Materialienbuch (Volume 91) ; Aisthesis Verlag ; handle/20.500.12657/51997 ; >
+    au < manifest ; exists ; 2019 ; 9783868543308 ; Zeit der Unterhändler: Koordinierter Kapitalismus in Deutschland und Frankreich zwischen 1920 und 1950 ; Hamburger Edition ; handle/20.500.12657/63256 ; >
+    au < manifest ; exists ; 2020 ;  ; The Production of Lateness: Old Age and Creativity in Contemporary Narrative ; Narr Francke Attempto ; handle/20.500.12657/41488 ; >
+    au < manifest ; exists ; 2014 ; 9782918382096 ; Penser une démocratie alimentaire - Volume 2: Propositions Lascaux entre ressources naturelles et besoins alimentaires ; Inida ; handle/20.500.12657/31287 ; >
+    au < manifest ; exists ; 2018 ;  ; Il Fantasma dell’Io. La massa e l’inconscio mimetico: The Phantom of the Ego: Modernism and the Mimetic Unconscious ; Mimesis ; handle/20.500.12657/25157 ; >
+    au < manifest ; exists ; 2014 ;  ; Traditional Medicines and Globalisation: The Future of Ancient Systems of Medicine ; Maven Publishers ; handle/20.500.12657/28389 ; >
+    au < manifest ; exists ; 2015 ; 978071909618||9781847798879 ; Before Blackwood's: Scottish Journalism in the Age of Enlightenment ; Pickering & Chatto Publishers ; handle/20.500.12657/33240 ; >
+    au < manifest ; exists ; 2020 ; 9783956507847 ; Religija: Konturen russischer Religionskonzepte im Orientdiskurs des 19. Jahrhunderts ; Ergon Verlag ; handle/20.500.12657/49946 ; >
+    au < manifest ; exists ; 2023 ; 9783946320432 ; Argumentieren mit dem Praxisschock: Einordnungen und Funktionen ; fabrico Verlag ; handle/20.500.12657/63989 ; >
+    au < manifest ; exists ; 2020 ; 9789463841856 ; Thirteen Fundamental Psychological Needs ; Delft University of Technology ; handle/20.500.12657/57422 ; >
+    au < manifest ; exists ; 2016 ; 9788538603290 ; Ciência, medicina e perícia nas tecnologias de governo ; Universidade Federal do Rio Grande do Sul ; handle/20.500.12657/29639 ; >
+    au < manifest ; exists ; 2020 ; 9783948466824 ; Der Stoff der Räume: Textile Raumkonzepte im französischen Interieur des 18. Jahrhunderts ; Edition Imorde ; handle/20.500.12657/49943 ; >
+    au < manifest ; exists ; 2020 ; 9783849815851 ; Populationen - Zeit-Räume - Protokollieren ; Aisthesis Verlag ; handle/20.500.12657/49932 ; >
+    au < manifest ; exists ; 2006 ;  ; The Human Side of Innovation Systems: Innovation, New Organization Forms and Competence Building in a learning Perspective ; Aalborg University Press ; handle/20.500.12657/34790 ; >
+    au < manifest ; exists ; 2018 ; 9782882242006 ; Enquêter, former, publier au coeur de la cité ; Editions IES ; handle/20.500.12657/25349 ; >
+    au < manifest ; exists ; 2013 ; 9782882240996 ; La part sensible de l’acte ; Editions IES ; handle/20.500.12657/33027 ; >
+    au < manifest ; exists ; 2016 ; 9780300186161 ; Wollstonecraft, Mill, and Women's Human Rights ; Yale University Press ; handle/20.500.12657/30049 ; >
+    au < manifest ; exists ; 2014 ;  ; The conservation of panel paintings and related objects: Research agenda 2014 -2020 ; NWO, Netherlands Organisation for Scientific Research ; handle/20.500.12657/39483 ; >
+    au < manifest ; exists ; 2017 ; 9781842466476 ; State of the World's Plants 2017 ; Royal Botanics Gardens Kew ; handle/20.500.12657/49594 ; >
+    au < manifest ; exists ; 2014 ; 9782970082910 ; Rhythmisch-melodische Studien ; sdvig press ; handle/20.500.12657/46963 ; >
+    au < manifest ; exists ; 2023 ; 9783038603467 ; Hermann Czech: An Architect in Vienna ; Park Books ; handle/20.500.12657/64096 ; >
+    au < manifest ; exists ; 2020 ; 9783728139917 ; Airport Aura – A Spatial History of Airport Infrastructure ; vdf Hochschulverlag AG ; handle/20.500.12657/49888 ; >
+    au < manifest ; exists ; 2021 ; 9788867192151 ; A Śaiva Utopia: The Śivadharma’s Revision of Brahmanical Varṇāśramadharma ; University of Naples L'Orientale ; handle/20.500.12657/57423 ; >
+    au < manifest ; exists ; 1987 ; 9783925717024 ; Eugen-Fink-Symposion Freiburg 1985 ; Pädagogische Hochschule Freiburg ; handle/20.500.12657/46964 ; >
+    au < manifest ; exists ; 2020 ; 9783869221687 ; Die Ökonomisierung des Raums: Planen und Bauen in Mittel- und Osteuropa unter den Nationalsozialisten 1938 bis 1945 ; Dom publisher ; handle/20.500.12657/49934 ; >
+    au < manifest ; exists ; 2023 ; 9780228014676||9780228015833||9780228015840||9780228014683||9780228016090 ; Looking after Miss Alexander: Care, Mental Capacity, and the Court of Protection in Mid-Twentieth-Century England ; McGill-Queen’s University Press (mqup) ; handle/20.500.12657/60304 ; >
+    au < manifest ; exists ; 2020 ; 9783966270182||9783966270151||9783966270168 ; Open-Access-Publikationsworkflow für akademische Bücher ; HTWK Leipzig - OA-Hochschulverlag ; handle/20.500.12657/22319 ; >
+    au < manifest ; exists ; 2013 ; 9782918382072 ; Penser une démocratie alimentaire (vol. I) ; Inida ; handle/20.500.12657/31288 ; >
+    au < manifest ; exists ; 2020 ; 9789036551090 ; Leerlingprestaties in de exacte vakken in groep 6 van het basisonderwijs: Resultaten TIMSS-2019 ; Universiteit Twente ; handle/20.500.12657/57715 ; >
+    au < manifest ; exists ; 2009 ; 9781608010097 ; The Schüssel Era in Austria ; innsbruck university press / University of New Orleans Press ; handle/20.500.12657/33880 ; >
+    au < manifest ; exists ; 2012 ; 9783851610833 ; Rationes decoris: Aufkommen und Verbreitung dorischer Friese in der mittelitalischen Architektur des 2. und 1. Jahrhunderts v. Chr. ; Phoibos Verlag ; handle/20.500.12657/33117 ; >
+    au < manifest ; exists ; 2013 ; 9782271130136 ; Traces numériques: De la production à l'interprétation ; CNRS Editions ; handle/20.500.12657/44276 ; >
+    au < manifest ; exists ; 2019 ;  ; Das akustische Argument: Wissenschaft und Hörerfahrung in der Architektur des 20. Jahrhunderts ; gta Verlag ; handle/20.500.12657/41484 ; >
+    au < manifest ; exists ; 2015 ; 9783956500916 ; Bringing up the Young with Global Values: A Psychology of Intercultural Pedagogy ; Ergon ; handle/20.500.12657/26019 ; >
+    au < manifest ; exists ; 2013 ; 9782271130136 ; Traces numériques. De la production à l'interprétation: De la production à l'interprétation ; CNRS Editions ; handle/20.500.12657/24905 ; >
+    au < manifest ; exists ; 2019 ;  ; Atlas: Makerspaces in Public Libraries in The Netherlands ; Delft University of Technology ; handle/20.500.12657/39444 ; >
+    au < manifest ; exists ; 2017 ; 9782757428023 ; Le mythe Néron: La fabrique d’un monstre dans la littérature antique (Ie-Ve s.) ; Presses universitaires du Septentrion ; handle/20.500.12657/24917 ; >
+    au < manifest ; exists ; 2018 ; 9782753574304 ; Le Théâtre de Dumas père, entre héritage et renouvellement ; Presses universitaires de Rennes ; handle/20.500.12657/25750 ; >
+    au < manifest ; exists ; 2020 ; 9788843095773 ; Melchiorre Cesarotti: Linguistica e antropologia nell’età dei Lumi ; Carocci Editore ; handle/20.500.12657/49955 ; >
+    au < manifest ; exists ; 2019 ; 9782728310661 ; Les dieux olympiens et la mer ; Publications de l’École française de Rome ; handle/20.500.12657/46525 ; >
+    au < manifest ; exists ; 2021 ; 9783035803884 ; Kritik der Perspektive ; DIAPHANES ; handle/20.500.12657/49854 ; >
+    au < manifest ; exists ; 1989 ; 3900575053 ; Die gewöhnliche Gebrauchskeramik vom Magdalensberg ; Verlag des Landesmuseums für Kärnten ; handle/20.500.12657/33916 ; >
+    au < manifest ; exists ; 2023 ; 9783943253726||9783943253627 ; Attending [to] Futures: Matters of Politics in Design Education, Research, Practice ; adocs ; handle/20.500.12657/87353 ; >
+    au < manifest ; exists ; 2018 ;  ; Business & The Sustainable Development Goals: A Framework for Effective Corporate Involvement ; Erasmus University Rotterdam ; handle/20.500.12657/39491 ; >
+    au < manifest ; exists ; 2018 ;  ; Judith Le Soldat: Werkausgabe / Band 2: Land ohne Wiederkehr: Auf der Suche nach einer neuen psychoanalytischen Theorie der Homosexualität ; frommann-holzboog ; handle/20.500.12657/41583 ; >
+    au < manifest ; exists ; 2019 ;  ; From efficiency to reduction: Tackling energy consumption in a cross disciplinary perspective ; In Planning ; handle/20.500.12657/39487 ; >
+    au < manifest ; exists ; 1985 ; 9780312523107 ; Maurice Merleau-Ponty: Between phenomenology and structuralism ; Macmillan ; handle/20.500.12657/46966 ; >
+    au < manifest ; exists ; 2013 ; 9780987120045 ; Concrete Expressions: Brutalism and the Government Buildings Precinct, Adelaide ; University of South Australia Architecture Museum ; handle/20.500.12657/30728 ; >
+    au < manifest ; exists ; 2019 ;  ; Theologie im öffentlichen Ethikdiskurs: Studien zur Rolle der Theologie in den nationalen Ethikgremien Deutschlands und der Schweiz ; Evangelische Verlagsanstalt ; handle/20.500.12657/41476 ; >
+    au < manifest ; exists ; 2015 ; 9781462518180 ; Assessment in Cognitive Therapy ; Guilford Press ; handle/20.500.12657/33059 ; >
+    au < manifest ; exists ; 2016 ; 9781786390059 ; Global Health Research in an Unequal World: Ethics Case Studies from Africa ; CABI ; handle/20.500.12657/28429 ; >
+    au < manifest ; exists ; 2022 ; 9780228012849||9780228011941||9780228011934||9780228014768||9780228012832 ; Mixing Medicines: The Global Drug Trade and Early Modern Russia ; McGill-Queen’s University Press (mqup) ; handle/20.500.12657/60312 ; >
+    au < manifest ; exists ; 2010 ;  ; Leseprojekte in der Sekundarstufe. Lesekompetenz, Lesemotivation, Lesedidaktik. ; Kassel University Press ; handle/20.500.12657/34785 ; >
+    au < manifest ; exists ; 2022 ; 9780700633418||9780700633425 ; Empire of Direct Mail: How Conservative Marketing Persuaded Voters and Transformed the Grassroots ; University Press of Kansas ; handle/20.500.12657/56664 ; >
+    au < manifest ; exists ; 2017 ; 9789054481591 ; Magnifying perspectives: contributions to history : a festschrift for Robert Ross ; African Studies Centre Leiden (ASCL) ; handle/20.500.12657/29611 ; >
+    au < manifest ; exists ; 2018 ;  ; Selling & Collecting: Printed Book Sale Catalogues and Private Libraries in Early Modern Europe ; eum edizioni universita di macerata ; handle/20.500.12657/29493 ; >
+    au < manifest ; exists ; 2010 ;  ; Prähistorische Textilkunst in Mitteleuropa: Geschichte des Handwerkes und Kleidung vor den Römern ; Naturhistorisches Museum Wien ; handle/20.500.12657/29409 ; >
+    au < manifest ; exists ; 2021 ; 9789461663962 ; Living with History, 1914-1964: Rebuilding Europe after the First and Second World Wars and the Role of Heritage Preservation / La reconstruction en Europe après la Première et la Seconde Guerre Mondiale et le rôle de la conservation des monuments historiques ; Universitaire Pers Leuven ; handle/20.500.12657/51079 ; >
+    au < manifest ; exists ; 2022 ; 9781912729241||9781912729258||9781912729227||9781912729234 ; Concealing for Freedom: The Making of Encryption, Secure Messaging and Digital Liberties ; Mattering Press ; handle/20.500.12657/87174 ; >
+    au < manifest ; exists ; 2011 ; 9781912260065 ; The Roma Struggle for Compensation in Post-War Germany ; University of Hertfordshire Press ; handle/20.500.12657/30668 ; >
+    au < manifest ; exists ; 2015 ;  ; Teologie dell’Antico Testamento ; San Paolo ‒ Gregorian & Biblical Press ; handle/20.500.12657/32912 ; >
+    au < manifest ; exists ; 2021 ; 9780774866767||9780774835497||9780774865463||9780774865470||9780774813389||978077482838||9780774865487||9780774818537 ; From Dismal Swamp to Smiling Farms: Food, Agriculture, and Change in the Holland Marsh ; UBC Press ; handle/20.500.12657/51602 ; >
+    au < manifest ; exists ; 2020 ; 9782940527120 ; Conférences sur les émotions et l'homéostasie, Paris, 1930 ; BHMS Editions ; handle/20.500.12657/49827 ; >
+    au < manifest ; exists ; 2019 ; 9781509924912 ; Parental Rights, Best Interests and Significant Harms: Medical decision-making on behalf of children post Great Ormond St vs Yates ; Hart Publishing ; handle/20.500.12657/48382 ; >
+    au < manifest ; exists ; 2013 ; 9781574415421 ; The Roots of Latino Urban Agency ; University of North Texas Press ; handle/20.500.12657/31720 ; >
+    au < manifest ; exists ; 2021 ;  ; Migration, Workers, and Fundamental Freedoms: Pandemic Vulnerabilities and States of Exception in India ; Routledge India ; handle/20.500.12657/46925 ; >
+    au < manifest ; exists ; 2021 ; 9789463663793 ; Building with Nature perspectives: Cross-disciplinary BwN approaches in coastal regions ; TU Delft Open ; handle/20.500.12657/53284 ; >
+    au < manifest ; exists ; 2016 ; 9783952454282 ; Teilnehmerkreis der Basler Lesegesellschaft 1825-1915. Eine Kollektivbiographie im sozialen und politischen Kontext der Basler Geschichte des 19. Jahrhunderts ; LIBRUM Publishers & Editors LLC ; handle/20.500.12657/31934 ; >
+    au < manifest ; exists ; 2010 ; 9783923507597 ; Genealogisches Bewusstsein als Legitimation. Inter-und intragenerationelle Auseinandersetzungen sowie die Bedeutung von Verwandtschaft bei Amtswechseln ; Bamberg University Press ; handle/20.500.12657/34690 ; >
+    au < manifest ; exists ; 2014 ; 9781626981003 ; Creation in Crisis: Science, Ethics, Theology ; Orbis Books ; handle/20.500.12657/52698 ; >
+    au < manifest ; exists ; 2017 ; 9783737006866 ; Mythen in deutschsprachigen Geschichtsschulbüchern: Von Marathon bis zum Élysée-Vertrag ; Georg-Eckert-Institut - Leibniz-Institut für Internationale Schulbuchforschung bei Vandehoek & Rupre ; handle/20.500.12657/31400 ; >
+    au < manifest ; exists ; 2023 ; 9781912729333||9781912729326||9781912729340||9781912729074 ; The Ethnographic Case: Second Edition ; Mattering Press ; handle/20.500.12657/87173 ; >
+    au < manifest ; exists ; 2024 ; 9783868543353 ; Gewalt erklären!: Plädoyer für eine entdeckende Prozesssoziologie ; Hamburger Edition ; handle/20.500.12657/88165 ; >
+    au < manifest ; exists ; 2019 ;  ; Internal Kurdish Coherence: Analyzing Alliances, Capacities, Threats, and Political Objectives of Kurdish Groups and Parties in Syria and Iraq 2015–2017 ; Scandinavian Military Studies ; handle/20.500.12657/46701 ; >
+    au < manifest ; exists ; 2017 ;  ; The Maya Temple-Palace of Santa Rosa Xtampak, Mexico: Documentation and Reconstruction of Form, Construction, and Function ; Verlag der Technischen Universität Graz ; handle/20.500.12657/31104 ; >
+    au < manifest ; exists ; 2019 ;  ; Joseph Penso de Vega: La creación de un perfil cultural y literario entre Ámsterdam y Livorno ; Olschki ; handle/20.500.12657/41494 ; >
+    au < manifest ; exists ; 2010 ;  ; m-Learning - die neue Welle? Mobiles Lernen für Deutsch als Fremdsprache. ; Kassel University Press ; handle/20.500.12657/34784 ; >
+    au < manifest ; exists ; 2015 ; 9783902902276 ; Queer-Feminist Punk: An Anti-Social History ; Zaglossus ; handle/20.500.12657/33098 ; >
+    au < manifest ; exists ; 2019 ; 9781906113278 ; Bishop Morley of Winchester 1598-1684: Politician Benefactor Pragmatist ; Winchester University Press ; handle/20.500.12657/46702 ; >
+    au < manifest ; exists ; 2018 ; 9791036200458 ; Les mises en guerre de l’État: 1914-1918 en perspective ; ENS Éditions ; handle/20.500.12657/25751 ; >
+    au < manifest ; exists ; 2015 ; 9788360109434 ; Hunter-gatherers and Early Food Producing Societies in Northeastern Africa ; Poznań Archaeological Museum ; handle/20.500.12657/32382 ; >
+    au < manifest ; exists ; 2013 ; 9781608011162 ; Austria's International Position after the End of the Cold War ; innsbruck university press / University of New Orleans Press ; handle/20.500.12657/33876 ; >
+    au < manifest ; exists ; 2019 ; 9783966270045||9783966270052 ; Kommunikationstechnische Optimierung eines energieautarken funkbasierten Sensorkonzepts ; HTWK Leipzig - OA-Hochschulverlag ; handle/20.500.12657/24561 ; >
+    au < manifest ; exists ; 2019 ;  ; Political Thought and Practice in the Ottoman Empire: Halcyon Days in Crete IX ; Crete University Press ; handle/20.500.12657/48534 ; >
+    au < manifest ; exists ; 2016 ; 9783451311031 ; Traditio et Translatio: Studien zur lateinischen Bibel zu Ehren von Roger Gryson ; Herder ; handle/20.500.12657/29725 ; >
+    au < manifest ; exists ; 2020 ; 9783826070365 ; Agency: The Entrepreneurial Self in Narratives of Transformation: Debuting in the Literary Field at the Dawn of the Twenty-First-Century ; Königshausen & Neumann ; handle/20.500.12657/45814 ; >
+    au < manifest ; exists ; 2020 ; 9788855260916 ; The Century of Global Cities: How Urbanisation is Changing the World and Shaping Our Future ; Ledizioni ; handle/20.500.12657/52799 ; >
+    au < manifest ; exists ; 2014 ; 9783902575623 ; Die altgermanischen Toponyme sowie die ungermanischen Toponyme Germaniens: Ein Handbuch zu ihrer Etymologie ; Fassbaender ; handle/20.500.12657/33304 ; >
+    au < manifest ; exists ; 2023 ; 9781839762765||9781839762796 ; What Is Antiracism?: And Why It Means Anticapitalism ; Verso ; handle/20.500.12657/85732 ; >
+    au < manifest ; exists ; 2016 ; 9783447194143 ; Wissen in Bewegung: Institution – Iteration – Transfer ; Harrassowitz Verlag ; handle/20.500.12657/25617 ; >
+    au < manifest ; exists ; 2016 ; 9783990280751 ; Das zusammengedrängte Gedenken: Leopold Kupelwiesers Freskenzyklus in der niederösterreichischen Statthalterei ; Verlag Bibliothek der Provinz ; handle/20.500.12657/32790 ; >
+    au < manifest ; exists ; 2022 ; 9783849818180 ; Die komische Differenz: Zur Dialektik des Lächerlichen in Theater und Gesellschaft ; Aisthesis Verlag ; handle/20.500.12657/59100 ; >
+    au < manifest ; exists ; 2020 ;  ; Das Saxhorn: Adolphe Sax' Blechblasinstrumente im Kontext ihrer Zeit ; Edition Argus ; handle/20.500.12657/41457 ; >
+    au < manifest ; exists ; 2023 ; 9781925486223||9781925486230||9781925486193||9781925486216||9781925486209 ; Laudato Si: An Integral Ecology and The Catholic Vision ; ATF Press Publishing ; handle/20.500.12657/89759 ; >
+    au < manifest ; exists ; 2014 ; 9789401211734 ; Scottish Medicine and Literary Culture, 1726-1832 ; Rodopi ; handle/20.500.12657/33283 ; >
+    au < manifest ; exists ; 2020 ; 9783906896113 ; Unvergleichbarkeit: Dürfen wir Entscheidungen dem Würfel überlassen? ; Colmena ; handle/20.500.12657/49938 ; >
+    au < manifest ; exists ; 2009 ; 9783941003033 ; „Eine Gesellschaft, die ihre Jugend verliert, ist verloren.“: Das hochschulpolitische Konzept der SED am Beispiel der Technischen Hochschule/ Universität Karl-Marx-Stadt und die daraus resultierende Verantwortung der FDJ zwischen 1953 und 1989/90 ; Universitätsverlag Chemnitz ; handle/20.500.12657/34779 ; >
+    au < manifest ; exists ; 2019 ;  ; Gli altri noi: Rom e residenti nella Svizzera italiana: etnografia a mediazione ; Armando Dadò editore ; handle/20.500.12657/41430 ; >
+    au < manifest ; exists ; 2019 ;  ; Auf Schritt und Tritt: Der schweizerische Schuhmarkt 1918–1948 ; NZZ Libro (Schwabe Verlagsgruppe) ; handle/20.500.12657/41492 ; >
+    au < manifest ; exists ; 2020 ; 9783825369958 ; Chasing Mythical Beasts: The Reception of Ancient Monsters in Children’s and Young Adults’ Culture ; Universitätsverlag Winter ; handle/20.500.12657/58202 ; >
+    au < manifest ; exists ; 2021 ; 9789612865443||9789612865436 ; Improving Frontline Responses to Domestic Violence in Europe ; University of Maribor, University Press ; handle/20.500.12657/52028 ; >
+    au < manifest ; exists ; 2012 ; 9781315216577||9781466503472||9781138075603||9781466500556 ; Strain-Engineered MOSFETs ; CRC Press ; handle/20.500.12657/22437 ; >
+    au < manifest ; exists ; 2020 ; 9782825711446 ; L'Homme-Bus: Une histoire  des controverses psychiatriques (1960-1980) ; Georg Editeur ; handle/20.500.12657/49803 ; >
+    au < manifest ; exists ; 2017 ;  ; Technological Change in Modern Surgery: Historical Perspectives on Innovation ; University of Rochester Press ; handle/20.500.12657/28395 ; >
+    au < manifest ; exists ; 2023 ; 9783704662828||9783704674425 ; Einseitig erklärter Eigentumsvorbehalt und Käuferinsolvenz: Vorleistungspflicht, Synallagmaschutz und Gläubigerprivilegierung in der Insolvenz ; Verlag Österreich ; handle/20.500.12657/76461 ; >
+    au < manifest ; exists ; 2017 ; 9781433143267 ; Avatar Assembled: The Social and Technical Anatomy of Digital Bodies ; PETER LANG LTD International Academic Publishers ; handle/20.500.12657/48875 ; >
+    au < manifest ; exists ; 2009 ; 9789460040399 ; Schrijverschap in de Belgische belle époque. Een sociaal-culturele geschiedenis ; Academia Press / Vantilt ; handle/20.500.12657/34696 ; >
+    au < manifest ; exists ; 2019 ; 9783966270083||9783966270090||9783966270113 ; Analyse von Kundenaktivitäten und der Bereitstellungsqualität von Büchern aus Kundensicht: Mit einer Untersuchung von Kundenkommentaren zu Mietangeboten für E-Books ; HTWK Leipzig - OA-Hochschulverlag ; handle/20.500.12657/23506 ; >
+    au < manifest ; exists ; 2011 ; 9780874218541||9781607327172 ; Working on the Railroad, Walking in Beauty: Navajos, Hozho, and Track Work ; Utah State University Press ; handle/20.500.12657/45670 ; >
+    au < manifest ; exists ; 2013 ; 9782970082903 ; Ecrits sur le langage ; sdvig press ; handle/20.500.12657/46960 ; >
+    au < manifest ; exists ; 2004 ;  ; Von der philosophisch-moralischen Erzählung zur modernen Novelle: Contes und nouvelles von 1760 bis 1830 ; Vittorio Klostermann ; handle/20.500.12657/33073 ; >
+    au < manifest ; exists ; 2021 ; 9783038053927 ; Internet Govrnance at the Point of No Return ; EIZ Publishing ; handle/20.500.12657/49862 ; >
+    au < manifest ; exists ; 2019 ;  ; The Hidden Affliction: Sexually Transmitted Infections and Infertility in History ; University of Rochester Press ; handle/20.500.12657/24594 ; >
+    au < manifest ; exists ; 2021 ; 9781648250224||9781800102668||9781800102675 ; Augustus Hopkins Strong and the Struggle to Reconcile Christian Theology with Modern Thought ; University of Rochester Press ; handle/20.500.12657/49487 ; >
+    au < manifest ; exists ; 2022 ; 9783777633404 ; Auf den Schwingen des Pelikans: Studien und Texte zur deutschen Literatur des Mittelalters ; S. Hirzel Verlag ; handle/20.500.12657/58484 ; >
+    au < manifest ; exists ; 2017 ;  ; The Maya Temple-Palace of Santa Rosa Xtampak, Mexico: Large Size Maps and Plans ; Verlag der Technischen Universität Graz ; handle/20.500.12657/31103 ; >
+    au < manifest ; exists ; 2022 ; 9789403678856 ; De sociologie en de pandemie: inzichten en vooruitblik na twee jaar coronacrisis ; Open Press Tilburg University ; handle/20.500.12657/70261 ; >
+    au < manifest ; exists ; 2022 ; 9780228015406||9780228014362||9780228015390||9780228014355||9780228016083 ; Dyslexia: a history ; McGill-Queen’s University Press (mqup) ; handle/20.500.12657/63863 ; >
+    au < manifest ; exists ; 2014 ; 9780567066176 ; Christian Faith and the Earth: Current Paths and Emerging Horizons in Ecotheology ; Bloomsbury ; handle/20.500.12657/52794 ; >
+    au < manifest ; exists ; 2006 ; 9781570756658 ; Ecology at the Heart of Faith ; Orbis Books ; handle/20.500.12657/52694 ; >
+    au < manifest ; exists ; 2016 ; 9780300216516 ; The World's Oldest Church ; Yale University Press ; handle/20.500.12657/30055 ; >
+    au < manifest ; exists ; 2023 ; 9781839760730||9781839760549||9781839760747 ; Waste and the City: The Crisis of Sanitation and the Right to Citylife ; Verso ; handle/20.500.12657/85733 ; >
+    au < manifest ; exists ; 2020 ; 9783428581467||9783428181469 ; The First World War as a Caesura?: Demographic Concepts, Population Policy, and Genocide in the Late Ottoman, Russian, and Habsburg Spheres. ; Duncker & Humblot ; handle/20.500.12657/63450 ; >
+    au < manifest ; exists ; 2019 ; 9783035516005 ; Beliefs von Geschichtslehrpersonen: eine Triangulationsstudie ; hep Verlag ; handle/20.500.12657/49848 ; >
+    au < manifest ; exists ; 2001 ;  ; Carl Junker, Zum Buchwesen in Österreich: Gesammelte Schriften (1896-1927) ; Edition Praesens ; handle/20.500.12657/33416 ; >
+    au < manifest ; exists ; 2019 ; 9783956506130 ; Schwellenzeiten ; Ergon Verlag ; handle/20.500.12657/49945 ; >
+    au < manifest ; exists ; 2019 ;  ; Sexuer le corps: Adolphe Sax' Blechblasinstrumente im Kontext ihrer Zeit: Romantic Brass Symposium 3 ; Cahiers de l'eesp ; handle/20.500.12657/41433 ; >
+    au < manifest ; exists ; 2016 ;  ; Botanists of the twenty-first century: roles, challenges and opportunities ; United Nations Educational, Scientific and Cultural Organisation (UNESCO) ; handle/20.500.12657/28390 ; >
+    au < manifest ; exists ; 2020 ; 9788855261593 ; Europe in Identity Crisis: The Future of the EU in the Age of Nationalism ; Ledizioni ; handle/20.500.12657/52802 ; >
+    au < manifest ; exists ; 2023 ; 9783170425934||9783170425927 ; Das Wagnis des Scheiterns: Religionspädagogische und -didaktische Untersuchungen zu einem Erfahrungsfeld der Gegenwart ; Kohlhammer Verlag ; handle/20.500.12657/85125 ; >
+    au < manifest ; exists ; 2015 ;  ; Judith Le Soldat: Werkausgabe / Band 1: Grund zur Homosexualität: Vorlesungen zu einer neuen psychoanalytischen Theorie der Homosexualität ; frommann-holzboog ; handle/20.500.12657/41582 ; >
+    au < manifest ; exists ; 2024 ; 9783868451788||9783868451771 ; Stadt unterm Hakenkreuz: Kommunalpolitik in Regensburg während der NS-Zeit ; Universitätsverlag Regensburg ; handle/20.500.12657/88598 ; >
+    au < manifest ; exists ; 2017 ; 9783700181101 ; Reconstructing Pharaonic Architecture in Nubia: The Case Study of SAV1, Sai Island ; Austrian Academy of Sciences Press ; handle/20.500.12657/25162 ; >
+    au < manifest ; exists ; 2020 ; 9781071602188||9781071602218||9781071602195 ; Cytoskeleton Dynamics: Methods and Protocols ; Humana Press ; handle/20.500.12657/56692 ; >
+    au < manifest ; exists ; 2011 ; 9781570759178 ; The Christian Future and the Fate of Earth ; Orbis Books ; handle/20.500.12657/52875 ; >
+    au < manifest ; exists ; 2023 ; 9783946320456 ; Benoten und Beurteilen im künstlerisch-gestalterischen Unterricht der Sekundarstufe: Herausforderungen und Spielräume für (in Ausbildung befindliche) Lehrer:innen ; fabrico Verlag ; handle/20.500.12657/63990 ; >
+    au < manifest ; exists ; 2018 ; 9781501744402||9781501744389||9781501744396 ; No More Nagasakis: Interfaith Action toward a World without Nuclear Weapons ; Mario Einaudi Center for International Studies, Cornell University ; handle/20.500.12657/62158 ; >
+    au < manifest ; exists ; 2010 ; 9781890951979 ; Access to Knowledge in the Age of Intellectual Property ; Zone Books ; handle/20.500.12657/26082 ; >
+    au < manifest ; exists ; 2014 ; 9781783474561 ; Sustainability Science for Strong Sustainability ; Edward Elgar Publishing ; handle/20.500.12657/29496 ; >
+    au < manifest ; exists ; 2019 ; 9783037975749 ; Die Kunstdenkmäler des Kantons Basel-Stadt X: Das Basler Münster ; Gesellschaft für Schweizerische Kunstgeschichte GSK ; handle/20.500.12657/49857 ; >
+    au < manifest ; exists ; 2021 ; 9781914427091 ; The Development of Neolithic House Societies in Orkney ; Windgather Press ; handle/20.500.12657/57160 ; >
+    au < manifest ; exists ; 2019 ; 9791036503672 ; Qu'est-ce qu'une archive du Web? ; OpenEdition Press ; handle/20.500.12657/25749 ; >
+    au < manifest ; exists ; 2012 ;  ; Rudolph Agricola: Six Lives and Erasmus’s Testimonies ; Koninklijke van Gorcum ; handle/20.500.12657/34474 ; >
+    au < manifest ; exists ; 1980 ;  ; Die römische Modelkeramik vom Magdalensberg: Textband und Tafelband ; Verlag des Landesmuseums für Kärnten ; handle/20.500.12657/29406 ; >
+    au < manifest ; exists ; 2014 ; 9780850843903 ; A Flourishing Practice? ; Royal College of General Practitioners (RCGP) ; handle/20.500.12657/45645 ; >
+    au < manifest ; exists ; 2016 ;  ; Commentaries, Catenae and Biblical Tradition: Papers from the Ninth Birmingham Colloquium on the Textual Criticism of the New Testament : in association with the COMPAUL project ; Gorgias Press. University of Birmingham ; handle/20.500.12657/31345 ; >
+    au < manifest ; exists ; 2017 ; 9781512601848 ; Gershom Scholem: From Berlin to Jerusalem and Back ; Brandeis University Press ; handle/20.500.12657/30662 ; >
+    au < manifest ; exists ; 2022 ; 9781800621152||9781800621176||9781800621169 ; Transgenic Insects: Techniques and Applications (2nd edition) ; CABI ; handle/20.500.12657/63876 ; >
+    au < manifest ; exists ; 2021 ; 9781476684185||9781476645469 ; The Nurse in Popular Media: Critical Essays ; McFarland ; handle/20.500.12657/60609 ; >
+    au < manifest ; exists ; 2022 ; 9789083121826 ; Noordbrabants Historisch Jaarboek 39: handelingen van het XIXde Colloquium 'De Brabantse Stad' : Brussel, 15 en 16 oktober 2021 : stad en territorium : de perceptie en representatie van stad en vorstendom in Brabant ; Open Press Tilburg University ; handle/20.500.12657/70263 ; >
+    au < manifest ; exists ; 2020 ; 9789390122042 ; Striving for Equity: Healthcare in Sri Lanka from Independence to the Millennium, 1948–2000 ; Orient Blackswan ; handle/20.500.12657/47401 ; >
+    au < manifest ; exists ; 2016 ; 9780300125665 ; Engines of Truth ; Yale University Press ; handle/20.500.12657/32811 ; >
+    au < manifest ; exists ; 2021 ; 9788822911636 ; Anticamente moderni: Palazzi rinascimentali di Lombardia in età sforzesca ; Quodlibet ; handle/20.500.12657/49953 ; >
+    au < manifest ; exists ; 2022 ; 9780806191607||9780806190655 ; Being Indigenous in Jim Crow Virginia: Powhatan People and the Color Line ; University of Oklahoma Press ; handle/20.500.12657/54680 ; >
+    au < manifest ; exists ; 2016 ; 9783902421944 ; The Art of Prehistoric Textile Making: The development of craft traditions and clothing in Central Europe ; Naturhistorisches Museum Wien ; handle/20.500.12657/32825 ; >
+    au < manifest ; exists ; 2017 ; 9791036501845 ; Les villes non occidentales: Comprendre les enjeux de la diversité urbaine ; Presses universitaires de Montréal ; handle/20.500.12657/24912 ; >
+    au < manifest ; exists ; 2016 ; 9783854768111 ; MOSCOW CONTEMPORARY: Museen zeitgenössischer Kunst im postsowjetischen Russland ; Mandelbaum Verlag ; handle/20.500.12657/31730 ; >
+    au < manifest ; exists ; 2021 ; 9789633863664||9789633863671 ; Nation and Migration: How Citizens in Europe Are Coping with Xenophobia ; CEU Press ; handle/20.500.12657/46596 ; >
+    au < manifest ; exists ; 2016 ; 9783868351958 ; Masculinities and Third Gender: The Origins and Nature of an Institutionalized Gender Otherness in the Ancient Near East (Volume 9) ; Ugarit Verlag ; handle/20.500.12657/51193 ; >
 
   }
 
