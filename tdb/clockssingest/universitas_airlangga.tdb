@@ -2064,10 +2064,8 @@
 
       param[journal_id] = biome
 
-      au < deepCrawl ; exists ; 2022 ; Journal of Bio-Molecule Research and Engineering Volume 1 ; 1 ; 2022 ; >
-      au < expected ; exists ; 2023 ; Journal of Bio-Molecule Research and Engineering Volume 2 ; 2 ; 2023 ; >
-      au < expected ; exists ; 2024 ; Journal of Bio-Molecule Research and Engineering Volume 3 ; 3 ; 2024 ; >
-
+      au < frozen ; exists ; 2022 ; Journal of Bio-Molecule Research and Engineering Volume 1 ; 1 ; 2022 ; >
+      #No longer listed https://e-journal.unair.ac.id/
   }
   } #end URL
   {
