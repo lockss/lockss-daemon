@@ -54,9 +54,12 @@ public class LSUIAArticleIteratorFactory implements ArticleIteratorFactory, Arti
   //https://sls-journal.com.ua/en/journals/tom-6-3-2023/dilema-rozvitku-ta-shlyakhi-virishennya-tsivilnikh-sudovikh-sprav-onlayn-u-kitayi-dosvid-kirgizstanu
   //https://sls-journal.com.ua/en/article/download/dilema-rozvitku-ta-shlyakhi-virishennya-tsivilnikh-sudovikh-sprav-onlayn-u-kitayi-dosvid-kirgizstanu
 
+  //https://sls-journal.com.ua/en/journals/tom-4-1-2021/genezis-kriminalnoyi-vidpovidalnosti-za-vtruchannya-u-diyalnist-derzhavnogo-diyacha-v-ukrayini
+  //https://sls-journal.com.ua/en/article/download/genezis-kriminalnoyi-vidpovidalnosti-za-vtruchannya-u-diyalnist-derzhavnogo-diyacha-v-ukrayini
+  //https://sls-journal.com.ua/uk/article/download/genezis-kriminalnoyi-vidpovidalnosti-za-vtruchannya-u-diyalnist-derzhavnogo-diyacha-v-ukrayini
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
 
-  protected static final String PATTERN_TEMPLATE = "\"%s(en|uk)/(journals/tom-%s-\\d+-2023|article/download)/(.*)\", base_url,volume_name,year";
+  protected static final String PATTERN_TEMPLATE = "\"%s(en|uk)/(journals/tom-%s-\\d+-\\d+|article/download)/(.*)\", base_url,volume_name,year";
 
   public static final Pattern HTML_PATTERN = Pattern.compile("(en|uk)/(journals/[^/]+)/(.*)", Pattern.CASE_INSENSITIVE);
   public static final String HTML_REPLACEMENT = "$1/$2/$3";
