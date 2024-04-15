@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>7</string>
+        <string>8</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -81,15 +81,15 @@ POSSIBILITY OF SUCH DAMAGE.
             <!-- https://www.manchesterhive.com/view/journals/fs/19/1/fs.19.issue-1.xml -->
             <!-- there are open source articles hosted on another domain -->
             <!-- https://www.manchesteropenhive.com/view/journals/hrv/1/1/article-p3.xml -->
-            <string>1,"^%s(view|downloadpdf|abstract)/journals/%s/%s", base_url, journal_id, volume_name</string>
-            <string>1,"^%s(view|downloadpdf|abstract)/journals/%s/%s", base_url2, journal_id, volume_name</string>
+            <string>1,"^%s(view|downloadpdf|abstract)/(view/)?journals/%s/%s", base_url, journal_id, volume_name</string>
+            <string>1,"^%s(view|downloadpdf|abstract)/(view/)?journals/%s/%s", base_url2, journal_id, volume_name</string>
         </list>
     </entry>
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
             <!-- https://www.manchesteropenhive.org/downloadpdf/journals/eint/24/2/eiD200001.xml -->
-            <string>"^(%s|%s)downloadpdf/journals/%s/%s/", base_url, base_url2, journal_id, volume_name</string>
+            <string>"^(%s|%s)downloadpdf/(view/)?journals/%s/%s/", base_url, base_url2, journal_id, volume_name</string>
         </list>
     </entry>
     <entry>

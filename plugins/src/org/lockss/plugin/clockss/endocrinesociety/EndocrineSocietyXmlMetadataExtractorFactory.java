@@ -70,7 +70,7 @@ public class EndocrineSocietyXmlMetadataExtractorFactory extends SourceXmlMetada
         }
 
         /*
-         * There is a one-to-one relationship between the pdf and xml.
+         * There is a one-to-many relationship between the xml and pdf.
          */
         @Override
         protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
@@ -78,7 +78,7 @@ public class EndocrineSocietyXmlMetadataExtractorFactory extends SourceXmlMetada
             String cuBase = FilenameUtils.getFullPath(cu.getUrl());
             String pdfName;
             log.debug3("CU Base is: " + cuBase);
-            //String doi = oneAM.getRaw(helper.getFilenameXPathKey());
+
             String title = oneAM.getRaw(EndocrineSocietyXmlSchemaHelper.article_title);
             String date = oneAM.getRaw(EndocrineSocietyXmlSchemaHelper.date);
             String isbn = oneAM.getRaw(EndocrineSocietyXmlSchemaHelper.isbn);
