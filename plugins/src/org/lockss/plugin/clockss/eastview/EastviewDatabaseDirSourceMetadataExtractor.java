@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -50,9 +50,6 @@ import java.util.regex.Pattern;
 
 public class EastviewDatabaseDirSourceMetadataExtractor extends BaseFileArticleMetadataExtractor{
 
-	/*
-	 * code ocean delivers capsules under publisher subdirectories - map the publisher path to a specifc publisher
-	 */
 
 	private static Logger log =
 			Logger.getLogger(EastviewDatabaseDirSourceMetadataExtractor.class);
@@ -68,12 +65,6 @@ public class EastviewDatabaseDirSourceMetadataExtractor extends BaseFileArticleM
 		super(role);
 	}
 
-	
-	/*
-	 *  CodeOcean has a file item "capsule.zip" that is the item we
-	 *  store characteristics about but additional metadata is extracted
-	 *  out of a preservation.yml file that is a sibling of capsule.zip
-	 */
 	protected CachedUrl getFileUrl(ArticleFiles af) {
 		CachedUrl fcu = af.getRoleCu("FileItem");
 		if (fcu == null) {
@@ -82,13 +73,6 @@ public class EastviewDatabaseDirSourceMetadataExtractor extends BaseFileArticleM
 		return fcu;
 	}
 
-
-    /*
-     * File item is capsule.zip
-     * Metadata from preservation.yml
-     * But check in case that file was missing, we don't want to extract
-     * any additional information so just return null.
-     */
 	protected CachedUrl getMetadataUrl(ArticleFiles af) {
 		CachedUrl mdcu = af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA); 
 		if((mdcu != null) && mdcu.getUrl().endsWith(".yml")) {
@@ -96,18 +80,7 @@ public class EastviewDatabaseDirSourceMetadataExtractor extends BaseFileArticleM
 		}
 		return null;
 	}	
-	/*
-	 * 
-	 * CodeOcean is a little different from the other FILE object items.
-	 * CodeOcean provides *some* metadata in a preservation.yml file that lives as a sibling of the actual 
-	 * item it describes "capsule.zip". 
-	 * Override the main File metadata method setFileMetadata
-	 */
 
-	/*
-	 * The AM should have the date from preservation.yml file
- 	 * If not, fail over to deposit date. 
-	 */
 	@Override
 	protected String getContentYear(CachedUrl cu, ArticleMetadata am) {
 		
@@ -124,21 +97,13 @@ public class EastviewDatabaseDirSourceMetadataExtractor extends BaseFileArticleM
 		return defYr;
 	}
 
-	/*
-	 * Code Ocean is actually the provider, serving code modules
-	 * for multiple publishers. 
-	 * If for some reason not set, use the publisher name in the url
-	 */
 	@Override
 	protected String getContentPublisher(CachedUrl cu, ArticleMetadata am) {
+
 		return super.getContentPublisher(cu,am);
 	}
 
 
-	/*
-	 * Code Ocean is actually the provider and provides
-	 * code modules for multliple publishers
-	 */ 
 	@Override
 	protected String getContentProvider(CachedUrl cu, ArticleMetadata am) {
 		return UDBCOM;

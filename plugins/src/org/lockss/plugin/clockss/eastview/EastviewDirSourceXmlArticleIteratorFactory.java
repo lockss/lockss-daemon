@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -35,6 +35,7 @@ package org.lockss.plugin.clockss.eastview;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractorFactory;
+import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
@@ -50,46 +51,68 @@ public class EastviewDirSourceXmlArticleIteratorFactory implements ArticleIterat
 
   private static final Logger log = Logger.getLogger(EastviewDirSourceXmlArticleIteratorFactory.class);
 
-  /*
-  /sourcefiles/eastviewudbcom-released/2024_01/eastview/UDB-COM/LGA/1997.zip
-  /sourcefiles/eastviewudbcom-released/2024_01/eastview/UDB-COM/LGA/1998.zip
-  /sourcefiles/eastviewudbcom-released/2024_01/eastview/UDB-COM/LGA/1999.zip
-  /sourcefiles/eastviewudbcom-released/2024_01/eastview/UDB-COM/LGA/2000.zip
-  /sourcefiles/eastviewudbcom-released/2024_01/eastview/UDB-COM/LGA/2001.zip
-   */
+  // Xml and PDF match from 2007, 2006 is a mixed year
+  //https://clockss-test.lockss.org/sourcefiles/eastview-released/2021/Eastview%20Journal%20Content/Digital%20Archives/Military%20Thought%20(DA-MLT)%201990-2019/DA-MLT.zip!/DA-MLT/MTH/2015/03/001_31/46295500_MTH_2015_0024_0001_0001.pdf
+  //https://clockss-test.lockss.org/sourcefiles/eastview-released/2021/Eastview%20Journal%20Content/Digital%20Archives/Military%20Thought%20(DA-MLT)%201990-2019/DA-MLT.zip!/DA-MLT/MTH/2015/03/001_31/46295500_MTH_2015_0024_0001_0001.xml
 
-  private static final String PATTERN_TEMPLATE =
-          "\"^%s%s/.*\\.zip\", base_url, directory";
+  // Only xml exits for year 2002,2003,2004, 2005
+  //https://clockss-test.lockss.org/sourcefiles/eastview-released/2021/Eastview%20Journal%20Content/Digital%20Archives/Military%20Thought%20(DA-MLT)%201990-2019/DA-MLT.zip!/DA-MLT/MTH/2003/03/001_31/01mth150.xml
+
+  // Only xhtml exists, before year 2002
+  //https://clockss-test.lockss.org/sourcefiles/eastview-released/2021/Eastview%20Journal%20Content/Digital%20Archives/Military%20Thought%20(DA-MLT)%201990-2019/DA-MLT.zip!/DA-MLT/MTH/1990/04/004_01/0040002.xhtml
+  protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
+          "\"%s[^/]+/.*\\.zip!/(.*)\\.(xml|xhtml)$\", base_url";
 
   // Be sure to exclude all nested archives in case supplemental data is provided this way
-  protected static final Pattern NESTED_ARCHIVE_PATTERN =
+  protected static final Pattern SUB_NESTED_ARCHIVE_PATTERN =
           Pattern.compile(".*/[^/]+\\.zip!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$",
                   Pattern.CASE_INSENSITIVE);
-  private static final Pattern ZIP_PATTERN = Pattern.compile("/(.*.zip)$", Pattern.CASE_INSENSITIVE);
-  private static final String 	ZIP_REPLACEMENT = "/$1.zip";
 
-  private static final String ROLE_FILE_ITEM = "FileItem";
+  protected Pattern getExcludeSubTreePattern() {
+    return SUB_NESTED_ARCHIVE_PATTERN;
+  }
+
+  protected String getIncludePatternTemplate() {
+    return ALL_ZIP_XML_PATTERN_TEMPLATE;
+  }
+
+  private static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.(xml)$", Pattern.CASE_INSENSITIVE);
+  private static final String XML_REPLACEMENT = "/$1.xml";
+  private static final String PDF_REPLACEMENT = "/$1.pdf";
 
 
+  //For early years, like before 2002, the delivered content only have "xhtml"
+  private static final Pattern XHTML_PATTERN = Pattern.compile("/(.*)\\.(xhtml)$", Pattern.CASE_INSENSITIVE);
+  private static final String XHTML_REPLACEMENT = "/$1.xhtml";
+  
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
-          throws PluginException {
+      throws PluginException {
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
 
-    // no need to limit to ROOT_TEMPLATE
     builder.setSpec(builder.newSpec()
-            .setTarget(target)
-            .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE)
-            .setExcludeSubTreePattern(NESTED_ARCHIVE_PATTERN));
+            .setPatternTemplate(getIncludePatternTemplate(), Pattern.CASE_INSENSITIVE)
+            //.setExcludeSubTreePattern(getExcludeSubTreePattern())
+            .setVisitArchiveMembers(true)
+            .setVisitArchiveMembers(getIsArchive()));
 
-
-    builder.addAspect(ZIP_PATTERN,
-            ZIP_REPLACEMENT,
-            ROLE_FILE_ITEM,
+    builder.addAspect(XHTML_PATTERN,
+            XHTML_REPLACEMENT,
             ArticleFiles.ROLE_ARTICLE_METADATA);
 
-    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, ROLE_FILE_ITEM);
+    builder.addAspect(XML_PATTERN,
+        XML_REPLACEMENT,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
+
+
+    builder.addAspect(XML_PATTERN,
+            PDF_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF);
+
+    
+    builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
+        ArticleFiles.ROLE_ARTICLE_METADATA); // emit even without PDF
 
     return builder.getSubTreeArticleIterator();
   }
@@ -97,11 +120,11 @@ public class EastviewDirSourceXmlArticleIteratorFactory implements ArticleIterat
   protected boolean getIsArchive() {
     return true;
   }
-
+  
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
-          throws PluginException {
-    return new EastviewDatabaseDirSourceMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
+      throws PluginException {
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
-
+  
 }
