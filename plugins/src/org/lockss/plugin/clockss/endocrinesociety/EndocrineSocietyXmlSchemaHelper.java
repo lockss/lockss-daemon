@@ -46,20 +46,19 @@ public class EndocrineSocietyXmlSchemaHelper implements SourceXmlSchemaHelper {
 
     static Logger log = Logger.getLogger(EndocrineSocietyXmlSchemaHelper.class);
 
-    protected static final String articleNode = "/metadatas/metadata";
+    private static final String articleNode = "/metadatas/metadata";
 
-    protected static final String article_title = articleNode + "/title";
-    protected static final String publisher = articleNode + "/publisher";
-    protected static final String isbn = articleNode + "/pisbn";
-    protected static final String eisbn = articleNode + "/eisbn";
-    protected static final String date = articleNode + "/yop";
-    protected static final String id = articleNode + "/id";
+    protected static final String article_title = "title";
+    protected static final String publisher = "publisher";
+    protected static final String isbn = "pisbn";
+    protected static final String eisbn = "eisbn";
+    protected static final String date = "yop";
+    protected static final String id = "id";
 
     static private final Map<String,XPathValue>
     articleMap = new HashMap<String,XPathValue>();
     static {
         articleMap.put(article_title, XmlDomMetadataExtractor.TEXT_VALUE);
-        articleMap.put(publisher, XmlDomMetadataExtractor.TEXT_VALUE);
         articleMap.put(isbn, XmlDomMetadataExtractor.TEXT_VALUE);
         articleMap.put(eisbn, XmlDomMetadataExtractor.TEXT_VALUE);
         articleMap.put(date, XmlDomMetadataExtractor.TEXT_VALUE);
@@ -67,7 +66,11 @@ public class EndocrineSocietyXmlSchemaHelper implements SourceXmlSchemaHelper {
     }
 
 
-    static private final Map<String,XPathValue> globalMap = null;
+    static private final Map<String, XPathValue> 
+    globalMap = new HashMap<String,XPathValue>();
+    static {
+        globalMap.put(publisher, XmlDomMetadataExtractor.TEXT_VALUE); 
+    }
 
     protected static final MultiValueMap cookMap = new MultiValueMap();
     static {
@@ -81,7 +84,7 @@ public class EndocrineSocietyXmlSchemaHelper implements SourceXmlSchemaHelper {
 
     @Override
     public Map<String, XPathValue> getGlobalMetaMap() {
-      return null; //globalMap;
+      return globalMap; //globalMap;
     }
 
     @Override
@@ -106,7 +109,7 @@ public class EndocrineSocietyXmlSchemaHelper implements SourceXmlSchemaHelper {
     }
     @Override
     public String getFilenameXPathKey() {
-        return null;
+        return id;
     }
     
 }

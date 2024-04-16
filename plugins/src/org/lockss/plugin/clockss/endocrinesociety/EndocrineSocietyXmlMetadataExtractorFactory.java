@@ -76,27 +76,31 @@ public class EndocrineSocietyXmlMetadataExtractorFactory extends SourceXmlMetada
         protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
             String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-            String pdfName;
+            String pdfName = "";
             log.debug3("CU Base is: " + cuBase);
 
             String title = oneAM.getRaw(EndocrineSocietyXmlSchemaHelper.article_title);
             String date = oneAM.getRaw(EndocrineSocietyXmlSchemaHelper.date);
             String id = oneAM.getRaw(EndocrineSocietyXmlSchemaHelper.id);
             //check if pdf is in REs or CMEs directory
-            if(title.contains("Reference Edition")){
-                log.debug3("reference edition found! ");
-                pdfName = cuBase + "REs/";
-            } else {
-                pdfName = cuBase + "CMEs/";
+            if(title != null){
+                if(title.contains("Reference Edition")){
+                    log.debug3("reference edition found! ");
+                    pdfName = cuBase + "REs/";
+                } else {
+                    pdfName = cuBase + "CMEs/";
+                }
             }
-            if(title.contains("ESAP")){
-                pdfName += "(1)%20ESAP/";
-            }else if(title.contains("Meet-The-Professor")){
-                pdfName += "(2)%20MTP/";
-            }else if(title.contains("Endocrine Board Review")){
-                pdfName += "(3)%20EBR/";
-            }else{
-                pdfName += "(4)%20PedESAP/";
+            if(title != null){
+                if(title.contains("ESAP")){
+                    pdfName += "(1)%20ESAP/";
+                }else if(title.contains("Endocrine Case Management")){
+                    pdfName += "(2)%20MTP/";
+                }else if(title.contains("Endocrine Board Review")){
+                    pdfName += "(3)%20EBR/";
+                }else{
+                    pdfName += "(4)%20PedESAP/";
+                }
             }
             pdfName += date + "/" + id;
             log.debug3("The pdf is: " + pdfName);
