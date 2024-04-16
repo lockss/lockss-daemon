@@ -60,13 +60,13 @@
         #au < doesNotExist ; doesNotExist ; 2010 ; 2010 ; 2010 ; Summer Academe Volume 2010 ; > #mpc can't find this
         #au < doesNotExist ; doesNotExist ; 2011 ; 2011 ; 2011 ; Summer Academe Volume 2011 ; > #mpc can't find this
         au < ready ; exists ; 2012 ; 2012 ; 2012 ; Summer Academe Volume 2012 ; >
-        au < ready ; exists ; 2013 ; 2013 ; 2013 ; Summer Academe Volume 2013 ; >
+        au < crawling ; exists ; 2013 ; 2013 ; 2013 ; Summer Academe Volume 2013 ; >
         au < doesNotExist ; doesNotExist ; 2014 ; 2014 ; 2014 ; Summer Academe Volume 2014 ; > #No articles
         au < ready ; exists ; 2015 ; 2015 ; 2015 ; Summer Academe Volume 2015 ; >
         au < ready ; exists ; 2016 ; 2016 ; 2016 ; Summer Academe Volume 2016 ; >
         au < doesNotExist ; doesNotExist ; 2017 ; 2017 ; 2017 ; Summer Academe Volume 2017 ; >
         au < ready ; exists ; 2018 ; 2018 ; 2018 ; Summer Academe Volume 2018 ; >
-        au < ready ; exists ; 2019 ; 2019 ; 2019 ; Summer Academe Volume 2019 ; >
+        au < crawling ; exists ; 2019 ; 2019 ; 2019 ; Summer Academe Volume 2019 ; >
         au < ready ; exists ; 2020 ; 2020 ; 2020 ; Summer Academe Volume 2020 ; >
         au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Summer Academe Volume 2021 ; >
         au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Summer Academe Volume 2022 ; >
@@ -88,7 +88,7 @@
         au < ready ; exists ; 2011 ; 2011 ; 2011 ; Essays in History Volume 2011 ; >
         au < ready ; exists ; 2012 ; 2012 ; 2012 ; Essays in History Volume 2012 ; >
         au < ready ; exists ; 2013 ; 2013 ; 2013 ; Essays in History Volume 2013 ; >
-        au < ready ; exists ; 2014 ; 2014 ; 2014 ; Essays in History Volume 2014 ; >
+        au < crawling ; exists ; 2014 ; 2014 ; 2014 ; Essays in History Volume 2014 ; >
         au < ready ; exists ; 2015 ; 2015 ; 2015 ; Essays in History Volume 2015 ; >
         au < ready ; exists ; 2016 ; 2016 ; 2016 ; Essays in History Volume 2016 ; >
         au < ready ; exists ; 2017 ; 2017 ; 2017 ; Essays in History Volume 2017 ; >
@@ -138,17 +138,17 @@
         au < ready ; exists ; 2009 ; 2009 ; 2009 ; Language Documentation and Description Volume 2009 ; >
         au < ready ; exists ; 2010 ; 2010 ; 2010 ; Language Documentation and Description Volume 2010 ; >
         au < ready ; exists ; 2011 ; 2011 ; 2011 ; Language Documentation and Description Volume 2011 ; >
-        au < ready ; exists ; 2012 ; 2012 ; 2012 ; Language Documentation and Description Volume 2012 ; >
+        au < crawling ; exists ; 2012 ; 2012 ; 2012 ; Language Documentation and Description Volume 2012 ; >
         au < doesNotExist ; doesNotExist ; 2013 ; 2013 ; 2013 ; Language Documentation and Description Volume 2013 ; >
         au < ready ; exists ; 2014 ; 2014 ; 2014 ; Language Documentation and Description Volume 2014 ; >
         au < doesNotExist ; doesNotExist ; 2015 ; 2015 ; 2015 ; Language Documentation and Description Volume 2015 ; >
         au < ready ; exists ; 2016 ; 2016 ; 2016 ; Language Documentation and Description Volume 2016 ; >
         au < ready ; exists ; 2017 ; 2017 ; 2017 ; Language Documentation and Description Volume 2017 ; >
         au < ready ; exists ; 2018 ; 2018 ; 2018 ; Language Documentation and Description Volume 2018 ; >
-        au < ready ; exists ; 2019 ; 2019 ; 2019 ; Language Documentation and Description Volume 2019 ; >
+        au < crawling ; exists ; 2019 ; 2019 ; 2019 ; Language Documentation and Description Volume 2019 ; >
         au < ready ; exists ; 2020 ; 2020 ; 2020 ; Language Documentation and Description Volume 2020 ; >
         au < ready ; exists ; 2021 ; 2021 ; 2021 ; Language Documentation and Description Volume 2021 ; >
-        au < ready ; exists ; 2022 ; 2022 ; 2022 ; Language Documentation and Description Volume 2022 ; >
+        au < crawling ; exists ; 2022 ; 2022 ; 2022 ; Language Documentation and Description Volume 2022 ; >
         au < ready ; exists ; 2023 ; 2023 ; 2023 ; Language Documentation and Description Volume 2023 ; >
         au < manifest ; exists ; 2024 ; 2024 ; 2024 ; Language Documentation and Description Volume 2024 ; >
     }
