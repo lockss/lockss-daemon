@@ -2004,7 +2004,7 @@ while (my $line = <>) {
             }
         }
         # now make sure a PDF is actually available on the book landing page
-        # whole book pdf will use the same doi as the book landing page
+        # whole book pdf will use the same doi as the book landing page ex. https://epubs.siam.org/doi/book/10.1137/1.9781611972863
         $url = sprintf("%sdoi/book/%s/%s",$param{base_url}, $doi1, $doi2);
         my $book_url = uri_unescape($url);
         my $breq = HTTP::Request->new(GET, $book_url);
@@ -2015,7 +2015,7 @@ while (my $line = <>) {
             #printf("href=\"pdfplus/%s/%s\"",${doi1},${doi2});
             #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\/${doi2}/)) {
             #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\//)) {  #"
-            if (defined($b_contents) && (($b_contents =~ m/href=\"[^"]+(epdf|pdf|epub|doi\/full)(plus)?\/${doi1}\//) || ($b_contents =~ m/>Buy PDF</))) {  #"
+            if (defined($b_contents) && (($b_contents =~ m/href=\"[^"]+(epdf|pdf|epub|doi\/)(book)?(full)?(plus)?\/${doi1}\//) || ($b_contents =~ m/>Buy PDF</))) {  #"
                 $result = "Manifest";
             }
         }
@@ -2073,7 +2073,7 @@ while (my $line = <>) {
                       #printf("href=\"pdfplus/%s/%s\"",${doi1},${doi2});
                       #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\/${doi2}/)) {
                       #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+(pdf|epub)(plus)?\/${doi1}\//)) {  #"
-                      if (defined($b_contents) && (($b_contents =~ m/href=\"[^"]+(epdf|pdf|epub|doi\/full)(plus)?\/${doi1}\//) || ($b_contents =~ m/>Buy PDF</))) {  #"
+                      if (defined($b_contents) && (($b_contents =~ m/href=\"[^"]+(epdf|pdf|epub|doi\/)(book)?(full)?(plus)?\/${doi1}\//) || ($b_contents =~ m/>Buy PDF</))) {  #"
                           $result = "Manifest";
                       }
                   }
