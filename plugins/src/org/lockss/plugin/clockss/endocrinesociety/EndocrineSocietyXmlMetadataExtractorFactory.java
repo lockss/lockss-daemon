@@ -81,7 +81,7 @@ public class EndocrineSocietyXmlMetadataExtractorFactory extends SourceXmlMetada
 
             String title = oneAM.getRaw(EndocrineSocietyXmlSchemaHelper.article_title);
             String date = oneAM.getRaw(EndocrineSocietyXmlSchemaHelper.date);
-            String isbn = oneAM.getRaw(EndocrineSocietyXmlSchemaHelper.isbn);
+            String id = oneAM.getRaw(EndocrineSocietyXmlSchemaHelper.id);
             //check if pdf is in REs or CMEs directory
             if(title.contains("Reference Edition")){
                 log.debug3("reference edition found! ");
@@ -98,7 +98,7 @@ public class EndocrineSocietyXmlMetadataExtractorFactory extends SourceXmlMetada
             }else{
                 pdfName += "(4)%20PedESAP/";
             }
-            pdfName += date + "/" + isbn + ".pdf";
+            pdfName += date + "/" + id;
             log.debug3("The pdf is: " + pdfName);
             List<String> returnList = new ArrayList<String>();
             returnList.add(pdfName);

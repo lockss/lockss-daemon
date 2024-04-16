@@ -46,8 +46,8 @@ public class TestEndocrineSocietyXmlMetadataExtractorFactory extends SourceXmlMe
     private static final Logger log = Logger.getLogger(TestEndocrineSocietyXmlMetadataExtractorFactory.class);
 
     private static String BaseUrl = "http://source.host.org/sourcefiles/endocrinesociety-released/";
-    private static String Directory = "2024_01";
-    private static String pdfUrl1 = BaseUrl + Directory + "/article_sample.pdf";
+    private static String Directory = "2024_01/Endocrine%20Society";
+    private static String pdfUrl1 = BaseUrl + Directory + "/CMEs/(1)%20ESAP/2018/9781879225411.pdf";
 
     public void testExtractArticleXmlSchema() throws Exception {
 

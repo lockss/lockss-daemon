@@ -46,11 +46,14 @@ public class EndocrineSocietyXmlSchemaHelper implements SourceXmlSchemaHelper {
 
     static Logger log = Logger.getLogger(EndocrineSocietyXmlSchemaHelper.class);
 
-    protected static final String article_title = "/metadatas/metadata/title";
-    protected static final String publisher = "/metadatas/metadata/publisher";
-    protected static final String isbn = "/metadatas/metadata/pisbn";
-    protected static final String eisbn = "/metadatas/metadata/eisbn";
-    protected static final String date = "/metadatas/metadata/yop";
+    protected static final String articleNode = "/metadatas/metadata";
+
+    protected static final String article_title = articleNode + "/title";
+    protected static final String publisher = articleNode + "/publisher";
+    protected static final String isbn = articleNode + "/pisbn";
+    protected static final String eisbn = articleNode + "/eisbn";
+    protected static final String date = articleNode + "/yop";
+    protected static final String id = articleNode + "/id";
 
     static private final Map<String,XPathValue>
     articleMap = new HashMap<String,XPathValue>();
@@ -60,6 +63,7 @@ public class EndocrineSocietyXmlSchemaHelper implements SourceXmlSchemaHelper {
         articleMap.put(isbn, XmlDomMetadataExtractor.TEXT_VALUE);
         articleMap.put(eisbn, XmlDomMetadataExtractor.TEXT_VALUE);
         articleMap.put(date, XmlDomMetadataExtractor.TEXT_VALUE);
+        articleMap.put(id, XmlDomMetadataExtractor.TEXT_VALUE);
     }
 
 
@@ -72,6 +76,7 @@ public class EndocrineSocietyXmlSchemaHelper implements SourceXmlSchemaHelper {
         cookMap.put(isbn, MetadataField.FIELD_ISBN);
         cookMap.put(eisbn, MetadataField.FIELD_EISBN);
         cookMap.put(date, MetadataField.FIELD_DATE);
+        cookMap.put(id, MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
     }
 
     @Override
@@ -85,7 +90,7 @@ public class EndocrineSocietyXmlSchemaHelper implements SourceXmlSchemaHelper {
     }
     @Override
     public String getArticleNode() {
-        return null;
+        return articleNode;
     }
     @Override
     public String getConsolidationXPathKey() {
