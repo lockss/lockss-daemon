@@ -1,0 +1,39 @@
+{
+
+  publisher <
+    name = Sulaimani Polytechnic University ;
+    info[contract] = 2024 ;
+    info[back] = 2020 ;
+    info[tester] = 8 ;
+    info[platform] = OJS3
+  >
+
+  implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
+
+  {
+ 
+    title <
+      name = Kurdistan Journal of Applied Research ;
+      issn = 2411-7684 ;
+      eissn = 2411-7706 ;
+      issnl = 2411-7684
+    >
+    
+    param[base_url] = https://kjar.spu.edu.iq/
+    param[journal_id] = kjar
+
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+
+    au < manifest ; exists ; 2016 ; 2016 ; Kurdistan Journal of Applied Research Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2017 ; 2017 ; Kurdistan Journal of Applied Research Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2018 ; 2018 ; Kurdistan Journal of Applied Research Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Kurdistan Journal of Applied Research Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Kurdistan Journal of Applied Research Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2021 ; 2021 ; Kurdistan Journal of Applied Research Volume 6 ; 6 ; >
+    au < doesNotExist ; doesNotExist ; 2022 ; 2022 ; Kurdistan Journal of Applied Research Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2023 ; 2023 ; Kurdistan Journal of Applied Research Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2024 ; 2024 ; Kurdistan Journal of Applied Research Volume 9 ; 9 ; >
+
+  }
+}
