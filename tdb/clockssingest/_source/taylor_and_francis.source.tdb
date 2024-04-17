@@ -57,8 +57,8 @@
     {
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/taylorfrancis-released/
 
-    au < readySource ; frozen ; 2023 ; Taylor & Francis Source Content 2023_01 ; 2023_01 >
-    au < readySource ; frozen ; 2023 ; Taylor & Francis Source Content 2023_02 ; 2023_02 >
+    au < readySource ; finished ; 2023 ; Taylor & Francis Source Content 2023_01 ; 2023_01 >
+    au < readySource ; finished ; 2023 ; Taylor & Francis Source Content 2023_02 ; 2023_02 >
 
     au < readySource ; crawling ; 2024 ; Taylor & Francis Source Content 2024_01 ; 2024_01 >
     au < testing ; exists ; 2024 ; Taylor & Francis Source Content 2024_02 ; 2024_02 >

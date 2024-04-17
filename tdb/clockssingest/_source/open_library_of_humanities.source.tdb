@@ -33,7 +33,7 @@
     {
     param[base_url] = https://clockss-ingest.lockss.org/warcfiles/alluvium-released/
 
-    au < readySource ; frozen ; 2023 ; Alluvium WARC Content 2023 ; 2023 ; >
+    au < readySource ; finished ; 2023 ; Alluvium WARC Content 2023 ; 2023 ; >
     au < expected ; exists ; 2025 ; Alluvium WARC Content 2025 ; 2025 ; >
 
     }
