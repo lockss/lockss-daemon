@@ -59,7 +59,7 @@
     au < finished ; finished ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 (06/2017) ; 2017-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 (07/2017) ; 2017-07 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 (08/2017) ; 2017-08 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 (09/2017) ; 2017-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 (09/2017) ; 2017-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 (10/2017) ; 2017-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 (11/2017) ; 2017-11 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
     au < doesNotExist ; doesNotExist ; 2017 ; 73 ; Acta Crystallographica Section E: Crystallographic Communications Volume 73 (12/2017) ; 2017-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
@@ -103,17 +103,17 @@
     au < deepCrawl ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (11/2020) ; 2020-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < superseded ; exists ; 2020 ; 76 ; Acta Crystallographica Section E: Crystallographic Communications Volume 76 (12/2020) ; 2020-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #no content
 
-    au < finished ; crawling ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (01/2021) ; 2021-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (02/2021) ; 2021-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (03/2021) ; 2021-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (04/2021) ; 2021-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (05/2021) ; 2021-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (06/2021) ; 2021-06 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (07/2021) ; 2021-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (08/2021) ; 2021-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (09/2021) ; 2021-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (10/2021) ; 2021-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (11/2021) ; 2021-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (01/2021) ; 2021-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (02/2021) ; 2021-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (03/2021) ; 2021-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (04/2021) ; 2021-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (05/2021) ; 2021-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (06/2021) ; 2021-06 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (07/2021) ; 2021-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (08/2021) ; 2021-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (09/2021) ; 2021-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (10/2021) ; 2021-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (11/2021) ; 2021-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
     au < doesNotExist ; doesNotExist ; 2021 ; 77 ; Acta Crystallographica Section E: Crystallographic Communications Volume 77 (12/2021) ; 2021-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #no content
 
     au < frozen ; exists ; 2022 ; 78 ; Acta Crystallographica Section E: Crystallographic Communications Volume 78 (01/2022) ; 2022-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
@@ -238,8 +238,8 @@
     au < finished ; crawling ; 2005 ; 61 ; Acta Crystallographica Section E: Structure Reports Online Volume 61 (12/2005) ; 2005-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
 
     au < finished ; crawling ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 (01/2006) ; 2006-01 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 (02/2006) ; 2006-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 (03/2006) ; 2006-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 (02/2006) ; 2006-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 (03/2006) ; 2006-03 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 (04/2006) ; 2006-04 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 (05/2006) ; 2006-05 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2006 ; 62 ; Acta Crystallographica Section E: Structure Reports Online Volume 62 (06/2006) ; 2006-06 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
@@ -261,7 +261,7 @@
     au < finished ; crawling ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 (09/2007) ; 2007-09 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 (10/2007) ; 2007-10 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 (11/2007) ; 2007-11 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 (12/2007) ; 2007-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2007 ; 63 ; Acta Crystallographica Section E: Structure Reports Online Volume 63 (12/2007) ; 2007-12 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
 
     au < frozen ; exists ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 (01/2008) ; 2008-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < finished ; finished ; 2008 ; 64 ; Acta Crystallographica Section E: Structure Reports Online Volume 64 (02/2008) ; 2008-02 ; http://journals.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
@@ -450,30 +450,30 @@
     au < superseded ; exists ; 2019 ; 6 ; IUCrJ Volume 6 (12/2019) ; 2019-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #no content
 
     au < finished ; crawling ; 2020 ; 7 ; IUCrJ Volume 7 (01/2020) ; 2020-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2020 ; 7 ; IUCrJ Volume 7 (02/2020) ; 2020-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2020 ; 7 ; IUCrJ Volume 7 (03/2020) ; 2020-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2020 ; 7 ; IUCrJ Volume 7 (04/2020) ; 2020-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2020 ; 7 ; IUCrJ Volume 7 (05/2020) ; 2020-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2020 ; 7 ; IUCrJ Volume 7 (06/2020) ; 2020-06 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2020 ; 7 ; IUCrJ Volume 7 (07/2020) ; 2020-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2020 ; 7 ; IUCrJ Volume 7 (08/2020) ; 2020-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2020 ; 7 ; IUCrJ Volume 7 (09/2020) ; 2020-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2020 ; 7 ; IUCrJ Volume 7 (10/2020) ; 2020-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2020 ; 7 ; IUCrJ Volume 7 (02/2020) ; 2020-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2020 ; 7 ; IUCrJ Volume 7 (03/2020) ; 2020-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2020 ; 7 ; IUCrJ Volume 7 (04/2020) ; 2020-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; 7 ; IUCrJ Volume 7 (05/2020) ; 2020-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; 7 ; IUCrJ Volume 7 (06/2020) ; 2020-06 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2020 ; 7 ; IUCrJ Volume 7 (07/2020) ; 2020-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2020 ; 7 ; IUCrJ Volume 7 (08/2020) ; 2020-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; 7 ; IUCrJ Volume 7 (09/2020) ; 2020-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; 7 ; IUCrJ Volume 7 (10/2020) ; 2020-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (11/2020) ; 2020-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #no content
     au < superseded ; exists ; 2020 ; 7 ; IUCrJ Volume 7 (12/2020) ; 2020-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #no content
 
-    au < finished ; crawling ; 2021 ; 8 ; IUCrJ Volume 8 (01/2021) ; 2021-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2021 ; 8 ; IUCrJ Volume 8 (02/2021) ; 2021-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2021 ; 8 ; IUCrJ Volume 8 (03/2021) ; 2021-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2021 ; 8 ; IUCrJ Volume 8 (04/2021) ; 2021-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2021 ; 8 ; IUCrJ Volume 8 (05/2021) ; 2021-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2021 ; 8 ; IUCrJ Volume 8 (06/2021) ; 2021-06 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2021 ; 8 ; IUCrJ Volume 8 (07/2021) ; 2021-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2021 ; 8 ; IUCrJ Volume 8 (08/2021) ; 2021-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2021 ; 8 ; IUCrJ Volume 8 (09/2021) ; 2021-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2021 ; 8 ; IUCrJ Volume 8 (10/2021) ; 2021-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2021 ; 8 ; IUCrJ Volume 8 (11/2021) ; 2021-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2021 ; 8 ; IUCrJ Volume 8 (12/2021) ; 2021-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ; 8 ; IUCrJ Volume 8 (01/2021) ; 2021-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2021 ; 8 ; IUCrJ Volume 8 (02/2021) ; 2021-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2021 ; 8 ; IUCrJ Volume 8 (03/2021) ; 2021-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ; 8 ; IUCrJ Volume 8 (04/2021) ; 2021-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ; 8 ; IUCrJ Volume 8 (05/2021) ; 2021-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2021 ; 8 ; IUCrJ Volume 8 (06/2021) ; 2021-06 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2021 ; 8 ; IUCrJ Volume 8 (07/2021) ; 2021-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ; 8 ; IUCrJ Volume 8 (08/2021) ; 2021-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ; 8 ; IUCrJ Volume 8 (09/2021) ; 2021-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2021 ; 8 ; IUCrJ Volume 8 (10/2021) ; 2021-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ; 8 ; IUCrJ Volume 8 (11/2021) ; 2021-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2021 ; 8 ; IUCrJ Volume 8 (12/2021) ; 2021-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
 
     au < frozen ; exists ; 2022 ; 9 ; IUCrJ Volume 9 (01/2022) ; 2022-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < frozen ; exists ; 2022 ; 9 ; IUCrJ Volume 9 (02/2022) ; 2022-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
@@ -583,27 +583,27 @@
 
     au < finished ; crawling ; 2020 ; 5 ; IUCrData Volume 5 (01/2020) ; 2020-01 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; 5 ; IUCrData Volume 5 (02/2020) ; 2020-02 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2020 ; 5 ; IUCrData Volume 5 (03/2020) ; 2020-03 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2020 ; 5 ; IUCrData Volume 5 (04/2020) ; 2020-04 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2020 ; 5 ; IUCrData Volume 5 (05/2020) ; 2020-05 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2020 ; 5 ; IUCrData Volume 5 (06/2020) ; 2020-06 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2020 ; 5 ; IUCrData Volume 5 (07/2020) ; 2020-07 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2020 ; 5 ; IUCrData Volume 5 (08/2020) ; 2020-08 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2020 ; 5 ; IUCrData Volume 5 (09/2020) ; 2020-09 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2020 ; 5 ; IUCrData Volume 5 (10/2020) ; 2020-10 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2020 ; 5 ; IUCrData Volume 5 (11/2020) ; 2020-11 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2020 ; 5 ; IUCrData Volume 5 (12/2020) ; 2020-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; 5 ; IUCrData Volume 5 (03/2020) ; 2020-03 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2020 ; 5 ; IUCrData Volume 5 (04/2020) ; 2020-04 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; 5 ; IUCrData Volume 5 (05/2020) ; 2020-05 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; 5 ; IUCrData Volume 5 (06/2020) ; 2020-06 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2020 ; 5 ; IUCrData Volume 5 (07/2020) ; 2020-07 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2020 ; 5 ; IUCrData Volume 5 (08/2020) ; 2020-08 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; 5 ; IUCrData Volume 5 (09/2020) ; 2020-09 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; 5 ; IUCrData Volume 5 (10/2020) ; 2020-10 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2020 ; 5 ; IUCrData Volume 5 (11/2020) ; 2020-11 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2020 ; 5 ; IUCrData Volume 5 (12/2020) ; 2020-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
 
     au < finished ; crawling ; 2021 ; 6 ; IUCrData Volume 6 (01/2021) ; 2021-01 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2021 ; 6 ; IUCrData Volume 6 (02/2021) ; 2021-02 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2021 ; 6 ; IUCrData Volume 6 (03/2021) ; 2021-03 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2021 ; 6 ; IUCrData Volume 6 (04/2021) ; 2021-04 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2021 ; 6 ; IUCrData Volume 6 (05/2021) ; 2021-05 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2021 ; 6 ; IUCrData Volume 6 (06/2021) ; 2021-06 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2021 ; 6 ; IUCrData Volume 6 (07/2021) ; 2021-07 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2021 ; 6 ; IUCrData Volume 6 (08/2021) ; 2021-08 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2021 ; 6 ; IUCrData Volume 6 (09/2021) ; 2021-09 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; crawling ; 2021 ; 6 ; IUCrData Volume 6 (10/2021) ; 2021-10 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ; 6 ; IUCrData Volume 6 (02/2021) ; 2021-02 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ; 6 ; IUCrData Volume 6 (03/2021) ; 2021-03 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ; 6 ; IUCrData Volume 6 (04/2021) ; 2021-04 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2021 ; 6 ; IUCrData Volume 6 (05/2021) ; 2021-05 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2021 ; 6 ; IUCrData Volume 6 (06/2021) ; 2021-06 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ; 6 ; IUCrData Volume 6 (07/2021) ; 2021-07 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2021 ; 6 ; IUCrData Volume 6 (08/2021) ; 2021-08 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2021 ; 6 ; IUCrData Volume 6 (09/2021) ; 2021-09 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2021 ; 6 ; IUCrData Volume 6 (10/2021) ; 2021-10 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 6 ; IUCrData Volume 6 (11/2021) ; 2021-11 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < frozen ; exists ; 2021 ; 6 ; IUCrData Volume 6 (12/2021) ; 2021-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
 
