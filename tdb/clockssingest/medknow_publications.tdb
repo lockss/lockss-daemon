@@ -231,7 +231,7 @@
     au < finished ; frozen ; 2018 ; Annals of Maxillofacial Surgery Volume 8 ; 2018 ; 8 ; http://www.amsjournal.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2019 ; Annals of Maxillofacial Surgery Volume 9 ; 2019 ; 9 ; https://www.amsjournal.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2020 ; Annals of Maxillofacial Surgery Volume 10 ; 2020 ; 10 ; https://www.amsjournal.com/ ; ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2021 ; Annals of Maxillofacial Surgery Volume 11 ; 2021 ; 11 ; https://www.amsjournal.com/ ; ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2021 ; Annals of Maxillofacial Surgery Volume 11 ; 2021 ; 11 ; https://www.amsjournal.com/ ; ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2022 ; Annals of Maxillofacial Surgery Volume 12 ; 2022 ; 12 ; https://www.amsjournal.com/ ; ; >
 
   }
@@ -535,8 +535,8 @@
     #move to LWW in 2023, moved https://journals.lww.com/ayuh/
 
     au < doNotProcess ; exists ; 2017 ; AYUHOM Volume 4 ; 2017 ; 4 ; https://www.ayuhom.com/ ; ; > #500 error
-    au < finished ; frozen ; 2018 ; AYUHOM Volume 5 ; 2018 ; 5 ; https://www.ayuhom.com/ ; ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2019 ; AYUHOM Volume 6 ; 2019 ; 6 ; https://www.ayuhom.com/ ; ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2018 ; AYUHOM Volume 5 ; 2018 ; 5 ; https://www.ayuhom.com/ ; ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; AYUHOM Volume 6 ; 2019 ; 6 ; https://www.ayuhom.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2020 ; AYUHOM Volume 7 ; 2020 ; 7 ; https://www.ayuhom.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; AYUHOM Volume 8 ; 2021 ; 8 ; https://www.ayuhom.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2022 ; AYUHOM Volume 9 ; 2022 ; 9 ; https://www.ayuhom.com/ ; ; reingest5.clockss.org:8082 >
