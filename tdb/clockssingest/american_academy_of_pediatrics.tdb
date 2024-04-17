@@ -28,7 +28,7 @@
       au < manifest ; exists ; 1999 ; 1999 ; AAP Grand Rounds Volume 2 ; 2 ; >
       au < finished ; manifest ; 2000 ; 2000 ; AAP Grand Rounds Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2000 ; 2000 ; AAP Grand Rounds Volume 4 ; 4 ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2001 ; 2001 ; AAP Grand Rounds Volume 5 ; 5 ; >
+      au < ready ; exists ; 2001 ; 2001 ; AAP Grand Rounds Volume 5 ; 5 ; >
       au < finished ; manifest ; 2001 ; 2001 ; AAP Grand Rounds Volume 6 ; 6 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2002 ; 2002 ; AAP Grand Rounds Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2002 ; 2002 ; AAP Grand Rounds Volume 8 ; 8 ; reingest1.clockss.org:8082 >
@@ -352,7 +352,7 @@
       au < doNotProcess ; exists ; 2018 ; 2018 ; Pediatrics Volume 141 ; 141 ; >
       au < doNotProcess ; exists ; 2018 ; 2018 ; Pediatrics Volume 142 ; 142 ; >
       au < doNotProcess ; exists ; 2019 ; 2019 ; Pediatrics Volume 143 ; 143 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Pediatrics Volume 144 ; 144 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Pediatrics Volume 144 ; 144 ; >
       au < doNotProcess ; exists ; 2020 ; 2020 ; Pediatrics Volume 145 ; 145 ; >
       au < doNotProcess ; exists ; 2020 ; 2020 ; Pediatrics Volume 146 ; 146 ; >
       au < finished ; manifest ; 2021 ; 2021 ; Pediatrics Volume 147 ; 147 ; reingest1.clockss.org:8082 >
