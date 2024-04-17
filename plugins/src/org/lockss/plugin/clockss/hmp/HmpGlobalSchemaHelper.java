@@ -37,16 +37,68 @@ import java.util.Map;
 import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.XmlDomMetadataExtractor;
+import org.lockss.extractor.XmlDomMetadataExtractor.NodeValue;
 import org.lockss.plugin.clockss.PubMedSchemaHelper;
+import org.lockss.util.Logger;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 public class HmpGlobalSchemaHelper extends PubMedSchemaHelper{
+
+    private static final Logger log = Logger.getLogger(HmpGlobalSchemaHelper.class);
+
+    static private final NodeValue AUTHOR_NAME = new NodeValue() {
+        @Override
+        public String getValue(Node node) {
+    
+          log.debug3("getValue of PubMed author name");
+          NodeList elementChildren = node.getChildNodes();
+          if (elementChildren == null) return null;
+    
+          String tgiven = null;
+          String tsurname = null;
+          String tmidname = null;
+          // look at each child of the TitleElement for information                                                                                                                                     
+          for (int j = 0; j < elementChildren.getLength(); j++) {
+            Node checkNode = elementChildren.item(j);
+            String nodeName = checkNode.getNodeName();
+            if ("FirstName".equals(nodeName)) {
+              tgiven = checkNode.getTextContent();
+            } else if ("LastName".equals(nodeName) ) {
+              tsurname = checkNode.getTextContent();
+            } else if ("MiddleName".equals(nodeName) ) {
+              tmidname = checkNode.getTextContent();
+            }
+          }
+    
+          StringBuilder valbuilder = new StringBuilder();
+          if (tsurname != null) {
+            valbuilder.append(tsurname);
+            if (tgiven != null) {
+              valbuilder.append(", " + tgiven);
+              if (tmidname != null) {
+                valbuilder.append(" " + tmidname);
+              }
+            }
+          } else {
+            log.debug3("no name found");
+            return null;
+          }
+          log.debug3("name found: " + valbuilder.toString());
+          return valbuilder.toString();
+        }
+      };
     
     static protected final String art_doi = "ELocationID[@EIdType = \"doi\"]";
+    protected static String art_title = "ArticleTitle";
+    protected static String art_contrib = "AuthorList/Author";
 
     @Override
     public Map<String, XmlDomMetadataExtractor.XPathValue> getArticleMetaMap() {
         Map<String, XmlDomMetadataExtractor.XPathValue> articleMap = super.getArticleMetaMap();
         articleMap.put(art_doi, XmlDomMetadataExtractor.TEXT_VALUE);
+        articleMap.put(art_title, XmlDomMetadataExtractor.TEXT_VALUE);
+        articleMap.put(art_contrib, AUTHOR_NAME);
         return articleMap;
     }
 
