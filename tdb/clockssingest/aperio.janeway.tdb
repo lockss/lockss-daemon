@@ -59,7 +59,7 @@
         #au < doesNotExist ; doesNotExist ; 2009 ; 2009 ; 2009 ; Summer Academe Volume 2009 ; > #mpc can't find this
         #au < doesNotExist ; doesNotExist ; 2010 ; 2010 ; 2010 ; Summer Academe Volume 2010 ; > #mpc can't find this
         #au < doesNotExist ; doesNotExist ; 2011 ; 2011 ; 2011 ; Summer Academe Volume 2011 ; > #mpc can't find this
-        au < ready ; exists ; 2012 ; 2012 ; 2012 ; Summer Academe Volume 2012 ; >
+        au < crawling ; exists ; 2012 ; 2012 ; 2012 ; Summer Academe Volume 2012 ; >
         au < crawling ; exists ; 2013 ; 2013 ; 2013 ; Summer Academe Volume 2013 ; >
         au < doesNotExist ; doesNotExist ; 2014 ; 2014 ; 2014 ; Summer Academe Volume 2014 ; > #No articles
         au < ready ; exists ; 2015 ; 2015 ; 2015 ; Summer Academe Volume 2015 ; >
@@ -92,7 +92,7 @@
         au < ready ; exists ; 2015 ; 2015 ; 2015 ; Essays in History Volume 2015 ; >
         au < ready ; exists ; 2016 ; 2016 ; 2016 ; Essays in History Volume 2016 ; >
         au < ready ; exists ; 2017 ; 2017 ; 2017 ; Essays in History Volume 2017 ; >
-        au < ready ; exists ; 2018 ; 2018 ; 2018 ; Essays in History Volume 2018 ; >
+        au < crawling ; exists ; 2018 ; 2018 ; 2018 ; Essays in History Volume 2018 ; >
         au < ready ; exists ; 2019 ; 2019 ; 2019 ; Essays in History Volume 2019 ; >
         au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Essays in History Volume 2020 ; >
         au < doesNotExist ; doesNotExist ; 2021 ; 2021 ; 2021 ; Essays in History Volume 2021 ; > # 2021 API return empty record list
@@ -110,13 +110,13 @@
 
         param[base_url] = https://firstaidjournal.org/
 
-        au < ready ; exists ; 2017 ; 2017 ; 2017 ; International Journal of First Aid Education Volume 2017 ; >
+        au < crawling ; exists ; 2017 ; 2017 ; 2017 ; International Journal of First Aid Education Volume 2017 ; >
         au < ready ; exists ; 2018 ; 2018 ; 2018 ; International Journal of First Aid Education Volume 2018 ; >
         au < ready ; exists ; 2019 ; 2019 ; 2019 ; International Journal of First Aid Education Volume 2019 ; >
-        au < ready ; exists ; 2020 ; 2020 ; 2020 ; International Journal of First Aid Education Volume 2020 ; >
+        au < crawling ; exists ; 2020 ; 2020 ; 2020 ; International Journal of First Aid Education Volume 2020 ; >
         au < ready ; exists ; 2021 ; 2021 ; 2021 ; International Journal of First Aid Education Volume 2021 ; >
         au < ready ; exists ; 2022 ; 2022 ; 2022 ; International Journal of First Aid Education Volume 2022 ; >
-        au < ready ; exists ; 2023 ; 2023 ; 2023 ; International Journal of First Aid Education Volume 2023 ; >
+        au < crawling ; exists ; 2023 ; 2023 ; 2023 ; International Journal of First Aid Education Volume 2023 ; >
         au < manifest ; exists ; 2024 ; 2024 ; 2024 ; International Journal of First Aid Education Volume 2024 ; >
 
   }
@@ -131,7 +131,7 @@
 
         au < ready ; exists ; 2003 ; 2003 ; 2003 ; Language Documentation and Description Volume 2003 ; >
         au < ready ; exists ; 2004 ; 2004 ; 2004 ; Language Documentation and Description Volume 2004 ; >
-        au < ready ; exists ; 2005 ; 2005 ; 2005 ; Language Documentation and Description Volume 2005 ; >
+        au < crawling ; exists ; 2005 ; 2005 ; 2005 ; Language Documentation and Description Volume 2005 ; >
         au < doesNotExist ; doesNotExist ; 2006 ; 2006 ; 2006 ; Language Documentation and Description Volume 2006 ; >
         au < ready ; exists ; 2007 ; 2007 ; 2007 ; Language Documentation and Description Volume 2007 ; >
         au < ready ; exists ; 2008 ; 2008 ; 2008 ; Language Documentation and Description Volume 2008 ; >
@@ -140,7 +140,7 @@
         au < ready ; exists ; 2011 ; 2011 ; 2011 ; Language Documentation and Description Volume 2011 ; >
         au < crawling ; exists ; 2012 ; 2012 ; 2012 ; Language Documentation and Description Volume 2012 ; >
         au < doesNotExist ; doesNotExist ; 2013 ; 2013 ; 2013 ; Language Documentation and Description Volume 2013 ; >
-        au < ready ; exists ; 2014 ; 2014 ; 2014 ; Language Documentation and Description Volume 2014 ; >
+        au < crawling ; exists ; 2014 ; 2014 ; 2014 ; Language Documentation and Description Volume 2014 ; >
         au < doesNotExist ; doesNotExist ; 2015 ; 2015 ; 2015 ; Language Documentation and Description Volume 2015 ; >
         au < ready ; exists ; 2016 ; 2016 ; 2016 ; Language Documentation and Description Volume 2016 ; >
         au < ready ; exists ; 2017 ; 2017 ; 2017 ; Language Documentation and Description Volume 2017 ; >
