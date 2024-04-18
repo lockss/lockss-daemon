@@ -45,7 +45,6 @@ import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
-import org.lockss.util.StringUtil;
 
 public class HmpGlobalNoDoiMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
     
@@ -82,9 +81,9 @@ public class HmpGlobalNoDoiMetadataExtractorFactory extends SourceXmlMetadataExt
             String pdfName;
             log.debug3("CU Base is: " + cuBase);
 
-            String title = oneAM.getRaw(HmpGlobalSchemaHelper.art_title);
-            List<String> titleList = new ArrayList<String>(Arrays.asList(title.split(" ")));
-            String author = oneAM.getRaw(HmpGlobalSchemaHelper.art_contrib);
+            String title = oneAM.getRaw(HmpGlobalSchemaHelper.art_title).trim().replace("/", ".");
+            List<String> titleList = new ArrayList<String>(Arrays.asList(title.split("[\\s:“”]+")));
+            String author = oneAM.getRaw(HmpGlobalSchemaHelper.art_contrib).replace("ñ","n").replace("á","a").replace("’","'");
             List<String> authorList = new ArrayList<String>(Arrays.asList(author.split(", ")));
             pdfName = cuBase + authorList.get(0) + "_" + titleList.get(0) + " " + titleList.get(1) + " " + titleList.get(2)+ ".pdf";
             log.debug3("The pdf is: " + pdfName);

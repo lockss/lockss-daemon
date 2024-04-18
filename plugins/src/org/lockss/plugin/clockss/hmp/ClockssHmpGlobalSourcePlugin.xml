@@ -99,7 +99,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <map>
             <entry>
                 <string>*</string>
-                <string>org.lockss.plugin.clockss.hmp.HmpGlobalXmlMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.clockss.hmp.HmpGlobalNoDoiMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
@@ -108,7 +108,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <map>
             <entry>
                 <string>*</string>
-                <string>org.lockss.plugin.clockss.hmp.HmpGlobalXmlMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.clockss.hmp.HmpGlobalNoDoiMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
