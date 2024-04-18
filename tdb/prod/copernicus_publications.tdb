@@ -475,8 +475,6 @@
       au < released ; 2020 ; 2020 ; Drinking Water Engineering and Science Volume 13 ; 13 >
       au < released ; 2021 ; 2021 ; Drinking Water Engineering and Science Volume 14 ; 14 >
       au < released ; 2022 ; 2022 ; Drinking Water Engineering and Science Volume 15 ; 15 >
-      au < expected ; 2023 ; 2023 ; Drinking Water Engineering and Science Volume 16 ; 16 >
-      au < expected ; 2024 ; 2024 ; Drinking Water Engineering and Science Volume 17 ; 17 >
 
    }
     
@@ -675,6 +673,7 @@
       param[base_url] = https://fr.copernicus.org/
       param[home_url] = https://www.fossil-record.net/
       # Abstract only, not Open Access, from volume 1 to 16, eissn 1860-1014
+      # continued at Pensoft from 1 January 2022
 
       au < manifest ; 1998 ; 1998 ; Fossil Record Reports Volume 1 ; 1 >
       au < manifest ; 1999 ; 1999 ; Fossil Record Reports Volume 2 ; 2 >
@@ -700,9 +699,6 @@
       au < doNotProcess ; 2019 ; 2019 ; Fossil Record Reports Volume 22 ; 22 >
       au < released ; 2020 ; 2020 ; Fossil Record Reports Volume 23 ; 23 >
       au < released ; 2021 ; 2021 ; Fossil Record Reports Volume 24 ; 24 >
-      au < expected ; 2022 ; 2022 ; Fossil Record Reports Volume 25 ; 25 >
-      au < expected ; 2023 ; 2023 ; Fossil Record Reports Volume 26 ; 26 >
-      au < expected ; 2024 ; 2024 ; Fossil Record Reports Volume 27 ; 27 >
 
    }
     
@@ -1256,9 +1252,8 @@
       param[home_url] = https://www.safety-of-nuclear-waste-disposal.net/
 
       au < released ; 2021 ; 2021 ; Safety of Nuclear Waste Disposal Volume 1 ; 1 >
-      au < expected ; 2022 ; 2022 ; Safety of Nuclear Waste Disposal Volume 2 ; 2 >
-      au < expected ; 2023 ; 2023 ; Safety of Nuclear Waste Disposal Volume 3 ; 3 >
-      au < expected ; 2024 ; 2024 ; Safety of Nuclear Waste Disposal Volume 4 ; 4 >
+      au < expected ; 2023 ; 2023 ; Safety of Nuclear Waste Disposal Volume 2 ; 2 >
+      au < expected ; 2024 ; 2024 ; Safety of Nuclear Waste Disposal Volume 3 ; 3 >
 
   }
 

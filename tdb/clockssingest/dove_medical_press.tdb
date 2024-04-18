@@ -1207,6 +1207,7 @@
     >
     
     param[journal_id] = 52
+    #International Journal of Wine Research ceased publishing in January 2023
 
     au < finished ; finished ; 2009 ; International Journal of Wine Research Volume 1 ; 1 ; 2009 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2010 ; International Journal of Wine Research Volume 2 ; 2 ; 2010 ; reingest1.clockss.org:8082 >
@@ -1220,10 +1221,6 @@
     au < finished ; finished ; 2018 ; International Journal of Wine Research Volume 10 ; 10 ; 2018 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2019 ; International Journal of Wine Research Volume 11 ; 11 ; 2019 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2020 ; International Journal of Wine Research Volume 12 ; 12 ; 2020 ; reingest3.clockss.org:8083 >
-    au < expected ; exists ; 2021 ; International Journal of Wine Research Volume 13 ; 13 ; 2021 ; >
-    au < expected ; exists ; 2022 ; International Journal of Wine Research Volume 14 ; 14 ; 2022 ; >
-    au < manifest ; exists ; 2023 ; International Journal of Wine Research Volume 15 ; 15 ; 2023 ; >
-    au < expected ; exists ; 2024 ; International Journal of Wine Research Volume 16 ; 16 ; 2024 ; >
 
   }
 
@@ -2015,6 +2012,7 @@
     >
     
     param[journal_id] = 88
+    #Core Evidence ceased publishing in January 2023
 
     au < finished ; finished ; 2005 ; Core Evidence Volume 1 Issues 1 and 2 ; 1 ; 2005 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2006 ; Core Evidence Volume 1 Issues 3 and 4 ; 1 ; 2006 ; reingest1.clockss.org:8082 >
@@ -2032,10 +2030,6 @@
     au < finished ; finished ; 2018 ; Core Evidence Volume 13 ; 13 ; 2018 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2019 ; Core Evidence Volume 14 ; 14 ; 2019 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2020 ; Core Evidence Volume 15 ; 15 ; 2020 ; reingest4.clockss.org:8082 >
-    au < expected ; exists ; 2021 ; Core Evidence Volume 16 ; 16 ; 2021 ; >
-    au < expected ; exists ; 2022 ; Core Evidence Volume 17 ; 17 ; 2022 ; >
-    au < manifest ; exists ; 2023 ; Core Evidence Volume 18 ; 18 ; 2023 ; >
-    au < expected ; exists ; 2024 ; Core Evidence Volume 19 ; 19 ; 2024 ; >
 
   }
 
@@ -3185,6 +3179,7 @@
     >
     
     param[journal_id] = 149
+    #Hypoxia ceased publishing in January 2023
 
     au < finished ; finished ; 2013 ; Hypoxia Volume 1 ; 1 ; 2013 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Hypoxia Volume 2 ; 2 ; 2014 ; >
@@ -3194,10 +3189,6 @@
     au < finished ; finished ; 2018 ; Hypoxia Volume 6 ; 6 ; 2018 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2019 ; Hypoxia Volume 7 ; 7 ; 2019 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2020 ; Hypoxia Volume 8 ; 8 ; 2020 ; reingest4.clockss.org:8082 >
-    au < expected ; exists ; 2021 ; Hypoxia Volume 9 ; 9 ; 2021 ; >
-    au < expected ; exists ; 2022 ; Hypoxia Volume 10 ; 10 ; 2022 ; >
-    au < manifest ; exists ; 2023 ; Hypoxia Volume 11 ; 11 ; 2023 ; >
-    au < expected ; exists ; 2024 ; Hypoxia Volume 12 ; 12 ; 2024 ; >
 
   }
 
@@ -3209,6 +3200,7 @@
     >
     
     param[journal_id] = 150
+    #Metalloproteinases In Medicine ceased publishing in January 2023
 
     au < finished ; finished ; 2014 ; Metalloproteinases In Medicine Volume 1 ; 1 ; 2014 ; >
     au < finished ; finished ; 2015 ; Metalloproteinases In Medicine Volume 2 ; 2 ; 2015 ; >
@@ -3217,10 +3209,6 @@
     au < finished ; finished ; 2018 ; Metalloproteinases In Medicine Volume 5 ; 5 ; 2018 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2019 ; Metalloproteinases In Medicine Volume 6 ; 6 ; 2019 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2020 ; Metalloproteinases In Medicine Volume 7 ; 7 ; 2020 ; reingest5.clockss.org:8082 >
-    au < expected ; exists ; 2021 ; Metalloproteinases In Medicine Volume 8 ; 8 ; 2021 ; >
-    au < expected ; exists ; 2022 ; Metalloproteinases In Medicine Volume 9 ; 9 ; 2022 ; >
-    au < manifest ; exists ; 2023 ; Metalloproteinases In Medicine Volume 10 ; 10 ; 2023 ; >
-    au < expected ; exists ; 2024 ; Metalloproteinases In Medicine Volume 11 ; 11 ; 2024 ; >
 
   }
 
@@ -3250,6 +3238,7 @@
     >
     
     param[journal_id] = 152
+    #Journal of Vascular Diagnostics and Interventions ceased publishing in January 2023
 
     au < finished ; finished ; 2013 ; Journal of Vascular Diagnostics and Interventions Volume 1 ; 1 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Journal of Vascular Diagnostics and Interventions Volume 2 ; 2 ; 2014 ; >
@@ -3259,10 +3248,6 @@
     au < finished ; finished ; 2018 ; Journal of Vascular Diagnostics and Interventions Volume 6 ; 6 ; 2018 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2019 ; Journal of Vascular Diagnostics and Interventions Volume 7 ; 7 ; 2019 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2020 ; Journal of Vascular Diagnostics and Interventions Volume 8 ; 8 ; 2020 ; reingest1.clockss.org:8082 >
-    au < expected ; exists ; 2021 ; Journal of Vascular Diagnostics and Interventions Volume 9 ; 9 ; 2021 ; >
-    au < expected ; exists ; 2022 ; Journal of Vascular Diagnostics and Interventions Volume 10 ; 10 ; 2022 ; >
-    au < manifest ; exists ; 2023 ; Journal of Vascular Diagnostics and Interventions Volume 11 ; 11 ; 2023 ; >
-    au < expected ; exists ; 2024 ; Journal of Vascular Diagnostics and Interventions Volume 12 ; 12 ; 2024 ; >
 
   }
 

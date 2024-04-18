@@ -3600,7 +3600,7 @@
       >
 
     param[journal_id] = 10.1055/s-00041241
-    comment[years] = 2013-current
+    comment[years] = 2013-2021
 
       au < doNotProcess ; 2013 ; 2013 ; Journal of Social Health and Diabetes Volume 1 ; 1 >
       au < doNotProcess ; 2014 ; 2014 ; Journal of Social Health and Diabetes Volume 2 ; 2 >
@@ -3611,9 +3611,6 @@
       au < released ; 2019 ; 2019 ; Journal of Social Health and Diabetes Volume 7 ; 7 >
       au < released ; 2020 ; 2020 ; Journal of Social Health and Diabetes Volume 8 ; 8 >
       au < released ; 2021 ; 2021 ; Journal of Social Health and Diabetes Volume 9 ; 9 >
-      au < expected ; 2022 ; 2022 ; Journal of Social Health and Diabetes Volume 10 ; 10 >
-      au < expected ; 2023 ; 2023 ; Journal of Social Health and Diabetes Volume 11 ; 11 >
-      au < expected ; 2024 ; 2024 ; Journal of Social Health and Diabetes Volume 12 ; 12 >
 
   }
 
@@ -3748,7 +3745,7 @@
 
     >
     param[journal_id] = 10.1055/s-00000030
-    comment[years] = 2003-current
+    comment[years] = 2003-2020
 
     au < doNotProcess ; 2003 ; 2003 ; Klinikarzt Der Volume 32 ; 32 >
     au < doNotProcess ; 2004 ; 2004 ; Klinikarzt Der Volume 33 ; 33 >
@@ -3768,10 +3765,6 @@
     au < released ; 2018 ; 2018 ; Klinikarzt Der Volume 47 ; 47 >
     au < released ; 2019 ; 2019 ; Klinikarzt Der Volume 48 ; 48 >
     au < released ; 2020 ; 2020 ; Klinikarzt Der Volume 49 ; 49 >
-    au < expected ; 2021 ; 2021 ; Klinikarzt Der Volume 50 ; 50 >
-    au < expected ; 2022 ; 2022 ; Klinikarzt Der Volume 51 ; 51 >
-    au < expected ; 2023 ; 2023 ; Klinikarzt Der Volume 52 ; 52 >
-    au < expected ; 2024 ; 2024 ; Klinikarzt Der Volume 53 ; 53 >
 
   }
 
@@ -4149,7 +4142,7 @@
 
     >
     param[journal_id] = 10.1055/s-00000038
-    comment[years] = 2004-current
+    comment[years] = 2004-2020
 
     au < doNotProcess ; 2004 ; 2004 ; manuelletherapie Volume 8 ; 8 >
     au < doNotProcess ; 2005 ; 2005 ; manuelletherapie Volume 9 ; 9 >
@@ -4168,10 +4161,6 @@
     au < released ; 2018 ; 2018 ; manuelletherapie Volume 22 ; 22 >
     au < released ; 2019 ; 2019 ; manuelletherapie Volume 23 ; 23 >
     au < released ; 2020 ; 2020 ; manuelletherapie Volume 24 ; 24 >
-    au < expected ; 2021 ; 2021 ; manuelletherapie Volume 25 ; 25 >
-    au < expected ; 2022 ; 2022 ; manuelletherapie Volume 26 ; 26 >
-    au < expected ; 2023 ; 2023 ; manuelletherapie Volume 27 ; 27 >
-    au < expected ; 2024 ; 2024 ; manuelletherapie Volume 28 ; 28 >
 
   }
 
@@ -4574,7 +4563,7 @@
 
     >
     param[journal_id] = 10.1055/s-00000045
-    comment[years] = 2002-current
+    comment[years] = 2002-2021
 
     au < doNotProcess ; 2002 ; 2002 ; Der Nuklearmediziner Volume 25 ; 25 >
     au < doNotProcess ; 2003 ; 2003 ; Der Nuklearmediziner Volume 26 ; 26 >
@@ -4596,9 +4585,6 @@
     au < released ; 2019 ; 2019 ; Der Nuklearmediziner Volume 42 ; 42 >
     au < released ; 2020 ; 2020 ; Der Nuklearmediziner Volume 43 ; 43 >
     au < released ; 2021 ; 2021 ; Der Nuklearmediziner Volume 44 ; 44 >
-    au < expected ; 2022 ; 2022 ; Der Nuklearmediziner Volume 45 ; 45 >
-    au < expected ; 2023 ; 2023 ; Der Nuklearmediziner Volume 46 ; 46 >
-    au < expected ; 2024 ; 2024 ; Der Nuklearmediziner Volume 47 ; 47 >
 
   }
 
@@ -7859,7 +7845,7 @@
 
     >
     param[journal_id] = 10.1055/s-00000112
-    comment[years] = 2003-current
+    comment[years] = 2003-2021
 
     au < doNotProcess ; 2003 ; 2003 ; ZWR - Das Deutsche Zahnärzteblatt Volume 112 ; 112 >
     au < doNotProcess ; 2004 ; 2004 ; ZWR - Das Deutsche Zahnärzteblatt Volume 113 ; 113 >
@@ -7880,9 +7866,6 @@
     au < released ; 2019 ; 2019 ; ZWR - Das Deutsche Zahnärzteblatt Volume 128 ; 128 >
     au < released ; 2020 ; 2020 ; ZWR - Das Deutsche Zahnärzteblatt Volume 129 ; 129 >
     au < released ; 2021 ; 2021 ; ZWR - Das Deutsche Zahnärzteblatt Volume 130 ; 130 >
-    au < expected ; 2022 ; 2022 ; ZWR - Das Deutsche Zahnärzteblatt Volume 131 ; 131 >
-    au < expected ; 2023 ; 2023 ; ZWR - Das Deutsche Zahnärzteblatt Volume 132 ; 132 >
-    au < expected ; 2024 ; 2024 ; ZWR - Das Deutsche Zahnärzteblatt Volume 133 ; 133 >
 
   }
 
@@ -8574,14 +8557,11 @@
     >
 
     param[journal_id] = 10.1055/s-00039252
-    comment[years] = 2019-current
+    comment[years] = 2019-2021
 
-    au < released ; 2019 ; 2019 ; Yearbook of Medical Informatics Volume 83 ; 83 >
-    au < released ; 2020 ; 2020 ; Yearbook of Medical Informatics Volume 84 ; 84 >
-    au < released ; 2021 ; 2021 ; Yearbook of Medical Informatics Volume 85 ; 85 >
-    au < expected ; 2022 ; 2022 ; Yearbook of Medical Informatics Volume 86 ; 86 >
-    au < expected ; 2023 ; 2023 ; Yearbook of Medical Informatics Volume 87 ; 87 >
-    au < expected ; 2024 ; 2024 ; Yearbook of Medical Informatics Volume 88 ; 88 >
+    au < released ; 2019 ; 2019 ; Revista Argentina de Radiología Volume 83 ; 83 >
+    au < released ; 2020 ; 2020 ; Revista Argentina de Radiología Volume 84 ; 84 >
+    au < released ; 2021 ; 2021 ; Revista Argentina de Radiología Volume 85 ; 85 >
 
   }
 
@@ -8778,15 +8758,12 @@
     >
 
     param[journal_id] = 10.1055/s-00035232
-    comment[years] = 2018-current
+    comment[years] = 2018-2021
 
     au < released ; 2018 ; 2018 ; Der Schmerzpatient Volume 1 ; 1 >
     au < released ; 2019 ; 2019 ; Der Schmerzpatient Volume 2 ; 2 >
     au < released ; 2020 ; 2020 ; Der Schmerzpatient Volume 3 ; 3 >
     au < released ; 2021 ; 2021 ; Der Schmerzpatient Volume 4 ; 4 >
-    au < expected ; 2022 ; 2022 ; Der Schmerzpatient Volume 5 ; 5 >
-    au < expected ; 2023 ; 2023 ; Der Schmerzpatient Volume 6 ; 6 >
-    au < expected ; 2024 ; 2024 ; Der Schmerzpatient Volume 7 ; 7 >
 
   }
 
@@ -8985,22 +8962,20 @@
     >
 
     param[journal_id] = 10.1055/s-00040442
-    comment[years] = 2011-current
+    comment[years] = 2011-2021
+    #Journal no longer online available
 
-    au < released ; 2011 ; 2011 ; International Journal of Nutrology Volume 4 ; 4 >
-    au < released ; 2012 ; 2012 ; International Journal of Nutrology Volume 5 ; 5 >
-    au < released ; 2013 ; 2013 ; International Journal of Nutrology Volume 6 ; 6 >
-    au < released ; 2014 ; 2014 ; International Journal of Nutrology Volume 7 ; 7 >
-    au < released ; 2015 ; 2015 ; International Journal of Nutrology Volume 8 ; 8 >
-    au < released ; 2016 ; 2016 ; International Journal of Nutrology Volume 9 ; 9 >
-    au < released ; 2017 ; 2017 ; International Journal of Nutrology Volume 10 ; 10 >
-    au < released ; 2018 ; 2018 ; International Journal of Nutrology Volume 11 ; 11 >
-    au < released ; 2019 ; 2019 ; International Journal of Nutrology Volume 12 ; 12 >
-    au < released ; 2020 ; 2020 ; International Journal of Nutrology Volume 13 ; 13 >
-    au < released ; 2021 ; 2021 ; International Journal of Nutrology Volume 14 ; 14 >
-    au < expected ; 2022 ; 2022 ; International Journal of Nutrology Volume 15 ; 15 >
-    au < expected ; 2023 ; 2023 ; International Journal of Nutrology Volume 16 ; 16 >
-    au < expected ; 2024 ; 2024 ; International Journal of Nutrology Volume 17 ; 17 >
+    au < down ; 2011 ; 2011 ; International Journal of Nutrology Volume 4 ; 4 >
+    au < down ; 2012 ; 2012 ; International Journal of Nutrology Volume 5 ; 5 >
+    au < down ; 2013 ; 2013 ; International Journal of Nutrology Volume 6 ; 6 >
+    au < down ; 2014 ; 2014 ; International Journal of Nutrology Volume 7 ; 7 >
+    au < down ; 2015 ; 2015 ; International Journal of Nutrology Volume 8 ; 8 >
+    au < down ; 2016 ; 2016 ; International Journal of Nutrology Volume 9 ; 9 >
+    au < down ; 2017 ; 2017 ; International Journal of Nutrology Volume 10 ; 10 >
+    au < down ; 2018 ; 2018 ; International Journal of Nutrology Volume 11 ; 11 >
+    au < down ; 2019 ; 2019 ; International Journal of Nutrology Volume 12 ; 12 >
+    au < down ; 2020 ; 2020 ; International Journal of Nutrology Volume 13 ; 13 >
+    au < down ; 2021 ; 2021 ; International Journal of Nutrology Volume 14 ; 14 >
 
   }
 
@@ -9269,15 +9244,13 @@
     >
 
     param[journal_id] = 10.1055/s-00042864
-    comment[years] = 2019-current
-    #content page not online
+    comment[years] = 2019-2021
+    #Journal no longer online available
 
-    au < exists ; 2019 ; 2019 ; National Journal of Clinical Anatomy Volume 1 ; 1 >
-    au < exists ; 2020 ; 2020 ; National Journal of Clinical Anatomy Volume 2 ; 2 >
-    au < exists ; 2021 ; 2021 ; National Journal of Clinical Anatomy Volume 3 ; 3 >
-    au < expected ; 2022 ; 2022 ; National Journal of Clinical Anatomy Volume 4 ; 4 >
-    au < expected ; 2023 ; 2023 ; National Journal of Clinical Anatomy Volume 5 ; 5 >
-    au < expected ; 2024 ; 2024 ; National Journal of Clinical Anatomy Volume 6 ; 6 >
+
+    au < doNotProcess ; 2019 ; 2019 ; National Journal of Clinical Anatomy Volume 1 ; 1 >
+    au < doNotProcess ; 2020 ; 2020 ; National Journal of Clinical Anatomy Volume 2 ; 2 >
+    au < doNotProcess ; 2021 ; 2021 ; National Journal of Clinical Anatomy Volume 3 ; 3 >
 
   }
 
@@ -9436,14 +9409,11 @@
     >
 
     param[journal_id] = 10.1055/s-00042778
-    comment[years] = 2019-current
+    comment[years] = 2019-2020
 
     au < released ; 2019 ; 2019 ; Revista Fisioterapia Invasiva Volume 1 ; 1 >
-    au < released ; 2020 ; 2020 ; Revista Fisioterapia Invasiva Volume 2 ; 2 >
-    au < expected ; 2021 ; 2021 ; Revista Fisioterapia Invasiva Volume 3 ; 3 >
-    au < expected ; 2022 ; 2022 ; Revista Fisioterapia Invasiva Volume 4 ; 4 >
-    au < expected ; 2023 ; 2023 ; Revista Fisioterapia Invasiva Volume 5 ; 5 >
-    au < expected ; 2024 ; 2024 ; Revista Fisioterapia Invasiva Volume 6 ; 6 >
+    au < expected ; 2019 ; 2019 ; Revista Fisioterapia Invasiva Volume 2 ; 2 >
+    au < released ; 2020 ; 2020 ; Revista Fisioterapia Invasiva Volume 3 ; 3 >
 
   }
 
