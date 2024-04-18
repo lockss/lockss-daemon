@@ -844,10 +844,11 @@
     au < frozen ; exists ; 2020 ; ; 9781789062076 ; Water and Environmental Challenges in a Changing World ; ebooks/book/804/Water-and-Environmental-Challenges-in-a-Changing ; >
     au < frozen ; exists ; 2021 ; ; 9781789062410 ; Water Resource Recovery Modelling ; ebooks/book/810/Water-Resource-Recovery-Modelling ; >
     au < frozen ; exists ; 2022 ; ; 9781789063370 ; Celebrating passion for Water, Science and Technology: Festschrift in Honour of Gustaf Olsson ; ebooks/book/859/Celebrating-passion-for-Water-Science-and ; >
-    au < notReady ; exists ; 2022 ; ; 9781789064445 ; SARS-CoV-2 in Water ; ebooks/book/883/SARS-CoV-2-in-Water ; >
-    au < notReady ; exists ; 2023 ; ; 9781789064797 ; Advanced Oxidation Processes for Contaminants of Emerging Concern ; ebooks/book/887/Advanced-Oxidation-Processes-for-Contaminants-of ; >
-    au < notReady ; exists ; 2023 ; ; 9781789064780 ; Wastewater-based Epidemiology at the Frontier of Global Public Health ; ebooks/book/888/Wastewater-based-Epidemiology-at-the-Frontier-of ; >
-    au < notReady ; exists ; 2023 ; ; 9781789064810 ; Cutting-edge Research on the Action Plan for Prevention and Control of Emerging Contaminants in China ; ebooks/book/889/Cutting-edge-Research-on-the-Action-Plan-for ; >
+    #No books on the site
+    au < doNotProcess ; doNotProcess ; 2022 ; ; 9781789064445 ; SARS-CoV-2 in Water ; ebooks/book/883/SARS-CoV-2-in-Water ; >
+    au < doNotProcess ; doNotProcess ; 2023 ; ; 9781789064797 ; Advanced Oxidation Processes for Contaminants of Emerging Concern ; ebooks/book/887/Advanced-Oxidation-Processes-for-Contaminants-of ; >
+    au < doNotProcess ; doNotProcess ; 2023 ; ; 9781789064780 ; Wastewater-based Epidemiology at the Frontier of Global Public Health ; ebooks/book/888/Wastewater-based-Epidemiology-at-the-Frontier-of ; >
+    au < doNotProcess ; doNotProcess ; 2023 ; ; 9781789064810 ; Cutting-edge Research on the Action Plan for Prevention and Control of Emerging Contaminants in China ; ebooks/book/889/Cutting-edge-Research-on-the-Action-Plan-for ; >
 
     }
   }
