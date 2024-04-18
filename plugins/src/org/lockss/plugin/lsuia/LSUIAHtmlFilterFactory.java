@@ -67,11 +67,12 @@ public class LSUIAHtmlFilterFactory implements FilterFactory {
      HtmlNodeFilters.tagWithAttributeRegex("section", "id", "product-tabs"),
      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "share-wrapper"),
      HtmlNodeFilters.tagWithAttributeRegex("span", "class", "fa-file-pdf-o"),
-     HtmlNodeFilters.tagWithAttributeRegex("span", "class", "fa-file-pdf-o"),
      HtmlNodeFilters.tagWithAttributeRegex("span", "class", "fa-users"),
-     HtmlNodeFilters.tagWithAttributeRegex("span", "class", "fa-eye"),
+     HtmlNodeFilters.tagWithAttributeRegex("span", "class", "fa-calendar"),
      HtmlNodeFilters.tagWithAttributeRegex("span", "class", "fa-eye"),
      HtmlNodeFilters.tagWithAttributeRegex("span", "class", "fa-file"),
+     HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "social-link"),
+     HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "post-info"),
 
     };
     InputStream filteredStream = new HtmlFilterInputStream(in, encoding,
