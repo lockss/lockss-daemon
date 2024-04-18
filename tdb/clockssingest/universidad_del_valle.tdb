@@ -1,0 +1,38 @@
+{
+
+  publisher <
+    name = Universidad del Valle ;
+    info[contract] = 2024 ;
+    info[back] = 2020 ;
+    info[tester] = 8 ;
+    info[platform] = OJS3
+  >
+
+  implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
+  plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+  attr[start_stem] = index.php/
+
+  {
+ 
+    title <
+      name = Revista Cuadernos de administración ;
+      issn = 0120-4645 ;
+      eissn = 2256-5078 ;
+      issnl = 0120-4645
+    >
+    
+    param[base_url] = https://cuadernosdeadministracion.univalle.edu.co/
+    param[journal_id] = cuadernos_de_administracion
+
+    au < exists ; exists ; 2016 ; 2016 ; Kurdistan Journal of Applied Research Volume 1 ; 1 ; >
+    au < exists ; exists ; 2017 ; 2017 ; Kurdistan Journal of Applied Research Volume 2 ; 2 ; >
+    au < exists ; exists ; 2018 ; 2018 ; Kurdistan Journal of Applied Research Volume 3 ; 3 ; >
+    au < exists ; exists ; 2019 ; 2019 ; Kurdistan Journal of Applied Research Volume 4 ; 4 ; >
+    au < exists ; exists ; 2020 ; 2020 ; Kurdistan Journal of Applied Research Volume 5 ; 5 ; >
+    au < exists ; exists ; 2021 ; 2021 ; Kurdistan Journal of Applied Research Volume 6 ; 6 ; >
+    au < exists ; exists ; 2022 ; 2022 ; Kurdistan Journal of Applied Research Volume 7 ; 7 ; >
+    au < exists ; exists ; 2023 ; 2023 ; Kurdistan Journal of Applied Research Volume 8 ; 8 ; >
+    au < expected ; exists ; 2024 ; 2024 ; Revista Cuadernos de administración Volume 9 ; 9 ; >
+
+  }
+}
