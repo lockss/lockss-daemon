@@ -98,12 +98,12 @@
       param[base_url] = https://njips.nust.edu.pk/
       param[journal_id] = njips
 
-      au < exists ; exists ; 2017 ; NUST Journal of International Peace and Stability Volume 2017 ; 1 ; 2017 ; >
-      au < exists ; exists ; 2018 ; NUST Journal of International Peace and Stability Volume 2018 ; 2 ; 2018 ; >
-      au < exists ; exists ; 2019 ; NUST Journal of International Peace and Stability Volume 2019 ; 3 ; 2019 ; >
-      au < exists ; exists ; 2020 ; NUST Journal of International Peace and Stability Volume 2020 ; 4 ; 2020 ; >
-      au < exists ; exists ; 2021 ; NUST Journal of International Peace and Stability Volume 2021 ; 5 ; 2021 ; >
-      au < exists ; exists ; 2022 ; NUST Journal of International Peace and Stability Volume 2022 ; 6 ; 2022 ; >
+      au < manifest ; exists ; 2017 ; NUST Journal of International Peace and Stability Volume 2017 ; 1 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; NUST Journal of International Peace and Stability Volume 2018 ; 2 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; NUST Journal of International Peace and Stability Volume 2019 ; 3 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; NUST Journal of International Peace and Stability Volume 2020 ; 4 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; NUST Journal of International Peace and Stability Volume 2021 ; 5 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; NUST Journal of International Peace and Stability Volume 2022 ; 6 ; 2022 ; >
       au < exists ; exists ; 2023 ; NUST Journal of International Peace and Stability Volume 2023 ; 7 ; 2023 ; >
       au < expected ; exists ; 2024 ; NUST Journal of International Peace and Stability Volume 2024 ; 8 ; 2024 ; >
 

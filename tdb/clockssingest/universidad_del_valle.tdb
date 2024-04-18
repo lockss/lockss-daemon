@@ -24,6 +24,9 @@
     param[base_url] = https://cuadernosdeadministracion.univalle.edu.co/
     param[journal_id] = cuadernos_de_administracion
 
+    au < exists ; exists ; 1983 ; 1983 ; Revista Cuadernos de administración Volume 1983 ; 1983 ; >
+    au < exists ; exists ; 1984 ; 1984 ; Revista Cuadernos de administración Volume 1984 ; 1984 ; >
+
     au < manifest ; exists ; 1985 ; 1985 ; Revista Cuadernos de administración Volume 1 ; 1 ; >
     au < doesNotExist ; doesNotExist ; 1986 ; 1986 ; Revista Cuadernos de administración Volume 2 ; 2 ; >
     au < manifest ; exists ; 1987 ; 1987 ; Revista Cuadernos de administración Volume 3 ; 3 ; >
@@ -31,16 +34,11 @@
     au < manifest ; exists ; 1989 ; 1989 ; Revista Cuadernos de administración Volume 5 ; 5 ; >
     au < manifest ; exists ; 1990 ; 1990 ; Revista Cuadernos de administración Volume 6 ; 6 ; >
     au < doesNotExist ; doesNotExist ; 1991 ; 1991 ; Revista Cuadernos de administración Volume 7 ; 7 ; >
-    au < manifest ; exists ; 1992 ; 1992 ; Revista Cuadernos de administración Volume 8 ; 8 ; >
-    au < doesNotExist ; doesNotExist ; 1993 ; 1993 ; Revista Cuadernos de administración Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1992 ; 1992 ; Revista Cuadernos de administración Volume 12 ; 12 ; >
 
-    au < doesNotExist ; doesNotExist ; 1994 ; 1994 ; Revista Cuadernos de administración Volume 10 ; 10 ; >
-    au < manifest ; exists ; 1995 ; 1995 ; Revista Cuadernos de administración Volume 11 ; 11 ; >
-    au < manifest ; exists ; 1996 ; 1996 ; Revista Cuadernos de administración Volume 12 ; 12 ; >
-    au < doesNotExist ; doesNotExist ; 1997 ; 1997 ; Revista Cuadernos de administración Volume 13 ; 13 ; >
-    au < manifest ; exists ; 1998 ; 1998 ; Revista Cuadernos de administración Volume 14 ; 14 ; >
-    au < doesNotExist ; doesNotExist ; 1999 ; 1999 ; Revista Cuadernos de administración Volume 15 ; 15 ; >
-    au < doesNotExist ; doesNotExist ; 2000 ; 2000 ; Revista Cuadernos de administración Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1995 ; 1995 ; Revista Cuadernos de administración Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1996 ; 1996 ; Revista Cuadernos de administración Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1998 ; 1998 ; Revista Cuadernos de administración Volume 16 ; 16 ; >
     au < manifest ; exists ; 2001 ; 2001 ; Revista Cuadernos de administración Volume 17 ; 17 ; >
     au < manifest ; exists ; 2002 ; 2002 ; Revista Cuadernos de administración Volume 18 ; 18 ; >
     au < manifest ; exists ; 2003 ; 2003 ; Revista Cuadernos de administración Volume 19 ; 19 ; >
