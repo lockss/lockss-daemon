@@ -24,15 +24,50 @@
     param[base_url] = https://cuadernosdeadministracion.univalle.edu.co/
     param[journal_id] = cuadernos_de_administracion
 
-    au < exists ; exists ; 2016 ; 2016 ; Kurdistan Journal of Applied Research Volume 1 ; 1 ; >
-    au < exists ; exists ; 2017 ; 2017 ; Kurdistan Journal of Applied Research Volume 2 ; 2 ; >
-    au < exists ; exists ; 2018 ; 2018 ; Kurdistan Journal of Applied Research Volume 3 ; 3 ; >
-    au < exists ; exists ; 2019 ; 2019 ; Kurdistan Journal of Applied Research Volume 4 ; 4 ; >
-    au < exists ; exists ; 2020 ; 2020 ; Kurdistan Journal of Applied Research Volume 5 ; 5 ; >
-    au < exists ; exists ; 2021 ; 2021 ; Kurdistan Journal of Applied Research Volume 6 ; 6 ; >
-    au < exists ; exists ; 2022 ; 2022 ; Kurdistan Journal of Applied Research Volume 7 ; 7 ; >
-    au < exists ; exists ; 2023 ; 2023 ; Kurdistan Journal of Applied Research Volume 8 ; 8 ; >
-    au < expected ; exists ; 2024 ; 2024 ; Revista Cuadernos de administración Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; Revista Cuadernos de administración Volume 1 ; 1 ; >
+    au < doesNotExist ; doesNotExist ; 1986 ; 1986 ; Revista Cuadernos de administración Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1987 ; 1987 ; Revista Cuadernos de administración Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1988 ; 1988 ; Revista Cuadernos de administración Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1989 ; 1989 ; Revista Cuadernos de administración Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1990 ; 1990 ; Revista Cuadernos de administración Volume 6 ; 6 ; >
+    au < doesNotExist ; doesNotExist ; 1991 ; 1991 ; Revista Cuadernos de administración Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1992 ; 1992 ; Revista Cuadernos de administración Volume 8 ; 8 ; >
+    au < doesNotExist ; doesNotExist ; 1993 ; 1993 ; Revista Cuadernos de administración Volume 9 ; 9 ; >
+
+    au < doesNotExist ; doesNotExist ; 1994 ; 1994 ; Revista Cuadernos de administración Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1995 ; 1995 ; Revista Cuadernos de administración Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1996 ; 1996 ; Revista Cuadernos de administración Volume 12 ; 12 ; >
+    au < doesNotExist ; doesNotExist ; 1997 ; 1997 ; Revista Cuadernos de administración Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1998 ; 1998 ; Revista Cuadernos de administración Volume 14 ; 14 ; >
+    au < doesNotExist ; doesNotExist ; 1999 ; 1999 ; Revista Cuadernos de administración Volume 15 ; 15 ; >
+    au < doesNotExist ; doesNotExist ; 2000 ; 2000 ; Revista Cuadernos de administración Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2001 ; 2001 ; Revista Cuadernos de administración Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2002 ; 2002 ; Revista Cuadernos de administración Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2003 ; 2003 ; Revista Cuadernos de administración Volume 19 ; 19 ; >
+
+    au < manifest ; exists ; 2004 ; 2004 ; Revista Cuadernos de administración Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2005 ; 2005 ; Revista Cuadernos de administración Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2006 ; 2006 ; Revista Cuadernos de administración Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2007 ; 2007 ; Revista Cuadernos de administración Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2008 ; 2008 ; Revista Cuadernos de administración Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; Revista Cuadernos de administración Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; Revista Cuadernos de administración Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Revista Cuadernos de administración Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Revista Cuadernos de administración Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Revista Cuadernos de administración Volume 29 ; 29 ; >
+
+    au < manifest ; exists ; 2014 ; 2014 ; Revista Cuadernos de administración Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; Revista Cuadernos de administración Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Revista Cuadernos de administración Volume 32 ; 32 ; >
+    au < manifest ; exists ; 2017 ; 2017 ; Revista Cuadernos de administración Volume 33 ; 33 ; >
+    au < manifest ; exists ; 2018 ; 2018 ; Revista Cuadernos de administración Volume 34 ; 34 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Revista Cuadernos de administración Volume 35 ; 35 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Revista Cuadernos de administración Volume 36 ; 36 ; >
+    au < manifest ; exists ; 2021 ; 2021 ; Revista Cuadernos de administración Volume 37 ; 37 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Revista Cuadernos de administración Volume 38 ; 38 ; >
+    au < manifest ; exists ; 2023 ; 2023 ; Revista Cuadernos de administración Volume 39 ; 39 ; >
+
+    au < manifest ; exists ; 2024 ; 2024 ; Revista Cuadernos de administración Volume 40 ; 40 ; >
 
   }
 }
