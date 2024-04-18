@@ -54,7 +54,7 @@
     param[journal_id] = dev
 
     au < ready ; exists ; 1953 ; 1953 ; Journal of Embryology and Experimental Morphology Volume 1 ; 1 ; >
-    au < ready ; exists ; 1954 ; 1954 ; Journal of Embryology and Experimental Morphology Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1954 ; 1954 ; Journal of Embryology and Experimental Morphology Volume 2 ; 2 ; >
     au < ready ; exists ; 1955 ; 1955 ; Journal of Embryology and Experimental Morphology Volume 3 ; 3 ; >
     au < crawling ; exists ; 1956 ; 1956 ; Journal of Embryology and Experimental Morphology Volume 4 ; 4 ; >
     au < ready ; exists ; 1957 ; 1957 ; Journal of Embryology and Experimental Morphology Volume 5 ; 5 ; >
@@ -71,11 +71,11 @@
     au < ready ; exists ; 1966 ; 1966 ; Journal of Embryology and Experimental Morphology Volume 16 ; 16 ; >
     au < ready ; exists ; 1967 ; 1967 ; Journal of Embryology and Experimental Morphology Volume 17 ; 17 ; >
     au < ready ; exists ; 1967 ; 1967 ; Journal of Embryology and Experimental Morphology Volume 18 ; 18 ; >
-    au < ready ; exists ; 1968 ; 1968 ; Journal of Embryology and Experimental Morphology Volume 19 ; 19 ; >
+    au < crawling ; exists ; 1968 ; 1968 ; Journal of Embryology and Experimental Morphology Volume 19 ; 19 ; >
     au < ready ; exists ; 1968 ; 1968 ; Journal of Embryology and Experimental Morphology Volume 20 ; 20 ; >
     au < ready ; exists ; 1969 ; 1969 ; Journal of Embryology and Experimental Morphology Volume 21 ; 21 ; >
     au < crawling ; exists ; 1969 ; 1969 ; Journal of Embryology and Experimental Morphology Volume 22 ; 22 ; >
-    au < ready ; exists ; 1970 ; 1970 ; Journal of Embryology and Experimental Morphology Volume 23 ; 23 ; >
+    au < crawling ; exists ; 1970 ; 1970 ; Journal of Embryology and Experimental Morphology Volume 23 ; 23 ; >
     au < crawling ; exists ; 1970 ; 1970 ; Journal of Embryology and Experimental Morphology Volume 24 ; 24 ; >
     au < ready ; exists ; 1971 ; 1971 ; Journal of Embryology and Experimental Morphology Volume 25 ; 25 ; >
     au < ready ; exists ; 1971 ; 1971 ; Journal of Embryology and Experimental Morphology Volume 26 ; 26 ; >
@@ -92,7 +92,7 @@
     au < ready ; exists ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 37 ; 37 ; >
     au < ready ; exists ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 38 ; 38 ; >
     au < ready ; exists ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 39 ; 39 ; >
-    au < ready ; exists ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 40 ; 40 ; >
+    au < crawling ; exists ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 40 ; 40 ; >
     au < crawling ; exists ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 41 ; 41 ; >
     au < crawling ; exists ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 42 ; 42 ; >
     au < ready ; exists ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 43 ; 43 ; >
@@ -105,7 +105,7 @@
     au < ready ; exists ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 50 ; 50 ; >
     au < crawling ; exists ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 51 ; 51 ; >
     au < crawling ; exists ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 52 ; 52 ; >
-    au < ready ; exists ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 53 ; 53 ; >
+    au < crawling ; exists ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 53 ; 53 ; >
     au < crawling ; exists ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 54 ; 54 ; >
     au < finished ; crawling ; 1980 ; 1980 ; Journal of Embryology and Experimental Morphology Volume 55 ; 55 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1980 ; 1980 ; Journal of Embryology and Experimental Morphology Volume 56 ; 56 ; reingest5.clockss.org:8082 >
@@ -284,14 +284,14 @@
     au < crawling ; exists ; 1902 ; 1902 ; Quarterly Journal of Microscopical Science Volume s2-46 (1902) ; s2-46 ; >
     au < frozen ; exists ; 1903 ; 1903 ; Quarterly Journal of Microscopical Science Volume s2-46 (1903) ; s2-46 ; >
     au < frozen ; exists ; 1903 ; 1903 ; Quarterly Journal of Microscopical Science Volume s2-47 (1903) ; s2-47 ; >
-    au < ready ; exists ; 1904 ; 1904 ; Quarterly Journal of Microscopical Science Volume s2-47 (1904) ; s2-47 ; >
+    au < crawling ; exists ; 1904 ; 1904 ; Quarterly Journal of Microscopical Science Volume s2-47 (1904) ; s2-47 ; >
     au < crawling ; exists ; 1904 ; 1904 ; Quarterly Journal of Microscopical Science Volume s2-48 (1904) ; s2-48 ; >
     au < ready ; exists ; 1905 ; 1905 ; Quarterly Journal of Microscopical Science Volume s2-48 (1905) ; s2-48 ; >
     au < frozen ; exists ; 1905 ; 1905 ; Quarterly Journal of Microscopical Science Volume s2-49 (1905) ; s2-49 ; >
     au < frozen ; exists ; 1906 ; 1906 ; Quarterly Journal of Microscopical Science Volume s2-49 (1906) ; s2-49 ; >
     au < frozen ; exists ; 1906 ; 1906 ; Quarterly Journal of Microscopical Science Volume s2-50 (1906) ; s2-50 ; >
     au < frozen ; exists ; 1907 ; 1907 ; Quarterly Journal of Microscopical Science Volume s2-51 (1907) ; s2-51 ; >
-    au < ready ; exists ; 1908 ; 1908 ; Quarterly Journal of Microscopical Science Volume s2-52 (1908) ; s2-52 ; >
+    au < crawling ; exists ; 1908 ; 1908 ; Quarterly Journal of Microscopical Science Volume s2-52 (1908) ; s2-52 ; >
     au < frozen ; exists ; 1908 ; 1908 ; Quarterly Journal of Microscopical Science Volume s2-53 (1908) ; s2-53 ; >
     au < frozen ; exists ; 1909 ; 1909 ; Quarterly Journal of Microscopical Science Volume s2-53 (1909) ; s2-53 ; >
     au < frozen ; exists ; 1909 ; 1909 ; Quarterly Journal of Microscopical Science Volume s2-54 (1909) ; s2-54 ; >
@@ -322,7 +322,7 @@
     au < frozen ; exists ; 1924 ; 1924 ; Quarterly Journal of Microscopical Science Volume s2-68 (1924) ; s2-68 ; >
     au < crawling ; exists ; 1924 ; 1924 ; Quarterly Journal of Microscopical Science Volume s2-69 (1924) ; s2-69 ; >
     au < frozen ; exists ; 1925 ; 1925 ; Quarterly Journal of Microscopical Science Volume s2-69 (1925) ; s2-69 ; >
-    au < ready ; exists ; 1926 ; 1926 ; Quarterly Journal of Microscopical Science Volume s2-70 (1926) ; s2-70 ; >
+    au < crawling ; exists ; 1926 ; 1926 ; Quarterly Journal of Microscopical Science Volume s2-70 (1926) ; s2-70 ; >
     au < frozen ; exists ; 1927 ; 1927 ; Quarterly Journal of Microscopical Science Volume s2-71 (1927) ; s2-71 ; >
     au < crawling ; exists ; 1928 ; 1928 ; Quarterly Journal of Microscopical Science Volume s2-71 (1928) ; s2-71 ; >
     au < frozen ; exists ; 1928 ; 1928 ; Quarterly Journal of Microscopical Science Volume s2-72 (1928) ; s2-72 ; >
@@ -566,7 +566,7 @@
 #    au < exists ; exists ; 1945-1946 ; Journal of Experimental Biology Volume 22 ; 22 ; >
     au < crawling ; exists ; 1946 ; 1946 ; Journal of Experimental Biology Volume 23 ; 23 ; >
     au < crawling ; exists ; 1947 ; 1947 ; Journal of Experimental Biology Volume 24 ; 24 ; >
-    au < ready ; exists ; 1948 ; 1948 ; Journal of Experimental Biology Volume 25 ; 25 ; >
+    au < crawling ; exists ; 1948 ; 1948 ; Journal of Experimental Biology Volume 25 ; 25 ; >
 #    au < exists ; exists ; 1949-1950 ; Journal of Experimental Biology Volume 26 ; 26 ; >
     au < ready ; exists ; 1950 ; 1950 ; Journal of Experimental Biology Volume 27 ; 27 ; >
     au < crawling ; exists ; 1951 ; 1951 ; Journal of Experimental Biology Volume 28 ; 28 ; >
