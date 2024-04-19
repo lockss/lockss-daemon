@@ -1,0 +1,351 @@
+{
+  publisher <
+    name = European Mathematical Society Journals (API) ;
+    info[contract] = 2015 ;
+    info[back] = 2010 ;
+    info[tester] = 8 ;
+    info[poller] = 2 ;
+    info[platform] = EMS Custom?
+  >
+
+  plugin = org.lockss.plugin.europeanmathematicalsociety.api.ClockssEuropeanMathematicalSocietyJournalsAPIPlugin
+
+  param[base_url] = https://ems.press/
+  param[api_url] = https://content.ems.press/
+
+  implicit < status ; status2 ; param[year] ; name ; hidden[proxy] >
+
+  {
+    title <
+      name = Commentarii Mathematici Helvetici ;
+      issn = 0010-2571 ;
+      eIssn = 1420-8946
+    >
+    param[journal_serial_number] = 1
+    param[journal_id] = cmh
+
+     au < testing ; exists ; 1997 ; Commentarii Mathematici Helvetici 1997 ; >
+     au < testing ; exists ; 1998 ; Commentarii Mathematici Helvetici 1998 ; >
+  }
+
+  {
+    title <
+      name = Elemente der Mathematik ;
+      issn = 0013-6018 ;
+      eIssn = 1420-8962
+    >
+    param[journal_serial_number] = 2
+    param[journal_id] = em
+
+     au < testing ; exists ; 1997 ; Elemente der Mathematik 1997 ; >
+     au < testing ; exists ; 1998 ; Elemente der Mathematik 1998 ; >
+  }
+
+  {
+    title <
+      name = "L’Enseignement Mathématique" ;
+      issn = 0013-8584 ;
+      eIssn = 2309-4672
+    >
+    param[journal_serial_number] = 3
+    param[journal_id] = lem
+
+    au < testing ; exists ; 2009 ; "L’Enseignement Mathématique 2009" ; >
+    au < testing ; exists ; 2010 ; "L’Enseignement Mathématique 2010" ; >
+  }
+
+  {
+    title <
+      name = Portugaliae Mathematica ;
+      issn = 0032-5155 ;
+      eIssn = 1662-2758
+    >
+    param[journal_serial_number] = 4
+    param[journal_id] = pm
+
+     au < testing ; exists ; 2007 ; Portugaliae Mathematica 2007 ; >
+     au < testing ; exists ; 2008 ; Portugaliae Mathematica 2008 ; >
+  }
+
+  {
+    title <
+      name = Publications of the Research Institute for Mathematical Sciences ;
+      issn = 0034-5318 ;
+      eIssn = 1663-4926
+    >
+    param[journal_serial_number] = 5
+    param[journal_id] = prims
+
+     au < testing ; exists ; 1965 ; Publications of the Research Institute for Mathematical Sciences 1965 ; >
+     au < testing ; exists ; 1966 ; Publications of the Research Institute for Mathematical Sciences 1966 ; >
+  }
+
+  {
+    title <
+      name = Rendiconti del Seminario Matematico della Università di Padova ;
+      issn = 0041-8994 ;
+      eIssn = 2240-2926
+    >
+
+    param[journal_serial_number] = 6
+    param[journal_id] = rsmup
+
+     au < testing ; exists ; 2008 ; Rendiconti del Seminario Matematico della Università di Padova 2008 ; >
+     au < testing ; exists ; 2008 ; Rendiconti del Seminario Matematico della Università di Padova 2008 ; >
+  }
+
+  {
+    title <
+      name = Revista Matemática Iberoamericana ;
+      issn = 0213-2230 ;
+      eIssn = 2235-0616
+    >
+    param[journal_serial_number] = 7
+    param[journal_id] = rmi
+
+     au < testing ; exists ; 1985 ; Revista Matemática Iberoamericana 1985 ; >
+     au < testing ; exists ; 1986 ; Revista Matemática Iberoamericana 1986 ; >
+  }
+
+  {
+      title <
+      name = European Mathematical Society Magazine ;
+      issn = 2747-7894 ;
+      eIssn = 2747-7908
+      >
+
+      param[journal_serial_number] = 9
+      param[journal_id] = mag
+
+      au < testing ; exists ; 2018 ; European Mathematical Society Magazine 2018 ; >
+      au < testing ; exists ; 2019 ; European Mathematical Society Magazine 2019 ; >
+
+  }
+
+  {
+      title <
+      name = Rendiconti Lincei ;
+      issn = 1120-6330 ;
+      eIssn = 1720-0768
+      >
+      param[journal_serial_number] = 10
+      param[journal_id] = rlm
+
+       au < testing ; exists ; 2019 ; Rendiconti Lincei 2019 ; >
+       au < testing ; exists ; 2020 ; Rendiconti Lincei 2020 ; >
+
+  }
+
+  {
+    title <
+    name = Journal of the European Mathematical Society ;
+    issn = 1435-9855 ;
+    eIssn = 1435-9863
+    >
+    param[journal_serial_number] = 11
+    param[journal_id] = jems
+
+     au < testing ; exists ; 2019 ; Journal of the European Mathematical Society 2019 ; >
+     au < testing ; exists ; 2020 ; Journal of the European Mathematical Society 2020 ; >
+     au < testing ; exists ; 2023 ; Journal of the European Mathematical Society 2023 ; >
+     au < testing ; exists ; 2024 ; Journal of the European Mathematical Society 2024 ; >
+
+  }
+
+  {
+      title <
+          name = Interfaces and Free Boundaries ;
+          issn = 1463-9963 ;
+          eIssn = 1463-9971
+      >
+
+      param[journal_serial_number] = 12
+      param[journal_id] = ifb
+
+       au < testing ; exists ; 2019 ; Interfaces and Free Boundaries 2019 ; >
+       au < testing ; exists ; 2020 ; Interfaces and Free Boundaries 2020 ; >
+  }
+
+  {
+      title <
+          name = Oberwolfach Reports ;
+          issn = 1660-8933 ;
+          eIssn = 1660-8941
+      >
+
+      param[journal_serial_number] = 13
+      param[journal_id] = owr
+
+       au < testing ; exists ; 2019 ; Oberwolfach Reports 2019 ; >
+       au < testing ; exists ; 2020 ; Oberwolfach Reports 2020 ; >
+  }
+
+  {
+      title <
+          name = Journal of Noncommutative Geometry ;
+          issn = 1661-6952 ;
+          eIssn = 1661-6960
+      >
+
+      param[journal_serial_number] = 14
+      param[journal_id] = jncg
+
+       au < testing ; exists ; 2019 ; Journal of Noncommutative Geometry 2019 ; >
+       au < testing ; exists ; 2020 ; Journal of Noncommutative Geometry 2020 ; >
+  }
+
+  {
+      title <
+          name = Groups, Geometry, and Dynamics ;
+          issn = 1661-7207 ;
+          eIssn = 1661-7215
+      >
+
+      param[journal_serial_number] = 15
+      param[journal_id] = ggd
+
+       au < testing ; exists ; 2019 ; Groups, Geometry, and Dynamics 2019 ; >
+       au < testing ; exists ; 2020 ; Groups, Geometry, and Dynamics 2020 ; >
+  }
+
+  {
+      title <
+          name = Quantum Topology ;
+          issn = 1663-487X ;
+          eIssn = 1664-073X
+      >
+
+      param[journal_serial_number] = 16
+      param[journal_id] = qt
+
+       au < testing ; exists ; 2019 ; Quantum Topology 2019 ; >
+       au < testing ; exists ; 2020 ; Quantum Topology 2020 ; >
+  }
+
+  {
+      title <
+          name = Journal of Spectral Theory ;
+          issn = 1664-039X ;
+          eIssn = 1664-0403
+      >
+
+      param[journal_serial_number] = 17
+      param[journal_id] = jst
+
+       au < testing ; exists ; 2019 ; Journal of Spectral Theory 2019 ; >
+       au < testing ; exists ; 2020 ; Journal of Spectral Theory 2020 ; >
+  }
+
+  {
+      title <
+          name = Journal of Fractal Geometry ;
+          issn = 2308-1309 ;
+          eIssn = 2308-1317
+      >
+
+      param[journal_serial_number] = 18
+      param[journal_id] = jfg
+
+       au < testing ; exists ; 2019 ; Journal of Fractal Geometry 2019 ; >
+       au < testing ; exists ; 2020 ; Journal of Fractal Geometry 2020 ; >
+  }
+
+  {
+      title <
+          name = EMS Surveys in Mathematical Sciences ;
+          issn = 2308-2151 ;
+          eIssn = 2308-216X
+      >
+
+      param[journal_serial_number] = 19
+      param[journal_id] = emss
+
+       au < testing ; exists ; 2019 ; EMS Surveys in Mathematical Sciences 2019 ; >
+       au < testing ; exists ; 2020 ; EMS Surveys in Mathematical Sciences 2020 ; >
+  }
+
+  {
+      title <
+          name = Annales de l’Institut Henri Poincaré D ;
+          issn = 2308-5827 ;
+          eIssn = 2308-5835
+      >
+
+      param[journal_serial_number] = 20
+      param[journal_id] = aihpd
+
+       au < testing ; exists ; 2019 ; Annales de l’Institut Henri Poincaré D 2019 ; >
+       au < testing ; exists ; 2020 ; Annales de l’Institut Henri Poincaré D 2020 ; >
+  }
+
+  {
+      title <
+          name = Algebraic Geometry ;
+          issn = 2308-5827 ;
+          eIssn = 2308-5835
+      >
+
+      param[journal_serial_number] = 21
+      param[journal_id] = ag
+
+       au < testing ; exists ; 2019 ; Algebraic Geometry 2019 ; >
+       au < testing ; exists ; 2020 ; Algebraic Geometry 2020 ; >
+  }
+
+  {
+      title <
+          name = Journal of Combinatorial Algebra ;
+          issn = 2415-6302 ;
+          eIssn = 2415-6310
+      >
+
+      param[journal_serial_number] = 22
+      param[journal_id] = jca
+
+       au < testing ; exists ; 2019 ; Journal of Combinatorial Algebra 2019 ; >
+       au < testing ; exists ; 2020 ; Journal of Combinatorial Algebra 2020 ; >
+  }
+
+  {
+      title <
+          name = Mathematical Statistics and Learning ;
+          issn = 2520-2316 ;
+          eIssn = 2520-2324
+      >
+
+      param[journal_serial_number] = 23
+      param[journal_id] = msl
+
+       au < testing ; exists ; 2019 ; Mathematical Statistics and Learning 2019 ; >
+       au < testing ; exists ; 2020 ; Mathematical Statistics and Learning 2020 ; >
+  }
+
+
+  {
+      title <
+          name = Annales de l'Institut Henri Poincaré C ;
+          issn = 0294-1449 ;
+          eIssn = 1873-1430
+      >
+
+      param[journal_serial_number] = 2678
+      param[journal_id] = aihpc
+
+       au < testing ; exists ; 2019 ; Annales de l'Institut Henri Poincaré C 2019 ; >
+       au < testing ; exists ; 2020 ; Annales de l'Institut Henri Poincaré C 2020 ; >
+  }
+
+  {
+      title <
+          name = Documenta Mathematica ;
+          issn = 1431-0635 ;
+          eIssn = 1431-0643
+      >
+
+      param[journal_serial_number] = 3345
+      param[journal_id] = dm
+
+       au < testing ; exists ; 2019 ; Documenta Mathematica 2019 ; >
+       au < testing ; exists ; 2020 ; Documenta Mathematica 2020 ; >
+  }
+}

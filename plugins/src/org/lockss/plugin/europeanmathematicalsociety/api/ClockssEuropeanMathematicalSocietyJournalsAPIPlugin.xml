@@ -44,11 +44,20 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>European Mathematical Society Journals API Plugin (CLOCKSS)</string>
+        <string>European Mathematical Society Journals 2024 Plugin (CLOCKSS)</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
         <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>api_url</key>
+                <displayName>API URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
             <org.lockss.daemon.ConfigParamDescr>
                 <key>base_url</key>
                 <displayName>Base URL</displayName>
@@ -59,24 +68,32 @@ POSSIBILITY OF SUCH DAMAGE.
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
             <org.lockss.daemon.ConfigParamDescr>
-                <key>item</key>
-                <displayName>Item</displayName>
-                <description>Item Identifier</description>
+                <key>journal_id</key>
+                <displayName>Journal ID</displayName>
+                <description>Journal ID(like "ag" or "jems")</description>
                 <type>1</type>
                 <size>40</size>
                 <definitional>true</definitional>
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
-            <!--
             <org.lockss.daemon.ConfigParamDescr>
-                <key>user_pass</key>
-                <displayName>Username:Password</displayName>
-                <type>10</type>
-                <size>30</size>
-                <definitional>false</definitional>
+                <key>journal_serial_number</key>
+                <displayName>Journal Serial Number</displayName>
+                <description>Journal Serial Number(Like "1", "2", "9","11")</description>
+                <type>1</type>
+                <size>40</size>
+                <definitional>true</definitional>
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
-            -->
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>year</key>
+                <displayName>Year</displayName>
+                <description>Four digit year (e.g., 2004)</description>
+                <type>4</type>
+                <size>4</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
         </list>
     </entry>
     <entry>
@@ -98,7 +115,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"European Mathematical Society Journals API Plugin (CLOCKSS), Base URL %s, Item %s", base_url, item</string>
+        <string>"European Mathematical Society Journals 2024 Plugin (CLOCKSS), API URL %s, Base URL %s, Journal ID %s, Journal Serial Number %s, Year %d", api_url, base_url, journal_id, journal_serial_number, year</string>
     </entry>
     <entry>
         <string>au_def_pause_time</string>
@@ -109,39 +126,53 @@ POSSIBILITY OF SUCH DAMAGE.
         <long>1209600000</long>
     </entry>
     <entry>
-        <!--
-        books page: https://content.ems.press/books
-        -->
         <string>au_start_url</string>
-        <!--<string>"%s%s", base_url, item</string>-->
-        <!--item is either "books" or "serial"-->
-        <string>"%s%s-issues?filter[serial]=11",base_url, item</string>
+        <!--https://content.ems.press/serial-issues?filter[serial]=11&filter[year]=2018-->
+        <string>"%sserial-issues?filter[serial]=%s&amp;filter[year]=%d",api_url, journal_serial_number,year</string>
     </entry>
-    <!--
     <entry>
         <string>au_permission_url</string>
-        <string>"%srobots.txt", base_url</string>
+        <string>"%sjournals/%s", base_url, journal_id</string>
     </entry>
-    -->
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
-            <string>"^%s.*\.pdf$", base_url</string>
+            <string>"%scontent/serial-article-files/\d+", base_url</string>
         </list>
     </entry>
     <entry>
         <string>au_crawlrules</string>
         <list>
-            <string>1,"%sserials/.*",base_url</string>
-            <string>1,"%sserials?filter",base_url</string>
-            <string>1,"%sserial-issues",base_url</string>
-            <string>1,"%sserial-issues\?filter",base_url</string>
+            <string>1,"%sserials/.*",api_url</string>
+            <string>1,"%sserials?filter",api_url</string>
+            <string>1,"%sserial-issues",api_url</string>
+            <string>1,"%sserial-issues\?filter",api_url</string>
             <!--https://content.ems.press/serial-articles?filter[serialIssue]=1&include=serialIssue,serialArticleFiles-->
-            <string>1,"%sserial-articles\?filter",base_url</string>
+            <string>1,"%sserial-articles\?filter",api_url</string>
             <!--
             https://content.ems.press/assets/public/full-texts/serials/jems/25/5/4990387-10.4171-jems-1224-print.pdf
             -->
-            <string>1,"%sassets/public/full-texts/serials/",base_url</string>
+            <string>1,"%sassets/public/full-texts/serials/",api_url</string>
+            <!--Do not include https://ems.press/journals/jems/read,
+            this will lead to overcrawl to other issues outside of volume-->
+            <string>1,"%sjournals/%s/(issues|articles)", base_url, journal_id</string>
+            <!--
+            https://ems.press/content/serial-article-files/32990
+            https://ems.press/content/serial-article-files/32816
+            -->
+            <string>1, "%s(content/)?serial-article-files/", base_url</string>
+            <!--
+            https://ems.press/_next/static/chunks/pages/_app-bd6f5c5d6ca0fffb.js
+            https://ems.press/_next/static/chunks/463-9fb302e5e0590873.js
+            https://ems.press/_next/static/chunks/378-ced21f12c2370ac3.js
+            https://ems.press/_next/static/chunks/pages/journals/%5Bjournal%5D/issues/%5Bissue%5D-7ef5448ecc75ff93.js
+            https://ems.press/_next/static/pn5T69CQrmoeujJJ504CV/_buildManifest.js
+            https://ems.press/_next/static/pn5T69CQrmoeujJJ504CV/_ssgManifest.js
+            https://ems.press/fonts/source-sans-pro-v14-latin-ext_latin_greek-200.woff2
+            https://ems.press/fonts/source-sans-pro-v14-latin-ext_latin_greek-200.woff
+            https://ems.press/fonts/source-sans-pro-v14-latin-ext_latin_greek-200italic.woff2
+            -->
+            <string>1,"%s/(fonts|_next/static|favicons)/", base_url</string>
         </list>
     </entry>
     <entry>
@@ -149,44 +180,40 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>1.75.7</string><!-- needs JsonPath -->
     </entry>
     <entry>
-        <string>plugin_crawl_seed_factory</string>
-        <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyCrawlSeedFactory</string>
-    </entry>
-    <entry>
-        <string>plugin_url_fetcher_factory</string>
-        <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyUrlFetcherFactory</string>
-    </entry>
-    <entry>
         <string>application/json_link_extractor_factory</string>
-        <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietySingleItemJsonLinkExtractorFactory</string>
+        <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyJournalsJsonLinkExtractorFactory</string>
     </entry>
-    <!--
     <entry>
-        <string>plugin_url_consumer_factory</string>
-        <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyUrlConsumerFactory</string>
+        <string>text/json_link_extractor_factory</string>
+        <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyJournalsJsonLinkExtractorFactory</string>
     </entry>
     <entry>
         <string>plugin_article_iterator_factory</string>
-        <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyArticleIteratorFactory</string>
+        <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyJournalsArticleIteratorFactory</string>
     </entry>
     <entry>
         <string>plugin_article_metadata_extractor_factory</string>
-        <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyArticleIteratorFactory</string>
+        <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyJournalsArticleIteratorFactory</string>
     </entry>
     <entry>
-        <string>application/json_metadata_extractor_factory_map</string>
+        <string>text/html_metadata_extractor_factory_map</string>
         <map>
             <entry>
                 <string>*</string>
-                <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyJsonMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyBooksHtmlMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
--->
     <entry>
         <string>au_url_mime_type_map</string>
         <list>
             <string>.*\.json$,application/json</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_permitted_host_pattern</string>
+        <list>
+            <string>content\.ems\.press</string>
         </list>
     </entry>
     <entry>
@@ -195,10 +222,6 @@ POSSIBILITY OF SUCH DAMAGE.
             <entry>
                 <string>au_def_pause_time</string>
                 <long>100</long>
-            </entry>
-            <entry>
-                <string>plugin_crawl_seed_factory</string>
-                <org.lockss.util.Default/>
             </entry>
             <entry>
                 <string>plugin_url_fetcher_factory</string>

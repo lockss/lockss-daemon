@@ -36,7 +36,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_identifier</string>
-        <string>org.lockss.plugin.europeanmathematicalsociety.api.ClockssEuropeanMathematicalSocietyBooksAPIPlugin</string>
+        <string>org.lockss.plugin.europeanmathematicalsociety.api.ClockssEuropeanMathematicalSocietyBooksPlugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
@@ -44,11 +44,20 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>European Mathematical Society Books API Plugin (CLOCKSS)</string>
+        <string>European Mathematical Society 2024 Books Plugin (CLOCKSS)</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
         <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>api_url</key>
+                <displayName>API URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
             <org.lockss.daemon.ConfigParamDescr>
                 <key>base_url</key>
                 <displayName>Base URL</displayName>
@@ -59,24 +68,23 @@ POSSIBILITY OF SUCH DAMAGE.
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
             <org.lockss.daemon.ConfigParamDescr>
-                <key>item</key>
-                <displayName>Item</displayName>
-                <description>Item Identifier</description>
+                <key>book_serial_id</key>
+                <displayName>Book Serial ID</displayName>
+                <description>Book Serial ID(Like "dms" or "elm")</description>
                 <type>1</type>
                 <size>40</size>
                 <definitional>true</definitional>
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
-            <!--
             <org.lockss.daemon.ConfigParamDescr>
-                <key>user_pass</key>
-                <displayName>Username:Password</displayName>
-                <type>10</type>
-                <size>30</size>
-                <definitional>false</definitional>
+                <key>book_id</key>
+                <displayName>Book ID</displayName>
+                <description>Book ID(like "245" or "253")</description>
+                <type>1</type>
+                <size>40</size>
+                <definitional>true</definitional>
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
-            -->
         </list>
     </entry>
     <entry>
@@ -98,7 +106,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"European Mathematical Society Books API Plugin (CLOCKSS), Base URL %s, Item %s", base_url, item</string>
+        <string>"European Mathematical Society 2024 Books Plugin (CLOCKSS), API URL %s, Base URL %s, Book Serial ID %s, Book ID %s", api_url, base_url, book_serial_id, book_id</string>
     </entry>
     <entry>
         <string>au_def_pause_time</string>
@@ -113,35 +121,26 @@ POSSIBILITY OF SUCH DAMAGE.
         books page: https://content.ems.press/books
         -->
         <string>au_start_url</string>
-        <!--<string>"%s%s", base_url, item</string>-->
-        <string>"%sbooks",base_url</string>
+        <!--https://ems.press/books/dms/252-->
+        <string>1,"%sbooks/%s/%s", base_url, book_serial_id, book_id</string>
     </entry>
-    <!--
     <entry>
         <string>au_permission_url</string>
-        <string>"%srobots.txt", base_url</string>
+        <string>"%sbooks/%s/%s", base_url, book_serial_id, book_id</string>
     </entry>
-    -->
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
-            <string>"^%s.*\.pdf$", base_url</string>
+            <string>"%scontent/book-chapter-files/", base_url</string>
         </list>
     </entry>
     <entry>
         <string>au_crawlrules</string>
         <list>
-            <string>1,"%sbooks",base_url</string>
-            <string>1,"%sbooks/\d+\?include=bookFiles",base_url</string>
-            <!--
-            https://content.ems.press/assets/public/full-texts/books/5/online-pdf/978-3-03719-503-1.pdf
-            https://content.ems.press/assets/public/full-texts/books/5/supplementary-files/3037190035_intro.pdf
-            https://content.ems.press/assets/public/full-texts/books/5/supplementary-files/3037190035_TOC.pdf
-            https://content.ems.press/assets/public/full-texts/books/6/online-pdf/978-3-03719-521-5.pdf
-            -->
-            <!--EXCLUDED for now, since not authorized by publihser yet -->
-            <string>2,"%sassets/public/full-texts/books/\d+/online-pdf/.*",base_url</string>
-            <string>1,"%sassets/public/full-texts/books/\d+/supplementary-files/.*",base_url</string>
+            <string>1,"%sjournals/jems", base_url</string>
+            <string>1,"%sbooks/%s/%s", base_url, book_serial_id, book_id</string>
+            <string>1,"%s(fonts|_next/static|favicons|contents)/", base_url</string>
+            <string>1,"%scontent/book-chapter-files", base_url</string>
         </list>
     </entry>
     <entry>
@@ -149,40 +148,22 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>1.75.7</string><!-- needs JsonPath -->
     </entry>
     <entry>
-        <string>plugin_crawl_seed_factory</string>
-        <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyCrawlSeedFactory</string>
-    </entry>
-    <entry>
-        <string>plugin_url_fetcher_factory</string>
-        <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyUrlFetcherFactory</string>
-    </entry>
-    <entry>
-        <string>application/json_link_extractor_factory</string>
-        <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietySingleItemJsonLinkExtractorFactory</string>
-    </entry>
-    <!--
-    <entry>
-        <string>plugin_url_consumer_factory</string>
-        <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyUrlConsumerFactory</string>
-    </entry>
-    <entry>
         <string>plugin_article_iterator_factory</string>
-        <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyArticleIteratorFactory</string>
+        <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyBooksArticleIteratorFactory</string>
     </entry>
     <entry>
         <string>plugin_article_metadata_extractor_factory</string>
-        <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyArticleIteratorFactory</string>
+        <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyBooksArticleIteratorFactory</string>
     </entry>
     <entry>
-        <string>application/json_metadata_extractor_factory_map</string>
+        <string>text/html_metadata_extractor_factory_map</string>
         <map>
             <entry>
                 <string>*</string>
-                <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyJsonMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyBooksHtmlMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
--->
     <entry>
         <string>au_url_mime_type_map</string>
         <list>

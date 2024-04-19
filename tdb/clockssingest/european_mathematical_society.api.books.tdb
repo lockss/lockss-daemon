@@ -1,0 +1,195 @@
+{
+    publisher <
+        name = European Mathematical Society Books (API) ;
+        info[contract] = 2015 ;
+        info[back] = 1900 ;
+        info[tester] = 8 ;
+        info[poller] = 2 ;
+        info[platform] = Custom. Publisher moved to new URL/platform https://ems.press/
+  >
+
+    plugin = org.lockss.plugin.europeanmathematicalsociety.api.ClockssEuropeanMathematicalSocietyBooksPlugin
+    param[base_url] = https://ems.press/  #Publisher moved to new URL, new platform.
+    param[api_url] = https://content.ems.press/
+
+    implicit < status ; status2 ; year ; isbn ; eisbn ; name ; param[book_id] ; hidden[proxy] >
+
+
+  {
+    title <
+      name = DMS Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= dms
+
+      au < testing ; exists ; 2021 ; 978-3-98547-047-1 ; 978-3-98547-047-1 ; The Legacy of Kurt Mahler ; 252 ; >
+
+  }
+
+  {
+    title <
+      name = EMM Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= emm
+
+      au < testing ; exists ; 2021 ; 978-3-03719-211-5 ; 978-3-03719-211-5 ; Quasi-Periodic Solutions of Nonlinear Wave Equations on the d-Dimensional Torus ; 184 ; >
+
+  }
+
+  {
+    title <
+      name = ESIAM Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= esiam
+
+      au < testing ; exists ; 2021 ; 978-3-98547-027-3 ; 978-3-98547-027-3 ; Interactions between Elasticity and Fluid Mechanics ; 242 ; >
+
+  }
+
+  {
+    title <
+      name = EMM Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= emm
+
+      au < testing ; exists ; 2021 ; 978-3-98547-047-1 ; 978-3-98547-047-1 ; The Legacy of Kurt Mahler ; 252 ; >
+
+  }
+
+  {
+    title <
+      name = ECR Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= ecr
+
+      au < testing ; exists ; 2022 ; 978-3-98547-054-9 ; 978-3-98547-054-9 ; Representations of Algebras and Related Structures ; 271 ; >
+
+  }
+
+  {
+    title <
+      name = ELM Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= elm
+
+      au < testing ; exists ; 2021 ; 978-3-98547-014-3 ; 978-3-98547-014-3 ; An Introduction to Singular Stochastic PDEs ; 232 ; >
+
+  }
+
+  {
+    title <
+      name = ETB Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= etb
+
+      au < testing ; exists ; 2021 ; 978-3-98547-018-1; 978-3-98547-018-1 ; Large Scale Geometry ; 264 ; >
+
+  }
+
+  {
+    title <
+      name = ETM Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= etm
+
+      au < testing ; exists ; 2021 ; 978-3-98547-048-8 ; 978-3-98547-048-8 ; The Structure of Pro-Lie Groups ; 270 ; >
+
+  }
+
+  {
+    title <
+      name = ESI Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= esi
+
+      au < testing ; exists ; 2021 ; 978-3-98547-029-7 ; 978-3-98547-029-7 ; An Introduction to the Mathematical Fluid Dynamics of Oceanic and Atmospheric Flows ; 263 ; >
+
+  }
+
+  {
+    title <
+      name = HEM Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= hem
+
+      au < testing ; exists ; 2021 ; 978-3-98547-011-2 ; 978-3-98547-011-2 ; "Hurwitz’s Lectures on the Number Theory of Quaternions" ; 257 ; >
+
+  }
+
+
+  {
+    title <
+      name = IRMA Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= irma
+
+      au < testing ; exists ; 2021 ; 978-3-98547-024-2 ; 978-3-98547-024-2 ; Essays in Geometry ; 265 ; >
+
+  }
+
+  {
+    title <
+      name = MEMS Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= mems
+
+      au < testing ; exists ; 2021 ; 978-3-98547-071-6 ; 978-3-98547-071-6 ; Integrating the Wigner Distribution on Subsets of the Phase Space, a Survey ; 284 ; >
+
+  }
+
+  {
+    title <
+      name = MLM Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= mlm
+
+      au < testing ; exists ; 2021 ; 978-3-03719-184-2 ; 978-3-03719-184-2 ; Lectures in Model Theory ; 155 ; >
+
+  }
+
+  {
+    title <
+      name = QGM Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= qgm
+
+      au < testing ; exists ; 2021 ; 978-3-03719-108-8 ; 978-3-03719-108-8 ; Lectures on Algebraic Categorification ; 110 ; >
+
+  }
+
+  {
+    title <
+      name = ZLAM Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= zlam
+
+      au < testing ; exists ; 2021 ; 978-3-98547-052-5 ; 978-3-98547-052-5 ; Prescribing Scalar Curvature in Conformal Geometry ; 268 ; >
+
+  }
+
+  {
+    title <
+      name = STANDALONE Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= standalone
+
+      au < testing ; exists ; 2021 ; 978-3-98547-058-7 ; 978-3-98547-058-7 ; International Congress of Mathematicians ; 272 ; >
+
+  }
+
+}
