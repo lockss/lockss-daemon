@@ -641,6 +641,7 @@
       au < released ; 2022 ; Faraday Discussions Volume 238 ; 238 ; 2022 ; https://pubs.rsc.org/ >
       au < released ; 2022 ; Faraday Discussions Volume 239 ; 239 ; 2022 ; https://pubs.rsc.org/ >
       au < released ; 2022 ; Faraday Discussions Volume 240 ; 240 ; 2022 ; https://pubs.rsc.org/ >
+
       au < manifest ; 2023 ; Faraday Discussions Volume 241 ; 241 ; 2023 ; https://pubs.rsc.org/ >
       au < manifest ; 2023 ; Faraday Discussions Volume 242 ; 242 ; 2023 ; https://pubs.rsc.org/ >
       au < manifest ; 2023 ; Faraday Discussions Volume 243 ; 243 ; 2023 ; https://pubs.rsc.org/ >
@@ -648,7 +649,8 @@
       au < manifest ; 2023 ; Faraday Discussions Volume 245 ; 245 ; 2023 ; https://pubs.rsc.org/ >
       au < manifest ; 2023 ; Faraday Discussions Volume 246 ; 246 ; 2023 ; https://pubs.rsc.org/ >
       au < manifest ; 2023 ; Faraday Discussions Volume 247 ; 247 ; 2023 ; https://pubs.rsc.org/ >
-      au < expected ; 2023 ; Faraday Discussions Volume 248 ; 248 ; 2023 ; https://pubs.rsc.org/ >
+
+      au < exists ; 2024 ; Faraday Discussions Volume 248 ; 248 ; 2024 ; https://pubs.rsc.org/ >
       au < manifest ; 2024 ; Faraday Discussions Volume 249 ; 249 ; 2024 ; https://pubs.rsc.org/ >
       au < manifest ; 2024 ; Faraday Discussions Volume 250 ; 250 ; 2024 ; https://pubs.rsc.org/ >
       au < expected ; 2024 ; Faraday Discussions Volume 251 ; 251 ; 2024 ; https://pubs.rsc.org/ >
@@ -3447,11 +3449,10 @@
         eissn = 2755-3701
       >
 
-      comment[years] = Published 2023-present
+      comment[years] = Published 2024-present
       param[journal_code] = lf
 
-      au < exists ; 2023 ; RSC Applied Interfaces Volume 1 ; 1 ; 2023 ; https://pubs.rsc.org/ >
-      au < expected ; 2024 ; RSC Applied Interfaces Volume 2 ; 2 ; 2024 ; https://pubs.rsc.org/ >
+      au < exists ; 2024 ; RSC Applied Interfaces Volume 1 ; 1 ; 2024 ; https://pubs.rsc.org/ >
 
   }
 

@@ -22,7 +22,6 @@
 
     param[journal_id] = canmin
 
-
       au < manifest ; exists ; 1957 ; 1957 ; The Canadian Mineralogist Volume 6 [1957] ; 6 ; >
       au < manifest ; exists ; 1958 ; 1958 ; The Canadian Mineralogist Volume 6 [1958] ; 6 ; >
       au < manifest ; exists ; 1959 ; 1959 ; The Canadian Mineralogist Volume 6 [1959] ; 6 ; >
@@ -93,8 +92,6 @@
       au < finished ; crawling ; 2020 ; 2020 ; The Canadian Mineralogist Volume 58 ; 58 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2021 ; 2021 ; The Canadian Mineralogist Volume 59 ; 59 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2022 ; 2022 ; The Canadian Mineralogist Volume 60 ; 60 ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2023 ; 2023 ; The Canadian Mineralogist Volume 61 ; 61 ; >
-      au < expected ; exists ; 2024 ; 2024 ; The Canadian Mineralogist Volume 62 ; 62 ; >
 
   }
   
