@@ -1702,9 +1702,10 @@ public class V2AuMover {
             errCode = response.code();
             errMsg=response.message();
             Gson gson = new Gson();
-            lrhe = gson.fromJson(response.body().string(),
+            String bodyStr = response.body().string();
+            lrhe = gson.fromJson(bodyStr,
                                  LockssRestHttpException.class);
-            logErrorBody(response, lrhe);
+            logErrorBody(response, bodyStr, lrhe);
             if (isNonRetryableResponse(errCode)) {
               // no retries
               msgPrefix = "Unretryable error: ";
@@ -1761,6 +1762,7 @@ public class V2AuMover {
 
     private boolean isNonRetryableResponse(int errCode) {
       switch (errCode) {
+      case 400:
       case 401:
       case 403:
       case 404:
@@ -1772,7 +1774,8 @@ public class V2AuMover {
     }
   }
 
-  void logErrorBody(Response response, LockssRestHttpException lrhe) {
+  void logErrorBody(Response response, String bodyStr,
+                    LockssRestHttpException lrhe) {
     try {
       StringBuilder sb = new StringBuilder();
       sb.append("Error response returned: ").append(response.code());
@@ -1786,9 +1789,12 @@ public class V2AuMover {
       if (lrhe != null) {
         sb.append(", body: ").append(lrhe.toString());
       } else {
-        ResponseBody body = response.body();
-        if (body != null) {
-          sb.append(", body: ").append(body.string());
+        if (!StringUtil.isNullString(bodyStr)) {
+          try {
+            sb.append(", body: ").append(bodyStr);
+          } catch (IllegalStateException e) {
+            sb.append("[body already closed]");
+          }
         }
       }
       log.debug(sb.toString());
