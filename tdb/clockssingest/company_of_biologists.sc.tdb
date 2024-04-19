@@ -53,7 +53,7 @@
     #param[base_url] = http://dev.biologists.org/
     param[journal_id] = dev
 
-    au < ready ; exists ; 1953 ; 1953 ; Journal of Embryology and Experimental Morphology Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1953 ; 1953 ; Journal of Embryology and Experimental Morphology Volume 1 ; 1 ; >
     au < crawling ; exists ; 1954 ; 1954 ; Journal of Embryology and Experimental Morphology Volume 2 ; 2 ; >
     au < ready ; exists ; 1955 ; 1955 ; Journal of Embryology and Experimental Morphology Volume 3 ; 3 ; >
     au < crawling ; exists ; 1956 ; 1956 ; Journal of Embryology and Experimental Morphology Volume 4 ; 4 ; >
@@ -63,11 +63,11 @@
     au < ready ; exists ; 1960 ; 1960 ; Journal of Embryology and Experimental Morphology Volume 8 ; 8 ; >
     au < crawling ; exists ; 1961 ; 1961 ; Journal of Embryology and Experimental Morphology Volume 9 ; 9 ; >
     au < ready ; exists ; 1962 ; 1962 ; Journal of Embryology and Experimental Morphology Volume 10 ; 10 ; >
-    au < ready ; exists ; 1963 ; 1963 ; Journal of Embryology and Experimental Morphology Volume 11 ; 11 ; >
+    au < crawling ; exists ; 1963 ; 1963 ; Journal of Embryology and Experimental Morphology Volume 11 ; 11 ; >
     au < crawling ; exists ; 1964 ; 1964 ; Journal of Embryology and Experimental Morphology Volume 12 ; 12 ; >
-    au < ready ; exists ; 1965 ; 1965 ; Journal of Embryology and Experimental Morphology Volume 13 ; 13 ; >
+    au < crawling ; exists ; 1965 ; 1965 ; Journal of Embryology and Experimental Morphology Volume 13 ; 13 ; >
     au < crawling ; exists ; 1965 ; 1965 ; Journal of Embryology and Experimental Morphology Volume 14 ; 14 ; >
-    au < ready ; exists ; 1966 ; 1966 ; Journal of Embryology and Experimental Morphology Volume 15 ; 15 ; >
+    au < crawling ; exists ; 1966 ; 1966 ; Journal of Embryology and Experimental Morphology Volume 15 ; 15 ; >
     au < ready ; exists ; 1966 ; 1966 ; Journal of Embryology and Experimental Morphology Volume 16 ; 16 ; >
     au < ready ; exists ; 1967 ; 1967 ; Journal of Embryology and Experimental Morphology Volume 17 ; 17 ; >
     au < ready ; exists ; 1967 ; 1967 ; Journal of Embryology and Experimental Morphology Volume 18 ; 18 ; >
@@ -81,28 +81,28 @@
     au < ready ; exists ; 1971 ; 1971 ; Journal of Embryology and Experimental Morphology Volume 26 ; 26 ; >
     au < crawling ; exists ; 1972 ; 1972 ; Journal of Embryology and Experimental Morphology Volume 27 ; 27 ; >
     au < ready ; exists ; 1972 ; 1972 ; Journal of Embryology and Experimental Morphology Volume 28 ; 28 ; >
-    au < ready ; exists ; 1973 ; 1973 ; Journal of Embryology and Experimental Morphology Volume 29 ; 29 ; >
-    au < ready ; exists ; 1973 ; 1973 ; Journal of Embryology and Experimental Morphology Volume 30 ; 30 ; >
+    au < crawling ; exists ; 1973 ; 1973 ; Journal of Embryology and Experimental Morphology Volume 29 ; 29 ; >
+    au < crawling ; exists ; 1973 ; 1973 ; Journal of Embryology and Experimental Morphology Volume 30 ; 30 ; >
     au < ready ; exists ; 1974 ; 1974 ; Journal of Embryology and Experimental Morphology Volume 31 ; 31 ; >
     au < ready ; exists ; 1974 ; 1974 ; Journal of Embryology and Experimental Morphology Volume 32 ; 32 ; >
     au < ready ; exists ; 1975 ; 1975 ; Journal of Embryology and Experimental Morphology Volume 33 ; 33 ; >
     au < ready ; exists ; 1975 ; 1975 ; Journal of Embryology and Experimental Morphology Volume 34 ; 34 ; >
     au < ready ; exists ; 1976 ; 1976 ; Journal of Embryology and Experimental Morphology Volume 35 ; 35 ; >
-    au < ready ; exists ; 1976 ; 1976 ; Journal of Embryology and Experimental Morphology Volume 36 ; 36 ; >
+    au < crawling ; exists ; 1976 ; 1976 ; Journal of Embryology and Experimental Morphology Volume 36 ; 36 ; >
     au < ready ; exists ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 37 ; 37 ; >
     au < ready ; exists ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 38 ; 38 ; >
     au < ready ; exists ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 39 ; 39 ; >
     au < crawling ; exists ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 40 ; 40 ; >
     au < crawling ; exists ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 41 ; 41 ; >
     au < crawling ; exists ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 42 ; 42 ; >
-    au < ready ; exists ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 43 ; 43 ; >
+    au < crawling ; exists ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 43 ; 43 ; >
     au < ready ; exists ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 44 ; 44 ; >
     au < crawling ; exists ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 45 ; 45 ; >
     au < ready ; exists ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 46 ; 46 ; >
     au < ready ; exists ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 47 ; 47 ; >
     au < crawling ; exists ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 48 ; 48 ; >
     au < crawling ; exists ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 49 ; 49 ; >
-    au < ready ; exists ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 50 ; 50 ; >
+    au < crawling ; exists ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 50 ; 50 ; >
     au < crawling ; exists ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 51 ; 51 ; >
     au < crawling ; exists ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 52 ; 52 ; >
     au < crawling ; exists ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 53 ; 53 ; >
@@ -390,9 +390,9 @@
     #Processed 111-133 on HW
     #Previously Journal of Embryology and Experimental Morphology
 
-    au < ready ; exists ; 1966 ; 1966 ; Journal of Cell Science Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1966 ; 1966 ; Journal of Cell Science Volume 1 ; 1 ; >
     au < frozen ; exists ; 1967 ; 1967 ; Journal of Cell Science Volume 2 ; 2 ; >
-    au < ready ; exists ; 1968 ; 1968 ; Journal of Cell Science Volume 3 ; 3 ; >
+    au < crawling ; exists ; 1968 ; 1968 ; Journal of Cell Science Volume 3 ; 3 ; >
     au < frozen ; exists ; 1969 ; 1969 ; Journal of Cell Science Volume 4 ; 4 ; >
     au < frozen ; exists ; 1969 ; 1969 ; Journal of Cell Science Volume 5 ; 5 ; >
     au < frozen ; exists ; 1970 ; 1970 ; Journal of Cell Science Volume 6 ; 6 ; >
@@ -575,19 +575,19 @@
     au < ready ; exists ; 1954 ; 1954 ; Journal of Experimental Biology Volume 31 ; 31 ; >
     au < ready ; exists ; 1955 ; 1955 ; Journal of Experimental Biology Volume 32 ; 32 ; >
     au < ready ; exists ; 1956 ; 1956 ; Journal of Experimental Biology Volume 33 ; 33 ; >
-    au < ready ; exists ; 1957 ; 1957 ; Journal of Experimental Biology Volume 34 ; 34 ; >
+    au < crawling ; exists ; 1957 ; 1957 ; Journal of Experimental Biology Volume 34 ; 34 ; >
     au < ready ; exists ; 1958 ; 1958 ; Journal of Experimental Biology Volume 35 ; 35 ; >
     au < ready ; exists ; 1959 ; 1959 ; Journal of Experimental Biology Volume 36 ; 36 ; >
     au < crawling ; exists ; 1960 ; 1960 ; Journal of Experimental Biology Volume 37 ; 37 ; >
     au < ready ; exists ; 1961 ; 1961 ; Journal of Experimental Biology Volume 38 ; 38 ; >
-    au < ready ; exists ; 1962 ; 1962 ; Journal of Experimental Biology Volume 39 ; 39 ; >
+    au < crawling ; exists ; 1962 ; 1962 ; Journal of Experimental Biology Volume 39 ; 39 ; >
     au < ready ; exists ; 1963 ; 1963 ; Journal of Experimental Biology Volume 40 ; 40 ; >
     au < ready ; exists ; 1964 ; 1964 ; Journal of Experimental Biology Volume 41 ; 41 ; >
     au < ready ; exists ; 1965 ; 1965 ; Journal of Experimental Biology Volume 42 ; 42 ; >
     au < ready ; exists ; 1965 ; 1965 ; Journal of Experimental Biology Volume 43 ; 43 ; >
     au < ready ; exists ; 1966 ; 1966 ; Journal of Experimental Biology Volume 44 ; 44 ; >
     au < crawling ; exists ; 1966 ; 1966 ; Journal of Experimental Biology Volume 45 ; 45 ; >
-    au < ready ; exists ; 1967 ; 1967 ; Journal of Experimental Biology Volume 46 ; 46 ; >
+    au < crawling ; exists ; 1967 ; 1967 ; Journal of Experimental Biology Volume 46 ; 46 ; >
     au < ready ; exists ; 1967 ; 1967 ; Journal of Experimental Biology Volume 47 ; 47 ; >
     au < ready ; exists ; 1968 ; 1968 ; Journal of Experimental Biology Volume 48 ; 48 ; >
     au < crawling ; exists ; 1968 ; 1968 ; Journal of Experimental Biology Volume 49 ; 49 ; >

@@ -111,7 +111,7 @@
       au < deepCrawl ; exists ; 2020 ; Masyarakat, Kebudayaan dan Politik Volume 33 ; 33 ; 2020 ; >
       au < finished ; frozen ; 2021 ; Masyarakat, Kebudayaan dan Politik Volume 34 ; 34 ; 2021 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; Masyarakat, Kebudayaan dan Politik Volume 35 ; 35 ; 2022 ; >
-      au < ready ; exists ; 2023 ; Masyarakat, Kebudayaan dan Politik Volume 36 ; 36 ; 2023 ; >
+      au < crawling ; exists ; 2023 ; Masyarakat, Kebudayaan dan Politik Volume 36 ; 36 ; 2023 ; >
       au < manifest ; exists ; 2024 ; Masyarakat, Kebudayaan dan Politik Volume 37 ; 37 ; 2024 ; >
 
   }
@@ -698,7 +698,7 @@
 
       au < finished ; manifest ; 2017 ; Etnolingual Volume 1 ; 1 ; 2017 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Etnolingual Volume 2 ; 2 ; 2018 ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2019 ; Etnolingual Volume 3 ; 3 ; 2019 ; >
+      au < crawling ; exists ; 2019 ; Etnolingual Volume 3 ; 3 ; 2019 ; >
       au < finished ; frozen ; 2020 ; Etnolingual Volume 4 ; 4 ; 2020 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; Etnolingual Volume 5 ; 5 ; 2021 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Etnolingual Volume 6 ; 6 ; 2022 ; >
@@ -718,7 +718,7 @@
       param[journal_id] = JVHS
 
       au < finished ; manifest ; 2017 ; Journal Of Vocational Health Studies Volume 1 ; 1 ; 2017 ; reingest2.clockss.org:8085 >
-      au < ready ; exists ; 2018 ; Journal Of Vocational Health Studies Volume 2 ; 2 ; 2018 ; >
+      au < crawling ; exists ; 2018 ; Journal Of Vocational Health Studies Volume 2 ; 2 ; 2018 ; >
       au < finished ; finished ; 2019 ; Journal Of Vocational Health Studies Volume 3 ; 3 ; 2019 ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; Journal Of Vocational Health Studies Volume 4 ; 4 ; 2020 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2021 ; Journal Of Vocational Health Studies Volume 5 ; 5 ; 2021 ; reingest3.clockss.org:8083 >
@@ -1460,7 +1460,7 @@
       au < finished ; manifest ; 2018 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 7 ; 7 ; 2018 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 8 ; 8 ; 2019 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 9 ; 9 ; 2020 ; reingest2.clockss.org:8085 >
-      au < ready ; exists ; 2021 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 10 ; 10 ; 2021 ; >
+      au < crawling ; exists ; 2021 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 10 ; 10 ; 2021 ; >
       au < deepCrawl ; exists ; 2022 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 11 ; 11 ; 2022 ; >
       au < crawling ; exists ; 2023 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 12 ; 12 ; 2023 ; >
       au < expected ; exists ; 2024 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 13 ; 13 ; 2024 ; >
