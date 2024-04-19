@@ -268,9 +268,9 @@
     au < finished ; crawling ; 2017 ; Epigenomics Volume 9 ; 9 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; Epigenomics Volume 10 ; 10 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2019 ; Epigenomics Volume 11 ; 11 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2020 ; Epigenomics Volume 12 ; 12 ; https://www.futuremedicine.com/ ; >
-    au < deepCrawl ; exists ; 2021 ; Epigenomics Volume 13 ; 13 ; https://www.futuremedicine.com/ ; >
-    au < deepCrawl ; exists ; 2022 ; Epigenomics Volume 14 ; 14 ; https://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2020 ; Epigenomics Volume 12 ; 12 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2021 ; Epigenomics Volume 13 ; 13 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2022 ; Epigenomics Volume 14 ; 14 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2023 ; Epigenomics Volume 15 ; 15 ; https://www.futuremedicine.com/ ; >
     au < manifest ; exists ; 2024 ; Epigenomics Volume 16 ; 16 ; https://www.futuremedicine.com/ ; >
 
@@ -826,8 +826,8 @@
     au < deepCrawl ; exists ; 2019 ; Pain Management Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2020 ; Pain Management Volume 10 ; 10 ; https://www.futuremedicine.com/ ; >
     au < deepCrawl ; exists ; 2021 ; Pain Management Volume 11 ; 11 ; https://www.futuremedicine.com/ ; >
-    au < deepCrawl ; exists ; 2022 ; Pain Management Volume 12 ; 12 ; https://www.futuremedicine.com/ ; >
-    au < deepCrawl ; exists ; 2023 ; Pain Management Volume 13 ; 13 ; https://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2022 ; Pain Management Volume 12 ; 12 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2023 ; Pain Management Volume 13 ; 13 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2024 ; Pain Management Volume 14 ; 14 ; https://www.futuremedicine.com/ ; >
 
   }
@@ -873,13 +873,13 @@
     au < finished ; finished ; 2014 ; Personalized Medicine Volume 11 ; 11 ; http://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Personalized Medicine Volume 12 ; 12 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2016 ; Personalized Medicine Volume 13 ; 13 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2017 ; Personalized Medicine Volume 14 ; 14 ; https://www.futuremedicine.com/ ; >
-    au < deepCrawl ; exists ; 2018 ; Personalized Medicine Volume 15 ; 15 ; https://www.futuremedicine.com/ ; >
-    au < deepCrawl ; exists ; 2019 ; Personalized Medicine Volume 16 ; 16 ; https://www.futuremedicine.com/ ; >
-    au < deepCrawl ; exists ; 2020 ; Personalized Medicine Volume 17 ; 17 ; https://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2017 ; Personalized Medicine Volume 14 ; 14 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2018 ; Personalized Medicine Volume 15 ; 15 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Personalized Medicine Volume 16 ; 16 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; Personalized Medicine Volume 17 ; 17 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Personalized Medicine Volume 18 ; 18 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2022 ; Personalized Medicine Volume 19 ; 19 ; https://www.futuremedicine.com/ ; >
-    au < deepCrawl ; exists ; 2023 ; Personalized Medicine Volume 20 ; 20 ; https://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2022 ; Personalized Medicine Volume 19 ; 19 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2023 ; Personalized Medicine Volume 20 ; 20 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2024 ; Personalized Medicine Volume 21 ; 21 ; https://www.futuremedicine.com/ ; >
 
   }
@@ -911,13 +911,13 @@
     au < zapped ; finished ; 2014 ; Pharmacogenomics Volume 15 ; 15 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2015 ; Pharmacogenomics Volume 16 ; 16 ; http://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2016 ; Pharmacogenomics Volume 17 ; 17 ; http://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2017 ; Pharmacogenomics Volume 18 ; 18 ; https://www.futuremedicine.com/ ; >
-    au < deepCrawl ; exists ; 2018 ; Pharmacogenomics Volume 19 ; 19 ; https://www.futuremedicine.com/ ; >
-    au < deepCrawl ; exists ; 2019 ; Pharmacogenomics Volume 20 ; 20 ; https://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2017 ; Pharmacogenomics Volume 18 ; 18 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2018 ; Pharmacogenomics Volume 19 ; 19 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Pharmacogenomics Volume 20 ; 20 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Pharmacogenomics Volume 21 ; 21 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2021 ; Pharmacogenomics Volume 22 ; 22 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2022 ; Pharmacogenomics Volume 23 ; 23 ; https://www.futuremedicine.com/ ; >
-    au < deepCrawl ; exists ; 2023 ; Pharmacogenomics Volume 24 ; 24 ; https://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2022 ; Pharmacogenomics Volume 23 ; 23 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2023 ; Pharmacogenomics Volume 24 ; 24 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2024 ; Pharmacogenomics Volume 25 ; 25 ; https://www.futuremedicine.com/ ; >
 
   }
@@ -943,13 +943,13 @@
     au < finished ; finished ; 2014 ; Regenerative Medicine Volume 9 ; 9 ; http://www.futuremedicine.com/ ; >
     au < zapped ; finished ; 2015 ; Regenerative Medicine Volume 10 ; 10 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; Regenerative Medicine Volume 11 ; 11 ; http://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2017 ; Regenerative Medicine Volume 12 ; 12 ; https://www.futuremedicine.com/ ; >
-    au < deepCrawl ; exists ; 2018 ; Regenerative Medicine Volume 13 ; 13 ; https://www.futuremedicine.com/ ; >
-    au < deepCrawl ; exists ; 2019 ; Regenerative Medicine Volume 14 ; 14 ; https://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2017 ; Regenerative Medicine Volume 12 ; 12 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2018 ; Regenerative Medicine Volume 13 ; 13 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Regenerative Medicine Volume 14 ; 14 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Regenerative Medicine Volume 15 ; 15 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2021 ; Regenerative Medicine Volume 16 ; 16 ; https://www.futuremedicine.com/ ; >
-    au < deepCrawl ; exists ; 2022 ; Regenerative Medicine Volume 17 ; 17 ; https://www.futuremedicine.com/ ; >
-    au < deepCrawl ; exists ; 2023 ; Regenerative Medicine Volume 18 ; 18 ; https://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2021 ; Regenerative Medicine Volume 16 ; 16 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2022 ; Regenerative Medicine Volume 17 ; 17 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2023 ; Regenerative Medicine Volume 18 ; 18 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2024 ; Regenerative Medicine Volume 19 ; 19 ; https://www.futuremedicine.com/ ; >
 
   }
