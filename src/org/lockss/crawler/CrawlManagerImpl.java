@@ -1186,10 +1186,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 						 limiter.getRate());
     }
 
-    AuState aus = AuUtil.getAuState(au);
-    AuState.MigrationState ms = aus.getMigrationState();
-    if (ms == AuState.MigrationState.InProgress ||
-        ms == AuState.MigrationState.Finished) {
+    if (AuUtil.isAuFrozen(au)) {
       throw new NotEligibleException("AU migrated or migrating");
     }
   }

@@ -2969,9 +2969,7 @@ public class PollManager
       throw new NotEligibleException(msg);
     }
 
-    AuState.MigrationState ms = auState.getMigrationState();
-    if (ms == AuState.MigrationState.InProgress ||
-        ms == AuState.MigrationState.Finished) {
+    if (AuUtil.isAuFrozen(au)) {
       throw new NotEligibleException("AU migrated or migrating");
     }
   }
