@@ -36,7 +36,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_identifier</string>
-        <string>org.lockss.plugin.europeanmathematicalsociety.api.ClockssEuropeanMathematicalSocietyJournalsAPIPlugin</string>
+        <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyJournalsPlugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>European Mathematical Society Journals 2024 Plugin (CLOCKSS)</string>
+        <string>European Mathematical Society Journals 2024 Plugin</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -115,7 +115,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"European Mathematical Society Journals 2024 Plugin (CLOCKSS), API URL %s, Base URL %s, Journal ID %s, Journal Serial Number %s, Year %d", api_url, base_url, journal_id, journal_serial_number, year</string>
+        <string>"European Mathematical Society Journals 2024 Plugin, API URL %s, Base URL %s, Journal ID %s, Journal Serial Number %s, Year %d", api_url, base_url, journal_id, journal_serial_number, year</string>
     </entry>
     <entry>
         <string>au_def_pause_time</string>
@@ -215,22 +215,5 @@ POSSIBILITY OF SUCH DAMAGE.
         <list>
             <string>content\.ems\.press</string>
         </list>
-    </entry>
-    <entry>
-        <string>clockss_override</string>
-        <map>
-            <entry>
-                <string>au_def_pause_time</string>
-                <long>100</long>
-            </entry>
-            <entry>
-                <string>plugin_url_fetcher_factory</string>
-                <org.lockss.util.Default/>
-            </entry>
-            <entry>
-                <string>plugin_url_consumer_factory</string>
-                <org.lockss.util.Default/>
-            </entry>
-        </map>
     </entry>
 </map>

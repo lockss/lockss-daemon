@@ -36,7 +36,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_identifier</string>
-        <string>org.lockss.plugin.europeanmathematicalsociety.api.ClockssEuropeanMathematicalSocietyBooksPlugin</string>
+        <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyBooksPlugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>European Mathematical Society 2024 Books Plugin (CLOCKSS)</string>
+        <string>European Mathematical Society 2024 Books Plugin</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -106,7 +106,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"European Mathematical Society 2024 Books Plugin (CLOCKSS), API URL %s, Base URL %s, Book Serial ID %s, Book ID %s", api_url, base_url, book_serial_id, book_id</string>
+        <string>"European Mathematical Society 2024 Books Plugin, API URL %s, Base URL %s, Book Serial ID %s, Book ID %s", api_url, base_url, book_serial_id, book_id</string>
     </entry>
     <entry>
         <string>au_def_pause_time</string>
@@ -169,26 +169,5 @@ POSSIBILITY OF SUCH DAMAGE.
         <list>
             <string>.*\.json$,application/json</string>
         </list>
-    </entry>
-    <entry>
-        <string>clockss_override</string>
-        <map>
-            <entry>
-                <string>au_def_pause_time</string>
-                <long>100</long>
-            </entry>
-            <entry>
-                <string>plugin_crawl_seed_factory</string>
-                <org.lockss.util.Default/>
-            </entry>
-            <entry>
-                <string>plugin_url_fetcher_factory</string>
-                <org.lockss.util.Default/>
-            </entry>
-            <entry>
-                <string>plugin_url_consumer_factory</string>
-                <org.lockss.util.Default/>
-            </entry>
-        </map>
     </entry>
 </map>

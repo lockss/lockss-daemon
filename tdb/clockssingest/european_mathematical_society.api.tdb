@@ -8,7 +8,7 @@
     info[platform] = EMS Custom?
   >
 
-  plugin = org.lockss.plugin.europeanmathematicalsociety.api.ClockssEuropeanMathematicalSocietyJournalsAPIPlugin
+  plugin = org.lockss.plugin.europeanmathematicalsociety.api.ClockssEuropeanMathematicalSocietyJournalsPlugin
 
   param[base_url] = https://ems.press/
   param[api_url] = https://content.ems.press/
