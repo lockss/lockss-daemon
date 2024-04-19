@@ -42,7 +42,35 @@ import org.lockss.util.*;
 import org.lockss.config.*;
 
 /** Manages V2AuMover instances and reports status to MigrateContent
- * servlet */
+ * servlet.<br>
+ *
+ * Migration is controlled by several modes and state vars. some
+ * reflect user choices, some the current state.  All but one are
+ * persistent, stored as config params in {@value
+ * org.lockss.config.ConfigManager#CONFIG_FILE_MIGRATION} <ul>
+ *
+ * <li><b>isInMigrationMode</b> - Enables permanent migration
+ * features: forwarding LCAP & content access traffic, deactivating or
+ * deleting (if enabled) migrated AUs.  Set they when a migration
+ * operation is started, unless in dry run or debug mode.</li>
+ *
+ * <li><b>isDeleteMigratedAus</b> - If true, AUs will be deleted & the
+ * space reclaimed after they are copied to V2.</li>
+ *
+ * <li><b>isRunning</b> - true when the migrator is actively copying
+ * data</li>
+ *
+ * <li><b>dryRunEnabled</b> - If set, migration will copy all data,
+ * including system settings, accounts, misc config, and content, but
+ * V1 won't enter migration mode so forwarding won't take place, and
+ * all AUs will remain live in V1 and won't be deleted or
+ * deactivated</li>
+ *
+ * <li><b>isMigrationInDebugMode</b> - Enables additional UI buttons,
+ * allows combinations of actions and state that should normally be
+ * prohibited, prevents permanent changes to V1 <i>a la</i> dry run
+ * mode </li>
+ */
 public class MigrationManager extends BaseLockssDaemonManager
   implements ConfigurableManager  {
 

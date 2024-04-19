@@ -64,6 +64,8 @@ public class MigrateContent extends LockssServlet {
 
   static final String SKIP_FINISHED_FOOT = "Uncheding this may result in many spurious verify errors as the content or state of previously copied AUs may have changed.";
 
+  static String DRY_RUN_FOOT = "Content and other data will be copied, but will continue to be active and possibly modified in V1.";
+
   static final String PREFIX = Configuration.PREFIX + "v2.migrate.";
   public static final String PARAM_ENABLE_MIGRATION = PREFIX + "enabled";
   public static final boolean DEFAULT_ENABLE_MIGRATION = true;
@@ -418,7 +420,19 @@ public class MigrateContent extends LockssServlet {
     Form frm = new Form(srvURL(myServletDescr()));
     frm.method("POST");
     Table tbl = new Table(0, "align=center cellspacing=2 cellpadding=0");
+    if (migrationMgr.isDryRun()) {
+      tbl.newCell(CENTERED_CELL);
+      tbl.add("<font color=\"dark orange\">");
+      tbl.add("Migration is in dry run mode");
+      tbl.add(addFootnote(DRY_RUN_FOOT));
+      tbl.add("</font>");
+      tbl.add("<br>");
+      tbl.add("<br>");
+      tbl.add("<br>");
+    }
+
     addSelToTable(tbl);
+
     tbl.newRow();
     tbl.newCell();
 
