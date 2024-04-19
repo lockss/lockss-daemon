@@ -45,6 +45,7 @@ import org.lockss.laaws.client.V2RestClient;
 import org.lockss.laaws.model.rs.AuidPageInfo;
 import org.lockss.plugin.*;
 import org.lockss.poller.PollManager;
+import org.lockss.protocol.IdentityManager;
 import org.lockss.repository.RepositoryManager;
 import org.lockss.servlet.MigrateContent;
 import org.lockss.state.AuState;
@@ -67,6 +68,7 @@ import java.util.stream.StreamSupport;
 import static java.nio.file.StandardOpenOption.APPEND;
 import static java.nio.file.StandardOpenOption.CREATE;
 import static org.lockss.laaws.Counters.CounterType;
+import static org.lockss.laaws.MigrationConstants.*;
 
 public class V2AuMover {
   private static final Logger log = Logger.getLogger(V2AuMover.class);
@@ -475,6 +477,7 @@ public class V2AuMover {
   private boolean terminated = false;
   private boolean globalAbort = false;
 
+  ConfigManager cfgManager;
   PluginManager pluginManager;
   RepositoryManager repoMgr;
   private final CrawlManager crawlMgr;
@@ -487,6 +490,7 @@ public class V2AuMover {
 
   public V2AuMover() {
     LockssDaemon theDaemon = LockssDaemon.getLockssDaemon();
+    cfgManager = theDaemon.getConfigManager();
     pluginManager = theDaemon.getPluginManager();
     repoMgr = theDaemon.getRepositoryManager();
     crawlMgr = theDaemon.getCrawlManager();
@@ -1026,6 +1030,34 @@ public class V2AuMover {
     currentStatus = STATUS_DONE_COPYING_CONFIG;
     logReport(currentStatus);
   }
+
+  public Configuration buildV2MigrateConfig() {
+    Configuration v1Config = cfgManager.getCurrentConfig();
+    Configuration v2MigConfig = ConfigManager.newConfiguration();
+
+    v2MigConfig.put(V2_PARAM_IS_IN_MIGRATION_MODE, "true");
+    v2MigConfig.put(V2_PARAM_SUBSCRIPTION_DEFERRED, "true");
+    // XXX This might be the wrong address if behind NAT.  Need to
+    // ask which to use?
+    String v1Id = v1Config.get(IdentityManager.PARAM_LOCAL_V3_IDENTITY);
+    if (!StringUtil.isNullString(v1Id)) {
+      v2MigConfig.put(V2_PARAM_LCAP_MIGRATE_FROM, v1Id);
+    }
+    return v2MigConfig;
+  }
+
+//   private void deleteV2MigrateConfig() {
+//     ConfigFileMover cfMover = new ConfigFileMover(this, task);
+//     try {
+//       Configuration v2EmptyMigConfig = ConfigManager.newConfiguration();
+//       cfMover.writeV2ConfigFile(SECTION_NAME_MIGRATION, v2EmptyMigConfig,
+//                                 "Enable V2 migration behavior during migration from V1");
+//     } catch (ApiException | IOException e) {
+//       String msg = "Couldn't set migration params in V2";
+//       log.error(msg, e);
+//       auMover.logReportAndError(msg + ": " + e);
+//     }
+//   }
 
   /**
    * Start the state machine for an AU

@@ -65,14 +65,6 @@ public class ConfigFileMover extends Worker {
     "### Adapted from LOCKSS %s to LOCKSS %s by migrator, %s";
 
 
-  static final String SECTION_NAME_CONTENT_SERVERS = "content_servers";
-  static final String SECTION_NAME_CRAWL_PROXY = "crawl_proxy";
-  static final String SECTION_NAME_EXPERT = "expert";
-  static final String SECTION_NAME_PLUGIN = "plugin";
-  static final String SECTION_NAME_PROXY_IP_ACCESS = "proxy_ip_access";
-  static final String SECTION_NAME_TITLE_DB = "titledb";
-  static final String SECTION_NAME_UI_IP_ACCESS = "ui_ip_access";
-
   private static final Map<String, String> configSectionMap =
     new LinkedHashMap<String, String>() {{
       put(SECTION_NAME_UI_IP_ACCESS, CONFIG_FILE_UI_IP_ACCESS);
@@ -125,6 +117,26 @@ public class ConfigFileMover extends Worker {
       } else {
         mergeConfigFile(section, v1Content, v2Content);
       }
+    }
+    writeV2MigrationConfig();
+  }
+
+  private void writeV2MigrationConfig() {
+//     if (migreationMgr.isDryRun() || migreationMgr.isMigrationInDebugMode) {
+//       String msg = (migreationMgr.isDryRun() ? "Dry run" : "Debug mode") +
+//         ", not putting V2 into migration mode";
+//       log.warning(msg);
+//       auMover.logReport(msg);
+//       return;
+//     }
+    try {
+      Configuration v2MigConfig = auMover.buildV2MigrateConfig();
+      writeV2ConfigFile(SECTION_NAME_MIGRATION, v2MigConfig,
+                        "Enable V2 migration behavior during migration from V1");
+    } catch (ApiException | IOException e) {
+      String msg = "Couldn't set migration params in V2";
+      log.error(msg, e);
+      auMover.logReportAndError(msg + ": " + e);
     }
   }
 
