@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2013-2016 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013-2024 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -66,6 +62,7 @@ public class TestMetadataManager extends LockssTestCase {
   private MetadataManagerSql metadataManagerSql;
   private PluginManager pluginManager;
   private DbManager dbManager;
+  private String tempDirPath;
 
   /** set of AuIds of AUs reindexed by the MetadataManager */
   Set<String> ausReindexed = new HashSet<String>();
@@ -75,7 +72,7 @@ public class TestMetadataManager extends LockssTestCase {
   
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = setUpDiskSpace();
+    tempDirPath = setUpDiskSpace();
 
     ConfigurationUtil.addFromArgs(MetadataManager.PARAM_INDEXING_ENABLED,
 	"true");
@@ -565,8 +562,13 @@ public class TestMetadataManager extends LockssTestCase {
     checkRowCount(con, countFullReindexQuery, 5);
 
     // insert another pending AU that is not also in the metadata manager
-    insertPendingAuBatchStatement.setString(1, "XyzzyPlugin");
-    insertPendingAuBatchStatement.setString(2, "journal_id=xyzzy");
+    SimulatedArchivalUnit sau5 =
+      PluginTestUtil.createAndStartSimAu(MySimulatedPlugin0.class,
+                                         simAuConfig(tempDirPath + "/5"));
+    Properties p = PropUtil.fromArgs("root",
+                                     sau5.getConfiguration().get("root"));
+    insertPendingAuBatchStatement.setString(1, MySimulatedPlugin0.class.getName());
+    insertPendingAuBatchStatement.setString(2, PropUtil.propsToCanonicalEncodedString(p));
     insertPendingAuBatchStatement.setBoolean(3, Boolean.FALSE);
     insertPendingAuBatchStatement.execute();
 
@@ -790,18 +792,26 @@ public class TestMetadataManager extends LockssTestCase {
     return articlesDeleted[0];
   }
 
+  private MockArchivalUnit makeMockAU(String auid) {
+    MockArchivalUnit mau = new MockArchivalUnit(new MockPlugin(theDaemon));
+    mau.setAuId(auid);
+    MockNodeManager nodeMgr = new MockNodeManager();
+    theDaemon.setNodeManager(nodeMgr, mau);
+    PluginTestUtil.registerArchivalUnit(mau);
+    nodeMgr.setAuState(new MockAuState());
+    return mau;
+  }
+
   private void runTestPriorityPatterns() {
     ConfigurationUtil.addFromArgs(MetadataManager.PARAM_INDEX_PRIORITY_AUID_MAP,
 				  "foo(4|5),-10000;bar,5;baz,-1");
-    MockArchivalUnit mau1 = new MockArchivalUnit(new MockPlugin(theDaemon));
-    mau1.setAuId("other");
+    MockArchivalUnit mau1 = makeMockAU("other");
     assertTrue(metadataManager.isEligibleForReindexing(mau1));
-    mau1.setAuId("foo4");
-    assertFalse(metadataManager.isEligibleForReindexing(mau1));
+    MockArchivalUnit mau2 = makeMockAU("foo4");
+    assertFalse(metadataManager.isEligibleForReindexing(mau2));
 
     // Remove param, ensure priority map gets removed
     ConfigurationUtil.resetConfig();
-    mau1.setAuId("foo4");
     assertTrue(metadataManager.isEligibleForReindexing(mau1));
 
   }
