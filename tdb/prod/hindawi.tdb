@@ -126,6 +126,7 @@
     >
 
     param[journal_id] = aav
+    #ceased publication in 2019
 
     au < doNotProcess ; 2008 ; Advances in Acoustics and Vibration Volume 2008 ; 2008 ; 2008 >
     au < doNotProcess ; 2009 ; Advances in Acoustics and Vibration Volume 2009 ; 2009 ; 2009 >
@@ -846,6 +847,7 @@
     >
 
     param[journal_id] = aoe
+    #ceased publication in 2019
 
     au < doNotProcess ; 2007 ; Advances in OptoElectronics Volume 2007 ; 2007 ; 2007 >
     au < doNotProcess ; 2008 ; Advances in OptoElectronics Volume 2008 ; 2008 ; 2008 >
@@ -2835,6 +2837,7 @@
     >
 
     param[journal_id] = cdr
+    #ceased publication in 2019
 
     au < doNotProcess ; 2011 ; Child Development Research Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Child Development Research Volume 2012 ; 2012 ; 2012 >
@@ -3439,6 +3442,7 @@
     >
 
     param[journal_id] = er
+    #ceased publication in 2019
 
     au < doNotProcess ; 2010 ; Enzyme Research Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Enzyme Research Volume 2011 ; 2011 ; 2011 >
@@ -3584,6 +3588,7 @@
     >
 
     param[journal_id] = gri
+    #ceased publication in 2019
 
     au < doNotProcess ; 2011 ; Genetics Research International Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Genetics Research International Volume 2012 ; 2012 ; 2012 >
@@ -4970,6 +4975,7 @@
     >
 
     param[journal_id] = ijmc
+    #ceased publication in 2020
 
     au < doNotProcess ; 2011 ; International Journal of Medicinal Chemistry Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; International Journal of Medicinal Chemistry Volume 2012 ; 2012 ; 2012 >
@@ -5847,6 +5853,7 @@
     # The ISRN journal will be collected as a single journal. The individual topics listed in the contract will not be separate.
 
     param[journal_id] = isrn
+    #ceased publication
 
     au < doNotProcess ; 2011 ; International Scholarly Research Notices Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; International Scholarly Research Notices Volume 2012 ; 2012 ; 2012 >
@@ -6346,6 +6353,7 @@
     >
 
     param[journal_id] = jb
+    #ceased publication
 
     au < doNotProcess ; 2009 ; Journal of Botany Volume 2009 ; 2009 ; 2009 >
     au < doNotProcess ; 2010 ; Journal of Botany Volume 2010 ; 2010 ; 2010 >
@@ -6597,7 +6605,8 @@
     >
 
     param[journal_id] = jca
-    
+    #ceased publication
+
     au < released ; 2013 ; Journal of Complex Analysis Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Complex Analysis Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Complex Analysis Volume 2015 ; 2015 ; 2015 >
@@ -6942,6 +6951,7 @@
     >
 
     param[journal_id] = jdd
+    #ceased publication in 2019
 
     au < doNotProcess ; 2011 ; Journal of Drug Delivery Volume 2011 ; 2011 ; 2011 >
     au < doNotProcess ; 2012 ; Journal of Drug Delivery Volume 2012 ; 2012 ; 2012 >
@@ -8185,7 +8195,8 @@
     >
 
     param[journal_id] = jphar
-    
+    #ceased publication in 2020
+
     au < released ; 2013 ; Journal of Pharmaceutics Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Pharmaceutics Volume 2014 ; 2014 ; 2014 >
     au < doNotProcess ; 2015 ; Journal of Pharmaceutics Volume 2015 ; 2015 ; 2015 >
@@ -8929,6 +8940,7 @@
     >
 
     param[journal_id] = jvm
+    #ceased publication
 
     au < released ; 2013 ; Journal of Veterinary Medicine Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Journal of Veterinary Medicine Volume 2014 ; 2014 ; 2014 >
@@ -9062,6 +9074,7 @@
     >
 
     param[journal_id] = mrt
+    #ceased publication in 2019
 
     au < doNotProcess ; 2010 ; Malaria Research and Treatment Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Malaria Research and Treatment Volume 2011 ; 2011 ; 2011 >
@@ -9383,6 +9396,7 @@
     >
 
     param[journal_id] = neuroscience
+    #ceased publication in 2019
 
     au < released ; 2013 ; Neuroscience Journal Volume 2013 ; 2013 ; 2013 >
     au < doNotProcess ; 2014 ; Neuroscience Journal Volume 2014 ; 2014 ; 2014 >
@@ -9582,6 +9596,7 @@
     >
 
     param[journal_id] = prt
+    #ceased publication in 2019
 
     au < doNotProcess ; 2010 ; Pain Research and Treatment Volume 2010 ; 2010 ; 2010 >
     au < doNotProcess ; 2011 ; Pain Research and Treatment Volume 2011 ; 2011 ; 2011 >

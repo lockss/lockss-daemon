@@ -82,6 +82,8 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
         // Footer
         HtmlNodeFilters.tagWithAttribute("div", "class", "Footer"),
         HtmlNodeFilters.tag("footer"),
+        // exclude related titles at bottom of the page since those can change
+        HtmlNodeFilters.tagWithAttribute("div", "id", "ctl00_ctl00_cphMain_cphSection_pnlRelatedTitles"),
         
         
         /*

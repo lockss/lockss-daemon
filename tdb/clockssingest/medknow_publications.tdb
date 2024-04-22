@@ -9708,7 +9708,7 @@
       param[journal_issn] = 2251-0060
 #      param[base_url] = http://www.atpjournal.org/
 
-      au < manifest ; exists ; 2010 ; Annals of Tropical Pathology Volume 1 ; 2010 ; 1 ; https://www.atpjournal.org/ ; login for pdf ; >
+      au < doNotProcess ; exists ; 2010 ; Annals of Tropical Pathology Volume 1 ; 2010 ; 1 ; https://www.atpjournal.org/ ; login for pdf ; >
       au < finished ; finished ; 2011 ; Annals of Tropical Pathology Volume 2 ; 2011 ; 2 ; https://www.atpjournal.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2012 ; Annals of Tropical Pathology Volume 3 ; 2012 ; 3 ; https://www.atpjournal.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Annals of Tropical Pathology Volume 4 ; 2013 ; 4 ; https://www.atpjournal.org/ ; ; reingest5.clockss.org:8082 >
