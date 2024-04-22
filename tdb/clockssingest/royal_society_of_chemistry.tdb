@@ -625,7 +625,7 @@
       au < crawling ; exists ; 2023 ; Faraday Discussions Volume 246 ; 246 ; 2023 ; https://pubs.rsc.org/ ; >
       au < testing ; exists ; 2023 ; Faraday Discussions Volume 247 ; 247 ; 2023 ; https://pubs.rsc.org/ ; >
 
-      au < exists ; exists ; 2024 ; Faraday Discussions Volume 248 ; 248 ; 2024 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2024 ; Faraday Discussions Volume 248 ; 248 ; 2024 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2024 ; Faraday Discussions Volume 249 ; 249 ; 2024 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2024 ; Faraday Discussions Volume 250 ; 250 ; 2024 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2024 ; Faraday Discussions Volume 251 ; 251 ; 2024 ; https://pubs.rsc.org/ ; >
@@ -3486,7 +3486,7 @@
       comment[years] = Published 2024-present
       param[journal_code] = lf
 
-      au < exists ; exists ; 2024 ; RSC Applied Interfaces Volume 1 ; 1 ; 2024 ; https://pubs.rsc.org/ ; >
+      au < manifest ; exists ; 2024 ; RSC Applied Interfaces Volume 1 ; 1 ; 2024 ; https://pubs.rsc.org/ ; >
 
   }
 

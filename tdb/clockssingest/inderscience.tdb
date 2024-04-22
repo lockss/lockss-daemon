@@ -6428,7 +6428,7 @@
       au < finished ; finished ; 2021 ; International Journal of Knowledge Management Studies Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2022 ; International Journal of Knowledge Management Studies Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; International Journal of Knowledge Management Studies Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2024 ; International Journal of Knowledge Management Studies Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2024 ; International Journal of Knowledge Management Studies Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -8546,7 +8546,7 @@
       au < finished ; finished ; 2021 ; International Journal of Powertrain Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2022 ; International Journal of Powertrain Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2023 ; International Journal of Powertrain Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2024 ; International Journal of Powertrain Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2024 ; International Journal of Powertrain Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -9983,7 +9983,7 @@
        param[journal_id] = ijspr
 
       au < deepCrawl ; exists ; 2022-2023 ; International Journal of Student Project Reporting Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2024-2025 ; International Journal of Student Project Reporting Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2024-2025 ; International Journal of Student Project Reporting Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
     }
 
