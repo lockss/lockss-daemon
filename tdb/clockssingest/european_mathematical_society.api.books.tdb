@@ -50,17 +50,6 @@
 
   {
     title <
-      name = EMM Books ;
-      type = bookSeries
-    >
-      param[book_serial_id]= emm
-
-      au < testing ; exists ; 2021 ; 978-3-98547-047-1 ; 978-3-98547-047-1 ; The Legacy of Kurt Mahler ; 252 ; >
-
-  }
-
-  {
-    title <
       name = ECR Books ;
       type = bookSeries
     >
