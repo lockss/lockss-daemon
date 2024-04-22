@@ -5073,11 +5073,6 @@
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Medicinal Chemistry Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Medicinal Chemistry Volume 2018 ; 2018 ; 2018 ; >
     au < finished ; frozen ; 2019 ; International Journal of Medicinal Chemistry Volume 2019 ; 2019 ; 2019 ; reingest4.clockss.org:8082 >
-    au < exists ; exists ; 2020 ; International Journal of Medicinal Chemistry Volume 2020 ; 2020 ; 2020 ; >
-    au < expected ; exists ; 2021 ; International Journal of Medicinal Chemistry Volume 2021 ; 2021 ; 2021 ; >
-    au < expected ; exists ; 2022 ; International Journal of Medicinal Chemistry Volume 2022 ; 2022 ; 2022 ; >
-    au < expected ; exists ; 2023 ; International Journal of Medicinal Chemistry Volume 2023 ; 2023 ; 2023 ; >
-    au < expected ; exists ; 2024 ; International Journal of Medicinal Chemistry Volume 2024 ; 2024 ; 2024 ; >
 
   }
 
@@ -5940,6 +5935,7 @@
 
 
     param[journal_id] = isrn
+    #ceased publication
 
     au < manifest ; exists ; 2011 ; International Scholarly Research Notices Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Scholarly Research Notices Volume 2012 ; 2012 ; 2012 ; >
@@ -5952,9 +5948,6 @@
     au < finished ; finished ; 2019 ; International Scholarly Research Notices Volume 2019 ; 2019 ; 2019 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2020 ; International Scholarly Research Notices Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Scholarly Research Notices Volume 2021 ; 2021 ; 2021 ; >
-    au < expected ; exists ; 2022 ; International Scholarly Research Notices Volume 2022 ; 2022 ; 2022 ; >
-    au < expected ; exists ; 2023 ; International Scholarly Research Notices Volume 2023 ; 2023 ; 2023 ; >
-    au < expected ; exists ; 2024 ; International Scholarly Research Notices Volume 2024 ; 2024 ; 2024 ; >
 
   }
 
@@ -6443,6 +6436,7 @@
 
     param[journal_id] = jb
     #Moved to archive
+    #ceased publication
 
     au < manifest ; exists ; 2009 ; Journal of Botany Volume 2009 ; 2009 ; 2009 ; >
     au < manifest ; exists ; 2010 ; Journal of Botany Volume 2010 ; 2010 ; 2010 ; >
@@ -6455,11 +6449,6 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Botany Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Botany Volume 2018 ; 2018 ; 2018 ; >
     au < finished ; frozen ; 2019 ; Journal of Botany Volume 2019 ; 2019 ; 2019 ; reingest2.clockss.org:8085 >
-    au < exists ; exists ; 2020 ; Journal of Botany Volume 2020 ; 2020 ; 2020 ; >
-    au < expected ; exists ; 2021 ; Journal of Botany Volume 2021 ; 2021 ; 2021 ; >
-    au < expected ; exists ; 2022 ; Journal of Botany Volume 2022 ; 2022 ; 2022 ; >
-    au < expected ; exists ; 2023 ; Journal of Botany Volume 2023 ; 2023 ; 2023 ; >
-    au < expected ; exists ; 2024 ; Journal of Botany Volume 2024 ; 2024 ; 2024 ; >
 
   }
   
@@ -6699,7 +6688,8 @@
 
     param[journal_id] = jca
     #Moved to archive
-    
+    #ceased publication
+
     au < finished ; finished ; 2013 ; Journal of Complex Analysis Volume 2013 ; 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Complex Analysis Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Complex Analysis Volume 2015 ; 2015 ; 2015 ; >
@@ -6707,11 +6697,6 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Complex Analysis Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Complex Analysis Volume 2018 ; 2018 ; 2018 ; >
     au < finished ; finished ; 2019 ; Journal of Complex Analysis Volume 2019 ; 2019 ; 2019 ; reingest3.clockss.org:8083 >
-    au < exists ; exists ; 2020 ; Journal of Complex Analysis Volume 2020 ; 2020 ; 2020 ; >
-    au < expected ; exists ; 2021 ; Journal of Complex Analysis Volume 2021 ; 2021 ; 2021 ; >
-    au < expected ; exists ; 2022 ; Journal of Complex Analysis Volume 2022 ; 2022 ; 2022 ; >
-    au < expected ; exists ; 2023 ; Journal of Complex Analysis Volume 2023 ; 2023 ; 2023 ; >
-    au < expected ; exists ; 2024 ; Journal of Complex Analysis Volume 2024 ; 2024 ; 2024 ; >
 
   }
 
@@ -7048,6 +7033,7 @@
     >
 
     param[journal_id] = jdd
+    #ceased publication in 2019
     
     au < manifest ; exists ; 2011 ; Journal of Drug Delivery Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Journal of Drug Delivery Volume 2012 ; 2012 ; 2012 ; >
@@ -7059,10 +7045,6 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Drug Delivery Volume 2018 ; 2018 ; 2018 ; >
     au < finished ; frozen ; 2019 ; Journal of Drug Delivery Volume 2019 ; 2019 ; 2019 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2020 ; Journal of Drug Delivery Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
-    au < expected ; exists ; 2021 ; Journal of Drug Delivery Volume 2021 ; 2021 ; 2021 ; >
-    au < expected ; exists ; 2022 ; Journal of Drug Delivery Volume 2022 ; 2022 ; 2022 ; >
-    au < expected ; exists ; 2023 ; Journal of Drug Delivery Volume 2023 ; 2023 ; 2023 ; >
-    au < expected ; exists ; 2024 ; Journal of Drug Delivery Volume 2024 ; 2024 ; 2024 ; >
 
   }
 
@@ -8296,7 +8278,8 @@
     >
 
     param[journal_id] = jphar
-    
+    #ceased publication in 2020
+
     au < finished ; frozen ; 2013 ; Journal of Pharmaceutics Volume 2013 ; 2013 ; 2013 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Pharmaceutics Volume 2014 ; 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Pharmaceutics Volume 2015 ; 2015 ; 2015 ; >
@@ -8305,10 +8288,6 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Pharmaceutics Volume 2018 ; 2018 ; 2018 ; >
     au < finished ; frozen ; 2019 ; Journal of Pharmaceutics Volume 2019 ; 2019 ; 2019 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2020 ; Journal of Pharmaceutics Volume 2020 ; 2020 ; 2020 ; reingest1.clockss.org:8082 >
-    au < expected ; exists ; 2021 ; Journal of Pharmaceutics Volume 2021 ; 2021 ; 2021 ; >
-    au < expected ; exists ; 2022 ; Journal of Pharmaceutics Volume 2022 ; 2022 ; 2022 ; >
-    au < expected ; exists ; 2023 ; Journal of Pharmaceutics Volume 2023 ; 2023 ; 2023 ; >
-    au < expected ; exists ; 2024 ; Journal of Pharmaceutics Volume 2024 ; 2024 ; 2024 ; >
 
   }
 
@@ -9043,6 +9022,7 @@
     >
 
     param[journal_id] = jvm
+    #ceased publication
 
     au < finished ; finished ; 2013 ; Journal of Veterinary Medicine Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Veterinary Medicine Volume 2014 ; 2014 ; 2014 ; >
@@ -9051,11 +9031,6 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Veterinary Medicine Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Veterinary Medicine Volume 2018 ; 2018 ; 2018 ; >
     au < finished ; frozen ; 2019 ; Journal of Veterinary Medicine Volume 2019 ; 2019 ; 2019 ; reingest5.clockss.org:8082 >
-    au < exists ; exists ; 2020 ; Journal of Veterinary Medicine Volume 2020 ; 2020 ; 2020 ; >
-    au < expected ; exists ; 2021 ; Journal of Veterinary Medicine Volume 2021 ; 2021 ; 2021 ; >
-    au < expected ; exists ; 2022 ; Journal of Veterinary Medicine Volume 2022 ; 2022 ; 2022 ; >
-    au < expected ; exists ; 2023 ; Journal of Veterinary Medicine Volume 2023 ; 2023 ; 2023 ; >
-    au < expected ; exists ; 2024 ; Journal of Veterinary Medicine Volume 2024 ; 2024 ; 2024 ; >
 
   }
 
@@ -9181,6 +9156,7 @@
     >
 
     param[journal_id] = mrt
+    #ceased publication in 2019
 
     au < manifest ; exists ; 2010 ; Malaria Research and Treatment Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Malaria Research and Treatment Volume 2011 ; 2011 ; 2011 ; >
@@ -9193,10 +9169,6 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Malaria Research and Treatment Volume 2018 ; 2018 ; 2018 ; >
     au < finished ; frozen ; 2019 ; Malaria Research and Treatment Volume 2019 ; 2019 ; 2019 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2020 ; Malaria Research and Treatment Volume 2020 ; 2020 ; 2020 ; reingest5.clockss.org:8082 >
-    au < expected ; exists ; 2021 ; Malaria Research and Treatment Volume 2021 ; 2021 ; 2021 ; >
-    au < expected ; exists ; 2022 ; Malaria Research and Treatment Volume 2022 ; 2022 ; 2022 ; >
-    au < expected ; exists ; 2023 ; Malaria Research and Treatment Volume 2023 ; 2023 ; 2023 ; >
-    au < expected ; exists ; 2024 ; Malaria Research and Treatment Volume 2024 ; 2024 ; 2024 ; >
 
   }
 
@@ -9503,6 +9475,7 @@
     >
 
     param[journal_id] = neuroscience
+    #ceased publication in 2019
 
     au < finished ; finished ; 2013 ; Neuroscience Journal Volume 2013 ; 2013 ; 2013 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Neuroscience Journal Volume 2014 ; 2014 ; 2014 ; >
@@ -9511,11 +9484,6 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Neuroscience Journal Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Neuroscience Journal Volume 2018 ; 2018 ; 2018 ; >
     au < finished ; frozen ; 2019 ; Neuroscience Journal Volume 2019 ; 2019 ; 2019 ; reingest5.clockss.org:8082 >
-    au < exists ; exists ; 2020 ; Neuroscience Journal Volume 2020 ; 2020 ; 2020 ; >
-    au < expected ; exists ; 2021 ; Neuroscience Journal Volume 2021 ; 2021 ; 2021 ; >
-    au < expected ; exists ; 2022 ; Neuroscience Journal Volume 2022 ; 2022 ; 2022 ; >
-    au < expected ; exists ; 2023 ; Neuroscience Journal Volume 2023 ; 2023 ; 2023 ; >
-    au < expected ; exists ; 2024 ; Neuroscience Journal Volume 2024 ; 2024 ; 2024 ; >
 
   }
 
@@ -9705,6 +9673,7 @@
     >
 
     param[journal_id] = prt
+    #ceased publication in 2019
 
     au < manifest ; exists ; 2010 ; Pain Research and Treatment Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Pain Research and Treatment Volume 2011 ; 2011 ; 2011 ; >
@@ -9716,11 +9685,6 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Pain Research and Treatment Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Pain Research and Treatment Volume 2018 ; 2018 ; 2018 ; >
     au < finished ; frozen ; 2019 ; Pain Research and Treatment Volume 2019 ; 2019 ; 2019 ; reingest3.clockss.org:8083 >
-    au < exists ; exists ; 2020 ; Pain Research and Treatment Volume 2020 ; 2020 ; 2020 ; >
-    au < expected ; exists ; 2021 ; Pain Research and Treatment Volume 2021 ; 2021 ; 2021 ; >
-    au < expected ; exists ; 2022 ; Pain Research and Treatment Volume 2022 ; 2022 ; 2022 ; >
-    au < expected ; exists ; 2023 ; Pain Research and Treatment Volume 2023 ; 2023 ; 2023 ; >
-    au < expected ; exists ; 2024 ; Pain Research and Treatment Volume 2024 ; 2024 ; 2024 ; >
 
   }
 
