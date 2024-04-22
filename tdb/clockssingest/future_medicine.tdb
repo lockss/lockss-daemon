@@ -647,10 +647,10 @@
     au < finished ; crawling ; 2017 ; Journal of 3D Printing in Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; Journal of 3D Printing in Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2019 ; Journal of 3D Printing in Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2020 ; Journal of 3D Printing in Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ ; >
-    au < deepCrawl ; exists ; 2021 ; Journal of 3D Printing in Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
-    au < deepCrawl ; exists ; 2022 ; Journal of 3D Printing in Medicine Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
-    au < deepCrawl ; exists ; 2023 ; Journal of 3D Printing in Medicine Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2020 ; Journal of 3D Printing in Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ; Journal of 3D Printing in Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2022 ; Journal of 3D Printing in Medicine Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2023 ; Journal of 3D Printing in Medicine Volume 7 ; 7 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < expected ; exists ; 2024 ; Journal of 3D Printing in Medicine Volume 8 ; 8 ; https://www.futuremedicine.com/ ; >
 
   }
@@ -675,7 +675,7 @@
     au < finished ; crawling ; 2018 ; Journal of Comparative Effectiveness Research Volume 7 ; 7 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
 
     au < finished ; finished ; 2019 ; Journal of Comparative Effectiveness Research Volume 8 ; 8 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2020 ; Journal of Comparative Effectiveness Research Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2020 ; Journal of Comparative Effectiveness Research Volume 9 ; 9 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Journal of Comparative Effectiveness Research Volume 10 ; 10 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < superseded ; exists ; 2022 ; Journal of Comparative Effectiveness Research Volume 11 [superseded] ; 11 ; https://www.futuremedicine.com/ ; >
 
@@ -698,10 +698,10 @@
     au < finished ; crawling ; 2017 ; Lung Cancer Management Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Lung Cancer Management Volume 7 ; 7 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2019 ; Lung Cancer Management Volume 8 ; 8 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2020 ; Lung Cancer Management Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
-    au < deepCrawl ; exists ; 2021 ; Lung Cancer Management Volume 10 ; 10 ; https://www.futuremedicine.com/ ; >
-    au < deepCrawl ; exists ; 2022 ; Lung Cancer Management Volume 11 ; 11 ; https://www.futuremedicine.com/ ; >
-    au < deepCrawl ; exists ; 2023 ; Lung Cancer Management Volume 12 ; 12 ; https://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2020 ; Lung Cancer Management Volume 9 ; 9 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ; Lung Cancer Management Volume 10 ; 10 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2022 ; Lung Cancer Management Volume 11 ; 11 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2023 ; Lung Cancer Management Volume 12 ; 12 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2024 ; Lung Cancer Management Volume 13 ; 13 ; https://www.futuremedicine.com/ ; >
 
   }
@@ -723,8 +723,8 @@
     au < finished ; crawling ; 2018 ; Melanoma Management Volume 5 ; 5 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2019 ; Melanoma Management Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Melanoma Management Volume 7 ; 7 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2021 ; Melanoma Management Volume 8 ; 8 ; https://www.futuremedicine.com/ ; >
-    au < deepCrawl ; exists ; 2022 ; Melanoma Management Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2021 ; Melanoma Management Volume 8 ; 8 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2022 ; Melanoma Management Volume 9 ; 9 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; Melanoma Management Volume 10 ; 10 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2024 ; Melanoma Management Volume 11 ; 11 ; https://www.futuremedicine.com/ ; >
 
