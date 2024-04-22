@@ -128,6 +128,7 @@
     >
 
     param[journal_id] = aav
+    #ceased publication in 2019
 
     au < doNotProcess ; doNotProcess ; 2008 ; Advances in Acoustics and Vibration Volume 2008 ; 2008 ; 2008 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Advances in Acoustics and Vibration Volume 2009 ; 2009 ; 2009 ; >
@@ -143,9 +144,6 @@
     au < doNotProcess ; doNotProcess ; 2019 ; Advances in Acoustics and Vibration Volume 2019 ; 2019 ; 2019 ; >
     au < finished ; finished ; 2020 ; Advances in Acoustics and Vibration Volume 2020 ; 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2021 ; Advances in Acoustics and Vibration Volume 2021 ; 2021 ; 2021 ; >
-    au < expected ; exists ; 2022 ; Advances in Acoustics and Vibration Volume 2022 ; 2022 ; 2022 ; >
-    au < expected ; exists ; 2023 ; Advances in Acoustics and Vibration Volume 2023 ; 2023 ; 2023 ; >
-    au < expected ; exists ; 2024 ; Advances in Acoustics and Vibration Volume 2024 ; 2024 ; 2024 ; >
 
   }
   
@@ -861,6 +859,7 @@
 
     param[journal_id] = aoe
     #Moved to archive
+    #ceased publication in 2019
 
     au < manifest ; exists ; 2007 ; Advances in OptoElectronics Volume 2007 ; 2007 ; 2007 ; >
     au < manifest ; exists ; 2008 ; Advances in OptoElectronics Volume 2008 ; 2008 ; 2008 ; >
@@ -875,11 +874,6 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Advances in OptoElectronics Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Advances in OptoElectronics Volume 2018 ; 2018 ; 2018 ; >
     au < finished ; frozen ; 2019 ; Advances in OptoElectronics Volume 2019 ; 2019 ; 2019 ; reingest3.clockss.org:8083 >
-    au < exists ; exists ; 2020 ; Advances in OptoElectronics Volume 2020 ; 2020 ; 2020 ; >
-    au < expected ; exists ; 2021 ; Advances in OptoElectronics Volume 2021 ; 2021 ; 2021 ; >
-    au < expected ; exists ; 2022 ; Advances in OptoElectronics Volume 2022 ; 2022 ; 2022 ; >
-    au < expected ; exists ; 2023 ; Advances in OptoElectronics Volume 2023 ; 2023 ; 2023 ; >
-    au < expected ; exists ; 2024 ; Advances in OptoElectronics Volume 2024 ; 2024 ; 2024 ; >
 
   }
  
@@ -2889,6 +2883,7 @@
     >
 
     param[journal_id] = cdr
+    #ceased publication in 2019
 
     au < manifest ; exists ; 2011 ; Child Development Research Volume 2011 ; 2011 ; 2011 ; >
     au < frozen ; exists ; 2012 ; Child Development Research Volume 2012 ; 2012 ; 2012 ; >
@@ -2899,11 +2894,6 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Child Development Research Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Child Development Research Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Child Development Research Volume 2019 ; 2019 ; 2019 ; >
-    au < exists ; exists ; 2020 ; Child Development Research Volume 2020 ; 2020 ; 2020 ; >
-    au < expected ; exists ; 2021 ; Child Development Research Volume 2021 ; 2021 ; 2021 ; >
-    au < expected ; exists ; 2022 ; Child Development Research Volume 2022 ; 2022 ; 2022 ; >
-    au < expected ; exists ; 2023 ; Child Development Research Volume 2023 ; 2023 ; 2023 ; >
-    au < expected ; exists ; 2024 ; Child Development Research Volume 2024 ; 2024 ; 2024 ; >
 
   }
   
@@ -3519,6 +3509,7 @@
     >
 
     param[journal_id] = er
+    #ceased publication in 2019
 
     au < manifest ; exists ; 2010 ; Enzyme Research Volume 2010 ; 2010 ; 2010 ; >
     au < manifest ; exists ; 2011 ; Enzyme Research Volume 2011 ; 2011 ; 2011 ; >
@@ -3530,11 +3521,6 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Enzyme Research Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Enzyme Research Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Enzyme Research Volume 2019 ; 2019 ; 2019 ; >
-    au < exists ; exists ; 2020 ; Enzyme Research Volume 2020 ; 2020 ; 2020 ; >
-    au < expected ; exists ; 2021 ; Enzyme Research Volume 2021 ; 2021 ; 2021 ; >
-    au < expected ; exists ; 2022 ; Enzyme Research Volume 2022 ; 2022 ; 2022 ; >
-    au < expected ; exists ; 2023 ; Enzyme Research Volume 2023 ; 2023 ; 2023 ; >
-    au < expected ; exists ; 2024 ; Enzyme Research Volume 2024 ; 2024 ; 2024 ; >
 
 
   }
@@ -3671,6 +3657,7 @@
     >
 
     param[journal_id] = gri
+    #ceased publication in 2019
 
     au < manifest ; exists ; 2011 ; Genetics Research International Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; Genetics Research International Volume 2012 ; 2012 ; 2012 ; >
@@ -3681,11 +3668,6 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Genetics Research International Volume 2017 ; 2017 ; 2017 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Genetics Research International Volume 2018 ; 2018 ; 2018 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Genetics Research International Volume 2019 ; 2019 ; 2019 ; >
-    au < exists ; exists ; 2020 ; Genetics Research International Volume 2020 ; 2020 ; 2020 ; >
-    au < expected ; exists ; 2021 ; Genetics Research International Volume 2021 ; 2021 ; 2021 ; >
-    au < expected ; exists ; 2022 ; Genetics Research International Volume 2022 ; 2022 ; 2022 ; >
-    au < expected ; exists ; 2023 ; Genetics Research International Volume 2023 ; 2023 ; 2023 ; >
-    au < expected ; exists ; 2024 ; Genetics Research International Volume 2024 ; 2024 ; 2024 ; >
 
   }
 
@@ -5080,6 +5062,7 @@
     >
 
     param[journal_id] = ijmc
+    #ceased publication in 2020
 
     au < manifest ; exists ; 2011 ; International Journal of Medicinal Chemistry Volume 2011 ; 2011 ; 2011 ; >
     au < manifest ; exists ; 2012 ; International Journal of Medicinal Chemistry Volume 2012 ; 2012 ; 2012 ; >
