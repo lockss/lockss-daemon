@@ -34,5 +34,29 @@
 
     }
   }
+}
 
+{
+ publisher <
+   name = American Institute of Mathematical Sciences ;
+   info[contract] = 2016 ;
+   info[tester] = S ;
+   info[platform] = Source
+ >
+ hidden[proxy] = DIRECT
+
+ {
+   title <
+     name = American Institute of Mathematical Sciences Source Content
+   >
+
+   plugin = org.lockss.plugin.clockss.aimsciences.ClockssAimsDirSourcePlugin
+   implicit < status ; status2 ; directory ; name ; param[directory] >
+
+   {
+     param[base_url] = https://clockss-test.lockss.org/sourcefiles/aimsciences-released/
+
+     au < testing ; exists ; 2024_01 ; American Institute of Mathematical Sciences Source Content 2024_01 ; 2024_01 >
+   }
+ }
 }
