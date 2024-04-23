@@ -4,6 +4,7 @@
         <string>plugin_status</string>
         <string>down</string>
     </entry>
+    <!-- https transition enabled --> 
     <entry>
         <string>plugin_identifier</string>
         <string>org.lockss.plugin.gigascience.GigaSciencePlugin</string>
@@ -62,11 +63,17 @@
     </entry>
     <entry>
         <string>au_start_url</string>
-        <string>"%sapi/", base_url</string>
+        <list>
+            <string>"%sapi/", to_http(base_url)</string>
+            <string>"%sapi/", to_https(base_url)</string>
+        </list>
     </entry>
     <entry>
         <string>au_permission_url</string>
-        <string>"%slockss.txt", base_url</string>
+        <list>
+            <string>"%slockss.txt", to_http(base_url)</string>
+            <string>"%slockss.txt", to_https(base_url)</string>
+        </list>
     </entry>
     <entry>
         <string>plugin_cache_result_list</string>
@@ -78,13 +85,13 @@
     <entry>
         <string>au_crawlrules</string>
         <list>
-            <string>1,"%sapi/", base_url</string>
+            <string>1,"^https?://%sapi/", base_url_host</string>
         </list>
     </entry>
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
-            <string>"%sapi/dataset\?doi=", base_url</string>
+            <string>"^https?://%s/api/dataset\?doi=", base_url_host</string>
         </list>
     </entry>
     <entry>
@@ -115,5 +122,14 @@
                 <string>org.lockss.plugin.gigascience.GigaScienceAPIXmlMetadataExtractorFactory</string>
             </entry>
         </map>
+    </entry>
+    <!--  added for https conversion -->
+    <entry>
+        <string>plugin_url_fetcher_factory</string>
+        <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_url_consumer_factory</string>
+        <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
     </entry>
 </map>
