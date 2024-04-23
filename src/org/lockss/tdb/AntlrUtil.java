@@ -32,8 +32,6 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.tdb;
 
-import java.io.*;
-
 import org.antlr.v4.runtime.*;
 
 /**

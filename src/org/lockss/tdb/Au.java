@@ -74,6 +74,7 @@ public class Au implements Serializable {
   public Au(Token tok, Au other) {
     this(tok);
     this.computedPlugin = other.computedPlugin;
+    this.computedPublisher = other.computedPublisher;
     this.eisbn = other.eisbn;
     this.implicit = other.implicit;
     this.isbn = other.isbn;
@@ -82,6 +83,7 @@ public class Au implements Serializable {
     this.pluginSuffix = other.pluginSuffix;
     this.provider = other.provider;
     this.proxy = other.proxy;
+    this.publisherName = other.publisherName;
     this.rights = other.rights;
     if (other.attrsMap != null) {
       this.attrsMap = new HashMap<String, String>(other.attrsMap);
@@ -291,6 +293,11 @@ public class Au implements Serializable {
           proxy = value;
           return ret;
         }
+        else if (PUBLISHER_NAME.equals(key)) {
+          String ret = publisherName;
+          publisherName = value;
+          return ret;
+        }
       } break;
       case 'r': {
         if (RIGHTS.equals(key)) {
@@ -480,6 +487,35 @@ public class Au implements Serializable {
       }
     }
     return computedPlugin;
+  }
+  
+  /**
+   * <p>
+   * The AU's computed publisher (field).
+   * </p>
+   * 
+   * @since 1.78
+   */
+  protected String computedPublisher = null;
+  
+  /**
+   * <p>
+   * Retrieves the AU's computed publisher.
+   * </p>
+   * 
+   * @return The AU's computed publisher.
+   * @since 1.78
+   */
+  public String getComputedPublisher() {
+    if (computedPublisher == null) {
+      if (publisherName != null) {
+        computedPublisher = publisherName;
+      }
+      else {
+        computedPublisher = getTitle().getPublisher().getName();
+      }
+    }
+    return computedPublisher;
   }
   
   /**
@@ -870,6 +906,36 @@ public class Au implements Serializable {
    */
   public String getProxy() {
     return proxy;
+  }
+  
+  /**
+   * <p>
+   * The AU's publisher name (key).
+   * </p>
+   * 
+   * @since 1.78
+   */
+  protected static final String PUBLISHER_NAME = "publisherName";
+  
+  /**
+   * <p>
+   * The AU's publisher name(field).
+   * </p>
+   * 
+   * @since 1.78
+   */
+  protected String publisherName = null;
+  
+  /**
+   * <p>
+   * Retrieves the AU's publisher name.
+   * </p>
+   * 
+   * @return The AU's publisher name.
+   * @since 1.78
+   */
+  public String getPublisherName() {
+    return publisherName;
   }
   
   /**
@@ -1284,11 +1350,12 @@ public class Au implements Serializable {
     m.put("au:isbn", (a) -> a.getIsbn());
     m.put("au:line", (a) -> Integer.toString(a.getLine()));
     m.put("au:name", (a) -> a.getName());
-    m.put("au:plugin", (a) -> a.getComputedPlugin());
+    m.put("au:plugin", (a) -> a.getPlugin());
     m.put("au:pluginPrefix", (a) -> a.getPluginPrefix());
     m.put("au:pluginSuffix", (a) -> a.getPluginSuffix());
     m.put("au:provider", (a) -> a.getProvider());
     m.put("au:proxy", (a) -> a.getProxy());
+    m.put("au:publisherName", (a) -> a.getPublisherName());
     m.put("au:rights", (a) -> a.getRights());
     m.put("au:status", (a) -> a.getStatus());
     m.put("au:status1", (a) -> a.getStatus1());
@@ -1318,12 +1385,12 @@ public class Au implements Serializable {
     m.put("issnl", m.get("title:issnl"));
     m.put("line", m.get("au:line"));
     m.put("name", m.get("au:name"));
-    m.put("plugin", m.get("au:plugin"));
+    m.put("plugin", (a) -> a.getComputedPlugin());
     m.put("pluginPrefix", m.get("au:pluginPrefix"));
     m.put("pluginSuffix", m.get("au:pluginSuffix"));
     m.put("provider", m.get("au:provider"));
     m.put("proxy", m.get("au:proxy"));
-    m.put("publisher", m.get("publisher:name"));
+    m.put("publisher", (a) -> a.getComputedPublisher());
     m.put("rights", m.get("au:rights"));
     m.put("status", m.get("au:status"));
     m.put("status1", m.get("au:status1"));

@@ -41,7 +41,6 @@ import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 import org.apache.commons.cli.*;
-import org.lockss.tdb.Predicates.*;
 import org.lockss.tdb.TdbQueryParser.*;
 
 /**
@@ -78,7 +77,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbQueryBuilder:0.3.1]";
+  public static final String VERSION = "[TdbQueryBuilder:0.3.2]";
   
   /**
    * <p>
@@ -1498,14 +1497,13 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
   /**
    * <p>
    * Retrieves from the options map the current AU predicate, which will never
-   * be <code>null</code> (it will be an instance of
-   * {@link Predicates.TruePredicate} if needed).
+   * be <code>null</code> (it will be an instance of an always-true predicate
+   * if needed).
    * </p>
    * 
    * @param options
    *          The options map.
-   * @return The current AU predicate or an instance of
-   *         {@link Predicates.TruePredicate}.
+   * @return The current AU predicate or an always-true predicate.
    * @since 1.67
    */
   public Predicate<Au> getAuPredicate(Map<String, Object> options) {
@@ -1515,14 +1513,14 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
   /**
    * <p>
    * If processing an abstract syntax tree of type Or2, pops the two predicates
-   * waiting on top of the stack, merges them into an
-   * {@link Predicates.OrPredicate} instance, and pushes the result onto the
-   * stack.
+   * waiting on top of the stack, merges them into an "or" predicate, and pushes
+   * the result onto the stack.
    * </p>
    * 
    * @param o2ctx
    *          Context supplied by ANTLR.
    * @since 1.67
+   * @see Predicate#or(Predicate)
    */
   @Override
   public void exitOr2(@NotNull Or2Context o2ctx) {
@@ -1534,14 +1532,14 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
   /**
    * <p>
    * If processing an abstract syntax tree of type And2, pops the two predicates
-   * waiting on top of the stack, merges them into an
-   * {@link Predicates.OrPredicate} instance, and pushes the result onto the
-   * stack.
+   * waiting on top of the stack, merges them into an "and" predicate, and
+   * pushes the result onto the stack.
    * </p>
    * 
    * @param a2ctx
    *          Context supplied by ANTLR.
    * @since 1.67
+   * @see Predicate#and(Predicate)
    */
   @Override
   public void exitAnd2(@NotNull And2Context a2ctx) {

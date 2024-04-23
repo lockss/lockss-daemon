@@ -9,7 +9,7 @@
     
     provider = OAPEN
     plugin = org.lockss.plugin.oapen.ClockssOAPENBooksPlugin
-    implicit < status ; status2 ; year ; isbn_string ; name ; publisher_string ; param[resource_id] ; hidden[proxy] >
+    implicit < status ; status2 ; year ; isbn_string ; name ; publisherName ; param[resource_id] ; hidden[proxy] >
     param[base_url] = https://library.oapen.org/
 
   {

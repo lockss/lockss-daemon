@@ -54,7 +54,7 @@ public class TdbXml {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbXml:0.3.1]";
+  public static final String VERSION = "[TdbXml:0.3.2]";
   
   /**
    * <p>
@@ -389,6 +389,7 @@ public class TdbXml {
     Publisher currentPub = null;
     String escapedPublisherName = null;
     String escapedPublisherNameNoDots = null;
+    String escapedComputedPublisherName = null;
     Title currentTitle = null;
     String escapedTitleName = null;
     String titleIssn = null;
@@ -467,7 +468,8 @@ public class TdbXml {
       ausb = null; // in case ausb accidentally gets re-used below instead of sb
       
       sb.append("  <property name=\""); sb.append(escapedAuNameShort); sb.append("\">\n");
-      appendOneAttr(sb, "publisher", escapedPublisherName);
+      escapedComputedPublisherName = xmlEscaper.translate(au.getComputedPublisher());
+      appendOneAttr(sb, "publisher", escapedComputedPublisherName);
       sb.append("   <property name=\"journalTitle\" value=\""); sb.append(escapedTitleName); sb.append("\" />\n");
       if (titleIssn != null) {
         sb.append("   <property name=\"issn\" value=\""); sb.append(titleIssn); sb.append("\" />\n");
