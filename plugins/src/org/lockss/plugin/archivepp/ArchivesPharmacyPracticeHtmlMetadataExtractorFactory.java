@@ -89,10 +89,10 @@ public class ArchivesPharmacyPracticeHtmlMetadataExtractorFactory implements Fil
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
         String contentType)
       throws PluginException {
-    return new EuropeanMathematicalSocietyHtmlMetadataExtractor();
+    return new ArchivesPharmacyPracticeHtmlMetadataExtractor();
   }
   
-  public static class EuropeanMathematicalSocietyHtmlMetadataExtractor extends SimpleHtmlMetaTagMetadataExtractor {
+  public static class ArchivesPharmacyPracticeHtmlMetadataExtractor extends SimpleHtmlMetaTagMetadataExtractor {
     
     // Map HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();

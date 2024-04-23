@@ -58,24 +58,19 @@ public class ArchivesPharmacyPracticeJournalsArticleIteratorFactory
   
   protected static final String ROOT_TEMPLATE =
     "\"%s\", base_url";
-  
+
   protected static final String PATTERN_TEMPLATE =
-    "\"%s(storage/models/)?article\", base_url";
+          "\"%sarticle/([a-zA-Z0-9\\-]+)$\", base_url";
 
   // various aspects of an article
   protected static final Pattern ARTICLE_LANDING_PAGE_PATTERN = Pattern.compile(
           "/article/([a-zA-Z0-9\\-]+)$", Pattern.CASE_INSENSITIVE);
   protected static final Pattern RIS_PAGE_PATTERN = Pattern.compile(
-      "/article/([a-zA-Z0-9\\-]+\\?download_citation=ris)", Pattern.CASE_INSENSITIVE);
+      "/article/([a-zA-Z0-9\\-]+)", Pattern.CASE_INSENSITIVE);
 
 
-  protected static final Pattern PDF_PATTERN = Pattern.compile(
-      "/storage/models/article/([^/]+/[^/]+)", Pattern.CASE_INSENSITIVE);
-  
-  // how to change from one form (aspect) of article to another
-  protected static final String ARTICLE_LANDING_PAGE_REPLACEMENT = "$1";
-  protected static final String RIS_REPLACEMENT = "$1";
-  protected static final String PDF_REPLACEMENT = "$1";
+  protected static final String ARTICLE_LANDING_PAGE_REPLACEMENT = "article/$1";
+  protected static final String RIS_REPLACEMENT = "article/$1?download_citation=ris";
   
   
   @Override
@@ -87,17 +82,11 @@ public class ArchivesPharmacyPracticeJournalsArticleIteratorFactory
     builder.setSpec(target,
         ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
 
-    // set up abstract page to be an aspect
     builder.addAspect(
             ARTICLE_LANDING_PAGE_PATTERN,
             ARTICLE_LANDING_PAGE_REPLACEMENT,
             ArticleFiles.ROLE_FULL_TEXT_HTML,
             ArticleFiles.ROLE_ARTICLE_METADATA);
-
-    builder.addAspect(
-            PDF_PATTERN,
-            PDF_REPLACEMENT,
-            ArticleFiles.ROLE_FULL_TEXT_PDF);
 
     builder.addAspect(
             RIS_PAGE_PATTERN,
