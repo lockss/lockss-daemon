@@ -25,11 +25,11 @@
 
       au < ready ; exists ; 2015 ; NUST Journal of Social Sciences and Humanities Volume 2015 ; 1 ; 2015 ; >
       au < ready ; exists ; 2016 ; NUST Journal of Social Sciences and Humanities Volume 2016 ; 2 ; 2016 ; >
-      au < ready ; exists ; 2017 ; NUST Journal of Social Sciences and Humanities Volume 2017 ; 3 ; 2017 ; >
-      au < ready ; exists ; 2018 ; NUST Journal of Social Sciences and Humanities Volume 2018 ; 4 ; 2018 ; >
+      au < crawling ; exists ; 2017 ; NUST Journal of Social Sciences and Humanities Volume 2017 ; 3 ; 2017 ; >
+      au < crawling ; exists ; 2018 ; NUST Journal of Social Sciences and Humanities Volume 2018 ; 4 ; 2018 ; >
       au < ready ; exists ; 2019 ; NUST Journal of Social Sciences and Humanities Volume 2019 ; 5 ; 2019 ; >
       au < ready ; exists ; 2020 ; NUST Journal of Social Sciences and Humanities Volume 2020 ; 6 ; 2020 ; >
-      au < ready ; exists ; 2021 ; NUST Journal of Social Sciences and Humanities Volume 2021 ; 7 ; 2021 ; >
+      au < crawling ; exists ; 2021 ; NUST Journal of Social Sciences and Humanities Volume 2021 ; 7 ; 2021 ; >
       au < ready ; exists ; 2022 ; NUST Journal of Social Sciences and Humanities Volume 2022 ; 8 ; 2022 ; >
       au < ready ; exists ; 2023 ; NUST Journal of Social Sciences and Humanities Volume 2023 ; 9 ; 2023 ; >
       au < expected ; exists ; 2024 ; NUST Journal of Social Sciences and Humanities Volume 2024 ; 10 ; 2024 ; >
@@ -60,7 +60,7 @@
       au < ready ; exists ; 2018 ; NUST Journal of Engineering Sciences Volume 2018 ; 11 ; 2018 ; >
       au < ready ; exists ; 2019 ; NUST Journal of Engineering Sciences Volume 2019 ; 12 ; 2019 ; >
       au < ready ; exists ; 2020 ; NUST Journal of Engineering Sciences Volume 2020 ; 13 ; 2020 ; >
-      au < ready ; exists ; 2021 ; NUST Journal of Engineering Sciences Volume 2021 ; 14 ; 2021 ; >
+      au < crawling ; exists ; 2021 ; NUST Journal of Engineering Sciences Volume 2021 ; 14 ; 2021 ; >
       au < ready ; exists ; 2022 ; NUST Journal of Engineering Sciences Volume 2022 ; 15 ; 2022 ; >
       au < ready ; exists ; 2023 ; NUST Journal of Engineering Sciences Volume 2023 ; 16 ; 2023 ; >
       au < expected ; exists ; 2024 ; NUST Journal of Engineering Sciences Volume 2024 ; 17 ; 2024 ; >
@@ -79,10 +79,10 @@
       param[journal_id] = nbr
 
       au < ready ; exists ; 2019 ; NUST Business Review Volume 2019 ; 1 ; 2019 ; >
-      au < ready ; exists ; 2020 ; NUST Business Review Volume 2020 ; 2 ; 2020 ; >
+      au < crawling ; exists ; 2020 ; NUST Business Review Volume 2020 ; 2 ; 2020 ; >
       au < ready ; exists ; 2021 ; NUST Business Review Volume 2021 ; 3 ; 2021 ; >
       au < ready ; exists ; 2022 ; NUST Business Review Volume 2022 ; 4 ; 2022 ; >
-      au < ready ; exists ; 2023 ; NUST Business Review Volume 2023 ; 5 ; 2023 ; >
+      au < crawling ; exists ; 2023 ; NUST Business Review Volume 2023 ; 5 ; 2023 ; >
       au < expected ; exists ; 2024 ; NUST Business Review Volume 2024 ; 6 ; 2024 ; >
 
   }
@@ -98,8 +98,8 @@
       param[base_url] = https://njips.nust.edu.pk/
       param[journal_id] = njips
 
-      au < ready ; exists ; 2017 ; NUST Journal of International Peace and Stability Volume 2017 ; 1 ; 2017 ; >
-      au < ready ; exists ; 2018 ; NUST Journal of International Peace and Stability Volume 2018 ; 2 ; 2018 ; >
+      au < crawling ; exists ; 2017 ; NUST Journal of International Peace and Stability Volume 2017 ; 1 ; 2017 ; >
+      au < crawling ; exists ; 2018 ; NUST Journal of International Peace and Stability Volume 2018 ; 2 ; 2018 ; >
       au < ready ; exists ; 2019 ; NUST Journal of International Peace and Stability Volume 2019 ; 3 ; 2019 ; >
       au < ready ; exists ; 2020 ; NUST Journal of International Peace and Stability Volume 2020 ; 4 ; 2020 ; >
       au < ready ; exists ; 2021 ; NUST Journal of International Peace and Stability Volume 2021 ; 5 ; 2021 ; >

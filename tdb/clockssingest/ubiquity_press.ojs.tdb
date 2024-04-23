@@ -2038,7 +2038,7 @@
       param[base_url] = https://account.ubiquityproceedings.com/
       param[journal_id] = up-j-up
 
-      au < ready ; exists ; 2018 ; 2018 ; Ubiquity Proceedings Volume 2018 ; 2018 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; Ubiquity Proceedings Volume 2018 ; 2018 ; >
       au < doesNotExist ; doesNotExist ; 2019 ; 0 ; Ubiquity Proceedings Volume 2019 ; 2019 ; >
       au < doesNotExist ; doesNotExist ; 2020 ; 0 ; Ubiquity Proceedings Volume 2020 ; 2020 ; >
       au < doesNotExist ; doesNotExist ; 2021 ; 0 ; Ubiquity Proceedings Volume 2021 ; 2021 ; >
@@ -2860,13 +2860,13 @@
       au < ready ; exists ; 2000 ; 5 ; The Journal of Technology Studies Volume 2000 ; 2000 ; >
       au < ready ; exists ; 2001 ; 6 ; The Journal of Technology Studies Volume 2001 ; 2001 ; >
       au < ready ; exists ; 2002 ; 7 ; The Journal of Technology Studies Volume 2002 ; 2002 ; >
-      au < ready ; exists ; 2003 ; 8 ; The Journal of Technology Studies Volume 2003 ; 2003 ; >
+      au < crawling ; exists ; 2003 ; 8 ; The Journal of Technology Studies Volume 2003 ; 2003 ; >
       au < ready ; exists ; 2004 ; 9 ; The Journal of Technology Studies Volume 2004 ; 2004 ; >
-      au < ready ; exists ; 2005 ; 10 ; The Journal of Technology Studies Volume 2005 ; 2005 ; >
+      au < crawling ; exists ; 2005 ; 10 ; The Journal of Technology Studies Volume 2005 ; 2005 ; >
       au < ready ; exists ; 2006 ; 11 ; The Journal of Technology Studies Volume 2006 ; 2006 ; >
       au < ready ; exists ; 2007 ; 12 ; The Journal of Technology Studies Volume 2007 ; 2007 ; >
       au < ready ; exists ; 2008 ; 13 ; The Journal of Technology Studies Volume 2008 ; 2008 ; >
-      au < ready ; exists ; 2009 ; 14 ; The Journal of Technology Studies Volume 2009 ; 2009 ; >
+      au < crawling ; exists ; 2009 ; 14 ; The Journal of Technology Studies Volume 2009 ; 2009 ; >
       au < ready ; exists ; 2010 ; 15 ; The Journal of Technology Studies Volume 2010 ; 2010 ; >
       au < ready ; exists ; 2011 ; 16 ; The Journal of Technology Studies Volume 2011 ; 2011 ; >
       au < ready ; exists ; 2012 ; 17 ; The Journal of Technology Studies Volume 2012 ; 2012 ; >
@@ -2985,14 +2985,14 @@
       au < ready ; exists ; 2007 ; 3 ; The International Journal of Servant-Leadership Volume 2007 ; 2007 ; >
       au < ready ; exists ; 2008 ; 4 ; The International Journal of Servant-Leadership Volume 2008 ; 2008 ; >
       au < ready ; exists ; 2009 ; 5 ; The International Journal of Servant-Leadership Volume 2009 ; 2009 ; >
-      au < ready ; exists ; 2010 ; 6 ; The International Journal of Servant-Leadership Volume 2010 ; 2010 ; >
-      au < ready ; exists ; 2011 ; 7 ; The International Journal of Servant-Leadership Volume 2011 ; 2011 ; >
+      au < crawling ; exists ; 2010 ; 6 ; The International Journal of Servant-Leadership Volume 2010 ; 2010 ; >
+      au < crawling ; exists ; 2011 ; 7 ; The International Journal of Servant-Leadership Volume 2011 ; 2011 ; >
       au < doesNotExist ; doesNotExist ; 2012 ; 8 ; The International Journal of Servant-Leadership Volume 2012 ; 2012 ; >
       au < ready ; exists ; 2013 ; 9 ; The International Journal of Servant-Leadership Volume 2013 ; 2013 ; >
-      au < ready ; exists ; 2014 ; 10 ; The International Journal of Servant-Leadership Volume 2014 ; 2014 ; >
+      au < crawling ; exists ; 2014 ; 10 ; The International Journal of Servant-Leadership Volume 2014 ; 2014 ; >
       au < doesNotExist ; doesNotExist ; 2015 ; 0 ; The International Journal of Servant-Leadership Volume 2015 ; 2015 ; >
       au < doesNotExist ; doesNotExist ; 2016 ; 0 ; The International Journal of Servant-Leadership Volume 2016 ; 2016 ; >
-      au < ready ; exists ; 2017 ; 11 ; The International Journal of Servant-Leadership Volume 2017 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; 11 ; The International Journal of Servant-Leadership Volume 2017 ; 2017 ; >
       au < ready ; exists ; 2018 ; 12 ; The International Journal of Servant-Leadership Volume 2018 ; 2018 ; >
       au < ready ; exists ; 2019 ; 13 ; The International Journal of Servant-Leadership Volume 2019 ; 2019 ; >
       au < ready ; exists ; 2020 ; 14 ; The International Journal of Servant-Leadership Volume 2020 ; 2020 ; >
@@ -3269,7 +3269,7 @@
       au < ready ; exists ; 2005 ; 2 ; Community Ear & Hearing Health Volume 2005 ; 2005 ; >
       au < ready ; exists ; 2006 ; 3 ; Community Ear & Hearing Health Volume 2006 ; 2006 ; >
       au < ready ; exists ; 2007 ; 4 ; Community Ear & Hearing Health Volume 2007 ; 2007 ; >
-      au < ready ; exists ; 2008 ; 5 ; Community Ear & Hearing Health Volume 2008 ; 2008 ; >
+      au < crawling ; exists ; 2008 ; 5 ; Community Ear & Hearing Health Volume 2008 ; 2008 ; >
       au < ready ; exists ; 2009 ; 6 ; Community Ear & Hearing Health Volume 2009 ; 2009 ; >
       au < finished ; crawling ; 2010 ; 7 ; Community Ear & Hearing Health Volume 2010 ; 2010 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2011 ; 8 ; Community Ear & Hearing Health Volume 2011 ; 2011 ; reingest3.clockss.org:8083 >
@@ -3452,15 +3452,15 @@
       au < ready ; exists ; 2012 ; 2  ; Scientific Study of Literature Volume 2012 ; 2012 ; >
       au < ready ; exists ; 2013 ; 3  ; Scientific Study of Literature Volume 2013 ; 2013 ; >
       au < ready ; exists ; 2014 ; 4  ; Scientific Study of Literature Volume 2014 ; 2014 ; >
-      au < ready ; exists ; 2015 ; 5  ; Scientific Study of Literature Volume 2015 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; 5  ; Scientific Study of Literature Volume 2015 ; 2015 ; >
       au < ready ; exists ; 2016 ; 6  ; Scientific Study of Literature Volume 2016 ; 2016 ; >
-      au < ready ; exists ; 2017 ; 7  ; Scientific Study of Literature Volume 2017 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; 7  ; Scientific Study of Literature Volume 2017 ; 2017 ; >
       au < ready ; exists ; 2018 ; 8  ; Scientific Study of Literature Volume 2018 ; 2018 ; >
       au < ready ; exists ; 2019 ; 9  ; Scientific Study of Literature Volume 2019 ; 2019 ; >
       au < ready ; exists ; 2020 ; 10 ; Scientific Study of Literature Volume 2020 ; 2020 ; >
       au < ready ; exists ; 2021 ; 11 ; Scientific Study of Literature Volume 2021 ; 2021 ; >
       au < doesNotExist ; doesNotExist ; 2022 ; 0 ; Scientific Study of Literature Volume 2022 ; 2022 ; >
-      au < ready ; exists ; 2023 ; 12 ; Scientific Study of Literature Volume 2023 ; 2023 ; >
+      au < crawling ; exists ; 2023 ; 12 ; Scientific Study of Literature Volume 2023 ; 2023 ; >
       au < expected ; exists ; 2024 ; 13 ; Scientific Study of Literature Volume 2024 ; 2024 ; >
 
   }
