@@ -24,10 +24,18 @@
     #No more AUs. Moving to https.
     }
     {
+    #PRODUCTION
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/mpidr-released/
 
     au < readySource ; finished ; 2023 ; Max Planck Institute for Demographic Research Source Content 2023_01 ; 2023_01 >
     au < readySource ; crawling ; 2024 ; Max Planck Institute for Demographic Research Source Content 2024_01 ; 2024_01 >
+
+    }
+    {
+    #TESTING
+    param[base_url] = https://clockss-test.lockss.org/sourcefiles/mpidr-released/
+
+    au < testing ; exists ; 2024 ; Max Planck Institute for Demographic Research Source Content 2024_01 [testing] ; 2024_01 >
 
     }
   }
