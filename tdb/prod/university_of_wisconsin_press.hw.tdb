@@ -210,15 +210,15 @@
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
       #param[base_url] = http://hopp.uwpress.org/
 
-      au < manifest ; 2014 ; History of Pharmacy and Pharmaceuticals Volume 56 ; 56 ; https://hopp.uwpress.org/ >
-      au < manifest ; 2015 ; History of Pharmacy and Pharmaceuticals Volume 57 ; 57 ; https://hopp.uwpress.org/ >
-      au < manifest ; 2016 ; History of Pharmacy and Pharmaceuticals Volume 58 ; 58 ; https://hopp.uwpress.org/ >
-      au < manifest ; 2017 ; History of Pharmacy and Pharmaceuticals Volume 59 ; 59 ; https://hopp.uwpress.org/ >
-      au < manifest ; 2018 ; History of Pharmacy and Pharmaceuticals Volume 60 ; 60 ; https://hopp.uwpress.org/ >
-      au < manifest ; 2019 ; History of Pharmacy and Pharmaceuticals Volume 61 ; 61 ; https://hopp.uwpress.org/ >
-      au < manifest ; 2020 ; History of Pharmacy and Pharmaceuticals Volume 62 ; 62 ; https://hopp.uwpress.org/ >
-      au < manifest ; 2021-2022 ; History of Pharmacy and Pharmaceuticals Volume 63 ; 63 ; https://hopp.uwpress.org/ >
-      au < manifest ; 2022 ; History of Pharmacy and Pharmaceuticals Volume 64 ; 64 ; https://hopp.uwpress.org/ >
+      au < ready ; 2014 ; History of Pharmacy and Pharmaceuticals Volume 56 ; 56 ; https://hopp.uwpress.org/ >
+      au < ready ; 2015 ; History of Pharmacy and Pharmaceuticals Volume 57 ; 57 ; https://hopp.uwpress.org/ >
+      au < ready ; 2016 ; History of Pharmacy and Pharmaceuticals Volume 58 ; 58 ; https://hopp.uwpress.org/ >
+      au < ready ; 2017 ; History of Pharmacy and Pharmaceuticals Volume 59 ; 59 ; https://hopp.uwpress.org/ >
+      au < ready ; 2018 ; History of Pharmacy and Pharmaceuticals Volume 60 ; 60 ; https://hopp.uwpress.org/ >
+      au < ready ; 2019 ; History of Pharmacy and Pharmaceuticals Volume 61 ; 61 ; https://hopp.uwpress.org/ >
+      au < ready ; 2020 ; History of Pharmacy and Pharmaceuticals Volume 62 ; 62 ; https://hopp.uwpress.org/ >
+      au < ready ; 2021-2022 ; History of Pharmacy and Pharmaceuticals Volume 63 ; 63 ; https://hopp.uwpress.org/ >
+      au < ready ; 2022 ; History of Pharmacy and Pharmaceuticals Volume 64 ; 64 ; https://hopp.uwpress.org/ >
       au < released ; 2023 ; History of Pharmacy and Pharmaceuticals Volume 65 ; 65 ; https://hopp.uwpress.org/ >
       au < expected ; 2024 ; History of Pharmacy and Pharmaceuticals Volume 66 ; 66 ; https://hopp.uwpress.org/ >
 
