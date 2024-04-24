@@ -180,7 +180,7 @@
       au < finished ; frozen ; 2010 ; Indonesian Journal of Tropical and Infectious Disease Volume 1 ; 1 ; 2010 ; reingest3.clockss.org:8083 >
       au < manifest ; exists ; 2011 ; Indonesian Journal of Tropical and Infectious Disease Volume 2 ; 2 ; 2011 ; >
       au < finished ; manifest ; 2012 ; Indonesian Journal of Tropical and Infectious Disease Volume 3 ; 3 ; 2012 ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2013 ; Indonesian Journal of Tropical and Infectious Disease Volume 4 ; 4 ; 2013 ; >
+      au < crawling ; exists ; 2013 ; Indonesian Journal of Tropical and Infectious Disease Volume 4 ; 4 ; 2013 ; >
       au < finished ; manifest ; 2014 ; Indonesian Journal of Tropical and Infectious Disease Volume 5 ; 5 ; 2014 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Indonesian Journal of Tropical and Infectious Disease Volume 6 ; 6 ; 2015 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2016 ; Indonesian Journal of Tropical and Infectious Disease Volume 7 ; 7 ; 2016 ; reingest2.clockss.org:8085 >
@@ -524,7 +524,7 @@
 
       param[journal_id] = JKL
 
-      au < ready ; exists ; 2015 ; Jurnal Kesehatan Lingkungan Volume 8 ; 8 ; 2015 ; >
+      au < crawling ; exists ; 2015 ; Jurnal Kesehatan Lingkungan Volume 8 ; 8 ; 2015 ; >
       au < finished ; finished ; 2016 ; Jurnal Kesehatan Lingkungan Volume 9 ; 9 ; 2016 ; reingest3.clockss.org:8083 >
       au < manifest ; exists ; 2017 ; Jurnal Kesehatan Lingkungan Volume 10 ; 10 ; 2017 ; >
       au < finished ; manifest ; 2018 ; Jurnal Kesehatan Lingkungan Volume 11 ; 11 ; 2018 ; reingest1.clockss.org:8082 >

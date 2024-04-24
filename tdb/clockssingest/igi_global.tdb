@@ -57,7 +57,7 @@
     au < finished ; finished ; 2020 ; Information Resources Management Journal (IRMJ) Volume 33 ; 33 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Information Resources Management Journal (IRMJ) Volume 34 ; 34 ; https://www.igi-global.com/ ; >
     au < deepCrawl ; exists ; 2022 ; Information Resources Management Journal (IRMJ) Volume 35 ; 35 ; https://www.igi-global.com/ ; >
-    au < ready ; exists ; 2023 ; Information Resources Management Journal (IRMJ) Volume 36 ; 36 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2023 ; Information Resources Management Journal (IRMJ) Volume 36 ; 36 ; https://www.igi-global.com/ ; >
     au < manifest ; exists ; 2024 ; Information Resources Management Journal (IRMJ) Volume 37 ; 37 ; https://www.igi-global.com/ ; >
 
   }
@@ -392,7 +392,7 @@
     >
     param[journal_issn] = 1947-9654
 
-    au < ready ; exists ; 2010 ; International Journal of Applied Geospatial Research (IJAGR) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2010 ; International Journal of Applied Geospatial Research (IJAGR) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
     au < finished ; finished ; 2011 ; International Journal of Applied Geospatial Research (IJAGR) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Applied Geospatial Research (IJAGR) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2013 ; International Journal of Applied Geospatial Research (IJAGR) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
@@ -483,7 +483,7 @@
     au < finished ; finished ; 2020 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 11 ; 11 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
-    au < ready ; exists ; 2023 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 14 ; 14 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2023 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 14 ; 14 ; https://www.igi-global.com/ ; >
     au < manifest ; exists ; 2024 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 15 ; 15 ; https://www.igi-global.com/ ; >
 
   }
@@ -1233,7 +1233,7 @@
     au < finished ; finished ; 2019 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 10 ; 10 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2020 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 11 ; 11 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
-    au < ready ; exists ; 2022 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2022 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
     au < ready ; exists ; 2023 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 14 ; 14 ; https://www.igi-global.com/ ; >
     au < manifest ; exists ; 2024 ; International Journal of Distributed Systems and Technologies (IJDST) Volume 15 ; 15 ; https://www.igi-global.com/ ; >
 
@@ -1504,7 +1504,7 @@
     au < finished ; crawling ; 2020 ; International Journal of Enterprise Information Systems (IJEIS) Volume 16 ; 16 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2021 ; International Journal of Enterprise Information Systems (IJEIS) Volume 17 ; 17 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; International Journal of Enterprise Information Systems (IJEIS) Volume 18 ; 18 ; https://www.igi-global.com/ ; >
-    au < ready ; exists ; 2023 ; International Journal of Enterprise Information Systems (IJEIS) Volume 19 ; 19 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2023 ; International Journal of Enterprise Information Systems (IJEIS) Volume 19 ; 19 ; https://www.igi-global.com/ ; >
     au < expected ; exists ; 2024 ; International Journal of Enterprise Information Systems (IJEIS) Volume 20 ; 20 ; https://www.igi-global.com/ ; >
 
   }
@@ -2049,7 +2049,7 @@
     au < finished ; finished ; 2019 ; International Journal of Information System Modeling and Design (IJISMD) Volume 10 ; 10 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; International Journal of Information System Modeling and Design (IJISMD) Volume 11 ; 11 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Information System Modeling and Design (IJISMD) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
-    au < ready ; exists ; 2022 ; International Journal of Information System Modeling and Design (IJISMD) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2022 ; International Journal of Information System Modeling and Design (IJISMD) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
     au < ready ; exists ; 2023 ; International Journal of Information System Modeling and Design (IJISMD) Volume 14 ; 14 ; https://www.igi-global.com/ ; >
     au < manifest ; exists ; 2024 ; International Journal of Information System Modeling and Design (IJISMD) Volume 15 ; 15 ; https://www.igi-global.com/ ; >
 
@@ -3267,7 +3267,7 @@
     au < finished ; finished ; 2020 ; International Journal of Service Science, Management, Engineering, and Technology (IJSSMET) Volume 11 ; 11 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2021 ; International Journal of Service Science, Management, Engineering, and Technology (IJSSMET) Volume 12 ; 12 ; https://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2022 ; International Journal of Service Science, Management, Engineering, and Technology (IJSSMET) Volume 13 ; 13 ; https://www.igi-global.com/ ; > 
-    au < ready ; exists ; 2023 ; International Journal of Service Science, Management, Engineering, and Technology (IJSSMET) Volume 14 ; 14 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2023 ; International Journal of Service Science, Management, Engineering, and Technology (IJSSMET) Volume 14 ; 14 ; https://www.igi-global.com/ ; > 
     au < manifest ; exists ; 2024 ; International Journal of Service Science, Management, Engineering, and Technology (IJSSMET) Volume 15 ; 15 ; https://www.igi-global.com/ ; > 
 
   }
