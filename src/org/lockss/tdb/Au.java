@@ -1391,6 +1391,7 @@ public class Au implements Serializable {
     m.put("provider", m.get("au:provider"));
     m.put("proxy", m.get("au:proxy"));
     m.put("publisher", (a) -> a.getComputedPublisher());
+    m.put("publisherName", m.get("au:publisherName"));
     m.put("rights", m.get("au:rights"));
     m.put("status", m.get("au:status"));
     m.put("status1", m.get("au:status1"));
