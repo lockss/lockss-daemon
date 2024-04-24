@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -146,6 +146,10 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>required_daemon_version</string>
         <string>1.75.7</string><!-- needs JsonPath -->
+    </entry>
+    <entry>
+        <string>text/html_filter_factory</string>
+        <string>org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyHtmlFilterFactory</string>
     </entry>
     <entry>
         <string>plugin_article_iterator_factory</string>
