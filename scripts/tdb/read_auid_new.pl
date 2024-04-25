@@ -574,6 +574,47 @@ while (my $line = <>) {
   }
       sleep(4);
 
+  } elsif ($plugin eq "ClockssLSUIAJournalPlugin") {
+    $url = sprintf("%sen/archive/%d",
+      $param{base_url}, $param{year});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+
+    $url = sprintf("%sen", 
+      $param{base_url});
+    $per_url = uri_unescape($url);
+    my $per_req = HTTP::Request->new(GET, $per_url);
+    my $per_resp = $ua->request($per_req);
+
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      my $per_contents = $per_resp->content;
+      #<h3> <a href="/en/journals/tom-6-4-2023"> Vol. 6, No. 4, 2023 </a> </h3>
+      if (defined($man_contents) && defined($man_contents) && ($per_contents =~ m/$clockss_tag/) && ($man_contents =~ m/href=\"\/en\/journals\/tom-$param{volume_name}-\d*-$param{year}\"/)) {
+        #if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
+        if ($man_contents =~ m/<h1>([^<]*)<\/h1>/si) {
+          $vol_title = $1;
+          if ($man_contents =~ m/<h2>([^<]*)<\/h2>/si) {
+            $vol_title = $vol_title . " " . $1;
+          }
+          $vol_title =~ s/\s*\n\s*/ /g;
+          $vol_title =~ s/,//;
+        }
+        $result = "Manifest"
+      } elsif ($man_contents !~ m/$clockss_tag/) {
+        $result = "--NO_TAG--"
+      } elsif ($man_contents !~ m/href=\"\/en\/journals\/tom-$param{volume_name}-\d*-$param{year}\"/){
+        $result = "--NO_ISSUES--"
+      } else {
+        $result = "--OTHER_ERROR--"
+      }
+    
+  } else {
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+  }
+      sleep(4);
+
   } elsif ($plugin eq "GovInfoSitemapsPlugin") {
       #https://www.govinfo.gov/sitemap/USCODE_2001_sitemap.xml
       $url = sprintf("%ssitemap/%s_%d_sitemap.xml",
