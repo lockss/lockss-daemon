@@ -48,7 +48,7 @@
       au < finished ; crawling ; 2020 ; 2020 ; Swiss Medical Weekly Volume 150 ; 150 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; 2021 ; Swiss Medical Weekly Volume 151 ; 151 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Swiss Medical Weekly Volume 152 ; 152 ; >
-      au < crawling ; exists ; 2023 ; 2023 ; Swiss Medical Weekly Volume 153 ; 153 ; >
+      au < deepCrawl ; exists ; 2023 ; 2023 ; Swiss Medical Weekly Volume 153 ; 153 ; >
       au < manifest ; exists ; 2024 ; 2024 ; Swiss Medical Weekly Volume 154 ; 154 ; >
 
     }
