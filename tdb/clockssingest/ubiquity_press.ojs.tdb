@@ -2857,7 +2857,7 @@
       au < manifest ; exists ; 1997 ; 2 ; The Journal of Technology Studies Volume 1997 ; 1997 ; >
       au < manifest ; exists ; 1998 ; 3 ; The Journal of Technology Studies Volume 1998 ; 1998 ; >
       au < manifest ; exists ; 1999 ; 4 ; The Journal of Technology Studies Volume 1999 ; 1999 ; >
-      au < ready ; exists ; 2000 ; 5 ; The Journal of Technology Studies Volume 2000 ; 2000 ; >
+      au < crawling ; exists ; 2000 ; 5 ; The Journal of Technology Studies Volume 2000 ; 2000 ; >
       au < ready ; exists ; 2001 ; 6 ; The Journal of Technology Studies Volume 2001 ; 2001 ; >
       au < ready ; exists ; 2002 ; 7 ; The Journal of Technology Studies Volume 2002 ; 2002 ; >
       au < crawling ; exists ; 2003 ; 8 ; The Journal of Technology Studies Volume 2003 ; 2003 ; >
@@ -2873,13 +2873,13 @@
       au < ready ; exists ; 2013 ; 18 ; The Journal of Technology Studies Volume 2013 ; 2013 ; >
       au < ready ; exists ; 2014 ; 19 ; The Journal of Technology Studies Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; 20 ; The Journal of Technology Studies Volume 2015 ; 2015 ; >
-      au < ready ; exists ; 2016 ; 21 ; The Journal of Technology Studies Volume 2016 ; 2016 ; >
+      au < crawling ; exists ; 2016 ; 21 ; The Journal of Technology Studies Volume 2016 ; 2016 ; >
       au < ready ; exists ; 2017 ; 22 ; The Journal of Technology Studies Volume 2017 ; 2017 ; >
       au < ready ; exists ; 2018 ; 23 ; The Journal of Technology Studies Volume 2018 ; 2018 ; >
       au < crawling ; exists ; 2019 ; 24 ; The Journal of Technology Studies Volume 2019 ; 2019 ; >
       au < ready ; exists ; 2020 ; 25 ; The Journal of Technology Studies Volume 2020 ; 2020 ; >
       au < ready ; exists ; 2021 ; 26 ; The Journal of Technology Studies Volume 2021 ; 2021 ; >
-      au < ready ; exists ; 2022 ; 27 ; The Journal of Technology Studies Volume 2022 ; 2022 ; >
+      au < crawling ; exists ; 2022 ; 27 ; The Journal of Technology Studies Volume 2022 ; 2022 ; >
       au < exists ; exists ; 2023 ; 28 ; The Journal of Technology Studies Volume 2023 ; 2023 ; >
       au < expected ; exists ; 2024 ; 29 ; The Journal of Technology Studies Volume 2024 ; 2024 ; >
 
@@ -2980,8 +2980,8 @@
       param[base_url] = https://account.ijsl.press.gonzaga.edu/
       param[journal_id] = gl-j-ijsl
 
-      au < ready ; exists ; 2005 ; 1 ; The International Journal of Servant-Leadership Volume 2005 ; 2005 ; >
-      au < ready ; exists ; 2006 ; 2 ; The International Journal of Servant-Leadership Volume 2006 ; 2006 ; >
+      au < crawling ; exists ; 2005 ; 1 ; The International Journal of Servant-Leadership Volume 2005 ; 2005 ; >
+      au < crawling ; exists ; 2006 ; 2 ; The International Journal of Servant-Leadership Volume 2006 ; 2006 ; >
       au < ready ; exists ; 2007 ; 3 ; The International Journal of Servant-Leadership Volume 2007 ; 2007 ; >
       au < ready ; exists ; 2008 ; 4 ; The International Journal of Servant-Leadership Volume 2008 ; 2008 ; >
       au < ready ; exists ; 2009 ; 5 ; The International Journal of Servant-Leadership Volume 2009 ; 2009 ; >
@@ -2993,7 +2993,7 @@
       au < doesNotExist ; doesNotExist ; 2015 ; 0 ; The International Journal of Servant-Leadership Volume 2015 ; 2015 ; >
       au < doesNotExist ; doesNotExist ; 2016 ; 0 ; The International Journal of Servant-Leadership Volume 2016 ; 2016 ; >
       au < crawling ; exists ; 2017 ; 11 ; The International Journal of Servant-Leadership Volume 2017 ; 2017 ; >
-      au < ready ; exists ; 2018 ; 12 ; The International Journal of Servant-Leadership Volume 2018 ; 2018 ; >
+      au < crawling ; exists ; 2018 ; 12 ; The International Journal of Servant-Leadership Volume 2018 ; 2018 ; >
       au < ready ; exists ; 2019 ; 13 ; The International Journal of Servant-Leadership Volume 2019 ; 2019 ; >
       au < ready ; exists ; 2020 ; 14 ; The International Journal of Servant-Leadership Volume 2020 ; 2020 ; >
       au < crawling ; exists ; 2021 ; 15 ; The International Journal of Servant-Leadership Volume 2021 ; 2021 ; >
@@ -3265,7 +3265,7 @@
       param[base_url] =  https://account.cehh.press.lshtm.ac.uk/
       param[journal_id] = s-j-cehh
 
-      au < ready ; exists ; 2004 ; 1 ; Community Ear & Hearing Health Volume 2004 ; 2004 ; >
+      au < crawling ; exists ; 2004 ; 1 ; Community Ear & Hearing Health Volume 2004 ; 2004 ; >
       au < ready ; exists ; 2005 ; 2 ; Community Ear & Hearing Health Volume 2005 ; 2005 ; >
       au < ready ; exists ; 2006 ; 3 ; Community Ear & Hearing Health Volume 2006 ; 2006 ; >
       au < crawling ; exists ; 2007 ; 4 ; Community Ear & Hearing Health Volume 2007 ; 2007 ; >

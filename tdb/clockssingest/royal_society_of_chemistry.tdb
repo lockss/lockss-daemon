@@ -3286,11 +3286,11 @@
       #journal changed its name in 2018 from 'Molecular BioSystems'
 
       au < ready ; exists ; 2018 ; Molecular Omics Volume 14 ; 14 ; 2018 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2019 ; Molecular Omics Volume 15 ; 15 ; 2019 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2019 ; Molecular Omics Volume 15 ; 15 ; 2019 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2020 ; Molecular Omics Volume 16 ; 16 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; Molecular Omics Volume 17 ; 17 ; 2021 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2022 ; Molecular Omics Volume 18 ; 18 ; 2022 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2023 ; Molecular Omics Volume 19 ; 19 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; Molecular Omics Volume 17 ; 17 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2022 ; Molecular Omics Volume 18 ; 18 ; 2022 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2023 ; Molecular Omics Volume 19 ; 19 ; 2023 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2024 ; Molecular Omics Volume 20 ; 20 ; 2024 ; https://pubs.rsc.org/ ; >
 
   }
@@ -3325,7 +3325,7 @@
       param[journal_code] = cb
 
       au < testing ; exists ; 2020 ; RSC Chemical Biology Volume 1 ; 1 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2021 ; RSC Chemical Biology Volume 2 ; 2 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2021 ; RSC Chemical Biology Volume 2 ; 2 ; 2021 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2022 ; RSC Chemical Biology Volume 3 ; 3 ; 2022 ; https://pubs.rsc.org/ ; >
       au < testing ; exists ; 2023 ; RSC Chemical Biology Volume 4 ; 4 ; 2023 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2024 ; RSC Chemical Biology Volume 5 ; 5 ; 2024 ; https://pubs.rsc.org/ ; >
