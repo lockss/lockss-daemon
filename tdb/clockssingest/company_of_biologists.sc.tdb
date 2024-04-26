@@ -69,7 +69,7 @@
     au < crawling ; exists ; 1965 ; 1965 ; Journal of Embryology and Experimental Morphology Volume 14 ; 14 ; >
     au < crawling ; exists ; 1966 ; 1966 ; Journal of Embryology and Experimental Morphology Volume 15 ; 15 ; >
     au < ready ; exists ; 1966 ; 1966 ; Journal of Embryology and Experimental Morphology Volume 16 ; 16 ; >
-    au < ready ; exists ; 1967 ; 1967 ; Journal of Embryology and Experimental Morphology Volume 17 ; 17 ; >
+    au < crawling ; exists ; 1967 ; 1967 ; Journal of Embryology and Experimental Morphology Volume 17 ; 17 ; >
     au < ready ; exists ; 1967 ; 1967 ; Journal of Embryology and Experimental Morphology Volume 18 ; 18 ; >
     au < crawling ; exists ; 1968 ; 1968 ; Journal of Embryology and Experimental Morphology Volume 19 ; 19 ; >
     au < crawling ; exists ; 1968 ; 1968 ; Journal of Embryology and Experimental Morphology Volume 20 ; 20 ; >
@@ -86,7 +86,7 @@
     au < ready ; exists ; 1974 ; 1974 ; Journal of Embryology and Experimental Morphology Volume 31 ; 31 ; >
     au < crawling ; exists ; 1974 ; 1974 ; Journal of Embryology and Experimental Morphology Volume 32 ; 32 ; >
     au < crawling ; exists ; 1975 ; 1975 ; Journal of Embryology and Experimental Morphology Volume 33 ; 33 ; >
-    au < ready ; exists ; 1975 ; 1975 ; Journal of Embryology and Experimental Morphology Volume 34 ; 34 ; >
+    au < crawling ; exists ; 1975 ; 1975 ; Journal of Embryology and Experimental Morphology Volume 34 ; 34 ; >
     au < ready ; exists ; 1976 ; 1976 ; Journal of Embryology and Experimental Morphology Volume 35 ; 35 ; >
     au < crawling ; exists ; 1976 ; 1976 ; Journal of Embryology and Experimental Morphology Volume 36 ; 36 ; >
     au < crawling ; exists ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 37 ; 37 ; >
@@ -96,9 +96,9 @@
     au < crawling ; exists ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 41 ; 41 ; >
     au < crawling ; exists ; 1977 ; 1977 ; Journal of Embryology and Experimental Morphology Volume 42 ; 42 ; >
     au < crawling ; exists ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 43 ; 43 ; >
-    au < ready ; exists ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 44 ; 44 ; >
+    au < crawling ; exists ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 44 ; 44 ; >
     au < crawling ; exists ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 45 ; 45 ; >
-    au < ready ; exists ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 46 ; 46 ; >
+    au < crawling ; exists ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 46 ; 46 ; >
     au < crawling ; exists ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 47 ; 47 ; >
     au < crawling ; exists ; 1978 ; 1978 ; Journal of Embryology and Experimental Morphology Volume 48 ; 48 ; >
     au < crawling ; exists ; 1979 ; 1979 ; Journal of Embryology and Experimental Morphology Volume 49 ; 49 ; >
@@ -543,11 +543,11 @@
     param[journal_id] = jeb
 
     au < crawling ; exists ; 1923 ; 1923 ; The British Journal of Experimental Biology Volume 1 ; 1 ; > #1923-1924
-    au < ready ; exists ; 1924 ; 1924 ; The British Journal of Experimental Biology Volume 2 ; 2 ; > #1924-1925
+    au < crawling ; exists ; 1924 ; 1924 ; The British Journal of Experimental Biology Volume 2 ; 2 ; > #1924-1925
     au < crawling ; exists ; 1925 ; 1925 ; The British Journal of Experimental Biology Volume 3 ; 3 ; > #1925-1926
     au < ready ; exists ; 1926 ; 1926 ; The British Journal of Experimental Biology Volume 4 ; 4 ; > #1926-1927
     au < crawling ; exists ; 1927 ; 1927 ; The British Journal of Experimental Biology Volume 5 ; 5 ; > #1927-1928
-    au < ready ; exists ; 1928 ; 1928 ; The British Journal of Experimental Biology Volume 6 ; 6 ; > #1928-1929
+    au < crawling ; exists ; 1928 ; 1928 ; The British Journal of Experimental Biology Volume 6 ; 6 ; > #1928-1929
     au < ready ; exists ; 1930 ; 1930 ; Journal of Experimental Biology Volume 7 ; 7 ; >
     au < crawling ; exists ; 1931 ; 1931 ; Journal of Experimental Biology Volume 8 ; 8 ; >
     au < crawling ; exists ; 1932 ; 1932 ; Journal of Experimental Biology Volume 9 ; 9 ; >
@@ -576,7 +576,7 @@
     au < ready ; exists ; 1955 ; 1955 ; Journal of Experimental Biology Volume 32 ; 32 ; >
     au < crawling ; exists ; 1956 ; 1956 ; Journal of Experimental Biology Volume 33 ; 33 ; >
     au < crawling ; exists ; 1957 ; 1957 ; Journal of Experimental Biology Volume 34 ; 34 ; >
-    au < ready ; exists ; 1958 ; 1958 ; Journal of Experimental Biology Volume 35 ; 35 ; >
+    au < crawling ; exists ; 1958 ; 1958 ; Journal of Experimental Biology Volume 35 ; 35 ; >
     au < ready ; exists ; 1959 ; 1959 ; Journal of Experimental Biology Volume 36 ; 36 ; >
     au < crawling ; exists ; 1960 ; 1960 ; Journal of Experimental Biology Volume 37 ; 37 ; >
     au < ready ; exists ; 1961 ; 1961 ; Journal of Experimental Biology Volume 38 ; 38 ; >
@@ -601,7 +601,7 @@
     au < crawling ; exists ; 1972 ; 1972 ; Journal of Experimental Biology Volume 57 ; 57 ; >
     au < ready ; exists ; 1973 ; 1973 ; Journal of Experimental Biology Volume 58 ; 58 ; >
     au < ready ; exists ; 1973 ; 1973 ; Journal of Experimental Biology Volume 59 ; 59 ; >
-    au < ready ; exists ; 1974 ; 1974 ; Journal of Experimental Biology Volume 60 ; 60 ; >
+    au < crawling ; exists ; 1974 ; 1974 ; Journal of Experimental Biology Volume 60 ; 60 ; >
     au < crawling ; exists ; 1974 ; 1974 ; Journal of Experimental Biology Volume 61 ; 61 ; >
     au < doNotProcess ; doNotProcess ; 1975 ; 1975 ; Journal of Experimental Biology Volume 62 ; 62 ; >
     au < ready ; exists ; 1975 ; 1975 ; Journal of Experimental Biology Volume 63 ; 63 ; >
@@ -621,7 +621,7 @@
     au < crawling ; exists ; 1978 ; 1978 ; Journal of Experimental Biology Volume 77 ; 77 ; >
     au < ready ; exists ; 1979 ; 1979 ; Journal of Experimental Biology Volume 78 ; 78 ; >
     au < crawling ; exists ; 1979 ; 1979 ; Journal of Experimental Biology Volume 79 ; 79 ; >
-    au < ready ; exists ; 1979 ; 1979 ; Journal of Experimental Biology Volume 80 ; 80 ; >
+    au < crawling ; exists ; 1979 ; 1979 ; Journal of Experimental Biology Volume 80 ; 80 ; >
     au < ready ; exists ; 1979 ; 1979 ; Journal of Experimental Biology Volume 81 ; 81 ; >
     au < crawling ; exists ; 1979 ; 1979 ; Journal of Experimental Biology Volume 82 ; 82 ; >
     au < ready ; exists ; 1979 ; 1979 ; Journal of Experimental Biology Volume 83 ; 83 ; >

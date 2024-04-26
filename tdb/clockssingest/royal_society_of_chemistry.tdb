@@ -623,7 +623,7 @@
       au < deepCrawl ; exists ; 2023 ; Faraday Discussions Volume 244 ; 244 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2023 ; Faraday Discussions Volume 245 ; 245 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2023 ; Faraday Discussions Volume 246 ; 246 ; 2023 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2023 ; Faraday Discussions Volume 247 ; 247 ; 2023 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2023 ; Faraday Discussions Volume 247 ; 247 ; 2023 ; https://pubs.rsc.org/ ; >
 
       au < manifest ; exists ; 2024 ; Faraday Discussions Volume 248 ; 248 ; 2024 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2024 ; Faraday Discussions Volume 249 ; 249 ; 2024 ; https://pubs.rsc.org/ ; >
@@ -3285,7 +3285,7 @@
       param[journal_code] = mo
       #journal changed its name in 2018 from 'Molecular BioSystems'
 
-      au < ready ; exists ; 2018 ; Molecular Omics Volume 14 ; 14 ; 2018 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2018 ; Molecular Omics Volume 14 ; 14 ; 2018 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2019 ; Molecular Omics Volume 15 ; 15 ; 2019 ; https://pubs.rsc.org/ ; >
       au < ready ; exists ; 2020 ; Molecular Omics Volume 16 ; 16 ; 2020 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2021 ; Molecular Omics Volume 17 ; 17 ; 2021 ; https://pubs.rsc.org/ ; >
@@ -3376,7 +3376,7 @@
       comment[years] = Published 2022-present
       param[journal_code] = dd
 
-      au < ready ; exists ; 2022 ; Digital Discovery Volume 1 ; 1 ; 2022 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2022 ; Digital Discovery Volume 1 ; 1 ; 2022 ; https://pubs.rsc.org/ ; >
       au < testing ; exists ; 2023 ; Digital Discovery Volume 2 ; 2 ; 2023 ; https://pubs.rsc.org/ ; >
       au < manifest ; exists ; 2024 ; Digital Discovery Volume 3 ; 3 ; 2024 ; https://pubs.rsc.org/ ; >
 
