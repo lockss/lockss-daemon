@@ -186,6 +186,24 @@ POSSIBILITY OF SUCH DAMAGE.
     <long>1209600000</long>
   </entry>
   <entry>
+    <string>au_mime_rate_limiter_map</string>
+    <map>
+      <entry>
+        <string>application/pdf</string>
+        <string>1/30s</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_url_rate_limiter_map</string>
+    <map>
+      <entry>
+        <string>/pub/[0-9]+/article/[0-9]+$</string>
+        <string>1/30s</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
     <long>3000</long>
   </entry>
