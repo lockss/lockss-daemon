@@ -32,16 +32,24 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
+import org.lockss.laaws.client.V2RestClient;
+import org.lockss.util.Logger;
+
 import java.io.*;
 import java.util.*;
 
 /** An input stream that can throw an exception on demand. */
 public class ThrowingInputStream extends FilterInputStream {
+  private static final Logger log = Logger.getLogger(ThrowingInputStream.class);
   private IOException throwOnRead;
   private long throwAtPos = 0;
   private long curPos = 0;
   private IOException throwOnClose;
   private Error errorOnRead;
+
+  public ThrowingInputStream(InputStream in) {
+    super(in);
+  }
 
   public ThrowingInputStream(InputStream in,
 			     IOException throwOnRead,
@@ -69,8 +77,15 @@ public class ThrowingInputStream extends FilterInputStream {
 
   private void checkReadError() throws IOException {
     if (throwOnRead != null && (curPos >= throwAtPos)) {
+      log.debug2("Injected read error: " + throwOnRead.getMessage(),
+		 new Throwable());
+      // Make stack trace reflect here, not where exception was created
+      throwOnRead.fillInStackTrace();
       throw throwOnRead;
     } else if (errorOnRead != null) {
+      log.debug2("Injected read error: " + errorOnRead.getMessage(),
+		 new Throwable());
+      errorOnRead.fillInStackTrace();
       throw errorOnRead;
     }
   }
@@ -91,11 +106,15 @@ public class ThrowingInputStream extends FilterInputStream {
   }
 
   public int read(byte[] b) throws IOException {
+    checkReadError();
     return in.read(b, 0, b.length);
   }
 
   public void close() throws IOException {
     if (throwOnClose != null) {
+      log.debug2("Injected close error: " + throwOnClose.getMessage(),
+		 new Throwable());
+      throwOnClose.fillInStackTrace();
       throw throwOnClose;
     } else {
       in.close();
