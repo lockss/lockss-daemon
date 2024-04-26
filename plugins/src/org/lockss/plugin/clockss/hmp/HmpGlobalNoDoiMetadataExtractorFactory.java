@@ -85,7 +85,16 @@ public class HmpGlobalNoDoiMetadataExtractorFactory extends SourceXmlMetadataExt
             List<String> titleList = new ArrayList<String>(Arrays.asList(title.split("[\\s:“”]+")));
             String author = oneAM.getRaw(HmpGlobalSchemaHelper.art_contrib).replace("ñ","n").replace("á","a").replace("’","'");
             List<String> authorList = new ArrayList<String>(Arrays.asList(author.split(", ")));
-            pdfName = cuBase + authorList.get(0) + "_" + titleList.get(0) + " " + titleList.get(1) + " " + titleList.get(2)+ ".pdf";
+            String firstThreeTitleWords = titleList.get(0) + " " + titleList.get(1) + " " + titleList.get(2);
+            String authorLastName;
+            if(firstThreeTitleWords.equals("Balloon Shaft Fracture")){
+                authorLastName = "Akkus";
+            }else if(firstThreeTitleWords.equals("Three Devices on")){
+                authorLastName = "Gonzalvez-Garcia";
+            }else{
+                authorLastName = authorList.get(0);
+            }
+            pdfName = cuBase + authorLastName + "_" + firstThreeTitleWords + ".pdf";
             log.debug3("The pdf is: " + pdfName);
             List<String> returnList = new ArrayList<String>();
             returnList.add(pdfName);
