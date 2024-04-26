@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
-import org.lockss.laaws.client.V2RestClient;
 import org.lockss.util.Logger;
 
 import java.io.*;
