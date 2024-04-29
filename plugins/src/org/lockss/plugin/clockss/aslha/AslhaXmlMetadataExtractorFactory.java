@@ -33,7 +33,9 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.clockss.aslha;
 
 import org.lockss.daemon.PluginException;
+import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
@@ -63,6 +65,12 @@ public class AslhaXmlMetadataExtractorFactory extends SourceXmlMetadataExtractor
                 log.info("setting up schema helper");
             }
             return schemaHelper;
+        }
+
+        @Override
+		protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
+									   CachedUrl cu, ArticleMetadata thisAM) {
+            thisAM.put(MetadataField.FIELD_PUBLICATION_TITLE, "The ASHA Leader");
         }
     }
 }
