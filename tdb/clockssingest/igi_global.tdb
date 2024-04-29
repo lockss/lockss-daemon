@@ -196,7 +196,7 @@
     #continued_by = 2643-7937
 
     au < manifest ; exists ; 2009 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
-    au < ready ; exists ; 2010 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 2 ; 2 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2010 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 2 ; 2 ; https://www.igi-global.com/ ; > 
     au < finished ; finished ; 2011 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; frozen ; 2012 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 4 ; 4 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2013 ; International Journal of Advanced Pervasive and Ubiquitous Computing (IJAPUC) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
@@ -443,7 +443,7 @@
     >
     param[journal_issn] = 1947-9573
 
-    au < ready ; exists ; 2010 ; International Journal of Applied Logistics (IJAL) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2010 ; International Journal of Applied Logistics (IJAL) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
     au < finished ; finished ; 2011 ; International Journal of Applied Logistics (IJAL) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Applied Logistics (IJAL) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2013 ; International Journal of Applied Logistics (IJAL) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
@@ -470,7 +470,7 @@
     >
     param[journal_issn] = 1947-8283
 
-    au < ready ; exists ; 2010 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2010 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
     au < finished ; finished ; 2011 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2013 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
@@ -667,7 +667,7 @@
     >
     param[journal_issn] = 1947-3591
 
-    au < ready ; exists ; 2010 ; International Journal of Business Intelligence Research (IJBIR) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2010 ; International Journal of Business Intelligence Research (IJBIR) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
     au < finished ; finished ; 2011 ; International Journal of Business Intelligence Research (IJBIR) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Business Intelligence Research (IJBIR) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; crawling ; 2013 ; International Journal of Business Intelligence Research (IJBIR) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
@@ -794,7 +794,7 @@
     param[journal_issn] = 1947-3133
     #continued_by = 2470-8526
 
-    au < ready ; exists ; 2010 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2010 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
     au < finished ; finished ; 2011 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2014 ; International Journal of Computational Models and Algorithms in Medicine (IJCMAM) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
@@ -842,7 +842,7 @@
     au < finished ; finished ; 2020 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 10 ; 10 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
-    au < ready ; exists ; 2023 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2023 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
     au < expected ; exists ; 2024 ; International Journal of Computer Vision and Image Processing (IJCVIP) Volume 14 ; 14 ; https://www.igi-global.com/ ; >
 
   }
@@ -904,7 +904,7 @@
     >
     param[journal_issn] = 1947-3117
 
-    au < ready ; exists ; 2010 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2010 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
     au < finished ; finished ; 2011 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2013 ; International Journal of Creative Interfaces and Computer Graphics (IJCICG) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
@@ -1037,7 +1037,7 @@
     au < manifest ; exists ; 2007 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 3 ; 3 ; https://www.igi-global.com/ ; > 
     au < manifest ; exists ; 2008 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 4 ; 4 ; https://www.igi-global.com/ ; > 
     au < manifest ; exists ; 2009 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 5 ; 5 ; https://www.igi-global.com/ ; > 
-    au < ready ; exists ; 2010 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 6 ; 6 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2010 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 6 ; 6 ; https://www.igi-global.com/ ; > 
     au < finished ; finished ; 2011 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 7 ; 7 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2013 ; International Journal of Data Warehousing and Mining (IJDWM) Volume 9 ; 9 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
@@ -1066,7 +1066,7 @@
     param[journal_issn] = 1941-6296
 
     au < manifest ; exists ; 2009 ; International Journal of Decision Support System Technology (IJDSST) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
-    au < ready ; exists ; 2010 ; International Journal of Decision Support System Technology (IJDSST) Volume 2 ; 2 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2010 ; International Journal of Decision Support System Technology (IJDSST) Volume 2 ; 2 ; https://www.igi-global.com/ ; > 
     au < finished ; finished ; 2011 ; International Journal of Decision Support System Technology (IJDSST) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Decision Support System Technology (IJDSST) Volume 4 ; 4 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2013 ; International Journal of Decision Support System Technology (IJDSST) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
@@ -1095,7 +1095,7 @@
     param[journal_issn] = 1947-9050
     # out of print. no substance on 2012
 
-    au < ready ; exists ; 2010 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2010 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
     au < finished ; finished ; 2011 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < superseded ; down ; 2012 ; International Journal of Dependable and Trustworthy Information Systems (IJDTIS) Volume 3 [superseded] ; 3 ; http://www.igi-global.com/ ; > 
 
@@ -1140,7 +1140,7 @@
     >
     param[journal_issn] = 1947-9077
 
-    au < ready ; exists ; 2010 ; International Journal of Digital Library Systems (IJDLS) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2010 ; International Journal of Digital Library Systems (IJDLS) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
     au < finished ; finished ; 2011 ; International Journal of Digital Library Systems (IJDLS) Volume 2 ; 2 ; http://www.igi-global.com/ ; >
     au < finished ; finished ; 2012 ; International Journal of Digital Library Systems (IJDLS) Volume 3 ; 3 ; http://www.igi-global.com/ ; >
     au < finished ; finished ; 2014 ; International Journal of Digital Library Systems (IJDLS) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 >
@@ -1250,7 +1250,7 @@
     param[journal_issn] = 1937-9633
 
     au < manifest ; exists ; 2009 ; International Journal of E-Adoption (IJEA) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
-    au < ready ; exists ; 2010 ; International Journal of E-Adoption (IJEA) Volume 2 ; 2 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2010 ; International Journal of E-Adoption (IJEA) Volume 2 ; 2 ; https://www.igi-global.com/ ; > 
     au < finished ; finished ; 2011 ; International Journal of E-Adoption (IJEA) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of E-Adoption (IJEA) Volume 4 ; 4 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2013 ; International Journal of E-Adoption (IJEA) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
@@ -1296,7 +1296,7 @@
     au < finished ; finished ; 2020 ; International Journal of E-Business Research (IJEBR) Volume 16 ; 16 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2021 ; International Journal of E-Business Research (IJEBR) Volume 17 ; 17 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; International Journal of E-Business Research (IJEBR) Volume 18 ; 18 ; https://www.igi-global.com/ ; >
-    au < ready ; exists ; 2023 ; International Journal of E-Business Research (IJEBR) Volume 19 ; 19 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2023 ; International Journal of E-Business Research (IJEBR) Volume 19 ; 19 ; https://www.igi-global.com/ ; >
     au < manifest ; exists ; 2024 ; International Journal of E-Business Research (IJEBR) Volume 20 ; 20 ; https://www.igi-global.com/ ; >
 
   }
@@ -1371,7 +1371,7 @@
     >
     param[journal_issn] = 1947-315X
 
-    au < ready ; exists ; 2010 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2010 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
     au < finished ; frozen ; 2011 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2013 ; International Journal of E-Health and Medical Communications (IJEHMC) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
@@ -1432,7 +1432,7 @@
     >
     param[journal_issn] = 1947-3176
 
-    au < ready ; exists ; 2010 ; International Journal of Embedded and Real-Time Communication Systems (IJERTCS) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2010 ; International Journal of Embedded and Real-Time Communication Systems (IJERTCS) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
     au < finished ; finished ; 2011 ; International Journal of Embedded and Real-Time Communication Systems (IJERTCS) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Embedded and Real-Time Communication Systems (IJERTCS) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2013 ; International Journal of Embedded and Real-Time Communication Systems (IJERTCS) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
@@ -1546,7 +1546,7 @@
     param[journal_issn] = 1947-9131
     #Out of print
 
-    au < ready ; exists ; 2010 ; International Journal of E-Politics (IJEP) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2010 ; International Journal of E-Politics (IJEP) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
     au < finished ; finished ; 2011 ; International Journal of E-Politics (IJEP) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of E-Politics (IJEP) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2013 ; International Journal of E-Politics (IJEP) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest3.clockss.org:8083 > 
@@ -1680,7 +1680,7 @@
     >
     param[journal_issn] = 1947-8488
 
-    au < ready ; exists ; 2010 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2010 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
     au < finished ; finished ; 2011 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 2 ; 2 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2013 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 4 ; 4 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
@@ -1752,7 +1752,7 @@
     param[journal_issn] = 1938-0259
 
     au < manifest ; exists ; 2009 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
-    au < ready ; exists ; 2010 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 2 ; 2 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2010 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 2 ; 2 ; https://www.igi-global.com/ ; > 
     au < finished ; finished ; 2011 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 3 ; 3 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 4 ; 4 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2013 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 5 ; 5 ; http://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
@@ -2078,7 +2078,7 @@
     au < finished ; finished ; 2020 ; International Journal of Information Systems and Social Change (IJISSC) Volume 11 ; 11 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Information Systems and Social Change (IJISSC) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Information Systems and Social Change (IJISSC) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
-    au < ready ; exists ; 2023 ; International Journal of Information Systems and Social Change (IJISSC) Volume 14 ; 14 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2023 ; International Journal of Information Systems and Social Change (IJISSC) Volume 14 ; 14 ; https://www.igi-global.com/ ; >
     au < manifest ; exists ; 2024 ; International Journal of Information Systems and Social Change (IJISSC) Volume 15 ; 15 ; https://www.igi-global.com/ ; >
 
   }
@@ -2536,7 +2536,7 @@
     au < finished ; finished ; 2020 ; International Journal of Knowledge Management (IJKM) Volume 16 ; 16 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2021 ; International Journal of Knowledge Management (IJKM) Volume 17 ; 17 ; https://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2022 ; International Journal of Knowledge Management (IJKM) Volume 18 ; 18 ; https://www.igi-global.com/ ; > 
-    au < ready ; exists ; 2023 ; International Journal of Knowledge Management (IJKM) Volume 19 ; 19 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2023 ; International Journal of Knowledge Management (IJKM) Volume 19 ; 19 ; https://www.igi-global.com/ ; > 
     au < manifest ; exists ; 2024 ; International Journal of Knowledge Management (IJKM) Volume 20 ; 20 ; https://www.igi-global.com/ ; > 
 
   }
@@ -2585,7 +2585,7 @@
     au < finished ; finished ; 2020 ; International Journal of Knowledge-Based Organizations (IJKBO) Volume 10 ; 10 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
     au < finished ; finished ; 2021 ; International Journal of Knowledge-Based Organizations (IJKBO) Volume 11 ; 11 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2022 ; International Journal of Knowledge-Based Organizations (IJKBO) Volume 12 ; 12 ; https://www.igi-global.com/ ; > 
-    au < ready ; exists ; 2023 ; International Journal of Knowledge-Based Organizations (IJKBO) Volume 13 ; 13 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2023 ; International Journal of Knowledge-Based Organizations (IJKBO) Volume 13 ; 13 ; https://www.igi-global.com/ ; > 
     au < expected ; exists ; 2024 ; International Journal of Knowledge-Based Organizations (IJKBO) Volume 14 ; 14 ; https://www.igi-global.com/ ; > 
 
   }
@@ -2882,7 +2882,7 @@
     au < finished ; finished ; 2020 ; International Journal of Online Pedagogy and Course Design (IJOPCD) Volume 10 ; 10 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2021 ; International Journal of Online Pedagogy and Course Design (IJOPCD) Volume 11 ; 11 ; https://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2022 ; International Journal of Online Pedagogy and Course Design (IJOPCD) Volume 12 ; 12 ; https://www.igi-global.com/ ; > 
-    au < ready ; exists ; 2023 ; International Journal of Online Pedagogy and Course Design (IJOPCD) Volume 13 ; 13 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2023 ; International Journal of Online Pedagogy and Course Design (IJOPCD) Volume 13 ; 13 ; https://www.igi-global.com/ ; > 
     au < manifest ; exists ; 2024 ; International Journal of Online Pedagogy and Course Design (IJOPCD) Volume 14 ; 14 ; https://www.igi-global.com/ ; > 
 
   }
@@ -3239,7 +3239,7 @@
     au < finished ; finished ; 2020 ; International Journal of Systems and Software Security and Protection (IJSSSP) Volume 11 ; 11 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; International Journal of Systems and Software Security and Protection (IJSSSP) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Systems and Software Security and Protection (IJSSSP) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
-    au < ready ; exists ; 2023 ; International Journal of Systems and Software Security and Protection (IJSSSP) Volume 14 ; 14 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2023 ; International Journal of Systems and Software Security and Protection (IJSSSP) Volume 14 ; 14 ; https://www.igi-global.com/ ; >
     au < expected ; exists ; 2024 ; International Journal of Systems and Software Security and Protection (IJSSSP) Volume 15 ; 15 ; https://www.igi-global.com/ ; >
 
   }
@@ -3934,7 +3934,7 @@
     au < manifest ; exists ; 2007 ; International Journal of Web Services Research (IJWSR) Volume 4 ; 4 ; https://www.igi-global.com/ ; > 
     au < manifest ; exists ; 2008 ; International Journal of Web Services Research (IJWSR) Volume 5 ; 5 ; https://www.igi-global.com/ ; > 
     au < manifest ; exists ; 2009 ; International Journal of Web Services Research (IJWSR) Volume 6 ; 6 ; https://www.igi-global.com/ ; > 
-    au < ready ; exists ; 2010 ; International Journal of Web Services Research (IJWSR) Volume 7 ; 7 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2010 ; International Journal of Web Services Research (IJWSR) Volume 7 ; 7 ; https://www.igi-global.com/ ; > 
     au < finished ; finished ; 2011 ; International Journal of Web Services Research (IJWSR) Volume 8 ; 8 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; International Journal of Web Services Research (IJWSR) Volume 9 ; 9 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2013 ; International Journal of Web Services Research (IJWSR) Volume 10 ; 10 ; http://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
@@ -4147,7 +4147,7 @@
     au < manifest ; exists ; 2007 ; Journal of Electronic Commerce in Organizations (JECO) Volume 5 ; 5 ; https://www.igi-global.com/ ; > 
     au < manifest ; exists ; 2008 ; Journal of Electronic Commerce in Organizations (JECO) Volume 6 ; 6 ; https://www.igi-global.com/ ; > 
     au < manifest ; exists ; 2009 ; Journal of Electronic Commerce in Organizations (JECO) Volume 7 ; 7 ; https://www.igi-global.com/ ; > 
-    au < ready ; exists ; 2010 ; Journal of Electronic Commerce in Organizations (JECO) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2010 ; Journal of Electronic Commerce in Organizations (JECO) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
     au < finished ; finished ; 2011 ; Journal of Electronic Commerce in Organizations (JECO) Volume 9 ; 9 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2012 ; Journal of Electronic Commerce in Organizations (JECO) Volume 10 ; 10 ; http://www.igi-global.com/ ; > 
     au < finished ; finished ; 2013 ; Journal of Electronic Commerce in Organizations (JECO) Volume 11 ; 11 ; http://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
@@ -4160,7 +4160,7 @@
     au < finished ; finished ; 2020 ; Journal of Electronic Commerce in Organizations (JECO) Volume 18 ; 18 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 > 
     au < deepCrawl ; exists ; 2021 ; Journal of Electronic Commerce in Organizations (JECO) Volume 19 ; 19 ; https://www.igi-global.com/ ; > 
     au < deepCrawl ; exists ; 2022 ; Journal of Electronic Commerce in Organizations (JECO) Volume 20 ; 20 ; https://www.igi-global.com/ ; > 
-    au < ready ; exists ; 2023 ; Journal of Electronic Commerce in Organizations (JECO) Volume 21 ; 21 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 2023 ; Journal of Electronic Commerce in Organizations (JECO) Volume 21 ; 21 ; https://www.igi-global.com/ ; > 
     au < manifest ; exists ; 2024 ; Journal of Electronic Commerce in Organizations (JECO) Volume 22 ; 22 ; https://www.igi-global.com/ ; > 
 
   }
