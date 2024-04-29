@@ -70,8 +70,8 @@
     au < zapped ; finished ; 2013 ; Journal on Applied Dynamical Systems Volume 12 ; 12 ; http://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal on Applied Dynamical Systems Volume 13 ; 13 ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Journal on Applied Dynamical Systems Volume 14 ; 14 ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Journal on Applied Dynamical Systems Volume 15 ; 15 ; http://epubs.siam.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2017 ; Journal on Applied Dynamical Systems Volume 16 ; 16 ; http://epubs.siam.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2016 ; Journal on Applied Dynamical Systems Volume 15 ; 15 ; http://epubs.siam.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2017 ; Journal on Applied Dynamical Systems Volume 16 ; 16 ; http://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2018 ; Journal on Applied Dynamical Systems Volume 17 ; 17 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2019 ; Journal on Applied Dynamical Systems Volume 18 ; 18 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Journal on Applied Dynamical Systems Volume 19 ; 19 ; https://epubs.siam.org/ ; >
@@ -92,19 +92,19 @@
     {
       param[journal_id] = smjmap.1
 
-      au < finished ; crawling ; 1953 ; Journal of the Society for Industrial and Applied Mathematics Volume 1 ; 1 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 1954 ; Journal of the Society for Industrial and Applied Mathematics Volume 2 ; 2 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 1955 ; Journal of the Society for Industrial and Applied Mathematics Volume 3 ; 3 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 1956 ; Journal of the Society for Industrial and Applied Mathematics Volume 4 ; 4 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 1957 ; Journal of the Society for Industrial and Applied Mathematics Volume 5 ; 5 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 1958 ; Journal of the Society for Industrial and Applied Mathematics Volume 6 ; 6 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 1959 ; Journal of the Society for Industrial and Applied Mathematics Volume 7 ; 7 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 1960 ; Journal of the Society for Industrial and Applied Mathematics Volume 8 ; 8 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 1961 ; Journal of the Society for Industrial and Applied Mathematics Volume 9 ; 9 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 1962 ; Journal of the Society for Industrial and Applied Mathematics Volume 10 ; 10 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 1963 ; Journal of the Society for Industrial and Applied Mathematics Volume 11 ; 11 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 1964 ; Journal of the Society for Industrial and Applied Mathematics Volume 12 ; 12 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 1965 ; Journal of the Society for Industrial and Applied Mathematics Volume 13 ; 13 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 1953 ; Journal of the Society for Industrial and Applied Mathematics Volume 1 ; 1 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1954 ; Journal of the Society for Industrial and Applied Mathematics Volume 2 ; 2 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 1955 ; Journal of the Society for Industrial and Applied Mathematics Volume 3 ; 3 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 1956 ; Journal of the Society for Industrial and Applied Mathematics Volume 4 ; 4 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 1957 ; Journal of the Society for Industrial and Applied Mathematics Volume 5 ; 5 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 1958 ; Journal of the Society for Industrial and Applied Mathematics Volume 6 ; 6 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1959 ; Journal of the Society for Industrial and Applied Mathematics Volume 7 ; 7 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 1960 ; Journal of the Society for Industrial and Applied Mathematics Volume 8 ; 8 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 1961 ; Journal of the Society for Industrial and Applied Mathematics Volume 9 ; 9 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 1962 ; Journal of the Society for Industrial and Applied Mathematics Volume 10 ; 10 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 1963 ; Journal of the Society for Industrial and Applied Mathematics Volume 11 ; 11 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; frozen ; 1964 ; Journal of the Society for Industrial and Applied Mathematics Volume 12 ; 12 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; frozen ; 1965 ; Journal of the Society for Industrial and Applied Mathematics Volume 13 ; 13 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     }
 
   }
@@ -183,7 +183,7 @@
       au < finished ; crawling ; 2013 ; Journal on Applied Mathematics Volume 73 ; 73 ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Journal on Applied Mathematics Volume 74 ; 74 ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; Journal on Applied Mathematics Volume 75 ; 75 ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2016 ; Journal on Applied Mathematics Volume 76 ; 76 ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 2016 ; Journal on Applied Mathematics Volume 76 ; 76 ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Journal on Applied Mathematics Volume 77 ; 77 ; http://epubs.siam.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Journal on Applied Mathematics Volume 78 ; 78 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Journal on Applied Mathematics Volume 79 ; 79 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
@@ -339,7 +339,7 @@
     au < finished ; finished ; 2016 ; Journal on Control and Optimization Volume 54 ; 54 ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2017 ; Journal on Control and Optimization Volume 55 ; 55 ; http://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Journal on Control and Optimization Volume 56 ; 56 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2019 ; Journal on Control and Optimization Volume 57 ; 57 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; frozen ; 2019 ; Journal on Control and Optimization Volume 57 ; 57 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; Journal on Control and Optimization Volume 58 ; 58 ; https://epubs.siam.org/ ; >
     au < deepCrawl ; exists ; 2021 ; Journal on Control and Optimization Volume 59 ; 59 ; https://epubs.siam.org/ ; >
     au < deepCrawl ; exists ; 2022 ; Journal on Control and Optimization Volume 60 ; 60 ; https://epubs.siam.org/ ; >
@@ -440,7 +440,7 @@
     au < finished ; finished ; 2010 ; Journal on Imaging Sciences Volume 3 ; 3 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2011 ; Journal on Imaging Sciences Volume 4 ; 4 ; http://epubs.siam.org/ ; >
     au < finished ; finished ; 2012 ; Journal on Imaging Sciences Volume 5 ; 5 ; http://epubs.siam.org/ ; >
-    au < finished ; crawling ; 2013 ; Journal on Imaging Sciences Volume 6 ; 6 ; http://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2013 ; Journal on Imaging Sciences Volume 6 ; 6 ; http://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal on Imaging Sciences Volume 7 ; 7 ; http://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Journal on Imaging Sciences Volume 8 ; 8 ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2016 ; Journal on Imaging Sciences Volume 9 ; 9 ; http://epubs.siam.org/ ; reingest4.clockss.org:8082 >
@@ -512,10 +512,10 @@
     au < finished ; crawling ; 2013 ; Journal on Mathematical Analysis Volume 45 ; 45 ; http://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Journal on Mathematical Analysis Volume 46 ; 46 ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2015 ; Journal on Mathematical Analysis Volume 47 ; 47 ; http://epubs.siam.org/ ; reingest1.clockss.org:8082 >
-    au < finished ; crawling ; 2016 ; Journal on Mathematical Analysis Volume 48 ; 48 ; http://epubs.siam.org/ ; reingest4.clockss.org:8082 >
+    au < finished ; frozen ; 2016 ; Journal on Mathematical Analysis Volume 48 ; 48 ; http://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Journal on Mathematical Analysis Volume 49 ; 49 ; http://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2018 ; Journal on Mathematical Analysis Volume 50 ; 50 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2019 ; Journal on Mathematical Analysis Volume 51 ; 51 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2019 ; Journal on Mathematical Analysis Volume 51 ; 51 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Journal on Mathematical Analysis Volume 52 ; 52 ; https://epubs.siam.org/ ; >
     au < deepCrawl ; exists ; 2021 ; Journal on Mathematical Analysis Volume 53 ; 53 ; https://epubs.siam.org/ ; >
     au < deepCrawl ; exists ; 2022 ; Journal on Mathematical Analysis Volume 54 ; 54 ; https://epubs.siam.org/ ; >
@@ -579,7 +579,7 @@
     au < finished ; finished ; 2016 ; Journal on Matrix Analysis and Application Volume 37 ; 37 ; http://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Journal on Matrix Analysis and Application Volume 38 ; 38 ; http://epubs.siam.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Journal on Matrix Analysis and Application Volume 39 ; 39 ; https://epubs.siam.org/ ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2019 ; Journal on Matrix Analysis and Application Volume 40 ; 40 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; Journal on Matrix Analysis and Application Volume 40 ; 40 ; https://epubs.siam.org/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal on Matrix Analysis and Application Volume 41 ; 41 ; https://epubs.siam.org/ ; >
     au < deepCrawl ; exists ; 2021 ; Journal on Matrix Analysis and Application Volume 42 ; 42 ; https://epubs.siam.org/ ; >
     au < deepCrawl ; exists ; 2022 ; Journal on Matrix Analysis and Application Volume 43 ; 43 ; https://epubs.siam.org/ ; >
@@ -796,7 +796,7 @@
     au < finished ; finished ; 2016 ; Journal on Uncertainty Quantification Volume 4 ; 4 ; http://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2017 ; Journal on Uncertainty Quantification Volume 5 ; 5 ; http://epubs.siam.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2018 ; Journal on Uncertainty Quantification Volume 6 ; 6 ; https://epubs.siam.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2019 ; Journal on Uncertainty Quantification Volume 7 ; 7 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; frozen ; 2019 ; Journal on Uncertainty Quantification Volume 7 ; 7 ; https://epubs.siam.org/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; Journal on Uncertainty Quantification Volume 8 ; 8 ; https://epubs.siam.org/ ; >
     au < deepCrawl ; exists ; 2021 ; Journal on Uncertainty Quantification Volume 9 ; 9 ; https://epubs.siam.org/ ; >
     au < deepCrawl ; exists ; 2022 ; Journal on Uncertainty Quantification Volume 10 ; 10 ; https://epubs.siam.org/ ; >
@@ -975,7 +975,7 @@
 
     param[journal_id] = sjmdaq
 
-    au < finished ; crawling ; 2019 ; Journal on Mathematics of Data Science Volume 1 ; 1 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2019 ; Journal on Mathematics of Data Science Volume 1 ; 1 ; https://epubs.siam.org/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2020 ; Journal on Mathematics of Data Science Volume 2 ; 2 ; https://epubs.siam.org/ ; >
     au < deepCrawl ; exists ; 2021 ; Journal on Mathematics of Data Science Volume 3 ; 3 ; https://epubs.siam.org/ ; >
     au < deepCrawl ; exists ; 2022 ; Journal on Mathematics of Data Science Volume 4 ; 4 ; https://epubs.siam.org/ ; >
