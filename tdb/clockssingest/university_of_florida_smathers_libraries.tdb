@@ -221,7 +221,7 @@
       au < frozen ; exists ; 2020 ; Florida Entomologist Volume 104 ; 104 ; 2020 ; >
       au < frozen ; exists ; 2021 ; Florida Entomologist Volume 105 ; 105 ; 2021 ; >
       au < frozen ; exists ; 2022 ; Florida Entomologist Volume 106 ; 106 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; Florida Entomologist Volume 107 ; 107 ; 2023 ; >
+      au < deepCrawl ; exists ; 2023 ; Florida Entomologist Volume 107 ; 107 ; 2023 ; >
       au < expected ; exists ; 2024 ; Florida Entomologist Volume 108 ; 108 ; 2024 ; >
 
   }
@@ -249,7 +249,7 @@
       au < frozen ; exists ; 2020 ; The International FLAIRS Conference Proceedings Volume 33 ; 33 ; 2020 ; >
       au < frozen ; exists ; 2021 ; The International FLAIRS Conference Proceedings Volume 34 ; 34 ; 2021 ; >
       au < frozen ; exists ; 2022 ; The International FLAIRS Conference Proceedings Volume 35 ; 35 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; The International FLAIRS Conference Proceedings Volume 36 ; 36 ; 2023 ; >
+      au < deepCrawl ; exists ; 2023 ; The International FLAIRS Conference Proceedings Volume 36 ; 36 ; 2023 ; >
       au < expected ; exists ; 2024 ; The International FLAIRS Conference Proceedings Volume 37 ; 37 ; 2024 ; >
 
   }
@@ -284,7 +284,7 @@
       au < frozen ; exists ; 2020 ; The Journal of Civic Information Volume 2 ; 2 ; 2020 ; >
       au < frozen ; exists ; 2021 ; The Journal of Civic Information Volume 3 ; 3 ; 2021 ; >
       au < frozen ; exists ; 2022 ; The Journal of Civic Information Volume 4 ; 4 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; The Journal of Civic Information Volume 5 ; 5 ; 2023 ; >
+      au < deepCrawl ; exists ; 2023 ; The Journal of Civic Information Volume 5 ; 5 ; 2023 ; >
       au < expected ; exists ; 2024 ; The Journal of Civic Information Volume 6 ; 6 ; 2024 ; >
 
   }
@@ -304,7 +304,7 @@
       au < frozen ; exists ; 2020 ; The Journal of Public Interest Communications Volume 4 ; 4 ; 2020 ; >
       au < frozen ; exists ; 2021 ; The Journal of Public Interest Communications Volume 5 ; 5 ; 2021 ; >
       au < frozen ; exists ; 2022 ; The Journal of Public Interest Communications Volume 6 ; 6 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; The Journal of Public Interest Communications Volume 7 ; 7 ; 2023 ; >
+      au < deepCrawl ; exists ; 2023 ; The Journal of Public Interest Communications Volume 7 ; 7 ; 2023 ; >
       au < expected ; exists ; 2024 ; The Journal of Public Interest Communications Volume 8 ; 8 ; 2024 ; >
 
   }
@@ -321,7 +321,7 @@
 
       au < frozen ; exists ; 2021 ; Journal of the Florida Mosquito Control Association Volume 68 ; 68 ; 2021 ; >
       au < frozen ; exists ; 2022 ; Journal of the Florida Mosquito Control Association Volume 69 ; 69 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; Journal of the Florida Mosquito Control Association Volume 70 ; 70 ; 2023 ; >
+      au < deepCrawl ; exists ; 2023 ; Journal of the Florida Mosquito Control Association Volume 70 ; 70 ; 2023 ; >
       au < manifest ; exists ; 2024 ; Journal of the Florida Mosquito Control Association Volume 71 ; 71 ; 2024 ; >
 
   }
@@ -357,7 +357,7 @@
       au < frozen ; exists ; 2020 ; Journal of Veterinary Forensic Sciences Volume 1 ; 1 ; 2020 ; >
       au < exists ; exists ; 2021 ; Journal of Veterinary Forensic Sciences Volume 2 ; 2 ; 2021 ; >
       au < exists ; exists ; 2022 ; Journal of Veterinary Forensic Sciences Volume 3 ; 3 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; Journal of Veterinary Forensic Sciences Volume 4 ; 4 ; 2023 ; >
+      au < deepCrawl ; exists ; 2023 ; Journal of Veterinary Forensic Sciences Volume 4 ; 4 ; 2023 ; >
       au < expected ; exists ; 2024 ; Journal of Veterinary Forensic Sciences Volume 5 ; 5 ; 2024 ; >
 
   }
@@ -389,7 +389,7 @@
       param[journal_id] = PCGSS
 
       au < frozen ; exists ; 2022 ; Selected Proceedings of the Classics Graduate Student Symposia Volume 1 ; 1 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; Selected Proceedings of the Classics Graduate Student Symposia Volume 2 ; 2 ; 2023 ; >
+      au < deepCrawl ; exists ; 2023 ; Selected Proceedings of the Classics Graduate Student Symposia Volume 2 ; 2 ; 2023 ; >
       au < expected ; exists ; 2024 ; Selected Proceedings of the Classics Graduate Student Symposia Volume 3 ; 3 ; 2024 ; >
 
   }
@@ -409,7 +409,7 @@
       au < frozen ; exists ; 2020 ; SOURCE Magazine Volume 3 ; 3 ; 2020 ; >
       au < frozen ; exists ; 2021 ; SOURCE Magazine Volume 4 ; 4 ; 2021 ; >
       au < frozen ; exists ; 2022 ; SOURCE Magazine Volume 5 ; 5 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; SOURCE Magazine Volume 6 ; 6 ; 2023 ; >
+      au < deepCrawl ; exists ; 2023 ; SOURCE Magazine Volume 6 ; 6 ; 2023 ; >
       au < expected ; exists ; 2024 ; SOURCE Magazine Volume 7 ; 7 ; 2024 ; >
 
   }
@@ -525,7 +525,7 @@
       au < frozen ; exists ; 2020 ; Tropical Lepidoptera Research Volume 31 ; 31 ; 2020 ; >
       au < frozen ; exists ; 2021 ; Tropical Lepidoptera Research Volume 32 ; 32 ; 2021 ; >
       au < frozen ; exists ; 2022 ; Tropical Lepidoptera Research Volume 33 ; 33 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; Tropical Lepidoptera Research Volume 34 ; 34 ; 2023 ; >
+      au < deepCrawl ; exists ; 2023 ; Tropical Lepidoptera Research Volume 34 ; 34 ; 2023 ; >
       au < manifest ; exists ; 2024 ; Tropical Lepidoptera Research Volume 35 ; 35 ; 2024 ; >
 
   }
@@ -695,7 +695,7 @@
       au < frozen ; exists ; 2020 ; Yorùbá Studies Review Volume 4 ; 4 ; 2020 ; >
       au < frozen ; exists ; 2021 ; Yorùbá Studies Review Volume 5 ; 5 ; 2021 ; >
       au < frozen ; exists ; 2022 ; Yorùbá Studies Review Volume 6 ; 6 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; Yorùbá Studies Review Volume 7 ; 7 ; 2023 ; >
+      au < deepCrawl ; exists ; 2023 ; Yorùbá Studies Review Volume 7 ; 7 ; 2023 ; >
       au < expected ; exists ; 2024 ; Yorùbá Studies Review Volume 8 ; 8 ; 2024 ; >
 
   }
