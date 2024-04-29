@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>8</string>
+        <string>9</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -59,7 +59,7 @@ POSSIBILITY OF SUCH DAMAGE.
             </entry>
             <entry>
                 <string>Metadata</string>
-                <string>1</string>
+                <string>2</string>
             </entry>
         </map>
     </entry>
@@ -122,6 +122,23 @@ POSSIBILITY OF SUCH DAMAGE.
         <list>
             <string>"^%s[^/]+\?itemId=(%%2F|/)content(%%2F|/)paper(%%2F|/)", base_url</string>
         </list>
+    </entry>
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.oecd.OcedWorkingPaperArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.oecd.OcedWorkingPaperArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*;DublinCore</string>
+                <string>org.lockss.plugin.oecd.OecdHtmlMetadataExtractorFactory</string>
+            </entry>
+        </map>
     </entry>
     <entry>
         <string>au_login_page_checker</string>
