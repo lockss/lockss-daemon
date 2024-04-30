@@ -17418,6 +17418,22 @@
   {
 
     title <
+      name = PNAS Nexus ;
+      issn = 0066-7374 ;
+      eissn = 2752-6542
+    >
+
+    param[journal_id] = pnasnexus
+
+    au < manifest ; exists ; 2022 ; 2022 ; PNAS Nexus Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2023 ; 2023 ; PNAS Nexus Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2024 ; 2024 ; PNAS Nexus Volume 3 ; 3 ; >
+
+  }
+
+  {
+
+    title <
       name = Progress of Theoretical Physics (PTP) ;
       issn = 0033-068X ;
       eissn = 1347-4081 ;
