@@ -55,7 +55,7 @@
 
       au < doNotProcess ; exists ; 2021 ; Aviation Volume 2021 ; 18 ; 2021 ; https://journals.vilniustech.lt/ ; >
       au < deepCrawl ; exists ; 2022 ; Aviation Volume 2022 ; 19 ; 2022 ; https://journals.vilniustech.lt/ ; >
-      au < crawling ; exists ; 2023 ; Aviation Volume 2023 ; 20 ; 2023 ; https://journals.vilniustech.lt/ ; >
+      au < deepCrawl ; exists ; 2023 ; Aviation Volume 2023 ; 20 ; 2023 ; https://journals.vilniustech.lt/ ; >
       au < manifest ; exists ; 2024 ; Aviation Volume 2024 ; 21 ; 2024 ; https://journals.vilniustech.lt/ ; >
 
   }
@@ -101,7 +101,7 @@
       {
       param[journal_id] = BMEE
       au < deepCrawl ; exists ; 2022 ; Business, Management and Economics Engineering Volume 2022 ; 13 ; 2022 ; https://journals.vilniustech.lt/ ; >
-      au < crawling ; exists ; 2023 ; Business, Management and Economics Engineering Volume 2023 ; 14 ; 2023 ; https://journals.vilniustech.lt/ ; >
+      au < deepCrawl ; exists ; 2023 ; Business, Management and Economics Engineering Volume 2023 ; 14 ; 2023 ; https://journals.vilniustech.lt/ ; >
       au < manifest ; exists ; 2024 ; Business, Management and Economics Engineering Volume 2024 ; 15 ; 2024 ; https://journals.vilniustech.lt/ ; >
       }
   }
@@ -135,7 +135,7 @@
 
       au < doNotProcess ; exists ; 2021 ; Business: Theory and Practice Volume 2021 ; 22 ; 2021 ; https://journals.vilniustech.lt/ ; >
       au < deepCrawl ; exists ; 2022 ; Business: Theory and Practice Volume 2022 ; 23 ; 2022 ; https://journals.vilniustech.lt/ ; >
-      au < crawling ; exists ; 2023 ; Business: Theory and Practice Volume 2023 ; 24 ; 2023 ; https://journals.vilniustech.lt/ ; >
+      au < deepCrawl ; exists ; 2023 ; Business: Theory and Practice Volume 2023 ; 24 ; 2023 ; https://journals.vilniustech.lt/ ; >
       au < manifest ; exists ; 2024 ; Business: Theory and Practice Volume 2024 ; 25 ; 2024 ; https://journals.vilniustech.lt/ ; >
 
   }
@@ -165,7 +165,7 @@
       au < deepCrawl ; exists ; 2020 ; Creativity Studies Volume 2020 ; 13 ; 2020 ; https://journals.vgtu.lt/ ; >
       au < deepCrawl ; exists ; 2021 ; Creativity Studies Volume 2021 ; 14 ; 2021 ; https://journals.vgtu.lt/ ; >
       au < deepCrawl ; exists ; 2022 ; Creativity Studies Volume 2022 ; 15 ; 2022 ; https://journals.vilniustech.lt/ ; >
-      au < crawling ; exists ; 2023 ; Creativity Studies Volume 2023 ; 16 ; 2023 ; https://journals.vilniustech.lt/ ; >
+      au < deepCrawl ; exists ; 2023 ; Creativity Studies Volume 2023 ; 16 ; 2023 ; https://journals.vilniustech.lt/ ; >
       au < manifest ; exists ; 2024 ; Creativity Studies Volume 2024 ; 17 ; 2024 ; https://journals.vilniustech.lt/ ; >
 
   }
@@ -228,7 +228,7 @@
       au < deepCrawl ; exists ; 2020 ; Geodesy and Cartography Volume 2020 ; 17 ; 2020 ; https://journals.vgtu.lt/ ; >
       au < deepCrawl ; exists ; 2021 ; Geodesy and Cartography Volume 2021 ; 18 ; 2021 ; https://journals.vgtu.lt/ ; >
       au < deepCrawl ; exists ; 2022 ; Geodesy and Cartography Volume 2022 ; 19 ; 2022 ; https://journals.vilniustech.lt/ ; >
-      au < crawling ; exists ; 2023 ; Geodesy and Cartography Volume 2023 ; 20 ; 2023 ; https://journals.vilniustech.lt/ ; >
+      au < deepCrawl ; exists ; 2023 ; Geodesy and Cartography Volume 2023 ; 20 ; 2023 ; https://journals.vilniustech.lt/ ; >
       au < manifest ; exists ; 2024 ; Geodesy and Cartography Volume 2024 ; 21 ; 2024 ; https://journals.vilniustech.lt/ ; >
 
   }
@@ -265,7 +265,7 @@
 
       au < doNotProcess ; exists ; 2021 ; International Journal of Strategic Property Management Volume 2021 ; 18 ; 2021 ; https://journals.vilniustech.lt/ ; >
       au < deepCrawl ; exists ; 2022 ; International Journal of Strategic Property Management Volume 2022 ; 19 ; 2022 ; https://journals.vilniustech.lt/ ; >
-      au < crawling ; exists ; 2023 ; International Journal of Strategic Property Management Volume 2023 ; 20 ; 2023 ; https://journals.vilniustech.lt/ ; >
+      au < deepCrawl ; exists ; 2023 ; International Journal of Strategic Property Management Volume 2023 ; 20 ; 2023 ; https://journals.vilniustech.lt/ ; >
       au < manifest ; exists ; 2024 ; International Journal of Strategic Property Management Volume 2024 ; 21 ; 2024 ; https://journals.vilniustech.lt/ ; >
 
   }
@@ -297,7 +297,7 @@
       au < deepCrawl ; exists ; 2020 ; Journal of Architecture and Urbanism Volume 2020 ; 15 ; 2020 ; https://journals.vgtu.lt/ ; >
       au < deepCrawl ; exists ; 2021 ; Journal of Architecture and Urbanism Volume 2021 ; 16 ; 2021 ; https://journals.vgtu.lt/ ; >
       au < deepCrawl ; exists ; 2022 ; Journal of Architecture and Urbanism Volume 2022 ; 17 ; 2022 ; https://journals.vilniustech.lt/ ; >
-      au < crawling ; exists ; 2023 ; Journal of Architecture and Urbanism Volume 2023 ; 18 ; 2023 ; https://journals.vilniustech.lt/ ; >
+      au < deepCrawl ; exists ; 2023 ; Journal of Architecture and Urbanism Volume 2023 ; 18 ; 2023 ; https://journals.vilniustech.lt/ ; >
       au < manifest ; exists ; 2024 ; Journal of Architecture and Urbanism Volume 2024 ; 19 ; 2024 ; https://journals.vilniustech.lt/ ; >
 
   }
@@ -335,7 +335,7 @@
 
       au < doNotProcess ; exists ; 2021 ; Journal of Business Economics and Management Volume 2021 ; 19 ; 2021 ; https://journals.vilniustech.lt/ ; >
       au < deepCrawl ; exists ; 2022 ; Journal of Business Economics and Management Volume 2022 ; 20 ; 2022 ; https://journals.vilniustech.lt/ ; >
-      au < crawling ; exists ; 2023 ; Journal of Business Economics and Management Volume 2023 ; 21 ; 2023 ; https://journals.vilniustech.lt/ ; >
+      au < deepCrawl ; exists ; 2023 ; Journal of Business Economics and Management Volume 2023 ; 21 ; 2023 ; https://journals.vilniustech.lt/ ; >
       au < manifest ; exists ; 2024 ; Journal of Business Economics and Management Volume 2024 ; 22 ; 2024 ; https://journals.vilniustech.lt/ ; >
 
   }
@@ -378,7 +378,7 @@
       au < deepCrawl ; exists ; 2020 ; Journal of Civil Engineering and Management Volume 2020 ; 26 ; 2020 ; https://journals.vgtu.lt/ ; >
       au < deepCrawl ; exists ; 2021 ; Journal of Civil Engineering and Management Volume 2021 ; 27 ; 2021 ; https://journals.vgtu.lt/ ; >
       au < deepCrawl ; exists ; 2022 ; Journal of Civil Engineering and Management Volume 2022 ; 28 ; 2022 ; https://journals.vilniustech.lt/ ; >
-      au < crawling ; exists ; 2023 ; Journal of Civil Engineering and Management Volume 2023 ; 29 ; 2023 ; https://journals.vilniustech.lt/ ; >
+      au < deepCrawl ; exists ; 2023 ; Journal of Civil Engineering and Management Volume 2023 ; 29 ; 2023 ; https://journals.vilniustech.lt/ ; >
       au < manifest ; exists ; 2024 ; Journal of Civil Engineering and Management Volume 2024 ; 30 ; 2024 ; https://journals.vilniustech.lt/ ; >
 
   }
@@ -415,7 +415,7 @@
 
       au < doNotProcess ; exists ; 2021 ; Journal of Environmental Engineering and Landscape Management Volume 2021 ; 18 ; 2021 ; https://journals.vilniustech.lt/ ; >
       au < deepCrawl ; exists ; 2022 ; Journal of Environmental Engineering and Landscape Management Volume 2022 ; 19 ; 2022 ; https://journals.vilniustech.lt/ ; >
-      au < crawling ; exists ; 2023 ; Journal of Environmental Engineering and Landscape Management Volume 2023 ; 20 ; 2023 ; https://journals.vilniustech.lt/ ; >
+      au < deepCrawl ; exists ; 2023 ; Journal of Environmental Engineering and Landscape Management Volume 2023 ; 20 ; 2023 ; https://journals.vilniustech.lt/ ; >
       au < manifest ; exists ; 2024 ; Journal of Environmental Engineering and Landscape Management Volume 2024 ; 21 ; 2024 ; https://journals.vilniustech.lt/ ; >
 
   }
@@ -460,7 +460,7 @@
 
       au < doNotProcess ; exists ; 2021 ; Mathematical Modelling and Analysis Volume 2021 ; 26 ; 2021 ; https://journals.vilniustech.lt/ ; >
       au < deepCrawl ; exists ; 2022 ; Mathematical Modelling and Analysis Volume 2022 ; 27 ; 2022 ; https://journals.vilniustech.lt/ ; >
-      au < crawling ; exists ; 2023 ; Mathematical Modelling and Analysis Volume 2023 ; 28 ; 2023 ; https://journals.vilniustech.lt/ ; >
+      au < deepCrawl ; exists ; 2023 ; Mathematical Modelling and Analysis Volume 2023 ; 28 ; 2023 ; https://journals.vilniustech.lt/ ; >
       au < manifest ; exists ; 2024 ; Mathematical Modelling and Analysis Volume 2024 ; 29 ; 2024 ; https://journals.vilniustech.lt/ ; >
 
   }
@@ -491,7 +491,7 @@
       au < deepCrawl ; exists ; 2021 ; Science - Future of Lithuania Volume 2021 ; 13 ; 2021 ; https://journals.vgtu.lt/ ; >
 
       au < deepCrawl ; exists ; 2022 ; Science - Future of Lithuania Volume 2022 ; 14 ; 2022 ; https://journals.vilniustech.lt/ ; >
-      au < crawling ; exists ; 2023 ; Science - Future of Lithuania Volume 2023 ; 15 ; 2023 ; https://journals.vilniustech.lt/ ; >
+      au < deepCrawl ; exists ; 2023 ; Science - Future of Lithuania Volume 2023 ; 15 ; 2023 ; https://journals.vilniustech.lt/ ; >
       au < manifest ; exists ; 2024 ; Science - Future of Lithuania Volume 2024 ; 16 ; 2024 ; https://journals.vilniustech.lt/ ; >
 
   }
@@ -528,7 +528,7 @@
 
       au < doNotProcess ; exists ; 2021 ; Technological and Economic Development of Economy Volume 2021 ; 18 ; 2021 ; https://journals.vilniustech.lt/ ; >
       au < deepCrawl ; exists ; 2022 ; Technological and Economic Development of Economy Volume 2022 ; 19 ; 2022 ; https://journals.vilniustech.lt/ ; >
-      au < crawling ; exists ; 2023 ; Technological and Economic Development of Economy Volume 2023 ; 20 ; 2023 ; https://journals.vilniustech.lt/ ; >
+      au < deepCrawl ; exists ; 2023 ; Technological and Economic Development of Economy Volume 2023 ; 20 ; 2023 ; https://journals.vilniustech.lt/ ; >
       au < manifest ; exists ; 2024 ; Technological and Economic Development of Economy Volume 2024 ; 21 ; 2024 ; https://journals.vilniustech.lt/ ; >
 
   }
@@ -564,7 +564,7 @@
       au < deepCrawl ; exists ; 2020 ; Transport Volume 2020 ; 19 ; 2020 ; https://journals.vgtu.lt/ ; >
       au < deepCrawl ; exists ; 2021 ; Transport Volume 2021 ; 20 ; 2021 ; https://journals.vgtu.lt/ ; >
       au < deepCrawl ; exists ; 2022 ; Transport Volume 2022 ; 21 ; 2022 ; https://journals.vilniustech.lt/ ; >
-      au < crawling ; exists ; 2023 ; Transport Volume 2023 ; 22 ; 2023 ; https://journals.vilniustech.lt/ ; >
+      au < deepCrawl ; exists ; 2023 ; Transport Volume 2023 ; 22 ; 2023 ; https://journals.vilniustech.lt/ ; >
       au < manifest ; exists ; 2024 ; Transport Volume 2024 ; 23 ; 2024 ; https://journals.vilniustech.lt/ ; >
 
   }

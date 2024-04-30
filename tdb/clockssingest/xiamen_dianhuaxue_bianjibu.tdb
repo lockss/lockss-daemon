@@ -49,7 +49,7 @@
       au < finished ; crawling ; 2020 ; Journal of Electrochemistry Volume 26 ; 26 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2021 ; Journal of Electrochemistry Volume 27 ; 27 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2022 ; Journal of Electrochemistry Volume 28 ; 28 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2023 ; Journal of Electrochemistry Volume 29 ; 29 ; >
+      au < deepCrawl ; exists ; 2023 ; Journal of Electrochemistry Volume 29 ; 29 ; >
       au < manifest ; exists ; 2024 ; Journal of Electrochemistry Volume 30 ; 30 ; >
 
   }
