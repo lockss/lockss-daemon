@@ -73,4 +73,115 @@
     au < manifest ; exists ; 2024 ; 2024 ; Revista Cuadernos de administración Volume 40 ; 40 ; >
 
   }
+  
+  {
+
+      title <
+        name = Revista Prospectiva ;
+        issn = 0122-1213 ;
+        eissn = 2389-993X
+      >
+
+      param[base_url] = https://revistaprospectiva.univalle.edu.co/
+      param[journal_id] = prospectiva
+
+      au < manifest ; exists ; 1994 ; 1994 ; Revista Prospectiva Volume 1994 ; 1 ; >
+      au < manifest ; exists ; 1995 ; 1995 ; Revista Prospectiva Volume 1995 ; 2 ; >
+      au < manifest ; exists ; 1996 ; 1996 ; Revista Prospectiva Volume 1996 ; 3 ; >
+      au < doesNotExist ; doesNotExist ; 1997 ; 1997 ; Revista Prospectiva Volume 1997 ; 0 ; >
+      au < doesNotExist ; doesNotExist ; 1998 ; 1998 ; Revista Prospectiva Volume 1998 ; 0 ; >
+      au < doesNotExist ; doesNotExist ; 1999 ; 1999 ; Revista Prospectiva Volume 1999 ; 0 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; Revista Prospectiva Volume 2000 ; 4-5 ; >
+      au < doesNotExist ; doesNotExist ; 2001 ; 2001 ; Revista Prospectiva Volume 2001 ; 0 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; Revista Prospectiva Volume 2002 ; 6-7 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; Revista Prospectiva Volume 2003 ; 8 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Revista Prospectiva Volume 2004 ; 9 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Revista Prospectiva Volume 2005 ; 10 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Revista Prospectiva Volume 2006 ; 11 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Revista Prospectiva Volume 2007 ; 12 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Revista Prospectiva Volume 2008 ; 13 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Revista Prospectiva Volume 2009 ; 14 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Revista Prospectiva Volume 2010 ; 15 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Revista Prospectiva Volume 2011 ; 16 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; Revista Prospectiva Volume 2012 ; 17 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; Revista Prospectiva Volume 2013 ; 18 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; Revista Prospectiva Volume 2014 ; 19 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; Revista Prospectiva Volume 2015 ; 20 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; Revista Prospectiva Volume 2016 ; 21-22 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; Revista Prospectiva Volume 2017 ; 23-24 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; Revista Prospectiva Volume 2018 ; 25-26 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Revista Prospectiva Volume 2019 ; 27-28 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; Revista Prospectiva Volume 2020 ; 29-30 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Revista Prospectiva Volume 2021 ; 31-32 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Revista Prospectiva Volume 2022 ; 33-34 ; >
+      au < manifest ; exists ; 2023 ; 2023 ; Revista Prospectiva Volume 2023 ; 35-36 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Revista Prospectiva Volume 2024 ; 37 ; >
+
+  }
+
+  {
+
+      title <
+        name = Lenguaje ;
+        issn = 0120-3479 ;
+        eissn = 2539-3804
+      >
+
+      param[base_url] = https://revistalenguaje.univalle.edu.co/
+      param[journal_id] = lenguaje
+
+      au < manifest ; exists ; 1972 ; 1972 ; Lenguaje Volume 1972 ; 1 ; >
+      au < manifest ; exists ; 1973 ; 1973 ; Lenguaje Volume 1973 ; 5 ; >
+      au < manifest ; exists ; 1976 ; 1976 ; Lenguaje Volume 1976 ; 6-7 ; >
+      au < doesNotExist ; doesNotExist ; 1977 ; 1977 ; Lenguaje Volume 1977 ; 0 ; >
+      au < manifest ; exists ; 1978 ; 1978 ; Lenguaje Volume 1978 ; 8-9 ; >
+      au < manifest ; exists ; 1979 ; 1979 ; Lenguaje Volume 1979 ; 10 ; >
+      au < manifest ; exists ; 1980 ; 1980 ; Lenguaje Volume 1980 ; 11-12 ; >
+      au < doesNotExist ; doesNotExist ; 1981 ; 1981 ; Lenguaje Volume 1981 ; 6 ; >
+      au < manifest ; exists ; 1982 ; 1982 ; Lenguaje Volume 1982 ; 13 ; >
+      au < manifest ; exists ; 1983 ; 1983 ; Lenguaje Volume 1983 ; 14 ; >
+      au < doesNotExist ; doesNotExist ; 1984 ; 1984 ; Lenguaje Volume 1984 ; 0 ; >
+      au < manifest ; exists ; 1985 ; 1985 ; Lenguaje Volume 1985 ; 15 ; >
+      au < doesNotExist ; doesNotExist ; 1986 ; 1986 ; Lenguaje Volume 1986 ; 0 ; >
+      au < manifest ; exists ; 1987 ; 1987 ; Lenguaje Volume 1987 ; 16 ; >
+      au < doesNotExist ; doesNotExist ; 1988 ; 1988 ; Lenguaje Volume 1988 ; 17 ; >
+      au < doesNotExist ; doesNotExist ; 1989 ; 1989 ; Lenguaje Volume 1989 ; 18 ; >
+      au < doesNotExist ; doesNotExist ; 1990 ; 1990 ; Lenguaje Volume 1990 ; 19 ; >
+      au < doesNotExist ; doesNotExist ; 1991 ; 1991 ; Lenguaje Volume 1991 ; 20 ; >
+      au < doesNotExist ; doesNotExist ; 1992 ; 1992 ; Lenguaje Volume 1992 ; 21 ; >
+      au < doesNotExist ; doesNotExist ; 1993 ; 1993 ; Lenguaje Volume 1993 ; 22 ; >
+      au < doesNotExist ; doesNotExist ; 1994 ; 1994 ; Lenguaje Volume 1994 ; 23 ; >
+      au < doesNotExist ; doesNotExist ; 1995 ; 1995 ; Lenguaje Volume 1995 ; 24 ; >
+      au < manifest ; exists ; 1996 ; 1996 ; Lenguaje Volume 1996 ; 24 ; >
+      au < doesNotExist ; doesNotExist ; 1997 ; 1997 ; Lenguaje Volume 1997 ; 0 ; >
+      au < doesNotExist ; doesNotExist ; 1998 ; 1998 ; Lenguaje Volume 1998 ; 0 ; >
+      au < doesNotExist ; doesNotExist ; 1999 ; 1999 ; Lenguaje Volume 1999 ; 0 ; >
+      au < doesNotExist ; doesNotExist ; 2000 ; 2000 ; Lenguaje Volume 2000 ; 0 ; >
+      au < doesNotExist ; doesNotExist ; 2001 ; 2001 ; Lenguaje Volume 2001 ; 0 ; >
+      au < doesNotExist ; doesNotExist ; 2002 ; 2002 ; Lenguaje Volume 2002 ; 0 ; >
+      au < doesNotExist ; doesNotExist ; 2003 ; 2003 ; Lenguaje Volume 2003 ; 0 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; Lenguaje Volume 2004 ; 32 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; Lenguaje Volume 2005 ; 33 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; Lenguaje Volume 2006 ; 34 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; Lenguaje Volume 2007 ; 35 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; Lenguaje Volume 2008 ; 36 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; Lenguaje Volume 2009 ; 37 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; Lenguaje Volume 2010 ; 38 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; Lenguaje Volume 2011 ; 39 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; Lenguaje Volume 2012 ; 40 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; Lenguaje Volume 2013 ; 41 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; Lenguaje Volume 2014 ; 42 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; Lenguaje Volume 2015 ; 43 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; Lenguaje Volume 2016 ; 44 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; Lenguaje Volume 2017 ; 45 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; Lenguaje Volume 2018 ; 46 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Lenguaje Volume 2019 ; 47 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; Lenguaje Volume 2020 ; 48 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Lenguaje Volume 2021 ; 49 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Lenguaje Volume 2022 ; 50 ; >
+      au < manifest ; exists ; 2023 ; 2023 ; Lenguaje Volume 2023 ; 51 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Lenguaje Volume 2024 ; 52 ; >
+
+  }
+
 }
