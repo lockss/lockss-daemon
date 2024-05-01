@@ -345,6 +345,7 @@ public class RisMetadataExtractor implements FileMetadataExtractor {
     String value = currentValue.toString();
     
     if (currentTag.equals("TY")) {
+      value = value.toUpperCase();
       switch (value) {
         case "JOUR":
           refType = REFTYPE_JOURNAL;
