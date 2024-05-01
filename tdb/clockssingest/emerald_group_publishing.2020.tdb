@@ -16087,6 +16087,54 @@
 
   }
 
+  {
+
+    title <
+      name = Consumer Behavior in Tourism and Hospitality ;
+        issn = 2752-6666 ;
+        eissn = 2752-6674
+    >
+
+    param[journal_issn] = 2752-6666
+
+    au < manifest ; exists ; 2022 ; Consumer Behavior in Tourism and Hospitality Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2023 ; Consumer Behavior in Tourism and Hospitality Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2024 ; Consumer Behavior in Tourism and Hospitality Volume 19 ; 19 ; >
+
+  }
+
+  {
+
+    title <
+      name = Drugs, Habits and Social Policy ;
+        issn = 2752-6739 ;
+        eissn = 2752-6747
+    >
+
+    param[journal_issn] = 2752-6739
+
+    au < manifest ; exists ; 2022 ; Drugs, Habits and Social Policy Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2023 ; Drugs, Habits and Social Policy Volume 24 ; 24 ; >
+    au < expected ; exists ; 2024 ; Drugs, Habits and Social Policy Volume 25 ; 25 ; >
+
+  }
+
+  {
+
+    title <
+      name = Technological Sustainability ;
+        issn = 2754-1312 ;
+        eissn = 2754-1320
+    >
+
+    param[journal_issn] = 2754-1312
+
+    au < manifest ; exists ; 2022 ; Drugs, Habits and Social Policy Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2023 ; Drugs, Habits and Social Policy Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2024 ; Drugs, Habits and Social Policy Volume 3 ; 3 ; >
+
+  }
+
 
   {
 
