@@ -13,6 +13,7 @@
   # notReady. AU has a complete manifest page, tested and could not pass.
   # exists. start page exists, but is not complete
   # doesNotExist. start page does not exist.
+  # doNotProcess. don't process this valid content. Probably a good idea to provide a note.
 
   {
 
@@ -364,6 +365,7 @@
     au < released ; 2012 ; CFR 2012 ; 2012 ; https://www.govinfo.gov/ >
     au < released ; 2013 ; CFR 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < released ; 2015 ; CFR 2015 ; 2015 ; https://www.govinfo.gov/ >
+    au < manifest ; 2024 ; CFR 2024 ; 2024 ; https://www.govinfo.gov/ >
 
     au < down ; 1807 ; Code of Federal Regulations 1807 ; 1807 ; https://www.govinfo.gov/ > #no substance
     au < released ; 2014 ; Code of Federal Regulations 2014 ; 2014 ; https://www.govinfo.gov/ >
@@ -963,6 +965,7 @@
     au < released ; 2016 ; DCPD 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < ready ; 2023 ; DCPD 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < manifest ; 2024 ; DCPD 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < exists ; 2027 ; DCPD 2027 ; 2027 ; https://www.govinfo.gov/ >
 
   }
 
@@ -1554,6 +1557,7 @@
     >
 
     param[collection_id] = USCOURTS
+    #This collection is being collected using a different plugin
 
     au < doNotProcess ; 2013 ; United States Courts 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 2014 ; United States Courts 2014 ; 2014 ; https://www.govinfo.gov/ >
