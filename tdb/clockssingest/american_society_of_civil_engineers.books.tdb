@@ -2,15 +2,15 @@
 
   publisher <
     name = American Society of Civil Engineers ;
-    info[contract] = 2024 ;
-    info[tester] = 4
-    #will let content testers fill in rest of info
+    info[contract] = 2010 ;
+    info[back] = 2010 ;
+    info[tester] = 4 ;
+    info[platform] = Atypon
   >
 
   plugin = org.lockss.plugin.atypon.americansocietyofcivilengineers.ClockssASCEBooksPlugin
-  #param[base_url] = http://ascelibrary.org/
-
-  implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_eisbn] ; name ; param[base_url] >
+  param[base_url] = https://ascelibrary.org/
+  implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_eisbn] ; name ; hidden[proxy] >
 
   {
 
@@ -19,9 +19,9 @@
       type = bookSeries
     >
     
-    au < testing ; exists ; 2019 ; 9780784415337 ; 9780784482278 ; 9780784482278 ; Adventures in Managing Water: RealWorld Engineering Experiences (9780784482278) ; http://ascelibrary.org/ >
-    au < testing ; exists ; 2015 ; 9780784413982 ; 9780784479131 ; 9780784479131 ; Building Information Modeling : Applications and Practices (9780784479131) ; http://ascelibrary.org/ >
-    au < testing ; exists ; 2022 ; 9780784416051 ; 9780784484173 ; 9780784484173 ; Anchorage Design for Petrochemical and Other Industrial Facilities (9780784484173) ; http://ascelibrary.org/ >
+    au < testing ; exists ; 2019 ; 9780784415337 ; 9780784482278 ; 9780784482278 ; Adventures in Managing Water: RealWorld Engineering Experiences (9780784482278) ; >
+    au < testing ; exists ; 2015 ; 9780784413982 ; 9780784479131 ; 9780784479131 ; Building Information Modeling : Applications and Practices (9780784479131) ; >
+    au < testing ; exists ; 2022 ; 9780784416051 ; 9780784484173 ; 9780784484173 ; Anchorage Design for Petrochemical and Other Industrial Facilities (9780784484173) ; >
 
   }
 }

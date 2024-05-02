@@ -2068,6 +2068,7 @@ while (my $line = <>) {
   # the CLOCKSS Atypon Books plugins go here
   } elsif (($plugin eq "ClockssGenericAtyponBooksPlugin") ||
            ($plugin eq "ClockssAIAABooksPlugin") ||
+           ($plugin eq "ClockssASCEBooksPlugin") ||
 #           ($plugin eq "ClockssEmeraldGroupBooksPlugin") ||
            ($plugin eq "ClockssEndocrineSocietyBooksPlugin") ||
            ($plugin eq "ClockssFutureScienceBooksPlugin") ||
