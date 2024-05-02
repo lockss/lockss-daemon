@@ -29,10 +29,10 @@
     au < zapped ; finished ; 2014 ; Bioanalysis Volume 6 ; 6 ; http://www.future-science.com/ ; reingest3.clockss.org:8083 >
     au < zapped ; finished ; 2015 ; Bioanalysis Volume 7 ; 7 ; http://www.future-science.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2016 ; Bioanalysis Volume 8 ; 8 ; http://www.future-science.com/ ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2017 ; Bioanalysis Volume 9 ; 9 ; https://www.future-science.com/ ; >
+    au < finished ; manifest ; 2017 ; Bioanalysis Volume 9 ; 9 ; https://www.future-science.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2018 ; Bioanalysis Volume 10 ; 10 ; https://www.future-science.com/ ; >
     au < finished ; crawling ; 2019 ; Bioanalysis Volume 11 ; 11 ; https://www.future-science.com/ ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2020 ; Bioanalysis Volume 12 ; 12 ; https://www.future-science.com/ ; >
+    au < finished ; manifest ; 2020 ; Bioanalysis Volume 12 ; 12 ; https://www.future-science.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2021 ; Bioanalysis Volume 13 ; 13 ; https://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2022 ; Bioanalysis Volume 14 ; 14 ; https://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2023 ; Bioanalysis Volume 15 ; 15 ; https://www.future-science.com/ ; >
@@ -94,13 +94,13 @@
     au < ingNotReady ; exists ; 2016 ; BioTechniques Volume 61 ; 61 ; https://www.future-science.com/ ; > #no metadata collected
     au < ingNotReady ; exists ; 2017 ; BioTechniques Volume 62 ; 62 ; https://www.future-science.com/ ; > #no metadata collected
     au < ingNotReady ; exists ; 2017 ; BioTechniques Volume 63 ; 63 ; https://www.future-science.com/ ; > #no metadata collected
-    au < deepCrawl ; exists ; 2018 ; BioTechniques Volume 64 ; 64 ; https://www.future-science.com/ ; >
-    au < deepCrawl ; exists ; 2018 ; BioTechniques Volume 65 ; 65 ; https://www.future-science.com/ ; >
+    au < finished ; manifest ; 2018 ; BioTechniques Volume 64 ; 64 ; https://www.future-science.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2018 ; BioTechniques Volume 65 ; 65 ; https://www.future-science.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; BioTechniques Volume 66 ; 66 ; https://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2019 ; BioTechniques Volume 67 ; 67 ; https://www.future-science.com/ ; >
-    au < deepCrawl ; exists ; 2020 ; BioTechniques Volume 68 ; 68 ; https://www.future-science.com/ ; >
-    au < deepCrawl ; exists ; 2020 ; BioTechniques Volume 69 ; 69 ; https://www.future-science.com/ ; >
-    au < deepCrawl ; exists ; 2021 ; BioTechniques Volume 70 ; 70 ; https://www.future-science.com/ ; >
+    au < finished ; manifest ; 2020 ; BioTechniques Volume 68 ; 68 ; https://www.future-science.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2020 ; BioTechniques Volume 69 ; 69 ; https://www.future-science.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ; BioTechniques Volume 70 ; 70 ; https://www.future-science.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; BioTechniques Volume 71 ; 71 ; https://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2022 ; BioTechniques Volume 72 ; 72 ; https://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2022 ; BioTechniques Volume 73 ; 73 ; https://www.future-science.com/ ; >
@@ -183,9 +183,9 @@
     au < finished ; frozen ; 2015 ; Future Medicinal Chemistry Volume 7 ; 7 ; http://www.future-science.com/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2016 ; Future Medicinal Chemistry Volume 8 ; 8 ; http://www.future-science.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2017 ; Future Medicinal Chemistry Volume 9 ; 9 ; https://www.future-science.com/ ; >
-    au < deepCrawl ; exists ; 2018 ; Future Medicinal Chemistry Volume 10 ; 10 ; https://www.future-science.com/ ; >
+    au < finished ; manifest ; 2018 ; Future Medicinal Chemistry Volume 10 ; 10 ; https://www.future-science.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2019 ; Future Medicinal Chemistry Volume 11 ; 11 ; https://www.future-science.com/ ; >
-    au < deepCrawl ; exists ; 2020 ; Future Medicinal Chemistry Volume 12 ; 12 ; https://www.future-science.com/ ; >
+    au < finished ; manifest ; 2020 ; Future Medicinal Chemistry Volume 12 ; 12 ; https://www.future-science.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2021 ; Future Medicinal Chemistry Volume 13 ; 13 ; https://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2022 ; Future Medicinal Chemistry Volume 14 ; 14 ; https://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2023 ; Future Medicinal Chemistry Volume 15 ; 15 ; https://www.future-science.com/ ; >
@@ -205,14 +205,14 @@
 
     au < finished ; finished ; 2015 ; Future Science OA Volume 1 ; 1 ; http://www.future-science.com/ ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2016 ; Future Science OA Volume 2 ; 2 ; http://www.future-science.com/ ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2017 ; Future Science OA Volume 3 ; 3 ; https://www.future-science.com/ ; >
-    au < deepCrawl ; exists ; 2018 ; Future Science OA Volume 4 ; 4 ; https://www.future-science.com/ ; >
+    au < finished ; manifest ; 2017 ; Future Science OA Volume 3 ; 3 ; https://www.future-science.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; Future Science OA Volume 4 ; 4 ; https://www.future-science.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2019 ; Future Science OA Volume 5 ; 5 ; https://www.future-science.com/ ; >
     }
     {
     param[journal_id] = fsoa
 
-    au < deepCrawl ; exists ; 2020 ; Future Science OA Volume 6 ; 6 ; https://www.future-science.com/ ; >
+    au < finished ; manifest ; 2020 ; Future Science OA Volume 6 ; 6 ; https://www.future-science.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2021 ; Future Science OA Volume 7 ; 7 ; https://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2022 ; Future Science OA Volume 8 ; 8 ; https://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2023 ; Future Science OA Volume 9 ; 9 ; https://www.future-science.com/ ; >
@@ -236,7 +236,7 @@
    au < deepCrawl ; exists ; 2018 ; International Journal of Pharmacokinetics Volume 3 ; 3 ; https://www.future-science.com/ ; >
    au < finished ; frozen ; 2019 ; International Journal of Pharmacokinetics Volume 4 ; 4 ; https://www.future-science.com/ ; reingest2.clockss.org:8085 >
    au < deepCrawl ; exists ; 2021 ; International Journal of Pharmacokinetics Volume 5 ; 5 ; https://www.future-science.com/ ; >
-   au < frozen ; exists ; 2022 ; International Journal of Pharmacokinetics Volume 6 ; 6 ; https://www.future-science.com/ ; >
+   au < finished ; manifest ; 2022 ; International Journal of Pharmacokinetics Volume 6 ; 6 ; https://www.future-science.com/ ; reingest4.clockss.org:8082 >
    au < deepCrawl ; exists ; 2023 ; International Journal of Pharmacokinetics Volume 7 ; 7 ; https://www.future-science.com/ ; >
    au < doNotProcess ; exists ; 2024 ; International Journal of Pharmacokinetics Volume 8 ; 8 ; https://www.future-science.com/ ; >
 
@@ -303,7 +303,7 @@
     au < deepCrawl ; exists ; 2017 ; Therapeutic Delivery Volume 8 ; 8 ; https://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2018 ; Therapeutic Delivery Volume 9 ; 9 ; https://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2019 ; Therapeutic Delivery Volume 10 ; 10 ; https://www.future-science.com/ ; >
-    au < deepCrawl ; exists ; 2020 ; Therapeutic Delivery Volume 11 ; 11 ; https://www.future-science.com/ ; >
+    au < finished ; manifest ; 2020 ; Therapeutic Delivery Volume 11 ; 11 ; https://www.future-science.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Therapeutic Delivery Volume 12 ; 12 ; https://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2022 ; Therapeutic Delivery Volume 13 ; 13 ; https://www.future-science.com/ ; >
     au < deepCrawl ; exists ; 2023 ; Therapeutic Delivery Volume 14 ; 14 ; https://www.future-science.com/ ; >
