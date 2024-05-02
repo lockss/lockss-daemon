@@ -100,25 +100,6 @@ POSSIBILITY OF SUCH DAMAGE.
     <org.lockss.util.Default />
   </entry>
   <entry>
-    <string>text/html_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*;DublinCore</string>
-        <string>org.lockss.plugin.atypon.BaseAtyponHtmlMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>
-<!--  oddly, ris files are text/plain -->
-  <entry>
-    <string>text/plain_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*;RIS</string>
-        <string>org.lockss.plugin.atypon.americansocietyofcivilengineers.ASCEMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
   <!--  CLOCKSS does not need this warning message about registering IP addresses -->
     <string>plugin_au_config_user_msg</string>
     <org.lockss.util.Default />
