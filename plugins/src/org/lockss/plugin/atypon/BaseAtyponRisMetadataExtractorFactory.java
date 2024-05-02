@@ -117,7 +117,7 @@ implements FileMetadataExtractorFactory {
       // the "view corrected article"-https://journals.sagepub.com/doi/10.1177/03635465211063901
 
       String ris_type = am.getRaw("TY");
-      if ( !ris_type.toUpperCase().contains("BOOK") && !ris_type.toUpperCase().contains("CHAP") ) {
+      if (ris_type != null && !ris_type.toUpperCase().contains("BOOK") && !ris_type.toUpperCase().contains("CHAP") ) {
 
         // Liverpool move back and forth between Atypon and Cloudpublishing, and use IS for older issue without volume
         //https://www.liverpooluniversitypress.co.uk/action/downloadCitation?doi=10.3828%2F27740306&format=ris&include=cit
