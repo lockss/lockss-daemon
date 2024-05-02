@@ -6,7 +6,7 @@ tpath="/home/$LOGNAME/tmp"
 #mkdir -p $tpath
 
 #list of Down AUs in old tdb file.
-tdbout -Dc param[collection_id],param[year] tdb/usdocspln/united_states_government_printing_office.fdsys.tdb | sort > $tpath/list1a 
+tdbout -Dc param[collection_id],param[year] tdb/usdocspln/united_states_government_publishing_office.fdsys.tdb | sort > $tpath/list1a 
 #list of pending and released AUs in new tdb file.
 tdbout -EMTYRDc param[collection_id],param[year] tdb/usdocspln/united_states_government_publishing_office.tdb | sort > $tpath/list1b 
 #list of pending and released AUs in COURTS tdb file.
