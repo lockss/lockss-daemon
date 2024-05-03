@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>2</string>
+        <string>3</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -92,7 +92,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <map>
             <entry>
                 <string>Substance</string>
-                <string>1</string>
+                <string>2</string>
             </entry>
             <entry>
                 <string>Poll</string>
@@ -132,6 +132,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_substance_url_pattern</string>
         <list>
             <string>"%scontent/book-chapter-files/", base_url</string>
+            <string>"%scontent/book-files/", base_url</string>
         </list>
     </entry>
     <entry>
@@ -141,6 +142,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>1,"%sbooks/%s/%s", base_url, book_serial_id, book_id</string>
             <string>1,"%s(fonts|_next/static|favicons|contents)/", base_url</string>
             <string>1,"%scontent/book-chapter-files", base_url</string>
+            <string>1,"%scontent/book-files", base_url</string>
         </list>
     </entry>
     <entry>
