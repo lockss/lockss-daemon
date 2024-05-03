@@ -433,9 +433,9 @@
     param[journal_id] = fvl
 
     au < frozen ; exists ; 2006 ; Future Virology Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
-    au < frozen ; exists ; 2007 ; Future Virology Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
-    au < frozen ; exists ; 2008 ; Future Virology Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
-    au < frozen ; exists ; 2009 ; Future Virology Volume 4 ; 4 ; https://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2007 ; Future Virology Volume 2 ; 2 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; Future Virology Volume 3 ; 3 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2009 ; Future Virology Volume 4 ; 4 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2010 ; Future Virology Volume 5 ; 5 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2011 ; Future Virology Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Future Virology Volume 7 ; 7 ; http://www.futuremedicine.com/ ; >
@@ -488,8 +488,8 @@
     param[journal_id] = fht
     comment[continued_by] = 1758-4310
 
-    au < frozen ; exists ; 2007 ; Future HIV Therapy Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
-    au < frozen ; exists ; 2008 ; Future HIV Therapy Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2007 ; Future HIV Therapy Volume 1 ; 1 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; Future HIV Therapy Volume 2 ; 2 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     
   }
 
@@ -504,7 +504,7 @@
     comment[continues] = 1746-9600
     # no content after 2010
 
-    au < frozen ; exists ; 2009 ; HIV Therapy Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2009 ; HIV Therapy Volume 3 ; 3 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; HIV Therapy Volume 4 ; 4 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     
   }
@@ -535,7 +535,7 @@
     
     param[journal_id] = imt
 
-    au < frozen ; exists ; 2009 ; Immunotherapy Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2009 ; Immunotherapy Volume 1 ; 1 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2010 ; Immunotherapy Volume 2 ; 2 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; Immunotherapy Volume 3 ; 3 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2012 ; Immunotherapy Volume 4 ; 4 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
@@ -739,9 +739,9 @@
     
     param[journal_id] = nnm
 
-    au < frozen ; exists ; 2006 ; Nanomedicine Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
-    au < frozen ; exists ; 2007 ; Nanomedicine Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
-    au < frozen ; exists ; 2008 ; Nanomedicine Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2006 ; Nanomedicine Volume 1 ; 1 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2007 ; Nanomedicine Volume 2 ; 2 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; Nanomedicine Volume 3 ; 3 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2009 ; Nanomedicine Volume 4 ; 4 ; https://www.futuremedicine.com/ ; >
     au < finished ; manifest ; 2010 ; Nanomedicine Volume 5 ; 5 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2011 ; Nanomedicine Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
@@ -841,9 +841,9 @@
     param[journal_id] = phe
     # no content after 2010
 
-    au < frozen ; exists ; 2007 ; Pediatric Health Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
-    au < frozen ; exists ; 2008 ; Pediatric Health Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
-    au < frozen ; exists ; 2009 ; Pediatric Health Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2007 ; Pediatric Health Volume 1 ; 1 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; Pediatric Health Volume 2 ; 2 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2009 ; Pediatric Health Volume 3 ; 3 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2010 ; Pediatric Health Volume 4 ; 4 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
    
   }
@@ -858,12 +858,12 @@
     
     param[journal_id] = pme
 
-    au < frozen ; exists ; 2004 ; Personalized Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2004 ; Personalized Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2005 ; Personalized Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
-    au < frozen ; exists ; 2006 ; Personalized Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
-    au < frozen ; exists ; 2007 ; Personalized Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ ; >
-    au < frozen ; exists ; 2008 ; Personalized Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
-    au < frozen ; exists ; 2009 ; Personalized Medicine Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2006 ; Personalized Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; Personalized Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; Personalized Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2009 ; Personalized Medicine Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2010 ; Personalized Medicine Volume 7 ; 7 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2011 ; Personalized Medicine Volume 8 ; 8 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; Personalized Medicine Volume 9 ; 9 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
@@ -892,16 +892,16 @@
     
     param[journal_id] = pgs
 
-    au < frozen ; exists ; 2000 ; Pharmacogenomics Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
-    au < frozen ; exists ; 2001 ; Pharmacogenomics Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
-    au < frozen ; exists ; 2002 ; Pharmacogenomics Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
-    au < frozen ; exists ; 2003 ; Pharmacogenomics Volume 4 ; 4 ; https://www.futuremedicine.com/ ; >
-    au < frozen ; exists ; 2004 ; Pharmacogenomics Volume 5 ; 5 ; https://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2000 ; Pharmacogenomics Volume 1 ; 1 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2001 ; Pharmacogenomics Volume 2 ; 2 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2002 ; Pharmacogenomics Volume 3 ; 3 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2003 ; Pharmacogenomics Volume 4 ; 4 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2004 ; Pharmacogenomics Volume 5 ; 5 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2005 ; Pharmacogenomics Volume 6 ; 6 ; https://www.futuremedicine.com/ ; >
-    au < frozen ; exists ; 2006 ; Pharmacogenomics Volume 7 ; 7 ; https://www.futuremedicine.com/ ; >
-    au < frozen ; exists ; 2007 ; Pharmacogenomics Volume 8 ; 8 ; https://www.futuremedicine.com/ ; >
-    au < frozen ; exists ; 2008 ; Pharmacogenomics Volume 9 ; 9 ; https://www.futuremedicine.com/ ; >
-    au < frozen ; exists ; 2009 ; Pharmacogenomics Volume 10 ; 10 ; https://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2006 ; Pharmacogenomics Volume 7 ; 7 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; Pharmacogenomics Volume 8 ; 8 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; Pharmacogenomics Volume 9 ; 9 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; Pharmacogenomics Volume 10 ; 10 ; https://www.futuremedicine.com/ ; reingest2.clockss.org:8085 >
     au < notReady ; exists ; 2010 ; Pharmacogenomics Volume 11 ; 11 ; https://www.futuremedicine.com/ ; > #500 error https://www.futuremedicine.com/cms/10.2217/pgs.10.159/asset/images/medium/figure1.ai.gif
     au < finished ; manifest ; 2011 ; Pharmacogenomics Volume 12 ; 12 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Pharmacogenomics Volume 13 ; 13 ; http://www.futuremedicine.com/ ; >
@@ -931,9 +931,9 @@
     param[journal_id] = rme
 
     au < doNotProcess ; exists ; 2006 ; Regenerative Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ ; >
-    au < frozen ; exists ; 2007 ; Regenerative Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ ; >
-    au < frozen ; exists ; 2008 ; Regenerative Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ ; >
-    au < frozen ; exists ; 2009 ; Regenerative Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ ; >
+    au < finished ; manifest ; 2007 ; Regenerative Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2008 ; Regenerative Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; Regenerative Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; Regenerative Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; Regenerative Medicine Volume 6 ; 6 ; https://www.futuremedicine.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Regenerative Medicine Volume 7 ; 7 ; http://www.futuremedicine.com/ ; reingest3.clockss.org:8083 >
