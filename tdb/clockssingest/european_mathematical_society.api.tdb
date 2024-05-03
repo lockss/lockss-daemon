@@ -1,11 +1,11 @@
 {
   publisher <
-    name = European Mathematical Society Journals (API) ;
-    info[contract] = 2015 ;
-    info[back] = 2010 ;
-    info[tester] = 8 ;
-    info[poller] = 2 ;
-    info[platform] = EMS Custom?
+    name = European Mathematical Society Journals (API) 
+    #info[contract] = 2015 ;
+    #info[back] = 2010 ;
+    #info[tester] = 8 ;
+    #info[poller] = 2 
+    #info[platform] = EMS Custom
   >
 
   plugin = org.lockss.plugin.europeanmathematicalsociety.api.ClockssEuropeanMathematicalSocietyJournalsPlugin
@@ -24,8 +24,8 @@
     param[journal_serial_number] = 1
     param[journal_id] = cmh
 
-     au < testing ; exists ; 1997 ; Commentarii Mathematici Helvetici 1997 ; >
-     au < testing ; exists ; 1998 ; Commentarii Mathematici Helvetici 1998 ; >
+     au < ready ; exists ; 1997 ; Commentarii Mathematici Helvetici 1997 ; >
+     au < ready ; exists ; 1998 ; Commentarii Mathematici Helvetici 1998 ; >
   }
 
   {
@@ -37,8 +37,8 @@
     param[journal_serial_number] = 2
     param[journal_id] = em
 
-     au < testing ; exists ; 1997 ; Elemente der Mathematik 1997 ; >
-     au < testing ; exists ; 1998 ; Elemente der Mathematik 1998 ; >
+     au < ready ; exists ; 1997 ; Elemente der Mathematik 1997 ; >
+     au < ready ; exists ; 1998 ; Elemente der Mathematik 1998 ; >
   }
 
   {
@@ -50,8 +50,8 @@
     param[journal_serial_number] = 3
     param[journal_id] = lem
 
-    au < testing ; exists ; 2009 ; "L’Enseignement Mathématique 2009" ; >
-    au < testing ; exists ; 2010 ; "L’Enseignement Mathématique 2010" ; >
+    au < ready ; exists ; 2009 ; "L’Enseignement Mathématique 2009" ; >
+    au < ready ; exists ; 2010 ; "L’Enseignement Mathématique 2010" ; >
   }
 
   {
@@ -63,8 +63,8 @@
     param[journal_serial_number] = 4
     param[journal_id] = pm
 
-     au < testing ; exists ; 2007 ; Portugaliae Mathematica 2007 ; >
-     au < testing ; exists ; 2008 ; Portugaliae Mathematica 2008 ; >
+     au < ready ; exists ; 2007 ; Portugaliae Mathematica 2007 ; >
+     au < ready ; exists ; 2008 ; Portugaliae Mathematica 2008 ; >
   }
 
   {
@@ -76,8 +76,8 @@
     param[journal_serial_number] = 5
     param[journal_id] = prims
 
-     au < testing ; exists ; 1965 ; Publications of the Research Institute for Mathematical Sciences 1965 ; >
-     au < testing ; exists ; 1966 ; Publications of the Research Institute for Mathematical Sciences 1966 ; >
+     au < ready ; exists ; 1965 ; Publications of the Research Institute for Mathematical Sciences 1965 ; >
+     au < ready ; exists ; 1966 ; Publications of the Research Institute for Mathematical Sciences 1966 ; >
   }
 
   {
@@ -90,7 +90,7 @@
     param[journal_serial_number] = 6
     param[journal_id] = rsmup
 
-     au < testing ; exists ; 2008 ; Rendiconti del Seminario Matematico della Università di Padova 2008 ; >
+     au < ready ; exists ; 2008 ; Rendiconti del Seminario Matematico della Università di Padova 2008 ; >
 
   }
 
@@ -103,8 +103,8 @@
     param[journal_serial_number] = 7
     param[journal_id] = rmi
 
-     au < testing ; exists ; 1985 ; Revista Matemática Iberoamericana 1985 ; >
-     au < testing ; exists ; 1986 ; Revista Matemática Iberoamericana 1986 ; >
+     au < ready ; exists ; 1985 ; Revista Matemática Iberoamericana 1985 ; >
+     au < ready ; exists ; 1986 ; Revista Matemática Iberoamericana 1986 ; >
   }
 
   {
@@ -117,8 +117,8 @@
       param[journal_serial_number] = 9
       param[journal_id] = mag
 
-      au < testing ; exists ; 2018 ; European Mathematical Society Magazine 2018 ; >
-      au < testing ; exists ; 2019 ; European Mathematical Society Magazine 2019 ; >
+      au < ready ; exists ; 2018 ; European Mathematical Society Magazine 2018 ; >
+      au < ready ; exists ; 2019 ; European Mathematical Society Magazine 2019 ; >
 
   }
 
@@ -131,8 +131,8 @@
       param[journal_serial_number] = 10
       param[journal_id] = rlm
 
-       au < testing ; exists ; 2019 ; Rendiconti Lincei 2019 ; >
-       au < testing ; exists ; 2020 ; Rendiconti Lincei 2020 ; >
+       au < ready ; exists ; 2019 ; Rendiconti Lincei 2019 ; >
+       au < ready ; exists ; 2020 ; Rendiconti Lincei 2020 ; >
 
   }
 
@@ -145,10 +145,10 @@
     param[journal_serial_number] = 11
     param[journal_id] = jems
 
-     au < testing ; exists ; 2019 ; Journal of the European Mathematical Society 2019 ; >
-     au < testing ; exists ; 2020 ; Journal of the European Mathematical Society 2020 ; >
-     au < testing ; exists ; 2023 ; Journal of the European Mathematical Society 2023 ; >
-     au < testing ; exists ; 2024 ; Journal of the European Mathematical Society 2024 ; >
+     au < ready ; exists ; 2019 ; Journal of the European Mathematical Society 2019 ; >
+     au < ready ; exists ; 2020 ; Journal of the European Mathematical Society 2020 ; >
+     au < ready ; exists ; 2023 ; Journal of the European Mathematical Society 2023 ; >
+     au < ready ; exists ; 2024 ; Journal of the European Mathematical Society 2024 ; >
 
   }
 
@@ -162,8 +162,8 @@
       param[journal_serial_number] = 12
       param[journal_id] = ifb
 
-       au < testing ; exists ; 2019 ; Interfaces and Free Boundaries 2019 ; >
-       au < testing ; exists ; 2020 ; Interfaces and Free Boundaries 2020 ; >
+       au < ready ; exists ; 2019 ; Interfaces and Free Boundaries 2019 ; >
+       au < ready ; exists ; 2020 ; Interfaces and Free Boundaries 2020 ; >
   }
 
   {
@@ -176,8 +176,8 @@
       param[journal_serial_number] = 13
       param[journal_id] = owr
 
-       au < testing ; exists ; 2019 ; Oberwolfach Reports 2019 ; >
-       au < testing ; exists ; 2020 ; Oberwolfach Reports 2020 ; >
+       au < ready ; exists ; 2019 ; Oberwolfach Reports 2019 ; >
+       au < ready ; exists ; 2020 ; Oberwolfach Reports 2020 ; >
   }
 
   {
@@ -190,8 +190,8 @@
       param[journal_serial_number] = 14
       param[journal_id] = jncg
 
-       au < testing ; exists ; 2019 ; Journal of Noncommutative Geometry 2019 ; >
-       au < testing ; exists ; 2020 ; Journal of Noncommutative Geometry 2020 ; >
+       au < ready ; exists ; 2019 ; Journal of Noncommutative Geometry 2019 ; >
+       au < ready ; exists ; 2020 ; Journal of Noncommutative Geometry 2020 ; >
   }
 
   {
@@ -204,8 +204,8 @@
       param[journal_serial_number] = 15
       param[journal_id] = ggd
 
-       au < testing ; exists ; 2019 ; Groups, Geometry, and Dynamics 2019 ; >
-       au < testing ; exists ; 2020 ; Groups, Geometry, and Dynamics 2020 ; >
+       au < ready ; exists ; 2019 ; Groups, Geometry, and Dynamics 2019 ; >
+       au < ready ; exists ; 2020 ; Groups, Geometry, and Dynamics 2020 ; >
   }
 
   {
@@ -218,8 +218,8 @@
       param[journal_serial_number] = 16
       param[journal_id] = qt
 
-       au < testing ; exists ; 2019 ; Quantum Topology 2019 ; >
-       au < testing ; exists ; 2020 ; Quantum Topology 2020 ; >
+       au < ready ; exists ; 2019 ; Quantum Topology 2019 ; >
+       au < ready ; exists ; 2020 ; Quantum Topology 2020 ; >
   }
 
   {
@@ -232,8 +232,8 @@
       param[journal_serial_number] = 17
       param[journal_id] = jst
 
-       au < testing ; exists ; 2019 ; Journal of Spectral Theory 2019 ; >
-       au < testing ; exists ; 2020 ; Journal of Spectral Theory 2020 ; >
+       au < ready ; exists ; 2019 ; Journal of Spectral Theory 2019 ; >
+       au < ready ; exists ; 2020 ; Journal of Spectral Theory 2020 ; >
   }
 
   {
@@ -246,8 +246,8 @@
       param[journal_serial_number] = 18
       param[journal_id] = jfg
 
-       au < testing ; exists ; 2019 ; Journal of Fractal Geometry 2019 ; >
-       au < testing ; exists ; 2020 ; Journal of Fractal Geometry 2020 ; >
+       au < ready ; exists ; 2019 ; Journal of Fractal Geometry 2019 ; >
+       au < ready ; exists ; 2020 ; Journal of Fractal Geometry 2020 ; >
   }
 
   {
@@ -260,8 +260,8 @@
       param[journal_serial_number] = 19
       param[journal_id] = emss
 
-       au < testing ; exists ; 2019 ; EMS Surveys in Mathematical Sciences 2019 ; >
-       au < testing ; exists ; 2020 ; EMS Surveys in Mathematical Sciences 2020 ; >
+       au < ready ; exists ; 2019 ; EMS Surveys in Mathematical Sciences 2019 ; >
+       au < ready ; exists ; 2020 ; EMS Surveys in Mathematical Sciences 2020 ; >
   }
 
   {
@@ -274,23 +274,23 @@
       param[journal_serial_number] = 20
       param[journal_id] = aihpd
 
-       au < testing ; exists ; 2019 ; Annales de l’Institut Henri Poincaré D 2019 ; >
-       au < testing ; exists ; 2020 ; Annales de l’Institut Henri Poincaré D 2020 ; >
+       au < ready ; exists ; 2019 ; Annales de l’Institut Henri Poincaré D 2019 ; >
+       au < ready ; exists ; 2020 ; Annales de l’Institut Henri Poincaré D 2020 ; >
   }
 
-  {
-      title <
-          name = Algebraic Geometry ;
-          issn = 2308-5827 ;
-          eIssn = 2308-5835
-      >
+  #{ This serial has no content when the tdb file is created
+      #title <
+          #name = Algebraic Geometry ;
+          #issn = 2308-5827 ;
+          #eIssn = 2308-5835
+      #>
 
-      param[journal_serial_number] = 21
-      param[journal_id] = ag
+      #param[journal_serial_number] = 21
+      #param[journal_id] = ag
 
-       au < testing ; exists ; 2019 ; Algebraic Geometry 2019 ; >
-       au < testing ; exists ; 2020 ; Algebraic Geometry 2020 ; >
-  }
+       #au < exists ; exists ; 2019 ; Algebraic Geometry 2019 ; >
+       #au < exists ; exists ; 2020 ; Algebraic Geometry 2020 ; >
+  #}
 
   {
       title <
@@ -302,8 +302,8 @@
       param[journal_serial_number] = 22
       param[journal_id] = jca
 
-       au < testing ; exists ; 2019 ; Journal of Combinatorial Algebra 2019 ; >
-       au < testing ; exists ; 2020 ; Journal of Combinatorial Algebra 2020 ; >
+       au < ready ; exists ; 2019 ; Journal of Combinatorial Algebra 2019 ; >
+       au < ready ; exists ; 2020 ; Journal of Combinatorial Algebra 2020 ; >
   }
 
   {
@@ -316,8 +316,8 @@
       param[journal_serial_number] = 23
       param[journal_id] = msl
 
-       au < testing ; exists ; 2019 ; Mathematical Statistics and Learning 2019 ; >
-       au < testing ; exists ; 2020 ; Mathematical Statistics and Learning 2020 ; >
+       au < ready ; exists ; 2019 ; Mathematical Statistics and Learning 2019 ; >
+       au < ready ; exists ; 2020 ; Mathematical Statistics and Learning 2020 ; >
   }
 
 
@@ -331,8 +331,8 @@
       param[journal_serial_number] = 2678
       param[journal_id] = aihpc
 
-       au < testing ; exists ; 2019 ; Annales de l'Institut Henri Poincaré C 2019 ; >
-       au < testing ; exists ; 2020 ; Annales de l'Institut Henri Poincaré C 2020 ; >
+       au < ready ; exists ; 2019 ; Annales de l'Institut Henri Poincaré C 2019 ; >
+       au < ready ; exists ; 2020 ; Annales de l'Institut Henri Poincaré C 2020 ; >
   }
 
   {
@@ -345,7 +345,7 @@
       param[journal_serial_number] = 3345
       param[journal_id] = dm
 
-       au < testing ; exists ; 2019 ; Documenta Mathematica 2019 ; >
-       au < testing ; exists ; 2020 ; Documenta Mathematica 2020 ; >
+       au < ready ; exists ; 2019 ; Documenta Mathematica 2019 ; >
+       au < ready ; exists ; 2020 ; Documenta Mathematica 2020 ; >
   }
 }
