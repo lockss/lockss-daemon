@@ -25,7 +25,7 @@
         param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/casalini-released/
 
         au < readySource ; finished ; 2023 ; Casalini Libri Source Content 2023_01 ; 2023_01 >
-        au < expected ; exists ; 2024 ; Casalini Libri Source Content 2024_01 ; 2024_01 >
+        au < manifest ; exists ; 2024 ; Casalini Libri Source Content 2024_01 ; 2024_01 >
 
       }
 
@@ -60,7 +60,7 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/casalinibooks-released/
 
       au < readySource ; finished ; 2023 ; Casalini Books Source Content 2023 ; 2023 >
-      au < expected ; exists ; 2024 ; Casalini Books Source Content 2024 ; 2024 >
+      au < manifest ; exists ; 2024 ; Casalini Books Source Content 2024 ; 2024 >
 
     }
   }

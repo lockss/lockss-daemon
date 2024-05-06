@@ -11798,7 +11798,7 @@
 
     au < manifest ; exists ; 2022 ; HUMAN BEHAVIOR AND EMERGING TECHNOLOGIES Volume 2022 ; 2022 ; 2022 ; >
     au < manifest ; exists ; 2023 ; HUMAN BEHAVIOR AND EMERGING TECHNOLOGIES Volume 2023 ; 2023 ; 2023 ; >
-    au < exists ; exists ; 2024 ; HUMAN BEHAVIOR AND EMERGING TECHNOLOGIES Volume 2024 ; 2024 ; 2024 ; >
+    au < manifest ; exists ; 2024 ; HUMAN BEHAVIOR AND EMERGING TECHNOLOGIES Volume 2024 ; 2024 ; 2024 ; >
 
   }
 
@@ -11815,7 +11815,7 @@
 
     au < manifest ; exists ; 2022 ; INTERNATIONAL JOURNAL OF CLINICAL PRACTICE Volume 2022 ; 2022 ; 2022 ; >
     au < manifest ; exists ; 2023 ; INTERNATIONAL JOURNAL OF CLINICAL PRACTICE Volume 2023 ; 2023 ; 2023 ; >
-    au < exists ; exists ; 2024 ; INTERNATIONAL JOURNAL OF CLINICAL PRACTICE Volume 2024 ; 2024 ; 2024 ; >
+    au < manifest ; exists ; 2024 ; INTERNATIONAL JOURNAL OF CLINICAL PRACTICE Volume 2024 ; 2024 ; 2024 ; >
 
   }
 
@@ -11830,9 +11830,9 @@
     param[journal_id] = itees
     comment[years] = 2022-current
 
-    au < exists ; exists ; 2022 ; INTERNATIONAL TRANSACTIONS ON ELECTRICAL ENERGY SYSTEMS Volume 2022 ; 2022 ; 2022 ; >
-    au < exists ; exists ; 2023 ; INTERNATIONAL TRANSACTIONS ON ELECTRICAL ENERGY SYSTEMS Volume 2023 ; 2023 ; 2023 ; >
-    au < exists ; exists ; 2024 ; INTERNATIONAL TRANSACTIONS ON ELECTRICAL ENERGY SYSTEMS Volume 2024 ; 2024 ; 2024 ; >
+    au < manifest ; exists ; 2022 ; INTERNATIONAL TRANSACTIONS ON ELECTRICAL ENERGY SYSTEMS Volume 2022 ; 2022 ; 2022 ; >
+    au < manifest ; exists ; 2023 ; INTERNATIONAL TRANSACTIONS ON ELECTRICAL ENERGY SYSTEMS Volume 2023 ; 2023 ; 2023 ; >
+    au < manifest ; exists ; 2024 ; INTERNATIONAL TRANSACTIONS ON ELECTRICAL ENERGY SYSTEMS Volume 2024 ; 2024 ; 2024 ; >
 
   }
 
@@ -11847,8 +11847,8 @@
     param[journal_id] = jtsp
     comment[years] = 2022-current
 
-    au < exists ; exists ; 2022 ; JOURNAL OF THEORETICAL SOCIAL PSYCHOLOGY Volume 2022 ; 2022 ; 2022 ; >
-    au < exists ; exists ; 2023 ; JOURNAL OF THEORETICAL SOCIAL PSYCHOLOGY Volume 2023 ; 2023 ; 2023 ; >
+    au < manifest ; exists ; 2022 ; JOURNAL OF THEORETICAL SOCIAL PSYCHOLOGY Volume 2022 ; 2022 ; 2022 ; >
+    au < manifest ; exists ; 2023 ; JOURNAL OF THEORETICAL SOCIAL PSYCHOLOGY Volume 2023 ; 2023 ; 2023 ; >
     au < exists ; exists ; 2024 ; JOURNAL OF THEORETICAL SOCIAL PSYCHOLOGY Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -11864,9 +11864,9 @@
     param[journal_id] = jzs
     comment[years] = 2022-current
 
-    au < exists ; exists ; 2022 ; JOURNAL OF ZOOLOGICAL SYSTEMATICS AND EVOLUTIONARY RESEARCH Volume 2022 ; 2022 ; 2022 ; >
-    au < exists ; exists ; 2023 ; JOURNAL OF ZOOLOGICAL SYSTEMATICS AND EVOLUTIONARY RESEARCH Volume 2023 ; 2023 ; 2023 ; >
-    au < exists ; exists ; 2024 ; JOURNAL OF ZOOLOGICAL SYSTEMATICS AND EVOLUTIONARY RESEARCH Volume 2024 ; 2024 ; 2024 ; >
+    au < manifest ; exists ; 2022 ; JOURNAL OF ZOOLOGICAL SYSTEMATICS AND EVOLUTIONARY RESEARCH Volume 2022 ; 2022 ; 2022 ; >
+    au < manifest ; exists ; 2023 ; JOURNAL OF ZOOLOGICAL SYSTEMATICS AND EVOLUTIONARY RESEARCH Volume 2023 ; 2023 ; 2023 ; >
+    au < manifest ; exists ; 2024 ; JOURNAL OF ZOOLOGICAL SYSTEMATICS AND EVOLUTIONARY RESEARCH Volume 2024 ; 2024 ; 2024 ; >
 
   }
 
@@ -11881,8 +11881,8 @@
     param[journal_id] = mdp
     comment[years] = 2022-current
 
-    au < exists ; exists ; 2022 ; MATERIAL DESIGN & PROCESSING COMMUNICATIONS Volume 2022 ; 2022 ; 2022 ; >
-    au < exists ; exists ; 2023 ; MATERIAL DESIGN & PROCESSING COMMUNICATIONS Volume 2023 ; 2023 ; 2023 ; >
+    au < manifest ; exists ; 2022 ; MATERIAL DESIGN & PROCESSING COMMUNICATIONS Volume 2022 ; 2022 ; 2022 ; >
+    au < manifest ; exists ; 2023 ; MATERIAL DESIGN & PROCESSING COMMUNICATIONS Volume 2023 ; 2023 ; 2023 ; >
     au < exists ; exists ; 2024 ; MATERIAL DESIGN & PROCESSING COMMUNICATIONS Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -11898,8 +11898,8 @@
     param[journal_id] = pcrys
     comment[years] = 2022-current
 
-    au < exists ; exists ; 2022 ; POLYMER CRYSTALLIZATION Volume 2022 ; 2022 ; 2022 ; >
-    au < exists ; exists ; 2023 ; POLYMER CRYSTALLIZATION Volume 2023 ; 2023 ; 2023 ; >
+    au < manifest ; exists ; 2022 ; POLYMER CRYSTALLIZATION Volume 2022 ; 2022 ; 2022 ; >
+    au < manifest ; exists ; 2023 ; POLYMER CRYSTALLIZATION Volume 2023 ; 2023 ; 2023 ; >
     au < exists ; exists ; 2024 ; POLYMER CRYSTALLIZATION Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -11915,9 +11915,9 @@
     param[journal_id] = que
     comment[years] = 2022-current
 
-    au < exists ; exists ; 2022 ; QUANTUM ENGINEERING Volume 2022 ; 2022 ; 2022 ; >
-    au < exists ; exists ; 2023 ; QUANTUM ENGINEERING Volume 2023 ; 2023 ; 2023 ; >
-    au < exists ; exists ; 2024 ; QUANTUM ENGINEERING Volume 2024 ; 2024 ; 2024 ; >
+    au < manifest ; exists ; 2022 ; QUANTUM ENGINEERING Volume 2022 ; 2022 ; 2022 ; >
+    au < manifest ; exists ; 2023 ; QUANTUM ENGINEERING Volume 2023 ; 2023 ; 2023 ; >
+    au < manifest ; exists ; 2024 ; QUANTUM ENGINEERING Volume 2024 ; 2024 ; 2024 ; >
 
   }
 
@@ -11932,9 +11932,9 @@
     param[journal_id] = tbj
     comment[years] = 2022-current
 
-    au < exists ; exists ; 2022 ; THE BREAST JOURNAL Volume 2022 ; 2022 ; 2022 ; >
-    au < exists ; exists ; 2023 ; THE BREAST JOURNAL Volume 2023 ; 2023 ; 2023 ; >
-    au < exists ; exists ; 2024 ; THE BREAST JOURNAL Volume 2024 ; 2024 ; 2024 ; >
+    au < manifest ; exists ; 2022 ; THE BREAST JOURNAL Volume 2022 ; 2022 ; 2022 ; >
+    au < manifest ; exists ; 2023 ; THE BREAST JOURNAL Volume 2023 ; 2023 ; 2023 ; >
+    au < manifest ; exists ; 2024 ; THE BREAST JOURNAL Volume 2024 ; 2024 ; 2024 ; >
 
   }
 
@@ -11949,9 +11949,9 @@
     param[journal_id] = tsmed
     comment[years] = 2022-current
 
-    au < exists ; exists ; 2022 ; TRANSLATIONAL SPORTS MEDICINE Volume 2022 ; 2022 ; 2022 ; >
-    au < exists ; exists ; 2023 ; TRANSLATIONAL SPORTS MEDICINE Volume 2023 ; 2023 ; 2023 ; >
-    au < exists ; exists ; 2024 ; TRANSLATIONAL SPORTS MEDICINE Volume 2024 ; 2024 ; 2024 ; >
+    au < manifest ; exists ; 2022 ; TRANSLATIONAL SPORTS MEDICINE Volume 2022 ; 2022 ; 2022 ; >
+    au < manifest ; exists ; 2023 ; TRANSLATIONAL SPORTS MEDICINE Volume 2023 ; 2023 ; 2023 ; >
+    au < manifest ; exists ; 2024 ; TRANSLATIONAL SPORTS MEDICINE Volume 2024 ; 2024 ; 2024 ; >
 
   }
 
