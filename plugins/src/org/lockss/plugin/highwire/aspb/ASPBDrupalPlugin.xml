@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>deprecated</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -41,11 +41,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Society of Plant Biologists Plugin</string>
+    <string>American Society of Plant Biologists Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -74,6 +74,6 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Society of Plant Biologists Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"American Society of Plant Biologists Plugin (Legacy), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
 </map>
