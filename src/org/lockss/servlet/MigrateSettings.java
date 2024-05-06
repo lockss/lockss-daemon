@@ -1,7 +1,5 @@
 package org.lockss.servlet;
 
-import org.apache.commons.csv.CSVFormat;
-import org.apache.commons.csv.CSVParser;
 import org.apache.commons.lang.RandomStringUtils;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
@@ -19,15 +17,8 @@ import org.lockss.util.*;
 import org.lockss.util.urlconn.LockssUrlConnection;
 import org.mortbay.html.*;
 import org.mortbay.http.HttpRequest;
-import org.w3c.dom.Document;
-import org.xml.sax.InputSource;
 
 import javax.servlet.ServletException;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathExpression;
-import javax.xml.xpath.XPathFactory;
 import java.io.*;
 import java.net.URL;
 import java.util.Properties;
@@ -247,7 +238,9 @@ public class MigrateSettings extends LockssServlet {
         case ACTION_LOAD_V2_CFG:
           try {
             initParamsFromFormData();
-            Configuration v2cfg = getConfigFromMigrationTarget();
+            Configuration v2cfg =
+              migrationMgr.getConfigFromMigrationTarget(hostname, cfgUiPort,
+                                                        userName, userPass);
             mCfg = getMigrationConfig(hostname, v2cfg);
             isTargetConfigFetched = true;
             fetchError = null;
@@ -659,87 +652,6 @@ public class MigrateSettings extends LockssServlet {
     tbl.add("&nbsp;");
     tbl.newCell();
     tbl.add(elem);
-  }
-
-  /**
-   * Fetches and returns the Configuration Status table of a remote machine. The set of
-   * parameters returned by this method does not reflect the full set of parameters on
-   * the remote machine since, for example, passwords are not included.
-   *
-   * @return A {@link Properties} containing the configuration from the remote machine.
-   * @throws IOException Thrown if there were network errors, or if the server response was
-   * not a 200.
-   */
-  private Configuration getConfigFromMigrationTarget() throws IOException {
-    URL cfgStatUrl = new URL("http", hostname, cfgUiPort,
-        "/DaemonStatus?table=ConfigStatus&output=csv");
-    log.info("url = " + cfgStatUrl.toString());
-
-    LockssUrlConnection conn = UrlUtil.openConnection(cfgStatUrl.toString());
-    conn.setCredentials(userName, userPass);
-    conn.setUserAgent("lockss");
-    conn.execute();
-
-    if (conn.getResponseCode() == 200) {
-      try (InputStream csvInput = conn.getResponseInputStream()) {
-        return ConfigManager.fromProperties(propsFromCsv(csvInput));
-      }
-    }
-
-    throw new IOException(
-        "Unexpected response from migration target: " + conn.getResponseCode());
-  }
-
-  /**
-   * Fetches the Platform Status page of a remote machine and returns its current
-   * working directory.
-   * @return A {@link String} containing the remote machine's current working directory.
-   * @throws IOException Thrown if there were network errors, or if the server response
-   * was not a 200.
-   */
-  private String getCwdOfMigrationTarget() throws IOException {
-    URL cfgStatUrl = new URL("http", hostname, cfgUiPort,
-        "/DaemonStatus?table=PlatformStatus&output=xml");
-    log.info("url = " + cfgStatUrl.toString());
-
-    LockssUrlConnection conn = UrlUtil.openConnection(cfgStatUrl.toString());
-    conn.setCredentials(userName, userPass);
-    conn.setUserAgent("lockss");
-    conn.execute();
-
-    if (conn.getResponseCode() == 200) {
-      try (InputStream xmlInput = conn.getResponseInputStream()) {
-        // FIXME: The factory and XPath expression could be constants
-        InputSource inputSource = new InputSource(xmlInput);
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder = factory.newDocumentBuilder();
-        Document doc = builder.parse(inputSource);
-        XPath xpath = XPathFactory.newInstance().newXPath();
-        XPathExpression cwdExp = xpath.compile("/table/summaryinfo/title[text()='Cwd']/following-sibling::value");
-        return XPathUtil.evaluateString(cwdExp, doc);
-      } catch (Throwable t) {
-        throw new IOException("Error parsing platform status XML", t);
-      }
-    }
-
-    throw new IOException(
-        "Unexpected response from migration target: " + conn.getResponseCode());
-  }
-
-  /**
-   * Transforms an {@link InputStream} containing the CSV output from a Configuration Status Table
-   * into a {@link Properties}.
-   *
-   * @param csvStream
-   * @return
-   * @throws IOException
-   */
-  public static Properties propsFromCsv(InputStream csvStream) throws IOException {
-    Properties result = new Properties();
-    InputStreamReader csvReader = new InputStreamReader(csvStream);
-    CSVParser csvParser = new CSVParser(csvReader, CSVFormat.DEFAULT.withHeader("Name", "Value"));
-    csvParser.forEach(record -> result.put(record.get("Name"), record.get("Value")));
-    return result;
   }
 
   /**

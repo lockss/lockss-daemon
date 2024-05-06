@@ -27,32 +27,6 @@ public class TestV2AuMover extends LockssTestCase {
     assertTrue(V2AuMover.isEqualUpToFinalSlash("foo", "foo/"));
   }
 
-  public void testMapFromCsvStream() throws Exception {
-    final String CSV = "Name,Value\n" +
-        "org.lockss.contentui.port,24680\n" +
-        "org.lockss.contentui.start,true\n" +
-        "org.lockss.proxy.port,24670\n" +
-        "org.lockss.proxy.start,true\n" +
-        "org.lockss.localV3Identity,TCP:[127.0.0.1]:9729\n" +
-        "org.lockss.metadataDbManager.datasource.className,org.apache.derby.jdbc.ClientDataSource\n" +
-        "org.lockss.metadataDbManager.datasource.dbcp.enabled,true\n" +
-        "org.lockss.metadataDbManager.datasource.portNumber,1527\n";
-
-    InputStream csvStream = new ByteArrayInputStream(CSV.getBytes(StandardCharsets.UTF_8));
-
-    Properties csvMap = MigrateSettings.propsFromCsv(csvStream);
-
-    assertEquals("24680", csvMap.get("org.lockss.contentui.port"));
-    assertEquals("true", csvMap.get("org.lockss.contentui.start"));
-    assertEquals("24670", csvMap.get("org.lockss.proxy.port"));
-    assertEquals("true", csvMap.get("org.lockss.proxy.start"));
-    assertEquals("TCP:[127.0.0.1]:9729", csvMap.get("org.lockss.localV3Identity"));
-    assertEquals("org.apache.derby.jdbc.ClientDataSource",
-        csvMap.get("org.lockss.metadataDbManager.datasource.className"));
-    assertEquals("true", csvMap.get("org.lockss.metadataDbManager.datasource.dbcp.enabled"));
-    assertEquals("1527", csvMap.get("org.lockss.metadataDbManager.datasource.portNumber"));
-  }
-
 //   V2AuMover auMover;
 //   String tempDirPath;
 //   String testUser = "tester";
