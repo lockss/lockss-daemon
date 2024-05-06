@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>26</string>
+    <string>27</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -131,6 +131,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <!-- https://www.govinfo.gov/content/pkg/DCPD-201800002.zip-->
       <string>2,"^%scontent/(granule|pkg)/[^/]+\.zip$", base_url</string>
       <string>1,"^%scontent/(granule|pkg)/%s-", base_url, collection_id</string>
+      <string>1,"^%smetadata/pkg/%s-.*/mods\.xml$", base_url, collection_id</string>
       <!-- This is a legitimate URL... -->
       <string>1,"^%sapp/dynamic/stylesheets/bootstrap/bootstrap\.min\.css", base_url</string>
       <!-- ...with incorrect relative URLs to ancillary files and error pages are served as 200 ad infinitum -->
