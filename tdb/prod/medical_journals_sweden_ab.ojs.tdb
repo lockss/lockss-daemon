@@ -40,11 +40,11 @@
       attr[start_stem] = 
       #First publication Volume 58, 1923. Older content not online 20221201
 
-      au < exists ; 2020 ; Journal of Plastic Surgery and Hand Surgery Volume 2020 ; 55 ; 2020 >
-      au < exists ; 2021 ; Journal of Plastic Surgery and Hand Surgery Volume 2021 ; 56 ; 2021 >
-      au < exists ; 2022 ; Journal of Plastic Surgery and Hand Surgery Volume 2022 ; 57 ; 2022 >
-      au < exists ; 2023 ; Journal of Plastic Surgery and Hand Surgery Volume 2023 ; 58 ; 2023 >
-      au < exists ; 2024 ; Journal of Plastic Surgery and Hand Surgery Volume 2024 ; 59 ; 2024 >
+      au < manifest ; 2020 ; Journal of Plastic Surgery and Hand Surgery Volume 2020 ; 55 ; 2020 >
+      au < manifest ; 2021 ; Journal of Plastic Surgery and Hand Surgery Volume 2021 ; 56 ; 2021 >
+      au < manifest ; 2022 ; Journal of Plastic Surgery and Hand Surgery Volume 2022 ; 57 ; 2022 >
+      au < manifest ; 2023 ; Journal of Plastic Surgery and Hand Surgery Volume 2023 ; 58 ; 2023 >
+      au < manifest ; 2024 ; Journal of Plastic Surgery and Hand Surgery Volume 2024 ; 59 ; 2024 >
 
   }
 
@@ -60,7 +60,7 @@
       attr[start_stem] = 
       #First publication Volume 2, 1921.
 
-      au < exists ; 1921 ; Acta Dermato-Venereologica Volume 1921 ; 1 ; 1921 >
+      au < manifest ; 1921 ; Acta Dermato-Venereologica Volume 1921 ; 1 ; 1921 >
       au < doesNotExist ; 1922 ; Acta Dermato-Venereologica Volume 1922 ; 2 ; 1922 >
       au < doesNotExist ; 1923 ; Acta Dermato-Venereologica Volume 1923 ; 3 ; 1923 >
       au < doesNotExist ; 1924 ; Acta Dermato-Venereologica Volume 1924 ; 4 ; 1924 >
@@ -75,7 +75,7 @@
       au < doesNotExist ; 1933 ; Acta Dermato-Venereologica Volume 1933 ; 13 ; 1933 >
       au < doesNotExist ; 1934 ; Acta Dermato-Venereologica Volume 1934 ; 14 ; 1934 >
       au < doesNotExist ; 1935 ; Acta Dermato-Venereologica Volume 1935 ; 15 ; 1935 >
-      au < exists ; 1936 ; Acta Dermato-Venereologica Volume 1936 ; 17 ; 1936 >
+      au < manifest ; 1936 ; Acta Dermato-Venereologica Volume 1936 ; 17 ; 1936 >
       au < doesNotExist ; 1937 ; Acta Dermato-Venereologica Volume 1937 ; 17 ; 1937 >
       au < doesNotExist ; 1938 ; Acta Dermato-Venereologica Volume 1938 ; 18 ; 1938 >
       au < doesNotExist ; 1939 ; Acta Dermato-Venereologica Volume 1939 ; 19 ; 1939 >
@@ -85,85 +85,85 @@
       au < doesNotExist ; 1943 ; Acta Dermato-Venereologica Volume 1943 ; 23 ; 1943 >
       au < doesNotExist ; 1944 ; Acta Dermato-Venereologica Volume 1944 ; 24 ; 1944 >
       au < doesNotExist ; 1945 ; Acta Dermato-Venereologica Volume 1945 ; 25 ; 1945 >
-      au < exists ; 1946 ; Acta Dermato-Venereologica Volume 1946 ; 26 ; 1946 >
-      au < exists ; 1947 ; Acta Dermato-Venereologica Volume 1947 ; 27 ; 1947 >
+      au < manifest ; 1946 ; Acta Dermato-Venereologica Volume 1946 ; 26 ; 1946 >
+      au < manifest ; 1947 ; Acta Dermato-Venereologica Volume 1947 ; 27 ; 1947 >
       au < doesNotExist ; 1948 ; Acta Dermato-Venereologica Volume 1948 ; 28 ; 1948 >
       au < doesNotExist ; 1949 ; Acta Dermato-Venereologica Volume 1949 ; 29 ; 1949 >
-      au < exists ; 1950 ; Acta Dermato-Venereologica Volume 1950 ; 30 ; 1950 >
-      au < exists ; 1951 ; Acta Dermato-Venereologica Volume 1951 ; 31 ; 1951 >
+      au < manifest ; 1950 ; Acta Dermato-Venereologica Volume 1950 ; 30 ; 1950 >
+      au < manifest ; 1951 ; Acta Dermato-Venereologica Volume 1951 ; 31 ; 1951 >
       au < doesNotExist ; 1952 ; Acta Dermato-Venereologica Volume 1952 ; 32 ; 1952 >
       au < doesNotExist ; 1953 ; Acta Dermato-Venereologica Volume 1953 ; 33 ; 1953 >
       au < doesNotExist ; 1954 ; Acta Dermato-Venereologica Volume 1954 ; 34 ; 1954 >
-      au < exists ; 1955 ; Acta Dermato-Venereologica Volume 1955 ; 35 ; 1955 >
-      au < exists ; 1956 ; Acta Dermato-Venereologica Volume 1956 ; 36 ; 1956 >
-      au < exists ; 1957 ; Acta Dermato-Venereologica Volume 1957 ; 37 ; 1957 >
-      au < exists ; 1958 ; Acta Dermato-Venereologica Volume 1958 ; 38 ; 1958 >
+      au < manifest ; 1955 ; Acta Dermato-Venereologica Volume 1955 ; 35 ; 1955 >
+      au < manifest ; 1956 ; Acta Dermato-Venereologica Volume 1956 ; 36 ; 1956 >
+      au < manifest ; 1957 ; Acta Dermato-Venereologica Volume 1957 ; 37 ; 1957 >
+      au < manifest ; 1958 ; Acta Dermato-Venereologica Volume 1958 ; 38 ; 1958 >
       au < doesNotExist ; 1959 ; Acta Dermato-Venereologica Volume 1959 ; 39 ; 1959 >
-      au < exists ; 1960 ; Acta Dermato-Venereologica Volume 1960 ; 40 ; 1960 >
-      au < exists ; 1961 ; Acta Dermato-Venereologica Volume 1961 ; 41 ; 1961 >
-      au < exists ; 1962 ; Acta Dermato-Venereologica Volume 1962 ; 42 ; 1962 >
-      au < exists ; 1963 ; Acta Dermato-Venereologica Volume 1963 ; 43 ; 1963 >
-      au < exists ; 1964 ; Acta Dermato-Venereologica Volume 1964 ; 44 ; 1964 >
-      au < exists ; 1965 ; Acta Dermato-Venereologica Volume 1965 ; 45 ; 1965 >
-      au < exists ; 1966 ; Acta Dermato-Venereologica Volume 1966 ; 46 ; 1966 >
+      au < manifest ; 1960 ; Acta Dermato-Venereologica Volume 1960 ; 40 ; 1960 >
+      au < manifest ; 1961 ; Acta Dermato-Venereologica Volume 1961 ; 41 ; 1961 >
+      au < manifest ; 1962 ; Acta Dermato-Venereologica Volume 1962 ; 42 ; 1962 >
+      au < manifest ; 1963 ; Acta Dermato-Venereologica Volume 1963 ; 43 ; 1963 >
+      au < manifest ; 1964 ; Acta Dermato-Venereologica Volume 1964 ; 44 ; 1964 >
+      au < manifest ; 1965 ; Acta Dermato-Venereologica Volume 1965 ; 45 ; 1965 >
+      au < manifest ; 1966 ; Acta Dermato-Venereologica Volume 1966 ; 46 ; 1966 >
       au < doesNotExist ; 1967 ; Acta Dermato-Venereologica Volume 1967 ; 47 ; 1967 >
-      au < exists ; 1968 ; Acta Dermato-Venereologica Volume 1968 ; 48 ; 1968 >
-      au < exists ; 1969 ; Acta Dermato-Venereologica Volume 1969 ; 49 ; 1969 >
-      au < exists ; 1970 ; Acta Dermato-Venereologica Volume 1970 ; 50 ; 1970 >
-      au < exists ; 1971 ; Acta Dermato-Venereologica Volume 1971 ; 51 ; 1971 >
-      au < exists ; 1972 ; Acta Dermato-Venereologica Volume 1972 ; 52 ; 1972 >
-      au < exists ; 1973 ; Acta Dermato-Venereologica Volume 1973 ; 53 ; 1973 >
-      au < exists ; 1974 ; Acta Dermato-Venereologica Volume 1974 ; 54 ; 1974 >
-      au < exists ; 1975 ; Acta Dermato-Venereologica Volume 1975 ; 55 ; 1975 >
-      au < exists ; 1976 ; Acta Dermato-Venereologica Volume 1976 ; 56 ; 1976 >
-      au < exists ; 1977 ; Acta Dermato-Venereologica Volume 1977 ; 57 ; 1977 >
-      au < exists ; 1978 ; Acta Dermato-Venereologica Volume 1978 ; 58 ; 1978 >
-      au < exists ; 1979 ; Acta Dermato-Venereologica Volume 1979 ; 59 ; 1979 >
-      au < exists ; 1980 ; Acta Dermato-Venereologica Volume 1980 ; 60 ; 1980 >
-      au < exists ; 1981 ; Acta Dermato-Venereologica Volume 1981 ; 61 ; 1981 >
-      au < exists ; 1982 ; Acta Dermato-Venereologica Volume 1982 ; 62 ; 1982 >
-      au < exists ; 1983 ; Acta Dermato-Venereologica Volume 1983 ; 63 ; 1983 >
-      au < exists ; 1984 ; Acta Dermato-Venereologica Volume 1984 ; 64 ; 1984 >
-      au < exists ; 1985 ; Acta Dermato-Venereologica Volume 1985 ; 65 ; 1985 >
-      au < exists ; 1986 ; Acta Dermato-Venereologica Volume 1986 ; 66 ; 1986 >
-      au < exists ; 1987 ; Acta Dermato-Venereologica Volume 1987 ; 67 ; 1987 >
-      au < exists ; 1988 ; Acta Dermato-Venereologica Volume 1988 ; 68 ; 1988 >
-      au < exists ; 1989 ; Acta Dermato-Venereologica Volume 1989 ; 69 ; 1989 >
-      au < exists ; 1990 ; Acta Dermato-Venereologica Volume 1990 ; 70 ; 1990 >
-      au < exists ; 1991 ; Acta Dermato-Venereologica Volume 1991 ; 71 ; 1991 >
-      au < exists ; 1992 ; Acta Dermato-Venereologica Volume 1992 ; 72 ; 1992 >
-      au < exists ; 1993 ; Acta Dermato-Venereologica Volume 1993 ; 73 ; 1993 >
-      au < exists ; 1994 ; Acta Dermato-Venereologica Volume 1994 ; 74 ; 1994 >
-      au < exists ; 1995 ; Acta Dermato-Venereologica Volume 1995 ; 75 ; 1995 >
-      au < exists ; 1996 ; Acta Dermato-Venereologica Volume 1996 ; 76 ; 1996 >
-      au < exists ; 1997 ; Acta Dermato-Venereologica Volume 1997 ; 77 ; 1997 >
-      au < exists ; 1998 ; Acta Dermato-Venereologica Volume 1998 ; 78 ; 1998 >
-      au < exists ; 1999 ; Acta Dermato-Venereologica Volume 1999 ; 79 ; 1999 >
-      au < exists ; 2000 ; Acta Dermato-Venereologica Volume 2000 ; 80 ; 2000 >
-      au < exists ; 2001 ; Acta Dermato-Venereologica Volume 2001 ; 81 ; 2001 >
-      au < exists ; 2002 ; Acta Dermato-Venereologica Volume 2002 ; 82 ; 2002 >
-      au < exists ; 2003 ; Acta Dermato-Venereologica Volume 2003 ; 83 ; 2003 >
-      au < exists ; 2004 ; Acta Dermato-Venereologica Volume 2004 ; 84 ; 2004 >
-      au < exists ; 2005 ; Acta Dermato-Venereologica Volume 2005 ; 85 ; 2005 >
-      au < exists ; 2006 ; Acta Dermato-Venereologica Volume 2006 ; 86 ; 2006 >
-      au < exists ; 2007 ; Acta Dermato-Venereologica Volume 2007 ; 87 ; 2007 > #https://medicaljournalssweden.se/actadv/article/view/8340  500 Internal Server Error
-      au < exists ; 2008 ; Acta Dermato-Venereologica Volume 2008 ; 88 ; 2008 >
-      au < exists ; 2009 ; Acta Dermato-Venereologica Volume 2009 ; 89 ; 2009 >
-      au < exists ; 2010 ; Acta Dermato-Venereologica Volume 2010 ; 90 ; 2010 >
-      au < exists ; 2011 ; Acta Dermato-Venereologica Volume 2011 ; 91 ; 2011 >
-      au < exists ; 2012 ; Acta Dermato-Venereologica Volume 2012 ; 92 ; 2012 >
-      au < exists ; 2013 ; Acta Dermato-Venereologica Volume 2013 ; 93 ; 2013 >
-      au < exists ; 2014 ; Acta Dermato-Venereologica Volume 2014 ; 94 ; 2014 >
-      au < exists ; 2015 ; Acta Dermato-Venereologica Volume 2015 ; 95 ; 2015 >
-      au < exists ; 2016 ; Acta Dermato-Venereologica Volume 2016 ; 96 ; 2016 >
-      au < exists ; 2017 ; Acta Dermato-Venereologica Volume 2017 ; 97 ; 2017 >
-      au < exists ; 2018 ; Acta Dermato-Venereologica Volume 2018 ; 98 ; 2018 >
-      au < exists ; 2019 ; Acta Dermato-Venereologica Volume 2019 ; 99 ; 2019 > #500 Error
-      au < exists ; 2020 ; Acta Dermato-Venereologica Volume 2020 ; 100 ; 2020 >
-      au < exists ; 2021 ; Acta Dermato-Venereologica Volume 2021 ; 101 ; 2021 >
-      au < exists ; 2022 ; Acta Dermato-Venereologica Volume 2022 ; 102 ; 2022 >
-      au < exists ; 2023 ; Acta Dermato-Venereologica Volume 2023 ; 103 ; 2023 >
-      au < exists ; 2024 ; Acta Dermato-Venereologica Volume 2024 ; 104 ; 2024 >
+      au < manifest ; 1968 ; Acta Dermato-Venereologica Volume 1968 ; 48 ; 1968 >
+      au < manifest ; 1969 ; Acta Dermato-Venereologica Volume 1969 ; 49 ; 1969 >
+      au < manifest ; 1970 ; Acta Dermato-Venereologica Volume 1970 ; 50 ; 1970 >
+      au < manifest ; 1971 ; Acta Dermato-Venereologica Volume 1971 ; 51 ; 1971 >
+      au < manifest ; 1972 ; Acta Dermato-Venereologica Volume 1972 ; 52 ; 1972 >
+      au < manifest ; 1973 ; Acta Dermato-Venereologica Volume 1973 ; 53 ; 1973 >
+      au < manifest ; 1974 ; Acta Dermato-Venereologica Volume 1974 ; 54 ; 1974 >
+      au < manifest ; 1975 ; Acta Dermato-Venereologica Volume 1975 ; 55 ; 1975 >
+      au < manifest ; 1976 ; Acta Dermato-Venereologica Volume 1976 ; 56 ; 1976 >
+      au < manifest ; 1977 ; Acta Dermato-Venereologica Volume 1977 ; 57 ; 1977 >
+      au < manifest ; 1978 ; Acta Dermato-Venereologica Volume 1978 ; 58 ; 1978 >
+      au < manifest ; 1979 ; Acta Dermato-Venereologica Volume 1979 ; 59 ; 1979 >
+      au < manifest ; 1980 ; Acta Dermato-Venereologica Volume 1980 ; 60 ; 1980 >
+      au < manifest ; 1981 ; Acta Dermato-Venereologica Volume 1981 ; 61 ; 1981 >
+      au < manifest ; 1982 ; Acta Dermato-Venereologica Volume 1982 ; 62 ; 1982 >
+      au < manifest ; 1983 ; Acta Dermato-Venereologica Volume 1983 ; 63 ; 1983 >
+      au < manifest ; 1984 ; Acta Dermato-Venereologica Volume 1984 ; 64 ; 1984 >
+      au < manifest ; 1985 ; Acta Dermato-Venereologica Volume 1985 ; 65 ; 1985 >
+      au < manifest ; 1986 ; Acta Dermato-Venereologica Volume 1986 ; 66 ; 1986 >
+      au < manifest ; 1987 ; Acta Dermato-Venereologica Volume 1987 ; 67 ; 1987 >
+      au < manifest ; 1988 ; Acta Dermato-Venereologica Volume 1988 ; 68 ; 1988 >
+      au < manifest ; 1989 ; Acta Dermato-Venereologica Volume 1989 ; 69 ; 1989 >
+      au < manifest ; 1990 ; Acta Dermato-Venereologica Volume 1990 ; 70 ; 1990 >
+      au < manifest ; 1991 ; Acta Dermato-Venereologica Volume 1991 ; 71 ; 1991 >
+      au < manifest ; 1992 ; Acta Dermato-Venereologica Volume 1992 ; 72 ; 1992 >
+      au < manifest ; 1993 ; Acta Dermato-Venereologica Volume 1993 ; 73 ; 1993 >
+      au < manifest ; 1994 ; Acta Dermato-Venereologica Volume 1994 ; 74 ; 1994 >
+      au < manifest ; 1995 ; Acta Dermato-Venereologica Volume 1995 ; 75 ; 1995 >
+      au < manifest ; 1996 ; Acta Dermato-Venereologica Volume 1996 ; 76 ; 1996 >
+      au < manifest ; 1997 ; Acta Dermato-Venereologica Volume 1997 ; 77 ; 1997 >
+      au < manifest ; 1998 ; Acta Dermato-Venereologica Volume 1998 ; 78 ; 1998 >
+      au < manifest ; 1999 ; Acta Dermato-Venereologica Volume 1999 ; 79 ; 1999 >
+      au < manifest ; 2000 ; Acta Dermato-Venereologica Volume 2000 ; 80 ; 2000 >
+      au < manifest ; 2001 ; Acta Dermato-Venereologica Volume 2001 ; 81 ; 2001 >
+      au < manifest ; 2002 ; Acta Dermato-Venereologica Volume 2002 ; 82 ; 2002 >
+      au < manifest ; 2003 ; Acta Dermato-Venereologica Volume 2003 ; 83 ; 2003 >
+      au < manifest ; 2004 ; Acta Dermato-Venereologica Volume 2004 ; 84 ; 2004 >
+      au < manifest ; 2005 ; Acta Dermato-Venereologica Volume 2005 ; 85 ; 2005 >
+      au < manifest ; 2006 ; Acta Dermato-Venereologica Volume 2006 ; 86 ; 2006 >
+      au < manifest ; 2007 ; Acta Dermato-Venereologica Volume 2007 ; 87 ; 2007 > #https://medicaljournalssweden.se/actadv/article/view/8340  500 Internal Server Error
+      au < manifest ; 2008 ; Acta Dermato-Venereologica Volume 2008 ; 88 ; 2008 >
+      au < manifest ; 2009 ; Acta Dermato-Venereologica Volume 2009 ; 89 ; 2009 >
+      au < manifest ; 2010 ; Acta Dermato-Venereologica Volume 2010 ; 90 ; 2010 >
+      au < manifest ; 2011 ; Acta Dermato-Venereologica Volume 2011 ; 91 ; 2011 >
+      au < manifest ; 2012 ; Acta Dermato-Venereologica Volume 2012 ; 92 ; 2012 >
+      au < manifest ; 2013 ; Acta Dermato-Venereologica Volume 2013 ; 93 ; 2013 >
+      au < manifest ; 2014 ; Acta Dermato-Venereologica Volume 2014 ; 94 ; 2014 >
+      au < manifest ; 2015 ; Acta Dermato-Venereologica Volume 2015 ; 95 ; 2015 >
+      au < manifest ; 2016 ; Acta Dermato-Venereologica Volume 2016 ; 96 ; 2016 >
+      au < manifest ; 2017 ; Acta Dermato-Venereologica Volume 2017 ; 97 ; 2017 >
+      au < manifest ; 2018 ; Acta Dermato-Venereologica Volume 2018 ; 98 ; 2018 >
+      au < manifest ; 2019 ; Acta Dermato-Venereologica Volume 2019 ; 99 ; 2019 > #500 Error
+      au < manifest ; 2020 ; Acta Dermato-Venereologica Volume 2020 ; 100 ; 2020 >
+      au < manifest ; 2021 ; Acta Dermato-Venereologica Volume 2021 ; 101 ; 2021 >
+      au < manifest ; 2022 ; Acta Dermato-Venereologica Volume 2022 ; 102 ; 2022 >
+      au < manifest ; 2023 ; Acta Dermato-Venereologica Volume 2023 ; 103 ; 2023 >
+      au < manifest ; 2024 ; Acta Dermato-Venereologica Volume 2024 ; 104 ; 2024 >
 
   }
 
@@ -179,101 +179,101 @@
       attr[start_stem] = index.php/
       #First publication Vol. 1, 1930.
 
-      au < exists ; 1930 ; Acta Orthopaedica Volume 1930 ; 1 ; 1930 >
+      au < manifest ; 1930 ; Acta Orthopaedica Volume 1930 ; 1 ; 1930 >
       au < doesNotExist ; 1931 ; Acta Orthopaedica Volume 1931 ; 2 ; 1931 >
-      au < exists ; 1932 ; Acta Orthopaedica Volume 1932 ; 3 ; 1932 >
-      au < exists ; 1933 ; Acta Orthopaedica Volume 1933 ; 4 ; 1933 >
-      au < exists ; 1934 ; Acta Orthopaedica Volume 1934 ; 5 ; 1934 >
-      au < exists ; 1935 ; Acta Orthopaedica Volume 1935 ; 6 ; 1935 >
-      au < exists ; 1936 ; Acta Orthopaedica Volume 1936 ; 7 ; 1936 >
-      au < exists ; 1937 ; Acta Orthopaedica Volume 1937 ; 8 ; 1937 >
-      au < exists ; 1938 ; Acta Orthopaedica Volume 1938 ; 9 ; 1938 >
-      au < exists ; 1939 ; Acta Orthopaedica Volume 1939 ; 10 ; 1939 >
-      au < exists ; 1940 ; Acta Orthopaedica Volume 1940 ; 11 ; 1940 >
-      au < exists ; 1941 ; Acta Orthopaedica Volume 1941 ; 12 ; 1941 >
-      au < exists ; 1942 ; Acta Orthopaedica Volume 1942 ; 13 ; 1942 >
-      au < exists ; 1943 ; Acta Orthopaedica Volume 1943 ; 14 ; 1943 >
-      au < exists ; 1944 ; Acta Orthopaedica Volume 1944 ; 15 ; 1944 >
-      au < exists ; 1945 ; Acta Orthopaedica Volume 1945 ; 16 ; 1945 >
+      au < manifest ; 1932 ; Acta Orthopaedica Volume 1932 ; 3 ; 1932 >
+      au < manifest ; 1933 ; Acta Orthopaedica Volume 1933 ; 4 ; 1933 >
+      au < manifest ; 1934 ; Acta Orthopaedica Volume 1934 ; 5 ; 1934 >
+      au < manifest ; 1935 ; Acta Orthopaedica Volume 1935 ; 6 ; 1935 >
+      au < manifest ; 1936 ; Acta Orthopaedica Volume 1936 ; 7 ; 1936 >
+      au < manifest ; 1937 ; Acta Orthopaedica Volume 1937 ; 8 ; 1937 >
+      au < manifest ; 1938 ; Acta Orthopaedica Volume 1938 ; 9 ; 1938 >
+      au < manifest ; 1939 ; Acta Orthopaedica Volume 1939 ; 10 ; 1939 >
+      au < manifest ; 1940 ; Acta Orthopaedica Volume 1940 ; 11 ; 1940 >
+      au < manifest ; 1941 ; Acta Orthopaedica Volume 1941 ; 12 ; 1941 >
+      au < manifest ; 1942 ; Acta Orthopaedica Volume 1942 ; 13 ; 1942 >
+      au < manifest ; 1943 ; Acta Orthopaedica Volume 1943 ; 14 ; 1943 >
+      au < manifest ; 1944 ; Acta Orthopaedica Volume 1944 ; 15 ; 1944 >
+      au < manifest ; 1945 ; Acta Orthopaedica Volume 1945 ; 16 ; 1945 >
       au < doesNotExist ; 1946 ; Acta Orthopaedica Volume 1946 ; 17 ; 1946 >
       au < doesNotExist ; 1947 ; Acta Orthopaedica Volume 1947 ; 18 ; 1947 >
-      au < exists ; 1948 ; Acta Orthopaedica Volume 1948 ; 19 ; 1948 >
-      au < exists ; 1949 ; Acta Orthopaedica Volume 1949 ; 20 ; 1949 >
-      au < exists ; 1950 ; Acta Orthopaedica Volume 1950 ; 21 ; 1950 >
-      au < exists ; 1951 ; Acta Orthopaedica Volume 1951 ; 22 ; 1951 >
-      au < exists ; 1952 ; Acta Orthopaedica Volume 1952 ; 23 ; 1952 >
-      au < exists ; 1953 ; Acta Orthopaedica Volume 1953 ; 24 ; 1953 >
-      au < exists ; 1954 ; Acta Orthopaedica Volume 1954 ; 25 ; 1954 >
-      au < exists ; 1955 ; Acta Orthopaedica Volume 1955 ; 26 ; 1955 >
-      au < exists ; 1956 ; Acta Orthopaedica Volume 1956 ; 27 ; 1956 >
-      au < exists ; 1957 ; Acta Orthopaedica Volume 1957 ; 28 ; 1957 >
-      au < exists ; 1958 ; Acta Orthopaedica Volume 1958 ; 29 ; 1958 >
-      au < exists ; 1959 ; Acta Orthopaedica Volume 1959 ; 30 ; 1959 >
-      au < exists ; 1960 ; Acta Orthopaedica Volume 1960 ; 31 ; 1960 >
-      au < exists ; 1961 ; Acta Orthopaedica Volume 1961 ; 32 ; 1961 >
-      au < exists ; 1962 ; Acta Orthopaedica Volume 1962 ; 33 ; 1962 >
-      au < exists ; 1963 ; Acta Orthopaedica Volume 1963 ; 34 ; 1963 >
-      au < exists ; 1964 ; Acta Orthopaedica Volume 1964 ; 35 ; 1964 >
-      au < exists ; 1965 ; Acta Orthopaedica Volume 1965 ; 36 ; 1965 >
-      au < exists ; 1966 ; Acta Orthopaedica Volume 1966 ; 37 ; 1966 >
-      au < exists ; 1967 ; Acta Orthopaedica Volume 1967 ; 38 ; 1967 >
-      au < exists ; 1968 ; Acta Orthopaedica Volume 1968 ; 39 ; 1968 >
-      au < exists ; 1969 ; Acta Orthopaedica Volume 1969 ; 40 ; 1969 >
-      au < exists ; 1970 ; Acta Orthopaedica Volume 1970 ; 41 ; 1970 >
-      au < exists ; 1971 ; Acta Orthopaedica Volume 1971 ; 42 ; 1971 >
-      au < exists ; 1972 ; Acta Orthopaedica Volume 1972 ; 43 ; 1972 >
-      au < exists ; 1973 ; Acta Orthopaedica Volume 1973 ; 44 ; 1973 >
-      au < exists ; 1974 ; Acta Orthopaedica Volume 1974 ; 45 ; 1974 >
-      au < exists ; 1975 ; Acta Orthopaedica Volume 1975 ; 46 ; 1975 >
-      au < exists ; 1976 ; Acta Orthopaedica Volume 1976 ; 47 ; 1976 >
-      au < exists ; 1977 ; Acta Orthopaedica Volume 1977 ; 48 ; 1977 >
-      au < exists ; 1978 ; Acta Orthopaedica Volume 1978 ; 49 ; 1978 >
-      au < exists ; 1979 ; Acta Orthopaedica Volume 1979 ; 50 ; 1979 >
-      au < exists ; 1980 ; Acta Orthopaedica Volume 1980 ; 51 ; 1980 >
-      au < exists ; 1981 ; Acta Orthopaedica Volume 1981 ; 52 ; 1981 >
-      au < exists ; 1982 ; Acta Orthopaedica Volume 1982 ; 53 ; 1982 >
-      au < exists ; 1983 ; Acta Orthopaedica Volume 1983 ; 54 ; 1983 >
-      au < exists ; 1984 ; Acta Orthopaedica Volume 1984 ; 55 ; 1984 >
-      au < exists ; 1985 ; Acta Orthopaedica Volume 1985 ; 56 ; 1985 >
-      au < exists ; 1986 ; Acta Orthopaedica Volume 1986 ; 57 ; 1986 >
-      au < exists ; 1987 ; Acta Orthopaedica Volume 1987 ; 58 ; 1987 >
-      au < exists ; 1988 ; Acta Orthopaedica Volume 1988 ; 59 ; 1988 >
-      au < exists ; 1989 ; Acta Orthopaedica Volume 1989 ; 60 ; 1989 >
-      au < exists ; 1990 ; Acta Orthopaedica Volume 1990 ; 61 ; 1990 >
-      au < exists ; 1991 ; Acta Orthopaedica Volume 1991 ; 62 ; 1991 >
-      au < exists ; 1992 ; Acta Orthopaedica Volume 1992 ; 63 ; 1992 >
-      au < exists ; 1993 ; Acta Orthopaedica Volume 1993 ; 64 ; 1993 >
-      au < exists ; 1994 ; Acta Orthopaedica Volume 1994 ; 65 ; 1994 >
-      au < exists ; 1995 ; Acta Orthopaedica Volume 1995 ; 66 ; 1995 >
-      au < exists ; 1996 ; Acta Orthopaedica Volume 1996 ; 67 ; 1996 >
-      au < exists ; 1997 ; Acta Orthopaedica Volume 1997 ; 68 ; 1997 >
-      au < exists ; 1998 ; Acta Orthopaedica Volume 1998 ; 69 ; 1998 >
-      au < exists ; 1999 ; Acta Orthopaedica Volume 1999 ; 70 ; 1999 >
-      au < exists ; 2000 ; Acta Orthopaedica Volume 2000 ; 71 ; 2000 >
-      au < exists ; 2001 ; Acta Orthopaedica Volume 2001 ; 72 ; 2001 >
-      au < exists ; 2002 ; Acta Orthopaedica Volume 2002 ; 73 ; 2002 >
-      au < exists ; 2003 ; Acta Orthopaedica Volume 2003 ; 74 ; 2003 >
-      au < exists ; 2004 ; Acta Orthopaedica Volume 2004 ; 75 ; 2004 >
-      au < exists ; 2005 ; Acta Orthopaedica Volume 2005 ; 76 ; 2005 >
-      au < exists ; 2006 ; Acta Orthopaedica Volume 2006 ; 77 ; 2006 >
-      au < exists ; 2007 ; Acta Orthopaedica Volume 2007 ; 78 ; 2007 >
-      au < exists ; 2008 ; Acta Orthopaedica Volume 2008 ; 79 ; 2008 >
-      au < exists ; 2009 ; Acta Orthopaedica Volume 2009 ; 80 ; 2009 >
-      au < exists ; 2010 ; Acta Orthopaedica Volume 2010 ; 81 ; 2010 >
-      au < exists ; 2011 ; Acta Orthopaedica Volume 2011 ; 82 ; 2011 >
-      au < exists ; 2012 ; Acta Orthopaedica Volume 2012 ; 83 ; 2012 >
-      au < exists ; 2013 ; Acta Orthopaedica Volume 2013 ; 84 ; 2013 >
-      au < exists ; 2014 ; Acta Orthopaedica Volume 2014 ; 85 ; 2014 >
-      au < exists ; 2015 ; Acta Orthopaedica Volume 2015 ; 86 ; 2015 >
-      au < exists ; 2016 ; Acta Orthopaedica Volume 2016 ; 87 ; 2016 >
-      au < exists ; 2017 ; Acta Orthopaedica Volume 2017 ; 88 ; 2017 >
-      au < exists ; 2018 ; Acta Orthopaedica Volume 2018 ; 89 ; 2018 >
-      au < exists ; 2019 ; Acta Orthopaedica Volume 2019 ; 90 ; 2019 >
-      au < exists ; 2020 ; Acta Orthopaedica Volume 2020 ; 91 ; 2020 >
-      au < exists ; 2021 ; Acta Orthopaedica Volume 2021 ; 92 ; 2021 >
-      au < exists ; 2022 ; Acta Orthopaedica Volume 2022 ; 93 ; 2022 >
-      au < exists ; 2023 ; Acta Orthopaedica Volume 2023 ; 94 ; 2023 >
-      au < exists ; 2024 ; Acta Orthopaedica Volume 2024 ; 95 ; 2024 >
+      au < manifest ; 1948 ; Acta Orthopaedica Volume 1948 ; 19 ; 1948 >
+      au < manifest ; 1949 ; Acta Orthopaedica Volume 1949 ; 20 ; 1949 >
+      au < manifest ; 1950 ; Acta Orthopaedica Volume 1950 ; 21 ; 1950 >
+      au < manifest ; 1951 ; Acta Orthopaedica Volume 1951 ; 22 ; 1951 >
+      au < manifest ; 1952 ; Acta Orthopaedica Volume 1952 ; 23 ; 1952 >
+      au < manifest ; 1953 ; Acta Orthopaedica Volume 1953 ; 24 ; 1953 >
+      au < manifest ; 1954 ; Acta Orthopaedica Volume 1954 ; 25 ; 1954 >
+      au < manifest ; 1955 ; Acta Orthopaedica Volume 1955 ; 26 ; 1955 >
+      au < manifest ; 1956 ; Acta Orthopaedica Volume 1956 ; 27 ; 1956 >
+      au < manifest ; 1957 ; Acta Orthopaedica Volume 1957 ; 28 ; 1957 >
+      au < manifest ; 1958 ; Acta Orthopaedica Volume 1958 ; 29 ; 1958 >
+      au < manifest ; 1959 ; Acta Orthopaedica Volume 1959 ; 30 ; 1959 >
+      au < manifest ; 1960 ; Acta Orthopaedica Volume 1960 ; 31 ; 1960 >
+      au < manifest ; 1961 ; Acta Orthopaedica Volume 1961 ; 32 ; 1961 >
+      au < manifest ; 1962 ; Acta Orthopaedica Volume 1962 ; 33 ; 1962 >
+      au < manifest ; 1963 ; Acta Orthopaedica Volume 1963 ; 34 ; 1963 >
+      au < manifest ; 1964 ; Acta Orthopaedica Volume 1964 ; 35 ; 1964 >
+      au < manifest ; 1965 ; Acta Orthopaedica Volume 1965 ; 36 ; 1965 >
+      au < manifest ; 1966 ; Acta Orthopaedica Volume 1966 ; 37 ; 1966 >
+      au < manifest ; 1967 ; Acta Orthopaedica Volume 1967 ; 38 ; 1967 >
+      au < manifest ; 1968 ; Acta Orthopaedica Volume 1968 ; 39 ; 1968 >
+      au < manifest ; 1969 ; Acta Orthopaedica Volume 1969 ; 40 ; 1969 >
+      au < manifest ; 1970 ; Acta Orthopaedica Volume 1970 ; 41 ; 1970 >
+      au < manifest ; 1971 ; Acta Orthopaedica Volume 1971 ; 42 ; 1971 >
+      au < manifest ; 1972 ; Acta Orthopaedica Volume 1972 ; 43 ; 1972 >
+      au < manifest ; 1973 ; Acta Orthopaedica Volume 1973 ; 44 ; 1973 >
+      au < manifest ; 1974 ; Acta Orthopaedica Volume 1974 ; 45 ; 1974 >
+      au < manifest ; 1975 ; Acta Orthopaedica Volume 1975 ; 46 ; 1975 >
+      au < manifest ; 1976 ; Acta Orthopaedica Volume 1976 ; 47 ; 1976 >
+      au < manifest ; 1977 ; Acta Orthopaedica Volume 1977 ; 48 ; 1977 >
+      au < manifest ; 1978 ; Acta Orthopaedica Volume 1978 ; 49 ; 1978 >
+      au < manifest ; 1979 ; Acta Orthopaedica Volume 1979 ; 50 ; 1979 >
+      au < manifest ; 1980 ; Acta Orthopaedica Volume 1980 ; 51 ; 1980 >
+      au < manifest ; 1981 ; Acta Orthopaedica Volume 1981 ; 52 ; 1981 >
+      au < manifest ; 1982 ; Acta Orthopaedica Volume 1982 ; 53 ; 1982 >
+      au < manifest ; 1983 ; Acta Orthopaedica Volume 1983 ; 54 ; 1983 >
+      au < manifest ; 1984 ; Acta Orthopaedica Volume 1984 ; 55 ; 1984 >
+      au < manifest ; 1985 ; Acta Orthopaedica Volume 1985 ; 56 ; 1985 >
+      au < manifest ; 1986 ; Acta Orthopaedica Volume 1986 ; 57 ; 1986 >
+      au < manifest ; 1987 ; Acta Orthopaedica Volume 1987 ; 58 ; 1987 >
+      au < manifest ; 1988 ; Acta Orthopaedica Volume 1988 ; 59 ; 1988 >
+      au < manifest ; 1989 ; Acta Orthopaedica Volume 1989 ; 60 ; 1989 >
+      au < manifest ; 1990 ; Acta Orthopaedica Volume 1990 ; 61 ; 1990 >
+      au < manifest ; 1991 ; Acta Orthopaedica Volume 1991 ; 62 ; 1991 >
+      au < manifest ; 1992 ; Acta Orthopaedica Volume 1992 ; 63 ; 1992 >
+      au < manifest ; 1993 ; Acta Orthopaedica Volume 1993 ; 64 ; 1993 >
+      au < manifest ; 1994 ; Acta Orthopaedica Volume 1994 ; 65 ; 1994 >
+      au < manifest ; 1995 ; Acta Orthopaedica Volume 1995 ; 66 ; 1995 >
+      au < manifest ; 1996 ; Acta Orthopaedica Volume 1996 ; 67 ; 1996 >
+      au < manifest ; 1997 ; Acta Orthopaedica Volume 1997 ; 68 ; 1997 >
+      au < manifest ; 1998 ; Acta Orthopaedica Volume 1998 ; 69 ; 1998 >
+      au < manifest ; 1999 ; Acta Orthopaedica Volume 1999 ; 70 ; 1999 >
+      au < manifest ; 2000 ; Acta Orthopaedica Volume 2000 ; 71 ; 2000 >
+      au < manifest ; 2001 ; Acta Orthopaedica Volume 2001 ; 72 ; 2001 >
+      au < manifest ; 2002 ; Acta Orthopaedica Volume 2002 ; 73 ; 2002 >
+      au < manifest ; 2003 ; Acta Orthopaedica Volume 2003 ; 74 ; 2003 >
+      au < manifest ; 2004 ; Acta Orthopaedica Volume 2004 ; 75 ; 2004 >
+      au < manifest ; 2005 ; Acta Orthopaedica Volume 2005 ; 76 ; 2005 >
+      au < manifest ; 2006 ; Acta Orthopaedica Volume 2006 ; 77 ; 2006 >
+      au < manifest ; 2007 ; Acta Orthopaedica Volume 2007 ; 78 ; 2007 >
+      au < manifest ; 2008 ; Acta Orthopaedica Volume 2008 ; 79 ; 2008 >
+      au < manifest ; 2009 ; Acta Orthopaedica Volume 2009 ; 80 ; 2009 >
+      au < manifest ; 2010 ; Acta Orthopaedica Volume 2010 ; 81 ; 2010 >
+      au < manifest ; 2011 ; Acta Orthopaedica Volume 2011 ; 82 ; 2011 >
+      au < manifest ; 2012 ; Acta Orthopaedica Volume 2012 ; 83 ; 2012 >
+      au < manifest ; 2013 ; Acta Orthopaedica Volume 2013 ; 84 ; 2013 >
+      au < manifest ; 2014 ; Acta Orthopaedica Volume 2014 ; 85 ; 2014 >
+      au < manifest ; 2015 ; Acta Orthopaedica Volume 2015 ; 86 ; 2015 >
+      au < manifest ; 2016 ; Acta Orthopaedica Volume 2016 ; 87 ; 2016 >
+      au < manifest ; 2017 ; Acta Orthopaedica Volume 2017 ; 88 ; 2017 >
+      au < manifest ; 2018 ; Acta Orthopaedica Volume 2018 ; 89 ; 2018 >
+      au < manifest ; 2019 ; Acta Orthopaedica Volume 2019 ; 90 ; 2019 >
+      au < manifest ; 2020 ; Acta Orthopaedica Volume 2020 ; 91 ; 2020 >
+      au < manifest ; 2021 ; Acta Orthopaedica Volume 2021 ; 92 ; 2021 >
+      au < manifest ; 2022 ; Acta Orthopaedica Volume 2022 ; 93 ; 2022 >
+      au < manifest ; 2023 ; Acta Orthopaedica Volume 2023 ; 94 ; 2023 >
+      au < manifest ; 2024 ; Acta Orthopaedica Volume 2024 ; 95 ; 2024 >
 
   }
 
@@ -287,92 +287,92 @@
       param[base_url] = https://medicaljournalssweden.se/
       param[journal_id] = actaodontologica
 
-      au < exists ; 1939 ; Acta Odontologica Scandinavica Volume 1939 ; 1 ; 1939 >
-      au < exists ; 1940 ; Acta Odontologica Scandinavica Volume 1940 ; 2 ; 1940 >
-      au < exists ; 1941 ; Acta Odontologica Scandinavica Volume 1941 ; 3 ; 1941 >
-      au < exists ; 1942 ; Acta Odontologica Scandinavica Volume 1942 ; 4 ; 1942 >
-      au < exists ; 1943 ; Acta Odontologica Scandinavica Volume 1943 ; 5 ; 1943 >
-      au < exists ; 1944 ; Acta Odontologica Scandinavica Volume 1944 ; 6 ; 1944 >
-      au < exists ; 1945 ; Acta Odontologica Scandinavica Volume 1945 ; 7 ; 1945 >
-      au < exists ; 1946 ; Acta Odontologica Scandinavica Volume 1946 ; 8 ; 1946 >
-      au < exists ; 1947 ; Acta Odontologica Scandinavica Volume 1947 ; 9 ; 1947 >
-      au < exists ; 1948 ; Acta Odontologica Scandinavica Volume 1948 ; 10 ; 1948 >
-      au < exists ; 1949 ; Acta Odontologica Scandinavica Volume 1949 ; 11 ; 1949 >
-      au < exists ; 1950 ; Acta Odontologica Scandinavica Volume 1950 ; 12 ; 1950 >
-      au < exists ; 1951 ; Acta Odontologica Scandinavica Volume 1951 ; 13 ; 1951 >
-      au < exists ; 1952 ; Acta Odontologica Scandinavica Volume 1952 ; 14 ; 1952 >
-      au < exists ; 1953 ; Acta Odontologica Scandinavica Volume 1953 ; 15 ; 1953 >
-      au < exists ; 1954 ; Acta Odontologica Scandinavica Volume 1954 ; 16 ; 1954 >
-      au < exists ; 1955 ; Acta Odontologica Scandinavica Volume 1955 ; 17 ; 1955 >
-      au < exists ; 1956 ; Acta Odontologica Scandinavica Volume 1956 ; 18 ; 1956 >
-      au < exists ; 1957 ; Acta Odontologica Scandinavica Volume 1957 ; 19 ; 1957 >
-      au < exists ; 1958 ; Acta Odontologica Scandinavica Volume 1958 ; 20 ; 1958 >
-      au < exists ; 1959 ; Acta Odontologica Scandinavica Volume 1959 ; 21 ; 1959 >
-      au < exists ; 1960 ; Acta Odontologica Scandinavica Volume 1960 ; 22 ; 1960 >
-      au < exists ; 1961 ; Acta Odontologica Scandinavica Volume 1961 ; 23 ; 1961 >
-      au < exists ; 1962 ; Acta Odontologica Scandinavica Volume 1962 ; 24 ; 1962 >
-      au < exists ; 1963 ; Acta Odontologica Scandinavica Volume 1963 ; 25 ; 1963 >
-      au < exists ; 1964 ; Acta Odontologica Scandinavica Volume 1964 ; 26 ; 1964 >
-      au < exists ; 1965 ; Acta Odontologica Scandinavica Volume 1965 ; 27 ; 1965 >
-      au < exists ; 1966 ; Acta Odontologica Scandinavica Volume 1966 ; 28 ; 1966 >
-      au < exists ; 1967 ; Acta Odontologica Scandinavica Volume 1967 ; 29 ; 1967 >
-      au < exists ; 1968 ; Acta Odontologica Scandinavica Volume 1968 ; 30 ; 1968 >
-      au < exists ; 1969 ; Acta Odontologica Scandinavica Volume 1969 ; 31 ; 1969 >
-      au < exists ; 1970 ; Acta Odontologica Scandinavica Volume 1970 ; 32 ; 1970 >
-      au < exists ; 1971 ; Acta Odontologica Scandinavica Volume 1971 ; 33 ; 1971 >
-      au < exists ; 1972 ; Acta Odontologica Scandinavica Volume 1972 ; 34 ; 1972 >
-      au < exists ; 1973 ; Acta Odontologica Scandinavica Volume 1973 ; 35 ; 1973 >
-      au < exists ; 1974 ; Acta Odontologica Scandinavica Volume 1974 ; 36 ; 1974 >
-      au < exists ; 1975 ; Acta Odontologica Scandinavica Volume 1975 ; 37 ; 1975 >
-      au < exists ; 1976 ; Acta Odontologica Scandinavica Volume 1976 ; 38 ; 1976 >
-      au < exists ; 1977 ; Acta Odontologica Scandinavica Volume 1977 ; 39 ; 1977 >
-      au < exists ; 1978 ; Acta Odontologica Scandinavica Volume 1978 ; 40 ; 1978 >
-      au < exists ; 1979 ; Acta Odontologica Scandinavica Volume 1979 ; 41 ; 1979 >
-      au < exists ; 1980 ; Acta Odontologica Scandinavica Volume 1980 ; 42 ; 1980 >
-      au < exists ; 1981 ; Acta Odontologica Scandinavica Volume 1981 ; 43 ; 1981 >
-      au < exists ; 1982 ; Acta Odontologica Scandinavica Volume 1982 ; 44 ; 1982 >
-      au < exists ; 1983 ; Acta Odontologica Scandinavica Volume 1983 ; 45 ; 1983 >
-      au < exists ; 1984 ; Acta Odontologica Scandinavica Volume 1984 ; 46 ; 1984 >
-      au < exists ; 1985 ; Acta Odontologica Scandinavica Volume 1985 ; 47 ; 1985 >
-      au < exists ; 1986 ; Acta Odontologica Scandinavica Volume 1986 ; 48 ; 1986 >
-      au < exists ; 1987 ; Acta Odontologica Scandinavica Volume 1987 ; 49 ; 1987 >
-      au < exists ; 1988 ; Acta Odontologica Scandinavica Volume 1988 ; 50 ; 1988 >
-      au < exists ; 1989 ; Acta Odontologica Scandinavica Volume 1989 ; 51 ; 1989 >
-      au < exists ; 1990 ; Acta Odontologica Scandinavica Volume 1990 ; 52 ; 1990 >
-      au < exists ; 1991 ; Acta Odontologica Scandinavica Volume 1991 ; 53 ; 1991 >
-      au < exists ; 1992 ; Acta Odontologica Scandinavica Volume 1992 ; 54 ; 1992 >
-      au < exists ; 1993 ; Acta Odontologica Scandinavica Volume 1993 ; 55 ; 1993 >
-      au < exists ; 1994 ; Acta Odontologica Scandinavica Volume 1994 ; 56 ; 1994 >
-      au < exists ; 1995 ; Acta Odontologica Scandinavica Volume 1995 ; 57 ; 1995 >
-      au < exists ; 1996 ; Acta Odontologica Scandinavica Volume 1996 ; 58 ; 1996 >
-      au < exists ; 1997 ; Acta Odontologica Scandinavica Volume 1997 ; 59 ; 1997 >
-      au < exists ; 1998 ; Acta Odontologica Scandinavica Volume 1998 ; 60 ; 1998 >
-      au < exists ; 1999 ; Acta Odontologica Scandinavica Volume 1999 ; 61 ; 1999 >
-      au < exists ; 2000 ; Acta Odontologica Scandinavica Volume 2000 ; 62 ; 2000 >
-      au < exists ; 2001 ; Acta Odontologica Scandinavica Volume 2001 ; 63 ; 2001 >
-      au < exists ; 2002 ; Acta Odontologica Scandinavica Volume 2002 ; 64 ; 2002 >
-      au < exists ; 2003 ; Acta Odontologica Scandinavica Volume 2003 ; 65 ; 2003 >
-      au < exists ; 2004 ; Acta Odontologica Scandinavica Volume 2004 ; 66 ; 2004 >
-      au < exists ; 2005 ; Acta Odontologica Scandinavica Volume 2005 ; 67 ; 2005 >
-      au < exists ; 2006 ; Acta Odontologica Scandinavica Volume 2006 ; 68 ; 2006 >
-      au < exists ; 2007 ; Acta Odontologica Scandinavica Volume 2007 ; 69 ; 2007 >
-      au < exists ; 2008 ; Acta Odontologica Scandinavica Volume 2008 ; 70 ; 2008 >
-      au < exists ; 2009 ; Acta Odontologica Scandinavica Volume 2009 ; 71 ; 2009 >
-      au < exists ; 2010 ; Acta Odontologica Scandinavica Volume 2010 ; 72 ; 2010 >
-      au < exists ; 2011 ; Acta Odontologica Scandinavica Volume 2011 ; 73 ; 2011 >
-      au < exists ; 2012 ; Acta Odontologica Scandinavica Volume 2012 ; 74 ; 2012 >
-      au < exists ; 2013 ; Acta Odontologica Scandinavica Volume 2013 ; 75 ; 2013 >
-      au < exists ; 2014 ; Acta Odontologica Scandinavica Volume 2014 ; 76 ; 2014 >
-      au < exists ; 2015 ; Acta Odontologica Scandinavica Volume 2015 ; 77 ; 2015 >
-      au < exists ; 2016 ; Acta Odontologica Scandinavica Volume 2016 ; 78 ; 2016 >
-      au < exists ; 2017 ; Acta Odontologica Scandinavica Volume 2017 ; 79 ; 2017 >
-      au < exists ; 2018 ; Acta Odontologica Scandinavica Volume 2018 ; 80 ; 2018 >
-      au < exists ; 2019 ; Acta Odontologica Scandinavica Volume 2019 ; 81 ; 2019 >
-      au < exists ; 2020 ; Acta Odontologica Scandinavica Volume 2020 ; 82 ; 2020 >
-      au < exists ; 2021 ; Acta Odontologica Scandinavica Volume 2021 ; 83 ; 2021 >
-      au < exists ; 2022 ; Acta Odontologica Scandinavica Volume 2022 ; 84 ; 2022 >
-      au < exists ; 2023 ; Acta Odontologica Scandinavica Volume 2023 ; 85 ; 2023 >
-      au < exists ; 2024 ; Acta Odontologica Scandinavica Volume 2024 ; 86 ; 2024 >
+      au < manifest ; 1939 ; Acta Odontologica Scandinavica Volume 1939 ; 1 ; 1939 >
+      au < manifest ; 1940 ; Acta Odontologica Scandinavica Volume 1940 ; 2 ; 1940 >
+      au < manifest ; 1941 ; Acta Odontologica Scandinavica Volume 1941 ; 3 ; 1941 >
+      au < manifest ; 1942 ; Acta Odontologica Scandinavica Volume 1942 ; 4 ; 1942 >
+      au < manifest ; 1943 ; Acta Odontologica Scandinavica Volume 1943 ; 5 ; 1943 >
+      au < manifest ; 1944 ; Acta Odontologica Scandinavica Volume 1944 ; 6 ; 1944 >
+      au < manifest ; 1945 ; Acta Odontologica Scandinavica Volume 1945 ; 7 ; 1945 >
+      au < manifest ; 1946 ; Acta Odontologica Scandinavica Volume 1946 ; 8 ; 1946 >
+      au < manifest ; 1947 ; Acta Odontologica Scandinavica Volume 1947 ; 9 ; 1947 >
+      au < manifest ; 1948 ; Acta Odontologica Scandinavica Volume 1948 ; 10 ; 1948 >
+      au < manifest ; 1949 ; Acta Odontologica Scandinavica Volume 1949 ; 11 ; 1949 >
+      au < manifest ; 1950 ; Acta Odontologica Scandinavica Volume 1950 ; 12 ; 1950 >
+      au < manifest ; 1951 ; Acta Odontologica Scandinavica Volume 1951 ; 13 ; 1951 >
+      au < manifest ; 1952 ; Acta Odontologica Scandinavica Volume 1952 ; 14 ; 1952 >
+      au < manifest ; 1953 ; Acta Odontologica Scandinavica Volume 1953 ; 15 ; 1953 >
+      au < manifest ; 1954 ; Acta Odontologica Scandinavica Volume 1954 ; 16 ; 1954 >
+      au < manifest ; 1955 ; Acta Odontologica Scandinavica Volume 1955 ; 17 ; 1955 >
+      au < manifest ; 1956 ; Acta Odontologica Scandinavica Volume 1956 ; 18 ; 1956 >
+      au < manifest ; 1957 ; Acta Odontologica Scandinavica Volume 1957 ; 19 ; 1957 >
+      au < manifest ; 1958 ; Acta Odontologica Scandinavica Volume 1958 ; 20 ; 1958 >
+      au < manifest ; 1959 ; Acta Odontologica Scandinavica Volume 1959 ; 21 ; 1959 >
+      au < manifest ; 1960 ; Acta Odontologica Scandinavica Volume 1960 ; 22 ; 1960 >
+      au < manifest ; 1961 ; Acta Odontologica Scandinavica Volume 1961 ; 23 ; 1961 >
+      au < manifest ; 1962 ; Acta Odontologica Scandinavica Volume 1962 ; 24 ; 1962 >
+      au < manifest ; 1963 ; Acta Odontologica Scandinavica Volume 1963 ; 25 ; 1963 >
+      au < manifest ; 1964 ; Acta Odontologica Scandinavica Volume 1964 ; 26 ; 1964 >
+      au < manifest ; 1965 ; Acta Odontologica Scandinavica Volume 1965 ; 27 ; 1965 >
+      au < manifest ; 1966 ; Acta Odontologica Scandinavica Volume 1966 ; 28 ; 1966 >
+      au < manifest ; 1967 ; Acta Odontologica Scandinavica Volume 1967 ; 29 ; 1967 >
+      au < manifest ; 1968 ; Acta Odontologica Scandinavica Volume 1968 ; 30 ; 1968 >
+      au < manifest ; 1969 ; Acta Odontologica Scandinavica Volume 1969 ; 31 ; 1969 >
+      au < manifest ; 1970 ; Acta Odontologica Scandinavica Volume 1970 ; 32 ; 1970 >
+      au < manifest ; 1971 ; Acta Odontologica Scandinavica Volume 1971 ; 33 ; 1971 >
+      au < manifest ; 1972 ; Acta Odontologica Scandinavica Volume 1972 ; 34 ; 1972 >
+      au < manifest ; 1973 ; Acta Odontologica Scandinavica Volume 1973 ; 35 ; 1973 >
+      au < manifest ; 1974 ; Acta Odontologica Scandinavica Volume 1974 ; 36 ; 1974 >
+      au < manifest ; 1975 ; Acta Odontologica Scandinavica Volume 1975 ; 37 ; 1975 >
+      au < manifest ; 1976 ; Acta Odontologica Scandinavica Volume 1976 ; 38 ; 1976 >
+      au < manifest ; 1977 ; Acta Odontologica Scandinavica Volume 1977 ; 39 ; 1977 >
+      au < manifest ; 1978 ; Acta Odontologica Scandinavica Volume 1978 ; 40 ; 1978 >
+      au < manifest ; 1979 ; Acta Odontologica Scandinavica Volume 1979 ; 41 ; 1979 >
+      au < manifest ; 1980 ; Acta Odontologica Scandinavica Volume 1980 ; 42 ; 1980 >
+      au < manifest ; 1981 ; Acta Odontologica Scandinavica Volume 1981 ; 43 ; 1981 >
+      au < manifest ; 1982 ; Acta Odontologica Scandinavica Volume 1982 ; 44 ; 1982 >
+      au < manifest ; 1983 ; Acta Odontologica Scandinavica Volume 1983 ; 45 ; 1983 >
+      au < manifest ; 1984 ; Acta Odontologica Scandinavica Volume 1984 ; 46 ; 1984 >
+      au < manifest ; 1985 ; Acta Odontologica Scandinavica Volume 1985 ; 47 ; 1985 >
+      au < manifest ; 1986 ; Acta Odontologica Scandinavica Volume 1986 ; 48 ; 1986 >
+      au < manifest ; 1987 ; Acta Odontologica Scandinavica Volume 1987 ; 49 ; 1987 >
+      au < manifest ; 1988 ; Acta Odontologica Scandinavica Volume 1988 ; 50 ; 1988 >
+      au < manifest ; 1989 ; Acta Odontologica Scandinavica Volume 1989 ; 51 ; 1989 >
+      au < manifest ; 1990 ; Acta Odontologica Scandinavica Volume 1990 ; 52 ; 1990 >
+      au < manifest ; 1991 ; Acta Odontologica Scandinavica Volume 1991 ; 53 ; 1991 >
+      au < manifest ; 1992 ; Acta Odontologica Scandinavica Volume 1992 ; 54 ; 1992 >
+      au < manifest ; 1993 ; Acta Odontologica Scandinavica Volume 1993 ; 55 ; 1993 >
+      au < manifest ; 1994 ; Acta Odontologica Scandinavica Volume 1994 ; 56 ; 1994 >
+      au < manifest ; 1995 ; Acta Odontologica Scandinavica Volume 1995 ; 57 ; 1995 >
+      au < manifest ; 1996 ; Acta Odontologica Scandinavica Volume 1996 ; 58 ; 1996 >
+      au < manifest ; 1997 ; Acta Odontologica Scandinavica Volume 1997 ; 59 ; 1997 >
+      au < manifest ; 1998 ; Acta Odontologica Scandinavica Volume 1998 ; 60 ; 1998 >
+      au < manifest ; 1999 ; Acta Odontologica Scandinavica Volume 1999 ; 61 ; 1999 >
+      au < manifest ; 2000 ; Acta Odontologica Scandinavica Volume 2000 ; 62 ; 2000 >
+      au < manifest ; 2001 ; Acta Odontologica Scandinavica Volume 2001 ; 63 ; 2001 >
+      au < manifest ; 2002 ; Acta Odontologica Scandinavica Volume 2002 ; 64 ; 2002 >
+      au < manifest ; 2003 ; Acta Odontologica Scandinavica Volume 2003 ; 65 ; 2003 >
+      au < manifest ; 2004 ; Acta Odontologica Scandinavica Volume 2004 ; 66 ; 2004 >
+      au < manifest ; 2005 ; Acta Odontologica Scandinavica Volume 2005 ; 67 ; 2005 >
+      au < manifest ; 2006 ; Acta Odontologica Scandinavica Volume 2006 ; 68 ; 2006 >
+      au < manifest ; 2007 ; Acta Odontologica Scandinavica Volume 2007 ; 69 ; 2007 >
+      au < manifest ; 2008 ; Acta Odontologica Scandinavica Volume 2008 ; 70 ; 2008 >
+      au < manifest ; 2009 ; Acta Odontologica Scandinavica Volume 2009 ; 71 ; 2009 >
+      au < manifest ; 2010 ; Acta Odontologica Scandinavica Volume 2010 ; 72 ; 2010 >
+      au < manifest ; 2011 ; Acta Odontologica Scandinavica Volume 2011 ; 73 ; 2011 >
+      au < manifest ; 2012 ; Acta Odontologica Scandinavica Volume 2012 ; 74 ; 2012 >
+      au < manifest ; 2013 ; Acta Odontologica Scandinavica Volume 2013 ; 75 ; 2013 >
+      au < manifest ; 2014 ; Acta Odontologica Scandinavica Volume 2014 ; 76 ; 2014 >
+      au < manifest ; 2015 ; Acta Odontologica Scandinavica Volume 2015 ; 77 ; 2015 >
+      au < manifest ; 2016 ; Acta Odontologica Scandinavica Volume 2016 ; 78 ; 2016 >
+      au < manifest ; 2017 ; Acta Odontologica Scandinavica Volume 2017 ; 79 ; 2017 >
+      au < manifest ; 2018 ; Acta Odontologica Scandinavica Volume 2018 ; 80 ; 2018 >
+      au < manifest ; 2019 ; Acta Odontologica Scandinavica Volume 2019 ; 81 ; 2019 >
+      au < manifest ; 2020 ; Acta Odontologica Scandinavica Volume 2020 ; 82 ; 2020 >
+      au < manifest ; 2021 ; Acta Odontologica Scandinavica Volume 2021 ; 83 ; 2021 >
+      au < manifest ; 2022 ; Acta Odontologica Scandinavica Volume 2022 ; 84 ; 2022 >
+      au < manifest ; 2023 ; Acta Odontologica Scandinavica Volume 2023 ; 85 ; 2023 >
+      au < manifest ; 2024 ; Acta Odontologica Scandinavica Volume 2024 ; 86 ; 2024 >
 
   }
 
@@ -386,68 +386,68 @@
       param[base_url] = https://medicaljournalssweden.se/
       param[journal_id] = actaoncologica
 
-      au < exists ; 1963 ; Acta Oncologica Volume 1963 ; 1 ; 1963 >
-      au < exists ; 1964 ; Acta Oncologica Volume 1964 ; 2 ; 1964 >
-      au < exists ; 1965 ; Acta Oncologica Volume 1965 ; 3 ; 1965 >
-      au < exists ; 1966 ; Acta Oncologica Volume 1966 ; 4 ; 1966 >
-      au < exists ; 1967 ; Acta Oncologica Volume 1967 ; 5 ; 1967 >
-      au < exists ; 1968 ; Acta Oncologica Volume 1968 ; 6 ; 1968 >
-      au < exists ; 1969 ; Acta Oncologica Volume 1969 ; 7 ; 1969 >
-      au < exists ; 1970 ; Acta Oncologica Volume 1970 ; 8 ; 1970 >
-      au < exists ; 1971 ; Acta Oncologica Volume 1971 ; 9 ; 1971 >
-      au < exists ; 1972 ; Acta Oncologica Volume 1972 ; 10 ; 1972 >
-      au < exists ; 1973 ; Acta Oncologica Volume 1973 ; 11 ; 1973 >
-      au < exists ; 1974 ; Acta Oncologica Volume 1974 ; 12 ; 1974 >
-      au < exists ; 1975 ; Acta Oncologica Volume 1975 ; 13 ; 1975 >
-      au < exists ; 1976 ; Acta Oncologica Volume 1976 ; 14 ; 1976 >
-      au < exists ; 1977 ; Acta Oncologica Volume 1977 ; 15 ; 1977 >
-      au < exists ; 1978 ; Acta Oncologica Volume 1978 ; 16 ; 1978 >
-      au < exists ; 1979 ; Acta Oncologica Volume 1979 ; 17 ; 1979 >
-      au < exists ; 1980 ; Acta Oncologica Volume 1980 ; 18 ; 1980 >
-      au < exists ; 1981 ; Acta Oncologica Volume 1981 ; 19 ; 1981 >
-      au < exists ; 1982 ; Acta Oncologica Volume 1982 ; 20 ; 1982 >
-      au < exists ; 1983 ; Acta Oncologica Volume 1983 ; 21 ; 1983 >
-      au < exists ; 1984 ; Acta Oncologica Volume 1984 ; 22 ; 1984 >
-      au < exists ; 1985 ; Acta Oncologica Volume 1985 ; 23 ; 1985 >
-      au < exists ; 1986 ; Acta Oncologica Volume 1986 ; 24 ; 1986 >
-      au < exists ; 1987 ; Acta Oncologica Volume 1987 ; 25 ; 1987 >
-      au < exists ; 1988 ; Acta Oncologica Volume 1988 ; 26 ; 1988 >
-      au < exists ; 1989 ; Acta Oncologica Volume 1989 ; 27 ; 1989 >
-      au < exists ; 1990 ; Acta Oncologica Volume 1990 ; 28 ; 1990 >
-      au < exists ; 1991 ; Acta Oncologica Volume 1991 ; 29 ; 1991 >
-      au < exists ; 1992 ; Acta Oncologica Volume 1992 ; 30 ; 1992 >
-      au < exists ; 1993 ; Acta Oncologica Volume 1993 ; 31 ; 1993 >
-      au < exists ; 1994 ; Acta Oncologica Volume 1994 ; 32 ; 1994 >
-      au < exists ; 1995 ; Acta Oncologica Volume 1995 ; 33 ; 1995 >
-      au < exists ; 1996 ; Acta Oncologica Volume 1996 ; 34 ; 1996 >
-      au < exists ; 1997 ; Acta Oncologica Volume 1997 ; 35 ; 1997 >
-      au < exists ; 1998 ; Acta Oncologica Volume 1998 ; 36 ; 1998 >
-      au < exists ; 1999 ; Acta Oncologica Volume 1999 ; 37 ; 1999 >
-      au < exists ; 2000 ; Acta Oncologica Volume 2000 ; 38 ; 2000 >
-      au < exists ; 2001 ; Acta Oncologica Volume 2001 ; 39 ; 2001 >
-      au < exists ; 2002 ; Acta Oncologica Volume 2002 ; 40 ; 2002 >
-      au < exists ; 2003 ; Acta Oncologica Volume 2003 ; 41 ; 2003 >
-      au < exists ; 2004 ; Acta Oncologica Volume 2004 ; 42 ; 2004 >
-      au < exists ; 2005 ; Acta Oncologica Volume 2005 ; 43 ; 2005 >
-      au < exists ; 2006 ; Acta Oncologica Volume 2006 ; 44 ; 2006 >
-      au < exists ; 2007 ; Acta Oncologica Volume 2007 ; 45 ; 2007 >
-      au < exists ; 2008 ; Acta Oncologica Volume 2008 ; 46 ; 2008 >
-      au < exists ; 2009 ; Acta Oncologica Volume 2009 ; 47 ; 2009 >
-      au < exists ; 2010 ; Acta Oncologica Volume 2010 ; 48 ; 2010 >
-      au < exists ; 2011 ; Acta Oncologica Volume 2011 ; 49 ; 2011 >
-      au < exists ; 2012 ; Acta Oncologica Volume 2012 ; 50 ; 2012 >
-      au < exists ; 2013 ; Acta Oncologica Volume 2013 ; 51 ; 2013 >
-      au < exists ; 2014 ; Acta Oncologica Volume 2014 ; 52 ; 2014 >
-      au < exists ; 2015 ; Acta Oncologica Volume 2015 ; 53 ; 2015 >
-      au < exists ; 2016 ; Acta Oncologica Volume 2016 ; 54 ; 2016 >
-      au < exists ; 2017 ; Acta Oncologica Volume 2017 ; 55 ; 2017 >
-      au < exists ; 2018 ; Acta Oncologica Volume 2018 ; 56 ; 2018 >
-      au < exists ; 2019 ; Acta Oncologica Volume 2019 ; 57 ; 2019 >
-      au < exists ; 2020 ; Acta Oncologica Volume 2020 ; 58 ; 2020 >
-      au < exists ; 2021 ; Acta Oncologica Volume 2021 ; 59 ; 2021 >
-      au < exists ; 2022 ; Acta Oncologica Volume 2022 ; 60 ; 2022 >
-      au < exists ; 2023 ; Acta Oncologica Volume 2023 ; 61 ; 2023 >
-      au < exists ; 2024 ; Acta Oncologica Volume 2024 ; 62 ; 2024 >
+      au < manifest ; 1963 ; Acta Oncologica Volume 1963 ; 1 ; 1963 >
+      au < manifest ; 1964 ; Acta Oncologica Volume 1964 ; 2 ; 1964 >
+      au < manifest ; 1965 ; Acta Oncologica Volume 1965 ; 3 ; 1965 >
+      au < manifest ; 1966 ; Acta Oncologica Volume 1966 ; 4 ; 1966 >
+      au < manifest ; 1967 ; Acta Oncologica Volume 1967 ; 5 ; 1967 >
+      au < manifest ; 1968 ; Acta Oncologica Volume 1968 ; 6 ; 1968 >
+      au < manifest ; 1969 ; Acta Oncologica Volume 1969 ; 7 ; 1969 >
+      au < manifest ; 1970 ; Acta Oncologica Volume 1970 ; 8 ; 1970 >
+      au < manifest ; 1971 ; Acta Oncologica Volume 1971 ; 9 ; 1971 >
+      au < manifest ; 1972 ; Acta Oncologica Volume 1972 ; 10 ; 1972 >
+      au < manifest ; 1973 ; Acta Oncologica Volume 1973 ; 11 ; 1973 >
+      au < manifest ; 1974 ; Acta Oncologica Volume 1974 ; 12 ; 1974 >
+      au < manifest ; 1975 ; Acta Oncologica Volume 1975 ; 13 ; 1975 >
+      au < manifest ; 1976 ; Acta Oncologica Volume 1976 ; 14 ; 1976 >
+      au < manifest ; 1977 ; Acta Oncologica Volume 1977 ; 15 ; 1977 >
+      au < manifest ; 1978 ; Acta Oncologica Volume 1978 ; 16 ; 1978 >
+      au < manifest ; 1979 ; Acta Oncologica Volume 1979 ; 17 ; 1979 >
+      au < manifest ; 1980 ; Acta Oncologica Volume 1980 ; 18 ; 1980 >
+      au < manifest ; 1981 ; Acta Oncologica Volume 1981 ; 19 ; 1981 >
+      au < manifest ; 1982 ; Acta Oncologica Volume 1982 ; 20 ; 1982 >
+      au < manifest ; 1983 ; Acta Oncologica Volume 1983 ; 21 ; 1983 >
+      au < manifest ; 1984 ; Acta Oncologica Volume 1984 ; 22 ; 1984 >
+      au < manifest ; 1985 ; Acta Oncologica Volume 1985 ; 23 ; 1985 >
+      au < manifest ; 1986 ; Acta Oncologica Volume 1986 ; 24 ; 1986 >
+      au < manifest ; 1987 ; Acta Oncologica Volume 1987 ; 25 ; 1987 >
+      au < manifest ; 1988 ; Acta Oncologica Volume 1988 ; 26 ; 1988 >
+      au < manifest ; 1989 ; Acta Oncologica Volume 1989 ; 27 ; 1989 >
+      au < manifest ; 1990 ; Acta Oncologica Volume 1990 ; 28 ; 1990 >
+      au < manifest ; 1991 ; Acta Oncologica Volume 1991 ; 29 ; 1991 >
+      au < manifest ; 1992 ; Acta Oncologica Volume 1992 ; 30 ; 1992 >
+      au < manifest ; 1993 ; Acta Oncologica Volume 1993 ; 31 ; 1993 >
+      au < manifest ; 1994 ; Acta Oncologica Volume 1994 ; 32 ; 1994 >
+      au < manifest ; 1995 ; Acta Oncologica Volume 1995 ; 33 ; 1995 >
+      au < manifest ; 1996 ; Acta Oncologica Volume 1996 ; 34 ; 1996 >
+      au < manifest ; 1997 ; Acta Oncologica Volume 1997 ; 35 ; 1997 >
+      au < manifest ; 1998 ; Acta Oncologica Volume 1998 ; 36 ; 1998 >
+      au < manifest ; 1999 ; Acta Oncologica Volume 1999 ; 37 ; 1999 >
+      au < manifest ; 2000 ; Acta Oncologica Volume 2000 ; 38 ; 2000 >
+      au < manifest ; 2001 ; Acta Oncologica Volume 2001 ; 39 ; 2001 >
+      au < manifest ; 2002 ; Acta Oncologica Volume 2002 ; 40 ; 2002 >
+      au < manifest ; 2003 ; Acta Oncologica Volume 2003 ; 41 ; 2003 >
+      au < manifest ; 2004 ; Acta Oncologica Volume 2004 ; 42 ; 2004 >
+      au < manifest ; 2005 ; Acta Oncologica Volume 2005 ; 43 ; 2005 >
+      au < manifest ; 2006 ; Acta Oncologica Volume 2006 ; 44 ; 2006 >
+      au < manifest ; 2007 ; Acta Oncologica Volume 2007 ; 45 ; 2007 >
+      au < manifest ; 2008 ; Acta Oncologica Volume 2008 ; 46 ; 2008 >
+      au < manifest ; 2009 ; Acta Oncologica Volume 2009 ; 47 ; 2009 >
+      au < manifest ; 2010 ; Acta Oncologica Volume 2010 ; 48 ; 2010 >
+      au < manifest ; 2011 ; Acta Oncologica Volume 2011 ; 49 ; 2011 >
+      au < manifest ; 2012 ; Acta Oncologica Volume 2012 ; 50 ; 2012 >
+      au < manifest ; 2013 ; Acta Oncologica Volume 2013 ; 51 ; 2013 >
+      au < manifest ; 2014 ; Acta Oncologica Volume 2014 ; 52 ; 2014 >
+      au < manifest ; 2015 ; Acta Oncologica Volume 2015 ; 53 ; 2015 >
+      au < manifest ; 2016 ; Acta Oncologica Volume 2016 ; 54 ; 2016 >
+      au < manifest ; 2017 ; Acta Oncologica Volume 2017 ; 55 ; 2017 >
+      au < manifest ; 2018 ; Acta Oncologica Volume 2018 ; 56 ; 2018 >
+      au < manifest ; 2019 ; Acta Oncologica Volume 2019 ; 57 ; 2019 >
+      au < manifest ; 2020 ; Acta Oncologica Volume 2020 ; 58 ; 2020 >
+      au < manifest ; 2021 ; Acta Oncologica Volume 2021 ; 59 ; 2021 >
+      au < manifest ; 2022 ; Acta Oncologica Volume 2022 ; 60 ; 2022 >
+      au < manifest ; 2023 ; Acta Oncologica Volume 2023 ; 61 ; 2023 >
+      au < manifest ; 2024 ; Acta Oncologica Volume 2024 ; 62 ; 2024 >
 
   }
 
@@ -461,16 +461,16 @@
       param[base_url] = https://medicaljournalssweden.se/
       param[journal_id] = biid
 
-      au < exists ; 2015 ; Biomaterial Investigations in Dentistry Volume 2015 ; 1 ; 2015 >
-      au < exists ; 2016 ; Biomaterial Investigations in Dentistry Volume 2016 ; 2 ; 2016 >
-      au < exists ; 2017 ; Biomaterial Investigations in Dentistry Volume 2017 ; 3 ; 2017 >
-      au < exists ; 2018 ; Biomaterial Investigations in Dentistry Volume 2018 ; 4 ; 2018 >
-      au < exists ; 2019 ; Biomaterial Investigations in Dentistry Volume 2019 ; 5 ; 2019 >
-      au < exists ; 2020 ; Biomaterial Investigations in Dentistry Volume 2020 ; 6 ; 2020 >
-      au < exists ; 2021 ; Biomaterial Investigations in Dentistry Volume 2021 ; 7 ; 2021 >
-      au < exists ; 2022 ; Biomaterial Investigations in Dentistry Volume 2022 ; 8 ; 2022 >
-      au < exists ; 2023 ; Biomaterial Investigations in Dentistry Volume 2023 ; 9 ; 2023 >
-      au < exists ; 2024 ; Biomaterial Investigations in Dentistry Volume 2024 ; 10 ; 2024 >
+      au < manifest ; 2015 ; Biomaterial Investigations in Dentistry Volume 2015 ; 1 ; 2015 >
+      au < manifest ; 2016 ; Biomaterial Investigations in Dentistry Volume 2016 ; 2 ; 2016 >
+      au < manifest ; 2017 ; Biomaterial Investigations in Dentistry Volume 2017 ; 3 ; 2017 >
+      au < manifest ; 2018 ; Biomaterial Investigations in Dentistry Volume 2018 ; 4 ; 2018 >
+      au < manifest ; 2019 ; Biomaterial Investigations in Dentistry Volume 2019 ; 5 ; 2019 >
+      au < manifest ; 2020 ; Biomaterial Investigations in Dentistry Volume 2020 ; 6 ; 2020 >
+      au < manifest ; 2021 ; Biomaterial Investigations in Dentistry Volume 2021 ; 7 ; 2021 >
+      au < manifest ; 2022 ; Biomaterial Investigations in Dentistry Volume 2022 ; 8 ; 2022 >
+      au < manifest ; 2023 ; Biomaterial Investigations in Dentistry Volume 2023 ; 9 ; 2023 >
+      au < manifest ; 2024 ; Biomaterial Investigations in Dentistry Volume 2024 ; 10 ; 2024 >
 
   }
 
@@ -484,13 +484,13 @@
       param[base_url] = https://medicaljournalssweden.se/
       param[journal_id] = jrm-cc
 
-      au < exists ; 2018 ; Journal of Rehabilitation Medicine - Clinical Communications (JRM-CC) Volume 2018 ; 1 ; 2018 >
-      au < exists ; 2019 ; Journal of Rehabilitation Medicine - Clinical Communications (JRM-CC) Volume 2019 ; 2 ; 2019 >
-      au < exists ; 2020 ; Journal of Rehabilitation Medicine - Clinical Communications (JRM-CC) Volume 2020 ; 3 ; 2020 >
-      au < exists ; 2021 ; Journal of Rehabilitation Medicine - Clinical Communications (JRM-CC) Volume 2021 ; 4 ; 2021 >
-      au < exists ; 2022 ; Journal of Rehabilitation Medicine - Clinical Communications (JRM-CC) Volume 2022 ; 5 ; 2022 >
-      au < exists ; 2023 ; Journal of Rehabilitation Medicine - Clinical Communications (JRM-CC) Volume 2023 ; 6 ; 2023 >
-      au < exists ; 2024 ; Journal of Rehabilitation Medicine - Clinical Communications (JRM-CC) Volume 2024 ; 7 ; 2024 >
+      au < manifest ; 2018 ; Journal of Rehabilitation Medicine - Clinical Communications (JRM-CC) Volume 2018 ; 1 ; 2018 >
+      au < manifest ; 2019 ; Journal of Rehabilitation Medicine - Clinical Communications (JRM-CC) Volume 2019 ; 2 ; 2019 >
+      au < manifest ; 2020 ; Journal of Rehabilitation Medicine - Clinical Communications (JRM-CC) Volume 2020 ; 3 ; 2020 >
+      au < manifest ; 2021 ; Journal of Rehabilitation Medicine - Clinical Communications (JRM-CC) Volume 2021 ; 4 ; 2021 >
+      au < manifest ; 2022 ; Journal of Rehabilitation Medicine - Clinical Communications (JRM-CC) Volume 2022 ; 5 ; 2022 >
+      au < manifest ; 2023 ; Journal of Rehabilitation Medicine - Clinical Communications (JRM-CC) Volume 2023 ; 6 ; 2023 >
+      au < manifest ; 2024 ; Journal of Rehabilitation Medicine - Clinical Communications (JRM-CC) Volume 2024 ; 7 ; 2024 >
 
   }
 
@@ -504,34 +504,34 @@
       param[base_url] = https://medicaljournalssweden.se/
       param[journal_id] = jrm
 
-      au < exists ; 1969 ; Journal of Rehabilitation Medicine Volume 1969 ; 1 ; 1969 >
-      au < exists ; 1970 ; Journal of Rehabilitation Medicine Volume 1970 ; 2 ; 1970 >
+      au < manifest ; 1969 ; Journal of Rehabilitation Medicine Volume 1969 ; 1 ; 1969 >
+      au < manifest ; 1970 ; Journal of Rehabilitation Medicine Volume 1970 ; 2 ; 1970 >
       au < doesNotExist ; 1971 ; Journal of Rehabilitation Medicine Volume 1971 ; 3 ; 1971 >
-      au < exists ; 1972 ; Journal of Rehabilitation Medicine Volume 1972 ; 4 ; 1972 >
-      au < exists ; 1973 ; Journal of Rehabilitation Medicine Volume 1973 ; 5 ; 1973 >
-      au < exists ; 1974 ; Journal of Rehabilitation Medicine Volume 1974 ; 6 ; 1974 >
-      au < exists ; 1975 ; Journal of Rehabilitation Medicine Volume 1975 ; 7 ; 1975 >
+      au < manifest ; 1972 ; Journal of Rehabilitation Medicine Volume 1972 ; 4 ; 1972 >
+      au < manifest ; 1973 ; Journal of Rehabilitation Medicine Volume 1973 ; 5 ; 1973 >
+      au < manifest ; 1974 ; Journal of Rehabilitation Medicine Volume 1974 ; 6 ; 1974 >
+      au < manifest ; 1975 ; Journal of Rehabilitation Medicine Volume 1975 ; 7 ; 1975 >
       au < doesNotExist ; 1976 ; Journal of Rehabilitation Medicine Volume 1976 ; 8 ; 1976 >
       au < doesNotExist ; 1977 ; Journal of Rehabilitation Medicine Volume 1977 ; 9 ; 1977 >
       au < doesNotExist ; 1978 ; Journal of Rehabilitation Medicine Volume 1978 ; 10 ; 1978 >
       au < doesNotExist ; 1979 ; Journal of Rehabilitation Medicine Volume 1979 ; 11 ; 1979 >
-      au < exists ; 1980 ; Journal of Rehabilitation Medicine Volume 1980 ; 12 ; 1980 >
+      au < manifest ; 1980 ; Journal of Rehabilitation Medicine Volume 1980 ; 12 ; 1980 >
       au < doesNotExist ; 1981 ; Journal of Rehabilitation Medicine Volume 1981 ; 13 ; 1981 >
-      au < exists ; 1982 ; Journal of Rehabilitation Medicine Volume 1982 ; 14 ; 1982 >
-      au < exists ; 1983 ; Journal of Rehabilitation Medicine Volume 1983 ; 15 ; 1983 >
-      au < exists ; 1984 ; Journal of Rehabilitation Medicine Volume 1984 ; 16 ; 1984 >
-      au < exists ; 1985 ; Journal of Rehabilitation Medicine Volume 1985 ; 17 ; 1985 >
-      au < exists ; 1986 ; Journal of Rehabilitation Medicine Volume 1986 ; 18 ; 1986 >
-      au < exists ; 1987 ; Journal of Rehabilitation Medicine Volume 1987 ; 19 ; 1987 >
+      au < manifest ; 1982 ; Journal of Rehabilitation Medicine Volume 1982 ; 14 ; 1982 >
+      au < manifest ; 1983 ; Journal of Rehabilitation Medicine Volume 1983 ; 15 ; 1983 >
+      au < manifest ; 1984 ; Journal of Rehabilitation Medicine Volume 1984 ; 16 ; 1984 >
+      au < manifest ; 1985 ; Journal of Rehabilitation Medicine Volume 1985 ; 17 ; 1985 >
+      au < manifest ; 1986 ; Journal of Rehabilitation Medicine Volume 1986 ; 18 ; 1986 >
+      au < manifest ; 1987 ; Journal of Rehabilitation Medicine Volume 1987 ; 19 ; 1987 >
       au < doesNotExist ; 1988 ; Journal of Rehabilitation Medicine Volume 1988 ; 20 ; 1988 >
-      au < exists ; 1989 ; Journal of Rehabilitation Medicine Volume 1989 ; 21 ; 1989 >
-      au < exists ; 1990 ; Journal of Rehabilitation Medicine Volume 1990 ; 22 ; 1990 >
-      au < exists ; 1991 ; Journal of Rehabilitation Medicine Volume 1991 ; 23 ; 1991 >
-      au < exists ; 1992 ; Journal of Rehabilitation Medicine Volume 1992 ; 24 ; 1992 >
-      au < exists ; 1993 ; Journal of Rehabilitation Medicine Volume 1993 ; 25 ; 1993 >
-      au < exists ; 1994 ; Journal of Rehabilitation Medicine Volume 1994 ; 26 ; 1994 >
-      au < exists ; 1995 ; Journal of Rehabilitation Medicine Volume 1995 ; 27 ; 1995 >
-      au < exists ; 1996 ; Journal of Rehabilitation Medicine Volume 1996 ; 28 ; 1996 >
+      au < manifest ; 1989 ; Journal of Rehabilitation Medicine Volume 1989 ; 21 ; 1989 >
+      au < manifest ; 1990 ; Journal of Rehabilitation Medicine Volume 1990 ; 22 ; 1990 >
+      au < manifest ; 1991 ; Journal of Rehabilitation Medicine Volume 1991 ; 23 ; 1991 >
+      au < manifest ; 1992 ; Journal of Rehabilitation Medicine Volume 1992 ; 24 ; 1992 >
+      au < manifest ; 1993 ; Journal of Rehabilitation Medicine Volume 1993 ; 25 ; 1993 >
+      au < manifest ; 1994 ; Journal of Rehabilitation Medicine Volume 1994 ; 26 ; 1994 >
+      au < manifest ; 1995 ; Journal of Rehabilitation Medicine Volume 1995 ; 27 ; 1995 >
+      au < manifest ; 1996 ; Journal of Rehabilitation Medicine Volume 1996 ; 28 ; 1996 >
       au < doesNotExist ; 1997 ; Journal of Rehabilitation Medicine Volume 1997 ; 29 ; 1997 >
       au < doesNotExist ; 1998 ; Journal of Rehabilitation Medicine Volume 1998 ; 30 ; 1998 >
       au < doesNotExist ; 1999 ; Journal of Rehabilitation Medicine Volume 1999 ; 31 ; 1999 >
@@ -543,23 +543,23 @@
       au < doesNotExist ; 2005 ; Journal of Rehabilitation Medicine Volume 2005 ; 37 ; 2005 >
       au < doesNotExist ; 2006 ; Journal of Rehabilitation Medicine Volume 2006 ; 38 ; 2006 >
       au < doesNotExist ; 2007 ; Journal of Rehabilitation Medicine Volume 2007 ; 39 ; 2007 >
-      au < exists ; 2008 ; Journal of Rehabilitation Medicine Volume 2008 ; 40 ; 2008 >
-      au < exists ; 2009 ; Journal of Rehabilitation Medicine Volume 2009 ; 41 ; 2009 >
-      au < exists ; 2010 ; Journal of Rehabilitation Medicine Volume 2010 ; 42 ; 2010 >
-      au < exists ; 2011 ; Journal of Rehabilitation Medicine Volume 2011 ; 43 ; 2011 >
-      au < exists ; 2012 ; Journal of Rehabilitation Medicine Volume 2012 ; 44 ; 2012 >
-      au < exists ; 2013 ; Journal of Rehabilitation Medicine Volume 2013 ; 45 ; 2013 >
-      au < exists ; 2014 ; Journal of Rehabilitation Medicine Volume 2014 ; 46 ; 2014 >
-      au < exists ; 2015 ; Journal of Rehabilitation Medicine Volume 2015 ; 47 ; 2015 >
-      au < exists ; 2016 ; Journal of Rehabilitation Medicine Volume 2016 ; 48 ; 2016 >
-      au < exists ; 2017 ; Journal of Rehabilitation Medicine Volume 2017 ; 49 ; 2017 >
-      au < exists ; 2018 ; Journal of Rehabilitation Medicine Volume 2018 ; 50 ; 2018 >
-      au < exists ; 2019 ; Journal of Rehabilitation Medicine Volume 2019 ; 51 ; 2019 >
-      au < exists ; 2020 ; Journal of Rehabilitation Medicine Volume 2020 ; 52 ; 2020 >
-      au < exists ; 2021 ; Journal of Rehabilitation Medicine Volume 2021 ; 53 ; 2021 >
-      au < exists ; 2022 ; Journal of Rehabilitation Medicine Volume 2022 ; 54 ; 2022 >
-      au < exists ; 2023 ; Journal of Rehabilitation Medicine Volume 2023 ; 55 ; 2023 >
-      au < exists ; 2024 ; Journal of Rehabilitation Medicine Volume 2024 ; 56 ; 2024 >
+      au < manifest ; 2008 ; Journal of Rehabilitation Medicine Volume 2008 ; 40 ; 2008 >
+      au < manifest ; 2009 ; Journal of Rehabilitation Medicine Volume 2009 ; 41 ; 2009 >
+      au < manifest ; 2010 ; Journal of Rehabilitation Medicine Volume 2010 ; 42 ; 2010 >
+      au < manifest ; 2011 ; Journal of Rehabilitation Medicine Volume 2011 ; 43 ; 2011 >
+      au < manifest ; 2012 ; Journal of Rehabilitation Medicine Volume 2012 ; 44 ; 2012 >
+      au < manifest ; 2013 ; Journal of Rehabilitation Medicine Volume 2013 ; 45 ; 2013 >
+      au < manifest ; 2014 ; Journal of Rehabilitation Medicine Volume 2014 ; 46 ; 2014 >
+      au < manifest ; 2015 ; Journal of Rehabilitation Medicine Volume 2015 ; 47 ; 2015 >
+      au < manifest ; 2016 ; Journal of Rehabilitation Medicine Volume 2016 ; 48 ; 2016 >
+      au < manifest ; 2017 ; Journal of Rehabilitation Medicine Volume 2017 ; 49 ; 2017 >
+      au < manifest ; 2018 ; Journal of Rehabilitation Medicine Volume 2018 ; 50 ; 2018 >
+      au < manifest ; 2019 ; Journal of Rehabilitation Medicine Volume 2019 ; 51 ; 2019 >
+      au < manifest ; 2020 ; Journal of Rehabilitation Medicine Volume 2020 ; 52 ; 2020 >
+      au < manifest ; 2021 ; Journal of Rehabilitation Medicine Volume 2021 ; 53 ; 2021 >
+      au < manifest ; 2022 ; Journal of Rehabilitation Medicine Volume 2022 ; 54 ; 2022 >
+      au < manifest ; 2023 ; Journal of Rehabilitation Medicine Volume 2023 ; 55 ; 2023 >
+      au < manifest ; 2024 ; Journal of Rehabilitation Medicine Volume 2024 ; 56 ; 2024 >
 
   }
 
