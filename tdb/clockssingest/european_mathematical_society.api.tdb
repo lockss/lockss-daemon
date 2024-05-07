@@ -278,19 +278,20 @@
        au < crawling ; exists ; 2020 ; 2020 ; Annales de l’Institut Henri Poincaré D 2020 ; >
   }
 
-  #{ This serial has no content when the tdb file is created
-      #title <
-          #name = Algebraic Geometry ;
-          #issn = 2308-5827 ;
-          #eIssn = 2308-5835
-      #>
-
-      #param[journal_serial_number] = 21
-      #param[journal_id] = ag
-
-       #au < exists ; exists ; 2019 ; 2019 ; Algebraic Geometry 2019 ; >
-       #au < exists ; exists ; 2020 ; 2020 ; Algebraic Geometry 2020 ; >
-  #}
+# This serial has no content when the tdb file is created
+#  {
+#      title <
+#          name = Algebraic Geometry ;
+#          issn = 2308-5827 ;
+#          eIssn = 2308-5835
+#      >
+#
+#      param[journal_serial_number] = 21
+#      param[journal_id] = ag
+#
+#       au < exists ; exists ; 2019 ; 2019 ; Algebraic Geometry 2019 ; >
+#       au < exists ; exists ; 2020 ; 2020 ; Algebraic Geometry 2020 ; >
+#  }
 
   {
       title <
