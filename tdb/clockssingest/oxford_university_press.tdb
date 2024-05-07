@@ -17425,8 +17425,8 @@
 
     param[journal_id] = pnasnexus
 
-    au < manifest ; exists ; 2022 ; 2022 ; PNAS Nexus Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2023 ; 2023 ; PNAS Nexus Volume 2 ; 2 ; >
+    au < testing ; exists ; 2022 ; 2022 ; PNAS Nexus Volume 1 ; 1 ; >
+    au < testing ; exists ; 2023 ; 2023 ; PNAS Nexus Volume 2 ; 2 ; >
     au < manifest ; exists ; 2024 ; 2024 ; PNAS Nexus Volume 3 ; 3 ; >
 
   }
