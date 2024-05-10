@@ -82,7 +82,9 @@
 
         param[base_url] = https://essaysinhistoryjournal.com/
 
-        au < doesNotExist ; doesNotExist ; 2008 ; 2008 ; 2008 ; Essays in History Volume 2008 ; >
+        au < exists ; exists ; 1999 ; 1999 ; 1999 ; Essays in History Volume 1999 ; >
+        au < exists ; exists ; 1999 ; 1999 ; 1999 ; Essays in History Volume 1999 ; >
+        au < exists ; exists ; 2000 ; 2000 ; 2000 ; Essays in History Volume 2000 ; >
         au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Essays in History Volume 2009 ; >
         au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Essays in History Volume 2010 ; >
         au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Essays in History Volume 2011 ; >
