@@ -31,13 +31,6 @@
     au < readySource ; crawling ; 2024 ; Max Planck Institute for Demographic Research Source Content 2024_01 ; 2024_01 >
 
     }
-    {
-    #TESTING
-    param[base_url] = https://clockss-test.lockss.org/sourcefiles/mpidr-released/
-
-    au < ready ; exists ; 2024 ; Max Planck Institute for Demographic Research Source Content 2024_01 [testing] ; 2024_01 >
-
-    }
   }
 
 }
