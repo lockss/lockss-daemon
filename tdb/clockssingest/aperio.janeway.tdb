@@ -50,13 +50,11 @@
         #au < doesNotExist ; doesNotExist ; 2003 ; 2003 ; 4 ; Summer Academe Volume 4 ; > #mpc can't find this
         #au < doesNotExist ; doesNotExist ; 2004 ; 2004 ; 5 ; Summer Academe Volume 5 ; > #mpc can't find this
         #au < doesNotExist ; doesNotExist ; 2009 ; 2009 ; 6 ; Summer Academe Volume 6 ; > #mpc can't find this
-        au < frozen ; exists ; 2012 ; 2012 ; 1-6 ; Summer Academe Volume 1-6 ; >
+        au < frozen ; exists ; 2012 ; 2012 ; 1-6 ; Summer Academe Volume 1-6 ; > #Nominally published 1996, 1997, 2000, 2003, 2004, 2009.
         au < frozen ; exists ; 2013 ; 2013 ; 7 ; Summer Academe Volume 7 ; >
-        au < doesNotExist ; doesNotExist ; 2014 ; 2014 ; 8 ; Summer Academe Volume 8 ; > #No articles
-        au < frozen ; exists ; 2015 ; 2015 ; 9 ; Summer Academe Volume 9 ; >
+        au < frozen ; exists ; 2015 ; 2015 ; 8-9 ; Summer Academe Volume 8-9 ; > #V8 nominally published in 2014, actually 2015
         au < frozen ; exists ; 2016 ; 2016 ; 10 ; Summer Academe Volume 10 ; >
-        au < doesNotExist ; doesNotExist ; 2017 ; 2017 ; 11 ; Summer Academe Volume 11 ; >
-        au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Summer Academe Volume 2018 ; >
+        au < frozen ; exists ; 2018 ; 2018 ; 11 ; Summer Academe Volume 11 ; > #V11 nominally published in 2017, actually 2018
         au < frozen ; exists ; 2019 ; 2019 ; 12 ; Summer Academe Volume 12 ; >
         au < frozen ; exists ; 2020 ; 2020 ; 13 ; Summer Academe Volume 13 ; >
         au < frozen ; exists ; 2021 ; 2021 ; 14 ; Summer Academe Volume 14 ; >
