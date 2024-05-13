@@ -27,12 +27,12 @@
        #No more AUs. Moved to https.
     }
     {
-       plugin = org.lockss.plugin.clockss.aimsciences.ClockssAimsSourcePlugin
-       implicit < status ; status2 ; year ; name ; param[year] >
-       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/aimsciences-released/
+       #plugin = org.lockss.plugin.clockss.aimsciences.ClockssAimsSourcePlugin
+       #implicit < status ; status2 ; year ; name ; param[year] >
+       #param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/aimsciences-released/
 
-       au < testing ; exists ; 2023 ; American Institute of Mathematical Sciences Source Content 2023 ; 2023 > #need redelivery of the content in different format
-       au < testing ; exists ; 2024 ; American Institute of Mathematical Sciences Source Content 2024 ; 2024 > #need redelivery of the content in different format
+       #au < testing ; exists ; 2023 ; American Institute of Mathematical Sciences Source Content 2023 ; 2023 > #need redelivery of the content in different format
+       #au < testing ; exists ; 2024 ; American Institute of Mathematical Sciences Source Content 2024 ; 2024 > #need redelivery of the content in different format
 
     }
     {
