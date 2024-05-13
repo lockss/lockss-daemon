@@ -2860,7 +2860,7 @@
     au < deepCrawl ; exists ; 2020 ; 2020 ; Briefings in Bioinformatics Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2021 ; 2021 ; Briefings in Bioinformatics Volume 22 ; 22 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Briefings in Bioinformatics Volume 23 ; 23 ; >
-    au < ready ; exists ; 2023 ; 2023 ; Briefings in Bioinformatics Volume 24-25 ; 24 ; >
+    au < crawling ; exists ; 2023 ; 2023 ; Briefings in Bioinformatics Volume 24-25 ; 24 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Briefings in Bioinformatics Volume 25 ; 25 ; >
 
   }
@@ -4792,7 +4792,7 @@
     au < deepCrawl ; exists ; 2020 ; 2020 ; Early Music Volume 48 ; 48 ; >
     au < deepCrawl ; exists ; 2021 ; 2021 ; Early Music Volume 49 ; 49 ; >
     au < frozen ; exists ; 2022 ; 2022 ; Early Music Volume 50 ; 50 ; >
-    au < ready ; exists ; 2023 ; 2023 ; Early Music Volume 51 ; 51 ; >
+    au < crawling ; exists ; 2023 ; 2023 ; Early Music Volume 51 ; 51 ; >
     au < expected ; exists ; 2024 ; 2024 ; Early Music Volume 52 ; 52 ; >
 
   }
@@ -11101,7 +11101,7 @@
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Experimental Botany Volume 71 ; 71 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Journal of Experimental Botany Volume 72 ; 72 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Experimental Botany Volume 73 ; 73 ; >
-    au < ready ; exists ; 2023 ; 2023 ; Journal of Experimental Botany Volume 74 ; 74 ; >
+    au < crawling ; exists ; 2023 ; 2023 ; Journal of Experimental Botany Volume 74 ; 74 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Journal of Experimental Botany Volume 75 ; 75 ; >
 
   }
@@ -11609,7 +11609,7 @@
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Intellectual Property Law & Practice Volume 15 ; 15 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Journal of Intellectual Property Law & Practice Volume 16 ; 16 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Intellectual Property Law & Practice Volume 17 ; 17 ; >
-    au < ready ; exists ; 2023 ; 2023 ; Journal of Intellectual Property Law & Practice Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2023 ; 2023 ; Journal of Intellectual Property Law & Practice Volume 18 ; 18 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Journal of Intellectual Property Law & Practice Volume 19 ; 19 ; >
 
   }
@@ -11645,7 +11645,7 @@
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of International Criminal Justice Volume 18 ; 18 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Journal of International Criminal Justice Volume 19 ; 19 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of International Criminal Justice Volume 20 ; 20 ; >
-    au < ready ; exists ; 2023 ; 2023 ; Journal of International Criminal Justice Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2023 ; 2023 ; Journal of International Criminal Justice Volume 21 ; 21 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Journal of International Criminal Justice Volume 22 ; 22 ; >
 
   }
@@ -11674,7 +11674,7 @@
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of International Dispute Settlement Volume 11 ; 11 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Journal of International Dispute Settlement Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of International Dispute Settlement Volume 13 ; 13 ; >
-    au < ready ; exists ; 2023 ; 2023 ; Journal of International Dispute Settlement Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2023 ; 2023 ; Journal of International Dispute Settlement Volume 14 ; 14 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Journal of International Dispute Settlement Volume 15 ; 15 ; >
 
   }
@@ -11715,7 +11715,7 @@
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of International Economic Law Volume 23 ; 23 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Journal of International Economic Law Volume 24 ; 24 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of International Economic Law Volume 25 ; 25 ; >
-    au < ready ; exists ; 2023 ; 2023 ; Journal of International Economic Law Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2023 ; 2023 ; Journal of International Economic Law Volume 26 ; 26 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Journal of International Economic Law Volume 27 ; 27 ; >
 
   }
@@ -17425,8 +17425,8 @@
 
     param[journal_id] = pnasnexus
 
-    au < ready ; exists ; 2022 ; 2022 ; PNAS Nexus Volume 1 ; 1 ; >
-    au < ready ; exists ; 2023 ; 2023 ; PNAS Nexus Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; PNAS Nexus Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2023 ; 2023 ; PNAS Nexus Volume 2 ; 2 ; >
     au < manifest ; exists ; 2024 ; 2024 ; PNAS Nexus Volume 3 ; 3 ; >
 
   }
