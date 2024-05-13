@@ -3,7 +3,7 @@
   publisher <
     name = Aperio ;
     info[contract] = 2024 ;
-    info[back] = 2019 ;
+    info[back] = 1950 ;
     info[tester] = 8 ;
     info[platform] = Janeway/OAI x2. See LXPLUG-2426
   >
@@ -17,59 +17,50 @@
     {
 
         title <
-            name = Journal of Modern Philosophy 
-            #eissn = 2034-4643
+            name = Journal of Modern Philosophy ;
+            eissn = 2644-0652
         >
 
         param[base_url] = https://jmphil.org/
-        #2019-2023 processed on previous platforms
+        #2019-2023 processed on previous platform (Ubiquity)
 
-        au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; 1 ; Journal of Modern Philosophy Volume 2019 ; >
-        au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; 2 ; Journal of Modern Philosophy Volume 2020 ; >
-        au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; 3 ; Journal of Modern Philosophy Volume 2021 ; >
-        au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; 4 ; Journal of Modern Philosophy Volume 2022 ; >
-        au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; 5 ; Journal of Modern Philosophy Volume 2023 ; >
-        au < manifest ; exists ; 2024 ; 2024 ; 6 ; Journal of Modern Philosophy Volume 2024 ; >
-
+        au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; 1 ; Journal of Modern Philosophy Volume 1 ; >
+        au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; 2 ; Journal of Modern Philosophy Volume 2 ; >
+        au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; 3 ; Journal of Modern Philosophy Volume 3 ; >
+        au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; 4 ; Journal of Modern Philosophy Volume 4 ; >
+        au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; 5 ; Journal of Modern Philosophy Volume 5 ; >
+        au < manifest ; exists ; 2024 ; 2024 ; 6 ; Journal of Modern Philosophy Volume 6 ; >
 
     }
 
     {
 
         title <
-            name = Summer Academe 
+            name = Summer Academe ;
+            issn = 1091-8515 ;
+            eissn = 2995-0600
         >
 
         param[base_url] = https://summeracademe.org/
         #The material in 1996-2011 was all published with the 2012 volume. Content collected by posting year.
 
-        #au < doesNotExist ; doesNotExist ; 1996 ; 1996 ; 1996 ; Summer Academe Volume 1996 ; > #mpc can't find this
-        #au < doesNotExist ; doesNotExist ; 1997 ; 1997 ; 1997 ; Summer Academe Volume 1997 ; > #mpc can't find this
-        #au < doesNotExist ; doesNotExist ; 1998 ; 1998 ; 1998 ; Summer Academe Volume 1998 ; > #mpc can't find this
-        #au < doesNotExist ; doesNotExist ; 1999 ; 1999 ; 1999 ; Summer Academe Volume 1999 ; > #mpc can't find this
-        #au < doesNotExist ; doesNotExist ; 2000 ; 2000 ; 2000 ; Summer Academe Volume 2000 ; > #mpc can't find this
-        #au < doesNotExist ; doesNotExist ; 2001 ; 2001 ; 2001 ; Summer Academe Volume 2001 ; > #mpc can't find this
-        #au < doesNotExist ; doesNotExist ; 2002 ; 2002 ; 2002 ; Summer Academe Volume 2002 ; > #mpc can't find this
-        #au < doesNotExist ; doesNotExist ; 2003 ; 2003 ; 2003 ; Summer Academe Volume 2003 ; > #mpc can't find this
-        #au < doesNotExist ; doesNotExist ; 2004 ; 2004 ; 2004 ; Summer Academe Volume 2004 ; > #mpc can't find this
-        #au < doesNotExist ; doesNotExist ; 2005 ; 2005 ; 2005 ; Summer Academe Volume 2005 ; > #mpc can't find this
-        #au < doesNotExist ; doesNotExist ; 2006 ; 2006 ; 2006 ; Summer Academe Volume 2006 ; > #mpc can't find this
-        #au < doesNotExist ; doesNotExist ; 2007 ; 2007 ; 2007 ; Summer Academe Volume 2007 ; > #mpc can't find this
-        #au < doesNotExist ; doesNotExist ; 2008 ; 2008 ; 2008 ; Summer Academe Volume 2008 ; > #mpc can't find this
-        #au < doesNotExist ; doesNotExist ; 2009 ; 2009 ; 2009 ; Summer Academe Volume 2009 ; > #mpc can't find this
-        #au < doesNotExist ; doesNotExist ; 2010 ; 2010 ; 2010 ; Summer Academe Volume 2010 ; > #mpc can't find this
-        #au < doesNotExist ; doesNotExist ; 2011 ; 2011 ; 2011 ; Summer Academe Volume 2011 ; > #mpc can't find this
-        au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Summer Academe Volume 2012 ; >
-        au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Summer Academe Volume 2013 ; >
-        au < doesNotExist ; doesNotExist ; 2014 ; 2014 ; 2014 ; Summer Academe Volume 2014 ; > #No articles
-        au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Summer Academe Volume 2015 ; >
-        au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Summer Academe Volume 2016 ; >
-        au < doesNotExist ; doesNotExist ; 2017 ; 2017 ; 2017 ; Summer Academe Volume 2017 ; >
+        #au < doesNotExist ; doesNotExist ; 1996 ; 1996 ; 1 ; Summer Academe Volume 1 ; > #mpc can't find this
+        #au < doesNotExist ; doesNotExist ; 1997 ; 1997 ; 2 ; Summer Academe Volume 2 ; > #mpc can't find this
+        #au < doesNotExist ; doesNotExist ; 2000 ; 2000 ; 3 ; Summer Academe Volume 3 ; > #mpc can't find this
+        #au < doesNotExist ; doesNotExist ; 2003 ; 2003 ; 4 ; Summer Academe Volume 4 ; > #mpc can't find this
+        #au < doesNotExist ; doesNotExist ; 2004 ; 2004 ; 5 ; Summer Academe Volume 5 ; > #mpc can't find this
+        #au < doesNotExist ; doesNotExist ; 2009 ; 2009 ; 6 ; Summer Academe Volume 6 ; > #mpc can't find this
+        au < frozen ; exists ; 2012 ; 2012 ; 1-6 ; Summer Academe Volume 1-6 ; >
+        au < frozen ; exists ; 2013 ; 2013 ; 7 ; Summer Academe Volume 7 ; >
+        au < doesNotExist ; doesNotExist ; 2014 ; 2014 ; 8 ; Summer Academe Volume 8 ; > #No articles
+        au < frozen ; exists ; 2015 ; 2015 ; 9 ; Summer Academe Volume 9 ; >
+        au < frozen ; exists ; 2016 ; 2016 ; 10 ; Summer Academe Volume 10 ; >
+        au < doesNotExist ; doesNotExist ; 2017 ; 2017 ; 11 ; Summer Academe Volume 11 ; >
         au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Summer Academe Volume 2018 ; >
-        au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Summer Academe Volume 2019 ; >
-        au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Summer Academe Volume 2020 ; >
-        au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Summer Academe Volume 2021 ; >
-        au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Summer Academe Volume 2022 ; >
+        au < frozen ; exists ; 2019 ; 2019 ; 12 ; Summer Academe Volume 12 ; >
+        au < frozen ; exists ; 2020 ; 2020 ; 13 ; Summer Academe Volume 13 ; >
+        au < frozen ; exists ; 2021 ; 2021 ; 14 ; Summer Academe Volume 14 ; >
+        au < frozen ; exists ; 2022 ; 2022 ; 15 ; Summer Academe Volume 15 ; >
         #Nothing after 2022 as of 20240321
 
     }
@@ -77,7 +68,9 @@
     {
 
         title <
-            name = Essays in History 
+            name = Essays in History ;
+            issn = 0071-1411 ;
+            eissn = 0071-1411
         >
 
         param[base_url] = https://essaysinhistoryjournal.com/
@@ -146,7 +139,8 @@
     {
 
         title <
-            name = International Journal of First Aid Education
+            name = International Journal of First Aid Education ;
+            eissn = 2514-7153
         >
 
         param[base_url] = https://firstaidjournal.org/
@@ -165,7 +159,8 @@
   {
 
         title <
-            name = Language Documentation and Description
+            name = Language Documentation and Description ;
+            eissn = 2756-1224
         >
 
         param[base_url] = https://www.lddjournal.org/
