@@ -63,8 +63,33 @@
     param[journal_serial_number] = 2
     param[journal_id] = em
 
-     au < frozen ; exists ; 1997 ; 1997 ; Elemente der Mathematik Volume 1997 ; 1997 ; >
-     au < frozen ; exists ; 1998 ; 1998 ; Elemente der Mathematik Volume 1998 ; 1998 ; >
+    au < frozen ; exists ; 1997 ; 1997 ; Elemente der Mathematik Volume 52 ; 52 ; >
+    au < frozen ; exists ; 1998 ; 1998 ; Elemente der Mathematik Volume 53 ; 53 ; >
+    au < exists ; exists ; 1999 ; 1999 ; Elemente der Mathematik Volume 54 ; 54 ; >
+    au < exists ; exists ; 2000 ; 2000 ; Elemente der Mathematik Volume 55 ; 55 ; >
+    au < exists ; exists ; 2001 ; 2001 ; Elemente der Mathematik Volume 56 ; 56 ; >
+    au < exists ; exists ; 2002 ; 2002 ; Elemente der Mathematik Volume 57 ; 57 ; >
+    au < exists ; exists ; 2003 ; 2003 ; Elemente der Mathematik Volume 58 ; 58 ; >
+    au < exists ; exists ; 2004 ; 2004 ; Elemente der Mathematik Volume 59 ; 59 ; >
+    au < exists ; exists ; 2005 ; 2005 ; Elemente der Mathematik Volume 60 ; 60 ; >
+    au < exists ; exists ; 2006 ; 2006 ; Elemente der Mathematik Volume 61 ; 61 ; >
+    au < exists ; exists ; 2007 ; 2007 ; Elemente der Mathematik Volume 62 ; 62 ; >
+    au < exists ; exists ; 2008 ; 2008 ; Elemente der Mathematik Volume 63 ; 63 ; >
+    au < exists ; exists ; 2009 ; 2009 ; Elemente der Mathematik Volume 64 ; 64 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Elemente der Mathematik Volume 65 ; 65 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Elemente der Mathematik Volume 66 ; 66 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Elemente der Mathematik Volume 67 ; 67 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Elemente der Mathematik Volume 68 ; 68 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Elemente der Mathematik Volume 69 ; 69 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Elemente der Mathematik Volume 70 ; 70 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Elemente der Mathematik Volume 71 ; 71 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Elemente der Mathematik Volume 72 ; 72 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Elemente der Mathematik Volume 73 ; 73 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Elemente der Mathematik Volume 74 ; 74 ; >
+    au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Elemente der Mathematik Volume 75 ; 75 ; >
+    au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Elemente der Mathematik Volume 76 ; 76 ; >
+    au < exists ; exists ; 2022 ; 2022 ; Elemente der Mathematik Volume 77 ; 77 ; >
+
   }
 
   {
@@ -76,8 +101,21 @@
     param[journal_serial_number] = 3
     param[journal_id] = lem
 
-    au < frozen ; exists ; 2009 ; 2009 ; "L’Enseignement Mathématique Volume 2009" ; 2009 ; >
-    au < frozen ; exists ; 2010 ; 2010 ; "L’Enseignement Mathématique Volume 2010" ; 2010 ; >
+    au < frozen ; exists ; 2009 ; 2009 ; L'Enseignement Mathématique Volume 2009 ; 2009 ; >
+    au < superseded ; exists ; 2010 ; 2010 ; L'Enseignement Mathématique Volume 2010 ; 2010 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; L'Enseignement Mathématique Volume 57 ; 57 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; L'Enseignement Mathématique Volume 58 ; 58 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; L'Enseignement Mathématique Volume 59 ; 59 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; L'Enseignement Mathématique Volume 60 ; 60 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; L'Enseignement Mathématique Volume 61 ; 61 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; L'Enseignement Mathématique Volume 62 ; 62 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; L'Enseignement Mathématique Volume 63 ; 63 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; L'Enseignement Mathématique Volume 64 ; 64 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; L'Enseignement Mathématique Volume 65 ; 65 ; >
+    au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; L'Enseignement Mathématique Volume 66 ; 66 ; >
+    au < exists ; exists ; 2021 ; 2021 ; L'Enseignement Mathématique Volume 67 ; 67 ; >
+    au < exists ; exists ; 2022 ; 2022 ; L'Enseignement Mathématique Volume 68 ; 68 ; >
+
   }
 
   {
@@ -89,8 +127,22 @@
     param[journal_serial_number] = 4
     param[journal_id] = pm
 
-     au < frozen ; exists ; 2007 ; 2007 ; Portugaliae Mathematica Volume 2007 ; 2007 ; >
-     au < frozen ; exists ; 2008 ; 2008 ; Portugaliae Mathematica Volume 2008 ; 2008 ; >
+    au < superseded ; exists ; 2007 ; 2007 ; Portugaliae Mathematica Volume 64 ; 64 ; >
+    au < superseded ; exists ; 2008 ; 2008 ; Portugaliae Mathematica Volume 65 ; 65 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Portugaliae Mathematica Volume 66 ; 66 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Portugaliae Mathematica Volume 67 ; 67 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Portugaliae Mathematica Volume 68 ; 68 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Portugaliae Mathematica Volume 69 ; 69 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Portugaliae Mathematica Volume 70 ; 70 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Portugaliae Mathematica Volume 71 ; 71 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Portugaliae Mathematica Volume 72 ; 72 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Portugaliae Mathematica Volume 73 ; 73 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Portugaliae Mathematica Volume 74 ; 74 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Portugaliae Mathematica Volume 75 ; 75 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Portugaliae Mathematica Volume 76 ; 76 ; >
+    au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Portugaliae Mathematica Volume 77 ; 77 ; >
+    au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Portugaliae Mathematica Volume 78 ; 78 ; >
+
   }
 
   {
