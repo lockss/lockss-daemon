@@ -89,11 +89,11 @@
     au < frozen ; exists ; 2013 ; BioTechniques Volume 55 ; 55 ; https://www.future-science.com/ ; >
     au < frozen ; exists ; 2014 ; BioTechniques Volume 56 ; 56 ; https://www.future-science.com/ ; >
     au < finished ; manifest ; 2014 ; BioTechniques Volume 57 ; 57 ; https://www.future-science.com/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2015 ; BioTechniques Volume 58 ; 58 ; https://www.future-science.com/ ; >
-    au < frozen ; exists ; 2015 ; BioTechniques Volume 59 ; 59 ; https://www.future-science.com/ ; >
-    au < frozen ; exists ; 2016 ; BioTechniques Volume 60 ; 60 ; https://www.future-science.com/ ; >
+    au < finished ; manifest ; 2015 ; BioTechniques Volume 58 ; 58 ; https://www.future-science.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2015 ; BioTechniques Volume 59 ; 59 ; https://www.future-science.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2016 ; BioTechniques Volume 60 ; 60 ; https://www.future-science.com/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2016 ; BioTechniques Volume 61 ; 61 ; https://www.future-science.com/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2017 ; BioTechniques Volume 62 ; 62 ; https://www.future-science.com/ ; >
+    au < finished ; manifest ; 2017 ; BioTechniques Volume 62 ; 62 ; https://www.future-science.com/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; BioTechniques Volume 63 ; 63 ; https://www.future-science.com/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; BioTechniques Volume 64 ; 64 ; https://www.future-science.com/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2018 ; BioTechniques Volume 65 ; 65 ; https://www.future-science.com/ ; reingest1.clockss.org:8082 >
@@ -175,9 +175,9 @@
     
     param[journal_id] = fmc
 
-    au < frozen ; exists ; 2009 ; Future Medicinal Chemistry Volume 1 ; 1 ; https://www.future-science.com/ ; >
+    au < finished ; manifest ; 2009 ; Future Medicinal Chemistry Volume 1 ; 1 ; https://www.future-science.com/ ; reingest5.clockss.org:8082 >
     au < doNotProcess ; exists ; 2010 ; Future Medicinal Chemistry Volume 2 ; 2 ; https://www.future-science.com/ ; >
-    au < frozen ; exists ; 2011 ; Future Medicinal Chemistry Volume 3 ; 3 ; https://www.future-science.com/ ; >
+    au < finished ; manifest ; 2011 ; Future Medicinal Chemistry Volume 3 ; 3 ; https://www.future-science.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Future Medicinal Chemistry Volume 4 ; 4 ; http://www.future-science.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2013 ; Future Medicinal Chemistry Volume 5 ; 5 ; http://www.future-science.com/ ; reingest4.clockss.org:8082 >
     au < zapped ; finished ; 2014 ; Future Medicinal Chemistry Volume 6 ; 6 ; http://www.future-science.com/ ; reingest1.clockss.org:8082 >
@@ -294,7 +294,7 @@
     
     param[journal_id] = tde
 
-    au < frozen ; exists ; 2010 ; Therapeutic Delivery Volume 1 ; 1 ; https://www.future-science.com/ ; >
+    au < finished ; manifest ; 2010 ; Therapeutic Delivery Volume 1 ; 1 ; https://www.future-science.com/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2011 ; Therapeutic Delivery Volume 2 ; 2 ; https://www.future-science.com/ ; >
     au < finished ; finished ; 2012 ; Therapeutic Delivery Volume 3 ; 3 ; http://www.future-science.com/ ; >
     au < finished ; frozen ; 2013 ; Therapeutic Delivery Volume 4 ; 4 ; http://www.future-science.com/ ; reingest4.clockss.org:8082 >
