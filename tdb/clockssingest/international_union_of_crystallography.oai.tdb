@@ -451,7 +451,7 @@
 
     au < finished ; crawling ; 2020 ; 7 ; IUCrJ Volume 7 (01/2020) ; 2020-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2020 ; 7 ; IUCrJ Volume 7 (02/2020) ; 2020-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2020 ; 7 ; IUCrJ Volume 7 (03/2020) ; 2020-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2020 ; 7 ; IUCrJ Volume 7 (03/2020) ; 2020-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2020 ; 7 ; IUCrJ Volume 7 (04/2020) ; 2020-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2020 ; 7 ; IUCrJ Volume 7 (05/2020) ; 2020-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2020 ; 7 ; IUCrJ Volume 7 (06/2020) ; 2020-06 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
@@ -471,7 +471,7 @@
     au < finished ; finished ; 2021 ; 8 ; IUCrJ Volume 8 (07/2021) ; 2021-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2021 ; 8 ; IUCrJ Volume 8 (08/2021) ; 2021-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2021 ; 8 ; IUCrJ Volume 8 (09/2021) ; 2021-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2021 ; 8 ; IUCrJ Volume 8 (10/2021) ; 2021-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2021 ; 8 ; IUCrJ Volume 8 (10/2021) ; 2021-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2021 ; 8 ; IUCrJ Volume 8 (11/2021) ; 2021-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2021 ; 8 ; IUCrJ Volume 8 (12/2021) ; 2021-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
 
@@ -529,7 +529,7 @@
     
     param[au_oai_set] = iucrdata
     
-    au < finished ; frozen ; 2016 ; 1 ; IUCrData Volume 1 (01/2016) ; 2016-01 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; 1 ; IUCrData Volume 1 (01/2016) ; 2016-01 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2016 ; 1 ; IUCrData Volume 1 (02/2016) ; 2016-02 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2016 ; 1 ; IUCrData Volume 1 (03/2016) ; 2016-03 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2016 ; 1 ; IUCrData Volume 1 (04/2016) ; 2016-04 ; http://iucrdata.iucr.org/ ; http://scripts.iucr.org/ ; reingest3.clockss.org:8083 >
