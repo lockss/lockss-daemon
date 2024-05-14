@@ -1556,7 +1556,7 @@
     au < doNotProcess ; 2020 ; Music, Sound, and the Moving Image Volume 14 ; 14 >
     au < doNotProcess ; 2021 ; Music, Sound, and the Moving Image Volume 15 ; 15 >
     au < released ; 2022 ; Music, Sound, and the Moving Image Volume 16 ; 16 >
-    au < manifest ; 2023 ; Music, Sound, and the Moving Image Volume 17 ; 17 >
+    au < ready ; 2023 ; Music, Sound, and the Moving Image Volume 17 ; 17 >
     au < expected ; 2024 ; Music, Sound, and the Moving Image Volume 18 ; 18 >
 
   }
@@ -1719,7 +1719,7 @@
     au < doNotProcess ; 2021 ; Quebec Studies Volume 71 ; 71 >
     au < doNotProcess ; 2021 ; Quebec Studies Volume 72 ; 72 >
     au < released ; 2022 ; Quebec Studies Volume 73 ; 73 >
-    au < manifest ; 2023 ; Quebec Studies Volume 74 ; 74 >
+    au < ready ; 2023 ; Quebec Studies Volume 74 ; 74 >
     au < manifest ; 2024 ; Quebec Studies Volume 75 ; 75 >
 
   }
@@ -1821,7 +1821,7 @@
     au < doNotProcess ; 2020 ; Studia Hibernica Volume 46 ; 46 >
     au < doNotProcess ; 2021 ; Studia Hibernica Volume 47 ; 47 >
     au < released ; 2022 ; Studia Hibernica Volume 48 ; 48 >
-    au < manifest ; 2023 ; Studia Hibernica Volume 49 ; 49 >
+    au < ready ; 2023 ; Studia Hibernica Volume 49 ; 49 >
     au < expected ; 2024 ; Studia Hibernica Volume 50 ; 50 >
 
   }
@@ -1999,7 +1999,7 @@
     au < doNotProcess ; 2020 ; Town Planning Review Volume 91 ; 91 >
     au < doNotProcess ; 2021 ; Town Planning Review Volume 92 ; 92 >
     au < released ; 2022 ; Town Planning Review Volume 93 ; 93 >
-    au < manifest ; 2023 ; Town Planning Review Volume 94 ; 94 >
+    au < ready ; 2023 ; Town Planning Review Volume 94 ; 94 >
     au < manifest ; 2024 ; Town Planning Review Volume 95 ; 95 >
 
   }
@@ -2067,7 +2067,7 @@
     param[journal_id] = cfci
 
     au < released ; 2022 ; CFC Intersections Volume 1 ; 1 >
-    au < manifest ; 2023 ; CFC Intersections Volume 2 ; 2 >
+    au < ready ; 2023 ; CFC Intersections Volume 2 ; 2 >
     au < expected ; 2024 ; CFC Intersections Volume 3 ; 3 >
 
   }
@@ -2097,7 +2097,7 @@
 
     param[journal_id] = revista
 
-    au < manifest ; 2023 ; Revista Iberoamericana Volume 89 ; 89 >
+    au < ready ; 2023 ; Revista Iberoamericana Volume 89 ; 89 >
     au < manifest ; 2024 ; Revista Iberoamericana Volume 90 ; 90 >
 
   }
