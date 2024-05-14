@@ -43,6 +43,7 @@ import org.lockss.plugin.ArticleIteratorFactory;
 import org.lockss.plugin.SubTreeArticleIteratorBuilder;
 import org.lockss.util.Logger;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.Pattern;
 
@@ -72,6 +73,8 @@ public class WileyBooksSourceArticleIteratorFactory implements ArticleIteratorFa
 
    */
 
+  private static final String ROLE_SECOND_CHOICE = "SecondChoice";
+
   protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
           "\"%s[^/]+/.*\\.zip!/(.*)\\.(xml|pdf)$\", base_url";
 
@@ -88,8 +91,13 @@ public class WileyBooksSourceArticleIteratorFactory implements ArticleIteratorFa
     return ALL_ZIP_XML_PATTERN_TEMPLATE;
   }
 
-  public static final Pattern XML_PATTERN = Pattern.compile("/(fmatter/fmatter|fmatter1/fmatter1|fmatter_indsub/fmatter_indsub|index/index)\\.xml$", Pattern.CASE_INSENSITIVE);
-  public static final Pattern PDF_PATTERN = Pattern.compile("/(fmatter/fmatter|fmatter1/fmatter1|fmatter_indsub/fmatter_indsub|index/index)\\.pdf$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern XML_PATTERN = Pattern.compile("/(fmatter/fmatter|fmatter1/fmatter1|fmatter_indsub/fmatter_indsub)\\.xml$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern PDF_PATTERN = Pattern.compile("/(fmatter/fmatter|fmatter1/fmatter1|fmatter_indsub/fmatter_indsub)\\.pdf$", Pattern.CASE_INSENSITIVE);
+
+  public static final Pattern XML_PATTERN_ALT = Pattern.compile("/(index/index)\\.xml$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern PDF_PATTERN_ALT = Pattern.compile("/(index/index)\\.pdf$", Pattern.CASE_INSENSITIVE);
+
+
   public static final String XML_REPLACEMENT = "/$1.xml";
   private static final String PDF_REPLACEMENT = "/$1.pdf";
 
@@ -107,13 +115,24 @@ public class WileyBooksSourceArticleIteratorFactory implements ArticleIteratorFa
             .setVisitArchiveMembers(true)
             .setVisitArchiveMembers(getIsArchive()));
 
-    builder.addAspect(PDF_PATTERN,
+    builder.addAspect(
+            PDF_PATTERN,
+            PDF_REPLACEMENT,
+            ArticleFiles.ROLE_FULL_TEXT_PDF);
+
+    builder.addAspect(PDF_PATTERN_ALT,
             PDF_REPLACEMENT,
             ArticleFiles.ROLE_FULL_TEXT_PDF);
 
     builder.addAspect(XML_PATTERN,
             XML_REPLACEMENT,
             ArticleFiles.ROLE_ARTICLE_METADATA);
+
+    builder.addAspect(XML_PATTERN_ALT,
+            XML_REPLACEMENT,
+            ROLE_SECOND_CHOICE);
+
+    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, ROLE_SECOND_CHOICE);
 
     builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
             ArticleFiles.ROLE_ARTICLE_METADATA);
