@@ -85,7 +85,7 @@ public class EntrepreneurshipandSustainabilityXmlMetadataExtractorFactory extend
             String cuBase = FilenameUtils.getFullPath(cu.getUrl());
             log.debug3("CU Base is: " + cuBase);
             String doi = oneAM.getRaw(helper.getFilenameXPathKey());
-            doi = doi.replace("/","_");
+            doi = doi.replace("/","_").trim();
             log.debug3("DOI: " + doi);
             String pdfName = cuBase + doi + ".pdf";
             log.debug3("The pdf is: " + pdfName);
