@@ -250,7 +250,7 @@
     param[collection_id] = GPO
     #see for example https://www.gpo.gov/smap/fdsys/sitemap_1961/1961_GPO_sitemap.xml
 
-    au < down ; 1907 ; Additional Government Publications 1907 ; http://www.gpo.gov/ ; 1907 >
+    au < superseded ; 1907 ; Additional Government Publications 1907 [re-released] ; http://www.gpo.gov/ ; 1907 >
     au < down ; 1936 ; Additional Government Publications 1936 ; http://www.gpo.gov/ ; 1936 >
     au < superseded ; 1941 ; Additional Government Publications 1941 [superseded] ; https://www.gpo.gov/ ; 1941 >
     au < superseded ; 1942 ; Additional Government Publications 1942 [superseded] ; https://www.gpo.gov/ ; 1942 >
