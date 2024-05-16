@@ -47,7 +47,7 @@ public class TestHmpGlobalXmlMetadataExtractorFactory extends SourceXmlMetadataE
 
     private static String BaseUrl = "http://source.host.org/sourcefiles/hmpglobal-released/";
     private static String Directory = "2024_01";
-    private static String pdfUrl1 = BaseUrl + Directory + "/article_sample.pdf";
+    private static String pdfUrl1 = BaseUrl + Directory + "/jic_23.00267.pdf";
 
     public void testExtractArticleXmlSchema() throws Exception {
 
@@ -77,7 +77,7 @@ public class TestHmpGlobalXmlMetadataExtractorFactory extends SourceXmlMetadataE
 
         List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
         assertNotEmpty(mdlist);
-        assertEquals(11, mdlist.size());
+        assertEquals(1, mdlist.size());
 
         ArticleMetadata md = mdlist.get(0);
         assertNotNull(md);
