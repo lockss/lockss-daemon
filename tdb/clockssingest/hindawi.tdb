@@ -11955,4 +11955,147 @@
 
   }
 
+  {
+
+    title <
+       name = IET Biometrics ;
+       issn = 2047-4938 ;
+       eissn = 2047-4946
+    >
+
+    param[journal_id] = ietbm
+    comment[years] = 2023-current
+
+    au < manifest ; exists ; 2023 ; IET Biometrics Volume 2023 ; 2023 ; 2023 ; >
+    au < manifest ; exists ; 2024 ; IET Biometrics Volume 2024 ; 2024 ; 2024 ; >
+
+  }
+
+  {
+
+    title <
+       name =  IET Circuits,  Devices & Systems ;
+       issn = 1751-858X ;
+       eissn = 1751-8598
+    >
+
+    param[journal_id] = ietcds
+    comment[years] = 2023-current
+
+    au < manifest ; exists ; 2023 ;  IET Circuits,  Devices & Systems Volume 2023 ; 2023 ; 2023 ; >
+    au < manifest ; exists ; 2024 ;  IET Circuits,  Devices & Systems Volume 2024 ; 2024 ; 2024 ; >
+
+  }
+
+  {
+
+    title <
+       name =  IET Computers & Digital Techniques ;
+       issn = 1751-8601 ;
+       eissn = 1751-861X
+    >
+
+    param[journal_id] = ietcdt
+    comment[years] = 2023-current
+
+    au < manifest ; exists ; 2023 ;  IET Computers & Digital Techniques Volume 2023 ; 2023 ; 2023 ; >
+    au < manifest ; exists ; 2024 ;  IET Computers & Digital Techniques Volume 2024 ; 2024 ; 2024 ; >
+
+  }
+
+  {
+
+    title <
+       name =  IET Electrical Systems in Transportation ;
+       issn = 2042-9738 ;
+       eissn = 2042-9746
+    >
+
+    param[journal_id] = ietest
+    comment[years] = 2023-current
+
+    au < manifest ; exists ; 2023 ;  IET Electrical Systems in Transportation Volume 2023 ; 2023 ; 2023 ; >
+    au < manifest ; exists ; 2024 ;  IET Electrical Systems in Transportation Volume 2024 ; 2024 ; 2024 ; >
+
+  }
+
+  {
+
+    title <
+       name =  IET Information Security ;
+       issn = 1751-8709 ;
+       eissn = 1751-8717
+    >
+
+    param[journal_id] = ietis
+    comment[years] = 2023-current
+
+    au < manifest ; exists ; 2023 ;  IET Information Security Volume 2023 ; 2023 ; 2023 ; >
+    au < manifest ; exists ; 2024 ;  IET Information Security Volume 2024 ; 2024 ; 2024 ; >
+
+  }
+
+  {
+
+    title <
+       name =  IET Nanobiotechnology ;
+       issn = 1751-8741 ;
+       eissn = 1751-875X
+    >
+
+    param[journal_id] = ietnbt
+    comment[years] = 2023-current
+
+    au < manifest ; exists ; 2023 ;  IET Nanobiotechnology Volume 2023 ; 2023 ; 2023 ; >
+    au < manifest ; exists ; 2024 ;  IET Nanobiotechnology Volume 2024 ; 2024 ; 2024 ; >
+
+  }
+
+  {
+
+    title <
+       name =  IET Signal Processing ;
+       issn = 1751-9675 ;
+       eissn = 1751-9683
+    >
+
+    param[journal_id] = ietsp
+    comment[years] = 2023-current
+
+    au < manifest ; exists ; 2023 ;  IET Signal Processing Volume 2023 ; 2023 ; 2023 ; >
+    au < manifest ; exists ; 2024 ;  IET Signal Processing Volume 2024 ; 2024 ; 2024 ; >
+
+  }
+
+  {
+
+    title <
+       name =  IET Software ;
+       issn = 1751-8806 ;
+       eissn = 1751-8814
+    >
+
+    param[journal_id] = ietsfw
+    comment[years] = 2023-current
+
+    au < manifest ; exists ; 2023 ;  IET Software Volume 2023 ; 2023 ; 2023 ; >
+    au < manifest ; exists ; 2024 ;  IET Software Volume 2024 ; 2024 ; 2024 ; >
+
+  }
+
+  {
+
+    title <
+       name = Nanomaterials and Nanotechnology ;
+       eissn = 1847-9804
+    >
+
+    param[journal_id] = nax
+    comment[years] = 2023-current
+
+    au < manifest ; exists ; 2023 ; Nanomaterials and Nanotechnology Volume 2023 ; 2023 ; 2023 ; >
+    au < manifest ; exists ; 2024 ; Nanomaterials and Nanotechnology Volume 2024 ; 2024 ; 2024 ; >
+
+  }
+
 }
