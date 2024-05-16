@@ -309,26 +309,26 @@
   }
 
   {
-      title <
+    title <
       name = European Mathematical Society Magazine ;
       issn = 2747-7894 ;
       eissn = 2747-7908
-      >
+    >
 
-      param[journal_serial_number] = 9
-      param[journal_id] = mag
+    param[journal_serial_number] = 9
+    param[journal_id] = mag
 
-      au < frozen ; exists ; 2018 ; 2018 ; European Mathematical Society Magazine Volume 2018 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; European Mathematical Society Magazine Volume 2019 ; 2019 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; European Mathematical Society Magazine Volume 2018 ; 2018 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; European Mathematical Society Magazine Volume 2019 ; 2019 ; >
 
   }
 
   {
-      title <
+    title <
       name = Rendiconti Lincei ;
       issn = 1120-6330 ;
       eissn = 1720-0768
-      >
+    >
     param[journal_serial_number] = 10
     param[journal_id] = rlm
 
@@ -354,144 +354,233 @@
 
   {
     title <
-    name = Journal of the European Mathematical Society ;
-    issn = 1435-9855 ;
-    eissn = 1435-9863
+      name = Journal of the European Mathematical Society ;
+      issn = 1435-9855 ;
+      eissn = 1435-9863
     >
     param[journal_serial_number] = 11
     param[journal_id] = jems
 
-     au < frozen ; exists ; 2019 ; 2019 ; Journal of the European Mathematical Society Volume 2019 ; 2019 ; >
-     au < frozen ; exists ; 2020 ; 2020 ; Journal of the European Mathematical Society Volume 2020 ; 2020 ; >
-     au < frozen ; exists ; 2023 ; 2023 ; Journal of the European Mathematical Society Volume 2023 ; 2023 ; >
-     au < crawling ; exists ; 2024 ; 2024 ; Journal of the European Mathematical Society Volume 2024 ; 2024 ; >
+    au < exists ; exists ; 1999 ; 1999 ; Journal of the European Mathematical Society Volume 1 ; 1 ; >
+    au < exists ; exists ; 2000 ; 2000 ; Journal of the European Mathematical Society Volume 2 ; 2 ; >
+    au < exists ; exists ; 2001 ; 2001 ; Journal of the European Mathematical Society Volume 3 ; 3 ; >
+    au < exists ; exists ; 2002 ; 2002 ; Journal of the European Mathematical Society Volume 4 ; 4 ; >
+    au < exists ; exists ; 2003 ; 2003 ; Journal of the European Mathematical Society Volume 5 ; 5 ; >
+    au < exists ; exists ; 2004 ; 2004 ; Journal of the European Mathematical Society Volume 6 ; 6 ; >
+    au < exists ; exists ; 2005 ; 2005 ; Journal of the European Mathematical Society Volume 7 ; 7 ; >
+    au < exists ; exists ; 2006 ; 2006 ; Journal of the European Mathematical Society Volume 8 ; 8 ; >
+    au < exists ; exists ; 2007 ; 2007 ; Journal of the European Mathematical Society Volume 9 ; 9 ; >
+    au < exists ; exists ; 2008 ; 2008 ; Journal of the European Mathematical Society Volume 10 ; 10 ; >
+    au < exists ; exists ; 2009 ; 2009 ; Journal of the European Mathematical Society Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of the European Mathematical Society Volume 12 ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Journal of the European Mathematical Society Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of the European Mathematical Society Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of the European Mathematical Society Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of the European Mathematical Society Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of the European Mathematical Society Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of the European Mathematical Society Volume 18 ; 18 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of the European Mathematical Society Volume 19 ; 19 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of the European Mathematical Society Volume 20 ; 20 ; >
+    au < superseded ; exists ; 2019 ; 2019 ; Journal of the European Mathematical Society Volume 21 [superseded] ; 21 ; >
+    au < superseded ; exists ; 2020 ; 2020 ; Journal of the European Mathematical Society Volume 22 [superseded] ; 22 ; >
+    au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of the European Mathematical Society Volume 23 ; 23 ; >
+    au < exists ; exists ; 2022 ; 2022 ; Journal of the European Mathematical Society Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2023 ; 2023 ; Journal of the European Mathematical Society Volume 2023 ; 2023 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; Journal of the European Mathematical Society Volume 2024 ; 2024 ; >
+
 
   }
 
   {
-      title <
-          name = Interfaces and Free Boundaries ;
-          issn = 1463-9963 ;
-          eissn = 1463-9971
-      >
+    title <
+      name = Interfaces and Free Boundaries ;
+      issn = 1463-9963 ;
+      eissn = 1463-9971
+    >
+    param[journal_serial_number] = 12
+    param[journal_id] = ifb
 
-      param[journal_serial_number] = 12
-      param[journal_id] = ifb
+    au < exists ; exists ; 1999 ; 1999 ; Interfaces and Free Boundaries Volume 1 ; 1 ; >
+    au < exists ; exists ; 2000 ; 2000 ; Interfaces and Free Boundaries Volume 2 ; 2 ; >
+    au < exists ; exists ; 2001 ; 2001 ; Interfaces and Free Boundaries Volume 3 ; 3 ; >
+    au < exists ; exists ; 2002 ; 2002 ; Interfaces and Free Boundaries Volume 4 ; 4 ; >
+    au < exists ; exists ; 2003 ; 2003 ; Interfaces and Free Boundaries Volume 5 ; 5 ; >
+    au < exists ; exists ; 2004 ; 2004 ; Interfaces and Free Boundaries Volume 6 ; 6 ; >
+    au < exists ; exists ; 2005 ; 2005 ; Interfaces and Free Boundaries Volume 7 ; 7 ; >
+    au < exists ; exists ; 2006 ; 2006 ; Interfaces and Free Boundaries Volume 8 ; 8 ; >
+    au < exists ; exists ; 2007 ; 2007 ; Interfaces and Free Boundaries Volume 9 ; 9 ; >
+    au < exists ; exists ; 2008 ; 2008 ; Interfaces and Free Boundaries Volume 10 ; 10 ; >
+    au < exists ; exists ; 2009 ; 2009 ; Interfaces and Free Boundaries Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Interfaces and Free Boundaries Volume 12 ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Interfaces and Free Boundaries Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Interfaces and Free Boundaries Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Interfaces and Free Boundaries Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Interfaces and Free Boundaries Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Interfaces and Free Boundaries Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Interfaces and Free Boundaries Volume 18 ; 18 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Interfaces and Free Boundaries Volume 19 ; 19 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Interfaces and Free Boundaries Volume 20 ; 20 ; >
+    au < superseded ; exists ; 2019 ; 2019 ; Interfaces and Free Boundaries Volume 21 [superseded] ; 21 ; >
+    au < superseded ; exists ; 2020 ; 2020 ; Interfaces and Free Boundaries Volume 22 [superseded] ; 22 ; >
+    au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Interfaces and Free Boundaries Volume 23 ; 23 ; >
+    au < exists ; exists ; 2022 ; 2022 ; Interfaces and Free Boundaries Volume 24 ; 24 ; >
 
-       au < frozen ; exists ; 2019 ; 2019 ; Interfaces and Free Boundaries Volume 2019 ; 2019 ; >
-       au < frozen ; exists ; 2020 ; 2020 ; Interfaces and Free Boundaries Volume 2020 ; 2020 ; >
   }
 
   {
-      title <
-          name = Oberwolfach Reports ;
-          issn = 1660-8933 ;
-          eissn = 1660-8941
-      >
+    title <
+      name = Oberwolfach Reports ;
+      issn = 1660-8933 ;
+      eissn = 1660-8941
+    >
+    param[journal_serial_number] = 13
+    param[journal_id] = owr
 
-      param[journal_serial_number] = 13
-      param[journal_id] = owr
-
-       au < frozen ; exists ; 2019 ; 2019 ; Oberwolfach Reports Volume 2019 ; 2019 ; >
-       au < frozen ; exists ; 2020 ; 2020 ; Oberwolfach Reports Volume 2020 ; 2020 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Oberwolfach Reports Volume 2019 ; 2019 ; >
+    au < frozen ; exists ; 2020 ; 2020 ; Oberwolfach Reports Volume 2020 ; 2020 ; >
   }
 
   {
-      title <
-          name = Journal of Noncommutative Geometry ;
-          issn = 1661-6952 ;
-          eissn = 1661-6960
-      >
+    title <
+      name = Journal of Noncommutative Geometry ;
+      issn = 1661-6952 ;
+      eissn = 1661-6960
+    >
 
-      param[journal_serial_number] = 14
-      param[journal_id] = jncg
+    param[journal_serial_number] = 14
+    param[journal_id] = jncg
 
-       au < frozen ; exists ; 2019 ; 2019 ; Journal of Noncommutative Geometry Volume 2019 ; 2019 ; >
-       au < frozen ; exists ; 2020 ; 2020 ; Journal of Noncommutative Geometry Volume 2020 ; 2020 ; >
+    au < exists ; exists ; 2007 ; 2007 ; Journal of Noncommutative Geometry Volume 1 ; 1 ; >
+    au < exists ; exists ; 2008 ; 2008 ; Journal of Noncommutative Geometry Volume 2 ; 2 ; >
+    au < exists ; exists ; 2009 ; 2009 ; Journal of Noncommutative Geometry Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of Noncommutative Geometry Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Journal of Noncommutative Geometry Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of Noncommutative Geometry Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Noncommutative Geometry Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Noncommutative Geometry Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Noncommutative Geometry Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Noncommutative Geometry Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Noncommutative Geometry Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of Noncommutative Geometry Volume 12 ; 12 ; >
+    au < superseded ; exists ; 2019 ; 2019 ; Journal of Noncommutative Geometry Volume 2019 [superseded] ; 2019 ; >
+    au < superseded ; exists ; 2020 ; 2020 ; Journal of Noncommutative Geometry Volume 2020 [superseded] ; 2020 ; >
+    au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Noncommutative Geometry Volume 15 ; 15 ; >
+    au < exists ; exists ; 2022 ; 2022 ; Journal of Noncommutative Geometry Volume 16 ; 16 ; >
+
   }
 
   {
-      title <
-          name = Groups, Geometry, and Dynamics ;
-          issn = 1661-7207 ;
-          eissn = 1661-7215
-      >
+    title <
+      name = Groups, Geometry, and Dynamics ;
+      issn = 1661-7207 ;
+      eissn = 1661-7215
+    >
 
-      param[journal_serial_number] = 15
-      param[journal_id] = ggd
+    param[journal_serial_number] = 15
+    param[journal_id] = ggd
 
-       au < frozen ; exists ; 2019 ; 2019 ; Groups, Geometry, and Dynamics Volume 2019 ; 2019 ; >
-       au < frozen ; exists ; 2020 ; 2020 ; Groups, Geometry, and Dynamics Volume 2020 ; 2020 ; >
+    au < exists ; exists ; 2007 ; 2007 ; Groups, Geometry, and Dynamics Volume 1 ; 1 ; >
+    au < exists ; exists ; 2008 ; 2008 ; Groups, Geometry, and Dynamics Volume 2 ; 2 ; >
+    au < exists ; exists ; 2009 ; 2009 ; Groups, Geometry, and Dynamics Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Groups, Geometry, and Dynamics Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Groups, Geometry, and Dynamics Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Groups, Geometry, and Dynamics Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Groups, Geometry, and Dynamics Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Groups, Geometry, and Dynamics Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Groups, Geometry, and Dynamics Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Groups, Geometry, and Dynamics Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Groups, Geometry, and Dynamics Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Groups, Geometry, and Dynamics Volume 12 ; 12 ; >
+    au < superseded ; exists ; 2019 ; 2019 ; Groups, Geometry, and Dynamics Volume 13 [superseded] ; 13 ; >
+    au < superseded ; exists ; 2020 ; 2020 ; Groups, Geometry, and Dynamics Volume 14 [superseded] ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Groups, Geometry, and Dynamics Volume 15 ; 15 ; >
+    au < exists ; exists ; 2022 ; 2022 ; Groups, Geometry, and Dynamics Volume 16 ; 16 ; >
+
   }
 
   {
-      title <
-          name = Quantum Topology ;
-          issn = 1663-487X ;
-          eissn = 1664-073X
-      >
+    title <
+      name = Quantum Topology ;
+      issn = 1663-487X ;
+      eissn = 1664-073X
+    >
 
-      param[journal_serial_number] = 16
-      param[journal_id] = qt
+    param[journal_serial_number] = 16
+    param[journal_id] = qt
 
-       au < frozen ; exists ; 2019 ; 2019 ; Quantum Topology Volume 2019 ; 2019 ; >
-       au < frozen ; exists ; 2020 ; 2020 ; Quantum Topology Volume 2020 ; 2020 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Quantum Topology Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Quantum Topology Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Quantum Topology Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Quantum Topology Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Quantum Topology Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Quantum Topology Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Quantum Topology Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Quantum Topology Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Quantum Topology Volume 9 ; 9 ; >
+    au < superseded ; exists ; 2019 ; 2019 ; Quantum Topology Volume 10 [superseded] ; 10 ; >
+    au < superseded ; exists ; 2020 ; 2020 ; Quantum Topology Volume 11 [superseded] ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Quantum Topology Volume 12 ; 12 ; >
+    au < exists ; exists ; 2022 ; 2022 ; Quantum Topology Volume 13 ; 13 ; >
+
   }
 
   {
-      title <
-          name = Journal of Spectral Theory ;
-          issn = 1664-039X ;
-          eissn = 1664-0403
-      >
+    title <
+      name = Journal of Spectral Theory ;
+      issn = 1664-039X ;
+      eissn = 1664-0403
+    >
 
-      param[journal_serial_number] = 17
-      param[journal_id] = jst
+    param[journal_serial_number] = 17
+    param[journal_id] = jst
 
-       au < frozen ; exists ; 2019 ; 2019 ; Journal of Spectral Theory Volume 2019 ; 2019 ; >
-       au < frozen ; exists ; 2020 ; 2020 ; Journal of Spectral Theory Volume 2020 ; 2020 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Journal of Spectral Theory Volume 2019 ; 2019 ; >
+    au < frozen ; exists ; 2020 ; 2020 ; Journal of Spectral Theory Volume 2020 ; 2020 ; >
+
   }
 
   {
-      title <
-          name = Journal of Fractal Geometry ;
-          issn = 2308-1309 ;
-          eissn = 2308-1317
-      >
+    title <
+      name = Journal of Fractal Geometry ;
+      issn = 2308-1309 ;
+      eissn = 2308-1317
+    >
 
-      param[journal_serial_number] = 18
-      param[journal_id] = jfg
+    param[journal_serial_number] = 18
+    param[journal_id] = jfg
 
-       au < frozen ; exists ; 2019 ; 2019 ; Journal of Fractal Geometry Volume 2019 ; 2019 ; >
-       au < frozen ; exists ; 2020 ; 2020 ; Journal of Fractal Geometry Volume 2020 ; 2020 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Journal of Fractal Geometry Volume 2019 ; 2019 ; >
+    au < frozen ; exists ; 2020 ; 2020 ; Journal of Fractal Geometry Volume 2020 ; 2020 ; >
+
   }
 
   {
-      title <
-          name = EMS Surveys in Mathematical Sciences ;
-          issn = 2308-2151 ;
-          eissn = 2308-216X
-      >
+    title <
+      name = EMS Surveys in Mathematical Sciences ;
+      issn = 2308-2151 ;
+      eissn = 2308-216X
+    >
 
-      param[journal_serial_number] = 19
-      param[journal_id] = emss
+    param[journal_serial_number] = 19
+    param[journal_id] = emss
 
-       au < frozen ; exists ; 2019 ; 2019 ; EMS Surveys in Mathematical Sciences Volume 2019 ; 2019 ; >
-       au < frozen ; exists ; 2020 ; 2020 ; EMS Surveys in Mathematical Sciences Volume 2020 ; 2020 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; EMS Surveys in Mathematical Sciences Volume 2019 ; 2019 ; >
+    au < frozen ; exists ; 2020 ; 2020 ; EMS Surveys in Mathematical Sciences Volume 2020 ; 2020 ; >
+
   }
 
   {
-      title <
-          name = Annales de l’Institut Henri Poincaré D ;
-          issn = 2308-5827 ;
-          eissn = 2308-5835
-      >
+    title <
+      name = Annales de l’Institut Henri Poincaré D ;
+      issn = 2308-5827 ;
+      eissn = 2308-5835
+    >
 
-      param[journal_serial_number] = 20
-      param[journal_id] = aihpd
+    param[journal_serial_number] = 20
+    param[journal_id] = aihpd
 
-       au < frozen ; exists ; 2019 ; 2019 ; Annales de l’Institut Henri Poincaré D Volume 2019 ; 2019 ; >
-       au < frozen ; exists ; 2020 ; 2020 ; Annales de l’Institut Henri Poincaré D Volume 2020 ; 2020 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Annales de l’Institut Henri Poincaré D Volume 2019 ; 2019 ; >
+    au < frozen ; exists ; 2020 ; 2020 ; Annales de l’Institut Henri Poincaré D Volume 2020 ; 2020 ; >
   }
 
 # This serial has no content when the tdb file is created
