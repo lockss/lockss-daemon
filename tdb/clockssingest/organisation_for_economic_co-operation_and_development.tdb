@@ -662,15 +662,15 @@
     param[journal_dir] = revue-de-l-ocde-sur-le-droit-et-la-politique-de-la-concurrence
     param[journal_issn] = 16843452
 
-    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 1 ; 1 ;  >
-    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 2 ; 2 ;  >
-    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 3 ; 3 ;  >
-    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 4 ; 4 ;  >
-    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 5 ; 5 ;  >
-    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 6 ; 6 ;  >
-    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 7 ; 7 ;  >
-    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 8 ; 8 ;  >
-    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 9 ; 9 ;  >
+    au < crawling ; exists ; 1999-2000 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 1 ; 1 ;  >
+    au < crawling ; exists ; 2000-2001 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 2 ; 2 ;  >
+    au < crawling ; exists ; 2001-2002 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 3 ; 3 ;  >
+    au < crawling ; exists ; 2002-2003 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 4 ; 4 ;  >
+    au < crawling ; exists ; 2003-2004 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 5 ; 5 ;  >
+    au < crawling ; exists ; 2004-2005 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 6 ; 6 ;  >
+    au < crawling ; exists ; 2005-2006 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 7 ; 7 ;  >
+    au < crawling ; exists ; 2006-2007 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 8 ; 8 ;  >
+    au < crawling ; exists ; 2007-2009 ; Revue de l'OCDE sur le droit et la politique de la concurrence Volume 9 ; 9 ;  >
 
   }
 
@@ -687,16 +687,16 @@
     param[journal_dir] = revue-de-l-ocde-sur-le-developpement
     param[journal_issn] = 19965753
 
-    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 1 ; 1 ;  >
-    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 2 ; 2 ;  >
-    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 3 ; 3 ;  >
-    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 4 ; 4 ;  >
-    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 5 ; 5 ;  >
-    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 6 ; 6 ;  >
-    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 7 ; 7 ;  >
-    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 8 ; 8 ;  >
-    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 9 ; 9 ;  >
-    au < crawling ; exists ; 0 ; Revue de l'OCDE sur le développement Volume 10 ; 10 ;  >
+    au < crawling ; exists ; 2000-2001 ; Revue de l'OCDE sur le développement Volume 1 ; 1 ;  >
+    au < crawling ; exists ; 2001-2002 ; Revue de l'OCDE sur le développement Volume 2 ; 2 ;  >
+    au < crawling ; exists ; 2002-2003 ; Revue de l'OCDE sur le développement Volume 3 ; 3 ;  >
+    au < crawling ; exists ; 2003-2004 ; Revue de l'OCDE sur le développement Volume 4 ; 4 ;  >
+    au < crawling ; exists ; 2004-2005 ; Revue de l'OCDE sur le développement Volume 5 ; 5 ;  >
+    au < crawling ; exists ; 2005-2006 ; Revue de l'OCDE sur le développement Volume 6 ; 6 ;  >
+    au < crawling ; exists ; 2006-2007 ; Revue de l'OCDE sur le développement Volume 7 ; 7 ;  >
+    au < crawling ; exists ; 2007-2008 ; Revue de l'OCDE sur le développement Volume 8 ; 8 ;  >
+    au < crawling ; exists ; 2009-2010 ; Revue de l'OCDE sur le développement Volume 9 ; 9 ;  >
+    au < crawling ; exists ; 2010-2011 ; Revue de l'OCDE sur le développement Volume 10 ; 10 ;  >
 
   }
 
