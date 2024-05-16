@@ -42,15 +42,15 @@
     param[journal_serial_number] = 2678
     param[journal_id] = aihpc
 
-    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Annales de l'Institut Henri Poincaré D Volume 1 ; 1 ; >
-    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Annales de l'Institut Henri Poincaré D Volume 2 ; 2 ; >
-    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Annales de l'Institut Henri Poincaré D Volume 3 ; 3 ; >
-    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Annales de l'Institut Henri Poincaré D Volume 4 ; 4 ; >
-    au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Annales de l'Institut Henri Poincaré D Volume 5 ; 5 ; >
-    au < superseded ; exists ; 2019 ; 2019 ; Annales de l'Institut Henri Poincaré C Volume 6 [superseded] ; 6 ; >
-    au < superseded ; exists ; 2020 ; 2020 ; Annales de l'Institut Henri Poincaré C Volume 7 [superseded] ; 7 ; >
-    au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Annales de l'Institut Henri Poincaré D Volume 8 ; 8 ; >
-    au < exists ; exists ; 2022 ; 2022 ; Annales de l'Institut Henri Poincaré D Volume 9 ; 9 ; >
+    au < exists ; exists ; 2014 ; 2014 ; Annales de l'Institut Henri Poincaré C Volume 31 ; 31 ; >
+    au < exists ; exists ; 2015 ; 2015 ; Annales de l'Institut Henri Poincaré C Volume 32 ; 32 ; >
+    au < exists ; exists ; 2016 ; 2016 ; Annales de l'Institut Henri Poincaré C Volume 33 ; 33 ; >
+    au < exists ; exists ; 2017 ; 2017 ; Annales de l'Institut Henri Poincaré C Volume 34 ; 34 ; >
+    au < exists ; exists ; 2018 ; 2018 ; Annales de l'Institut Henri Poincaré C Volume 35 ; 35 ; >
+    au < exists ; exists ; 2019 ; 2019 ; Annales de l'Institut Henri Poincaré C Volume 36 ; 36 ; >
+    au < exists ; exists ; 2020 ; 2020 ; Annales de l'Institut Henri Poincaré C Volume 37 ; 37 ; >
+    au < exists ; exists ; 2021 ; 2021 ; Annales de l'Institut Henri Poincaré C Volume 38 ; 38 ; >
+    au < exists ; exists ; 2022 ; 2022 ; Annales de l'Institut Henri Poincaré C Volume 39 ; 39 ; >
   }
 
   {
