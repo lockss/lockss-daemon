@@ -41,6 +41,7 @@ import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.clockss.CrossRefSchemaHelper;
 import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
@@ -50,24 +51,25 @@ public class EntrepreneurshipandSustainabilityXmlMetadataExtractorFactory extend
 
     private static final Logger log = Logger.getLogger(EntrepreneurshipandSustainabilityXmlMetadataExtractorFactory.class);
 
-    private static SourceXmlSchemaHelper EandSCrossRefPublishingHelper = null;
+    private static SourceXmlSchemaHelper EandSSchemaHelper = null;
 
     @Override
     public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
         String contentType)
             throws PluginException {
-      return new EandSCrossRefArticleMetadataExtractor();
+      return new EntrepreneurshipandSustainabilityXmlMetadataExtractor();
     }
     
-    public class EandSCrossRefArticleMetadataExtractor extends SourceXmlMetadataExtractor {
+    public class EntrepreneurshipandSustainabilityXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
         @Override
         protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
-        // Once you have it, just keep returning the same one. It won't change.
-        if (EandSCrossRefPublishingHelper == null) {
-            EandSCrossRefPublishingHelper = new JatsPublishingSchemaHelper();
-        }
-        return EandSCrossRefPublishingHelper;
+            // Once you have it, just keep returning the same one. It won't change.
+            if (EandSSchemaHelper == null) {
+                EandSSchemaHelper = new CrossRefSchemaHelper();
+                log.info("Setting up schema helper.");
+            }
+            return EandSSchemaHelper;
         }
 
         /*
@@ -86,9 +88,9 @@ public class EntrepreneurshipandSustainabilityXmlMetadataExtractorFactory extend
             log.debug3("CU Base is: " + cuBase);
             String doi = oneAM.getRaw(helper.getFilenameXPathKey());
             doi = doi.replace("/","_").trim();
-            log.debug3("DOI: " + doi);
+            log.info("DOI: " + doi);
             String pdfName = cuBase + doi + ".pdf";
-            log.debug3("The pdf is: " + pdfName);
+            log.info("The pdf is: " + pdfName);
             List<String> returnList = new ArrayList<String>();
             returnList.add(pdfName);
             return returnList;
