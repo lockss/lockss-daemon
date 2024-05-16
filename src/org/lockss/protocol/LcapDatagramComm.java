@@ -149,8 +149,8 @@ public class LcapDatagramComm
     idMgr = getDaemon().getIdentityManager();
     if (enabled) {
       start();
-      getDaemon().getStatusService().registerStatusAccessor("CommStats",
-							    new Status());
+//       getDaemon().getStatusService().registerStatusAccessor("CommStats",
+// 							    new Status());
     }
   }
 
@@ -160,7 +160,7 @@ public class LcapDatagramComm
    */
   public void stopService() {
     // TODO: checkpoint here.
-    getDaemon().getStatusService().unregisterStatusAccessor("CommStats");
+//     getDaemon().getStatusService().unregisterStatusAccessor("CommStats");
     stop();
     super.stopService();
   }
