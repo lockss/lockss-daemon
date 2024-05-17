@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -52,7 +52,7 @@ public class BaseOecdHtmlCrawlFilterFactory implements FilterFactory {
       HtmlNodeFilters.tag("header"),
       HtmlNodeFilters.tag("footer"),
       HtmlNodeFilters.tagWithAttribute("ol", "class", "breadcrumb"),
-      // link to the entire journal in other languges
+      // link to the entire journal in other languages
       HtmlNodeFilters.tagWithAttribute("p", "class", "language"),
       HtmlNodeFilters.tagWithAttributeRegex("li", "class", "furtherReading"),
       HtmlNodeFilters.tagWithAttributeRegex("li", "class", "relatedtitle"),
@@ -71,8 +71,8 @@ public class BaseOecdHtmlCrawlFilterFactory implements FilterFactory {
       // get rid of all the links in the landing page except the csv file(s)
       HtmlNodeFilters.allExceptSubtree(
           HtmlNodeFilters.tagWithAttributeRegex("div", "class", "section-title"),
-          // per OECD we are only to collect the pdfs and epubs
-          HtmlNodeFilters.tagWithAttributeRegex("a", "class", "action-(epub|pdf)")
+          // per OECD we are only to collect the pdfs and epubs (and CSV, for datasets)
+          HtmlNodeFilters.tagWithAttributeRegex("a", "class", "action-(csv|epub|pdf)")
       )
   };
 

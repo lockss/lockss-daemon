@@ -24,11 +24,8 @@
     {
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/eastviewbooks-released/
 
-      #tested this directory using testing url, https://clockss-test.lockss.org/sourcefiles/eastviewbooks-released/2023_01, it is ready
       au < readySource ; crawling ; 2023 ; East View Information Services Book Source Content 2023_01 ; 2023_01 >
-      #tested this directory using testing url, https://clockss-test.lockss.org/sourcefiles/eastviewbooks-released/2024_01
-      #there are 3 invalid isbn need publisher to fix
-      #au < manifest ; exists ; 2024 ; East View Information Services Book Source Content 2024_01 ; 2024_01 >
+      au < readySource ; crawling ; 2024 ; East View Information Services Book Source Content 2024_01 ; 2024_01 >
 
     }
   }
@@ -43,10 +40,10 @@
     {
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/eastview-released/
 
-      au < readySource ; finished ; 2021 ; East View Information Services Journal Source Content 2021_01 ; 2021_01 >
-      au < readySource ; finished ; 2021 ; East View Information Services Journal Source Content 2021_02 ; 2021_02 >
-      au < readySource ; finished ; 2021 ; East View Information Services Journal Source Content 2021_03 ; 2021_03 >
-      au < readySource ; finished ; 2021 ; East View Information Services Journal Source Content 2021_04 ; 2021_04 >
+      au < zapped ; finished ; 2021 ; East View Information Services Journal Source Content 2021_01 ; 2021_01 >
+      au < zapped ; finished ; 2021 ; East View Information Services Journal Source Content 2021_02 ; 2021_02 >
+      au < zapped ; finished ; 2021 ; East View Information Services Journal Source Content 2021_03 ; 2021_03 >
+      au < zapped ; finished ; 2021 ; East View Information Services Journal Source Content 2021_04 ; 2021_04 >
       #No more AUs. Moved to https.
     }
     {
@@ -56,6 +53,29 @@
 
     }
   }
+
+  {
+      title <
+         name = East View Information Services Journals Database Source Content
+      >
+      plugin = org.lockss.plugin.clockss.eastview.ClockssEastviewDatabaseDirSourcePlugin
+      implicit < status ; status2 ; year ; name ; param[directory] >
+
+      {
+        #AUs tested in test directory
+        #param[base_url] = https://clockss-test.lockss.org/sourcefiles/eastviewudbcom-released/
+        param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/eastviewudbcom-released/
+
+        # all 6 buckets can be marked "ready" once the bucket is setup, they have been tested on testing machine*
+
+        au < expected ; exists ; 2024 ; East View Information Services Journal Database Source Content 2024_01 ; 2024_01 >
+        au < expected ; exists ; 2024 ; East View Information Services Journal Database Source Content 2024_02 ; 2024_02 >
+        au < expected ; exists ; 2024 ; East View Information Services Journal Database Source Content 2024_03 ; 2024_03 >
+        au < expected ; exists ; 2024 ; East View Information Services Journal Database Source Content 2024_04 ; 2024_04 >
+        au < expected ; exists ; 2024 ; East View Information Services Journal Database Source Content 2024_05 ; 2024_05 >
+        au < expected ; exists ; 2024 ; East View Information Services Journal Database Source Content 2024_06 ; 2024_06 >
+      }
+    }
 
   {
       title <

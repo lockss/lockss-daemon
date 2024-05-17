@@ -141,7 +141,7 @@ public class TestRSC2014Plugin extends LockssTestCase {
     props.setProperty(YEAR_KEY, "2013");
     
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("Royal Society of Chemistry 2014 Plugin (CLOCKSS), " +
+    assertEquals("Royal Society of Chemistry Journals Plugin (CLOCKSS), " +
         "Base URL http://pubs.example.com/, " +
         "Base URL2 http://www.example.com/, " +
         "Resolver URL http://xlink.example.com/, " +

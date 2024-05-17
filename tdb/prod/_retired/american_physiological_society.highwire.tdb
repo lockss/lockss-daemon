@@ -340,8 +340,12 @@
     param[base_url] = http://ajpcell.physiology.org/
 
     {
-    
-      comment[notReady] = manifest page is up, but the links are not working
+
+      au < HighWirePlugin ; superseded ; 2006 ; American Journal of Physiology - Cell Physiology Volume 290 [superseded] ; 290 >
+
+    }
+
+    {
     
       au < HighWirePressH20Plugin ; down ; 1977 ; American Journal of Physiology - Cell Physiology Volume 232 ; 232 >
       au < HighWirePressH20Plugin ; down ; 1977 ; American Journal of Physiology - Cell Physiology Volume 233 ; 233 >
@@ -401,6 +405,7 @@
       au < HighWirePressH20Plugin ; down ; 2004 ; American Journal of Physiology - Cell Physiology Volume 287 ; 287 >
       au < HighWirePressH20Plugin ; down ; 2005 ; American Journal of Physiology - Cell Physiology Volume 288 ; 288 >
       au < HighWirePressH20Plugin ; down ; 2005 ; American Journal of Physiology - Cell Physiology Volume 289 ; 289 >
+      au < HighWireStrVolPlugin ; superseded ; 2006 ; American Journal of Physiology - Cell Physiology Volume 290 [superseded] ; 290 >
       au < HighWirePressH20Plugin ; down ; 2006 ; American Journal of Physiology - Cell Physiology Volume 290 ; 290 >
       au < HighWirePressH20Plugin ; down ; 2006 ; American Journal of Physiology - Cell Physiology Volume 291 ; 291 >
       au < HighWirePressH20Plugin ; down ; 2007 ; American Journal of Physiology - Cell Physiology Volume 292 ; 292 >
@@ -441,6 +446,15 @@
 
     comment[current_plugin] = aps.APSDrupalPlugin
     param[base_url] = http://ajpendo.physiology.org/
+
+    {
+
+      #plugin = org.lockss.plugin.highwire.HighWirePlugin
+      #implicit < status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2006 ; American Journal of Physiology - Endocrinology And Metabolism Volume 290 [superseded] ; 290 >
+
+    }
 
     {
     
@@ -557,6 +571,15 @@
 
     {
 
+      #plugin = org.lockss.plugin.highwire.HighWirePlugin
+      #implicit < status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2006 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 290 [superseded] ; 290 >
+
+    }
+
+    {
+
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < HighWireStrVolPlugin ; down ; 2005 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 288 ; 288 >
@@ -667,6 +690,15 @@
 
     comment[current_plugin] = aps.APSDrupalPlugin
     param[base_url] = http://ajpheart.physiology.org/
+
+    {
+
+      #plugin = org.lockss.plugin.highwire.HighWirePlugin
+      #implicit < status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2006 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 290 [superseded] ; 290 >
+
+    }
 
     {
 
@@ -783,6 +815,15 @@
 
     {
 
+      #plugin = org.lockss.plugin.highwire.HighWirePlugin
+      #implicit < status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2006 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 290 [superseded] ; 290 >
+
+    }
+
+    {
+
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < HighWireStrVolPlugin ; down ; 2005 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 288 ; 288 >
@@ -868,6 +909,15 @@
 
     comment[current_plugin] = aps.APSDrupalPlugin
     param[base_url] = http://ajpregu.physiology.org/
+
+    {
+
+      #plugin = org.lockss.plugin.highwire.HighWirePlugin
+      #implicit < status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2006 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 290 [superseded] ; 290 >
+
+    }
 
     {
 
@@ -983,6 +1033,15 @@
     # other possible issn 0363-6127
     {
 
+      #plugin = org.lockss.plugin.highwire.HighWirePlugin
+      #implicit < status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2006 ; American Journal of Physiology - Renal Physiology Volume 290 [superseded] ; 290 >
+
+    }
+
+    {
+
       au < HighWireStrVolPlugin ; down ; 2005 ; American Journal of Physiology - Renal Physiology Volume 288 ; 288 >
       au < HighWireStrVolPlugin ; down ; 2005 ; American Journal of Physiology - Renal Physiology Volume 289 ; 289 >
       au < HighWireStrVolPlugin ; down ; 2006 ; American Journal of Physiology - Renal Physiology Volume 290 ; 290 >
@@ -1091,6 +1150,15 @@
 
     comment[current_plugin] = HighWirePressH20Plugin
     param[base_url] = http://jap.physiology.org/
+
+    {
+
+      #plugin = org.lockss.plugin.highwire.HighWirePlugin
+      #implicit < status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2006 ; Journal of Applied Physiology Volume 100 [superseded] ; 100 >
+
+    }
 
     {
     
@@ -1248,6 +1316,15 @@
 
     {
 
+      #plugin = org.lockss.plugin.highwire.HighWirePlugin
+      #implicit < status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2006 ; Journal of Neurophysiology Volume 95 [superseded] ; 95 >
+
+    }
+
+    {
+
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Neurophysiology Volume 93 ; 93 >
@@ -1394,6 +1471,15 @@
 
     comment[current_plugin] = HighWirePressH20Plugin
     param[base_url] = http://physiolgenomics.physiology.org/
+
+    {
+
+      #plugin = org.lockss.plugin.highwire.HighWirePlugin
+      #implicit < status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2006 ; Physiological Genomics Volume 25 [superseded] ; 25 >
+
+    }
 
     {
 
@@ -1606,6 +1692,15 @@
 
     comment[current_plugin] = aps.APSDrupalPlugin
     param[base_url] = http://physiologyonline.physiology.org/
+
+    {
+
+      #plugin = org.lockss.plugin.highwire.HighWirePlugin
+      #implicit < status ; year ; name ; param[volume] >
+
+      au < HighWirePlugin ; superseded ; 2006 ; Physiology Volume 21 [superseded] ; 21 >
+
+    }
 
     {
 

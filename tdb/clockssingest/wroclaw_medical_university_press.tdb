@@ -46,7 +46,7 @@
 
     au < finished ; finished ; 2021 ; 2021 ; Advances in Clinical and Experimental Medicine Volume 30 ; 30 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2022 ; 2022 ; Advances in Clinical and Experimental Medicine Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2023 ; 2023 ; Advances in Clinical and Experimental Medicine Volume 32 ; 32 ; >
+    au < deepCrawl ; exists ; 2023 ; 2023 ; Advances in Clinical and Experimental Medicine Volume 32 ; 32 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Advances in Clinical and Experimental Medicine Volume 33 ; 33 ; >
 
     }
@@ -84,7 +84,7 @@
 
     au < finished ; finished ; 2021 ; 2021 ; Dental and Medical Problems Volume 58 ; 58 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2022 ; 2022 ; Dental and Medical Problems Volume 59 ; 59 ; >
-    au < crawling ; exists ; 2023 ; 2023 ; Dental and Medical Problems Volume 60 ; 60 ; >
+    au < deepCrawl ; exists ; 2023 ; 2023 ; Dental and Medical Problems Volume 60 ; 60 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Dental and Medical Problems Volume 61 ; 61 ; >
 
     }
@@ -122,7 +122,7 @@
 
     au < finished ; finished ; 2021 ; 2021 ; Polymers in Medicine Volume 51 ; 51 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2022 ; 2022 ; Polymers in Medicine Volume 52 ; 52 ; >
-    au < crawling ; exists ; 2023 ; 2023 ; Polymers in Medicine Volume 53 ; 53 ; >
+    au < deepCrawl ; exists ; 2023 ; 2023 ; Polymers in Medicine Volume 53 ; 53 ; >
     au < expected ; exists ; 2024 ; 2024 ; Polymers in Medicine Volume 54 ; 54 ; >
 
     }

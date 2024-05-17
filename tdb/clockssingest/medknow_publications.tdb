@@ -231,7 +231,7 @@
     au < finished ; frozen ; 2018 ; Annals of Maxillofacial Surgery Volume 8 ; 2018 ; 8 ; http://www.amsjournal.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2019 ; Annals of Maxillofacial Surgery Volume 9 ; 2019 ; 9 ; https://www.amsjournal.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2020 ; Annals of Maxillofacial Surgery Volume 10 ; 2020 ; 10 ; https://www.amsjournal.com/ ; ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2021 ; Annals of Maxillofacial Surgery Volume 11 ; 2021 ; 11 ; https://www.amsjournal.com/ ; ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2021 ; Annals of Maxillofacial Surgery Volume 11 ; 2021 ; 11 ; https://www.amsjournal.com/ ; ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2022 ; Annals of Maxillofacial Surgery Volume 12 ; 2022 ; 12 ; https://www.amsjournal.com/ ; ; >
 
   }
@@ -535,8 +535,8 @@
     #move to LWW in 2023, moved https://journals.lww.com/ayuh/
 
     au < doNotProcess ; exists ; 2017 ; AYUHOM Volume 4 ; 2017 ; 4 ; https://www.ayuhom.com/ ; ; > #500 error
-    au < finished ; frozen ; 2018 ; AYUHOM Volume 5 ; 2018 ; 5 ; https://www.ayuhom.com/ ; ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2019 ; AYUHOM Volume 6 ; 2019 ; 6 ; https://www.ayuhom.com/ ; ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2018 ; AYUHOM Volume 5 ; 2018 ; 5 ; https://www.ayuhom.com/ ; ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2019 ; AYUHOM Volume 6 ; 2019 ; 6 ; https://www.ayuhom.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2020 ; AYUHOM Volume 7 ; 2020 ; 7 ; https://www.ayuhom.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; AYUHOM Volume 8 ; 2021 ; 8 ; https://www.ayuhom.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2022 ; AYUHOM Volume 9 ; 2022 ; 9 ; https://www.ayuhom.com/ ; ; reingest5.clockss.org:8082 >
@@ -2211,7 +2211,7 @@
     param[journal_issn] = 2772-5170
     #move to LWW in 2023, moved https://journals.lww.com/ipcr/
 
-    au < finished ; frozen ; 2021 ; Indian Pediatrics Case Reports Volume 1 ; 2021 ; 1 ; https://www.ipcares.org/ ; ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2021 ; Indian Pediatrics Case Reports Volume 1 ; 2021 ; 1 ; https://www.ipcares.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2022 ; Indian Pediatrics Case Reports Volume 2 ; 2022 ; 2 ; https://www.ipcares.org/ ; ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2023 ; Indian Pediatrics Case Reports Volume 3 ; 2023 ; 3 ; https://www.ipcares.org/ ; ; reingest5.clockss.org:8082 >
 
@@ -2269,7 +2269,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Applied and Basic Medical Research Volume 8 ; 2018 ; 8 ; https://www.ijabmr.org/ ; 500 Error ; > #500 https://www.ijabmr.org/article.asp?issn=2229-516X;year=2018;volume=8;issue=3;spage=155;epage=157;aulast=Sahbaz;type=2
     au < finished ; finished ; 2019 ; International Journal of Applied and Basic Medical Research Volume 9 ; 2019 ; 9 ; https://www.ijabmr.org/ ; ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2020 ; International Journal of Applied and Basic Medical Research Volume 10 ; 2020 ; 10 ; https://www.ijabmr.org/ ; ; reingest3.clockss.org:8083 >
-    au < finished ; frozen ; 2021 ; International Journal of Applied and Basic Medical Research Volume 11 ; 2021 ; 11 ; https://www.ijabmr.org/ ; ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2021 ; International Journal of Applied and Basic Medical Research Volume 11 ; 2021 ; 11 ; https://www.ijabmr.org/ ; ; reingest3.clockss.org:8083 >
 
   }
 #  {
@@ -2469,7 +2469,7 @@
     au < finished ; frozen ; 2018 ; International Journal of Trichology Volume 10 ; 2018 ; 10 ; http://www.ijtrichology.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2019 ; International Journal of Trichology Volume 11 ; 2019 ; 11 ; https://www.ijtrichology.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2020 ; International Journal of Trichology Volume 12 ; 2020 ; 12 ; https://www.ijtrichology.com/ ; ; reingest1.clockss.org:8082 >
-    au < finished ; frozen ; 2021 ; International Journal of Trichology Volume 13 ; 2021 ; 13 ; https://www.ijtrichology.com/ ; ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2021 ; International Journal of Trichology Volume 13 ; 2021 ; 13 ; https://www.ijtrichology.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2022 ; International Journal of Trichology Volume 14 ; 2022 ; 14 ; https://www.ijtrichology.com/ ; ; reingest4.clockss.org:8082 >
     au < doNotProcess ; exists ; 2023 ; International Journal of Trichology Volume 15 ; 2023 ; 15 ; https://www.ijtrichology.com/ ; ; >
 
@@ -3311,7 +3311,7 @@
     au < finished ; finished ; 2018 ; Journal of Indian Society of Periodontology Volume 22 ; 2018 ; 22 ; http://www.jisponline.com/ ; ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2019 ; Journal of Indian Society of Periodontology Volume 23 ; 2019 ; 23 ; https://www.jisponline.com/ ; ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2020 ; Journal of Indian Society of Periodontology Volume 24 ; 2020 ; 24 ; https://www.jisponline.com/ ; ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2021 ; Journal of Indian Society of Periodontology Volume 25 ; 2021 ; 25 ; https://www.jisponline.com/ ; ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2021 ; Journal of Indian Society of Periodontology Volume 25 ; 2021 ; 25 ; https://www.jisponline.com/ ; ; reingest1.clockss.org:8082 >
     au < doNotProcess ; exists ; 2022 ; Journal of Indian Society of Periodontology Volume 26 ; 2022 ; 26 ; https://www.jisponline.com/ ; ; >
 
   }
@@ -4980,7 +4980,7 @@
     au < finished ; finished ; 2018 ; Urology Annals Volume 10 ; 2018 ; 10 ; http://www.urologyannals.com/ ; ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2019 ; Urology Annals Volume 11 ; 2019 ; 11 ; https://www.urologyannals.com/ ; ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2020 ; Urology Annals Volume 12 ; 2020 ; 12 ; https://www.urologyannals.com/ ; ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2021 ; Urology Annals Volume 13 ; 2021 ; 13 ; https://www.urologyannals.com/ ; ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2021 ; Urology Annals Volume 13 ; 2021 ; 13 ; https://www.urologyannals.com/ ; ; reingest2.clockss.org:8085 >
 
   }
 
@@ -6007,7 +6007,7 @@
       au < finished ; finished ; 2018 ; Egyptian Retina Journal Volume 5 ; 2018 ; 5 ; http://www.egyptretinaj.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2019 ; Egyptian Retina Journal Volume 6 ; 2019 ; 6 ; https://www.egyptretinaj.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; Egyptian Retina Journal Volume 7 ; 2020 ; 7 ; https://www.egyptretinaj.com/ ; ; reingest4.clockss.org:8082 >
-      au < finished ; frozen ; 2021 ; Egyptian Retina Journal Volume 8 ; 2021 ; 8 ; https://www.egyptretinaj.com/ ; ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2021 ; Egyptian Retina Journal Volume 8 ; 2021 ; 8 ; https://www.egyptretinaj.com/ ; ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2022 ; Egyptian Retina Journal Volume 9 ; 2022 ; 9 ; https://www.egyptretinaj.com/ ; ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2023 ; Egyptian Retina Journal Volume 10 ; 2023 ; 10 ; https://www.egyptretinaj.com/ ; ; >
 
@@ -6096,7 +6096,7 @@
       au < finished ; frozen ; 2015 ; Endoscopic Ultrasound Volume 4 ; 2015 ; 4 ; http://www.eusjournal.com/ ; ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2016 ; Endoscopic Ultrasound Volume 5 ; 2016 ; 5 ; http://www.eusjournal.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2017 ; Endoscopic Ultrasound Volume 6 ; 2017 ; 6 ; http://www.eusjournal.com/ ; ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; Endoscopic Ultrasound Volume 7 ; 2018 ; 7 ; http://www.eusjournal.com/ ; ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2018 ; Endoscopic Ultrasound Volume 7 ; 2018 ; 7 ; http://www.eusjournal.com/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2019 ; Endoscopic Ultrasound Volume 8 ; 2019 ; 8 ; https://www.eusjournal.com/ ; ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; Endoscopic Ultrasound Volume 9 ; 2020 ; 9 ; https://www.eusjournal.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2021 ; Endoscopic Ultrasound Volume 10 ; 2021 ; 10 ; https://www.eusjournal.com/ ; ; reingest5.clockss.org:8082 >
@@ -6118,9 +6118,9 @@
 
       au < finished ; finished ; 2016 ; Environmental Disease Volume 1 ; 2016 ; 1 ; http://www.environmentmed.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2017 ; Environmental Disease Volume 2 ; 2017 ; 2 ; http://www.environmentmed.org/ ; ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2018 ; Environmental Disease Volume 3 ; 2018 ; 3 ; http://www.environmentmed.org/ ; ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2019 ; Environmental Disease Volume 4 ; 2019 ; 4 ; https://www.environmentmed.org/ ; ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2020 ; Environmental Disease Volume 5 ; 2020 ; 5 ; https://www.environmentmed.org/ ; ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; Environmental Disease Volume 3 ; 2018 ; 3 ; http://www.environmentmed.org/ ; ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2019 ; Environmental Disease Volume 4 ; 2019 ; 4 ; https://www.environmentmed.org/ ; ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2020 ; Environmental Disease Volume 5 ; 2020 ; 5 ; https://www.environmentmed.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; Environmental Disease Volume 6 ; 2021 ; 6 ; https://www.environmentmed.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2022 ; Environmental Disease Volume 7 ; 2022 ; 7 ; https://www.environmentmed.org/ ; ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2023 ; Environmental Disease Volume 8 ; 2023 ; 8 ; https://www.environmentmed.org/ ; ; >
@@ -6142,9 +6142,9 @@
       au < finished ; frozen ; 2013 ; European Journal of Dentistry Volume 7 ; 2013 ; 7 ; http://www.eurjdent.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; European Journal of Dentistry Volume 8 ; 2014 ; 8 ; http://www.eurjdent.com/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2015 ; European Journal of Dentistry Volume 9 ; 2015 ; 9 ; http://www.eurjdent.com/ ; ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2016 ; European Journal of Dentistry Volume 10 ; 2016 ; 10 ; http://www.eurjdent.com/ ; ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2016 ; European Journal of Dentistry Volume 10 ; 2016 ; 10 ; http://www.eurjdent.com/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; European Journal of Dentistry Volume 11 ; 2017 ; 11 ; http://www.eurjdent.com/ ; ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2018 ; European Journal of Dentistry Volume 12 ; 2018 ; 12 ; http://www.eurjdent.com/ ; ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; European Journal of Dentistry Volume 12 ; 2018 ; 12 ; http://www.eurjdent.com/ ; ; reingest1.clockss.org:8082 >
 
   }
 
@@ -6295,7 +6295,7 @@
       au < finished ; finished ; 2018 ; Indian Journal of Allergy, Asthma and Immunology Volume 32 ; 2018 ; 32 ; http://www.ijaai.in/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Indian Journal of Allergy, Asthma and Immunology Volume 33 ; 2019 ; 33 ; https://www.ijaai.in/ ; ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2020 ; Indian Journal of Allergy, Asthma and Immunology Volume 34 ; 2020 ; 34 ; https://www.ijaai.in/ ; ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2021 ; Indian Journal of Allergy, Asthma and Immunology Volume 35 ; 2021 ; 35 ; https://www.ijaai.in/ ; ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2021 ; Indian Journal of Allergy, Asthma and Immunology Volume 35 ; 2021 ; 35 ; https://www.ijaai.in/ ; ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; Indian Journal of Allergy, Asthma and Immunology Volume 36 [superseded] ; 2022 ; 36 ; https://www.ijaai.in/ ; ; >
       au < doNotProcess ; exists ; 2023 ; Indian Journal of Allergy, Asthma and Immunology Volume 37 ; 2023 ; 37 ; https://www.ijaai.in/ ; ; >
 
@@ -6894,10 +6894,10 @@
       au < finished ; frozen ; 2013 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 1 ; 2013 ; 1 ; http://www.ijoyppp.org/ ; ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 2 ; 2014 ; 2 ; http://www.ijoyppp.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2015 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 3 ; 2015 ; 3 ; http://www.ijoyppp.org/ ; ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2016 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 4 ; 2016 ; 4 ; https://www.ijoyppp.org/ ; ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 4 ; 2016 ; 4 ; https://www.ijoyppp.org/ ; ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2017 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 5 ; 2017 ; 5 ; https://www.ijoyppp.org/ ; ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2018 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 6 ; 2018 ; 6 ; https://www.ijoyppp.org/ ; ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2019 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 7 ; 2019 ; 7 ; https://www.ijoyppp.org/ ; ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2018 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 6 ; 2018 ; 6 ; https://www.ijoyppp.org/ ; ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2019 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 7 ; 2019 ; 7 ; https://www.ijoyppp.org/ ; ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2020 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 8 ; 2020 ; 8 ; https://www.ijoyppp.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2021 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 9 ; 2021 ; 9 ; https://www.ijoyppp.org/ ; ; reingest4.clockss.org:8082 >
 
@@ -9708,7 +9708,7 @@
       param[journal_issn] = 2251-0060
 #      param[base_url] = http://www.atpjournal.org/
 
-      au < manifest ; exists ; 2010 ; Annals of Tropical Pathology Volume 1 ; 2010 ; 1 ; https://www.atpjournal.org/ ; login for pdf ; >
+      au < doNotProcess ; exists ; 2010 ; Annals of Tropical Pathology Volume 1 ; 2010 ; 1 ; https://www.atpjournal.org/ ; login for pdf ; >
       au < finished ; finished ; 2011 ; Annals of Tropical Pathology Volume 2 ; 2011 ; 2 ; https://www.atpjournal.org/ ; ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2012 ; Annals of Tropical Pathology Volume 3 ; 2012 ; 3 ; https://www.atpjournal.org/ ; ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2013 ; Annals of Tropical Pathology Volume 4 ; 2013 ; 4 ; https://www.atpjournal.org/ ; ; reingest5.clockss.org:8082 >

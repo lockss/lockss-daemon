@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -33,13 +33,14 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.tdb;
 
 import java.util.*;
+import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.regex.Pattern;
 
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 import org.apache.commons.cli.*;
-import org.lockss.tdb.Predicates.*;
 import org.lockss.tdb.TdbQueryParser.*;
 
 /**
@@ -1462,20 +1463,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
     }
     if (secondarySet.size() > 0) {
       if (cmd.hasOption(KEY_STATUS2)) {
-        statusPredicate = new Predicate<Au>() {
-          @Override
-          public boolean test(Au a) {
-            return secondarySet.contains(a.getStatus2());
-          }
-        };
+        statusPredicate = (a) -> secondarySet.contains(a.getStatus2());
       }
       else {
-        statusPredicate = new Predicate<Au>() {
-          @Override
-          public boolean test(Au a) {
-            return secondarySet.contains(a.getStatus());
-          }
-        };
+        statusPredicate = (a) -> secondarySet.contains(a.getStatus());
       }
     }
     
@@ -1483,32 +1474,22 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
     Predicate<Au> nonAlliancePredicate = null;
     final Set<String> nonAllianceSet = new HashSet<String>(NON_ALLIANCE_PLUGINS);
     if (cmd.hasOption(KEY_NON_ALLIANCE)) {
-      nonAlliancePredicate = new Predicate<Au>() {
-        @Override
-        public boolean test(Au a) {
-          return nonAllianceSet.contains(a.getComputedPlugin());
-        }
-      };
+      nonAlliancePredicate = (a) -> nonAllianceSet.contains(a.getComputedPlugin());
     }
     else if (cmd.hasOption(KEY_ALLIANCE)) {
-      nonAlliancePredicate = new Predicate<Au>() {
-        @Override
-        public boolean test(Au a) {
-          return !nonAllianceSet.contains(a.getComputedPlugin());
-        }
-      };
+      nonAlliancePredicate = (a) -> !nonAllianceSet.contains(a.getComputedPlugin());
     }
     
     // Join predicates
     Predicate<Au> predicate = queryPredicate;
     if (statusPredicate != null) {
-      predicate = (predicate == null ? statusPredicate : new AndPredicate<Au>(statusPredicate, predicate));
+      predicate = predicate == null ? statusPredicate : statusPredicate.and(predicate);
     }
     if (nonAlliancePredicate != null) {
-      predicate = (predicate == null ? nonAlliancePredicate : new AndPredicate<Au>(nonAlliancePredicate, predicate));
+      predicate = predicate == null ? nonAlliancePredicate : nonAlliancePredicate.and(predicate);
     }
     if (predicate == null) {
-      predicate = new TruePredicate<Au>();
+      predicate = (a) -> true;
     }
     options.put(KEY_QUERY, predicate);
   }
@@ -1516,14 +1497,13 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
   /**
    * <p>
    * Retrieves from the options map the current AU predicate, which will never
-   * be <code>null</code> (it will be an instance of
-   * {@link Predicates.TruePredicate} if needed).
+   * be <code>null</code> (it will be an instance of an always-true predicate
+   * if needed).
    * </p>
    * 
    * @param options
    *          The options map.
-   * @return The current AU predicate or an instance of
-   *         {@link Predicates.TruePredicate}.
+   * @return The current AU predicate or an always-true predicate.
    * @since 1.67
    */
   public Predicate<Au> getAuPredicate(Map<String, Object> options) {
@@ -1533,39 +1513,39 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
   /**
    * <p>
    * If processing an abstract syntax tree of type Or2, pops the two predicates
-   * waiting on top of the stack, merges them into an
-   * {@link Predicates.OrPredicate} instance, and pushes the result onto the
-   * stack.
+   * waiting on top of the stack, merges them into an "or" predicate, and pushes
+   * the result onto the stack.
    * </p>
    * 
    * @param o2ctx
    *          Context supplied by ANTLR.
    * @since 1.67
+   * @see Predicate#or(Predicate)
    */
   @Override
   public void exitOr2(@NotNull Or2Context o2ctx) {
     Predicate<Au> op2 = predicateStack.pop();
     Predicate<Au> op1 = predicateStack.pop();
-    predicateStack.push(new OrPredicate<Au>(op1, op2));
+    predicateStack.push(op1.or(op2));
   }
   
   /**
    * <p>
    * If processing an abstract syntax tree of type And2, pops the two predicates
-   * waiting on top of the stack, merges them into an
-   * {@link Predicates.OrPredicate} instance, and pushes the result onto the
-   * stack.
+   * waiting on top of the stack, merges them into an "and" predicate, and
+   * pushes the result onto the stack.
    * </p>
    * 
    * @param a2ctx
    *          Context supplied by ANTLR.
    * @since 1.67
+   * @see Predicate#and(Predicate)
    */
   @Override
   public void exitAnd2(@NotNull And2Context a2ctx) {
     Predicate<Au> op2 = predicateStack.pop();
     Predicate<Au> op1 = predicateStack.pop();
-    predicateStack.push(new AndPredicate<Au>(op1, op2));
+    predicateStack.push(op1.and(op2));
   }
   
   /**
@@ -1580,17 +1560,14 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    */
   @Override
   public void exitExprRegex(@NotNull ExprRegexContext erctx) {
-    final Functor<Au, String> traitFunctor = Au.traitFunctor(erctx.IDENTIFIER().getText());
+    final Function<Au, String> traitFunctor = Au.traitFunctor(erctx.IDENTIFIER().getText());
     final Pattern pat = Pattern.compile(erctx.STRING().getText());
-    Predicate<Au> ret = new Predicate<Au>() {
-      @Override
-      public boolean test(Au a) {
-        String trait = traitFunctor.apply(a);
-        return pat.matcher(trait == null ? "" : trait).find();
-      }
+    Predicate<Au> ret = (a) -> {
+      String trait = traitFunctor.apply(a);
+      return pat.matcher(trait == null ? "" : trait).find();
     };
     if (erctx.DOES_NOT_MATCH() != null) {
-      ret = new NotPredicate<Au>(ret);
+      ret = ret.negate();
     }
     predicateStack.push(ret);
   }
@@ -1607,16 +1584,11 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    */
   @Override
   public void exitExprString(@NotNull ExprStringContext esctx) {
-    final Functor<Au, String> traitFunctor = Au.traitFunctor(esctx.IDENTIFIER().getText());
+    final Function<Au, String> traitFunctor = Au.traitFunctor(esctx.IDENTIFIER().getText());
     final String str = esctx.STRING().getText();
-    Predicate<Au> ret = new Predicate<Au>() {
-      @Override
-      public boolean test(Au a) {
-        return str.equals(traitFunctor.apply(a));
-      }
-    };
+    Predicate<Au> ret = (a) -> str.equals(traitFunctor.apply(a));
     if (esctx.NOT() != null || esctx.NOT_EQUALS() != null) {
-      ret = new NotPredicate<Au>(ret);
+      ret = ret.negate();
     }
     predicateStack.push(ret);
   }
@@ -1633,15 +1605,10 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    */
   @Override
   public void exitExprSet(@NotNull ExprSetContext esctx) {
-    final Functor<Au, String> traitFunctor = Au.traitFunctor(esctx.IDENTIFIER().getText());
-    Predicate<Au> ret = new Predicate<Au>() {
-        @Override
-        public boolean test(Au a) {
-          return traitFunctor.apply(a) != null;
-        }
-    };
+    final Function<Au, String> traitFunctor = Au.traitFunctor(esctx.IDENTIFIER().getText());
+    Predicate<Au> ret = (a) -> traitFunctor.apply(a) != null;
     if (esctx.NOT() != null) {
-      ret = new NotPredicate<Au>(ret);
+      ret = ret.negate();
     }
     predicateStack.push(ret);
   }

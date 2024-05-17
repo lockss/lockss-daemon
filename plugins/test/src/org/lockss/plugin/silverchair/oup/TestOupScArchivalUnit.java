@@ -174,7 +174,8 @@ public class TestOupScArchivalUnit extends LockssTestCase {
     //PDF files start at 
     shouldCacheTest(ROOT_URL + "database/article-pdf/46/1/119/11062483/afw166.pdf", true, au);
     // and redirect to a variable expiring url but as they're stored at the canonical, this is okay
-    shouldCacheTest("https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/46/1/10.1093_ageing_afw166/11/afw166.pdf?Expires=1524256967&Signature=wzdP26Lxkw__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA", true, au);
+    //UPDATE 2024: we are only capturing things that have the specified expiration key from Silverchair
+    shouldCacheTest("https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/46/1/10.1093_ageing_afw166/11/afw166.pdf?Expires=1524256967&Signature=wzdP26Lxkw__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA", false, au);
     
     // TODO - expiration needs to be the firm steady date
     shouldCacheTest("https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/2015/10.1093_database_bau122/2/bau122f1p.png?Expires=1497074690&Signature=S60KGC7x1rMgczcd6O-A__&Key-Pair-Id=APKAIULVPAVW3Q", false, au);
@@ -182,9 +183,9 @@ public class TestOupScArchivalUnit extends LockssTestCase {
     shouldCacheTest("https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/2015/10.1093_database_bau122/2/bau122f1p.png?Expires=2147483647&Signature=S60KGC7x1rMgczcd6O-A__&Key-Pair-Id=APKAIULVPAVW3Q", true, au);
     // toc, front-matter, et al PDFs with expiration are now preserved? XXX
     shouldCacheTest("https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/Issue/461/1/toc.pdf" +
-        "?Expires=1497074690&Signature=S60KGC7x1rMgczcd6O-A__&Key-Pair-Id=APKAIULVPAVW3Q", true, au);
+        "?Expires=1497074690&Signature=S60KGC7x1rMgczcd6O-A__&Key-Pair-Id=APKAIULVPAVW3Q", false, au);
     shouldCacheTest("https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/database/Issue/461/1/front-matter.pdf" +
-        "?Expires=1497074690&Signature=S60KGC7x1rMgczcd6O-A__&Key-Pair-Id=APKAIULVPAVW3Q", true, au);
+        "?Expires=1497074690&Signature=S60KGC7x1rMgczcd6O-A__&Key-Pair-Id=APKAIULVPAVW3Q", false, au);
     
     // www. embedded in url
     shouldCacheTest(ROOT_URL + "database/article/2433123/ProtoBug-functional-families-from-the-complete/www.foo.bar?param", false, au);

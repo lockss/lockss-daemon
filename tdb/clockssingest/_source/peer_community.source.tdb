@@ -1,7 +1,7 @@
 {
 
   publisher <
-    name = Peer Community In ;
+    name = Peer Community in ;
     info[contract] = 2020 ;
     info[tester] = S ;
     info[platform] = Source
@@ -10,7 +10,7 @@
 
   {
     title <
-      name = Peer Community In
+      name = Peer Community in
     >
 
     plugin = org.lockss.plugin.clockss.peercommunityin.ClockssPeerCommunityInSourcePlugin
@@ -18,16 +18,16 @@
     {
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/pci-released/
 
-    au < zapped ; finished ; 2020 ; Peer Community In Source Content 2020 ; 2020 >
-    au < readySource ; finished ; 2021 ; Peer Community In Source Content 2021 ; 2021 >
-    au < readySource ; finished ; 2022 ; Peer Community In Source Content 2022 ; 2022 >
+    au < zapped ; finished ; 2020 ; Peer Community in Source Content 2020 ; 2020 >
+    au < readySource ; finished ; 2021 ; Peer Community in Source Content 2021 ; 2021 >
+    au < readySource ; finished ; 2022 ; Peer Community in Source Content 2022 ; 2022 >
     #No more AUs. Moving to https.
     }
     {
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/pci-released/
 
-    au < readySource ; crawling ; 2023 ; Peer Community In Source Content 2023 ; 2023 >
-    au < expected ; exists ; 2024 ; Peer Community In Source Content 2024 ; 2024 >
+    au < readySource ; finished ; 2023 ; Peer Community in Source Content 2023 ; 2023 >
+    au < testing ; exists ; 2024 ; Peer Community in Source Content 2024 ; 2024 >
 
     }
   }

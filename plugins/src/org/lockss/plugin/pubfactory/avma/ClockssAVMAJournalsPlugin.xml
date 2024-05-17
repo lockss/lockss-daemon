@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>2</string>
+        <string>3</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -76,7 +76,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>2,"^%s.*\.xml\?&amp;pdfVersion=true$", base_url</string>
             <string>1,"^https://fonts.googleapis.com/css"</string>
             <!--  citation overlay and ris download have odd normalization; allow for both -->
-            <string>1,"^%s(view|downloadpdf|abstract|skin|pdfviewer)/journals/%s/%s", base_url, journal_id, volume_name</string>
+            <string>1,"^%s(view|downloadpdf|abstract|skin|pdfviewer)/(view/)?journals/%s/%s", base_url, journal_id, volume_name</string>
             <string>1,"^%s(skin|pdfviewer)", base_url</string>
         </list>
     </entry>
@@ -84,7 +84,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_substance_url_pattern</string>
         <list>
             <!--https://avmajournals.avma.org/downloadpdf/journals/javma/261/1/javma.21.10.0448.pdf-->
-            <string>"^%sdownloadpdf/journals/%s/%s/", base_url, journal_id, volume_name</string>
+            <string>"^%sdownloadpdf/view/journals/%s/%s/", base_url, journal_id, volume_name</string>
         </list>
     </entry>
     <entry>

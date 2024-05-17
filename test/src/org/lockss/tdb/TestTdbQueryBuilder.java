@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -33,9 +33,9 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.tdb;
 
 import java.util.*;
+import java.util.function.Predicate;
 
 import org.lockss.tdb.AntlrUtil.SyntaxError;
-import org.lockss.tdb.Predicates.TruePredicate;
 import org.lockss.test.LockssTestCase;
 
 public class TestTdbQueryBuilder extends LockssTestCase {
@@ -52,7 +52,7 @@ public class TestTdbQueryBuilder extends LockssTestCase {
     tdbq.processCommandLine(options, cmd);
     Predicate<Au> predicate = tdbq.getAuPredicate(options);
     assertNotNull(predicate);
-    assertTrue(predicate instanceof TruePredicate);
+    assertTrue(predicate.test(null));
   }
   
   public void testAlliance() throws Exception {
@@ -67,7 +67,6 @@ public class TestTdbQueryBuilder extends LockssTestCase {
     tdbq.processCommandLine(options, cmd);
     Predicate<Au> predicate = tdbq.getAuPredicate(options);
     assertNotNull(predicate);
-    assertFalse(predicate instanceof TruePredicate);
     for (String plu : TdbQueryBuilder.NON_ALLIANCE_PLUGINS) {
       Au au;
       au = new Au(null);
@@ -91,7 +90,6 @@ public class TestTdbQueryBuilder extends LockssTestCase {
     tdbq.processCommandLine(options, cmd);
     Predicate<Au> predicate = tdbq.getAuPredicate(options);
     assertNotNull(predicate);
-    assertFalse(predicate instanceof TruePredicate);
     for (String plu : TdbQueryBuilder.NON_ALLIANCE_PLUGINS) {
       Au au;
       au = new Au(null);

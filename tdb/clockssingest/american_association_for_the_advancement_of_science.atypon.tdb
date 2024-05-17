@@ -435,7 +435,7 @@
       au < finished ; manifest ; 2019 ; Science Volume 365 ; 365 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2019 ; Science Volume 366 ; 366 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; Science Volume 367 ; 367 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2020 ; Science Volume 368 ; 368 ; >
+      au < frozen ; exists ; 2020 ; Science Volume 368 ; 368 ; >
       au < finished ; manifest ; 2020 ; Science Volume 369 ; 369 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2020 ; Science Volume 370 ; 370 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; Science Volume 371 ; 371 ; reingest1.clockss.org:8082 >
@@ -446,12 +446,12 @@
       au < finished ; manifest ; 2022 ; Science Volume 376 ; 376 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; Science Volume 377 ; 377 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; Science Volume 378 ; 378 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2023 ; Science Volume 379 ; 379 ; >
-      au < crawling ; exists ; 2023 ; Science Volume 380 ; 380 ; >
-      au < crawling ; exists ; 2023 ; Science Volume 381 ; 381 ; >
-      au < testing ; exists ; 2023 ; Science Volume 382 ; 382 ; >
+      au < deepCrawl ; exists ; 2023 ; Science Volume 379 ; 379 ; >
+      au < deepCrawl ; exists ; 2023 ; Science Volume 380 ; 380 ; >
+      au < deepCrawl ; exists ; 2023 ; Science Volume 381 ; 381 ; >
+      au < notReady ; exists ; 2023 ; Science Volume 382 ; 382 ; > #524 error, redirect to www.atypon.com
       au < manifest ; exists ; 2024 ; Science Volume 383 ; 383 ; >
-      au < expected ; exists ; 2024 ; Science Volume 384 ; 384 ; >
+      au < manifest ; exists ; 2024 ; Science Volume 384 ; 384 ; >
       au < expected ; exists ; 2024 ; Science Volume 385 ; 385 ; >
       au < expected ; exists ; 2024 ; Science Volume 386 ; 386 ; >
 

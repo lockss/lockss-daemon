@@ -81,6 +81,7 @@ public class NPERXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorF
 
       String customAccessUrl = cu.getUrl();
       String articleTitle = thisAM.get(MetadataField.FIELD_ARTICLE_TITLE);
+      String articleEndPage = thisAM.get(MetadataField.FIELD_END_PAGE);
 
       //in 2021 folder, there are two articles with the same startpage and endpage,
       //so need to append partical article title to make access.url unique
@@ -100,6 +101,10 @@ public class NPERXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorF
             log.warning("UnsupportedEncodingException", e);
           }
         }
+      }
+
+      if (articleEndPage != null) {
+        customAccessUrl = customAccessUrl + "&article_endpage=" + URLEncoder.encode(articleEndPage);
       }
 
       log.debug3("customAccessUrl  = " + customAccessUrl );

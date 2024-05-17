@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>40</string>
+    <string>41</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -128,21 +128,17 @@ POSSIBILITY OF SUCH DAMAGE.
            https://ash.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
            -->
       <string>2,"^https?://([^/]+\.silverchair-cdn\.com)/cassette\.axd/.*"</string>
-      <!--Exclude OUP PAP files-->
-      <string>2,"^https?://(%s|oup\.silverchair-cdn\.com)/oup/backfile/Content_public/Journal/[^?/]+/PAP/", url_host(base_url)</string>
       <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdn\.mathjax\.org|cdnjs\.cloudflare\.com)/"</string>
       <!-- 	https://academic.oup.com/my-account/register?siteId=191&returnUrl= redirect to this means access failed -->
       <string>2,"^https?://%s/my-account/register", url_host(base_url)</string>
       <!-- images/figures/supplemental have Expires that will always be 2147483647 and don't redirect - allow -->
       <string>1,"^https?://(%s|oup\.silverchair-cdn\.com)/oup/backfile/Content_public/Journal/[^?]+\?Expires=2147483647", url_host(base_url)</string>
       <!--  PDFs redirect through one-time with changing expiring that stores in canonical -->
-      <string>1,"^https?://(%s|oup\.silverchair-cdn\.com)/oup/backfile/Content_public/Journal/%s/[^?]+[.]pdf\?Expires=", url_host(base_url), journal_id</string>
+      <string>1,"^https?://(%s|oup\.silverchair-cdn\.com)/oup/backfile/Content_public/Journal/%s/[^?]+[.]pdf\?Expires=2147483647", url_host(base_url), journal_id</string>
       <!--  allow any other item, but if it has Expires it's a content image and it has to be stable-->
       <string>2,"^https?://(%s|oup\.silverchair-cdn\.com).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)\?Expires=.*$", url_host(base_url)</string>
       <!--  but allow any other items that do NOT have expiry - they're just support images, fonts, etc -->
       <string>1,"^https?://(%s|oup\.silverchair-cdn\.com).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
-      <!--  pdf can go through regardless of Expiry because it gets consumed, and JS and CSS have no expiry -->
-      <string>1,"^https?://oup\.silverchair-cdn\.com/.*(CSS|JS|\.pdf)(\?.*)?$"</string>
       <!--  PDF content is going through watermarking SOME of the time; we will consume -->
       <string>1,"^https?://watermark\.silverchair\.com/[^/]+\.pdf\?token="</string>
       <!--  redundant version of issue, now filtered out of crawl -->

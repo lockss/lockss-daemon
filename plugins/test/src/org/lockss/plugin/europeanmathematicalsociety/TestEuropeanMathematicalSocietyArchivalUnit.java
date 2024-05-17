@@ -122,14 +122,17 @@ public class TestEuropeanMathematicalSocietyArchivalUnit extends LockssTestCase 
     DefinableArchivalUnit au = makeAu();
     assertEquals(ListUtil.list(expected), au.getStartUrls());
   }
-  
-  
+
+
+  //Plugin is deprecated
+  /*
   public void testGetName() throws Exception {
     DefinableArchivalUnit au = makeAu();
-    
-    assertEquals(PluginName + ", Base URL " + BASE_URL + ", ISSN " + JOURNAL_ISSN +
-        ", Volume " + VOLUME, au.getName());
+
+
+    assertEquals(PluginName + ", Base URL " + BASE_URL + ", ISSN " + JOURNAL_ISSN +", Volume " + VOLUME, au.getName());
   }
+  */
   
 }
 

@@ -129,7 +129,8 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
-            <string>"^%sdownloadpdf(/display)?/%s", base_url, book_isbn</string>
+            <!--check for full text OR pdf-->
+            <string>"^%s(downloadpdf/)?(display/)?%s/%s\.[0-9]+\.(xml|pdf)", base_url, book_isbn, book_isbn</string>
         </list>
     </entry>
     <entry>

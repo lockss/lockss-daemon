@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -77,7 +77,7 @@ public class TestTitle extends LockssTestCase {
     assertEquals(Title.TYPE_DEFAULT, title.getType());
     assertNull(title.getArbitraryValue(FOO_KEY));
   }
-  
+
   public void testTitle() throws Exception {
     Publisher publisher = new Publisher();
     Map<String, String> map = new HashMap<String, String>();

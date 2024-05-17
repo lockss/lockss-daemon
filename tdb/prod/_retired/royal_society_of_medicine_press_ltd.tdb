@@ -19,52 +19,52 @@
         implicit < status ; year ; name ; param[volume_name] >
         comment[platform] = HighWire H10
       
-        au < doesNotExist ; 2001 ; He@lth Information on the Internet Volume 21 ; 21 >
-        au < doesNotExist ; 2001 ; He@lth Information on the Internet Volume 22 ; 22 >
-        au < doesNotExist ; 2001 ; He@lth Information on the Internet Volume 23 ; 23 >
-        au < doesNotExist ; 2001 ; He@lth Information on the Internet Volume 24 ; 24 >
-        au < doesNotExist ; 2002 ; He@lth Information on the Internet Volume 25 ; 25 >
-        au < doesNotExist ; 2002 ; He@lth Information on the Internet Volume 26 ; 26 >
-        au < doesNotExist ; 2002 ; He@lth Information on the Internet Volume 27 ; 27 >
-        au < doesNotExist ; 2002 ; He@lth Information on the Internet Volume 28 ; 28 >
-        au < doesNotExist ; 2002 ; He@lth Information on the Internet Volume 29 ; 29 >
-        au < doesNotExist ; 2002 ; He@lth Information on the Internet Volume 30 ; 30 >
-        au < doesNotExist ; 2003 ; He@lth Information on the Internet Volume 31 ; 31 >
-        au < doesNotExist ; 2003 ; He@lth Information on the Internet Volume 32 ; 32 >
-        au < doesNotExist ; 2003 ; He@lth Information on the Internet Volume 33 ; 33 >
-        au < doesNotExist ; 2003 ; He@lth Information on the Internet Volume 34 ; 34 >
-        au < doesNotExist ; 2003 ; He@lth Information on the Internet Volume 35 ; 35 >
-        au < doesNotExist ; 2003 ; He@lth Information on the Internet Volume 36 ; 36 >
-        au < doesNotExist ; 2004 ; He@lth Information on the Internet Volume 37 ; 37 >
-        au < doesNotExist ; 2004 ; He@lth Information on the Internet Volume 38 ; 38 >
-        au < doesNotExist ; 2004 ; He@lth Information on the Internet Volume 39 ; 39 >
-        au < doesNotExist ; 2004 ; He@lth Information on the Internet Volume 40 ; 40 >
-        au < doesNotExist ; 2004 ; He@lth Information on the Internet Volume 41 ; 41 >
-        au < doesNotExist ; 2004 ; He@lth Information on the Internet Volume 42 ; 42 >
-        au < doesNotExist ; 2005 ; He@lth Information on the Internet Volume 43 ; 43 >
-        au < doesNotExist ; 2005 ; He@lth Information on the Internet Volume 44 ; 44 >
-        au < doesNotExist ; 2005 ; He@lth Information on the Internet Volume 45 ; 45 >
-        au < doesNotExist ; 2005 ; He@lth Information on the Internet Volume 46 ; 46 >
-        au < doesNotExist ; 2005 ; He@lth Information on the Internet Volume 47 ; 47 >
-        au < doesNotExist ; 2005 ; He@lth Information on the Internet Volume 48 ; 48 >
-        au < doesNotExist ; 2006 ; He@lth Information on the Internet Volume 49 ; 49 >
-        au < doesNotExist ; 2006 ; He@lth Information on the Internet Volume 50 ; 50 >
-        au < doesNotExist ; 2006 ; He@lth Information on the Internet Volume 51 ; 51 >
-        au < doesNotExist ; 2006 ; He@lth Information on the Internet Volume 52 ; 52 >
-        au < doesNotExist ; 2006 ; He@lth Information on the Internet Volume 53 ; 53 >
-        au < doesNotExist ; 2006 ; He@lth Information on the Internet Volume 54 ; 54 >
-        au < doesNotExist ; 2007 ; He@lth Information on the Internet Volume 55 ; 55 >
-        au < doesNotExist ; 2007 ; He@lth Information on the Internet Volume 56 ; 56 >
-        au < doesNotExist ; 2007 ; He@lth Information on the Internet Volume 57 ; 57 >
-        au < doesNotExist ; 2007 ; He@lth Information on the Internet Volume 58 ; 58 >
-        au < doesNotExist ; 2007 ; He@lth Information on the Internet Volume 59 ; 59 >
-        au < doesNotExist ; 2007 ; He@lth Information on the Internet Volume 60 ; 60 >
-        au < doesNotExist ; 2008 ; He@lth Information on the Internet Volume 61 ; 61 >
-        au < doesNotExist ; 2008 ; He@lth Information on the Internet Volume 62 ; 62 >
-        au < doesNotExist ; 2008 ; He@lth Information on the Internet Volume 63 ; 63 >
-        au < doNotProcess ; 2008 ; He@lth Information on the Internet Volume 64 ; 64 >
-        au < doesNotExist ; 2008 ; He@lth Information on the Internet Volume 65 ; 65 >
-        au < doesNotExist ; 2008 ; He@lth Information on the Internet Volume 66 ; 66 >
+        au < superseded ; 2001 ; He@lth Information on the Internet Volume 21 [superseded] ; 21 >
+        au < superseded ; 2001 ; He@lth Information on the Internet Volume 22 [superseded] ; 22 >
+        au < superseded ; 2001 ; He@lth Information on the Internet Volume 23 [superseded] ; 23 >
+        au < superseded ; 2001 ; He@lth Information on the Internet Volume 24 [superseded] ; 24 >
+        au < superseded ; 2002 ; He@lth Information on the Internet Volume 25 [superseded] ; 25 >
+        au < superseded ; 2002 ; He@lth Information on the Internet Volume 26 [superseded] ; 26 >
+        au < superseded ; 2002 ; He@lth Information on the Internet Volume 27 [superseded] ; 27 >
+        au < superseded ; 2002 ; He@lth Information on the Internet Volume 28 [superseded] ; 28 >
+        au < superseded ; 2002 ; He@lth Information on the Internet Volume 29 [superseded] ; 29 >
+        au < superseded ; 2002 ; He@lth Information on the Internet Volume 30 [superseded] ; 30 >
+        au < superseded ; 2003 ; He@lth Information on the Internet Volume 31 [superseded] ; 31 >
+        au < superseded ; 2003 ; He@lth Information on the Internet Volume 32 [superseded] ; 32 >
+        au < superseded ; 2003 ; He@lth Information on the Internet Volume 33 [superseded] ; 33 >
+        au < superseded ; 2003 ; He@lth Information on the Internet Volume 34 [superseded] ; 34 >
+        au < superseded ; 2003 ; He@lth Information on the Internet Volume 35 [superseded] ; 35 >
+        au < superseded ; 2003 ; He@lth Information on the Internet Volume 36 [superseded] ; 36 >
+        au < superseded ; 2004 ; He@lth Information on the Internet Volume 37 [superseded] ; 37 >
+        au < superseded ; 2004 ; He@lth Information on the Internet Volume 38 [superseded] ; 38 >
+        au < superseded ; 2004 ; He@lth Information on the Internet Volume 39 [superseded] ; 39 >
+        au < superseded ; 2004 ; He@lth Information on the Internet Volume 40 [superseded] ; 40 >
+        au < superseded ; 2004 ; He@lth Information on the Internet Volume 41 [superseded] ; 41 >
+        au < superseded ; 2004 ; He@lth Information on the Internet Volume 42 [superseded] ; 42 >
+        au < superseded ; 2005 ; He@lth Information on the Internet Volume 43 [superseded] ; 43 >
+        au < superseded ; 2005 ; He@lth Information on the Internet Volume 44 [superseded] ; 44 >
+        au < superseded ; 2005 ; He@lth Information on the Internet Volume 45 [superseded] ; 45 >
+        au < superseded ; 2005 ; He@lth Information on the Internet Volume 46 [superseded] ; 46 >
+        au < superseded ; 2005 ; He@lth Information on the Internet Volume 47 [superseded] ; 47 >
+        au < superseded ; 2005 ; He@lth Information on the Internet Volume 48 [superseded] ; 48 >
+        au < superseded ; 2006 ; He@lth Information on the Internet Volume 49 [superseded] ; 49 >
+        au < superseded ; 2006 ; He@lth Information on the Internet Volume 50 [superseded] ; 50 >
+        au < superseded ; 2006 ; He@lth Information on the Internet Volume 51 [superseded] ; 51 >
+        au < superseded ; 2006 ; He@lth Information on the Internet Volume 52 [superseded] ; 52 >
+        au < superseded ; 2006 ; He@lth Information on the Internet Volume 53 [superseded] ; 53 >
+        au < superseded ; 2006 ; He@lth Information on the Internet Volume 54 [superseded] ; 54 >
+        au < superseded ; 2007 ; He@lth Information on the Internet Volume 55 [superseded] ; 55 >
+        au < superseded ; 2007 ; He@lth Information on the Internet Volume 56 [superseded] ; 56 >
+        au < superseded ; 2007 ; He@lth Information on the Internet Volume 57 [superseded] ; 57 >
+        au < superseded ; 2007 ; He@lth Information on the Internet Volume 58 [superseded] ; 58 >
+        au < superseded ; 2007 ; He@lth Information on the Internet Volume 59 [superseded] ; 59 >
+        au < superseded ; 2007 ; He@lth Information on the Internet Volume 60 [superseded] ; 60 >
+        au < superseded ; 2008 ; He@lth Information on the Internet Volume 61 [superseded] ; 61 >
+        au < superseded ; 2008 ; He@lth Information on the Internet Volume 62 [superseded] ; 62 >
+        au < superseded ; 2008 ; He@lth Information on the Internet Volume 63 [superseded] ; 63 >
+        au < superseded ; 2008 ; He@lth Information on the Internet Volume 64 [superseded] ; 64 >
+        au < superseded ; 2008 ; He@lth Information on the Internet Volume 65 [superseded] ; 65 >
+        au < superseded ; 2008 ; He@lth Information on the Internet Volume 66 [superseded] ; 66 >
   
       }
   

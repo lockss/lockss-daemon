@@ -37,8 +37,12 @@ import java.io.IOException;
 
 import org.lockss.extractor.GoslingHtmlLinkExtractor;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.util.Logger;
 
 public class GeorgThiemeVerlagHtmlLinkExtractor extends GoslingHtmlLinkExtractor{
+
+    Logger log = Logger.getLogger(GeorgThiemeVerlagHtmlLinkExtractor.class);
+  
     @Override
     protected String extractLinkFromTag(StringBuffer link,
                                       ArchivalUnit au,
@@ -50,7 +54,10 @@ public class GeorgThiemeVerlagHtmlLinkExtractor extends GoslingHtmlLinkExtractor
             String name = getAttributeValue("name", link);
             if("citation_xml_url".equals(name)){
                 content = getAttributeValue("content", link);
+                log.debug3("The Content is:" + content);
                 if(content != null){
+                    content = content.replace("http","https");
+                    log.debug3("The new Content is:" + content);
                     cb.foundLink(resolveUri(baseUrl, content));
                 }
             }

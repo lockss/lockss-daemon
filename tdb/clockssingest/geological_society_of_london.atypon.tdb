@@ -16,6 +16,20 @@
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
   {
+
+    title <
+      name = Geoenergy ;
+      eissn = 2755-1725 ;
+      issnl = 2755-1725
+    >
+
+      param[journal_id] = geoenergy
+
+      au < manifest ; exists ; 2023 ; Geological Society of America Bulletin Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2024 ; Geological Society of America Bulletin Volume 2 ; 2 ; >
+  }
+
+  {
   
     title <
       name = Engineering Geology Special Publications ;
@@ -730,20 +744,20 @@
     au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 534 ; 534 ; >
     au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 535 ; 535 ; >
     au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 536 ; 536 ; >
-    au < crawling ; exists ; 2023 ; Geological Society of London Special Publications Volume 537 ; 537 ; >
+    au < deepCrawl ; exists ; 2023 ; Geological Society of London Special Publications Volume 537 ; 537 ; >
     au < deepCrawl ; exists ; 2023 ; Geological Society of London Special Publications Volume 538 ; 538 ; >
     au < deepCrawl ; exists ; 2023 ; Geological Society of London Special Publications Volume 539 ; 539 ; >
     au < deepCrawl ; exists ; 2023 ; Geological Society of London Special Publications Volume 540 ; 540 ; >
-    au < crawling ; exists ; 2023 ; Geological Society of London Special Publications Volume 541 ; 541 ; >
+    au < deepCrawl ; exists ; 2023 ; Geological Society of London Special Publications Volume 541 ; 541 ; >
     au < deepCrawl ; exists ; 2023 ; Geological Society of London Special Publications Volume 542 ; 542 ; >
-    au < crawling ; exists ; 2023 ; Geological Society of London Special Publications Volume 543 ; 543 ; >
+    au < deepCrawl ; exists ; 2023 ; Geological Society of London Special Publications Volume 543 ; 543 ; >
     au < deepCrawl ; exists ; 2023 ; Geological Society of London Special Publications Volume 544 ; 544 ; >
     au < deepCrawl ; exists ; 2023 ; Geological Society of London Special Publications Volume 545 ; 545 ; >
     au < deepCrawl ; exists ; 2023 ; Geological Society of London Special Publications Volume 546 ; 546 ; >
     au < deepCrawl ; exists ; 2023 ; Geological Society of London Special Publications Volume 547 ; 547 ; >
     au < manifest ; exists ; 2023 ; Geological Society of London Special Publications Volume 548 ; 548 ; >
-    au < expected ; exists ; 2023 ; Geological Society of London Special Publications Volume 549 ; 549 ; >
-    au < expected ; exists ; 2023 ; Geological Society of London Special Publications Volume 550 ; 550 ; >
+    au < manifest ; exists ; 2023 ; Geological Society of London Special Publications Volume 549 ; 549 ; >
+    au < manifest ; exists ; 2023 ; Geological Society of London Special Publications Volume 550 ; 550 ; >
     au < expected ; exists ; 2023 ; Geological Society of London Special Publications Volume 551 ; 551 ; >
     au < expected ; exists ; 2023 ; Geological Society of London Special Publications Volume 552 ; 552 ; >
     au < expected ; exists ; 2023 ; Geological Society of London Special Publications Volume 553 ; 553 ; >
@@ -1029,7 +1043,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Petroleum Geoscience Volume 26 ; 26 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Petroleum Geoscience Volume 27 ; 27 ; >
       au < deepCrawl ; exists ; 2022 ; Petroleum Geoscience Volume 28 ; 28 ; >
-      au < crawling ; exists ; 2023 ; Petroleum Geoscience Volume 29 ; 29 ; >
+      au < deepCrawl ; exists ; 2023 ; Petroleum Geoscience Volume 29 ; 29 ; >
       au < manifest ; exists ; 2024 ; Petroleum Geoscience Volume 30 ; 30 ; >
 
   }
@@ -1381,7 +1395,7 @@
     au < doNotProcess ; doNotProcess ; 2018-2019 ; Proceedings of the Yorkshire Geological Society Volume 62 ; 62 ; >
     au < doNotProcess ; doNotProcess ; 2020-2021 ; Proceedings of the Yorkshire Geological Society Volume 63 ; 63 ; >
     au < deepCrawl ; exists ; 2022-2023 ; Proceedings of the Yorkshire Geological Society Volume 64 ; 64 ; >
-    au < expected ; exists ; 2023-2024 ; Proceedings of the Yorkshire Geological Society Volume 65 ; 65 ; >
+    au < manifest ; exists ; 2023-2024 ; Proceedings of the Yorkshire Geological Society Volume 65 ; 65 ; >
     au < expected ; exists ; 2024-2025 ; Proceedings of the Yorkshire Geological Society Volume 66 ; 66 ; >
 
   }

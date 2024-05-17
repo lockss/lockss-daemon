@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -34,6 +34,7 @@ package org.lockss.tdb;
 
 import java.io.Serializable;
 import java.util.*;
+import java.util.function.Function;
 
 import org.antlr.v4.runtime.Token;
 
@@ -73,7 +74,7 @@ public class Au implements Serializable {
   public Au(Token tok, Au other) {
     this(tok);
     this.computedPlugin = other.computedPlugin;
-    this.doi = other.doi;
+    this.computedPublisher = other.computedPublisher;
     this.eisbn = other.eisbn;
     this.implicit = other.implicit;
     this.isbn = other.isbn;
@@ -82,6 +83,7 @@ public class Au implements Serializable {
     this.pluginSuffix = other.pluginSuffix;
     this.provider = other.provider;
     this.proxy = other.proxy;
+    this.publisherName = other.publisherName;
     this.rights = other.rights;
     if (other.attrsMap != null) {
       this.attrsMap = new HashMap<String, String>(other.attrsMap);
@@ -227,13 +229,6 @@ public class Au implements Serializable {
           return attrsMap.put(key.substring(ATTR_PREFIX.length(), key.length() - 1), value);
         }
       } break;
-      case 'd': {
-        if (DOI.equals(key)) {
-          String ret = doi;
-          doi = value;
-          return ret;
-        }
-      } break;
       case 'e': {
         if (EDITION.equals(key)) {
           String ret = edition;
@@ -296,6 +291,11 @@ public class Au implements Serializable {
         else if (PROXY.equals(key)) {
           String ret = proxy;
           proxy = value;
+          return ret;
+        }
+        else if (PUBLISHER_NAME.equals(key)) {
+          String ret = publisherName;
+          publisherName = value;
           return ret;
         }
       } break;
@@ -491,32 +491,31 @@ public class Au implements Serializable {
   
   /**
    * <p>
-   * The AU's DOI (key).
+   * The AU's computed publisher (field).
    * </p>
    * 
-   * @since 1.77
+   * @since 1.78
    */
-  protected static final String DOI = "doi";
+  protected String computedPublisher = null;
   
   /**
    * <p>
-   * The AU's DOI (field).
+   * Retrieves the AU's computed publisher.
    * </p>
    * 
-   * @since 1.77
+   * @return The AU's computed publisher.
+   * @since 1.78
    */
-  protected String doi = null;
-  
-  /**
-   * <p>
-   * Retrieves the AU's DOI.
-   * </p>
-   * 
-   * @return The AU's DOI.
-   * @since 1.77
-   */
-  public String getDoi() {
-    return doi;
+  public String getComputedPublisher() {
+    if (computedPublisher == null) {
+      if (publisherName != null) {
+        computedPublisher = publisherName;
+      }
+      else {
+        computedPublisher = getTitle().getPublisher().getName();
+      }
+    }
+    return computedPublisher;
   }
   
   /**
@@ -907,6 +906,36 @@ public class Au implements Serializable {
    */
   public String getProxy() {
     return proxy;
+  }
+  
+  /**
+   * <p>
+   * The AU's publisher name (key).
+   * </p>
+   * 
+   * @since 1.78
+   */
+  protected static final String PUBLISHER_NAME = "publisherName";
+  
+  /**
+   * <p>
+   * The AU's publisher name(field).
+   * </p>
+   * 
+   * @since 1.78
+   */
+  protected String publisherName = null;
+  
+  /**
+   * <p>
+   * Retrieves the AU's publisher name.
+   * </p>
+   * 
+   * @return The AU's publisher name.
+   * @since 1.78
+   */
+  public String getPublisherName() {
+    return publisherName;
   }
   
   /**
@@ -1304,60 +1333,48 @@ public class Au implements Serializable {
    * 
    * @since 1.67
    */
-  private static final Map<String, Functor<Au, String>> functorMap = new HashMap<String, Functor<Au, String>>();
+  private static final Map<String, Function<Au, String>> functorMap = new HashMap<String, Function<Au, String>>();
   
   /*
    * STATIC INITIALIZER
    */
   static {
-    Map<String, Functor<Au, String>> m = functorMap;
+    Map<String, Function<Au, String>> m = functorMap;
     // AU traits
-    abstract class A implements Functor<Au, String> {
-      @Override public String apply(Au a) { return a(a); }
-      abstract String a(Au a);
-    }
-    m.put("au:auid", new A() { @Override String a(Au a) { return a.getAuid(); } });
-    m.put("au:auidplus", new A() { @Override String a(Au a) { return a.getAuidPlus(); } });
-    m.put("au:doi", new A() { @Override String a(Au a) { return a.getDoi(); } });
-    m.put("au:edition", new A() { @Override String a(Au a) { return a.getEdition(); } });
-    m.put("au:eisbn", new A() { @Override String a(Au a) { return a.getEisbn(); } });
-    m.put("au:file", new A() { @Override String a(Au a) { return a.getFile(); } });
-    m.put("au:fileline", new A() { @Override String a(Au a) { return String.format("%s:%d", a.getFile(), a.getLine()); } });
-    m.put("au:isbn", new A() { @Override String a(Au a) { return a.getIsbn(); } });
-    m.put("au:line", new A() { @Override String a(Au a) { return Integer.toString(a.getLine()); } });
-    m.put("au:name", new A() { @Override String a(Au a) { return a.getName(); } });
-    m.put("au:plugin", new A() { @Override String a(Au a) { return a.getComputedPlugin(); } });
-    m.put("au:pluginPrefix", new A() { @Override String a(Au a) { return a.getPluginPrefix(); } });
-    m.put("au:pluginSuffix", new A() { @Override String a(Au a) { return a.getPluginSuffix(); } });
-    m.put("au:provider", new A() { @Override String a(Au a) { return a.getProvider(); } });
-    m.put("au:proxy", new A() { @Override String a(Au a) { return a.getProxy(); } });
-    m.put("au:rights", new A() { @Override String a(Au a) { return a.getRights(); } });
-    m.put("au:status", new A() { @Override String a(Au a) { return a.getStatus(); } });
-    m.put("au:status1", new A() { @Override String a(Au a) { return a.getStatus1(); } });
-    m.put("au:status2", new A() { @Override String a(Au a) { return a.getStatus2(); } });
-    m.put("au:volume", new A() { @Override String a(Au a) { return a.getVolume(); } });
-    m.put("au:year", new A() { @Override String a(Au a) { return a.getYear(); } });
+    m.put("au:auid", (a) -> a.getAuid());
+    m.put("au:auidplus", (a) -> a.getAuidPlus());
+    m.put("au:edition", (a) -> a.getEdition());
+    m.put("au:eisbn", (a) -> a.getEisbn());
+    m.put("au:file", (a) -> a.getFile());
+    m.put("au:fileline", (a) -> String.format("%s:%d", a.getFile(), a.getLine()));
+    m.put("au:isbn", (a) -> a.getIsbn());
+    m.put("au:line", (a) -> Integer.toString(a.getLine()));
+    m.put("au:name", (a) -> a.getName());
+    m.put("au:plugin", (a) -> a.getPlugin());
+    m.put("au:pluginPrefix", (a) -> a.getPluginPrefix());
+    m.put("au:pluginSuffix", (a) -> a.getPluginSuffix());
+    m.put("au:provider", (a) -> a.getProvider());
+    m.put("au:proxy", (a) -> a.getProxy());
+    m.put("au:publisherName", (a) -> a.getPublisherName());
+    m.put("au:rights", (a) -> a.getRights());
+    m.put("au:status", (a) -> a.getStatus());
+    m.put("au:status1", (a) -> a.getStatus1());
+    m.put("au:status2", (a) -> a.getStatus2());
+    m.put("au:volume", (a) -> a.getVolume());
+    m.put("au:year", (a) -> a.getYear());
     // Title traits
-    abstract class T implements Functor<Au, String> {
-      @Override public String apply(Au a) { return t(a.getTitle()); }
-      abstract String t(Title t);
-    }
-    m.put("title:eissn", new T() { @Override String t(Title t) { return t.getEissn(); } });
-    m.put("title:doi", new T() { @Override String t(Title t) { return t.getDoi(); } });
-    m.put("title:issn", new T() { @Override String t(Title t) { return t.getIssn(); } });
-    m.put("title:issnl", new T() { @Override String t(Title t) { return t.getIssnl(); } });
-    m.put("title:name", new T() { @Override String t(Title t) { return t.getName(); } });
-    m.put("title:type", new T() { @Override String t(Title t) { return t.getType(); } });
+    m.put("title:eissn", (a) -> a.getTitle().getEissn());
+    m.put("title:doi", (a) -> a.getTitle().getDoi());
+    m.put("title:issn", (a) -> a.getTitle().getIssn());
+    m.put("title:issnl", (a) -> a.getTitle().getIssnl());
+    m.put("title:name", (a) -> a.getTitle().getName());
+    m.put("title:type", (a) -> a.getTitle().getType());
     // Publisher traits
-    abstract class P implements Functor<Au, String> {
-      @Override public String apply(Au a) { return p(a.getTitle().getPublisher()); }
-      abstract String p(Publisher p);
-    }
-    m.put("publisher:name", new P() { @Override String p(Publisher p) { return p.getName(); } });
+    m.put("publisher:name", (a) -> a.getTitle().getPublisher().getName());
     // Convenient abbreviations
     m.put("auid", m.get("au:auid"));
     m.put("auidplus", m.get("au:auidplus"));
-    m.put("doi", m.get("au:doi"));
+    m.put("doi", m.get("title:doi"));
     m.put("edition", m.get("au:edition"));
     m.put("eisbn", m.get("au:eisbn"));
     m.put("eissn", m.get("title:eissn"));
@@ -1368,12 +1385,13 @@ public class Au implements Serializable {
     m.put("issnl", m.get("title:issnl"));
     m.put("line", m.get("au:line"));
     m.put("name", m.get("au:name"));
-    m.put("plugin", m.get("au:plugin"));
+    m.put("plugin", (a) -> a.getComputedPlugin());
     m.put("pluginPrefix", m.get("au:pluginPrefix"));
     m.put("pluginSuffix", m.get("au:pluginSuffix"));
     m.put("provider", m.get("au:provider"));
     m.put("proxy", m.get("au:proxy"));
-    m.put("publisher", m.get("publisher:name"));
+    m.put("publisher", (a) -> a.getComputedPublisher());
+    m.put("publisherName", m.get("au:publisherName"));
     m.put("rights", m.get("au:rights"));
     m.put("status", m.get("au:status"));
     m.put("status1", m.get("au:status1"));
@@ -1384,81 +1402,47 @@ public class Au implements Serializable {
     m.put("year", m.get("au:year"));
   }
   
-  public static Functor<Au, String> traitFunctor(String trait) {
+  public static Function<Au, String> traitFunctor(final String trait) {
     // Well-known traits
-    Functor<Au, String> functor = functorMap.get(trait);
+    Function<Au, String> functor = functorMap.get(trait);
     if (functor != null) {
       return functor;
     }
     
-    final String key;
-
     // Publisher traits
     final String publisherPrefix = "publisher:";
     if (trait.startsWith(publisherPrefix)) {
-      key = trait.substring(publisherPrefix.length());
-      return new Functor<Au, String>() {
-        @Override
-        public String apply(Au a) {
-          return a.getTitle().getPublisher().getArbitraryValue(key);
-        }
-      };
+      return (a) -> a.getTitle().getPublisher().getArbitraryValue(trait.substring(publisherPrefix.length()));
     }
     
     // Title traits
     final String titlePrefix = "title:";
     if (trait.startsWith(titlePrefix)) {
-      key = trait.substring(titlePrefix.length());
-      return new Functor<Au, String>() {
-        @Override
-        public String apply(Au a) {
-          return a.getTitle().getArbitraryValue(key);
-        }
-      };
+      return (a) -> a.getTitle().getArbitraryValue(trait.substring(titlePrefix.length()));
     }
     
     // AU traits
     final String auPrefix = "au:";
+    final String finalTrait;
     boolean auColon = false;
     if (trait.startsWith(auPrefix)) {
       auColon = true;
-      trait = trait.substring(auPrefix.length());
+      finalTrait = trait.substring(auPrefix.length());
     }
-    if (trait.startsWith(PARAM_PREFIX) && trait.endsWith("]")) {
-      key = trait.substring(PARAM_PREFIX.length(), trait.length() - 1);
-      return new Functor<Au, String>() {
-        @Override
-        public String apply(Au a) {
-          return a.getParams().get(key);
-        }
-      };
+    else {
+      finalTrait = trait;
     }
-    if (trait.startsWith(NONDEFPARAM_PREFIX) && trait.endsWith("]")) {
-      key = trait.substring(NONDEFPARAM_PREFIX.length(), trait.length() - 1);
-      return new Functor<Au, String>() {
-        @Override
-        public String apply(Au a) {
-          return a.getNondefParams().get(key);
-        }
-      };
+    if (finalTrait.startsWith(PARAM_PREFIX) && finalTrait.endsWith("]")) {
+      return (a) -> a.getParams().get(finalTrait.substring(PARAM_PREFIX.length(), finalTrait.length() - 1));
     }
-    if (trait.startsWith(ATTR_PREFIX) && trait.endsWith("]")) {
-      key = trait.substring(ATTR_PREFIX.length(), trait.length() - 1);
-      return new Functor<Au, String>() {
-        @Override
-        public String apply(Au a) {
-          return a.getAttrs().get(key);
-        }
-      };
+    if (finalTrait.startsWith(NONDEFPARAM_PREFIX) && finalTrait.endsWith("]")) {
+      return (a) -> a.getNondefParams().get(finalTrait.substring(NONDEFPARAM_PREFIX.length(), finalTrait.length() - 1));
+    }
+    if (finalTrait.startsWith(ATTR_PREFIX) && finalTrait.endsWith("]")) {
+      return (a) -> a.getAttrs().get(finalTrait.substring(ATTR_PREFIX.length(), finalTrait.length() - 1));
     }
     if (auColon) {
-      key = trait;
-      return new Functor<Au, String>() {
-        @Override
-        public String apply(Au a) {
-          return a.getArbitraryValue(key);
-        }
-      }; 
+      return (a) -> a.getArbitraryValue(finalTrait);
     }
     
     return null;

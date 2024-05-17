@@ -125,36 +125,33 @@
       au < released ; 2020 ; Dialogue & Discourse Volume 11 ; 11 ; 2020 ; https://journals.uic.edu/ojs/ >
       au < released ; 2021 ; Dialogue & Discourse Volume 12 ; 12 ; 2021 ; https://journals.uic.edu/ojs/ >
       au < released ; 2022 ; Dialogue & Discourse Volume 13 ; 13 ; 2022 ; https://journals.uic.edu/ojs/ >
-      au < manifest ; 2023 ; Dialogue & Discourse Volume 14 ; 14 ; 2023 ; https://journals.uic.edu/ojs/ >
+      au < released ; 2023 ; Dialogue & Discourse Volume 14 ; 14 ; 2023 ; https://journals.uic.edu/ojs/ >
       au < expected ; 2024 ; Dialogue & Discourse Volume 15 ; 15 ; 2024 ; https://journals.uic.edu/ojs/ >
     }
   }
 
-  {
-  
-    title <
-      name = FWD: Museums
-    >
-    
-    {
-    
-      plugin = org.lockss.plugin.ojs3.Ojs3Plugin
-      #param[base_url] = https://journals.uic.edu/ojs/
-      param[journal_id] = fwd
-      attr[start_stem] = index.php/
-    
-    #This journal uses OJS as an entry point only till 2021. Moving to OJS soon.
-      au < doNotProcess ; 2016 ; FWD: Museums Volume 2016 ; 2016 ; 2016 ; https://journals.uic.edu/ojs/ >
-      au < doNotProcess ; 2017 ; FWD: Museums Volume 2017 ; 2017 ; 2017 ; https://journals.uic.edu/ojs/ >
-      au < doNotProcess ; 2018 ; FWD: Museums Volume 2018 ; 2018 ; 2018 ; https://journals.uic.edu/ojs/ >
-      au < doNotProcess ; 2019 ; FWD: Museums Volume 2019 ; 2019 ; 2019 ; https://journals.uic.edu/ojs/ >
-      au < doNotProcess ; 2020 ; FWD: Museums Volume 2020 ; 2020 ; 2020 ; https://journals.uic.edu/ojs/ >
-      au < doNotProcess ; 2021 ; FWD: Museums Volume 2021 ; 2021 ; 2021 ; https://journals.uic.edu/ojs/ >
-      au < expected ; 2022 ; FWD: Museums Volume 2022 ; 2022 ; 2022 ; https://journals.uic.edu/ojs/ >
-      au < expected ; 2023 ; FWD: Museums Volume 2023 ; 2023 ; 2023 ; https://journals.uic.edu/ojs/ >
-      au < expected ; 2024 ; FWD: Museums Volume 2024 ; 2024 ; 2024 ; https://journals.uic.edu/ojs/ >
-    }
-  }
+#  {
+#  
+#    title <
+#      name = FWD: Museums
+#    >
+#    
+#    {
+#    
+#      plugin = org.lockss.plugin.ojs3.Ojs3Plugin
+#      #param[base_url] = https://journals.uic.edu/ojs/
+#      param[journal_id] = fwd
+#      attr[start_stem] = index.php/
+#    
+#    #This journal uses OJS as an entry point only till 2021. 
+#      au < doNotProcess ; 2016 ; FWD: Museums Volume 2016 ; 2016 ; 2016 ; https://journals.uic.edu/ojs/ >
+#      au < doNotProcess ; 2017 ; FWD: Museums Volume 2017 ; 2017 ; 2017 ; https://journals.uic.edu/ojs/ >
+#      au < doNotProcess ; 2018 ; FWD: Museums Volume 2018 ; 2018 ; 2018 ; https://journals.uic.edu/ojs/ >
+#      au < doNotProcess ; 2019 ; FWD: Museums Volume 2019 ; 2019 ; 2019 ; https://journals.uic.edu/ojs/ >
+#      au < doNotProcess ; 2020 ; FWD: Museums Volume 2020 ; 2020 ; 2020 ; https://journals.uic.edu/ojs/ >
+#      au < doNotProcess ; 2021 ; FWD: Museums Volume 2021 ; 2021 ; 2021 ; https://journals.uic.edu/ojs/ >
+#    }
+#  }
 
   {
   
@@ -212,18 +209,22 @@
       param[journal_id] = fm
       attr[start_stem] = index.php/
     
-      au < released ; 2013 ; First Monday Volume 18 ; 18 ; 2013 ; https://journals.uic.edu/ojs/ >
-      au < released ; 2014 ; First Monday Volume 19 ; 19 ; 2014 ; https://journals.uic.edu/ojs/ >
-      au < released ; 2015 ; First Monday Volume 20 ; 20 ; 2015 ; https://journals.uic.edu/ojs/ >
-      au < released ; 2016 ; First Monday Volume 21 ; 21 ; 2016 ; https://journals.uic.edu/ojs/ >
-      au < released ; 2017 ; First Monday Volume 22 ; 22 ; 2017 ; https://journals.uic.edu/ojs/ >
-      au < released ; 2018 ; First Monday Volume 23 ; 23 ; 2018 ; https://journals.uic.edu/ojs/ >
-      au < released ; 2019 ; First Monday Volume 24 ; 24 ; 2019 ; https://journals.uic.edu/ojs/ >
-      au < released ; 2020 ; First Monday Volume 25 ; 25 ; 2020 ; https://journals.uic.edu/ojs/ >
-      au < released ; 2021 ; First Monday Volume 26 ; 26 ; 2021 ; https://journals.uic.edu/ojs/ >
-      au < released ; 2022 ; First Monday Volume 27 ; 27 ; 2022 ; https://journals.uic.edu/ojs/ >
-      au < manifest ; 2023 ; First Monday Volume 28 ; 28 ; 2023 ; https://journals.uic.edu/ojs/ >
-      au < expected ; 2024 ; First Monday Volume 29 ; 29 ; 2024 ; https://journals.uic.edu/ojs/ >
+      au < down ; 2013 ; First Monday Volume 18 ; 18 ; 2013 ; https://journals.uic.edu/ojs/ >
+      au < down ; 2014 ; First Monday Volume 19 ; 19 ; 2014 ; https://journals.uic.edu/ojs/ >
+      au < down ; 2015 ; First Monday Volume 20 ; 20 ; 2015 ; https://journals.uic.edu/ojs/ >
+      au < down ; 2016 ; First Monday Volume 21 ; 21 ; 2016 ; https://journals.uic.edu/ojs/ >
+      au < down ; 2017 ; First Monday Volume 22 ; 22 ; 2017 ; https://journals.uic.edu/ojs/ >
+      au < down ; 2018 ; First Monday Volume 23 ; 23 ; 2018 ; https://journals.uic.edu/ojs/ >
+      au < down ; 2019 ; First Monday Volume 24 ; 24 ; 2019 ; https://journals.uic.edu/ojs/ >
+      au < superseded ; 2020 ; First Monday Volume 25 [superseded] ; 25 ; 2020 ; https://journals.uic.edu/ojs/ >
+      au < superseded ; 2021 ; First Monday Volume 26 [superseded] ; 26 ; 2021 ; https://journals.uic.edu/ojs/ >
+      au < superseded ; 2022 ; First Monday Volume 27 [superseded] ; 27 ; 2022 ; https://journals.uic.edu/ojs/ >
+
+      au < manifest ; 2020 ; First Monday Volume 25 ; 25 ; 2020 ; https://journals.uic.edu/ojs/ >
+      au < manifest ; 2021 ; First Monday Volume 26 ; 26 ; 2021 ; https://journals.uic.edu/ojs/ >
+      au < manifest ; 2022 ; First Monday Volume 27 ; 27 ; 2022 ; https://journals.uic.edu/ojs/ >
+      au < manifest ; 2023 ; First Monday Volume 28 ; 28 ; 2023 ; https://www.firstmonday.org/ojs/ >
+      au < manifest ; 2024 ; First Monday Volume 29 ; 29 ; 2024 ; https://www.firstmonday.org/ojs/ >
 
     }
 
@@ -251,7 +252,7 @@
       au < released ; 2020 ; Journal of Biocommunication Volume 44 ; 44 ; 2020 ; https://journals.uic.edu/ojs/ >
       au < released ; 2021 ; Journal of Biocommunication Volume 45 ; 45 ; 2021 ; https://journals.uic.edu/ojs/ >
       au < released ; 2022 ; Journal of Biocommunication Volume 46 ; 46 ; 2022 ; https://journals.uic.edu/ojs/ >
-      au < manifest ; 2023 ; Journal of Biocommunication Volume 47 ; 47 ; 2023 ; https://journals.uic.edu/ojs/ >
+      au < released ; 2023 ; Journal of Biocommunication Volume 47 ; 47 ; 2023 ; https://journals.uic.edu/ojs/ >
       au < expected ; 2024 ; Journal of Biocommunication Volume 48 ; 48 ; 2024 ; https://journals.uic.edu/ojs/ >
     }
   }
@@ -270,9 +271,7 @@
       attr[start_stem] = index.php/
     
       au < released ; 2021 ; Social Justice Research Collaborative Volume 1 ; 1 ; 2021 ; https://journals.uic.edu/ojs/ >
-      au < expected ; 2022 ; Social Justice Research Collaborative Volume 2 ; 2 ; 2022 ; https://journals.uic.edu/ojs/ >
-      au < expected ; 2023 ; Social Justice Research Collaborative Volume 3 ; 3 ; 2023 ; https://journals.uic.edu/ojs/ >
-      au < expected ; 2024 ; Social Justice Research Collaborative Volume 4 ; 4 ; 2024 ; https://journals.uic.edu/ojs/ >
+
     }
   }
 
@@ -374,8 +373,7 @@
       au < released ; 2021 ; Online Journal of Public Health Informatics Volume 13 ; 13 ; 2021 ; https://journals.uic.edu/ojs/ >
       #base_url changed
       au < released ; 2022 ; Online Journal of Public Health Informatics Volume 14 ; 14 ; 2022 ; https://ojphi.org/ojs/ >
-      au < expected ; 2023 ; Online Journal of Public Health Informatics Volume 15 ; 15 ; 2023 ; https://ojphi.org/ojs/ >
-      au < expected ; 2024 ; Online Journal of Public Health Informatics Volume 16 ; 16 ; 2024 ; https://ojphi.org/ojs/ >
+      au < expected ; 2024 ; Online Journal of Public Health Informatics Volume 15 ; 15 ; 2024 ; https://ojphi.org/ojs/ >
 
     }
 

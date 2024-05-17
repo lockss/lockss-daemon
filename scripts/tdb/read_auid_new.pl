@@ -22,6 +22,7 @@ use HTTP::Cookies;
 use HTML::Entities;
 use utf8;
 use Encode qw(decode encode);
+push(@LWP::Protocol::http::EXTRA_SOCK_OPTS, MaxLineLength => 16*1024); #For Hindawi header is too long
 
 my $lockss_tag  = "LOCKSS system has permission to collect, preserve, and serve this Archival Unit";
 my $oa_tag      = "LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit";
@@ -563,6 +564,47 @@ while (my $line = <>) {
       } elsif ($man_contents !~ m/$lockss_tag/) {
         $result = "--NO_TAG--"
       } elsif ($man_contents =~ m/No issues available/ || $man_contents !~ m/href=\"\/issue\//){
+        $result = "--NO_ISSUES--"
+      } else {
+        $result = "--OTHER_ERROR--"
+      }
+    
+  } else {
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+  }
+      sleep(4);
+
+  } elsif ($plugin eq "ClockssLSUIAJournalPlugin") {
+    $url = sprintf("%sen/archive/%d",
+      $param{base_url}, $param{year});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+
+    $url = sprintf("%sen", 
+      $param{base_url});
+    $per_url = uri_unescape($url);
+    my $per_req = HTTP::Request->new(GET, $per_url);
+    my $per_resp = $ua->request($per_req);
+
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      my $per_contents = $per_resp->content;
+      #<h3> <a href="/en/journals/tom-6-4-2023"> Vol. 6, No. 4, 2023 </a> </h3>
+      if (defined($man_contents) && defined($man_contents) && ($per_contents =~ m/$clockss_tag/) && ($man_contents =~ m/href=\"\/en\/journals\/tom-$param{volume_name}-\d*-$param{year}\"/)) {
+        #if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
+        if ($man_contents =~ m/<h1>([^<]*)<\/h1>/si) {
+          $vol_title = $1;
+          if ($man_contents =~ m/<h2>([^<]*)<\/h2>/si) {
+            $vol_title = $vol_title . " " . $1;
+          }
+          $vol_title =~ s/\s*\n\s*/ /g;
+          $vol_title =~ s/,//;
+        }
+        $result = "Manifest"
+      } elsif ($man_contents !~ m/$clockss_tag/) {
+        $result = "--NO_TAG--"
+      } elsif ($man_contents !~ m/href=\"\/en\/journals\/tom-$param{volume_name}-\d*-$param{year}\"/){
         $result = "--NO_ISSUES--"
       } else {
         $result = "--OTHER_ERROR--"
@@ -1250,6 +1292,9 @@ while (my $line = <>) {
       #printf("URL: %s\n", $perm_url); #debug
       $vol_title = $perm_url ;
     #start_url for all OAI queries https://www.comicsgrid.com/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31
+    #From RP start_url: "%slockss?oai_granularity=%s&amp;au_oai_date=%d", base_url, oai_granularity, year
+    #$url = sprintf("%slockss?oai_granularity=%s&amp;au_oai_date=%d",
+      #$param{base_url}, $param{oai_granularity}, $param{year});
     $url = sprintf("%soai?verb=ListRecords&metadataPrefix=oai_dc&from=%d-01-01&until=%d-12-31",
       $param{base_url}, $param{year}, $param{year});
     $man_url = uri_unescape($url);
@@ -1292,6 +1337,7 @@ while (my $line = <>) {
   #Janeway. No journal_id
   } elsif (($plugin eq "OLHPlugin") || 
            ($plugin eq "ClockssOLHPlugin") ||
+           ($plugin eq "ClockssAperioJournalsPlugin") ||
            ($plugin eq "UniversityofMichiganPlugin") ||
            ($plugin eq "ClockssUniversityofMichiganPlugin") ||
            ($plugin eq "GhentUniversityLibraryDomainModeJournalsPlugin") ||
@@ -1834,6 +1880,7 @@ while (my $line = <>) {
 
   } elsif (($plugin eq "ClockssTaylorAndFrancisPlugin") ||
            ($plugin eq "ClockssGenericAtyponPlugin") ||
+           ($plugin eq "ClockssARRSPlugin") ||
            ($plugin eq "ClockssAaasPlugin") ||
            ($plugin eq "ClockssAIAAPlugin") ||
            ($plugin eq "ClockssAllenPressJournalsPlugin") ||
@@ -1998,7 +2045,7 @@ while (my $line = <>) {
             }
         }
         # now make sure a PDF is actually available on the book landing page
-        # whole book pdf will use the same doi as the book landing page
+        # whole book pdf will use the same doi as the book landing page ex. https://epubs.siam.org/doi/book/10.1137/1.9781611972863
         $url = sprintf("%sdoi/book/%s/%s",$param{base_url}, $doi1, $doi2);
         my $book_url = uri_unescape($url);
         my $breq = HTTP::Request->new(GET, $book_url);
@@ -2009,7 +2056,7 @@ while (my $line = <>) {
             #printf("href=\"pdfplus/%s/%s\"",${doi1},${doi2});
             #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\/${doi2}/)) {
             #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\//)) {  #"
-            if (defined($b_contents) && (($b_contents =~ m/href=\"[^"]+(epdf|pdf|epub|doi\/full)(plus)?\/${doi1}\//) || ($b_contents =~ m/>Buy PDF</))) {  #"
+            if (defined($b_contents) && (($b_contents =~ m/href=\"[^"]+(epdf|pdf|epub|doi\/)(book)?(full)?(plus)?\/${doi1}\//) || ($b_contents =~ m/>Buy PDF</))) {  #"
                 $result = "Manifest";
             }
         }
@@ -2021,6 +2068,7 @@ while (my $line = <>) {
   # the CLOCKSS Atypon Books plugins go here
   } elsif (($plugin eq "ClockssGenericAtyponBooksPlugin") ||
            ($plugin eq "ClockssAIAABooksPlugin") ||
+           ($plugin eq "ClockssASCEBooksPlugin") ||
 #           ($plugin eq "ClockssEmeraldGroupBooksPlugin") ||
            ($plugin eq "ClockssEndocrineSocietyBooksPlugin") ||
            ($plugin eq "ClockssFutureScienceBooksPlugin") ||
@@ -2067,7 +2115,7 @@ while (my $line = <>) {
                       #printf("href=\"pdfplus/%s/%s\"",${doi1},${doi2});
                       #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\/${doi2}/)) {
                       #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+(pdf|epub)(plus)?\/${doi1}\//)) {  #"
-                      if (defined($b_contents) && (($b_contents =~ m/href=\"[^"]+(epdf|pdf|epub|doi\/full)(plus)?\/${doi1}\//) || ($b_contents =~ m/>Buy PDF</))) {  #"
+                      if (defined($b_contents) && (($b_contents =~ m/href=\"[^"]+(epdf|pdf|epub|doi\/)(book)?(full)?(plus)?\/${doi1}\//) || ($b_contents =~ m/>Buy PDF</))) {  #"
                           $result = "Manifest";
                       }
                   }
@@ -2138,7 +2186,8 @@ while (my $line = <>) {
 #file transfer: old style (Warc|Source)Plugin (base+year), new style SourcePlugin (base+dir), DeliveredSourcePlugin (base + year + dir)
 #the url can be built up from the available parameters
   } elsif (($plugin =~ m/\w+SourcePlugin/) || 
-           ($plugin =~ m/\w+WarcPlugin/)) {
+           ($plugin =~ m/\w+WarcPlugin/) || 
+           ($plugin eq "ClockssCasaliniLibriBooksPlugin")) {
       $url = sprintf("%s", $param{base_url});
       # if there is a year parameter (delivered source and original source plugins) that comes next
       if (defined $param{year}) {
@@ -3375,13 +3424,17 @@ while (my $line = <>) {
     if ($resp->is_success) {
       my $man_contents = $resp->content;
       if ($req->url ne $resp->request->uri) {
-              $vol_title = $resp->request->uri;
-              $result = "Redirected";
+        $vol_title = $resp->request->uri;
+        $result = "Redirected";
       } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
-      if ($man_contents =~ m/<title>(.*)<\/title>/si) {
+        if ($man_contents =~ m/<title>(.*)<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
+          #<meta name="citation_doi" content="10.1039/9781837671595" />
+          if ($man_contents =~ m/ content=.10.1039\/(\d*). \/>/si) {
+            $vol_title = $1 . " * " . substr($vol_title, 0, 30);
           }
+        }
         $result = "Manifest"
       } else {
         $result = "--NO_TAG--"
@@ -3402,13 +3455,17 @@ while (my $line = <>) {
     if ($resp->is_success) {
       my $man_contents = $resp->content;
       if ($req->url ne $resp->request->uri) {
-              $vol_title = $resp->request->uri;
-              $result = "Redirected";
+          $vol_title = $resp->request->uri;
+          $result = "Redirected";
       } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
-      if ($man_contents =~ m/<title>(.*)<\/title>/si) {
+        if ($man_contents =~ m/<title>(.*)<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
+          #<meta name="citation_doi" content="10.1039/9781837671595" />
+          if ($man_contents =~ m/ content=.10.1039\/(\d*). \/>/si) {
+            $vol_title = $1 . " * " . substr($vol_title, 0, 30);
           }
+        }
         $result = "Manifest"
       } else {
         $result = "--NO_TAG--"

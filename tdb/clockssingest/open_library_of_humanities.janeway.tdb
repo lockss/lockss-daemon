@@ -455,7 +455,7 @@
       au < frozen ; exists ; 2021 ; 6 ; Glossa: a journal of general linguistics Volume 2021 ; 2021 ; > 
       au < deepCrawl ; exists ; 2022 ; 7 ; Glossa: a journal of general linguistics Volume 2022 ; 2022 ; > 
       au < notReady ; exists ; 2023 ; 8 ; Glossa: a journal of general linguistics Volume 2023 ; 2023 ; > #XML Parsing Error: no root element found ~ org.xml.sax.SAXParseException; Premature end of file. https://www.glossa-journal.org/article/5823/galley/23046/download/
-      au < manifest ; exists ; 2024 ; 9 ; Glossa: a journal of general linguistics Volume 2024 ; 2024 ; > #XML Parsing Error: no root element found ~ org.xml.sax.SAXParseException; Premature end of file. https://www.glossa-journal.org/article/5923/galley/23046/download/
+      au < manifest ; exists ; 2024 ; 9 ; Glossa: a journal of general linguistics Volume 2024 ; 2024 ; >
 
   }
 
@@ -707,7 +707,7 @@
       au < frozen ; exists ; 2021 ; 6 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2021 ; 2021 ; >
       au < frozen ; exists ; 2022 ; 7 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2022 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 8 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2023 ; 2023 ; >
-      au < expected ; exists ; 2024 ; 9 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2024 ; 9 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2024 ; 2024 ; >
 
   }
 
@@ -723,8 +723,8 @@
       #Issues not necessarily published the same year as dated.
       #Volumes are 2006, 2008, 2012, 2015, 2022, 2023.
 
-      au < crawling ; exists ; 2006 ; 1 ; Lifewriting Annual Volume 2006 ; 2005 ; >
-      au < crawling ; exists ; 2008 ; 2 ; Lifewriting Annual Volume 2008 ; 2007 ; >
+      au < frozen ; exists ; 2006 ; 1 ; Lifewriting Annual Volume 2006 ; 2005 ; >
+      au < frozen ; exists ; 2008 ; 2 ; Lifewriting Annual Volume 2008 ; 2007 ; >
       au < frozen ; exists ; 2012 ; 3 ; Lifewriting Annual Volume 2012 ; 2012 ; >
       au < frozen ; exists ; 2015 ; 4 ; Lifewriting Annual Volume 2015 ; 2014 ; >
       au < notReady ; exists ; 2022 ; 5 ; Lifewriting Annual Volume 2022 ; 2022 ; >

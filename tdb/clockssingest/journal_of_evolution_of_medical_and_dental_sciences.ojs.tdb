@@ -28,7 +28,7 @@
       param[base_url] = https://jemds.in/
 
       au < frozen ; exists ; 2022 ; Journal of Evolution of Medical and Dental Sciences Volume 2022 ; 11 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; Journal of Evolution of Medical and Dental Sciences Volume 2023 ; 12 ; 2023 ; >
+      au < ingNotReady ; exists ; 2023 ; Journal of Evolution of Medical and Dental Sciences Volume 2023 ; 12 ; 2023 ; > #login found, https://jemds.in/index.php/jemds/article/view/524/236
       au < manifest ; exists ; 2024 ; Journal of Evolution of Medical and Dental Sciences Volume 2024 ; 13 ; 2024 ; >
 
   }

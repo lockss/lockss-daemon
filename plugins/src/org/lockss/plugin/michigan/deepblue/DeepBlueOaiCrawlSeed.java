@@ -58,10 +58,10 @@ import java.util.regex.Pattern;
 
 public class DeepBlueOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
   public static final String DEFAULT_DATE_TAG = "dc.date.issued.en_US";
-  public static final String DEFAULT_IDENTIFIER_TAG = "dc.identifier.uri.none";
+  public static final String DEFAULT_IDENTIFIER_TAG = "dc.identifier.uri.en_US";
   protected Collection<String> startUrls;
   protected int year;
-  protected Pattern yearPattern = Pattern.compile("^([0-9]{4})$");
+  protected Pattern yearPattern = Pattern.compile("^([0-9]{4})");
   public static final String OAI_DC_METADATA_PREFIX = "oai_dc";
   public static final String XOAI_METADATA_PREFIX = "xoai";
   private static Logger logger =

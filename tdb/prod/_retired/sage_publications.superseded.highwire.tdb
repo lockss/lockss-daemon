@@ -21,7 +21,7 @@
         au < superseded ; 2006 ; Business Communication Quarterly Volume 69 [superseded] ; 69 ; http://bcq.sagepub.com/ >
         au < superseded ; 2006 ; Business Information Review Volume 23 [superseded] ; 23 ; http://bir.sagepub.com/ >
         au < superseded ; 2006 ; British Journalism Review Volume 17 [superseded] ; 17 ; http://bjr.sagepub.com/ >
-        au < superseded ; 2006 ; bul.sagepub.com, vol. 90 [superseded] ; 90 ; http://bul.sagepub.com/ >
+        au < superseded ; 2006 ; NASSP Bulletin Volume 90 [superseded] ; 90 ; http://bul.sagepub.com/ >
         au < superseded ; 2006 ; Cooperation and Conflict Volume 41 [superseded] ; 41 ; http://cac.sagepub.com/ >
         au < superseded ; 2006 ; Crime & Delinquency Volume 52 [superseded] ; 52 ; http://cad.sagepub.com/ >
         au < superseded ; 2006 ; Comparative American Studies Volume 3 [superseded] ; 3 ; http://cas.sagepub.com/ >
@@ -349,6 +349,120 @@
         au < superseded ; 2006 ; Work, Employment & Society Volume 20 [superseded] ; 20 ; http://wes.sagepub.com/ >
         au < superseded ; 2006 ; Western Journal of Nursing Research Volume 28 [superseded] ; 28 ; http://wjn.sagepub.com/ >
         au < superseded ; 2006 ; Western Journal of Nursing Research Volume 29 [superseded] ; 29 ; http://wjn.sagepub.com/ >
+
+    }
+
+    {
+
+      title <
+        name = Sage Journals
+      >
+
+        pluginSuffix = HighWirePressPlugin
+        implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
+
+        au < superseded ; 2005 ; International Journal of Care Pathways Volume 9 [superseded] ; 9 ; http://ijcp.rsmjournals.com/ >
+        au < superseded ; 2006 ; International Journal of Care Pathways Volume 10 [superseded] ; 10 ; http://ijcp.rsmjournals.com/ >
+        au < superseded ; 2007 ; International Journal of Care Pathways Volume 11 [superseded] ; 11 ; http://ijcp.rsmjournals.com/ >
+        au < superseded ; 2008 ; International Journal of Care Pathways Volume 12 [superseded] ; 12 ; http://ijcp.rsmjournals.com/ >
+        au < superseded ; 2009 ; International Journal of Care Pathways Volume 13 [superseded] ; 13 ; http://ijcp.rsmjournals.com/ >
+        au < superseded ; 2010 ; International Journal of Care Pathways Volume 14 [superseded] ; 14 ; http://ijcp.rsmjournals.com/ >
+        au < superseded ; 2011 ; International Journal of Care Pathways Volume 15 [superseded] ; 15 ; http://ijcp.rsmjournals.com/ >
+        au < superseded ; 2001 ; Journal of Health Services Research & Policy Volume 6 [superseded] ; 6 ; http://jhsrp.rsmjournals.com/ >
+        au < superseded ; 2002 ; Journal of Health Services Research & Policy Volume 7 [superseded] ; 7 ; http://jhsrp.rsmjournals.com/ >
+        au < superseded ; 2003 ; Journal of Health Services Research & Policy Volume 8 [superseded] ; 8 ; http://jhsrp.rsmjournals.com/ >
+        au < superseded ; 2004 ; Journal of Health Services Research & Policy Volume 9 [superseded] ; 9 ; http://jhsrp.rsmjournals.com/ >
+        au < superseded ; 2005 ; Journal of Health Services Research & Policy Volume 10 [superseded] ; 10 ; http://jhsrp.rsmjournals.com/ >
+        au < superseded ; 2006 ; Journal of Health Services Research & Policy Volume 11 [superseded] ; 11 ; http://jhsrp.rsmjournals.com/ >
+        au < superseded ; 2007 ; Journal of Health Services Research & Policy Volume 12 [superseded] ; 12 ; http://jhsrp.rsmjournals.com/ >
+        au < superseded ; 2008 ; Journal of Health Services Research & Policy Volume 13 [superseded] ; 13 ; http://jhsrp.rsmjournals.com/ >
+        au < superseded ; 2009 ; Journal of Health Services Research & Policy Volume 14 [superseded] ; 14 ; http://jhsrp.rsmjournals.com/ >
+        au < superseded ; 2010 ; Journal of Health Services Research & Policy Volume 15 [superseded] ; 15 ; http://jhsrp.rsmjournals.com/ >
+        au < superseded ; 2011 ; Journal of Health Services Research & Policy Volume 16 [superseded] ; 16 ; http://jhsrp.rsmjournals.com/ >
+        au < superseded ; 2005 ; Journal of Medical Biography Volume 13 [superseded] ; 13 ; http://jmb.rsmjournals.com/ >
+        au < superseded ; 2006 ; Journal of Medical Biography Volume 14 [superseded] ; 14 ; http://jmb.rsmjournals.com/ >
+        au < superseded ; 2007 ; Journal of Medical Biography Volume 15 [superseded] ; 15 ; http://jmb.rsmjournals.com/ >
+        au < superseded ; 2008 ; Journal of Medical Biography Volume 16 [superseded] ; 16 ; http://jmb.rsmjournals.com/ >
+        au < superseded ; 2009 ; Journal of Medical Biography Volume 17 [superseded] ; 17 ; http://jmb.rsmjournals.com/ >
+        au < superseded ; 2010 ; Journal of Medical Biography Volume 18 [superseded] ; 18 ; http://jmb.rsmjournals.com/ >
+        au < superseded ; 2011 ; Journal of Medical Biography Volume 19 [superseded] ; 19 ; http://jmb.rsmjournals.com/ >
+        au < superseded ; 1998 ; Journal of Medical Screening Volume 5 [superseded] ; 5 ; http://jms.rsmjournals.com/ >
+        au < superseded ; 1999 ; Journal of Medical Screening Volume 6 [superseded] ; 6 ; http://jms.rsmjournals.com/ >
+        au < superseded ; 2000 ; Journal of Medical Screening Volume 7 [superseded] ; 7 ; http://jms.rsmjournals.com/ >
+        au < superseded ; 2001 ; Journal of Medical Screening Volume 8 [superseded] ; 8 ; http://jms.rsmjournals.com/ >
+        au < superseded ; 2002 ; Journal of Medical Screening Volume 9 [superseded] ; 9 ; http://jms.rsmjournals.com/ >
+        au < superseded ; 2003 ; Journal of Medical Screening Volume 10 [superseded] ; 10 ; http://jms.rsmjournals.com/ >
+        au < superseded ; 2004 ; Journal of Medical Screening Volume 11 [superseded] ; 11 ; http://jms.rsmjournals.com/ >
+        au < superseded ; 2005 ; Journal of Medical Screening Volume 12 [superseded] ; 12 ; http://jms.rsmjournals.com/ >
+        au < superseded ; 2006 ; Journal of Medical Screening Volume 13 [superseded] ; 13 ; http://jms.rsmjournals.com/ >
+        au < superseded ; 2007 ; Journal of Medical Screening Volume 14 [superseded] ; 14 ; http://jms.rsmjournals.com/ >
+        au < superseded ; 2008 ; Journal of Medical Screening Volume 15 [superseded] ; 15 ; http://jms.rsmjournals.com/ >
+        au < superseded ; 2009 ; Journal of Medical Screening Volume 16 [superseded] ; 16 ; http://jms.rsmjournals.com/ >
+        au < superseded ; 2010 ; Journal of Medical Screening Volume 17 [superseded] ; 17 ; http://jms.rsmjournals.com/ >
+        au < superseded ; 2011 ; Journal of Medical Screening Volume 18 [superseded] ; 18 ; http://jms.rsmjournals.com/ >
+        au < superseded ; 1996 ; Journal of Telemedicine and Telecare Volume 2 [superseded] ; 2 ; http://jtt.rsmjournals.com/ >
+        au < superseded ; 1997 ; Journal of Telemedicine and Telecare Volume 3 [superseded] ; 3 ; http://jtt.rsmjournals.com/ >
+        au < superseded ; 1998 ; Journal of Telemedicine and Telecare Volume 4 [superseded] ; 4 ; http://jtt.rsmjournals.com/ >
+        au < superseded ; 1999 ; Journal of Telemedicine and Telecare Volume 5 [superseded] ; 5 ; http://jtt.rsmjournals.com/ >
+        au < superseded ; 2000 ; Journal of Telemedicine and Telecare Volume 6 [superseded] ; 6 ; http://jtt.rsmjournals.com/ >
+        au < superseded ; 2001 ; Journal of Telemedicine and Telecare Volume 7 [superseded] ; 7 ; http://jtt.rsmjournals.com/ >
+        au < superseded ; 2002 ; Journal of Telemedicine and Telecare Volume 8 [superseded] ; 8 ; http://jtt.rsmjournals.com/ >
+        au < superseded ; 2003 ; Journal of Telemedicine and Telecare Volume 9 [superseded] ; 9 ; http://jtt.rsmjournals.com/ >
+        au < superseded ; 2004 ; Journal of Telemedicine and Telecare Volume 10 [superseded] ; 10 ; http://jtt.rsmjournals.com/ >
+        au < superseded ; 2005 ; Journal of Telemedicine and Telecare Volume 11 [superseded] ; 11 ; http://jtt.rsmjournals.com/ >
+        au < superseded ; 2006 ; Journal of Telemedicine and Telecare Volume 12 [superseded] ; 12 ; http://jtt.rsmjournals.com/ >
+        au < superseded ; 2007 ; Journal of Telemedicine and Telecare Volume 13 [superseded] ; 13 ; http://jtt.rsmjournals.com/ >
+        au < superseded ; 2008 ; Journal of Telemedicine and Telecare Volume 14 [superseded] ; 14 ; http://jtt.rsmjournals.com/ >
+        au < superseded ; 2009 ; Journal of Telemedicine and Telecare Volume 15 [superseded] ; 15 ; http://jtt.rsmjournals.com/ >
+        au < superseded ; 2010 ; Journal of Telemedicine and Telecare Volume 16 [superseded] ; 16 ; http://jtt.rsmjournals.com/ >
+        au < superseded ; 2011 ; Journal of Telemedicine and Telecare Volume 17 [superseded] ; 17 ; http://jtt.rsmjournals.com/ >
+        au < superseded ; 1965 ; JRSM Volume 58 [superseded] ; 58 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1966 ; JRSM Volume 59 [superseded] ; 59 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1967 ; JRSM Volume 60 [superseded] ; 60 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1968 ; JRSM Volume 61 [superseded] ; 61 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1969 ; JRSM Volume 62 [superseded] ; 62 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1970 ; JRSM Volume 63 [superseded] ; 63 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1971 ; JRSM Volume 64 [superseded] ; 64 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1972 ; JRSM Volume 65 [superseded] ; 65 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1973 ; JRSM Volume 66 [superseded] ; 66 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1974 ; JRSM Volume 67 [superseded] ; 67 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1975 ; JRSM Volume 68 [superseded] ; 68 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1976 ; JRSM Volume 69 [superseded] ; 69 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1977 ; JRSM Volume 70 [superseded] ; 70 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1978 ; JRSM Volume 71 [superseded] ; 71 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1979 ; JRSM Volume 72 [superseded] ; 72 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1980 ; JRSM Volume 73 [superseded] ; 73 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1981 ; JRSM Volume 74 [superseded] ; 74 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1982 ; JRSM Volume 75 [superseded] ; 75 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1983 ; JRSM Volume 76 [superseded] ; 76 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1984 ; JRSM Volume 77 [superseded] ; 77 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1985 ; JRSM Volume 78 [superseded] ; 78 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1986 ; JRSM Volume 79 [superseded] ; 79 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1987 ; JRSM Volume 80 [superseded] ; 80 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1988 ; JRSM Volume 81 [superseded] ; 81 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1989 ; JRSM Volume 82 [superseded] ; 82 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1990 ; JRSM Volume 83 [superseded] ; 83 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1991 ; JRSM Volume 84 [superseded] ; 84 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1992 ; JRSM Volume 85 [superseded] ; 85 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1993 ; JRSM Volume 86 [superseded] ; 86 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1994 ; JRSM Volume 87 [superseded] ; 87 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1995 ; JRSM Volume 88 [superseded] ; 88 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1996 ; JRSM Volume 89 [superseded] ; 89 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1997 ; JRSM Volume 90 [superseded] ; 90 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1998 ; JRSM Volume 91 [superseded] ; 91 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 1999 ; JRSM Volume 92 [superseded] ; 92 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 2000 ; JRSM Volume 93 [superseded] ; 93 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 2001 ; JRSM Volume 94 [superseded] ; 94 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 2002 ; JRSM Volume 95 [superseded] ; 95 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 2003 ; JRSM Volume 96 [superseded] ; 96 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 2004 ; JRSM Volume 97 [superseded] ; 97 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 2005 ; JRSM Volume 98 [superseded] ; 98 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 2006 ; JRSM Volume 99 [superseded] ; 99 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 2007 ; JRSM Volume 100 [superseded] ; 100 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 2008 ; JRSM Volume 101 [superseded] ; 101 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 2009 ; JRSM Volume 102 [superseded] ; 102 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 2010 ; JRSM Volume 103 [superseded] ; 103 ; http://jrsm.rsmjournals.com/ >
+        au < superseded ; 2011 ; JRSM Volume 104 [superseded] ; 104 ; http://jrsm.rsmjournals.com/ >
 
     }
 }

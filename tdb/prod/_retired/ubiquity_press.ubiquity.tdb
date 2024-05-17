@@ -435,10 +435,10 @@
 
 {
   publisher <
-    name = London School of Economics and Politics
+    name = London School of Economics and Political Science
   >
 
-    provider = London School of Economics and Politics
+    provider = London School of Economics and Political Science
     plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
@@ -449,14 +449,14 @@
         eissn = 2516-7227
       >
 
-      comment[publisher] = London School of Economics and Politics
+      comment[publisher] = London School of Economics and Political Science
 #      param[base_url] = https://jied.lse.ac.uk/
 
-      au < down ; 2019 ; 1 ; London School of Economics and Politics Volume 2019 ; 2019 ; https://jied.lse.ac.uk/ >
-      au < down ; 2020 ; 2 ; London School of Economics and Politics Volume 2020 ; 2020 ; https://jied.lse.ac.uk/ >
-      au < down ; 2021 ; 3 ; London School of Economics and Politics Volume 2021 ; 2021 ; https://jied.lse.ac.uk/ >
-      au < doNotProcess ; 2022 ; 4 ; London School of Economics and Politics Volume 2022 ; 2022 ; https://jied.lse.ac.uk/ >
-      au < doNotProcess ; 2023 ; 5 ; London School of Economics and Politics Volume 2023 ; 2023 ; https://jied.lse.ac.uk/ >
+      au < down ; 2019 ; 1 ; Journal of Illicit Economies and Development Volume 2019 ; 2019 ; https://jied.lse.ac.uk/ >
+      au < down ; 2020 ; 2 ; Journal of Illicit Economies and Development Volume 2020 ; 2020 ; https://jied.lse.ac.uk/ >
+      au < down ; 2021 ; 3 ; Journal of Illicit Economies and Development Volume 2021 ; 2021 ; https://jied.lse.ac.uk/ >
+      au < doNotProcess ; 2022 ; 4 ; Journal of Illicit Economies and Development Volume 2022 ; 2022 ; https://jied.lse.ac.uk/ >
+      au < doNotProcess ; 2023 ; 5 ; Journal of Illicit Economies and Development Volume 2023 ; 2023 ; https://jied.lse.ac.uk/ >
 
   }
   
@@ -467,7 +467,7 @@
         eissn = 2516-9122
       >
 
-      comment[publisher] = London School of Economics and Politics
+      comment[publisher] = London School of Economics and Political Science
 #      param[base_url] = https://journal.ilpnetwork.org/
 
       au < down ; 2018 ; 2 ; Journal of Long-Term Care Volume 2018 ; 2018 ; https://journal.ilpnetwork.org/ > #problem with volume url?
@@ -486,7 +486,7 @@
         eissn = 2633-4046
       >
 
-      comment[publisher] = London School of Economics and Politics
+      comment[publisher] = London School of Economics and Political Science
 #      param[base_url] = https://ppr.lse.ac.uk/ 
 
       au < down ; 2020 ; 1 ; LSE Public Policy Review Volume 2020 ; 2020 ; https://ppr.lse.ac.uk/ >
@@ -503,7 +503,7 @@
         eissn = 2753-5908
       >
 
-      comment[publisher] = London School of Economics and Politics
+      comment[publisher] = London School of Economics and Political Science
 #      param[base_url] = https://philosophyofphysics.lse.ac.uk/ 
 
       au < doNotProcess ; 2023 ; 1 ; Philosophy of Physics Volume 2023 ; 2023 ; https://philosophyofphysics.lse.ac.uk/ >
@@ -518,7 +518,7 @@
         eissn = 1529-7470
       >
 
-      comment[publisher] = London School of Economics and Politics
+      comment[publisher] = London School of Economics and Political Science
 #      param[base_url] = https://economia.lse.ac.uk/ 
 
       au < doNotProcess ; 2000 ; 1 ; Economía Volume 2000 ; 2000 ; https://economia.lse.ac.uk/ >

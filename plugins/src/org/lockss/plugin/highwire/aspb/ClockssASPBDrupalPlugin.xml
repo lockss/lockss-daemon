@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>deprecated</string>
   </entry>
   <!-- compare to ASPBDrupalPlugin, the added entries should be in synch -->
   <!-- also compare to ClockssHighWireDrupalPlugin for CLOCKSS specific entries -->
@@ -43,11 +43,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Society of Plant Biologists Plugin (CLOCKSS)</string>
+    <string>American Society of Plant Biologists Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -55,11 +55,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Society of Plant Biologists Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"American Society of Plant Biologists Plugin (Legacy, CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>

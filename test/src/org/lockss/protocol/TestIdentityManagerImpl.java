@@ -268,6 +268,17 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     assertNotNull(peer3);
     assertNotEquals(peer3, peer2);
     assertNotEquals(peer3, peer1);
+
+    PeerIdentity peer31 = idmgr.stringToPeerIdentity("tcp:[127.0.0.1]:1111");
+    assertNotNull(peer31);
+    assertSame(peer31, idmgr.stringToPeerIdentity("TCP:[127.0.0.1]:1111"));
+    PeerIdentity peer32 = idmgr.stringToPeerIdentity("tcp:[127.0.0.1]:1112");
+    assertNotNull(peer32);
+    assertNotEquals(peer31, peer32);
+    PeerIdentity peer33 = idmgr.stringToPeerIdentity("tcp:[127.0.0.2]:1111");
+    assertNotNull(peer33);
+    assertNotEquals(peer33, peer32);
+    assertNotEquals(peer33, peer31);
   }
 
   // XXX this should go away

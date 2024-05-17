@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_batch xmlns="http://www.crossref.org/schema/4.4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.4.0" xsi:schemaLocation="http://www.crossref.org/schema/4.4.0 http://www.crossref.org/schema/deposit/crossref4.4.0.xsd">
+   <head>
+      <doi_batch_id>-2076f08415bfcfef014-2e03</doi_batch_id>
+      <timestamp>202303251838</timestamp>
+      <depositor>
+         <depositor_name>jonas</depositor_name>
+         <email_address>joana@getweb.lt</email_address>
+      </depositor>
+      <registrant>WEB-FORM</registrant>
+   </head>
+   <body>
+      <journal>
+         <journal_metadata language="en">
+            <full_title>Insights into Regional Development</full_title>
+            <abbrev_title>IRD</abbrev_title>
+            <issn media_type="electronic">2669-0195</issn>
+            <doi_data>
+               <doi>10.9770/ird</doi>
+               <resource>https://jssidoi.org/ird/</resource>
+            </doi_data>
+         </journal_metadata>
+         <journal_issue>
+            <publication_date media_type="online">
+               <month>3</month>
+               <day>30</day>
+               <year>2023</year>
+            </publication_date>
+            <journal_volume>
+               <volume>5</volume>
+            </journal_volume>
+            <issue>1</issue>
+            <doi_data>
+               <doi>10.9770/ird.2023.5.1</doi>
+               <resource>https://jssidoi.org/ird/issue/17</resource>
+            </doi_data>
+         </journal_issue>
+         <journal_article publication_type="full_text">
+            <titles>
+               <title>Financial instruments for ensuring national security: experience of Ukraine in military conditions</title>
+            </titles>
+            <contributors>
+               <person_name sequence="first" contributor_role="author">
+                  <given_name>Oksana</given_name>
+                  <surname>Radchenko</surname>
+                  <ORCID>https://orcid.org/0000-0003-4892-7764</ORCID>
+               </person_name>
+               <person_name sequence="additional" contributor_role="author">
+                  <given_name>Leonid</given_name>
+                  <surname>Tulush</surname>
+                  <ORCID>https://orcid.org/0000-0002-3922-5245</ORCID>
+               </person_name>
+               <person_name sequence="additional" contributor_role="author">
+                  <given_name>Serhii</given_name>
+                  <surname>Leontovych</surname>
+                  <ORCID>https://orcid.org/0000-0002-0393-1869</ORCID>
+               </person_name>
+            </contributors>
+            <publication_date media_type="online">
+               <month>3</month>
+               <day>30</day>
+               <year>2023</year>
+            </publication_date>
+            <pages>
+               <first_page>10</first_page>
+               <last_page>25</last_page>
+            </pages>
+            <crossmark>
+               <crossmark_policy>10.9770/ird/CrossMark</crossmark_policy>
+               <crossmark_domains>
+                  <crossmark_domain>
+                     <domain>jssidoi.org</domain>
+                  </crossmark_domain>
+               </crossmark_domains>
+               <crossmark_domain_exclusive>true</crossmark_domain_exclusive>
+               <custom_metadata>
+                  <assertion name="received" label="Received" group_name="publication_history" group_label="Publication History">2022-08-15</assertion>
+                  <assertion name="accepted" label="Accepted" group_name="publication_history" group_label="Publication History">2023-01-10</assertion>
+                  <assertion name="published" label="Published" group_name="publication_history" group_label="Publication History">2023-03-30</assertion>
+               </custom_metadata>
+            </crossmark>
+            <doi_data>
+               <doi>10.9770/ird.2023.5.1(1)</doi>
+               <resource>https://jssidoi.org/ird/article/122</resource>
+            </doi_data>
+         </journal_article>
+      </journal>
+   </body>
+</doi_batch>

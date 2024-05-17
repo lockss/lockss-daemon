@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -83,5 +83,9 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.highwire.annalsfamilymedicine.AnnalsFamilyMedicineJCoreHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.highwire.annalsfamilymedicine.AnnalsFamilyMedicineDrupalUrlNormalizer</string>
   </entry>
 </map>

@@ -33,6 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.silverchair;
 
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.lockss.daemon.PluginException;
@@ -47,6 +48,8 @@ import java.io.Reader;
 import java.util.*;
 
 /*
+http://movie-usa.glencoesoftware.com/metadata/10.1083/jcb.202111095
+
 {
   "Video 4": {
     "source_href": "http://static-movie-usa.glencoesoftware.com/source/10.1083/157/6573459fd8d5825e210c60409e3c3decaf0e8378/JCB_202111095_V4.mp4",
@@ -106,6 +109,10 @@ public class SilverchairVideoJsonLinkExtractor implements LinkExtractor {
 
     log.debug3("Parsing " + srcUrl);
 
+    // Need to handle JSON responses like these, video provider confirm these are valid from their perspective
+    String jsonResponseEmpty = "{}";
+    String jsonResponseError = "{\"error\": \"Not found\"}";
+
     if (in == null) {
       throw new IllegalArgumentException("Called with null InputStream");
     }
@@ -113,61 +120,93 @@ public class SilverchairVideoJsonLinkExtractor implements LinkExtractor {
       throw new IllegalArgumentException("Called with null callback");
     }
 
-    // Parse input
     ObjectMapper objectMapper = new ObjectMapper();
     JsonNode rootNode = null;
-    try (Reader reader = new InputStreamReader(in, encoding)) {
-      rootNode = objectMapper.readTree(reader);
-      if (log.isDebug3()) {
-        log.debug3(String.format("Input: %s", rootNode));
+    Scanner scanner = new Scanner(in);
+
+    try {
+      scanner.useDelimiter("\\A");
+      String inputString = scanner.hasNext() ? scanner.next() : "";
+
+      log.debug3("srcUrl = " + srcUrl + ", encoding = " + encoding + ", input = " + inputString);
+
+      rootNode = objectMapper.readTree(inputString);
+
+      // Check if the JSON response matches the criteria
+      if (rootNode.isObject() && !rootNode.fields().hasNext()) {
+        log.debug3("JSON response is an empty JSON object, srcUrl = " + srcUrl);
+      } else if (rootNode.has("error") && rootNode.get("error").isTextual() && rootNode.get("error").asText().equals("Not found")) {
+        log.debug3("JSON response Contains error: Not found , srcUrl = " + srcUrl);
+      } else {
+        Iterator<Map.Entry<String, JsonNode>> fields = rootNode.fields();
+
+        while (fields.hasNext()) {
+          Map.Entry<String, JsonNode> entry = fields.next();
+          String videoName = entry.getKey();
+          JsonNode videoNode = entry.getValue();
+
+
+              /*
+              Only use source_href, and ignore others as suggested by the video provider.
+
+              """
+              With respect to the FLVs, it's not an access issue; several years ago we stopped transcoding to FLV.
+              For all the transcoded content there is no guarantee that all the transcoded assets are available.
+              I would suggest sticking with just the assets referred to by the source_href as those are the original videos.
+              Otherwise you are preserving several copies of the same thing in slightly different formats with different
+              playback targets.
+
+              A 404 not found from the metadata API means we know nothing about the DOI, we have no metadata for the article
+              at all. Empty JSON means we know about the article and have metadata about it but it contains no videos
+              that we're aware of. RUP is a special case for us as we have nearly all their article XML.
+              """
+               */
+
+          String sourceHref = videoNode.get("source_href").asText();
+          String mp4Href = videoNode.get("mp4_href").asText();
+          String ogvHref = videoNode.get("ogv_href").asText();
+          String webmHref = videoNode.get("webm_href").asText();
+
+          log.debug3("Video Name: " + videoName + ", sourceHref: " + sourceHref
+                  + ", mp4Href: " + mp4Href
+                  + ", ogvHref: " + ogvHref
+                  + ", webmHref: " + webmHref
+          );
+
+          if (sourceHref != null && !sourceHref.isEmpty()) {
+
+            log.debug3("srcUrl = " + srcUrl + ", adding new video sourceHref = " + sourceHref);
+
+            cb.foundLink(sourceHref);
+          }
+
+          if (mp4Href != null && !mp4Href.isEmpty()) {
+
+            log.debug3("srcUrl = " + srcUrl + ", adding new video mp4Href = " + mp4Href);
+
+            cb.foundLink(mp4Href);
+          }
+
+          if (ogvHref != null && !ogvHref.isEmpty()) {
+
+            log.debug3("srcUrl = " + srcUrl + ", adding new video ogvHref = " + ogvHref);
+
+            cb.foundLink(ogvHref);
+          }
+
+          if (webmHref != null && !webmHref.isEmpty()) {
+
+            log.debug3("srcUrl = " + srcUrl + ", adding new video webmHref = " + webmHref);
+
+            cb.foundLink(webmHref);
+          }
+        }
       }
-    }
-
-    Iterator<Map.Entry<String, JsonNode>> fields = rootNode.fields();
-
-    while (fields.hasNext()) {
-      Map.Entry<String, JsonNode> entry = fields.next();
-
-      String videoName = entry.getKey();
-      JsonNode videoNode = entry.getValue();
-
-      String sourceHref = videoNode.get("source_href").asText();
-      String mp4Href = videoNode.get("mp4_href").asText();
-      String flvHref = videoNode.get("flv_href").asText();
-      String ogvHref = videoNode.get("ogv_href").asText();
-      String webmHref = videoNode.get("webm_href").asText();
-
-
-      log.debug3("Video Name: " + videoName + ", sourceHref: " + sourceHref
-              + ", mp4Href: " + mp4Href
-              + ", flvHref: " + flvHref
-              + ", ogvHref: " + ogvHref
-              + ", webmHref: " + webmHref
-
-
-      );
-
-      if (sourceHref != null && !sourceHref.isEmpty()) {
-        cb.foundLink(sourceHref);
-
-      }
-
-      if (mp4Href != null && !mp4Href.isEmpty()) {
-        cb.foundLink(mp4Href);
-      }
-
-      if (flvHref != null && !flvHref.isEmpty()) {
-        cb.foundLink(flvHref);
-      }
-
-      if (ogvHref != null && !ogvHref.isEmpty()) {
-        cb.foundLink(ogvHref);
-      }
-
-      if (webmHref != null && !webmHref.isEmpty()) {
-        cb.foundLink(webmHref);
-      }
-
+    } catch (IOException e) {
+      log.error("IOException occurred while reading input stream: " + e.getMessage());
+    } finally {
+      // Close the scanner
+      scanner.close();
     }
   }
 }

@@ -70,13 +70,13 @@
       au < zapped ; finished ; 2020 ; Springer Source Content 2020_12 ; 2020_12 >
 
       au < readySource ; finished ; 2021 ; Springer Source Content 2021_01 ; 2021_01 >
-      au < readySource ; finished ; 2021 ; Springer Source Content 2021_02 ; 2021_02 >
+      au < zapped ; finished ; 2021 ; Springer Source Content 2021_02 ; 2021_02 >
       au < readySource ; finished ; 2021 ; Springer Source Content 2021_03 ; 2021_03 >
-      au < readySource ; finished ; 2021 ; Springer Source Content 2021_04 ; 2021_04 >
-      au < readySource ; finished ; 2021 ; Springer Source Content 2021_05 ; 2021_05 >
-      au < readySource ; finished ; 2021 ; Springer Source Content 2021_06 ; 2021_06 >
-      au < readySource ; finished ; 2021 ; Springer Source Content 2021_07 ; 2021_07 >
-      au < readySource ; finished ; 2021 ; Springer Source Content 2021_08 ; 2021_08 >
+      au < zapped ; finished ; 2021 ; Springer Source Content 2021_04 ; 2021_04 >
+      au < zapped ; finished ; 2021 ; Springer Source Content 2021_05 ; 2021_05 >
+      au < zapped ; finished ; 2021 ; Springer Source Content 2021_06 ; 2021_06 >
+      au < zapped ; finished ; 2021 ; Springer Source Content 2021_07 ; 2021_07 >
+      au < zapped ; finished ; 2021 ; Springer Source Content 2021_08 ; 2021_08 >
       au < readySource ; finished ; 2021 ; Springer Source Content 2021_09 ; 2021_09 >
       au < readySource ; finished ; 2021 ; Springer Source Content 2021_10 ; 2021_10 >
       au < readySource ; finished ; 2021 ; Springer Source Content 2021_11 ; 2021_11 >
@@ -104,19 +104,19 @@
       {
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/springerjats-released/
 
-      au < readySource ; crawling ; 2023 ; Springer Source Content 2023_01 ; 2023_01 >
-      au < readySource ; crawling ; 2023 ; Springer Source Content 2023_02 ; 2023_02 >
+      au < readySource ; finished ; 2023 ; Springer Source Content 2023_01 ; 2023_01 >
+      au < readySource ; finished ; 2023 ; Springer Source Content 2023_02 ; 2023_02 >
       au < readySource ; crawling ; 2023 ; Springer Source Content 2023_03 ; 2023_03 >
       au < readySource ; crawling ; 2023 ; Springer Source Content 2023_04 ; 2023_04 >
-      au < readySource ; crawling ; 2023 ; Springer Source Content 2023_05 ; 2023_05 >
-      au < readySource ; crawling ; 2023 ; Springer Source Content 2023_06 ; 2023_06 >
-      au < readySource ; crawling ; 2023 ; Springer Source Content 2023_07 ; 2023_07 >
-      au < readySource ; crawling ; 2023 ; Springer Source Content 2023_08 ; 2023_08 >
-      au < readySource ; crawling ; 2023 ; Springer Source Content 2023_09 ; 2023_09 >
-      au < readySource ; crawling ; 2023 ; Springer Source Content 2023_10 ; 2023_10 >
-      au < readySource ; crawling ; 2023 ; Springer Source Content 2023_11 ; 2023_11 >
-      au < readySource ; crawling ; 2023 ; Springer Source Content 2023_12 ; 2023_12 >
-      au < readySource ; crawling ; 2023 ; Springer Source Content 2023_13 ; 2023_13 >
+      au < readySource ; finished ; 2023 ; Springer Source Content 2023_05 ; 2023_05 >
+      au < readySource ; finished ; 2023 ; Springer Source Content 2023_06 ; 2023_06 >
+      au < readySource ; finished ; 2023 ; Springer Source Content 2023_07 ; 2023_07 >
+      au < readySource ; finished ; 2023 ; Springer Source Content 2023_08 ; 2023_08 >
+      au < readySource ; finished ; 2023 ; Springer Source Content 2023_09 ; 2023_09 >
+      au < readySource ; finished ; 2023 ; Springer Source Content 2023_10 ; 2023_10 >
+      au < readySource ; finished ; 2023 ; Springer Source Content 2023_11 ; 2023_11 >
+      au < readySource ; finished ; 2023 ; Springer Source Content 2023_12 ; 2023_12 >
+      au < readySource ; frozen ; 2023 ; Springer Source Content 2023_13 ; 2023_13 >
       au < readySource ; crawling ; 2023 ; Springer Source Content 2023_14 ; 2023_14 >
       au < readySource ; crawling ; 2023 ; Springer Source Content 2023_15 ; 2023_15 >
       au < readySource ; crawling ; 2023 ; Springer Source Content 2023_16 ; 2023_16 >
@@ -127,11 +127,11 @@
       au < readySource ; crawling ; 2024 ; Springer Source Content 2024_01 ; 2024_01 >
       au < readySource ; crawling ; 2024 ; Springer Source Content 2024_02 ; 2024_02 >
       au < readySource ; crawling ; 2024 ; Springer Source Content 2024_03 ; 2024_03 >
-      au < manifest ; exists ; 2024 ; Springer Source Content 2024_04 ; 2024_04 >
-      au < expected ; exists ; 2024 ; Springer Source Content 2024_05 ; 2024_05 >
-      au < expected ; exists ; 2024 ; Springer Source Content 2024_06 ; 2024_06 >
-      au < expected ; exists ; 2024 ; Springer Source Content 2024_07 ; 2024_07 >
-      au < expected ; exists ; 2024 ; Springer Source Content 2024_08 ; 2024_08 >
+      au < readySource ; crawling ; 2024 ; Springer Source Content 2024_04 ; 2024_04 >
+      au < readySource ; crawling ; 2024 ; Springer Source Content 2024_05 ; 2024_05 >
+      au < readySource ; crawling ; 2024 ; Springer Source Content 2024_06 ; 2024_06 >
+      au < readySource ; crawling ; 2024 ; Springer Source Content 2024_07 ; 2024_07 >
+      au < readySource ; crawling ; 2024 ; Springer Source Content 2024_08 ; 2024_08 >
       au < expected ; exists ; 2024 ; Springer Source Content 2024_09 ; 2024_09 >
       au < expected ; exists ; 2024 ; Springer Source Content 2024_10 ; 2024_10 >
       au < expected ; exists ; 2024 ; Springer Source Content 2024_11 ; 2024_11 >

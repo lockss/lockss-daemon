@@ -1,0 +1,204 @@
+{
+    publisher <
+        name = European Mathematical Society ;
+        info[contract] = 2015 ;
+        info[back] = 1900 ;
+        info[tester] = 8 ;
+        info[platform] = Custom
+  >
+
+    plugin = org.lockss.plugin.europeanmathematicalsociety.api.ClockssEuropeanMathematicalSocietyBooksPlugin
+    param[base_url] = https://ems.press/  #Publisher moved to new URL, new platform.
+    param[api_url] = https://content.ems.press/
+
+    implicit < status ; status2 ; year ; isbn ; eisbn ; name ; param[book_id] ; hidden[proxy] >
+
+
+  {
+    title <
+      name = DMS Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= dms
+      #no books previously processed for this series.
+
+      au < exists ; exists ; 2015 ; 978-3-936609-61-5 ; 978-3-98547-040-2 ; A Collection of Manuscripts Written in Honour of Alexander S. Merkurjev on the Occasion of His Sixtieth Birthday ; 253 ; >
+      au < frozen ; exists ; 2021 ; 978-3-98547-047-1 ; 978-3-98547-047-1 ; The Legacy of Kurt Mahler ; 252 ; >
+
+  }
+
+  {
+    title <
+      name = EMM Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= emm
+      #Books from 2003-2020 processed in a previous version of the platform
+
+      au < frozen ; exists ; 2021 ; 978-3-03719-211-5 ; 978-3-03719-211-5 ; Quasi-Periodic Solutions of Nonlinear Wave Equations on the d-Dimensional Torus ; 184 ; >
+
+  }
+
+  {
+    title <
+      name = ESIAM Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= esiam
+      #Books from 2014 and 2020 processed in a previous version of the platform
+
+      au < frozen ; exists ; 2021 ; 978-3-98547-027-3 ; 978-3-98547-027-3 ; Interactions between Elasticity and Fluid Mechanics ; 242 ; >
+
+  }
+
+  {
+    title <
+      name = ECR Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= ecr
+      #Books from 2008-2021 processed in a previous version of the platform
+
+      au < exists ; exists ; 2021 ; 978-3-98547-007-5 ; 978-3-98547-507-0 ; Partial Differential Equations, Spectral Theory, and Mathematical Physics ; 187 ; >
+      au < frozen ; exists ; 2022 ; 978-3-98547-054-9 ; 978-3-98547-054-9 ; Representations of Algebras and Related Structures ; 271 ; >
+
+  }
+
+  {
+    title <
+      name = ELM Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= elm
+      #Books from 2004-2021 processed in a previous version of the platform
+
+      au < exists ; exists ; 2021 ; 978-3-98547-008-2 ; 978-3-98547-508-7 ; Orthogonal Polynomials and Linear Functionals ; 191 ; >
+      au < frozen ; exists ; 2021 ; 978-3-98547-014-3 ; 978-3-98547-014-3 ; An Introduction to Singular Stochastic PDEs ; 232 ; >
+
+  }
+
+  {
+    title <
+      name = ETB Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= etb
+      #Books from 2004-2018 processed in a previous version of the platform
+
+      au < exists ; exists ; 2021 ; 978-3-98547-010-5 ; 978-3-98547-510-0 ; An Invitation to Optimal Transport, Wasserstein Distances, and Gradient Flows ; 258 ; >
+      au < exists ; exists ; 2021 ; 978-3-98547-012-9 ; 978-3-98547-512-4 ; Dynamic Optimization for Beginners ; 192 ; >
+      au < frozen ; exists ; 2021 ; 978-3-98547-018-1; 978-3-98547-018-1 ; Large Scale Geometry ; 264 ; >
+
+  }
+
+  {
+    title <
+      name = ETM Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= etm
+      #Books from 2007-2020 processed in a previous version of the platform
+
+      au < frozen ; exists ; 2021 ; 978-3-98547-048-8 ; 978-3-98547-048-8 ; The Structure of Pro-Lie Groups ; 270 ; >
+
+  }
+
+  {
+    title <
+      name = ESI Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= esi
+      #Books from 2004-2019 processed in a previous version of the platform
+
+      au < frozen ; exists ; 2021 ; 978-3-98547-029-7 ; 978-3-98547-029-7 ; An Introduction to the Mathematical Fluid Dynamics of Oceanic and Atmospheric Flows ; 263 ; >
+
+  }
+
+  {
+    title <
+      name = HEM Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= hem
+      #Books from 2007-2019 processed in a previous version of the platform
+
+      au < frozen ; exists ; 2021 ; 978-3-98547-011-2 ; 978-3-98547-011-2 ; "Hurwitz’s Lectures on the Number Theory of Quaternions" ; 257 ; >
+
+  }
+
+
+  {
+    title <
+      name = IRMA Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= irma
+      #Books from 2005-2020 processed in a previous version of the platform
+
+      au < exists ; exists ; 2021 ; 978-3-98547-001-3 ; 978-3-98547-501-8 ; Topology and Geometry ; 189 ; >
+      au < frozen ; exists ; 2021 ; 978-3-98547-024-2 ; 978-3-98547-024-2 ; Essays in Geometry ; 265 ; >
+
+  }
+
+  {
+    title <
+      name = MEMS Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= mems
+      #no books previously processed for this series.
+
+      au < frozen ; exists ; 2021 ; 978-3-98547-071-6 ; 978-3-98547-071-6 ; Integrating the Wigner Distribution on Subsets of the Phase Space, a Survey ; 284 ; >
+
+  }
+
+  {
+    title <
+      name = MLM Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= mlm
+      #Books from 2016 and 2018 processed in a previous version of the platform
+
+      au < frozen ; exists ; 2021 ; 978-3-03719-184-2 ; 978-3-03719-184-2 ; Lectures in Model Theory ; 155 ; >
+
+  }
+
+  {
+    title <
+      name = QGM Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= qgm
+      #Books from 2012 processed in a previous version of the platform
+
+      au < frozen ; exists ; 2021 ; 978-3-03719-108-8 ; 978-3-03719-108-8 ; Lectures on Algebraic Categorification ; 110 ; >
+
+  }
+
+  {
+    title <
+      name = ZLAM Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= zlam
+      #Books from 2004-2021 processed in a previous version of the platform
+
+      au < frozen ; exists ; 2021 ; 978-3-98547-052-5 ; 978-3-98547-052-5 ; Prescribing Scalar Curvature in Conformal Geometry ; 268 ; >
+
+  }
+
+  {
+    title <
+      name = STANDALONE Books ;
+      type = bookSeries
+    >
+      param[book_serial_id]= standalone
+      #Books from 2005-2018 processed in a previous version of the platform
+
+      au < frozen ; exists ; 2021 ; 978-3-98547-058-7 ; 978-3-98547-058-7 ; International Congress of Mathematicians ; 272 ; >
+
+  }
+
+}

@@ -55,6 +55,7 @@ public class GeorgThiemeVerlagArticleIteratorFactory
       "\"^%s(?:[^/]+/)?(?:ejournals|ebooks)/(?:abstract|html|pdf)/10[.][0-9a-z]{4,6}/[^/?&]+(?:[.]pdf|[?]issue=[^&]+)?(?:\\?articleLanguage=.*)?$\"," +
       " base_url";
   
+  // 02/2024 - Thieme has added full-text xml aspects of articles
   // various aspects of an article
   // https://www.thieme-connect.de/products/ejournals/html/10.1055/s-0029-1214947
   // https://www.thieme-connect.de/ejournals/pdf/10.1055/s-0029-1214947.pdf
@@ -86,12 +87,17 @@ public class GeorgThiemeVerlagArticleIteratorFactory
   protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
       "/abstract/([^/]+/[^/?&]+)(\\?articleLanguage=.*|$)",
       Pattern.CASE_INSENSITIVE);
+
+  protected static final Pattern XML_PATTERN = Pattern.compile(
+      "/xml/([^/]+/[^/?&]+)[.]xml(\\?articleLanguage=.*|$)",
+      Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
   protected static final String HTML_REPLACEMENT = "/html/$1$2";
   protected static final String PDF_REPLACEMENT = "/pdf/$1.pdf$2";
   protected static final String ABSTRACT_REPLACEMENT = "/abstract/$1$2";
   protected static final String RIS_REPLACEMENT = "/ris/$1/BIB$2";
+  protected static final String XML_REPLACEMENT = "/xml/$1.xml$2";
   
   public Iterator<ArticleFiles> createArticleIterator(
       ArchivalUnit au, MetadataTarget target)
@@ -121,12 +127,17 @@ public class GeorgThiemeVerlagArticleIteratorFactory
     builder.addAspect(
         RIS_REPLACEMENT,
         ArticleFiles.ROLE_CITATION_RIS);
+
+    builder.addAspect(
+        XML_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_XML);
     
     // add metadata role from abstract, html, or pdf (NOTE: pdf metadata gets DOI from filename)
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, Arrays.asList(
         ArticleFiles.ROLE_ABSTRACT,
         ArticleFiles.ROLE_FULL_TEXT_HTML,
-        ArticleFiles.ROLE_FULL_TEXT_PDF));
+        ArticleFiles.ROLE_FULL_TEXT_PDF,
+        ArticleFiles.ROLE_FULL_TEXT_XML));
     
     return builder.getSubTreeArticleIterator();
   }

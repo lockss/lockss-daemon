@@ -65,6 +65,17 @@
   {
 
     title <
+      name = Language Development Research ;
+      eissn = 2771-7976
+    >
+    provider = Carnegie Mellon University Library Publishing Service
+
+    au < expected ; exists ; 2024 ; Language Development Research ; UNKNOWN >
+  }
+
+  {
+
+    title <
       name = Educational Journal of Living Theories ;
       eissn = 2009-1788
     >
@@ -161,6 +172,30 @@
   {
 
     title <
+      name = History of Media Studies ;
+      eissn = 2637-6091
+    >
+    provider = Media Studies Press
+
+    au < expected ; exists ; 2024 ; History of Media Studies ; UNKNOWN >
+
+  }
+
+  {
+
+    title <
+      name = Academic Finance ;
+      eissn = 1923-2993
+    >
+    provider = Recherche Entreprises et Décision - Institut Supérieur de Gestion de Gabès
+
+    au < expected ; exists ; 2024 ; Academic Finance ; UNKNOWN >
+
+  }
+
+  {
+
+    title <
       name = Análisis Filosófico ;
       issn = 0326-1301 ;
       eissn = 1851-9636
@@ -168,6 +203,30 @@
     provider = Sociedad Argentina de Análisis Filosófico
 
     au < readySource ; crawling ; 2023-2024 ; Análisis Filosófico ; analisis_filosofico_1851-9636 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Horticultural Sciences ;
+      eissn = 2582-4899
+    >
+    provider = Society for Promotion of Horticulture - Indian Institute of Horticultural Research
+
+    au < expected ; exists ; 2024 ; Journal of Horticultural Sciences ; UNKNOWN >
+
+  }
+
+  {
+
+    title <
+      name = Revista Stultifera ;
+      eissn = 0719-983X
+    >
+    provider = Universidad Austral de Chile
+
+    au < ready ; exists ; 2024 ; Revista Stultifera ; revista_stultifera_0719-983x >
 
   }
 

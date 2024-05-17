@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -41,7 +41,7 @@ public class TestPublisher extends LockssTestCase {
   public static final String NAME_VALUE = "Publisher Name";
 
   public static final String FOO_KEY = "publisherfookey";
-  public static final String FOO_VALUE = "publisherfooval";
+    public static final String FOO_VALUE = "publisherfooval";
 
   public void testKeys() throws Exception {
     assertEquals("name", Publisher.NAME);

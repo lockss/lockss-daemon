@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -37,6 +37,7 @@ import java.nio.charset.*;
 import java.text.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.regex.*;
 
 import org.apache.commons.cli.*;
@@ -388,6 +389,7 @@ public class TdbXml {
     Publisher currentPub = null;
     String escapedPublisherName = null;
     String escapedPublisherNameNoDots = null;
+    String escapedComputedPublisherName = null;
     Title currentTitle = null;
     String escapedTitleName = null;
     String titleIssn = null;
@@ -450,7 +452,15 @@ public class TdbXml {
        */
       // AU name
       String plugin = au.getComputedPlugin();
+      if (plugin == null) {
+        AppUtil.warning(options, null, "%s:%d: AU has no plugin (or pluginPrefix+pluginSuffix)", au.getFile(), au.getLine());
+        KeepGoing.addError(options, new NullPointerException());
+      }
       String auName = au.getName();
+      if (auName == null) {
+        AppUtil.warning(options, null, "%s:%d: AU has no name", au.getFile(), au.getLine());
+        KeepGoing.addError(options, new NullPointerException());
+      }
       String escapedAuName = xmlEscaper.translate(auName);
       StringBuilder ausb = new StringBuilder();
       computeAuShortName(ausb, plugin, auName);
@@ -458,7 +468,8 @@ public class TdbXml {
       ausb = null; // in case ausb accidentally gets re-used below instead of sb
       
       sb.append("  <property name=\""); sb.append(escapedAuNameShort); sb.append("\">\n");
-      appendOneAttr(sb, "publisher", escapedPublisherName);
+      escapedComputedPublisherName = xmlEscaper.translate(au.getComputedPublisher());
+      appendOneAttr(sb, "publisher", escapedComputedPublisherName);
       sb.append("   <property name=\"journalTitle\" value=\""); sb.append(escapedTitleName); sb.append("\" />\n");
       if (titleIssn != null) {
         sb.append("   <property name=\"issn\" value=\""); sb.append(titleIssn); sb.append("\" />\n");
@@ -517,7 +528,6 @@ public class TdbXml {
       
       // Miscellaneous
       appendOneAttr(sb, "provider", xmlEscaper.translate(au.getProvider()));
-      appendOneAttr(sb, "doi", au.getDoi());
       appendOneAttr(sb, "edition", au.getEdition());
       appendOneAttr(sb, "eisbn", au.getEisbn());
       appendOneAttr(sb, "isbn", au.getIsbn());

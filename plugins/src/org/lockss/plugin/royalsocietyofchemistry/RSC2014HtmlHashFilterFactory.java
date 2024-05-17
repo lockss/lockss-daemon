@@ -113,6 +113,7 @@ public class RSC2014HtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "footer"),
         // remove header for minor changes in nav & breadcrumbs
         HtmlNodeFilters.tagWithAttribute("div", "class", "header"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "header_text"),
         // Changeable scripts
         HtmlNodeFilters.tag("script"),
         // remove head for metadata changes and JS/CSS version number
@@ -127,6 +128,12 @@ public class RSC2014HtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "class", "page_anchor"),
         HtmlNodeFilters.comment(),
         HtmlNodeFilters.tag("noscript"),
+        // filter out potential login credential request
+        HtmlNodeFilters.tagWithAttribute("a", "title", "Log in via your home Institution"),
+        HtmlNodeFilters.tagWithAttribute("a", "title", "Log in with your member or subscriber username and password"),
+        HtmlNodeFilters.tagWithText("div", "To gain access to this content please"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "links_list"),
+
     };
     
     InputStream filtered =  new HtmlFilterInputStream(in, encoding,
