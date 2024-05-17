@@ -70,7 +70,7 @@ public abstract class BaseConfigFile implements ConfigFile {
   public BaseConfigFile(String url) {
     if (StringUtil.endsWithIgnoreCase(url, ".xml") ||
 	StringUtil.endsWithIgnoreCase(url, ".xml.gz") ||
-	StringUtil.endsWithIgnoreCase(url, ".xml.gz")) {
+	StringUtil.endsWithIgnoreCase(url, ".xml.opt")) {
       m_fileType = ConfigFile.XML_FILE;
     } else {
       m_fileType = ConfigFile.PROPERTIES_FILE;
