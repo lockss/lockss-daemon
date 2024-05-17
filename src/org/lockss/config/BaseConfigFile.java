@@ -69,6 +69,7 @@ public abstract class BaseConfigFile implements ConfigFile {
    */
   public BaseConfigFile(String url) {
     if (StringUtil.endsWithIgnoreCase(url, ".xml") ||
+	StringUtil.endsWithIgnoreCase(url, ".xml.gz") ||
 	StringUtil.endsWithIgnoreCase(url, ".xml.gz")) {
       m_fileType = ConfigFile.XML_FILE;
     } else {
