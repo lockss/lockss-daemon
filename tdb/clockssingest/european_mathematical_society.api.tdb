@@ -1,7 +1,7 @@
 {
 
   publisher <
-    name = European Mathematical Society Journals (API) ;
+    name = European Mathematical Society ;
     info[contract] = 2015 ;
     info[back] = 2010 ;
     info[tester] = 8 ;
@@ -14,6 +14,7 @@
 
   param[base_url] = https://ems.press/
   param[api_url] = https://content.ems.press/
+  # API URL https://content.ems.press/serials
 
   implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
 
@@ -783,7 +784,7 @@
       
     >
     
-    param[journal_serial_number] = 
+    param[journal_serial_number] = 8
     param[journal_id] = zaa
     
     au < exists ; exists ; 1982 ; 1982 ; Zeitschrift für Analysis und ihre Anwendungen Volume 1 ; 1 ; >
