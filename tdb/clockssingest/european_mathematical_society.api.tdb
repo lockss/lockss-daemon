@@ -267,8 +267,33 @@
     param[journal_serial_number] = 9
     param[journal_id] = mag
 
+    au < exists ; exists ; 1991 ; 1991 ; European Mathematical Society Magazine Volume 1991 ; 1991 ; >
+    au < exists ; exists ; 1992 ; 1992 ; European Mathematical Society Magazine Volume 1992 ; 1992 ; >
+    au < exists ; exists ; 1993 ; 1993 ; European Mathematical Society Magazine Volume 1993 ; 1993 ; >
+    au < exists ; exists ; 1994 ; 1994 ; European Mathematical Society Magazine Volume 1994 ; 1994 ; >
+    au < exists ; exists ; 1995 ; 1995 ; European Mathematical Society Magazine Volume 1995 ; 1995 ; >
+    au < exists ; exists ; 1996 ; 1996 ; European Mathematical Society Magazine Volume 1996 ; 1996 ; >
+    au < exists ; exists ; 1997 ; 1997 ; European Mathematical Society Magazine Volume 1997 ; 1997 ; >
+    au < exists ; exists ; 1998 ; 1998 ; European Mathematical Society Magazine Volume 1998 ; 1998 ; >
+    au < exists ; exists ; 1999 ; 1999 ; European Mathematical Society Magazine Volume 1999 ; 1999 ; >
+    au < exists ; exists ; 2000 ; 2000 ; European Mathematical Society Magazine Volume 2000 ; 2000 ; >
+    au < exists ; exists ; 2001 ; 2001 ; European Mathematical Society Magazine Volume 2001 ; 2001 ; >
+    au < exists ; exists ; 2002 ; 2002 ; European Mathematical Society Magazine Volume 2002 ; 2002 ; >
+    au < exists ; exists ; 2003 ; 2003 ; European Mathematical Society Magazine Volume 2003 ; 2003 ; >
+    au < exists ; exists ; 2004 ; 2004 ; European Mathematical Society Magazine Volume 2004 ; 2004 ; >
+    au < exists ; exists ; 2005 ; 2005 ; European Mathematical Society Magazine Volume 2005 ; 2005 ; >
+    au < exists ; exists ; 2006 ; 2006 ; European Mathematical Society Magazine Volume 2006 ; 2006 ; >
+    au < exists ; exists ; 2007 ; 2007 ; European Mathematical Society Magazine Volume 2007 ; 2007 ; >
+    au < exists ; exists ; 2008 ; 2008 ; European Mathematical Society Magazine Volume 2008 ; 2008 ; >
+    au < exists ; exists ; 2009 ; 2009 ; European Mathematical Society Magazine Volume 2009 ; 2009 ; >
+    au < exists ; exists ; 2010 ; 2010 ; European Mathematical Society Magazine Volume 2010 ; 2010 ; >
+    au < exists ; exists ; 2011 ; 2011 ; European Mathematical Society Magazine Volume 2011 ; 2011 ; >
+    au < exists ; exists ; 2012 ; 2012 ; European Mathematical Society Magazine Volume 2012 ; 2012 ; >
+    au < exists ; exists ; 2013 ; 2013 ; European Mathematical Society Magazine Volume 2013 ; 2013 ; >
+    au < exists ; exists ; 2014 ; 2014 ; European Mathematical Society Magazine Volume 2014 ; 2014 ; >
+    au < exists ; exists ; 2015 ; 2015 ; European Mathematical Society Magazine Volume 2015 ; 2015 ; >
+    au < exists ; exists ; 2016 ; 2016 ; European Mathematical Society Magazine Volume 2016 ; 2016 ; >
     au < exists ; exists ; 2017 ; 2017 ; European Mathematical Society Magazine Volume 2017 ; 2017 ; >
-
     au < frozen ; exists ; 2018 ; 2018 ; European Mathematical Society Magazine Volume 2018 ; 2018 ; >
     au < frozen ; exists ; 2019 ; 2019 ; European Mathematical Society Magazine Volume 2019 ; 2019 ; >
     au < exists ; exists ; 2020 ; 2020 ; European Mathematical Society Magazine Volume 2020 ; 2020 ; >
@@ -305,6 +330,8 @@
     au < superseded ; exists ; 2020 ; 2020 ; Groups, Geometry, and Dynamics Volume 14 [superseded] ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Groups, Geometry, and Dynamics Volume 15 ; 15 ; >
     au < exists ; exists ; 2022 ; 2022 ; Groups, Geometry, and Dynamics Volume 16 ; 16 ; >
+    au < exists ; exists ; 2023 ; 2023 ; Groups, Geometry, and Dynamics Volume 17 ; 17 ; >
+    au < exists ; exists ; 2024 ; 2024 ; Groups, Geometry, and Dynamics Volume 18 ; 18 ; >
 
   }
 
@@ -341,6 +368,8 @@
     au < superseded ; exists ; 2020 ; 2020 ; Interfaces and Free Boundaries Volume 22 [superseded] ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Interfaces and Free Boundaries Volume 23 ; 23 ; >
     au < exists ; exists ; 2022 ; 2022 ; Interfaces and Free Boundaries Volume 24 ; 24 ; >
+    au < exists ; exists ; 2023 ; 2023 ; Interfaces and Free Boundaries Volume 25 ; 25 ; >
+    au < exists ; exists ; 2024 ; 2024 ; Interfaces and Free Boundaries Volume 26 ; 26 ; >
 
   }
 
@@ -360,6 +389,8 @@
     au < superseded ; exists ; 2020 ; 2020 ; Journal of Combinatorial Algebra Volume 4 [superseded] ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Combinatorial Algebra Volume 5 ; 5 ; >
     au < exists ; exists ; 2022 ; 2022 ; Journal of Combinatorial Algebra Volume 6 ; 6 ; >
+    au < exists ; exists ; 2023 ; 2023 ; Journal of Combinatorial Algebra Volume 7 ; 7 ; >
+    au < exists ; exists ; 2024 ; 2024 ; Journal of Combinatorial Algebra Volume 8 ; 8 ; >
 
   }
 
@@ -381,6 +412,9 @@
     au < superseded ; exists ; 2019 ; 2019 ; Journal of Fractal Geometry Volume 6 [superseded] ; 6 ; >
     au < superseded ; exists ; 2020 ; 2020 ; Journal of Fractal Geometry Volume 7 [superseded] ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Fractal Geometry Volume 8 ; 8 ; >
+    au < exists ; exists ; 2022 ; 2022 ; Journal of Fractal Geometry Volume 9 ; 9 ; >
+    au < exists ; exists ; 2023 ; 2023 ; Journal of Fractal Geometry Volume 10 ; 10 ; >
+    au < expected ; exists ; 2024 ; 2024 ; Journal of Fractal Geometry Volume 11 ; 11 ; >
 
   }
 
@@ -410,6 +444,8 @@
     au < superseded ; exists ; 2020 ; 2020 ; Journal of Noncommutative Geometry Volume 2020 [superseded] ; 2020 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Noncommutative Geometry Volume 15 ; 15 ; >
     au < exists ; exists ; 2022 ; 2022 ; Journal of Noncommutative Geometry Volume 16 ; 16 ; >
+    au < exists ; exists ; 2023 ; 2023 ; Journal of Noncommutative Geometry Volume 17 ; 17 ; >
+    au < exists ; exists ; 2024 ; 2024 ; Journal of Noncommutative Geometry Volume 18 ; 18 ; >
 
   }
 
@@ -435,6 +471,8 @@
     au < superseded ; exists ; 2020 ; 2020 ; Journal of Spectral Theory Volume 10 [superseded] ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Spectral Theory Volume 11 ; 11 ; >
     au < exists ; exists ; 2022 ; 2022 ; Journal of Spectral Theory Volume 12 ; 12 ; >
+    au < exists ; exists ; 2023 ; 2023 ; Journal of Spectral Theory Volume 13 ; 13 ; >
+    au < exists ; exists ; 2024 ; 2024 ; Journal of Spectral Theory Volume 14 ; 14 ; >
 
   }
 
@@ -478,15 +516,15 @@
 
   {
     title <
-      name = "L’Enseignement Mathématique" ;
+      name = L'Enseignement Mathématique ;
       issn = 0013-8584 ;
       eissn = 2309-4672
     >
     param[journal_serial_number] = 3
     param[journal_id] = lem
 
-    au < frozen ; exists ; 2009 ; 2009 ; L'Enseignement Mathématique Volume 2009 ; 2009 ; >
-    au < superseded ; exists ; 2010 ; 2010 ; L'Enseignement Mathématique Volume 2010 ; 2010 ; >
+    au < frozen ; exists ; 2009 ; 2009 ; L'Enseignement Mathématique Volume 55 ; 55 ; >
+    au < superseded ; exists ; 2010 ; 2010 ; L'Enseignement Mathématique Volume 56 ; 56 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; L'Enseignement Mathématique Volume 57 ; 57 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; L'Enseignement Mathématique Volume 58 ; 58 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; L'Enseignement Mathématique Volume 59 ; 59 ; >
@@ -499,6 +537,8 @@
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; L'Enseignement Mathématique Volume 66 ; 66 ; >
     au < exists ; exists ; 2021 ; 2021 ; L'Enseignement Mathématique Volume 67 ; 67 ; >
     au < exists ; exists ; 2022 ; 2022 ; L'Enseignement Mathématique Volume 68 ; 68 ; >
+    au < exists ; exists ; 2023 ; 2023 ; L'Enseignement Mathématique Volume 69 ; 69 ; >
+    au < exists ; exists ; 2024 ; 2024 ; L'Enseignement Mathématique Volume 70 ; 70 ; >
 
   }
 
@@ -512,8 +552,13 @@
     param[journal_serial_number] = 23
     param[journal_id] = msl
 
-    au < frozen ; exists ; 2019 ; 2019 ; Mathematical Statistics and Learning Volume 2019 ; 2019 ; >
-    au < frozen ; exists ; 2020 ; 2020 ; Mathematical Statistics and Learning Volume 2020 ; 2020 ; >
+    au < exists ; exists ; 2018 ; 2018 ; Mathematical Statistics and Learning Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2019 ; 2019 ; Mathematical Statistics and Learning Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2020 ; 2020 ; Mathematical Statistics and Learning Volume 3 ; 3 ; >
+    au < exists ; exists ; 2021 ; 2021 ; Mathematical Statistics and Learning Volume 4 ; 4 ; >
+    au < exists ; exists ; 2022 ; 2022 ; Mathematical Statistics and Learning Volume 5 ; 5 ; >
+    au < exists ; exists ; 2023 ; 2023 ; Mathematical Statistics and Learning Volume 6 ; 6 ; >
+    au < exists ; exists ; 2024 ; 2024 ; Mathematical Statistics and Learning Volume 7 ; 7 ; >
 
   }
 
@@ -526,9 +571,27 @@
     param[journal_serial_number] = 13
     param[journal_id] = owr
 
+    au < exists ; exists ; 2004 ; 2004 ; Oberwolfach Reports Volume 1  ; 1  ; >
+    au < exists ; exists ; 2005 ; 2005 ; Oberwolfach Reports Volume 2  ; 2  ; >
+    au < exists ; exists ; 2006 ; 2006 ; Oberwolfach Reports Volume 3  ; 3  ; >
+    au < exists ; exists ; 2007 ; 2007 ; Oberwolfach Reports Volume 4  ; 4  ; >
+    au < exists ; exists ; 2008 ; 2008 ; Oberwolfach Reports Volume 5  ; 5  ; >
+    au < exists ; exists ; 2009 ; 2009 ; Oberwolfach Reports Volume 6  ; 6  ; >
+    au < exists ; exists ; 2010 ; 2010 ; Oberwolfach Reports Volume 7  ; 7  ; >
+    au < exists ; exists ; 2011 ; 2011 ; Oberwolfach Reports Volume 8  ; 8  ; >
+    au < exists ; exists ; 2012 ; 2012 ; Oberwolfach Reports Volume 9  ; 9  ; >
+    au < exists ; exists ; 2013 ; 2013 ; Oberwolfach Reports Volume 10 ; 10 ; >
+    au < exists ; exists ; 2014 ; 2014 ; Oberwolfach Reports Volume 11 ; 11 ; >
+    au < exists ; exists ; 2015 ; 2015 ; Oberwolfach Reports Volume 12 ; 12 ; >
+    au < exists ; exists ; 2016 ; 2016 ; Oberwolfach Reports Volume 13 ; 13 ; >
+    au < exists ; exists ; 2017 ; 2017 ; Oberwolfach Reports Volume 14 ; 14 ; >
+    au < exists ; exists ; 2018 ; 2018 ; Oberwolfach Reports Volume 15 ; 15 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Oberwolfach Reports Volume 16 ; 16 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Oberwolfach Reports Volume 17 ; 17 ; >
     au < exists ; exists ; 2021 ; 2021 ; Oberwolfach Reports Volume 18 ; 18 ; >
+    au < exists ; exists ; 2022 ; 2022 ; Oberwolfach Reports Volume 19 ; 19 ; >
+    au < exists ; exists ; 2023 ; 2023 ; Oberwolfach Reports Volume 20 ; 20 ; >
+    au < expected ; exists ; 2024 ; 2024 ; Oberwolfach Reports Volume 21 ; 21 ; >
 
   }
 
@@ -556,6 +619,9 @@
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Portugaliae Mathematica Volume 76 ; 76 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Portugaliae Mathematica Volume 77 ; 77 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Portugaliae Mathematica Volume 78 ; 78 ; >
+    au < exists ; exists ; 2022 ; 2022 ; Portugaliae Mathematica Volume 79 ; 79 ; >
+    au < exists ; exists ; 2023 ; 2023 ; Portugaliae Mathematica Volume 80 ; 80 ; >
+    au < exists ; exists ; 2024 ; 2024 ; Portugaliae Mathematica Volume 81 ; 81 ; >
 
   }
 
@@ -626,6 +692,8 @@
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Publications of the Research Institute for Mathematical Sciences Volume 56 ; 56 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Publications of the Research Institute for Mathematical Sciences Volume 57 ; 57 ; >
     au < exists ; exists ; 2022 ; 2022 ; Publications of the Research Institute for Mathematical Sciences Volume 58 ; 58 ; >
+    au < exists ; exists ; 2023 ; 2023 ; Publications of the Research Institute for Mathematical Sciences Volume 59 ; 59 ; >
+    au < expected ; exists ; 2024 ; 2024 ; Publications of the Research Institute for Mathematical Sciences Volume 60 ; 60 ; >
 
   }
 
@@ -652,6 +720,8 @@
     au < superseded ; exists ; 2020 ; 2020 ; Quantum Topology Volume 11 [superseded] ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Quantum Topology Volume 12 ; 12 ; >
     au < exists ; exists ; 2022 ; 2022 ; Quantum Topology Volume 13 ; 13 ; >
+    au < exists ; exists ; 2023 ; 2023 ; Quantum Topology Volume 14 ; 14 ; >
+    au < exists ; exists ; 2024 ; 2024 ; Quantum Topology Volume 15 ; 15 ; >
 
   }
 
