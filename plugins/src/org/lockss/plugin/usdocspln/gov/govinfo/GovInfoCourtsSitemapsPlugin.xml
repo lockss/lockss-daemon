@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>25</string>
+    <string>26</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -48,7 +48,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>27</string>
+    <string>28</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -124,6 +124,8 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!-- Improperly relative links that don't return 404 -->
+      <string>2,"^%s.*/html/www\.", base_url</string>
       <!--
       implicit < status ; year ; name ; param[collection_id] ; param[court_id] ; param[year] >
       au < manifest ; 2014 ; USCOURTS_akd 2014 ; USCOURTS ; akd ; 2014 >
@@ -134,7 +136,9 @@ POSSIBILITY OF SUCH DAMAGE.
       https://www.govinfo.gov/metadata/pkg/USCOURTS-akd-1_06-cv-00009/premis.xml
       -->
       <string>2,"^%scontent/pkg/[^/]+\.zip$", base_url</string>
-      <string>1,"^%s(content|metadata)/pkg/%s-%s", base_url, collection_id, court_id</string>
+      <string>1,"^%scontent/pkg/%s-%s", base_url, collection_id, court_id</string>
+      <string>1,"^%smetadata/pkg/%s-%s.*/mods\.xml$", base_url, collection_id, court_id</string>
+      <string>2,"^%smetadata/pkg/%s-%s.*/premis\.xml$", base_url, collection_id, court_id</string>
       <!-- This is a legitimate URL... -->
       <string>1,"^%sapp/dynamic/stylesheets/bootstrap/bootstrap\.min\.css", base_url</string>
       <!-- ...with incorrect relative URLs to ancillary files and error pages are served as 200 ad infinitum -->
