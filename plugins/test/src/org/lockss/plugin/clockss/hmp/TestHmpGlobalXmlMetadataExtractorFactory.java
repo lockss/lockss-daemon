@@ -46,7 +46,7 @@ public class TestHmpGlobalXmlMetadataExtractorFactory extends SourceXmlMetadataE
     private static final Logger log = Logger.getLogger(TestHmpGlobalXmlMetadataExtractorFactory.class);
 
     private static String BaseUrl = "http://source.host.org/sourcefiles/hmpglobal-released/";
-    private static String Directory = "2024_01";
+    private static String Directory = "2024_02";
     private static String pdfUrl1 = BaseUrl + Directory + "/jic_23.00267.pdf";
 
     public void testExtractArticleXmlSchema() throws Exception {
