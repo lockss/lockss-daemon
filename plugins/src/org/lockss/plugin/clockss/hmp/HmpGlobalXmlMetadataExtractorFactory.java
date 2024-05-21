@@ -84,11 +84,8 @@ public class HmpGlobalXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
             //remove xml part of URL
             int lastSubDirectory = cuBase.lastIndexOf("/");
             String pdfName;
-            if(oneAM.getRaw(HmpGlobalSchemaHelper.art_doi) != null && oneAM.getRaw(HmpGlobalSchemaHelper.art_doi) != ""){
-                //get DOI
-                String doi = oneAM.getRaw(HmpGlobalSchemaHelper.art_doi).replace("10.25270/","").replace("/","_");
-                pdfName = cuBase.substring(0, lastSubDirectory) + "/" + doi + ".pdf";
-            }else{
+            //pre-doi content will be stored in 2024_01 bucket
+            if(cuBase.contains("2024_01")){
                 String title = oneAM.getRaw(HmpGlobalSchemaHelper.art_title).trim().replace("/", ".");
                 List<String> titleList = new ArrayList<String>(Arrays.asList(title.split("[\\s:“”]+")));
                 String author = oneAM.getRaw(HmpGlobalSchemaHelper.art_contrib).replace("ñ","n").replace("á","a").replace("’","'");
@@ -104,6 +101,11 @@ public class HmpGlobalXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
                     authorLastName = authorList.get(0);
                 }
                 pdfName = cuBase.substring(0, lastSubDirectory) + "/" + authorLastName + "_" + firstThreeTitleWords + ".pdf";
+
+            }else{
+                //get DOI
+                String doi = oneAM.getRaw(HmpGlobalSchemaHelper.art_doi).replace("10.25270/","").replace("/","_");
+                pdfName = cuBase.substring(0, lastSubDirectory) + "/" + doi + ".pdf";
             }
             log.info("The pdf is: " + pdfName);
             returnList.add(pdfName);
