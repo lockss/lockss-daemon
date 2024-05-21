@@ -6,7 +6,7 @@
     info[back] = 2010 ;
     info[tester] = 8 ;
     info[poller] = 2 ;
-    info[platform] = EMS Custom
+    info[platform] = EMS API. Custom
   >
   #do not include Memoirs of the European Mathematical Society. These are books.
 
@@ -43,23 +43,25 @@
     param[journal_serial_number] = 2678
     param[journal_id] = aihpc
 
-    au < exists ; exists ; 1984 ; 1984 ; Annales de l'Institut Henri Poincaré C Volume 1 ; 1 ; >
-    au < exists ; exists ; 1985 ; 1985 ; Annales de l'Institut Henri Poincaré C Volume 2 ; 2 ; >
-    au < exists ; exists ; 1986 ; 1986 ; Annales de l'Institut Henri Poincaré C Volume 3 ; 3 ; >
-    au < exists ; exists ; 1987 ; 1987 ; Annales de l'Institut Henri Poincaré C Volume 4 ; 4 ; >
-    au < exists ; exists ; 1988 ; 1988 ; Annales de l'Institut Henri Poincaré C Volume 5 ; 5 ; >
-    au < exists ; exists ; 1989 ; 1989 ; Annales de l'Institut Henri Poincaré C Volume 6 ; 6 ; >
-    au < exists ; exists ; 1990 ; 1990 ; Annales de l'Institut Henri Poincaré C Volume 7 ; 7 ; >
-    au < exists ; exists ; 1991 ; 1991 ; Annales de l'Institut Henri Poincaré C Volume 8 ; 8 ; >
-    au < exists ; exists ; 1992 ; 1992 ; Annales de l'Institut Henri Poincaré C Volume 9 ; 9 ; >
-    au < exists ; exists ; 1993 ; 1993 ; Annales de l'Institut Henri Poincaré C Volume 10 ; 10 ; >
-    au < exists ; exists ; 1994 ; 1994 ; Annales de l'Institut Henri Poincaré C Volume 11 ; 11 ; >
-    au < exists ; exists ; 1995 ; 1995 ; Annales de l'Institut Henri Poincaré C Volume 12 ; 12 ; >
-    au < exists ; exists ; 1996 ; 1996 ; Annales de l'Institut Henri Poincaré C Volume 13 ; 13 ; >
-    au < exists ; exists ; 1997 ; 1997 ; Annales de l'Institut Henri Poincaré C Volume 14 ; 14 ; >
-    au < exists ; exists ; 1998 ; 1998 ; Annales de l'Institut Henri Poincaré C Volume 15 ; 15 ; >
-    au < exists ; exists ; 1999 ; 1999 ; Annales de l'Institut Henri Poincaré C Volume 16 ; 16 ; >
-    au < exists ; exists ; 2000 ; 2000 ; Annales de l'Institut Henri Poincaré C Volume 17 ; 17 ; >
+    au < exists ; exists ; 1900 ; 1900 ; Annales de l'Institut Henri Poincaré C Volume 0 ; 0 ; > #Testing the MPC. Should fail.
+
+    au < manifest ; exists ; 1984 ; 1984 ; Annales de l'Institut Henri Poincaré C Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; Annales de l'Institut Henri Poincaré C Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; Annales de l'Institut Henri Poincaré C Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1987 ; 1987 ; Annales de l'Institut Henri Poincaré C Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1988 ; 1988 ; Annales de l'Institut Henri Poincaré C Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1989 ; 1989 ; Annales de l'Institut Henri Poincaré C Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1990 ; 1990 ; Annales de l'Institut Henri Poincaré C Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1991 ; 1991 ; Annales de l'Institut Henri Poincaré C Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1992 ; 1992 ; Annales de l'Institut Henri Poincaré C Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1993 ; 1993 ; Annales de l'Institut Henri Poincaré C Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1994 ; 1994 ; Annales de l'Institut Henri Poincaré C Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1995 ; 1995 ; Annales de l'Institut Henri Poincaré C Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1996 ; 1996 ; Annales de l'Institut Henri Poincaré C Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1997 ; 1997 ; Annales de l'Institut Henri Poincaré C Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1998 ; 1998 ; Annales de l'Institut Henri Poincaré C Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1999 ; 1999 ; Annales de l'Institut Henri Poincaré C Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2000 ; 2000 ; Annales de l'Institut Henri Poincaré C Volume 17 ; 17 ; >
     au < exists ; exists ; 2001 ; 2001 ; Annales de l'Institut Henri Poincaré C Volume 18 ; 18 ; >
     au < exists ; exists ; 2002 ; 2002 ; Annales de l'Institut Henri Poincaré C Volume 19 ; 19 ; >
     au < exists ; exists ; 2003 ; 2003 ; Annales de l'Institut Henri Poincaré C Volume 20 ; 20 ; >

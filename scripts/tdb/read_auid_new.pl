@@ -3198,6 +3198,7 @@ while (my $line = <>) {
     }
     sleep(4);
 
+  #European Mathematical Society Deprecated
   } elsif ($plugin eq "EuropeanMathematicalSocietyPlugin") {
     $url = sprintf("%sjournals/all_issues.php?issn=%s",
       $param{base_url}, $param{journal_issn});
@@ -3223,6 +3224,7 @@ while (my $line = <>) {
     }
     sleep(4);
 
+  #European Mathematical Society Deprecated
   } elsif ($plugin eq "ClockssEuropeanMathematicalSocietyPlugin") {
     $url = sprintf("%sjournals/all_issues.php?issn=%s",
       $param{base_url}, $param{journal_issn});
@@ -3248,9 +3250,10 @@ while (my $line = <>) {
     }
     sleep(4);
 
+  #European Mathematical Society API
   } elsif ($plugin eq "ClockssEuropeanMathematicalSocietyJournalsPlugin") {
-    $url = sprintf("%sjournals/all_issues.php?issn=%s",
-      $param{base_url}, $param{journal_id});
+    $url = sprintf("%sserial-issues?filter[serial]=%s&filter[year]=%d",
+      $param{api_url}, $param{journal_serial_number}, $param{year});
     $man_url = uri_unescape($url);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
@@ -3260,9 +3263,9 @@ while (my $line = <>) {
       if ($req->url ne $resp->request->uri) {
               $vol_title = $resp->request->uri;
               $result = "Redirected";
-      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/vol=$param{volume_name}/)) {
-        if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
-          $vol_title = $1;
+      } elsif (defined($man_contents) && ($man_contents =~ m/$param{year}/) && ($man_contents =~ m/$param{journal_serial_number}/)) {
+        if (($man_contents =~ m/\"name\":"([^\"]*)\"/si)) { #"
+          $vol_title = $1 . " Volume " . $param{year};
         }
         $result = "Manifest"
       } else {
@@ -3273,6 +3276,7 @@ while (my $line = <>) {
     }
     sleep(4);
 
+  #European Mathematical Society Deprecated
   } elsif ($plugin eq "EuropeanMathematicalSocietyBooksPlugin") {
     $url = sprintf("%sbooks/book.php?proj_nr=%s",
       $param{base_url}, $param{book_number});
@@ -3298,6 +3302,7 @@ while (my $line = <>) {
     }
     sleep(4);
 
+  #European Mathematical Society Deprecated
   } elsif ($plugin eq "ClockssEuropeanMathematicalSocietyBooksPlugin") {
     $url = sprintf("%sbooks/book.php?proj_nr=%s",
       $param{base_url}, $param{book_number});
