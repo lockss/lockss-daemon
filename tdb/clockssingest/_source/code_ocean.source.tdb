@@ -30,7 +30,7 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/code-ocean-released/
 
       au < readySource ; finished ; 2023 ; Code Ocean Source Content 2023 ; 2023 >
-      au < manifest ; exists ; 2024 ; Code Ocean Source Content 2024 ; 2024 >
+      au < ready ; exists ; 2024 ; Code Ocean Source Content 2024 ; 2024 >
 
     }
 
