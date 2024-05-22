@@ -23,6 +23,14 @@
     }
 
     {
+    plugin = org.lockss.plugin.clockss.kluwerlaw.ClockssKluwerLawJournalsSourcePlugin
+    param[base_url] = https://clockss-test.lockss.org/sourcefiles/kluwerlawjnls-released/
+
+    au < testing ; exists ; 2024 ; Kluwer Law Journals Content 2024_02 ; 2024_02 >
+
+    }
+
+    {
     #Books
     plugin = org.lockss.plugin.clockss.kluwerlaw.ClockssKluwerLawBooksSourcePlugin
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/kluwerlaw-released/
