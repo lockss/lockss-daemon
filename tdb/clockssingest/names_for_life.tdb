@@ -1,0 +1,24 @@
+{
+
+  publisher <
+    name = Lawrence Berkeley National Laboratory
+    #info[contract] = 2013 ;
+    #info[tester] = 5 ;
+    #info[poller] = 8
+  >
+
+  {
+
+    title <
+      name = Names for Life
+    >
+
+    plugin = org.lockss.plugin.lbnl.ClockssNamesforLifePlugin
+    param[base_url] = https://www.namesforlife.com/
+    implicit < status ; status2 ; year ; name ; hidden[proxy] >
+
+    au < testing ; exists ; 2024 ; Names for Life ; >
+
+  }
+
+}
