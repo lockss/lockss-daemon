@@ -4,7 +4,7 @@
     name = Organisation for Economic Co-operation and Development ;
     info[contract] = 2023 ;
     info[back] = 1950 ;
-    info[tester] = 1 ;
+    info[tester] = 8 ;
     info[platform] = Custom
   >
 
@@ -657,7 +657,7 @@
     au < crawling ; exists ; 2002 ; Revue de l'OCDE sur la gestion budgétaire Volume 2 ; 2 ;  >
     au < crawling ; exists ; 2003 ; Revue de l'OCDE sur la gestion budgétaire Volume 3 ; 3 ;  >
     au < crawling ; exists ; 2004 ; Revue de l'OCDE sur la gestion budgétaire Volume 4 ; 4 ;  >
-    au < exists ; exists ; 2013 ; Revue de l'OCDE sur la gestion budgétaire Volume 12 ; 12 ;  >
+    au < manifest ; exists ; 2013 ; Revue de l'OCDE sur la gestion budgétaire Volume 12 ; 12 ;  >
 
   }
 
@@ -754,6 +754,12 @@
     au < crawling ; exists ; 1994 ; STI Review Volume 1994 ; 1994 ;  >
     au < crawling ; exists ; 1995 ; STI Review Volume 1995 ; 1995 ;  >
     au < crawling ; exists ; 1996 ; STI Review Volume 1996 ; 1996 ;  >
+    au < manifest ; exists ; 1997 ; STI Review Volume 1997 ; 1997 ;  >
+    au < manifest ; exists ; 1998 ; STI Review Volume 1998 ; 1998 ;  >
+    au < manifest ; exists ; 1999 ; STI Review Volume 1999 ; 1999 ;  >
+    au < manifest ; exists ; 2000 ; STI Review Volume 2000 ; 2000 ;  >
+    au < manifest ; exists ; 2001 ; STI Review Volume 2001 ; 2001 ;  >
+    au < manifest ; exists ; 2002 ; STI Review Volume 2002 ; 2002 ;  >
 
   }
 
