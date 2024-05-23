@@ -9,6 +9,7 @@
   >
 
   # Generated 2024-03-20 00:05:51.175144
+  # It appears that content is preserved by actual publication date (when a year is used), not nominal publication date.
 
   plugin = org.lockss.plugin.oecd.ClockssOecdJournalsPlugin
   param[base_url] = https://www.oecd-ilibrary.org/
@@ -49,6 +50,9 @@
     au < crawling ; exists ; 2017 ; Bulletin de droit nucléaire Volume 2017 ; 2017 ;  >
     au < crawling ; exists ; 2018 ; Bulletin de droit nucléaire Volume 2018 ; 2018 ;  >
     au < crawling ; exists ; 2019 ; Bulletin de droit nucléaire Volume 2019 ; 2019 ;  >
+    au < manifest ; exists ; 2020 ; Bulletin de droit nucléaire Volume 2020 ; 2020 ;  >
+    au < manifest ; exists ; 2021 ; Bulletin de droit nucléaire Volume 2021 ; 2021 ;  >
+    au < manifest ; exists ; 2023 ; Bulletin de droit nucléaire Volume 2023 ; 2023 ;  >
 
   }
 
@@ -183,8 +187,16 @@
 
     au < crawling ; exists ; 2004 ; Journal of Business Cycle Measurement and Analysis Volume 2004 ; 2004 ;  >
     au < crawling ; exists ; 2005 ; Journal of Business Cycle Measurement and Analysis Volume 2005 ; 2005 ;  >
-    au < crawling ; exists ; 2006 ; Journal of Business Cycle Measurement and Analysis Volume 2006 ; 2006 ;  >
+    au < superseded ; exists ; 2006 ; Journal of Business Cycle Measurement and Analysis Volume 2006 ; 2006 ;  > # No 2006 volume
     au < crawling ; exists ; 2007 ; Journal of Business Cycle Measurement and Analysis Volume 2007 ; 2007 ;  >
+    au < manifest ; exists ; 2008 ; Journal of Business Cycle Measurement and Analysis Volume 2008 ; 2008 ;  >
+    au < manifest ; exists ; 2009 ; Journal of Business Cycle Measurement and Analysis Volume 2009 ; 2009 ;  >
+    au < manifest ; exists ; 2010 ; Journal of Business Cycle Measurement and Analysis Volume 2010 ; 2010 ;  >
+    au < manifest ; exists ; 2011 ; Journal of Business Cycle Measurement and Analysis Volume 2011 ; 2011 ;  >
+    au < manifest ; exists ; 2012 ; Journal of Business Cycle Measurement and Analysis Volume 2012 ; 2012 ;  >
+    au < manifest ; exists ; 2013 ; Journal of Business Cycle Measurement and Analysis Volume 2013 ; 2013 ;  >
+    au < manifest ; exists ; 2014 ; Journal of Business Cycle Measurement and Analysis Volume 2014 ; 2014 ;  >
+    au < manifest ; exists ; 2015 ; Journal of Business Cycle Measurement and Analysis Volume 2015 ; 2015 ;  >
 
   }
 
@@ -270,7 +282,7 @@
     param[journal_dir] = nuclear-law-bulletin
     param[journal_issn] = 16097378
 
-    au < crawling ; exists ; 1998 ; Nuclear Law Bulletin Volume 1997 ; 1997 ;  >
+    au < superseded ; exists ; 1998 ; Nuclear Law Bulletin Volume 1997 ; 1997 ;  > # There is a 1997 item, published in 1998.
     au < crawling ; exists ; 1999 ; Nuclear Law Bulletin Volume 1998 ; 1998 ;  >
     au < crawling ; exists ; 2000 ; Nuclear Law Bulletin Volume 1999 ; 1999 ;  >
     au < crawling ; exists ; 2001 ; Nuclear Law Bulletin Volume 2000 ; 2000 ;  >
@@ -312,16 +324,16 @@
     param[journal_dir] = oecd-economic-studies
     param[journal_issn] = 16097491
 
-    au < crawling ; exists ; 1998 ; OECD Economic Studies Volume 1997 ; 1997 ;  >
-    au < crawling ; exists ; 1999 ; OECD Economic Studies Volume 1998 ; 1998 ;  >
-    au < crawling ; exists ; 2000 ; OECD Economic Studies Volume 1999 ; 1999 ;  >
-    au < crawling ; exists ; 2001 ; OECD Economic Studies Volume 2000 ; 2000 ;  >
-    au < crawling ; exists ; 2002 ; OECD Economic Studies Volume 2001 ; 2001 ;  >
-    au < crawling ; exists ; 2003 ; OECD Economic Studies Volume 2002 ; 2002 ;  >
-    au < crawling ; exists ; 2004 ; OECD Economic Studies Volume 2003 ; 2003 ;  >
-    au < crawling ; exists ; 2005 ; OECD Economic Studies Volume 2004 ; 2004 ;  >
-    au < crawling ; exists ; 2006 ; OECD Economic Studies Volume 2005 ; 2005 ;  >
-    au < crawling ; exists ; 2007 ; OECD Economic Studies Volume 2006 ; 2006 ;  >
+    au < crawling ; exists ; 1997 ; OECD Economic Studies Volume 1997 ; 1997 ;  >
+    au < superseded ; exists ; 1998 ; OECD Economic Studies Volume 1998 ; 1998 ;  > #does not exist
+    au < superseded ; exists ; 1999 ; OECD Economic Studies Volume 1999 ; 1999 ;  > #does not exist
+    au < crawling ; exists ; 2000 ; OECD Economic Studies Volume 2000 ; 2000 ;  >
+    au < crawling ; exists ; 2001 ; OECD Economic Studies Volume 2001 ; 2001 ;  >
+    au < crawling ; exists ; 2002 ; OECD Economic Studies Volume 2002 ; 2002 ;  >
+    au < crawling ; exists ; 2003 ; OECD Economic Studies Volume 2003 ; 2003 ;  >
+    au < crawling ; exists ; 2004 ; OECD Economic Studies Volume 2004 ; 2004 ;  >
+    au < crawling ; exists ; 2005 ; OECD Economic Studies Volume 2005 ; 2005 ;  >
+    au < crawling ; exists ; 2006 ; OECD Economic Studies Volume 2006 ; 2006 ;  >
 
   }
 
@@ -714,8 +726,8 @@
     param[journal_issn] = 16843444
 
     au < crawling ; exists ; 1997 ; Revue économique de l'OCDE Volume 1997 ; 1997 ;  >
-    au < crawling ; exists ; 1998 ; Revue économique de l'OCDE Volume 1998 ; 1998 ;  >
-    au < crawling ; exists ; 1999 ; Revue économique de l'OCDE Volume 1999 ; 1999 ;  >
+    au < superseded ; exists ; 1998 ; Revue économique de l'OCDE Volume 1998 ; 1998 ;  >
+    au < superseded ; exists ; 1999 ; Revue économique de l'OCDE Volume 1999 ; 1999 ;  >
     au < crawling ; exists ; 2000 ; Revue économique de l'OCDE Volume 2000 ; 2000 ;  >
     au < crawling ; exists ; 2001 ; Revue économique de l'OCDE Volume 2001 ; 2001 ;  >
     au < crawling ; exists ; 2002 ; Revue économique de l'OCDE Volume 2002 ; 2002 ;  >
