@@ -1,0 +1,44 @@
+{
+
+  publisher <
+    name = International Society for the Advancement of Spine Surgery ;
+    info[contract] = 2014 ;
+    info[back] = 2007 ;
+    info[min_year] = 2007 ;
+    info[tester] = 5 ;
+    info[platform] = HW Drupal
+  >
+    plugin = org.lockss.plugin.highwire.aapl.ClockssMMMMMDrupalPlugin
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+
+  {
+
+    title <
+      name = International Journal of Spine Surgery ;
+      eissn = 2211-4599
+    >
+
+    param[base_url] = https://www.ijssurgery.com/
+
+    au < exists ; exists ; 2007 ; International Journal of Spine Surgery Volume 1 ; 1 ; >
+    au < exists ; exists ; 2008 ; International Journal of Spine Surgery Volume 2 ; 2 ; >
+    au < exists ; exists ; 2009 ; International Journal of Spine Surgery Volume 3 ; 3 ; >
+    au < exists ; exists ; 2010 ; International Journal of Spine Surgery Volume 4 ; 4 ; >
+    au < exists ; exists ; 2011 ; International Journal of Spine Surgery Volume 5 ; 5 ; >
+    au < exists ; exists ; 2012 ; International Journal of Spine Surgery Volume 6 ; 6 ; >
+    au < exists ; exists ; 2013 ; International Journal of Spine Surgery Volume 7 ; 7 ; >
+    au < exists ; exists ; 2014 ; International Journal of Spine Surgery Volume 8 ; 8 ; >
+    au < exists ; exists ; 2015 ; International Journal of Spine Surgery Volume 9 ; 9 ; >
+    au < exists ; exists ; 2016 ; International Journal of Spine Surgery Volume 10 ; 10 ; >
+    au < exists ; exists ; 2017 ; International Journal of Spine Surgery Volume 11 ; 11 ; >
+    au < exists ; exists ; 2018 ; International Journal of Spine Surgery Volume 12 ; 12 ; >
+    au < exists ; exists ; 2019 ; International Journal of Spine Surgery Volume 13 ; 13 ; >
+    au < exists ; exists ; 2020 ; International Journal of Spine Surgery Volume 14 ; 14 ; >
+    au < exists ; exists ; 2021 ; International Journal of Spine Surgery Volume 15 ; 15 ; >
+    au < exists ; exists ; 2022 ; International Journal of Spine Surgery Volume 16 ; 16 ; >
+    au < exists ; exists ; 2023 ; International Journal of Spine Surgery Volume 17 ; 17 ; >
+    au < exists ; exists ; 2024 ; International Journal of Spine Surgery Volume 18 ; 18 ; >
+
+    }
+
+}
