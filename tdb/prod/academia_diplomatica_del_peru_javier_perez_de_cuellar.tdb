@@ -1,0 +1,41 @@
+{
+
+  publisher <
+    name = Academia Diplomática del Perú Javier Pérez de Cuéllar ;
+    info[platform] = OJS3
+    
+  >
+    implicit < status ; year ; param[year] ; name ; volume >
+    plugin = org.lockss.plugin.ojs3.Ojs3Plugin
+    attr[start_stem] = index.php/
+
+  {
+
+    title <
+      name = Política Internacional ;
+      issn = 1810-9330 ;
+      eissn = 2707-7330
+     >
+     
+     param[journal_id] = RPI
+     param[base_url] = https://revista.adp.edu.pe/
+     
+     au < manifest ; 2010 ; 2010 ; Política Internacional Volume 2010 ; 2010 >
+     au < manifest ; 2011 ; 2011 ; Política Internacional Volume 2011 ; 2011 >
+     au < manifest ; 2012 ; 2012 ; Política Internacional Volume 2012 ; 2012 >
+     au < manifest ; 2013 ; 2013 ; Política Internacional Volume 2013 ; 2013 >
+     au < manifest ; 2014 ; 2014 ; Política Internacional Volume 2014 ; 2014 >
+     au < manifest ; 2015 ; 2015 ; Política Internacional Volume 2015 ; 2015 >
+     au < manifest ; 2016 ; 2016 ; Política Internacional Volume 2016 ; 2016 >
+     au < manifest ; 2017 ; 2017 ; Política Internacional Volume 2017 ; 2017 >
+     au < manifest ; 2018 ; 2018 ; Política Internacional Volume 2018 ; 2018 >
+     au < doesNotExist ; 2019 ; 2019 ; Política Internacional Volume 2019 ; 2019 >
+     au < manifest ; 2020 ; 2020 ; Política Internacional Volume 2020 ; 2020 >
+     au < manifest ; 2021 ; 2021 ; Política Internacional Volume 129-130 ; 129-130 >
+     au < manifest ; 2022 ; 2022 ; Política Internacional Volume 131-132 ; 131-132 >
+     au < manifest ; 2023 ; 2023 ; Política Internacional Volume 133-134 ; 133-134 >
+     au < expected ; 2024 ; 2024 ; Política Internacional Volume 135-136 ; 135-136 >
+
+  }
+
+}
