@@ -34,7 +34,7 @@ package org.lockss.test;
 
 import java.util.List;
 
-import org.apache.commons.collections.map.LinkedMap;
+import org.apache.commons.collections4.map.LinkedMap;
 
 import org.lockss.alert.AlertManager;
 import org.lockss.account.AccountManager;

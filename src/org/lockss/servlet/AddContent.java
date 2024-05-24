@@ -31,7 +31,7 @@
  */
 package org.lockss.servlet;
 
-import org.apache.commons.collections.map.LinkedMap;
+import org.apache.commons.collections4.map.LinkedMap;
 import org.lockss.config.*;
 import org.lockss.daemon.status.StatusService;
 import org.lockss.daemon.status.StatusTable;

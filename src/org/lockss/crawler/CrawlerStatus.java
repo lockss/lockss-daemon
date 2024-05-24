@@ -36,7 +36,7 @@ import java.util.*;
 
 import org.apache.commons.lang3.mutable.MutableInt;
 import org.apache.commons.collections.set.ListOrderedSet;
-import org.apache.commons.collections.map.LinkedMap;
+import org.apache.commons.collections4.map.LinkedMap;
 import org.apache.commons.collections.iterators.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.CacheException;
