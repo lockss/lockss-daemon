@@ -3520,4 +3520,30 @@
 
   }
 
+  {
+      title <
+        name = RSC Mechanochemistry ;
+        eissn = 2976-8683
+      >
+
+      comment[years] = Published 2024-present
+      param[journal_code] = mr
+
+      au < manifest ; exists ; 2024 ; RSC Mechanochemistry Volume 1 ; 1 ; 2024 ; https://pubs.rsc.org/ ; >
+
+  }
+
+  {
+      title <
+        name = RSC Pharmaceutics ;
+        eissn = 2976-8713
+      >
+
+      comment[years] = Published 2024-present
+      param[journal_code] = pm
+
+      au < manifest ; exists ; 2024 ; RSC Pharmaceutics Volume 1 ; 1 ; 2024 ; https://pubs.rsc.org/ ; >
+
+  }
+
 }
