@@ -40,7 +40,7 @@
     au < ers.ClockssERSDrupalPlugin ; deepCrawl ; exists ; 2021 ; Breathe Volume 17 ; 17 ; https://breathe.ersjournals.com/ ; >
     au < ers.ClockssERSDrupalPlugin ; deepCrawl ; exists ; 2022 ; Breathe Volume 18 ; 18 ; https://breathe.ersjournals.com/ ; >
     au < ers.ClockssERSDrupalPlugin ; deepCrawl ; exists ; 2023 ; Breathe Volume 19 ; 19 ; https://breathe.ersjournals.com/ ; >
-    au < ers.ClockssERSDrupalPlugin ; expected ; exists ; 2024 ; Breathe Volume 20 ; 20 ; https://breathe.ersjournals.com/ ; >
+    au < ers.ClockssERSDrupalPlugin ; manifest ; exists ; 2024 ; Breathe Volume 20 ; 20 ; https://breathe.ersjournals.com/ ; >
 
   }
 
