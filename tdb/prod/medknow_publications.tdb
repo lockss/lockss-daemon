@@ -7323,15 +7323,17 @@
 
   {
     title <
-      name = Journal of Ophthalmology Clinics and Research
+      name = Journal of Ophthalmology Clinics and Research ;
+      issn =  2950-3817 ;
+      eissn = 2950-3809
     >
 #    param[base_url] = https://www.jocr.in/
-
     param[journal_issn] = WKMP-0230
+    #Moved to LWW 
 
     au < down ; 2021 ; Journal of Ophthalmology Clinics and Research Volume 1 ; 2021 ; 1 ; https://www.jocr.in/ >
     au < down ; 2022 ; Journal of Ophthalmology Clinics and Research Volume 2 ; 2022 ; 2 ; https://www.jocr.in/ >
-    au < expected ; 2023 ; Journal of Ophthalmology Clinics and Research Volume 3 ; 2023 ; 3 ; https://www.jocr.in/ >
+    au < doNotProcess ; 2023 ; Journal of Ophthalmology Clinics and Research Volume 3 ; 2023 ; 3 ; https://www.jocr.in/ >
 
   }
 
