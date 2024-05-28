@@ -25,8 +25,8 @@
       #TESTING
       param[base_url] = https://clockss-test.lockss.org/sourcefiles/hmpglobal-released/
 
-      au < ready ; exists ; 2024 ; Journal of Invasive Cardiology Source Content 2024_01 ; 2024_01 > #Old format content - no doi
-      au < ready ; exists ; 2024 ; Journal of Invasive Cardiology Source Content 2024_02 ; 2024_02 > #New format content - with doi
+      au < ready ; exists ; 2024 ; Journal of Invasive Cardiology Source Content 2024_01 [Testing] ; 2024_01 > #Old format content - no doi
+      au < ready ; exists ; 2024 ; Journal of Invasive Cardiology Source Content 2024_02 [Testing] ; 2024_02 > #New format content - with doi
 
     }
 
