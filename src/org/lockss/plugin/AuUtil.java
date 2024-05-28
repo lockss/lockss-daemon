@@ -47,6 +47,7 @@ import org.lockss.jetty.CuResourceHandler;
 import org.lockss.crawler.*;
 import org.lockss.state.*;
 import org.lockss.poller.*;
+import org.lockss.hasher.*;
 import org.lockss.repository.*;
 import org.lockss.plugin.definable.*;
 import org.lockss.plugin.exploded.*;
@@ -85,6 +86,8 @@ public class AuUtil {
   private static int earliestVersionSearchMax =
     DEFAULT_EARLIEST_VERSION_SEARCH_MAX;
 
+  private static boolean isV2Compat = BlockHasher.DEFAULT_V2_COMPAT;
+
   /** Called by org.lockss.config.MiscConfig
    */
   public static void setConfig(Configuration config,
@@ -95,6 +98,8 @@ public class AuUtil {
 	config.getInt(PARAM_EARLIEST_VERSION_SEARCH_MAX,
 		      DEFAULT_EARLIEST_VERSION_SEARCH_MAX);
     }
+    isV2Compat = config.getBoolean(BlockHasher.PARAM_V2_COMPAT,
+                                   BlockHasher.DEFAULT_V2_COMPAT);
   }
 
   public static LockssDaemon getDaemon(ArchivalUnit au) {
@@ -719,6 +724,17 @@ public class AuUtil {
       return (CachedUrl)node;
     }
     return null;
+  }
+
+  public static boolean hasV2Content(CachedUrl cu) {
+    String url = cu.getUrl();
+    ArchivalUnit au = cu.getArchivalUnit();
+    if (isV2Compat && !url.endsWith("/") && au.shouldBeCached(url + "/")) {
+      CIProperties props = cu.getProperties();
+      String nodeUrl = props.getProperty(CachedUrl.PROPERTY_NODE_URL);
+      return UrlUtil.isDirectoryRedirection(url, nodeUrl);
+    }
+    return false;
   }
 
   public static List<String> getRedirectChain(CachedUrl cu) {

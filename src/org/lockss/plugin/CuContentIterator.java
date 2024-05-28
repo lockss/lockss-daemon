@@ -105,15 +105,23 @@ public class CuContentIterator extends CuIterator {
   }
 
   protected boolean isIncluded(CachedUrl cu) {
+    String url = cu.getUrl();
     if (getOptions().isIncludedOnly() &&
-	!cu.getArchivalUnit().shouldBeCached(cu.getUrl())) {
-      log.debug("Excluding " + cu.getUrl());
+	!cu.getArchivalUnit().shouldBeCached(url)) {
+      CIProperties props = cu.getProperties();
+      String nodeUrl = props.getProperty(CachedUrl.PROPERTY_NODE_URL);
+      if (UrlUtil.isDirectoryRedirection(url, nodeUrl) &&
+          cu.getArchivalUnit().shouldBeCached(nodeUrl)) {
+        log.debug2("Including dirnode: " + nodeUrl);
+        return true;
+      }
+      log.debug("Excluding " + url);
       excluded++;
       return false;
     }
     if (getCrawlManager(cu) != null &&
 	getCrawlManager(cu).isGloballyExcludedUrl(cu.getArchivalUnit(),
-						cu.getUrl())) {
+						url)) {
       excluded++;
       return false;
     }

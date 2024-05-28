@@ -232,7 +232,8 @@ public class BaseCachedUrl implements CachedUrl {
     if (leaf == null || !leaf.hasContent()) {
       return false;
     }
-    if (isIncludedOnly() && !au.shouldBeCached(getUrl())) {
+    if (isIncludedOnly() && !au.shouldBeCached(getUrl()) &&
+        !AuUtil.hasV2Content(this)) {
       logger.debug2("hasContent("+getUrl()+"): excluded by crawl rule");
       return false;
     }
