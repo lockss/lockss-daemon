@@ -1816,6 +1816,7 @@
     >
 
     param[journal_id] = btri
+    #moved to archive
 
     au < doNotProcess ; 2011 ; Biotechnology Research International Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; Biotechnology Research International Volume 2012 ; 2012 ; 2012 >
@@ -1826,7 +1827,7 @@
     au < doNotProcess ; 2017 ; Biotechnology Research International Volume 2017 ; 2017 ; 2017 >
     au < released ; 2018 ; Biotechnology Research International Volume 2018 ; 2018 ; 2018 >
     au < doesNotExist ; 2019 ; Biotechnology Research International Volume 2019 ; 2019 ; 2019 >
-    au < manifest ; 2020 ; Biotechnology Research International Volume 2020 ; 2020 ; 2020 >
+    au < exists ; 2020 ; Biotechnology Research International Volume 2020 ; 2020 ; 2020 >
 
   }
 
@@ -11693,6 +11694,336 @@
     au < doesNotExist ; 2022 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2022 ; 2022 ; 2022 >
     au < released ; 2023 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2023 ; 2023 ; 2023 >
     au < manifest ; 2024 ; TRANSBOUNDARY AND EMERGING DISEASES Volume 2024 ; 2024 ; 2024 >
+
+  }
+
+  {
+
+    title <
+       name = GASTROHEP ;
+       issn = 1478-1239 ;
+       eissn = 1478-1239
+    >
+
+    param[journal_id] = ghep
+    comment[years] = 2022-current
+
+    au < exists ; 2022 ; GASTROHEP Volume 2022 ; 2022 ; 2022 >
+    au < exists ; 2023 ; GASTROHEP Volume 2023 ; 2023 ; 2023 >
+    au < exists ; 2024 ; GASTROHEP Volume 2024 ; 2024 ; 2024 >
+
+  }
+
+  {
+
+    title <
+       name = HUMAN BEHAVIOR AND EMERGING TECHNOLOGIES ;
+       issn = 2578-1863 ;
+       eissn = 2578-1863
+    >
+
+    param[journal_id] = hbet
+    comment[years] = 2022-current
+
+    au < exists ; 2022 ; HUMAN BEHAVIOR AND EMERGING TECHNOLOGIES Volume 2022 ; 2022 ; 2022 >
+    au < exists ; 2023 ; HUMAN BEHAVIOR AND EMERGING TECHNOLOGIES Volume 2023 ; 2023 ; 2023 >
+    au < exists ; 2024 ; HUMAN BEHAVIOR AND EMERGING TECHNOLOGIES Volume 2024 ; 2024 ; 2024 >
+
+  }
+
+  {
+
+    title <
+       name = INTERNATIONAL JOURNAL OF CLINICAL PRACTICE ;
+       issn = 1368-5031 ;
+       eissn = 1742-1241
+    >
+
+    param[journal_id] = ijclp
+    comment[years] = 2022-current
+
+    au < exists ; 2022 ; INTERNATIONAL JOURNAL OF CLINICAL PRACTICE Volume 2022 ; 2022 ; 2022 >
+    au < exists ; 2023 ; INTERNATIONAL JOURNAL OF CLINICAL PRACTICE Volume 2023 ; 2023 ; 2023 >
+    au < exists ; 2024 ; INTERNATIONAL JOURNAL OF CLINICAL PRACTICE Volume 2024 ; 2024 ; 2024 >
+
+  }
+
+  {
+
+    title <
+       name = INTERNATIONAL TRANSACTIONS ON ELECTRICAL ENERGY SYSTEMS ;
+       issn = 2050-7038 ;
+       eissn = 2050-7038
+    >
+
+    param[journal_id] = itees
+    comment[years] = 2022-current
+
+    au < exists ; 2022 ; INTERNATIONAL TRANSACTIONS ON ELECTRICAL ENERGY SYSTEMS Volume 2022 ; 2022 ; 2022 >
+    au < exists ; 2023 ; INTERNATIONAL TRANSACTIONS ON ELECTRICAL ENERGY SYSTEMS Volume 2023 ; 2023 ; 2023 >
+    au < exists ; 2024 ; INTERNATIONAL TRANSACTIONS ON ELECTRICAL ENERGY SYSTEMS Volume 2024 ; 2024 ; 2024 >
+
+  }
+
+  {
+
+    title <
+       name = JOURNAL OF THEORETICAL SOCIAL PSYCHOLOGY ;
+       issn = 2475-0387 ;
+       eissn = 2475-0387
+    >
+
+    param[journal_id] = jtsp
+    comment[years] = 2022-current
+
+    au < exists ; 2022 ; JOURNAL OF THEORETICAL SOCIAL PSYCHOLOGY Volume 2022 ; 2022 ; 2022 >
+    au < exists ; 2023 ; JOURNAL OF THEORETICAL SOCIAL PSYCHOLOGY Volume 2023 ; 2023 ; 2023 >
+    au < exists ; 2024 ; JOURNAL OF THEORETICAL SOCIAL PSYCHOLOGY Volume 2024 ; 2024 ; 2024 >
+
+  }
+
+  {
+
+    title <
+       name = JOURNAL OF ZOOLOGICAL SYSTEMATICS AND EVOLUTIONARY RESEARCH ;
+       issn = 0947-5745 ;
+       eissn = 1439-0469
+    >
+
+    param[journal_id] = jzs
+    comment[years] = 2022-current
+
+    au < exists ; 2022 ; JOURNAL OF ZOOLOGICAL SYSTEMATICS AND EVOLUTIONARY RESEARCH Volume 2022 ; 2022 ; 2022 >
+    au < exists ; 2023 ; JOURNAL OF ZOOLOGICAL SYSTEMATICS AND EVOLUTIONARY RESEARCH Volume 2023 ; 2023 ; 2023 >
+    au < exists ; 2024 ; JOURNAL OF ZOOLOGICAL SYSTEMATICS AND EVOLUTIONARY RESEARCH Volume 2024 ; 2024 ; 2024 >
+
+  }
+
+  {
+
+    title <
+       name = MATERIAL DESIGN & PROCESSING COMMUNICATIONS ;
+       issn = 2577-6576 ;
+       eissn = 2577-6576
+    >
+
+    param[journal_id] = mdp
+    comment[years] = 2022-current
+
+    au < exists ; 2022 ; MATERIAL DESIGN & PROCESSING COMMUNICATIONS Volume 2022 ; 2022 ; 2022 >
+    au < exists ; 2023 ; MATERIAL DESIGN & PROCESSING COMMUNICATIONS Volume 2023 ; 2023 ; 2023 >
+    au < exists ; 2024 ; MATERIAL DESIGN & PROCESSING COMMUNICATIONS Volume 2024 ; 2024 ; 2024 >
+
+  }
+
+  {
+
+    title <
+       name = POLYMER CRYSTALLIZATION ;
+       issn = 2573-7619 ;
+       eissn = 2573-7619
+    >
+
+    param[journal_id] = pcrys
+    comment[years] = 2022-current
+
+    au < exists ; 2022 ; POLYMER CRYSTALLIZATION Volume 2022 ; 2022 ; 2022 >
+    au < exists ; 2023 ; POLYMER CRYSTALLIZATION Volume 2023 ; 2023 ; 2023 >
+    au < exists ; 2024 ; POLYMER CRYSTALLIZATION Volume 2024 ; 2024 ; 2024 >
+
+  }
+
+  {
+
+    title <
+       name = QUANTUM ENGINEERING ;
+       issn = 2577-0470 ;
+       eissn = 2577-0470
+    >
+
+    param[journal_id] = que
+    comment[years] = 2022-current
+
+    au < exists ; 2022 ; QUANTUM ENGINEERING Volume 2022 ; 2022 ; 2022 >
+    au < exists ; 2023 ; QUANTUM ENGINEERING Volume 2023 ; 2023 ; 2023 >
+    au < exists ; 2024 ; QUANTUM ENGINEERING Volume 2024 ; 2024 ; 2024 >
+
+  }
+
+  {
+
+    title <
+       name = THE BREAST JOURNAL ;
+       issn = 1075-122X ;
+       eissn = 1524-4741
+    >
+
+    param[journal_id] = tbj
+    comment[years] = 2022-current
+
+    au < exists ; 2022 ; THE BREAST JOURNAL Volume 2022 ; 2022 ; 2022 >
+    au < exists ; 2023 ; THE BREAST JOURNAL Volume 2023 ; 2023 ; 2023 >
+    au < exists ; 2024 ; THE BREAST JOURNAL Volume 2024 ; 2024 ; 2024 >
+
+  }
+
+  {
+
+    title <
+       name = TRANSLATIONAL SPORTS MEDICINE ;
+       issn = 2573-8488 ;
+       eissn = 2573-8488
+    >
+
+    param[journal_id] = tsmed
+    comment[years] = 2022-current
+
+    au < exists ; 2022 ; TRANSLATIONAL SPORTS MEDICINE Volume 2022 ; 2022 ; 2022 >
+    au < exists ; 2023 ; TRANSLATIONAL SPORTS MEDICINE Volume 2023 ; 2023 ; 2023 >
+    au < exists ; 2024 ; TRANSLATIONAL SPORTS MEDICINE Volume 2024 ; 2024 ; 2024 >
+
+  }
+
+  {
+
+    title <
+       name = IET Biometrics ;
+       issn = 2047-4938 ;
+       eissn = 2047-4946
+    >
+
+    param[journal_id] = ietbm
+    comment[years] = 2023-current
+
+    au < exists ; 2023 ; IET Biometrics Volume 2023 ; 2023 ; 2023 >
+    au < exists ; 2024 ; IET Biometrics Volume 2024 ; 2024 ; 2024 >
+
+  }
+
+  {
+
+    title <
+       name =  IET Circuits,  Devices & Systems ;
+       issn = 1751-858X ;
+       eissn = 1751-8598
+    >
+
+    param[journal_id] = ietcds
+    comment[years] = 2023-current
+
+    au < exists ; 2023 ;  IET Circuits,  Devices & Systems Volume 2023 ; 2023 ; 2023 >
+    au < exists ; 2024 ;  IET Circuits,  Devices & Systems Volume 2024 ; 2024 ; 2024 >
+
+  }
+
+  {
+
+    title <
+       name =  IET Computers & Digital Techniques ;
+       issn = 1751-8601 ;
+       eissn = 1751-861X
+    >
+
+    param[journal_id] = ietcdt
+    comment[years] = 2023-current
+
+    au < exists ; 2023 ;  IET Computers & Digital Techniques Volume 2023 ; 2023 ; 2023 >
+    au < exists ; 2024 ;  IET Computers & Digital Techniques Volume 2024 ; 2024 ; 2024 >
+
+  }
+
+  {
+
+    title <
+       name =  IET Electrical Systems in Transportation ;
+       issn = 2042-9738 ;
+       eissn = 2042-9746
+    >
+
+    param[journal_id] = ietest
+    comment[years] = 2023-current
+
+    au < exists ; 2023 ;  IET Electrical Systems in Transportation Volume 2023 ; 2023 ; 2023 >
+    au < exists ; 2024 ;  IET Electrical Systems in Transportation Volume 2024 ; 2024 ; 2024 >
+
+  }
+
+  {
+
+    title <
+       name =  IET Information Security ;
+       issn = 1751-8709 ;
+       eissn = 1751-8717
+    >
+
+    param[journal_id] = ietis
+    comment[years] = 2023-current
+
+    au < exists ; 2023 ;  IET Information Security Volume 2023 ; 2023 ; 2023 >
+    au < exists ; 2024 ;  IET Information Security Volume 2024 ; 2024 ; 2024 >
+
+  }
+
+  {
+
+    title <
+       name =  IET Nanobiotechnology ;
+       issn = 1751-8741 ;
+       eissn = 1751-875X
+    >
+
+    param[journal_id] = ietnbt
+    comment[years] = 2023-current
+
+    au < exists ; 2023 ;  IET Nanobiotechnology Volume 2023 ; 2023 ; 2023 >
+    au < exists ; 2024 ;  IET Nanobiotechnology Volume 2024 ; 2024 ; 2024 >
+
+  }
+
+  {
+
+    title <
+       name =  IET Signal Processing ;
+       issn = 1751-9675 ;
+       eissn = 1751-9683
+    >
+
+    param[journal_id] = ietsp
+    comment[years] = 2023-current
+
+    au < exists ; 2023 ;  IET Signal Processing Volume 2023 ; 2023 ; 2023 >
+    au < exists ; 2024 ;  IET Signal Processing Volume 2024 ; 2024 ; 2024 >
+
+  }
+
+  {
+
+    title <
+       name =  IET Software ;
+       issn = 1751-8806 ;
+       eissn = 1751-8814
+    >
+
+    param[journal_id] = ietsfw
+    comment[years] = 2023-current
+
+    au < exists ; 2023 ;  IET Software Volume 2023 ; 2023 ; 2023 >
+    au < exists ; 2024 ;  IET Software Volume 2024 ; 2024 ; 2024 >
+
+  }
+
+  {
+
+    title <
+       name = Nanomaterials and Nanotechnology ;
+       eissn = 1847-9804
+    >
+
+    param[journal_id] = nax
+    comment[years] = 2023-current
+
+    au < exists ; 2023 ; Nanomaterials and Nanotechnology Volume 2023 ; 2023 ; 2023 >
+    au < exists ; 2024 ; Nanomaterials and Nanotechnology Volume 2024 ; 2024 ; 2024 >
 
   }
 
