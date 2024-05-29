@@ -1,0 +1,36 @@
+{
+
+  publisher <
+    name = University Press of Morocco ;
+    info[contract] = 2008 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+  
+  plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+  implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+  
+  {
+
+    title <
+      name = Health Sciences ;
+      eissn = 2658-865X
+    >
+
+    {
+    param[base_url] = https://publishing.universitypress.ma/
+    param[journal_abbr] = health-sciences
+
+    au < manifest ; exists ; 2020 ; Health Sciences Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2021 ; Health Sciences Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2022 ; Health Sciences Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2023 ; Health Sciences Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2024 ; Health Sciences Volume 5 ; 5 ; >
+
+    }
+  }
+
+}
