@@ -5,7 +5,7 @@
     info[contract] = 2014 ;
     info[back] = 2007 ;
     info[min_year] = 2007 ;
-    info[tester] = 5 ;
+    info[tester] = 4 ;
     info[platform] = HW Drupal
   >
     plugin = org.lockss.plugin.highwire.isass.ClockssIsassDrupalPlugin
@@ -35,8 +35,8 @@
     au < manifest ; exists ; 2019 ; International Journal of Spine Surgery Volume 13 ; 13 ; >
     au < manifest ; exists ; 2020 ; International Journal of Spine Surgery Volume 14 ; 14 ; >
     au < manifest ; exists ; 2021 ; International Journal of Spine Surgery Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2022 ; International Journal of Spine Surgery Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2023 ; International Journal of Spine Surgery Volume 17 ; 17 ; >
+    au < testing ; exists ; 2022 ; International Journal of Spine Surgery Volume 16 ; 16 ; >
+    au < testing ; exists ; 2023 ; International Journal of Spine Surgery Volume 17 ; 17 ; >
     au < manifest ; exists ; 2024 ; International Journal of Spine Surgery Volume 18 ; 18 ; >
 
     }
