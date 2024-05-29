@@ -755,15 +755,15 @@
 
     param[journal_issn] = 0972-9747
 
-    au < released ; 2004 ; Hepatitis B Annual Volume 1 ; 2004 ; 1 ; https://www.hepatitisbannual.org/ >
-    au < released ; 2005 ; Hepatitis B Annual Volume 2 ; 2005 ; 2 ; https://www.hepatitisbannual.org/ >
-    au < released ; 2006 ; Hepatitis B Annual Volume 3 ; 2006 ; 3 ; https://www.hepatitisbannual.org/ >
-    au < released ; 2007 ; Hepatitis B Annual Volume 4 ; 2007 ; 4 ; https://www.hepatitisbannual.org/ >
-    au < released ; 2008 ; Hepatitis B Annual Volume 5 ; 2008 ; 5 ; https://www.hepatitisbannual.org/ >
-    au < released ; 2009 ; Hepatitis B Annual Volume 6 ; 2009 ; 6 ; https://www.hepatitisbannual.org/ >
-    au < released ; 2010 ; Hepatitis B Annual Volume 7 ; 2010 ; 7 ; https://www.hepatitisbannual.org/ >
-    au < released ; 2011 ; Hepatitis B Annual Volume 8 ; 2011 ; 8 ; http://www.hepatitisbannual.org/ >
-    au < released ; 2012 ; Hepatitis B Annual Volume 9 ; 2012 ; 9 ; http://www.hepatitisbannual.org/ >
+    au < down ; 2004 ; Hepatitis B Annual Volume 1 ; 2004 ; 1 ; https://www.hepatitisbannual.org/ >
+    au < down ; 2005 ; Hepatitis B Annual Volume 2 ; 2005 ; 2 ; https://www.hepatitisbannual.org/ >
+    au < down ; 2006 ; Hepatitis B Annual Volume 3 ; 2006 ; 3 ; https://www.hepatitisbannual.org/ >
+    au < down ; 2007 ; Hepatitis B Annual Volume 4 ; 2007 ; 4 ; https://www.hepatitisbannual.org/ >
+    au < down ; 2008 ; Hepatitis B Annual Volume 5 ; 2008 ; 5 ; https://www.hepatitisbannual.org/ >
+    au < down ; 2009 ; Hepatitis B Annual Volume 6 ; 2009 ; 6 ; https://www.hepatitisbannual.org/ >
+    au < down ; 2010 ; Hepatitis B Annual Volume 7 ; 2010 ; 7 ; https://www.hepatitisbannual.org/ >
+    au < down ; 2011 ; Hepatitis B Annual Volume 8 ; 2011 ; 8 ; http://www.hepatitisbannual.org/ >
+    au < down ; 2012 ; Hepatitis B Annual Volume 9 ; 2012 ; 9 ; http://www.hepatitisbannual.org/ >
 
   }
 
@@ -1137,12 +1137,12 @@
     au < doNotProcess ; 1998 ; Indian Journal of Endocrinology and Metabolism Volume 2 ; 1998 ; 2 ; https://www.ijem.in/ >
     au < doNotProcess ; 1999 ; Indian Journal of Endocrinology and Metabolism Volume 3 ; 1999 ; 3 ; https://www.ijem.in/ >
     au < doNotProcess ; 2000 ; Indian Journal of Endocrinology and Metabolism Volume 4 ; 2000 ; 4 ; https://www.ijem.in/ >
-    au < doesNotExist ; 2001 ; Indian Journal of Endocrinology and Metabolism Volume 5 ; 2001 ; 5 ; http://www.ijem.in/ >
+    au < doNotProcess ; 2001 ; Indian Journal of Endocrinology and Metabolism Volume 5 ; 2001 ; 5 ; http://www.ijem.in/ >
     au < doNotProcess ; 2004 ; Indian Journal of Endocrinology and Metabolism Volume 6 ; 2004 ; 6 ; https://www.ijem.in/ >
-    au < doesNotExist ; 2003 ; Indian Journal of Endocrinology and Metabolism Volume 7 ; 2003 ; 7 ; http://www.ijem.in/ >
+    au < doNotProcess ; 2003 ; Indian Journal of Endocrinology and Metabolism Volume 7 ; 2003 ; 7 ; http://www.ijem.in/ >
     au < doNotProcess ; 2006 ; Indian Journal of Endocrinology and Metabolism Volume 8 ; 2006 ; 8 ; https://www.ijem.in/ >
-    au < doesNotExist ; 2005 ; Indian Journal of Endocrinology and Metabolism Volume 9 ; 2005 ; 9 ; http://www.ijem.in/ >
-    au < doesNotExist ; 2006 ; Indian Journal of Endocrinology and Metabolism Volume 10 ; 2006 ; 10 ; http://www.ijem.in/ >
+    au < doNotProcess ; 2005 ; Indian Journal of Endocrinology and Metabolism Volume 9 ; 2005 ; 9 ; http://www.ijem.in/ >
+    au < doNotProcess ; 2006 ; Indian Journal of Endocrinology and Metabolism Volume 10 ; 2006 ; 10 ; http://www.ijem.in/ >
     au < doNotProcess ; 2007 ; Indian Journal of Endocrinology and Metabolism Volume 11 ; 2007 ; 11 ; https://www.ijem.in/ >
     au < doNotProcess ; 2008 ; Indian Journal of Endocrinology and Metabolism Volume 12 ; 2008 ; 12 ; https://www.ijem.in/ >
     au < doNotProcess ; 2009 ; Indian Journal of Endocrinology and Metabolism Volume 13 ; 2009 ; 13 ; https://www.ijem.in/ >
@@ -1214,7 +1214,7 @@
     param[journal_issn] = 0255-0857
 
     au < doNotProcess ; 1984 ; Indian Journal of Medical Microbiology Volume 2 ; 1984 ; 2 ; https://www.ijmm.org/ >
-    au < doesNotExist ; 0 ; Indian Journal of Medical Microbiology Volume 3 ; 0 ; 0 ; http://www.ijmm.org/ >
+    au < doNotProcess ; 0 ; Indian Journal of Medical Microbiology Volume 3 ; 0 ; 0 ; http://www.ijmm.org/ >
     au < doNotProcess ; 1986 ; Indian Journal of Medical Microbiology Volume 4 ; 1986 ; 4 ; https://www.ijmm.org/ >
     au < doNotProcess ; 1987 ; Indian Journal of Medical Microbiology Volume 5 ; 1987 ; 5 ; https://www.ijmm.org/ >
     au < doNotProcess ; 1988 ; Indian Journal of Medical Microbiology Volume 6 ; 1988 ; 6 ; https://www.ijmm.org/ >
@@ -1223,7 +1223,7 @@
     au < doNotProcess ; 1991 ; Indian Journal of Medical Microbiology Volume 9 ; 1991 ; 9 ; https://www.ijmm.org/ >
     au < doNotProcess ; 1992 ; Indian Journal of Medical Microbiology Volume 10 ; 1992 ; 10 ; https://www.ijmm.org/ >
     au < doNotProcess ; 1993 ; Indian Journal of Medical Microbiology Volume 11 ; 1993 ; 11 ; https://www.ijmm.org/ >
-    au < doesNotExist ; 0 ; Indian Journal of Medical Microbiology Volume 12 ; 0 ; 0 ; http://www.ijmm.org/ >
+    au < doNotProcess ; 0 ; Indian Journal of Medical Microbiology Volume 12 ; 0 ; 0 ; http://www.ijmm.org/ >
     au < doNotProcess ; 1995 ; Indian Journal of Medical Microbiology Volume 13 ; 1995 ; 13 ; https://www.ijmm.org/ >
     au < doNotProcess ; 1996 ; Indian Journal of Medical Microbiology Volume 14 ; 1996 ; 14 ; https://www.ijmm.org/ >
     au < doNotProcess ; 1997 ; Indian Journal of Medical Microbiology Volume 15 ; 1997 ; 15 ; https://www.ijmm.org/ >
@@ -1310,7 +1310,7 @@
     au < doNotProcess ; 2003 ; Indian Journal of Nephrology Volume 13 ; 2003 ; 13 ; https://www.indianjnephrol.org/ >
     au < doNotProcess ; 2004 ; Indian Journal of Nephrology Volume 14 ; 2004 ; 14 ; https://www.indianjnephrol.org/ >
     au < doNotProcess ; 2005 ; Indian Journal of Nephrology Volume 15 ; 2005 ; 15 ; https://www.indianjnephrol.org/ >
-    au < doesNotExist ; 2006 ; Indian Journal of Nephrology Volume 16 ; 2006 ; 16 ; https://www.indianjnephrol.org/ >
+    au < doNotProcess ; 2006 ; Indian Journal of Nephrology Volume 16 ; 2006 ; 16 ; https://www.indianjnephrol.org/ >
     au < doNotProcess ; 2007 ; Indian Journal of Nephrology Volume 17 ; 2007 ; 17 ; https://www.indianjnephrol.org/ >
     au < doNotProcess ; 2008 ; Indian Journal of Nephrology Volume 18 ; 2008 ; 18 ; https://www.indianjnephrol.org/ >
     au < doNotProcess ; 2009 ; Indian Journal of Nephrology Volume 19 ; 2009 ; 19 ; https://www.indianjnephrol.org/ >
@@ -1344,8 +1344,8 @@
 
     au < doNotProcess ; 2006 ; Indian Journal of Nuclear Medicine Volume 21 ; 2006 ; 21 ; https://www.ijnm.in/ >
     au < doNotProcess ; 2007 ; Indian Journal of Nuclear Medicine Volume 22 ; 2007 ; 22 ; https://www.ijnm.in/ >
-    au < doesNotExist ; 2008 ; Indian Journal of Nuclear Medicine Volume 23 ; 0 ; 0 ; http://www.ijnm.in/ >
-    au < doesNotExist ; 2009 ; Indian Journal of Nuclear Medicine Volume 24 ; 0 ; 0 ; http://www.ijnm.in/ >
+    au < doNotProcess ; 2008 ; Indian Journal of Nuclear Medicine Volume 23 ; 0 ; 0 ; http://www.ijnm.in/ >
+    au < doNotProcess ; 2009 ; Indian Journal of Nuclear Medicine Volume 24 ; 0 ; 0 ; http://www.ijnm.in/ >
     au < down ; 2010 ; Indian Journal of Nuclear Medicine Volume 25 ; 2010 ; 25 ; https://www.ijnm.in/ >
     au < down ; 2011 ; Indian Journal of Nuclear Medicine Volume 26 ; 2011 ; 26 ; http://www.ijnm.in/ >
     au < down ; 2012 ; Indian Journal of Nuclear Medicine Volume 27 ; 2012 ; 27 ; http://www.ijnm.in/ >
@@ -1511,9 +1511,9 @@
     au < doNotProcess ; 1967 ; Indian Journal of Orthopaedics Volume 1 ; 1967 ; 1 ; https://www.ijoonline.com/ >
     au < doNotProcess ; 1968 ; Indian Journal of Orthopaedics Volume 2 ; 1968 ; 2 ; https://www.ijoonline.com/ >
     au < doNotProcess ; 1969 ; Indian Journal of Orthopaedics Volume 3 ; 1969 ; 3 ; https://www.ijoonline.com/ >
-    au < doesNotExist ; 1970 ; Indian Journal of Orthopaedics Volume 4 ; 0 ; 0 ; http://www.ijoonline.com/ >
-    au < doesNotExist ; 1971 ; Indian Journal of Orthopaedics Volume 5 ; 0 ; 0 ; http://www.ijoonline.com/ >
-    au < doesNotExist ; 1972 ; Indian Journal of Orthopaedics Volume 6 ; 0 ; 0 ; http://www.ijoonline.com/ >
+    au < doNotProcess ; 1970 ; Indian Journal of Orthopaedics Volume 4 ; 0 ; 0 ; http://www.ijoonline.com/ >
+    au < doNotProcess ; 1971 ; Indian Journal of Orthopaedics Volume 5 ; 0 ; 0 ; http://www.ijoonline.com/ >
+    au < doNotProcess ; 1972 ; Indian Journal of Orthopaedics Volume 6 ; 0 ; 0 ; http://www.ijoonline.com/ >
     au < doNotProcess ; 1973 ; Indian Journal of Orthopaedics Volume 7 ; 1973 ; 7 ; https://www.ijoonline.com/ >
     au < doNotProcess ; 1974 ; Indian Journal of Orthopaedics Volume 8 ; 1974 ; 8 ; https://www.ijoonline.com/ >
     au < doNotProcess ; 1975 ; Indian Journal of Orthopaedics Volume 9 ; 1975 ; 9 ; https://www.ijoonline.com/ >
@@ -1530,16 +1530,16 @@
     au < doNotProcess ; 1986 ; Indian Journal of Orthopaedics Volume 20 ; 1986 ; 20 ; https://www.ijoonline.com/ >
     au < doNotProcess ; 1987 ; Indian Journal of Orthopaedics Volume 21 ; 1987 ; 21 ; https://www.ijoonline.com/ >
     au < doNotProcess ; 1988 ; Indian Journal of Orthopaedics Volume 22 ; 1988 ; 22 ; https://www.ijoonline.com/ >
-    au < doesNotExist ; 1989 ; Indian Journal of Orthopaedics Volume 23 ; 0 ; 0 ; http://www.ijoonline.com/ >
-    au < doesNotExist ; 1990 ; Indian Journal of Orthopaedics Volume 24 ; 0 ; 0 ; http://www.ijoonline.com/ >
-    au < doesNotExist ; 1991 ; Indian Journal of Orthopaedics Volume 25 ; 0 ; 0 ; http://www.ijoonline.com/ >
+    au < doNotProcess ; 1989 ; Indian Journal of Orthopaedics Volume 23 ; 0 ; 0 ; http://www.ijoonline.com/ >
+    au < doNotProcess ; 1990 ; Indian Journal of Orthopaedics Volume 24 ; 0 ; 0 ; http://www.ijoonline.com/ >
+    au < doNotProcess ; 1991 ; Indian Journal of Orthopaedics Volume 25 ; 0 ; 0 ; http://www.ijoonline.com/ >
     au < doNotProcess ; 1992 ; Indian Journal of Orthopaedics Volume 26 ; 1992 ; 26 ; https://www.ijoonline.com/ >
-    au < doesNotExist ; 1993 ; Indian Journal of Orthopaedics Volume 27 ; 0 ; 0 ; http://www.ijoonline.com/ >
+    au < doNotProcess ; 1993 ; Indian Journal of Orthopaedics Volume 27 ; 0 ; 0 ; http://www.ijoonline.com/ >
     au < doNotProcess ; 1994 ; Indian Journal of Orthopaedics Volume 28 ; 1994 ; 28 ; https://www.ijoonline.com/ >
     au < doNotProcess ; 1995 ; Indian Journal of Orthopaedics Volume 29 ; 1995 ; 29 ; https://www.ijoonline.com/ >
     au < doNotProcess ; 1996 ; Indian Journal of Orthopaedics Volume 30 ; 1996 ; 30 ; https://www.ijoonline.com/ >
     au < doNotProcess ; 1997 ; Indian Journal of Orthopaedics Volume 31 ; 1997 ; 31 ; https://www.ijoonline.com/ >
-    au < doesNotExist ; 1998 ; Indian Journal of Orthopaedics Volume 32 ; 0 ; 0 ; http://www.ijoonline.com/ >
+    au < doNotProcess ; 1998 ; Indian Journal of Orthopaedics Volume 32 ; 0 ; 0 ; http://www.ijoonline.com/ >
     au < doNotProcess ; 1999 ; Indian Journal of Orthopaedics Volume 33 ; 1999 ; 33 ; https://www.ijoonline.com/ >
     au < doNotProcess ; 2000 ; Indian Journal of Orthopaedics Volume 34 ; 2000 ; 34 ; https://www.ijoonline.com/ >
     au < doNotProcess ; 2001 ; Indian Journal of Orthopaedics Volume 35 ; 2001 ; 35 ; https://www.ijoonline.com/ >
@@ -1669,9 +1669,9 @@
     au < doNotProcess ; 2000 ; Indian Journal of Pathology and Microbiology Volume 43 ; 2000 ; 43 ; https://www.ijpmonline.org/ >
     au < doNotProcess ; 2001 ; Indian Journal of Pathology and Microbiology Volume 44 ; 2001 ; 44 ; https://www.ijpmonline.org/ >
     au < doNotProcess ; 2002 ; Indian Journal of Pathology and Microbiology Volume 45 ; 2002 ; 45 ; https://www.ijpmonline.org/ >
-    au < doesNotExist ; 2003 ; Indian Journal of Pathology and Microbiology Volume 46 ; 2003 ; 46 ; https://www.ijpmonline.org/ >
-    au < doesNotExist ; 2004 ; Indian Journal of Pathology and Microbiology Volume 47 ; 2004 ; 47 ; https://www.ijpmonline.org/ >
-    au < doesNotExist ; 2005 ; Indian Journal of Pathology and Microbiology Volume 48 ; 2005 ; 48 ; https://www.ijpmonline.org/ >
+    au < doNotProcess ; 2003 ; Indian Journal of Pathology and Microbiology Volume 46 ; 2003 ; 46 ; https://www.ijpmonline.org/ >
+    au < doNotProcess ; 2004 ; Indian Journal of Pathology and Microbiology Volume 47 ; 2004 ; 47 ; https://www.ijpmonline.org/ >
+    au < doNotProcess ; 2005 ; Indian Journal of Pathology and Microbiology Volume 48 ; 2005 ; 48 ; https://www.ijpmonline.org/ >
     au < doNotProcess ; 2006 ; Indian Journal of Pathology and Microbiology Volume 49 ; 2006 ; 49 ; https://www.ijpmonline.org/ >
     au < doNotProcess ; 2007 ; Indian Journal of Pathology and Microbiology Volume 50 ; 2007 ; 50 ; https://www.ijpmonline.org/ >
     au < doNotProcess ; 2008 ; Indian Journal of Pathology and Microbiology Volume 51 ; 2008 ; 51 ; https://www.ijpmonline.org/ >
@@ -1742,7 +1742,7 @@
     au < doNotProcess ; 1983 ; Indian Journal of Pharmacology Volume 15 ; 1983 ; 15 ; https://www.ijp-online.com/ >
     au < doNotProcess ; 1984 ; Indian Journal of Pharmacology Volume 16 ; 1984 ; 16 ; https://www.ijp-online.com/ >
     au < doNotProcess ; 1985 ; Indian Journal of Pharmacology Volume 17 ; 1985 ; 17 ; https://www.ijp-online.com/ >
-    au < doesNotExist ; 1986 ; Indian Journal of Pharmacology Volume 18 ; 0 ; 0 ; http://www.ijp-online.com/ >
+    au < doNotProcess ; 1986 ; Indian Journal of Pharmacology Volume 18 ; 0 ; 0 ; http://www.ijp-online.com/ >
     au < doNotProcess ; 1987 ; Indian Journal of Pharmacology Volume 19 ; 1987 ; 19 ; https://www.ijp-online.com/ >
     au < doNotProcess ; 1988 ; Indian Journal of Pharmacology Volume 20 ; 1988 ; 20 ; https://www.ijp-online.com/ >
     au < doNotProcess ; 1989 ; Indian Journal of Pharmacology Volume 21 ; 1989 ; 21 ; https://www.ijp-online.com/ >
@@ -1798,7 +1798,7 @@
     au < doNotProcess ; 1986 ; Indian Journal of Plastic Surgery Volume 19 ; 1986 ; 19 ; https://www.ijps.org/ >
     au < doNotProcess ; 1987 ; Indian Journal of Plastic Surgery Volume 20 ; 1987 ; 20 ; https://www.ijps.org/ >
     au < doNotProcess ; 1988 ; Indian Journal of Plastic Surgery Volume 21 ; 1988 ; 21 ; https://www.ijps.org/ >
-    au < doesNotExist ; 1989 ; Indian Journal of Plastic Surgery Volume 22 ; 0 ; 0 ; http://www.ijps.org/ >
+    au < doNotProcess ; 1989 ; Indian Journal of Plastic Surgery Volume 22 ; 0 ; 0 ; http://www.ijps.org/ >
     au < doNotProcess ; 1990 ; Indian Journal of Plastic Surgery Volume 23 ; 1990 ; 23 ; https://www.ijps.org/ >
     au < doNotProcess ; 1991 ; Indian Journal of Plastic Surgery Volume 24 ; 1991 ; 24 ; https://www.ijps.org/ >
     au < doNotProcess ; 1992 ; Indian Journal of Plastic Surgery Volume 25 ; 1992 ; 25 ; https://www.ijps.org/ >
@@ -1806,12 +1806,12 @@
     au < doNotProcess ; 1994 ; Indian Journal of Plastic Surgery Volume 27 ; 1994 ; 27 ; https://www.ijps.org/ >
     au < doNotProcess ; 1995 ; Indian Journal of Plastic Surgery Volume 28 ; 1995 ; 28 ; https://www.ijps.org/ >
     au < doNotProcess ; 1996 ; Indian Journal of Plastic Surgery Volume 29 ; 1996 ; 29 ; https://www.ijps.org/ >
-    au < doesNotExist ; 1997 ; Indian Journal of Plastic Surgery Volume 30 ; 0 ; 0 ; http://www.ijps.org/ >
-    au < doesNotExist ; 1998 ; Indian Journal of Plastic Surgery Volume 31 ; 0 ; 0 ; http://www.ijps.org/ >
-    au < doesNotExist ; 1999 ; Indian Journal of Plastic Surgery Volume 32 ; 0 ; 0 ; http://www.ijps.org/ >
-    au < doesNotExist ; 2000 ; Indian Journal of Plastic Surgery Volume 33 ; 0 ; 0 ; http://www.ijps.org/ >
+    au < doNotProcess ; 1997 ; Indian Journal of Plastic Surgery Volume 30 ; 0 ; 0 ; http://www.ijps.org/ >
+    au < doNotProcess ; 1998 ; Indian Journal of Plastic Surgery Volume 31 ; 0 ; 0 ; http://www.ijps.org/ >
+    au < doNotProcess ; 1999 ; Indian Journal of Plastic Surgery Volume 32 ; 0 ; 0 ; http://www.ijps.org/ >
+    au < doNotProcess ; 2000 ; Indian Journal of Plastic Surgery Volume 33 ; 0 ; 0 ; http://www.ijps.org/ >
     au < doNotProcess ; 2001 ; Indian Journal of Plastic Surgery 34 ; 2001 ; 34 ; https://www.ijps.org/ >
-    au < doesNotExist ; 2002 ; Indian Journal of Plastic Surgery Volume 35 ; 0 ; 0 ; http://www.ijps.org/ >
+    au < doNotProcess ; 2002 ; Indian Journal of Plastic Surgery Volume 35 ; 0 ; 0 ; http://www.ijps.org/ >
     au < doNotProcess ; 2003 ; Indian Journal of Plastic Surgery Volume 36 ; 2003 ; 36 ; https://www.ijps.org/ >
     au < doNotProcess ; 2004 ; Indian Journal of Plastic Surgery Volume 37 ; 2004 ; 37 ; https://www.ijps.org/ >
     au < doNotProcess ; 2005 ; Indian Journal of Plastic Surgery Volume 38 ; 2005 ; 38 ; https://www.ijps.org/ >
@@ -1855,7 +1855,7 @@
     au < doNotProcess ; 1966 ; Indian Journal of Psychiatry Volume 8 ; 1966 ; 8 ; https://www.indianjpsychiatry.org/ >
     au < doNotProcess ; 1967 ; Indian Journal of Psychiatry Volume 9 ; 1967 ; 9 ; https://www.indianjpsychiatry.org/ >
     au < doNotProcess ; 1968 ; Indian Journal of Psychiatry Volume 10 ; 1968 ; 10 ; https://www.indianjpsychiatry.org/ >
-    au < doesNotExist ; 1969 ; Indian Journal of Psychiatry Volume 11 ; 0 ; 0 ; http://www.indianjpsychiatry.org/ >
+    au < doNotProcess ; 1969 ; Indian Journal of Psychiatry Volume 11 ; 0 ; 0 ; http://www.indianjpsychiatry.org/ >
     au < doNotProcess ; 1970 ; Indian Journal of Psychiatry Volume 12 ; 1970 ; 12 ; https://www.indianjpsychiatry.org/ >
     au < doNotProcess ; 1971 ; Indian Journal of Psychiatry Volume 13 ; 1971 ; 13 ; https://www.indianjpsychiatry.org/ >
     au < doNotProcess ; 1972 ; Indian Journal of Psychiatry Volume 14 ; 1972 ; 14 ; https://www.indianjpsychiatry.org/ >
@@ -2080,9 +2080,9 @@
     # new issn and eissn -- changed since 2017
     param[journal_issn] = 2589-0557
 
-    au < manifest ; 2007 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 28 ; 2007 ; 28 ; https://www.ijstd.org/ >
-    au < manifest ; 2008 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 29 ; 2008 ; 29 ; https://www.ijstd.org/ >
-    au < manifest ; 2009 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 30 ; 2009 ; 30 ; https://www.ijstd.org/ >
+    au < doNotProcess ; 2007 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 28 ; 2007 ; 28 ; https://www.ijstd.org/ >
+    au < doNotProcess ; 2008 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 29 ; 2008 ; 29 ; https://www.ijstd.org/ >
+    au < doNotProcess ; 2009 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 30 ; 2009 ; 30 ; https://www.ijstd.org/ >
     au < down ; 2010 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 31 ; 2010 ; 31 ; https://www.ijstd.org/ >
     au < doNotProcess ; 2011 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 32 ; 2011 ; 32 ; http://www.ijstd.org/ >
     au < doNotProcess ; 2012 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 33 ; 2012 ; 33 ; http://www.ijstd.org/ >
@@ -2095,8 +2095,8 @@
     au < down ; 2019 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 40 ; 2019 ; 40 ; https://www.ijstd.org/ >
     au < down ; 2020 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 41 ; 2020 ; 41 ; https://www.ijstd.org/ >
     au < down ; 2021 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 42 ; 2021 ; 42 ; https://www.ijstd.org/ >
-    au < manifest ; 2022 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 43 ; 2022 ; 43 ; https://www.ijstd.org/ >
-    au < manifest ; 2023 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 44 ; 2023 ; 44 ; https://www.ijstd.org/ >
+    au < doNotProcess ; 2022 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 43 ; 2022 ; 43 ; https://www.ijstd.org/ >
+    au < doNotProcess ; 2023 ; Indian Journal of Sexually Transmitted Diseases and AIDS Volume 44 ; 2023 ; 44 ; https://www.ijstd.org/ >
 
     }
     {
@@ -2127,13 +2127,13 @@
     au < doNotProcess ; 1986 ; Indian Journal of Urology Volume 2 ; 1986 ; 2 ; https://www.indianjurol.com/ >
     au < doNotProcess ; 1987 ; Indian Journal of Urology Volume 3 ; 1987 ; 3 ; https://www.indianjurol.com/ >
     au < doNotProcess ; 1987 ; Indian Journal of Urology Volume 4 ; 1987 ; 4 ; https://www.indianjurol.com/ >
-    au < doesNotExist ; 1989 ; Indian Journal of Urology Volume 5 ; 1989 ; 5 ; http://www.indianjurol.com/ >
-    au < doesNotExist ; 1990 ; Indian Journal of Urology Volume 6 ; 1990 ; 6 ; http://www.indianjurol.com/ >
-    au < doesNotExist ; 1991 ; Indian Journal of Urology Volume 7 ; 1991 ; 7 ; http://www.indianjurol.com/ >
-    au < doesNotExist ; 1992 ; Indian Journal of Urology Volume 8 ; 1992 ; 8 ; http://www.indianjurol.com/ >
+    au < doNotProcess ; 1989 ; Indian Journal of Urology Volume 5 ; 1989 ; 5 ; http://www.indianjurol.com/ >
+    au < doNotProcess ; 1990 ; Indian Journal of Urology Volume 6 ; 1990 ; 6 ; http://www.indianjurol.com/ >
+    au < doNotProcess ; 1991 ; Indian Journal of Urology Volume 7 ; 1991 ; 7 ; http://www.indianjurol.com/ >
+    au < doNotProcess ; 1992 ; Indian Journal of Urology Volume 8 ; 1992 ; 8 ; http://www.indianjurol.com/ >
     au < doNotProcess ; 1993 ; Indian Journal of Urology Volume 9 ; 1993 ; 9 ; https://www.indianjurol.com/ >
     au < doNotProcess ; 1994 ; Indian Journal of Urology Volume 10 ; 1994 ; 10 ; https://www.indianjurol.com/ >
-    au < doesNotExist ; 1995 ; Indian Journal of Urology Volume 11 ; 1995 ; 11 ; http://www.indianjurol.com/ >
+    au < doNotProcess ; 1995 ; Indian Journal of Urology Volume 11 ; 1995 ; 11 ; http://www.indianjurol.com/ >
     au < doNotProcess ; 1996 ; Indian Journal of Urology Volume 12 ; 1996 ; 12 ; https://www.indianjurol.com/ >
     au < doNotProcess ; 1997 ; Indian Journal of Urology Volume 13 ; 1997 ; 13 ; https://www.indianjurol.com/ >
     au < doNotProcess ; 1998 ; Indian Journal of Urology Volume 14 ; 1998 ; 14 ; https://www.indianjurol.com/ >
@@ -2824,11 +2824,11 @@
 
     param[journal_issn] = 0974-7761
 
-    au < released ; 2011 ; Journal of Education and Ethics in Dentistry Volume 1 ; 2011 ; 1 ; http://www.jeed.in/ >
-    au < released ; 2012 ; Journal of Education and Ethics in Dentistry Volume 2 ; 2012 ; 2 ; http://www.jeed.in/ >
-    au < released ; 2013 ; Journal of Education and Ethics in Dentistry Volume 3 ; 2013 ; 3 ; http://www.jeed.in/ >
-    au < released ; 2014 ; Journal of Education and Ethics in Dentistry Volume 4 ; 2014 ; 4 ; http://www.jeed.in/ >
-    au < released ; 2015 ; Journal of Education and Ethics in Dentistry Volume 5 ; 2015 ; 5 ; http://www.jeed.in/ >
+    au < down ; 2011 ; Journal of Education and Ethics in Dentistry Volume 1 ; 2011 ; 1 ; http://www.jeed.in/ >
+    au < down ; 2012 ; Journal of Education and Ethics in Dentistry Volume 2 ; 2012 ; 2 ; http://www.jeed.in/ >
+    au < down ; 2013 ; Journal of Education and Ethics in Dentistry Volume 3 ; 2013 ; 3 ; http://www.jeed.in/ >
+    au < down ; 2014 ; Journal of Education and Ethics in Dentistry Volume 4 ; 2014 ; 4 ; http://www.jeed.in/ >
+    au < down ; 2015 ; Journal of Education and Ethics in Dentistry Volume 5 ; 2015 ; 5 ; http://www.jeed.in/ >
     
   }
 
@@ -3016,7 +3016,7 @@
     #stored here https://www.ncbi.nlm.nih.gov/pmc/journals/1763/
 
     au < doNotProcess ; 2009 ; Journal of Gynecological Endoscopy and Surgery Volume 1 ; 2009 ; 1 ; https://www.gynecendoscopy.org/ >
-    au < released ; 2011 ; Journal of Gynecological Endoscopy and Surgery Volume 2 ; 2011 ; 2 ; http://www.gynecendoscopy.org/ >
+    au < down ; 2011 ; Journal of Gynecological Endoscopy and Surgery Volume 2 ; 2011 ; 2 ; http://www.gynecendoscopy.org/ >
 
   }
 
@@ -3290,7 +3290,7 @@
     au < doNotProcess ; 1979 ; Journal of Medical Physics Volume 4 ; 1979 ; 4 ; https://www.jmp.org.in/ >
     au < doNotProcess ; 1980 ; Journal of Medical Physics Volume 5 ; 1980 ; 5 ; https://www.jmp.org.in/ >
     au < doNotProcess ; 1981 ; Journal of Medical Physics Volume 6 ; 1981 ; 6 ; https://www.jmp.org.in/ >
-    au < doesNotExist ; 1982 ; Journal of Medical Physics Volume 7 ; 0 ; 0 ; http://www.jmp.org.in/ >
+    au < doNotProcess ; 1982 ; Journal of Medical Physics Volume 7 ; 0 ; 0 ; http://www.jmp.org.in/ >
     au < doNotProcess ; 1983 ; Journal of Medical Physics Volume 8 ; 1983 ; 8 ; https://www.jmp.org.in/ >
     au < doNotProcess ; 1984 ; Journal of Medical Physics Volume 9 ; 1984 ; 9 ; https://www.jmp.org.in/ >
     au < doNotProcess ; 1985 ; Journal of Medical Physics Volume 10 ; 1985 ; 10 ; https://www.jmp.org.in/ >
@@ -3456,15 +3456,15 @@
     param[journal_issn] = 2345-5756
     #move to Brieflands, 2023-01-01
 
-    au < released ; 2014 ; Journal of Nursing and Midwifery Sciences Volume 1 ; 2014 ; 1 ; https://www.jnmsjournal.org/ >
-    au < released ; 2015 ; Journal of Nursing and Midwifery Sciences Volume 2 ; 2015 ; 2 ; https://www.jnmsjournal.org/ >
-    au < released ; 2016 ; Journal of Nursing and Midwifery Sciences Volume 3 ; 2016 ; 3 ; https://www.jnmsjournal.org/ >
-    au < released ; 2017 ; Journal of Nursing and Midwifery Sciences Volume 4 ; 2017 ; 4 ; https://www.jnmsjournal.org/ >
-    au < released ; 2018 ; Journal of Nursing and Midwifery Sciences Volume 5 ; 2018 ; 5 ; https://www.jnmsjournal.org/ >
-    au < released ; 2019 ; Journal of Nursing and Midwifery Sciences Volume 6 ; 2019 ; 6 ; https://www.jnmsjournal.org/ >
-    au < released ; 2020 ; Journal of Nursing and Midwifery Sciences Volume 7 ; 2020 ; 7 ; https://www.jnmsjournal.org/ >
-    au < released ; 2021 ; Journal of Nursing and Midwifery Sciences Volume 8 ; 2021 ; 8 ; https://www.jnmsjournal.org/ >
-    au < released ; 2022 ; Journal of Nursing and Midwifery Sciences Volume 9 ; 2022 ; 9 ; https://www.jnmsjournal.org/ >
+    au < down ; 2014 ; Journal of Nursing and Midwifery Sciences Volume 1 ; 2014 ; 1 ; https://www.jnmsjournal.org/ >
+    au < down ; 2015 ; Journal of Nursing and Midwifery Sciences Volume 2 ; 2015 ; 2 ; https://www.jnmsjournal.org/ >
+    au < down ; 2016 ; Journal of Nursing and Midwifery Sciences Volume 3 ; 2016 ; 3 ; https://www.jnmsjournal.org/ >
+    au < down ; 2017 ; Journal of Nursing and Midwifery Sciences Volume 4 ; 2017 ; 4 ; https://www.jnmsjournal.org/ >
+    au < down ; 2018 ; Journal of Nursing and Midwifery Sciences Volume 5 ; 2018 ; 5 ; https://www.jnmsjournal.org/ >
+    au < down ; 2019 ; Journal of Nursing and Midwifery Sciences Volume 6 ; 2019 ; 6 ; https://www.jnmsjournal.org/ >
+    au < down ; 2020 ; Journal of Nursing and Midwifery Sciences Volume 7 ; 2020 ; 7 ; https://www.jnmsjournal.org/ >
+    au < down ; 2021 ; Journal of Nursing and Midwifery Sciences Volume 8 ; 2021 ; 8 ; https://www.jnmsjournal.org/ >
+    au < down ; 2022 ; Journal of Nursing and Midwifery Sciences Volume 9 ; 2022 ; 9 ; https://www.jnmsjournal.org/ >
       #deactivated
 
   }
@@ -3979,7 +3979,7 @@
     #move to LWW in 2023, moved https://journals.lww.com/neur/
 
     au < doNotProcess ; 1993 ; Neurology India Volume 41 ; 1993 ; 41 ; https://www.neurologyindia.com/ >
-    au < doesNotExist ; 1994 ; Neurology India Volume 42 ; 0 ; 0 ; http://www.neurologyindia.com/ >
+    au < doNotProcess ; 1994 ; Neurology India Volume 42 ; 0 ; 0 ; http://www.neurologyindia.com/ >
     au < doNotProcess ; 1995 ; Neurology India Volume 43 ; 1995 ; 43 ; https://www.neurologyindia.com/ >
     au < doNotProcess ; 1996 ; Neurology India Volume 44 ; 1996 ; 44 ; https://www.neurologyindia.com/ >
     au < doNotProcess ; 1997 ; Neurology India Volume 45 ; 1997 ; 45 ; https://www.neurologyindia.com/ >
@@ -4085,18 +4085,18 @@
 #    param[base_url] = http://www.nigeriamedj.com/
     param[journal_issn] = 0300-1652
 
-    au < released ; 2009 ; Nigerian Medical Journal Volume 50 ; 2009 ; 50 ; https://www.nigeriamedj.com/ >
-    au < released ; 2010 ; Nigerian Medical Journal Volume 51 ; 2010 ; 51 ; https://www.nigeriamedj.com/ >
-    au < released ; 2011 ; Nigerian Medical Journal Volume 52 ; 2011 ; 52 ; http://www.nigeriamedj.com/ >
-    au < released ; 2012 ; Nigerian Medical Journal Volume 53 ; 2012 ; 53 ; http://www.nigeriamedj.com/ >
-    au < released ; 2013 ; Nigerian Medical Journal Volume 54 ; 2013 ; 54 ; http://www.nigeriamedj.com/ >
-    au < released ; 2014 ; Nigerian Medical Journal Volume 55 ; 2014 ; 55 ; http://www.nigeriamedj.com/ >
-    au < released ; 2015 ; Nigerian Medical Journal Volume 56 ; 2015 ; 56 ; http://www.nigeriamedj.com/ >
-    au < released ; 2016 ; Nigerian Medical Journal Volume 57 ; 2016 ; 57 ; http://www.nigeriamedj.com/ >
-    au < released ; 2017 ; Nigerian Medical Journal Volume 58 ; 2017 ; 58 ; http://www.nigeriamedj.com/ >
-    au < released ; 2018 ; Nigerian Medical Journal Volume 59 ; 2018 ; 59 ; https://www.nigeriamedj.com/ >
-    au < released ; 2019 ; Nigerian Medical Journal Volume 60 ; 2019 ; 60 ; https://www.nigeriamedj.com/ >
-    au < released ; 2020 ; Nigerian Medical Journal Volume 61 ; 2020 ; 61 ; https://www.nigeriamedj.com/ >
+    au < down ; 2009 ; Nigerian Medical Journal Volume 50 ; 2009 ; 50 ; https://www.nigeriamedj.com/ >
+    au < down ; 2010 ; Nigerian Medical Journal Volume 51 ; 2010 ; 51 ; https://www.nigeriamedj.com/ >
+    au < down ; 2011 ; Nigerian Medical Journal Volume 52 ; 2011 ; 52 ; http://www.nigeriamedj.com/ >
+    au < down ; 2012 ; Nigerian Medical Journal Volume 53 ; 2012 ; 53 ; http://www.nigeriamedj.com/ >
+    au < down ; 2013 ; Nigerian Medical Journal Volume 54 ; 2013 ; 54 ; http://www.nigeriamedj.com/ >
+    au < down ; 2014 ; Nigerian Medical Journal Volume 55 ; 2014 ; 55 ; http://www.nigeriamedj.com/ >
+    au < down ; 2015 ; Nigerian Medical Journal Volume 56 ; 2015 ; 56 ; http://www.nigeriamedj.com/ >
+    au < down ; 2016 ; Nigerian Medical Journal Volume 57 ; 2016 ; 57 ; http://www.nigeriamedj.com/ >
+    au < down ; 2017 ; Nigerian Medical Journal Volume 58 ; 2017 ; 58 ; http://www.nigeriamedj.com/ >
+    au < down ; 2018 ; Nigerian Medical Journal Volume 59 ; 2018 ; 59 ; https://www.nigeriamedj.com/ >
+    au < down ; 2019 ; Nigerian Medical Journal Volume 60 ; 2019 ; 60 ; https://www.nigeriamedj.com/ >
+    au < down ; 2020 ; Nigerian Medical Journal Volume 61 ; 2020 ; 61 ; https://www.nigeriamedj.com/ >
 
   }
 
@@ -4600,14 +4600,14 @@
 #    param[base_url] = http://www.wjnm.org/
     param[journal_issn] = 1450-1147
     #move to Thieme, 2022.
-    # notReady V10 2011. 500 error, replicated. http://www.wjnm.org/article.asp?issn=1450-1147;year=2011;volume=10;issue=1;spage=5;epage=6;aulast=Baum;type=2
+    # doNotProcess V10 2011. 500 error, replicated. http://www.wjnm.org/article.asp?issn=1450-1147;year=2011;volume=10;issue=1;spage=5;epage=6;aulast=Baum;type=2
 
     au < doNotProcess ; 2005 ; World Journal of Nuclear Medicine Volume 4 ; 2005 ; 4 ; https://www.wjnm.org/ >
     au < doNotProcess ; 2006 ; World Journal of Nuclear Medicine Volume 5 ; 2006 ; 5 ; https://www.wjnm.org/ >
     au < doNotProcess ; 2007 ; World Journal of Nuclear Medicine Volume 6 ; 2007 ; 6 ; https://www.wjnm.org/ >
     au < doNotProcess ; 2008 ; World Journal of Nuclear Medicine Volume 7 ; 2008 ; 7 ; https://www.wjnm.org/ >
     au < doNotProcess ; 2009 ; World Journal of Nuclear Medicine Volume 8 ; 2009 ; 8 ; https://www.wjnm.org/ >
-    au < doesNotExist ; 2010 ; World Journal of Nuclear Medicine Volume 9 ; 2010 ; 9 ; https://www.wjnm.org/ >
+    au < doNotProcess ; 2010 ; World Journal of Nuclear Medicine Volume 9 ; 2010 ; 9 ; https://www.wjnm.org/ >
     au < doNotProcess ; 2011 ; World Journal of Nuclear Medicine Volume 10 ; 2011 ; 10 ; https://www.wjnm.org/ >
     au < down ; 2012 ; World Journal of Nuclear Medicine Volume 11 ; 2012 ; 11 ; http://www.wjnm.org/ >
     au < down ; 2013 ; World Journal of Nuclear Medicine Volume 12 ; 2013 ; 12 ; http://www.wjnm.org/ >
@@ -4717,10 +4717,10 @@
       param[journal_issn] = 1597-1112
 #      param[base_url] = http://www.afrjtrauma.com/
 
-      au < released ; 2014 ; African Journal of Trauma Volume 3 ; 2014 ; 3 ; http://www.afrjtrauma.com/ >
-      au < released ; 2015 ; African Journal of Trauma Volume 4 ; 2015 ; 4 ; http://www.afrjtrauma.com/ >
-      au < released ; 2016 ; African Journal of Trauma Volume 5 ; 2016 ; 5 ; http://www.afrjtrauma.com/ >
-      au < released ; 2017 ; African Journal of Trauma Volume 6 ; 2017 ; 6 ; http://www.afrjtrauma.com/ >
+      au < down ; 2014 ; African Journal of Trauma Volume 3 ; 2014 ; 3 ; http://www.afrjtrauma.com/ >
+      au < down ; 2015 ; African Journal of Trauma Volume 4 ; 2015 ; 4 ; http://www.afrjtrauma.com/ >
+      au < down ; 2016 ; African Journal of Trauma Volume 5 ; 2016 ; 5 ; http://www.afrjtrauma.com/ >
+      au < down ; 2017 ; African Journal of Trauma Volume 6 ; 2017 ; 6 ; http://www.afrjtrauma.com/ >
 
   }
 
@@ -4870,18 +4870,18 @@
       param[journal_issn] = 2278-9596
 #      param[base_url] = http://www.archintsurg.org/
 
-      au < released ; 2012 ; Archives of International Surgery Volume 2 ; 2012 ; 2 ; http://www.archintsurg.org/ >
-      au < released ; 2013 ; Archives of International Surgery Volume 3 ; 2013 ; 3 ; http://www.archintsurg.org/ >
-      au < released ; 2014 ; Archives of International Surgery Volume 4 ; 2014 ; 4 ; http://www.archintsurg.org/ >
-      au < released ; 2015 ; Archives of International Surgery Volume 5 ; 2015 ; 5 ; http://www.archintsurg.org/ >
-      au < released ; 2016 ; Archives of International Surgery Volume 6 ; 2016 ; 6 ; http://www.archintsurg.org/ >
-      au < released ; 2017 ; Archives of International Surgery Volume 7 ; 2017 ; 7 ; http://www.archintsurg.org/ >
-      au < released ; 2018 ; Archives of International Surgery Volume 8 ; 2018 ; 8 ; https://www.archintsurg.org/ >
-      au < released ; 2019 ; Archives of International Surgery Volume 9 ; 2019 ; 9 ; https://www.archintsurg.org/ >
-      au < released ; 2020 ; Archives of International Surgery Volume 10 ; 2020 ; 10 ; https://www.archintsurg.org/ >
+      au < down ; 2012 ; Archives of International Surgery Volume 2 ; 2012 ; 2 ; http://www.archintsurg.org/ >
+      au < down ; 2013 ; Archives of International Surgery Volume 3 ; 2013 ; 3 ; http://www.archintsurg.org/ >
+      au < down ; 2014 ; Archives of International Surgery Volume 4 ; 2014 ; 4 ; http://www.archintsurg.org/ >
+      au < down ; 2015 ; Archives of International Surgery Volume 5 ; 2015 ; 5 ; http://www.archintsurg.org/ >
+      au < down ; 2016 ; Archives of International Surgery Volume 6 ; 2016 ; 6 ; http://www.archintsurg.org/ >
+      au < down ; 2017 ; Archives of International Surgery Volume 7 ; 2017 ; 7 ; http://www.archintsurg.org/ >
+      au < down ; 2018 ; Archives of International Surgery Volume 8 ; 2018 ; 8 ; https://www.archintsurg.org/ >
+      au < down ; 2019 ; Archives of International Surgery Volume 9 ; 2019 ; 9 ; https://www.archintsurg.org/ >
+      au < down ; 2020 ; Archives of International Surgery Volume 10 ; 2020 ; 10 ; https://www.archintsurg.org/ >
       au < doNotProcess ; 2021 ; Archives of International Surgery Volume 11 ; 2021 ; 11 ; https://www.archintsurg.org/ >
       au < doNotProcess ; 2022 ; Archives of International Surgery Volume 12 ; 2022 ; 12 ; https://www.archintsurg.org/ >
-      au < expected ; 2023 ; Archives of International Surgery Volume 13 ; 2023 ; 13 ; https://www.archintsurg.org/ >
+      au < doNotProcess ; 2023 ; Archives of International Surgery Volume 13 ; 2023 ; 13 ; https://www.archintsurg.org/ >
 
   }
 
@@ -4951,11 +4951,11 @@
 #      param[base_url] = http://www.actnjournal.com/
       #Moved to https://www.bnmjournal.com/
 
-      au < released ; 2016 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 1 ; 2016 ; 1 ; http://www.actnjournal.com/ >
-      au < released ; 2017 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 2 ; 2017 ; 2 ; http://www.actnjournal.com/ >
-      au < released ; 2018 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 3 ; 2018 ; 3 ; http://www.actnjournal.com/ >
-      au < released ; 2019 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 4 ; 2019 ; 4 ; https://www.actnjournal.com/ >
-      au < released ; 2020 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 5 ; 2020 ; 5 ; https://www.actnjournal.com/ >
+      au < down ; 2016 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 1 ; 2016 ; 1 ; http://www.actnjournal.com/ >
+      au < down ; 2017 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 2 ; 2017 ; 2 ; http://www.actnjournal.com/ >
+      au < down ; 2018 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 3 ; 2018 ; 3 ; http://www.actnjournal.com/ >
+      au < down ; 2019 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 4 ; 2019 ; 4 ; https://www.actnjournal.com/ >
+      au < down ; 2020 ; Asia Pacific Journal of Clinical Trials: Nervous System Diseases Volume 5 ; 2020 ; 5 ; https://www.actnjournal.com/ >
       #Changed name. See next title.
 
   }
@@ -5220,11 +5220,11 @@
 #      param[base_url] = http://www.clinicaltdd.com/
       # changed to "Aging Advances" in 2023, but no new content found
 
-      au < released ; 2016 ; Clinical and Translational Degenerative Diseases Volume 1 ; 2016 ; 1 ; http://www.clinicaltdd.com/ >
-      au < released ; 2017 ; Clinical and Translational Degenerative Diseases Volume 2 ; 2017 ; 2 ; http://www.clinicaltdd.com/ >
-      au < released ; 2018 ; Clinical and Translational Degenerative Diseases Volume 3 ; 2018 ; 3 ; http://www.clinicaltdd.com/ >
-      au < released ; 2019 ; Clinical and Translational Degenerative Diseases Volume 4 ; 2019 ; 4 ; https://www.clinicaltdd.com/ >
-      au < released ; 2020 ; Clinical and Translational Degenerative Diseases Volume 5 ; 2020 ; 5 ; https://www.clinicaltdd.com/ >
+      au < down ; 2016 ; Clinical and Translational Degenerative Diseases Volume 1 ; 2016 ; 1 ; http://www.clinicaltdd.com/ >
+      au < down ; 2017 ; Clinical and Translational Degenerative Diseases Volume 2 ; 2017 ; 2 ; http://www.clinicaltdd.com/ >
+      au < down ; 2018 ; Clinical and Translational Degenerative Diseases Volume 3 ; 2018 ; 3 ; http://www.clinicaltdd.com/ >
+      au < down ; 2019 ; Clinical and Translational Degenerative Diseases Volume 4 ; 2019 ; 4 ; https://www.clinicaltdd.com/ >
+      au < down ; 2020 ; Clinical and Translational Degenerative Diseases Volume 5 ; 2020 ; 5 ; https://www.clinicaltdd.com/ >
 
   }
 
@@ -5245,9 +5245,9 @@
 #      param[base_url] = http://www.clinicalto.com/
       #archived at Medknow. Not crawl-able. No permission statement.
 
-      au < released ; 2016 ; Clinical Trials in Orthopedic Disorders Volume 1 ; 2016 ; 1 ; http://www.clinicalto.com/ >
-      au < released ; 2017 ; Clinical Trials in Orthopedic Disorders Volume 2 ; 2017 ; 2 ; http://www.clinicalto.com/ >
-      au < released ; 2018 ; Clinical Trials in Orthopedic Disorders Volume 3 ; 2018 ; 3 ; http://www.clinicalto.com/ >
+      au < down ; 2016 ; Clinical Trials in Orthopedic Disorders Volume 1 ; 2016 ; 1 ; http://www.clinicalto.com/ >
+      au < down ; 2017 ; Clinical Trials in Orthopedic Disorders Volume 2 ; 2017 ; 2 ; http://www.clinicalto.com/ >
+      au < down ; 2018 ; Clinical Trials in Orthopedic Disorders Volume 3 ; 2018 ; 3 ; http://www.clinicalto.com/ >
       au < doNotProcess ; 2019 ; Clinical Trials in Orthopedic Disorders Volume 4 ; 2019 ; 4 ; https://www.clinicalto.com/ >
       au < doNotProcess ; 2020 ; Clinical Trials in Orthopedic Disorders Volume 5 ; 2020 ; 5 ; https://www.clinicalto.com/ >
 
@@ -5713,13 +5713,13 @@
 #      param[base_url] = http://www.ejgd.org/
       #Moved to Thieme
 
-      au < released ; 2012 ; European Journal of General Dentistry Volume 1 ; 2012 ; 1 ; http://www.ejgd.org/ >
-      au < released ; 2013 ; European Journal of General Dentistry Volume 2 ; 2013 ; 2 ; http://www.ejgd.org/ >
-      au < released ; 2014 ; European Journal of General Dentistry Volume 3 ; 2014 ; 3 ; http://www.ejgd.org/ >
-      au < released ; 2015 ; European Journal of General Dentistry Volume 4 ; 2015 ; 4 ; http://www.ejgd.org/ >
-      au < released ; 2016 ; European Journal of General Dentistry Volume 5 ; 2016 ; 5 ; http://www.ejgd.org/ >
-      au < released ; 2017 ; European Journal of General Dentistry Volume 6 ; 2017 ; 6 ; http://www.ejgd.org/ >
-      au < released ; 2018 ; European Journal of General Dentistry Volume 7 ; 2018 ; 7 ; http://www.ejgd.org/ >
+      au < down ; 2012 ; European Journal of General Dentistry Volume 1 ; 2012 ; 1 ; http://www.ejgd.org/ >
+      au < down ; 2013 ; European Journal of General Dentistry Volume 2 ; 2013 ; 2 ; http://www.ejgd.org/ >
+      au < down ; 2014 ; European Journal of General Dentistry Volume 3 ; 2014 ; 3 ; http://www.ejgd.org/ >
+      au < down ; 2015 ; European Journal of General Dentistry Volume 4 ; 2015 ; 4 ; http://www.ejgd.org/ >
+      au < down ; 2016 ; European Journal of General Dentistry Volume 5 ; 2016 ; 5 ; http://www.ejgd.org/ >
+      au < down ; 2017 ; European Journal of General Dentistry Volume 6 ; 2017 ; 6 ; http://www.ejgd.org/ >
+      au < down ; 2018 ; European Journal of General Dentistry Volume 7 ; 2018 ; 7 ; http://www.ejgd.org/ >
       au < doNotProcess ; 2019 ; European Journal of General Dentistry Volume 8 ; 2019 ; 8 ; https://www.ejgd.org/ >
       au < down ; 2020 ; European Journal of General Dentistry Volume 9 ; 2020 ; 9 ; https://www.ejgd.org/ >
       au < doNotProcess ; 2021 ; European Journal of General Dentistry Volume 10 ; 2021 ; 10 ; https://www.ejgd.org/ >
@@ -5894,8 +5894,8 @@
       param[journal_issn] = 2395-4264
 #      param[base_url] = http://www.ijcpjournal.org/
 
-      au < released ; 2015 ; Indian Journal of Cerebral Palsy Volume 1 ; 2015 ; 1 ; http://www.ijcpjournal.org/ >
-      au < released ; 2016 ; Indian Journal of Cerebral Palsy Volume 2 ; 2016 ; 2 ; http://www.ijcpjournal.org/ >
+      au < down ; 2015 ; Indian Journal of Cerebral Palsy Volume 1 ; 2015 ; 1 ; http://www.ijcpjournal.org/ >
+      au < down ; 2016 ; Indian Journal of Cerebral Palsy Volume 2 ; 2016 ; 2 ; http://www.ijcpjournal.org/ >
 
   }
 
@@ -5950,15 +5950,15 @@
       param[journal_issn] = 2455-3972
 #      param[base_url] = http://www.ijdd.in/
 
-      au < released ; 2015 ; Indian Journal of Drugs in Dermatology Volume 1 ; 2015 ; 1 ; http://www.ijdd.in/ >
-      au < released ; 2016 ; Indian Journal of Drugs in Dermatology Volume 2 ; 2016 ; 2 ; http://www.ijdd.in/ >
-      au < released ; 2017 ; Indian Journal of Drugs in Dermatology Volume 3 ; 2017 ; 3 ; http://www.ijdd.in/ >
-      au < released ; 2018 ; Indian Journal of Drugs in Dermatology Volume 4 ; 2018 ; 4 ; http://www.ijdd.in/ >
-      au < released ; 2019 ; Indian Journal of Drugs in Dermatology Volume 5 ; 2019 ; 5 ; https://www.ijdd.in/ >
-      au < released ; 2020 ; Indian Journal of Drugs in Dermatology Volume 6 ; 2020 ; 6 ; https://www.ijdd.in/ >
-      au < released ; 2021 ; Indian Journal of Drugs in Dermatology Volume 7 ; 2021 ; 7 ; https://www.ijdd.in/ >
-      au < released ; 2022 ; Indian Journal of Drugs in Dermatology Volume 8 ; 2022 ; 8 ; https://www.ijdd.in/ >
-      au < manifest ; 2023 ; Indian Journal of Drugs in Dermatology Volume 9 ; 2023 ; 9 ; https://www.ijdd.in/ >
+      au < down ; 2015 ; Indian Journal of Drugs in Dermatology Volume 1 ; 2015 ; 1 ; http://www.ijdd.in/ >
+      au < down ; 2016 ; Indian Journal of Drugs in Dermatology Volume 2 ; 2016 ; 2 ; http://www.ijdd.in/ >
+      au < down ; 2017 ; Indian Journal of Drugs in Dermatology Volume 3 ; 2017 ; 3 ; http://www.ijdd.in/ >
+      au < down ; 2018 ; Indian Journal of Drugs in Dermatology Volume 4 ; 2018 ; 4 ; http://www.ijdd.in/ >
+      au < down ; 2019 ; Indian Journal of Drugs in Dermatology Volume 5 ; 2019 ; 5 ; https://www.ijdd.in/ >
+      au < down ; 2020 ; Indian Journal of Drugs in Dermatology Volume 6 ; 2020 ; 6 ; https://www.ijdd.in/ >
+      au < down ; 2021 ; Indian Journal of Drugs in Dermatology Volume 7 ; 2021 ; 7 ; https://www.ijdd.in/ >
+      au < down ; 2022 ; Indian Journal of Drugs in Dermatology Volume 8 ; 2022 ; 8 ; https://www.ijdd.in/ >
+      au < doNotProcess ; 2023 ; Indian Journal of Drugs in Dermatology Volume 9 ; 2023 ; 9 ; https://www.ijdd.in/ >
 
   }
 
@@ -6052,15 +6052,15 @@
       param[journal_issn] = 2229-6360
 #      param[base_url] = http://www.ijmdent.com/
 
-      au < released ; 2011 ; Indian Journal of Multidisciplinary Dentistry Volume 1 ; 2011 ; 1 ; http://www.ijmdent.com/ >
-      au < released ; 2012 ; Indian Journal of Multidisciplinary Dentistry Volume 2 ; 2012 ; 2 ; http://www.ijmdent.com/ >
-      au < released ; 2013 ; Indian Journal of Multidisciplinary Dentistry Volume 3 ; 2013 ; 3 ; http://www.ijmdent.com/ >
-      au < released ; 2014 ; Indian Journal of Multidisciplinary Dentistry Volume 4 ; 2014 ; 4 ; http://www.ijmdent.com/ >
-      au < released ; 2015 ; Indian Journal of Multidisciplinary Dentistry Volume 5 ; 2015 ; 5 ; http://www.ijmdent.com/ >
-      au < released ; 2016 ; Indian Journal of Multidisciplinary Dentistry Volume 6 ; 2016 ; 6 ; http://www.ijmdent.com/ >
-      au < released ; 2017 ; Indian Journal of Multidisciplinary Dentistry Volume 7 ; 2017 ; 7 ; http://www.ijmdent.com/ >
-      au < released ; 2018 ; Indian Journal of Multidisciplinary Dentistry Volume 8 ; 2018 ; 8 ; http://www.ijmdent.com/ >
-      au < released ; 2019 ; Indian Journal of Multidisciplinary Dentistry Volume 9 ; 2019 ; 9 ; https://www.ijmdent.com/ >
+      au < down ; 2011 ; Indian Journal of Multidisciplinary Dentistry Volume 1 ; 2011 ; 1 ; http://www.ijmdent.com/ >
+      au < down ; 2012 ; Indian Journal of Multidisciplinary Dentistry Volume 2 ; 2012 ; 2 ; http://www.ijmdent.com/ >
+      au < down ; 2013 ; Indian Journal of Multidisciplinary Dentistry Volume 3 ; 2013 ; 3 ; http://www.ijmdent.com/ >
+      au < down ; 2014 ; Indian Journal of Multidisciplinary Dentistry Volume 4 ; 2014 ; 4 ; http://www.ijmdent.com/ >
+      au < down ; 2015 ; Indian Journal of Multidisciplinary Dentistry Volume 5 ; 2015 ; 5 ; http://www.ijmdent.com/ >
+      au < down ; 2016 ; Indian Journal of Multidisciplinary Dentistry Volume 6 ; 2016 ; 6 ; http://www.ijmdent.com/ >
+      au < down ; 2017 ; Indian Journal of Multidisciplinary Dentistry Volume 7 ; 2017 ; 7 ; http://www.ijmdent.com/ >
+      au < down ; 2018 ; Indian Journal of Multidisciplinary Dentistry Volume 8 ; 2018 ; 8 ; http://www.ijmdent.com/ >
+      au < down ; 2019 ; Indian Journal of Multidisciplinary Dentistry Volume 9 ; 2019 ; 9 ; https://www.ijmdent.com/ >
 
   }
 
@@ -6076,13 +6076,13 @@
 #      param[base_url] = http://www.ijohr.org/
       #ceased publishing 2022. Archive will stay with Medknow until further notice
 
-      au < released ; 2015 ; Indian Journal of Oral Health and Research Volume 1 ; 2015 ; 1 ; http://www.ijohr.org/ >
-      au < released ; 2016 ; Indian Journal of Oral Health and Research Volume 2 ; 2016 ; 2 ; http://www.ijohr.org/ >
-      au < released ; 2017 ; Indian Journal of Oral Health and Research Volume 3 ; 2017 ; 3 ; http://www.ijohr.org/ >
-      au < released ; 2018 ; Indian Journal of Oral Health and Research Volume 4 ; 2018 ; 4 ; http://www.ijohr.org/ >
-      au < released ; 2019 ; Indian Journal of Oral Health and Research Volume 5 ; 2019 ; 5 ; https://www.ijohr.org/ >
-      au < released ; 2020 ; Indian Journal of Oral Health and Research Volume 6 ; 2020 ; 6 ; https://www.ijohr.org/ >
-      au < released ; 2021 ; Indian Journal of Oral Health and Research Volume 7 ; 2021 ; 7 ; https://www.ijohr.org/ >
+      au < down ; 2015 ; Indian Journal of Oral Health and Research Volume 1 ; 2015 ; 1 ; http://www.ijohr.org/ >
+      au < down ; 2016 ; Indian Journal of Oral Health and Research Volume 2 ; 2016 ; 2 ; http://www.ijohr.org/ >
+      au < down ; 2017 ; Indian Journal of Oral Health and Research Volume 3 ; 2017 ; 3 ; http://www.ijohr.org/ >
+      au < down ; 2018 ; Indian Journal of Oral Health and Research Volume 4 ; 2018 ; 4 ; http://www.ijohr.org/ >
+      au < down ; 2019 ; Indian Journal of Oral Health and Research Volume 5 ; 2019 ; 5 ; https://www.ijohr.org/ >
+      au < down ; 2020 ; Indian Journal of Oral Health and Research Volume 6 ; 2020 ; 6 ; https://www.ijohr.org/ >
+      au < down ; 2021 ; Indian Journal of Oral Health and Research Volume 7 ; 2021 ; 7 ; https://www.ijohr.org/ >
 
   }
 
@@ -6266,10 +6266,10 @@
 #      param[base_url] = http://www.ijcep.org/
       #move to OJS platform
 
-      au < released ; 2014 ; International Journal of Clinical and Experimental Physiology Volume 1 ; 2014 ; 1 ; http://www.ijcep.org/ >
-      au < released ; 2015 ; International Journal of Clinical and Experimental Physiology Volume 2 ; 2015 ; 2 ; http://www.ijcep.org/ >
-      au < released ; 2016 ; International Journal of Clinical and Experimental Physiology Volume 3 ; 2016 ; 3 ; http://www.ijcep.org/ >
-      au < released ; 2017 ; International Journal of Clinical and Experimental Physiology Volume 4 ; 2017 ; 4 ; http://www.ijcep.org/ >
+      au < down ; 2014 ; International Journal of Clinical and Experimental Physiology Volume 1 ; 2014 ; 1 ; http://www.ijcep.org/ >
+      au < down ; 2015 ; International Journal of Clinical and Experimental Physiology Volume 2 ; 2015 ; 2 ; http://www.ijcep.org/ >
+      au < down ; 2016 ; International Journal of Clinical and Experimental Physiology Volume 3 ; 2016 ; 3 ; http://www.ijcep.org/ >
+      au < down ; 2017 ; International Journal of Clinical and Experimental Physiology Volume 4 ; 2017 ; 4 ; http://www.ijcep.org/ >
       au < doNotProcess ; 2018 ; International Journal of Clinical and Experimental Physiology Volume 5 ; 2018 ; 5 ; https://www.ijcep.org/ >
 
   }
@@ -6284,10 +6284,10 @@
       param[journal_issn] = 2395-2296
 #      param[base_url] = http://www.ijeprjournal.org/
 
-      au < released ; 2015 ; International Journal of Educational and Psychological Researches Volume 1 ; 2015 ; 1 ; http://www.ijeprjournal.org/ >
-      au < released ; 2016 ; International Journal of Educational and Psychological Researches Volume 2 ; 2016 ; 2 ; http://www.ijeprjournal.org/ >
-      au < released ; 2017 ; International Journal of Educational and Psychological Researches Volume 3 ; 2017 ; 3 ; http://www.ijeprjournal.org/ >
-      au < released ; 2018 ; International Journal of Educational and Psychological Researches Volume 4 ; 2018 ; 4 ; http://www.ijeprjournal.org/ >
+      au < down ; 2015 ; International Journal of Educational and Psychological Researches Volume 1 ; 2015 ; 1 ; http://www.ijeprjournal.org/ >
+      au < down ; 2016 ; International Journal of Educational and Psychological Researches Volume 2 ; 2016 ; 2 ; http://www.ijeprjournal.org/ >
+      au < down ; 2017 ; International Journal of Educational and Psychological Researches Volume 3 ; 2017 ; 3 ; http://www.ijeprjournal.org/ >
+      au < down ; 2018 ; International Journal of Educational and Psychological Researches Volume 4 ; 2018 ; 4 ; http://www.ijeprjournal.org/ >
 
   }
 
@@ -6327,16 +6327,16 @@
 #      param[base_url] = http://www.ijhas.in/
       #move to Elsevier, 2022. Archive will stay with Medknow until further notice
 
-      au < released ; 2012 ; International Journal of Health & Allied Sciences Volume 1 ; 2012 ; 1 ; http://www.ijhas.in/ >
-      au < released ; 2013 ; International Journal of Health & Allied Sciences Volume 2 ; 2013 ; 2 ; http://www.ijhas.in/ >
-      au < released ; 2014 ; International Journal of Health & Allied Sciences Volume 3 ; 2014 ; 3 ; http://www.ijhas.in/ >
-      au < released ; 2015 ; International Journal of Health & Allied Sciences Volume 4 ; 2015 ; 4 ; http://www.ijhas.in/ >
-      au < released ; 2016 ; International Journal of Health & Allied Sciences Volume 5 ; 2016 ; 5 ; http://www.ijhas.in/ >
-      au < released ; 2017 ; International Journal of Health & Allied Sciences Volume 6 ; 2017 ; 6 ; http://www.ijhas.in/ >
-      au < released ; 2018 ; International Journal of Health & Allied Sciences Volume 7 ; 2018 ; 7 ; http://www.ijhas.in/ >
-      au < released ; 2019 ; International Journal of Health & Allied Sciences Volume 8 ; 2019 ; 8 ; https://www.ijhas.in/ >
-      au < released ; 2020 ; International Journal of Health & Allied Sciences Volume 9 ; 2020 ; 9 ; https://www.ijhas.in/ >
-      au < released ; 2021 ; International Journal of Health & Allied Sciences Volume 10 ; 2021 ; 10 ; https://www.ijhas.in/ >
+      au < down ; 2012 ; International Journal of Health & Allied Sciences Volume 1 ; 2012 ; 1 ; http://www.ijhas.in/ >
+      au < down ; 2013 ; International Journal of Health & Allied Sciences Volume 2 ; 2013 ; 2 ; http://www.ijhas.in/ >
+      au < down ; 2014 ; International Journal of Health & Allied Sciences Volume 3 ; 2014 ; 3 ; http://www.ijhas.in/ >
+      au < down ; 2015 ; International Journal of Health & Allied Sciences Volume 4 ; 2015 ; 4 ; http://www.ijhas.in/ >
+      au < down ; 2016 ; International Journal of Health & Allied Sciences Volume 5 ; 2016 ; 5 ; http://www.ijhas.in/ >
+      au < down ; 2017 ; International Journal of Health & Allied Sciences Volume 6 ; 2017 ; 6 ; http://www.ijhas.in/ >
+      au < down ; 2018 ; International Journal of Health & Allied Sciences Volume 7 ; 2018 ; 7 ; http://www.ijhas.in/ >
+      au < down ; 2019 ; International Journal of Health & Allied Sciences Volume 8 ; 2019 ; 8 ; https://www.ijhas.in/ >
+      au < down ; 2020 ; International Journal of Health & Allied Sciences Volume 9 ; 2020 ; 9 ; https://www.ijhas.in/ >
+      au < down ; 2021 ; International Journal of Health & Allied Sciences Volume 10 ; 2021 ; 10 ; https://www.ijhas.in/ >
       #No more published content. Archive will stay with Medknow until further notice
 
   }
@@ -6351,11 +6351,11 @@
       param[journal_issn] = 2347-9019
 #      param[base_url] = http://www.ijhsdm.org/
 
-      au < released ; 2013 ; International Journal of Health System and Disaster Management Volume 1 ; 2013 ; 1 ; http://www.ijhsdm.org/ >
-      au < released ; 2014 ; International Journal of Health System and Disaster Management Volume 2 ; 2014 ; 2 ; http://www.ijhsdm.org/ >
-      au < released ; 2015 ; International Journal of Health System and Disaster Management Volume 3 ; 2015 ; 3 ; http://www.ijhsdm.org/ >
-      au < released ; 2016 ; International Journal of Health System and Disaster Management Volume 4 ; 2016 ; 4 ; http://www.ijhsdm.org/ >
-      au < released ; 2017 ; International Journal of Health System and Disaster Management Volume 5 ; 2017 ; 5 ; http://www.ijhsdm.org/ >
+      au < down ; 2013 ; International Journal of Health System and Disaster Management Volume 1 ; 2013 ; 1 ; http://www.ijhsdm.org/ >
+      au < down ; 2014 ; International Journal of Health System and Disaster Management Volume 2 ; 2014 ; 2 ; http://www.ijhsdm.org/ >
+      au < down ; 2015 ; International Journal of Health System and Disaster Management Volume 3 ; 2015 ; 3 ; http://www.ijhsdm.org/ >
+      au < down ; 2016 ; International Journal of Health System and Disaster Management Volume 4 ; 2016 ; 4 ; http://www.ijhsdm.org/ >
+      au < down ; 2017 ; International Journal of Health System and Disaster Management Volume 5 ; 2017 ; 5 ; http://www.ijhsdm.org/ >
 
   }
 
@@ -6443,15 +6443,15 @@
       param[journal_issn] = 2347-5633
 #      param[base_url] = http://www.ijoyppp.org/
 
-      au < released ; 2013 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 1 ; 2013 ; 1 ; http://www.ijoyppp.org/ >
-      au < released ; 2014 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 2 ; 2014 ; 2 ; http://www.ijoyppp.org/ >
-      au < released ; 2015 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 3 ; 2015 ; 3 ; http://www.ijoyppp.org/ >
-      au < released ; 2016 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 4 ; 2016 ; 4 ; https://www.ijoyppp.org/ >
-      au < released ; 2017 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 5 ; 2017 ; 5 ; https://www.ijoyppp.org/ >
-      au < released ; 2018 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 6 ; 2018 ; 6 ; https://www.ijoyppp.org/ >
-      au < released ; 2019 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 7 ; 2019 ; 7 ; https://www.ijoyppp.org/ >
-      au < released ; 2020 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 8 ; 2020 ; 8 ; https://www.ijoyppp.org/ >
-      au < released ; 2021 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 9 ; 2021 ; 9 ; https://www.ijoyppp.org/ >
+      au < down ; 2013 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 1 ; 2013 ; 1 ; http://www.ijoyppp.org/ >
+      au < down ; 2014 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 2 ; 2014 ; 2 ; http://www.ijoyppp.org/ >
+      au < down ; 2015 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 3 ; 2015 ; 3 ; http://www.ijoyppp.org/ >
+      au < down ; 2016 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 4 ; 2016 ; 4 ; https://www.ijoyppp.org/ >
+      au < down ; 2017 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 5 ; 2017 ; 5 ; https://www.ijoyppp.org/ >
+      au < down ; 2018 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 6 ; 2018 ; 6 ; https://www.ijoyppp.org/ >
+      au < down ; 2019 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 7 ; 2019 ; 7 ; https://www.ijoyppp.org/ >
+      au < down ; 2020 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 8 ; 2020 ; 8 ; https://www.ijoyppp.org/ >
+      au < down ; 2021 ; International Journal of Yoga - Philosophy, Psychology and Parapsychology Volume 9 ; 2021 ; 9 ; https://www.ijoyppp.org/ >
 
   }
 
@@ -6744,19 +6744,19 @@
       param[journal_issn] = 2321-1385
 #      param[base_url] = http://www.jdentlasers.org/
 
-      au < released ; 2007 ; Journal of Dental Lasers Volume 1 ; 2007 ; 1 ; https://www.jdentlasers.org/ >
-      au < released ; 2008 ; Journal of Dental Lasers Volume 2 ; 2008 ; 2 ; https://www.jdentlasers.org/ >
-      au < released ; 2009 ; Journal of Dental Lasers Volume 3 ; 2009 ; 3 ; https://www.jdentlasers.org/ >
-      au < released ; 2010 ; Journal of Dental Lasers Volume 4 ; 2010 ; 4 ; https://www.jdentlasers.org/ >
-      au < released ; 2011 ; Journal of Dental Lasers Volume 5 ; 2011 ; 5 ; http://www.jdentlasers.org/ >
-      au < released ; 2012 ; Journal of Dental Lasers Volume 6 ; 2012 ; 6 ; http://www.jdentlasers.org/ >
-      au < released ; 2013 ; Journal of Dental Lasers Volume 7 ; 2013 ; 7 ; http://www.jdentlasers.org/ >
-      au < released ; 2014 ; Journal of Dental Lasers Volume 8 ; 2014 ; 8 ; http://www.jdentlasers.org/ >
-      au < released ; 2015 ; Journal of Dental Lasers Volume 9 ; 2015 ; 9 ; http://www.jdentlasers.org/ >
-      au < released ; 2016 ; Journal of Dental Lasers Volume 10 ; 2016 ; 10 ; http://www.jdentlasers.org/ >
-      au < released ; 2017 ; Journal of Dental Lasers Volume 11 ; 2017 ; 11 ; http://www.jdentlasers.org/ >
-      au < released ; 2018 ; Journal of Dental Lasers Volume 12 ; 2018 ; 12 ; http://www.jdentlasers.org/ >
-      au < released ; 2019 ; Journal of Dental Lasers Volume 13 ; 2019 ; 13 ; https://www.jdentlasers.org/ >
+      au < down ; 2007 ; Journal of Dental Lasers Volume 1 ; 2007 ; 1 ; https://www.jdentlasers.org/ >
+      au < down ; 2008 ; Journal of Dental Lasers Volume 2 ; 2008 ; 2 ; https://www.jdentlasers.org/ >
+      au < down ; 2009 ; Journal of Dental Lasers Volume 3 ; 2009 ; 3 ; https://www.jdentlasers.org/ >
+      au < down ; 2010 ; Journal of Dental Lasers Volume 4 ; 2010 ; 4 ; https://www.jdentlasers.org/ >
+      au < down ; 2011 ; Journal of Dental Lasers Volume 5 ; 2011 ; 5 ; http://www.jdentlasers.org/ >
+      au < down ; 2012 ; Journal of Dental Lasers Volume 6 ; 2012 ; 6 ; http://www.jdentlasers.org/ >
+      au < down ; 2013 ; Journal of Dental Lasers Volume 7 ; 2013 ; 7 ; http://www.jdentlasers.org/ >
+      au < down ; 2014 ; Journal of Dental Lasers Volume 8 ; 2014 ; 8 ; http://www.jdentlasers.org/ >
+      au < down ; 2015 ; Journal of Dental Lasers Volume 9 ; 2015 ; 9 ; http://www.jdentlasers.org/ >
+      au < down ; 2016 ; Journal of Dental Lasers Volume 10 ; 2016 ; 10 ; http://www.jdentlasers.org/ >
+      au < down ; 2017 ; Journal of Dental Lasers Volume 11 ; 2017 ; 11 ; http://www.jdentlasers.org/ >
+      au < down ; 2018 ; Journal of Dental Lasers Volume 12 ; 2018 ; 12 ; http://www.jdentlasers.org/ >
+      au < down ; 2019 ; Journal of Dental Lasers Volume 13 ; 2019 ; 13 ; https://www.jdentlasers.org/ >
 
   }
 
@@ -6843,8 +6843,8 @@
       param[journal_issn] = 2423-7752
 #      param[base_url] = http://www.ijeehs.org/
 
-      au < released ; 2015 ; Journal of Earth, Environment and Health Sciences Volume 1 ; 2015 ; 1 ; http://www.ijeehs.org/ >
-      au < released ; 2016 ; Journal of Earth, Environment and Health Sciences Volume 2 ; 2016 ; 2 ; http://www.ijeehs.org/ >
+      au < down ; 2015 ; Journal of Earth, Environment and Health Sciences Volume 1 ; 2015 ; 1 ; http://www.ijeehs.org/ >
+      au < down ; 2016 ; Journal of Earth, Environment and Health Sciences Volume 2 ; 2016 ; 2 ; http://www.ijeehs.org/ >
 
   }
 
@@ -6950,16 +6950,16 @@
       param[journal_issn] = 2394-2010
 #      param[base_url] = http://www.jhrr.org/
 
-      au < released ; 2014 ; Journal of Health Research and Reviews Volume 1 ; 2014 ; 1 ; http://www.jhrr.org/ >
-      au < released ; 2015 ; Journal of Health Research and Reviews Volume 2 ; 2015 ; 2 ; http://www.jhrr.org/ >
-      au < released ; 2016 ; Journal of Health Research and Reviews Volume 3 ; 2016 ; 3 ; http://www.jhrr.org/ >
-      au < released ; 2017 ; Journal of Health Research and Reviews Volume 4 ; 2017 ; 4 ; http://www.jhrr.org/ >
-      au < released ; 2018 ; Journal of Health Research and Reviews Volume 5 ; 2018 ; 5 ; http://www.jhrr.org/ >
-      au < released ; 2019 ; Journal of Health Research and Reviews Volume 6 ; 2019 ; 6 ; https://www.jhrr.org/ >
-      au < released ; 2020 ; Journal of Health Research and Reviews Volume 7 ; 2020 ; 7 ; https://www.jhrr.org/ >
-      au < released ; 2021 ; Journal of Health Research and Reviews Volume 8 ; 2021 ; 8 ; https://www.jhrr.org/ >
-      au < released ; 2022 ; Journal of Health Research and Reviews Volume 9 ; 2022 ; 9 ; https://www.jhrr.org/ >
-      au < expected ; 2023 ; Journal of Health Research and Reviews Volume 10 ; 2023 ; 10 ; https://www.jhrr.org/ >
+      au < down ; 2014 ; Journal of Health Research and Reviews Volume 1 ; 2014 ; 1 ; http://www.jhrr.org/ >
+      au < down ; 2015 ; Journal of Health Research and Reviews Volume 2 ; 2015 ; 2 ; http://www.jhrr.org/ >
+      au < down ; 2016 ; Journal of Health Research and Reviews Volume 3 ; 2016 ; 3 ; http://www.jhrr.org/ >
+      au < down ; 2017 ; Journal of Health Research and Reviews Volume 4 ; 2017 ; 4 ; http://www.jhrr.org/ >
+      au < down ; 2018 ; Journal of Health Research and Reviews Volume 5 ; 2018 ; 5 ; http://www.jhrr.org/ >
+      au < down ; 2019 ; Journal of Health Research and Reviews Volume 6 ; 2019 ; 6 ; https://www.jhrr.org/ >
+      au < down ; 2020 ; Journal of Health Research and Reviews Volume 7 ; 2020 ; 7 ; https://www.jhrr.org/ >
+      au < down ; 2021 ; Journal of Health Research and Reviews Volume 8 ; 2021 ; 8 ; https://www.jhrr.org/ >
+      au < down ; 2022 ; Journal of Health Research and Reviews Volume 9 ; 2022 ; 9 ; https://www.jhrr.org/ >
+      au < doNotProcess ; 2023 ; Journal of Health Research and Reviews Volume 10 ; 2023 ; 10 ; https://www.jhrr.org/ >
 
   }
 
@@ -7117,8 +7117,8 @@
       au < down ; 2016 ; Journal of Integrative Nephrology and Andrology Volume 3 ; 2016 ; 3 ; http://www.journal-ina.com/ >
       au < down ; 2017 ; Journal of Integrative Nephrology and Andrology Volume 4 ; 2017 ; 4 ; http://www.journal-ina.com/ >
       au < down ; 2018 ; Journal of Integrative Nephrology and Andrology Volume 5 ; 2018 ; 5 ; http://www.journal-ina.com/ >
-      au < notReady ; 2019 ; Journal of Integrative Nephrology and Andrology Volume 6 ; 2019 ; 6 ; https://www.journal-ina.com/ >
-      au < notReady ; 2020 ; Journal of Integrative Nephrology and Andrology Volume 7 ; 2020 ; 7 ; https://www.journal-ina.com/ >
+      au < doNotProcess ; 2019 ; Journal of Integrative Nephrology and Andrology Volume 6 ; 2019 ; 6 ; https://www.journal-ina.com/ >
+      au < doNotProcess ; 2020 ; Journal of Integrative Nephrology and Andrology Volume 7 ; 2020 ; 7 ; https://www.journal-ina.com/ >
 
   }
 
@@ -7181,10 +7181,10 @@
       param[journal_issn] = 2278-1870
 #      param[base_url] = http://www.jmnn.org/
 
-      au < released ; 2012 ; Journal of Medical Nutrition and Nutraceuticals Volume 1 ; 2012 ; 1 ; http://www.jmnn.org/ >
-      au < released ; 2013 ; Journal of Medical Nutrition and Nutraceuticals Volume 2 ; 2013 ; 2 ; http://www.jmnn.org/ >
-      au < released ; 2014 ; Journal of Medical Nutrition and Nutraceuticals Volume 3 ; 2014 ; 3 ; http://www.jmnn.org/ >
-      au < released ; 2015 ; Journal of Medical Nutrition and Nutraceuticals Volume 4 ; 2015 ; 4 ; http://www.jmnn.org/ >
+      au < down ; 2012 ; Journal of Medical Nutrition and Nutraceuticals Volume 1 ; 2012 ; 1 ; http://www.jmnn.org/ >
+      au < down ; 2013 ; Journal of Medical Nutrition and Nutraceuticals Volume 2 ; 2013 ; 2 ; http://www.jmnn.org/ >
+      au < down ; 2014 ; Journal of Medical Nutrition and Nutraceuticals Volume 3 ; 2014 ; 3 ; http://www.jmnn.org/ >
+      au < down ; 2015 ; Journal of Medical Nutrition and Nutraceuticals Volume 4 ; 2015 ; 4 ; http://www.jmnn.org/ >
 
   }
 
@@ -7310,14 +7310,14 @@
 #      param[base_url] = http://www.jovr.org/
       #move to Knowledge E
 
-      au < released ; 2011 ; Journal of Ophthalmic and Vision Research Volume 6 ; 2011 ; 6 ; http://www.jovr.org/ >
-      au < released ; 2012 ; Journal of Ophthalmic and Vision Research Volume 7 ; 2012 ; 7 ; http://www.jovr.org/ >
-      au < released ; 2013 ; Journal of Ophthalmic and Vision Research Volume 8 ; 2013 ; 8 ; http://www.jovr.org/ >
-      au < released ; 2014 ; Journal of Ophthalmic and Vision Research Volume 9 ; 2014 ; 9 ; http://www.jovr.org/ >
-      au < released ; 2015 ; Journal of Ophthalmic and Vision Research Volume 10 ; 2015 ; 10 ; http://www.jovr.org/ >
-      au < released ; 2016 ; Journal of Ophthalmic and Vision Research Volume 11 ; 2016 ; 11 ; http://www.jovr.org/ >
-      au < released ; 2017 ; Journal of Ophthalmic and Vision Research Volume 12 ; 2017 ; 12 ; http://www.jovr.org/ >
-      au < released ; 2018 ; Journal of Ophthalmic and Vision Research Volume 13 ; 2018 ; 13 ; http://www.jovr.org/ >
+      au < down ; 2011 ; Journal of Ophthalmic and Vision Research Volume 6 ; 2011 ; 6 ; http://www.jovr.org/ >
+      au < down ; 2012 ; Journal of Ophthalmic and Vision Research Volume 7 ; 2012 ; 7 ; http://www.jovr.org/ >
+      au < down ; 2013 ; Journal of Ophthalmic and Vision Research Volume 8 ; 2013 ; 8 ; http://www.jovr.org/ >
+      au < down ; 2014 ; Journal of Ophthalmic and Vision Research Volume 9 ; 2014 ; 9 ; http://www.jovr.org/ >
+      au < down ; 2015 ; Journal of Ophthalmic and Vision Research Volume 10 ; 2015 ; 10 ; http://www.jovr.org/ >
+      au < down ; 2016 ; Journal of Ophthalmic and Vision Research Volume 11 ; 2016 ; 11 ; http://www.jovr.org/ >
+      au < down ; 2017 ; Journal of Ophthalmic and Vision Research Volume 12 ; 2017 ; 12 ; http://www.jovr.org/ >
+      au < down ; 2018 ; Journal of Ophthalmic and Vision Research Volume 13 ; 2018 ; 13 ; http://www.jovr.org/ >
 
   }
 
@@ -7824,11 +7824,11 @@
 #      param[base_url] = http://www.mjdrdypu.org/
 
       au < down ; 2012 ; Medical Journal of Dr. D.Y. Patil University Volume 5 ; 2012 ; 5 ; http://www.mjdrdypu.org/ >
-      au < released ; 2013 ; Medical Journal of Dr. D.Y. Patil University Volume 6 ; 2013 ; 6 ; http://www.mjdrdypu.org/ >
-      au < released ; 2014 ; Medical Journal of Dr. D.Y. Patil University Volume 7 ; 2014 ; 7 ; http://www.mjdrdypu.org/ >
-      au < released ; 2015 ; Medical Journal of Dr. D.Y. Patil University Volume 8 ; 2015 ; 8 ; http://www.mjdrdypu.org/ >
-      au < released ; 2016 ; Medical Journal of Dr. D.Y. Patil University Volume 9 ; 2016 ; 9 ; http://www.mjdrdypu.org/ >
-      au < released ; 2017 ; Medical Journal of Dr. D.Y. Patil University Volume 10 ; 2017 ; 10 ; http://www.mjdrdypu.org/ >
+      au < down ; 2013 ; Medical Journal of Dr. D.Y. Patil University Volume 6 ; 2013 ; 6 ; http://www.mjdrdypu.org/ >
+      au < down ; 2014 ; Medical Journal of Dr. D.Y. Patil University Volume 7 ; 2014 ; 7 ; http://www.mjdrdypu.org/ >
+      au < down ; 2015 ; Medical Journal of Dr. D.Y. Patil University Volume 8 ; 2015 ; 8 ; http://www.mjdrdypu.org/ >
+      au < down ; 2016 ; Medical Journal of Dr. D.Y. Patil University Volume 9 ; 2016 ; 9 ; http://www.mjdrdypu.org/ >
+      au < down ; 2017 ; Medical Journal of Dr. D.Y. Patil University Volume 10 ; 2017 ; 10 ; http://www.mjdrdypu.org/ >
 
   }
 
@@ -7943,12 +7943,12 @@
       #https://www.mdcan-uath.org/showBackIssue.asp?issn=2250-9658;year=2019;volume=8;issue=14
       #https://www.mdcan-uath.org/showBackIssue.asp?issn=2250-9658;year=2020;volume=9;issue=16
 
-      au < notReady ; 2016 ; New Nigerian Journal of Clinical Research Volume 5 ; 2016 ; 5 ; https://www.mdcan-uath.org/ > #500 Error
-      au < notReady ; 2017 ; New Nigerian Journal of Clinical Research Volume 6 ; 2017 ; 6 ; https://www.mdcan-uath.org/ > #500 Error
-      au < notReady ; 2018 ; New Nigerian Journal of Clinical Research Volume 7 ; 2018 ; 7 ; https://www.mdcan-uath.org/ > #500 Error
-      au < notReady ; 2019 ; New Nigerian Journal of Clinical Research Volume 8 ; 2019 ; 8 ; https://www.mdcan-uath.org/ > #500 Error
-      au < notReady ; 2020 ; New Nigerian Journal of Clinical Research Volume 9 ; 2020 ; 9 ; https://www.mdcan-uath.org/ > #500 Error
-      au < notReady ; 2021 ; New Nigerian Journal of Clinical Research Volume 10 ; 2021 ; 10 ; https://www.mdcan-uath.org/ > #500 Error
+      au < doNotProcess ; 2016 ; New Nigerian Journal of Clinical Research Volume 5 ; 2016 ; 5 ; https://www.mdcan-uath.org/ > #500 Error
+      au < doNotProcess ; 2017 ; New Nigerian Journal of Clinical Research Volume 6 ; 2017 ; 6 ; https://www.mdcan-uath.org/ > #500 Error
+      au < doNotProcess ; 2018 ; New Nigerian Journal of Clinical Research Volume 7 ; 2018 ; 7 ; https://www.mdcan-uath.org/ > #500 Error
+      au < doNotProcess ; 2019 ; New Nigerian Journal of Clinical Research Volume 8 ; 2019 ; 8 ; https://www.mdcan-uath.org/ > #500 Error
+      au < doNotProcess ; 2020 ; New Nigerian Journal of Clinical Research Volume 9 ; 2020 ; 9 ; https://www.mdcan-uath.org/ > #500 Error
+      au < doNotProcess ; 2021 ; New Nigerian Journal of Clinical Research Volume 10 ; 2021 ; 10 ; https://www.mdcan-uath.org/ > #500 Error
       au < doNotProcess ; 2022 ; New Nigerian Journal of Clinical Research Volume 11 ; 2022 ; 11 ; https://www.mdcan-uath.org/ > #500 Error
       au < doNotProcess ; 2023 ; New Nigerian Journal of Clinical Research Volume 12 ; 2023 ; 12 ; https://www.mdcan-uath.org/ > #500 Error
 
@@ -8034,8 +8034,8 @@
       param[journal_issn] = 1596-4078
 #      param[base_url] = http://www.chs-journal.com/
 
-      au < released ; 2015 ; Nigerian Journal of Health Sciences Volume 15 ; 2015 ; 15 ; http://www.chs-journal.com/ >
-      au < released ; 2016 ; Nigerian Journal of Health Sciences Volume 16 ; 2016 ; 16 ; http://www.chs-journal.com/ >
+      au < down ; 2015 ; Nigerian Journal of Health Sciences Volume 15 ; 2015 ; 15 ; http://www.chs-journal.com/ >
+      au < down ; 2016 ; Nigerian Journal of Health Sciences Volume 16 ; 2016 ; 16 ; http://www.chs-journal.com/ >
 
   }
 
@@ -8075,13 +8075,13 @@
       param[journal_issn] = 0794-9316
 #      param[base_url] = http://www.njps.org/
 
-      au < released ; 2014 ; Nigerian Journal of Plastic Surgery Volume 10 ; 2014 ; 10 ; http://www.njps.org/ >
-      au < released ; 2015 ; Nigerian Journal of Plastic Surgery Volume 11 ; 2015 ; 11 ; http://www.njps.org/ >
-      au < released ; 2016 ; Nigerian Journal of Plastic Surgery Volume 12 ; 2016 ; 12 ; http://www.njps.org/ >
-      au < released ; 2017 ; Nigerian Journal of Plastic Surgery Volume 13 ; 2017 ; 13 ; http://www.njps.org/ >
-      au < released ; 2018 ; Nigerian Journal of Plastic Surgery Volume 14 ; 2018 ; 14 ; http://www.njps.org/ >
-      au < released ; 2019 ; Nigerian Journal of Plastic Surgery Volume 15 ; 2019 ; 15 ; https://www.njps.org/ >
-      au < released ; 2020 ; Nigerian Journal of Plastic Surgery Volume 16 ; 2020 ; 16 ; https://www.njps.org/ >
+      au < down ; 2014 ; Nigerian Journal of Plastic Surgery Volume 10 ; 2014 ; 10 ; http://www.njps.org/ >
+      au < down ; 2015 ; Nigerian Journal of Plastic Surgery Volume 11 ; 2015 ; 11 ; http://www.njps.org/ >
+      au < down ; 2016 ; Nigerian Journal of Plastic Surgery Volume 12 ; 2016 ; 12 ; http://www.njps.org/ >
+      au < down ; 2017 ; Nigerian Journal of Plastic Surgery Volume 13 ; 2017 ; 13 ; http://www.njps.org/ >
+      au < down ; 2018 ; Nigerian Journal of Plastic Surgery Volume 14 ; 2018 ; 14 ; http://www.njps.org/ >
+      au < down ; 2019 ; Nigerian Journal of Plastic Surgery Volume 15 ; 2019 ; 15 ; https://www.njps.org/ >
+      au < down ; 2020 ; Nigerian Journal of Plastic Surgery Volume 16 ; 2020 ; 16 ; https://www.njps.org/ >
 
   }
 
@@ -8233,11 +8233,11 @@
       param[journal_issn] = 0795-3038
 #      param[base_url] = http://www.phmj.org/
 
-      au < released ; 2016 ; Port Harcourt Medical Journal Volume 10 ; 2016 ; 10 ; http://www.phmj.org/ >
-      au < released ; 2017 ; Port Harcourt Medical Journal Volume 11 ; 2017 ; 11 ; http://www.phmj.org/ >
-      au < released ; 2018 ; Port Harcourt Medical Journal Volume 12 ; 2018 ; 12 ; http://www.phmj.org/ >
-      au < released ; 2019 ; Port Harcourt Medical Journal Volume 13 ; 2019 ; 13 ; https://www.phmj.org/ >
-      au < released ; 2020 ; Port Harcourt Medical Journal Volume 14 ; 2020 ; 14 ; https://www.phmj.org/ >
+      au < down ; 2016 ; Port Harcourt Medical Journal Volume 10 ; 2016 ; 10 ; http://www.phmj.org/ >
+      au < down ; 2017 ; Port Harcourt Medical Journal Volume 11 ; 2017 ; 11 ; http://www.phmj.org/ >
+      au < down ; 2018 ; Port Harcourt Medical Journal Volume 12 ; 2018 ; 12 ; http://www.phmj.org/ >
+      au < down ; 2019 ; Port Harcourt Medical Journal Volume 13 ; 2019 ; 13 ; https://www.phmj.org/ >
+      au < down ; 2020 ; Port Harcourt Medical Journal Volume 14 ; 2020 ; 14 ; https://www.phmj.org/ >
       au < doNotProcess ; 2021 ; Port Harcourt Medical Journal Volume 15 ; 2021 ; 15 ; https://www.phmj.org/ >
       au < doNotProcess ; 2022 ; Port Harcourt Medical Journal Volume 16 ; 2022 ; 16 ; https://www.phmj.org/ >
       au < doNotProcess ; 2023 ; Port Harcourt Medical Journal Volume 17 ; 2023 ; 17 ; https://www.phmj.org/ >
@@ -8279,31 +8279,31 @@
       param[journal_issn] = 1118-8561
 #      param[base_url] = http://www.smjonline.org/
 
-      au < manifest ; 1998 ; Sahel Medical Journal Volume 1 ; 1998 ; 1 ; https://www.smjonline.org/ >
-      au < manifest ; 1999 ; Sahel Medical Journal Volume 2 ; 1999 ; 2 ; https://www.smjonline.org/ >
-      au < released ; 2000 ; Sahel Medical Journal Volume 3 ; 2000 ; 3 ; https://www.smjonline.org/ >
-      au < released ; 2001 ; Sahel Medical Journal Volume 4 ; 2001 ; 4 ; https://www.smjonline.org/ >
-      au < released ; 2002 ; Sahel Medical Journal Volume 5 ; 2002 ; 5 ; https://www.smjonline.org/ >
-      au < released ; 2003 ; Sahel Medical Journal Volume 6 ; 2003 ; 6 ; https://www.smjonline.org/ >
-      au < released ; 2004 ; Sahel Medical Journal Volume 7 ; 2004 ; 7 ; https://www.smjonline.org/ >
-      au < released ; 2005 ; Sahel Medical Journal Volume 8 ; 2005 ; 8 ; https://www.smjonline.org/ >
-      au < released ; 2006 ; Sahel Medical Journal Volume 9 ; 2006 ; 9 ; https://www.smjonline.org/ >
-      au < released ; 2007 ; Sahel Medical Journal Volume 10 ; 2007 ; 10 ; https://www.smjonline.org/ >
-      au < released ; 2008 ; Sahel Medical Journal Volume 11 ; 2008 ; 11 ; https://www.smjonline.org/ >
-      au < released ; 2009 ; Sahel Medical Journal Volume 12 ; 2009 ; 12 ; https://www.smjonline.org/ >
+      au < doNotProcess ; 1998 ; Sahel Medical Journal Volume 1 ; 1998 ; 1 ; https://www.smjonline.org/ >
+      au < doNotProcess ; 1999 ; Sahel Medical Journal Volume 2 ; 1999 ; 2 ; https://www.smjonline.org/ >
+      au < down ; 2000 ; Sahel Medical Journal Volume 3 ; 2000 ; 3 ; https://www.smjonline.org/ >
+      au < down ; 2001 ; Sahel Medical Journal Volume 4 ; 2001 ; 4 ; https://www.smjonline.org/ >
+      au < down ; 2002 ; Sahel Medical Journal Volume 5 ; 2002 ; 5 ; https://www.smjonline.org/ >
+      au < down ; 2003 ; Sahel Medical Journal Volume 6 ; 2003 ; 6 ; https://www.smjonline.org/ >
+      au < down ; 2004 ; Sahel Medical Journal Volume 7 ; 2004 ; 7 ; https://www.smjonline.org/ >
+      au < down ; 2005 ; Sahel Medical Journal Volume 8 ; 2005 ; 8 ; https://www.smjonline.org/ >
+      au < down ; 2006 ; Sahel Medical Journal Volume 9 ; 2006 ; 9 ; https://www.smjonline.org/ >
+      au < down ; 2007 ; Sahel Medical Journal Volume 10 ; 2007 ; 10 ; https://www.smjonline.org/ >
+      au < down ; 2008 ; Sahel Medical Journal Volume 11 ; 2008 ; 11 ; https://www.smjonline.org/ >
+      au < down ; 2009 ; Sahel Medical Journal Volume 12 ; 2009 ; 12 ; https://www.smjonline.org/ >
       au < down ; 2010 ; Sahel Medical Journal Volume 13 ; 2010 ; 13 ; https://www.smjonline.org/ >
-      au < released ; 2011 ; Sahel Medical Journal Volume 14 ; 2011 ; 14 ; http://www.smjonline.org/ >
-      au < released ; 2012 ; Sahel Medical Journal Volume 15 ; 2012 ; 15 ; http://www.smjonline.org/ >
-      au < released ; 2013 ; Sahel Medical Journal Volume 16 ; 2013 ; 16 ; http://www.smjonline.org/ >
-      au < released ; 2014 ; Sahel Medical Journal Volume 17 ; 2014 ; 17 ; http://www.smjonline.org/ >
-      au < released ; 2015 ; Sahel Medical Journal Volume 18 ; 2015 ; 18 ; http://www.smjonline.org/ >
-      au < released ; 2016 ; Sahel Medical Journal Volume 19 ; 2016 ; 19 ; http://www.smjonline.org/ >
-      au < released ; 2017 ; Sahel Medical Journal Volume 20 ; 2017 ; 20 ; http://www.smjonline.org/ >
-      au < released ; 2018 ; Sahel Medical Journal Volume 21 ; 2018 ; 21 ; http://www.smjonline.org/ >
-      au < released ; 2019 ; Sahel Medical Journal Volume 22 ; 2019 ; 22 ; https://www.smjonline.org/ >
-      au < released ; 2020 ; Sahel Medical Journal Volume 23 ; 2020 ; 23 ; https://www.smjonline.org/ >
-      au < released ; 2021 ; Sahel Medical Journal Volume 24 ; 2021 ; 24 ; https://www.smjonline.org/ >
-      au < released ; 2022 ; Sahel Medical Journal Volume 25 ; 2022 ; 25 ; https://www.smjonline.org/ >
+      au < down ; 2011 ; Sahel Medical Journal Volume 14 ; 2011 ; 14 ; http://www.smjonline.org/ >
+      au < down ; 2012 ; Sahel Medical Journal Volume 15 ; 2012 ; 15 ; http://www.smjonline.org/ >
+      au < down ; 2013 ; Sahel Medical Journal Volume 16 ; 2013 ; 16 ; http://www.smjonline.org/ >
+      au < down ; 2014 ; Sahel Medical Journal Volume 17 ; 2014 ; 17 ; http://www.smjonline.org/ >
+      au < down ; 2015 ; Sahel Medical Journal Volume 18 ; 2015 ; 18 ; http://www.smjonline.org/ >
+      au < down ; 2016 ; Sahel Medical Journal Volume 19 ; 2016 ; 19 ; http://www.smjonline.org/ >
+      au < down ; 2017 ; Sahel Medical Journal Volume 20 ; 2017 ; 20 ; http://www.smjonline.org/ >
+      au < down ; 2018 ; Sahel Medical Journal Volume 21 ; 2018 ; 21 ; http://www.smjonline.org/ >
+      au < down ; 2019 ; Sahel Medical Journal Volume 22 ; 2019 ; 22 ; https://www.smjonline.org/ >
+      au < down ; 2020 ; Sahel Medical Journal Volume 23 ; 2020 ; 23 ; https://www.smjonline.org/ >
+      au < down ; 2021 ; Sahel Medical Journal Volume 24 ; 2021 ; 24 ; https://www.smjonline.org/ >
+      au < down ; 2022 ; Sahel Medical Journal Volume 25 ; 2022 ; 25 ; https://www.smjonline.org/ >
       au < doNotProcess ; 2023 ; Sahel Medical Journal Volume 26 ; 2023 ; 26 ; https://www.smjonline.org/ >
 
   }
@@ -8517,9 +8517,9 @@
       param[journal_issn] = 2148-7731
 #      param[base_url] = http://www.imjsu.org/
 
-      au < released ; 2014 ; Sifa Medical Journal Volume 1 ; 2014 ; 1 ; http://www.imjsu.org/ >
-      au < released ; 2015 ; Sifa Medical Journal Volume 2 ; 2015 ; 2 ; http://www.imjsu.org/ >
-      au < released ; 2016 ; Sifa Medical Journal Volume 3 ; 2016 ; 3 ; http://www.imjsu.org/ >
+      au < down ; 2014 ; Sifa Medical Journal Volume 1 ; 2014 ; 1 ; http://www.imjsu.org/ >
+      au < down ; 2015 ; Sifa Medical Journal Volume 2 ; 2015 ; 2 ; http://www.imjsu.org/ >
+      au < down ; 2016 ; Sifa Medical Journal Volume 3 ; 2016 ; 3 ; http://www.imjsu.org/ >
 
   }
 
@@ -8563,12 +8563,12 @@
       param[journal_issn] = 2384-5147
 #      param[base_url] = http://www.ssajm.org/
 
-      au < released ; 2014 ; Sub-Saharan African Journal of Medicine Volume 1 ; 2014 ; 1 ; http://www.ssajm.org/ >
-      au < released ; 2015 ; Sub-Saharan African Journal of Medicine Volume 2 ; 2015 ; 2 ; http://www.ssajm.org/ >
-      au < released ; 2016 ; Sub-Saharan African Journal of Medicine Volume 3 ; 2016 ; 3 ; http://www.ssajm.org/ >
-      au < released ; 2017 ; Sub-Saharan African Journal of Medicine Volume 4 ; 2017 ; 4 ; http://www.ssajm.org/ >
-      au < released ; 2018 ; Sub-Saharan African Journal of Medicine Volume 5 ; 2018 ; 5 ; http://www.ssajm.org/ >
-      au < released ; 2019 ; Sub-Saharan African Journal of Medicine Volume 6 ; 2019 ; 6 ; https://www.ssajm.org/ >
+      au < down ; 2014 ; Sub-Saharan African Journal of Medicine Volume 1 ; 2014 ; 1 ; http://www.ssajm.org/ >
+      au < down ; 2015 ; Sub-Saharan African Journal of Medicine Volume 2 ; 2015 ; 2 ; http://www.ssajm.org/ >
+      au < down ; 2016 ; Sub-Saharan African Journal of Medicine Volume 3 ; 2016 ; 3 ; http://www.ssajm.org/ >
+      au < down ; 2017 ; Sub-Saharan African Journal of Medicine Volume 4 ; 2017 ; 4 ; http://www.ssajm.org/ >
+      au < down ; 2018 ; Sub-Saharan African Journal of Medicine Volume 5 ; 2018 ; 5 ; http://www.ssajm.org/ >
+      au < down ; 2019 ; Sub-Saharan African Journal of Medicine Volume 6 ; 2019 ; 6 ; https://www.ssajm.org/ >
 
   }
 
@@ -8802,11 +8802,11 @@
       au < doNotProcess ; 2007 ; The Journal of Indian Prosthodontic Society Volume 7 ; 2007 ; 7 ; https://www.j-ips.org/ >
       au < doNotProcess ; 2008 ; The Journal of Indian Prosthodontic Society Volume 8 ; 2008 ; 8 ; https://www.j-ips.org/ >
       au < doNotProcess ; 2009 ; The Journal of Indian Prosthodontic Society Volume 9 ; 2009 ; 9 ; https://www.j-ips.org/ >
-      au < doesNotExist ; 2010 ; The Journal of Indian Prosthodontic Society Volume 10 ; 2010 ; 10 ; https://www.j-ips.org/ >
-      au < doesNotExist ; 2011 ; The Journal of Indian Prosthodontic Society Volume 11 ; 2011 ; 11 ; https://www.j-ips.org/ >
-      au < doesNotExist ; 2012 ; The Journal of Indian Prosthodontic Society Volume 12 ; 2012 ; 12 ; https://www.j-ips.org/ >
-      au < doesNotExist ; 2013 ; The Journal of Indian Prosthodontic Society Volume 13 ; 2013 ; 13 ; https://www.j-ips.org/ >
-      au < doesNotExist ; 2014 ; The Journal of Indian Prosthodontic Society Volume 14 ; 2014 ; 14 ; https://www.j-ips.org/ >
+      au < doNotProcess ; 2010 ; The Journal of Indian Prosthodontic Society Volume 10 ; 2010 ; 10 ; https://www.j-ips.org/ >
+      au < doNotProcess ; 2011 ; The Journal of Indian Prosthodontic Society Volume 11 ; 2011 ; 11 ; https://www.j-ips.org/ >
+      au < doNotProcess ; 2012 ; The Journal of Indian Prosthodontic Society Volume 12 ; 2012 ; 12 ; https://www.j-ips.org/ >
+      au < doNotProcess ; 2013 ; The Journal of Indian Prosthodontic Society Volume 13 ; 2013 ; 13 ; https://www.j-ips.org/ >
+      au < doNotProcess ; 2014 ; The Journal of Indian Prosthodontic Society Volume 14 ; 2014 ; 14 ; https://www.j-ips.org/ >
       au < down ; 2015 ; The Journal of Indian Prosthodontic Society Volume 15 ; 2015 ; 15 ; http://www.j-ips.org/ >
       au < down ; 2016 ; The Journal of Indian Prosthodontic Society Volume 16 ; 2016 ; 16 ; http://www.j-ips.org/ >
       au < down ; 2017 ; The Journal of Indian Prosthodontic Society Volume 17 ; 2017 ; 17 ; http://www.j-ips.org/ >
@@ -8978,11 +8978,11 @@
 #      param[base_url] = http://www.tjogonline.com/
       #Archive will stay with Medknow until further notice
 
-      au < released ; 2016 ; Tropical Journal of Obstetrics and Gynaecology Volume 33 ; 2016 ; 33 ; http://www.tjogonline.com/ >
-      au < released ; 2017 ; Tropical Journal of Obstetrics and Gynaecology Volume 34 ; 2017 ; 34 ; http://www.tjogonline.com/ >
-      au < released ; 2018 ; Tropical Journal of Obstetrics and Gynaecology Volume 35 ; 2018 ; 35 ; http://www.tjogonline.com/ >
-      au < released ; 2019 ; Tropical Journal of Obstetrics and Gynaecology Volume 36 ; 2019 ; 36 ; https://www.tjogonline.com/ >
-      au < released ; 2020 ; Tropical Journal of Obstetrics and Gynaecology Volume 37 ; 2020 ; 37 ; https://www.tjogonline.com/ >
+      au < down ; 2016 ; Tropical Journal of Obstetrics and Gynaecology Volume 33 ; 2016 ; 33 ; http://www.tjogonline.com/ >
+      au < down ; 2017 ; Tropical Journal of Obstetrics and Gynaecology Volume 34 ; 2017 ; 34 ; http://www.tjogonline.com/ >
+      au < down ; 2018 ; Tropical Journal of Obstetrics and Gynaecology Volume 35 ; 2018 ; 35 ; http://www.tjogonline.com/ >
+      au < down ; 2019 ; Tropical Journal of Obstetrics and Gynaecology Volume 36 ; 2019 ; 36 ; https://www.tjogonline.com/ >
+      au < down ; 2020 ; Tropical Journal of Obstetrics and Gynaecology Volume 37 ; 2020 ; 37 ; https://www.tjogonline.com/ >
       #deactivated
 
   }
@@ -9021,7 +9021,7 @@
       #move to LWW in 2023, moved https://journals.lww.com/wajr/
 
       au < doNotProcess ; 2001 ; West African Journal of Radiology Volume 8 ; 2001 ; 8 ; https://www.wajradiology.org/ >
-      au < doesNotExist ; 2002 ; West African Journal of Radiology Volume 9 ; 2002 ; 9 ; https://www.wajradiology.org/ >
+      au < doNotProcess ; 2002 ; West African Journal of Radiology Volume 9 ; 2002 ; 9 ; https://www.wajradiology.org/ >
       au < doNotProcess ; 2003 ; West African Journal of Radiology Volume 10 ; 2003 ; 10 ; https://www.wajradiology.org/ >
       au < doNotProcess ; 2004 ; West African Journal of Radiology Volume 11 ; 2004 ; 11 ; https://www.wajradiology.org/ >
       au < doNotProcess ; 2005 ; West African Journal of Radiology Volume 12 ; 2005 ; 12 ; https://www.wajradiology.org/ >
@@ -9135,7 +9135,7 @@
       param[journal_issn] = 2536-1384
 #      param[base_url] = http://www.asmfa.org/
 
-      au < released ; 2017 ; Advances in Skeletal Muscle Function Assessment Volume 1 ; 2017 ; 1 ; http://www.asmfa.org/ >
+      au < down ; 2017 ; Advances in Skeletal Muscle Function Assessment Volume 1 ; 2017 ; 1 ; http://www.asmfa.org/ >
 
   }
 
@@ -9351,10 +9351,10 @@
       param[journal_issn] = 2543-1951
 #      param[base_url] = http://www.archms.org/
 
-      au < released ; 2016 ; Archives of Medicine and Surgery Volume 1 ; 2016 ; 1 ; http://www.archms.org/ >
-      au < released ; 2017 ; Archives of Medicine and Surgery Volume 2 ; 2017 ; 2 ; http://www.archms.org/ >
-      au < released ; 2018 ; Archives of Medicine and Surgery Volume 3 ; 2018 ; 3 ; http://www.archms.org/ >
-      au < released ; 2019 ; Archives of Medicine and Surgery Volume 4 ; 2019 ; 4 ; https://www.archms.org/ >
+      au < down ; 2016 ; Archives of Medicine and Surgery Volume 1 ; 2016 ; 1 ; http://www.archms.org/ >
+      au < down ; 2017 ; Archives of Medicine and Surgery Volume 2 ; 2017 ; 2 ; http://www.archms.org/ >
+      au < down ; 2018 ; Archives of Medicine and Surgery Volume 3 ; 2018 ; 3 ; http://www.archms.org/ >
+      au < down ; 2019 ; Archives of Medicine and Surgery Volume 4 ; 2019 ; 4 ; https://www.archms.org/ >
 
   }
 
@@ -9370,13 +9370,13 @@
       param[journal_issn] = 2251-953X
 #      param[base_url] = http://www.archtrauma.com/
 
-      au < released ; 2017 ; Archives of Trauma Research Volume 6 ; 2017 ; 6 ; http://www.archtrauma.com/ >
-      au < released ; 2018 ; Archives of Trauma Research Volume 7 ; 2018 ; 7 ; https://www.archtrauma.com/ >
-      au < released ; 2019 ; Archives of Trauma Research Volume 8 ; 2019 ; 8 ; https://www.archtrauma.com/ >
-      au < released ; 2020 ; Archives of Trauma Research Volume 9 ; 2020 ; 9 ; https://www.archtrauma.com/ >
-      au < released ; 2021 ; Archives of Trauma Research Volume 10 ; 2021 ; 10 ; https://www.archtrauma.com/ >
-      au < released ; 2022 ; Archives of Trauma Research Volume 11 ; 2022 ; 11 ; https://www.archtrauma.com/ >
-      au < manifest ; 2023 ; Archives of Trauma Research Volume 12 ; 2023 ; 12 ; https://www.archtrauma.com/ >
+      au < down ; 2017 ; Archives of Trauma Research Volume 6 ; 2017 ; 6 ; http://www.archtrauma.com/ >
+      au < down ; 2018 ; Archives of Trauma Research Volume 7 ; 2018 ; 7 ; https://www.archtrauma.com/ >
+      au < down ; 2019 ; Archives of Trauma Research Volume 8 ; 2019 ; 8 ; https://www.archtrauma.com/ >
+      au < down ; 2020 ; Archives of Trauma Research Volume 9 ; 2020 ; 9 ; https://www.archtrauma.com/ >
+      au < down ; 2021 ; Archives of Trauma Research Volume 10 ; 2021 ; 10 ; https://www.archtrauma.com/ >
+      au < down ; 2022 ; Archives of Trauma Research Volume 11 ; 2022 ; 11 ; https://www.archtrauma.com/ >
+      au < doNotProcess ; 2023 ; Archives of Trauma Research Volume 12 ; 2023 ; 12 ; https://www.archtrauma.com/ >
 
   }
 
@@ -10041,12 +10041,12 @@
 #      param[base_url] = http://www.ijofo.org/
       #move to MM Publications 2022-06, Archive will stay with Medknow until further notice
 
-      au < released ; 2016 ; International Journal of Forensic Odontology Volume 1 ; 2016 ; 1 ; https://www.ijofo.org/ >
-      au < released ; 2017 ; International Journal of Forensic Odontology Volume 2 ; 2017 ; 2 ; http://www.ijofo.org/ >
-      au < released ; 2018 ; International Journal of Forensic Odontology Volume 3 ; 2018 ; 3 ; https://www.ijofo.org/ >
-      au < released ; 2019 ; International Journal of Forensic Odontology Volume 4 ; 2019 ; 4 ; https://www.ijofo.org/ >
-      au < released ; 2020 ; International Journal of Forensic Odontology Volume 5 ; 2020 ; 5 ; https://www.ijofo.org/ >
-      au < released ; 2021 ; International Journal of Forensic Odontology Volume 6 ; 2021 ; 6 ; https://www.ijofo.org/ >
+      au < down ; 2016 ; International Journal of Forensic Odontology Volume 1 ; 2016 ; 1 ; https://www.ijofo.org/ >
+      au < down ; 2017 ; International Journal of Forensic Odontology Volume 2 ; 2017 ; 2 ; http://www.ijofo.org/ >
+      au < down ; 2018 ; International Journal of Forensic Odontology Volume 3 ; 2018 ; 3 ; https://www.ijofo.org/ >
+      au < down ; 2019 ; International Journal of Forensic Odontology Volume 4 ; 2019 ; 4 ; https://www.ijofo.org/ >
+      au < down ; 2020 ; International Journal of Forensic Odontology Volume 5 ; 2020 ; 5 ; https://www.ijofo.org/ >
+      au < down ; 2021 ; International Journal of Forensic Odontology Volume 6 ; 2021 ; 6 ; https://www.ijofo.org/ >
       #deactivated
 
   }
@@ -10086,9 +10086,9 @@
       param[journal_issn] = 2589-7330
 #      param[base_url] = http://www.cellsindentistry.org/
 
-      au < released ; 2018 ; International Journal of Growth Factors and Stem Cells in Dentistry Volume 1 ; 2018 ; 1 ; https://www.cellsindentistry.org/ >
-      au < released ; 2019 ; International Journal of Growth Factors and Stem Cells in Dentistry Volume 2 ; 2019 ; 2 ; https://www.cellsindentistry.org/ >
-      au < released ; 2020 ; International Journal of Growth Factors and Stem Cells in Dentistry Volume 3 ; 2020 ; 3 ; https://www.cellsindentistry.org/ >
+      au < down ; 2018 ; International Journal of Growth Factors and Stem Cells in Dentistry Volume 1 ; 2018 ; 1 ; https://www.cellsindentistry.org/ >
+      au < down ; 2019 ; International Journal of Growth Factors and Stem Cells in Dentistry Volume 2 ; 2019 ; 2 ; https://www.cellsindentistry.org/ >
+      au < down ; 2020 ; International Journal of Growth Factors and Stem Cells in Dentistry Volume 3 ; 2020 ; 3 ; https://www.cellsindentistry.org/ >
 
   }
 
@@ -10103,9 +10103,9 @@
       param[journal_issn] = WKMP-0130
       #Archive will stay with Medknow until further notice
 
-      au < released ; 2017 ; International Journal of Histopathological Interpretation Volume 6 ; 2017 ; 6 ; https://www.ijhi.org/ >
-      au < released ; 2018 ; International Journal of Histopathological Interpretation Volume 7 ; 2018 ; 7 ; https://www.ijhi.org/ >
-      au < released ; 2019 ; International Journal of Histopathological Interpretation Volume 8 ; 2019 ; 8 ; https://www.ijhi.org/ >
+      au < down ; 2017 ; International Journal of Histopathological Interpretation Volume 6 ; 2017 ; 6 ; https://www.ijhi.org/ >
+      au < down ; 2018 ; International Journal of Histopathological Interpretation Volume 7 ; 2018 ; 7 ; https://www.ijhi.org/ >
+      au < down ; 2019 ; International Journal of Histopathological Interpretation Volume 8 ; 2019 ; 8 ; https://www.ijhi.org/ >
       #deactivated
 
   }
@@ -10149,10 +10149,10 @@
 #      param[base_url] = http://www.ijofb.org/
       #move to MM Publications 2022-06, Archive will stay with Medknow until further notice
 
-      au < released ; 2017 ; International Journal of Orofacial Biology Volume 1 ; 2017 ; 1 ; http://www.ijofb.org/ >
-      au < released ; 2018 ; International Journal of Orofacial Biology Volume 2 ; 2018 ; 2 ; https://www.ijofb.org/ >
-      au < released ; 2019 ; International Journal of Orofacial Biology Volume 3 ; 2019 ; 3 ; https://www.ijofb.org/ >
-      au < released ; 2020 ; International Journal of Orofacial Biology Volume 4 ; 2020 ; 4 ; https://www.ijofb.org/ >
+      au < down ; 2017 ; International Journal of Orofacial Biology Volume 1 ; 2017 ; 1 ; http://www.ijofb.org/ >
+      au < down ; 2018 ; International Journal of Orofacial Biology Volume 2 ; 2018 ; 2 ; https://www.ijofb.org/ >
+      au < down ; 2019 ; International Journal of Orofacial Biology Volume 3 ; 2019 ; 3 ; https://www.ijofb.org/ >
+      au < down ; 2020 ; International Journal of Orofacial Biology Volume 4 ; 2020 ; 4 ; https://www.ijofb.org/ >
       #deactivated
 
   }
@@ -10169,8 +10169,8 @@
 #      param[base_url] = http://www.ijofr.org/
       #move to MM Publications 2022-06, Archive will stay with Medknow until further notice
 
-      au < released ; 2017 ; International Journal of Orofacial Research Volume 2 ; 2017 ; 2 ; http://www.ijofr.org/ >
-      au < released ; 2018 ; International Journal of Orofacial Research Volume 3 ; 2018 ; 3 ; https://www.ijofr.org/ >
+      au < down ; 2017 ; International Journal of Orofacial Research Volume 2 ; 2017 ; 2 ; http://www.ijofr.org/ >
+      au < down ; 2018 ; International Journal of Orofacial Research Volume 3 ; 2018 ; 3 ; https://www.ijofr.org/ >
       #deactivated
 
   }
@@ -10188,12 +10188,12 @@
 #      param[base_url] = http://www.orthodrehab.org/
       #move to MM Publications 2022-06, Archive will stay with Medknow until further notice
 
-      au < released ; 2016 ; International Journal of Orthodontic Rehabilitation Volume 7 ; 2016 ; 7 ; https://www.orthodrehab.org/ >
-      au < released ; 2017 ; International Journal of Orthodontic Rehabilitation Volume 8 ; 2017 ; 8 ; http://www.orthodrehab.org/ >
-      au < released ; 2018 ; International Journal of Orthodontic Rehabilitation Volume 9 ; 2018 ; 9 ; https://www.orthodrehab.org/ >
-      au < released ; 2019 ; International Journal of Orthodontic Rehabilitation Volume 10 ; 2019 ; 10 ; https://www.orthodrehab.org/ >
-      au < released ; 2020 ; International Journal of Orthodontic Rehabilitation Volume 11 ; 2020 ; 11 ; https://www.orthodrehab.org/ >
-      au < released ; 2021 ; International Journal of Orthodontic Rehabilitation Volume 12 ; 2021 ; 12 ; https://www.orthodrehab.org/ >
+      au < down ; 2016 ; International Journal of Orthodontic Rehabilitation Volume 7 ; 2016 ; 7 ; https://www.orthodrehab.org/ >
+      au < down ; 2017 ; International Journal of Orthodontic Rehabilitation Volume 8 ; 2017 ; 8 ; http://www.orthodrehab.org/ >
+      au < down ; 2018 ; International Journal of Orthodontic Rehabilitation Volume 9 ; 2018 ; 9 ; https://www.orthodrehab.org/ >
+      au < down ; 2019 ; International Journal of Orthodontic Rehabilitation Volume 10 ; 2019 ; 10 ; https://www.orthodrehab.org/ >
+      au < down ; 2020 ; International Journal of Orthodontic Rehabilitation Volume 11 ; 2020 ; 11 ; https://www.orthodrehab.org/ >
+      au < down ; 2021 ; International Journal of Orthodontic Rehabilitation Volume 12 ; 2021 ; 12 ; https://www.orthodrehab.org/ >
       #deactivated
 
   }
@@ -10211,12 +10211,12 @@
 #      param[base_url] = http://www.ijpedor.org/
       #move to MM Publications 2022-06, Archive will stay with Medknow until further notice
 
-      au < released ; 2016 ; International Journal of Pedodontic Rehabilitation Volume 1 ; 2016 ; 1 ; https://www.ijpedor.org/ >
-      au < released ; 2017 ; International Journal of Pedodontic Rehabilitation Volume 2 ; 2017 ; 2 ; http://www.ijpedor.org/ >
-      au < released ; 2018 ; International Journal of Pedodontic Rehabilitation Volume 3 ; 2018 ; 3 ; https://www.ijpedor.org/ >
-      au < released ; 2019 ; International Journal of Pedodontic Rehabilitation Volume 4 ; 2019 ; 4 ; https://www.ijpedor.org/ >
-      au < released ; 2020 ; International Journal of Pedodontic Rehabilitation Volume 5 ; 2020 ; 5 ; https://www.ijpedor.org/ >
-      au < released ; 2021 ; International Journal of Pedodontic Rehabilitation Volume 6 ; 2021 ; 6 ; https://www.ijpedor.org/ >
+      au < down ; 2016 ; International Journal of Pedodontic Rehabilitation Volume 1 ; 2016 ; 1 ; https://www.ijpedor.org/ >
+      au < down ; 2017 ; International Journal of Pedodontic Rehabilitation Volume 2 ; 2017 ; 2 ; http://www.ijpedor.org/ >
+      au < down ; 2018 ; International Journal of Pedodontic Rehabilitation Volume 3 ; 2018 ; 3 ; https://www.ijpedor.org/ >
+      au < down ; 2019 ; International Journal of Pedodontic Rehabilitation Volume 4 ; 2019 ; 4 ; https://www.ijpedor.org/ >
+      au < down ; 2020 ; International Journal of Pedodontic Rehabilitation Volume 5 ; 2020 ; 5 ; https://www.ijpedor.org/ >
+      au < down ; 2021 ; International Journal of Pedodontic Rehabilitation Volume 6 ; 2021 ; 6 ; https://www.ijpedor.org/ >
       #deactivated
 
   }
@@ -10411,10 +10411,10 @@
 #      param[base_url] = https://www.jdeponline.com/
       #move to Thieme, 2022. Archive will stay with Medknow until further notice
 
-      au < released ; 2018 ; Journal of Diabetes and Endocrine Practice Volume 1 ; 2018 ; 1 ; https://www.jdeponline.com/ >
-      au < released ; 2019 ; Journal of Diabetes and Endocrine Practice Volume 2 ; 2019 ; 2 ; https://www.jdeponline.com/ >
-      au < released ; 2020 ; Journal of Diabetes and Endocrine Practice Volume 3 ; 2020 ; 3 ; https://www.jdeponline.com/ >
-      au < released ; 2021 ; Journal of Diabetes and Endocrine Practice Volume 4 ; 2021 ; 4 ; https://www.jdeponline.com/ >
+      au < down ; 2018 ; Journal of Diabetes and Endocrine Practice Volume 1 ; 2018 ; 1 ; https://www.jdeponline.com/ >
+      au < down ; 2019 ; Journal of Diabetes and Endocrine Practice Volume 2 ; 2019 ; 2 ; https://www.jdeponline.com/ >
+      au < down ; 2020 ; Journal of Diabetes and Endocrine Practice Volume 3 ; 2020 ; 3 ; https://www.jdeponline.com/ >
+      au < down ; 2021 ; Journal of Diabetes and Endocrine Practice Volume 4 ; 2021 ; 4 ; https://www.jdeponline.com/ >
 
   }
 
@@ -10524,8 +10524,8 @@
       au < down ; 2019 ; Journal of International Oral Health Volume 11 ; 2019 ; 11 ; https://www.jioh.org/ >
       au < down ; 2020 ; Journal of International Oral Health Volume 12 ; 2020 ; 12 ; https://www.jioh.org/ >
       au < down ; 2021 ; Journal of International Oral Health Volume 13 ; 2021 ; 13 ; https://www.jioh.org/ >
-      au < manifest ; 2022 ; Journal of International Oral Health Volume 14 ; 2022 ; 14 ; https://www.jioh.org/ >
-      au < manifest ; 2023 ; Journal of International Oral Health Volume 15 ; 2023 ; 15 ; https://www.jioh.org/ >
+      au < doNotProcess ; 2022 ; Journal of International Oral Health Volume 14 ; 2022 ; 14 ; https://www.jioh.org/ >
+      au < doNotProcess ; 2023 ; Journal of International Oral Health Volume 15 ; 2023 ; 15 ; https://www.jioh.org/ >
 
   }
 
@@ -11022,10 +11022,10 @@
       param[journal_issn] = 1596-4582
 #      param[base_url] = http://www.njotonline.org/
 
-      au < released ; 2018 ; Nigerian Journal of Orthopaedics and Trauma Volume 17 ; 2018 ; 17 ; https://www.njotonline.org/ >
-      au < released ; 2019 ; Nigerian Journal of Orthopaedics and Trauma Volume 18 ; 2019 ; 18 ; https://www.njotonline.org/ >
-      au < released ; 2020 ; Nigerian Journal of Orthopaedics and Trauma Volume 19 ; 2020 ; 19 ; https://www.njotonline.org/ >
-      au < released ; 2021 ; Nigerian Journal of Orthopaedics and Trauma Volume 20 ; 2021 ; 20 ; https://www.njotonline.org/ >
+      au < down ; 2018 ; Nigerian Journal of Orthopaedics and Trauma Volume 17 ; 2018 ; 17 ; https://www.njotonline.org/ >
+      au < down ; 2019 ; Nigerian Journal of Orthopaedics and Trauma Volume 18 ; 2019 ; 18 ; https://www.njotonline.org/ >
+      au < down ; 2020 ; Nigerian Journal of Orthopaedics and Trauma Volume 19 ; 2020 ; 19 ; https://www.njotonline.org/ >
+      au < down ; 2021 ; Nigerian Journal of Orthopaedics and Trauma Volume 20 ; 2021 ; 20 ; https://www.njotonline.org/ >
 
   }
 
@@ -11293,7 +11293,7 @@
       param[journal_issn] = 2395-7182
 #      param[base_url] = http://www.tmeresearch.org/
 
-      au < released ; 2018 ; Tumor and Microenvironment Volume 1 ; 2018 ; 1 ; https://www.tmeresearch.org/ >
+      au < down ; 2018 ; Tumor and Microenvironment Volume 1 ; 2018 ; 1 ; https://www.tmeresearch.org/ >
 
   }
 
@@ -11661,16 +11661,16 @@
       param[journal_issn] = 2349-3666
       #param[base_url] = https://www.brjnmims.org/
 
-      au < released ; 2014 ; Biomedical Research Journal Volume 1 ; 2014 ; 1 ; https://www.brjnmims.org/ >
-      au < released ; 2015 ; Biomedical Research Journal Volume 2 ; 2015 ; 2 ; https://www.brjnmims.org/ >
-      au < released ; 2016 ; Biomedical Research Journal Volume 3 ; 2016 ; 3 ; https://www.brjnmims.org/ >
-      au < released ; 2017 ; Biomedical Research Journal Volume 4 ; 2017 ; 4 ; https://www.brjnmims.org/ >
-      au < released ; 2018 ; Biomedical Research Journal Volume 5 ; 2018 ; 5 ; https://www.brjnmims.org/ >
-      au < released ; 2019 ; Biomedical Research Journal Volume 6 ; 2019 ; 6 ; https://www.brjnmims.org/ >
-      au < released ; 2020 ; Biomedical Research Journal Volume 7 ; 2020 ; 7 ; https://www.brjnmims.org/ >
-      au < released ; 2021 ; Biomedical Research Journal Volume 8 ; 2021 ; 8 ; https://www.brjnmims.org/ >
+      au < down ; 2014 ; Biomedical Research Journal Volume 1 ; 2014 ; 1 ; https://www.brjnmims.org/ >
+      au < down ; 2015 ; Biomedical Research Journal Volume 2 ; 2015 ; 2 ; https://www.brjnmims.org/ >
+      au < down ; 2016 ; Biomedical Research Journal Volume 3 ; 2016 ; 3 ; https://www.brjnmims.org/ >
+      au < down ; 2017 ; Biomedical Research Journal Volume 4 ; 2017 ; 4 ; https://www.brjnmims.org/ >
+      au < down ; 2018 ; Biomedical Research Journal Volume 5 ; 2018 ; 5 ; https://www.brjnmims.org/ >
+      au < down ; 2019 ; Biomedical Research Journal Volume 6 ; 2019 ; 6 ; https://www.brjnmims.org/ >
+      au < down ; 2020 ; Biomedical Research Journal Volume 7 ; 2020 ; 7 ; https://www.brjnmims.org/ >
+      au < down ; 2021 ; Biomedical Research Journal Volume 8 ; 2021 ; 8 ; https://www.brjnmims.org/ >
       au < doNotProcess ; 2022 ; Biomedical Research Journal Volume 9 ; 2022 ; 9 ; https://www.brjnmims.org/ >
-      au < expected ; 2023 ; Biomedical Research Journal Volume 10 ; 2023 ; 10 ; https://www.brjnmims.org/ >
+      au < doNotProcess ; 2023 ; Biomedical Research Journal Volume 10 ; 2023 ; 10 ; https://www.brjnmims.org/ >
 
   }
 
@@ -11795,8 +11795,8 @@
       param[journal_issn] = 2231-5055
       #param[base_url] = https://www.dukeorthojournal.com/
 
-      au < released ; 2019 ; Duke Orthopedic Journal Volume 9 ; 2019 ; 9 ; https://www.dukeorthojournal.com/ >
-      au < released ; 2020 ; Duke Orthopedic Journal Volume 10 ; 2020 ; 10 ; https://www.dukeorthojournal.com/ >
+      au < down ; 2019 ; Duke Orthopedic Journal Volume 9 ; 2019 ; 9 ; https://www.dukeorthojournal.com/ >
+      au < down ; 2020 ; Duke Orthopedic Journal Volume 10 ; 2020 ; 10 ; https://www.dukeorthojournal.com/ >
       au < doNotProcess ; 2021 ; Duke Orthopedic Journal Volume 11 ; 2021 ; 11 ; https://www.dukeorthojournal.com/ >
       au < doNotProcess ; 2022 ; Duke Orthopedic Journal Volume 12 ; 2022 ; 12 ; https://www.dukeorthojournal.com/ >
       au < doNotProcess ; 2023 ; Duke Orthopedic Journal Volume 13 ; 2023 ; 13 ; https://www.dukeorthojournal.com/ >
@@ -12032,10 +12032,10 @@
       #param[base_url] = https://www.ijcommdent.com/
       #move to MM Publications 2022-06, Archive will stay with Medknow until further notice
 
-      au < released ; 2018 ; International Journal of Community Dentistry Volume 6 ; 2018 ; 6 ; https://www.ijcommdent.com/ >
-      au < released ; 2019 ; International Journal of Community Dentistry Volume 7 ; 2019 ; 7 ; https://www.ijcommdent.com/ >
-      au < released ; 2020 ; International Journal of Community Dentistry Volume 8 ; 2020 ; 8 ; https://www.ijcommdent.com/ >
-      au < released ; 2021 ; International Journal of Community Dentistry Volume 9 ; 2021 ; 9 ; https://www.ijcommdent.com/ >
+      au < down ; 2018 ; International Journal of Community Dentistry Volume 6 ; 2018 ; 6 ; https://www.ijcommdent.com/ >
+      au < down ; 2019 ; International Journal of Community Dentistry Volume 7 ; 2019 ; 7 ; https://www.ijcommdent.com/ >
+      au < down ; 2020 ; International Journal of Community Dentistry Volume 8 ; 2020 ; 8 ; https://www.ijcommdent.com/ >
+      au < down ; 2021 ; International Journal of Community Dentistry Volume 9 ; 2021 ; 9 ; https://www.ijcommdent.com/ >
       #deactivated
 
   }
@@ -12052,9 +12052,9 @@
       #param[base_url] = https://www.ijhnp.org/
       #move to MM Publications 2022-06, Archive will stay with Medknow until further notice
 
-      au < released ; 2018 ; International Journal of Head and Neck Pathology Volume 1 ; 2018 ; 1 ; https://www.ijhnp.org/ >
-      au < released ; 2019 ; International Journal of Head and Neck Pathology Volume 2 ; 2019 ; 2 ; https://www.ijhnp.org/ >
-      au < released ; 2020 ; International Journal of Head and Neck Pathology Volume 3 ; 2020 ; 3 ; https://www.ijhnp.org/ >
+      au < down ; 2018 ; International Journal of Head and Neck Pathology Volume 1 ; 2018 ; 1 ; https://www.ijhnp.org/ >
+      au < down ; 2019 ; International Journal of Head and Neck Pathology Volume 2 ; 2019 ; 2 ; https://www.ijhnp.org/ >
+      au < down ; 2020 ; International Journal of Head and Neck Pathology Volume 3 ; 2020 ; 3 ; https://www.ijhnp.org/ >
       #deactivated
 
   }
@@ -12196,10 +12196,10 @@
       #param[base_url] = https://www.ijsocialrehab.com/
       #move to MM Publications 2022-06, Archive will stay with Medknow until further notice
 
-      au < released ; 2018 ; International Journal of Social Rehabilitation Volume 3 ; 2018 ; 3 ; https://www.ijsocialrehab.com/ >
-      au < released ; 2019 ; International Journal of Social Rehabilitation Volume 4 ; 2019 ; 4 ; https://www.ijsocialrehab.com/ >
-      au < released ; 2020 ; International Journal of Social Rehabilitation Volume 5 ; 2020 ; 5 ; https://www.ijsocialrehab.com/ >
-      au < released ; 2021 ; International Journal of Social Rehabilitation Volume 6 ; 2021 ; 6 ; https://www.ijsocialrehab.com/ >
+      au < down ; 2018 ; International Journal of Social Rehabilitation Volume 3 ; 2018 ; 3 ; https://www.ijsocialrehab.com/ >
+      au < down ; 2019 ; International Journal of Social Rehabilitation Volume 4 ; 2019 ; 4 ; https://www.ijsocialrehab.com/ >
+      au < down ; 2020 ; International Journal of Social Rehabilitation Volume 5 ; 2020 ; 5 ; https://www.ijsocialrehab.com/ >
+      au < down ; 2021 ; International Journal of Social Rehabilitation Volume 6 ; 2021 ; 6 ; https://www.ijsocialrehab.com/ >
       #deactivated
 
   }
@@ -12447,11 +12447,11 @@
       #param[base_url] = https://www.journalofcurrentoncology.org/
       #move to Sage in 2023
 
-      au < released ; 2018 ; Journal of Current Oncology Volume 1 ; 2018 ; 1 ; https://www.journalofcurrentoncology.org/ >
-      au < released ; 2019 ; Journal of Current Oncology Volume 2 ; 2019 ; 2 ; https://www.journalofcurrentoncology.org/ >
-      au < released ; 2020 ; Journal of Current Oncology Volume 3 ; 2020 ; 3 ; https://www.journalofcurrentoncology.org/ >
-      au < released ; 2021 ; Journal of Current Oncology Volume 4 ; 2021 ; 4 ; https://www.journalofcurrentoncology.org/ >
-      au < released ; 2022 ; Journal of Current Oncology Volume 5 ; 2022 ; 5 ; https://www.journalofcurrentoncology.org/ >
+      au < down ; 2018 ; Journal of Current Oncology Volume 1 ; 2018 ; 1 ; https://www.journalofcurrentoncology.org/ >
+      au < down ; 2019 ; Journal of Current Oncology Volume 2 ; 2019 ; 2 ; https://www.journalofcurrentoncology.org/ >
+      au < down ; 2020 ; Journal of Current Oncology Volume 3 ; 2020 ; 3 ; https://www.journalofcurrentoncology.org/ >
+      au < down ; 2021 ; Journal of Current Oncology Volume 4 ; 2021 ; 4 ; https://www.journalofcurrentoncology.org/ >
+      au < down ; 2022 ; Journal of Current Oncology Volume 5 ; 2022 ; 5 ; https://www.journalofcurrentoncology.org/ >
       #deactivated
   }
 
@@ -13396,9 +13396,9 @@
 #      #param[base_url] = https://www.shbonweb.com/
 #      #Moved to https://www.healthandbehavior.com/
 #
-#      au < doesNotExist ; 2018 ; Social Health and Behavior Volume 1 ; 2018 ; 1 ; https://www.shbonweb.com/ >
-#      au < doesNotExist ; 2019 ; Social Health and Behavior Volume 2 ; 2019 ; 2 ; https://www.shbonweb.com/ >
-#      au < doesNotExist ; 2020 ; Social Health and Behavior Volume 3 ; 2020 ; 3 ; https://www.shbonweb.com/ >
+#      au < doNotProcess ; 2018 ; Social Health and Behavior Volume 1 ; 2018 ; 1 ; https://www.shbonweb.com/ >
+#      au < doNotProcess ; 2019 ; Social Health and Behavior Volume 2 ; 2019 ; 2 ; https://www.shbonweb.com/ >
+#      au < doNotProcess ; 2020 ; Social Health and Behavior Volume 3 ; 2020 ; 3 ; https://www.shbonweb.com/ >
 #
 #  }
 
