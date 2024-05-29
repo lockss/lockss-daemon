@@ -57,13 +57,10 @@ public class NamesforLifeArticleIteratorFactory implements ArticleIteratorFactor
 
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
 
-  protected static final String PATTERN_TEMPLATE = "\"%s(\\d+\\.\\d+/.*)\", base_url";
+  protected static final String PATTERN_TEMPLATE = "\"%s([\\d\\.]+)/(\\w+\\.\\d+)$\", base_url";
 
-  public static final Pattern HTML_PATTERN = Pattern.compile("(\\d+\\.\\d+/.*)", Pattern.CASE_INSENSITIVE);
-  public static final String HTML_REPLACEMENT = "$1";
-
-  public static final Pattern PDF_PATTERN = Pattern.compile("(bitstream/)(handle/\\d+\\.\\d+/\\d+)(/.*\\.pdf\\?sequence=[^&]+&isAllowed=y)", Pattern.CASE_INSENSITIVE);
-  public static final String PDF_REPLACEMENT = "bitstream/$2$3";
+  public static final Pattern HTML_PATTERN = Pattern.compile("([\\d\\.]+)/(\\w+\\.\\d+)$", Pattern.CASE_INSENSITIVE);
+  public static final String HTML_REPLACEMENT = "$1/$2";
 
 
   @Override
@@ -88,16 +85,9 @@ public class NamesforLifeArticleIteratorFactory implements ArticleIteratorFactor
     return builder.getSubTreeArticleIterator();
   }
 
-  @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
           throws PluginException {
-    //Do this on purpose, since its PDF has weird string
-    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA) {
-      @Override
-      protected boolean isCheckAccessUrl() {
-        return false;
-      }
-    };
+    return new BaseArticleMetadataExtractor(null);
   }
 }
 

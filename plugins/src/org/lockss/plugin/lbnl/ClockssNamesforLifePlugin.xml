@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -61,6 +61,23 @@ POSSIBILITY OF SUCH DAMAGE.
     </list>
   </entry>
   <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>2</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
     <string>au_name</string>
     <string>"Names for Life Plugin (CLOCKSS), Base URL %s", base_url</string>
   </entry>
@@ -78,6 +95,9 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com)/"</string>
       <string>1,"https://static.namesforlife.com/"</string>
+      <string>1,"https://api.namesforlife.com/script/"</string>
+      <string>1,"https://maxcdn.bootstrapcdn.com/bootstrap/"</string>
+      <string>1,"https://code.jquery.com/jquery[^/]+\.js"</string>
       <string>1,"^%ssitemap.*", base_url</string>
       <string>1,"^%s.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)?", base_url</string>
       <string>1,"^%s(data|css|script|images)", base_url</string>
@@ -101,6 +121,12 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
+      <!--
+      https://www.namesforlife.com/data/7/7/1/190-1088-2-PB.pdf
+      https://www.namesforlife.com/data/7/7/112/180-1078-1-PB.pdf
+      https://www.namesforlife.com/data/7/7/148/181-1079-1-PB.pdf
+      https://www.namesforlife.com/data/7/7/246/183-1080-1-PB.pdf
+      -->
       <string>"%sdata/.*\.pdf", base_url</string>
     </list>
   </entry>
@@ -136,11 +162,16 @@ POSSIBILITY OF SUCH DAMAGE.
       https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js
       https://static.namesforlife.com/images/US10896236B2.png
       https://static.namesforlife.com/patents/US10896236B2.pdf
+      https://api.namesforlife.com/script/abstract.js
+      https://api.namesforlife.com/script/microbial-earth.js
+      https://api.namesforlife.com/script/sac.js
       -->
       <string>maxcdn\.bootstrapcdn\.com</string>
       <string>code\.jquery\.com</string>
       <string>cdnjs\.cloudflare\.com</string>
       <string>static\.namesforlife\.com</string>
+      <string>api\.namesforlife\.com</string>
+      <string>code\.jquery\.com</string>
     </list>
   </entry>
   <entry>

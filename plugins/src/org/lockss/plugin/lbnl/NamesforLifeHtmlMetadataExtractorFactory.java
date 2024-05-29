@@ -90,21 +90,9 @@ public class NamesforLifeHtmlMetadataExtractorFactory
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
 
-      String originalUrl = am.get(MetadataField.FIELD_ACCESS_URL);
-      String url = "";
+      am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
+      am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
 
-      log.debug3("access_url === " + originalUrl);
-
-      ArchivalUnit au = cu.getArchivalUnit();
-      if (originalUrl == null || originalUrl.isEmpty() || !au.makeCachedUrl(originalUrl).hasContent()) {
-        url = cu.getUrl();
-        log.debug3("access_url failed === " + url);
-      }
-
-      log.debug3("access_url repalced with === " + originalUrl);
-
-      //Still use the originalUrl here, since the PDF link has some strange extra string at the end
-      am.replace(MetadataField.FIELD_ACCESS_URL, originalUrl);
       return am;
     }
   }
