@@ -1138,7 +1138,7 @@
     au < finished ; finished ; 2020 ; Reports in Medical Imaging Volume 13 ; 13 ; 2020 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2021 ; Reports in Medical Imaging Volume 14 ; 14 ; 2021 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Reports in Medical Imaging Volume 15 ; 15 ; 2022 ; >
-    au < manifest ; exists ; 2023 ; Reports in Medical Imaging Volume 16 ; 16 ; 2023 ; >
+    au < testing ; exists ; 2023 ; Reports in Medical Imaging Volume 16 ; 16 ; 2023 ; >
     au < expected ; exists ; 2024 ; Reports in Medical Imaging Volume 17 ; 17 ; 2024 ; >
 
   }
@@ -2997,7 +2997,7 @@
     au < finished ; finished ; 2020 ; Smart Homecare Technology and TeleHealth Volume 7 ; 7 ; 2020 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Smart Homecare Technology and TeleHealth Volume 8 ; 8 ; 2021 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Smart Homecare Technology and TeleHealth Volume 9 ; 9 ; 2022 ; >
-    au < manifest ; exists ; 2023 ; Smart Homecare Technology and TeleHealth Volume 10 ; 10 ; 2023 ; >
+    au < testing ; exists ; 2023 ; Smart Homecare Technology and TeleHealth Volume 10 ; 10 ; 2023 ; >
     au < expected ; exists ; 2024 ; Smart Homecare Technology and TeleHealth Volume 11 ; 11 ; 2024 ; >
 
   }
@@ -3022,7 +3022,7 @@
     au < finished ; finished ; 2020 ; Oncolytic Virotherapy Volume 9 ; 9 ; 2020 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Oncolytic Virotherapy Volume 10 ; 10 ; 2021 ; reingest2.clockss.org:8085 >
     au < expected ; exists ; 2022 ; Oncolytic Virotherapy Volume 11 ; 11 ; 2022 ; >
-    au < manifest ; exists ; 2023 ; Oncolytic Virotherapy Volume 12 ; 12 ; 2023 ; >
+    au < testing ; exists ; 2023 ; Oncolytic Virotherapy Volume 12 ; 12 ; 2023 ; >
     au < expected ; exists ; 2024 ; Oncolytic Virotherapy Volume 13 ; 13 ; 2024 ; >
 
   }
@@ -3117,7 +3117,7 @@
     au < finished ; finished ; 2020 ; International Journal of Clinical Transfusion Medicine Volume 8 ; 8 ; 2020 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; International Journal of Clinical Transfusion Medicine Volume 9 ; 9 ; 2021 ; reingest3.clockss.org:8083 >
     au < expected ; exists ; 2022 ; International Journal of Clinical Transfusion Medicine Volume 10 ; 10 ; 2022 ; >
-    au < manifest ; exists ; 2023 ; International Journal of Clinical Transfusion Medicine Volume 11 ; 11 ; 2023 ; >
+    au < testing ; exists ; 2023 ; International Journal of Clinical Transfusion Medicine Volume 11 ; 11 ; 2023 ; >
     au < expected ; exists ; 2024 ; International Journal of Clinical Transfusion Medicine Volume 12 ; 12 ; 2024 ; >
 
   }
@@ -3143,7 +3143,7 @@
     au < finished ; finished ; 2020 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 10 ; 10 ; 2020 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2021 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 11 ; 11 ; 2021 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 12 ; 12 ; 2022 ; >
-    au < manifest ; exists ; 2023 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 13 ; 13 ; 2023 ; >
+    au < testing ; exists ; 2023 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 13 ; 13 ; 2023 ; >
     au < expected ; exists ; 2024 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 14 ; 14 ; 2024 ; >
 
   }
@@ -3291,7 +3291,7 @@
     au < finished ; finished ; 2020 ; Robotic Surgery: Research and Reviews Volume 7 ; 7 ; 2020 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2021 ; Robotic Surgery: Research and Reviews Volume 8 ; 8 ; 2021 ; reingest2.clockss.org:8085 >
     au < expected ; exists ; 2022 ; Robotic Surgery: Research and Reviews Volume 9 ; 9 ; 2022 ; >
-    au < manifest ; exists ; 2023 ; Robotic Surgery: Research and Reviews Volume 10 ; 10 ; 2023 ; >
+    au < testing ; exists ; 2023 ; Robotic Surgery: Research and Reviews Volume 10 ; 10 ; 2023 ; >
     au < expected ; exists ; 2024 ; Robotic Surgery: Research and Reviews Volume 11 ; 11 ; 2024 ; >
 
   }
