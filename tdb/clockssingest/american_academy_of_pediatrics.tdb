@@ -427,4 +427,18 @@
 
   }
 
+  {
+  
+    title <
+      name = Pediatrics Open Science
+    >
+      #param[base_url] = http://pediatrics.aappublications.org/
+
+      param[journal_id] = pediatricsopenscience
+
+      au < expected ; exists ; 2024 ; 2024 ; Pediatrics Open Science Volume 1 ; 1 ; >
+      au < expected ; exists ; 2024 ; 2024 ; Pediatrics Open Science Volume 2 ; 2 ; >
+
+  }
+
 }
