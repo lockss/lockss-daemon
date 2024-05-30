@@ -289,7 +289,8 @@ public class LcapRouter
     if (lmsg.getDestinationId() == myPeerId) {
       handleLocalInboundMessage(pmsg, lmsg);
     } else {
-      log.warning("Forwarding disabled and message not addressed to me; dropping message: " + pmsg);
+      log.warning("Message addressed to " + lmsg.getDestinationId() +
+                  " but forwarding disabled; dropping: " + pmsg);
     }
   }
 
