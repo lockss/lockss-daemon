@@ -1228,7 +1228,11 @@ while (my $line = <>) {
     if ($resp_p->is_success) {
       my $perm_contents = $resp_p->content;
       my $lcl_tag = $cc_license_tag;
-
+      
+      #printf("%s\n", $req_p->url);
+      #printf("%s\n", $resp_p->request->uri);
+      #printf("%s\n", $req_s->url);
+      #printf("%s\n", $resp_s->request->uri);
       if (($req_p->url ne $resp_p->request->uri) || ($req_s->url ne $resp_s->request->uri)) {
           $vol_title = $resp_p->request->uri . "+" . $resp_s->request->uri;
           $result = "Redirected";
