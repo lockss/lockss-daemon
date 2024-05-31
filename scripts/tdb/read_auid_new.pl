@@ -2565,6 +2565,8 @@ while (my $line = <>) {
     $url = sprintf("%sgateway/book/%s",
       $param{base_url}, $param{volume});
     $start_url = uri_unescape($url);
+        #for reporting at the end 
+        $man_url = $start_url;
     my $req_p = HTTP::Request->new(GET, $perm_url);
     my $resp_p = $ua->request($req_p);
     my $req_s = HTTP::Request->new(GET, $start_url);
@@ -2582,8 +2584,6 @@ while (my $line = <>) {
           }
         }
         $result = "Manifest" ;
-        #for reporting at the end 
-        $man_url = $start_url
       } else {
         $result = "--NO_TAG--"
       }
@@ -2601,6 +2601,8 @@ while (my $line = <>) {
     $url = sprintf("%sgateway/book/%s",
       $param{base_url}, $param{volume});
     $start_url = uri_unescape($url);
+        #for reporting at the end 
+        $man_url = $start_url;
     my $req_p = HTTP::Request->new(GET, $perm_url);
     my $resp_p = $ua->request($req_p);
     my $req_s = HTTP::Request->new(GET, $start_url);
@@ -2618,8 +2620,6 @@ while (my $line = <>) {
           }
         }
         $result = "Manifest" ;
-        #for reporting at the end 
-        $man_url = $start_url
       } else {
         $result = "--NO_TAG--"
       }
