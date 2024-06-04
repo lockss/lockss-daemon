@@ -359,7 +359,7 @@
       au < finished ; crawling ; 2020 ; 30 ; Theoretical Roman Archaeology Journal Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2021 ; 31 ; Theoretical Roman Archaeology Journal Volume 2021 ; 2021 ; >
       au < deepCrawl ; exists ; 2022 ; 32 ; Theoretical Roman Archaeology Journal Volume 2022 ; 2022 ; >
-      au < ready ; exists ; 2023 ; 33 ; Theoretical Roman Archaeology Journal Volume 2023 ; 2023 ; >
+      au < crawling ; exists ; 2023 ; 33 ; Theoretical Roman Archaeology Journal Volume 2023 ; 2023 ; >
       au < manifest ; exists ; 2024 ; 34 ; Theoretical Roman Archaeology Journal Volume 2024 ; 2024 ; >
 
   }
@@ -550,7 +550,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; 16 ; Digital Medievalist Volume 2020 ; 2020 ; >
       au < frozen ; exists ; 2021 ; 17 ; Digital Medievalist Volume 2021 ; 2021 ; >
       au < deepCrawl ; exists ; 2022 ; 18 ; Digital Medievalist Volume 2022 ; 2022 ; >
-      au < ready ; exists ; 2023 ; 19 ; Digital Medievalist Volume 2023 ; 2023 ; >
+      au < crawling ; exists ; 2023 ; 19 ; Digital Medievalist Volume 2023 ; 2023 ; >
       au < manifest ; exists ; 2024 ; 20 ; Digital Medievalist Volume 2024 ; 2024 ; >
 
   }
