@@ -1827,7 +1827,7 @@
     au < doNotProcess ; 2017 ; Biotechnology Research International Volume 2017 ; 2017 ; 2017 >
     au < released ; 2018 ; Biotechnology Research International Volume 2018 ; 2018 ; 2018 >
     au < doesNotExist ; 2019 ; Biotechnology Research International Volume 2019 ; 2019 ; 2019 >
-    au < exists ; 2020 ; Biotechnology Research International Volume 2020 ; 2020 ; 2020 >
+    au < manifest ; 2020 ; Biotechnology Research International Volume 2020 ; 2020 ; 2020 >
 
   }
 
@@ -11708,8 +11708,8 @@
     param[journal_id] = ghep
     comment[years] = 2022-current
 
-    au < exists ; 2022 ; GASTROHEP Volume 2022 ; 2022 ; 2022 >
-    au < exists ; 2023 ; GASTROHEP Volume 2023 ; 2023 ; 2023 >
+    au < manifest ; 2022 ; GASTROHEP Volume 2022 ; 2022 ; 2022 >
+    au < manifest ; 2023 ; GASTROHEP Volume 2023 ; 2023 ; 2023 >
     au < exists ; 2024 ; GASTROHEP Volume 2024 ; 2024 ; 2024 >
 
   }
@@ -11725,9 +11725,9 @@
     param[journal_id] = hbet
     comment[years] = 2022-current
 
-    au < exists ; 2022 ; HUMAN BEHAVIOR AND EMERGING TECHNOLOGIES Volume 2022 ; 2022 ; 2022 >
-    au < exists ; 2023 ; HUMAN BEHAVIOR AND EMERGING TECHNOLOGIES Volume 2023 ; 2023 ; 2023 >
-    au < exists ; 2024 ; HUMAN BEHAVIOR AND EMERGING TECHNOLOGIES Volume 2024 ; 2024 ; 2024 >
+    au < manifest ; 2022 ; HUMAN BEHAVIOR AND EMERGING TECHNOLOGIES Volume 2022 ; 2022 ; 2022 >
+    au < manifest ; 2023 ; HUMAN BEHAVIOR AND EMERGING TECHNOLOGIES Volume 2023 ; 2023 ; 2023 >
+    au < manifest ; 2024 ; HUMAN BEHAVIOR AND EMERGING TECHNOLOGIES Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -11742,9 +11742,9 @@
     param[journal_id] = ijclp
     comment[years] = 2022-current
 
-    au < exists ; 2022 ; INTERNATIONAL JOURNAL OF CLINICAL PRACTICE Volume 2022 ; 2022 ; 2022 >
-    au < exists ; 2023 ; INTERNATIONAL JOURNAL OF CLINICAL PRACTICE Volume 2023 ; 2023 ; 2023 >
-    au < exists ; 2024 ; INTERNATIONAL JOURNAL OF CLINICAL PRACTICE Volume 2024 ; 2024 ; 2024 >
+    au < manifest ; 2022 ; INTERNATIONAL JOURNAL OF CLINICAL PRACTICE Volume 2022 ; 2022 ; 2022 >
+    au < manifest ; 2023 ; INTERNATIONAL JOURNAL OF CLINICAL PRACTICE Volume 2023 ; 2023 ; 2023 >
+    au < manifest ; 2024 ; INTERNATIONAL JOURNAL OF CLINICAL PRACTICE Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -11759,9 +11759,9 @@
     param[journal_id] = itees
     comment[years] = 2022-current
 
-    au < exists ; 2022 ; INTERNATIONAL TRANSACTIONS ON ELECTRICAL ENERGY SYSTEMS Volume 2022 ; 2022 ; 2022 >
-    au < exists ; 2023 ; INTERNATIONAL TRANSACTIONS ON ELECTRICAL ENERGY SYSTEMS Volume 2023 ; 2023 ; 2023 >
-    au < exists ; 2024 ; INTERNATIONAL TRANSACTIONS ON ELECTRICAL ENERGY SYSTEMS Volume 2024 ; 2024 ; 2024 >
+    au < manifest ; 2022 ; INTERNATIONAL TRANSACTIONS ON ELECTRICAL ENERGY SYSTEMS Volume 2022 ; 2022 ; 2022 >
+    au < manifest ; 2023 ; INTERNATIONAL TRANSACTIONS ON ELECTRICAL ENERGY SYSTEMS Volume 2023 ; 2023 ; 2023 >
+    au < manifest ; 2024 ; INTERNATIONAL TRANSACTIONS ON ELECTRICAL ENERGY SYSTEMS Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -11776,8 +11776,8 @@
     param[journal_id] = jtsp
     comment[years] = 2022-current
 
-    au < exists ; 2022 ; JOURNAL OF THEORETICAL SOCIAL PSYCHOLOGY Volume 2022 ; 2022 ; 2022 >
-    au < exists ; 2023 ; JOURNAL OF THEORETICAL SOCIAL PSYCHOLOGY Volume 2023 ; 2023 ; 2023 >
+    au < manifest ; 2022 ; JOURNAL OF THEORETICAL SOCIAL PSYCHOLOGY Volume 2022 ; 2022 ; 2022 >
+    au < manifest ; 2023 ; JOURNAL OF THEORETICAL SOCIAL PSYCHOLOGY Volume 2023 ; 2023 ; 2023 >
     au < exists ; 2024 ; JOURNAL OF THEORETICAL SOCIAL PSYCHOLOGY Volume 2024 ; 2024 ; 2024 >
 
   }
@@ -11793,9 +11793,9 @@
     param[journal_id] = jzs
     comment[years] = 2022-current
 
-    au < exists ; 2022 ; JOURNAL OF ZOOLOGICAL SYSTEMATICS AND EVOLUTIONARY RESEARCH Volume 2022 ; 2022 ; 2022 >
-    au < exists ; 2023 ; JOURNAL OF ZOOLOGICAL SYSTEMATICS AND EVOLUTIONARY RESEARCH Volume 2023 ; 2023 ; 2023 >
-    au < exists ; 2024 ; JOURNAL OF ZOOLOGICAL SYSTEMATICS AND EVOLUTIONARY RESEARCH Volume 2024 ; 2024 ; 2024 >
+    au < manifest ; 2022 ; JOURNAL OF ZOOLOGICAL SYSTEMATICS AND EVOLUTIONARY RESEARCH Volume 2022 ; 2022 ; 2022 >
+    au < manifest ; 2023 ; JOURNAL OF ZOOLOGICAL SYSTEMATICS AND EVOLUTIONARY RESEARCH Volume 2023 ; 2023 ; 2023 >
+    au < manifest ; 2024 ; JOURNAL OF ZOOLOGICAL SYSTEMATICS AND EVOLUTIONARY RESEARCH Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -11810,9 +11810,9 @@
     param[journal_id] = mdp
     comment[years] = 2022-current
 
-    au < exists ; 2022 ; MATERIAL DESIGN & PROCESSING COMMUNICATIONS Volume 2022 ; 2022 ; 2022 >
-    au < exists ; 2023 ; MATERIAL DESIGN & PROCESSING COMMUNICATIONS Volume 2023 ; 2023 ; 2023 >
-    au < exists ; 2024 ; MATERIAL DESIGN & PROCESSING COMMUNICATIONS Volume 2024 ; 2024 ; 2024 >
+    au < manifest ; 2022 ; MATERIAL DESIGN & PROCESSING COMMUNICATIONS Volume 2022 ; 2022 ; 2022 >
+    au < manifest ; 2023 ; MATERIAL DESIGN & PROCESSING COMMUNICATIONS Volume 2023 ; 2023 ; 2023 >
+    au < manifest ; 2024 ; MATERIAL DESIGN & PROCESSING COMMUNICATIONS Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -11827,8 +11827,8 @@
     param[journal_id] = pcrys
     comment[years] = 2022-current
 
-    au < exists ; 2022 ; POLYMER CRYSTALLIZATION Volume 2022 ; 2022 ; 2022 >
-    au < exists ; 2023 ; POLYMER CRYSTALLIZATION Volume 2023 ; 2023 ; 2023 >
+    au < manifest ; 2022 ; POLYMER CRYSTALLIZATION Volume 2022 ; 2022 ; 2022 >
+    au < manifest ; 2023 ; POLYMER CRYSTALLIZATION Volume 2023 ; 2023 ; 2023 >
     au < exists ; 2024 ; POLYMER CRYSTALLIZATION Volume 2024 ; 2024 ; 2024 >
 
   }
@@ -11844,9 +11844,9 @@
     param[journal_id] = que
     comment[years] = 2022-current
 
-    au < exists ; 2022 ; QUANTUM ENGINEERING Volume 2022 ; 2022 ; 2022 >
-    au < exists ; 2023 ; QUANTUM ENGINEERING Volume 2023 ; 2023 ; 2023 >
-    au < exists ; 2024 ; QUANTUM ENGINEERING Volume 2024 ; 2024 ; 2024 >
+    au < manifest ; 2022 ; QUANTUM ENGINEERING Volume 2022 ; 2022 ; 2022 >
+    au < manifest ; 2023 ; QUANTUM ENGINEERING Volume 2023 ; 2023 ; 2023 >
+    au < manifest ; 2024 ; QUANTUM ENGINEERING Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -11861,9 +11861,9 @@
     param[journal_id] = tbj
     comment[years] = 2022-current
 
-    au < exists ; 2022 ; THE BREAST JOURNAL Volume 2022 ; 2022 ; 2022 >
-    au < exists ; 2023 ; THE BREAST JOURNAL Volume 2023 ; 2023 ; 2023 >
-    au < exists ; 2024 ; THE BREAST JOURNAL Volume 2024 ; 2024 ; 2024 >
+    au < manifest ; 2022 ; THE BREAST JOURNAL Volume 2022 ; 2022 ; 2022 >
+    au < manifest ; 2023 ; THE BREAST JOURNAL Volume 2023 ; 2023 ; 2023 >
+    au < manifest ; 2024 ; THE BREAST JOURNAL Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -11878,9 +11878,9 @@
     param[journal_id] = tsmed
     comment[years] = 2022-current
 
-    au < exists ; 2022 ; TRANSLATIONAL SPORTS MEDICINE Volume 2022 ; 2022 ; 2022 >
-    au < exists ; 2023 ; TRANSLATIONAL SPORTS MEDICINE Volume 2023 ; 2023 ; 2023 >
-    au < exists ; 2024 ; TRANSLATIONAL SPORTS MEDICINE Volume 2024 ; 2024 ; 2024 >
+    au < manifest ; 2022 ; TRANSLATIONAL SPORTS MEDICINE Volume 2022 ; 2022 ; 2022 >
+    au < manifest ; 2023 ; TRANSLATIONAL SPORTS MEDICINE Volume 2023 ; 2023 ; 2023 >
+    au < manifest ; 2024 ; TRANSLATIONAL SPORTS MEDICINE Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -11895,8 +11895,8 @@
     param[journal_id] = ietbm
     comment[years] = 2023-current
 
-    au < exists ; 2023 ; IET Biometrics Volume 2023 ; 2023 ; 2023 >
-    au < exists ; 2024 ; IET Biometrics Volume 2024 ; 2024 ; 2024 >
+    au < manifest ; 2023 ; IET Biometrics Volume 2023 ; 2023 ; 2023 >
+    au < manifest ; 2024 ; IET Biometrics Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -11911,8 +11911,8 @@
     param[journal_id] = ietcds
     comment[years] = 2023-current
 
-    au < exists ; 2023 ;  IET Circuits,  Devices & Systems Volume 2023 ; 2023 ; 2023 >
-    au < exists ; 2024 ;  IET Circuits,  Devices & Systems Volume 2024 ; 2024 ; 2024 >
+    au < manifest ; 2023 ;  IET Circuits,  Devices & Systems Volume 2023 ; 2023 ; 2023 >
+    au < manifest ; 2024 ;  IET Circuits,  Devices & Systems Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -11927,8 +11927,8 @@
     param[journal_id] = ietcdt
     comment[years] = 2023-current
 
-    au < exists ; 2023 ;  IET Computers & Digital Techniques Volume 2023 ; 2023 ; 2023 >
-    au < exists ; 2024 ;  IET Computers & Digital Techniques Volume 2024 ; 2024 ; 2024 >
+    au < manifest ; 2023 ;  IET Computers & Digital Techniques Volume 2023 ; 2023 ; 2023 >
+    au < manifest ; 2024 ;  IET Computers & Digital Techniques Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -11943,8 +11943,8 @@
     param[journal_id] = ietest
     comment[years] = 2023-current
 
-    au < exists ; 2023 ;  IET Electrical Systems in Transportation Volume 2023 ; 2023 ; 2023 >
-    au < exists ; 2024 ;  IET Electrical Systems in Transportation Volume 2024 ; 2024 ; 2024 >
+    au < manifest ; 2023 ;  IET Electrical Systems in Transportation Volume 2023 ; 2023 ; 2023 >
+    au < manifest ; 2024 ;  IET Electrical Systems in Transportation Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -11959,8 +11959,8 @@
     param[journal_id] = ietis
     comment[years] = 2023-current
 
-    au < exists ; 2023 ;  IET Information Security Volume 2023 ; 2023 ; 2023 >
-    au < exists ; 2024 ;  IET Information Security Volume 2024 ; 2024 ; 2024 >
+    au < manifest ; 2023 ;  IET Information Security Volume 2023 ; 2023 ; 2023 >
+    au < manifest ; 2024 ;  IET Information Security Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -11975,8 +11975,8 @@
     param[journal_id] = ietnbt
     comment[years] = 2023-current
 
-    au < exists ; 2023 ;  IET Nanobiotechnology Volume 2023 ; 2023 ; 2023 >
-    au < exists ; 2024 ;  IET Nanobiotechnology Volume 2024 ; 2024 ; 2024 >
+    au < manifest ; 2023 ;  IET Nanobiotechnology Volume 2023 ; 2023 ; 2023 >
+    au < manifest ; 2024 ;  IET Nanobiotechnology Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -11991,8 +11991,8 @@
     param[journal_id] = ietsp
     comment[years] = 2023-current
 
-    au < exists ; 2023 ;  IET Signal Processing Volume 2023 ; 2023 ; 2023 >
-    au < exists ; 2024 ;  IET Signal Processing Volume 2024 ; 2024 ; 2024 >
+    au < manifest ; 2023 ;  IET Signal Processing Volume 2023 ; 2023 ; 2023 >
+    au < manifest ; 2024 ;  IET Signal Processing Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -12007,8 +12007,8 @@
     param[journal_id] = ietsfw
     comment[years] = 2023-current
 
-    au < exists ; 2023 ;  IET Software Volume 2023 ; 2023 ; 2023 >
-    au < exists ; 2024 ;  IET Software Volume 2024 ; 2024 ; 2024 >
+    au < manifest ; 2023 ;  IET Software Volume 2023 ; 2023 ; 2023 >
+    au < manifest ; 2024 ;  IET Software Volume 2024 ; 2024 ; 2024 >
 
   }
 
@@ -12022,8 +12022,8 @@
     param[journal_id] = nax
     comment[years] = 2023-current
 
-    au < exists ; 2023 ; Nanomaterials and Nanotechnology Volume 2023 ; 2023 ; 2023 >
-    au < exists ; 2024 ; Nanomaterials and Nanotechnology Volume 2024 ; 2024 ; 2024 >
+    au < manifest ; 2023 ; Nanomaterials and Nanotechnology Volume 2023 ; 2023 ; 2023 >
+    au < manifest ; 2024 ; Nanomaterials and Nanotechnology Volume 2024 ; 2024 ; 2024 >
 
   }
 
