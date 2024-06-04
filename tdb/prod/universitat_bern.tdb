@@ -484,11 +484,11 @@
 
       comment[publisher] = Universität Bern
       #moved to ojs3
-      attr[start_stem] = index.php/
       #do not Process Swiss Journal of Educational Research 1979-1999. Different platform.
       {
       param[base_url] = https://sjer.ch/
       param[journal_id] = sjer
+      attr[start_stem] = index.php/
 
       au < ojs3.Ojs3Plugin ; released ; 2000 ; 22 ; Swiss Journal of Educational Research Volume 2000 ; 2000 ; >
       au < ojs3.Ojs3Plugin ; released ; 2001 ; 23 ; Swiss Journal of Educational Research Volume 2001 ; 2001 ; >
@@ -514,8 +514,9 @@
       au < ojs3.Ojs3Plugin ; superseded ; 2021 ; 43 ; Swiss Journal of Educational Research Volume 2021 [superseded] ; 2021 ; >
       }
       {
-      param[base_url] = https://bop.unibe.ch/
+      param[base_url] = https://sjer.ch/
       param[journal_id] = sjer
+      attr[start_stem] = 
 
       au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 43 ; Swiss Journal of Educational Research Volume 2021 ; 2021 ; >
       au < ojs3.Ojs3Plugin ; manifest ; 2022 ; 44 ; Swiss Journal of Educational Research Volume 2022 ; 2022 ; >
@@ -533,10 +534,10 @@
       >
 
       comment[publisher] = Universität Bern
-      param[base_url] = https://sjer.ch/
+      param[base_url] = https://bop.unibe.ch/
       param[journal_id] = SJM
       #moved to ojs3
-      attr[start_stem] = index.php/
+      attr[start_stem] = 
 
       au < ojs3.Ojs3Plugin ; manifest ; 2021 ; 38 ; Swiss Journal of Musicology Volume 2021 ; 2021 ; >
       au < ojs3.Ojs3Plugin ; manifest ; 2022 ; 39 ; Swiss Journal of Musicology Volume 2022 ; 2022 ; >
