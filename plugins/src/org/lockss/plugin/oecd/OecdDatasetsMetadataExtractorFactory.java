@@ -99,11 +99,12 @@ public class OecdDatasetsMetadataExtractorFactory extends OecdHtmlMetadataExtrac
                     if (publisher != null) {
                     am.put(MetadataField.FIELD_PUBLISHER, publisher);
                     }
-                    am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_FILE);
 
                 } else {
                     log.debug3("Inside OECD Datasets Metadata extractor, tdb is empty");
                 }
+                am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_FILE);
+                am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.PUBLICATION_TYPE_FILE);
                 emitter.emitMetadata(cu, am);
             }
     }
