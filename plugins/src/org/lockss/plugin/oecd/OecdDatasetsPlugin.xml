@@ -148,4 +148,13 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_login_page_checker</string>
         <string>org.lockss.plugin.oecd.OecdLoginPageChecker</string>
     </entry>
+    <entry>
+        <string>text/html_metadata_extractor_factory_map</string>
+        <map>
+        <entry>
+            <string>*</string>
+            <string>org.lockss.plugin.oecd.OecdDatasetsMetadataExtractorFactory</string>
+        </entry>
+        </map>
+    </entry>
 </map>
