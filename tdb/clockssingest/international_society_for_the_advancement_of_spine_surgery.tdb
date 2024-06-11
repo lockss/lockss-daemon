@@ -5,7 +5,7 @@
     info[contract] = 2014 ;
     info[back] = 2007 ;
     info[min_year] = 2007 ;
-    info[tester] = 4 ;
+    info[tester] = 5 ;
     info[platform] = HW Drupal
   >
     plugin = org.lockss.plugin.highwire.isass.ClockssIsassDrupalPlugin
@@ -20,23 +20,23 @@
 
     param[base_url] = https://www.ijssurgery.com/
 
-    au < manifest ; exists ; 2007 ; International Journal of Spine Surgery Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2008 ; International Journal of Spine Surgery Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2009 ; International Journal of Spine Surgery Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2010 ; International Journal of Spine Surgery Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2011 ; International Journal of Spine Surgery Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2012 ; International Journal of Spine Surgery Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2013 ; International Journal of Spine Surgery Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2014 ; International Journal of Spine Surgery Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2015 ; International Journal of Spine Surgery Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2016 ; International Journal of Spine Surgery Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2017 ; International Journal of Spine Surgery Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2018 ; International Journal of Spine Surgery Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2019 ; International Journal of Spine Surgery Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2020 ; International Journal of Spine Surgery Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2021 ; International Journal of Spine Surgery Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2022 ; International Journal of Spine Surgery Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2023 ; International Journal of Spine Surgery Volume 17 ; 17 ; >
+    au < doNotProcess ; exists ; 2007 ; International Journal of Spine Surgery Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 2008 ; International Journal of Spine Surgery Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 2009 ; International Journal of Spine Surgery Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 2010 ; International Journal of Spine Surgery Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 2011 ; International Journal of Spine Surgery Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 2012 ; International Journal of Spine Surgery Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 2013 ; International Journal of Spine Surgery Volume 7 ; 7 ; >
+    au < doNotProcess ; exists ; 2014 ; International Journal of Spine Surgery Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 2015 ; International Journal of Spine Surgery Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 2016 ; International Journal of Spine Surgery Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 2017 ; International Journal of Spine Surgery Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 2018 ; International Journal of Spine Surgery Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 2019 ; International Journal of Spine Surgery Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 2020 ; International Journal of Spine Surgery Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 2021 ; International Journal of Spine Surgery Volume 15 ; 15 ; >
+    au < ready ; exists ; 2022 ; International Journal of Spine Surgery Volume 16 ; 16 ; >
+    au < ready ; exists ; 2023 ; International Journal of Spine Surgery Volume 17 ; 17 ; >
     au < manifest ; exists ; 2024 ; International Journal of Spine Surgery Volume 18 ; 18 ; >
 
     }
