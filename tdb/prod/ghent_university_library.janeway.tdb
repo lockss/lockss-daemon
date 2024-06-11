@@ -784,25 +784,29 @@
 
   }
 
-  {
-
-      title <
-        name = Journal for the History of Environment and Society ;
-        issn = 2506-6730 ;
-        eissn = 2506-6749
-      >
-
-      #published 2016-2020
-      param[journal_id] = jhes
-
-      au < manifest ; 2016 ; 2016 ; 2016 ; Journal for the History of Environment and Society Volume 2016 >
-      au < manifest ; 2017 ; 2017 ; 2017 ; Journal for the History of Environment and Society Volume 2017 >
-      au < manifest ; 2018 ; 2018 ; 2018 ; Journal for the History of Environment and Society Volume 2018 >
-      au < manifest ; 2019 ; 2019 ; 2019 ; Journal for the History of Environment and Society Volume 2019 >
-      au < manifest ; 2020 ; 2020 ; 2020 ; Journal for the History of Environment and Society Volume 2020 >
-      au < manifest ; 2021 ; 2021 ; 2021 ; Journal for the History of Environment and Society Volume 2021 >
-
-  }
+#  {
+#
+#      title <
+#        name = Journal for the History of Environment and Society ;
+#        issn = 2506-6730 ;
+#        eissn = 2506-6749
+#      >
+#
+#      #published 2016-2020
+#      param[journal_id] = jhes
+#      #Content expected at https://openjournals.ugent.be/jhes/issues/. No content to download
+#      #Content actually at https://www.brepolsonline.net/doi/10.1484/J.JHES.5.116794,
+#      #                    https://www.brepolsonline.net/toc/jhes/current
+#      #Removed per publisher
+#
+#      au < manifest ; 2016 ; 2016 ; 2016 ; Journal for the History of Environment and Society Volume 2016 >
+#      au < manifest ; 2017 ; 2017 ; 2017 ; Journal for the History of Environment and Society Volume 2017 >
+#      au < manifest ; 2018 ; 2018 ; 2018 ; Journal for the History of Environment and Society Volume 2018 >
+#      au < manifest ; 2019 ; 2019 ; 2019 ; Journal for the History of Environment and Society Volume 2019 >
+#      au < manifest ; 2020 ; 2020 ; 2020 ; Journal for the History of Environment and Society Volume 2020 >
+#      au < manifest ; 2021 ; 2021 ; 2021 ; Journal for the History of Environment and Society Volume 2021 >
+#
+#  }
 
   {
 
