@@ -137,59 +137,44 @@ public class AimsCrossrefXmlMetadataExtractorFactory extends SourceXmlMetadataEx
 
       List<String> returnList = new ArrayList<String>();
 
-      log.debug3("cuBase " + cuBase);
+      String name2018WithDoi = cuBase + doiFirst + "/" + pubJID + "." + pubYear + "." + pubIssue + "." + artPage + "/Paper.pdf";
+      String name2018AltWithDoi = cuBase + doiFirst + "/" + pubJIDAlt + "." + pubYear + "." + pubIssue + "." + artPage + "/Paper.pdf";
+      String name2018AltWithDoi2 = cuBase + doiFirst + "/" + pubJIDAlt2 + "." + pubYear + "." + pubIssue + "." + artPage + "/Paper.pdf";
 
+      String name2018Alt2WithDoi = cuBase + doiFirst + "/" + pubJID + "." + pubYear + "." + pubIssue + "." + artPage + "/paper.pdf";
+      String name2018Alt3WithDoi = cuBase + doiFirst + "/" + pubJIDAlt + "." + pubYear + "." + pubIssue + "." + artPage + "/paper.pdf";
+      String name2018Alt3WithDoi2 = cuBase + doiFirst + "/" + pubJIDAlt2 + "." + pubYear + "." + pubIssue + "." + artPage + "/paper.pdf";
 
-      if (cuBase.contains("aimsciences-released/2024_01/MINE")) {
+      String name2018 = cuBase + "/" + pubJID + "." + pubYear + "." + pubIssue + "." + artPage + ".pdf";
+      String name2018Alt = cuBase + "/" + pubJIDAlt + "." + pubYear + "." + pubIssue + "." + artPage + ".pdf";
+      String name2018AltUpper = cuBase + "/" + pubJIDAlt2 + "." + pubYear + "." + pubIssue + "." + artPage + ".pdf";
 
-        String mineSpecialPdfName = cuBase + doiFirst + "/" + pubJID + "." + pubYear + "." + pubIssue + "." + artPage + "/Paper.pdf";
+      String name2018Alt2 = cuBase + "/" + pubJID + "." + pubYear + "." + pubIssue + "." + artPage + ".pdf";
+      String name2018Alt3 = cuBase + "/" + pubJIDAlt + "." + pubYear + "." + pubIssue + "." + artPage + ".pdf";
+      String name2018Alt3Upper = cuBase + "/" + pubJIDAlt2 + "." + pubYear + "." + pubIssue + "." + artPage + ".pdf";
 
-        log.debug3("Special Case - MINE: " + mineSpecialPdfName);
+      log.debug3("looking for: " + pdfName + " or " + altName + " or " + name2018 + " or "
+              + name2018Alt + " or " + name2018Alt2 + " or " + name2018Alt3);
 
-        returnList.add(mineSpecialPdfName);
+      log.debug3("adding name2018WithDoi = " + name2018WithDoi + ", name2018Alt2WithDoi = " + name2018Alt2WithDoi);
 
+      returnList.add(pdfName);
+      returnList.add(altName);
 
-      } else {
+      returnList.add(name2018WithDoi);
+      returnList.add(name2018AltWithDoi);
+      returnList.add(name2018AltWithDoi2);
+      returnList.add(name2018Alt2WithDoi);
+      returnList.add(name2018Alt3WithDoi);
+      returnList.add(name2018Alt3WithDoi2);
 
-        String name2018WithDoi = cuBase + doiFirst + "/" + pubJID + "." + pubYear + "." + pubIssue + "." + artPage + "/Paper.pdf";
-        String name2018AltWithDoi = cuBase + doiFirst + "/" + pubJIDAlt + "." + pubYear + "." + pubIssue + "." + artPage + "/Paper.pdf";
-        String name2018AltWithDoi2 = cuBase + doiFirst + "/" + pubJIDAlt2 + "." + pubYear + "." + pubIssue + "." + artPage + "/Paper.pdf";
+      returnList.add(name2018);
+      returnList.add(name2018Alt);
+      returnList.add(name2018AltUpper);
+      returnList.add(name2018Alt2);
+      returnList.add(name2018Alt3);
+      returnList.add(name2018Alt3Upper);
 
-        String name2018Alt2WithDoi = cuBase + doiFirst + "/" + pubJID + "." + pubYear + "." + pubIssue + "." + artPage + "/paper.pdf";
-        String name2018Alt3WithDoi = cuBase + doiFirst + "/" + pubJIDAlt + "." + pubYear + "." + pubIssue + "." + artPage + "/paper.pdf";
-        String name2018Alt3WithDoi2 = cuBase + doiFirst + "/" + pubJIDAlt2 + "." + pubYear + "." + pubIssue + "." + artPage + "/paper.pdf";
-
-        String name2018 = cuBase + "/" + pubJID + "." + pubYear + "." + pubIssue + "." + artPage + ".pdf";
-        String name2018Alt = cuBase + "/" + pubJIDAlt + "." + pubYear + "." + pubIssue + "." + artPage + ".pdf";
-        String name2018AltUpper = cuBase + "/" + pubJIDAlt2 + "." + pubYear + "." + pubIssue + "." + artPage + ".pdf";
-
-        String name2018Alt2 = cuBase + "/" + pubJID + "." + pubYear + "." + pubIssue + "." + artPage + ".pdf";
-        String name2018Alt3 = cuBase + "/" + pubJIDAlt + "." + pubYear + "." + pubIssue + "." + artPage + ".pdf";
-        String name2018Alt3Upper = cuBase + "/" + pubJIDAlt2 + "." + pubYear + "." + pubIssue + "." + artPage + ".pdf";
-
-        log.debug3("looking for: " + pdfName + " or " + altName + " or " + name2018 + " or "
-                + name2018Alt + " or " + name2018Alt2 + " or " + name2018Alt3);
-
-
-        log.debug3("adding name2018WithDoi = " + name2018WithDoi + ", name2018Alt2WithDoi = " + name2018Alt2WithDoi);
-
-        returnList.add(pdfName);
-        returnList.add(altName);
-
-        returnList.add(name2018WithDoi);
-        returnList.add(name2018AltWithDoi);
-        returnList.add(name2018AltWithDoi2);
-        returnList.add(name2018Alt2WithDoi);
-        returnList.add(name2018Alt3WithDoi);
-        returnList.add(name2018Alt3WithDoi2);
-
-        returnList.add(name2018);
-        returnList.add(name2018Alt);
-        returnList.add(name2018AltUpper);
-        returnList.add(name2018Alt2);
-        returnList.add(name2018Alt3);
-        returnList.add(name2018Alt3Upper);
-      }
 
       return returnList;
     }
@@ -213,7 +198,13 @@ public class AimsCrossrefXmlMetadataExtractorFactory extends SourceXmlMetadataEx
 
         String article_title = thisAM.get(MetadataField.FIELD_ARTICLE_TITLE);
 
-        String newAccessUrl = originalUrl + "?unique_record_id=" + URLEncoder.encode(article_title.substring(0,50));
+        String newAccessUrl = null;
+
+        if (article_title.length() > 50) {
+          newAccessUrl = originalUrl + "?unique_record_id=" + URLEncoder.encode(article_title.substring(0, 50));
+        } else {
+          newAccessUrl = originalUrl + "?unique_record_id=" + URLEncoder.encode(article_title);
+        }
 
         log.debug3("access_url === " + originalUrl + ", newAccessUrl =" + newAccessUrl);
 
