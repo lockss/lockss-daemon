@@ -21,7 +21,7 @@
       eissn = 1678-2690
     >
 
-    param[base_url] = http://www.scielo.br/
+    param[base_url] = https://www.scielo.br/
     param[journal_id] = aabc
 
     au < exists ; exists ; 2000 ; 72 ; Anais da Academia Brasileira de Ciências Volume 72 ; 2000 ; >

@@ -50,7 +50,6 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.ArticleIteratorFactory;
 import org.lockss.plugin.SubTreeArticleIteratorBuilder;
-import org.lockss.plugin.oapen.OAPENBooksArticleIteratorFactory;
 import org.lockss.util.Logger;
 
 /**
@@ -70,7 +69,7 @@ import org.lockss.util.Logger;
 public class SciELO2024ArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory{
 
     protected static Logger log =
-        Logger.getLogger(OAPENBooksArticleIteratorFactory.class);
+        Logger.getLogger(SciELO2024ArticleIteratorFactory.class);
 
     private static final List<String> languageCodes = Arrays.asList("en", "pt", "es");
 
