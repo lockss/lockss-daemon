@@ -10,8 +10,7 @@
   
   provider = Anais da Academia Brasileira de Ciências
   rights = openaccess
-  #plugin = org.lockss.plugin.scielo.ClockssSciELO2024Plugin
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.scielo.ClockssSciELO2024Plugin
   implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
 
   {
