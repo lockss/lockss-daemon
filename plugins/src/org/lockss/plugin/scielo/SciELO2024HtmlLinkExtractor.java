@@ -1,4 +1,4 @@
-<!--
+/*
 
 Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
@@ -28,46 +28,33 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
--->
-<map>
-  <!-- This plugin is currently for CLOCKSS only and single instance crawling 
-        no hash filtering needed -->
-  <entry>
-    <string>plugin_status</string>
-    <string>deprecated</string>
-  </entry>
-  <entry>
-    <string>plugin_identifier</string>
-    <string>org.lockss.plugin.scielo.ClockssSciELOPlugin</string>
-  </entry>
-  <entry>
-    <string>plugin_version</string>
-    <string>12</string>
-  </entry>
-  <entry>
-    <string>plugin_name</string>
-    <string>SciELO Journals Plugin (Legacy, CLOCKSS)</string>
-  </entry>
-  <entry>
-    <string>plugin_parent</string>
-    <string>org.lockss.plugin.scielo.SciELOPlugin</string>
-  </entry>
-   <entry>
-    <string>plugin_parent_version</string>
-    <string>12</string>
-  </entry>  
-  <entry>
-    <string>au_name</string>
-    <string>"SciELO Journals Plugin (Legacy, CLOCKSS), Base URL %s, ISSN %s, Year %d", base_url, journal_issn, year</string>
-  </entry>
-  <!-- for ingest to clockss-production -->
-  <entry>
-    <string>clockss_override</string>
-    <map>
-     <entry>
-        <string>au_def_pause_time</string>
-        <long>100</long>
-     </entry>
-    </map>
-  </entry>
-</map>
+*/
+package org.lockss.plugin.scielo;
+import java.io.IOException;
+
+import org.lockss.extractor.GoslingHtmlLinkExtractor;
+import org.lockss.plugin.ArchivalUnit;
+
+public class SciELO2024HtmlLinkExtractor extends GoslingHtmlLinkExtractor{
+
+    @Override
+    protected String extractLinkFromTag(StringBuffer link,
+                                      ArchivalUnit au,
+                                      Callback cb)
+    throws IOException {
+        char ch = link.charAt(0);
+        if ((ch == 'm' || ch == 'M') && beginsWithTag(link, METATAG)) {
+            String content = null;
+            String name = getAttributeValue("name", link);
+            if("citation_xml_url".equals(name)){
+                content = getAttributeValue("content", link);
+                if(content != null){
+                    cb.foundLink(resolveUri(baseUrl, content));
+                }
+            }
+            return content;
+        } else{
+            return super.extractLinkFromTag(link, au, cb);
+        }
+    }
+}

@@ -1,4 +1,4 @@
-<!--
+/*
 
 Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
@@ -28,46 +28,19 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
--->
-<map>
-  <!-- This plugin is currently for CLOCKSS only and single instance crawling 
-        no hash filtering needed -->
-  <entry>
-    <string>plugin_status</string>
-    <string>deprecated</string>
-  </entry>
-  <entry>
-    <string>plugin_identifier</string>
-    <string>org.lockss.plugin.scielo.ClockssSciELOPlugin</string>
-  </entry>
-  <entry>
-    <string>plugin_version</string>
-    <string>12</string>
-  </entry>
-  <entry>
-    <string>plugin_name</string>
-    <string>SciELO Journals Plugin (Legacy, CLOCKSS)</string>
-  </entry>
-  <entry>
-    <string>plugin_parent</string>
-    <string>org.lockss.plugin.scielo.SciELOPlugin</string>
-  </entry>
-   <entry>
-    <string>plugin_parent_version</string>
-    <string>12</string>
-  </entry>  
-  <entry>
-    <string>au_name</string>
-    <string>"SciELO Journals Plugin (Legacy, CLOCKSS), Base URL %s, ISSN %s, Year %d", base_url, journal_issn, year</string>
-  </entry>
-  <!-- for ingest to clockss-production -->
-  <entry>
-    <string>clockss_override</string>
-    <map>
-     <entry>
-        <string>au_def_pause_time</string>
-        <long>100</long>
-     </entry>
-    </map>
-  </entry>
-</map>
+*/
+
+package org.lockss.plugin.scielo;
+
+import org.lockss.daemon.PluginException;
+import org.lockss.extractor.LinkExtractor;
+import org.lockss.extractor.LinkExtractorFactory;
+
+public class SciELO2024HtmlLinkExtractorFactory implements LinkExtractorFactory{
+
+    @Override
+    public LinkExtractor createLinkExtractor(String mimeType) throws PluginException {
+        return new SciELO2024HtmlLinkExtractor();
+    }
+    
+}
