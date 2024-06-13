@@ -17,7 +17,7 @@
     param[base_url] = https://www.namesforlife.com/
     implicit < status ; status2 ; year ; name ; hidden[proxy] >
 
-    au < ready ; exists ; 2024 ; Names for Life ; >
+    au < crawling ; exists ; 2024 ; Names for Life ; >
 
   }
 
