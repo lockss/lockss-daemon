@@ -2141,4 +2141,29 @@
 
   }
   
+  {
+
+    title <
+      name = The Shandean ;
+      issn = 0956-3083 ;
+      eissn = 3049-4788
+    >
+
+    param[journal_id] = shandean
+
+    au < manifest ; exists ; 2013 ; The Shandean Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2014 ; The Shandean Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2015 ; The Shandean Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2016 ; The Shandean Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2017 ; The Shandean Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2018 ; The Shandean Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2019 ; The Shandean Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2020 ; The Shandean Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2021 ; The Shandean Volume 32 ; 32 ; >
+    au < manifest ; exists ; 2022 ; The Shandean Volume 33 ; 33 ; >
+    au < exists ; exists ; 2023 ; The Shandean Volume 34 ; 34 ; >
+    au < expected ; exists ; 2024 ; The Shandean Volume 35 ; 35 ; >
+
+  }
+  
 }
