@@ -102,7 +102,7 @@ public class TestSciELOPlugin extends LockssTestCase {
         "http://www.example.com/scielo.php?script=sci_issues&pid=X090-999X&lng=pt"
         };
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("SciELO Journals Plugin, Base URL http://www.example.com/, ISSN X090-999X, Year 2013",
+    assertEquals("SciELO Journals Plugin (Legacy), Base URL http://www.example.com/, ISSN X090-999X, Year 2013",
         au.getName());
     assertEquals(ListUtil.fromArray(starturls), au.getStartUrls());
   }
