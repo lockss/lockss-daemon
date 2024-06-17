@@ -89,6 +89,12 @@ POSSIBILITY OF SUCH DAMAGE.
     </list>
   </entry>
   <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      	<string>1,"^%s(j/%s/a|citation/export)/[^/]+/\?format=pdf", base_url, journal_id</string>
+    </list>
+  </entry>
+  <entry>
     <string>au_crawlrules</string>
     <!-- examples
         https://www.scielo.br/j/aob/a/9rQ95PXmRBxDNsxhhr4hB6k/abstract/?lang=en
