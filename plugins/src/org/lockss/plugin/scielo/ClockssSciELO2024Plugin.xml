@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
         <string>plugin_version</string>
-        <string>2</string>
+        <string>3</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -130,7 +130,6 @@ POSSIBILITY OF SUCH DAMAGE.
       <entry>
         <string>au_permitted_host_pattern</string>
         <list>
-          <string>www.scielo.br</string> <!-- fix me-->
           <string>minio\.scielo\.br</string>
           <string>cdnjs\.cloudflare\.com</string>
           <string>.+\.cloudfront\.net</string>

@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -34,16 +34,74 @@ package org.lockss.plugin.scielo;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.QueryUrlNormalizer;
 import org.lockss.plugin.UrlNormalizer;
+import org.apache.commons.collections4.ListValuedMap;
+import org.apache.commons.collections4.multimap.ArrayListValuedHashMap;
+import org.apache.commons.lang3.StringUtils;
 
-public class SciELO2024UrlNormalizer extends QueryUrlNormalizer{
-    @Override
-    public boolean shouldDropKeyValue(String key, String value) {
-    // TODO Auto-generated method stub
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class SciELO2024UrlNormalizer implements UrlNormalizer{
+  @Override
+  public String normalizeUrl(String url,
+                            ArchivalUnit au)
+      throws PluginException {
+        if(!url.contains("?")){
+            return url;
+        }
+        int qmark = url.indexOf('?');
+        String primary = url.substring(0,qmark);
+        String query = url.substring(qmark+1);
+        String[] pairs = StringUtils.split(query,'&');
+        ListValuedMap<String, String> queryMap = new ArrayListValuedHashMap<String,String>();
+        for(String pair:pairs){
+            int equals = pair.indexOf('=');
+            if(equals < 0){
+                queryMap.put(pair, null);
+            } else {
+                String key = pair.substring(0,equals);
+                String value = pair.substring(equals+1);
+                if(!shouldDropKey(key) && !shouldDropKeyValue(key, value)){
+                  queryMap.put(key, value);
+                }
+                
+            }
+        }
+        processQueryMap(queryMap);
+        List<String> sortedKeys = new ArrayList<String>(queryMap.keySet());
+        Collections.sort(sortedKeys, getKeyComparator());
+        StringBuilder result = new StringBuilder(primary + "?");
+        for(String key:sortedKeys){
+          for(String value:queryMap.get(key)){
+            result.append(key);
+            if(value != null){
+              result.append("=").append(value);
+            }
+            result.append("&");
+          }
+        }
+        result.deleteCharAt(result.length()-1);
+        return result.toString();
+  }
+
+  public void processQueryMap(ListValuedMap<String, String> queryMap){
+
+  }
+
+  public boolean shouldDropKey(String key){
+    return false;
+  }
+
+  public boolean shouldDropKeyValue(String key, String value) {
       if(key.equals("format") && value.equals("html")){
         return true;
-      }
-      return super.shouldDropKeyValue(key, value);
+      }else return false;
     }
+
+  public Comparator<String> getKeyComparator(){
+    return Comparator.<String>naturalOrder();
+  }
 }
