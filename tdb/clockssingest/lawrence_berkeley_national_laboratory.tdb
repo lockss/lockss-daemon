@@ -10,14 +10,14 @@
   {
 
     title <
-      name = Names for Life
+      name = NamesforLife Abstracts
     >
 
     plugin = org.lockss.plugin.lbnl.ClockssNamesforLifePlugin
     param[base_url] = https://www.namesforlife.com/
     implicit < status ; status2 ; year ; name ; hidden[proxy] >
 
-    au < crawling ; exists ; 2024 ; Names for Life ; >
+    au < crawling ; exists ; 2024 ; NamesforLife Abstracts ; >
 
   }
 
