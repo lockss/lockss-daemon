@@ -72,7 +72,7 @@
         param[base_url] = https://www.ajnr.org/
 
         au < asnr.AsnrDrupalPlugin ; released ; 2022 ; American Journal of Neuroradiology Volume 43 ; 43 >
-        au < asnr.AsnrDrupalPlugin ; ready ; 2023 ; American Journal of Neuroradiology Volume 44 ; 44 >
+        au < asnr.AsnrDrupalPlugin ; releasing ; 2023 ; American Journal of Neuroradiology Volume 44 ; 44 >
         au < asnr.AsnrDrupalPlugin ; manifest ; 2024 ; American Journal of Neuroradiology Volume 45 ; 45 >
       }
     }
@@ -120,7 +120,7 @@
       au < released ; 2020 ; Neurographics Volume 10 ; 10 >
       au < released ; 2021 ; Neurographics Volume 11 ; 11 >
       au < released ; 2022 ; Neurographics Volume 12 ; 12 >
-      au < ready ; 2023 ; Neurographics Volume 13 ; 13 >
+      au < releasing ; 2023 ; Neurographics Volume 13 ; 13 >
 
     }
 
