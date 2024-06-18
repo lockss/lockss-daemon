@@ -234,9 +234,9 @@
     param[journal_id] = dmt
     #No longer published by Future Medicine, no content online
 
-    au < down ; 2012 ; Diabetes Management Volume 2 ; 2 ; http://www.futuremedicine.com/ >
-    au < down ; 2013 ; Diabetes Management Volume 3 ; 3 ; http://www.futuremedicine.com/ >
-    au < down ; 2014 ; Diabetes Management Volume 4 ; 4 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2012 ; Diabetes Management Volume 2 [superseded] ; 2 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2013 ; Diabetes Management Volume 3 [superseded] ; 3 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2014 ; Diabetes Management Volume 4 [superseded] ; 4 ; http://www.futuremedicine.com/ >
     au < down ; 2015 ; Diabetes Management Volume 5 ; 5 ; http://www.futuremedicine.com/ >
 
   }
@@ -512,7 +512,7 @@
     #No longer published by Future Medicine, no content online
 
     au < down ; 2012 ; Imaging in Medicine Volume 4 ; 4 ; http://www.futuremedicine.com/ >
-    au < down ; 2013 ; Imaging in Medicine Volume 5 ; 5 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2013 ; Imaging in Medicine Volume 5 [superseded] ; 5 ; http://www.futuremedicine.com/ >
     au < down ; 2014 ; Imaging in Medicine Volume 6 ; 6 ; http://www.futuremedicine.com/ >
 
   }
@@ -557,10 +557,10 @@
     param[journal_id] = ijr
     #No longer published by Future Medicine, no content online
 
-    au < down ; 2012 ; International Journal of Clinical Rheumatology Volume 7 ; 7 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2012 ; International Journal of Clinical Rheumatology Volume 7 [superseded] ; 7 ; http://www.futuremedicine.com/ >
     au < down ; 2013 ; International Journal of Clinical Rheumatology Volume 8 ; 8 ; http://www.futuremedicine.com/ >
-    au < down ; 2014 ; International Journal of Clinical Rheumatology Volume 9 ; 9 ; http://www.futuremedicine.com/ >
-    au < down ; 2015 ; International Journal of Clinical Rheumatology Volume 10 ; 10 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2014 ; International Journal of Clinical Rheumatology Volume 9 [superseded] ; 9 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2015 ; International Journal of Clinical Rheumatology Volume 10 [superseded] ; 10 ; http://www.futuremedicine.com/ >
 
   }
 
@@ -620,9 +620,9 @@
     param[journal_id] = ica
     #No longer published by Future Medicine, no content online
 
-    au < down ; 2012 ; Interventional Cardiology Volume 4 ; 4 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2012 ; Interventional Cardiology Volume 4 [superseded] ; 4 ; http://www.futuremedicine.com/ >
     au < down ; 2013 ; Interventional Cardiology Volume 5 ; 5 ; http://www.futuremedicine.com/ >
-    au < down ; 2014 ; Interventional Cardiology Volume 6 ; 6 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2014 ; Interventional Cardiology Volume 6 [superseded] ; 6 ; http://www.futuremedicine.com/ >
     au < down ; 2015 ; Interventional Cardiology Volume 7 ; 7 ; http://www.futuremedicine.com/ >
 
   }
@@ -791,9 +791,9 @@
     param[journal_id] = npy
     #No longer published by Future Medicine, no content online
 
-    au < down ; 2012 ; Neuropsychiatry Volume 2 ; 2 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2012 ; Neuropsychiatry Volume 2 [superseded] ; 2 ; http://www.futuremedicine.com/ >
     au < down ; 2013 ; Neuropsychiatry Volume 3 ; 3 ; http://www.futuremedicine.com/ >
-    au < down ; 2014 ; Neuropsychiatry Volume 4 ; 4 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2014 ; Neuropsychiatry Volume 4 [superseded] ; 4 ; http://www.futuremedicine.com/ >
 
   }
 
