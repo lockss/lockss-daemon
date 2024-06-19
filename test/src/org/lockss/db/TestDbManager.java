@@ -207,6 +207,7 @@ public class TestDbManager extends LockssTestCase {
     dbManagerSql.logTableSchema(conn, "testtable");
     assertFalse(dbManagerSql
 	.createTableIfMissing(conn, "testtable", TABLE_CREATE_SQL));
+    DbManager.safeCloseConnection(conn);
   }
 
   /**
@@ -223,6 +224,7 @@ public class TestDbManager extends LockssTestCase {
     assertNotNull(conn);
     assertFalse(dbManagerSql.tableExists(conn,
 	SqlConstants.OBSOLETE_METADATA_TABLE));
+    DbManager.safeCloseConnection(conn);
   }
 
   /**
@@ -244,6 +246,8 @@ public class TestDbManager extends LockssTestCase {
 	"select count(*) from " + SqlConstants.OBSOLETE_METADATA_TABLE);
 
     assertEquals(DbManager.DEFAULT_FETCH_SIZE, ps.getFetchSize());
+    DbManager.safeCloseStatement(ps);
+    DbManager.safeCloseConnection(conn);
   }
 
   /**
@@ -277,6 +281,8 @@ public class TestDbManager extends LockssTestCase {
 	"select count(*) from " + SqlConstants.OBSOLETE_METADATA_TABLE);
 
     assertEquals(12345, ps.getFetchSize());
+    DbManager.safeCloseStatement(ps);
+    DbManager.safeCloseConnection(conn);
   }
 
   /**
@@ -294,6 +300,7 @@ public class TestDbManager extends LockssTestCase {
     assertFalse(dbManagerSql.tableExists(conn,
 	SqlConstants.OBSOLETE_METADATA_TABLE));
     assertTrue(dbManagerSql.tableExists(conn, SqlConstants.VERSION_TABLE));
+    DbManager.safeCloseConnection(conn);
   }
 
   /**
@@ -311,6 +318,7 @@ public class TestDbManager extends LockssTestCase {
     assertFalse(dbManagerSql.tableExists(conn,
 	SqlConstants.OBSOLETE_METADATA_TABLE));
     assertTrue(dbManagerSql.tableExists(conn, SqlConstants.VERSION_TABLE));
+    DbManager.safeCloseConnection(conn);
   }
 
   /**
@@ -627,5 +635,8 @@ public class TestDbManager extends LockssTestCase {
 
     assertTrue(resultSet.next());
     assertEquals(11, resultSet.getLong(MD_ITEM_TYPE_SEQ_COLUMN));
+    DbManager.safeCloseResultSet(resultSet);
+    DbManager.safeCloseStatement(stmt);
+    DbManager.safeCloseConnection(conn);
   }
 }

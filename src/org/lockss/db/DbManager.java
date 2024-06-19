@@ -1555,8 +1555,9 @@ public class DbManager extends BaseLockssDaemonManager
     initializeDataSourceProperties(shutdownConfig, ds);
 
     // Get a connection, which will shutdown the Derby database.
+    Connection conn = null;
     try {
-      dbManagerSql.getConnection(ds, false);
+      conn = dbManagerSql.getConnection(ds, false);
     } catch (SQLException sqle) {
       // Check whether it is the expected exception.
       if (SHUTDOWN_SUCCESS_STATE_CODE.equals(sqle.getSQLState())) {
@@ -1570,6 +1571,8 @@ public class DbManager extends BaseLockssDaemonManager
     } catch (RuntimeException re) {
       // Report the problem.
       log.error("Unexpected exception caught shutting down database", re);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug())

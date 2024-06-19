@@ -1616,6 +1616,8 @@ public class TestSubscriptionManager extends LockssTestCase {
     assertEquals("1954", unsubscribedRanges.get(0).toDisplayableString());
     assertTrue(subManagerSql.hasSubscriptionRanges(conn));
     assertFalse(subManagerSql.hasPublisherSubscriptions(conn));
+
+    DbManager.safeRollbackAndClose(conn);
   }
 
   private TitleConfig makeTitleConfig(String vol) {

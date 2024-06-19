@@ -2256,13 +2256,13 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       return;
     }
 
-    if (isTotalSubscriptionEnabled && totalSubscriptionChanged) {
-      updateTotalSubscription(conn, updatedTotalSubscriptionSetting, status);
-    }
-
-    BatchAuStatus bas;
-
     try {
+      if (isTotalSubscriptionEnabled && totalSubscriptionChanged) {
+        updateTotalSubscription(conn, updatedTotalSubscriptionSetting, status);
+      }
+
+      BatchAuStatus bas;
+
       // Loop through all the publisher subscriptions.
       for (PublisherSubscription publisherSubscription
 	  : publisherSubscriptions) {
@@ -2842,13 +2842,13 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       return;
     }
 
-    if (isTotalSubscriptionEnabled && totalSubscriptionChanged) {
-      updateTotalSubscription(conn, updatedTotalSubscriptionSetting, status);
-    }
-
-    BatchAuStatus bas;
-
     try {
+      if (isTotalSubscriptionEnabled && totalSubscriptionChanged) {
+        updateTotalSubscription(conn, updatedTotalSubscriptionSetting, status);
+      }
+
+      BatchAuStatus bas;
+
       // Loop through all the publisher subscriptions.
       for (PublisherSubscription publisherSubscription
 	  : publisherSubscriptions) {
@@ -4089,6 +4089,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       log.error(CANNOT_CONNECT_TO_DB_ERROR_MESSAGE, dbe);
       status.createTotalSubscriptionStatusEntry(false, dbe.getMessage(),
 	  totalSubscriptionSetting);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
     }
   }
 
@@ -4220,15 +4222,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     try {
       // Get a connection to the database.
       conn = dbManager.getConnection();
+      updateTotalSubscription(conn, true, status);
     } catch (DbException dbe) {
       log.error(CANNOT_CONNECT_TO_DB_ERROR_MESSAGE, dbe);
       status.createTotalSubscriptionStatusEntry(false, dbe.getMessage(), null);
       if (log.isDebug2()) log.debug(DEBUG_HEADER + "Done.");
       return;
-    }
-
-    try {
-      updateTotalSubscription(conn, true, status);
     } finally {
       DbManager.safeRollbackAndClose(conn);
     }

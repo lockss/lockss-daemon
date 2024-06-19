@@ -293,79 +293,80 @@ public class FetchTimeExporter {
 
     try {
       conn = dbManager.getConnection();
+
+      try {
+        // Do nothing more if the required database version has not been
+        // completed.
+        if (!dbManager.isVersionCompleted(conn, 20)) {
+          return true;
+        }
+      } catch (DbException dbe) {
+        log.error("Cannot determine whether a database upgrade is done", dbe);
+        if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+        return true;
+      }
+
+      // Determine the report file name.
+      String fileName = getReportFileName();
+      if (log.isDebug2())
+        log.debug2(DEBUG_HEADER + "fileName = '" + fileName + "'.");
+
+      File exportFile = new File(outputDir, fileName + ".ignore");
+      if (log.isDebug2())
+        log.debug2(DEBUG_HEADER + "exportFile = '" + exportFile + "'.");
+
+      // Get the writer for this report.
+      PrintWriter writer = null;
+
+      try {
+        writer = new PrintWriter(new FileWriter(exportFile));
+      } catch (IOException ioe) {
+        log.error("Cannot get a PrintWriter for the export output file '"
+            + exportFile + "'", ioe);
+        if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+        return true;
+      }
+
+      // An indication of whether any new data has been written out.
+      boolean newDataWritten = false;
+
+      try {
+        // Get the database version.
+        int dbVersion = dbManager.getDatabaseVersion(conn);
+        if (log.isDebug3()) log.debug3(DEBUG_HEADER + "dbVersion = " + dbVersion);
+
+        // Check whether the database version is appropriate.
+        if (dbVersion >= 10) {
+          // Yes: Perform the export.
+          newDataWritten = processExport(conn, exportFile, writer);
+          if (log.isDebug3())
+            log.debug3(DEBUG_HEADER + "newDataWritten = " + newDataWritten);
+        } else {
+          log.info("Database version is " + dbVersion
+              + " (< 10). Export skipped.");
+        }
+      } catch (DbException dbe) {
+        log.error("Cannot export fetch times", dbe);
+      } finally {
+        IOUtil.safeClose(writer);
+      }
+
+      // Check whether any new data has been written out.
+      if (newDataWritten) {
+        // Yes: Rename the output file to mark it as available.
+        boolean renamed = exportFile.renameTo(new File(outputDir, fileName));
+        if (log.isDebug3()) log.debug3(DEBUG_HEADER + "renamed = " + renamed);
+      } else {
+        // No: Delete the empty file to avoid cluttering.
+        boolean deleted = exportFile.delete();
+        if (log.isDebug3()) log.debug3(DEBUG_HEADER + "deleted = " + deleted);
+      }
     } catch (DbException dbe) {
       log.error("Cannot get a connection to the database", dbe);
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
       return true;
-    }
-
-    try {
-      // Do nothing more if the required database version has not been
-      // completed.
-      if (!dbManager.isVersionCompleted(conn, 20)) {
-	return true;
-      }
-    } catch (DbException dbe) {
-      log.error("Cannot determine whether a database upgrade is done", dbe);
-      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-      return true;
-    }
-
-    // Determine the report file name.
-    String fileName = getReportFileName();
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "fileName = '" + fileName + "'.");
-
-    File exportFile = new File(outputDir, fileName + ".ignore");
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "exportFile = '" + exportFile + "'.");
-
-    // Get the writer for this report.
-    PrintWriter writer = null;
-
-    try {
-      writer = new PrintWriter(new FileWriter(exportFile));
-    } catch (IOException ioe) {
-      log.error("Cannot get a PrintWriter for the export output file '"
-	  + exportFile + "'", ioe);
-      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-      return true;
-    }
-
-    // An indication of whether any new data has been written out.
-    boolean newDataWritten = false;
-
-    try {
-      // Get the database version.
-      int dbVersion = dbManager.getDatabaseVersion(conn);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "dbVersion = " + dbVersion);
-
-      // Check whether the database version is appropriate.
-      if (dbVersion >= 10) {
-	// Yes: Perform the export.
-	newDataWritten = processExport(conn, exportFile, writer);
-	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + "newDataWritten = " + newDataWritten);
-      } else {
-	log.info("Database version is " + dbVersion
-	    + " (< 10). Export skipped.");
-      }
-    } catch (DbException dbe) {
-      log.error("Cannot export fetch times", dbe);
     } finally {
       DbManager.safeRollbackAndClose(conn);
-      IOUtil.safeClose(writer);
-    }
-
-    // Check whether any new data has been written out.
-    if (newDataWritten) {
-      // Yes: Rename the output file to mark it as available.
-      boolean renamed = exportFile.renameTo(new File(outputDir, fileName));
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "renamed = " + renamed);
-    } else {
-      // No: Delete the empty file to avoid cluttering.
-      boolean deleted = exportFile.delete();
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "deleted = " + deleted);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");

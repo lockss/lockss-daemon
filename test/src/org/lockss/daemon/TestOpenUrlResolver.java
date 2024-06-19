@@ -37,6 +37,7 @@ import junit.framework.Test;
 import org.lockss.config.*;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo;
 import org.lockss.db.DbManager;
+import org.lockss.db.DbManagerSql;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
@@ -317,6 +318,7 @@ public abstract class TestOpenUrlResolver extends LockssTestCase {
 
     con.rollback();
     con.commit();
+    DbManager.safeRollbackAndClose(con);
   }
   
   /**

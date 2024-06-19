@@ -3513,16 +3513,20 @@ public class DbManagerSql {
     // to be created within a transaction.
     Connection conn = getConnection(ds, true, true);
 
-    // Check whether the database does not exist.
-    if (!postgresqlDbExists(conn, databaseName)) {
-      // Yes: Create it.
-      createPostgresqlDb(conn, databaseName);
+    try {
+      // Check whether the database does not exist.
+      if (!postgresqlDbExists(conn, databaseName)) {
+        // Yes: Create it.
+        createPostgresqlDb(conn, databaseName);
 
-      result = true;
+        result = true;
+      }
+
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+      return result;
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
     }
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
-    return result;
   }
 
   /**
@@ -4094,15 +4098,19 @@ public class DbManagerSql {
     // Connect to the standard connectable MySql database.
     Connection conn = getConnection(ds);
 
-    // Check whether the database does not exist.
-    if (!mysqlDbExists(conn, databaseName)) {
-      // Yes: Create it.
-      createMysqlDb(conn, databaseName);
-      result = true;
-    }
+    try {
+      // Check whether the database does not exist.
+      if (!mysqlDbExists(conn, databaseName)) {
+        // Yes: Create it.
+        createMysqlDb(conn, databaseName);
+        result = true;
+      }
 
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
-    return result;
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+      return result;
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
   }
 
   /**

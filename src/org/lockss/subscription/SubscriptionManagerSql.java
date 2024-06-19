@@ -799,6 +799,7 @@ public class SubscriptionManagerSql {
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(getAllSubscriptionRanges);
+      DbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2())
@@ -952,6 +953,7 @@ public class SubscriptionManagerSql {
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(getAllSubscribedPublishers);
+      DbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "subscriptions.size() = "
@@ -1026,6 +1028,7 @@ public class SubscriptionManagerSql {
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(getAllSubscriptionsAndPublishers);
+      DbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "subscriptions.size() = "
@@ -1253,6 +1256,7 @@ public class SubscriptionManagerSql {
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(getSubscriptionDataForBackup);
+      DbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "subscriptions.size() = "
@@ -1601,6 +1605,7 @@ public class SubscriptionManagerSql {
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(getSubscriptionDataForBackup);
+      DbManager.safeRollbackAndClose(conn);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER

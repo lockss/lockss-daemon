@@ -208,156 +208,160 @@ public class SubscriptionStarter extends LockssRunnable {
       return;
     }
 
-    // Get the Total Subscription feature setting.
-    message = CANNOT_GET_TOTAL_SUBSCRIPTION_ERROR_MESSAGE;
-
     try {
-      queryTotalSubscriptionSetting(conn);
-    } catch (DbException dbe) {
-      log.error(message, dbe);
-      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-      return;
-    }
-
-    // Nothing more to do if the Total Subscription feature is set to off.
-    if (isTotalSubscription != null && !isTotalSubscription.booleanValue()) {
-      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-      return;
-    }
-
-    boolean isFirstRun = false;
-
-    if (!isTotalSubscriptionOn && !mustConfigure) {
-      message = CANNOT_CHECK_FIRST_RUN_ERROR_MESSAGE;
+      // Get the Total Subscription feature setting.
+      message = CANNOT_GET_TOTAL_SUBSCRIPTION_ERROR_MESSAGE;
 
       try {
-	// Determine whether this is the first run of the subscription manager.
-	isFirstRun = mdManager.countUnconfiguredAus(conn) == 0;
-	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + "isFirstRun = " + isFirstRun);
+        queryTotalSubscriptionSetting(conn);
       } catch (DbException dbe) {
-	log.error(message, dbe);
-	if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-	return;
-      }
-    }
-
-    Iterator<TdbAu> tdbAuIterator = null;
-    boolean afterFirstIterator = false;
-    int overallConfiguredAuCount = 0;
-    long overallConfiguredAuCountStartTime = 0;
-
-    if (log.isDebug3()) {
-      overallConfiguredAuCountStartTime = new Date().getTime();
-    }
-
-    // Initialize the configuration used to configure the archival units.
-    Configuration config = ConfigManager.newConfiguration();
-
-    // Keep running until there are no more TdbAus to be processed.
-    while (true) {
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER
-	  + (tdbAuIterator == null ? "tdbAuIterator == null"
-	      : "tdbAuIterator.hasNext() = " + tdbAuIterator.hasNext()));
-
-      // Check whether a new TdbAu iterator needs to be processed.
-      if (tdbAuIterator == null || !tdbAuIterator.hasNext()) {
-	synchronized (tdbAuIterators) {
-	  // Yes: Get it.
-	  tdbAuIterator = tdbAuIterators.poll();
-
-	  // Determine whether the thread needs to exit.
-	  exiting = tdbAuIterator == null;
-	}
-
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "exiting = " + exiting);
-
-	// Check whether there are no more TdbAus to be processed.
-	if (exiting) {
-	  // Yes: Configure the last partial batch of archival units.
-	  try {
-	    subscriptionManager.configureAuBatch(config);
-	  } catch (IOException ioe) {
-	    log.error("Exception caught configuring a batch of archival units. "
-		+ "Config = " + config, ioe);
-	  }
-
-	  // Clean up and exit.
-	  DbManager.safeRollbackAndClose(conn);
-
-	  if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-	  return;
-	}
-
-	if (!isTotalSubscriptionOn && !mustConfigure) {
-	  // Make sure the flag that indicates this is the first run of the
-	  // subscription manager is reset after the first iterator.
-	  if (afterFirstIterator) {
-	    isFirstRun = false;
-	  } else {
-	    afterFirstIterator = true;
-	  }
-	}
+        log.error(message, dbe);
+        if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+        return;
       }
 
-      long configuredAuCountStartTime = 0;
+      // Nothing more to do if the Total Subscription feature is set to off.
+      if (isTotalSubscription != null && !isTotalSubscription.booleanValue()) {
+        if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+        return;
+      }
+
+      boolean isFirstRun = false;
+
+      if (!isTotalSubscriptionOn && !mustConfigure) {
+        message = CANNOT_CHECK_FIRST_RUN_ERROR_MESSAGE;
+
+        try {
+          // Determine whether this is the first run of the subscription manager.
+          isFirstRun = mdManager.countUnconfiguredAus(conn) == 0;
+          if (log.isDebug3())
+            log.debug3(DEBUG_HEADER + "isFirstRun = " + isFirstRun);
+        } catch (DbException dbe) {
+          log.error(message, dbe);
+          if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+          return;
+        }
+      }
+
+      Iterator<TdbAu> tdbAuIterator = null;
+      boolean afterFirstIterator = false;
+      int overallConfiguredAuCount = 0;
+      long overallConfiguredAuCountStartTime = 0;
 
       if (log.isDebug3()) {
-	configuredAuCountStartTime = new Date().getTime();
+        overallConfiguredAuCountStartTime = new Date().getTime();
       }
 
-      // Prepare a batch of archival units to be configured, if any.
-      int configuredAuCount =
-	  prepareBatch(tdbAuIterator, conn, isFirstRun, config);
+      // Initialize the configuration used to configure the archival units.
+      Configuration config = ConfigManager.newConfiguration();
 
-      // Check whether no archival units were batched to be configured.
-      if (configuredAuCount == 0) {
-	// Yes: Continue with the next TdbAu iterator.
-	continue;
+      // Keep running until there are no more TdbAus to be processed.
+      while (true) {
+        if (log.isDebug3()) log.debug3(DEBUG_HEADER
+            + (tdbAuIterator == null ? "tdbAuIterator == null"
+            : "tdbAuIterator.hasNext() = " + tdbAuIterator.hasNext()));
+
+        // Check whether a new TdbAu iterator needs to be processed.
+        if (tdbAuIterator == null || !tdbAuIterator.hasNext()) {
+          synchronized (tdbAuIterators) {
+            // Yes: Get it.
+            tdbAuIterator = tdbAuIterators.poll();
+
+            // Determine whether the thread needs to exit.
+            exiting = tdbAuIterator == null;
+          }
+
+          if (log.isDebug3()) log.debug3(DEBUG_HEADER + "exiting = " + exiting);
+
+          // Check whether there are no more TdbAus to be processed.
+          if (exiting) {
+            // Yes: Configure the last partial batch of archival units.
+            try {
+              subscriptionManager.configureAuBatch(config);
+            } catch (IOException ioe) {
+              log.error("Exception caught configuring a batch of archival units. "
+                  + "Config = " + config, ioe);
+            }
+
+            // Clean up and exit.
+            DbManager.safeRollbackAndClose(conn);
+
+            if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+            return;
+          }
+
+          if (!isTotalSubscriptionOn && !mustConfigure) {
+            // Make sure the flag that indicates this is the first run of the
+            // subscription manager is reset after the first iterator.
+            if (afterFirstIterator) {
+              isFirstRun = false;
+            } else {
+              afterFirstIterator = true;
+            }
+          }
+        }
+
+        long configuredAuCountStartTime = 0;
+
+        if (log.isDebug3()) {
+          configuredAuCountStartTime = new Date().getTime();
+        }
+
+        // Prepare a batch of archival units to be configured, if any.
+        int configuredAuCount =
+            prepareBatch(tdbAuIterator, conn, isFirstRun, config);
+
+        // Check whether no archival units were batched to be configured.
+        if (configuredAuCount == 0) {
+          // Yes: Continue with the next TdbAu iterator.
+          continue;
+        }
+
+        // No: Configure the batch of archival units.
+        try {
+          subscriptionManager.configureAuBatch(config);
+        } catch (IOException ioe) {
+          log.error("Exception caught configuring a batch of archival units. "
+              + "Config = " + config, ioe);
+        }
+
+        // Reset the configuration for the next batch.
+        config = ConfigManager.newConfiguration();
+
+        long startDelayTime = 0;
+
+        if (log.isDebug3()) {
+          startDelayTime = new Date().getTime();
+        }
+
+        // Wait until the next batch can be started in order to keep the
+        // appropriate configuration rate.
+        try {
+          if (log.isDebug3()) log.debug3(DEBUG_HEADER
+              + "Waiting until the next batch is allowed to proceed...");
+
+          configureAuRateLimiter.waitUntilEventOk();
+        } catch (InterruptedException ie) {
+        }
+
+        if (log.isDebug3()) {
+          long currentTime = new Date().getTime();
+          log.debug3(DEBUG_HEADER + "configuredAuCountDelaySeconds = "
+              + (currentTime - startDelayTime) / 1000.00);
+          log.debug3(DEBUG_HEADER + "configuredAuCountRate = "
+              + (configuredAuCount * 60000.0D)
+              / (currentTime - configuredAuCountStartTime));
+
+          overallConfiguredAuCount += configuredAuCount;
+          log.debug3(DEBUG_HEADER + "overallConfiguredAuCount = "
+              + overallConfiguredAuCount);
+          log.debug3(DEBUG_HEADER + "overallConfiguredAuCountRate = "
+              + (overallConfiguredAuCount * 60000.0D)
+              / (currentTime - overallConfiguredAuCountStartTime));
+        }
       }
-
-      // No: Configure the batch of archival units.
-      try {
-	subscriptionManager.configureAuBatch(config);
-      } catch (IOException ioe) {
-	log.error("Exception caught configuring a batch of archival units. "
-	    + "Config = " + config, ioe);
-      }
-
-      // Reset the configuration for the next batch.
-      config = ConfigManager.newConfiguration();
-
-      long startDelayTime = 0;
-
-      if (log.isDebug3()) {
-	startDelayTime = new Date().getTime();
-      }
-
-      // Wait until the next batch can be started in order to keep the
-      // appropriate configuration rate.
-      try {
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER
-	    + "Waiting until the next batch is allowed to proceed...");
-
-	configureAuRateLimiter.waitUntilEventOk();
-      } catch (InterruptedException ie) {
-      }
-
-      if (log.isDebug3()) {
-	long currentTime = new Date().getTime();
-	log.debug3(DEBUG_HEADER + "configuredAuCountDelaySeconds = "
-	    + (currentTime - startDelayTime) / 1000.00);
-	log.debug3(DEBUG_HEADER + "configuredAuCountRate = "
-	    + (configuredAuCount * 60000.0D)
-	    / (currentTime - configuredAuCountStartTime));
-
-	overallConfiguredAuCount += configuredAuCount;
-	log.debug3(DEBUG_HEADER + "overallConfiguredAuCount = "
-	    + overallConfiguredAuCount);
-	log.debug3(DEBUG_HEADER + "overallConfiguredAuCountRate = "
-	    + (overallConfiguredAuCount * 60000.0D)
-	    / (currentTime - overallConfiguredAuCountStartTime));
-      }
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
     }
   }
 

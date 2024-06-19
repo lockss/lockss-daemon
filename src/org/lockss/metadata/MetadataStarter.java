@@ -117,70 +117,69 @@ public class MetadataStarter extends LockssRunnable {
     // with the archival unit.
     pluginManager.registerAuEventHandler(new ArchivalUnitEventHandler());
 
-    log.debug2(DEBUG_HEADER + "Examining AUs");
-
-    List<ArchivalUnit> toBeIndexed = new ArrayList<ArchivalUnit>();
-
-    // Loop through all the AUs to see which need to be on the pending queue.
-    for (ArchivalUnit au : pluginManager.getAllAus()) {
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "Plugin AU = " + au.getName());
-
-      // Check whether the AU has not been crawled.
-      if (!AuUtil.hasCrawled(au)) {
-	// Yes: Do not index it.
-	continue;
-      } else {
-	// No: Check whether the plugin's md extractor version is newer
-	// than the version of the metadata already in the database or
-	// whether the AU metadata hasn't been extracted since the last
-	// successful crawl.
-	try {
-	  if (mdManager.isAuMetadataForObsoletePlugin(conn, au)) {
-	    // Yes: index it.
-            log.debug2("Need index due to obsolete metadata version: " + au);
-	    toBeIndexed.add(au);
-          }
-          else if (mdManager.isAuCrawledAndNotExtracted(conn, au)) {
-	    // Yes: index it.
-            log.debug2("Need index due to crawl: " + au);
-	    toBeIndexed.add(au);
-	  }
-	} catch (DbException dbe) {
-	  log.error("Cannot get AU metadata version: " + dbe);
-	}
-      }
-    }
-    log.debug2(DEBUG_HEADER + "Done examining AUs");
-
-    // Loop in random order through all the AUs to to be added the pending
-    // queue.
-    for (ArchivalUnit au : (Collection<ArchivalUnit>)
-	    CollectionUtil.randomPermutation(toBeIndexed)) {
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "Pending AU = " + au.getName());
-
-      try {
-      	// Determine whether the AU needs to be fully reindexed.
-	boolean fullReindex = mdManager.isAuMetadataForObsoletePlugin(conn, au);
-	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + "fullReindex = " + fullReindex);
-
-   	// Add the AU to the table of pending AUs, if not already there.
-	mdManager.addToPendingAusIfNotThere(conn, Collections.singleton(au),
-	    fullReindex);
-	DbManager.commitOrRollback(conn, log);
-	log.debug2(DEBUG_HEADER + "Queue updated");
-      } catch (DbException dbe) {
-	log.error("Cannot add to pending AUs table \"" + PENDING_AU_TABLE
-	    + "\"", dbe);
-	DbManager.safeRollbackAndClose(conn);
-	return;
-      }
-    }
-
-    // Start the reindexing process.
     try {
+      log.debug2(DEBUG_HEADER + "Examining AUs");
+
+      List<ArchivalUnit> toBeIndexed = new ArrayList<ArchivalUnit>();
+
+      // Loop through all the AUs to see which need to be on the pending queue.
+      for (ArchivalUnit au : pluginManager.getAllAus()) {
+        if (log.isDebug3())
+          log.debug3(DEBUG_HEADER + "Plugin AU = " + au.getName());
+
+        // Check whether the AU has not been crawled.
+        if (!AuUtil.hasCrawled(au)) {
+          // Yes: Do not index it.
+          continue;
+        } else {
+          // No: Check whether the plugin's md extractor version is newer
+          // than the version of the metadata already in the database or
+          // whether the AU metadata hasn't been extracted since the last
+          // successful crawl.
+          try {
+            if (mdManager.isAuMetadataForObsoletePlugin(conn, au)) {
+              // Yes: index it.
+              log.debug2("Need index due to obsolete metadata version: " + au);
+              toBeIndexed.add(au);
+            } else if (mdManager.isAuCrawledAndNotExtracted(conn, au)) {
+              // Yes: index it.
+              log.debug2("Need index due to crawl: " + au);
+              toBeIndexed.add(au);
+            }
+          } catch (DbException dbe) {
+            log.error("Cannot get AU metadata version: " + dbe);
+          }
+        }
+      }
+      log.debug2(DEBUG_HEADER + "Done examining AUs");
+
+      // Loop in random order through all the AUs to to be added the pending
+      // queue.
+      for (ArchivalUnit au : (Collection<ArchivalUnit>)
+          CollectionUtil.randomPermutation(toBeIndexed)) {
+        if (log.isDebug3())
+          log.debug3(DEBUG_HEADER + "Pending AU = " + au.getName());
+
+        try {
+          // Determine whether the AU needs to be fully reindexed.
+          boolean fullReindex = mdManager.isAuMetadataForObsoletePlugin(conn, au);
+          if (log.isDebug3())
+            log.debug3(DEBUG_HEADER + "fullReindex = " + fullReindex);
+
+          // Add the AU to the table of pending AUs, if not already there.
+          mdManager.addToPendingAusIfNotThere(conn, Collections.singleton(au),
+              fullReindex);
+          DbManager.commitOrRollback(conn, log);
+          log.debug2(DEBUG_HEADER + "Queue updated");
+        } catch (DbException dbe) {
+          log.error("Cannot add to pending AUs table \"" + PENDING_AU_TABLE
+              + "\"", dbe);
+          DbManager.safeRollbackAndClose(conn);
+          return;
+        }
+      }
+
+      // Start the reindexing process.
       mdManager.startReindexing(conn);
       conn.commit();
     } catch (SQLException sqle) {
