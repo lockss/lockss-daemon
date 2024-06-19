@@ -100,7 +100,7 @@
 
       param[journal_id] = EMIC
 
-      au < crawling ; exists ; 2023 ; EMIC Volume 1 ; 1 ; 2023 ; >
+      au < frozen ; exists ; 2023 ; EMIC Volume 1 ; 1 ; 2023 ; >
       au < manifest ; exists ; 2024 ; EMIC Volume 2 ; 2 ; 2024 ; >
 
   }
@@ -340,7 +340,7 @@
       au < frozen ; exists ; 2020 ; UF Journal of Undergraduate Research Volume 22 ; 22 ; 2020 ; >
       au < frozen ; exists ; 2021 ; UF Journal of Undergraduate Research Volume 23 ; 23 ; 2021 ; >
       au < frozen ; exists ; 2022 ; UF Journal of Undergraduate Research Volume 24 ; 24 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; UF Journal of Undergraduate Research Volume 25 ; 25 ; 2023 ; >
+      au < frozen ; exists ; 2023 ; UF Journal of Undergraduate Research Volume 25 ; 25 ; 2023 ; >
       au < expected ; exists ; 2024 ; UF Journal of Undergraduate Research Volume 26 ; 26 ; 2024 ; >
 
   }
@@ -477,7 +477,7 @@
       au < frozen ; exists ; 2020 ; Studies in African Linguistics Volume 51 ; 51 ; 2020 ; >
       au < frozen ; exists ; 2021 ; Studies in African Linguistics Volume 52 ; 52 ; 2021 ; >
       au < frozen ; exists ; 2022 ; Studies in African Linguistics Volume 53 ; 53 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; Studies in African Linguistics Volume 54 ; 54 ; 2023 ; >
+      au < frozen ; exists ; 2023 ; Studies in African Linguistics Volume 54 ; 54 ; 2023 ; >
       au < expected ; exists ; 2024 ; Studies in African Linguistics Volume 55 ; 55 ; 2024 ; >
 
   }
