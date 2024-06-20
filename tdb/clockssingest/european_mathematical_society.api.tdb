@@ -71,19 +71,19 @@
     au < manifest ; exists ; 2007 ; 2007 ; Annales de l'Institut Henri Poincaré C Volume 24 ; 24 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Annales de l'Institut Henri Poincaré C Volume 25 ; 25 ; >
     au < manifest ; exists ; 2009 ; 2009 ; Annales de l'Institut Henri Poincaré C Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2010 ; 2010 ; Annales de l'Institut Henri Poincaré C Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2011 ; 2011 ; Annales de l'Institut Henri Poincaré C Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2012 ; 2012 ; Annales de l'Institut Henri Poincaré C Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2010 ; 2010 ; Annales de l'Institut Henri Poincaré C Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2011 ; 2011 ; Annales de l'Institut Henri Poincaré C Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2012 ; 2012 ; Annales de l'Institut Henri Poincaré C Volume 29 ; 29 ; >
     au < ready ; exists ; 2013 ; 2013 ; Annales de l'Institut Henri Poincaré C Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Annales de l'Institut Henri Poincaré C Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; Annales de l'Institut Henri Poincaré C Volume 32 ; 32 ; >
+    au < frozen ; exists ; 2014 ; 2014 ; Annales de l'Institut Henri Poincaré C Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Annales de l'Institut Henri Poincaré C Volume 32 ; 32 ; >
     au < ready ; exists ; 2016 ; 2016 ; Annales de l'Institut Henri Poincaré C Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Annales de l'Institut Henri Poincaré C Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Annales de l'Institut Henri Poincaré C Volume 35 ; 35 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Annales de l'Institut Henri Poincaré C Volume 34 ; 34 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Annales de l'Institut Henri Poincaré C Volume 35 ; 35 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Annales de l'Institut Henri Poincaré C Volume 36 ; 36 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Annales de l'Institut Henri Poincaré C Volume 37 ; 37 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Annales de l'Institut Henri Poincaré C Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2022 ; 2022 ; Annales de l'Institut Henri Poincaré C Volume 39 ; 39 ; >
+    au < frozen ; exists ; 2021 ; 2021 ; Annales de l'Institut Henri Poincaré C Volume 38 ; 38 ; >
+    au < frozen ; exists ; 2022 ; 2022 ; Annales de l'Institut Henri Poincaré C Volume 39 ; 39 ; >
     au < ready ; exists ; 2023 ; 2023 ; Annales de l'Institut Henri Poincaré C Volume 40 ; 40 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Annales de l'Institut Henri Poincaré C Volume 41 ; 41 ; >
 
@@ -108,7 +108,7 @@
     au < superseded ; exists ; 2020 ; 2020 ; Annales de l’Institut Henri Poincaré D Volume 7 [superseded] ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Annales de l'Institut Henri Poincaré D Volume 8 ; 8 ; >
     au < ready ; exists ; 2022 ; 2022 ; Annales de l'Institut Henri Poincaré D Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2023 ; 2023 ; Annales de l'Institut Henri Poincaré D Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2023 ; 2023 ; Annales de l'Institut Henri Poincaré D Volume 10 ; 10 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Annales de l'Institut Henri Poincaré D Volume 11 ; 11 ; >
 
   }
@@ -147,7 +147,7 @@
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Commentarii Mathematici Helvetici Volume 94 ; 94 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Commentarii Mathematici Helvetici Volume 95 ; 95 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Commentarii Mathematici Helvetici Volume 96 ; 96 ; >
-    au < crawling ; exists ; 2022 ; 2022 ; Commentarii Mathematici Helvetici Volume 97 ; 97 ; >
+    au < frozen ; exists ; 2022 ; 2022 ; Commentarii Mathematici Helvetici Volume 97 ; 97 ; >
     au < ready ; exists ; 2023 ; 2023 ; Commentarii Mathematici Helvetici Volume 98 ; 98 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Commentarii Mathematici Helvetici Volume 99 ; 99 ; >
 
@@ -179,17 +179,17 @@
     au < manifest ; exists ; 2009 ; 2009 ; Documenta Mathematica Volume 14 ; 14 ; >
     au < ready ; exists ; 2010 ; 2010 ; Documenta Mathematica Volume 15 ; 15 ; >
     au < ready ; exists ; 2011 ; 2011 ; Documenta Mathematica Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2012 ; 2012 ; Documenta Mathematica Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2012 ; 2012 ; Documenta Mathematica Volume 17 ; 17 ; >
     au < ready ; exists ; 2013 ; 2013 ; Documenta Mathematica Volume 18 ; 18 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Documenta Mathematica Volume 19 ; 19 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; Documenta Mathematica Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Documenta Mathematica Volume 21 ; 21 ; >
+    au < frozen ; exists ; 2014 ; 2014 ; Documenta Mathematica Volume 19 ; 19 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Documenta Mathematica Volume 20 ; 20 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Documenta Mathematica Volume 21 ; 21 ; >
     au < ready ; exists ; 2017 ; 2017 ; Documenta Mathematica Volume 22 ; 22 ; >
     au < ready ; exists ; 2018 ; 2018 ; Documenta Mathematica Volume 23 ; 23 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Documenta Mathematica Volume 24 ; 24 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Documenta Mathematica Volume 25 ; 25 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Documenta Mathematica Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2022 ; 2022 ; Documenta Mathematica Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2021 ; 2021 ; Documenta Mathematica Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2022 ; 2022 ; Documenta Mathematica Volume 27 ; 27 ; >
     au < ready ; exists ; 2023 ; 2023 ; Documenta Mathematica Volume 28 ; 28 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Documenta Mathematica Volume 29 ; 29 ; >
 
@@ -229,8 +229,8 @@
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Elemente der Mathematik Volume 74 ; 74 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Elemente der Mathematik Volume 75 ; 75 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Elemente der Mathematik Volume 76 ; 76 ; >
-    au < crawling ; exists ; 2022 ; 2022 ; Elemente der Mathematik Volume 77 ; 77 ; >
-    au < crawling ; exists ; 2023 ; 2023 ; Elemente der Mathematik Volume 78 ; 78 ; >
+    au < frozen ; exists ; 2022 ; 2022 ; Elemente der Mathematik Volume 77 ; 77 ; >
+    au < frozen ; exists ; 2023 ; 2023 ; Elemente der Mathematik Volume 78 ; 78 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Elemente der Mathematik Volume 79 ; 79 ; >
 
   }
@@ -253,8 +253,8 @@
     au < superseded ; exists ; 2019 ; 2019 ; EMS Surveys in Mathematical Sciences Volume 6 [superseded] ; 6 ; >
     au < superseded ; exists ; 2020 ; 2020 ; EMS Surveys in Mathematical Sciences Volume 7 [superseded] ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; EMS Surveys in Mathematical Sciences Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2022 ; 2022 ; EMS Surveys in Mathematical Sciences Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2023 ; 2023 ; EMS Surveys in Mathematical Sciences Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2022 ; 2022 ; EMS Surveys in Mathematical Sciences Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2023 ; 2023 ; EMS Surveys in Mathematical Sciences Volume 10 ; 10 ; >
     au < manifest ; exists ; 2024 ; 2024 ; EMS Surveys in Mathematical Sciences Volume 11 ; 11 ; >
 
   }
@@ -294,13 +294,13 @@
     au < manifest ; exists ; 2013 ; 2013 ; European Mathematical Society Magazine Volume 2013 ; 2013 ; >
     au < manifest ; exists ; 2014 ; 2014 ; European Mathematical Society Magazine Volume 2014 ; 2014 ; >
     au < manifest ; exists ; 2015 ; 2015 ; European Mathematical Society Magazine Volume 2015 ; 2015 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; European Mathematical Society Magazine Volume 2016 ; 2016 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; European Mathematical Society Magazine Volume 2017 ; 2017 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; European Mathematical Society Magazine Volume 2016 ; 2016 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; European Mathematical Society Magazine Volume 2017 ; 2017 ; >
     au < frozen ; exists ; 2018 ; 2018 ; European Mathematical Society Magazine Volume 2018 ; 2018 ; >
     au < frozen ; exists ; 2019 ; 2019 ; European Mathematical Society Magazine Volume 2019 ; 2019 ; >
-    au < crawling ; exists ; 2020 ; 2020 ; European Mathematical Society Magazine Volume 2020 ; 2020 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; European Mathematical Society Magazine Volume 2021 ; 2021 ; >
-    au < crawling ; exists ; 2022 ; 2022 ; European Mathematical Society Magazine Volume 2022 ; 2022 ; >
+    au < frozen ; exists ; 2020 ; 2020 ; European Mathematical Society Magazine Volume 2020 ; 2020 ; >
+    au < frozen ; exists ; 2021 ; 2021 ; European Mathematical Society Magazine Volume 2021 ; 2021 ; >
+    au < frozen ; exists ; 2022 ; 2022 ; European Mathematical Society Magazine Volume 2022 ; 2022 ; >
     au < ready ; exists ; 2023 ; 2023 ; European Mathematical Society Magazine Volume 2023 ; 2023 ; >
     au < manifest ; exists ; 2024 ; 2024 ; European Mathematical Society Magazine Volume 2024 ; 2024 ; >
 
@@ -332,7 +332,7 @@
     au < superseded ; exists ; 2020 ; 2020 ; Groups, Geometry, and Dynamics Volume 14 [superseded] ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Groups, Geometry, and Dynamics Volume 15 ; 15 ; >
     au < ready ; exists ; 2022 ; 2022 ; Groups, Geometry, and Dynamics Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2023 ; 2023 ; Groups, Geometry, and Dynamics Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2023 ; 2023 ; Groups, Geometry, and Dynamics Volume 17 ; 17 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Groups, Geometry, and Dynamics Volume 18 ; 18 ; >
 
   }
@@ -369,8 +369,8 @@
     au < superseded ; exists ; 2019 ; 2019 ; Interfaces and Free Boundaries Volume 21 [superseded] ; 21 ; >
     au < superseded ; exists ; 2020 ; 2020 ; Interfaces and Free Boundaries Volume 22 [superseded] ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Interfaces and Free Boundaries Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2022 ; 2022 ; Interfaces and Free Boundaries Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2023 ; 2023 ; Interfaces and Free Boundaries Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2022 ; 2022 ; Interfaces and Free Boundaries Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2023 ; 2023 ; Interfaces and Free Boundaries Volume 25 ; 25 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Interfaces and Free Boundaries Volume 26 ; 26 ; >
 
   }
@@ -391,7 +391,7 @@
     au < superseded ; exists ; 2020 ; 2020 ; Journal of Combinatorial Algebra Volume 4 [superseded] ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Combinatorial Algebra Volume 5 ; 5 ; >
     au < ready ; exists ; 2022 ; 2022 ; Journal of Combinatorial Algebra Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2023 ; 2023 ; Journal of Combinatorial Algebra Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2023 ; 2023 ; Journal of Combinatorial Algebra Volume 7 ; 7 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Journal of Combinatorial Algebra Volume 8 ; 8 ; >
 
   }
@@ -414,7 +414,7 @@
     au < superseded ; exists ; 2019 ; 2019 ; Journal of Fractal Geometry Volume 6 [superseded] ; 6 ; >
     au < superseded ; exists ; 2020 ; 2020 ; Journal of Fractal Geometry Volume 7 [superseded] ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Fractal Geometry Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2022 ; 2022 ; Journal of Fractal Geometry Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2022 ; 2022 ; Journal of Fractal Geometry Volume 9 ; 9 ; >
     au < ready ; exists ; 2023 ; 2023 ; Journal of Fractal Geometry Volume 10 ; 10 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Journal of Fractal Geometry Volume 11 ; 11 ; >
 
@@ -445,8 +445,8 @@
     au < superseded ; exists ; 2019 ; 2019 ; Journal of Noncommutative Geometry Volume 2019 [superseded] ; 2019 ; >
     au < superseded ; exists ; 2020 ; 2020 ; Journal of Noncommutative Geometry Volume 2020 [superseded] ; 2020 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Noncommutative Geometry Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2022 ; 2022 ; Journal of Noncommutative Geometry Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2023 ; 2023 ; Journal of Noncommutative Geometry Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2022 ; 2022 ; Journal of Noncommutative Geometry Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2023 ; 2023 ; Journal of Noncommutative Geometry Volume 17 ; 17 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Journal of Noncommutative Geometry Volume 18 ; 18 ; >
 
   }
@@ -472,8 +472,8 @@
     au < superseded ; exists ; 2019 ; 2019 ; Journal of Spectral Theory Volume 9 [superseded] ; 9 ; >
     au < superseded ; exists ; 2020 ; 2020 ; Journal of Spectral Theory Volume 10 [superseded] ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Spectral Theory Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2022 ; 2022 ; Journal of Spectral Theory Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2023 ; 2023 ; Journal of Spectral Theory Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2022 ; 2022 ; Journal of Spectral Theory Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2023 ; 2023 ; Journal of Spectral Theory Volume 13 ; 13 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Journal of Spectral Theory Volume 14 ; 14 ; >
 
   }
@@ -510,7 +510,7 @@
     au < superseded ; exists ; 2019 ; 2019 ; Journal of the European Mathematical Society Volume 21 [superseded] ; 21 ; >
     au < superseded ; exists ; 2020 ; 2020 ; Journal of the European Mathematical Society Volume 22 [superseded] ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of the European Mathematical Society Volume 23 ; 23 ; >
-    au < crawling ; exists ; 2022 ; 2022 ; Journal of the European Mathematical Society Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2022 ; 2022 ; Journal of the European Mathematical Society Volume 24 ; 24 ; >
     au < frozen ; exists ; 2023 ; 2023 ; Journal of the European Mathematical Society Volume 2023 ; 2023 ; >
     au < crawling ; exists ; 2024 ; 2024 ; Journal of the European Mathematical Society Volume 2024 ; 2024 ; >
 
@@ -539,7 +539,7 @@
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; L'Enseignement Mathématique Volume 66 ; 66 ; >
     au < ready ; exists ; 2021 ; 2021 ; L'Enseignement Mathématique Volume 67 ; 67 ; >
     au < ready ; exists ; 2022 ; 2022 ; L'Enseignement Mathématique Volume 68 ; 68 ; >
-    au < crawling ; exists ; 2023 ; 2023 ; L'Enseignement Mathématique Volume 69 ; 69 ; >
+    au < frozen ; exists ; 2023 ; 2023 ; L'Enseignement Mathématique Volume 69 ; 69 ; >
     au < manifest ; exists ; 2024 ; 2024 ; L'Enseignement Mathématique Volume 70 ; 70 ; >
 
   }
@@ -554,12 +554,12 @@
     param[journal_serial_number] = 23
     param[journal_id] = msl
 
-    au < crawling ; exists ; 2018 ; 2018 ; Mathematical Statistics and Learning Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Mathematical Statistics and Learning Volume 1 ; 1 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Mathematical Statistics and Learning Volume 2 ; 2 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Mathematical Statistics and Learning Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Mathematical Statistics and Learning Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2021 ; 2021 ; Mathematical Statistics and Learning Volume 4 ; 4 ; >
     au < ready ; exists ; 2022 ; 2022 ; Mathematical Statistics and Learning Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2023 ; 2023 ; Mathematical Statistics and Learning Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2023 ; 2023 ; Mathematical Statistics and Learning Volume 6 ; 6 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Mathematical Statistics and Learning Volume 7 ; 7 ; >
 
   }
@@ -579,18 +579,18 @@
     au < manifest ; exists ; 2007 ; 2007 ; Oberwolfach Reports Volume 4  ; 4  ; >
     au < manifest ; exists ; 2008 ; 2008 ; Oberwolfach Reports Volume 5  ; 5  ; >
     au < manifest ; exists ; 2009 ; 2009 ; Oberwolfach Reports Volume 6  ; 6  ; >
-    au < crawling ; exists ; 2010 ; 2010 ; Oberwolfach Reports Volume 7  ; 7  ; >
-    au < crawling ; exists ; 2011 ; 2011 ; Oberwolfach Reports Volume 8  ; 8  ; >
+    au < frozen ; exists ; 2010 ; 2010 ; Oberwolfach Reports Volume 7  ; 7  ; >
+    au < frozen ; exists ; 2011 ; 2011 ; Oberwolfach Reports Volume 8  ; 8  ; >
     au < ready ; exists ; 2012 ; 2012 ; Oberwolfach Reports Volume 9  ; 9  ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Oberwolfach Reports Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Oberwolfach Reports Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; Oberwolfach Reports Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2013 ; 2013 ; Oberwolfach Reports Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2014 ; 2014 ; Oberwolfach Reports Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Oberwolfach Reports Volume 12 ; 12 ; >
     au < ready ; exists ; 2016 ; 2016 ; Oberwolfach Reports Volume 13 ; 13 ; >
     au < ready ; exists ; 2017 ; 2017 ; Oberwolfach Reports Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2018 ; 2018 ; Oberwolfach Reports Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2018 ; 2018 ; Oberwolfach Reports Volume 15 ; 15 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Oberwolfach Reports Volume 16 ; 16 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Oberwolfach Reports Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Oberwolfach Reports Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2021 ; 2021 ; Oberwolfach Reports Volume 18 ; 18 ; >
     au < ready ; exists ; 2022 ; 2022 ; Oberwolfach Reports Volume 19 ; 19 ; >
     au < ready ; exists ; 2023 ; 2023 ; Oberwolfach Reports Volume 20 ; 20 ; >
     au < expected ; exists ; 2024 ; 2024 ; Oberwolfach Reports Volume 21 ; 21 ; >
@@ -694,7 +694,7 @@
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Publications of the Research Institute for Mathematical Sciences Volume 56 ; 56 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Publications of the Research Institute for Mathematical Sciences Volume 57 ; 57 ; >
     au < ready ; exists ; 2022 ; 2022 ; Publications of the Research Institute for Mathematical Sciences Volume 58 ; 58 ; >
-    au < crawling ; exists ; 2023 ; 2023 ; Publications of the Research Institute for Mathematical Sciences Volume 59 ; 59 ; >
+    au < frozen ; exists ; 2023 ; 2023 ; Publications of the Research Institute for Mathematical Sciences Volume 59 ; 59 ; >
     au < expected ; exists ; 2024 ; 2024 ; Publications of the Research Institute for Mathematical Sciences Volume 60 ; 60 ; >
 
   }
@@ -750,7 +750,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Rendiconti del Seminario Matematico della Università di Padova Volume 139-140 ; 139-140 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Rendiconti del Seminario Matematico della Università di Padova Volume 141-142 ; 141-142 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Rendiconti del Seminario Matematico della Università di Padova Volume 143-144 ; 143-144 ; >
-    au < crawling ; exists ; 2021 ; 2021 ; Rendiconti del Seminario Matematico della Università di Padova Volume 145-146 ; 145-146 ; >
+    au < frozen ; exists ; 2021 ; 2021 ; Rendiconti del Seminario Matematico della Università di Padova Volume 145-146 ; 145-146 ; >
     au < ready ; exists ; 2022 ; 2022 ; Rendiconti del Seminario Matematico della Università di Padova Volume 147-148 ; 147-148 ; >
     au < ready ; exists ; 2023 ; 2023 ; Rendiconti del Seminario Matematico della Università di Padova Volume 149-150 ; 149-150 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Rendiconti del Seminario Matematico della Università di Padova Volume 150-151 ; 150-151 ; >
@@ -834,7 +834,7 @@
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Revista Matemática Iberoamericana Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Revista Matemática Iberoamericana Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Revista Matemática Iberoamericana Volume 37 ; 37 ; >
-    au < crawling ; exists ; 2022 ; 2022 ; Revista Matemática Iberoamericana Volume 38 ; 38 ; >
+    au < frozen ; exists ; 2022 ; 2022 ; Revista Matemática Iberoamericana Volume 38 ; 38 ; >
     au < ready ; exists ; 2023 ; 2023 ; Revista Matemática Iberoamericana Volume 39 ; 39 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Revista Matemática Iberoamericana Volume 40 ; 40 ; >
 
@@ -893,7 +893,7 @@
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Zeitschrift für Analysis und ihre Anwendungen Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Zeitschrift für Analysis und ihre Anwendungen Volume 40 ; 40 ; >
     au < ready ; exists ; 2022 ; 2022 ; Zeitschrift für Analysis und ihre Anwendungen Volume 41 ; 41 ; >
-    au < crawling ; exists ; 2023 ; 2023 ; Zeitschrift für Analysis und ihre Anwendungen Volume 42 ; 42 ; >
+    au < frozen ; exists ; 2023 ; 2023 ; Zeitschrift für Analysis und ihre Anwendungen Volume 42 ; 42 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Zeitschrift für Analysis und ihre Anwendungen Volume 43 ; 43 ; >
 
   }
