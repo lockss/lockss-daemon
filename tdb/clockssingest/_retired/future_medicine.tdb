@@ -18,7 +18,8 @@
   
     title < 
       name = Aging Health ;
-      issn = 1745-509X 
+      issn = 1745-509X ;
+      eissn = 1745-5103
     >
     
     param[journal_id] = ahe
@@ -39,7 +40,8 @@
   
     title < 
       name = Biomarkers in Medicine ;
-      issn = 1752-0363
+      issn = 1752-0363 ;
+      eissn = 1752-0371
     >
     
     param[journal_id] = bmm
@@ -85,7 +87,8 @@
   
     title < 
       name = Breast Cancer Management ;
-      issn = 1758-1923
+      issn = 1758-1923 ;
+      eissn = 1758-1931
     >
     
     param[journal_id] = bmt
@@ -164,7 +167,8 @@
   
     title < 
       name = CNS Oncology ;
-      issn = 2045-0907
+      issn = 2045-0907 ;
+      eissn = 2045-0915
     >
     
     param[journal_id] = cns
@@ -189,7 +193,8 @@
   
     title < 
       name = Colorectal Cancer ;
-      issn = 1758-194X
+      issn = 1758-194X ;
+      eissn = 1758-1958
     >
     
     param[journal_id] = crc
@@ -253,7 +258,8 @@
   
     title < 
       name = Epigenomics ;
-      issn = 1750-1911
+      issn = 1750-1911 ;
+      eissn = 1750-192X
     >
     
     param[journal_id] = epi
@@ -314,7 +320,8 @@
   
     title < 
       name = Future Microbiology ;
-      issn = 1746-0913
+      issn = 1746-0913 ;
+      eissn = 1746-0921
     >
     
     param[journal_id] = fmb
@@ -483,7 +490,8 @@
   
     title < 
       name = Future HIV Therapy ;
-      issn = 1746-9600
+      issn = 1746-9600 ;
+      eissn = 1746-9619
     >
     
     param[journal_id] = fht
