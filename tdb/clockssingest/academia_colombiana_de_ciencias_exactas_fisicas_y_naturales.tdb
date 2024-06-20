@@ -1,0 +1,126 @@
+{
+
+  publisher <
+    name = Academia Colombiana de Ciencias Exactas, Físicas y Naturales ;
+    info[contract] = 2024 ;
+    info[back] = 2000 ;
+    info[tester] = 5 ;
+    info[platform] = OJS3 3.3.0.15
+  >
+
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    param[base_url] = https://raccefyn.co/
+    attr[start_stem] = index.php/
+
+  {
+
+    title <
+      name = Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales ;
+      issn = 0370-3908 ;
+      eissn = 2382-4980
+    >
+      param[journal_id] = raccefyn
+
+      au < manifest ; exists ; 1936 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1936 ; 1936 ; 1936 ; >
+      au < manifest ; exists ; 1937 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1937 ; 1937 ; 1937 ; >
+      au < manifest ; exists ; 1938 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1938 ; 1938 ; 1938 ; >
+      au < manifest ; exists ; 1939 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1939 ; 1939 ; 1939 ; >
+
+      au < manifest ; exists ; 1940 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1940 ; 1940 ; 1940 ; >
+      au < manifest ; exists ; 1941 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1941 ; 1941 ; 1941 ; >
+      au < manifest ; exists ; 1942 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1942 ; 1942 ; 1942 ; >
+      au < manifest ; exists ; 1943 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1943 ; 1943 ; 1943 ; >
+      au < manifest ; exists ; 1944 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1944 ; 1944 ; 1944 ; >
+      au < manifest ; exists ; 1945 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1945 ; 1945 ; 1945 ; >
+      au < manifest ; exists ; 1946 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1946 ; 1946 ; 1946 ; >
+      au < manifest ; exists ; 1947 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1947 ; 1947 ; 1947 ; >
+      au < doesNotExist ; doesNotExist ; 1948 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1948 ; 1948 ; 1948 ; >
+      au < doesNotExist ; doesNotExist ; 1949 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1949 ; 1949 ; 1949 ; >
+
+      au < manifest ; exists ; 1950 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1950 ; 1950 ; 1950 ; >
+      au < manifest ; exists ; 1951 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1951 ; 1951 ; 1951 ; >
+      au < manifest ; exists ; 1952 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1952 ; 1952 ; 1952 ; >
+      au < manifest ; exists ; 1953 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1953 ; 1953 ; 1953 ; >
+      au < manifest ; exists ; 1954 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1954 ; 1954 ; 1954 ; >
+      au < doesNotExist ; doesNotExist ; 1955 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1955 ; 1955 ; 1955 ; >
+      au < manifest ; exists ; 1956 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1956 ; 1956 ; 1956 ; >
+      au < manifest ; exists ; 1957 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1957 ; 1957 ; 1957 ; >
+      au < manifest ; exists ; 1958 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1958 ; 1958 ; 1958 ; >
+      au < manifest ; exists ; 1959 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1959 ; 1959 ; 1959 ; >
+
+      au < exists ; exists ; 1960 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1960 ; 1960 ; 1960 ; >
+      au < exists ; exists ; 1961 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1961 ; 1961 ; 1961 ; >
+      au < exists ; exists ; 1962 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1962 ; 1962 ; 1962 ; >
+      au < exists ; exists ; 1963 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1963 ; 1963 ; 1963 ; >
+      au < exists ; exists ; 1964 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1964 ; 1964 ; 1964 ; >
+      au < exists ; exists ; 1965 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1965 ; 1965 ; 1965 ; >
+      au < exists ; exists ; 1966 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1966 ; 1966 ; 1966 ; >
+      au < exists ; exists ; 1967 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1967 ; 1967 ; 1967 ; >
+      au < exists ; exists ; 1968 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1968 ; 1968 ; 1968 ; >
+      au < exists ; exists ; 1969 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1969 ; 1969 ; 1969 ; >
+
+      au < exists ; exists ; 1970 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1970 ; 1970 ; 1970 ; >
+      au < doesNotExist ; doesNotExist ; 1971 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1971 ; 1971 ; 1971 ; >
+      au < exists ; exists ; 1972 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1972 ; 1972 ; 1972 ; >
+      au < exists ; exists ; 1973 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1973 ; 1973 ; 1973 ; >
+      au < doesNotExist ; doesNotExist ; 1974 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1974 ; 1974 ; 1974 ; >
+      au < doesNotExist ; doesNotExist ; 1975 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1975 ; 1975 ; 1975 ; >
+      au < exists ; exists ; 1976 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1976 ; 1976 ; 1976 ; >
+      au < exists ; exists ; 1977 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1977 ; 1977 ; 1977 ; >
+      au < exists ; exists ; 1978 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1978 ; 1978 ; 1978 ; >
+      au < doesNotExist ; doesNotExist ; 1979 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1979 ; 1979 ; 1979 ; >
+
+      au < exists ; exists ; 1980 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1980 ; 1980 ; 1980 ; >
+      au < exists ; exists ; 1981 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1981 ; 1981 ; 1981 ; >
+      au < doesNotExist ; doesNotExist ; 1982 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1982 ; 1982 ; 1982 ; >
+      au < exists ; exists ; 1983 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1983 ; 1983 ; 1983 ; >
+      au < exists ; exists ; 1984 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1984 ; 1984 ; 1984 ; >
+      au < doesNotExist ; doesNotExist ; 1985 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1985 ; 1985 ; 1985 ; >
+      au < manifest ; exists ; 1986 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1986 ; 1986 ; 1986 ; >
+      au < manifest ; exists ; 1987 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1987 ; 1987 ; 1987 ; >
+      au < manifest ; exists ; 1988 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1988 ; 1988 ; 1988 ; >
+      au < manifest ; exists ; 1989 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 1989 ; 1989 ; 1989 ; >
+
+      au < manifest ; exists ; 1990 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 20 ; 20 ; 1990 ; >
+      au < manifest ; exists ; 1991 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 21 ; 21 ; 1991 ; >
+      au < manifest ; exists ; 1992 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 22 ; 22 ; 1992 ; >
+      au < manifest ; exists ; 1993 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 23 ; 23 ; 1993 ; >
+      au < manifest ; exists ; 1994 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 24 ; 24 ; 1994 ; >
+      au < manifest ; exists ; 1995 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 25 ; 25 ; 1995 ; >
+      au < manifest ; exists ; 1996 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 26 ; 26 ; 1996 ; >
+      au < manifest ; exists ; 1997 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 27 ; 27 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 28 ; 28 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 29 ; 29 ; 1999 ; >
+
+      au < manifest ; exists ; 2000 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 24 ; 24 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 25 ; 25 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 26 ; 26 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 27 ; 27 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 28 ; 28 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 29 ; 29 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 30 ; 30 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 31 ; 31 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 32 ; 32 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 33 ; 33 ; 2009 ; >
+
+      au < manifest ; exists ; 2010 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 34 ; 34 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 35 ; 35 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 36 ; 36 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 37 ; 37 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 38 ; 38 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 39 ; 39 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 40 ; 40 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 41 ; 41 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 42 ; 42 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 43 ; 43 ; 2019 ; >
+
+      au < manifest ; exists ; 2020 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 44 ; 44 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 45 ; 45 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 46 ; 46 ; 2022 ; >
+      au < manifest ; exists ; 2023 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 47 ; 47 ; 2023 ; >
+      au < manifest ; exists ; 2024 ; Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales Volume 48 ; 48 ; 2024 ; >
+
+  }
+
+}
