@@ -6,9 +6,7 @@ import org.lockss.extractor.FileMetadataExtractor;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.clockss.CrossRefQuerySchemaHelper;
-import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
-import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
+import org.lockss.plugin.clockss.*;
 import org.lockss.util.Logger;
 
 import java.util.ArrayList;
@@ -30,11 +28,10 @@ public class IScienceNotesXmlMetadataExtractorFactory extends SourceXmlMetadataE
 
         @Override
         protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
-            // Once you have it, just keep returning the same one. It won't change.
             if (CrossRefHelper != null) {
                 return CrossRefHelper;
             }
-            CrossRefHelper = new CrossRefQuerySchemaHelper();
+            CrossRefHelper = new CrossRefSchemaHelper();
             return CrossRefHelper;
         }
 
@@ -56,14 +53,8 @@ public class IScienceNotesXmlMetadataExtractorFactory extends SourceXmlMetadataE
         @Override
         protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
                                        CachedUrl cu, ArticleMetadata thisAM) {
-            log.debug("in postcook");
-            // In the AOFoundation metadata, the registrant is incorrectly set to WEB-FORM
-            String pname = thisAM.get(MetadataField.FIELD_PUBLISHER);
-            // they cannot seem to avoid spelling errors in the publication name. I'm going to manually set it
-            // after doing a basic check.  The variants seen so far are:
-            // European Cells and Material,European Cells and Materials,European Cells and Matherials, European Cells a¨nd Materials
-            // European cells amd Material,European cells amd Materials, Europen Cells and Materials,etc
-            String jname = thisAM.get(MetadataField.FIELD_PUBLICATION_TITLE);
+            thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
+            thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
         }
 
     }

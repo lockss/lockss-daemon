@@ -93,9 +93,9 @@ public class TestCrossRefQuerySchemaXmlMetadataExtractor extends LockssTestCase 
             assertNotNull(AM);
 
             assertEquals("iScience Notes", AM.get(MetadataField.FIELD_PUBLICATION_TITLE));
-            assertEquals("2016-10-15", AM.get(MetadataField.FIELD_DATE));
-            assertEquals("9", AM.get(MetadataField.FIELD_VOLUME));
-            assertEquals("7", AM.get(MetadataField.FIELD_ISSUE));
+            assertEquals("2021", AM.get(MetadataField.FIELD_DATE));
+            assertEquals("6", AM.get(MetadataField.FIELD_VOLUME));
+            assertEquals("6", AM.get(MetadataField.FIELD_ISSUE));
 
         } finally {
             IOUtil.safeClose(file_input);
