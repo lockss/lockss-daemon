@@ -596,7 +596,8 @@
   
     title < 
       name = International Journal of Hematologic Oncology ;
-      eissn = 2045-1393
+      issn = 2045-1393 ;
+      eissn = 2045-1407
     >
     
     param[journal_id] = ijh
@@ -639,7 +640,8 @@
   
     title < 
       name = Journal of 3D Printing in Medicine ;
-      issn = 2059-4755
+      issn = 2059-4755 ;
+      eissn = 2059-4763
     >
     
     param[journal_id] = 3dp
@@ -673,7 +675,6 @@
     au < down ; 2016 ; Journal of Comparative Effectiveness Research Volume 5 ; 5 ; http://www.futuremedicine.com/ >
     au < down ; 2017 ; Journal of Comparative Effectiveness Research Volume 6 ; 6 ; https://www.futuremedicine.com/ >
     au < down ; 2018 ; Journal of Comparative Effectiveness Research Volume 7 ; 7 ; https://www.futuremedicine.com/ >
-
     au < down ; 2019 ; Journal of Comparative Effectiveness Research Volume 8 ; 8 ; https://www.futuremedicine.com/ >
     au < down ; 2020 ; Journal of Comparative Effectiveness Research Volume 9 ; 9 ; https://www.futuremedicine.com/ >
     au < down ; 2021 ; Journal of Comparative Effectiveness Research Volume 10 ; 10 ; https://www.futuremedicine.com/ >
@@ -809,7 +810,8 @@
   
     title < 
       name = Pain Management ;
-      issn = 1758-1869
+      issn = 1758-1869;
+      eissn = 1758-1877
     >
     
     param[journal_id] = pmt

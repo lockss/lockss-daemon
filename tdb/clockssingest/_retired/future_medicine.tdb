@@ -605,7 +605,8 @@
   
     title < 
       name = International Journal of Hematologic Oncology ;
-      eissn = 2045-1393
+      issn = 2045-1393 ;
+      eissn = 2045-1407
     >
     
     param[journal_id] = ijh
@@ -648,7 +649,8 @@
   
     title < 
       name = Journal of 3D Printing in Medicine ;
-      issn = 2059-4755
+      issn = 2059-4755 ;
+      eissn = 2059-4763
     >
     
     param[journal_id] = 3dp
@@ -817,7 +819,8 @@
   
     title < 
       name = Pain Management ;
-      issn = 1758-1869
+      issn = 1758-1869;
+      eissn = 1758-1877
     >
     
     param[journal_id] = pmt
