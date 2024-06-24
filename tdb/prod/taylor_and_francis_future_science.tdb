@@ -113,35 +113,6 @@
   {
   
     title < 
-      name = Carbon Management ;
-      issn = 1758-3004 ;
-      eissn = 1758-3012
-    >
-    
-    param[journal_id] = tcmt20
-    #merged_into = 2043-0779
-
-    au < exists ; 2010 ; Carbon Management Volume 1 ; 1 ; https://www.tandfonline.com/ >
-    au < exists ; 2011 ; Carbon Management Volume 2 ; 2 ; https://www.tandfonline.com/ >
-    au < exists ; 2012 ; Carbon Management Volume 3 ; 3 ; https://www.tandfonline.com/ >
-    au < exists ; 2013 ; Carbon Management Volume 4 ; 4 ; https://www.tandfonline.com/ >
-    au < exists ; 2014 ; Carbon Management Volume 5 ; 5 ; https://www.tandfonline.com/ >
-    au < exists ; 2015 ; Carbon Management Volume 6 ; 6 ; https://www.tandfonline.com/ >
-    au < exists ; 2016 ; Carbon Management Volume 7 ; 7 ; https://www.tandfonline.com/ >
-    au < exists ; 2017 ; Carbon Management Volume 8 ; 8 ; https://www.tandfonline.com/ >
-    au < exists ; 2018 ; Carbon Management Volume 9 ; 9 ; https://www.tandfonline.com/ >
-    au < exists ; 2019 ; Carbon Management Volume 10 ; 10 ; https://www.tandfonline.com/ >
-    au < exists ; 2020 ; Carbon Management Volume 11 ; 11 ; https://www.tandfonline.com/ >
-    au < exists ; 2021 ; Carbon Management Volume 12 ; 12 ; https://www.tandfonline.com/ >
-    au < exists ; 2022 ; Carbon Management Volume 13 ; 13 ; https://www.tandfonline.com/ >
-    au < exists ; 2023 ; Carbon Management Volume 14 ; 14 ; https://www.tandfonline.com/ >
-    au < exists ; 2024 ; Carbon Management Volume 15 ; 15 ; https://www.tandfonline.com/ >
-
-  }
-
-  {
-  
-    title < 
       name = Future Drug Discover ;
       eissn = 2631-3316
     >
