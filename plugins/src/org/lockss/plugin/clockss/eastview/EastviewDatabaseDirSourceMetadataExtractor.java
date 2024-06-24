@@ -55,7 +55,7 @@ public class EastviewDatabaseDirSourceMetadataExtractor extends BaseFileArticleM
 			Logger.getLogger(EastviewDatabaseDirSourceMetadataExtractor.class);
 
 	private static final String UDBCOM_FILE_TYPE = "file";
-	private static final String UDBCOM = "Eastview";
+	private static final String UDBCOM = "East View Information Services";
 	private static final Pattern  ZIP_PAT = Pattern.compile("/eastviewudbcom-released/([^_]+)_([^_]+)/.*\\.zip", Pattern.CASE_INSENSITIVE);
 
 	private static final int YEAR_GROUP = 1;
