@@ -64,7 +64,7 @@ public abstract class PeerAddress {
     RegexpUtil.uncheckedCompile("TCP:\\[([0-9a-f.:]+)\\]:([0-9]+)",
 				Perl5Compiler.CASE_INSENSITIVE_MASK);
 
-  protected static PeerAddress makePeerAddress(String key)
+  public static PeerAddress makePeerAddress(String key)
       throws IdentityManager.MalformedIdentityKeyException {
     // V3 addresses start with "TCP:", to allow for other protocols (e.g.,
     // SOAP).
@@ -126,7 +126,7 @@ public abstract class PeerAddress {
       this.addr = addr;
     }
 
-    protected IPAddr getIPAddr() {
+    public IPAddr getIPAddr() {
       return addr;
     }
 
@@ -170,7 +170,7 @@ public abstract class PeerAddress {
     }
   }
 
-  protected static class Tcp extends Ip {
+  public static class Tcp extends Ip {
     private int port;
 
     Tcp(String key, IPAddr addr, int port) {
@@ -181,7 +181,7 @@ public abstract class PeerAddress {
       this.port = (int)port;
     }
 
-    protected int getPort() {
+    public int getPort() {
       return port;
     }
 

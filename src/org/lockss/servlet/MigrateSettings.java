@@ -9,7 +9,7 @@ import org.lockss.db.DbManager;
 import org.lockss.db.DbManagerSql;
 import org.lockss.laaws.MigrationManager;
 import org.lockss.laaws.V2AuMover;
-import org.lockss.protocol.IdentityManager;
+import org.lockss.protocol.*;
 import org.lockss.protocol.LcapRouter;
 import org.lockss.proxy.ProxyManager;
 import org.lockss.repository.RepositoryManager;
@@ -20,7 +20,7 @@ import org.mortbay.http.HttpRequest;
 
 import javax.servlet.ServletException;
 import java.io.*;
-import java.net.URL;
+import java.net.*;
 import java.util.Properties;
 
 import static org.lockss.laaws.MigrationConstants.*;
@@ -238,10 +238,10 @@ public class MigrateSettings extends LockssServlet {
         case ACTION_LOAD_V2_CFG:
           try {
             initParamsFromFormData();
-            Configuration v2cfg =
+            Configuration targetCfg =
               migrationMgr.getConfigFromMigrationTarget(hostname, cfgUiPort,
                                                         userName, userPass);
-            mCfg = getMigrationConfig(hostname, v2cfg);
+            mCfg = getMigrationConfig(hostname, targetCfg);
             isTargetConfigFetched = true;
             fetchError = null;
           } catch (IOException e) {
@@ -273,6 +273,14 @@ public class MigrateSettings extends LockssServlet {
             dbError = "Derby not supported";
           } else if (StringUtil.isNullString(dbPass)) {
             dbError = "Missing database password";
+          } else if (!dryRunEnabled &&
+                     !migrationMgr.isTargetInMigrationMode(hostname, cfgUiPort,
+                                                           userName, userPass)) {
+            errMsg = "Non-dry run migration cannot be performed when target is not in migration mode";
+          } else if (dryRunEnabled &&
+                     migrationMgr.isTargetInMigrationMode(hostname, cfgUiPort,
+                                                          userName, userPass)) {
+            errMsg = "Dry run migration cannot be performed when target is in migration mode";
           } else if (!migrationMgr.isInMigrationMode() || migrationMgr.isMigrationInDebugMode()) {
             // Populate remaining migration configuration parameters
             mCfg.put(V2_DOT + DbManager.PARAM_DATASOURCE_PASSWORD, dbPass);
@@ -694,8 +702,16 @@ public class MigrateSettings extends LockssServlet {
     }
 
     // LCAP forwarding settings
-    v2Cfg.put(LcapRouter.PARAM_MIGRATE_TO,
-        targetCfg.get(IdentityManager.PARAM_LOCAL_V3_IDENTITY));
+    int targetLcapPort = targetCfg.getInt(V2_PARAM_ACTUAL_V3_LCAP_PORT, -1);
+    if (targetLcapPort > 0) {
+      String targetIdentity = targetCfg.get(V2_PARAM_LOCAL_V3_IDENTITY);      
+      String targetIp = getLcapForwardAddr(targetHost, targetIdentity);
+      String migTo = IDUtil.ipAddrToKey(targetIp, targetLcapPort);
+      v2Cfg.put(LcapRouter.PARAM_MIGRATE_TO, migTo);
+      log.info("Configuring to forward LCAP to: " + migTo);
+    } else {
+      log.error("V2 didn't supply " + V2_PARAM_ACTUAL_V3_LCAP_PORT);
+    }
 
     // Datasource configuration
     Configuration dsCfg = ConfigManager.newConfiguration();
@@ -736,6 +752,36 @@ public class MigrateSettings extends LockssServlet {
     mCfg.addAsSubTree(v2Cfg, V2_PREFIX);
     return mCfg;
   }
+
+  // Prefer to get IP addr from target hostname as that's known to be
+  // reachable from V1
+  private String getLcapForwardAddr(String targetHost, String targetIdentity) {
+    String targetIp;
+    try {
+      IPAddr targetIPAddr = IPAddr.getByName(targetHost);
+      targetIp = targetIPAddr.getHostAddress();
+      log.debug("LCAP forward addr from hostname: " + targetIp);
+      return targetIp;
+    } catch (UnknownHostException e) {
+      try {
+        PeerAddress v2Pad = PeerAddress.makePeerAddress(targetIdentity);
+        if (v2Pad instanceof PeerAddress.Tcp) {
+          PeerAddress.Tcp v2Padv3 = (PeerAddress.Tcp)v2Pad;
+          targetIp = v2Padv3.getIPAddr().toString();
+          log.debug("LCAP forward addr from V2 identity: " + targetIp);
+          return targetIp;
+        } else {
+          log.error("Target doesn't have LCAP V3 identity: " + targetIdentity);
+          throw new IllegalArgumentException("Target not configured with an LCAP V@ identity");
+        }
+      } catch (IdentityManager.MalformedIdentityKeyException e2) {
+        String msg = "Target LCAP identity is malformed, can't set up for migration: " + targetIdentity;
+        log.error(msg);
+        throw new IllegalArgumentException(msg);
+      }
+    }
+  }
+
 
   /**
    * Returns the default port database under V2, given the data source class name.

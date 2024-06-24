@@ -47,13 +47,19 @@ public class MigrationConstants {
   public static final String V2_PARAM_METADATADBMANAGER_DATASOURCE_PASSWORD =
       V2_PARAM_METADATADBMANAGER_DATASOURCE_ROOT + ".password";
 
+  public static final String V2_PARAM_LOCAL_IP =
+    Configuration.PREFIX + "localIPAddress";
+  public static final String V2_PARAM_LOCAL_V3_IDENTITY =
+    Configuration.PREFIX + "localV3Identity";
   public static final String V2_PARAM_LCAP_MIGRATE_FROM =
     Configuration.PREFIX + "comm.migrateFrom";
   public static final String V2_PARAM_SUBSCRIPTION_DEFERRED =
     Configuration.PREFIX + "subscription.deferred";
   public static final String V2_PARAM_IS_IN_MIGRATION_MODE =
-    Configuration.PREFIX + "inMigrationMode";
+    Configuration.PREFIX + "config.inMigrationMode";
   public static final boolean V2_DEFAULT_IS_IN_MIGRATION_MODE = false;
+  public static final String V2_PARAM_ACTUAL_V3_LCAP_PORT =
+    Configuration.PREFIX + "config.actualV3LcapPort";
 
   public static final boolean V2_DEFAULT_PROXYMANAGER_START = false;
   public static final boolean V2_DEFAULT_CONTENTSERVLETMANAGER_START = false;

@@ -269,9 +269,10 @@ public class MigrationManager extends BaseLockssDaemonManager
     return mover != null && mover.isRunning();
   }
 
-  public synchronized void startRunner(List<V2AuMover.Args> args) throws IOException {
+  public synchronized void startRunner(List<V2AuMover.Args> args)
+      throws IOException, IllegalStateException {
     if (isRunning()) {
-      throw new IOException("Migration is already running, can't start a new one");
+      throw new IllegalStateException("Migration is already running, can't start a new one");
     }
     startTime = TimeBase.nowMs();
     mover = new V2AuMover();
@@ -331,6 +332,23 @@ public class MigrationManager extends BaseLockssDaemonManager
 
     throw new IOException("Unexpected response from migration target: " +
                           conn.getResponseCode());
+  }
+
+  public boolean isTargetInMigrationMode(String hostname, int cfgUiPort,
+                                         String userName, String userPass) {
+    try {
+      Configuration v2cfg =
+        getConfigFromMigrationTarget(hostname, cfgUiPort, userName, userPass);
+      return isTargetInMigrationMode(v2cfg);
+    } catch (IOException e) {
+      log.error("Can't retrieve target configuration", e);
+      return false;
+    }
+  }
+
+  public boolean isTargetInMigrationMode(Configuration v2cfg) {
+    return v2cfg.getBoolean(MigrationConstants.V2_PARAM_IS_IN_MIGRATION_MODE,
+                            MigrationConstants.V2_DEFAULT_IS_IN_MIGRATION_MODE);
   }
 
   /**

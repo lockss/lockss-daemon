@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2021-2022 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2021-2024 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -756,12 +756,18 @@ public class V2AuMover {
     try {
       checkV2ServicesAvailable();
       openReportFiles(firstArgs); // must follow checkV2ServicesAvailable
-      for (Args args : argsLst) {
-        try {
-          executeRequest(args);
-        } catch (Exception e) {
-          log.error("executeRequest(" + args + ") threw", e);
-          break;
+      if (!migrationMgr.isDryRun() &&
+          !migrationMgr.isTargetInMigrationMode(hostName, cfgUiPort,
+                                                userName, userPass)) {
+        currentStatus = "Failed - target is not in migration mode";
+      } else {
+        for (Args args : argsLst) {
+          try {
+            executeRequest(args);
+          } catch (Exception e) {
+            log.error("executeRequest(" + args + ") threw", e);
+            break;
+          }
         }
       }
     } catch (IOException e) {
@@ -1031,33 +1037,31 @@ public class V2AuMover {
     logReport(currentStatus);
   }
 
-  public Configuration buildV2MigrateConfig() {
-    Configuration v1Config = cfgManager.getCurrentConfig();
-    Configuration v2MigConfig = ConfigManager.newConfiguration();
+//   public Configuration buildV2MigrateConfig() {
+//     Configuration v1Config = cfgManager.getCurrentConfig();
+//     Configuration v2MigConfig = ConfigManager.newConfiguration();
 
-    v2MigConfig.put(V2_PARAM_IS_IN_MIGRATION_MODE, "true");
-    v2MigConfig.put(V2_PARAM_SUBSCRIPTION_DEFERRED, "true");
-    // XXX This might be the wrong address if behind NAT.  Need to
-    // ask which to use?
-    String v1Id = v1Config.get(IdentityManager.PARAM_LOCAL_V3_IDENTITY);
-    if (!StringUtil.isNullString(v1Id)) {
-      v2MigConfig.put(V2_PARAM_LCAP_MIGRATE_FROM, v1Id);
-    }
-    return v2MigConfig;
-  }
+// //     v2MigConfig.put(V2_PARAM_IS_IN_MIGRATION_MODE, "true");
+// //     v2MigConfig.put(V2_PARAM_SUBSCRIPTION_DEFERRED, "true");
+// //     v2MigConfig.put(V2_PARAM_LCAP_MIGRATE_FROM, migrationMgr.getMigrateFromId())
 
-//   private void deleteV2MigrateConfig() {
-//     ConfigFileMover cfMover = new ConfigFileMover(this, task);
-//     try {
-//       Configuration v2EmptyMigConfig = ConfigManager.newConfiguration();
-//       cfMover.writeV2ConfigFile(SECTION_NAME_MIGRATION, v2EmptyMigConfig,
-//                                 "Enable V2 migration behavior during migration from V1");
-//     } catch (ApiException | IOException e) {
-//       String msg = "Couldn't set migration params in V2";
-//       log.error(msg, e);
-//       auMover.logReportAndError(msg + ": " + e);
-//     }
+// //     String v1Id = v1Config.get(IdentityManager.PARAM_LOCAL_V3_IDENTITY);
+// //     v2MigConfig.put(V2_PARAM_LCAP_MIGRATE_FROM, migrationMgr.getMigrateFromId())
+//     return v2MigConfig;
 //   }
+
+// //   private void deleteV2MigrateConfig() {
+// //     ConfigFileMover cfMover = new ConfigFileMover(this, task);
+// //     try {
+// //       Configuration v2EmptyMigConfig = ConfigManager.newConfiguration();
+// //       cfMover.writeV2ConfigFile(SECTION_NAME_MIGRATION, v2EmptyMigConfig,
+// //                                 "Enable V2 migration behavior during migration from V1");
+// //     } catch (ApiException | IOException e) {
+// //       String msg = "Couldn't set migration params in V2";
+// //       log.error(msg, e);
+// //       auMover.logReportAndError(msg + ": " + e);
+// //     }
+// //   }
 
   /**
    * Start the state machine for an AU
@@ -2530,18 +2534,19 @@ public class V2AuMover {
 
   void closeReport(PrintWriter writer, String now) {
     StringBuilder sb = new StringBuilder();
-    appendTotalSummary(sb);
-    totalTimers.addCounterStatus(sb, opType, ": ");
-    String summary = sb.toString();
+    if (opType != null) {
+      appendTotalSummary(sb);
+      totalTimers.addCounterStatus(sb, opType, ": ");
+      currentStatus = sb.toString();
+    }
     running = false;
-    currentStatus = summary;
     if (writer != null) {
       writer.println("--------------------------------------------------");
       writer.println((isAbort() ? " Aborted" : "  Finished") + " with " +
                      StringUtil.bigNumberOfUnits(totalTimers.getErrorCount(),
                                                  "error") +
                      " at " + now);
-      writer.println(summary);
+      writer.println(currentStatus);
       writer.println("--------------------------------------------------");
       writer.println("");
       if (writer.checkError()) {
@@ -2550,7 +2555,7 @@ public class V2AuMover {
 
       writer.close();
     }
-    log.info(summary);
+    log.info(currentStatus);
   }
 
   //////////////////////////////////////////////////////////////////////

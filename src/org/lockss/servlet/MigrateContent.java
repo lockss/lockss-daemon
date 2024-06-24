@@ -422,10 +422,10 @@ public class MigrateContent extends LockssServlet {
     Table tbl = new Table(0, "align=center cellspacing=2 cellpadding=0");
     if (migrationMgr.isDryRun()) {
       tbl.newCell(CENTERED_CELL);
-      tbl.add("<font color=\"dark orange\">");
+//       tbl.add("<font color=\"dark orange\">");
       tbl.add("Migration is in dry run mode");
       tbl.add(addFootnote(DRY_RUN_FOOT));
-      tbl.add("</font>");
+//       tbl.add("</font>");
       tbl.add("<br>");
       tbl.add("<br>");
       tbl.add("<br>");
