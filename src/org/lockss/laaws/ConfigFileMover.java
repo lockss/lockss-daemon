@@ -118,27 +118,20 @@ public class ConfigFileMover extends Worker {
         mergeConfigFile(section, v1Content, v2Content);
       }
     }
-    writeV2MigrationConfig();
+//     writeV2MigrationConfig();
   }
 
-  private void writeV2MigrationConfig() {
-//     if (migreationMgr.isDryRun() || migreationMgr.isMigrationInDebugMode) {
-//       String msg = (migreationMgr.isDryRun() ? "Dry run" : "Debug mode") +
-//         ", not putting V2 into migration mode";
-//       log.warning(msg);
-//       auMover.logReport(msg);
-//       return;
+//   private void writeV2MigrationConfig() {
+//     try {
+//       Configuration v2MigConfig = auMover.buildV2MigrateConfig();
+//       writeV2ConfigFile(SECTION_NAME_MIGRATION, v2MigConfig,
+//                         "Enable V2 migration behavior during migration from V1");
+//     } catch (ApiException | IOException e) {
+//       String msg = "Couldn't set migration params in V2";
+//       log.error(msg, e);
+//       auMover.logReportAndError(msg + ": " + e);
 //     }
-    try {
-      Configuration v2MigConfig = auMover.buildV2MigrateConfig();
-      writeV2ConfigFile(SECTION_NAME_MIGRATION, v2MigConfig,
-                        "Enable V2 migration behavior during migration from V1");
-    } catch (ApiException | IOException e) {
-      String msg = "Couldn't set migration params in V2";
-      log.error(msg, e);
-      auMover.logReportAndError(msg + ": " + e);
-    }
-  }
+//   }
 
   private void moveConfigFile(String section, String v1Content) {
     log.debug3("Copying config file; " + section);
