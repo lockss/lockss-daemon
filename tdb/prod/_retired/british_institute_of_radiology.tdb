@@ -159,14 +159,14 @@
 #      param[base_url] = http://www.birpublications.org/
       param[journal_id] = bjrcr
 
-      au < released ; 2015 ; BJR|case reports Volume 1 ; 1 ; http://www.birpublications.org/ >
-      au < released ; 2016 ; BJR|case reports Volume 2 ; 2 ; http://www.birpublications.org/ >
-      au < released ; 2017 ; BJR|case reports Volume 3 ; 3 ; https://www.birpublications.org/ >
-      au < released ; 2018 ; BJR|case reports Volume 4 ; 4 ; https://www.birpublications.org/ >
-      au < released ; 2019 ; BJR|case reports Volume 5 ; 5 ; https://www.birpublications.org/ >
-      au < released ; 2020 ; BJR|case reports Volume 6 ; 6 ; https://www.birpublications.org/ >
-      au < released ; 2021 ; BJR|case reports Volume 7 ; 7 ; https://www.birpublications.org/ >
-      au < released ; 2022 ; BJR|case reports Volume 8 ; 8 ; https://www.birpublications.org/ >
+      au < down ; 2015 ; BJR|case reports Volume 1 ; 1 ; http://www.birpublications.org/ >
+      au < down ; 2016 ; BJR|case reports Volume 2 ; 2 ; http://www.birpublications.org/ >
+      au < down ; 2017 ; BJR|case reports Volume 3 ; 3 ; https://www.birpublications.org/ >
+      au < down ; 2018 ; BJR|case reports Volume 4 ; 4 ; https://www.birpublications.org/ >
+      au < down ; 2019 ; BJR|case reports Volume 5 ; 5 ; https://www.birpublications.org/ >
+      au < down ; 2020 ; BJR|case reports Volume 6 ; 6 ; https://www.birpublications.org/ >
+      au < down ; 2021 ; BJR|case reports Volume 7 ; 7 ; https://www.birpublications.org/ >
+      au < down ; 2022 ; BJR|case reports Volume 8 ; 8 ; https://www.birpublications.org/ >
       au < doNotProcess ; 2023 ; BJR|case reports Volume 9 ; 9 ; https://www.birpublications.org/ >
       #Moving to OUP in 2024
 
@@ -185,10 +185,10 @@
       implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
       param[journal_id] = bjro
 
-      au < released ; 2019 ; BJR|Open Volume 1 ; 1 ; https://www.birpublications.org/ >
-      au < released ; 2020 ; BJR|Open Volume 2 ; 2 ; https://www.birpublications.org/ >
-      au < released ; 2021 ; BJR|Open Volume 3 ; 3 ; https://www.birpublications.org/ >
-      au < released ; 2022 ; BJR|Open Volume 4 ; 4 ; https://www.birpublications.org/ >
+      au < down ; 2019 ; BJR|Open Volume 1 ; 1 ; https://www.birpublications.org/ >
+      au < down ; 2020 ; BJR|Open Volume 2 ; 2 ; https://www.birpublications.org/ >
+      au < down ; 2021 ; BJR|Open Volume 3 ; 3 ; https://www.birpublications.org/ >
+      au < down ; 2022 ; BJR|Open Volume 4 ; 4 ; https://www.birpublications.org/ >
       au < doNotProcess ; 2023 ; BJR|Open Volume 5 ; 5 ; https://www.birpublications.org/ >
       #Moving to OUP in 2024
 
@@ -257,23 +257,23 @@
       au < doNotProcess ; 2003 ; Dentomaxillofacial Radiology Volume 32 ; 32 ; https://www.birpublications.org/ >
       au < doNotProcess ; 2004 ; Dentomaxillofacial Radiology Volume 33 ; 33 ; https://www.birpublications.org/ >
       au < doNotProcess ; 2005 ; Dentomaxillofacial Radiology Volume 34 ; 34 ; https://www.birpublications.org/ >
-      au < released ; 2006 ; Dentomaxillofacial Radiology Volume 35 ; 35 ; https://www.birpublications.org/ >
+      au < down ; 2006 ; Dentomaxillofacial Radiology Volume 35 ; 35 ; https://www.birpublications.org/ >
       au < doNotProcess ; 2007 ; Dentomaxillofacial Radiology Volume 36 ; 36 ; https://www.birpublications.org/ >
       au < doNotProcess ; 2008 ; Dentomaxillofacial Radiology Volume 37 ; 37 ; https://www.birpublications.org/ >
       au < doNotProcess ; 2009 ; Dentomaxillofacial Radiology Volume 38 ; 38 ; https://www.birpublications.org/ >
       au < doNotProcess ; 2010 ; Dentomaxillofacial Radiology Volume 39 ; 39 ; https://www.birpublications.org/ >
       au < doNotProcess ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 ; https://www.birpublications.org/ >
       au < doNotProcess ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 ; https://www.birpublications.org/ >
-      au < released ; 2013 ; Dentomaxillofacial Radiology Volume 42 ; 42 ; http://www.birpublications.org/ >
-      au < released ; 2014 ; Dentomaxillofacial Radiology Volume 43 ; 43 ; http://www.birpublications.org/ >
-      au < released ; 2015 ; Dentomaxillofacial Radiology Volume 44 ; 44 ; http://www.birpublications.org/ >
-      au < released ; 2016 ; Dentomaxillofacial Radiology Volume 45 ; 45 ; http://www.birpublications.org/ >
-      au < released ; 2017 ; Dentomaxillofacial Radiology Volume 46 ; 46 ; https://www.birpublications.org/ >
-      au < released ; 2018 ; Dentomaxillofacial Radiology Volume 47 ; 47 ; https://www.birpublications.org/ >
-      au < released ; 2019 ; Dentomaxillofacial Radiology Volume 48 ; 48 ; https://www.birpublications.org/ >
-      au < released ; 2020 ; Dentomaxillofacial Radiology Volume 49 ; 49 ; https://www.birpublications.org/ >
-      au < released ; 2021 ; Dentomaxillofacial Radiology Volume 50 ; 50 ; https://www.birpublications.org/ >
-      au < released ; 2022 ; Dentomaxillofacial Radiology Volume 51 ; 51 ; https://www.birpublications.org/ >
+      au < down ; 2013 ; Dentomaxillofacial Radiology Volume 42 ; 42 ; http://www.birpublications.org/ >
+      au < down ; 2014 ; Dentomaxillofacial Radiology Volume 43 ; 43 ; http://www.birpublications.org/ >
+      au < down ; 2015 ; Dentomaxillofacial Radiology Volume 44 ; 44 ; http://www.birpublications.org/ >
+      au < down ; 2016 ; Dentomaxillofacial Radiology Volume 45 ; 45 ; http://www.birpublications.org/ >
+      au < down ; 2017 ; Dentomaxillofacial Radiology Volume 46 ; 46 ; https://www.birpublications.org/ >
+      au < down ; 2018 ; Dentomaxillofacial Radiology Volume 47 ; 47 ; https://www.birpublications.org/ >
+      au < down ; 2019 ; Dentomaxillofacial Radiology Volume 48 ; 48 ; https://www.birpublications.org/ >
+      au < down ; 2020 ; Dentomaxillofacial Radiology Volume 49 ; 49 ; https://www.birpublications.org/ >
+      au < down ; 2021 ; Dentomaxillofacial Radiology Volume 50 ; 50 ; https://www.birpublications.org/ >
+      au < down ; 2022 ; Dentomaxillofacial Radiology Volume 51 ; 51 ; https://www.birpublications.org/ >
       au < doNotProcess ; 2023 ; Dentomaxillofacial Radiology Volume 52 ; 52 ; https://www.birpublications.org/ >
       #Moving to OUP in 2024
 
@@ -328,8 +328,8 @@
       au < doNotProcess ; 2007 ; Imaging Volume 19 ; 19 ; https://www.birpublications.org/ >
       au < doNotProcess ; 2008 ; Imaging Volume 20 ; 20 ; https://www.birpublications.org/ >
       au < doNotProcess ; 2009 ; Imaging Volume 21 ; 21 ; https://www.birpublications.org/ >
-      au < released ; 2013 ; Imaging Volume 22 ; 22 ; http://www.birpublications.org/ >
-      au < released ; 2014 ; Imaging Volume 23 ; 23 ; http://www.birpublications.org/ >
+      au < down ; 2013 ; Imaging Volume 22 ; 22 ; http://www.birpublications.org/ >
+      au < down ; 2014 ; Imaging Volume 23 ; 23 ; http://www.birpublications.org/ >
       #no more volumes as of 20171107
       
     }
