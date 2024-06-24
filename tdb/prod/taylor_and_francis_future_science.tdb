@@ -351,62 +351,6 @@
   {
   
     title < 
-      name = Future Lipidology ;
-      issn = 1746-0875 ;
-      eissn = 1746-0883
-    >
-    param[journal_id] = tlip19
-    #continued_by = 1758-4299
-
-    au < exists ; 2006 ; Future Lipidology Volume 1 ; 1 ; https://www.tandfonline.com/ >
-    au < exists ; 2007 ; Future Lipidology Volume 2 ; 2 ; https://www.tandfonline.com/ >
-    au < exists ; 2008 ; Future Lipidology Volume 3 ; 3 ; https://www.tandfonline.com/ >
-
-  }
-
-  {
-  
-    title < 
-      name = Clinical Lipidology ;
-      issn = 1758-4299 ;
-      eissn = 1758-4302
-
-    >
-    param[journal_id] = tlip20
-    #continues = 1746-0875
-    #continued_by = 2641-5321
-
-    au < exists ; 2009 ; Clinical Lipidology Volume 4 ; 4 ; https://www.tandfonline.com/ >
-    au < exists ; 2010 ; Clinical Lipidology Volume 5 ; 5 ; https://www.tandfonline.com/ >
-    au < exists ; 2011 ; Clinical Lipidology Volume 6 ; 6 ; https://www.tandfonline.com/ >
-    au < exists ; 2012 ; Clinical Lipidology Volume 7 ; 7 ; https://www.tandfonline.com/ >
-    au < exists ; 2013 ; Clinical Lipidology Volume 8 ; 8 ; https://www.tandfonline.com/ >
-    au < exists ; 2014 ; Clinical Lipidology Volume 9 ; 9 ; https://www.tandfonline.com/ >
-    au < exists ; 2015 ; Clinical Lipidology Volume 10 ; 10 ; https://www.tandfonline.com/ >
-    au < exists ; 2016 ; Clinical Lipidology Volume 11 ; 11 ; https://www.tandfonline.com/ >
-    au < exists ; 2017 ; Clinical Lipidology Volume 12 ; 12 ; https://www.tandfonline.com/ >
-    au < exists ; 2018 ; Clinical Lipidology Volume 13 ; 13 ; https://www.tandfonline.com/ >
-
-  }
-
-  {
-
-    title <
-      name = Clinical Lipidology and Metabolic Disorders ;
-      eissn = 2641-5321
-
-    >
-    param[journal_id] = tlip21
-    #continues = 1758-4299
-    #title ceased 2019
-
-    au < exists ; 2019 ; Clinical Lipidology and Metabolic Disorders Volume 14 ; 14 ; https://www.tandfonline.com/ >
-
-  }
-
-  {
-  
-    title < 
       name = CNS Oncology ;
       issn = 2045-0907 ;
       eissn = 2045-0915
