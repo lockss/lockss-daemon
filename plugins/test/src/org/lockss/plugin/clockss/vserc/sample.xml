@@ -1,0 +1,456 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1d1 20130915//EN" "JATS-journalpublishing1.dtd">
+<article>
+   <front>
+      <journal-meta>
+         <journal-title-group>
+            <journal-title>Review of Socio-Economic Research and Development Studies</journal-title>
+         </journal-title-group>
+         <issn publication-format="print">2599-5464</issn>
+         <issn publication-format="online">2718-9694</issn>
+      </journal-meta>
+      <volume>1</volume>
+      <issue>1</issue>
+      <fpage>1</fpage>
+      <lpage>17</lpage>
+      <article-meta>
+         <pub-date publication-format="electronic" date-type="pdf">
+            <day>1</day><month>12</month><year>2017</year>
+         </pub-date>
+         <article-id pub-id-type="doi">10.5281/zenodo.4515083</article-id>
+         <title-group>
+            <article-title>IMPACT ANALYSIS OF THE SITIO ELECTRIFICATION PROGRAM (SEP) ON THE SOCIO - ECONOMIC DEVELOPMENT OF SELECTED HOUSEHOLDS IN MATALOM, LEYTE</article-title>
+         </title-group>
+         <contrib-group>
+            <contrib contrib-type="author">
+               <name>
+                  <givenName>Mary Jane P.</givenName>
+                  <surname>Pepe</surname>
+               </name>
+               <email/>
+               <xref rid="aff0" ref-type="aff">1</xref>
+            </contrib>
+            <contrib contrib-type="author"><name>
+               <givenName>Ma. Salome B.</givenName>
+               <surname>Salome</surname>
+            </name>
+               <email/>
+               <xref rid="aff1" ref-type="aff">2</xref>
+            </contrib>
+            <contrib contrib-type="author"><name>
+               <givenName>Marlon M.</givenName>
+               <surname>Tambis</surname>
+            </name>
+               <email/>
+               <xref rid="aff2" ref-type="aff">3</xref>
+            </contrib>
+            <aff id="aff0">
+               <label>1</label><institution>, Agricultural Training Institute, Regional Training Center VIII, Visayas State University (VSU)</institution>
+               <addr-line>Visca, Baybay City, Leyte</addr-line>
+            </aff>
+            <aff id="aff1">
+               <label>2</label><institution>Department of Economics, VSU</institution>
+               <addr-line>Visca, Baybay City, Leyte</addr-line>
+            </aff>
+            <aff id="aff2">
+               <label>3</label><institution>PhilRootcrops, VSU</institution>
+               <addr-line>Visca, Baybay City, Leyte</addr-line>
+            </aff>
+         </contrib-group><permissions/>
+         <abstract>
+            <title>Abstract</title>
+            <p>This study investigates the impact of Sitio Electrification Program (SEP) on the socio-economic status of selected households in Matalom, Leyte. The SEP was implemented in 2011 with the aim of boosting the socio-economic development of many powerless villages all over the Philippines. The impact of SEP was quantified using pooled Ordinary Least Squares (OLS) regression applying the difference-in-difference estimation technique. The variables of interest include income, study hours and household assets. Results show that the SEP has no significant influence with income. However, positive relationships are found with the asset index of the households and study hours of the children. These imply that availability of electricity translates to accumulation of more household assets and increases the number hours of children spent studying at night. Although the effect on income is not significant, estimation results show robust increase in household assets. Estimation from the pooled OLS, on average, the study hours have increased by around 14 minutes per day and asset index by more than 2 per household. This research also finds out that the "willingness to connect" among households remains an issue in spite of the subsidies on initial household electrification expenses provided by the program. This issue can limit the positive effects that can be brought by the program. One potential approach to address this issue is through affordable amortization packages given to selected beneficiaries.</p>
+         </abstract>
+         <kwd-group>
+            <title>Keywords</title>
+            <kwd>electrification program</kwd>
+            <kwd>impact</kwd>
+            <kwd>socio-economic development</kwd>
+            <kwd>difference-in-difference</kwd>
+         </kwd-group>
+         <author-notes>
+            <fn>
+               <p>Corresponding Author: Mary Jane P. Pepe, Agricultural Training Institute, Regional Training Center VIII, VSU, Visca, Baybay City, Leyte. email:
+                  <email>maryjanepepe123@gmail.com</email>
+               </p>
+            </fn>
+         </author-notes>
+      </article-meta>
+   </front>
+   <body>
+      <sec>
+         <title/>
+         <p/>
+         <p>This study investigates the impact of Sitio Electrification Program (SEP) on the socio-economic status of selected households in Matalom, Leyte. The SEP was implemented in 2011 with the aim of boosting the socio-economic development of many powerless villages all over the Philippines. The impact of SEP was quantified using pooled Ordinary Least Squares (OLS) regression applying the difference-in-difference estimation technique. The variables of interest include income, study hours and household assets. Results show that the SEP has no significant influence with income. However, positive relationships are found with the asset index of the households and study hours of the children. These imply that availability of electricity translates to accumulation of more household assets and increases the number hours of children spent studying at night. Although the effect on income is not significant, estimation results show robust increase in household assets. Estimation from the pooled OLS, on average, the study hours have increased by around 14 minutes per day and asset index by more than 2 per household. This research also finds out that the "willingness to connect" among households remains an issue in spite of the subsidies on initial household electrification expenses provided by the program. This issue can limit the positive effects that can be brought by the program. One potential approach to address this issue is through affordable amortization packages given to selected beneficiaries.</p>
+         <title>1. INTRODUCTION</title>
+         <p>Electricity plays a vital role in the socio -economic development in the Philippines. It is an essential commodity that has improved the people's quality of life around the globe <xref rid="b2" ref-type="bibr">(Bergasse et al., 2013)</xref>. It is now being considered as one of the basic needs of the country. The progress of a nation can also be gauged on the stability of its power supply. <xref rid="b3" ref-type="bibr">Leung et al. (2005)</xref> said that increasing electricity consumption per capita can improve social development and achieve faster economic growth. The Philippine government is duty bound to help and look for means that every Filipino shall have access to a stable and affordable power supply.</p>
+         <p>According to <xref rid="b0" ref-type="bibr">Barnes et al. (2010)</xref>xref> the benefits of electricity consumption are classified into two categories: direct and indirect. Direct benefits include improvements in lighting and television viewing. Indirect benefits include improvement on educational outcomes for children in homes with electricity, increase in assets owned, and improvement in income-generation opportunities.</p>
+         <p>But even if electricity is one of the tools for a country to develop, <xref rid="b8" ref-type="bibr">Ong (2011)</xref> reported that there are still 32,403 powerless sitios 2 all over the Philippines. As a response to this problem and with a goal of improving the lives of each Filipinos, the government implemented the Sitio Electrification Program (SEP) on September 22, 2011. This gives fund to the 110 electric cooperatives around the country. This a subsidized electrification program of the Aquino administration which gives free installation of electricity (e.g. electric poles, lines, hardware, municipal fees, and labor costs) to the poor households all over the country.</p>
+         <p>According to <xref rid="b5" ref-type="bibr">Navarro (2013)</xref>, the Sitio Electrification Program (SEP) started in 2011 under the governance of the Department of Energy (DOE) and the National Electrification Administration (NEA) in partnership with the 110 electric cooperatives. This program is a big help for the total electrification of the country. It aims to energize sitios through on-grid electrification by connecting sitios to the power grid. A sitio is considered energized if it is successfully connected to the grid and at least 20 households are given electricity connections. Funding of the SEP is in the form of national government subsidy of the NEA. The subsidy appears in the General Appropriations Act under "Budgetary Support to Government Corporations". The NEA, which is mandated as a special financing institution and primary lender of electric cooperatives (ECs), conveys the funds as subsidies rather than loans to ECs eligible under the SEP.</p>
+         <p>As stated in the State of the Nation Address (SONA) of President Benigno Aquino III last July 27, 2015, there are already 25,257 sitios which are already connected to a power grid through Sitio Electrification Program (SEP). Seventyeight percent (78%) of the target of the project is already energized. Two respondents who were both interviewed for the presentation of the SONA 2015 claimed that electricity is a big help in their everyday living. It helps them to earn extra income and to engage in income generating activities or referred to as productive use of energy (Official Gazette of the Philippines, 2015)</p>
+         <p>As a response to the president's goal, Leyte IV Electric Cooperative, Inc. (LEYECO IV) as one of the electric cooperatives in the country implemented the Sitio Electrification Program (SEP) to the six towns under their administration namely Baybay City, Inopacan, Hindang, Hilongos, Bato, and Matalom.</p>
+         <p>According to <xref rid="b7" ref-type="bibr">Olan-olan (2011)</xref>, the government will give fund to the electric cooperatives for the construction of the lines of the electricity and this will be audited by the Commission on Audit (COA). The first sixty (60) beneficiary households will be given free house wiring worth two-thousand pesos (P 2,000.00) and 30-meter service drop wire. The installation and municipal fees for the electric permits through the approval of the municipal mayor are also free. The beneficiaries will only be paying: a.) five pesos (Php 5) for the membership fee, b.) one hundred seventy pesos and forty centavos (Php 170.40) for the bill deposit, c.) one hundred fifty pesos (P 150) for the layout plan, d.) fifty pesos (P 50) for the notarial fee, and e.) one hundred fifty pesos (P 150) for the processing fee. These payments are relatively small as compared to the payments made by the households without the help of the said program.</p>
+         <p>Matalom, Leyte, which is the site of the study, is one of the beneficiary towns of the Sitio Electrification Program (SEP). From the year 2012-2013, fifteen (15) sitios of Matalom benefitted from Sitio Electrification Program (SEP) with 237 households (LEYECO IV, 2014). The locality has experienced socio-economic development because of the additional lighted homes in the town. Power has contributed to the improvement of the quality of life of the locals.</p>
+      </sec>
+      <sec>
+         <title>Objectives of the Study</title>
+         <p/>
+         <p>The general objective of this research is to analyze the impact of the Sitio Electrification Program (SEP) on the socioeconomic development of the household beneficiaries in the town of Matalom, Leyte. Its specific objectives are:</p>
+         <p>(1) to describe the socioeconomic characteristics of the Sitio Electrification Program (SEP) beneficiaries; </p>
+         <p>(2) to know the socioeconomic effects of the availability of electricity; and </p>
+         <p>(3) to provide policy implications and recommendations based on the findings of the study.</p>
+      </sec>
+      <sec>
+         <title>2. METHODOLOGY</title>
+         <p/>
+         <p>This study was conducted in selected households of Matalom, Leyte which is one of the beneficiary towns of the Sitio Electrification Program (SEP) of Leyte IV Electric Cooperative (LEYECO IV). Non-electrified households in the stated site of the study were also taken into account. Figure 1 shows the location of the study site.
+            <sec>
+               <fig id="fig_0" orientation="portrait" fig-type="graphic" position="anchor">
+                  <graphic xmlns:xlink="https://raw.githubusercontent.com/reserds/2017_vol_01/main/paper_01_fig_0.png" xlink:href="paper_01_fig_0.png"></graphic>
+               </fig>
+            </sec>
+         </p>
+      </sec>
+      <sec>
+         <title>Sampling Procedure</title>
+         <p/>
+         <p>The 237 household beneficiaries from the fifteen (15) beneficiary sitios of the program in the year 2012-2013 served as the population of the study. The number of respondents to be surveyed was determined using Slovene's formula as follows:
+         </p>
+         <sec>
+            <fig id="eq_1" orientation="portrait" fig-type="graphic" position="anchor">
+               <graphic xmlns:xlink="https://raw.githubusercontent.com/reserds/2017_vol_01/main/paper_01_eq_1.png" xlink:href="paper_01_eq_1.png"></graphic>
+            </fig>
+         </sec>
+         <p>where: n= the sample size</p>
+         <p>N= the total number of sampling units in the population </p>
+         <p>e= the margin error</p>
+         <p>The margin of error is set to 0.07. As determined using the Slovene's formula, the sample size of households with electricity through SEP is one hundred ten (110). A purposive sample of fifty-five (55) households without electricity was also used to serve as control group. Summing up, the total respondents that was interviewed was one hundred sixty-five (165). Proportionate allocation of sample was used to get the sample size for the households with electricity through SEP in each sitios. Respondents were selected randomly.</p>
+         <p>The list of the beneficiaries of the Sitio Electrification Program (SEP) in Matalom, Leyte is the secondary data that was asked from the office of the Leyte IV Electric Cooperative (LEYECO IV). The list of households without electricity was obtained from the secretaries of each selected barangays. These lists were used for gathering the primary data, which was collected through an interview using a structured questionnaire.</p>
+      </sec>
+      <sec>
+         <title>Data Analysis</title>
+         <p/>
+         <p>Descriptive statistics were used to characterize the effects of the availability of electricity through the Sitio Electrification Program (SEP) on the socioeconomic development of Matalom, Leyte. The study also used regression using the semi-logarithmic model where income, study hours, and asset index expressed in natural logarithm were used as dependent variables and were regressed in each of the explanatory variables. Pooled OLS regression was used to determine if the presence of SEP has an impact on income, asset index and study hours of the respondents. Diagnostic test was also conducted to test the validity of the results.</p>
+      </sec>
+      <sec>
+         <title>Empirical Model</title>
+         <p/>
+         <p>This study focused only on the effect of electricity on income and asset index of the beneficiary household and on the study hours of their children who went to school.</p>
+         <p>To quantify the effects of available electricity through the Sitio Electrification Program (SEP) on the socio economic development of a household, three (3) different models were used:</p>
+         <sec>
+            <fig id="eq_2" orientation="portrait" fig-type="graphic" position="anchor">
+               <graphic xmlns:xlink="https://raw.githubusercontent.com/reserds/2017_vol_01/main/paper_01_eq_2.png" xlink:href="paper_01_eq_2.png"></graphic>
+            </fig>
+         </sec>
+         <sec>
+            <fig id="eq_3" orientation="portrait" fig-type="graphic" position="anchor">
+               <graphic xmlns:xlink="https://raw.githubusercontent.com/reserds/2017_vol_01/main/paper_01_eq_3.png" xlink:href="paper_01_eq_3.png"></graphic>
+            </fig>
+         </sec>
+         <sec>
+            <fig id="eq_4" orientation="portrait" fig-type="graphic" position="anchor">
+               <graphic xmlns:xlink="https://raw.githubusercontent.com/reserds/2017_vol_01/main/paper_01_eq_4.png" xlink:href="paper_01_eq_4.png"></graphic>
+            </fig>
+         </sec>
+         <p>where: ln(INC) = measures the monthly income of the household in log form (dependent variable for model 2).</p>
+         <p>ln(SH) = Reflects study hours in log form that is measured by the change in hours spent in studying of the students in that particular household due to the availability of electricity (dependent variable for model 3). </p>
+         <p>ln(AI) = Asset index is measured by the additional assets owned by the beneficiaries particularly those that need electricity to function. Principal component analysis (PCA) is used to compute for the asset index and was converted into log form (dependent variable for model 4). </p>
+         <p>ELEC = Electricity is the consumption of electricity that is measured by the average monthly kilowatt hour (kWh) consumption of each household. </p>
+         <p>SOL1 = Source of livelihood 1 of a household is categorized as agricultural income.</p>
+         <p>It is a dummy variable, 0 for not and 1 for yes. It includes income from farming, copra, abaca weaving, tuba gathering, charcoal making, and fishing. </p>
+         <p>SOL2 = Income of laborers and service workers fall under the source of livelihood 2 or the wage income. It is a dummy variable, 0 for not and 1 for yes. </p>
+         <p>SOL3 = Source of livelihood 3 is the non-farm income or income from being selfemployed. It includes those from business, remittance, and official's honorarium. It is a dummy variable, 0 for not and 1 for yes. </p>
+         <p>SOL4 = Sources of Livelihood 4 is a dummy variable, 0 for not and 1 for yes. It is the other sources of income that includes pension and money from being a 4P's beneficiary.</p>
+         <p>AGE = Age is measured in number of years of the household head. </p>
+         <p>GEN = Gender is a dummy variable, 0 for male and 1 for female. </p>p>
+         <p>LOC1 = Location is the distance of the beneficiary household from the national road. It is measured in meters. </p>
+         <p>LOC2 = Location 2 is the distance of the beneficiary household from the market and is measured in meters.</p>
+         <p>LOC3 = Location 3 that is measured in meters is the distance of the beneficiary household from the school. </p>
+         <p>HS = Household size or the number of family members in each household is measured by count. </p>
+         <p>HO = House ownership is a dummy variable that is answerable by yes or no (1 = yes, owns the house; 0 = no, otherwise). </p>
+         <p>LO = Lot ownership is a dummy variable that is answerable by yes or no (1 = yes, owns the residential lot; 0 = no, otherwise). </p>
+         <p>EL = Educational level is measured in the number of years spent in school. </p>
+         <p>SA = Social awareness includes awareness on the importance of electricity and awareness on the effects of having electricity. It is a dummy variable that is answerable by yes or no (1 = yes, socially aware; 0 = no, otherwise). </p>
+         <p>µ = remaining error term</p>
+      </sec>
+      <sec>
+         <title>RESULTS AND DISCUSSION</title>
+         <p/>
+         <p>The socio-economic factors that were used in the analysis are source of livelihood, total monthly income of the household, number of assets owned, age, gender, distance from the national road, from the market and from the school, household size, house ownership, lot ownership, educational level, social awareness, study hours, and average monthly kilowatt hour consumption of the household.</p>
+      </sec>
+      <sec>
+         <title>Sources of Income</title>
+         <p/>
+         <p>Sources of income are used as a determinant in knowing how much money is earned by a household. Having multiple sources of income does not always mean that a household or an individual earns more than those who only have single source of income. Table 1 shows the sources of income of the selected residents of Matalom.</p>
+         <p>Agricultural income is the primary income source of the people of Matalom. Of the households surveyed, 68.5% of them rely on farming, copra, abaca weaving, tuba gathering, charcoal making, and fishing. Wage income is a second major source of household income for both types of households. Almost one-half or 46.7% of them receives earned wages from working as laborers and service workers, while 19.4% of the respondents are also relying on other sources of income. These are from pensions and cash transfers as 4P's beneficiary. Some of the respondents from households with electricity (20.9%) derived income from businesses, remittances, and honorarium as barangay officials. </p>
+      </sec>
+      <sec>
+         <fig id="tab_0" orientation="portrait" fig-type="graphic" position="anchor">
+            <graphic xmlns:xlink="https://raw.githubusercontent.com/reserds/2017_vol_01/main/paper_01_tab_0.png" xlink:href="paper_01_tab_0.png"></graphic>
+         </fig>
+      </sec>
+      <sec>
+         <title>Total Monthly Income of the Household</title>
+         <p/>
+         <p>The total monthly income of the household (in Php) is shown in Table 2. Close to forty percent (37%) of the total numbers of households with and without electricity are earning income ranging from Php 1,001 to 3,000 per month.</p>
+         <p>Data shows that households with electricity are earning more than the households without electricity. At higher ranges, 8.2% of households with electricity is earning from Php 9,001 and above per month while only 5.5% of the total households without electricity are earning at this range. The average household monthly income for those with electricity is Php 4,941 while for households without electricity (Php 4,000, on average). Households with electricity have more purchasing power and therefore can afford to pay for the monthly electrical bills. </p>
+      </sec>
+      <sec>
+         <fig id="tab_1" orientation="portrait" fig-type="graphic" position="anchor">
+            <graphic xmlns:xlink="https://raw.githubusercontent.com/reserds/2017_vol_01/main/paper_01_tab_2.png" xlink:href="paper_01_tab_1.png"></graphic>
+         </fig>
+      </sec>
+      <sec>
+         <title>Study Hours</title>
+         <p/>
+         <p>As shown in Table 3, students who lived in a household with electricity have more study hours than students who lived in a household without electricity. Almost 30% of the students in a household with electricity have study hours that last up to 41 minutes and above while only 9.1% of the students from a household without electricity studies up to this certain length of time per day. Respondents claimed that it is more convenient to use light bulbs than traditional lamps when studying. Moreover, it lessens the chance or probability for a student to have eye defects.</p>
+      </sec>
+      <sec>
+         <title>Asset Owned</title>
+         <p/>
+         <p>Households without electricity do not have as much assets as what the households with electricity have. They own mobile phones but they charged it at the house of their friends and relatives who have access on electricity. More than half of the respondents from households without electricity owned mobile phones while respondents from households with electricity own two or more assets. Households own a variety of appliances. These appliances require electricity for it to function so it is expected that with the electricity available in the house, respondents are motivated to purchase these assets. Table 4 shows the assets owned by households with electricity and households without electricity. </p>
+      </sec>
+      <sec>
+         <fig id="tab_2" orientation="portrait" fig-type="graphic" position="anchor">
+            <graphic xmlns:xlink="https://raw.githubusercontent.com/reserds/2017_vol_01/main/paper_01_tab_2.png" xlink:href="paper_01_tab_2.png"></graphic>
+         </fig>
+      </sec>
+      <sec>
+         <fig id="tab_3" orientation="portrait" fig-type="graphic" position="anchor">
+            <graphic xmlns:xlink="https://raw.githubusercontent.com/reserds/2017_vol_01/main/paper_01_tab_3.png" xlink:href="paper_01_tab_3.png"></graphic>
+         </fig>
+      </sec>
+      <sec>
+         <title>Estimation of Impact using Pooled OLS Regression Analysis</title>
+         <p/>
+         <p>Table 5 the results of difference-in-difference analysis in a regression framework. The analysis was done using pooled OLS regression using income, study hours and asset index as dependent variables while the independent variables include: (1) time dummy with a value of 1 after having electricity and 0 before using electricity; (2) dummy variable for beneficiary with 1 representing for beneficiary and 0 for non-beneficiary; and (3) impact factor which is the interaction for the time and beneficiary. The third dummy is the most important variable in the regression because this is the estimator of impact of the electrification program on income, study hours and assets. This is being called as the difference-indifference estimator of impact. This method takes into account any differences between the treatment and comparison groups that are constant over time <xref rid="b2" ref-type="bibr">(Gertler, et.al, 2009)</xref>. Based on the results, the presence of electricity has no significant effect in income. The effect was observed in study hours and asset index.</p>
+         <p/>
+         <p>Most of the respondents claimed that their incomes remain the same despite the presence of electricity. The respondents were connected to on-grid electrification and became a beneficiary of the Sitio Electrification Program (SEP) in 2012 or 2013 so their electric connections are still new and have not yet changed their income status. They are also practicing consumptive use of energy instead of productive use of energy. Change in income takes a longer time and electricity may also affect income indirectly.</p>
+         <p>Households' income may increase by engaging in business enterprise. This can be facilitated by the installation of electricity. However, this may not happen immediately because it requires financial resources to put up a business. Maybe in the long run, household income will increase if there are opportunities for them to engage in business.</p>
+         <sec>
+            <fig id="tab_4" orientation="portrait" fig-type="graphic" position="anchor">
+               <graphic xmlns:xlink="https://raw.githubusercontent.com/reserds/2017_vol_01/main/paper_01_tab_4.png" xlink:href="paper_01_tab_4.png"></graphic>
+            </fig>
+         </sec>
+         <p>With electricity available at night, the students' average hours spent studying increases significantly. These results imply that the presence of electricity can potentially increase their grades and maybe reduce the cases of eye defects. Respondents from households without electricity also claimed that the absence of electricity affects the performance of the students.</p>
+         <p>Likewise, the number of assets owned also tends to increase with the presence of electricity for a reason that an individual might acquire more things that uses electricity to give them comfort and make their work faster. One reason why they can acquire for additional assets despite the fact that their income did not increase is that maybe they purchase things through installment or loan. </p>
+      </sec>
+      <sec>
+         <title>SEP and the Other Factors Affecting Income, Study Hours, and Asset Index</title>
+         <p/>
+         <p>Table 6 shows the relationship between the three dependent variables and the predictor variables included in the model. The regression model used in this study is a semi-logarithmic model where the log of income, log of study hours and log of asset index were used as dependent variables. Multiplying the coefficient of the explanatory variable yields the percentage change in income or study hours or asset index of the rural household per absolute change in the explanatory variable.</p>
+         <p>Robust standard errors were used in the model and different diagnostic tests were also used to check the validity of its results. The three models are all significant at 1%. The R -squared in each model is relatively small because this study uses a cross -sectional data.</p>
+         <p>In model 1, only 29.1% of the variation of the dependent variable (i.e. income) is explained by the model. Among the variables included in the model, the results indicate that household size, lot ownership, and social awareness are positively associated with income. Household size is significant at 1% while lot ownership and social awareness are significant at 10%. However, age, being female, and distance of the household from the school (location 3) are significant but are negatively associated with income. Age is significant at 1% while gender and distance of the household from the school (location 3) are both significant at 5%.</p>
+         <p>For household size, the result implies that holding other things constant, a unit increase in household size will also increase income by 9%. As the number of household members increase, the more the family members need to work to earn extra income which will then be added up to the total monthly income of the household. The more socially aware an individual is; income will increase by 38.9%. If the household owns the lot they are residing, income is relatively higher compared to those who do not own the lot where their house is erected. </p>
+         <sec>
+            <fig id="tab_5" orientation="portrait" fig-type="graphic" position="anchor">
+               <graphic xmlns:xlink="https://raw.githubusercontent.com/reserds/2017_vol_01/main/paper_01_tab_5.png" xlink:href="paper_01_tab_5.png"></graphic>
+            </fig>
+         </sec>
+         <p>An increase in distance of the household from the school (location 3) by 1% would lead to a 0.239% decrease in income. Maybe due to the distance, the respondent will not be able to finish their studies and could restrain them to find higher paying jobs.</p>
+         <p>For model 2, the study hours of each child in school is the dependent variable. Based on the results, 18.2% of the variation of the dependent variable (study hours) is explained by the model. The variables electricity consumption, non -wage income, and other sources of income are positively related with study hours while household size is negatively related to study hours. Electricity consumption and household size are significant at 1% while non -farm income is significant at 5%, and other sources of income at 10%. A unit increase in electricity consumption would lead to a 1.83% increase in study hours. The students have longer time to study especially at night because they have improved and reliable source of light. One (1) unit increase in non -wage income will have a corresponding increase in study hours by 40.9%. Also, a unit increase in other sources of income would lead to an increase in study hours by 33.5%. This might be due to a reason that children have more study hours if their family has a stable source of income or owns a business or if they are beneficiary of a government program that requires them to have good results in their studies. Moreover, as the number of household members increase, study hours will decrease by 13.1%. This result implies that students will become preoccupied and have lesser focus on studying if they have bigger household size.</p>
+         <p>In the third model, 41.6% of the variation of the dependent variable (asset index) is explained by the variables included in the model. Asset index is measured using principal component analysis (PCA). Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components. The number of principal components is less than or equal to the number of original variables <xref rid="b9" ref-type="bibr">(Shlens, 2003)</xref>.</p>
+         <p>The variables electricity consumption, non-farm income and distance of the household from the market (location 2) are significant at 1%. Educational level and distance of the household from the national road (location 1) are significant at 5%. Electricity consumption, non-farm income, educational level, and location 1 are positively correlated with asset index while location 2 has a negative relationship. For electricity consumption, a 1 kilowatt hour increase in electricity consumption will lead to a 5.28% increase in asset index. This might be due to the comfort and easiness that additional assets can bring to the lives of the beneficiaries. So the more they acquire things that use electricity, the higher they pay for electricity. Furthermore, a unit increase in non-farm income would increase asset index by 75%. If a household owns a business or has a family member working abroad, the higher is the earnings; thus, the more households can afford to buy additional things. Similarly, as number of years spent in school increases, asset index also increases by 6.96%. The farther away the households from the national road is associated with an increase in asset index. One reason for this is that people are getting more practical. Maybe they find that buying additional assets that will bring them comfort will give them lesser cost than travelling every day or weekly. Table 6 presents the summary of the results of model 1, 2 and 3.</p>
+         <p>Since it is evident that SEP positively influence study hours and asset index, the government should further expand the SEP implementation so that more household can benefit. Though it was not proven yet to significantly affect income, the increase in study hours can already be used to predict to future increase in income. Increase in study hours would mean increase in grades and then educational attainment which has already significant association to income. This means that electricity will still have an effect on income soon due to increased study hours. The effect of the presence of electricity is reflected on assets but is not apparent on income.</p>
+      </sec>
+      <sec>
+         <title>Diagnostic Test Results</title>
+         <p/>
+         <p>To test the validity of the results and to check for potential problems with analysis, several diagnostic tests were used. <italic>Table 7</italic> presents the summary results of the diagnostic tests. </p>
+      </sec>
+      <sec>
+         <fig id="tab_6" orientation="portrait" fig-type="graphic" position="anchor">
+            <graphic xmlns:xlink="https://raw.githubusercontent.com/reserds/2017_vol_01/main/paper_01_tab_6.png" xlink:href="paper_01_tab_6.png"></graphic>
+         </fig>
+      </sec>
+      <sec>
+         <title>CONCLUSIONS, RECOMMENDATIONS AND IMPLICATIONS</title>
+         <p/>
+         <p>This study made use of the survey data collected from 165 respondents from households with electricity and households without electricity. This is conducted to: (1) describe the socioeconomic characteristics of the Sitio Electrification Program (SEP) beneficiaries; (2) know the socioeconomic effects of the availability of electricity; and (3) provide policy implications and recommendations based on the findings of the study.</p>
+         <p>This study finds that due to the short interval of time between the projects' implementation and the conduct of this research, results show that electricity has no impact yet on the households' income but it has already an effect on study hours of the students. In addition, due to the presence of electricity, households owned more assets. Improved educational outcomes and additional assets owned are direct effects of the presence of electricity while income is an indirect effect and needs longer time period for it to change.</p>
+         <p>The "willingness to connect" of households remains an issue despite the presence of subsidies for house-wiring and other initial household electrification expenses. Some of them claimed that electricity will be a great help in their everyday living but instead of allocating budget for their monthly electricity bill, they rather choose to spend it in their everyday consumption. They further relayed that they are already used to living without electricity. Some also claimed that they want to be connected to on-grid electrification but they found out that the free 30 m service drop wire is not enough for them and they can't afford to pay for the additional length of wires. As a response to this issue, affordable amortization packages should be implemented in all barangays. Beneficiaries should also be properly chosen and not just picking someone whom the implementers know.</p>
+         <p>Sitio Electrification Program (SEP) is a good project and is a big help in the electrification of our country but the targeting of SEP beneficiaries should be improved. Households situated in a distant location and far from town centers should be prioritized. Electric cooperatives should also monitor their accomplishments by visiting and checking some of the households. </p>
+      </sec>
+   </body>
+   <back>
+      <ref-list>
+         <title>References</title>
+         <ref id="b0">
+            <element-citation publication-type="misc">
+               <person-group person-group-type="author">
+                  <name>
+                     <given-names>D. F.</given-names>
+                     <surname>Barnes</surname>
+                  </name>
+                  <name>
+                     <given-names>P.</given-names>
+                     <surname>Meir</surname>
+                  </name>
+                  <name>
+                     <given-names>V.</given-names>
+                     <surname>Tuntivate</surname>
+                  </name>
+                  <name>
+                     <given-names>S.V.</given-names>
+                     <surname>Bogach</surname>
+                  </name>
+                  <name>
+                     <given-names>D.</given-names>
+                     <surname>Farchy</surname>
+                  </name>
+               </person-group>
+               <year>2010</year>
+               <article-title>Peru: National Survey of Rural Household Energy Use.</article-title>
+               <source>ESMAP Special Report No. 07/10. U. S. A.</source>
+            </element-citation>
+         </ref>
+         <ref id="b2">
+            <element-citation publication-type="misc">
+               <person-group person-group-type="author">
+                  <name>
+                     <given-names>E.</given-names>
+                     <surname>Bergasse</surname>
+                  </name>
+                  <name>
+                     <given-names>W.</given-names>
+                     <surname>Paczynski</surname>
+                  </name>
+                  <name>
+                     <given-names>M.</given-names>
+                     <surname>Dabrowski</surname>
+                  </name>
+                  <name>
+                     <given-names>L.</given-names>
+                     <surname>Dewulf</surname>
+                  </name>
+               </person-group>
+               <year>2013</year>
+               <article-title>The Relationship between Energy and Socio-Economic Development in the Southern and Eastern Mediterranean</article-title>
+               <source>MEDPRO Technical Report No. 27. Poland.</source>
+            </element-citation>
+         </ref>
+         <ref id="b2">
+            <element-citation publication-type="book">
+               <person-group person-group-type="author">
+                  <name>
+                     <given-names>P. J.</given-names>
+                     <surname>Gertler</surname>
+                  </name>
+                  <name>
+                     <given-names>S.</given-names>
+                     <surname>Martinez</surname>
+                  </name>
+                  <name>
+                     <given-names>P.</given-names>
+                     <surname>Premand</surname>
+                  </name>
+                  <name>
+                     <given-names>L.B.</given-names>
+                     <surname>Rawlings</surname>
+                  </name>
+                  <name>
+                     <given-names>C.M.</given-names>
+                     <surname>Vermeersh</surname>
+                  </name>
+               </person-group>
+               <year>2009</year>
+               <source>Impact Evaluation in Practice</source>
+               <publisher-loc>Washington D. C</publisher-loc>
+            </element-citation>
+         </ref>
+         <ref id="b3">
+            <element-citation publication-type="book">
+               <person-group person-group-type="author">
+                  <name>
+                     <given-names>C. S.</given-names>
+                     <surname>Leung</surname>
+                  </name>
+                  <name>
+                     <given-names>P.</given-names>
+                     <surname>Meisen</surname>
+                  </name>
+               </person-group>
+               <source>How Electricity Consumption Affects Social and Economic Development by Comparing Low, Medium and High Human Development Countries</source>
+               <year>2005</year>
+               <publisher-loc>Saudi Arabia</publisher-loc>
+            </element-citation>
+         </ref>
+         <ref id="b4">
+            <element-citation publication-type="book">
+               <person-group person-group-type="author">
+                  <name>
+                     <given-names>Leyte Electrive Cooperative (LEYECO) IV</given-names>
+                     <surname></surname>
+                  </name>
+               </person-group>
+               <year>2014</year>
+               <source>2013 Annual Report, 34 th Annual General Membership Assembly</source>
+               <publisher-loc>Leyte</publisher-loc>
+            </element-citation>
+         </ref>
+         <ref id="b5">
+            <element-citation publication-type="misc">
+               <person-group person-group-type="author">
+                  <name>
+                     <given-names>A.M.</given-names>
+                     <surname>Navarro</surname>
+                  </name>
+               </person-group>
+               <year>2013</year>
+               <source>Cost Efficiency and Effectiveness of the Sitio and Household Electrification Program</source>
+               <publisher-name>Makati</publisher-name>
+            </element-citation>
+         </ref>
+         <ref id="b6">
+            <element-citation publication-type="misc">
+               <person-group>
+                  <name>
+                     <given-names>Official Gazette of the Philippines Website</given-names>
+                     <surname></surname>
+                  </name>
+               </person-group>
+               <year>2015</year>
+               <article-title>"Benigno S. Aquino III, Sixth State of the Nation Address, July, 27, 2015". Accessed on on August 14, 2015 from www.gov.ph/2015/07/27/president-aquino-sixth-sona/</article-title>
+            </element-citation>
+         </ref>
+         <ref id="b7">
+            <element-citation publication-type="book">
+               <person-group person-group-type="author">
+                  <name>
+                     <given-names>J.</given-names>
+                     <surname>Olan-Olan</surname>
+                  </name>
+               </person-group>
+               <year>2011</year>
+               <article-title>"Sitio Electrification Program, Bawat Pinoy may Liwanag".</article-title>
+               <publisher-loc>Leyte</publisher-loc>
+            </element-citation>
+         </ref>
+         <ref id="b8">
+            <element-citation publication-type="book">
+               <person-group person-group-type="author">
+                  <name>
+                     <given-names>C.</given-names>
+                     <surname>Ong</surname>
+                  </name>
+               </person-group>
+               <year>2011</year>
+               <article-title> “NSO: 87% of Households Uses Electricity”. Accessed on November 27, 2015 from https://www.gov.ph/2015/07/27/president-aquino-sixth-sona/.</article-title>
+            </element-citation>
+         </ref>
+         <ref id="b9">
+            <element-citation publication-type="book">
+               <person-group person-group-type="author">
+                  <name>
+                     <given-names>J</given-names>
+                     <surname>Shlens</surname>
+                  </name>
+               </person-group>
+               <source>A Tutorial on Principal Component Analysis</source>
+               <year>2003</year>
+               <publisher-loc>France</publisher-loc>
+            </element-citation>
+         </ref>
+      </ref-list>
+   </back>
+</article>
