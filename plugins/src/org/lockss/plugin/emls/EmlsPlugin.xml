@@ -34,6 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>plugin_status</string>
     <string>ready</string>
   </entry>
+  <!-- https transition enabled -->
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.emls.EmlsPlugin</string>
@@ -83,21 +84,27 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%semlsjour.html", base_url</string>
+    <list>
+      <string>"%semlsjour.html", to_http(base_url)</string>
+      <string>"%semlsjour.html", to_https(base_url)</string>
+    </list>
   </entry>
   <entry>
     <string>au_permission_url</string>
-    <string>"%slockss-volume%d.html", base_url, volume</string>
+    <list>
+      <string>"%slockss-volume%d.html", to_http(base_url), volume</string>
+      <string>"%slockss-volume%d.html", to_https(base_url), volume</string>
+    </list>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
       <string>4,"^https?://%s/", base_url_host</string>
-      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
-      <string>1,"^%semlsjour\.html$", base_url</string>
-      <string>1,"^%slockss-volume%d\.html$", base_url, volume</string>
-      <string>1,"^%s%02d-[0-9]+/", base_url, volume</string>
-      <string>1,"^%s%s/", base_url, issues</string>
+      <string>1,"^https?://%s%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host, base_url_path</string>
+      <string>1,"^https?://%s%semlsjour\.html$", base_url_host, base_url_path</string>
+      <string>1,"^https?://%s%slockss-volume%d\.html$", base_url_host, base_url_path, volume</string>
+      <string>1,"^https?://%s%s%02d-[0-9]+/", base_url_host, base_url_path, volume</string>
+      <string>1,"^https?://%s%s%s/", base_url_host, base_url_path, issues</string>
     </list>
   </entry>
   <entry>
@@ -113,16 +120,24 @@ POSSIBILITY OF SUCH DAMAGE.
   	<map>
 	    <entry>
         <string>au_title</string>
-        <string>"%semlsjour.html", base_url</string>
+        <string>"^https?://%s/emlsjour.html", base_url_host</string>
       </entry>
       <entry>
     	  <string>au_volume</string>
-	      <string>"%slockss-volume%d.html", base_url, volume</string>
+	      <string>"^https?://%s/lockss-volume%d.html", base_url_host, volume</string>
   	  </entry>
   	  <entry>
     	  <string>au_issue</string>
-        <string>"%s%d-%s/%d-%stoc.htm", base_url, journal_issn, volume, issue</string>
+        <string>"^https?://%s/%d-%s/%d-%stoc.htm", base_url_host, journal_issn, volume, issue</string>
   	  </entry>
 	  </map>
+  </entry>
+  <entry>
+    <string>plugin_url_fetcher_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer</string>
   </entry>
 </map>
