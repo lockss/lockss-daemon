@@ -2,14 +2,95 @@
   publisher <
     name = White Horse Press
   >
-  #Moving to LUP’s ATYPON 2024
-  #Global Environment, ISSN 1973-3739
 
-  #HOSTED ON WHP's OJS 2024
-  #Worldwide Waste, E-ISSN: 2399-7117 [formerly with Ubiquity]
-  #Climates and Cultures in History, ISSN (online): 2635-1331 [brand new journal]
-  #Plant Perspectives, ISSN (online): 2753-3603 [brand new journal]
+ #Liverpool/Atypon
+ {
+  plugin = org.lockss.plugin.atypon.liverpool.LiverpoolJournalsPlugin
+  param[base_url] = https://www.liverpooluniversitypress.co.uk/
+  implicit < status ; year ; name ; param[volume_name] >
 
+  {
+
+    title <
+      name = Global Environment ;
+      eissn = 1973-3739 ;
+      issnl = 1973-3739
+    >
+
+    param[journal_id] = whpge
+    #Published 2008-Present
+
+    au < manifest ; 2008 ; Global Environment Volume 1  ; 1  >
+    au < manifest ; 2009 ; Global Environment Volume 2  ; 2  >
+    au < manifest ; 2010 ; Global Environment Volume 3  ; 3  >
+    au < manifest ; 2011 ; Global Environment Volume 4  ; 4  >
+    au < manifest ; 2012 ; Global Environment Volume 5  ; 5  >
+    au < manifest ; 2013 ; Global Environment Volume 6  ; 6  >
+    au < manifest ; 2014 ; Global Environment Volume 7  ; 7  >
+    au < manifest ; 2015 ; Global Environment Volume 8  ; 8  >
+    au < manifest ; 2016 ; Global Environment Volume 9  ; 9  >
+    au < manifest ; 2017 ; Global Environment Volume 10 ; 10 >
+    au < manifest ; 2018 ; Global Environment Volume 11 ; 11 >
+    au < manifest ; 2019 ; Global Environment Volume 12 ; 12 >
+    au < manifest ; 2020 ; Global Environment Volume 13 ; 13 >
+    au < manifest ; 2021 ; Global Environment Volume 14 ; 14 >
+    au < manifest ; 2022 ; Global Environment Volume 15 ; 15 >
+    au < manifest ; 2023 ; Global Environment Volume 16 ; 16 >
+    au < manifest ; 2024 ; Global Environment Volume 17 ; 17 >
+
+  }
+
+  {
+
+    title <
+      name = Nomadic Peoples ;
+      issn = 0822-7942 ;
+      eissn = 1752-2366 ;
+      issnl = 0822-7942
+    >
+
+    param[journal_id] = whpnp
+    #Published 1997-Present
+
+    #For 1997-2016 see below on Ingenta
+    au < manifest ; 2017 ; Nomadic Peoples Volume 21 ; 21 >
+    au < manifest ; 2018 ; Nomadic Peoples Volume 22 ; 22 >
+    au < manifest ; 2019 ; Nomadic Peoples Volume 23 ; 23 >
+    au < manifest ; 2020 ; Nomadic Peoples Volume 24 ; 24 >
+    au < manifest ; 2021 ; Nomadic Peoples Volume 25 ; 25 >
+    au < manifest ; 2022 ; Nomadic Peoples Volume 26 ; 26 >
+    au < manifest ; 2023 ; Nomadic Peoples Volume 27 ; 27 >
+    au < manifest ; 2024 ; Nomadic Peoples Volume 28 ; 28 >
+
+  }
+
+  {
+
+    title <
+      name = Environment and History ;
+      issn = 0967-3407 ;
+      eissn = 1752-7023 ;
+      issnl = 0967-3407
+  >
+
+    param[journal_id] = whpeh
+    #Published 1995-Present
+
+    #For 1995-2016 see below on Ingenta
+    au < manifest ; 2017 ; Environment and History Volume 23 ; 23 >
+    au < manifest ; 2018 ; Environment and History Volume 24 ; 24 >
+    au < manifest ; 2019 ; Environment and History Volume 25 ; 25 >
+    au < manifest ; 2020 ; Environment and History Volume 26 ; 26 >
+    au < manifest ; 2021 ; Environment and History Volume 27 ; 27 >
+    au < manifest ; 2022 ; Environment and History Volume 28 ; 28 >
+    au < manifest ; 2023 ; Environment and History Volume 29 ; 29 >
+    au < exists ; 2024 ; Environment and History Volume 30 ; 30 >
+
+  }
+
+ }
+
+ #Ingenta
  {
     plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
     param[graphics_url] = http://graphics.ingentaconnect.com/
@@ -33,28 +114,28 @@
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
 
-    au < released ; 1995 ; Environment and History Volume 1 ; 1 >
-    au < released ; 1996 ; Environment and History Volume 2 ; 2 >
-    au < released ; 1997 ; Environment and History Volume 3 ; 3 >
-    au < released ; 1998 ; Environment and History Volume 4 ; 4 >
-    au < released ; 1999 ; Environment and History Volume 5 ; 5 >
-    au < released ; 2000 ; Environment and History Volume 6 ; 6 >
-    au < released ; 2001 ; Environment and History Volume 7 ; 7 >
-    au < released ; 2002 ; Environment and History Volume 8 ; 8 >
-    au < released ; 2003 ; Environment and History Volume 9 ; 9 >
-    au < released ; 2004 ; Environment and History Volume 10 ; 10 >
-    au < released ; 2005 ; Environment and History Volume 11 ; 11 >
-    au < released ; 2006 ; Environment and History Volume 12 ; 12 >
-    au < released ; 2007 ; Environment and History Volume 13 ; 13 >
-    au < released ; 2008 ; Environment and History Volume 14 ; 14 >
-    au < released ; 2009 ; Environment and History Volume 15 ; 15 >
-    au < released ; 2010 ; Environment and History Volume 16 ; 16 >
-    au < released ; 2011 ; Environment and History Volume 17 ; 17 >
-    au < released ; 2012 ; Environment and History Volume 18 ; 18 >
-    au < released ; 2013 ; Environment and History Volume 19 ; 19 >
-    au < released ; 2014 ; Environment and History Volume 20 ; 20 >
-    au < released ; 2015 ; Environment and History Volume 21 ; 21 >
-    au < released ; 2016 ; Environment and History Volume 22 ; 22 >
+    au < down ; 1995 ; Environment and History Volume 1 ; 1 >
+    au < down ; 1996 ; Environment and History Volume 2 ; 2 >
+    au < down ; 1997 ; Environment and History Volume 3 ; 3 >
+    au < down ; 1998 ; Environment and History Volume 4 ; 4 >
+    au < down ; 1999 ; Environment and History Volume 5 ; 5 >
+    au < down ; 2000 ; Environment and History Volume 6 ; 6 >
+    au < down ; 2001 ; Environment and History Volume 7 ; 7 >
+    au < down ; 2002 ; Environment and History Volume 8 ; 8 >
+    au < down ; 2003 ; Environment and History Volume 9 ; 9 >
+    au < down ; 2004 ; Environment and History Volume 10 ; 10 >
+    au < down ; 2005 ; Environment and History Volume 11 ; 11 >
+    au < down ; 2006 ; Environment and History Volume 12 ; 12 >
+    au < down ; 2007 ; Environment and History Volume 13 ; 13 >
+    au < down ; 2008 ; Environment and History Volume 14 ; 14 >
+    au < down ; 2009 ; Environment and History Volume 15 ; 15 >
+    au < down ; 2010 ; Environment and History Volume 16 ; 16 >
+    au < down ; 2011 ; Environment and History Volume 17 ; 17 >
+    au < down ; 2012 ; Environment and History Volume 18 ; 18 >
+    au < down ; 2013 ; Environment and History Volume 19 ; 19 >
+    au < down ; 2014 ; Environment and History Volume 20 ; 20 >
+    au < down ; 2015 ; Environment and History Volume 21 ; 21 >
+    au < down ; 2016 ; Environment and History Volume 22 ; 22 >
 
     }
 
@@ -62,12 +143,12 @@
     param[base_url] = https://www.ingentaconnect.com/
     param[api_url] = https://api.ingentaconnect.com/
 
-    au < released ; 2017 ; Environment and History Volume 23 ; 23 >
-    au < released ; 2018 ; Environment and History Volume 24 ; 24 >
-    au < released ; 2019 ; Environment and History Volume 25 ; 25 >
-    au < released ; 2020 ; Environment and History Volume 26 ; 26 >
-    au < released ; 2021 ; Environment and History Volume 27 ; 27 >
-    au < released ; 2022 ; Environment and History Volume 28 ; 28 >
+    au < down ; 2017 ; Environment and History Volume 23 ; 23 >
+    au < down ; 2018 ; Environment and History Volume 24 ; 24 >
+    au < down ; 2019 ; Environment and History Volume 25 ; 25 >
+    au < down ; 2020 ; Environment and History Volume 26 ; 26 >
+    au < down ; 2021 ; Environment and History Volume 27 ; 27 >
+    au < down ; 2022 ; Environment and History Volume 28 ; 28 >
     au < doNotProcess ; 2023 ; Environment and History Volume 29 ; 29 >
     #Moving to LUP/ATYPON in 2024
 
@@ -92,31 +173,31 @@
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
 
-    au < released ; 1992 ; Environmental Values Volume 1 ; 1 >
-    au < released ; 1993 ; Environmental Values Volume 2 ; 2 >
-    au < released ; 1994 ; Environmental Values Volume 3 ; 3 >
-    au < released ; 1995 ; Environmental Values Volume 4 ; 4 >
-    au < released ; 1996 ; Environmental Values Volume 5 ; 5 >
-    au < released ; 1997 ; Environmental Values Volume 6 ; 6 >
-    au < released ; 1998 ; Environmental Values Volume 7 ; 7 >
-    au < released ; 1999 ; Environmental Values Volume 8 ; 8 >
-    au < released ; 2000 ; Environmental Values Volume 9 ; 9 >
-    au < released ; 2001 ; Environmental Values Volume 10 ; 10 >
-    au < released ; 2002 ; Environmental Values Volume 11 ; 11 >
-    au < released ; 2003 ; Environmental Values Volume 12 ; 12 >
-    au < released ; 2004 ; Environmental Values Volume 13 ; 13 >
-    au < released ; 2005 ; Environmental Values Volume 14 ; 14 >
-    au < released ; 2006 ; Environmental Values Volume 15 ; 15 >
-    au < released ; 2007 ; Environmental Values Volume 16 ; 16 >
-    au < released ; 2008 ; Environmental Values Volume 17 ; 17 >
-    au < released ; 2009 ; Environmental Values Volume 18 ; 18 >
-    au < released ; 2010 ; Environmental Values Volume 19 ; 19 >
-    au < released ; 2011 ; Environmental Values Volume 20 ; 20 >
-    au < released ; 2012 ; Environmental Values Volume 21 ; 21 >
-    au < released ; 2013 ; Environmental Values Volume 22 ; 22 >
-    au < released ; 2014 ; Environmental Values Volume 23 ; 23 >
-    au < released ; 2015 ; Environmental Values Volume 24 ; 24 >
-    au < released ; 2016 ; Environmental Values Volume 25 ; 25 >
+    au < down ; 1992 ; Environmental Values Volume 1 ; 1 >
+    au < down ; 1993 ; Environmental Values Volume 2 ; 2 >
+    au < down ; 1994 ; Environmental Values Volume 3 ; 3 >
+    au < down ; 1995 ; Environmental Values Volume 4 ; 4 >
+    au < down ; 1996 ; Environmental Values Volume 5 ; 5 >
+    au < down ; 1997 ; Environmental Values Volume 6 ; 6 >
+    au < down ; 1998 ; Environmental Values Volume 7 ; 7 >
+    au < down ; 1999 ; Environmental Values Volume 8 ; 8 >
+    au < down ; 2000 ; Environmental Values Volume 9 ; 9 >
+    au < down ; 2001 ; Environmental Values Volume 10 ; 10 >
+    au < down ; 2002 ; Environmental Values Volume 11 ; 11 >
+    au < down ; 2003 ; Environmental Values Volume 12 ; 12 >
+    au < down ; 2004 ; Environmental Values Volume 13 ; 13 >
+    au < down ; 2005 ; Environmental Values Volume 14 ; 14 >
+    au < down ; 2006 ; Environmental Values Volume 15 ; 15 >
+    au < down ; 2007 ; Environmental Values Volume 16 ; 16 >
+    au < down ; 2008 ; Environmental Values Volume 17 ; 17 >
+    au < down ; 2009 ; Environmental Values Volume 18 ; 18 >
+    au < down ; 2010 ; Environmental Values Volume 19 ; 19 >
+    au < down ; 2011 ; Environmental Values Volume 20 ; 20 >
+    au < down ; 2012 ; Environmental Values Volume 21 ; 21 >
+    au < down ; 2013 ; Environmental Values Volume 22 ; 22 >
+    au < down ; 2014 ; Environmental Values Volume 23 ; 23 >
+    au < down ; 2015 ; Environmental Values Volume 24 ; 24 >
+    au < down ; 2016 ; Environmental Values Volume 25 ; 25 >
 
     }
 
@@ -124,12 +205,12 @@
     param[base_url] = https://www.ingentaconnect.com/
     param[api_url] = https://api.ingentaconnect.com/
 
-    au < released ; 2017 ; Environmental Values Volume 26 ; 26 >
-    au < released ; 2018 ; Environmental Values Volume 27 ; 27 >
-    au < released ; 2019 ; Environmental Values Volume 28 ; 28 >
-    au < released ; 2020 ; Environmental Values Volume 29 ; 29 >
-    au < released ; 2021 ; Environmental Values Volume 30 ; 30 >
-    au < released ; 2022 ; Environmental Values Volume 31 ; 31 >
+    au < down ; 2017 ; Environmental Values Volume 26 ; 26 >
+    au < down ; 2018 ; Environmental Values Volume 27 ; 27 >
+    au < down ; 2019 ; Environmental Values Volume 28 ; 28 >
+    au < down ; 2020 ; Environmental Values Volume 29 ; 29 >
+    au < down ; 2021 ; Environmental Values Volume 30 ; 30 >
+    au < down ; 2022 ; Environmental Values Volume 31 ; 31 >
     au < doNotProcess ; 2023 ; Environmental Values Volume 32 ; 32 >
     #Moved to Sage as of 2024. Back content moving end 2023.
 
@@ -169,10 +250,10 @@
     au < doNotProcess ; 2010 ; Nomadic Peoples Volume 14 ; 14 >
     au < doNotProcess ; 2011 ; Nomadic Peoples Volume 15 ; 15 >
     au < doNotProcess ; 2012 ; Nomadic Peoples Volume 16 ; 16 >
-    au < released ; 2013 ; Nomadic Peoples Volume 17 ; 17 >
-    au < released ; 2014 ; Nomadic Peoples Volume 18 ; 18 >
-    au < released ; 2015 ; Nomadic Peoples Volume 19 ; 19 >
-    au < released ; 2016 ; Nomadic Peoples Volume 20 ; 20 >
+    au < down ; 2013 ; Nomadic Peoples Volume 17 ; 17 >
+    au < down ; 2014 ; Nomadic Peoples Volume 18 ; 18 >
+    au < down ; 2015 ; Nomadic Peoples Volume 19 ; 19 >
+    au < down ; 2016 ; Nomadic Peoples Volume 20 ; 20 >
 
     }
 
@@ -180,18 +261,20 @@
     param[base_url] = https://www.ingentaconnect.com/
     param[api_url] = https://api.ingentaconnect.com/
 
-    au < released ; 2017 ; Nomadic Peoples Volume 21 ; 21 >
-    au < released ; 2018 ; Nomadic Peoples Volume 22 ; 22 >
-    au < released ; 2019 ; Nomadic Peoples Volume 23 ; 23 >
-    au < released ; 2020 ; Nomadic Peoples Volume 24 ; 24 >
-    au < released ; 2021 ; Nomadic Peoples Volume 25 ; 25 >
-    au < released ; 2022 ; Nomadic Peoples Volume 26 ; 26 >
+    au < down ; 2017 ; Nomadic Peoples Volume 21 ; 21 >
+    au < down ; 2018 ; Nomadic Peoples Volume 22 ; 22 >
+    au < down ; 2019 ; Nomadic Peoples Volume 23 ; 23 >
+    au < down ; 2020 ; Nomadic Peoples Volume 24 ; 24 >
+    au < down ; 2021 ; Nomadic Peoples Volume 25 ; 25 >
+    au < down ; 2022 ; Nomadic Peoples Volume 26 ; 26 >
     au < doNotProcess ; 2023 ; Nomadic Peoples Volume 27 ; 27 >
     #Moving to LUP/ATYPON in 2024
 
     }
   }
  }
+
+ # OJS3
  {
     implicit < status ; year ; param[year] ; name ; volume >
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
@@ -207,6 +290,7 @@
      
      param[journal_id] = JPS
      param[base_url] = https://www.whp-journals.co.uk/
+     #Online 20240625
      
      au < released ; 2016 ; 2016 ; The Journal of Population and Sustainability Volume 2016 ; 1 >
      au < released ; 2017 ; 2017 ; The Journal of Population and Sustainability Volume 2017 ; 1-2 >
@@ -217,6 +301,51 @@
      au < released ; 2022 ; 2022 ; The Journal of Population and Sustainability Volume 2022 ; 6 >
      au < released ; 2023 ; 2023 ; The Journal of Population and Sustainability Volume 2023 ; 7 >
      au < manifest ; 2024 ; 2024 ; The Journal of Population and Sustainability Volume 2024 ; 8 >
+  }
+
+  {
+
+    title <
+      name = Worldwide Waste: Journal of Interdisciplinary Studies ;
+      eissn = 2399-7117
+     >
+     
+     param[journal_id] = WW
+     param[base_url] = https://www.whp-journals.co.uk/
+     
+     au < doNotProcess ; 2018 ; 2018 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2018 ; 1 >
+     au < doNotProcess ; 2019 ; 2019 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2019 ; 2 >
+     au < doNotProcess ; 2020 ; 2020 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2020 ; 3 >
+     au < doNotProcess ; 2021 ; 2021 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2021 ; 4 >
+     au < manifest ; 2022 ; 2022 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2022 ; 5 >
+     au < manifest ; 2023 ; 2023 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2023 ; 6 >
+     au < expected ; 2024 ; 2024 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2024 ; 7 >
+  }
+
+  {
+
+    title <
+      name = Climates and Cultures in History ;
+      eissn = 2635-1331
+     >
+     
+     param[journal_id] = CCH
+     param[base_url] = https://www.whp-journals.co.uk/
+     
+     au < manifest ; 2024 ; 2024 ; Climates and Cultures in History Volume 2024 ; 1 >
+  }
+
+  {
+
+    title <
+      name = Plant Perspectives ;
+      eissn = 2753-3603
+     >
+     
+     param[journal_id] = PP
+     param[base_url] = https://www.whp-journals.co.uk/
+     
+     au < manifest ; 2024 ; 2024 ; Plant Perspectives Volume 2024 ; 1 >
   }
 
  }
