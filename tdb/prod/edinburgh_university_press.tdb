@@ -3053,4 +3053,21 @@
 
   }
 
+  {
+
+    title <
+      name = Philosophy, Politics and Critique ;
+      issn = 2755-9785 ;
+      eissn = 2755-9793 ;
+      issnl = 2755-9785 
+     >
+
+    plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+    implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
+    param[journal_id] = ppc
+
+    au < manifest ; 2024 ; Philosophy, Politics and Critique Volume 1 ; 1 ; https://www.euppublishing.com/ >
+
+  }
+
 }
