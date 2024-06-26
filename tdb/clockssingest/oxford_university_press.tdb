@@ -2627,7 +2627,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Biostatistics Volume 19 ; 19 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; 2019 ; Biostatistics Volume 20 ; 20 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Biostatistics Volume 21 ; 21 ; >
-    au < frozen ; exists ; 2021 ; 2021 ; Biostatistics Volume 22 ; 22 ; > #500 internal server error
+    au < finished ; manifest ; 2021 ; 2021 ; Biostatistics Volume 22 ; 22 ; reingest3.clockss.org:8083 > #500 internal server error
     au < deepCrawl ; exists ; 2022 ; 2022 ; Biostatistics Volume 23 ; 23 ; >
     au < frozen ; exists ; 2023 ; 2023 ; Biostatistics Volume 24 ; 24 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Biostatistics Volume 25 ; 25 ; >
@@ -5390,7 +5390,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Epidemiologic Reviews Volume 40 ; 40 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Epidemiologic Reviews Volume 41 ; 41 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; Epidemiologic Reviews Volume 42 ; 42 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2021 ; 2021 ; Epidemiologic Reviews Volume 43 ; 43 ; >
+    au < finished ; manifest ; 2021 ; 2021 ; Epidemiologic Reviews Volume 43 ; 43 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Epidemiologic Reviews Volume 44 ; 44 ; >
     au < frozen ; exists ; 2023 ; 2023 ; Epidemiologic Reviews Volume 45 ; 45 ; >
     au < expected ; exists ; 2024 ; 2024 ; Epidemiologic Reviews Volume 46 ; 46 ; >
@@ -7072,7 +7072,7 @@
     param[journal_id] = g3journal
     #2011 V1 to 2020 V10 had been processed in Genetics Society of America
 
-    au < frozen ; exists ; 2021 ; 2021 ; G3: Genes, Genomes, Genetics Volume 11 ; 11 ; >
+    au < finished ; manifest ; 2021 ; 2021 ; G3: Genes, Genomes, Genetics Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < ingNotReady ; exists ; 2022 ; 2022 ; G3: Genes, Genomes, Genetics Volume 12 ; 12 ; > #403 Forbidden, https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/g3journal/PAP/10.1093_g3journal_jkac206/1/jkac206_supplementary_data.pdf?Expires=1664967694&Signature=CG95KvRwykfA7ST2aFmPcSBMaYRm~4V8~uY19ebraBjAbgs3SRiKQqx92tXN0lBBKYvqTGHMWBHd5hRGSWG~n9m3kbLB-eNesOhBoSn08NDl966Gz05ILqMaPN4-25e1aajKRTSxPTXSkc3Svuw8HiVpb2Qv4a9ml0oFQnRoDMQENm4kgI03kMfmGN58h5FBtoTF07fvpn0OxISnl5LjNdqLFzHLI8NqWwlNFEWa1olioMkM2EVbAllzchybpb-HL8XqCsnnFHFHpIotHpE1XDhFGMjPW9GTi~le2fjLoMdrMG34R5Fr0H4poReLIjf0tUxwXMpXF2NUiQlf9ahsVA__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
     au < frozen ; exists ; 2023 ; 2023 ; G3: Genes, Genomes, Genetics Volume 13 ; 13 ; >
     au < manifest ; exists ; 2024 ; 2024 ; G3: Genes, Genomes, Genetics Volume 14 ; 14 ; >
@@ -7092,7 +7092,7 @@
     #1916 V1 to 2009 V183 NOT processed in Genetics Society of America (HW)
     #2010 V184 to 2020 V216 processed in Genetics Society of America (HW)
 
-    au < frozen ; exists ; 2021 ; 2021 ; Genetics Volume 217-219 ; 217-219 ; >
+    au < finished ; manifest ; 2021 ; 2021 ; Genetics Volume 217-219 ; 217-219 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Genetics Volume 220-222 ; 220-222 ; >
     au < frozen ; exists ; 2023 ; 2023 ; Genetics Volume 223-225 ; 223-225 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Genetics Volume 226-228 ; 226-228 ; >
