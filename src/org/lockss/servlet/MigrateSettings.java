@@ -33,11 +33,11 @@ public class MigrateSettings extends LockssServlet {
   static Logger log = Logger.getLogger("MigrateSettings");
 
   private static final String FOOTNOTE_HOST_URL =
-      "The V2 REST Service host name (localhost by default).";
+      "The target REST Service host name (localhost by default).";
   private static final String FOOTNOTE_USERNAME =
-      "The username used to connect to the rest interface of the V2 services.";
+      "The username used to connect to the rest interface of the target services.";
   private static final String FOOTNOTE_PASSWORD =
-      "The password used to connect to the rest interface of the V2 services.";
+      "The password used to connect to the rest interface of the target services.";
   static final String RESET_CONFIRMATION_MSG = "If migration is resumed it will start over from the beginning.  %sDo you want to proceed?";
   static final String RESET_ALREADY_DELETED = "Any AUs already deleted after migration will not be included.  ";
 
@@ -382,10 +382,10 @@ public class MigrateSettings extends LockssServlet {
     addSection(tbl, "Migration Target");
 
     addInputToTable(tbl,
-        "V2 Hostname" + addFootnote(FOOTNOTE_HOST_URL),
+        "Target Hostname" + addFootnote(FOOTNOTE_HOST_URL),
         KEY_HOSTNAME, hostname, 40);
     addInputToTable(tbl,
-        "V2 Configuration Service Port",
+        "Target Configuration Service Port",
         KEY_CFGSVC_UI_PORT, String.valueOf(cfgUiPort), 20);
     addInputToTable(tbl,
         "Username" + addFootnote(FOOTNOTE_USERNAME),
@@ -506,8 +506,8 @@ public class MigrateSettings extends LockssServlet {
 
     addSection(tbl, "Migration Target");
 
-    addFieldToTable(tbl, "V2 Hostname", hostname);
-    addFieldToTable(tbl, "V2 Configuration Service Port", String.valueOf(cfgUiPort));
+    addFieldToTable(tbl, "Target Hostname", hostname);
+    addFieldToTable(tbl, "Target Configuration Service Port", String.valueOf(cfgUiPort));
     addFieldToTable(tbl, "Username", userName);
     addHiddenFieldToTable(tbl, "Password", "********");
 
@@ -719,7 +719,7 @@ public class MigrateSettings extends LockssServlet {
       v2Cfg.put(LcapRouter.PARAM_MIGRATE_TO, migTo);
       log.info("Configuring to forward LCAP to: " + migTo);
     } else {
-      log.error("V2 didn't supply " + V2_PARAM_ACTUAL_V3_LCAP_PORT);
+      log.error("Target didn't supply " + V2_PARAM_ACTUAL_V3_LCAP_PORT);
     }
 
     // Datasource configuration
@@ -777,7 +777,7 @@ public class MigrateSettings extends LockssServlet {
         if (v2Pad instanceof PeerAddress.Tcp) {
           PeerAddress.Tcp v2Padv3 = (PeerAddress.Tcp)v2Pad;
           targetIp = v2Padv3.getIPAddr().toString();
-          log.debug("LCAP forward addr from V2 identity: " + targetIp);
+          log.debug("LCAP forward addr from target identity: " + targetIp);
           return targetIp;
         } else {
           log.error("Target doesn't have LCAP V3 identity: " + targetIdentity);
