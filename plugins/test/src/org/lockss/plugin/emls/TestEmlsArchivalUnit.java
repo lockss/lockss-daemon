@@ -51,6 +51,7 @@ public class TestEmlsArchivalUnit extends LockssTestCase {
 
 
   static final String ROOT_URL = "http://extra.shu.ac.uk/emls/";
+  static final String ROOT_HTTPS_URL = "https://extra.shu.ac.uk/emls/";
 
   public void setUp() throws Exception {
     super.setUp();
@@ -144,17 +145,21 @@ public class TestEmlsArchivalUnit extends LockssTestCase {
   public void testStartUrlConstruction() throws Exception {
     URL url = new URL(ROOT_URL);
     String expectedStr = ROOT_URL+"emlsjour.html";
+    String expectedHttpsStr = ROOT_HTTPS_URL+"emlsjour.html";
     DefinableArchivalUnit eAu = makeAu(url, 3);
-    assertEquals(ListUtil.list(expectedStr), eAu.getStartUrls());
+    
+    assertEquals(ListUtil.list(expectedStr,expectedHttpsStr), eAu.getStartUrls());
   }
 
   public void testGetUrlStems() throws Exception {
     String stem1 = "http://muse.jhu.edu/";
+    String stem1Https = "https://muse.jhu.edu/";
     DefinableArchivalUnit eAu1 = makeAu(new URL(stem1 + "emls/"), 3);
-    assertEquals(ListUtil.list(stem1), eAu1.getUrlStems());
+    assertEquals(ListUtil.list(stem1, stem1Https), eAu1.getUrlStems());
     String stem2 = "http://muse.jhu.edu:8080/";
+    String stem2Https = "https://muse.jhu.edu:8080/";
     DefinableArchivalUnit eAu2 = makeAu(new URL(stem2 + "emls/"), 3);
-    assertEquals(ListUtil.list(stem2), eAu2.getUrlStems());
+    assertEquals(ListUtil.list(stem2Https, stem2), eAu2.getUrlStems());
   }
 
   public void testShouldDoNewContentCrawlTooEarly() throws Exception {
