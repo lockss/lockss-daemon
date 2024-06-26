@@ -55,10 +55,10 @@ import org.lockss.daemon.status.*;
 public class LoginForm extends LockssServlet {
   static Logger log = Logger.getLogger("LoginForm");
 
-  static final String FORM_ACTION = "j_security_check";
+  public static final String FORM_ACTION = "j_security_check";
   static final String FORM_METHOD = "post";
-  static final String KEY_USERNAME = "j_username";
-  static final String KEY_PASSWORD = "j_password";
+  public static final String KEY_USERNAME = "j_username";
+  public static final String KEY_PASSWORD = "j_password";
 
   static final String ACTION_SUBMIT = "Login";
 

@@ -225,6 +225,13 @@ public class MigrateSettings extends LockssServlet {
     requestMethod = null;
   }
 
+  private void sanityCheckTargetConfig(Configuration targetCfg)
+      throws IOException {
+    if (StringUtil.isNullString(targetCfg.get("org.lockss.app.serviceBindings"))) {
+      throw new IOException("Target config fails sanity check");
+    }
+  }
+
   /**
    * Request handler for this {@link LockssServlet}.
    */
@@ -241,11 +248,13 @@ public class MigrateSettings extends LockssServlet {
             Configuration targetCfg =
               migrationMgr.getConfigFromMigrationTarget(hostname, cfgUiPort,
                                                         userName, userPass);
+            sanityCheckTargetConfig(targetCfg);
             mCfg = getMigrationConfig(hostname, targetCfg);
             isTargetConfigFetched = true;
             fetchError = null;
           } catch (IOException e) {
-            fetchError = "Could not fetch migration target configuration";
+            fetchError = "Could not fetch migration target configuration: " +
+              e.getMessage();
             log.error(fetchError, e);
             session.removeAttribute(KEY_FETCHED_V2_CONFIG);
             isTargetConfigFetched = false;

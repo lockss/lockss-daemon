@@ -47,6 +47,7 @@ import org.lockss.daemon.*;
 import org.lockss.db.*;
 import org.lockss.plugin.*;
 import org.lockss.servlet.MigrateContent;
+import org.lockss.servlet.LoginForm;
 import org.lockss.state.AuState;
 import org.lockss.state.AuState.MigrationState;
 import org.lockss.util.*;
@@ -85,7 +86,6 @@ import org.lockss.config.*;
  */
 public class MigrationManager extends BaseLockssDaemonManager
   implements ConfigurableManager  {
-
   protected static Logger log = Logger.getLogger("MigrationManager");
 
   public static final String PREFIX = Configuration.PREFIX + "v2.migrate.";
@@ -320,19 +320,30 @@ public class MigrationManager extends BaseLockssDaemonManager
         "/DaemonStatus?table=ConfigStatus&output=csv");
     log.debug("V2 config GET url: " + cfgStatUrl.toString());
 
-    LockssUrlConnection conn = UrlUtil.openConnection(cfgStatUrl.toString());
+    LockssUrlConnectionPool connectionPool = new LockssUrlConnectionPool();
+    connectionPool.setConnectTimeout(15000);
+
+    LockssUrlConnection conn = UrlUtil.openConnection(cfgStatUrl.toString(),
+                                                      connectionPool);
     conn.setCredentials(userName, userPass);
     conn.setUserAgent("lockss");
     conn.execute();
+    conn = UrlUtil.handleLoginForm(conn, userName, userPass, connectionPool);
 
     if (conn.getResponseCode() == 200) {
       try (InputStream csvInput = conn.getResponseInputStream()) {
-        return ConfigManager.fromProperties(propsFromCsv(csvInput));
+        Properties props = propsFromCsv(csvInput);
+        log.debug("Read " + props.size() + " props from target");
+        return ConfigManager.fromProperties(props);
       }
     }
 
+    // 403 response message (at least) from daemon comes back
+    // URL-encoded.  Running decoder here seems wrong but won't hurt
+    // much on a string that hasn't been encoded
     throw new IOException("Unexpected response from migration target: " +
-                          conn.getResponseCode());
+                          conn.getResponseCode() + ": " +
+                          URLDecoder.decode(conn.getResponseMessage(),"UTF-8"));
   }
 
   public boolean isTargetInMigrationMode(String hostname, int cfgUiPort,
