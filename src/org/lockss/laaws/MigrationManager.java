@@ -38,6 +38,7 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathFactory;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
+import org.apache.commons.csv.CSVRecord;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
 
@@ -401,7 +402,16 @@ public class MigrationManager extends BaseLockssDaemonManager
     Properties result = new Properties();
     InputStreamReader csvReader = new InputStreamReader(csvStream);
     CSVParser csvParser = new CSVParser(csvReader, CSVFormat.DEFAULT.withHeader("Name", "Value"));
-    csvParser.forEach(record -> result.put(record.get("Name"), record.get("Value")));
+    for (CSVRecord record : csvParser) {
+      try {
+        String key = record.get("Name");
+        String val = record.get("Value");
+        result.put(key, val);
+      } catch (IllegalArgumentException e) {
+        log.warning("Malformed CSV record: " + record);
+      }
+    }
+    log.debug("targetprops: " + result);
     return result;
   }
 
