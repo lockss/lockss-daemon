@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -114,6 +114,12 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_def_pause_time</string>
     <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^https?://%s%s%02d-[0-9]+/", base_url_host, base_url_path, volume</string>
+    </list>
   </entry>
   <entry>
   	<string>au_feature_urls</string>
