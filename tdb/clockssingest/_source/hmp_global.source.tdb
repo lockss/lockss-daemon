@@ -35,8 +35,8 @@
       #PRODUCTION
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/hmpglobal-released/
 
-      #Test
-      au < expected ; exists ; 2024 ; Journal of Invasive Cardiology Source Content 2024_01 ; 2024_01 >
+      #Production
+      au < ready ; exists ; 2024 ; Journal of Invasive Cardiology Source Content 2024_01 ; 2024_01 >
 
     }
 
