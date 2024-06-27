@@ -205,11 +205,11 @@
       param[journal_id] = vdt
 
       au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Vlaams Diergeneeskundig Tijdschrift Volume 2009 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; 2010 ; Vlaams Diergeneeskundig Tijdschrift Volume 2010 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Vlaams Diergeneeskundig Tijdschrift Volume 2010 ; >
       au < ready ; exists ; 2011 ; 2011 ; 2011 ; Vlaams Diergeneeskundig Tijdschrift Volume 2011 ; >
-      au < crawling ; exists ; 2012 ; 2012 ; 2012 ; Vlaams Diergeneeskundig Tijdschrift Volume 2012 ; >
-      au < crawling ; exists ; 2013 ; 2013 ; 2013 ; Vlaams Diergeneeskundig Tijdschrift Volume 2013 ; >
-      au < crawling ; exists ; 2014 ; 2014 ; 2014 ; Vlaams Diergeneeskundig Tijdschrift Volume 2014 ; >
+      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Vlaams Diergeneeskundig Tijdschrift Volume 2012 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Vlaams Diergeneeskundig Tijdschrift Volume 2013 ; >
+      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Vlaams Diergeneeskundig Tijdschrift Volume 2014 ; >
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Vlaams Diergeneeskundig Tijdschrift Volume 2015 ; >
       au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Vlaams Diergeneeskundig Tijdschrift Volume 2016 ; >
       au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Vlaams Diergeneeskundig Tijdschrift Volume 2017 ; >
@@ -249,11 +249,11 @@
       au < manifest ; exists ; 2007 ; 2007 ; 2007 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2007 ; >
       au < manifest ; exists ; 2008 ; 2008 ; 2008 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2008 ; >
       au < manifest ; exists ; 2009 ; 2009 ; 2009 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2009 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; 2010 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2010 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2010 ; >
       au < ready ; exists ; 2011 ; 2011 ; 2011 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2011 ; >
-      au < crawling ; exists ; 2012 ; 2012 ; 2012 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2012 ; >
-      au < crawling ; exists ; 2013 ; 2013 ; 2013 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2013 ; >
-      au < crawling ; exists ; 2014 ; 2014 ; 2014 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2014 ; >
+      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2012 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2013 ; >
+      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2014 ; >
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2015 ; >
       au < frozen ; exists ; 2016 ; 2016 ; 2016 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2016 ; >
       au < frozen ; exists ; 2017 ; 2017 ; 2017 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2017 ; >
@@ -301,11 +301,11 @@
       au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Afrika Focus Volume 2007 ; >
       au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Afrika Focus Volume 2008 ; >
       au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Afrika Focus Volume 2009 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; 2010 ; Afrika Focus Volume 2010 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; 2011 ; Afrika Focus Volume 2011 ; >
-      au < crawling ; exists ; 2012 ; 2012 ; 2012 ; Afrika Focus Volume 2012 ; >
-      au < crawling ; exists ; 2013 ; 2013 ; 2013 ; Afrika Focus Volume 2013 ; >
-      au < crawling ; exists ; 2014 ; 2014 ; 2014 ; Afrika Focus Volume 2014 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Afrika Focus Volume 2010 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Afrika Focus Volume 2011 ; >
+      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Afrika Focus Volume 2012 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Afrika Focus Volume 2013 ; >
+      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Afrika Focus Volume 2014 ; >
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Afrika Focus Volume 2015 ; >
       au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Afrika Focus Volume 2016 ; >
       au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Afrika Focus Volume 2017 ; >
@@ -351,10 +351,10 @@
       au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Agora Magazine Volume 2007 ; >
       au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Agora Magazine Volume 2008 ; >
       au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Agora Magazine Volume 2009 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; 2010 ; Agora Magazine Volume 2010 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; 2011 ; Agora Magazine Volume 2011 ; >
-      au < crawling ; exists ; 2012 ; 2012 ; 2012 ; Agora Magazine Volume 2012 ; >
-      au < crawling ; exists ; 2013 ; 2013 ; 2013 ; Agora Magazine Volume 2013 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Agora Magazine Volume 2010 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Agora Magazine Volume 2011 ; >
+      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Agora Magazine Volume 2012 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Agora Magazine Volume 2013 ; >
       au < ready ; exists ; 2014 ; 2014 ; 2014 ; Agora Magazine Volume 2014 ; >
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Agora Magazine Volume 2015 ; >
       au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Agora Magazine Volume 2016 ; >
@@ -421,11 +421,11 @@
       au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Brood & Rozen Volume 2007 ; >
       au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Brood & Rozen Volume 2008 ; >
       au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Brood & Rozen Volume 2009 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; 2010 ; Brood & Rozen Volume 2010 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; 2011 ; Brood & Rozen Volume 2011 ; >
-      au < crawling ; exists ; 2012 ; 2012 ; 2012 ; Brood & Rozen Volume 2012 ; >
-      au < crawling ; exists ; 2013 ; 2013 ; 2013 ; Brood & Rozen Volume 2013 ; >
-      au < crawling ; exists ; 2014 ; 2014 ; 2014 ; Brood & Rozen Volume 2014 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Brood & Rozen Volume 2010 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Brood & Rozen Volume 2011 ; >
+      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Brood & Rozen Volume 2012 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Brood & Rozen Volume 2013 ; >
+      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Brood & Rozen Volume 2014 ; >
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Brood & Rozen Volume 2015 ; >
       au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Brood & Rozen Volume 2016 ; >
       au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Brood & Rozen Volume 2017 ; >
@@ -470,11 +470,11 @@
       au < manifest ; exists ; 2006 ; 2006 ; 2006 ; De Uil van Minerva Volume 2006 ; >
       au < manifest ; exists ; 2007 ; 2007 ; 2007 ; De Uil van Minerva Volume 2007 ; >
 
-      au < crawling ; exists ; 2010 ; 2010 ; 2010 ; De Uil van Minerva Volume 2010 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; 2011 ; De Uil van Minerva Volume 2011 ; >
-      au < crawling ; exists ; 2012 ; 2012 ; 2012 ; De Uil van Minerva Volume 2012 ; >
-      au < crawling ; exists ; 2013 ; 2013 ; 2013 ; De Uil van Minerva Volume 2013 ; >
-      au < crawling ; exists ; 2014 ; 2014 ; 2014 ; De Uil van Minerva Volume 2014 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; De Uil van Minerva Volume 2010 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; De Uil van Minerva Volume 2011 ; >
+      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; De Uil van Minerva Volume 2012 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; De Uil van Minerva Volume 2013 ; >
+      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; De Uil van Minerva Volume 2014 ; >
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; De Uil van Minerva Volume 2015 ; >
       au < frozen ; exists ; 2016 ; 2016 ; 2016 ; De Uil van Minerva Volume 2016 ; >
       au < manifest ; exists ; 2017 ; 2017 ; 2017 ; De Uil van Minerva Volume 2017 ; >
@@ -537,10 +537,10 @@
       au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Ghendtsche Tydinghen Volume 2007 ; >
       au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Ghendtsche Tydinghen Volume 2008 ; >
       au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Ghendtsche Tydinghen Volume 2009 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; 2010 ; Ghendtsche Tydinghen Volume 2010 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; 2011 ; Ghendtsche Tydinghen Volume 2011 ; >
-      au < crawling ; exists ; 2012 ; 2012 ; 2012 ; Ghendtsche Tydinghen Volume 2012 ; >
-      au < crawling ; exists ; 2013 ; 2013 ; 2013 ; Ghendtsche Tydinghen Volume 2013 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Ghendtsche Tydinghen Volume 2010 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Ghendtsche Tydinghen Volume 2011 ; >
+      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Ghendtsche Tydinghen Volume 2012 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Ghendtsche Tydinghen Volume 2013 ; >
       au < ready ; exists ; 2014 ; 2014 ; 2014 ; Ghendtsche Tydinghen Volume 2014 ; >
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Ghendtsche Tydinghen Volume 2015 ; >
       au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Ghendtsche Tydinghen Volume 2016 ; >
@@ -657,8 +657,8 @@
       au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2007 ; >
       au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2008 ; >
       au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2009 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; 2010 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2010 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; 2011 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2011 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2010 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2011 ; >
       au < ready ; exists ; 2012 ; 2012 ; 2012 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2012 ; >
       au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2013 ; >
       au < manifest ; exists ; 2014 ; 2014 ; 2014 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2014 ; >
@@ -747,9 +747,9 @@
       au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2008 ; >
       au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2009 ; >
       au < ready ; exists ; 2010 ; 2010 ; 2010 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2010 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; 2011 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2011 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2011 ; >
       au < ready ; exists ; 2012 ; 2012 ; 2012 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2012 ; >
-      au < crawling ; exists ; 2013 ; 2013 ; 2013 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2013 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2013 ; >
       au < ready ; exists ; 2014 ; 2014 ; 2014 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2014 ; >
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2015 ; >
       au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2016 ; >
@@ -859,10 +859,10 @@
       #published 2010-2017
       param[journal_id] = scad
 
-      au < crawling ; exists ; 2010 ; 2010 ; 2010 ; International Journal Sustainable Construction & Design Volume 2010 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; International Journal Sustainable Construction & Design Volume 2010 ; >
       au < ready ; exists ; 2011 ; 2011 ; 2011 ; International Journal Sustainable Construction & Design Volume 2011 ; >
       au < ready ; exists ; 2012 ; 2012 ; 2012 ; International Journal Sustainable Construction & Design Volume 2012 ; >
-      au < crawling ; exists ; 2013 ; 2013 ; 2013 ; International Journal Sustainable Construction & Design Volume 2013 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; International Journal Sustainable Construction & Design Volume 2013 ; >
       au < frozen ; exists ; 2014 ; 2014 ; 2014 ; International Journal Sustainable Construction & Design Volume 2014 ; >
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; International Journal Sustainable Construction & Design Volume 2015 ; >
       au < frozen ; exists ; 2016 ; 2016 ; 2016 ; International Journal Sustainable Construction & Design Volume 2016 ; >
@@ -1377,10 +1377,10 @@
       au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Res Publica Volume 2008 ; >
       au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Res Publica Volume 2009 ; >
       au < ready ; exists ; 2010 ; 2010 ; 2010 ; Res Publica Volume 2010 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; 2011 ; Res Publica Volume 2011 ; >
-      au < crawling ; exists ; 2012 ; 2012 ; 2012 ; Res Publica Volume 2012 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Res Publica Volume 2011 ; >
+      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Res Publica Volume 2012 ; >
       au < ready ; exists ; 2013 ; 2013 ; 2013 ; Res Publica Volume 2013 ; >
-      au < crawling ; exists ; 2014 ; 2014 ; 2014 ; Res Publica Volume 2014 ; >
+      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Res Publica Volume 2014 ; >
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Res Publica Volume 2015 ; >
       au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Res Publica Volume 2016 ; >
       au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Res Publica Volume 2017 ; >
@@ -1487,7 +1487,7 @@
       au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Tijdschrift voor industriële cultuur Volume 2007 ; >
       au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Tijdschrift voor industriële cultuur Volume 2008 ; >
       au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Tijdschrift voor industriële cultuur Volume 2009 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; 2010 ; Tijdschrift voor industriële cultuur Volume 2010 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Tijdschrift voor industriële cultuur Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Tijdschrift voor industriële cultuur Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Tijdschrift voor industriële cultuur Volume 2012 ; >
       au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Tijdschrift voor industriële cultuur Volume 2013 ; >
@@ -1511,9 +1511,9 @@
       au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2007 ; >
       au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2008 ; >
       au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2009 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; 2010 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2010 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; 2011 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2011 ; >
-      au < crawling ; exists ; 2012 ; 2012 ; 2012 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2012 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2010 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2011 ; >
+      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2012 ; >
       au < ready ; exists ; 2013 ; 2013 ; 2013 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2013 ; >
       au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2014 ; >
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2015 ; >
@@ -1560,10 +1560,10 @@
       #published 2013-present
       param[journal_id] = snm
 
-      au < crawling ; exists ; 2013 ; 2013 ; 2013 ; Studies on National Movements Volume 2013 ; >
-      au < crawling ; exists ; 2014 ; 2014 ; 2014 ; Studies on National Movements Volume 2014 ; >
-      au < crawling ; exists ; 2015 ; 2015 ; 2015 ; Studies on National Movements Volume 2015 ; >
-      au < crawling ; exists ; 2019 ; 2019 ; 2019 ; Studies on National Movements Volume 2019 ; >
+      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Studies on National Movements Volume 2013 ; >
+      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Studies on National Movements Volume 2014 ; >
+      au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Studies on National Movements Volume 2015 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Studies on National Movements Volume 2019 ; >
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Studies on National Movements Volume 2020 ; >
       au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Studies on National Movements Volume 2021 ; >
       au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Studies on National Movements Volume 2022 ; >
