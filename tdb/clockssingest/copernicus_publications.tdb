@@ -3,7 +3,8 @@
   publisher <
     name = Copernicus Publications ;
     info[contract] = 2012 ;
-    info[back] = 1940 ;
+    info[back] = 1946 ;
+    info[min_year] = 1946 ;
     info[tester] = 5 ;
     info[platform] = CopernicusPublicationsPlugin
   >

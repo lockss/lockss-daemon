@@ -3,6 +3,8 @@
   publisher <
     name = American Medical Association ;
     info[contract] = 2008 ;
+    info[back] = 2008 ;
+    info[min_year] = 2008 ;
     info[tester] = 5 ;
     info[poller] = 2 ;
     info[platform] = SC
@@ -50,6 +52,7 @@
 
     param[resource_id] = 68
     param[journal_id] = jamadermatology
+    #Processed on HW 1920-2011, on older SC platform 2012-2015
     
     au < doNotProcess ; doNotProcess ; 2013 ; JAMA Dermatology Volume 149 ; 2013 ; https://jamanetwork.com/ ; >
     au < doNotProcess ; doNotProcess ; 2014 ; JAMA Dermatology Volume 150 ; 2014 ; https://jamanetwork.com/ ; >
@@ -77,6 +80,7 @@
 
     param[resource_id] = 69
     param[journal_id] = jamafacialplasticsurgery
+    #Processed on HW 1999-2011, on older SC platform 2012-2015
     #move to liebertpub
 
     au < doNotProcess ; doNotProcess ; 2013 ; JAMA Facial Plastic Surgery Volume 15 ; 2013 ; https://jamanetwork.com/ ; >
@@ -99,6 +103,7 @@
     >
 
     param[resource_id] = 71
+    #Processed on HW 1908-2011, on older SC platform 2012-2015
     param[journal_id] = jamainternalmedicine
     
     au < doNotProcess ; doNotProcess ; 2013 ; JAMA Internal Medicine Volume 173 ; 2013 ; https://jamanetwork.com/ ; >

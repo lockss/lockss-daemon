@@ -2,9 +2,9 @@
 
   publisher <
     name = Emerald Group Publishing ;
-    #info[back] = 1899 ;
-    info[back] = 1994 ;   #Typically no pdfs before 1994
     info[contract] = 2015 ;
+    info[back] = 1994 ;   #Typically no pdfs before 1994
+    info[min_year] = 1899 ;
     info[tester] = 8 ;
     info[poller] = 3
   >
