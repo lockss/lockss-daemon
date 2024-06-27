@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -100,7 +100,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_crawlrules</string>
     <list>
       <string>4,"^https?://%s/", base_url_host</string>
-      <string>1,"^https?://%s%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host, base_url_path</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host, base_url_path</string>
       <string>1,"^https?://%s%semlsjour\.html$", base_url_host, base_url_path</string>
       <string>1,"^https?://%s%slockss-volume%d\.html$", base_url_host, base_url_path, volume</string>
       <string>1,"^https?://%s%s%02d-[0-9]+/", base_url_host, base_url_path, volume</string>
@@ -139,5 +139,9 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
   </entry>
 </map>
