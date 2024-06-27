@@ -24,12 +24,8 @@
       param[journal_id] = airea
 
       au < manifest ; exists ; 2018 ; Airea: Arts and Interdisciplinary Research Volume 2018 ; 1 ; 2018 ; >
-      au < exists ; exists ; 2019 ; Airea: Arts and Interdisciplinary Research Volume 2019 ; 2 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Airea: Arts and Interdisciplinary Research Volume 2020 ; 3 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Airea: Arts and Interdisciplinary Research Volume 2021 ; 4 ; 2021 ; >
-      au < exists ; exists ; 2022 ; Airea: Arts and Interdisciplinary Research Volume 2022 ; 5 ; 2022 ; >
-      au < exists ; exists ; 2023 ; Airea: Arts and Interdisciplinary Research Volume 2023 ; 6 ; 2023 ; >
-      au < expected ; exists ; 2024 ; Airea: Arts and Interdisciplinary Research Volume 2024 ; 7 ; 2024 ; >
 
   }
 
@@ -213,20 +209,21 @@
       param[base_url] = https://journals.ed.ac.uk/
       param[journal_id] = leviathan
 
-      au < manifest ; exists ; 2011 ; Leviathan Volume 2011 ; 1 ; 2011 ; >
-      au < manifest ; exists ; 2012 ; Leviathan Volume 2012 ; 2 ; 2012 ; >
-      au < manifest ; exists ; 2013 ; Leviathan Volume 2013 ; 3 ; 2013 ; >
-      au < manifest ; exists ; 2014 ; Leviathan Volume 2014 ; 4 ; 2014 ; >
+      au < exists ; exists ; 2010 ; Leviathan Volume 2010 ; 1 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; Leviathan Volume 2011 ; 1-2 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; Leviathan Volume 2012 ; 3 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Leviathan Volume 2013 ; 3-4 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Leviathan Volume 2014 ; 4-5 ; 2014 ; >
       au < manifest ; exists ; 2015 ; Leviathan Volume 2015 ; 5 ; 2015 ; >
-      au < manifest ; exists ; 2016 ; Leviathan Volume 2016 ; 6 ; 2016 ; >
-      au < manifest ; exists ; 2017 ; Leviathan Volume 2017 ; 7 ; 2017 ; >
+      au < manifest ; exists ; 2016 ; Leviathan Volume 2016 ; 6-7 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; Leviathan Volume 2017 ; 7-8 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Leviathan Volume 2018 ; 8 ; 2018 ; >
-      au < manifest ; exists ; 2019 ; Leviathan Volume 2019 ; 9 ; 2019 ; >
+      au < manifest ; exists ; 2019 ; Leviathan Volume 2019 ; 9-10 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Leviathan Volume 2020 ; 10 ; 2020 ; >
-      au < manifest ; exists ; 2021 ; Leviathan Volume 2021 ; 11 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; Leviathan Volume 2022 ; 12 ; 2022 ; >
-      au < manifest ; exists ; 2023 ; Leviathan Volume 2023 ; 13 ; 2023 ; >
-      au < expected ; exists ; 2024 ; Leviathan Volume 2024 ; 14 ; 2024 ; >
+      au < manifest ; exists ; 2021 ; Leviathan Volume 2021 ; 11-12 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Leviathan Volume 2022 ; 12-13 ; 2022 ; >
+      au < manifest ; exists ; 2023 ; Leviathan Volume 2023 ; 13-14 ; 2023 ; >
+      au < expected ; exists ; 2024 ; Leviathan Volume 2024 ; 14-15 ; 2024 ; >
 
   }
 

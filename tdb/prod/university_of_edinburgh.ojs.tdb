@@ -144,12 +144,12 @@
       au < exists ; 2016 ; 37 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2016 ; 2016 >
       au < exists ; 2017 ; 38 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2017 ; 2017 >
       au < exists ; 2018 ; 39 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2018 ; 2018 >
-      au < manifest ; 2019 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2019 ; 40 ; 2019 >
-      au < manifest ; 2020 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2020 ; 41 ; 2020 >
-      au < manifest ; 2021 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2021 ; 42 ; 2021 >
-      au < manifest ; 2022 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2022 ; 43 ; 2022 >
-      au < manifest ; 2023 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2023 ; 44 ; 2023 >
-      au < expected ; 2024 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2024 ; 45 ; 2024 >
+      au < manifest ; 2019 ; 40 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2019 ; 2019 >
+      au < manifest ; 2020 ; 41 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2020 ; 2020 >
+      au < manifest ; 2021 ; 42 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2021 ; 2021 >
+      au < manifest ; 2022 ; 43 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2022 ; 2022 >
+      au < manifest ; 2023 ; 44 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2023 ; 2023 >
+      au < expected ; 2024 ; 45 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2024 ; 2024 >
 
   }
 
@@ -181,17 +181,17 @@
       param[base_url] = https://journals.ed.ac.uk/
       param[journal_id] = lithicstudies
 
-      au < exists ; 2014 ; Journal of Lithic Studies Volume 2014 ; 1 ; 2014 >
-      au < exists ; 2015 ; Journal of Lithic Studies Volume 2015 ; 2 ; 2015 >
-      au < exists ; 2016 ; Journal of Lithic Studies Volume 2016 ; 3 ; 2016 >
-      au < exists ; 2017 ; Journal of Lithic Studies Volume 2017 ; 4 ; 2017 >
-      au < exists ; 2018 ; Journal of Lithic Studies Volume 2018 ; 5 ; 2018 >
-      au < exists ; 2019 ; Journal of Lithic Studies Volume 2019 ; 6 ; 2019 >
-      au < exists ; 2020 ; Journal of Lithic Studies Volume 2020 ; 7 ; 2020 >
-      au < exists ; 2021 ; Journal of Lithic Studies Volume 2021 ; 8 ; 2021 >
-      au < exists ; 2022 ; Journal of Lithic Studies Volume 2022 ; 9 ; 2022 >
-      au < exists ; 2023 ; Journal of Lithic Studies Volume 2023 ; 10 ; 2023 >
-      au < exists ; 2024 ; Journal of Lithic Studies Volume 2024 ; 11 ; 2024 >
+      au < exists ; 2014 ; 1 ; Journal of Lithic Studies Volume 2014 ; 2014 >
+      au < exists ; 2015 ; 2 ; Journal of Lithic Studies Volume 2015 ; 2015 >
+      au < exists ; 2016 ; 3 ; Journal of Lithic Studies Volume 2016 ; 2016 >
+      au < exists ; 2017 ; 4 ; Journal of Lithic Studies Volume 2017 ; 2017 >
+      au < exists ; 2018 ; 5 ; Journal of Lithic Studies Volume 2018 ; 2018 >
+      au < exists ; 2019 ; 6 ; Journal of Lithic Studies Volume 2019 ; 2019 >
+      au < exists ; 2020 ; 7 ; Journal of Lithic Studies Volume 2020 ; 2020 >
+      au < exists ; 2021 ; 8 ; Journal of Lithic Studies Volume 2021 ; 2021 >
+      au < exists ; 2022 ; 9 ; Journal of Lithic Studies Volume 2022 ; 2022 >
+      au < exists ; 2023 ; 10 ; Journal of Lithic Studies Volume 2023 ; 2023 >
+      au < exists ; 2024 ; 11 ; Journal of Lithic Studies Volume 2024 ; 2024 >
 
   }
 
@@ -210,12 +210,12 @@
     au < manifest ; 2012 ; 3 ; Leviathan Volume 2012 ; 2012 >
     au < manifest ; 2013 ; 3-4 ; Leviathan Volume 2013 ; 2013 >
     au < manifest ; 2014 ; 4-5 ; Leviathan Volume 2014 ; 2014 >
-    au < manifest ; 2015 ; 5 ; Leviathan Volume 2015 No 2-3 ; 2015 >
-    au < manifest ; 2016 ; 6-7 ; Leviathan Volume 2016 No 2-3 ; 2016 >
+    au < manifest ; 2015 ; 5 ; Leviathan Volume 2015 ; 2015 >
+    au < manifest ; 2016 ; 6-7 ; Leviathan Volume 2016 ; 2016 >
     au < manifest ; 2017 ; 7-8 ; Leviathan Volume 2017 ; 2017 >
-    au < manifest ; 2018 ; 8 ; Leviathan Volume 2018 No 2-3 ; 2018 >
+    au < manifest ; 2018 ; 8 ; Leviathan Volume 2018 ; 2018 >
     au < manifest ; 2019 ; 9-10 ; Leviathan Volume 2019 ; 2019 >
-    au < manifest ; 2020 ; 10 ; Leviathan Volume 2020 No 2 ; 2020 >
+    au < manifest ; 2020 ; 10 ; Leviathan Volume 2020 ; 2020 >
     au < manifest ; 2021 ; 11-12 ; Leviathan Volume 2021 ; 2021 >
     au < manifest ; 2022 ; 12-13 ; Leviathan Volume 2022 ; 2022 >
     au < manifest ; 2023 ; 13-14 ; Leviathan Volume 2023 ; 2023 >
@@ -445,7 +445,7 @@
       eissn = 2405-691X
     >
 
-    param[base_url] = https://journals.ed.ac.uk/
+    param[base_url] = https://www.medanthrotheory.org/
     param[journal_id] = mat
     
     au < exists ; 2014 ; 1 ; Medicine Anthropology Theory Volume 2014 ; 2014 >
@@ -473,18 +473,18 @@
       param[journal_id] = southasianist
       #This title does not use a journal_id
 
-      au < exists ; 2012 ; 1 ; The South Asianist Journal Volume 2012 ; 2012 >
-      au < exists ; 2013 ; 2 ; The South Asianist Journal Volume 2013 ; 2013 >
-      au < exists ; 2014 ; 3 ; The South Asianist Journal Volume 2014 ; 2014 >
-      au < exists ; 2015 ; 4 ; The South Asianist Journal Volume 2015 ; 2015 >
-      au < exists ; 2016 ; 5 ; The South Asianist Journal Volume 2016 ; 2016 >
-      au < exists ; 2017 ; 6 ; The South Asianist Journal Volume 2017 ; 2017 >
-      au < exists ; 2018 ; 7 ; The South Asianist Journal Volume 2018 ; 2018 >
+      au < manifest ; 2012 ; 1 ; The South Asianist Journal Volume 2012 ; 2012 >
+      au < manifest ; 2013 ; 2 ; The South Asianist Journal Volume 2013 ; 2013 >
+      au < manifest ; 2014 ; 3 ; The South Asianist Journal Volume 2014 ; 2014 >
+      au < manifest ; 2015 ; 4 ; The South Asianist Journal Volume 2015 ; 2015 >
+      au < manifest ; 2016 ; 5 ; The South Asianist Journal Volume 2016 ; 2016 >
+      au < manifest ; 2017 ; 6 ; The South Asianist Journal Volume 2017 ; 2017 >
+      au < manifest ; 2018 ; 7 ; The South Asianist Journal Volume 2018 ; 2018 >
       au < exists ; 2019 ; 8 ; The South Asianist Journal Volume 2019 ; 2019 >
-      au < exists ; 2020 ; 9 ; The South Asianist Journal Volume 2020 ; 2020 >
-      au < exists ; 2021 ; 10 ; The South Asianist Journal Volume 2021 ; 2021 >
+      au < manifest ; 2020 ; 9 ; The South Asianist Journal Volume 2020 ; 2020 >
+      au < manifest ; 2021 ; 10 ; The South Asianist Journal Volume 2021 ; 2021 >
       au < exists ; 2022 ; 11 ; The South Asianist Journal Volume 2022 ; 2022 >
-      au < exists ; 2023 ; 12 ; The South Asianist Journal Volume 2023 ; 2023 >
+      au < manifest ; 2023 ; 12 ; The South Asianist Journal Volume 2023 ; 2023 >
       au < expected ; 2024 ; 13 ; The South Asianist Journal Volume 2024 ; 2024 >
 
   }
