@@ -2421,4 +2421,32 @@
 
   }
 
+  {
+
+      title <
+        name = Palestine/Israel Review ;
+        issn = 2834-4324 ;
+        eissn = 2834-4332
+      >
+
+      param[journal_id] = pir 
+
+      au < expected ; exists ; 2024 ; Palestine/Israel Review Volume 1 ; 1 ; 2024 ; >
+
+  }
+
+  {
+
+      title <
+        name = Theatre and Performance Notes and Counternotes ;
+        issn = 2693-101X ;
+        eissn = 2693-1028
+      >
+
+      param[journal_id] = TPNC 
+
+      au < expected ; exists ; 2024 ; Theatre and Performance Notes and Counternotes Volume 1 ; 1 ; 2024 ; >
+
+  }
+
 }
