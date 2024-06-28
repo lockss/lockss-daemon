@@ -10,7 +10,8 @@
     publisher <
       name = Finnish Literature Society (SKS) ;
       info[contract] = 2011 ;
-      info[back] = 2000 ;
+      info[back] = 2001 ;
+      info[min_year] = 2001 ;
       info[tester] = 5 ;
       info[poller] = 3 ;
       info[platform] = Ubiquity Books
@@ -110,7 +111,8 @@
     publisher <
       name = Kriterium ;
       info[contract] = 2011 ;
-      info[back] = 2000 ;
+      info[back] = 2016 ;
+      info[min_year] = 2016 ;
       info[tester] = 5 ;
       info[poller] = 3 ;
       info[platform] = Ubiquity Books
@@ -156,9 +158,10 @@
   {
 
     publisher <
-      name = London School of Economics Press ;
+      name = London School of Economics and Political Science ;
       info[contract] = 2011 ;
-      info[back] = 2000 ;
+      info[back] = 2018 ;
+      info[min_year] = 2018 ;
       info[tester] = 5 ;
       info[poller] = 3 ;
       info[platform] = Ubiquity Books
@@ -167,7 +170,7 @@
     {
 
       title <
-        name = London School of Economics Press Books ;
+        name = London School of Economics and Political Science Books ;
         type = bookSeries
       >
 
@@ -193,7 +196,8 @@
     publisher <
       name = Modern Academic Publishing ;
       info[contract] = 2011 ;
-      info[back] = 2000 ;
+      info[back] = 2015 ;
+      info[min_year] = 2015 ;
       info[tester] = 5 ;
       info[poller] = 3 ;
       info[platform] = Ubiquity Books
@@ -327,7 +331,8 @@
     publisher <
       name = Ubiquity Press ;
       info[contract] = 2011 ;
-      info[back] = 2000 ;
+      info[back] = 2013 ;
+      info[min_year] = 2013 ;
       info[tester] = 5 ;
       info[poller] = 3 ;
       info[platform] = Ubiquity Books

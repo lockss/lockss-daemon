@@ -4,6 +4,7 @@
     name = SciELO ;
     info[contract] = 2024 ;
     info[back] = 2000 ;
+    info[min_year] = 2000 ;
     info[tester] = 8 ;
     info[poller] = 8
   >
