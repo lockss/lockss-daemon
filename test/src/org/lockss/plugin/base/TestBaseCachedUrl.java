@@ -300,8 +300,12 @@ public class TestBaseCachedUrl extends LockssTestCase {
       createLeaf(url3, "", null);
 
       CachedUrl cu = getTestCu(url1);
+      assertFalse(cu.needsRelease());
       InputStream urlIs = cu.getUnfilteredInputStream();
+      assertTrue(cu.needsRelease());
       assertEquals(content1, StringUtil.fromInputStream(urlIs));
+      cu.release();
+      assertFalse(cu.needsRelease());
 
       cu = getTestCu(url2);
       urlIs = cu.getUnfilteredInputStream();
@@ -691,9 +695,14 @@ public class TestBaseCachedUrl extends LockssTestCase {
       createLeaf(url1, (String)null, newProps);
 
       CachedUrl cu = getTestCu(url1);
+      assertFalse(cu.needsRelease());
+
       CIProperties urlProps = cu.getProperties();
       assertEquals("value", urlProps.getProperty("test"));
       assertEquals("value2", urlProps.getProperty("test2"));
+      assertTrue(cu.needsRelease());
+      cu.release();
+      assertFalse(cu.needsRelease());
     }
 
     public void testAddProperty() throws Exception {

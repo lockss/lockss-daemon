@@ -174,6 +174,11 @@ public class PTestPlugin {
     public void release() {
     }
 
+    @Override
+    public boolean needsRelease() {
+      return false;
+    }
+
     public ArticleMetadataExtractor getArticleMetadataExtractor() {
       throw new UnsupportedOperationException("Not implemented");
     }

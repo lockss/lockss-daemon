@@ -440,6 +440,11 @@ public class BaseCachedUrl implements CachedUrl {
     leaf = null;
   }
 
+  @Override
+  public boolean needsRelease() {
+    return rnc != null;
+  }
+
   protected synchronized void ensureRnc() {
     if (rnc == null) {
       if (getNodeVersion() == null) {

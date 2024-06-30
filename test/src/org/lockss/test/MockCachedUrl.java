@@ -391,6 +391,11 @@ public class MockCachedUrl implements CachedUrl {
     open = false;
   }
 
+  @Override
+  public boolean needsRelease() {
+    return open;
+  }
+
   public boolean isOpen() {
     return open;
   }
