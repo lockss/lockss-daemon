@@ -80,4 +80,7 @@ public class MigrationConstants {
   public static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_DATABASENAME = "LockssMetadataDbManager";
   public static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_USER = "LOCKSS";
   public static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_PASSWORD = "insecure";
+
+  public static final String V2_POSTGRES_CONTAINER_NAME =
+    "lockss-postgres-service";
 }

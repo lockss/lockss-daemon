@@ -734,7 +734,8 @@ public class MigrateSettings extends LockssServlet {
     }
 
     String dsServerName = dsCfg.get("serverName");
-    if (StringUtil.isNullString(dsServerName)) {
+    if (StringUtil.isNullString(dsServerName) ||
+        dsServerName.equals(V2_POSTGRES_CONTAINER_NAME)) {
       dsCfg.put("serverName", targetHost);
     }
 
