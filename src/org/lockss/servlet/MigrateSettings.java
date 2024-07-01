@@ -35,9 +35,9 @@ public class MigrateSettings extends LockssServlet {
   private static final String FOOTNOTE_HOST_URL =
       "The target REST Service host name (localhost by default).";
   private static final String FOOTNOTE_USERNAME =
-      "The username used to connect to the rest interface of the target services.";
+      "The username used to connect to the rest interface/admin UI of the target services.";
   private static final String FOOTNOTE_PASSWORD =
-      "The password used to connect to the rest interface of the target services.";
+      "The password used to connect to the rest interface/admin UI of the target services.";
   static final String RESET_CONFIRMATION_MSG = "If migration is resumed it will start over from the beginning.  %sDo you want to proceed?";
   static final String RESET_ALREADY_DELETED = "Any AUs already deleted after migration will not be included.  ";
 
@@ -165,7 +165,15 @@ public class MigrateSettings extends LockssServlet {
   private void initParamsFromFormData() {
     // Migration target
     hostname = getParameter(KEY_HOSTNAME);
-    cfgUiPort = Integer.parseInt(getParameter(KEY_CFGSVC_UI_PORT));
+    String portStr = getParameter(KEY_CFGSVC_UI_PORT);
+    if (StringUtil.isNullString(portStr)) {
+      throw new IllegalArgumentException("Missing configuration service port");
+    }
+    try {
+      cfgUiPort = Integer.parseInt(portStr);
+    } catch (NumberFormatException e) {
+      throw new IllegalArgumentException("Invalid configuration service port");
+    }
     userName = getParameter(KEY_V2_USERNAME);
     userPass = getParameter(KEY_V2_PASSWORD);
 
@@ -175,6 +183,21 @@ public class MigrateSettings extends LockssServlet {
     // Migration configuration
     dryRunEnabled = hasParameter(KEY_DRY_RUN_ENABLED);
     isDeleteAusEnabled = hasParameter(KEY_DELETE_AUS);
+  }
+
+  private void checkFetchConfigParams() {
+    if (StringUtil.isNullString(hostname)) {
+      throw new IllegalArgumentException("Missing hostname");
+    }
+    if (StringUtil.isNullString(userName)) {
+      throw new IllegalArgumentException("Missing username");
+    }
+    if (StringUtil.isNullString(userPass)) {
+      throw new IllegalArgumentException("Missing password");
+    }
+    if (cfgUiPort <= 0) {
+      throw new IllegalArgumentException("Missing or illegal target configuration port");
+    }
   }
 
   /**
@@ -245,6 +268,7 @@ public class MigrateSettings extends LockssServlet {
         case ACTION_LOAD_V2_CFG:
           try {
             initParamsFromFormData();
+            checkFetchConfigParams();
             Configuration targetCfg =
               migrationMgr.getConfigFromMigrationTarget(hostname, cfgUiPort,
                                                         userName, userPass);
@@ -252,7 +276,7 @@ public class MigrateSettings extends LockssServlet {
             mCfg = getMigrationConfig(hostname, targetCfg);
             isTargetConfigFetched = true;
             fetchError = null;
-          } catch (IOException e) {
+          } catch (IOException | IllegalArgumentException e) {
             fetchError = "Could not fetch migration target configuration: " +
               e.getMessage();
             log.error(fetchError, e);
