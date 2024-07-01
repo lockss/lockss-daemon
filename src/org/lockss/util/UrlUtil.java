@@ -1365,10 +1365,10 @@ public class UrlUtil {
     // Detect redirect to ".../LoginForm"
     String actualUrl = conn.getActualUrl();
     if (actualUrl.indexOf("/LoginForm;jsessionid=") > 0) {
-      log.debug("Login form detected: " + actualUrl);
       String relUrl = org.lockss.servlet.LoginForm.FORM_ACTION;
       String logUrl = UrlUtil.resolveUri(actualUrl, relUrl);
-      log.debug("Logging in to: " + logUrl);
+      log.debug2("Login form detected: " + actualUrl +
+                 ", Logging in to: " + logUrl);
       // POST the login form values
       LockssUrlConnection logConn =
         UrlUtil.openConnection(LockssUrlConnection.METHOD_POST, logUrl, pool);

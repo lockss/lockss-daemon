@@ -140,6 +140,8 @@ public class LcapRouter
       if (!StringUtil.isNullString(migrateToVal)) {
         try {
           migrateTo = idMgr.findPeerIdentity(migrateToVal);
+          log.debug("Will forward LCAP traffic for migrated AUs to " +
+                    migrateTo);
         } catch (IdentityManager.MalformedIdentityKeyException e) {
           log.error("Malformed migrateTo peer identity: " +
               migrateToVal);
@@ -247,11 +249,12 @@ public class LcapRouter
       if (lmsg.getDestinationId() != myPeerId) {
         // Forward-outbound message from V2: Send message to destination peer
         try {
+          log.debug2("Forwarding outbound message from V2 to " +
+                     lmsg.getDestinationId());
           scomm.sendTo(pmsg, lmsg.getDestinationId());
         } catch (IOException e) {
           log.error("Could not forward peer message to destination", e);
         }
-
         return;
       } else {
         // Inbound message: Determine whether to handle locally or forward to V2
@@ -277,6 +280,8 @@ public class LcapRouter
           }
         }
         if (forward) {
+          log.debug2("Forwarding inbound message from " +
+                     lmsg.getOriginatorId() + " to V2 (" + migrateTo + ")");
           try {
             scomm.sendTo(pmsg, migrateTo);
           } catch (IOException e) {
