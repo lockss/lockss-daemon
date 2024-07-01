@@ -3393,7 +3393,7 @@
       comment[years] = Published 2022-present
       param[journal_code] = sd
 
-      au < ready ; exists ; 2022 ; Sensors & Diagnostics Volume 1 ; 1 ; 2022 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2022 ; Sensors & Diagnostics Volume 1 ; 1 ; 2022 ; https://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2023 ; Sensors & Diagnostics Volume 2 ; 2 ; 2023 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < manifest ; exists ; 2024 ; Sensors & Diagnostics Volume 3 ; 3 ; 2024 ; https://pubs.rsc.org/ ; >
 
