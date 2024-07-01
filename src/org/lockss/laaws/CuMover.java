@@ -73,7 +73,7 @@ public class CuMover extends CuBase {
   void buildCompatMap(CachedUrl cu) {
     CachedUrl[] v1Versions = cu.getCuVersions();
     for (CachedUrl cuVer : v1Versions) {
-      CIProperties verProps = cu.getProperties();
+      CIProperties verProps = cuVer.getProperties();
       String nodeUrl = verProps.getProperty(CachedUrl.PROPERTY_NODE_URL);
       String redirTo = verProps.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO);
       if (UrlUtil.isDirectoryRedirection(v1Url, nodeUrl)) {
