@@ -251,10 +251,14 @@ public abstract class LockssServlet extends HttpServlet
       }
 
       if (isDisallowInMigration()) {
-        String dis = "This function is disabled in migration mode.  Please use %s in your LOCKSS 2.x instance instead.";
-        displayWarningInLieuOfPage(v2ServletLink(dis));
-        resp.setStatus(HttpResponse.__503_Service_Unavailable, "Disabled");
-        return;
+        if (migrationMgr.isMigrationInDebugMode()) {
+          log.debug(myServletDescr().getServletName() + " normally disallowed in migration mode, allowing it in migration debug mode.");
+        } else {
+          String dis = "This function is disabled in migration mode.  Please use %s in your LOCKSS 2.x instance instead.";
+          displayWarningInLieuOfPage(v2ServletLink(dis));
+          resp.setStatus(HttpResponse.__503_Service_Unavailable, "Disabled");
+          return;
+        }
       }
 
       if (session != null) {
@@ -1350,8 +1354,13 @@ public abstract class LockssServlet extends HttpServlet
       String prefix = "This LOCKSS 1.x instance is in migration mode";
       String migstr = prefix +
         (migrationMgr.isRunning()
-         ? " and is actively mograting content to LOCKSS 2.x."
+         ? " and is actively migrating content to LOCKSS 2.x."
          : " but the migrator is not currently running");
+      if (isDisallowInMigration() && migrationMgr.isMigrationInDebugMode()) {
+        migstr +=
+          "\n(This page would be disabled but migration is in debug mode)";
+      }
+
       txt = errMsg == null ? migstr : migstr + "\n" + errMsg;
     }
 

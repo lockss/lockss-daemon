@@ -951,9 +951,8 @@ public class V2AuMover {
 
   private void setAuMigrationState(ArchivalUnit au,
                                    AuState.MigrationState state) {
-    // Do nothing if dry run or debug mode
-    if (migrationMgr.isDryRun() ||
-        migrationMgr.isMigrationInDebugMode()) {
+    // Do nothing if dry run mode
+    if (migrationMgr.isDryRun()) {
       return;
     }
 

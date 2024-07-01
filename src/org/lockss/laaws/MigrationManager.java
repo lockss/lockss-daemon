@@ -202,10 +202,6 @@ public class MigrationManager extends BaseLockssDaemonManager
         log.debug("Not setting inMigrationMode because doing a dry run");
         return;
       }
-      if (isMigrationInDebugMode()) {
-        log.debug("Not setting inMigrationMode because in debug mode");
-        return;
-      }
     }
     Configuration mCfg = cfgMgr.newConfiguration();
     mCfg.put(MigrationManager.PARAM_IS_IN_MIGRATION_MODE,
@@ -216,7 +212,7 @@ public class MigrationManager extends BaseLockssDaemonManager
 
   public void setIsDbMoved(boolean isDbMoved) throws IOException {
     if (isMigrationInDebugMode()) {
-      log.debug("Not setting isDbMoved becuae in debug mode");
+      log.debug("Not setting isDbMoved because in debug mode");
       return;
     }
     Configuration mCfg = cfgMgr.newConfiguration();
