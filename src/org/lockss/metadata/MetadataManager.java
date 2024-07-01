@@ -994,6 +994,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       return false;
     }
     ArchivalUnit au = pluginMgr.getAuFromId(auId);
+    if (au == null) {
+      log.debug("Probable inactive AU in pending queue, not indexing");
+      return false;
+    }
     return !AuUtil.isAuFrozen(au);
   }
 
