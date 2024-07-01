@@ -382,7 +382,7 @@
       au < released ; 2021 ; 2021 ; 2021 ; De Uil van Minerva Volume 2021 >
       au < released ; 2022 ; 2022 ; 2022 ; De Uil van Minerva Volume 2022 >
       au < manifest ; 2023 ; 2023 ; 2023 ; De Uil van Minerva Volume 2023 >
-      au < expected ; 2024 ; 2024 ; 2024 ; De Uil van Minerva Volume 2024 >
+      au < manifest ; 2024 ; 2024 ; 2024 ; De Uil van Minerva Volume 2024 >
 
   }
 
@@ -809,11 +809,11 @@
       au < exists ; 2017 ; 2017 ; 2017 ; EWOP in Practice Volume 2017 >
       au < exists ; 2018 ; 2018 ; 2018 ; EWOP in Practice Volume 2018 >
       au < exists ; 2019 ; 2019 ; 2019 ; EWOP in Practice Volume 2019 >
-      au < exists ; 2020 ; 2020 ; 2020 ; EWOP in Practice Volume 2020 >
-      au < exists ; 2021 ; 2021 ; 2021 ; EWOP in Practice Volume 2021 >
-      au < exists ; 2022 ; 2022 ; 2022 ; EWOP in Practice Volume 2022 >
-      au < exists ; 2023 ; 2023 ; 2023 ; EWOP in Practice Volume 2023 >
-      au < expected ; 2024 ; 2024 ; 2024 ; EWOP in Practice Volume 2024 >
+      au < manifest ; 2020 ; 2020 ; 2020 ; EWOP in Practice Volume 2020 >
+      au < manifest ; 2021 ; 2021 ; 2021 ; EWOP in Practice Volume 2021 >
+      au < manifest ; 2022 ; 2022 ; 2022 ; EWOP in Practice Volume 2022 >
+      au < manifest ; 2023 ; 2023 ; 2023 ; EWOP in Practice Volume 2023 >
+      au < manifest ; 2024 ; 2024 ; 2024 ; EWOP in Practice Volume 2024 >
 
   }
 
@@ -919,11 +919,11 @@
       au < exists ; 2015 ; 2015 ; 2015 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2015 >
       au < exists ; 2016 ; 2016 ; 2016 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2016 >
       au < exists ; 2017 ; 2017 ; 2017 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2017 >
-      au < exists ; 2018 ; 2018 ; 2018 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2018 >
-      au < exists ; 2019 ; 2019 ; 2019 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2019 >
-      au < exists ; 2020 ; 2020 ; 2020 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2020 >
-      au < exists ; 2021 ; 2021 ; 2021 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2021 >
-      au < exists ; 2022 ; 2022 ; 2022 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2022 >
+      au < manifest ; 2018 ; 2018 ; 2018 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2018 >
+      au < manifest ; 2019 ; 2019 ; 2019 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2019 >
+      au < manifest ; 2020 ; 2020 ; 2020 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2020 >
+      au < manifest ; 2021 ; 2021 ; 2021 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2021 >
+      au < manifest ; 2022 ; 2022 ; 2022 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2022 >
 
   }
 
@@ -975,8 +975,8 @@
       au < exists ; 2015 ; 2015 ; 2015 ; Sociologos Volume 2015 >
       au < exists ; 2016 ; 2016 ; 2016 ; Sociologos Volume 2016 >
       au < exists ; 2017 ; 2017 ; 2017 ; Sociologos Volume 2017 >
-      au < exists ; 2018 ; 2018 ; 2018 ; Sociologos Volume 2018 >
-      au < exists ; 2019 ; 2019 ; 2019 ; Sociologos Volume 2019 >
+      au < manifest ; 2018 ; 2018 ; 2018 ; Sociologos Volume 2018 >
+      au < manifest ; 2019 ; 2019 ; 2019 ; Sociologos Volume 2019 >
 
   }
 
@@ -1002,9 +1002,9 @@
       au < exists ; 2014 ; 2014 ; 2014 ; Sociologie Volume 2014 >
       au < exists ; 2015 ; 2015 ; 2015 ; Sociologie Volume 2015 >
       au < exists ; 2016 ; 2016 ; 2016 ; Sociologie Volume 2016 >
-      au < exists ; 2017 ; 2017 ; 2017 ; Sociologie Volume 2017 >
-      au < exists ; 2018 ; 2018 ; 2018 ; Sociologie Volume 2018 >
-      au < exists ; 2019 ; 2019 ; 2019 ; Sociologie Volume 2019 >
+      au < manifest ; 2017 ; 2017 ; 2017 ; Sociologie Volume 2017 >
+      au < manifest ; 2018 ; 2018 ; 2018 ; Sociologie Volume 2018 >
+      au < manifest ; 2019 ; 2019 ; 2019 ; Sociologie Volume 2019 >
 
   }
 
@@ -1042,21 +1042,21 @@
       #published 2010-2024
       param[journal_id] = nise
 
-      au < exists ; 2010 ; 2010 ; 2010 ; NISE Essays Volume 2010 >
+      au < manifest ; 2010 ; 2010 ; 2010 ; NISE Essays Volume 2010 >
       au < exists ; 2011 ; 2011 ; 2011 ; NISE Essays Volume 2011 >
       au < exists ; 2012 ; 2012 ; 2012 ; NISE Essays Volume 2012 >
-      au < exists ; 2013 ; 2013 ; 2013 ; NISE Essays Volume 2013 >
-      au < exists ; 2014 ; 2014 ; 2014 ; NISE Essays Volume 2014 >
+      au < manifest ; 2013 ; 2013 ; 2013 ; NISE Essays Volume 2013 >
+      au < manifest ; 2014 ; 2014 ; 2014 ; NISE Essays Volume 2014 >
       au < exists ; 2015 ; 2015 ; 2015 ; NISE Essays Volume 2015 >
       au < exists ; 2016 ; 2016 ; 2016 ; NISE Essays Volume 2016 >
       au < exists ; 2017 ; 2017 ; 2017 ; NISE Essays Volume 2017 >
-      au < exists ; 2018 ; 2018 ; 2018 ; NISE Essays Volume 2018 >
-      au < exists ; 2019 ; 2019 ; 2019 ; NISE Essays Volume 2019 >
-      au < exists ; 2020 ; 2020 ; 2020 ; NISE Essays Volume 2020 >
-      au < exists ; 2021 ; 2021 ; 2021 ; NISE Essays Volume 2021 >
+      au < manifest ; 2018 ; 2018 ; 2018 ; NISE Essays Volume 2018 >
+      au < manifest ; 2019 ; 2019 ; 2019 ; NISE Essays Volume 2019 >
+      au < manifest ; 2020 ; 2020 ; 2020 ; NISE Essays Volume 2020 >
+      au < manifest ; 2021 ; 2021 ; 2021 ; NISE Essays Volume 2021 >
       au < exists ; 2022 ; 2022 ; 2022 ; NISE Essays Volume 2022 >
-      au < exists ; 2023 ; 2023 ; 2023 ; NISE Essays Volume 2023 >
-      au < expected ; 2024 ; 2024 ; 2024 ; NISE Essays Volume 2024 >
+      au < manifest ; 2023 ; 2023 ; 2023 ; NISE Essays Volume 2023 >
+      au < manifest ; 2024 ; 2024 ; 2024 ; NISE Essays Volume 2024 >
 
   }
 
