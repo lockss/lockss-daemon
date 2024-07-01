@@ -77,9 +77,9 @@ public class LcapRouter
 
   @Override
   public void initService(LockssDaemon daemon) {
-    super.initService(daemon);
     idMgr = daemon.getIdentityManager();
     pluginMgr = daemon.getPluginManager();
+    super.initService(daemon);
   }
 
   @Override
