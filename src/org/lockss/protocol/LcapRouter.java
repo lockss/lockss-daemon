@@ -222,7 +222,10 @@ public class LcapRouter
     try {
       in = pmsg.getInputStream();
       V3LcapMessage lmsg = new V3LcapMessage(in, dataDir, getDaemon());
-      lmsg.setOriginatorId(pmsg.getSender());
+      if (lmsg.getOriginatorId() == null) {
+        log.warning("Incoming LcapMessage has no originator, setting it to PeerMessge sender");
+        lmsg.setOriginatorId(pmsg.getSender());
+      }
       return lmsg;
     } finally {
       IOUtil.safeClose(in);
