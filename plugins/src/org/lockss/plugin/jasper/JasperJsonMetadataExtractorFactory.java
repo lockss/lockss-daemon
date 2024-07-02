@@ -142,7 +142,7 @@ public class JasperJsonMetadataExtractorFactory implements FileMetadataExtractor
     static MultiMap jsonPathToMetadataField = new MultiValueMap();
 
     static {
-      jsonPathToMetadataField.put("created_date", MetadataField.FIELD_DATE);
+      jsonPathToMetadataField.put("bibjson.year", MetadataField.FIELD_DATE);
       jsonPathToMetadataField.put("bibjson.abstract", MetadataField.FIELD_ABSTRACT);
       jsonPathToMetadataField.put("bibjson.start_page", MetadataField.FIELD_START_PAGE);
       jsonPathToMetadataField.put("bibjson.end_page", MetadataField.FIELD_END_PAGE);

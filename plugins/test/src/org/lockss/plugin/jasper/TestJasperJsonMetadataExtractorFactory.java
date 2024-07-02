@@ -273,7 +273,7 @@ public class TestJasperJsonMetadataExtractorFactory extends LockssTestCase {
 
   static String goodAuthors = "[Jonathan D. Cherry, Jesse Me, John F. Crar, Yorghos Tripodi, Victor E. Alvare, Ian Maha, Bertrand R. Hube, Michael L. Alosc, Raymond Nick, Bobak Abdolmohammad, Patrick T. Kierna, Laney Ever, Sarah Svirsk, Katharine Babcoc, Hannah M. Gardne, Gaoyuan Men, Christopher J. Nowinsk, Brett M. Marti, Brigid Dwye, Neil W. Kowal, Robert C. Cant, Lee E. Goldstei, Douglas I. Kat, Robert A. Ster, Lindsay A. Farre, Ann C. McKe, Thor D. Stein]";
   static String goodTitle = "Variation in TMEM106B in chronic traumatic encephalopathy";
-  static String goodDate = "2018-11-04T12:37:46Z";
+  static String goodDate = "2018";
   static String goodJournal = "Acta Neuropathologica Communications";
   static String goodPublisher = "BMC";
 
