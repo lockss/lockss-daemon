@@ -61,6 +61,7 @@ public class TestLcapRouter extends LockssTestCase {
   private MockLockssDaemon daemon;
   MyLcapRouter rtr;
   MyBlockingStreamComm scomm;
+  IdentityManager idMgr;
 
   PeerIdentity myPeerId;
   PeerIdentity pid1;
@@ -79,8 +80,9 @@ public class TestLcapRouter extends LockssTestCase {
     daemon.setStreamCommManager(scomm);
     rtr = new MyLcapRouter();
     rtr.initService(daemon);
-    // V3LcapMessage.decode needs idmgr
-    daemon.getIdentityManager().startService();
+    // V3LcapMessage.decode needs idMgr
+    idMgr = daemon.getIdentityManager();
+    idMgr.startService();
     daemon.setRouterManager(rtr);
     rtr.startService();
     myPeerId = daemon.getIdentityManager()
@@ -94,8 +96,7 @@ public class TestLcapRouter extends LockssTestCase {
   }
 
   private PeerIdentity newPI(String key) throws Exception {
-    return (PeerIdentity)PrivilegedAccessor.
-      invokeConstructor(PeerIdentity.class.getName(), key);
+    return idMgr.findPeerIdentity(key);
   }
 
 
@@ -104,7 +105,6 @@ public class TestLcapRouter extends LockssTestCase {
       LcapMessageTestUtil.makeTestVoteMessage(pid1, pid2, tempDir, daemon);
     PeerMessage pmsg = rtr.makePeerMessage(lmsg);
     assertNull(pmsg.getSender());
-    pmsg.setSender(pid1);
     V3LcapMessage msg2 = rtr.makeV3LcapMessage(pmsg);
     assertEqualMessages(lmsg, msg2);
   }
@@ -237,7 +237,7 @@ public class TestLcapRouter extends LockssTestCase {
 
   private void assertEqualMessages(V3LcapMessage a, V3LcapMessage b)
       throws Exception {
-    assertTrue(a.getOriginatorId() == b.getOriginatorId());
+    assertSame(a.getOriginatorId(), b.getOriginatorId());
     assertEquals(a.getOpcode(), b.getOpcode());
     assertEquals(a.getTargetUrl(), b.getTargetUrl());
     assertEquals(a.getArchivalId(), b.getArchivalId());
