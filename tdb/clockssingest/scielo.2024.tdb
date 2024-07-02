@@ -25,7 +25,7 @@
     param[base_url] = https://www.scielo.br/
     param[journal_id] = aabc
 
-    au < crawling ; exists ; 2000 ; 72 ; Anais da Academia Brasileira de Ciências Volume 72 ; 2000 ; >
+    au < frozen ; exists ; 2000 ; 72 ; Anais da Academia Brasileira de Ciências Volume 72 ; 2000 ; >
     au < manifest ; exists ; 2001 ; 73 ; Anais da Academia Brasileira de Ciências Volume 73 ; 2001 ; >
     au < manifest ; exists ; 2002 ; 74 ; Anais da Academia Brasileira de Ciências Volume 74 ; 2002 ; >
     au < manifest ; exists ; 2003 ; 75 ; Anais da Academia Brasileira de Ciências Volume 75 ; 2003 ; >
@@ -35,7 +35,7 @@
     au < manifest ; exists ; 2007 ; 79 ; Anais da Academia Brasileira de Ciências Volume 79 ; 2007 ; >
     au < manifest ; exists ; 2008 ; 80 ; Anais da Academia Brasileira de Ciências Volume 80 ; 2008 ; >
     au < manifest ; exists ; 2009 ; 81 ; Anais da Academia Brasileira de Ciências Volume 81 ; 2009 ; >
-    au < crawling ; exists ; 2010 ; 82 ; Anais da Academia Brasileira de Ciências Volume 82 ; 2010 ; >
+    au < frozen ; exists ; 2010 ; 82 ; Anais da Academia Brasileira de Ciências Volume 82 ; 2010 ; >
     au < crawling ; exists ; 2011 ; 83 ; Anais da Academia Brasileira de Ciências Volume 83 ; 2011 ; >
     au < crawling ; exists ; 2012 ; 84 ; Anais da Academia Brasileira de Ciências Volume 84 ; 2012 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 85 ; Anais da Academia Brasileira de Ciências Volume 85 ; 2013 ; >
