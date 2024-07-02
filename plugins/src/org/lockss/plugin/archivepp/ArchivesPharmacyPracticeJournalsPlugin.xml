@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -90,6 +90,11 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>"Archives Pharmacy Practice Journals Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
     </entry>
     <entry>
+        <string>au_permission_url</string>
+        <!-- https://archivepp.com/lockss-manifest?volume=1 -->
+        <string>"%slockss-manifest?volume=%s", base_url, volume_name</string>
+    </entry>
+    <entry>
         <string>au_start_url</string>
         <!-- https://archivepp.com/lockss-manifest?volume=1 -->
         <string>"%slockss-manifest?volume=%s", base_url, volume_name</string>
@@ -110,6 +115,14 @@ POSSIBILITY OF SUCH DAMAGE.
         </list>
     </entry>
     <entry>
+        <string>text/html_crawl_filter_factory</string>
+        <string>org.lockss.plugin.archivepp.ArchivesPharmacyPracticeHtmlCrawlFilterFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_filter_factory</string>
+        <string>org.lockss.plugin.archivepp.ArchivesPharmacyPracticeHtmlHashFilterFactory</string>
+    </entry>
+    <entry>
         <string>plugin_article_iterator_factory</string>
         <string>org.lockss.plugin.archivepp.ArchivesPharmacyPracticeJournalsArticleIteratorFactory</string>
     </entry>
@@ -127,11 +140,29 @@ POSSIBILITY OF SUCH DAMAGE.
         </map>
     </entry>
     <entry>
-        <string>au_def_pause_time</string>
-        <long>3000</long>
+        <string>text/plain_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*</string>
+                <string>org.lockss.plugin.archivepp.ArchivesPharmacyPracticeRisMetadataExtractorFactory</string>
+            </entry>
+        </map>
     </entry>
     <entry>
-        <string>au_def_new_content_crawl</string>
-        <long>1209600000</long>
+      <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
+      <map>
+        <entry>
+          <string>*</string>
+          <string>org.lockss.plugin.archivepp.ArchivesPharmacyPracticeRisMetadataExtractorFactory</string>
+        </entry>
+      </map>
     </entry>
-</map>
+      <entry>
+          <string>au_def_pause_time</string>
+          <long>3000</long>
+      </entry>
+      <entry>
+          <string>au_def_new_content_crawl</string>
+          <long>1209600000</long>
+      </entry>
+  </map>
