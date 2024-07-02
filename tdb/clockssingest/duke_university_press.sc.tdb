@@ -24,28 +24,28 @@
 
       param[journal_id] = agricultural-history
 
-      au < ready ; exists ; 2000 ; 2000 ; Agricultural History Volume 74 ; 74 ; >
-      au < ready ; exists ; 2001 ; 2001 ; Agricultural History Volume 75 ; 75 ; >
-      au < ready ; exists ; 2002 ; 2002 ; Agricultural History Volume 76 ; 76 ; >
-      au < ready ; exists ; 2003 ; 2003 ; Agricultural History Volume 77 ; 77 ; >
-      au < ready ; exists ; 2004 ; 2004 ; Agricultural History Volume 78 ; 78 ; >
-      au < ready ; exists ; 2005 ; 2005 ; Agricultural History Volume 79 ; 79 ; >
-      au < ready ; exists ; 2006 ; 2006 ; Agricultural History Volume 80 ; 80 ; >
-      au < ready ; exists ; 2007 ; 2007 ; Agricultural History Volume 81 ; 81 ; >
-      au < ready ; exists ; 2008 ; 2008 ; Agricultural History Volume 82 ; 82 ; >
-      au < ready ; exists ; 2009 ; 2009 ; Agricultural History Volume 83 ; 83 ; >
-      au < ready ; exists ; 2010 ; 2010 ; Agricultural History Volume 84 ; 84 ; >
-      au < ready ; exists ; 2011 ; 2011 ; Agricultural History Volume 85 ; 85 ; >
-      au < ready ; exists ; 2012 ; 2012 ; Agricultural History Volume 86 ; 86 ; >
-      au < ready ; exists ; 2013 ; 2013 ; Agricultural History Volume 87 ; 87 ; >
-      au < ready ; exists ; 2014 ; 2014 ; Agricultural History Volume 88 ; 88 ; >
-      au < ready ; exists ; 2015 ; 2015 ; Agricultural History Volume 89 ; 89 ; >
-      au < ready ; exists ; 2016 ; 2016 ; Agricultural History Volume 90 ; 90 ; >
-      au < ready ; exists ; 2017 ; 2017 ; Agricultural History Volume 91 ; 91 ; >
-      au < ready ; exists ; 2018 ; 2018 ; Agricultural History Volume 92 ; 92 ; >
-      au < ready ; exists ; 2019 ; 2019 ; Agricultural History Volume 93 ; 93 ; >
-      au < ready ; exists ; 2020 ; 2020 ; Agricultural History Volume 94 ; 94 ; >
-      au < ready ; exists ; 2021 ; 2021 ; Agricultural History Volume 95 ; 95 ; >
+      au < crawling ; exists ; 2000 ; 2000 ; Agricultural History Volume 74 ; 74 ; >
+      au < crawling ; exists ; 2001 ; 2001 ; Agricultural History Volume 75 ; 75 ; >
+      au < crawling ; exists ; 2002 ; 2002 ; Agricultural History Volume 76 ; 76 ; >
+      au < crawling ; exists ; 2003 ; 2003 ; Agricultural History Volume 77 ; 77 ; >
+      au < crawling ; exists ; 2004 ; 2004 ; Agricultural History Volume 78 ; 78 ; >
+      au < crawling ; exists ; 2005 ; 2005 ; Agricultural History Volume 79 ; 79 ; >
+      au < crawling ; exists ; 2006 ; 2006 ; Agricultural History Volume 80 ; 80 ; >
+      au < crawling ; exists ; 2007 ; 2007 ; Agricultural History Volume 81 ; 81 ; >
+      au < crawling ; exists ; 2008 ; 2008 ; Agricultural History Volume 82 ; 82 ; >
+      au < crawling ; exists ; 2009 ; 2009 ; Agricultural History Volume 83 ; 83 ; >
+      au < crawling ; exists ; 2010 ; 2010 ; Agricultural History Volume 84 ; 84 ; >
+      au < crawling ; exists ; 2011 ; 2011 ; Agricultural History Volume 85 ; 85 ; >
+      au < crawling ; exists ; 2012 ; 2012 ; Agricultural History Volume 86 ; 86 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Agricultural History Volume 87 ; 87 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Agricultural History Volume 88 ; 88 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Agricultural History Volume 89 ; 89 ; >
+      au < crawling ; exists ; 2016 ; 2016 ; Agricultural History Volume 90 ; 90 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; Agricultural History Volume 91 ; 91 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; Agricultural History Volume 92 ; 92 ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Agricultural History Volume 93 ; 93 ; >
+      au < crawling ; exists ; 2020 ; 2020 ; Agricultural History Volume 94 ; 94 ; >
+      au < crawling ; exists ; 2021 ; 2021 ; Agricultural History Volume 95 ; 95 ; >
       au < frozen ; exists ; 2022 ; 2022 ; Agricultural History Volume 96 ; 96 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Agricultural History Volume 97 ; 97 ; >
       au < testing ; exists ; 2024 ; 2024 ; Agricultural History Volume 98 ; 98 ; >
@@ -799,13 +799,13 @@
 
       param[journal_id] = mediterranean-quarterly
 
-      au < ready ; exists ; 2010 ; 2010 ; Mediterranean Quarterly Volume 21 ; 21 ; >
-      au < ready ; exists ; 2011 ; 2011 ; Mediterranean Quarterly Volume 22 ; 22 ; >
-      au < ready ; exists ; 2012 ; 2012 ; Mediterranean Quarterly Volume 23 ; 23 ; >
-      au < ready ; exists ; 2013 ; 2013 ; Mediterranean Quarterly Volume 24 ; 24 ; >
-      au < ready ; exists ; 2014 ; 2014 ; Mediterranean Quarterly Volume 25 ; 25 ; >
-      au < ready ; exists ; 2015 ; 2015 ; Mediterranean Quarterly Volume 26 ; 26 ; >
-      au < ready ; exists ; 2016 ; 2016 ; Mediterranean Quarterly Volume 27 ; 27 ; >
+      au < crawling ; exists ; 2010 ; 2010 ; Mediterranean Quarterly Volume 21 ; 21 ; >
+      au < crawling ; exists ; 2011 ; 2011 ; Mediterranean Quarterly Volume 22 ; 22 ; >
+      au < crawling ; exists ; 2012 ; 2012 ; Mediterranean Quarterly Volume 23 ; 23 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Mediterranean Quarterly Volume 24 ; 24 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Mediterranean Quarterly Volume 25 ; 25 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Mediterranean Quarterly Volume 26 ; 26 ; >
+      au < crawling ; exists ; 2016 ; 2016 ; Mediterranean Quarterly Volume 27 ; 27 ; >
       au < frozen ; exists ; 2017 ; 2017 ; Mediterranean Quarterly Volume 28 ; 28 ; >
       au < frozen ; exists ; 2018 ; 2018 ; Mediterranean Quarterly Volume 29 ; 29 ; >
 
@@ -1296,18 +1296,18 @@
 
       param[journal_id] = trans-asia-photography
 
-      au < ready ; exists ; 2010 ; 2010 ; Trans Asia Photography Volume 2010 ; 1 ; >
-      au < ready ; exists ; 2011 ; 2011 ; Trans Asia Photography Volume 2011 ; 1-2 ; >
-      au < ready ; exists ; 2012 ; 2012 ; Trans Asia Photography Volume 2012 ; 2-3 ; >
-      au < ready ; exists ; 2013 ; 2013 ; Trans Asia Photography Volume 2013 ; 3-4 ; >
-      au < ready ; exists ; 2014 ; 2014 ; Trans Asia Photography Volume 2014 ; 4-5 ; >
-      au < ready ; exists ; 2015 ; 2015 ; Trans Asia Photography Volume 2015 ; 5-6 ; >
+      au < crawling ; exists ; 2010 ; 2010 ; Trans Asia Photography Volume 2010 ; 1 ; >
+      au < crawling ; exists ; 2011 ; 2011 ; Trans Asia Photography Volume 2011 ; 1-2 ; >
+      au < crawling ; exists ; 2012 ; 2012 ; Trans Asia Photography Volume 2012 ; 2-3 ; >
+      au < crawling ; exists ; 2013 ; 2013 ; Trans Asia Photography Volume 2013 ; 3-4 ; >
+      au < crawling ; exists ; 2014 ; 2014 ; Trans Asia Photography Volume 2014 ; 4-5 ; >
+      au < crawling ; exists ; 2015 ; 2015 ; Trans Asia Photography Volume 2015 ; 5-6 ; >
       au < testing ; exists ; 2016 ; 2016 ; Trans Asia Photography Volume 2016 ; 6-7 ; >
-      au < ready ; exists ; 2017 ; 2017 ; Trans Asia Photography Volume 2017 ; 7-8 ; >
-      au < ready ; exists ; 2018 ; 2018 ; Trans Asia Photography Volume 2018 ; 8-9 ; >
-      au < ready ; exists ; 2019 ; 2019 ; Trans Asia Photography Volume 2019 ; 9-10 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; Trans Asia Photography Volume 2017 ; 7-8 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; Trans Asia Photography Volume 2018 ; 8-9 ; >
+      au < crawling ; exists ; 2019 ; 2019 ; Trans Asia Photography Volume 2019 ; 9-10 ; >
       au < doNotProcess ; exists ; 2019-2020 ; 2019-2020 ; Trans Asia Photography Volume 10 ; 10 ; >
-      au < ready ; exists ; 2020 ; 2020 ; Trans Asia Photography Volume 2020 ; 10 ; >
+      au < crawling ; exists ; 2020 ; 2020 ; Trans Asia Photography Volume 2020 ; 10 ; >
       au < frozen ; exists ; 2021 ; 2021 ; Trans Asia Photography Volume 2021 ; 11 ; >
       au < frozen ; exists ; 2022 ; 2022 ; Trans Asia Photography Volume 2022 ; 12 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Trans Asia Photography Volume 2023 ; 13 ; >
