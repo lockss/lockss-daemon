@@ -44,7 +44,11 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.lockss.daemon.PluginException;
+import org.lockss.extractor.ArticleMetadataExtractor;
+import org.lockss.extractor.ArticleMetadataExtractorFactory;
+import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
+import org.lockss.filter.html.HtmlTags.Article;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.ArticleIteratorFactory;
@@ -54,7 +58,7 @@ import org.lockss.plugin.SubTreeArticleIterator.Spec;
 import org.lockss.util.Logger;
 import org.lockss.plugin.SubTreeArticleIteratorBuilder;
 
-public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFactory{
+public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory{
 
     protected static Logger log = Logger.getLogger(Ojs3TocParsingArticleIteratorFactory.class);
 
@@ -86,35 +90,84 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
         Iterator<ArticleFiles> tocIterator = sb.getSubTreeArticleIterator();
         for(ArticleFiles tocAF : IteratorUtils.asIterable(tocIterator)){
             CachedUrl tocCU = tocAF.getFullTextCu();
-            parseToc(tocCU, articles);
+            parseToc(tocCU, articles, au);
         }
-        return sb.getSubTreeArticleIterator();
+        
+        return articles.iterator();
     }
 
-    public void parseToc(CachedUrl tocCU, ArrayList<ArticleFiles> results){
+    public void parseToc(CachedUrl tocCU, ArrayList<ArticleFiles> results, ArchivalUnit au){
 
         /* Examples of where articles are located on TOC pages:
          *  https://raccefyn.co/index.php/raccefyn/issue/view/197 - <div class = article-summary>
          *  https://blakequarterly.org/index.php/blake/issue/view/84 - <article class = article>
          *  https://journals.whitingbirch.net/index.php/SWSSR/issue/view/196 - li inside of <ul class = cmp_article_list articles>
          */
+        CachedUrl pdfUrl = null;
+        CachedUrl htmlUrl = null;
+        CachedUrl abstractsUrl = null;
+
         try{
             Document doc = Jsoup.parse(tocCU.getUnfilteredInputStream(), AuUtil.getCharsetOrDefault(tocCU.getProperties()), tocCU.getUrl());
             Elements articles = doc.select("div.article-summary,article.article,ul.articles>li");
+            ArrayList<String> rolesForFullText = new ArrayList<>();
             for (Element article : articles) {
                 ArticleFiles af = new ArticleFiles();
-                Elements abstracts = article.select("div.article-summary-title>a,h4.article__title>a,h3.title>a");
-                af.setRole(ArticleFiles.ROLE_ABSTRACT,abstracts.attr("href")); //use absURL
+
                 Elements PDFs = article.select("div.article-summary-galleys>a,ul.article__btn-group>li>a.pdf,ul.galleys_links>li>a.pdf");
-                af.setRole(ArticleFiles.ROLE_FULL_TEXT_PDF,PDFs.attr("href"));
+                pdfUrl = au.makeCachedUrl(PDFs.attr("href"));
+                if(pdfUrl.hasContent()){
+                    af.setRole(ArticleFiles.ROLE_FULL_TEXT_PDF,pdfUrl);
+                    log.debug3("The PDF URL is "+pdfUrl.toString());
+                    rolesForFullText.add(ArticleFiles.ROLE_FULL_TEXT_PDF);
+                }
+
                 Elements HTMLs = article.select("ul.article__btn-group>li>a.file");
-                af.setRole(ArticleFiles.ROLE_FULL_TEXT_HTML,HTMLs.attr("href"));
+                htmlUrl = au.makeCachedUrl(HTMLs.attr("href"));
+                if(htmlUrl.hasContent()){
+                    af.setRole(ArticleFiles.ROLE_FULL_TEXT_HTML,htmlUrl);
+                    log.debug3("The HTML URL is " + htmlUrl.toString());
+                    rolesForFullText.add(ArticleFiles.ROLE_FULL_TEXT_HTML);
+                }
+
+                Elements abstracts = article.select("div.article-summary-title>a,h4.article__title>a,h3.title>a");
+                abstractsUrl = au.makeCachedUrl(abstracts.attr("href"));
+                if(abstractsUrl.hasContent()){
+                    af.setRole(ArticleFiles.ROLE_ABSTRACT,abstractsUrl); 
+                    log.debug3("The Abstract URL is "+abstractsUrl.toString());
+                    rolesForFullText.add(ArticleFiles.ROLE_ABSTRACT);
+                }
+
+                if (rolesForFullText.size() > 0) {
+                    af.setFullTextCu(null);
+                    for (String role : rolesForFullText) {
+                        log.debug3("The role is " + role);
+                      CachedUrl foundCu = af.getRoleCu(role);
+
+                      if (foundCu != null) {
+                        log.debug2(String.format("Full text CU reset to: %s", foundCu.getUrl()));
+                        af.setFullTextCu(foundCu);
+                        break;
+                      }
+                    }
+                }
+
                 results.add(af);
             }
         }catch(IOException ioe){
             log.debug("Error parsing CU", ioe);
+        }finally{
+            AuUtil.safeRelease(pdfUrl);
+            AuUtil.safeRelease(htmlUrl);
+            AuUtil.safeRelease(abstractsUrl);
         }
         
+    }
+
+    @Override
+    public ArticleMetadataExtractor createArticleMetadataExtractor(
+        MetadataTarget target) throws PluginException {
+        return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ABSTRACT);
     }
     
 }
