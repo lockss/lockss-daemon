@@ -620,6 +620,23 @@ public class TafHtmlHashFilterFactory implements FilterFactory {
             return false;
           }
         },
+        //In 2024, the html source of title section get changed again for both Abstract and Full Text
+        new NodeFilter() {
+              @Override
+              public boolean accept(Node node) {
+                if (node instanceof Span) {
+                  String spanClass = ((Span) node).getAttribute("class");
+                  if (spanClass != null && !spanClass.isEmpty()) {
+                    // check if the other version of the title has been saved already
+                    if (spanClass.equalsIgnoreCase("NLM_article-title hlfld-title")) {
+                      bD.hlFld_TitleSPAN = true;
+                      return true;
+                    }
+                  }
+                }
+                return false;
+              }
+            },
         new NodeFilter() {
           @Override
           public boolean accept (Node node) {
