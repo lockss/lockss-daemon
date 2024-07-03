@@ -83,15 +83,12 @@ public class BritishAcademyJournalsXmlMetadataExtractorFactory extends SourceXml
         protected void postCookProcess(SourceXmlSchemaHelper schemaHelper,
                                        CachedUrl cu, ArticleMetadata thisAM) {
 
-            //If we didn't get a valid date value, use the copyright year if it's there
-            if (thisAM.get(MetadataField.FIELD_DATE) == null) {
-                if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date) != null) {
-                    thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date));
-                } else {// last chance
-                    thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_edate));
-                }
+            //Use edate instead of copyright date as requested in Jira
+            if (thisAM.getRaw(JatsPublishingSchemaHelper.JATS_edate) != null) {
+                thisAM.replace(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_edate));
+            } else {// last chance
+                thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_date));
             }
         }
-
     }
 }
