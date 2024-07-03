@@ -48,7 +48,6 @@ import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractorFactory;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
-import org.lockss.filter.html.HtmlTags.Article;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.ArticleIteratorFactory;
@@ -116,40 +115,30 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
 
                 Elements PDFs = article.select("div.article-summary-galleys>a,ul.article__btn-group>li>a.pdf,ul.galleys_links>li>a.pdf");
                 pdfUrl = au.makeCachedUrl(PDFs.attr("href"));
-                if(pdfUrl.hasContent()){
-                    af.setRole(ArticleFiles.ROLE_FULL_TEXT_PDF,pdfUrl);
-                    log.debug3("The PDF URL is "+pdfUrl.toString());
-                    rolesForFullText.add(ArticleFiles.ROLE_FULL_TEXT_PDF);
-                }
+                addToListOfRoles(pdfUrl, af, rolesForFullText, ArticleFiles.ROLE_FULL_TEXT_PDF);
 
                 Elements HTMLs = article.select("ul.article__btn-group>li>a.file");
                 htmlUrl = au.makeCachedUrl(HTMLs.attr("href"));
-                if(htmlUrl.hasContent()){
-                    af.setRole(ArticleFiles.ROLE_FULL_TEXT_HTML,htmlUrl);
-                    log.debug3("The HTML URL is " + htmlUrl.toString());
-                    rolesForFullText.add(ArticleFiles.ROLE_FULL_TEXT_HTML);
-                }
+                addToListOfRoles(htmlUrl, af, rolesForFullText, ArticleFiles.ROLE_FULL_TEXT_HTML);
 
                 Elements abstracts = article.select("div.article-summary-title>a,h4.article__title>a,h3.title>a");
                 abstractsUrl = au.makeCachedUrl(abstracts.attr("href"));
-                if(abstractsUrl.hasContent()){
-                    af.setRole(ArticleFiles.ROLE_ABSTRACT,abstractsUrl); 
-                    log.debug3("The Abstract URL is "+abstractsUrl.toString());
-                    rolesForFullText.add(ArticleFiles.ROLE_ABSTRACT);
-                }
+                addToListOfRoles(abstractsUrl, af, rolesForFullText, ArticleFiles.ROLE_ABSTRACT);
 
                 if (rolesForFullText.size() > 0) {
-                    af.setFullTextCu(null);
                     for (String role : rolesForFullText) {
                         log.debug3("The role is " + role);
-                      CachedUrl foundCu = af.getRoleCu(role);
+                        CachedUrl foundCu = af.getRoleCu(role);
 
-                      if (foundCu != null) {
-                        log.debug2(String.format("Full text CU reset to: %s", foundCu.getUrl()));
-                        af.setFullTextCu(foundCu);
-                        break;
-                      }
+                        if (foundCu != null) {
+                            log.debug2(String.format("Full text CU set to: %s", foundCu.getUrl()));
+                            af.setFullTextCu(foundCu);
+                            break;
+                        }
                     }
+                }
+                if(af.getFullTextCu() == null){
+                    log.debug3("There is no full text. The abstract CU is " + abstractsUrl.toString());
                 }
 
                 results.add(af);
@@ -162,6 +151,14 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
             AuUtil.safeRelease(abstractsUrl);
         }
         
+    }
+
+    public void addToListOfRoles(CachedUrl cu, ArticleFiles af, ArrayList<String> rolesForFullText, String role){
+        if(cu.hasContent()){
+            af.setRole(role,cu);
+            log.debug3("The  URL is " + cu.toString() + " and the role is " + role);
+            rolesForFullText.add(role);
+        } return;
     }
 
     @Override
