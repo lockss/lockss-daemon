@@ -148,7 +148,7 @@
     au < finished ; crawling ; 2021 ; 2021 ; Journal of Water and Climate Change Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2022 ; 2022 ; Journal of Water and Climate Change Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2023 ; 2023 ; Journal of Water and Climate Change Volume 14 ; 14 ; >
-    au < testing ; exists ; 2024 ; 2024 ; Journal of Water and Climate Change Volume 15 ; 15 ; >
+    au < ready ; exists ; 2024 ; 2024 ; Journal of Water and Climate Change Volume 15 ; 15 ; >
 
   }
 
@@ -274,7 +274,7 @@
     au < finished ; crawling ; 2021 ; 2021 ; AQUA: Water Infrastructure, Ecosystems and Society Volume 70 ; 70 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2022 ; 2022 ; AQUA: Water Infrastructure, Ecosystems and Society Volume 71 ; 71 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2023 ; 2023 ; AQUA: Water Infrastructure, Ecosystems and Society Volume 72 ; 72 ; >
-    au < testing ; exists ; 2024 ; 2024 ; AQUA: Water Infrastructure, Ecosystems and Society Volume 73 ; 73 ; >
+    au < ready ; exists ; 2024 ; 2024 ; AQUA: Water Infrastructure, Ecosystems and Society Volume 73 ; 73 ; >
 
   }
   
@@ -351,7 +351,7 @@
     au < finished ; crawling ; 2021 ; 2021 ; Journal of Hydroinformatics Volume 23 ; 23 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2022 ; 2022 ; Journal of Hydroinformatics Volume 24 ; 24 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2023 ; 2023 ; Journal of Hydroinformatics Volume 25 ; 25 ; >
-    au < testing ; exists ; 2024 ; 2024 ; Journal of Hydroinformatics Volume 26 ; 26 ; >
+    au < ready ; exists ; 2024 ; 2024 ; Journal of Hydroinformatics Volume 26 ; 26 ; >
 
   }
   
@@ -383,7 +383,7 @@
     au < finished ; crawling ; 2021 ; 2021 ; Water Practice and Technology Volume 16 ; 16 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2022 ; 2022 ; Water Practice and Technology Volume 17 ; 17 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2023 ; 2023 ; Water Practice and Technology Volume 18 ; 18 ; >
-    au < testing ; exists ; 2024 ; 2024 ; Water Practice and Technology Volume 19 ; 19 ; >
+    au < ready ; exists ; 2024 ; 2024 ; Water Practice and Technology Volume 19 ; 19 ; >
 
   }
   
@@ -494,19 +494,19 @@
     au < manifest ; exists ; 1997 ; 1997 ; Water Quality Research Journal of Canada Volume 32 ; 32 ; >
     au < manifest ; exists ; 1998 ; 1998 ; Water Quality Research Journal of Canada Volume 33 ; 33 ; >
     au < manifest ; exists ; 1999 ; 1999 ; Water Quality Research Journal of Canada Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2000 ; 2000 ; Water Quality Research Journal of Canada Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2001 ; 2001 ; Water Quality Research Journal of Canada Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2002 ; 2002 ; Water Quality Research Journal of Canada Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2003 ; 2003 ; Water Quality Research Journal of Canada Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2004 ; 2004 ; Water Quality Research Journal of Canada Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2005 ; 2005 ; Water Quality Research Journal of Canada Volume 40 ; 40 ; >
-    au < manifest ; exists ; 2006 ; 2006 ; Water Quality Research Journal of Canada Volume 41 ; 41 ; >
-    au < manifest ; exists ; 2007 ; 2007 ; Water Quality Research Journal of Canada Volume 42 ; 42 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Water Quality Research Journal of Canada Volume 43 ; 43 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Water Quality Research Journal of Canada Volume 44 ; 44 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Water Quality Research Journal of Canada Volume 45 ; 45 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Water Quality Research Journal of Canada Volume 46 ; 46 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Water Quality Research Journal of Canada Volume 47 ; 47 ; >
+    au < testing ; exists ; 2000 ; 2000 ; Water Quality Research Journal of Canada Volume 35 ; 35 ; >
+    au < testing ; exists ; 2001 ; 2001 ; Water Quality Research Journal of Canada Volume 36 ; 36 ; >
+    au < testing ; exists ; 2002 ; 2002 ; Water Quality Research Journal of Canada Volume 37 ; 37 ; >
+    au < testing ; exists ; 2003 ; 2003 ; Water Quality Research Journal of Canada Volume 38 ; 38 ; >
+    au < testing ; exists ; 2004 ; 2004 ; Water Quality Research Journal of Canada Volume 39 ; 39 ; >
+    au < testing ; exists ; 2005 ; 2005 ; Water Quality Research Journal of Canada Volume 40 ; 40 ; >
+    au < testing ; exists ; 2006 ; 2006 ; Water Quality Research Journal of Canada Volume 41 ; 41 ; >
+    au < testing ; exists ; 2007 ; 2007 ; Water Quality Research Journal of Canada Volume 42 ; 42 ; >
+    au < testing ; exists ; 2008 ; 2008 ; Water Quality Research Journal of Canada Volume 43 ; 43 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Water Quality Research Journal of Canada Volume 44 ; 44 ; >
+    au < testing ; exists ; 2010 ; 2010 ; Water Quality Research Journal of Canada Volume 45 ; 45 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Water Quality Research Journal of Canada Volume 46 ; 46 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Water Quality Research Journal of Canada Volume 47 ; 47 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Water Quality Research Journal of Canada Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Water Quality Research Journal of Canada Volume 49 ; 49 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Water Quality Research Journal of Canada Volume 50 ; 50 ; >
@@ -544,19 +544,19 @@
     au < manifest ; exists ; 1997 ; 1997 ; Water Science and Technology Volume 35-36 ; 35-36 ; >
     au < manifest ; exists ; 1998 ; 1998 ; Water Science and Technology Volume 37-38 ; 37-38 ; >
     au < manifest ; exists ; 1999 ; 1999 ; Water Science and Technology Volume 39-40 ; 39-40 ; >
-    au < manifest ; exists ; 2000 ; 2000 ; Water Science and Technology Volume 41-42 ; 41-42 ; >
-    au < manifest ; exists ; 2001 ; 2001 ; Water Science and Technology Volume 43-44 ; 43-44 ; >
-    au < manifest ; exists ; 2002 ; 2002 ; Water Science and Technology Volume 45-46 ; 45-46 ; >
-    au < manifest ; exists ; 2003 ; 2003 ; Water Science and Technology Volume 47-48 ; 47-48 ; >
-    au < manifest ; exists ; 2004 ; 2004 ; Water Science and Technology Volume 49-50 ; 49-50 ; >
-    au < manifest ; exists ; 2005 ; 2005 ; Water Science and Technology Volume 51-52 ; 51-52 ; >
-    au < manifest ; exists ; 2006 ; 2006 ; Water Science and Technology Volume 53-54 ; 53-54 ; >
-    au < manifest ; exists ; 2007 ; 2007 ; Water Science and Technology Volume 55-56 ; 55-56 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Water Science and Technology Volume 57-58 ; 57-58 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Water Science and Technology Volume 59-60 ; 59-60 ; >
+    au < testing ; exists ; 2000 ; 2000 ; Water Science and Technology Volume 41-42 ; 41-42 ; >
+    au < testing ; exists ; 2001 ; 2001 ; Water Science and Technology Volume 43-44 ; 43-44 ; >
+    au < testing ; exists ; 2002 ; 2002 ; Water Science and Technology Volume 45-46 ; 45-46 ; >
+    au < testing ; exists ; 2003 ; 2003 ; Water Science and Technology Volume 47-48 ; 47-48 ; >
+    au < testing ; exists ; 2004 ; 2004 ; Water Science and Technology Volume 49-50 ; 49-50 ; >
+    au < testing ; exists ; 2005 ; 2005 ; Water Science and Technology Volume 51-52 ; 51-52 ; >
+    au < testing ; exists ; 2006 ; 2006 ; Water Science and Technology Volume 53-54 ; 53-54 ; >
+    au < testing ; exists ; 2007 ; 2007 ; Water Science and Technology Volume 55-56 ; 55-56 ; >
+    au < testing ; exists ; 2008 ; 2008 ; Water Science and Technology Volume 57-58 ; 57-58 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Water Science and Technology Volume 59-60 ; 59-60 ; >
     au < manifest ; exists ; 2010 ; 2010 ; Water Science and Technology Volume 61-62 ; 61-62 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Water Science and Technology Volume 63-64 ; 63-64 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Water Science and Technology Volume 65-66 ; 65-66 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Water Science and Technology Volume 63-64 ; 63-64 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Water Science and Technology Volume 65-66 ; 65-66 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Water Science and Technology Volume 67-68 ; 67-68 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Water Science and Technology Volume 69-70 ; 69-70 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Water Science and Technology Volume 71-72 ; 71-72 ; >
@@ -568,7 +568,7 @@
     au < finished ; crawling ; 2021 ; 2021 ; Water Science and Technology Volume 83-84 ; 83-84 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2022 ; 2022 ; Water Science and Technology Volume 85-86 ; 85-86 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2023 ; 2023 ; Water Science and Technology Volume 87-88 ; 87-88 ; >
-    au < manifest ; exists ; 2024 ; 2024 ; Water Science and Technology Volume 89-90 ; 89-90 ; >
+    au < testing ; exists ; 2024 ; 2024 ; Water Science and Technology Volume 89-90 ; 89-90 ; >
 
   }
   
@@ -586,15 +586,15 @@
 
     au < manifest ; exists ; 2001 ; 2001 ; Water Science and Technology: Water Supply Volume 1 ; 1 ; >
     au < manifest ; exists ; 2002 ; 2002 ; Water Science and Technology: Water Supply Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2003 ; 2003 ; Water Science and Technology: Water Supply Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2004 ; 2004 ; Water Science and Technology: Water Supply Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2005 ; 2005 ; Water Science and Technology: Water Supply Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2006 ; 2006 ; Water Science and Technology: Water Supply Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2007 ; 2007 ; Water Science and Technology: Water Supply Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Water Science and Technology: Water Supply Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Water Science and Technology: Water Supply Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Water Science and Technology: Water Supply Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Water Science and Technology: Water Supply Volume 11 ; 11 ; >
+    au < testing ; exists ; 2003 ; 2003 ; Water Science and Technology: Water Supply Volume 3 ; 3 ; >
+    au < testing ; exists ; 2004 ; 2004 ; Water Science and Technology: Water Supply Volume 4 ; 4 ; >
+    au < testing ; exists ; 2005 ; 2005 ; Water Science and Technology: Water Supply Volume 5 ; 5 ; >
+    au < testing ; exists ; 2006 ; 2006 ; Water Science and Technology: Water Supply Volume 6 ; 6 ; >
+    au < testing ; exists ; 2007 ; 2007 ; Water Science and Technology: Water Supply Volume 7 ; 7 ; >
+    au < testing ; exists ; 2008 ; 2008 ; Water Science and Technology: Water Supply Volume 8 ; 8 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Water Science and Technology: Water Supply Volume 9 ; 9 ; >
+    au < testing ; exists ; 2010 ; 2010 ; Water Science and Technology: Water Supply Volume 10 ; 10 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Water Science and Technology: Water Supply Volume 11 ; 11 ; >
     au < finished ; crawling ; 2012 ; 2012 ; Water Science and Technology: Water Supply Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Water Science and Technology: Water Supply Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Water Science and Technology: Water Supply Volume 14 ; 14 ; >
@@ -607,7 +607,7 @@
     au < finished ; crawling ; 2021 ; 2021 ; Water Supply Volume 21 ; 21 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2022 ; 2022 ; Water Supply Volume 22 ; 22 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2023 ; 2023 ; Water Supply Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2024 ; 2024 ; Water Supply Volume 24 ; 24 ; >
+    au < testing ; exists ; 2024 ; 2024 ; Water Supply Volume 24 ; 24 ; >
 
   }
   
