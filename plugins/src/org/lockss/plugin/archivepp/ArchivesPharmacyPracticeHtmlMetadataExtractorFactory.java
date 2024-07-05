@@ -34,10 +34,13 @@ package org.lockss.plugin.archivepp;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
+import org.apache.commons.lang3.StringUtils;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
+import org.lockss.util.TypedEntryMap;
 
 import java.io.IOException;
 
@@ -92,7 +95,7 @@ public class ArchivesPharmacyPracticeHtmlMetadataExtractorFactory implements Fil
     return new ArchivesPharmacyPracticeHtmlMetadataExtractor();
   }
   
-  public static class ArchivesPharmacyPracticeHtmlMetadataExtractor extends SimpleHtmlMetaTagMetadataExtractor {
+  public static class ArchivesPharmacyPracticeHtmlMetadataExtractor implements FileMetadataExtractor {
     
     // Map HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
@@ -111,11 +114,11 @@ public class ArchivesPharmacyPracticeHtmlMetadataExtractorFactory implements Fil
       // The following is/are for books
       tagMap.put("citation_isbn", MetadataField.FIELD_ISBN);
     }
-    
+
     @Override
-    public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
-        throws IOException {
-      ArticleMetadata am = super.extract(target, cu);
+    public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter) throws IOException, PluginException {
+      ArticleMetadata am =
+              new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       log.debug3("Inside extract method");
 
       am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
@@ -123,7 +126,22 @@ public class ArchivesPharmacyPracticeHtmlMetadataExtractorFactory implements Fil
 
 
       am.cook(tagMap);
-      return am;
+
+      String foundVolume = am.get(MetadataField.FIELD_VOLUME);
+
+      // Check VOLUME
+      if (!StringUtils.isEmpty(foundVolume)) {
+        // Get the AU's volume name from the AU properties. This must be set
+        TypedEntryMap tfProps = cu.getArchivalUnit().getProperties();
+        String AU_volume = tfProps.getString(ConfigParamDescr.VOLUME_NAME.getKey());
+
+        if (!StringUtils.isEmpty(foundVolume)) {
+          if ((AU_volume != null) && (AU_volume.equals(foundVolume))) {
+            log.debug3("After volume check, foundVolume = " + foundVolume + ", AU_volume" + AU_volume);
+            emitter.emitMetadata(cu, am);
+          }
+        }
+      }
     }
   }
 }
