@@ -99,6 +99,11 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
         // <p> class="mb0" data-component='SpringerLinkArticleCollections'>
         //	We re sorry, something doesn't seem to be working properly.</p>
         HtmlNodeFilters.tagWithTextRegex("p", "re sorry, something doesn't seem to be working properly\\."),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "MagazineFulltextArticleBodySuffix"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "app-article-metrics"),
+        HtmlNodeFilters.tagWithAttributeRegex("section", "class", "app-article-metrics"),
+        //Content collected in 2021 has extra "id" but contnet collect in 2020 does not have "id"
+        HtmlNodeFilters.tagWithAttributeRegex("h1", "class", "c-article-figure-title"),
       })),
       // now keep these
       HtmlNodeFilterTransform.include(new OrFilter(new NodeFilter[] {
