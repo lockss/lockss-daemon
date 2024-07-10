@@ -1,0 +1,24 @@
+{
+
+  publisher <
+    name = Australasian Journal of Plastic Surgery ;
+    info[contract] = 2023 ;
+    info[tester] = S ;
+    info[platform] = Source
+  >
+    hidden[proxy] = DIRECT
+
+  {
+
+     title <
+      name = Australasian Journal of Plastic Surgery Source Content
+    >
+    plugin = needs.SourcePlugin
+    implicit < status ; status2 ; year ; name ; param[directory] >
+    param[base_url] = https://clockss-test.lockss.org/sourcefiles/ajops-released/
+
+    au < expected ; exists ; 2024 ; Australasian Journal of Plastic Surgery Content 2024_01 ; 2024_01 >
+
+  }
+
+}
