@@ -2,7 +2,8 @@
   publisher <
     name = University of Edinburgh ; 
     info[contract] = 2023 ;
-    info[back] = 2020 ;
+    info[back] = 2005 ;
+    info[min_year] = 2005 ;
     info[tester] = 8 ;
     info[poller] = 8 ;
     info[platform] = OJS V3.3.0.17.
