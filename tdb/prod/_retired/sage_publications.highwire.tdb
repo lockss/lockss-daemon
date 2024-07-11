@@ -42919,7 +42919,7 @@ comment[mpj] = now published by Brill
     {
 
       title <
-        name = Science Technology & Society ;
+        name = Science, Technology & Society ;
         issn = 0971-7218 ;
         eissn = 0973-0796 ;
         issnl = 0971-7218
@@ -42931,10 +42931,10 @@ comment[mpj] = now published by Brill
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
 
-        au < HighWireStrVolPlugin ; down ; 2006 ; Science Technology & Society Volume 11 ; 11 >
-        au < HighWireStrVolPlugin ; down ; 2007 ; Science Technology & Society Volume 12 ; 12 >
-        au < HighWirePressPlugin ; down ; 2008 ; Science Technology & Society Volume 13 ; 13 >
-        au < HighWirePressPlugin ; down ; 2009 ; Science Technology & Society Volume 14 ; 14 >
+        au < HighWireStrVolPlugin ; down ; 2006 ; Science, Technology & Society Volume 11 ; 11 >
+        au < HighWireStrVolPlugin ; down ; 2007 ; Science, Technology & Society Volume 12 ; 12 >
+        au < HighWirePressPlugin ; down ; 2008 ; Science, Technology & Society Volume 13 ; 13 >
+        au < HighWirePressPlugin ; down ; 2009 ; Science, Technology & Society Volume 14 ; 14 >
 
       }
 
@@ -42944,27 +42944,27 @@ comment[mpj] = now published by Brill
         param[base_url] = http://sts.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < doNotProcess ; 1996 ; Science Technology & Society Volume 1 ; 1 >
-        au < doNotProcess ; 1997 ; Science Technology & Society Volume 2 ; 2 >
-        au < doNotProcess ; 1998 ; Science Technology & Society Volume 3 ; 3 >
-        au < doNotProcess ; 1999 ; Science Technology & Society Volume 4 ; 4 >
-        au < doNotProcess ; 2000 ; Science Technology & Society Volume 5 ; 5 >
-        au < doNotProcess ; 2001 ; Science Technology & Society Volume 6 ; 6 >
-        au < doNotProcess ; 2002 ; Science Technology & Society Volume 7 ; 7 >
-        au < doNotProcess ; 2003 ; Science Technology & Society Volume 8 ; 8 >
-        au < doNotProcess ; 2004 ; Science Technology & Society Volume 9 ; 9 >
-        au < doNotProcess ; 2005 ; Science Technology & Society Volume 10 ; 10 >
-        au < doNotProcess ; 2006 ; Science Technology & Society Volume 11 ; 11 >
-        au < doNotProcess ; 2007 ; Science Technology & Society Volume 12 ; 12 >
-        au < doNotProcess ; 2008 ; Science Technology & Society Volume 13 ; 13 >
-        au < doNotProcess ; 2009 ; Science Technology & Society Volume 14 ; 14 >
-        au < down ; 2010 ; Science Technology & Society Volume 15 ; 15 >
-        au < down ; 2011 ; Science Technology & Society Volume 16 ; 16 >
-        au < down ; 2012 ; Science Technology & Society Volume 17 ; 17 >
-        au < down ; 2013 ; Science Technology & Society Volume 18 ; 18 >
-        au < down ; 2014 ; Science Technology & Society Volume 19 ; 19 >
-        au < down ; 2015 ; Science Technology & Society Volume 20 ; 20 >
-        au < doNotProcess ; 2016 ; Science Technology & Society Volume 21 ; 21 >
+        au < doNotProcess ; 1996 ; Science, Technology & Society Volume 1 ; 1 >
+        au < doNotProcess ; 1997 ; Science, Technology & Society Volume 2 ; 2 >
+        au < doNotProcess ; 1998 ; Science, Technology & Society Volume 3 ; 3 >
+        au < doNotProcess ; 1999 ; Science, Technology & Society Volume 4 ; 4 >
+        au < doNotProcess ; 2000 ; Science, Technology & Society Volume 5 ; 5 >
+        au < doNotProcess ; 2001 ; Science, Technology & Society Volume 6 ; 6 >
+        au < doNotProcess ; 2002 ; Science, Technology & Society Volume 7 ; 7 >
+        au < doNotProcess ; 2003 ; Science, Technology & Society Volume 8 ; 8 >
+        au < doNotProcess ; 2004 ; Science, Technology & Society Volume 9 ; 9 >
+        au < doNotProcess ; 2005 ; Science, Technology & Society Volume 10 ; 10 >
+        au < doNotProcess ; 2006 ; Science, Technology & Society Volume 11 ; 11 >
+        au < doNotProcess ; 2007 ; Science, Technology & Society Volume 12 ; 12 >
+        au < doNotProcess ; 2008 ; Science, Technology & Society Volume 13 ; 13 >
+        au < doNotProcess ; 2009 ; Science, Technology & Society Volume 14 ; 14 >
+        au < down ; 2010 ; Science, Technology & Society Volume 15 ; 15 >
+        au < down ; 2011 ; Science, Technology & Society Volume 16 ; 16 >
+        au < down ; 2012 ; Science, Technology & Society Volume 17 ; 17 >
+        au < down ; 2013 ; Science, Technology & Society Volume 18 ; 18 >
+        au < down ; 2014 ; Science, Technology & Society Volume 19 ; 19 >
+        au < down ; 2015 ; Science, Technology & Society Volume 20 ; 20 >
+        au < doNotProcess ; 2016 ; Science, Technology & Society Volume 21 ; 21 >
 
       }
 
