@@ -17,7 +17,7 @@
     #param[base_url] = http://ojs.ethnobiology.org/
 
     param[journal_id] = ebl
-    #moved to ojs3
+    #moved to ojs3 Open Journal Systems 3.1.2.1, malformed permission statement.
 
     au < ojs2.OJS2Plugin ; down ; 2010 ; 1 ; Ethnobiology Letters Volume 1 ; 2010 ; http://ojs.ethnobiology.org/ >
     au < ojs2.OJS2Plugin ; down ; 2011 ; 2 ; Ethnobiology Letters Volume 2 ; 2011 ; http://ojs.ethnobiology.org/ >
@@ -42,28 +42,11 @@
     title <
       name = Journal of Ethnobiology ;
       issn = 0278-0771 ;
+      eissn = 2162-4496 ;
       issnl = 0278-0771
     >
-#    { #not on ojs.
-#    plugin = org.lockss.plugin.ojs2.OJS2Plugin
-#    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-#    #param[base_url] = http://ojs.ethnobiology.org/
-#
-#    param[journal_id] = ebl
-#    
-#    au < doNotProcess ; 2010 ; 30 ; Journal of Ethnobiology Volume 30 ; 2010 ; https://ojs.ethnobiology.org/ >
-#    au < doNotProcess ; 2011 ; 31 ; Journal of Ethnobiology Volume 31 ; 2011 ; https://ojs.ethnobiology.org/ >
-#    au < doNotProcess ; 2012 ; 32 ; Journal of Ethnobiology Volume 32 ; 2012 ; https://ojs.ethnobiology.org/ >
-#    au < doNotProcess ; 2013 ; 33 ; Journal of Ethnobiology Volume 33 ; 2013 ; https://ojs.ethnobiology.org/ >
-#    au < doNotProcess ; 2014 ; 34 ; Journal of Ethnobiology Volume 34 ; 2014 ; https://ojs.ethnobiology.org/ >
-#    au < doNotProcess ; 2015 ; 35 ; Journal of Ethnobiology Volume 35 ; 2015 ; https://ojs.ethnobiology.org/ >
-#    au < doNotProcess ; 2016 ; 36 ; Journal of Ethnobiology Volume 36 ; 2016 ; https://ojs.ethnobiology.org/ >
-#    au < doNotProcess ; 2017 ; 37 ; Journal of Ethnobiology Volume 37 ; 2017 ; https://ojs.ethnobiology.org/ >
-#    au < exists ; 2018 ; 38 ; Journal of Ethnobiology Volume 38 ; 2018 ; https://ojs.ethnobiology.org/ >
-#
-#    }
-#
 
+    #Moved to Sage
     {
     plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
     implicit < status ; year ; name ; param[volume_name] >
