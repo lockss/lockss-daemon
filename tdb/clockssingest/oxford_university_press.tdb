@@ -350,7 +350,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Age and Ageing Volume 48 ; 48 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Age and Ageing Volume 49 ; 49 ; >
     au < finished ; manifest ; 2021 ; 2021 ; Age and Ageing Volume 50 ; 50 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2022 ; 2022 ; Age and Ageing Volume 51 ; 51 ; >
+    au < finished ; manifest ; 2022 ; 2022 ; Age and Ageing Volume 51 ; 51 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2023 ; 2023 ; Age and Ageing Volume 52 ; 52 ; >
     au < testing ; exists ; 2024 ; 2024 ; Age and Ageing Volume 53 ; 53 ; >
 
@@ -583,7 +583,7 @@
     au < finished ; manifest ; 2019 ; 2019 ; The American Journal of Clinical Nutrition Volume 109-110 ; 109-110 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; The American Journal of Clinical Nutrition Volume 111-112 ; 111-112 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; 2021 ; The American Journal of Clinical Nutrition Volume 113-114 ; 113-114 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2022 ; 2022 ; The American Journal of Clinical Nutrition Volume 115-116 ; 115-116 ; >
+    au < finished ; manifest ; 2022 ; 2022 ; The American Journal of Clinical Nutrition Volume 115-116 ; 115-116 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -789,7 +789,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; American Journal of Health-System Pharmacy Volume 76 ; 76 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; American Journal of Health-System Pharmacy Volume 77 ; 77 ; >
     au < deepCrawl ; exists ; 2021 ; 2021 ; American Journal of Health-System Pharmacy Volume 78 ; 78 ; >
-    au < frozen ; exists ; 2022 ; 2022 ; American Journal of Health-System Pharmacy Volume 79 ; 79 ; >
+    au < finished ; manifest ; 2022 ; 2022 ; American Journal of Health-System Pharmacy Volume 79 ; 79 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2023 ; 2023 ; American Journal of Health-System Pharmacy Volume 80 ; 80 ; >
     au < crawling ; exists ; 2024 ; 2024 ; American Journal of Health-System Pharmacy Volume 81 ; 81 ; >
 
@@ -1129,7 +1129,7 @@
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Animal Science Volume 96 ; 96 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Animal Science Volume 97 ; 97 ; >
     au < deepCrawl ; exists ; 2021 ; 2021 ; Journal of Animal Science Volume 98 ; 98 ; >
-    au < frozen ; exists ; 2022 ; 2022 ; Journal of Animal Science Volume 99 ; 99 ; >
+    au < finished ; manifest ; 2022 ; 2022 ; Journal of Animal Science Volume 99 ; 99 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2023 ; 2023 ; Journal of Animal Science Volume 100 ; 100 ; >
     au < testing ; exists ; 2024 ; 2024 ; Journal of Animal Science Volume 101 ; 101 ; >
 
@@ -1150,7 +1150,7 @@
     au < deepCrawl ; exists ; 2019 ; 2019 ; Annals of Behavioral Medicine Volume 2 ; 2 ; >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Annals of Behavioral Medicine Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2021 ; 2021 ; Annals of Behavioral Medicine Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2022 ; 2022 ; Annals of Behavioral Medicine Volume 5 ; 5 ; >
+    au < finished ; manifest ; 2022 ; 2022 ; Annals of Behavioral Medicine Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2023 ; 2023 ; Annals of Behavioral Medicine Volume 6 ; 6 ; >
     au < crawling ; exists ; 2024 ; 2024 ; Annals of Behavioral Medicine Volume 7 ; 7 ; >
 
@@ -4305,7 +4305,7 @@
     au < finished ; crawling ; 2018 ; 2018 ; Current Legal Problems Volume 71 ; 71 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Current Legal Problems Volume 72 ; 72 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; 2021 ; Current Legal Problems Volume 73 ; 73 ; >
-    au < frozen ; exists ; 2022 ; 2022 ; Current Legal Problems Volume 74 ; 74 ; >
+    au < finished ; manifest ; 2022 ; 2022 ; Current Legal Problems Volume 74 ; 74 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2023 ; 2023 ; Current Legal Problems Volume 75 ; 75 ; >
     au < expected ; exists ; 2024 ; 2024 ; Current Legal Problems Volume 76 ; 76 ; >
 
@@ -14520,7 +14520,7 @@
     au < finished ; manifest ; 2019 ; 2019 ; Microscopy and Microanalysis Volume 25 ; 25 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; 2020 ; Microscopy and Microanalysis Volume 26 ; 26 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2021 ; 2021 ; Microscopy and Microanalysis Volume 27 ; 27 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2022 ; 2022 ; Microscopy and Microanalysis Volume 28 ; 28 ; >
+    au < finished ; manifest ; 2022 ; 2022 ; Microscopy and Microanalysis Volume 28 ; 28 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2023 ; 2023 ; Microscopy and Microanalysis Volume 29 ; 29 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Microscopy and Microanalysis Volume 30 ; 30 ; >
 
