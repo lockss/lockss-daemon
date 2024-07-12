@@ -759,4 +759,52 @@
 
   }
 
+  {
+
+      title <
+        name = EDIS ;
+        eissn = 2576-0009
+      >
+
+      param[journal_id] = edis
+
+      au < exists ; exists ; 1989 ; EDIS Volume 1989 ; 1989 ; 1989 ; >
+      au < exists ; exists ; 1990 ; EDIS Volume 1990 ; 1990 ; 1990 ; >
+      au < exists ; exists ; 1991 ; EDIS Volume 1991 ; 1991 ; 1991 ; >
+      au < exists ; exists ; 1992 ; EDIS Volume 1992 ; 1992 ; 1992 ; >
+      au < exists ; exists ; 1993 ; EDIS Volume 1993 ; 1993 ; 1993 ; >
+      au < exists ; exists ; 1994 ; EDIS Volume 1994 ; 1994 ; 1994 ; >
+      au < manifest ; exists ; 1995 ; EDIS Volume 1995 ; 1995 ; 1995 ; >
+      au < manifest ; exists ; 1996 ; EDIS Volume 1996 ; 1996 ; 1996 ; >
+      au < manifest ; exists ; 1997 ; EDIS Volume 1997 ; 1997 ; 1997 ; >
+      au < manifest ; exists ; 1998 ; EDIS Volume 1998 ; 1998 ; 1998 ; >
+      au < manifest ; exists ; 1999 ; EDIS Volume 1999 ; 1999 ; 1999 ; >
+      au < manifest ; exists ; 2000 ; EDIS Volume 2000 ; 2000 ; 2000 ; >
+      au < manifest ; exists ; 2001 ; EDIS Volume 2001 ; 2001 ; 2001 ; >
+      au < manifest ; exists ; 2002 ; EDIS Volume 2002 ; 2002 ; 2002 ; >
+      au < manifest ; exists ; 2003 ; EDIS Volume 2003 ; 2003 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; EDIS Volume 2004 ; 2004 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; EDIS Volume 2005 ; 2005 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; EDIS Volume 2006 ; 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; EDIS Volume 2007 ; 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; EDIS Volume 2008 ; 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; EDIS Volume 2009 ; 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; EDIS Volume 2010 ; 2010 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; EDIS Volume 2011 ; 2011 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; EDIS Volume 2012 ; 2012 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; EDIS Volume 2013 ; 2013 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; EDIS Volume 2014 ; 2014 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; EDIS Volume 2015 ; 2015 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; EDIS Volume 2016 ; 2016 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; EDIS Volume 2017 ; 2017 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; EDIS Volume 2018 ; 2018 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; EDIS Volume 2019 ; 2019 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; EDIS Volume 2020 ; 2020 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; EDIS Volume 2021 ; 2021 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; EDIS Volume 2022 ; 2022 ; 2022 ; >
+      au < manifest ; exists ; 2023 ; EDIS Volume 2023 ; 2023 ; 2023 ; >
+      au < manifest ; exists ; 2024 ; EDIS Volume 2024 ; 2024 ; 2024 ; >
+
+  }
+
 }
