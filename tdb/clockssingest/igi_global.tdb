@@ -95,7 +95,7 @@
     param[journal_issn] = 1942-535X
     #continued_by = 2640-9976
 
-    au < ready ; exists ; 2009 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2009 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
     au < finished ; finished ; 2010 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 2 ; 2 ; http://www.igi-global.com/ ; >
     au < finished ; finished ; 2011 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 3 ; 3 ; http://www.igi-global.com/ ; >
     au < finished ; finished ; 2012 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 4 ; 4 ; http://www.igi-global.com/ ; >
@@ -1241,7 +1241,7 @@
     >
     param[journal_issn] = 1937-9633
 
-    au < ready ; exists ; 2009 ; International Journal of E-Adoption (IJEA) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2009 ; International Journal of E-Adoption (IJEA) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
     au < frozen ; exists ; 2010 ; International Journal of E-Adoption (IJEA) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
     au < finished ; finished ; 2011 ; International Journal of E-Adoption (IJEA) Volume 3 ; 3 ; http://www.igi-global.com/ ; >
     au < finished ; finished ; 2012 ; International Journal of E-Adoption (IJEA) Volume 4 ; 4 ; http://www.igi-global.com/ ; >
@@ -1811,7 +1811,7 @@
     param[journal_issn] = 1938-0216
     # out of print. no substance on 2012
 
-    au < ready ; exists ; 2009 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2009 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
     au < testing ; exists ; 2010 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
     au < finished ; finished ; 2011 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 3 ; 3 ; http://www.igi-global.com/ ; >
     au < superseded ; down ; 2012 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 4 [superseded] ; 4 ; http://www.igi-global.com/ ; >
@@ -1938,7 +1938,7 @@
     >
     param[journal_issn] = 1935-5661
 
-    au < ready ; exists ; 2009 ; International Journal of Information Communication Technologies and Human Development (IJICTHD) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2009 ; International Journal of Information Communication Technologies and Human Development (IJICTHD) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
     au < testing ; exists ; 2010 ; International Journal of Information Communication Technologies and Human Development (IJICTHD) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
     au < finished ; finished ; 2011 ; International Journal of Information Communication Technologies and Human Development (IJICTHD) Volume 3 ; 3 ; http://www.igi-global.com/ ; >
     au < finished ; finished ; 2012 ; International Journal of Information Communication Technologies and Human Development (IJICTHD) Volume 4 ; 4 ; http://www.igi-global.com/ ; >
@@ -2081,7 +2081,7 @@
     param[journal_issn] = 1935-5726
 
     au < testing ; exists ; 2008 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
-    au < ready ; exists ; 2009 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2009 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
     au < testing ; exists ; 2010 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
     au < finished ; finished ; 2011 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 4 ; 4 ; http://www.igi-global.com/ ; >
     au < finished ; finished ; 2012 ; International Journal of Information Systems and Supply Chain Management (IJISSCM) Volume 5 ; 5 ; http://www.igi-global.com/ ; >
@@ -3354,7 +3354,7 @@
     >
     param[journal_issn] = 1942-9045
 
-    au < ready ; exists ; 2009 ; International Journal of Software Science and Computational Intelligence (IJSSCI) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2009 ; International Journal of Software Science and Computational Intelligence (IJSSCI) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
     au < testing ; exists ; 2010 ; International Journal of Software Science and Computational Intelligence (IJSSCI) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
     au < finished ; finished ; 2011 ; International Journal of Software Science and Computational Intelligence (IJSSCI) Volume 3 ; 3 ; http://www.igi-global.com/ ; >
     au < finished ; finished ; 2012 ; International Journal of Software Science and Computational Intelligence (IJSSCI) Volume 4 ; 4 ; http://www.igi-global.com/ ; >
@@ -3927,7 +3927,7 @@
     au < testing ; exists ; 2006 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
     au < testing ; exists ; 2007 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
     au < testing ; exists ; 2008 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
-    au < ready ; exists ; 2009 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2009 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
     au < testing ; exists ; 2010 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
     au < finished ; finished ; 2011 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 6 ; 6 ; http://www.igi-global.com/ ; >
     au < finished ; finished ; 2012 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 7 ; 7 ; http://www.igi-global.com/ ; >
@@ -4023,7 +4023,7 @@
     au < testing ; exists ; 2006 ; Journal of Cases on Information Technology (JCIT) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
     au < testing ; exists ; 2007 ; Journal of Cases on Information Technology (JCIT) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
     au < testing ; exists ; 2008 ; Journal of Cases on Information Technology (JCIT) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
-    au < ready ; exists ; 2009 ; Journal of Cases on Information Technology (JCIT) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2009 ; Journal of Cases on Information Technology (JCIT) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
     au < frozen ; exists ; 2010 ; Journal of Cases on Information Technology (JCIT) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
     au < finished ; finished ; 2011 ; Journal of Cases on Information Technology (JCIT) Volume 13 ; 13 ; http://www.igi-global.com/ ; >
     au < finished ; finished ; 2012 ; Journal of Cases on Information Technology (JCIT) Volume 14 ; 14 ; http://www.igi-global.com/ ; >

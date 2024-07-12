@@ -75,13 +75,13 @@
       au < exists ; exists ; 1999 ; 1999 ; 1999 ; Documenta Volume 1999 ; >
       au < crawling ; exists ; 2000 ; 2000 ; 2000 ; Documenta Volume 2000 ; >
       au < crawling ; exists ; 2001 ; 2001 ; 2001 ; Documenta Volume 2001 ; >
-      au < ready ; exists ; 2002 ; 2002 ; 2002 ; Documenta Volume 2002 ; >
-      au < ready ; exists ; 2003 ; 2003 ; 2003 ; Documenta Volume 2003 ; >
-      au < ready ; exists ; 2004 ; 2004 ; 2004 ; Documenta Volume 2004 ; >
+      au < crawling ; exists ; 2002 ; 2002 ; 2002 ; Documenta Volume 2002 ; >
+      au < crawling ; exists ; 2003 ; 2003 ; 2003 ; Documenta Volume 2003 ; >
+      au < crawling ; exists ; 2004 ; 2004 ; 2004 ; Documenta Volume 2004 ; >
       au < crawling ; exists ; 2005 ; 2005 ; 2005 ; Documenta Volume 2005 ; >
-      au < ready ; exists ; 2006 ; 2006 ; 2006 ; Documenta Volume 2006 ; >
-      au < ready ; exists ; 2007 ; 2007 ; 2007 ; Documenta Volume 2007 ; >
-      au < ready ; exists ; 2008 ; 2008 ; 2008 ; Documenta Volume 2008 ; >
+      au < crawling ; exists ; 2006 ; 2006 ; 2006 ; Documenta Volume 2006 ; >
+      au < crawling ; exists ; 2007 ; 2007 ; 2007 ; Documenta Volume 2007 ; >
+      au < crawling ; exists ; 2008 ; 2008 ; 2008 ; Documenta Volume 2008 ; >
       au < crawling ; exists ; 2009 ; 2009 ; 2009 ; Documenta Volume 2009 ; >
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Documenta Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Documenta Volume 2011 ; >
@@ -910,8 +910,8 @@
       au < crawling ; exists ; 2018 ; 2018 ; 2018 ; EWOP in Practice Volume 2018 ; >
       au < crawling ; exists ; 2019 ; 2019 ; 2019 ; EWOP in Practice Volume 2019 ; >
       au < crawling ; exists ; 2020 ; 2020 ; 2020 ; EWOP in Practice Volume 2020 ; >
-      au < ready ; exists ; 2021 ; 2021 ; 2021 ; EWOP in Practice Volume 2021 ; >
-      au < ready ; exists ; 2022 ; 2022 ; 2022 ; EWOP in Practice Volume 2022 ; >
+      au < crawling ; exists ; 2021 ; 2021 ; 2021 ; EWOP in Practice Volume 2021 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; 2022 ; EWOP in Practice Volume 2022 ; >
       au < crawling ; exists ; 2023 ; 2023 ; 2023 ; EWOP in Practice Volume 2023 ; >
       au < crawling ; exists ; 2024 ; 2024 ; 2024 ; EWOP in Practice Volume 2024 ; >
 
@@ -1151,12 +1151,12 @@
       au < manifest ; exists ; 2015 ; 2015 ; 2015 ; NISE Essays Volume 2015 ; >
       au < manifest ; exists ; 2016 ; 2016 ; 2016 ; NISE Essays Volume 2016 ; >
       au < manifest ; exists ; 2017 ; 2017 ; 2017 ; NISE Essays Volume 2017 ; >
-      au < ready ; exists ; 2018 ; 2018 ; 2018 ; NISE Essays Volume 2018 ; >
-      au < ready ; exists ; 2019 ; 2019 ; 2019 ; NISE Essays Volume 2019 ; >
-      au < ready ; exists ; 2020 ; 2020 ; 2020 ; NISE Essays Volume 2020 ; >
+      au < crawling ; exists ; 2018 ; 2018 ; 2018 ; NISE Essays Volume 2018 ; >
+      au < crawling ; exists ; 2019 ; 2019 ; 2019 ; NISE Essays Volume 2019 ; >
+      au < crawling ; exists ; 2020 ; 2020 ; 2020 ; NISE Essays Volume 2020 ; >
       au < crawling ; exists ; 2021 ; 2021 ; 2021 ; NISE Essays Volume 2021 ; >
       au < exists ; exists ; 2022 ; 2022 ; 2022 ; NISE Essays Volume 2022 ; >
-      au < ready ; exists ; 2023 ; 2023 ; 2023 ; NISE Essays Volume 2023 ; >
+      au < crawling ; exists ; 2023 ; 2023 ; 2023 ; NISE Essays Volume 2023 ; >
       au < crawling ; exists ; 2024 ; 2024 ; 2024 ; NISE Essays Volume 2024 ; >
 
   }
