@@ -57,6 +57,11 @@ public class OAPENBooksArticleIteratorFactory implements ArticleIteratorFactory,
   /*	-		-
   https://library.oapen.org/handle/20.500.12657/41485?show=full
   https://library.oapen.org/bitstream/handle/20.500.12657/41485/9783835391154.pdf?sequence=1&isAllowed=y
+
+
+  Some AUs only have EPUBs.
+  https://library.oapen.org/handle/20.500.12657/89759?show=full
+  https://library.oapen.org/bitstream/handle/20.500.12657/89759/external_content.epub?sequence=1&isAllowed=y
    */
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
 
@@ -64,11 +69,11 @@ public class OAPENBooksArticleIteratorFactory implements ArticleIteratorFactory,
 
   public static final Pattern PDF_PATTERN = Pattern.compile("/(bitstream/)?(handle/.*)(/.*\\.pdf\\?sequence=[0-9]+&isAllowed=y)", Pattern.CASE_INSENSITIVE);
   public static final Pattern FULLTEXT_PATTERN = Pattern.compile("/(.*)(\\?show=full)", Pattern.CASE_INSENSITIVE);
+  public static final Pattern EPUB_PATTERN = Pattern.compile("/(bitstream/)?(handle/.*)(/.*\\.epub\\?sequence=[0-9]+&isAllowed=y)", Pattern.CASE_INSENSITIVE);
 
   public static final String PDF_REPLACEMENT = "/bitstream/$2/.*\\.pdf\\?sequence=sequence=[0-9]+&isAllowed=y";
   public static final String FULLTEXT_REPLACEMENT =  "/$2\\?show=full";
-
-
+  public static final String EPUB_REPLACEMENT = "/bitstream/$2/.*\\.epub\\?sequence=[0-9]+&isAllowed=y";
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
@@ -81,6 +86,11 @@ public class OAPENBooksArticleIteratorFactory implements ArticleIteratorFactory,
             PDF_PATTERN,
             PDF_REPLACEMENT,
             ArticleFiles.ROLE_FULL_TEXT_PDF);
+
+    builder.addAspect(
+            EPUB_PATTERN,
+            EPUB_REPLACEMENT,
+            ArticleFiles.ROLE_FULL_TEXT_EPUB);
 
     builder.addAspect(
             FULLTEXT_REPLACEMENT,
