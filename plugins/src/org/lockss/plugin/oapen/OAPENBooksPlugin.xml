@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -113,6 +113,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_substance_url_pattern</string>
     <list>
       <string>"%sbitstream/%s/.*\.pdf", base_url,resource_id</string>
+      <string>"%sbitstream/%s/.*\.epub[^\\.]", base_url,resource_id</string>
     </list>
   </entry>
   <entry>
@@ -150,7 +151,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <string>fonts\.googleapis\.com</string>
       <string>unpkg\.com</string>
-      <string>fonts\.gstatic\.com/</string>
+      <string>fonts\.gstatic\.com</string>
     </list>
   </entry>
   <entry>
