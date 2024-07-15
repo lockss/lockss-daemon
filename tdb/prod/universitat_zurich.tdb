@@ -44,17 +44,17 @@
       #manifest page change to https://sui-generis.ch/gateway/lockss
       attr[start_stem] = index.php/
 
-      au < exists ; 2014 ; sui generis Volume 2014 ; 2014 ; 2014 ; https://sui-generis.ch/ >
-      au < exists ; 2015 ; sui generis Volume 2015 ; 2015 ; 2015 ; https://sui-generis.ch/ >
-      au < exists ; 2016 ; sui generis Volume 2016 ; 2016 ; 2016 ; https://sui-generis.ch/ >
-      au < exists ; 2017 ; sui generis Volume 2017 ; 2017 ; 2017 ; https://sui-generis.ch/ >
-      au < exists ; 2018 ; sui generis Volume 2018 ; 2018 ; 2018 ; https://sui-generis.ch/ >
-      au < exists ; 2019 ; sui generis Volume 2019 ; 2019 ; 2019 ; https://sui-generis.ch/ >
-      au < exists ; 2020 ; sui generis Volume 2020 ; 2020 ; 2020 ; https://sui-generis.ch/ >
-      au < exists ; 2021 ; sui generis Volume 2021 ; 2021 ; 2021 ; https://sui-generis.ch/ >
-      au < manifest ; 2022 ; sui generis Volume 2022 ; 2022 ; 2022 ; https://sui-generis.ch/ > #Trial case. Does not pass MPC
-      au < expected ; 2023 ; sui generis Volume 2023 ; 2023 ; 2023 ; https://sui-generis.ch/ >
-      au < expected ; 2024 ; sui generis Volume 2024 ; 2024 ; 2024 ; https://sui-generis.ch/ >
+      au < notReady ; 2014 ; sui generis Volume 2014 ; 2014 ; 2014 ; https://sui-generis.ch/ >
+      au < notReady ; 2015 ; sui generis Volume 2015 ; 2015 ; 2015 ; https://sui-generis.ch/ >
+      au < notReady ; 2016 ; sui generis Volume 2016 ; 2016 ; 2016 ; https://sui-generis.ch/ >
+      au < notReady ; 2017 ; sui generis Volume 2017 ; 2017 ; 2017 ; https://sui-generis.ch/ >
+      au < notReady ; 2018 ; sui generis Volume 2018 ; 2018 ; 2018 ; https://sui-generis.ch/ >
+      au < notReady ; 2019 ; sui generis Volume 2019 ; 2019 ; 2019 ; https://sui-generis.ch/ >
+      au < notReady ; 2020 ; sui generis Volume 2020 ; 2020 ; 2020 ; https://sui-generis.ch/ >
+      au < notReady ; 2021 ; sui generis Volume 2021 ; 2021 ; 2021 ; https://sui-generis.ch/ >
+      au < notReady ; 2022 ; sui generis Volume 2022 ; 2022 ; 2022 ; https://sui-generis.ch/ > #Trial case. Does not pass MPC. See LXPLUG-2477
+      au < notReady ; 2023 ; sui generis Volume 2023 ; 2023 ; 2023 ; https://sui-generis.ch/ >
+      au < notReady ; 2024 ; sui generis Volume 2024 ; 2024 ; 2024 ; https://sui-generis.ch/ >
 
     }
 
