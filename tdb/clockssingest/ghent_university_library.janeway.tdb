@@ -73,16 +73,16 @@
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; Documenta Volume 1997 ; >
       au < exists ; exists ; 1998 ; 1998 ; 1998 ; Documenta Volume 1998 ; >
       au < exists ; exists ; 1999 ; 1999 ; 1999 ; Documenta Volume 1999 ; >
-      au < crawling ; exists ; 2000 ; 2000 ; 2000 ; Documenta Volume 2000 ; >
-      au < crawling ; exists ; 2001 ; 2001 ; 2001 ; Documenta Volume 2001 ; >
-      au < crawling ; exists ; 2002 ; 2002 ; 2002 ; Documenta Volume 2002 ; >
-      au < crawling ; exists ; 2003 ; 2003 ; 2003 ; Documenta Volume 2003 ; >
-      au < crawling ; exists ; 2004 ; 2004 ; 2004 ; Documenta Volume 2004 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; 2005 ; Documenta Volume 2005 ; >
-      au < crawling ; exists ; 2006 ; 2006 ; 2006 ; Documenta Volume 2006 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; 2007 ; Documenta Volume 2007 ; >
-      au < crawling ; exists ; 2008 ; 2008 ; 2008 ; Documenta Volume 2008 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; 2009 ; Documenta Volume 2009 ; >
+      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Documenta Volume 2000 ; >
+      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Documenta Volume 2001 ; >
+      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Documenta Volume 2002 ; >
+      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Documenta Volume 2003 ; >
+      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Documenta Volume 2004 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Documenta Volume 2005 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Documenta Volume 2006 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Documenta Volume 2007 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Documenta Volume 2008 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Documenta Volume 2009 ; >
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Documenta Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Documenta Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Documenta Volume 2012 ; >
@@ -362,7 +362,7 @@
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Agora Magazine Volume 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Agora Magazine Volume 2019 ; >
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Agora Magazine Volume 2020 ; >
-      au < crawling ; exists ; 2021 ; 2021 ; 2021 ; Agora Magazine Volume 2021 ; >
+      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Agora Magazine Volume 2021 ; >
       au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Agora Magazine Volume 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; Agora Magazine Volume 2023 ; >
       au < crawling ; exists ; 2024 ; 2024 ; 2024 ; Agora Magazine Volume 2024 ; >
@@ -480,8 +480,8 @@
       au < manifest ; exists ; 2017 ; 2017 ; 2017 ; De Uil van Minerva Volume 2017 ; >
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; De Uil van Minerva Volume 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; De Uil van Minerva Volume 2019 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; 2020 ; De Uil van Minerva Volume 2020 ; >
-      au < crawling ; exists ; 2021 ; 2021 ; 2021 ; De Uil van Minerva Volume 2021 ; >
+      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; De Uil van Minerva Volume 2020 ; >
+      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; De Uil van Minerva Volume 2021 ; >
       au < frozen ; exists ; 2022 ; 2022 ; 2022 ; De Uil van Minerva Volume 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; De Uil van Minerva Volume 2023 ; >
       au < manifest ; exists ; 2024 ; 2024 ; 2024 ; De Uil van Minerva Volume 2024 ; >
@@ -907,12 +907,12 @@
       au < manifest ; exists ; 2015 ; 2015 ; 2015 ; EWOP in Practice Volume 2015 ; >
       au < manifest ; exists ; 2016 ; 2016 ; 2016 ; EWOP in Practice Volume 2016 ; >
       au < manifest ; exists ; 2017 ; 2017 ; 2017 ; EWOP in Practice Volume 2017 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; 2018 ; EWOP in Practice Volume 2018 ; >
-      au < crawling ; exists ; 2019 ; 2019 ; 2019 ; EWOP in Practice Volume 2019 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; 2020 ; EWOP in Practice Volume 2020 ; >
-      au < crawling ; exists ; 2021 ; 2021 ; 2021 ; EWOP in Practice Volume 2021 ; >
-      au < crawling ; exists ; 2022 ; 2022 ; 2022 ; EWOP in Practice Volume 2022 ; >
-      au < crawling ; exists ; 2023 ; 2023 ; 2023 ; EWOP in Practice Volume 2023 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; EWOP in Practice Volume 2018 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; EWOP in Practice Volume 2019 ; >
+      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; EWOP in Practice Volume 2020 ; >
+      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; EWOP in Practice Volume 2021 ; >
+      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; EWOP in Practice Volume 2022 ; >
+      au < frozen ; exists ; 2023 ; 2023 ; 2023 ; EWOP in Practice Volume 2023 ; >
       au < crawling ; exists ; 2024 ; 2024 ; 2024 ; EWOP in Practice Volume 2024 ; >
 
   }
@@ -1022,7 +1022,7 @@
       au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2017 ; >
       au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2018 ; >
       au < manifest ; exists ; 2019 ; 2019 ; 2019 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2019 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; 2020 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2020 ; >
+      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2020 ; >
       au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2021 ; >
       au < manifest ; exists ; 2022 ; 2022 ; 2022 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2022 ; >
 
@@ -1151,12 +1151,12 @@
       au < manifest ; exists ; 2015 ; 2015 ; 2015 ; NISE Essays Volume 2015 ; >
       au < manifest ; exists ; 2016 ; 2016 ; 2016 ; NISE Essays Volume 2016 ; >
       au < manifest ; exists ; 2017 ; 2017 ; 2017 ; NISE Essays Volume 2017 ; >
-      au < crawling ; exists ; 2018 ; 2018 ; 2018 ; NISE Essays Volume 2018 ; >
-      au < crawling ; exists ; 2019 ; 2019 ; 2019 ; NISE Essays Volume 2019 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; 2020 ; NISE Essays Volume 2020 ; >
-      au < crawling ; exists ; 2021 ; 2021 ; 2021 ; NISE Essays Volume 2021 ; >
+      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; NISE Essays Volume 2018 ; >
+      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; NISE Essays Volume 2019 ; >
+      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; NISE Essays Volume 2020 ; >
+      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; NISE Essays Volume 2021 ; >
       au < exists ; exists ; 2022 ; 2022 ; 2022 ; NISE Essays Volume 2022 ; >
-      au < crawling ; exists ; 2023 ; 2023 ; 2023 ; NISE Essays Volume 2023 ; >
+      au < frozen ; exists ; 2023 ; 2023 ; 2023 ; NISE Essays Volume 2023 ; >
       au < crawling ; exists ; 2024 ; 2024 ; 2024 ; NISE Essays Volume 2024 ; >
 
   }
