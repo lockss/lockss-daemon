@@ -1,0 +1,674 @@
+{
+  publisher <
+    name = Universidad de Antioquia ;
+    info[contract] = 2024 ;
+    info[back] = 2000 ;
+    info[tester] = 8 ;
+    info[platform] = OJS3
+  >
+
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    implicit < status ; status2 ; year ; name ; param[year] ; volume ; hidden[proxy] >
+    #OJS3
+    attr[start_stem] = index.php/
+
+  {
+
+      title <
+        name = Revista Colombiana de Ciencias Pecuarias ;
+        issn = 0120-0690 ;
+        eissn = 2256-2958
+      >
+
+      param[base_url] = https://revistas.udea.edu.co/
+      param[journal_id] = rccp
+
+      au < exists ; exists ; 1978 ; Revista Colombiana de Ciencias Pecuarias Volume 1978 ; 1978 ; 1 ; >
+      au < exists ; exists ; 1979 ; Revista Colombiana de Ciencias Pecuarias Volume 1979 ; 1979 ; 2 ; >
+      au < exists ; exists ; 1980 ; Revista Colombiana de Ciencias Pecuarias Volume 1980 ; 1980 ; 3 ; >
+      au < exists ; exists ; 1981 ; Revista Colombiana de Ciencias Pecuarias Volume 1981 ; 1981 ; 4 ; >
+      au < exists ; exists ; 1982 ; Revista Colombiana de Ciencias Pecuarias Volume 1982 ; 1982 ; 5 ; >
+      au < exists ; exists ; 1983 ; Revista Colombiana de Ciencias Pecuarias Volume 1983 ; 1983 ; 6 ; >
+      au < exists ; exists ; 1984 ; Revista Colombiana de Ciencias Pecuarias Volume 1984 ; 1984 ; 7 ; >
+      au < exists ; exists ; 1985 ; Revista Colombiana de Ciencias Pecuarias Volume 1985 ; 1985 ; 8 ; >
+      au < exists ; exists ; 1986 ; Revista Colombiana de Ciencias Pecuarias Volume 1986 ; 1986 ; 9 ; >
+      au < exists ; exists ; 1987 ; Revista Colombiana de Ciencias Pecuarias Volume 1987 ; 1987 ; 10 ; >
+      au < exists ; exists ; 1988 ; Revista Colombiana de Ciencias Pecuarias Volume 1988 ; 1988 ; 11 ; >
+      au < exists ; exists ; 1989 ; Revista Colombiana de Ciencias Pecuarias Volume 1989 ; 1989 ; 12 ; >
+      au < exists ; exists ; 1990 ; Revista Colombiana de Ciencias Pecuarias Volume 1990 ; 1990 ; 13 ; >
+      au < exists ; exists ; 1991 ; Revista Colombiana de Ciencias Pecuarias Volume 1991 ; 1991 ; 14 ; >
+      au < exists ; exists ; 1992 ; Revista Colombiana de Ciencias Pecuarias Volume 1992 ; 1992 ; 15 ; >
+      au < exists ; exists ; 1993 ; Revista Colombiana de Ciencias Pecuarias Volume 1993 ; 1993 ; 16 ; >
+      au < exists ; exists ; 1994 ; Revista Colombiana de Ciencias Pecuarias Volume 1994 ; 1994 ; 17 ; >
+      au < exists ; exists ; 1995 ; Revista Colombiana de Ciencias Pecuarias Volume 1995 ; 1995 ; 18 ; >
+      au < exists ; exists ; 1996 ; Revista Colombiana de Ciencias Pecuarias Volume 1996 ; 1996 ; 19 ; >
+      au < exists ; exists ; 1997 ; Revista Colombiana de Ciencias Pecuarias Volume 1997 ; 1997 ; 20 ; >
+      au < exists ; exists ; 1998 ; Revista Colombiana de Ciencias Pecuarias Volume 1998 ; 1998 ; 21 ; >
+      au < exists ; exists ; 1999 ; Revista Colombiana de Ciencias Pecuarias Volume 1999 ; 1999 ; 22 ; >
+      au < exists ; exists ; 2000 ; Revista Colombiana de Ciencias Pecuarias Volume 2000 ; 2000 ; 23 ; >
+      au < exists ; exists ; 2001 ; Revista Colombiana de Ciencias Pecuarias Volume 2001 ; 2001 ; 24 ; >
+      au < exists ; exists ; 2002 ; Revista Colombiana de Ciencias Pecuarias Volume 2002 ; 2002 ; 25 ; >
+      au < exists ; exists ; 2003 ; Revista Colombiana de Ciencias Pecuarias Volume 2003 ; 2003 ; 26 ; >
+      au < exists ; exists ; 2004 ; Revista Colombiana de Ciencias Pecuarias Volume 2004 ; 2004 ; 27 ; >
+      au < exists ; exists ; 2005 ; Revista Colombiana de Ciencias Pecuarias Volume 2005 ; 2005 ; 28 ; >
+      au < exists ; exists ; 2006 ; Revista Colombiana de Ciencias Pecuarias Volume 2006 ; 2006 ; 29 ; >
+      au < exists ; exists ; 2007 ; Revista Colombiana de Ciencias Pecuarias Volume 2007 ; 2007 ; 30 ; >
+      au < exists ; exists ; 2008 ; Revista Colombiana de Ciencias Pecuarias Volume 2008 ; 2008 ; 31 ; >
+      au < exists ; exists ; 2009 ; Revista Colombiana de Ciencias Pecuarias Volume 2009 ; 2009 ; 32 ; >
+      au < exists ; exists ; 2010 ; Revista Colombiana de Ciencias Pecuarias Volume 2010 ; 2010 ; 33 ; >
+      au < exists ; exists ; 2011 ; Revista Colombiana de Ciencias Pecuarias Volume 2011 ; 2011 ; 34 ; >
+      au < exists ; exists ; 2012 ; Revista Colombiana de Ciencias Pecuarias Volume 2012 ; 2012 ; 35 ; >
+      au < exists ; exists ; 2013 ; Revista Colombiana de Ciencias Pecuarias Volume 2013 ; 2013 ; 36 ; >
+      au < exists ; exists ; 2014 ; Revista Colombiana de Ciencias Pecuarias Volume 2014 ; 2014 ; 37 ; >
+      au < exists ; exists ; 2015 ; Revista Colombiana de Ciencias Pecuarias Volume 2015 ; 2015 ; 38 ; >
+      au < exists ; exists ; 2016 ; Revista Colombiana de Ciencias Pecuarias Volume 2016 ; 2016 ; 39 ; >
+      au < exists ; exists ; 2017 ; Revista Colombiana de Ciencias Pecuarias Volume 2017 ; 2017 ; 40 ; >
+      au < exists ; exists ; 2018 ; Revista Colombiana de Ciencias Pecuarias Volume 2018 ; 2018 ; 41 ; >
+      au < exists ; exists ; 2019 ; Revista Colombiana de Ciencias Pecuarias Volume 2019 ; 2019 ; 42 ; >
+      au < exists ; exists ; 2020 ; Revista Colombiana de Ciencias Pecuarias Volume 2020 ; 2020 ; 43 ; >
+      au < exists ; exists ; 2021 ; Revista Colombiana de Ciencias Pecuarias Volume 2021 ; 2021 ; 44 ; >
+      au < exists ; exists ; 2022 ; Revista Colombiana de Ciencias Pecuarias Volume 2022 ; 2022 ; 45 ; >
+      au < testing ; exists ; 2023 ; Revista Colombiana de Ciencias Pecuarias Volume 2023 ; 2023 ; 46 ; >
+      au < exists ; exists ; 2024 ; Revista Colombiana de Ciencias Pecuarias Volume 2024 ; 2024 ; 47 ; >
+
+  }
+
+  {
+
+      title <
+        name = Revista Interamericana de Bibliotecología ;
+        issn = 0120-0976 ;
+        eissn = 2538-9866
+      >
+
+      param[base_url] = https://revistas.udea.edu.co/
+      param[journal_id] = RIB
+
+      au < exists ; exists ; 1978 ; Revista Interamericana de Bibliotecología Volume 1978 ; 1978 ; 1 ; >
+      au < exists ; exists ; 1979 ; Revista Interamericana de Bibliotecología Volume 1979 ; 1979 ; 2 ; >
+      au < exists ; exists ; 1980 ; Revista Interamericana de Bibliotecología Volume 1980 ; 1980 ; 3 ; >
+      au < exists ; exists ; 1981 ; Revista Interamericana de Bibliotecología Volume 1981 ; 1981 ; 4 ; >
+      au < exists ; exists ; 1982 ; Revista Interamericana de Bibliotecología Volume 1982 ; 1982 ; 5 ; >
+      au < exists ; exists ; 1983 ; Revista Interamericana de Bibliotecología Volume 1983 ; 1983 ; 6 ; >
+      au < exists ; exists ; 1984 ; Revista Interamericana de Bibliotecología Volume 1984 ; 1984 ; 7 ; >
+      au < exists ; exists ; 1985 ; Revista Interamericana de Bibliotecología Volume 1985 ; 1985 ; 8 ; >
+      au < exists ; exists ; 1986 ; Revista Interamericana de Bibliotecología Volume 1986 ; 1986 ; 9 ; >
+      au < exists ; exists ; 1987 ; Revista Interamericana de Bibliotecología Volume 1987 ; 1987 ; 10 ; >
+      au < exists ; exists ; 1988 ; Revista Interamericana de Bibliotecología Volume 1988 ; 1988 ; 11 ; >
+      au < exists ; exists ; 1989 ; Revista Interamericana de Bibliotecología Volume 1989 ; 1989 ; 12 ; >
+      au < exists ; exists ; 1990 ; Revista Interamericana de Bibliotecología Volume 1990 ; 1990 ; 13 ; >
+      au < exists ; exists ; 1991 ; Revista Interamericana de Bibliotecología Volume 1991 ; 1991 ; 14 ; >
+      au < exists ; exists ; 1992 ; Revista Interamericana de Bibliotecología Volume 1992 ; 1992 ; 15 ; >
+      au < exists ; exists ; 1993 ; Revista Interamericana de Bibliotecología Volume 1993 ; 1993 ; 16 ; >
+      au < exists ; exists ; 1994 ; Revista Interamericana de Bibliotecología Volume 1994 ; 1994 ; 17 ; >
+      au < exists ; exists ; 1995 ; Revista Interamericana de Bibliotecología Volume 1995 ; 1995 ; 18 ; >
+      au < exists ; exists ; 1996 ; Revista Interamericana de Bibliotecología Volume 1996 ; 1996 ; 19 ; >
+      au < exists ; exists ; 1997 ; Revista Interamericana de Bibliotecología Volume 1997 ; 1997 ; 20 ; >
+      au < exists ; exists ; 1998 ; Revista Interamericana de Bibliotecología Volume 1998 ; 1998 ; 21 ; >
+      au < exists ; exists ; 1999 ; Revista Interamericana de Bibliotecología Volume 1999 ; 1999 ; 22 ; >
+      au < exists ; exists ; 2000 ; Revista Interamericana de Bibliotecología Volume 2000 ; 2000 ; 23 ; >
+      au < exists ; exists ; 2001 ; Revista Interamericana de Bibliotecología Volume 2001 ; 2001 ; 24 ; >
+      au < exists ; exists ; 2002 ; Revista Interamericana de Bibliotecología Volume 2002 ; 2002 ; 25 ; >
+      au < exists ; exists ; 2003 ; Revista Interamericana de Bibliotecología Volume 2003 ; 2003 ; 26 ; >
+      au < exists ; exists ; 2004 ; Revista Interamericana de Bibliotecología Volume 2004 ; 2004 ; 27 ; >
+      au < exists ; exists ; 2005 ; Revista Interamericana de Bibliotecología Volume 2005 ; 2005 ; 28 ; >
+      au < exists ; exists ; 2006 ; Revista Interamericana de Bibliotecología Volume 2006 ; 2006 ; 29 ; >
+      au < exists ; exists ; 2007 ; Revista Interamericana de Bibliotecología Volume 2007 ; 2007 ; 30 ; >
+      au < exists ; exists ; 2008 ; Revista Interamericana de Bibliotecología Volume 2008 ; 2008 ; 31 ; >
+      au < exists ; exists ; 2009 ; Revista Interamericana de Bibliotecología Volume 2009 ; 2009 ; 32 ; >
+      au < exists ; exists ; 2010 ; Revista Interamericana de Bibliotecología Volume 2010 ; 2010 ; 33 ; >
+      au < exists ; exists ; 2011 ; Revista Interamericana de Bibliotecología Volume 2011 ; 2011 ; 34 ; >
+      au < exists ; exists ; 2012 ; Revista Interamericana de Bibliotecología Volume 2012 ; 2012 ; 35 ; >
+      au < exists ; exists ; 2013 ; Revista Interamericana de Bibliotecología Volume 2013 ; 2013 ; 36 ; >
+      au < exists ; exists ; 2014 ; Revista Interamericana de Bibliotecología Volume 2014 ; 2014 ; 37 ; >
+      au < exists ; exists ; 2015 ; Revista Interamericana de Bibliotecología Volume 2015 ; 2015 ; 38 ; >
+      au < exists ; exists ; 2016 ; Revista Interamericana de Bibliotecología Volume 2016 ; 2016 ; 39 ; >
+      au < exists ; exists ; 2017 ; Revista Interamericana de Bibliotecología Volume 2017 ; 2017 ; 40 ; >
+      au < exists ; exists ; 2018 ; Revista Interamericana de Bibliotecología Volume 2018 ; 2018 ; 41 ; >
+      au < exists ; exists ; 2019 ; Revista Interamericana de Bibliotecología Volume 2019 ; 2019 ; 42 ; >
+      au < exists ; exists ; 2020 ; Revista Interamericana de Bibliotecología Volume 2020 ; 2020 ; 43 ; >
+      au < exists ; exists ; 2021 ; Revista Interamericana de Bibliotecología Volume 2021 ; 2021 ; 44 ; >
+      au < exists ; exists ; 2022 ; Revista Interamericana de Bibliotecología Volume 2022 ; 2022 ; 45 ; >
+      au < testing ; exists ; 2023 ; Revista Interamericana de Bibliotecología Volume 2023 ; 2023 ; 46 ; >
+      au < exists ; exists ; 2024 ; Revista Interamericana de Bibliotecología Volume 2024 ; 2024 ; 47 ; >
+
+  }
+
+  {
+
+      title <
+        name = Contaduría Universidad de Antioquia ;
+        issn = 0120-4203 ;
+        eissn = 2590-4604
+      >
+
+      param[base_url] = https://revistas.udea.edu.co/
+      param[journal_id] = cont
+
+      au < exists ; exists ; 1982 ; Contaduría Universidad de Antioquia Volume 1982 ; 1982 ; 1 ; >
+      au < exists ; exists ; 1983 ; Contaduría Universidad de Antioquia Volume 1983 ; 1983 ; 2 ; >
+      au < exists ; exists ; 1984 ; Contaduría Universidad de Antioquia Volume 1984 ; 1984 ; 3 ; >
+      au < exists ; exists ; 1985 ; Contaduría Universidad de Antioquia Volume 1985 ; 1985 ; 4 ; >
+      au < exists ; exists ; 1986 ; Contaduría Universidad de Antioquia Volume 1986 ; 1986 ; 5 ; >
+      au < exists ; exists ; 1987 ; Contaduría Universidad de Antioquia Volume 1987 ; 1987 ; 6 ; >
+      au < exists ; exists ; 1988 ; Contaduría Universidad de Antioquia Volume 1988 ; 1988 ; 7 ; >
+      au < exists ; exists ; 1989 ; Contaduría Universidad de Antioquia Volume 1989 ; 1989 ; 8 ; >
+      au < exists ; exists ; 1990 ; Contaduría Universidad de Antioquia Volume 1990 ; 1990 ; 9 ; >
+      au < exists ; exists ; 1991 ; Contaduría Universidad de Antioquia Volume 1991 ; 1991 ; 10 ; >
+      au < exists ; exists ; 1992 ; Contaduría Universidad de Antioquia Volume 1992 ; 1992 ; 11 ; >
+      au < exists ; exists ; 1993 ; Contaduría Universidad de Antioquia Volume 1993 ; 1993 ; 12 ; >
+      au < exists ; exists ; 1994 ; Contaduría Universidad de Antioquia Volume 1994 ; 1994 ; 13 ; >
+      au < exists ; exists ; 1995 ; Contaduría Universidad de Antioquia Volume 1995 ; 1995 ; 14 ; >
+      au < exists ; exists ; 1996 ; Contaduría Universidad de Antioquia Volume 1996 ; 1996 ; 15 ; >
+      au < exists ; exists ; 1997 ; Contaduría Universidad de Antioquia Volume 1997 ; 1997 ; 16 ; >
+      au < exists ; exists ; 1998 ; Contaduría Universidad de Antioquia Volume 1998 ; 1998 ; 17 ; >
+      au < exists ; exists ; 1999 ; Contaduría Universidad de Antioquia Volume 1999 ; 1999 ; 18 ; >
+      au < exists ; exists ; 2000 ; Contaduría Universidad de Antioquia Volume 2000 ; 2000 ; 19 ; >
+      au < exists ; exists ; 2001 ; Contaduría Universidad de Antioquia Volume 2001 ; 2001 ; 20 ; >
+      au < exists ; exists ; 2002 ; Contaduría Universidad de Antioquia Volume 2002 ; 2002 ; 21 ; >
+      au < exists ; exists ; 2003 ; Contaduría Universidad de Antioquia Volume 2003 ; 2003 ; 22 ; >
+      au < exists ; exists ; 2004 ; Contaduría Universidad de Antioquia Volume 2004 ; 2004 ; 23 ; >
+      au < exists ; exists ; 2005 ; Contaduría Universidad de Antioquia Volume 2005 ; 2005 ; 24 ; >
+      au < exists ; exists ; 2006 ; Contaduría Universidad de Antioquia Volume 2006 ; 2006 ; 25 ; >
+      au < exists ; exists ; 2007 ; Contaduría Universidad de Antioquia Volume 2007 ; 2007 ; 26 ; >
+      au < exists ; exists ; 2008 ; Contaduría Universidad de Antioquia Volume 2008 ; 2008 ; 27 ; >
+      au < exists ; exists ; 2009 ; Contaduría Universidad de Antioquia Volume 2009 ; 2009 ; 28 ; >
+      au < exists ; exists ; 2010 ; Contaduría Universidad de Antioquia Volume 2010 ; 2010 ; 29 ; >
+      au < exists ; exists ; 2011 ; Contaduría Universidad de Antioquia Volume 2011 ; 2011 ; 30 ; >
+      au < exists ; exists ; 2012 ; Contaduría Universidad de Antioquia Volume 2012 ; 2012 ; 31 ; >
+      au < exists ; exists ; 2013 ; Contaduría Universidad de Antioquia Volume 2013 ; 2013 ; 32 ; >
+      au < exists ; exists ; 2014 ; Contaduría Universidad de Antioquia Volume 2014 ; 2014 ; 33 ; >
+      au < exists ; exists ; 2015 ; Contaduría Universidad de Antioquia Volume 2015 ; 2015 ; 34 ; >
+      au < exists ; exists ; 2016 ; Contaduría Universidad de Antioquia Volume 2016 ; 2016 ; 35 ; >
+      au < exists ; exists ; 2017 ; Contaduría Universidad de Antioquia Volume 2017 ; 2017 ; 36 ; >
+      au < exists ; exists ; 2018 ; Contaduría Universidad de Antioquia Volume 2018 ; 2018 ; 37 ; >
+      au < exists ; exists ; 2019 ; Contaduría Universidad de Antioquia Volume 2019 ; 2019 ; 38 ; >
+      au < exists ; exists ; 2020 ; Contaduría Universidad de Antioquia Volume 2020 ; 2020 ; 39 ; >
+      au < exists ; exists ; 2021 ; Contaduría Universidad de Antioquia Volume 2021 ; 2021 ; 40 ; >
+      au < exists ; exists ; 2022 ; Contaduría Universidad de Antioquia Volume 2022 ; 2022 ; 41 ; >
+      au < testing ; exists ; 2023 ; Contaduría Universidad de Antioquia Volume 2023 ; 2023 ; 42 ; >
+      au < exists ; exists ; 2024 ; Contaduría Universidad de Antioquia Volume 2024 ; 2024 ; 43 ; >
+
+  }
+
+  {
+
+      title <
+        name = Investigación y Educación En Enfermería ;
+        issn = 0120-5307 ;
+        eissn = 2216-0280
+      >
+
+      param[base_url] = https://revistas.udea.edu.co/
+      param[journal_id] = iee
+
+      au < exists ; exists ; 1983 ; Investigación y Educación En Enfermería Volume 1983 ; 1983 ; 1 ; >
+      au < exists ; exists ; 1984 ; Investigación y Educación En Enfermería Volume 1984 ; 1984 ; 2 ; >
+      au < exists ; exists ; 1985 ; Investigación y Educación En Enfermería Volume 1985 ; 1985 ; 3 ; >
+      au < exists ; exists ; 1986 ; Investigación y Educación En Enfermería Volume 1986 ; 1986 ; 4 ; >
+      au < exists ; exists ; 1987 ; Investigación y Educación En Enfermería Volume 1987 ; 1987 ; 5 ; >
+      au < exists ; exists ; 1988 ; Investigación y Educación En Enfermería Volume 1988 ; 1988 ; 6 ; >
+      au < exists ; exists ; 1989 ; Investigación y Educación En Enfermería Volume 1989 ; 1989 ; 7 ; >
+      au < exists ; exists ; 1990 ; Investigación y Educación En Enfermería Volume 1990 ; 1990 ; 8 ; >
+      au < exists ; exists ; 1991 ; Investigación y Educación En Enfermería Volume 1991 ; 1991 ; 9 ; >
+      au < exists ; exists ; 1992 ; Investigación y Educación En Enfermería Volume 1992 ; 1992 ; 10 ; >
+      au < exists ; exists ; 1993 ; Investigación y Educación En Enfermería Volume 1993 ; 1993 ; 11 ; >
+      au < exists ; exists ; 1994 ; Investigación y Educación En Enfermería Volume 1994 ; 1994 ; 12 ; >
+      au < exists ; exists ; 1995 ; Investigación y Educación En Enfermería Volume 1995 ; 1995 ; 13 ; >
+      au < exists ; exists ; 1996 ; Investigación y Educación En Enfermería Volume 1996 ; 1996 ; 14 ; >
+      au < exists ; exists ; 1997 ; Investigación y Educación En Enfermería Volume 1997 ; 1997 ; 15 ; >
+      au < exists ; exists ; 1998 ; Investigación y Educación En Enfermería Volume 1998 ; 1998 ; 16 ; >
+      au < exists ; exists ; 1999 ; Investigación y Educación En Enfermería Volume 1999 ; 1999 ; 17 ; >
+      au < exists ; exists ; 2000 ; Investigación y Educación En Enfermería Volume 2000 ; 2000 ; 18 ; >
+      au < exists ; exists ; 2001 ; Investigación y Educación En Enfermería Volume 2001 ; 2001 ; 19 ; >
+      au < exists ; exists ; 2002 ; Investigación y Educación En Enfermería Volume 2002 ; 2002 ; 20 ; >
+      au < exists ; exists ; 2003 ; Investigación y Educación En Enfermería Volume 2003 ; 2003 ; 21 ; >
+      au < exists ; exists ; 2004 ; Investigación y Educación En Enfermería Volume 2004 ; 2004 ; 22 ; >
+      au < exists ; exists ; 2005 ; Investigación y Educación En Enfermería Volume 2005 ; 2005 ; 23 ; >
+      au < exists ; exists ; 2006 ; Investigación y Educación En Enfermería Volume 2006 ; 2006 ; 24 ; >
+      au < exists ; exists ; 2007 ; Investigación y Educación En Enfermería Volume 2007 ; 2007 ; 25 ; >
+      au < exists ; exists ; 2008 ; Investigación y Educación En Enfermería Volume 2008 ; 2008 ; 26 ; >
+      au < exists ; exists ; 2009 ; Investigación y Educación En Enfermería Volume 2009 ; 2009 ; 27 ; >
+      au < exists ; exists ; 2010 ; Investigación y Educación En Enfermería Volume 2010 ; 2010 ; 28 ; >
+      au < exists ; exists ; 2011 ; Investigación y Educación En Enfermería Volume 2011 ; 2011 ; 29 ; >
+      au < exists ; exists ; 2012 ; Investigación y Educación En Enfermería Volume 2012 ; 2012 ; 30 ; >
+      au < exists ; exists ; 2013 ; Investigación y Educación En Enfermería Volume 2013 ; 2013 ; 31 ; >
+      au < exists ; exists ; 2014 ; Investigación y Educación En Enfermería Volume 2014 ; 2014 ; 32 ; >
+      au < exists ; exists ; 2015 ; Investigación y Educación En Enfermería Volume 2015 ; 2015 ; 33 ; >
+      au < exists ; exists ; 2016 ; Investigación y Educación En Enfermería Volume 2016 ; 2016 ; 34 ; >
+      au < exists ; exists ; 2017 ; Investigación y Educación En Enfermería Volume 2017 ; 2017 ; 35 ; >
+      au < exists ; exists ; 2018 ; Investigación y Educación En Enfermería Volume 2018 ; 2018 ; 36 ; >
+      au < exists ; exists ; 2019 ; Investigación y Educación En Enfermería Volume 2019 ; 2019 ; 37 ; >
+      au < exists ; exists ; 2020 ; Investigación y Educación En Enfermería Volume 2020 ; 2020 ; 38 ; >
+      au < exists ; exists ; 2021 ; Investigación y Educación En Enfermería Volume 2021 ; 2021 ; 39 ; >
+      au < exists ; exists ; 2022 ; Investigación y Educación En Enfermería Volume 2022 ; 2022 ; 40 ; >
+      au < testing ; exists ; 2023 ; Investigación y Educación En Enfermería Volume 2023 ; 2023 ; 41 ; >
+      au < exists ; exists ; 2024 ; Investigación y Educación En Enfermería Volume 2024 ; 2024 ; 42 ; >
+
+  }
+
+  {
+
+      title <
+        name = Lingüística y Literatura ;
+        issn = 0120-5587 ;
+        eissn = 2422-3174
+      >
+
+      param[base_url] = https://revistas.udea.edu.co/
+      param[journal_id] = lyl
+
+      au < exists ; exists ; 2006 ; Lingüística y Literatura Volume 2006 ; 2006 ; 49 ; >
+      au < exists ; exists ; 2007 ; Lingüística y Literatura Volume 2007 ; 2007 ; 50 ; >
+      au < exists ; exists ; 2008 ; Lingüística y Literatura Volume 2008 ; 2008 ; 51 ; >
+      au < exists ; exists ; 2009 ; Lingüística y Literatura Volume 2009 ; 2009 ; 52 ; >
+      au < exists ; exists ; 2010 ; Lingüística y Literatura Volume 2010 ; 2010 ; 53 ; >
+      au < exists ; exists ; 2011 ; Lingüística y Literatura Volume 2011 ; 2011 ; 54 ; >
+      au < exists ; exists ; 2012 ; Lingüística y Literatura Volume 2012 ; 2012 ; 55 ; >
+      au < exists ; exists ; 2013 ; Lingüística y Literatura Volume 2013 ; 2013 ; 56 ; >
+      au < exists ; exists ; 2014 ; Lingüística y Literatura Volume 2014 ; 2014 ; 57 ; >
+      au < exists ; exists ; 2015 ; Lingüística y Literatura Volume 2015 ; 2015 ; 58 ; >
+      au < exists ; exists ; 2016 ; Lingüística y Literatura Volume 2016 ; 2016 ; 59 ; >
+      au < exists ; exists ; 2017 ; Lingüística y Literatura Volume 2017 ; 2017 ; 60 ; >
+      au < exists ; exists ; 2018 ; Lingüística y Literatura Volume 2018 ; 2018 ; 61 ; >
+      au < exists ; exists ; 2019 ; Lingüística y Literatura Volume 2019 ; 2019 ; 62 ; >
+      au < exists ; exists ; 2020 ; Lingüística y Literatura Volume 2020 ; 2020 ; 63 ; >
+      au < exists ; exists ; 2021 ; Lingüística y Literatura Volume 2021 ; 2021 ; 64 ; >
+      au < exists ; exists ; 2022 ; Lingüística y Literatura Volume 2022 ; 2022 ; 65 ; >
+      au < testing ; exists ; 2023 ; Lingüística y Literatura Volume 2023 ; 2023 ; 66 ; >
+      au < exists ; exists ; 2024 ; Lingüística y Literatura Volume 2024 ; 2024 ; 67 ; >
+
+  }
+
+  {
+
+      title <
+        name = Revista Facultad de Ingeniería Universidad de Antioquia ;
+        issn = 0120-6230 ;
+        eissn = 2422-2844
+      >
+
+      param[base_url] = https://revistas.udea.edu.co/
+      param[journal_id] = ingenieria
+
+      au < exists ; exists ; 1984 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1984 ; 1984 ; 1 ; >
+      au < exists ; exists ; 1985 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1985 ; 1985 ; 2 ; >
+      au < exists ; exists ; 1986 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1986 ; 1986 ; 3 ; >
+      au < exists ; exists ; 1987 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1987 ; 1987 ; 4 ; >
+      au < exists ; exists ; 1988 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1988 ; 1988 ; 5 ; >
+      au < exists ; exists ; 1989 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1989 ; 1989 ; 6 ; >
+      au < exists ; exists ; 1990 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1990 ; 1990 ; 7 ; >
+      au < exists ; exists ; 1991 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1991 ; 1991 ; 8 ; >
+      au < exists ; exists ; 1992 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1992 ; 1992 ; 9 ; >
+      au < exists ; exists ; 1993 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1993 ; 1993 ; 10 ; >
+      au < exists ; exists ; 1994 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1994 ; 1994 ; 11 ; >
+      au < exists ; exists ; 1995 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1995 ; 1995 ; 12 ; >
+      au < exists ; exists ; 1996 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1996 ; 1996 ; 13 ; >
+      au < exists ; exists ; 1997 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1997 ; 1997 ; 14 ; >
+      au < exists ; exists ; 1998 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1998 ; 1998 ; 15 ; >
+      au < exists ; exists ; 1999 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1999 ; 1999 ; 16 ; >
+      au < exists ; exists ; 2000 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2000 ; 2000 ; 17 ; >
+      au < exists ; exists ; 2001 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2001 ; 2001 ; 18 ; >
+      au < exists ; exists ; 2002 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2002 ; 2002 ; 19 ; >
+      au < exists ; exists ; 2003 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2003 ; 2003 ; 20 ; >
+      au < exists ; exists ; 2004 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2004 ; 2004 ; 21 ; >
+      au < exists ; exists ; 2005 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2005 ; 2005 ; 22 ; >
+      au < exists ; exists ; 2006 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2006 ; 2006 ; 23 ; >
+      au < exists ; exists ; 2007 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2007 ; 2007 ; 24 ; >
+      au < exists ; exists ; 2008 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2008 ; 2008 ; 25 ; >
+      au < exists ; exists ; 2009 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2009 ; 2009 ; 26 ; >
+      au < exists ; exists ; 2010 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2010 ; 2010 ; 27 ; >
+      au < exists ; exists ; 2011 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2011 ; 2011 ; 28 ; >
+      au < exists ; exists ; 2012 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2012 ; 2012 ; 29 ; >
+      au < exists ; exists ; 2013 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2013 ; 2013 ; 30 ; >
+      au < exists ; exists ; 2014 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2014 ; 2014 ; 31 ; >
+      au < exists ; exists ; 2015 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2015 ; 2015 ; 32 ; >
+      au < exists ; exists ; 2016 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2016 ; 2016 ; 33 ; >
+      au < exists ; exists ; 2017 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2017 ; 2017 ; 34 ; >
+      au < exists ; exists ; 2018 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2018 ; 2018 ; 35 ; >
+      au < exists ; exists ; 2019 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2019 ; 2019 ; 36 ; >
+      au < exists ; exists ; 2020 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2020 ; 2020 ; 37 ; >
+      au < exists ; exists ; 2021 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2021 ; 2021 ; 38 ; >
+      au < exists ; exists ; 2022 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2022 ; 2022 ; 39 ; >
+      au < testing ; exists ; 2023 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2023 ; 2023 ; 40 ; >
+      au < exists ; exists ; 2024 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2024 ; 2024 ; 41 ; >
+
+  }
+
+  {
+
+      title <
+        name = Iatreia ;
+        issn = 0121-0793 ;
+        eissn = 2011-7965
+      >
+
+      param[base_url] = https://revistas.udea.edu.co/
+      param[journal_id] = iatreia
+
+      au < exists ; exists ; 1988 ; Iatreia Volume 1988 ; 1988 ; 1 ; >
+      au < exists ; exists ; 1989 ; Iatreia Volume 1989 ; 1989 ; 2 ; >
+      au < exists ; exists ; 1990 ; Iatreia Volume 1990 ; 1990 ; 3 ; >
+      au < exists ; exists ; 1991 ; Iatreia Volume 1991 ; 1991 ; 4 ; >
+      au < exists ; exists ; 1992 ; Iatreia Volume 1992 ; 1992 ; 5 ; >
+      au < exists ; exists ; 1993 ; Iatreia Volume 1993 ; 1993 ; 6 ; >
+      au < exists ; exists ; 1994 ; Iatreia Volume 1994 ; 1994 ; 7 ; >
+      au < exists ; exists ; 1995 ; Iatreia Volume 1995 ; 1995 ; 8 ; >
+      au < exists ; exists ; 1996 ; Iatreia Volume 1996 ; 1996 ; 9 ; >
+      au < exists ; exists ; 1997 ; Iatreia Volume 1997 ; 1997 ; 10 ; >
+      au < exists ; exists ; 1998 ; Iatreia Volume 1998 ; 1998 ; 11 ; >
+      au < exists ; exists ; 1999 ; Iatreia Volume 1999 ; 1999 ; 12 ; >
+      au < exists ; exists ; 2000 ; Iatreia Volume 2000 ; 2000 ; 13 ; >
+      au < exists ; exists ; 2001 ; Iatreia Volume 2001 ; 2001 ; 14 ; >
+      au < exists ; exists ; 2002 ; Iatreia Volume 2002 ; 2002 ; 15 ; >
+      au < exists ; exists ; 2003 ; Iatreia Volume 2003 ; 2003 ; 16 ; >
+      au < exists ; exists ; 2004 ; Iatreia Volume 2004 ; 2004 ; 17 ; >
+      au < exists ; exists ; 2005 ; Iatreia Volume 2005 ; 2005 ; 18 ; >
+      au < exists ; exists ; 2006 ; Iatreia Volume 2006 ; 2006 ; 19 ; >
+      au < exists ; exists ; 2007 ; Iatreia Volume 2007 ; 2007 ; 20 ; >
+      au < exists ; exists ; 2008 ; Iatreia Volume 2008 ; 2008 ; 21 ; >
+      au < exists ; exists ; 2009 ; Iatreia Volume 2009 ; 2009 ; 22 ; >
+      au < exists ; exists ; 2010 ; Iatreia Volume 2010 ; 2010 ; 23 ; >
+      au < exists ; exists ; 2011 ; Iatreia Volume 2011 ; 2011 ; 24 ; >
+      au < exists ; exists ; 2012 ; Iatreia Volume 2012 ; 2012 ; 25 ; >
+      au < exists ; exists ; 2013 ; Iatreia Volume 2013 ; 2013 ; 26 ; >
+      au < exists ; exists ; 2014 ; Iatreia Volume 2014 ; 2014 ; 27 ; >
+      au < exists ; exists ; 2015 ; Iatreia Volume 2015 ; 2015 ; 28 ; >
+      au < exists ; exists ; 2016 ; Iatreia Volume 2016 ; 2016 ; 29 ; >
+      au < exists ; exists ; 2017 ; Iatreia Volume 2017 ; 2017 ; 30 ; >
+      au < exists ; exists ; 2018 ; Iatreia Volume 2018 ; 2018 ; 31 ; >
+      au < exists ; exists ; 2019 ; Iatreia Volume 2019 ; 2019 ; 32 ; >
+      au < exists ; exists ; 2020 ; Iatreia Volume 2020 ; 2020 ; 33 ; >
+      au < exists ; exists ; 2021 ; Iatreia Volume 2021 ; 2021 ; 34 ; >
+      au < exists ; exists ; 2022 ; Iatreia Volume 2022 ; 2022 ; 35 ; >
+      au < testing ; exists ; 2023 ; Iatreia Volume 2023 ; 2023 ; 36 ; >
+      au < exists ; exists ; 2024 ; Iatreia Volume 2024 ; 2024 ; 37 ; >
+
+  }
+
+  {
+
+      title <
+        name = Estudios de Filosofía ;
+        issn = 0121-3628 ;
+        eissn =  2256-358X
+      >
+
+      param[base_url] = https://revistas.udea.edu.co/
+      param[journal_id] = estudios_de_filosofia
+
+      au < exists ; exists ; 1990 ; Estudios de Filosofía Volume 1990 ; 1990 ; 1 ; >
+      au < exists ; exists ; 1991 ; Estudios de Filosofía Volume 1991 ; 1991 ; 2 ; >
+      au < exists ; exists ; 1992 ; Estudios de Filosofía Volume 1992 ; 1992 ; 3 ; >
+      au < exists ; exists ; 1993 ; Estudios de Filosofía Volume 1993 ; 1993 ; 4 ; >
+      au < exists ; exists ; 1994 ; Estudios de Filosofía Volume 1994 ; 1994 ; 5 ; >
+      au < exists ; exists ; 1995 ; Estudios de Filosofía Volume 1995 ; 1995 ; 6 ; >
+      au < exists ; exists ; 1996 ; Estudios de Filosofía Volume 1996 ; 1996 ; 7 ; >
+      au < exists ; exists ; 1997 ; Estudios de Filosofía Volume 1997 ; 1997 ; 8 ; >
+      au < exists ; exists ; 1998 ; Estudios de Filosofía Volume 1998 ; 1998 ; 9 ; >
+      au < exists ; exists ; 1999 ; Estudios de Filosofía Volume 1999 ; 1999 ; 10 ; >
+      au < exists ; exists ; 2000 ; Estudios de Filosofía Volume 2000 ; 2000 ; 11 ; >
+      au < exists ; exists ; 2001 ; Estudios de Filosofía Volume 2001 ; 2001 ; 12 ; >
+      au < exists ; exists ; 2002 ; Estudios de Filosofía Volume 2002 ; 2002 ; 13 ; >
+      au < exists ; exists ; 2003 ; Estudios de Filosofía Volume 2003 ; 2003 ; 14 ; >
+      au < exists ; exists ; 2004 ; Estudios de Filosofía Volume 2004 ; 2004 ; 15 ; >
+      au < exists ; exists ; 2005 ; Estudios de Filosofía Volume 2005 ; 2005 ; 16 ; >
+      au < exists ; exists ; 2006 ; Estudios de Filosofía Volume 2006 ; 2006 ; 17 ; >
+      au < exists ; exists ; 2007 ; Estudios de Filosofía Volume 2007 ; 2007 ; 18 ; >
+      au < exists ; exists ; 2008 ; Estudios de Filosofía Volume 2008 ; 2008 ; 19 ; >
+      au < exists ; exists ; 2009 ; Estudios de Filosofía Volume 2009 ; 2009 ; 20 ; >
+      au < exists ; exists ; 2010 ; Estudios de Filosofía Volume 2010 ; 2010 ; 21 ; >
+      au < exists ; exists ; 2011 ; Estudios de Filosofía Volume 2011 ; 2011 ; 22 ; >
+      au < exists ; exists ; 2012 ; Estudios de Filosofía Volume 2012 ; 2012 ; 23 ; >
+      au < exists ; exists ; 2013 ; Estudios de Filosofía Volume 2013 ; 2013 ; 24 ; >
+      au < exists ; exists ; 2014 ; Estudios de Filosofía Volume 2014 ; 2014 ; 25 ; >
+      au < exists ; exists ; 2015 ; Estudios de Filosofía Volume 2015 ; 2015 ; 26 ; >
+      au < exists ; exists ; 2016 ; Estudios de Filosofía Volume 2016 ; 2016 ; 27 ; >
+      au < exists ; exists ; 2017 ; Estudios de Filosofía Volume 2017 ; 2017 ; 28 ; >
+      au < exists ; exists ; 2018 ; Estudios de Filosofía Volume 2018 ; 2018 ; 29 ; >
+      au < exists ; exists ; 2019 ; Estudios de Filosofía Volume 2019 ; 2019 ; 30 ; >
+      au < exists ; exists ; 2020 ; Estudios de Filosofía Volume 2020 ; 2020 ; 31 ; >
+      au < exists ; exists ; 2021 ; Estudios de Filosofía Volume 2021 ; 2021 ; 32 ; >
+      au < exists ; exists ; 2022 ; Estudios de Filosofía Volume 2022 ; 2022 ; 33 ; >
+      au < testing ; exists ; 2023 ; Estudios de Filosofía Volume 2023 ; 2023 ; 34 ; >
+      au < exists ; exists ; 2024 ; Estudios de Filosofía Volume 2024 ; 2024 ; 35 ; >
+
+  }
+
+  {
+
+      title <
+        name = Vitae ;
+        issn = 0121-4004 ;
+        eissn = 2145-2660
+      >
+
+      param[base_url] = https://revistas.udea.edu.co/
+      param[journal_id] = vitae
+
+      au < exists ; exists ; 1991 ; Vitae Volume 1991 ; 1991 ; 1 ; >
+      au < exists ; exists ; 1992 ; Vitae Volume 1992 ; 1992 ; 2 ; >
+      au < exists ; exists ; 1993 ; Vitae Volume 1993 ; 1993 ; 3 ; >
+      au < exists ; exists ; 1994 ; Vitae Volume 1994 ; 1994 ; 4 ; >
+      au < exists ; exists ; 1995 ; Vitae Volume 1995 ; 1995 ; 5 ; >
+      au < exists ; exists ; 1996 ; Vitae Volume 1996 ; 1996 ; 6 ; >
+      au < exists ; exists ; 1997 ; Vitae Volume 1997 ; 1997 ; 7 ; >
+      au < exists ; exists ; 1998 ; Vitae Volume 1998 ; 1998 ; 8 ; >
+      au < exists ; exists ; 1999 ; Vitae Volume 1999 ; 1999 ; 9 ; >
+      au < exists ; exists ; 2000 ; Vitae Volume 2000 ; 2000 ; 10 ; >
+      au < exists ; exists ; 2001 ; Vitae Volume 2001 ; 2001 ; 11 ; >
+      au < exists ; exists ; 2002 ; Vitae Volume 2002 ; 2002 ; 12 ; >
+      au < exists ; exists ; 2003 ; Vitae Volume 2003 ; 2003 ; 13 ; >
+      au < exists ; exists ; 2004 ; Vitae Volume 2004 ; 2004 ; 14 ; >
+      au < exists ; exists ; 2005 ; Vitae Volume 2005 ; 2005 ; 15 ; >
+      au < exists ; exists ; 2006 ; Vitae Volume 2006 ; 2006 ; 16 ; >
+      au < exists ; exists ; 2007 ; Vitae Volume 2007 ; 2007 ; 17 ; >
+      au < exists ; exists ; 2008 ; Vitae Volume 2008 ; 2008 ; 18 ; >
+      au < exists ; exists ; 2009 ; Vitae Volume 2009 ; 2009 ; 19 ; >
+      au < exists ; exists ; 2010 ; Vitae Volume 2010 ; 2010 ; 20 ; >
+      au < exists ; exists ; 2011 ; Vitae Volume 2011 ; 2011 ; 21 ; >
+      au < exists ; exists ; 2012 ; Vitae Volume 2012 ; 2012 ; 22 ; >
+      au < exists ; exists ; 2013 ; Vitae Volume 2013 ; 2013 ; 23 ; >
+      au < exists ; exists ; 2014 ; Vitae Volume 2014 ; 2014 ; 24 ; >
+      au < exists ; exists ; 2015 ; Vitae Volume 2015 ; 2015 ; 25 ; >
+      au < exists ; exists ; 2016 ; Vitae Volume 2016 ; 2016 ; 26 ; >
+      au < exists ; exists ; 2017 ; Vitae Volume 2017 ; 2017 ; 27 ; >
+      au < exists ; exists ; 2018 ; Vitae Volume 2018 ; 2018 ; 28 ; >
+      au < exists ; exists ; 2019 ; Vitae Volume 2019 ; 2019 ; 29 ; >
+      au < exists ; exists ; 2020 ; Vitae Volume 2020 ; 2020 ; 30 ; >
+      au < exists ; exists ; 2021 ; Vitae Volume 2021 ; 2021 ; 31 ; >
+      au < exists ; exists ; 2022 ; Vitae Volume 2022 ; 2022 ; 32 ; >
+      au < testing ; exists ; 2023 ; Vitae Volume 2023 ; 2023 ; 33 ; >
+      au < exists ; exists ; 2024 ; Vitae Volume 2024 ; 2024 ; 34 ; >
+
+  }
+
+  {
+
+      title <
+        name = Estudios Políticos ;
+        issn = 0121-5167 ;
+        eissn = 2462-8433
+      >
+
+      param[base_url] = https://revistas.udea.edu.co/
+      param[journal_id] = estudiospoliticos
+
+      au < exists ; exists ; 1992 ; Estudios Políticos Volume 1992 ; 1992 ; 1 ; >
+      au < exists ; exists ; 1993 ; Estudios Políticos Volume 1993 ; 1993 ; 2 ; >
+      au < exists ; exists ; 1994 ; Estudios Políticos Volume 1994 ; 1994 ; 3 ; >
+      au < exists ; exists ; 1995 ; Estudios Políticos Volume 1995 ; 1995 ; 4 ; >
+      au < exists ; exists ; 1996 ; Estudios Políticos Volume 1996 ; 1996 ; 5 ; >
+      au < exists ; exists ; 1997 ; Estudios Políticos Volume 1997 ; 1997 ; 6 ; >
+      au < exists ; exists ; 1998 ; Estudios Políticos Volume 1998 ; 1998 ; 7 ; >
+      au < exists ; exists ; 1999 ; Estudios Políticos Volume 1999 ; 1999 ; 8 ; >
+      au < exists ; exists ; 2000 ; Estudios Políticos Volume 2000 ; 2000 ; 9 ; >
+      au < exists ; exists ; 2001 ; Estudios Políticos Volume 2001 ; 2001 ; 10 ; >
+      au < exists ; exists ; 2002 ; Estudios Políticos Volume 2002 ; 2002 ; 11 ; >
+      au < exists ; exists ; 2003 ; Estudios Políticos Volume 2003 ; 2003 ; 12 ; >
+      au < exists ; exists ; 2004 ; Estudios Políticos Volume 2004 ; 2004 ; 13 ; >
+      au < exists ; exists ; 2005 ; Estudios Políticos Volume 2005 ; 2005 ; 14 ; >
+      au < exists ; exists ; 2006 ; Estudios Políticos Volume 2006 ; 2006 ; 15 ; >
+      au < exists ; exists ; 2007 ; Estudios Políticos Volume 2007 ; 2007 ; 16 ; >
+      au < exists ; exists ; 2008 ; Estudios Políticos Volume 2008 ; 2008 ; 17 ; >
+      au < exists ; exists ; 2009 ; Estudios Políticos Volume 2009 ; 2009 ; 18 ; >
+      au < exists ; exists ; 2010 ; Estudios Políticos Volume 2010 ; 2010 ; 19 ; >
+      au < exists ; exists ; 2011 ; Estudios Políticos Volume 2011 ; 2011 ; 20 ; >
+      au < exists ; exists ; 2012 ; Estudios Políticos Volume 2012 ; 2012 ; 21 ; >
+      au < exists ; exists ; 2013 ; Estudios Políticos Volume 2013 ; 2013 ; 22 ; >
+      au < exists ; exists ; 2014 ; Estudios Políticos Volume 2014 ; 2014 ; 23 ; >
+      au < exists ; exists ; 2015 ; Estudios Políticos Volume 2015 ; 2015 ; 24 ; >
+      au < exists ; exists ; 2016 ; Estudios Políticos Volume 2016 ; 2016 ; 25 ; >
+      au < exists ; exists ; 2017 ; Estudios Políticos Volume 2017 ; 2017 ; 26 ; >
+      au < exists ; exists ; 2018 ; Estudios Políticos Volume 2018 ; 2018 ; 27 ; >
+      au < exists ; exists ; 2019 ; Estudios Políticos Volume 2019 ; 2019 ; 28 ; >
+      au < exists ; exists ; 2020 ; Estudios Políticos Volume 2020 ; 2020 ; 29 ; >
+      au < exists ; exists ; 2021 ; Estudios Políticos Volume 2021 ; 2021 ; 30 ; >
+      au < exists ; exists ; 2022 ; Estudios Políticos Volume 2022 ; 2022 ; 31 ; >
+      au < testing ; exists ; 2023 ; Estudios Políticos Volume 2023 ; 2023 ; 32 ; >
+      au < exists ; exists ; 2024 ; Estudios Políticos Volume 2024 ; 2024 ; 33 ; >
+
+  }
+
+  {
+
+      title <
+        name = Íkala, Revista de Lenguaje y Cultura ;
+        issn = 0123-3432 ;
+        eissn = 2145-566X
+      >
+
+      param[base_url] = https://revistas.udea.edu.co/
+      param[journal_id] = ikala
+
+      au < exists ; exists ; 1996 ; Íkala, Revista de Lenguaje y Cultura Volume 1996 ; 1996 ; 1 ; >
+      au < exists ; exists ; 1997 ; Íkala, Revista de Lenguaje y Cultura Volume 1997 ; 1997 ; 2 ; >
+      au < exists ; exists ; 1998 ; Íkala, Revista de Lenguaje y Cultura Volume 1998 ; 1998 ; 3 ; >
+      au < exists ; exists ; 1999 ; Íkala, Revista de Lenguaje y Cultura Volume 1999 ; 1999 ; 4 ; >
+      au < exists ; exists ; 2000 ; Íkala, Revista de Lenguaje y Cultura Volume 2000 ; 2000 ; 5 ; >
+      au < exists ; exists ; 2001 ; Íkala, Revista de Lenguaje y Cultura Volume 2001 ; 2001 ; 6 ; >
+      au < exists ; exists ; 2002 ; Íkala, Revista de Lenguaje y Cultura Volume 2002 ; 2002 ; 7 ; >
+      au < exists ; exists ; 2003 ; Íkala, Revista de Lenguaje y Cultura Volume 2003 ; 2003 ; 8 ; >
+      au < exists ; exists ; 2004 ; Íkala, Revista de Lenguaje y Cultura Volume 2004 ; 2004 ; 9 ; >
+      au < exists ; exists ; 2005 ; Íkala, Revista de Lenguaje y Cultura Volume 2005 ; 2005 ; 10 ; >
+      au < exists ; exists ; 2006 ; Íkala, Revista de Lenguaje y Cultura Volume 2006 ; 2006 ; 11 ; >
+      au < exists ; exists ; 2007 ; Íkala, Revista de Lenguaje y Cultura Volume 2007 ; 2007 ; 12 ; >
+      au < exists ; exists ; 2008 ; Íkala, Revista de Lenguaje y Cultura Volume 2008 ; 2008 ; 13 ; >
+      au < exists ; exists ; 2009 ; Íkala, Revista de Lenguaje y Cultura Volume 2009 ; 2009 ; 14 ; >
+      au < exists ; exists ; 2010 ; Íkala, Revista de Lenguaje y Cultura Volume 2010 ; 2010 ; 15 ; >
+      au < exists ; exists ; 2011 ; Íkala, Revista de Lenguaje y Cultura Volume 2011 ; 2011 ; 16 ; >
+      au < exists ; exists ; 2012 ; Íkala, Revista de Lenguaje y Cultura Volume 2012 ; 2012 ; 17 ; >
+      au < exists ; exists ; 2013 ; Íkala, Revista de Lenguaje y Cultura Volume 2013 ; 2013 ; 18 ; >
+      au < exists ; exists ; 2014 ; Íkala, Revista de Lenguaje y Cultura Volume 2014 ; 2014 ; 19 ; >
+      au < exists ; exists ; 2015 ; Íkala, Revista de Lenguaje y Cultura Volume 2015 ; 2015 ; 20 ; >
+      au < exists ; exists ; 2016 ; Íkala, Revista de Lenguaje y Cultura Volume 2016 ; 2016 ; 21 ; >
+      au < exists ; exists ; 2017 ; Íkala, Revista de Lenguaje y Cultura Volume 2017 ; 2017 ; 22 ; >
+      au < exists ; exists ; 2018 ; Íkala, Revista de Lenguaje y Cultura Volume 2018 ; 2018 ; 23 ; >
+      au < exists ; exists ; 2019 ; Íkala, Revista de Lenguaje y Cultura Volume 2019 ; 2019 ; 24 ; >
+      au < exists ; exists ; 2020 ; Íkala, Revista de Lenguaje y Cultura Volume 2020 ; 2020 ; 25 ; >
+      au < exists ; exists ; 2021 ; Íkala, Revista de Lenguaje y Cultura Volume 2021 ; 2021 ; 26 ; >
+      au < exists ; exists ; 2022 ; Íkala, Revista de Lenguaje y Cultura Volume 2022 ; 2022 ; 27 ; >
+      au < testing ; exists ; 2023 ; Íkala, Revista de Lenguaje y Cultura Volume 2023 ; 2023 ; 28 ; >
+      au < exists ; exists ; 2024 ; Íkala, Revista de Lenguaje y Cultura Volume 2024 ; 2024 ; 29 ; >
+
+  }
+
+  {
+
+      title <
+        name = Estudios De Literatura Colombiana ;
+        issn = 0123-4412 ;
+        eissn =  2665-3273
+      >
+
+      param[base_url] = https://revistas.udea.edu.co/
+      param[journal_id] = elc
+
+      au < exists ; exists ; 1997 ; Estudios De Literatura Colombiana Volume 1997 ; 1997 ; 1 ; >
+      au < exists ; exists ; 1998 ; Estudios De Literatura Colombiana Volume 1998 ; 1998 ; 2 ; >
+      au < exists ; exists ; 1999 ; Estudios De Literatura Colombiana Volume 1999 ; 1999 ; 3 ; >
+      au < exists ; exists ; 2000 ; Estudios De Literatura Colombiana Volume 2000 ; 2000 ; 4 ; >
+      au < exists ; exists ; 2001 ; Estudios De Literatura Colombiana Volume 2001 ; 2001 ; 5 ; >
+      au < exists ; exists ; 2002 ; Estudios De Literatura Colombiana Volume 2002 ; 2002 ; 6 ; >
+      au < exists ; exists ; 2003 ; Estudios De Literatura Colombiana Volume 2003 ; 2003 ; 7 ; >
+      au < exists ; exists ; 2004 ; Estudios De Literatura Colombiana Volume 2004 ; 2004 ; 8 ; >
+      au < exists ; exists ; 2005 ; Estudios De Literatura Colombiana Volume 2005 ; 2005 ; 9 ; >
+      au < exists ; exists ; 2006 ; Estudios De Literatura Colombiana Volume 2006 ; 2006 ; 10 ; >
+      au < exists ; exists ; 2007 ; Estudios De Literatura Colombiana Volume 2007 ; 2007 ; 11 ; >
+      au < exists ; exists ; 2008 ; Estudios De Literatura Colombiana Volume 2008 ; 2008 ; 12 ; >
+      au < exists ; exists ; 2009 ; Estudios De Literatura Colombiana Volume 2009 ; 2009 ; 13 ; >
+      au < exists ; exists ; 2010 ; Estudios De Literatura Colombiana Volume 2010 ; 2010 ; 14 ; >
+      au < exists ; exists ; 2011 ; Estudios De Literatura Colombiana Volume 2011 ; 2011 ; 15 ; >
+      au < exists ; exists ; 2012 ; Estudios De Literatura Colombiana Volume 2012 ; 2012 ; 16 ; >
+      au < exists ; exists ; 2013 ; Estudios De Literatura Colombiana Volume 2013 ; 2013 ; 17 ; >
+      au < exists ; exists ; 2014 ; Estudios De Literatura Colombiana Volume 2014 ; 2014 ; 18 ; >
+      au < exists ; exists ; 2015 ; Estudios De Literatura Colombiana Volume 2015 ; 2015 ; 19 ; >
+      au < exists ; exists ; 2016 ; Estudios De Literatura Colombiana Volume 2016 ; 2016 ; 20 ; >
+      au < exists ; exists ; 2017 ; Estudios De Literatura Colombiana Volume 2017 ; 2017 ; 21 ; >
+      au < exists ; exists ; 2018 ; Estudios De Literatura Colombiana Volume 2018 ; 2018 ; 22 ; >
+      au < exists ; exists ; 2019 ; Estudios De Literatura Colombiana Volume 2019 ; 2019 ; 23 ; >
+      au < exists ; exists ; 2020 ; Estudios De Literatura Colombiana Volume 2020 ; 2020 ; 24 ; >
+      au < exists ; exists ; 2021 ; Estudios De Literatura Colombiana Volume 2021 ; 2021 ; 25 ; >
+      au < exists ; exists ; 2022 ; Estudios De Literatura Colombiana Volume 2022 ; 2022 ; 26 ; >
+      au < testing ; exists ; 2023 ; Estudios De Literatura Colombiana Volume 2023 ; 2023 ; 27 ; >
+      au < exists ; exists ; 2024 ; Estudios De Literatura Colombiana Volume 2024 ; 2024 ; 28 ; >
+
+  }
+
+  {
+
+      title <
+        name = Mutatis Mutandis. Revista Latinoamericana de Traducción ;
+        eissn = 2011-799X
+      >
+
+      param[base_url] = https://revistas.udea.edu.co/
+      param[journal_id] = mutatismutandis
+
+      au < exists ; exists ; 2008 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2008 ; 2008 ; 1 ; >
+      au < exists ; exists ; 2009 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2009 ; 2009 ; 2 ; >
+      au < exists ; exists ; 2010 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2010 ; 2010 ; 3 ; >
+      au < exists ; exists ; 2011 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2011 ; 2011 ; 4 ; >
+      au < exists ; exists ; 2012 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2012 ; 2012 ; 5 ; >
+      au < exists ; exists ; 2013 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2013 ; 2013 ; 6 ; >
+      au < exists ; exists ; 2014 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2014 ; 2014 ; 7 ; >
+      au < exists ; exists ; 2015 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2015 ; 2015 ; 8 ; >
+      au < exists ; exists ; 2016 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2016 ; 2016 ; 9 ; >
+      au < exists ; exists ; 2017 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2017 ; 2017 ; 10 ; >
+      au < exists ; exists ; 2018 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2018 ; 2018 ; 11 ; >
+      au < exists ; exists ; 2019 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2019 ; 2019 ; 12 ; >
+      au < exists ; exists ; 2020 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2020 ; 2020 ; 13 ; >
+      au < exists ; exists ; 2021 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2021 ; 2021 ; 14 ; >
+      au < exists ; exists ; 2022 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2022 ; 2022 ; 15 ; >
+      au < testing ; exists ; 2023 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2023 ; 2023 ; 16 ; >
+      au < exists ; exists ; 2024 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2024 ; 2024 ; 17 ; >
+
+  }
+
+  {
+
+      title <
+        name = Trashumante ;
+        issn = 2322-9381 ;
+        eissn =  2322-9675
+      >
+
+      param[base_url] = https://revistas.udea.edu.co/
+      param[journal_id] = trashumante
+
+      au < exists ; exists ; 2013 ; Trashumante Volume 2013 ; 2013 ; 1 ; >
+      au < exists ; exists ; 2014 ; Trashumante Volume 2014 ; 2014 ; 2 ; >
+      au < exists ; exists ; 2015 ; Trashumante Volume 2015 ; 2015 ; 3 ; >
+      au < exists ; exists ; 2016 ; Trashumante Volume 2016 ; 2016 ; 4 ; >
+      au < exists ; exists ; 2017 ; Trashumante Volume 2017 ; 2017 ; 5 ; >
+      au < exists ; exists ; 2018 ; Trashumante Volume 2018 ; 2018 ; 6 ; >
+      au < exists ; exists ; 2019 ; Trashumante Volume 2019 ; 2019 ; 7 ; >
+      au < exists ; exists ; 2020 ; Trashumante Volume 2020 ; 2020 ; 8 ; >
+      au < exists ; exists ; 2021 ; Trashumante Volume 2021 ; 2021 ; 9 ; >
+      au < exists ; exists ; 2022 ; Trashumante Volume 2022 ; 2022 ; 10 ; >
+      au < testing ; exists ; 2023 ; Trashumante Volume 2023 ; 2023 ; 11 ; >
+      au < exists ; exists ; 2024 ; Trashumante Volume 2024 ; 2024 ; 12 ; >
+
+  }
+
+}
