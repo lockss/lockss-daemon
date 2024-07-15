@@ -768,12 +768,12 @@
 
       param[journal_id] = edis
 
-      au < exists ; exists ; 1989 ; EDIS Volume 1989 ; 1989 ; 1989 ; >
-      au < exists ; exists ; 1990 ; EDIS Volume 1990 ; 1990 ; 1990 ; >
+      au < manifest ; exists ; 1989 ; EDIS Volume 1989 ; 1989 ; 1989 ; >
+      au < manifest ; exists ; 1990 ; EDIS Volume 1990 ; 1990 ; 1990 ; >
       au < exists ; exists ; 1991 ; EDIS Volume 1991 ; 1991 ; 1991 ; >
-      au < exists ; exists ; 1992 ; EDIS Volume 1992 ; 1992 ; 1992 ; >
-      au < exists ; exists ; 1993 ; EDIS Volume 1993 ; 1993 ; 1993 ; >
-      au < exists ; exists ; 1994 ; EDIS Volume 1994 ; 1994 ; 1994 ; >
+      au < manifest ; exists ; 1992 ; EDIS Volume 1992 ; 1992 ; 1992 ; >
+      au < manifest ; exists ; 1993 ; EDIS Volume 1993 ; 1993 ; 1993 ; >
+      au < manifest ; exists ; 1994 ; EDIS Volume 1994 ; 1994 ; 1994 ; >
       au < manifest ; exists ; 1995 ; EDIS Volume 1995 ; 1995 ; 1995 ; >
       au < manifest ; exists ; 1996 ; EDIS Volume 1996 ; 1996 ; 1996 ; >
       au < manifest ; exists ; 1997 ; EDIS Volume 1997 ; 1997 ; 1997 ; >
