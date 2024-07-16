@@ -263,14 +263,12 @@
       >
 
       param[base_url] = https://journals.ed.ac.uk/
-      param[journal_id] = rthink
+      param[journal_id] = rethink
 
-      au < exists ; exists ; 2018 ; re:think - a journal of creative ethnography Volume 2018 ; 1 ; 2018 ; >
-      au < exists ; exists ; 2019 ; re:think - a journal of creative ethnography Volume 2019 ; 2 ; 2019 ; >
-      au < exists ; exists ; 2020 ; re:think - a journal of creative ethnography Volume 2020 ; 3 ; 2020 ; >
-      au < exists ; exists ; 2021 ; re:think - a journal of creative ethnography Volume 2021 ; 4 ; 2021 ; >
-      au < exists ; exists ; 2022 ; re:think - a journal of creative ethnography Volume 2022 ; 5 ; 2022 ; >
-      au < exists ; exists ; 2023 ; re:think - a journal of creative ethnography Volume 2023 ; 6 ; 2023 ; >
+      au < manifest ; exists ; 2018 ; re:think - a journal of creative ethnography Volume 2018 ; 1 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; re:think - a journal of creative ethnography Volume 2019 ; 2 ; 2019 ; >
+      au < manifest ; exists ; 2021 ; re:think - a journal of creative ethnography Volume 2021 ; 3 ; 2021 ; >
+      au < manifest ; exists ; 2023 ; re:think - a journal of creative ethnography Volume 2023 ; 4 ; 2023 ; >
       au < expected ; exists ; 2024 ; re:think - a journal of creative ethnography Volume 2024 ; 7 ; 2024 ; >
 
   }
@@ -286,24 +284,12 @@
       param[journal_id] = ScottishStudies
 
       au < manifest ; exists ; 2006 ; Scottish Studies Volume 2006 ; 34 ; 2006 ; >
-      au < exists ; exists ; 2007 ; Scottish Studies Volume 2007 ; 35 ; 2007 ; >
-      au < exists ; exists ; 2008 ; Scottish Studies Volume 2008 ; 36 ; 2008 ; >
-      au < exists ; exists ; 2009 ; Scottish Studies Volume 2009 ; 37 ; 2009 ; >
-      au < manifest ; exists ; 2010 ; Scottish Studies Volume 2010 ; 38 ; 2010 ; >
-      au < exists ; exists ; 2011 ; Scottish Studies Volume 2011 ; 39 ; 2011 ; >
-      au < exists ; exists ; 2012 ; Scottish Studies Volume 2012 ; 40 ; 2012 ; >
-      au < manifest ; exists ; 2013 ; Scottish Studies Volume 2013 ; 41 ; 2013 ; >
-      au < manifest ; exists ; 2014 ; Scottish Studies Volume 2014 ; 42 ; 2014 ; >
-      au < exists ; exists ; 2015 ; Scottish Studies Volume 2015 ; 43 ; 2015 ; >
-      au < exists ; exists ; 2016 ; Scottish Studies Volume 2016 ; 44 ; 2016 ; >
-      au < exists ; exists ; 2017 ; Scottish Studies Volume 2017 ; 45 ; 2017 ; >
-      au < manifest ; exists ; 2018 ; Scottish Studies Volume 2018 ; 46 ; 2018 ; >
-      au < exists ; exists ; 2019 ; Scottish Studies Volume 2019 ; 47 ; 2019 ; >
-      au < exists ; exists ; 2020 ; Scottish Studies Volume 2020 ; 48 ; 2020 ; >
-      au < exists ; exists ; 2021 ; Scottish Studies Volume 2021 ; 49 ; 2021 ; >
-      au < ready ; exists ; 2022 ; Scottish Studies Volume 2022 ; 50 ; 2022 ; >
-      au < exists ; exists ; 2023 ; Scottish Studies Volume 2023 ; 51 ; 2023 ; >
-      au < ready ; exists ; 2024 ; Scottish Studies Volume 2024 ; 52 ; 2024 ; >
+      au < manifest ; exists ; 2010 ; Scottish Studies Volume 2010 ; 35 ; 2010 ; >
+      au < manifest ; exists ; 2013 ; Scottish Studies Volume 2013 ; 36 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Scottish Studies Volume 2014 ; 37 ; 2014 ; >
+      au < manifest ; exists ; 2018 ; Scottish Studies Volume 2018 ; 38 ; 2018 ; >
+      au < ready ; exists ; 2022 ; Scottish Studies Volume 2022 ; 39 ; 2022 ; >
+      au < ready ; exists ; 2024 ; Scottish Studies Volume 2024 ; 40 ; 2024 ; >
 
   }
 
@@ -360,49 +346,24 @@
   {
 
       title <
-        name = Finance and Society ;
-        eissn = 2059-5999
-      >
-
-      param[base_url] = https://financeandsociety.ed.ac.uk/
-      param[journal_id] = financeandsociety
-      #This title does not use a journal_id
-
-      au < exists ; exists ; 2015 ; Finance and Society Volume 2015 ; 1 ; 2015 ; >
-      au < exists ; exists ; 2016 ; Finance and Society Volume 2016 ; 2 ; 2016 ; >
-      au < exists ; exists ; 2017 ; Finance and Society Volume 2017 ; 3 ; 2017 ; >
-      au < exists ; exists ; 2018 ; Finance and Society Volume 2018 ; 4 ; 2018 ; >
-      au < exists ; exists ; 2019 ; Finance and Society Volume 2019 ; 5 ; 2019 ; >
-      au < exists ; exists ; 2020 ; Finance and Society Volume 2020 ; 6 ; 2020 ; >
-      au < exists ; exists ; 2021 ; Finance and Society Volume 2021 ; 7 ; 2021 ; >
-      au < exists ; exists ; 2022 ; Finance and Society Volume 2022 ; 8 ; 2022 ; >
-      au < exists ; exists ; 2023 ; Finance and Society Volume 2023 ; 9 ; 2023 ; >
-      au < expected ; exists ; 2024 ; Finance and Society Volume 2024 ; 10 ; 2024 ; >
-
-  }
-
-  {
-
-      title <
         name = Language and Psychoanalysis ;
         eissn = 2049-324X
       >
 
       param[base_url] = https://journals.ed.ac.uk/
-      param[journal_id] = language-and-psychoanalysis
-      #This title does not use a journal_id
+      param[journal_id] = languageandpsychoanalysis
 
-      au < exists ; exists ; 2012 ; Language and Psychoanalysis Volume 2012 ; 1 ; 2012 ; >
-      au < exists ; exists ; 2013 ; Language and Psychoanalysis Volume 2013 ; 2 ; 2013 ; >
-      au < exists ; exists ; 2014 ; Language and Psychoanalysis Volume 2014 ; 3 ; 2014 ; >
-      au < exists ; exists ; 2015 ; Language and Psychoanalysis Volume 2015 ; 4 ; 2015 ; >
-      au < exists ; exists ; 2016 ; Language and Psychoanalysis Volume 2016 ; 5 ; 2016 ; >
-      au < exists ; exists ; 2017 ; Language and Psychoanalysis Volume 2017 ; 6 ; 2017 ; >
-      au < exists ; exists ; 2018 ; Language and Psychoanalysis Volume 2018 ; 7 ; 2018 ; >
-      au < exists ; exists ; 2019 ; Language and Psychoanalysis Volume 2019 ; 8 ; 2019 ; >
-      au < exists ; exists ; 2020 ; Language and Psychoanalysis Volume 2020 ; 9 ; 2020 ; >
-      au < exists ; exists ; 2021 ; Language and Psychoanalysis Volume 2021 ; 10 ; 2021 ; >
-      au < exists ; exists ; 2022 ; Language and Psychoanalysis Volume 2022 ; 11 ; 2022 ; >
+      au < manifest ; exists ; 2012 ; Language and Psychoanalysis Volume 2012 ; 1 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; Language and Psychoanalysis Volume 2013 ; 2 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; Language and Psychoanalysis Volume 2014 ; 3 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Language and Psychoanalysis Volume 2015 ; 4 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Language and Psychoanalysis Volume 2016 ; 5 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; Language and Psychoanalysis Volume 2017 ; 6 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Language and Psychoanalysis Volume 2018 ; 7 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; Language and Psychoanalysis Volume 2019 ; 8 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; Language and Psychoanalysis Volume 2020 ; 9 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Language and Psychoanalysis Volume 2021 ; 10 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Language and Psychoanalysis Volume 2022 ; 11 ; 2022 ; >
       au < exists ; exists ; 2023 ; Language and Psychoanalysis Volume 2023 ; 12 ; 2023 ; >
       au < expected ; exists ; 2024 ; Language and Psychoanalysis Volume 2024 ; 13 ; 2024 ; >
 
