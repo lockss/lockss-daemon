@@ -172,25 +172,25 @@
   {
 
     title <
-      name = History of Media Studies ;
-      eissn = 2637-6091
+      name = Public Governance, Administration and Finances Law Review ;
+      issn = 2498-6275 ;
+      eissn = 2786-0736
     >
-    provider = Media Studies Press
+    provider = Ludovika University Press
 
-    au < expected ; exists ; 2024 ; History of Media Studies ; UNKNOWN >
+    au < testing ; exists ; 2024 ; Public Governance, Administration and Finances Law Review ; public_governance_administration_and_finances_law_review_2786-0736 >
 
   }
 
   {
 
     title <
-      name = Public Governance, Administration and Finances Law Review ;
-      eissn = 2786-0736
+      name = History of Media Studies ;
+      eissn = 2637-6091
     >
-    provider = Public Governance, Administration and Finances Law Review
+    provider = Media Studies Press
 
-    #Wait for confirmation from CLOCKSS
-    au < doNotProcess ; exists ; 2024 ; Public Governance, Administration and Finances Law Review ; public_governance_administration_and_finances_law_review_2786-0736 >
+    au < expected ; exists ; 2024 ; History of Media Studies ; UNKNOWN >
 
   }
 
