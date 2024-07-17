@@ -31029,7 +31029,7 @@
 
     title <
       name = Margin: The Journal of Applied Economic Research ;
-      issn = 0973-8010 ;
+      issn = 0025-2921 ;
       eissn = 0973-8029
     >
 
@@ -39272,7 +39272,7 @@
   {
 
     title <
-      name = Science Technology & Society ;
+      name = Science, Technology & Society ;
       issn = 0971-7218 ;
       eissn = 0973-0796
     >
@@ -39284,8 +39284,8 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < zapped ; finished ; 2008 ; Science Technology & Society Volume 13 ; 13 ; >
-      au < finished ; finished ; 2009 ; Science Technology & Society Volume 14 ; 14 ; >
+      au < zapped ; finished ; 2008 ; Science, Technology & Society Volume 13 ; 13 ; >
+      au < finished ; finished ; 2009 ; Science, Technology & Society Volume 14 ; 14 ; >
 
     }
 
@@ -39293,27 +39293,27 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < doNotProcess ; exists ; 1996 ; Science Technology & Society Volume 1 ; 1 ; >
-      au < doNotProcess ; exists ; 1997 ; Science Technology & Society Volume 2 ; 2 ; >
-      au < doNotProcess ; exists ; 1998 ; Science Technology & Society Volume 3 ; 3 ; >
-      au < doNotProcess ; exists ; 1999 ; Science Technology & Society Volume 4 ; 4 ; >
-      au < doNotProcess ; exists ; 2000 ; Science Technology & Society Volume 5 ; 5 ; >
-      au < doNotProcess ; exists ; 2001 ; Science Technology & Society Volume 6 ; 6 ; >
-      au < doNotProcess ; exists ; 2002 ; Science Technology & Society Volume 7 ; 7 ; >
-      au < doNotProcess ; exists ; 2003 ; Science Technology & Society Volume 8 ; 8 ; >
-      au < doNotProcess ; exists ; 2004 ; Science Technology & Society Volume 9 ; 9 ; >
-      au < doNotProcess ; exists ; 2005 ; Science Technology & Society Volume 10 ; 10 ; >
-      au < doNotProcess ; exists ; 2006 ; Science Technology & Society Volume 11 ; 11 ; >
-      au < doNotProcess ; exists ; 2007 ; Science Technology & Society Volume 12 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; Science Technology & Society Volume 13 ; 13 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; Science Technology & Society Volume 14 ; 14 ; >
-      au < zapped ; finished ; 2010 ; Science Technology & Society Volume 15 ; 15 ; >
-      au < zapped ; finished ; 2011 ; Science Technology & Society Volume 16 ; 16 ; >
-      au < finished ; finished ; 2012 ; Science Technology & Society Volume 17 ; 17 ; >
-      au < finished ; finished ; 2013 ; Science Technology & Society Volume 18 ; 18 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2014 ; Science Technology & Society Volume 19 ; 19 ; >
-      au < finished ; finished ; 2015 ; Science Technology & Society Volume 20 ; 20 ; reingest1.clockss.org:8082 >
-      au < doNotProcess ; exists ; 2016 ; Science Technology & Society Volume 21 ; 21 ; >
+      au < doNotProcess ; exists ; 1996 ; Science, Technology & Society Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 1997 ; Science, Technology & Society Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 1998 ; Science, Technology & Society Volume 3 ; 3 ; >
+      au < doNotProcess ; exists ; 1999 ; Science, Technology & Society Volume 4 ; 4 ; >
+      au < doNotProcess ; exists ; 2000 ; Science, Technology & Society Volume 5 ; 5 ; >
+      au < doNotProcess ; exists ; 2001 ; Science, Technology & Society Volume 6 ; 6 ; >
+      au < doNotProcess ; exists ; 2002 ; Science, Technology & Society Volume 7 ; 7 ; >
+      au < doNotProcess ; exists ; 2003 ; Science, Technology & Society Volume 8 ; 8 ; >
+      au < doNotProcess ; exists ; 2004 ; Science, Technology & Society Volume 9 ; 9 ; >
+      au < doNotProcess ; exists ; 2005 ; Science, Technology & Society Volume 10 ; 10 ; >
+      au < doNotProcess ; exists ; 2006 ; Science, Technology & Society Volume 11 ; 11 ; >
+      au < doNotProcess ; exists ; 2007 ; Science, Technology & Society Volume 12 ; 12 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; Science, Technology & Society Volume 13 ; 13 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; Science, Technology & Society Volume 14 ; 14 ; >
+      au < zapped ; finished ; 2010 ; Science, Technology & Society Volume 15 ; 15 ; >
+      au < zapped ; finished ; 2011 ; Science, Technology & Society Volume 16 ; 16 ; >
+      au < finished ; finished ; 2012 ; Science, Technology & Society Volume 17 ; 17 ; >
+      au < finished ; finished ; 2013 ; Science, Technology & Society Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; Science, Technology & Society Volume 19 ; 19 ; >
+      au < finished ; finished ; 2015 ; Science, Technology & Society Volume 20 ; 20 ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; exists ; 2016 ; Science, Technology & Society Volume 21 ; 21 ; >
 
     }
 
