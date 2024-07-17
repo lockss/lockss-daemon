@@ -25,8 +25,8 @@
       param[journal_id] = airea
 
       au < manifest ; exists ; 2018 ; Airea: Arts and Interdisciplinary Research Volume 2018 ; 1 ; 2018 ; >
-      au < crawling ; exists ; 2020 ; Airea: Arts and Interdisciplinary Research Volume 2020 ; 3 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Airea: Arts and Interdisciplinary Research Volume 2021 ; 4 ; 2021 ; >
+      au < frozen ; exists ; 2020 ; Airea: Arts and Interdisciplinary Research Volume 2020 ; 3 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; Airea: Arts and Interdisciplinary Research Volume 2021 ; 4 ; 2021 ; >
 
   }
 
@@ -89,9 +89,9 @@
       au < manifest ; exists ; 2017 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2017 ; 13 ; 2017 ; >
       au < manifest ; exists ; 2018 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2018 ; 14 ; 2018 ; >
       au < manifest ; exists ; 2019 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2019 ; 15 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2020 ; 16 ; 2020 ; >
+      au < frozen ; exists ; 2020 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2020 ; 16 ; 2020 ; >
       au < ready ; exists ; 2021 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2021 ; 17 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2022 ; 18 ; 2022 ; >
+      au < frozen ; exists ; 2022 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2022 ; 18 ; 2022 ; >
       au < ready ; exists ; 2023 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2023 ; 19 ; 2023 ; >
       au < expected ; exists ; 2024 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2024 ; 20 ; 2024 ; >
 
@@ -112,10 +112,10 @@
 
       au < manifest ; exists ; 2018 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2018 ; 39 ; 2018 ; >
       au < manifest ; exists ; 2019 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2019 ; 40 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2020 ; 41 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2021 ; 42 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2022 ; 43 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2023 ; 44 ; 2023 ; >
+      au < frozen ; exists ; 2020 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2020 ; 41 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2021 ; 42 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2022 ; 43 ; 2022 ; >
+      au < frozen ; exists ; 2023 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2023 ; 44 ; 2023 ; >
       au < expected ; exists ; 2024 ; HIMALAYA: The Journal of the Association for Nepal and Himalayan Studies Volume 2024 ; 45 ; 2024 ; >
 
   }
@@ -132,9 +132,9 @@
 
       au < manifest ; exists ; 2019 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2019 ; 2019 ; 2019 ; >
       au < ready ; exists ; 2020 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2020 ; 2020 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2021 ; 2021 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2022 ; 2022 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2023 ; 2023 ; 2023 ; >
+      au < frozen ; exists ; 2021 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2021 ; 2021 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2022 ; 2022 ; 2022 ; >
+      au < frozen ; exists ; 2023 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2023 ; 2023 ; 2023 ; >
       au < expected ; exists ; 2024 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2024 ; 2024 ; 2024 ; >
 
   }
@@ -156,9 +156,9 @@
       au < manifest ; exists ; 2018 ; Journal of Lithic Studies Volume 2018 ; 5 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Journal of Lithic Studies Volume 2019 ; 6 ; 2019 ; >
       au < ready ; exists ; 2020 ; Journal of Lithic Studies Volume 2020 ; 7 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Journal of Lithic Studies Volume 2021 ; 8 ; 2021 ; >
+      au < frozen ; exists ; 2021 ; Journal of Lithic Studies Volume 2021 ; 8 ; 2021 ; >
       au < ready ; exists ; 2022 ; Journal of Lithic Studies Volume 2022 ; 9 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; Journal of Lithic Studies Volume 2023 ; 10 ; 2023 ; >
+      au < frozen ; exists ; 2023 ; Journal of Lithic Studies Volume 2023 ; 10 ; 2023 ; >
       au < crawling ; exists ; 2024 ; Journal of Lithic Studies Volume 2024 ; 11 ; 2024 ; >
 
   }
@@ -185,9 +185,9 @@
       au < manifest ; exists ; 2018 ; Leviathan Volume 2018 ; 8 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Leviathan Volume 2019 ; 9-10 ; 2019 ; >
       au < ready ; exists ; 2020 ; Leviathan Volume 2020 ; 10 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Leviathan Volume 2021 ; 11-12 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; Leviathan Volume 2022 ; 12-13 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; Leviathan Volume 2023 ; 13-14 ; 2023 ; >
+      au < frozen ; exists ; 2021 ; Leviathan Volume 2021 ; 11-12 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; Leviathan Volume 2022 ; 12-13 ; 2022 ; >
+      au < frozen ; exists ; 2023 ; Leviathan Volume 2023 ; 13-14 ; 2023 ; >
       au < expected ; exists ; 2024 ; Leviathan Volume 2024 ; 14-15 ; 2024 ; >
 
   }
@@ -225,10 +225,10 @@
       param[base_url] = https://journals.ed.ac.uk/
       param[journal_id] = music-ology-eca
 
-      au < crawling ; exists ; 2020 ; MUSIC.OLOGY.ECA Volume 2020 ; 1 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; MUSIC.OLOGY.ECA Volume 2021 ; 2 ; 2021 ; >
+      au < frozen ; exists ; 2020 ; MUSIC.OLOGY.ECA Volume 2020 ; 1 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; MUSIC.OLOGY.ECA Volume 2021 ; 2 ; 2021 ; >
       au < ready ; exists ; 2022 ; MUSIC.OLOGY.ECA Volume 2022 ; 3 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; MUSIC.OLOGY.ECA Volume 2023 ; 4 ; 2023 ; >
+      au < frozen ; exists ; 2023 ; MUSIC.OLOGY.ECA Volume 2023 ; 4 ; 2023 ; >
       au < expected ; exists ; 2024 ; MUSIC.OLOGY.ECA Volume 2024 ; 5 ; 2024 ; >
 
   }
@@ -247,9 +247,9 @@
       au < manifest ; exists ; 2017 ; Papers in Historical Phonology Volume 2017 ; 2 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Papers in Historical Phonology Volume 2018 ; 3 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Papers in Historical Phonology Volume 2019 ; 4 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; Papers in Historical Phonology Volume 2020 ; 5 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Papers in Historical Phonology Volume 2021 ; 6 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; Papers in Historical Phonology Volume 2022 ; 7 ; 2022 ; >
+      au < frozen ; exists ; 2020 ; Papers in Historical Phonology Volume 2020 ; 5 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; Papers in Historical Phonology Volume 2021 ; 6 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; Papers in Historical Phonology Volume 2022 ; 7 ; 2022 ; >
       au < ready ; exists ; 2023 ; Papers in Historical Phonology Volume 2023 ; 8 ; 2023 ; >
       au < expected ; exists ; 2024 ; Papers in Historical Phonology Volume 2024 ; 9 ; 2024 ; >
 
@@ -306,9 +306,9 @@
       au < manifest ; exists ; 2018 ; Social Science Protocols Volume 2018 ; 1 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Social Science Protocols Volume 2019 ; 2 ; 2019 ; >
       au < ready ; exists ; 2020 ; Social Science Protocols Volume 2020 ; 3 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Social Science Protocols Volume 2021 ; 4 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; Social Science Protocols Volume 2022 ; 5 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; Social Science Protocols Volume 2023 ; 6 ; 2023 ; >
+      au < frozen ; exists ; 2021 ; Social Science Protocols Volume 2021 ; 4 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; Social Science Protocols Volume 2022 ; 5 ; 2022 ; >
+      au < frozen ; exists ; 2023 ; Social Science Protocols Volume 2023 ; 6 ; 2023 ; >
       au < expected ; exists ; 2024 ; Social Science Protocols Volume 2024 ; 7 ; 2024 ; >
 
   }
