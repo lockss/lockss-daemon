@@ -750,6 +750,7 @@
     param[topic] = science-and-technology
     param[journal_dir] = sti-science-technology-and-industry-review
     param[journal_issn] = 16097637
+    ###### PLUGIN MARKS THIS AS A BOOK ######
 
     au < finished ; manifest ; 1994 ; STI Review Volume 1994 ; 1994 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1995 ; STI Review Volume 1995 ; 1995 ; reingest4.clockss.org:8082 >
