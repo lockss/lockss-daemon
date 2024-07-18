@@ -8,7 +8,8 @@ import logging
 #Suggested input: python3 ./scripts/tdb/fulcrum_cvs_to_tdb.py InputFile.csv 5
 
 # Set the logging level to DEBUG for development and debugging
-logging.basicConfig(level=logging.INFO)
+#logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.DEBUG)
 
 def resolve_redirects(url):
     try:

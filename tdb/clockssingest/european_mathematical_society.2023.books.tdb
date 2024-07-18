@@ -1,11 +1,11 @@
 {
     publisher <
-        name = European Mathematical Society ; 
-        info[contract] = 2015 ; 
-        info[back] = 1900 ; 
-        info[tester] = 8 ; 
-        info[poller] = 2 ;
-        info[platform] = Custom
+      name = European Mathematical Society ; 
+      info[contract] = 2015 ; 
+      info[back] = 1900 ; 
+      info[tester] = 8 ; 
+      info[poller] = 2 ;
+      info[platform] = Custom
   >
 
     plugin = org.lockss.plugin.europeanmathematicalsociety.api.ClockssEuropeanMathematicalSocietyBooksPlugin
@@ -21,6 +21,30 @@
 
   {
     title <
+      name = Documenta Mathematica Series ;
+      issn = 2943-498X ;
+      eissn = 2943-4998 ;
+      type = bookSeries
+
+    >
+      param[book_serial_id] = dms
+
+      au < exists ; exists ; 1998 ; 978-3-98547-043-3 ; 978-3-98547-543-8 ; Proceedings of the International Congress of Mathematicians 1998: Berlin, Germany, 18–27 August 1998 ; 245 ; >
+      au < exists ; exists ; 1998 ; 978-3-98547-044-0 ; 978-3-98547-544-5 ; Proceedings of the International Congress of Mathematicians 1998 Volume 1 ; 246 ; >
+      au < exists ; exists ; 1998 ; 978-3-98547-045-7 ; 978-3-98547-545-2 ; Proceedings of the International Congress of Mathematicians 1998 Volume 2 ; 247 ; >
+      au < exists ; exists ; 1998 ; 978-3-98547-046-4 ; 978-3-98547-546-9 ; Proceedings of the International Congress of Mathematicians 1998 Volume 3 ; 248 ; >
+      au < exists ; exists ; 2001 ; 978-3-98547-042-6 ; 978-3-98547-542-1 ; Proceedings of the Conference on Quadratic Forms and Related Topics: Baton Rouge, Louisiana, USA, 26–30 March 2001 ; 249 ; >
+      au < exists ; exists ; 2003 ; 978-3-936609-21-9 ; 978-3-98547-547-6 ; A Collection of Manuscripts Written in Honour of Kazuya Kato on the Occasion of His Fiftieth Birthday ; 250 ; >
+      au < exists ; exists ; 2012 ; 978-3-936609-58-5 ; 978-3-98547-540-7 ; Optimization Stories: 21st International Symposium on Mathematical Programming. Berlin, Germany, 19–24 August 2012 ; 251 ; >
+      au < exists ; exists ; 2019 ; 978-3-98547-047-1 ;  ; The Legacy of Kurt Mahler: A Mathematical Selecta ; 252 ; >
+      au < exists ; exists ; 2015 ; 978-3-936609-61-5 ; 978-3-98547-040-2 ; A Collection of Manuscripts Written in Honour of Alexander S. Merkurjev on the Occasion of His Sixtieth Birthday ; 253 ; >
+      au < exists ; exists ; 2006 ; 978-3-936609-28-8 ; 978-3-98547-541-4 ; A Collection of Manuscripts Written in Honour of John H. Coates on the Occasion of His Sixtieth Birthday ; 254 ; >
+      au < exists ; exists ; 2010 ; 978-3-936609-48-6 ; 978-3-98547-041-9 ; A Collection of Manuscripts Written in Honour of Andrei A. Suslin on the Occasion of His Sixtieth Birthday ; 255 ; >
+      
+  }
+
+  {
+    title <
       name = EMS Monographs in Mathematics ;
       issn = 2523-5192 ;
       eissn = 2523-5206 ;
@@ -29,16 +53,16 @@
     >
       param[book_serial_id] = emm
 
-      au < doNotProcess ; doNotProcess ; 2003 ; 978-3-03719-000-5 ; 978-3-03719-500-0 ; Logarithmic combinatorial structures: a probabilistic approach ; 15 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-036-4 ; 978-3-03719-536-9 ; Elements of Asymptotic Geometry ; 58 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-031-9 ; 978-3-03719-531-4 ; The Formation of Shocks in 3-Dimensional Fluids ; 51 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-068-5 ; 978-3-03719-568-0 ; The Formation of Black Holes in General Relativity ; 93 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-106-4 ; 978-3-03719-606-9 ; Concentration Compactness for Critical Wave Maps ; 146 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-136-1 ; 978-3-03719-636-6 ; A Spinorial Approach to Riemannian and Conformal Geometry ; 194 ;  >
-      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-135-4 ; 978-3-03719-635-9 ; Foundations of Rigid Geometry I ; 227 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 978-3-03719-192-7 ; 978-3-03719-692-2 ; The Shock Development Problem ; 238 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 978-3-03719-193-4 ; 978-3-03719-693-9 ; From the Vlasov–Maxwell–Boltzmann System to Incompressible Viscous Electro-magneto-hydrodynamics ; 239 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 978-3-03719-209-2 ; 978-3-03719-709-7 ; Mackey 2-Functors and Mackey 2-Motives ; 256 ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; 978-3-03719-000-5 ; 978-3-03719-500-0 ; Logarithmic combinatorial structures: a probabilistic approach ; 18 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-036-4 ; 978-3-03719-536-9 ; Elements of Asymptotic Geometry ; 38 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-031-9 ; 978-3-03719-531-4 ; The Formation of Shocks in 3-Dimensional Fluids ; 29 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-068-5 ; 978-3-03719-568-0 ; The Formation of Black Holes in General Relativity ; 62 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-106-4 ; 978-3-03719-606-9 ; Concentration Compactness for Critical Wave Maps ; 108 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-136-1 ; 978-3-03719-636-6 ; A Spinorial Approach to Riemannian and Conformal Geometry ; 216 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-135-4 ; 978-3-03719-635-9 ; Foundations of Rigid Geometry I ; 154 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; 978-3-03719-192-7 ; 978-3-03719-692-2 ; The Shock Development Problem ; 165 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; 978-3-03719-193-4 ; 978-3-03719-693-9 ; From the Vlasov–Maxwell–Boltzmann System to Incompressible Viscous Electro-magneto-hydrodynamics ; 166 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; 978-3-03719-209-2 ; 978-3-03719-709-7 ; Mackey 2-Functors and Mackey 2-Motives ; 182 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 978-3-03719-211-5 ; 978-3-03719-711-0 ; Quasi-Periodic Solutions of Nonlinear Wave Equations on the d-Dimensional Torus ; 184 ; >
 
   }
@@ -53,8 +77,10 @@
     >
       param[book_serial_id] = esiam
 
-      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-137-8 ; 978-3-03719-637-3 ; MATHEON - Mathematics for Key Technologies ; 177 ;  >
-      au < doNotProcess ; doNotProcess ; 2020 ; 978-3-03719-207-8 ; 978-3-03719-707-3 ; Decision Support Systems for Water Supply Systems ; 254 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-137-8 ; 978-3-03719-637-3 ; MATHEON - Mathematics for Key Technologies ; 230 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; 978-3-03719-207-8 ; 978-3-03719-707-3 ; Decision Support Systems for Water Supply Systems ; 179 ; >
+
+      au < exists ; exists ; 2022 ; 978-3-98547-027-3 ; 978-3-98547-527-8 ; Interactions between Elasticity and Fluid Mechanics ; 242 ; >
 
   }
 
@@ -68,24 +94,26 @@
     >
       param[book_serial_id] = ecr
 
-      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-060-9 ; 978-3-03719-560-4 ; K-Theory and Noncommutative Geometry ; 89 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-062-3 ; 978-3-03719-562-8 ; Trends in Representation Theory of Algebras and Related Topics ; 88 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-007-4 ; 978-3-03719-507-9 ; Classification of Algebraic Varieties ; 124 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-072-2 ; 978-3-03719-572-7 ; Surveys in Stochastic Processes ; 133 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-101-9 ; 978-3-03719-601-4 ; Representations of Algebras and Related Topics ; 135 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-114-9 ; 978-3-03719-614-4 ; Contributions to Algebraic Geometry ; 154 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-119-4 ; 978-3-03719-619-9 ; Geometry and Arithmetic ; 155 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 978-3-03719-115-6 ; 978-3-03719-615-1 ; Derived Categories in Algebraic Geometry ; 161 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-125-5 ; 978-3-03719-625-0 ; Advances in Representation Theory of Algebras ; 174 ;  >
-      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-149-1 ; 978-3-03719-649-6 ; Valuation Theory in Interaction ; 182 ;  >
-      au < doNotProcess ; doNotProcess ; 2017 ; 978-3-03719-171-2 ; 978-3-03719-671-7 ; Representation Theory – Current Trends and Perspectives ; 216 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 978-3-03719-175-0 ; 978-3-03719-675-5 ; Functional Analysis and Operator Theory for Quantum Physics ; 218 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-182-8 ; 978-3-03719-682-3 ; Schubert Varieties, Equivariant Cohomology and Characteristic Classes ; 226 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-186-6 ; 978-3-03719-686-1 ; Non-Linear Partial Differential Equations, Mathematical Physics, and Stochastic Analysis ; 231 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 978-3-03719-197-2 ; 978-3-03719-697-7 ; Spectral Structures and Topological Methods in Mathematics ; 244 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 978-3-03719-198-9 ; 978-3-03719-698-4 ; $t$-Motives: Hodge Structures, Transcendence and Other Motivic Aspects ; 235 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 978-3-98547-005-1 ; 978-3-98547-505-6 ; Probabilistic Structures in Evolution ; 264 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 978-3-98547-007-5 ; 978-3-98547-507-0 ; Partial Differential Equations, Spectral Theory, and Mathematical Physics ; 265 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-060-9 ; 978-3-03719-560-4 ; K-Theory and Noncommutative Geometry ; 60 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-062-3 ; 978-3-03719-562-8 ; Trends in Representation Theory of Algebras and Related Topics ; 59 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-007-4 ; 978-3-03719-507-9 ; Classification of Algebraic Varieties ; 89 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-072-2 ; 978-3-03719-572-7 ; Surveys in Stochastic Processes ; 98 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-101-9 ; 978-3-03719-601-4 ; Representations of Algebras and Related Topics ; 103 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-114-9 ; 978-3-03719-614-4 ; Contributions to Algebraic Geometry ; 117 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-119-4 ; 978-3-03719-619-9 ; Geometry and Arithmetic ; 115 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 978-3-03719-115-6 ; 978-3-03719-615-1 ; Derived Categories in Algebraic Geometry ; 119 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-125-5 ; 978-3-03719-625-0 ; Advances in Representation Theory of Algebras ; 207 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-149-1 ; 978-3-03719-649-6 ; Valuation Theory in Interaction ; 197 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 978-3-03719-171-2 ; 978-3-03719-671-7 ; Representation Theory – Current Trends and Perspectives ; 143 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 978-3-03719-175-0 ; 978-3-03719-675-5 ; Functional Analysis and Operator Theory for Quantum Physics ; 145 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-182-8 ; 978-3-03719-682-3 ; Schubert Varieties, Equivariant Cohomology and Characteristic Classes ; 153 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-186-6 ; 978-3-03719-686-1 ; Non-Linear Partial Differential Equations, Mathematical Physics, and Stochastic Analysis ; 162 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; 978-3-03719-197-2 ; 978-3-03719-697-7 ; Spectral Structures and Topological Methods in Mathematics ; 169 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; 978-3-03719-198-9 ; 978-3-03719-698-4 ; $t$-Motives: Hodge Structures, Transcendence and Other Motivic Aspects ; 164 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 978-3-98547-005-1 ; 978-3-98547-505-6 ; Probabilistic Structures in Evolution ; 186 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 978-3-98547-007-5 ; 978-3-98547-507-0 ; Partial Differential Equations, Spectral Theory, and Mathematical Physics ; 187 ; >
+
+      au < exists ; exists ; 2023 ; 978-3-98547-054-9 ; 978-3-98547-554-4 ; Representations of Algebras and Related Structures: International Conference on Representations of Algebras, ICRA 2020, 9–25 November 2020 ; 271 ; >
 
   }
 
@@ -99,39 +127,41 @@
     >
       param[book_serial_id] = elm
 
-      au < doNotProcess ; doNotProcess ; 2004 ; 978-3-03719-004-3 ; 978-3-03719-504-8 ; Uhlenbeck Compactness ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 978-3-03719-015-9 ; 978-3-03719-515-4 ; One Semester of Elliptic Curves ; 35 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 978-3-03719-023-4 ; 978-3-03719-523-9 ; Lectures on Algebraic Topology ; 40 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 978-3-03719-024-1 ; 978-3-03719-524-6 ; An Introduction to Noncommutative Geometry ; 41 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 978-3-03719-030-2 ; 978-3-03719-530-7 ; Differential Harnack Inequalities and the Ricci Flow ; 48 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-027-2 ; 978-3-03719-527-7 ; Lectures on Empirical Processes ; 44 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-050-0 ; 978-3-03719-550-5 ; Lectures on Differential Geometry ; 76 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-018-0 ; 978-3-03719-518-5 ; Wavelets, Their Friends, and What They Can Do for You ; 82 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-066-1 ; 978-3-03719-566-6 ; Finite Generalized Quadrangles ; 97 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-078-4 ; 978-3-03719-578-9 ; Splitting Methods for Partial Differential Equations with Rough Solutions ; 112 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-090-6 ; 978-3-03719-590-1 ; 'Moonshine' of Finite Groups ; 121 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-080-7 ; 978-3-03719-580-2 ; Lectures on Gaussian Integral Operators and Classical Groups ; 126 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-096-8 ; 978-3-03719-596-3 ; Lectures on Duflo Isomorphisms in Lie Algebra and Complex Geometry ; 128 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-097-5 ; 978-3-03719-597-0 ; Mathematical Foundations of Supersymmetry ; 132 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-107-1 ; 978-3-03719-607-6 ; Faber Systems and Their Use in Sampling, Discrepancy, Numerical Integration ; 147 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-110-1 ; 978-3-03719-610-6 ; A Course on Elation Quadrangles ; 152 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 978-3-03719-128-6 ; 978-3-03719-628-1 ; Basic Noncommutative Geometry ; 109 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-131-6 ; 978-3-03719-631-1 ; The Defocusing NLS Equation and Its Normal Form ; 175 ;  >
-      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-141-5 ; 978-3-03719-641-0 ; Lectures on Universal Teichmüller Space ; 183 ;  >
-      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-154-5 ; 978-3-03719-654-0 ; 3-Manifold Groups ; 195 ;  >
-      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-155-2 ; 978-3-03719-655-7 ; Tempered Homogeneous Function Spaces ; 196 ;  >
-      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-142-2 ; 978-3-03719-642-7 ; Four Faces of Number Theory ; 197 ;  >
-      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-156-9 ; 978-3-03719-656-4 ; Higher-Dimensional Generalized Manifolds: Surgery and Constructions ; 203 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-162-0 ; 978-3-03719-662-5 ; Geometry, Analysis and Dynamics on sub-Riemannian Manifolds: Volume I ; 205 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-163-7 ; 978-3-03719-663-2 ; Geometry, Analysis and Dynamics on sub-Riemannian Manifolds: Volume II ; 206 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-168-2 ; 978-3-03719-668-7 ; Dynamics Done with Your Bare Hands ; 211 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 978-3-03719-172-9 ; 978-3-03719-672-4 ; PDE Models for Chemotaxis and Hydrodynamics in Supercritical Function Spaces ; 217 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 978-3-03719-180-4 ; 978-3-03719-680-9 ; Higher-Dimensional Knots According to Michel Kervaire ; 224 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-185-9 ; 978-3-03719-685-4 ; Local Representation Theory and Simple Groups ; 230 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 978-3-03719-195-8 ; 978-3-03719-695-3 ; Function Spaces with Dominating Mixed Smoothness ; 241 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 978-3-03719-210-8 ; 978-3-03719-710-3 ; Classification of Complex Algebraic Surfaces ; 257 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 978-3-98547-004-4 ; 978-3-98547-504-9 ; Lectures on Selected Topics in von Neumann Algebras ; 262 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 978-3-98547-008-2 ; 978-3-98547-508-7 ; Orthogonal Polynomials and Linear Functionals ; 268 ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; 978-3-03719-004-3 ; 978-3-03719-504-8 ; Uhlenbeck Compactness ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; 978-3-03719-015-9 ; 978-3-03719-515-4 ; One Semester of Elliptic Curves ; 12 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; 978-3-03719-023-4 ; 978-3-03719-523-9 ; Lectures on Algebraic Topology ; 23 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; 978-3-03719-024-1 ; 978-3-03719-524-6 ; An Introduction to Noncommutative Geometry ; 22 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; 978-3-03719-030-2 ; 978-3-03719-530-7 ; Differential Harnack Inequalities and the Ricci Flow ; 26 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-027-2 ; 978-3-03719-527-7 ; Lectures on Empirical Processes ; 223 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-050-0 ; 978-3-03719-550-5 ; Lectures on Differential Geometry ; 47 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-018-0 ; 978-3-03719-518-5 ; Wavelets, Their Friends, and What They Can Do for You ; 54 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-066-1 ; 978-3-03719-566-6 ; Finite Generalized Quadrangles ; 67 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-078-4 ; 978-3-03719-578-9 ; Splitting Methods for Partial Differential Equations with Rough Solutions ; 77 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-090-6 ; 978-3-03719-590-1 ; Moonshine' of Finite Groups ; 86 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-080-7 ; 978-3-03719-580-2 ; Lectures on Gaussian Integral Operators and Classical Groups ; 91 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-096-8 ; 978-3-03719-596-3 ; Lectures on Duflo Isomorphisms in Lie Algebra and Complex Geometry ; 93 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-097-5 ; 978-3-03719-597-0 ; Mathematical Foundations of Supersymmetry ; 97 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-107-1 ; 978-3-03719-607-6 ; Faber Systems and Their Use in Sampling, Discrepancy, Numerical Integration ; 109 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-110-1 ; 978-3-03719-610-6 ; A Course on Elation Quadrangles ; 112 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 978-3-03719-128-6 ; 978-3-03719-628-1 ; Basic Noncommutative Geometry ; 225 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-131-6 ; 978-3-03719-631-1 ; The Defocusing NLS Equation and Its Normal Form ; 205 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-141-5 ; 978-3-03719-641-0 ; Lectures on Universal Teichmüller Space ; 199 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-154-5 ; 978-3-03719-654-0 ; 3-Manifold Groups ; 217 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-155-2 ; 978-3-03719-655-7 ; Tempered Homogeneous Function Spaces ; 218 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-142-2 ; 978-3-03719-642-7 ; Four Faces of Number Theory ; 219 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-156-9 ; 978-3-03719-656-4 ; Higher-Dimensional Generalized Manifolds: Surgery and Constructions ; 137 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-162-0 ; 978-3-03719-662-5 ; Geometry, Analysis and Dynamics on sub-Riemannian Manifolds: Volume I ; 130 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-163-7 ; 978-3-03719-663-2 ; Geometry, Analysis and Dynamics on sub-Riemannian Manifolds: Volume II ; 138 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-168-2 ; 978-3-03719-668-7 ; Dynamics Done with Your Bare Hands ; 136 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 978-3-03719-172-9 ; 978-3-03719-672-4 ; PDE Models for Chemotaxis and Hydrodynamics in Supercritical Function Spaces ; 144 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 978-3-03719-180-4 ; 978-3-03719-680-9 ; Higher-Dimensional Knots According to Michel Kervaire ; 151 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-185-9 ; 978-3-03719-685-4 ; Local Representation Theory and Simple Groups ; 158 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; 978-3-03719-195-8 ; 978-3-03719-695-3 ; Function Spaces with Dominating Mixed Smoothness ; 167 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; 978-3-03719-210-8 ; 978-3-03719-710-3 ; Classification of Complex Algebraic Surfaces ; 183 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 978-3-98547-004-4 ; 978-3-98547-504-9 ; Lectures on Selected Topics in von Neumann Algebras ; 188 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 978-3-98547-008-2 ; 978-3-98547-508-7 ; Orthogonal Polynomials and Linear Functionals ; 191 ; >
+
+      au < exists ; exists ; 2022 ; 978-3-98547-014-3 ; 978-3-98547-514-8 ; An Introduction to Singular Stochastic PDEs: Allen–Cahn Equations, Metastability, and Regularity Structures ; 232 ; >
 
   }
 
@@ -143,30 +173,34 @@
     >
       param[book_serial_id] = etb
 
-      au < doNotProcess ; doNotProcess ; 2004 ; 978-3-03719-001-2 ; 978-3-03719-501-7 ; A Course In Error-Correcting Codes (978-3-03719-501-7) ; 17 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 978-3-03719-017-3 ; 978-3-03719-517-8 ; Differential-Algebraic Equations ; 36 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 978-3-03719-016-6 ; 978-3-03719-516-1 ; Locally Compact Groups ; 37 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-042-5 ; 978-3-03719-542-0 ; Distributions, Sobolev Spaces, Elliptic Equations ; 65 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-043-2 ; 978-3-03719-543-7 ; An Invitation to Quantum Groups and Duality ; 72 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-041-8 ; 978-3-03719-541-3 ; Introduction to Group Theory ; 74 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-159-0 ; 978-3-03719-659-5 ; Measure and Integration ; 201 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-049-4 ; 978-3-03719-549-9 ; First Steps in Several Complex Variables: Reinhardt Domains ; 75 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-048-7 ; 978-3-03719-548-2 ; Algebraic Topology ; 86 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-064-7 ; 978-3-03719-564-2 ; Lectures on Curves, Surfaces and Projective Varieties ; 103 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-071-5 ; 978-3-03719-571-0 ; Denumerable Markov Chains ; 104 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-081-4 ; 978-3-03719-581-9 ; Lectures on Dynamical Systems ; 113 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-102-6 ; 978-3-03719-602-1 ; Frobenius Algebras I ; 142 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-112-5 ; 978-3-03719-612-0 ; Large Scale Geometry ; 158 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 978-3-03719-111-8 ; 978-3-03719-611-3 ; Complex Analysis ; 164 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-138-5 ; 978-3-03719-638-0 ; Analytic Projective Geometry ; 176 ;  >
-      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-133-0 ; 978-3-03719-633-5 ; Diffusion Processes and Stochastic Calculus ; 181 ;  >
-      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-151-4 ; 978-3-03719-651-9 ; Spectral Theory in Riemannian Geometry ; 186 ;  >
-      au < doNotProcess ; doNotProcess ; 2017 ; 978-3-03719-174-3 ; 978-3-03719-674-8 ; Frobenius Algebras II ; 219 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 978-3-03719-179-8 ; 978-3-03719-679-3 ; A Course In Error-Correcting Codes (978-3-03719-679-3) ; 223 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-188-0 ; 978-3-03719-688-5 ; A Brief Introduction to Spectral Graph Theory ; 233 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-187-3 ; 978-3-03719-687-8 ; An Introduction to Kac-Moody Groups over Fields ; 232 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 978-3-98547-010-5 ; 978-3-98547-510-0 ; An Invitation to Optimal Transport, Wasserstein Distances, and Gradient Flows ; 267 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 978-3-98547-012-9 ; 978-3-98547-512-4 ; Dynamic Optimization for Beginners ; 269 ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; 978-3-03719-001-2 ; 978-3-03719-501-7 ; A Course In Error-Correcting Codes (978-3-03719-501-7) ; 238 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; 978-3-03719-017-3 ; 978-3-03719-517-8 ; Differential-Algebraic Equations ; 14 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; 978-3-03719-016-6 ; 978-3-03719-516-1 ; Locally Compact Groups ; 15 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-042-5 ; 978-3-03719-542-0 ; Distributions, Sobolev Spaces, Elliptic Equations ; 42 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-043-2 ; 978-3-03719-543-7 ; An Invitation to Quantum Groups and Duality ; 44 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-041-8 ; 978-3-03719-541-3 ; Introduction to Group Theory ; 45 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-159-0 ; 978-3-03719-659-5 ; Measure and Integration ; 128 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-049-4 ; 978-3-03719-549-9 ; First Steps in Several Complex Variables: Reinhardt Domains ; 46 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-048-7 ; 978-3-03719-548-2 ; Algebraic Topology ; 57 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-064-7 ; 978-3-03719-564-2 ; Lectures on Curves, Surfaces and Projective Varieties ; 70 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-071-5 ; 978-3-03719-571-0 ; Denumerable Markov Chains ; 80 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-081-4 ; 978-3-03719-581-9 ; Lectures on Dynamical Systems ; 76 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-102-6 ; 978-3-03719-602-1 ; Frobenius Algebras I ; 105 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-112-5 ; 978-3-03719-612-0 ; Large Scale Geometry ; 114 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 978-3-03719-111-8 ; 978-3-03719-611-3 ; Complex Analysis ; 122 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-138-5 ; 978-3-03719-638-0 ; Analytic Projective Geometry ; 211 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-133-0 ; 978-3-03719-633-5 ; Diffusion Processes and Stochastic Calculus ; 196 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-151-4 ; 978-3-03719-651-9 ; Spectral Theory in Riemannian Geometry ; 204 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 978-3-03719-174-3 ; 978-3-03719-674-8 ; Frobenius Algebras II ; 146 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 978-3-03719-179-8 ; 978-3-03719-679-3 ; A Course In Error-Correcting Codes (978-3-03719-679-3) ; 150 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-188-0 ; 978-3-03719-688-5 ; A Brief Introduction to Spectral Graph Theory ; 156 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-187-3 ; 978-3-03719-687-8 ; An Introduction to Kac-Moody Groups over Fields ; 159 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 978-3-98547-010-5 ; 978-3-98547-510-0 ; An Invitation to Optimal Transport, Wasserstein Distances, and Gradient Flows ; 190 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 978-3-98547-012-9 ; 978-3-98547-512-4 ; Dynamic Optimization for Beginners ; 192 ; >
+
+      au < exists ; exists ; 2022 ; 978-3-98547-017-4 ; 978-3-98547-517-9 ; Elements of Graph Theory: From Basic Concepts to Modern Developments ; 243 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-050-1 ; 978-3-98547-550-6 ; An Invitation to Optimal Transport, Wasserstein Distances, and Gradient Flows: Second Edition ; 258 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-018-1 ; 978-3-98547-518-6 ; Large Scale Geometry: Second Edition ; 264 ; >
 
   }
 
@@ -178,40 +212,43 @@
     >
       param[book_serial_id] = etm
 
-      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-033-3 ; 978-3-03719-533-8 ; Degenerate Diffusions ; 56 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-032-6 ; 978-3-03719-532-1 ; The Lie Theory of Connected Pro-Lie Groups ; 57 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-039-5 ; 978-3-03719-539-0 ; Local and Analytic Cyclic Homology ; 59 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-040-1 ; 978-3-03719-540-6 ; Elliptic Mixed, Transmission and Singular Crack Problems ; 64 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-045-6 ; 978-3-03719-545-1 ; Functional Equations and Characterization Problems on Locally Compact Abelian Groups ; 77 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-026-5 ; 978-3-03719-526-0 ; Tractability of Multivariate Problems (978-3-03719-026-5) ; 85 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-019-7 ; 978-3-03719-519-2 ; Function Spaces and Wavelets on Domains ; 84 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-070-8 ; 978-3-03719-570-3 ; The Statistical Mechanics of Quantum Lattice Systems ; 100 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-074-6 ; 978-3-03719-574-1 ; Cohomological Theory of Crystals over Function Fields ; 107 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-086-9 ; 978-3-03719-586-4 ; Homotopy Quantum Field Theory ; 114 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-085-2 ; 978-3-03719-585-7 ; Bases in Function Spaces, Sampling, Discrepancy, Numerical integration ; 115 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-084-5 ; 978-3-03719-584-0 ; Tractability of Multivariate Problems (978-3-03719-084-5) ; 118 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-082-1 ; 978-3-03719-582-6 ; Geometrisation of 3-Manifolds ; 122 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-091-3 ; 978-3-03719-591-8 ; Efficient Numerical Methods for Non-local Operators ; 125 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-083-8 ; 978-3-03719-583-3 ; Nonabelian Algebraic Topology ; 130 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-098-2 ; 978-3-03719-598-7 ; Separately Analytic Functions ; 131 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-099-9 ; 978-3-03719-599-4 ; Nonlinear Potential Theory on Metric Spaces ; 141 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-116-3 ; 978-3-03719-616-8 ; Tractability of Multivariate Problems (978-3-03719-116-3) ; 159 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 978-3-03719-122-4 ; 978-3-03719-622-9 ; Infinitesimal Geometry of Quasiconformal and Bi-Lipschitz Mappings in the Plane ; 165 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 978-3-03719-123-1 ; 978-3-03719-623-6 ; Local Function Spaces, Heat and Navier-Stokes Equations ; 166 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 978-3-03719-124-8 ; 978-3-03719-624-3 ; Invariant Manifolds in Discrete and Continuous Dynamical Systems ; 167 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-150-7 ; 978-3-03719-650-2 ; Hybrid Function Spaces, Heat and Navier-Stokes Equations ; 185 ;  >
-      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-139-2 ; 978-3-03719-639-7 ; Foundations of Garside Theory ; 192 ;  >
-      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-140-8 ; 978-3-03719-640-3 ; Elliptic PDEs, Measures and Capacities ; 214 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-166-8 ; 978-3-03719-666-3 ; Metric Geometry of Locally Compact Groups ; 209 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 978-3-03719-167-5 ; 978-3-03719-667-0 ; Degenerate Complex Monge–Ampère Equations ; 210 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 978-3-03719-169-9 ; 978-3-03719-669-4 ; Bound States of the Magnetic Schrödinger Operator ; 212 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-178-1 ; 978-3-03719-678-6 ; Shape Variation and Optimization ; 222 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-181-1 ; 978-3-03719-681-6 ; Regular, Quasi-regular and Induced Representations of Infinite-dimensional Groups ; 225 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-190-3 ; 978-3-03719-690-8 ; Boundary Behavior of Solutions to Elliptic Equations in General Domains ; 236 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 978-3-03719-191-0 ; 978-3-03719-691-5 ; Estimates for Differential Operators in Half-space ; 237 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 978-3-03719-208-5 ; 978-3-03719-708-0 ; $K3$ Surfaces ; 255 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 978-3-03719-206-1 ; 978-3-03719-706-6 ; Accuracy of Mathematical Models ; 253 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 978-3-98547-009-9 ; 978-3-98547-509-4 ; Homogenized Models of Suspension Dynamics ; 270 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-033-3 ; 978-3-03719-533-8 ; Degenerate Diffusions ; 36 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-032-6 ; 978-3-03719-532-1 ; The Lie Theory of Connected Pro-Lie Groups ; 37 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-039-5 ; 978-3-03719-539-0 ; Local and Analytic Cyclic Homology ; 39 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-040-1 ; 978-3-03719-540-6 ; Elliptic Mixed, Transmission and Singular Crack Problems ; 40 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-045-6 ; 978-3-03719-545-1 ; Functional Equations and Characterization Problems on Locally Compact Abelian Groups ; 48 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-026-5 ; 978-3-03719-526-0 ; Tractability of Multivariate Problems (978-3-03719-026-5) ; 56 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-019-7 ; 978-3-03719-519-2 ; Function Spaces and Wavelets on Domains ; 58 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-070-8 ; 978-3-03719-570-3 ; The Statistical Mechanics of Quantum Lattice Systems ; 68 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-074-6 ; 978-3-03719-574-1 ; Cohomological Theory of Crystals over Function Fields ; 74 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-086-9 ; 978-3-03719-586-4 ; Homotopy Quantum Field Theory ; 79 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-085-2 ; 978-3-03719-585-7 ; Bases in Function Spaces, Sampling, Discrepancy, Numerical integration ; 82 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-084-5 ; 978-3-03719-584-0 ; Tractability of Multivariate Problems (978-3-03719-084-5) ; 83 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-082-1 ; 978-3-03719-582-6 ; Geometrisation of 3-Manifolds ; 87 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-091-3 ; 978-3-03719-591-8 ; Efficient Numerical Methods for Non-local Operators ; 90 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-083-8 ; 978-3-03719-583-3 ; Nonabelian Algebraic Topology ; 96 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-098-2 ; 978-3-03719-598-7 ; Separately Analytic Functions ; 94 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-099-9 ; 978-3-03719-599-4 ; Nonlinear Potential Theory on Metric Spaces ; 100 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-116-3 ; 978-3-03719-616-8 ; Tractability of Multivariate Problems (978-3-03719-116-3) ; 116 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 978-3-03719-122-4 ; 978-3-03719-622-9 ; Infinitesimal Geometry of Quasiconformal and Bi-Lipschitz Mappings in the Plane ; 125 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 978-3-03719-123-1 ; 978-3-03719-623-6 ; Local Function Spaces, Heat and Navier-Stokes Equations ; 226 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 978-3-03719-124-8 ; 978-3-03719-624-3 ; Invariant Manifolds in Discrete and Continuous Dynamical Systems ; 123 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-150-7 ; 978-3-03719-650-2 ; Hybrid Function Spaces, Heat and Navier-Stokes Equations ; 202 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-139-2 ; 978-3-03719-639-7 ; Foundations of Garside Theory ; 214 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-140-8 ; 978-3-03719-640-3 ; Elliptic PDEs, Measures and Capacities ; 141 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-166-8 ; 978-3-03719-666-3 ; Metric Geometry of Locally Compact Groups ; 131 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 978-3-03719-167-5 ; 978-3-03719-667-0 ; Degenerate Complex Monge–Ampère Equations ; 134 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 978-3-03719-169-9 ; 978-3-03719-669-4 ; Bound States of the Magnetic Schrödinger Operator ; 139 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-178-1 ; 978-3-03719-678-6 ; Shape Variation and Optimization ; 149 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-181-1 ; 978-3-03719-681-6 ; Regular, Quasi-regular and Induced Representations of Infinite-dimensional Groups ; 152 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-190-3 ; 978-3-03719-690-8 ; Boundary Behavior of Solutions to Elliptic Equations in General Domains ; 161 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; 978-3-03719-191-0 ; 978-3-03719-691-5 ; Estimates for Differential Operators in Half-space ; 163 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; 978-3-03719-208-5 ; 978-3-03719-708-0 ; $K3$ Surfaces ; 181 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; 978-3-03719-206-1 ; 978-3-03719-706-6 ; Accuracy of Mathematical Models ; 177 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 978-3-98547-009-9 ; 978-3-98547-509-4 ; Homogenized Models of Suspension Dynamics ; 193 ; >
+
+      au < exists ; exists ; 2023 ; 978-3-98547-039-6 ; 978-3-98547-539-1 ; Euclidean Buildings: Geometry and Group Actions ; 267 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-048-8 ; 978-3-98547-548-3 ; The Structure of Pro-Lie Groups ; 270 ; >
 
   }
 
@@ -222,16 +259,18 @@
     >
       param[book_serial_id] = esi
 
-      au < doNotProcess ; doNotProcess ; 2004 ; 978-3-03719-002-9 ; 978-3-03719-502-4 ; Lectures on Real Semisimple Lie Algebras and Their Representations ; 18 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 978-3-03719-025-8 ; 978-3-03719-525-3 ; Lectures on Kähler Manifolds ; 42 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-037-1 ; 978-3-03719-537-6 ; Wave Equations on Lorentzian Manifolds and Quantization ; 54 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-051-7 ; 978-3-03719-551-2 ; Recent Developments in Pseudo-Riemannian Geometry ; 81 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-057-9 ; 978-3-03719-557-4 ; Boltzmann's Legacy ; 91 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-053-1 ; 978-3-03719-553-6 ; The Cauchy Problem in General Relativity ; 99 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-076-0 ; 978-3-03719-576-5 ; Lectures on the ℒ²-Sobolev Theory of the ∂-Neumann problem ; 110 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-008-1 ; 978-3-03719-508-6 ; Noncommutative Geometry and Physics: Renormalisation, Motives, Index Theory ; 129 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 978-3-03719-121-7 ; 978-3-03719-621-2 ; Erwin Schrödinger - 50 Years After ; 163 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 978-3-03719-094-4 ; 978-3-03719-594-9 ; Microlocal Analysis of Quantum Fields on Curved Spacetimes ; 245 ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; 978-3-03719-002-9 ; 978-3-03719-502-4 ; Lectures on Real Semisimple Lie Algebras and Their Representations ; 8 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; 978-3-03719-025-8 ; 978-3-03719-525-3 ; Lectures on Kähler Manifolds ; 19 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-037-1 ; 978-3-03719-537-6 ; Wave Equations on Lorentzian Manifolds and Quantization ; 34 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-051-7 ; 978-3-03719-551-2 ; Recent Developments in Pseudo-Riemannian Geometry ; 53 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-057-9 ; 978-3-03719-557-4 ; Boltzmann's Legacy ; 61 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-053-1 ; 978-3-03719-553-6 ; The Cauchy Problem in General Relativity ; 66 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-076-0 ; 978-3-03719-576-5 ; Lectures on the ?²-Sobolev Theory of the ?-Neumann problem ; 78 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-008-1 ; 978-3-03719-508-6 ; Noncommutative Geometry and Physics: Renormalisation, Motives, Index Theory ; 95 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 978-3-03719-121-7 ; 978-3-03719-621-2 ; Erwin Schrödinger - 50 Years After ; 121 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; 978-3-03719-094-4 ; 978-3-03719-594-9 ; Microlocal Analysis of Quantum Fields on Curved Spacetimes ; 173 ; >
+
+      au < exists ; exists ; 2023 ; 978-3-98547-029-7 ; 978-3-98547-529-2 ; An Introduction to the Mathematical Fluid Dynamics of Oceanic and Atmospheric Flows ; 263 ; >
 
   }
 
@@ -239,22 +278,43 @@
     title <
       name = European Mathematical Society Books ; 
       type = bookSeries
-
     >
-      au < doNotProcess ; doNotProcess ; 2005 ; 978-3-03719-009-8 ; 978-3-03719-509-3 ; European Congress of Mathematics Stockholm, June 27 - July 2, 2004 ; 23 ; >
-      au < doNotProcess ; doNotProcess ; 2005 ; 978-3-03719-014-2 ; 978-3-03719-514-7 ; Writing Mathematical Papers in English ; 34 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 978-3-03719-011-1 ; 978-3-03719-511-6 ; Dynamics on the Riemann Sphere ; 33 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-022-7 ; 978-3-03719-522-2 ; Proceedings of the International Congress of Mathematicians Madrid, August 22-30, 2006 ; 39 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-056-2 ; 978-3-03719-556-7 ; 6th International Congress on Industrial and Applied Mathematics Zürich, Switzerland, 16-20 July 2007 ; 98 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-069-2 ; 978-3-03719-569-7 ; Essays on the Complexity of Continuous Problems ; 102 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-077-7 ; 978-3-03719-577-2 ; European Congress of Mathematics Amsterdam, 14-18 July, 2008 ; 111 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-089-0 ; 978-3-03719-589-5 ; math.ch/100 ; 120 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-088-3 ; 978-3-03719-588-8 ; The Blind Spot ; 136 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-120-0 ; 978-3-03719-620-5 ; European Congress of Mathematics Kraków, 2 - 7 July, 2012 ; 170 ;  >
-      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-164-4 ; 978-3-03719-664-9 ; Mathematics and Society ; 207 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-157-6 ; 978-3-03719-657-1 ; Absolute Arithmetic and F1-Geometry ; 204 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 978-3-03719-177-4 ; 978-3-03719-677-9 ; Interviews with the Abel Prize Laureates 20032016 ; 221 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-176-7 ; 978-3-03719-676-2 ; European Congress of Mathematics ; 220 ; >
+      param[book_serial_id] = standalone
+
+      au < doNotProcess ; doNotProcess ; 2005 ; 978-3-03719-009-8 ; 978-3-03719-509-3 ; European Congress of Mathematics Stockholm, June 27 - July 2, 2004 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; 978-3-03719-014-2 ; 978-3-03719-514-7 ; Writing Mathematical Papers in English ; 11 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; 978-3-03719-011-1 ; 978-3-03719-511-6 ; Dynamics on the Riemann Sphere ; 10 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-022-7 ; 978-3-03719-522-2 ; Proceedings of the International Congress of Mathematicians Madrid, August 22-30, 2006 ; 17 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-056-2 ; 978-3-03719-556-7 ; 6th International Congress on Industrial and Applied Mathematics Zürich, Switzerland, 16-20 July 2007 ; 63 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-069-2 ; 978-3-03719-569-7 ; Essays on the Complexity of Continuous Problems ; 69 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-077-7 ; 978-3-03719-577-2 ; European Congress of Mathematics Amsterdam, 14-18 July, 2008 ; 75 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-089-0 ; 978-3-03719-589-5 ; math.ch/100 ; 85 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-088-3 ; 978-3-03719-588-8 ; The Blind Spot ; 101 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-120-0 ; 978-3-03719-620-5 ; European Congress of Mathematics Kraków, 2 - 7 July, 2012 ; 229 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-164-4 ; 978-3-03719-664-9 ; Mathematics and Society ; 132 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-157-6 ; 978-3-03719-657-1 ; Absolute Arithmetic and F1-Geometry ; 135 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 978-3-03719-177-4 ; 978-3-03719-677-9 ; Interviews with the Abel Prize Laureates 20032016 ; 147 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-176-7 ; 978-3-03719-676-2 ; European Congress of Mathematics ; 148 ; >
+
+      au < exists ; exists ; 2007 ; 978-3-98547-036-5 ; 978-3-98547-536-0 ; Proceedings of the International Congress of Mathematicians Madrid, August 22–30, 2006 Volume 1 ; 20 ; >
+      au < exists ; exists ; 2007 ; 978-3-98547-037-2 ; 978-3-98547-537-7 ; Proceedings of the International Congress of Mathematicians Madrid, August 22–30, 2006 Volume 2 ; 21 ; >
+      au < exists ; exists ; 2007 ; 978-3-98547-038-9 ; 978-3-98547-538-4 ; Proceedings of the International Congress of Mathematicians Madrid, August 22–30, 2006 Volume 3 ; 24 ; >
+      au < exists ; exists ; 2021 ; 978-3-98547-006-8 ; 978-3-98547-506-3 ; Handbook of Automata Theory ; 172 ; >
+      au < exists ; exists ; 2021 ; 978-3-98547-002-0 ; 978-3-98547-502-5 ; Handbook of Automata Theory Volume 1 ; 174 ; >
+      au < exists ; exists ; 2021 ; 978-3-98547-003-7 ; 978-3-98547-503-2 ; Handbook of Automata Theory Volume 2 ; 175 ; >
+      au < exists ; exists ; 2022 ; 978-3-98547-019-8 ; 978-3-98547-519-3 ; The Physics and Mathematics of Elliott Lieb ; 234 ; >
+      au < exists ; exists ; 2022 ; 978-3-98547-021-1 ; 978-3-98547-521-6 ; The Physics and Mathematics of Elliott Lieb Volume I ; 235 ; >
+      au < exists ; exists ; 2022 ; 978-3-98547-022-8 ; 978-3-98547-522-3 ; The Physics and Mathematics of Elliott Lieb Volume II ; 236 ; >
+      au < exists ; exists ; 2022 ; 978-3-98547-013-6 ; 978-3-98547-513-1 ; Émile Borel: A Life in Mathematics and Politics Across Two Centuries ; 244 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-051-8 ; 978-3-98547-551-3 ; European Congress of Mathematics: Portorož, 20–26 June, 2021 ; 262 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-058-7 ; 978-3-98547-558-2 ; International Congress of Mathematicians, 2022 July 6–14 ; 272 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-059-4 ; 978-3-98547-559-9 ; International Congress of Mathematicians, 2022 July 6–14, Volume 1 ; 273 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-060-0 ; 978-3-98547-560-5 ; International Congress of Mathematicians, 2022 July 6–14, Volume 2 ; 274 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-061-7 ; 978-3-98547-561-2 ; International Congress of Mathematicians, 2022 July 6–14, Volume 3 ; 275 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-062-4 ; 978-3-98547-562-9 ; International Congress of Mathematicians, 2022 July 6–14, Volume 4 ; 276 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-063-1 ; 978-3-98547-563-6 ; International Congress of Mathematicians, 2022 July 6–14, Volume 5 ; 277 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-064-8 ; 978-3-98547-564-3 ; International Congress of Mathematicians, 2022 July 6–14, Volume 6 ; 278 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-065-5 ; 978-3-98547-565-0 ; International Congress of Mathematicians, 2022 July 6–14, Volume 7 ; 279 ; >
 
   }
 
@@ -267,19 +327,26 @@
     >
       param[book_serial_id] = hem
 
-      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-038-8 ; 978-3-03719-538-3 ; Andrzej Schinzel, Selecta ; 53 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-059-3 ; 978-3-03719-559-8 ; Thomas Harriot's Doctrine of Triangular Numbers: the 'Magisteria Magna' ; 94 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-058-6 ; 978-3-03719-558-1 ; Hans Freudenthal, Selecta ; 108 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-087-6 ; 978-3-03719-587-1 ; Nikolai I. Lobachevsky, Pangeometry ; 123 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-092-0 ; 978-3-03719-592-5 ; From Cardano's great art to Lagrange's reflections: filling a gap in the history of algebra ; 127 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-104-0 ; 978-3-03719-604-5 ; The mathematical writings of Évariste Galois ; 137 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 978-3-03719-113-2 ; 978-3-03719-613-7 ; Contributions to the History of Number Theory in the 20th Century ; 162 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 978-3-03719-126-2 ; 978-3-03719-626-7 ; Jacques Tits, OEuvres - Collected Works Volumes I-IV ; 168 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-146-0 ; 978-3-03719-646-5 ; Emil Artin and Beyond - Class Field Theory and $L$-Functions ; 188 ;  >
-      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-144-6 ; 978-3-03719-644-1 ; Karl Löwner and His Student Lipman Bers - Pre-war Prague Mathematicians ; 189 ;  >
-      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-145-3 ; 978-3-03719-645-8 ; Uniformization of Riemann Surfaces ; 198 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 978-3-03719-199-6 ; 978-3-03719-699-1 ; Gösta Mittag-Leffler and Vito Volterra. 40 Years of Correspondence ; 246 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-038-8 ; 978-3-03719-538-3 ; Andrzej Schinzel, Selecta ; 31 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-059-3 ; 978-3-03719-559-8 ; Thomas Harriot's Doctrine of Triangular Numbers: the 'Magisteria Magna' ; 64 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-058-6 ; 978-3-03719-558-1 ; Hans Freudenthal, Selecta ; 73 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-087-6 ; 978-3-03719-587-1 ; Nikolai I. Lobachevsky, Pangeometry ; 88 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-092-0 ; 978-3-03719-592-5 ; From Cardano's great art to Lagrange's reflections: filling a gap in the history of algebra ; 92 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-104-0 ; 978-3-03719-604-5 ; The mathematical writings of Évariste Galois ; 102 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 978-3-03719-113-2 ; 978-3-03719-613-7 ; Contributions to the History of Number Theory in the 20th Century ; 120 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 978-3-03719-126-2 ; 978-3-03719-626-7 ; Jacques Tits, OEuvres - Collected Works Volumes I-IV ; 124 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-146-0 ; 978-3-03719-646-5 ; Emil Artin and Beyond - Class Field Theory and $L$-Functions ; 209 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-144-6 ; 978-3-03719-644-1 ; Karl Löwner and His Student Lipman Bers - Pre-war Prague Mathematicians ; 210 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-145-3 ; 978-3-03719-645-8 ; Uniformization of Riemann Surfaces ; 222 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; 978-3-03719-199-6 ; 978-3-03719-699-1 ; Gösta Mittag-Leffler and Vito Volterra. 40 Years of Correspondence ; 171 ; >
 
+      au < exists ; exists ; 2007 ; 978-3-98547-034-1 ; 978-3-98547-534-6 ; Andrzej Schinzel, Selecta Volume 1 ; 32 ; >
+      au < exists ; exists ; 2007 ; 978-3-98547-035-8 ; 978-3-98547-535-3 ; Andrzej Schinzel, Selecta Volume 2 ; 33 ; >
+      au < exists ; exists ; 2013 ; 978-3-98547-032-7 ; 978-3-98547-532-2 ; Jacques Tits, Œuvres – Collected Works Volume 3 ; 126 ; >
+      au < exists ; exists ; 2013 ; 978-3-98547-033-4 ; 978-3-98547-533-9 ; Jacques Tits, Œuvres – Collected Works Volume 4 ; 198 ; >
+      au < exists ; exists ; 2013 ; 978-3-98547-030-3 ; 978-3-98547-530-8 ; Jacques Tits, Œuvres – Collected Works Volume 1 ; 227 ; >
+      au < exists ; exists ; 2013 ; 978-3-98547-031-0 ; 978-3-98547-531-5 ; Jacques Tits, Œuvres – Collected Works Volume 2 ; 228 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-011-2 ; 978-3-98547-511-7 ; Hurwitz’s Lectures on the Number Theory of Quaternions ; 257 ; >
   }
 
   {
@@ -292,34 +359,62 @@
     >
       param[book_serial_id] = irma
 
-      au < doNotProcess ; doNotProcess ; 2005 ; 978-3-03719-013-5 ; 978-3-03719-513-0 ; AdS/CFT Correspondence: Einstein Metrics and Their Conformal Boundaries ; 32 ; >
-      au < doNotProcess ; doNotProcess ; 2005 ; 978-3-03719-012-8 ; 978-3-03719-512-3 ; Numerical Methods for Hyperbolic and Kinetic Problems ; 24 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 978-3-03719-028-9 ; 978-3-03719-528-4 ; Physics and Number Theory ; 49 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 978-3-03719-020-3 ; 978-3-03719-520-8 ; Differential Equations and Quantum Groups ; 50 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-029-6 ; 978-3-03719-529-1 ; Handbook of Teichmüller Theory, Volume I ; 55 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-047-0 ; 978-3-03719-547-5 ; Quantum Groups ; 80 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-055-5 ; 978-3-03719-555-0 ; Handbook of Teichmüller Theory, Volume II ; 96 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-073-9 ; 978-3-03719-573-4 ; Renormalization and Galois Theories ; 106 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-046-3 ; 978-3-03719-546-8 ; Dynamical  Systems and Processes ; 105 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-079-1 ; 978-3-03719-579-6 ; Handbook of Pseudo-Riemannian Geometry and Supersymmetry ; 116 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-105-7 ; 978-3-03719-605-2 ; Strasbourg Master Class on Geometry ; 145 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-103-3 ; 978-3-03719-603-8 ; Handbook of Teichmüller Theory, Volume III ; 153 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-118-7 ; 978-3-03719-618-2 ; Singularities in Geometry and Topology ; 160 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-132-3 ; 978-3-03719-632-8 ; Metric Spaces, Convexity and Nonpositive Curvature ; 22 ;  >
-      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-117-0 ; 978-3-03719-617-5 ; Handbook of Teichmüller Theory, Volume IV ; 178 ;  >
-      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-147-7 ; 978-3-03719-647-2 ; Handbook of Hilbert Geometry ; 184 ;  >
-      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-153-8 ; 978-3-03719-653-3 ; Free Loop Spaces in Geometry and Topology ; 190 ;  >
-      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-148-4 ; 978-3-03719-648-9 ; Sophus Lie and Felix Klein: The Erlangen Program and Its Impact in Mathematics and Physics ; 191 ;  >
-      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-143-9 ; 978-3-03719-643-4 ; Faà di Bruno Hopf Algebras, Dyson-Schwinger Equations, and Lie-Butcher Series ; 193 ;  >
-      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-158-3 ; 978-3-03719-658-8 ; Metric Measure Geometry ; 199 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-160-6 ; 978-3-03719-660-1 ; Handbook of Teichmüller Theory, Volume V ; 200 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-161-3 ; 978-3-03719-661-8 ; Handbook of Teichmüller Theory, Volume VI ; 202 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-183-5 ; 978-3-03719-683-0 ; Linear Forms in Logarithms and Applications ; 228 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 978-3-03719-196-5 ; 978-3-03719-696-0 ; Eighteen Essays in Non-Euclidean Geometry ; 243 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 978-3-03719-203-0 ; 978-3-03719-703-5 ; Handbook of Teichmüller Theory, Volume VII ; 250 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 978-3-03719-204-7 ; 978-3-03719-704-2 ; Algebraic Combinatorics, Resurgence, Moulds and Applications (CARMA), Volume 1 ; 251 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 978-3-03719-205-4 ; 978-3-03719-705-9 ; Algebraic Combinatorics, Resurgence, Moulds and Applications (CARMA), Volume 2 ; 252 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 978-3-98547-001-3 ; 978-3-98547-501-8 ; Topology and Geometry ; 266 ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; 978-3-03719-013-5 ; 978-3-03719-513-0 ; AdS/CFT Correspondence: Einstein Metrics and Their Conformal Boundaries ; 9 ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; 978-3-03719-012-8 ; 978-3-03719-512-3 ; Numerical Methods for Hyperbolic and Kinetic Problems ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; 978-3-03719-028-9 ; 978-3-03719-528-4 ; Physics and Number Theory ; 27 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; 978-3-03719-020-3 ; 978-3-03719-520-8 ; Differential Equations and Quantum Groups ; 28 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-029-6 ; 978-3-03719-529-1 ; Handbook of Teichmüller Theory, Volume I ; 35 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-047-0 ; 978-3-03719-547-5 ; Quantum Groups ; 51 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-055-5 ; 978-3-03719-555-0 ; Handbook of Teichmüller Theory, Volume II ; 65 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-073-9 ; 978-3-03719-573-4 ; Renormalization and Galois Theories ; 71 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 978-3-03719-046-3 ; 978-3-03719-546-8 ; Dynamical  Systems and Processes ; 72 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-079-1 ; 978-3-03719-579-6 ; Handbook of Pseudo-Riemannian Geometry and Supersymmetry ; 81 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-105-7 ; 978-3-03719-605-2 ; Strasbourg Master Class on Geometry ; 107 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-103-3 ; 978-3-03719-603-8 ; Handbook of Teichmüller Theory, Volume III ; 113 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-118-7 ; 978-3-03719-618-2 ; Singularities in Geometry and Topology ; 118 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-132-3 ; 978-3-03719-632-8 ; Metric Spaces, Convexity and Nonpositive Curvature ; 16 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-117-0 ; 978-3-03719-617-5 ; Handbook of Teichmüller Theory, Volume IV ; 231 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-147-7 ; 978-3-03719-647-2 ; Handbook of Hilbert Geometry ; 200 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-153-8 ; 978-3-03719-653-3 ; Free Loop Spaces in Geometry and Topology ; 212 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-148-4 ; 978-3-03719-648-9 ; Sophus Lie and Felix Klein: The Erlangen Program and Its Impact in Mathematics and Physics ; 213 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-143-9 ; 978-3-03719-643-4 ; Faà di Bruno Hopf Algebras, Dyson-Schwinger Equations, and Lie-Butcher Series ; 215 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-158-3 ; 978-3-03719-658-8 ; Metric Measure Geometry ; 220 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-160-6 ; 978-3-03719-660-1 ; Handbook of Teichmüller Theory, Volume V ; 221 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-161-3 ; 978-3-03719-661-8 ; Handbook of Teichmüller Theory, Volume VI ; 129 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-183-5 ; 978-3-03719-683-0 ; Linear Forms in Logarithms and Applications ; 157 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; 978-3-03719-196-5 ; 978-3-03719-696-0 ; Eighteen Essays in Non-Euclidean Geometry ; 168 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; 978-3-03719-203-0 ; 978-3-03719-703-5 ; Handbook of Teichmüller Theory, Volume VII ; 176 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; 978-3-03719-204-7 ; 978-3-03719-704-2 ; Algebraic Combinatorics, Resurgence, Moulds and Applications (CARMA), Volume 1 ; 180 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; 978-3-03719-205-4 ; 978-3-03719-705-9 ; Algebraic Combinatorics, Resurgence, Moulds and Applications (CARMA), Volume 2 ; 178 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 978-3-98547-001-3 ; 978-3-98547-501-8 ; Topology and Geometry ; 189 ; >
+
+      au < exists ; exists ; 2023 ; 978-3-98547-024-2 ; 978-3-98547-524-7 ; Essays in Geometry: Dedicated to Norbert A’Campo ; 265 ; >
+
+  }
+
+  {
+    title <
+      name = Memoirs of the European Mathematical Society ;
+      issn = 2747-9080 ;
+      eissn = 2747-9099 ;
+      type = bookSeries
+
+    >
+      param[book_serial_id] = mems
+
+      au < exists ; exists ; 2022 ; 978-3-98547-020-4 ; 978-3-98547-520-9 ; Long-Time Dispersive Estimates for Perturbations of a Kink Solution of One-Dimensional Cubic Wave Equations ; 233 ; >
+      au < exists ; exists ; 2022 ; 978-3-98547-023-5 ; 978-3-98547-523-0 ; Cyclic Stratum of Frobenius Manifolds, Borel–Laplace (??, ??)-Multitransforms, and Integral Representations of Solutions of Quantum Differential Equations ; 241 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-025-9 ; 978-3-98547-525-4 ; Laplacians on Infinite Graphs ; 256 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-049-5 ; 978-3-98547-549-0 ; The Limiting Absorption Principle for Massless Dirac Operators, Properties of Spectral Shift Functions, and an Application to the Witten Index of Non-Fredholm Operators ; 259 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-056-3 ; 978-3-98547-556-8 ; Conductive Homogeneity of Compact Metric Spaces and Construction of ??-Energy ; 261 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-057-0 ; 978-3-98547-557-5 ; Purely Arithmetic PDEs Over a ??-Adic Field: ?-Characters and ?-Modular Forms ; 266 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-055-6 ; 978-3-98547-555-1 ; On Einstein's Effective Viscosity Formula ; 269 ; >
+      au < exists ; exists ; 2024 ; 978-3-98547-066-2 ; 978-3-98547-566-7 ; The Universal Coefficient Theorem for ??*-Algebras with Finite Complexity ; 280 ; >
+      au < exists ; exists ; 2024 ; 978-3-98547-067-9 ; 978-3-98547-567-4 ; Positive Energy Representations of Gauge Groups I: Localization ; 281 ; >
+      au < exists ; exists ; 2024 ; 978-3-98547-068-6 ; 978-3-98547-568-1 ; The Lévy Flight Foraging Hypothesis in Bounded Regions: Subordinate Brownian Motions and High-risk/High-gain Strategies ; 282 ; >
+      au < exists ; exists ; 2024 ; 978-3-98547-069-3 ; 978-3-98547-569-8 ; Extension, Separation and Isomorphic Reverse Isoperimetry ; 283 ; >
+      au < exists ; exists ; 2024 ; 978-3-98547-071-6 ; 978-3-98547-571-1 ; Integrating the Wigner Distribution on Subsets of the Phase Space, a Survey ; 284 ; >
+      au < exists ; exists ; 2024 ; 978-3-98547-070-9 ; 978-3-98547-570-4 ; On Efficient Algorithms for Computing Near-Best Polynomial Approximations to High-Dimensional, Hilbert-Valued Functions from Limited Samples ; 285 ; >
 
   }
 
@@ -333,8 +428,8 @@
     >
       param[book_serial_id] = mlm
 
-      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-165-1 ; 978-3-03719-665-6 ; Free Probability and Operator Algebras ; 208 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-184-2 ; 978-3-03719-684-7 ; Lectures in Model Theory ; 229 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-165-1 ; 978-3-03719-665-6 ; Free Probability and Operator Algebras ; 133 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-184-2 ; 978-3-03719-684-7 ; Lectures in Model Theory ; 155 ; >
 
   }
 
@@ -346,8 +441,8 @@
     >
       param[book_serial_id] = qgm
     
-      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-075-3 ; 978-3-03719-575-8 ; Decorated Teichmüller Theory ; 144 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-108-8 ; 978-3-03719-608-3 ; Lectures on Algebraic Categorification ; 148 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-075-3 ; 978-3-03719-575-8 ; Decorated Teichmüller Theory ; 106 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-108-8 ; 978-3-03719-608-3 ; Lectures on Algebraic Categorification ; 110 ; >
 
   }
 
@@ -359,35 +454,39 @@
     >
       param[book_serial_id] = zlam
 
-      au < doNotProcess ; doNotProcess ; 2004 ; 978-3-03719-003-6 ; 978-3-03719-503-1 ; Lectures on partial hyperbolicity and stable ergodicity ; 16 ; >
-      au < doNotProcess ; doNotProcess ; 2004 ; 978-3-03719-006-7 ; 978-3-03719-506-2 ; Non-linear Elliptic Equations in Conformal Geometry ; 21 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 978-3-03719-021-0 ; 978-3-03719-521-5 ; Randomly forced nonlinear PDEs and statistical hydrodynamics in 2 space dimensions ; 25 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-034-0 ; 978-3-03719-534-5 ; Calogero-Moser systems and representation theory ; 52 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-035-7 ; 978-3-03719-535-2 ; High Risk Scenarios and Extremes ; 62 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-063-0 ; 978-3-03719-563-5 ; Fukaya Categories and Picard-Lefschetz Theory ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-005-0 ; 978-3-03719-505-5 ; Mathematical Problems of General Relativity I ; 19 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-044-9 ; 978-3-03719-544-4 ; Rectifiable Sets, Densities, and Tangent Measures ; 67 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-054-8 ; 978-3-03719-554-3 ; Invitation to Topological Robotics ; 78 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-052-4 ; 978-3-03719-552-9 ; Integer Points in Polyhedra ; 79 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-065-4 ; 978-3-03719-565-9 ; Geometric Invariant Theory and Decorated Principal Bundles ; 83 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-067-8 ; 978-3-03719-567-3 ; From Quantum to Classical Molecular Dynamics: Reduced Models and Numerical Analysis ; 87 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-093-7 ; 978-3-03719-593-2 ; Nonlinear Discrete Optimization ; 119 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-095-1 ; 978-3-03719-595-6 ; Invariant Manifolds and Dispersive Hamiltonian Evolution Equations ; 134 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-100-2 ; 978-3-03719-600-7 ; Geometric Numerical Integration and Schrödinger Equations ; 143 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-109-5 ; 978-3-03719-609-0 ; Topics in Occupation Times and Gaussian Free Fields ; 149 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 978-3-03719-127-9 ; 978-3-03719-627-4 ; Lectures on Representations of Surface Groups ; 169 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-130-9 ; 978-3-03719-630-4 ; Lecture Notes on Cluster Algebras ; 172 ;  >
-      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-129-3 ; 978-3-03719-629-8 ; From Newton to Boltzmann: Hard Spheres and Short-range Potentials ; 173 ;  >
-      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-134-7 ; 978-3-03719-634-2 ; Compactness and Stability for Nonlinear Elliptic Equations ; 180 ;  >
-      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-152-1 ; 978-3-03719-652-6 ; Coulomb Gases and Ginzburg-Landau Vortices ; 187 ;  >
-      au < doNotProcess ; doNotProcess ; 2017 ; 978-3-03719-170-5 ; 978-3-03719-670-0 ; The Monge-Ampère Equation and Its Applications ; 213 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 978-3-03719-173-6 ; 978-3-03719-673-1 ; Asymptotic Theory of Transaction Costs ; 215 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-189-7 ; 978-3-03719-689-2 ; Geometric and Topological Aspects of Coxeter Groups and Buildings ; 234 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 978-3-03719-200-9 ; 978-3-03719-700-4 ; Hyperbolic Flows ; 247 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 978-3-98547-000-6 ; 978-3-98547-500-1 ; Geometry and Topology of Surfaces ; 261 ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; 978-3-03719-003-6 ; 978-3-03719-503-1 ; Lectures on partial hyperbolicity and stable ergodicity ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; 978-3-03719-006-7 ; 978-3-03719-506-2 ; Non-linear Elliptic Equations in Conformal Geometry ; 7 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; 978-3-03719-021-0 ; 978-3-03719-521-5 ; Randomly forced nonlinear PDEs and statistical hydrodynamics in 2 space dimensions ; 6 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-034-0 ; 978-3-03719-534-5 ; Calogero-Moser systems and representation theory ; 30 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 978-3-03719-035-7 ; 978-3-03719-535-2 ; High Risk Scenarios and Extremes ; 41 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-063-0 ; 978-3-03719-563-5 ; Fukaya Categories and Picard-Lefschetz Theory ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-005-0 ; 978-3-03719-505-5 ; Mathematical Problems of General Relativity I ; 13 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-044-9 ; 978-3-03719-544-4 ; Rectifiable Sets, Densities, and Tangent Measures ; 43 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-054-8 ; 978-3-03719-554-3 ; Invitation to Topological Robotics ; 49 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-052-4 ; 978-3-03719-552-9 ; Integer Points in Polyhedra ; 50 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-065-4 ; 978-3-03719-565-9 ; Geometric Invariant Theory and Decorated Principal Bundles ; 224 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 978-3-03719-067-8 ; 978-3-03719-567-3 ; From Quantum to Classical Molecular Dynamics: Reduced Models and Numerical Analysis ; 55 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 978-3-03719-093-7 ; 978-3-03719-593-2 ; Nonlinear Discrete Optimization ; 84 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 978-3-03719-095-1 ; 978-3-03719-595-6 ; Invariant Manifolds and Dispersive Hamiltonian Evolution Equations ; 99 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-100-2 ; 978-3-03719-600-7 ; Geometric Numerical Integration and Schrödinger Equations ; 104 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-109-5 ; 978-3-03719-609-0 ; Topics in Occupation Times and Gaussian Free Fields ; 111 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 978-3-03719-127-9 ; 978-3-03719-627-4 ; Lectures on Representations of Surface Groups ; 203 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-130-9 ; 978-3-03719-630-4 ; Lecture Notes on Cluster Algebras ; 201 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-129-3 ; 978-3-03719-629-8 ; From Newton to Boltzmann: Hard Spheres and Short-range Potentials ; 206 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-134-7 ; 978-3-03719-634-2 ; Compactness and Stability for Nonlinear Elliptic Equations ; 195 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 978-3-03719-152-1 ; 978-3-03719-652-6 ; Coulomb Gases and Ginzburg-Landau Vortices ; 208 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 978-3-03719-170-5 ; 978-3-03719-670-0 ; The Monge-Ampère Equation and Its Applications ; 140 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 978-3-03719-173-6 ; 978-3-03719-673-1 ; Asymptotic Theory of Transaction Costs ; 142 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-189-7 ; 978-3-03719-689-2 ; Geometric and Topological Aspects of Coxeter Groups and Buildings ; 160 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; 978-3-03719-200-9 ; 978-3-03719-700-4 ; Hyperbolic Flows ; 170 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 978-3-98547-000-6 ; 978-3-98547-500-1 ; Geometry and Topology of Surfaces ; 185 ; >
       au < exists ; exists ; 2022 ; 978-3-98547-015-0 ; 978-3-98547-515-5 ; Quantum Ergodicity and Delocalization of Schrödinger Eigenfunctions ; 237 ; >
       au < exists ; exists ; 2022 ; 978-3-98547-026-6 ; 978-3-98547-526-1 ; A Infinity - Structures and Moduli Spaces ; 240 ; >
       au < exists ; exists ; 2022 ; 978-3-98547-028-0 ; 978-3-98547-528-5 ; Regularity Theory for Elliptic PDE ; 239 ; >
+
+      au < exists ; exists ; 2023 ; 978-3-98547-053-2 ; 978-3-98547-553-7 ; Bayesian Non-linear Statistical Inverse Problems ; 260 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-052-5 ; 978-3-98547-552-0 ; Prescribing Scalar Curvature in Conformal Geometry ; 268 ; >
+      au < exists ; exists ; 2024 ; 978-3-98547-074-7 ; 978-3-98547-574-2 ; Statistical Mechanics of Mean-Field Disordered Systems: A Hamilton–Jacobi Approach ; 286 ; >
 
   }
 
