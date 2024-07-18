@@ -136,7 +136,7 @@
     au < finished ; frozen ; 2021 ; JAMA Health Forum Volume 2021 ; 2021 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; JAMA Health Forum Volume 2022 ; 2022 ; https://jamanetwork.com/ ; >
     au < deepCrawl ; exists ; 2023 ; JAMA Health Forum Volume 2023 ; 2023 ; https://jamanetwork.com/ ; >
-    au < ready ; exists ; 2024 ; JAMA Health Forum Volume 2024 ; 2024 ; https://jamanetwork.com/ ; >
+    au < crawling ; exists ; 2024 ; JAMA Health Forum Volume 2024 ; 2024 ; https://jamanetwork.com/ ; >
 
   }
 
@@ -157,7 +157,7 @@
     au < finished ; frozen ; 2021 ; JAMA Network Open Volume 4 ; 2021 ; https://jamanetwork.com/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2022 ; JAMA Network Open Volume 5 ; 2022 ; https://jamanetwork.com/ ; >
     au < deepCrawl ; exists ; 2023 ; JAMA Network Open Volume 6 ; 2023 ; https://jamanetwork.com/ ; >
-    au < ready ; exists ; 2024 ; JAMA Network Open Volume 7 ; 2024 ; https://jamanetwork.com/ ; >
+    au < crawling ; exists ; 2024 ; JAMA Network Open Volume 7 ; 2024 ; https://jamanetwork.com/ ; >
 
   }
 

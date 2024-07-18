@@ -264,7 +264,7 @@
     au < finished ; frozen ; 2020 ; Journal of the American Mathematical Society Volume 33 ; 2020 ; https://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Journal of the American Mathematical Society Volume 34 ; 2021 ; https://www.ams.org/ ; >
     au < finished ; manifest ; 2022 ; Journal of the American Mathematical Society Volume 35 ; 2022 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 2023 ; Journal of the American Mathematical Society Volume 36 ; 2023 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2023 ; Journal of the American Mathematical Society Volume 36 ; 2023 ; https://www.ams.org/ ; >
     au < testing ; exists ; 2024 ; Journal of the American Mathematical Society Volume 37 ; 2024 ; https://www.ams.org/ ; >
 
   }
@@ -429,7 +429,7 @@
     au < finished ; frozen ; 2020 ; Proceedings of the American Mathematical Society Volume 148 ; 2020 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Proceedings of the American Mathematical Society Volume 149 ; 2021 ; https://www.ams.org/ ; >
     au < finished ; manifest ; 2022 ; Proceedings of the American Mathematical Society Volume 150 ; 2022 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2023 ; Proceedings of the American Mathematical Society Volume 151 ; 2023 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2023 ; Proceedings of the American Mathematical Society Volume 151 ; 2023 ; https://www.ams.org/ ; >
     au < testing ; exists ; 2024 ; Proceedings of the American Mathematical Society Volume 152 ; 2024 ; https://www.ams.org/ ; >
 
   }
@@ -568,7 +568,7 @@
     au < finished ; finished ; 2020 ; Theory of Probability and Mathematical Statistics Volume 92 ; 2020 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Theory of Probability and Mathematical Statistics Volume 93 ; 2021 ; https://www.ams.org/ ; >
     au < deepCrawl ; exists ; 2022 ; Theory of Probability and Mathematical Statistics Volume 94 ; 2022 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2023 ; Theory of Probability and Mathematical Statistics Volume 95 ; 2023 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2023 ; Theory of Probability and Mathematical Statistics Volume 95 ; 2023 ; https://www.ams.org/ ; >
     au < testing ; exists ; 2024 ; Theory of Probability and Mathematical Statistics Volume 96 ; 2024 ; https://www.ams.org/ ; >
 
   }   
@@ -601,7 +601,7 @@
     au < finished ; frozen ; 2020 ; Transactions of the American Mathematical Society Volume 372 ; 2020 ; https://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2021 ; Transactions of the American Mathematical Society Volume 373 ; 2021 ; https://www.ams.org/ ; >
     au < finished ; manifest ; 2022 ; Transactions of the American Mathematical Society Volume 374 ; 2022 ; https://www.ams.org/ ; reingest5.clockss.org:8082 >
-    au < ready ; exists ; 2023 ; Transactions of the American Mathematical Society Volume 375 ; 2023 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2023 ; Transactions of the American Mathematical Society Volume 375 ; 2023 ; https://www.ams.org/ ; >
     au < testing ; exists ; 2024 ; Transactions of the American Mathematical Society Volume 376 ; 2024 ; https://www.ams.org/ ; >
 
   }
@@ -675,7 +675,7 @@
     au < finished ; frozen ; 2020 ; Sugaku Expositions Volume 33 ; 2020 ; https://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021 ; Sugaku Expositions Volume 34 ; 2021 ; https://www.ams.org/ ; >
     au < finished ; manifest ; 2022 ; Sugaku Expositions Volume 35 ; 2022 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 2023 ; Sugaku Expositions Volume 36 ; 2023 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2023 ; Sugaku Expositions Volume 36 ; 2023 ; https://www.ams.org/ ; >
     au < testing ; exists ; 2024 ; Sugaku Expositions Volume 37 ; 2024 ; https://www.ams.org/ ; >
 
   }
