@@ -183,8 +183,9 @@
       au < doNotProcess ; 2019 ; The F. Scott Fitzgerald Review Volume 17 ; 17 ; 2019 >
       au < doNotProcess ; 2020 ; The F. Scott Fitzgerald Review Volume 18 ; 18 ; 2020 >
       au < released ; 2021 ; The F. Scott Fitzgerald Review Volume 19 ; 19 ; 2021 >
-      au < expected ; 2023 ; The F. Scott Fitzgerald Review Volume 20 ; 20 ; 2023 >
-      au < expected ; 2024 ; The F. Scott Fitzgerald Review Volume 21 ; 21 ; 2024 >
+      au < exists ; 2022 ; The F. Scott Fitzgerald Review Volume 20 ; 20 ; 2022 >
+      au < exists ; 2023 ; The F. Scott Fitzgerald Review Volume 21 ; 21 ; 2023 >
+      au < expected ; 2024 ; The F. Scott Fitzgerald Review Volume 22 ; 22 ; 2024 >
 
   }
 
@@ -212,8 +213,7 @@
       au < doNotProcess ; 2019 ; The Good Society Volume 28 ; 28 ; 2019 >
       au < doNotProcess ; 2020 ; The Good Society Volume 29 ; 29 ; 2020 >
       au < doNotProcess ; 2021 ; The Good Society Volume 30 ; 30 ; 2021 >
-      au < expected ; 2023 ; The Good Society Volume 31 ; 31 ; 2023 >
-      au < expected ; 2024 ; The Good Society Volume 32 ; 32 ; 2024 >
+      au < exists ; 2022 ; The Good Society Volume 31 ; 31 ; 2022 >
 
   }
 
@@ -300,8 +300,6 @@
       au < released ; 2020 ; Journal of Assessment and Institutional Effectiveness Volume 10 ; 10 ; 2020 >
       au < released ; 2021 ; Journal of Assessment and Institutional Effectiveness Volume 11 ; 11 ; 2021 >
       au < released ; 2022 ; Journal of Assessment and Institutional Effectiveness Volume 12 ; 12 ; 2022 >
-      au < expected ; 2023 ; Journal of Assessment and Institutional Effectiveness Volume 13 ; 13 ; 2023 >
-      au < expected ; 2024 ; Journal of Assessment and Institutional Effectiveness Volume 14 ; 14 ; 2024 >
 
   }
 
@@ -387,8 +385,6 @@
       au < doNotProcess ; 2019 ; The Journal of General Education Volume 68 ; 68 ; 2019 >
       au < released ; 2020 ; The Journal of General Education Volume 69 ; 69 ; 2020 >
       au < doNotProcess ; 2021 ; The Journal of General Education Volume 70 ; 70 ; 2021 >
-      au < expected ; 2023 ; The Journal of General Education Volume 71 ; 71 ; 2023 >
-      au < expected ; 2024 ; The Journal of General Education Volume 72 ; 72 ; 2024 >
 
   }
 
@@ -797,8 +793,6 @@
       au < doNotProcess ; 2020 ; Soundings: An Interdisciplinary Journal Volume 103 ; 103 ; 2020 >
       au < doNotProcess ; 2021 ; Soundings: An Interdisciplinary Journal Volume 104 ; 104 ; 2021 >
       au < released ; 2022 ; Soundings: An Interdisciplinary Journal Volume 105 ; 105 ; 2022 >
-      au < expected ; 2023 ; Soundings: An Interdisciplinary Journal Volume 106 ; 106 ; 2023 >
-      au < expected ; 2024 ; Soundings: An Interdisciplinary Journal Volume 107 ; 107 ; 2024 >
 
   }
 
@@ -934,8 +928,6 @@
       au < doNotProcess ; 2019 ; ab-Original Volume 3 (2019) ; 3 ; 2019 >
       au < doNotProcess ; 2020 ; ab-Original Volume 3 (2020) ; 3 ; 2020 >
       au < released ; 2021 ; ab-Original Volume 4 ; 4 ; 2021 >
-      au < expected ; 2023 ; ab-Original Volume 5 ; 5 ; 2023 >
-      au < expected ; 2024 ; ab-Original Volume 6 ; 6 ; 2024 >
 
   }
 
@@ -1471,8 +1463,6 @@
       au < doNotProcess ; 2019 ; Journal of the Pennsylvania Academy of Science Volume 93 ; 93 ; 2019 >
       au < doNotProcess ; 2020 ; Journal of the Pennsylvania Academy of Science Volume 94 ; 94 ; 2020 >
       au < doNotProcess ; 2021 ; Journal of the Pennsylvania Academy of Science Volume 95 ; 95 ; 2021 >
-      au < expected ; 2023 ; Journal of the Pennsylvania Academy of Science Volume 96 ; 96 ; 2023 >
-      au < expected ; 2024 ; Journal of the Pennsylvania Academy of Science Volume 97 ; 97 ; 2024 >
 
   }
 
@@ -1608,9 +1598,9 @@
       au < doNotProcess ; 2017 ; Resources for American Literary Study Volume 39 ; 39 ; 2017 >
       au < doNotProcess ; 2018 ; Resources for American Literary Study Volume 40 ; 40 ; 2018 >
       au < doNotProcess ; 2019 ; Resources for American Literary Study Volume 41 ; 41 ; 2019 >
-      au < doNotProcess ; 2021 ; Resources for American Literary Study Volume 42 ; 42 ; 2021 >
-      au < expected ; 2023 ; Resources for American Literary Study Volume 43 ; 43 ; 2023 >
-      au < expected ; 2024 ; Resources for American Literary Study Volume 44 ; 44 ; 2024 >
+      au < doNotProcess ; 2020 ; Resources for American Literary Study Volume 42 ; 42 ; 2020 >
+      au < exists ; 2021 ; Resources for American Literary Study Volume 43 ; 43 ; 2021 >
+      au < exists ; 2022 ; Resources for American Literary Study Volume 44 ; 44 ; 2022 >
 
   }
 
@@ -1790,8 +1780,7 @@
       au < doNotProcess ; 2019 ; The Korean Language in America Volume 23 ; 23 ; 2019 >
       au < doNotProcess ; 2020 ; The Korean Language in America Volume 24 ; 24 ; 2020 >
       au < doNotProcess ; 2021 ; The Korean Language in America Volume 25 ; 25 ; 2021 >
-      au < expected ; 2023 ; The Korean Language in America Volume 26 ; 26 ; 2023 >
-      au < expected ; 2024 ; The Korean Language in America Volume 27 ; 27 ; 2024 >
+      au < exists ; 2022 ; The Korean Language in America Volume 26 ; 26 ; 2022 >
 
   }
 
@@ -2006,8 +1995,6 @@
 
       au < doNotProcess ; 2020 ; Journal of Minority Achievement, Creativity, and Leadership Volume 1 ; 1 ; 2020 >
       au < manifest ; 2021 ; Journal of Minority Achievement, Creativity, and Leadership Volume 2 ; 2 ; 2021 >
-      au < expected ; 2023 ; Journal of Minority Achievement, Creativity, and Leadership Volume 3 ; 3 ; 2023 >
-      au < expected ; 2024 ; Journal of Minority Achievement, Creativity, and Leadership Volume 4 ; 4 ; 2024 >
 
   }
 
