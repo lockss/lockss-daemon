@@ -1,39 +1,38 @@
 /*
- * $Id$
- */
 
-/*
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
-Copyright (c) 2000-2016 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
 
 */
 
 package org.lockss.daemon;
 
 import java.io.*;
-import java.util.*;
 import java.util.regex.*;
 
 import org.lockss.config.*;
@@ -50,63 +49,115 @@ import org.lockss.extractor.*;
  */
 public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
 
-  private static Logger logger =
+  private static Logger log =
     Logger.getLogger(CreativeCommonsPermissionChecker.class);
 
+  /**
+   * @deprecated Since 1.78.
+   */
+  @Deprecated
   public static final String PREFIX =
     Configuration.PREFIX + "creativeCommonsPermission.";
 
-  /** List of Creative Commons license types that are accepted */
+  /**
+   * <p>
+   * Accepts 1.0 Generic, 2.0 Generic, 2.1, 2.5 Generic, 3.0 Unported, 4.0
+   * International, CC0 1.0, CERTIFICATION 1.0, and PDM 1.0, regardless of
+   * country and language codes, with HTTP or HTTPS, with or without WWW, with
+   * the addition of inverted "by-nc-nd" and "nc-nd" for 1.0 Generic.
+   * </p>
+   * 
+   * @since 1.78
+   * @see https://creativecommons.org/licenses/list.en
+   * @see https://creativecommons.org/publicdomain/list.en
+   */
+  public static final String LICENSE_PATTERN_STRING =
+    "^https?://(?:www\\.)?creativecommons\\.org/"
+    + "(?:"
+            + "licenses/"
+            + "(?:"
+                    // - 1.0 Generic (https://creativecommons.org/licenses/list.en#generic-10), but:
+                    //     - by-nc-nd, nc-nd don't explicitly exist but they would be the modern spelling of by-nd-nc, nd-nc
+                    + "(?:by|by-nc|by-nc-sa|by-nd|by-nd-nc|by-sa|nc|nc-sa|nc-sampling(?:\\+|%2B)|nd|nd-nc|sa|sampling|sampling(?:\\+|%2B)|by-nc-nd|nc-nd)/1\\.0"
+            + "|"
+                    // - 2.0 Generic (https://creativecommons.org/licenses/list.en#generic-20), but:
+                    //     - nc, nc-sa, nd, nd-nc, sa only in Japan (https://creativecommons.org/licenses/list.en#japan-20)
+                    //     - nc-nd doesn't explicitly exist but it would be the modern spelling of nd-nc
+                    + "(?:by|by-nc|by-nc-nd|by-nc-sa|by-nd|by-sa|devnations|nc|nc-sa|nd|nd-nc|sa|nc-nd)/2\\.0"
+            + "|"
+                    // - 2.1 (https://creativecommons.org/licenses/list.en#licenses-21), but only in:
+                    //     - Australia (https://creativecommons.org/licenses/list.en#australia-21),
+                    //     - Canada (https://creativecommons.org/licenses/list.en#canada-21),
+                    //     - Japan (https://creativecommons.org/licenses/list.en#japan-21)
+                    //     - Spain (https://creativecommons.org/licenses/list.en#spain-21)
+                    // - 2.5 Generic (https://creativecommons.org/licenses/list.en#generic-25)
+                    // - 3.0 Unported (https://creativecommons.org/licenses/list.en#unported-30)
+                    // - 4.0 International (https://creativecommons.org/licenses/list.en#international-40)
+                    + "(?:by|by-nc|by-nc-nd|by-nc-sa|by-nd|by-sa)/(?:2\\.1|2\\.5|3\\.0|4\\.0)"
+            + ")"
+    + "|"
+            // - CC0 1.0 (https://creativecommons.org/publicdomain/list.en#publicdomain-cc0-10)
+            // - CERTIFICATION 1.0 (https://creativecommons.org/publicdomain/list.en#publicdomain-certification-10-us)
+            // - PDM 1.0 (https://creativecommons.org/publicdomain/list.en#publicdomain-pdm-10)
+            + "publicdomain/(?:zero|certification|mark)/1\\.0"
+    + ")"
+    + "(?:$|/)";
+  
+  /**
+   * List of Creative Commons license types that are accepted (deprecated since
+   * 1.78)
+   * 
+   * @deprecated Since 1.78.
+   */
+  @Deprecated
   public static final String PARAM_VALID_LICENSE_TYPES =
     PREFIX + "validLicenseTypes";
-  public static final List DEFAULT_VALID_LICENSE_TYPES =
-    ListUtil.list("by", "by-sa", "by-nc", "by-nd", "by-nc-sa", "by-nc-nd");
 
-  /** List of Creative Commons license versions that are accepted */
+  /**
+   * List of Creative Commons license versions that are accepted (deprecated
+   * since 1.78 
+   * 
+   * @deprecated Since 1.78.
+   */
+  @Deprecated
   public static final String PARAM_VALID_LICENSE_VERSIONS =
     PREFIX + "validLicenseVersions";
-  public static final List DEFAULT_VALID_LICENSE_VERSIONS =
-    ListUtil.list("1.0", "2.0", "2.5", "3.0", "4.0");
 
-  private static Set<String> validLicenseTypes =
-    SetUtil.theSet(DEFAULT_VALID_LICENSE_TYPES);
-
-  private static Set<String> validLicenseVersions =
-    SetUtil.theSet(DEFAULT_VALID_LICENSE_VERSIONS);
-
+  protected static Pattern licensePat = Pattern.compile(LICENSE_PATTERN_STRING, Pattern.CASE_INSENSITIVE);
+  
   /** Called by org.lockss.config.MiscConfig
    */
   public static void setConfig(Configuration config,
                                Configuration oldConfig,
                                Configuration.Differences diffs) {
     if (diffs.contains(PREFIX)) {
-      validLicenseTypes =
-	SetUtil.theSet(config.getList(PARAM_VALID_LICENSE_TYPES,
-				      DEFAULT_VALID_LICENSE_TYPES));
-      validLicenseVersions =
-	SetUtil.theSet(config.getList(PARAM_VALID_LICENSE_VERSIONS,
-				      DEFAULT_VALID_LICENSE_VERSIONS));
+      if (diffs.contains(PARAM_VALID_LICENSE_TYPES) || diffs.contains(PARAM_VALID_LICENSE_VERSIONS)) {
+        log.warning(String.format("The configuration parameters %s and %s are deprecated since LOCKSS 1.78",
+            PARAM_VALID_LICENSE_TYPES, PARAM_VALID_LICENSE_VERSIONS));
+      }
     }
   }
 
-  boolean foundCcLicense = false;
-
-  public CreativeCommonsPermissionChecker() {
-  }
+  protected boolean foundCcLicense = false;
 
   public boolean checkPermission(Crawler.CrawlerFacade crawlFacade,
 				 Reader inputReader, String permissionUrl) {
     foundCcLicense = false;
-    logger.debug3("Checking permission on "+permissionUrl);
+    log.debug3("Checking permission on " + permissionUrl);
     if (permissionUrl == null) {
       return false;
     }
+    if (licensePat == null) {
+      log.error("Invalid pattern");
+      return false;
+    }
+    
     ArchivalUnit au = null;
     if (crawlFacade != null) {
       au = crawlFacade.getAu();
-      if (logger.isDebug3()) {
-	logger.debug3("crawlFacade: " + crawlFacade);
-	logger.debug3("AU: " + au);
+      if (log.isDebug3()) {
+	log.debug3("crawlFacade: " + crawlFacade);
+	log.debug3("AU: " + au);
       }
     }
     CustomHtmlLinkExtractor extractor = new CustomHtmlLinkExtractor();
@@ -116,12 +167,12 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
       extractor.extractUrls(au, new ReaderInputStream(inputReader), null,
 			    permissionUrl, new MyLinkExtractorCallback());
     } catch (IOException ex) {
-      logger.error("Exception trying to parse permission url "+permissionUrl,
+      log.error("Exception trying to parse permission URL " + permissionUrl,
 		   ex);
       return false;
     }
     if (foundCcLicense) {
-      logger.debug3("Found CC license on " + permissionUrl);
+      log.debug3("Found CC license on " + permissionUrl);
       setAuAccessType(crawlFacade, AuState.AccessType.OpenAccess);
       return true;
     }
@@ -130,10 +181,6 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
 
   private static final String REL = "rel";
   private static final String LICENSE = "license";
-
-  private static Pattern CC_LICENSE_PAT =
-    Pattern.compile("https?://creativecommons.org/licenses/([^/]+)/([^/]+).*",
-		    Pattern.CASE_INSENSITIVE);
 
   private class CustomHtmlLinkExtractor
     extends GoslingHtmlLinkExtractor {
@@ -145,8 +192,8 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
         case 'L':
         case 'a': //<a href="blah" rel="license">
         case 'A':
-	  if (logger.isDebug3()) {
-	    logger.debug3("Looking for license in "+link);
+	  if (log.isDebug3()) {
+	    log.debug3("Looking for license in " + link);
 	  }
 	  if (beginsWithTag(link, LINKTAG) || beginsWithTag(link, ATAG)) {
 	    String relStr = getAttributeValue(REL, link);
@@ -156,25 +203,16 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
 	      if (candidateUrl == null) {
 	        break;
 	      }
-	      if (logger.isDebug2()) {
-		logger.debug2("CC license URL: "+candidateUrl);
+	      if (log.isDebug2()) {
+		log.debug2("CC license URL: " + candidateUrl);
 	      }
-	      Matcher mat = CC_LICENSE_PAT.matcher(candidateUrl);
-	      if (logger.isDebug2()) {
-		logger.debug2("Match: " + mat.matches() + ": " + candidateUrl);
+	      // Already checked that licensePat != null
+	      Matcher mat = licensePat.matcher(candidateUrl);
+	      if (log.isDebug2()) {
+		log.debug2("Match: " + mat.matches() + ": " + candidateUrl);
 	      }
-	      if (mat.matches()) {
-		String lic = mat.group(1).toLowerCase();
-		String ver = mat.group(2);
-		if (logger.isDebug2()) {
-		  logger.debug2("lic: " + lic + ", ver: " + ver);
-		}
-		// Any combination of license terms and version is
-		// currently acceptable.
-		if (validLicenseTypes.contains(lic)
-		    && validLicenseVersions.contains(ver)) {
-		  foundCcLicense = true;
-		}
+	      if (mat.find()) {
+		foundCcLicense = true;
 	      }
 	    }
 	  }
