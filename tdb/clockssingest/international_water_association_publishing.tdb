@@ -85,16 +85,16 @@
     au < manifest ; exists ; 1987 ; 1987 ; Nordic Hydrology Volume 18 ; 18 ; >
     au < manifest ; exists ; 1988 ; 1988 ; Nordic Hydrology Volume 19 ; 19 ; >
     au < manifest ; exists ; 1989 ; 1989 ; Nordic Hydrology Volume 20 ; 20 ; >
-    au < manifest ; exists ; 1990 ; 1990 ; Nordic Hydrology Volume 21 ; 21 ; >
-    au < manifest ; exists ; 1991 ; 1991 ; Nordic Hydrology Volume 22 ; 22 ; >
-    au < manifest ; exists ; 1992 ; 1992 ; Nordic Hydrology Volume 23 ; 23 ; >
-    au < manifest ; exists ; 1993 ; 1993 ; Nordic Hydrology Volume 24 ; 24 ; >
-    au < manifest ; exists ; 1994 ; 1994 ; Nordic Hydrology Volume 25 ; 25 ; >
-    au < manifest ; exists ; 1995 ; 1995 ; Nordic Hydrology Volume 26 ; 26 ; >
-    au < manifest ; exists ; 1996 ; 1996 ; Nordic Hydrology Volume 27 ; 27 ; >
-    au < manifest ; exists ; 1997 ; 1997 ; Nordic Hydrology Volume 28 ; 28 ; >
-    au < manifest ; exists ; 1998 ; 1998 ; Nordic Hydrology Volume 29 ; 29 ; >
-    au < manifest ; exists ; 1999 ; 1999 ; Nordic Hydrology Volume 30 ; 30 ; >
+    au < testing ; exists ; 1990 ; 1990 ; Nordic Hydrology Volume 21 ; 21 ; >
+    au < testing ; exists ; 1991 ; 1991 ; Nordic Hydrology Volume 22 ; 22 ; >
+    au < testing ; exists ; 1992 ; 1992 ; Nordic Hydrology Volume 23 ; 23 ; >
+    au < testing ; exists ; 1993 ; 1993 ; Nordic Hydrology Volume 24 ; 24 ; >
+    au < testing ; exists ; 1994 ; 1994 ; Nordic Hydrology Volume 25 ; 25 ; >
+    au < testing ; exists ; 1995 ; 1995 ; Nordic Hydrology Volume 26 ; 26 ; >
+    au < testing ; exists ; 1996 ; 1996 ; Nordic Hydrology Volume 27 ; 27 ; >
+    au < testing ; exists ; 1997 ; 1997 ; Nordic Hydrology Volume 28 ; 28 ; >
+    au < testing ; exists ; 1998 ; 1998 ; Nordic Hydrology Volume 29 ; 29 ; >
+    au < testing ; exists ; 1999 ; 1999 ; Nordic Hydrology Volume 30 ; 30 ; >
     au < frozen ; exists ; 2000 ; 2000 ; Nordic Hydrology Volume 31 ; 31 ; >
     au < frozen ; exists ; 2001 ; 2001 ; Nordic Hydrology Volume 32 ; 32 ; >
     au < frozen ; exists ; 2002 ; 2002 ; Nordic Hydrology Volume 33 ; 33 ; >
@@ -289,8 +289,8 @@
 
     param[journal_id] = aqua
 
-    au < manifest ; exists ; 1998 ; 1998 ; Journal of Water Supply: Research and Technology - Aqua Volume 47 ; 47 ; >
-    au < manifest ; exists ; 1999 ; 1999 ; Journal of Water Supply: Research and Technology - Aqua Volume 48 ; 48 ; >
+    au < testing ; exists ; 1998 ; 1998 ; Journal of Water Supply: Research and Technology - Aqua Volume 47 ; 47 ; >
+    au < testing ; exists ; 1999 ; 1999 ; Journal of Water Supply: Research and Technology - Aqua Volume 48 ; 48 ; >
     au < frozen ; exists ; 2000 ; 2000 ; Journal of Water Supply: Research and Technology - Aqua Volume 49 ; 49 ; >
     au < frozen ; exists ; 2001 ; 2001 ; Journal of Water Supply: Research and Technology - Aqua Volume 50 ; 50 ; >
     au < frozen ; exists ; 2002 ; 2002 ; Journal of Water Supply: Research and Technology - Aqua Volume 51 ; 51 ; >
@@ -484,16 +484,16 @@
     au < manifest ; exists ; 1987 ; 1987 ; Water Quality Research Journal of Canada Volume 22 ; 22 ; >
     au < manifest ; exists ; 1988 ; 1988 ; Water Quality Research Journal of Canada Volume 23 ; 23 ; >
     au < manifest ; exists ; 1989 ; 1989 ; Water Quality Research Journal of Canada Volume 24 ; 24 ; >
-    au < manifest ; exists ; 1990 ; 1990 ; Water Quality Research Journal of Canada Volume 25 ; 25 ; >
-    au < manifest ; exists ; 1991 ; 1991 ; Water Quality Research Journal of Canada Volume 26 ; 26 ; >
-    au < manifest ; exists ; 1992 ; 1992 ; Water Quality Research Journal of Canada Volume 27 ; 27 ; >
-    au < manifest ; exists ; 1993 ; 1993 ; Water Quality Research Journal of Canada Volume 28 ; 28 ; >
-    au < manifest ; exists ; 1994 ; 1994 ; Water Quality Research Journal of Canada Volume 29 ; 29 ; >
-    au < manifest ; exists ; 1995 ; 1995 ; Water Quality Research Journal of Canada Volume 30 ; 30 ; >
-    au < manifest ; exists ; 1996 ; 1996 ; Water Quality Research Journal of Canada Volume 31 ; 31 ; >
-    au < manifest ; exists ; 1997 ; 1997 ; Water Quality Research Journal of Canada Volume 32 ; 32 ; >
-    au < manifest ; exists ; 1998 ; 1998 ; Water Quality Research Journal of Canada Volume 33 ; 33 ; >
-    au < manifest ; exists ; 1999 ; 1999 ; Water Quality Research Journal of Canada Volume 34 ; 34 ; >
+    au < testing ; exists ; 1990 ; 1990 ; Water Quality Research Journal of Canada Volume 25 ; 25 ; >
+    au < testing ; exists ; 1991 ; 1991 ; Water Quality Research Journal of Canada Volume 26 ; 26 ; >
+    au < testing ; exists ; 1992 ; 1992 ; Water Quality Research Journal of Canada Volume 27 ; 27 ; >
+    au < testing ; exists ; 1993 ; 1993 ; Water Quality Research Journal of Canada Volume 28 ; 28 ; >
+    au < testing ; exists ; 1994 ; 1994 ; Water Quality Research Journal of Canada Volume 29 ; 29 ; >
+    au < testing ; exists ; 1995 ; 1995 ; Water Quality Research Journal of Canada Volume 30 ; 30 ; >
+    au < testing ; exists ; 1996 ; 1996 ; Water Quality Research Journal of Canada Volume 31 ; 31 ; >
+    au < testing ; exists ; 1997 ; 1997 ; Water Quality Research Journal of Canada Volume 32 ; 32 ; >
+    au < testing ; exists ; 1998 ; 1998 ; Water Quality Research Journal of Canada Volume 33 ; 33 ; >
+    au < testing ; exists ; 1999 ; 1999 ; Water Quality Research Journal of Canada Volume 34 ; 34 ; >
     au < frozen ; exists ; 2000 ; 2000 ; Water Quality Research Journal of Canada Volume 35 ; 35 ; >
     au < frozen ; exists ; 2001 ; 2001 ; Water Quality Research Journal of Canada Volume 36 ; 36 ; >
     au < frozen ; exists ; 2002 ; 2002 ; Water Quality Research Journal of Canada Volume 37 ; 37 ; >
@@ -534,16 +534,16 @@
     au < manifest ; exists ; 1987 ; 1987 ; Water Science and Technology Volume 19 ; 19 ; >
     au < manifest ; exists ; 1988 ; 1988 ; Water Science and Technology Volume 20 ; 20 ; >
     au < manifest ; exists ; 1989 ; 1989 ; Water Science and Technology Volume 21 ; 21 ; >
-    au < manifest ; exists ; 1990 ; 1990 ; Water Science and Technology Volume 22 ; 22 ; >
-    au < manifest ; exists ; 1991 ; 1991 ; Water Science and Technology Volume 23-24 ; 23-24 ; >
-    au < manifest ; exists ; 1992 ; 1992 ; Water Science and Technology Volume 25-26 ; 25-26 ; >
-    au < manifest ; exists ; 1993 ; 1993 ; Water Science and Technology Volume 27-28 ; 27-28 ; >
-    au < manifest ; exists ; 1994 ; 1994 ; Water Science and Technology Volume 29-30 ; 29-30 ; >
-    au < manifest ; exists ; 1995 ; 1995 ; Water Science and Technology Volume 31-32 ; 31-32 ; >
-    au < manifest ; exists ; 1996 ; 1996 ; Water Science and Technology Volume 33-34 ; 33-34 ; >
-    au < manifest ; exists ; 1997 ; 1997 ; Water Science and Technology Volume 35-36 ; 35-36 ; >
-    au < manifest ; exists ; 1998 ; 1998 ; Water Science and Technology Volume 37-38 ; 37-38 ; >
-    au < manifest ; exists ; 1999 ; 1999 ; Water Science and Technology Volume 39-40 ; 39-40 ; >
+    au < testing ; exists ; 1990 ; 1990 ; Water Science and Technology Volume 22 ; 22 ; >
+    au < testing ; exists ; 1991 ; 1991 ; Water Science and Technology Volume 23-24 ; 23-24 ; >
+    au < testing ; exists ; 1992 ; 1992 ; Water Science and Technology Volume 25-26 ; 25-26 ; >
+    au < testing ; exists ; 1993 ; 1993 ; Water Science and Technology Volume 27-28 ; 27-28 ; >
+    au < testing ; exists ; 1994 ; 1994 ; Water Science and Technology Volume 29-30 ; 29-30 ; >
+    au < testing ; exists ; 1995 ; 1995 ; Water Science and Technology Volume 31-32 ; 31-32 ; >
+    au < testing ; exists ; 1996 ; 1996 ; Water Science and Technology Volume 33-34 ; 33-34 ; >
+    au < testing ; exists ; 1997 ; 1997 ; Water Science and Technology Volume 35-36 ; 35-36 ; >
+    au < testing ; exists ; 1998 ; 1998 ; Water Science and Technology Volume 37-38 ; 37-38 ; >
+    au < testing ; exists ; 1999 ; 1999 ; Water Science and Technology Volume 39-40 ; 39-40 ; >
     au < frozen ; exists ; 2000 ; 2000 ; Water Science and Technology Volume 41-42 ; 41-42 ; >
     au < frozen ; exists ; 2001 ; 2001 ; Water Science and Technology Volume 43-44 ; 43-44 ; >
     au < frozen ; exists ; 2002 ; 2002 ; Water Science and Technology Volume 45-46 ; 45-46 ; >
