@@ -48,7 +48,7 @@ import org.lockss.util.Logger;
 
 public class Ojs3HtmlMetadataExtractorFactory2024 implements FileMetadataExtractorFactory{
 
-    private static final Logger log = Logger.getLogger(Ojs3HtmlMetdataExtractorFactory2024.class);
+    private static final Logger log = Logger.getLogger(Ojs3HtmlMetadataExtractorFactory2024.class);
     private static final SimpleHtmlMetaTagMetadataExtractor shtmmde = new SimpleHtmlMetaTagMetadataExtractor();
     @Override
     public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget arg0, String arg1) throws PluginException {
