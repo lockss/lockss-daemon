@@ -98,30 +98,42 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
     public void parseToc(CachedUrl tocCU, ArrayList<ArticleFiles> results, ArchivalUnit au){
 
         /* Examples of where articles are located on TOC pages:
+         *  MOST COMMON
+         *  https://medicaljournalssweden.se/JPHS/issue/view/2155 <div class="obj_article_summary">
+         * 
+         * 
          *  https://raccefyn.co/index.php/raccefyn/issue/view/197 - <div class = article-summary>
          *  https://blakequarterly.org/index.php/blake/issue/view/84 - <article class = article>
          *  https://journals.whitingbirch.net/index.php/SWSSR/issue/view/196 - li inside of <ul class = cmp_article_list articles>
+         *  https://journals.vilniustech.lt/index.php/BMEE/issue/view/1296 - <div class="article-summary media">
          */
         CachedUrl pdfUrl = null;
         CachedUrl htmlUrl = null;
+        CachedUrl xmlUrl = null;
         CachedUrl abstractsUrl = null;
 
         try{
             Document doc = Jsoup.parse(tocCU.getUnfilteredInputStream(), AuUtil.getCharsetOrDefault(tocCU.getProperties()), tocCU.getUrl());
-            Elements articles = doc.select("div.article-summary,article.article,ul.articles>li");
+            Elements articles = doc.select("div.article-summary,article.article,ul.articles>li,div.one-article-intoc,article.article_summary,div.article-sum");
             ArrayList<String> rolesForFullText = new ArrayList<>();
             for (Element article : articles) {
                 ArticleFiles af = new ArticleFiles();
 
-                Elements PDFs = article.select("div.article-summary-galleys>a,ul.article__btn-group>li>a.pdf,ul.galleys_links>li>a.pdf");
+                Elements PDFs = article.select("div.article-summary-galleys>a,ul.article__btn-group>li>a:contains(PDF),ul.galleys_links>li>a:contains(PDF),div.galleryLinksWrp>div.btnsLink>a.galley-link,"
+                    +"div.galleys_links>a:contains(PDF),div.btn-group>a:contains(PDF)");
                 pdfUrl = au.makeCachedUrl(PDFs.attr("href"));
                 addToListOfRoles(pdfUrl, af, rolesForFullText, ArticleFiles.ROLE_FULL_TEXT_PDF);
 
-                Elements HTMLs = article.select("ul.article__btn-group>li>a.file");
+                Elements HTMLs = article.select("ul.galleys_links>li>a:contains(HTML),ul.article__btn-group>li>a:contains(HTML),div.btn-group>a:contains(HTML)");
                 htmlUrl = au.makeCachedUrl(HTMLs.attr("href"));
                 addToListOfRoles(htmlUrl, af, rolesForFullText, ArticleFiles.ROLE_FULL_TEXT_HTML);
 
-                Elements abstracts = article.select("div.article-summary-title>a,h4.article__title>a,h3.title>a");
+                Elements XMLs = article.select("ul.galleys_links>li>a:contains(XML),div.btn-group>a:contains(XML)");
+                xmlUrl = au.makeCachedUrl(XMLs.attr("href"));
+                addToListOfRoles(xmlUrl, af, rolesForFullText, ArticleFiles.ROLE_FULL_TEXT_XML);
+
+                Elements abstracts = article.select("div.article-summary-title>a,h4.article__title>a,h3.title>a,h4.issue-article-title.a[href*=article],h3.media-heading>a,"+
+                "a.summary_title");
                 abstractsUrl = au.makeCachedUrl(abstracts.attr("href"));
                 addToListOfRoles(abstractsUrl, af, rolesForFullText, ArticleFiles.ROLE_ABSTRACT);
 
@@ -148,6 +160,7 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
         }finally{
             AuUtil.safeRelease(pdfUrl);
             AuUtil.safeRelease(htmlUrl);
+            AuUtil.safeRelease(xmlUrl);
             AuUtil.safeRelease(abstractsUrl);
         }
         

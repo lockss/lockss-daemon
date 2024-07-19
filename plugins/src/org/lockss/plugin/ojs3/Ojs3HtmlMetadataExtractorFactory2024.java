@@ -46,7 +46,7 @@ import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.ojs3.Ojs3HtmlMetadataExtractorFactory.Ojs3HtmlMetadataExtractor;
 import org.lockss.util.Logger;
 
-public class Ojs3HtmlMetdataExtractorFactory2024 implements FileMetadataExtractorFactory{
+public class Ojs3HtmlMetadataExtractorFactory2024 implements FileMetadataExtractorFactory{
 
     private static final Logger log = Logger.getLogger(Ojs3HtmlMetdataExtractorFactory2024.class);
     private static final SimpleHtmlMetaTagMetadataExtractor shtmmde = new SimpleHtmlMetaTagMetadataExtractor();
@@ -84,8 +84,8 @@ public class Ojs3HtmlMetdataExtractorFactory2024 implements FileMetadataExtracto
             throws IOException, PluginException {
             
             ArticleMetadata am = shtmmde.extract(target, cu);
-            am.cook(tagMap);
             if (am != null) {
+                am.cook(tagMap);
                 emitter.emitMetadata(cu, am);
             }
         }
