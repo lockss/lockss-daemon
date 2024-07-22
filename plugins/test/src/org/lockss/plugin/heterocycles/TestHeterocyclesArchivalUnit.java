@@ -69,7 +69,7 @@ public class TestHeterocyclesArchivalUnit extends LockssTestCase {
   private static final String PLUGIN_ID = 
       "org.lockss.plugin.heterocycles.ClockssHeterocyclesPlugin";
   
-  private static final String PLUGIN_NAME = "Heterocycles Plugin (CLOCKSS)";
+  private static final String PLUGIN_NAME = "Heterocycles Plugin (Legacy, CLOCKSS)";
 
   private static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   private static final String VOL_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
