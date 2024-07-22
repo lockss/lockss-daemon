@@ -299,50 +299,54 @@ public class MigrateSettings extends LockssServlet {
           break;
 
         case ACTION_NEXT:
-          initParamsFromFormData();
-          if (!isTargetConfigFetched) {
-            errMsg = "Missing database configuration";
-          } else if (DbManagerSql.isTypeDerby(mCfg.get(DbManager.PARAM_DATASOURCE_CLASSNAME))) {
-            dbError = "Derby not supported";
-          } else if (StringUtil.isNullString(dbPass)) {
-            dbError = "Missing database password";
-          } else if (!dryRunEnabled &&
-                     !migrationMgr.isTargetInMigrationMode(hostname, cfgUiPort,
-                                                           userName, userPass)) {
-            errMsg = "Non-dry run migration cannot be performed when target is not in migration mode";
-          } else if (dryRunEnabled &&
-                     migrationMgr.isTargetInMigrationMode(hostname, cfgUiPort,
-                                                          userName, userPass)) {
-            errMsg = "Dry run migration cannot be performed when target is in migration mode";
-          } else if (!migrationMgr.isInMigrationMode() || migrationMgr.isMigrationInDebugMode()) {
-            // Populate remaining migration configuration parameters
-            mCfg.put(V2_DOT + DbManager.PARAM_DATASOURCE_PASSWORD, dbPass);
-            mCfg.put(MigrationManager.PARAM_DRY_RUN_ENABLED,
-                String.valueOf(dryRunEnabled));
-            mCfg.put(MigrateContent.PARAM_DELETE_AFTER_MIGRATION, String.valueOf(isDeleteAusEnabled));
-
-            if (isDeleteAusEnabled) {
-              // Migration options (provided by user input)
-              mCfg.put(V2_DOT + RepositoryManager.PARAM_MOVE_DELETED_AUS_TO, "MIGRATED");
-              mCfg.put(V2_DOT + RepositoryManager.PARAM_DELETEAUS_INTERVAL,
-                  String.valueOf(RepositoryManager.DEFAULT_DELETEAUS_INTERVAL));
-            }
-
-            // Test database connection
-            if (!migrationMgr.isSkipDbCopy()) {
-              try {
-                Configuration dsCfg = DataSourceUtil.getRuntimeDataSourceConfig(mCfg.getConfigTree(V2_PREFIX));
-                DataSourceUtil.validateDataSourceConfig(dsCfg);
-              } catch (Throwable e) {
-                dbError = "Could not connect to database";
-                log.error(dbError, e);
-                break;
-              }
-            }
-            // Write migration configuration to file
-            writeMigrationConfigFile(mCfg);
-            ConfigManager.getConfigManager().reloadAndWait();
+          if (migrationMgr.isInMigrationMode()) {
             redirectToMigrateContent();
+          } else {
+            initParamsFromFormData();
+            if (!isTargetConfigFetched) {
+              errMsg = "Missing database configuration";
+            } else if (DbManagerSql.isTypeDerby(mCfg.get(DbManager.PARAM_DATASOURCE_CLASSNAME))) {
+              dbError = "Derby not supported";
+            } else if (StringUtil.isNullString(dbPass)) {
+              dbError = "Missing database password";
+            } else if (!dryRunEnabled &&
+                       !migrationMgr.isTargetInMigrationMode(hostname, cfgUiPort,
+                                                             userName, userPass)) {
+              errMsg = "Non-dry run migration cannot be performed when target is not in migration mode";
+            } else if (dryRunEnabled &&
+                       migrationMgr.isTargetInMigrationMode(hostname, cfgUiPort,
+                                                            userName, userPass)) {
+              errMsg = "Dry run migration cannot be performed when target is in migration mode";
+            } else if (!migrationMgr.isInMigrationMode() || migrationMgr.isMigrationInDebugMode()) {
+              // Populate remaining migration configuration parameters
+              mCfg.put(V2_DOT + DbManager.PARAM_DATASOURCE_PASSWORD, dbPass);
+              mCfg.put(MigrationManager.PARAM_DRY_RUN_ENABLED,
+                       String.valueOf(dryRunEnabled));
+              mCfg.put(MigrateContent.PARAM_DELETE_AFTER_MIGRATION, String.valueOf(isDeleteAusEnabled));
+
+              if (isDeleteAusEnabled) {
+                // Migration options (provided by user input)
+                mCfg.put(V2_DOT + RepositoryManager.PARAM_MOVE_DELETED_AUS_TO, "MIGRATED");
+                mCfg.put(V2_DOT + RepositoryManager.PARAM_DELETEAUS_INTERVAL,
+                         String.valueOf(RepositoryManager.DEFAULT_DELETEAUS_INTERVAL));
+              }
+
+              // Test database connection
+              if (!migrationMgr.isSkipDbCopy()) {
+                try {
+                  Configuration dsCfg = DataSourceUtil.getRuntimeDataSourceConfig(mCfg.getConfigTree(V2_PREFIX));
+                  DataSourceUtil.validateDataSourceConfig(dsCfg);
+                } catch (Throwable e) {
+                  dbError = "Could not connect to database";
+                  log.error(dbError, e);
+                  break;
+                }
+              }
+              // Write migration configuration to file
+              writeMigrationConfigFile(mCfg);
+              ConfigManager.getConfigManager().reloadAndWait();
+              redirectToMigrateContent();
+            }
           }
           break;
         case ACTION_RESET_MIGRATION_STATE:
@@ -721,24 +725,22 @@ public class MigrateSettings extends LockssServlet {
     Configuration v2Cfg = ConfigManager.newConfiguration();
 
     // Proxy forwarding settings
-    if (targetCfg.getBoolean(ProxyManager.PARAM_START, V2_DEFAULT_PROXYMANAGER_START)) {
-      v2Cfg.put(ProxyManager.PARAM_FORWARD_PROXY,
-          targetHost + ":" + targetCfg.getInt(
-              V2_PARAM_PROXY_PORT, V2_DEFAULT_PROXY_PORT));
-    }
+    v2Cfg.put(ProxyManager.PARAM_FORWARD_PROXY,
+              targetHost + ":" +
+              targetCfg.getInt(V2_PARAM_PROXY_PORT, V2_DEFAULT_PROXY_PORT));
 
     // ServeContent forwarding settings
-    if (targetCfg.getBoolean(ContentServletManager.PARAM_START, V2_DEFAULT_CONTENTSERVLETMANAGER_START)) {
-      v2Cfg.put(ServeContent.PARAM_FORWARD_SERVE_CONTENT,
-          targetHost + ":" + targetCfg.getInt(
-              V2_PARAM_CONTENTSERVLET_PORT, V2_DEFAULT_CONTENTSERVLET_PORT));
-    }
+    v2Cfg.put(ServeContent.PARAM_FORWARD_SERVE_CONTENT,
+              targetHost + ":" +
+              targetCfg.getInt(V2_PARAM_CONTENTSERVLET_PORT,
+                               V2_DEFAULT_CONTENTSERVLET_PORT));
 
     // LCAP forwarding settings
     int targetLcapPort = targetCfg.getInt(V2_PARAM_ACTUAL_V3_LCAP_PORT, -1);
     if (targetLcapPort > 0) {
       String targetIdentity = targetCfg.get(V2_PARAM_LOCAL_V3_IDENTITY);      
-      String targetIp = getLcapForwardAddr(targetHost, targetIdentity);
+      String targetIp = getLcapForwardAddr(targetHost, targetIdentity,
+                                           targetCfg);
       String migTo = IDUtil.ipAddrToKey(targetIp, targetLcapPort);
       v2Cfg.put(LcapRouter.PARAM_MIGRATE_TO, migTo);
       log.info("Configuring to forward LCAP to: " + migTo);
@@ -789,7 +791,15 @@ public class MigrateSettings extends LockssServlet {
 
   // Prefer to get IP addr from target hostname as that's known to be
   // reachable from V1
-  private String getLcapForwardAddr(String targetHost, String targetIdentity) {
+  private String getLcapForwardAddr(String targetHost, String targetIdentity,
+                                    Configuration targetCfg) {
+    // If localhost, use actual IP addr instead.  V2 comm can't use
+    // loopback because it's running in a container, and both ends
+    // much match
+    if (targetHost.equalsIgnoreCase("localhost") ||
+        targetHost.equals("127.0.0.1")) {
+      return targetCfg.get(IdentityManager.PARAM_LOCAL_IP);
+    }
     String targetIp;
     try {
       IPAddr targetIPAddr = IPAddr.getByName(targetHost);
