@@ -36,13 +36,13 @@
     au < manifest ; exists ; 1998 ; Information Resources Management Journal (IRMJ) Volume 11 ; 11 ; https://www.igi-global.com/ ; > 
     au < manifest ; exists ; 1999 ; Information Resources Management Journal (IRMJ) Volume 12 ; 12 ; https://www.igi-global.com/ ; > 
     au < crawling ; exists ; 2000 ; Information Resources Management Journal (IRMJ) Volume 13 ; 13 ; https://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2001 ; Information Resources Management Journal (IRMJ) Volume 14 ; 14 ; https://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2002 ; Information Resources Management Journal (IRMJ) Volume 15 ; 15 ; https://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2003 ; Information Resources Management Journal (IRMJ) Volume 16 ; 16 ; https://www.igi-global.com/ ; > 
+    au < frozen ; exists ; 2001 ; Information Resources Management Journal (IRMJ) Volume 14 ; 14 ; https://www.igi-global.com/ ; > 
+    au < frozen ; exists ; 2002 ; Information Resources Management Journal (IRMJ) Volume 15 ; 15 ; https://www.igi-global.com/ ; > 
+    au < frozen ; exists ; 2003 ; Information Resources Management Journal (IRMJ) Volume 16 ; 16 ; https://www.igi-global.com/ ; > 
     au < crawling ; exists ; 2004 ; Information Resources Management Journal (IRMJ) Volume 17 ; 17 ; https://www.igi-global.com/ ; > 
     au < crawling ; exists ; 2005 ; Information Resources Management Journal (IRMJ) Volume 18 ; 18 ; https://www.igi-global.com/ ; > 
     au < crawling ; exists ; 2006 ; Information Resources Management Journal (IRMJ) Volume 19 ; 19 ; https://www.igi-global.com/ ; > 
-    au < crawling ; exists ; 2007 ; Information Resources Management Journal (IRMJ) Volume 20 ; 20 ; https://www.igi-global.com/ ; > 
+    au < frozen ; exists ; 2007 ; Information Resources Management Journal (IRMJ) Volume 20 ; 20 ; https://www.igi-global.com/ ; > 
     au < crawling ; exists ; 2008 ; Information Resources Management Journal (IRMJ) Volume 21 ; 21 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2009 ; Information Resources Management Journal (IRMJ) Volume 22 ; 22 ; https://www.igi-global.com/ ; > 
     au < frozen ; exists ; 2010 ; Information Resources Management Journal (IRMJ) Volume 23 ; 23 ; https://www.igi-global.com/ ; > 
@@ -95,7 +95,7 @@
     param[journal_issn] = 1942-535X
     #continued_by = 2640-9976
 
-    au < crawling ; exists ; 2009 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 2009 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
     au < finished ; finished ; 2010 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 2 ; 2 ; http://www.igi-global.com/ ; >
     au < finished ; finished ; 2011 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 3 ; 3 ; http://www.igi-global.com/ ; >
     au < finished ; finished ; 2012 ; International Journal of Actor-Network Theory and Technological Innovation (IJANTTI) Volume 4 ; 4 ; http://www.igi-global.com/ ; >
@@ -1274,7 +1274,7 @@
     au < crawling ; exists ; 2006 ; International Journal of E-Business Research (IJEBR) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2007 ; International Journal of E-Business Research (IJEBR) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2008 ; International Journal of E-Business Research (IJEBR) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
-    au < crawling ; exists ; 2009 ; International Journal of E-Business Research (IJEBR) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 2009 ; International Journal of E-Business Research (IJEBR) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
     au < frozen ; exists ; 2010 ; International Journal of E-Business Research (IJEBR) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
     au < finished ; finished ; 2011 ; International Journal of E-Business Research (IJEBR) Volume 7 ; 7 ; http://www.igi-global.com/ ; >
     au < finished ; frozen ; 2012 ; International Journal of E-Business Research (IJEBR) Volume 8 ; 8 ; http://www.igi-global.com/ ; >
@@ -1307,7 +1307,7 @@
     au < crawling ; exists ; 2006 ; International Journal of e-Collaboration (IJeC) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2007 ; International Journal of e-Collaboration (IJeC) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2008 ; International Journal of e-Collaboration (IJeC) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
-    au < crawling ; exists ; 2009 ; International Journal of e-Collaboration (IJeC) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 2009 ; International Journal of e-Collaboration (IJeC) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
     au < frozen ; exists ; 2010 ; International Journal of e-Collaboration (IJeC) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
     au < finished ; finished ; 2011 ; International Journal of e-Collaboration (IJeC) Volume 7 ; 7 ; http://www.igi-global.com/ ; >
     au < finished ; finished ; 2012 ; International Journal of e-Collaboration (IJeC) Volume 8 ; 8 ; http://www.igi-global.com/ ; >
@@ -1480,7 +1480,7 @@
     au < crawling ; exists ; 2006 ; International Journal of Enterprise Information Systems (IJEIS) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2007 ; International Journal of Enterprise Information Systems (IJEIS) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2008 ; International Journal of Enterprise Information Systems (IJEIS) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
-    au < crawling ; exists ; 2009 ; International Journal of Enterprise Information Systems (IJEIS) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 2009 ; International Journal of Enterprise Information Systems (IJEIS) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
     au < frozen ; exists ; 2010 ; International Journal of Enterprise Information Systems (IJEIS) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
     au < finished ; finished ; 2011 ; International Journal of Enterprise Information Systems (IJEIS) Volume 7 ; 7 ; http://www.igi-global.com/ ; >
     au < finished ; finished ; 2012 ; International Journal of Enterprise Information Systems (IJEIS) Volume 8 ; 8 ; http://www.igi-global.com/ ; >
@@ -1559,7 +1559,7 @@
     >
     param[journal_issn] = 1941-627X
 
-    au < crawling ; exists ; 2009 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 2009 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
     au < frozen ; exists ; 2010 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
     au < finished ; finished ; 2011 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 3 ; 3 ; http://www.igi-global.com/ ; >
     au < finished ; frozen ; 2012 ; International Journal of E-Services and Mobile Applications (IJESMA) Volume 4 ; 4 ; http://www.igi-global.com/ ; >
@@ -1641,7 +1641,7 @@
     >
     param[journal_issn] = 1942-3888
 
-    au < crawling ; exists ; 2009 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 2009 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
     au < frozen ; exists ; 2010 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
     au < finished ; finished ; 2011 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 3 ; 3 ; http://www.igi-global.com/ ; >
     au < finished ; finished ; 2012 ; International Journal of Gaming and Computer-Mediated Simulations (IJGCMS) Volume 4 ; 4 ; http://www.igi-global.com/ ; >
@@ -1811,7 +1811,7 @@
     param[journal_issn] = 1938-0216
     # out of print. no substance on 2012
 
-    au < crawling ; exists ; 2009 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 2009 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
     au < testing ; exists ; 2010 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
     au < finished ; finished ; 2011 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 3 ; 3 ; http://www.igi-global.com/ ; >
     au < superseded ; down ; 2012 ; International Journal of Healthcare Delivery Reform Initiatives (IJHDRI) Volume 4 [superseded] ; 4 ; http://www.igi-global.com/ ; >
@@ -2165,7 +2165,7 @@
     param[journal_issn] = 1935-570X
 
     au < crawling ; exists ; 2008 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
-    au < crawling ; exists ; 2009 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 2009 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
     au < testing ; exists ; 2010 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
     au < finished ; finished ; 2011 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 4 ; 4 ; http://www.igi-global.com/ ; >
     au < finished ; finished ; 2012 ; International Journal of Information Technologies and Systems Approach (IJITSA) Volume 5 ; 5 ; http://www.igi-global.com/ ; >
@@ -2286,7 +2286,7 @@
     au < crawling ; exists ; 2006 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2007 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2008 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
-    au < crawling ; exists ; 2009 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 2009 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
     au < testing ; exists ; 2010 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
     au < finished ; finished ; 2011 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 7 ; 7 ; http://www.igi-global.com/ ; >
     au < finished ; finished ; 2012 ; International Journal of Intelligent Information Technologies (IJIIT) Volume 8 ; 8 ; http://www.igi-global.com/ ; >
@@ -3713,7 +3713,7 @@
     au < crawling ; exists ; 2006 ; International Journal of Technology and Human Interaction (IJTHI) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2007 ; International Journal of Technology and Human Interaction (IJTHI) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2008 ; International Journal of Technology and Human Interaction (IJTHI) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
-    au < crawling ; exists ; 2009 ; International Journal of Technology and Human Interaction (IJTHI) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 2009 ; International Journal of Technology and Human Interaction (IJTHI) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
     au < testing ; exists ; 2010 ; International Journal of Technology and Human Interaction (IJTHI) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
     au < finished ; finished ; 2011 ; International Journal of Technology and Human Interaction (IJTHI) Volume 7 ; 7 ; http://www.igi-global.com/ ; >
     au < finished ; finished ; 2012 ; International Journal of Technology and Human Interaction (IJTHI) Volume 8 ; 8 ; http://www.igi-global.com/ ; >
@@ -3895,7 +3895,7 @@
     au < crawling ; exists ; 2006 ; International Journal of Web Services Research (IJWSR) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2007 ; International Journal of Web Services Research (IJWSR) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2008 ; International Journal of Web Services Research (IJWSR) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
-    au < crawling ; exists ; 2009 ; International Journal of Web Services Research (IJWSR) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 2009 ; International Journal of Web Services Research (IJWSR) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
     au < frozen ; exists ; 2010 ; International Journal of Web Services Research (IJWSR) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
     au < finished ; finished ; 2011 ; International Journal of Web Services Research (IJWSR) Volume 8 ; 8 ; http://www.igi-global.com/ ; >
     au < finished ; finished ; 2012 ; International Journal of Web Services Research (IJWSR) Volume 9 ; 9 ; http://www.igi-global.com/ ; >
@@ -3927,7 +3927,7 @@
     au < crawling ; exists ; 2006 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2007 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2008 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
-    au < crawling ; exists ; 2009 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 2009 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
     au < testing ; exists ; 2010 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
     au < finished ; finished ; 2011 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 6 ; 6 ; http://www.igi-global.com/ ; >
     au < finished ; finished ; 2012 ; International Journal of Web-Based Learning and Teaching Technologies (IJWLTT) Volume 7 ; 7 ; http://www.igi-global.com/ ; >
@@ -4106,7 +4106,7 @@
     au < crawling ; exists ; 2006 ; Journal of Electronic Commerce in Organizations (JECO) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2007 ; Journal of Electronic Commerce in Organizations (JECO) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2008 ; Journal of Electronic Commerce in Organizations (JECO) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
-    au < crawling ; exists ; 2009 ; Journal of Electronic Commerce in Organizations (JECO) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 2009 ; Journal of Electronic Commerce in Organizations (JECO) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
     au < frozen ; exists ; 2010 ; Journal of Electronic Commerce in Organizations (JECO) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
     au < finished ; finished ; 2011 ; Journal of Electronic Commerce in Organizations (JECO) Volume 9 ; 9 ; http://www.igi-global.com/ ; >
     au < finished ; finished ; 2012 ; Journal of Electronic Commerce in Organizations (JECO) Volume 10 ; 10 ; http://www.igi-global.com/ ; >
@@ -4151,7 +4151,7 @@
     au < crawling ; exists ; 2006 ; Journal of Global Information Management (JGIM) Volume 14 ; 14 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2007 ; Journal of Global Information Management (JGIM) Volume 15 ; 15 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 2008 ; Journal of Global Information Management (JGIM) Volume 16 ; 16 ; https://www.igi-global.com/ ; >
-    au < crawling ; exists ; 2009 ; Journal of Global Information Management (JGIM) Volume 17 ; 17 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 2009 ; Journal of Global Information Management (JGIM) Volume 17 ; 17 ; https://www.igi-global.com/ ; >
     au < frozen ; exists ; 2010 ; Journal of Global Information Management (JGIM) Volume 18 ; 18 ; https://www.igi-global.com/ ; >
     au < finished ; finished ; 2011 ; Journal of Global Information Management (JGIM) Volume 19 ; 19 ; http://www.igi-global.com/ ; >
     au < finished ; finished ; 2012 ; Journal of Global Information Management (JGIM) Volume 20 ; 20 ; http://www.igi-global.com/ ; >
