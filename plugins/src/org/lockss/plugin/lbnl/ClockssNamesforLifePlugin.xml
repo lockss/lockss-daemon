@@ -1,6 +1,6 @@
 <!--
 
-Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -40,11 +40,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Names for Life Plugin (CLOCKSS)</string>
+    <string>NamesforLife Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -79,7 +79,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Names for Life Plugin (CLOCKSS), Base URL %s", base_url</string>
+    <string>"NamesforLife Plugin (CLOCKSS), Base URL %s", base_url</string>
   </entry>
   <entry>
     <string>au_start_url</string>
@@ -93,14 +93,16 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,"^https?://maxcdn\.bootstrapcdn\.com/bootstrap/"</string>
+      <string>1,"^https?://code\.jquery\.com/jquery[^/]+\.js"</string>
       <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com)/"</string>
-      <string>1,"https://static.namesforlife.com/"</string>
-      <string>1,"https://api.namesforlife.com/script/"</string>
-      <string>1,"https://maxcdn.bootstrapcdn.com/bootstrap/"</string>
-      <string>1,"https://code.jquery.com/jquery[^/]+\.js"</string>
-      <string>1,"^%ssitemap.*", base_url</string>
-      <string>1,"^%s.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)?", base_url</string>
-      <string>1,"^%s(data|css|script|images)", base_url</string>
+      <string>1,"^https?://static\.namesforlife\.com/"</string>
+      <string>1,"^https?://api\.namesforlife\.com/script/"</string>
+      <string>1,"^https?://doi\.org/10\.1601/"</string>
+      <string>1,"^%s", base_url</string>
+      <!--<string>1,"^%ssitemap.*", base_url</string>-->
+      <!--<string>1,"^%s.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)?", base_url</string>-->
+      <!--<string>1,"^%s(data|css|script|images)", base_url</string>-->
       <!--
       Urls inside objects.xml
         <url>
@@ -110,8 +112,8 @@ POSSIBILITY OF SUCH DAMAGE.
           <priority>0.2</priority>
         </url>
       -->
-      <string>1,"^%s10\.", base_url</string>
-      <string>1,"^%s\d+\.\d+/.*", base_url</string>
+      <!--<string>1,"^%s10\.", base_url</string>-->
+      <!--<string>1,"^%s\d+\.\d+/.*", base_url</string>-->
     </list>
   </entry>
   <entry>
@@ -171,7 +173,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>cdnjs\.cloudflare\.com</string>
       <string>static\.namesforlife\.com</string>
       <string>api\.namesforlife\.com</string>
-      <string>code\.jquery\.com</string>
+      <string>doi\.org</string>
     </list>
   </entry>
   <entry>
