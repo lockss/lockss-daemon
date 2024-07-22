@@ -59,7 +59,7 @@ public class TestMedknowArchivalUnit extends LockssPluginTestCase {
   private static final Logger log = Logger.getLogger(TestMedknowArchivalUnit.class);
 
   static final String PLUGIN_ID = "org.lockss.plugin.medknow.MedknowPlugin";
-  static final String PluginName = "Medknow Publications Journals Plugin";
+  static final String PluginName = "Medknow Publications Journals Plugin (Legacy)";
 
   public void setUp() throws Exception {
     super.setUp();

@@ -41,11 +41,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Medknow Publications Journals Plugin (CLOCKSS)</string>
+    <string>Medknow Publications Journals Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>39</string>
+    <string>40</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -53,11 +53,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>39</string>
+    <string>40</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Medknow Publications Journals Plugin (CLOCKSS), Base URL %s, Issn %s, Year %d, Volume %s", base_url, journal_issn, year, volume_name</string>
+    <string>"Medknow Publications Journals Plugin (Legacy, CLOCKSS), Base URL %s, Issn %s, Year %d, Volume %s", base_url, journal_issn, year, volume_name</string>
   </entry>
   <entry>
     <string>clockss_override</string>
