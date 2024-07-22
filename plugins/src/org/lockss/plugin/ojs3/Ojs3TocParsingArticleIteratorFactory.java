@@ -120,20 +120,22 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
                 ArticleFiles af = new ArticleFiles();
 
                 Elements PDFs = article.select("div.article-summary-galleys>a,ul.article__btn-group>li>a:contains(PDF),ul.galleys_links>li>a:contains(PDF),div.galleryLinksWrp>div.btnsLink>a.galley-link,"
-                    +"div.galleys_links>a:contains(PDF),div.btn-group>a:contains(PDF)");
+                    +"div.galleys_links>a:contains(PDF),div.btn-group>a:contains(PDF),div.btn-group>a:contains(PDF)");
                 pdfUrl = au.makeCachedUrl(PDFs.attr("href"));
                 addToListOfRoles(pdfUrl, af, rolesForFullText, ArticleFiles.ROLE_FULL_TEXT_PDF);
 
-                Elements HTMLs = article.select("ul.galleys_links>li>a:contains(HTML),ul.article__btn-group>li>a:contains(HTML),div.btn-group>a:contains(HTML)");
+                Elements HTMLs = article.select("ul.galleys_links>li>a:contains(HTML),ul.article__btn-group>li>a:contains(HTML),div.btn-group>a:contains(HTML),div.btn-group>a:contains(HTML),"
+                    +"div.galleys_links>a:contains(HTML)");
                 htmlUrl = au.makeCachedUrl(HTMLs.attr("href"));
                 addToListOfRoles(htmlUrl, af, rolesForFullText, ArticleFiles.ROLE_FULL_TEXT_HTML);
 
-                Elements XMLs = article.select("ul.galleys_links>li>a:contains(XML),div.btn-group>a:contains(XML)");
+                Elements XMLs = article.select("ul.galleys_links>li>a:contains(XML),div.btn-group>a:contains(XML),div.btn-group>a:contains(XML),"
+                    +"div.galleys_links>a:contains(XML)");
                 xmlUrl = au.makeCachedUrl(XMLs.attr("href"));
                 addToListOfRoles(xmlUrl, af, rolesForFullText, ArticleFiles.ROLE_FULL_TEXT_XML);
 
-                Elements abstracts = article.select("div.article-summary-title>a,h4.article__title>a,h3.title>a,h4.issue-article-title.a[href*=article],h3.media-heading>a,"+
-                "a.summary_title");
+                Elements abstracts = article.select("div.article-summary-title>a,h4.article__title>a,h3.title>a,h4.issue-article-title>a[href*=article],h3.media-heading>a,"+
+                "a.summary_title,span.article-title>a[href*=article],div.obj_article_summary>div.title>a[href*=article]");
                 abstractsUrl = au.makeCachedUrl(abstracts.attr("href"));
                 addToListOfRoles(abstractsUrl, af, rolesForFullText, ArticleFiles.ROLE_ABSTRACT);
 
