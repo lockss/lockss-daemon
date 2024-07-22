@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -200,5 +200,9 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_refetch_depth</string>
+    <int>0</int>
   </entry>
 </map>
