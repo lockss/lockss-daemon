@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -95,11 +95,11 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <string>1,"^https?://maxcdn\.bootstrapcdn\.com/bootstrap/"</string>
       <string>1,"^https?://code\.jquery\.com/jquery[^/]+\.js"</string>
-      <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com)/"</string>
+      <string>1,"^https?://cdnjs\.cloudflare\.com/"</string>
       <string>1,"^https?://static\.namesforlife\.com/"</string>
       <string>1,"^https?://api\.namesforlife\.com/script/"</string>
       <string>1,"^https?://doi\.org/10\.1601/"</string>
-      <string>1,"^%s", base_url</string>
+      <string>1,"^https?://%s/", url_host(base_url)</string>
       <!--<string>1,"^%ssitemap.*", base_url</string>-->
       <!--<string>1,"^%s.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)?", base_url</string>-->
       <!--<string>1,"^%s(data|css|script|images)", base_url</string>-->
@@ -118,7 +118,10 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_permission_url</string>
-    <string>"https://www.namesforlife.com/"</string>
+    <list>
+      <string>"%s", to_http(base_url)</string>
+      <string>"%s", to_https(base_url)</string>
+    </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
