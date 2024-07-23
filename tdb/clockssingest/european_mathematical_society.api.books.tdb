@@ -16,13 +16,24 @@
 
   {
     title <
-      name = DMS Books ;
+      name = Documenta Mathematica Series ;
+      issn = 2943-498X ;
+      eissn = 2943-4998 ;
       type = bookSeries
     >
       param[book_serial_id]= dms
-      #no books previously processed for this series.
 
-      au < exists ; exists ; 2015 ; 978-3-936609-61-5 ; 978-3-98547-040-2 ; A Collection of Manuscripts Written in Honour of Alexander S. Merkurjev on the Occasion of His Sixtieth Birthday ; 253 ; >
+
+      au < testing ; exists ; 1998 ; 978-3-98547-043-3 ; 978-3-98547-543-8 ; Proceedings of the International Congress of Mathematicians 1998: Berlin, Germany, 18–27 August 1998 ; 245 ; >
+      au < testing ; exists ; 1998 ; 978-3-98547-044-0 ; 978-3-98547-544-5 ; Proceedings of the International Congress of Mathematicians 1998 Volume 1 ; 246 ; >
+      au < testing ; exists ; 1998 ; 978-3-98547-045-7 ; 978-3-98547-545-2 ; Proceedings of the International Congress of Mathematicians 1998 Volume 2 ; 247 ; >
+      au < testing ; exists ; 1998 ; 978-3-98547-046-4 ; 978-3-98547-546-9 ; Proceedings of the International Congress of Mathematicians 1998 Volume 3 ; 248 ; >
+      au < testing ; exists ; 2001 ; 978-3-98547-042-6 ; 978-3-98547-542-1 ; Proceedings of the Conference on Quadratic Forms and Related Topics: Baton Rouge, Louisiana, USA, 26–30 March 2001 ; 249 ; >
+      au < testing ; exists ; 2003 ; 978-3-936609-21-9 ; 978-3-98547-547-6 ; A Collection of Manuscripts Written in Honour of Kazuya Kato on the Occasion of His Fiftieth Birthday ; 250 ; >
+      au < testing ; exists ; 2006 ; 978-3-936609-28-8 ; 978-3-98547-541-4 ; A Collection of Manuscripts Written in Honour of John H. Coates on the Occasion of His Sixtieth Birthday ; 254 ; >
+      au < testing ; exists ; 2010 ; 978-3-936609-48-6 ; 978-3-98547-041-9 ; A Collection of Manuscripts Written in Honour of Andrei A. Suslin on the Occasion of His Sixtieth Birthday ; 255 ; >
+      au < testing ; exists ; 2012 ; 978-3-936609-58-5 ; 978-3-98547-540-7 ; Optimization Stories: 21st International Symposium on Mathematical Programming. Berlin, Germany, 19–24 August 2012 ; 251 ; >
+      au < testing ; exists ; 2015 ; 978-3-936609-61-5 ; 978-3-98547-040-2 ; A Collection of Manuscripts Written in Honour of Alexander S. Merkurjev on the Occasion of His Sixtieth Birthday ; 253 ; >
       au < frozen ; exists ; 2021 ; 978-3-98547-047-1 ; 978-3-98547-047-1 ; The Legacy of Kurt Mahler ; 252 ; >
 
   }
