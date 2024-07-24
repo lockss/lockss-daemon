@@ -20,22 +20,22 @@
     param[journal_id] = whpge
     #Published 2008-Present
 
-    au < ready ; 2008 ; Global Environment Volume 1  ; 1  >
-    au < ready ; 2009 ; Global Environment Volume 2  ; 2  >
-    au < ready ; 2010 ; Global Environment Volume 3  ; 3  >
-    au < ready ; 2011 ; Global Environment Volume 4  ; 4  >
-    au < ready ; 2012 ; Global Environment Volume 5  ; 5  >
-    au < ready ; 2013 ; Global Environment Volume 6  ; 6  >
-    au < ready ; 2014 ; Global Environment Volume 7  ; 7  >
-    au < ready ; 2015 ; Global Environment Volume 8  ; 8  >
-    au < ready ; 2016 ; Global Environment Volume 9  ; 9  >
-    au < ready ; 2017 ; Global Environment Volume 10 ; 10 >
-    au < ready ; 2018 ; Global Environment Volume 11 ; 11 >
-    au < ready ; 2019 ; Global Environment Volume 12 ; 12 >
-    au < ready ; 2020 ; Global Environment Volume 13 ; 13 >
-    au < ready ; 2021 ; Global Environment Volume 14 ; 14 >
-    au < ready ; 2022 ; Global Environment Volume 15 ; 15 >
-    au < ready ; 2023 ; Global Environment Volume 16 ; 16 >
+    au < releasing ; 2008 ; Global Environment Volume 1  ; 1  >
+    au < releasing ; 2009 ; Global Environment Volume 2  ; 2  >
+    au < releasing ; 2010 ; Global Environment Volume 3  ; 3  >
+    au < releasing ; 2011 ; Global Environment Volume 4  ; 4  >
+    au < releasing ; 2012 ; Global Environment Volume 5  ; 5  >
+    au < releasing ; 2013 ; Global Environment Volume 6  ; 6  >
+    au < releasing ; 2014 ; Global Environment Volume 7  ; 7  >
+    au < releasing ; 2015 ; Global Environment Volume 8  ; 8  >
+    au < releasing ; 2016 ; Global Environment Volume 9  ; 9  >
+    au < releasing ; 2017 ; Global Environment Volume 10 ; 10 >
+    au < releasing ; 2018 ; Global Environment Volume 11 ; 11 >
+    au < releasing ; 2019 ; Global Environment Volume 12 ; 12 >
+    au < releasing ; 2020 ; Global Environment Volume 13 ; 13 >
+    au < releasing ; 2021 ; Global Environment Volume 14 ; 14 >
+    au < releasing ; 2022 ; Global Environment Volume 15 ; 15 >
+    au < releasing ; 2023 ; Global Environment Volume 16 ; 16 >
     au < manifest ; 2024 ; Global Environment Volume 17 ; 17 >
 
   }
@@ -53,13 +53,13 @@
     #Published 1997-Present
 
     #For 1997-2016 see below on Ingenta
-    au < ready ; 2017 ; Nomadic Peoples Volume 21 ; 21 >
-    au < ready ; 2018 ; Nomadic Peoples Volume 22 ; 22 >
-    au < ready ; 2019 ; Nomadic Peoples Volume 23 ; 23 >
-    au < ready ; 2020 ; Nomadic Peoples Volume 24 ; 24 >
-    au < ready ; 2021 ; Nomadic Peoples Volume 25 ; 25 >
-    au < ready ; 2022 ; Nomadic Peoples Volume 26 ; 26 >
-    au < ready ; 2023 ; Nomadic Peoples Volume 27 ; 27 >
+    au < releasing ; 2017 ; Nomadic Peoples Volume 21 ; 21 >
+    au < releasing ; 2018 ; Nomadic Peoples Volume 22 ; 22 >
+    au < releasing ; 2019 ; Nomadic Peoples Volume 23 ; 23 >
+    au < releasing ; 2020 ; Nomadic Peoples Volume 24 ; 24 >
+    au < releasing ; 2021 ; Nomadic Peoples Volume 25 ; 25 >
+    au < releasing ; 2022 ; Nomadic Peoples Volume 26 ; 26 >
+    au < releasing ; 2023 ; Nomadic Peoples Volume 27 ; 27 >
     au < manifest ; 2024 ; Nomadic Peoples Volume 28 ; 28 >
 
   }
@@ -77,13 +77,13 @@
     #Published 1995-Present
 
     #For 1995-2016 see below on Ingenta
-    au < ready ; 2017 ; Environment and History Volume 23 ; 23 >
-    au < ready ; 2018 ; Environment and History Volume 24 ; 24 >
-    au < ready ; 2019 ; Environment and History Volume 25 ; 25 >
-    au < ready ; 2020 ; Environment and History Volume 26 ; 26 >
-    au < ready ; 2021 ; Environment and History Volume 27 ; 27 >
-    au < ready ; 2022 ; Environment and History Volume 28 ; 28 >
-    au < ready ; 2023 ; Environment and History Volume 29 ; 29 >
+    au < releasing ; 2017 ; Environment and History Volume 23 ; 23 >
+    au < releasing ; 2018 ; Environment and History Volume 24 ; 24 >
+    au < releasing ; 2019 ; Environment and History Volume 25 ; 25 >
+    au < releasing ; 2020 ; Environment and History Volume 26 ; 26 >
+    au < releasing ; 2021 ; Environment and History Volume 27 ; 27 >
+    au < releasing ; 2022 ; Environment and History Volume 28 ; 28 >
+    au < releasing ; 2023 ; Environment and History Volume 29 ; 29 >
     au < manifest ; 2024 ; Environment and History Volume 30 ; 30 >
 
   }
@@ -317,8 +317,8 @@
      au < doNotProcess ; 2019 ; 2019 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2019 ; 2 >
      au < doNotProcess ; 2020 ; 2020 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2020 ; 3 >
      au < doNotProcess ; 2021 ; 2021 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2021 ; 4 >
-     au < ready ; 2022 ; 2022 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2022 ; 5 >
-     au < ready ; 2023 ; 2023 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2023 ; 6 >
+     au < releasing ; 2022 ; 2022 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2022 ; 5 >
+     au < releasing ; 2023 ; 2023 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2023 ; 6 >
      au < expected ; 2024 ; 2024 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2024 ; 7 >
   }
 
