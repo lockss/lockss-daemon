@@ -21,15 +21,6 @@
       au < readySource ; finished ; 2022 ; Journal of Invasive Cardiology Source Content 2022_01 ; 2022_01 >
       #No more AUs. Moved to https.
     }
-    {
-      #TESTING
-      param[base_url] = https://clockss-test.lockss.org/sourcefiles/hmpglobal-released/
-
-      #These AUs tested and ready. Can delete once the production AU is crawling.
-      au < doNotProcess ; exists ; 2024 ; Journal of Invasive Cardiology Source Content 2024_01 [Testing] ; 2024_01 > #Old format content - no doi
-      au < doNotProcess ; exists ; 2024 ; Journal of Invasive Cardiology Source Content 2024_02 [Testing] ; 2024_02 > #New format content - with doi
-
-    }
 
     {
       #PRODUCTION
