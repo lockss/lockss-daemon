@@ -477,7 +477,7 @@
       au < frozen ; exists ; 2014 ; 2014 ; 2014 ; De Uil van Minerva Volume 2014 ; >
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; De Uil van Minerva Volume 2015 ; >
       au < frozen ; exists ; 2016 ; 2016 ; 2016 ; De Uil van Minerva Volume 2016 ; >
-      au < doesNotExist ; exists ; 2017 ; 2017 ; 2017 ; De Uil van Minerva Volume 2017 ; > #Does not exist
+      au < doesNotExist ; doesNotExist ; 2017 ; 2017 ; 2017 ; De Uil van Minerva Volume 2017 ; > #Does not exist
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; De Uil van Minerva Volume 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; De Uil van Minerva Volume 2019 ; >
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; De Uil van Minerva Volume 2020 ; >
@@ -661,10 +661,10 @@
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2012 ; >
       au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2013 ; >
-      au < doesNotExist ; exists ; 2014 ; 2014 ; 2014 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2014 ; > #Does not exist
+      au < doesNotExist ; doesNotExist ; 2014 ; 2014 ; 2014 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2014 ; > #Does not exist
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2015 ; >
       au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2016 ; >
-      au < doesNotExist ; exists ; 2017 ; 2017 ; 2017 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2017 ; >
+      au < doesNotExist ; doesNotExist ; 2017 ; 2017 ; 2017 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2017 ; >
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2019 ; >
 
@@ -901,7 +901,7 @@
       au < manifest ; exists ; 2009 ; 2009 ; 2009 ; EWOP in Practice Volume 2009 ; >
       au < manifest ; exists ; 2010 ; 2010 ; 2010 ; EWOP in Practice Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; EWOP in Practice Volume 2011 ; >
-      au < doesNotExist ; exists ; 2012 ; 2012 ; 2012 ; EWOP in Practice Volume 2012 ; >
+      au < doesNotExist ; doesNotExist ; 2012 ; 2012 ; 2012 ; EWOP in Practice Volume 2012 ; >
       au < frozen ; exists ; 2013 ; 2013 ; 2013 ; EWOP in Practice Volume 2013 ; >
       au < frozen ; exists ; 2014 ; 2014 ; 2014 ; EWOP in Practice Volume 2014 ; >
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; EWOP in Practice Volume 2015 ; >
@@ -1075,7 +1075,7 @@
       au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Sociologos Volume 2014 ; >
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Sociologos Volume 2015 ; >
       au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Sociologos Volume 2016 ; >
-      au < doesNotExist ; exists ; 2017 ; 2017 ; 2017 ; Sociologos Volume 2017 ; >
+      au < doesNotExist ; doesNotExist ; 2017 ; 2017 ; 2017 ; Sociologos Volume 2017 ; >
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Sociologos Volume 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Sociologos Volume 2019 ; >
 
@@ -1128,9 +1128,9 @@
       au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Ruimte & Maatschappij Volume 2009 ; >
       au < manifest ; exists ; 2010 ; 2010 ; 2010 ; Ruimte & Maatschappij Volume 2010 ; >
       au < manifest ; exists ; 2011 ; 2011 ; 2011 ; Ruimte & Maatschappij Volume 2011 ; >
-      au < doesNotExist ; exists ; 2012 ; 2012 ; 2012 ; Ruimte & Maatschappij Volume 2012 ; >
-      au < doesNotExist ; exists ; 2013 ; 2013 ; 2013 ; Ruimte & Maatschappij Volume 2013 ; >
-      au < doesNotExist ; exists ; 2014 ; 2014 ; 2014 ; Ruimte & Maatschappij Volume 2014 ; >
+      au < doesNotExist ; doesNotExist ; 2012 ; 2012 ; 2012 ; Ruimte & Maatschappij Volume 2012 ; >
+      au < doesNotExist ; doesNotExist ; 2013 ; 2013 ; 2013 ; Ruimte & Maatschappij Volume 2013 ; >
+      au < doesNotExist ; doesNotExist ; 2014 ; 2014 ; 2014 ; Ruimte & Maatschappij Volume 2014 ; >
 
   }
 
@@ -1145,12 +1145,12 @@
 
       au < manifest ; exists ; 2010 ; 2010 ; 2010 ; NISE Essays Volume 2010 ; >
       au < manifest ; exists ; 2011 ; 2011 ; 2011 ; NISE Essays Volume 2011 ; >
-      au < doesNotExist ; exists ; 2012 ; 2012 ; 2012 ; NISE Essays Volume 2012 ; >
+      au < doesNotExist ; doesNotExist ; 2012 ; 2012 ; 2012 ; NISE Essays Volume 2012 ; >
       au < frozen ; exists ; 2013 ; 2013 ; 2013 ; NISE Essays Volume 2013 ; >
       au < frozen ; exists ; 2014 ; 2014 ; 2014 ; NISE Essays Volume 2014 ; >
-      au < doesNotExist ; exists ; 2015 ; 2015 ; 2015 ; NISE Essays Volume 2015 ; >
-      au < doesNotExist ; exists ; 2016 ; 2016 ; 2016 ; NISE Essays Volume 2016 ; >
-      au < doesNotExist ; exists ; 2017 ; 2017 ; 2017 ; NISE Essays Volume 2017 ; >
+      au < doesNotExist ; doesNotExist ; 2015 ; 2015 ; 2015 ; NISE Essays Volume 2015 ; >
+      au < doesNotExist ; doesNotExist ; 2016 ; 2016 ; 2016 ; NISE Essays Volume 2016 ; >
+      au < doesNotExist ; doesNotExist ; 2017 ; 2017 ; 2017 ; NISE Essays Volume 2017 ; >
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; NISE Essays Volume 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; NISE Essays Volume 2019 ; >
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; NISE Essays Volume 2020 ; >
@@ -1557,7 +1557,7 @@
       #published 2021-present
       param[journal_id] = radices
 
-      au < doesNotExist ; exists ; 2021 ; 2021 ; 2021 ; Radices Volume 2021 ; >
+      au < doesNotExist ; doesNotExist ; 2021 ; 2021 ; 2021 ; Radices Volume 2021 ; >
       au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Radices Volume 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; Radices Volume 2023 ; >
       au < expected ; exists ; 2024 ; 2024 ; 2024 ; Radices Volume 2024 ; >
