@@ -22,8 +22,8 @@
       {
         param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/frontiers-released/
 
-        au < readySource ; finished ; 2021 ; Frontiers Journals Source Content 2021_01 ; 2021_01 >
-        au < readySource ; finished ; 2021 ; Frontiers Journals Source Content 2021_02 ; 2021_02 >
+        au < zapped ; finished ; 2021 ; Frontiers Journals Source Content 2021_01 ; 2021_01 >
+        au < zapped ; finished ; 2021 ; Frontiers Journals Source Content 2021_02 ; 2021_02 >
 
         au < readySource ; finished ; 2022 ; Frontiers Journals Source Content 2022_01 ; 2022_01 >
         au < readySource ; finished ; 2022 ; Frontiers Journals Source Content 2022_02 ; 2022_02 >
@@ -58,7 +58,7 @@
       au < zapped ; finished ; 2018 ; Frontiers Journals Source Content 2018 ; 2018 >
       au < zapped ; finished ; 2019 ; Frontiers Journals Source Content 2019 ; 2019 >
       au < zapped ; finished ; 2020 ; Frontiers Journals Source Content 2020 ; 2020 >
-      au < readySource ; finished ; 2021 ; Frontiers Journals Source Content 2021 ; 2021 >
+      au < zapped ; finished ; 2021 ; Frontiers Journals Source Content 2021 ; 2021 >
       #no more AUs for this plugin
     }
 
@@ -100,7 +100,7 @@
       au < zapped ; finished ; 2018 ; Frontiers Books Source Content 2018 ; 2018 >
       au < zapped ; finished ; 2019 ; Frontiers Books Source Content 2019 ; 2019 >
       au < zapped ; finished ; 2020 ; Frontiers Books Source Content 2020 ; 2020 >
-      au < readySource ; finished ; 2021 ; Frontiers Books Source Content 2021 ; 2021 >
+      au < zapped ; finished ; 2021 ; Frontiers Books Source Content 2021 ; 2021 >
       au < readySource ; finished ; 2022 ; Frontiers Books Source Content 2022 ; 2022 >
       #no more AUs for this plugin
     }
