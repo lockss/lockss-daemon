@@ -47,6 +47,7 @@ import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractorFactory;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
+import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
@@ -116,14 +117,14 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
         try{
             Document doc = Jsoup.parse(tocCU.getUnfilteredInputStream(), AuUtil.getCharsetOrDefault(tocCU.getProperties()), tocCU.getUrl());
             Elements articles = doc.select("div.article-summary,article.article,ul.articles>li,div.one-article-intoc,article.article_summary,div.article-sum,"
-                +"ul.it-list>li>div.it-right-zone,article.equal,div.grid-child:has(div>div.media-body)");
+                +"ul.it-list>li>div.it-right-zone,article.equal,div.grid-child:has(div>div.media-body),ul.row>li.issue__article");
             ArrayList<String> rolesForFullText = new ArrayList<>();
             for (Element article : articles) {
                 ArticleFiles af = new ArticleFiles();
 
-                Elements PDFs = article.select("div.article-summary-galleys>a,ul.article__btn-group>li>a:contains(PDF),ul.galleys_links>li>a:contains(PDF),div.galleryLinksWrp>div.btnsLink>a.galley-link:contains(PDF),"
-                    +"div.galleys_links>a:contains(PDF),div.btn-group>a:contains(PDF),a.indexGalleyLink:contains(PDF),div.btn-group>a.pdf:contains(Article),"
-                    +"ul.actions>li.galley-links-items>a:has(i.fa-file-pdf),div.row>div>a.galley-link:has(span.gallery_item_link:contains(PDF))");
+                Elements PDFs = article.select("div.article-summary-galleys>a[href*=article]:contains(PDF),ul.article__btn-group>li>a[href*=article]:contains(PDF),ul.galleys_links>li>a[href*=article]:contains(PDF),"
+                    +"div.galleys_links>a[href*=article]:contains(PDF),div.btn-group>a[href*=article]:contains(PDF),a.indexGalleyLink:contains(PDF),div.btn-group>a[href*=article].pdf:contains(Article),"
+                    +"div.galleryLinksWrp>div.btnsLink>a.galley-link:contains(PDF),ul.actions>li.galley-links-items>a:has(i.fa-file-pdf),div.row>div>a.galley-link:has(span.gallery_item_link:contains(PDF))");
                 pdfUrl = au.makeCachedUrl(PDFs.attr("href"));
                 addToListOfRoles(pdfUrl, af, rolesForFullText, ArticleFiles.ROLE_FULL_TEXT_PDF);
 
@@ -133,7 +134,7 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
                 addToListOfRoles(htmlUrl, af, rolesForFullText, ArticleFiles.ROLE_FULL_TEXT_HTML);
 
                 Elements XMLs = article.select("ul.galleys_links>li>a:contains(XML),div.btn-group>a.file:contains(XML),"
-                    +"div.galleys_links>a:contains(XML)");
+                    +"div.galleys_links>a:contains(XML),div.article-summary-galleys>a:contains(XML)");
                 xmlUrl = au.makeCachedUrl(XMLs.attr("href"));
                 addToListOfRoles(xmlUrl, af, rolesForFullText, ArticleFiles.ROLE_FULL_TEXT_XML);
 
@@ -141,9 +142,9 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
                 epubUrl = au.makeCachedUrl(EPUBs.attr("href"));
                 addToListOfRoles(epubUrl, af, rolesForFullText, ArticleFiles.ROLE_FULL_TEXT_EPUB);
 
-                Elements abstracts = article.select("div.article-summary-title>a,h4.article__title>a,h3.title>a[href*=article],h4.issue-article-title>a[href*=article],h3.media-heading>a[href*=article],"+
+                Elements abstracts = article.select("div.article-summary-title>a[href*=article],h4.article__title>a[href*=article],div.obj_article_summary>h3.title>a[href*=article],h4.issue-article-title>a[href*=article],h3.media-heading>a[href*=article],"+
                 "a.summary_title,span.article-title>a[href*=article],div.obj_article_summary>div.title>a[href*=article],a:has(span.text>h6.article-title),"
-                +"ul.actions>li>a:contains(View Article),div.obj_article_summary>h4.title>a[href*=article]");
+                +"ul.actions>li>a:contains(View Article),div.obj_article_summary>h4.title>a[href*=article],div.obj_article_summary>div.card-body>h3.card-title>a[href*=article]");
                 abstractsUrl = au.makeCachedUrl(abstracts.attr("href"));
                 addToListOfRoles(abstractsUrl, af, rolesForFullText, ArticleFiles.ROLE_ABSTRACT);
 
