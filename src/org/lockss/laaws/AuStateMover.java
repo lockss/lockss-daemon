@@ -98,7 +98,7 @@ public class AuStateMover extends Worker {
           .filter(key -> !key.equalsIgnoreCase(PluginManager.AU_PARAM_REPOSITORY))
           .forEach(key -> v2config.putAuConfigItem(key, v1config.get(key)));
         // send the configuration
-        cfgApiClient.putAuConfig(au.getAuId(), v2config);
+        cfgAusApiClient.putAuConfig(au.getAuId(), v2config);
         log.info("Successfully moved AU Configuration: " + auName);
       }
       catch (Exception ex) {
@@ -124,7 +124,7 @@ public class AuStateMover extends Worker {
     if (v1AuAgreements != null) {
       try {
         String json_str = new Gson().toJson(v1AuAgreements.getPrunedBean(au.getAuId()));
-        cfgApiClient.patchAuAgreements(au.getAuId(), json_str, auMover.makeCookie());
+        cfgAusApiClient.patchAuAgreements(au.getAuId(), json_str, auMover.makeCookie());
         log.info("Successfully moved AU Agreements: " + auName);
       }
       catch (Exception ex) {
@@ -150,7 +150,7 @@ public class AuStateMover extends Worker {
     if (asuv != null) {
       try {
         String json_str = new Gson().toJson(asuv.getBean(au.getAuId()));
-        cfgApiClient.putAuSuspectUrlVersions(au.getAuId(), json_str,
+        cfgAusApiClient.putAuSuspectUrlVersions(au.getAuId(), json_str,
             auMover.makeCookie());
         log.info("Successfully moved AU Suspect Url Versions: " + auName);
       }
@@ -178,7 +178,7 @@ public class AuStateMover extends Worker {
     if (noAuPeerSet instanceof DatedPeerIdSetImpl) {
       try {
         String json_str = new Gson().toJson(((DatedPeerIdSetImpl) noAuPeerSet).getBean(au.getAuId()));
-        cfgApiClient.putNoAuPeers(au.getAuId(), json_str, auMover.makeCookie());
+        cfgAusApiClient.putNoAuPeers(au.getAuId(), json_str, auMover.makeCookie());
         log.info("Successfully moved no AU peers: " + auName);
       }
       catch (Exception ex) {
@@ -205,7 +205,7 @@ public class AuStateMover extends Worker {
       try {
         V2AuStateBean v2State = new V2AuStateBean(v1State);
         String json_str = new Gson().toJson(v2State.toMap());
-        cfgApiClient.patchAuState(au.getAuId(), json_str, auMover.makeCookie());
+        cfgAusApiClient.patchAuState(au.getAuId(), json_str, auMover.makeCookie());
         log.info("Successfully moved AU State: " + auName);
       }
       catch (Exception ex) {

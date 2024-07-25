@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 import java.util.*;
+import java.util.stream.*;
 import java.io.*;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -2103,6 +2104,20 @@ public class StringUtil {
    */
   public static String normalizeDashes(String str) {
     return DASHES.matcher(str).replaceAll(CANONICAL_DASH);
+  }
+
+  /** Prepend "#  " to each line.  */
+  public static String commentize(String str) {
+    return prefixLines(str, "#  ");
+  }
+
+  /** Prepend the prefix to each line.  Assumes string uses Unix
+   * EOL. */
+  public static String prefixLines(String str, String prefix) {
+    str = StringUtil.removeTrailing(str, "\n");
+    return StringUtil.breakAt(str, '\n').stream()
+      .map(x -> prefix + x)
+      .collect(Collectors.joining("\n")) + "\n";
   }
 
   /**

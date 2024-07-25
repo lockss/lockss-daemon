@@ -168,6 +168,7 @@ public class DaemonStatus extends LockssServlet {
   private Page newTablePage() throws IOException {
     Page page = newPage();
     addJavaScript(page);
+    layoutErrorBlock(page);
 
     if (!pluginMgr.areAusStarted()) {
       page.add(ServletUtil.notStartedWarning());

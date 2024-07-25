@@ -335,6 +335,13 @@ public interface CachedUrl extends CachedUrlSetNode {
   public void release();
 
   /**
+   * @return true if this CachedUrl is in a state where a release call
+   * is necessary (i.e., its Properties or InputStream have been
+   * accessed).
+   */
+  public boolean needsRelease();
+
+  /**
    * Return a FileMetadataExtractor for the CachedUrl's content type. If
    * there isn't one, a null extractor will be returned.
    * @param target the purpose for which metadata is being extracted

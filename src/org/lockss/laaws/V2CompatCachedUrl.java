@@ -112,6 +112,10 @@ public class V2CompatCachedUrl implements CachedUrl {
   public void release() {
     cu.release();
   }
+  @Override
+  public boolean needsRelease() {
+    return cu.needsRelease();
+  }
   public FileMetadataExtractor getFileMetadataExtractor(MetadataTarget target) {
     return cu.getFileMetadataExtractor(target);
   }

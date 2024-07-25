@@ -35,6 +35,7 @@ import org.apache.commons.httpclient.URIException;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.PluginBehaviorException;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.servlet.LoginForm;
 import org.lockss.util.urlconn.HttpClientUrlConnection;
 import org.lockss.util.urlconn.JavaHttpUrlConnection;
 import org.lockss.util.urlconn.JavaUrlConnection;
@@ -1347,6 +1348,53 @@ public class UrlUtil {
       luc = new JavaUrlConnection(urlString);
     }
     return luc;
+  }
+
+  /** Excessively bare-bones form login client, able to navigate a
+   * LOCKSS daemon login form.
+   * @param conn a LockssUrlConnection that has just been execute()d
+   * @param userName in case login form is encountered
+   * @param passWord
+   * @param pool Connection pool to use if a login form needs to be POSTed
+   */
+  public static LockssUrlConnection handleLoginForm(LockssUrlConnection conn,
+                                                    String userName,
+                                                    String userPass,
+                                                    LockssUrlConnectionPool pool)
+      throws IOException {
+    // Detect redirect to ".../LoginForm"
+    String actualUrl = conn.getActualUrl();
+    if (actualUrl.indexOf("/LoginForm;jsessionid=") > 0) {
+      String relUrl = org.lockss.servlet.LoginForm.FORM_ACTION;
+      String logUrl = UrlUtil.resolveUri(actualUrl, relUrl);
+      log.debug2("Login form detected: " + actualUrl +
+                 ", Logging in to: " + logUrl);
+      // POST the login form values
+      LockssUrlConnection logConn =
+        UrlUtil.openConnection(LockssUrlConnection.METHOD_POST, logUrl, pool);
+      logConn.setRequestProperty("content-type", Constants.FORM_ENCODING_URL);
+      logConn.setRequestEntity(String .format("%s=%s&%s=%s",
+                                              LoginForm.KEY_USERNAME,
+                                              UrlUtil.encodeUrl(userName),
+                                              LoginForm.KEY_PASSWORD,
+                                              UrlUtil.encodeUrl(userPass)));
+      logConn.execute();
+      // Follow expected redirect to original URL
+      if (logConn.getResponseCode() == 302) {
+        String redirTo = logConn.getResponseHeaderValue("location");
+        if (redirTo != null) {
+          if (redirTo.indexOf("/LoginForm") > 0) {
+            // Redirect back to login page means wrong credentials
+            throw new IOException("Wrong username:password");
+          }
+          conn = UrlUtil.openConnection(redirTo, pool);
+          conn.execute();
+        }
+      } else {
+        log.warning("Unexpected response to login POST: " + logConn.getResponseCode() + ": " + logConn.getResponseMessage());
+      }
+    }
+    return conn;
   }
 
 //   /** Return input stream for url iff 200 response code, else throw.

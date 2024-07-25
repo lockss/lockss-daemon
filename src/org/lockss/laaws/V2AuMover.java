@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2021-2022 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2021-2024 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -27,8 +27,29 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.laaws;
 
-import static java.nio.file.StandardOpenOption.APPEND;
-import static java.nio.file.StandardOpenOption.CREATE;
+import okhttp3.Interceptor;
+import okhttp3.Request;
+import okhttp3.Response;
+import okhttp3.ResponseBody;
+import com.google.gson.Gson;
+import org.apache.commons.lang3.builder.*;
+import org.lockss.app.LockssDaemon;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
+import org.lockss.crawler.CrawlManager;
+import org.lockss.daemon.LockssRunnable;
+import org.lockss.laaws.MigrationManager.OpType;
+import org.lockss.laaws.api.rs.StreamingArtifactsApi;
+import org.lockss.laaws.client.ApiException;
+import org.lockss.laaws.client.V2RestClient;
+import org.lockss.laaws.model.rs.AuidPageInfo;
+import org.lockss.plugin.*;
+import org.lockss.poller.PollManager;
+import org.lockss.protocol.IdentityManager;
+import org.lockss.repository.RepositoryManager;
+import org.lockss.servlet.MigrateContent;
+import org.lockss.state.AuState;
+import org.lockss.util.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -41,22 +62,13 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.*;
-import okhttp3.*;
-import org.lockss.app.LockssDaemon;
-import org.lockss.config.*;
-import org.lockss.crawler.CrawlManager;
-import org.lockss.daemon.LockssRunnable;
-import org.lockss.laaws.MigrationManager.OpType;
-import org.lockss.laaws.api.rs.StreamingArtifactsApi;
-import org.lockss.laaws.client.ApiException;
-import org.lockss.laaws.client.V2RestClient;
-import org.lockss.laaws.model.rs.AuidPageInfo;
-import org.lockss.plugin.*;
-import org.lockss.state.AuState;
-import org.lockss.uiapi.util.DateFormatter;
-import org.lockss.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
+
+import static java.nio.file.StandardOpenOption.APPEND;
+import static java.nio.file.StandardOpenOption.CREATE;
 import static org.lockss.laaws.Counters.CounterType;
+import static org.lockss.laaws.MigrationConstants.*;
 
 public class V2AuMover {
   private static final Logger log = Logger.getLogger(V2AuMover.class);
@@ -70,8 +82,8 @@ public class V2AuMover {
   /**
    * User agent that the migrator will use when connecting to V2 services
    */
-  public static final String PARAM_V2_USER_AGENT = PREFIX + "user_agent";
-  public static final String DEFAULT_V2_USER_AGENT = "lockss";
+  public static final String V2_PARAM_USER_AGENT = PREFIX + "user_agent";
+  public static final String V2_DEFAULT_USER_AGENT = "lockss";
 
   /**
    * Enable debugging for the configuration service network endpoints.
@@ -178,9 +190,9 @@ public class V2AuMover {
   /**
    * V2 namespace to migrate into
    */
-  public static final String PARAM_V2_NAMESPACE
+  public static final String V2_PARAM_NAMESPACE
  = PREFIX + "namespace";
-  public static final String DEFAULT_V2_NAMESPACE
+  public static final String V2_DEFAULT_NAMESPACE
  = "lockss";
 
   /**
@@ -194,6 +206,12 @@ public class V2AuMover {
    */
   public static final String PARAM_CFG_PORT = PREFIX + "cfg.port";
   public static final int DEFAULT_CFG_PORT = 24620;
+
+  /**
+   * Configuration service port
+   */
+  public static final String PARAM_CFG_UI_PORT = PREFIX + "cfg.ui.port";
+  public static final int DEFAULT_CFG_UI_PORT = 24621;
 
   /**
    * Maximum number of retries for REST request failures
@@ -282,6 +300,8 @@ public class V2AuMover {
    */
   public static final String PARAM_DETAILED_STATS = PREFIX + "detailedStats";
   public static final boolean DEFAULT_DETAILED_STATS = true;
+  long dbBytesCopied;
+  long dbBytesTotal;
 
   enum UseFetchUrl {
     NONE,
@@ -303,8 +323,12 @@ public class V2AuMover {
 
   /** Flag to getCurrentStatus() to build status string on the fly. */
   private static final String STATUS_RUNNING = "**Running**";
+  private static final String STATUS_MIGRATING_DATABASE = "Migrating database content";
+  private static final String STATUS_DONE_MIGRATING_DATABASE = "Finished migrating database";
+  private static final String STATUS_COPYING_CONFIG = "Copying config files";
+  private static final String STATUS_DONE_COPYING_CONFIG = "Finished copying config files";
   private static final String STATUS_COPYING_USER_ACCOUNTS = "Copying user accounts";
-  private static final String STATUS_DONE_COPYING_SYSTEM_SETTINGS = "Done copying system settings";
+  private static final String STATUS_DONE_COPYING_SYSTEM_SETTINGS = "Finished copying system settings";
 
   public static final ThreadLocal<NumberFormat> TH_BIGINT_FMT =
     new ThreadLocal<NumberFormat>() {
@@ -363,14 +387,17 @@ public class V2AuMover {
   /** V2 Users API client */
   private org.lockss.laaws.api.cfg.UsersApi cfgUsersApiClient;
 
+  /** V2 Config files api client */
+  private org.lockss.laaws.api.cfg.ConfigApi cfgConfigApiClient;
+
   /** Configuration service port */
   private int cfgPort;
 
+  /** Configuration service UI port */
+  private int cfgUiPort;
+
   /** V2 cfgsvc REST access URL */
   private String cfgAccessUrl = null;
-
-  /** Original args to V2AuMover **/
-  private Args args;
 
   /** V2 host name */
   private String hostName;
@@ -435,6 +462,9 @@ public class V2AuMover {
   // State vars
   //////////////////////////////////////////////////////////////////////
 
+  private org.lockss.laaws.model.cfg.ApiStatus cfgStatus;
+  private org.lockss.laaws.model.rs.ApiStatus repoStatus;
+
   /** All AUIDs known to V2 repo at start of execution */
   private final ArrayList<String> v2Aus = new ArrayList<>();
   private final LinkedHashSet<ArchivalUnit> auMoveQueue = new LinkedHashSet<>();
@@ -447,14 +477,25 @@ public class V2AuMover {
   private boolean terminated = false;
   private boolean globalAbort = false;
 
+  ConfigManager cfgManager;
   PluginManager pluginManager;
+  RepositoryManager repoMgr;
+  private final CrawlManager crawlMgr;
+  private final PollManager pollMgr;
+  MigrationManager migrationMgr;
 
   //////////////////////////////////////////////////////////////////////
   // Constructor, config, init
   //////////////////////////////////////////////////////////////////////
 
   public V2AuMover() {
-    pluginManager = LockssDaemon.getLockssDaemon().getPluginManager();
+    LockssDaemon theDaemon = LockssDaemon.getLockssDaemon();
+    cfgManager = theDaemon.getConfigManager();
+    pluginManager = theDaemon.getPluginManager();
+    repoMgr = theDaemon.getRepositoryManager();
+    crawlMgr = theDaemon.getCrawlManager();
+    pollMgr = theDaemon.getPollManager();
+    migrationMgr = theDaemon.getMigrationManager();
     Configuration config = ConfigManager.getCurrentConfig();
     setInitialConfig(config);
     setConfig(config, null, config.differences(null));
@@ -465,9 +506,10 @@ public class V2AuMover {
    * start of a request.
    */
   private void setInitialConfig(Configuration config) {
-    userAgent = config.get(PARAM_V2_USER_AGENT, DEFAULT_V2_USER_AGENT);
-    namespace = config.get(PARAM_V2_NAMESPACE, DEFAULT_V2_NAMESPACE);
+    userAgent = config.get(V2_PARAM_USER_AGENT, V2_DEFAULT_USER_AGENT);
+    namespace = config.get(V2_PARAM_NAMESPACE, V2_DEFAULT_NAMESPACE);
     cfgPort = config.getInt(PARAM_CFG_PORT, DEFAULT_CFG_PORT);
+    cfgUiPort = config.getInt(PARAM_CFG_UI_PORT, DEFAULT_CFG_UI_PORT);
     repoPort = config.getInt(PARAM_RS_PORT, DEFAULT_RS_PORT);
     debugRepoReq = config.getBoolean(DEBUG_REPO_REQUEST,
                                      DEFAULT_DEBUG_REPO_REQUEST);
@@ -552,8 +594,9 @@ public class V2AuMover {
     }
   }
 
-  void initClients(Args args) {
-    currentStatus = "Initializing clients";
+  /** Set up to execute a sequence of migration operations.  Create
+   * REST clients, open reports files */
+  void initBatch(Args args) {
     hostName = args.host;
     userName = args.uname;
     userPass = args.upass;
@@ -591,6 +634,7 @@ public class V2AuMover {
       cfgStatusApiClient = new org.lockss.laaws.api.cfg.StatusApi(cfgApiStatusClient);
       cfgAusApiClient = new org.lockss.laaws.api.cfg.AusApi(configClient);
       cfgUsersApiClient = new org.lockss.laaws.api.cfg.UsersApi(configClient);
+      cfgConfigApiClient = new org.lockss.laaws.api.cfg.ConfigApi(configClient);
     }
     catch (MalformedURLException mue) {
       totalCounters.addError("Error parsing REST Configuration Service URL: "
@@ -634,32 +678,28 @@ public class V2AuMover {
       throw new IllegalArgumentException(
           "Missing or invalid configuration service hostName: " + hostName + " port: " + repoPort);
     }
-
-    openReportFiles(args);
   }
 
   /**
-   * Create the REST clients to access the remote repo & cfgsvc
-   * specified in the args, and initialize the status.
-   *
    * @param args the arguments for this request.
    * @throws IllegalArgumentException
    */
-  void initRequest(Args args, String whichAus) throws IllegalArgumentException {
-    currentStatus = "Initializing";
+  void initAuRequest(Args args, String whichAus)
+      throws IllegalArgumentException {
+    initRequest(args);
     this.whichAus = whichAus;
-    running = true;
-    hasBeenStarted = true;
-    opType = args.opType;
     isCompareBytes = args.isCompareContent;
-
     // Must be called after config & args are processed
     initPhaseMap();
-
     if (whichAus != null) {
       logReport("Moving: " + whichAus);
     }
+  }
 
+  void initRequest(Args args) throws IllegalArgumentException {
+    running = true;
+    hasBeenStarted = true;
+    opType = args.opType;
     startTime = now();
   }
 
@@ -704,18 +744,62 @@ public class V2AuMover {
   // Public entry point and top level control
   //////////////////////////////////////////////////////////////////////
 
+  public void executeRequests(List<Args> argsLst)
+      throws MigrationTaskFailedException {
+    if (argsLst.size() > 1) {
+      log.debug(argsLst.size() +
+                " operations requested, using client configuration from the first");
+    }
+    Args firstArgs = argsLst.get(0);
+    initBatch(firstArgs);
+    currentStatus = "Checking V2 services";
+    try {
+      checkV2ServicesAvailable();
+      openReportFiles(firstArgs); // must follow checkV2ServicesAvailable
+      if (!migrationMgr.isDryRun() &&
+          !migrationMgr.isTargetInMigrationMode(hostName, cfgUiPort,
+                                                userName, userPass)) {
+        currentStatus = "Failed - target is not in migration mode";
+      } else {
+        for (Args args : argsLst) {
+          try {
+            executeRequest(args);
+          } catch (Exception e) {
+            log.error("executeRequest(" + args + ") threw", e);
+            break;
+          }
+        }
+      }
+    } catch (IOException e) {
+      openReportFiles(firstArgs);
+      String msg = "Couldn't read V2 API status, aborting";
+      log.error(msg, e);
+      logReportAndError(msg);
+    } finally {
+      running = false;
+      closeReports();
+    }
+  }
+
   /** Entry point from MigrateContent servlet.  Synchronous - doesn't
    * return until all AUs in request have been copied. */
-  public void executeRequest(Args args) {
-    // Remember original Args from request
-    this.args = args;
-    writeOpHeader(reportWriter, args);
-    writeOpHeader(errorWriter, args);
+  public void executeRequest(Args args) throws MigrationTaskFailedException {
+    logReportPhase(opHeader(args));
 
     try {
-      if (args.opType == OpType.CopySystemSettings) {
+      switch (args.opType) {
+      case CopySystemSettings:
         moveSystemSettings(args);
-      } else {
+        break;
+      case CopyDatabase:
+        moveDatabase(args);
+        break;
+      case CopyConfig:
+        moveConfigFiles(args);
+        break;
+      case CopyOnly:
+      case CopyAndVerify:
+      case VerifyOnly:
         if (args.au != null) {
           // If an AU was supplied, copy it
           moveOneAu(args);
@@ -727,12 +811,13 @@ public class V2AuMover {
           moveAllAus(args);
         }
         waitUntilDone();
+        break;
+      default:
+        log.error("Unknown OpType: " + args.opType + ", ignored");
       }
     } catch (IOException e) {
       log.error("Unexpected exception", e);
       currentStatus = e.getMessage();
-      running = false;
-    } finally {
     }
   }
 
@@ -766,9 +851,7 @@ public class V2AuMover {
       throw new IllegalArgumentException("Can't move internal AUs");
     }
     startTotalTimers();
-    initRequest(args, ("AU: " + args.au.getName()));
-    currentStatus = "Checking V2 services";
-    checkV2ServicesAvailable();
+    initAuRequest(args, ("AU: " + args.au.getName()));
     // get the aus known to the v2 repository
     getV2Aus();
     auMoveQueue.add(args.au);
@@ -783,9 +866,7 @@ public class V2AuMover {
    */
   public void moveAllAus(Args args) throws IOException {
     startTotalTimers();
-    initRequest(args, "All AUs");
-    currentStatus = "Checking V2 services";
-    checkV2ServicesAvailable();
+    initAuRequest(args, "All AUs");
     // get the aus known to the v2 repo
     getV2Aus();
     // get the local AUs to move
@@ -795,10 +876,14 @@ public class V2AuMover {
         continue;
       }
       // Filter by selection pattern if set
-      if (args.selPatterns == null || args.selPatterns.isEmpty() ||
-          isMatch(au.getAuId(), args.selPatterns)) {
-        auMoveQueue.add(au);
+      if (!(args.selPatterns == null || args.selPatterns.isEmpty() ||
+            isMatch(au.getAuId(), args.selPatterns))) {
+        continue;
       }
+      if (isSkipFinished(args, au)) {
+        continue;
+      }
+      auMoveQueue.add(au);
     }
     moveQueuedAus();
   }
@@ -811,13 +896,11 @@ public class V2AuMover {
    */
   public void movePluginAus(Args args) throws IOException {
     startTotalTimers();
-    initRequest(args,
+    initAuRequest(args,
                 "AUs in plugin(s): " +
                 StringUtil.separatedString(args.plugins.stream()
                                            .map(x -> x.getPluginName())
                                            .collect(Collectors.toList())));
-    currentStatus = "Checking V2 services";
-    checkV2ServicesAvailable();
     // get the aus known to the v2 repo
     getV2Aus();
     // get the local AUs to move
@@ -826,9 +909,19 @@ public class V2AuMover {
                                             false))
       // Don't copy internal AUs (test probably unnecessary here)
       .filter(au -> !pluginManager.isInternalAu(au))
+      .filter(au -> !isSkipFinished(args, au))
       .forEach(au -> auMoveQueue.add(au));
 
     moveQueuedAus();
+  }
+
+  private boolean isSkipFinished(Args args, ArchivalUnit au) {
+    if (!args.isSkipFinished) return false;
+    AuState auState = AuUtil.getAuState(au);
+    switch (auState.getMigrationState()) {
+    case Finished: return true;
+    default: return false;
+    }
   }
 
   void startTotalTimers() {
@@ -838,7 +931,8 @@ public class V2AuMover {
   }
 
   /** Start/enqueue all AUs in auMoveQueue */
-  private void moveQueuedAus() {
+  private void moveQueuedAus() throws IOException {
+    migrationMgr.setInMigrationMode(true);
     ausLatch = new CountUpDownLatch(1, "AU");
     currentStatus = STATUS_RUNNING;
     totalAusToMove = auMoveQueue.size();
@@ -857,8 +951,11 @@ public class V2AuMover {
 
   private void setAuMigrationState(ArchivalUnit au,
                                    AuState.MigrationState state) {
-    if (true) return;
-    // TODO I think this should be conditional on migrationMode && !debugMode
+    // Do nothing if dry run mode
+    if (migrationMgr.isDryRun()) {
+      return;
+    }
+
     AuState auState = AuUtil.getAuState(au);
 
     if (auState.getMigrationState() == state) {
@@ -875,25 +972,95 @@ public class V2AuMover {
         // be resumed.
         break;
       case InProgress:
-        // TODO: Abort any crawls and polls on AU
+        crawlMgr.abortAuCrawls(au);
+        pollMgr.cancelAuPolls(au);
         break;
+      case Finished:
+        // Optionally delete the AU from the system
+        if (!migrationMgr.isDryRun()) {
+          try {
+            if (migrationMgr.isDeleteMigratedAus()) {
+              // Remove AU from LOCKSS
+              pluginManager.deleteAu(au);
+            } else {
+              pluginManager.deactivateAu(au);
+            }
+          } catch (IOException e) {
+            throw new RuntimeException(e);
+          }
+        }
     }
+  }
+  private void moveDatabase(Args args) throws MigrationTaskFailedException {
+    currentStatus = STATUS_MIGRATING_DATABASE;
+
+    initRequest(args);
+
+    // Migrate the database
+    MigrationTask task  = MigrationTask.migrateDb(this);
+    DBMover dbMover = new DBMover(this, task);
+
+    dbMover.run();
+
+    currentStatus = STATUS_DONE_MIGRATING_DATABASE;
+    logReport(currentStatus);
   }
 
   private void moveSystemSettings(Args args) {
-    currentStatus = STATUS_COPYING_USER_ACCOUNTS;
-    logReport(currentStatus);
-
-    initRequest(args, null);
+    initRequest(args);
 
     // Move user accounts
+    currentStatus = STATUS_COPYING_USER_ACCOUNTS;
     MigrationTask task = MigrationTask.copyUserAccounts(this);
     UserAccountMover userAcctMover = new UserAccountMover(this, task);
-    userAcctMover.run();
+    if (!userAcctMover.getAccountsToMove().isEmpty()) {
+      userAcctMover.run();
+      currentStatus = STATUS_DONE_COPYING_SYSTEM_SETTINGS;
+      logReport("Copied user accounts");
+    } else {
+    }
+  }
 
-    currentStatus = STATUS_DONE_COPYING_SYSTEM_SETTINGS;
+  private void moveConfigFiles(Args args) throws MigrationTaskFailedException {
+    currentStatus = STATUS_COPYING_CONFIG;
+
+    initRequest(args);
+
+    // Migrate the database
+    MigrationTask task  = MigrationTask.migrateConfigFiles(this);
+    ConfigFileMover cfMover = new ConfigFileMover(this, task);
+
+    cfMover.run();
+
+    currentStatus = STATUS_DONE_COPYING_CONFIG;
     logReport(currentStatus);
   }
+
+//   public Configuration buildV2MigrateConfig() {
+//     Configuration v1Config = cfgManager.getCurrentConfig();
+//     Configuration v2MigConfig = ConfigManager.newConfiguration();
+
+// //     v2MigConfig.put(V2_PARAM_IS_IN_MIGRATION_MODE, "true");
+// //     v2MigConfig.put(V2_PARAM_SUBSCRIPTION_DEFERRED, "true");
+// //     v2MigConfig.put(V2_PARAM_LCAP_MIGRATE_FROM, migrationMgr.getMigrateFromId())
+
+// //     String v1Id = v1Config.get(IdentityManager.PARAM_LOCAL_V3_IDENTITY);
+// //     v2MigConfig.put(V2_PARAM_LCAP_MIGRATE_FROM, migrationMgr.getMigrateFromId())
+//     return v2MigConfig;
+//   }
+
+// //   private void deleteV2MigrateConfig() {
+// //     ConfigFileMover cfMover = new ConfigFileMover(this, task);
+// //     try {
+// //       Configuration v2EmptyMigConfig = ConfigManager.newConfiguration();
+// //       cfMover.writeV2ConfigFile(SECTION_NAME_MIGRATION, v2EmptyMigConfig,
+// //                                 "Enable V2 migration behavior during migration from V1");
+// //     } catch (ApiException | IOException e) {
+// //       String msg = "Couldn't set migration params in V2";
+// //       log.error(msg, e);
+// //       auMover.logReportAndError(msg + ": " + e);
+// //     }
+// //   }
 
   /**
    * Start the state machine for an AU
@@ -1311,7 +1478,6 @@ public class V2AuMover {
           log.debug2("FINISH_ALL: wait");
           ausLatch.await();
           totalTimers.stop(Phase.TOTAL);
-          closeReports();
           doneSem.fill();
           break;
         default:
@@ -1446,16 +1612,30 @@ public class V2AuMover {
   void checkV2ServicesAvailable() throws IOException {
     try {
       log.info("Checking V2 Repository Status");
-      if (!repoStatusApiClient.getStatus().getReady()) {
+      repoStatus = repoStatusApiClient.getStatus();
+      if (!repoStatus.getReady()) {
         throw new IOException("V2 Repository Service is not ready");
       }
       log.info("Checking V2 Configuration Status");
-      if (!cfgStatusApiClient.getStatus().getReady()) {
+      cfgStatus = cfgStatusApiClient.getStatus();
+      if (!cfgStatus.getReady()) {
         throw new IOException("V2 Configuration Service is not ready");
       }
     } catch (Exception e) {
       throw new ServiceUnavailableException("Couldn't fetch service status", e);
     }
+  }
+
+  public String getCfgSvcVersion() {
+    return cfgStatus.getLockssVersion();
+  }
+
+  public String getRepoSvcVersion() {
+    return repoStatus.getLockssVersion();
+  }
+
+  public String getLocalVersion() {
+    return ConfigManager.getDaemonVersion().displayString();
   }
 
   /**
@@ -1473,7 +1653,7 @@ public class V2AuMover {
         token = pageInfo.getPageInfo().getContinuationToken();
       } while (!isAbort() && !StringUtil.isNullString(token));
     } catch (ApiException apie) {
-      if (apie.getMessage().indexOf("404: Not Found") > 0) {
+      if (apie.getCode() == 404) {
         return;
       } else {
         //LockssRestServiceException: The namespace does not exist
@@ -1510,6 +1690,7 @@ public class V2AuMover {
       // first call is actual call, following are first retries
       int errCode = 0;
       String errMsg = "";
+      LockssRestHttpException lrhe = null;
       String msgPrefix = "Exceeded retries: ";
       while ((response == null || (!response.isSuccessful()) && tryCount < maxRetryCount)) {
         if (isAbort()) {
@@ -1520,11 +1701,14 @@ public class V2AuMover {
           response = chain.proceed(request);
           if (response.isSuccessful()) {
             return response;
-          }
-          else {
+          } else {
             errCode = response.code();
             errMsg=response.message();
-            logErrorBody(response);
+            Gson gson = new Gson();
+            String bodyStr = response.body().string();
+            lrhe = gson.fromJson(bodyStr,
+                                 LockssRestHttpException.class);
+            logErrorBody(response, bodyStr, lrhe);
             if (isNonRetryableResponse(errCode)) {
               // no retries
               msgPrefix = "Unretryable error: ";
@@ -1533,8 +1717,7 @@ public class V2AuMover {
             // close response before retry
             response.close();
           }
-        }
-        catch (final IOException ioe) {
+        } catch (final IOException ioe) {
           if (tryCount < maxRetryCount) {
             if (log.isDebug2()) {
               log.debug2("Retrying", ioe);
@@ -1545,8 +1728,7 @@ public class V2AuMover {
               // close response before retry
               response.close();
             }
-          }
-          else {
+          } else {
             if (log.isDebug2()) {
               // already logged the stack trace
               log.debug2("Exceeded retries - exiting: " + ioe);
@@ -1554,7 +1736,7 @@ public class V2AuMover {
               // log stack trace when give up.
               log.debug("Exceeded retries - exiting", ioe);
             }
-            terminated = true;
+//             terminated = true;
             if (response != null) {
               response.close();
             }
@@ -1564,8 +1746,7 @@ public class V2AuMover {
         // sleep before retrying
         try {
           Thread.sleep(retryBackoffDelay * tryCount);
-        }
-        catch (InterruptedException e1) {
+        } catch (InterruptedException e1) {
           throw new RuntimeException(e1);
         }
       }
@@ -1576,11 +1757,15 @@ public class V2AuMover {
       if (errCode == 501) {
         throw new UnsupportedOperationException(msg);
       }
+      if (lrhe != null) {
+        throw lrhe;
+      }
       throw new IOException(msg);
     }
 
     private boolean isNonRetryableResponse(int errCode) {
       switch (errCode) {
+      case 400:
       case 401:
       case 403:
       case 404:
@@ -1592,19 +1777,30 @@ public class V2AuMover {
     }
   }
 
-  void logErrorBody(Response response) {
+  void logErrorBody(Response response, String bodyStr,
+                    LockssRestHttpException lrhe) {
     try {
       StringBuilder sb = new StringBuilder();
-      sb.append("Error response returned: ").append(response.code())
-        .append(": ").append(response.message());
-      sb.append(", Headers: ");
-      response.headers().forEach(header -> sb.append(header.getFirst()).append(":").append(header.getSecond()));
-      ResponseBody body = response.body();
-      if (body != null) {
-        // XXX Should parse as json, extract various fields
-        sb.append(", body: ").append(body.string());
+      sb.append("Error response returned: ").append(response.code());
+      if (!StringUtil.isNullString(response.message())) {
+        sb.append(", ").append(response.message());
       }
-      log.warning(sb.toString());
+      if (log.isDebug2()) {
+        sb.append(", Headers: ");
+        response.headers().forEach(header -> sb.append(header.getFirst()).append(": ").append(header.getSecond()));
+      }
+      if (lrhe != null) {
+        sb.append(", body: ").append(lrhe.toString());
+      } else {
+        if (!StringUtil.isNullString(bodyStr)) {
+          try {
+            sb.append(", body: ").append(bodyStr);
+          } catch (IllegalStateException e) {
+            sb.append("[body already closed]");
+          }
+        }
+      }
+      log.debug(sb.toString());
     }
     catch (Exception e) {
       log.error("Exception trying to retrieve error response body", e);
@@ -1639,6 +1835,10 @@ public class V2AuMover {
     return cfgUsersApiClient;
   }
 
+  public org.lockss.laaws.api.cfg.ConfigApi getCfgConfigApiClient() {
+    return cfgConfigApiClient;
+  }
+
   // Cookie not needed in this context
   public synchronized String makeCookie() {
     return null;
@@ -1659,6 +1859,7 @@ public class V2AuMover {
     String upass;
     OpType opType;
     boolean isCompareContent;
+    boolean isSkipFinished;
     List<Pattern> selPatterns;
     Collection<Plugin> plugins;
     ArchivalUnit au;
@@ -1683,6 +1884,10 @@ public class V2AuMover {
       this.isCompareContent = val;
       return this;
     }
+    public Args setSkipFinished(boolean val) {
+      this.isSkipFinished = val;
+      return this;
+    }
     public Args setPlugins(Collection<Plugin> plugs) {
       this.plugins = plugs;
       this.selPatterns = null;
@@ -1696,6 +1901,10 @@ public class V2AuMover {
     public Args setAu(ArchivalUnit au) {
       this.au = au;
       return this;
+    }
+
+    public String toString() {
+      return "[Args: " + opType + "]";
     }
   }
 
@@ -1870,6 +2079,7 @@ public class V2AuMover {
 
   private Map<String,AuStatus> activeAus = new LinkedHashMap<>();
   private Map<String,AuStatus> finishedAus = new LinkedHashMap<>();
+  private List<String> finishedOthers = new ArrayList<>();
 
   /**
    * Return a string describing the current progress, or completion state.
@@ -1883,7 +2093,16 @@ public class V2AuMover {
 
       if (opType == OpType.CopySystemSettings) {
         sb.append(currentStatus);
-      } else {
+      }
+      else if (opType == OpType.CopyDatabase) {
+        sb.append(currentStatus);
+        sb.append("Copied");
+        sb.append(dbBytesCopied);
+        sb.append( " of");
+        sb.append(dbBytesTotal);
+        sb.append(" bytes");
+      }
+      else {
         if (!isAbort()) {
           switch (opType) {
             case CopyOnly:
@@ -1902,16 +2121,9 @@ public class V2AuMover {
           sb.append("Aborting");
         }
 
-        sb.append(", ");
-        sb.append(whichAus);
-
-        sb.append(" to ");
-        sb.append(hostName);
-        sb.append(", processed ");
-        sb.append(totalAusMoved);
-        sb.append(" of ");
-        sb.append(totalAusToMove);
-        sb.append(" AUs");
+        sb.append(String.format(", %s to %s, processed %d of %d AUs",
+                                whichAus, hostName,
+                                totalAusMoved, totalAusToMove));
       }
 
       if (errstat.length() != 0) {
@@ -1964,20 +2176,20 @@ public class V2AuMover {
     return res;
   }
 
-  public List<String> getFinishedStatusList() {
-    Map<String,AuStatus> auStats;
-    synchronized (finishedAus) {
-      auStats = new LinkedHashMap<>(finishedAus);
-    }
-    List<String> res = new ArrayList<>();
-    for (AuStatus auStat : auStats.values()) {
-      String one = getOneAuStatus(auStat);
-      if (one != null) {
-        res.add(one);
-      }
-    }
-    return res;
-  }
+//   public List<String> getFinishedStatusList() {
+//     Map<String,AuStatus> auStats;
+//     synchronized (finishedAus) {
+//       auStats = new LinkedHashMap<>(finishedAus);
+//     }
+//     List<String> res = new ArrayList<>();
+//     for (AuStatus auStat : auStats.values()) {
+//       String one = getOneAuStatus(auStat);
+//       if (one != null) {
+//         res.add(one);
+//       }
+//     }
+//     return res;
+//   }
 
   public int getFinishedStatusCount() {
     synchronized (finishedAus) {
@@ -1986,21 +2198,31 @@ public class V2AuMover {
   }
 
   public List<String> getFinishedStatusPage(int index, int size) {
-    Map<String,AuStatus> auStats;
+    List<String> res = new ArrayList<>();
+    int ix = 0;
+    int ctr = 0;
+    synchronized (finishedOthers) {
+      for (String str : finishedOthers) {
+        if (ctr >= size) {
+          break;
+        }
+        if (ix++ >= index) {
+          res.add(str);
+          ctr++;
+        }
+      }
+    }
     synchronized (finishedAus) {
-      List<String> res = new ArrayList<>();
-      int ix = 0;
-      int ctr = 0;
       for (AuStatus auStat : finishedAus.values()) {
+        if (ctr >= size) {
+          break;
+        }
         if (ix++ >= index) {
           String one = getOneAuStatus(auStat);
           if (one != null) {
             res.add(one);
             ctr++;
           }
-        }
-        if (ctr >= size) {
-          break;
         }
       }
       return res;
@@ -2059,6 +2281,10 @@ public class V2AuMover {
     return terminated;
   }
 
+  public void setTerminated(boolean isTerminated) {
+    this.terminated = isTerminated;
+  }
+
   public boolean isAbort() {
     return globalAbort;
   }
@@ -2090,6 +2316,12 @@ public class V2AuMover {
     }
   }
 
+  public void addFinishedOther(String str) {
+    synchronized (finishedOthers) {
+      finishedOthers.add(str);
+    }
+  }
+
   public AuStatus getAuStatus(ArchivalUnit au) {
     synchronized (activeAus) {
       if (activeAus.containsKey(au.getAuId())) {
@@ -2108,13 +2340,36 @@ public class V2AuMover {
   // Report files
   //////////////////////////////////////////////////////////////////////
 
+  public static final DateFormat TIMESTAMP_FMT =
+                      new SimpleDateFormat("MM/dd/yy HH:mm:ss zzz");
+
+  public String nowTimestamp() {
+    return TIMESTAMP_FMT.format(new Date());
+  }
+
   /**
    * Open (append) the Report file and error file
    */
   void openReportFiles(Args args) {
-    String now = DateFormatter.now();
-    reportWriter = openReportFile(reportFile, args, "Report", now);
-    errorWriter = openReportFile(errorFile, args, "Error Report", now);
+    String now = nowTimestamp();
+    if (reportWriter == null) {
+      reportWriter = openReportFile(reportFile, args, "Report", now);
+      writeDeferredMessages(reportWriter, deferredReports);
+    }
+    if (errorWriter == null) {
+      errorWriter = openReportFile(errorFile, args, "Error Report", now);
+      writeDeferredMessages(errorWriter, deferredErrorReports);
+    }
+  }
+
+  private List<String> deferredReports = new ArrayList<>();
+  private List<String> deferredErrorReports = new ArrayList<>();
+
+  private void writeDeferredMessages(PrintWriter wrtr, List<String> msgs) {
+    for (String x : msgs) {
+      wrtr.println(x);
+    }
+    msgs.clear();
   }
 
   PrintWriter openReportFile(File file, Args args,
@@ -2126,9 +2381,11 @@ public class V2AuMover {
                                                   CREATE, APPEND),
                             true);
       res.println("===================================================");
-      res.println("  V2 AU Migration " + title + " - " + now);
-      res.println("  Migrating from " + PlatformUtil.getLocalHostname() +
-                  " to " + args.host);
+      res.println("  V2 Migration " + title + " - " + now);
+      res.println(String.format("  Copying from %s (%s) to %s (%s)",
+                                PlatformUtil.getLocalHostname(),
+                                getLocalVersion(),
+                                args.host, getRepoSvcVersion()));
       res.println("--------------------------------------------------");
       res.println();
       if (res.checkError()) {
@@ -2142,17 +2399,33 @@ public class V2AuMover {
     return res;
   }
 
-  void writeOpHeader(PrintWriter wrtr, Args args) {
-    wrtr.println(args.opType + (args.isCompareContent ? " with compare" : ""));
+  String opHeader(Args args) {
+    return args.opType + (args.isCompareContent ? " with compare" : "");
   }
 
   public void logReport(String msg) {
     if (reportWriter == null) {
-      log.error("updateReport called when no reportWriter",
-          new Throwable());
-      return;
+      deferredReports.add(msg);
+    } else {
+      reportWriter.println(msg);
     }
-    reportWriter.println(msg);
+  }
+
+  public void logReportError(String msg) {
+    if (errorWriter == null) {
+      deferredErrorReports.add(msg);
+    } else {
+      errorWriter.println(msg);
+    }
+  }
+
+  public void logReportAndError(String msg) {
+    logReport(msg);
+    logReportError(msg);
+  }
+
+  public void logReportPhase(String msg) {
+    logReport("Phase: " + msg);
   }
 
   /**
@@ -2226,7 +2499,7 @@ public class V2AuMover {
    * Close the report before exiting
    */
   void closeReports() {
-    String now = DateFormatter.now();
+    String now = nowTimestamp();
     closeReport(reportWriter, now);
     closeReport(errorWriter, now);
 
@@ -2260,18 +2533,19 @@ public class V2AuMover {
 
   void closeReport(PrintWriter writer, String now) {
     StringBuilder sb = new StringBuilder();
-    appendTotalSummary(sb);
-    totalTimers.addCounterStatus(sb, opType, ": ");
-    String summary = sb.toString();
+    if (opType != null) {
+      appendTotalSummary(sb);
+      totalTimers.addCounterStatus(sb, opType, ": ");
+      currentStatus = sb.toString();
+    }
     running = false;
-    currentStatus = summary;
     if (writer != null) {
       writer.println("--------------------------------------------------");
       writer.println((isAbort() ? " Aborted" : "  Finished") + " with " +
                      StringUtil.bigNumberOfUnits(totalTimers.getErrorCount(),
                                                  "error") +
                      " at " + now);
-      writer.println(summary);
+      writer.println(currentStatus);
       writer.println("--------------------------------------------------");
       writer.println("");
       if (writer.checkError()) {
@@ -2280,12 +2554,20 @@ public class V2AuMover {
 
       writer.close();
     }
-    log.info(summary);
+    log.info(currentStatus);
   }
 
   //////////////////////////////////////////////////////////////////////
   // Utilities
   //////////////////////////////////////////////////////////////////////
+
+  public String diffString(DiffResult<?> dr) {
+    List<String> l = new ArrayList<>();
+    for (Diff d : dr.getDiffs()) {
+      l.add(d.getFieldName() + ": V1: " + d.getLeft() + ", V2: " + d.getRight());
+    }
+    return StringUtil.separatedString(l, "; ");
+  }
 
   public static String bigIntFormat(long x) {
     return TH_BIGINT_FMT.get().format(x);
@@ -2441,4 +2723,7 @@ public class V2AuMover {
     return repoAccessUrl;
   }
 
+  MigrationManager getMigrationMgr() {
+    return migrationMgr;
+  }
 }

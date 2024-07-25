@@ -76,7 +76,7 @@ class AuMigrationStatus extends React.Component {
     }
     return (
         <div className="stats-div">
-        {this.state.errors.length} Errors:
+        {this.state.errors.length} Errors and Warnings:
         <div className={"errors"}>
         <ul>{this.state.errors.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul>
         </div>
@@ -100,7 +100,7 @@ class AuMigrationStatus extends React.Component {
 
     // FIXME: Replace with a jQuery solution?
     if (prevState.running != this.state.running) {
-      for (const e of document.querySelectorAll("input[type='submit']")) {
+      for (const e of document.querySelectorAll("input[type='submit'],input[type='button']")) {
         if (e.value == "Abort") {
           this.disableIfRunning = false;
         } else {
@@ -189,7 +189,7 @@ class AuMigrationStatus extends React.Component {
 
           this.setState({
             fetchError: true,
-            statusList: [ "Server not responding" ],
+            statusList: [ "Status source (classic LOCKSS daemon) not responding" ],
             delay: 5000,
           });
         }

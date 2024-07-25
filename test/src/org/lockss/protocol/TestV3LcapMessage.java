@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2024 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -170,7 +166,7 @@ public class TestV3LcapMessage extends LockssTestCase {
       "Key:key " +
       "PN:AQIDBAUGBwgJAAECAwQFBgcICQA= " +
       "VN:AQIDBAUGBwgJAAECAwQFBgcICQA= " +
-      "B:10 ver 3 rev 5]";
+      "B:10 ver 3 rev 6]";
     assertEquals(expectedResult, m_testMsg.toString());
   }
   

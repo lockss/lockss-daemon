@@ -73,7 +73,7 @@ public class BlockHasher extends GenericHasher {
    * where V2 doesn't handle final slash correctly.. */
   public static final String PARAM_V2_COMPAT =
     Configuration.PREFIX + "blockHasher.v2Compatible";
-  public static final boolean DEFAULT_V2_COMPAT = false;
+  public static final boolean DEFAULT_V2_COMPAT = true;
 
   private static final Logger log = Logger.getLogger(BlockHasher.class);
 
@@ -275,9 +275,13 @@ public class BlockHasher extends GenericHasher {
       return false;
     }
     if (ignoreFilesOutsideCrawlSpec && !au.shouldBeCached(url)) {
-      excludedByCrawlRule++;
-      if (isTrace) log.debug3("isIncluded(" + url + "): not in spec");
-      return false;
+      if (isV2Compat && !url.endsWith("/") && au.shouldBeCached(url + "/")) {
+        log.debug2("Provisionally including URL with slash: " + url + "/");
+      } else {
+        excludedByCrawlRule++;
+        if (isTrace) log.debug3("isIncluded(" + url + "): not in spec");
+        return false;
+      }
     }
     if (excludeUrlPats != null && RegexpUtil.isMatch(url, excludeUrlPats)) {
       excludedByPlugin++;
@@ -341,6 +345,12 @@ public class BlockHasher extends GenericHasher {
             String nodeUrl = verProps.getProperty(CachedUrl.PROPERTY_NODE_URL);
             String redirTo = verProps.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO);
             if (UrlUtil.isDirectoryRedirection(url, nodeUrl)) {
+              // first check crawl rule, in case this node was wrongly
+              // provisionally included
+              if (ignoreFilesOutsideCrawlSpec && !au.shouldBeCached(nodeUrl)) {
+                continue;
+              }
+              log.debug2("doslashonly: " + nodeUrl);
               // This was collected as "foo/", not the result of a
               // redirect.  Defer it and process only as "foo/"
               enqueueSlashCU(curVer, nodeUrl);
@@ -349,6 +359,7 @@ public class BlockHasher extends GenericHasher {
               // This was redirected from "foo" to "foo/".  Process
               // as "foo" and again as "foo/" to match what V2 would
               // have done.
+              log.debug2("doboth: " + url + ", " + redirTo);
               enqueueSlashCU(curVer, redirTo);
             }
           }
@@ -476,7 +487,7 @@ public class BlockHasher extends GenericHasher {
                                      curNode.getUrl())
         <= 0) {
       cuVersions = processingV2CompatCUs.stream()
-        .toArray(CachedUrl[]::new);
+        .toArray(V2CompatCachedUrl[]::new);
       curCu = cuVersions[0];
       vix = -1;
     } else {
@@ -518,7 +529,7 @@ public class BlockHasher extends GenericHasher {
   protected void endOfNode() {
     processingV2CompatCUs = null;
     super.endOfNode();
-    if (hblock != null) {
+    if (hblock != null && hblock.size() > 0) {
       if (cb != null) cb.blockDone(hblock);
       hblock = null;
     }

@@ -1,9 +1,5 @@
 /*
- * $Id$
- */
-
-/*
- Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2024 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -124,6 +120,8 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
    };
 
   // V3 Protocol revision history:
+  //  6 - LOCKSS 1.0 - 2.0 compatibility.  V1 handles URLs with
+  //      trailing slash correctly
   //  5 - Changed HtmlParser to scan the content of <script> tags
   //      permissively, as browsers do.  See
   //      HtmlFilterInputStream.setupHtmlParser()
@@ -141,8 +139,9 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   public static final int V3_PROTOCOL_R3 = 3;
   public static final int V3_PROTOCOL_R4 = 4;
   public static final int V3_PROTOCOL_R5 = 5;
+  public static final int V3_PROTOCOL_R6 = 6;
   // Don't use this directly, use getSupportedProtocolRev()
-  private static final int V3_PROTOCOL_REV = V3_PROTOCOL_R5;
+  private static final int V3_PROTOCOL_REV = V3_PROTOCOL_R6;
 
   /** Poll minor version from received message */
   private int m_minorVersion = V3_PROTOCOL_REV;

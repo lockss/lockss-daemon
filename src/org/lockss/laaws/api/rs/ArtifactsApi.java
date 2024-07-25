@@ -1243,12 +1243,12 @@ public class ArtifactsApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {"multipart/form-data"};
-    final String localVarContentType =
-        apiClient.selectHeaderContentType(localVarContentTypes);
-    if (localVarContentType != null) {
-      localVarHeaderParams.put("Content-Type", localVarContentType);
-    }
+//    final String[] localVarContentTypes = {"multipart/form-data"};
+//    final String localVarContentType =
+//        apiClient.selectHeaderContentType(localVarContentTypes);
+//    if (localVarContentType != null) {
+//      localVarHeaderParams.put("Content-Type", localVarContentType);
+//    }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
     return apiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams,

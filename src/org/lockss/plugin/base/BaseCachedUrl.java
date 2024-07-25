@@ -41,6 +41,7 @@ import de.schlichtherle.truezip.file.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
+import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.definable.*;
 import org.lockss.truezip.*;
@@ -232,11 +233,51 @@ public class BaseCachedUrl implements CachedUrl {
     if (leaf == null || !leaf.hasContent()) {
       return false;
     }
-    if (isIncludedOnly() && !au.shouldBeCached(getUrl())) {
+    if (isIncludedOnly() && !au.shouldBeCached(getUrl()) &&
+        !hasV2Content()) {
       logger.debug2("hasContent("+getUrl()+"): excluded by crawl rule");
       return false;
     }
     return true;
+  }
+
+  private Boolean hasV2Content = null;
+
+  private boolean hasV2Content() {
+    String url = getUrl();
+    ArchivalUnit au = getArchivalUnit();
+    if (CurrentConfig.getBooleanParam(BlockHasher.PARAM_V2_COMPAT,
+                                      BlockHasher.DEFAULT_V2_COMPAT) &&
+        !url.endsWith("/") && au.shouldBeCached(url + "/")) {
+
+      // If we've already determined the answer, return it.
+      if (hasV2Content != null) {
+        return hasV2Content;
+      }
+
+      // If the URL is excluded by crawl rules but would be included
+      // if it ended with slash, we need to check whether it really
+      // does end with slash.  That requires checking the properties,
+      // but the existing mechanism to access the properties also
+      // opens an InputStream, which would violate the contract that
+      // merely calling hasContent() doesn't require a CU to be
+      // released.  So if we do create an rnc, release it.  In the
+      // event this overhead is a problem (unlikely), a cheaper but
+      // more complex solution would be to load just the properties.
+
+      boolean needRelease = rnc == null;
+      CIProperties props = getProperties();
+      String nodeUrl = props.getProperty(CachedUrl.PROPERTY_NODE_URL);
+      boolean res = UrlUtil.isDirectoryRedirection(url, nodeUrl);
+      if (needRelease) {
+        // We created an rnc, so release it, but remember the result in
+        // case of another call to hasContent() on this CU.
+        release();
+        hasV2Content = Boolean.valueOf(res);
+      }
+      return res;
+    }
+    return false;
   }
 
   public InputStream getUnfilteredInputStream() {
@@ -394,8 +435,14 @@ public class BaseCachedUrl implements CachedUrl {
     if (rnc != null) {
       rnc.release();
       rnc = null;
+      hasV2Content = null;
     }
     leaf = null;
+  }
+
+  @Override
+  public boolean needsRelease() {
+    return rnc != null;
   }
 
   protected synchronized void ensureRnc() {

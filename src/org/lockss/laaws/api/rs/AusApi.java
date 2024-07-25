@@ -461,12 +461,13 @@ public class AusApi {
     Map<String, String> localVarCookieParams = new HashMap<String, String>();
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-    if (op != null) {
-      localVarFormParams.put("op", op);
-    }
 
     if (namespace != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("namespace", namespace));
+    }
+
+    if (op != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("op", op));
     }
 
     final String[] localVarAccepts = {};
@@ -475,7 +476,7 @@ public class AusApi {
       localVarHeaderParams.put("Accept", localVarAccept);
     }
 
-    final String[] localVarContentTypes = {"multipart/form-data"};
+    final String[] localVarContentTypes = {};
     final String localVarContentType =
         apiClient.selectHeaderContentType(localVarContentTypes);
     if (localVarContentType != null) {

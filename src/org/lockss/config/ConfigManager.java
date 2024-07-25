@@ -44,9 +44,11 @@ import org.apache.oro.text.regex.*;
 
 import org.lockss.app.*;
 import org.lockss.account.*;
+import org.lockss.db.*;
 import org.lockss.clockss.*;
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;
+import org.lockss.laaws.*;
 import org.lockss.mail.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
@@ -393,6 +395,7 @@ public class ConfigManager implements LockssManager {
     "access_groups_config.txt"; // not yet in use
   public static final String CONFIG_FILE_CRAWL_PROXY = "crawl_proxy.txt";
   public static final String CONFIG_FILE_EXPERT = "expert_config.txt";
+  public static final String CONFIG_FILE_MIGRATION = "migration_config.txt";
 
   /** Obsolescent - replaced by CONFIG_FILE_CONTENT_SERVERS */
   public static final String CONFIG_FILE_ICP_SERVER = "icp_server_config.txt";
@@ -600,6 +603,7 @@ public class ConfigManager implements LockssManager {
     new LocalFileDescr(CONFIG_FILE_CONTENT_SERVERS),
     new LocalFileDescr(CONFIG_FILE_ACCESS_GROUPS), // not yet in use
     new LocalFileDescr(CONFIG_FILE_CRAWL_PROXY),
+    new LocalFileDescr(CONFIG_FILE_MIGRATION),
     new LocalFileDescr(CONFIG_FILE_EXPERT)
     .setKeyPredicate(expertConfigKeyPredicate)
     .setIncludePredicate(expertConfigIncludePredicate),
@@ -1395,6 +1399,7 @@ public class ConfigManager implements LockssManager {
     inferMiscParams(newConfig);
     setConfigMacros(newConfig);
     setCompatibilityParams(newConfig);
+    setMigrationParams(newConfig);
     newConfig.seal();
     Configuration oldConfig = currentConfig;
     if (!oldConfig.isEmpty() && newConfig.equals(oldConfig)) {
@@ -1576,6 +1581,26 @@ public class ConfigManager implements LockssManager {
 //     setIfNotSet(config, fromParam, IcpManager.PARAM_ICP_BIND_ADDRS);
 
     org.lockss.poller.PollManager.processConfigMacros(config);
+
+  }
+
+  private void setMigrationParams(Configuration config) {
+    boolean isDryRun = config.getBoolean(
+        MigrationManager.PARAM_DRY_RUN_ENABLED,
+        MigrationManager.DEFAULT_DRY_RUN_ENABLED);
+
+    boolean isInMigrationMode = config.getBoolean(
+        MigrationManager.PARAM_IS_IN_MIGRATION_MODE,
+        MigrationManager.DEFAULT_IS_IN_MIGRATION_MODE);
+
+    if (isInMigrationMode && !isDryRun) {
+      Configuration v2MigrationParams = config.getConfigTree("v2");
+      if (!v2MigrationParams.isEmpty()) {
+        // Replace V1 DB params with V2 DB params
+        config.removeConfigTree(DbManager.DATASOURCE_ROOT);
+        config.copyFrom(v2MigrationParams);
+      }
+    }
   }
 
   // Backward compatibility for param settings

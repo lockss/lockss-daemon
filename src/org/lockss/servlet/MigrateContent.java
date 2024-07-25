@@ -62,18 +62,26 @@ public class MigrateContent extends LockssServlet {
 
   static Logger log = Logger.getLogger("MigrateContent");
 
+  static final String SKIP_FINISHED_FOOT = "Uncheding this may result in many spurious verify errors as the content or state of previously copied AUs may have changed.";
+
+  static String DRY_RUN_FOOT = "Content and other data will be copied, but will continue to be active and possibly modified in V1.";
+
   static final String PREFIX = Configuration.PREFIX + "v2.migrate.";
   public static final String PARAM_ENABLE_MIGRATION = PREFIX + "enabled";
   public static final boolean DEFAULT_ENABLE_MIGRATION = true;
-
   public static final String PARAM_HOSTNAME=PREFIX +"hostname";
   static final String DEFAULT_HOSTNAME="localhost";
+  public static final String PARAM_USERNAME = PREFIX + "username";
+  public static final String PARAM_PASSWORD = PREFIX + "password";
+  public static final String PARAM_DELETE_AFTER_MIGRATION = PREFIX + "deleteAusAfterMigration";
+  public static final boolean DEFAULT_DELETE_AFTER_MIGRATION = false;
   public static final String PARAM_AU_SELECT_FILTER=PREFIX +"au_select_filter";
   public static final List<String> DEFAULT_AU_SELECT_FILTER =
     Collections.emptyList();
 
   public static final String PARAM_DEFAULT_OPTYPE = PREFIX + "defaultOpType";
   static final OpType DEFAULT_DEFAULT_OPTYPE = OpType.CopyOnly;
+  static final String BUTTON_SPACE = "&nbsp;";
 
   /**
    * If true, the verify step will perform a byte-by-byte comparison
@@ -95,19 +103,15 @@ public class MigrateContent extends LockssServlet {
   static final String KEY_PASSWD="password";
   static final String KEY_OP_TYPE = "op_type";
   static final String KEY_COMPARE_CONTENT = "compare_content";
+  static final String KEY_SKIP_FINISHED = "skip_finished";
 
 
   public static final String ACTION_START= "Start";
   public static final String ACTION_ABORT= "Abort";
+  public static final String ACTION_COPY_DB= "CopyDb";
+  public static final String ACTION_COPY_CONFIG= "CopyConfig";
 
   private static String ALL_PLUGINS_ID = "_allplugs_";
-
-  private static final String HOST_URL_FOOT =
-    "The V2 REST Service host name (localhost by default).";
-  private static final String USER_NAME_FOOT =
-    "The username used to connect to the rest interface of the V2 services.";
-  private static final String PASSWD_FOOT =
-    "The password used to connect to the rest interface of the V2 services.";
 
   private PluginManager pluginMgr;
   private MigrationManager migrationMgr;
@@ -122,9 +126,10 @@ public class MigrateContent extends LockssServlet {
   boolean defaultCompare = DEFAULT_DEFAULT_COMPARE;
   OpType opType;
   boolean isCompareContent;
+  boolean isSkipFinished = true;
+  boolean isMigratorConfigured;
   List<String> auSelectFilter;
   List<Pattern> auSelectPatterns;
-
 
   protected void resetLocals() {
     auid = null;
@@ -138,6 +143,8 @@ public class MigrateContent extends LockssServlet {
 
   void initParams() {
     Configuration config = ConfigManager.getCurrentConfig();
+    isMigratorConfigured = config.getBoolean(MigrationManager.PARAM_IS_MIGRATOR_CONFIGURED,
+        MigrationManager.DEFAULT_IS_MIGRATOR_CONFIGURED);
     hostName = config.get(PARAM_HOSTNAME, DEFAULT_HOSTNAME);
     auSelectFilter =
       config.getList(PARAM_AU_SELECT_FILTER, DEFAULT_AU_SELECT_FILTER);
@@ -155,16 +162,22 @@ public class MigrateContent extends LockssServlet {
   public void lockssHandleRequest() throws IOException {
     initParams();
 
+    // Redirect to Migrate Settings servlet if we have no migration configuration
+    if (!isMigratorConfigured) {
+      String redir = srvURL(AdminServletManager.SERVLET_MIGRATE_CONTENT_SETTINGS);
+      resp.sendRedirect(redir);
+    }
+
     // Is this a status request?
-    String output = getParameter(KEY_OUTPUT);
+    String outputFormat = getParameter(KEY_OUTPUT);
     String status = getParameter(KEY_STATUS);
     if (!StringUtil.isNullString(status)) {
       switch (status) {
       case "status":
-        sendCurrentStatus(output);
+        sendCurrentStatus(outputFormat);
         break;
       case "finished":
-        sendFinishedChunk(output,
+        sendFinishedChunk(outputFormat,
                           getParameter(KEY_INDEX), getParameter(KEY_SIZE));
         break;
       }
@@ -181,11 +194,12 @@ public class MigrateContent extends LockssServlet {
 
     String action = getParameter(KEY_ACTION);
     if (!StringUtil.isNullString(action)) {
-      userName=getParameter(KEY_USER_NAME);
-      userPass =getParameter(KEY_PASSWD);
-      hostName=getParameter(KEY_HOSTNAME);
+      userName = config.get(PARAM_USERNAME);
+      userPass = config.get(PARAM_PASSWORD);
+      hostName = config.get(PARAM_HOSTNAME);
       if(hostName==null) hostName="localhost";
       isCompareContent = getParameter(KEY_COMPARE_CONTENT) != null;
+      isSkipFinished = getParameter(KEY_SKIP_FINISHED) != null;
 
       auid = getParameter(KEY_AUID);
       pluginId = getParameter(KEY_PLUGINID);
@@ -207,6 +221,10 @@ public class MigrateContent extends LockssServlet {
         }
       } else if (ACTION_ABORT.equals(action)) {
         doAbort();
+      } else if (ACTION_COPY_DB.equals(action)) {
+        doCopyDb();
+      } else if (ACTION_COPY_CONFIG.equals(action)) {
+        doCopyConfig();
       }
     }
     displayPage();
@@ -272,6 +290,7 @@ public class MigrateContent extends LockssServlet {
       .setUname(userName)
       .setUpass(userPass)
       .setCompareContent(isCompareContent)
+      .setSkipFinished(isSkipFinished)
       .setOpType(opType);
   }
 
@@ -288,7 +307,25 @@ public class MigrateContent extends LockssServlet {
     try {
       startRunner(ListUtil.list(
           getArgsToMigrateSystemSettings(),
+          getArgsToMigrateDatabase(),
+          getArgsToMigrateConfig(),
           getArgsToMigratePluginAus()));
+    } catch (Exception e) {
+      log.error("Could not start runner", e);
+    }
+  }
+
+  private void doCopyDb() {
+    try {
+      startRunner(ListUtil.list(getArgsToMigrateDatabase()));
+    } catch (Exception e) {
+      log.error("Could not start runner", e);
+    }
+  }
+
+  private void doCopyConfig() {
+    try {
+      startRunner(ListUtil.list(getArgsToMigrateConfig()));
     } catch (Exception e) {
       log.error("Could not start runner", e);
     }
@@ -298,6 +335,18 @@ public class MigrateContent extends LockssServlet {
     return getCommonFormArgs()
       .setCompareContent(false)
       .setOpType(OpType.CopySystemSettings);
+  }
+
+  private V2AuMover.Args getArgsToMigrateDatabase() {
+    return getCommonFormArgs()
+      .setCompareContent(false)
+      .setOpType(OpType.CopyDatabase);
+  }
+
+  private V2AuMover.Args getArgsToMigrateConfig() {
+    return getCommonFormArgs()
+      .setCompareContent(false)
+      .setOpType(OpType.CopyConfig);
   }
 
   private V2AuMover.Args getArgsToMigratePluginAus() {
@@ -340,10 +389,10 @@ public class MigrateContent extends LockssServlet {
     return au;
   }
 
-
   private void displayPage() throws IOException {
     Page page = newPage();
     addCssLocations(page);
+    addJavaScript(page);
     page.add(new StyleLink("/css/migrate.css"));
     addReactJSLocations(page);
     addJSXLocation(page, "js/auMigrationStatus.js");
@@ -371,19 +420,21 @@ public class MigrateContent extends LockssServlet {
     Form frm = new Form(srvURL(myServletDescr()));
     frm.method("POST");
     Table tbl = new Table(0, "align=center cellspacing=2 cellpadding=0");
+    if (migrationMgr.isDryRun()) {
+      tbl.newCell(CENTERED_CELL);
+//       tbl.add("<font color=\"dark orange\">");
+      tbl.add("Migration is in dry run mode");
+      tbl.add(addFootnote(DRY_RUN_FOOT));
+//       tbl.add("</font>");
+      tbl.add("<br>");
+      tbl.add("<br>");
+      tbl.add("<br>");
+    }
+
     addSelToTable(tbl);
+
     tbl.newRow();
     tbl.newCell();
-
-    addInputToTable(tbl,
-      "V2 Rest Services Hostname" + addFootnote(HOST_URL_FOOT),
-      KEY_HOSTNAME, hostName, 40);
-    addInputToTable(tbl,
-      "V2 Rest Services Username" + addFootnote(USER_NAME_FOOT),
-      KEY_USER_NAME, userName, 20);
-    addHiddenInputToTable(tbl,
-      "V2 Rest Services Password" + addFootnote(PASSWD_FOOT),
-      KEY_PASSWD,"", 20);
 
     OpType selOpType = opType != null ? opType : defaultOpType;
 
@@ -399,14 +450,29 @@ public class MigrateContent extends LockssServlet {
     tbl.newCell(CENTERED_CELL);
     tbl.add(checkBox("Full content compare", "true", KEY_COMPARE_CONTENT,
                      isCompareContent));
+    tbl.add("&nbsp;&nbsp;");
+    tbl.add(checkBox("Skip already-copied AUs" + addFootnote(SKIP_FINISHED_FOOT),
+                     "true", KEY_SKIP_FINISHED, isSkipFinished));
 
 
     tbl.newRow();
     tbl.newCell(CENTERED_CELL);
-    Input start = new Input(Input.Submit, KEY_ACTION, ACTION_START);
+    // Input start = new Input(Input.Submit, KEY_ACTION, ACTION_START);
+    String lbl = migrationMgr.isDryRun() ?
+        "Start Dry Run Migration" : "Start Migration";
+    ServletUtil.layoutSubmitButton(this, tbl, KEY_ACTION, ACTION_START, lbl, false, false);
     Input abort = new Input(Input.Submit, KEY_ACTION, ACTION_ABORT);
-    tbl.add(start);
+    tbl.add(BUTTON_SPACE);
     tbl.add(abort);
+    // Advanced migration options - only in debug mode
+    if (migrationMgr.isMigrationInDebugMode()) {
+      Input copyDb = new Input(Input.Submit, KEY_ACTION, ACTION_COPY_DB);
+      Input copyConfig = new Input(Input.Submit, KEY_ACTION, ACTION_COPY_CONFIG);
+      tbl.add("<br>");
+      tbl.add(copyDb);
+      tbl.add(BUTTON_SPACE);
+      tbl.add(copyConfig);
+    }
 
     frm.add(tbl);
     comp.add(frm);

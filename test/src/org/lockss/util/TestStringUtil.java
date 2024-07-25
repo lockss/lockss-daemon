@@ -1469,6 +1469,12 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals("a-z", StringUtil.normalizeDashes("a\u2015z"));
   }
   
+  public void testCommentize() {
+    assertEquals("#  foo\n#  #bar\n", StringUtil.commentize("foo\n#bar\n"));
+    assertEquals("#  foo\n#  #bar\n", StringUtil.commentize("foo\n#bar"));
+    assertEquals("#  foo\n#  #bar\n#  \n", StringUtil.commentize("foo\n#bar\n\n"));
+  }
+
   public void testNonNull() throws Exception {
     assertSame("foo", StringUtil.nonNull("foo"));
     assertSame("", StringUtil.nonNull(""));

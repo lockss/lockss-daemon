@@ -806,6 +806,17 @@ public class AuUtil {
     return auCreationTime;
   }
 
+  public static boolean isAuFrozen(ArchivalUnit au) {
+    AuState aus = AuUtil.getAuState(au);
+    switch (aus.getMigrationState()) {
+    case InProgress:
+    case Finished:
+      return true;
+    default:
+      return false;
+    }
+  }
+
   /**
    * Provides the earliest fetch time of a collection of URLs of an Archival
    * Unit.

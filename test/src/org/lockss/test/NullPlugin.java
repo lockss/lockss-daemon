@@ -288,6 +288,11 @@ public class NullPlugin {
     public void release() {
     }
 
+    @Override
+    public boolean needsRelease() {
+      return false;
+    }
+
     public void delete() throws UnsupportedOperationException, IOException {
     }
 

@@ -34,6 +34,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.InstanceCreator;
 import com.google.gson.reflect.TypeToken;
+import org.apache.commons.lang3.builder.*;
 import java.lang.reflect.Type;
 import java.util.Collection;
 import java.util.EnumMap;
@@ -111,7 +112,7 @@ public class AuStateChecker extends Worker {
     String err = null;
     if (v1 != null) {
       try {
-        final String json = cfgApiClient.getAuAgreements(au.getAuId());
+        final String json = cfgAusApiClient.getAuAgreements(au.getAuId());
         Gson gson = new GsonBuilder().registerTypeAdapter(
                 new TypeToken<EnumMap<AgreementType, PeerAgreement>>() {
                 }.getType(),
@@ -154,7 +155,7 @@ public class AuStateChecker extends Worker {
     if (asuv != null) {
       AuSuspectUrlVersionsBean v1Bean = asuv.getBean(au.getAuId());
       try {
-        final String json = cfgApiClient.getAuSuspectUrlVersions(au.getAuId());
+        final String json = cfgAusApiClient.getAuSuspectUrlVersions(au.getAuId());
         AuSuspectUrlVersionsBean v2Bean = new Gson().fromJson(json, AuSuspectUrlVersionsBean.class);
         if (v2Bean.equals(v1Bean)) {
           log.info("V2 AU Suspect Url Versions are the same");
@@ -192,7 +193,7 @@ public class AuStateChecker extends Worker {
     if (v1 instanceof DatedPeerIdSetImpl) {
       try {
         DatedPeerIdSetBean v1Bean = ((DatedPeerIdSetImpl) v1).getBean(au.getAuId());
-        String json = cfgApiClient.getNoAuPeers(au.getAuId());
+        String json = cfgAusApiClient.getNoAuPeers(au.getAuId());
         DatedPeerIdSetBean v2Bean = new Gson().fromJson(json, DatedPeerIdSetBean.class);
         if (v2Bean.equals(v1Bean)) {
           log.info("V2 No AU PeerSet are the same");
@@ -232,7 +233,7 @@ public class AuStateChecker extends Worker {
       if (v1 != null) {
         v1.keySet().stream().filter(key -> !key.equalsIgnoreCase("reserved.repository"))
             .forEach(key -> v1Config.putAuConfigItem(key, v1.get(key)));
-        v2Config = cfgApiClient.getAuConfig(au.getAuId());
+        v2Config = cfgAusApiClient.getAuConfig(au.getAuId());
         v2Config.getAuConfig().remove(PluginManager.AU_PARAM_REPOSITORY);
         if (v2Config == null) {
           if (!v1Config.getAuConfig().isEmpty()) {
@@ -271,7 +272,7 @@ public class AuStateChecker extends Worker {
     if (v1 != null) {
       try {
         V2AuStateBean v1Bean = new V2AuStateBean(v1);
-        String json = cfgApiClient.getAuState(au.getAuId());
+        String json = cfgAusApiClient.getAuState(au.getAuId());
         V2AuStateBean v2Bean = new Gson().fromJson(json, V2AuStateBean.class);
         v2Bean.setCdnStems(v2Bean.getCdnStems());
         if (v2Bean.equals(v1Bean)) {
@@ -282,8 +283,8 @@ public class AuStateChecker extends Worker {
             log.debug("AuState v1Bean: "+ v1Bean.toString());
             log.debug("AuState v2Bean: "+ v2Bean.toString());
           }
-          err = "V2 AuState mismatch: " + auName +
-            ": V1: " + v1Bean + ", V2: " + v2Bean;
+          err = "AuState mismatch: " + auName + ": " +
+            auMover.diffString(v1Bean.diff(v2Bean));
           log.error(err);
         }
       }

@@ -42,11 +42,34 @@
 
 package org.lockss.laaws.model.cfg;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapter;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
+import com.google.gson.reflect.TypeToken;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 import java.io.Serializable;
+import java.lang.reflect.Type;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Objects;
+import java.util.Set;
+import org.lockss.laaws.client.JSON;
 
 /**
  * The status information of the service
@@ -56,32 +79,113 @@ import java.util.Objects;
 public class ApiStatus implements Serializable {
   private static final long serialVersionUID = 1L;
 
-  public static final String SERIALIZED_NAME_VERSION = "version";
-  @SerializedName(SERIALIZED_NAME_VERSION) private String version;
+  public static final String SERIALIZED_NAME_API_VERSION = "apiVersion";
+  @SerializedName(SERIALIZED_NAME_API_VERSION) private String apiVersion;
+
+  public static final String SERIALIZED_NAME_COMPONENT_NAME = "componentName";
+  @SerializedName(SERIALIZED_NAME_COMPONENT_NAME) private String componentName;
+
+  public static final String SERIALIZED_NAME_COMPONENT_VERSION = "componentVersion";
+  @SerializedName(SERIALIZED_NAME_COMPONENT_VERSION) private String componentVersion;
+
+  public static final String SERIALIZED_NAME_LOCKSS_VERSION = "lockssVersion";
+  @SerializedName(SERIALIZED_NAME_LOCKSS_VERSION) private String lockssVersion;
 
   public static final String SERIALIZED_NAME_READY = "ready";
   @SerializedName(SERIALIZED_NAME_READY) private Boolean ready;
 
+  public static final String SERIALIZED_NAME_SERVICE_NAME = "serviceName";
+  @SerializedName(SERIALIZED_NAME_SERVICE_NAME) private String serviceName;
+
+  public static final String SERIALIZED_NAME_READY_TIME = "readyTime";
+  @SerializedName(SERIALIZED_NAME_READY_TIME) private Long readyTime;
+
+  public static final String SERIALIZED_NAME_REASON = "reason";
+  @SerializedName(SERIALIZED_NAME_REASON) private String reason;
+
+  public static final String SERIALIZED_NAME_PLUGINS_READY = "pluginsReady";
+  @SerializedName(SERIALIZED_NAME_PLUGINS_READY) private Boolean pluginsReady;
+
   public ApiStatus() {}
 
-  public ApiStatus version(String version) {
-    this.version = version;
+  public ApiStatus apiVersion(String apiVersion) {
+    this.apiVersion = apiVersion;
     return this;
   }
 
   /**
-   * The version of the service
-   * @return version
+   * The version of the API
+   * @return apiVersion
    **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The version of the service")
+  @ApiModelProperty(required = true, value = "The version of the API")
 
-  public String getVersion() {
-    return version;
+  public String getApiVersion() {
+    return apiVersion;
   }
 
-  public void setVersion(String version) {
-    this.version = version;
+  public void setApiVersion(String apiVersion) {
+    this.apiVersion = apiVersion;
+  }
+
+  public ApiStatus componentName(String componentName) {
+    this.componentName = componentName;
+    return this;
+  }
+
+  /**
+   * The name of the component
+   * @return componentName
+   **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "The name of the component")
+
+  public String getComponentName() {
+    return componentName;
+  }
+
+  public void setComponentName(String componentName) {
+    this.componentName = componentName;
+  }
+
+  public ApiStatus componentVersion(String componentVersion) {
+    this.componentVersion = componentVersion;
+    return this;
+  }
+
+  /**
+   * The version of the component software
+   * @return componentVersion
+   **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "The version of the component software")
+
+  public String getComponentVersion() {
+    return componentVersion;
+  }
+
+  public void setComponentVersion(String componentVersion) {
+    this.componentVersion = componentVersion;
+  }
+
+  public ApiStatus lockssVersion(String lockssVersion) {
+    this.lockssVersion = lockssVersion;
+    return this;
+  }
+
+  /**
+   * The version of the LOCKSS system
+   * @return lockssVersion
+   **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "The version of the LOCKSS system")
+
+  public String getLockssVersion() {
+    return lockssVersion;
+  }
+
+  public void setLockssVersion(String lockssVersion) {
+    this.lockssVersion = lockssVersion;
   }
 
   public ApiStatus ready(Boolean ready) {
@@ -104,6 +208,88 @@ public class ApiStatus implements Serializable {
     this.ready = ready;
   }
 
+  public ApiStatus serviceName(String serviceName) {
+    this.serviceName = serviceName;
+    return this;
+  }
+
+  /**
+   * The name of the service
+   * @return serviceName
+   **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "The name of the service")
+
+  public String getServiceName() {
+    return serviceName;
+  }
+
+  public void setServiceName(String serviceName) {
+    this.serviceName = serviceName;
+  }
+
+  public ApiStatus readyTime(Long readyTime) {
+    this.readyTime = readyTime;
+    return this;
+  }
+
+  /**
+   * The time the service became ready.
+   * @return readyTime
+   **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "The time the service became ready.")
+
+  public Long getReadyTime() {
+    return readyTime;
+  }
+
+  public void setReadyTime(Long readyTime) {
+    this.readyTime = readyTime;
+  }
+
+  public ApiStatus reason(String reason) {
+    this.reason = reason;
+    return this;
+  }
+
+  /**
+   * The reason this service is not ready.
+   * @return reason
+   **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "The reason this service is not ready.")
+
+  public String getReason() {
+    return reason;
+  }
+
+  public void setReason(String reason) {
+    this.reason = reason;
+  }
+
+  public ApiStatus pluginsReady(Boolean pluginsReady) {
+    this.pluginsReady = pluginsReady;
+    return this;
+  }
+
+  /**
+   * An indication of whether this service has made the loadable plugins available.
+   * @return pluginsReady
+   **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(
+    value = "An indication of whether this service has made the loadable plugins available.")
+
+  public Boolean
+  getPluginsReady() {
+    return pluginsReady;
+  }
+
+  public void setPluginsReady(Boolean pluginsReady) {
+    this.pluginsReady = pluginsReady;
+  }
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -113,21 +299,36 @@ public class ApiStatus implements Serializable {
       return false;
     }
     ApiStatus apiStatus = (ApiStatus) o;
-    return Objects.equals(this.version, apiStatus.version)
-        && Objects.equals(this.ready, apiStatus.ready);
+    return Objects.equals(this.apiVersion, apiStatus.apiVersion)
+      && Objects.equals(this.componentName, apiStatus.componentName)
+      && Objects.equals(this.componentVersion, apiStatus.componentVersion)
+      && Objects.equals(this.lockssVersion, apiStatus.lockssVersion)
+      && Objects.equals(this.ready, apiStatus.ready)
+      && Objects.equals(this.serviceName, apiStatus.serviceName)
+      && Objects.equals(this.readyTime, apiStatus.readyTime)
+      && Objects.equals(this.reason, apiStatus.reason)
+      && Objects.equals(this.pluginsReady, apiStatus.pluginsReady);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(version, ready);
+    return Objects.hash(apiVersion, componentName, componentVersion, lockssVersion, ready,
+      serviceName, readyTime, reason, pluginsReady);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ApiStatus {\n");
-    sb.append("    version: ").append(toIndentedString(version)).append("\n");
+    sb.append("    apiVersion: ").append(toIndentedString(apiVersion)).append("\n");
+    sb.append("    componentName: ").append(toIndentedString(componentName)).append("\n");
+    sb.append("    componentVersion: ").append(toIndentedString(componentVersion)).append("\n");
+    sb.append("    lockssVersion: ").append(toIndentedString(lockssVersion)).append("\n");
     sb.append("    ready: ").append(toIndentedString(ready)).append("\n");
+    sb.append("    serviceName: ").append(toIndentedString(serviceName)).append("\n");
+    sb.append("    readyTime: ").append(toIndentedString(readyTime)).append("\n");
+    sb.append("    reason: ").append(toIndentedString(reason)).append("\n");
+    sb.append("    pluginsReady: ").append(toIndentedString(pluginsReady)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -142,4 +343,250 @@ public class ApiStatus implements Serializable {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("apiVersion");
+    openapiFields.add("componentName");
+    openapiFields.add("componentVersion");
+    openapiFields.add("lockssVersion");
+    openapiFields.add("ready");
+    openapiFields.add("serviceName");
+    openapiFields.add("readyTime");
+    openapiFields.add("reason");
+    openapiFields.add("pluginsReady");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("apiVersion");
+    openapiRequiredFields.add("componentName");
+    openapiRequiredFields.add("componentVersion");
+    openapiRequiredFields.add("lockssVersion");
+    openapiRequiredFields.add("ready");
+    openapiRequiredFields.add("serviceName");
+  }
+
+  /**
+   * Validates the JSON Object and throws an exception if issues found
+   *
+   * @param jsonObj JSON Object
+   * @throws IOException if the JSON Object is invalid with respect to ApiStatus
+   */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+    if (jsonObj == null) {
+      if (!ApiStatus.openapiRequiredFields
+               .isEmpty()) { // has required fields but JSON object is null
+        throw new IllegalArgumentException(String.format(
+          "The required field(s) %s in ApiStatus is not found in the empty JSON string",
+          ApiStatus.openapiRequiredFields.toString()));
+      }
+    }
+
+//     Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+//     // check to see if the JSON string contains additional fields
+//     for (Entry<String, JsonElement> entry : entries) {
+//       if (!ApiStatus.openapiFields.contains(entry.getKey())) {
+//         throw new IllegalArgumentException(String.format(
+//           "The field `%s` in the JSON string is not defined in the `ApiStatus` properties. JSON: %s",
+//           entry.getKey(), jsonObj.toString()));
+//       }
+//     }
+
+    // check to make sure all required properties/fields are present in the JSON string
+    for (String requiredField : ApiStatus.openapiRequiredFields) {
+      if (jsonObj.get(requiredField) == null) {
+        throw new IllegalArgumentException(
+          String.format("The required field `%s` is not found in the JSON string: %s",
+            requiredField, jsonObj.toString()));
+      }
+    }
+    if ((jsonObj.get("apiVersion") != null && !jsonObj.get("apiVersion").isJsonNull())
+      && !jsonObj.get("apiVersion").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(
+        "Expected the field `apiVersion` to be a primitive type in the JSON string but got `%s`",
+        jsonObj.get("apiVersion").toString()));
+    }
+    if ((jsonObj.get("componentName") != null && !jsonObj.get("componentName").isJsonNull())
+      && !jsonObj.get("componentName").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(
+        "Expected the field `componentName` to be a primitive type in the JSON string but got `%s`",
+        jsonObj.get("componentName").toString()));
+    }
+    if ((jsonObj.get("componentVersion") != null && !jsonObj.get("componentVersion").isJsonNull())
+      && !jsonObj.get("componentVersion").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(
+        "Expected the field `componentVersion` to be a primitive type in the JSON string but got `%s`",
+        jsonObj.get("componentVersion").toString()));
+    }
+    if ((jsonObj.get("lockssVersion") != null && !jsonObj.get("lockssVersion").isJsonNull())
+      && !jsonObj.get("lockssVersion").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(
+        "Expected the field `lockssVersion` to be a primitive type in the JSON string but got `%s`",
+        jsonObj.get("lockssVersion").toString()));
+    }
+    if ((jsonObj.get("serviceName") != null && !jsonObj.get("serviceName").isJsonNull())
+      && !jsonObj.get("serviceName").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(
+        "Expected the field `serviceName` to be a primitive type in the JSON string but got `%s`",
+        jsonObj.get("serviceName").toString()));
+    }
+    if ((jsonObj.get("reason") != null && !jsonObj.get("reason").isJsonNull())
+      && !jsonObj.get("reason").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(
+        "Expected the field `reason` to be a primitive type in the JSON string but got `%s`",
+        jsonObj.get("reason").toString()));
+    }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+      if (!ApiStatus.class.isAssignableFrom(type.getRawType())) {
+        return null; // this class only serializes 'ApiStatus' and its subtypes
+      }
+      final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+      final TypeAdapter<ApiStatus> thisAdapter =
+        gson.getDelegateAdapter(this, TypeToken.get(ApiStatus.class));
+
+      return (TypeAdapter<T>) new TypeAdapter<ApiStatus>() {
+        @Override
+        public void write(JsonWriter out, ApiStatus value) throws IOException {
+          JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+          elementAdapter.write(out, obj);
+        }
+
+        @Override
+        public ApiStatus read(JsonReader in) throws IOException {
+          JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+          validateJsonObject(jsonObj);
+          return thisAdapter.fromJsonTree(jsonObj);
+        }
+      }.nullSafe();
+    }
+  }
+
+  /**
+   * Create an instance of ApiStatus given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ApiStatus
+   * @throws IOException if the JSON string is invalid with respect to ApiStatus
+   */
+  public static ApiStatus fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ApiStatus.class);
+  }
+
+  /**
+   * Convert an instance of ApiStatus to an JSON string
+   *
+   * @return JSON string
+   */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
+// import com.google.gson.annotations.SerializedName;
+// import io.swagger.annotations.ApiModel;
+// import io.swagger.annotations.ApiModelProperty;
+// import java.io.Serializable;
+// import java.util.Objects;
+
+// /**
+//  * The status information of the service
+//  */
+// @ApiModel(description = "The status information of the service")
+// @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+// public class ApiStatus implements Serializable {
+//   private static final long serialVersionUID = 1L;
+
+//   public static final String SERIALIZED_NAME_VERSION = "version";
+//   @SerializedName(SERIALIZED_NAME_VERSION) private String version;
+
+//   public static final String SERIALIZED_NAME_READY = "ready";
+//   @SerializedName(SERIALIZED_NAME_READY) private Boolean ready;
+
+//   public ApiStatus() {}
+
+//   public ApiStatus version(String version) {
+//     this.version = version;
+//     return this;
+//   }
+
+//   /**
+//    * The version of the service
+//    * @return version
+//    **/
+//   @javax.annotation.Nonnull
+//   @ApiModelProperty(required = true, value = "The version of the service")
+
+//   public String getVersion() {
+//     return version;
+//   }
+
+//   public void setVersion(String version) {
+//     this.version = version;
+//   }
+
+//   public ApiStatus ready(Boolean ready) {
+//     this.ready = ready;
+//     return this;
+//   }
+
+//   /**
+//    * The indication of whether the service is available
+//    * @return ready
+//    **/
+//   @javax.annotation.Nonnull
+//   @ApiModelProperty(required = true, value = "The indication of whether the service is available")
+
+//   public Boolean getReady() {
+//     return ready;
+//   }
+
+//   public void setReady(Boolean ready) {
+//     this.ready = ready;
+//   }
+
+//   @Override
+//   public boolean equals(Object o) {
+//     if (this == o) {
+//       return true;
+//     }
+//     if (o == null || getClass() != o.getClass()) {
+//       return false;
+//     }
+//     ApiStatus apiStatus = (ApiStatus) o;
+//     return Objects.equals(this.version, apiStatus.version)
+//         && Objects.equals(this.ready, apiStatus.ready);
+//   }
+
+//   @Override
+//   public int hashCode() {
+//     return Objects.hash(version, ready);
+//   }
+
+//   @Override
+//   public String toString() {
+//     StringBuilder sb = new StringBuilder();
+//     sb.append("class ApiStatus {\n");
+//     sb.append("    version: ").append(toIndentedString(version)).append("\n");
+//     sb.append("    ready: ").append(toIndentedString(ready)).append("\n");
+//     sb.append("}");
+//     return sb.toString();
+//   }
+
+//   /**
+//    * Convert the given object to string with each line indented by 4 spaces
+//    * (except the first line).
+//    */
+//   private String toIndentedString(Object o) {
+//     if (o == null) {
+//       return "null";
+//     }
+//     return o.toString().replace("\n", "\n    ");
+//   }
 }

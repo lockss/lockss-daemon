@@ -1203,7 +1203,7 @@ public class PollManager
   /** Cancel all polls on the specified AU.
    * @param au the AU
    */
-  void cancelAuPolls(ArchivalUnit au) {
+  public void cancelAuPolls(ArchivalUnit au) {
     // first remove from queues, so none will run.
     pollQueue.cancelAuPolls(au);
 
@@ -1254,8 +1254,7 @@ public class PollManager
       long duration = pollFact.calcDuration(pollspec, this);
       if (duration > 0) {
 	try {
-	  PeerIdentity orig =
-	    theIDManager.getLocalPeerIdentity(pollspec.getProtocolVersion());
+          PeerIdentity orig = getMyPeerId(pollspec.getProtocolVersion());
 	  BasePoll thePoll =
 	    makePoller(pollspec, duration, orig);
 	  if (thePoll != null) {
@@ -2969,9 +2968,7 @@ public class PollManager
       throw new NotEligibleException(msg);
     }
 
-    AuState.MigrationState ms = auState.getMigrationState();
-    if (ms == AuState.MigrationState.InProgress ||
-        ms == AuState.MigrationState.Finished) {
+    if (AuUtil.isAuFrozen(au)) {
       throw new NotEligibleException("AU migrated or migrating");
     }
   }
@@ -3282,6 +3279,10 @@ public class PollManager
    * time for this AU */
   public boolean isRecalcAu(ArchivalUnit au) {
     return recalcingAus.contains(au);
+  }
+
+  public PeerIdentity getMyPeerId(int pollVersion) {
+    return theIDManager.getLocalPeerIdentity(pollVersion);
   }
 
   public enum EventCtr {Polls,

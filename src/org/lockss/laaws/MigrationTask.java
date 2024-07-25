@@ -39,7 +39,9 @@ public class MigrationTask {
 
 
   public enum TaskType {
+    COPY_DATABASE,
     COPY_USER_ACCOUNTS,
+    COPY_CONFIG_FILES,
     COPY_CU_VERSIONS,
     CHECK_CU_VERSIONS,
     COPY_AU_STATE,
@@ -100,8 +102,16 @@ public class MigrationTask {
     return type.getTaskPhase();
   }
 
+  public static MigrationTask migrateDb(V2AuMover mover) {
+    return new MigrationTask(mover, TaskType.COPY_DATABASE);
+  }
+
   public static MigrationTask copyUserAccounts(V2AuMover mover) {
     return new MigrationTask(mover, TaskType.COPY_USER_ACCOUNTS);
+  }
+
+  public static MigrationTask migrateConfigFiles(V2AuMover mover) {
+    return new MigrationTask(mover, TaskType.COPY_CONFIG_FILES);
   }
 
   public static MigrationTask copyCuVersions(V2AuMover mover,

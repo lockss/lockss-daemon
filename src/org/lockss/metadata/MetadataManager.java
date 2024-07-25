@@ -989,8 +989,16 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *         for reindexing, <code>false</code> otherwise.
    */
   boolean isEligibleForReindexing(String auId) {
-    return indexPriorityAuidMap == null
-      || indexPriorityAuidMap.getMatch(auId, 0) >= 0;
+    if (indexPriorityAuidMap != null
+        && indexPriorityAuidMap.getMatch(auId, 0) < 0) {
+      return false;
+    }
+    ArchivalUnit au = pluginMgr.getAuFromId(auId);
+    if (au == null) {
+      log.debug("Probable inactive AU in pending queue, not indexing");
+      return false;
+    }
+    return !AuUtil.isAuFrozen(au);
   }
 
   /**

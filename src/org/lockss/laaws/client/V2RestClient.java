@@ -102,6 +102,7 @@ import okio.Okio;
 import org.apache.commons.io.IOUtils;
 import org.lockss.account.UserAccount;
 import org.lockss.laaws.DigestCachedUrl;
+import org.lockss.laaws.LockssRestHttpException;
 import org.lockss.laaws.client.auth.ApiKeyAuth;
 import org.lockss.laaws.client.auth.Authentication;
 import org.lockss.laaws.client.auth.HttpBasicAuth;
@@ -892,6 +893,9 @@ public class V2RestClient {
       // Handle file downloading.
       return (T) downloadFileFromResponse(response);
     }
+    else if (returnType.equals(Response.class)) {
+      return (T)response;
+    }
     else if (returnType.equals(ArtifactData.class)) {
       MultipartReader reader = null;
       try {
@@ -1104,8 +1108,9 @@ public class V2RestClient {
       Response response = call.execute();
       T data = handleResponse(response, returnType);
       return new ApiResponse<T>(response.code(), response.headers().toMultimap(), data);
-    }
-    catch (IOException e) {
+    } catch (LockssRestHttpException e) {
+      throw new ApiException(e.getMessage(), e, e.getStatus(), null);
+    } catch (IOException e) {
       throw new ApiException(e);
     }
   }
@@ -1463,6 +1468,20 @@ public class V2RestClient {
             "form-data; name=\"" + param.getKey() + "\"; filename=\"artifact\"");
         MediaType mediaType = MediaType.parse("application/http;msgtype=response");
         mpBuilder.addPart(partHeaders, new CachedUrlRequestBody(dcu, mediaType));
+      }
+      else if (param.getKey().equals("artifactProps")) {
+        Headers partHeaders = Headers.of("Content-Disposition",
+                "form-data; name=\"" + param.getKey() + "\"");
+        MediaType mediaType = MediaType.parse("application/json");
+        mpBuilder.addPart(partHeaders, RequestBody.create(mediaType, (String)param.getValue()));
+
+      }
+      else if (param.getKey().equals("httpResponseHeader")) {
+        Headers partHeaders = Headers.of("Content-Disposition",
+                "form-data; name=\"" + param.getKey() + "\"");
+        MediaType mediaType = MediaType.parse("application/octet-stream");
+        mpBuilder.addPart(partHeaders, RequestBody.create(mediaType, (String)param.getValue()));
+
       }
       else {
         Headers partHeaders = Headers.of("Content-Disposition",

@@ -43,21 +43,31 @@ import java.util.stream.Collectors;
 public class UserAccountMover extends Worker {
   private static final Logger log = Logger.getLogger(UserAccountMover.class);
 
+  private Collection<UserAccount> acctsToMove;
+  private int nMoved = 0;
+
   public UserAccountMover(V2AuMover auMover, MigrationTask task) {
     super(auMover, task);
   }
 
   public void run() {
-    AccountManager acctsMgr = LockssDaemon.getLockssDaemon().getAccountManager();
+    moveUserAccounts(getAccountsToMove());
+  }
 
     // Only transfer editable (i.e., non-static) user accounts
-    Collection<UserAccount> accts = acctsMgr.getUsers()
+  public Collection<UserAccount> getAccountsToMove() {
+    if (acctsToMove == null) {
+      AccountManager acctsMgr =
+        LockssDaemon.getLockssDaemon().getAccountManager();
+      acctsToMove = acctsMgr.getUsers()
         .stream()
         .filter(UserAccount::isEditable)
         .collect(Collectors.toList());
-
-    moveUserAccounts(accts);
+    }
+    return acctsToMove;
   }
+
+
 
   private void moveUserAccounts(Collection<UserAccount> accts) {
     if (accts == null || accts.isEmpty()) {
@@ -69,6 +79,7 @@ public class UserAccountMover extends Worker {
       cfgUsersApiClient.postUsers(accts);
       log.info("Successfully moved user accounts");
       auMover.logReport("Moved user accounts");
+      nMoved = accts.size();
     } catch (Exception e) {
       String err = "Attempt to move user accounts failed: " + e.getMessage();
       log.error(err, e);

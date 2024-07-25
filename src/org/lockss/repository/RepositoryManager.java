@@ -36,10 +36,15 @@ import org.apache.commons.collections4.map.LinkedMap;
 import org.apache.commons.io.FileUtils;
 
 import org.lockss.app.*;
+import org.lockss.laaws.MigrationManager;
+import org.lockss.servlet.MigrateContent;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
+
+import static org.lockss.laaws.MigrationManager.DEFAULT_DRY_RUN_ENABLED;
+import static org.lockss.laaws.MigrationManager.PARAM_DRY_RUN_ENABLED;
 
 /**
  * RepositoryManager is the center of the per AU repositories.  It manages
@@ -127,6 +132,11 @@ public class RepositoryManager
   public static final String PARAM_MOVE_DELETED_AUS_TO =
     PREFIX + "moveDeletedAusTo";
   public static final String DEFAULT_MOVE_DELETED_AUS_TO = null;
+  public static final String PARAM_DELETEAUS_INTERVAL =
+      PREFIX + "deleteAusInterval";
+  public static final long DEFAULT_DELETEAUS_INTERVAL = Constants.HOUR;
+  static final String PRIORITY_PARAM_DELETEAUS_THREAD = "DeleteAusThread";
+  static final int PRIORITY_DEFAULT_DELETEAUS_THREAD = Thread.NORM_PRIORITY + 1;
 
   static final String WDOG_PARAM_SIZE_CALC = "SizeCalc";
   static final long WDOG_DEFAULT_SIZE_CALC = Constants.DAY;
@@ -170,6 +180,8 @@ public class RepositoryManager
   private static CheckUnnormalizedMode checkUnnormalized =
     DEFAULT_CHECK_UNNORMALIZED;
   private String paramMoveDeletedAusTo = DEFAULT_MOVE_DELETED_AUS_TO;
+  private long paramDeleteThreadInterval = DEFAULT_DELETEAUS_INTERVAL;
+  private Deadline deleteThreadDeadline;
   private AuEventHandler auEventHandler;
 
 
@@ -204,70 +216,138 @@ public class RepositoryManager
   // intended use is for autest, which normally won't delete AUs with
   // active polls or crawls.
   private void moveAuDir(AuEvent event, ArchivalUnit au) {
-    String auid = au.getAuId();
     switch (event.getType()) {
       // Do this only for Delete, not Deactivate or RestartDelete
     case Delete:
-      if (!StringUtil.isNullString(paramMoveDeletedAusTo)) {
-        // Normally will be only one dir for AU, no harm in checking all
-        // the repos
-        for (String repoName : getRepositoryList()) {
-          String repoRoot =
-            LockssRepositoryImpl.getLocalRepositoryPath(repoName);
-          // Ensure deleted dir exists
-          File deletedDir = new File(repoRoot, paramMoveDeletedAusTo);
-          if (!deletedDir.exists()) {
-            log.debug("Creating deleted AU dir: " + deletedDir);
-            if (!deletedDir.mkdirs()) {
-              log.error("Couldn't create deleted AU dir: " + deletedDir);
-              continue;
-            }
-          }
-          LockssRepositoryImpl.LocalRepository localRepo =
-            LockssRepositoryImpl.getLocalRepository(repoRoot);
-          synchronized (localRepo) {
-            String auDirPath =
-              LockssRepositoryImpl.getAuDir(auid, repoRoot, false);
-            if (auDirPath != null) {
-              log.debug2("del repo for: " + au.getName() + ": " + auDirPath);
-              File auDir = new File(auDirPath);
-              String auDirName = auDir.getName();
-
-              // Uniqueify the dirname under the "deleted" dir
-              File moveToDir = new File(deletedDir, auDirName);
-              int suffix = 1;
-              while (moveToDir.exists()) {
-                moveToDir = new File(deletedDir, auDirName + "." + suffix++);
-              }
-              try {
-                log.debug2("move(" + auDir.toPath() + ", "
-                           + moveToDir.toPath() + ")");
-
-                if (pluginMgr.getAuFromId(auid) != null) {
-                  log.debug("AU recreated, not deleting repo dir: " +
-                            au.getName());
-                  continue;
-                }
-                Files.move(auDir.toPath(), moveToDir.toPath(),
-                           StandardCopyOption.ATOMIC_MOVE);
-                // Remove entry from map
-                LockssRepositoryImpl.removeAuDirEntry(pluginMgr, auid, repoRoot);
-
-                // Update timestamp so janitor script knows when to delete the
-                // dir.
-                FileUtils.touch(moveToDir);
-              } catch (IOException e) {
-                log.error("failed to move deleted AU dir: " + auDir +
-                          " to deleted dir: " + moveToDir, e);
-              }
-            }
-          }
-        }
-      }
+      moveDeletedAu(au);
       break;
     }
   }
 
+  /**
+   * Deletes an AU from the filesystem immediately by moving it into
+   * the "deleted AUs" directory and expiring the "delete thread".
+   * @param au The {@link ArchivalUnit} to delete.
+   */
+  public void deleteAu(ArchivalUnit au) {
+    if (StringUtil.isNullString(paramMoveDeletedAusTo)) {
+      log.warning("MoveDeletedAusTo is not set!");
+    }
+
+    moveDeletedAu(au);
+    deleteThreadDeadline.expire();
+  }
+
+  private class DeleteAusToDeleteThread extends LockssThread {
+    boolean keepGoing = true;
+
+    protected DeleteAusToDeleteThread() {
+      super("DeleteAusToDelete");
+    }
+
+    public void stopDeleteThread() {
+      keepGoing = false;
+      deleteThreadDeadline.expire();
+    }
+
+    @Override
+    protected void lockssRun() {
+      setPriority(PRIORITY_PARAM_DELETEAUS_THREAD, PRIORITY_DEFAULT_DELETEAUS_THREAD);
+
+      while (keepGoing) {
+        try {
+          deleteAusToDelete();
+          deleteThreadDeadline.sleep();
+          deleteThreadDeadline.expireIn(paramDeleteThreadInterval);
+        } catch (InterruptedException e) {
+          // just wakeup and check for exit
+        }
+      }
+    }
+  }
+
+  private void deleteAusToDelete() {
+    for (String repoName : getRepositoryList()) {
+      String repoRoot =
+          LockssRepositoryImpl.getLocalRepositoryPath(repoName);
+
+      File deletedAusDir = new File(repoRoot, paramMoveDeletedAusTo);
+
+      if (deletedAusDir.isDirectory()) {
+        // Iterate over all AUs under deletedAusDir and call delTree
+        for (File movedToDir : deletedAusDir.listFiles()) {
+          FileUtil.delTree(movedToDir);
+        }
+      }
+    }
+  }
+
+  /**
+   * Moves a deleted AU to the deleted AUs directory for actual removal by
+   * an external process.
+   *
+   * @return A {@link File} that the AU was moved to, or {@code null} if
+   */
+  void moveDeletedAu(ArchivalUnit au) {
+    String auid = au.getAuId();
+
+    if (!StringUtil.isNullString(paramMoveDeletedAusTo)) {
+      // Normally will be only one dir for AU, no harm in checking all
+      // the repos
+      for (String repoName : getRepositoryList()) {
+        String repoRoot =
+            LockssRepositoryImpl.getLocalRepositoryPath(repoName);
+        // Ensure deleted dir exists
+        File deletedDir = new File(repoRoot, paramMoveDeletedAusTo);
+        if (!deletedDir.exists()) {
+          log.debug("Creating deleted AU dir: " + deletedDir);
+          if (!deletedDir.mkdirs()) {
+            log.error("Couldn't create deleted AU dir: " + deletedDir);
+            continue;
+          }
+        }
+        LockssRepositoryImpl.LocalRepository localRepo =
+            LockssRepositoryImpl.getLocalRepository(repoRoot);
+        synchronized (localRepo) {
+          String auDirPath =
+              LockssRepositoryImpl.getAuDir(auid, repoRoot, false);
+          if (auDirPath != null) {
+            log.debug2("del repo for: " + au.getName() + ": " + auDirPath);
+            File auDir = new File(auDirPath);
+            String auDirName = auDir.getName();
+
+            // Uniqueify the dirname under the "deleted" dir
+            File moveToDir = new File(deletedDir, auDirName);
+            int suffix = 1;
+            while (moveToDir.exists()) {
+              moveToDir = new File(deletedDir, auDirName + "." + suffix++);
+            }
+            try {
+              log.debug2("move(" + auDir.toPath() + ", "
+                  + moveToDir.toPath() + ")");
+
+              if (pluginMgr.getAuFromId(auid) != null) {
+                log.debug("AU recreated, not deleting repo dir: " +
+                    au.getName());
+                continue;
+              }
+              Files.move(auDir.toPath(), moveToDir.toPath(),
+                  StandardCopyOption.ATOMIC_MOVE);
+              // Remove entry from map
+              LockssRepositoryImpl.removeAuDirEntry(pluginMgr, auid, repoRoot);
+
+              // Update timestamp so janitor script knows when to delete the
+              // dir.
+              FileUtils.touch(moveToDir);
+            } catch (IOException e) {
+              log.error("failed to move deleted AU dir: " + auDir +
+                  " to deleted dir: " + moveToDir, e);
+            }
+          }
+        }
+      }
+    }
+  }
 
   private String localRepoSpec(String path) {
     return StringPool.REPO_SPEC.intern("local:" + path);
@@ -350,8 +430,46 @@ public class RepositoryManager
 	(CheckUnnormalizedMode)
 	config.getEnum(CheckUnnormalizedMode.class,
 		       PARAM_CHECK_UNNORMALIZED, DEFAULT_CHECK_UNNORMALIZED);
+
       paramMoveDeletedAusTo = config.get(PARAM_MOVE_DELETED_AUS_TO,
                                          DEFAULT_MOVE_DELETED_AUS_TO);
+
+      paramDeleteThreadInterval = config.getTimeInterval(
+          PARAM_DELETEAUS_INTERVAL,
+          DEFAULT_DELETEAUS_INTERVAL);
+
+      if (changedKeys.contains(PARAM_DELETEAUS_INTERVAL)) {
+        if (deleteThreadDeadline == null) {
+          deleteThreadDeadline = Deadline.in(0);
+        }
+        deleteThreadDeadline.expire();
+      }
+
+      if (changedKeys.contains(MigrationManager.PARAM_IS_IN_MIGRATION_MODE) ||
+          changedKeys.contains(MigrateContent.PARAM_DELETE_AFTER_MIGRATION) ||
+          changedKeys.contains(PARAM_MOVE_DELETED_AUS_TO)) {
+
+        boolean isDryRun = config.getBoolean(
+            PARAM_DRY_RUN_ENABLED,
+            DEFAULT_DRY_RUN_ENABLED);
+
+        boolean inMigrationMode = config.getBoolean(
+            MigrationManager.PARAM_IS_IN_MIGRATION_MODE,
+            MigrationManager.DEFAULT_IS_IN_MIGRATION_MODE);
+
+        boolean deleteAusAfterMigration = config.getBoolean(
+            MigrateContent.PARAM_DELETE_AFTER_MIGRATION,
+            MigrateContent.DEFAULT_DELETE_AFTER_MIGRATION);
+
+        if (inMigrationMode
+            && !isDryRun
+            && deleteAusAfterMigration
+            && !StringUtil.isNullString(paramMoveDeletedAusTo)) {
+          startOrKickDeleteAusThread();
+        } else {
+          stopDeleteAusThread();
+        }
+      }
     }
   }
 
@@ -527,6 +645,7 @@ public class RepositoryManager
   private Set sizeCalcQueue = new HashSet();
   private BinarySemaphore sizeCalcSem = new BinarySemaphore();
   private SizeCalcThread sizeCalcThread;
+  private DeleteAusToDeleteThread deleteAusThread;
 
   /** engqueue a size calculation for the AU */
   public void queueSizeCalc(ArchivalUnit au) {
@@ -538,7 +657,7 @@ public class RepositoryManager
     synchronized (sizeCalcQueue) {
       if (sizeCalcQueue.add(node)) {
 	log.debug2("Queue size calc: " + node);
-	startOrKickThread();
+	startOrKickSizeCalcThread();
       }
     }
   }
@@ -549,7 +668,7 @@ public class RepositoryManager
     }
   }
 
-  void startOrKickThread() {
+  void startOrKickSizeCalcThread() {
     if (sizeCalcThread == null) {
       log.debug2("Starting thread");
       sizeCalcThread = new SizeCalcThread();
@@ -559,11 +678,27 @@ public class RepositoryManager
     sizeCalcSem.give();
   }
 
-  void stopThread() {
+  void stopSizeCalcThread() {
     if (sizeCalcThread != null) {
       log.debug2("Stopping thread");
       sizeCalcThread.stopSizeCalc();
       sizeCalcThread = null;
+    }
+  }
+
+  void startOrKickDeleteAusThread() {
+    if (deleteAusThread == null) {
+      log.debug2("Starting delete AUs thread");
+      deleteAusThread = new DeleteAusToDeleteThread();
+      deleteAusThread.start();
+    }
+  }
+
+  void stopDeleteAusThread() {
+    if (deleteAusThread != null) {
+      log.debug2("Stopping delete AUs thread");
+      deleteAusThread.stopDeleteThread();
+      deleteAusThread = null;
     }
   }
 

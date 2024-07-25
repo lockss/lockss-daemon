@@ -112,8 +112,7 @@ public class LockssErrorHandler extends AbstractHttpHandler {
     writer.write("</p>\n");
     writer.write("<p><i><small>" +
 		 "<a href=\"" + Constants.LOCKSS_HOME_URL +
-		 "\">LOCKSS " + name + "</a>, " +
-		 "<a href=\"http://jetty.mortbay.org\">powered by Jetty</a>" +
+		 "\">LOCKSS " + name + "</a>" +
 		 "</small></i></p>");
 
 //     for (int i= 0; i < 20; i++)

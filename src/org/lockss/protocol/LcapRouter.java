@@ -75,6 +75,14 @@ public class LcapRouter
   private File dataDir = null;
   private PeerIdentity migrateTo = null;
 
+  @Override
+  public void initService(LockssDaemon daemon) {
+    idMgr = daemon.getIdentityManager();
+    pluginMgr = daemon.getPluginManager();
+    super.initService(daemon);
+  }
+
+  @Override
   public void startService() {
     super.startService();
     LockssDaemon daemon = getDaemon();
@@ -101,8 +109,6 @@ public class LcapRouter
       log.warning("No stream comm");
       scomm = null;
     }
-    idMgr = daemon.getIdentityManager();
-    pluginMgr = daemon.getPluginManager();
   }
 
   public void stopService() {
@@ -134,6 +140,8 @@ public class LcapRouter
       if (!StringUtil.isNullString(migrateToVal)) {
         try {
           migrateTo = idMgr.findPeerIdentity(migrateToVal);
+          log.debug("Will forward LCAP traffic for migrated AUs to " +
+                    migrateTo);
         } catch (IdentityManager.MalformedIdentityKeyException e) {
           log.error("Malformed migrateTo peer identity: " +
               migrateToVal);
@@ -214,7 +222,10 @@ public class LcapRouter
     try {
       in = pmsg.getInputStream();
       V3LcapMessage lmsg = new V3LcapMessage(in, dataDir, getDaemon());
-      lmsg.setOriginatorId(pmsg.getSender());
+      if (lmsg.getOriginatorId() == null) {
+        log.warning("Incoming LcapMessage has no originator, setting it to PeerMessge sender");
+        lmsg.setOriginatorId(pmsg.getSender());
+      }
       return lmsg;
     } finally {
       IOUtil.safeClose(in);
@@ -241,11 +252,12 @@ public class LcapRouter
       if (lmsg.getDestinationId() != myPeerId) {
         // Forward-outbound message from V2: Send message to destination peer
         try {
+          log.debug2("Forwarding outbound message from V2 to " +
+                     lmsg.getDestinationId());
           scomm.sendTo(pmsg, lmsg.getDestinationId());
         } catch (IOException e) {
           log.error("Could not forward peer message to destination", e);
         }
-
         return;
       } else {
         // Inbound message: Determine whether to handle locally or forward to V2
@@ -271,6 +283,8 @@ public class LcapRouter
           }
         }
         if (forward) {
+          log.debug2("Forwarding inbound message from " +
+                     lmsg.getOriginatorId() + " to V2 (" + migrateTo + ")");
           try {
             scomm.sendTo(pmsg, migrateTo);
           } catch (IOException e) {
@@ -283,7 +297,8 @@ public class LcapRouter
     if (lmsg.getDestinationId() == myPeerId) {
       handleLocalInboundMessage(pmsg, lmsg);
     } else {
-      log.warning("Forwarding disabled and message not addressed to me; dropping message: " + pmsg);
+      log.warning("Message addressed to " + lmsg.getDestinationId() +
+                  " but forwarding disabled; dropping: " + pmsg);
     }
   }
 

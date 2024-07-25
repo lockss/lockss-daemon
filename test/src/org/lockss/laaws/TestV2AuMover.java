@@ -1,25 +1,12 @@
 package org.lockss.laaws;
 
-import static org.lockss.laaws.V2AuMover.compileRegexps;
-
-import java.io.File;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.regex.Pattern;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.PluginManager;
-import org.lockss.protocol.MockIdentityManager;
-import org.lockss.util.Logger;
-import org.lockss.test.ConfigurationUtil;
+import org.lockss.servlet.MigrateSettings;
 import org.lockss.test.LockssTestCase;
-import org.lockss.test.MockArchivalUnit;
-import org.lockss.test.MockLockssDaemon;
-import org.lockss.test.MockPlugin;
+
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import java.util.Properties;
 
 public class TestV2AuMover extends LockssTestCase {
   // make tests succeed

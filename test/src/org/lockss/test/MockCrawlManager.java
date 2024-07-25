@@ -105,6 +105,11 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
   public void startNewContentCrawl(CrawlReq req, ActivityRegulator.Lock lock) {
   }
 
+  @Override
+  public void abortAuCrawls(ArchivalUnit au) {
+    scheduledCrawls.remove(au);
+  }
+
   public CrawlRateLimiter getCrawlRateLimiter(Crawler crawler) {
     if (crl != null) {
       return crl;

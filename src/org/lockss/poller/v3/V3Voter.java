@@ -1081,6 +1081,10 @@ public class V3Voter extends BasePoll {
     }
   }
 
+  public PeerIdentity getMyPeerId() {
+    return pollManager.getMyPeerId(Poll.V3_PROTOCOL);
+  }
+
   public PeerIdentity getCallerID() {
     return voterUserData.getPollerId();
   }

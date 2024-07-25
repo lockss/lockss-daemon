@@ -100,7 +100,7 @@ public class DbManager extends BaseLockssDaemonManager
       "4000";
 
   // Prefix for the datasource configuration entries.
-  private static final String DATASOURCE_ROOT = PREFIX + "datasource";
+  public static final String DATASOURCE_ROOT = PREFIX + "datasource";
 
   /**
    * Name of the database datasource class. Changes require daemon restart.
@@ -261,6 +261,12 @@ public class DbManager extends BaseLockssDaemonManager
    */
   public DbManager(boolean skipAsynchronousUpdates) {
     this.skipAsynchronousUpdates = skipAsynchronousUpdates;
+  }
+
+  public void restartService() {
+    stopService();
+    resetConfig();
+    startService();
   }
 
   /**

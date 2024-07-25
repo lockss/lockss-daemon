@@ -35,13 +35,14 @@ import java.security.*;
 import java.util.*;
 
 import org.lockss.plugin.*;
-import org.lockss.util.LockssSerializable;
+import org.lockss.util.*;
 
 /** Result of a single-block V3 hash, passed to the ContentHasher's
  * HashBlockCallback.  A block contains multiple versions, which can be
  * iterated over or returned as an array.  This array is sorted and iterated
  * in the order <i>newest</i> to <i>oldest</i> version. */
 public class HashBlock {
+  private static Logger log = Logger.getLogger(HashBlock.class);
 
   String url;
   TreeSet versions;
@@ -53,6 +54,7 @@ public class HashBlock {
   public HashBlock(CachedUrl cu) {
     this.versions = new TreeSet();
     this.url = cu.getUrl();
+    log.debug2("new HashBlock: " + cu, new Throwable());
   }
 
   public String getUrl() {
