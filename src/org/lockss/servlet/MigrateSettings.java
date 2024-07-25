@@ -504,13 +504,15 @@ public class MigrateSettings extends LockssServlet {
     }
     tbl.add(nextButton);
     tbl.add("&nbsp;");
-    Input resetMigrationStateButton = new Input(Input.Submit, KEY_ACTION,
-                                                ACTION_RESET_MIGRATION_STATE);
-    String confMsg = String.format(RESET_CONFIRMATION_MSG,
-                                   (isDeleteAusEnabled ? RESET_ALREADY_DELETED : ""));
-    resetMigrationStateButton.attribute("onclick", "return confirm(\"" +
-                                        confMsg + "\");");
-    tbl.add(resetMigrationStateButton);
+    if (migrationMgr.isMigrationInDebugMode()) {
+      Input resetMigrationStateButton = new Input(Input.Submit, KEY_ACTION,
+                                                  ACTION_RESET_MIGRATION_STATE);
+      String confMsg = String.format(RESET_CONFIRMATION_MSG,
+                                     (isDeleteAusEnabled ? RESET_ALREADY_DELETED : ""));
+      resetMigrationStateButton.attribute("onclick", "return confirm(\"" +
+                                          confMsg + "\");");
+      tbl.add(resetMigrationStateButton);
+    }
   }
 
   private void setupToggleGroup(Input toggleElem, Input... groupElems) {

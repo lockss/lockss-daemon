@@ -323,7 +323,7 @@ public class V2AuMover {
 
   /** Flag to getCurrentStatus() to build status string on the fly. */
   private static final String STATUS_RUNNING = "**Running**";
-  private static final String STATUS_MIGRATING_DATABASE = "Migrating database conent";
+  private static final String STATUS_MIGRATING_DATABASE = "Migrating database content";
   private static final String STATUS_DONE_MIGRATING_DATABASE = "Finished migrating database";
   private static final String STATUS_COPYING_CONFIG = "Copying config files";
   private static final String STATUS_DONE_COPYING_CONFIG = "Finished copying config files";
