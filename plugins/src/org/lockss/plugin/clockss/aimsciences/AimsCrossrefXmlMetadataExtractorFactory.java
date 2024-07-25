@@ -32,6 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.clockss.aimsciences;
 
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -118,6 +119,23 @@ public class AimsCrossrefXmlMetadataExtractorFactory extends SourceXmlMetadataEx
 
       log.debug3("looking for: pubIssue = " + pubIssue);
 
+      /*
+      MINE is a special case, since all the PDF start page is "1", so the publisher make a work-around and organize the content
+      like this:
+      Structure is:
+        directory:
+            xml file
+                sub_directory_1:
+                    PDF file_1
+                sub_directory_2:
+                    PDF file_2
+
+       PDF like these:
+        aimsciences-released/2024_01/MINE-5-1-January2023.zip!/MINE-5-1-January2023/10.3934/MINE.2023.1.1/Paper.pdf
+        aimsciences-released/2024_01/MINE-5-2-April2023.zip!/MINE-5-2-April2023/10.3934/MINE.2023.2.1/Paper.pdf
+       */
+
+      List<String> returnList = new ArrayList<String>();
 
       String name2018WithDoi = cuBase + doiFirst + "/" + pubJID + "." + pubYear + "." + pubIssue + "." + artPage + "/Paper.pdf";
       String name2018AltWithDoi = cuBase + doiFirst + "/" + pubJIDAlt + "." + pubYear + "." + pubIssue + "." + artPage + "/Paper.pdf";
@@ -132,13 +150,14 @@ public class AimsCrossrefXmlMetadataExtractorFactory extends SourceXmlMetadataEx
       String name2018AltUpper = cuBase + "/" + pubJIDAlt2 + "." + pubYear + "." + pubIssue + "." + artPage + ".pdf";
 
       String name2018Alt2 = cuBase + "/" + pubJID + "." + pubYear + "." + pubIssue + "." + artPage + ".pdf";
-      String name2018Alt3 = cuBase  + "/" + pubJIDAlt + "." + pubYear + "." + pubIssue + "." + artPage + ".pdf";
-      String name2018Alt3Upper = cuBase  + "/" + pubJIDAlt2 + "." + pubYear + "." + pubIssue + "." + artPage + ".pdf";
+      String name2018Alt3 = cuBase + "/" + pubJIDAlt + "." + pubYear + "." + pubIssue + "." + artPage + ".pdf";
+      String name2018Alt3Upper = cuBase + "/" + pubJIDAlt2 + "." + pubYear + "." + pubIssue + "." + artPage + ".pdf";
 
-      log.debug3("looking for: " + pdfName + " or " + altName + " or " + name2018 +  " or "
-              + name2018Alt + " or " + name2018Alt2 +  " or " + name2018Alt3);
+      log.debug3("looking for: " + pdfName + " or " + altName + " or " + name2018 + " or "
+              + name2018Alt + " or " + name2018Alt2 + " or " + name2018Alt3);
 
-      List<String> returnList = new ArrayList<String>();
+      log.debug3("adding name2018WithDoi = " + name2018WithDoi + ", name2018Alt2WithDoi = " + name2018Alt2WithDoi);
+
       returnList.add(pdfName);
       returnList.add(altName);
 
@@ -155,6 +174,8 @@ public class AimsCrossrefXmlMetadataExtractorFactory extends SourceXmlMetadataEx
       returnList.add(name2018Alt2);
       returnList.add(name2018Alt3);
       returnList.add(name2018Alt3Upper);
+
+
       return returnList;
     }
     
@@ -167,7 +188,29 @@ public class AimsCrossrefXmlMetadataExtractorFactory extends SourceXmlMetadataEx
       if (!(AIMS_PUBLISHER.equals(pname))) {
     	  	// the CrossRef schema helper cooks this so be sure
             thisAM.replace(MetadataField.FIELD_PUBLISHER,AIMS_PUBLISHER);
+      }
+
+      String originalUrl = thisAM.get(MetadataField.FIELD_ACCESS_URL);
+
+      log.debug3("access_url === " + originalUrl);
+
+      if (originalUrl.contains("aimsciences-released/2024_01/MINE")) {
+
+        String article_title = thisAM.get(MetadataField.FIELD_ARTICLE_TITLE);
+
+        String newAccessUrl = null;
+
+        if (article_title.length() > 50) {
+          newAccessUrl = originalUrl + "?unique_record_id=" + URLEncoder.encode(article_title.substring(0, 50));
+        } else {
+          newAccessUrl = originalUrl + "?unique_record_id=" + URLEncoder.encode(article_title);
         }
+
+        log.debug3("access_url === " + originalUrl + ", newAccessUrl =" + newAccessUrl);
+
+        thisAM.replace(MetadataField.FIELD_ACCESS_URL, newAccessUrl);
+      }
+
     }
   }
 }

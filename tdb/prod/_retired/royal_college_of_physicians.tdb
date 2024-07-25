@@ -1,0 +1,89 @@
+{
+  publisher <
+    name = Royal College of Physicians ;
+    info[platform] = New HW platform Origins
+  >
+
+    implicit < status ; year ; name ; param[volume_name] >
+    #Moved to Elsevier
+
+  {
+
+    title <
+      name = Clinical Medicine ;
+      issn = 1470-2118 ;
+      eissn = 1473-4893 
+    >
+    #https://www.rcpjournals.org/content/clinmedicine
+
+    {
+    param[base_url] = https://www.rcpjournals.org/
+    param[journal_id] = clinmedicine
+    plugin = org.lockss.plugin.highwire.rcp.RcpOriginsPlugin
+
+    au < down ; 2016 ; Clinical Medicine Volume 16 ; 16 >
+    au < down ; 2017 ; Clinical Medicine Volume 17 ; 17 >
+    au < down ; 2018 ; Clinical Medicine Volume 18 ; 18 >
+    au < down ; 2019 ; Clinical Medicine Volume 19 ; 19 >
+    au < down ; 2020 ; Clinical Medicine Volume 20 ; 20 >
+    au < down ; 2021 ; Clinical Medicine Volume 21 ; 21 >
+    au < down ; 2022 ; Clinical Medicine Volume 22 ; 22 >
+    au < doNotProcess ; 2023 ; Clinical Medicine Volume 23 ; 23 >
+    au < doNotProcess ; 2024 ; Clinical Medicine Volume 24 ; 24 >
+    }
+    {
+    param[base_url] = http://www.clinmed.rcpjournal.org/
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+
+    au < doNotProcess ; 2001 ; Clinical Medicine Volume 1 ; 1 >
+    au < doNotProcess ; 2002 ; Clinical Medicine Volume 2 ; 2 >
+    au < doNotProcess ; 2003 ; Clinical Medicine Volume 3 ; 3 >
+    au < doNotProcess ; 2004 ; Clinical Medicine Volume 4 ; 4 >
+    au < down ; 2005 ; Clinical Medicine Volume 5 ; 5 >
+    au < down ; 2006 ; Clinical Medicine Volume 6 ; 6 >
+    au < down ; 2007 ; Clinical Medicine Volume 7 ; 7 >
+    au < down ; 2008 ; Clinical Medicine Volume 8 ; 8 >
+    au < down ; 2009 ; Clinical Medicine Volume 9 ; 9 >
+    au < down ; 2010 ; Clinical Medicine Volume 10 ; 10 >
+    au < down ; 2011 ; Clinical Medicine Volume 11 ; 11 >
+    au < down ; 2012 ; Clinical Medicine Volume 12 ; 12 >
+    au < down ; 2013 ; Clinical Medicine Volume 13 ; 13 >
+    au < down ; 2014 ; Clinical Medicine Volume 14 ; 14 >
+    au < down ; 2015 ; Clinical Medicine Volume 15 ; 15 >
+    }
+  }
+    
+  {
+
+    title <
+      name = Future Hospital Journal ;
+      issn = 2055-3323 ;
+      eissn = 2055-3331 
+    >
+    #https://www.rcpjournals.org/content/futurehosp
+
+    {
+    param[base_url] = https://www.rcpjournals.org/
+    param[journal_id] = futurehosp
+    plugin = org.lockss.plugin.highwire.rcp.RcpOriginsPlugin
+
+    au < down ; 2019 ; Future Hospital Journal Volume 6 ; 6 >
+    au < down ; 2020 ; Future Hospital Journal Volume 7 ; 7 >
+    au < down ; 2021 ; Future Hospital Journal Volume 8 ; 8 >
+    au < down ; 2022 ; Future Hospital Journal Volume 9 ; 9 >
+    au < doNotProcess ; 2023 ; Future Hospital Journal Volume 10 ; 10 >
+    au < doNotProcess ; 2024 ; Future Hospital Journal Volume 11 ; 11 >
+    }
+    {
+    param[base_url] = http://futurehospital.rcpjournal.org/
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+
+    au < down ; 2014 ; Future Hospital Journal Volume 1 ; 1 >
+    au < down ; 2015 ; Future Hospital Journal Volume 2 ; 2 >
+    au < down ; 2016 ; Future Hospital Journal Volume 3 ; 3 >
+    au < down ; 2017 ; Future Hospital Journal Volume 4 ; 4 >
+    au < down ; 2018 ; Future Hospital Journal Volume 5 ; 5 >
+    }
+  }
+
+}

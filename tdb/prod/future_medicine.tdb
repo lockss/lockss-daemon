@@ -12,20 +12,21 @@
   
     title < 
       name = Aging Health ;
-      issn = 1745-509X 
+      issn = 1745-509X ;
+      eissn = 1745-5103
     >
     
     param[journal_id] = ahe
 
-    au < released ; 2005 ; Aging Health Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < released ; 2006 ; Aging Health Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < released ; 2007 ; Aging Health Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < released ; 2008 ; Aging Health Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < released ; 2009 ; Aging Health Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < released ; 2010 ; Aging Health Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < released ; 2011 ; Aging Health Volume 7 ; 7 ; https://www.futuremedicine.com/ >
-    au < released ; 2012 ; Aging Health Volume 8 ; 8 ; http://www.futuremedicine.com/ >
-    au < released ; 2013 ; Aging Health Volume 9 ; 9 ; http://www.futuremedicine.com/ >
+    au < down ; 2005 ; Aging Health Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < down ; 2006 ; Aging Health Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < down ; 2007 ; Aging Health Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < down ; 2008 ; Aging Health Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < down ; 2009 ; Aging Health Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < down ; 2010 ; Aging Health Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < down ; 2011 ; Aging Health Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < down ; 2012 ; Aging Health Volume 8 ; 8 ; http://www.futuremedicine.com/ >
+    au < down ; 2013 ; Aging Health Volume 9 ; 9 ; http://www.futuremedicine.com/ >
 
   }
 
@@ -33,28 +34,29 @@
   
     title < 
       name = Biomarkers in Medicine ;
-      issn = 1752-0363
+      issn = 1752-0363 ;
+      eissn = 1752-0371
     >
     
     param[journal_id] = bmm
 
-    au < released ; 2007 ; Biomarkers in Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < released ; 2008 ; Biomarkers in Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < released ; 2009 ; Biomarkers in Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < released ; 2010 ; Biomarkers in Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < released ; 2011 ; Biomarkers in Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < released ; 2012 ; Biomarkers in Medicine Volume 6 ; 6 ; http://www.futuremedicine.com/ >
-    au < released ; 2013 ; Biomarkers in Medicine Volume 7 ; 7 ; http://www.futuremedicine.com/ >
-    au < released ; 2014 ; Biomarkers in Medicine Volume 8 ; 8 ; http://www.futuremedicine.com/ >
-    au < released ; 2015 ; Biomarkers in Medicine Volume 9 ; 9 ; http://www.futuremedicine.com/ >
-    au < released ; 2016 ; Biomarkers in Medicine Volume 10 ; 10 ; http://www.futuremedicine.com/ >
-    au < released ; 2017 ; Biomarkers in Medicine Volume 11 ; 11 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; Biomarkers in Medicine Volume 12 ; 12 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; Biomarkers in Medicine Volume 13 ; 13 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; Biomarkers in Medicine Volume 14 ; 14 ; https://www.futuremedicine.com/ >
-    au < released ; 2021 ; Biomarkers in Medicine Volume 15 ; 15 ; https://www.futuremedicine.com/ >
-    au < released ; 2022 ; Biomarkers in Medicine Volume 16 ; 16 ; https://www.futuremedicine.com/ >
-    au < released ; 2023 ; Biomarkers in Medicine Volume 17 ; 17 ; https://www.futuremedicine.com/ >
+    au < down ; 2007 ; Biomarkers in Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < down ; 2008 ; Biomarkers in Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < down ; 2009 ; Biomarkers in Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < down ; 2010 ; Biomarkers in Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < down ; 2011 ; Biomarkers in Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < down ; 2012 ; Biomarkers in Medicine Volume 6 ; 6 ; http://www.futuremedicine.com/ >
+    au < down ; 2013 ; Biomarkers in Medicine Volume 7 ; 7 ; http://www.futuremedicine.com/ >
+    au < down ; 2014 ; Biomarkers in Medicine Volume 8 ; 8 ; http://www.futuremedicine.com/ >
+    au < down ; 2015 ; Biomarkers in Medicine Volume 9 ; 9 ; http://www.futuremedicine.com/ >
+    au < down ; 2016 ; Biomarkers in Medicine Volume 10 ; 10 ; http://www.futuremedicine.com/ >
+    au < down ; 2017 ; Biomarkers in Medicine Volume 11 ; 11 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; Biomarkers in Medicine Volume 12 ; 12 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; Biomarkers in Medicine Volume 13 ; 13 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; Biomarkers in Medicine Volume 14 ; 14 ; https://www.futuremedicine.com/ >
+    au < down ; 2021 ; Biomarkers in Medicine Volume 15 ; 15 ; https://www.futuremedicine.com/ >
+    au < down ; 2022 ; Biomarkers in Medicine Volume 16 ; 16 ; https://www.futuremedicine.com/ >
+    au < down ; 2023 ; Biomarkers in Medicine Volume 17 ; 17 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2024 ; Biomarkers in Medicine Volume 18 ; 18 ; https://www.futuremedicine.com/ >
 
   }
@@ -69,9 +71,9 @@
     
     param[journal_id] = bem
 
-    au < released ; 2018 ; Bioelectronics in Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; Bioelectronics in Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; Bioelectronics in Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; Bioelectronics in Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; Bioelectronics in Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; Bioelectronics in Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ >
     #Ceased
   }
 
@@ -79,23 +81,24 @@
   
     title < 
       name = Breast Cancer Management ;
-      issn = 1758-1923
+      issn = 1758-1923 ;
+      eissn = 1758-1931
     >
     
     param[journal_id] = bmt
 
-    au < released ; 2012 ; Breast Cancer Management Volume 1 ; 1 ; http://www.futuremedicine.com/ >
-    au < released ; 2013 ; Breast Cancer Management Volume 2 ; 2 ; http://www.futuremedicine.com/ >
-    au < released ; 2014 ; Breast Cancer Management Volume 3 ; 3 ; http://www.futuremedicine.com/ >
-    au < released ; 2015 ; Breast Cancer Management Volume 4 ; 4 ; http://www.futuremedicine.com/ >
-    au < released ; 2016 ; Breast Cancer Management Volume 5 ; 5 ; http://www.futuremedicine.com/ >
-    au < released ; 2017 ; Breast Cancer Management Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; Breast Cancer Management Volume 7 ; 7 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; Breast Cancer Management Volume 8 ; 8 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; Breast Cancer Management Volume 9 ; 9 ; https://www.futuremedicine.com/ >
-    au < released ; 2021 ; Breast Cancer Management Volume 10 ; 10 ; https://www.futuremedicine.com/ >
-    au < released ; 2022 ; Breast Cancer Management Volume 11 ; 11 ; https://www.futuremedicine.com/ >
-    au < released ; 2023 ; Breast Cancer Management Volume 12 ; 12 ; https://www.futuremedicine.com/ >
+    au < down ; 2012 ; Breast Cancer Management Volume 1 ; 1 ; http://www.futuremedicine.com/ >
+    au < down ; 2013 ; Breast Cancer Management Volume 2 ; 2 ; http://www.futuremedicine.com/ >
+    au < down ; 2014 ; Breast Cancer Management Volume 3 ; 3 ; http://www.futuremedicine.com/ >
+    au < down ; 2015 ; Breast Cancer Management Volume 4 ; 4 ; http://www.futuremedicine.com/ >
+    au < down ; 2016 ; Breast Cancer Management Volume 5 ; 5 ; http://www.futuremedicine.com/ >
+    au < down ; 2017 ; Breast Cancer Management Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; Breast Cancer Management Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; Breast Cancer Management Volume 8 ; 8 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; Breast Cancer Management Volume 9 ; 9 ; https://www.futuremedicine.com/ >
+    au < down ; 2021 ; Breast Cancer Management Volume 10 ; 10 ; https://www.futuremedicine.com/ >
+    au < down ; 2022 ; Breast Cancer Management Volume 11 ; 11 ; https://www.futuremedicine.com/ >
+    au < down ; 2023 ; Breast Cancer Management Volume 12 ; 12 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2024 ; Breast Cancer Management Volume 13 ; 13 ; https://www.futuremedicine.com/ >
 
   }
@@ -111,9 +114,9 @@
     param[journal_id] = flp
     #No longer published by Future Medicine 
 
-    au < exists ; 2006 ; Future Lipidology Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < exists ; 2007 ; Future Lipidology Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < exists ; 2008 ; Future Lipidology Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < doNotProcess ; 2006 ; Future Lipidology Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < doNotProcess ; 2007 ; Future Lipidology Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < doNotProcess ; 2008 ; Future Lipidology Volume 3 ; 3 ; https://www.futuremedicine.com/ >
 
   }
 
@@ -156,23 +159,24 @@
   
     title < 
       name = CNS Oncology ;
-      issn = 2045-0907
+      issn = 2045-0907 ;
+      eissn = 2045-0915
     >
     
     param[journal_id] = cns
 
-    au < released ; 2012 ; CNS Oncology Volume 1 ; 1 ; http://www.futuremedicine.com/ >
-    au < released ; 2013 ; CNS Oncology Volume 2 ; 2 ; http://www.futuremedicine.com/ >
-    au < released ; 2014 ; CNS Oncology Volume 3 ; 3 ; http://www.futuremedicine.com/ >
-    au < released ; 2015 ; CNS Oncology Volume 4 ; 4 ; http://www.futuremedicine.com/ >
-    au < released ; 2016 ; CNS Oncology Volume 5 ; 5 ; http://www.futuremedicine.com/ >
-    au < released ; 2017 ; CNS Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; CNS Oncology Volume 7 ; 7 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; CNS Oncology Volume 8 ; 8 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; CNS Oncology Volume 9 ; 9 ; https://www.futuremedicine.com/ >
-    au < released ; 2021 ; CNS Oncology Volume 10 ; 10 ; https://www.futuremedicine.com/ >
-    au < released ; 2022 ; CNS Oncology Volume 11 ; 11 ; https://www.futuremedicine.com/ >
-    au < released ; 2023 ; CNS Oncology Volume 12 ; 12 ; https://www.futuremedicine.com/ >
+    au < down ; 2012 ; CNS Oncology Volume 1 ; 1 ; http://www.futuremedicine.com/ >
+    au < down ; 2013 ; CNS Oncology Volume 2 ; 2 ; http://www.futuremedicine.com/ >
+    au < down ; 2014 ; CNS Oncology Volume 3 ; 3 ; http://www.futuremedicine.com/ >
+    au < down ; 2015 ; CNS Oncology Volume 4 ; 4 ; http://www.futuremedicine.com/ >
+    au < down ; 2016 ; CNS Oncology Volume 5 ; 5 ; http://www.futuremedicine.com/ >
+    au < down ; 2017 ; CNS Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; CNS Oncology Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; CNS Oncology Volume 8 ; 8 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; CNS Oncology Volume 9 ; 9 ; https://www.futuremedicine.com/ >
+    au < down ; 2021 ; CNS Oncology Volume 10 ; 10 ; https://www.futuremedicine.com/ >
+    au < down ; 2022 ; CNS Oncology Volume 11 ; 11 ; https://www.futuremedicine.com/ >
+    au < down ; 2023 ; CNS Oncology Volume 12 ; 12 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2024 ; CNS Oncology Volume 13 ; 13 ; https://www.futuremedicine.com/ >
 
   }
@@ -181,23 +185,24 @@
   
     title < 
       name = Colorectal Cancer ;
-      issn = 1758-194X
+      issn = 1758-194X ;
+      eissn = 1758-1958
     >
     
     param[journal_id] = crc
 
-    au < released ; 2012 ; Colorectal Cancer Volume 1 ; 1 ; http://www.futuremedicine.com/ >
-    au < released ; 2013 ; Colorectal Cancer Volume 2 ; 2 ; http://www.futuremedicine.com/ >
-    au < released ; 2014 ; Colorectal Cancer Volume 3 ; 3 ; http://www.futuremedicine.com/ >
-    au < released ; 2015 ; Colorectal Cancer Volume 4 ; 4 ; http://www.futuremedicine.com/ >
-    au < released ; 2016 ; Colorectal Cancer Volume 5 ; 5 ; http://www.futuremedicine.com/ >
-    au < released ; 2017 ; Colorectal Cancer Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; Colorectal Cancer Volume 7 ; 7 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; Colorectal Cancer Volume 8 ; 8 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; Colorectal Cancer Volume 9 ; 9 ; https://www.futuremedicine.com/ >
-    au < released ; 2021 ; Colorectal Cancer Volume 10 ; 10 ; https://www.futuremedicine.com/ >
-    au < released ; 2022 ; Colorectal Cancer Volume 11 ; 11 ; https://www.futuremedicine.com/ >
-    au < released ; 2023 ; Colorectal Cancer Volume 12 ; 12 ; https://www.futuremedicine.com/ >
+    au < down ; 2012 ; Colorectal Cancer Volume 1 ; 1 ; http://www.futuremedicine.com/ >
+    au < down ; 2013 ; Colorectal Cancer Volume 2 ; 2 ; http://www.futuremedicine.com/ >
+    au < down ; 2014 ; Colorectal Cancer Volume 3 ; 3 ; http://www.futuremedicine.com/ >
+    au < down ; 2015 ; Colorectal Cancer Volume 4 ; 4 ; http://www.futuremedicine.com/ >
+    au < down ; 2016 ; Colorectal Cancer Volume 5 ; 5 ; http://www.futuremedicine.com/ >
+    au < down ; 2017 ; Colorectal Cancer Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; Colorectal Cancer Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; Colorectal Cancer Volume 8 ; 8 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; Colorectal Cancer Volume 9 ; 9 ; https://www.futuremedicine.com/ >
+    au < down ; 2021 ; Colorectal Cancer Volume 10 ; 10 ; https://www.futuremedicine.com/ >
+    au < down ; 2022 ; Colorectal Cancer Volume 11 ; 11 ; https://www.futuremedicine.com/ >
+    au < down ; 2023 ; Colorectal Cancer Volume 12 ; 12 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2024 ; Colorectal Cancer Volume 13 ; 13 ; https://www.futuremedicine.com/ >
 
   }
@@ -211,14 +216,14 @@
     
     param[journal_id] = cnc
 
-    au < released ; 2016 ; Concussion Volume 1 ; 1 ; http://www.futuremedicine.com/ >
-    au < released ; 2017 ; Concussion Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; Concussion Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; Concussion Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; Concussion Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < released ; 2021 ; Concussion Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < released ; 2022 ; Concussion Volume 7 ; 7 ; https://www.futuremedicine.com/ >
-    au < released ; 2023 ; Concussion Volume 8 ; 8 ; https://www.futuremedicine.com/ >
+    au < down ; 2016 ; Concussion Volume 1 ; 1 ; http://www.futuremedicine.com/ >
+    au < down ; 2017 ; Concussion Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; Concussion Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; Concussion Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; Concussion Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < down ; 2021 ; Concussion Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < down ; 2022 ; Concussion Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < down ; 2023 ; Concussion Volume 8 ; 8 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2024 ; Concussion Volume 9 ; 9 ; https://www.futuremedicine.com/ >
 
   }
@@ -234,9 +239,9 @@
     param[journal_id] = dmt
     #No longer published by Future Medicine, no content online
 
-    au < down ; 2012 ; Diabetes Management Volume 2 ; 2 ; http://www.futuremedicine.com/ >
-    au < down ; 2013 ; Diabetes Management Volume 3 ; 3 ; http://www.futuremedicine.com/ >
-    au < down ; 2014 ; Diabetes Management Volume 4 ; 4 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2012 ; Diabetes Management Volume 2 [superseded] ; 2 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2013 ; Diabetes Management Volume 3 [superseded] ; 3 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2014 ; Diabetes Management Volume 4 [superseded] ; 4 ; http://www.futuremedicine.com/ >
     au < down ; 2015 ; Diabetes Management Volume 5 ; 5 ; http://www.futuremedicine.com/ >
 
   }
@@ -245,26 +250,27 @@
   
     title < 
       name = Epigenomics ;
-      issn = 1750-1911
+      issn = 1750-1911 ;
+      eissn = 1750-192X
     >
     
     param[journal_id] = epi
 
-    au < released ; 2009 ; Epigenomics Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < released ; 2010 ; Epigenomics Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < released ; 2011 ; Epigenomics Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < released ; 2012 ; Epigenomics Volume 4 ; 4 ; http://www.futuremedicine.com/ >
-    au < released ; 2013 ; Epigenomics Volume 5 ; 5 ; http://www.futuremedicine.com/ >
-    au < released ; 2014 ; Epigenomics Volume 6 ; 6 ; http://www.futuremedicine.com/ >
-    au < released ; 2015 ; Epigenomics Volume 7 ; 7 ; http://www.futuremedicine.com/ >
-    au < released ; 2016 ; Epigenomics Volume 8 ; 8 ; http://www.futuremedicine.com/ >
-    au < released ; 2017 ; Epigenomics Volume 9 ; 9 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; Epigenomics Volume 10 ; 10 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; Epigenomics Volume 11 ; 11 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; Epigenomics Volume 12 ; 12 ; https://www.futuremedicine.com/ >
-    au < released ; 2021 ; Epigenomics Volume 13 ; 13 ; https://www.futuremedicine.com/ >
-    au < released ; 2022 ; Epigenomics Volume 14 ; 14 ; https://www.futuremedicine.com/ >
-    au < released ; 2023 ; Epigenomics Volume 15 ; 15 ; https://www.futuremedicine.com/ >
+    au < down ; 2009 ; Epigenomics Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < down ; 2010 ; Epigenomics Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < down ; 2011 ; Epigenomics Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < down ; 2012 ; Epigenomics Volume 4 ; 4 ; http://www.futuremedicine.com/ >
+    au < down ; 2013 ; Epigenomics Volume 5 ; 5 ; http://www.futuremedicine.com/ >
+    au < down ; 2014 ; Epigenomics Volume 6 ; 6 ; http://www.futuremedicine.com/ >
+    au < down ; 2015 ; Epigenomics Volume 7 ; 7 ; http://www.futuremedicine.com/ >
+    au < down ; 2016 ; Epigenomics Volume 8 ; 8 ; http://www.futuremedicine.com/ >
+    au < down ; 2017 ; Epigenomics Volume 9 ; 9 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; Epigenomics Volume 10 ; 10 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; Epigenomics Volume 11 ; 11 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; Epigenomics Volume 12 ; 12 ; https://www.futuremedicine.com/ >
+    au < down ; 2021 ; Epigenomics Volume 13 ; 13 ; https://www.futuremedicine.com/ >
+    au < down ; 2022 ; Epigenomics Volume 14 ; 14 ; https://www.futuremedicine.com/ >
+    au < down ; 2023 ; Epigenomics Volume 15 ; 15 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2024 ; Epigenomics Volume 16 ; 16 ; https://www.futuremedicine.com/ >
 
   }
@@ -280,24 +286,24 @@
     param[journal_id] = fca
 
     au < doNotProcess ; 2005 ; Future Cardiology Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < released ; 2006 ; Future Cardiology Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < released ; 2007 ; Future Cardiology Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < released ; 2008 ; Future Cardiology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < released ; 2009 ; Future Cardiology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < down ; 2006 ; Future Cardiology Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < down ; 2007 ; Future Cardiology Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < down ; 2008 ; Future Cardiology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < down ; 2009 ; Future Cardiology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2010 ; Future Cardiology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < released ; 2011 ; Future Cardiology Volume 7 ; 7 ; https://www.futuremedicine.com/ >
-    au < released ; 2012 ; Future Cardiology Volume 8 ; 8 ; http://www.futuremedicine.com/ >
-    au < released ; 2013 ; Future Cardiology Volume 9 ; 9 ; http://www.futuremedicine.com/ >
-    au < released ; 2014 ; Future Cardiology Volume 10 ; 10 ; http://www.futuremedicine.com/ >
-    au < released ; 2015 ; Future Cardiology Volume 11 ; 11 ; http://www.futuremedicine.com/ >
-    au < released ; 2016 ; Future Cardiology Volume 12 ; 12 ; http://www.futuremedicine.com/ >
-    au < released ; 2017 ; Future Cardiology Volume 13 ; 13 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; Future Cardiology Volume 14 ; 14 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; Future Cardiology Volume 15 ; 15 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; Future Cardiology Volume 16 ; 16 ; https://www.futuremedicine.com/ >
-    au < released ; 2021 ; Future Cardiology Volume 17 ; 17 ; https://www.futuremedicine.com/ >
-    au < released ; 2022 ; Future Cardiology Volume 18 ; 18 ; https://www.futuremedicine.com/ >
-    au < released ; 2023 ; Future Cardiology Volume 19 ; 19 ; https://www.futuremedicine.com/ >
+    au < down ; 2011 ; Future Cardiology Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < down ; 2012 ; Future Cardiology Volume 8 ; 8 ; http://www.futuremedicine.com/ >
+    au < down ; 2013 ; Future Cardiology Volume 9 ; 9 ; http://www.futuremedicine.com/ >
+    au < down ; 2014 ; Future Cardiology Volume 10 ; 10 ; http://www.futuremedicine.com/ >
+    au < down ; 2015 ; Future Cardiology Volume 11 ; 11 ; http://www.futuremedicine.com/ >
+    au < down ; 2016 ; Future Cardiology Volume 12 ; 12 ; http://www.futuremedicine.com/ >
+    au < down ; 2017 ; Future Cardiology Volume 13 ; 13 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; Future Cardiology Volume 14 ; 14 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; Future Cardiology Volume 15 ; 15 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; Future Cardiology Volume 16 ; 16 ; https://www.futuremedicine.com/ >
+    au < down ; 2021 ; Future Cardiology Volume 17 ; 17 ; https://www.futuremedicine.com/ >
+    au < down ; 2022 ; Future Cardiology Volume 18 ; 18 ; https://www.futuremedicine.com/ >
+    au < down ; 2023 ; Future Cardiology Volume 19 ; 19 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2024 ; Future Cardiology Volume 20 ; 20 ; https://www.futuremedicine.com/ >
 
   }
@@ -306,29 +312,30 @@
   
     title < 
       name = Future Microbiology ;
-      issn = 1746-0913
+      issn = 1746-0913 ;
+      eissn = 1746-0921
     >
     
     param[journal_id] = fmb
 
-    au < released ; 2006 ; Future Microbiology Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < released ; 2007 ; Future Microbiology Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < released ; 2008 ; Future Microbiology Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < released ; 2009 ; Future Microbiology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < released ; 2010 ; Future Microbiology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < released ; 2011 ; Future Microbiology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < released ; 2012 ; Future Microbiology Volume 7 ; 7 ; http://www.futuremedicine.com/ >
-    au < released ; 2013 ; Future Microbiology Volume 8 ; 8 ; http://www.futuremedicine.com/ >
-    au < released ; 2014 ; Future Microbiology Volume 9 ; 9 ; http://www.futuremedicine.com/ >
-    au < released ; 2015 ; Future Microbiology Volume 10 ; 10 ; http://www.futuremedicine.com/ >
-    au < released ; 2016 ; Future Microbiology Volume 11 ; 11 ; http://www.futuremedicine.com/ >
-    au < released ; 2017 ; Future Microbiology Volume 12 ; 12 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; Future Microbiology Volume 13 ; 13 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; Future Microbiology Volume 14 ; 14 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; Future Microbiology Volume 15 ; 15 ; https://www.futuremedicine.com/ >
-    au < released ; 2021 ; Future Microbiology Volume 16 ; 16 ; https://www.futuremedicine.com/ >
-    au < released ; 2022 ; Future Microbiology Volume 17 ; 17 ; https://www.futuremedicine.com/ >
-    au < released ; 2023 ; Future Microbiology Volume 18 ; 18 ; https://www.futuremedicine.com/ >
+    au < down ; 2006 ; Future Microbiology Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < down ; 2007 ; Future Microbiology Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < down ; 2008 ; Future Microbiology Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < down ; 2009 ; Future Microbiology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < down ; 2010 ; Future Microbiology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < down ; 2011 ; Future Microbiology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < down ; 2012 ; Future Microbiology Volume 7 ; 7 ; http://www.futuremedicine.com/ >
+    au < down ; 2013 ; Future Microbiology Volume 8 ; 8 ; http://www.futuremedicine.com/ >
+    au < down ; 2014 ; Future Microbiology Volume 9 ; 9 ; http://www.futuremedicine.com/ >
+    au < down ; 2015 ; Future Microbiology Volume 10 ; 10 ; http://www.futuremedicine.com/ >
+    au < down ; 2016 ; Future Microbiology Volume 11 ; 11 ; http://www.futuremedicine.com/ >
+    au < down ; 2017 ; Future Microbiology Volume 12 ; 12 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; Future Microbiology Volume 13 ; 13 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; Future Microbiology Volume 14 ; 14 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; Future Microbiology Volume 15 ; 15 ; https://www.futuremedicine.com/ >
+    au < down ; 2021 ; Future Microbiology Volume 16 ; 16 ; https://www.futuremedicine.com/ >
+    au < down ; 2022 ; Future Microbiology Volume 17 ; 17 ; https://www.futuremedicine.com/ >
+    au < down ; 2023 ; Future Microbiology Volume 18 ; 18 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2024 ; Future Microbiology Volume 19 ; 19 ; https://www.futuremedicine.com/ >
 
   }
@@ -343,24 +350,24 @@
     
     param[journal_id] = fnl
 
-    au < released ; 2006 ; Future Neurology Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < released ; 2007 ; Future Neurology Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < released ; 2008 ; Future Neurology Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < released ; 2009 ; Future Neurology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < released ; 2010 ; Future Neurology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < released ; 2011 ; Future Neurology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < released ; 2012 ; Future Neurology Volume 7 ; 7 ; http://www.futuremedicine.com/ >
-    au < released ; 2013 ; Future Neurology Volume 8 ; 8 ; http://www.futuremedicine.com/ >
-    au < released ; 2014 ; Future Neurology Volume 9 ; 9 ; http://www.futuremedicine.com/ >
-    au < released ; 2015 ; Future Neurology Volume 10 ; 10 ; http://www.futuremedicine.com/ >
-    au < released ; 2016 ; Future Neurology Volume 11 ; 11 ; http://www.futuremedicine.com/ >
-    au < released ; 2017 ; Future Neurology Volume 12 ; 12 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; Future Neurology Volume 13 ; 13 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; Future Neurology Volume 14 ; 14 ; https://www.futuremedicine.com/ >
-    au < notReady ; 2020 ; Future Neurology Volume 15 ; 15 ; https://www.futuremedicine.com/ > #500 error
-    au < released ; 2021 ; Future Neurology Volume 16 ; 16 ; https://www.futuremedicine.com/ >
-    au < released ; 2022 ; Future Neurology Volume 17 ; 17 ; https://www.futuremedicine.com/ >
-    au < released ; 2023 ; Future Neurology Volume 18 ; 18 ; https://www.futuremedicine.com/ >
+    au < down ; 2006 ; Future Neurology Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < down ; 2007 ; Future Neurology Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < down ; 2008 ; Future Neurology Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < down ; 2009 ; Future Neurology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < down ; 2010 ; Future Neurology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < down ; 2011 ; Future Neurology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < down ; 2012 ; Future Neurology Volume 7 ; 7 ; http://www.futuremedicine.com/ >
+    au < down ; 2013 ; Future Neurology Volume 8 ; 8 ; http://www.futuremedicine.com/ >
+    au < down ; 2014 ; Future Neurology Volume 9 ; 9 ; http://www.futuremedicine.com/ >
+    au < down ; 2015 ; Future Neurology Volume 10 ; 10 ; http://www.futuremedicine.com/ >
+    au < down ; 2016 ; Future Neurology Volume 11 ; 11 ; http://www.futuremedicine.com/ >
+    au < down ; 2017 ; Future Neurology Volume 12 ; 12 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; Future Neurology Volume 13 ; 13 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; Future Neurology Volume 14 ; 14 ; https://www.futuremedicine.com/ >
+    au < doNotProcess ; 2020 ; Future Neurology Volume 15 ; 15 ; https://www.futuremedicine.com/ > #500 error
+    au < down ; 2021 ; Future Neurology Volume 16 ; 16 ; https://www.futuremedicine.com/ >
+    au < down ; 2022 ; Future Neurology Volume 17 ; 17 ; https://www.futuremedicine.com/ >
+    au < down ; 2023 ; Future Neurology Volume 18 ; 18 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2024 ; Future Neurology Volume 19 ; 19 ; https://www.futuremedicine.com/ >
 
   }
@@ -376,24 +383,24 @@
     param[journal_id] = fon
 
     au < doNotProcess ; 2005 ; Future Oncology Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < released ; 2006 ; Future Oncology Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < released ; 2007 ; Future Oncology Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < down ; 2006 ; Future Oncology Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < down ; 2007 ; Future Oncology Volume 3 ; 3 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2008 ; Future Oncology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < released ; 2009 ; Future Oncology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < notReady ; 2010 ; Future Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ > #500 error
-    au < released ; 2011 ; Future Oncology Volume 7 ; 7 ; https://www.futuremedicine.com/ >
-    au < released ; 2012 ; Future Oncology Volume 8 ; 8 ; http://www.futuremedicine.com/ >
-    au < released ; 2013 ; Future Oncology Volume 9 ; 9 ; http://www.futuremedicine.com/ >
-    au < released ; 2014 ; Future Oncology Volume 10 ; 10 ; http://www.futuremedicine.com/ >
-    au < released ; 2015 ; Future Oncology Volume 11 ; 11 ; http://www.futuremedicine.com/ >
-    au < released ; 2016 ; Future Oncology Volume 12 ; 12 ; http://www.futuremedicine.com/ >
-    au < released ; 2017 ; Future Oncology Volume 13 ; 13 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; Future Oncology Volume 14 ; 14 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; Future Oncology Volume 15 ; 15 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; Future Oncology Volume 16 ; 16 ; https://www.futuremedicine.com/ >
-    au < released ; 2021 ; Future Oncology Volume 17 ; 17 ; https://www.futuremedicine.com/ >
-    au < released ; 2022 ; Future Oncology Volume 18 ; 18 ; https://www.futuremedicine.com/ >
-    au < released ; 2023 ; Future Oncology Volume 19 ; 19 ; https://www.futuremedicine.com/ >
+    au < down ; 2009 ; Future Oncology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < doNotProcess ; 2010 ; Future Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ > #500 error
+    au < down ; 2011 ; Future Oncology Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < down ; 2012 ; Future Oncology Volume 8 ; 8 ; http://www.futuremedicine.com/ >
+    au < down ; 2013 ; Future Oncology Volume 9 ; 9 ; http://www.futuremedicine.com/ >
+    au < down ; 2014 ; Future Oncology Volume 10 ; 10 ; http://www.futuremedicine.com/ >
+    au < down ; 2015 ; Future Oncology Volume 11 ; 11 ; http://www.futuremedicine.com/ >
+    au < down ; 2016 ; Future Oncology Volume 12 ; 12 ; http://www.futuremedicine.com/ >
+    au < down ; 2017 ; Future Oncology Volume 13 ; 13 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; Future Oncology Volume 14 ; 14 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; Future Oncology Volume 15 ; 15 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; Future Oncology Volume 16 ; 16 ; https://www.futuremedicine.com/ >
+    au < down ; 2021 ; Future Oncology Volume 17 ; 17 ; https://www.futuremedicine.com/ >
+    au < down ; 2022 ; Future Oncology Volume 18 ; 18 ; https://www.futuremedicine.com/ >
+    au < down ; 2023 ; Future Oncology Volume 19 ; 19 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2024 ; Future Oncology Volume 20 ; 20 ; https://www.futuremedicine.com/ >
 
   }
@@ -408,9 +415,9 @@
     
     param[journal_id] = frd
 
-    au < released ; 2021 ; Future Rare Diseases Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < released ; 2022 ; Future Rare Diseases Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < released ; 2023 ; Future Rare Diseases Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < down ; 2021 ; Future Rare Diseases Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < down ; 2022 ; Future Rare Diseases Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < down ; 2023 ; Future Rare Diseases Volume 3 ; 3 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2024 ; Future Rare Diseases Volume 4 ; 4 ; https://www.futuremedicine.com/ >
 
   }
@@ -425,24 +432,24 @@
     
     param[journal_id] = fvl
 
-    au < released ; 2006 ; Future Virology Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < released ; 2007 ; Future Virology Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < released ; 2008 ; Future Virology Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < released ; 2009 ; Future Virology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < released ; 2010 ; Future Virology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < released ; 2011 ; Future Virology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < released ; 2012 ; Future Virology Volume 7 ; 7 ; http://www.futuremedicine.com/ >
-    au < released ; 2013 ; Future Virology Volume 8 ; 8 ; http://www.futuremedicine.com/ >
-    au < released ; 2014 ; Future Virology Volume 9 ; 9 ; http://www.futuremedicine.com/ >
-    au < released ; 2015 ; Future Virology Volume 10 ; 10 ; http://www.futuremedicine.com/ >
-    au < released ; 2016 ; Future Virology Volume 11 ; 11 ; http://www.futuremedicine.com/ >
-    au < released ; 2017 ; Future Virology Volume 12 ; 12 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; Future Virology Volume 13 ; 13 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; Future Virology Volume 14 ; 14 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; Future Virology Volume 15 ; 15 ; https://www.futuremedicine.com/ >
-    au < released ; 2021 ; Future Virology Volume 16 ; 16 ; https://www.futuremedicine.com/ >
-    au < released ; 2022 ; Future Virology Volume 17 ; 17 ; https://www.futuremedicine.com/ >
-    au < released ; 2023 ; Future Virology Volume 18 ; 18 ; https://www.futuremedicine.com/ >
+    au < down ; 2006 ; Future Virology Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < down ; 2007 ; Future Virology Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < down ; 2008 ; Future Virology Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < down ; 2009 ; Future Virology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < down ; 2010 ; Future Virology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < down ; 2011 ; Future Virology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < down ; 2012 ; Future Virology Volume 7 ; 7 ; http://www.futuremedicine.com/ >
+    au < down ; 2013 ; Future Virology Volume 8 ; 8 ; http://www.futuremedicine.com/ >
+    au < down ; 2014 ; Future Virology Volume 9 ; 9 ; http://www.futuremedicine.com/ >
+    au < down ; 2015 ; Future Virology Volume 10 ; 10 ; http://www.futuremedicine.com/ >
+    au < down ; 2016 ; Future Virology Volume 11 ; 11 ; http://www.futuremedicine.com/ >
+    au < down ; 2017 ; Future Virology Volume 12 ; 12 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; Future Virology Volume 13 ; 13 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; Future Virology Volume 14 ; 14 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; Future Virology Volume 15 ; 15 ; https://www.futuremedicine.com/ >
+    au < down ; 2021 ; Future Virology Volume 16 ; 16 ; https://www.futuremedicine.com/ >
+    au < down ; 2022 ; Future Virology Volume 17 ; 17 ; https://www.futuremedicine.com/ >
+    au < down ; 2023 ; Future Virology Volume 18 ; 18 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2024 ; Future Virology Volume 19 ; 19 ; https://www.futuremedicine.com/ >
 
   }
@@ -451,14 +458,15 @@
   
     title < 
       name = Future HIV Therapy ;
-      issn = 1746-9600
+      issn = 1746-9600 ;
+      eissn = 1746-9619
     >
     
     param[journal_id] = fht
     comment[continued_by] = 1758-4310
 
-    au < released ; 2007 ; Future HIV Therapy Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < released ; 2008 ; Future HIV Therapy Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < down ; 2007 ; Future HIV Therapy Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < down ; 2008 ; Future HIV Therapy Volume 2 ; 2 ; https://www.futuremedicine.com/ >
     
   }
 
@@ -472,8 +480,8 @@
     param[journal_id] = hiv
     comment[continues] = 1746-9600
 
-    au < released ; 2009 ; HIV Therapy Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < released ; 2010 ; HIV Therapy Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < down ; 2009 ; HIV Therapy Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < down ; 2010 ; HIV Therapy Volume 4 ; 4 ; https://www.futuremedicine.com/ >
     
   }
 
@@ -487,16 +495,16 @@
     
     param[journal_id] = hep
 
-    au < released ; 2014 ; Hepatic Oncology Volume 1 ; 1 ; http://www.futuremedicine.com/ >
-    au < released ; 2015 ; Hepatic Oncology Volume 2 ; 2 ; http://www.futuremedicine.com/ >
-    au < released ; 2016 ; Hepatic Oncology Volume 3 ; 3 ; http://www.futuremedicine.com/ >
-    au < released ; 2017 ; Hepatic Oncology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; Hepatic Oncology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; Hepatic Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; Hepatic Oncology Volume 7 ; 7 ; https://www.futuremedicine.com/ >
-    au < released ; 2021 ; Hepatic Oncology Volume 8 ; 8 ; https://www.futuremedicine.com/ >
-    au < released ; 2022 ; Hepatic Oncology Volume 9 ; 9 ; https://www.futuremedicine.com/ >
-    au < released ; 2023 ; Hepatic Oncology Volume 10 ; 10 ; https://www.futuremedicine.com/ >
+    au < down ; 2014 ; Hepatic Oncology Volume 1 ; 1 ; http://www.futuremedicine.com/ >
+    au < down ; 2015 ; Hepatic Oncology Volume 2 ; 2 ; http://www.futuremedicine.com/ >
+    au < down ; 2016 ; Hepatic Oncology Volume 3 ; 3 ; http://www.futuremedicine.com/ >
+    au < down ; 2017 ; Hepatic Oncology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; Hepatic Oncology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; Hepatic Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; Hepatic Oncology Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < down ; 2021 ; Hepatic Oncology Volume 8 ; 8 ; https://www.futuremedicine.com/ >
+    au < down ; 2022 ; Hepatic Oncology Volume 9 ; 9 ; https://www.futuremedicine.com/ >
+    au < down ; 2023 ; Hepatic Oncology Volume 10 ; 10 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2024 ; Hepatic Oncology Volume 11 ; 11 ; https://www.futuremedicine.com/ >
 
   }
@@ -512,7 +520,7 @@
     #No longer published by Future Medicine, no content online
 
     au < down ; 2012 ; Imaging in Medicine Volume 4 ; 4 ; http://www.futuremedicine.com/ >
-    au < down ; 2013 ; Imaging in Medicine Volume 5 ; 5 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2013 ; Imaging in Medicine Volume 5 [superseded] ; 5 ; http://www.futuremedicine.com/ >
     au < down ; 2014 ; Imaging in Medicine Volume 6 ; 6 ; http://www.futuremedicine.com/ >
 
   }
@@ -527,21 +535,21 @@
     
     param[journal_id] = imt
 
-    au < released ; 2009 ; Immunotherapy Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < released ; 2010 ; Immunotherapy Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < released ; 2011 ; Immunotherapy Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < released ; 2012 ; Immunotherapy Volume 4 ; 4 ; http://www.futuremedicine.com/ >
-    au < released ; 2013 ; Immunotherapy Volume 5 ; 5 ; http://www.futuremedicine.com/ >
-    au < released ; 2014 ; Immunotherapy Volume 6 ; 6 ; http://www.futuremedicine.com/ >
-    au < released ; 2015 ; Immunotherapy Volume 7 ; 7 ; https://www.futuremedicine.com/ >
-    au < released ; 2016 ; Immunotherapy Volume 8 ; 8 ; http://www.futuremedicine.com/ >
-    au < released ; 2017 ; Immunotherapy Volume 9 ; 9 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; Immunotherapy Volume 10 ; 10 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; Immunotherapy Volume 11 ; 11 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; Immunotherapy Volume 12 ; 12 ; https://www.futuremedicine.com/ >
-    au < released ; 2021 ; Immunotherapy Volume 13 ; 13 ; https://www.futuremedicine.com/ >
-    au < released ; 2022 ; Immunotherapy Volume 14 ; 14 ; https://www.futuremedicine.com/ >
-    au < released ; 2023 ; Immunotherapy Volume 15 ; 15 ; https://www.futuremedicine.com/ >
+    au < down ; 2009 ; Immunotherapy Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < down ; 2010 ; Immunotherapy Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < down ; 2011 ; Immunotherapy Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < down ; 2012 ; Immunotherapy Volume 4 ; 4 ; http://www.futuremedicine.com/ >
+    au < down ; 2013 ; Immunotherapy Volume 5 ; 5 ; http://www.futuremedicine.com/ >
+    au < down ; 2014 ; Immunotherapy Volume 6 ; 6 ; http://www.futuremedicine.com/ >
+    au < down ; 2015 ; Immunotherapy Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < down ; 2016 ; Immunotherapy Volume 8 ; 8 ; http://www.futuremedicine.com/ >
+    au < down ; 2017 ; Immunotherapy Volume 9 ; 9 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; Immunotherapy Volume 10 ; 10 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; Immunotherapy Volume 11 ; 11 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; Immunotherapy Volume 12 ; 12 ; https://www.futuremedicine.com/ >
+    au < down ; 2021 ; Immunotherapy Volume 13 ; 13 ; https://www.futuremedicine.com/ >
+    au < down ; 2022 ; Immunotherapy Volume 14 ; 14 ; https://www.futuremedicine.com/ >
+    au < down ; 2023 ; Immunotherapy Volume 15 ; 15 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2024 ; Immunotherapy Volume 16 ; 16 ; https://www.futuremedicine.com/ >
 
   }
@@ -557,10 +565,10 @@
     param[journal_id] = ijr
     #No longer published by Future Medicine, no content online
 
-    au < down ; 2012 ; International Journal of Clinical Rheumatology Volume 7 ; 7 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2012 ; International Journal of Clinical Rheumatology Volume 7 [superseded] ; 7 ; http://www.futuremedicine.com/ >
     au < down ; 2013 ; International Journal of Clinical Rheumatology Volume 8 ; 8 ; http://www.futuremedicine.com/ >
-    au < down ; 2014 ; International Journal of Clinical Rheumatology Volume 9 ; 9 ; http://www.futuremedicine.com/ >
-    au < down ; 2015 ; International Journal of Clinical Rheumatology Volume 10 ; 10 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2014 ; International Journal of Clinical Rheumatology Volume 9 [superseded] ; 9 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2015 ; International Journal of Clinical Rheumatology Volume 10 [superseded] ; 10 ; http://www.futuremedicine.com/ >
 
   }
 
@@ -574,13 +582,13 @@
     
     param[journal_id] = ije
 
-    au < released ; 2014 ; International Journal of Endocrine Oncology Volume 1 ; 1 ; http://www.futuremedicine.com/ >
-    au < released ; 2015 ; International Journal of Endocrine Oncology Volume 2 ; 2 ; http://www.futuremedicine.com/ >
-    au < released ; 2016 ; International Journal of Endocrine Oncology Volume 3 ; 3 ; http://www.futuremedicine.com/ >
-    au < released ; 2017 ; International Journal of Endocrine Oncology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; International Journal of Endocrine Oncology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; International Journal of Endocrine Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; International Journal of Endocrine Oncology Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < down ; 2014 ; International Journal of Endocrine Oncology Volume 1 ; 1 ; http://www.futuremedicine.com/ >
+    au < down ; 2015 ; International Journal of Endocrine Oncology Volume 2 ; 2 ; http://www.futuremedicine.com/ >
+    au < down ; 2016 ; International Journal of Endocrine Oncology Volume 3 ; 3 ; http://www.futuremedicine.com/ >
+    au < down ; 2017 ; International Journal of Endocrine Oncology Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; International Journal of Endocrine Oncology Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; International Journal of Endocrine Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; International Journal of Endocrine Oncology Volume 7 ; 7 ; https://www.futuremedicine.com/ >
 
   }
 
@@ -588,23 +596,24 @@
   
     title < 
       name = International Journal of Hematologic Oncology ;
-      eissn = 2045-1393
+      issn = 2045-1393 ;
+      eissn = 2045-1407
     >
     
     param[journal_id] = ijh
 
-    au < released ; 2012 ; International Journal of Hematologic Oncology Volume 1 ; 1 ; http://www.futuremedicine.com/ >
-    au < released ; 2013 ; International Journal of Hematologic Oncology Volume 2 ; 2 ; http://www.futuremedicine.com/ >
-    au < released ; 2014 ; International Journal of Hematologic Oncology Volume 3 ; 3 ; http://www.futuremedicine.com/ >
-    au < released ; 2015 ; International Journal of Hematologic Oncology Volume 4 ; 4 ; http://www.futuremedicine.com/ >
-    au < released ; 2016 ; International Journal of Hematologic Oncology Volume 5 ; 5 ; http://www.futuremedicine.com/ >
-    au < released ; 2017 ; International Journal of Hematologic Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; International Journal of Hematologic Oncology Volume 7 ; 7 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; International Journal of Hematologic Oncology Volume 8 ; 8 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; International Journal of Hematologic Oncology Volume 9 ; 9 ; https://www.futuremedicine.com/ >
-    au < released ; 2021 ; International Journal of Hematologic Oncology Volume 10 ; 10 ; https://www.futuremedicine.com/ >
-    au < released ; 2022 ; International Journal of Hematologic Oncology Volume 11 ; 11 ; https://www.futuremedicine.com/ >
-    au < released ; 2023 ; International Journal of Hematologic Oncology Volume 12 ; 12 ; https://www.futuremedicine.com/ >
+    au < down ; 2012 ; International Journal of Hematologic Oncology Volume 1 ; 1 ; http://www.futuremedicine.com/ >
+    au < down ; 2013 ; International Journal of Hematologic Oncology Volume 2 ; 2 ; http://www.futuremedicine.com/ >
+    au < down ; 2014 ; International Journal of Hematologic Oncology Volume 3 ; 3 ; http://www.futuremedicine.com/ >
+    au < down ; 2015 ; International Journal of Hematologic Oncology Volume 4 ; 4 ; http://www.futuremedicine.com/ >
+    au < down ; 2016 ; International Journal of Hematologic Oncology Volume 5 ; 5 ; http://www.futuremedicine.com/ >
+    au < down ; 2017 ; International Journal of Hematologic Oncology Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; International Journal of Hematologic Oncology Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; International Journal of Hematologic Oncology Volume 8 ; 8 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; International Journal of Hematologic Oncology Volume 9 ; 9 ; https://www.futuremedicine.com/ >
+    au < down ; 2021 ; International Journal of Hematologic Oncology Volume 10 ; 10 ; https://www.futuremedicine.com/ >
+    au < down ; 2022 ; International Journal of Hematologic Oncology Volume 11 ; 11 ; https://www.futuremedicine.com/ >
+    au < down ; 2023 ; International Journal of Hematologic Oncology Volume 12 ; 12 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2024 ; International Journal of Hematologic Oncology Volume 13 ; 13 ; https://www.futuremedicine.com/ >
 
   }
@@ -620,9 +629,9 @@
     param[journal_id] = ica
     #No longer published by Future Medicine, no content online
 
-    au < down ; 2012 ; Interventional Cardiology Volume 4 ; 4 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2012 ; Interventional Cardiology Volume 4 [superseded] ; 4 ; http://www.futuremedicine.com/ >
     au < down ; 2013 ; Interventional Cardiology Volume 5 ; 5 ; http://www.futuremedicine.com/ >
-    au < down ; 2014 ; Interventional Cardiology Volume 6 ; 6 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2014 ; Interventional Cardiology Volume 6 [superseded] ; 6 ; http://www.futuremedicine.com/ >
     au < down ; 2015 ; Interventional Cardiology Volume 7 ; 7 ; http://www.futuremedicine.com/ >
 
   }
@@ -631,18 +640,19 @@
   
     title < 
       name = Journal of 3D Printing in Medicine ;
-      issn = 2059-4755
+      issn = 2059-4755 ;
+      eissn = 2059-4763
     >
     
     param[journal_id] = 3dp
 
-    au < released ; 2017 ; Journal of 3D Printing in Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; Journal of 3D Printing in Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; Journal of 3D Printing in Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; Journal of 3D Printing in Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < released ; 2021 ; Journal of 3D Printing in Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < released ; 2022 ; Journal of 3D Printing in Medicine Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < released ; 2023 ; Journal of 3D Printing in Medicine Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < down ; 2017 ; Journal of 3D Printing in Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; Journal of 3D Printing in Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; Journal of 3D Printing in Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; Journal of 3D Printing in Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < down ; 2021 ; Journal of 3D Printing in Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < down ; 2022 ; Journal of 3D Printing in Medicine Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < down ; 2023 ; Journal of 3D Printing in Medicine Volume 7 ; 7 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2024 ; Journal of 3D Printing in Medicine Volume 8 ; 8 ; https://www.futuremedicine.com/ >
 
   }
@@ -665,10 +675,9 @@
     au < down ; 2016 ; Journal of Comparative Effectiveness Research Volume 5 ; 5 ; http://www.futuremedicine.com/ >
     au < down ; 2017 ; Journal of Comparative Effectiveness Research Volume 6 ; 6 ; https://www.futuremedicine.com/ >
     au < down ; 2018 ; Journal of Comparative Effectiveness Research Volume 7 ; 7 ; https://www.futuremedicine.com/ >
-
-    au < released ; 2019 ; Journal of Comparative Effectiveness Research Volume 8 ; 8 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; Journal of Comparative Effectiveness Research Volume 9 ; 9 ; https://www.futuremedicine.com/ >
-    au < released ; 2021 ; Journal of Comparative Effectiveness Research Volume 10 ; 10 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; Journal of Comparative Effectiveness Research Volume 8 ; 8 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; Journal of Comparative Effectiveness Research Volume 9 ; 9 ; https://www.futuremedicine.com/ >
+    au < down ; 2021 ; Journal of Comparative Effectiveness Research Volume 10 ; 10 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2022 ; Journal of Comparative Effectiveness Research Volume 11 ; 11 ; https://www.futuremedicine.com/ >
 
   }
@@ -682,18 +691,18 @@
     
     param[journal_id] = lmt
 
-    au < released ; 2012 ; Lung Cancer Management Volume 1 ; 1 ; http://www.futuremedicine.com/ >
-    au < released ; 2013 ; Lung Cancer Management Volume 2 ; 2 ; http://www.futuremedicine.com/ >
-    au < released ; 2014 ; Lung Cancer Management Volume 3 ; 3 ; http://www.futuremedicine.com/ >
-    au < released ; 2015 ; Lung Cancer Management Volume 4 ; 4 ; http://www.futuremedicine.com/ >
-    au < released ; 2016 ; Lung Cancer Management Volume 5 ; 5 ; http://www.futuremedicine.com/ >
-    au < released ; 2017 ; Lung Cancer Management Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; Lung Cancer Management Volume 7 ; 7 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; Lung Cancer Management Volume 8 ; 8 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; Lung Cancer Management Volume 9 ; 9 ; https://www.futuremedicine.com/ >
-    au < released ; 2021 ; Lung Cancer Management Volume 10 ; 10 ; https://www.futuremedicine.com/ >
-    au < released ; 2022 ; Lung Cancer Management Volume 11 ; 11 ; https://www.futuremedicine.com/ >
-    au < released ; 2023 ; Lung Cancer Management Volume 12 ; 12 ; https://www.futuremedicine.com/ >
+    au < down ; 2012 ; Lung Cancer Management Volume 1 ; 1 ; http://www.futuremedicine.com/ >
+    au < down ; 2013 ; Lung Cancer Management Volume 2 ; 2 ; http://www.futuremedicine.com/ >
+    au < down ; 2014 ; Lung Cancer Management Volume 3 ; 3 ; http://www.futuremedicine.com/ >
+    au < down ; 2015 ; Lung Cancer Management Volume 4 ; 4 ; http://www.futuremedicine.com/ >
+    au < down ; 2016 ; Lung Cancer Management Volume 5 ; 5 ; http://www.futuremedicine.com/ >
+    au < down ; 2017 ; Lung Cancer Management Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; Lung Cancer Management Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; Lung Cancer Management Volume 8 ; 8 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; Lung Cancer Management Volume 9 ; 9 ; https://www.futuremedicine.com/ >
+    au < down ; 2021 ; Lung Cancer Management Volume 10 ; 10 ; https://www.futuremedicine.com/ >
+    au < down ; 2022 ; Lung Cancer Management Volume 11 ; 11 ; https://www.futuremedicine.com/ >
+    au < down ; 2023 ; Lung Cancer Management Volume 12 ; 12 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2024 ; Lung Cancer Management Volume 13 ; 13 ; https://www.futuremedicine.com/ >
 
   }
@@ -708,16 +717,16 @@
     
     param[journal_id] = mmt
 
-    au < released ; 2014 ; Melanoma Management Volume 1 ; 1 ; http://www.futuremedicine.com/ >
-    au < released ; 2015 ; Melanoma Management Volume 2 ; 2 ; http://www.futuremedicine.com/ >
-    au < released ; 2016 ; Melanoma Management Volume 3 ; 3 ; http://www.futuremedicine.com/ >
-    au < released ; 2017 ; Melanoma Management Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; Melanoma Management Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; Melanoma Management Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; Melanoma Management Volume 7 ; 7 ; https://www.futuremedicine.com/ >
-    au < released ; 2021 ; Melanoma Management Volume 8 ; 8 ; https://www.futuremedicine.com/ >
-    au < released ; 2022 ; Melanoma Management Volume 9 ; 9 ; https://www.futuremedicine.com/ >
-    au < released ; 2023 ; Melanoma Management Volume 10 ; 10 ; https://www.futuremedicine.com/ >
+    au < down ; 2014 ; Melanoma Management Volume 1 ; 1 ; http://www.futuremedicine.com/ >
+    au < down ; 2015 ; Melanoma Management Volume 2 ; 2 ; http://www.futuremedicine.com/ >
+    au < down ; 2016 ; Melanoma Management Volume 3 ; 3 ; http://www.futuremedicine.com/ >
+    au < down ; 2017 ; Melanoma Management Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; Melanoma Management Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; Melanoma Management Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; Melanoma Management Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < down ; 2021 ; Melanoma Management Volume 8 ; 8 ; https://www.futuremedicine.com/ >
+    au < down ; 2022 ; Melanoma Management Volume 9 ; 9 ; https://www.futuremedicine.com/ >
+    au < down ; 2023 ; Melanoma Management Volume 10 ; 10 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2024 ; Melanoma Management Volume 11 ; 11 ; https://www.futuremedicine.com/ >
 
   }
@@ -732,24 +741,24 @@
     
     param[journal_id] = nnm
 
-    au < released ; 2006 ; Nanomedicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < released ; 2007 ; Nanomedicine Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < released ; 2008 ; Nanomedicine Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < down ; 2006 ; Nanomedicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < down ; 2007 ; Nanomedicine Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < down ; 2008 ; Nanomedicine Volume 3 ; 3 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2009 ; Nanomedicine Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < released ; 2010 ; Nanomedicine Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < released ; 2011 ; Nanomedicine Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < released ; 2012 ; Nanomedicine Volume 7 ; 7 ; http://www.futuremedicine.com/ >
-    au < released ; 2013 ; Nanomedicine Volume 8 ; 8 ; http://www.futuremedicine.com/ >
-    au < released ; 2014 ; Nanomedicine Volume 9 ; 9 ; http://www.futuremedicine.com/ >
-    au < released ; 2015 ; Nanomedicine Volume 10 ; 10 ; http://www.futuremedicine.com/ >
-    au < released ; 2016 ; Nanomedicine Volume 11 ; 11 ; http://www.futuremedicine.com/ >
-    au < released ; 2017 ; Nanomedicine Volume 12 ; 12 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; Nanomedicine Volume 13 ; 13 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; Nanomedicine Volume 14 ; 14 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; Nanomedicine Volume 15 ; 15 ; https://www.futuremedicine.com/ >
-    au < released ; 2021 ; Nanomedicine Volume 16 ; 16 ; https://www.futuremedicine.com/ >
-    au < released ; 2022 ; Nanomedicine Volume 17 ; 17 ; https://www.futuremedicine.com/ >
-    au < released ; 2023 ; Nanomedicine Volume 18 ; 18 ; https://www.futuremedicine.com/ >
+    au < down ; 2010 ; Nanomedicine Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < down ; 2011 ; Nanomedicine Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < down ; 2012 ; Nanomedicine Volume 7 ; 7 ; http://www.futuremedicine.com/ >
+    au < down ; 2013 ; Nanomedicine Volume 8 ; 8 ; http://www.futuremedicine.com/ >
+    au < down ; 2014 ; Nanomedicine Volume 9 ; 9 ; http://www.futuremedicine.com/ >
+    au < down ; 2015 ; Nanomedicine Volume 10 ; 10 ; http://www.futuremedicine.com/ >
+    au < down ; 2016 ; Nanomedicine Volume 11 ; 11 ; http://www.futuremedicine.com/ >
+    au < down ; 2017 ; Nanomedicine Volume 12 ; 12 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; Nanomedicine Volume 13 ; 13 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; Nanomedicine Volume 14 ; 14 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; Nanomedicine Volume 15 ; 15 ; https://www.futuremedicine.com/ >
+    au < down ; 2021 ; Nanomedicine Volume 16 ; 16 ; https://www.futuremedicine.com/ >
+    au < down ; 2022 ; Nanomedicine Volume 17 ; 17 ; https://www.futuremedicine.com/ >
+    au < down ; 2023 ; Nanomedicine Volume 18 ; 18 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2024 ; Nanomedicine Volume 19 ; 19 ; https://www.futuremedicine.com/ >
 
   }
@@ -764,19 +773,19 @@
     
     param[journal_id] = nmt
 
-    au < released ; 2011 ; Neurodegenerative Disease Management Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < released ; 2012 ; Neurodegenerative Disease Management Volume 2 ; 2 ; http://www.futuremedicine.com/ >
-    au < released ; 2013 ; Neurodegenerative Disease Management Volume 3 ; 3 ; http://www.futuremedicine.com/ >
-    au < released ; 2014 ; Neurodegenerative Disease Management Volume 4 ; 4 ; http://www.futuremedicine.com/ >
-    au < released ; 2015 ; Neurodegenerative Disease Management Volume 5 ; 5 ; http://www.futuremedicine.com/ >
-    au < released ; 2016 ; Neurodegenerative Disease Management Volume 6 ; 6 ; http://www.futuremedicine.com/ >
-    au < released ; 2017 ; Neurodegenerative Disease Management Volume 7 ; 7 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; Neurodegenerative Disease Management Volume 8 ; 8 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; Neurodegenerative Disease Management Volume 9 ; 9 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; Neurodegenerative Disease Management Volume 10 ; 10 ; https://www.futuremedicine.com/ >
-    au < released ; 2021 ; Neurodegenerative Disease Management Volume 11 ; 11 ; https://www.futuremedicine.com/ >
-    au < released ; 2022 ; Neurodegenerative Disease Management Volume 12 ; 12 ; https://www.futuremedicine.com/ >
-    au < released ; 2023 ; Neurodegenerative Disease Management Volume 13 ; 13 ; https://www.futuremedicine.com/ >
+    au < down ; 2011 ; Neurodegenerative Disease Management Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < down ; 2012 ; Neurodegenerative Disease Management Volume 2 ; 2 ; http://www.futuremedicine.com/ >
+    au < down ; 2013 ; Neurodegenerative Disease Management Volume 3 ; 3 ; http://www.futuremedicine.com/ >
+    au < down ; 2014 ; Neurodegenerative Disease Management Volume 4 ; 4 ; http://www.futuremedicine.com/ >
+    au < down ; 2015 ; Neurodegenerative Disease Management Volume 5 ; 5 ; http://www.futuremedicine.com/ >
+    au < down ; 2016 ; Neurodegenerative Disease Management Volume 6 ; 6 ; http://www.futuremedicine.com/ >
+    au < down ; 2017 ; Neurodegenerative Disease Management Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; Neurodegenerative Disease Management Volume 8 ; 8 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; Neurodegenerative Disease Management Volume 9 ; 9 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; Neurodegenerative Disease Management Volume 10 ; 10 ; https://www.futuremedicine.com/ >
+    au < down ; 2021 ; Neurodegenerative Disease Management Volume 11 ; 11 ; https://www.futuremedicine.com/ >
+    au < down ; 2022 ; Neurodegenerative Disease Management Volume 12 ; 12 ; https://www.futuremedicine.com/ >
+    au < down ; 2023 ; Neurodegenerative Disease Management Volume 13 ; 13 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2024 ; Neurodegenerative Disease Management Volume 14 ; 14 ; https://www.futuremedicine.com/ >
 
   }
@@ -791,9 +800,9 @@
     param[journal_id] = npy
     #No longer published by Future Medicine, no content online
 
-    au < down ; 2012 ; Neuropsychiatry Volume 2 ; 2 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2012 ; Neuropsychiatry Volume 2 [superseded] ; 2 ; http://www.futuremedicine.com/ >
     au < down ; 2013 ; Neuropsychiatry Volume 3 ; 3 ; http://www.futuremedicine.com/ >
-    au < down ; 2014 ; Neuropsychiatry Volume 4 ; 4 ; http://www.futuremedicine.com/ >
+    au < superseded ; 2014 ; Neuropsychiatry Volume 4 [superseded] ; 4 ; http://www.futuremedicine.com/ >
 
   }
 
@@ -801,24 +810,25 @@
   
     title < 
       name = Pain Management ;
-      issn = 1758-1869
+      issn = 1758-1869;
+      eissn = 1758-1877
     >
     
     param[journal_id] = pmt
 
-    au < released ; 2011 ; Pain Management Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < released ; 2012 ; Pain Management Volume 2 ; 2 ; http://www.futuremedicine.com/ >
-    au < released ; 2013 ; Pain Management Volume 3 ; 3 ; http://www.futuremedicine.com/ >
-    au < released ; 2014 ; Pain Management Volume 4 ; 4 ; http://www.futuremedicine.com/ >
-    au < released ; 2015 ; Pain Management Volume 5 ; 5 ; http://www.futuremedicine.com/ >
-    au < released ; 2016 ; Pain Management Volume 6 ; 6 ; http://www.futuremedicine.com/ >
-    au < released ; 2017 ; Pain Management Volume 7 ; 7 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; Pain Management Volume 8 ; 8 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; Pain Management Volume 9 ; 9 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; Pain Management Volume 10 ; 10 ; https://www.futuremedicine.com/ >
-    au < released ; 2021 ; Pain Management Volume 11 ; 11 ; https://www.futuremedicine.com/ >
-    au < released ; 2022 ; Pain Management Volume 12 ; 12 ; https://www.futuremedicine.com/ >
-    au < released ; 2023 ; Pain Management Volume 13 ; 13 ; https://www.futuremedicine.com/ >
+    au < down ; 2011 ; Pain Management Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < down ; 2012 ; Pain Management Volume 2 ; 2 ; http://www.futuremedicine.com/ >
+    au < down ; 2013 ; Pain Management Volume 3 ; 3 ; http://www.futuremedicine.com/ >
+    au < down ; 2014 ; Pain Management Volume 4 ; 4 ; http://www.futuremedicine.com/ >
+    au < down ; 2015 ; Pain Management Volume 5 ; 5 ; http://www.futuremedicine.com/ >
+    au < down ; 2016 ; Pain Management Volume 6 ; 6 ; http://www.futuremedicine.com/ >
+    au < down ; 2017 ; Pain Management Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; Pain Management Volume 8 ; 8 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; Pain Management Volume 9 ; 9 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; Pain Management Volume 10 ; 10 ; https://www.futuremedicine.com/ >
+    au < down ; 2021 ; Pain Management Volume 11 ; 11 ; https://www.futuremedicine.com/ >
+    au < down ; 2022 ; Pain Management Volume 12 ; 12 ; https://www.futuremedicine.com/ >
+    au < down ; 2023 ; Pain Management Volume 13 ; 13 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2024 ; Pain Management Volume 14 ; 14 ; https://www.futuremedicine.com/ >
 
   }
@@ -833,10 +843,10 @@
     
     param[journal_id] = phe
 
-    au < released ; 2007 ; Pediatric Health Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < released ; 2008 ; Pediatric Health Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < released ; 2009 ; Pediatric Health Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < released ; 2010 ; Pediatric Health Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < down ; 2007 ; Pediatric Health Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < down ; 2008 ; Pediatric Health Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < down ; 2009 ; Pediatric Health Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < down ; 2010 ; Pediatric Health Volume 4 ; 4 ; https://www.futuremedicine.com/ >
    
   }
 
@@ -850,26 +860,26 @@
     
     param[journal_id] = pme
 
-    au < released ; 2004 ; Personalized Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < down ; 2004 ; Personalized Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2005 ; Personalized Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < released ; 2006 ; Personalized Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < released ; 2007 ; Personalized Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < released ; 2008 ; Personalized Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < released ; 2009 ; Personalized Medicine Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < released ; 2010 ; Personalized Medicine Volume 7 ; 7 ; https://www.futuremedicine.com/ >
-    au < released ; 2011 ; Personalized Medicine Volume 8 ; 8 ; https://www.futuremedicine.com/ >
-    au < released ; 2012 ; Personalized Medicine Volume 9 ; 9 ; http://www.futuremedicine.com/ >
-    au < released ; 2013 ; Personalized Medicine Volume 10 ; 10 ; http://www.futuremedicine.com/ >
-    au < released ; 2014 ; Personalized Medicine Volume 11 ; 11 ; http://www.futuremedicine.com/ >
-    au < released ; 2015 ; Personalized Medicine Volume 12 ; 12 ; http://www.futuremedicine.com/ >
-    au < released ; 2016 ; Personalized Medicine Volume 13 ; 13 ; http://www.futuremedicine.com/ >
-    au < released ; 2017 ; Personalized Medicine Volume 14 ; 14 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; Personalized Medicine Volume 15 ; 15 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; Personalized Medicine Volume 16 ; 16 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; Personalized Medicine Volume 17 ; 17 ; https://www.futuremedicine.com/ >
-    au < released ; 2021 ; Personalized Medicine Volume 18 ; 18 ; https://www.futuremedicine.com/ >
-    au < released ; 2022 ; Personalized Medicine Volume 19 ; 19 ; https://www.futuremedicine.com/ >
-    au < released ; 2023 ; Personalized Medicine Volume 20 ; 20 ; https://www.futuremedicine.com/ >
+    au < down ; 2006 ; Personalized Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < down ; 2007 ; Personalized Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < down ; 2008 ; Personalized Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < down ; 2009 ; Personalized Medicine Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < down ; 2010 ; Personalized Medicine Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < down ; 2011 ; Personalized Medicine Volume 8 ; 8 ; https://www.futuremedicine.com/ >
+    au < down ; 2012 ; Personalized Medicine Volume 9 ; 9 ; http://www.futuremedicine.com/ >
+    au < down ; 2013 ; Personalized Medicine Volume 10 ; 10 ; http://www.futuremedicine.com/ >
+    au < down ; 2014 ; Personalized Medicine Volume 11 ; 11 ; http://www.futuremedicine.com/ >
+    au < down ; 2015 ; Personalized Medicine Volume 12 ; 12 ; http://www.futuremedicine.com/ >
+    au < down ; 2016 ; Personalized Medicine Volume 13 ; 13 ; http://www.futuremedicine.com/ >
+    au < down ; 2017 ; Personalized Medicine Volume 14 ; 14 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; Personalized Medicine Volume 15 ; 15 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; Personalized Medicine Volume 16 ; 16 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; Personalized Medicine Volume 17 ; 17 ; https://www.futuremedicine.com/ >
+    au < down ; 2021 ; Personalized Medicine Volume 18 ; 18 ; https://www.futuremedicine.com/ >
+    au < down ; 2022 ; Personalized Medicine Volume 19 ; 19 ; https://www.futuremedicine.com/ >
+    au < down ; 2023 ; Personalized Medicine Volume 20 ; 20 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2024 ; Personalized Medicine Volume 21 ; 21 ; https://www.futuremedicine.com/ >
 
   }
@@ -884,30 +894,30 @@
     
     param[journal_id] = pgs
 
-    au < released ; 2000 ; Pharmacogenomics Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < released ; 2001 ; Pharmacogenomics Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < released ; 2002 ; Pharmacogenomics Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < released ; 2003 ; Pharmacogenomics Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < released ; 2004 ; Pharmacogenomics Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < down ; 2000 ; Pharmacogenomics Volume 1 ; 1 ; https://www.futuremedicine.com/ >
+    au < down ; 2001 ; Pharmacogenomics Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < down ; 2002 ; Pharmacogenomics Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < down ; 2003 ; Pharmacogenomics Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < down ; 2004 ; Pharmacogenomics Volume 5 ; 5 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2005 ; Pharmacogenomics Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < released ; 2006 ; Pharmacogenomics Volume 7 ; 7 ; https://www.futuremedicine.com/ >
-    au < released ; 2007 ; Pharmacogenomics Volume 8 ; 8 ; https://www.futuremedicine.com/ >
-    au < released ; 2008 ; Pharmacogenomics Volume 9 ; 9 ; https://www.futuremedicine.com/ >
-    au < released ; 2009 ; Pharmacogenomics Volume 10 ; 10 ; https://www.futuremedicine.com/ >
-    au < notReady ; 2010 ; Pharmacogenomics Volume 11 ; 11 ; https://www.futuremedicine.com/ > #500 error
-    au < released ; 2011 ; Pharmacogenomics Volume 12 ; 12 ; https://www.futuremedicine.com/ >
-    au < released ; 2012 ; Pharmacogenomics Volume 13 ; 13 ; http://www.futuremedicine.com/ >
-    au < released ; 2013 ; Pharmacogenomics Volume 14 ; 14 ; http://www.futuremedicine.com/ >
-    au < released ; 2014 ; Pharmacogenomics Volume 15 ; 15 ; http://www.futuremedicine.com/ >
-    au < released ; 2015 ; Pharmacogenomics Volume 16 ; 16 ; http://www.futuremedicine.com/ >
-    au < released ; 2016 ; Pharmacogenomics Volume 17 ; 17 ; http://www.futuremedicine.com/ >
-    au < released ; 2017 ; Pharmacogenomics Volume 18 ; 18 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; Pharmacogenomics Volume 19 ; 19 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; Pharmacogenomics Volume 20 ; 20 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; Pharmacogenomics Volume 21 ; 21 ; https://www.futuremedicine.com/ >
-    au < released ; 2021 ; Pharmacogenomics Volume 22 ; 22 ; https://www.futuremedicine.com/ >
-    au < released ; 2022 ; Pharmacogenomics Volume 23 ; 23 ; https://www.futuremedicine.com/ >
-    au < released ; 2023 ; Pharmacogenomics Volume 24 ; 24 ; https://www.futuremedicine.com/ >
+    au < down ; 2006 ; Pharmacogenomics Volume 7 ; 7 ; https://www.futuremedicine.com/ >
+    au < down ; 2007 ; Pharmacogenomics Volume 8 ; 8 ; https://www.futuremedicine.com/ >
+    au < down ; 2008 ; Pharmacogenomics Volume 9 ; 9 ; https://www.futuremedicine.com/ >
+    au < down ; 2009 ; Pharmacogenomics Volume 10 ; 10 ; https://www.futuremedicine.com/ >
+    au < doNotProcess ; 2010 ; Pharmacogenomics Volume 11 ; 11 ; https://www.futuremedicine.com/ > #500 error
+    au < down ; 2011 ; Pharmacogenomics Volume 12 ; 12 ; https://www.futuremedicine.com/ >
+    au < down ; 2012 ; Pharmacogenomics Volume 13 ; 13 ; http://www.futuremedicine.com/ >
+    au < down ; 2013 ; Pharmacogenomics Volume 14 ; 14 ; http://www.futuremedicine.com/ >
+    au < down ; 2014 ; Pharmacogenomics Volume 15 ; 15 ; http://www.futuremedicine.com/ >
+    au < down ; 2015 ; Pharmacogenomics Volume 16 ; 16 ; http://www.futuremedicine.com/ >
+    au < down ; 2016 ; Pharmacogenomics Volume 17 ; 17 ; http://www.futuremedicine.com/ >
+    au < down ; 2017 ; Pharmacogenomics Volume 18 ; 18 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; Pharmacogenomics Volume 19 ; 19 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; Pharmacogenomics Volume 20 ; 20 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; Pharmacogenomics Volume 21 ; 21 ; https://www.futuremedicine.com/ >
+    au < down ; 2021 ; Pharmacogenomics Volume 22 ; 22 ; https://www.futuremedicine.com/ >
+    au < down ; 2022 ; Pharmacogenomics Volume 23 ; 23 ; https://www.futuremedicine.com/ >
+    au < down ; 2023 ; Pharmacogenomics Volume 24 ; 24 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2024 ; Pharmacogenomics Volume 25 ; 25 ; https://www.futuremedicine.com/ >
 
   }
@@ -923,23 +933,23 @@
     param[journal_id] = rme
 
     au < doNotProcess ; 2006 ; Regenerative Medicine Volume 1 ; 1 ; https://www.futuremedicine.com/ >
-    au < released ; 2007 ; Regenerative Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ >
-    au < released ; 2008 ; Regenerative Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ >
-    au < released ; 2009 ; Regenerative Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ >
-    au < released ; 2010 ; Regenerative Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ >
-    au < released ; 2011 ; Regenerative Medicine Volume 6 ; 6 ; https://www.futuremedicine.com/ >
-    au < released ; 2012 ; Regenerative Medicine Volume 7 ; 7 ; http://www.futuremedicine.com/ >
-    au < released ; 2013 ; Regenerative Medicine Volume 8 ; 8 ; http://www.futuremedicine.com/ >
-    au < released ; 2014 ; Regenerative Medicine Volume 9 ; 9 ; http://www.futuremedicine.com/ >
-    au < released ; 2015 ; Regenerative Medicine Volume 10 ; 10 ; http://www.futuremedicine.com/ >
-    au < released ; 2016 ; Regenerative Medicine Volume 11 ; 11 ; http://www.futuremedicine.com/ >
-    au < released ; 2017 ; Regenerative Medicine Volume 12 ; 12 ; https://www.futuremedicine.com/ >
-    au < released ; 2018 ; Regenerative Medicine Volume 13 ; 13 ; https://www.futuremedicine.com/ >
-    au < released ; 2019 ; Regenerative Medicine Volume 14 ; 14 ; https://www.futuremedicine.com/ >
-    au < released ; 2020 ; Regenerative Medicine Volume 15 ; 15 ; https://www.futuremedicine.com/ >
-    au < released ; 2021 ; Regenerative Medicine Volume 16 ; 16 ; https://www.futuremedicine.com/ >
-    au < released ; 2022 ; Regenerative Medicine Volume 17 ; 17 ; https://www.futuremedicine.com/ >
-    au < released ; 2023 ; Regenerative Medicine Volume 18 ; 18 ; https://www.futuremedicine.com/ >
+    au < down ; 2007 ; Regenerative Medicine Volume 2 ; 2 ; https://www.futuremedicine.com/ >
+    au < down ; 2008 ; Regenerative Medicine Volume 3 ; 3 ; https://www.futuremedicine.com/ >
+    au < down ; 2009 ; Regenerative Medicine Volume 4 ; 4 ; https://www.futuremedicine.com/ >
+    au < down ; 2010 ; Regenerative Medicine Volume 5 ; 5 ; https://www.futuremedicine.com/ >
+    au < down ; 2011 ; Regenerative Medicine Volume 6 ; 6 ; https://www.futuremedicine.com/ >
+    au < down ; 2012 ; Regenerative Medicine Volume 7 ; 7 ; http://www.futuremedicine.com/ >
+    au < down ; 2013 ; Regenerative Medicine Volume 8 ; 8 ; http://www.futuremedicine.com/ >
+    au < down ; 2014 ; Regenerative Medicine Volume 9 ; 9 ; http://www.futuremedicine.com/ >
+    au < down ; 2015 ; Regenerative Medicine Volume 10 ; 10 ; http://www.futuremedicine.com/ >
+    au < down ; 2016 ; Regenerative Medicine Volume 11 ; 11 ; http://www.futuremedicine.com/ >
+    au < down ; 2017 ; Regenerative Medicine Volume 12 ; 12 ; https://www.futuremedicine.com/ >
+    au < down ; 2018 ; Regenerative Medicine Volume 13 ; 13 ; https://www.futuremedicine.com/ >
+    au < down ; 2019 ; Regenerative Medicine Volume 14 ; 14 ; https://www.futuremedicine.com/ >
+    au < down ; 2020 ; Regenerative Medicine Volume 15 ; 15 ; https://www.futuremedicine.com/ >
+    au < down ; 2021 ; Regenerative Medicine Volume 16 ; 16 ; https://www.futuremedicine.com/ >
+    au < down ; 2022 ; Regenerative Medicine Volume 17 ; 17 ; https://www.futuremedicine.com/ >
+    au < down ; 2023 ; Regenerative Medicine Volume 18 ; 18 ; https://www.futuremedicine.com/ >
     au < doNotProcess ; 2024 ; Regenerative Medicine Volume 19 ; 19 ; https://www.futuremedicine.com/ >
 
   }

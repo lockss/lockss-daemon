@@ -223,7 +223,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 4 ; Journal of Scientific Innovation in Medicine Volume 2021 ; 2021 ; >
       au < finished ; crawling ; 2022 ; 5 ; Journal of Scientific Innovation in Medicine Volume 2022 ; 2022 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; 6 ; Journal of Scientific Innovation in Medicine Volume 2023 ; 2023 ; >
-      au < expected ; exists ; 2024 ; 7 ; Journal of Scientific Innovation in Medicine Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2024 ; 7 ; Journal of Scientific Innovation in Medicine Volume 2024 ; 2024 ; >
 
   }
 
@@ -502,7 +502,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 8 ; Rural Landscapes: Society, Environment, History Volume 2021 ; 2021 ; >
       au < finished ; crawling ; 2022 ; 9 ; Rural Landscapes: Society, Environment, History Volume 2022 ; 2022 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 10 ; Rural Landscapes: Society, Environment, History Volume 2023 ; 2023 ; >
-      au < expected ; exists ; 2024 ; 11 ; Rural Landscapes: Society, Environment, History Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2024 ; 11 ; Rural Landscapes: Society, Environment, History Volume 2024 ; 2024 ; >
 
   }
 
@@ -783,7 +783,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 6 ; ARENA Journal of Architectural Research Volume 2021 ; 2021 ; >
       au < finished ; crawling ; 2022 ; 7 ; ARENA Journal of Architectural Research Volume 2022 ; 2022 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 8 ; ARENA Journal of Architectural Research Volume 2023 ; 2023 ; >
-      au < expected ; exists ; 2024 ; 9 ; ARENA Journal of Architectural Research Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2024 ; 9 ; ARENA Journal of Architectural Research Volume 2024 ; 2024 ; >
 
   }
 
@@ -2011,18 +2011,18 @@
       param[base_url] = https://account.pmejournal.org/
       param[journal_id] = up-j-pme
 
-      au < crawling ; exists ; 2012 ; 1  ; Perspectives on Medical Education Volume 2012 ; 2012 ; >
-      au < crawling ; exists ; 2013 ; 2  ; Perspectives on Medical Education Volume 2013 ; 2013 ; >
+      au < frozen ; exists ; 2012 ; 1  ; Perspectives on Medical Education Volume 2012 ; 2012 ; >
+      au < frozen ; exists ; 2013 ; 2  ; Perspectives on Medical Education Volume 2013 ; 2013 ; >
       au < frozen ; exists ; 2014 ; 3  ; Perspectives on Medical Education Volume 2014 ; 2014 ; >
       au < frozen ; exists ; 2015 ; 4  ; Perspectives on Medical Education Volume 2015 ; 2015 ; >
-      au < crawling ; exists ; 2016 ; 5  ; Perspectives on Medical Education Volume 2016 ; 2016 ; >
+      au < frozen ; exists ; 2016 ; 5  ; Perspectives on Medical Education Volume 2016 ; 2016 ; >
       au < frozen ; exists ; 2017 ; 6  ; Perspectives on Medical Education Volume 2017 ; 2017 ; >
-      au < crawling ; exists ; 2018 ; 7  ; Perspectives on Medical Education Volume 2018 ; 2018 ; >
+      au < frozen ; exists ; 2018 ; 7  ; Perspectives on Medical Education Volume 2018 ; 2018 ; >
       au < frozen ; exists ; 2019 ; 8  ; Perspectives on Medical Education Volume 2019 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; 9  ; Perspectives on Medical Education Volume 2020 ; 2020 ; >
+      au < frozen ; exists ; 2020 ; 9  ; Perspectives on Medical Education Volume 2020 ; 2020 ; >
       au < frozen ; exists ; 2021 ; 10 ; Perspectives on Medical Education Volume 2021 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; 11 ; Perspectives on Medical Education Volume 2022 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; 12 ; Perspectives on Medical Education Volume 2023 ; 2023 ; >
+      au < frozen ; exists ; 2022 ; 11 ; Perspectives on Medical Education Volume 2022 ; 2022 ; >
+      au < frozen ; exists ; 2023 ; 12 ; Perspectives on Medical Education Volume 2023 ; 2023 ; >
       au < manifest ; exists ; 2024 ; 13 ; Perspectives on Medical Education Volume 2024 ; 2024 ; >
 
   }
@@ -2042,8 +2042,8 @@
       au < doesNotExist ; doesNotExist ; 2019 ; 0 ; Ubiquity Proceedings Volume 2019 ; 2019 ; >
       au < doesNotExist ; doesNotExist ; 2020 ; 0 ; Ubiquity Proceedings Volume 2020 ; 2020 ; >
       au < doesNotExist ; doesNotExist ; 2021 ; 0 ; Ubiquity Proceedings Volume 2021 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; 2022 ; Ubiquity Proceedings Volume 2022 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; 2023 ; Ubiquity Proceedings Volume 2023 ; 2023 ; >
+      au < frozen ; exists ; 2022 ; 2022 ; Ubiquity Proceedings Volume 2022 ; 2022 ; >
+      au < frozen ; exists ; 2023 ; 2023 ; Ubiquity Proceedings Volume 2023 ; 2023 ; >
       au < expected ; exists ; 2024 ; 2024 ; Ubiquity Proceedings Volume 2024 ; 2024 ; >
 
   }
@@ -2085,7 +2085,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 8 ; Journal of Philosophy in Schools Volume 2021 ; 2021 ; > #no substance
       au < finished ; crawling ; 2022 ; 9 ; Journal of Philosophy in Schools Volume 2022 ; 2022 ; reingest3.clockss.org:8083 > #no substance
       au < deepCrawl ; exists ; 2023 ; 10 ; Journal of Philosophy in Schools Volume 2023 ; 2023 ; > #no substance
-      au < expected ; exists ; 2024 ; 11 ; Journal of Philosophy in Schools Volume 2024 ; 2024 ; > #no substance
+      au < manifest ; exists ; 2024 ; 11 ; Journal of Philosophy in Schools Volume 2024 ; 2024 ; > #no substance
 
   }
 }
@@ -2416,7 +2416,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 14 ; International Journal for Court Administration Volume 2021 ; 2021 ; >
       au < finished ; crawling ; 2022 ; 15 ; International Journal for Court Administration Volume 2022 ; 2022 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 16 ; International Journal for Court Administration Volume 2023 ; 2023 ; >
-      au < expected ; exists ; 2024 ; 17 ; International Journal for Court Administration Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2024 ; 17 ; International Journal for Court Administration Volume 2024 ; 2024 ; >
 
   }
 
@@ -2525,7 +2525,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 17 ; Utrecht Law Review Volume 2021 ; 2021 ; >
       au < finished ; crawling ; 2022 ; 18 ; Utrecht Law Review Volume 2022 ; 2022 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2023 ; 19 ; Utrecht Law Review Volume 2023 ; 2023 ; >
-      au < expected ; exists ; 2024 ; 20 ; Utrecht Law Review Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2024 ; 20 ; Utrecht Law Review Volume 2024 ; 2024 ; >
 
   }
 
@@ -2858,7 +2858,7 @@
       au < manifest ; exists ; 1998 ; 3 ; The Journal of Technology Studies Volume 1998 ; 1998 ; >
       au < manifest ; exists ; 1999 ; 4 ; The Journal of Technology Studies Volume 1999 ; 1999 ; >
       au < frozen ; exists ; 2000 ; 5 ; The Journal of Technology Studies Volume 2000 ; 2000 ; >
-      au < crawling ; exists ; 2001 ; 6 ; The Journal of Technology Studies Volume 2001 ; 2001 ; >
+      au < frozen ; exists ; 2001 ; 6 ; The Journal of Technology Studies Volume 2001 ; 2001 ; >
       au < frozen ; exists ; 2002 ; 7 ; The Journal of Technology Studies Volume 2002 ; 2002 ; >
       au < frozen ; exists ; 2003 ; 8 ; The Journal of Technology Studies Volume 2003 ; 2003 ; >
       au < frozen ; exists ; 2004 ; 9 ; The Journal of Technology Studies Volume 2004 ; 2004 ; >
@@ -2867,18 +2867,18 @@
       au < frozen ; exists ; 2007 ; 12 ; The Journal of Technology Studies Volume 2007 ; 2007 ; >
       au < frozen ; exists ; 2008 ; 13 ; The Journal of Technology Studies Volume 2008 ; 2008 ; >
       au < frozen ; exists ; 2009 ; 14 ; The Journal of Technology Studies Volume 2009 ; 2009 ; >
-      au < crawling ; exists ; 2010 ; 15 ; The Journal of Technology Studies Volume 2010 ; 2010 ; >
-      au < crawling ; exists ; 2011 ; 16 ; The Journal of Technology Studies Volume 2011 ; 2011 ; >
-      au < crawling ; exists ; 2012 ; 17 ; The Journal of Technology Studies Volume 2012 ; 2012 ; >
-      au < crawling ; exists ; 2013 ; 18 ; The Journal of Technology Studies Volume 2013 ; 2013 ; >
-      au < crawling ; exists ; 2014 ; 19 ; The Journal of Technology Studies Volume 2014 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; 20 ; The Journal of Technology Studies Volume 2015 ; 2015 ; >
+      au < frozen ; exists ; 2010 ; 15 ; The Journal of Technology Studies Volume 2010 ; 2010 ; >
+      au < frozen ; exists ; 2011 ; 16 ; The Journal of Technology Studies Volume 2011 ; 2011 ; >
+      au < frozen ; exists ; 2012 ; 17 ; The Journal of Technology Studies Volume 2012 ; 2012 ; >
+      au < frozen ; exists ; 2013 ; 18 ; The Journal of Technology Studies Volume 2013 ; 2013 ; >
+      au < frozen ; exists ; 2014 ; 19 ; The Journal of Technology Studies Volume 2014 ; 2014 ; >
+      au < frozen ; exists ; 2015 ; 20 ; The Journal of Technology Studies Volume 2015 ; 2015 ; >
       au < frozen ; exists ; 2016 ; 21 ; The Journal of Technology Studies Volume 2016 ; 2016 ; >
       au < frozen ; exists ; 2017 ; 22 ; The Journal of Technology Studies Volume 2017 ; 2017 ; >
-      au < crawling ; exists ; 2018 ; 23 ; The Journal of Technology Studies Volume 2018 ; 2018 ; >
+      au < frozen ; exists ; 2018 ; 23 ; The Journal of Technology Studies Volume 2018 ; 2018 ; >
       au < frozen ; exists ; 2019 ; 24 ; The Journal of Technology Studies Volume 2019 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; 25 ; The Journal of Technology Studies Volume 2020 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; 26 ; The Journal of Technology Studies Volume 2021 ; 2021 ; >
+      au < frozen ; exists ; 2020 ; 25 ; The Journal of Technology Studies Volume 2020 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; 26 ; The Journal of Technology Studies Volume 2021 ; 2021 ; >
       au < frozen ; exists ; 2022 ; 27 ; The Journal of Technology Studies Volume 2022 ; 2022 ; >
       au < exists ; exists ; 2023 ; 28 ; The Journal of Technology Studies Volume 2023 ; 2023 ; >
       au < manifest ; exists ; 2024 ; 29 ; The Journal of Technology Studies Volume 2024 ; 2024 ; >
@@ -2983,21 +2983,21 @@
       au < frozen ; exists ; 2005 ; 1 ; The International Journal of Servant-Leadership Volume 2005 ; 2005 ; >
       au < frozen ; exists ; 2006 ; 2 ; The International Journal of Servant-Leadership Volume 2006 ; 2006 ; >
       au < frozen ; exists ; 2007 ; 3 ; The International Journal of Servant-Leadership Volume 2007 ; 2007 ; >
-      au < crawling ; exists ; 2008 ; 4 ; The International Journal of Servant-Leadership Volume 2008 ; 2008 ; >
-      au < crawling ; exists ; 2009 ; 5 ; The International Journal of Servant-Leadership Volume 2009 ; 2009 ; >
+      au < frozen ; exists ; 2008 ; 4 ; The International Journal of Servant-Leadership Volume 2008 ; 2008 ; >
+      au < frozen ; exists ; 2009 ; 5 ; The International Journal of Servant-Leadership Volume 2009 ; 2009 ; >
       au < frozen ; exists ; 2010 ; 6 ; The International Journal of Servant-Leadership Volume 2010 ; 2010 ; >
       au < frozen ; exists ; 2011 ; 7 ; The International Journal of Servant-Leadership Volume 2011 ; 2011 ; >
       au < doesNotExist ; doesNotExist ; 2012 ; 8 ; The International Journal of Servant-Leadership Volume 2012 ; 2012 ; >
-      au < crawling ; exists ; 2013 ; 9 ; The International Journal of Servant-Leadership Volume 2013 ; 2013 ; >
+      au < frozen ; exists ; 2013 ; 9 ; The International Journal of Servant-Leadership Volume 2013 ; 2013 ; >
       au < frozen ; exists ; 2014 ; 10 ; The International Journal of Servant-Leadership Volume 2014 ; 2014 ; >
       au < doesNotExist ; doesNotExist ; 2015 ; 0 ; The International Journal of Servant-Leadership Volume 2015 ; 2015 ; >
       au < doesNotExist ; doesNotExist ; 2016 ; 0 ; The International Journal of Servant-Leadership Volume 2016 ; 2016 ; >
       au < frozen ; exists ; 2017 ; 11 ; The International Journal of Servant-Leadership Volume 2017 ; 2017 ; >
       au < frozen ; exists ; 2018 ; 12 ; The International Journal of Servant-Leadership Volume 2018 ; 2018 ; >
       au < frozen ; exists ; 2019 ; 13 ; The International Journal of Servant-Leadership Volume 2019 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; 14 ; The International Journal of Servant-Leadership Volume 2020 ; 2020 ; >
+      au < frozen ; exists ; 2020 ; 14 ; The International Journal of Servant-Leadership Volume 2020 ; 2020 ; >
       au < frozen ; exists ; 2021 ; 15 ; The International Journal of Servant-Leadership Volume 2021 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; 16 ; The International Journal of Servant-Leadership Volume 2022 ; 2022 ; >
+      au < frozen ; exists ; 2022 ; 16 ; The International Journal of Servant-Leadership Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; 17 ; The International Journal of Servant-Leadership Volume 2023 ; 2023 ; >
       au < expected ; exists ; 2024 ; 18 ; The International Journal of Servant-Leadership Volume 2024 ; 2024 ; >
 
@@ -3266,7 +3266,7 @@
       param[journal_id] = s-j-cehh
 
       au < frozen ; exists ; 2004 ; 1 ; Community Ear & Hearing Health Volume 2004 ; 2004 ; >
-      au < crawling ; exists ; 2005 ; 2 ; Community Ear & Hearing Health Volume 2005 ; 2005 ; >
+      au < frozen ; exists ; 2005 ; 2 ; Community Ear & Hearing Health Volume 2005 ; 2005 ; >
       au < frozen ; exists ; 2006 ; 3 ; Community Ear & Hearing Health Volume 2006 ; 2006 ; >
       au < frozen ; exists ; 2007 ; 4 ; Community Ear & Hearing Health Volume 2007 ; 2007 ; >
       au < frozen ; exists ; 2008 ; 5 ; Community Ear & Hearing Health Volume 2008 ; 2008 ; >
@@ -3283,7 +3283,7 @@
       au < finished ; crawling ; 2019 ; 16 ; Community Ear & Hearing Health Volume 2019 ; 2019 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; 17 ; Community Ear & Hearing Health Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2021 ; 18 ; Community Ear & Hearing Health Volume 2021 ; 2021 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2022 ; 19 ; Community Ear & Hearing Health Volume 2022 ; 2022 ; >
+      au < frozen ; exists ; 2022 ; 19 ; Community Ear & Hearing Health Volume 2022 ; 2022 ; >
 
   }
 
@@ -3449,14 +3449,14 @@
       param[journal_id] = isesl-j-ssl
 
       au < frozen ; exists ; 2011 ; 1  ; Scientific Study of Literature Volume 2011 ; 2011 ; >
-      au < crawling ; exists ; 2012 ; 2  ; Scientific Study of Literature Volume 2012 ; 2012 ; >
-      au < crawling ; exists ; 2013 ; 3  ; Scientific Study of Literature Volume 2013 ; 2013 ; >
+      au < frozen ; exists ; 2012 ; 2  ; Scientific Study of Literature Volume 2012 ; 2012 ; >
+      au < frozen ; exists ; 2013 ; 3  ; Scientific Study of Literature Volume 2013 ; 2013 ; >
       au < frozen ; exists ; 2014 ; 4  ; Scientific Study of Literature Volume 2014 ; 2014 ; >
       au < frozen ; exists ; 2015 ; 5  ; Scientific Study of Literature Volume 2015 ; 2015 ; >
       au < frozen ; exists ; 2016 ; 6  ; Scientific Study of Literature Volume 2016 ; 2016 ; >
       au < frozen ; exists ; 2017 ; 7  ; Scientific Study of Literature Volume 2017 ; 2017 ; >
       au < frozen ; exists ; 2018 ; 8  ; Scientific Study of Literature Volume 2018 ; 2018 ; >
-      au < crawling ; exists ; 2019 ; 9  ; Scientific Study of Literature Volume 2019 ; 2019 ; >
+      au < frozen ; exists ; 2019 ; 9  ; Scientific Study of Literature Volume 2019 ; 2019 ; >
       au < frozen ; exists ; 2020 ; 10 ; Scientific Study of Literature Volume 2020 ; 2020 ; >
       au < frozen ; exists ; 2021 ; 11 ; Scientific Study of Literature Volume 2021 ; 2021 ; >
       au < doesNotExist ; doesNotExist ; 2022 ; 0 ; Scientific Study of Literature Volume 2022 ; 2022 ; >

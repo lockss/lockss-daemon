@@ -11,6 +11,20 @@
     implicit < status ; year ; name ; param[volume_name] >
 
   {
+
+    title <
+      name = Geoenergy ;
+      eissn = 2755-1725 ;
+      issnl = 2755-1725
+    >
+
+      param[journal_id] = geoenergy
+
+      au < manifest ; 2023 ; Geological Society of America Bulletin Volume 1 ; 1 >
+      au < manifest ; 2024 ; Geological Society of America Bulletin Volume 2 ; 2 >
+  }
+
+  {
   
     title <
       name = Engineering Geology Special Publications ;
@@ -166,7 +180,7 @@
     au < released ; 2021 ; Geological Society of London Memoirs Volume 57 ; 57 >
     au < released ; 2022 ; Geological Society of London Memoirs Volume 58 ; 58 >
     au < released ; 2022 ; Geological Society of London Memoirs Volume 59 ; 59 >
-    au < exists ; 2022 ; Geological Society of London Memoirs Volume 60 ; 60 >
+    au < manifest ; 2022 ; Geological Society of London Memoirs Volume 60 ; 60 >
     au < exists ; 2022 ; Geological Society of London Memoirs Volume 61 ; 61 >
     au < expected ; 2023 ; Geological Society of London Memoirs Volume 62 ; 62 >
     au < expected ; 2023 ; Geological Society of London Memoirs Volume 63 ; 63 >
@@ -742,7 +756,7 @@
     au < manifest ; 2023 ; Geological Society of London Special Publications Volume 548 ; 548 >
     au < manifest ; 2023 ; Geological Society of London Special Publications Volume 549 ; 549 >
     au < manifest ; 2023 ; Geological Society of London Special Publications Volume 550 ; 550 >
-    au < expected ; 2023 ; Geological Society of London Special Publications Volume 551 ; 551 >
+    au < manifest ; 2023 ; Geological Society of London Special Publications Volume 551 ; 551 >
     au < expected ; 2023 ; Geological Society of London Special Publications Volume 552 ; 552 >
     au < expected ; 2023 ; Geological Society of London Special Publications Volume 553 ; 553 >
     au < expected ; 2023 ; Geological Society of London Special Publications Volume 554 ; 554 >

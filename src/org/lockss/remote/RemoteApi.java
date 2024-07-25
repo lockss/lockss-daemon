@@ -49,7 +49,7 @@ import org.lockss.util.*;
 import org.lockss.util.CloseCallbackInputStream.DeleteFileOnCloseInputStream;
 import org.lockss.mail.*;
 import org.lockss.servlet.ServletUtil;
-import org.apache.commons.collections.map.LinkedMap;
+import org.apache.commons.collections4.map.LinkedMap;
 import org.apache.commons.collections.map.ReferenceMap;
 
 /**
@@ -425,7 +425,7 @@ public class RemoteApi
     return repoMgr.getRepositoryDF(repoName);
   }
 
-  public Map<String,PlatformUtil.DF> getRepositoryMap() {
+  public LinkedMap<String,PlatformUtil.DF> getRepositoryMap() {
     return repoMgr.getRepositoryMap();
   }
 

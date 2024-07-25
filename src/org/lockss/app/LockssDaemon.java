@@ -56,7 +56,7 @@ import org.lockss.remote.*;
 import org.lockss.clockss.*;
 import org.lockss.safenet.*;
 import org.lockss.laaws.*;
-import org.apache.commons.collections.map.LinkedMap;
+import org.apache.commons.collections4.map.LinkedMap;
 
 /**
  * The LOCKSS daemon application

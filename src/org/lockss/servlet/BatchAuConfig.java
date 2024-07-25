@@ -35,7 +35,7 @@ import java.util.List;
 import javax.servlet.*;
 import javax.servlet.http.HttpSession;
 
-import org.apache.commons.collections.map.LinkedMap;
+import org.apache.commons.collections4.map.LinkedMap;
 import org.apache.commons.lang3.mutable.*;
 import org.lockss.config.*;
 import org.lockss.daemon.TitleSet;
@@ -412,9 +412,9 @@ public class BatchAuConfig extends LockssServlet {
     frm.add(new Input(Input.Hidden, ACTION_TAG));
     frm.add(new Input(Input.Hidden, KEY_VERB, verb.valStr));
 
+    LinkedMap<String,PlatformUtil.DF> repoMap = remoteApi.getRepositoryMap();
     if (verb.isAdd) {
       // display df for Add even if only one repo
-      Map<String,PlatformUtil.DF> repoMap = remoteApi.getRepositoryMap();
       frm.add(ServletUtil.makeRepoTable(this, remoteApi,
 					repoMap, KEY_DEFAULT_REPO));
       if (repoFlg) {
@@ -424,7 +424,7 @@ public class BatchAuConfig extends LockssServlet {
 
     MutableInt buttonNumber = new MutableInt(submitButtonNumber);
     frm.add(ServletUtil.makeChooseAus(this, bas.getStatusList().iterator(),
-        verb, repos, auConfs, KEY_AUID, KEY_REPO, FOOT_REPO_CHOICE,
+        verb, repoMap.asList(), auConfs, KEY_AUID, KEY_REPO, FOOT_REPO_CHOICE,
         buttonText, buttonNumber, bas.hasAtLeast(LONG_TABLE_AT_LEAST)));
     submitButtonNumber = buttonNumber.intValue();
 

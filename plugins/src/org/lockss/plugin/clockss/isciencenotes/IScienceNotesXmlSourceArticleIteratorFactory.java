@@ -44,13 +44,14 @@ public class IScienceNotesXmlSourceArticleIteratorFactory implements ArticleIter
                 .setVisitArchiveMembers(true)
                 .setVisitArchiveMembers(getIsArchive()));
 
+        builder.addAspect(XML_PATTERN,
+                XML_REPLACEMENT,
+                ArticleFiles.ROLE_ARTICLE_METADATA);
+
         builder.addAspect(PDF_PATTERN,
                 PDF_REPLACEMENT,
                 ArticleFiles.ROLE_FULL_TEXT_PDF);
 
-        builder.addAspect(XML_PATTERN,
-                XML_REPLACEMENT,
-                ArticleFiles.ROLE_ARTICLE_METADATA);
 
         builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
                 ArticleFiles.ROLE_ARTICLE_METADATA);

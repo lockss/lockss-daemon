@@ -69,6 +69,8 @@ public class SilverchairCommonThemeHtmlHashFilterFactory implements FilterFactor
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-IssueInfo"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget-ArticleNavLinks"),
             HtmlNodeFilters.tagWithAttributeRegex("a", "class", "download-slide"),
+            //https://books.rsc.org/books/edited-volume/2096/chapter/7630738/Metal-Organic-Frameworks-in-Green-Analytical
+            HtmlNodeFilters.tagWithAttributeRegex("span", "class", "title-label"),
             
     };
 

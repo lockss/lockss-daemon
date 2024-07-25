@@ -62,10 +62,10 @@ public class OAPENBooksArticleIteratorFactory implements ArticleIteratorFactory,
 
   protected static final String PATTERN_TEMPLATE = "\"%s(bitstream/)?(%s)\", base_url, resource_id";
 
-  public static final Pattern PDF_PATTERN = Pattern.compile("/(bitstream/)?(handle/.*)(/.*\\.pdf\\?sequence=1&isAllowed=y)", Pattern.CASE_INSENSITIVE);
+  public static final Pattern PDF_PATTERN = Pattern.compile("/(bitstream/)?(handle/.*)(/.*\\.pdf\\?sequence=[0-9]+&isAllowed=y)", Pattern.CASE_INSENSITIVE);
   public static final Pattern FULLTEXT_PATTERN = Pattern.compile("/(.*)(\\?show=full)", Pattern.CASE_INSENSITIVE);
 
-  public static final String PDF_REPLACEMENT = "/bitstream/$2/.*\\.pdf\\?sequence=1&isAllowed=y";
+  public static final String PDF_REPLACEMENT = "/bitstream/$2/.*\\.pdf\\?sequence=sequence=[0-9]+&isAllowed=y";
   public static final String FULLTEXT_REPLACEMENT =  "/$2\\?show=full";
 
 

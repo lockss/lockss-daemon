@@ -32,7 +32,7 @@ import java.io.*;
 import java.nio.file.*;
 import java.net.*;
 import java.util.*;
-import org.apache.commons.collections.map.LinkedMap;
+import org.apache.commons.collections4.map.LinkedMap;
 import org.apache.commons.io.FileUtils;
 
 import org.lockss.app.*;
@@ -501,8 +501,8 @@ public class RepositoryManager
       return platInfo.getDF(path);
   }
 
-  public Map<String,PlatformUtil.DF> getRepositoryMap() {
-    Map<String,PlatformUtil.DF> repoMap = new LinkedMap();
+  public LinkedMap<String,PlatformUtil.DF> getRepositoryMap() {
+    LinkedMap<String,PlatformUtil.DF> repoMap = new LinkedMap<>();
     for (String repo : getRepositoryList()) {
       repoMap.put(repo, getRepositoryDF(repo));
     }

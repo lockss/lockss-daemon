@@ -71,9 +71,9 @@
       au < finished ; finished ; 2019 ; Early Theatre Volume 22 ; 22 ; 2019 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2020 ; Early Theatre Volume 23 ; 23 ; 2020 ; >
       au < deepCrawl ; exists ; 2021 ; Early Theatre Volume 24 ; 24 ; 2021 ; >
-      au < notReady ; exists ; 2022 ; Early Theatre Volume 25 ; 25 ; 2022 ; >#subscription for a year. Wait till 2024
-      au < manifest ; exists ; 2023 ; Early Theatre Volume 26 ; 26 ; 2023 ; >#subscription for a year. Wait till 2024
-      au < expected ; exists ; 2024 ; Early Theatre Volume 27 ; 27 ; 2024 ; >#subscription for a year. Wait till 2024
+      au < manifest ; exists ; 2024 ; Early Theatre Volume 25 ; 25 ; 2022 ; >#subscription for a year. Wait till 2024
+      au < manifest ; exists ; 2025 ; Early Theatre Volume 26 ; 26 ; 2023 ; >#subscription for a year. Wait till 2025
+      au < expected ; exists ; 2026 ; Early Theatre Volume 27 ; 27 ; 2024 ; >#subscription for a year. Wait till 2026
 
     }
 
@@ -178,8 +178,8 @@
       au < finished ; finished ; 2020 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 8 ; 8 ; 2020 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2021 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 9 ; 9 ; 2021 ; >
       au < notReady ; exists ; 2022 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 10 ; 10 ; 2022 ; > #500 Error https://mulpress.mcmaster.ca/hro-ors/article/view/4691
-      au < manifest ; exists ; 2023 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 11 ; 11 ; 2023 ; > #500 Error https://mulpress.mcmaster.ca/hro-ors/article/view/4691
-      au < expected ; exists ; 2024 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 12 ; 12 ; 2024 ; > #500 Error https://mulpress.mcmaster.ca/hro-ors/article/view/4691
+      au < notReady ; exists ; 2023 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 11 ; 11 ; 2023 ; > #500 Error https://mulpress.mcmaster.ca/hro-ors/article/view/5341
+      au < expected ; exists ; 2024 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 12 ; 12 ; 2024 ; >
 
       }
 
@@ -212,7 +212,7 @@
       au < deepCrawl ; exists ; 2021 ; International Journal for Students as Partners Volume 5 ; 5 ; 2021 ; >
       au < deepCrawl ; exists ; 2022 ; International Journal for Students as Partners Volume 6 ; 6 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; International Journal for Students as Partners Volume 7 ; 7 ; 2023 ; >
-      au < expected ; exists ; 2024 ; International Journal for Students as Partners Volume 8 ; 8 ; 2024 ; >
+      au < manifest ; exists ; 2024 ; International Journal for Students as Partners Volume 8 ; 8 ; 2024 ; >
 
       }
 
@@ -371,7 +371,7 @@
       au < finished ; finished ; 2012 ; The Sophie Journal Volume 2 ; 2 ; 2012 ; reingest1.clockss.org:8082 > 
       au < doNotProcess ; exists ; 2015 ; The Sophie Journal Volume 3 ; 3 ; 2015 ; > 
       au < doNotProcess ; exists ; 2017 ; The Sophie Journal Volume 4 ; 4 ; 2017 ; > 
-      au < ready ; exists ; 2020 ; The Sophie Journal Volume 5 ; 5 ; 2020 ; >
+      au < frozen ; exists ; 2020 ; The Sophie Journal Volume 5 ; 5 ; 2020 ; >
 
       }
 

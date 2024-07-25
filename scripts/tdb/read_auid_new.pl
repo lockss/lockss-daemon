@@ -1228,7 +1228,11 @@ while (my $line = <>) {
     if ($resp_p->is_success) {
       my $perm_contents = $resp_p->content;
       my $lcl_tag = $cc_license_tag;
-
+      
+      #printf("%s\n", $req_p->url);
+      #printf("%s\n", $resp_p->request->uri);
+      #printf("%s\n", $req_s->url);
+      #printf("%s\n", $resp_s->request->uri);
       if (($req_p->url ne $resp_p->request->uri) || ($req_s->url ne $resp_s->request->uri)) {
           $vol_title = $resp_p->request->uri . "+" . $resp_s->request->uri;
           $result = "Redirected";
@@ -2056,7 +2060,8 @@ while (my $line = <>) {
             #printf("href=\"pdfplus/%s/%s\"",${doi1},${doi2});
             #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\/${doi2}/)) {
             #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\//)) {  #"
-            if (defined($b_contents) && (($b_contents =~ m/href=\"[^"]+(epdf|pdf|epub|doi\/)(book)?(full)?(plus)?\/${doi1}\//) || ($b_contents =~ m/>Buy PDF</))) {  #"
+            #if (defined($b_contents) && (($b_contents =~ m/href=\"[^"]+(epdf|pdf|epub|doi\/)(book)?(full)?(plus)?\/${doi1}\//) || ($b_contents =~ m/>Buy PDF</))) {  #"
+            if (defined($b_contents) && (($b_contents =~ m/href=\"[^"]+(epdf|pdf|epub\/)(full)?(plus)?\/${doi1}\//) || ($b_contents =~ m/>Buy PDF</) || ($b_contents =~ m/>Buy Online</) || ($b_contents =~ m/>Buy Digital</))) {  #"
                 $result = "Manifest";
             }
         }
@@ -2115,7 +2120,8 @@ while (my $line = <>) {
                       #printf("href=\"pdfplus/%s/%s\"",${doi1},${doi2});
                       #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\/${doi2}/)) {
                       #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+(pdf|epub)(plus)?\/${doi1}\//)) {  #"
-                      if (defined($b_contents) && (($b_contents =~ m/href=\"[^"]+(epdf|pdf|epub|doi\/)(book)?(full)?(plus)?\/${doi1}\//) || ($b_contents =~ m/>Buy PDF</))) {  #"
+                      #if (defined($b_contents) && (($b_contents =~ m/href=\"[^"]+(epdf|pdf|epub|doi\/)(book)?(full)?(plus)?\/${doi1}\//) || ($b_contents =~ m/>Buy PDF</))) {  #"
+                      if (defined($b_contents) && (($b_contents =~ m/href=\"[^"]+(epdf|pdf|epub\/)(full)?(plus)?\/${doi1}\//) || ($b_contents =~ m/>Buy PDF</) || ($b_contents =~ m/>Buy Online</) || ($b_contents =~ m/>Buy Digital</))) {  #"
                           $result = "Manifest";
                       }
                   }
@@ -2563,6 +2569,8 @@ while (my $line = <>) {
     $url = sprintf("%sgateway/book/%s",
       $param{base_url}, $param{volume});
     $start_url = uri_unescape($url);
+        #for reporting at the end 
+        $man_url = $start_url;
     my $req_p = HTTP::Request->new(GET, $perm_url);
     my $resp_p = $ua->request($req_p);
     my $req_s = HTTP::Request->new(GET, $start_url);
@@ -2580,8 +2588,6 @@ while (my $line = <>) {
           }
         }
         $result = "Manifest" ;
-        #for reporting at the end 
-        $man_url = $start_url
       } else {
         $result = "--NO_TAG--"
       }
@@ -2599,6 +2605,8 @@ while (my $line = <>) {
     $url = sprintf("%sgateway/book/%s",
       $param{base_url}, $param{volume});
     $start_url = uri_unescape($url);
+        #for reporting at the end 
+        $man_url = $start_url;
     my $req_p = HTTP::Request->new(GET, $perm_url);
     my $resp_p = $ua->request($req_p);
     my $req_s = HTTP::Request->new(GET, $start_url);
@@ -2616,8 +2624,6 @@ while (my $line = <>) {
           }
         }
         $result = "Manifest" ;
-        #for reporting at the end 
-        $man_url = $start_url
       } else {
         $result = "--NO_TAG--"
       }
@@ -3198,6 +3204,7 @@ while (my $line = <>) {
     }
     sleep(4);
 
+  #European Mathematical Society Deprecated
   } elsif ($plugin eq "EuropeanMathematicalSocietyPlugin") {
     $url = sprintf("%sjournals/all_issues.php?issn=%s",
       $param{base_url}, $param{journal_issn});
@@ -3223,6 +3230,7 @@ while (my $line = <>) {
     }
     sleep(4);
 
+  #European Mathematical Society Deprecated
   } elsif ($plugin eq "ClockssEuropeanMathematicalSocietyPlugin") {
     $url = sprintf("%sjournals/all_issues.php?issn=%s",
       $param{base_url}, $param{journal_issn});
@@ -3248,6 +3256,33 @@ while (my $line = <>) {
     }
     sleep(4);
 
+  #European Mathematical Society API
+  } elsif ($plugin eq "ClockssEuropeanMathematicalSocietyJournalsPlugin") {
+    $url = sprintf("%sserial-issues?filter[serial]=%s&filter[year]=%d",
+      $param{api_url}, $param{journal_serial_number}, $param{year});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+#      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && (man_contents =~ m/issn=$param{journal_issn}.vol=$param{volume_name}/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$param{year}/) && ($man_contents =~ m/$param{journal_serial_number}/)) {
+        if (($man_contents =~ m/\"name\":"([^\"]*)\"/si)) { #"
+          $vol_title = $1 . " Volume " . $param{year};
+        }
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+    }
+    sleep(4);
+
+  #European Mathematical Society Deprecated
   } elsif ($plugin eq "EuropeanMathematicalSocietyBooksPlugin") {
     $url = sprintf("%sbooks/book.php?proj_nr=%s",
       $param{base_url}, $param{book_number});
@@ -3273,6 +3308,7 @@ while (my $line = <>) {
     }
     sleep(4);
 
+  #European Mathematical Society Deprecated
   } elsif ($plugin eq "ClockssEuropeanMathematicalSocietyBooksPlugin") {
     $url = sprintf("%sbooks/book.php?proj_nr=%s",
       $param{base_url}, $param{book_number});

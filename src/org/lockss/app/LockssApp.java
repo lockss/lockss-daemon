@@ -39,7 +39,7 @@ import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.scheduler.*;
 import org.lockss.servlet.*;
-import org.apache.commons.collections.map.LinkedMap;
+import org.apache.commons.collections4.map.LinkedMap;
 
 /**
  * Abstract base class for LOCKSS applications.  Derived from original

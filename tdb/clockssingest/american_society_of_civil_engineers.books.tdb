@@ -3,7 +3,7 @@
   publisher <
     name = American Society of Civil Engineers ;
     info[contract] = 2010 ;
-    info[back] = 2010 ;
+    info[back] = 1980 ;
     info[tester] = 4 ;
     info[platform] = Atypon
   >
@@ -18,6 +18,9 @@
       name = American Society of Civil Engineers Books ;
       type = bookSeries
     >
+    # Not books
+    #au < exists ; exists ; 2015 ;  ; 9780784479001 ; 9780784479001 ; Publishing Proceedings with ASCE : A Guide for Editors and Conference Committees (9780784479001) ; >
+    #au < exists ; exists ; 2023 ;  ; 9780784479018 ; 9780784479018 ; Publishing in ASCE Journals : A Guide for Authors (9780784479018) ; >
     
     au < testing ; exists ; 2019 ; 9780784415337 ; 9780784482278 ; 9780784482278 ; Adventures in Managing Water: RealWorld Engineering Experiences (9780784482278) ; >
     au < testing ; exists ; 2015 ; 9780784413982 ; 9780784479131 ; 9780784479131 ; Building Information Modeling : Applications and Practices (9780784479131) ; >
@@ -341,7 +344,6 @@
     au < manifest ; exists ; 2015 ; 9780784414088 ; 9780784479254 ; 9780784414088 ; Nanomaterials in the Environment (9780784414088) ; >
     au < manifest ; exists ; 2015 ; 9780784413906 ; 9780784479124 ; 9780784413906 ; Ontology in the AEC Industry : A Decade of Research and Development in Architecture, Engineering, and Construction (9780784413906) ; >
     au < manifest ; exists ; 2015 ; 9780784413784 ; 9780784478677 ; 9780784413784 ; Permeable Pavements (9780784413784) ; >
-    au < exists ; exists ; 2015 ;  ; 9780784479001 ; 9780784479001 ; Publishing Proceedings with ASCE : A Guide for Editors and Conference Committees (9780784479001) ; >
     au < manifest ; exists ; 2015 ; 9780784413524 ; 9780784478394 ; 9780784413524 ; Seismic Loads : Guide to the Seismic Load Provisions of ASCE 7-10 (9780784413524) ; >
     au < manifest ; exists ; 2015 ; 9780784413944 ; 9780784479032 ; 9780784413944 ; Too Much Information : Living the Civil Engineering Life (9780784413944) ; >
     au < manifest ; exists ; 2015 ; 9780784413579 ; 9780784478431 ; 9780784413579 ; Waterfront Facilities Inspection and Assessment (9780784413579) ; >
@@ -399,7 +401,7 @@
     au < manifest ; exists ; 2019 ; 9780784415436 ; 9780784482544 ; 9780784415436 ; Inspection and Maintenance of Stormwater Control Measures (9780784415436) ; >
     au < manifest ; exists ; 2019 ; 9780784415467 ; 9780784482636 ; 9780784415467 ; Life-Cycle Design, Assessment, and Maintenance of Structures and Infrastructure Systems (9780784415467) ; >
     au < manifest ; exists ; 2019 ;  ; 9780784482186 ; 9780784482186 ; Prestandard for Performance-Based Wind Design (9780784482186) ; >
-    au < manifest ; exists ; 2019 ; 9780784478998 ;  ; 9780784478998 ; Publishing Books with ASCE : A Guide for Authors, Editors, and Committees (9780784478998) ; >
+    au < exists ; exists ; 2019 ; 9780784478998 ;  ; 9780784478998 ; Publishing Books with ASCE : A Guide for Authors, Editors, and Committees (9780784478998) ; >
     au < manifest ; exists ; 2019 ; 9780784415443 ; 9780784482568 ; 9780784415443 ; Recommended Practice for Fiber-Reinforced Polymer Products for Overhead Utility Line Structures (9780784415443) ; >
     au < manifest ; exists ; 2019 ; 9780784415276 ; 9780784482063 ; 9780784415276 ; Resilience-Based Performance : Next Generation Guidelines for Buildings and Lifeline Standards (9780784415276) ; >
     au < manifest ; exists ; 2019 ; 9780784415474 ; 9780784482643 ; 9780784415474 ; Risk-Based Structural Evaluation Methods : Best Practices and Development of Standards (9780784415474) ; >
@@ -473,7 +475,6 @@
     au < manifest ; exists ; 2023 ; 9780784416167 ; 9780784485149 ; 9780784485149 ; Navigation Channel Sedimentation Solutions (9780784485149) ; >
     au < manifest ; exists ; 2023 ;  ; 9780784485101 ; 9780784485101 ; Premise Plumbing Modeling (9780784485101) ; >
     au < manifest ; exists ; 2023 ;  ; 9780784484739 ; 9780784484739 ; Prestandard for Performance-Based Wind Design V1.1 (9780784484739) ; >
-    au < manifest ; exists ; 2023 ;  ; 9780784479018 ; 9780784479018 ; Publishing in ASCE Journals : A Guide for Authors (9780784479018) ; >
     au < manifest ; exists ; 2023 ;  ; 9780784485057 ; 9780784485057 ; Resilient and Sustainable Buildings (9780784485057) ; >
     au < manifest ; exists ; 2023 ; 9780784416136 ; 9780784484838 ; 9780784416136 ; Snow Loads : Guide to the Snow Load Provisions of ASCE 7-22 (9780784416136) ; >
     au < manifest ; exists ; 2023 ; 9780784416174 ; 9780784485170 ; 9780784485170 ; Substation Structure Design Guide : Recommended Practice for Design and Use (9780784485170) ; >

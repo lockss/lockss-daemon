@@ -3,7 +3,7 @@
   publisher <
     name = Bon View Publishing ;
     info[contract] = 2022 ;
-    info[back] = 2013 ;
+    info[back] = 2022 ;
     info[tester] = 5 ;
     info[poller] = 3 ;
     info[platform] = OJS3 3.3.0.8
@@ -22,7 +22,7 @@
     >
       param[journal_id] = AAES
 
-      au < manifest ; exists ; 2023 ; Archives of Advanced Engineering Science Volume 1 ; 1 ; 2023 ; >
+      au < frozen ; exists ; 2023 ; Archives of Advanced Engineering Science Volume 1 ; 1 ; 2023 ; >
       au < manifest ; exists ; 2024 ; Archives of Advanced Engineering Science Volume 2 ; 2 ; 2024 ; >
 
   }
@@ -116,6 +116,18 @@
       param[journal_id] = MEDIN
 
       au < manifest ; exists ; 2024 ; Medinformatics Volume 1 ; 1 ; 2024 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Comprehensive Business Administration Research ;
+      eissn = 3029-2697
+    >
+      param[journal_id] = JCBAR
+
+      au < manifest ; exists ; 2024 ; Journal of Comprehensive Business Administration Research Volume 1 ; 1 ; 2024 ; >
 
   }
 

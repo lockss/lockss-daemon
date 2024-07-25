@@ -128,6 +128,8 @@
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; AAP News Volume 33 ; 33 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; AAP News Volume 34 ; 34 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; AAP News Volume 35 ; 35 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; AAP News Volume 36 ; 36 ; >
+      au < exists ; exists ; 2016 ; 2016 ; AAP News Volume 37 ; 37 ; >
       #new platform.
   
   }
@@ -422,6 +424,22 @@
       au < finished ; manifest ; 2022 ; 2022 ; Pediatrics in Review Volume 43 ; 43 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Pediatrics in Review Volume 44 ; 44 ; >
       au < manifest ; exists ; 2024 ; 2024 ; Pediatrics in Review Volume 45 ; 45 ; >
+
+  }
+
+  {
+  
+    title <
+      name = Pediatrics Open Science ;
+      issn = ;
+      eissn = 
+    >
+      #param[base_url] = http://pediatrics.aappublications.org/
+
+      param[journal_id] = pediatricsopenscience
+
+      au < expected ; exists ; 2024 ; 2024 ; Pediatrics Open Science Volume 1 ; 1 ; >
+      au < expected ; exists ; 2024 ; 2024 ; Pediatrics Open Science Volume 2 ; 2 ; >
 
   }
 

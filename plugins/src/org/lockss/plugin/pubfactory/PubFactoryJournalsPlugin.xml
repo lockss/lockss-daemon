@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -91,7 +91,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^%scite/(\$002f)?journals(\$002f|/)%s(\$002f|/)%s", base_url, journal_id, volume_name</string>
       <string>1,"^%scite:exportcitation/ris\?t:ac=\$002fjournals(\$002f|/)%s(\$002f|/)%s", base_url, journal_id, volume_name</string>
       <!-- https://journals.ametsoc.org/view/journals/eint/24/2/eiD200001.xml -->
-      <string>1,"^%s(view|downloadpdf|abstract)/journals/%s/%s", base_url, journal_id, volume_name</string>
+      <string>1,"^%s(view|downloadpdf|abstract)/(view/)?journals/%s/%s", base_url, journal_id, volume_name</string>
     </list>
   </entry>
   <entry>
@@ -144,7 +144,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_substance_url_pattern</string>
     <list>
       <!-- https://journals.ametsoc.org/downloadpdf/journals/eint/24/2/eiD200001.xml -->
-      <string>"^%sdownloadpdf/journals/%s/%s/", base_url, journal_id, volume_name</string>
+      <string>"^%sdownloadpdf/(view/)journals/%s/%s/", base_url, journal_id, volume_name</string>
     </list>
   </entry>
   <entry>

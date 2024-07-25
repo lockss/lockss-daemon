@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>9</string>
+        <string>10</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -99,7 +99,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_start_url</string>
-        <!-- https://www.oecd-ilibrary.org/lockss/datasets?year=2019 -->
+        <!-- https://www.oecd-ilibrary.org/lockss/workingpapers?year=2019 -->
         <string>"%slockss/workingpapers?year=%d", base_url, year</string>
     </entry>
     <entry>
@@ -120,6 +120,12 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
+            <!--
+            https://www.oecd-ilibrary.org/deliver/00db7ac4-en.pdf?itemId=%2Fcontent%2Fpaper%2F00db7ac4-en&mimeType=pdf
+            https://www.oecd-ilibrary.org/deliver/0176c74c-en.pdf?itemId=%2Fcontent%2Fpaper%2F0176c74c-en&mimeType=pdf
+            https://www.oecd-ilibrary.org/deliver/025bfebe-en.pdf?itemId=%2Fcontent%2Fpaper%2F025bfebe-en&mimeType=pdf
+            -->
+            <string>"^%sdeliver\/.+\.pdf\?itemId=%%2Fcontent%%2Fpaper%%2F.+&amp;mimeType=pdf", base_url</string>
             <string>"^%s[^/]+\?itemId=(%%2F|/)content(%%2F|/)paper(%%2F|/)", base_url</string>
         </list>
     </entry>

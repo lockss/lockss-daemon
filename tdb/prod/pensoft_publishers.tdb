@@ -1175,6 +1175,7 @@
       >
 
       param[au_oai_set] = jel
+      #Moved to https://www.aup-online.com/
 
       au < down ; 2020 ; 2020 ; Journal of European Landscapes Volume 2020 ; 2020 ; https://journalofeuropeanlandscapes.eu/ >
       au < down ; 2021 ; 2021 ; Journal of European Landscapes Volume 2021 ; 2021 ; https://journalofeuropeanlandscapes.eu/ >
@@ -1309,7 +1310,7 @@
       au < released ; 2021 ; 2021 ; Plant Sociology Volume 2021 ; 2021 ; https://plantsociology.arphahub.com/ >
       au < released ; 2022 ; 2022 ; Plant Sociology Volume 2022 ; 2022 ; https://plantsociology.arphahub.com/ >
       au < released ; 2023 ; 2023 ; Plant Sociology Volume 2023 ; 2023 ; https://plantsociology.arphahub.com/ >
-      au < expected ; 2024 ; 2024 ; Plant Sociology Volume 2024 ; 2024 ; https://plantsociology.arphahub.com/ >
+      au < manifest ; 2024 ; 2024 ; Plant Sociology Volume 2024 ; 2024 ; https://plantsociology.arphahub.com/ >
 
   }
 
@@ -1395,7 +1396,7 @@
       param[au_oai_set] = atomiclayerdeposition
 
       au < released ; 2023 ; 2023 ; Atomic Layer Deposition Volume 2023 ; 2023 ; https://journal.atomiclayerdeposition.com/ >
-      au < expected ; 2024 ; 2024 ; Atomic Layer Deposition Volume 2024 ; 2024 ; https://journal.atomiclayerdeposition.com/ >
+      au < manifest ; 2024 ; 2024 ; Atomic Layer Deposition Volume 2024 ; 2024 ; https://journal.atomiclayerdeposition.com/ >
 
   }
 
@@ -1511,7 +1512,7 @@
         eissn = 2738-8972
       >
 
-      param[au_oai_set] = interventionalcardioforum
+      param[au_oai_set] = icf
 
       au < manifest ; 2021 ; 2021 ; Interventional Cardiology Forum Volume 2021 ; 2021 ; https://interventionalcardioforum.net/ >
       au < manifest ; 2022 ; 2022 ; Interventional Cardiology Forum Volume 2022 ; 2022 ; https://interventionalcardioforum.net/ >

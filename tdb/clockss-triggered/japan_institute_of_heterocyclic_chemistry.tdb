@@ -1,0 +1,128 @@
+{
+
+  publisher <
+    name = Japan Institute of Heterocyclic Chemistry
+  >
+
+  plugin = org.lockss.plugin.heterocycles.ClockssHeterocyclesPlugin
+  param[base_url] = http://www.heterocycles.jp/ 
+  implicit < status ; year ; name ; volume ; param[volume_name] >
+  #Example manifest page: https://www.heterocycles.jp/clockss/manifest/vol/100
+  {
+  
+    title < 
+      name = Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry ;
+      issn = 0385-5414;
+      eissn = 1881-0942
+    >
+    
+    au < down ; 1973 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 1 ; 1 ; 1 >
+    au < down ; 1974 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 2 ; 2 ; 2 >
+    au < down ; 1975 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 3 ; 3 ; 3 >
+    au < down ; 1976 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 4 ; 4 ; 4 >
+    au < down ; 1976 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 5 ; 5 ; 5 >
+    au < down ; 1977 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 6 ; 6 ; 6 >
+    au < down ; 1977 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 7 ; 7 ; 7 >
+    au < down ; 1977 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 8 ; 8 ; 8 >
+    au < down ; 1978 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 9 ; 9 ; 9 >
+    au < down ; 1978 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 10 ; 10 ; 10 >
+    au < down ; 1978 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 11 ; 11 ; 11 >
+    au < down ; 1979 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 12 ; 12 ; 12 >
+    au < down ; 1979 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 13 ; 13 ; 13 >
+    au < down ; 1980 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 14 ; 14 ; 14 >
+    au < down ; 1981 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 15 ; 15 ; 15 >
+    au < down ; 1981 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 16 ; 16 ; 16 >
+    au < down ; 1982 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 17 ; 17 ; 17 >
+    au < down ; 1982 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 18 ; 18 ; 18 >
+    au < down ; 1982 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 19 ; 19 ; 19 >
+    au < down ; 1983 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 20 ; 20 ; 20 >
+    au < down ; 1984 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 21 ; 21 ; 21 >
+    au < down ; 1984 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 22 ; 22 ; 22 >
+    au < down ; 1985 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 23 ; 23 ; 23 >
+    au < down ; 1986 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 24 ; 24 ; 24 >
+    au < down ; 1987 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 25 ; 25 ; 25 >
+    au < down ; 1987 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 26 ; 26 ; 26 >
+    au < down ; 1988 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 27 ; 27 ; 27 >
+    au < down ; 1989 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 28 ; 28 ; 28 >
+    au < down ; 1989 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 29 ; 29 ; 29 >
+    au < down ; 1990 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 30 ; 30 ; 30 >
+    au < down ; 1990 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 31 ; 31 ; 31 >
+    au < down ; 1991 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 32 ; 32 ; 32 >
+    au < down ; 1992 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 33 ; 33 ; 33 >
+    au < down ; 1992 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 34 ; 34 ; 34 >
+    au < down ; 1993 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 35 ; 35 ; 35 >
+    au < down ; 1993 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 36 ; 36 ; 36 >
+    au < down ; 1994 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 37 ; 37 ; 37 >
+    au < down ; 1994 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 38 ; 38 ; 38 >
+    au < down ; 1994 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 39 ; 39 ; 39 >
+    au < down ; 1995 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 40 ; 40 ; 40 >
+    au < down ; 1995 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 41 ; 41 ; 41 >
+    au < down ; 1996 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 42 ; 42 ; 42 >
+    au < down ; 1996 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 43 ; 43 ; 43 >
+    au < down ; 1997 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 44 ; 44 ; 44 >
+    au < down ; 1997 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 45 ; 45 ; 45 >
+    au < down ; 1997 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 46 ; 46 ; 46 >
+    au < down ; 1998 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 47 ; 47 ; 47 >
+    au < down ; 1998 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 48 ; 48 ; 48 >
+    au < down ; 1999 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 49 ; 49 ; 49 >
+    au < down ; 1999 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 50 ; 50 ; 50 >
+    au < down ; 2000 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 51 ; 51 ; 51 >
+    au < down ; 2000 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 52 ; 52 ; 52 >
+    au < down ; 2001 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 53 ; 53 ; 53 >
+    au < down ; 2001 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 54 ; 54 ; 54 >
+    au < down ; 2002 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 55 ; 55 ; 55 >
+    au < down ; 2002 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 56 ; 56 ; 56 >
+    au < down ; 2002 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 57 ; 57 ; 57 >
+    au < down ; 2003 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 58 ; 58 ; 58 >
+    au < down ; 2003 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 59 ; 59 ; 59 >
+    au < down ; 2003 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 60 ; 60 ; 60 >
+    au < down ; 2004 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 61 ; 61 ; 61 >
+    au < down ; 2004 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 62 ; 62 ; 62 >
+    au < down ; 2004 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 63 ; 63 ; 63 >
+    au < down ; 2005 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 64 ; 64 ; 64 >
+    au < down ; 2005 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 65 ; 65 ; 65 >
+    au < down ; 2006 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 66 ; 66 ; 66 >
+    au < down ; 2006 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 67 ; 67 ; 67 >
+    au < down ; 2006 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 68 ; 68 ; 68 >
+    au < down ; 2006 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 69 ; 69 ; 69 >
+    au < down ; 2007 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 70 ; 70 ; 70 >
+    au < down ; 2007 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 71 ; 71 ; 71 >
+    au < down ; 2007 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 72 ; 72 ; 72 >
+    au < down ; 2007 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 73 ; 73 ; 73 >
+    au < down ; 2008 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 74 ; 74 ; 74 >
+    au < down ; 2008 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 75 ; 75 ; 75 >
+    au < down ; 2009 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 76 ; 76 ; 76 >
+    au < down ; 2009 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 77 ; 77 ; 77 >
+    au < down ; 2009 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 78 ; 78 ; 78 >
+    au < down ; 2010 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 79 ; 79 ; 79 >
+    au < down ; 2010 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 80 ; 80 ; 80 >
+    au < down ; 2010 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 81 ; 81 ; 81 >
+    au < down ; 2011 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 82 ; 82 ; 82 >
+    au < down ; 2011 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 83 ; 83 ; 83 >
+    au < down ; 2012 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 84 ; 84 ; 84 >
+    au < down ; 2012 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 85 ; 85 ; 85 >
+    au < down ; 2012 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 86 ; 86 ; 86 >
+    au < down ; 2013 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 87 ; 87 ; 87 >
+    au < down ; 2014 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 88 ; 88 ; 88 >
+    au < down ; 2014 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 89 ; 89 ; 89 >
+    au < down ; 2015 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 90 ; 90 ; 90 >
+    au < down ; 2015 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 91 ; 91 ; 91 >
+    au < down ; 2016 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 92 ; 92 ; 92 >
+    au < down ; 2016 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 93 ; 93 ; 93 >
+    au < down ; 2017 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 94 ; 94 ; 94 >
+    au < down ; 2017 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 95 ; 95 ; 95 >
+    au < down ; 2018 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 96 ; 96 ; 96 >
+    au < down ; 2018 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 97 ; 97 ; 97 >
+    au < down ; 2019 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 98 ; 98 ; 98 >
+    au < down ; 2019 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 99 ; 99 ; 99 >
+    au < down ; 2020 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 100 ; 100 ; 100 >
+    au < down ; 2020 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 101 ; 101 ; 101 >
+    au < down ; 2021 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 102 ; 102 ; 102 >
+    au < down ; 2021 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 103 ; 103 ; 103 >
+    au < down ; 2022 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 104 ; 104 ; 104 >
+    au < down ; 2022 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 105 ; 105 ; 105 >
+    au < down ; 2023 ; Heterocycles: An International Journal for Reviews and Communications in Heterocyclic Chemistry Volume 106 ; 106 ; 106 >
+
+  }
+
+}

@@ -2,7 +2,7 @@
   publisher <
     name = Spandidos Publications ;
     info[contract] = 2018 ;
-    info[back] = 2015 ;
+    info[back] = 2010 ;
     info[tester] = 8 ;
     info[poller] = 7
   >
@@ -121,7 +121,7 @@
       au < deepCrawl ; exists ; 2023 ; International Journal of Oncology Volume 62 ; 62 ; >
       au < deepCrawl ; exists ; 2023 ; International Journal of Oncology Volume 63 ; 63 ; >
       au < manifest ; exists ; 2024 ; International Journal of Oncology Volume 64 ; 64 ; >
-      au < expected ; exists ; 2024 ; International Journal of Oncology Volume 65 ; 65 ; >
+      au < manifest ; exists ; 2024 ; International Journal of Oncology Volume 65 ; 65 ; >
 
     }
   
@@ -348,7 +348,7 @@
       au < deepCrawl ; exists ; 2023 ; Oncology Reports Volume 49 ; 49 ; >
       au < manifest ; exists ; 2023 ; Oncology Reports Volume 50 ; 50 ; >
       au < manifest ; exists ; 2024 ; Oncology Reports Volume 51 ; 51 ; >
-      au < expected ; exists ; 2024 ; Oncology Reports Volume 52 ; 52 ; >
+      au < manifest ; exists ; 2024 ; Oncology Reports Volume 52 ; 52 ; >
 
     }
   
@@ -387,8 +387,8 @@
       au < deepCrawl ; exists ; 2021 ; Molecular Medicine Reports Volume 24 ; 24 ; >
       au < deepCrawl ; exists ; 2022 ; Molecular Medicine Reports Volume 25 ; 25 ; >
       au < deepCrawl ; exists ; 2022 ; Molecular Medicine Reports Volume 26 ; 26 ; >
-      au < crawling ; exists ; 2023 ; Molecular Medicine Reports Volume 27 ; 27 ; >
-      au < crawling ; exists ; 2023 ; Molecular Medicine Reports Volume 28 ; 28 ; >
+      au < frozen ; exists ; 2023 ; Molecular Medicine Reports Volume 27 ; 27 ; >
+      au < frozen ; exists ; 2023 ; Molecular Medicine Reports Volume 28 ; 28 ; >
       au < crawling ; exists ; 2024 ; Molecular Medicine Reports Volume 29 ; 29 ; >
       au < manifest ; exists ; 2024 ; Molecular Medicine Reports Volume 30 ; 30 ; >
 

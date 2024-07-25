@@ -1,7 +1,7 @@
 {
   publisher <
     name = Springer Publishing Company ;
-    info[platform] = HW Scolaris. LXPUB-297 BLOCKED - no access to pdfs
+    info[platform] = HW Scolaris. LXPUB-297
   >
 
     implicit < status ; year ; name ; param[volume_name] >
@@ -36,7 +36,7 @@
     au < released ; 2020 ; Ethical Human Psychology and Psychiatry Volume 22 ; 22 >
     au < released ; 2021 ; Ethical Human Psychology and Psychiatry Volume 23 ; 23 >
     au < released ; 2022 ; Ethical Human Psychology and Psychiatry Volume 24 ; 24 >
-    au < expected ; 2023 ; Ethical Human Psychology and Psychiatry Volume 25 ; 25 >
+    au < manifest ; 2023 ; Ethical Human Psychology and Psychiatry Volume 25 ; 25 >
     au < expected ; 2024 ; Ethical Human Psychology and Psychiatry Volume 26 ; 26 >
 
   }

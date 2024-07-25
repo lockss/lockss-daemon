@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>11</string>
+    <string>12</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -63,7 +63,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>SciELO Journals Plugin</string>
+    <string>SciELO Journals Plugin (Legacy)</string>
   </entry>
   <entry>
     <!--  version at creation -->
@@ -103,7 +103,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"SciELO Journals Plugin, Base URL %s, ISSN %s, Year %d", base_url, journal_issn, year</string>
+    <string>"SciELO Journals Plugin (Legacy), Base URL %s, ISSN %s, Year %d", base_url, journal_issn, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>

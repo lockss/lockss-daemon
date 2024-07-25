@@ -1122,6 +1122,7 @@
     >
     
     param[journal_id] = 49
+    #ceased publishing in January 2023
 
     au < finished ; finished ; 2008 ; Reports in Medical Imaging Volume 1 ; 1 ; 2008 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2009 ; Reports in Medical Imaging Volume 2 ; 2 ; 2009 ; reingest1.clockss.org:8082 >
@@ -1138,8 +1139,6 @@
     au < finished ; finished ; 2020 ; Reports in Medical Imaging Volume 13 ; 13 ; 2020 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2021 ; Reports in Medical Imaging Volume 14 ; 14 ; 2021 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Reports in Medical Imaging Volume 15 ; 15 ; 2022 ; >
-    au < manifest ; exists ; 2023 ; Reports in Medical Imaging Volume 16 ; 16 ; 2023 ; >
-    au < expected ; exists ; 2024 ; Reports in Medical Imaging Volume 17 ; 17 ; 2024 ; >
 
   }
 
@@ -1195,7 +1194,7 @@
     au < finished ; finished ; 2021 ; Open Access Journal of Clinical Trials Volume 13 ; 13 ; 2021 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Open Access Journal of Clinical Trials Volume 14 ; 14 ; 2022 ; >
     au < deepCrawl ; exists ; 2023 ; Open Access Journal of Clinical Trials Volume 15 ; 15 ; 2023 ; >
-    au < expected ; exists ; 2024 ; Open Access Journal of Clinical Trials Volume 16 ; 16 ; 2024 ; >
+    au < manifest ; exists ; 2024 ; Open Access Journal of Clinical Trials Volume 16 ; 16 ; 2024 ; >
 
   }
 
@@ -2987,6 +2986,7 @@
     >
     
     param[journal_id] = 140
+    #ceased publishing in January 2023
 
     au < finished ; finished ; 2013 ; Smart Homecare Technology and TeleHealth Volume 1 ; 1 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Smart Homecare Technology and TeleHealth Volume 2 ; 2 ; 2014 ; >
@@ -2997,8 +2997,6 @@
     au < finished ; finished ; 2020 ; Smart Homecare Technology and TeleHealth Volume 7 ; 7 ; 2020 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Smart Homecare Technology and TeleHealth Volume 8 ; 8 ; 2021 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Smart Homecare Technology and TeleHealth Volume 9 ; 9 ; 2022 ; >
-    au < manifest ; exists ; 2023 ; Smart Homecare Technology and TeleHealth Volume 10 ; 10 ; 2023 ; >
-    au < expected ; exists ; 2024 ; Smart Homecare Technology and TeleHealth Volume 11 ; 11 ; 2024 ; >
 
   }
 
@@ -3010,6 +3008,7 @@
     >
     
     param[journal_id] = 141
+    #Oncolytic Virotherapy ceased publishing in January 2023
 
     au < finished ; finished ; 2012 ; Oncolytic Virotherapy Volume 1 ; 1 ; 2012 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Oncolytic Virotherapy Volume 2 ; 2 ; 2013 ; reingest3.clockss.org:8083 >
@@ -3021,9 +3020,6 @@
     au < finished ; finished ; 2019 ; Oncolytic Virotherapy Volume 8 ; 8 ; 2019 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2020 ; Oncolytic Virotherapy Volume 9 ; 9 ; 2020 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Oncolytic Virotherapy Volume 10 ; 10 ; 2021 ; reingest2.clockss.org:8085 >
-    au < expected ; exists ; 2022 ; Oncolytic Virotherapy Volume 11 ; 11 ; 2022 ; >
-    au < manifest ; exists ; 2023 ; Oncolytic Virotherapy Volume 12 ; 12 ; 2023 ; >
-    au < expected ; exists ; 2024 ; Oncolytic Virotherapy Volume 13 ; 13 ; 2024 ; >
 
   }
 
@@ -3106,6 +3102,7 @@
     >
     
     param[journal_id] = 146
+    #ceased publishing in January 2023
 
     au < finished ; finished ; 2013 ; International Journal of Clinical Transfusion Medicine Volume 1 ; 1 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; International Journal of Clinical Transfusion Medicine Volume 2 ; 2 ; 2014 ; >
@@ -3116,9 +3113,6 @@
     au < finished ; finished ; 2019 ; International Journal of Clinical Transfusion Medicine Volume 7 ; 7 ; 2019 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2020 ; International Journal of Clinical Transfusion Medicine Volume 8 ; 8 ; 2020 ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; International Journal of Clinical Transfusion Medicine Volume 9 ; 9 ; 2021 ; reingest3.clockss.org:8083 >
-    au < expected ; exists ; 2022 ; International Journal of Clinical Transfusion Medicine Volume 10 ; 10 ; 2022 ; >
-    au < manifest ; exists ; 2023 ; International Journal of Clinical Transfusion Medicine Volume 11 ; 11 ; 2023 ; >
-    au < expected ; exists ; 2024 ; International Journal of Clinical Transfusion Medicine Volume 12 ; 12 ; 2024 ; >
 
   }
 
@@ -3130,6 +3124,7 @@
     >
     
     param[journal_id] = 147
+    #relaunched as Research and Reviews in Parkinsonism in 2019
 
     au < finished ; finished ; 2011 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 1 ; 1 ; 2011 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 2 ; 2 ; 2012 ; reingest4.clockss.org:8082 >
@@ -3139,12 +3134,22 @@
     au < finished ; finished ; 2016 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 6 ; 6 ; 2016 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 7 ; 7 ; 2017 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 8 ; 8 ; 2018 ; reingest3.clockss.org:8083 >
-    au < finished ; finished ; 2019 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 9 ; 9 ; 2019 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2020 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 10 ; 10 ; 2020 ; reingest2.clockss.org:8085 >
-    au < finished ; frozen ; 2021 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 11 ; 11 ; 2021 ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2022 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 12 ; 12 ; 2022 ; >
-    au < manifest ; exists ; 2023 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 13 ; 13 ; 2023 ; >
-    au < expected ; exists ; 2024 ; Journal of Parkinsonism & Restless Legs Syndrome Volume 14 ; 14 ; 2024 ; >
+
+  }
+
+  {
+
+    title <
+      name = Research and Reviews in Parkinsonism ;
+      issn = 2624-3733
+    >
+
+    param[journal_id] = 147
+
+    au < finished ; finished ; 2019 ; Research and Reviews in Parkinsonism Volume 9 ; 9 ; 2019 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2020 ; Research and Reviews in Parkinsonism Volume 10 ; 10 ; 2020 ; reingest2.clockss.org:8085 >
+    au < finished ; frozen ; 2021 ; Research and Reviews in Parkinsonism Volume 11 ; 11 ; 2021 ; reingest4.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2022 ; Research and Reviews in Parkinsonism Volume 12 ; 12 ; 2022 ; >
 
   }
 
@@ -3281,6 +3286,7 @@
     >
     
     param[journal_id] = 154
+    #ceased publishing in January 2023
 
     au < finished ; finished ; 2014 ; Robotic Surgery: Research and Reviews Volume 1 ; 1 ; 2014 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Robotic Surgery: Research and Reviews Volume 2 ; 2 ; 2015 ; >
@@ -3290,9 +3296,6 @@
     au < finished ; finished ; 2019 ; Robotic Surgery: Research and Reviews Volume 6 ; 6 ; 2019 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2020 ; Robotic Surgery: Research and Reviews Volume 7 ; 7 ; 2020 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2021 ; Robotic Surgery: Research and Reviews Volume 8 ; 8 ; 2021 ; reingest2.clockss.org:8085 >
-    au < expected ; exists ; 2022 ; Robotic Surgery: Research and Reviews Volume 9 ; 9 ; 2022 ; >
-    au < manifest ; exists ; 2023 ; Robotic Surgery: Research and Reviews Volume 10 ; 10 ; 2023 ; >
-    au < expected ; exists ; 2024 ; Robotic Surgery: Research and Reviews Volume 11 ; 11 ; 2024 ; >
 
   }
 

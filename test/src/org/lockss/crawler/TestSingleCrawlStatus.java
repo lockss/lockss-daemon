@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 import java.util.*;
-import org.apache.commons.collections.map.LinkedMap;
+import org.apache.commons.collections4.map.LinkedMap;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;

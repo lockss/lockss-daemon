@@ -19,15 +19,15 @@
     param[journal_id] = papersinphysics
     implicit < pluginSuffix ; status ; year ; name ; volume ; param[year] ; param[base_url] >
     
-    au < ojs2.OJS2Plugin ; released ; 2009 ; Papers in Physics Volume 1 ; 1 ; 2009 ; http://www.papersinphysics.org/ >
-    au < ojs2.OJS2Plugin ; released ; 2010 ; Papers in Physics Volume 2 ; 2 ; 2010 ; http://www.papersinphysics.org/ >
-    au < ojs2.OJS2Plugin ; released ; 2011 ; Papers in Physics Volume 3 ; 3 ; 2011 ; http://www.papersinphysics.org/ >
-    au < ojs2.OJS2Plugin ; released ; 2012 ; Papers in Physics Volume 4 ; 4 ; 2012 ; http://www.papersinphysics.org/ >
-    au < ojs2.OJS2Plugin ; released ; 2013 ; Papers in Physics Volume 5 ; 5 ; 2013 ; http://www.papersinphysics.org/ >
-    au < ojs2.OJS2Plugin ; released ; 2014 ; Papers in Physics Volume 6 ; 6 ; 2014 ; http://www.papersinphysics.org/ >
-    au < ojs2.OJS2Plugin ; released ; 2015 ; Papers in Physics Volume 7 ; 7 ; 2015 ; http://www.papersinphysics.org/ >
-    au < ojs2.OJS2Plugin ; released ; 2016 ; Papers in Physics Volume 8 ; 8 ; 2016 ; http://www.papersinphysics.org/ >
-    au < ojs2.OJS2Plugin ; released ; 2017 ; Papers in Physics Volume 9 ; 9 ; 2017 ; http://www.papersinphysics.org/ >
+    au < ojs2.OJS2Plugin ; down ; 2009 ; Papers in Physics Volume 1 ; 1 ; 2009 ; http://www.papersinphysics.org/ >
+    au < ojs2.OJS2Plugin ; down ; 2010 ; Papers in Physics Volume 2 ; 2 ; 2010 ; http://www.papersinphysics.org/ >
+    au < ojs2.OJS2Plugin ; down ; 2011 ; Papers in Physics Volume 3 ; 3 ; 2011 ; http://www.papersinphysics.org/ >
+    au < ojs2.OJS2Plugin ; down ; 2012 ; Papers in Physics Volume 4 ; 4 ; 2012 ; http://www.papersinphysics.org/ >
+    au < ojs2.OJS2Plugin ; down ; 2013 ; Papers in Physics Volume 5 ; 5 ; 2013 ; http://www.papersinphysics.org/ >
+    au < ojs2.OJS2Plugin ; down ; 2014 ; Papers in Physics Volume 6 ; 6 ; 2014 ; http://www.papersinphysics.org/ >
+    au < ojs2.OJS2Plugin ; down ; 2015 ; Papers in Physics Volume 7 ; 7 ; 2015 ; http://www.papersinphysics.org/ >
+    au < ojs2.OJS2Plugin ; down ; 2016 ; Papers in Physics Volume 8 ; 8 ; 2016 ; http://www.papersinphysics.org/ >
+    au < ojs2.OJS2Plugin ; down ; 2017 ; Papers in Physics Volume 9 ; 9 ; 2017 ; http://www.papersinphysics.org/ >
     au < ojs3.Ojs3Plugin ; released ; 2018 ; Papers in Physics Volume 10 ; 10 ; 2018 ; https://www.papersinphysics.org/ >
     au < ojs3.Ojs3Plugin ; released ; 2019 ; Papers in Physics Volume 11 ; 11 ; 2019 ; https://www.papersinphysics.org/ >
     au < ojs3.Ojs3Plugin ; released ; 2020 ; Papers in Physics Volume 12 ; 12 ; 2020 ; https://www.papersinphysics.org/ >
