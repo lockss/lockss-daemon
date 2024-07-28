@@ -37,7 +37,7 @@ import java.util.regex.*;
 
 import org.lockss.util.*;
 import org.lockss.util.Constants.RegexpContext;
-import org.lockss.daemon.*;
+import org.lockss.app.*;
 import org.lockss.crawler.*;
 import org.lockss.extractor.*;
 
@@ -48,13 +48,17 @@ import org.lockss.extractor.*;
 public class CuContentIterator extends CuIterator {
   static Logger log = Logger.getLogger("CuContentIterator");
 
+  private LockssDaemon daemon;
   private Iterator<CachedUrlSetNode> cusIter;
   private CachedUrl nextElement = null;
   private CrawlManager crawlMgr;
   private int excluded = 0;
+  private boolean isV2Compat;
 
   public CuContentIterator(Iterator<CachedUrlSetNode> cusIter) {
     this.cusIter = cusIter;
+    daemon = LockssDaemon.getLockssDaemon();
+    isV2Compat = daemon.getPollManager().isV2Compat();
   }
 
   public void remove() {
@@ -99,7 +103,7 @@ public class CuContentIterator extends CuIterator {
 
   CrawlManager getCrawlManager(CachedUrl cu) {
     if (crawlMgr == null) {
-      crawlMgr = AuUtil.getDaemon(cu.getArchivalUnit()).getCrawlManager();
+      crawlMgr = daemon.getCrawlManager();
     }
     return crawlMgr;
   }
@@ -110,12 +114,14 @@ public class CuContentIterator extends CuIterator {
 	!cu.getArchivalUnit().shouldBeCached(url)) {
       boolean shouldRelease = !cu.needsRelease();
       try {
-        CIProperties props = cu.getProperties();
-        String nodeUrl = props.getProperty(CachedUrl.PROPERTY_NODE_URL);
-        if (UrlUtil.isDirectoryRedirection(url, nodeUrl) &&
-            cu.getArchivalUnit().shouldBeCached(nodeUrl)) {
-          log.debug2("Including dirnode: " + nodeUrl);
-          return true;
+        if (isV2Compat) {
+          CIProperties props = cu.getProperties();
+          String nodeUrl = props.getProperty(CachedUrl.PROPERTY_NODE_URL);
+          if (UrlUtil.isDirectoryRedirection(url, nodeUrl) &&
+              cu.getArchivalUnit().shouldBeCached(nodeUrl)) {
+            log.debug2("Including dirnode: " + nodeUrl);
+            return true;
+          }
         }
         log.debug("Excluding " + url);
         excluded++;
