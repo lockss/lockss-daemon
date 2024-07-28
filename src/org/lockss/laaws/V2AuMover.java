@@ -2089,18 +2089,19 @@ public class V2AuMover {
     String errstat = getErrorStatus();
     StringBuilder sb = new StringBuilder();
     sb.append("Status: ");
-    if (STATUS_RUNNING.equals(currentStatus)) {
-
+    if (STATUS_MIGRATING_DATABASE.equals(currentStatus)) {
+      sb.append(currentStatus);
+      res.add(sb.toString());
+      sb = new StringBuilder();
+      sb.append("Copied ");
+      sb.append(StringUtil.sizeToString(dbBytesCopied));
+      sb.append( " of ");
+      sb.append(StringUtil.sizeToString(dbBytesTotal));
+      res.add(sb.toString());
+    }
+    else if (STATUS_RUNNING.equals(currentStatus)) {
       if (opType == OpType.CopySystemSettings) {
         sb.append(currentStatus);
-      }
-      else if (opType == OpType.CopyDatabase) {
-        sb.append(currentStatus);
-        sb.append("Copied");
-        sb.append(dbBytesCopied);
-        sb.append( " of");
-        sb.append(dbBytesTotal);
-        sb.append(" bytes");
       }
       else {
         if (!isAbort()) {
