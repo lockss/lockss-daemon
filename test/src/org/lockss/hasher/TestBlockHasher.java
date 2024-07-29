@@ -1538,6 +1538,24 @@ public class TestBlockHasher extends LockssTestCase {
   }
 
   public void testDirRedir() throws Exception {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_V2_COMPAT, "false");
+    setUpRedirTest();
+    String str = "top index";
+    storeCu(dirAu, DIR_BASE, str, redirProps(DIR_BASE, DIR_BASE + "/"));
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    CachedUrlSet cus = dirAu.getAuCachedUrlSet();
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
+    hasher.setFiltered(false);
+    assertEquals(str.length() * 1, hashToEnd(hasher, 100));
+    assertTrue(hasher.finished());
+    List<Event> events = handRec.getEvents();
+    assertEquals(1, events.size());
+    assertEvent(DIR_BASE, str.length(), "top index", events.get(0), false);
+  }
+
+  public void testDirRedirV2Compat() throws Exception {
     ConfigurationUtil.addFromArgs(BlockHasher.PARAM_V2_COMPAT, "true");
     setUpRedirTest();
     String str = "top index";

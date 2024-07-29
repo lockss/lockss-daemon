@@ -296,9 +296,14 @@ public class LcapRouter
     }
     if (lmsg.getDestinationId() == myPeerId) {
       handleLocalInboundMessage(pmsg, lmsg);
+    } else if (lmsg.getDestinationId() == null) {
+      // debug2 because this is the normal situation talking to
+      // pre-1.78 V1 nodes
+      log.debug2("Message addressed to null, processing anyway: " + pmsg);
+      handleLocalInboundMessage(pmsg, lmsg);
     } else {
       log.warning("Message addressed to " + lmsg.getDestinationId() +
-                  " but forwarding disabled; dropping: " + pmsg);
+                  " but forwarding disabled; processing anyway: " + pmsg);
     }
   }
 

@@ -38,6 +38,7 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.apache.oro.text.regex.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
+import org.lockss.poller.*;
 import org.lockss.repository.AuSuspectUrlVersions;
 import org.lockss.state.*;
 import org.lockss.util.*;
@@ -71,9 +72,8 @@ public class BlockHasher extends GenericHasher {
   /** If true, V2-compatible hashes are produced.  Currently this
    * handles only "foo" -> "foo/" directory reirection and other cases
    * where V2 doesn't handle final slash correctly.. */
-  public static final String PARAM_V2_COMPAT =
-    Configuration.PREFIX + "blockHasher.v2Compatible";
-  public static final boolean DEFAULT_V2_COMPAT = true;
+  public static String PARAM_V2_COMPAT = PollManager.PARAM_V2_COMPAT;
+  public static boolean DEFAULT_V2_COMPAT = PollManager.DEFAULT_V2_COMPAT;
 
   private static final Logger log = Logger.getLogger(BlockHasher.class);
 

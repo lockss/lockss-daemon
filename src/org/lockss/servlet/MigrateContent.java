@@ -62,7 +62,7 @@ public class MigrateContent extends LockssServlet {
 
   static Logger log = Logger.getLogger("MigrateContent");
 
-  static final String SKIP_FINISHED_FOOT = "Uncheding this may result in many spurious verify errors as the content or state of previously copied AUs may have changed.";
+  static final String SKIP_FINISHED_FOOT = "Unchecking this may result in many spurious verify errors as the content or state of previously copied AUs may have changed.";
 
   static String DRY_RUN_FOOT = "Content and other data will be copied, but will continue to be active and possibly modified in V1.";
 

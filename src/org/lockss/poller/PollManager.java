@@ -78,6 +78,13 @@ public class PollManager
   protected static final Logger theLog = Logger.getLogger(PollManager.class);
 
   static final String PREFIX = Configuration.PREFIX + "poll.";
+
+  /** If true, polls will be conducted in a way that allows polling
+   * with LOCKSS 2.x nodes, and precents polling with 1.x that are not
+   * in this mode.  If false, will not poll with 2.x nodes. */
+  public static final String PARAM_V2_COMPAT = PREFIX + "2.0Compatible";
+  public static final boolean DEFAULT_V2_COMPAT = false;
+
   static final String PARAM_RECENT_EXPIRATION = PREFIX + "expireRecent";
 
   static final long DEFAULT_RECENT_EXPIRATION = 2 * DAY;
@@ -686,6 +693,7 @@ public class PollManager
   private static IdentityManager theIDManager;
   private static HashService theHashService;
   private static LcapRouter theRouter = null;
+  private boolean isV2Compat = DEFAULT_V2_COMPAT;
   private RepairPolicy theRepairPolicy = null;
   private V3ReusableRepairer theReusableRepairer = null;
   private AlertManager theAlertManager = null;
@@ -1759,6 +1767,7 @@ public class PollManager
 			Configuration.Differences changedKeys) {
 
     if (changedKeys.contains(PREFIX)) {
+      isV2Compat = newConfig.getBoolean(PARAM_V2_COMPAT, DEFAULT_V2_COMPAT);
       m_recentPollExpireTime =
 	newConfig.getTimeInterval(PARAM_RECENT_EXPIRATION,
 				  DEFAULT_RECENT_EXPIRATION);
@@ -1993,6 +2002,10 @@ public class PollManager
 	pf[i].setConfig(newConfig, oldConfig, changedKeys);
       }
     }
+  }
+
+  public boolean isV2Compat() {
+    return isV2Compat;
   }
 
   public boolean isV3PollPolicyEnabled() {

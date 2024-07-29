@@ -146,7 +146,8 @@ public class TestV3PollFactory extends LockssTestCase {
                         ByteArray.makeRandomBytes(20),
                         opcode,
                         10000, testId, tempDir, theDaemon) {
-        public int getSupportedProtocolRev() {
+        @Override
+        public int getMinorVersion() {
           return -47;
         }
       };

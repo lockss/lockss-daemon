@@ -86,6 +86,7 @@ public class TestV3LcapMessage extends LockssTestCase {
     IdentityManager idmgr = theDaemon.getIdentityManager();
     idmgr.startService();
     mPollMgr = new MockPollManager();
+    mPollMgr.initService(theDaemon);
     theDaemon.setPollManager(mPollMgr);
     try {
       m_testID = idmgr.stringToPeerIdentity("127.0.0.1");
@@ -161,12 +162,25 @@ public class TestV3LcapMessage extends LockssTestCase {
   }
 
   public void testTestMessageToString() throws IOException {
+    ConfigurationUtil.addFromArgs(PollManager.PARAM_V2_COMPAT, "false");
+    testTestMessageToString(false);
+  }
+
+  public void testTestMessageToStringV2Compat() throws IOException {
+    ConfigurationUtil.addFromArgs(PollManager.PARAM_V2_COMPAT, "true");
+    testTestMessageToString(true);
+  }
+
+  public void testTestMessageToString(boolean isV2Compat) throws IOException {
+    // Remake the msg now that V@ compat is set.
+    m_testMsg = this.makeTestVoteMessage(m_testVoteBlocks);
     String expectedResult = "[V3LcapMessage: from " + m_testID.toString() +
       ", Vote AUID: TestAU_1.0 " +
       "Key:key " +
       "PN:AQIDBAUGBwgJAAECAwQFBgcICQA= " +
       "VN:AQIDBAUGBwgJAAECAwQFBgcICQA= " +
-      "B:10 ver 3 rev 6]";
+      "B:10 ver 3 rev " +
+      (isV2Compat ? "6" : "5") + "]";
     assertEquals(expectedResult, m_testMsg.toString());
   }
   
