@@ -64,7 +64,7 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/mdpi-released/
       implicit < status ; status2 ; year ; name ; param[directory] >
 
-      au < readySource ; crawling ; 2024 ; Multidisciplinary Digital Publishing Institute Books Source Content 2022_04 ; 2022_04 >
+      au < ready ; exists ; 2024 ; Multidisciplinary Digital Publishing Institute Books Source Content 2022_04 ; 2022_04 >
 
     }
 
