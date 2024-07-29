@@ -85,10 +85,11 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
         spec.setPattern(ALL_TOC_PATTERN);
         sb.setSpec(spec);
         sb.addAspect(Arrays.asList(SHOW_TOC_PATTERN, PLAIN_TOC_PATTERN), Arrays.asList(SHOW_TOC_REPLACEMENT, PLAIN_TOC_REPLACEMENT), ROLE_TOC);
-
+        
         /*Parse the TOC to find all articles */
         Iterator<ArticleFiles> tocIterator = sb.getSubTreeArticleIterator();
         for(ArticleFiles tocAF : IteratorUtils.asIterable(tocIterator)){
+            log.debug3("I found a plain TOC " + tocAF.getFullTextUrl());
             CachedUrl tocCU = tocAF.getFullTextCu();
             parseToc(tocCU, articles, au);
         }
@@ -142,9 +143,10 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
                 epubUrl = au.makeCachedUrl(EPUBs.attr("href"));
                 addToListOfRoles(epubUrl, af, rolesForFullText, ArticleFiles.ROLE_FULL_TEXT_EPUB);
 
-                Elements abstracts = article.select("div.article-summary-title>a[href*=article],h4.article__title>a[href*=article],div.obj_article_summary>h3.title>a[href*=article],div.card-body>h4.issue-article-title>a,h3.media-heading>a[href*=article],"+
+                Elements abstracts = article.select("div.article-summary-title>a[href*=article],h4.article__title>a[href*=article],div.obj_article_summary>h3.title>a[href*=article],h3.media-heading>a[href*=article],"+
                 "a.summary_title,span.article-title>a[href*=article],div.obj_article_summary>div.title>a[href*=article],a:has(span.text>h6.article-title),"
-                +"ul.actions>li>a:contains(View Article),div.obj_article_summary>h4.title>a[href*=article],div.obj_article_summary>div.card-body>h3.card-title>a[href*=article]");
+                +"ul.actions>li>a:contains(View Article),div.obj_article_summary>h4.title>a[href*=article],div.obj_article_summary>div.card-body>h3.card-title>a[href*=article],"+
+                "div.card-body>h4.issue-article-title>a");
                 abstractsUrl = au.makeCachedUrl(abstracts.attr("href"));
                 addToListOfRoles(abstractsUrl, af, rolesForFullText, ArticleFiles.ROLE_ABSTRACT);
 
@@ -172,13 +174,16 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
             AuUtil.safeRelease(pdfUrl);
             AuUtil.safeRelease(htmlUrl);
             AuUtil.safeRelease(xmlUrl);
+            AuUtil.safeRelease(epubUrl);
             AuUtil.safeRelease(abstractsUrl);
         }
         
     }
 
     public void addToListOfRoles(CachedUrl cu, ArticleFiles af, ArrayList<String> rolesForFullText, String role){
+        log.debug3("I am in the method.");
         if(cu.hasContent()){
+            log.debug3("The cu has content");
             af.setRole(role,cu);
             log.debug3("The  URL is " + cu.toString() + " and the role is " + role);
             rolesForFullText.add(role);
