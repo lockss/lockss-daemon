@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>4</string>
+        <string>5</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -49,6 +49,23 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>plugin_parent_version</string>
         <string>17</string>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Poll</string>
+                <string>9</string>
+            </entry>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Substance</string>
+                <string>2</string>
+            </entry>
+        </map>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -76,15 +93,18 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>2,"^%s.*\.xml\?&amp;pdfVersion=true$", base_url</string>
             <string>1,"^https://fonts.googleapis.com/css"</string>
             <!--  citation overlay and ris download have odd normalization; allow for both -->
-            <string>1,"^%s(view|downloadpdf|abstract|skin|pdfviewer)/journals/%s/%s", base_url, journal_id, volume_name</string>
+            <string>1,"^%s(view|downloadpdf|abstract|skin|pdfviewer)/(view/)?journals/%s/%s", base_url, journal_id, volume_name</string>
             <string>1,"^%s(skin|pdfviewer)", base_url</string>
         </list>
     </entry>
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
-            <!--https://japmaonline.org/downloadpdf/journals/apms/112/6/20-260.pdf-->
-            <string>"^%sdownloadpdf/journals/%s/%s/", base_url, journal_id, volume_name</string>
+            <!--
+            https://japmaonline.org/downloadpdf/journals/apms/112/6/20-260.pdf
+            https://japmaonline.org/downloadpdf/view/journals/apms/114/2/22-047.pdf
+            -->
+            <string>"^%sdownloadpdf/(view/)?journals/%s/%s/", base_url, journal_id, volume_name</string>
         </list>
     </entry>
     <entry>
