@@ -1,0 +1,31 @@
+{
+  publisher <
+    name = Harbin University of Science and Technology ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[platform] = Bepress
+  >
+    provider = bepress
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+
+      title <
+        name =  Journal of Science and Technology (JSTM) ;
+        eissn = 2097-3233
+      >
+
+      comment[publisher] = Harbin University of Science and Technology
+      param[base_url] = https://jstm.researchcommons.org/
+      param[journal_abbr] = journal
+
+      au < manifest ; exists ; 2020 ; Journal of Science and Technology Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2021 ; Journal of Science and Technology Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2022 ; Journal of Science and Technology Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2023 ; Journal of Science and Technology Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2024 ; Journal of Science and Technology Volume 26 ; 26 ; >
+
+  }
+
+}
