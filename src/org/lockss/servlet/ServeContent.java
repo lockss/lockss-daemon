@@ -542,9 +542,6 @@ public class ServeContent extends LockssServlet {
     } else {
       url = getParameter("url");
       auid = getParameter("auid");
-      if (StringUtil.isNullString(auid)) {
-        log.critical("auid is null, setting useOpenUrlForAuid");
-      }
       useOpenUrlForAuid = Boolean.parseBoolean(getParameter("use_openurl"));
     }
 
