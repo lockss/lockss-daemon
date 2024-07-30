@@ -363,4 +363,12 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
     return pdfProps;
   }
 
+  // Read the test TOC file test_toc_junit.html from current directory
+  // Prepare input stream for UrlCacher storeContent() method
+  private InputStream getTestTocInputStream() throws IOException {
+    InputStream htmlIn = getResourceAsStream("test_toc.html");
+    String absHtml = StringUtil.fromInputStream(htmlIn);
+    return IOUtils.toInputStream(absHtml);
+  }
+
 }
