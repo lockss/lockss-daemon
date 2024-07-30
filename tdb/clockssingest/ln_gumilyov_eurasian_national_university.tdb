@@ -1,0 +1,34 @@
+{
+  publisher <
+    name = L.N. Gumilyov Eurasian National University ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[platform] = Bepress
+  >
+    provider = bepress
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Eurasian Journal of Physics and Functional Materials ;
+        eissn = 2616-8537
+      >
+
+      comment[publisher] = L.N. Gumilyov Eurasian National University
+      param[base_url] = https://www.ephys.kz/
+      param[journal_abbr] = journal
+
+      au < manifest ; exists ; 2017 ; Eurasian Journal of Physics and Functional Materials Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2018 ; Eurasian Journal of Physics and Functional Materials Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2019 ; Eurasian Journal of Physics and Functional Materials Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2020 ; Eurasian Journal of Physics and Functional Materials Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2021 ; Eurasian Journal of Physics and Functional Materials Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2022 ; Eurasian Journal of Physics and Functional Materials Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2023 ; Eurasian Journal of Physics and Functional Materials Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2024 ; Eurasian Journal of Physics and Functional Materials Volume 8 ; 8 ; >
+
+  }
+
+}
