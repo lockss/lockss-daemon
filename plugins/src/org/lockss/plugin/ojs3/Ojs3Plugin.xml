@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>43</string>
+    <string>44</string>
   </entry>
    <entry>
     <string>plugin_name</string>
@@ -247,18 +247,18 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.ojs3.Ojs3TocParsingArticleIteratorFactory</string>
+    <string>org.lockss.plugin.ojs3.Ojs3ArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.ojs3.Ojs3TocParsingArticleIteratorFactory</string>
+    <string>org.lockss.plugin.ojs3.Ojs3ArticleIteratorFactory</string>
   </entry>
  <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.ojs3.Ojs3HtmlMetadataExtractorFactory2024</string>
+        <string>org.lockss.plugin.ojs3.Ojs3HtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
