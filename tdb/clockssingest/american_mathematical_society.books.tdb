@@ -395,7 +395,7 @@
     au < manifest ; exists ; 2006 ; CBMS Regional Conference Series in Mathematics 2006 ; 2006 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2008 ; CBMS Regional Conference Series in Mathematics 2008 ; 2008 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2009 ; CBMS Regional Conference Series in Mathematics 2009 ; 2009 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2010 ; CBMS Regional Conference Series in Mathematics 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2010 ; CBMS Regional Conference Series in Mathematics 2010 ; 2010 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2011 ; CBMS Regional Conference Series in Mathematics 2011 ; 2011 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2012 ; CBMS Regional Conference Series in Mathematics 2012 ; 2012 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2013 ; CBMS Regional Conference Series in Mathematics 2013 ; 2013 ; https://www.ams.org/ ; >
@@ -427,7 +427,7 @@
     au < manifest ; exists ; 2007 ; Current Lecture Notes 2007 ; 2007 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2008 ; Current Lecture Notes 2008 ; 2008 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2009 ; Current Lecture Notes 2009 ; 2009 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2010 ; Current Lecture Notes 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2010 ; Current Lecture Notes 2010 ; 2010 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2011 ; Current Lecture Notes 2011 ; 2011 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2013 ; Current Lecture Notes 2013 ; 2013 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2014 ; Current Lecture Notes 2014 ; 2014 ; https://www.ams.org/ ; >
@@ -486,7 +486,7 @@
     au < manifest ; exists ; 2004 ; Colloquium Publications 2004 ; 2004 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2005 ; Colloquium Publications 2005 ; 2005 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2008 ; Colloquium Publications 2008 ; 2008 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2010 ; Colloquium Publications 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2010 ; Colloquium Publications 2010 ; 2010 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2012 ; Colloquium Publications 2012 ; 2012 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2013 ; Colloquium Publications 2013 ; 2013 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2016 ; Colloquium Publications 2016 ; 2016 ; https://www.ams.org/ ; >
@@ -523,8 +523,8 @@
     au < manifest ; exists ; 2007 ; Fields Institute Communications 2007 ; 2007 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2008 ; Fields Institute Communications 2008 ; 2008 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2009 ; Fields Institute Communications 2009 ; 2009 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2010 ; Fields Institute Communications 2010 ; 2010 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2011 ; Fields Institute Communications 2011 ; 2011 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2010 ; Fields Institute Communications 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2011 ; Fields Institute Communications 2011 ; 2011 ; https://www.ams.org/ ; >
 
     }
 
@@ -551,8 +551,8 @@
     au < manifest ; exists ; 2006 ; Fields Institute Monographs 2006 ; 2006 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2008 ; Fields Institute Monographs 2008 ; 2008 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2009 ; Fields Institute Monographs 2009 ; 2009 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2010 ; Fields Institute Monographs 2010 ; 2010 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2011 ; Fields Institute Monographs 2011 ; 2011 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2010 ; Fields Institute Monographs 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2011 ; Fields Institute Monographs 2011 ; 2011 ; https://www.ams.org/ ; >
 
     }
 
@@ -582,9 +582,9 @@
     au < manifest ; exists ; 2007 ; Graduate Studies in Mathematics 2007 ; 2007 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2008 ; Graduate Studies in Mathematics 2008 ; 2008 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2009 ; Graduate Studies in Mathematics 2009 ; 2009 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2010 ; Graduate Studies in Mathematics 2010 ; 2010 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2011 ; Graduate Studies in Mathematics 2011 ; 2011 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2012 ; Graduate Studies in Mathematics 2012 ; 2012 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2010 ; Graduate Studies in Mathematics 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2011 ; Graduate Studies in Mathematics 2011 ; 2011 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2012 ; Graduate Studies in Mathematics 2012 ; 2012 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2013 ; Graduate Studies in Mathematics 2013 ; 2013 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2014 ; Graduate Studies in Mathematics 2014 ; 2014 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2015 ; Graduate Studies in Mathematics 2015 ; 2015 ; https://www.ams.org/ ; >
@@ -648,8 +648,8 @@
     au < manifest ; exists ; 2007 ; The Student Mathematical Library 2007 ; 2007 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2008 ; The Student Mathematical Library 2008 ; 2008 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2009 ; The Student Mathematical Library 2009 ; 2009 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2010 ; The Student Mathematical Library 2010 ; 2010 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2011 ; The Student Mathematical Library 2011 ; 2011 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2010 ; The Student Mathematical Library 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2011 ; The Student Mathematical Library 2011 ; 2011 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2012 ; The Student Mathematical Library 2012 ; 2012 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2013 ; The Student Mathematical Library 2013 ; 2013 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2014 ; The Student Mathematical Library 2014 ; 2014 ; https://www.ams.org/ ; >
@@ -695,8 +695,8 @@
     au < doesNotExist ; doesNotExist ; 2007 ; University Lecture Series 2007 ; 2007 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2008 ; University Lecture Series 2008 ; 2008 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2009 ; University Lecture Series 2009 ; 2009 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2010 ; University Lecture Series 2010 ; 2010 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2011 ; University Lecture Series 2011 ; 2011 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2010 ; University Lecture Series 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2011 ; University Lecture Series 2011 ; 2011 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2012 ; University Lecture Series 2012 ; 2012 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2013 ; University Lecture Series 2013 ; 2013 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2014 ; University Lecture Series 2014 ; 2014 ; https://www.ams.org/ ; >
@@ -731,7 +731,7 @@
     au < manifest ; exists ; 2006 ; CBMS Issues in Mathematics Education 2006 ; 2006 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2007 ; CBMS Issues in Mathematics Education 2007 ; 2007 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2008 ; CBMS Issues in Mathematics Education 2008 ; 2008 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2010 ; CBMS Issues in Mathematics Education 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2010 ; CBMS Issues in Mathematics Education 2010 ; 2010 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2012 ; CBMS Issues in Mathematics Education 2012 ; 2012 ; https://www.ams.org/ ; >
     }
 
@@ -799,7 +799,7 @@
     au < manifest ; exists ; 2007 ; AMS Translations: Series 2 2007 ; 2007 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2008 ; AMS Translations: Series 2 2008 ; 2008 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2009 ; AMS Translations: Series 2 2009 ; 2009 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2010 ; AMS Translations: Series 2 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2010 ; AMS Translations: Series 2 2010 ; 2010 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2014 ; AMS Translations: Series 2 2014 ; 2014 ; https://www.ams.org/ ; >
     }
 }
