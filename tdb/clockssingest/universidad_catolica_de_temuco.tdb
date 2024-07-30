@@ -54,18 +54,18 @@
       param[journal_id] = safer
       #published 2013 to present
 
-      au < exists ; exists ; 2013 ; Sustainability, Agri, Food and Environmental Research Volume 2013 ; 1 ; 2013 ; https://safer.uct.cl/ ; >
-      au < exists ; exists ; 2014 ; Sustainability, Agri, Food and Environmental Research Volume 2014 ; 2 ; 2014 ; https://safer.uct.cl/ ; >
-      au < exists ; exists ; 2015 ; Sustainability, Agri, Food and Environmental Research Volume 2015 ; 3 ; 2015 ; https://safer.uct.cl/ ; >
-      au < exists ; exists ; 2016 ; Sustainability, Agri, Food and Environmental Research Volume 2016 ; 4 ; 2016 ; https://safer.uct.cl/ ; >
-      au < exists ; exists ; 2017 ; Sustainability, Agri, Food and Environmental Research Volume 2017 ; 5 ; 2017 ; https://safer.uct.cl/ ; >
+      au < manifest ; exists ; 2013 ; Sustainability, Agri, Food and Environmental Research Volume 2013 ; 1 ; 2013 ; https://safer.uct.cl/ ; >
+      au < manifest ; exists ; 2014 ; Sustainability, Agri, Food and Environmental Research Volume 2014 ; 2 ; 2014 ; https://safer.uct.cl/ ; >
+      au < manifest ; exists ; 2015 ; Sustainability, Agri, Food and Environmental Research Volume 2015 ; 3 ; 2015 ; https://safer.uct.cl/ ; >
+      au < manifest ; exists ; 2016 ; Sustainability, Agri, Food and Environmental Research Volume 2016 ; 4 ; 2016 ; https://safer.uct.cl/ ; >
+      au < manifest ; exists ; 2017 ; Sustainability, Agri, Food and Environmental Research Volume 2017 ; 5 ; 2017 ; https://safer.uct.cl/ ; >
       au < frozen ; exists ; 2018 ; Sustainability, Agri, Food and Environmental Research Volume 2018 ; 6 ; 2018 ; https://portalrevistas.uct.cl/ ; >
       au < frozen ; exists ; 2019 ; Sustainability, Agri, Food and Environmental Research Volume 2019 ; 7 ; 2019 ; https://portalrevistas.uct.cl/ ; >
       au < frozen ; exists ; 2020 ; Sustainability, Agri, Food and Environmental Research Volume 2020 ; 8 ; 2020 ; https://portalrevistas.uct.cl/ ; >
       au < frozen ; exists ; 2021 ; Sustainability, Agri, Food and Environmental Research Volume 2021 ; 9 ; 2021 ; https://portalrevistas.uct.cl/ ; >
       au < frozen ; exists ; 2022 ; Sustainability, Agri, Food and Environmental Research Volume 2022 ; 10 ; 2022 ; https://portalrevistas.uct.cl/ ; >
       au < deepCrawl ; exists ; 2023 ; Sustainability, Agri, Food and Environmental Research Volume 2023 ; 11 ; 2023 ; https://portalrevistas.uct.cl/ ; >
-      au < exists ; exists ; 2024 ; Sustainability, Agri, Food and Environmental Research Volume 2024 ; 12 ; 2024 ; https://safer.uct.cl/ ; >
+      au < manifest ; exists ; 2024 ; Sustainability, Agri, Food and Environmental Research Volume 2024 ; 12 ; 2024 ; https://safer.uct.cl/ ; >
 
   }
 
@@ -81,27 +81,27 @@
       #published 1984 to present
       #There are special volumes in 1991 and 1999
 
-      au < exists ; exists ; 1984 ; Revista CUHSO Volume 1984 ; 1 ; 1984 ; https://cuhso.uct.cl/ ; >
-      au < exists ; exists ; 1985 ; Revista CUHSO Volume 1985 ; 2 ; 1985 ; https://cuhso.uct.cl/ ; >
-      au < exists ; exists ; 1986 ; Revista CUHSO Volume 1986 ; 3 ; 1986 ; https://cuhso.uct.cl/ ; >
-      au < exists ; exists ; 1998 ; Revista CUHSO Volume 1998 ; 4 ; 1998 ; https://cuhso.uct.cl/ ; >
-      au < exists ; exists ; 2000 ; Revista CUHSO Volume 2000 ; 5 ; 2000 ; https://cuhso.uct.cl/ ; >
-      au < exists ; exists ; 2002 ; Revista CUHSO Volume 2002 ; 6 ; 2002 ; https://cuhso.uct.cl/ ; >
-      au < exists ; exists ; 2003 ; Revista CUHSO Volume 2003 ; 7 ; 2003 ; https://cuhso.uct.cl/ ; >
-      au < exists ; exists ; 2004 ; Revista CUHSO Volume 2004 ; 8 ; 2004 ; https://cuhso.uct.cl/ ; >
-      au < exists ; exists ; 2005 ; Revista CUHSO Volume 2005 ; 9-10 ; 2005 ; https://cuhso.uct.cl/ ; >
-      au < exists ; exists ; 2006 ; Revista CUHSO Volume 2006 ; 11-12 ; 2006 ; https://cuhso.uct.cl/ ; >
-      au < exists ; exists ; 2007 ; Revista CUHSO Volume 2007 ; 13-14 ; 2007 ; https://cuhso.uct.cl/ ; >
-      au < exists ; exists ; 2008 ; Revista CUHSO Volume 2008 ; 15-16 ; 2008 ; https://cuhso.uct.cl/ ; >
-      au < exists ; exists ; 2009 ; Revista CUHSO Volume 2009 ; 17-18 ; 2009 ; https://cuhso.uct.cl/ ; >
-      au < exists ; exists ; 2010 ; Revista CUHSO Volume 2010 ; 19-20 ; 2010 ; https://cuhso.uct.cl/ ; >
-      au < exists ; exists ; 2011 ; Revista CUHSO Volume 2011 ; 21 ; 2011 ; https://cuhso.uct.cl/ ; >
-      au < exists ; exists ; 2012 ; Revista CUHSO Volume 2012 ; 22 ; 2012 ; https://cuhso.uct.cl/ ; >
-      au < exists ; exists ; 2013 ; Revista CUHSO Volume 2013 ; 23 ; 2013 ; https://cuhso.uct.cl/ ; >
-      au < exists ; exists ; 2014 ; Revista CUHSO Volume 2014 ; 24 ; 2014 ; https://cuhso.uct.cl/ ; >
-      au < exists ; exists ; 2015 ; Revista CUHSO Volume 2015 ; 25 ; 2015 ; https://cuhso.uct.cl/ ; >
-      au < exists ; exists ; 2016 ; Revista CUHSO Volume 2016 ; 26 ; 2016 ; https://cuhso.uct.cl/ ; >
-      au < exists ; exists ; 2017 ; Revista CUHSO Volume 2017 ; 27 ; 2017 ; https://cuhso.uct.cl/ ; >
+      au < manifest ; exists ; 1984 ; Revista CUHSO Volume 1984 ; 1 ; 1984 ; https://cuhso.uct.cl/ ; >
+      au < manifest ; exists ; 1985 ; Revista CUHSO Volume 1985 ; 2 ; 1985 ; https://cuhso.uct.cl/ ; >
+      au < manifest ; exists ; 1986 ; Revista CUHSO Volume 1986 ; 3 ; 1986 ; https://cuhso.uct.cl/ ; >
+      au < manifest ; exists ; 1998 ; Revista CUHSO Volume 1998 ; 4 ; 1998 ; https://cuhso.uct.cl/ ; >
+      au < manifest ; exists ; 2000 ; Revista CUHSO Volume 2000 ; 5 ; 2000 ; https://cuhso.uct.cl/ ; >
+      au < manifest ; exists ; 2002 ; Revista CUHSO Volume 2002 ; 6 ; 2002 ; https://cuhso.uct.cl/ ; >
+      au < manifest ; exists ; 2003 ; Revista CUHSO Volume 2003 ; 7 ; 2003 ; https://cuhso.uct.cl/ ; >
+      au < manifest ; exists ; 2004 ; Revista CUHSO Volume 2004 ; 8 ; 2004 ; https://cuhso.uct.cl/ ; >
+      au < manifest ; exists ; 2005 ; Revista CUHSO Volume 2005 ; 9-10 ; 2005 ; https://cuhso.uct.cl/ ; >
+      au < manifest ; exists ; 2006 ; Revista CUHSO Volume 2006 ; 11-12 ; 2006 ; https://cuhso.uct.cl/ ; >
+      au < manifest ; exists ; 2007 ; Revista CUHSO Volume 2007 ; 13-14 ; 2007 ; https://cuhso.uct.cl/ ; >
+      au < manifest ; exists ; 2008 ; Revista CUHSO Volume 2008 ; 15-16 ; 2008 ; https://cuhso.uct.cl/ ; >
+      au < manifest ; exists ; 2009 ; Revista CUHSO Volume 2009 ; 17-18 ; 2009 ; https://cuhso.uct.cl/ ; >
+      au < manifest ; exists ; 2010 ; Revista CUHSO Volume 2010 ; 19-20 ; 2010 ; https://cuhso.uct.cl/ ; >
+      au < manifest ; exists ; 2011 ; Revista CUHSO Volume 2011 ; 21 ; 2011 ; https://cuhso.uct.cl/ ; >
+      au < manifest ; exists ; 2012 ; Revista CUHSO Volume 2012 ; 22 ; 2012 ; https://cuhso.uct.cl/ ; >
+      au < manifest ; exists ; 2013 ; Revista CUHSO Volume 2013 ; 23 ; 2013 ; https://cuhso.uct.cl/ ; >
+      au < manifest ; exists ; 2014 ; Revista CUHSO Volume 2014 ; 24 ; 2014 ; https://cuhso.uct.cl/ ; >
+      au < manifest ; exists ; 2015 ; Revista CUHSO Volume 2015 ; 25 ; 2015 ; https://cuhso.uct.cl/ ; >
+      au < manifest ; exists ; 2016 ; Revista CUHSO Volume 2016 ; 26 ; 2016 ; https://cuhso.uct.cl/ ; >
+      au < manifest ; exists ; 2017 ; Revista CUHSO Volume 2017 ; 27 ; 2017 ; https://cuhso.uct.cl/ ; >
       au < frozen ; exists ; 2018 ; Revista CUHSO Volume 2018 ; 28 ; 2018 ; https://portalrevistas.uct.cl/ ; >
       au < frozen ; exists ; 2019 ; Revista CUHSO Volume 2019 ; 29 ; 2019 ; https://portalrevistas.uct.cl/ ; >
       au < frozen ; exists ; 2020 ; Revista CUHSO Volume 2020 ; 30 ; 2020 ; https://portalrevistas.uct.cl/ ; >
