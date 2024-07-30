@@ -351,7 +351,11 @@ public class ProxyManager extends BaseProxyManager {
       try {
         String forwardProxyParam =
             config.get(PARAM_FORWARD_PROXY, DEFAULT_FORWARD_PROXY);
-        forwardProxy = new HostPortParser(forwardProxyParam);
+        if (StringUtil.isNullString(forwardProxyParam)) {
+          forwardProxy = null;
+        } else {
+          forwardProxy = new HostPortParser(forwardProxyParam);
+        }
       } catch (HostPortParser.InvalidSpec e) {
         log.error("Error parsing forwardProxy parameter", e);
         forwardProxy = null;

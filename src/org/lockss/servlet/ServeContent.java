@@ -384,7 +384,9 @@ public class ServeContent extends LockssServlet {
       try {
         String forwardToParam =
             config.get(PARAM_FORWARD_SERVE_CONTENT, DEFAULT_FORWARD_SERVE_CONTENT);
-        forwardTo = new HostPortParser(forwardToParam);
+        if (!StringUtil.isNullString(forwardToParam)) {
+          forwardTo = new HostPortParser(forwardToParam);
+        }
       } catch (HostPortParser.InvalidSpec e) {
         log.error("Error parsing forwardTo parameter", e);
         forwardTo = null;
@@ -540,6 +542,9 @@ public class ServeContent extends LockssServlet {
     } else {
       url = getParameter("url");
       auid = getParameter("auid");
+      if (StringUtil.isNullString(auid)) {
+        log.critical("auid is null, setting useOpenUrlForAuid");
+      }
       useOpenUrlForAuid = Boolean.parseBoolean(getParameter("use_openurl"));
     }
 
