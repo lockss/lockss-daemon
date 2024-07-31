@@ -22,7 +22,7 @@
     param[base_url] = https://clockss-test.lockss.org/sourcefiles/wolterskluwer-released/
     ## DEVELOPMENT
 
-    au < testing ; exists ; 2024 ; Wolters Kluwer Health Source Content 2024_01 ; 2024_01 >
+    au < testing ; exists ; 2024 ; Wolters Kluwer Health Source Content 2024_01 DEV ; 2024_01 >
       }
       {
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/wolterskluwer-released/
