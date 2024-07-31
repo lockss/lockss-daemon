@@ -1,0 +1,30 @@
+{
+  publisher <
+    name = Minnesota State University Moorhead and Department of Leadership and Learning ;
+    info[contract] = 2024 ;
+    info[tester] = 5 ;
+    info[platform] = Bepress
+  >
+    provider = bepress
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+    param[base_url] = https://red.mnstate.edu/
+
+  {
+
+      title <
+        name = The Interactive Journal of Global Leadership and Learning (IJGLL) ;
+        eissn = 2692-3394
+      >
+
+      param[journal_abbr] = ijgll
+
+      au < exists ; exists ; 2020 ; The Interactive Journal of Global Leadership and Learning (IJGLL) Volume 1 ; 1 ; >
+      au < exists ; exists ; 2021 ; The Interactive Journal of Global Leadership and Learning (IJGLL) Volume 2 ; 2 ; >
+      au < expected ; exists ; 2022 ; The Interactive Journal of Global Leadership and Learning (IJGLL) Volume 3 ; 3 ; >
+      au < expected ; exists ; 2023 ; The Interactive Journal of Global Leadership and Learning (IJGLL) Volume 4 ; 4 ; >
+      au < expected ; exists ; 2024 ; The Interactive Journal of Global Leadership and Learning (IJGLL) Volume 5 ; 5 ; >
+
+  }
+
+}
