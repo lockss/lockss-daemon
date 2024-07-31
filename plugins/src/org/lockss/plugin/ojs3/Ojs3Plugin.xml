@@ -247,18 +247,18 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.ojs3.Ojs3ArticleIteratorFactory</string>
+    <string>org.lockss.plugin.ojs3.Ojs3TocParsingArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.ojs3.Ojs3ArticleIteratorFactory</string>
+    <string>org.lockss.plugin.ojs3.Ojs3TocParsingArticleIteratorFactory</string>
   </entry>
  <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.ojs3.Ojs3HtmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.ojs3.Ojs3HtmlMetadataExtractorFactory2024</string>
       </entry>
     </map>
   </entry>

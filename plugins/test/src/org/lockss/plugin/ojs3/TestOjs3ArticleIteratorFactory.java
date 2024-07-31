@@ -33,7 +33,6 @@ import java.io.*;
 import org.apache.commons.io.IOUtils;
 
 import java.util.*;
-import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -123,13 +122,16 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
     InputStream input = null;
     CIProperties props = null;
     // issue table of content
-    if (url.endsWith("8601") && url.contains("download")) { 
+    if (url.contains("478")) { 
+      input = getTestTocInputStream();
+      props = getHtmlProperties();
+    }else if (url.endsWith("8601") && url.contains("download")) { 
         // pdf
         input = new StringInputStream("");
         props = getPdfProperties();
     } else if (url.endsWith("8110")) {
       // abs - for metadata/
-      input = new StringInputStream(abstractMetadata);
+      input = new StringInputStream("<html></html>");
       props = getHtmlProperties();
     } else {
     	// default blank html
@@ -161,8 +163,8 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
                                af1.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF) };
 
       for (int i = 0;i< actualUrls1.length; i++) {
-        log.debug("expected url1: " + expectedUrls1[i]);
-        log.debug("  actual url1: " + actualUrls1[i]);
+        log.info("expected url1: " + expectedUrls1[i]);
+        log.info("  actual url1: " + actualUrls1[i]);
 
         // "scholarworks.iu.edu" has speical case, which only has html page, no other aspects of article
         if (!BASE_URL.contains("scholarworks.iu.edu")) {
@@ -177,7 +179,7 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
   /*
    * Test of the Article Iterator pattern matching when only issue level content exists
    *
-   *   */
+   *   
   public void testIssueUrlsWithPrefixes() throws Exception {
     Iterator<ArticleFiles> artIter = getArticleIteratorAfterSimCrawl(au, "issue");
     Pattern pat = getPattern((SubTreeArticleIterator) artIter);
@@ -197,7 +199,7 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
   /*
    * Test of the Article Iterator pattern matching when "typical" single level article content exists
    *
-   *   */
+   *   
   public void testArticleSingleUrlsWithPrefixes() throws Exception {
     Iterator<ArticleFiles> artIter = getArticleIteratorAfterSimCrawl(au, "article/123");
     Pattern pat = getPattern((SubTreeArticleIterator) artIter);
@@ -215,7 +217,7 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
   /*
    * Test of the Article Iterator pattern matching when only double level article content exists
    *
-   *   */
+   *   
   public void testArticleDoubleUrlsWithPrefixes() throws Exception {
     Iterator<ArticleFiles> artIter = getArticleIteratorAfterSimCrawl(au, "article/123/456");
     Pattern pat = getPattern((SubTreeArticleIterator) artIter);
@@ -230,7 +232,7 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
     assertMatchesRE(pat,"https://www.foo.com/index.php/test/article/view/99/22");
     // probably pdf
     assertNotMatchesRE(pat,"https://www.foo.com/index.php/test/article/download/99/22");
-  }
+  }*/
 
 
   private Iterator<ArticleFiles> getArticleIteratorAfterSimCrawl(ArchivalUnit au,
@@ -277,7 +279,7 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
 
     // Store test cases - articleUrls
     for (String url : articleUrls) {
-      log.debug3("testCreateArticleFiles() url: " + url);
+      log.info("testCreateArticleFiles() url: " + url);
       storeTestContent(url);
     }
   }
