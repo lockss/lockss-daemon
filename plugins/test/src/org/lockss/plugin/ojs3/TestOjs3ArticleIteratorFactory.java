@@ -66,11 +66,14 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
     "https://www.foo.com/index.php/test/article/view/8110";
   private final String EXPECTED_PDF_1 = 
 		    "https://www.foo.com/index.php/test/article/view/8110/8601";
+  private final String EXPECTED_HTML_1 = 
+		    "https://www.foo.com/index.php/test/article/view/8110/8514";
 
   String [] expectedUrls1 = { EXPECTED_ABS_URL_1,
                               EXPECTED_ARTICLE_METADATA_URL_1,
                               EXPECTED_PDF_1,
-                              EXPECTED_PDF_1};
+                              EXPECTED_PDF_1,
+                              EXPECTED_HTML_1};
 
 
   public void setUp() throws Exception {
@@ -126,7 +129,7 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
         // pdf
         input = new StringInputStream("");
         props = getPdfProperties();
-    } else if (url.endsWith("8110")) {
+    } else if (url.endsWith("8110") || url.endsWith("8514")) {
       // abs - for metadata/
       input = new StringInputStream("<html></html>");
       props = getHtmlProperties();
@@ -156,7 +159,8 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
       String[] actualUrls1 = { af1.getRoleUrl(ArticleFiles.ROLE_ABSTRACT),
                                af1.getRoleUrl(ArticleFiles.ROLE_ARTICLE_METADATA),
                                af1.getFullTextUrl(),
-                               af1.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF) };
+                               af1.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF),
+                               af1.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_HTML) };
 
       for (int i = 0;i< actualUrls1.length; i++) {
         log.info("expected url1: " + expectedUrls1[i]);
@@ -164,7 +168,7 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
 
         // "scholarworks.iu.edu" has speical case, which only has html page, no other aspects of article
         if (!BASE_URL.contains("scholarworks.iu.edu")) {
-          //assertEquals(expectedUrls1[i], actualUrls1[i]);
+          assertEquals(expectedUrls1[i], actualUrls1[i]);
         }
       }
       
