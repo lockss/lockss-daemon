@@ -64,16 +64,13 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
     "https://www.foo.com/index.php/test/article/view/8110";
   private final String EXPECTED_ARTICLE_METADATA_URL_1 =
     "https://www.foo.com/index.php/test/article/view/8110";
-  private final String EXPECTED_PDF_LAND = 
+  private final String EXPECTED_PDF_1 = 
 		    "https://www.foo.com/index.php/test/article/view/8110/8601";
-  private final String EXPECTED_PDF = 
-		    "https://www.foo.com/index.php/test/article/download/8110/8601";
 
   String [] expectedUrls1 = { EXPECTED_ABS_URL_1,
                               EXPECTED_ARTICLE_METADATA_URL_1,
-                              EXPECTED_PDF,
-                              EXPECTED_PDF_LAND,
-                              EXPECTED_PDF};
+                              EXPECTED_PDF_1,
+                              EXPECTED_PDF_1};
 
 
   public void setUp() throws Exception {
@@ -153,13 +150,12 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
     int count = 0;
     while (it.hasNext()) {
       ArticleFiles af1 = it.next();
-      log.debug("article file af1: " + af1.toString());
+      log.info("article file af1: " + af1.toString());
       count+=1;
       // assert article 1
       String[] actualUrls1 = { af1.getRoleUrl(ArticleFiles.ROLE_ABSTRACT),
                                af1.getRoleUrl(ArticleFiles.ROLE_ARTICLE_METADATA),
                                af1.getFullTextUrl(),
-                               af1.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE),
                                af1.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF) };
 
       for (int i = 0;i< actualUrls1.length; i++) {
@@ -177,6 +173,9 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
   }
 
   /*
+   * The following tests are from the older version of the OJS3 Article Iterator Factory.
+   * 
+   * 
    * Test of the Article Iterator pattern matching when only issue level content exists
    *
    *   

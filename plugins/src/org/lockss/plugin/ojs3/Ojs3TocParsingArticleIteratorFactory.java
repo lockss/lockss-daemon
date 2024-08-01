@@ -166,6 +166,10 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
                     log.debug3("There is no full text. The abstract CU is " + abstractsUrl.toString());
                 }
 
+                if ((abstractsUrl != null) && abstractsUrl.hasContent()) {
+                    log.info("I'm setting up the metadata role.");
+                    af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, abstractsUrl);
+                }
                 results.add(af);
             }
         }catch(IOException ioe){
