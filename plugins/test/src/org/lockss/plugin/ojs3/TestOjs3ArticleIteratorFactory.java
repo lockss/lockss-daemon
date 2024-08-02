@@ -117,13 +117,13 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
 
   
   // Simulated content URLs stored in the UrlCacher object.
-  public void storeTestContent(String url) throws Exception {
+  public void storeTestContent(String url, String htmlString) throws Exception {
     log.debug3("storeTestContent() url: " + url);
     InputStream input = null;
     CIProperties props = null;
     // issue table of content
     if (url.contains("478")) { 
-      input = getTestTocInputStream();
+      input = getTestTocInputStream(htmlString);
       props = getHtmlProperties();
     }else if (url.endsWith("8601") && url.contains("download")) { 
         // pdf
@@ -143,9 +143,9 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
     uc.storeContent();
   }  
   
-  public void testCreateArticleFiles() throws Exception {
+  public void testCreateArticleFiles(String htmlString) throws Exception {
 
-    simCrawlBasic();
+    simCrawlBasic(htmlString);
     // access Ojs3ArticleItrerator
     Iterator<ArticleFiles> it = au.getArticleIterator();
     // ensure you have found articles - this would not otherwise not fail before completion
@@ -176,6 +176,16 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
     assertEquals(count,1);
   }
 
+  public void testDifferentHtmlStructures(){
+    try {
+      testCreateArticleFiles("test_toc.html");
+      testCreateArticleFiles("test_toc_2.html");
+      testCreateArticleFiles("test_toc_3.html");
+    } catch (Exception e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+  }
   /*
    * The following tests are from the older version of the OJS3 Article Iterator Factory.
    * 
@@ -235,7 +245,7 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
     assertMatchesRE(pat,"https://www.foo.com/index.php/test/article/view/99/22");
     // probably pdf
     assertNotMatchesRE(pat,"https://www.foo.com/index.php/test/article/download/99/22");
-  }*/
+  }
 
 
   private Iterator<ArticleFiles> getArticleIteratorAfterSimCrawl(ArchivalUnit au,
@@ -256,9 +266,9 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
     }
     // return an articleIterator for the crawl content
     return au.getArticleIterator();
-  }
+  }*/
 
-  private void simCrawlBasic() throws Exception {
+  private void simCrawlBasic(String htmlString) throws Exception {
     ArrayList<String> articleUrls = new ArrayList<>();
     articleUrls.add(String.format("%sindex.php/%s/issue/view/478",
         BASE_URL, JOURNAL_ID)); // table of contents
@@ -283,7 +293,7 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
     // Store test cases - articleUrls
     for (String url : articleUrls) {
       log.info("testCreateArticleFiles() url: " + url);
-      storeTestContent(url);
+      storeTestContent(url, htmlString);
     }
   }
   private void deleteFromCrawl(ArrayList<Pattern> removalPatterns) throws IOException {
@@ -370,8 +380,8 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
 
   // Read the test TOC file test_toc_junit.html from current directory
   // Prepare input stream for UrlCacher storeContent() method
-  private InputStream getTestTocInputStream() throws IOException {
-    InputStream htmlIn = getResourceAsStream("test_toc.html");
+  private InputStream getTestTocInputStream(String htmlDoc) throws IOException {
+    InputStream htmlIn = getResourceAsStream(htmlDoc);
     String absHtml = StringUtil.fromInputStream(htmlIn);
     return IOUtils.toInputStream(absHtml);
   }
