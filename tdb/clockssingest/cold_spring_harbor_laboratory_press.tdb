@@ -140,7 +140,7 @@
       au < superseded ; exists ; 2022 ; Cold Spring Harbor Protocols Volume 2022 [superseded] ; 2022 ; http://cshprotocols.cshlp.org/ ; >
       au < finished ; crawling ; 2022 ; Cold Spring Harbor Protocols Volume 2022 ; 2022 ; https://cshprotocols.cshlp.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2023 ; Cold Spring Harbor Protocols Volume 2023 ; 2023 ; https://cshprotocols.cshlp.org/ ; >
-      au < manifest ; exists ; 2024 ; Cold Spring Harbor Protocols Volume 2024 ; 2024 ; https://cshprotocols.cshlp.org/ ; >
+      au < ready ; exists ; 2024 ; Cold Spring Harbor Protocols Volume 2024 ; 2024 ; https://cshprotocols.cshlp.org/ ; >
 
     }
     
@@ -406,7 +406,7 @@
       au < deepCrawl ; exists ; 2021 ; Learning & Memory Volume 28 ; 28 ; http://learnmem.cshlp.org/ ; >
       au < finished ; crawling ; 2022 ; Learning & Memory Volume 29 ; 29 ; https://learnmem.cshlp.org/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2023 ; Learning & Memory Volume 30 ; 30 ; https://learnmem.cshlp.org/ ; >
-      au < manifest ; exists ; 2024 ; Learning & Memory Volume 31 ; 31 ; https://learnmem.cshlp.org/ ; >
+      au < notReady ; exists ; 2024 ; Learning & Memory Volume 31 ; 31 ; https://learnmem.cshlp.org/ ; > #Unable to fetch probe permission page
 
     }
 

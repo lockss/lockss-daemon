@@ -20,11 +20,11 @@
       param[base_url] = https://jstm.researchcommons.org/
       param[journal_abbr] = journal
 
-      au < manifest ; exists ; 2020 ; Journal of Science and Technology Volume 22 ; 22 ; >
-      au < manifest ; exists ; 2021 ; Journal of Science and Technology Volume 23 ; 23 ; >
-      au < manifest ; exists ; 2022 ; Journal of Science and Technology Volume 24 ; 24 ; >
-      au < manifest ; exists ; 2023 ; Journal of Science and Technology Volume 25 ; 25 ; >
-      au < manifest ; exists ; 2024 ; Journal of Science and Technology Volume 26 ; 26 ; >
+      au < testing ; exists ; 2020 ; Journal of Science and Technology Volume 22 ; 22 ; >
+      au < testing ; exists ; 2021 ; Journal of Science and Technology Volume 23 ; 23 ; >
+      au < testing ; exists ; 2022 ; Journal of Science and Technology Volume 24 ; 24 ; >
+      au < testing ; exists ; 2023 ; Journal of Science and Technology Volume 25 ; 25 ; >
+      au < testing ; exists ; 2024 ; Journal of Science and Technology Volume 26 ; 26 ; >
 
   }
 
