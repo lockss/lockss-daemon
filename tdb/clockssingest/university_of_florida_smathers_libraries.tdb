@@ -87,7 +87,7 @@
       au < frozen ; exists ; 2021 ; Chemical Engineering Education Volume 2021 ; 2021 ; 2021 ; >
       au < frozen ; exists ; 2022 ; Chemical Engineering Education Volume 2022 ; 2022 ; 2022 ; >
       au < notReady ; exists ; 2023 ; Chemical Engineering Education Volume 2023 ; 2023 ; 2023 ; > #login found, https://journals.flvc.org/cee/article/view/132637/136584
-      au < testing ; exists ; 2024 ; Chemical Engineering Education Volume 2024 ; 2024 ; 2024 ; > #login found, https://journals.flvc.org/cee/article/view/132637/136584
+      au < testing ; exists ; 2024 ; Chemical Engineering Education Volume 2024 ; 2024 ; 2024 ; >
 
   }
 
@@ -101,7 +101,7 @@
       param[journal_id] = EMIC
 
       au < frozen ; exists ; 2023 ; EMIC Volume 1 ; 1 ; 2023 ; >
-      au < testing ; exists ; 2024 ; EMIC Volume 2 ; 2 ; 2024 ; >
+      au < ready ; exists ; 2024 ; EMIC Volume 2 ; 2 ; 2024 ; >
 
   }
 
@@ -250,7 +250,7 @@
       au < frozen ; exists ; 2021 ; The International FLAIRS Conference Proceedings Volume 34 ; 34 ; 2021 ; >
       au < frozen ; exists ; 2022 ; The International FLAIRS Conference Proceedings Volume 35 ; 35 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; The International FLAIRS Conference Proceedings Volume 36 ; 36 ; 2023 ; >
-      au < testing ; exists ; 2024 ; The International FLAIRS Conference Proceedings Volume 37 ; 37 ; 2024 ; >
+      au < ready ; exists ; 2024 ; The International FLAIRS Conference Proceedings Volume 37 ; 37 ; 2024 ; >
 
   }
 
@@ -285,7 +285,7 @@
       au < frozen ; exists ; 2021 ; The Journal of Civic Information Volume 3 ; 3 ; 2021 ; >
       au < frozen ; exists ; 2022 ; The Journal of Civic Information Volume 4 ; 4 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; The Journal of Civic Information Volume 5 ; 5 ; 2023 ; >
-      au < testing ; exists ; 2024 ; The Journal of Civic Information Volume 6 ; 6 ; 2024 ; >
+      au < ready ; exists ; 2024 ; The Journal of Civic Information Volume 6 ; 6 ; 2024 ; >
 
   }
 
@@ -305,7 +305,7 @@
       au < frozen ; exists ; 2021 ; The Journal of Public Interest Communications Volume 5 ; 5 ; 2021 ; >
       au < frozen ; exists ; 2022 ; The Journal of Public Interest Communications Volume 6 ; 6 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; The Journal of Public Interest Communications Volume 7 ; 7 ; 2023 ; >
-      au < testing ; exists ; 2024 ; The Journal of Public Interest Communications Volume 8 ; 8 ; 2024 ; >
+      au < ready ; exists ; 2024 ; The Journal of Public Interest Communications Volume 8 ; 8 ; 2024 ; >
 
   }
 
@@ -322,7 +322,7 @@
       au < frozen ; exists ; 2021 ; Journal of the Florida Mosquito Control Association Volume 68 ; 68 ; 2021 ; >
       au < frozen ; exists ; 2022 ; Journal of the Florida Mosquito Control Association Volume 69 ; 69 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; Journal of the Florida Mosquito Control Association Volume 70 ; 70 ; 2023 ; >
-      au < testing ; exists ; 2024 ; Journal of the Florida Mosquito Control Association Volume 71 ; 71 ; 2024 ; >
+      au < ready ; exists ; 2024 ; Journal of the Florida Mosquito Control Association Volume 71 ; 71 ; 2024 ; >
 
   }
 
@@ -526,7 +526,7 @@
       au < frozen ; exists ; 2021 ; Tropical Lepidoptera Research Volume 32 ; 32 ; 2021 ; >
       au < frozen ; exists ; 2022 ; Tropical Lepidoptera Research Volume 33 ; 33 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; Tropical Lepidoptera Research Volume 34 ; 34 ; 2023 ; >
-      au < testing ; exists ; 2024 ; Tropical Lepidoptera Research Volume 35 ; 35 ; 2024 ; >
+      au < ready ; exists ; 2024 ; Tropical Lepidoptera Research Volume 35 ; 35 ; 2024 ; >
 
   }
 
