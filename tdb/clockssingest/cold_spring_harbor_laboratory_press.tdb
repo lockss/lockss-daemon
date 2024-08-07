@@ -140,7 +140,7 @@
       au < superseded ; exists ; 2022 ; Cold Spring Harbor Protocols Volume 2022 [superseded] ; 2022 ; http://cshprotocols.cshlp.org/ ; >
       au < finished ; crawling ; 2022 ; Cold Spring Harbor Protocols Volume 2022 ; 2022 ; https://cshprotocols.cshlp.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2023 ; Cold Spring Harbor Protocols Volume 2023 ; 2023 ; https://cshprotocols.cshlp.org/ ; >
-      au < ready ; exists ; 2024 ; Cold Spring Harbor Protocols Volume 2024 ; 2024 ; https://cshprotocols.cshlp.org/ ; >
+      au < crawling ; exists ; 2024 ; Cold Spring Harbor Protocols Volume 2024 ; 2024 ; https://cshprotocols.cshlp.org/ ; >
 
     }
     
