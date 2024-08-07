@@ -89,6 +89,12 @@ POSSIBILITY OF SUCH DAMAGE.
     </list>
   </entry>
   <entry>
+    <string>au_permission_url</string>
+    <list>
+      <string>"%sjournal/%s/about", base_url, journal_id</string> 
+    </list>
+  </entry>
+  <entry>
     <string>au_substance_url_pattern</string>
     <list>
       	<string>1,"^%s(j/%s/a|citation/export)/[^/]+/\?format=pdf", base_url, journal_id</string>
