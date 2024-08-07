@@ -89,47 +89,8 @@ public class Ojs3HtmlMetadataExtractorFactory2024 implements FileMetadataExtract
             if (am != null) {
                 am.cook(tagMap);
                 emitter.emitMetadata(cu, am);
-                // if there are multiple pdfs (from multiple languages) the publisher
-                // would like this represented in the metadata count
-                processMultiplePdfs(am, cu, emitter);
             }
         }
 
-        public void processMultiplePdfs(ArticleMetadata am, CachedUrl cu, Emitter emitter) {
-            List<String> pdfUrls = am.getRawList("citation_pdf_url");
-            List<String> altTitles = am.getRawList("dc.title.alternative");
-            if (pdfUrls.size() > 1) {
-                ArchivalUnit au = cu.getArchivalUnit();
-                for (int i = 1; i < pdfUrls.size(); i++) {
-                String actualPdfUrl = null;
-                CachedUrl pdfCu = au.makeCachedUrl(pdfUrls.get(i));
-                if (pdfCu != null && pdfCu.hasContent()) {
-                    actualPdfUrl = pdfUrls.get(i);
-                } else {
-                    // search for the actual pdf url, which can have appended dirs/args
-                    for (CachedUrl acu : au.getAuCachedUrlSet().getCuIterable()) {
-                    String cuUrl = acu.getUrl();
-                    if (cuUrl.contains(pdfUrls.get(i))) {
-                        actualPdfUrl = cuUrl;
-                        break;
-                    }
-                    }
-                }
-                // if there is no altTitle, then the pdf is not likely another language, it is more likely a supplement.
-                if (actualPdfUrl != null && altTitles.size()>0) {
-                    ArticleMetadata multiAm = new ArticleMetadata();
-                    //for (Object mf : tagMap.values()) {
-                    //  multiAm.put(((MetadataField) mf), am.get((MetadataField) mf));
-                    //}
-                    multiAm.put(MetadataField.FIELD_ACCESS_URL, actualPdfUrl);
-                    if (altTitles.size()>=i-1) {
-                    multiAm.put(MetadataField.FIELD_ARTICLE_TITLE, altTitles.get(i-1));
-                    }
-                    //multiAm.replace(MetadataField.FIELD_LANGUAGE, "en");
-                    emitter.emitMetadata(cu, multiAm);
-                    }
-                }
-            }
-        }
     }
 }

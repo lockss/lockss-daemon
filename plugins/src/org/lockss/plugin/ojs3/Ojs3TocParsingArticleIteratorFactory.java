@@ -118,14 +118,16 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
         try{
             Document doc = Jsoup.parse(tocCU.getUnfilteredInputStream(), AuUtil.getCharsetOrDefault(tocCU.getProperties()), tocCU.getUrl());
             Elements articles = doc.select("div.article-summary,article.article,ul.articles>li,div.one-article-intoc,article.article_summary,div.article-sum,"
-                +"ul.it-list>li>div.it-right-zone,article.equal,div.grid-child:has(div>div.media-body),ul.row>li.issue__article");
+                +"ul.it-list>li>div.it-right-zone,article.equal,div.grid-child:has(div>div.media-body),ul.row>li.issue__article,div.page-issue-galleys:has(div.h3:contains(Número completo)),"
+                +"div.galleys:has(h2:contains(Número completo))");
             ArrayList<String> rolesForFullText = new ArrayList<>();
             for (Element article : articles) {
                 ArticleFiles af = new ArticleFiles();
 
                 Elements PDFs = article.select("div.article-summary-galleys>a[href*=article]:contains(PDF),ul.article__btn-group>li>a[href*=article]:contains(PDF),ul.galleys_links>li>a[href*=article]:contains(PDF),"
                     +"div.galleys_links>a[href*=article]:contains(PDF),div.btn-group>a[href*=article]:contains(PDF),a.indexGalleyLink:contains(PDF),div.btn-group>a[href*=article].pdf:contains(Article),"
-                    +"div.galleryLinksWrp>div.btnsLink>a.galley-link:contains(PDF),ul.actions>li.galley-links-items>a:has(i.fa-file-pdf),div.row>div>a.galley-link:has(span.gallery_item_link:contains(PDF))");
+                    +"div.galleryLinksWrp>div.btnsLink>a.galley-link:contains(PDF),ul.actions>li.galley-links-items>a:has(i.fa-file-pdf),div.row>div>a.galley-link:has(span.gallery_item_link:contains(PDF)),"
+                    +"a[href*=issue/view].btn:contains(PDF),ul.galleys_links>li>a.pdf[href*=issue/view]");
                 pdfUrl = au.makeCachedUrl(PDFs.attr("href"));
                 addToListOfRoles(pdfUrl, af, rolesForFullText, ArticleFiles.ROLE_FULL_TEXT_PDF);
 
