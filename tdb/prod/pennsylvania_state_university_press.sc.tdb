@@ -332,7 +332,7 @@
       au < doNotProcess ; 2021 ; The Journal of Ayn Rand Studies Volume 21 ; 21 ; 2021 >
       au < released ; 2022 ; The Journal of Ayn Rand Studies Volume 22 ; 22 ; 2022 >
       au < released ; 2023 ; The Journal of Ayn Rand Studies Volume 23 ; 23 ; 2023 >
-      au < expected ; 2024 ; The Journal of Ayn Rand Studies Volume 24 ; 24 ; 2024 >
+      #Last volume V23 2023
 
   }
 
@@ -1463,6 +1463,7 @@
       au < doNotProcess ; 2019 ; Journal of the Pennsylvania Academy of Science Volume 93 ; 93 ; 2019 >
       au < doNotProcess ; 2020 ; Journal of the Pennsylvania Academy of Science Volume 94 ; 94 ; 2020 >
       au < doNotProcess ; 2021 ; Journal of the Pennsylvania Academy of Science Volume 95 ; 95 ; 2021 >
+      au < exists ; 2022 ; Journal of the Pennsylvania Academy of Science Volume 96 ; 96 ; 2022 >
 
   }
 
@@ -2179,7 +2180,7 @@
 
       au < released ; 2020 ; AMP: American Music Perspectives Volume 1 ; 1 ; 2020 >
       au < released ; 2021 ; AMP: American Music Perspectives Volume 2 ; 2 ; 2021 >
-      au < expected ; 2023 ; AMP: American Music Perspectives Volume 3 ; 3 ; 2023 >
+      au < exists ; 2022 ; AMP: American Music Perspectives Volume 3 ; 3 ; 2022 >
       au < expected ; 2024 ; AMP: American Music Perspectives Volume 4 ; 4 ; 2024 >
 
   }
@@ -2408,4 +2409,31 @@
 
   }
 
+  {
+
+      title <
+        name = Palestine/Israel Review ;
+        issn = 2834-4324 ;
+        eissn = 2834-4332
+      >
+
+      param[journal_id] = pir 
+
+      au < manifest ; 2024 ; Palestine/Israel Review Volume 1 ; 1 ; 2024 >
+
+  }
+
+  {
+
+      title <
+        name = Theatre and Performance Notes and Counternotes ;
+        issn = 2693-101X ;
+        eissn = 2693-1028
+      >
+
+      param[journal_id] = tpnc 
+
+      au < manifest ; 2024 ; Theatre and Performance Notes and Counternotes Volume 1 ; 1 ; 2024 >
+
+  }
 }
