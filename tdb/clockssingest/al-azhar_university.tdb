@@ -3,7 +3,7 @@
     name = Al-Azhar University ;
     info[contract] = 2012 ;
     info[tester] = 5 ;
-    info[platform] = Bepress
+    info[platform] = bepress
   >
     provider = bepress
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
