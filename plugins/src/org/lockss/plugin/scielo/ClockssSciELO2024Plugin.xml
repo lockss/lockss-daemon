@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
         <string>plugin_version</string>
-        <string>4</string>
+        <string>5</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -119,6 +119,7 @@ POSSIBILITY OF SUCH DAMAGE.
         Answer: Looks like data is captured in HTML (use cURL command to check source)
      --> 
     <list>
+      <string>4,"^%s", base_url</string>
       <string>2,"^%sj/%s/a/[^/]+/.*[?&amp;]goto=", base_url, journal_id</string>
       <!--<string>2,"^%sj/%s/i/%d\.[^/]+/.*[?&amp;]goto=", base_url, journal_id, year</string>-->
       <string>1,"^%s(j/%s/a|citation/export)/[^/]+", base_url, journal_id</string>
