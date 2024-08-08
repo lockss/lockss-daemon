@@ -420,13 +420,13 @@
     au < ready ; exists ; 2000 ; Current Lecture Notes 2000 ; 2000 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2001 ; Current Lecture Notes 2001 ; 2001 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2002 ; Current Lecture Notes 2002 ; 2002 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2003 ; Current Lecture Notes 2003 ; 2003 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2004 ; Current Lecture Notes 2004 ; 2004 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2003 ; Current Lecture Notes 2003 ; 2003 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2004 ; Current Lecture Notes 2004 ; 2004 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2005 ; Current Lecture Notes 2005 ; 2005 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2006 ; Current Lecture Notes 2006 ; 2006 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2007 ; Current Lecture Notes 2007 ; 2007 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2008 ; Current Lecture Notes 2008 ; 2008 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2009 ; Current Lecture Notes 2009 ; 2009 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2009 ; Current Lecture Notes 2009 ; 2009 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2010 ; Current Lecture Notes 2010 ; 2010 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2011 ; Current Lecture Notes 2011 ; 2011 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2013 ; Current Lecture Notes 2013 ; 2013 ; https://www.ams.org/ ; >
@@ -521,7 +521,7 @@
     au < crawling ; exists ; 2005 ; Fields Institute Communications 2005 ; 2005 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2006 ; Fields Institute Communications 2006 ; 2006 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2007 ; Fields Institute Communications 2007 ; 2007 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2008 ; Fields Institute Communications 2008 ; 2008 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2008 ; Fields Institute Communications 2008 ; 2008 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2009 ; Fields Institute Communications 2009 ; 2009 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2010 ; Fields Institute Communications 2010 ; 2010 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2011 ; Fields Institute Communications 2011 ; 2011 ; https://www.ams.org/ ; >
@@ -545,10 +545,10 @@
     au < ready ; exists ; 1999 ; Fields Institute Monographs 1999 ; 1999 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2000 ; Fields Institute Monographs 2000 ; 2000 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2002 ; Fields Institute Monographs 2002 ; 2002 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2003 ; Fields Institute Monographs 2003 ; 2003 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2004 ; Fields Institute Monographs 2004 ; 2004 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2003 ; Fields Institute Monographs 2003 ; 2003 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2004 ; Fields Institute Monographs 2004 ; 2004 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2005 ; Fields Institute Monographs 2005 ; 2005 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2006 ; Fields Institute Monographs 2006 ; 2006 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2006 ; Fields Institute Monographs 2006 ; 2006 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2008 ; Fields Institute Monographs 2008 ; 2008 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2009 ; Fields Institute Monographs 2009 ; 2009 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2010 ; Fields Institute Monographs 2010 ; 2010 ; https://www.ams.org/ ; >
@@ -642,7 +642,7 @@
     au < crawling ; exists ; 2001 ; The Student Mathematical Library 2001 ; 2001 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2002 ; The Student Mathematical Library 2002 ; 2002 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2003 ; The Student Mathematical Library 2003 ; 2003 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2004 ; The Student Mathematical Library 2004 ; 2004 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2004 ; The Student Mathematical Library 2004 ; 2004 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2005 ; The Student Mathematical Library 2005 ; 2005 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2006 ; The Student Mathematical Library 2006 ; 2006 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2007 ; The Student Mathematical Library 2007 ; 2007 ; https://www.ams.org/ ; >
@@ -686,14 +686,14 @@
     au < ready ; exists ; 1998 ; University Lecture Series 1998 ; 1998 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1999 ; University Lecture Series 1999 ; 1999 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2000 ; University Lecture Series 2000 ; 2000 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2001 ; University Lecture Series 2001 ; 2001 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2001 ; University Lecture Series 2001 ; 2001 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2002 ; University Lecture Series 2002 ; 2002 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2003 ; University Lecture Series 2003 ; 2003 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2003 ; University Lecture Series 2003 ; 2003 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2004 ; University Lecture Series 2004 ; 2004 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2005 ; University Lecture Series 2005 ; 2005 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2005 ; University Lecture Series 2005 ; 2005 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2006 ; University Lecture Series 2006 ; 2006 ; https://www.ams.org/ ; >
     au < doesNotExist ; doesNotExist ; 2007 ; University Lecture Series 2007 ; 2007 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2008 ; University Lecture Series 2008 ; 2008 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2008 ; University Lecture Series 2008 ; 2008 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2009 ; University Lecture Series 2009 ; 2009 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2010 ; University Lecture Series 2010 ; 2010 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2011 ; University Lecture Series 2011 ; 2011 ; https://www.ams.org/ ; >
@@ -727,7 +727,7 @@
     au < ready ; exists ; 1998 ; CBMS Issues in Mathematics Education 1998 ; 1998 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2000 ; CBMS Issues in Mathematics Education 2000 ; 2000 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2001 ; CBMS Issues in Mathematics Education 2001 ; 2001 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2003 ; CBMS Issues in Mathematics Education 2003 ; 2003 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2003 ; CBMS Issues in Mathematics Education 2003 ; 2003 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2006 ; CBMS Issues in Mathematics Education 2006 ; 2006 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2007 ; CBMS Issues in Mathematics Education 2007 ; 2007 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2008 ; CBMS Issues in Mathematics Education 2008 ; 2008 ; https://www.ams.org/ ; >
@@ -796,7 +796,7 @@
     au < crawling ; exists ; 2004 ; AMS Translations: Series 2 2004 ; 2004 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2005 ; AMS Translations: Series 2 2005 ; 2005 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2006 ; AMS Translations: Series 2 2006 ; 2006 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2007 ; AMS Translations: Series 2 2007 ; 2007 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2007 ; AMS Translations: Series 2 2007 ; 2007 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2008 ; AMS Translations: Series 2 2008 ; 2008 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2009 ; AMS Translations: Series 2 2009 ; 2009 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2010 ; AMS Translations: Series 2 2010 ; 2010 ; https://www.ams.org/ ; >
