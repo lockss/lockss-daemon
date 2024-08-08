@@ -3,11 +3,12 @@
     name = Georgia Southern University ;
     info[contract] = 2012 ;
     info[tester] = 5 ;
-    info[poller] = 6
+    info[poller] = 6 ;
+    info[platform] = bepress
   >
-
-    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
-    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+  provider = Georgia Southern University
+  plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+  implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
   {
 
