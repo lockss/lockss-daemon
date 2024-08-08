@@ -22,7 +22,7 @@
       param[journal_abbr] = home
 
       au < ready ; exists ; 2023 ; Journal of Medicine in Scientific Research Volume 6 ; 6 ; > #LXQUEUE-1881
-      au < ready ; exists ; 2024 ; Journal of Medicine in Scientific Research Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2024 ; Journal of Medicine in Scientific Research Volume 7 ; 7 ; >
 
   }
 

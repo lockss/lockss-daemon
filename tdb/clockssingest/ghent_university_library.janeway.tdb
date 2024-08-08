@@ -346,10 +346,10 @@
       au < ready ; exists ; 2002 ; 2002 ; 2002 ; Agora Magazine Volume 2002 ; >
       au < ready ; exists ; 2003 ; 2003 ; 2003 ; Agora Magazine Volume 2003 ; >
       au < ready ; exists ; 2004 ; 2004 ; 2004 ; Agora Magazine Volume 2004 ; >
-      au < ready ; exists ; 2005 ; 2005 ; 2005 ; Agora Magazine Volume 2005 ; >
+      au < crawling ; exists ; 2005 ; 2005 ; 2005 ; Agora Magazine Volume 2005 ; >
       au < ready ; exists ; 2006 ; 2006 ; 2006 ; Agora Magazine Volume 2006 ; >
       au < ready ; exists ; 2007 ; 2007 ; 2007 ; Agora Magazine Volume 2007 ; >
-      au < ready ; exists ; 2008 ; 2008 ; 2008 ; Agora Magazine Volume 2008 ; >
+      au < crawling ; exists ; 2008 ; 2008 ; 2008 ; Agora Magazine Volume 2008 ; >
       au < ready ; exists ; 2009 ; 2009 ; 2009 ; Agora Magazine Volume 2009 ; >
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Agora Magazine Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Agora Magazine Volume 2011 ; >
@@ -463,7 +463,7 @@
       au < exists ; exists ; 1999 ; 1999 ; 1999 ; De Uil van Minerva Volume 1999 ; >
       au < ready ; exists ; 2000 ; 2000 ; 2000 ; De Uil van Minerva Volume 2000 ; >
       au < ready ; exists ; 2001 ; 2001 ; 2001 ; De Uil van Minerva Volume 2001 ; >
-      au < ready ; exists ; 2002 ; 2002 ; 2002 ; De Uil van Minerva Volume 2002 ; >
+      au < crawling ; exists ; 2002 ; 2002 ; 2002 ; De Uil van Minerva Volume 2002 ; >
       au < ready ; exists ; 2003 ; 2003 ; 2003 ; De Uil van Minerva Volume 2003 ; >
       au < ready ; exists ; 2004 ; 2004 ; 2004 ; De Uil van Minerva Volume 2004 ; >
       au < ready ; exists ; 2005 ; 2005 ; 2005 ; De Uil van Minerva Volume 2005 ; >
@@ -530,13 +530,13 @@
       au < ready ; exists ; 2000 ; 2000 ; 2000 ; Ghendtsche Tydinghen Volume 2000 ; >
       au < ready ; exists ; 2001 ; 2001 ; 2001 ; Ghendtsche Tydinghen Volume 2001 ; >
       au < ready ; exists ; 2002 ; 2002 ; 2002 ; Ghendtsche Tydinghen Volume 2002 ; >
-      au < ready ; exists ; 2003 ; 2003 ; 2003 ; Ghendtsche Tydinghen Volume 2003 ; >
+      au < crawling ; exists ; 2003 ; 2003 ; 2003 ; Ghendtsche Tydinghen Volume 2003 ; >
       au < ready ; exists ; 2004 ; 2004 ; 2004 ; Ghendtsche Tydinghen Volume 2004 ; >
       au < ready ; exists ; 2005 ; 2005 ; 2005 ; Ghendtsche Tydinghen Volume 2005 ; >
       au < ready ; exists ; 2006 ; 2006 ; 2006 ; Ghendtsche Tydinghen Volume 2006 ; >
-      au < ready ; exists ; 2007 ; 2007 ; 2007 ; Ghendtsche Tydinghen Volume 2007 ; >
+      au < crawling ; exists ; 2007 ; 2007 ; 2007 ; Ghendtsche Tydinghen Volume 2007 ; >
       au < ready ; exists ; 2008 ; 2008 ; 2008 ; Ghendtsche Tydinghen Volume 2008 ; >
-      au < ready ; exists ; 2009 ; 2009 ; 2009 ; Ghendtsche Tydinghen Volume 2009 ; >
+      au < crawling ; exists ; 2009 ; 2009 ; 2009 ; Ghendtsche Tydinghen Volume 2009 ; >
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Ghendtsche Tydinghen Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Ghendtsche Tydinghen Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Ghendtsche Tydinghen Volume 2012 ; >
@@ -897,7 +897,7 @@
 
       au < ready ; exists ; 2006 ; 2006 ; 2006 ; EWOP in Practice Volume 2006 ; >
       au < ready ; exists ; 2007 ; 2007 ; 2007 ; EWOP in Practice Volume 2007 ; >
-      au < ready ; exists ; 2008 ; 2008 ; 2008 ; EWOP in Practice Volume 2008 ; >
+      au < crawling ; exists ; 2008 ; 2008 ; 2008 ; EWOP in Practice Volume 2008 ; >
       au < ready ; exists ; 2009 ; 2009 ; 2009 ; EWOP in Practice Volume 2009 ; >
       au < manifest ; exists ; 2010 ; 2010 ; 2010 ; EWOP in Practice Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; EWOP in Practice Volume 2011 ; >
