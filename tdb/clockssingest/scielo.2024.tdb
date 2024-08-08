@@ -5,11 +5,10 @@
     info[contract] = 2024 ;
     info[back] = 2000 ;
     info[min_year] = 2000 ;
-    info[tester] = 8 ;
+    info[tester] = 4 ;
     info[poller] = 8
   >
   
-  provider = Anais da Academia Brasileira de Ciências
   rights = openaccess
   plugin = org.lockss.plugin.scielo.ClockssSciELO2024Plugin
   implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
@@ -24,6 +23,7 @@
 
     param[base_url] = https://www.scielo.br/
     param[journal_id] = aabc
+    provider = Anais da Academia Brasileira de Ciências
 
     au < frozen ; exists ; 2000 ; 72 ; Anais da Academia Brasileira de Ciências Volume 72 ; 2000 ; >
     au < manifest ; exists ; 2001 ; 73 ; Anais da Academia Brasileira de Ciências Volume 73 ; 2001 ; >
@@ -50,6 +50,23 @@
     au < frozen ; exists ; 2022 ; 94 ; Anais da Academia Brasileira de Ciências Volume 94 ; 2022 ; >
     au < frozen ; exists ; 2023 ; 95 ; Anais da Academia Brasileira de Ciências Volume 95 ; 2023 ; >
     au < expected ; exists ; 2024 ; 96 ; Anais da Academia Brasileira de Ciências Volume 96 ; 2024 ; >
+
+  }
+
+  {
+
+    title <
+      name = Revista Gaúcha de Enfermagem ;
+      issn = 0102-6933 ;
+      eissn = 1983-1447
+    >
+
+    param[base_url] = https://www.scielo.br/
+    param[journal_id] = rgenf
+    provider = Fundacao de Apoio Da Universidade Federal Do Rgs-Faurgs
+
+    au < testing ; exists ; 2010 ; 31 ; Revista Gaúcha de Enfermagem Volume 31 ; 2010 ; >
+    au < testing ; exists ; 2020 ; 41 ; Revista Gaúcha de Enfermagem Volume 41 ; 2020 ; >
 
   }
 
