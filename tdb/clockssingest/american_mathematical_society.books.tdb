@@ -417,7 +417,7 @@
     
     param[collection_id] = cln
     
-    au < ready ; exists ; 2000 ; Current Lecture Notes 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2000 ; Current Lecture Notes 2000 ; 2000 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2001 ; Current Lecture Notes 2001 ; 2001 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2002 ; Current Lecture Notes 2002 ; 2002 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2003 ; Current Lecture Notes 2003 ; 2003 ; https://www.ams.org/ ; >
@@ -480,8 +480,8 @@
     au < testing ; exists ; 1995 ; Colloquium Publications 1995 ; 1995 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1996 ; Colloquium Publications 1996 ; 1996 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1998 ; Colloquium Publications 1998 ; 1998 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1999 ; Colloquium Publications 1999 ; 1999 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2000 ; Colloquium Publications 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1999 ; Colloquium Publications 1999 ; 1999 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2000 ; Colloquium Publications 2000 ; 2000 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2002 ; Colloquium Publications 2002 ; 2002 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2004 ; Colloquium Publications 2004 ; 2004 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2005 ; Colloquium Publications 2005 ; 2005 ; https://www.ams.org/ ; >
@@ -509,11 +509,11 @@
     au < testing ; exists ; 1993 ; Fields Institute Communications 1993 ; 1993 ; https://www.ams.org/ ; >
     au < testing ; exists ; 1994 ; Fields Institute Communications 1994 ; 1994 ; https://www.ams.org/ ; >
     au < testing ; exists ; 1995 ; Fields Institute Communications 1995 ; 1995 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1996 ; Fields Institute Communications 1996 ; 1996 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1997 ; Fields Institute Communications 1997 ; 1997 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1996 ; Fields Institute Communications 1996 ; 1996 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1997 ; Fields Institute Communications 1997 ; 1997 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 1998 ; Fields Institute Communications 1998 ; 1998 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1999 ; Fields Institute Communications 1999 ; 1999 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2000 ; Fields Institute Communications 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2000 ; Fields Institute Communications 2000 ; 2000 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2001 ; Fields Institute Communications 2001 ; 2001 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2002 ; Fields Institute Communications 2002 ; 2002 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2003 ; Fields Institute Communications 2003 ; 2003 ; https://www.ams.org/ ; >
@@ -539,11 +539,11 @@
     
     au < testing ; exists ; 1993 ; Fields Institute Monographs 1993 ; 1993 ; https://www.ams.org/ ; >
     au < testing ; exists ; 1994 ; Fields Institute Monographs 1994 ; 1994 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1996 ; Fields Institute Monographs 1996 ; 1996 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1997 ; Fields Institute Monographs 1997 ; 1997 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1998 ; Fields Institute Monographs 1998 ; 1998 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1996 ; Fields Institute Monographs 1996 ; 1996 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1997 ; Fields Institute Monographs 1997 ; 1997 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1998 ; Fields Institute Monographs 1998 ; 1998 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1999 ; Fields Institute Monographs 1999 ; 1999 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2000 ; Fields Institute Monographs 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2000 ; Fields Institute Monographs 2000 ; 2000 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2002 ; Fields Institute Monographs 2002 ; 2002 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2003 ; Fields Institute Monographs 2003 ; 2003 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2004 ; Fields Institute Monographs 2004 ; 2004 ; https://www.ams.org/ ; >
@@ -571,8 +571,8 @@
     au < crawling ; exists ; 1996 ; Graduate Studies in Mathematics 1996 ; 1996 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 1997 ; Graduate Studies in Mathematics 1997 ; 1997 ; https://www.ams.org/ ; >
     au < testing ; exists ; 1998 ; Graduate Studies in Mathematics 1998 ; 1998 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1999 ; Graduate Studies in Mathematics 1999 ; 1999 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2000 ; Graduate Studies in Mathematics 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1999 ; Graduate Studies in Mathematics 1999 ; 1999 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2000 ; Graduate Studies in Mathematics 2000 ; 2000 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2001 ; Graduate Studies in Mathematics 2001 ; 2001 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2002 ; Graduate Studies in Mathematics 2002 ; 2002 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2003 ; Graduate Studies in Mathematics 2003 ; 2003 ; https://www.ams.org/ ; >
@@ -613,9 +613,9 @@
     au < testing ; exists ; 1994 ; Mathematical World 1994 ; 1994 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 1996 ; Mathematical World 1996 ; 1996 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1997 ; Mathematical World 1997 ; 1997 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1998 ; Mathematical World 1998 ; 1998 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1998 ; Mathematical World 1998 ; 1998 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1999 ; Mathematical World 1999 ; 1999 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2000 ; Mathematical World 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2000 ; Mathematical World 2000 ; 2000 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2002 ; Mathematical World 2002 ; 2002 ; https://www.ams.org/ ; >
     au < notReady ; exists ; 2003 ; Mathematical World 2003 ; 2003 ; https://www.ams.org/ ; > #no content link on http://www.ams.org/books/mawrld/019/
     au < crawling ; exists ; 2004 ; Mathematical World 2004 ; 2004 ; https://www.ams.org/ ; >
@@ -637,8 +637,8 @@
     
     param[collection_id] = stml
     
-    au < ready ; exists ; 1999 ; The Student Mathematical Library 1999 ; 1999 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2000 ; The Student Mathematical Library 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1999 ; The Student Mathematical Library 1999 ; 1999 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2000 ; The Student Mathematical Library 2000 ; 2000 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2001 ; The Student Mathematical Library 2001 ; 2001 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2002 ; The Student Mathematical Library 2002 ; 2002 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2003 ; The Student Mathematical Library 2003 ; 2003 ; https://www.ams.org/ ; >
@@ -723,8 +723,8 @@
     au < testing ; exists ; 1993 ; CBMS Issues in Mathematics Education 1993 ; 1993 ; https://www.ams.org/ ; >
     au < testing ; exists ; 1994 ; CBMS Issues in Mathematics Education 1994 ; 1994 ; https://www.ams.org/ ; >
     au < testing ; exists ; 1995 ; CBMS Issues in Mathematics Education 1995 ; 1995 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1996 ; CBMS Issues in Mathematics Education 1996 ; 1996 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1998 ; CBMS Issues in Mathematics Education 1998 ; 1998 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1996 ; CBMS Issues in Mathematics Education 1996 ; 1996 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1998 ; CBMS Issues in Mathematics Education 1998 ; 1998 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2000 ; CBMS Issues in Mathematics Education 2000 ; 2000 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2001 ; CBMS Issues in Mathematics Education 2001 ; 2001 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2003 ; CBMS Issues in Mathematics Education 2003 ; 2003 ; https://www.ams.org/ ; >
@@ -785,11 +785,11 @@
     au < testing ; exists ; 1993 ; AMS Translations: Series 2 1993 ; 1993 ; https://www.ams.org/ ; >
     au < testing ; exists ; 1994 ; AMS Translations: Series 2 1994 ; 1994 ; https://www.ams.org/ ; >
     au < testing ; exists ; 1995 ; AMS Translations: Series 2 1995 ; 1995 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1996 ; AMS Translations: Series 2 1996 ; 1996 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1997 ; AMS Translations: Series 2 1997 ; 1997 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1996 ; AMS Translations: Series 2 1996 ; 1996 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1997 ; AMS Translations: Series 2 1997 ; 1997 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1998 ; AMS Translations: Series 2 1998 ; 1998 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1999 ; AMS Translations: Series 2 1999 ; 1999 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2000 ; AMS Translations: Series 2 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2000 ; AMS Translations: Series 2 2000 ; 2000 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2001 ; AMS Translations: Series 2 2001 ; 2001 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2002 ; AMS Translations: Series 2 2002 ; 2002 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 2003 ; AMS Translations: Series 2 2003 ; 2003 ; https://www.ams.org/ ; >
