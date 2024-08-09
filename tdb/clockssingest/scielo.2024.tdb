@@ -5,7 +5,7 @@
     info[contract] = 2024 ;
     info[back] = 2000 ;
     info[min_year] = 2000 ;
-    info[tester] = 4 ;
+    info[tester] = 8 ;
     info[poller] = 8
   >
   
@@ -65,8 +65,8 @@
     param[journal_id] = rgenf
     provider = Fundacao de Apoio Da Universidade Federal Do Rgs-Faurgs
 
-    au < testing ; exists ; 2010 ; 31 ; Revista Gaúcha de Enfermagem Volume 31 ; 2010 ; >
-    au < testing ; exists ; 2020 ; 41 ; Revista Gaúcha de Enfermagem Volume 41 ; 2020 ; >
+    au < ready ; exists ; 2010 ; 31 ; Revista Gaúcha de Enfermagem Volume 31 ; 2010 ; >
+    au < ready ; exists ; 2020 ; 41 ; Revista Gaúcha de Enfermagem Volume 41 ; 2020 ; >
 
   }
 
