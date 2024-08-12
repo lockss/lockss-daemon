@@ -65,8 +65,8 @@
     param[journal_id] = rgenf
     provider = Fundacao de Apoio Da Universidade Federal Do Rgs-Faurgs
 
-    au < ready ; exists ; 2010 ; 31 ; Revista Gaúcha de Enfermagem Volume 31 ; 2010 ; >
-    au < ready ; exists ; 2020 ; 41 ; Revista Gaúcha de Enfermagem Volume 41 ; 2020 ; >
+    au < crawling ; exists ; 2010 ; 31 ; Revista Gaúcha de Enfermagem Volume 31 ; 2010 ; >
+    au < crawling ; exists ; 2020 ; 41 ; Revista Gaúcha de Enfermagem Volume 41 ; 2020 ; >
 
   }
 
