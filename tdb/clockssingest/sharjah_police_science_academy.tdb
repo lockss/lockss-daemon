@@ -21,7 +21,7 @@
       param[journal_abbr] = journal
 
       au < manifest ; exists ; 2023 ; Journal of Police and Legal Sciences Volume 13 ; 13 ; > #LXQUEUE-1881
-      au < manifest ; exists ; 2024 ; Journal of Police and Legal Sciences Volume 14 ; 14 ; >
+      au < testing ; exists ; 2024 ; Journal of Police and Legal Sciences Volume 14 ; 14 ; >
 
   }
 
