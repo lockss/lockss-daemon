@@ -204,7 +204,7 @@
       #param[base_url] = https://openjournals.ugent.be/
       param[journal_id] = vdt
 
-      au < crawling ; exists ; 2009 ; 2009 ; 2009 ; Vlaams Diergeneeskundig Tijdschrift Volume 2009 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Vlaams Diergeneeskundig Tijdschrift Volume 2009 ; >
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Vlaams Diergeneeskundig Tijdschrift Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Vlaams Diergeneeskundig Tijdschrift Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Vlaams Diergeneeskundig Tijdschrift Volume 2012 ; >
@@ -294,13 +294,13 @@
       au < exists ; exists ; 1998 ; 1998 ; 1998 ; Afrika Focus Volume 1998 ; >
       au < exists ; exists ; 1999 ; 1999 ; 1999 ; Afrika Focus Volume 1999 ; >
       au < ready ; exists ; 2000 ; 2000 ; 2000 ; Afrika Focus Volume 2000 ; >
-      au < crawling ; exists ; 2001 ; 2001 ; 2001 ; Afrika Focus Volume 2001 ; >
+      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Afrika Focus Volume 2001 ; >
 
       au < ready ; exists ; 2005 ; 2005 ; 2005 ; Afrika Focus Volume 2005 ; >
       au < ready ; exists ; 2006 ; 2006 ; 2006 ; Afrika Focus Volume 2006 ; >
       au < ready ; exists ; 2007 ; 2007 ; 2007 ; Afrika Focus Volume 2007 ; >
-      au < crawling ; exists ; 2008 ; 2008 ; 2008 ; Afrika Focus Volume 2008 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; 2009 ; Afrika Focus Volume 2009 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Afrika Focus Volume 2008 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Afrika Focus Volume 2009 ; >
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Afrika Focus Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Afrika Focus Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Afrika Focus Volume 2012 ; >
@@ -341,16 +341,16 @@
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; Agora Magazine Volume 1997 ; >
       au < exists ; exists ; 1998 ; 1998 ; 1998 ; Agora Magazine Volume 1998 ; >
       au < exists ; exists ; 1999 ; 1999 ; 1999 ; Agora Magazine Volume 1999 ; >
-      au < crawling ; exists ; 2000 ; 2000 ; 2000 ; Agora Magazine Volume 2000 ; >
-      au < crawling ; exists ; 2001 ; 2001 ; 2001 ; Agora Magazine Volume 2001 ; >
-      au < crawling ; exists ; 2002 ; 2002 ; 2002 ; Agora Magazine Volume 2002 ; >
+      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Agora Magazine Volume 2000 ; >
+      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Agora Magazine Volume 2001 ; >
+      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Agora Magazine Volume 2002 ; >
       au < ready ; exists ; 2003 ; 2003 ; 2003 ; Agora Magazine Volume 2003 ; >
       au < ready ; exists ; 2004 ; 2004 ; 2004 ; Agora Magazine Volume 2004 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; 2005 ; Agora Magazine Volume 2005 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Agora Magazine Volume 2005 ; >
       au < ready ; exists ; 2006 ; 2006 ; 2006 ; Agora Magazine Volume 2006 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; 2007 ; Agora Magazine Volume 2007 ; >
-      au < crawling ; exists ; 2008 ; 2008 ; 2008 ; Agora Magazine Volume 2008 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; 2009 ; Agora Magazine Volume 2009 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Agora Magazine Volume 2007 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Agora Magazine Volume 2008 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Agora Magazine Volume 2009 ; >
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Agora Magazine Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Agora Magazine Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Agora Magazine Volume 2012 ; >
@@ -411,12 +411,12 @@
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; Brood & Rozen Volume 1997 ; >
       au < exists ; exists ; 1998 ; 1998 ; 1998 ; Brood & Rozen Volume 1998 ; >
       au < exists ; exists ; 1999 ; 1999 ; 1999 ; Brood & Rozen Volume 1999 ; >
-      au < crawling ; exists ; 2000 ; 2000 ; 2000 ; Brood & Rozen Volume 2000 ; >
+      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Brood & Rozen Volume 2000 ; >
       au < ready ; exists ; 2001 ; 2001 ; 2001 ; Brood & Rozen Volume 2001 ; >
       au < ready ; exists ; 2002 ; 2002 ; 2002 ; Brood & Rozen Volume 2002 ; >
       au < ready ; exists ; 2003 ; 2003 ; 2003 ; Brood & Rozen Volume 2003 ; >
       au < ready ; exists ; 2004 ; 2004 ; 2004 ; Brood & Rozen Volume 2004 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; 2005 ; Brood & Rozen Volume 2005 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Brood & Rozen Volume 2005 ; >
       au < ready ; exists ; 2006 ; 2006 ; 2006 ; Brood & Rozen Volume 2006 ; >
       au < ready ; exists ; 2007 ; 2007 ; 2007 ; Brood & Rozen Volume 2007 ; >
       au < ready ; exists ; 2008 ; 2008 ; 2008 ; Brood & Rozen Volume 2008 ; >
@@ -463,12 +463,12 @@
       au < exists ; exists ; 1999 ; 1999 ; 1999 ; De Uil van Minerva Volume 1999 ; >
       au < ready ; exists ; 2000 ; 2000 ; 2000 ; De Uil van Minerva Volume 2000 ; >
       au < ready ; exists ; 2001 ; 2001 ; 2001 ; De Uil van Minerva Volume 2001 ; >
-      au < crawling ; exists ; 2002 ; 2002 ; 2002 ; De Uil van Minerva Volume 2002 ; >
-      au < crawling ; exists ; 2003 ; 2003 ; 2003 ; De Uil van Minerva Volume 2003 ; >
-      au < crawling ; exists ; 2004 ; 2004 ; 2004 ; De Uil van Minerva Volume 2004 ; >
+      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; De Uil van Minerva Volume 2002 ; >
+      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; De Uil van Minerva Volume 2003 ; >
+      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; De Uil van Minerva Volume 2004 ; >
       au < ready ; exists ; 2005 ; 2005 ; 2005 ; De Uil van Minerva Volume 2005 ; >
       au < ready ; exists ; 2006 ; 2006 ; 2006 ; De Uil van Minerva Volume 2006 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; 2007 ; De Uil van Minerva Volume 2007 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; De Uil van Minerva Volume 2007 ; >
 
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; De Uil van Minerva Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; De Uil van Minerva Volume 2011 ; >
@@ -527,16 +527,16 @@
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; Ghendtsche Tydinghen Volume 1997 ; >
       au < exists ; exists ; 1998 ; 1998 ; 1998 ; Ghendtsche Tydinghen Volume 1998 ; >
       au < exists ; exists ; 1999 ; 1999 ; 1999 ; Ghendtsche Tydinghen Volume 1999 ; >
-      au < crawling ; exists ; 2000 ; 2000 ; 2000 ; Ghendtsche Tydinghen Volume 2000 ; >
-      au < crawling ; exists ; 2001 ; 2001 ; 2001 ; Ghendtsche Tydinghen Volume 2001 ; >
+      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Ghendtsche Tydinghen Volume 2000 ; >
+      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Ghendtsche Tydinghen Volume 2001 ; >
       au < ready ; exists ; 2002 ; 2002 ; 2002 ; Ghendtsche Tydinghen Volume 2002 ; >
-      au < crawling ; exists ; 2003 ; 2003 ; 2003 ; Ghendtsche Tydinghen Volume 2003 ; >
-      au < crawling ; exists ; 2004 ; 2004 ; 2004 ; Ghendtsche Tydinghen Volume 2004 ; >
-      au < crawling ; exists ; 2005 ; 2005 ; 2005 ; Ghendtsche Tydinghen Volume 2005 ; >
-      au < crawling ; exists ; 2006 ; 2006 ; 2006 ; Ghendtsche Tydinghen Volume 2006 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; 2007 ; Ghendtsche Tydinghen Volume 2007 ; >
+      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Ghendtsche Tydinghen Volume 2003 ; >
+      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Ghendtsche Tydinghen Volume 2004 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Ghendtsche Tydinghen Volume 2005 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Ghendtsche Tydinghen Volume 2006 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Ghendtsche Tydinghen Volume 2007 ; >
       au < ready ; exists ; 2008 ; 2008 ; 2008 ; Ghendtsche Tydinghen Volume 2008 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; 2009 ; Ghendtsche Tydinghen Volume 2009 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Ghendtsche Tydinghen Volume 2009 ; >
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Ghendtsche Tydinghen Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Ghendtsche Tydinghen Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Ghendtsche Tydinghen Volume 2012 ; >
@@ -830,7 +830,7 @@
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; Handelingen van het Genootschap voor Geschiedenis Volume 1997 ; >
       au < exists ; exists ; 1998 ; 1998 ; 1998 ; Handelingen van het Genootschap voor Geschiedenis Volume 1998 ; >
       au < exists ; exists ; 1999 ; 1999 ; 1999 ; Handelingen van het Genootschap voor Geschiedenis Volume 1999 ; >
-      au < crawling ; exists ; 2000 ; 2000 ; 2000 ; Handelingen van het Genootschap voor Geschiedenis Volume 2000 ; >
+      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Handelingen van het Genootschap voor Geschiedenis Volume 2000 ; >
       au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Handelingen van het Genootschap voor Geschiedenis Volume 2001 ; >
       au < manifest ; exists ; 2002 ; 2002 ; 2002 ; Handelingen van het Genootschap voor Geschiedenis Volume 2002 ; >
       au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Handelingen van het Genootschap voor Geschiedenis Volume 2003 ; >
@@ -839,7 +839,7 @@
       au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Handelingen van het Genootschap voor Geschiedenis Volume 2006 ; >
       au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Handelingen van het Genootschap voor Geschiedenis Volume 2007 ; >
       au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Handelingen van het Genootschap voor Geschiedenis Volume 2008 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; 2009 ; Handelingen van het Genootschap voor Geschiedenis Volume 2009 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Handelingen van het Genootschap voor Geschiedenis Volume 2009 ; >
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Handelingen van het Genootschap voor Geschiedenis Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Handelingen van het Genootschap voor Geschiedenis Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Handelingen van het Genootschap voor Geschiedenis Volume 2012 ; >
@@ -896,8 +896,8 @@
       param[journal_id] = ewopinpractice
 
       au < ready ; exists ; 2006 ; 2006 ; 2006 ; EWOP in Practice Volume 2006 ; >
-      au < crawling ; exists ; 2007 ; 2007 ; 2007 ; EWOP in Practice Volume 2007 ; >
-      au < crawling ; exists ; 2008 ; 2008 ; 2008 ; EWOP in Practice Volume 2008 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; EWOP in Practice Volume 2007 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; EWOP in Practice Volume 2008 ; >
       au < ready ; exists ; 2009 ; 2009 ; 2009 ; EWOP in Practice Volume 2009 ; >
       au < manifest ; exists ; 2010 ; 2010 ; 2010 ; EWOP in Practice Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; EWOP in Practice Volume 2011 ; >
@@ -1011,8 +1011,8 @@
       au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2006 ; >
       au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2007 ; >
       au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2008 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; 2009 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2009 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; 2010 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2010 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2009 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2012 ; >
       au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2013 ; >
@@ -1068,7 +1068,7 @@
       au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Sociologos Volume 2007 ; >
       au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Sociologos Volume 2008 ; >
       au < ready ; exists ; 2009 ; 2009 ; 2009 ; Sociologos Volume 2009 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; 2010 ; Sociologos Volume 2010 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Sociologos Volume 2010 ; >
       au < ready ; exists ; 2011 ; 2011 ; 2011 ; Sociologos Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Sociologos Volume 2012 ; >
       au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Sociologos Volume 2013 ; >
@@ -1096,8 +1096,8 @@
       au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Sociologie Volume 2007 ; >
       au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Sociologie Volume 2008 ; >
       au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Sociologie Volume 2009 ; >
-      au < crawling ; exists ; 2010 ; 2010 ; 2010 ; Sociologie Volume 2010 ; >
-      au < crawling ; exists ; 2011 ; 2011 ; 2011 ; Sociologie Volume 2011 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Sociologie Volume 2010 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Sociologie Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Sociologie Volume 2012 ; >
       au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Sociologie Volume 2013 ; >
       au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Sociologie Volume 2014 ; >
@@ -1350,7 +1350,7 @@
       au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Res Publica Volume 2006 ; >
       au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Res Publica Volume 2007 ; >
       au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Res Publica Volume 2008 ; >
-      au < crawling ; exists ; 2009 ; 2009 ; 2009 ; Res Publica Volume 2009 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Res Publica Volume 2009 ; >
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Res Publica Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Res Publica Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Res Publica Volume 2012 ; >
