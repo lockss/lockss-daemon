@@ -41,8 +41,10 @@
     au < doNotProcess ; exists ; 2019 ; 2019 ; Zoo's Print Volume 11 ; 11 ; https://zoosprint.zooreach.org/ ; >
     au < doNotProcess ; exists ; 2020 ; 2020 ; Zoo's Print Volume 12 ; 12 ; https://zoosprint.zooreach.org/ ; >
     au < finished ; frozen ; 2021 ; 2021 ; Zoo's Print Volume 13 ; 13 ; https://zoosprint.zooreach.org/ ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2022 ; 2022 ; Zoo's Print Volume 14 ; 14 ; https://zoosprint.zooreach.org/ ; >
-    au < deepCrawl ; exists ; 2023 ; 2023 ; Zoo's Print Volume 15 ; 15 ; https://zoosprint.zooreach.org/ ; >
+    au < superseded ; exists ; 2022 ; 2022 ; Zoo's Print Volume 14 [superseded] ; 14 ; https://zoosprint.zooreach.org/ ; >
+    au < superseded ; exists ; 2023 ; 2023 ; Zoo's Print Volume 15 [superseded] ; 15 ; https://zoosprint.zooreach.org/ ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Zoo's Print Volume 14 ; 14 ; https://zoosprint.org/ ; >
+    au < manifest ; exists ; 2023 ; 2023 ; Zoo's Print Volume 15 ; 15 ; https://zoosprint.org/ ; >
     au < manifest ; exists ; 2024 ; 2024 ; Zoo's Print Volume 16 ; 16 ; https://zoosprint.org/ ; >
 
     }
