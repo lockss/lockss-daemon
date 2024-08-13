@@ -24,10 +24,10 @@
     param[base_url] = https://publishing.universitypress.ma/
     param[journal_abbr] = health-sciences
 
-    au < crawling ; exists ; 2020 ; Health Sciences Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2021 ; Health Sciences Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2022 ; Health Sciences Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2023 ; Health Sciences Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2020 ; Health Sciences Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2021 ; Health Sciences Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2022 ; Health Sciences Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2023 ; Health Sciences Volume 4 ; 4 ; >
     au < crawling ; exists ; 2024 ; Health Sciences Volume 5 ; 5 ; >
 
     }

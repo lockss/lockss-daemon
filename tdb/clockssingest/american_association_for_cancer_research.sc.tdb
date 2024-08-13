@@ -313,7 +313,7 @@
       au < manifest ; exists ; 2017 ; 2017 ; Clinical Cancer Research Volume 23 ; 23 ; >
       au < manifest ; exists ; 2018 ; 2018 ; Clinical Cancer Research Volume 24 ; 24 ; >
       au < manifest ; exists ; 2019 ; 2019 ; Clinical Cancer Research Volume 25 ; 25 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; Clinical Cancer Research Volume 26 ; 26 ; >
+      au < frozen ; exists ; 2020 ; 2020 ; Clinical Cancer Research Volume 26 ; 26 ; >
       au < frozen ; exists ; 2021 ; 2021 ; Clinical Cancer Research Volume 27 ; 27 ; >
       au < crawling ; exists ; 2022 ; 2022 ; Clinical Cancer Research Volume 28 ; 28 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Clinical Cancer Research Volume 29 ; 29 ; >
@@ -350,10 +350,10 @@
       au < manifest ; exists ; 2017 ; 2017 ; Molecular Cancer Research Volume 15 ; 15 ; >
       au < manifest ; exists ; 2018 ; 2018 ; Molecular Cancer Research Volume 16 ; 16 ; >
       au < manifest ; exists ; 2019 ; 2019 ; Molecular Cancer Research Volume 17 ; 17 ; >
-      au < crawling ; exists ; 2020 ; 2020 ; Molecular Cancer Research Volume 18 ; 18 ; >
-      au < crawling ; exists ; 2021 ; 2021 ; Molecular Cancer Research Volume 19 ; 19 ; >
+      au < frozen ; exists ; 2020 ; 2020 ; Molecular Cancer Research Volume 18 ; 18 ; >
+      au < frozen ; exists ; 2021 ; 2021 ; Molecular Cancer Research Volume 19 ; 19 ; >
       au < crawling ; exists ; 2022 ; 2022 ; Molecular Cancer Research Volume 20 ; 20 ; >
-      au < crawling ; exists ; 2023 ; 2023 ; Molecular Cancer Research Volume 21 ; 21 ; >
+      au < frozen ; exists ; 2023 ; 2023 ; Molecular Cancer Research Volume 21 ; 21 ; >
       au < crawling ; exists ; 2024 ; 2024 ; Molecular Cancer Research Volume 22 ; 22 ; >
 
   }
@@ -389,7 +389,7 @@
       au < manifest ; exists ; 2018 ; 2018 ; Molecular Cancer Therapeutics Volume 17 ; 17 ; >
       au < manifest ; exists ; 2019 ; 2019 ; Molecular Cancer Therapeutics Volume 18 ; 18 ; >
       au < crawling ; exists ; 2020 ; 2020 ; Molecular Cancer Therapeutics Volume 19 ; 19 ; >
-      au < crawling ; exists ; 2021 ; 2021 ; Molecular Cancer Therapeutics Volume 20 ; 20 ; >
+      au < frozen ; exists ; 2021 ; 2021 ; Molecular Cancer Therapeutics Volume 20 ; 20 ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Molecular Cancer Therapeutics Volume 21 ; 21 ; >
       au < crawling ; exists ; 2023 ; 2023 ; Molecular Cancer Therapeutics Volume 22 ; 22 ; >
       au < crawling ; exists ; 2024 ; 2024 ; Molecular Cancer Therapeutics Volume 23 ; 23 ; >
