@@ -202,13 +202,13 @@
       param[base_url] = https://journals.ed.ac.uk/
       param[journal_id] = lifespansstyles
 
-      au < exists ; exists ; 2015 ; Lifespans and Styles Volume 2015 ; 1 ; 2015 ; >
-      au < exists ; exists ; 2016 ; Lifespans and Styles Volume 2016 ; 2 ; 2016 ; >
-      au < exists ; exists ; 2017 ; Lifespans and Styles Volume 2017 ; 3 ; 2017 ; >
-      au < exists ; exists ; 2018 ; Lifespans and Styles Volume 2018 ; 4 ; 2018 ; >
-      au < exists ; exists ; 2019 ; Lifespans and Styles Volume 2019 ; 5 ; 2019 ; >
-      au < exists ; exists ; 2020 ; Lifespans and Styles Volume 2020 ; 6 ; 2020 ; >
-      au < exists ; exists ; 2021 ; Lifespans and Styles Volume 2021 ; 7 ; 2021 ; >
+      au < manifest ; exists ; 2015 ; Lifespans and Styles Volume 2015 ; 1 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Lifespans and Styles Volume 2016 ; 2 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; Lifespans and Styles Volume 2017 ; 3 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Lifespans and Styles Volume 2018 ; 4 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; Lifespans and Styles Volume 2019 ; 5 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; Lifespans and Styles Volume 2020 ; 6 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Lifespans and Styles Volume 2021 ; 7 ; 2021 ; >
       au < exists ; exists ; 2022 ; Lifespans and Styles Volume 2022 ; 8 ; 2022 ; >
       au < exists ; exists ; 2023 ; Lifespans and Styles Volume 2023 ; 9 ; 2023 ; >
       au < expected ; exists ; 2024 ; Lifespans and Styles Volume 2024 ; 10 ; 2024 ; >
