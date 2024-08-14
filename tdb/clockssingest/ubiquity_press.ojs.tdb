@@ -101,7 +101,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 11 ; Nordic Journal of Migration Research Volume 2021 ; 2021 ; >
       au < finished ; crawling ; 2022 ; 12 ; Nordic Journal of Migration Research Volume 2022 ; 2022 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; 13 ; Nordic Journal of Migration Research Volume 2023 ; 2023 ; >
-      au < ready ; exists ; 2024 ; 14 ; Nordic Journal of Migration Research Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; 14 ; Nordic Journal of Migration Research Volume 2024 ; 2024 ; >
   }
 
   {
@@ -280,7 +280,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 8 ; Modern Languages Open Volume 2021 ; 2021 ; >
       au < finished ; crawling ; 2022 ; 9 ; Modern Languages Open Volume 2022 ; 2022 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 10 ; Modern Languages Open Volume 2023 ; 2023 ; >
-      au < ready ; exists ; 2024 ; 11 ; Modern Languages Open Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; 11 ; Modern Languages Open Volume 2024 ; 2024 ; >
 
   }
 
@@ -338,7 +338,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 8 ; Journal of Long-Term Care Volume 2021 ; 2021 ; >
       au < finished ; crawling ; 2022 ; 9 ; Journal of Long-Term Care Volume 2022 ; 2022 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 10 ; Journal of Long-Term Care Volume 2023 ; 2023 ; >
-      au < ready ; exists ; 2024 ; 11 ; Journal of Long-Term Care Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; 11 ; Journal of Long-Term Care Volume 2024 ; 2024 ; >
 
   }
 
@@ -373,7 +373,7 @@
       param[journal_id] = lse-j-pp
 
       au < deepCrawl ; exists ; 2023 ; 1 ; Philosophy of Physics Volume 2023 ; 2023 ; >
-      au < ready ; exists ; 2024 ; 2 ; Philosophy of Physics Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; 2 ; Philosophy of Physics Volume 2024 ; 2024 ; >
 
   }
 
@@ -704,7 +704,7 @@
       au < finished ; crawling ; 2021 ; 2 ; Building and Cities Volume 2021 ; 2021 ; reingest4.clockss.org:8082 > #403 forbidden cloudfront.net
       au < finished ; crawling ; 2022 ; 3 ; Building and Cities Volume 2022 ; 2022 ; reingest5.clockss.org:8082 > #403 forbidden cloudfront.net
       au < deepCrawl ; exists ; 2023 ; 4 ; Building and Cities Volume 2023 ; 2023 ; > #404 forbidden cloudfront.net
-      au < ready ; exists ; 2024 ; 5 ; Building and Cities Volume 2024 ; 2024 ; > #505 forbidden cloudfront.net
+      au < crawling ; exists ; 2024 ; 5 ; Building and Cities Volume 2024 ; 2024 ; > #505 forbidden cloudfront.net
 
   }
 
@@ -740,7 +740,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 37 ; Current: Journal of Marine Education Volume 2021 ; 2021 ; >
       au < finished ; crawling ; 2022 ; 38 ; Current: Journal of Marine Education Volume 2022 ; 2022 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 39 ; Current: Journal of Marine Education Volume 2023 ; 2023 ; >
-      au < ready ; exists ; 2024 ; 40 ; Current: Journal of Marine Education Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; 40 ; Current: Journal of Marine Education Volume 2024 ; 2024 ; >
 
   }
 
@@ -1314,7 +1314,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 9 ; Journal of Open Psychology Data Volume 2021 ; 2021 ; >
       au < finished ; crawling ; 2022 ; 10 ; Journal of Open Psychology Data Volume 2022 ; 2022 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 11 ; Journal of Open Psychology Data Volume 2023 ; 2023 ; >
-      au < ready ; exists ; 2024 ; 12 ; Journal of Open Psychology Data Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; 12 ; Journal of Open Psychology Data Volume 2024 ; 2024 ; >
 
   }
 
@@ -1365,7 +1365,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 105 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2021 ; 2021 ; >
       au < finished ; crawling ; 2022 ; 106 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2022 ; 2022 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; 107 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2023 ; 2023 ; >
-      au < ready ; exists ; 2024 ; 108 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; 108 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2024 ; 2024 ; >
 
   }
 
@@ -1739,7 +1739,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 11 ; Tremor and Other Hyperkinetic Movements Volume 2021 ; 2021 ; >
       au < finished ; crawling ; 2022 ; 12 ; Tremor and Other Hyperkinetic Movements Volume 2022 ; 2022 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 13 ; Tremor and Other Hyperkinetic Movements Volume 2023 ; 2023 ; >
-      au < ready ; exists ; 2024 ; 14 ; Tremor and Other Hyperkinetic Movements Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; 14 ; Tremor and Other Hyperkinetic Movements Volume 2024 ; 2024 ; >
 
   }
 
@@ -1782,7 +1782,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 4 ; Journal of Cognition Volume 2021 ; 2021 ; >
       au < finished ; crawling ; 2022 ; 5 ; Journal of Cognition Volume 2022 ; 2022 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; 6 ; Journal of Cognition Volume 2023 ; 2023 ; >
-      au < ready ; exists ; 2024 ; 7 ; Journal of Cognition Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; 7 ; Journal of Cognition Volume 2024 ; 2024 ; >
 
   }
 
@@ -1803,7 +1803,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 4 ; Journal of Computer Applications in Archaeology Volume 2021 ; 2021 ; >
       au < deepCrawl ; exists ; 2022 ; 5 ; Journal of Computer Applications in Archaeology Volume 2022 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 6 ; Journal of Computer Applications in Archaeology Volume 2023 ; 2023 ; >
-      au < ready ; exists ; 2024 ; 7 ; Journal of Computer Applications in Archaeology Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; 7 ; Journal of Computer Applications in Archaeology Volume 2024 ; 2024 ; >
 
   }
 
@@ -1945,7 +1945,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 4 ; Transactions of the International Society for Music Information Retrieval Volume 2021 ; 2021 ; >
       au < finished ; crawling ; 2022 ; 5 ; Transactions of the International Society for Music Information Retrieval Volume 2022 ; 2022 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 6 ; Transactions of the International Society for Music Information Retrieval Volume 2023 ; 2023 ; >
-      au < ready ; exists ; 2024 ; 7 ; Transactions of the International Society for Music Information Retrieval Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; 7 ; Transactions of the International Society for Music Information Retrieval Volume 2024 ; 2024 ; >
 
   }
 
@@ -2086,7 +2086,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 8 ; Journal of Philosophy in Schools Volume 2021 ; 2021 ; > #no substance
       au < finished ; crawling ; 2022 ; 9 ; Journal of Philosophy in Schools Volume 2022 ; 2022 ; reingest3.clockss.org:8083 > #no substance
       au < deepCrawl ; exists ; 2023 ; 10 ; Journal of Philosophy in Schools Volume 2023 ; 2023 ; > #no substance
-      au < ready ; exists ; 2024 ; 11 ; Journal of Philosophy in Schools Volume 2024 ; 2024 ; > #no substance
+      au < crawling ; exists ; 2024 ; 11 ; Journal of Philosophy in Schools Volume 2024 ; 2024 ; > #no substance
 
   }
 }
@@ -2359,7 +2359,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 19 ; ERLACS Volume 2021 ; 2021 ; >
       au < finished ; crawling ; 2022 ; 20 ; ERLACS Volume 2022 ; 2022 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 21 ; ERLACS Volume 2023 ; 2023 ; >
-      au < ready ; exists ; 2024 ; 22 ; ERLACS Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; 22 ; ERLACS Volume 2024 ; 2024 ; >
 
   }
 
@@ -2451,7 +2451,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 17 ; Journal of Social Intervention Volume 2021 ; 2021 ; >
       au < finished ; crawling ; 2022 ; 18 ; Journal of Social Intervention Volume 2022 ; 2022 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 19 ; Journal of Social Intervention Volume 2023 ; 2023 ; >
-      au < ready ; exists ; 2024 ; 20 ; Journal of Social Intervention Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; 20 ; Journal of Social Intervention Volume 2024 ; 2024 ; >
 
   }
 
@@ -3067,7 +3067,7 @@
       au < finished ; crawling ; 2021 ; 12 ; Gateway Papers Volume 2021 ; 2021 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2022 ; 13 ; Gateway Papers Volume 2022 ; 2022 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 14 ; Gateway Papers Volume 2023 ; 2023 ; >
-      au < ready ; exists ; 2024 ; 15 ; Gateway Papers Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; 15 ; Gateway Papers Volume 2024 ; 2024 ; >
 
   }
 
@@ -3236,7 +3236,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 73 ; Tellus B: Chemical and Physical Meteorology Volume 2021 ; 2021 ; >
       au < finished ; crawling ; 2022 ; 74 ; Tellus B: Chemical and Physical Meteorology Volume 2022 ; 2022 ; reingest1.clockss.org:8082 > # Lists all volumes.
       au < deepCrawl ; exists ; 2023 ; 75 ; Tellus B: Chemical and Physical Meteorology Volume 2023 ; 2023 ; >
-      au < ready ; exists ; 2024 ; 76 ; Tellus B: Chemical and Physical Meteorology Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; 76 ; Tellus B: Chemical and Physical Meteorology Volume 2024 ; 2024 ; >
 
   }
 
