@@ -7,7 +7,8 @@
         info[platform] = Custom
   >
 
-    plugin = org.lockss.plugin.europeanmathematicalsociety.api.ClockssEuropeanMathematicalSocietyBooksPlugin
+    plugin = needs.plugin
+    #plugin = org.lockss.plugin.europeanmathematicalsociety.api.ClockssEuropeanMathematicalSocietyBooksPlugin
     param[base_url] = https://ems.press/
     param[api_url] = https://content.ems.press/
 
@@ -29,14 +30,14 @@
       au < exists ; exists ; 1998 ; 978-3-98547-043-3 ; 978-3-98547-543-8 ; Proceedings of the International Congress of Mathematicians 1998: Berlin, Germany, 18–27 August 1998 ; 245 ; >
       au < exists ; exists ; 1998 ; 978-3-98547-044-0 ; 978-3-98547-544-5 ; Proceedings of the International Congress of Mathematicians 1998 Volume 1 ; 246 ; >
       au < exists ; exists ; 1998 ; 978-3-98547-045-7 ; 978-3-98547-545-2 ; Proceedings of the International Congress of Mathematicians 1998 Volume 2 ; 247 ; >
-      au < frozen ; exists ; 1998 ; 978-3-98547-046-4 ; 978-3-98547-546-9 ; Proceedings of the International Congress of Mathematicians 1998 Volume 3 ; 248 ; >
+      au < exists ; exists ; 1998 ; 978-3-98547-046-4 ; 978-3-98547-546-9 ; Proceedings of the International Congress of Mathematicians 1998 Volume 3 ; 248 ; >
       au < exists ; exists ; 2001 ; 978-3-98547-042-6 ; 978-3-98547-542-1 ; Proceedings of the Conference on Quadratic Forms and Related Topics: Baton Rouge, Louisiana, USA, 26–30 March 2001 ; 249 ; >
       au < exists ; exists ; 2003 ; 978-3-936609-21-9 ; 978-3-98547-547-6 ; A Collection of Manuscripts Written in Honour of Kazuya Kato on the Occasion of His Fiftieth Birthday ; 250 ; >
       au < exists ; exists ; 2006 ; 978-3-936609-28-8 ; 978-3-98547-541-4 ; A Collection of Manuscripts Written in Honour of John H. Coates on the Occasion of His Sixtieth Birthday ; 254 ; >
       au < exists ; exists ; 2010 ; 978-3-936609-48-6 ; 978-3-98547-041-9 ; A Collection of Manuscripts Written in Honour of Andrei A. Suslin on the Occasion of His Sixtieth Birthday ; 255 ; >
       au < exists ; exists ; 2012 ; 978-3-936609-58-5 ; 978-3-98547-540-7 ; Optimization Stories: 21st International Symposium on Mathematical Programming. Berlin, Germany, 19–24 August 2012 ; 251 ; >
-      au < frozen ; exists ; 2015 ; 978-3-936609-61-5 ; 978-3-98547-040-2 ; A Collection of Manuscripts Written in Honour of Alexander S. Merkurjev on the Occasion of His Sixtieth Birthday ; 253 ; >
-      au < frozen ; exists ; 2021 ; 978-3-98547-047-1 ; 978-3-98547-047-1 ; The Legacy of Kurt Mahler ; 252 ; >
+      au < exists ; exists ; 2015 ; 978-3-936609-61-5 ; 978-3-98547-040-2 ; A Collection of Manuscripts Written in Honour of Alexander S. Merkurjev on the Occasion of His Sixtieth Birthday ; 253 ; >
+      au < exists ; exists ; 2021 ; 978-3-98547-047-1 ; 978-3-98547-047-1 ; The Legacy of Kurt Mahler ; 252 ; >
 
   }
 
@@ -60,7 +61,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 978-3-03719-192-7 ; 978-3-03719-692-2 ; The Shock Development Problem ; 165 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 978-3-03719-193-4 ; 978-3-03719-693-9 ; From the Vlasov–Maxwell–Boltzmann System to Incompressible Viscous Electro-magneto-hydrodynamics ; 166 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 978-3-03719-209-2 ; 978-3-03719-709-7 ; Mackey 2-Functors and Mackey 2-Motives ; 182 ; >
-      au < superseded ; exists ; 2021 ; 978-3-03719-211-5 ; 978-3-03719-711-0 ; Quasi-Periodic Solutions of Nonlinear Wave Equations on the d-Dimensional Torus [superseded] ; 184 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 978-3-03719-211-5 ; 978-3-03719-711-0 ; Quasi-Periodic Solutions of Nonlinear Wave Equations on the d-Dimensional Torus [superseded] ; 184 ; >
 
   }
 
@@ -76,7 +77,7 @@
 
     au < doNotProcess ; doNotProcess ; 2014 ; 978-3-03719-137-8 ; 978-3-03719-637-3 ; MATHEON - Mathematics for Key Technologies ; 230 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 978-3-03719-207-8 ; 978-3-03719-707-3 ; Decision Support Systems for Water Supply Systems ; 179 ; >
-    au < frozen ; exists ; 2021 ; 978-3-98547-027-3 ; 978-3-98547-027-3 ; Interactions between Elasticity and Fluid Mechanics ; 242 ; >
+    au < exists ; exists ; 2021 ; 978-3-98547-027-3 ; 978-3-98547-027-3 ; Interactions between Elasticity and Fluid Mechanics ; 242 ; >
 
   }
   
@@ -108,7 +109,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; 978-3-03719-198-9 ; 978-3-03719-698-4 ; $t$-Motives: Hodge Structures, Transcendence and Other Motivic Aspects ; 164 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; 978-3-98547-005-1 ; 978-3-98547-505-6 ; Probabilistic Structures in Evolution ; 186 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; 978-3-98547-007-5 ; 978-3-98547-507-0 ; Partial Differential Equations, Spectral Theory, and Mathematical Physics ; 187 ; >
-      au < frozen ; exists ; 2023 ; 978-3-98547-054-9 ; 978-3-98547-554-4 ; Representations of Algebras and Related Structures: International Conference on Representations of Algebras, ICRA 2020, 9–25 November 2020 ; 271 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-054-9 ; 978-3-98547-554-4 ; Representations of Algebras and Related Structures: International Conference on Representations of Algebras, ICRA 2020, 9–25 November 2020 ; 271 ; >
 
   }
 
@@ -155,7 +156,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; 978-3-03719-210-8 ; 978-3-03719-710-3 ; Classification of Complex Algebraic Surfaces ; 183 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; 978-3-98547-004-4 ; 978-3-98547-504-9 ; Lectures on Selected Topics in von Neumann Algebras ; 188 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; 978-3-98547-008-2 ; 978-3-98547-508-7 ; Orthogonal Polynomials and Linear Functionals ; 191 ; >
-      au < frozen ; exists ; 2022 ; 978-3-98547-014-3 ; 978-3-98547-514-8 ; An Introduction to Singular Stochastic PDEs ; 232 ; >
+      au < exists ; exists ; 2022 ; 978-3-98547-014-3 ; 978-3-98547-514-8 ; An Introduction to Singular Stochastic PDEs ; 232 ; >
 
   }
 
@@ -194,7 +195,7 @@
 
       au < exists ; exists ; 2022 ; 978-3-98547-017-4 ; 978-3-98547-517-9 ; Elements of Graph Theory: From Basic Concepts to Modern Developments ; 243 ; >
       au < exists ; exists ; 2023 ; 978-3-98547-050-1 ; 978-3-98547-550-6 ; An Invitation to Optimal Transport, Wasserstein Distances, and Gradient Flows: Second Edition ; 258 ; >
-      au < frozen ; exists ; 2023 ; 978-3-98547-018-1 ; 978-3-98547-518-6 ; Large Scale Geometry: Second Edition ; 264 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-018-1 ; 978-3-98547-518-6 ; Large Scale Geometry: Second Edition ; 264 ; >
 
   }
 
@@ -242,7 +243,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 978-3-98547-009-9 ; 978-3-98547-509-4 ; Homogenized Models of Suspension Dynamics ; 193 ; >
 
       au < exists ; exists ; 2023 ; 978-3-98547-039-6 ; 978-3-98547-539-1 ; Euclidean Buildings: Geometry and Group Actions ; 267 ; >
-      au < frozen ; exists ; 2023 ; 978-3-98547-048-8 ; 978-3-98547-548-3 ; The Structure of Pro-Lie Groups ; 270 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-048-8 ; 978-3-98547-548-3 ; The Structure of Pro-Lie Groups ; 270 ; >
 
   }
 
@@ -264,7 +265,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; 978-3-03719-121-7 ; 978-3-03719-621-2 ; Erwin Schrödinger - 50 Years After ; 121 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 978-3-03719-094-4 ; 978-3-03719-594-9 ; Microlocal Analysis of Quantum Fields on Curved Spacetimes ; 173 ; >
 
-      au < frozen ; exists ; 2023 ; 978-3-98547-029-7 ; 978-3-98547-529-2 ; An Introduction to the Mathematical Fluid Dynamics of Oceanic and Atmospheric Flows ; 263 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-029-7 ; 978-3-98547-529-2 ; An Introduction to the Mathematical Fluid Dynamics of Oceanic and Atmospheric Flows ; 263 ; >
 
   }
 
@@ -296,7 +297,7 @@
       au < exists ; exists ; 2013 ; 978-3-98547-033-4 ; 978-3-98547-533-9 ; Jacques Tits, Œuvres – Collected Works Volume 4 ; 198 ; >
       au < exists ; exists ; 2013 ; 978-3-98547-030-3 ; 978-3-98547-530-8 ; Jacques Tits, Œuvres – Collected Works Volume 1 ; 227 ; >
       au < exists ; exists ; 2013 ; 978-3-98547-031-0 ; 978-3-98547-531-5 ; Jacques Tits, Œuvres – Collected Works Volume 2 ; 228 ; >
-      au < frozen ; exists ; 2023 ; 978-3-98547-011-2 ; 978-3-98547-511-7 ; Hurwitz’s Lectures on the Number Theory of Quaternions ; 257 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-011-2 ; 978-3-98547-511-7 ; Hurwitz’s Lectures on the Number Theory of Quaternions ; 257 ; >
   }
 
   {
@@ -338,7 +339,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; 978-3-03719-205-4 ; 978-3-03719-705-9 ; Algebraic Combinatorics, Resurgence, Moulds and Applications (CARMA), Volume 2 ; 178 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; 978-3-98547-001-3 ; 978-3-98547-501-8 ; Topology and Geometry ; 189 ; >
 
-      au < frozen ; exists ; 2023 ; 978-3-98547-024-2 ; 978-3-98547-524-7 ; Essays in Geometry: Dedicated to Norbert A’Campo ; 265 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-024-2 ; 978-3-98547-524-7 ; Essays in Geometry: Dedicated to Norbert A’Campo ; 265 ; >
 
   }
 
@@ -363,7 +364,7 @@
       au < exists ; exists ; 2024 ; 978-3-98547-067-9 ; 978-3-98547-567-4 ; Positive Energy Representations of Gauge Groups I: Localization ; 281 ; >
       au < exists ; exists ; 2024 ; 978-3-98547-068-6 ; 978-3-98547-568-1 ; The Lévy Flight Foraging Hypothesis in Bounded Regions: Subordinate Brownian Motions and High-risk/High-gain Strategies ; 282 ; >
       au < exists ; exists ; 2024 ; 978-3-98547-069-3 ; 978-3-98547-569-8 ; Extension, Separation and Isomorphic Reverse Isoperimetry ; 283 ; >
-      au < frozen ; exists ; 2024 ; 978-3-98547-071-6 ; 978-3-98547-571-1 ; Integrating the Wigner Distribution on Subsets of the Phase Space, a Survey ; 284 ; >
+      au < exists ; exists ; 2024 ; 978-3-98547-071-6 ; 978-3-98547-571-1 ; Integrating the Wigner Distribution on Subsets of the Phase Space, a Survey ; 284 ; >
       au < exists ; exists ; 2024 ; 978-3-98547-070-9 ; 978-3-98547-570-4 ; On Efficient Algorithms for Computing Near-Best Polynomial Approximations to High-Dimensional, Hilbert-Valued Functions from Limited Samples ; 285 ; >
 
   }
@@ -379,7 +380,7 @@
       param[book_serial_id] = mlm
 
       au < doNotProcess ; doNotProcess ; 2016 ; 978-3-03719-165-1 ; 978-3-03719-665-6 ; Free Probability and Operator Algebras ; 133 ; >
-      au < superseded ; exists ; 2018 ; 978-3-03719-184-2 ; 978-3-03719-684-7 ; Lectures in Model Theory [superseded] ; 155 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 978-3-03719-184-2 ; 978-3-03719-684-7 ; Lectures in Model Theory [superseded] ; 155 ; >
 
   }
 
@@ -392,7 +393,7 @@
       param[book_serial_id] = qgm
     
       au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-075-3 ; 978-3-03719-575-8 ; Decorated Teichmüller Theory ; 106 ; >
-      au < superseded ; exists ; 2012 ; 978-3-03719-108-8 ; 978-3-03719-608-3 ; Lectures on Algebraic Categorification [superseded] ; 110 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 978-3-03719-108-8 ; 978-3-03719-608-3 ; Lectures on Algebraic Categorification [superseded] ; 110 ; >
 
   }
 
@@ -435,7 +436,7 @@
       au < exists ; exists ; 2022 ; 978-3-98547-028-0 ; 978-3-98547-528-5 ; Regularity Theory for Elliptic PDE ; 239 ; >
 
       au < exists ; exists ; 2023 ; 978-3-98547-053-2 ; 978-3-98547-553-7 ; Bayesian Non-linear Statistical Inverse Problems ; 260 ; >
-      au < frozen ; exists ; 2023 ; 978-3-98547-052-5 ; 978-3-98547-552-0 ; Prescribing Scalar Curvature in Conformal Geometry ; 268 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-052-5 ; 978-3-98547-552-0 ; Prescribing Scalar Curvature in Conformal Geometry ; 268 ; >
       au < exists ; exists ; 2024 ; 978-3-98547-074-7 ; 978-3-98547-574-2 ; Statistical Mechanics of Mean-Field Disordered Systems: A Hamilton–Jacobi Approach ; 286 ; >
 
   }
@@ -468,12 +469,12 @@
       au < exists ; exists ; 2021 ; 978-3-98547-006-8 ; 978-3-98547-506-3 ; Handbook of Automata Theory ; 172 ; >
       au < exists ; exists ; 2021 ; 978-3-98547-002-0 ; 978-3-98547-502-5 ; Handbook of Automata Theory Volume 1 ; 174 ; >
       au < exists ; exists ; 2021 ; 978-3-98547-003-7 ; 978-3-98547-503-2 ; Handbook of Automata Theory Volume 2 ; 175 ; >
-      au < frozen ; exists ; 2022 ; 978-3-98547-019-8 ; 978-3-98547-519-3 ; The Physics and Mathematics of Elliott Lieb ; 234 ; >
+      au < exists ; exists ; 2022 ; 978-3-98547-019-8 ; 978-3-98547-519-3 ; The Physics and Mathematics of Elliott Lieb ; 234 ; >
       au < exists ; exists ; 2022 ; 978-3-98547-021-1 ; 978-3-98547-521-6 ; The Physics and Mathematics of Elliott Lieb Volume I ; 235 ; >
       au < exists ; exists ; 2022 ; 978-3-98547-022-8 ; 978-3-98547-522-3 ; The Physics and Mathematics of Elliott Lieb Volume II ; 236 ; >
       au < exists ; exists ; 2022 ; 978-3-98547-013-6 ; 978-3-98547-513-1 ; Émile Borel: A Life in Mathematics and Politics Across Two Centuries ; 244 ; >
       au < exists ; exists ; 2023 ; 978-3-98547-051-8 ; 978-3-98547-551-3 ; European Congress of Mathematics: Portorož, 20–26 June, 2021 ; 262 ; >
-      au < frozen ; exists ; 2023 ; 978-3-98547-058-7 ; 978-3-98547-558-2 ; International Congress of Mathematicians, 2022 July 6–14 ; 272 ; >
+      au < exists ; exists ; 2023 ; 978-3-98547-058-7 ; 978-3-98547-558-2 ; International Congress of Mathematicians, 2022 July 6–14 ; 272 ; >
       au < exists ; exists ; 2023 ; 978-3-98547-059-4 ; 978-3-98547-559-9 ; International Congress of Mathematicians, 2022 July 6–14, Volume 1 ; 273 ; >
       au < exists ; exists ; 2023 ; 978-3-98547-060-0 ; 978-3-98547-560-5 ; International Congress of Mathematicians, 2022 July 6–14, Volume 2 ; 274 ; >
       au < exists ; exists ; 2023 ; 978-3-98547-061-7 ; 978-3-98547-561-2 ; International Congress of Mathematicians, 2022 July 6–14, Volume 3 ; 275 ; >
