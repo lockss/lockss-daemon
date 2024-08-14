@@ -14,31 +14,31 @@
     >
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    param[base_url] = http://www.clinmedres.org/
-    implicit < status ; year ; name ; param[volume_name] >
+    #param[base_url] = http://www.clinmedres.org/
+    implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
 
-    au < released ; 2003 ; Clinical Medicine & Research Volume 1 ; 1 >
-    au < released ; 2004 ; Clinical Medicine & Research Volume 2 ; 2 >
-    au < released ; 2005 ; Clinical Medicine & Research Volume 3 ; 3 >
-    au < released ; 2006 ; Clinical Medicine & Research Volume 4 ; 4 >
-    au < released ; 2007 ; Clinical Medicine & Research Volume 5 ; 5 >
-    au < released ; 2008 ; Clinical Medicine & Research Volume 6 ; 6 >
-    au < released ; 2009 ; Clinical Medicine & Research Volume 7 ; 7 >
-    au < released ; 2010 ; Clinical Medicine & Research Volume 8 ; 8 >
-    au < released ; 2011 ; Clinical Medicine & Research Volume 9 ; 9 >
-    au < released ; 2012 ; Clinical Medicine & Research Volume 10 ; 10 >
-    au < released ; 2013 ; Clinical Medicine & Research Volume 11 ; 11 >
-    au < released ; 2014 ; Clinical Medicine & Research Volume 12 ; 12 >
-    au < released ; 2015 ; Clinical Medicine & Research Volume 13 ; 13 >
-    au < released ; 2016 ; Clinical Medicine & Research Volume 14 ; 14 >
-    au < released ; 2017 ; Clinical Medicine & Research Volume 15 ; 15 >
-    au < released ; 2018 ; Clinical Medicine & Research Volume 16 ; 16 >
-    au < released ; 2019 ; Clinical Medicine & Research Volume 17 ; 17 >
-    au < released ; 2020 ; Clinical Medicine & Research Volume 18 ; 18 >
-    au < released ; 2021 ; Clinical Medicine & Research Volume 19 ; 19 >
-    au < released ; 2022 ; Clinical Medicine & Research Volume 20 ; 20 >
-    au < manifest ; 2023 ; Clinical Medicine & Research Volume 21 ; 21 >
-    au < manifest ; 2024 ; Clinical Medicine & Research Volume 22 ; 22 >
+    au < released ; 2003 ; Clinical Medicine & Research Volume 1 ; 1 ; http://www.clinmedres.org/ >
+    au < released ; 2004 ; Clinical Medicine & Research Volume 2 ; 2 ; http://www.clinmedres.org/ >
+    au < released ; 2005 ; Clinical Medicine & Research Volume 3 ; 3 ; http://www.clinmedres.org/ >
+    au < released ; 2006 ; Clinical Medicine & Research Volume 4 ; 4 ; http://www.clinmedres.org/ >
+    au < released ; 2007 ; Clinical Medicine & Research Volume 5 ; 5 ; http://www.clinmedres.org/ >
+    au < released ; 2008 ; Clinical Medicine & Research Volume 6 ; 6 ; http://www.clinmedres.org/ >
+    au < released ; 2009 ; Clinical Medicine & Research Volume 7 ; 7 ; http://www.clinmedres.org/ >
+    au < released ; 2010 ; Clinical Medicine & Research Volume 8 ; 8 ; http://www.clinmedres.org/ >
+    au < released ; 2011 ; Clinical Medicine & Research Volume 9 ; 9 ; http://www.clinmedres.org/ >
+    au < released ; 2012 ; Clinical Medicine & Research Volume 10 ; 10 ; http://www.clinmedres.org/ >
+    au < released ; 2013 ; Clinical Medicine & Research Volume 11 ; 11 ; http://www.clinmedres.org/ >
+    au < released ; 2014 ; Clinical Medicine & Research Volume 12 ; 12 ; http://www.clinmedres.org/ >
+    au < released ; 2015 ; Clinical Medicine & Research Volume 13 ; 13 ; http://www.clinmedres.org/ >
+    au < released ; 2016 ; Clinical Medicine & Research Volume 14 ; 14 ; http://www.clinmedres.org/ >
+    au < released ; 2017 ; Clinical Medicine & Research Volume 15 ; 15 ; http://www.clinmedres.org/ >
+    au < released ; 2018 ; Clinical Medicine & Research Volume 16 ; 16 ; http://www.clinmedres.org/ >
+    au < released ; 2019 ; Clinical Medicine & Research Volume 17 ; 17 ; http://www.clinmedres.org/ >
+    au < released ; 2020 ; Clinical Medicine & Research Volume 18 ; 18 ; http://www.clinmedres.org/ >
+    au < released ; 2021 ; Clinical Medicine & Research Volume 19 ; 19 ; http://www.clinmedres.org/ >
+    au < released ; 2022 ; Clinical Medicine & Research Volume 20 ; 20 ; http://www.clinmedres.org/ >
+    au < exists ; 2023 ; Clinical Medicine & Research Volume 21 ; 21 ; https://www.clinmedres.org/ >
+    au < exists ; 2024 ; Clinical Medicine & Research Volume 22 ; 22 ; https://www.clinmedres.org/ >
 
   }
 
