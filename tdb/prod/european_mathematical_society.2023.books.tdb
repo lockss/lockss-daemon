@@ -4,7 +4,7 @@
         info[platform] = Custom
   >
 
-    plugin = org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyBooksPlugin
+    plugin = org.lockss.plugin.europeanmathematicalsociety.api.EuropeanMathematicalSocietyBooks2024Plugin
     param[base_url] = https://ems.press/
     param[api_url] = https://content.ems.press/
 

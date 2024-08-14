@@ -8,7 +8,7 @@
   >
 
     plugin = needs.plugin
-    #plugin = org.lockss.plugin.europeanmathematicalsociety.api.ClockssEuropeanMathematicalSocietyBooksPlugin
+    #plugin = org.lockss.plugin.europeanmathematicalsociety.api.ClockssEuropeanMathematicalSocietyBooks2024Plugin
     param[base_url] = https://ems.press/
     param[api_url] = https://content.ems.press/
 
