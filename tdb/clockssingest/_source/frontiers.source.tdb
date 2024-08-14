@@ -5,7 +5,7 @@
     info[tester] = S ;
     info[platform] = Source
   >
-  hidden[proxy] = DIRECT
+    hidden[proxy] = DIRECT
 
   {
 
@@ -40,8 +40,9 @@
         au < readySource ; crawling ; 2023 ; Frontiers Journals Source Content 2023_03 ; 2023_03 >
 
         au < readySource ; crawling ; 2024 ; Frontiers Journals Source Content 2024_01 ; 2024_01 >
-        au < manifest ; exists ; 2024 ; Frontiers Journals Source Content 2024_02 ; 2024_02 >
+        au < ready ; exists ; 2024 ; Frontiers Journals Source Content 2024_02 ; 2024_02 >
         au < expected ; exists ; 2024 ; Frontiers Journals Source Content 2024_03 ; 2024_03 >
+        au < expected ; exists ; 2024 ; Frontiers Journals Source Content 2024_04 ; 2024_04 >
 
       }
 
