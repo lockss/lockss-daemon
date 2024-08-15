@@ -3265,60 +3265,61 @@ while (my $line = <>) {
     }
     sleep(4);
 
-  #European Mathematical Society Deprecated
-  } elsif ($plugin eq "EuropeanMathematicalSocietyPlugin") {
-    $url = sprintf("%sjournals/all_issues.php?issn=%s",
-      $param{base_url}, $param{journal_issn});
-    $man_url = uri_unescape($url);
-    my $req = HTTP::Request->new(GET, $man_url);
-    my $resp = $ua->request($req);
-    if ($resp->is_success) {
-      my $man_contents = $resp->content;
-#      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && (man_contents =~ m/issn=$param{journal_issn}.vol=$param{volume_name}/)) {
-      if ($req->url ne $resp->request->uri) {
-              $vol_title = $resp->request->uri;
-              $result = "Redirected";
-      } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/vol=$param{volume_name}/)) {
-        if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
-          $vol_title = $1;
-        }
-        $result = "Manifest"
-      } else {
-        $result = "--NO_TAG--"
-      }
-    } else {
-      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-    }
-    sleep(4);
-
-  #European Mathematical Society Deprecated
-  } elsif ($plugin eq "ClockssEuropeanMathematicalSocietyPlugin") {
-    $url = sprintf("%sjournals/all_issues.php?issn=%s",
-      $param{base_url}, $param{journal_issn});
-    $man_url = uri_unescape($url);
-    my $req = HTTP::Request->new(GET, $man_url);
-    my $resp = $ua->request($req);
-    if ($resp->is_success) {
-      my $man_contents = $resp->content;
-#      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && (man_contents =~ m/issn=$param{journal_issn}.vol=$param{volume_name}/)) {
-      if ($req->url ne $resp->request->uri) {
-              $vol_title = $resp->request->uri;
-              $result = "Redirected";
-      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/vol=$param{volume_name}/)) {
-        if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
-          $vol_title = $1;
-        }
-        $result = "Manifest"
-      } else {
-        $result = "--NO_TAG--"
-      }
-    } else {
-      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-    }
-    sleep(4);
+#  #European Mathematical Society Deprecated
+#  } elsif ($plugin eq "EuropeanMathematicalSocietyPlugin") {
+#    $url = sprintf("%sjournals/all_issues.php?issn=%s",
+#      $param{base_url}, $param{journal_issn});
+#    $man_url = uri_unescape($url);
+#    my $req = HTTP::Request->new(GET, $man_url);
+#    my $resp = $ua->request($req);
+#    if ($resp->is_success) {
+#      my $man_contents = $resp->content;
+##      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && (man_contents =~ m/issn=$param{journal_issn}.vol=$param{volume_name}/)) {
+#      if ($req->url ne $resp->request->uri) {
+#              $vol_title = $resp->request->uri;
+#              $result = "Redirected";
+#      } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/vol=$param{volume_name}/)) {
+#        if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
+#          $vol_title = $1;
+#        }
+#        $result = "Manifest"
+#      } else {
+#        $result = "--NO_TAG--"
+#      }
+#    } else {
+#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+#    }
+#    sleep(4);
+#
+#  #European Mathematical Society Deprecated
+#  } elsif ($plugin eq "ClockssEuropeanMathematicalSocietyPlugin") {
+#    $url = sprintf("%sjournals/all_issues.php?issn=%s",
+#      $param{base_url}, $param{journal_issn});
+#    $man_url = uri_unescape($url);
+#    my $req = HTTP::Request->new(GET, $man_url);
+#    my $resp = $ua->request($req);
+#    if ($resp->is_success) {
+#      my $man_contents = $resp->content;
+##      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && (man_contents =~ m/issn=$param{journal_issn}.vol=$param{volume_name}/)) {
+#      if ($req->url ne $resp->request->uri) {
+#              $vol_title = $resp->request->uri;
+#              $result = "Redirected";
+#      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/vol=$param{volume_name}/)) {
+#        if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
+#          $vol_title = $1;
+#        }
+#        $result = "Manifest"
+#      } else {
+#        $result = "--NO_TAG--"
+#      }
+#    } else {
+#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+#    }
+#    sleep(4);
 
   #European Mathematical Society API
-  } elsif ($plugin eq "ClockssEuropeanMathematicalSocietyJournalsPlugin") {
+  } elsif ($plugin eq "ClockssEuropeanMathematicalSocietyJournalsPlugin" || 
+           $plugin eq "EuropeanMathematicalSocietyJournalsPlugin") {
     $url = sprintf("%sserial-issues?filter[serial]=%s&filter[year]=%d",
       $param{api_url}, $param{journal_serial_number}, $param{year});
     $man_url = uri_unescape($url);
@@ -3343,58 +3344,33 @@ while (my $line = <>) {
     }
     sleep(4);
 
-#  #European Mathematical Society Deprecated
-#  } elsif ($plugin eq "EuropeanMathematicalSocietyBooksPlugin") {
-#    $url = sprintf("%sbooks/book.php?proj_nr=%s",
-#      $param{base_url}, $param{book_number});
-#    $man_url = uri_unescape($url);
-#    my $req = HTTP::Request->new(GET, $man_url);
-#    my $resp = $ua->request($req);
-#    if ($resp->is_success) {
-#      my $man_contents = $resp->content;
-##      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && (man_contents =~ m/issn=$param{journal_issn}.vol=$param{volume_name}/)) {
-#      if ($req->url ne $resp->request->uri) {
-#              $vol_title = $resp->request->uri;
-#              $result = "Redirected";
-#      } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/proj_nr=$param{book_number}/)) {
-#        if ($man_contents =~ m/<h4>([^<]*)<\/h4>/si) {
-#          $vol_title = $1;
-#        }
-#        $result = "Manifest"
-#      } else {
-#        $result = "--NO_TAG--"
-#      }
-#    } else {
-#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-#    }
-#    sleep(4);
-#
-#  #European Mathematical Society Deprecated
-#  } elsif ($plugin eq "ClockssEuropeanMathematicalSocietyBooksPlugin") {
-#    $url = sprintf("%sbooks/book.php?proj_nr=%s",
-#      $param{base_url}, $param{book_number});
-#    $man_url = uri_unescape($url);
-#    my $req = HTTP::Request->new(GET, $man_url);
-#    my $resp = $ua->request($req);
-#    if ($resp->is_success) {
-#      my $man_contents = $resp->content;
-##      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && (man_contents =~ m/issn=$param{journal_issn}.vol=$param{volume_name}/)) {
-#      if ($req->url ne $resp->request->uri) {
-#              $vol_title = $resp->request->uri;
-#              $result = "Redirected";
-#      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/proj_nr=$param{book_number}/)) {
-#        if ($man_contents =~ m/<h4>([^<]*)<\/h4>/si) {
-#          $vol_title = $1;
-#        }
-#        $result = "Manifest"
-#      } else {
-#        $result = "--NO_TAG--"
-#      }
-#    } else {
-#      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-#    }
-#    sleep(4);
-#
+  #European Mathematical Society Books
+  } elsif ($plugin eq "ClockssEuropeanMathematicalSocietyBooks2024Plugin") {
+    $url = sprintf("%sbooks/%s/%s",
+      $param{base_url}, $param{book_serial_id}, $param{book_id});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+#      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && (man_contents =~ m/issn=$param{journal_issn}.vol=$param{volume_name}/)) {
+      if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/>Download [^<]*PDF</)) {
+        if ($man_contents =~ m/<h4>([^<]*)<\/h4>/si) {
+          $vol_title = $1;
+        }
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+    }
+    sleep(4);
+
+
   } elsif (($plugin eq "SilverchairJournalsPlugin") ||
           ($plugin eq "AmaSilverchairPlugin")) {
     $url = sprintf("%sLOCKSS/ListOfIssues.aspx?resourceId=%d&year=%d",
