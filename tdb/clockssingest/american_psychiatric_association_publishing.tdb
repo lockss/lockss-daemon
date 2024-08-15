@@ -17,7 +17,6 @@
   #overcrawl
   
   plugin = org.lockss.plugin.atypon.ampsychpub.ClockssAmPsychPubAtyponPlugin
-  implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
   
     {
@@ -28,45 +27,94 @@
         issnl = 0002-9564
       >
 
+      # content published from 1947 to current
+      param[journal_id] = apt
+      implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
      {
-      param[base_url] = https://psychotherapy.psychiatryonline.org/
-      param[journal_id] = apt
-      # content starts from 1947 to current
 
-      au < finished ; finished ; 2010 ; The American Journal of Psychotherapy Volume 14 ; 14 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2011 ; The American Journal of Psychotherapy Volume 15 ; 15 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2012 ; The American Journal of Psychotherapy Volume 16 ; 16 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2013 ; The American Journal of Psychotherapy Volume 17 ; 17 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2014 ; The American Journal of Psychotherapy Volume 18 ; 18 ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2015 ; The American Journal of Psychotherapy Volume 19 ; 19 ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2016 ; The American Journal of Psychotherapy Volume 20 ; 20 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2017 ; The American Journal of Psychotherapy Volume 21 ; 21 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2018 ; The American Journal of Psychotherapy Volume 22 ; 22 ; reingest1.clockss.org:8082 >
-      au < finished ; frozen ; 2019 ; The American Journal of Psychotherapy Volume 23 ; 23 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; The American Journal of Psychotherapy Volume 24 ; 24 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2021 ; The American Journal of Psychotherapy Volume 25 ; 25 ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2022 ; The American Journal of Psychotherapy Volume 26 ; 26 ; >
-      au < deepCrawl ; exists ; 2023 ; The American Journal of Psychotherapy Volume 27 ; 27 ; >
-      }
-      {
-      param[base_url] = https://psychiatryonline.org/
-      param[journal_id] = apt
+      au < manifest ; exists ; 1947 ; The American Journal of Psychotherapy Volume 1 ; 1 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1948 ; The American Journal of Psychotherapy Volume 2 ; 2 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1949 ; The American Journal of Psychotherapy Volume 3 ; 3 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1950 ; The American Journal of Psychotherapy Volume 4 ; 4 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1951 ; The American Journal of Psychotherapy Volume 5 ; 5 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1952 ; The American Journal of Psychotherapy Volume 6 ; 6 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1953 ; The American Journal of Psychotherapy Volume 7 ; 7 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1954 ; The American Journal of Psychotherapy Volume 8 ; 8 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1955 ; The American Journal of Psychotherapy Volume 9 ; 9 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1956 ; The American Journal of Psychotherapy Volume 10 ; 10 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1957 ; The American Journal of Psychotherapy Volume 11 ; 11 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1958 ; The American Journal of Psychotherapy Volume 12 ; 12 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1959 ; The American Journal of Psychotherapy Volume 13 ; 13 ; https://psychiatryonline.org/ ; >
+      au < finished ; finished ; 1960 ; The American Journal of Psychotherapy Volume 14 ; 14 ; https://psychotherapy.psychiatryonline.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1961 ; The American Journal of Psychotherapy Volume 15 ; 15 ; https://psychotherapy.psychiatryonline.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1962 ; The American Journal of Psychotherapy Volume 16 ; 16 ; https://psychotherapy.psychiatryonline.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1963 ; The American Journal of Psychotherapy Volume 17 ; 17 ; https://psychotherapy.psychiatryonline.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1964 ; The American Journal of Psychotherapy Volume 18 ; 18 ; https://psychotherapy.psychiatryonline.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 1965 ; The American Journal of Psychotherapy Volume 19 ; 19 ; https://psychotherapy.psychiatryonline.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 1966 ; The American Journal of Psychotherapy Volume 20 ; 20 ; https://psychotherapy.psychiatryonline.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 1967 ; The American Journal of Psychotherapy Volume 21 ; 21 ; https://psychotherapy.psychiatryonline.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 1968 ; The American Journal of Psychotherapy Volume 22 ; 22 ; https://psychotherapy.psychiatryonline.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; frozen ; 1969 ; The American Journal of Psychotherapy Volume 23 ; 23 ; https://psychotherapy.psychiatryonline.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 1970 ; The American Journal of Psychotherapy Volume 24 ; 24 ; https://psychotherapy.psychiatryonline.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 1971 ; The American Journal of Psychotherapy Volume 25 ; 25 ; https://psychotherapy.psychiatryonline.org/ ; reingest3.clockss.org:8083 >
 
-      au < exists ; exists ; 1997 ; The American Journal of Psychotherapy Volume 1 ; 1 ; >
-      au < exists ; exists ; 1998 ; The American Journal of Psychotherapy Volume 2 ; 2 ; >
-      au < exists ; exists ; 1999 ; The American Journal of Psychotherapy Volume 3 ; 3 ; >
-      au < exists ; exists ; 2000 ; The American Journal of Psychotherapy Volume 4 ; 4 ; >
-      au < exists ; exists ; 2001 ; The American Journal of Psychotherapy Volume 5 ; 5 ; >
-      au < exists ; exists ; 2002 ; The American Journal of Psychotherapy Volume 6 ; 6 ; >
-      au < exists ; exists ; 2003 ; The American Journal of Psychotherapy Volume 7 ; 7 ; >
-      au < exists ; exists ; 2004 ; The American Journal of Psychotherapy Volume 8 ; 8 ; >
-      au < exists ; exists ; 2005 ; The American Journal of Psychotherapy Volume 9 ; 9 ; >
-      au < exists ; exists ; 2006 ; The American Journal of Psychotherapy Volume 10 ; 10 ; >
-      au < exists ; exists ; 2007 ; The American Journal of Psychotherapy Volume 11 ; 11 ; >
-      au < exists ; exists ; 2008 ; The American Journal of Psychotherapy Volume 12 ; 12 ; >
-      au < exists ; exists ; 2009 ; The American Journal of Psychotherapy Volume 13 ; 13 ; >
+      au < superseded ; exists ; 1972 ; The American Journal of Psychotherapy Volume 26 [superseded] ; 26 ; https://psychotherapy.psychiatryonline.org/ ; >
+      au < exists ; exists ; 1972 ; The American Journal of Psychotherapy Volume 26 ; 26 ; https://psychiatryonline.org/ ; >
+      au < superseded ; exists ; 1973 ; The American Journal of Psychotherapy Volume 27 [superseded] ; 27 ; https://psychotherapy.psychiatryonline.org/ ; >
+      au < exists ; exists ; 1973 ; The American Journal of Psychotherapy Volume 27 ; 27 ; https://psychiatryonline.org/ ; >
 
-      au < exists ; exists ; 2024 ; The American Journal of Psychotherapy Volume 28 ; 28 ; >
+      au < manifest ; exists ; 1974 ; The American Journal of Psychotherapy Volume 28 ; 28 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1975 ; The American Journal of Psychotherapy Volume 29 ; 29 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1976 ; The American Journal of Psychotherapy Volume 30 ; 30 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1977 ; The American Journal of Psychotherapy Volume 31 ; 31 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1978 ; The American Journal of Psychotherapy Volume 32 ; 32 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1979 ; The American Journal of Psychotherapy Volume 33 ; 33 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1980 ; The American Journal of Psychotherapy Volume 34 ; 34 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1981 ; The American Journal of Psychotherapy Volume 35 ; 35 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1982 ; The American Journal of Psychotherapy Volume 36 ; 36 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1983 ; The American Journal of Psychotherapy Volume 37 ; 37 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1984 ; The American Journal of Psychotherapy Volume 38 ; 38 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1985 ; The American Journal of Psychotherapy Volume 39 ; 39 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1986 ; The American Journal of Psychotherapy Volume 40 ; 40 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1987 ; The American Journal of Psychotherapy Volume 41 ; 41 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1988 ; The American Journal of Psychotherapy Volume 42 ; 42 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1989 ; The American Journal of Psychotherapy Volume 43 ; 43 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1990 ; The American Journal of Psychotherapy Volume 44 ; 44 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1991 ; The American Journal of Psychotherapy Volume 45 ; 45 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1992 ; The American Journal of Psychotherapy Volume 46 ; 46 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1993 ; The American Journal of Psychotherapy Volume 47 ; 47 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1994 ; The American Journal of Psychotherapy Volume 48 ; 48 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1995 ; The American Journal of Psychotherapy Volume 49 ; 49 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1996 ; The American Journal of Psychotherapy Volume 50 ; 50 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1997 ; The American Journal of Psychotherapy Volume 51 ; 51 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1998 ; The American Journal of Psychotherapy Volume 52 ; 52 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1999 ; The American Journal of Psychotherapy Volume 53 ; 53 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 2000 ; The American Journal of Psychotherapy Volume 54 ; 54 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 2001 ; The American Journal of Psychotherapy Volume 55 ; 55 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 2002 ; The American Journal of Psychotherapy Volume 56 ; 56 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 2003 ; The American Journal of Psychotherapy Volume 57 ; 57 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 2004 ; The American Journal of Psychotherapy Volume 58 ; 58 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 2005 ; The American Journal of Psychotherapy Volume 59 ; 59 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 2006 ; The American Journal of Psychotherapy Volume 60 ; 60 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 2007 ; The American Journal of Psychotherapy Volume 61 ; 61 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 2008 ; The American Journal of Psychotherapy Volume 62 ; 62 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 2009 ; The American Journal of Psychotherapy Volume 63 ; 63 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 2010 ; The American Journal of Psychotherapy Volume 64 ; 64 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 2011 ; The American Journal of Psychotherapy Volume 65 ; 65 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 2012 ; The American Journal of Psychotherapy Volume 66 ; 66 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 2013 ; The American Journal of Psychotherapy Volume 67 ; 67 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 2014 ; The American Journal of Psychotherapy Volume 68 ; 68 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 2015 ; The American Journal of Psychotherapy Volume 69 ; 69 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 2016 ; The American Journal of Psychotherapy Volume 70 ; 70 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 2018 ; The American Journal of Psychotherapy Volume 71 ; 71 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 2019 ; The American Journal of Psychotherapy Volume 72 ; 72 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 2020 ; The American Journal of Psychotherapy Volume 73 ; 73 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 2021 ; The American Journal of Psychotherapy Volume 74 ; 74 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 2022 ; The American Journal of Psychotherapy Volume 75 ; 75 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 2023 ; The American Journal of Psychotherapy Volume 76 ; 76 ; https://psychiatryonline.org/ ; >
+      au < expected ; exists ; 2024 ; The American Journal of Psychotherapy Volume 77 ; 77 ; https://psychiatryonline.org/ ; >
+
+
       }
     }
 ###############################################
@@ -84,6 +132,7 @@
       >
 
         
+      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       param[base_url] = https://ajp.psychiatryonline.org/
       param[journal_id] = ajp
       # content starts from 1844 to current
@@ -124,6 +173,7 @@
         issnl = 1541-4094
       >
 
+      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       param[base_url] = https://focus.psychiatryonline.org/
       param[journal_id] = foc
 
@@ -145,7 +195,10 @@
       au < superseded ; exists ; 2018 ; FOCUS Volume 16 ; 16 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2019 ; FOCUS Volume 17 ; 17 ; >
       au < superseded ; exists ; 2020 ; FOCUS Volume 18 ; 18 ; >
-      #au < doNotProcess ; exists ; 2021 ; FOCUS Volume 19 ; 19 ; >
+      au < doNotProcess ; exists ; 2021 ; FOCUS Volume 19 ; 19 ; >
+      au < doNotProcess ; exists ; 2022 ; FOCUS Volume 20 ; 20 ; >
+      au < doNotProcess ; exists ; 2023 ; FOCUS Volume 21 ; 21 ; >
+      au < doNotProcess ; exists ; 2024 ; FOCUS Volume 22 ; 22 ; >
 ###DoNotProcess
     }
 
@@ -157,6 +210,7 @@
         issnl = 0895-0172
       >
 
+      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       param[base_url] = https://neuro.psychiatryonline.org/
       param[journal_id] = jnp
       # content starts from 1989 to current
@@ -196,6 +250,7 @@
         issnl = 1075-2730
       >
 
+      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       param[base_url] = https://ps.psychiatryonline.org/
       param[journal_id] = ps
       # content starts from year 1950 to current
@@ -232,6 +287,7 @@
         eissn = 2575-5609 
       >
 
+      implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
       param[base_url] = https://prcp.psychiatryonline.org/
       param[journal_id] = prcp
       # content starts from year 2019
