@@ -383,7 +383,7 @@
     au < finished ; manifest ; 1991 ; CBMS Regional Conference Series in Mathematics 1991 ; 1991 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 1993 ; CBMS Regional Conference Series in Mathematics 1993 ; 1993 ; https://www.ams.org/ ; >
     au < finished ; manifest ; 1994 ; CBMS Regional Conference Series in Mathematics 1994 ; 1994 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 1995 ; CBMS Regional Conference Series in Mathematics 1995 ; 1995 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1995 ; CBMS Regional Conference Series in Mathematics 1995 ; 1995 ; https://www.ams.org/ ; >
     au < finished ; manifest ; 1996 ; CBMS Regional Conference Series in Mathematics 1996 ; 1996 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < ready ; exists ; 1997 ; CBMS Regional Conference Series in Mathematics 1997 ; 1997 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1999 ; CBMS Regional Conference Series in Mathematics 1999 ; 1999 ; https://www.ams.org/ ; >
@@ -508,7 +508,7 @@
     
     au < frozen ; exists ; 1993 ; Fields Institute Communications 1993 ; 1993 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1994 ; Fields Institute Communications 1994 ; 1994 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1995 ; Fields Institute Communications 1995 ; 1995 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1995 ; Fields Institute Communications 1995 ; 1995 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1996 ; Fields Institute Communications 1996 ; 1996 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1997 ; Fields Institute Communications 1997 ; 1997 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1998 ; Fields Institute Communications 1998 ; 1998 ; https://www.ams.org/ ; >
@@ -566,7 +566,7 @@
     param[collection_id] = gsm
     
     au < frozen ; exists ; 1993 ; Graduate Studies in Mathematics 1993 ; 1993 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1994 ; Graduate Studies in Mathematics 1994 ; 1994 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1994 ; Graduate Studies in Mathematics 1994 ; 1994 ; https://www.ams.org/ ; >
     au < notReady ; exists ; 1995 ; Graduate Studies in Mathematics 1995 ; 1995 ; https://www.ams.org/ ; > #no content link on http://www.ams.org/books/gsm/005/
     au < frozen ; exists ; 1996 ; Graduate Studies in Mathematics 1996 ; 1996 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1997 ; Graduate Studies in Mathematics 1997 ; 1997 ; https://www.ams.org/ ; >
@@ -609,7 +609,7 @@
     param[collection_id] = mawrld
     
     au < frozen ; exists ; 1991 ; Mathematical World 1991 ; 1991 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1993 ; Mathematical World 1993 ; 1993 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1993 ; Mathematical World 1993 ; 1993 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1994 ; Mathematical World 1994 ; 1994 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1996 ; Mathematical World 1996 ; 1996 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1997 ; Mathematical World 1997 ; 1997 ; https://www.ams.org/ ; >
@@ -783,7 +783,7 @@
     au < frozen ; exists ; 1991 ; AMS Translations: Series 2 1991 ; 1991 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1992 ; AMS Translations: Series 2 1992 ; 1992 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1993 ; AMS Translations: Series 2 1993 ; 1993 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1994 ; AMS Translations: Series 2 1994 ; 1994 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1994 ; AMS Translations: Series 2 1994 ; 1994 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1995 ; AMS Translations: Series 2 1995 ; 1995 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1996 ; AMS Translations: Series 2 1996 ; 1996 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1997 ; AMS Translations: Series 2 1997 ; 1997 ; https://www.ams.org/ ; >
