@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>4</string>
+        <string>5</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -60,7 +60,7 @@ POSSIBILITY OF SUCH DAMAGE.
             </entry>
             <entry>
                 <string>Metadata</string>
-                <string>1</string>
+                <string>2</string>
             </entry>
         </map>
     </entry>
@@ -187,7 +187,7 @@ POSSIBILITY OF SUCH DAMAGE.
             https://domain/umbrella/journal/issue/vol#/iss#
             -->
             <string>1,"%s%s/%s/(issue|article|article-abstract|article-standard)/(volume/)?%s", base_url, college_id, journal_id, volume_name</string>
-            <string>1,"%s%s/%s/article/doi/.*%s.*", base_url, college_id, journal_id, volume_name</string>
+            <string>1,"%s%s/%s/article/doi/.*", base_url, college_id, journal_id</string>
             <!--
             https://pubs.geoscienceworld.org/gsabulletin/article-pdf/132/1-2/3/4907520/3.pdf
             Redirected to excluded URL:
@@ -277,7 +277,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <map>
             <entry>
                 <string>*</string>
-                <string>org.lockss.plugin.silverchair.ScHtmlMetadataExtractorFactory</string>
+                <string>org.lockss.plugin.silverchair.SilverchairScholarlyPublishingCollectiveMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
