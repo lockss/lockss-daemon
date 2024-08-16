@@ -24,7 +24,7 @@
       param[base_url] = https://journals.ed.ac.uk/
       param[journal_id] = airea
 
-      au < ready ; exists ; 2018 ; Airea: Arts and Interdisciplinary Research Volume 2018 ; 1 ; 2018 ; >
+      au < crawling ; exists ; 2018 ; Airea: Arts and Interdisciplinary Research Volume 2018 ; 1 ; 2018 ; >
       au < frozen ; exists ; 2020 ; Airea: Arts and Interdisciplinary Research Volume 2020 ; 3 ; 2020 ; >
       au < frozen ; exists ; 2021 ; Airea: Arts and Interdisciplinary Research Volume 2021 ; 4 ; 2021 ; >
 
@@ -86,9 +86,9 @@
       au < manifest ; exists ; 2014 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2014 ; 10 ; 2014 ; >
       au < manifest ; exists ; 2015 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2015 ; 11 ; 2015 ; >
       au < manifest ; exists ; 2016 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2016 ; 12 ; 2016 ; >
-      au < ready ; exists ; 2017 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2017 ; 13 ; 2017 ; >
+      au < crawling ; exists ; 2017 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2017 ; 13 ; 2017 ; >
       au < crawling ; exists ; 2018 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2018 ; 14 ; 2018 ; >
-      au < ready ; exists ; 2019 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2019 ; 15 ; 2019 ; >
+      au < crawling ; exists ; 2019 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2019 ; 15 ; 2019 ; >
       au < frozen ; exists ; 2020 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2020 ; 16 ; 2020 ; >
       au < frozen ; exists ; 2021 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2021 ; 17 ; 2021 ; >
       au < frozen ; exists ; 2022 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2022 ; 18 ; 2022 ; >
@@ -130,7 +130,7 @@
       param[base_url] = https://journals.ed.ac.uk/
       param[journal_id] = gtopdb-cite
 
-      au < ready ; exists ; 2019 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2019 ; 2019 ; 2019 ; >
+      au < crawling ; exists ; 2019 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2019 ; 2019 ; 2019 ; >
       au < frozen ; exists ; 2020 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2020 ; 2020 ; 2020 ; >
       au < frozen ; exists ; 2021 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2021 ; 2021 ; 2021 ; >
       au < frozen ; exists ; 2022 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2022 ; 2022 ; 2022 ; >
@@ -152,8 +152,8 @@
       au < manifest ; exists ; 2014 ; Journal of Lithic Studies Volume 2014 ; 1 ; 2014 ; >
       au < manifest ; exists ; 2015 ; Journal of Lithic Studies Volume 2015 ; 2 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Journal of Lithic Studies Volume 2016 ; 3 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Journal of Lithic Studies Volume 2017 ; 4 ; 2017 ; >
-      au < ready ; exists ; 2018 ; Journal of Lithic Studies Volume 2018 ; 5 ; 2018 ; >
+      au < crawling ; exists ; 2017 ; Journal of Lithic Studies Volume 2017 ; 4 ; 2017 ; >
+      au < crawling ; exists ; 2018 ; Journal of Lithic Studies Volume 2018 ; 5 ; 2018 ; >
       au < crawling ; exists ; 2019 ; Journal of Lithic Studies Volume 2019 ; 6 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Journal of Lithic Studies Volume 2020 ; 7 ; 2020 ; >
       au < frozen ; exists ; 2021 ; Journal of Lithic Studies Volume 2021 ; 8 ; 2021 ; >
@@ -183,7 +183,7 @@
       au < manifest ; exists ; 2016 ; Leviathan Volume 2016 ; 6-7 ; 2016 ; >
       au < manifest ; exists ; 2017 ; Leviathan Volume 2017 ; 7-8 ; 2017 ; >
       au < manifest ; exists ; 2018 ; Leviathan Volume 2018 ; 8 ; 2018 ; >
-      au < ready ; exists ; 2019 ; Leviathan Volume 2019 ; 9-10 ; 2019 ; >
+      au < crawling ; exists ; 2019 ; Leviathan Volume 2019 ; 9-10 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Leviathan Volume 2020 ; 10 ; 2020 ; >
       au < frozen ; exists ; 2021 ; Leviathan Volume 2021 ; 11-12 ; 2021 ; >
       au < frozen ; exists ; 2022 ; Leviathan Volume 2022 ; 12-13 ; 2022 ; >
@@ -263,10 +263,10 @@
       param[base_url] = https://journals.ed.ac.uk/
       param[journal_id] = rethink
 
-      au < ready ; exists ; 2018 ; re:think - a journal of creative ethnography Volume 2018 ; 1 ; 2018 ; >
+      au < crawling ; exists ; 2018 ; re:think - a journal of creative ethnography Volume 2018 ; 1 ; 2018 ; >
       au < crawling ; exists ; 2019 ; re:think - a journal of creative ethnography Volume 2019 ; 2 ; 2019 ; >
-      au < ready ; exists ; 2021 ; re:think - a journal of creative ethnography Volume 2021 ; 3 ; 2021 ; >
-      au < ready ; exists ; 2023 ; re:think - a journal of creative ethnography Volume 2023 ; 4 ; 2023 ; >
+      au < crawling ; exists ; 2021 ; re:think - a journal of creative ethnography Volume 2021 ; 3 ; 2021 ; >
+      au < crawling ; exists ; 2023 ; re:think - a journal of creative ethnography Volume 2023 ; 4 ; 2023 ; >
       au < expected ; exists ; 2024 ; re:think - a journal of creative ethnography Volume 2024 ; 7 ; 2024 ; >
 
   }
@@ -301,8 +301,8 @@
       param[base_url] = https://journals.ed.ac.uk/
       param[journal_id] = social-science-protocols
 
-      au < ready ; exists ; 2018 ; Social Science Protocols Volume 2018 ; 1 ; 2018 ; >
-      au < ready ; exists ; 2019 ; Social Science Protocols Volume 2019 ; 2 ; 2019 ; >
+      au < crawling ; exists ; 2018 ; Social Science Protocols Volume 2018 ; 1 ; 2018 ; >
+      au < crawling ; exists ; 2019 ; Social Science Protocols Volume 2019 ; 2 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Social Science Protocols Volume 2020 ; 3 ; 2020 ; >
       au < frozen ; exists ; 2021 ; Social Science Protocols Volume 2021 ; 4 ; 2021 ; >
       au < frozen ; exists ; 2022 ; Social Science Protocols Volume 2022 ; 5 ; 2022 ; >
@@ -323,19 +323,19 @@
       param[journal_id] = concept
       #This title does not use a journal_id
 
-      au < ready ; exists ; 2010 ; Concept Volume 2010 ; 1 ; 2010 ; >
+      au < crawling ; exists ; 2010 ; Concept Volume 2010 ; 1 ; 2010 ; >
       au < crawling ; exists ; 2011 ; Concept Volume 2011 ; 2 ; 2011 ; >
       au < crawling ; exists ; 2012 ; Concept Volume 2012 ; 3 ; 2012 ; >
-      au < ready ; exists ; 2013 ; Concept Volume 2013 ; 4 ; 2013 ; >
-      au < ready ; exists ; 2014 ; Concept Volume 2014 ; 5 ; 2014 ; >
+      au < crawling ; exists ; 2013 ; Concept Volume 2013 ; 4 ; 2013 ; >
+      au < crawling ; exists ; 2014 ; Concept Volume 2014 ; 5 ; 2014 ; >
       au < crawling ; exists ; 2015 ; Concept Volume 2015 ; 6 ; 2015 ; >
       au < crawling ; exists ; 2016 ; Concept Volume 2016 ; 7 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Concept Volume 2017 ; 8 ; 2017 ; >
-      au < ready ; exists ; 2018 ; Concept Volume 2018 ; 9 ; 2018 ; >
-      au < ready ; exists ; 2019 ; Concept Volume 2019 ; 10 ; 2019 ; >
-      au < ready ; exists ; 2020 ; Concept Volume 2020 ; 11 ; 2020 ; >
-      au < ready ; exists ; 2021 ; Concept Volume 2021 ; 12 ; 2021 ; >
-      au < ready ; exists ; 2022 ; Concept Volume 2022 ; 13 ; 2022 ; >
+      au < crawling ; exists ; 2017 ; Concept Volume 2017 ; 8 ; 2017 ; >
+      au < crawling ; exists ; 2018 ; Concept Volume 2018 ; 9 ; 2018 ; >
+      au < crawling ; exists ; 2019 ; Concept Volume 2019 ; 10 ; 2019 ; >
+      au < crawling ; exists ; 2020 ; Concept Volume 2020 ; 11 ; 2020 ; >
+      au < crawling ; exists ; 2021 ; Concept Volume 2021 ; 12 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; Concept Volume 2022 ; 13 ; 2022 ; >
       au < crawling ; exists ; 2023 ; Concept Volume 2023 ; 14 ; 2023 ; >
       au < crawling ; exists ; 2024 ; Concept Volume 2024 ; 15 ; 2024 ; >
 
@@ -356,12 +356,12 @@
       au < manifest ; exists ; 2014 ; Language and Psychoanalysis Volume 2014 ; 3 ; 2014 ; >
       au < manifest ; exists ; 2015 ; Language and Psychoanalysis Volume 2015 ; 4 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Language and Psychoanalysis Volume 2016 ; 5 ; 2016 ; >
-      au < ready ; exists ; 2017 ; Language and Psychoanalysis Volume 2017 ; 6 ; 2017 ; >
-      au < ready ; exists ; 2018 ; Language and Psychoanalysis Volume 2018 ; 7 ; 2018 ; >
-      au < ready ; exists ; 2019 ; Language and Psychoanalysis Volume 2019 ; 8 ; 2019 ; >
+      au < crawling ; exists ; 2017 ; Language and Psychoanalysis Volume 2017 ; 6 ; 2017 ; >
+      au < crawling ; exists ; 2018 ; Language and Psychoanalysis Volume 2018 ; 7 ; 2018 ; >
+      au < crawling ; exists ; 2019 ; Language and Psychoanalysis Volume 2019 ; 8 ; 2019 ; >
       au < crawling ; exists ; 2020 ; Language and Psychoanalysis Volume 2020 ; 9 ; 2020 ; >
       au < crawling ; exists ; 2021 ; Language and Psychoanalysis Volume 2021 ; 10 ; 2021 ; >
-      au < ready ; exists ; 2022 ; Language and Psychoanalysis Volume 2022 ; 11 ; 2022 ; >
+      au < crawling ; exists ; 2022 ; Language and Psychoanalysis Volume 2022 ; 11 ; 2022 ; >
       au < exists ; exists ; 2023 ; Language and Psychoanalysis Volume 2023 ; 12 ; 2023 ; >
       au < expected ; exists ; 2024 ; Language and Psychoanalysis Volume 2024 ; 13 ; 2024 ; >
 
@@ -385,9 +385,9 @@
       au < crawling ; exists ; 2018 ; Medicine Anthropology Theory Volume 2018 ; 5 ; 2018 ; >
       au < manifest ; exists ; 2019 ; Medicine Anthropology Theory Volume 2019 ; 6 ; 2019 ; >
       au < crawling ; exists ; 2020 ; Medicine Anthropology Theory Volume 2020 ; 7 ; 2020 ; >
-      au < ready ; exists ; 2021 ; Medicine Anthropology Theory Volume 2021 ; 8 ; 2021 ; >
-      au < ready ; exists ; 2022 ; Medicine Anthropology Theory Volume 2022 ; 9 ; 2022 ; >
-      au < ready ; exists ; 2023 ; Medicine Anthropology Theory Volume 2023 ; 10 ; 2023 ; >
+      au < crawling ; exists ; 2021 ; Medicine Anthropology Theory Volume 2021 ; 8 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; Medicine Anthropology Theory Volume 2022 ; 9 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; Medicine Anthropology Theory Volume 2023 ; 10 ; 2023 ; >
       au < crawling ; exists ; 2024 ; Medicine Anthropology Theory Volume 2024 ; 11 ; 2024 ; >
 
   }
@@ -409,12 +409,12 @@
       au < manifest ; exists ; 2015 ; The South Asianist Journal Volume 2015 ; 4 ; 2015 ; >
       au < manifest ; exists ; 2016 ; The South Asianist Journal Volume 2016 ; 5 ; 2016 ; >
       au < manifest ; exists ; 2017 ; The South Asianist Journal Volume 2017 ; 6 ; 2017 ; >
-      au < ready ; exists ; 2018 ; The South Asianist Journal Volume 2018 ; 7 ; 2018 ; >
+      au < crawling ; exists ; 2018 ; The South Asianist Journal Volume 2018 ; 7 ; 2018 ; >
       au < exists ; exists ; 2019 ; The South Asianist Journal Volume 2019 ; 8 ; 2019 ; >
-      au < ready ; exists ; 2020 ; The South Asianist Journal Volume 2020 ; 9 ; 2020 ; >
+      au < crawling ; exists ; 2020 ; The South Asianist Journal Volume 2020 ; 9 ; 2020 ; >
       au < crawling ; exists ; 2021 ; The South Asianist Journal Volume 2021 ; 10 ; 2021 ; >
       au < exists ; exists ; 2022 ; The South Asianist Journal Volume 2022 ; 11 ; 2022 ; >
-      au < ready ; exists ; 2023 ; The South Asianist Journal Volume 2023 ; 12 ; 2023 ; >
+      au < crawling ; exists ; 2023 ; The South Asianist Journal Volume 2023 ; 12 ; 2023 ; >
       au < expected ; exists ; 2024 ; The South Asianist Journal Volume 2024 ; 13 ; 2024 ; >
 
   }

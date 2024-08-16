@@ -385,8 +385,8 @@
     au < finished ; manifest ; 1994 ; CBMS Regional Conference Series in Mathematics 1994 ; 1994 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 1995 ; CBMS Regional Conference Series in Mathematics 1995 ; 1995 ; https://www.ams.org/ ; >
     au < finished ; manifest ; 1996 ; CBMS Regional Conference Series in Mathematics 1996 ; 1996 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 1997 ; CBMS Regional Conference Series in Mathematics 1997 ; 1997 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1999 ; CBMS Regional Conference Series in Mathematics 1999 ; 1999 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1997 ; CBMS Regional Conference Series in Mathematics 1997 ; 1997 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1999 ; CBMS Regional Conference Series in Mathematics 1999 ; 1999 ; https://www.ams.org/ ; >
     au < finished ; manifest ; 2000 ; CBMS Regional Conference Series in Mathematics 2000 ; 2000 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2002 ; CBMS Regional Conference Series in Mathematics 2002 ; 2002 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2003 ; CBMS Regional Conference Series in Mathematics 2003 ; 2003 ; https://www.ams.org/ ; >
@@ -478,7 +478,7 @@
     au < manifest ; exists ; 1987 ; Colloquium Publications 1987 ; 1987 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1991 ; Colloquium Publications 1991 ; 1991 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1995 ; Colloquium Publications 1995 ; 1995 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1996 ; Colloquium Publications 1996 ; 1996 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1996 ; Colloquium Publications 1996 ; 1996 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1998 ; Colloquium Publications 1998 ; 1998 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1999 ; Colloquium Publications 1999 ; 1999 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2000 ; Colloquium Publications 2000 ; 2000 ; https://www.ams.org/ ; >
@@ -612,9 +612,9 @@
     au < crawling ; exists ; 1993 ; Mathematical World 1993 ; 1993 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1994 ; Mathematical World 1994 ; 1994 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1996 ; Mathematical World 1996 ; 1996 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1997 ; Mathematical World 1997 ; 1997 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1997 ; Mathematical World 1997 ; 1997 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1998 ; Mathematical World 1998 ; 1998 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1999 ; Mathematical World 1999 ; 1999 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1999 ; Mathematical World 1999 ; 1999 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2000 ; Mathematical World 2000 ; 2000 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2002 ; Mathematical World 2002 ; 2002 ; https://www.ams.org/ ; >
     au < notReady ; exists ; 2003 ; Mathematical World 2003 ; 2003 ; https://www.ams.org/ ; > #no content link on http://www.ams.org/books/mawrld/019/
@@ -722,7 +722,7 @@
     au < frozen ; exists ; 1991 ; CBMS Issues in Mathematics Education 1991 ; 1991 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1993 ; CBMS Issues in Mathematics Education 1993 ; 1993 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1994 ; CBMS Issues in Mathematics Education 1994 ; 1994 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1995 ; CBMS Issues in Mathematics Education 1995 ; 1995 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1995 ; CBMS Issues in Mathematics Education 1995 ; 1995 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1996 ; CBMS Issues in Mathematics Education 1996 ; 1996 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1998 ; CBMS Issues in Mathematics Education 1998 ; 1998 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2000 ; CBMS Issues in Mathematics Education 2000 ; 2000 ; https://www.ams.org/ ; >
@@ -779,9 +779,9 @@
     au < manifest ; exists ; 1987 ; AMS Translations: Series 2 1987 ; 1987 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 1988 ; AMS Translations: Series 2 1988 ; 1988 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 1989 ; AMS Translations: Series 2 1989 ; 1989 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1990 ; AMS Translations: Series 2 1990 ; 1990 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1990 ; AMS Translations: Series 2 1990 ; 1990 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1991 ; AMS Translations: Series 2 1991 ; 1991 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1992 ; AMS Translations: Series 2 1992 ; 1992 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1992 ; AMS Translations: Series 2 1992 ; 1992 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1993 ; AMS Translations: Series 2 1993 ; 1993 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 1994 ; AMS Translations: Series 2 1994 ; 1994 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1995 ; AMS Translations: Series 2 1995 ; 1995 ; https://www.ams.org/ ; >
