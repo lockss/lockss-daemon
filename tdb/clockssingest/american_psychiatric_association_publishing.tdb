@@ -59,9 +59,9 @@
       au < finished ; crawling ; 1971 ; The American Journal of Psychotherapy Volume 25 ; 25 ; https://psychotherapy.psychiatryonline.org/ ; reingest3.clockss.org:8083 >
 
       au < superseded ; exists ; 1972 ; The American Journal of Psychotherapy Volume 26 [superseded] ; 26 ; https://psychotherapy.psychiatryonline.org/ ; >
-      au < exists ; exists ; 1972 ; The American Journal of Psychotherapy Volume 26 ; 26 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1972 ; The American Journal of Psychotherapy Volume 26 ; 26 ; https://psychiatryonline.org/ ; >
       au < superseded ; exists ; 1973 ; The American Journal of Psychotherapy Volume 27 [superseded] ; 27 ; https://psychotherapy.psychiatryonline.org/ ; >
-      au < exists ; exists ; 1973 ; The American Journal of Psychotherapy Volume 27 ; 27 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 1973 ; The American Journal of Psychotherapy Volume 27 ; 27 ; https://psychiatryonline.org/ ; >
 
       au < manifest ; exists ; 1974 ; The American Journal of Psychotherapy Volume 28 ; 28 ; https://psychiatryonline.org/ ; >
       au < manifest ; exists ; 1975 ; The American Journal of Psychotherapy Volume 29 ; 29 ; https://psychiatryonline.org/ ; >
@@ -112,7 +112,7 @@
       au < manifest ; exists ; 2021 ; The American Journal of Psychotherapy Volume 74 ; 74 ; https://psychiatryonline.org/ ; >
       au < manifest ; exists ; 2022 ; The American Journal of Psychotherapy Volume 75 ; 75 ; https://psychiatryonline.org/ ; >
       au < manifest ; exists ; 2023 ; The American Journal of Psychotherapy Volume 76 ; 76 ; https://psychiatryonline.org/ ; >
-      au < expected ; exists ; 2024 ; The American Journal of Psychotherapy Volume 77 ; 77 ; https://psychiatryonline.org/ ; >
+      au < manifest ; exists ; 2024 ; The American Journal of Psychotherapy Volume 77 ; 77 ; https://psychiatryonline.org/ ; >
 
 
       }
