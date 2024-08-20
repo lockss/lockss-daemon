@@ -1464,7 +1464,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; Journal of the Pennsylvania Academy of Science Volume 93 ; 93 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; Journal of the Pennsylvania Academy of Science Volume 94 ; 94 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Journal of the Pennsylvania Academy of Science Volume 95 ; 95 ; 2021 ; >
-      au < testing ; exists ; 2022 ; Journal of the Pennsylvania Academy of Science Volume 96 ; 96 ; 2022 ; >
+      au < ready ; exists ; 2022 ; Journal of the Pennsylvania Academy of Science Volume 96 ; 96 ; 2022 ; >
 
   }
 
@@ -1601,8 +1601,8 @@
       au < doNotProcess ; doNotProcess ; 2018 ; Resources for American Literary Study Volume 40 ; 40 ; 2018 ; >
       au < doNotProcess ; doNotProcess ; 2019 ; Resources for American Literary Study Volume 41 ; 41 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; Resources for American Literary Study Volume 42 ; 42 ; 2020 ; >
-      au < testing ; exists ; 2021 ; Resources for American Literary Study Volume 43 ; 43 ; 2021 ; >
-      au < testing ; exists ; 2022 ; Resources for American Literary Study Volume 44 ; 44 ; 2022 ; >
+      au < ready ; exists ; 2021 ; Resources for American Literary Study Volume 43 ; 43 ; 2021 ; >
+      au < ready ; exists ; 2022 ; Resources for American Literary Study Volume 44 ; 44 ; 2022 ; >
 
   }
 
@@ -1782,7 +1782,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; The Korean Language in America Volume 23 ; 23 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; The Korean Language in America Volume 24 ; 24 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; The Korean Language in America Volume 25 ; 25 ; 2021 ; >
-      au < testing ; exists ; 2022 ; The Korean Language in America Volume 26 ; 26 ; 2022 ; >
+      au < ready ; exists ; 2022 ; The Korean Language in America Volume 26 ; 26 ; 2022 ; >
 
   }
 
@@ -2180,7 +2180,7 @@
 
       au < finished ; manifest ; 2020 ; AMP: American Music Perspectives Volume 1 ; 1 ; 2020 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2021 ; AMP: American Music Perspectives Volume 2 ; 2 ; 2021 ; reingest3.clockss.org:8083 >
-      au < testing ; exists ; 2022 ; AMP: American Music Perspectives Volume 3 ; 3 ; 2022 ; >
+      au < ready ; exists ; 2022 ; AMP: American Music Perspectives Volume 3 ; 3 ; 2022 ; >
       au < expected ; exists ; 2024 ; AMP: American Music Perspectives Volume 4 ; 4 ; 2024 ; >
 
   }
