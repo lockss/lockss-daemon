@@ -185,8 +185,8 @@
       au < doNotProcess ; doNotProcess ; 2019 ; The F. Scott Fitzgerald Review Volume 17 ; 17 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; The F. Scott Fitzgerald Review Volume 18 ; 18 ; 2020 ; >
       au < finished ; manifest ; 2021 ; The F. Scott Fitzgerald Review Volume 19 ; 19 ; 2021 ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2022 ; The F. Scott Fitzgerald Review Volume 20 ; 20 ; 2022 ; >
-      au < manifest ; exists ; 2023 ; The F. Scott Fitzgerald Review Volume 21 ; 21 ; 2023 ; >
+      au < testing ; exists ; 2022 ; The F. Scott Fitzgerald Review Volume 20 ; 20 ; 2022 ; >
+      au < testing ; exists ; 2023 ; The F. Scott Fitzgerald Review Volume 21 ; 21 ; 2023 ; >
       au < expected ; exists ; 2024 ; The F. Scott Fitzgerald Review Volume 22 ; 22 ; 2024 ; >
 
   }
@@ -215,7 +215,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; The Good Society Volume 28 ; 28 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; The Good Society Volume 29 ; 29 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; The Good Society Volume 30 ; 30 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; The Good Society Volume 31 ; 31 ; 2022 ; >
+      au < testing ; exists ; 2022 ; The Good Society Volume 31 ; 31 ; 2022 ; >
 
   }
 
@@ -1925,7 +1925,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; Hungarian Studies Review Volume 48 ; 48 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Hungarian Studies Review Volume 49 ; 49 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Hungarian Studies Review Volume 50 ; 50 ; 2023 ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2024 ; Hungarian Studies Review Volume 51 ; 51 ; 2024 ; >
+      au < testing ; exists ; 2024 ; Hungarian Studies Review Volume 51 ; 51 ; 2024 ; >
 
   }
 
