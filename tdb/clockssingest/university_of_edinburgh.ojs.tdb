@@ -267,7 +267,7 @@
       au < frozen ; exists ; 2019 ; re:think - a journal of creative ethnography Volume 2019 ; 2 ; 2019 ; >
       au < frozen ; exists ; 2021 ; re:think - a journal of creative ethnography Volume 2021 ; 3 ; 2021 ; >
       au < frozen ; exists ; 2023 ; re:think - a journal of creative ethnography Volume 2023 ; 4 ; 2023 ; >
-      au < expected ; exists ; 2024 ; re:think - a journal of creative ethnography Volume 2024 ; 7 ; 2024 ; >
+      au < expected ; exists ; 2024 ; re:think - a journal of creative ethnography Volume 2024 ; 5 ; 2024 ; >
 
   }
 
@@ -341,6 +341,30 @@
 
   }
 
+#  {
+#
+#      title <
+#        name = Finance and Society ;
+#        eissn = 2059-5999
+#      >
+#
+#      param[base_url] = https://financeandsociety.ed.ac.uk/
+#      param[journal_id] = financeandsociety
+#      #Moved to Cambridge
+#
+#      au < exists ; exists ; 2015 ; Finance and Society Volume 2015 ; 1 ; 2015 ; >
+#      au < exists ; exists ; 2016 ; Finance and Society Volume 2016 ; 2 ; 2016 ; >
+#      au < exists ; exists ; 2017 ; Finance and Society Volume 2017 ; 3 ; 2017 ; >
+#      au < exists ; exists ; 2018 ; Finance and Society Volume 2018 ; 4 ; 2018 ; >
+#      au < exists ; exists ; 2019 ; Finance and Society Volume 2019 ; 5 ; 2019 ; >
+#      au < exists ; exists ; 2020 ; Finance and Society Volume 2020 ; 6 ; 2020 ; >
+#      au < exists ; exists ; 2021 ; Finance and Society Volume 2021 ; 7 ; 2021 ; >
+#      au < exists ; exists ; 2022 ; Finance and Society Volume 2022 ; 8 ; 2022 ; >
+#      au < exists ; exists ; 2023 ; Finance and Society Volume 2023 ; 9 ; 2023 ; >
+#      au < expected ; exists ; 2024 ; Finance and Society Volume 2024 ; 10 ; 2024 ; >
+#
+#  }
+
   {
 
       title <
@@ -410,10 +434,10 @@
       au < manifest ; exists ; 2016 ; The South Asianist Journal Volume 2016 ; 5 ; 2016 ; >
       au < manifest ; exists ; 2017 ; The South Asianist Journal Volume 2017 ; 6 ; 2017 ; >
       au < frozen ; exists ; 2018 ; The South Asianist Journal Volume 2018 ; 7 ; 2018 ; >
-      au < exists ; exists ; 2019 ; The South Asianist Journal Volume 2019 ; 8 ; 2019 ; >
+      au < doesNotExist ; doesNotExist ; 2019 ; The South Asianist Journal Volume 2019 ; 8 ; 2019 ; >
       au < frozen ; exists ; 2020 ; The South Asianist Journal Volume 2020 ; 9 ; 2020 ; >
       au < frozen ; exists ; 2021 ; The South Asianist Journal Volume 2021 ; 10 ; 2021 ; >
-      au < exists ; exists ; 2022 ; The South Asianist Journal Volume 2022 ; 11 ; 2022 ; >
+      au < doesNotExist ; doesNotExist ; 2022 ; The South Asianist Journal Volume 2022 ; 11 ; 2022 ; >
       au < frozen ; exists ; 2023 ; The South Asianist Journal Volume 2023 ; 12 ; 2023 ; >
       au < expected ; exists ; 2024 ; The South Asianist Journal Volume 2024 ; 13 ; 2024 ; >
 
