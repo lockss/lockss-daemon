@@ -243,8 +243,8 @@ public class BaseScHtmlHashFilterFactory implements FilterFactory {
     Reader reader = FilterUtil.getReader(filtered, encoding);
 
     // Remove all inner tag content
-    // on OUP in 2024, there are literal unicode replacement characters (U+FFFD) so we are filtering those out
-    Reader noTagFilter = new HtmlTagFilter(new StringFilter(new StringFilter(reader,"\ufffd",""), "<", " <"), new TagPair("<", ">"));
+    // we need to filter out nbsp; characters in OUP
+    Reader noTagFilter = new HtmlTagFilter(new StringFilter(new StringFilter(reader,"\u00a0",""), "<", " <"), new TagPair("<", ">"));
 
     // Remove white space
     Reader whiteSpaceFilter = new WhiteSpaceFilter(noTagFilter);
