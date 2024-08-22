@@ -117,11 +117,14 @@ public class Pub2WebHtmlMetadataExtractorFactory implements FileMetadataExtracto
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
         throws IOException {
+
+      log.debug3("Pub2web volume check will start");
+
       ArticleMetadata am =
-          new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
+              new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       am.cook(tagMap);
-      if ((am.get(MetadataField.FIELD_DOI) == null) && (am.get(MetadataField.DC_FIELD_IDENTIFIER)!= null )){
-        am.put(MetadataField.FIELD_DOI,am.get(MetadataField.DC_FIELD_IDENTIFIER));
+      if ((am.get(MetadataField.FIELD_DOI) == null) && (am.get(MetadataField.DC_FIELD_IDENTIFIER) != null)) {
+        am.put(MetadataField.FIELD_DOI, am.get(MetadataField.DC_FIELD_IDENTIFIER));
       }
       // leave this method here in case we need to make modifications 
       // note that access.url isn't set to allow for default full_text_cu value (pdf)
@@ -134,16 +137,27 @@ public class Pub2WebHtmlMetadataExtractorFactory implements FileMetadataExtracto
       TdbAu tdbau = au.getTdbAu();
 
       String pubName = (tdbau == null) ? null : tdbau.getPublisherName();
-      
-      if (tdbau != null) {
-        tdb_volume = tdbau.getVolume();
 
-        //check volume
-        if (pubName != null && pubName.equals("Microbiology Society") && citation_volume != null && tdb_volume != null && citation_volume.equalsIgnoreCase(tdb_volume)) {
+      if (!pubName.equalsIgnoreCase("Microbiology Society")) {
+        emitter.emitMetadata(cu, am);
+      } else {
+        if (tdbau != null) {
+          tdb_volume = tdbau.getVolume();
+
+          log.debug3("Pub2web volume check in plugin: Get volume_name... " + tdb_volume);
+
           log.debug3("Pub2web volume check: date In Au , citation_volume = " + citation_volume + ", tdb_volume = " + tdb_volume + ", pubName = " + pubName);
-          emitter.emitMetadata(cu, am);
+
+          //check volume
+          if (pubName != null && pubName.equals("Microbiology Society") && citation_volume != null && tdb_volume != null && citation_volume.equalsIgnoreCase(tdb_volume)) {
+            log.debug3("Pub2web volume check: date In Au , citation_volume = " + citation_volume + ", tdb_volume = " + tdb_volume + ", pubName = " + pubName);
+            emitter.emitMetadata(cu, am);
+          } else {
+            log.debug3("Pub2web volume check: failed, volume In Au , citation_volume = " + citation_volume + ", tdb_volume = " + tdb_volume + ", pubName = " + pubName);
+            emitter.emitMetadata(cu, am);
+          }
         } else {
-          log.debug3("Pub2web volume check: failed, volume In Au , citation_volume = " + citation_volume + ", tdb_volume = " + ", pubName = " + pubName);
+          log.debug3("Pub2web tdbau is NULL");
         }
       }
     }
